@@ -4,7 +4,7 @@ description: Lär dig mer om hur du hanterar samlingar med resurser, som att ska
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0ffda4a6919f2a7ba9f49321fbb59f076bf5c406
+source-git-commit: 97bb17ce719f82449e28f9b32eb651b632b0f8b5
 
 ---
 
@@ -19,9 +19,8 @@ Du kan dela flera samlingar med en användare. Varje samling innehåller referen
 
 Samlingar är av följande typer, baserat på det sätt som de samlar resurser på:
 
-* En samling som innehåller en statisk referenslista med resurser, mappar och andra samlingar
-
-* En smart samling som dynamiskt inkluderar resurser baserat på sökvillkor
+* En samling som innehåller en statisk referenslista med resurser, mappar och andra samlingar.
+* En smart samling som dynamiskt inkluderar resurser baserat på sökvillkor.
 
 ## Åtkomst till samlingskonsolen {#navigating-the-collections-console}
 
@@ -162,19 +161,33 @@ Samlingsmetadata omfattar data om samlingen, inklusive taggar som läggs till.
 1. På sidan Metadata för **[!UICONTROL samling]** kan du visa samlingsmetadata från flikarna **[!UICONTROL Grundläggande]** och **[!UICONTROL Avancerat]** .
 1. Ändra metadata efter behov och tryck/klicka sedan på **[!UICONTROL Spara och stäng]** i verktygsfältet för att spara ändringarna.
 
-### Redigera samlingsmetadata {#editing-collection-metadata-in-bulk}
+### Redigera metadata för flera samlingar samtidigt {#editing-collection-metadata-in-bulk}
 
 Du kan redigera metadata för flera samlingar samtidigt. Med den här funktionen kan du snabbt replikera vanliga metadata i flera samlingar.
 
 1. I konsolen Samlingar väljer du två eller flera samlingar som du vill redigera metadata för.
-1. Tryck/klicka på ikonen **[!UICONTROL Egenskaper]** i verktygsfältet.
+1. Tryck/klicka på **[!UICONTROL Egenskaper]** i verktygsfältet.
 1. På sidan Metadata för **[!UICONTROL samling]** redigerar du metadata på flikarna **[!UICONTROL Grundläggande]** och **[!UICONTROL Avancerat]** .
+1. Om du vill visa metadataegenskaperna för en viss samling avmarkerar du de återstående samlingarna i samlingslistan. Metadataredigeringsfälten fylls i med metadata för den aktuella samlingen.
+
+   >[!NOTE]
+   >
+   >* På sidan med samlingsegenskaper kan du ta bort samlingar från listan med samlingar genom att avmarkera dem. I samlingslistan är alla samlingar markerade som standard. Metadata för samlingar som du tar bort uppdateras inte.
+   >* Överst i listan markerar du kryssrutan vid **[!UICONTROL Titel]** för att växla mellan att markera samlingarna och rensa listan.
+
+
 1. Tryck/klicka på **[!UICONTROL Spara och stäng]** i verktygsfältet och stäng sedan bekräftelsedialogrutan för att slutföra processen.
 1. Om du vill lägga till nya metadata med befintliga metadata väljer du **[!UICONTROL Lägg till läge]**. Om du inte markerar det här alternativet ersätter de nya metadata som finns i fälten. Tryck/klicka på **[!UICONTROL Skicka]**.
 
    >[!NOTE]
    >
-   >Läget Lägg till fungerar bara för fält som kan innehålla flera värden. För fält som bara kan innehålla ett värde läggs de nya metadata inte till i det befintliga värdet i fältet, även om du väljer **[!UICONTROL Lägg till]**.
+   >De metadata som du lägger till för de valda samlingarna skriver över tidigare metadata för dessa samlingar. Använd [!UICONTROL tilläggsläget] för att lägga till nya värden till befintliga metadata i fälten som kan innehålla flera värden. Enkelvärdesfält skrivs alltid över. Alla taggar som du lägger till i fältet [!UICONTROL Taggar] läggs till i den befintliga listan med taggar i metadata.
+
+Om du vill anpassa [!UICONTROL egenskapssidan för] metadata, inklusive lägga till, ändra eller ta bort metadataegenskaper, använder du schemaredigeraren.
+
+>[!TIP]
+>
+>Massredigeringsmetoden fungerar för resurser som är tillgängliga i en samling. För resurser som är tillgängliga i olika mappar eller som matchar ett gemensamt villkor är det möjligt att uppdatera metadata i grupp efter att ha sökt i dessa resurser.
 
 ## Sök i samlingar {#searching-collections}
 
@@ -288,6 +301,5 @@ Du kan köra ett arbetsflöde för resurserna i en samling. Om samlingen innehå
 >[!MORELIKETHIS]
 >
 >* [Konfigurera e-postmeddelanden för Experience Manager Assets](/help/sites-administering/notification.md#assetsconfig)
->* [Redigera metadataegenskaper för flera samlingar](managing-multiple-assets.md)
 >* [Skapa en granskningsuppgift för samlingar](bulk-approval.md)
 
