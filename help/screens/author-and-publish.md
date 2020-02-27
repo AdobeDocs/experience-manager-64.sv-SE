@@ -1,0 +1,390 @@
+---
+title: Konfigurera författare och publicera på AEM-skärmar
+seo-title: Konfigurera författare och publicera på AEM-skärmar
+description: AEM Screens-arkitekturen liknar en traditionell AEM Sites-arkitektur. Innehållet skapas på en AEM-författarinstans och sedan vidarebefordras till flera publiceringsinstanser. Följ den här sidan för att lära dig hur du konfigurerar författare och publicerar för AEM-skärmar.
+seo-description: AEM Screens-arkitekturen liknar en traditionell AEM Sites-arkitektur. Innehållet skapas på en AEM-författarinstans och sedan vidarebefordras till flera publiceringsinstanser. Följ den här sidan för att lära dig hur du konfigurerar författare och publicerar för AEM-skärmar.
+uuid: 2bea5594-8a89-4aa2-8f3c-35ce84c84cc6
+contentOwner: jsyal
+content-type: reference
+products: SG_EXPERIENCEMANAGER/6.4/SCREENS
+topic-tags: authoring
+discoiquuid: a6886b33-3bf1-4a81-8b9b-b6c154ca06d7
+translation-type: tm+mt
+source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+
+---
+
+
+# Konfigurera författare och publicera på AEM-skärmar{#configuring-author-and-publish-in-aem-screens}
+
+På den här sidan beskrivs följande ämnen:
+
+* **Konfigurera författare- och publiceringsinstanser**
+* **Konfigurera publiceringstopologi**
+* **Hantera publikation: Leverera innehållsuppdateringar från författare till enhet**
+
+## Förutsättningar {#prerequisites}
+
+Innan du börjar med författare och publiceringsservrar bör du ha kunskap om:
+
+* **AEM Topology**
+* **Skapa och hantera AEM-skärmsprojekt**
+* **Enhetsregistreringsprocess**
+
+>[!NOTE]
+>
+>Den här AEM-skärmfunktionen är bara tillgänglig om du har installerat AEM 6.4 Screens Feature Pack 2. Om du vill få tillgång till det här funktionspaketet måste du kontakta Adobes support och begära åtkomst. När du har behörighet kan du hämta den från paketresursen.
+
+## Konfigurera författare- och publiceringsinstanser {#configuring-author-and-publish-instances}
+
+>[!NOTE]
+>
+>Om du vill veta mer om författaren och publiceringen av en arkitekturöversikt och hur innehållet skapas på en AEM-författarinstans och sedan vidarebefordras till flera publiceringsinstanser kan du läsa [Författaröversikt och Översikt över](author-publish-architecture-overview.md)publiceringsarkitekturen.
+
+I följande avsnitt beskrivs hur du konfigurerar replikeringsagenter för författare och publiceringstopologi.
+
+Du kan skapa ett enkelt exempel där du är värd för en författare och två publiceringsinstanser:
+
+* Författare —> localhost:4502
+* Publish 1 (pub1) —> localhost:4503
+* Publish (pub2) —> localhost:4504
+
+### Konfigurera replikeringsagenter på författare {#setting-up-replication-agents-on-author}
+
+Om du vill skapa replikeringsagenter måste du lära dig hur du skapar en standardredigeringsagent.
+
+Det behövs tre replikeringsagenter för skärmar:
+
+1. **Standardreplikeringsagent ***(anges som***standardreplikeringsagent**)
+
+1. **Raster Replication Agent**
+1. **Agenten för omvänd replikering**
+
+Följ de här stegen för att skapa en agent för omvänd replikering.
+
+1. Navigera till din AEM-instans —> hammer-ikon —> **Åtgärder** —> **Konfiguration**.
+
+   ![screen_shot_2019-02-25at24621pm](assets/screen_shot_2019-02-25at24621pm.png)
+
+1. Välj **Replikering** i det vänstra navigeringsträdet.
+
+   ![screen_shot_2019-02-25at24715pm](assets/screen_shot_2019-02-25at24715pm.png)
+
+1. Välj **agenter på författaren** i mappen **Replication** och klicka på **New** för att skapa en ny standardslikeringsagent.
+
+   ![screen_shot_2019-02-25at25400pm](assets/screen_shot_2019-02-25at25400pm.png)
+
+1. Ange **titel** och **namn** för att skapa replikeringsagenten och klicka på **Skapa**.
+
+   ![screen_shot_2019-02-25at25737pm](assets/screen_shot_2019-02-25at25737pm.png)
+
+1. Högerklicka på replikeringsagenten och klicka på **Öppna** för att redigera inställningarna.
+
+   ![screen_shot_2019-02-25at30018pm](assets/screen_shot_2019-02-25at30018pm.png)
+
+1. Klicka på **Redigera** för att öppna dialogrutan **Agentinställningar** och ange informationen.
+
+   ![screen_shot_2019-02-25at30134pm](assets/screen_shot_2019-02-25at30134pm.png)
+
+1. Navigera till fliken **Transport** och ange **URI**, **Användare** och **Lösenord**.
+
+   ![screen_shot_2019-03-04at34955pm](assets/screen_shot_2019-03-04at34955pm.png)
+
+   >[!NOTE]
+   >
+   >Du kan också kopiera och byta namn på en befintlig standardreplikeringsagent.
+
+#### Skapar standardreplikeringsagenter {#creating-standard-replication-agents}
+
+1. Skapa en standardobjektreplikeringsagent för pub1 (standardagenten som är färdig bör redan vara konfigurerad) (till exempel *https://&lt;värdnamn>:4503/bin/receive?sling:authRequestLogin=1*)
+
+1. Skapa en standardslikeringsagent för pub2. Du kan kopiera rep agent för pub1 och uppdatera transporten som ska användas för pub2 genom att ändra porten i transportkonfigurationen. (till exempel *https://&lt;värdnamn>:4504/bin/receive?sling:authRequestLogin=1*)
+
+#### Skapar agenter för skärmreplikering {#creating-screens-replication-agents}
+
+1. Skapa AEM Screens-replikeringsagent för pub1. Det finns en som heter Screens Replication Agent som pekar på port 4503. Detta måste aktiveras.
+1. Skapa AEM Screens-replikeringsagent för pub2. Kopiera skärmreplikeringsagenten för pub1 och ändra porten till punkt 4504 för pub2.
+
+#### Skapar agenter för omvänd rasterreplikering {#creating-screens-reverse-replication-agents}
+
+1. Skapa en standardinverterad replikeringsagent för pub1.
+1. Skapa en standardinverterad replikeringsagent för pub2. Du kan kopiera omvänd rep-agent för pub1 och uppdatera transporten som ska användas för pub2 genom att ändra porten i transportkonfigurationen.
+
+## Konfigurera publiceringstopologi {#setting-up-publish-topology}
+
+### Steg 1: Konfigurera Apache Sling Oak-Based Discovery {#step-configure-apache-sling-oak-based-discovery}
+
+Konfigurera Apache Sling Oak-Based Discovery för alla publiceringsinstanser i topologin
+
+För varje publiceringsinstans:
+
+1. Gå till https://&lt;host>:&lt;port>/system/console/configMgr
+1. Välj **Konfiguration av Apache Sling Oak-Based Discovery Service** .
+1. Uppdatera topologianslutnings-URL: lägga till URL:er för alla partakta publiceringsinstanser, det vill säga, [http://localhost:4502/libs/sling/topology/connector](http://localhost:4502/libs/sling/topology/connector)
+1. Whitelist för topologikoppling: anpassa sig till IP-adresser eller undernät som omfattar partakta publiceringsinstanser
+1. Aktivera **automatiska stopp av lokala loopar**
+
+Konfigurationen ska vara identisk för varje publiceringsinstans och den automatiska stopploopen förhindrar en oändlig slinga.
+
+### Steg 2: Verifiera publiceringstopologi {#step-verify-publish-topology}
+
+För alla publiceringsinstanser går du till https://&lt;host>:&lt;port>/system/console/topology. Du bör se varje publiceringsinstans representeras i topologin.
+
+### Steg 3: Konfigurera ActiveMQ-objektkluster {#step-setup-activemq-artemis-cluster}
+
+I det här steget kan du skapa krypterat lösenord för ActiveMQ Artemis-klustret.\
+Klusteranvändaren och lösenordet för alla publiceringsinstanser i topologin måste vara identiska. Lösenordet för ActiveMQ Artemis-konfigurationen måste krypteras. Eftersom varje instans har en egen krypteringsnyckel måste du använda krypteringsstöd för att skapa en krypterad lösenordssträng. Krypterat lösenord används sedan i OSGi-konfigurationen för ActiveMQ.
+
+På varje publiceringsinstans:
+
+1. I OSGi Console går du till **MAIN** —> **Crypto Support** (*https://&lt;värd>:&lt;port>/system/console/crypto*).
+
+1. Skriv in det önskade lösenordet för oformaterad text (samma för alla förekomster) i **oformaterad text**
+1. Klicka på **Skydda**.
+1. Kopiera värdet **Skyddad text** till anteckningsrutan eller textredigeraren. Det här värdet används i OSGi-konfigurationen för ActiveMQ.
+
+Eftersom varje publiceringsinstans som standard har unika krypteringsnycklar måste du utföra det här steget på varje pub-instans och spara den unika nyckeln för nästa konfiguration.
+
+*Exempel*,
+
+Pub1 - {1ec346330f1c26b5c48255084c3b7272a5e85260322edd59119828d1fa0a6 10e}\
+Pub2 - {8d3d113c834cc4f52c2daee0da3cb0a21122a31f0138bfe4b70c9ead79415f41}
+
+### Steg 4: Aktivera ActiveMQ Artemis-kluster {#step-activate-activemq-artemis-cluster}
+
+På varje publiceringsinstans:
+
+1. Navigera till OSGi Config-hanteraren *https://&lt;host>:&lt;port>/system/console/configMgr*
+1. Välj **konfiguration för ActiveMQ Artemis JMS Provider** för Apache
+1. Uppdatera följande:
+
+* ***Klusterlösenord***: (använd krypterat värde från föregående steg per instans)
+* ***Avsnitt***: {name: &#39;commands&#39;, adress: &#39;com.adobe.cq.screens.commands&#39;, maxConsumers: 50}
+
+### Verifiera ActiveMQ-objektkluster {#verify-activemq-artemis-cluster}
+
+Följ stegen nedan för varje publiceringsinstans:
+
+1. Navigera till OSGi Console -> Meny > ActiveMQ Artemis ([http://localhost:4505/system/console/mq](http://localhost:4505/system/console/mq)).
+1. Verifiera och kontrollera om du vill visa portar för andra instanser under Klusterinformation > Topologi > noder=2, members=2.
+1. Skicka ett testmeddelande (högst upp på skärmen under Information om mäklare)
+1. Ange följande ändringar i fält:
+
+   1. **Mål**: /com.adobe.cq.screens/devTestTopic
+   1. **Text**:Hello World
+   1. Visa felet.log för varje instans för att se att meddelandet skickades och togs emot i hela klustret
+
+>[!NOTE]
+>
+>Navigering till OSGI-konsolen kan ta några sekunder efter att konfigurationen sparats i föregående steg. Du kan också kontrollera error.log för mer information.
+
+Följande bild visas till exempel när ActiveMQ Artemis Server har konfigurerats.
+
+Om du inte ser följande konfiguration från */system/console/mq* går du till */system/console/mq* och klickar på **Starta** om du vill starta om mäklaren.
+
+![image-2018-06-18-18-14-55-449](assets/image-2018-06-18-18-14-55-449.png)
+
+### Ta bort krav på referensrubrik {#remove-referrer-header-requirement}
+
+Följ stegen för varje publiceringsinstans:
+
+1. Gå till **Configuration Manager** från **OSGi Console**.
+1. Välj **filtret** Apache Sling Referer.
+1. Uppdatera konfigurationen och **markera Tillåt tomt**.
+
+## Konfigurera författare och publiceringsinstans {#configuring-author-and-publish-instance}
+
+När du har konfigurerat publiceringstologin måste du konfigurera författaren och publiceringsinstanserna för att visa de praktiska resultaten av implementeringen:
+
+>[!NOTE]
+>
+>**Förutsättningar**
+>
+>För att komma igång med det här exemplet skapar du ett nytt AEM Screens-projekt följt av att skapa en plats, en skärm och en kanal i projektet. Lägg till innehåll i kanalen och tilldela kanalen till en skärm.
+
+### Steg 1: Starta en AEM Screens Player (enhet) {#step-starting-an-aem-screens-player-device}
+
+1. Starta ett separat webbläsarfönster.
+1. Gå till Skärmspelaren med [webbläsaren](http://localhost:4502/content/mobileapps/cq-screens-player/firmware.html) eller starta appen AEM Screens. När du öppnar enheten visas enhetens status som ej registrerad.
+
+>[!NOTE]
+>
+>Du kan öppna en AEM Screens-spelare med appen AEM Screens som du har laddat ned eller med webbläsaren.
+
+### Steg 2: Registrera en enhet på författaren {#step-registering-a-device-on-author}
+
+1. Gå till [http://localhost:4502/screens.html/content/screens/we-retail](http://localhost:4502/screens.html/content/screens/we-retail) eller välj projektet och gå till Enheter > Enhetshanteraren.
+1. Välj **Registrera enhet**.
+1. Klicka på **Enhetsregistrering** för att visa enheten.
+1. Välj den enhet som du vill registrera och klicka på **Registrera enhet**.
+1. Verifiera registreringskoden och klicka på **Validera**.
+1. Ange en rubrik för enheten och klicka på **Registrera**.
+
+#### Steg 3: Tilldela enheten till visning {#step-assigning-the-device-to-display}
+
+1. Klicka på **Tilldela visning** i dialogrutan i föregående steg.
+1. Välj visningssökvägen för kanalen i mappen **Platser** .
+1. Klicka på **Tilldela**.
+1. Klicka på **Slutför** för att slutföra processen, och nu tilldelas enheten.
+
+Kontrollera spelaren så ser du innehållet som du har lagt till i kanalen.
+
+### Steg 4: Publicera enhetskonfiguration för publiceringsinstanser {#step-publishing-device-configuration-to-publish-instances}
+
+**Verifiera enheten**
+
+Innan du utför stegen nedan kontrollerar du att enhets-ID är verifierat. Om du vill verifiera söker du efter enhets-ID i CRXDELite, med sökvägen as */home/users/screens/{project}/devices*.
+
+Så här replikerar du enhetsanvändaren:
+
+1. Gå till sidan för användaradministration (t.ex.: [http://localhost:4502/useradmin](http://localhost:4502/useradmin)).
+1. Sök efter **gruppen screens-devices-master**
+1. Högerklicka på gruppen och klicka på **Aktivera**
+
+>[!CAUTION]
+>
+>Aktivera inte författare-publish-screens-service eftersom det är en systemanvändare som används av författarjobbet.
+
+Du kan även aktivera enheten från enhetshanteringskonsolen. Följ stegen nedan:
+
+1. Gå till ditt skärmsprojekt —> **Enheter**.
+1. Klicka på **Enhetshanteraren** i åtgärdsfältet.
+1. Markera enheten och klicka på **Aktivera** i åtgärdsfältet enligt bilden nedan.
+
+![screen_shot_2019-02-21at11036am](assets/screen_shot_2019-02-21at111036am.png)
+
+>[!NOTE]
+>
+>När du har aktiverat enheten kan du också redigera eller uppdatera server-URL:en genom att klicka på **Redigera server-URL** i åtgärdsfältet, som visas i bilden nedan, så sprids ändringarna till AEM Screens Player.
+
+![screen_shot_2019-02-21at105527am](assets/screen_shot_2019-02-21at105527am.png)
+
+## Publiceringskontrolllista {#publishing-check-list}
+
+Följande punkter sammanfattar publiceringskontrolllistan:
+
+* *Skärmar som enhetsanvändare* - Detta lagras som en AEM-användare och kan aktiveras via **Verktyg** > **Säkerhet** > **Användare**. Användaren får prefixet&quot;screens&quot; med en lång serialiserad sträng.
+
+* *Projekt* - projektet AEM Screens.
+
+* *Plats* - Den plats där enheten är ansluten.
+* *Kanaler* - en eller flera kanaler som visas på platsen
+* *Schema* - Om du använder ett schema måste du se till att det publiceras
+* *Plats, Scheman och Kanalmapp* - om motsvarande resurser finns i en mapp.
+
+När du har verifierat checklistan måste du verifiera följande ändringar/beteenden i din kanal:
+
+* När du har publicerat enhetskonfigurationen öppnar du konfigurationen för skärmspelaren och pekar den mot publiceringsinstansen. Du kan även aktivera enheten från enhetshanteringskonsolen.
+* Uppdatera kanalinnehåll på författaren och publicera det och verifiera att den uppdaterade kanalen nu visas på AEM Screens Player.
+* Anslut skärmspelaren till en annan publiceringsinstans och verifiera beteendet ovan.
+
+### Steg 5: Peka på enheten för att publicera instansen på Admin-panelen {#step-pointing-the-device-to-publish-instance-in-the-admin-panel}
+
+1. Visa administratörsgränssnittet från Skärmspelaren, tryck länge på det övre vänstra hörnet för att öppna Admin-menyn, på din touchaktiverade AEM Screens Player eller med en mus.
+1. Klicka på alternativet **Konfiguration **på sidopanelen.
+1. Ändra författarinstansen till publiceringsinstansen i **Server**.
+
+Se ändringarna i din AEM Screens Player.
+
+Du kan även uppdatera/redigera server-URL:en från enhetshanteringskonsolen genom att följa följande steg:
+
+1. Navigera till ditt AEM Screens-projekt och välj mappen **Devices** .
+1. Klicka på **Enhetshanteraren** i åtgärdsfältet.
+1. Markera enheten och klicka på **Redigera server-URL** i åtgärdsfältet, som visas i bilden nedan, så sprids ändringarna till AEM Screens Player.
+
+![screen_shot_2019-02-07at31028pm](assets/screen_shot_2019-02-07at31028pm.png)
+
+## Hantera publikation: Leverera innehållsuppdateringar från författare till enhet {#managing-publication-delivering-content-updates-from-author-to-publish-to-device}
+
+Du kan publicera och avpublicera innehåll från AEM-skärmar. Med funktionen Hantera publikation kan du leverera innehållsuppdateringar från författare till publiceringsenhet. Du kan publicera/avpublicera innehåll för hela AEM Screens-projektet eller bara för en av dina kanaler, platser, enheter, program eller scheman.
+
+### Hantera publikationer för ett AEM-skärmsprojekt {#managing-publication-for-an-aem-screens-project}
+
+Följ stegen nedan för att leverera innehållsuppdateringar från författaren till en enhet för ett AEM-skärmsprojekt:
+
+1. Gå till ditt AEM Screens-projekt.
+1. Klicka på **Hantera publikation** i åtgärdsfältet för att publicera projektet till publiceringsinstansen.
+
+   ![screen_shot_2019-02-25at21420pm](assets/screen_shot_2019-02-25at21420pm.png)
+
+1. Guiden **Hantera publikation** öppnas. Du kan välja **åtgärden** och schemalägga publiceringstiden för tillfället eller senare. Click **Next**.
+
+   ![screen_shot_2019-02-07at120304pm](assets/screen_shot_2019-02-07at120304pm.png)
+
+1. Markera rutan om du vill välja hela projektet i guiden **Hantera publikation** .
+
+   ![screen_shot_2019-02-25at22712pm](assets/screen_shot_2019-02-25at22712pm.png)
+
+1. Klicka på **+ Inkludera underordnade** i åtgärdsfältet och avmarkera alla alternativ för att publicera alla moduler i projektet och klicka på **Lägg** till för att publicera.
+
+   >[!NOTE]
+   >
+   >Som standard markeras alla rutor och du måste avmarkera kryssrutorna manuellt för att publicera alla moduler i projektet.
+
+   ![screen_shot_2019-02-25at23116pm](assets/screen_shot_2019-02-25at23116pm.png)
+
+1. Klicka på **Publicera** i **Hantera **publikationsguiden**.
+
+   ![screen_shot_2019-02-25at23341pm](assets/screen_shot_2019-02-25at23341pm.png)
+
+   >[!NOTE]
+   >
+   >Vänta i några sekunder/minuter så att innehållet når publiceringsinstansen.
+   >
+   >Det är en tvåstegsprocess att **hantera publikationer** med uppdaterat offlineinnehåll och stegen måste vara i rätt ordning.
+   >
+   > 1. Arbetsflödet fungerar inte om **Uppdatera offlineinnehåll** aktiveras före publicering med **Hantera publikation**.
+   > 1. Arbetsflödet fungerar inte om det inte finns några ändringar i projektet och inget för **Uppdatera offlineinnehåll**.
+   > 1. Arbetsflödet fungerar inte om författaren inte slutför replikeringsprocessen (innehållet överförs fortfarande till publiceringsinstansen) efter att ha klickat på knappen **Publicera** i arbetsflödet för att hantera publiceringen.
+
+
+1. När du är klar med arbetsflödet för att hantera publicering måste du aktivera det uppdaterade offlineinnehållet i författaren, som skapar uppdateringen offline på författarinstansen.
+
+   Navigera till projektet och klicka på **Uppdatera offlineinnehåll** i åtgärdsfältet. Den här åtgärden vidarebefordrar samma kommando för att publicera instansen, så att offlinepostmeddelandena även skapas i publiceringsinstansen.
+
+   ![screen_shot_2019-02-25at23451pm](assets/screen_shot_2019-02-25at23451pm.png)
+
+   >[!CAUTION]
+   >
+   >Du måste först publicera och sedan utlösa uppdateringen av offlineinnehållet, vilket sammanfattas i föregående steg.
+
+### Hantera publikation för en kanal {#managing-publication-for-a-channel}
+
+Följ stegen nedan för att leverera innehållsuppdateringar från författaren till en enhet för en kanal i ett AEM Screens Project:
+
+>[!NOTE]
+>
+>Följ bara det här avsnittet om det finns ändringar i en kanal. Om en kanal inte har några ändringar efter den tidigare uppdateringen av offlineinnehåll, kommer arbetsflödet för att hantera publicering för en enskild kanal inte att fungera.
+
+1. Navigera till ditt skärmsprojekt och markera kanalen.
+1. Klicka på **Hantera publikation** i åtgärdsfältet för att publicera kanalen till publiceringsinstansen.
+
+   ![screen_shot_2019-02-07at115800am](assets/screen_shot_2019-02-07at115800am.png)
+
+1. Guiden **Hantera publikation** öppnas. Du kan välja **åtgärden** och schemalägga publiceringstiden för tillfället eller senare. Click **Next**.
+
+   ![screen_shot_2019-02-07at120304pm](assets/screen_shot_2019-02-07at120304pm.png)
+
+1. Klicka på **Publicera **i guiden** Hantera **publikation.**
+
+   ![screen_shot_2019-02-07at120507pm](assets/screen_shot_2019-02-07at120507pm.png)
+
+   >[!NOTE]
+   >
+   >Vänta i några sekunder/minuter så att innehållet når publiceringsinstansen.
+
+1. När du är klar med arbetsflödet för att hantera publicering måste du aktivera det uppdaterade offlineinnehållet i författaren, som skapar uppdateringen offline på författarinstansen.
+
+   Navigera till kanalkontrollpanelen och klicka på **Uppdatera offlineinnehåll**. Den här åtgärden vidarebefordrar samma kommando för att publicera instansen, så att offlinepostmeddelandena även skapas i publiceringsinstansen.
+
+   ![screen_shot_2019-02-07at21608pm](assets/screen_shot_2019-02-07at21608pm.png)
+
+   >[!CAUTION]
+   >
+   >Du måste först publicera och sedan utlösa uppdateringen av offlineinnehållet, vilket sammanfattas i föregående steg.
+
+### Kanal- och enhetsomtilldelning: {#channel-and-device-re-assignment}
+
+Om du har tilldelat om en enhet måste du publicera både den första och den nya skärmen när enheten har tilldelats till den nya skärmen.
+
+Om du har omtilldelat en kanal måste du publicera både den inledande och den nya visningen när kanalen har omtilldelats den nya visningen.
