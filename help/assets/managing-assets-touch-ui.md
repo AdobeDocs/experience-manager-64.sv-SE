@@ -4,7 +4,7 @@ description: Lär dig mer om olika resurshanterings- och redigeringsuppgifter so
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 28ebd6c7648e4f32203e20dbc8a7d7f205acb740
+source-git-commit: 56e5fd252b860e95a81293407f51db9f5ae296c2
 
 ---
 
@@ -381,7 +381,7 @@ När du kopierar en resurs eller en mapp kopieras hela resursen eller mappen til
 
 Några attribut som är unika för en viss kopia av en tillgång överförs inte. Några exempel är:
 
-* Relativ sökväg, resurs-ID, datum och tid när de skapades samt versioner och versionshistorik. Vissa av dessa egenskaper indikeras av egenskaperna `dam:relativePath`, `jcr:uuid`, `jcr:created`och `cq:name`.
+* Tillgångs-ID, datum och tid när de skapades samt versioner och versionshistorik. Vissa av dessa egenskaper indikeras av egenskaperna `jcr:uuid`, `jcr:created`och `cq:name`.
 
 * Skapandetid och refererade sökvägar är unika för varje resurs och för varje återgivning.
 
