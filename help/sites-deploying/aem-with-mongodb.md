@@ -10,7 +10,7 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 3c59ec8f-b72f-48dd-bac8-9817005ae210
 translation-type: tm+mt
-source-git-commit: f9a147ee60d3088bb9245258146323d52c747642
+source-git-commit: 77997d6d8744cf1498add91a0aa2dab4e29f8e3d
 
 ---
 
@@ -40,7 +40,7 @@ Om villkoren inte uppfylls rekommenderar vi en aktiverings-/standby-distribution
 
 ### Minimal MongoDB-distribution för AEM {#minimal-mongodb-deployment-for-aem}
 
-Nedan visas en minimal driftsättning för AEM på MongoDB. För enkelhetens skull har SSL-terminering och HTTP-proxykomponenter generaliserats. Den består av en enda MongoBD-replikuppsättning, med en primär och två sekundära.
+Nedan visas en minimal driftsättning för AEM på MongoDB. För enkelhetens skull har SSL-terminering och HTTP-proxykomponenter generaliserats. Den består av en enda MongoDB-replikuppsättning, med en primär och två sekundära.
 
 ![chlimage_1-94](assets/chlimage_1-94.png)
 
