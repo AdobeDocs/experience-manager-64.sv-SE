@@ -3,7 +3,7 @@ title: Överlappande metadata
 description: I den här artikeln beskrivs hur du definierar överlappande metadata för resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: e6c3254b1913f300f5c4bf99c75734c4a38cf021
 
 ---
 
@@ -106,9 +106,8 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
 
    ![Överlappande metadata för videoresurs](assets/video_asset.png)
 
-   **** Bild: Överlappande *metadata för videoresurs*
+   *Bild: Överlappande metadata för videoresurs*
 
    ![Överlappande metadata för dokumentresurs](assets/doc_type_fields.png)
 
-   **** Bild: Överlappande *metadata för dokumentresurs*
-
+   *Bild:Överlappande metadata för dokumentresurs*
