@@ -4,7 +4,7 @@ description: Lär dig mer om olika resurshanterings- och redigeringsuppgifter so
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 56e5fd252b860e95a81293407f51db9f5ae296c2
+source-git-commit: 174c100a55bd8b2f4d33b07683e359d77f13983d
 
 ---
 
@@ -21,7 +21,9 @@ När du organiserar en samling resurser, till exempel alla `Nature` bilder, kan 
 
 >[!NOTE]
 >
->Delning av en resursmapp av den typen `sling:OrderedFolder` stöds inte vid delning till Marketing Cloud. Om du vill dela en mapp ska du inte välja Ordnad när du skapar en mapp.
+>* Delning av en resursmapp av den typen `sling:OrderedFolder` stöds inte vid delning till Marketing Cloud. Om du vill dela en mapp ska du inte välja Ordnad när du skapar en mapp.
+>* Det går inte att använda `subassets` ordet som namn på en mapp i Experience Manager. Det är ett nyckelord som är reserverat för nod som innehåller delresurser för sammansatta resurser.
+
 
 1. Navigera till den plats i mappen med digitala resurser där du vill skapa en ny mapp.
 1. Klicka på **[!UICONTROL Skapa]** på menyn. Välj **[!UICONTROL Ny mapp]**.
