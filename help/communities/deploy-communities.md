@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: d0249609-2a9c-4d3b-92ee-dbc5fbdeaac6
 translation-type: tm+mt
-source-git-commit: 8c66f2b0053882bd1c998d8e01dbb0573881bc87
+source-git-commit: 9d03a3988b2c8e34b9009d80a53d8b8508b5f0aa
 
 ---
 
@@ -132,7 +132,7 @@ Nödvändiga steg är:
 
 1. Upprepa steg 3 och 4 för alla författare- och publiceringsinstanser
 
-Mer information om hur du installerar paket finns på [webbkonsolsidan](../../help/sites-deploying/configuring-web-console.md#bundles) .
+Mer information om hur du installerar paket finns på [webbkonsolsidan](/help/sites-deploying/web-console.md#bundles) .
 
 #### Exempel: Installerat MySQL Connector-paket {#example-installed-mysql-connector-bundle}
 
