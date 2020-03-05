@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 616d42c8-2316-4c56-b89f-660903270620
 translation-type: tm+mt
-source-git-commit: d2b4e6599a7b1c01dc220a03b2be9aa55e5d7458
+source-git-commit: 11d4d4c4aa633974df2047631cf92f3226aaf6ca
 
 ---
 
@@ -112,10 +112,6 @@ De alternativ som är tillgängliga på dessa paneler beskrivs nedan.
   <tr>
    <td>Projekt</td> 
    <td>Med <a href="/help/sites-authoring/touch-ui-managing-projects.md">projektkonsolen får du direktåtkomst till dina projekt</a>. Projekt är virtuella kontrollpaneler. De kan användas för att bygga upp ett team och sedan ge teamet tillgång till resurser, arbetsflöden och uppgifter så att andra kan arbeta med ett gemensamt mål. <br /> </td> 
-  </tr>
-  <tr>
-   <td>Skärmar</td> 
-   <td><a href="/help/screens/authoring-screens.md">Med skärmar</a> kan du hantera alla kundcentrerade skärmar, oavsett storlek och plats.</td> 
   </tr>
   <tr>
    <td>Sites</td> 
@@ -271,7 +267,7 @@ På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt 
 
 I [kortvyn](#quick-actions) finns vissa åtgärder som snabbikoner och som finns i verktygsfältet. Snabbåtgärdsikoner är tillgängliga för ett enskilt objekt i taget och eliminerar behovet av att välja i förväg.
 
-Snabbåtgärderna är synliga när du för musen över ett resurskort (en stationär enhet). Vilka snabbåtgärder som är tillgängliga beror på konsolen och sammanhanget. Här följer t.ex. snabbåtgärderna för en sida i konsolen **Platser** :
+Snabbåtgärderna visas när du för musen över ett resurskort (en stationär enhet). Vilka snabbåtgärder som är tillgängliga beror på konsolen och sammanhanget. Här följer t.ex. snabbåtgärderna för en sida i konsolen **Platser** :
 
 ![screen_shot_2018-03-23at104953](assets/screen_shot_2018-03-23at104953.png)
 
@@ -305,39 +301,39 @@ Välja en specifik resurs beror på en kombination av vyn och enheten:
    <td>Kolumnvy<br /> </td> 
    <td>
     <ul> 
-     <li><br /> Skrivbord:Klicka på miniatyrbilden</li> 
-     <li><br /> Mobil enhet:Tryck på miniatyrbilden</li> 
+     <li>Skrivbord:<br /> Klicka på miniatyrbilden</li> 
+     <li>Mobil enhet:<br /> Tryck på miniatyrbilden</li> 
     </ul> </td> 
    <td>
     <ul> 
-     <li><br /> Skrivbord:Klicka på miniatyrbilden</li> 
-     <li><br /> Mobil enhet:Tryck på miniatyrbilden</li> 
+     <li>Skrivbord:<br /> Klicka på miniatyrbilden</li> 
+     <li>Mobil enhet:<br /> Tryck på miniatyrbilden</li> 
     </ul> </td> 
   </tr>
   <tr>
    <td>Kortvy<br /> </td> 
    <td>
     <ul> 
-     <li><br /> Skrivbord: För musen över och använd sedan snabbåtgärden bock</li> 
-     <li><br /> Mobil enhet: Tryck och håll på kortet</li> 
+     <li>Skrivbord:<br /> För musen över och använd sedan snabbåtgärden bock</li> 
+     <li>Mobil enhet:<br /> Tryck och håll på kortet</li> 
     </ul> </td> 
    <td>
     <ul> 
-     <li><br /> Skrivbord:Klicka på kortet</li> 
-     <li><br /> Mobil enhet:Tryck på kortet</li> 
+     <li>Skrivbord:<br /> Klicka på kortet</li> 
+     <li>Mobil enhet:<br /> Tryck på kortet</li> 
     </ul> </td> 
   </tr>
   <tr>
    <td>Listvy</td> 
    <td>
     <ul> 
-     <li><br /> Skrivbord:Klicka på miniatyrbilden</li> 
-     <li><br /> Mobil enhet:Tryck på miniatyrbilden</li> 
+     <li>Skrivbord:<br /> Klicka på miniatyrbilden</li> 
+     <li>Mobil enhet:<br /> Tryck på miniatyrbilden</li> 
     </ul> </td> 
    <td>
     <ul> 
-     <li><br /> Skrivbord:Klicka på miniatyrbilden</li> 
-     <li><br /> Mobil enhet:Tryck på miniatyrbilden</li> 
+     <li>Skrivbord:<br /> Klicka på miniatyrbilden</li> 
+     <li>Mobil enhet:<br /> Tryck på miniatyrbilden</li> 
     </ul> </td> 
   </tr>
  </tbody>
