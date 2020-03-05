@@ -1,15 +1,15 @@
 ---
 title: PhoneGap
 seo-title: Om du skriver innehåll för Adobe PhoneGap Enterprise
-description: 'Den här sidan fungerar som utgångspunkt för att utveckla appar med PhoneGap Enterprise med AEM. AEM integreras med PhoneGap så att du enkelt kan skapa appar med AEM-sidor. Med PhoneGap kan användaren skapa verktygsappar som gör att användaren kan arbeta med innehållet. '
-seo-description: 'Den här sidan fungerar som utgångspunkt för att utveckla appar med PhoneGap Enterprise med AEM. AEM integreras med PhoneGap så att du enkelt kan skapa appar med AEM-sidor. Med PhoneGap kan användaren skapa verktygsappar som gör att användaren kan arbeta med innehållet. '
+description: Den här sidan fungerar som utgångspunkt för att utveckla appar med PhoneGap Enterprise med AEM. AEM integreras med PhoneGap så att du enkelt kan skapa appar med AEM-sidor. Med PhoneGap kan användaren skapa verktygsappar som gör att användaren kan arbeta med innehållet.
+seo-description: Den här sidan fungerar som utgångspunkt för att utveckla appar med PhoneGap Enterprise med AEM. AEM integreras med PhoneGap så att du enkelt kan skapa appar med AEM-sidor. Med PhoneGap kan användaren skapa verktygsappar som gör att användaren kan arbeta med innehållet.
 uuid: c6ac02fa-d41c-4b57-95d8-171a96540dd6
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 discoiquuid: bc61e495-b53b-49c5-99e5-c2e35873e6bd
 translation-type: tm+mt
-source-git-commit: 6b1052ff03f336fa102b8863fe138e91c6e9f2f7
+source-git-commit: 9d03a3988b2c8e34b9009d80a53d8b8508b5f0aa
 
 ---
 
@@ -35,7 +35,7 @@ Följande resurser hjälper dig att komma igång med AEM Mobile med Adobe PhoneG
 * [AEM Mobile Content Services: En översikt](/help/mobile/develop-content-as-a-service.md)
 
    * Information om hur du aktiverar innehållstjänster och datamodeller finns i [Administrera innehållstjänster](/help/mobile/developing-content-services.md)
-   * Mer information om att skapa modeller finns i [Utveckla modeller](/help/mobile/models-in-repository.md)
+   * Mer information om att skapa modeller finns i [Utveckla modeller](/help/mobile/administer-mobile-apps.md)
    * Mer information om återgivning och leverans finns i [Återgivning och leverans av innehållstjänster](/help/mobile/rendering-and-delivery.md)
 
 >[!NOTE]
