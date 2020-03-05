@@ -244,7 +244,7 @@ Använd alternativen för **[!UICONTROL beskärningsalternativ]** och **[!UICONT
 | Utöka lager till bakgrundsstorlek |  | Utökar storleken på överlappade bildlager till storleken på bakgrundslagret. |
 | Namnge lager |  | Lager i PSD-filen överförs som separata bilder. |
 |  | Lagernamn | Namnger bilderna efter deras lagernamn i PSD-filen. Ett lager med namnet Price Tag i den ursprungliga PSD-filen blir till exempel en bild med namnet Price Tag. Om lagernamnen i PSD-filen är standardlagernamn för Photoshop (Bakgrund, Lager 1, Lager 2 och så vidare) får bilderna namn efter sina lagernummer i PSD-filen, inte efter deras standardlagernamn. |
-|  | Photoshop och lagernummer | Namnger bilderna efter deras lagernummer i PSD-filen och ignorerar de ursprungliga lagernamnen. Bilder namnges med Photoshops filnamn och ett nummer på lagret som läggs till. Det andra lagret i en fil som heter Spring Ad.psd heter Spring Ad_2 även om det har ett icke-standardnamn i Photoshop. |
+|  | Photoshop och lagernummer | Namnger bilderna efter deras lagernummer i PSD-filen och ignorerar de ursprungliga lagernamnen. Bilder namnges med Photoshops filnamn och ett nummer på lagret som läggs till. Det andra lagret i en fil som heter Spring Ad.psd får till exempel namnet Spring Ad_2 även om det har ett icke-standardnamn i Photoshop. |
 |  | Photoshop och lagernamn | Namnger bilderna efter PSD-filen följt av lagernamnet eller lagernumret. Lagernumret används om lagernamnen i PSD-filen är standardlagernamn i Photoshop. Ett lager med namnet Price Tag i en PSD-fil med namnet SpringAd får till exempel namnet Spring Ad_Price Tag. Ett lager med standardnamnet Lager2 kallas Spring Ad_2. |
 | Fästpunkt |  | Ange hur bilder ska förankras i mallar som genereras från lagerkompositionen som skapas från PSD-filen. Som standard är ankarpunkten i mitten. Med en central ankarpunkt kan ersättningsbilder bäst fylla samma område, oavsett ersättningsbildens proportioner. Bilder med en annan aspekt som ersätter den här bilden upptar i själva verket samma utrymme när de refererar till mallen och använder parameterersättning. Ändra till en annan inställning om ditt program kräver att ersättningsbilderna fyller ut det tilldelade utrymmet i mallen. |
 
@@ -287,11 +287,11 @@ Du kan omkoda en videofil genom att välja bland en mängd olika förinställnin
 
 Om du automatiskt vill skapa en bilduppsättning eller en snurra uppsättning från överförda bilder klickar du på kolumnen **[!UICONTROL Aktiv** för den förinställning du vill använda. Du kan markera flera förinställningar.
 
- Mer information om hur du skapar förinställningar för gruppuppsättningar finns i [Konfigurera förinställningar för gruppuppsättningar för att automatiskt generera bilduppsättningar och](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) snurruppsättningar.
+Mer information om hur du skapar förinställningar för gruppuppsättningar finns i [Konfigurera förinställningar för gruppuppsättningar för att automatiskt generera bilduppsättningar och](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) snurruppsättningar.
 
 ### Strömmade överföringar {#streamed-uploads}
 
-Om du överför flera resurser ökar I/O-anropen till AEM-servern drastiskt, vilket minskar uppladdningseffektiviteten och till och med kan göra att den tar slut. AEM Assets stöder direktuppspelad överföring av resurser. Direktuppspelad överföring minskar I/O-disken under överföringen genom att undvika att lagra resurser i en tillfällig mapp på servern innan den kopieras till databasen. I stället överförs data direkt till databasen. På så sätt minskas tiden det tar att överföra stora resurser och möjligheten till timeout. Direktuppspelad överföring är aktiverat som standard i AEM Resurser.
+Om du överför flera resurser ökar I/O-anropen till AEM-servern drastiskt, vilket minskar uppladdningseffektiviteten och till och med kan göra att den tar slut. AEM Assets stöder direktuppspelad överföring av resurser. Direktuppspelad överföring minskar I/O-disken under överföringen genom att resurslagring undviks i en tillfällig mapp på servern innan den kopieras till databasen. I stället överförs data direkt till databasen. På så sätt minskas tiden det tar att överföra stora resurser och möjligheten till timeout. Direktuppspelad överföring är aktiverat som standard i AEM Resurser.
 
 Direktuppspelning är inaktiverat för AEM som körs på JEE-server med en servlet-api-version som är lägre än 3.1.
 
@@ -346,7 +346,7 @@ Se även [Förhandsgranska dynamiska medieresurser.](previewing-assets.md)
 
 1. Om du vill schemalägga ett visst datum/tid för aktiveringen av tillgången använder du datumväljaren bredvid fältet **[!UICONTROL I tid]** .
 
-   ![Ställ in På-tid för tillgångar så att de blir tillgängliga för en fast tidsperiod mellan på- och fråntid](assets/chlimage_1-12.png)
+   ![Ställ in På-tid för tillgångar för att göra tillgångar tillgängliga för en fast tidsperiod mellan på- och fråntid](assets/chlimage_1-12.png)
 
 1. Om du vill inaktivera tillgången efter en viss tid väljer du datum och tid för inaktiveringen i datumväljaren bredvid fältet **[!UICONTROL Av tid]** .
 
@@ -363,7 +363,7 @@ Om du vill skapa taggar måste du ha skrivbehörighet för `/content/cq:tags/def
 
    ![omdömen](assets/ratings.png)
 
-   Värderingspoängen som du tilldelar resursen visas under **[!UICONTROL Dina klassificeringar]**. Det genomsnittliga omdöme som resursen fick från användare som värderade resursen visas under **[!UICONTROL Värdering]**. Dessutom visas uppdelningen av de omdömen som bidrar till det genomsnittliga omdömet under **[!UICONTROL Värderingsfördelning]**. Du kan söka efter resurser baserat på genomsnittliga poäng.
+   Värderingspoängen som du tilldelar resursen visas under **[!UICONTROL Dina graderingar]**. Det genomsnittliga omdöme som resursen fick från användare som värderade resursen visas under **[!UICONTROL Värdering]**. Dessutom visas uppdelningen av de omdömen som bidrar till det genomsnittliga omdömet under **[!UICONTROL Värderingsfördelning]**. Du kan söka efter resurser baserat på genomsnittliga poäng.
 
 1. Om du vill visa användningsstatistik för resursen trycker du på fliken **[!UICONTROL Insikter]** .
 
@@ -527,7 +527,7 @@ Du måste ha behörighet att ta bort en resurs för att den ska kunna tas bort. 
    * **[!UICONTROL Ta bort]** för att bekräfta åtgärden baserat på följande:
 
       * Om resursen inte har några referenser tas resursen bort.
-      * Om resursen har referenser visas ett felmeddelande om att det finns referenser till **[!UICONTROL en eller flera resurser]**.  Du kan välja **[!UICONTROL Tvinga borttagning]** eller **[!UICONTROL Avbryt]**.
+      * Om resursen har referenser visas ett felmeddelande om att det finns referenser till **[!UICONTROL en eller flera resurser]**. Du kan välja **[!UICONTROL Tvinga borttagning]** eller **[!UICONTROL Avbryt]**.
    >[!NOTE]
    >
    >Om du vill lösa eller ta bort inkommande referenser från andra sidor uppdaterar du de relevanta referenserna innan du tar bort en resurs.
@@ -830,7 +830,8 @@ Om du vill skriva ut anteckningarna och granskningsstatusen trycker du på ikone
 
    Återgå till den återgivna PDF-filen och uppdatera den. Den uppdaterade PDF-filen återspeglar de ändringar du har gjort.
 
-**Så här skriver du ut anteckningar på främmande språk**:Om en resurs innehåller anteckningar på främmande språk (särskilt icke-latinska språk) måste du först konfigurera tjänsten CQ-DAM-Handler-Gibson Font Manager på AEM-servern så att den kan skriva ut anteckningarna. När du konfigurerar Font Manager-tjänsten CQ-DAM-Handler-Gibson anger du sökvägen till teckensnitten för de önskade språken.
+**Så här skriver du ut anteckningar på främmande språk**:
+Om en resurs innehåller anteckningar på främmande språk (särskilt icke-latinska språk) måste du först konfigurera tjänsten CQ-DAM-Handler-Gibson Font Manager på AEM-servern så att den kan skriva ut anteckningarna. När du konfigurerar Font Manager-tjänsten CQ-DAM-Handler-Gibson anger du sökvägen till teckensnitten för de önskade språken.
 
 1. Öppna konfigurationssidan för **[!UICONTROL CQ-DAM-Handler-Gibson Font Manager Service]** från URL: [https://&lt;server>:&lt;port>/system/console/configMgr/com.day.cq.dam.handler.gibson.fontmanager.impl.FontManagerServiceImpl](http://localhost:4502/system/console/configMgr/com.day.cq.dam.handler.gibson.fontmanager.impl.FontManagerServiceImpl).
 1. Så här konfigurerar du **[!UICONTROL CQ-DAM-Handler-Gibson Font Manager-tjänsten]**:
@@ -855,7 +856,7 @@ Följande är ett exempel på hur du konfigurerar AEM för att skriva ut anteckn
    * Teckensnitt för valfritt språk: [https://www.google.com/get/noto/](https://www.google.com/get/noto/)
 
 1. Konfigurera PDF-filen med anteckningen genom att ange parametern font-family till `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif`. Den här konfigurationen är tillgänglig som standard och fungerar för alla europeiska språk och CJK-språk.
-1. Om det språk du väljer skiljer sig från de språk som nämns i steg 2 lägger du till en lämplig (kommaavgränsad) post i standardteckensnittsfamiljen.
+1. Om det språk du väljer skiljer sig från de språk som nämns i steg 2 lägger du till en lämplig (kommaseparerad) post i standardteckensnittsfamiljen.
 
 ## Skapa resursversionshantering {#asset-versioning}
 
