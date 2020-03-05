@@ -3,14 +3,14 @@ title: Publicera samlingar på varumärkesportalen
 description: Lär dig hur du publicerar och avpublicerar samlingar på varumärkesportalen.
 contentOwner: VG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 33210032c45e38963aed429e70eec4095c5d75f1
 
 ---
 
 
 # Publicera samlingar på varumärkesportalen {#publish-collections-to-brand-portal}
 
-Som administratör för Adobe Experience Manager-resurser (AEM) kan du publicera samlingar till instansen AEM Assets Brand Portal för din organisation. Du måste dock först integrera AEM Assets med varumärkesportalen. Mer information finns i [Konfigurera AEM Assets-integrering med varumärkesportalen](brand-portal-configuring-integration.md).
+Som administratör för Adobe Experience Manager-resurser (AEM) kan du publicera samlingar till instansen AEM Assets Brand Portal för din organisation. Du måste dock först integrera AEM Assets med varumärkesportalen. Mer information finns i [Konfigurera AEM-resurser med varumärkesportalen](configure-aem-assets-with-brand-portal.md).
 
 Om du gör senare ändringar i den ursprungliga samlingen i AEM Resurser återspeglas inte ändringarna i varumärkesportalen förrän du publicerar samlingen igen. Den här egenskapen ser till att ändringar i pågående arbete inte är tillgängliga i varumärkesportalen. Endast godkända ändringar som publiceras av en administratör är tillgängliga i varumärkesportalen.
 
