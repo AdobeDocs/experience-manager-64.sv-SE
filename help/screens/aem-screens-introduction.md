@@ -10,7 +10,7 @@ topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.4/SCREENS
 discoiquuid: 920e9702-82f7-4495-a84e-22a1c8b0d559
 translation-type: tm+mt
-source-git-commit: 5f613cbae9dccbc277287e5e58c8f0648c4f3bed
+source-git-commit: 11d4d4c4aa633974df2047631cf92f3226aaf6ca
 
 ---
 
@@ -25,7 +25,7 @@ Kom igång med en enkel digital signeringsupplevelse med [Kickstart för AEM-sk�
 
 **AEM Screens** bygger på den gedigna grunden för ***AEM Sites*** och gör det möjligt för marknadsförare och IT-personal att skapa och hantera upplevelser på flera digitala skärmar som påverkar butikens/butikens mål för att bygga varumärken och driva efterfrågan. Integreringen av AEM-skärmar med Sites gör att ni kan återanvända befintligt innehåll och effektivt leverera en sammanhängande och enhetlig kundlösning. Detta ger ett smidigt arbetsflöde för att skapa dedikerade digitala upplevelser som är mycket kostnadseffektiva och användbara. Det bidrar dessutom till att påverka varumärkesuppfattningen och de beslut som påverkar varumärkesuppfattningen, vilket leder till en ökning av köp och engagemang.
 
-AEM Screens är en kraftfull webbaserad lösning som gör att ni kan skapa dedikerade digitala menypaneler, produktrekommendationer, bakgrundsbilder för livsstil för att utöka kundinteraktionen och leverera enhetliga och användbara varumärkesupplevelser till fysiska platser, som butiker, hotell, banker, sjukvårds- och utbildningsinstitutioner och många fler - från samma AEM-plattform. Skärmar har många unika applikationer som interaktiva skärmar, spårbarhet, branding och framhäv nya miljöer för kunder och anställda, baserat på den domän där de används.
+AEM Screens är en kraftfull webbaserad lösning som gör att ni kan skapa dedikerade digitala menypaneler, produktrekommendationer, bakgrundsbilder för livsstil för att utöka kundinteraktionen och leverera enhetliga och användbara varumärkesupplevelser till fysiska platser, som butiker, hotell, banker, sjukvårds- och utbildningsinstitutioner och många fler - från samma AEM-plattform. Skärmar har många unika applikationer som interaktiva displayer, flygplanssökning, branding och framtagning av nya kunder och anställda baserat på den domän där de används.
 
 Det är enkelt och intuitivt att skapa och hantera ett program med hjälp av skärmar. Ett *program* är värd för webbsidor som skapats för AEM-skärmar av kunder eller implementeringspartners. *Platserna* hanterar fördefinierad hierarki och innehåller *visningar*. Varje skärm har en kontrollpanel som visar olika enheter och skärmar. Innehåll för AEM-skärmar hanteras i *kanaler*. AEM Screens Player återger innehåll som finns i kanaler på skärmar.
 
@@ -43,11 +43,7 @@ Information om hur du skapar ett demoskärmsprojekt och publicerar innehåll i s
 
 ## Starta ett nytt AEM-skärmsprojekt {#starting-a-new-aem-screens-project}
 
-För att starta en ny digital signeringsupplevelse krävs det en enhetlig roll innan den är klar för konsumtion. Följande roller är en startpunkt för att skapa ett nytt skärmsprojekt:
-
-* [Författare](authoring-screens.md)
-* [Utvecklare](developing-screens.md)
-* [Systemadministratör/tekniker](administering-screens.md)
+För att starta en ny digital signeringsupplevelse krävs det en enhetlig roll innan den är klar för konsumtion.
 
 Följande bild definierar personerna och deras roller för AEM-skärmar.
 
