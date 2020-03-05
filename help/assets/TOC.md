@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.4 Assets User Guide
 translation-type: tm+mt
-source-git-commit: 978c6e5cffb557f0d42f961bdde597fabf278ddd
+source-git-commit: 939da6b84ebfe5b3bbd97cd6a8b7556ea5189a13
 
 ---
 
@@ -119,7 +119,8 @@ source-git-commit: 978c6e5cffb557f0d42f961bdde597fabf278ddd
    + [Metadataschema för mapp](folder-metadata-schema.md)
    + [Hantera smarta taggar](managing-smart-tags.md)
 + Varumärkesportal {#brandportal}
-   + [Konfigurera AEM Assets-integrering med varumärkesportalen](brand-portal-configuring-integration.md)
+   + [Konfigurera AEM-resurser med varumärkesportalen](configure-aem-assets-with-brand-portal.md)
+   + [Publicera resurser på varumärkesportalen](brand-portal-publish-assets.md)
    + [Publicera samlingar på varumärkesportalen](brand-portal-publish-collection.md)
    + [Publicera mappar på varumärkesportalen](brand-portal-publish-folder.md)
 + Innehållsfragment {#fragments}
