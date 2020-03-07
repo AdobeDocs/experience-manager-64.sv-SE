@@ -5,7 +5,7 @@ sub-product: forms
 audience: end-user
 user-guide-title: AEM 6.4 Forms User Guide
 translation-type: tm+mt
-source-git-commit: 6546a047d3013740be93b739ccd880c685250200
+source-git-commit: 7aa8c789830ca6544c72f0086b186cffd939faec
 
 ---
 
@@ -22,16 +22,16 @@ source-git-commit: 6546a047d3013740be93b739ccd880c685250200
    + [Introduktion till interaktiv kommunikation](using/interactive-communications-overview.md)
    + [Introduktion till hantering av formulär](using/introduction-managing-forms.md)
    + Självstudiekurs: Skapa ditt första adaptiva formulär {#create-first-adaptive-form}
-      + [Självstudiekurs:Skapa ditt första anpassningsbara formulär](using/create-your-first-adaptive-form.md)
+      + [Självstudiekurs: Skapa ditt första anpassningsbara formulär](using/create-your-first-adaptive-form.md)
       + [Självstudiekurs: Skapa ett anpassat formulär](using/create-adaptive-form.md)
-      + [Självstudiekurs:Skapa formulärdatamodell](using/create-form-data-model.md)
+      + [Självstudiekurs: Skapa formulärdatamodell](using/create-form-data-model.md)
       + [Självstudiekurs: Tillämpa regler på anpassningsbara formulärfält l](using/apply-rules-to-adaptive-form-fields.md)
       + [Självstudiekurs: Formatera ditt hjälpmedelsformulär](using/style-your-adaptive-form.md)
    + Självstudiekurs: Skapa din första interaktiva kommunikation {#create-first-interactive-communication}
-      + [Självstudiekurs:Skapa din första interaktiva kommunikation](using/create-your-first-interactive-communication.md)
+      + [Självstudiekurs: Skapa din första interaktiva kommunikation](using/create-your-first-interactive-communication.md)
       + [Självstudiekurs: Planera interaktiv kommunikation](using/planning-interactive-communications.md)
-      + [Självstudiekurs:Skapa formulärdatamodell](using/create-form-data-model0.md)
-      + [Självstudiekurs:Skapa dokumentfragment](using/create-document-fragments.md)
+      + [Självstudiekurs: Skapa formulärdatamodell](using/create-form-data-model0.md)
+      + [Självstudiekurs: Skapa dokumentfragment](using/create-document-fragments.md)
       + [Självstudiekurs: Skapa mallar](using/create-templates-print-web.md)
       + [Självstudiekurs: Skapa interaktiv kommunikation](using/create-interactive-communication0.md)
    + AEM Forms Reference Collaterals {#aem-forms-reference-collaterals}
@@ -308,7 +308,7 @@ source-git-commit: 6546a047d3013740be93b739ccd880c685250200
    + [Lägg till anpassade egenskaper i Correspondence Management-resurser](using/add-custom-properties-cm-assets.md)
    + [Anpassa gränssnitt för att skapa korrespondens](using/customize-create-correspondence-ui.md)
    + [Anpassa textredigeraren](using/customize-text-editor.md)
-   + [Korrespondenshantering:Felsökning](using/cm-troubleshooting.md)
+   + [Korrespondenshantering: Felsökning](using/cm-troubleshooting.md)
    + [API:er för åtkomst till bokstavsinstanser](using/cm-apis-to-access-letter-instances.md)
    + [Integrera Create Correspondence UI med din anpassade portal](using/integrating-create-correspondence-ui-with-your-portal.md)
    + [Anpassade specialtecken i korrespondenshantering](using/custom-special-characters.md)
@@ -517,7 +517,7 @@ source-git-commit: 6546a047d3013740be93b739ccd880c685250200
       + [Importera och exportera globala inställningar](/help/forms/using/admin-help/importing-exporting-global-settings.md)
       + [Ställa in dagens meddelande](/help/forms/using/admin-help/setting-message-day.md)
       + [Anpassa sökmallar](/help/forms/using/admin-help/customizing-search-templates.md)
-      + [Hantera de kategorier som visas i arbetsytan](/help/forms/using/admin-help/categories-displayed-workspace.md)
+      + [Hantera de kategorier som visas i Arbetsyta](/help/forms/using/admin-help/categories-displayed-workspace.md)
    + Hälsoövervakning {#health-monitor}
       + [Översikt över hälsoövervakning](/help/forms/using/admin-help/overview-11.md)
       + [Finjustera prestanda för hälsoövervakning](/help/forms/using/admin-help/fine-tuning-health-monitor-performance.md)
@@ -612,6 +612,7 @@ source-git-commit: 6546a047d3013740be93b739ccd880c685250200
       + Anropa AEM Forms på JEE med API:er {#invoking-aem-forms-jee-apis}
          + [Anropa AEM-formulär med REST-begäran](developing/invoking-aem-forms-using-rest.md)
          + [Anropa AEM-formulär med fjärrstyrning](developing/invoking-aem-forms-using-remoting.md)
+         + [Anropa AEM-formulär med webbtjänster](developing/invoking-aem-forms-using-web.md)
          + [Anropa AEM-formulär med webbtjänster](developing/invoking-human-centric-long-lived.md)
          + [Anropa AEM-formulär med JavaAPI](developing/invoking-aem-forms-using-java.md)
          + [Skapa Flash Builder-program som utför SSO-autentisering med HTTP-tokens](developing/creating-flash-builder-applications-perform.md)
