@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: Configuration
 discoiquuid: e78f539a-109c-444c-8e52-be2260c3509f
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: c5a78d6c2b8a55cad6266e86e9b990cafc038431
 
 ---
 
@@ -44,7 +44,7 @@ Om det inte finns något klientbibliotek för det begärda språket söker progr
 
 ## Lägg till lokaliseringsstöd för språk som inte stöds {#add-localization-support-for-non-supported-locales}
 
-AEM Forms har för närvarande stöd för lokalisering av innehåll i adaptiva formulär på engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska (Brasilien), kinesiska (zh-tn), kinesiska (zh-tw) och koreanska (ko-kr).
+AEM Forms har för närvarande stöd för lokalisering av innehåll i adaptiva formulär på engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska (Brasilien) (pt-BR, kinesiska (zh-CN), kinesiska (zh-TW) och koreanska (ko-KR).
 
 Så här lägger du till stöd för en ny språkinställning vid körning av adaptiva formulär:
 
@@ -97,12 +97,12 @@ LogMessages.js
 
 ### Lägg till språkstöd för ordlistan {#add-locale-support-for-the-dictionary-br}
 
-Utför bara det här steget om `<locale>` du lägger till inte finns bland `en`, `de`, `es`, `fr`, `it`, `pt-br`, `zh-tn`, `zh-tw`, `ja``ko-kr`¥.
+Utför bara det här steget om `<locale>` du lägger till inte finns bland `en`, `de`, `es`, `fr`, `it`, `pt-br`, `zh-cn`, `zh-tw`, `ja``ko-kr`¥.
 
 1. Skapa en `nt:unstructured` nod `languages` under `etc`, om den inte redan finns.
 
 1. Lägg till en strängegenskap med flera värden `languages` till noden, om den inte redan finns.
-1. Lägg till `<locale>` standardvärden för nationella inställningar `de`, `es`, `fr`, `it`, `pt-br`, `zh-tn`, `zh-tw`, `ja`, `ko-kr`om sådana inte finns.
+1. Lägg till `<locale>` standardvärden för nationella inställningar `de`, `es`, `fr`, `it`, `pt-br`, `zh-cn`, `zh-tw`, `ja`, `ko-kr`om sådana inte finns.
 
 1. Lägg till egenskapen `<locale>` i värdena för `languages` egenskapen `/etc/languages`.
 
