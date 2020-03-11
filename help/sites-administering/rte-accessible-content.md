@@ -10,7 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: ff0f006d-461c-4cc4-b6eb-d665f3f3b498
 translation-type: tm+mt
-source-git-commit: 89f920203342a55280eaee4a89bbdb8497344b49
+source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
 
 ---
 
@@ -24,12 +24,8 @@ AEM har stöd för båda:
 
 >[!NOTE]
 >
->Se även:
->
->* Mer information finns i [Snabbguide till WCAG 2.0](/help/managing/qg-wcag.md)
+>* [Snabbguide till WCAG 2.0](/help/managing/qg-wcag.md)
 >* [Skapa tillgängligt innehåll (WCAG 2.0-överensstämmelse)](/help/sites-authoring/creating-accessible-content.md)
->
-
 
 
 Innehållsförfattare kan använda funktionerna i RTE för att tillhandahålla hjälpmedelsinformation när de lägger till innehåll på en sida. Det kan vara att lägga till strukturinformation via rubriker och styckeelement.
@@ -196,7 +192,7 @@ I **Tabell** måste du uttryckligen ange eller ta bort attributet till/från DOM
    }
    ```
 
-1. Spara ändringarna med **Spara alla ...**
+1. Spara ändringarna med **Spara alla**
 
 >[!NOTE]
 >
@@ -206,5 +202,4 @@ I **Tabell** måste du uttryckligen ange eller ta bort attributet till/från DOM
 >
 >* Egenskapen `itemId` för varje motsvarande fält ställs in på namnet på lämpligt DOM-attribut (`TablePropertiesDialog`).
 >* Attributet anges och/eller tas bort explicit i DOM-elementet (`Table`).
-
 
