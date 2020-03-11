@@ -3,7 +3,7 @@ title: Stöd för Camera Raw
 description: Lär dig hur du aktiverar stöd för Camera Raw i Adobe Experience Manager Assets.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e6c3254b1913f300f5c4bf99c75734c4a38cf021
+source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
 
 ---
 
@@ -20,7 +20,7 @@ Så här aktiverar du stöd för Camera Raw i Adobe Experience Manager Assets:
 
 1. Hämta [Camera Raw-paketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) från paketresursen.
 
-1. Åtkomst `https://[aem_server]:[port]/workflow`. Öppna arbetsflödet för **[!UICONTROL DAM-uppdatering av resurser]** .
+1. Öppna `https://[aem_server]:[port]/workflow`. Öppna arbetsflödet för **[!UICONTROL DAM-uppdatering av resurser]** .
 
 1. Öppna steget **[!UICONTROL Bearbeta miniatyrbilder]** .
 
@@ -57,11 +57,11 @@ Nu kan du importera Camera Raw-filer till AEM Resurser. När du har installerat 
 
 ![chlimage_1-337](assets/chlimage_1-337.png)
 
-*Bild: Alternativ på sidopanelen.*
+*Bild: Alternativ i sidopanelen*
 
 ![chlimage_1-337](assets/chlimage_1-338.png)
 
-*Bild: Använd det här alternativet om du vill göra små ändringar i dina bilder.*
+*Bild: Använd det här alternativet om du vill göra små ändringar i dina bilder*
 
 När du har sparat redigeringarna i en Camera Raw-bild `AdjustedPreview.jpg` skapas en ny återgivning för bilden. För andra bildtyper än Camera Raw återspeglas ändringarna i alla återgivningar.
 
