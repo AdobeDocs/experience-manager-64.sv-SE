@@ -3,7 +3,7 @@ title: Överlappande metadata
 description: I den här artikeln beskrivs hur du definierar överlappande metadata för resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e6c3254b1913f300f5c4bf99c75734c4a38cf021
+source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
 
 ---
 
@@ -35,7 +35,7 @@ Tänk dig ett scenario där du vill visa överlappande metadata baserat på den 
 Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligatoriskt fält.
 
 1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Verktyg]** > **[!UICONTROL Resurser]** > **[!UICONTROL Metadata Schemas]**.
-1. Välj ett schemaformulär på sidan **[!UICONTROL Schemaformulär]** och redigera sedan schemat genom att trycka/klicka på **[!UICONTROL Redigera]** i verktygsfältet.
+1. In the **[!UICONTROL Schema Forms]** page, select a schema form and then tap/click **[!UICONTROL Edit]** from the toolbar to edit the schema.
 
    ![select_form](assets/select_form.png)
 
@@ -76,7 +76,7 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
    ![select_beroentfield](assets/select_dependentfield.png)
 
 1. Under **[!UICONTROL Krav]** väljer du alternativet **[!UICONTROL Obligatorisk, baserat på ny regel]** .
-1. Tryck/klicka på **[!UICONTROL Lägg till regel]** och välj fältet **[!UICONTROL Resurstyp]** för att skapa ett beroende. Välj också det fältvärde som beroendet ska skapas utifrån. I det här fallet väljer du **[!UICONTROL Video]**. Tryck/klicka på **[!UICONTROL Klar]** för att spara ändringarna.
+1. Tryck/klicka på **[!UICONTROL Lägg till regel]** och välj fältet **[!UICONTROL Resurstyp]** för att skapa ett beroende. Välj också det fältvärde som beroendet ska skapas utifrån. In this case, choose **[!UICONTROL Video]**. Tap/click **[!UICONTROL Done]** to save the changes.
 
    ![define_rule](assets/define_rule.png)
 
@@ -86,7 +86,7 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
 
 1. Under **[!UICONTROL Synlighet]** väljer du alternativet **[!UICONTROL Synlig, baserat på den nya regeln]** .
 
-1. Tryck/klicka på **[!UICONTROL Lägg till regel]** och välj fältet **[!UICONTROL Resurstyp]** för att skapa ett beroende. Välj också det fältvärde som beroendet ska skapas utifrån. I det här fallet väljer du **[!UICONTROL Video]**. Tryck/klicka på **[!UICONTROL Klar]** för att spara ändringarna.
+1. Tryck/klicka på **[!UICONTROL Lägg till regel]** och välj fältet **[!UICONTROL Resurstyp]** för att skapa ett beroende. Välj också det fältvärde som beroendet ska skapas utifrån. In this case, choose **[!UICONTROL Video]**. Tap/click **[!UICONTROL Done]** to save the changes.
 
    ![define_visibilityrule](assets/define_visibilityrule.png)
 
@@ -96,7 +96,7 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
 
    >[!NOTE]
    >
-   >Du kan använda villkoret **[!UICONTROL Krav]** och **[!UICONTROL synlighet]** oberoende av varandra.
+   >You can apply **[!UICONTROL Requirement]** condition and **[!UICONTROL Visibility]** condition independent of each other.
 
 1. Du kan också skapa ett beroende mellan värdet Video i fältet Resurstyp och andra fält, som Kodek och Varaktighet.
 1. Upprepa stegen för att skapa beroende mellan dokumentresurser (PDF och Word) i fältet **[!UICONTROL Resurstyp]** och fält som Antal sidor och Författare.
@@ -110,4 +110,4 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
 
    ![Överlappande metadata för dokumentresurs](assets/doc_type_fields.png)
 
-   *Bild:Överlappande metadata för dokumentresurs*
+   *Bild: Överlappande metadata för dokumentresurs*
