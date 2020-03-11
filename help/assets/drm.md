@@ -3,7 +3,7 @@ title: Digital Rights Management i Assets
 description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information om licensierade mediefiler i AEM.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
 
 ---
 
@@ -11,6 +11,8 @@ source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
 # Digital Rights Management in Assets {#digital-rights-management-in-assets}
 
 Digitala resurser är ofta kopplade till en licens, som anger användningsvillkoren och hur länge de ska användas. Eftersom Adobe Experience Manager Assets (AEM) är helt integrerat med AEM-plattformen kan ni effektivt hantera information om när mediefiler förfaller och resursstatus. Du kan även associera licensinformation med resurser.
+
+<!-- TBD see if adding more UICONTROL tags is needed -->
 
 ## Resursens förfallodatum {#asset-expiration}
 
@@ -20,21 +22,21 @@ Du kan visa förfallostatusen för en resurs i resurskonsolen i både kort- och 
 
 **Kortvy**
 
- För en resurs som har gått ut visas en flagga på kortet som anger att den har gått ut.
+För en resurs som har gått ut visas en flagga på kortet som anger att den har gått ut.
 
 ![utgången_flagga_kort](assets/expired_flag_card.png)
 
 **Listvy**
 
- För förfallna mediefiler visas bannern **[!UICONTROL Status]** i kolumnen **[!UICONTROL Förfallen]** .
+För förfallna mediefiler visas bannern **[!UICONTROL Status]** i kolumnen **[!UICONTROL Förfallen]** .
 
 ![utgången_flagga_lista](assets/expired_flag_list.png)
 
- Du kan visa förfallostatusen för en resurs på tidslinjen. Markera resursen och välj Tidslinje på menyn GlobalNav.
+Du kan visa förfallostatusen för en resurs på tidslinjen. Markera resursen och välj Tidslinje på menyn GlobalNav.
 
 ![chlimage_1-144](assets/chlimage_1-144.png)
 
- Du kan även visa förfallostatusen för resurser på **[!UICONTROL referenslisten]** . Den hanterar förfallostatus och relationer mellan sammansatta resurser och refererade delresurser, samlingar och projekt.
+Du kan även visa förfallostatusen för resurser på **[!UICONTROL referenslisten]** . Den hanterar förfallostatus och relationer mellan sammansatta resurser och refererade delresurser, samlingar och projekt.
 
 1. Navigera till resursen som du vill visa referenser till webbsidor och sammansatta resurser för.
 1. Markera resursen och klicka/tryck på den globala navigeringsikonen.
@@ -69,7 +71,7 @@ Du kan söka efter utgångna resurser, inklusive underresurser som gått ut, på
 
    ![chlimage_1-151](assets/chlimage_1-151.png)
 
-1. Klicka/tryck på alternativet **[!UICONTROL Förfallostatus]** för att expandera det.
+1. Click/tap the **[!UICONTROL Expiry Status]** option to expand it.
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 
@@ -83,14 +85,14 @@ Om du ändrar förfallodatumet för en publicerad resurs till ett datum som är 
 
 Om ett fel eller fel dessutom förhindrar att schemaläggaren upptäcker förfallna resurser i den aktuella cykeln, undersöker schemaläggaren om dessa resurser i nästa cykel och identifierar deras förfallna status.
 
-Om du vill att resurskonsolen ska kunna visa de sammansatta resurserna tillsammans med de delresurser som har gått ut, konfigurerar du ett arbetsflöde för **Adobe CQ DAM-meddelande** om förfallodatum i AEM Configuration Manager.
+Om du vill att resurskonsolen ska visa de sammansatta resurserna tillsammans med de delresurser som har gått ut, konfigurerar du ett arbetsflöde för **Adobe CQ DAM Expiry Notification** i AEM Configuration Manager.
 
 1. Öppna AEM Configuration Manager.
 1. Välj **[!UICONTROL Adobe CQ DAM Expiry Notification]**. Som standard är **[!UICONTROL Tidsbaserad schemaläggare]** markerad, vilket schemalägger ett jobb att vid en viss tidpunkt kontrollera om en resurs har upphört att gälla eller inte. När jobbet har slutförts visas resurser som har upphört att gälla och refererade resurser som utgångna i sökresultaten.
 
    ![chlimage_1-154](assets/chlimage_1-154.png)
 
-1. Om du vill köra jobbet regelbundet avmarkerar du fältet **[!UICONTROL Tidsbaserad schemaläggarregel]** och ändrar tiden i sekunder i fältet **[!UICONTROL Periodisk schemaläggare]** . Exempeluttrycket &#39;0 0 0 &amp;ast; &amp;ast; ? utlöser jobbet vid 00 timmar.
+1. Om du vill köra jobbet regelbundet avmarkerar du fältet **[!UICONTROL Tidsbaserad schemaläggarregel]** och ändrar tiden i sekunder i fältet **[!UICONTROL Periodisk schemaläggare]** . Exempeluttrycket ”0 0 0 &amp;ast; &amp;ast; ?” utlöser till exempel jobbet kl. 00.
 1. Välj **[!UICONTROL Skicka e-post]** om du vill få e-post när en mediefil förfaller.
 
    >[!NOTE]
@@ -111,7 +113,7 @@ Resurskonsolen för Adobe Experience Manager-resurser (AEM) kan visa olika läge
 
    ![chlimage_1-155](assets/chlimage_1-155.png)
 
-1. Tryck/klicka på ikonen **[!UICONTROL Publicera]** i verktygsfältet. Om du inte kan se ikonen **Publicera** i verktygsfältet trycker/klickar du på **[!UICONTROL Mer]** i verktygsfältet och letar upp ikonen **[!UICONTROL Publicera]** .
+1. Tap/click the **[!UICONTROL Publish]** icon from the toolbar. If you can&#39;t see the **Publish** icon on the toolbar, tap/click **[!UICONTROL More]** on the toolbar and locate the **[!UICONTROL Publish]** icon.
 
    ![chlimage_1-156](assets/chlimage_1-156.png)
 
@@ -144,15 +146,15 @@ Resurskonsolen för Adobe Experience Manager-resurser (AEM) kan visa olika läge
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
 1. Tryck på returtangenten och klicka/tryck sedan på ikonen **[!UICONTROL GlobalNav]** för att visa sökpanelen.
-1. På sökpanelen trycker/klickar du på **[!UICONTROL Publiceringsstatus]** och väljer **[!UICONTROL Publicerad]** för att söka efter publicerade resurser i AEM Resurser.
+1. In the Search panel, tap/click **[!UICONTROL Publish Status]** and select **[!UICONTROL Published]** to search for published assets in AEM Assets.
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
 
-1. Tryck/klicka på **[!UICONTROL Godkännandestatus]** och klicka på lämpligt alternativ för att söka efter godkända eller avvisade resurser.
+1. Tap/click **[!UICONTROL Approval Status]** and click the appropriate option to search for approved or rejected assets.
 
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
-1. Om du vill söka efter resurser baserat på deras förfallostatus väljer du **[!UICONTROL Förfallostatus]** på sökpanelen och väljer lämpligt alternativ.
+1. To search for assets based on their expiration status, select **[!UICONTROL Expiry Status]** in the Search panel and choose the appropriate option.
 
    ![chlimage_1-165](assets/chlimage_1-165.png)
 
@@ -182,12 +184,12 @@ En tillgång anses vara skyddad om något av dessa villkor är uppfyllt:
 ### Hämta DRM-resurser {#downloading-drm-assets}
 
 1. I kortvyn väljer du de resurser du vill hämta och klickar på **[!UICONTROL hämtningsikonen]** .
-1. På sidan **[!UICONTROL Copyrighthantering]** väljer du den resurs du vill hämta i listan.
+1. In the **[!UICONTROL Copyright Management]** page, select the asset you want to download from the list.
 1. Välj **[!UICONTROL Godkänn]** i licensfönstret. En bock visas bredvid den mediefil som du godkänner licensavtalet för. Tryck/klicka på knappen **[!UICONTROL Hämta]** .
 
    >[!NOTE]
    >
-   >Knappen **[!UICONTROL Hämta]** är bara aktiverad när du väljer att godkänna licensavtalet för en skyddad resurs. Om urvalet omfattar både skyddade och oskyddade resurser visas bara de skyddade resurserna i den vänstra rutan och knappen **[!UICONTROL Hämta]** aktiveras för att hämta de oskyddade resurserna. Om du vill acceptera licensavtal för flera skyddade tillgångar samtidigt markerar du resurserna i listan och väljer sedan **[!UICONTROL Godkänn]**.
+   >The **[!UICONTROL Download]** button is enabled only when you choose to agree to the license agreement for a protected asset. However, if your selection comprises both protected and unprotected assets, only the protected assets are listed in the left pane and the **[!UICONTROL Download]** button is enabled to download the unprotected assets. To simultaneously accept license agreements for multiple protected assets, select the assets from the list and then choose **[!UICONTROL Agree]**.
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
