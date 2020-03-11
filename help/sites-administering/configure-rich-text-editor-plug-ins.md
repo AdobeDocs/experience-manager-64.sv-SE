@@ -1,17 +1,9 @@
 ---
 title: Konfigurera plugin-programmen för RTF-redigeraren
-seo-title: Konfigurera plugin-programmen för RTF-redigeraren
 description: Lär dig konfigurera plugin-programmen för AEM Rich Text Editor så att enskilda funktioner aktiveras.
-seo-description: Lär dig konfigurera plugin-programmen för AEM Rich Text Editor så att enskilda funktioner aktiveras.
-uuid: d6a029fb-e431-4f12-9002-7d794e4beb0d
-contentOwner: asgupta
-products: SG_EXPERIENCEMANAGER/6.4/SITES
-topic-tags: operations
-content-type: reference
-discoiquuid: e0328f9c-26c6-4c40-8594-3190c38cebd8
-noindex: true
+contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 89f920203342a55280eaee4a89bbdb8497344b49
+source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
 
 ---
 
@@ -134,11 +126,11 @@ Du kan förkonfigurera beteendet för ikonen **[!UICONTROL Klistra in (Ctrl+V)]*
 
 Konfigurationen tillåter följande tre typer av användningsfall:
 
-*  Klistra in text med webbläsarens standardimplementering för inklistring. Det är inte en rekommenderad metod eftersom den kan medföra oönskad markering. Konfigurerad med `browser` nedan.
+* Klistra in text med webbläsarens standardimplementering för inklistring. Det är inte en rekommenderad metod eftersom den kan medföra oönskad markering. Konfigurerad med `browser` nedan.
 
-*  Klistra in urklippsinnehållet som oformaterad text. Den raderar alla formatelement från det kopierade innehållet innan den infogas i AEM-komponenten. Konfigurerad med `plaintext` nedan.
+* Klistra in urklippsinnehållet som oformaterad text. Den raderar alla formatelement från det kopierade innehållet innan den infogas i AEM-komponenten. Konfigurerad med `plaintext` nedan.
 
-*  Klistra in texten, inklusive tabeller, med formatering när du kopierar från MS Word. Det går inte att kopiera och klistra in text från en annan källa, t.ex. en webbsida eller MS Excel, utan endast partiell formatering. Konfigurerad med `wordhtml` nedan.
+* Klistra in texten, inklusive tabeller, med formatering när du kopierar från MS Word. Det går inte att kopiera och klistra in text från en annan källa, t.ex. en webbsida eller MS Excel, utan endast partiell formatering. Konfigurerad med `wordhtml` nedan.
 
 1. Navigera till `<rtePlugins-node>/edit` noden i komponenten. Skapa noderna om de inte finns. Mer information finns i [Aktivera ett plugin-program](#activateplugin).
 1. Skapa en egenskap med följande information i noden: `edit`
@@ -562,7 +554,7 @@ Ibland kan du skapa datatabeller utan visuell text i en kolumnrubrik om rubriken
 RTE har stöd för dolda rubrikceller för att förbättra tillgängligheten i sådana scenarier. Dessutom innehåller den konfigurationsinställningar för dolda rubriker i tabeller. Med de här inställningarna kan du använda CSS-format på dolda rubriker i redigerings- och förhandsgranskningslägena. Om du vill hjälpa författare att identifiera dolda rubriker i redigeringsläget kan du inkludera följande parametrar i koden:
 
 * `hiddenHeaderEditingCSS`: Anger namnet på CSS-klassen som används i den dolda rubrikcellen när RTE redigeras.
-* `hiddenHeaderEditingStyle`: Anger en formatsträng som används i cellen med dolda rubriker när textredigeringsredigering används.
+* `hiddenHeaderEditingStyle`: Anger en formatsträng som används på cellen med dolda rubriker när textredigeringsredigering används.
 
 Om du anger både CSS och formatsträngen i koden har CSS-klassen företräde framför formatsträngen och kan skriva över alla konfigurationsändringar som formatsträngen gör.
 
@@ -575,7 +567,7 @@ Om du anger både CSS och formatsträngen i koden har CSS-klassen företräde fr
 
 ## Lägg till ordlistor för stavningskontrollen {#adddict}
 
-När plugin-programmet för stavningskontroll är aktiverat används lexikon för respektive språk. Dessa väljs sedan enligt webbplatsens språk antingen genom att underträdets language property används eller genom att språket extraheras från URL:en. till exempel. filialen `/en/` kontrolleras som engelska, `/de/` filialen som tyska.
+När plugin-programmet för stavningskontroll är aktiverat används lexikon för respektive språk. Dessa väljs sedan enligt webbplatsens språk antingen genom att underträdets language-egenskap används eller genom att språket extraheras från URL:en. till exempel. filialen `/en/` kontrolleras som engelska, `/de/` filialen som tyska.
 
 >[!NOTE]
 Meddelandet&quot;Stavningskontrollen misslyckades.&quot; visas om en kontroll görs för ett språk som inte är installerat.
