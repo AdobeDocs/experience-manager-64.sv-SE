@@ -3,7 +3,7 @@ title: Söka efter resurser i AEM
 description: Lär dig hur du hittar de nödvändiga resurserna i AEM med hjälp av panelen Filter och hur du använder de resurser som visas i sökningen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 57952323a3ae0990232506d551b91b724f830f20
+source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
 
 ---
 
@@ -26,6 +26,8 @@ Du kan söka baserat på följande alternativ (prediktiv):
 * Orientering
 * Format
 * Insikter
+
+<!-- TBD keystroke 65 article and port applicable changes here. This content goes. -->
 
 Du kan anpassa panelen Filter och lägga till/ta bort sökpredikatorer med [sökfaktorer](search-facets.md). Så här visar du panelen Filter:
 
