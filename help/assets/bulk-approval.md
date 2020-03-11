@@ -1,14 +1,14 @@
 ---
-title: Granska material i mappar och samlingar
+title: Granska resurser i mappar och samlingar
 description: Ställ in granskningsarbetsflöden för material i en mapp eller en samling och dela dem med granskare eller kreativa partners för att få feedback.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
 
 ---
 
 
-# Granska material i mappar och samlingar {#review-folder-assets-and-collections}
+# Granska resurser i mappar och samlingar {#review-folder-assets-and-collections}
 
 Ställ in granskningsarbetsflöden för material i en mapp eller en samling och dela dem med granskare eller kreativa partners för att få feedback.
 
@@ -23,7 +23,7 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 ## Skapa en granskningsuppgift för mappar {#creating-a-review-task-for-folders}
 
 1. I Assets-användargränssnittet väljer du den mapp som du vill skapa en granskningsuppgift för.
-1. Tryck/klicka på ikonen **[!UICONTROL Skapa granskningsuppgift]** i verktygsfältet för att öppna sidan **[!UICONTROL Granskningsuppgift]** . Om du inte kan se ikonen i verktygsfältet trycker/klickar du på **[!UICONTROL Mer]** och väljer sedan ikonen.
+1. Tryck/klicka på ikonen **[!UICONTROL Skapa granskningsuppgift]** i verktygsfältet för att öppna sidan **[!UICONTROL Granskningsuppgift]** . If you cannot see the icon in the toolbar, tap/click **[!UICONTROL More]** and then select the icon.
 
    ![chlimage_1-403](assets/chlimage_1-403.png)
 
@@ -47,17 +47,17 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 
    ![review_name](assets/review_name.png)
 
-1. Tryck/klicka på **[!UICONTROL Skicka]** och sedan på/klicka på **[!UICONTROL Klar]** för att stänga bekräftelsemeddelandet. Ett meddelande om den nya uppgiften skickas till godkännaren.
+1. Tap/click **[!UICONTROL Submit]**, and then tap/click **[!UICONTROL Done]** to close the confirmation message. Ett meddelande om den nya uppgiften skickas till godkännaren.
 1. Logga in på AEM Assets som godkännare och navigera till Assets UI. Om du vill godkänna resurser klickar/trycker du på ikonen **[!UICONTROL Notifications]** (Meddelanden) och väljer sedan granskningsåtgärden i listan.
 
    ![meddelande](assets/notification.png)
 
-1. Granska informationen om granskningsaktiviteten på sidan **[!UICONTROL Granska uppgift]** och tryck/klicka sedan på **[!UICONTROL Granska]**.
-1. Markera resurser på sidan **[!UICONTROL Granska uppgift]** och tryck/klicka på ikonen **[!UICONTROL Godkänn/Avvisa]** för att godkänna eller avvisa.
+1. In the **[!UICONTROL Review Task]** page, examine the details of the review task, and then tap/click **[!UICONTROL Review]**.
+1. In the **[!UICONTROL Review Task]** page, select assets, and tap/click the **[!UICONTROL Approve/Reject]** icon to approve or reject, as appropriate.
 
    ![review_task](assets/review_task.png)
 
-1. Tryck/klicka på ikonen **[!UICONTROL Slutför]** i verktygsfältet. Skriv en kommentar i dialogrutan och bekräfta genom att trycka/klicka på **[!UICONTROL Slutför]** .
+1. Tap/click the **[!UICONTROL Complete]** icon from the toolbar. Skriv en kommentar i dialogrutan och bekräfta genom att trycka/klicka på **[!UICONTROL Slutför]** .
 1. Navigera till resursgränssnittet och öppna mappen. Ikonerna för godkännandestatus för resurserna visas både i kort- och listvyn.
 
    **Kortvy**
@@ -71,7 +71,7 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 ## Skapa en granskningsuppgift för samlingar {#creating-a-review-task-for-collections}
 
 1. På sidan Samlingar väljer du den samling som du vill skapa en granskningsuppgift för.
-1. Tryck/klicka på ikonen **[!UICONTROL Skapa granskningsuppgift]** i verktygsfältet för att öppna sidan **[!UICONTROL Granskningsuppgift]** . Om du inte kan se ikonen i verktygsfältet trycker/klickar du på **[!UICONTROL Mer]** och väljer sedan ikonen.
+1. Tryck/klicka på ikonen **[!UICONTROL Skapa granskningsuppgift]** i verktygsfältet för att öppna sidan **[!UICONTROL Granskningsuppgift]** . If you cannot see the icon in the toolbar, tap/click **[!UICONTROL More]** and then select the icon.
 
    ![chlimage_1-405](assets/chlimage_1-405.png)
 
@@ -91,14 +91,14 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 
    ![task_details-collection](assets/task_details-collection.png)
 
-1. Tryck/klicka på **[!UICONTROL Skicka]** och sedan på/klicka på **[!UICONTROL Klar]** för att stänga bekräftelsemeddelandet. Ett meddelande om den nya uppgiften skickas till godkännaren.
+1. Tap/click **[!UICONTROL Submit]**, and then tap/click **[!UICONTROL Done]** to close the confirmation message. Ett meddelande om den nya uppgiften skickas till godkännaren.
 1. Logga in på AEM Assets som godkännare och navigera till Assets-konsolen. Om du vill godkänna resurser trycker/klickar du på **[!UICONTROL meddelandeikonen]** och väljer sedan granskningsåtgärden i listan.
-1. Granska informationen om granskningsaktiviteten på sidan **[!UICONTROL Granska uppgift]** och tryck/klicka sedan på **[!UICONTROL Granska]**.
+1. In the **[!UICONTROL Review Task]** page, examine the details of the review task, and then tap/click **[!UICONTROL Review]**.
 1. Alla resurser i samlingen visas på granskningssidan. Markera resurserna och tryck/klicka på ikonen **[!UICONTROL Godkänn/Avvisa]** för att godkänna eller avvisa resurser.
 
    ![review_task_collection](assets/review_task_collection.png)
 
-1. Tryck/klicka på ikonen **[!UICONTROL Slutför]** i verktygsfältet. Skriv en kommentar i dialogrutan och bekräfta genom att trycka/klicka på **[!UICONTROL Slutför]** .
+1. Tap/click the **[!UICONTROL Complete]** icon from the toolbar. Skriv en kommentar i dialogrutan och bekräfta genom att trycka/klicka på **[!UICONTROL Slutför]** .
 1. Navigera till samlingskonsolen och öppna samlingen. Ikonerna för godkännandestatus för resurserna visas både i kort- och listvyn.
 
    **Kortvy**
@@ -108,4 +108,3 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
    **Listvy**
 
    ![collection_reviewstatuslistview](assets/collection_reviewstatuslistview.png)
-
