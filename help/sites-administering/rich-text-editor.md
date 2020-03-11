@@ -1,16 +1,9 @@
 ---
 title: Konfigurera RTF-redigeraren
-seo-title: Konfigurera RTF-redigeraren
 description: Lär dig konfigurera AEM Rich Text Editor.
-seo-description: Lär dig konfigurera AEM Rich Text Editor.
-uuid: 82d2fe41-676a-4a49-939f-13374b9d869f
-contentOwner: asgupta
-products: SG_EXPERIENCEMANAGER/6.4/SITES
-topic-tags: operations
-content-type: reference
-discoiquuid: 9248d09c-b749-4aca-9167-1707c1dd8a53
+contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 01a748a6f6f92c752fc6a14005f236fee304c2eb
+source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
 
 ---
 
@@ -25,26 +18,27 @@ Följande arbetsflöde visar den rekommenderade ordningen för att slutföra RTE
 
 ![Normalt arbetsflöde för att konfigurera RTF-redigeraren](assets/rte_workflow_v1.png)
 
-**** Bild: *Vanligt arbetsflöde för att konfigurera RTF-redigeraren*
+*Bild: Normalt arbetsflöde för att konfigurera RTF-redigeraren*
 
 ## Förstå användargränssnittet med pekskärmsfunktioner och det klassiska användargränssnittet {#understand-touch-enabled-ui-and-classic-ui}
 
-Det användargränssnitt som har stöd för pekskärm är standardgränssnittet för AEM. Adobe introducerade Touch UI med [responsiv design](/help/sites-authoring/responsive-layout.md) för redigeringsmiljön i version 5.6.Touchgränssnittet är utformat för enheter med pekskärm och stationära datorer. Gränssnittet skiljer sig avsevärt från det ursprungliga klassiska användargränssnittet.
+Det användargränssnitt som har stöd för pekskärm är standardgränssnittet för AEM. Adobe introducerade Touch UI med [responsiv design](/help/sites-authoring/responsive-layout.md) för redigeringsmiljön i version 5.6. Touchgränssnittet är utformat för enheter med pekskärm och stationära datorer. Gränssnittet skiljer sig avsevärt från det ursprungliga klassiska användargränssnittet.
 
 ![Verktygsfältet för textredigeraren i det Touch-aktiverade gränssnittet](assets/chlimage_1-404.png)
 
-**** Bild: Verktygsfältet *RTF-redigerare i det pekaktiverade användargränssnittet*
+*Bild: Verktygsfältet för textredigeraren i det Touch-aktiverade gränssnittet*
 
 ![Verktygsfältet RTF-redigerare i det klassiska användargränssnittet](assets/rtedefault.png)
 
-**** Bild: Verktygsfältet *RTF-redigerare i det klassiska användargränssnittet*
+*Bild: Verktygsfältet RTF-redigerare i det klassiska användargränssnittet*
 
-**Se även**:
+>[!MORELIKETHIS]
+>
+>* [Gränssnittsrekommendationer](/help/sites-deploying/ui-recommendations.md)
+>* Information om hur du ersätter det klassiska användargränssnittet finns i [Versionsinformation för AEM 6.4](/help/release-notes/deprecated-removed-features.md)
+>* Skillnaden mellan användargränssnitten finns i [Touch-gränssnittet och det klassiska användargränssnittet](https://aemcq5pedia.wordpress.com/2018/01/05/touch-enabled-ui-aem6-3/)
+>* Mer information om användargränssnittet med pekfunktioner finns i [avsnittet om användargränssnittet i AEM Touch](/help/sites-developing/touch-ui-concepts.md)
 
-* [Gränssnittsrekommendationer](/help/sites-deploying/ui-recommendations.md)
-* Information om hur du ersätter det klassiska användargränssnittet finns i [Versionsinformation för AEM 6.4](/help/release-notes/deprecated-removed-features.md)
-* Skillnaden mellan användargränssnitten finns i [Touch-gränssnittet och det klassiska användargränssnittet](https://aemcq5pedia.wordpress.com/2018/01/05/touch-enabled-ui-aem6-3/)
-* Mer information om användargränssnittet med pekfunktioner finns i [avsnittet om användargränssnittet i AEM Touch](/help/sites-developing/touch-ui-concepts.md)
 
 ## Olika redigeringslägen {#editingmodes}
 
@@ -100,7 +94,7 @@ När innehållet öppnas (med en långsam dubbeltryckning/klick) kan det rediger
 
 ![Inline-redigering med grundläggande verktygsfält i Touch-aktiverat användargränssnitt](assets/chlimage_1-405.png)
 
-**** Bild: Redigera *textbundet med grundläggande verktygsfält i användargränssnittet med pekfunktion*
+*Bild: Inline-redigering med grundläggande verktygsfält i Touch-aktiverat användargränssnitt*
 
 I det klassiska användargränssnittet kan du med en långsam dubbelklickning på komponenten redigera textbundet och med en orange kontur markeras innehållet. Om Innehållssökning är öppet visas ett verktygsfält med tillgängliga alternativ för RTF-formatering högst upp i fönstret. Om Innehållssökning inte är öppet visas inte formateringsalternativen och du kan bara göra grundläggande textredigeringar.
 
@@ -112,7 +106,7 @@ I helskärmsläget i dialogrutan finns ett detaljerat verktygsfält för textred
 
 ![Det detaljerade verktygsfältet för textredigering när du redigerar i helskärmsläge i det touchaktiverade gränssnittet](assets/chlimage_1-406.png)
 
-**** Bild: Detaljerat *verktygsfält för textredigering när du redigerar i helskärmsläge i det touchaktiverade gränssnittet*
+*Bild: Det detaljerade verktygsfältet för textredigering när du redigerar i helskärmsläge i det touchaktiverade gränssnittet*
 
 ### Dialogruteredigering {#dialog-editing}
 
@@ -120,11 +114,11 @@ När du dubbelklickar på en komponent i det klassiska användargränssnittet ö
 
 ![Dialogruteredigeringsläge i användargränssnittet med pekfunktioner](assets/dialog_editing_modetouchui.png)
 
-**** Bild: Redigeringsläge *för dialogrutor i användargränssnittet med pekfunktioner*
+*Bild: Dialogruteredigeringsläge i användargränssnittet med pekfunktioner*
 
 ![Dialogruta i Classic UI som innehåller ett detaljerat verktygsfält för redigering](assets/chlimage_1-407.png)
 
-**** Bild: Dialogrutan *i Classic UI som innehåller ett detaljerat verktygsfält för redigering*
+*Bild: Dialogruta i Classic UI som innehåller ett detaljerat verktygsfält för redigering*
 
 ## Om RTE-plugin-program och associerade funktioner {#aboutplugins}
 
