@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 translation-type: tm+mt
-source-git-commit: 9f6da11b6fd5630dd2a81d1745f7f157ffb2bf34
+source-git-commit: 6684e78caf43b49660de3c1a90e2cccd9a204420
 
 ---
 
@@ -173,7 +173,7 @@ Några av de viktigaste nyheterna i AEM 6.4.7.0 är:
 * Ny kolumn för skapat datum, som är sorterbar, har lagts till i **DAM-listvyn** och i resurssökningsresultat i **listvyn** (NPR-31311).
 * Resurssortering baserat på **namnkolumnen** är tillåtet i **listvyn** .
 * Tidsgränsen för batchstorlek och arbetsflödessteg för återbearbetning och batchöverföring kan nu konfigureras från gränssnittet i Dynamic Media.
-* Minnet `pdfBrochure` har angetts till false i Scene 7-molnkonfigurationen för att spara minne i IPS.
+* Minnet `pdfBrochure` har angetts till false i molnkonfigurationen Scene 7 för att spara minne i IPS.
 
 ##### Assets {#assets-6470}
 
@@ -596,7 +596,7 @@ Några av de viktigaste nyheterna i AEM 6.4.5.0 är:
 **Plattform**
 
 * XSS (Cross-site scripting) i pakethanteraren när ett paket installeras. NPR-29734, NPR-29713, NPR-29630: Programfix för GRANITE-26161, GRANITE-
-* Flera lagrade och reflekterade XSS (Cross-site scripting) i CRXDE Lite. NPR-29534: Programfix för GRANITE-26049
+* Flera lagrade och reflekterade XSS (Cross-site scripting) i CRXDE Lite. NPR-29634: Programfix för GRANITE-26049
 * Inloggningsfunktionen för paketresurs använder GET-begäran i stället för POST-begäran, vilket gör att lösenordet visas under nätverksfliken. NPR-29631: Programfix för GRANITE-26048
 
 **Felix**
@@ -1389,7 +1389,7 @@ Några av de viktigaste nyheterna i AEM 6.4.2.0 är:
 
 **Communities**
 
-* (Filbibliotek) Om du hämtar resurser med blanksteg uppstår formatproblem. NPR-23260: Programfix för CQ-4245159
+* (Filbibliotek) Om du hämtar resurser med blanksteg uppstår formatproblem. NPR-24260: Programfix för CQ-4245159
 * Korrigeringar av flera Adobe Social-problem. NPR-24247: Programfix för CQ-4245054, CQ-4245120, CQ-4245296
 * Ofullständig rullning för medlemmar och grupper konsolen misslyckas om författaren ska kunna publicera på olika kontextsökvägar. NPR-24437: Programfix för CQ-4246013
 * Inlägget återgår inte till det obesvarade läget även om det tas bort från det besvarade läget och poängen inte minskas. NPR-24419: Programfix för CQ-4245797, CQ-4245932
@@ -2206,7 +2206,7 @@ Om du vill använda Uber Jar i ett Maven-projekt kan du läsa artikeln [Så här
 <dependency>
       <code>com.adobe.aem</groupId>
       <artifactId>uber-jar</artifactId>
-      <version>6.4.8.0</version>
+      <version>6.4.8</version>
       <classifier>apis</classifier>
       <scope>provided</scope>
 </dependency>
