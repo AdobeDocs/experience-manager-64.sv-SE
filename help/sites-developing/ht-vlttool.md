@@ -10,7 +10,7 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: a76425e9-fd3b-4c73-80f9-0ebabb8fd94f
 translation-type: tm+mt
-source-git-commit: 274c043eadbb6dda125062bf53ed145a5b101a2e
+source-git-commit: f0e4d958cad182c7218314ba7b117c2347f947ca
 
 ---
 
@@ -39,7 +39,7 @@ Om du vill börja använda VLT måste du göra följande:
 
 Om du vill använda VLT-verktyget måste du först installera det. Det installeras inte som standard eftersom det är ett extra verktyg. Dessutom måste du ange systemmiljövariabeln.
 
-1. Hämta arkivfilen FileVault från webbplatsen [Apache Jackrabbit.](https://jackrabbit.apache.org/jcr/downloads.html#vlt)
+1. Ladda ned arkivfilen FileVault från [Maven-arkivdatabasen.](https://repo1.maven.org/maven2/org/apache/jackrabbit/vault/vault-cli/)
    >[!NOTE]
    >
    >VLT-verktygets källa är [tillgänglig på GitHub.](https://github.com/apache/jackrabbit-filevault)
