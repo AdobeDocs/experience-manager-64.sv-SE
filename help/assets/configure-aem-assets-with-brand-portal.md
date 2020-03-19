@@ -3,7 +3,7 @@ title: Konfigurera AEM-resurser med varumärkesportalen
 description: 'Lär dig hur du konfigurerar AEM Assets med varumärkesportalen för publicering av resurser och samlingar på varumärkesportalen. '
 contentOwner: VG
 translation-type: tm+mt
-source-git-commit: 16ed5bc3a06976d2cd616da9987cb7e70f87210f
+source-git-commit: c269402e253ae71f51de5bf7c05970abb51ef192
 
 ---
 
@@ -183,17 +183,19 @@ Kontrollera att du har utfört följande steg:
 
    ![Konfiguration av IMS-konto](assets/create-new-integration6.png)
 
-   >[!CAUTION]
-   >
-   >Skapa endast en IMS-konfiguration. Skapa inte flera IMS-konfigurationer.
-
 1. Välj IMS-konfigurationen och klicka på **[!UICONTROL Kontrollera hälsa]**. En dialogruta visas.
 
    Klicka på **[!UICONTROL Kontrollera]**. När anslutningen är klar visas meddelandet *Token har* hämtats.
 
    ![](assets/create-new-integration5.png)
 
-   <br/> <br/>
+>[!CAUTION]
+>
+>Skapa endast en giltig IMS-konfiguration. Skapa inte flera IMS-konfigurationer.
+>
+>Kontrollera att konfigurationen är felfri. Om konfigurationen inte är felfri tar du bort den och skapar en ny felfri konfiguration.
+
+<br/> <br/>
 
 ### Konfigurera molntjänst {#configure-the-cloud-service}
 
