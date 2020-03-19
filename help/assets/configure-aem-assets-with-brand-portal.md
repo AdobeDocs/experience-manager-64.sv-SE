@@ -3,7 +3,7 @@ title: Konfigurera AEM-resurser med varumärkesportalen
 description: 'Lär dig hur du konfigurerar AEM Assets med varumärkesportalen för publicering av resurser och samlingar på varumärkesportalen. '
 contentOwner: VG
 translation-type: tm+mt
-source-git-commit: c269402e253ae71f51de5bf7c05970abb51ef192
+source-git-commit: bd6ae2ddf49091c3b25bac97761a593cdd0a56cc
 
 ---
 
@@ -195,7 +195,6 @@ Kontrollera att du har utfört följande steg:
 >
 >Kontrollera att konfigurationen är felfri. Om konfigurationen inte är felfri tar du bort den och skapar en ny felfri konfiguration.
 
-<br/> <br/>
 
 ### Konfigurera molntjänst {#configure-the-cloud-service}
 
