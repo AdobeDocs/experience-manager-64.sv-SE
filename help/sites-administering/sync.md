@@ -10,7 +10,7 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 707b150b-7759-437f-9150-9f4784856754
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 793305a07cc23e5e551871362e8898ee7bafc0c2
 
 ---
 
@@ -154,11 +154,11 @@ Se även
 * [Behörighetshantering](/help/sites-administering/user-group-ac-admin.md#access-right-management)
 * Felsökningsavsnittet [Ändra åtgärdsundantag under](#modify-operation-exception-during-response-processing)svarsbearbetning.
 
-### 3.Adobe Granite Distribution - Krypterad lösenordsleverantör {#adobegraniteencpasswrd}
+### 3. Adobe Granite Distribution - Krypterad lösenordsleverantör {#adobegraniteencpasswrd}
 
 **Konfigurera behörigheter**
 
-När en auktoriserad användare, som är medlem i **`administrators`**användargruppen, har skapats på alla publiceringsinstanser måste den auktoriserade användaren identifieras som behörig användare av författaren med behörighet att synkronisera användardata från författaren till publiceringen.
+När en auktoriserad användare, som är medlem i **`administrators`**användargruppen, har skapats för alla publiceringsinstanser måste den auktoriserade användaren identifieras som behörig användare av författaren med behörighet att synkronisera användardata från författaren till publiceringen.
 
 * **on author**
 
@@ -202,7 +202,7 @@ När en auktoriserad användare, som är medlem i **`administrators`**användarg
 
 ![chlimage_1-390](assets/chlimage_1-390.png)
 
-### 5.Adobe Granite Distribution - Diff Observer Factory {#diffobserver}
+### 5. Adobe Granite Distribution - Diff Observer Factory {#diffobserver}
 
 **Aktivera gruppsynkronisering**
 
@@ -332,7 +332,7 @@ Om det finns anpassade data som ska synkroniseras över flera publiceringsinstan
 
 * **Distribuerade mappar**
 
-   De flesta sling:Mappar ignoreras eftersom synkronisering inte behövs. Här listas de få undantagen.
+   De flesta sling:Mappar ignoreras eftersom synkronisering inte behövs. Här anges de få undantagen.
 
    Standardmappar att synkronisera
 
@@ -350,7 +350,7 @@ Om Sling ID är samma för flera publiceringsinstanser i en publiceringsgrupp sy
 
 Så här validerar du att alla värden för Sling ID skiljer sig åt för varje publiceringsinstans:
 
-1. gå till [https://*host:port*/system/console/status-slingssettings](http://localhost:4503/system/console/status-slingsettings)
+1. bläddra till `http://<host>:<port>/system/console/status-slingsettings`
 1. kontrollera värdet för **Sling ID**
 
 ![chlimage_1-395](assets/chlimage_1-395.png)
@@ -553,7 +553,7 @@ Se avsnitt [9. Unikt försäljnings-ID](#unique-sling-id)
 
       * när du redigerar paketet
 
-         * Fliken Filter: Lägg till filter:Rotsökväg: `/home`
+         * Fliken Filter: Lägg till filter: Rotsökväg: `/home`
          * Fliken Avancerat: AC-hantering: `Overwrite`
    * [exportera paketet](/help/sites-administering/package-manager.md#downloading-packages-to-your-file-system)
 
