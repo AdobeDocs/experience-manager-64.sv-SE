@@ -3,12 +3,12 @@ title: Filformat som stöds i AEM Assets
 description: Lista över filformat och MIME-typer som stöds av AEM Assets och de funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e71ae585919f3745d36bcbce4eebe49f4477e840
+source-git-commit: 75d2bdc6cda9a608d622e31769abfa36e847e3a3
 
 ---
 
 
-# Filformat som stöds i AEM Resurser {#assets-supported-formats}
+# Filformat som stöds i AEM Assets {#assets-supported-formats}
 
 AEM Resurser har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika MIME-typer.
 
@@ -37,10 +37,12 @@ Följande rasterbildformat stöds för filhanteringsfunktioner:
 | PGM | ✓ | ✓ |  |  |  |  | ✓ |
 | PBM | ✓ | ✓ |  |  |  |  | ✓ |
 | PPM | ✓ | ✓ |  |  |  |  | ✓ |
-| PSD* | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
+| PSD **¹** | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ |  | ✓ |  |
 | PICT |  |  |  |  |  |  | ✓ |
 | PSB | ✓ | ✓ | ✓ | ✓ |  |  |  |
+
+**¹** Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
 
 Följande rasterbildformat stöds för Dynamic Media-funktioner:
 
@@ -55,12 +57,12 @@ Följande rasterbildformat stöds för Dynamic Media-funktioner:
 | PGM |  |  |  |  |  |
 | PBM |  |  |  |  |  |
 | PPM |  |  |  |  |  |
-| PSD* | ✓ |  |  |  |  |
+| PSD **¹** | ✓ |  |  |  |  |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ |  |  |  |  |
 | PSB |  |  |  |  |  |
 
- &amp;ast; Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
+**¹** Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
 
 Utöver informationen ovan bör du tänka på följande:
 
@@ -204,9 +206,9 @@ De arkivformat som stöds och tillämpligheten för de vanliga DAM-arbetsflöden
 | JAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | RAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | TAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
-| ZIP* | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| ZIP **²** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-**** &amp;ast; ZIP-arkiven som skapats med `Deflate64` algoritmen har begränsat stöd i AEM. Arkiv- och arkiveringsåtgärder stöds inte. Åtgärder som att överföra, bläddra och hämta stöds emellertid.
+**²** Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte. ZIP-arkiven som skapats med `Deflate64` algoritmen har begränsat stöd i AEM. Arkiv- och arkiveringsåtgärder stöds inte. Åtgärder som att överföra, bläddra och hämta stöds emellertid.
 
 ## Andra format som stöds {#other-supported-formats}
 
@@ -214,14 +216,14 @@ Hur vanliga DAM-arbetsflöden kan användas för ett par andra filformat beskriv
 
 | Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Dynamic Media Delivery |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| * | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| **³** | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | SVG | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JavaScript (när konfigureras med egen leveransdomän) |  |  |  |  |  | ✓ |
 
-**** &amp;ast; De andra formaten stöds i DAM för lagring, versionshantering, ACL, arbetsflöde, publicering och metadatahantering.
+**³** De andra formaten stöds i DAM för lagring, versionshantering, ACL, arbetsflöde, publicering och metadatahantering.
 
 ## MIME-typer som stöds {#supported-mime-types}
 
