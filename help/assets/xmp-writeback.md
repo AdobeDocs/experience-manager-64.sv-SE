@@ -3,7 +3,7 @@ title: XMP-tillbakaskrivning till återgivningar
 description: Lär dig hur XMP-återskrivningsfunktionen sprider metadataändringar för en resurs till alla eller vissa återgivningar av resursen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 5ef4c4e42165819191c6e3810c36183110f3f34a
 
 ---
 
@@ -16,7 +16,7 @@ När du ändrar metadata för en resurs i AEM Resurser eller när du överför r
 
 Funktionen XMP-återställning sprider metadataändringarna till alla eller specifika återgivningar av resursen.
 
-Tänk dig ett scenario där du ändrar egenskapen Title för resursen &quot;**Classic Leather**&quot; till &quot;**Nylon**&quot;.
+Tänk dig ett scenario där du ändrar egenskapen [!UICONTROL Title] för resursen som har namnet `Classic Leather` på `Nylon`.
 
 ![metadata](assets/metadata.png)
 
@@ -32,7 +32,7 @@ Med funktionen XMP-återställning kan du sprida metadataändringarna till alla 
 
 Om du vill att metadataändringarna ska kunna spridas till återgivningarna av resursen när du överför den ändrar du konfigurationen **Adobe CQ DAM Rendition Maker** i Configuration Manager.
 
-1. Öppna Configuration Manager från `https://[AEM_server]:[port]/system/console/configMgr`.
+1. Öppna Configuration Manager från `https://[aem_server]:[port]/system/console/configMgr`.
 1. Öppna **[!UICONTROL Adobe CQ DAM Rendition Maker]** -konfigurationen.
 1. Välj alternativet **[!UICONTROL Sprid XMP]** och spara sedan ändringarna.
 
@@ -44,21 +44,18 @@ Om du vill att XMP-återskrivningsfunktionen ska kunna sprida metadataändringar
 
 Utför dessa steg för XMP-återskrivningsfunktionen som sprider metadata till återgivningsminiatyrerna 140.100.png och 319.319.png.
 
-1. Tryck/klicka på AEM-logotypen och navigera sedan till **[!UICONTROL Verktyg > Arbetsflöde > Modeller]**.
-1. Öppna arbetsflödesmodellen **DAM Metadata Writeback** på sidan Modeller.
+1. Navigera till **[!UICONTROL Verktyg > Arbetsflöde > Modeller]** i Experience Manager.
+1. Öppna arbetsflödesmodellen [!UICONTROL DAM-metadataåterställning] på sidan **[!UICONTROL Modeller]** .
 1. Öppna steget för **[!UICONTROL XMP-återskrivningsprocess]** på sidan med egenskaper för **[!UICONTROL DAM-metadataåterställning]** .
-1. I dialogrutan Stegegenskaper trycker/klickar du på fliken **[!UICONTROL Process]** .
-1. Lägg till **[!UICONTROL i rutan]** Argument `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`och tryck/klicka sedan på **[!UICONTROL OK]**.
+1. I dialogrutan **[!UICONTROL Stegegenskaper]** trycker/klickar du på fliken **[!UICONTROL Process]** .
+1. Lägg till i rutan **[!UICONTROL Argument]** `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`. Tryck/klicka på **[!UICONTROL OK]**.
 
    ![step_properties](assets/step_properties.png)
 
-1. Spara ändringarna.
-1. Om du vill återskapa pyramidens TIF-renderingar för Dynamic Media-bilder med de nya attributen lägger du till steget **[!UICONTROL Dynamic Media Process Image Assets]** i arbetsflödet för DAM-metadataåterställning.
-PTIFF-renderingar skapas och lagras bara lokalt i en Dynamic Media Hybrid-implementering.
+1. To regenerate the pyramid TIFF renditions for Dynamic Media images with the new attributes, add the **[!UICONTROL Dynamic Media Process Image Assets]** step to the DAM Metadata Writeback workflow.
+PTIFF-renderingar skapas och lagras endast lokalt i läget Dynamic Media Hybrid. Spara arbetsflödet.
 
-1. Spara arbetsflödet.
-
-Metadataändringarna sprids till miniatyrbilden för återgivningarna.140.100.png och miniatyrbilden.319.319.png för resursen, inte till de andra.
+Metadataändringarna sprids till återgivningarna `thumbnail.140.100.png` och `thumbnail.319.319.png` till resursen, inte till de andra.
 
 >[!NOTE]
 >
@@ -78,17 +75,14 @@ Vitlistsfiltrering av XMP-metadata löser problemet genom att du kan definiera d
 >
 >Filtrering fungerar bara för egenskaper som härletts från XMP-källor i objektbinärfiler. För egenskaper som härleds från andra källor än XMP, t.ex. EXIF- och IPTC-format, fungerar inte filtreringen. Datumet då resursen skapades sparas till exempel i egenskapen EXIF TIFF `CreateDate` . AEM berättar det här värdet i metadatafältet med namnet `exif:DateTimeOriginal`. Eftersom källan inte är en XMP-källa fungerar inte filtrering på den här egenskapen.
 
-1. Öppna Configuration Manager från `https://[AEM_server]:[port]/system/console/configMgr`.
+1. Öppna Configuration Manager från `https://[aem_server]:[port]/system/console/configMgr`.
 1. Öppna **[!UICONTROL Adobe CQ DAM XmpFilter]** -konfigurationen.
 1. Om du vill använda vitlistsfiltrering väljer du **[!UICONTROL Använd vitlista på XMP-egenskaper]** och anger de egenskaper som ska importeras i rutan XML-namn i listan **[!UICONTROL över godkända för XMP-filtrering]** .
 
    ![chlimage_1-347](assets/chlimage_1-347.png)
 
-1. Om du vill filtrera bort svartlistade XMP-egenskaper efter att ha använt vitlistsfiltrering anger du dem i rutan XML-namn med **[!UICONTROL svartlistning för XMP-filtrering]** .
+1. Om du vill filtrera bort svartlistade XMP-egenskaper efter att ha använt vitlistsfiltrering anger du dem i rutan XML-namn med **[!UICONTROL svartlistning för XMP-filtrering]** . Spara ändringarna.
 
    >[!NOTE]
    >
-   >Alternativet **[!UICONTROL Använd svartlista för XMP-egenskaper]** är markerat som standard. Svartlistsfiltrering är alltså aktiverat som standard. Om du vill inaktivera svartlistsfiltrering avmarkerar du alternativet **[!UICONTROL Använd svartlista för XMP-egenskaper]** .
-
-1. Spara ändringarna.
-
+   >Alternativet **[!UICONTROL Använd svartlista för XMP-egenskaper]** är markerat som standard. Svartlistsfiltrering är alltså aktiverat som standard. Om du vill inaktivera svartlistsfiltrering avmarkerar du **[!UICONTROL Använd svartlista för XMP-egenskaper]**.
