@@ -8,7 +8,7 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 75b2d424-91d3-45b4-a5d7-fb49ab558582
 translation-type: tm+mt
-source-git-commit: 7e58d1d861f832d073fb178868804995ee8d855b
+source-git-commit: 9327fd06957fafc7c711f1726f5d8a363ae0c1ad
 
 ---
 
@@ -19,7 +19,7 @@ Planera anatomin för interaktiv kommunikation
 
 ![02-create-adaptive-form-main-image](assets/02-create-adaptive-form-main-image.png)
 
-Den här självstudiekursen är ett steg i [Skapa din första interaktiva kommunikationsserie](/help/forms/using/create-your-first-interactive-communication.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
+Den här självstudiekursen är ett steg i [Skapa din första interaktiva kommunikationsserie](/help/forms/using/create-your-first-interactive-communication.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga självstudiekurserna.
 
 Det första steget i planeringen av interaktiv kommunikation är att färdigställa innehållet i den interaktiva kommunikationen. Ämnesexperter från avdelningar som juridik, ekonomi, support eller marknadsföring kan hjälpa dig att slutföra innehållet. När innehållet är klart måste du analysera det för att identifiera de olika resurstyper som krävs för att skapa den interaktiva kommunikationen.
 
@@ -40,8 +40,6 @@ En interaktiv kommunikation innehåller följande element:
 ## Anatomi i interaktiv kommunikation {#anatomy-of-the-interactive-communication}
 
 När du är klar med innehållet och de element som används för att skapa den interaktiva kommunikationen kan du skapa en beskrivning av den interaktiva kommunikationen. Anatomin måste innehålla de uppgifter som anges i avsnittet [Planeringsöverväganden](/help/forms/using/planning-interactive-communications.md#planning-considerations) . Baserat på vårt användningsexempel är följande ett exempel på en anatomi av den månatliga faktura som en telefonoperatör skickar till sina kunder.
-
-Platshållare för anatomi-video
 
 Anatomin innehåller data med följande indatalägen:
 
