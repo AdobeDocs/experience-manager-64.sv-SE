@@ -3,7 +3,7 @@ title: Om AEM Assets
 description: Lär dig vad som är digital resurshantering, användningsexempel och Adobes AEM Asset-erbjudande.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 077cc39c5ed47371a4e3fae1e991209c7bfe6b80
 
 ---
 
@@ -64,21 +64,21 @@ En resurs är i stort sett en binär resurs plus metadata plus återgivningar pl
 
 När du arbetar med digitala resurser i AEM måste du förstå följande terminologi:
 
-* **** Samling: En samling resurser, antingen baserat på fysisk plats (mapp), gemensamma egenskaper (sparad sökmapp) eller användarval (lightbox-mappar).
+* **Samling:** En samling resurser, antingen baserat på fysisk plats (mapp), gemensamma egenskaper (sparad sökmapp) eller användarval (lightbox-mappar).
 
-* **** Metadata: Resurserna har metadata. till exempel författare, förfallodatum, DRM-information (Digital Rights Management) och så vidare. Metadata är under åtkomstkontroll. AEM Resurser har stöd för följande vanliga metadatascheman:
+* **Metadata:** Resurserna har metadata. till exempel författare, förfallodatum, DRM-information (Digital Rights Management) och så vidare. Metadata är under åtkomstkontroll. AEM Resurser har stöd för följande vanliga metadatascheman:
 
    * **Dublin Core**: inklusive författare, beskrivning, datum, ämne och så vidare.
    * **IPTC**: inklusive händelse, modell, plats och så vidare.
    * **WCM**: inklusive sidegenskaper, tid och så vidare.
 
-* **** Taggning: Resurser kan taggas och klassificeras. Se Använda taggar och Administrera taggar.
+* **Taggning:** Resurser kan taggas och klassificeras. Se Använda taggar och Administrera taggar.
 
-* **** Återgivningar:En återgivning är den binära representationen av en resurs. Resurser har alltid en primär representation - den som tillhör den överförda filen. De kan ha valfritt antal ytterligare representationer som skapas, till exempel genom anpassade arbetsflödessteg eller när en resurs överförs. Återgivningar kan ha en annan storlek, med en annan upplösning, med en vattenstämpel eller någon annan förändrad egenskap.
+* **Återgivningar:** En återgivning är den binära representationen av en resurs. Resurser har alltid en primär representation - den som tillhör den överförda filen. De kan ha valfritt antal ytterligare representationer som skapas, till exempel genom anpassade arbetsflödessteg eller när en resurs överförs. Återgivningar kan ha en annan storlek, med en annan upplösning, med en vattenstämpel eller någon annan förändrad egenskap.
 
-* **** Versioner:Versionshantering skapar en ögonblicksbild av digitala resurser vid en viss tidpunkt. Du kan återställa resurser till tidigare versioner. Se Versionshantering i AEM Resurser.
+* **Versioner:** Versionshantering skapar en ögonblicksbild av digitala resurser vid en viss tidpunkt. Du kan återställa resurser till tidigare versioner. Se [versionshantering i AEM Assets](managing-assets-touch-ui.md#asset-versioning).
 
-* **** Deltillgångar: Delresurser är resurser som utgör en resurs, till exempel lager i en Adobe Photoshop-fil eller sidor i en PDF-fil. I AEM Resurser kan du hantera underresurser på samma sätt som du hanterar resurser.
+* **Deltillgångar:** Delresurser är resurser som utgör en resurs, till exempel lager i en Adobe Photoshop-fil eller sidor i en PDF-fil. I AEM Resurser kan du hantera underresurser på samma sätt som du hanterar resurser.
 
 ### Så här arbetar du med resurser {#how-to-work-with-assets}
 
