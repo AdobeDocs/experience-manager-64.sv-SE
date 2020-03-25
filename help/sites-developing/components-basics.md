@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: a8e5786731c24dc4c0122dbc75e59a6c3be82cf7
+source-git-commit: 8a612282df46f5f54ebe73c4b297eba6515ea35d
 
 ---
 
@@ -53,7 +53,7 @@ Innan du börjar konfigurera eller koda komponenten bör du fråga:
 
    * Mer information finns i [Säkerhetschecklista - Bästa metoder](/help/sites-administering/security-checklist.md#development-best-practices) för utveckling.
 
-### Pekaktiverat jämfört med klassiskt användargränssnitt {#touch-enabled-vs-classic-ui}
+### Pekaktiverat eller klassiskt gränssnitt {#touch-enabled-vs-classic-ui}
 
 Innan du börjar diskutera hur du utvecklar komponenter måste du veta vilket gränssnitt författarna kommer att använda:
 
@@ -586,7 +586,7 @@ Redigeringsbeteendet för en komponent konfigureras genom att en `cq:editConfig`
 * [ `cq:editConfig` nodegenskaper](#configuring-with-cq-editconfig-properties):
 
    * `cq:actions` ( `String array`): definierar de åtgärder som kan utföras på komponenten.
-   * `cq:layout` ( `String`):: definierar hur komponenten redigeras i det klassiska användargränssnittet.
+   * `cq:layout` ( `String`): : definierar hur komponenten redigeras i det klassiska användargränssnittet.
    * `cq:dialogMode` ( `String`): definierar hur komponentdialogrutan öppnas i det klassiska användargränssnittet
 
       * I det beröringsaktiverade användargränssnittet flyter dialogrutorna alltid i skrivbordsläge och öppnas automatiskt som helskärm i mobilen.
@@ -657,6 +657,10 @@ Egenskapen `cq:actions` ( `String array`) definierar en eller flera åtgärder s
    <td><code>edit</code></td> 
    <td>Lägger till en knapp för att redigera komponenten.</td> 
   </tr> 
+    <tr>
+    <td><code>editannotate</code></td>
+    <td>Lägger till en knapp för att redigera komponenten samt tillåta <a href="/help/sites-authoring/annotations.md">anteckningar</a>.</td>
+   </tr>
   <tr> 
    <td><code>delete</code></td> 
    <td>Lägger till en knapp för att ta bort komponenten</td> 
@@ -702,7 +706,7 @@ Egenskapen `cq:layout` ( `String`) definierar hur komponenten kan redigeras i de
   </tr> 
   <tr> 
    <td><code>rollover</code></td> 
-   <td> Standardvärde. Komponentutgåvan är tillgänglig"när du för muspekaren över" genom att klicka och/eller snabbmenyn.<br /> Observera att motsvarande objekt på klientsidan är: <code>CQ.wcm.EditRollover</code>.</td> 
+   <td>Standardvärde. Komponentutgåvan är tillgänglig"när du för muspekaren över" genom att klicka och/eller snabbmenyn.<br /> Observera att motsvarande objekt på klientsidan är: <code>CQ.wcm.EditRollover</code>.</td> 
   </tr> 
   <tr> 
    <td><code>editbar</code></td> 
@@ -719,7 +723,7 @@ Egenskapen `cq:layout` ( `String`) definierar hur komponenten kan redigeras i de
 >
 >Begreppen överrullning och redigeringsfält kan inte användas i det beröringsaktiverade gränssnittet.
 
-I följande konfiguration läggs en redigeringsknapp till i komponentens redigeringsfält:
+Följande konfiguration lägger till en redigeringsknapp i komponentens redigeringsfält:
 
 ```
 <jcr:root xmlns:cq="https://www.day.com/jcr/cq/1.0" xmlns:jcr="https://www.jcp.org/jcr/1.0"
@@ -824,7 +828,7 @@ Noden av typen `cq:DropTargetConfig` måste ha följande egenskaper:
   </tr> 
   <tr> 
    <td><code>accept</code></td> 
-   <td>Regex används på resursens Mime-typ för att validera om släppning är tillåten.</td> 
+   <td>Regex används på resursens MIME-typ för att validera om släppning är tillåten.</td> 
   </tr> 
   <tr> 
    <td><code>groups</code></td> 
@@ -837,7 +841,7 @@ Noden av typen `cq:DropTargetConfig` måste ha följande egenskaper:
  </tbody> 
 </table>
 
-Följande konfiguration hämtas från komponenten Download. Det gör att alla resurser (mime-typen kan vara vilken sträng som helst) från gruppen kan tas bort från innehållssökaren till komponenten. `media` Efter släppningen `fileReference` uppdateras komponentegenskapen:
+Följande konfiguration hämtas från komponenten Download. Det gör att alla resurser (mime-typen kan vara vilken sträng som helst) från gruppen kan tas bort från innehållssökaren till komponenten. `media` Efter släppningen `fileReference` uppdateras egenskapen component:
 
 ```
     <cq:dropTargets jcr:primaryType="nt:unstructured">
