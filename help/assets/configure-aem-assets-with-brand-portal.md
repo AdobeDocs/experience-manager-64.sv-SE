@@ -3,7 +3,7 @@ title: Konfigurera AEM-resurser med varumärkesportalen
 description: 'Lär dig hur du konfigurerar AEM Assets med varumärkesportalen för publicering av resurser och samlingar på varumärkesportalen. '
 contentOwner: VG
 translation-type: tm+mt
-source-git-commit: bd6ae2ddf49091c3b25bac97761a593cdd0a56cc
+source-git-commit: face3b5c50e06d24127aedd0b114efedb2467e96
 
 ---
 
@@ -17,12 +17,14 @@ Adobe Experience Manager Assets (AEM) är konfigurerat med varumärkesportalen v
 >Konfigurering av AEM-resurser med varumärkesportalen via Adobe I/O stöds i AEM 6.4.8.0 och senare.
 >
 >Tidigare konfigurerades varumärkesportalen i Classic UI via äldre OAuth Gateway, som använder JWT-tokenutbyte för att erhålla en IMS Access-token för auktorisering.
+
+
+>[!TIP]
 >
->Om du är en befintlig Brand Portal-användare med konfiguration för äldre OAuth Gateway rekommenderar vi att du tar bort de befintliga konfigurationerna och skapar en ny konfiguration för Adobe I/O.
+>***Endast för befintliga kunder***
 >
->Om du är en befintlig Brand Portal-användare med konfiguration för äldre OAuth Gateway rekommenderar vi att du tar bort de befintliga konfigurationerna och skapar en ny konfiguration för Adobe I/O.
->
->Den befintliga konfigurationen fortsätter dock att fungera om du inte ändrar konfigurationerna.
+>Vi rekommenderar att du fortsätter använda den befintliga äldre OAuth Gateway-konfigurationen. Om du får problem med äldre OAuth Gateway-konfiguration tar du bort den befintliga konfigurationen och skapar en ny konfiguration via Adobe I/O.
+
 
 I den här hjälpen beskrivs följande två användningsområden:
 * [Ny konfiguration](#configure-new-integration-64): Om du är en ny Brand Portal-användare och vill konfigurera AEM Assets-författarinstansen med Brand Portal kan du skapa en ny konfiguration på Adobe I/O.
