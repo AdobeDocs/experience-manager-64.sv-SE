@@ -3,7 +3,7 @@ title: Prestandajusteringsguide för resurser
 description: Viktiga fokusområden kring AEM-konfiguration, ändringar av maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar och optimera prestanda för AEM Assets.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 82b3998d5c1add6a759812e45ecd08b421d3b0df
 
 ---
 
@@ -104,7 +104,7 @@ accessKey=<snip>
 
 ## Nätverksoptimering {#network-optimization}
 
-Adobe rekommenderar att du aktiverar HTTPS eftersom många företag har brandväggar som fångar upp HTTP-trafik, vilket påverkar överföringar negativt och skadar filer. För stora filöverföringar måste användarna ha kabelanslutna anslutningar till nätverket eftersom ett WiFi-nätverk snabbt blir mättat. Riktlinjer för hur du identifierar flaskhalsar i nätverk finns i [Handbok](assets-sizing-guide.md)för resursstorlek. Information om hur du utvärderar nätverksprestanda genom att analysera nätverkstopologi finns i [Resurser för nätverksaspekter](assets-network-considerations.md).
+Adobe rekommenderar att du aktiverar HTTPS eftersom många företag har brandväggar som förhindrar HTTP-trafik, vilket påverkar överföringar negativt och gör att filer skadas. För stora filöverföringar måste användarna ha kabelanslutna anslutningar till nätverket eftersom ett WiFi-nätverk snabbt blir mättat. Riktlinjer för hur du identifierar flaskhalsar i nätverk finns i [Handbok](assets-sizing-guide.md)för resursstorlek. Information om hur du utvärderar nätverksprestanda genom att analysera nätverkstopologi finns i [Resurser för nätverksaspekter](assets-network-considerations.md).
 
 Din nätverksoptimeringsstrategi är i första hand beroende av hur mycket bandbredd som är tillgänglig och hur stor belastning din AEM-instans har. Gemensamma konfigurationsalternativ, inklusive brandväggar och proxies, kan förbättra nätverkets prestanda. Här följer några viktiga punkter att tänka på:
 
@@ -180,7 +180,7 @@ Kunderna använder bilder av olika storlek och format på sin webbplats eller f�
 
 Många webbplatskunder implementerar en bildservett som ändrar storlek på och beskär bilder när de begärs, vilket medför ytterligare belastning på publiceringsinstansen. Så länge dessa bilder kan cachas kan utmaningen dock mildras.
 
-Ett annat sätt är att använda Scene7-teknik för att helt och hållet överlåta bildbearbetning. Dessutom kan ni distribuera varumärkesportalen som inte bara tar över ansvaret för återgivningsgenerering från AEM-infrastrukturen, utan även hela publiceringsnivån.
+Ett annat sätt är att använda Scene7-teknik för att helt och hållet överlåta bildbearbetning. Dessutom kan ni driftsätta varumärkesportalen som inte bara tar över ansvaret för att skapa renderingar från AEM-infrastrukturen, utan även hela publiceringsnivån.
 
 #### ImageMagick {#imagemagick}
 
@@ -242,31 +242,33 @@ To disable Page Extraction:
 1. Click **[!UICONTROL OK]**
 1. Repeat steps 3-6 for other launcher items that use **DAM Parse Word Documents **workflow model 
 
---># Sub-asset generation and page extraction {#sub-asset-generation-and-page-extraction}
+-->
 
-Under överföringar av resurser skapar AEM:s arbetsflöde en separat resurs för varje sida i PDF- och Office-dokument. Var och en av dessa sidor är en resurs i sig, som förbrukar mer diskutrymme, kräver versionshantering och ytterligare arbetsflödesbearbetning. Om du inte behöver separata sidor inaktiverar du Generering av delresurser och extrahering av sidor.
+<!--
+# Sub-asset generation and page extraction {#sub-asset-generation-and-page-extraction}
 
-Så här inaktiverar du generering av delresurser:
+During asset uploads, AEM's workflow creates a separate asset for each page in PDF and Office documents. Each of these pages is an asset by itself, which consumes additional disk space, requires versioning and additional workflow processing. If you do not require separate pages, disable Sub Asset Generation and Page Extraction.
 
-1. Öppna **[!UICONTROL arbetsflödeskonsolen]** genom att gå till */libs/cq/workflow/content/console.html*
+To disable Sub Asset generation, do the following:
 
-1. Välj fliken **[!UICONTROL Modeller]**
-1. Dubbelklicka på arbetsflödesmodellen **[!UICONTROL DAM Update Asset]**
-1. Ta bort steget **[!UICONTROL Bearbeta underresurs]** från arbetsflödesmodellen **[!UICONTROL DAM-uppdatering]** .
+1. Open the **[!UICONTROL Workflow Console]** tool by going to */libs/cq/workflow/content/console.html*
 
-1. Klicka på **[!UICONTROL Spara]**
+1. Select the **[!UICONTROL Models]** tab
+1. Double click the **[!UICONTROL DAM Update Asset]** workflow model
+1. Delete **[!UICONTROL Process Sub Asset]** step from **[!UICONTROL DAM Update Asset]** workflow model.
 
-Så här inaktiverar du sidextrahering:
+1. Click on **[!UICONTROL Save]**
 
-1. Öppna **[!UICONTROL arbetsflödeskonsolen]** genom att gå till */libs/cq/workflow/content/console.html*
+To disable Page Extraction:
 
-1. Välj fliken **[!UICONTROL Startare]**
-1. Välj en startfil som startar arbetsflödesmodellen **[!UICONTROL för DAM-tolkning av Word-dokument]**
+1. Open the **[!UICONTROL Workflow Console]** tool by going to */libs/cq/workflow/content/console.html*
+
+1. Select the **[!UICONTROL Launchers]** tab
+1. Select a launcher that launches **[!UICONTROL DAM Parse Word Documents]** workflow model.
 1. Click **[!UICONTROL Edit]**
-1. Välj **[!UICONTROL Inaktivera]**
+1. Select **[!UICONTROL Disable]**
 1. Click **[!UICONTROL OK]**
-1. Upprepa steg 3-6 för andra startobjekt som använder **DAM Tolka Word-dokument **arbetsflödesmodell
-
+1. Repeat steps 3-6 for other launcher items that use **DAM Parse Word Documents** workflow model.
 -->
 
 ### XMP-tillbakaskrivning {#xmp-writeback}
@@ -345,12 +347,11 @@ Uppdatera indexkonfigurationer för att förbättra omindexeringstiden:
 
    type=&quot;String&quot;
 
-1. På noden /oak:index/ntBaseLucene anger du egenskapen *reindex=true*
+1. På noden /oak:index/ntBaseLucene anger du egenskapen `reindex=true`
 1. Klicka på **[!UICONTROL Spara alla]**
 1. Övervaka error.log för att se när indexeringen är klar:
 
-   
-Omindexering har slutförts för index: [/ek:index/ntBaseLucene]
+   Omindexering har slutförts för index: [/ek:index/ntBaseLucene]
 
 1. Du kan också se att indexeringen har slutförts genom att uppdatera noden /oak:index/ntBaseLucene i CRXDe eftersom egenskapen reindex skulle återgå till false
 1. När indexeringen är klar går du tillbaka till CRXDe och anger att **[!UICONTROL type]** -egenskapen ska vara inaktiverad för dessa två index
@@ -373,7 +374,7 @@ Om användarna inte behöver kunna söka i innehållet i resurser, till exempel 
 
 När du skapar frågor som genererar stora resultatuppsättningar bör du använda parametern för att undvika att använda mycket minne när du kör dem. `guessTotal`
 
-## Kända fel {#known-issues}
+## Known issues {#known-issues}
 
 ### Stora filer {#large-files}
 
@@ -404,17 +405,17 @@ För att minimera latens och uppnå hög genomströmning genom effektiv processo
 
 ## Prestandakontrolllista för AEM Resurser {#aem-assets-performance-checklist}
 
-* Gör det möjligt för HTTPS att kringgå HTTP-trafiksnuttar
-* Använd en kabelanslutning för överföring av stora resurser
-* Driftsätt med Java 8.
-* Ange optimala JVM-parametrar
-* Konfigurera ett datalager i filsystemet eller ett S3 DataStore
-* Aktivera tillfälliga arbetsflöden
-* Justera Granite-arbetsflödesköer för att begränsa samtidiga jobb
-* Konfigurera ImageMagick för att begränsa resursförbrukningen
-* Ta bort onödiga steg från arbetsflödet för DAM-uppdatering
-* Konfigurera arbetsflöde och versionsrensning
-* Optimera Lucene-indexkonfigurationen i versioner före 6.2
+* Gör det möjligt för HTTPS att kringgå alla HTTP-trafiksniffare på företag.
+* Använd en kabelanslutning för överföring av stora resurser.
+* Ange optimala JVM-parametrar.
+* Konfigurera ett datalager i filsystemet eller ett S3 DataStore.
+* Inaktivera generering av underresurser. Om det är aktiverat skapar AEM:s arbetsflöde en separat resurs för varje sida i en flersidig resurs. Var och en av dessa sidor är en enskild resurs som förbrukar mer diskutrymme, kräver versionshantering och ytterligare arbetsflödesbearbetning. Om du inte behöver separata sidor inaktiverar du generering av delresurser och sidextrahering.
+* Möjliggör tillfälliga arbetsflöden.
+* Justera Granite-arbetsflödesköerna för att begränsa antalet samtidiga jobb.
+* Konfigurera ImageMagick för att begränsa resursförbrukningen.
+* Ta bort onödiga steg från arbetsflödet för DAM Update Asset.
+* Konfigurera arbetsflöde och versionsrensning.
+* Optimera Lucene-indexkonfigurationen.
 * Optimera index med de senaste servicepaketen och snabbkorrigeringarna. Kontakta Adobe Support för eventuella ytterligare indexoptimeringar.
 * Används `guessTotal` för att optimera frågeprestanda.
 * Om du konfigurerar AEM för att identifiera filtyper från filernas innehåll (genom att konfigurera [!UICONTROL Day CQ DAM Mime Type Service] i [!UICONTROL AEM Web Console]) överför du många filer samtidigt under icke-toppade tider eftersom åtgärden är resurskrävande.
