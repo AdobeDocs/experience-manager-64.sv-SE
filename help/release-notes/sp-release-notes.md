@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 translation-type: tm+mt
-source-git-commit: 6684e78caf43b49660de3c1a90e2cccd9a204420
+source-git-commit: a80f5bd7be1de577a46c8aae880d6713e2d50f30
 
 ---
 
@@ -46,6 +46,8 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Integrering av formulärdatamodeller med SOAP-webbtjänsten har nu stöd för urvalsgrupper eller attribut för element.
 
 * AEM Assets har nu konfigurerats med en varumärkesportal via Adobe I/O.
+
+* Uppdaterade jQuery-versionen som paketerats i ContextHub till 3.4.1.
 
 ## Ändringslista {#list-of-changes}
 
@@ -173,7 +175,7 @@ Några av de viktigaste nyheterna i AEM 6.4.7.0 är:
 * Ny kolumn för skapat datum, som är sorterbar, har lagts till i **DAM-listvyn** och i resurssökningsresultat i **listvyn** (NPR-31311).
 * Resurssortering baserat på **namnkolumnen** är tillåtet i **listvyn** .
 * Tidsgränsen för batchstorlek och arbetsflödessteg för återbearbetning och batchöverföring kan nu konfigureras från gränssnittet i Dynamic Media.
-* Minnet `pdfBrochure` har angetts till false i molnkonfigurationen Scene 7 för att spara minne i IPS.
+* Minnet `pdfBrochure` har angetts till false i Scene 7-molnkonfigurationen för att spara minne i IPS.
 
 ##### Assets {#assets-6470}
 
@@ -2115,7 +2117,7 @@ Så här installerar du Service Pack på en befintlig AEM 6.4-instans:
 
 >[!NOTE]
 >
->**Dialogrutan för Package Manager-gränssnittet avslutas ibland på ett felaktigt sätt under installationen av 6.4.8.0**
+>**Dialogrutan i användargränssnittet för Package Manager avslutas ibland på ett felaktigt sätt under installationen av 6.4.8.0**
 >
 >Därför rekommenderar vi att du väntar på att felloggarna ska stabiliseras innan du får åtkomst till instansen. Användaren måste vänta på specifika loggar som rör avinstallation av uppdateringspaketet innan den kan vara säker på att installationen lyckas. Det händer vanligtvis på Safari, men kan hända i olika webbläsare.
 
