@@ -3,7 +3,7 @@ title: Filformat som stöds i AEM Assets
 description: Lista över filformat och MIME-typer som stöds av AEM Assets och de funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 75d2bdc6cda9a608d622e31769abfa36e847e3a3
+source-git-commit: 171186251e675094e716931b64c77e7897c03ca7
 
 ---
 
@@ -20,7 +20,7 @@ Använd teckenförklaringen för att förstå supportnivån.
 |:---:|---|
 | ✓ | Stöds |
 | * | Stöds med tilläggsfunktioner |
-| - | Ej relevant |
+| − | Ej relevant |
 
 ## Rasterbildformat {#supported-raster-image-formats}
 
@@ -37,12 +37,12 @@ Följande rasterbildformat stöds för filhanteringsfunktioner:
 | PGM | ✓ | ✓ |  |  |  |  | ✓ |
 | PBM | ✓ | ✓ |  |  |  |  | ✓ |
 | PPM | ✓ | ✓ |  |  |  |  | ✓ |
-| PSD **¹** | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
+| PSD **‡** | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ |  | ✓ |  |
 | PICT |  |  |  |  |  |  | ✓ |
 | PSB | ✓ | ✓ | ✓ | ✓ |  |  |  |
 
-**¹** Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
+**‡** Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
 
 Följande rasterbildformat stöds för Dynamic Media-funktioner:
 
@@ -54,15 +54,15 @@ Följande rasterbildformat stöds för Dynamic Media-funktioner:
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | BMP | ✓ |  |  |  |  |
 | PNM |  |  |  |  |  |
-| PGM |  |  |  |  |  |
+| PFM |  |  |  |  |  |
 | PBM |  |  |  |  |  |
 | PPM |  |  |  |  |  |
-| PSD **¹** | ✓ |  |  |  |  |
+| PSD **‡** | ✓ |  |  |  |  |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ |  |  |  |  |
 | PSB |  |  |  |  |  |
 
-**¹** Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
+**‡** Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
 
 Utöver informationen ovan bör du tänka på följande:
 
@@ -156,16 +156,16 @@ Utöver ovanstående funktioner bör du tänka på följande:
 
 | Format | Lagring | Metadatahantering | Extrahering av metadata | Generering av miniatyrbilder | FFMPEG-omkodning |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| AAC | ✓ | ✓ |  | - | * |
-| MIDI | ✓ | ✓ |  | - | * |
-| 3GP | ✓ | ✓ |  | - | * |
-| MP3 | ✓ | ✓ | ✓ | - | * |
-| MPG | ✓ | ✓ |  | - | * |
-| OGA | ✓ | ✓ |  | - | * |
-| OGG | ✓ | ✓ |  | - | * |
-| RA | ✓ | ✓ |  | - | * |
-| WAV | ✓ | ✓ |  | - | * |
-| WMA | ✓ | ✓ |  | - | * |
+| AAC | ✓ | ✓ |  | − | * |
+| MIDI | ✓ | ✓ |  | − | * |
+| 3GP | ✓ | ✓ |  | − | * |
+| MP3 | ✓ | ✓ | ✓ | − | * |
+| MPG | ✓ | ✓ |  | − | * |
+| OGA | ✓ | ✓ |  | − | * |
+| OGG | ✓ | ✓ |  | − | * |
+| RA | ✓ | ✓ |  | − | * |
+| WAV | ✓ | ✓ |  | − | * |
+| WMA | ✓ | ✓ |  | − | * |
 | DVI | ✓ | ✓ |  | * | * |
 | FLV | ✓ | ✓ |  | * | * |
 | M4V | ✓ | ✓ |  | * | * |
@@ -206,9 +206,9 @@ De arkivformat som stöds och tillämpligheten för de vanliga DAM-arbetsflöden
 | JAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | RAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | TAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
-| ZIP **²** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| ZIP **†** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-**²** Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte. ZIP-arkiven som skapats med `Deflate64` algoritmen har begränsat stöd i AEM. Arkiv- och arkiveringsåtgärder stöds inte. Åtgärder som att överföra, bläddra och hämta stöds emellertid.
+**†** Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte. ZIP-arkiven som skapats med `Deflate64` algoritmen har begränsat stöd i AEM. Arkiv- och arkiveringsåtgärder stöds inte. Åtgärder som att överföra, bläddra och hämta stöds emellertid.
 
 ## Andra format som stöds {#other-supported-formats}
 
@@ -216,14 +216,14 @@ Hur vanliga DAM-arbetsflöden kan användas för ett par andra filformat beskriv
 
 | Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Dynamic Media Delivery |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **³** | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| **#** | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | SVG | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JavaScript (när konfigureras med egen leveransdomän) |  |  |  |  |  | ✓ |
 
-**³** De andra formaten stöds i DAM för lagring, versionshantering, ACL, arbetsflöde, publicering och metadatahantering.
+**#** De andra formaten stöds i DAM för lagring, versionshantering, ACL, arbetsflöde, publicering och metadatahantering.
 
 ## MIME-typer som stöds {#supported-mime-types}
 
@@ -271,7 +271,7 @@ Se även [Aktivera stöd](/help/sites-administering/scene7.md#enabling-mime-type
 | OTF | application/x-font-otf |  |  |
 | PDF | application/pdf | `pdfprocess=Rasterize&resolution=150`<br>`&colorspace=Auto&pdfbrochure=false`<br>`&keywords=false&links=false` | [pdfOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/?f=r_pdf_options) |
 | PFB | application/x-font-type1 |  |  |
-| PGM | application/x-font-type1 |  |  |
+| PFM | application/x-font-type1 |  |  |
 | PICT | image/x-pict |  |  |
 | PNG | bild/png |  |  |
 | PPT | application/vnd.ms |  |  |
