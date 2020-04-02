@@ -1,9 +1,9 @@
 ---
-source-git-commit: 56f859e9e6a31d81364b327e744749f8d5ff4da6
+source-git-commit: 56d3b9ccfa274ffb6305317bfe262060555b46a0
 translation-type: tm+mt
 
 ---
-# AEM 6.4-dokumentation
+# Adobe Experience Manager 6.4 - dokumentation
 
 Det här är databasen för Adobe Experience Manager 6.4-dokumentation. Denna dokumentation beskriver installation, administration, redigering och anpassning av AEM.
 
