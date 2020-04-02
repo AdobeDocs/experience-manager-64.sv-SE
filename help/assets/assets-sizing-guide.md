@@ -6,7 +6,7 @@ contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 82c1725e-a092-42e2-a43b-72f2af3a8e04
 translation-type: tm+mt
-source-git-commit: 8e9f7aa39832351084bc335580b2d40ed432cd84
+source-git-commit: 6aec5927c00f70ce2c044ffd56cabbf68a81071a
 
 ---
 
@@ -28,7 +28,7 @@ Slutligen lagras dubbletter av resurserna i versionshistoriken i AEM:s versionsh
 Med tanke på dessa faktorer behöver du en metod för att beräkna ett tillräckligt exakt lagringsutrymme för lagring av användarresurser.
 
 1. Fastställ storleken och antalet resurser som ska läsas in i systemet.
-1. Hämta ett representativt urval av de resurser som ska överföras till AEM. Om du t.ex. tänker läsa in PSD-, JPG-, AI- och PDF-filer i systemet behöver du flera exempelbilder för varje filformat. Dessutom bör dessa prover representera de olika filstorlekarna och komplexiteterna i bilderna.
+1. Hämta ett representativt urval av de resurser som ska överföras till AEM. Om du till exempel tänker läsa in PSD-, JPG-, AI- och PDF-filer i systemet behöver du flera exempelbilder för varje filformat. Dessutom bör dessa prover representera de olika filstorlekarna och komplexiteterna i bilderna.
 1. Definiera de återgivningar som ska användas.
 1. Skapa renderingarna i AEM med ImageMagick eller Adobes Creative Cloud-program. Förutom de återgivningar som användarna anger skapar du färdiga återgivningar. För användare som implementerar Scene7 kan du använda IC-binärfilen för att generera PTIFF-återgivningar som ska lagras i AEM.
 1. Om du tänker använda delresurser genererar du dem för rätt filtyper. Mer information finns i onlinedokumentationen om hur du genererar underresurssidor från InDesign-filer eller PNG-/PDF-filer från Illustrator-lager.
@@ -96,7 +96,7 @@ Det är svårt att få fram exakta siffror för storleken för en NodeStore elle
 
 Eftersom binärfilerna lagras i datalagret tar varje binärfil upp lite utrymme. De flesta databaser är mindre än 100 GB. Det kan dock finnas större databaser som är upp till 1 TB stora. För att utföra offlinekomprimering behöver du dessutom tillräckligt med ledigt utrymme på volymen för att skriva om den komprimerade databasen tillsammans med den förkomprimerade versionen. En bra tumregel är att ändra storlek på disken till 1,5 gånger den storlek som förväntas för databasen.
 
-Använd SSD-diskar eller diskar med en IOPS-nivå som är större än 3 kB för databasen. För att eliminera riskerna att IOPS inför flaskhalsar i prestandan bör du övervaka CPU-IO-väntenivåer för tidiga tecken på problem.
+Använd SSD-diskar eller diskar med en IOPS-nivå som är högre än 3 000 för databasen. För att eliminera riskerna att IOPS inför flaskhalsar i prestandan bör du övervaka CPU-IO-väntenivåer för tidiga tecken på problem.
 
 [Hämta fil](assets/aem_environment_sizingtool.xlsx)
 
@@ -138,7 +138,7 @@ Gränsen för antalet filer som kan finnas i ett datalager kan vara 2,1 miljarde
 
 Om återgivningarna genereras på ett felaktigt sätt använder du Camera Raw-biblioteket. I det här fallet får dock den längsta sidan av bilden inte vara större än 65 000 pixlar. Dessutom får bilden inte innehålla fler än 512 MP (512 &amp;ast; 1024 &amp;ast; 1024 pixlar)&#39;. *Storleken på tillgången är inkonsekvent*.
 
-Det är svårt att göra en korrekt uppskattning av storleken på TIFF-filen som kan användas direkt (OTB) med en särskild heap för AEM eftersom ytterligare faktorer, som pixelstorlek, påverkar bearbetningen. Det är möjligt att AEM kan bearbeta en fil med storleken 255 MB OOTB, men inte kan bearbeta en filstorlek på 18 MB eftersom den senare innehåller ett ovanligt stort antal pixlar jämfört med den förra.
+Det är svårt att göra en korrekt uppskattning av storleken på TIFF-filen som stöds från början (OTB) med en särskild heap för AEM eftersom ytterligare faktorer, som pixelstorlek, påverkar bearbetningen. Det är möjligt att AEM kan bearbeta en fil med storleken 255 MB OOTB, men inte kan bearbeta en filstorlek på 18 MB eftersom den senare innehåller ett ovanligt stort antal pixlar jämfört med den förra.
 
 ## Storlek på tillgångar {#size-of-assets}
 
