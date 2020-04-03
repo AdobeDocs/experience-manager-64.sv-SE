@@ -3,7 +3,7 @@ title: Konfigurera plugin-programmen för RTF-redigeraren
 description: Lär dig konfigurera plugin-programmen för AEM Rich Text Editor så att enskilda funktioner aktiveras.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
+source-git-commit: f1a1dc18f768d814c63082ed40687862235a76cf
 
 ---
 
@@ -87,7 +87,9 @@ När du har aktiverat ett plugin-program följer du de här riktlinjerna för at
 
 ## Förstå plugin-programmet findreplace {#understand--findreplace-plugin}
 
-Plugin- `findreplace` programmet behöver ingen konfiguration. Det fungerar som förväntat, direkt vid leverans.
+Plugin- `findreplace` programmet behöver ingen konfiguration. Det går som det ska.
+
+När du använder funktionen Ersätt bör du ange den ersättningssträng som ska ersättas samtidigt som söksträngen. Du kan dock fortfarande klicka på Sök för att söka efter strängen innan du ersätter den. Om ersättningssträngen anges efter att du klickat på Sök återställs sökningen till början av texten.
 
 Dialogrutan Sök och ersätt blir genomskinlig när du klickar på Sök och blir ogenomskinlig när du klickar på Ersätt. Detta gör att författaren kan granska texten som författaren ska ersätta. Om användare klickar på Ersätt alla stängs dialogrutan och visar antalet ersättningar som gjorts.
 
