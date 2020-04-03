@@ -10,7 +10,7 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 15819d42-4897-40fa-a013-e019d1580fa2
 translation-type: tm+mt
-source-git-commit: 1ce49a86e954f48a7cd213558da93861794cfd33
+source-git-commit: d79b5f7204cb7a00cef6d31a1fdd2cbe93a6cfbe
 
 ---
 
@@ -92,7 +92,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
     <ul> 
      <li>grund/komponenter/timing</li> 
     </ul> </td> 
-   <td>För tillfället är det inte tänkt att ersätta något.</td> 
+   <td>Just nu är det inte tänkt att ersätta något.</td> 
   </tr>
   <tr>
    <td>Portaldirektör</td> 
@@ -100,12 +100,12 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
     <ul> 
      <li>/libs/portal/director</li> 
     </ul> </td> 
-   <td>För tillfället är det inte tänkt att ersätta något.</td> 
+   <td>Just nu är det inte tänkt att ersätta något.</td> 
   </tr>
   <tr>
    <td>Portlet-komponent</td> 
    <td><p>Portlet Components under /foundation/components/portlet gör att JSR Portlets i AEM kan användas som komponenter.</p> <p>Adobe planerar inte att göra fler förbättringar av funktionen Portlet Component. Portlet Component ingår i AEM 6.4, och kunder som uppgraderar från tidigare versioner kan fortsätta använda det som det är. Observera att Portlet Component fortfarande har fullt stöd medan det är föråldrat.</p> </td> 
-   <td>För tillfället är det inte tänkt att ersätta något.</td> 
+   <td>Just nu är det inte tänkt att ersätta något.</td> 
   </tr>
   <tr>
    <td>Formulär</td> 
@@ -122,7 +122,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 
 ## Borttagna funktioner {#removed-features}
 
-I det här avsnittet listas funktioner som har tagits bort från AEM 6.4. Tidigare versioner hade dessa funktioner markerats som borttagna.
+I det här avsnittet listas funktioner som har tagits bort från AEM 6.4. Tidigare versioner hade dessa funktioner markerats som föråldrade.
 
 <table> 
  <tbody>
@@ -185,6 +185,41 @@ I det här avsnittet listas funktioner som har tagits bort från AEM 6.4. Tidiga
    <td>Formulär</td> 
    <td>Stöd för bilder i dokumentfragment har tagits bort. </td> 
    <td>Interaktiv kommunikation gör det möjligt att använda bilder i tryck- och webbkanaler direkt.<br /> </td> 
+  </tr>
+    <tr>
+   <td>Formulär</td> 
+   <td> Uppgradering utanför kontoret </td> 
+   <td>Det finns inget stöd för att utföra uppgraderingen utanför platsen <br/> </td> 
+  </tr>
+  <tr>
+   <td>Formulär</td> 
+   <td> Sidegrade för TjärMK till DocumentMK-migreringar </td> 
+   <td> Du kan exportera data från ett äldre system och sedan importera dem i ett uppdateringssystem. Detaljerade instruktioner finns i AEM Forms om JEE-uppgraderingsdokumentation <br/> </td> 
+  </tr>
+    <tr>
+   <td>Formulär</td> 
+ <td>AEM Forms på JEE 32-bitars installationsprogram är inte tillgängligt.</td> 
+   <td>Adobe har slutat leverera AEM Forms på JEE 32-bitars installationsprogram. Du kan fortsätta använda 64-bitars installationsprogram för att installera AEM Forms på JEE. </td>  
+  </tr>
+    <tr>
+    <td>Formulär</td> 
+    <td>Tog bort stöd för att använda DAM-bilder i Document Fragment Component.</td> 
+    <td> Du kan använda komponenterna Bild och Diagram i den interaktiva kommunikationens utskriftskanal. Om du använder ett adaptivt dokuments dokumentfragmentkomponent i adaptiva formulär slutar det fungera efter uppgradering till AEM 6.4-formulär. </td>  
+  </tr>
+  <tr>
+   <td>Formulär</td> 
+   <td> Funktionen Adaptiva dokument har tagits bort</td> 
+   <td> Du kan använda funktionen för interaktiv kommunikation för att skapa tryckt och webbaserad kommunikation. <br/> </td> 
+  </tr>
+    <tr>
+    <td>Formulär</td> 
+    <td>Borttagen AEM Forms på JEE-specifik landningssida.</td> 
+    <td>AEM Forms på JEE-landningssida ersätts med AEM-landningssida (/aem/start.html) </td>  
+  </tr>
+   <tr>
+   <td>Formulär</td> 
+   <td>Stöd för standard-Captcha har tagits bort</td> 
+   <td>Använd tjänsten reCAPTCHA från Google.</td> 
   </tr>
   <tr>
    <td>Communities</td> 
