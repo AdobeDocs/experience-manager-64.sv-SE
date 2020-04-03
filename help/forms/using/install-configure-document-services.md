@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: b9d2a5b65f7ae48a9bde5580b5ddd3e55fc68d61
+source-git-commit: db1adfa79456ab856ec8bfe5d64ae6a128cb7360
 
 ---
 
@@ -336,7 +336,7 @@ Du kan göra det möjligt för en icke-administratörsanvändare att använda PD
 
 1. Starta om datorn.
 
-### Inaktivera tjänsten Felrapportering {#disable-error-reporting-service}
+### Inaktivera felrapporteringstjänsten {#disable-error-reporting-service}
 
 När du konverterar ett dokument till PDF med PDF Generator-tjänsten på Windows Server rapporterar Windows Server ibland att den körbara filen har stött på ett problem och måste stängas. PDF-konverteringen påverkas dock inte eftersom den fortsätter i bakgrunden.
 
@@ -412,6 +412,7 @@ AEM Forms-tilläggspaketet är ett program som distribueras till AEM. Paketet in
    ```
    sling.bootdelegation.xerces=org.apache.xerces.*
    ```
+
 1. Spara och stäng filen.
 
 ### Konfigurera teckensnittshanterartjänsten {#configuring-the-font-manager-service}
@@ -518,7 +519,7 @@ Med pålitlighetslagerhanteringen kan du importera, redigera och ta bort certifi
 
 ### Konfigurera certifikat för Reader-tilläggs- och krypteringstjänsten {#set-up-certificates-for-reader-extension-and-encryption-service}
 
-DocAssurance-tjänsten kan tillämpa användningsrättigheter på PDF-dokument. Konfigurera certifikaten om du vill tillämpa användningsbehörighet för PDF-dokument.
+Tjänsten DocAssurance kan lägga in användarrättigheter i PDF-dokument. Konfigurera certifikaten om du vill tillämpa användningsbehörighet för PDF-dokument.
 
 Innan du konfigurerar certifikaten bör du kontrollera att du har en:
 
@@ -572,11 +573,11 @@ Assembler-tjänsten är beroende av Reader Extensions-tjänsten, signaturtjänst
   </tr> 
   <tr> 
    <td>Forms Service</td> 
-   <td>com.adobe.livecycle.adobe-lc-forms-grund-connector<br /> </td> 
+   <td>com.adobe.livecycle.adobe-lc-forms-bedrock-connector<br /> </td> 
   </tr> 
   <tr> 
    <td>Utdatatjänst</td> 
-   <td>com.adobe.livecycle.adobe-lc-forms-grund-connector</td> 
+   <td>com.adobe.livecycle.adobe-lc-forms-bedrock-connector</td> 
   </tr> 
  </tbody> 
 </table>
