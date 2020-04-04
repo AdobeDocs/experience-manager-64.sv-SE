@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 translation-type: tm+mt
-source-git-commit: a80f5bd7be1de577a46c8aae880d6713e2d50f30
+source-git-commit: 9b372645792d3e9181c3c1c1e03f0b9cbb7ef14a
 
 ---
 
@@ -598,7 +598,7 @@ Några av de viktigaste nyheterna i AEM 6.4.5.0 är:
 **Plattform**
 
 * XSS (Cross-site scripting) i pakethanteraren när ett paket installeras. NPR-29734, NPR-29713, NPR-29630: Programfix för GRANITE-26161, GRANITE-
-* Flera lagrade och reflekterade XSS (Cross-site scripting) i CRXDE Lite. NPR-29634: Programfix för GRANITE-26049
+* Flera lagrade och reflekterade XSS (Cross-site scripting) i CRXDE Lite. NPR-29534: Programfix för GRANITE-26049
 * Inloggningsfunktionen för paketresurs använder GET-begäran i stället för POST-begäran, vilket gör att lösenordet visas under nätverksfliken. NPR-29631: Programfix för GRANITE-26048
 
 **Felix**
@@ -708,7 +708,7 @@ De viktigaste nyheterna i AEM 6.4.5.0-formulär är:
 **Formulär - dokumenttjänster**
 
 * Ogiltig PDF/A-fil rapporteras som giltig PDF/A med isPDFA-åtgärd. NPR-29076: Programfix för CQ-4261541
-* PDF-filen kan inte konverteras till PDF/A-1b med formulärfältet har ingen utseendeordlista. NPR-29534: Programfix för CQ-4269618
+* PDF-filen kan inte konverteras till PDF/A-1b med formulärfältet har ingen utseendeordlista. NPR-29634: Programfix för CQ-4269618
 * PDF/A-konvertering från PDF som skapats med utdatatjänsten godkänns inte vid validering med Acrobat DC. NPR-29647: Programfix för CQ-4270448
 * Apache POI-paketet misslyckas med ett undantag. NPR-27861, NPR-28048: Programfix för CQ-4245898, CQ-4244778
 
@@ -1391,7 +1391,7 @@ Några av de viktigaste nyheterna i AEM 6.4.2.0 är:
 
 **Communities**
 
-* (Filbibliotek) Om du hämtar resurser med blanksteg uppstår formatproblem. NPR-24260: Programfix för CQ-4245159
+* (Filbibliotek) Om du hämtar resurser med blanksteg uppstår formatproblem. NPR-23260: Programfix för CQ-4245159
 * Korrigeringar av flera Adobe Social-problem. NPR-24247: Programfix för CQ-4245054, CQ-4245120, CQ-4245296
 * Ofullständig rullning för medlemmar och grupper konsolen misslyckas om författaren ska kunna publicera på olika kontextsökvägar. NPR-24437: Programfix för CQ-4246013
 * Inlägget återgår inte till det obesvarade läget även om det tas bort från det besvarade läget och poängen inte minskas. NPR-24419: Programfix för CQ-4245797, CQ-4245932
@@ -1694,6 +1694,7 @@ AEM 6.4.1.0 kan installeras på AEM 6.4 GA. Några av huvudpunkterna i Service P
 * Stöd för ARIA har lagts till i Print och PrintDialog.
 * Stöd för ARIA-validering av e-post har lagts till.
 * Proaktiv backport för korrigeringar av platform.clientlibs.
+* Förebygga automatisk körning av skript när det inte finns några indata till explicit dataType.
 
 **Assets**
 
@@ -2117,7 +2118,7 @@ Så här installerar du Service Pack på en befintlig AEM 6.4-instans:
 
 >[!NOTE]
 >
->**Dialogrutan i användargränssnittet för Package Manager avslutas ibland på ett felaktigt sätt under installationen av 6.4.8.0**
+>**Dialogrutan för Package Manager-gränssnittet avslutas ibland på ett felaktigt sätt under installationen av 6.4.8.0**
 >
 >Därför rekommenderar vi att du väntar på att felloggarna ska stabiliseras innan du får åtkomst till instansen. Användaren måste vänta på specifika loggar som rör avinstallation av uppdateringspaketet innan den kan vara säker på att installationen lyckas. Det händer vanligtvis på Safari, men kan hända i olika webbläsare.
 
