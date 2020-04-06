@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d18c0ece-4c4f-499c-ac94-a9aaa7f883c4
 translation-type: tm+mt
-source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+source-git-commit: bd2eb8787a98fa9910cc540ba329466a0e72e0db
 
 ---
 
@@ -38,9 +38,9 @@ Koden i den här självstudien är beroende av att huvudmappnamnet är samma fö
 >* Nodnamn kan innehålla mellanslag, men när de används i en URI måste utrymmet kodas antingen som %20 eller +
 >* Nodnamn kan innehålla bindestreck och understreck, men de måste kodas när de refereras som ett paketnamn i en Java-fil. Både bindestreck och understreck escape-konverteras med understreck följt av deras unicode-värde:
    >
-   >  
-* bindestreck blir &#39;_002d&#39;
->  * understreck blir &#39;_005f&#39;
+   >   
+   * bindestreck blir &#39;_002d&#39;
+   >   * understreck blir &#39;_005f&#39;
 
 
 ## Konfigurera programkatalogen (/apps) {#setup-the-application-directory-apps}
@@ -54,8 +54,8 @@ Katalogen /apps är skyddad och inte allmänt tillgänglig, vilket är kataloger
    Använda **[!UICONTROL CRXDE Lite]** i utforskarfönstret
 
    1. Markera `/apps` mappen
-   1. **[!UICONTROL Högerklicka på]** Skapa **[!UICONTROL ... eller dra ned]** Skapa...meny
-   1. **[!UICONTROL Välj]** Skapa mapp.. .
+   1. Högerklicka på **[!UICONTROL Skapa]**... eller dra ned **[!UICONTROL Skapa...]** meny
+   1. Välj **[!UICONTROL Skapa mapp..]** .
    1. I dialogrutan **[!UICONTROL Skapa mapp]** anger du `an-scf-sandbox`
    1. Click **[!UICONTROL OK]**
 
@@ -111,4 +111,4 @@ Katalogen /etc/designs innehåller de bilder, skript och formatmallar som ska h�
 
 Katalogen /content i databasen är den plats där webbplatsinnehållet finns. Sökvägarna under /content utgör sökvägarna till webbadressen för webbläsarbegäranden.
 
-*När* [sidmallen](initial-app.md#createthepagetemplate) har skapats som en del av det inledande programmet kan det inledande sidinnehållet skapas baserat på mallen... . [**⇒**](initial-app.md)
+*När* [sidmallen](initial-app.md#createthepagetemplate) har skapats som en del av det inledande programmet kan det inledande sidinnehållet skapas baserat på mallen.... [**⇒**](initial-app.md)
