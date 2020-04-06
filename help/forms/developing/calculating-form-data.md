@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: b4f57e42-60a6-407d-9764-15a11615827d
 translation-type: tm+mt
-source-git-commit: 58f85b8d21b615597f74efd5cbff2aa8c0229733
+source-git-commit: db6fbf28dc899c58d73334e2d5a694a228a53f80
 
 ---
 
@@ -72,7 +72,7 @@ För att illustrera användningen av ett formulärdesignskript undersöker det h
 
 ![cf_cf_caldata](assets/cf_cf_caldata.png)
 
-******S. Ett fält med namnet NumericField1** B. Ett fält med namnet NumericField2 **C.** Ett fält med namnet NumericField3
+**S.** Ett fält med namnet NumericField1 **B.** Ett fält med namnet NumericField2 **C.** Ett fält med namnet NumericField3
 
 Skriptet i den här formulärdesignen har följande syntax:
 
@@ -109,7 +109,7 @@ Innan du programmässigt kan utföra en API-åtgärd för Form Service Client m�
 
 **Hämta ett formulär som innehåller ett beräkningsskript**
 
-Du använder API:t för Form Service Client för att skapa programlogik som hanterar ett formulär som innehåller ett skript som är konfigurerat att köras på servern. Processen liknar hantering av ett skickat formulär. (Se [Hantera skickade formulär](/help/forms/develop/rendering-forms-rendering-forms handling-submit-forms-handling-submitted.md#handling-skickad-forms).)
+Du använder API:t för Form Service Client för att skapa programlogik som hanterar ett formulär som innehåller ett skript som är konfigurerat att köras på servern. Processen liknar hantering av ett skickat formulär. (Se [Hantera skickade formulär](/help/forms/developing/handling-submitted-forms.md).)
 
 Kontrollera att bearbetningstillståndet som är associerat med det skickade formuläret är `1``(Calculate)`, vilket innebär att Forms-tjänsten utför en beräkningsåtgärd på formulärdata och att resultaten måste skrivas tillbaka till användaren. I så fall körs ett skript som är konfigurerat att köras på servern automatiskt.
 
