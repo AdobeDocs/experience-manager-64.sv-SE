@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: ebe8136b-2a79-4035-b9d5-aa70a5bbd4af
 translation-type: tm+mt
-source-git-commit: f1558c7dec34649d00afcd04245ea552e8c6b978
+source-git-commit: 5a185a50dc9e413953be91444d5c8e76bdae0a69
 
 ---
 
@@ -100,7 +100,7 @@ Både filen map.pdf och filen Directions.pdf måste placeras i ett samlingsobjek
 
 >[!NOTE]
 >
->Ett `*AssemblerResult*` objekt, som innehåller ett samlingsobjekt, returneras om du anropar `*invokeDDX*` åtgärden. Den här åtgärden används när du skickar två eller flera PDF-indatadokument till Assembler-tjänsten. Om du bara skickar en PDF-indatafil till Assembler-tjänsten och bara förväntar dig ett returdokument, ska du anropa `*invokeOneDocument*` åtgärden. När den här åtgärden anropas returneras ett enda dokument. Mer information om hur du använder den här åtgärden finns i [Sammanställa krypterade PDF-dokument](/help/forms/develop/assembling-encrypted-pdf-documents-assembling-encrypted-pdf-documents-assembling.md#assembling-encrypted-pdf-documents).
+>Ett `*AssemblerResult*` objekt, som innehåller ett samlingsobjekt, returneras om du anropar `*invokeDDX*` åtgärden. Den här åtgärden används när du skickar två eller flera PDF-indatadokument till Assembler-tjänsten. Om du bara skickar en PDF-indatafil till Assembler-tjänsten och bara förväntar dig ett returdokument, ska du anropa `*invokeOneDocument*` åtgärden. När den här åtgärden anropas returneras ett enda dokument. Mer information om hur du använder den här åtgärden finns i [Sammanställa krypterade PDF-dokument](/help/forms/developing/assembling-encrypted-pdf-documents.md#assembling-encrypted-pdf-documents).
 
 **Ange körningsalternativ**
 
