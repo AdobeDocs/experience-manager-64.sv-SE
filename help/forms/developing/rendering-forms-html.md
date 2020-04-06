@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 translation-type: tm+mt
-source-git-commit: fd7c589eed2977f3d06f07086008450e2e85a940
+source-git-commit: 340c267fc4e142a67ae5be3f1ab11f063417962e
 
 ---
 
@@ -86,14 +86,14 @@ Vi rekommenderar att du inte ger skriptvariabler och formulärfält samma namn, 
 
 När du återger HTML-formulär som innehåller både sidnavigeringsfunktioner och formulärskript (t.ex. anta att ett skript hämtar fältdata från en databas varje gång formuläret återges), kontrollerar du att formulärskriptet finns i händelsen form:calculate i stället för i formen:readyevent.
 
-Formulärskript som finns i formen:ready-händelsen körs bara en gång under den inledande återgivningen av formuläret och körs inte för efterföljande sidhämtningar. Händelsen form:calculate körs däremot för varje sidnavigering där formuläret återges.
+Formulärskript som finns i händelsen form:ready körs bara en gång under den första återgivningen av formuläret och körs inte för efterföljande sidhämtningar. Händelsen form:calculate körs däremot för varje sidnavigering där formuläret återges.
 
 >[!NOTE]
 På ett flersidigt formulär behålls inte ändringar som JavaScript gjort på en sida om du flyttar till en annan sida.
 
 Du kan anropa egna skript innan du skickar in ett formulär. Den här funktionen fungerar i alla tillgängliga webbläsare. Den kan dock bara användas när användarna återger det HTML-formulär som har egenskapen `Output Type` inställd på `Form Body`. Det kommer inte att fungera när det `Output Type` är `Full HTML`. Mer information om hur du konfigurerar den här funktionen finns i Konfigurera formulär i administrationshjälpen.
 
-Du måste definiera en callback-funktion som anropas innan du skickar formuläret, där funktionens namn är `_user_onsubmit`. Det antas att funktionen inte genererar något undantag, eller att undantaget ignoreras om det gör det. Vi rekommenderar att du placerar JavaScript-funktionen i huvudet i html. Du kan emellertid deklarera det var som helst före slutet av de script-taggar som innehåller `xfasubset.js`.
+Du måste definiera en callback-funktion som anropas innan du skickar formuläret, där funktionens namn är `_user_onsubmit`. Det antas att funktionen inte genererar något undantag, eller att undantaget ignoreras om det gör det. Vi rekommenderar att du placerar JavaScript-funktionen i huvudet i html. Du kan emellertid deklarera den var som helst före slutet av de script-taggar som innehåller `xfasubset.js`.
 
 När formserver återger en XDP-fil som innehåller en nedrullningsbar lista skapas även två dolda textfält förutom att listrutan skapas. Dessa textfält lagrar data i den nedrullningsbara listan (ett lagrar alternativens visningsnamn och andra lagrar alternativens värden). Därför skickas alla data i den nedrullningsbara listan varje gång en användare skickar formuläret. Om du inte vill skicka så mycket data varje gång kan du skriva ett eget skript som inaktiverar det. Till exempel: Listrutans namn är `drpOrderedByStateProv` och omsluts av delformulärsrubriken. Namnet på HTML-indataelementet blir `header[0].drpOrderedByStateProv[0]`. Namnet på de dolda fält som lagrar och skickar data i listrutan har följande namn: `header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]`
 
@@ -335,7 +335,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras en formulärdatastr�
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som är en del av ett formulärprogram måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
    * Ett `TransformTo` uppräkningsvärde som anger HTML-inställningstypen. Om du till exempel vill återge ett HTML-formulär som är kompatibelt med dynamisk HTML för Internet Explorer 5.0 eller senare anger du `TransformTo.MSDHTML`.
-   * Ett `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`. (Se [Fylla i formulär i förväg med flödeslayouter](/help/forms/development/rendering-forms-rendering-forms preiating-forms-flowable-layouts-preiating.md#prepopulating-forms-with-flowable-layouts).)
+   * Ett `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`. (Se [Fylla i formulär i förväg med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md#prepopulating-forms-with-flowable-layouts).)
    * Det objekt `HTMLRenderSpec` som lagrar körningsalternativ för HTML.
    * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärdet; till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. Du kan skicka en tom sträng om du inte vill ange det här värdet.
    * Ett `URLSpec` objekt som lagrar de URI-värden som krävs för att återge ett HTML-formulär. (Se [Ange URI-värden](/help/forms/developing/rendering-interactive-pdf-forms.md).)
