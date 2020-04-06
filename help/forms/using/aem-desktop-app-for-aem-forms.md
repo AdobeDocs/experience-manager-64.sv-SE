@@ -10,7 +10,7 @@ topic-tags: manage
 discoiquuid: c30332b6-e012-442d-8e84-28832c116c7b
 noindex: true
 translation-type: tm+mt
-source-git-commit: 2cb6420879ed93ab4ed3c70603aa11afe919840d
+source-git-commit: 3995381542c86694bad6ff6d3f726b1e24bf7ddc
 
 ---
 
@@ -34,7 +34,7 @@ Du kan använda appen för att synkronisera binära AEM Forms-filer av följande
 AEM-skrivbordsappen använder WebDAV-protokollet i Microsoft Windows och SMB1 i Mac OS X för att ansluta till en AEM Forms-server. Som standard är AEM Forms-servern inte aktiverad för att synkronisera binära filer och andra resurser med en WebDAV- eller SMB-klient. Gör så här för att aktivera AEM Forms för AEM-datorprogrammet:
 
 1. Logga in på AEM Forms som administratör.
-1. I författarinstansen klickar du på ![adobeexperienceManager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager > Tools **![hammer](assets/hammer.png)**> Distribution > Operations > Web Console]**. Webbkonsolen öppnas i ett nytt fönster.
+1. I författarinstansen klickar du på ![adobeexperienceManager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager > Tools]** ![hammer](assets/hammer.png) **[!UICONTROL > Distribution > Operations > Web Console]**. Webbkonsolen öppnas i ett nytt fönster.
 1. I webbkonsolfönstret letar du upp och öppnar alternativet **[!UICONTROL FormsManager AddOn Configuration]** .
 1. Avmarkera kryssrutan Synkronisera resurser **[!UICONTROL asynkront i dialogrutan Lägg till i konfiguration för FormsManager och klicka på]** Spara ****.
 1. Starta om AEM Forms-servern. Efter omstarten är AEM Forms-servern aktiverad för att acceptera och dela innehåll med AEM-skrivbordsappen.
