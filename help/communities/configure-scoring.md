@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: ddb86546-d04b-4967-937b-50a19b0237a0
 translation-type: tm+mt
-source-git-commit: 8c66f2b0053882bd1c998d8e01dbb0573881bc87
+source-git-commit: d653a5db1b12ae2d650db2894dfa602326f7a295
 
 ---
 
@@ -110,7 +110,7 @@ Så här visar du loggposter:
 * På serverns lokala disk
 
    * Loggfilen finns på &lt;*server-install-dir*>/crx-quickstart/logs/&lt;*log-file-name*>.log
-   * Exempel, `.../crx-quickstart/logs/scoring-debug.log`
+   * Exempel: `.../crx-quickstart/logs/scoring-debug.log`
 
 ![chlimage_1-249](assets/chlimage_1-249.png)
 
@@ -149,8 +149,10 @@ Skärmbilderna av databasdata kommer från att konfigurera poängsättning och m
       * `/content/sites/engage/en/forum/jcr:content`
    * Lägga till egenskaper för poängsättning och märkning
 
-      * poängregler = [/etc/community/scoring/rules/comments-scoring,/etc/community/scoring/rules/forums-scoring]
-      * badgingRules =[/etc/community/badging/rules/comments-scoring,/etc/community/badging/rules/forums-scoring]
+      * `scoringRules = [/etc/community/scoring/rules/comments-scoring,
+/etc/community/scoring/rules/forums-scoring]`
+      * `badgingRules =[/etc/community/badging/rules/comments-scoring,
+/etc/community/badging/rules/forums-scoring]`
    * Hitta forumkomponentnoden
 
       * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
