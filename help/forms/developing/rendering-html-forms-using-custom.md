@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 8fe7c072-7df0-44b7-92d0-bf39dc1e688a
 translation-type: tm+mt
-source-git-commit: a11348685b249743b0d77201f5e2ce7e553d670d
+source-git-commit: e2a6f76d8fa34b2b97713aaef094a2df8164e746
 
 ---
 
@@ -163,7 +163,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som är en del av ett formulärprogram måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
    * Ett `TransformTo` uppräkningsvärde som anger HTML-inställningstypen. Om du till exempel vill återge ett HTML-formulär som är kompatibelt med dynamisk HTML för Internet Explorer 5.0 eller senare anger du `TransformTo.MSDHTML`.
-   * Ett `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`. (Se [Fylla i formulär i förväg med flödeslayouter](/help/forms/development/rendering-forms-rendering-forms preiating-forms-flowable-layouts-preiating.md#prepopulating-forms-with-flowable-layouts).)
+   * Ett `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`. (Se [Fylla i formulär i förväg med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md).)
    * Det objekt `HTMLRenderSpec` som lagrar körningsalternativ för HTML.
    * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärdet, till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. Du kan skicka en tom sträng om du inte vill ange det här värdet.
    * Ett `URLSpec` objekt som lagrar de URI-värden som krävs för att återge ett HTML-formulär.
