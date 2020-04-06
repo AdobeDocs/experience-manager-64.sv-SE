@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 53595ac8-ca7e-4adc-9214-5d0b7cdf71a0
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: 48ea1c456e6f43fb5b348aa65f2380ee0b72a3f1
 
 ---
 
@@ -50,11 +50,11 @@ Du använder Data Dictionary Editor för att skapa ett datalexikon eller du kan 
 1. Tryck på **Skapa dataordlista**.
 1. Lägg till följande på skärmen Egenskaper:
 
-   * **** Titel: (Valfritt) Ange dataordlistans rubrik. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska. Bokstäver och andra dokumentfragment refereras till med sin titel (när de är tillgängliga), t.ex. i miniatyrbilder och resursegenskaper. Dataordlistor refereras med sina namn och inte till titlar.
-   * **** Namn: Det unika namnet för dataordlistan. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel och de specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
+   * **Titel:** (Valfritt) Ange dataordlistans rubrik. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska. Bokstäver och andra dokumentfragment refereras till med sin titel (när de är tillgängliga), t.ex. i miniatyrbilder och resursegenskaper. Dataordlistor refereras med sina namn och inte till titlar.
+   * **Namn:** Det unika namnet för dataordlistan. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel och de specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
 
    * **Beskrivning**: (Valfritt) Beskrivning av dataordlistan.
-   * **** Taggar: (Valfritt) Om du vill skapa en egen tagg anger du ett värde i textfältet och trycker på Retur. Du kan se taggen under textfältet med taggar. När du sparar den här texten skapas även de nya taggarna.
+   * **Taggar:** (Valfritt) Om du vill skapa en egen tagg anger du ett värde i textfältet och trycker på Retur. Du kan se taggen under textfältet med taggar. När du sparar den här texten skapas även de nya taggarna.
    * **Utökade egenskaper**: (Valfritt) Tryck på **Lägg till fält** för att ange metadataattribut för din dataordlista. Ange ett unikt egenskapsnamn i kolumnen Egenskapsnamn. Ange ett värde som ska associeras med egenskapen i kolumnen Värde.
    ![Dataordlistegenskaper som anges på tyska](do-not-localize/1_ddproperties.png)
 
@@ -424,19 +424,15 @@ När du vill skicka samma bokstav på olika språk till dina kunder kan du lokal
 1. Tryck på **OK** i varningen. Correspondence Management hämtar en zip-fil till datorn med namnet DataDictionary-&lt;DDname>.zip.
 1. Zip-filen innehåller en .properties-fil. Den här filen definierar det hämtade dataordlistan. Innehållet i egenskapsfilen liknar följande:
 
-   # Wed May 20 16:06:23 BST 2015
-
+   ```
+   #Wed May 20 16:06:23 BST 2015
    DataDictionary.EmployeeDD.description=
-
    DataDictionary.EmployeeDD.displayName=EmployeeDataDictionary
-
    DataDictionaryElement.name.description=
-
    DataDictionaryElement.name.displayName=name
-
    DataDictionaryElement.person.description=
-
    DataDictionaryElement.person.displayName=person
+   ```
 
    Egenskapsfilens struktur definierar en rad var för beskrivningen och visningsnamnet för dataordlistan och varje dataordlisteelement i dataordlistan. Egenskapsfilen definierar dessutom en rad för ett uppräkningsvärde som anges för varje dataordlisteelement. Precis som med en dataordlista kan motsvarande egenskapsfil ha flera definitioner för dataordlisteelement. Dessutom kan filen innehålla definitioner för en eller flera uppräkningsvärdeuppsättningar.
 
