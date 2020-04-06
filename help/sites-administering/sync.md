@@ -10,7 +10,7 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 707b150b-7759-437f-9150-9f4784856754
 translation-type: tm+mt
-source-git-commit: 793305a07cc23e5e551871362e8898ee7bafc0c2
+source-git-commit: 39c9ca8fb7b73d74904a56d9e6a5418950a8c98b
 
 ---
 
@@ -514,7 +514,7 @@ Om följande syns i loggen:
 
 `java.lang.IllegalStateException: This tree does not exist`
 
-Kontrollera sedan att avsnitt [2. Skapa behörig användare](/content/docs/en/aem/6-1/administer/security/security/sync.md#2). skapa behörig användare) följdes korrekt.
+Kontrollera sedan att avsnitt [2. Skapa auktoriserad användare](#createauthuser) följdes korrekt.
 
 I det här avsnittet beskrivs hur du skapar en behörig användare, som finns i alla publiceringsinstanser, och identifierar dem i OSGi-konfigurationen för den hemliga providern. By default, the user is `admin`.
 
