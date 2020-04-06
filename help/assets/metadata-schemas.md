@@ -3,12 +3,12 @@ title: Metadata-scheman
 description: 'Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.  '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 57952323a3ae0990232506d551b91b724f830f20
+source-git-commit: 9674b07fa8ddaee1d77f5a171ca00745e7545d0b
 
 ---
 
 
-# Metadata-scheman {#metadata-schemas}
+# Metadatascheman {#metadata-schemas}
 
 I Adobe Experience Manager Resurser (AEM) definieras layouten för egenskapssidan och de metadataegenskaper som visas för resurser som använder det aktuella schemat i ett metadataram. Metadataegenskaperna innehåller titel, beskrivning, MIME-typer, taggar och så vidare.
 
@@ -28,34 +28,26 @@ Du kan använda redigeraren Metadata Schema Forms om du vill ändra befintliga s
 
    Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatamatchschema eller ändrar ett befintligt formulär. Mer information finns i [Redigera metadata Schema-formulär](metadata-schemas.md#editing-metadata-schema-forms) . Om du ändrar metadataschemat för en viss MIME-typ ändras egenskapssidlayouten för resurser med den aktuella MIME-typen och alla resursundertyper. Om du till exempel ändrar ett `jpeg` schema under `default/image` ändras metadatalayouten (resursegenskaper) för resurser med MIME-typ `IMAGE/JPEG`. Om du redigerar standardschemat ändrar du metadatalayouten för alla typer av resurser.
 
-1. Om du vill visa en lista med formulär/mallar klickar du på AEM-logotypen och går sedan till **[!UICONTROL Verktyg > Resurser > Metadatascheman]**.
+1. To view a list of forms/templates, click the AEM logo and then navigate to **[!UICONTROL Tools > Assets > Metadata Schemas]**.
 
-   ![chlimage_1-173](assets/chlimage_1-173.png)
+   ![chlimage_1-37](assets/chlimage_1-173.png)
 
    AEM innehåller följande mallar:
-
    * **standard**: Basmetadataschemaformuläret för resurser.
-   Följande underordnade formulär ärver egenskaperna för standardformuläret:
 
-   
-i. **bild**: Schemaformulär för resurser med MIME-typen `image`till exempel `image/jpeg`, `image/png`och så vidare.
+      Följande underordnade formulär ärver egenskaperna för standardformuläret:
 
-   &quot;Bildsformuläret har följande underordnade formulärmallar:
+      1. **bild**: Schemaformulär för resurser med MIME-typen &quot;image&quot;, till exempel `image/jpeg`, `image/png`osv.
 
-   a. **jpeg**: Schemaformulär för resurser med undertypen jpeg.
-
-   b. **tiff**: Schemaformulär för resurserna med undertypen TIFF.
-
-   ii. **program**: Schemaformulär för resurser med MIME-typprogram, till exempel `application/pdf`, `application/zip`och så vidare.
-
-   a. **pdf**: Schemaformulär för resurser med undertyp PDF.
-
-   iii. **video**: Schemaformulär för resurser med MIME-typ, t.ex. `video/avi`, `video/mp4` och så vidare.
-
-   * **samling**: Schemaformulär för samlingar
-   * **** innehållfragment: Schemaformulär för innehållsfragment
-   * **formulär**: Det här schemaformuläret gäller [Adobe Experience Manager Forms](/help/forms/home.md)
-
+         &quot;Bildsformuläret har följande underordnade formulärmallar:
+         * **jpeg**: Schemaformulär för resurser med undertyp `jpeg`.
+         * **tiff**: Schemaformulär för resurser med undertyp `tiff`.
+      1. **program**: Schemaformulär för resurser med MIME-typ, `application`till exempel `application/pdf`, `application/zip`och så vidare.
+         * **pdf**: Schemaformulär för resurser med undertyp `pdf`.
+      1. **video**: Schemaformulär för resurser med MIME-typ `video`som `video/avi`, `video/mp4`osv.
+   * **samling**: Schemaformulär för samlingar.
+   * **innehållfragment:** Schemaformulär för innehållsfragment.
+   * **formulär**: Det här schemaformuläret gäller [Adobe Experience Manager Forms](/help/forms/home.md).
 
 >[!NOTE]
 >
@@ -84,11 +76,11 @@ Du kan mappa/konfigurera dessa formulärobjekt till ett fält i en metadatanod i
 
 Du kan lägga till nya flikar eller formulärobjekt i metadatchemaformuläret. Flikarna och formulärobjekten som härleds från det överordnade objektet är låsta. Du kan inte ändra dem på underordnad nivå.
 
-1. Markera kryssrutan före ett formulär på sidan **[!UICONTROL Schemaformulär]** och klicka sedan på **[!UICONTROL Redigera]** i verktygsfältet.
+1. In the **[!UICONTROL Schema Forms]** page, select the check box before a form and then click **[!UICONTROL Edit]** on the toolbar.
 
    ![chlimage_1-175](assets/chlimage_1-175.png)
 
-1. Anpassa egenskapssidan för resursen genom att dra en eller flera komponenter från listan med komponenttyper på fliken **[!UICONTROL Skapa formulär]** till fliken **[!UICONTROL Grundläggande]** på sidan **[!UICONTROL Metadata Schema Editor]** .
+1. In the **[!UICONTROL Metadata Schema Editor]** page, customize the properties page of the asset by dragging one or more components from the list of component types in the **[!UICONTROL Build Form]** tab to the **[!UICONTROL Basic]** tab.
 
    ![chlimage_1-176](assets/chlimage_1-176.png)
 
@@ -125,9 +117,9 @@ Om du vill redigera egenskaperna för en metadatakomponent i formuläret klickar
 
 Följande är giltiga värden för den här egenskapen:
 
-* `./jcr:content/metadata/dc:title`: Lagrar värdet vid resursens metadatanod som egenskap `dc:title`.
+* `./jcr:content/metadata/dc:title`: Lagrar värdet vid resursens metadatanod som egenskapen `dc:title`.
 
-* `./jcr:created`: Visar JCR-egenskapen vid objektets nod. Om du konfigurerar de här egenskaperna för att visa egenskaper rekommenderar vi att du markerar dem som Inaktivera redigering eftersom de är skyddade. I annat fall kunde inte [!UICONTROL resursen/resurserna ändra] resultaten när du sparade resursens egenskaper.
+* `./jcr:created`: Visar JCR-egenskapen vid objektets nod. Om du konfigurerar de här egenskaperna för visning bör du markera dem som Inaktivera redigering, eftersom de är skyddade. Otherwise, the error [!UICONTROL Asset(s) failed to modify] results when you save the asset&#39;s properties.
 
 För att komponenten ska visas korrekt i metadataschemaformuläret bör egenskapssökvägen inte innehålla några blanksteg.
 
@@ -153,7 +145,7 @@ För att komponenten ska visas korrekt i metadataschemaformuläret bör egenskap
 >
 >Komponenten Dolt fält innehåller inte dessa attribut. I stället innehåller den egenskaper som till exempel attributnamn, värde, fältetikett och Beskrivning. Värdena för komponenten Dolt fält skickas som en POST-parameter när resursen sparas. Den sparas inte som metadata för resursen.
 
-Om du väljer alternativet **[!UICONTROL Obligatorisk]** kan du söka efter resurser som saknar obligatoriska metadata. Expandera predikatet för **[!UICONTROL metadatavalidering]** på panelen **[!UICONTROL Filter]** och välj alternativet **[!UICONTROL Ogiltig]** . Sökresultaten visar resurser som saknar obligatoriska metadata som du har konfigurerat via schemaformuläret.
+If you select the **[!UICONTROL Required]** option, you can search for assets missing mandatory metadata. Expandera predikatet för **[!UICONTROL metadatavalidering]** på panelen **[!UICONTROL Filter]** och välj alternativet **[!UICONTROL Ogiltig]** . Sökresultatet visar resurser som saknar obligatoriska metadata som du har konfigurerat via schemaformuläret.
 
 ![chlimage_1-178](assets/chlimage_1-178.png)
 
@@ -167,7 +159,7 @@ Om du vill ta med en flik på egenskapssidan förutom fliken där komponenten Sa
 
 ### Ange egenskaper i JSON-filen {#specifying-properties-in-json-file}
 
-I stället för att ange egenskaper för alternativen på fliken **[!UICONTROL Inställningar]** kan du definiera alternativen i en JSON-fil genom att ange motsvarande nyckelvärdepar. Ange sökvägen till JSON-filen i fältet **[!UICONTROL JSON-sökväg]** .
+Instead of specifying properties for the options in the **[!UICONTROL Settings]** tab, you can define the options in a JSON file by specifying corresponding key-value pairs. Specify the path of the JSON file in the **[!UICONTROL JSON Path]** field.
 
 ### Lägga till eller ta bort en flik i schemaformuläret {#adding-deleting-a-tab-in-the-schema-form}
 
@@ -199,7 +191,7 @@ AEM Assets innehåller standardformulär för olika MIME-typer. Du kan dock läg
 
 ### Lägg till nya formulär för MIME-typer {#adding-new-forms-for-mime-types}
 
-Skapa ett nytt formulär under lämplig formulärtyp. Om du till exempel vill lägga till en ny mall för `image/png` undertypen skapar du formuläret under `image` formulären. Schemaformulärets rubrik är undertypsnamnet. I det här fallet är titeln `png`.
+Skapa ett nytt formulär med lämplig formulärtyp. For example, to add a new template for the `image/png` subtype, create the form under the `image` forms. Schemaformulärets titel är undertypsnamnet. In this case, the title is `png`.
 
 ### Använd en befintlig schemamall för olika MIME-typer {#using-an-existing-schema-template-for-various-mime-types}
 
