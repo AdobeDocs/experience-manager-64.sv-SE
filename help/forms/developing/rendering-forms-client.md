@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 08d36e9f-cafc-478e-9781-8fc29ac6262e
 translation-type: tm+mt
-source-git-commit: 1d00abc71086bbe375033834db5b4811d6f89462
+source-git-commit: a750aeb9f41347da93f1ceb16c5646bc94bee67b
 
 ---
 
@@ -156,7 +156,7 @@ Forms-tjänsten skapar en formulärdataström som du måste skriva till klienten
    Anropa `FormsService` objektets `renderPDFForm` metod och skicka följande värden:
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som är en del av ett formulärprogram måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
-   * Ett `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`. (Se [Fylla i formulär i förväg med flödeslayouter](/help/forms/development/rendering-forms-rendering-forms preiating-forms-flowable-layouts-preiating.md#prepopulating-forms-with-flowable-layouts).)
+   * Ett `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`. (Se [Fylla i formulär i förväg med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md).)
    * Ett `PDFFormRenderSpec` objekt som lagrar körningsalternativ som krävs för att återge ett formulär på klienten.
    * Ett `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
    * Ett `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
