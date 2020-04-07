@@ -31,13 +31,19 @@ Så här visar du inte avataren bredvid varje publicerad kommentar:
 1. Öppna överlägg `comment.hbs`
    * Dubbelklicka på noden `comment.hbs`i `/apps/social/commons/components/hbs/comments/comment folder`
 1. Hitta följande rader och ta bort eller kommentera dem:
-   `xml <aside class="scf-comment-author">
-<img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>`
+
+```xml
+<aside class="scf-comment-author">
+        <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
+```
 
 Radera linjerna eller omge dem med &quot;&lt;!—&#39; och &#39;—>&#39; för att kommentera dem. Dessutom läggs tecknen &#39;xxx&#39; till som en visuell indikator på var avataren skulle ha varit.
-`xml <!-- do not display avatar with comment
-<aside class="scf-comment-author">
-<img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>`
+
+```xml
+<!-- do not display avatar with comment
+    <aside class="scf-comment-author">
+        <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
+```
 
 ## Replikera övertäckningen {#replicate-the-overlay}
 
