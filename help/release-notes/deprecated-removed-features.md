@@ -10,7 +10,7 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 15819d42-4897-40fa-a013-e019d1580fa2
 translation-type: tm+mt
-source-git-commit: d79b5f7204cb7a00cef6d31a1fdd2cbe93a6cfbe
+source-git-commit: 3316dbc8ef268be2b305d22da9003ae40414b4e1
 
 ---
 
@@ -96,7 +96,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
   </tr>
   <tr>
    <td>Portaldirektör</td> 
-   <td><p>Portal Director är en uppsättning funktioner som gör det möjligt att lägga upp AEM-innehåll via Portlet i tredjepartsservrar.</p> <p>Adobe planerar inte att göra ytterligare förbättringar av funktionen Portal Direct i enlighet med den plats som anges nedan. AEM 6.4 har Portal Director inkluderat och kunder som uppgraderar från tidigare versioner kan fortsätta använda det som det är. Observera att Portal Direct fortfarande stöds fullt ut när det är föråldrat.</p> 
+   <td><p>Portal Director är en uppsättning funktioner som gör det möjligt att lägga upp AEM-innehåll via Portlet i tredjepartsservrar.</p> <p>Adobe planerar inte att göra fler förbättringar av funktionen Portal Director på den plats som listas nedan. AEM 6.4 har Portal Director inkluderat och kunder som uppgraderar från tidigare versioner kan fortsätta använda det som det är. Observera att Portal Direct fortfarande stöds fullt ut när det är föråldrat.</p> 
     <ul> 
      <li>/libs/portal/director</li> 
     </ul> </td> 
@@ -110,7 +110,14 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
   <tr>
    <td>Formulär</td> 
    <td><p>Stödet för tjänsten Adobe Central Migration Bridge har tagits bort eftersom Adobe Central-produkten inte längre stöds.</p> </td> 
-   <td> </td> 
+   <td>Ingen ersättning </td> 
+  </tr>
+    <tr>
+   <td>Formulär</td> 
+   <td><p>Användning av JSONObject i Query och OperationOptions har tagits bort. Följande API:er är inaktuella:
+   <ul><li>setArguments(JSONObject arguments)</li><li>JSONObject getArguments()</li><li>OperationOptions(String operationId, JSONObject-argument</li><li>JSONObject getArguments()</li><li>void setArguments(JSONObject arguments)</li></ul>
+   </p> </td> 
+   <td>Använda API:t för IValueMap </td> 
   </tr>
   <tr>
    <td>Assets</td> 
@@ -204,17 +211,22 @@ I det här avsnittet listas funktioner som har tagits bort från AEM 6.4. Tidiga
     <tr>
     <td>Formulär</td> 
     <td>Tog bort stöd för att använda DAM-bilder i Document Fragment Component.</td> 
-    <td> Du kan använda komponenterna Bild och Diagram i den interaktiva kommunikationens utskriftskanal. Om du använder ett adaptivt dokuments dokumentfragmentkomponent i adaptiva formulär slutar det fungera efter uppgradering till AEM 6.4-formulär. </td>  
+    <td> Du kan använda komponenterna Bild och Diagram i den interaktiva kommunikationens tryckkanal. Om du använder ett adaptivt dokuments dokumentfragmentkomponent i adaptiva formulär slutar det fungera efter uppgradering till AEM 6.4-formulär. </td>  
   </tr>
   <tr>
    <td>Formulär</td> 
    <td> Funktionen Adaptiva dokument har tagits bort</td> 
-   <td> Du kan använda funktionen för interaktiv kommunikation för att skapa tryckt och webbaserad kommunikation. <br/> </td> 
+   <td> Du kan använda funktionen för interaktiv kommunikation för att skapa tryckt och webbaserad kommunikation. Om du använder adaptiva dokument måste du installera kompatibilitetspaketet för att kunna fortsätta använda befintliga adaptiva dokument<br/> </td> 
   </tr>
     <tr>
     <td>Formulär</td> 
     <td>Borttagen AEM Forms på JEE-specifik landningssida.</td> 
     <td>AEM Forms på JEE-landningssida ersätts med AEM-landningssida (/aem/start.html) </td>  
+  </tr>
+   <tr>
+   <td>Formulär</td> 
+   <td>Stöd för standard-Captcha har tagits bort</td> 
+   <td>Använd tjänsten reCAPTCHA från Google.</td> 
   </tr>
    <tr>
    <td>Formulär</td> 
