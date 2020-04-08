@@ -10,7 +10,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d630499d-740d-4979-8a34-9e3fcc3b5a23
 translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+source-git-commit: 43a28b0d9552cfde74850dfd1a1d63d04f7e4540
 
 ---
 
@@ -29,7 +29,7 @@ Se hur interaktiva bilder fungerar på webbsidan ovan genom att gå till följan
 
 ## Se hur interaktiva bildbanderoller skapas {#watch-how-interactive-image-banners-are-created}
 
-Titta på en genomgång på 10 minuter och 33 sekunder om [hur interaktiva bildbanderoller skapas](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&emailurl=https://s7d5.scene7.com/s7/emailFriend&serverUrl=https://s7d5.scene7.com/is/image/&config=Scene7SharedAssets/Universal_HTML5_Video_social&contenturl=https://s7d5.scene7.com/skins/&asset=S7tutorials/InteractiveCarouselBanner). Du får också lära dig att förhandsgranska, redigera och leverera interaktiva bildbanderoller.
+Titta på en genomgång på 10 minuter och 33 sekunder om [hur interaktiva bildbanderoller skapas](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner). Du får också lära dig att förhandsgranska, redigera och leverera interaktiva bildbanderoller.
 
 ## Snabbstart: Interaktiva bilder {#quick-start-interactive-images}
 
@@ -65,7 +65,7 @@ Självstudiekursen visar hur du integrerar interaktiva bilder på din egen webbp
 
 1. **Lägga till en interaktiv bild till din webbplats eller till din webbplats i AEM**
 
-   * Om du använder AEM Sites, AEM eCommerce eller båda, kan du lägga till den interaktiva bilden direkt på en webbsida i AEM genom att dra komponenten Interactive Media till sidan. See [Adding Dynamic Media Assets to Pages.](adding-dynamic-media-assets-to-pages.md)
+   * Om du använder AEM Sites, AEM eCommerce eller båda, kan du lägga till den interaktiva bilden direkt på en webbsida i AEM genom att dra komponenten Interactive Media till sidan. See [Adding Dynamic Media Assets to Pages](adding-dynamic-media-assets-to-pages.md).
    * Om du använder fristående AEM Assets och Dynamic Media måste du kopiera inbäddningskoden på din webbplats och sedan integrera den med din befintliga Quickview. Se [Integrera en interaktiv bild med webbplatsen](#integrating-an-interactive-image-with-your-website).
    * Om du använder en WCM-fil (Web Content Manager) från tredje part måste du integrera den nya interaktiva videon med den befintliga QuickView-implementeringen som används på webbplatsen. Se [Integrera en interaktiv bild med en befintlig snabbvy](#integrating-an-interactive-image-with-an-existing-quickview).
 
@@ -106,7 +106,7 @@ Normalt behöver du inte använda några specialverktyg för felsökning. Modern
 
    På en Mac trycker du på **[!UICONTROL Command+Alt+I]** för att öppna panelen **[!UICONTROL Utvecklarverktyg]** och sedan på fliken Nätverk.
 
-* I Firefox kan du antingen aktivera plugin-programmet för Firebug genom att trycka på F12 och använda fliken Net. Du kan också använda det inbyggda **[!UICONTROL inspektörsverktyget]** och fliken **[!UICONTROL Nätverk]** .
+* In Firefox, you can either activate the Firebug plug-in by pressing F12 and use its Net tab, or you can use the built-in **[!UICONTROL Inspector]** tool and its **[!UICONTROL Network]** tab.
 
    På en Mac trycker du på **[!UICONTROL Command+Alt+I]** för att öppna panelen **[!UICONTROL Utvecklarverktyg]** och sedan på fliken **[!UICONTROL Granskare]** .
 
@@ -189,11 +189,11 @@ När du har sparat visningsförinställningen aktiveras den automatiskt (aktiver
 **Så här skapar du en förinställning** för Interactive Image Viewer:
 
 1. Tryck på **[!UICONTROL Verktyg > Resurser > Visningsförinställningar]** till vänster.
-1. Tryck på **[!UICONTROL Skapa]** i det övre högra hörnet på sidan.
+1. Near the upper-right corner of the page, tap **[!UICONTROL Create]**.
 1. I dialogrutan **[!UICONTROL Ny visningsförinställning]** för visningsprogrammet skriver du ett namn som beskriver förinställningen för det interaktiva visningsprogrammet för banderollen.
 
    Det här är titeln som visas på listsidan för **[!UICONTROL visningsförinställningar]** när du har sparat.
-1. I listrutan **[!UICONTROL Multimedietyp]** väljer du **[!UICONTROL Interaktiv bild]**.
+1. In the **[!UICONTROL Rich Media Type]** pull-down menu, select **[!UICONTROL Interactive Image]**.
 1. Tryck på **Skapa**.
 1. Tryck på fliken **[!UICONTROL Utseende]** på sidan **[!UICONTROL Redigera visningsförinställning]** .
 1. Gör något av följande:
@@ -201,7 +201,7 @@ När du har sparat visningsförinställningen aktiveras den automatiskt (aktiver
    * Om du vill överföra en egen hotspot-bild som du vill använda på bilder trycker du på ikonen **[!UICONTROL Resursväljaren]** . Navigera till den hotspot-bild som du vill använda på sidan **[!UICONTROL Välj innehåll]** , markera den och tryck sedan på ikonen **[!UICONTROL Markera]** i det övre högra hörnet.
    * Om du vill välja en fördefinierad hotspot-bild trycker du på **[!UICONTROL ikonen för]** Hotspot-galleriet. Tryck på den hotspot-bild som du vill använda på paletten för klickbara områden.
 
-1. I det övre högra hörnet av sidan trycker du på **[!UICONTROL Spara]**.
+1. Near the upper-right corner of the page, tap **[!UICONTROL Save]**.
 
    Var noga med att publicera den nya visningsförinställningen.
 
@@ -256,16 +256,16 @@ Se [(Valfritt) Förhandsvisa interaktiva bilder](#optional-previewing-interactiv
 1. I resursvyn navigerar du till den bildbanderoll som du vill göra interaktiv.
 1. Gör något av följande:
 
-   * Håll pekaren över bilden och tryck sedan på **[!UICONTROL Select** (bockmarkeringsikonen). Tryck på **[!UICONTROL-redigering** i verktygsfältet.
+   * Hover on the image, then tap **[!UICONTROL Select** (checkmark icon). Tryck på **[!UICONTROL-redigering** i verktygsfältet.
    * Håll pekaren över bilden och tryck sedan på **[!UICONTROL Fler åtgärder]** (ikonen med tre punkter) > **[!UICONTROL Redigera]**.
    * Tryck på bilden för att öppna den på sidan **[!UICONTROL Detaljvy]** . Tryck på **[!UICONTROL-redigering** i verktygsfältet.
 
-1. I närheten av det övre vänstra hörnet av sidan trycker du på **[!UICONTROL Add Hotspot]** (fingerpeksikonen) för att öppna sidan **[!UICONTROL Hotspot Management]** .
-1. I närheten av det övre vänstra hörnet av sidan trycker du på **[!UICONTROL aktiveringspunkten]**.
+1. Near the upper-left corner of the page, tap **[!UICONTROL Add Hotspot]** (finger tap icon) to open the **[!UICONTROL Hotspot Management]** page.
+1. Near the upper-left corner of the page, tap **[!UICONTROL Hotspot]**.
 1. a. I närheten av det övre vänstra hörnet på sidan **Hantering** av hotspot trycker du på **[!UICONTROL hotspot]**.
-b.Tryck på den plats i bilden där du vill att hotspot-området ska visas. Dra hotspot-området om det behövs för att justera dess placering.
-c.Lägg till ytterligare hotspot-områden efter behov genom att upprepa steg a och b.
-d.(Valfritt) Om du vill ta bort en aktiveringspunkt markerar du den på bilden och trycker sedan på **[!UICONTROL Ta bort]** (skräpburkikon) under rubriken **[!UICONTROL Aktiveringspunkter]** .
+b. Tryck på den plats i bilden där du vill att hotspot-området ska visas. Dra hotspot-området om det behövs för att justera dess placering.
+c. Lägg till ytterligare hotspot-områden efter behov genom att upprepa steg a och b.
+d. (Valfritt) Om du vill ta bort en aktiveringspunkt markerar du den på bilden och trycker sedan på **[!UICONTROL Ta bort]** (skräpburkikon) under rubriken **[!UICONTROL Aktiveringspunkter]** .
 
 1. Skriv namnet på hotspot-området i **[!UICONTROL textfältet Namn]** . Det här namnet visas också i listrutan **[!UICONTROL Markerad aktiveringspunkt]** .
 1. Gör något av följande:
