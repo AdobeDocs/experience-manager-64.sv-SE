@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: c74b951194fd2fd723056679784ac2186f37a3e2
+source-git-commit: 1c751a81550086371623d0ba66e4de40f7daaa16
 
 ---
 
@@ -64,7 +64,9 @@ Om du vill anropa en AEM Forms-tjänst med hjälp av Java API:t inkluderar du n�
 * Den AEM Forms-tjänst som ska anropas. Ett klientprogram kan anropa en eller flera tjänster.
 * Det läge i vilket du vill anropa en AEM Forms-tjänst. Du kan använda läget EJB eller SOAP. (Se [Ange anslutningsegenskaper](invoking-aem-forms-using-java.md#setting-connection-properties).)
 
->[!NOTE] (Endast inaktivera) Starta AEM Forms-servern med kommandot `standalone.bat -b <Server IP> -c lc_turnkey.xml` att ange en server-IP för EJB
+>[!NOTE]
+>
+>(Endast inaktivera) Starta AEM Forms-servern med kommando `standalone.bat -b <Server IP> -c lc_turnkey.xml` för att ange en server-IP för EJB.
 
 * J2EE-programservern där AEM Forms distribueras.
 
@@ -72,329 +74,329 @@ Om du vill anropa en AEM Forms-tjänst med hjälp av Java API:t inkluderar du n�
 
 I följande tabell visas de JAR-filer som krävs för att anropa AEM Forms-tjänster.
 
-<table> 
- <thead> 
-  <tr> 
-   <th><p>Arkiv</p></th> 
-   <th><p>Beskrivning</p></th> 
-   <th><p>Plats</p></th> 
-  </tr> 
- </thead> 
+<table>
+ <thead>
+  <tr>
+   <th><p>Arkiv</p></th>
+   <th><p>Beskrivning</p></th>
+   <th><p>Plats</p></th>
+  </tr>
+ </thead>
  <tbody>
-  <tr> 
-   <td><p>adobe-livecycle-client.jar</p></td> 
-   <td><p>Måste alltid ingå i ett Java-klientprograms klassökväg.</p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-usermanager-client.jar</p></td> 
-   <td><p>Måste alltid ingå i ett Java-klientprograms klassökväg.</p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-utilities.jar</p></td> 
-   <td><p>Måste alltid ingå i ett Java-klientprograms klassökväg.</p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk//client-libs/&lt;programserver&gt;</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-applicationmanager-client-sdk.jar</p></td> 
-   <td><p>Krävs för att anropa Application Manager-tjänsten.</p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-assembler-client.jar</p></td> 
-   <td><p>Krävs för att anropa Assembler-tjänsten. </p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-backup-restore-client-sdk.jar</p></td> 
-   <td><p>Krävs för att anropa tjänste-API:t för säkerhetskopiering och återställning.</p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-barcodedforms-client.jar</p></td> 
-   <td><p>Krävs för att anropa den streckkodade formulärtjänsten. </p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-convertpdf-client.jar</p></td> 
-   <td><p>Krävs för att anropa tjänsten Konvertera PDF. </p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-distiller-client.jar</p></td> 
-   <td><p>Krävs för att anropa Distiller-tjänsten.</p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-docconverter-client.jar</p></td> 
-   <td><p>Krävs för att anropa tjänsten DocConverter.</p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-contentservices-client.jar</p></td> 
-   <td><p>Krävs för att anropa dokumenthanteringstjänsten.</p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-encryption-client.jar</p></td> 
-   <td><p>Krävs för att anropa krypteringstjänsten.</p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-forms-client.jar</p></td> 
-   <td><p>Krävs för att anropa Forms-tjänsten.</p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-formdataintegration-client.jar</p></td> 
-   <td><p>Krävs för att anropa integreringstjänsten för formulärdata.</p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-generatepdf-client.jar</p></td> 
-   <td><p>Krävs för att anropa tjänsten Generera PDF.</p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-generate3dpdf-client.jar</p></td> 
-   <td><p>Krävs för att anropa tjänsten Generera 3D PDF.</p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-jobmanager-client-sdk.jar</p></td> 
-   <td><p>Krävs för att anropa tjänsten Job Manager. </p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-output-client.jar</p></td> 
-   <td><p>Krävs för att anropa Output-tjänsten.</p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-pdfutility-client.jar</p></td> 
-   <td><p>Krävs för att anropa PDF-verktygen eller XMP-verktygstjänsten.</p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-reader-extensions-client.jar</p></td> 
-   <td><p>Krävs för att anropa Acrobat Reader DC-tilläggstjänsten.</p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-database-client.jar</p><p>comons-codec-1.3.jar</p></td> 
-   <td><p>Krävs för att anropa databastjänsten.</p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs\thirdparty</p></td> 
-  </tr> 
-  <tr> 
-   <td> 
-    <ul> 
-     <li><p>adobe-rightsmanagement-client.jar</p></li> 
-     <li><p>namespace.jar</p></li> 
-     <li><p>jaxb-api.jar</p></li> 
-     <li><p>jaxb-impl.jar</p></li> 
-     <li><p>jaxb-libs.jar</p></li> 
-     <li><p>jaxb-xjc.jar</p></li> 
-     <li><p>relaxngDatatype.jar</p></li> 
-     <li><p>xsdlib.jar</p></li> 
-    </ul></td> 
-   <td><p>Krävs för att anropa Rights Management-tjänsten.</p><p>Om AEM Forms distribueras på JBoss inkluderar du alla dessa filer. </p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p><p>JBoss-specifik bibliotekskatalog</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-signatures-client.jar</p></td> 
-   <td><p>Krävs för att anropa signaturtjänsten.</p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-taskmanager-client-sdk.jar</p></td> 
-   <td><p>Krävs för att anropa tjänsten Task Manager. </p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>adobe-truststore-client.jar</p></td> 
-   <td><p>Krävs för att anropa tjänsten Trust Store. </p></td> 
-   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td> 
-  </tr> 
- </tbody> 
+  <tr>
+   <td><p>adobe-livecycle-client.jar</p></td>
+   <td><p>Måste alltid ingå i ett Java-klientprograms klassökväg.</p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-usermanager-client.jar</p></td>
+   <td><p>Måste alltid ingå i ett Java-klientprograms klassökväg.</p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-utilities.jar</p></td>
+   <td><p>Måste alltid ingå i ett Java-klientprograms klassökväg.</p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk//client-libs/&lt;programserver&gt;</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-applicationmanager-client-sdk.jar</p></td>
+   <td><p>Krävs för att anropa Application Manager-tjänsten.</p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-assembler-client.jar</p></td>
+   <td><p>Krävs för att anropa Assembler-tjänsten. </p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-backup-restore-client-sdk.jar</p></td>
+   <td><p>Krävs för att anropa tjänste-API:t för säkerhetskopiering och återställning.</p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-barcodedforms-client.jar</p></td>
+   <td><p>Krävs för att anropa den streckkodade formulärtjänsten. </p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-convertpdf-client.jar</p></td>
+   <td><p>Krävs för att anropa tjänsten Konvertera PDF. </p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-distiller-client.jar</p></td>
+   <td><p>Krävs för att anropa Distiller-tjänsten.</p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-docconverter-client.jar</p></td>
+   <td><p>Krävs för att anropa tjänsten DocConverter.</p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-contentservices-client.jar</p></td>
+   <td><p>Krävs för att anropa dokumenthanteringstjänsten.</p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-encryption-client.jar</p></td>
+   <td><p>Krävs för att anropa krypteringstjänsten.</p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-forms-client.jar</p></td>
+   <td><p>Krävs för att anropa Forms-tjänsten.</p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-formdataintegration-client.jar</p></td>
+   <td><p>Krävs för att anropa integreringstjänsten för formulärdata.</p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-generatepdf-client.jar</p></td>
+   <td><p>Krävs för att anropa tjänsten Generera PDF.</p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-generate3dpdf-client.jar</p></td>
+   <td><p>Krävs för att anropa tjänsten Generera 3D PDF.</p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-jobmanager-client-sdk.jar</p></td>
+   <td><p>Krävs för att anropa tjänsten Job Manager. </p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-output-client.jar</p></td>
+   <td><p>Krävs för att anropa Output-tjänsten.</p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-pdfutility-client.jar</p></td>
+   <td><p>Krävs för att anropa PDF-verktygen eller XMP-verktygstjänsten.</p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-reader-extensions-client.jar</p></td>
+   <td><p>Krävs för att anropa Acrobat Reader DC-tilläggstjänsten.</p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-repository-client.jar</p><p>comons-codec-1.3.jar</p></td>
+   <td><p>Krävs för att anropa databastjänsten.</p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs\thirdparty</p></td>
+  </tr>
+  <tr>
+   <td>
+    <ul>
+     <li><p>adobe-rightsmanagement-client.jar</p></li>
+     <li><p>namespace.jar</p></li>
+     <li><p>jaxb-api.jar</p></li>
+     <li><p>jaxb-impl.jar</p></li>
+     <li><p>jaxb-libs.jar</p></li>
+     <li><p>jaxb-xjc.jar</p></li>
+     <li><p>relaxngDatatype.jar</p></li>
+     <li><p>xsdlib.jar</p></li>
+    </ul></td>
+   <td><p>Krävs för att anropa Rights Management-tjänsten.</p><p>Om AEM Forms distribueras på JBoss inkluderar du alla dessa filer. </p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p><p>JBoss-specifik bibliotekskatalog</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-signatures-client.jar</p></td>
+   <td><p>Krävs för att anropa signaturtjänsten.</p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-taskmanager-client-sdk.jar</p></td>
+   <td><p>Krävs för att anropa tjänsten Task Manager. </p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+  <tr>
+   <td><p>adobe-truststore-client.jar</p></td>
+   <td><p>Krävs för att anropa tjänsten Trust Store. </p></td>
+   <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
+  </tr>
+ </tbody>
 </table>
 
 ### Anslutningsläge och JAR-filer för J2EE-program {#connection-mode-and-j2ee-application-jar-files}
 
 I följande tabell visas de JAR-filer som är beroende av anslutningsläget och J2EE-programservern som AEM Forms distribueras på.
 
-<table> 
- <thead> 
-  <tr> 
-   <th><p>Arkiv</p> </th> 
-   <th><p>Beskrivning</p> </th> 
-   <th><p>Plats</p> </th> 
-  </tr> 
- &lt;/thead align="left"&gt; 
- <tbody> 
-  <tr> 
-   <td> 
-    <ul> 
-     <li><p>activation.jar</p> </li> 
-     <li><p>axis.jar</p> </li> 
-     <li><p>comons-codec-1.3.jar</p> </li> 
-     <li><p>commons-collections-3.1.jar</p> </li> 
-     <li><p>comons-discovery.jar</p> </li> 
-     <li><p>commons-log.jar</p> </li> 
-     <li><p>dom3-xml-apis-2.5.0.jar</p> </li> 
-     <li><p>jaxen-1.1-beta-9.jar</p> </li> 
-     <li><p>jaxrpc.jar</p> </li> 
-     <li><p>log4j.jar</p> </li> 
-     <li><p>mail.jar</p> </li> 
-     <li><p>saaj.jar</p> </li> 
-     <li><p>wsdl4j.jar</p> </li> 
-     <li><p>xalan.jar</p> </li> 
-     <li><p>xbean.jar</p> </li> 
-    </ul> 
-    <ul> 
-     <li>xercesImpl.jar<br /> </li> 
-     <li>commons-httpclient-3.1.jar</li> 
-    </ul> <p> </p> </td> 
-   <td><p>Om AEM Forms anropas i SOAP-läge ska du inkludera dessa JAR-filer.</p> </td> 
-   <td><p>&lt;<em>installationskatalog</em>&gt;/sdk/client-libs/thirdparty</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p> jboss-client.jar</p> </td> 
-   <td><p>om AEM Forms distribueras på JBoss Application Server, inkludera den här JAR-filen.</p> <p>Klassinläsaren hittar inte nödvändiga klasser om jboss-client.jar och de refererade burkarna inte finns tillsammans.</p> </td> 
-   <td><p>JBoss-klientbibliotekskatalog</p> <p>Om du distribuerar klientprogrammet på samma J2EE-programserver behöver du inte inkludera den här filen.</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p>wlclient.jar</p> </td> 
-   <td><p>Om AEM Forms används på BEA WebLogic Server® ska du bifoga den här JAR-filen.</p> </td> 
-   <td><p>WebLogic-specifik bibliotekskatalog</p> <p>Om du distribuerar klientprogrammet på samma J2EE-programserver behöver du inte inkludera den här filen.</p> </td> 
-  </tr> 
-  <tr> 
-   <td> 
-    <ul> 
-     <li><p>com.ibm.ws.admin.client_6.1.0.jar</p> </li> 
-     <li><p>com.ibm.ws.webservices.thinclient_6.1.0.jar</p> </li> 
-    </ul> </td> 
-   <td> 
-    <ul> 
-     <li><p>om AEM Forms distribueras på WebSphere Application Server ska du inkludera dessa JAR-filer.</p> </li> 
-     <li><p>(com.ibm.ws.webservices.thinclient_6.1.0.jar krävs för webbtjänstanrop).</p> </li> 
-    </ul> </td> 
-   <td><p>WebSphere-specifik bibliotekskatalog (<em>[WAS_HOME]</em>/runtimes)</p> <p>Om du distribuerar klientprogrammet på samma J2EE-programserver behöver du inte inkludera de här filerna.</p> </td> 
-  </tr> 
- </tbody> 
+<table>
+ <thead>
+  <tr>
+   <th><p>Arkiv</p> </th>
+   <th><p>Beskrivning</p> </th>
+   <th><p>Plats</p> </th>
+  </tr>
+ &lt;/thead align="left"&gt;
+ <tbody>
+  <tr>
+   <td>
+    <ul>
+     <li><p>activation.jar</p> </li>
+     <li><p>axis.jar</p> </li>
+     <li><p>comons-codec-1.3.jar</p> </li>
+     <li><p>commons-collections-3.1.jar</p> </li>
+     <li><p>commons-discovery.jar</p> </li>
+     <li><p>commons-logging.jar</p> </li>
+     <li><p>dom3-xml-apis-2.5.0.jar</p> </li>
+     <li><p>jaxen-1.1-beta-9.jar</p> </li>
+     <li><p>jaxrpc.jar</p> </li>
+     <li><p>log4j.jar</p> </li>
+     <li><p>mail.jar</p> </li>
+     <li><p>saaj.jar</p> </li>
+     <li><p>wsdl4j.jar</p> </li>
+     <li><p>xalan.jar</p> </li>
+     <li><p>xbean.jar</p> </li>
+    </ul>
+    <ul>
+     <li>xercesImpl.jar<br /> </li>
+     <li>commons-httpclient-3.1.jar</li>
+    </ul> <p> </p> </td>
+   <td><p>Om AEM Forms anropas i SOAP-läge ska du inkludera dessa JAR-filer.</p> </td>
+   <td><p>&lt;<em>installationskatalog</em>&gt;/sdk/client-libs/thirdparty</p> </td>
+  </tr>
+  <tr>
+   <td><p> jboss-client.jar</p> </td>
+   <td><p>om AEM Forms distribueras på JBoss Application Server, inkludera den här JAR-filen.</p> <p>Klassinläsaren hittar inte nödvändiga klasser om jboss-client.jar och de refererade burkarna inte finns tillsammans.</p> </td>
+   <td><p>JBoss-klientbibliotekskatalog</p> <p>Om du distribuerar klientprogrammet på samma J2EE-programserver behöver du inte inkludera den här filen.</p> </td>
+  </tr>
+  <tr>
+   <td><p>wlclient.jar</p> </td>
+   <td><p>Om AEM Forms används på BEA WebLogic Server® ska du bifoga den här JAR-filen.</p> </td>
+   <td><p>WebLogic-specifik bibliotekskatalog</p> <p>Om du distribuerar klientprogrammet på samma J2EE-programserver behöver du inte inkludera den här filen.</p> </td>
+  </tr>
+  <tr>
+   <td>
+    <ul>
+     <li><p>com.ibm.ws.admin.client_6.1.0.jar</p> </li>
+     <li><p>com.ibm.ws.webservices.thinclient_6.1.0.jar</p> </li>
+    </ul> </td>
+   <td>
+    <ul>
+     <li><p>om AEM Forms distribueras på WebSphere Application Server ska du inkludera dessa JAR-filer.</p> </li>
+     <li><p>(com.ibm.ws.webservices.thinclient_6.1.0.jar krävs för webbtjänstanrop).</p> </li>
+    </ul> </td>
+   <td><p>WebSphere-specifik bibliotekskatalog (<em>[WAS_HOME]</em>/runtimes)</p> <p>Om du distribuerar klientprogrammet på samma J2EE-programserver behöver du inte inkludera de här filerna.</p> </td>
+  </tr>
+ </tbody>
 </table>
 
 ### Anropa scenarier {#invoking-scenarios}
 
 I följande tabell anges vilka scenarier som anropas och vilka JAR-filer som krävs för att AEM Forms ska kunna anropas.
 
-<table> 
- <thead> 
-  <tr> 
-   <th><p>Tjänster</p> </th> 
-   <th><p>Anropsläge</p> </th> 
-   <th><p>J2EE-programserver</p> </th> 
-   <th><p>Nödvändiga JAR-filer</p> </th> 
-  </tr> 
- &lt;/thead align="left"&gt; 
- <tbody> 
-  <tr> 
-   <td><p>Formulärtjänst</p> </td> 
-   <td><p>EJB</p> </td> 
-   <td><p>JBoss</p> </td> 
-   <td> 
-    <ul> 
-     <li><p>adobe-livecycle-client.jar</p> </li> 
-     <li><p>adobe-usermanager-client.jar</p> </li> 
-    </ul> 
-    <ul> 
-     <li>jboss-client.jar</li> 
-    </ul> 
-    <ul> 
-     <li>adobe-forms-client.jar<br /> </li> 
-     <li>commons-httpclient-3.1.jar</li> 
-    </ul> </td> 
-  </tr> 
-  <tr> 
-   <td><p>Formulärtjänst</p> <p>Tilläggstjänsten Acrobat Reader DC</p> <p>Signaturtjänst</p> </td> 
-   <td><p>EJB</p> </td> 
-   <td><p>JBoss</p> </td> 
-   <td> 
-    <ul> 
-     <li><p>adobe-livecycle-client.jar</p> </li> 
-     <li><p>adobe-usermanager-client.jar</p> </li> 
-    </ul> 
-    <ul> 
-     <li>jboss-client.jar<br /> </li> 
-     <li>commons-httpclient-3.1.jar</li> 
-    </ul> 
-    <ul> 
-     <li><p>adobe-forms-client.jar</p> </li> 
-     <li><p>adobe-reader-extensions-client.jar</p> </li> 
-     <li><p>adobe-signatures-client.jar</p> </li> 
-    </ul> </td> 
-  </tr> 
-  <tr> 
-   <td><p>Formulärtjänst</p> </td> 
-   <td><p>SOAP</p> </td> 
-   <td><p>WebLogic</p> </td> 
-   <td> 
-    <ul> 
-     <li><p>adobe-livecycle-client.jar</p> </li> 
-     <li><p>adobe-usermanager-client.jar</p> </li> 
-     <li><p>wlclient.jar</p> </li> 
-     <li><p>activation.jar</p> </li> 
-     <li><p>axis.jar</p> </li> 
-     <li><p>comons-codec-1.3.jar</p> </li> 
-     <li><p>commons-collections-3.1.jar</p> </li> 
-     <li><p>comons-discovery.jar</p> </li> 
-     <li><p>commons-log.jar</p> </li> 
-     <li><p>dom3-xml-apis-2.5.0.jar</p> </li> 
-     <li><p>jai_imageio.jar</p> </li> 
-     <li><p>jaxen-1.1-beta-9.jar</p> </li> 
-     <li><p>jaxrpc.jar</p> </li> 
-     <li><p>log4j.jar</p> </li> 
-     <li><p>mail.jar</p> </li> 
-     <li><p>saaj.jar</p> </li> 
-     <li><p>wsdl4j.jar</p> </li> 
-     <li><p>xalan.jar</p> </li> 
-     <li><p>xbean.jar</p> </li> 
-     <li><p>xercesImpl.jar</p> </li> 
-     <li><p>adobe-forms-client.jar</p> </li> 
-    </ul> </td> 
-  </tr> 
-  <tr> 
-   <td><p>Formulärtjänst</p> <p>Tilläggstjänsten Acrobat Reader DC</p> <p>Signaturtjänst</p> </td> 
-   <td><p>SOAP</p> </td> 
-   <td><p>WebLogic</p> </td> 
-   <td> 
-    <ul> 
-     <li><p>adobe-livecycle-client.jar</p> </li> 
-     <li><p>adobe-usermanager-client.jar</p> </li> 
-     <li><p>wlclient.jar</p> </li> 
-     <li><p>activation.jar</p> </li> 
-     <li><p>axis.jar</p> </li> 
-     <li><p>comons-codec-1.3.jar</p> </li> 
-     <li><p>commons-collections-3.1.jar</p> </li> 
-     <li><p>comons-discovery.jar</p> </li> 
-     <li><p>commons-log.jar</p> </li> 
-     <li><p>dom3-xml-apis-2.5.0.jar</p> </li> 
-     <li><p>jai_imageio.jar</p> </li> 
-     <li><p>jaxen-1.1-beta-9.jar</p> </li> 
-     <li><p>jaxrpc.jar</p> </li> 
-     <li><p>log4j.jar</p> </li> 
-     <li><p>mail.jar</p> </li> 
-     <li><p>saaj.jar</p> </li> 
-     <li><p>wsdl4j.jar</p> </li> 
-     <li><p>xalan.jar</p> </li> 
-     <li><p>xbean.jar</p> </li> 
-     <li><p>xercesImpl.jar</p> </li> 
-     <li><p>adobe-forms-client.jar</p> </li> 
-     <li><p>adobe-reader-extensions-client.jar</p> </li> 
-     <li><p>adobe-signatures-client.jar</p> </li> 
-    </ul> </td> 
+<table>
+ <thead>
+  <tr>
+   <th><p>Tjänster</p> </th>
+   <th><p>Anropsläge</p> </th>
+   <th><p>J2EE-programserver</p> </th>
+   <th><p>Nödvändiga JAR-filer</p> </th>
+  </tr>
+ &lt;/thead align="left"&gt;
+ <tbody>
+  <tr>
+   <td><p>Formulärtjänst</p> </td>
+   <td><p>EJB</p> </td>
+   <td><p>JBoss</p> </td>
+   <td>
+    <ul>
+     <li><p>adobe-livecycle-client.jar</p> </li>
+     <li><p>adobe-usermanager-client.jar</p> </li>
+    </ul>
+    <ul>
+     <li>jboss-client.jar</li>
+    </ul>
+    <ul>
+     <li>adobe-forms-client.jar<br /> </li>
+     <li>commons-httpclient-3.1.jar</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td><p>Formulärtjänst</p> <p>Tilläggstjänsten Acrobat Reader DC</p> <p>Signaturtjänst</p> </td>
+   <td><p>EJB</p> </td>
+   <td><p>JBoss</p> </td>
+   <td>
+    <ul>
+     <li><p>adobe-livecycle-client.jar</p> </li>
+     <li><p>adobe-usermanager-client.jar</p> </li>
+    </ul>
+    <ul>
+     <li>jboss-client.jar<br /> </li>
+     <li>commons-httpclient-3.1.jar</li>
+    </ul>
+    <ul>
+     <li><p>adobe-forms-client.jar</p> </li>
+     <li><p>adobe-reader-extensions-client.jar</p> </li>
+     <li><p>adobe-signatures-client.jar</p> </li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td><p>Formulärtjänst</p> </td>
+   <td><p>SOAP</p> </td>
+   <td><p>WebLogic</p> </td>
+   <td>
+    <ul>
+     <li><p>adobe-livecycle-client.jar</p> </li>
+     <li><p>adobe-usermanager-client.jar</p> </li>
+     <li><p>wlclient.jar</p> </li>
+     <li><p>activation.jar</p> </li>
+     <li><p>axis.jar</p> </li>
+     <li><p>comons-codec-1.3.jar</p> </li>
+     <li><p>commons-collections-3.1.jar</p> </li>
+     <li><p>commons-discovery.jar</p> </li>
+     <li><p>commons-logging.jar</p> </li>
+     <li><p>dom3-xml-apis-2.5.0.jar</p> </li>
+     <li><p>jai_imageio.jar</p> </li>
+     <li><p>jaxen-1.1-beta-9.jar</p> </li>
+     <li><p>jaxrpc.jar</p> </li>
+     <li><p>log4j.jar</p> </li>
+     <li><p>mail.jar</p> </li>
+     <li><p>saaj.jar</p> </li>
+     <li><p>wsdl4j.jar</p> </li>
+     <li><p>xalan.jar</p> </li>
+     <li><p>xbean.jar</p> </li>
+     <li><p>xercesImpl.jar</p> </li>
+     <li><p>adobe-forms-client.jar</p> </li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td><p>Formulärtjänst</p> <p>Tilläggstjänsten Acrobat Reader DC</p> <p>Signaturtjänst</p> </td>
+   <td><p>SOAP</p> </td>
+   <td><p>WebLogic</p> </td>
+   <td>
+    <ul>
+     <li><p>adobe-livecycle-client.jar</p> </li>
+     <li><p>adobe-usermanager-client.jar</p> </li>
+     <li><p>wlclient.jar</p> </li>
+     <li><p>activation.jar</p> </li>
+     <li><p>axis.jar</p> </li>
+     <li><p>comons-codec-1.3.jar</p> </li>
+     <li><p>commons-collections-3.1.jar</p> </li>
+     <li><p>commons-discovery.jar</p> </li>
+     <li><p>commons-logging.jar</p> </li>
+     <li><p>dom3-xml-apis-2.5.0.jar</p> </li>
+     <li><p>jai_imageio.jar</p> </li>
+     <li><p>jaxen-1.1-beta-9.jar</p> </li>
+     <li><p>jaxrpc.jar</p> </li>
+     <li><p>log4j.jar</p> </li>
+     <li><p>mail.jar</p> </li>
+     <li><p>saaj.jar</p> </li>
+     <li><p>wsdl4j.jar</p> </li>
+     <li><p>xalan.jar</p> </li>
+     <li><p>xbean.jar</p> </li>
+     <li><p>xercesImpl.jar</p> </li>
+     <li><p>adobe-forms-client.jar</p> </li>
+     <li><p>adobe-reader-extensions-client.jar</p> </li>
+     <li><p>adobe-signatures-client.jar</p> </li>
+    </ul> </td>
   </tr> xmp-tur
- </tbody> 
+ </tbody>
 </table>
 
 ### Uppgraderar JAR-filer {#upgrading-jar-files}
@@ -489,11 +491,11 @@ Utför följande åtgärder för att ange anslutningsegenskaper:
 I följande Java-kodexempel ställs anslutningsegenskaperna in så att AEM Forms anropas som distribueras på JBoss och EJB-anslutningsläget används.
 
 ```java
- Properties ConnectionProps = new Properties(); 
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT, "https://<hostname>:8080"); 
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_EJB_PROTOCOL);           
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss"); 
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator"); 
+ Properties ConnectionProps = new Properties();
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT, "https://<hostname>:8080");
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_EJB_PROTOCOL);
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_PASSWORD, "password");
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DOCUMENT_HTTP_ENDPOINT,"https://<hostname>:8080");
 ```
@@ -503,11 +505,11 @@ I följande Java-kodexempel ställs anslutningsegenskaperna in så att AEM Forms
 I följande Java-kodexempel ställs anslutningsegenskaperna in så att AEM-formulär som distribueras på WebLogic anropas och EJB-anslutningsläget används.
 
 ```as3
- Properties ConnectionProps = new Properties(); 
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT, "t3://localhost:7001"); 
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_EJB_PROTOCOL);           
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "WebLogic"); 
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator"); 
+ Properties ConnectionProps = new Properties();
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT, "t3://localhost:7001");
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_EJB_PROTOCOL);
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "WebLogic");
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_PASSWORD, "password");
 ```
 
@@ -516,11 +518,11 @@ I följande Java-kodexempel ställs anslutningsegenskaperna in så att AEM-formu
 I följande Java-kodexempel ställs anslutningsegenskaperna in så att AEM Forms anropas som distribuerats på WebSphere och som använder EJB-anslutningsläget.
 
 ```as3
- Properties ConnectionProps = new Properties(); 
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT, "iiop://localhost:2809"); 
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_EJB_PROTOCOL);           
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "WebSphere"); 
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator"); 
+ Properties ConnectionProps = new Properties();
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT, "iiop://localhost:2809");
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_EJB_PROTOCOL);
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "WebSphere");
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_PASSWORD, "password");
 ```
 
@@ -529,11 +531,11 @@ I följande Java-kodexempel ställs anslutningsegenskaperna in så att AEM Forms
 I följande Java-kodexempel ställs anslutningsegenskaper in i SOAP-läge så att AEM Forms anropas som distribueras på JBoss.
 
 ```as3
- Properties ConnectionProps = new Properties(); 
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "http://localhost:8080"); 
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);           
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss"); 
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator"); 
+ Properties ConnectionProps = new Properties();
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "http://localhost:8080");
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_PASSWORD, "password");
 ```
 
@@ -546,9 +548,9 @@ I följande Java-kodexempel ställs anslutningsegenskaper in i SOAP-läge så at
 I följande Java-kodexempel ställs anslutningsegenskaper in som krävs för att anropa AEM Forms som distribueras på JBoss Application Server och när tjänstsäkerhet är inaktiverat.
 
 ```as3
- Properties ConnectionProps = new Properties(); 
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT, "jnp://localhost:1099"); 
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_EJB_PROTOCOL);           
+ Properties ConnectionProps = new Properties();
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT, "jnp://localhost:1099");
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_EJB_PROTOCOL);
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
 ```
 
@@ -559,12 +561,12 @@ I följande Java-kodexempel ställs anslutningsegenskaper in som krävs för att
 **Ställa in SOAP-anslutningsläget med tidsgräns för anpassad begäran**
 
 ```as3
- Properties ConnectionProps = new Properties(); 
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "http://localhost:8080"); 
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);           
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss"); 
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator"); 
- ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_PASSWORD, "password"); 
+ Properties ConnectionProps = new Properties();
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "http://localhost:8080");
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
+ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_PASSWORD, "password");
 ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, "1800000"); // Request timeout limit 30 Minutes
 ```
 
@@ -575,7 +577,7 @@ Du kan använda ett `com.adobe.idp.Context` objekt för att anropa en AEM Forms-
 Metoden returnerar `authenticate` ett `AuthResult` objekt som innehåller autentiseringsresultatet. Du kan skapa ett `com.adobe.idp.Context` objekt genom att anropa dess konstruktor. Anropa sedan `com.adobe.idp.Context` objektets `initPrincipal` -metod och skicka `AuthResult` objektet, vilket visas i följande kod:
 
 ```as3
- Context myCtx = new Context();  
+ Context myCtx = new Context();
  myCtx.initPrincipal(authResult);
 ```
 
@@ -584,30 +586,30 @@ I stället för att ställa in `DSC_CREDENTIAL_USERNAME` - eller `DSC_CREDENTIAL
 I följande kodexempel visas hur du använder ett `com.adobe.idp.Context` objekt i anslutningsinställningarna för att skapa ett `EncryptionServiceClient` objekt.
 
 ```as3
- //Authenticate a user and use the Context object within connection settings 
- // Authenticate the user 
- String username = "wblue"; 
- String password = "password"; 
- AuthResult authResult = authClient.authenticate(username, password.getBytes()); 
-  
- //Set a Content object that represents the authenticated user 
- //Use the Context object to invoke the Encryption service 
- Context myCtx = new Context();  
- myCtx.initPrincipal(authResult); 
-  
- //Set connection settings 
- Properties connectionProps = new Properties(); 
- connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT, "jnp://<server>:1099"); 
- connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL, ServiceClientFactoryProperties.DSC_EJB_PROTOCOL); 
- connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE); 
+ //Authenticate a user and use the Context object within connection settings
+ // Authenticate the user
+ String username = "wblue";
+ String password = "password";
+ AuthResult authResult = authClient.authenticate(username, password.getBytes());
+ 
+ //Set a Content object that represents the authenticated user
+ //Use the Context object to invoke the Encryption service
+ Context myCtx = new Context();
+ myCtx.initPrincipal(authResult);
+ 
+ //Set connection settings
+ Properties connectionProps = new Properties();
+ connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT, "jnp://<server>:1099");
+ connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL, ServiceClientFactoryProperties.DSC_EJB_PROTOCOL);
+ connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE);
  connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DOCUMENT_HTTP_ENDPOINT,"jnp://<server>:1099");
 
-                          
- //Create a ServiceClientFactory object 
- ServiceClientFactory myFactory = ServiceClientFactory.createInstance(connectionProps); 
- myFactory.setContext(myCtx); 
-                          
- //Create an EncryptionServiceClient object 
+ 
+ //Create a ServiceClientFactory object
+ ServiceClientFactory myFactory = ServiceClientFactory.createInstance(connectionProps);
+ myFactory.setContext(myCtx);
+ 
+ //Create an EncryptionServiceClient object
  EncryptionServiceClient encryptClient  = new EncryptionServiceClient(myFactory);
 ```
 
@@ -647,8 +649,8 @@ Klientprogram som använder SOAP-anslutningsläget kan använda HTTP-belastnings
 I följande exempel visas innehållet i en jndi.properties-fil som används för att ansluta till AEM Forms som distribueras på WebSphere.
 
 ```as3
- java.naming.factory.initial=com.ibm.websphere.naming. 
- WsnInitialContextFactory 
+ java.naming.factory.initial=com.ibm.websphere.naming.
+ WsnInitialContextFactory
  java.naming.provider.url=corbaloc::appserver1:9810,:appserver2:9810
 ```
 
@@ -657,7 +659,7 @@ I följande exempel visas innehållet i en jndi.properties-fil som används för
 I följande exempel visas innehållet i en jndi.properties-fil som används för att ansluta till AEM Forms som distribueras på WebLogic.
 
 ```as3
- java.naming.factory.initial=weblogic.jndi.WLInitialContextFactory 
+ java.naming.factory.initial=weblogic.jndi.WLInitialContextFactory
  java.naming.provider.url=t3://appserver1:8001, appserver2:8001
 ```
 
@@ -666,8 +668,8 @@ I följande exempel visas innehållet i en jndi.properties-fil som används för
 I följande exempel visas innehållet i en jndi.properties-fil som används för att ansluta till AEM Forms som distribueras på JBoss.
 
 ```as3
- java.naming.factory.initial= org.jnp.interfaces.NamingContextFactory 
- java.naming.provider.url= jnp://appserver1:1099, appserver2:1099, 
+ java.naming.factory.initial= org.jnp.interfaces.NamingContextFactory
+ java.naming.provider.url= jnp://appserver1:1099, appserver2:1099,
  appserver3:1099
 ```
 
@@ -706,39 +708,39 @@ Ett program kan innehålla både `com.adobe.idp.Document` - och `org.w3c.dom.Doc
 >Om du vill förhindra en minnesläcka i WebLogic när du använder ett `com.adobe.idp.Document` objekt läser du dokumentinformationen i segment om högst 2 048 byte. Följande kod läser dokumentinformationen i segment om 2 048 byte:
 
 ```as3
-        // Set up the chunk size to prevent a potential memory leak 
-        int buffSize = 2048; 
-  
-        // Determine the total number of bytes to read 
-        int docLength = (int) inDoc.length(); 
-        byte [] byteDoc = new byte[docLength]; 
-  
-        // Set up the reading position 
-        int pos = 0; 
-  
-        // Loop through the document information, 2048 bytes at a time 
-        while (docLength > 0) { 
-      // Read the next chunk of information 
-            int toRead = Math.min(buffSize, docLength); 
-            int bytesRead = inDoc.read(pos, byteDoc, pos, toRead); 
-  
-            // Handle the exception in case data retrieval failed 
-            if (bytesRead == -1) { 
-  
-                inDoc.doneReading(); 
-                inDoc.dispose(); 
-                throw new RuntimeException("Data retrieval failed!"); 
-  
-            } 
-  
-             // Update the reading position and number of bytes remaining 
-             pos += bytesRead; 
-             docLength -= bytesRead; 
-  
-        } 
-  
-        // The document information has been successfully read 
-        inDoc.doneReading(); 
+        // Set up the chunk size to prevent a potential memory leak
+        int buffSize = 2048;
+ 
+        // Determine the total number of bytes to read
+        int docLength = (int) inDoc.length();
+        byte [] byteDoc = new byte[docLength];
+ 
+        // Set up the reading position
+        int pos = 0;
+ 
+        // Loop through the document information, 2048 bytes at a time
+        while (docLength > 0) {
+      // Read the next chunk of information
+            int toRead = Math.min(buffSize, docLength);
+            int bytesRead = inDoc.read(pos, byteDoc, pos, toRead);
+ 
+            // Handle the exception in case data retrieval failed
+            if (bytesRead == -1) {
+ 
+                inDoc.doneReading();
+                inDoc.dispose();
+                throw new RuntimeException("Data retrieval failed!");
+ 
+            }
+ 
+             // Update the reading position and number of bytes remaining
+             pos += bytesRead;
+             docLength -= bytesRead;
+ 
+        }
+ 
+        // The document information has been successfully read
+        inDoc.doneReading();
         inDoc.dispose();
 ```
 
@@ -775,17 +777,17 @@ I följande kodexempel skapas ett `com.adobe.idp.Document` objekt som är basera
 **Skapa ett Document-objekt som baseras på ett annat dokument**
 
 ```as3
- //Create a Document object based on a byte array 
- InputStream is = new FileInputStream("C:\\Map.pdf"); 
- int len = is.available(); 
- byte [] myByteArray = new byte[len]; 
- int i = 0; 
- while (i < len) { 
-       i += is.read(myByteArray, i, len); 
- } 
- Document myPDFDocument = new Document(myByteArray); 
-  
- //Create another Document object 
+ //Create a Document object based on a byte array
+ InputStream is = new FileInputStream("C:\\Map.pdf");
+ int len = is.available();
+ byte [] myByteArray = new byte[len];
+ int i = 0;
+ while (i < len) {
+       i += is.read(myByteArray, i, len);
+ }
+ Document myPDFDocument = new Document(myByteArray);
+ 
+ //Create another Document object
  Document anotherDocument = new Document(myPDFDocument);
 ```
 
@@ -800,8 +802,8 @@ Om du ställer in den här parametern på `false` innebär det att du behåller 
 **Skapa ett Document-objekt som bygger på en PDF-fil**
 
 ```as3
- //Create a Document object based on the map.pdf source file 
- File mySourceMap = new File("C:\\map.pdf"); 
+ //Create a Document object based on the map.pdf source file
+ File mySourceMap = new File("C:\\map.pdf");
  Document myPDFDocument = new Document(mySourceMap,true);
 ```
 
@@ -812,8 +814,8 @@ I följande Java-kodexempel skapas ett `com.adobe.idp.Document` objekt som är b
 **Skapa ett dokument baserat på ett InputStream-objekt**
 
 ```as3
- //Create a Document object based on an InputStream object 
- InputStream is = new FileInputStream("C:\\Map.pdf"); 
+ //Create a Document object based on an InputStream object
+ InputStream is = new FileInputStream("C:\\Map.pdf");
  Document myPDFDocument = new Document(is);
 ```
 
@@ -832,10 +834,10 @@ Filen c:/temp/input.pdf måste finnas på klientdatorn (inte på serverdatorn). 
 **Skapa ett dokument baserat på innehåll som är tillgängligt från en URL**
 
 ```as3
- //Create a Document object based on a java.net.URL object 
- URL myURL = new URL("http", "localhost", 8080,"/WebApp/map.pdf");  
-          
- //Create another Document object 
+ //Create a Document object based on a java.net.URL object
+ URL myURL = new URL("http", "localhost", 8080,"/WebApp/map.pdf");
+ 
+ //Create another Document object
  Document myPDFDocument = new Document(myURL);
 ```
 
@@ -869,7 +871,7 @@ I följande kodexempel kopieras innehållet i ett `com.adobe.idp.Document` objek
 **Kopiera innehållet i ett dokumentobjekt till en fil**
 
 ```as3
- File outFile = new File("C:\\AnotherMap.pdf"); 
+ File outFile = new File("C:\\AnotherMap.pdf");
  myDocument.copyToFile (outFile);
 ```
 
@@ -883,47 +885,47 @@ I följande kodexempel kopieras innehållet i ett `com.adobe.idp.Document` objek
 
 Bestäm MIME-typen för ett `com.adobe.idp.Document` objekt genom att anropa `com.adobe.idp.Document` objektets `getContentType` metod. Den här metoden returnerar ett strängvärde som anger innehållstypen för `com.adobe.idp.Document` objektet. I följande tabell beskrivs de olika innehållstyper som returneras av AEM Forms.
 
-<table> 
- <thead> 
-  <tr> 
-   <th><p>MIME-typ</p></th> 
-   <th><p>Beskrivning</p></th> 
-  </tr> 
- </thead> 
+<table>
+ <thead>
+  <tr>
+   <th><p>MIME-typ</p></th>
+   <th><p>Beskrivning</p></th>
+  </tr>
+ </thead>
  <tbody>
-  <tr> 
-   <td><p><code>application/pdf</code></p></td> 
-   <td><p>PDF-dokument</p></td> 
-  </tr> 
-  <tr> 
-   <td><p><code>application/vnd.adobe.xdp+xml</code></p></td> 
-   <td><p>XML Data Packaging (XDP), som används för exporterade XFA-formulär (XML Forms Architecture)</p></td> 
-  </tr> 
-  <tr> 
-   <td><p><code>text/xml</code></p></td> 
-   <td><p>Bokmärken, bilagor eller andra XML-dokument</p></td> 
-  </tr> 
-  <tr> 
-   <td><p><code>application/vnd.fdf</code></p></td> 
-   <td><p>Forms Data Format (FDF), som används för exporterade Acrobat-formulär</p></td> 
-  </tr> 
-  <tr> 
-   <td><p><code>application/vnd.adobe.xfdf</code></p></td> 
-   <td><p>XFDF (XML Forms Data Format), som används för exporterade Acrobat-formulär</p></td> 
-  </tr> 
-  <tr> 
-   <td><p><code>application/rdf+xml</code></p></td> 
-   <td><p>Rikt dataformat och XML</p></td> 
-  </tr> 
-  <tr> 
-   <td><p><code>application/octet-stream</code></p></td> 
-   <td><p>Allmänt dataformat</p></td> 
-  </tr> 
-  <tr> 
-   <td><p><code>NULL</code></p></td> 
-   <td><p>Ospecificerad MIME-typ</p></td> 
-  </tr> 
- </tbody> 
+  <tr>
+   <td><p><code>application/pdf</code></p></td>
+   <td><p>PDF-dokument</p></td>
+  </tr>
+  <tr>
+   <td><p><code>application/vnd.adobe.xdp+xml</code></p></td>
+   <td><p>XML Data Packaging (XDP), som används för exporterade XFA-formulär (XML Forms Architecture)</p></td>
+  </tr>
+  <tr>
+   <td><p><code>text/xml</code></p></td>
+   <td><p>Bokmärken, bilagor eller andra XML-dokument</p></td>
+  </tr>
+  <tr>
+   <td><p><code>application/vnd.fdf</code></p></td>
+   <td><p>Forms Data Format (FDF), som används för exporterade Acrobat-formulär</p></td>
+  </tr>
+  <tr>
+   <td><p><code>application/vnd.adobe.xfdf</code></p></td>
+   <td><p>XFDF (XML Forms Data Format), som används för exporterade Acrobat-formulär</p></td>
+  </tr>
+  <tr>
+   <td><p><code>application/rdf+xml</code></p></td>
+   <td><p>Rikt dataformat och XML</p></td>
+  </tr>
+  <tr>
+   <td><p><code>application/octet-stream</code></p></td>
+   <td><p>Allmänt dataformat</p></td>
+  </tr>
+  <tr>
+   <td><p><code>NULL</code></p></td>
+   <td><p>Ospecificerad MIME-typ</p></td>
+  </tr>
+ </tbody>
 </table>
 
 Följande kodexempel avgör innehållstypen för ett `com.adobe.idp.Document` objekt.
@@ -931,8 +933,8 @@ Följande kodexempel avgör innehållstypen för ett `com.adobe.idp.Document` ob
 **Bestämma innehållstypen för ett Document-objekt**
 
 ```as3
- //Determine the content type of the Document object 
- String ct = myDocument.getContentType(); 
+ //Determine the content type of the Document object
+ String ct = myDocument.getContentType();
  System.out.println("The content type of the Document object is " +ct);
 ```
 
@@ -1033,10 +1035,10 @@ Anropa den `MyApplication/EncryptDocument` kortvariga processen med Java-API:t:
 1. Anropa `java.util.HashMap` objektets `put` metod för varje indataparameter för att skicka till den långvariga processen. Eftersom den `MyApplication/EncryptDocument` kortvariga processen kräver en indataparameter av typen `Document`, behöver du bara anropa `put` metoden en gång, vilket visas i följande exempel.
 
    ```as3
-    //Create a Map object to store the parameter value for inDoc 
-    Map params = new HashMap(); 
-    InputStream inFile = new FileInputStream("C:\\Adobe\Loan.pdf"); 
-    Document inDoc = new Document(inFile); 
+    //Create a Map object to store the parameter value for inDoc
+    Map params = new HashMap();
+    InputStream inFile = new FileInputStream("C:\\Adobe\Loan.pdf");
+    Document inDoc = new Document(inFile);
     params.put("inDoc", inDoc);
    ```
 
@@ -1056,7 +1058,7 @@ Anropa den `MyApplication/EncryptDocument` kortvariga processen med Java-API:t:
 1. Hämta processens returvärde genom att anropa `InvocationReponse` objektets `getOutputParameter` metod och skicka ett strängvärde som anger utdataparameterns namn. I det här fallet anger du `outDoc` ( `outDoc` är namnet på `MyApplication/EncryptDocument` processens utdataparameter). Sänd returvärdet till `Document`, som i följande exempel.
 
    ```as3
-    InvocationResponse response = myServiceClient.invoke(request); 
+    InvocationResponse response = myServiceClient.invoke(request);
     Document encryptDoc = (Document) response.getOutputParameter("outDoc");
    ```
 
