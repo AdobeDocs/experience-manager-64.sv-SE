@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 3d838027-6bde-4a71-a428-4d5102f7d799
 translation-type: tm+mt
-source-git-commit: ba04fe705a91717f1d9658d436056ebddda6be3a
+source-git-commit: 1c751a81550086371623d0ba66e4de40f7daaa16
 
 ---
 
@@ -28,27 +28,27 @@ I följande diagram visas data som skickas till en Java-server med namnet `Handl
 
 I följande tabell förklaras stegen i diagrammet.
 
-<table> 
- <thead> 
-  <tr> 
-   <th><p>Steg</p></th> 
-   <th><p>Beskrivning</p></th> 
+<table>
+ <thead>
+  <tr>
+   <th><p>Steg</p></th>
+   <th><p>Beskrivning</p></th>
   </tr>
- </thead> 
+ </thead>
  <tbody>
-  <tr> 
-   <td><p>1</p></td> 
-   <td><p>En användare fyller i ett interaktivt formulär och klickar på formulärets Skicka-knapp.</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>2</p></td> 
-   <td><p>Data skickas till <code>HandleData</code> Java Servlet som XML-data.</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>3</p></td> 
-   <td><p>Java- <code>HandleData</code> serverns programlogik för hämtning av data.</p></td> 
-  </tr> 
- </tbody> 
+  <tr>
+   <td><p>1</p></td>
+   <td><p>En användare fyller i ett interaktivt formulär och klickar på formulärets Skicka-knapp.</p></td>
+  </tr>
+  <tr>
+   <td><p>2</p></td>
+   <td><p>Data skickas till <code>HandleData</code> Java Servlet som XML-data.</p></td>
+  </tr>
+  <tr>
+   <td><p>3</p></td>
+   <td><p>Java- <code>HandleData</code> serverns programlogik för hämtning av data.</p></td>
+  </tr>
+ </tbody>
 </table>
 
 ## Hantera skickade XML-data {#handling-submitted-xml-data}
@@ -75,31 +75,31 @@ Fälten i låneformuläret. Dessa värden kan hämtas med Java XML-klasser.
 
 I följande tabell beskrivs stegen i det här diagrammet.
 
-<table> 
- <thead> 
-  <tr> 
-   <th><p>Steg</p></th> 
-   <th><p>Beskrivning</p></th> 
-  </tr> 
- </thead> 
+<table>
+ <thead>
+  <tr>
+   <th><p>Steg</p></th>
+   <th><p>Beskrivning</p></th>
+  </tr>
+ </thead>
  <tbody>
-  <tr> 
-   <td><p>1</p></td> 
-   <td><p>En webbsida innehåller en länk till en Java-server som anropar Forms-tjänsten.</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>2</p></td> 
-   <td><p>Forms-tjänsten återger ett interaktivt PDF-formulär till klientens webbläsare.</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>3</p></td> 
-   <td><p>Användaren fyller i ett interaktivt formulär och klickar på en skicka-knapp. Formuläret skickas tillbaka till Forms-tjänsten som PDF-data. Det här alternativet anges i Designer.</p></td> 
-  </tr> 
-  <tr> 
-   <td><p>4</p></td> 
-   <td><p>Forms-tjänsten sparar PDF-data som en PDF-fil. </p></td> 
-  </tr> 
- </tbody> 
+  <tr>
+   <td><p>1</p></td>
+   <td><p>En webbsida innehåller en länk till en Java-server som anropar Forms-tjänsten.</p></td>
+  </tr>
+  <tr>
+   <td><p>2</p></td>
+   <td><p>Forms-tjänsten återger ett interaktivt PDF-formulär till klientens webbläsare.</p></td>
+  </tr>
+  <tr>
+   <td><p>3</p></td>
+   <td><p>Användaren fyller i ett interaktivt formulär och klickar på en skicka-knapp. Formuläret skickas tillbaka till Forms-tjänsten som PDF-data. Det här alternativet anges i Designer.</p></td>
+  </tr>
+  <tr>
+   <td><p>4</p></td>
+   <td><p>Forms-tjänsten sparar PDF-data som en PDF-fil. </p></td>
+  </tr>
+ </tbody>
 </table>
 
 ## Hantera skickade URL UTF-16-data {#handling-submitted-url-utf-16-data}
@@ -152,15 +152,15 @@ Du hämtar formulärdata som har registrerats i Forms-tjänsten och fastställer
 
 Forms-tjänsten returnerar följande värden för att ange om bearbetningen av data har slutförts:
 
-* **** 0 (Skicka): Skickade data kan nu bearbetas.
-* **** 1 (Beräkna): Forms-tjänsten utförde en beräkningsåtgärd för data och resultaten måste återges för användaren.
-* **** 2 (Validera): Formulärtjänstens validerade formulärdata och resultaten måste återges för användaren.
-* **** 3 (Nästa): Den aktuella sidan har ändrats med resultat som måste skrivas till klientprogrammet.
+* **0 (Skicka):** Skickade data kan nu bearbetas.
+* **1 (Beräkna):** Forms-tjänsten utförde en beräkningsåtgärd för data och resultaten måste återges för användaren.
+* **2 (Validera):** Formulärtjänstens validerade formulärdata och resultaten måste återges för användaren.
+* **3 (Nästa):** Den aktuella sidan har ändrats med resultat som måste skrivas till klientprogrammet.
 * **4 (föregående**): Den aktuella sidan har ändrats med resultat som måste skrivas till klientprogrammet.
 
 >[!NOTE]
 >
->Beräkningar och valideringar måste återges för användaren. (Se [Beräkna formulärdata](/help/forms/develop/rendering-forms-rendering-forms calculate-form-data-calculate-form-data-calculate-form-data-calculate-form.md#calculate-form-data)*.)*
+>Beräkningar och valideringar måste återges för användaren. (Se [Beräkna formulärdata](/help/forms/developing/calculating-form-data.md#calculating-form-data).)
 
 **Kontrollera om formuläröverföringen innehåller bifogade filer**
 
