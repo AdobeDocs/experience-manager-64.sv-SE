@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 translation-type: tm+mt
-source-git-commit: 730a08c0c02b5d44b5483c733252e0e76236061a
+source-git-commit: b46378657b8a173986a669beaa56468886b23266
 
 ---
 
@@ -100,6 +100,8 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Adobe Campaign-egenskaper rensas inte bort när en språkkopia av ett nyhetsbrev som är länkat till en Adobe Campaign skapas, medan rensning sker när ett nyhetsbrev som är länkat till en Adobe Campaign kopieras eller klistras in (NPR-32540).
 
+* ReportSuitesServlet är sårbart för SSRF (NPR-32161).
+
 ### Sling {#sling-6480}
 
 * Icke-deterministisk skuggning av resursuppföljning fungerar inte (CQ-4286466).
@@ -175,7 +177,7 @@ Några av de viktigaste nyheterna i AEM 6.4.7.0 är:
 * Ny kolumn för skapat datum, som är sorterbar, har lagts till i **DAM-listvyn** och i resurssökningsresultat i **listvyn** (NPR-31311).
 * Resurssortering baserat på **namnkolumnen** är tillåtet i **listvyn** .
 * Tidsgränsen för batchstorlek och arbetsflödessteg för återbearbetning och batchöverföring kan nu konfigureras från gränssnittet i Dynamic Media.
-* Minnet `pdfBrochure` har angetts till false i Scene 7-molnkonfigurationen för att spara minne i IPS.
+* Minnet `pdfBrochure` har angetts till false i molnkonfigurationen Scene 7 för att spara minne i IPS.
 
 ##### Assets {#assets-6470}
 
@@ -689,7 +691,7 @@ De viktigaste nyheterna i AEM 6.4.5.0-formulär är:
 **Formulär - Interaktiv kommunikation och interaktiva formulär - korrespondenshantering**
 
 * CCR-gränssnittet (Create Correspondence UI) hanterar inte ett flyttal.  NPR-29210: Programfix för CQ-4254201
-* Verktygstipset för en variabel visas inte i gränssnittet för att skapa korrespondens (CCR UI). NPR-29839: Programfix för CQ-4250533
+* Verktygstipset för en variabel visas inte i gränssnittet för att skapa korrespondens (CCR UI). NPR-29739: Programfix för CQ-4250533
 * Det går inte att kopiera eller klistra in från Omnissearch inom brev. NPR-29808: Programfix för CQ-4270783
 
 **HTML5-formulär**
@@ -708,7 +710,7 @@ De viktigaste nyheterna i AEM 6.4.5.0-formulär är:
 **Formulär - dokumenttjänster**
 
 * Ogiltig PDF/A-fil rapporteras som giltig PDF/A med isPDFA-åtgärd. NPR-29076: Programfix för CQ-4261541
-* PDF-filen kan inte konverteras till PDF/A-1b med formulärfältet har ingen utseendeordlista. NPR-29534: Programfix för CQ-4269618
+* PDF-filen kan inte konverteras till PDF/A-1b med formulärfältet har ingen utseendeordlista. NPR-29634: Programfix för CQ-4269618
 * PDF/A-konvertering från PDF som skapats med utdatatjänsten godkänns inte vid validering med Acrobat DC. NPR-29647: Programfix för CQ-4270448
 * Apache POI-paketet misslyckas med ett undantag. NPR-27861, NPR-28048: Programfix för CQ-4245898, CQ-4244778
 
