@@ -3,7 +3,7 @@ title: Konfigurera AEM-resurser med varumärkesportalen
 description: 'Lär dig hur du konfigurerar AEM Assets med varumärkesportalen för publicering av resurser och samlingar på varumärkesportalen. '
 contentOwner: VG
 translation-type: tm+mt
-source-git-commit: face3b5c50e06d24127aedd0b114efedb2467e96
+source-git-commit: 608280909877d522fc69ed9723ff615dfaa0a50a
 
 ---
 
@@ -193,7 +193,7 @@ Kontrollera att du har utfört följande steg:
 
 >[!CAUTION]
 >
->Skapa endast en giltig IMS-konfiguration. Skapa inte flera IMS-konfigurationer.
+>Skapa endast en giltig IMS-konfiguration.
 >
 >Kontrollera att konfigurationen är felfri. Om konfigurationen inte är felfri tar du bort den och skapar en ny felfri konfiguration.
 
