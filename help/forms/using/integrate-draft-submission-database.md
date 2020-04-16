@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 translation-type: tm+mt
-source-git-commit: 8afc09103b34b12e0218a133b87422456cb20d35
+source-git-commit: da967c43a6b4c0021ac591477bd13f3fdb026287
 
 ---
 
@@ -26,8 +26,7 @@ Exemplet, som behandlas i det här dokumentet, är en referensimplementering av 
 >
 >* De exempel och konfigurationer som beskrivs i det här dokumentet är enligt MySQL 5.6.24 och du måste ersätta dem på lämpligt sätt för ditt databassystem.
 >* Kontrollera att du har installerat den senaste versionen av AEM Forms-tilläggspaketet. En lista över tillgängliga paket finns i artikeln [AEM Forms Release](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
->
-
+> * Exempelpaketet fungerar bara med åtgärder för att skicka adaptiva formulär.
 
 
 ## Konfigurera och konfigurera exemplet {#set-up-and-configure-the-sample}
@@ -399,13 +398,13 @@ Så här skapar du [ett klientbibliotek](/help/sites-developing/clientlibs.md) o
 
 1. Lägg till följande egenskap i mappen som skapades i steg 2 och klicka på **[!UICONTROL Spara alla]**.
 
-   * **** Namn: kategorier
+   * **[!UICONTROL Namn:]** kategorier
 
-   * **** Typ:Sträng
+   * **[!UICONTROL Typ:]** Sträng
 
-   * **** Värde: fp.validation
+   * **[!UICONTROL Värde:]** fp.validation
 
-   * **** flera alternativ:Aktiverad
+   * **[!UICONTROL flera alternativ:]** Aktiverad
 
 1. Navigera till `/libs/fd/af/runtime/clientlibs/guideRuntime`och lägg till `fp.validation` värdet i egenskapen **embed** .
 
