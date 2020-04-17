@@ -10,7 +10,7 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 15819d42-4897-40fa-a013-e019d1580fa2
 translation-type: tm+mt
-source-git-commit: 3316dbc8ef268be2b305d22da9003ae40414b4e1
+source-git-commit: 08cf51186b7e9ad62b92a266e95022d7d7a34a9b
 
 ---
 
@@ -144,7 +144,7 @@ I det här avsnittet listas funktioner som har tagits bort från AEM 6.4. Tidiga
    <td>På grund av säkerhetsändringar i Adobe Analytics-API:t är det inte längre möjligt att använda den version av Activity Map som ingår i AEM.<br><br>Det <a href="https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html">ActivityMap-plugin som tillhandahålls av Adobe Analytics</a> bör nu användas.</td> 
   </tr>
   <tr>
-   <td>Komponenter</td> 
+   <td>Komponenter-formulär</td> 
    <td>Form Captcha<br /> (foundation/components/form/captcha)</td> 
    <td>Använd komponenten ReCaptcha från Google i stället</td> 
   </tr>
@@ -185,11 +185,6 @@ I det här avsnittet listas funktioner som har tagits bort från AEM 6.4. Tidiga
   </tr>
   <tr>
    <td>Formulär</td> 
-   <td>Stöd för AEM Captcha-standardtjänsten i anpassningsbara formulär har tagits bort. </td> 
-   <td>Använd ReCaptcha från Google i stället.</td> 
-  </tr>
-  <tr>
-   <td>Formulär</td> 
    <td>Stöd för bilder i dokumentfragment har tagits bort. </td> 
    <td>Interaktiv kommunikation gör det möjligt att använda bilder i tryck- och webbkanaler direkt.<br /> </td> 
   </tr>
@@ -222,11 +217,6 @@ I det här avsnittet listas funktioner som har tagits bort från AEM 6.4. Tidiga
     <td>Formulär</td> 
     <td>Borttagen AEM Forms på JEE-specifik landningssida.</td> 
     <td>AEM Forms på JEE-landningssida ersätts med AEM-landningssida (/aem/start.html) </td>  
-  </tr>
-   <tr>
-   <td>Formulär</td> 
-   <td>Stöd för standard-Captcha har tagits bort</td> 
-   <td>Använd tjänsten reCAPTCHA från Google.</td> 
   </tr>
    <tr>
    <td>Formulär</td> 
