@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 7d494c2e-d457-4d52-89be-a77ffa07eb88
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: abdcde27b33f290a4288b09c39bffb0d4f1918a1
 
 ---
 
@@ -30,7 +30,7 @@ Du behöver följande för att integrera Adobe Sign med AEM Forms:
 
 * Ett aktivt [Adobe Sign-utvecklarkonto](https://acrobat.adobe.com/us/en/why-adobe/developer-form.html).
 * En [SSL-aktiverad](/help/sites-administering/ssl-by-default.md) AEM Forms-server.
-* Ett [Adobe Sign API-program](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobeio/adobeio-documentation/master/sign/gstarted/create_app.md).
+* Ett [Adobe Sign API-program](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md).
 * Autentiseringsuppgifter (klient-ID och klienthemlighet) för Adobe Sign API-programmet.
 
 ## Konfigurera Adobe Sign med AEM-formulär {#configure-adobe-sign-with-aem-forms}
@@ -84,7 +84,7 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
 
 1. Öppna AEM Web Console. URL:en är `https://[server]:[port]/system/console/configMgr`
 1. Öppna **[!UICONTROL Forms Common Configuration Service]**.
-1. I fältet **[!UICONTROL Tillåt]** väljer du **[!UICONTROL Alla användare]** - Alla användare, anonyma eller inloggade, kan förhandsgranska bilagor, verifiera och signera formulär och klicka på **[!UICONTROL Spara]**.  Författarinstansen är konfigurerad att använda Adobe Sign.
+1. I fältet **[!UICONTROL Tillåt]** väljer du **[!UICONTROL Alla användare]** - Alla användare, anonyma eller inloggade, kan förhandsgranska bilagor, verifiera och signera formulär och klicka på **[!UICONTROL Spara]**. Författarinstansen är konfigurerad att använda Adobe Sign.
 1. Logga in på [Publish](/help/sites-deploying/deploy.md) -instansen och öppna följande URL:
 
    `https://<server-name>:<port>/libs/granite/configurations/content/view.html/conf`
