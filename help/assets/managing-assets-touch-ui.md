@@ -4,7 +4,7 @@ description: Lär dig mer om olika resurshanterings- och redigeringsuppgifter so
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a7d6e9fa5d72eba0899f0aadea393fe0e9126a34
+source-git-commit: 04462c7162d8478d48f41e84c2f91ae7d025e423
 
 ---
 
@@ -315,8 +315,6 @@ Vissa begränsningar för funktionen är:
 
 ## Förhandsgranska resurser {#previewing-assets}
 
-Se även [Förhandsgranska dynamiska medieresurser.](previewing-assets.md)
-
 **Så här förhandsgranskar du resurser**:
 
 1. I resursgränssnittet navigerar du till platsen för resursen som du vill förhandsgranska.
@@ -331,6 +329,12 @@ Se även [Förhandsgranska dynamiska medieresurser.](previewing-assets.md)
    Tryck på knappen **[!UICONTROL Återställ]** för att återställa vyn till den ursprungliga storleken.
 
    ![chlimage_1-11](assets/chlimage_1-11.png)
+
+>[!MORELIKETHIS]
+>
+>* [Förhandsgranska dynamiska medieresurser](/help/assets/previewing-assets.md).
+>* [Visa delresurser](managing-linked-subassets.md#viewing-subassets).
+
 
 ## Redigera egenskaper {#editing-properties}
 
