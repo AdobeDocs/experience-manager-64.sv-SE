@@ -3,7 +3,7 @@ title: Konfigurera RTF-redigeraren
 description: Lär dig konfigurera AEM Rich Text Editor.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
+source-git-commit: c86d1ac76d97fa716cf70bdebe91d2b6dec46b0b
 
 ---
 
@@ -12,9 +12,7 @@ source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
 
 Med textredigeraren får författarna ett stort antal funktioner för redigering av textinnehåll. Ikoner, markeringsrutor, verktygsfält och menyer finns för WYSIWYG-textredigering.
 
-RTE kan konfigureras för att aktivera, inaktivera och utöka de funktioner som är tillgängliga i redigeringskomponenterna. Mer information om hur du använder RTE-funktioner för redigering finns i [Använda RTF-redigerare för redigering](/help/sites-authoring/rich-text-editor.md).
-
-Följande arbetsflöde visar den rekommenderade ordningen för att slutföra RTE-konfigurationsuppgifterna.
+Mer information om hur du använder RTE-funktioner för redigering finns i [Använda RTF-redigerare för redigering](/help/sites-authoring/rich-text-editor.md). RTE kan konfigureras för att aktivera, inaktivera och utöka de funktioner som är tillgängliga i redigeringskomponenterna. Följande arbetsflöde visar en rekommenderad ordning för slutförande av RTE-konfigurationsåtgärder i Experience Manager.
 
 ![Normalt arbetsflöde för att konfigurera RTF-redigeraren](assets/rte_workflow_v1.png)
 
@@ -44,45 +42,12 @@ Det användargränssnitt som har stöd för pekskärm är standardgränssnittet 
 
 Författare kan skapa och redigera textinnehåll i AEM med hjälp av de olika komponentlägena. Alternativen i verktygsfältet för att skapa och formatera innehåll och användarupplevelsen i komponenter med RTE-funktioner i olika redigeringslägen varierar beroende på RTE-konfigurationer.
 
-<table> 
- <tbody> 
-  <tr> 
-   <th>Redigeringsläge</th> 
-   <th>Redigeringsområde</th> 
-   <th>Rekommenderade funktioner som ska aktiveras<br /> </th> 
-   <th>Pekgränssnitt</th> 
-   <th>Klassiskt användargränssnitt</th> 
-  </tr> 
-  <tr> 
-   <td>Textbunden</td> 
-   <td>On-place editing for quick, minor edits; Formatera utan att öppna en dialogruta</td> 
-   <td>Minimala RTE-funktioner</td> 
-   <td>J</td> 
-   <td>J</td> 
-  </tr> 
-  <tr> 
-   <td>RTE helskärm</td> 
-   <td>Täcker hela sidan<br /> </td> 
-   <td>Alla RTE-funktioner som krävs<br /> </td> 
-   <td>J</td> 
-   <td>N<br /> </td> 
-  </tr> 
-  <tr> 
-   <td>Dialog</td> 
-   <td>Dialogrutan visas ovanpå sidinnehållet men täcker inte hela sidan</td> 
-   <td>Alla nödvändiga RTE-funktioner i Classic UI. aktivera funktioner i Touch-gränssnittet<br /> </td> 
-   <td>J</td> 
-   <td>J</td> 
-  </tr> 
-  <tr> 
-   <td>Dialogruta i helskärmsläge<br /> </td> 
-   <td>Samma som helskärmsläge. innehåller fält i dialogrutan vid sidan om textredigeringsprojektet<br /> </td> 
-   <td>Alla RTE-funktioner som krävs</td> 
-   <td>J</td> 
-   <td>N</td> 
-  </tr> 
- </tbody> 
-</table>
+| Redigeringsläge | Redigeringsområde | Rekommenderade funktioner som ska aktiveras | Pekgränssnitt | Klassiskt användargränssnitt |
+|--- |--- |--- |--- |--- |
+| Textbunden | On-place editing for quick, minor edits; Formatera utan att öppna en dialogruta | Minimala RTE-funktioner | J | J |
+| RTE helskärm | Täcker hela sidan | Alla RTE-funktioner som krävs | J | N |
+| Dialog | Dialogrutan visas ovanpå sidinnehållet men täcker inte hela sidan | Alla nödvändiga RTE-funktioner i Classic UI. aktivera funktioner i Touch-gränssnittet | J | J |
+| Dialogruta i helskärmsläge | Samma som helskärmsläge. innehåller fält i dialogrutan vid sidan om textredigeringsprojektet | Alla RTE-funktioner som krävs | J | N |
 
 >[!NOTE]
 >
@@ -139,90 +104,23 @@ I följande tabell visas de aktuella plugin-programmen:
 * Tillåtna värden för `features` egenskapen.
 * En beskrivning av de funktioner som tillhandahålls av plugin-programmet.
 
-<table> 
- <tbody> 
-  <tr> 
-   <td><p>Plug-in-ID<br /><br /> </p> </td> 
-   <td><p>funktioner<br /><br /> </p> </td> 
-   <td><p>Beskrivning<br /> <br /> </p> </td> 
-  </tr> 
-  <tr> 
-   <td><p>redigera</p> </td> 
-   <td><p>cut<br /> copy<br /> paste-default<br /> paste-plaintext<br /> paste-wordhtml</p> </td> 
-   <td><p><a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles" target="_blank">Klipp ut, kopiera och, de tre inklistringslägena</a>.</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FindReplacePlugin">findreplace</a></p> </td> 
-   <td><p>sök<br /> efter ersätt</p> </td> 
-   <td><p>Sök och ersätt.</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FormatPlugin">format</a></p> </td> 
-   <td><p>fet<br /> kursiv<br /> understrykning</p> </td> 
-   <td><p><a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles" target="_blank">Grundläggande textformatering</a>.</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ImagePlugin">image</a></p> </td> 
-   <td><p>image</p> </td> 
-   <td><p>Ange vissa bildegenskaper, till exempel justering och alternativ text. Grundläggande stöd för att dra och släppa bilder från Content Finder fungerar utan denna plugin.</p> <p><em>Obs</em>: Utvecklingsbeteendet kan variera beroende på webbläsaren. Mozilla Firefox har till exempel funktioner för storleksändring, men det har inte Google Chrome.</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.KeyPlugin">tangenter</a></p> </td> 
-   <td><p> </p> </td> 
-   <td><p>Mer information om hur du definierar det här värdet finns i <a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#tabsize" target="_blank">Tabbstorlek</a>.</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.JustifyPlugin">justera</a></p> </td> 
-   <td><p>justera vänster<br /> justera centrera<br /> höger</p> </td> 
-   <td><p>Styckejustering.</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.LinkPlugin">länkar</a></p> </td> 
-   <td><p>ändra<br /> länkavlänkningsankarpunkt<br /></p> </td> 
-   <td><p><a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles" target="_blank">Hyperlänkar och ankare</a>.</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ListPlugin">listor</a></p> </td> 
-   <td><p>ordnad<br /> oordnad<br /> indrag<br /> indrag</p> </td> 
-   <td><p>Denna plugin styr både <a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#indentmargin" target="_blank">indrag och listor</a>. inklusive kapslade listor.</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.MiscToolsPlugin">felverktyg</a></p> </td> 
-   <td><p>specialchars<br /> sourceedit</p> </td> 
-   <td>Med andra verktyg kan författare ange <a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#spchar" target="_blank">specialtecken</a> eller redigera HTML-källan. Du kan också lägga till ett helt <a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#definerangechar" target="_blank">intervall med specialtecken</a> om du vill definiera en egen lista.</td> 
-  </tr> 
-  <tr> 
-   <td><p>Paraformat</p> </td> 
-   <td><p>paraformat</p> </td> 
-   <td>Standardstyckeformaten är Stycke, Rubrik 1, Rubrik 2 och Rubrik 3 (&lt;p&gt;, &lt;h1&gt;, &lt;h2&gt; och &lt;h3&gt;). Du kan <a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#paraformats" target="_blank">lägga till fler styckeformat</a> eller utöka listan.</td> 
-  </tr> 
-  <tr> 
-   <td><p>stavningskontroll</p> </td> 
-   <td><p>checkText</p> </td> 
-   <td><p><a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#adddict" target="_blank">Språkmedveten stavningskontroll</a>.</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p>stilar</p> </td> 
-   <td><p>stilar</p> </td> 
-   <td>Stöd för formatering med en CSS-klass. <a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles" target="-blank">Lägg till nya textformat</a> om du vill lägga till (eller utöka) egna format för användning med text.</td> 
-  </tr> 
-  <tr> 
-   <td><p>nedsänkt</p> </td> 
-   <td><p>nedsänkt<br /> upphöjd text</p> </td> 
-   <td><p>Tillägg till de grundläggande formaten, med både sub- och super-script.</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p>tabell</p> </td> 
-   <td><p>tabell<br /> borttagbar<br /> infogning<br /> borttagbar infogningkolumn<br /> borttagbar kolumn<br /> cellprops<br /> sammanfogningsceller<br /> delcellsväljare<br /><br /><br /> markeringskolumner</p> </td> 
-   <td>Se <a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles" target="_blank">Konfigurera tabellformat</a>om du vill lägga till egna format för hela tabeller eller enskilda celler.</td> 
-  </tr> 
-  <tr> 
-   <td><p>ångra</p> </td> 
-   <td><p>ångra<br /> gör om</p> </td> 
-   <td>Historikstorlek för <a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#undohistory" target="_blank">ångra- och gör om-</a> åtgärder.</td> 
-  </tr> 
- </tbody> 
-</table>
+| Plug-in-ID | funktioner | Beskrivning |
+|--- |--- |--- |
+| redigera | cut copy paste-default paste-plaintext paste-wordhtml | [Klipp ut, kopiera och, de tre inklistringslägena](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
+| [findreplace](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FindReplacePlugin) | sök och ersätt | Sök och ersätt. |
+| [format](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FormatPlugin) | fet kursiv understrykning | [Grundläggande textformatering](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
+| [image](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ImagePlugin) | image | Grundläggande bildstöd (dra från innehåll eller Innehållssökning). Beroende på webbläsaren har stödet olika beteenden för författare |
+| [tangenter](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.KeyPlugin) |  | Mer information om hur du definierar det här värdet finns i [Tabbstorlek](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tabsize). |
+| [justera](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.JustifyPlugin) | justera vänster justera mitten justera höger | Styckejustering. |
+| [länkar](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.LinkPlugin) | ändra länkavlänkningsankarpunkt | [Hyperlänkar och ankare](/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles). |
+| [listor](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ListPlugin) | sorterat indrag utan ordning | Denna plugin styr både [indrag och listor](/help/sites-administering/configure-rich-text-editor-plug-ins.md#indentmargin). inklusive kapslade listor. |
+| [felverktyg](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.MiscToolsPlugin) | specialteckenkälla redigera | Med andra verktyg kan författare ange [specialtecken](/help/sites-administering/configure-rich-text-editor-plug-ins.md#spchar) eller redigera HTML-källan. Du kan också lägga till ett helt [intervall med specialtecken](/help/sites-administering/configure-rich-text-editor-plug-ins.md#definerangechar) om du vill definiera en egen lista. |
+| Paraformat | paraformat | Standardstyckeformaten är Stycke, Rubrik 1, Rubrik 2 och Rubrik 3 (`<p>`, `<h1>`, `<h2>`och `<h3>`). Du kan [lägga till fler styckeformat](/help/sites-administering/configure-rich-text-editor-plug-ins.md#paraformats) eller utöka listan. |
+| stavningskontroll | checkText | [Språkmedveten stavningskontroll](/help/sites-administering/configure-rich-text-editor-plug-ins.md#adddict). |
+| stilar | stilar | Stöd för formatering med en CSS-klass. [Lägg till nya textformat](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles) om du vill lägga till (eller utöka) egna format för användning med text. |
+| nedsänkt | nedsänkt upphöjd text | Tillägg till de grundläggande formaten, med både sub- och super-script. |
+| tabell | tabell borttagbar infogning ta bort infogkolumn borttagbar kolumn cellprops mergeceller splitcell markervalkolumner | Se [Konfigurera tabellformat](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles)om du vill lägga till egna format för hela tabeller eller enskilda celler. |
+| ångra | ångra gör om | Historikstorlek för [ångra- och gör om-](/help/sites-administering/configure-rich-text-editor-plug-ins.md#undohistory) åtgärder. |
 
 >[!NOTE]
 >
@@ -244,12 +142,8 @@ Det [läge för RTE-redigering (och användargränssnittet)](#editingmodes) som 
 >Namnge inte noden under `cq:inplaceEditing` som `config`. Ange följande egenskaper på `cq:inplaceEditing` noden:
 >
 >* **Namn**: `configPath`
-   >
-   >
-* **Typ**: `String`
-   >
-   >
-* **Värde**: sökväg till noden som innehåller den faktiska konfigurationen
+>* **Typ**: `String`
+>* **Värde**: sökväg till noden som innehåller den faktiska konfigurationen
 >
 >
 Ge inte RTE-konfigurationsnoden namnet `config`. Annars gäller RTE-konfigurationerna bara för administratörerna och inte för användarna i gruppen `content-author`.
@@ -273,7 +167,6 @@ Om RTE används i dialogrutan med pekfunktioner är det obligatoriskt att ange e
 RTE-funktioner är tillgängliga via en serie plugin-program, var och en med features-egenskaper. Du kan konfigurera egenskapen features för att aktivera eller inaktivera de olika funktionerna i varje plugin-program.
 
 Detaljerade konfigurationer av RTE-plugin-program finns i [hur du aktiverar och konfigurerar RTE-plugin-program](/help/sites-administering/configure-rich-text-editor-plug-ins.md).
-
 
 Hämta den här exempelkonfigurationen för att förstå hur du konfigurerar RTE. I det här paketet är alla funktioner aktiverade.
 
@@ -423,8 +316,8 @@ Du kan särskilt se vilka plugin-program och relaterade alternativ som är tillg
 * Komponenten [CQ.form.RichText](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.RichText) innehåller ett formulärfält för redigering av formaterad textinformation (RTF). Mer information om alla parametrar som finns tillgängliga för RTF-formuläret finns i Konfigurationsalternativ.
 * Komponenten RichText har ett brett utbud av funktioner med hjälp av plugin-program som listas under [CQ.form.form.plugins.Plugin](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin). För varje plugin:
 
-   * Mer information om funktioner som kan aktiveras (eller inaktiveras) finns i Funktioner
-   * Se konfigurationsalternativen för alla tillgängliga parametrar för detaljerad konfiguration av lämpligt plugin-program
+   * Se Funktioner för mer information om funktioner som kan aktiveras (eller inaktiveras).
+   * Se Konfigurera alternativ för alla tillgängliga parametrar för detaljerad konfiguration av lämpligt plugin-program.
 
 * Mer information om HTML-regler för länkar finns också.
 
@@ -434,9 +327,9 @@ Ovanstående alternativ kan användas för att utöka och anpassa din egen RTE. 
 
 Funktionen AEM RTE har följande begränsningar:
 
-* RTE-funktioner stöds endast i AEM-komponentdialogrutor. RTE stöds inte på guider eller grundformulär som [Sidegenskaper](../sites-developing/page-properties-views.md) och [Scaffolding](../sites-authoring/scaffolding.md) på användargränssnittet som har stöd för pekfunktioner.
+* RTE-funktioner stöds endast i AEM-komponentdialogrutor. RTE stöds inte på guider eller grundformulär som [Sidegenskaper](/help/sites-developing/page-properties-views.md) och [Scaffolding](/help/sites-authoring/scaffolding.md) på användargränssnittet som har stöd för pekfunktioner.
 
-* AEM fungerar inte på [hybridenheter](../release-notes/known-issues.md).
+* AEM fungerar inte på [hybridenheter](/help/release-notes/known-issues.md).
 
 * Ge inte RTE-konfigurationsnoden ett namn `config`. Annars gäller RTE-konfigurationen bara för administratörerna och inte för användarna i gruppen `content-author`.
 
