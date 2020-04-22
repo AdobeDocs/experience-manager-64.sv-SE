@@ -8,7 +8,7 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 821eb27e-67c9-4589-9196-30dacb84fa59
 translation-type: tm+mt
-source-git-commit: 9b6c1efe1f6281892648c7b41820856d2e3fcac1
+source-git-commit: 9514b35f8d36ad0d73dab7c202c6ca7dc0bb9e63
 
 ---
 
@@ -133,7 +133,7 @@ Du kan välja att implementera Dynamic Media endast för bildåtergivning, endas
 
 >[!NOTE]
 >
->Om du aktiverar dynamiska medier via körningsläget ersätts funktionerna i AEM 6.1 och AEM 6.0, där du aktiverade dynamiska medier genom att flaggan **[!UICONTROL dynamicMediaEnabled]** anges som **[!UICONTROL true]**. Den här flaggan har ingen funktion i AEM 6.2 och senare. Du behöver inte heller starta om snabbstarten för att aktivera dynamiska medier.
+>När du aktiverar dynamiska medier via körningsläget ersätts funktionerna i AEM 6.1 och AEM 6.0, där du aktiverade dynamiska medier genom att flaggan **[!UICONTROL dynamicMediaEnabled]** anges som **[!UICONTROL true]**. Den här flaggan har ingen funktion i AEM 6.2 och senare. Du behöver inte heller starta om snabbstarten för att aktivera dynamiska medier.
 
 Genom att aktivera Dynamic Media blir de dynamiska mediefunktionerna tillgängliga i användargränssnittet och varje överförd bildresurs får en `cqdam.pyramid.tiff` rendering som används för snabb leverans av dynamiska bildrenderingar. Dessa PTIFF-filer har avsevärda fördelar, bland annat (1) möjligheten att hantera endast en huvudbild och generera oändliga återgivningar direkt utan ytterligare lagringsutrymme och (2) möjligheten att använda interaktiv visualisering som zoomning, panorering, rotation och så vidare.
 
@@ -184,7 +184,7 @@ I AEM:
 * Den **egna** domänen i [externalizer](/help/sites-developing/externalizer.md) används för att hämta både portnumret och kontextsökvägen.
 * Om ingen **egen** domän har konfigurerats hämtas portnumret och kontextsökvägen från HTTP-tjänsten Jetty.
 
-I en AEM QuickStart WAR-distribution går det inte att härleda portnumret och kontextsökvägen. Du måste därför konfigurera en **egen** domän. Mer information finns i [dokumentationen](/help/sites-developing/externalizer.md) för externalisering om hur du konfigurerar den **egna** domänen.
+I en AEM QuickStart WAR-distribution går det inte att härleda portnumret och kontextsökvägen. Du måste därför konfigurera en **egen** domän. Se [dokumentationen](/help/sites-developing/externalizer.md) för externalisering om hur du konfigurerar **självdomänen** .
 
 >[!NOTE]
 I en fristående [AEM Quickstart-distribution](/help/sites-deploying/deploy.md)behöver en **självdomän** vanligtvis inte konfigureras eftersom portnumret och kontextsökvägen kan konfigureras automatiskt. Om alla nätverksgränssnitt är inaktiverade måste du konfigurera **egen** domän.
@@ -251,7 +251,7 @@ Du måste konfigurera replikeringsverifiering för författaren för att kunna r
 **Så här konfigurerar du autentisering**:
 
 1. Kontakta kundtjänst för din KeyStore-fil och ditt lösenord om du inte redan har detta. Detta är en del av etableringen och kopplar nycklarna till ditt konto.
-1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och sedan på **[!UICONTROL Verktyg > Säkerhet > Användare]**.
+1. In AEM, tap the AEM logo to access the global navigation console, then tap **[!UICONTROL Tools > Security > Users]**.
 1. På sidan Användarhantering går du till **[!UICONTROL Dynamic-media-replication]** user och trycker sedan för att öppna.
 
    ![dm-replikering](assets/dm-replication.png)
@@ -273,7 +273,7 @@ Du måste konfigurera replikeringsverifiering för författaren för att kunna r
    * Tryck på **[!UICONTROL KeyStore-filen]**. Navigera till den KeyStore-fil som du har fått från Adobe, markera den och tryck sedan på **[!UICONTROL Öppna]**.
    * I fältet **[!UICONTROL KeyStore-fillösenord]** anger du lösenordet för KeyStore-filen. Det här är _inte_ det KeyStore-lösenord som du skapade i steg 5, men det är det KeyStore-fillösenord som Adobe anger i det välkomstmeddelande som skickas till dig under etableringen. Kontakta Adobes kundtjänst om du inte fått något lösenord för KeyStore-filen.
    * I fältet Lösenord **[!UICONTROL för]** privat nyckel anger du lösenordet för den privata nyckeln (kan vara samma lösenord för den privata nyckeln som angavs i föregående steg). Adobe tillhandahåller lösenordet för den privata nyckeln i det välkomstmeddelande som skickas till dig under etableringen. Kontakta Adobes kundtjänst om du inte har fått något lösenord för privat nyckel.
-   * I fältet Alias för **[!UICONTROL privat nyckel]** anger du alias för den privata nyckeln. Exempel, `companyname-alias`. Adobe tillhandahåller alias för den privata nyckeln i det välkomstmeddelande som skickas till dig under etableringen. Kontakta Adobes kundtjänst om du inte har fått något alias för privat nyckel.
+   * I fältet Alias för **[!UICONTROL privat nyckel]** anger du alias för den privata nyckeln. Till exempel, `companyname-alias`. Adobe tillhandahåller alias för den privata nyckeln i det välkomstmeddelande som skickas till dig under etableringen. Kontakta Adobes kundtjänst om du inte har fått något alias för privat nyckel.
    ![edit_settings_for dynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 
 1. Tryck på **[!UICONTROL Spara och stäng]** för att spara ändringarna för den här användaren.
@@ -351,7 +351,7 @@ Replication test to s7delivery:https://s7bern.macromedia.com:8580/is-publish/
  Server returned status code 401 with message: Authorization required.
 ```
 
-**Lösning**: Kontrollera att `KeyStore` filen har sparats till en **[!UICONTROL användare med dynamisk mediareplikering]** och att rätt lösenord har angetts.
+**Lösning**: Kontrollera att `KeyStore` filen har sparats till en **[!UICONTROL dynamisk replikeringsanvändare]** och att rätt lösenord har angetts.
 
 #### Problem: Det gick inte att dekryptera nyckeln - det gick inte att dekryptera data {#problem-could-not-decrypt-key-could-not-decrypt-data}
 
@@ -411,7 +411,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
    `localhost:4502/libs/granite/security/content/useradmin.html`
 1. På sidan **[!UICONTROL Användarhantering]** navigerar du till användaren för **[!UICONTROL dynamisk mediareplikering]** och trycker sedan för att öppna.
-1. Tryck på fliken **[!UICONTROL KeyStore]** . Om knappen **[!UICONTROL Skapa KeyStore]** visas måste du göra om stegen under [Konfigurera autentisering](#setting-up-authentication) tidigare.
+1. Tap the **[!UICONTROL KeyStore]** tab. Om knappen **[!UICONTROL Skapa KeyStore]** visas måste du göra om stegen under [Konfigurera autentisering](#setting-up-authentication) tidigare.
 1. Om du måste göra om **[!UICONTROL installationen av KeyStore]** kan du behöva [konfigurera replikeringsagenten](config-dynamic.md#configuring-the-replication-agent) igen.
 
    Konfigurera om s7delivery Replication Agent.
@@ -450,7 +450,7 @@ Exempel på replikeringslogg:
 
    `enableOauth=true`
 
-1. I det övre vänstra hörnet av sidan trycker du på **[!UICONTROL Spara alla]**.
+1. Near the upper-left corner of the page, tap **[!UICONTROL Save All]**.
 
 ### Testa konfigurationen {#testing-your-configuration}
 
@@ -503,18 +503,18 @@ Innan du konfigurerar Dynamic Media Cloud Services måste du se till att du har 
 
 Du kan konfigurera videorapportering för flera installationer av AEM med läget Dynamic Media - Hybrid.
 
-**** När ska du använda: När du konfigurerar **[!UICONTROL Dynamic Media Configuration (Pre 6.3)]** startas flera funktioner, bland annat videorapportering. Konfigurationen skapar en rapportserie i ett regionalt Analytics-företag. Om du konfigurerar flera författarnoder skapar du en separat rapportserie för var och en av dem. Därför är rapportering av data inkonsekvent mellan anläggningar. Om varje Author-nod refererar till samma Hybrid Publish-server, ändrar den senaste Author-installationen målrapportsviten för alla videorapporter. Det här problemet överbelastar analyssystemet med för många rapportsviter.
+**När ska du använda:** När du konfigurerar **[!UICONTROL Dynamic Media Configuration (Pre 6.3)]** startas flera funktioner, bland annat videorapportering. Konfigurationen skapar en rapportserie i ett regionalt Analytics-företag. Om du konfigurerar flera författarnoder skapar du en separat rapportserie för var och en av dem. Därför är rapportering av data inkonsekvent mellan anläggningar. Om varje Author-nod refererar till samma Hybrid Publish-server, ändrar den senaste Author-installationen målrapportsviten för alla videorapporter. Det här problemet överbelastar analyssystemet med för många rapportsviter.
 
-**** Kom igång: Konfigurera videorapportering genom att utföra följande tre uppgifter.
+**Kom igång:** Konfigurera videorapportering genom att utföra följande tre uppgifter.
 
-1. Skapa ett förinställt paket för videoanalys när du har konfigurerat **[!UICONTROL Dynamic Media Configuration (Pre 6.3)]** på den första Author-noden. Den här initiala aktiviteten är viktig eftersom den tillåter en ny konfiguration att fortsätta använda samma rapportserie.
-1. Installera förinställningspaketet för Video Analytics på en ***ny*** författarnod ***innan*** du konfigurerar Dynamic Media Configuration (Pre 6.3).
+1. Skapa ett [!DNL Video Analytics] förinställt paket när du har konfigurerat **[!UICONTROL Dynamic Media Configuration (Pre 6.3)]** på den första Author-noden. Den här initiala aktiviteten är viktig eftersom den tillåter en ny konfiguration att fortsätta använda samma rapportserie.
+1. Installera förinställningspaketet på en [!DNL Video Analytics] ny ***författarnod*** innan ****** du konfigurerar Dynamic Media Configuration (Pre 6.3).
 
 1. Verifiera och felsök paketinstallationen.
 
-### Skapa ett förinställt paket för videoanalys efter att du har konfigurerat den första redigeringsnoden {#creating-a-video-analytics-preset-package-after-configuring-the-first-author-node}
+### Skapa ett [!DNL Video Analytics] förinställt paket när du har konfigurerat den första författarnoden {#creating-a-video-analytics-preset-package-after-configuring-the-first-author-node}
 
-När du är klar med den här uppgiften har du en paketfil som innehåller förinställningarna för videoanalys. Dessa förinställningar innehåller en rapportserie, spårningsservern, spårningsnamnutrymmet och Marketing Cloud Organization ID (om tillgängligt).
+När du är klar med den här uppgiften har du en paketfil som innehåller [!DNL Video Analytics] förinställningarna. Dessa förinställningar innehåller en rapportserie, spårningsservern, spårningsnamnutrymmet och Marketing Cloud Organization ID (om tillgängligt).
 
 1. Om du inte redan har gjort det konfigurerar du **[!UICONTROL Dynamic Media Configuration (Pre 6.3)]**.
 1. (Valfritt) Visa och kopiera **[!UICONTROL Report Suite-ID]** (du måste ha tillgång till JCR). Även om det inte krävs något ID för **[!UICONTROL Report Suite]** är det enklare att validera.
@@ -524,23 +524,23 @@ När du är klar med den här uppgiften har du en paketfil som innehåller föri
    I AEM: `/conf/global/settings/dam/dm/presets/analytics/jcr:content/userdata`
 
 1. Bygg paketet.
-1. Hämta eller dela förinställningspaketet för Video Analytics så att det kan delas med efterföljande nya redigeringsnoder.
+1. Ladda ned eller dela det [!DNL Video Analytics] förinställda paketet så att det kan delas med efterföljande nya författarnoder.
 
-### Installera förinställningspaketet för videoanalys innan du konfigurerar ytterligare redigeringsnoder {#installing-the-video-analytics-preset-package-before-you-configure-additional-author-nodes}
+### Installera förinställningspaketet innan du konfigurerar ytterligare redigeringsnoder [!DNL Video Analytics]{#installing-the-video-analytics-preset-package-before-you-configure-additional-author-nodes}
 
 Se till att du slutför den här uppgiften _innan_ du konfigurerar **[!UICONTROL dynamisk mediekonfiguration (före 6.3)]**. Om du inte gör det skapas en annan oanvänd rapportserie. Dessutom är datainsamlingen inte optimerad även om videorapporteringen fortfarande fungerar som den ska.
 
-Kontrollera att förinställningspaketet för Video Analytics från den första författarnoden är tillgängligt på den nya författarnoden.
+Se till att det förinställda paketet från den första författarnoden är tillgängligt på den nya författarnoden. [!DNL Video Analytics]
 
-1. Överför förinställningspaketet för Video Analytics som du skapade tidigare till **[!UICONTROL Package Manager]**.
-1. Installera förinställningspaketet för Video Analytics.
+1. Överför det [!DNL Video Analytics] förinställda paket som du skapade tidigare till **[!UICONTROL Package Manager]**.
+1. Installera [!DNL Video Analytics] förinställningspaketet.
 1. Konfigurera **[!UICONTROL dynamisk mediekonfiguration (före 6.3)]**.
 
 ### Verifiera och felsöka paketinstallationen {#verifying-and-debugging-the-package-installation}
 
 1. Gör något av följande för att verifiera och, om det behövs, felsöka paketinstallationen:
 
-   * **Kontrollera förinställningen Video Analytics med JCR** För att kontrollera förinställningen Video Analytics med JCR måste du ha tillgång till **[!UICONTROL CRXDE Lite]**.
+   * **Kontrollera förinställningen med hjälp av JCR[!DNL Video Analytics]Du måste ha tillgång till** CRXDE Lite [!DNL Video Analytics] för att kunna kontrollera **** förinställningen med hjälp av JCR.
 
       AEM - I **[!UICONTROL CRXDE Lite]** navigerar du till `/conf/global/settings/dam/dm/presets/analytics/jcr:content/userdata  `
 
@@ -548,11 +548,11 @@ Kontrollera att förinställningspaketet för Video Analytics från den första 
 
       Om du inte har tillgång till **[!UICONTROL CRXDE Lite]** på författarnoden kan du kontrollera förinställningen via publiceringsservern.
 
-   * **Kontrollera förinställningen för videoanalys via bildservern**
+   * **Kontrollera förinställningen[!DNL Video Analytics]via Image Server**
 
-      Du kan validera Video Analytics-förinställningen direkt genom att göra en Image Server- `req=userdata` förfrågan.
+      Du kan validera förinställningen direkt genom att göra en Image Server- [!DNL Video Analytics] `req=userdata` förfrågan.
 
-      Om du till exempel vill se Analytics-förinställningen på författarnoden kan du göra följande begäran:
+      Om du till exempel vill se förinställningen på noden Författare kan du göra följande begäran: [!DNL Video Analytics]
 
       `http://localhost:4502/is/image/conf/global/settings/dam/dm/presets/analytics?req=userdata`
 
@@ -565,7 +565,7 @@ Kontrollera att förinställningspaketet för Video Analytics från den första 
        trackingServer=aemvideodal.d2.sc.omtrdc.net
       ```
 
-   * **Kontrollera förinställningen för videoanalys med videorapporteringsverktyget i AEM**
+   * **Kontrollera förinställningen med videorapporteringsverktyget i AEM[!DNL Video Analytics]**
 
       Tryck på **[!UICONTROL Verktyg > Resurser > Videorapportering]**`http://localhost:4502/mnt/overlay/dam/gui/content/s7dam/videoreports/videoreport.html`
 
@@ -584,13 +584,13 @@ Kontrollera att förinställningspaketet för Video Analytics från den första 
 
 ### Felsöka konfigurationen för videorapportering {#troubleshooting-the-video-reporting-configuration}
 
-* Under installationen kan anslutningar till API-servern för Analytics göra timeout. Installationen försöker ansluta igen 20 gånger, men den misslyckas fortfarande. När detta inträffar registreras flera fel i loggfilen. Sök efter `SiteCatalystReportService`.
-* Om Analytics Preset-paketet inte installeras först kan en ny rapportserie skapas.
+* Under installationen kan anslutningar till API-servern för Analytics göra timeout. Installationen försöker ansluta igen 20 gånger, men den misslyckas fortfarande. När detta inträffar registreras flera fel i loggfilen. Search for `SiteCatalystReportService`.
+* Om du inte installerar [!DNL Video Analytics] förinställningspaketet först kan det leda till att en ny rapportserie skapas.
 * Om du uppgraderar från AEM 6.3 till AEM 6.4 eller AEM 6.4.1 och sedan konfigurerar **[!UICONTROL Dynamic Media Configuration (Pre 6.3)]** skapas fortfarande en rapportserie. Det här problemet är känt och är kopplat till att åtgärdas för AEM 6.4.2.
 
-### Om förinställningen Videoanalys {#about-the-video-analytics-preset}
+### Om [!DNL Video Analytics] förinställningen {#about-the-video-analytics-preset}
 
-Förinställningen Video Analytics (Videoanalys), som ibland helt enkelt kallas analysförinställning, lagras bredvid visningsförinställningarna i Dynamic Media. Det är i princip detsamma som en visningsprogramförinställning, men med information som används för att konfigurera AppMeasurement- och Video Heartbeat-rapporter.
+Förinställningen, som ibland helt enkelt kallas analysförinställning, lagras bredvid visningsförinställningarna i Dynamic Media. [!DNL Video Analytics] Det är i princip detsamma som en visningsprogramförinställning, men med information som används för att konfigurera AppMeasurement- och Video Heartbeat-rapporter.
 
 Förinställningens egenskaper är följande:
 
@@ -613,15 +613,15 @@ Du måste publicera dina egna standardkataloginställningar som en del av konfig
 
    `https://<server>:<port>/crx/de/index.jsp#/conf/global/settings/dam/dm/imageserver/`
 
-1. Tryck på fliken **[!UICONTROL Replikering]** .
+1. Tap the **[!UICONTROL Replication]** tab.
 1. Tryck på **[!UICONTROL Replikera]**.
 
 ## Replikera visningsförinställningar {#replicating-viewer-presets}
 
-Om du vill leverera en resurs med en visningsförinställning måste du replikera/publicera visningsförinställningen. (Alla förinställningar för visningsprogram måste aktiveras _och_ replikeras för att URL-adressen eller inbäddningskoden för en resurs ska kunna hämtas.) Mer information finns i [Publicera förinställningar](managing-viewer-presets.md#publishing-viewer-presets) för visningsprogram.
+Om du vill leverera en resurs med en visningsförinställning måste du replikera/publicera visningsförinställningen. (All viewer presets must be activated _and_ replicated to obtain the URL or embed code for an asset.) Mer information finns i [Publicera förinställningar](managing-viewer-presets.md#publishing-viewer-presets) för visningsprogram.
 
 >[!NOTE]
-Som standard visas en mängd olika återgivningar när du väljer **[!UICONTROL Återgivningar]** och en mängd förinställningar för visningsprogram när du väljer **[!UICONTROL Visningsprogram]** i resursens detaljvy. Du kan öka eller minska antalet som visas. Se [Öka antalet bildförinställningar som visas](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) eller [Öka antalet visningsförinställningar som visas](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
+Som standard visas en mängd olika återgivningar när du väljer **[!UICONTROL Återgivningar]** och en mängd förinställningar för visningsprogram när du väljer **[!UICONTROL Visningsprogram]** i resursens detaljvy. Du kan öka eller minska antalet som visas. See [Increasing the number of image presets that display](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) or [Increasing the number of viewer presets that display](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
 ## Filtrera resurser för replikering {#filtering-assets-for-replication}
 
@@ -666,7 +666,7 @@ Om du använder Dynamic Media för 1) bildåtergivning _eller_ 2) bildåtergivni
    <td>"filter-video" som är klar att användas: 
     <ul> 
      <li>Inkludera proxyvideorenderingar, videominiatyr/filmminiatyrbild, metadata (både vid överordnad video och videorenderingar) för replikering (alla renderingar som börjar med <strong>cqdam</strong>).</li> 
-     <li>Undanta återgivningar av originalvideo och statiska miniatyrer från replikering.<br /><br /> <strong> Obs! </strong>Obs! Proxyvideorenderingarna innehåller inga binärfiler, utan är bara nodegenskaper. Det påverkar således inte utgivarens databasstorlek.</li> 
+     <li>Undanta återgivningar av originalvideo och statiska miniatyrer från replikering.<br /> <br /> Obs! <strong>Obs!</strong> Proxyvideorenderingarna innehåller inga binärfiler, utan är bara nodegenskaper. Det påverkar således inte utgivarens databasstorlek.</li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -781,7 +781,7 @@ Navigera till `content/dam/<locate_your_asset>/jcr:content/renditions`.
 
 Följande grafik är ett exempel på en resurs återgivningar.
 
-![chlimage_1-510](assets/chlimage_1-513.png)
+![chlimage_1-513](assets/chlimage_1-513.png)
 
 Om du bara vill replikera PTIFF (Pyramid TIFF) i exemplet ovan anger du `+cqdam,*` som innehåller alla återgivningar som börjar med `cqdam`. I exemplet är den återgivningen `cqdam.pyramid.tiff`.
 
@@ -916,7 +916,7 @@ Manifestinställningar och deras standardvärden:
   <tr> 
    <td>jpegquality</td> 
    <td>80</td> 
-   <td><p>Standardattribut för JPEG-kodning. Anger standardattributen för JPEG-svarsbilder.</p> <p>Heltal och flagga, avgränsade med kommatecken. Det första värdet ligger inom intervallet 1..100 och definierar kvaliteten. Det andra värdet kan vara 0 för normalt beteende, eller 1 för att inaktivera nedsampling av RGB-kromaticitet, som vanligtvis används av JPEG-kodare.</p> <p>Se även <a href="https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/image_catalog/r_jpegquality.html">JpegQuality</a> i API:t för bildservrar.</p> </td> 
+   <td><p>Standardattribut för JPEG-kodning. Anger standardattributen för JPEG-svarsbilder.</p> <p>Heltal och flagga, avgränsade med kommatecken. Det första värdet ligger inom intervallet 1..100 och definierar kvaliteten. Det andra värdet kan vara 0 för normalt beteende, eller 1 för att inaktivera nedsampling av RGB-kromaticitet som vanligtvis används av JPEG-kodare.</p> <p>Se även <a href="https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/image_catalog/r_jpegquality.html">JpegQuality</a> i API:t för bildservrar.</p> </td> 
   </tr> 
   <tr> 
    <td>maxpix</td> 
