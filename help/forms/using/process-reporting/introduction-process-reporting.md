@@ -9,7 +9,7 @@ topic-tags: process-reporting
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 0cfe62b8-839e-414b-95e5-1bfce6a9d16a
 translation-type: tm+mt
-source-git-commit: 9ce0d4c714d8ff55c64a884d90462bcd75629ae0
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -38,7 +38,7 @@ Processrapportering bygger på moduler som:
 
 ![platshantering](assets/site-management.png)
 
-Visa en lista över processer som körs länge, tidsscheman för processer och kör anpassade frågor med filter.
+Visa listan över långvariga processer, processens tidsplaneringsdiagram och kör anpassade frågor med filter.
 
 Med Process Reporting kan du också exportera rapport- och frågedata i CSV-format.
 
@@ -68,4 +68,4 @@ Processrapportering ger behörighetsbaserad åtkomst till användargränssnittet
 
 Det innebär att bara användare med rapportbehörigheter har åtkomst till användargränssnittet för processrapportering.
 
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
+
