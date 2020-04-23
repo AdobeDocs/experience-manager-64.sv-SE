@@ -9,7 +9,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 0a818d19-8804-4c69-b721-31c347c593c0
 translation-type: tm+mt
-source-git-commit: 9ce0d4c714d8ff55c64a884d90462bcd75629ae0
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -32,4 +32,3 @@ När du fortfarande är inloggad på Process Reporting:
 1. Rensa webbläsarcachen.
 1. Uppdatera webbläsarskärmen.
 
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
