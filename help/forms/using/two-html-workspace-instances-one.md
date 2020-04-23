@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 1254a7c2-2c67-4661-803e-afd53e817916
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -92,5 +92,3 @@ Följ de här stegen för att konfigurera arbetsytan i AEM Forms.
 1. I egenskaperna för `ws2`ändrar du värdet för `sling:redirect` till `content/ws2`.
 
 1. Ändra värdet för `sling:match` till `^[^/\||]/[^/\||]/ws2$`.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
