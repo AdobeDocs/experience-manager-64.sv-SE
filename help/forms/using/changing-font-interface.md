@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 487e3966-443a-408e-b5af-899fcba6fca6
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -74,8 +74,6 @@ Om du till exempel vill ändra teckensnittet för den översta navigeringsfälte
 
 1. Starta om arbetsytan och rensa webbläsarcachen så att ändringarna syns.
 
-![](assets/change_font_before.png) change_font_before **** Figure: Övre *navigeringsfältet före teckensnittsanpassning*
+![change_font_before](assets/change_font_before.png)**Figure:** Övre *navigeringsfältet före teckensnittsanpassning*
 
-![](assets/change_font_after.png) change_font_after **** Figure: Övre *navigeringsfältet efter teckensnittsanpassning för den första fliken*
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
+![change_font_after](assets/change_font_after.png)**Figure:** Övre *navigeringsfältet efter teckensnittsanpassning för den första fliken*
