@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 90cd8ba5-4f47-4074-bc54-6a7bb8afe256
 translation-type: tm+mt
-source-git-commit: 07192aee6699fa113db7b7983c548bcd0d291ebb
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -39,5 +39,3 @@ Du måste arkivera Xcode-projektet för AEM Forms-appen för att skapa installat
 1. Välj lämplig signatur för **[!UICONTROL Kodsigneringsidentitet]**. Se till att samma signatur är markerad för **[!UICONTROL Felsök]**, **[!UICONTROL Frigör]** och **[!UICONTROL Valfri iOS SDK]**.
 1. Under **[!UICONTROL PROJEKT]** väljer du **[!UICONTROL AEM Forms]** och ser till att rätt signatur är markerat för **[!UICONTROL kodsigneringsidentitet]**, **[!UICONTROL felsökning]**, **[!UICONTROL release]** **** och¥Any iOS SDK.
 1. Bygg och distribuera appen AEM Forms. Detaljerade anvisningar om hur du skapar och distribuerar appen AEM Forms finns i [Skapa installationsprogrammet för appen](/help/forms/using/setup-xcode-project-build-installer.md#main-pars-text-12)AEM Forms.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
