@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 58f95138-5439-4540-a8dc-193b4cb42203
 translation-type: tm+mt
-source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -136,7 +136,7 @@ Några vanliga frågor om åtgärdsprofiler är följande:
 * Återge nytt HTML-formulär (nytt)
 * Standardåtergivningsformulär (nytt)
 
-Och likvärdiga inskickningsprocesser.
+Och likvärdiga sändningsprocesser.
 
 ![gen_question_b_20](assets/gen_question_b_20.png) **Vilka åtgärdsprofiler kommer att vara tillgängliga?**
 
@@ -160,5 +160,3 @@ Om du har ändrat befintliga tjänster för återgivning eller skickning av PDF-
 
 Vad behöver processdesignern göra för att formuläret ska kunna återges i HTML på en enhet och i PDF på en dator?\
 Vad behöver processdesignern göra för att formuläret ska kunna återges i HTML på en enhet och i PDF på en dator?
-
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
