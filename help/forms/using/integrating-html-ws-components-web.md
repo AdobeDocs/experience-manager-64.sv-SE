@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6be87939-007e-42c7-8a41-e34ac2b8bed4
 translation-type: tm+mt
-source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -23,7 +23,7 @@ Du kan använda [komponenter](/help/forms/using/description-reusable-components.
 1. Skapa en bana `/apps/sampleApplication/wscomponents`.
 1. Kopiera css, bilder, js/libs, js/runtime och js/registry.js
 
-   * from `/libs/ws`
+   * från `/libs/ws`
    * to `/apps/sampleApplication/wscomponents`.
 
 1. Skapa en demomain.js-fil i mappen /apps/sampleApplication/wscomponents/js. Kopiera kod från /libs/ws/js/main.js till demomain.js.
@@ -89,5 +89,3 @@ Du kan använda [komponenter](/help/forms/using/description-reusable-components.
        margin: 0 auto;
    }
    ```
-
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
