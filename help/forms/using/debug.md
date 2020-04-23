@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5260d981-da40-40ab-834e-88e091840813
 translation-type: tm+mt
-source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -148,7 +148,8 @@ Kontrollera följande parametrar:
 
    Den troliga orsaken är att en eller flera parametrar i URL:en är felaktiga.
 
-   Kontrollera följande parametrar:Stega text
+   Kontrollera följande parametrar:
+Stega text
 
 <table> 
  <tbody> 
@@ -178,5 +179,3 @@ Kontrollera följande parametrar:
 1. I webbläsaren går du till Utvecklarverktyg -> Resurser.
 
    Markera till vänster i Bildrutor om bilden visas.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
