@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 7efc8ad6-2bb1-41a6-ac0b-7f8ddddbf2a6
 translation-type: tm+mt
-source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -30,4 +30,3 @@ Arbetsytan i AEM Forms är kompatibel med fler enheter och formfaktorer. Den mö
 * Utvidga affärsprocesserna till mobila medarbetare både online och offline med AEM Forms-appen.
 * Visa rapporter för att övervaka eftersläpningar, arbetsköer och nyckeltal (KPI). Du kan använda API:er för att extrahera data för ytterligare analys med rapportverktyg från tredje part.
 
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
