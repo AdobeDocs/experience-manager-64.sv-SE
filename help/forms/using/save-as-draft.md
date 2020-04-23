@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 9950288c-b5a2-4945-afad-be9ce2abc8e9
 translation-type: tm+mt
-source-git-commit: db4d19e3af11f04369fc7f6a7c13377962f0650a
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -44,4 +44,3 @@ Så här tar du bort ett utkast:
 1. Ett formulär med redigeringsikonen ![edit-draft-app](assets/edit-draft-app.png) betecknar ett utkast. Tryck på den vågräta ellipsen bredvid utkastet.
 1. Tryck på **Ta bort utkast** i de alternativ som visas när du trycker på den vågräta ellipsen.
 
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
