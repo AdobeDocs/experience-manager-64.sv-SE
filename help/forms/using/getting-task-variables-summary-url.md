@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6dc31bec-b02d-47db-a4f4-be8c14c5619e
 translation-type: tm+mt
-source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -70,7 +70,7 @@ I den här exempelstrukturen skickar en medarbetare ett ledighetsansökningsform
 
       Den har tre indatavariabler:
 
-      * **Mappsökväg**: Sökvägen där den nya CRX-noden skapas. Ange sökvägen som **/innehåll**.
+      * **Mappsökväg**: Den sökväg där den nya CRX-noden skapas. Ange sökvägen som **/innehåll**.
       * **Nodnamn**: Tilldela indatavariabeln nodeName till det här fältet. Detta är en unik nodnamnssträng.
       * **Nodtyp**: Definiera typen som **not:undefined**. Utdata för den här processen är nodePath. nodePath är CRX-sökvägen för den nyskapade noden. The ndoePath skulle vara det slutliga resultatet av sammanfattningsprocessen för **att skapa PTO** .
    1. Skicka skickade formulärdata (**employeeName**, **employeeID**, **ptoReason** och **totalDays**) som indata till den nya processen **skapa PTO-sammanfattning**. Ta utdata som **ptoSummaryNodePath**.
@@ -84,4 +84,3 @@ När du öppnar en uppgift i AEM Forms-arbetsytan får sammanfattnings-URL:en å
 
 Sammanfattningslayouten kan ändras utan att processen ändras. HTML-återgivaren visar sammanfattningen korrekt.
 
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
