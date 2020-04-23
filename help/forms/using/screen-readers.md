@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 53c57180-7004-4534-9146-603f7770a6fe
 translation-type: tm+mt
-source-git-commit: db4d19e3af11f04369fc7f6a7c13377962f0650a
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -35,13 +35,11 @@ Alla standardtangenttryckningar och kortkommandon fungerar för HTML5-formulär.
 
 ### VoiceOver {#voiceover}
 
-HTML5-formulär har stöd för alla standardtangenttryckningar och -gester för Voice over. Mer information om hur du konfigurerar och använder VoiceOver finns på [https://www.apple.com/accessibility/voiceover/](https://www.apple.com/accessibility/voiceover/).
+HTML5-formulär har stöd för alla standardtangenttryckningar och -gester för Voice over. Mer information om hur du konfigurerar och använder VoiceOver finns i [https://www.apple.com/accessibility/voiceover/](https://www.apple.com/accessibility/voiceover/).
 
-## Kända fel {#known-issues}
+## Known issues {#known-issues}
 
 * **(Endast i Utforskaren 9)** I HTML5-formulär läses sidorna in vid behov (dynamiskt). Sidinläsning on demand orsakar problem med skärmläsarnas funktion. När skärmläsarens fokus är på det sista fältet på sidan och användaren trycker på fliken, återgår skärmläsaren fokus till det första fältet på formulärets första sida i stället för att fokusera på det första fältet på nästa sida.
 * **(Endast Internet Explorer 9)** Datumväljarkontrollen i HTML5-formulär är inte helt tillgänglig med tangentbordet. Om du trycker på upp-/nedtangenterna flera gånger i datumväljaren stängs datumväljaren och fokus flyttas till nästa/sista fält.
 
 * VoiceOver kan inte identifiera piltangenter på datumwidgeten på iPad safari.
-
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
