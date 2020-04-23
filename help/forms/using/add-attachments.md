@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 184b5c7f-a704-4b8c-b1ec-f4d6616a1afc
 translation-type: tm+mt
-source-git-commit: 07192aee6699fa113db7b7983c548bcd0d291ebb
+source-git-commit: 0ce79686522da4fb3d017068b623c76f81c6b23a
 
 ---
 
@@ -53,7 +53,7 @@ Du kan använda kameran på din mobila enhet eller sparade bilder på enheten f�
 
       Ta ett foto. Tryck sedan på knappen **[!UICONTROL Använd]** ![use-pic](assets/use-pic.png) .
 
-      Du kan också trycka på **[!UICONTROL Återuppta]** ![om du vill ta fotot igen](assets/retake.png) .
+      Du kan också trycka på **[!UICONTROL Återuppta]** ![omtagning](assets/retake.png) för att ta fotot igen.
 
    1. Om du väljer **[!UICONTROL Galleri]**.
 
@@ -65,10 +65,10 @@ Med alternativet **Anteckningar** kan du lägga till frihandsskript och textbila
 
 1. Tryck på knappen Bifogad fil ![längst ned](assets/attch.png) i fönstret.
 1. Tryck på **[!UICONTROL Anteckningar]** i popup-fönstret som visas.
-1. Hämta ett frihandsskript i det användargränssnitt som startas.
+1. Hämta ett frihandsskript i anteckningsgränssnittet som startas.
 
    ![Klottra](assets/scribble-ui.png)
-   **** Bild: *Klottra*
+   **Bild:** *Klottra*
 
    Du kan använda följande alternativ i gränssnittet Klottra:
 
@@ -85,5 +85,3 @@ Bifogade filer för mobilformulär som synkroniseras med AEM Forms OSGi-servrar 
 Bilagor på formulärnivå stöds inte för adaptiva formulär som läses in i appen från en AEM Forms OSGi-server. Om du vill bifoga bilder eller textanteckningar aktiverar du bilagor på fältnivå i formuläret när du redigerar det. Dra och släpp den bifogade filkomponenten från komponentwebbläsaren i fältet.
 
 När det gäller anpassningsbara formulär kan du visa de bifogade filerna i postdokumentet (DoR). Se [Generera arkivdokument för icke-XFA adaptiva formulär](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
