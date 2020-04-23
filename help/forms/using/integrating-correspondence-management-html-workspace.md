@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: f2bde2e8-da95-48ac-a652-85ead87f2cd3
 translation-type: tm+mt
-source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -114,4 +114,3 @@ Följ de här stegen för att skapa en uppgift som återger och skickar ett brev
    >
    >Knappen Skicka är inte aktiverad förrän alla obligatoriska variabler i brevet har fyllts i.
 
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
