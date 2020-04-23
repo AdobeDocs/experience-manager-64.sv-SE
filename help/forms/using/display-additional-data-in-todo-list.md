@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: b74a0933-2b96-4a88-9995-6fb21df141aa
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: a5cac0d369bb40659cfde011e5d6ef9a68dc4012
 
 ---
 
@@ -138,7 +138,7 @@ Slutligen måste du ta med en post i dev-paketet för varje egenskap som du vill
 
 1. Kopiera `task.html`:
 
-   * from: `/libs/ws/js/runtime/templates/`
+   * från: `/libs/ws/js/runtime/templates/`
    * to: `/apps/ws/js/runtime/templates/`
 
 1. Lägg till den nya informationen i `/apps/ws/js/runtime/templates/task.html`.
@@ -148,5 +148,3 @@ Slutligen måste du ta med en post i dev-paketet för varje egenskap som du vill
    ```
    <span class="stepname" alt="<%= $.t('task.stepname.value')%>" title = '<%= $.t("task.stepname.tooltip",{stepName:stepName})%>'/>
    ```
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
