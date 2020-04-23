@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: d3facd17-ceb0-4799-8cd9-ff9e81e09793
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -58,7 +58,7 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
     <ul> 
      <li><p>filterSelected - aktivitetslistmodell</p></li> 
      <li><p>remove - aktivitetslistmodell</p></li> 
-     <li><p>updateQueue - aktivitetslista, modell</p></li> 
+     <li><p>updateQueue - aktivitetslistmodell</p></li> 
     </ul></td> 
   </tr> 
  </tbody> 
@@ -92,7 +92,7 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
    <td><p>JS-beroenden</p></td> 
    <td> 
     <ul> 
-     <li><p> aktivitetslistmodell</p></li> 
+     <li><p>aktivitetslistmodell</p></li> 
      <li><p>aktivitetsverktyg</p></li> 
     </ul></td> 
   </tr> 
@@ -141,7 +141,7 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
     <ul> 
      <li><p>hämtad - aktivitetslistmodell </p></li> 
      <li><p>remove - aktivitetslistmodell </p></li> 
-     <li><p>updateQueue - aktivitetslista, modell </p></li> 
+     <li><p>updateQueue - aktivitetslistmodell </p></li> 
      <li><p>uppdateradKö - aktivitetslistmodell </p></li> 
      <li><p>filterSelected - aktivitetslistmodell</p></li> 
     </ul></td> 
@@ -170,7 +170,7 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
    <td> 
     <ul> 
      <li><p>Fält: kö: { name, qid, isDefault, type}</p> </li> 
-     <li><p>Fält: fråga:string</p> </li> 
+     <li><p>Fält: fråga: string</p> </li> 
      <li><p>Fält: parentView: filterlistevy</p> </li> 
      <li><p>Fält: parentModel: aktivitetslistmodell</p> </li> 
      <li><p>Fält: utility</p> </li> 
@@ -213,7 +213,7 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
     <ul> 
      <li><p>hämtad - aktivitetslistmodell </p></li> 
      <li><p>remove - aktivitetslistmodell </p></li> 
-     <li><p>updateQueue - aktivitetslista, modell </p></li> 
+     <li><p>updateQueue - aktivitetslistmodell </p></li> 
      <li><p>teamQueuesFetched - tasklist model </p></li> 
     </ul></td> 
   </tr> 
@@ -246,7 +246,7 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
     <ul> 
      <li><p>Utökar: filtervy</p> </li> 
      <li><p>Fält: queue :{ name, qid, isDefault, type }</p> </li> 
-     <li><p>Fält: fråga:string</p> </li> 
+     <li><p>Fält: fråga: string</p> </li> 
      <li><p>Fält: parentView: filterlistevy</p> </li> 
      <li><p>Fält: parentModel : aktivitetslistmodell</p> </li> 
      <li><p>Fält: utility</p> </li> 
@@ -436,7 +436,7 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
      <li><p>startpunktsmodell</p></li> 
      <li><p>aktivitetsmodell</p></li> 
      <li><p>aktivitetsmodell</p></li> 
-     <li><p> aktivitetslistmodell</p></li> 
+     <li><p>aktivitetslistmodell</p></li> 
      <li><p>gruppaktivitetsmodell</p></li> 
     </ul></td> 
   </tr> 
@@ -595,7 +595,7 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
  <tbody> 
   <tr> 
    <td><p>Modell</p></td> 
-   <td><p>processnamn.js</p></td> 
+   <td><p>processname.js</p></td> 
   </tr> 
   <tr> 
    <td><p>Visa</p></td> 
@@ -681,7 +681,7 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
   </tr> 
   <tr> 
    <td><p>JS-beroenden</p></td> 
-   <td><p> aktivitetslistmodell</p></td> 
+   <td><p>aktivitetslistmodell</p></td> 
   </tr> 
   <tr> 
    <td><p>Lyssnade händelser (händelsenamn - utlösare)</p></td> 
@@ -1071,11 +1071,11 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
   </tr> 
   <tr> 
    <td><p>Visa</p> </td> 
-   <td><p>searchtempledetails.js</p> </td> 
+   <td><p>searchtemplatedetails.js</p> </td> 
   </tr> 
   <tr> 
    <td><p>Mall</p> </td> 
-   <td><p>searchtempledetails.html</p> </td> 
+   <td><p>searchtemplatedetails.html</p> </td> 
   </tr> 
   <tr> 
    <td><p>Kräver komponenter</p> </td> 
@@ -1091,5 +1091,3 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
   </tr> 
  </tbody> 
 </table>
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
