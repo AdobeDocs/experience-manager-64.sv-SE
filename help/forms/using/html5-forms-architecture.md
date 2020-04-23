@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 599f1925-a17e-4bae-93d9-b54edcee92b0
 translation-type: tm+mt
-source-git-commit: 4466161992d877b17d43fe73e3298dd6252733c0
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -42,7 +42,7 @@ HTML5-formulär cachelagrar alla mellanliggande objekt som krävs för att bearb
 
 Mobilformulär upprätthåller två olika cachenivåer, PreRender-cache och Render Cache. Cacheminnet för preRender innehåller alla fragment och bilder i en löst mall och Render-cachen innehåller återgivet innehåll som HTML.
 
-![](assets/cacheworkflow.png) Arbetsflöde **för HTML5-formulär** Bild: Arbetsflöde för *HTML5-formulär*
+![Arbetsflöde](assets/cacheworkflow.png)för HTML5-formulär **Bild:** Arbetsflöde för *HTML5-formulär*
 
 HTML5-formulär cache-lagrar inte mallar som saknar referenser till fragment och bilder. Om HTML5-formulär tar längre tid än normalt kontrollerar du om det finns referenser och varningar som saknas i serverloggarna. Se även till att objektets maximala storlek inte nås.
 
@@ -75,7 +75,7 @@ Den här komponenten ansvarar också för att generera data-XML från det inskic
 
 #### Cachekomponent {#cache-component}
 
-HTML5-formulär använder cachelagring för att optimera dataflöde och svarstid. Du kan konfigurera cachetjänstens nivå för att finjustera avvägningen mellan prestanda och utrymmesanvändning.
+HTML5-formulär använder cachelagring för att optimera dataflödet och svarstiden. Du kan konfigurera cachetjänstens nivå för att finjustera avvägningen mellan prestanda och utrymmesanvändning.
 
 <table> 
  <tbody> 
@@ -92,7 +92,7 @@ HTML5-formulär använder cachelagring för att optimera dataflöde och svarstid
    <td>Cachelagra endast mellanliggande artefakter som genereras före återgivningen av formuläret, som en mall som innehåller textbundna fragment och bilder</td> 
   </tr> 
   <tr> 
-   <td> Aggressiv</td> 
+   <td>Aggressiv</td> 
    <td>Cachelagra återgivet HTML-innehåll<br /> Cachelagra alla artefakter som cachelagrats på den konservativa nivån.<br /> <strong>Obs</strong>: Den här strategin ger bästa prestanda men kräver mer minne för att lagra cachelagrade artefakter.</td> 
   </tr> 
  </tbody> 
@@ -182,5 +182,5 @@ Mer information om CQ Client Libs finns i [CQ Clientlib Documentation](https://d
 Så som beskrivs ovan anropar profilåtergivaren JSP Forms Service via en sling include. Denna JSP anger också olika felsökningsalternativ baserat på administratörskonfigurationen eller frågeparametrarna.
 
 Med HTML5-formulär kan utvecklare skapa profil- och profilåtergivning för att anpassa formulärens utseende. Med HTML-formulär kan utvecklare t.ex. integrera formulär på en panel eller &lt;div> i en befintlig HTML-portal.\
-Mer information om hur du skapar anpassade profiler finns i [Skapa en anpassad profil](/help/forms/using/custom-profile.md).\
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
+Mer information om hur du skapar anpassade profiler finns i [Skapa en anpassad profil](/help/forms/using/custom-profile.md).
+
