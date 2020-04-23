@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: a8d986ab-2a4c-488b-957e-4606f7391bd3
 translation-type: tm+mt
-source-git-commit: 7e58d1d861f832d073fb178868804995ee8d855b
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -248,5 +248,3 @@ När valideringen av ett fält resulterar i en varning visas en intern varning n
 `Styling Fields with Validation Errors`
 
 När valideringen för ett fält misslyckas ändras formatet på widgeten. Den här formatändringen görs genom att en CSS-klass **widgetError** används på widgetkomponenten. Om du vill ändra standardformatet åsidosätter du **klassen widgetError** .
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
