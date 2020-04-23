@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 2cb251a6-d8d0-4563-b0f0-2dca38037155
 translation-type: tm+mt
-source-git-commit: 12905ca1540e5b280975724a7fb3635dc4afffca
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -107,7 +107,7 @@ När du har öppnat en uppgift beror uppgiften på vilka flikar som visas i huvu
 
 **Information**: Ger information om den aktuella uppgiften och processen som den tillhör.
 
-**Formulär**: Visar formuläret som är associerat med uppgiften. Formuläret kan vara av många filtyper, bland annat PDF, HTML, Guide och SWF. Formuläret kan se ut som ett vanligt utskrivbart eller webbaserat formulär eller vägleda dig genom en serie guideliknande paneler för att samla in information.
+**Formulär**: Visar formuläret som är associerat med uppgiften. Formuläret kan vara av många filtyper, bland annat PDF-, HTML-, guide- och SWF-filer. Formuläret kan se ut som ett vanligt utskrivbart eller webbaserat formulär eller vägleda dig genom en serie guideliknande paneler för att samla in information.
 
 **Historik**: Visar de uppgifter som ingår i processinstansen och det tillhörande formuläret, uppgiftstilldelningar och bilagor för varje uppgift.
 
@@ -277,7 +277,7 @@ När du slutför en uppgift via e-post tas uppgiften bort från din Att göra-li
 
 >[!NOTE]
 >
->Om användaren inte är inloggad på AEM Forms-arbetsytan i webbläsaren och öppnar en länk till en Att göra-uppgift, kan länken för att göra-uppgift inte öppnas och ett undantag visas. Logga in på arbetsytan i AEM Forms innan du klickar på länkar i e-postmeddelanden.
+>Om användaren inte är inloggad på AEM Forms-arbetsytan i webbläsaren och öppnar en länk till en Att göra-uppgift, kommer länken direkt att misslyckas och ett undantagsfel visas. Logga in på arbetsytan i AEM Forms innan du klickar på länkar i e-postmeddelanden.
 
 >[!NOTE]
 >
@@ -307,7 +307,7 @@ Alla uppgifter som är tilldelade dig visas i listan Att göra (kö).
 
 Alla grupper och delade Att göra-listor som du har åtkomst till visas också i den vänstra rutan på Att göra-sidan. Du kan slutföra uppgifter från alla Att göra-listor som du har tillgång till.
 
-En lista med att göra-uppgifter för en grupp kan ha fler än en medlem. En administratör konfigurerar grupper att göra-listor baserat på organisationens specifika krav. Gruppera Att göra-listor är ett sätt att distribuera arbete bland flera personer som har liknande ansvarsområden.
+En lista med att göra-uppgifter för en grupp kan ha fler än en medlem. En administratör konfigurerar grupper att göra-listor baserat på organisationens specifika krav. Gruppera Att göra-listor är ett sätt att distribuera arbete bland flera personer som delar liknande ansvarsområden.
 
 Alla i teamet hanterar t.ex. låneblanketter. Alla dessa uppgifter skickas till en gruppAtt göra-lista som alla medlemmar i gruppen har åtkomst till. Varje medlem i din grupp har åtkomst till uppgifterna från Att göra-listan.
 
@@ -391,4 +391,3 @@ Du kan ange en standardperson som alla dina uppgifter skickas till. Du kan ocks�
 
 1. När du är klar med inställningarna klickar du på **Spara**. Om dina inställningar indikerar att du inte är på kontoret för tillfället, träder ändringarna i kraft omedelbart. Annars börjar de gälla vid angivet startdatum och angiven starttid. Om du loggar in när du inte är på kontoret beaktas du inte på kontoret förrän du ändrar dina inställningar.
 
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
