@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: a3aac07e-7d67-4a4f-b941-ff25a981092f
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -66,5 +66,3 @@ Du kan göra följande ändringar i inställningarna för ditt program.
 >Om du rensar cachen loggas du omedelbart ut från appen.
 >
 >Du uppmanas dock att bekräfta rensningen av cachen.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
