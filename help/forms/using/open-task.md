@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: cdce7a6a-2bbf-492f-bf91-5b8f07d02207
 translation-type: tm+mt
-source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -45,5 +45,3 @@ Andra formulär sparas som utkast på fliken Utkast. Se [Spara ett utkast](/help
 1. Tryck på uppgiften för att öppna den.
 
    Du kan trycka på **Visa sammanfattning** om du vill visa ytterligare instruktioner för programmet.
-
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
