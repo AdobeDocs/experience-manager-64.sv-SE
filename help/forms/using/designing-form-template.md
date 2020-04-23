@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: e135fa01-fede-4285-b4dd-2d23acbb4d26
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -33,5 +33,3 @@ Fliken Förhandsgranska HTML läggs till i designläget för formulärdesigners 
 Huvudmålet för HTML5-formulär är pekenheter. Därför har en ny kontroll för signering i klotter lagts till i AEM Forms Designer. Du kan klicka på eller dra och släppa kontrollen för signering av skript på formulärmallen och konfigurera den. Det återges som ett klottrigt fält i HTML5-rendering och kan användas för att klottra signaturer på enheter med pekskärm. På stationära datorer kan den användas som ett klotterfält med hjälp av muskontroll. Mer information om hur du använder den här funktionen finns i [XFA-skriptfält](/help/forms/using/scribble-signature.md).
 
 ![4](assets/4.png)
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
