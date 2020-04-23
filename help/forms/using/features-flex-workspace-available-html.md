@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: ef5c957a-9d5a-42be-ad85-bdca876f56bc
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -22,9 +22,8 @@ Arbetsytan i AEM Forms är den helt nya arbetsytan. Nedan följer några av de f
 * Välkomstsidan är inte tillgänglig. Du kan ange sidorna Starta process, Att göra, Spärra/knip och Favoriter som den första sida som ska visas när du loggar in på arbetsytan.
 * Meddelanden och meddelanden om systemhändelser visas inte på arbetsytan i AEM Forms. Alla inställningar som motsvarar meddelanden (till exempel Visa meddelanden) gäller inte heller för arbetsytan AEM Forms.
 * Vyn har omstrukturerats och nu är det ingen skillnad på kort- och listvy för startpunkter och uppgifter.
-* Eftersom det inte är någon skillnad mellan kort- och listvy på arbetsytan i AEM Forms är inställningen Hantera kolumnrubriker i Att göra, Historik och Inställningar inte tillgänglig.
+* Eftersom det inte finns någon skillnad mellan kort- och listvy på arbetsytan i AEM Forms är inställningen Hantera kolumnrubriker i Att göra, Historik och Inställningar inte tillgänglig.
 * Alternativet att hantera kolumnrubriker för spårningssidan är inte tillgängligt på arbetsytan i AEM Forms.
 * Det går inte att ange en godkännandebehållare eller anpassad behållare för en användaraktivitet i AEM Forms-arbetsytan.
 * Det finns ett alternativ för att söka efter mallar på fliken Spärra/knip, men inte på fliken Att göra.
 
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
