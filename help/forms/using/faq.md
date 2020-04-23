@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: fbe70162-ced6-4989-9322-e12772edbcbc
 translation-type: tm+mt
-source-git-commit: b9d2a5b65f7ae48a9bde5580b5ddd3e55fc68d61
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -176,7 +176,7 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 1. Finns det någon rekommenderad namnkonvention och finns det några reserverade nyckelord att undvika?
 
    * I AEM Forms Designer rekommenderar vi att du inte börjar namnet på ett objekt (till exempel ett delformulär eller ett textfält) med ett understreck (_). Om du vill använda understreck i början av namnet lägger du till ett prefix efter understrecket *_&lt;prefix>&lt;objektnamn>. *
-   *  Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med API:erna för [HTML5-formulär för anpassade API:er](/help/forms/using/scripting-support.md).
+   * Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med API:erna för [HTML5-formulär för anpassade API:er](/help/forms/using/scripting-support.md).
 
 1. Har HTML5-formulär stöd för flytande fält?
 
@@ -202,6 +202,5 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
 1. Finns det några reserverade nyckelord i HTML5-formulär?
 
-   Svar: Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med API:erna för [HTML5-formulär för anpassade API:er](/help/forms/using/scripting-support.md). Förutom reserverade nyckelord bör du lägga till ett unikt prefix efter understrecket om du använder objektnamn som börjar med ett understreck (_). Genom att lägga till ett prefix undviker du eventuella konflikter med interna API:er för HTML5-formulär. Exempel, `_fpField1`
+   Svar: Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med API:erna för [HTML5-formulär för anpassade API:er](/help/forms/using/scripting-support.md). Förutom reserverade nyckelord bör du lägga till ett unikt prefix efter understrecket om du använder objektnamn som börjar med ett understreck (_). Genom att lägga till ett prefix undviker du eventuella konflikter med interna API:er för HTML5-formulär. Till exempel, `_fpField1`
 
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
