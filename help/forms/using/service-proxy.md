@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 2791c9a1-38a2-4154-8bea-2f7c564b46c8
 translation-type: tm+mt
-source-git-commit: db4d19e3af11f04369fc7f6a7c13377962f0650a
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -133,4 +133,3 @@ Skicka-tjänstproxyn väljer en topologi om den skicka-URL:en finns i request-pa
 
 * Innan data skickas (POST-begäran) till en server kontrollerar HTML5-formulär serverns anslutning och tillgänglighet. HTML-formulär skickar en tom huvudbegäran till servern för att verifiera anslutningen och tillgängligheten. Om servern är tillgänglig skickar HTML5-formuläret data (POST-begäran) till servern. Om servern inte är tillgänglig visas ett felmeddelande, *Could not connect to the server,* . Avancerad identifiering förhindrar att användarna behöver fylla i formuläret på ett enkelt sätt. Proxyservern hanterar huvudbegäran och genererar inget undantag.
 
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
