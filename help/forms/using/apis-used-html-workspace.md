@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 4a73a973-fccf-466b-b4a0-47652a14a080
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: 0ce79686522da4fb3d017068b623c76f81c6b23a
 
 ---
 
@@ -90,7 +90,7 @@ Följande API:er används på arbetsytan i AEM Forms.
    <td>renderTask</td> 
    <td>ProcessManagementTaskService</td> 
    <td>återge</td> 
-   <td>Den återger en uppgift och returnerar information som behövs för att återge formulär som t.ex. formulär-URL, formulärtyp, data-URL, om det behövs, osv.</td> 
+   <td>Den återger en uppgift och returnerar information som behövs för att återge formulär som t.ex. formulär-URL, formulärtyp, data-URL, om det behövs osv.</td> 
   </tr>
   <tr>
    <td>submitWithBeforeData</td> 
@@ -102,7 +102,7 @@ Följande API:er används på arbetsytan i AEM Forms.
    <td>submitWithData</td> 
    <td>ProcessManagementTaskService</td> 
    <td>submitWithData</td> 
-   <td>Den skickar formulärdata (skickas som sträng) som är kopplade till uppgiften med TaskManagers API. Det används för flexformulär som inte anropar TaskManagers API.</td> 
+   <td>Den skickar formulärdata (skickas som sträng) som är kopplade till uppgiften med TaskManagers API. Den används för flexformulär som inte anropar TaskManagers API för att skicka.</td> 
   </tr>
   <tr>
    <td>save</td> 
@@ -401,5 +401,5 @@ Följande API:er används på arbetsytan i AEM Forms.
  </tbody>
 </table>
 
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
+
 
