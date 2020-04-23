@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: cb75b826-d044-44be-b364-790c046513e0
 translation-type: tm+mt
-source-git-commit: db4d19e3af11f04369fc7f6a7c13377962f0650a
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -22,9 +22,9 @@ HTML5-formulär har en uppfattning om **profiler** som visas som REST-slutpunkte
 
 https://&lt;*host*>:&lt;*port*>/content/xfaforms/profiles/default.html?contentRoot=&lt;*path of the folder containing form xdp*>&amp;template=&lt;*name of the xdp*>
 
-Exempel, `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=c:/xdps&template=sampleForm.xdp`
+Till exempel, `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=c:/xdps&template=sampleForm.xdp`
 
-För en anpassad profil ändras slutpunkten därefter. Slutpunkten för den anpassade profilen med namnet &quot;hrforms&quot; är till exempel:
+För en anpassad profil ändras slutpunkten därefter. Slutpunkten för den anpassade profilen med namnet &quot;formulär&quot; är till exempel:
 
 `http://localhost:4502/content/xfaforms/profiles/hrforms.html?contentRoot=c:/xdps&template=sampleForm.xdp`
 
@@ -76,10 +76,8 @@ HTML5-formulär har stöd för tre metoder för att skicka återgivningsparametr
 
 * **Parametrar** för SetAttribute-begäran: Du kan ange återgivningsparametrarna som ett nyckelvärdepar. I parametrarna för SetAttribute-begäran är parametrarna inte synliga för slutanvändaren. Du kan vidarebefordra en begäran från andra JSP-program till JSP för HTML5-formulärprofiler och använda *setAttribute* för begäranobjektet för att skicka alla återgivningsparametrar. Den här metoden har högsta prioritet.
 
-* **** Parametrar för profilnodbegäran: Du kan ange återgivningsparametrarna som nodegenskaper för en profilnod. I parametrarna för profilnodbegäran är parametrarna inte synliga för slutanvändaren. Profilnod är den nod där begäran skickas. Om du vill ange parametrar som nodegenskaper använder du CRXDE lite.
+* **Parametrar för profilnodbegäran:** Du kan ange återgivningsparametrarna som nodegenskaper för en profilnod. I parametrarna för profilnodbegäran är parametrarna inte synliga för slutanvändaren. Profilnod är den nod där begäran skickas. Om du vill ange parametrar som nodegenskaper använder du CRXDE lite.
 
 ### Skicka parametrar {#submit-parameters}
 
 HTML5-formulär skickar data; köra serverbaserade skript och webbtjänster på AEM-servrar. Detaljerad information om parametrar som används för att köra serverbaserade skript och webbtjänster på AEM-servrar finns i [HTML5 Forms Service Proxy](/help/forms/using/service-proxy.md).
-
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
