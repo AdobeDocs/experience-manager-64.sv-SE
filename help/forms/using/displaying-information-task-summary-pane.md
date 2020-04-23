@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 90d0f584-b598-4b21-85d7-31da5f13d404
 translation-type: tm+mt
-source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -49,7 +49,4 @@ Med arbetsytan i AEM Forms kan du visa en webbsida som du väljer i rutan Samman
    ```
 
    * Ange värdet för uppgiftssammanfattnings-URL:en som `/lc/content/SampleSummary.html` i steget Tilldela uppgift.
-   * När den uppgift som är associerad med det här steget Tilldela uppgift öppnas i arbetsytan i AEM Forms, kommer `html.esp` vid `/apps/SampleSummary` att renderas i åtgärdssammanfattningsrutan.
-
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
+   * När den uppgift som är associerad med det här steget Tilldela uppgift öppnas i arbetsytan i AEM Forms, kommer `html.esp` vid `/apps/SampleSummary` att renderas i åtgärdssammanfattningsfönstret.
