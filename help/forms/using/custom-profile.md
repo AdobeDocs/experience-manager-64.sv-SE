@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 9cd22244-9aa6-4b5f-96cf-c9cb3d6f9c8a
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -81,5 +81,3 @@ När du har skapat en anpassad profil lägger du till återgivningsinformation i
 1. Kontrollera att profilen har skapats genom att öppna URL `https://[server]:[port]/content/xfaforms/profiles/hrform.html`
 
 Verifiera formulären genom att [importera formulären](/help/forms/using/get-xdp-pdf-documents-aem.md) från det lokala filsystemet till AEM Forms och [förhandsgranska formuläret](/help/forms/using/previewing-forms.md) på AEM-serverns författarinstans.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
