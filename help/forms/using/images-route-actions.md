@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 10158c13-47b4-43e3-ac47-690f3cbab158
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -32,7 +32,7 @@ Om du vill anpassa bilderna som används i vägåtgärder utför du stegen som b
 
    >[!NOTE]
    >
-   >Använd formatnamnet som namn på flödesåtgärden.
+   >Använd formatnamnet om du vill vara samma som vägåtgärdens namn.
 
    ```css
    .myStyle1{
@@ -172,4 +172,3 @@ To
 1. Ersätt texten med följande:\
    `"text!/lc/apps/ws/js/runtime/templates/taskdetails.html"`
 
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
