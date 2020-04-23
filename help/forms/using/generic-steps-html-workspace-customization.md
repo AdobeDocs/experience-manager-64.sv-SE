@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 54326a05-3fb0-4111-a6ec-230b6473052e
 translation-type: tm+mt
-source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -90,4 +90,3 @@ De allmänna stegen för att utföra anpassningar är:
 
    Gå till URL:en `https://[server]:[port]/lc/ws` och logga in med administratörs-/lösenordsinformation. Webbläsaren dirigeras om till `https://[server]:[port]/lc/apps/ws/index.html`.
 
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
