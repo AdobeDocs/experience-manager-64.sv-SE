@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 8a5e038e-b39a-41de-88a0-47642e5bd5bf
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -43,5 +43,3 @@ Bifogade filer på formulärnivå stöds inte i de adaptiva formulär som har h�
 
 1. Om du vill öppna ett formulär trycker du på formuläret på hemskärmen.
 1. Du kan uppdatera fälten i formuläret, lägga till bilagor, spara som utkast och skicka det.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
