@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: b8cd2656-8bc2-4bd7-a3d6-dc76b0a2d429
 translation-type: tm+mt
-source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -35,7 +35,7 @@ HTML5-formulär genererar dokument baserade på vanliga HTML5-konstruktioner. Du
 
 ### Flerkanalspublicering {#multichannel-publishing}
 
-Formulärutvecklare kan använda en XFA-mall för att återge formulär i PDF- och HTML5-format. Den här funktionen är användbar i scenarier där du har en stor uppsättning XFA-formulär som kräver minimala ändringar för att anpassa dig till designrutiner för HTML5-formulär. Du kan återge befintliga XFA-formulär till HTML5 för olika enheter där XFA-baserad PDF ännu inte stöds.
+Formulärutvecklare kan använda en XFA-mall för att återge formulär i PDF- och HTML5-format. Den här funktionen är bra i scenarier där du har en stor uppsättning XFA-formulär som kräver minimala ändringar för att anpassa dig till designrutiner för HTML5-formulär. Du kan återge befintliga XFA-formulär till HTML5 för olika enheter där XFA-baserad PDF ännu inte stöds.
 
 ## Hantera HTML5-formulär {#manage-html-forms}
 
@@ -44,5 +44,3 @@ AEM ger också en enhetlig vy för att lista och hantera alla formulärmallar me
 ### Anpassa formulär {#forms-customization}
 
 HTML5-formulär återger formulärmallar med HTML5-standardkonstruktioner. Detta gör det enkelt att anpassa och utöka formulär i HTML5-format med hjälp av webbtekniker, främst CSS och JavaScript. Du kan enkelt anpassa utseendet på befintliga widgetar, skapa egna widgetar eller använda anpassade format i formulär. Mer information om hur du skapar anpassade widgetar och anpassar befintliga widgetar finns i [Plugin-program i anpassade widgetar med HTML5-formulär](/help/forms/using/custom-widgets.md).
-
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
