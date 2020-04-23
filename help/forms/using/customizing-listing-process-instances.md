@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 40d7d43f-ee0a-4e34-ae93-20c9c940f76b
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -94,5 +94,3 @@ Utför följande steg för att visa `description` egenskapen för processinstans
        padding : 2px;
    }
    ```
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
