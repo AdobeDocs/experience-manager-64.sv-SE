@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 2228dcdd-5c9c-46b3-9888-489756c04887
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -43,7 +43,7 @@ Du kan ange vilka kolumner som ska visas i sökresultaten.
 
 På spårningssidan kan du välja en process och visa information om den. Du kan söka i processerna baserat på olika parametrar för att visa uppgiftsinformationen. Du kan även visa fliken Status för processer där flera användare tar emot uppgifter parallellt där verktygen för granskning av dokument är aktiverade.
 
-**** Status: Statusen för uppgifter i en process visas i kolumnen Markerad åtgärd när du klickar på en uppgift. Processens status är dock inte tillgänglig.
+**Status:** Statusen för uppgifter i en process visas i kolumnen Markerad åtgärd när du klickar på en uppgift. Processens status är dock inte tillgänglig.
 
 1. Välj processinstansen i sökresultatlistan om du vill visa information om de uppgifter som är en del av processinstansen.
 1. Gör något av följande om du vill visa mer information om en uppgift:
@@ -52,4 +52,3 @@ På spårningssidan kan du välja en process och visa information om den. Du kan
    * Om du vill visa information om uppgiftstilldelningen klickar du på fliken Uppdrag.
    * Om du vill visa det associerade formuläret klickar du på formulärknappen.
 
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
