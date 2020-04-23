@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 265eee8a-364e-4edf-b2a0-f42617169944
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -46,5 +46,3 @@ Om programmet är offline sparas formuläret och dess data i mappen Utkorgen.
 Om appen är online synkroniseras uppgiften med AEM Forms-servern och tilldelas den användare som anges i processen.
 
 Information om hur du arbetar med uppgiften i uppgiftslistan finns i [Öppna en uppgift](/help/forms/using/open-task.md).
-
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
