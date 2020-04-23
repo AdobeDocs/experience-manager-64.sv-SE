@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: b6e88080-6ffc-4796-98c7-d7462bca454e
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -85,7 +85,7 @@ Tredjepartsprogram återges med vyn ExtAppTaskForm.
 
 AEM Forms arbetsyta lyssnar på `window.global.postMessage([Message],[Payload])`
 
-[]`SubmitMessage``CancelMessage`Meddelande`ErrorMessage` kan vara en sträng som anges som||| `actionEnabledMessage`i `runtimeMap`. Tredjepartsprogram måste använda det här gränssnittet för att meddela AEM Forms-arbetsytan efter behov. Det är obligatoriskt att använda det här gränssnittet eftersom AEM Forms-arbetsytan måste veta att när uppgiften skickas så att den kan rensa upp aktivitetsfönstret.
+[Meddelande] kan vara en sträng som anges som `SubmitMessage`| `CancelMessage`| `ErrorMessage`| `actionEnabledMessage`i `runtimeMap`. Tredjepartsprogram måste använda det här gränssnittet för att meddela AEM Forms-arbetsytan efter behov. Det är obligatoriskt att använda det här gränssnittet eftersom AEM Forms-arbetsytan måste veta att när uppgiften skickas så att den kan rensa upp aktivitetsfönstret.
 
 **AEM Forms-arbetsyta till kommunikation med program från tredje part**
 
@@ -95,5 +95,3 @@ En Flex-applikation kan till exempel definiera `ExternalInterface.addCallback('g
 
 Du kan läsa mer om integrering av tredjepartsprogram med avseende på Correspondence Management på arbetsytan [Integrating Correspondence Management i AEM Forms](/help/forms/using/integrating-correspondence-management-html-workspace.md).
 
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
