@@ -9,7 +9,7 @@ topic-tags: process-reporting
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 6320c632-c7ec-4e56-9d12-cd27e3e9306e
 translation-type: tm+mt
-source-git-commit: ec74a1c3b1d3686a1f5216e06dfc33dc1dccfb2f
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -90,7 +90,7 @@ Processvaraktighetsrapporten visar antalet instanser av en formulärprocess i an
 
 ## Rapport över arbetsflödesvolym {#workflow-volume-report}
 
-Volymrapporten för arbetsflöde visar antalet instanser av en AEM-formulärprocess som körs och har slutförts per kalenderdag.
+Volymrapporten för arbetsflöde visar antalet aktuella och slutförda instanser av en AEM Forms-process per kalenderdag.
 
 ### Så här kör du en arbetsflödesvolymrapport {#to-execute-a-workflow-volume-report-br}
 
@@ -121,4 +121,3 @@ Volymrapporten för arbetsflöde visar antalet instanser av en AEM-formulärproc
    * **Ändra förklaringsfärg**: Markera och ändra färgen på rapportförklaringen
    * **Exportera till CSV**: Exportera och hämta data från rapporten till en kommaavgränsad fil
 
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
