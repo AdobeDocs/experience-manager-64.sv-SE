@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: dae1ce32-702e-4cf0-b3c6-976551208d09
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -46,4 +46,3 @@ Tryck på knappen Synkronisera ![synkroniseringsprogram](assets/sync-app.png) l�
 * Funktionerna syncSubowedTask() och syncSavedTask() utför åtgärder på enskilda uppgifter.
 * Anropet till funktionen processOfflineSubmitSavedTasks() initieras av uppgiftslistkomponenten efter att en användare har valt att synkronisera offlineläget med servern eller en automatisk synkronisering av bakgrundstråden.
 
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
