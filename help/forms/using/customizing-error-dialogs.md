@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: f547c0c1-3917-4092-9d63-c1b3aaefcef0
 translation-type: tm+mt
-source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -20,7 +20,7 @@ Med arbetsytan i AEM Forms kan du anpassa feldialogrutor. Utför de [allmänna s
 
 ## Anpassa text {#customizing-text}
 
-1. Ändra värdena för i `/apps/ws/locales/en-US/translation.json` filen `wserror` till anpassade värden. Exempel:
+1. Ändra värdena för i `/apps/ws/locales/en-US/translation.json` filen `wserror` till anpassade värden. Till exempel:
 
    ```
    "wserror" : {
@@ -279,5 +279,3 @@ To
     padding-top: 15px;
 }
 ```
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
