@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: c9d3f369-3744-41d5-b340-390ab7e03f36
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -128,4 +128,3 @@ Du kan lägga till alla processer i kategorin Favoriter. Genom att ange favorite
 
 Markera en process som favorit genom att markera den i sin kategori och klicka på den ofyllda stjärnan. Stjärnan blir guld. Om du vill avmarkera en process som en favorit klickar du på den gyllene stjärnan igen.
 
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
