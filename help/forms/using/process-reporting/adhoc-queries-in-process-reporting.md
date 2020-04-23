@@ -9,7 +9,7 @@ topic-tags: process-reporting
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 812f9212-2732-4966-a7fa-389aa2332c7e
 translation-type: tm+mt
-source-git-commit: 8afc09103b34b12e0218a133b87422456cb20d35
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -95,7 +95,7 @@ När du har skapat en fråga använder du alternativen i det övre högra hörne
 
 * **Kör**: Kör den aktuella frågan för att se och/eller verifiera resultatet. I det här fallet behöver du inte spara frågan innan du kör frågan. Du kan verifiera resultatet, göra eventuella ändringar och sedan spara frågan när du är nöjd med resultatet.
 
-* **Spara**:Spara filtret. Filtret kan sedan visas och köras från panelen **Mina filter** .
+* **Spara**: Spara filtret. Filtret kan sedan visas och köras från panelen **Mina filter** .
 
 ### Alternativ på panelen Mina filter {#options-in-my-filters-panel}
 
@@ -187,7 +187,7 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
 
    ![process_details](assets/process_details.png)
 
-   **** Vänster panel: Visar följande information om den valda processen:
+   **Vänster panel:** Visar följande information om den valda processen:
 
    * Namn på process
    * Datum och tid för processskapande
@@ -195,7 +195,7 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
    * Processens längd
    * Processstatus
    * Processinitierare
-   **** Panelen längst upp till höger: Visar följande information om de uppgifter som utgör den valda processen:
+   **Panelen längst upp till höger:** Visar följande information om de uppgifter som utgör den valda processen:
 
    * Aktivitets-ID
    * Uppgiftsnamn
@@ -205,7 +205,7 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
    * Datum och tid för slutförande av uppgift
    * Aktivitetsvaraktighet
    * Uppgiftsstatus
-   **** Panelen längst ned till höger: Visar följande information om processhistoriken för den valda processen:
+   **Panelen längst ned till höger:** Visar följande information om processhistoriken för den valda processen:
 
    * Processnamn
    * Processinitierare
@@ -216,7 +216,7 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
 
    ![task_details](assets/task_details.png)
 
-   **** Vänster panel: Visar följande information om den valda aktiviteten:
+   **Vänster panel:** Visar följande information om den valda aktiviteten:
 
    * Aktivitetsnamn
    * ID för processen som den här aktiviteten tillhör
@@ -226,13 +226,13 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
    * Aktivitetsvaraktighet
    * Uppgiftsstatus
    * Markerat uppgiftsflöde
-   **** Panelen längst upp till höger: Visar följande information om de formulär som utgör den valda uppgiften:
+   **Panelen längst upp till höger:** Visar följande information om de formulär som utgör den valda uppgiften:
 
    * Formulär-ID
    * Datum och tid då formuläret skapades
    * Datum och tid för formuläruppdatering
    * Formulärmallens URL
-   **** Panelen längst ned till höger: Visar följande information om processhistoriken för den valda uppgiften:
+   **Panelen längst ned till höger:** Visar följande information om processhistoriken för den valda uppgiften:
 
    * Typ av aktivitetstilldelning
    * Aktivitetsägare
@@ -266,4 +266,4 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
 
    För en uppgift visar frågeresultatet detaljerna i de formulär som ingår i uppgiften.
 
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
+
