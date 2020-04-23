@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: process-reporting
 discoiquuid: a0f81621-6ccd-46e2-85d7-2eb4ee3cdb91
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -247,40 +247,40 @@ När du loggar in på Process Reporting visas **[!UICONTROL startskärmen]** .
 
 ![process-reporting-home-screen](assets/process-reporting-home-screen.png)
 
-**** Trädvy för processrapportering: Trädvyn till vänster på hemskärmen innehåller objekten för processrapportmodulerna.
+**Trädvy för processrapportering:** Trädvyn till vänster på hemskärmen innehåller objekten för processrapportmodulerna.
 
 Trädvyn består av följande objekt på den översta nivån:
 
-**** Rapporter: Det här objektet innehåller färdiga rapporter som levereras med processrapportering.
+**Rapporter:** Det här objektet innehåller färdiga rapporter som levereras med processrapportering.
 
 Mer information om de fördefinierade rapporterna finns i [Fördefinierade rapporter i Processrapportering](pre-defined-reports-in-process-reporting.md).
 
-**** Adhoc-frågor: Det här objektet innehåller alternativ för att utföra filterbaserad sökning efter processer och uppgifter.
+**Adhoc-frågor:** Det här objektet innehåller alternativ för att utföra filterbaserad sökning efter processer och uppgifter.
 
 Mer information om ad hoc-frågor finns i [Ad-hoc-frågor i processrapportering](adhoc-queries-in-process-reporting.md).
 
-**** Anpassad: Noden Anpassad visar anpassade rapporter som du skapar.
+**Anpassad:** Noden Anpassad visar anpassade rapporter som du skapar.
 
 Information om hur du skapar och visar anpassade rapporter finns i [Anpassade rapporter i processrapportering](/help/forms/using/process-reporting/process-reporting-custom-reports.md).
 
-**** Titelfält för processrapportering: Titelfältet Processrapportering innehåller några allmänna alternativ som du kan använda när du arbetar i användargränssnittet.
+**Titelfält för processrapportering:** Titelfältet Processrapportering innehåller några allmänna alternativ som du kan använda när du arbetar i användargränssnittet.
 
-**** Processrapporttitel: Rubriken Processrapportering visas i det vänstra hörnet av namnlisten.
+**Processrapporttitel:** Rubriken Processrapportering visas i det vänstra hörnet av namnlisten.
 
 Klicka på titeln när som helst för att gå tillbaka till hemskärmen.
 
-**** Senaste uppdateringstid: Processdata publiceras på schemalagd basis från AEM Forms-databasen till Process Reporting-databasen.
+**Senaste uppdateringstid:** Processdata publiceras på schemalagd basis från AEM Forms-databasen till Process Reporting-databasen.
 
 Senaste uppdateringstid visar det senaste datumet och den senaste tiden fram till vilket datapresentationerna överfördes till Process Reporting-databasen.
 
 Mer information om datapubliceringstjänsten och hur du schemalägger den här tjänsten finns i [Schemalägg publicering](/help/forms/using/process-reporting/install-start-process-reporting.md#p-schedule-process-data-publishing-p) av processdata i artikeln Komma igång med processrapportering.
 
-**** Processrapportanvändare: Det inloggade användarnamnet visas till höger om tiden för senaste uppdatering.
+**Processrapportanvändare:** Det inloggade användarnamnet visas till höger om tiden för senaste uppdatering.
 
-**** Listruta med namnlist för Processrapportering: Listrutan till höger i namnlisten Processrapportering innehåller följande alternativ:
+**Listruta med namnlist för Processrapportering:** Listrutan till höger i namnlisten Processrapportering innehåller följande alternativ:
 
 * **[!UICONTROL Synkronisera]**: Synkronisera den inbäddade processrapportdatabasen med AEM Forms-databasen.
 * **[!UICONTROL Hjälp]**: Visa hjälpdokumentationen om processrapportering.
 * **[!UICONTROL Utloggning]**: Logga ut från processrapportering
 
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
+
