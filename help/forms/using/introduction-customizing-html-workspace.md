@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 80a70f5c-dcc4-425f-9971-9e0feec094d6
 translation-type: tm+mt
-source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -260,7 +260,7 @@ Paketet kan byggas med de tre profiler som beskrivs nedan.
 
       * mallar - Innehåller alla mallar, det vill säga HTML-filer för alla komponenter i AEM Forms-arbetsytan.
    * main.js (kombinerat, minifierat och uglifierat).
-   * register.js
+   * registry.js
 
 
 
@@ -305,7 +305,7 @@ Paketet kan byggas med de tre profiler som beskrivs nedan.
 
       * mallar - Innehåller alla mallar, det vill säga HTML-filer för alla komponenter i AEM Forms-arbetsytan.
    * main.js (kombinerat).
-   * register.js
+   * registry.js
 
 
 
@@ -354,7 +354,7 @@ mvn clean -P Dev install on client-pkg
       * util - Innehåller alla verktygsfiler (JavaScript) som används i AEM Forms-arbetsytan.
       * vyer - Innehåller vyer över alla komponenter på arbetsytan i AEM Forms.
    * main.js
-   * register.js
+   * registry.js
    * router.js
 
 
@@ -378,4 +378,3 @@ mvn clean -P Dev install on client-pkg
 * content.xml
 * _rep_policy.xml
 
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
