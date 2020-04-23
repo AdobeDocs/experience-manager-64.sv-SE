@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: ebabecb9-91c4-4991-8f5b-d27f940d2ecb
 translation-type: tm+mt
-source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -32,9 +32,9 @@ Följ genomgången för att lära dig hur man skapar en blankettapplikation som 
 
 Du kan använda arbetsytan i AEM Forms för att utföra följande uppgifter:
 
-**** Påbörja en affärsprocess: AEM Forms-arbetsytan kategoriserar dina processer så som de har utformats och konfigurerats av din organisation. Du kan använda de kategorier du använder ofta till att snabbt komma åt kategorierna. När du påbörjar en process fyller du vanligtvis i ett formulär för att påbörja en affärsprocess som styr arbetsflödet för formulär. Mer information finns i [Starta processer](/help/forms/using/starting-processes.md).
+**Påbörja en affärsprocess:** AEM Forms-arbetsytan kategoriserar dina processer så som de har utformats och konfigurerats av organisationen. Du kan använda de kategorier du använder ofta till att snabbt komma åt kategorierna. När du påbörjar en process fyller du vanligtvis i ett formulär för att påbörja en affärsprocess som styr arbetsflödet för formulär. Mer information finns i [Starta processer](/help/forms/using/starting-processes.md).
 
-**** Visa och agera på uppgifter: När du visar dina Att göra-listor kan du se uppgifter från en affärsprocess som är tilldelade dig, eller till grupper som du tillhör eller som är delade uppgifter för andra användare. Du kan öppna, arbeta med och slutföra uppgifter efter behov. Vanligtvis innebär det att tillhandahålla information, godkänna ett formulär eller avslå ett formulär. Mer information finns i [Arbeta med att göra-listor](/help/forms/using/todo-lists.md).
+**Visa och agera på uppgifter:** När du visar dina Att göra-listor kan du se uppgifter från en affärsprocess som är tilldelade dig, eller till grupper som du tillhör eller som är delade uppgifter för andra användare. Du kan öppna, arbeta med och slutföra uppgifter efter behov. Vanligtvis innebär det att tillhandahålla information, godkänna ett formulär eller avslå ett formulär. Mer information finns i [Arbeta med att göra-listor](/help/forms/using/todo-lists.md).
 
 **Spåra uppgifter**: Om du vill spåra dina uppgifter använder du fliken Spärra/knip på arbetsytan i AEM Forms. Du kan söka efter aktiva eller slutförda processer som du har påbörjat eller deltagit i. Du kan visa uppgifter, uppdrag och formulär som ingår i processen. Du kan också starta nya processer med formulärdata från en process som du tidigare har initierat. Mer information finns i [Spåra processer](/help/forms/using/tracking-processes.md).
 
@@ -127,7 +127,7 @@ Arbetsytan i AEM Forms har stöd för en mängd anpassningar för att uppdatera 
 
 Artikeln om [anpassning](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-0) förklarar vilka typer av sådana anpassningar som finns.
 
-### Konfigurera utvecklarmiljön {#set-up-the-developer-environment}
+### Set up the developer environment {#set-up-the-developer-environment}
 
 AEM Forms-arbetsytan innehåller ett CRX-paket som distribuerats på CRX, ett SDK-arkiv som innehåller den fullständiga källkoden, JavaScript-bibliotek från tredje part och byggskript för arbetsytan AEM Forms. Använd dessa för att konfigurera utvecklingsmiljön för att utföra de anpassningar som nämns ovan. Mer information finns i [Skapa kod](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3)för arbetsytan i AEM Forms.
 
@@ -142,5 +142,3 @@ Som standard återges ett XDP-formulär i PDF-format på en dator och i HTML-for
 ## AEM Forms arbetsyta {#aem-forms-workspace-app}
 
 Om du vill arbeta med dina affärsprocesser på en mobil enhet kan du använda AEM Forms-arbetsyteappen som erbjuder AEM Forms. Mer information finns i Översikt över [arbetsytan i](https://helpx.adobe.com/livecycle/help/mobile-workspace/mobile-workspace-overview.html)AEM Forms.
-
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
