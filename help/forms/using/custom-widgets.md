@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5d860f05-3257-4cf7-93dd-77d226d59b39
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 
 Du kan koppla in anpassade widgetar i mobilformulär. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar med hjälp av utseenderamverket. XFA-motorn använder olika widgetar. Mer information finns i Utseenderamverket för adaptiva formulär och HTML5-formulär [](/help/forms/using/introduction-widgets.md) .
 
-![](assets/custom-widgets.jpg) Ett exempel på standardwidget och anpassad widget **** Bild: *Ett exempel på standardwidget och anpassad widget*
+![Ett exempel på standardwidget och anpassad widget](assets/custom-widgets.jpg)**Bild:** *Ett exempel på standardwidget och anpassad widget*
 
 ## Integrera anpassade widgetar med HTML5-formulär {#integrating-custom-widgets-with-html-forms}
 
@@ -100,5 +100,3 @@ där &quot;identifier&quot; är en jQuery CSS-väljare som representerar ett vis
 | Särskilt fält med namn fältnamn | Identifierare:&quot;div.fieldName&quot; | Alla fält med namnet&quot;fältnamn&quot; återges med widgeten. |
 | Alla fält av typen&quot;type&quot; (där typen är NumericField, DateField och så vidare).: | Identifierare: &quot;div.type&quot; | För Timefield och DateTimeField är typen textfält eftersom dessa fält inte stöds. |
 | Alla fält | Identifierare: &quot;div.field&quot; |  |
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
