@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 5756cb52-dd47-4277-981c-fd0af9a20638
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -44,5 +44,3 @@ Om du inaktiverar **Tillåt användning av kameran** fungerar inte kamerafunktio
 * **Kräv lösenord på enheten** i avsnittet Lösenordsprinciper
 
 Om du vill aktivera **kryptering av programdata** bör du aktivera **lösenordet** på enheten. Om lösenordet inte har angetts på enheten krypteras inte programdata som lagras på enheten.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
