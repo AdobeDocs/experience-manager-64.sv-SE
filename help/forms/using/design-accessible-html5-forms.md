@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: ccc59dd5-c0cf-415a-b71a-5bc0cf452ede
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -29,6 +29,4 @@ AEM Forms Designer innehåller ett antal alternativ för att tala text som kan s
 
 ![hjälpmedel](assets/accessibility.png)
 
-När det finns flera alternativ som verktygstips, Skärmläsartext och Bildtext på en formulärkontroll använder skärmläsaren bara en av dessa egenskaper. Standardordningen är Anpassad uppläsningstext, Verktygstips, Bildtext och Namn. You can override the default order using the Screen Reader **Precedence** option in the Accessibility palette.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
+När det finns flera alternativ som verktygstips, Skärmläsartext och Bildtext på en formulärkontroll använder skärmläsaren bara en av dessa egenskaper. Standardordningen är Anpassad uppläsningstext, funktionsbeskrivning, bildtext och namn. You can override the default order using the Screen Reader **Precedence** option in the Accessibility palette.
