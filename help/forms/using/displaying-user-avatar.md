@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: aec03ea5-17a6-4775-92cb-2ad361895fdf
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -83,5 +83,3 @@ Avatar för den inloggade användaren visas i det övre högra hörnet på arbet
 
 1. Distribuera DSC via Workbench. Starta om `ProcessManagementClientSessionService` tjänsten.
 1. Du kan behöva uppdatera webbläsaren eller logga ut/logga in med användaren igen.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
