@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 23bc7cd2-7d06-4ef8-977a-778e290daef9
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -149,7 +149,7 @@ I logg-URL:en definieras frågesträngsparametern för loggkonfigurationen så h
 
 `{destination}-{a level}-{b level}-{c level}`
 
-Exempel:
+Till exempel:
 
 <table> 
  <tbody> 
@@ -159,7 +159,7 @@ Exempel:
   </tr> 
   <tr> 
    <td>2-a4-b5-c6<br type="_moz" /> </td> 
-   <td>Mål: Server<br /> xfa-nivå: INFO<br /> xfaView-nivå: DEBUG<br /> xfaPerf-nivå:TRACE</td> 
+   <td>Mål: Server<br /> xfa-nivå: INFO<br /> xfaView-nivå: DEBUG<br /> xfaPerf-nivå: TRACE</td> 
   </tr> 
  </tbody> 
 </table>
@@ -206,4 +206,3 @@ Så här ändrar du plats och namn på loggfilen:
 
 1. Ändra **Logger** till **HTMLFormsPerfLogger** och klicka på **Spara**.
 
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
