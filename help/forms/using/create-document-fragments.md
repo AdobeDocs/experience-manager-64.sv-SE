@@ -8,7 +8,7 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e9b78e2b-af7d-49d7-b37f-c96ec732015e
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 813675c7cd770008e8c986f87f37f36b0b193dd2
 
 ---
 
@@ -25,9 +25,9 @@ Dokumentfragment är återanvändbara komponenter i en korrespondens som använd
 
 * Text - En textresurs är en del av innehållet som består av ett eller flera textstycken. Ett stycke kan vara statiskt eller dynamiskt.
 * List - List är en grupp dokumentfragment, inklusive text, listor, villkor och bilder.
-* Villkor - Med villkor kan du definiera vilket innehåll som ska inkluderas i den interaktiva kommunikationen baserat på data som tas emot från formulärdatamodellen.
+* Villkor - Med villkor kan du definiera vilket innehåll som ska tas med i den interaktiva kommunikationen baserat på data som tas emot från formulärdatamodellen.
 
-I den här självstudiekursen får du hjälp med att skapa flera textdokumentfragment baserat på anatomin i [Planera i avsnittet Interaktiv kommunikation](/help/forms/using/planning-interactive-communications.md) . I slutet av den här självstudiekursen kan du:
+I den här självstudiekursen får du hjälp med att skapa flera textdokumentfragment baserat på anatomin i [Planera avsnittet Interaktiv kommunikation](/help/forms/using/planning-interactive-communications.md) . I slutet av den här självstudiekursen kan du:
 
 * Skapa dokumentfragment
 * Skapa variabler
@@ -61,7 +61,7 @@ Dokumentfragmentet med faktureringsinformation innehåller följande fält:
 
 Utför följande steg för att skapa variabler för fält med användargränssnittet för agent som datakälla, skapa statisk text och använda formulärdatamodellelement i dokumentfragmentet:
 
-1. Välj **Formulär** > **Dokumentfragment**.
+1. Välj **[!UICONTROL Formulär]** > **[!UICONTROL Dokumentfragment]**.
 
 1. Välj **Skapa** > **Text**.
 1. Ange följande information:
@@ -120,7 +120,7 @@ Dokumentfragmentet Kundinformation innehåller följande fält:
 
 Utför följande steg för att skapa variabler för fält med användargränssnittet för agent som datakälla, skapa statisk text och använda formulärdatamodellelement i dokumentfragmentet:
 
-1. Välj **Formulär** > **Dokumentfragment**.
+1. Välj **[!UICONTROL Formulär]** > **[!UICONTROL Dokumentfragment]**.
 1. Välj **Skapa** > **Text**.
 1. Ange följande information:
 
@@ -179,7 +179,7 @@ Dokumentfragmentet Faktureringssammanfattning innehåller följande fält:
 
 Utför följande steg för att skapa variabler för fält med användargränssnittet för agent som datakälla, skapa statisk text och använda formulärdatamodellelement i dokumentfragmentet:
 
-1. Välj **Formulär** > **Dokumentfragment**.
+1. Välj **[!UICONTROL Formulär]** > **[!UICONTROL Dokumentfragment]**.
 1. Välj **Skapa** > **Text**.
 1. Ange följande information:
 
@@ -242,7 +242,7 @@ Dokumentfragmentet Sammanfattning av avgifter innehåller följande fält:
 
 Utför följande steg för att skapa statisk text och använda modellelement för formulärdata i dokumentfragmentet:
 
-1. Välj **Formulär** > **Dokumentfragment**.
+1. Välj **[!UICONTROL Formulär]** > **[!UICONTROL Dokumentfragment]**.
 1. Välj **Skapa** > **Text**.
 1. Ange följande information:
 
