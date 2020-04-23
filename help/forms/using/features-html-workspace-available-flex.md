@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 66c3cdc4-0e4c-4597-a107-f457dd0cc166
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -41,4 +41,3 @@ Funktionen för integrering med tredjepartsprogram kan användas för att överf
 
 AEM Forms arbetsyta har stöd för HTML-återgivning av XDP-formulär. Detta stöd gör att användare kan visa ett XDP-formulär som HTML på mobila enheter och som PDF på en dator när det används i en renderingsprocess som dirigerar till olika renderingar av XDP baserat på enheten eller användarens agent. Detta bidrar till att ge användare som arbetar i olika miljöer på olika enheter en smidig täckning av processhanteringen.
 
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
