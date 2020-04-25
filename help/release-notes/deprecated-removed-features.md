@@ -10,7 +10,7 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 15819d42-4897-40fa-a013-e019d1580fa2
 translation-type: tm+mt
-source-git-commit: 08cf51186b7e9ad62b92a266e95022d7d7a34a9b
+source-git-commit: 45849a1a22f99d149369cd91781de4de0260c8e3
 
 ---
 
@@ -21,14 +21,14 @@ Adobe utvärderar ständigt produktfunktioner för att så småningom förnya el
 
 Följande regler gäller för att informera om kommande borttagning/ersättning av AEM-funktioner:
 
-1. Föråldringsanmälan kommer först. Även om de är föråldrade finns det fortfarande kapacitet, men de kommer inte att förbättras ytterligare.
+1. Föråldringsanmälan kommer först. Funktioner är fortfarande tillgängliga, men de kommer inte att förbättras ytterligare.
 1. Borttagning av föråldrade funktioner kommer att ske tidigast i följande större version. Faktiskt måldatum för borttagning tillkännages.
 
 Den här processen ger kunderna minst en releasecykel för att anpassa implementeringen till en ny version eller en efterföljare till en borttagningsfunktion, innan den faktiska borttagningen.
 
 ## Föråldrade funktioner {#deprecated-features}
 
-I det här avsnittet listas funktioner som har markerats som borttagna i AEM 6.4. I allmänhet är funktioner som ska tas bort i en framtida version först inaktuella, med ett alternativ.
+Tabellen nedan visar funktioner som har markerats som borttagna i AEM 6.4. I allmänhet är funktioner som ska tas bort i en framtida version först inaktuella, med ett alternativ.
 
 Kunderna rekommenderas att granska om de använder funktionen/funktionen i den aktuella distributionen och planera för att ändra implementeringen så att den använder det alternativ som finns.
 
@@ -120,6 +120,11 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
    <td>Använda API:t för IValueMap </td> 
   </tr>
   <tr>
+   <td>Formulär</td> 
+   <td><p>Tjänsten Central Migration Bridge är inaktuell</p> </td> 
+   <td> Ingen ersättning </td> 
+  </tr>
+  <tr>
    <td>Assets</td> 
    <td><p>Avlastning av resurser har tagits bort från och med AEM 6.4</p> </td> 
    <td> </td> 
@@ -129,7 +134,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 
 ## Borttagna funktioner {#removed-features}
 
-I det här avsnittet listas funktioner som har tagits bort från AEM 6.4. Tidigare versioner hade dessa funktioner markerats som föråldrade.
+Tabellen nedan visar funktioner som har tagits bort från AEM 6.4. Tidigare versioner hade dessa funktioner markerats som föråldrade.
 
 <table> 
  <tbody>
@@ -141,7 +146,7 @@ I det här avsnittet listas funktioner som har tagits bort från AEM 6.4. Tidiga
   <tr>
    <td>Aktivitetskarta för analyser</td> 
    <td>Den version av aktivitetskartan som ingår i AEM.</td> 
-   <td>På grund av säkerhetsändringar i Adobe Analytics-API:t är det inte längre möjligt att använda den version av Activity Map som ingår i AEM.<br><br>Det <a href="https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html">ActivityMap-plugin som tillhandahålls av Adobe Analytics</a> bör nu användas.</td> 
+   <td>På grund av säkerhetsändringar i Adobe Analytics-API:t är det inte längre möjligt att använda den version av Activity Map som ingår i AEM.<br><br>Plugin-programmet <a href="https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html">ActivityMap från Adobe Analytics</a> bör nu användas.</td> 
   </tr>
   <tr>
    <td>Komponenter-formulär</td> 
@@ -215,13 +220,18 @@ I det här avsnittet listas funktioner som har tagits bort från AEM 6.4. Tidiga
   </tr>
     <tr>
     <td>Formulär</td> 
-    <td>Borttagen AEM Forms på JEE-specifik landningssida.</td> 
+    <td>AEM Forms på JEE-specifik landningssida har tagits bort.</td> 
     <td>AEM Forms på JEE-landningssida ersätts med AEM-landningssida (/aem/start.html) </td>  
   </tr>
    <tr>
    <td>Formulär</td> 
    <td>Stöd för standard-Captcha har tagits bort</td> 
    <td>Använd tjänsten reCAPTCHA från Google.</td> 
+  </tr>
+  <tr>
+   <td>Formulär</td> 
+   <td>Stöd för flash-fält i AEM Designer har tagits bort. AEM Designer tillåter inte redigering av Flash-fält som används i ett formulär.</td> 
+   <td>Du kan använda AEM Designer som släppts för en tidigare version för att redigera sådana formulär.</td> 
   </tr>
   <tr>
    <td>Communities</td> 
@@ -233,14 +243,15 @@ I det här avsnittet listas funktioner som har tagits bort från AEM 6.4. Tidiga
 
 ## Förhandsmeddelande för nästa release {#pre-announcement-for-next-release}
 
-Det här avsnittet används för att i förväg meddela om ändringar i framtida versioner som inte är inaktuella, men som kommer att påverka kunderna. Dessa tillhandahålls för planeringsändamål.
+
+Tabellen nedan innehåller en lista över ändringar för framtida releaser som inte är inaktuella, men som kan påverka kunderna. Dessa tillhandahålls för planeringsändamål.
 
 <table> 
  <tbody>
   <tr>
    <td>Area<br /> </td> 
    <td>Funktion<br /> </td> 
-   <td>Anmälning</td> 
+   <td>Meddelande</td> 
   </tr>
   <tr>
    <td>Webbläsarstöd</td> 
