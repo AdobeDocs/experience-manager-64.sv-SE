@@ -3,7 +3,7 @@ title: Jämför funktionerna i AEM Assets och AEM Media Library
 description: Frågor och svar om AEM Assets och AEM Media Library, inklusive skillnaderna.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c5862cce4a061f076486a00685c37326bb4b21d9
+source-git-commit: 48426d3e2bd204b3cfcae217591016c14afafbda
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: c5862cce4a061f076486a00685c37326bb4b21d9
 
 Adobe Experience Manager Assets (AEM) är en integrerad del av AEM-plattformen. Denna smidiga integrering ses som en stor fördel i AEM och säkerställer enhetlighet i innehållshanteringen och hög produktivitet för skribenter.
 
-## Frågor och svar {#frequently-asked-questions}
+## Vanliga frågor {#frequently-asked-questions}
 
 ### Vad är AEM Assets? {#what-is-aem-assets}
 
@@ -35,15 +35,11 @@ Dessa funktioner kräver en giltig licens för AEM Assets.
 
 ### Finns AEM Assets som separat paket? {#is-aem-assets-available-as-a-separate-package}
 
-Nej. För att underlätta installation och driftsättning levereras alla AEM-program och tillägg i ett enda paket med alla funktioner inkluderade. Det innebär inte att du har behörighet att använda alla funktioner i paketet.
+Nej. För att underlätta installation och driftsättning levereras alla AEM-program och tillägg i ett enda paket med alla funktioner inkluderade. Detta innebär inte att du har behörighet att använda alla funktioner i paketet.
 
 #### Jag vill redigera metadata för digitala resurser. Behöver jag AEM Assets? {#i-want-to-edit-metadata-of-digital-assets-do-i-need-aem-assets}
 
 Om du planerar att redigera andra metadata än titel, beskrivning och taggar måste du licensiera AEM Assets.
-
-#### Jag vill använda kategoripredikatet på min webbplats. Behöver jag AEM Assets? {#i-want-to-use-the-category-predicate-on-my-website-do-i-need-aem-assets}
-
-Ja, kategoripredikatet och alla andra komponenter som används i Geometrixx Press Center ingår i AEM Assets och kräver en AEM Assets-licens.
 
 #### Jag vill automatiskt ändra storlek på bilder vid import. Behöver jag AEM Assets? {#i-want-to-automatically-resize-images-upon-import-do-i-need-aem-assets}
 
@@ -64,3 +60,4 @@ I det här fallet behöver man inte köpa AEM Assets, inte ens mediebiblioteket 
 >[!MORELIKETHIS]
 >
 >* [Detaljerad lista över funktionsskillnader](https://docs.adobe.com/content/help/en/experience-manager-65/assets/administer/medialibrary.html#listoffeatures)
+
