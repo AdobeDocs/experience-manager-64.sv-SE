@@ -3,7 +3,7 @@ title: Installera och konfigurera ImageMagick så att det fungerar med AEM Asset
 description: Läs om programmet ImageMagick, hur du installerar det, konfigurerar kommandoradsprocessen och använder det för att redigera, skapa och generera miniatyrbilder från bilder.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: af5f8a24db589ecdbe28d603ab9583f11d29212c
 
 ---
 
@@ -18,7 +18,7 @@ Om du vill bearbeta stora filer med ImageMagick bör du tänka på högre minnes
 
 >[!NOTE]
 >
->Om du använder AEM på Adobes hanterade tjänster (AMS) kan du kontakta Adobe Support om du tänker bearbeta många stora PSD- eller PSB-filer.
+>Om du använder AEM på Adobes hanterade tjänster (AMS) kan du kontakta Adobes kundtjänst om du tänker bearbeta många stora PSD- eller PSB-filer. Det går inte att bearbeta PSB-filer med hög upplösning som är större än 3 000 × 2 3 000 pixlar i Experience Manager.
 
 ## Installera ImageMagick {#installing-imagemagick}
 
@@ -52,7 +52,7 @@ Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfa
 
    ![web_enabled_image](assets/web_enabled_image.png)
 
-1. Tryck/klicka på **[!UICONTROL OK]** för att spara ändringarna.
+1. Tap/click **[!UICONTROL OK]** to save the changes.
 
    >[!NOTE]
    >
@@ -64,7 +64,7 @@ Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfa
 
    ![skip_mime_types](assets/skip_mime_types.png)
 
-1. På fliken **[!UICONTROL Webbaktiverad bild]** lägger du till MIME-typen `image/jpeg` under **[!UICONTROL Hoppa över lista]**. Tryck/klicka på **[!UICONTROL OK]** för att spara ändringarna.
+1. På fliken **[!UICONTROL Webbaktiverad bild]** lägger du till MIME-typen `image/jpeg` under **[!UICONTROL Hoppa över lista]**. Tap/click **[!UICONTROL OK]** to save the changes.
 
    ![web_enabled](assets/web_enabled.png)
 
