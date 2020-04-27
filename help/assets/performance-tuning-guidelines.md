@@ -3,7 +3,7 @@ title: Prestandajusteringsguide för resurser
 description: Viktiga fokusområden kring AEM-konfiguration, ändringar av maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar och optimera prestanda för AEM Assets.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 82b3998d5c1add6a759812e45ecd08b421d3b0df
+source-git-commit: af5f8a24db589ecdbe28d603ab9583f11d29212c
 
 ---
 
@@ -209,11 +209,9 @@ Dessutom anger du sökvägen till ImageMagick:s temporära mapp i filen *configu
 
 >[!NOTE]
 >
->ImageMagick-filen policy.xml och configure.xml finns under /usr/lib64/ImageMagick-&amp;ast;/config/ i stället för /etc/ImageMagick/. Mer information om var konfigurationsfilen finns i dokumentationen [till](https://www.imagemagick.org/script/resources.php) ImageMagick.
+>ImageMagick `policy.xml` - och `configure.xml` -filerna finns under `/usr/lib64/ImageMagick-*/config/` i stället för `/etc/ImageMagick/`. Mer information om [konfigurationsfilernas placering finns i dokumentationen](https://www.imagemagick.org/script/resources.php) till ImageMagick.
 
->[!NOTE]
->
->Om du använder AEM på Adobes hanterade tjänster (AMS) kan du kontakta Adobe Support om du tänker bearbeta många stora PSD- eller PSB-filer.
+Om du använder AEM på Adobes hanterade tjänster (AMS) kan du kontakta Adobes kundtjänst om du tänker bearbeta många stora PSD- eller PSB-filer. Det går inte att bearbeta PSB-filer med hög upplösning som är större än 3 000 × 2 3 000 pixlar i Experience Manager.
 
 <!-- 
 
