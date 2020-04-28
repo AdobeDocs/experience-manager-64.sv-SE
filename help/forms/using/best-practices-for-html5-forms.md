@@ -10,7 +10,7 @@ topic-tags: hTML5_forms
 content-type: reference
 discoiquuid: a5eba237-3aad-497a-8f77-061d5d3df371
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: ecfac782540ac6712e11bed9148199561b7e7f79
 
 ---
 
@@ -76,6 +76,7 @@ Adobe Experience Manager-formulär (AEM) kan hjälpa er att omvandla komplexa tr
 * [Bästa tillvägagångssätt för att administrera AEM](/help/sites-administering/administer-best-practices.md)
 * [Bästa tillvägagångssätt för att utveckla lösningar](/help/sites-developing/best-practices.md)
 * [Bästa tillvägagångssätt för arbete med anpassningsbara formulär](/help/forms/using/adaptive-forms-best-practices.md)
+* [AEM Forms-servern bäddar inte in teckensnitt i ett dynamiskt PDF-formulär](https://helpx.adobe.com/aem-forms/kb/aem-forms-server-does-not-embed-fonts-to-dynamic-pdf-form.html)
 
 ## Lathund {#quick-reference-card}
 
