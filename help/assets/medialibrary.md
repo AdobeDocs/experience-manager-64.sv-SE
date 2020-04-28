@@ -3,7 +3,7 @@ title: Jämför funktionerna i AEM Assets och AEM Media Library
 description: Frågor och svar om AEM Assets och AEM Media Library, inklusive skillnaderna.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 48426d3e2bd204b3cfcae217591016c14afafbda
+source-git-commit: 6a1013715c538c39eaf40a22dbffc7f2df36f968
 
 ---
 
