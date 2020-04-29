@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
 translation-type: tm+mt
-source-git-commit: 82e065a7faefe6d91f23e2b54dd045fd240fafbb
+source-git-commit: 8c37e09d9b00ff26fc5a0549766080d593769a24
 
 ---
 
@@ -30,6 +30,7 @@ Innan du börjar ditt AEM-utvecklingsprojekt bör du först granska följande me
 * [Code Pitfalls](/help/sites-developing/code-pitfalls.md)
 * [JCR-interaktion](/help/sites-developing/jcr-integration.md)
 * [OSGi Bundles](/help/sites-developing/osgi-bundles.md)
+* [Java API Best Practices](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
 
 ### Ytterligare metodinformation {#additional-best-practices-information}
 
@@ -55,7 +56,7 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
  <tbody>
   <tr>
    <td>En del av teorin bakom standardgränssnittet med pekfunktioner.</td> 
-   <td><p><a href="/help/sites-developing/touch-ui-concepts.md">Pekaktiverat användargränssnitt: Concepts</a></p> <p><a href="/help/sites-developing/touch-ui-structure.md">Pekaktiverat användargränssnitt:Struktur</a></p> </td> 
+   <td><p><a href="/help/sites-developing/touch-ui-concepts.md">Pekaktiverat användargränssnitt: Concepts</a></p> <p><a href="/help/sites-developing/touch-ui-structure.md">Pekaktiverat användargränssnitt: Struktur</a></p> </td> 
    <td>Dessa dokument ger en översikt över begreppen, och strukturen, för det beröringskänsliga användargränssnittet.</td> 
   </tr>
   <tr>
@@ -78,7 +79,7 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 
 ## Communities {#communities}
 
-[AEM Communities](/help/communities/overview.md) förenklar framtagning och hantering av lokala communityn.
+[AEM Communities](/help/communities/overview.md) förenklar framtagning och hantering av lokala communities.
 
 Här beskrivs några tips för Communities:
 
