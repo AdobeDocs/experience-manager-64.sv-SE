@@ -3,7 +3,7 @@ title: Konfigurera RTF-redigeraren
 description: Lär dig konfigurera AEM Rich Text Editor.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c86d1ac76d97fa716cf70bdebe91d2b6dec46b0b
+source-git-commit: 7849a3e2d9d8241382652fb1c8e6e302ffd853e0
 
 ---
 
@@ -161,6 +161,15 @@ Konfigurera följande egenskaper som gäller i redigeringsläget för dialogruto
 * `rte-start`: Utlös den här händelsen i slutet `contenteditable-div` av textredigeraren, när textredigeringsredigeringen ska börja. Detta fungerar bara om `customStart` värdet är true.
 
 Om RTE används i dialogrutan med pekfunktioner är det obligatoriskt att ange egenskapen `useFixedInlineToolbar` till true för att undvika problem.
+
+## Anpassa redigering på plats {#customizing-in-place-editing}
+
+Du kan definiera på vilken HTML-väljare textredigeraren ska starta genom att konfigurera följande egenskaper:
+
+* **`editElementQuery`** - Den här egenskapen används `cq:InplaceEditingConfig`för att ange en väljare för det HTML-element som textbundna redigeringar för textkomponenten ska startas på. Om inget anges startas redigeringen direkt på HTML-koden för textkomponenten.
+* **`textPropertyName`** - Den här egenskapen används `cq:InplaceEditingConfig`för att ange namnet på den egenskap som ska sparas på noden content där textkomponentens HTML-värde ska bevaras efter infogad redigering.
+
+Motsvarande egenskap för dialogläge är `name`.
 
 ## Aktivera RTE-funktioner genom att aktivera plugin-program {#enable-rte-functionalities-by-activating-plug-ins}
 
