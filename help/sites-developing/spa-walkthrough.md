@@ -1,8 +1,8 @@
 ---
 title: Introduktion och genomgång av SPA
 seo-title: Introduktion och genomgång av SPA
-description: I den här artikeln beskrivs begreppen för ett SPA-program och du kan gå igenom hur du använder ett grundläggande SPA-program för att skapa, vilket visar hur det är relaterat till den underliggande AEM SPA-redigeraren.
-seo-description: I den här artikeln beskrivs begreppen för ett SPA-program och du kan gå igenom hur du använder ett grundläggande SPA-program för att skapa, vilket visar hur det är relaterat till den underliggande AEM SPA-redigeraren.
+description: I den här artikeln beskrivs begreppen för ett SPA-program och du kan gå igenom hur det används i ett grundläggande SPA-program för att skapa, vilket visar hur det relaterar till den underliggande AEM SPA-redigeraren.
+seo-description: I den här artikeln beskrivs begreppen för ett SPA-program och du kan gå igenom hur det används i ett grundläggande SPA-program för att skapa, vilket visar hur det relaterar till den underliggande AEM SPA-redigeraren.
 uuid: 97a199af-b684-433d-b7b1-a8378513cb3d
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,7 +10,7 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 77b42490-15db-41d5-9757-17009f1c1efd
 translation-type: tm+mt
-source-git-commit: e514734f2bfdb9d793b64e554856cbe202ea561f
+source-git-commit: a77bdac97c81bed6fcfc4235bebf764be10bad72
 
 ---
 
@@ -79,7 +79,7 @@ Genom att vara snabbare, smidigare och mer som ett systemspecifikt program blir 
 
 Den främsta idén bakom ett SPA är att anrop och beroende av en server minskas för att minimera fördröjningar som orsakas av serveranrop så att SPA närmar sig svarstiden för ett systemspecifikt program.
 
-På en traditionell, sekventiell webbsida läses bara de data som behövs för den omedelbara sidan in. Det innebär att när besökaren flyttar till en annan sida anropas servern för de extra resurserna. Ytterligare anrop kan behövas eftersom besökaren interagerar med element på sidan. Dessa anrop kan ge en känsla av fördröjning eller fördröjning eftersom sidan måste hinna ifatt besökarens önskemål.
+På en traditionell, sekventiell webbsida läses bara de data som behövs för den omedelbara sidan in. Det innebär att när besökaren flyttar till en annan sida anropas servern för de extra resurserna. Ytterligare anrop kan behövas eftersom besökaren interagerar med element på sidan. Dessa anrop kan ge en känsla av fördröjning eller fördröjning eftersom sidan måste hinna med besökarens önskemål.
 
 ![screen_shot_2018-08-20at140449](assets/screen_shot_2018-08-20at140449.png)
 
@@ -120,6 +120,9 @@ När en SPA byggs för att utnyttja AEM SPA-redigeraren märker innehållsförfa
 1. Redigera innehållet som vanligt i AEM och notera att ändringarna bevaras.
 
    ![screen_shot_2018-06-07at143419](assets/screen_shot_2018-06-07at143419.png)
+
+   >[!NOTE]
+   >Mer information om textredigeraren på plats och SPA finns i [SPA-redigeringsöversikten](spa-overview.md#requirements-limitations) .
 
 1. Använd Resursläsaren för att dra och släppa en ny bild i en bildkomponent.
 
@@ -260,7 +263,7 @@ I följande avsnitt utforskar vi det avtal som gör det möjligt för SPA-redige
 
    ![screen_shot_2018-06-08at095124](assets/screen_shot_2018-06-08at095124.png)
 
-   Exempel
+   Till exempel
 
    `data-cq-data-path="root/responsivegrid/paragraph_1`
 
