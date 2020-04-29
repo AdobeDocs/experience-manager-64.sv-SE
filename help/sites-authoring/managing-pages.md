@@ -10,7 +10,7 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: a727c57c-87a9-46c2-8d9b-1348f1ed8ac4
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 1bbcf870170a5bfae68861614fe1a0a83d86ff61
 
 ---
 
@@ -96,9 +96,9 @@ När du skapar en ny sida finns det två nyckelfält:
 
 #### Begränsningar för sidnamn och bästa praxis {#page-name-restrictions-and-best-practices}
 
-Sidans **titel** och **namn** kan skapas separat men är relaterade:
+Sidans **titel** och **namn** kan skapas separat men hänger ihop:
 
-* När du skapar en sida är endast fältet **Titel** obligatoriskt. Om inget **namn** anges när sidan skapas genererar AEM ett namn från de 64 första tecknen i titeln (med den validering som anges nedan). Endast de första 64 tecknen används för att ge stöd åt de bästa sätten att använda korta sidnamn.
+* När du skapar en sida är endast fältet **Titel** obligatoriskt. Om inget **namn** anges när sidan skapas genererar AEM ett namn från de 64 första tecknen i titeln (med den validering som anges nedan). Endast de första 64 tecknen används för att ge stöd åt de bästa sätten med namn på korta sidor.
 
 * Om ett sidnamn anges manuellt av författaren gäller inte gränsen på 64 tecken, men andra tekniska begränsningar på sidnamnets längd kan förekomma.
 
@@ -126,12 +126,12 @@ Fullständig information om alla tillåtna tecken finns i [namnkonventionen](/he
 
 #### Titel {#title}
 
-Om du bara anger en **sidrubrik** när du skapar en ny sida, kommer AEM att härleda sidans **namn** från den här strängen och [validera namnet i enlighet med konventionerna](/help/sites-developing/naming-conventions.md) från AEM och JCR. Ett **titelfält** som innehåller ogiltiga tecken accepteras, men det härledda namnet kommer att ersätta de ogiltiga tecknen. Exempel:
+Om du bara anger en **sidtitel** när du skapar en ny sida härleds sidans **namn**[ i AEM från den här strängen och namnet valideras enligt konventionerna i AEM och JCR. ](/help/sites-developing/naming-conventions.md) Ett **titelfält** som innehåller ogiltiga tecken accepteras, men det härledda namnet kommer att ersätta de ogiltiga tecknen. Till exempel:
 
 | Titel | Härlett namn |
 |---|---|
-| Schön | school.html |
-| SC%&amp;&amp;ast;ç+ | sc—c-.html |
+| Schön | schoen.html |
+| SC%&amp;&amp;ast;ç+ | sc---c-.html |
 
 #### Namn {#name}
 
@@ -145,7 +145,7 @@ När du anger ett **sidnamn** när du skapar en ny sida, [validerar AEM namnet e
 >
 >See [Preparing Content for Translation](/help/sites-administering/tc-prep.md) for more information.
 
-### Templates {#templates}
+### Mallar {#templates}
 
 I AEM anger en mall en speciell typ av sida. En mall kommer att användas som bas för alla nya sidor som skapas.
 
@@ -187,7 +187,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
 1. Öppna konsolen Platser (till exempel [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)).
 1. Navigera till den plats där du vill skapa den nya sidan.
-1. Öppna den nedrullningsbara listrutan med **Skapa** i verktygsfältet och välj sedan **Sida** i listan:
+1. Öppna listrutan med **Skapa** i verktygsfältet och välj sedan **Sida** i listan:
 
    ![screen_shot_2018-03-22at104944](assets/screen_shot_2018-03-22at104944.png)
 
@@ -345,7 +345,7 @@ Med AEM kan du uppdatera interna länkar som refererar till sidan som byter namn
 
 >[!NOTE]
 >
->Om sidan redan har publicerats avpubliceras den automatiskt när du flyttar den. Som standard publiceras den om när flytten är klar, men detta kan ändras genom att avmarkera fältet **Publicera** igen i steget **Justera/Publicera** igen.
+>Om sidan redan har publicerats avpubliceras den automatiskt när du flyttar den. By default, it will be republished when the move is complete, but this can changed by unchecking the **Republish** field in the **Adjust/Republish** step.
 
 >[!NOTE]
 >
@@ -360,10 +360,14 @@ Med AEM kan du uppdatera interna länkar som refererar till sidan som byter namn
 
    >[!NOTE]
    >
-   >Som en säkerhetsåtgärd är **ikonen Ta bort** inte tillgänglig som en snabbåtgärd.
+   >Som en säkerhetsåtgärd är ikonen **Ta bort** inte tillgänglig som en snabbåtgärd.
 
-1. En dialogruta öppnas där du uppmanas att bekräfta. Använd:
+1. En dialogruta där du tillfrågas om bekräftelse.
 
+   * **Vill du arkivera sidor före borttagning?** - Om det här alternativet är markerat skapas versioner av de sidor som markerats för borttagning när de tas bort.
+      * [Versioner kan återställas vid ett senare tillfälle.](/help/sites-authoring/working-with-page-versions.md)
+      * Det går inte att återställa sidor som tagits bort utan tidigare versioner.
+      * Det här alternativet är endast tillgängligt från AEM version 6.4.7.0.
    * **Avbryt** om du vill avbryta åtgärden
    * **Ta bort** för att bekräfta åtgärden:
 
@@ -397,7 +401,7 @@ Du kan skapa mappar som hjälper dig att ordna dina filer och sidor.
 
 
 
-1. Öppna **webbplatskonsolen** och navigera till önskad plats.
+1. Open the **Sites** console and navigate to the required location.
 1. Om du vill öppna alternativlistan väljer du **Skapa** i verktygsfältet
 1. Öppna dialogrutan genom att välja **Mapp** . Här anger du **namn** och **titel**:
 
