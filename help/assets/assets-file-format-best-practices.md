@@ -3,7 +3,7 @@ title: Bästa metoder för att använda filformat
 description: Metodtips för filstöd i AEM Assets.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: a892ef7ab018aca715693125808d7ade540c8242
 
 ---
 
@@ -21,7 +21,7 @@ För bästa prestanda rekommenderar Adobe att du använder Adobe Camera Raw-bibl
 * RAW
 * DNG
 
-Adobe Camera Raw-biblioteket stöder CMYK-färgprofil som indata. Däremot genereras utdata i RGB-färgrymd och endast JPEG-format stöds. Färgrymden för källfilen (till exempel CMYK) behålls inte i miniatyrbilderna.
+Adobe Camera Raw-biblioteket stöder CMYK-färgprofil som indata. Däremot genereras utdata i RGB-färgrymd och endast JPEG-format stöds. Källfilens färgrymd (till exempel CMYK) behålls inte i miniatyrbilderna.
 
 Mer information finns i [Camera Raw-stöd](camera-raw.md) i AEM Resurser.
 
@@ -43,7 +43,7 @@ Adobe rekommenderar att du använder Adobe InDesign Server för att extrahera Ad
 
 Dynamic Media genererar och levererar flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara och prestandaoptimerade nätverk. Det levererar interaktiva tittarupplevelser och effektiviserar den digitala kampanjhanteringsprocessen. Mer information om hur du aktiverar dynamiska media finns i [Konfigurera dynamiska media](config-dynamic.md).
 
-För närvarande har Dynamic Media stöd för videor på upp till 20 GB innehåll per fil.
+För närvarande har Dynamic Media stöd för videor på upp till 15 GB innehåll per fil.
 
 ## ImageMagick Library {#imagemagick-library}
 
