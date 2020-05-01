@@ -3,7 +3,7 @@ title: Filformat som stöds i AEM Assets
 description: Lista över filformat och MIME-typer som stöds av AEM Assets och de funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 04462c7162d8478d48f41e84c2f91ae7d025e423
+source-git-commit: b54b51f03f8d5f8b9fd5888f4b59510bfd7847a8
 
 ---
 
@@ -34,7 +34,7 @@ Följande rasterbildformat stöds för filhanteringsfunktioner:
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | BMP | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
 | PNM | ✓ | ✓ |  |  |  |  | ✓ |
-| PFM | ✓ | ✓ |  |  |  |  | ✓ |
+| PGM | ✓ | ✓ |  |  |  |  | ✓ |
 | PBM | ✓ | ✓ |  |  |  |  | ✓ |
 | PPM | ✓ | ✓ |  |  |  |  | ✓ |
 | PSD **‡** | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
@@ -54,7 +54,7 @@ Följande rasterbildformat stöds för Dynamic Media-funktioner:
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | BMP | ✓ |  |  |  |  |
 | PNM |  |  |  |  |  |
-| PFM |  |  |  |  |  |
+| PGM |  |  |  |  |  |
 | PBM |  |  |  |  |  |
 | PPM |  |  |  |  |  |
 | PSD **‡** | ✓ |  |  |  |  |
@@ -73,6 +73,17 @@ Utöver informationen ovan bör du tänka på följande:
 * Information om hur du använder Dynamic Media för att förhandsgranska och generera dynamiska renderingar för EPS-filer finns i [Adobe Illustrator (AI), PostScript (EPS) och PDF-filformat.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * För EPS-filer stöds tillbakaskrivning av metadata i PostScript Document Structuring Convention (PS-Adobe) version 3.0 eller senare.
+
+## Rasterbildformat som inte stöds i Dynamic Media (#unsupported-image-formats-dynamic-media)
+
+I följande lista beskrivs de undertyper av rasterbildfilformat som *inte* stöds i Dynamic Media.
+
+* PNG-filer som har en IDAT-segmentstorlek som är större än 100 MB.
+* PSB-filer.
+* PSD-filer med en annan färgrymd än CMYK, RGB, Gråskala eller Bitmapp stöds inte. Färgrymderna DuoTone, Lab och Indexed stöds inte.
+* PSD-filer med ett bitdjup som är större än 16.
+* TIFF-filer som har flyttalsdata.
+* TIFF-filer med Lab-färgrymd.
 
 ## PDF Rasterizer-bibliotek {#supported-pdf-rasterizer-library}
 
