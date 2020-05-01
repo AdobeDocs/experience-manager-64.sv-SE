@@ -10,7 +10,7 @@ topic-tags: Dynamic-Media
 content-type: reference
 discoiquuid: b721dc7c-b056-47f5-9489-9f4db45b68a0
 translation-type: tm+mt
-source-git-commit: 978c6e5cffb557f0d42f961bdde597fabf278ddd
+source-git-commit: a892ef7ab018aca715693125808d7ade540c8242
 
 ---
 
@@ -44,7 +44,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
       * [Tillämpa en videoprofil på mappar](video-profiles.md#applying-a-video-profile-to-folders).
       * Läs mer om [de bästa sätten att ordna digitala resurser för bearbetning av profiler](organize-assets.md#organize-using-folders).
       * Läs mer om [att ordna digitala resurser](organize-assets.md).
-   * Överför dina huvudvideor till mapparna. Du kan överföra videofiler på upp till 20 GB vardera. När du lägger till videofilmer i mappen kodas de enligt den videobearbetningsprofil som du tilldelade mappen.
+   * Överför dina huvudvideor till mapparna. Du kan överföra videofiler som är upp till 15 GB vardera. När du lägger till videofilmer i mappen kodas de enligt den videobearbetningsprofil som du tilldelade mappen.
 
       * [Ladda upp videor](managing-video-assets.md#uploading-and-previewing-video-assets).
       * Läs mer om [indatafilformat](assets-formats.md#supported-multimedia-formats)som stöds.
@@ -146,9 +146,9 @@ Följande stöds för hantering av enstaka video och adaptiva videouppsättninga
 
 Adaptiv videoströmning stöds på flera olika iOS-plattformar. Se [Adobe Viewer Reference Guide](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_about.html).
 
-Dynamic Media har stöd för videouppspelning i mobiler för MP4 H.264-video. Du kan hitta Blackberry-enheter som stöder det här videoformatet på följande sätt: Videoformat [som stöds på Blackberry](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482).
+Dynamic Media har stöd för videouppspelning i mobiler för MP4 H.264-video. Du kan hitta Blackberry-enheter som stöder det här videoformatet på följande sätt: [Videoformat som stöds på Blackberry](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482).
 
-Windows-enheter som stöder det här videoformatet finns på följande plats: Videoformat [som stöds på Windows Phone](https://msdn.microsoft.com/library/windows/apps/ff462087%28v=vs.105%29.aspx)
+Windows-enheter som stöder det här videoformatet finns på följande plats: [Videoformat som stöds på Windows Phone](https://msdn.microsoft.com/library/windows/apps/ff462087%28v=vs.105%29.aspx)
 
 * Spela upp videon med Dynamic Media Video Viewer Presets, inklusive följande:
 
@@ -158,7 +158,7 @@ Windows-enheter som stöder det här videoformatet finns på följande plats: Vi
 * Konfigurera videospelare för att tillgodose era varumärkesbehov.
 * Integrera video på webbplatsen, mobilsajten eller mobilapplikationen med en enkel URL eller inbäddningskod.
 
-Se [Dynamisk videouppspelning](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&config=GeoRetail/Universal_Video1&stageSize=640,480).
+Se [Dynamisk videouppspelning](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&amp;config=GeoRetail/Universal_Video1&amp;stageSize=640,480).
 
 Se även [Om HTML5-visningsprogram](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_html5_viewers_about.html) i referenshandboken för Adobe Scene7-visningsprogram.
 
@@ -273,14 +273,14 @@ Följande bild visar det övergripande arbetsflödet för redigering av videokli
 
 ## Bästa tillvägagångssätt för att koda videofilmer {#best-practices-for-encoding-videos}
 
-Arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** kodar video om du har aktiverat dynamiska media och konfigurerat videolmolntjänster. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Se [Övervaka videokodning och Publiceringsförloppet](#monitoring-video-encoding-and-youtube-publishing-progress)på YouTube. Om du har aktiverat Dynamic Media och konfigurerat Video Cloud-tjänster börjar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** automatiskt gälla när du överför en video. (Om du inte använder Dynamic Media träder arbetsflödet för **[!UICONTROL DAM-uppdatering av resurser]** i kraft.)
+Arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** kodar video om du har aktiverat dynamiska media och konfigurerat videolmolntjänster. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress). If you have enabled Dynamic Media and set up Video Cloud services, the **[!UICONTROL Dynamic Media Encode Video]** workflow automatically takes effect when you upload a video. (If you are not using Dynamic Media, the **[!UICONTROL DAM Update Asset]** workflow takes effect.)
 
 Nedan följer några tips om hur du kodar källvideofiler.
 
 Mer information om videokodning finns i:
 
-* *Artikel:* Streaming 101: Grundläggande om kodekar, bandbredd, datahastighet och upplösning: [www.adobe.com/go/learn_s7_streaming101_en](https://www.adobe.com/go/learn_s7_streaming101_en).
-* *Video: Grunderna* i videokodning: [www.adobe.com/go/learn_s7_encoding_en](https://www.adobe.com/go/learn_s7_encoding_en).
+* Artikel: *Direktuppspelning 101: Grundläggande om kodekar, bandbredd, datahastighet och upplösning:* [www.adobe.com/go/learn_s7_streaming101_en](https://www.adobe.com/go/learn_s7_streaming101_en).
+* Video: *Grunderna i videokodning:* [www.adobe.com/go/learn_s7_encoding_en](https://www.adobe.com/go/learn_s7_encoding_en).
 
 ### Källvideofiler {#source-video-files}
 
@@ -337,7 +337,8 @@ När du väljer en bithastighetskodning kan du välja mellan två typer:
 
    VBR tar längre tid att koda men ger det mest fördelaktiga resultatet. mediefilens kvalitet är överlägsen. VBR används oftast för http-progressiv leverans av videoinnehåll.
 
-**När ska du använda VBR jämfört med CRB?** När det gäller att välja VBR eller CBR rekommenderar vi nästan alltid att du använder VBR för dina mediefiler. VBR ger filer av högre kvalitet med konkurrenskraftiga bithastigheter. När du använder VBR måste du vara säker på att du använder kodning i två omgångar och ställa in den maximala bithastigheten till 1,5 gånger målvideobithastigheten.
+**När ska du använda VBR jämfört med CRB?**
+När det gäller att välja VBR eller CBR rekommenderar vi nästan alltid att du använder VBR för dina mediefiler. VBR ger filer av högre kvalitet med konkurrenskraftiga bithastigheter. När du använder VBR måste du vara säker på att du använder kodning i två omgångar och ställa in den maximala bithastigheten till 1,5 gånger målvideobithastigheten.
 
 När du väljer en förinställning för videokodning ska du ta hänsyn till slutanvändarens anslutningshastighet. Välj en förinställning med en datahastighet som är 80 % av den hastigheten. Om målanvändarens anslutningshastighet till exempel är 1 000 kbit/s är den bästa förinställningen en med en videodatahastighet på 800 kbit/s.
 
@@ -495,7 +496,7 @@ För att kunna publicera på YouTube behöver du ett Google-konto. Om du har ett
 
    `https://<servername.domain>:<port_number>`
 
-   Exempel, `https://1a2b3c.mycompany.com:4321`
+   Till exempel, `https://1a2b3c.mycompany.com:4321`
 
    **Obs**: Banexemplet ovan är endast avsett för illustrationsändamål.
 
@@ -503,7 +504,7 @@ För att kunna publicera på YouTube behöver du ett Google-konto. Om du har ett
 
    `https://<servername.domain>:<port#>/etc/cloudservices/youtube.youtubecredentialcallback.json`
 
-   Exempel, `https://1a2b3c.mycompany.com:4321/etc/cloudservices/youtube.youtubecredentialcallback.json`
+   Till exempel, `https://1a2b3c.mycompany.com:4321/etc/cloudservices/youtube.youtubecredentialcallback.json`
 
    **Obs**: Banexemplet ovan är endast avsett för illustrationsändamål.
 
@@ -563,11 +564,11 @@ Om du tänker använda standardtaggarna i AEM kan du hoppa över den här uppgif
 
 ### Konfigurera YouTube i AEM {#setting-up-youtube-in-aem}
 
-1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan på **[!UICONTROL Verktyg > Distribution > Cloud-tjänster]** i det vänstra fältet.
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools > Deployment > Cloud Services]**.
 1. Under rubriken **[!UICONTROL Tredjepartstjänster]** , under YouTube, trycker du på **[!UICONTROL Konfigurera nu]**.
 1. I dialogrutan **Skapa konfiguration]** anger du en rubrik (obligatorisk) och ett namn (valfritt) i respektive fält.
 1. Tryck på **[!UICONTROL Skapa]**.
-1. I dialogrutan **[!UICONTROL YouTube-kontoinställningar]** anger du Googles projekt-ID i fältet **[!UICONTROL Programnamn]** .
+1. In the **[!UICONTROL YouTube Account Settings]** dialog box, in the **[!UICONTROL Application Name]** field, enter the Google Project ID.
 
    Du angav projekt-ID när du konfigurerade Google Cloud-inställningarna tidigare.
 
@@ -575,13 +576,13 @@ Om du tänker använda standardtaggarna i AEM kan du hoppa över den här uppgif
 
 1. Öppna JSON-filen som du hämtade och sparade tidigare i uppgiften Konfigurera inställningarna för Google Cloud med en vanlig textredigerare.
 1. Markera och kopiera hela JSON-texten.
-1. Återgå till **[!UICONTROL dialogrutan Kontoinställningar]** för YouTube. Klistra in JSON-texten i fältet **[!UICONTROL JSON-konfiguration]** .
+1. Return to the **[!UICONTROL YouTube Account Settings]** dialog box. In the **[!UICONTROL JSON Config]** field, paste the JSON text.
 1. Tryck på **[!UICONTROL OK]**.
 
    Du kommer nu att konfigurera YouTube-kanaler i AEM.
 
-1. Till höger om **[!UICONTROL Tillgängliga kanaler]** trycker du på **[!UICONTROL +]** (plusteckenikonen).
-1. I dialogrutan **[!UICONTROL YouTube-kanalinställningar]** anger du namnet på kanalen som du skapade i uppgiften **[!UICONTROL Skapa en YouTube-kanal]** tidigare i fältet **[!UICONTROL Titel ]**.
+1. To the right of **[!UICONTROL Available Channels]**, tap **[!UICONTROL +]** (plus sign icon).
+1. In the **[!UICONTROL YouTube Channel Settings]** dialog box, in the **[!UICONTROL Title]** field, enter the name of the channel that you created in the task **C[!UICONTROL reating a YouTube channel ]**earlier.
 
    Om du vill kan du lägga till en beskrivning.
 
@@ -610,13 +611,13 @@ Om du tänker använda standardtaggarna i AEM kan du hoppa över den här uppgif
 
 Du kan automatisera inställningen av YouTube-egenskaper när du överför videoklipp. Du uppnår detta genom att skapa en metadatabearbetningsprofil i AEM.
 
-Om du vill skapa en metadatabearbetningsprofil kopierar du först värden från fältetiketten **[!UICONTROL ,]** Mappa till egenskap **[!UICONTROL och]** valfälten **** , som alla finns i Metadatascheman för video. Sedan skapar du din YouTube-metadatabearbetningsprofil för video genom att lägga till dessa värden.
+To create the metadata processing profile, you are first going to copy values from the **[!UICONTROL Field Label]**, **[!UICONTROL Map to property]**, and **[!UICONTROL Choices]** fields, all found in Metadata Schemas for video. Sedan skapar du din YouTube-profil för videometadatabearbetning genom att lägga till dessa värden i den.
 
 **Om du vill kan du automatisera inställningen av YouTube-standardegenskaper för dina överförda videofilmer**:
 
-1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan på **[!UICONTROL Verktyg > Resurser > Metadata-scheman]** i den vänstra listen.
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools > Assets > Metadata Schemas]**.
 1. Tryck på **[!UICONTROL standard]**. (Lägg inte till en bockmarkering i markeringsrutan till vänster om &quot;standard&quot;.)
-1. Markera kryssrutan till vänster om **[!UICONTROL videon]** på **[!UICONTROL standardsidan]** och tryck sedan på **[!UICONTROL Redigera]**.
+1. On the **[!UICONTROL default]** page, check the box to the left of **[!UICONTROL video]**, then tap **[!UICONTROL Edit]**.
 1. Tryck på fliken **[!UICONTROL Avancerat]** på sidan **[!UICONTROL Metadata Schema Editor]** .
 1. Tryck på **[!UICONTROL YouTube-kategorin]** under rubriken YouTube Publishing. (Tryck inte på listrutan YouTube-kategori.)
 1. Till höger på sidan, under fliken **[!UICONTROL Inställningar]** , gör du följande:
@@ -649,7 +650,7 @@ Om du vill skapa en metadatabearbetningsprofil kopierar du först värden från 
       Klistra in det kopierade värdet i den öppna textredigeraren. Du kommer att behöva det här värdet senare när du skapar din metadatabearbetningsprofil. Låt textredigeraren vara öppen.
 
 1. I det övre högra hörnet av sidan **[!UICONTROL Metadata Schema Editor]** trycker du på **[!UICONTROL Avbryt]**.
-1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan på **[!UICONTROL Verktyg > Resurser > Metadataprofiler]** i den vänstra listen.
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools > Assets > Metadata Profiles]**.
 
 1. På sidan **[!UICONTROL-metadataprofiler** , i det övre högra hörnet av sidan, trycker du på **[!UICONTROL Create**. I dialogrutan **[!UICONTROL Lägg till metadataprofil** anger du namnet i textfältet **[!UICONTROL Profiltitel]** `YouTube Video`.
 1. På sidan **[!UICONTROL Metadataprofilredigeraren]** trycker du på fliken **[!UICONTROL Avancerat]** .
@@ -659,7 +660,7 @@ Om du vill skapa en metadatabearbetningsprofil kopierar du först värden från 
    * Dra komponenten med etiketten **[!UICONTROL Avsnittshuvud]** till vänster och släpp den i formulärområdet.
    * Tryck på **[!UICONTROL Fältetikett]** för att markera komponenten.
    * Till höger på sidan, under fliken **[!UICONTROL Inställningar]** , anger du **[!UICONTROL i textfältet]** Fältetikett `YouTube Publishing`.
-   * Tryck på fliken **[!UICONTROL Skapa formulär]** och dra sedan komponenten **[!UICONTROL Single Line Text]** och släpp den under rubriken **[!UICONTROL YouTube Publishing]** som du just har skapat.
+   * Tap the **[!UICONTROL Build Form]** tab, then drag the component labeled **[!UICONTROL Single Line Text]** and drop it below the **[!UICONTROL YouTube Publishing]** heading that you just created.
    * Tryck på **[!UICONTROL Fältetikett]** för att markera komponenten.
    * Till höger på sidan, under fliken **[!UICONTROL Inställningar]** , klistrar du in **[!UICONTROL YouTube Publishing]** -värden (**[!UICONTROL Field Label]** -värde och **[!UICONTROL Map to property]** -värde) som du kopierade tidigare i deras respektive fält i formuläret. Klistra in **[!UICONTROL alternativvärdet]** i fältet **[!UICONTROL Standardvärde]** .
 
@@ -669,11 +670,11 @@ Om du vill skapa en metadatabearbetningsprofil kopierar du först värden från 
    * Dra komponenten med etiketten **[!UICONTROL Avsnittshuvud]** till vänster och släpp den i formulärområdet.
    * Tryck på **[!UICONTROL Fältetikett]** för att markera komponenten.
    * Till höger på sidan anger du `YouTube Privacy`under fliken Inställningar i textfältet Fältetikett.
-   * Tryck på fliken **[!UICONTROL Skapa formulär]** och dra sedan komponenten **[!UICONTROL Single Line Text]** och släpp den under rubriken **[!UICONTROL YouTube Privacy]** som du just skapat.
+   * Tap the **[!UICONTROL Build Form]** tab, then drag the component labeled **[!UICONTROL Single Line Text]** and drop it below the **[!UICONTROL YouTube Privacy]** heading you just created.
    * Tryck på **[!UICONTROL Fältetikett]** för att markera komponenten.
    * Till höger på sidan, under fliken **[!UICONTROL Inställningar]** , klistrar du in **[!UICONTROL YouTube Publishing]** -värden (**[!UICONTROL Field Label]** -värde och **[!UICONTROL Map to property]** -värde) som du kopierade tidigare i deras respektive fält i formuläret. Klistra in värdet **[!UICONTROL Choices** i fältet **[!UICONTROL Standardvärde]** .
 
-1. I det övre högra hörnet av sidan trycker du på **[!UICONTROL Spara]**.
+1. Near the upper-right corner of the page, tap **[!UICONTROL Save]**.
 1. Använd metadataprofilen YouTube Publishing på de mappar där du ska överföra videoklipp. Du måste ha både metadataprofilen och videoprofilen inställda.
 
    Se [Metadataprofiler](metadata-profiles.md) och [Videoprofiler](video-profiles.md).
@@ -683,7 +684,7 @@ Om du vill skapa en metadatabearbetningsprofil kopierar du först värden från 
 Nu kopplar du taggarna som du lade till tidigare till videoresurser. Denna process låter AEM veta vilka resurser som ska publiceras i din YouTube-kanal.
 
 För att publicera innehåll från YouTube använder AEM arbetsflödet **[!UICONTROL Publicera på YouTube]** , som gör att du kan övervaka förloppet och visa felinformation.
-Se [Övervaka videokodning och Publiceringsförloppet](#monitoring-video-encoding-and-youtube-publishing-progress)på YouTube.
+Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
 
 **Så här publicerar du videor till din YouTube-kanal**:
 
@@ -705,7 +706,7 @@ Se [Övervaka videokodning och Publiceringsförloppet](#monitoring-video-encodin
 
 Du kan övervaka förloppet för din YouTube-publicering (eller avpublicering).
 
-Se [Övervaka videokodning och Publiceringsförloppet](#monitoring-video-encoding-and-youtube-publishing-progress)på YouTube.
+Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
 
 Publiceringstiderna kan variera avsevärt beroende på olika faktorer, bland annat huvudvideons format, filstorlek och överföringstrafik. Publiceringsprocessen kan ta från några minuter till flera timmar. Tänk också på att format med högre upplösning återges mycket långsammare. 720p och 1080p tar till exempel betydligt längre tid att visa än 480p.
 
@@ -721,10 +722,10 @@ YouTube-URL:en är inte tillgänglig för kopiering förrän du har publicerat v
 
 1. Navigera till den YouTube- *publicerade* videoresursen vars URL du vill kopiera och markera den.
 
-   Kom ihåg att YouTube-URL:er endast är tillgängliga för kopiering *när* du först har *publicerat* videomaterialet på YouTube.
+   Remember that YouTube URLs are only available to copy *after* you have first *published* the video assets to YouTube.
 
 1. Tryck på **[!UICONTROL Egenskaper]** i verktygsfältet.
-1. Tryck på fliken **[!UICONTROL Avancerat]** .
+1. Tap the **[!UICONTROL Advanced]** tab.
 1. Under rubriken **[!UICONTROL YouTube Publishing]** , i **[!UICONTROL YouTubes URL]** -lista, markerar och kopierar du URL-texten till webbläsaren för att förhandsgranska resursen eller lägga till den på webbinnehållssidan.
 
 ### Avpublicera videoklipp för att ta bort dem från YouTube {#unpublishing-videos-to-remove-them-from-youtube}
@@ -736,16 +737,16 @@ När du avpublicerar en videoresurs i AEM tas videon bort från YouTube.
 >Om du tar bort en video direkt från YouTube känner AEM inte av det och fortsätter bete sig som om videon fortfarande publiceras på YouTube. Avpublicera alltid en videoresurs från YouTube med hjälp av AEM.
 
 För att ta bort innehåll från YouTube använder AEM arbetsflödet **[!UICONTROL Unpublish från YouTube]** , som gör att du kan övervaka förloppet och visa felinformation.
-Se [Övervaka videokodning och Publiceringsförloppet](#monitoring-video-encoding-and-youtube-publishing-progress)på YouTube.
+Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
 
 **Så här avpublicerar du videoklipp för att ta bort dem från YouTube**:
 
-1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan på **[!UICONTROL Verktyg > Resurser]** i den vänstra listen.
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools > Assets]**.
 1. Navigera till de videoresurser som du vill avpublicera från din YouTube-kanal.
 1. Välj en eller flera publicerade videoresurser i ett resursurvalsläge.
 1. Tryck på **[!UICONTROL Avpublicera > Avpublicera]** i verktygsfältet.
 
-## Övervaka videokodning och YouTubes publiceringsförlopp {#monitoring-video-encoding-and-youtube-publishing-progress}
+## Monitoring video encoding and YouTube publishing progress {#monitoring-video-encoding-and-youtube-publishing-progress}
 
 När du överför en ny video till en mapp där videokodning används eller publicerar videon till YouTube kan du övervaka hur videokodningen/YouTube-publiceringen fortskrider (eller misslyckas) på flera olika sätt. Det faktiska publiceringsförloppet för YouTube är endast tillgängligt via loggarna, men om det misslyckas eller lyckas visas på ytterligare sätt som beskrivs i följande procedur. Dessutom kan du få e-postmeddelanden när ett publiceringsarbetsflöde eller videokodning från YouTube har slutförts eller avbrutits.
 
@@ -759,7 +760,7 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
 
       ![chlimage_1-429](assets/chlimage_1-429.png)
 
-   * I **[!UICONTROL listvyn]** visas förloppet för videokodning i kolumnen **[!UICONTROL Bearbetningsstatus]** . Om ett fel uppstår visas det här meddelandet i samma kolumn.
+   * In **[!UICONTROL List View]**, video encoding progress displays in the **[!UICONTROL Processing Status]** column. Om ett fel uppstår visas det här meddelandet i samma kolumn.
 
       ![chlimage_1-430](assets/chlimage_1-430.png)
 
@@ -775,7 +776,7 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
 
    >[!NOTE]
    >
-   >Det kan ta lång tid innan fel-/felmeddelanden slutligen registreras på grund av flera arbetsflödeskonfigurationer för **[!UICONTROL återförsök]**, **[!UICONTROL återförsöksfördröjning]** och **[!UICONTROL timeout]** från [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr), till exempel:
+   >It may take a long time for failure/error messages to finally be recorded due to multiple workflow configurations on **[!UICONTROL retries]**, **[!UICONTROL retry delay]**, and **[!UICONTROL timeout]** from [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr), for example:
    >
    >* Konfiguration av Apache Sling-jobbkö
    >* Extern processhanterare för Adobe Granite-arbetsflöde
@@ -789,7 +790,7 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
    >
    >Du kan behöva administratörsbehörighet för att komma åt **[!UICONTROL Verktyg]** -menyn.
 
-   ![chlimage_1-432](assets/chlimage_1-433.png)
+   ![chlimage_1-433](assets/chlimage_1-433.png)
 
    Markera instansen och tryck på **[!UICONTROL Öppna historik]**.
 
@@ -797,7 +798,7 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
 
    Under **[!UICONTROL Arbetsflödesinstanser]** kan du också göra uppehåll i, avsluta eller byta namn på arbetsflöden. Mer information finns i [Administrera arbetsflöden](/help/sites-administering/workflows-administering.md) .
 
-1. Information om misslyckade jobb finns i **Arbetsflödesfel** i **[!UICONTROL Verktyg > Arbetsflöde > Fel]**. I **[!UICONTROL Arbetsflödesfelet]** visas alla misslyckade arbetsflödesaktiviteter.
+1. Information om misslyckade jobb finns i **Arbetsflödesfel** i **[!UICONTROL Verktyg > Arbetsflöde > Fel]**. The **[!UICONTROL Workflow Failure]** lists all failed workflow activities.
 
    >[!NOTE]
    >
@@ -807,7 +808,7 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
 
    >[!NOTE]
    >
-   >Det kan ta lång tid innan felmeddelandet slutligen spelas in på grund av flera arbetsflödeskonfigurationer för **[!UICONTROL återförsök]**, **[!UICONTROL återförsöksfördröjning]** och **[!UICONTROL timeout]** från [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr), till exempel:
+   >It may take a long time for the error message to finally be recorded due to multiple workflow configurations on **[!UICONTROL retries]**, **[!UICONTROL retry delay]**, and **[!UICONTROL timeout]** from [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr), for example:
    >
    >* Konfiguration av Apache Sling-jobbkö
    >* Extern processhanterare för Adobe Granite-arbetsflöde
@@ -815,7 +816,7 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
    >
    >Du kan justera **[!UICONTROL återförsök]**, **[!UICONTROL återförsöksfördröjning]** och **[!UICONTROL timeout]** -egenskaper i dessa konfigurationer.
 
-1. Information om slutförda arbetsflöden finns i **[!UICONTROL Arbetsflödesarkiv]** som finns på **[!UICONTROL Verktyg > Arbetsflöde > Arkiv]**. I **[!UICONTROL Arbetsflödesarkivet]** visas alla slutförda arbetsflödesaktiviteter.
+1. Information om slutförda arbetsflöden finns i **[!UICONTROL Arbetsflödesarkiv]** som finns på **[!UICONTROL Verktyg > Arbetsflöde > Arkiv]**. The **[!UICONTROL Workflow Archive]** lists all completed workflow activities.
 
    Du kan behöva administratörsbehörighet för att komma åt **[!UICONTROL Verktyg]** -menyn.
 
@@ -828,7 +829,7 @@ Se [Konfigurera e-postmeddelanden](#configuring-e-mail-notifications).
 
 Du kan behöva administratörsbehörighet för att komma åt **[!UICONTROL Verktyg]** -menyn.
 
-Hur du konfigurerar meddelanden beror på om du vill ha meddelanden om kodningsjobb eller YouTube-publiceringsjobb:
+Hur du konfigurerar meddelanden beror på om du vill ha meddelanden för kodningsjobb eller YouTube-publiceringsjobb:
 
 * För kodningsjobb kan du komma åt konfigurationssidan för alla e-postmeddelanden för AEM-arbetsflöden på **[!UICONTROL Verktyg > Åtgärder > Webbkonsol]** och genom att söka efter **[!UICONTROL Day CQ Workflow Email Notification Service]**. Se [Konfigurera e-postmeddelande i AEM](/help/sites-administering/notification.md). Du kan markera eller avmarkera kryssrutorna för **[!UICONTROL Notify on Abort]** eller **[!UICONTROL Notify on Complete]** .
 
@@ -879,7 +880,7 @@ För att videorapporter ska fungera på rätt sätt skapas ett Report Suite-ID a
 
 **Så här visar du videorapporter**:
 
-1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan på **[!UICONTROL Verktyg > Resurser > Videorapporter]** i det vänstra fältet.
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools > Assets > Video Reports]**.
 1. Gör något av följande på sidan Videorapporter:
 
    * I det övre högra hörnet trycker du på ikonen **[!UICONTROL Uppdatera videorapport]** .
@@ -889,7 +890,7 @@ För att videorapporter ska fungera på rätt sätt skapas ett Report Suite-ID a
    * I det övre högra hörnet trycker du på **[!UICONTROL datumväljarens]** ikon.
 
       Ange start- och slutdatumintervallet som du vill ha videodata för och tryck sedan på **[!UICONTROL Kör rapport]**.
-   I grupprutan **[!UICONTROL Top Metrics]** (Övre mått) identifieras olika aggregerade mått för alla *publicerade* videor på webbplatsen.
+   I grupprutan **[!UICONTROL Top Metrics]** (Toppvärden) identifieras olika aggregerade mått för alla *publicerade* videor på webbplatsen.
 
 1. I tabellen som visar de publicerade videoklippen trycker du på ett videonamn för att spela upp videon och ser även videons återgivningsrapport.
 
@@ -908,7 +909,7 @@ Se [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d
 Så här visar du videorapporter baserade på ett videovisningsprogram som du har skapat med SDK:n för HTML5-visningsprogrammet för Scene7:
 
 1. Navigera till alla publicerade videoresurser.
-1. I den nedrullningsbara listan i det övre vänstra hörnet av resursens sida väljer du **[!UICONTROL Visare]**.
+1. Near the upper-left corner of the asset&#39;s page, from the drop-down list, select **[!UICONTROL Viewers]**.
 1. Välj en förinställning för visningsprogrammet och kopiera inbäddningskoden.
 1. I inbäddningskoden söker du efter raden med följande:
 
@@ -916,7 +917,7 @@ Så här visar du videorapporter baserade på ett videovisningsprogram som du ha
 
    Parametern `config2` aktiverar spårning i HTML5-visningsprogram. Det är också en företagsspecifik förinställning som innehåller konfigurationsinformationen för Videorapportering och för kundspecifika Adobe Analytics-konfigurationer.
 
-   Rätt värde för parametern config2 finns både i **[!UICONTROL Embed Code]** och i funktionen copy **[!UICONTROL URL]** . I URL:en från kommandot Kopiera **[!UICONTROL URL]** är parametern som ska sökas efter `&config2=<value>` . Värdet är nästan alltid `companypreset`men i vissa fall kan det också vara `companypreset-1`, `companypreset-2`o.s.v.
+   The correct value for the config2 parameter is found in both the **[!UICONTROL Embed Code]** and in the copy **[!UICONTROL URL]** function. I URL:en från kopieringskommandot **[!UICONTROL URL]** letar du efter parametern `&config2=<value>`. Värdet är nästan alltid `companypreset`, men i vissa fall kan det också vara `companypreset-1`, `companypreset-2` osv.
 
 1. Lägg till AppMeasurementBridge .jsp på visningsprogramsidan i din anpassade videovisningsprogramkod genom att göra följande:
 
@@ -938,15 +939,13 @@ Så här visar du videorapporter baserade på ett videovisningsprogram som du ha
 
    * Koppla komponenter till TrackingManager genom att göra följande:
 
-      
-I händelsehanteraren kopplar du den komponent som du vill spåra till TrackingManager. `s7sdk.Event.SDK_READY`
+      I händelsehanteraren kopplar du den komponent som du vill spåra till TrackingManager. `s7sdk.Event.SDK_READY`
 
       Om komponenten är `videoPlayer`lägger du till
 
       `trackingManager.attach(videoPlayer);`
 
-      
-för att bifoga komponenten till trackingManager. Om du vill spåra flera visningsprogram på en sida använder du flera komponenter för spårningshanteraren.
+      för att bifoga komponenten till trackingManager. Om du vill spåra flera visningsprogram på en sida använder du flera komponenter för spårningshanteraren.
 
    * Skapa AppMeasurementBridge-objektet genom att lägga till följande:
 
@@ -992,7 +991,7 @@ Mer information om hur du använder JSON-funktionen i en URL finns i [Servera st
 
    Du får bäst resultat om du använder verktyget i Internet Explorer 9 eller senare, Google Chrome eller Safari.
 
-   I verktyget, i fältet **[!UICONTROL Ange URL för videofilen]** , klistrar du in den kopierade URL-adressen för videofilen och sedan trycker du på **[!UICONTROL Läs in]**. Se [Hämta en URL för en resurs](linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) för att hämta URL-adressen till själva videofilen som du sedan kan klistra in i **[!UICONTROL Ange URL-adressen för videofilsfältet]**. Internet Explorer, Chrome eller Safari kan sedan spela upp videon direkt.
+   I verktyget, i fältet **[!UICONTROL Ange URL för videofilen]** , klistrar du in den kopierade URL-adressen för videofilen och sedan trycker du på **[!UICONTROL Läs in]**. See [Obtaining a URL for an Asset](linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) to get the URL to the video file itself which you can then paste into the **[!UICONTROL Enter URL of video file field]**. Internet Explorer, Chrome och Safari kan sedan spela upp videon direkt.
 
    Följ nu instruktionerna på skärmen för att skapa och spara WebVTT-filen. När du är klar kopierar du bildtextfilens innehåll och klistrar in det i en vanlig textredigerare och sparar det med filnamnstillägget .vtt.
 
@@ -1005,7 +1004,7 @@ Mer information om hur du använder JSON-funktionen i en URL finns i [Servera st
 1. I AEM överför du din WebVTT-bildtextfil till DAM.
 1. Navigera till den *publicerade* videoresurs som du vill associera med bildtextfilen som du överförde.
 
-   Kom ihåg att URL-adresser endast är tillgängliga att kopiera *när* du först har *publicerat* resurserna.
+   Kom ihåg att URL:er endast går att kopiera *efter* att du har *publicerat* resurserna.
 
    Se [Publicera resurser.](publishing-dynamicmedia-assets.md)
 
@@ -1082,19 +1081,19 @@ Se [WebVTT: Textspår för webbvideo](https://dev.w3.org/html5/webvtt/)
        <td>För en popup-video</td> 
        <td> 
        <ol> 
-       <li>Navigera till den <i>publicerade </i>videoresurs som du vill associera med den kapitelfil som du överförde. Kom ihåg att URL-adresser endast är tillgängliga att kopiera <i>när</i> du först har <i>publicerat</i> resurserna. Se <a href="/help/assets/publishing-dynamicmedia-assets.md">Publicera resurser.</a></li> 
+       <li>Navigera till den <i>publicerade </i>videoresurs som du vill associera med den kapitelfil som du överförde. Kom ihåg att URL:er endast går att kopiera <i>efter</i> att du har <i>publicerat</i> resurserna. Se <a href="/help/assets/publishing-dynamicmedia-assets.md">Publicera resurser.</a></li> 
        <li>Tryck sedan på <strong>Visare</strong>i listrutan.</li> 
        <li>Tryck på förinställningsnamnet för videovisningsprogrammet i den vänstra listen. En förhandsgranskning av videon öppnas på en separat sida.</li> 
        <li>Tryck på <strong>URL</strong>längst ned i den vänstra listen.</li> 
        <li>I dialogrutan URL-adress markerar och kopierar du URL-adressen till Urklipp och sedan förbi URL-adressen till en enkel textredigerare.</li> 
-       <li><br /> Lägg till den kopierade URL:en för videon med följande syntax för att koppla den till den kopierade URL:en till din kapitelfil: <br /> <code>&amp;navigation=&lt;<i>full_copied_URL_path_to_chapter_file</i>.vtt&gt;</code><br /> </li> 
+       <li>Lägg till den kopierade URL:en för videon med följande syntax för att koppla den till den kopierade URL:en till din kapitelfil:<br /> <br /> <code>&amp;navigation=&lt;<i>full_copied_URL_path_to_chapter_file</i>.vtt&gt;</code><br /> </li> 
       </ol> </td> 
       </tr> 
       <tr> 
        <td>För en inbäddad videoupplevelse<br /> </td> 
        <td> 
        <ol> 
-       <li>Navigera till den <i>publicerade </i>videoresurs som du vill associera med den kapitelfil som du överförde. Kom ihåg att URL-adresser endast är tillgängliga att kopiera <i>när</i> du först har <i>publicerat</i> resurserna. Se <a href="/help/assets/publishing-dynamicmedia-assets.md">Publicera resurser.</a></li> 
+       <li>Navigera till den <i>publicerade </i>videoresurs som du vill associera med den kapitelfil som du överförde. Kom ihåg att URL:er endast går att kopiera <i>efter</i> att du har <i>publicerat</i> resurserna. Se <a href="/help/assets/publishing-dynamicmedia-assets.md">Publicera resurser.</a></li> 
        <li>Tryck sedan på <strong>Visare</strong>i listrutan.</li> 
        <li>Tryck på förinställningsnamnet för videovisningsprogrammet i den vänstra listen. En förhandsgranskning av videon öppnas på en separat sida.</li> 
        <li>Tryck på <strong>Bädda</strong>längst ned i den vänstra listen.</li> 
