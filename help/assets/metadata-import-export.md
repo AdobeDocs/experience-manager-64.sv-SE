@@ -3,7 +3,7 @@ title: Importera och exportera massmetadata
 description: I den här artikeln beskrivs hur du importerar och exporterar flera metadata samtidigt.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 093524d47565f63c8179abee704720fe23b0d09a
+source-git-commit: 254a9dec248255f8f76db3531c65b54fb4ebff0c
 
 ---
 
@@ -23,7 +23,7 @@ Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig
 Så här importerar du flera metadata samtidigt:
 
 1. Navigera till användargränssnittet Resurser och tryck/klicka på **[!UICONTROL Skapa]** i verktygsfältet.
-1. Välj **[!UICONTROL Metadata]** på menyn.
+1. From the menu, select **[!UICONTROL Metadata]**.
 1. På sidan **[!UICONTROL Metadataimport]** trycker/klickar du på **[!UICONTROL Välj fil]**.  Markera CSV-filen med metadata.
 1. Kontrollera att CSV-filen innehåller följande parametrar:
 
@@ -36,6 +36,12 @@ Så här importerar du flera metadata samtidigt:
    | [!UICONTROL Kolumnnamn för resurssökväg] | Definierar kolumnnamnet för CSV-filen med resurser. |
 
 1. Tryck/klicka på **[!UICONTROL Importera]** i verktygsfältet. När metadata har importerats skickas ett meddelande till din meddelandeinkorg. Navigera till egenskapssidan för resurser och kontrollera om metadatavärdena har importerats korrekt för resurser.
+
+Om du vill lägga till datum och tidsstämpel när du importerar metadata använder du `YYYY-MM-DDThh:mm:ss.fff-00:00` format för datum och tid. Datum och tid avgränsas med `T`, `hh` är timmar i 24-timmarsformat, `fff` är nanosekunder och `-00:00` är tidszonsförskjutning. Exempel: `2020-03-26T11:26:00.000-07:00` är 26 mars 2020 kl. 11:26:00.000 PST.
+
+>[!CAUTION]
+>
+>Om datumformatet inte matchar `YYYY-MM-DDThh:mm:ss.fff-00:00`ställs datumvärdena inte in. Datumformaten för den exporterade CSV-metadatafilen har formatet `YYYY-MM-DDThh:mm:ss-00:00`. Om du vill importera den konverterar du den till ett godkänt format genom att lägga till värdet för nanosekunder som anges av `fff`.
 
 ## Exportera metadata {#export-metadata}
 
