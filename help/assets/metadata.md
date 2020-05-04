@@ -3,14 +3,14 @@ title: Hantera metadata för digitala resurser i [!DNL Adobe Experience Manager]
 description: Lär dig mer om metadatatyperna och hur [!DNL Adobe Experience Manager Assets] hjälper dig att hantera metadata för resurser så att det blir enklare att kategorisera och ordna resurser. Med [!DNL Experience Manager] går det att automatiskt ordna och bearbeta resurser baserat på deras metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6687d6ae059dcd5d91986ae144d2f0367d8189e1
+source-git-commit: 7f8f35b9f62f61f5bb8c175062e76ba5f4966dbe
 
 ---
 
 
 # Hantera metadata för dina digitala resurser {#managing-metadata-for-digital-assets}
 
-[!DNL Adobe Experience Manager Assets] sparar metadata för varje resurs. Detta gör det enklare att kategorisera och ordna resurser och det hjälper personer som letar efter en viss resurs. Tack vare möjligheten att extrahera metadata från filer som överförts till [!DNL Experience Manager Assets]kan metadatahanteringen integreras med det kreativa arbetsflödet. Tack vare möjligheten att behålla och hantera metadata med dina resurser kan du automatiskt ordna och bearbeta resurser baserat på deras metadata. [!DNL Experience Manager Assets]
+[!DNL Adobe Experience Manager Assets] sparar metadata för varje resurs. Det gör det enklare att kategorisera och ordna resurser och det hjälper personer som letar efter en viss resurs. Tack vare möjligheten att extrahera metadata från filer som överförts till [!DNL Experience Manager Assets]kan metadatahanteringen integreras med det kreativa arbetsflödet. Med möjligheten att behålla och hantera metadata med dina resurser kan du automatiskt ordna och bearbeta resurser baserat på deras metadata.
 
 * [XMP-metadata](xmp.md).
 * [Redigera eller lägga till metadata](meta-edit.md).
@@ -28,7 +28,7 @@ Metadata är en samling med alla data som är tillgängliga för en resurs, men 
 * Namnet på mappen som den finns i.
 * Relaterade resurser eller tillämpade taggar.
 
-Detta är de grundläggande metadataegenskaperna som [!DNL Experience Manager] kan hantera resurser, vilket gör att användare kan se alla resurser, till exempel ordnade efter det senaste ändringsdatumet - användbart när de försöker identifiera vilka resurser som nyligen har lagts till i databasen.
+Ovanstående är de grundläggande metadataegenskaper som [!DNL Experience Manager] kan hantera resurser, vilket gör att användare kan se alla resurser. Det kan till exempel vara bra att beställa resurser efter det senaste ändringsdatumet när du försöker identifiera nyligen tillagda resurser.
 
 Du kan lägga till mer högnivådata till digitala resurser, till exempel:
 
@@ -38,13 +38,13 @@ Du kan lägga till mer högnivådata till digitala resurser, till exempel:
 * Beskrivning av tillgången.
 * Taggar som tilldelats en resurs.
 
-Fler metadata hjälper dig att kategorisera resurser ytterligare och är till hjälp när mängden digital information växer. Det går att hantera några hundra filer baserat på bara filnamnen. Den här metoden är dock inte skalbar och blir snabbt kort när antalet inblandade personer och antalet förvaltade resurser ökar.
+Fler metadata hjälper dig att kategorisera resurser ytterligare och är till hjälp när mängden digital information växer. Det går att hantera några hundra filer baserat på bara filnamnen. Den här metoden är dock inte skalbar. Den blir kort när antalet inblandade och antalet förvaltade tillgångar ökar.
 
 Med hjälp av metadata ökar värdet på en digital resurs eftersom resursen blir
 
 * Mer åtkomligt - system och användare hittar det enkelt.
 * Enklare att hantera - du kan hitta resurser med samma uppsättning egenskaper enklare och använda ändringarna på dem.
-* Mer komplett - ju fler metadata du har lagt till i en resurs, desto mer information och sammanhang får den.
+* Fullständigt - materialet innehåller mer information och sammanhang med fler metadata.
 
 Därför har du tillgång [!DNL Assets] till rätt sätt att skapa, hantera och utbyta metadata för dina digitala resurser.
 
@@ -61,11 +61,7 @@ Tekniska metadata är användbara för program som hanterar digitala resurser oc
 
 Beskrivande metadata är metadata som rör programdomänen, till exempel det företag som en resurs kommer från. Beskrivande metadata kan inte bestämmas automatiskt. Den skapas manuellt eller halvautomatiskt. En GPS-aktiverad kamera kan till exempel automatiskt spåra latitud och longitud och lägga till geotagga bilden.
 
-På grund av den höga kostnaden för manuell insats som krävs för att skapa beskrivande metadatainformation har standarder upprättats för att underlätta utbyte av metadata mellan olika programsystem och organisationer.
-
-[!DNL Experience Manager Assets] stöder alla relevanta standarder för metadatahantering.
-
-Eftersom metadata är så viktiga och det krävs mycket manuellt arbete för att skapa metadata har standarder fastställts som gör det enklare att utbyta.
+Kostnaden för att manuellt skapa beskrivande metadatainformation är hög. Därför har standarder upprättats för att underlätta utbyte av metadata mellan olika programsystem och organisationer. [!DNL Experience Manager Assets] stöder alla relevanta standarder för metadatahantering.
 
 ## Kodningsstandarder {#encoding-standards}
 
@@ -74,11 +70,11 @@ Det finns olika sätt att bädda in metadata i filer. Ett urval kodningsstandard
 * XMP: används av [!DNL Assets] för att lagra extraherade metadata i databasen.
 * ID3: för ljud- och videofiler.
 * Exif: för bildfiler.
-* Annat/äldre: från Microsoft Word, PowerPoint, Excel och så vidare.
+* Annat/äldre: från [!DNL Microsoft Word], [!DNL PowerPoint], [!DNL Excel]och så vidare.
 
 ### XMP {#xmp}
 
-XMP (Extensible Metadata Platform) är en öppen standard som används av [!DNL Experience Manager Assets] för all metadatahantering. Standarden erbjuder universell metadatakodning som kan bäddas in i alla filformat. Adobe och andra företag stöder XMP-standarden eftersom den erbjuder en innehållsmodell med mycket innehåll. Användare av XMP-standard och av [!DNL Experience Manager Assets] har en kraftfull plattform att bygga vidare på. For more information, see [XMP](https://www.adobe.com/products/xmp.html).
+[!DNL Extensible Metadata Platform] (XMP) är en öppen standard som används av [!DNL Experience Manager Assets] för all metadatahantering. Standarden erbjuder universell metadatakodning som kan bäddas in i alla filformat. Adobe och andra företag stöder XMP-standarden eftersom den erbjuder en innehållsmodell med mycket innehåll. Användare av XMP-standard och av [!DNL Experience Manager Assets] har en kraftfull plattform att bygga vidare på. For more information, see [XMP](https://www.adobe.com/products/xmp.html).
 
 ### ID3 {#id}
 
@@ -94,15 +90,15 @@ ID3-taggar är utformade för filformatet MP3. Mer information om format:
 
 ### Exif {#exif}
 
-Exchangeable image file format (Exif) är det vanligaste metadataformatet som används för digitalfoto. Det är ett sätt att bädda in en fast ordlista med metadataegenskaper i många filformat, till exempel JPEG, TIFF, RIFF och WAV. Exif lagrar metadata som par av ett metadatanamn och ett metadatavärde. Dessa metadata name-value-pars kallas också taggar, som inte ska blandas ihop med taggarna i [!DNL Experience Manager]. Eftersom Exif automatiskt skapas av moderna digitalkameror och stöds av moderna grafikprogram, kan det ses som den lägsta gemensamma nämnaren för metadatahantering.
+Exchangeable image file format (Exif) är det vanligaste metadataformatet som används för digitalfoto. Det är ett sätt att bädda in en fast ordlista med metadataegenskaper i många filformat, till exempel JPEG, TIFF, RIFF och WAV. Exif lagrar metadata som par av ett metadatanamn och ett metadatavärde. Dessa metadata name-value-pars kallas också taggar, som inte ska blandas ihop med taggarna i [!DNL Experience Manager]. Moderna digitalkameror skapar Exif-metadata och moderna grafikprogram stöder det. Exif-formatet är den minsta gemensamma nämnaren för metadatahantering, särskilt för bilder.
 
 En stor begränsning för Exif är att ett fåtal populära bildfilsformat som BMP, GIF och PNG inte har stöd för det.
 
-Metadatafält som vanligtvis definieras av Exif är av teknisk natur och har begränsad användning för beskrivande metadatahantering. Därför erbjuder [!DNL Experience Manager Assets] mappning av Exif-egenskaper till [vanliga metadatamatchningar](metadata-schemas.md) och till [XMP](xmp-writeback.md).
+Metadatafält som definieras av Exif är vanligtvis av teknisk natur och har begränsad användning för beskrivande metadatahantering. Därför erbjuder [!DNL Experience Manager Assets] mappning av Exif-egenskaper till [vanliga metadatamatchningar](metadata-schemas.md) och till [XMP](xmp-writeback.md).
 
 ### Andra metadata {#other-metadata}
 
-Andra metadata som kan bäddas in från filer är bland annat Microsoft Word, PowerPoint och Excel.
+Andra metadata som kan bäddas in från filer är bland annat [!DNL Microsoft Word], [!DNL PowerPoint], [!DNL Excel]osv.
 
 ## Metadata-scheman {#metadata-schemata}
 
@@ -114,62 +110,62 @@ De metadatamappningar som stöds listas nedan.
 
 ### Standardmetadata {#standard-metadata}
 
-* dc - Dublin Core - den viktigaste och mest använda uppsättningen metadata.
+* DC - [!DNL Dublin Core] är en viktig och allmänt använd uppsättning metadata.
 * DICOM - Digital Imaging and Communications in Medicine.
-* Iptc4xmpCore &amp; iptc4xmpExt - International Press Communications Standard - massor av ämnesspecifika metadata.
-* rdf - Resource Description Framework - för generiska semantiska webbmetadata.
-* xmp - Extensible Metadata Platform.
-* xmpBJ - Grundläggande jobbiljetter.
+* `Iptc4xmpCore` och `iptc4xmpExt` - International Press Communications Standard innehåller många ämnesspecifika metadata.
+* RDF - Resource Description Framework - för generiska semantiska webbmetadata.
+* XMP - [!DNL Extensible Metadata Platform].
+* `xmpBJ` - Grundläggande jobbiljetter.
 
 ### Programspecifika metadata {#application-specific-metadata}
 
-Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du använder dessa kanske andra program inte kan använda metadata. Om du t.ex. har en resurs med [!DNL Adobe Photoshop] metadata och ett annat bildåtergivningsprogram försöker få åtkomst till metadata kanske den inte kan få åtkomst till metadata. Om du har mycket programspecifika metadata i dina resurser kan du skapa ett arbetsflödessteg som ändrar en programspecifik egenskap till en standardegenskap.
+Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du använder sådana metadata kanske andra program inte kan använda dessa metadata. Ett annat bildåtergivningsprogram kanske inte kan komma åt [!DNL Adobe Photoshop] metadata. Du kan skapa ett arbetsflödessteg som ändrar en programspecifik egenskap till en standardegenskap.
 
-* cd-see - metadata hanteras av ACDSee-programmet [www.acdsee.com/](https://www.acdsee.com/).
-* album - Adobe Photoshop Album.
-* cq - används av [!DNL Experience Manager Assets].
-* dam - används av [!DNL Experience Manager Assets].
-* dex - Optima SC Description Explorer.
-* crs - Adobe Photoshop Camera Raw.
-* lr - Adobe Lightroom.
-* mediapro - IView MediaPro.
-* Microsoft Photo &amp; MP - Microsoft Photo.
-* pdf och pdfx.
-* photoshop &amp; psAux - Adobe Photoshop.
+* ACDSee - metadata som hanteras av [!DNL ACDSee] programmet. Se [www.acdsee.com/](https://www.acdsee.com/).
+* Album - [!DNL Adobe Photoshop Album].
+* CQ - Används av [!DNL Experience Manager Assets].
+* DAM - Används av [!DNL Experience Manager Assets].
+* DEX - [Optima SC Description Explorer](http://www.optimasc.com/products/dex/index.html) är en samling verktyg för metadata och filhantering i Windows.
+* CRS - [Adobe Photoshop Camera Raw](https://helpx.adobe.com/camera-raw/using/introduction-camera-raw.html).
+* LR - [!DNL Adobe Lightroom].
+* MediaPro - [iView MediaPro](https://en.wikipedia.org/wiki/Phase_One_Media_Pro).
+* Microsoft Photo och MP - Microsoft Photo.
+* PDF och PDF/X.
+* Photoshop och psAux - [!DNL Adobe Photoshop].
 
 ### Metadata för hantering av digitala rättigheter {#digital-rights-management-metadata}
 
-* cc - creative comms
-* xmpRights
-* plus - Picture Licensing Universal System - https://www.useplus.com/
-* prisma - https://www.idealliance.org/prism-metadata Publiceringskrav för branschstandardmetadata
-* prl - Prism Rights Language
-* pur - Användarrättigheter för prismaanvändning
-* xmpPlus - integrering av PLUS med XMP
+* CC - [!DNL Creative Commons].
+* [!DNL XMPRights].
+* PLUS - [Picture Licensing Universal System](https://www.useplus.com).
+* PRISM - [publiceringskrav för branschstandardmetadata](https://www.idealliance.org/prism-metadata).
+* PRL - PRISM Rights Language.
+* PUR - PRISM-användningsrättigheter.
+* `xmpPlus` - Integration av PLUS med XMP.
 
 ### Fotografispecifika metadata {#photography-specific-metadata}
 
-* exif - massor av teknisk information från kameran, inklusive GPS-position
-* crs - photoshop camera raw
-* Iptc4xmpCore och iptc4xmpExt
-* TIFF - bildmetadata (inte bara för TIFF-bilder)
+* Exif - Teknisk information från kameran, inklusive GPS-position.
+* CRS - [!DNL Camera Raw] schema.
+* `iptc4xmpCore` and `iptc4xmpExt`.
+* TIFF - bildmetadata (inte bara för TIFF-bilder).
 
 ### Utskriftsspecifika metadata {#print-specific-metadata}
 
-* pdf och pdfx - Adobe PDF och tredjepartsprogram
-* prisma - [www.prismstandard.org](https://www.prismstandard.org) publiceringskrav för branschstandardmetadata
-* xmp
-* xmpPG - xmp för växlad text
+* PDF och PDF/X - Adobe PDF och tredjepartsprogram.
+* PRISM - [publiceringskrav för branschstandardmetadata](https://www.prismstandard.org).
+* XMP - [!DNL Extensible Metadata Platform].
+* `xmpPG` - XMP-metadata för växlad text.
 
 ### Multimediaspecifika metadata {#multimedia-specific-metadata}
 
-* xmpDM - Dynamiska media
-* xmpMM - Mediehantering
+* `xmpDM` - [!DNL Dynamic Media].
+* `xmpMM` - Mediehantering.
 
 ## Metadatastyrda arbetsflöden {#metadata-driven-workflows}
 
 Genom att skapa metadatadrivna arbetsflöden kan du automatisera vissa processer, vilket ökar effektiviteten. I ett metadatadrivet arbetsflöde läser arbetsflödet och utför därför en fördefinierad åtgärd. Du kan till exempel använda metadatadrivna arbetsflöden på olika sätt:
 
-* Arbetsflödet kan kontrollera om en bild har en titel. Om så inte är fallet meddelas användaren om att lägga till en titel.
-* Arbetsflödet kan kontrollera om ett copyrightmeddelande för en mediefil tillåter distribution. Om så är fallet skickas resursen till en server. Om så inte är fallet skickas resursen till en annan server.
-* Ett arbetsflöde kan söka efter resurser utan fördefinierade, obligatoriska metadata eller med *ogiltiga* metadata.
+* Arbetsflödet kan kontrollera om en bild har en titel eller inte. Om så inte är fallet meddelas systemet om att en titel ska läggas till.
+* Arbetsflödet kan kontrollera om ett copyrightmeddelande för en mediefil tillåter distribution eller inte. Systemet skickar alltså resursen till den ena servern eller den andra.
+* Ett arbetsflöde kan söka efter resurser utan fördefinierade, obligatoriska metadata eller resurser med *ogiltiga* metadata.
