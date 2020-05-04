@@ -10,7 +10,7 @@ topic-tags: components
 content-type: reference
 discoiquuid: efbe46a3-c37f-4b67-8b3a-188cfc75118b
 translation-type: tm+mt
-source-git-commit: d6c10927d437cfc9371e4baeff5a91ed9a0503c8
+source-git-commit: 185bdd83b8b67671a31aa3f341b80614ed819b6c
 
 ---
 
@@ -35,15 +35,8 @@ Detta hjälper en utvecklare att:
 >
 >* Är bara tillgängligt i det beröringsaktiverade användargränssnittet (vid redigering av sidor).
 >* Är inte tillgängligt på mobila enheter eller små fönster på skrivbordet (på grund av utrymmesbegränsningar).
-   >
-   >  
-* Detta inträffar när bredden är mindre än 1024px.
-   >
-   >
-* Kräver lämpliga behörigheter:
-   >
-   >  
-* Användare som har skrivbehörighet i Developer Mode får åtkomst till det `/apps`.
+   >   * Detta inträffar när bredden är mindre än 1024px.
+>* Är bara tillgängligt för användare som är medlemmar i `administrators` gruppen.
 
 
 >[!CAUTION]
