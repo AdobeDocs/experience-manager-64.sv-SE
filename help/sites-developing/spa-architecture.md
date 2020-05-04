@@ -10,7 +10,7 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 3f4c17cf-6f77-4a87-b27b-f13a6a976523
 translation-type: tm+mt
-source-git-commit: d6c10927d437cfc9371e4baeff5a91ed9a0503c8
+source-git-commit: 0e7f4a78f63808bea2aa7a5abbb31e7e5b9d21b3
 
 ---
 
@@ -27,9 +27,9 @@ I den här artikeln finns viktiga frågor att tänka på när en frontutvecklare
 >
 >SPA-redigeraren är den rekommenderade lösningen för projekt som kräver SPA-ramverksbaserad rendering på klientsidan (t.ex. React eller Angular).
 
-## Maven Archetype for SPA Starter Kit {#maven-archetype-for-spa-starter-kit}
+## AEM Project Archetype {#aem-project-archetype}
 
-Alla SPA-projekt på AEM bör utnyttja [Maven Archetype för SPA Starter Kit](https://github.com/adobe/aem-spa-project-archetype).
+Alla AEM-projekt bör utnyttja [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA-projekt med React eller Angular och utnyttjar SPA SDK.
 
 ## SPA:s utvecklingsprinciper för AEM {#spa-development-principles-for-aem}
 
