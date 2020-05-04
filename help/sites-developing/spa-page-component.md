@@ -10,7 +10,7 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 5d607b9f-584b-4ffc-ab0b-d0318dc69dec
 translation-type: tm+mt
-source-git-commit: 00317d1ba79f10e98b4c52713d845092b7cc6c2e
+source-git-commit: 0e7f4a78f63808bea2aa7a5abbb31e7e5b9d21b3
 
 ---
 
@@ -92,7 +92,7 @@ Meta-resursegenskaperna som beskriver SPA-innehållet:
 >
 >Det här dokumentet använder appen We.Retail Journal endast i demonstrationssyfte. Det ska inte användas för något projektarbete.
 >
->Alla SPA-projekt på AEM bör baseras på Maven Archetype för SPA Starter Kit.
+>Alla AEM-projekt bör utnyttja [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA-projekt med React eller Angular och utnyttjar SPA SDK. Alla SPA-projekt på AEM bör baseras på Maven Archetype för SPA Starter Kit.
 
 ## Synkronisering av sidredigeringsövertäckning {#page-editor-overlay-synchronization}
 
@@ -103,6 +103,6 @@ Synkroniseringen av övertäckningarna garanteras av exakt samma Mutation-observ
 När routningsfunktionerna är aktiverade antas att JSON-exporten av SPA innehåller de olika vägarna i programmet tack vare JSON-exporten av AEM-navigeringskomponenten. JSON-utdata för AEM-navigeringskomponenten kan konfigureras i SPA:s innehållsprincip för rotsidor via följande två egenskaper:
 
 * `structureDepth`: Nummer som motsvarar djupet i det exporterade trädet
-* `structurePatterns`: Regex för en matris med regexter som motsvarar den sida som ska exporteras
+* `structurePatterns`: Regex för en matris av regexter som motsvarar den sida som ska exporteras
 
 Detta kan visas i SPA-exempelinnehållet i `/conf/we-retail-journal/react/settings/wcm/policies/we-retail-journal/react/components/structure/page/root`.
