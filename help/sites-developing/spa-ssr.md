@@ -10,7 +10,7 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 30d25772-0df7-468e-bcbd-c6fb2e962662
 translation-type: tm+mt
-source-git-commit: 2abf448e0231eb6fcd9295f498a24e81e1ead11a
+source-git-commit: 0e7f4a78f63808bea2aa7a5abbb31e7e5b9d21b3
 
 ---
 
@@ -28,7 +28,7 @@ source-git-commit: 2abf448e0231eb6fcd9295f498a24e81e1ead11a
 
 ## Översikt {#overview}
 
-Single page applications (SPA) kan ge användaren en rik, dynamisk upplevelse som reagerar och beter sig på välbekanta sätt, ofta precis som i andra program. [Detta uppnås genom att kunden förlitar sig på att läsa in innehållet i förväg och sedan göra en reaktiv hantering av användarinteraktionen](/help/sites-developing/spa-walkthrough.md#how-does-a-spa-work) och på så sätt minimera mängden kommunikation som krävs mellan klienten och servern.
+Single page applications (SPA) kan ge användaren en rik, dynamisk upplevelse som reagerar och beter sig på välbekanta sätt, ofta precis som i andra program. [Detta uppnås genom att kunden förlitar sig på att läsa in innehållet i förväg och sedan göra en grov förbättring av användarinteraktionen](/help/sites-developing/spa-walkthrough.md#how-does-a-spa-work) och på så sätt minimera mängden kommunikation som krävs mellan klienten och servern, vilket gör appen mer reaktiv.
 
 Detta kan dock leda till längre inledande inläsningstider, särskilt om SPA-filen är stor och har mycket innehåll. För att optimera inläsningstiden kan en del av innehållet återges på serversidan. Serversidorendering (SSR) kan snabba upp den initiala inläsningen av sidan och sedan överföra ytterligare återgivning till klienten.
 
@@ -40,8 +40,8 @@ När du beslutar dig för att implementera SSR måste du först uppskatta vilken
 
 SSR ger vanligtvis ett visst värde när det finns ett tydligt&quot;ja&quot; till någon av följande frågor:
 
-* **** SEO: Krävs det fortfarande SSR för att webbplatsen ska kunna indexeras korrekt av sökmotorer som genererar trafik? Kom ihåg att de viktigaste sökmotorcrawlarna nu utvärderar JS.
-* **** Sidhastighet: Ger SSR en mätbar hastighetsförbättring i realtidsmiljöer och ökar den övergripande användarupplevelsen?
+* **SEO:** Krävs det fortfarande SSR för att webbplatsen ska kunna indexeras korrekt av sökmotorer som genererar trafik? Kom ihåg att de viktigaste sökmotorcrawlarna nu utvärderar JS.
+* **Sidhastighet:** Ger SSR en mätbar hastighetsförbättring i realtidsmiljöer och ökar den övergripande användarupplevelsen?
 
 Adobe rekommenderar att SSR implementeras endast när minst en av dessa två frågor besvaras med ett tydligt&quot;ja&quot; för ditt projekt. I följande avsnitt beskrivs hur du gör detta med Adobe I/O Runtime.
 
@@ -141,7 +141,7 @@ Ett enkelt exempel finns i appen [](https://github.com/Adobe-Marketing-Cloud/aem
 >Appen [](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal) We.Retail Journal är endast avsedd som exempel och använder därför Node.js som ett enkelt exempel i stället för den rekommenderade Adobe I/O Runtime-modulen. Det här exemplet ska inte användas för något projektarbete.
 
 >[!NOTE]
->Alla SPA-projekt på AEM bör baseras på [Maven Archetype för SPA Starter Kit](https://github.com/adobe/aem-spa-project-archetype).
+>Alla AEM-projekt bör utnyttja [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA-projekt med React eller Angular och utnyttjar SPA SDK.
 
 ## Använda Node.js {#using-node-js}
 
@@ -171,7 +171,7 @@ Den här tjänsten används internt av [RemoteContentRendererRequestHandlerServl
 
 Den `RemoteContentRendererRequestHandlerServlet` kan användas för att ställa in konfigurationen för begäran programmatiskt. `DefaultRemoteContentRendererRequestHandlerImpl`, den medföljande standardimplementeringen av begäranhanteraren, gör att du kan skapa flera OSGi-konfigurationer för att mappa en plats i innehållsstrukturen till en fjärrslutpunkt.
 
-Implementera `RemoteContentRendererRequestHandler` gränssnittet om du vill lägga till en anpassad begärandehanterare. Se till att du anger egenskapen `Constants.SERVICE_RANKING` component till ett heltal som är högre än 100, vilket är rankningen för `DefaultRemoteContentRendererRequestHandlerImpl`.
+Implementera `RemoteContentRendererRequestHandler` gränssnittet om du vill lägga till en anpassad begärandehanterare. Var noga med att ange egenskapen `Constants.SERVICE_RANKING` component till ett heltal som är högre än 100, vilket är rankningen för `DefaultRemoteContentRendererRequestHandlerImpl`.
 
 ```
 @Component(immediate = true,
