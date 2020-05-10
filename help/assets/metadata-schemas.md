@@ -3,10 +3,10 @@ title: Metadata-scheman
 description: 'Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.  '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: baecd478801154048e8be7fc27a3fbd7d8a72f6d
+source-git-commit: b774b23028f642436b9a17f94da61f8e40bdae9a
 workflow-type: tm+mt
-source-wordcount: '2398'
-ht-degree: 9%
+source-wordcount: '2375'
+ht-degree: 8%
 
 ---
 
@@ -31,38 +31,22 @@ Du kan använda redigeraren Metadata Schema Forms om du vill ändra befintliga s
 
    Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatamatchschema eller ändrar ett befintligt formulär. Mer information finns i [Redigera metadata Schema-formulär](metadata-schemas.md#editing-metadata-schema-forms) . Om du ändrar metadataschemat för en viss MIME-typ ändras egenskapssidlayouten för resurser med den aktuella MIME-typen och alla resursundertyper. Om du till exempel ändrar ett `jpeg` schema under `default/image` ändras metadatalayouten (resursegenskaper) för resurser med MIME-typ `IMAGE/JPEG`. Om du redigerar standardschemat ändrar du metadatalayouten för alla typer av resurser.
 
-1. Om du vill visa en lista med formulär/mallar klickar du på AEM-logotypen och navigerar sedan till **[!UICONTROL Tools > Assets > Metadata Schemas]**.
+## Metadata Schema Forms {#default-metadata-schema-forms}
 
-   ![chlimage_1-37](assets/chlimage_1-173.png)
-
-## Metadata Schema Forms finns som standard {#available-metadata-schema-templates}
+Om du vill visa en lista med formulär/mallar går du till [!DNL Experience Manager] > **[!UICONTROL Tools]** > **[!UICONTROL Assets]** i **[!UICONTROL Metadata Schemas]** gränssnittet.
 
 [!DNL Experience Manager] innehåller följande formulärmallar för metadataschema:
 
-### standard {#default-template}
-
-Detta [!UICONTROL default] är basmetadatamatchschemaformuläret för resurser. Följande underordnade formulär ärver egenskaperna för standardformuläret:
-
-* **image** är schemaformuläret för resurser med MIME-typen &quot;image&quot;. Till exempel `image/jpeg`, `image/png`och så vidare. &quot;Bildsformuläret har följande underordnade formulärmallar:
-   * **jpeg** är schemaformuläret för resurser med undertyp `jpeg`.
-
-   * **tiff** är schemaformuläret för resurser med undertyp `tiff`.
-
-* **program** är schemaformuläret för resurser med MIME-typ `application`. Till exempel `application/pdf`, `application/zip`och så vidare. **pdf** är schemaformuläret för resurser med undertyp `pdf`.
-
-* **video** är schemaformuläret för resurser med MIME-typ `video`som `video/avi`, `video/mp4`och så vidare.
-
-### collection {#collection-template}
-
-Detta [!UICONTROL collection] är schemaformuläret för samlingar.
-
-### innehållfragment {#contentfragment-template}
-
-Detta [!UICONTROL contentfragment] är schemaformuläret för innehållsfragment.
-
-### formulär {#forms-template}
-
-Schemaformuläret är [!UICONTROL forms] relaterat till [Adobe Experience Manager Forms](/help/forms/home.md).
+| Mallar |  | Beskrivning |
+|---|---|---|
+| [!UICONTROL default] |  | Basmetadataschemaformuläret för resurser. |
+|  | Följande underordnade formulär ärver egenskaperna för [!UICONTROL default] formuläret: |  |
+|  | <ul><li> [!UICONTROL image]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;image&quot;, till exempel image/jpeg, image/png o.s.v. <br> Formuläret har [!UICONTROL image] följande underordnade formulärmallar: <ul><li> [!UICONTROL jpeg]: Schemaformulär för resurser med undertyp [!UICONTROL jpeg].</li> <li>[!UICONTROL tiff]: Schemaformulär för resurser med undertyp [!UICONTROL tiff].</li></ul> |
+|  | <ul><li> [!UICONTROL application]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;application&quot;, till exempel application/pdf, application/zip och så vidare. <br>[!UICONTROL pdf]: Schemaformulär för resurser med undertyp pdf. |
+|  | <ul><li>[!UICONTROL video]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;video&quot;, till exempel video/avi, video/mp4 och så vidare. |
+| [!UICONTROL collection] |  | Schemaformulär för samlingar. |
+| [!UICONTROL contentfragment] |  | Schemaformulär för innehållsfragment. |
+| [!UICONTROL forms] |  | Det här schemaformuläret gäller [Adobe Experience Manager Forms](/help/forms/home.md). |
 
 >[!NOTE]
 >
