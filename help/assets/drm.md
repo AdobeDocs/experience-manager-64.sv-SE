@@ -1,57 +1,58 @@
 ---
-title: Digital Rights Management i Assets
-description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information om licensierade mediefiler i AEM.
+title: Digital Rights Management i [!DNL Adobe Experience Manager Assets].
+description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information om licensierade mediefiler i [!DNL Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
+source-git-commit: fe99869df5616f8f483ab8a9517e850e45c7a117
+workflow-type: tm+mt
+source-wordcount: '1363'
+ht-degree: 6%
 
 ---
 
 
-# Digital Rights Management in Assets {#digital-rights-management-in-assets}
+# Digital Rights Management for assets {#digital-rights-management-in-assets}
 
-Digitala resurser är ofta kopplade till en licens, som anger användningsvillkoren och hur länge de ska användas. Eftersom Adobe Experience Manager Assets (AEM) är helt integrerat med AEM-plattformen kan ni effektivt hantera information om när mediefiler förfaller och resursstatus. Du kan även associera licensinformation med resurser.
-
-<!-- TBD see if adding more UICONTROL tags is needed -->
+Digitala resurser är ofta kopplade till en licens som anger användningsvillkoren och hur länge de ska användas. Eftersom [!DNL Adobe Experience Manager Assets] är helt integrerat med [!DNL Experience Manager] plattformen kan du effektivt hantera information om när mediefiler förfaller och resurstillstånd. Du kan även associera licensinformation med resurser.
 
 ## Resursens förfallodatum {#asset-expiration}
 
-Att mediefiler förfaller är ett effektivt sätt att genomdriva licenskrav för mediefiler. Det säkerställer att den publicerade resursen inte publiceras när den upphör att gälla, vilket förhindrar eventuella brott mot licensen. En användare utan administratörsbehörighet kan inte redigera, kopiera, flytta, publicera och hämta en utgången resurs.
+Att mediefiler förfaller är ett effektivt sätt att tillämpa licenskrav för mediefiler. Det säkerställer att den publicerade resursen inte publiceras när den upphör att gälla, vilket förhindrar eventuella brott mot licensen. En användare utan administratörsbehörighet kan inte redigera, kopiera, flytta, publicera och hämta en utgången resurs.
 
-Du kan visa förfallostatusen för en resurs i resurskonsolen i både kort- och listvyn.
-
-**Kortvy**
-
-För en resurs som har gått ut visas en flagga på kortet som anger att den har gått ut.
+Du kan visa förfallostatusen för en resurs i [!DNL Assets] konsolen i både kort- och listvyn.
 
 ![utgången_flagga_kort](assets/expired_flag_card.png)
 
-**Listvy**
-
-För förfallna mediefiler visas bannern **[!UICONTROL Status]** i kolumnen **[!UICONTROL Förfallen]** .
+*Bild: I kortvyn anger en flagga på kortet att resursen har gått ut.*
 
 ![utgången_flagga_lista](assets/expired_flag_list.png)
 
-Du kan visa förfallostatusen för en resurs på tidslinjen. Markera resursen och välj Tidslinje på menyn GlobalNav.
+*Bild: I listvyn visas[!UICONTROL Status]bannern i[!UICONTROL Expired]kolumnen.*
+
+Du kan visa förfallostatusen för en resurs i den vänstra [!UICONTROL Timeline] listen.
 
 ![chlimage_1-144](assets/chlimage_1-144.png)
 
-Du kan även visa förfallostatusen för resurser på **[!UICONTROL referenslisten]** . Den hanterar förfallostatus och relationer mellan sammansatta resurser och refererade delresurser, samlingar och projekt.
+>[!NOTE]
+>
+>Utgångsdatumet för en resurs visas olika för användare i olika tidszoner.
+
+Du kan även visa förfallostatusen för resurser på **[!UICONTROL References]** spåret. Den hanterar förfallostatus och relationer mellan sammansatta resurser och refererade delresurser, samlingar och projekt.
 
 1. Navigera till resursen som du vill visa referenser till webbsidor och sammansatta resurser för.
-1. Markera resursen och klicka/tryck på den globala navigeringsikonen.
+1. Markera resursen och klicka på [!DNL Experience Manager] logotypen.
 
    ![chlimage_1-145](assets/chlimage_1-145.png)
 
-1. Välj **[!UICONTROL Referenser]** på menyn.
+1. Välj **[!UICONTROL References]** på menyn.
 
    ![chlimage_1-146](assets/chlimage_1-146.png)
 
-   För förfallna mediefiler visas **[!UICONTROL mediefilens förfallostatus längst upp på referenslinjen]** .
+   För förfallna mediefiler visas förfallostatusen **[!UICONTROL Asset is Expired]** högst upp på referenslinjen.
 
    ![chlimage_1-147](assets/chlimage_1-147.png)
 
-   Om resursen har upphört att gälla visas statusen **[!UICONTROL Tillgång har förfallna delresurser]** i referensfältet.
+   Om resursen har upphört att gälla visas statusen på referenslinjen **[!UICONTROL Asset has Expired Sub-Assets]**.
 
    ![chlimage_1-148](assets/chlimage_1-148.png)
 
@@ -59,102 +60,104 @@ Du kan även visa förfallostatusen för resurser på **[!UICONTROL referenslist
 
 Du kan söka efter utgångna resurser, inklusive underresurser som gått ut, på sökpanelen.
 
-1. Klicka på ikonen **Sök** i verktygsfältet i resurskonsolen för att visa rutan Omni-sökning.
+1. I [!DNL Assets] konsolen klickar du på **[!UICONTROL Search]** i verktygsfältet för att visa rutan Omnissearch.
 
    ![chlimage_1-149](assets/chlimage_1-149.png)
 
-1. När markören är i rutan Omni Search (Omni-sökning) trycker du på Retur för att visa sidan Sökresultat.
+1. Tryck på Retur när markören är i rutan Sök så visas sökresultatsidan.
 
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
-1. Klicka på ikonen GlobalNav för att visa sökpanelen.
+1. Klicka på [!DNL Experience Manager] logotypen för att visa sökpanelen.
 
    ![chlimage_1-151](assets/chlimage_1-151.png)
 
-1. Click/tap the **[!UICONTROL Expiry Status]** option to expand it.
+1. Click the **[!UICONTROL Expiry Status]** option to expand it.
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 
-1. Välj **[!UICONTROL Förfallen]**. De förfallna resurserna visas i sökresultaten.
+1. Choose **[!UICONTROL Expired]**. De förfallna resurserna visas i sökresultaten.
 
    ![chlimage_1-153](assets/chlimage_1-153.png)
 
-När du väljer alternativet **Utgånget** visas bara de förfallna resurserna och delresurserna som sammansatta resurser refererar till i resurskonsolen. De sammansatta resurserna som refererar till utgångna delresurser visas inte omedelbart efter att delresurserna har upphört att gälla. I stället visas de när AEM Resurser har identifierat att de refererar till utgångna delresurser nästa gång som schemaläggaren körs.
+När du väljer **[!UICONTROL Expired]** [!DNL Assets] alternativet visas bara de resurser och underresurser som har upphört att gälla och som sammansatta resurser refererar till. De sammansatta resurserna som refererar till utgångna delresurser visas inte omedelbart efter att delresurserna har upphört att gälla. I stället visas de när [!DNL Experience Manager] upptäcker att de refererar till utgångna delresurser nästa gång som schemaläggaren körs.
 
 Om du ändrar förfallodatumet för en publicerad resurs till ett datum som är tidigare än den aktuella schemaläggningscykeln, identifierar schemat fortfarande den här resursen som en utgången resurs nästa gång den körs och visar dess status i enlighet med detta.
 
 Om ett fel eller fel dessutom förhindrar att schemaläggaren upptäcker förfallna resurser i den aktuella cykeln, undersöker schemaläggaren om dessa resurser i nästa cykel och identifierar deras förfallna status.
 
-Om du vill att resurskonsolen ska visa de sammansatta resurserna tillsammans med de delresurser som har gått ut, konfigurerar du ett arbetsflöde för **Adobe CQ DAM Expiry Notification** i AEM Configuration Manager.
+To enable the [!DNL Assets] console to display the referencing compound assets along with the expired subassets, configure an **[!UICONTROL Adobe CQ DAM Expiry Notification]** workflow in [!DNL Experience Manager] Configuration Manager.
 
-1. Öppna AEM Configuration Manager.
-1. Välj **[!UICONTROL Adobe CQ DAM Expiry Notification]**. Som standard är **[!UICONTROL Tidsbaserad schemaläggare]** markerad, vilket schemalägger ett jobb att vid en viss tidpunkt kontrollera om en resurs har upphört att gälla eller inte. När jobbet har slutförts visas resurser som har upphört att gälla och refererade resurser som utgångna i sökresultaten.
+1. Öppna [!DNL Experience Manager] Configuration Manager.
+1. Choose **[!UICONTROL Adobe CQ DAM Expiry Notification]**. Som standard **[!UICONTROL Time based Scheduler]** markeras, vilket innebär att ett jobb schemaläggs för att kontrollera om en resurs har upphört att gälla eller inte. När jobbet har slutförts visas resurser som har upphört att gälla och refererade resurser som utgångna i sökresultaten.
 
    ![chlimage_1-154](assets/chlimage_1-154.png)
 
-1. Om du vill köra jobbet regelbundet avmarkerar du fältet **[!UICONTROL Tidsbaserad schemaläggarregel]** och ändrar tiden i sekunder i fältet **[!UICONTROL Periodisk schemaläggare]** . Exempeluttrycket ”0 0 0 &amp;ast; &amp;ast; ?” utlöser till exempel jobbet kl. 00.
-1. Välj **[!UICONTROL Skicka e-post]** om du vill få e-post när en mediefil förfaller.
+1. Om du vill köra jobbet regelbundet avmarkerar du fältet **[!UICONTROL Time Based Scheduler Rule]** och ändrar tiden i sekunder i fältet **[!UICONTROL Periodic Scheduler]**. Exempeluttrycket ”0 0 0 &amp;ast; &amp;ast; ?” utlöser till exempel jobbet kl. 00.
+1. Välj **[!UICONTROL send email]** att ta emot e-postmeddelanden när en mediefil förfaller.
 
    >[!NOTE]
    >
-   >Det är bara den som har skapat mediefilen (den person som överför en viss mediefil till AEM Resurser) som får ett e-postmeddelande när mediefilen upphör att gälla. Mer information om hur du konfigurerar e-postmeddelanden finns i [Konfigurera e-postmeddelanden](/help/sites-administering/notification.md) på den övergripande AEM-nivån.
+   >Det är bara den som har skapat mediefilen (den person som överför en viss mediefil till [!DNL Assets]) som får ett e-postmeddelande när mediefilen förfaller. Se [hur du konfigurerar e-postmeddelanden](/help/sites-administering/notification.md) för mer information om hur du konfigurerar e-postmeddelanden på den övergripande [!DNL Experience Manager] nivån.
 
-1. I fältet **[!UICONTROL Förhandsmeddelande i sekunder]** anger du tiden i sekunder innan en resurs förfaller när du vill få ett meddelande om förfallotiden. Om du är administratör eller den som har skapat resursen får du ett meddelande innan resursen upphör att gälla om att resursen håller på att gå ut efter den angivna tiden.
+1. I **[!UICONTROL Prior notification in seconds]** fältet anger du tiden i sekunder innan en resurs förfaller när du vill få ett meddelande om förfallotiden. Om du är administratör eller den som har skapat resursen får du ett meddelande innan resursen upphör att gälla om att resursen håller på att gå ut efter den angivna tiden.
 
    När resursen har gått ut får du ett meddelande som bekräftar att den har gått ut. Dessutom inaktiveras utgångna resurser.
 
-1. Click **[!UICONTROL Save]**.
+1. Klicka på **[!UICONTROL Save]**.
 
 ## Tillgångstillstånd {#asset-states}
 
-Resurskonsolen för Adobe Experience Manager-resurser (AEM) kan visa olika lägen för resurser. Beroende på det aktuella tillståndet för en viss resurs visas en etikett som beskriver dess tillstånd, till exempel Utgången, Publicerad, Godkänd, Avvisad och så vidare, i kortvyn.
+Konsolen kan [!DNL Assets] visa olika lägen för resurser. Beroende på det aktuella tillståndet för en viss resurs visas en etikett som beskriver dess tillstånd, till exempel Utgången, Publicerad, Godkänd, Avvisad och så vidare, i kortvyn.
 
-1. Välj en resurs i användargränssnittet Resurser.
+1. Välj en resurs i [!DNL Assets] användargränssnittet.
 
    ![chlimage_1-155](assets/chlimage_1-155.png)
 
-1. Tap/click the **[!UICONTROL Publish]** icon from the toolbar. If you can&#39;t see the **Publish** icon on the toolbar, tap/click **[!UICONTROL More]** on the toolbar and locate the **[!UICONTROL Publish]** icon.
+1. Klicka **[!UICONTROL Publish]** i verktygsfältet. Om du inte ser **Publicera** i verktygsfältet klickar du **[!UICONTROL More]** i verktygsfältet och letar upp **[!UICONTROL Publish]** alternativet.
 
    ![chlimage_1-156](assets/chlimage_1-156.png)
 
-1. Välj **[!UICONTROL Publicera]** på menyn och stäng sedan bekräftelsedialogrutan.
+1. Välj **[!UICONTROL Publish]** på menyn och stäng sedan bekräftelsedialogrutan.
 1. Avsluta markeringsläget. Publiceringsstatusen för resursen visas längst ned på miniatyrbilden av resursen i kortvyn. I listvyn visar kolumnen Publicerad den tidpunkt då resursen publicerades.
 
    ![chlimage_1-157](assets/chlimage_1-157.png)
 
-1. I resursgränssnittet markerar du en resurs och trycker/klickar på ikonen **[!UICONTROL Egenskaper]** för att visa sidan med resursinformation.
+1. Om du vill visa sidan med resursinformation väljer du en resurs i [!DNL Assets] gränssnittet och klickar på **[!UICONTROL Properties]**.
 
    ![chlimage_1-158](assets/chlimage_1-158.png)
 
-1. På fliken Avancerat anger du ett förfallodatum för resursen i fältet **[!UICONTROL Förfaller]** under.
+1. Ange ett förfallodatum för resursen från **[!UICONTROL Expires]** fältet på fliken Avancerat.
 
-   ![chlimage_1-159](assets/chlimage_1-159.png)
+   ![ange förfallodatum och förfallotid för resurs i fältet Förfaller](assets/chlimage_1-159.png)
 
-1. Klicka på **[!UICONTROL Spara]** och sedan på **[!UICONTROL Stäng]** för att visa resurskonsolen.
-1. Publiceringsstatusen för resursen anger att den har upphört att gälla längst ned på miniatyrbilden av resursen i kortvyn. I listvyn visas resursens status som **[!UICONTROL Förfallen]**.
+   *Bild:[!UICONTROL Advanced]på[!UICONTROL Properties]tillgångssidan för att ange förfallodatum för tillgång.*
+
+1. Klicka **[!UICONTROL Save]** och sedan på **[!UICONTROL Close]** för att visa resurskonsolen.
+1. Publiceringsstatusen för resursen anger att den har upphört att gälla längst ned på miniatyrbilden av resursen i kortvyn. I listvyn visas resursens status som **[!UICONTROL Expired]**.
 
    ![chlimage_1-160](assets/chlimage_1-160.png)
 
-1. I resurskonsolen väljer du en mapp och skapar en granskningsåtgärd för mappen.
-1. Granska och godkänn/avvisa resurserna i granskningsaktiviteten och klicka på **[!UICONTROL Slutför]**.
+1. I [!DNL Assets] konsolen väljer du en mapp och skapar en granskningsåtgärd för mappen.
+1. Granska och godkänn/avvisa resurserna i granskningsaktiviteten och klicka på **[!UICONTROL Complete]**.
 1. Navigera till mappen som du skapade granskningsaktiviteten för. Statusen för de mediefiler som du har godkänt/avvisat visas längst ned i kortvyn. I listvyn visas status för godkännande och förfallodatum i lämpliga kolumner.
 
    ![chlimage_1-161](assets/chlimage_1-161.png)
 
-1. Om du vill söka efter resurser baserat på deras status klickar/trycker du på ikonen **[!UICONTROL Sök]** för att visa Omni Search-fältet.
+1. Om du vill söka efter resurser baserat på deras status, klickar du **[!UICONTROL Search]** för att visa omsökningsfältet.
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
-1. Tryck på returtangenten och klicka/tryck sedan på ikonen **[!UICONTROL GlobalNav]** för att visa sökpanelen.
-1. In the Search panel, tap/click **[!UICONTROL Publish Status]** and select **[!UICONTROL Published]** to search for published assets in AEM Assets.
+1. Tryck på Retur och klicka [!DNL Experience Manager] för att visa sökpanelen.
+1. In the search panel, click **[!UICONTROL Publish Status]** and select **[!UICONTROL Published]** to search for published assets in [!DNL Assets].
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
 
-1. Tap/click **[!UICONTROL Approval Status]** and click the appropriate option to search for approved or rejected assets.
+1. Click **[!UICONTROL Approval Status]** and click the appropriate option to search for approved or rejected assets.
 
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
-1. To search for assets based on their expiration status, select **[!UICONTROL Expiry Status]** in the Search panel and choose the appropriate option.
+1. Om du vill söka efter resurser baserat på deras förfallostatus markerar du **[!UICONTROL Expiry Status]** på sökpanelen och väljer lämpligt alternativ.
 
    ![chlimage_1-165](assets/chlimage_1-165.png)
 
@@ -162,36 +165,35 @@ Resurskonsolen för Adobe Experience Manager-resurser (AEM) kan visa olika läge
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
 
-## Digital Rights Management in Assets {#digital-rights-management-in-assets-1}
+## Digital Rights Management i [!DNL Assets] {#digital-rights-management-in-assets-1}
 
-Den här funktionen tvingar dig att godkänna licensavtalet innan du kan hämta en licensierad mediefil från Adobe Experience Manager (AEM) Assets.
+Den här funktionen tvingar till godkännande av licensavtalet innan du kan hämta en licensierad mediefil från [!DNL Adobe Experience Manager Assets].
 
-Om du väljer en skyddad resurs och klickar på ikonen **[!UICONTROL Hämta]** omdirigeras du till en licenssida där du godkänner licensavtalet. Om du inte godkänner licensavtalet inaktiveras knappen **[!UICONTROL Hämta]** .
+Om du väljer en skyddad resurs och klickar på **[!UICONTROL Download]** den omdirigeras du till en licenssida för att godkänna licensavtalet. Om du inte godkänner licensavtalet är alternativet inte tillgängligt **[!UICONTROL Download]** .
 
 Om markeringen innehåller flera skyddade resurser markerar du en resurs i taget, godkänner licensavtalet och fortsätter att hämta resursen.
 
 En tillgång anses vara skyddad om något av dessa villkor är uppfyllt:
 
-* Metadataegenskapen för resursen `xmpRights:WebStatement` pekar på sökvägen till CQ-sidan som innehåller licensavtalet för resursen.
+* Metadataegenskapen för resursen `xmpRights:WebStatement` pekar på sökvägen till sidan som innehåller licensavtalet för resursen.
 * Värdet för resursens metadataegenskap `adobe_dam:restrictions` är en rå HTML-kod som anger licensavtalet.
 
 >[!NOTE]
 >
->Den plats */etc/dam/drm/licenses* som användes för att lagra licenser i tidigare versioner av AEM är föråldrad.
+>Platsen `/etc/dam/drm/licenses` som användes för att lagra licenser i tidigare versioner av [!DNL Experience Manager] är föråldrad.
 >
->Om du skapar eller ändrar licenssidor, eller importerar dem från tidigare AEM-versioner, rekommenderar Adobe att du lagrar dem under */apps/settings/dam/drm/licenses* eller */conf/&amp;ast;/settings/dam/drm/licenses*.
+>Om du skapar eller ändrar licenssidor, eller importerar dem från tidigare [!DNL Experience Manager] versioner, rekommenderar Adobe att du lagrar dem under `/apps/settings/dam/drm/licenses` eller `/conf/&ast;/settings/dam/drm/licenses`.
 
-### Hämta DRM-resurser {#downloading-drm-assets}
+### Hämta DRM-skyddade resurser {#downloading-drm-assets}
 
-1. I kortvyn väljer du de resurser du vill hämta och klickar på **[!UICONTROL hämtningsikonen]** .
-1. In the **[!UICONTROL Copyright Management]** page, select the asset you want to download from the list.
-1. Välj **[!UICONTROL Godkänn]** i licensfönstret. En bock visas bredvid den mediefil som du godkänner licensavtalet för. Tryck/klicka på knappen **[!UICONTROL Hämta]** .
+1. I kortvyn väljer du de resurser du vill hämta och klickar på **[!UICONTROL Download]**.
+1. På sidan **[!UICONTROL Copyright Management]** väljer du den resurs du vill hämta i listan.
+1. Välj i [!UICONTROL License] rutan **[!UICONTROL Agree]**. En bock visas bredvid resursen. Klicka på **[!UICONTROL Download]** alternativet.
 
    >[!NOTE]
    >
-   >The **[!UICONTROL Download]** button is enabled only when you choose to agree to the license agreement for a protected asset. However, if your selection comprises both protected and unprotected assets, only the protected assets are listed in the left pane and the **[!UICONTROL Download]** button is enabled to download the unprotected assets. To simultaneously accept license agreements for multiple protected assets, select the assets from the list and then choose **[!UICONTROL Agree]**.
+   >The **[!UICONTROL Download]** option is enabled only when you choose to agree to the license agreement for a protected asset. However, if your selection comprises both protected and unprotected assets, only the protected assets are listed in the pane and the **[!UICONTROL Download]** option is enabled to download the unprotected assets. Om du vill acceptera licensavtal för flera skyddade resurser samtidigt markerar du resurserna i listan och väljer sedan **[!UICONTROL Agree]**.
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
-1. I dialogrutan trycker/klickar du på **[!UICONTROL Hämta]** för att hämta resursen eller dess återgivningar.
-
+1. I dialogrutan klickar du för **[!UICONTROL Download]** att hämta resursen eller dess återgivningar.
