@@ -3,7 +3,10 @@ title: Filformat som stöds i AEM Assets
 description: Lista över filformat och MIME-typer som stöds av AEM Assets och de funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d4539e538c299f3b2a076ef4fa60f7013621394e
+source-git-commit: 1f93b2b0c8b1a4e55a67c11937b9c5ce4076ee2a
+workflow-type: tm+mt
+source-wordcount: '1868'
+ht-degree: 2%
 
 ---
 
@@ -77,6 +80,8 @@ Utöver informationen ovan bör du tänka på följande:
 ## Rasterbildformat som inte stöds i Dynamic Media {#unsupported-image-formats-dynamic-media}
 
 I följande lista beskrivs de undertyper av rasterbildfilformat som *inte* stöds i Dynamic Media.
+
+Se även [Identifiera filformat som inte stöds för Dynamic Media](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html).
 
 * PNG-filer som har en IDAT-segmentstorlek som är större än 100 MB.
 * PSB-filer.
@@ -238,7 +243,7 @@ Hur vanliga DAM-arbetsflöden kan användas för ett par andra filformat beskriv
 
 ## MIME-typer som stöds {#supported-mime-types}
 
-Som standard identifierar AEM filtypen med hjälp av filtillägget. AEM kan identifiera det från innehållet i filerna. För det senare alternativet [!UICONTROL Identifiera MIME från innehåll] i [!UICONTROL Day CQ DAM Mime Type Service] i AEM Web Console.
+Som standard identifierar AEM filtypen med hjälp av filtillägget. AEM kan identifiera det från innehållet i filerna. För den senare väljer du [!UICONTROL Detect MIME from content] ett alternativ [!UICONTROL Day CQ DAM Mime Type Service] i AEM Web Console.
 
 En lista över MIME-typer som stöds finns i CRXDE Lite på `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`.
 
