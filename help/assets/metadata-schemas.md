@@ -3,9 +3,9 @@ title: Metadata-scheman
 description: 'Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.  '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b774b23028f642436b9a17f94da61f8e40bdae9a
+source-git-commit: 1a6c2e9603ae8cb5017abd9bec9fe0c3fdf62dea
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2391'
 ht-degree: 8%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 8%
 
 # Metadatascheman {#metadata-schemas}
 
-I Adobe Experience Manager Resurser (AEM) definieras layouten för egenskapssidan och de metadataegenskaper som visas för resurser som använder det aktuella schemat i ett metadataram. Metadataegenskaperna innehåller titel, beskrivning, MIME-typer, taggar och så vidare.
+I [!DNL Experience Manager Assets]ett metadataram definieras layouten för egenskapssidan och de metadataegenskaper som visas för resurser som använder det aktuella schemat. Metadataegenskaperna innehåller titel, beskrivning, MIME-typer, taggar och så vidare.
 
-Du kan använda redigeraren Metadata Schema Forms om du vill ändra befintliga scheman eller lägga till anpassade metadatascheman.
+Du kan använda redigeraren Metadata Schema Forms om du vill ändra befintliga scheman eller lägga till anpassade metadatascheman. Så här visar och redigerar du egenskapssidan för en resurs:
 
-1. Om du vill visa egenskapssidan för en resurs klickar eller trycker du på **[!UICONTROL View Properties]** från **[!UICONTROL Quick Actions]** resurspanelen i kortvyn.
+1. Klicka på eller tryck på **[!UICONTROL View Properties]** snabbåtgärderna i resurspanelen i kortvyn.
 
    ![chlimage_1-170](assets/chlimage_1-170.png)
 
@@ -25,7 +25,7 @@ Du kan använda redigeraren Metadata Schema Forms om du vill ändra befintliga s
 
    ![chlimage_1-171](assets/chlimage_1-171.png)
 
-1. Redigera de redigerbara metadataegenskaperna under de olika flikarna.
+1. Du kan redigera de redigerbara metadataegenskaperna under de tillgängliga flikarna. Du kan dock inte ändra resursen [!UICONTROL Type] på egenskapsfliken [!UICONTROL Basic] .
 
    ![chlimage_1-172](assets/chlimage_1-172.png)
 
@@ -62,7 +62,7 @@ Om du vill visa en lista med formulär/mallar går du till [!DNL Experience Mana
 
 1. Ange schemaformulärets rubrik i dialogrutan och klicka **[!UICONTROL Create]** för att slutföra formulärskapandet.
 
-   ![chlimage_1-174](assets/chlimage_1-174.png)
+   ![chlimage_1-175](assets/chlimage_1-174.png)
 
 ## Redigera metadata-schemaformulär {#editing-metadata-schema-forms}
 
@@ -77,7 +77,7 @@ Du kan lägga till nya flikar eller formulärobjekt i metadatchemaformuläret. F
 
 1. In the **[!UICONTROL Schema Forms]** page, select the check box before a form and then click **[!UICONTROL Edit]** on the toolbar.
 
-   ![chlimage_1-175](assets/chlimage_1-175.png)
+   ![chlimage_1-174](assets/chlimage_1-175.png)
 
 1. På sidan **[!UICONTROL Metadata Schema Editor]** anpassar du egenskapssidan för resursen genom att dra en eller flera komponenter från listan med komponenttyper på fliken **[!UICONTROL Build Form]** till fliken **[!UICONTROL Basic]**.
 
@@ -164,7 +164,7 @@ I stället för att ange egenskaper för alternativen på fliken **[!UICONTROL S
 
 Med schemaredigeraren kan du lägga till eller ta bort en flik. Standardschemaformuläret innehåller som standard flikarna **[!UICONTROL Basic]**, **[!UICONTROL Advanced]**, **[!UICONTROL IPTC]** och **[!UICONTROL IPTC Extension]**.
 
-![chlimage_1-181](assets/chlimage_1-181.png)
+![chlimage_1-101](assets/chlimage_1-181.png)
 
 Klicka `+` för att lägga till en ny flik i ett schemaformulär. Som standard har den nya fliken namnet `Unnamed-1`. Du kan ändra namnet på **[!UICONTROL Settings]** fliken. Klicka `X` för att ta bort en flik.
 
