@@ -3,9 +3,9 @@ title: Metadata-scheman
 description: 'Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.  '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1a6c2e9603ae8cb5017abd9bec9fe0c3fdf62dea
+source-git-commit: c5317d96ed5fccbc1bf03176f75dbaec6d8cb0b4
 workflow-type: tm+mt
-source-wordcount: '2391'
+source-wordcount: '2392'
 ht-degree: 8%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 8%
 
 # Metadatascheman {#metadata-schemas}
 
-I [!DNL Experience Manager Assets]ett metadataram definieras layouten för egenskapssidan och de metadataegenskaper som visas för resurser som använder det aktuella schemat. Metadataegenskaperna innehåller titel, beskrivning, MIME-typer, taggar och så vidare.
+I [!DNL Experience Manager Assets]ett metadataram definieras layouten för egenskapssidan och de metadataegenskaper som visas för resurser som använder det aktuella schemat. Metadataegenskaperna innehåller titel, beskrivning, MIME-typer, taggar och så vidare. Du kan använda redigeraren Metadata Schema Forms om du vill ändra befintliga scheman eller lägga till anpassade metadatascheman.
 
-Du kan använda redigeraren Metadata Schema Forms om du vill ändra befintliga scheman eller lägga till anpassade metadatascheman. Så här visar och redigerar du egenskapssidan för en resurs:
+Så här visar och redigerar du egenskapssidan för en resurs:
 
 1. Klicka på eller tryck på **[!UICONTROL View Properties]** snabbåtgärderna i resurspanelen i kortvyn.
 
@@ -25,7 +25,7 @@ Du kan använda redigeraren Metadata Schema Forms om du vill ändra befintliga s
 
    ![chlimage_1-171](assets/chlimage_1-171.png)
 
-1. Du kan redigera de redigerbara metadataegenskaperna under de tillgängliga flikarna. Du kan dock inte ändra resursen [!UICONTROL Type] på egenskapsfliken [!UICONTROL Basic] .
+1. Du kan redigera de olika redigerbara metadataegenskaperna under de tillgängliga flikarna. Du kan dock inte ändra resursen [!UICONTROL Type] på egenskapsfliken [!UICONTROL Basic] .
 
    ![chlimage_1-172](assets/chlimage_1-172.png)
 
@@ -164,7 +164,7 @@ I stället för att ange egenskaper för alternativen på fliken **[!UICONTROL S
 
 Med schemaredigeraren kan du lägga till eller ta bort en flik. Standardschemaformuläret innehåller som standard flikarna **[!UICONTROL Basic]**, **[!UICONTROL Advanced]**, **[!UICONTROL IPTC]** och **[!UICONTROL IPTC Extension]**.
 
-![chlimage_1-101](assets/chlimage_1-181.png)
+![chlimage_1-181](assets/chlimage_1-181.png)
 
 Klicka `+` för att lägga till en ny flik i ett schemaformulär. Som standard har den nya fliken namnet `Unnamed-1`. Du kan ändra namnet på **[!UICONTROL Settings]** fliken. Klicka `X` för att ta bort en flik.
 
