@@ -3,7 +3,10 @@ title: Bearbeta material för att genomföra affärsprocesser, utföra revisione
 description: Resursbearbetning för att konvertera format, skapa renderingar, hantera resurser, validera resurser och köra arbetsflöden.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a7d6e9fa5d72eba0899f0aadea393fe0e9126a34
+source-git-commit: c564271c88de0183df81557f1e3ab00eafb44b34
+workflow-type: tm+mt
+source-wordcount: '981'
+ht-degree: 2%
 
 ---
 
@@ -18,9 +21,9 @@ För bearbetning av resurser [!DNL Experience Manager] används arbetsflöden. A
 
 ## Standardarbetsflöden som är tillgängliga i Experience Manager {#default-workflows}
 
-Som standard bearbetas alla överförda resurser med hjälp av arbetsflödet [!UICONTROL DAM-uppdatering] . Arbetsflödet körs för varje överförd resurs och utför grundläggande resurshanteringsåtgärder som återgivningsgenerering, tillbakaskrivning av metadata, sidextrahering, medieextrahering och omkodning.
+Som standard bearbetas alla överförda resurser i ett [!UICONTROL DAM Update Asset] arbetsflöde. Arbetsflödet körs för varje överförd resurs och utför grundläggande resurshanteringsåtgärder som återgivningsgenerering, tillbakaskrivning av metadata, sidextrahering, medieextrahering och omkodning.
 
-Information om de olika arbetsflödesmodellerna som är tillgängliga som standard finns i [!UICONTROL Verktyg > Arbetsflöde > Modeller] i [!DNL Experience Manager].
+Information om de olika arbetsflödesmodellerna som är tillgängliga som standard finns [!UICONTROL Tools > Workflow > Models] i [!DNL Experience Manager].
 
 ![En del av standardarbetsflödet](assets/aem-default-workflows.png)
 
@@ -34,7 +37,7 @@ Använd arbetsflöden i digitala resurser för att aktivera resursen eller skapa
 
 >[!NOTE]
 >
->Om ett arbetsflöde som är tillgängligt i det klassiska användargränssnittet inte är tillgängligt i det Touch-aktiverade användargränssnittet, som [!UICONTROL Begäran att aktivera] och [!UICONTROL Begär att inaktivera], ska du läsa [skapa arbetsflödesmodeller](/help/sites-developing/workflows-models.md#make-workflow-models-available-in-touchui).
+>Om ett arbetsflöde i Classic UI inte är tillgängligt i Touch-aktiverat gränssnitt, som [!UICONTROL Request to Activate] och [!UICONTROL Request to Deactivate], ska du läsa [Skapa arbetsflödesmodeller](/help/sites-developing/workflows-models.md#make-workflow-models-available-in-touchui).
 
 ## Tillämpa ett arbetsflöde på en AEM-resurs {#apply-a-workflow-to-an-aem-asset}
 
@@ -46,15 +49,15 @@ Så här använder du ett arbetsflöde för en resurs:
 
 1. Navigera till platsen för resursen som du vill starta ett arbetsflöde för och klicka på resursen för att öppna resurssidan.
 
-1. Navigera till platsen för resursen som du vill starta ett arbetsflöde för och klicka på resursen för att öppna resurssidan. Välj **[!UICONTROL Tidslinje]** på menyn för att visa tidslinjen.
+1. Navigera till platsen för resursen som du vill starta ett arbetsflöde för och klicka på resursen för att öppna resurssidan. Välj **[!UICONTROL Timeline]** på menyn för att visa tidslinjen.
 
    ![tidslinje-2](assets/timeline-2.png)
 
-1. Klicka på **[!UICONTROL Åtgärder]** längst ned för att öppna en lista med tillgängliga åtgärder för resursen.
+1. Klicka **[!UICONTROL Actions]** längst ned för att öppna en lista med tillgängliga åtgärder för resursen.
 
-1. Klicka på **[!UICONTROL Starta arbetsflöde]** i listan.
+1. Klicka **[!UICONTROL Start Workflow]** i listan.
 
-1. In the **[!UICONTROL Start Workflow]** dialog box, select a workflow model from the list.
+1. I **[!UICONTROL Start Workflow]** dialogrutan väljer du en arbetsflödesmodell i listan.
 
    ![chlimage_1-50](assets/chlimage_1-50.png)
 
@@ -62,25 +65,25 @@ Så här använder du ett arbetsflöde för en resurs:
 
    ![chlimage_1-51](assets/chlimage_1-51.png)
 
-1. Klicka på **[!UICONTROL Start]** och sedan på **[!UICONTROL Fortsätt]** i dialogrutan för att bekräfta. Varje steg i arbetsflödet visas på tidslinjen som en händelse.
+1. Bekräfta genom att klicka på **[!UICONTROL Start]** och sedan klicka **[!UICONTROL Proceed]** i dialogrutan. Varje steg i arbetsflödet visas på tidslinjen som en händelse.
 
    ![chlimage_1-52](assets/chlimage_1-52.png)
 
 ## Tillämpa ett arbetsflöde på flera resurser {#applying-a-workflow-to-multiple-assets}
 
-1. I resurskonsolen navigerar du till platsen för de resurser som du vill starta ett arbetsflöde för och väljer resurser. Välj **[!UICONTROL Tidslinje]** på menyn för att visa tidslinjen.
+1. I resurskonsolen navigerar du till platsen för de resurser som du vill starta ett arbetsflöde för och väljer resurser. Välj **[!UICONTROL Timeline]** på menyn för att visa tidslinjen.
 
    ![chlimage_1-136](assets/chlimage_1-136.png)
 
-1. Klicka på **[!UICONTROL Åtgärder]** längst ned.
+1. Klicka på **[!UICONTROL Actions]** längst ned.
 
-1. Klicka på **[!UICONTROL Starta arbetsflöde]**. In the **[!UICONTROL Start Workflow]** dialog, select a workflow model from the list.
+1. Klicka på **[!UICONTROL Start Workflow]**. Välj en arbetsflödesmodell i listan i **[!UICONTROL Start Workflow]** dialogrutan.
 
    ![chlimage_1-138](assets/chlimage_1-138.png)
 
 1. (Valfritt) Ange en rubrik för arbetsflödet som kan användas som referens för arbetsflödesinstansen.
 
-1. Click **[!UICONTROL Start]** and then click **[!UICONTROL Confirm]** in the dialog. Arbetsflödet körs på alla resurser som du har valt.
+1. Klicka på **[!UICONTROL Start]** och sedan på **[!UICONTROL Confirm]** i dialogrutan. Arbetsflödet körs på alla resurser som du har valt.
 
 ## Tillämpa ett arbetsflöde på flera mappar {#applying-a-workflow-to-multiple-folders}
 
@@ -94,10 +97,14 @@ Mer information om hur du använder ett arbetsflöde i en samling finns i [Anvä
 
 Administratörer kan konfigurera arbetsflödet så att resurser automatiskt körs och bearbetas baserat på fördefinierade villkor. Funktionen är användbar för användare och marknadsförare inom olika branscher, till exempel för att skapa anpassade arbetsflöden för specifika mappar. Anta att alla resurser från en reklambyrås foton kan vara vattenstämplade eller att alla resurser som överförts av en frilansare kan bearbetas för att skapa specifika renderingar.
 
-För en arbetsflödesmodell kan användare skapa en startfil för arbetsflödet som kör den. En arbetsflödesstartsfunktion övervakar ändringar i innehållsdatabasen och kör arbetsflödet när de fördefinierade villkoren är uppfyllda. Administratörer kan ge marknadsförarna åtkomst för att skapa arbetsflödena och konfigurera startprogrammet. Användarna kan ändra standardarbetsflödet för [!UICONTROL DAM-uppdatering av resurser] och lägga till de extra steg som krävs för att bearbeta specifika resurser. Arbetsflödet körs på alla nyligen överförda resurser. Använd någon av följande metoder för att begränsa utförandet av de extra stegen för specifika resurser:
+För en arbetsflödesmodell kan användare skapa en startfil för arbetsflödet som kör den. En arbetsflödesstartsfunktion övervakar ändringar i innehållsdatabasen och kör arbetsflödet när de fördefinierade villkoren är uppfyllda. Administratörer kan ge marknadsförarna åtkomst för att skapa arbetsflödena och konfigurera startprogrammet. Användare kan ändra standardarbetsflödet [!UICONTROL DAM Update Asset] för att lägga till de extra steg som krävs för att bearbeta specifika resurser. Arbetsflödet körs på alla nyligen överförda resurser. Använd någon av följande metoder för att begränsa utförandet av de extra stegen för specifika resurser:
 
-* Gör en kopia av arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] och ändra det så att det körs i en viss mapphierarki. Den här metoden är användbar för ett fåtal mappar.
+* Gör en kopia av arbetsflödet och ändra det så att det körs i en viss mapphierarki. [!UICONTROL DAM Update Asset] Den här metoden är användbar för ett fåtal mappar.
 * De extra bearbetningsstegen kan läggas till med hjälp av en [OR-delning](/help/sites-developing/workflows-step-ref.md#or-split) enligt villkor som gäller för så många mappar som behövs.
+
+## God praxis och begränsningar {#best-practices-limitations-tips}
+
+* Tänk på dina behov av alla typer av återgivningar när du utformar arbetsflöden. Om du inte förutser att en återgivning behövs i framtiden tar du bort steget när du skapar den från arbetsflödet. Det går inte att ta bort återgivningar gruppvis efteråt. Oönskade återgivningar kan ta upp mycket lagringsutrymme efter långvarig användning av [!DNL Experience Manager]. För enskilda resurser kan du ta bort återgivningar manuellt från användargränssnittet. För flera resurser kan du antingen anpassa [!DNL Experience Manager] för att ta bort specifika återgivningar eller ta bort resurserna och överföra dem igen.
 
 >[!MORELIKETHIS]
 >
