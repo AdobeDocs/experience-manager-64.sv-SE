@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 translation-type: tm+mt
-source-git-commit: b46378657b8a173986a669beaa56468886b23266
+source-git-commit: cad8b5cb9a0e2c602d12e5d529b037b3ebcbcfbe
+workflow-type: tm+mt
+source-wordcount: '21556'
+ht-degree: 0%
 
 ---
 
@@ -177,7 +180,7 @@ Några av de viktigaste nyheterna i AEM 6.4.7.0 är:
 * Ny kolumn för skapat datum, som är sorterbar, har lagts till i **DAM-listvyn** och i resurssökningsresultat i **listvyn** (NPR-31311).
 * Resurssortering baserat på **namnkolumnen** är tillåtet i **listvyn** .
 * Tidsgränsen för batchstorlek och arbetsflödessteg för återbearbetning och batchöverföring kan nu konfigureras från gränssnittet i Dynamic Media.
-* Minnet `pdfBrochure` har angetts till false i molnkonfigurationen Scene 7 för att spara minne i IPS.
+* Minnet `pdfBrochure` har angetts till false i Scene 7-molnkonfigurationen för att spara minne i IPS.
 
 ##### Assets {#assets-6470}
 
@@ -185,6 +188,10 @@ Några av de viktigaste nyheterna i AEM 6.4.7.0 är:
 
 * Den exportversion av API-paket `package com.day.cq.dam.handler.standard.msoffice` som stöds av `dam-handler` bundle uppgraderas till 6.0.0 (CQ-4279059).
 Om du använder paketet `com.day.cq.dam.handler.standard.msoffice` i din anpassade implementering bör du kompilera ditt `dam-handler` paket med den senaste uber burken.
+
+* Ny kolumn för skapat datum, som är sorterbar, har lagts till i DAM-listvyn och i resurssökningsresultat i listvyn (NPR-31311).
+
+* Resurssortering baserat på namnkolumnen är tillåtet i listvyn (NPR-31299).
 
 **Korrigeringar**
 
@@ -710,7 +717,7 @@ De viktigaste nyheterna i AEM 6.4.5.0-formulär är:
 **Formulär - dokumenttjänster**
 
 * Ogiltig PDF/A-fil rapporteras som giltig PDF/A med isPDFA-åtgärd. NPR-29076: Programfix för CQ-4261541
-* PDF-filen kan inte konverteras till PDF/A-1b med formulärfältet har ingen utseendeordlista. NPR-29634: Programfix för CQ-4269618
+* PDF-filen kan inte konverteras till PDF/A-1b med formulärfältet har ingen utseendeordlista. NPR-29534: Programfix för CQ-4269618
 * PDF/A-konvertering från PDF som skapats med utdatatjänsten godkänns inte vid validering med Acrobat DC. NPR-29647: Programfix för CQ-4270448
 * Apache POI-paketet misslyckas med ett undantag. NPR-27861, NPR-28048: Programfix för CQ-4245898, CQ-4244778
 
@@ -994,7 +1001,7 @@ Ett paket är fortfarande installerat när du har installerat Forms Management-p
 
 **Formulär - arbetsflöde**
 
-* HTML5-formulär med standardskickningsprocessen i an.lca fungerar inte med JBoss 7. NPR-28675: Programfix för CQ-4243928
+* HTML5-formulär med standardskickningsprocessen i an.lca fungerar inte med JBoss 7. NPR-28675: Programfix för CQ-4242928
 * Det går inte att skicka PDF-formulär i HTML Workspace. NPR-28058: Programfix för CQ-4260373
 * Kunddata skrivs ut i informationsloggar med hjälp av arbetsflödet Anropa FDM Service Forms. Programfix för CQ-4260385
 
@@ -1069,7 +1076,7 @@ Några av de viktigaste nyheterna i AEM 6.4.3.0 är:
 * När RTF-redigeraren kombineras med flera fält visas ett TypeError-undantag: fieldAPI.getName är inte en funktion vid foundation.js-fel inträffar. NPR-27146: Programfix för CQ-4253155
 * Salesforce-integrering kan inte använda proxykonfigurationen. NPR-27244: Programfix för CQ-4245300
 * När du schemalägger en sida för aktivering med alternativet Hantera publikation för ett senare datum och växlar till listvyn saknas kalenderikonen. NPR-26974: Programfix för CQ-4239206
-* Användare kan inte redigera behörigheter för slutna användargrupper i sidegenskaperna. NPR-27138: Programfix för CQ-4256089Det går inte att redigera taggar via taggning. NPR-26957: Programfix för CQ-4254858
+* Användare kan inte redigera behörigheter för slutna användargrupper i sidegenskaperna. NPR-27138: Programfix för CQ-4256089Det går inte att redigera taggar via taggning. NPR-26958: Programfix för CQ-4254858
 * När en tagg som refereras från en strukturerad innehållsfragmentmodell flyttas, uppdateras inte de befintliga referenserna till taggen i ett innehållsfragment. Detta händer i redigeringsskärmen för innehållsfragmentmodellen. NPR-26776: Programfix för CQ-4251805
 * När du skapar och befordrar en start med flera sidor skapas flera versioner för varje sida. NPR-26917: Programfix för CQ-4254663
 * AEM siteadmin hanterar inte sökvägar som anges i webbläsarens adressfält. NPR-26780: Programfix för CQ-4254097
@@ -1106,7 +1113,7 @@ Några av de viktigaste nyheterna i AEM 6.4.3.0 är:
 * IndexOutOfBoundsException i ResourceProviderTracker. NPR-26968: Programfix för GRANITE-23310
 * JMX-konsolen samlar många administratörssessioner och en ny session öppnas var femte minut. NPR-26958: Programfix för CQ-4251090
 * När du har uppgraderat från 6.2 till 6.4 visar loggfilen stackspårning för resurslösaren com.adobe.granite.repository.hc.impl.content.sling.SlingContentHealthCheck. NPR-26176: Programfix för Granite-21734
-* När en rensningsagent som är klar att användas för att uppdatera alias konfigureras, misslyckas åtgärden med ett StackOverflowError-undantag. NPR-26373: Programfix för CQ-4242928
+* När en rensningsagent som är klar att användas för att uppdatera alias konfigureras, misslyckas åtgärden med ett StackOverflowError-undantag. NPR-26373: Programfix för CQ-4243928
 * Replikeringen använder utgången OAuth-token tills den misslyckas. NPR-25894
 * Begränsad sida (sidan Stängd användargrupp) med sling: alias inte omdirigerar användaren till inloggningssidan. NPR-25715: Programfix för Granite=22263
 * Vid publicering av taggar visas ingen aktivitet i användargränssnittet. Programfix för CQ-4255961
@@ -1135,7 +1142,7 @@ Några av de viktigaste nyheterna i AEM 6.4.3.0 är:
 * Endast 10 grupper visas på sidan för aktiveringsresurser, även om sidnumrering är aktiverat för grupplistning. NPR-26934: Programfix för CQ-4252985
 * Alternativet att aktivera/inaktivera sökning för schemalagd post i journalkomponenten finns i ConfigMgr, och jobbet SearchScheduledPosts har optimerats. NPR-26923: Programfix för CQ-4250463
 * Sök efter nyckelord i adress fungerar inte på komponentsidor i kalendern när AEM-communityn är inställd på att fungera med DSRP. NPR-26737: Programfix för CQ-4258493
-* En direkt länk till kommentaren i stället för huvudposten i en kommentars detalj har implementerats för modereringsgränssnitt och aktiveringsresurser. NPR-26704: Programfix för CQ-4251381
+* En direkt länk till kommentaren i stället för huvudposten i en kommentars detalj har implementerats för modereringsgränssnitt och aktiveringsresurser. NPR-26702: Programfix för CQ-4251381
 * Innehåll som modereras via flerval på modereringskonsolen visas inte på aktivitetsströmmen. NPR-26695: Programfix för CQ-4253244
 * Sökningen med Förnamn och Efternamn i fältet Till i Communities Messaging returnerar inte det förväntade resultatet. NPR-26385: Programfix för CQ-4248673
 * Ett fel uppstod vid överföring av en annan bifogad fil än bilden (till exempel .pdf) i forum. NPR-27360: Programfix för CQ-4257753
@@ -1370,7 +1377,7 @@ Några av de viktigaste nyheterna i AEM 6.4.2.0 är:
 
 **Plattform**
 
-* Indexerar om slinga| NPE vid utförande av BinaryTextExtraction under uppgradering från 6.3 till 6.4. Programfix för Granite - 21677
+* Indexerar om slinga | NPE vid utförande av BinaryTextExtraction under uppgradering från 6.3 till 6.4. Programfix för Granite - 21677
 * Gränsöverskridande åsidosättning av intern markerad sökväg /libs/cq/cloudserviceconfigs/templates/configpage/jcr:content - Problem vid körning av mönsteridentifierare. NPR-25036: Programfix för CQ-4248597
 * Loggposter har inte skrivits på grund av NPE i LogEntryImpl. NPR-25627: Programfix för Granite-22383
 * Replikering av borttagningshändelsen söker inte efter rättigheter. NPR-25679: Programfix för CQ-4241234
@@ -1445,7 +1452,7 @@ Några av de viktigaste nyheterna i AEM 6.4.2.0 är:
 * (Platsinställningar) Det går att spara ändringar som gjorts i roller. NPR-26274: Programfix för CQ-4252187
 * (Säkerhetslucka) Kontoövertagande på grund av felaktig konfiguration av JSON Web Token. NPR-26458: Programfix för CQ-4253314
 * Sidindelningen återställs inte när svar tas bort. NPR-26326: Programfix för CQ-4252997
-* Bilden som bifogats visas inte i Utkast under redigering. Programfix för CQ-4253360
+* Bilden som bifogats visas inte i Utkast under redigering. Programfix för CQ-4255360
 * Sidan uppdateras inte när den bifogade filen kopplas i relationsdatabasen (DSRP). Programfix för CQ-4253084
 * Grupper fungerar inte i Enablement-webbplatsresursen. Programfix för CQ-4252975
 * Förutsättningar för utbildningssökvägar sparas inte i Aktivering. Programfix för CQ-4252948
@@ -1796,7 +1803,7 @@ AEM 6.4.1.0 kan installeras på AEM 6.4 GA. Några av huvudpunkterna i Service P
 * Det går inte att redigera något arbetsflöde efter att ha redigerat det en gång. NPR-23742: Programfix för CQ-4238526
 * (Klassiskt användargränssnitt) När arbetsflödet startas försvinner villkoren och arbetsflödena startar utan några villkor. NPR-23835: Programfix för CQ-4239153
 * Projektinkorg: när du växlar till kalendervyn visas huvudinnehållet i inkorgen. NPR-23947: Programfix för CQ-4241236
-* Nödvändig att visa nyttolastdetaljer i paketet så att HTML-komponenten kan visa värdet i listvyn. NPR-23948: Programfix för CQ-4240953
+* Nödvändig att visa nyttolastdetaljer i paketet så att HTML-komponenten kan visa värdet i listvyn. NPR-23947: Programfix för CQ-4240953
 * Det går inte att lagra dialogdata i dialogdeltagarsteget. NPR-23965: Programfix för CQ-4234123
 * (Touch-gränssnittet) När du sparar en arbetsflödesmodell ändras knappen Synkronisera till Synkroniserad vilket resulterar i ett stavfel. Programfix för CQ-4244843
 * Projektinkorg: när du växlar till kalendervyn visas huvudinnehållet i inkorgen. Programfix för CQ-4244436
@@ -1845,7 +1852,7 @@ AEM 6.4.1.0 kan installeras på AEM 6.4 GA. Några av huvudpunkterna i Service P
 * Filtyps- och filstorlekspredikat är inte tillgängliga i publicerade sökformulär. Programfix för CQ-4242026
 * Sökningen i katalogpredikatet ska filtreras bort eller inte visas i sökfiltren. Programfix för CQ-4241386
 * Standardsökning från bör finnas efter avpublicering. Programfix för CQ-4241383, CQ-424113
-* Publicera till varumärkesportalgester fungerar inte för bildförinställningar. Programfix för CQ-4241074
+* Publicera till varumärkesportalgester fungerar inte för bildförinställningar. Programfix för CQ-4241076
 * Publicera på varumärkesportalen fungerar inte för samlingar. Programfix för CQ-4241122, CQ-4246558
 
 **DAM - DM-klient**
@@ -1921,7 +1928,7 @@ De viktigaste nyheterna i AEM Forms är:
 * (FDM Client SDK) Det går inte att utföra testning av förprocessor/efterprocessor och anpassad sändningsåtgärd. Programfix för CQ-4238469
 * Korrigeringar för Javadoc-problem i Dermis. Programfix för CQ-4244250
 * Förbättrade indata i WSDL (Web Services Description Language). Programfix för CQ-4244133
-* Grundläggande autentiseringstestning för WSDL ger olika fel för samma konfiguration i AEM 6.3 och AEM 6.4. Programfix för CQ-4244132
+* Grundläggande autentiseringstestning för WSDL ger olika fel för samma konfiguration i AEM 6.3 och AEM 6.4. Programfix för CQ-4244133
 * Begäran om att ta med ValueUtil i klient-sdk och javadocs. Programfix för CQ-4242803
 * (FDM Cloud Config) Det går inte att konfigurera SOAP-baserad autentisering från molnkonfigurationen. Programfix för CQ-4238462
 * Dermis - Lägg till saknade paket i Javadocs. Programfix för CQ-4242815
@@ -1935,7 +1942,7 @@ De viktigaste nyheterna i AEM Forms är:
 * Korrekturtypsfält saknas när UAT3 körs på den senaste uppgraderade servern. Programfix för CQ-4243120
 * På en uppgraderad server saknar det inskickade formuläret de värden för delstat/provins/region och land som fanns på en server före uppgraderingen. Programfix för CQ-4241444
 * (ExpressionEditor) Fel vid navigering till Verifiera scen under formuläröverföring. Programfix för CQ-4241384
-* Värden saknas i verifieringsfasen på en föruppgraderad och uppgraderad server för inskickat formulär. Programfix för CQ-4241896
+* Värden saknas i verifieringsfasen på föruppgraderings- och uppgraderingsservern för det skickade formuläret. Programfix för CQ-4241896
 * Knappen Avsluta och spara längst ned på sidan fungerar inte. Programfix för CQ-4240112
 * Kontaktnummer saknas i den uppgraderade installationen. Programfix för CQ-4239870
 * Under `ACTION TAKEN` avsnittet Tvisttyp på fliken Ytterligare dokument som stöder mitt anspråk har ytterligare fältet Korrekturtyp sparats. Programfix för CQ-4239873
