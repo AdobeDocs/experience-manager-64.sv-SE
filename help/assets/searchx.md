@@ -3,7 +3,10 @@ title: Utöka resurssökning
 description: Utöka sökfunktionerna i AEM Resurser utöver färdiga sökningar efter resurser efter strängar.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
+workflow-type: tm+mt
+source-wordcount: '830'
+ht-degree: 11%
 
 ---
 
@@ -139,7 +142,7 @@ Så här skapar du ett egenskapspredikat:
    </script>
    ```
 
-1. Om du vill göra komponenten tillgänglig måste du kunna redigera den. Om du vill göra en komponent redigerbar lägger du i CRXDE till en nod `cq:editConfig` av primär typ `cq:EditConfig`. Du kan ta bort stycken genom att lägga till en flervärdesegenskap `cq:actions` med värdet **DELETE**.
+1. Om du vill göra komponenten tillgänglig måste du kunna redigera den. To make a component editable, in CRXDE, add a node `cq:editConfig` of primary type `cq:EditConfig`. Du kan ta bort stycken genom att lägga till en egenskap med flera värden `cq:actions` med ett enda värde på **DELETE**.
 1. Navigera till webbläsaren och på exempelsidan (till exempel `press.html`) växla till designläge och aktivera den nya komponenten för prediate paragraph system (till exempel **vänster**).
 
 1. I **redigeringsläget** är den nya komponenten nu tillgänglig i sidosparken (finns i **sökgruppen** ). Infoga komponenten i kolumnen **Predikatorer** och skriv ett sökord, till exempel **Diamant** , och klicka på förstoringsglaset för att starta sökningen.
@@ -169,7 +172,7 @@ Så här skapar du ett grupppredikat:
 
 1. Lägg till `titlepredicate.jsp`:
 
-   ```xml
+   ```java
    <%--
    
      Sample group predicate component
@@ -246,7 +249,7 @@ Så här skapar du ett grupppredikat:
        });
    ```
 
-1. Om du vill göra komponenten tillgänglig måste du kunna redigera den. Om du vill göra en komponent redigerbar lägger du i CRXDE till en nod `cq:editConfig` av primär typ `cq:EditConfig`. Du kan ta bort stycken genom att lägga till en flervärdesegenskap `cq:actions` med ett enda värde på `DELETE`.
+1. Om du vill göra komponenten tillgänglig måste du kunna redigera den. To make a component editable, in CRXDE, add a node `cq:editConfig` of primary type `cq:EditConfig`. Du kan ta bort stycken genom att lägga till en egenskap med flera värden `cq:actions` med ett enda värde på `DELETE`.
 1. Navigera till webbläsaren och på exempelsidan (till exempel `press.html`) växla till designläge och aktivera den nya komponenten för prediate paragraph system (till exempel **vänster**).
 1. I **redigeringsläget** är den nya komponenten nu tillgänglig i sidosparken (finns i **sökgruppen** ). Infoga komponenten i kolumnen **Predicates** .
 
@@ -258,32 +261,32 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
-| predikateName | Sträng | Predikatets namn. Standardvärdet är `fulltext` |
-| searchCallback | Funktion | Återanrop för att utlösa sökning vid händelse `keyup`. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
+| predikateName | Sträng | Predikatets namn. Defaults to `fulltext` |
+| searchCallback |  -funktion | Återanrop för att utlösa sökning vid händelse `keyup`. Defaults to `CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
-| predikateName | Sträng | Predikatets namn. Standardvärdet är `property` |
-| propertyName | Sträng | Namn på JCR-egenskapen. Standardvärdet är `jcr:title` |
+| predikateName | Sträng | Predikatets namn. Defaults to `property` |
+| propertyName | Sträng | Namn på JCR-egenskapen. Defaults to `jcr:title` |
 | defaultValue | Sträng | Förfyllt standardvärde. |
 
 ### PathPredicate {#pathpredicate}
 
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
-| predikateName | Sträng | Predikatets namn. Standardvärdet är `path` |
-| rootPath | Sträng | Predikatets rotsökväg. Standardvärdet är `/content/dam` |
-| pathFieldPredicateName | Sträng | Standardvärdet är `folder` |
+| predikateName | Sträng | Predikatets namn. Defaults to `path` |
+| rootPath | Sträng | Predikatets rotsökväg. Defaults to `/content/dam` |
+| pathFieldPredicateName | Sträng | Defaults to `folder` |
 | showFlatOption | Boolesk | Flagga som visar kryssrutan `search in subfolders`. Standardvärdet är true. |
 
 ### DatePredicate {#datepredicate}
 
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
-| predikateName | Sträng | Predikatets namn. Standardvärdet är `daterange` |
-| egenskapsnamn | Sträng | Namn på JCR-egenskapen. Standardvärdet är `jcr:content/jcr:lastModified` |
+| predikateName | Sträng | Predikatets namn. Defaults to `daterange` |
+| egenskapsnamn | Sträng | Namn på JCR-egenskapen. Defaults to `jcr:content/jcr:lastModified` |
 | defaultValue | Sträng | Förfyllt standardvärde |
 
 ### OptionsPredicate {#optionspredicate}
@@ -291,11 +294,11 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
 | title | Sträng | Lägger till ytterligare en rubrik |
-| predikateName | Sträng | Predikatets namn. Standardvärdet är `daterange` |
-| egenskapsnamn | Sträng | Namn på JCR-egenskapen. Standardvärdet är `jcr:content/metadata/cq:tags` |
-| komprimera | Sträng | Komprimera nivå. Standardvärdet är `level1` |
+| predikateName | Sträng | Predikatets namn. Defaults to `daterange` |
+| egenskapsnamn | Sträng | Namn på JCR-egenskapen. Defaults to `jcr:content/metadata/cq:tags` |
+| komprimera | Sträng | Komprimera nivå. Defaults to `level1` |
 | triggerSearch | Boolesk | Flagga för att utlösa sökning vid kontroll. Standardvärdet är false |
-| searchCallback | Funktion | Återanrop för att utlösa sökning. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
+| searchCallback |  -funktion | Återanrop för att utlösa sökning. Defaults to `CQ.wcm.SiteAdmin.doSearch` |
 | searchTimeoutTime | Siffra | Timeout innan searchCallback aktiveras. Standardvärdet är 800 ms |
 
 ## Anpassa sökresultat {#customizing-search-results}
