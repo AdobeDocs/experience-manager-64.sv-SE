@@ -3,7 +3,10 @@ title: Prestandajusteringsguide för resurser
 description: Viktiga fokusområden kring AEM-konfiguration, ändringar av maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar och optimera prestanda för AEM Assets.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: af5f8a24db589ecdbe28d603ab9583f11d29212c
+source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
+workflow-type: tm+mt
+source-wordcount: '3161'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ Om du vill förbättra överföringstiden för resurser använder du lagring med
 
 Om servern har tillräckligt med minne konfigurerar du en RAM-enhet. Kör följande kommandon i Linux för att skapa en 8 GB RAM-enhet:
 
-```
+```shell
 mkfs -q /dev/ram1 800000
  mkdir -p /mnt/aem-tmp
  mount /dev/ram1 /mnt/aem-tmp
@@ -81,7 +84,7 @@ Implementering av ett S3- eller delat fildatalager kan bidra till att spara disk
 
 Följande S3 Data Store-konfiguration ( `org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.cfg`) hjälper Adobe att extrahera 12,8 TB binära stora objekt (BLOB) från ett befintligt arkiv till ett S3-datalager på en kunds webbplats:
 
-```
+```conf
 accessKey=<snip>
  secretKey=<snip>
  s3Bucket=<snip>
@@ -125,10 +128,10 @@ Ställ in arbetsflödet DAM Update Asset på Transient när det är möjligt. In
 
 1. Öppna `http://localhost:4502/miscadmin` den AEM-instans som du vill konfigurera.
 
-1. Expandera **[!UICONTROL Verktyg]** > **[!UICONTROL Arbetsflöde]** > **[!UICONTROL Modeller]** > **[!UICONTROL dam]** i navigeringsträdet.
-1. Dubbelklicka på **[!UICONTROL DAM Update Asset]**.
-1. Gå till fliken **[!UICONTROL Sida]** i den flytande verktygspanelen och klicka sedan på **[!UICONTROL Sidegenskaper]**.
-1. Välj **[!UICONTROL Övergående arbetsflöde]** och klicka på **[!UICONTROL OK]**.
+1. I navigeringsträdet expanderar du **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]** > **[!UICONTROL dam]**.
+1. Dubbelklicka **[!UICONTROL DAM Update Asset]**.
+1. I den flytande verktygspanelen växlar du till **[!UICONTROL Page]** fliken och klickar sedan på **[!UICONTROL Page Properties]**.
+1. Välj **[!UICONTROL Transient Workflow]** Klicka **[!UICONTROL OK]**.
 
    >[!NOTE]
    >
@@ -289,7 +292,7 @@ När du replikerar resurser till ett stort antal publiceringsinstanser, till exe
 
 1. Välj vilken publiceringsinstans du vill använda för att länka replikeringarna till
 1. På den publiceringsinstansen lägger du till replikeringsagenter som pekar på andra publiceringsinstanser
-1. På var och en av dessa replikeringsagenter aktiverar du **[!UICONTROL Vid mottagande]** på fliken **[!UICONTROL Utlösare]** .
+1. På var och en av dessa replikeringsagenter aktiverar du **[!UICONTROL On Receive]** på **[!UICONTROL Triggers]** fliken
 
 >[!NOTE]
 >
@@ -297,7 +300,7 @@ När du replikerar resurser till ett stort antal publiceringsinstanser, till exe
 
 ## Sökindex {#search-indexes}
 
-Se till att du implementerar de senaste Service Pack-uppdateringarna och prestandarelaterade snabbkorrigeringar eftersom de ofta innehåller uppdateringar av systemindex. Se tips [för prestandajustering| 6.x](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) för vissa indexoptimeringar som kan tillämpas, beroende på vilken version av AEM du har.
+Se till att du implementerar de senaste Service Pack-uppdateringarna och prestandarelaterade snabbkorrigeringar eftersom de ofta innehåller uppdateringar av systemindex. Se tips [för prestandajustering | 6.x](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) för vissa indexoptimeringar som kan tillämpas, beroende på vilken version av AEM du har.
 
 Skapa anpassade index för frågor som du kör ofta. Mer information finns i [metod för att analysera långsamma frågor](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html) och [skapa anpassade index](/help/sites-deploying/queries-and-indexing.md). Mer information om de effektivaste strategierna för frågor och index finns i [Bästa metoder för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 
@@ -308,15 +311,15 @@ Vissa optimeringar kan göras för Oak-indexkonfigurationer som kan förbättra 
 Uppdatera LuceneIndexProvider-konfigurationen:
 
 1. Gå till /system/console/configMgrorg.apache.jackrabbit.oak.plugins.index.lucene.LuceneIndexProviderService
-1. Aktivera indexfilerna **** CopyOnRead, CopyOnWrite och Prefetch i versioner före AEM 6.2. Dessa värden är aktiverade som standard i AEM 6.2 och senare versioner.
+1. Aktivera **[!UICONTROL CopyOnRead , CopyOnWrite , and Prefetch Index Files]** i tidigare versioner än AEM 6.2. Dessa värden är aktiverade som standard i AEM 6.2 och senare versioner.
 
 Uppdatera indexkonfigurationer för att förbättra omindexeringstiden:
 
 1. Öppna CRXDe /crx/de/index.jsp och logga in som administrativ användare
 1. Bläddra till /oak:index/lucene
-1. Lägg till en String[] -egenskap med namnet **[!UICONTROL excludePaths]** med värdena &quot;/var&quot;, &quot;/etc/workflow/instances&quot; och &quot;/etc/replication&quot;
+1. Lägg till en String[] -egenskap med namnet **[!UICONTROL excludedPaths]** med värdena &quot;/var&quot;, &quot;/etc/workflow/instances&quot; och &quot;/etc/replication&quot;
 1. Bläddra till /oak:index/damAssetLucene
-1. Lägg till en String[] -egenskap med namnet **[!UICONTROL includedPaths]** med värdet &quot;/content/dam&quot;
+1. Lägg till en String[] -egenskap med namnet **[!UICONTROL includedPaths]** med värdet /content/dam
 1. Spara
 
 (Endast AEM6.1 och 6.2) Uppdatera indexet ntBaseLucene för att förbättra prestanda vid borttagning och flyttning av resurser:
@@ -346,18 +349,18 @@ Uppdatera indexkonfigurationer för att förbättra omindexeringstiden:
    type=&quot;String&quot;
 
 1. På noden /oak:index/ntBaseLucene anger du egenskapen `reindex=true`
-1. Klicka på **[!UICONTROL Spara alla]**
+1. Klicka på **[!UICONTROL Save All]**
 1. Övervaka error.log för att se när indexeringen är klar:
 
-   Omindexering har slutförts för index: [/ek:index/ntBaseLucene]
+   Omindexering har slutförts för index: [/oak:index/ntBaseLucene]
 
 1. Du kan också se att indexeringen har slutförts genom att uppdatera noden /oak:index/ntBaseLucene i CRXDe eftersom egenskapen reindex skulle återgå till false
-1. När indexeringen är klar går du tillbaka till CRXDe och anger att **[!UICONTROL type]** -egenskapen ska vara inaktiverad för dessa två index
+1. När indexeringen är klar går du tillbaka till CRXDe och anger att egenskapen **[!UICONTROL type]** ska inaktiveras för dessa två index
 
    * */oak:index/slingResource*
    * */oak:index/damResolvedPath*
 
-1. Klicka på **[!UICONTROL Spara alla]**
+1. Klicka på **[!UICONTROL Save All]**
 
 Inaktivera Lucene-textextrahering:
 
@@ -416,4 +419,4 @@ För att minimera latens och uppnå hög genomströmning genom effektiv processo
 * Optimera Lucene-indexkonfigurationen.
 * Optimera index med de senaste servicepaketen och snabbkorrigeringarna. Kontakta Adobe Support för eventuella ytterligare indexoptimeringar.
 * Används `guessTotal` för att optimera frågeprestanda.
-* Om du konfigurerar AEM för att identifiera filtyper från filernas innehåll (genom att konfigurera [!UICONTROL Day CQ DAM Mime Type Service] i [!UICONTROL AEM Web Console]) överför du många filer samtidigt under icke-toppade tider eftersom åtgärden är resurskrävande.
+* If you configure AEM to detect file types from the content of the files (by configuring [!UICONTROL Day CQ DAM Mime Type Service] in the [!UICONTROL AEM Web Console]), upload many files in bulk during non-peak hours as the operation is resource-intensive.
