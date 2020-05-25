@@ -10,7 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 619de2e4-d7bd-4ca6-9763-1efa8b2dec05
 translation-type: tm+mt
-source-git-commit: 7dc90299b7a0e5166c30702323f1678353fe39b3
+source-git-commit: 263e66f6a24a68e1fd64e1b35bf4830f4cba3a44
+workflow-type: tm+mt
+source-wordcount: '2889'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ För att lösa det här problemet tillhandahåller AEM biblioteksmappar **på** 
 
 ## Hur klientbibliotek fungerar i AEM {#how-client-side-libraries-work-in-aem}
 
-Det vanliga sättet att inkludera ett klientbibliotek (dvs. en JS- eller CSS-fil) i HTML-koden för en sida är helt enkelt att ta med en `<script>` - eller `<link>` -tagg i JSP-filen för sidan, som innehåller sökvägen till filen i fråga. Exempel:
+Det vanliga sättet att inkludera ett klientbibliotek (dvs. en JS- eller CSS-fil) i HTML-koden för en sida är helt enkelt att ta med en `<script>` - eller `<link>` -tagg i JSP-filen för sidan, som innehåller sökvägen till filen i fråga. Till exempel,
 
 ```xml
 ...
@@ -99,7 +102,7 @@ Fullständig information, inklusive attribut för filtrering av JS-, CSS- eller 
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>`, som tidigare ofta användes för att inkludera klientbibliotek, har tagits bort sedan AEM 5.6. [ `<ui:includeClientLib>`](/help/sites-developing/taglib.md#amp-lt-ui-includeclientlib) ska användas i stället enligt ovan.
+>`<cq:includeClientLib>`, som tidigare ofta användes för att inkludera klientbibliotek, har tagits bort sedan AEM 5.6. [ `<ui:includeClientLib>`](/help/sites-developing/taglib.md#amp-lt-ui-includeclientlib) ska användas i stället så som beskrivs ovan.
 
 ## Skapar klientbiblioteksmappar {#creating-client-library-folders}
 
@@ -112,7 +115,7 @@ Klientbiblioteksmappar innehåller följande objekt:
 * JS- och/eller CSS-källfilerna som ska sammanfogas.
 * Resurser som stöder CSS-format, t.ex. bildfiler.
 
-   **** Obs! Du kan använda undermappar för att ordna källfiler.
+   **Obs!** Du kan använda undermappar för att ordna källfiler.
 * En `js.txt` fil och/eller en `css.txt` fil som identifierar de källfiler som ska sammanfogas i de genererade JS- och/eller CSS-filerna.
 
 ![clientlibarch](assets/clientlibarch.png)
@@ -167,19 +170,19 @@ Sedan ställer du in egenskapen `allowProxy` på `foo` true.
 1. Om du vill ange kategorin eller kategorierna som biblioteket tillhör markerar du `cq:ClientLibraryFolder` noden, lägger till följande egenskap och klickar sedan på **Spara alla**:
 
    * Namn: kategorier
-   * Typ:Sträng
+   * Typ: Sträng
    * Värde: Kategorinamnet
    * Flera: Välj
 
 1. Lägg till källfiler i biblioteksmappen på alla sätt. Använd till exempel en WebDav-klient för att kopiera filer, eller skapa en fil och redigera innehållet manuellt.
 
-   **** Obs! Du kan ordna källfiler i undermappar om du vill.
+   **Obs!** Du kan ordna källfiler i undermappar om du vill.
 
 1. Markera klientbiblioteksmappen och klicka på **Skapa > Skapa fil**.
 1. Skriv något av följande filnamn i rutan Filnamn och klicka på OK:
 
-   * **`js.txt`**: Använd det här filnamnet för att generera en JavaScript-fil.
-   * **`css.txt`**: Använd det här filnamnet för att generera en CSS (Cascading Style Sheet).
+   * **`js.txt`:**Använd det här filnamnet för att generera en JavaScript-fil.
+   * **`css.txt`:**Använd det här filnamnet för att generera en CSS (Cascading Style Sheet).
 
 1. Öppna filen och skriv följande text för att identifiera källfilernas rot:
 
@@ -202,9 +205,9 @@ När koden i klientbiblioteksmappen refererar till andra bibliotek identifierar 
 
 Beroenden måste vara ett annat `cq:ClientLibraryFolder`. Om du vill identifiera beroenden lägger du till en egenskap i din `cq:ClientLibraryFolder` nod med följande attribut:
 
-* **** Namn:beroenden
-* **** Typ:Sträng`[]`
-* **** Värden: Värdet på egenskapen categories för den cq:ClientLibraryFolder-nod som den aktuella biblioteksmappen är beroende av.
+* **Namn:** beroenden
+* **Typ:** Sträng`[]`
+* **Värden:** Värdet på egenskapen categories för den cq:ClientLibraryFolder-nod som den aktuella biblioteksmappen är beroende av.
 
 Till exempel är / `etc/clientlibs/myclientlibs/publicmain` beroende av `cq.jquery` biblioteket. Den JSP som refererar till huvudklientbiblioteket genererar HTML som innehåller följande kod:
 
@@ -225,9 +228,9 @@ Det är en god vana att behålla alla programrelaterade filer i programmappen ne
 
 Använd egenskapen categories för att identifiera klientbiblioteksmappen som ska bäddas in. Om du vill bädda in biblioteket lägger du till en egenskap i `cq:ClientLibraryFolder` noden för inbäddning med följande egenskapsattribut:
 
-* **** Namn: embed
-* **** Typ:Sträng`[]`
-* **** Värde: Värdet på egenskapen categories för den `cq:ClientLibraryFolder` nod som ska bäddas in.
+* **Namn:** embed
+* **Typ:** Sträng`[]`
+* **Värde:** Värdet på egenskapen categories för den `cq:ClientLibraryFolder` nod som ska bäddas in.
 
 #### Använda inbäddning för att minimera begäranden {#using-embedding-to-minimize-requests}
 
@@ -300,9 +303,9 @@ Använd egenskapen `channels` för en klientbiblioteksmapp för att identifiera 
 
 Om du vill associera en klientbiblioteksmapp med en enhetsgrupp lägger du till en egenskap i din `cq:ClientLibraryFolder` nod med följande attribut:
 
-* **** Namn: kanaler
-* **** Typ:Sträng`[]`
-* **** Värden: Namnet på mobilgruppen. Om du vill utesluta biblioteksmappen från en grupp anger du ett utropstecken (&quot;!&quot;) för namnet.
+* **Namn:** kanaler
+* **Typ:** Sträng`[]`
+* **Värden:** Namnet på mobilgruppen. Om du vill utesluta biblioteksmappen från en grupp anger du ett utropstecken (&quot;!&quot;) för namnet.
 
 I följande tabell visas värdet för egenskapen `channels` för varje klientbiblioteksmapp i `cq.widgets` kategorin:
 
@@ -337,7 +340,7 @@ De anslutningsbara preprocessorerna möjliggör flexibel användning, inklusive:
 >
 >Placera inte ett miniatyrbibliotek i ett klientbibliotek. Ange i stället Raw-biblioteket och om miniatyrbilder krävs använder du alternativen för preprocessorerna.
 
-### Usage {#usage}
+### Användning {#usage}
 
 Du kan välja att konfigurera preprocessorer-konfigurationen per klientbibliotek eller system i hela systemet.
 
@@ -398,7 +401,7 @@ YUI anges som standardminiprogram i AEM. Följ de här stegen för att ändra de
 
    Alternativ kan skickas om de avgränsas med ett semikolon, t.ex. `min:gcc;obfuscate=true`.
 
-1. Klicka på **Spara** för att spara ändringarna.
+1. Click **Save** to save the changes.
 
 ## Felsökningsverktyg {#debugging-tools}
 
@@ -428,9 +431,9 @@ När du öppnar `publicmain.css` filen visas följande kod:
 
 ### Identifiera klientbibliotek {#discover-client-libraries}
 
-Komponenten `/libs/cq/ui/components/dumplibs/dumplibs` genererar en sida med information om alla klientbiblioteksmappar i systemet. Noden har komponenten som `/libs/cq/ui/content/dumplibs` en resurstyp. Använd följande URL för att öppna sidan (använd en annan värd och port efter behov):
+Komponenten `/libs/cq/granite/components/dumplibs/dumplibs` genererar en sida med information om alla klientbiblioteksmappar i systemet. Noden har komponenten som `/libs/granite/ui/content/dumplibs` en resurstyp. Om du vill öppna sidan använder du följande URL (ändra värd och port efter behov):
 
-[http://localhost:4502/libs/cq/ui/content/dumplibs.test.html](http://localhost:4502/libs/cq/ui/content/dumplibs.test.html)
+`https://<host>:<port>/libs/granite/ui/content/dumplibs.test.html`
 
 Informationen omfattar bibliotekets sökväg och typ (CSS eller JS) samt värdena för biblioteksattributen, t.ex. kategorier och beroenden. Efterföljande tabeller på sidan visar biblioteken i varje kategori och kanal.
 
@@ -443,7 +446,7 @@ Komponenten innehåller en testväljare som visar den källkod som genereras fö
    * På `dumplibs.html` sidan klickar du på länken i **Klicka här för utdatatestningstexten** .
    * Öppna följande URL i webbläsaren (använd en annan värd och port efter behov):
 
-      [http://localhost:4502/libs/cq/ui/content/dumplibs.html](http://localhost:4502/libs/cq/ui/content/dumplibs.html)
+      * `http://<host>:<port>/libs/granite/ui/content/dumplibs.html`
    Standardsidan visar utdata för taggar utan värde för attributet categories.
 
 1. Om du vill visa utdata för en kategori anger du värdet för klientbibliotekets `categories` egenskap och klickar på **Skicka fråga**.
