@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 6696c325-d188-41c8-a39f-c8ae7f339fe8
 translation-type: tm+mt
-source-git-commit: 24aa210f1c7079c3e25fc5ccf346336b2121c142
+source-git-commit: 4d5cc3a785be782e79a53d18cb9bb5beba60f61d
+workflow-type: tm+mt
+source-wordcount: '1827'
+ht-degree: 0%
 
 ---
 
@@ -111,17 +114,17 @@ Mer information om typiska lokala distributioner finns i [Rekommenderade distrib
 
 ### Hanterade tjänster med Cloud Manager {#managed-services-using-cloud-manager}
 
-AEM Managed Services är en komplett lösning för hantering av digitala upplevelser. Det ger fördelar med upplevelseleverans i molnet samtidigt som man behåller alla kontroll-, säkerhets- och anpassningsfördelar som en lokal driftsättning ger. Med AEM Managed Services kan kunderna komma igång snabbare genom att driftsätta i molnet och även genom att lära sig de bästa metoderna och den bästa supporten från Adobe. Organisationer och företagsanvändare kan engagera kunderna på minimal tid, öka marknadsandelen och fokusera på att skapa innovativa marknadsföringskampanjer samtidigt som IT-avdelningen minskar bördan.
+AEM Managed Services är en komplett lösning för hantering av digitala upplevelser. Det ger fördelar med upplevelseleverans i molnet samtidigt som alla kontroll-, säkerhets- och anpassningsfördelar vid en lokal driftsättning bibehålls. Med AEM Managed Services kan kunderna komma igång snabbare genom att driftsätta i molnet och även genom att lära sig de bästa metoderna och den bästa supporten från Adobe. Organisationer och företagsanvändare kan engagera kunderna på minimal tid, öka marknadsandelen och fokusera på att skapa innovativa marknadsföringskampanjer samtidigt som IT-avdelningen minskar bördan.
 
 Med AEM Managed Services kan kunderna uppnå följande fördelar:
 
-**** Snabbare time to market: Med flexibel molninfrastruktur i Adobe Managed Services kan organisationer snabbt planera, lansera och optimera framgångsrika digitala upplevelser. Adobe hanterar molnarkitekturen utan ytterligare kapital-, maskinvaru- eller programvarubehov och Adobes Customer Success Engineers, hjälp med AEM-arkitektur, provisionering, anpassning för att ansluta till back-end-appar och bästa praxis för att publicera.
+**Snabbare time to market:** Med flexibel molninfrastruktur i Adobe Managed Services kan organisationer snabbt planera, lansera och optimera framgångsrika digitala upplevelser. Adobe hanterar molnarkitekturen utan ytterligare kapital-, maskinvaru- eller programvarubehov och Adobes Customer Success Engineers, hjälp med AEM-arkitektur, provisionering, anpassning för att ansluta till back-end-appar och bästa praxis för att publicera.
 
-**** Högre prestanda: Ger tillförlitliga digitala upplevelser för företaget med fyra alternativ för tillgänglighet: 99,5 %, 99,9 %, 99,95 % och 99,99 %. Dessutom kan man med programmet automatiskt säkerhetskopiera och återställa flera lägen för att säkerställa tillförlitlighet och beredskapshantering.
+**Högre prestanda:** Ger tillförlitliga digitala upplevelser för företaget med fyra alternativ för tillgänglighet: 99,5 %, 99,9 %, 99,95 % och 99,99 %. Dessutom kan man med programmet automatiskt säkerhetskopiera och återställa flera lägen för att säkerställa tillförlitlighet och beredskapshantering.
 
-**** Optimerade IT-kostnader: Proaktiv vägledning och expertis hjälper organisationer att hålla sig uppdaterade med den senaste versionen av AEM. Adobe Platinum Maintenance and Support ingår automatiskt i nya driftsättningar av AMS Enterprise/Basic, med teknisk expertis och driftserfarenhet som hjälper företag att underhålla sina verksamhetskritiska applikationer. Kostnadsfria grundläggande analyser eller Target-funktioner ger ytterligare värde, särskilt för medelstora organisationer med begränsade behov av analys och personalisering.
+**Optimerade IT-kostnader:** Proaktiv vägledning och expertis hjälper organisationer att hålla sig uppdaterade med den senaste versionen av AEM. Adobe Platinum Maintenance and Support ingår automatiskt i nya driftsättningar av AMS Enterprise/Basic, med teknisk expertis och driftserfarenhet som hjälper företag att underhålla sina verksamhetskritiska applikationer. Kostnadsfria grundläggande analyser eller Target-funktioner ger ytterligare värde, särskilt för medelstora organisationer med begränsade behov av analys och personalisering.
 
-**** Högsta säkerhet: Säkerställer fysisk säkerhet, nätverks- och datasäkerhet i företagsklass genom att lagra kundapplikationer i en begränsad åtkomstfunktion, bakom brandväggssystem eller i ett virtuellt privat moln. Den innehåller virtuella datorer med en klientorganisation och robust kryptering för datalagring, antivirala program och dataisolering.
+**Högsta säkerhet:** Säkerställer fysisk säkerhet, nätverks- och datasäkerhet i företagsklass genom att lagra kundapplikationer i en begränsad åtkomstfunktion, bakom brandväggssystem eller i ett virtuellt privat moln. Den innehåller virtuella datorer med en klientorganisation och robust kryptering för datalagring, antivirala program och dataisolering.
 
 **Cloud Manager**: Cloud Manager, som ingår i Adobe Experience Manager Managed Services-erbjudandet, är en självbetjäningsportal som gör det möjligt för organisationer att självhantera Adobe Experience Manager i molnet. Den innehåller en modern pipeline för kontinuerlig integrering och kontinuerlig leverans (CI/CD) som gör att IT-team och implementeringspartners kan snabba upp leveransen av anpassningar eller uppdateringar utan att kompromissa med prestanda eller säkerhet. Cloud Manager är bara tillgängligt för Adobe Managed Service-kunder.
 
@@ -139,19 +142,19 @@ På klientsidan fungerar AEM med alla moderna webbläsare (**Microsoft Edge**, *
 
 ### Hämta programvaran {#getting-the-software}
 
-Kunder med giltigt underhålls- och supportavtal bör ha fått ett mejl med en kod och kunna ladda ned AEM från [**Adobes licenswebbplats **](https://licensing.adobe.com/). Affärspartners kan begära nedladdningsåtkomst från[**spphelp@adobe.com**](mailto:spphelp@adobe.com).
+Kunder med giltigt underhålls- och supportavtal bör ha fått ett mejl med en kod och kunna ladda ned AEM från [**Adobes licenswebbplats **](https://licensing.adobe.com/). Affärspartners kan begära nedladdningsåtkomst från[**spphelp@adobe.com **](mailto:spphelp@adobe.com).
 
 AEM-programpaketet finns i två format:
 
-* **** cq-quickstart-6.4.0.jar: En fristående körbar *burkfil* som innehåller allt som behövs för att komma igång.
+* **cq-quickstart-6.4.0.jar:** En fristående körbar *burkfil* som innehåller allt som behövs för att komma igång.
 
-* **** cq-quickstart-6.4.0.war: En *krigsfil* för distribution på en tredjepartsprogramserver.
+* **cq-quickstart-6.4.0.war:** En *krigsfil* för distribution på en tredjepartsprogramserver.
 
 I följande avsnitt beskriver vi den **fristående installationen**. Mer information om hur du installerar AEM i en programserver finns i Installera [](/help/sites-deploying/application-server-install.md)programserver.
 
 ### Lokal standardinstallation {#default-local-install}
 
-1. Skapa en installationskatalog på den lokala datorn. Exempel:
+1. Skapa en installationskatalog på den lokala datorn. Till exempel:
 
    Installationsplats för UNIX: **/opt/aem**
 
@@ -272,7 +275,7 @@ Du kan också stoppa och starta AEM från kommandoraden. Om du redan har install
 
 **`<aem-install>/crx-quickstart/bin/`**
 
-Den här mappen innehåller följande Unix-baserade gränssnittsskript:
+Den här mappen innehåller följande Unix-basskalskript:
 
 * **`start`**: Startar instansen
 * `stop`: Stoppar instansen
