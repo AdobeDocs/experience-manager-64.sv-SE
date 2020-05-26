@@ -10,7 +10,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d1f45751-1761-4d6b-b17d-110b2f1117ea
 translation-type: tm+mt
-source-git-commit: 58482f492b7a44685af2c69b2df9aec47812d989
+source-git-commit: fbf38e7e41ef33bca5867c7b6eb1f6806ca70a08
 workflow-type: tm+mt
 source-wordcount: '2751'
 ht-degree: 4%
@@ -47,7 +47,6 @@ Att lägga till en Dynamic Media-komponent på en sida är detsamma som att läg
 1. Dra en Dynamic Media-komponent som du vill använda till sidan på önskad plats.
 1. Håll muspekaren direkt på komponenten. När komponenten är omgiven av en blå ruta trycker du en gång för att visa komponentens verktygsfält. Tryck på ikonen **[!UICONTROL Configuration]** (skiftnyckel).
 1. [Redigera komponenterna](#dynamic-media-components) efter behov och klicka på bockmarkeringen för att spara ändringarna.
-1. 
 
 ### Aktivera komponenter för dynamiska media {#enabling-dynamic-media-components}
 
