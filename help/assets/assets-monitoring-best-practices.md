@@ -3,7 +3,10 @@ title: Metodtips för resursövervakning
 description: Bästa tillvägagångssätt för att övervaka miljön och prestanda för AEM-instansen efter att den har distribuerats.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: c407cecf4f4de9aa00ba987f96df3c75784e0171
+workflow-type: tm+mt
+source-wordcount: '1765'
+ht-degree: 0%
 
 ---
 
@@ -97,7 +100,7 @@ Minne
 Trådar
 
 * MBean: `java.lang:type=Threading`
-* URL: */system/console/jmx/java.lang:type=Koppla*
+* URL: */system/console/jmx/java.lang:type=Threading*
 * Instanser: Alla servrar
 * Larm threshold: När antalet trådar är större än 150 % av baslinjen.
 * Larm-definition: Antingen finns det en aktiv runaway-process, eller så använder en ineffektiv åtgärd en stor mängd resurser. Analysera en tråddump för att komma fram till en definition.
@@ -117,7 +120,7 @@ Replikeringsagenter
 
 * Larm-definition: Det finns en blockerad kö i systemet som anger att replikeringsmålet är nere eller inte kan nås. Nätverks- eller infrastrukturproblem leder ofta till att för många poster köas, vilket kan påverka systemets prestanda negativt.
 
-**Obs**:För parametrarna MBean och URL ersätter du `<AGENT_NAME>` med namnet på den replikeringsagent som du vill övervaka.
+**Obs**: För parametrarna MBean och URL ersätter du `<AGENT_NAME>` med namnet på den replikeringsagent som du vill övervaka.
 
 Sessionsräknare
 
@@ -181,17 +184,15 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
    * Larm threshold: När statusen inte är OK
    * Larm-definition: Det finns fel i loggfilerna. Mer information om orsaken till problemet finns i loggattributet.
 
-## Vanliga problem och lösningar {#common-issues-and-resolutions}
+## Vanliga problem och lösningar  {#common-issues-and-resolutions}
 
 Om du råkar ut för problem i samband med övervakningen finns det några felsökningsuppgifter som du kan utföra för att lösa vanliga problem med AEM-instanser:
 
 * Om du använder tarMK ska du köra Tjärkomprimering ofta. Mer information finns i [Underhålla databasen](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
 * Kontrollera `OutOfMemoryError` loggar. Mer information finns i [Analysera minnesproblem](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html).
-
 * Kontrollera loggarna om det finns referenser till oindexerade frågor, trädgenomgångar eller indexgenomgångar. Dessa indikerar oindexerade frågor eller otillräckligt indexerade frågor. Mer information om hur du optimerar fråga- och indexeringsprestanda finns i [Bästa metoder för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 * Använd arbetsflödeskonsolen för att verifiera att arbetsflödena fungerar som förväntat. Om det är möjligt kan du komprimera flera arbetsflöden till ett enda arbetsflöde.
 * Läs om live-övervakning och leta efter fler flaskhalsar eller konsumenter av specifika resurser.
 * Undersök ingångspunkterna från klientnätverket och ingångspunkterna till AEM-instansnätverket, inklusive dispatchern. Det är ofta flaskhalsar. Mer information finns i [Resursnätverkshänsyn](assets-network-considerations.md).
-* Ändra storlek på AEM-servern. Din AEM-instans kan ha en felaktig storlek. Adobe Support kan hjälpa er att identifiera om servern är för liten.
+* Ändra storlek på AEM-servern. Din AEM-instans kan ha en felaktig storlek. Med Adobes kundtjänst kan du se om din server är för liten eller inte.
 * Undersök `access.log` och `error.log` filer för att se om det finns poster runt tiden när något gick fel. Leta efter mönster som kan indikera anpassade kodavvikelser. Lägg till dem i listan med händelser som du övervakar.
-
