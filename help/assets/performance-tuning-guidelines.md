@@ -3,9 +3,9 @@ title: Prestandajusteringsguide för resurser
 description: Viktiga fokusområden kring AEM-konfiguration, ändringar av maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar och optimera prestanda för AEM Assets.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
+source-git-commit: c407cecf4f4de9aa00ba987f96df3c75784e0171
 workflow-type: tm+mt
-source-wordcount: '3161'
+source-wordcount: '3162'
 ht-degree: 0%
 
 ---
@@ -417,6 +417,6 @@ För att minimera latens och uppnå hög genomströmning genom effektiv processo
 * Ta bort onödiga steg från arbetsflödet för DAM Update Asset.
 * Konfigurera arbetsflöde och versionsrensning.
 * Optimera Lucene-indexkonfigurationen.
-* Optimera index med de senaste servicepaketen och snabbkorrigeringarna. Kontakta Adobe Support för eventuella ytterligare indexoptimeringar.
+* Optimera index med de senaste servicepaketen och snabbkorrigeringarna. Kontakta Adobes kundtjänst för eventuella ytterligare indexoptimeringar.
 * Används `guessTotal` för att optimera frågeprestanda.
 * If you configure AEM to detect file types from the content of the files (by configuring [!UICONTROL Day CQ DAM Mime Type Service] in the [!UICONTROL AEM Web Console]), upload many files in bulk during non-peak hours as the operation is resource-intensive.
