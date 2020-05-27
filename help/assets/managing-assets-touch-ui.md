@@ -4,9 +4,9 @@ description: Lär dig mer om olika resurshanterings- och redigeringsuppgifter so
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c564271c88de0183df81557f1e3ab00eafb44b34
+source-git-commit: c407cecf4f4de9aa00ba987f96df3c75784e0171
 workflow-type: tm+mt
-source-wordcount: '9499'
+source-wordcount: '9500'
 ht-degree: 1%
 
 ---
@@ -142,7 +142,7 @@ Med Dynamic Media kan du batchöverföra resurser via FTP-servern. Om du tänker
 
 >[!NOTE]
 >
->Så här överför du resurser via FTP i Dynamic Media - Scene7-läget installerar funktionspaket 18912 på AEM-författaren. Kontakta Adobe Support för att få tillgång till FP-18912 och slutföra konfigurationen av ditt FTP-konto. Se [Installera funktionspaket 18912 för migrering](/help/assets/bulk-ingest-migrate.md)av gruppresurser.
+>Så här överför du resurser via FTP i Dynamic Media - Scene7-läget installerar funktionspaket 18912 på AEM-författaren. Kontakta Adobes kundtjänst för att få tillgång till FP-18912 och slutföra konfigurationen av ditt FTP-konto. Se [Installera funktionspaket 18912 för migrering](/help/assets/bulk-ingest-migrate.md)av gruppresurser.
 Om du använder FTP för att överföra resurser ignoreras de överföringsinställningar som anges i AEM. I stället används filbearbetningsregler, enligt definition i Dynamic Media Classic,.
 
 **Så här överför du resurser med FTP**
