@@ -10,7 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 translation-type: tm+mt
-source-git-commit: dc3c351cfce14cf243fea9dfc492846e156246ff
+source-git-commit: 3ceb701076b18ebe36949b2842242da0a25c9afe
+workflow-type: tm+mt
+source-wordcount: '3365'
+ht-degree: 0%
 
 ---
 
@@ -43,11 +46,11 @@ Java Content Repository (JCR)-standarden, [JSR 283](https://docs.adobe.com/conte
 
 Adobes forskningschef (Schweiz) AG.
 
-Paketet [JCR API 2.0](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) , javax.jcr. &amp;ast; används för direkt åtkomst och hantering av databasinnehåll.
+Paketet [JCR API 2.0](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) , javax.jcr.&amp;ast; används för direkt åtkomst och hantering av databasinnehåll.
 
 ## Experience Server (CRX) och Jackrabbit {#experience-server-crx-and-jackrabbit}
 
-Experience Server innehåller de Experience Services som AEM bygger på, och som kan utnyttjas för att skapa anpassade program, och den bäddar in innehållsdatabasen baserat på Jackrabbit.
+Experience Server innehåller de Experience Services som AEM är byggt på, och som kan utnyttjas för att skapa anpassade program, och den bäddar in innehållsdatabasen baserat på Jackrabbit.
 
 [Apache Jackrabbit](https://jackrabbit.apache.org/) är en öppen källkodsimplementering av JCR API 2.0 som följer alla regler.
 
@@ -135,8 +138,8 @@ Med Sling anger du vilket skript som ska återge en viss enhet (genom att ange e
 
 Begäran har delats upp och nödvändig information har extraherats. Databasen genomsöks efter den begärda resursen (innehållsnod):
 
-* Först Sling kontrollerar om det finns en nod på den plats som anges i begäran.t.ex. `../content/corporate/jobs/developer.html`
-* Om ingen nod hittas tas tillägget bort och sökningen upprepas.t.ex. `../content/corporate/jobs/developer`
+* Först Sling kontrollerar om det finns en nod på den plats som anges i begäran. t.ex. `../content/corporate/jobs/developer.html`
+* Om ingen nod hittas tas tillägget bort och sökningen upprepas. t.ex. `../content/corporate/jobs/developer`
 * Om ingen nod hittas returnerar Sling http-koden 404 (Hittades inte).
 
 Med Sling kan även andra saker än JCR-noder vara resurser, men det här är en avancerad funktion.
@@ -182,7 +185,7 @@ Om exemplet ovan `sling:resourceType` är `hr/jobs` för:
 
 * URL-adresser i andra format, slutar inte med .html
 
-   Exempel `../content/corporate/jobs/developer.pdf`
+   Till exempel `../content/corporate/jobs/developer.pdf`
 
    Skriptet ska vara `/apps/hr/jobs/jobs.pdf.esp`; suffixet läggs till i skriptnamnet.
 
@@ -237,7 +240,7 @@ Resursens överordnade typ kan definieras på två sätt:
 * efter resursens `sling:resourceSuperType` egenskap.
 * av egenskapen `sling:resourceSuperType` för noden som `sling:resourceType` pekar på.
 
-Exempel:
+Till exempel:
 
 * /
 
@@ -259,7 +262,14 @@ Exempel:
 
 
 
-Typphierarkin för /x är [ c, b, a, &lt;default>] medan hierarkin för /y är [ c, a,
+Typhierarkin för:
+
+* `/x`
+   * är `[ c, b, a, <default>]`
+* while för `/y`
+   * hierarkin är `[ c, a, <default>]`
+
+Detta beror på att `/y` har `sling:resourceSuperType` egenskapen men `/x` inte, och dess supertyp hämtas därför från sin resurstyp.
 
 #### Sling Scripts kan inte anropas direkt {#sling-scripts-cannot-be-called-directly}
 
