@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 619de2e4-d7bd-4ca6-9763-1efa8b2dec05
 translation-type: tm+mt
-source-git-commit: 263e66f6a24a68e1fd64e1b35bf4830f4cba3a44
+source-git-commit: 50d57997496e6809361277f7025f3858857e14af
 workflow-type: tm+mt
 source-wordcount: '2889'
 ht-degree: 0%
@@ -134,7 +134,7 @@ I tidigare versioner fanns klientbiblioteksmapparna nedan `/etc/clientlibs` i da
 
 >[!NOTE]
 >
->Statiska resurser under klientbiblioteksmappen måste finnas i en mapp som kallas *resurser*. Om du inte har statiska resurser, till exempel bilder, under mappresurserna ** kan du inte referera till dem på en publiceringsinstans. Här är ett exempel: http://localhost:4503/etc.clientlibs/geometrixx/components/clinetlibs/resources/example.gif
+>Statiska resurser under klientbiblioteksmappen måste finnas i en mapp som kallas *resurser*. Om du inte har statiska resurser, till exempel bilder, under mappresurserna ** kan du inte referera till dem på en publiceringsinstans. Här är ett exempel: http://localhost:4503/etc.clientlibs/geometrixx/components/clientlibs/resources/example.gif
 
 >[!NOTE]
 >
