@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: 442cd4bb-21b8-4d9d-89a4-402ee22c79a7
 translation-type: tm+mt
-source-git-commit: 1c751a81550086371623d0ba66e4de40f7daaa16
+source-git-commit: 9d13589ea95329dc6a9d3dbf3a5a9930998597f5
+workflow-type: tm+mt
+source-wordcount: '7663'
+ht-degree: 0%
 
 ---
 
@@ -84,7 +87,7 @@ Du kan konfigurera följande egenskaper för en bevakad mapp.
 
 * **stageFileExpirationDuration (Long, default -1)**: Antalet sekunder som väntar innan en indatafil/indatamapp som redan har hämtats för bearbetning kan behandlas som om tidsgränsen har överskridits och markerats som ett fel. Den här förfallomekanismen aktiveras bara när värdet för den här egenskapen är ett positivt tal.
 
-   **Obs!** Även *när en inmatning har markerats som att tidsgränsen nåtts med den här mekanismen kan den fortfarande bearbetas i bakgrunden, men bara ta längre tid än förväntat. Om indatainnehållet förbrukades innan timeoutmekanismen startades kan bearbetningen till och med slutföras senare och utdata dumpas i resultatmappen. Om innehållet inte förbrukades innan tidsgränsen uppnåddes är det troligtvis så att bearbetningen misslyckas senare när innehållet används, och det här felet loggas även i felmappen för samma indata. Om bearbetningen av indata inte aktiveras på grund av ett tillfälligt fel i jobb/arbetsflöde (vilket är det scenario som utgångsmekanismen avser), kommer ingen av dessa två situationer att inträffa. För alla poster i felmappen som markerats som misslyckade på grund av en timeout (sök efter meddelanden i formatet &quot;Fil som inte bearbetats efter lång tid, markerat som misslyckad!&quot; i felloggen) är det tillrådligt att söka igenom resultatmappen (och även själva felmappen för en annan post för samma indata) för att kontrollera om någon av de händelser som beskrivs ovan faktiskt inträffade.*
+   **Obs!** *Även om en inmatning har markerats som att den har nått tidsgränsen med den här mekanismen kan den fortfarande bearbetas i bakgrunden, men bara ta längre tid än förväntat. Om indatainnehållet förbrukades innan timeoutmekanismen startades kan bearbetningen till och med slutföras senare och utdata dumpas i resultatmappen. Om innehållet inte förbrukades innan tidsgränsen uppnåddes är det troligtvis så att bearbetningen misslyckas senare när innehållet används, och det här felet loggas även i felmappen för samma indata. Om bearbetningen av indata inte aktiveras på grund av ett tillfälligt fel i jobb/arbetsflöde (vilket är det scenario som utgångsmekanismen avser), kommer ingen av dessa två situationer att inträffa. För alla poster i felmappen som markerats som misslyckade på grund av en timeout (sök efter meddelanden i formatet &quot;Fil som inte bearbetats efter lång tid, markerat som misslyckad!&quot; i felloggen) är det tillrådligt att söka igenom resultatmappen (och även själva felmappen för en annan post för samma indata) för att kontrollera om någon av de händelser som beskrivs ovan faktiskt inträffade.*
 
 * 
 * **deleteExpiredStageFileOnlyWhenThrottled (Boolean, standard true):** Anger om förfallomekanismen endast ska aktiveras när bevakade mappar stryps. Mekanismen är mer relevant för begränsade bevakade mappar eftersom ett litet antal filer som ligger kvar i ett obearbetat tillstånd (på grund av tillfälliga fel i jobb/arbetsflöde) kan kväva bearbetningen för hela gruppen när strypning är aktiverat. Om den här egenskapen behålls som true (standard) aktiveras inte förfallomekanismen för bevakade mappar som inte är begränsade. Om egenskapen behålls som false aktiveras mekanismen alltid så länge egenskapen stageFileExpirationDuration är ett positivt tal.
@@ -159,7 +162,7 @@ Mer information om filmönster finns i [Om filmönster](/help/forms/using/watche
 * **overwriteDuplicateFilename (Boolean)**: När värdet är True skrivs filerna i resultatmappen och i den bevarade mappen över. Om värdet är Falskt används filer och mappar med ett numeriskt indexsuffix för namnet. Standardvärdet är Falskt.
 * **preserveOnFailure (Boolean)**: Bevara indatafiler om det inte går att utföra åtgärden på en tjänst. Standardvärdet är true.
 * **inputFilePattern (String)**: Anger mönstret för indatafilerna för en bevakad mapp. Skapar en vitlista över filerna.
-* **asynk (Boolean)**: Identifierar anropstypen som asynkron eller synkron. Standardvärdet är true (asynkront). Filbearbetningen är en resurskrävande uppgift. Behåll värdet för asynch-flaggan till true för att förhindra att huvudtråden i sökningsjobbet kvävs. I en klustermiljö är det viktigt att flaggan är true för att det ska gå att använda belastningsutjämning för de filer som bearbetas på de tillgängliga servrarna. Om flaggan är false försöker sökningsjobbet att bearbeta varje fil/mapp på den översta nivån sekventiellt i sin egen tråd. Ange inte flaggan till false utan en specifik orsak, till exempel arbetsflödesbaserad bearbetning i en enskild serverkonfiguration.
+* **asynk (Boolean)**: Identifierar anropstypen som asynkron eller synkron. Standardvärdet är true (asynkront). Filbearbetningen är en resurskrävande uppgift. Behåll värdet för asynch-flaggan till true för att förhindra att huvudtråden i sökningsjobbet kvävs. I en klustermiljö är det viktigt att flaggan är true för att det ska gå att använda belastningsutjämning för de filer som bearbetas på de tillgängliga servrarna. Om flaggan är false försöker sökningsjobbet att utföra bearbetning för varje fil/mapp på den översta nivån sekventiellt i sin egen tråd. Ange inte flaggan till false utan en specifik orsak, till exempel arbetsflödesbaserad bearbetning i en enskild serverkonfiguration.
 
 >[!NOTE]
 >
@@ -210,7 +213,7 @@ Du kan skapa variabler som kan ändras för arbetsflödesbaserade filbearbetning
 
 Du kan starta ett arbetsflöde, en tjänst eller ett skript för att bearbeta dokumenten i en bevakad mapp.
 
-### Använda en tjänst för att bearbeta filer i en bevakad mapp {#using-a-service-to-process-files-of-a-watched-folder-nbsp}
+### Använda en tjänst för att bearbeta filer i en bevakad mapp   {#using-a-service-to-process-files-of-a-watched-folder-nbsp}
 
 En tjänst är en anpassad implementering av `com.adobe.aemfd.watchfolder.service.api.ContentProcessor` gränssnittet. Den registreras med OSGi tillsammans med några anpassade egenskaper. Implementeringens anpassade egenskaper gör den unik och hjälper till att identifiera implementeringen.
 
@@ -280,7 +283,7 @@ processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docm
 
 Som standard finns en behållarmapp (/etc/fd/watchfolder/scripts) där kunderna kan placera sina skript, och standardtjänstanvändaren som används av ramverket för bevakade mappar har de behörigheter som krävs för att läsa skript från den här platsen.
 
-Om du tänker placera dina skript på en anpassad plats, är det troligt att standardtjänstanvändaren inte har läsbehörighet över den anpassade platsen. Så här anger du nödvändig behörighet till den anpassade platsen:
+Om du tänker placera dina skript på en anpassad plats är det troligt att standardtjänstanvändaren inte har läsbehörighet över den anpassade platsen. Så här anger du nödvändig behörighet till den anpassade platsen:
 
 1. Skapa en systemanvändare programmatiskt eller via konsolen `https://[server]:[port]/crx/explorer`. Du kan också använda en befintlig systemanvändare. Det är viktigt att du arbetar med systemanvändare här i stället för med vanliga användare.
 1. Ge läsbehörighet till den nyskapade eller befintliga systemanvändaren på den anpassade plats där skripten lagras. Du kan ha flera anpassade platser. Ange minst läsbehörighet för alla anpassade platser.
@@ -720,7 +723,7 @@ ECMAScript använder PDF Generators createPDF-API för att konvertera Microsoft 
 
 ### Skapa ett arbetsflöde {#create-a-workflow-1}
 
-1. Öppna gränssnittet för AEM-arbetsflödet i ett webbläsarfönster. `https://[server]:[port]/worklow`
+1. Öppna gränssnittet för AEM-arbetsflödet i ett webbläsarfönster. `https://[server]:[port]/workflow`
 
 1. Klicka på **Nytt** i modellvyn. Ange **titel** i dialogrutan Nytt arbetsflöde och klicka på **OK**.
 1. Markera det nya arbetsflödet och klicka på **Redigera**. Arbetsflödet öppnas i ett nytt fönster.
