@@ -1,8 +1,8 @@
 ---
 title: Dynamiska mediebildprofiler
 seo-title: Dynamiska mediebildprofiler
-description: Skapa bildprofiler som innehåller inställningar för oskarp mask, smart beskärning eller smarta färgrutor, eller båda, och tillämpa sedan profilen på en mapp med bildresurser.
-seo-description: Skapa bildprofiler som innehåller inställningar för oskarp mask, smart beskärning eller smarta färgrutor, eller båda, och tillämpa sedan profilen på en mapp med bildresurser.
+description: Skapa bildprofiler som innehåller inställningar för oskarp mask och smart beskärning eller smarta färgrutor, eller både och, och tillämpa sedan profilen på en mapp med bildresurser.
+seo-description: Skapa bildprofiler som innehåller inställningar för oskarp mask och smart beskärning eller smarta färgrutor, eller både och, och tillämpa sedan profilen på en mapp med bildresurser.
 uuid: 9049fab9-d2be-4118-8684-ce58f3c8c16a
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 translation-type: tm+mt
-source-git-commit: 036bb0f6fc00a089e282145cbfde2d48a098ede9
+source-git-commit: 3a9b145395b5a251071129b0cee5ad57ca32fff6
 workflow-type: tm+mt
-source-wordcount: '2546'
+source-wordcount: '2547'
 ht-degree: 10%
 
 ---
@@ -28,11 +28,11 @@ När du överför bilder kan du beskära bilden automatiskt vid överföring gen
 
 ## Beskärningsalternativ {#crop-options}
 
-Du kan välja mellan två bildbeskärningsalternativ och ett alternativ för att automatisera skapandet av färg- och bildfärgrutor.
+<!-- CQDOC-16069 -->Smart Crop coordinates are aspect ratio dependent. That is, for the various smart crop settings in an image profile, if the aspect ratio is the same for the added dimensions that are in the image profile, then the same aspect ratio is sent to Dynamic media. Because of this, Adobe recommends that you use the same crop area. Doing so will ensure that there is no impact to different dimensions used in the image profile.
 
->[!IMPORTANT]
->
->Var medveten om att varje generering av Smart Crop som du skapar kräver ytterligare bearbetning. Om du till exempel lägger till mer än fem proportioner för smart beskärning kan det leda till en långsam intag av resurser. Det kan också ge ökad belastning på systemen. Eftersom du kan använda SmartCrop på mappnivå rekommenderar Adobe att du *bara* använder det i mappar där det behövs.
+Tänk på att varje generering av SmartCrop som du skapar kräver extra bearbetning. Om du till exempel lägger till mer än fem proportioner för smart beskärning kan det leda till en långsam intag av resurser. Det kan också ge ökad belastning på systemen. Eftersom du kan använda SmartCrop på mappnivå rekommenderar Adobe att du *bara* använder det i mappar där det behövs.
+
+Du kan välja mellan två bildbeskärningsalternativ. Du kan också automatisera skapandet av färg- och bildfärgrutor.
 
 <table> 
  <tbody> 
@@ -51,7 +51,7 @@ Du kan välja mellan två bildbeskärningsalternativ och ett alternativ för att
      <li>Startpunkt för beskärning: Vänster är X och Överkant är Y</li> 
      <li>Vågrät beräkning: vågrät pixeldimension för originalbilden minus vänster och sedan minus höger.</li> 
      <li>Lodrät beräkning: vertikal pixelhöjd minus överkant och sedan minus underkant.</li> 
-    </ul> <p>Anta till exempel att du har en bild på 4 000 x 3 000 pixlar. Du använder värden: Top=250; Bottom=500; Vänster=300; Höger=700.</p> <p>Från övre vänstra (300,250) beskär med fyllningsutrymmet (4000-300-700, 3000-250-500 eller 3000,2250).</p> </td> 
+    </ul> <p>Anta till exempel att du har en bild på 4 000 x 3 000 pixlar. Du använder värden: Top=250, Bottom=500, Left=300, Right=700.</p> <p>Från övre vänstra (300,250) beskär med fyllningsutrymmet (4000-300-700, 3000-250-500 eller 3000,2250).</p> </td> 
   </tr> 
   <tr> 
    <td>Smart beskärning</td> 
@@ -74,7 +74,7 @@ You use **Unsharp Mask** to fine-tune a sharpening filter effect on the final do
 
 >[!NOTE]
 >
->Oskarp mask används endast för nedskalade återgivningar i PTIFF (pyramidformade gånger) som nedsamplas till mer än 50 %. Det innebär att de största återgivningarna i mönstret inte påverkas av oskarp mask, medan mindre återgivningar som miniatyrbilder ändras (och visar den oskarpa masken).
+>Oskarp mask används endast för nedskalade återgivningar i PTIFF (pyramidformade gånger) som nedsamplas till mer än 50 %. Det innebär att de största återgivningarna i PTIFF inte påverkas av oskarp mask, medan mindre återgivningar som miniatyrbilder ändras (och visar den oskarpa masken).
 
 I **Oskarp mask** finns följande filtreringsalternativ:
 
@@ -248,7 +248,7 @@ Om det behövs kan du köra smart beskärning igen för att generera ytterligare
    * Flytta den smarta beskärningsrutan. Gör något av följande:
 
       * Om bilden har en smart beskärning eller endast en smart färgruta drar du beskärningsrutan till en ny plats på bilden.
-      * Om bilden har både en smart beskärning och en smart färgruta drar du den smarta beskärningsrutan till en ny plats på bilden. Du kan också trycka eller klicka på den smarta färgrutan under bilden (färgrutorna är statiska) och sedan dra den smarta färgrutans beskärningsruta till en ny plats.
+      * Om bilden har både en smart beskärning och en smart färgruta drar du den smarta beskärningsrutan till en ny plats på bilden. Du kan också trycka på den smarta färgrutan under bilden (färgrutorna är statiska) och sedan dra den smarta färgrutans beskärningsruta till en ny plats.
       ![edit_smart_crop-move](assets/edit_smart_crops-move.png)
 
    * Ångra alla redigeringar och återställ den ursprungliga smarta beskärningen eller den smarta färgrutan (gäller endast den aktuella redigeringssessionen).
@@ -280,6 +280,6 @@ Du kan ta bort en bildprofil från en mapp från menyn **[!UICONTROL Tools]** el
 1. Tryck på AEM-logotypen och navigera **[!UICONTROL Assets]** sedan till mappen som du vill ta bort en bildprofil från.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
 1. Klicka på **[!UICONTROL Image Profiles]** fliken.
-1. I listrutan **[!UICONTROL Profile Name]** väljer du **[!UICONTROL None]** och sedan trycker du på **[!UICONTROL Save & Close]**.
+1. From the **[!UICONTROL Profile Name]** drop-down list, select **[!UICONTROL None]**, then tap **[!UICONTROL Save & Close]**.
 
    För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
