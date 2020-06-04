@@ -3,14 +3,17 @@ title: Stöd för Camera Raw
 description: Lär dig hur du aktiverar stöd för Camera Raw i Adobe Experience Manager Assets.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
+source-git-commit: 69976917f19a695908f1d7e5276d969587671761
+workflow-type: tm+mt
+source-wordcount: '401'
+ht-degree: 0%
 
 ---
 
 
 # Stöd för att bearbeta bilder med Camera Raw {#camera-raw-support}
 
-Du kan aktivera Camera Raw-stödet för att bearbeta råfilsformat, som CR2, NEF och RAF, och återge bilderna i JPEG-format. Funktionen stöds i Adobe Experience Manager Assets med hjälp av [Camera Raw-paketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) som är tillgängligt via Paketdelning.
+Du kan aktivera Camera Raw-stödet för att bearbeta råfilsformat, som CR2, NEF och RAF, och återge bilderna i JPEG-format. Funktionen stöds i Adobe Experience Manager Assets med hjälp av [Camera Raw-paketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) som är tillgängligt via Paketresurs eller från [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg).
 
 >[!NOTE]
 >
@@ -18,28 +21,28 @@ Du kan aktivera Camera Raw-stödet för att bearbeta råfilsformat, som CR2, NEF
 
 Så här aktiverar du stöd för Camera Raw i Adobe Experience Manager Assets:
 
-1. Hämta [Camera Raw-paketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) från paketresursen.
+1. Hämta [Camera Raw-paketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) från paketresursen eller från [programdistributionen](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg).
 
-1. Öppna `https://[aem_server]:[port]/workflow`. Öppna arbetsflödet för **[!UICONTROL DAM-uppdatering av resurser]** .
+1. Öppna `https://[aem_server]:[port]/workflow`. Öppna **[!UICONTROL DAM Update Asset]** arbetsflödet.
 
-1. Öppna steget **[!UICONTROL Bearbeta miniatyrbilder]** .
+1. Öppna **[!UICONTROL Process Thumbnails]** steget.
 
-1. Ange följande konfiguration på fliken **[!UICONTROL Miniatyrbilder]** :
+1. Ange följande konfiguration på **[!UICONTROL Thumbnails]** fliken:
 
-   * **[!UICONTROL Miniatyrbilder]**: `140:100:false, 48:48:false, 319:319:false`
-   * **[!UICONTROL Hoppa över MIME-typer]**: `skip:image/dng, skip:image/x-raw-(.*)`
+   * **[!UICONTROL Thumbnails]**: `140:100:false, 48:48:false, 319:319:false`
+   * **[!UICONTROL Skip Mime Types]**: `skip:image/dng, skip:image/x-raw-(.*)`
    ![klibbig](assets/chlimage_1-334.png)
 
-1. På fliken **[!UICONTROL Webbaktiverad bild]** anger du **[!UICONTROL i fältet]** Hoppa över lista `audio/mpeg, video/(.*), image/dng, image/x-raw-(.*)`.
+1. Ange **[!UICONTROL Web Enabled Image]** på fliken i **[!UICONTROL Skip List]** `audio/mpeg, video/(.*), image/dng, image/x-raw-(.*)`fältet.
 
    ![klibbig](assets/chlimage_1-335.png)
 
-1. Lägg till **[!UICONTROL Camera Raw/DNG Handler]** -steget under steget Skapa **** miniatyrbilder i sidopanelen.
+1. På sidopanelen lägger du till **[!UICONTROL Camera Raw/DNG Handler]** steget under **[!UICONTROL Thumbnail creation]** steget.
 
-1. I steget **[!UICONTROL Camera Raw/DNG Handler]** lägger du till följande konfiguration på fliken **[!UICONTROL Argument]** :
+1. I **[!UICONTROL Camera Raw/DNG Handler]** steget lägger du till följande konfiguration på **[!UICONTROL Arguments]** fliken:
 
-   * **[!UICONTROL Mime-typer]**: `image/dng` och `image/x-raw-(.*)`
-   * **[!UICONTROL Kommando]**:
+   * **[!UICONTROL Mime Types]**: `image/dng` och `image/x-raw-(.*)`
+   * **[!UICONTROL Command]**:
 
       * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.web.1280.1280.jpeg 1280 1280`
       * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.thumbnail.319.319.jpeg 319 319`
@@ -47,19 +50,19 @@ Så här aktiverar du stöd för Camera Raw i Adobe Experience Manager Assets:
       * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.thumbnail.48.48.jpeg 48 48`
    ![chlimage_1-336](assets/chlimage_1-336.png)
 
-1. Click **[!UICONTROL Save]**.
+1. Klicka på **[!UICONTROL Save]**.
 
 >[!NOTE]
 >
->Kontrollera att konfigurationen ovan är densamma som konfigurationen för **[!UICONTROL DAM-uppdateringsresurs med Camera RAW och DNG Handling Step]** .
+>Kontrollera att konfigurationen ovan är densamma som **[!UICONTROL Sample DAM Update Asset With Camera RAW and DNG Handling Step]** konfigurationen.
 
-Nu kan du importera Camera Raw-filer till AEM Resurser. När du har installerat Camera RAW-paketet och konfigurerat det arbetsflöde som krävs visas alternativet **[!UICONTROL Bildjustering]** i listan med sidorutor.
+Nu kan du importera Camera Raw-filer till AEM Resurser. När du har installerat Camera RAW-paketet och konfigurerat det arbetsflöde som krävs visas alternativet i listan med sidorutor **[!UICONTROL Image Adjust]** .
 
 ![chlimage_1-337](assets/chlimage_1-337.png)
 
 *Bild: Alternativ i sidopanelen*
 
-![chlimage_1-337](assets/chlimage_1-338.png)
+![chlimage_1-338](assets/chlimage_1-338.png)
 
 *Bild: Använd det här alternativet om du vill göra små ändringar i dina bilder*
 
