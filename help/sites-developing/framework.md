@@ -10,7 +10,10 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 4b680d17-383b-4173-a444-0b7bdb24e6c8
 translation-type: tm+mt
-source-git-commit: 14daff213297d2435765dd46039f346ce3868ac5
+source-git-commit: eebb765465c90c0ede5957c8bf79a028e1b4f6ce
+workflow-type: tm+mt
+source-wordcount: '1908'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ Så här taggar du innehåll och använder AEM Taggning-infrastrukturen:
 * NodeType för tagged content-noden måste innehålla [`cq:Taggable`](#taggable-content-cq-taggable-mixin) mixin
 * TagID [läggs till i innehållsnodens](#tagid) [`cq:tags`](#tagged-content-cq-tags-property) egenskap och löses till en nod av typen [`cq:Tag`](#tags-cq-tag-node-type)
 
-## Taggar: cq:Tag Node Type {#tags-cq-tag-node-type}
+## Taggar: cq:Tag Node Type  {#tags-cq-tag-node-type}
 
 Deklarationen för en tagg hämtas i databasen i en nod av typen `cq:Tag.`
 
@@ -225,8 +228,7 @@ Nedan följer en beskrivning av effekterna i databasen när du flyttar eller sam
 
 * `cq:movedTo` pekar på tagg B.
 
-   
-Den här egenskapen innebär att tagg A har flyttats eller sammanfogats till tagg B. Om du flyttar tagg B uppdateras den här egenskapen i enlighet med detta. Tagg A är alltså dold och sparas bara i databasen för att matcha tagg-ID:n i innehållsnoder som pekar på tagg A. Taggskräpinsamlaren tar bort taggar som tagg A en gång och inga fler innehållsnoder pekar på dem.
+   Den här egenskapen innebär att tagg A har flyttats eller sammanfogats till tagg B. Om du flyttar tagg B uppdateras den här egenskapen i enlighet med detta. Tagg A är alltså dold och sparas bara i databasen för att matcha tagg-ID:n i innehållsnoder som pekar på tagg A. Taggskräpinsamlaren tar bort taggar som tagg A en gång och inga fler innehållsnoder pekar på dem.
 
    Ett specialvärde för `cq:movedTo` egenskapen är `nirvana`: används när taggen tas bort men inte kan tas bort från databasen eftersom det finns undertaggar med en `cq:movedTo` som måste behållas.
 
@@ -254,3 +256,88 @@ Den här egenskapen innebär att tagg A har flyttats eller sammanfogats till tag
 * Om du vill publicera ändringen när en tagg har flyttats eller sammanfogats måste noden och alla dess bakgrunder replikeras: `cq:Tag` detta görs automatiskt när taggen aktiveras i tagghanteringskonsolen.
 
 * Senare uppdateringar av sidans `cq:tags` egenskap rensar automatiskt de&quot;gamla&quot; referenserna. Detta utlöses eftersom en flyttad tagg som löses via API returnerar måltaggen och därmed anger måltaggens ID.
+
+## Migrering av taggar {#tags-migration}
+
+Taggar från och med Experience Manager 6.4 lagras under `/content/cq:tags`, som tidigare lagrats under `/etc/tags`. I scenarier där Adobe Experience Manager har uppgraderats från en tidigare version finns dock taggarna kvar på den gamla platsen `/etc/tags`. I uppgraderade system måste taggar migreras under `/content/cq:tags`.
+
+> [!NOTE]
+> På sidan Sidegenskaper för taggar rekommenderar vi att du använder tagg-ID (till exempel `geometrixx-outdoors:activity/biking`) i stället för att hårdkoda taggbassökvägen (till exempel `/etc/tags/geometrixx-outdoors/activity/biking`).
+> Om du vill visa taggar `com.day.cq.tagging.servlets.TagListServlet` kan du använda dem.
+
+> [!NOTE]
+> Vi rekommenderar att du använder tagghanterings-API som resurs.
+
+**Om den uppgraderade AEM-instansen har stöd för TagManager API**
+
+1. I början av komponenten identifierar TagManager API om det är en uppgraderad AEM-instans. I uppgraderat system lagras taggarna under `/etc/tags`.
+
+1. API:t TagManager körs sedan i bakåtkompatibilitetsläge, vilket innebär att API:t använder `/etc/tags` som grundsökväg. Annars används en ny plats `/content/cq:tags`.
+
+1. Uppdatera platsen för taggarna.
+
+1. Kör följande skript när du har migrerat taggar till den nya platsen:
+
+```java
+import org.apache.sling.api.resource.*
+import javax.jcr.*
+
+ResourceResolverFactory resourceResolverFactory = osgi.getService(ResourceResolverFactory.class);
+ResourceResolver resolver = resourceResolverFactory.getAdministrativeResourceResolver(null);
+Session session = resolver.adaptTo(Session.class);
+
+def queryManager = session.workspace.queryManager;
+def statement = "/jcr:root/content/cq:tags//element(*, cq:Tag)[jcr:contains(@cq:movedTo,\'/etc/tags\') or jcr:contains(@cq:backlinks,\'/etc/tags\')]";
+def query = queryManager.createQuery(statement, "xpath");
+
+println "query = ${query.statement}\n";
+
+def tags = query.execute().getNodes();
+
+
+tags.each { node ->
+        def tagPath = node.path;
+        println "tag = ${tagPath}";
+
+        if(node.hasProperty("cq:movedTo") && node.getProperty("cq:movedTo").getValue().toString().startsWith("/etc/tags")){
+
+                def movedTo = node.getProperty("cq:movedTo").getValue().toString();
+
+                println "cq:movedTo = ${movedTo} \n";
+
+                movedTo = movedTo.replace("/etc/tags","/content/cq:tags");
+                node.setProperty("cq:movedTo",movedTo);
+        } else if(node.hasProperty("cq:backlinks")){
+
+               String[] backLinks = node.getProperty("cq:backlinks").getValues();
+               int count = 0;
+
+               backLinks.each { value ->
+                       if(value.startsWith("/etc/tags")){
+                               println "cq:backlinks = ${value}\n";
+                               backLinks[count] = value.replace("/etc/tags","/content/cq:tags");
+    }
+                       count++;
+               }
+
+               node.setProperty("cq:backlinks",backLinks);
+  }
+}
+session.save();
+
+println "---------------------------------Success-------------------------------------"
+```
+
+Skriptet hämtar alla taggar som har `/etc/tags` värdet för `cq:movedTo/cq:backLinks` egenskapen. Sedan itereras den genom den hämtade resultatuppsättningen och löser värdena för `cq:movedTo` och `cq:backlinks` egenskapen till `/content/cq:tags` sökvägar (i det fall där `/etc/tags` värdet identifieras).
+
+**Om den uppgraderade AEM-instansen körs på klassiskt gränssnitt**
+
+> [!NOTE]
+> Klassiskt användargränssnitt är inte noll som är nedtidskompatibelt och stöder inte ny taggbassökväg. Om du vill använda ett klassiskt användargränssnitt än vad som behöver skapas, följt av `/etc/tags` `cq-tagging` komponentomstart.
+
+
+Om uppgraderade AEM-instanser stöds av TagManager API och körs i Classic UI:
+
+1. När referenser till den gamla taggbassökvägen `/etc/tags` har ersatts med tagId eller en ny taggplats `/content/cq:tags`kan du migrera taggar till den nya platsen `/content/cq:tags` i CRX följt av komponentomstart.
+
+1. Kör skriptet ovan när du har migrerat taggar till den nya platsen.
