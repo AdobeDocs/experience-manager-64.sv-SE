@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 5a771d8c-cc56-4979-aeab-b508755a2078
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 6de5e6f12f123ca2ec45358a138becc410c89e4e
+workflow-type: tm+mt
+source-wordcount: '691'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +28,7 @@ Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid si
 
 >[!CAUTION]
 >
->Användaren måste ha behörigheten **Ändra/Skapa/Ta bort** på noden `/content/versionhistory` för att kunna använda funktionen.
+>Om du kör en version som är äldre än AEM 6.4.3 måste användaren ha **behörigheten Ändra/Skapa/Ta bort** på noden `/content/versionhistory` för att kunna använda funktionen.
 >
 >Mer teknisk information om den här funktionen finns i [Developing and Page Diff](/help/sites-developing/pagediff.md#operation-details) .
 
