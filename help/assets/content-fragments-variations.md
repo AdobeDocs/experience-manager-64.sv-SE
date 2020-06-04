@@ -10,7 +10,10 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 1cdb2dfc-623b-44cf-9a7b-98cfabbb1d0c
 translation-type: tm+mt
-source-git-commit: 2d25f3154ac4a2b43aec98cf63699cabf0d113cf
+source-git-commit: 69976917f19a695908f1d7e5276d969587671761
+workflow-type: tm+mt
+source-wordcount: '1815'
+ht-degree: 10%
 
 ---
 
@@ -46,7 +49,7 @@ Utför en rad andra åtgärder beroende på vilken datatyp som redigeras. till e
 
 ## Redigera ditt innehåll {#authoring-your-content}
 
-När du öppnar ditt innehållsfragment för redigering öppnas fliken **Variationer** som standard. Här kan du skapa innehållet, för mallsidor eller andra varianter som du har. Du kan:
+När du öppnar ditt innehållsfragment för redigering öppnas fliken **Variationer** som standard. Här kan du skapa innehållet, för mallen eller eventuella varianter som du har. Du kan:
 
 * gör redigeringar direkt på fliken **Variationer**
 * öppna [helskärmsredigeraren](#full-screen-editor) för att:
@@ -55,7 +58,7 @@ När du öppnar ditt innehållsfragment för redigering öppnas fliken **Variati
    * se fler redigeringsalternativ (för [RTF](#rich-text) -format)
    * få tillgång till ett antal [åtgärder](#actions)
 
-Exempel:
+Till exempel:
 
 * Redigera ett enkelt fragment
 
@@ -134,7 +137,7 @@ Med oformaterad text kan du snabbt lägga in innehåll utan formaterings- eller 
 
 >[!CAUTION]
 >
->Om du väljer **Oformaterad text** kan du förlora formatering, markeringar och/eller resurser som du har infogat i **RTF** eller **Markering**.
+>Om du väljer **Oformaterad text** kan du förlora formatering, markdown-kod och/eller resurser som du har infogat i **RTF** eller **Markdown-kod**.
 
 ### Markdown {#markdown}
 
@@ -158,11 +161,11 @@ Du kan även öppna helskärmsredigeraren för ytterligare [åtgärder](#actions
 
 >[!CAUTION]
 >
->Om du växlar mellan **RTF** och **Markdown** kan du få oväntade effekter med Blockcitattecken och Kodblock, eftersom dessa två format kan ha skillnader i hur de hanteras.
+>Om du växlar mellan **RTF** och **Markdown-kod** kan du få oväntade effekter med Blockcitattecken och Kodblock, eftersom dessa båda format kan hanteras på olika sätt.
 
 ### Visa nyckelstatistik {#viewing-key-statistics}
 
-När helskärmsredigeraren är öppen visas ett intervall med information om texten i **textstatistiken** . Exempel:
+När helskärmsredigeraren är öppen visar åtgärden **Textstatistik** information om texten. Till exempel:
 
 ![cfx-6420-22](assets/cfx-6420-22.png)
 
@@ -190,20 +193,20 @@ Att sammanfatta text är utformat för att hjälpa användare att minska längde
 >
 >Engelska finns i körklart skick.
 >
->Andra språk är tillgängliga som språkmodellpaket från paketresurs:
+>Andra språk är tillgängliga som språkmodellpaket från paketresurs eller programdistribution:
 >
->* [Franska (fr)](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-fr)
->* [German (de)](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-de)
->* [Italienska (it)](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-it)
->* [Spanska (es)](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-es)
+>* [Franska (fr) från Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-fr) eller [franska (fr) från Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
+>* [German (de) from Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-de) or [German (de) from Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+>* [Italian (it) from Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-it) or [Italian (it) from Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+>* [Spanska (es) från Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-es) eller [Spanska (es) från Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
 >
 
 
 
-1. Välj **[!UICONTROL mallsida]** eller önskad variant.
+1. Välj **[!UICONTROL Master]** eller önskad variation.
 1. Öppna fullskärmsredigeraren.
 
-1. Välj **[!UICONTROL Sammanfatta text]** i verktygsfältet.
+1. Välj **[!UICONTROL Summarize text]** i verktygsfältet.
 
    ![cf-17](assets/cf-17.png)
 
@@ -215,21 +218,21 @@ Att sammanfatta text är utformat för att hjälpa användare att minska längde
    * Klicka på en mening som inte är markerad för att ta bort den.
    ![cfm-6420-23](assets/cfm-6420-23.png)
 
-1. Markera **[!UICONTROL Sammanfattning]** för att bekräfta ändringarna.
+1. Markera **[!UICONTROL Summarize]** för att bekräfta ändringarna.
 
 ### Anteckna ett innehållsfragment {#annotating-a-content-fragment}
 
 Så här kommenterar du ett fragment:
 
-1. Välj **[!UICONTROL mallsida]** eller önskad variant.
+1. Välj **[!UICONTROL Master]** eller önskad variation.
 1. Öppna fullskärmsredigeraren.
-1. Markera text. Ikonen **[!UICONTROL Anteckning]** blir tillgänglig.
+1. Markera text. Ikonen blir **[!UICONTROL Annotate]** tillgänglig.
 
    ![cfm-6420-24](assets/cfm-6420-24.png)
 
 1. En dialogruta öppnas. Här kan du ange din anteckning.
 
-1. Stäng helskärmsredigeraren och **[!UICONTROL spara]** fragmentet.
+1. Stäng helskärmsredigeraren och **[!UICONTROL Save]** fragmentet.
 
 ### Visa, redigera, ta bort anteckningar {#viewing-editing-deleting-annotations}
 
@@ -243,7 +246,7 @@ Anteckningar:
 
 * När du tar bort hela texten som kommentaren användes på tas även anteckningen bort.
 
-* Kan listas och tas bort genom att välja fliken **[!UICONTROL Anteckningar]** i fragmentredigeraren.
+* Du kan visa och ta bort en lista genom att välja **[!UICONTROL Annotations]** fliken i fragmentredigeraren.
 
    ![cfm-6420-25](assets/cfm-6420-25.png)
 
@@ -266,7 +269,7 @@ De läggs till i fragmentets styckesekvens utan formatering. formatering kan gö
 >Det finns olika metoder för att lägga till [bilder](content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
 
 1. Placera markören på den plats där du vill lägga till bilden.
-1. Använd ikonen **[!UICONTROL Infoga resurs]** för att öppna sökdialogrutan.
+1. Use the **[!UICONTROL Insert Asset]** icon to open the search dialog.
 
    ![cf-insertasset-icon](assets/cf-insertasset-icon.png)
 
@@ -276,14 +279,14 @@ De läggs till i fragmentets styckesekvens utan formatering. formatering kan gö
    * söka efter resursen i DAM
    Välj önskad resurs genom att klicka på miniatyrbilden.
 
-1. Använd **[!UICONTROL Välj]** för att lägga till resursen i innehållsfragmentets styckesystem på den aktuella platsen.
+1. Use **[!UICONTROL Select]** to add the asset to the paragraph system of your content fragment at the current location.
 
    >[!CAUTION]
    >
    >Om du efter att ha lagt till en resurs ändrar formatet till:
    >
-   >* **Oformaterad text**: resursen kommer att förloras helt från fragmentet.
-   >* **Markering**: resursen visas inte, men finns fortfarande kvar när du återgår till **RTF**.
+   >* **Oformaterad text**: Resursen kommer att förloras helt från fragmentet.
+   >* **Markdown-kod**: Resursen visas inte, men finns fortfarande kvar när du återgår till **RTF**.
 
 
 ## Hantera variationer {#managing-variations}
@@ -295,10 +298,10 @@ Med variationer kan du ta **mallinnehållet** och ändra det efter syfte (om det
 Så här skapar du en ny variant:
 
 1. Öppna fragmentet och se till att sidopanelen är synlig.
-1. Välj **[!UICONTROL Variationer]** i ikonfältet på sidpanelen.
-1. Välj **[!UICONTROL Skapa variation]**.
-1. En dialogruta öppnas där du anger **[!UICONTROL titel]** och **[!UICONTROL beskrivning]** för den nya varianten.
-1. Välj **[!UICONTROL Lägg till]**; fragmentmallsidan **** kopieras till den nya varianten som nu är öppen för [redigering](#editing-a-variation).
+1. Välj **[!UICONTROL Variations]** från ikonfältet på sidopanelen.
+1. Välj **[!UICONTROL Create Variation]**.
+1. A dialog will open, specify the **[!UICONTROL Title]** and **[!UICONTROL Description]** for the new variation.
+1. Select **[!UICONTROL Add]**; the fragment **[!UICONTROL Master]** will be copied to the new variation, which is now open for [editing](#editing-a-variation).
 
    >[!NOTE]
    >
@@ -317,13 +320,13 @@ Du kan ändra variantinnehållet efter antingen:
 
 Så här byter du namn på en befintlig variant:
 
-1. Öppna fragmentet och välj **[!UICONTROL Variationer]** på sidpanelen.
+1. Open your fragment and select **[!UICONTROL Variations]** from the side panel.
 1. Välj önskad variant.
-1. Välj **[!UICONTROL Byt namn]** i listrutan **[!UICONTROL Åtgärder]** .
+1. Välj **[!UICONTROL Rename]** i **[!UICONTROL Actions]** listrutan.
 
-1. Ange den nya **[!UICONTROL titeln]** och/eller **[!UICONTROL beskrivningen]** i dialogrutan som visas.
+1. Enter the new **[!UICONTROL Title]** and/or **[!UICONTROL Description]** in the resulting dialog box.
 
-1. Bekräfta åtgärden **[!UICONTROL Byt namn]** .
+1. Bekräfta **[!UICONTROL Rename]** åtgärden.
 
 >[!NOTE]
 >
@@ -333,11 +336,11 @@ Så här byter du namn på en befintlig variant:
 
 Så här tar du bort en befintlig variant:
 
-1. Öppna fragmentet och välj **[!UICONTROL Variationer]** på sidpanelen.
+1. Open your fragment and select **[!UICONTROL Variations]** from the side panel.
 1. Välj önskad variant.
-1. Välj **[!UICONTROL Ta bort]** i listrutan **[!UICONTROL Åtgärder]** .
+1. Välj **[!UICONTROL Delete]** i **[!UICONTROL Actions]** listrutan.
 
-1. Bekräfta åtgärden **[!UICONTROL Ta bort]** i dialogrutan.
+1. Bekräfta **[!UICONTROL Delete]** åtgärden i dialogrutan.
 
 >[!NOTE]
 >
@@ -351,13 +354,13 @@ När du redigerar en variant har du tillgång till åtgärden för att synkronis
 
 >[!CAUTION]
 >
->Synkronisering är bara tillgängligt för att kopiera ändringar *från **mallsida**till varianten*.
+>Synkronisering är bara tillgängligt för att kopiera ändringar *från **mastern**till varianten*.
 >
 >Endast det aktuella elementet i variationen synkroniseras.
 >
->Synkronisering fungerar bara på datatypen **Flerradig text** .
+>Synkronisering fungerar bara på datatypen **Flerradig text**.
 >
->Du kan inte överföra ändringar *från en variant till **mallsida ***.
+>Du kan inte överföra ändringar *från en variant till **mastern ***.
 
 1. Öppna ditt innehållsfragment i fragmentredigeraren. Kontrollera att **mallsidan** har redigerats.
 2. Välj en specifik variant och sedan lämplig synkroniseringsåtgärd från antingen:
@@ -371,5 +374,5 @@ När du redigerar en variant har du tillgång till åtgärden för att synkronis
    * rött anger att innehållet har tagits bort (från varianten)
    ![cfm-6420-27](assets/cfm-6420-27.png)
 
-4. Välj **[!UICONTROL Synkronisera]**. Variationen uppdateras och visas.
+4. Välj **[!UICONTROL Synchronize]** det här alternativet om varianten ska uppdateras och visas.
 
