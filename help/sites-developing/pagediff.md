@@ -10,7 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 13e8cbef-698f-4e69-9f8c-f9bee82e9fd1
 translation-type: tm+mt
-source-git-commit: 835f1ba1f196c6c6303019f0cc310cad850e1682
+source-git-commit: 6de5e6f12f123ca2ec45358a138becc410c89e4e
+workflow-type: tm+mt
+source-wordcount: '481'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Med sidskillnader kan en användare jämföra den aktuella sidan med startsidor,
 
 ## Operationsinformation {#operation-details}
 
-När man jämför versioner av en sida skapas den tidigare versionen som användaren vill jämföra av AEM i bakgrunden för att underlätta skillnaderna. Detta behövs för att kunna återge innehållet [för jämförelse](/help/sites-authoring/page-diff.md#presentation-of-differences)sida vid sida.
+När man jämför olika versioner av en sida skapas den tidigare versionen som användaren vill jämföra om av AEM i bakgrunden för att underlätta skillnaderna. Detta behövs för att kunna återge innehållet [för jämförelse](/help/sites-authoring/page-diff.md#presentation-of-differences)sida vid sida.
 
 Denna rekreationsåtgärd utförs internt av AEM och är transparent för användaren och kräver ingen åtgärd. En administratör som visar databasen, till exempel i CRX DE Lite, skulle dock se dessa återskapade versioner i innehållsstrukturen.
 
@@ -41,7 +44,7 @@ Eftersom AEM återskapar den tidigare versionen av sidan om du använder sidskil
 
 >[!CAUTION]
 >
->För att kunna använda funktionen för sidskillnad måste användaren ha behörigheten** Ändra/Skapa/Ta bort** på noden `/content/versionhistory`.
+>För att kunna använda funktionen för sidskillnad måste användaren ha behörigheten **Ändra/Skapa/Ta bort** på noden `/content/versionhistory`.
 
 ### Från och med AEM 6.4.3 {#as-of-aem}
 
