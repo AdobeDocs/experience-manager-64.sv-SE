@@ -4,9 +4,9 @@ description: Versionsinformation om Adobe Experience Manager 6.4 Cumulative Fix 
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 2aa3037b63f745d158eb87c5156808237277990d
+source-git-commit: b1deed95174e271bbd91814ef4aa6d4fa578cc45
 workflow-type: tm+mt
-source-wordcount: '2134'
+source-wordcount: '2144'
 ht-degree: 0%
 
 ---
@@ -237,7 +237,7 @@ I det här avsnittet listas funktioner som har tagits bort eller tagits bort fr�
 
 ## Kända fel {#known-issues}
 
-* Uppdatering av [!DNL chrome] version 83 orsakar ett problem när paket byggs. Lös problemet genom att använda andra tillgängliga webbläsare, som [!DNL Internet Explorer] och [!DNL Firefox]eller andra installationsalternativ för AEM-standardpaket.
+* När du installerar AEM 6.4.8.1 orsakar uppdateringen av [!DNL Chrome] version 83 ett problem när du skapar paket. Lös problemet genom att använda andra tillgängliga webbläsare, som [!DNL Internet Explorer] och [!DNL Firefox]eller andra installationsalternativ för AEM-standardpaket. Problemet åtgärdas efter installation av AEM 6.4.8.1.
 
 * Det går inte att skicka ett e-postmeddelande till SMTP-fjärrservern med hjälp av AEM-standardavsändaren eftersom den bara tillåter kommunikation med TLS v1.2. Ta bort paketet `javax.mail:mail:1.5.0-b01` från `system/console` och uppdatera paketen för att lösa problemet.
 
