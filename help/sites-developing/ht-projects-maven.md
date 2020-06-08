@@ -10,7 +10,10 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: aee5f5a7-8462-4d42-8d96-8a7eb317770e
 translation-type: tm+mt
-source-git-commit: 0e3c64b43ceba3b8ebee134872123f5c5d03affa
+source-git-commit: 377922cc2ccf40a02467b17910a8750420202b61
+workflow-type: tm+mt
+source-wordcount: '2247'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +44,7 @@ Att bygga ett AEM-projekt baserat på Maven ger dig flera fördelar:
 
 Tidigare var utvecklarna tvungna att hantera ett relativt stort antal enskilda beroenden till olika AEM-bibliotek, och när varje nytt API användes var det nödvändigt att lägga till ett eller flera individuella beroenden i projektet. I ett projekt ledde införandet av UberJar till att 30 olika beroenden togs bort från projektet.
 
-### Hur använder jag UberJar? {#how-to-i-use-the-uberjar}
+### Hur använder jag UberJar? {#how-do-i-use-the-uberjar}
 
 Om du använder Apache Maven som ett byggsystem (vilket är fallet för de flesta AEM Java-projekt) måste du lägga till ett eller två element i *filen pom.xml* . Det första är ett *beroendeelement* som lägger till det faktiska beroendet i ditt projekt:
 
@@ -346,7 +349,7 @@ Den här filen används på flera olika sätt:
 Beroende på programmets krav kan det vara bra att lägga till mer innehåll i sökvägarna, till exempel:
 
 * Konfigurationer för utrullning
-* Blueprints
+* Ritningar
 * Arbetsflödesmodeller
 * Designsidor
 * Exempelinnehåll
@@ -430,7 +433,7 @@ Du måste också konfigurera om plugin-programmet maven-resources-plugin för at
 
 ### Så här arbetar du med JSP:er {#how-to-work-with-jsps}
 
-I Maven-konfigurationen som beskrivits hittills skapas ett innehållspaket som även kan innehålla komponenter och motsvarande JSP:er. Men Maven behandlar dem som andra filer som är en del av innehållspaketet och känner inte ens igen dem som JSP:er.
+I Maven-konfigurationen som beskrivs hittills skapas ett innehållspaket som även kan innehålla komponenter och motsvarande JSP:er. Men Maven behandlar dem som andra filer som är en del av innehållspaketet och känner inte ens igen dem som JSP:er.
 
 De resulterande komponenterna fungerar på samma sätt i AEM, men det finns två stora fördelar med att göra Maven medveten om JSP:erna
 
