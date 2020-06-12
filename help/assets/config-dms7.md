@@ -10,7 +10,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: cd3adbac-9868-4838-9d8a-37dde8973df4
 translation-type: tm+mt
-source-git-commit: 48f7e9ca8038ab0217af251be31b4b0e98f75912
+source-git-commit: 05595377d4a5f24e4f311e5c34f10e6dc964d35e
 workflow-type: tm+mt
 source-wordcount: '5139'
 ht-degree: 3%
@@ -107,7 +107,7 @@ Så här konfigurerar du Dynamic Media Cloud-tjänster:
    ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
 1. Tryck på **[!UICONTROL Save]**.
-1. Om du vill förhandsgranska dynamiskt medieinnehåll på ett säkert sätt innan det publiceras måste du vitlista AEM-författarinstansen för att ansluta till Dynamic Media:
+1. Om du vill förhandsgranska dynamiskt mediematerial på ett säkert sätt innan det publiceras måste du&quot;tillåta&quot; AEM-författarinstansen för att ansluta till Dynamic Media:
 
    * Logga in på ditt konto för Dynamic Media Classic: [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html). Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
    * Tryck på i navigeringsfältet uppe till höger på sidan **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]**.
