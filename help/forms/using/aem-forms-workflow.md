@@ -9,7 +9,10 @@ topic-tags: document_services
 discoiquuid: f8df5fa3-3843-4110-a46d-9a524d2657cd
 noindex: true
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: 5e764edb3d8ed98542c50b80cac40776c886ccf5
+workflow-type: tm+mt
+source-wordcount: '2842'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +42,7 @@ I följande diagram visas hela proceduren för att skapa, köra och övervaka et
 ## Innan du startar {#before-you-start}
 
 * Ett arbetsflöde är en representation av en affärsprocess i verkligheten. Håll er verkliga affärsprocess och lista över deltagarna i affärsprocessen klar. Ha också materialet (adaptiva formulär, PDF-dokument med mera) färdigt innan du börjar skapa ett arbetsflöde.
-*  Ett arbetsflöde kan ha flera steg. De här stegen visas i AEM Inbox och hjälper till att rapportera arbetsflödets förlopp. Dela upp affärsprocessen i logiska steg.
+* Ett arbetsflöde kan ha flera steg. De här stegen visas i AEM Inbox och hjälper till att rapportera arbetsflödets förlopp. Dela upp affärsprocessen i logiska steg.
 * Du kan konfigurera tilldelningssteget i AEM-arbetsflöden för att skicka e-postmeddelanden till användare eller tilldelade användare. Aktivera [e-postmeddelanden](#configure-email-service).
 * Ett arbetsflöde kan även använda Adobe Sign för digitala signaturer. Om du tänker använda Adobe Sign i ett arbetsflöde, [konfigurerar du Adobe Sign för AEM Forms](/help/forms/using/adobe-sign-integration-adaptive-forms.md) innan du använder det i ett arbetsflöde.
 
@@ -64,24 +67,24 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 [Hämta fil](assets/example-mortgage-loan-application.zip)
 
 1. Öppna konsolen Arbetsflödesmodeller. Standardwebbadressen är `https://[Server]:[port]/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models`
-1. Välj **[!UICONTROL Skapa]** och sedan **[!UICONTROL Skapa modell]**. Dialogrutan Lägg till arbetsflödesmodell visas.
-1. Ange **[!UICONTROL Titel]** och **[!UICONTROL Namn]** (valfritt). Till exempel en låneansökan. Tryck på **[!UICONTROL Klar]**.
+1. Välj **[!UICONTROL Create]** sedan **[!UICONTROL Create Model]**. Dialogrutan Lägg till arbetsflödesmodell visas.
+1. Ange **[!UICONTROL Title]** och **[!UICONTROL Name]** (valfritt). Till exempel en låneansökan. Tryck på **[!UICONTROL Done]**.
 1. Välj den nya arbetsflödesmodellen och tryck på **Redigera.** Nu kan du lägga till arbetsflödessteg för att skapa affärslogik. När du först skapar en arbetsflödesmodell innehåller den:
 
    * Stegen: Flödesstart och Flödesslut. De här stegen representerar början och slutet av arbetsflödet. Dessa steg är obligatoriska och kan inte redigeras eller tas bort.
    * Ett exempel på deltagarsteg som heter Steg 1. Det här steget är konfigurerat för att tilldela en arbetsuppgift till administratörsanvändaren. Ta bort det här steget.
 
-1. Aktivera e-postmeddelanden. Du kan konfigurera ett formulärorienterat arbetsflöde i OSGi för att skicka e-postmeddelanden till användare eller tilldelade användare. Gör följande konfigurationer för att aktivera e-postmeddelanden:
+1. Aktivera e-postmeddelanden. Du kan konfigurera formulärcentrerade arbetsflöden i OSGi för att skicka e-postmeddelanden till användare eller tilldelade användare. Gör följande konfigurationer för att aktivera e-postmeddelanden:
 
    1. Gå till AEM-konfigurationshanteraren på `https://[server]:[port]/system/console/configMgr`.
-   1. Öppna konfigurationen för **[!UICONTROL daglig CQ Mail Service]** . Ange ett värde för **[!UICONTROL SMTP-serverns värdnamn]**, **** SMTP-serverport och adressfälten **** &quot;Från&quot;. Click **[!UICONTROL Save]**.
-   1. Öppna **[!UICONTROL Dag CQ Link Externalizer]** -konfigurationen. I fältet **[!UICONTROL Domäner]** anger du den faktiska värdnamnet/IP-adressen och portnumret för lokala instanser, författare och publiceringsinstanser. Click **[!UICONTROL Save]**.
+   1. Öppna **[!UICONTROL Day CQ Mail Service]** konfigurationen. Ange ett värde för fälten **[!UICONTROL SMTP server host name]**, **[!UICONTROL SMTP server port,]** och **[!UICONTROL "From" address]** . Klicka på **[!UICONTROL Save]**.
+   1. Öppna **[!UICONTROL Day CQ Link Externalizer]** konfigurationen. I **[!UICONTROL Domains]** fältet anger du den faktiska värdnamnet/IP-adressen och portnumret för lokala instanser, författare och publiceringsinstanser. Klicka på **[!UICONTROL Save]**.
 
-1. Skapa arbetsflödesfaser.  Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inbox och rapporterar förloppet för arbetsflödet.
+1. Skapa arbetsflödesfaser. Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inbox och rapporterar förloppet för arbetsflödet.
 
-   Om du vill definiera en scen trycker du på ikonen ![informationscirkel](assets/info-circle.png) för att öppna arbetsflödesmodellens egenskaper, öppnar fliken **[!UICONTROL Steg]** , lägger till faser för arbetsflödesmodellen och trycker på **[!UICONTROL Spara och stäng]**. I exemplet med låneansökan skapar du faser: låneansökan, låneanspråksstatus, signerade dokument och signerade lånedokument.
+   Om du vill definiera en scen trycker du på ikonen ![informationscirkel](assets/info-circle.png) för att öppna arbetsflödesmodellens egenskaper, öppnar **[!UICONTROL Stages]** fliken, lägger till faser för arbetsflödesmodellen och trycker på **[!UICONTROL Save & Close]**. I exemplet med låneansökan skapar du faser: låneansökan, låneanspråksstatus, signerade dokument och signerade lånedokument.
 
-1. Dra och släpp webbläsaren **[!UICONTROL Tilldela uppgift]** -steg till arbetsflödesmodellen. Gör det till modellens första steg.
+1. Dra och släpp **[!UICONTROL Assign Task]** stegwebbläsaren till arbetsflödesmodellen. Gör det till modellens första steg.
 
    Tilldela en uppgiftskomponent tilldelar uppgiften, som skapas i ett arbetsflöde, till en användare eller grupp. Förutom att tilldela uppgiften kan du använda komponenten för att ange ett adaptivt formulär eller en icke-interaktiv PDF för uppgiften. Det adaptiva formuläret krävs för att kunna ta emot indata från användare och icke-interaktiva PDF-filer eller ett skrivskyddat anpassat formulär används endast för granskning.
 
@@ -89,7 +92,7 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
    ![arbetsflödesredigerare](assets/workflow-editor.png)
 
-   I exemplet med låneansökan ska du konfigurera tilldelningssteget så att det använder ett skrivskyddat anpassat formulär och visa PDF-dokumentet när uppgiften är klar. Välj även en användargrupp som kan godkänna lånebegäran. På fliken **[!UICONTROL Åtgärder]** inaktiverar du alternativet **[!UICONTROL Skicka]** . Ange en **[!UICONTROL routningsvariabel]**. Till exempel actionTaken. Lägg även till rutterna Godkänn och Avvisa. Vägarna visas som separata åtgärder (knappar) i AEM Inbox. Arbetsflödet väljer en gren baserat på den åtgärd (knapp) som användaren knackar på.
+   I exemplet med låneansökan ska du konfigurera tilldelningssteget så att det använder ett skrivskyddat anpassat formulär och visa PDF-dokumentet när uppgiften är klar. Välj även en användargrupp som kan godkänna lånebegäran. Inaktivera **[!UICONTROL Actions]** alternativet på **[!UICONTROL Submit]** fliken. Ange en **[!UICONTROL Route Variable]**. Till exempel actionTaken. Lägg även till rutterna Godkänn och Avvisa. Vägarna visas som separata åtgärder (knappar) i AEM Inbox. Arbetsflödet väljer en gren baserat på den åtgärd (knapp) som användaren knackar på.
 
    Du kan importera exempelpaketet, som är tillgängligt för hämtning i början av avsnittet, för den fullständiga uppsättningen värden för alla fält i tilldelningssteget som konfigurerats för exempelvis låneprogram.
 
@@ -99,7 +102,7 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
    **Kodfragment för gren 1**
 
-   När en användare trycker på **[!UICONTROL Godkänn]** i AEM Inbox aktiveras gren 1.
+   När en användare trycker **[!UICONTROL Approve]** i AEM Inbox aktiveras Förgrening 1.
 
    ```
    function check(){
@@ -111,7 +114,7 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
    **Kodfragment för gren 2**
 
-   När en användare trycker på **[!UICONTROL Avvisa]** i AEM Inbox aktiveras gren 2.
+   När en användare trycker **[!UICONTROL Reject]** i AEM Inbox aktiveras gren 2.
 
    ```
    function check(){
@@ -127,7 +130,7 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
    Om du vill visa en komplett uppsättning värden för alla fält i tilldelningsstegen, dokumentsteget och signeringsdokumentsteget som konfigurerats för exempelvis låneprogram importerar du exempelpaketet som är tillgängligt för hämtning i början av det här avsnittet.
 
-   Arbetsflödesmodellen är klar. Du kan starta arbetsflödet på olika sätt. Mer information finns i [Starta ett formulärcentrerat arbetsflöde i OSGi](/help/forms/using/aem-forms-workflow.md#main-pars-header).
+   Arbetsflödesmodellen är klar. Du kan starta arbetsflödet på olika sätt. Mer information finns i [Starta ett formulärcentrerat arbetsflöde i OSGi](#launch).
 
    ![arbetsflödeseditor-inteckning](assets/workflow-editor-mortgage.png)
 
@@ -139,8 +142,8 @@ Programmet är det adaptiva formulär som är associerat med arbetsflödet. När
 >
 >Du måste vara medlem i gruppen fd-administrator för att kunna skapa och hantera arbetsflödesprogram.
 
-1. Gå till ![verktyg](assets/tools.png) > **[!UICONTROL Formulär]** > **[!UICONTROL Hantera arbetsflödesprogram]** och tryck på **[!UICONTROL Skapa]** i AEM-författarinstansen.
-1. I fönstret Skapa arbetsflödesprogram anger du indata för följande fält och trycker på **[!UICONTROL Skapa]**. Ett nytt program skapas och visas på skärmen Arbetsflödesprogram.
+1. Gå till ![verktyg](assets/tools.png) > **[!UICONTROL Forms]** > **[!UICONTROL Manage Workflow Application]** och tryck **[!UICONTROL Create]** på din AEM-författare.
+1. Ange indata för följande fält i fönstret Skapa arbetsflödesprogram och tryck sedan på **[!UICONTROL Create]**. Ett nytt program skapas och visas på skärmen Arbetsflödesprogram.
 
 <table> 
  <tbody> 
@@ -213,7 +216,7 @@ Appen AEM Forms synkroniseras med en AEM Forms-server och du kan ändra formulä
 
 ### Skicka ett anpassat formulär {#af}
 
-Du kan konfigurera skicka-åtgärderna för ett adaptivt formulär så att ett arbetsflöde startas när det adaptiva formuläret skickas. Med adaptiva formulär kan **[!UICONTROL du starta ett arbetsflöde när du skickar ett anpassat formulär genom att anropa ett AEM-arbetsflöde]** . Mer information om åtgärden Skicka finns i [Konfigurera åtgärden](/help/forms/using/configuring-submit-actions.md)Skicka. Om du vill skicka ett adaptivt formulär via appen AEM Forms aktiverar du Synkronisera med appen AEM Forms i de adaptiva formuläregenskaperna.
+Du kan konfigurera skicka-åtgärderna för ett adaptivt formulär så att ett arbetsflöde startas när det adaptiva formuläret skickas. Med adaptiva formulär kan du skicka in formulär för att starta ett arbetsflöde när du skickar in ett anpassat formulär. **[!UICONTROL Invoke an AEM Workflow]** Mer information om åtgärden Skicka finns i [Konfigurera åtgärden](/help/forms/using/configuring-submit-actions.md)Skicka. Om du vill skicka ett adaptivt formulär via appen AEM Forms aktiverar du Synkronisera med appen AEM Forms i de adaptiva formuläregenskaperna.
 
 Du kan konfigurera ett anpassningsbart formulär så att det synkroniserar, skickar och utlöser ett arbetsflöde från appen AEM Forms. Mer information finns i [Arbeta med ett formulär](/help/forms/using/working-with-form.md).
 
@@ -221,8 +224,8 @@ Du kan konfigurera ett anpassningsbart formulär så att det synkroniserar, skic
 
 En administratör (medlem i gruppen fd-administratörer) kan konfigurera en nätverksmapp så att den kör ett förkonfigurerat arbetsflöde när en användare placerar en fil (t.ex. en PDF-fil) i mappen. När arbetsflödet har slutförts kan resultatfilen sparas i en angiven utdatamapp. En sådan mapp kallas [Bevakad mapp](/help/forms/using/watched-folder-in-aem-forms.md). Så här konfigurerar du en bevakad mapp för att starta ett arbetsflöde:
 
-1. Gå till ![Verktyg](assets/tools.png) > **[!UICONTROL Formulär > Konfigurera bevakad mapp]** i din AEM-författarinstans.  En lista över redan konfigurerade bevakade mappar visas.
-1. Tryck på **[!UICONTROL Nytt]**. En lista med fält visas. Ange ett värde för följande fält för att konfigurera en bevakad mapp för ett arbetsflöde:
+1. Gå till ![verktyg](assets/tools.png) i din AEM-författarinstans **[!UICONTROL Forms > Configure Watched Folder]**. En lista över redan konfigurerade bevakade mappar visas.
+1. Tryck på **[!UICONTROL New]**. En lista med fält visas. Ange ett värde för följande fält för att konfigurera en bevakad mapp för ett arbetsflöde:
 
 <table> 
  <tbody> 
@@ -253,7 +256,7 @@ En administratör (medlem i gruppen fd-administratörer) kan konfigurera en nät
  </tbody> 
 </table>
 
-1. Tryck på **[!UICONTROL Avancerat]**. Ange ett värde för följande fält och tryck på **[!UICONTROL Skapa]**. Den bevakade mappen är konfigurerad för att starta ett arbetsflöde. När en fil placeras i indatakatalogen för den bevakade mappen aktiveras nu det angivna arbetsflödet.
+1. Tryck på **[!UICONTROL Advanced]**. Ange ett värde för följande fält och tryck på **[!UICONTROL Create]**. Den bevakade mappen är konfigurerad för att starta ett arbetsflöde. När en fil placeras i indatakatalogen för den bevakade mappen aktiveras nu det angivna arbetsflödet.
 
    | Fält | Beskrivning |
    |---|---|
@@ -272,8 +275,8 @@ Du kan associera och köra ett formulärcentrerat arbetsflöde i OSGi när du sk
 Du kan använda stegen Tilldela uppgift och Skicka e-post i AEM-arbetsflöden för att skicka ett e-postmeddelande. Utför följande steg för att ange e-postservrar och andra konfigurationer som krävs för att skicka e-post:
 
 1. Gå till AEM-konfigurationshanteraren på `https://[server]:[port]/system/console/configMgr`.
-1. Öppna konfigurationen för **[!UICONTROL daglig CQ Mail Service]** . Ange ett värde för **[!UICONTROL SMTP-serverns värdnamn]**, **** SMTP-serverport och adressfälten **** &quot;Från&quot;. Click **[!UICONTROL Save]**.
-1. Öppna **[!UICONTROL Dag CQ Link Externalizer]** -konfigurationen. I fältet **[!UICONTROL Domäner]** anger du den faktiska värdnamnet/IP-adressen och portnumret för lokala instanser, författare och publiceringsinstanser. Click **[!UICONTROL Save]**.
+1. Öppna **[!UICONTROL Day CQ Mail Service]** konfigurationen. Ange ett värde för fälten **[!UICONTROL SMTP server host name]**, **[!UICONTROL SMTP server port,]** och **[!UICONTROL "From" address]** . Klicka på **[!UICONTROL Save]**.
+1. Öppna **[!UICONTROL Day CQ Link Externalizer]** konfigurationen. I **[!UICONTROL Domains]** fältet anger du den faktiska värdnamnet/IP-adressen och portnumret för lokala instanser, författare och publiceringsinstanser. Klicka på **[!UICONTROL Save]**.
 
 ### Rensa arbetsflödesinstanser {#purge-workflow-instances}
 
