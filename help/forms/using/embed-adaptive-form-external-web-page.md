@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: author
 discoiquuid: b99c7b93-ba05-42ee-9ca8-0079e15d8602
 translation-type: tm+mt
-source-git-commit: 7a5fb38ada7e7ad76525449e35f64b133aa5e39f
+source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+workflow-type: tm+mt
+source-wordcount: '1271'
+ht-degree: 0%
 
 ---
 
@@ -113,7 +116,7 @@ Det anpassningsbara formuläret är inbäddat på webbsidan. Observera följande
 * Upplevelsemål och A/B-tester som konfigurerats i det ursprungliga adaptiva formuläret fungerar inte i det inbäddade formuläret.
 * Om Adobe Analytics är konfigurerat på originalformuläret hämtas analysdata till Adobe Analytics-servern. Den är dock inte tillgänglig i Forms Analytics-rapporten.
 
-## Konfigurera omvänd proxy {#reveseproxy}
+## Konfigurera omvänd proxy  {#reveseproxy}
 
 Den externa webbsidan som bäddar in det adaptiva formuläret skickar begäranden till AEM-servern, som vanligtvis sitter bakom brandväggen i ett privat nätverk. För att säkerställa att förfrågningarna dirigeras till AEM-servern på ett säkert sätt bör du konfigurera en omvänd proxyserver.
 
@@ -160,11 +163,11 @@ Tänk på följande när du bäddar in ett anpassat formulär på en webbsida:
 
 * Kontrollera att formateringsreglerna som definieras i webbsidans CSS inte är i konflikt med formulärobjektets CSS. För att undvika konflikterna kan du återanvända webbsidans CSS i det adaptiva formulärtemat med hjälp av AEM-klientbiblioteket. Mer information om hur du använder klientbiblioteket i adaptiva formulärteman finns i [Teman i AEM-formulär](/help/forms/using/themes.md).
 * Låt formulärbehållaren på webbsidan använda hela fönsterbredden. Det ser till att CSS-reglerna som konfigurerats för mobila enheter fungerar utan ändringar. Om formulärbehållaren inte får hela fönsterbredden måste du skriva anpassad CSS så att formuläret kan anpassas till olika mobila enheter.
-* Använd ` [getData](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` API för att hämta XML- eller JSON-representationen av formulärdata i klienten.
-* Använd ` [unloadAdaptiveForm](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` API för att ta bort det adaptiva formuläret från HTML DOM.
+* Använd [getData](https://helpx.adobe.com/experience-manager/6-4/forms/javascript-api/GuideBridge.html) API för att hämta XML- eller JSON-representationen av formulärdata i klienten.
+* Använd [unloadAdaptiveForm](https://helpx.adobe.com/experience-manager/6-4/forms/javascript-api/GuideBridge.html) API för att ta bort det adaptiva formuläret från HTML DOM.
 * Ange huvudet för åtkomstkontrollens ursprung när du skickar svar från AEM-servern.
 
-## Aktivera AEM Forms för att skicka adaptiva formulär till en domänövergripande webbplats {#cross-domain-sites}
+## Aktivera AEM Forms för att skicka adaptiva formulär till en domänövergripande webbplats  {#cross-domain-sites}
 
 1. På AEM-författarinstansen går du till AEM Web Console Configuration Manager på `http://[server]:[port]/system/console/configMgr`.
 1. Leta reda på och öppna **filterkonfigurationen för** Apache Sling Referrer.
