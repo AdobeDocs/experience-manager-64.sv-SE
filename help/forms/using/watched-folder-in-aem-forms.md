@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: 442cd4bb-21b8-4d9d-89a4-402ee22c79a7
 translation-type: tm+mt
-source-git-commit: 9d13589ea95329dc6a9d3dbf3a5a9930998597f5
+source-git-commit: 3cc4e08b3a69851e5d4e79eb8159ee00e8f333a0
 workflow-type: tm+mt
-source-wordcount: '7663'
+source-wordcount: '7662'
 ht-degree: 0%
 
 ---
@@ -19,17 +19,17 @@ ht-degree: 0%
 
 # Bevakad mapp i AEM Forms {#watched-folder-in-aem-forms}
 
-En administratör kan konfigurera en nätverksmapp, en s.k. bevakad mapp, så att när en användare monterar en fil (t.ex. en PDF-fil) i den bevakade mappen så startas ett förkonfigurerat arbetsflöde, en tjänst eller ett skript för att bearbeta den tillagda filen. När tjänsten har utfört den angivna åtgärden sparas resultatfilen i en angiven utdatamapp. Mer information om arbetsflöde, tjänst och skript finns i [Olika metoder för att bearbeta filer](/help/forms/using/watched-folder-in-aem-forms.md#main-pars-header-4).
+En administratör kan konfigurera en nätverksmapp, en s.k. bevakad mapp, så att när en användare monterar en fil (t.ex. en PDF-fil) i den bevakade mappen så startas ett förkonfigurerat arbetsflöde, en tjänst eller ett skript för att bearbeta den tillagda filen. När tjänsten har utfört den angivna åtgärden sparas resultatfilen i en angiven utdatamapp. Mer information om arbetsflöde, tjänst och skript finns i [Olika metoder för att bearbeta filer](#variousmethodsforprocessingfiles).
 
 ## Skapa en bevakad mapp {#create-a-watched-folder}
 
 Du kan använda någon av följande metoder för att skapa en bevakad mapp i filsystemet:
 
-* När du konfigurerar egenskaperna för en speciell nod i konfigurationen för bevakad mapp anger du den fullständiga sökvägen till den överordnade katalogen i egenskapen folderPath och lägger till namnet på den bevakade mapp som ska skapas, vilket visas i följande exempel: `C:/MyPDFs/MyWatchedFolder`
+* När du konfigurerar egenskaperna för en nod för konfiguration av bevakad mapp anger du den fullständiga sökvägen till den överordnade katalogen i egenskapen folderPath och lägger till namnet på den bevakade mapp som ska skapas, vilket visas i följande exempel: `C:/MyPDFs/MyWatchedFolder`
 
    Mappen `MyWatchedFolder`finns inte. AEM Forms försöker skapa mappen med den angivna sökvägen.
 
-* Skapa en mapp på filsystemet innan du konfigurerar en bevakad mappslutpunkt och ange sedan den fullständiga sökvägen i egenskapen folderPath. Mer information om egenskapen folderPath finns i Egenskaper [för](/help/forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)bevakad mapp.
+* Skapa en mapp på filsystemet innan du konfigurerar en bevakad mappslutpunkt och ange sedan den fullständiga sökvägen i egenskapen folderPath. Mer information om egenskapen folderPath finns i Egenskaper [för](#watchedfolderproperties)bevakad mapp.
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ Om du vill konfigurera en bevakad mapp skapar du en konfigurationsnod för bevak
    * `inputProcessorType`
    * `inputProcessorId`
    * `outputFilePattern`
-   En fullständig lista över egenskaper som stöds finns i Egenskaper [för](/help/forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)bevakad mapp.
+   En fullständig lista över egenskaper som stöds finns i Egenskaper [för](#watchedfolderproperties)bevakad mapp.
 
 1. Klicka på **Spara alla**. När noden har skapats och egenskaperna har sparats. Mapparna `input`, `result`, `failure`, `preserve`och `stage`skapas på den sökväg som anges i `folderPath` egenskapen.
 
@@ -80,8 +80,9 @@ Du kan konfigurera följande egenskaper för en bevakad mapp.
    * författare, publicera
 
    * publicera, författare
-
-**Obs**: *Om servern som är värd för den bevakade mappen inte har något av det angivna körningsläget aktiveras alltid den bevakade mappen oavsett serverns körningslägen.*
+   >[!NOTE]
+   >
+   >Om servern som är värd för den bevakade mappen inte har något av det angivna körningsläget aktiveras alltid den bevakade mappen oavsett serverns körningslägen.
 
 * **outputFilePattern (String)**: Utdatafilens mönster. Du kan ange en mapp eller ett filmönster. Om ett mappmönster anges har utdatafilerna namn enligt arbetsflödena. Om ett filmönster anges har utdatafilerna namn som beskrivs i filmönstret. [Fil- och mappmönstret](/help/forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p) kan även ange en katalogstruktur för utdatafilerna. Det är en obligatorisk egenskap.
 
@@ -162,7 +163,7 @@ Mer information om filmönster finns i [Om filmönster](/help/forms/using/watche
 * **overwriteDuplicateFilename (Boolean)**: När värdet är True skrivs filerna i resultatmappen och i den bevarade mappen över. Om värdet är Falskt används filer och mappar med ett numeriskt indexsuffix för namnet. Standardvärdet är Falskt.
 * **preserveOnFailure (Boolean)**: Bevara indatafiler om det inte går att utföra åtgärden på en tjänst. Standardvärdet är true.
 * **inputFilePattern (String)**: Anger mönstret för indatafilerna för en bevakad mapp. Skapar en vitlista över filerna.
-* **asynk (Boolean)**: Identifierar anropstypen som asynkron eller synkron. Standardvärdet är true (asynkront). Filbearbetningen är en resurskrävande uppgift. Behåll värdet för asynch-flaggan till true för att förhindra att huvudtråden i sökningsjobbet kvävs. I en klustermiljö är det viktigt att flaggan är true för att det ska gå att använda belastningsutjämning för de filer som bearbetas på de tillgängliga servrarna. Om flaggan är false försöker sökningsjobbet att utföra bearbetning för varje fil/mapp på den översta nivån sekventiellt i sin egen tråd. Ange inte flaggan till false utan en specifik orsak, till exempel arbetsflödesbaserad bearbetning i en enskild serverkonfiguration.
+* **asynk (Boolean)**: Identifierar anropstypen som asynkron eller synkron. Standardvärdet är true (asynkront). Filbearbetningen är en resurskrävande uppgift. Behåll värdet för asynch-flaggan till true för att förhindra att huvudtråden i sökningsjobbet kvävs. I en klustermiljö är det viktigt att flaggan är true för att det ska gå att använda belastningsutjämning för de filer som bearbetas på de tillgängliga servrarna. Om flaggan är false försöker sökningsjobbet att bearbeta varje fil/mapp på den översta nivån sekventiellt i sin egen tråd. Ange inte flaggan till false utan en specifik orsak, till exempel arbetsflödesbaserad bearbetning i en enskild serverkonfiguration.
 
 >[!NOTE]
 >
@@ -283,7 +284,7 @@ processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docm
 
 Som standard finns en behållarmapp (/etc/fd/watchfolder/scripts) där kunderna kan placera sina skript, och standardtjänstanvändaren som används av ramverket för bevakade mappar har de behörigheter som krävs för att läsa skript från den här platsen.
 
-Om du tänker placera dina skript på en anpassad plats är det troligt att standardtjänstanvändaren inte har läsbehörighet över den anpassade platsen. Så här anger du nödvändig behörighet till den anpassade platsen:
+Om du tänker placera dina skript på en anpassad plats, är det troligt att standardtjänstanvändaren inte har läsbehörighet över den anpassade platsen. Så här anger du nödvändig behörighet till den anpassade platsen:
 
 1. Skapa en systemanvändare programmatiskt eller via konsolen `https://[server]:[port]/crx/explorer`. Du kan också använda en befintlig systemanvändare. Det är viktigt att du arbetar med systemanvändare här i stället för med vanliga användare.
 1. Ge läsbehörighet till den nyskapade eller befintliga systemanvändaren på den anpassade plats där skripten lagras. Du kan ha flera anpassade platser. Ange minst läsbehörighet för alla anpassade platser.
@@ -296,7 +297,7 @@ Nu kan du använda konfigurerad anpassad plats för att spara skripten.
 
 Med arbetsflöden kan ni automatisera Experience Manager-aktiviteter. Arbetsflöden består av en serie steg som körs i en viss ordning. Varje steg utför en distinkt aktivitet som att aktivera en sida eller skicka ett e-postmeddelande. Arbetsflöden kan interagera med resurser i databasen, användarkonton och Experience Manager-tjänster. Därför kan arbetsflöden koordinera komplicerade saker.
 
-* Innan du skapar ett arbetsflöde bör du tänka på följande:
+* Tänk på följande innan du skapar ett arbetsflöde:
 * Resultatet av ett steg måste vara tillgängligt för alla efterföljande steg.
 
    Stegen måste kunna uppdatera (eller till och med ta bort) befintliga utdata som genererats av föregående steg.
@@ -540,7 +541,7 @@ Om den bevakade mappen inte kan bearbeta källfilerna i scenmappen kan du åters
 
    >[!NOTE]
    >
-   >Du kan titta på datum- och tidsstämpeln för filerna i scenkatalogen. Beroende på antalet filer och den normala bearbetningstiden kan du avgöra vilka filer som är tillräckligt gamla för att anses ha fastnat.
+   >Du kan titta på datum- och tidsstämpeln för filerna i scenkatalogen. Beroende på antalet filer och den normala bearbetningstiden kan du avgöra vilka filer som är tillräckligt gamla för att betraktas som fasta.
 
 1. Kopiera de obearbetade filerna från scenkatalogen till indatakatalogen.
 
@@ -669,7 +670,7 @@ ECMAScript använder PDF Generators createPDF-API för att konvertera Microsoft 
    * inputProcessorId (String): Beteendet för egenskapen inputProcessorId baseras på det värde som anges för egenskapen inputProcessorType. I det här exemplet är värdet för egenskapen inputProcessorType arbetsflöde. Ange därför följande sökväg för PDFG-arbetsflödet för egenskapen inputProcessorId: /etc/workflow/models/pdfg/jcr:content/model
 
    * outputFilePattern (String): Utdatafilens mönster. Du kan ange en mapp eller ett filmönster. Om ett mappmönster anges har utdatafilerna namn enligt arbetsflödena. Om ett filmönster anges har utdatafilerna namn som beskrivs i filmönstret.
-   Förutom de obligatoriska egenskaper som nämns ovan, har Bevakade mappar även stöd för några valfria egenskaper. En fullständig lista och en beskrivning av valfria egenskaper finns i Egenskaper för [bevakad mapp](/help/forms/using/watched-folder-in-aem-forms.md#main-pars-header-1).
+   Förutom de obligatoriska egenskaper som nämns ovan, har Bevakade mappar även stöd för några valfria egenskaper. En fullständig lista och en beskrivning av valfria egenskaper finns i Egenskaper för [bevakad mapp](#watchedfolderproperties).
 
 ## Använda Central migreringsbrygga (borttagen) med en bevakad mapp {#using-central-migration-bridge-deprecated-with-a-watched-folder}
 
@@ -750,4 +751,4 @@ ECMAScript använder PDF Generators createPDF-API för att konvertera Microsoft 
 
    * **outputFilePattern (String)**: Utdatafilens mönster. Du kan ange en mapp eller ett filmönster. Om ett mappmönster anges har utdatafilerna namn enligt arbetsflödena. Om ett filmönster anges har utdatafilerna namn som beskrivs i filmönstret.
 
-Förutom de obligatoriska egenskaper som nämns ovan, har Bevakade mappar även stöd för några valfria egenskaper. En fullständig lista och beskrivning av valfria egenskaper finns i Egenskaper för [bevakad mapp](/help/forms/using/watched-folder-in-aem-forms.md#main-pars-header-1).
+Förutom de obligatoriska egenskaper som nämns ovan, har Bevakade mappar även stöd för några valfria egenskaper. En fullständig lista och beskrivning av valfria egenskaper finns i Egenskaper för [bevakad mapp](#watchedfolderproperties).
