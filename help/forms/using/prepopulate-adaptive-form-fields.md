@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 2ddb33a5-0d62-46f4-8f8c-0f0807a975cb
 translation-type: tm+mt
-source-git-commit: 8b5a3e1f6616c3a07da91e4347596961ac4a8e22
+source-git-commit: f234d368163f4260563d69230a2cbda37b6d315a
+workflow-type: tm+mt
+source-wordcount: '2012'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Ett anpassningsbart formulär kan ha en blandning av bundna och obundna fält. B
 Du kan förifylla både bundna och obundna fält i ett anpassat formulär. Prefill-data innehåller avsnitten afBoundData och afUnBoundData för att förifylla både bundna och obundna fält i ett adaptivt formulär. Avsnittet innehåller förifyllda data för bundna fält och paneler. `afBoundData` Dessa data måste vara kompatibla med det associerade formulärmodellschemat:
 
 * För adaptiva formulär som använder [XFA-formulärmallen](/help/forms/using/prepopulate-adaptive-form-fields.md)använder du den förifyllda XML-filen som är kompatibel med XFA-mallens dataschema.
-* För adaptiva formulär som använder [XML-schema](/help/forms/using/prepopulate-adaptive-form-fields.md#main-pars-header-3)använder du den förifyllda XML-koden som är kompatibel med XML-schemastrukturen.
+* För adaptiva formulär som använder [XML-schema](#xml-schema-af)använder du den förifyllda XML-koden som är kompatibel med XML-schemastrukturen.
 * För adaptiva formulär som använder [JSON-schema](/help/forms/using/prepopulate-adaptive-form-fields.md#json-schema-based-adaptive-forms)ska du använda JSON-prefyllnad som är kompatibel med JSON-schemat.
 * För anpassningsbara formulär med FDM-schema använder du JSON-funktionen för förifyllnad som är kompatibel med FDM-schemat.
 * För anpassningsbara formulär utan [någon formulärmodell](/help/forms/using/prepopulate-adaptive-form-fields.md#p-adaptive-form-with-no-form-model-p)finns det inga bundna data. Varje fält är ett obundet fält och är förifyllt med den obundna XML-koden.
@@ -87,7 +90,7 @@ Prefill-Submit-Data-ContentPackage.zip
 
 [Hämta File](assets/prefill-submit-data-contentpackage.zip)Sample som innehåller förifyllda data och skickade data
 
-## XML-schemabaserade adaptiva formulär {#xml-schema-af}
+## XML-schemabaserade adaptiva formulär  {#xml-schema-af}
 
 Strukturen för förifylld XML och inskickad XML för adaptiva formulär baserade på XML-schema är följande:
 
@@ -231,15 +234,15 @@ Om du vill aktivera förifyllningstjänsten anger du standardkonfigurationen fö
 >
 >Konfiguration av förifyllningstjänsten kan användas för adaptiva formulär, HTML5-formulär och HTML5-formuläruppsättningar.
 
-1. Öppna **[!UICONTROL Adobe Experience Manager Web Console-konfigurationen]** med URL:en:\
+1. Öppna **[!UICONTROL Adobe Experience Manager Web Console Configuration]** med URL:\
    https://&lt;server>:&lt;port>/system/console/configMgr
-1. Sök efter och öppna **[!UICONTROL standardkonfigurationen]** för förifyllningstjänsten.
+1. Sök och öppna **[!UICONTROL Default Prefill Service Configuration]**.
 
    ![prefill_config](assets/prefill_config.png)
 
-1. Ange dataplatsen eller en region (reguljärt uttryck) för **[!UICONTROL datafilernas platser]**. Exempel på giltiga platser för datafiler är:
+1. Ange dataplatsen eller ett regex (reguljärt uttryck) för **[!UICONTROL Data files locations]**. Exempel på giltiga platser för datafiler är:
 
-   * file:///C:/Users/public/Document/Prefill/. &amp;ast;
+   * file:///C:/Users/public/Document/Prefill/.&amp;ast;
    * http://localhost:8000/somesamplexmlfile.xml
    >[!NOTE]
    >
@@ -274,7 +277,7 @@ http://localhost:4502/content/forms/af/xml.html?wcmmode=disabled&dataRef=crx:///
 
 Den angivna noden måste ha en egenskap som kallas `jcr:data` och innehåller data.
 
-### file:// {#the-file-protocol-nbsp}
+### file://  {#the-file-protocol-nbsp}
 
 ```xml
 http://localhost:4502/content/forms/af/someAF.html?wcmmode=disabled&dataRef=file:///C:/Users/form-user/Downloads/somesamplexml.xml
@@ -363,6 +366,6 @@ Mallpaketet (exempelpaketet för förifyllning) innehåller exempel på implemen
 Starta förifyllningstjänsten genom att överföra JAR-filen till AEM Forms Web Console och aktivera tjänsten. Nu börjar tjänsten visas i en anpassad formulärredigerare. Så här associerar du en förifyllningstjänst till ett anpassat formulär:
 
 1. Öppna det adaptiva formuläret i formulärredigeraren och öppna egenskapspanelen för formulärbehållaren.
-1. Gå till **[!UICONTROL AEM Forms-behållaren > Basic > Prefill Service]** i egenskapskonsolen.
-1. Välj standardtjänsten för förifyllnad och klicka på **[!UICONTROL Spara]**. Tjänsten är kopplad till formuläret.
+1. Gå till egenskapskonsolen **[!UICONTROL AEM Forms container > Basic > Prefill Service]**.
+1. Välj standardtjänsten för förifyllnad och klicka på **[!UICONTROL Save]**. Tjänsten är kopplad till formuläret.
 
