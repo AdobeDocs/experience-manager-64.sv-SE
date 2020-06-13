@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: f192a8a3-1116-4d32-9b57-b53d532c0dbf
 translation-type: tm+mt
-source-git-commit: ccf4f4232d6a7af0781480106526c4c6fcb7c40e
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '1520'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: ccf4f4232d6a7af0781480106526c4c6fcb7c40e
 
 Om AEM-formulärimplementeringen lagrar ytterligare anpassade data i en annan databas ansvarar du för att implementera en strategi för att säkerhetskopiera dessa data och se till att de är synkroniserade med AEM-formulärdata. Dessutom måste programmet vara utformat så att det är tillräckligt robust för att hantera ett scenario där ytterligare databaser inte är synkroniserade. Vi rekommenderar starkt att alla databasåtgärder som utförs utförs i samband med en transaktion för att upprätthålla ett konsekvent tillstånd.
 
-När du har identifierat hur AEM-formulär används, ska du bestämma vilka filer som ska säkerhetskopieras, hur ofta och vilket säkerhetskopieringsfönster som ska göras tillgängligt.
+När du har identifierat hur AEM-formulär ska användas, bestämmer du vilka filer som ska säkerhetskopieras, hur ofta och vilket säkerhetskopieringsfönster som ska göras tillgängligt.
 
 >[!NOTE]
 >
@@ -31,11 +34,13 @@ Adobe Experience Manager (AEM) är en integrerad del av AEM-formulären. Därfö
 
 Säkerhetskopieringsstrategin för AEM-formulär innefattar två typer av säkerhetskopiering:
 
-**** Systemavbildning: En fullständig säkerhetskopia av systemet som du kan använda för att återställa datorns innehåll om hårddisken eller hela datorn slutar att fungera. Säkerhetskopiering av systemavbildning krävs endast före driftsättning av AEM-formulär. Interna regler styr sedan hur ofta säkerhetskopiering av systemavbildningar krävs.
+**Systemavbildning:** En fullständig säkerhetskopia av systemet som du kan använda för att återställa datorns innehåll om hårddisken eller hela datorn slutar att fungera. Säkerhetskopiering av systemavbildning krävs endast före driftsättning av AEM-formulär. Interna regler styr sedan hur ofta säkerhetskopiering av systemavbildningar krävs.
 
-**** Specifika data för AEM-formulär: Programdata finns i databasen, GDS (Global Document Storage) och AEM-databasen och måste säkerhetskopieras i realtid. GDS är en katalog som används för att lagra långlivade filer som används i en process. Dessa filer kan innehålla PDF-filer, profiler eller formulärmallar.
+**Specifika data för AEM-formulär:** Programdata finns i databasen, GDS (Global Document Storage) och AEM-databasen och måste säkerhetskopieras i realtid. GDS är en katalog som används för att lagra långlivade filer som används i en process. Dessa filer kan innehålla PDF-filer, profiler eller formulärmallar.
 
-***Obs **: Om Content Services (Deprecated) är installerat säkerhetskopierar du även rotkatalogen för innehållslagring. (Se rotkatalog för[innehållslagring (endast innehållstjänster)](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-directory-content-services-only).)*
+>[!NOTE]
+>
+>Om Content Services (Deprecated) är installerat säkerhetskopierar du även rotkatalogen för innehållslagring. Se rotkatalog för [innehållslagring (endast innehållstjänster)](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-directory-content-services-only).
 
 Databasen används för att lagra formulärartefakter, tjänstkonfigurationer, processtillstånd och databasreferenser till GDS-filer. Om du har aktiverat dokumentlagring i databasen lagras beständiga data och dokument i GDS också i databasen. Databasen kan säkerhetskopieras och återställas på följande sätt:
 
@@ -47,7 +52,9 @@ Databasen används för att lagra formulärartefakter, tjänstkonfigurationer, p
 
 * **Läget för rullande säkerhetskopiering** anger att systemet alltid är i säkerhetskopieringsläge, med en ny session för säkerhetskopieringsläge initierad så snart som föregående session släpps. Ingen timeout är associerad med rullande säkerhetskopieringsläge. När skriptet eller API:erna för LCBackupMode anropas för att lämna det rullande säkerhetskopieringsläget påbörjas en ny session för rullande säkerhetskopieringsläge. Det här läget är användbart när du vill ha stöd för kontinuerlig säkerhetskopiering men ändå vill att gamla och obehövliga dokument ska rensas bort från GDS-katalogen. Läget för rullande säkerhetskopiering stöds inte via sidan Säkerhetskopiering och återställning. Efter ett återställningsscenario är läget för rullande säkerhetskopiering fortfarande aktiverat. Du kan lämna läget för kontinuerlig säkerhetskopiering (rullande säkerhetskopieringsläge) genom att använda skriptet LCBackupMode med `leaveContinuousCoverage` alternativet.
 
-***Obs**! Om du lämnar det rullande säkerhetskopieringsläget omedelbart startas en ny session i säkerhetskopieringsläge. Om du vill inaktivera läget för rullande säkerhetskopiering helt använder du alternativet i skriptet, som skriver över den befintliga rullande säkerhetskopieringssessionen. `leaveContinuousCoverage` I läget för säkerhetskopiering av ögonblicksbilder kan du lämna säkerhetskopieringsläget som vanligt. *
+>[!NOTE]
+>
+>Om du lämnar det rullande säkerhetskopieringsläget omedelbart startas en ny session i säkerhetskopieringsläge. Om du vill inaktivera läget för rullande säkerhetskopiering helt använder du alternativet i skriptet, som skriver över den befintliga rullande säkerhetskopieringssessionen. `leaveContinuousCoverage` I läget för säkerhetskopiering av ögonblicksbilder kan du lämna säkerhetskopieringsläget som vanligt.
 
 För att förhindra dataförlust måste AEM-formulärspecifika data säkerhetskopieras på ett sätt som säkerställer att GDS- och Content Storage Root-katalogdokument korrelerar med databasreferenser.
 
