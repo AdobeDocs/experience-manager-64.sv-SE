@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: development-tools
 discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
 translation-type: tm+mt
-source-git-commit: 529b8c6556a7179a9169ff8250af6b5dc1251ef3
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '791'
+ht-degree: 0%
 
 ---
 
@@ -31,9 +34,11 @@ Det finns dock situationer där en process inte kan slutföras synkront på grun
 
    Dessa typer av processer kallas långvariga processer. En långvarig process utförs asynkront, vilket gör att systemen kan interagera när resurserna tillåter det, och som gör det möjligt att spåra och övervaka operationen. När en långvarig process anropas skapar AEM Forms ett anrops-ID-värde som en del av en post som spårar den långvariga processens status. Posten lagras i AEM Forms-databasen. Du kan rensa långvariga processposter när de inte längre behövs.
 
-   ***Obs**! AEM Forms skapar inte en post när en kort process anropas. *
+>[!NOTE]
+>
+>AEM Forms skapar inte en post när en kort process anropas.
 
-   Med hjälp av anropsidentifierarvärdet kan du spåra den långvariga processens status. Du kan till exempel använda processens identifierarvärde för anrop för att utföra processhanteraråtgärder som att avsluta en pågående processinstans.
+Med hjälp av anropsidentifierarvärdet kan du spåra den långvariga processens status. Du kan till exempel använda processens identifierarvärde för anrop för att utföra processhanteraråtgärder som att avsluta en pågående processinstans.
 
 **Exempel på kortlivad process**
 
