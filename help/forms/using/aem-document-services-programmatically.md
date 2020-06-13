@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: document_services
 discoiquuid: 32118d3b-54d0-4283-b489-780bdcbfc8d2
 translation-type: tm+mt
-source-git-commit: 90ea3f4aa53b00e975542a62da08b348f6097be1
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '6286'
+ht-degree: 1%
 
 ---
 
@@ -60,7 +63,7 @@ Du kan utföra följande åtgärder med tjänsten DocAssurance:
 
 >[!NOTE]
 >
->Alla dessa tjänster använder Document-objektet som indataparameter som Javadoc finns för på URL:en [https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/index.html](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/index.html)
+>Alla dessa tjänster använder Document-objektet som indataparameter som Javadoc finns för på URL:en [https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/index.html](https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/index.html)
 
 ### Lägga till ett osynligt signaturfält {#adding-an-invisible-signature-field}
 
@@ -234,7 +237,7 @@ sigAppearence.setSigningFormat(signingFormat);
 signOptions.setSigAppearence(sigAppearence);
 ```
 
-### Lägga till ett signaturfält {#adding-a-signature-field-nbsp}
+### Lägga till ett signaturfält  {#adding-a-signature-field-nbsp}
 
 Du kan programmässigt lägga till ett signaturfält med hjälp av Java API:t för signaturtjänsten eller API:t för signaturwebbtjänsten. Du kan lägga till flera signaturfält i ett PDF-dokument. Varje signaturfältsnamn måste dock vara unikt.
 
@@ -745,7 +748,7 @@ public class GetSignature {
 }
 ```
 
-### Hämtar signaturfältlista {#getting-signature-field-list-nbsp}
+### Hämtar signaturfältlista  {#getting-signature-field-list-nbsp}
 
 Du kan hämta namnen på alla signaturfält som finns i ett PDF-dokument som du vill signera eller certifiera. Om du är osäker på signaturfältens namn i ett PDF-dokument kan du hämta och verifiera dem programmatiskt. Signaturtjänsten returnerar signaturfältets kvalificerade namn, till exempel `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
 
@@ -860,7 +863,7 @@ public class GetSignatureFields {
 }
 ```
 
-### Ändra signaturfält {#modifying-signature-fields-nbsp}
+### Ändra signaturfält  {#modifying-signature-fields-nbsp}
 
 Du kan ändra signaturfält som finns i ett PDF-dokument. När du ändrar ett signaturfält måste du ändra signaturfältets låsordlistevärden eller ordlistevärden för startvärde.
 
@@ -1027,7 +1030,7 @@ public class ModifySignatureField {
 }
 ```
 
-### Certifiera PDF-dokument {#certifying-pdf-documents-nbsp}
+### Certifiera PDF-dokument  {#certifying-pdf-documents-nbsp}
 
 Du kan skydda ett PDF-dokument genom att certifiera det med en viss typ av signatur som kallas certifierad signatur. En certifierad signatur skiljer sig från en digital signatur på följande sätt:
 
@@ -1357,7 +1360,9 @@ Ett certifikat för offentlig nyckel innehåller en användares offentliga nycke
 
 Dessutom innehåller listor över återkallade certifikat information om certifikat som återkallats före förfallodatumet. CRL-listor publiceras regelbundet av certifikatutfärdare. Återkallningsstatusen för ett certifikat kan också hämtas via OCSP (Online Certificate Status Protocol) via nätverket.
 
-*****Obs *:*Innan du kan kryptera ett PDF-dokument med ett certifikat måste du se till att du lägger till certifikatet i AEM Trust Store *.
+>[!NOTE]
+>
+>Innan du kan kryptera ett PDF-dokument med ett certifikat måste du se till att du lägger till certifikatet i AEM Trust Store.
 
 **Tillämpa användningsbehörighet för PDF-dokument**
 
@@ -1371,13 +1376,17 @@ Digitala signaturer kan användas i PDF-dokument för att ge en viss säkerhetsn
 
 Den teknik som används för att digitalt signera dokument gör att både signeraren och mottagaren vet vad som signerats och vet att dokumentet inte har ändrats sedan det signerades.
 
-PDF-dokument signeras med hjälp av teknik med öppen nyckel. En signerare har två nycklar: en offentlig nyckel och en privat nyckel. Den privata nyckeln lagras i en användares autentiseringsuppgifter som måste vara tillgängliga vid signeringen.
+PDF-dokument signeras med hjälp av teknik för offentlig nyckel. En signerare har två nycklar: en offentlig nyckel och en privat nyckel. Den privata nyckeln lagras i en användares autentiseringsuppgifter som måste vara tillgängliga vid signeringen.
 
 Den offentliga nyckeln lagras i användarens certifikat som måste vara tillgängligt för mottagarna för att validera signaturen. Information om återkallade certifikat finns i listor över återkallade certifikat (CRL:er) och OCSP-svar (Online Certificate Status Protocol) som distribueras av certifikatutfärdare (CA:er). Tidpunkten för signering kan hämtas från en betrodd källa som kallas tidsstämpelutfärdare.
 
-*****Obs *:*Innan du kan signera ett PDF-dokument digitalt måste du se till att du lägger till inloggningsuppgifterna i AEM Keystore. Autentiseringsuppgiften är den privata nyckel som används för signering *.
+>[!NOTE]
+>
+>Innan du kan signera ett PDF-dokument digitalt måste du se till att du lägger till autentiseringsuppgifterna i AEM Keystore. Autentiseringsuppgiften är den privata nyckel som används för signering.
 
-****** Obs! AEM Forms har även stöd för *[CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29)*-specifikationen för digital signering av PDF-dokument.
+>[!NOTE]
+>
+>AEM Forms har även stöd för *[CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29)*-specifikationen för digital signering av PDF-dokument.
 
 **Certifiera PDF-dokument**
 
@@ -1399,7 +1408,10 @@ Vid tidpunkten för signering genomsöks dokumentet efter specifika typer av inn
 
 En anteckning kan t.ex. dölja text på en sida som är viktig för att förstå vad som certifieras. En förklaring (juridisk attestering) kan ges om sådant innehåll.
 
-***Obs **: Innan du kan signera ett PDF-dokument digitalt måste du se till att du lägger till autentiseringsuppgifterna i AEM Keystore. Autentiseringsuppgiften är den privata nyckel som används för signering *.
+>[!NOTE]
+>
+>Innan du kan signera ett PDF-dokument digitalt måste du se till att du lägger till autentiseringsuppgifterna i AEM Keystore. Autentiseringsuppgiften är den privata nyckel som används för signering.
+
 
 **Syntax**:
 
@@ -3600,19 +3612,19 @@ public class RemovePKIEncryption {
 
 Tjänsten Output innehåller API:er för att återge en XDP-fil i formaten .pdf, .pcl, .zpl och .ps. Tjänsten stöder följande API:er:
 
-* **[](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p)generatePDFOutput **: Skapar ett PDF-dokument genom att sammanfoga en formulärdesign med data som lagras på en nätverksplats, ett lokalt filsystem eller en HTTP-plats som litteralvärden.
+* **[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p):**Skapar ett PDF-dokument genom att sammanfoga en formulärdesign med data som lagras på en nätverksplats, ett lokalt filsystem eller en HTTP-plats som litteralvärden.
 
-* **[](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p)generatePDFOutput **: Skapar ett PDF-dokument genom att sammanfoga en formulärdesign med data som lagras i ett program.
-* **[](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutputbatch-p)generatePDFOutputBatch **: Sammanfogar en formulärdesign med data för att skapa ett PDF-dokument. Alternativt kan du generera en metadatafil för varje post eller spara utdata i en PDF-fil.
-* **[](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p)generatePrintedOutput **: Skapar PCL-, PostScript- eller ZPL-utdata från en formulärdesign och datafil som lagras på en nätverksplats, ett lokalt filsystem eller en HTTP-plats som litteralvärden.
+* **[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p):**Skapar ett PDF-dokument genom att sammanfoga en formulärdesign med data som lagras i ett program.
+* **[generatePDFOutputBatch](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutputbatch-p):**Sammanfogar en formulärdesign med data för att skapa ett PDF-dokument. Alternativt kan du generera en metadatafil för varje post eller spara utdata i en PDF-fil.
+* **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p):**Skapar PCL-, PostScript- eller ZPL-utdata från en formulärdesign och datafil som lagras på en nätverksplats, ett lokalt filsystem eller en HTTP-plats som litteralvärden.
 
-* **[](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p)generatePrintedOutput **: Skapar PCL-, PostScript- och ZPL-utdata från en formulärdesign och datafil som lagras i ett program.
+* **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p):**Skapar PCL-, PostScript- och ZPL-utdata från en formulärdesign och datafil som lagras i ett program.
 
 ### generatePDFOutput {#generatepdfoutput}
 
 generatePDFOutput-API:t genererar ett PDF-dokument genom att sammanfoga en formulärdesign med data. Alternativt kan du generera en metadatafil för varje post eller spara utdata i en PDF-fil. Använd generatePDFOutput API för formulärdesigner eller data som lagras på en nätverksplats, ett lokalt filsystem eller en HTTP-plats som litteralvärden. Om formulärdesignen och XML-data lagras i ett program använder du API:t [generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) .
 
-**** Syntax: `Document generatePDFOutput(String uriOrFileName, Document data, PDFOutputOptions options);`
+**Syntax:** `Document generatePDFOutput(String uriOrFileName, Document data, PDFOutputOptions options);`
 
 #### Indataparametrar {#input-parameters}
 
@@ -3719,7 +3731,7 @@ try {
 
 generatePDFOutput-API:t genererar ett PDF-dokument genom att sammanfoga en formulärdesign med data. Du kan också generera en metadatafil för varje post eller spara utdata i en PDF-fil. Använd API:t generatePrintedOutput för formulärdesigner eller data som lagras i ett program. Om formulärdesignen och XML-data lagras på en nätverksplats, lokalt eller en HTTP-plats som litteralvärden, använder du API:t [generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) .
 
-**** Syntax: `Document generatePDFOutput(Document inputdocument, Document data, PDFOutputOptions options)`
+**Syntax:** `Document generatePDFOutput(Document inputdocument, Document data, PDFOutputOptions options)`
 
 #### Indataparameter {#input-parameter}
 
@@ -3827,9 +3839,9 @@ Document doc=null;
 
 ### generatePDFOutputBatch {#generatepdfoutputbatch}
 
- Sammanfogar en formulärdesign med data för att skapa ett PDF-dokument. Alternativt kan du generera en metadatafil för varje post eller spara utdata i en PDF-fil. Använd API:t generatePDFOutputBatch för formulärdesigner eller data som lagras på en nätverksplats, ett lokalt filsystem eller en HTTP-plats som litteralvärden.
+Sammanfogar en formulärdesign med data för att skapa ett PDF-dokument. Alternativt kan du generera en metadatafil för varje post eller spara utdata i en PDF-fil. Använd API:t generatePDFOutputBatch för formulärdesigner eller data som lagras på en nätverksplats, ett lokalt filsystem eller en HTTP-plats som litteralvärden.
 
-**** Syntax: `BatchResult generatePDFOutputBatch(Map templates, Map data, PDFOutputOptions options, BatchOptions batchOptions);`
+**Syntax:** `BatchResult generatePDFOutputBatch(Map templates, Map data, PDFOutputOptions options, BatchOptions batchOptions);`
 
 #### Indataparametrar {#input-parameters-1}
 
@@ -3946,7 +3958,7 @@ String outputFolder="C:/Output";
 
 Skapar PCL-, PostScript- och ZPL-utdata från en formulärdesign och datafil. Datafilen sammanfogas med formulärdesignen och formateras för utskrift. Du kan skicka utdata direkt till en skrivare eller spara som en fil. Använd API:t generatePrintedOutput för formulärdesigner eller data som lagras i ett program.
 
-**** Syntax: `Document generatePrintedOutput(String uriOrFileName, Document data, PrintedOutputOptions);`
+**Syntax:** `Document generatePrintedOutput(String uriOrFileName, Document data, PrintedOutputOptions);`
 
 #### Indataparametrar {#input-parameters-2}
 
@@ -4037,7 +4049,7 @@ Document doc=null;
 
 Skapar PCL-, PostScript- och ZPL-utdata utifrån en formulärdesign och datafil. Datafilen sammanfogas med formulärdesignen och formateras för utskrift. Utdata kan skickas direkt till en skrivare eller sparas som en fil. Använd API:t generatePrintedOutput för formulärdesigner eller data som lagras i ett program.
 
-**** Syntax: `Document generatePrintedOutput(Document inputdocument, Document data, PrintedOutputOptions);`
+**Syntax:** `Document generatePrintedOutput(Document inputdocument, Document data, PrintedOutputOptions);`
 
 #### Indataparametrar {#input-parameters-3}
 
@@ -4259,14 +4271,14 @@ String outputFolder="C:/Output";
 
 Forms-tjänsten tillhandahåller API:er för import och export av data till och från ett interaktivt PDF-formulär. Ett interaktivt PDF-formulär är ett PDF-dokument som innehåller ett eller flera fält som används för att visa och samla in information från användarna. Tjänsten stöder följande API:er:
 
-* **[](/help/forms/using/aem-document-services-programmatically.md#p-exportdata-p)exportData **: exporterar data från ett PDF-formulär.
-* **[](/help/forms/using/aem-document-services-programmatically.md#p-importdata-p)importData **: importerar data till ett interaktivt PDF-formulär.
+* **[exportData](/help/forms/using/aem-document-services-programmatically.md#p-exportdata-p):**exporterar data från ett PDF-formulär.
+* **[importData](/help/forms/using/aem-document-services-programmatically.md#p-importdata-p):**importerar data till ett interaktivt PDF-formulär.
 
 ### exportData {#exportdata}
 
 Exporterar formulärdata från ett interaktivt PDF-formulär i XML- och XDP-format.
 
-**** Syntax: `Document exportData(Document xdpOrPdf, DataFormat dataFormat)`
+**Syntax:** `Document exportData(Document xdpOrPdf, DataFormat dataFormat)`
 
 #### Indataparametrar {#input-parameters-5}
 
@@ -4350,7 +4362,7 @@ try {
 
 Importerar formulärdata till ett interaktivt PDF-formulär.
 
-**** Syntax: `Document importData(Document PDF, Document data)`
+**Syntax:** `Document importData(Document PDF, Document data)`
 
 #### Indataparametrar {#input-parameters-6}
 
@@ -4492,7 +4504,7 @@ CreatePDF-tjänsten ger följande undantag:
 * InvalidParameterException
 * FileFormatNotSupportedException
 
-**** Syntax: `Map createPDF(Document inputDoc, String inputFilename, String fileTypeSettings, String pdfSettings, String securitySettings, Document settingsDoc, Document xmpDoc) throws InvalidParameterException, ConversionException, FileFormatNotSupportedException;`
+**Syntax:** `Map createPDF(Document inputDoc, String inputFilename, String fileTypeSettings, String pdfSettings, String securitySettings, Document settingsDoc, Document xmpDoc) throws InvalidParameterException, ConversionException, FileFormatNotSupportedException;`
 
 #### Indataparametrar {#input-parameters-7}
 
@@ -4612,7 +4624,7 @@ File createPDF(File inputFile, String inputFilename, String fileTypeSettings, St
 
 #### exportPDF {#exportpdf}
 
- Konverterar ett PDF-dokument till en filtyp som stöds. Metoden godkänner en PDF-fil som indata och exporterar innehållet i PDF-filen i angivet filformat.
+Konverterar ett PDF-dokument till en filtyp som stöds. Metoden godkänner en PDF-fil som indata och exporterar innehållet i PDF-filen i angivet filformat.
 
 CreatePDF-tjänsten returnerar en java.util.Map med resultat. Kartans nycklar är:
 
@@ -4797,7 +4809,7 @@ File optimizePDF(File inputFile, String fileTypeSettings, File settingsFile) thr
 
 #### htmlToPdf2 {#htmltopdf}
 
- Konverterar en HTML-sida till ett PDF-dokument. HTML-sidans URL accepteras som indata.
+Konverterar en HTML-sida till ett PDF-dokument. HTML-sidans URL accepteras som indata.
 
 Tjänsten htmlToPdf2 returnerar ett HtmlToPdfResult-objekt. Du kan hämta den konverterade PDF-filen via result.getConvertedDocument().
 
