@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: document_services
 discoiquuid: dcf60604-c401-4c74-95c7-e7d4457fdfe5
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+workflow-type: tm+mt
+source-wordcount: '1043'
+ht-degree: 1%
 
 ---
 
@@ -127,7 +130,7 @@ Tänk även på följande begränsningar när du använder tjänsten Barcoded Fo
 
 Tjänsten kan dessutom avkoda alla streckkoder som har en symbolik som stöds om ovanstående begränsningar iakttas. Mer information om hur du skapar interaktiva streckkodade formulär finns i [Designer-hjälpen](https://www.adobe.com/go/learn_aemforms_designer_63).
 
-## Konfigurera egenskaper för tjänsten {#configureproperties}
+## Konfigurera egenskaper för tjänsten   {#configureproperties}
 
 Du kan använda **AEMFD Barcoded Forms Service** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen för AEM-konsolen är `https://[host]:[port]/system/console/configMgr`.
 
@@ -135,9 +138,9 @@ Du kan använda **AEMFD Barcoded Forms Service** i AEM Console för att konfigur
 
 Barcoded Forms Service tillhandahåller följande två API:er:
 
-* **[avkodning](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**: Avkodar alla streckkoder som är tillgängliga i ett PDF-inmatningsdokument eller en TIFF-bild. Det returnerar ett annat XML-dokument som innehåller data som hämtats från alla streckkoder som finns i indatadokumentet eller bilden.
+* **[avkodning](https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**: Avkodar alla streckkoder som är tillgängliga i ett PDF-inmatningsdokument eller en TIFF-bild. Det returnerar ett annat XML-dokument som innehåller data som hämtats från alla streckkoder som finns i indatadokumentet eller bilden.
 
-* **[extractToXML](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**: Konvertera data som avkodats med avkodnings-API till XML-data. Dessa XML-data kan sammanfogas med ett XFA-formulär. Den returnerar en lista med XML-dokument, en för varje streckkod.
+* **[extractToXML](https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**: Konvertera data som avkodats med avkodnings-API till XML-data. Dessa XML-data kan sammanfogas med ett XFA-formulär. Den returnerar en lista med XML-dokument, en för varje streckkod.
 
 ### Använda BCF Service med JSP eller Servlets {#using-bcf-service-with-a-jsp-or-servlets}
 
