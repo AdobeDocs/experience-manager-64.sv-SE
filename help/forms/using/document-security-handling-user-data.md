@@ -1,6 +1,6 @@
 ---
-title: Dokumentsäkerhet| Hantera användardata
-seo-title: Dokumentsäkerhet| Hantera användardata
+title: Dokumentsäkerhet | Hantera användardata
+seo-title: Dokumentsäkerhet | Hantera användardata
 description: 'null'
 seo-description: 'null'
 uuid: 1624a465-8b0c-4347-a53f-1118bfa6e18f
@@ -8,12 +8,15 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 898268cb-4426-421f-8f63-d75bd85cb57f
 translation-type: tm+mt
-source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '935'
+ht-degree: 0%
 
 ---
 
 
-# Dokumentsäkerhet| Hantera användardata {#document-security-handling-user-data}
+# Dokumentsäkerhet | Hantera användardata {#document-security-handling-user-data}
 
 Med dokumentsäkerhet för AEM Forms kan du skapa, lagra och använda fördefinierade säkerhetsinställningar i dina dokument. Det säkerställer att endast behöriga användare kan använda dokumenten. Du kan skydda dokument med hjälp av profiler. En profil är en samling information som innehåller säkerhetsinställningar och en lista över behöriga användare. Du kan tillämpa en profil på ett eller flera dokument och auktorisera användare som läggs till i AEM Forms JEE-användarhantering.
 
@@ -192,17 +195,19 @@ Gör följande för att ta bort dokumentsäkerhetsdata för ett säkerhetsobjekt
    **Använda administrationskonsolen**
 
    1. Som administratör loggar du in på administrationskonsolen för Forms JEE på https://[*server*]:[*port*]/adminui.
-   1. Navigera till **[!UICONTROL Tjänster > Dokumentsäkerhet > Principuppsättningar]**.
+   1. Navigera till **[!UICONTROL Services > Document Security > Policy Sets]**.
    1. Öppna en principuppsättning och ta bort användaren från profilen.
    **Använda webbsidan Dokumentsäkerhet**
 
    Dokumentsäkerhetsanvändare som har behörighet att skapa personliga profiler kan ta bort användardata från sina profiler. Så här gör du:
 
    1. Användare med egna profiler loggar in på sin dokumentsäkerhetswebbsida på https://[*server*]:[*port*]/edc.
-   1. Navigera till **[!UICONTROL Tjänster > Dokumentsäkerhet > Mina principer]**.
+   1. Navigera till **[!UICONTROL Services > Document Security > My Policies]**.
    1. Öppna en profil och ta bort användaren från profilen.
-   **Obs**: Administratörer kan söka efter, komma åt och ta bort användardata från andra användares personliga profiler i **[!UICONTROL Tjänster > Dokumentsäkerhet > Mina principer]** med administrationskonsolen.
+   >[!NOTE]
+   >
+   >Administratörer kan söka efter, komma åt och ta bort användardata från andra användares personliga profiler i **[!UICONTROL Services > Document Security > My Policies]** administrationskonsolen.
 
-1. Ta bort data för huvuds-ID från användarhanteringsdatabasen. Detaljerade steg finns i [Hantering av formuläranvändare| Hantera användardata](/help/forms/using/user-management-handling-user-data.md).
+1. Ta bort data för huvuds-ID från användarhanteringsdatabasen. Detaljerade steg finns i [Hantering av formuläranvändare | Hantera användardata](/help/forms/using/user-management-handling-user-data.md).
 1. Starta AEM Forms-servern.
 
