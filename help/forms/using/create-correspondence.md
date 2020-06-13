@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 2c1be479-9f44-4348-b074-a08af8df51fa
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: 5e764edb3d8ed98542c50b80cac40776c886ccf5
+workflow-type: tm+mt
+source-wordcount: '3705'
+ht-degree: 0%
 
 ---
 
@@ -46,7 +49,7 @@ Markera den bokstav du vill förhandsgranska genom att följa följande steg:
 
    ![Förhandsgranska brev](assets/8_previewcustomdatafile.png)
 
-1. HTML-bokstaven (förhandsgranskning av mobilformulär) öppnas som standard med fliken Data i fokus.
+1. Bokstaven HTML-förhandsgranskning (förhandsgranskning av mobilformulär) öppnas som standard med fliken Data i fokus.
 
    Mer information om mobilformulär och vilka funktioner de har stöd för finns i [Funktionsdifferentiering mellan mobilformulär och PDF-formulär](https://helpx.adobe.com/livecycle/help/mobile-forms/feature-differentiation-mobile-forms-pdf.html).
 
@@ -82,7 +85,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
    Genom att trycka på Markera valda moduler ( ![markerat](assets/highlightselectedmodulesincontentccr.png)dmodulesincontentccr) längst upp till vänster i HTML-förhandsvisningen på fliken Innehåll eller Data kan du inaktivera eller aktivera funktioner för att gå till innehålls-/datamodulen när relevant text, stycke eller datafält är markerat i förhandsvisningen av bokstaven.
 
-   Mer information om åtgärder som är tillgängliga för olika moduler i användargränssnittet Skapa korrespondens finns i [Åtgärder och information i användargränssnittet](/help/forms/using/create-letter.md#main-pars-header-9)Skapa korrespondens.
+   Mer information om åtgärder som är tillgängliga för olika moduler i användargränssnittet Skapa korrespondens finns i [Åtgärder och information i användargränssnittet](create-letter.md)Skapa korrespondens.
 
 1. Om du vill söka efter innehållsmoduler använder du fältet Sök. Ange det fullständiga eller delvisa namnet eller titeln på innehållsmodulen för att söka efter den i korrespondensen.
 1. Tryck på visningsikonen ( ![visa](assets/display.png)) framför en lista, text, villkor eller målområde för att visa eller dölja den i bokstaven.
@@ -228,7 +231,7 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
 
    Genom att trycka på Markera valda moduler i innehåll ( ![markerat](assets/highlightselectedmodulesincontentccr.png)dmodulesincontentccr) kan du inaktivera eller aktivera funktioner för att markera innehållsmodulen på fliken Innehåll när användaren trycker på den relevanta texten, stycket eller datafältet i förhandsvisningen av bokstaven.
 
-   Mer information om åtgärder som är tillgängliga för olika moduler i användargränssnittet Skapa korrespondens finns i [Åtgärder och information i användargränssnittet](/help/forms/using/create-letter.md#main-pars-header-9)Skapa korrespondens.
+   Mer information om åtgärder som är tillgängliga för olika moduler i användargränssnittet Skapa korrespondens finns i [Åtgärder och information i användargränssnittet](create-letter.md)Skapa korrespondens.
 
 1. Om du vill lägga till en sidbrytning i brevet trycker du där du vill infoga en sidbrytning och väljer Sidbrytning före eller Sidbrytning efter ( ![sidbrytning före](assets/pagebreakbeforeafter.png)).
 
@@ -244,7 +247,7 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
 
    ![saveasdraft](assets/saveasdraft.png)
 
-   Dialogrutan Utkastbokstavsnamn visas med bokstavskod-ID:t. Du kan också redigera detta ID. Notera brev-ID:t och tryck sedan på **Klar**. Du kan sedan använda detta ID för att [läsa in utkastet](/help/forms/using/submit-letter-topostprocess.md#main-pars-header-1)igen.
+   Dialogrutan Utkastbokstavsnamn visas med bokstavskod-ID. Du kan också redigera detta ID. Notera brev-ID:t och tryck sedan på **Klar**. Du kan sedan använda detta ID för att [läsa in utkastet](submit-letter-topostprocess.md#reloaddraft)igen.
 
 1. Om du vill förhandsgranska bokstaven som en förenklad PDF-fil med exakt layout och sidbrytningar så som den kommer att skickas, trycker du på ![förhandsgranskning](assets/preview.png).
 
@@ -277,8 +280,8 @@ Det finns två typer av bokstavsinstanser som kan sparas: Utkastinstans och Skic
 Sådana instanser kan bara sparas när brevet visas på en publiceringsinstans. Som standard är sparandet av instanser inaktiverat. Gör så här om du vill att instanser av bokstäver ska kunna sparas:
 
 1. Öppna Adobe Experience Manager Web Console-konfiguration för servern i AEM med följande URL: https://&lt;server>:&lt;port>/&lt;kontextsökväg>/system/console/configMgr
-1. Leta reda på **[!UICONTROL Correspondence Management Configurations]** och klicka på den.
-1. Markera **[!UICONTROL Hantera bokstavsinstanser vid publicering]** och klicka sedan på **[!UICONTROL Spara]**.
+1. Leta upp **[!UICONTROL Correspondence Management Configurations]** och klicka på den.
+1. Kontrollera **[!UICONTROL Manage Letter Instances on Publish]** konfigurationen och klicka sedan på **[!UICONTROL Save]**.
 
 När du har aktiverat funktionen för att spara bokstäver kan du välja var du vill spara bokstavsinstanserna. Det finns två alternativ för att spara bokstavsinstanser: Spara lokalt eller Fjärrspara.
 
@@ -294,7 +297,7 @@ Det här alternativet finns för personer som har problem med att spara använda
 
 1. Öppna Adobe Experience Manager Web Console-konfiguration för servern i AEM med följande URL: `https://<server>:<port>/<contextpath>/system/console/configMgr`
 1. Sök efter **[!UICONTROL Correspondence Management Configurations]** och klicka på den.
-1. Leta reda på konfigurationen för **[!UICONTROL fjärrspara]** , markera den och klicka sedan på **[!UICONTROL Spara]**.
+1. Leta reda på **[!UICONTROL Remote Save]** konfigurationen, kontrollera den och klicka på **[!UICONTROL Save]**.
 
 #### Ange inställningar för bearbetningsförfattare {#specify-processing-author-settings}
 
@@ -348,6 +351,6 @@ Mer information om webbläsarkompatibilitet med förhandsgranskning av brev finn
 Om du vill ändra förhandsgranskningsläget för brevet utför du följande steg:
 
 1. Gå till `https://[system]:[port]/system/console/configMgr` och logga in som administratör om det behövs.
-1. Gå till **[!UICONTROL Correspondence Management Configurations]** > **[!UICONTROL Rendition Type]** och välj **HTML Rendition** (Default) eller **PDF Rendition**.
-1. Click **[!UICONTROL Save]**.
+1. Gå till **[!UICONTROL Correspondence Management Configurations]** > **[!UICONTROL Rendition Type]** och välj **HTML-återgivning** (standard) eller **PDF-återgivning**.
+1. Klicka på **[!UICONTROL Save]**.
 
