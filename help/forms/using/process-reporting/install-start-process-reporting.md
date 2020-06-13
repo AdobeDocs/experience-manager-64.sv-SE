@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: process-reporting
 discoiquuid: a0f81621-6ccd-46e2-85d7-2eb4ee3cdb91
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: f6b6d8559bb0b899a78afd6410eb316626ecaa18
+workflow-type: tm+mt
+source-wordcount: '1733'
+ht-degree: 0%
 
 ---
 
@@ -50,6 +53,8 @@ Gör så här för att ändra publiceringsschemat:
 >
 >Om du kör implementeringen av AEM Forms på ett kluster utför du följande steg på varje nod i klustret.
 
+#### JBoss-programserver {#jboss-application-server}
+
 1. Stoppa AEM Forms-serverinstansen.
    * (Windows) Öppna `[*JBoss root*]/bin/run.conf.bat` filen i en redigerare.
    * (För Linux, AIX och Solaris) `[*JBoss root*]/bin/run.conf.sh` i en redigerare.
@@ -63,6 +68,8 @@ Gör så här för att ändra publiceringsschemat:
 1. Spara och stäng `run.conf.bat` filen.
 
 1. Starta om serverinstansen för AEM Forms.
+
+#### WebSphere Application Server {#websphere-application-server}
 
 1. Stoppa AEM Forms-serverinstansen.
 1. Logga in på administrationskonsolen för WebSphere. Klicka på **Servrar** > **Programservrar** i navigeringsträdet och klicka sedan på servernamnet i den högra rutan.
@@ -80,6 +87,8 @@ Gör så här för att ändra publiceringsschemat:
 1. Klicka på **Använd**, klicka på OK och sedan på **Spara direkt i huvudkonfigurationen**.
 
 1. Starta om serverinstansen för AEM Forms.
+
+#### WebLogic Application Server {#weblogic-application-server}
 
 1. Stoppa AEM Forms-serverinstansen.
 1. Logga in på WebLogic Administration Console. Standardadressen för WebLogic Administration Console är `https://[hostname]:[port]/console`.
@@ -165,7 +174,7 @@ Tjänsten ReportConfiguration används av Process Reporting för att konfigurera
 
 Tjänsten ProcessDataPublisher importerar processdata från AEM Forms-databasen och publicerar data till tjänsten ProcessDataStorageProvider för lagring.
 
-#### Så här konfigurerar du tjänsten ProcessDataPublisher {#to-configure-processdatapublisher-service-nbsp}
+#### Så här konfigurerar du tjänsten ProcessDataPublisher   {#to-configure-processdatapublisher-service-nbsp}
 
 1. Logga in på **administrationskonsolen** med administratörsuppgifter.
 
@@ -241,7 +250,7 @@ Ange dina autentiseringsuppgifter för att logga in i modulen Processrapporterin
 
 ![hämtning](assets/capture.png)
 
-När du loggar in på Process Reporting visas **[!UICONTROL startskärmen]** .
+När du loggar in på Process Reporting visas **[!UICONTROL Home]** skärmen.
 
 ### Startskärmen för processrapportering {#process-reporting-home-screen}
 
@@ -279,8 +288,8 @@ Mer information om datapubliceringstjänsten och hur du schemalägger den här t
 
 **Listruta med namnlist för Processrapportering:** Listrutan till höger i namnlisten Processrapportering innehåller följande alternativ:
 
-* **[!UICONTROL Synkronisera]**: Synkronisera den inbäddade processrapportdatabasen med AEM Forms-databasen.
-* **[!UICONTROL Hjälp]**: Visa hjälpdokumentationen om processrapportering.
-* **[!UICONTROL Utloggning]**: Logga ut från processrapportering
+* **[!UICONTROL Sync]**: Synkronisera den inbäddade processrapportdatabasen med AEM Forms-databasen.
+* **[!UICONTROL Help]**: Visa hjälpdokumentationen om processrapportering.
+* **[!UICONTROL Logout]**: Logga ut från processrapportering
 
 
