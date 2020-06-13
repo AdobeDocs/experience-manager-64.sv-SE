@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 6f775933-e989-4456-ad01-9bdf5dee3dad
 translation-type: tm+mt
-source-git-commit: 36d12ff07b1cdd1e6c6fee052a335d3f49eee3bb
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '1122'
+ht-degree: 1%
 
 ---
 
@@ -110,19 +113,19 @@ I följande tabell beskrivs filhanteringen för fem exempelfiler (fil1, fil2, fi
 
 I följande text beskrivs filhanteringen för varje gång:
 
-**** T1: De fyra exempelfilerna placeras i indatamappen.
+**T1:** De fyra exempelfilerna placeras i indatamappen.
 
-**** T2: Tjänståtgärden flyttar fil1 till scenmappen för manipulering.
+**T2:** Tjänståtgärden flyttar fil1 till scenmappen för manipulering.
 
-**** T3: Tjänståtgärden flyttar fil2 till scenmappen för manipulering. Resultatet av fil1 placeras i utdatamappen och fil1 flyttas till mappen preserve.
+**T3:** Tjänståtgärden flyttar fil2 till scenmappen för manipulering. Resultatet av fil1 placeras i utdatamappen och fil1 flyttas till mappen preserve.
 
-**** T4: Tjänståtgärden placerar filen3 i scenmappen för manipulering. Resultatet av fil2 placeras i utdatamappen och fil2 placeras i den reserverade mappen.
+**T4:** Tjänståtgärden placerar filen3 i scenmappen för manipulering. Resultatet av fil2 placeras i utdatamappen och fil2 placeras i den reserverade mappen.
 
-**** T5: Tjänståtgärden placerar fil4 i scenmappen för manipulering. Hanteringen av filen3 misslyckas och den placeras i felmappen.
+**T5:** Tjänståtgärden placerar fil4 i scenmappen för manipulering. Hanteringen av filen3 misslyckas och den placeras i felmappen.
 
-**** T6: Tjänståtgärden placerar fil5 i indatamappen. Resultatet av filen 4 placeras i utdatamappen och filen 4 placeras i mappen preserve.
+**T6:** Tjänståtgärden placerar fil5 i indatamappen. Resultatet av filen 4 placeras i utdatamappen och filen 4 placeras i mappen preserve.
 
-**** T7: Tjänståtgärden placerar fil5 i scenmappen för manipulering.
+**T7:** Tjänståtgärden placerar fil5 i scenmappen för manipulering.
 
 ## Säkerhetskopiera bevakade mappar {#backing-up-watched-folders}
 
@@ -136,15 +139,15 @@ Om t.ex. en säkerhetskopia tas vid T1-tidpunkten och servern misslyckas vid T7,
 
 Om en senare säkerhetskopiering har gjorts kan du återställa filerna. När du återställer filerna bör du tänka på vilken mapp i mapphierarkin den aktuella filen finns i:
 
-**** Scen: Filerna i den här mappen bearbetas igen när den bevakade mappen har återställts.
+**Scen:** Filerna i den här mappen bearbetas igen när den bevakade mappen har återställts.
 
-**** Indata: Filerna i den här mappen bearbetas igen när den bevakade mappen har återställts.
+**Indata:** Filerna i den här mappen bearbetas igen när den bevakade mappen har återställts.
 
-**** Resultat: Filerna i den här mappen bearbetas inte.
+**Resultat:** Filerna i den här mappen bearbetas inte.
 
-**** Utdata: Filerna i den här mappen bearbetas inte.
+**Utdata:** Filerna i den här mappen bearbetas inte.
 
-**** Bevara: Filerna i den här mappen bearbetas inte.
+**Bevara:** Filerna i den här mappen bearbetas inte.
 
 ## Strategier för att minimera dataförluster {#strategies-to-minimize-data-loss}
 
@@ -158,14 +161,16 @@ Följande strategier kan minimera dataförlust för utdata och indatamappar när
 * Om den bevakade säkerhetskopian av mappen som är tillgänglig är äldre än den tid det tar att bearbeta jobbet, bör du låta systemet skapa en ny bevakad mapp och automatiskt placera filerna i indatamappen.
 * Om den senaste tillgängliga säkerhetskopian inte är tillräckligt aktuell är säkerhetskopieringstiden kortare än den tid det tar att bearbeta filerna och den bevakade mappen återställs, har filen manipulerats i någon av följande steg:
 
-   * **** Steg 1: I indatamappen
-   * **** Steg 2: Kopierad till scenmappen, men processen har inte anropats än
-   * **** Steg 3: Kopieras till scenmappen och processen anropas
-   * **** Steg 4: Hantering pågår
-   * **** Steg 5: Returnerade resultat
+   * **Steg 1:** I indatamappen
+   * **Steg 2:** Kopierad till scenmappen, men processen har inte anropats än
+   * **Steg 3:** Kopieras till scenmappen och processen anropas
+   * **Steg 4:** Hantering pågår
+   * **Steg 5:** Returnerade resultat
    Om filerna finns på scen 1 ändras de. Om filerna finns i scen 2 eller 3 placerar du dem i indatamappen så att ändringarna utförs igen.
 
-   **Obs**: Om en fil manipuleras mer än en gång förhindras dataförlust, men resultatet kan dupliceras. *
+   >[!NOTE]
+   >
+   >Om en fil manipuleras mer än en gång förhindras dataförlust, men resultatet kan dupliceras.
 
 ## Slutsats {#conclusion}
 
