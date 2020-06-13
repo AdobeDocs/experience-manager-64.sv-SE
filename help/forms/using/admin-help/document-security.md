@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 46847c9f-c66d-46fa-8ff5-a99d2462c099
 translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '2546'
+ht-degree: 0%
 
 ---
 
@@ -44,9 +47,9 @@ Med dokumentsäkerhet kan du övervaka skyddsskyddade dokument och spåra hände
 
 Dokumentsäkerhet består av en server och ett användargränssnitt:
 
-**** Server: Den centrala komponent genom vilken dokumentsäkerhet utför transaktioner som användarautentisering, hantering av profiler i realtid och tillämpning av sekretess. Servern har också ett centralt arkiv för policyer, granskningsposter och annan relaterad information.
+**Server:** Den centrala komponent genom vilken dokumentsäkerhet utför transaktioner som användarautentisering, hantering av profiler i realtid och tillämpning av sekretess. Servern har också ett centralt arkiv för policyer, granskningsposter och annan relaterad information.
 
-**** Webbsidor: Gränssnittet där du skapar profiler, hanterar profilskyddade dokument och övervakar händelser som är kopplade till profilskyddade dokument. Administratörer kan också konfigurera globala alternativ som användarautentisering, granskning och meddelanden för inbjudna användare samt hantera inbjudna användarkonton.
+**Webbsidor:** Gränssnittet där du skapar profiler, hanterar profilskyddade dokument och övervakar händelser som är kopplade till profilskyddade dokument. Administratörer kan också konfigurera globala alternativ som användarautentisering, granskning och meddelanden för inbjudna användare samt hantera inbjudna användarkonton.
 
 ![rm_psworkflow](assets/rm_psworkflow.png)
 
@@ -63,11 +66,11 @@ Olika typer av användare arbetar med dokumentsäkerhet för att utföra olika u
 
 * Systemadministratören eller annan person som arbetar med informationssystem installerar och konfigurerar dokumentsäkerhet. Den här personen kan även vara ansvarig för att konfigurera globala inställningar för servern, webbsidor, profiler och dokument.
 
-   De här inställningarna kan t.ex. innehålla en grundläggande säkerhets-URL, gransknings- och sekretessmeddelanden, inbjudna användarregistreringsmeddelanden och standardavtalsperioder.
+   Dessa inställningar kan t.ex. innehålla en grundläggande säkerhets-URL, gransknings- och sekretessmeddelanden, inbjudna användarregistreringsmeddelanden och standardavtalsperioder.
 
 * Dokumentsäkerhetsadministratörer kan skapa profiler och uppsättningar av profiler samt hantera profilskyddade dokument för användare efter behov. De skapar även inbjudna användarkonton och övervakar system, dokument, användare, policy, principuppsättning och anpassade händelser. De kan också ansvara för att konfigurera den globala servern samt webbsidan och principinställningarna tillsammans med en systemadministratör.
 
-   Administratörer kan tilldela användare följande roller i området för användarhantering i administrationskonsolen. Användare som tilldelas dessa roller utför sina uppgifter i dokumentets säkerhetsgränssnitt i administrationskonsolen.
+   Administratörer kan tilldela användare följande roller i området för användarhantering i administrationskonsolen. Användare som tilldelas de här rollerna utför sina uppgifter i dokumentets säkerhetsgränssnitt i administrationskonsolen.
 
    **Superadministratör för dokumentsäkerhet**
 
@@ -78,7 +81,7 @@ Olika typer av användare arbetar med dokumentsäkerhet för att utföra olika u
    * Hantera principuppsättningar
    * Hantera dokument
    * Hantera dokumentutgivare
-   *  Hantera inbjudna och lokala användare
+   * Hantera inbjudna och lokala användare
    * Visa händelser
    * Delegera
    * Bjud in externa användare
@@ -86,7 +89,9 @@ Olika typer av användare arbetar med dokumentsäkerhet för att utföra olika u
 
    Användare med den här rollen kan konfigurera dokumentsäkerhetsservern med hjälp av sidan Konfiguration i dokumentsäkerhetsavsnittet i administrationskonsolen. Den här behörigheten är associerad med rollen Hantera konfiguration.
 
-   **Obs**: *Användare med den här rollen måste också ha administratörskonsolens användarroll för att kunna logga in på administrationskonsolen och redigera alla konfigurationsrelaterade inställningar.*
+   >[!NOTE]
+   >
+   >Användare med den här rollen måste också ha administratörskonsolens användarroll för att kunna logga in på administrationskonsolen och redigera alla konfigurationsrelaterade inställningar.
 
    **Administratör för dokumentsäkerhetsprincip**
 
@@ -98,16 +103,20 @@ Olika typer av användare arbetar med dokumentsäkerhet för att utföra olika u
    * Hantera dokumentutgivare
    * Visa händelser
    * Delegera
-   **Obs**: *Användare med den här rollen måste också ha administratörskonsolens användarroll för att kunna logga in på administrationskonsolen och redigera alla konfigurationsrelaterade inställningar.*
+   >[!NOTE]
+   >
+   >Användare med den här rollen måste också ha administratörskonsolens användarroll för att kunna logga in på administrationskonsolen och redigera alla konfigurationsrelaterade inställningar.
 
    **Dokumentsäkerhet hanterar inbjudna och lokala användare**
 
    Användare med den här rollen kan utföra de uppgifter som krävs för att hantera alla inbjudna och lokala användare på relevanta dokumentsäkerhetswebbsidor. Dessa behörigheter är associerade med rollen:
 
-   *  Hantera inbjudna och lokala användare
+   * Hantera inbjudna och lokala användare
    * Bjud in externa användare
    * Åtkomst till slutanvändarens webbsidor
-   **Obs**: *Användare med den här rollen måste också ha administratörskonsolens användarroll för att kunna logga in på administrationskonsolen och redigera alla konfigurationsrelaterade inställningar.*
+   >[!NOTE]
+   >
+   >Användare med den här rollen måste också ha administratörskonsolens användarroll för att kunna logga in på administrationskonsolen och redigera alla konfigurationsrelaterade inställningar.
 
    **Inbjudan till dokumentsäkerhet**
 
@@ -189,7 +198,7 @@ Du kan fortsätta använda ett dokument under följande förhållanden:
 
 Du kan också använda principskyddade dokument offline (utan Internet- eller nätverksanslutning) om profilen tillåter åtkomst offline. Du måste först logga in på dokumentsäkerhet för att synkronisera dokumentet. Du kan sedan använda dokumentet under den offlinelåneperiod som anges i profilen.
 
-När offlinelåneperioden är slut måste du synkronisera dokumentet igen med dokumentsäkerhet, antingen genom att gå online och öppna ett policyskyddat dokument eller genom att använda ett kommando i klientprogrammet. (Mer information finns i *Acrobat-hjälpen* eller i hjälpen *för lämpliga* Acrobat Reader DC-tillägg.)
+När offlinelåneperioden är slut måste du synkronisera dokumentet igen med dokumentsäkerheten, antingen genom att gå online och öppna ett policyskyddat dokument eller genom att använda ett kommando i klientprogrammet. (Mer information finns i *Acrobat-hjälpen* eller i hjälpen *för lämpliga* Acrobat Reader DC-tillägg.)
 
 Om du sparar en kopia av ett principskyddat dokument med menykommandot Spara eller Spara som, används profilen automatiskt för det nya dokumentet. Händelser som försök att öppna det nya dokumentet granskas också och registreras för det ursprungliga dokumentet.
 
