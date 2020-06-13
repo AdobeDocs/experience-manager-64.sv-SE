@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 translation-type: tm+mt
-source-git-commit: 0f51ed42a1cd9b043be1ec8ce17e32cea0b1a161
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '7876'
+ht-degree: 0%
 
 ---
 
@@ -25,17 +28,23 @@ Tjänsten Generate PDF använder inbyggda program för att konvertera följande 
 
 * Microsoft Office 2003 och 2007 för att konvertera DOC, DOCX, RTF, TXT, XLS, XLSX, PPT, PPTX, VSD, MPP, MPPX, XPS och PUB (endast Windows)
 
-   ***Obs **: Acrobat® 9.2 eller senare krävs för att konvertera Microsoft XPS-format till PDF.*
+   >[!NOTE]
+   >
+   >Acrobat® 9.2 eller senare krävs för att konvertera Microsoft XPS-format till PDF.
 
 * Autodesk AutoCAD 2005, 2006, 2007, 2008 och 2009 för att konvertera DWF, DWG och DXW (endast engelska)
 * Corel WordPerfect 12 och X4 för att konvertera WPD, QPW, SHW (endast på engelska)
 * OpenOffice 2.0, 2.4, 3.0.1 och 3.1 för konvertering av ODT, ODS, ODP, ODG, ODF, SXW, SXI, SXC, SXD, DOC, DOCX, RTF, TXT, XLS, XLSX, PPT, PPTX, VSD, MPP, MPPX och PUB
 
-   ***Obs **: Tjänsten Generate PDF stöder inte 64-bitarsversionerna av OpenOffice.*
+   >[!NOTE]
+   >
+   >Tjänsten Generate PDF stöder inte 64-bitarsversionerna av OpenOffice.
 
 * Adobe Photoshop® CS2 för att konvertera PSD (endast Windows)
 
-   ***Obs**! Photoshop CS3 och CS4 stöds inte eftersom de inte stöder Windows Server 2003 eller Windows Server 2008. *
+   >[!NOTE]
+   >
+   >Photoshop CS3 och CS4 stöds inte eftersom de inte stöder Windows Server 2003 eller Windows Server 2008.
 
 * Adobe FrameMaker® 7.2 och 8 för att konvertera FM (endast Windows)
 * Adobe PageMaker® 7.0 för konvertering av PMD, PM6, P65 och PM (endast Windows)
@@ -166,7 +175,7 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Gener
 
    Så här hämtar du PDF-dokumentet:
 
-   * Anropa `CreatePDFResult` objektets `getCreatedDocument` metod som returnerar ett `com.adobe.idp.Document` objekt.
+   * Anropa `CreatePDFResult` objektets `getCreatedDocument` metod, som returnerar ett `com.adobe.idp.Document` objekt.
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera PDF-dokumentet från objektet som skapades i föregående steg.
    Utför följande åtgärder om du använde metoden för att hämta loggdokumentet (gäller inte för HTML-konverteringar): `createPDF2`
 
@@ -186,7 +195,7 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Gener
 
 ### Konvertera Word-dokument till PDF-dokument med webbtjänstens API {#convert-word-documents-to-pdf-documents-using-the-web-service-api}
 
-Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Generate PDF API (webbtjänsten):
+Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Generera PDF API (webbtjänst):
 
 1. Inkludera projektfiler.
 
@@ -570,7 +579,7 @@ Komponentinteraktioner för intern filkonvertering
 
 I det här dokumentet används termen *ursprungsprogram* för att ange vilket program som används för att skapa ett internt filformat, t.ex. Microsoft Word.
 
-*AppMon* är en företagskomponent som interagerar med ett systemspecifikt program på samma sätt som en användare navigerar genom de dialogrutor som visas i det programmet. Den XML-grammatik som används av AppMon för att instruera ett program, t.ex. Microsoft Word, att öppna och skriva ut en fil omfattar följande sekventiella uppgifter:
+*AppMon* är en företagskomponent som interagerar med ett systemspecifikt program på samma sätt som en användare navigerar i de dialogrutor som visas i det programmet. Den XML-grammatik som används av AppMon för att instruera ett program, t.ex. Microsoft Word, att öppna och skriva ut en fil omfattar följande sekventiella uppgifter:
 
 1. Öppna filen genom att välja Arkiv > Öppna
 1. se till att dialogrutan Öppna visas, om inte, hantera felet
@@ -606,7 +615,7 @@ I den här tabellen visas vilken typ av information som används vid utskrift av
   <tr> 
    <td><p>Skript </p></td> 
    <td><p>Anger interaktioner mellan tjänsten Generera PDF och ett systemspecifikt program. Sådana interaktioner dirigerar vanligtvis programmet till Adobe PDF-drivrutinen. </p><p>Skriptet innehåller instruktioner som instruerar det ursprungliga programmet att öppna specifika dialogrutor och som ger specifika svar på fält och knappar i dessa dialogrutor. </p></td> 
-   <td><p>Tjänsten Generate PDF innehåller skriptfiler för alla originalprogram som stöds. Du kan ändra dessa filer med ett XML-redigeringsprogram.</p><p>Om du vill lägga till stöd för ett nytt inbyggt program måste du skapa en ny skriptfil. (Se <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">Skapa eller ändra ytterligare en dialogrute-XML-fil för ett internt program</a>.) </p></td> 
+   <td><p>Tjänsten Generate PDF innehåller skriptfiler för alla originalprogram som stöds. Du kan ändra dessa filer med ett XML-redigeringsprogram.</p><p>Om du vill lägga till stöd för ett nytt systemspecifikt program måste du skapa en ny skriptfil. (Se <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">Skapa eller ändra ytterligare en dialogrute-XML-fil för ett internt program</a>.) </p></td> 
   </tr> 
   <tr> 
    <td><p>Allmänna instruktioner i dialogrutan </p></td> 
@@ -737,7 +746,7 @@ När du har lagt till dessa XML-filer i filen adobe-appmondata.jar måste du dis
 1. Expandera Aktiva tjänster. En grön pil visas bredvid tjänstnamnet om det körs. Annars är tjänsten i stoppat läge.
 1. Om tjänsten är stoppad högerklickar du på tjänstnamnet och väljer Starta tjänst.
 
-### Skapa eller ändra en skript-XML-fil för ett internt program {#creating-or-modifying-a-script-xml-file-for-a-native-application}
+### Skapa eller ändra en skript-XML-fil för ett program {#creating-or-modifying-a-script-xml-file-for-a-native-application}
 
 Om du vill dirigera filer till ett nytt originalprogram måste du skapa en skript-XML-fil för det programmet. Om du vill ändra hur tjänsten Generera PDF interagerar med ett program som redan stöds måste du ändra skriptet för det programmet.
 
