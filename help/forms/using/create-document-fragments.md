@@ -8,7 +8,10 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e9b78e2b-af7d-49d7-b37f-c96ec732015e
 translation-type: tm+mt
-source-git-commit: 813675c7cd770008e8c986f87f37f36b0b193dd2
+source-git-commit: 79dcf6816e1156604c0c9279b727ea436ad1826a
+workflow-type: tm+mt
+source-wordcount: '1683'
+ht-degree: 0%
 
 ---
 
@@ -46,7 +49,7 @@ Varje dokumentfragment innehåller fält med statisk text, data som tagits emot 
 
 När du skapar dokumentfragment i den här självstudiekursen skapas variabler för fält som tar emot data med hjälp av agentens användargränssnitt.
 
-Använd **FDM_Create_First_IC**, som beskrivs i avsnittet [Skapa formulärdatamodell](/help/forms/using/create-form-data-model0.md) , som formulärdatamodell för att skapa dokumentfragment i den här självstudiekursen.
+Använd **FDM_Create_First_IC**, som beskrivs i avsnittet [Skapa formulärdatamodell](create-form-data-model-tutorial.md) , som formulärdatamodell för att skapa dokumentfragment i den här självstudiekursen.
 
 ## Steg 1: Skapa textdokumentfragment för fakturainformation {#step-create-bill-details-text-document-fragment}
 
@@ -61,7 +64,7 @@ Dokumentfragmentet med faktureringsinformation innehåller följande fält:
 
 Utför följande steg för att skapa variabler för fält med användargränssnittet för agent som datakälla, skapa statisk text och använda formulärdatamodellelement i dokumentfragmentet:
 
-1. Välj **[!UICONTROL Formulär]** > **[!UICONTROL Dokumentfragment]**.
+1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Document Fragments]**.
 
 1. Välj **Skapa** > **Text**.
 1. Ange följande information:
@@ -120,7 +123,7 @@ Dokumentfragmentet Kundinformation innehåller följande fält:
 
 Utför följande steg för att skapa variabler för fält med användargränssnittet för agent som datakälla, skapa statisk text och använda formulärdatamodellelement i dokumentfragmentet:
 
-1. Välj **[!UICONTROL Formulär]** > **[!UICONTROL Dokumentfragment]**.
+1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Document Fragments]**.
 1. Välj **Skapa** > **Text**.
 1. Ange följande information:
 
@@ -154,7 +157,7 @@ Utför följande steg för att skapa variabler för fält med användargränssni
    ![customer_details_static_text_fdm](assets/customer_details_static_text_fdm.png)
 
 1. Placera markören bredvid fältet **Mobilnummer** och dubbelklicka på **kunden** > **egenskapen mobilenum** .
-1. Placera markören bredvid fältet **Alternativt kontaktnummer** och dubbelklicka på egenskapen** kund** > **alternateNumber** .
+1. Placera markören bredvid fältet **Alternativt kontaktnummer** och dubbelklicka på egenskapen **kund** > **alternate** .
 1. Placera markören bredvid fältet **Relationsnummer** och dubbelklicka på egenskapen **kund** > **relationsnummer** .
 1. Markera fliken **Variabler** , placera markören bredvid fältet **Leveransställe** och dubbelklicka på variabeln **Placesupply** .
 1. Placera markören bredvid fältet **Statuskod** och dubbelklicka på variabeln **Statskod** .
@@ -179,7 +182,7 @@ Dokumentfragmentet Faktureringssammanfattning innehåller följande fält:
 
 Utför följande steg för att skapa variabler för fält med användargränssnittet för agent som datakälla, skapa statisk text och använda formulärdatamodellelement i dokumentfragmentet:
 
-1. Välj **[!UICONTROL Formulär]** > **[!UICONTROL Dokumentfragment]**.
+1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Document Fragments]**.
 1. Välj **Skapa** > **Text**.
 1. Ange följande information:
 
@@ -242,11 +245,11 @@ Dokumentfragmentet Sammanfattning av avgifter innehåller följande fält:
 
 Utför följande steg för att skapa statisk text och använda modellelement för formulärdata i dokumentfragmentet:
 
-1. Välj **[!UICONTROL Formulär]** > **[!UICONTROL Dokumentfragment]**.
+1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Document Fragments]**.
 1. Välj **Skapa** > **Text**.
 1. Ange följande information:
 
-   1. Ange **summary_addas_first_ic **som namn i fältet **Titel** . Titeln fylls i automatiskt i namnfältet.
+   1. Ange **summary_addas_first_ic** som namn i fältet **Titel** . Titeln fylls i automatiskt i namnfältet.
    1. Välj **Formulärdatamodell** i avsnittet **Datamodell** .
    1. Välj **FDM_Create_First_IC** som formulärdatamodell och tryck på **Select**.
    1. Tryck på **Nästa**.
