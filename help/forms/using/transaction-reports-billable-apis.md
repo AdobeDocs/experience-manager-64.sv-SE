@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager
 discoiquuid: 82e72ffb-2faa-45fe-8bb2-f485d8fa043e
 translation-type: tm+mt
-source-git-commit: 0d0c6c6e536bf91ddc579382593c07144bd0ba8f
+source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+workflow-type: tm+mt
+source-wordcount: '1881'
+ht-degree: 1%
 
 ---
 
@@ -31,8 +34,8 @@ AEM Forms innehåller flera API:er för att skicka formulär, bearbeta dokument 
 
 Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett dokument eller formulär eller det återgivna dokumentets slutliga format. En transaktionsrapport delar upp transaktionerna i tre kategorier: Bearbetade dokument, återgivna dokument och skickade formulär.
 
-* **** Skickade formulär: När data skickas från någon typ av formulär som skapats med AEM Forms och data skickas till en datalagringsplats eller databas anses formuläröverföringen vara möjlig. Om du t.ex. skickar ett anpassat formulär, HTML5-formulär, PDF-formulär och formuläruppsättning, räknas de som skickade formulär. Varje formulär i en formuläruppsättning betraktas som en inlämning. Om en formuläruppsättning till exempel har fem formulär, räknas den som 5 inskickade när formuläruppsättningen skickas.
-* **** Återgivna dokument: Generering av ett dokument genom att kombinera en mall och data, digitalt signera eller certifiera ett dokument, använda ett fakturerbart API:er för dokumenttjänster eller konvertering av ett dokument från ett format till ett annat, räknas som dokument som återges.
+* **Skickade formulär:** När data skickas från någon typ av formulär som skapats med AEM Forms och data skickas till en datalagringsplats eller databas anses formuläröverföringen vara möjlig. Om du t.ex. skickar ett anpassat formulär, HTML5-formulär, PDF-formulär och formuläruppsättning, räknas de som skickade formulär. Varje formulär i en formuläruppsättning betraktas som en inlämning. Om en formuläruppsättning till exempel har fem formulär, räknas den som 5 inskickade när formuläruppsättningen skickas.
+* **Återgivna dokument:** Generering av ett dokument genom att kombinera en mall och data, digitalt signera eller certifiera ett dokument, använda ett fakturerbart API:er för dokumenttjänster eller konvertering av ett dokument från ett format till ett annat, räknas som dokument som återges.
 
 >[!NOTE]
 >
@@ -81,7 +84,7 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
    <td> </td> 
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlFileToPdf-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-">htmlFileToPdf</a></td> 
+   <td><a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlFileToPdf-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-">htmlFileToPdf</a></td> 
    <td><p>Skapar PDF från HTML-sidor.</p> </td> 
    <td>Bearbetade dokument<br /> </td> 
    <td> </td> 
@@ -274,8 +277,8 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
    <td>Ytterligare information</td> 
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#invoke-com.adobe.aemfd.docmanager.Document-java.util.Map-com.adobe.fd.assembler.client.AssemblerOptionSpec-">invoke</a></td> 
-   <td>Kör det angivna DDX-dokumentet och returnerar ett <a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">AssemblerResult</a> -objekt som innehåller de resulterande dokumenten. </td> 
+   <td><a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#invoke-com.adobe.aemfd.docmanager.Document-java.util.Map-com.adobe.fd.assembler.client.AssemblerOptionSpec-">invoke</a></td> 
+   <td>Kör det angivna DDX-dokumentet och returnerar ett <a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">AssemblerResult</a> -objekt som innehåller de resulterande dokumenten. </td> 
    <td>Bearbetade dokument</td> 
    <td>Följande operationer redovisas inte som transaktioner:
     <ul> 
@@ -285,7 +288,7 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#invoke-com.adobe.aemfd.docmanager.Document-java.util.Map-com.adobe.fd.assembler.client.AssemblerOptionSpec-" target="_blank">invoke</a></td> 
-   <td>Kör det angivna DDX-dokumentet och returnerar ett <a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html"> AssemblerResult</a> -objekt som innehåller de resulterande dokumenten. </td> 
+   <td>Kör det angivna DDX-dokumentet och returnerar ett <a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html"> AssemblerResult</a> -objekt som innehåller de resulterande dokumenten. </td> 
    <td>Bearbetade dokument</td> 
    <td>Alla indatafilformat som stöds av PDF Generator-, Forms- och Output-tjänsterna har stöd för alla dessa format som utdatafilformat. </td> 
   </tr>
@@ -306,7 +309,7 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
 
 
 
-### PDF Utility Service {#pdf-utility-service}
+### PDF Utility Service  {#pdf-utility-service}
 
 <table> 
  <tbody>
@@ -459,7 +462,7 @@ Tilldela uppgifter och dokumenttjänster i formulärbaserade AEM-arbetsflöden i
  </tbody>
 </table>
 
-### Formulärbaserade AEM-arbetsflöden i OSGi {#form-centric-aem-workflows-on-osgi}
+### Formulärbaserade AEM-arbetsflöden i OSGi  {#form-centric-aem-workflows-on-osgi}
 
 <table> 
  <tbody>
