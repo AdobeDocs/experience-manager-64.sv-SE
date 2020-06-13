@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: d28997b4-49d2-46da-bfa1-ed6876a65639
 translation-type: tm+mt
-source-git-commit: 12905ca1540e5b280975724a7fb3635dc4afffca
+source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+workflow-type: tm+mt
+source-wordcount: '2184'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +24,7 @@ Kunskap om CSS och LESS-ramverket.
 
 ## Vad kan anpassas {#what-can-be-customized}
 
-I artikeln listas allmänt tillgängliga CSS-klasser för adaptiva formulär. Du kan använda dessa klasser för att formatera olika komponenter i ett anpassat formulär. Formateringen av redigeringskomponenter, t.ex. dialogrutor och statusfält som visar varningar, ligger utanför artikelns omfång. Använd bara dessa formateringskonstruktioner när du skapar format (med CSS eller Less) när du inte kan formatera komponenter med [temaredigeraren](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html).
+I artikeln listas allmänt tillgängliga CSS-klasser för adaptiva formulär. Du kan använda dessa klasser för att formatera olika komponenter i ett anpassat formulär. Formateringen av redigeringskomponenter, t.ex. dialogrutor och statusfält som visar varningar, ligger utanför artikelns omfång. Använd bara dessa formateringskonstruktioner när du skapar format (med CSS eller Less) när du inte kan formatera komponenter med [temaredigeraren](themes.md).
 
 ## Anpassa format i anpassningsbara formulär {#customizing-styles-in-adaptive-forms}
 
