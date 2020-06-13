@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 16e57cf6-aaa1-406d-a6ad-71ec60b15386
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 5e764edb3d8ed98542c50b80cac40776c886ccf5
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 0%
 
 ---
 
@@ -84,4 +87,4 @@ Så här anpassar du informationssidan:
 >
 >Om du vill anpassa uppgiftsinformationssidan med uppgifter som skapats på fliken **Starta process **på arbetsytan i AEM Forms lägger du till den nya informationen `/apps/ws/js/runtime/templates/startprocess.html`.
 >
->Om du vill lägga till nya format för informationen som läggs till på informationssidan, ändrar du CSS-filen med hjälp av ändringsavsnittet *för* användargränssnittet i [Anpassa](/help/forms/using/changing-locale-user-interface.md#main-pars-header-3)arbetsytan.
+>Om du vill lägga till nya format för informationen som läggs till på informationssidan, ändrar du CSS-filen med hjälp av ändringsavsnittet *för* användargränssnittet i [Anpassa](/help/forms/using/changing-locale-user-interface.md)arbetsytan.
