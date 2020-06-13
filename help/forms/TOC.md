@@ -1,11 +1,14 @@
 ---
 cloud: experience-cloud
 product: adobe experience manager
-sub-product: forms
+sub-product: 'formulär '
 audience: end-user
-user-guide-title: AEM 6.4 Forms User Guide
+user-guide-title: Användarhandbok för AEM 6.4-formulär
 translation-type: tm+mt
-source-git-commit: 7aa8c789830ca6544c72f0086b186cffd939faec
+source-git-commit: 4f6b0555b681d257c6d92490daa85a3ae2439a96
+workflow-type: tm+mt
+source-wordcount: '3702'
+ht-degree: 0%
 
 ---
 
@@ -30,10 +33,10 @@ source-git-commit: 7aa8c789830ca6544c72f0086b186cffd939faec
    + Självstudiekurs: Skapa din första interaktiva kommunikation {#create-first-interactive-communication}
       + [Självstudiekurs: Skapa din första interaktiva kommunikation](using/create-your-first-interactive-communication.md)
       + [Självstudiekurs: Planera interaktiv kommunikation](using/planning-interactive-communications.md)
-      + [Självstudiekurs: Skapa formulärdatamodell](using/create-form-data-model0.md)
+      + [Självstudiekurs: Skapa formulärdatamodell](using/create-form-data-model-tutorial.md)
       + [Självstudiekurs: Skapa dokumentfragment](using/create-document-fragments.md)
       + [Självstudiekurs: Skapa mallar](using/create-templates-print-web.md)
-      + [Självstudiekurs: Skapa interaktiv kommunikation](using/create-interactive-communication0.md)
+      + [Självstudiekurs: Skapa interaktiv kommunikation](using/create-interactive-communication-tutorial.md)
    + AEM Forms Reference Collaterals {#aem-forms-reference-collaterals}
       + [Konfigurera och konfigurera referenswebbplatser för AEM Forms](using/setup-reference-sites.md)
       + [Genomgång av referenswebbplatser för ekonomi](using/finance-reference-site-walkthrough.md)
@@ -95,7 +98,7 @@ source-git-commit: 7aa8c789830ca6544c72f0086b186cffd939faec
       + [Uppgradera från en AEM Forms-version till AEM 6.4 Forms on JEE for WebLogic](http://www.adobe.com/go/learn_aemforms_upgradeWebLogic_64)
       + [Uppgradera från LiveCycle ES4 SP1 till AEM Forms på JEE för WebLogic](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-weblogic-livecycle.pdf)
       + [Uppgradera från en AEM Forms-version till AEM 6.4 Forms on JEE for WebSphere](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_64)
-      + [Uppgradera från LiveCycle ES4 SP1 till AEM Forms på JEE för WebSphere](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-turnkey-livecycle.pdf)
+      + [Uppgradera från LiveCycle ES4 SP1 till AEM Forms på JEE för WebSphere](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-websphere-livecycle.pdf)
 + Hantera AEM-formulär {#manage-administer-aem-forms}
    + [AEM Forms on OSGi Groups and Privileges](using/forms-groups-privileges-tasks.md)
    + [Skapa nya mappar för att kategorisera formulär](using/creating-new-folders-categorize-forms.md)
