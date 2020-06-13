@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: b624e255-ae71-4d9c-8554-d48f3e77b799
 translation-type: tm+mt
-source-git-commit: e3fcf1a117b13392b7e530a09198982c6160cb7b
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '221'
+ht-degree: 0%
 
 ---
 
@@ -25,9 +28,13 @@ Java API Quick Start (SOAP) är tillgängligt för tjänsten Credential.
 
 AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
 
-***Obs **: Snabbstarter i Programmering med AEM-formulär baseras på den FormsServer som distribueras på JBoss och operativsystemet Windows. Om du använder ett annat operativsystem, till exempel Unix, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. (Se[Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)*
+>[!NOTE]
+>
+>Snabbstarter i Programmering med AEM-formulär baseras på den FormsServer som distribueras på JBoss och operativsystemet Windows. Om du använder ett annat operativsystem, till exempel Unix, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-***Obs **: Du kan inte utföra åtgärder för autentiseringsuppgifter med webbtjänster.*
+>[!NOTE]
+>
+>Du kan inte utföra åtgärder för autentiseringsuppgifter med webbtjänster.
 
 ## Snabbstart (SOAP-läge): Importera autentiseringsuppgifter med Java API {#quick-start-soap-mode-importing-credentials-using-the-java-api}
 
