@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: ca3f6025-7e17-4173-8267-e24a338ea4a1
 translation-type: tm+mt
-source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+source-git-commit: 5e764edb3d8ed98542c50b80cac40776c886ccf5
+workflow-type: tm+mt
+source-wordcount: '317'
+ht-degree: 0%
 
 ---
 
@@ -135,7 +138,7 @@ Om du bara vill visa bilder för åtgärder anpassar du bilderna som används i 
 
 ### Åtgärdssnabbmeny för uppgiftslistans åtgärd {#task-list-task-action-nbsp-pop-up-menu}
 
-1. Du behöver ett utvecklingspaket för att kunna anpassa objekt på aktivitetsmenyn på arbetsytan i AEM Forms. Mer information om hur du skapar utvecklingspaket finns i [Skapa kod för arbetsytan i AEM Forms.](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3)
+1. Du behöver ett utvecklingspaket för att kunna anpassa objekt på aktivitetsmenyn på arbetsytan i AEM Forms. Mer information om hur du skapar utvecklingspaket finns i [Skapa kod för arbetsytan i AEM Forms.](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
 
 1. Kopiera /libs/ws/js/runtime/templates/task.html för att `/apps/ws/js/runtime/templates/task.html`ersätta följande kodfragment:
 
