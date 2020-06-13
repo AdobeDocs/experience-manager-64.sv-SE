@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: f8707752-2c83-461a-b83d-708754b0f3f6
 translation-type: tm+mt
-source-git-commit: ba04fe705a91717f1d9658d436056ebddda6be3a
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '2772'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,9 @@ Du kan utföra följande uppgifter med tjänsten Konvertera PDF:
 * Konvertera PDF-dokument till PostScript.
 * Konvertera PDF-dokument till bildformat.
 
-   ***Obs **:Mer information om tjänsten Konvertera PDF finns i[Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).*
+   >[!NOTE]
+   >
+   >Mer information om tjänsten Konvertera PDF finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Konvertera PDF-dokument till PostScript {#converting-pdf-documents-to-postscript}
 
@@ -67,7 +72,7 @@ När du konverterar ett PDF-dokument till en PostScript-fil kan du definiera kö
 
 Vanligtvis återspeglar den genererade PostScript-filen storleken på PDF-indatadokumentet. Om du väljer `ShrinkToFit` alternativet (vilket minskar PostScript-filens utdata så att de passar sidan) kommer du inte att se någon skillnad mellan PDF-indatadokumentet och den genererade PostScript-filen. Alternativet `ShrinkToFit` används endast om du väljer att skriva ut med en mindre sidstorlek än PDF-indatadokumentet. Om du vill välja en mindre sidstorlek definierar du `PageSize` alternativet. Vi rekommenderar dessutom att du ställer in alternativet att `RotateAndCenter` hämta rätt PostScript-utdata `true` .
 
-Om du markerar `ExpandToFit` alternativet (som utökar PostScript-filens utdata så att de passar sidan), aktiveras det bara om du väljer att skriva ut med en större sidstorlek än PDF-indatadokumentet. Om du vill välja en större sidstorlek definierar du `PageSize` alternativet. Vi rekommenderar dessutom att du ställer in alternativet att `RotateAndCenter` hämta rätt PostScript-utdata `true` .
+Om du markerar `ExpandToFit` alternativet (som utökar PostScript-filens utdata så att de passar in på sidan) aktiveras det bara om du väljer att skriva ut med en större sidstorlek än PDF-indatadokumentet. Om du vill välja en större sidstorlek definierar du `PageSize` alternativet. Vi rekommenderar dessutom att du ställer in alternativet att `RotateAndCenter` hämta rätt PostScript-utdata `true` .
 
 >[!NOTE]
 >
