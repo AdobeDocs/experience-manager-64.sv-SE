@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: b89293c4-ea2e-4fa4-9e5e-ef4f548e9608
 translation-type: tm+mt
-source-git-commit: 529b8c6556a7179a9169ff8250af6b5dc1251ef3
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '1071'
+ht-degree: 0%
 
 ---
 
@@ -45,7 +48,9 @@ Java API Quick Start (SOAP) är tillgängligt för Rights Management-tjänsten:
 
 AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
 
-***Obs **: Snabbstart som finns i Programmering med AEM Forms är baserat på operativsystemet på Forms-servern. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. (Se[Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)*
+>[!NOTE]
+>
+>Snabbstart som finns i Programmering med AEM Forms är baserat på operativsystemet på Forms-servern. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Skapa en profil med Java API {#quick-start-soap-mode-creating-a-policy-using-the-java-api}
 
