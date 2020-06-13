@@ -1,6 +1,6 @@
 ---
-title: Formulär-JEE-arbetsflöden| Hantera användardata
-seo-title: Formulär-JEE-arbetsflöden| Hantera användardata
+title: Formulär-JEE-arbetsflöden | Hantera användardata
+seo-title: Formulär-JEE-arbetsflöden | Hantera användardata
 description: 'null'
 seo-description: 'null'
 uuid: 3b06ef19-d3c4-411e-9530-2c5d2159b559
@@ -8,12 +8,15 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 5632a8df-a827-4e38-beaa-18b61c2208a3
 translation-type: tm+mt
-source-git-commit: 8afc09103b34b12e0218a133b87422456cb20d35
+source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+workflow-type: tm+mt
+source-wordcount: '1371'
+ht-degree: 0%
 
 ---
 
 
-# Formulär-JEE-arbetsflöden| Hantera användardata {#forms-jee-workflows-handling-user-data}
+# Formulär-JEE-arbetsflöden | Hantera användardata {#forms-jee-workflows-handling-user-data}
 
 AEM Forms JEE-arbetsflöden innehåller verktyg för att utforma, skapa och hantera affärsprocesser. En arbetsflödesprocess består av en serie steg som körs i en angiven ordning. Varje steg utför en specifik åtgärd, till exempel att tilldela en uppgift till en användare eller skicka ett e-postmeddelande. En process kan samverka med resurser, användarkonton och tjänster och kan aktiveras på något av följande sätt:
 
@@ -126,7 +129,7 @@ Nu när du har identifierat de processinstans-ID som är kopplade till en använ
 
 1. Skapa en instans av den offentliga `ProcessManager` klienten ( `com.adobe.idp.workflow.client.ProcessManager`) med en `ServiceClientFactory` instans med rätt anslutningsinställningar.
 
-   Mer information finns i Java API-referens för [klassen ProcessManager](https://helpx.adobe.com/experience-manager/6-3/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html).
+   Mer information finns i Java API-referens för [klassen ProcessManager](https://helpx.adobe.com/experience-manager/6-4/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html).
 
 1. Kontrollera arbetsflödesinstansens status. Om statusen är annan än 2 (COMPLETE) eller 4 (TERMINATED) avslutar du instansen först genom att anropa följande metod:
 
@@ -184,7 +187,7 @@ När du har uppgifts-ID:n gör du följande för att rensa de associerade filern
 
 
 
-1. Kör följande kommandon för att ta bort data för uppgifts-ID:n från AEM Forms-serverdatabasen:
+1. Utför följande kommandon för att ta bort data för aktivitets-ID:n från AEM Forms-serverdatabasen:
 
    ```sql
    delete from tb_task_acl where task_id=<task_id>
