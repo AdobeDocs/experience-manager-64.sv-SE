@@ -9,12 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: introduction
 discoiquuid: c7a1d13e-cb61-4082-8ae7-7f5eee9e0a51
 translation-type: tm+mt
-source-git-commit: 835618e8e0d01905ad7b476b0172dfecec41cf9d
+source-git-commit: 7c65752a969d9089ad61c29b0581327d32e022d1
+workflow-type: tm+mt
+source-wordcount: '3008'
+ht-degree: 0%
 
 ---
 
 
-# Introduktion till utveckling av anpassningsbara formulär {#introduction-to-authoring-adaptive-forms}
+# Introduktion till utveckling av anpassningsbara formulär  {#introduction-to-authoring-adaptive-forms}
 
 ## Översikt {#overview}
 
@@ -25,11 +28,11 @@ Med adaptiva formulär kan du skapa formulär som är engagerande, responsiva, d
 
 * **Att använda en XDP-formulärmall**&#x200B;är en idealisk formulärmodell om du har investeringar i XFA-baserade eller XDP-formulär. Det är ett direkt sätt att konvertera XFA-baserade formulär till anpassningsbara formulär. Alla befintliga XFA-regler behålls i de tillhörande adaptiva formulären. De färdiga adaptiva formulären har stöd för XFA-konstruktioner, till exempel valideringar, händelser, egenskaper och mönster.
 
-* **Om du använder en XSD (XML Schema Definition) eller ett JSON Schema** XML- och JSON-schema representerar detta strukturen i vilken data produceras eller används av företagets back-end-system. Du kan koppla schemat till ett anpassat formulär och använda dess element för att lägga till dynamiskt innehåll i det anpassningsbara formuläret. Elementen i schemat kommer att vara tillgängliga för användning på fliken Datamodellobjekt i innehållsläsaren när du redigerar adaptiva formulär.
+* **Om du använder en XSD (XML Schema Definition) eller ett JSON Schema** XML- och JSON-schema representerar detta strukturen i vilken data produceras eller används av det bakomliggande systemet i organisationen. Du kan koppla schemat till ett anpassat formulär och använda dess element för att lägga till dynamiskt innehåll i det anpassningsbara formuläret. Elementen i schemat kommer att vara tillgängliga för användning på fliken Datamodellobjekt i innehållsläsaren när du redigerar adaptiva formulär.
 
 * **Använda ingen eller utan en formulärmodell**
 
- Anpassningsbara formulär som skapas med det här alternativet använder inte någon formulärmodell. Data-XML som genereras från sådana formulär har en platt struktur med fält och motsvarande värden.
+Anpassningsbara formulär som skapas med det här alternativet använder inte någon formulärmodell. Data-XML som genereras från sådana formulär har en platt struktur med fält och motsvarande värden.
 
 Mer information om hur du skapar ett adaptivt formulär finns i [Skapa ett adaptivt formulär](/help/forms/using/creating-adaptive-form.md).
 
@@ -51,7 +54,7 @@ När du skapar ett nytt eller redigerar ett befintligt anpassat formulär använ
 
 ![Gränssnitt för redigering av anpassningsbara formulär](assets/formeditor.png)
 
-******S. Sidofält** B. Sida, verktygsfält **C.** Adaptiv formulärsida
+**S.** Sidofält **B.** Sida, verktygsfält **C.** Adaptiv formulärsida
 
 ### Sidebar {#sidebar}
 
@@ -65,7 +68,7 @@ Med sidofältet kan du
    ![Sidebar](assets/sidebar-comps-2.png)
    [Klicka för att förstora](assets/sidebar-comps-2.png)
 
-******** S. Innehållsläsaren **B. Egenskapsläsaren** C.**Resurser, webbläsare** D. Komponentwebbläsare
+**S.** Innehållsläsaren **B.** Egenskapsläsaren **C.** Resurser, webbläsare **D.** Komponentwebbläsare
 
 Sidlisten innehåller följande webbläsare:
 
@@ -87,7 +90,7 @@ Sidlisten innehåller följande webbläsare:
 
    Gör att du kan redigera egenskaperna för en komponent. Egenskaperna ändras enligt en komponent. Så här visar du egenskaper för den adaptiva formulärbehållaren:
 
-   Markera en komponent, tryck sedan på ![fältnivå](assets/field-level.png) > **[!UICONTROL Adaptiv formulärbehållare]** och tryck sedan på ![cmpr](assets/cmppr.png).
+   Markera en komponent, tryck sedan på ![fältnivå](assets/field-level.png) > **[!UICONTROL Adaptive Form Container]** och tryck sedan på ![cmpr](assets/cmppr.png).
 
 * **Resursläsaren**
 
@@ -149,7 +152,7 @@ Sidlisten innehåller följande webbläsare:
   </tr> 
   <tr> 
    <td>Bifogad fil</td> 
-   <td><p>Lägger till en knapp som gör att användare kan bläddra bland och bifoga stöddokument till ett formulär.</p> <p><strong>Obs! Komponenten </strong>för bifogad fil har stöd för en fördefinierad uppsättning filformat i adaptiva formulär som är aktiverade för Adobe Sign. Mer information finns i <a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">Filformat</a>som stöds.</p> </td> 
+   <td><p>Lägger till en knapp som gör att användare kan bläddra bland och bifoga stöddokument till ett formulär.</p> <p><strong>Obs! </strong>Komponenten Bifogad fil har stöd för en fördefinierad uppsättning filformat i adaptiva formulär som är aktiverade för Adobe Sign. Mer information finns i <a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html">Filformat</a>som stöds.</p> </td> 
   </tr> 
   <tr> 
    <td>Lista över bifogade filer</td> 
@@ -263,69 +266,69 @@ Sidlisten innehåller följande webbläsare:
   </tr> 
   <tr> 
    <td>Verifiera steg</td> 
-   <td><p>Lägger till en platshållare som visar det ifyllda formuläret för verifiering av användaren.</p> <p><strong>Obs</strong>:Adaptiv form som innehåller Verifiera-komponenten stöder inte anonyma användare. Du bör inte heller använda komponenten Verify i ett adaptivt formulärfragment.</p> </td> 
+   <td><p>Lägger till en platshållare som visar det ifyllda formuläret för verifiering av användaren.</p> <p><strong>Obs</strong>: Adaptiv form som innehåller Verifiera-komponenten stöder inte anonyma användare. Du bör inte heller använda komponenten Verify i ett adaptivt formulärfragment.</p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 #### Bästa tillvägagångssätt vid arbete med komponenter {#best-practices}
 
-Här följer några tips och viktiga saker att komma ihåg när du arbetar med adaptiva formulärkomponenter:
+Här följer några tips och viktiga saker du bör komma ihåg när du arbetar med adaptiva formulärkomponenter:
 
 * Varje komponent har tillhörande egenskaper som styr dess utseende och funktion. Om du vill konfigurera egenskaperna för en komponent trycker du på komponenten och trycker på ![cmpr](assets/cmppr.png) för att öppna komponentegenskaperna i egenskapsläsaren.
-* En komponent identifieras med sitt elementnamn. När du trycker på ![cmpr](assets/cmppr.png)kan du ändra komponentens namn genom att ändra fältvärdet för **[!UICONTROL elementnamnet]** i egenskapsläsaren. Endast bokstäver, siffror, bindestreck (-) och understreck (_) godkänns i fältet Elementnamn. Andra specialtecken tillåts inte och elementnamnet måste börja med en bokstav.
+* En komponent identifieras med sitt elementnamn. När du trycker på ![cmpr](assets/cmppr.png)kan du ändra komponentens namn genom att ändra **[!UICONTROL Element Name]** fältvärdet i egenskapsläsaren. Endast bokstäver, siffror, bindestreck (-) och understreck (_) godkänns i fältet Elementnamn. Andra specialtecken tillåts inte och elementnamnet måste börja med en bokstav.
 
 * Du kan ändra egenskapen Title för en adaptiv formulärkomponent infogad i formulärredigeraren utan att öppna egenskapsgranskaren så länge titeln visas i formuläret. Så här gör du:
 
-   1. Tryck för att markera en komponent som har en **[!UICONTROL Title]** -egenskap och vars **[!UICONTROL Hide title]** -egenskap är inaktiverad.
+   1. Tryck för att markera en komponent som har en **[!UICONTROL Title]** egenskap och vars **[!UICONTROL Hide title]** egenskap är inaktiverad.
    1. Tryck på ![aem_6_3_edit](assets/aem_6_3_edit.png) för att göra titeln redigerbar.
    1. Ändra titeln och tryck på Retur-tangenten eller var som helst utanför komponenten för att spara ändringarna. Tryck på Esc för att ignorera ändringarna.
 
-* Vissa adaptiva formulärkomponenter som e-post och telefon innehåller färdiga valideringsmönster. Du kan dock ange anpassad validering genom att uppdatera fältet **[!UICONTROL Valideringsmönster]** under dragspelsfliken Mönster i komponentegenskaperna. Mer information om standardvalideringar finns i komponentbeskrivningarna i tabellen ovan.
+* Vissa adaptiva formulärkomponenter som e-post och telefon innehåller färdiga valideringsmönster. Du kan dock ange anpassad validering genom att uppdatera **[!UICONTROL Validation Pattern]** fältet under mönsterdragspelsfliken i komponentegenskaperna. Mer information om standardvalideringar finns i komponentbeskrivningarna i tabellen ovan.
 
-* Anpassningsbara formulärfält, t.ex. Numerisk ruta och E-post, kan konfigureras så att de innehåller speciella HTML5-indatatyper. När de här fälten är i fokus på mobila enheter och surfplattor visas särskilda alfabet, siffror och tecken som är vanliga för inmatningsinformation i fälten. Det gör det lättare för användarna att ange information snabbt utan att behöva växla mellan teckenuppsättningar på knappsatsen. Om du vill tillåta specialiserade indata för en komponent aktiverar du kryssrutan **[!UICONTROL Använd HTML-typnummer]** i komponentegenskaperna.
+* Anpassningsbara formulärfält, t.ex. Numerisk ruta och E-post, kan konfigureras så att de innehåller speciella HTML5-indatatyper. När de här fälten är i fokus på mobila enheter och surfplattor visas särskilda alfabet, siffror och tecken som är vanliga för inmatningsinformation i fälten. Det gör det lättare för användarna att ange information snabbt utan att behöva växla mellan teckenuppsättningar på knappsatsen. Om du vill tillåta specialindata för en komponent aktiverar du kryssrutan i dess komponentegenskaper **[!UICONTROL Use HTML Type Number]** .
 
-* Du kan aktivera en textrutekomponent för att acceptera RTF. Om du vill aktivera RTF-text för en textruta markerar du kryssrutan **[!UICONTROL Tillåt RTF]** i komponentegenskaperna.
+* Du kan aktivera en textrutekomponent för att acceptera RTF. Om du vill aktivera RTF-text för en textruta aktiverar du kryssrutan i komponentegenskaperna **[!UICONTROL Allow Rich Text]** .
 
-* Du kan aktivera komponenterna Textruta, E-post och Telefon för att autofylla värden för fält som namn, adress, kreditkort, telefon och e-post från informationen som lagras i webbläsarens autofyllningsinställningar. Om du vill aktivera den här funktionen väljer du **[!UICONTROL Aktivera automatisk ifyllning]** i komponentegenskaperna och väljer ett **[!UICONTROL autofyllningsattribut]**. När en användare fyller i ett anpassat formulär föreslås värdena från profilen för automatisk ifyllning i webbläsaren eller baserat på de värden som användaren tidigare fyllt i. Observera att Autofyll fungerar om autofyllningsinställningarna i användarens webbläsare är aktiverade.
+* Du kan aktivera komponenterna Textruta, E-post och Telefon för att autofylla värden för fält som namn, adress, kreditkort, telefon och e-post från informationen som lagras i webbläsarens autofyllningsinställningar. Om du vill aktivera den här funktionen markerar du **[!UICONTROL Enable Autofill]** komponentegenskaperna och väljer en **[!UICONTROL Autofill Attribute]**. När en användare fyller i ett anpassat formulär föreslås värdena från profilen för automatisk ifyllning i webbläsaren eller baserat på de värden som användaren tidigare fyllt i. Observera att Autofyll fungerar om autofyllningsinställningarna i användarens webbläsare är aktiverade.
 
 * Ange värden för alternativknappar och kryssruteobjekt i `{value}={text}` format i komponentegenskaper.
-* Komponenten för bifogad fil tillåter som standard att användaren bara kan bifoga en fil. Du kan dock konfigurera komponentegenskaperna så att de stöder flera bifogade filer. Om en användare dessutom bifogar flera filer med samma filnamn kan de bifogade filerna orsaka problem. Därför rekommenderar vi att du kopplar en unik identifierare till varje bifogad fil när formuläret skickas. Så här gör du:
+* Komponenten för bifogad fil tillåter som standard endast användare att bifoga en fil. Du kan dock konfigurera komponentegenskaperna så att de stöder flera bifogade filer. Om en användare dessutom bifogar flera filer med samma filnamn kan de bifogade filerna orsaka problem. Därför rekommenderar vi att du kopplar en unik identifierare till varje bifogad fil när formuläret skickas. Så här gör du:
 
-   1. På din AEM Forms-server går du till **[!UICONTROL Adobe Experience Manager > Verktyg > Åtgärder > Webbkonsol]**.
-   1. Sök efter och tryck på **[!UICONTROL tjänsten]** Adaptive Forms Configuration.
-   1. Aktivera **[!UICONTROL Gör filnamn unika]** i dialogrutan Adaptiv formulärkonfigurationstjänst. Som standard är den inaktiverad.
+   1. Gå till AEM Forms-servern **[!UICONTROL Adobe Experience Manager > Tools > Operations > Web Console]**.
+   1. Sök och tryck **[!UICONTROL Adaptive Forms Configuration Service]**.
+   1. Aktivera **[!UICONTROL Make File Names Unique]** i dialogrutan Adaptive Forms Configuration Service. Som standard är den inaktiverad.
 
-* Om du vill att användare ska kunna bifoga en PDF-fil med Safari-webbläsaren kontrollerar du att **[!UICONTROL application/pdf]** har lagts till i egenskapen Filtyper som stöds i komponenten för bifogade filer. Anpassningsbara formulär som skapats med tidigare AEM Forms-version kan innehålla **[!UICONTROL .pdf]** i stället för **[!UICONTROL application/pdf]** i egenskapen Filtyper som stöds.
+* Om du vill att användare ska kunna bifoga en PDF-fil med Safari-webbläsaren måste du se till att **[!UICONTROL application/pdf]** läggs till i egenskapen Filtyper som stöds i komponenten för bifogade filer. Anpassningsbara formulär som skapats med tidigare AEM Forms-version kan innehålla **[!UICONTROL .pdf]** i stället **[!UICONTROL application/pdf]** för egenskapen Filtyper som stöds.
 
 Mer information om adaptiva formulär finns i [Bästa tillvägagångssätt för att arbeta med adaptiva formulär](/help/forms/using/adaptive-forms-best-practices.md).
 
 >[!NOTE]
 >
->Anpassade formulärkomponenter har inte stöd för höger till vänster-språk. Till exempel hebreiska.
+>Adaptiva formulärkomponenter har inte stöd för RTL-språk. Till exempel hebreiska.
 
 ### Verktygsfältet Sida {#page-toolbar}
 
 Verktygsfältet längst upp på sidan innehåller alternativ som gör att du kan förhandsgranska formuläret, ändra formuläregenskaper och redigera formulärlayouten. Du kan förhandsgranska formuläret när du redigerar det och göra ändringar i det. I verktygsfältet visas:
 
-* **[!UICONTROL Växla panelen]** Sida vid ![sida](assets/toggle-side-panel.png): Här kan du visa eller dölja sidofältet.
+* **[!UICONTROL Toggle Side Panel]** ![växlingspanel](assets/toggle-side-panel.png): Här kan du visa eller dölja sidofältet.
 
-* **[!UICONTROL Sidinformation]** ![temaalternativ](assets/theme-options.png): Gör att du kan visa sidegenskaper, publicera/avpublicera ett formulär, starta ett formulärarbetsflöde och öppna formuläret i klassiskt gränssnitt.
+* **[!UICONTROL Page information]** ![temaalternativ](assets/theme-options.png): Gör att du kan visa sidegenskaper, publicera/avpublicera ett formulär, starta ett formulärarbetsflöde och öppna formuläret i klassiskt gränssnitt.
 
-* **[!UICONTROL Emulatorns]** ![linjal](assets/ruler.png): Gör att du kan emulera formulärutseendet för olika visningsstorlekar, till exempel surfplattor och telefoner.
+* **[!UICONTROL Emulator]** ![linjal](assets/ruler.png): Gör att du kan emulera formulärutseendet för olika visningsstorlekar, till exempel för surfplattor och telefoner.
 
-* **[!UICONTROL Redigera]**: Här kan du välja andra lägen, till exempel: **Redigera, Formatera, Utvecklare** och **Design**.
+* **[!UICONTROL Edit]**: Här kan du välja andra lägen, till exempel: **Redigera, Formatera, Utvecklare** och **Design**.
 
-   * **[!UICONTROL Redigera]**: Här kan du redigera egenskaperna för formuläret och dess komponenter. Du kan till exempel lägga till en komponent, släppa en bild och ange obligatoriska fält.
-   * **[!UICONTROL Format]**: Gör att du kan formatera utseendet på komponenter i formuläret. I stilläge kan du till exempel markera en panel och ange dess bakgrundsfärg.
-   * **[!UICONTROL Utvecklare]**: Låter en utvecklare:
+   * **[!UICONTROL Edit]**: Här kan du redigera egenskaperna för formuläret och dess komponenter. Du kan till exempel lägga till en komponent, släppa en bild och ange obligatoriska fält.
+   * **[!UICONTROL Style]**: Gör att du kan formatera utseendet på komponenter i formuläret. I stilläge kan du till exempel markera en panel och ange dess bakgrundsfärg.
+   * **[!UICONTROL Developer]**: Låter en utvecklare:
 
       * Upptäck vad formulären består av.
       * Felsök vad som händer var och när, vilket i sin tur hjälper till att lösa problem.
    * **[!UICONTROL Design]**: Gör att du kan aktivera eller inaktivera anpassade komponenter eller komponenter som inte finns med i sidofältet.
 
 
-* **[!UICONTROL Förhandsgranska]**: Gör att du kan förhandsgranska hur formuläret ser ut när du publicerar det.
+* **[!UICONTROL Preview]**: Gör att du kan förhandsgranska hur formuläret ser ut när du publicerar det.
 
 ### Komponentverktygsfältet {#component-toolbar}
 
@@ -333,32 +336,32 @@ Verktygsfältet längst upp på sidan innehåller alternativ som gör att du kan
 
 När du markerar en komponent visas ett verktygsfält där du kan arbeta med den. Du får alternativ för att klippa ut, klistra in, flytta och ange egenskaper för komponenterna. Dina alternativ är:
 
-A.**[!UICONTROL Konfigurera]**: När du trycker på **[!UICONTROL Konfigurera]** visas komponentegenskaperna i sidofältet. Om du konfigurerar dessa egenskaper kan du anpassa datainhämtningen. Du kan ändra komponentens elementnamn och ange etikettexten i komponentens rubrikfält. Med elementnamnet kan du hämta värden som användarna anger med komponenten. I komponentegenskaperna anger du komponentens beteende och hanterar användarindata. Konfigurera egenskaperna i sidofältet för att hämta användardata och använda dem för vidare bearbetning. Med egenskaper för adaptiv formulärbehållare kan du ange klientbibliotek, layouter, teman, inställningar för dokumentdokument, inställningar för att spara, inställningar för överföring och metadatainställningar.
+A.**[!UICONTROL Configure]**: När du trycker **[!UICONTROL Configure]** visas komponentegenskaperna i sidlisten. Om du konfigurerar dessa egenskaper kan du anpassa datainhämtningen. Du kan ändra komponentens elementnamn och ange etikettexten i komponentens rubrikfält. Med elementnamnet kan du hämta värden som användarna anger med komponenten. I komponentegenskaperna anger du komponentens beteende och hanterar användarindata. Konfigurera egenskaperna i sidofältet för att hämta användardata och använda dem för vidare bearbetning. Med egenskaper för adaptiv formulärbehållare kan du ange klientbibliotek, layouter, teman, inställningar för dokumentdokument, inställningar för att spara, inställningar för överföring och metadatainställningar.
 
 B.**[!UICONTROL Copy]**: Du kan använda kopieringsalternativet för att kopiera en komponent och klistra in den på andra platser i formuläret. När du klistrar in en komponent får den inklistrade komponenten ett nytt elementnamn men behåller den kopierade komponentens egenskaper.
 
 C.**[!UICONTROL Cut]**: Du kan använda alternativet Klipp ut för att flytta en komponent från en plats till en annan i det adaptiva formuläret.
 
-D. **[!UICONTROL Ta bort]**: Gör att du kan ta bort komponenten från formuläret.
+D. **[!UICONTROL Delete]**: Gör att du kan ta bort komponenten från formuläret.
 
-E. **[!UICONTROL Infoga]**: Gör att du kan infoga en komponent ovanför den markerade komponenten.
+E. **[!UICONTROL Insert]**: Gör att du kan infoga en komponent ovanför den markerade komponenten.
 
-F. **[!UICONTROL Klistra in]**: Gör att du kan klistra in komponenten som du klipper ut eller kopierar med alternativen som beskrivs ovan.
+F. **[!UICONTROL Paste]**: Gör att du kan klistra in komponenten som du klipper ut eller kopierar med alternativen som beskrivs ovan.
 
-G. **[!UICONTROL Redigera regler]**: Gör att du kan öppna regelredigeraren. Mer information finns i [Regelredigeraren](/help/forms/using/rule-editor.md).
+G. **[!UICONTROL Edit rules]**: Gör att du kan öppna regelredigeraren. Mer information finns i [Regelredigeraren](/help/forms/using/rule-editor.md).
 
 H. **Grupp**: Gör att du kan markera flera komponenter om du vill klippa ut, kopiera eller klistra in mer än en komponent tillsammans.
 
-Jag. **[!UICONTROL Överordnad]**: Gör att du kan välja en komponents överordnade. Ett textfält ligger till exempel i ett underavsnitt som finns i ett avsnitt. Avsnittet finns i stödlinjens rotpanel och den adaptiva formulärbehållaren är överordnad en stödlinjens rotpanel. För en komponent kan du se alla alternativ med hierarkin sorterad längst ned.
+Jag. **[!UICONTROL Parent]**: Gör att du kan välja en komponents överordnade. Ett textfält ligger till exempel i ett underavsnitt som finns i ett avsnitt. Avsnittet finns i stödlinjens rotpanel och den adaptiva formulärbehållaren är överordnad en stödlinjens rotpanel. För en komponent kan du se alla alternativ med hierarkin sorterad längst ned.
 
-Om du till exempel trycker på **[!UICONTROL Överordnad]** för en textruta ser du:
+Om du till exempel trycker **[!UICONTROL Parent]** på en textruta ser du:
 
 * Underavsnitt
 * Avsnitt
 * guideRootPanel
 * Adaptiv formulärbehållare
 
-J. **Övriga**: Innehåller fler alternativ för att arbeta med den markerade komponenten.
+J. **Övrigt**: Innehåller fler alternativ för att arbeta med den markerade komponenten.
 
 * Visa SOM-uttryck
 * Spara en panel som fragment (endast för paneler)
@@ -368,7 +371,7 @@ J. **Övriga**: Innehåller fler alternativ för att arbeta med den markerade ko
 
 ### Adaptiv formulärsida {#af-page}
 
-Den anpassningsbara formulärsidan är det faktiska formuläret. Det är som alla andra WCM-sidor som modelleras som WCM- `cq:Page` komponent. Följande bild visar innehållsstrukturen i ett typiskt anpassat formulär.
+Den anpassningsbara formulärsidan är det faktiska formuläret. Den är som alla andra WCM-sidor som modelleras som WCM- `cq:Page` komponent. Följande bild visar innehållsstrukturen i ett typiskt anpassat formulär.
 
 ![Innehållsstruktur för en WCM-sida med anpassat formulär](assets/afstructure.png)
 
@@ -383,7 +386,7 @@ Innehållsstrukturen innehåller vanligtvis följande primära komponenter:
 
 * **[!UICONTROL rootPanel]**: Rotpanelen i ett adaptivt formulär. Den kan innehålla underpaneler under objektnoden. Varje panel, inklusive rotpanelen, kan ha en tillhörande layout. Panelens layout bestämmer hur formuläret placeras. I till exempel dragspelslayouten* placeras *objekten som dragspelssteg.
 
-* **[!UICONTROL verktygsfält]**: En adaptiv formulärbehållare har ett associerat globalt verktygsfält som är globalt för formuläret. Det här verktygsfältet kan läggas till med åtgärden **Lägg till verktygsfält** i redigeringsfältet, som gör att författare kan lägga till åtgärder som Skicka, Spara, Återställ och så vidare.
+* **[!UICONTROL toolbar]**: En adaptiv formulärbehållare har ett associerat globalt verktygsfält som är globalt för formuläret. Det här verktygsfältet kan läggas till med åtgärden **Lägg till verktygsfält** i redigeringsfältet, som gör att författare kan lägga till åtgärder som Skicka, Spara, Återställ och så vidare.
 
-* **[!UICONTROL resurser]**: Den här noden innehåller ytterligare information som används för formulärredigering. Exempel: formulärmodellinformation, lokaliseringsinformation osv.).
+* **[!UICONTROL assets]**: Den här noden innehåller ytterligare information som används för formulärredigering. Exempel: formulärmodellinformation, lokaliseringsinformation osv.).
 
