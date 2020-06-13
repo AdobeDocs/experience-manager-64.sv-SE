@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/get_started_with_administering_aem_forms_on_je
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: bd648c38-731b-420e-973d-a4728b69868e
 translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '1729'
+ht-degree: 0%
 
 ---
 
@@ -25,8 +28,8 @@ Mer information om hur du aktiverar läget för säker säkerhetskopiering finns
 >
 >Filerna i den tillfälliga katalogen och de långlivade dokumenten i GDS-rotkatalogen (Global Document Storage) kan innehålla känslig användarinformation, t.ex. information som kräver särskilda autentiseringsuppgifter när de används med API:er eller användargränssnitt. Därför är det viktigt att den här katalogen skyddas på rätt sätt genom att använda de metoder som är tillgängliga för operativsystemet. Vi rekommenderar att endast det operativsystemskonto som används för att köra programservern har läs- och skrivåtkomst till den här katalogen.
 
-1. I administrationskonsolen klickar du på **[!UICONTROL Inställningar > Core System Settings > Configurations]**.
-1. Ändra alternativen på sidan Core Configurations (Grundkonfiguration) efter behov och klicka på **[!UICONTROL OK]**. Mer information om alternativen finns i Alternativ för [kärnkonfigurationer](configure-general-aem-forms-settings.md#core-configurations-options).
+1. Klicka på i administrationskonsolen **[!UICONTROL Settings > Core System Settings > Configurations]**.
+1. Ändra alternativen på sidan Core Configurations (Grundkonfiguration) efter behov och klicka sedan på **[!UICONTROL OK]**. Mer information om alternativen finns i Alternativ för [kärnkonfigurationer](configure-general-aem-forms-settings.md#core-configurations-options).
 
 ## Alternativ för kärnkonfigurationer {#core-configurations-options}
 
@@ -39,7 +42,9 @@ Mer information om hur du aktiverar läget för säker säkerhetskopiering finns
 * Lagra långlivade dokument. Långa dokument har ingen förfallotid och finns kvar tills de tas bort (t.ex. PDF-filerna som används i en arbetsflödesprocess). De långvariga dokumenten utgör en kritisk del av det övergripande systemtillståndet. Om några eller alla dessa dokument förloras eller skadas kan formulärservern bli instabil. Därför är det viktigt att den här katalogen lagras på en RAID-enhet.
 * Lagra tillfälliga dokument som behövs under bearbetningen.
 
-   ***Obs **: Du kan även aktivera dokumentlagring i AEM-formulärdatabasen. Systemprestanda är dock bättre när du använder GDS.*
+>[!NOTE]
+>
+>Du kan även aktivera dokumentlagring i AEM-formulärdatabasen. Systemprestanda är dock bättre när du använder GDS.
 
 * Överför dokument mellan noder i ett kluster. Om du kör AEM-formulär i en klustrad miljö måste katalogen vara tillgänglig från alla noder i klustret.
 * Tar emot inkommande parametrar från fjärr-API-anrop.
@@ -50,9 +55,13 @@ Om du inte anger någon GDS-rotkatalog används en programserverkatalog som stan
 * `*[WEBSPHERE_HOME]*/installedApps/adobe/*[server]*/DocumentStorage`
 * `*[WEBLOGIC_HOME]*/user_projects/<domain>/*[server]*/adobe/AEMformsserver/DocumentStorage`
 
-***Obs **: Om du ändrar värdet för GDS-rotkataloginställningen bör du vara särskilt försiktig. GDS-katalogen används för att lagra både långlivade filer som används i en process och viktiga produktkomponenter för AEM-formulär. Att ändra platsen för GDS-katalogen är en stor systemändring. Om GDS-katalogen konfigureras på ett felaktigt sätt kommer AEM-formulären att fungera och en fullständig ominstallation av AEM-formulären kan krävas. Om du anger en ny plats för GDS-katalogen måste programservern stängas av och data migreras innan servern kan startas om. Systemadministratören måste flytta alla filer från den gamla platsen till den nya, men behålla den interna katalogstrukturen.*
+>[!NOTE]
+>
+>Om du ändrar värdet för GDS-rotkataloginställningen bör du vara särskilt försiktig. GDS-katalogen används för att lagra både långlivade filer som används i en process och viktiga produktkomponenter för AEM-formulär. Att ändra platsen för GDS-katalogen är en stor systemändring. Om GDS-katalogen konfigureras på ett felaktigt sätt kommer AEM-formulären att fungera och en fullständig ominstallation av AEM-formulären kan krävas. Om du anger en ny plats för GDS-katalogen måste programservern stängas av och data migreras innan servern kan startas om. Systemadministratören måste flytta alla filer från den gamla platsen till den nya, men behålla den interna katalogstrukturen.
 
-***Obs **: Ange inte samma katalog för den tillfälliga katalogen och GDS-katalogen.*
+>[!NOTE]
+>
+>Ange inte samma katalog för den tillfälliga katalogen och GDS-katalogen.
 
 Mer information om GDS-katalogen finns i [Förbereda för att installera AEM-formulär (Single Server)](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63).
 
@@ -72,15 +81,15 @@ Den här inställningen är tom som standard.
 
 **Maximal textbunden dokumentstorlek (byte)** Det maximala antalet byte som finns i minnet när dokument skickas mellan olika AEM-formulärkomponenter. Använd den här inställningen för prestandajustering. Dokument som är mindre än det här antalet lagras i minnet och sparas i databasen. Dokument som överskrider det högsta tillåtna antalet lagras på hårddisken.
 
- Den här inställningen är obligatorisk. Standardvärdet är 65 536 byte.
+Den här inställningen är obligatorisk. Standardvärdet är 65 536 byte.
 
 **Standardtidsgräns för borttagning av dokument (sekunder)** Den maximala tiden, i sekunder, under vilken ett dokument som skickas mellan olika AEM-formulärkomponenter anses vara aktiv. När den här tiden har gått kan filer som används för att lagra det här dokumentet tas bort. Använd den här inställningen för att kontrollera hur mycket diskutrymme som används.
 
- Den här inställningen är obligatorisk. Standardvärdet är 600 sekunder.
+Den här inställningen är obligatorisk. Standardvärdet är 600 sekunder.
 
 **Intervall för dokumentsvepning (sekunder)** Den tid, i sekunder, mellan försök att ta bort filer som inte längre behövs och som användes för att skicka dokumentdata mellan tjänster.
 
- Den här inställningen är obligatorisk. Standardvärdet är 30 sekunder.
+Den här inställningen är obligatorisk. Standardvärdet är 30 sekunder.
 
 **Aktivera FIPS** Välj det här alternativet om du vill aktivera FIPS-läget. Federal Information Processing Standard (FIPS) 140-2 är en kryptologistandard som definierats av USA:s regering. När AEM-formulär körs i FIPS-läge begränsar de dataskyddet till godkända FIPS 140-2-algoritmer genom att använda krypteringsmodulen RSA BSAFE Crypto-C 2.1.
 
@@ -88,11 +97,13 @@ FIPS-läget stöder inte krypteringsalgoritmer som används i tidigare versioner
 
 När FIPS är aktiverat används vanligtvis inte lösenordskryptering för något dokument. Om du försöker göra det genereras ett FIPSModeException-undantag som anger att lösenordskryptering inte tillåts i FIPS-läge. Dessutom stöds inte elementet PDFsFromBookmarks (DX) i dokumentbeskrivningens XML-element i FIPS-läge när basdokumentet är lösenordskrypterat.
 
-***Obs **: AEM-formulärprogram validerar inte kod för att säkerställa FIPS-kompatibilitet. Den tillhandahåller ett FIPS-driftläge så att FIPS-godkända algoritmer används för kryptografiska tjänster från FIPS-godkända bibliotek (RSA).*
+>[!NOTE]
+>
+>AEM-formulärprogram validerar inte kod för att säkerställa FIPS-kompatibilitet. Den tillhandahåller ett FIPS-driftläge så att FIPS-godkända algoritmer används för kryptografiska tjänster från FIPS-godkända bibliotek (RSA).
 
 **Aktivera WSDL** Välj det här alternativet om du vill aktivera generering av WSDL (Web Service Definition Language) för alla tjänster som ingår i AEM-formulär.
 
-Aktivera det här alternativet i utvecklingsmiljöer, där utvecklare använder WSDL-generering för att skapa sina klientprogram. Du kan välja att inaktivera WSDL-generering i en produktionsmiljö för att undvika att visa tjänstens interna information.
+Aktivera det här alternativet i utvecklingsmiljöer, där utvecklare använder WSDL-generering för att bygga sina klientprogram. Du kan välja att inaktivera WSDL-generering i en produktionsmiljö för att undvika att visa tjänstens interna information.
 
 **Aktivera dokumentlagring i databasen** Välj det här alternativet om du vill lagra långlivade dokument i AEM-formulärdatabasen. Om du aktiverar det här alternativet tas inte behovet av en GDS-katalog bort. Om du väljer det här alternativet förenklas dock säkerhetskopieringen av AEM-formulär. Om du bara använder GDS-systemet innebär en säkerhetskopiering att AEM-formulärsystemet försätts i säkerhetskopieringsläge och att säkerhetskopieringen av databasen och GDS slutförs. Om du väljer databasalternativet innebär säkerhetskopieringen att du slutför databassäkerhetskopieringen för en ny installation eller slutför databassäkerhetskopieringen och engångskopieringen av GDS för en uppgradering. Ytterligare hantering av databasen kan behövas för att rensa jobb och data jämfört med en GDS-konfiguration. (Se Alternativ för säkerhetskopiering när databasen används för dokumentlagring.)
 
@@ -102,6 +113,6 @@ Aktivera det här alternativet i utvecklingsmiljöer, där utvecklare använder 
 
 **Tillåt icke-skyddade RDS-begäranden** När det här alternativet är markerat behöver RDS-begäranden inte använda https. Som standard är det här alternativet inte markerat och all kommunikation till datatjänster måste vara https-begäranden.
 
-**** Tillåt osäker dokumentöverföring från Flex-program: Filöverföringsservern som används för att överföra dokument från Adobe Flex®-program till AEM-formulär kräver att användarna är autentiserade och behöriga innan de kan överföra dokument. Användaren måste tilldelas rollen som användare av Document Upload Application eller en annan roll som innefattar behörigheten Dokumentöverföring. Detta förhindrar obehöriga användare från att överföra dokument till AEM-formulärservern. Välj det här alternativet om du vill inaktivera den här säkerhetsfunktionen i en utvecklingsmiljö eller för bakåtkompatibilitet med tidigare versioner av AEM-formulär. Som standard är det här alternativet inte markerat. Mer information finns i&quot;Anropa AEM-formulär med AEM Forms Remoting&quot; i Programmering med AEM-formulär.
+**Tillåt osäker dokumentöverföring från Flex-program:** Filöverföringsservern som används för att överföra dokument från Adobe Flex®-program till AEM-formulär kräver att användarna är autentiserade och behöriga innan de kan överföra dokument. Användaren måste tilldelas rollen som användare av Document Upload Application eller en annan roll som innefattar behörigheten Dokumentöverföring. Detta förhindrar obehöriga användare från att överföra dokument till AEM-formulärservern. Välj det här alternativet om du vill inaktivera den här säkerhetsfunktionen i en utvecklingsmiljö eller för bakåtkompatibilitet med tidigare versioner av AEM-formulär. Som standard är det här alternativet inte markerat. Mer information finns i&quot;Anropa AEM-formulär med AEM Forms Remoting&quot; i Programmering med AEM-formulär.
 
-**** Tillåt oskyddad dokumentöverföring från Java SDK-program: Överföringar med HTTP DocumentManager måste vara skyddade. Som standard kräver HTTP-överföringar att användare autentiseras och auktoriseras innan de kan överföra dokument. Användaren måste tilldelas rollen Tjänstanvändare eller en annan roll som innehåller behörigheten Tjänstanrop. Detta förhindrar obehöriga användare från att överföra dokument till formulärservern. Välj det här alternativet om du vill inaktivera den här säkerhetsfunktionen i en utvecklingsmiljö, för bakåtkompatibilitet med tidigare versioner av AEM-formulär eller baserat på din brandvägg. Som standard är det här alternativet inte markerat. Mer information finns i&quot;Anropa AEM-formulär med Java API&quot; i Programmering med AEM-formulär.
+**Tillåt oskyddad dokumentöverföring från Java SDK-program:** Överföringar med HTTP DocumentManager måste vara skyddade. Som standard kräver HTTP-överföringar att användare autentiseras och auktoriseras innan de kan överföra dokument. Användaren måste tilldelas rollen Tjänstanvändare eller en annan roll som innehåller behörigheten Tjänstanrop. Detta förhindrar obehöriga användare från att överföra dokument till formulärservern. Välj det här alternativet om du vill inaktivera den här säkerhetsfunktionen i en utvecklingsmiljö, för bakåtkompatibilitet med tidigare versioner av AEM-formulär eller baserat på din brandvägg. Som standard är det här alternativet inte markerat. Mer information finns i&quot;Anropa AEM-formulär med Java API&quot; i Programmering med AEM-formulär.
