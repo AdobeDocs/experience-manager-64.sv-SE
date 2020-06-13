@@ -9,7 +9,10 @@ topic-tags: process-reporting
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 6320c632-c7ec-4e56-9d12-cd27e3e9306e
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 79dcf6816e1156604c0c9279b727ea436ad1826a
+workflow-type: tm+mt
+source-wordcount: '723'
+ht-degree: 0%
 
 ---
 
@@ -47,11 +50,11 @@ Rapporten Långa processer visar de AEM Forms-processer som tagit mer än en ang
 
 1. Klicka på **Gå** för att köra rapporten.
 
-   Rapporten visas i panelen **Rapport **till höger i fönstret **Processrapportering** .
+   Rapporten visas på panelen **Rapport** till höger om fönstret **Processrapportering** .
 
    ![long_running_processes](assets/long_running_processes.png)
 
-   Använd alternativen i det övre högra hörnet av panelen **Rapport **för att utföra följande åtgärder för rapporten.
+   Använd alternativen i det övre högra hörnet av **rapportpanelen** för att utföra följande åtgärder för rapporten.
 
    * **Uppdatera**: Uppdaterar rapporten med de senaste data som finns i lagringen
    * **Ändra förklaringsfärg**: Markera och ändra färgen på rapportförklaringen
