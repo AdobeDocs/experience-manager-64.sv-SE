@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 6cef0bcf-e2f0-4a5a-85a1-6d8a5dd9bd01
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: 5e764edb3d8ed98542c50b80cac40776c886ccf5
+workflow-type: tm+mt
+source-wordcount: '4010'
+ht-degree: 1%
 
 ---
 
@@ -48,7 +51,7 @@ I stället för att skapa en layoutmall från grunden kan du välja att ändra o
 
 ### Skapa dokumentfragment {#document-fragment-creation}
 
-Dokumentfragment är återanvändbara delar\komponenter i en korrespondens som du kan använda för att skapa bokstäver\korrespondens.
+Dokumentfragment är återanvändbara delar\komponenter av en korrespondens som du kan använda för att skapa bokstäver\korrespondens.
 
 Dokumentfragmenten är av följande typer:
 
@@ -228,11 +231,11 @@ Du behöver följande innan du kan skapa en korrespondens:
 * [Kompatibilitetspaket](https://helpx.adobe.com/in/experience-manager/6-4/forms/using/compatibility-package.html). Installera Kompatibilitetspaketet för att visa alternativet **Bokstäver** på **formulärsidan** .
 
 * Bokstaven XDP ([layout](/help/forms/using/document-fragments.md)).
-* Andra XDP-filer ([layoutfragment](/help/forms/using/document-fragments.md#main-pars-header-13)) som utgör delar av bokstaven. XDP:er\Layouts skapas i [Designer](https://help.adobe.com/en-US/AEMForms/6.1/DesignerHelp/).
+* Andra XDP-filer ([layoutfragment](/help/forms/using/document-fragments.md)) som utgör delar av bokstaven. XDP:er\Layouts skapas i [Designer](https://help.adobe.com/en-US/AEMForms/6.1/DesignerHelp/).
 
 * Relevant [dataordlista](/help/forms/using/data-dictionary.md) (valfritt).
 * De [datamoduler](/help/forms/using/document-fragments.md) som du vill använda i korrespondensen.
-* [Testdata](/help/forms/using/data-dictionary.md#p-working-with-test-data-p) är XML-filen med testdata. Du måste testa data om du använder ett datalexikon.
+* [Testdata](/help/forms/using/data-dictionary.md#p-working-with-test-data-p) är XML-filen med testdata inlagda. Du måste testa data om du använder ett datalexikon.
 
 ## Skapa en brevmall {#create-a-letter-template}
 
@@ -250,12 +253,12 @@ Du behöver följande innan du kan skapa en korrespondens:
 
 1. Ange egenskaperna för korrespondensen och tryck på **Spara:**
 
-   * **** Titel (valfritt): Ange brevets titel. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska.
-   * **** Namn: Brevets unika namn. Det får inte finnas två bokstäver i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
-   * **** Beskrivning (valfritt): Beskriv referensbrevet.
+   * **Titel (valfritt):** Ange brevets titel. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska.
+   * **Namn:** Brevets unika namn. Det får inte finnas två bokstäver i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
+   * **Beskrivning (valfritt):** Beskriv referensbrevet.
    * **Dataordlista (valfritt)**: Dataordlistan kan kopplas till korrespondensen. Resurserna som du senare infogar i den här korrespondensen bör antingen ha samma dataordlista som den du väljer för korrespondensen här eller ingen dataordlista.
-   * **** Taggar (valfritt): Markera de taggar som ska användas för korrespondensen. Du kan också skriva in ett nytt/anpassat taggnamn och trycka på Retur för att skapa det.
-   * **** Efterprocess (valfritt): Välj den bokföringsprocess som ska användas för brevmallen. Det finns fler inlämningsprocesser och de du har skapat med AEM, som e-post och utskrift.
+   * **Taggar (valfritt):** Markera de taggar som ska användas för korrespondensen. Du kan också skriva in ett nytt/anpassat taggnamn och trycka på Retur för att skapa det.
+   * **Efterprocess (valfritt):** Välj den bokföringsprocess som ska användas för brevmallen. Det finns fler inlämningsprocesser och de du har skapat med AEM, som e-post och utskrift.
    ![Korrespondensegenskaper](assets/createcorrespondenceproperties.png)
 
 1. Systemet visar ett meddelande: &quot;Bokstaven har skapats.&quot; (i varningsmeddelandet) Tryck på **Öppna** för att konfigurera datamodulerna och layoutfragmenten i det. Eller tryck på **Klar** för att gå tillbaka till föregående sida.
@@ -286,7 +289,7 @@ När du har skapat en korrespondens när du trycker på Öppna, visar Korrespond
    1. **Redigerbar**: När det här alternativet är markerat kan innehållet redigeras i användargränssnittet Skapa korrespondens. Markera innehåll som redigerbart endast om det kräver att företagsanvändaren (till exempel en anspråksjustering) ändrar det.
    1. **Obligatoriskt**: När det här alternativet är markerat krävs innehållet i användargränssnittet Skapa korrespondens.
    1. **Markerad**: När det här alternativet är markerat markeras innehållet som standard i användargränssnittet Skapa korrespondens.
-   1. **Indrag**: Öka eller minska indraget för modulen/innehållet i bokstaven. Indrag anges som nivåer, med början 0. Varje nivå drar in 36pts. Mer information om hur du anpassar formulär finns i **[!UICONTROL Korrespondenshanteringskonfigurationer]** i [formulärarbetsflödet](/help/forms/using/submit-letter-topostprocess.md#main-pars-header-3).
+   1. **Indrag**: Öka eller minska indraget för modulen/innehållet i bokstaven. Indrag anges som nivåer, med början 0. Varje nivå drar in 36pts. Mer information om hur du anpassar formulär finns **[!UICONTROL Correspondence Management Configurations]** i [Formulärarbetsflödet](/help/forms/using/submit-letter-topostprocess.md#formsworkflow).
    1. **Sidbrytning före**: Om du anger sidbrytningen före visas alltid innehållet i den här modulen på en ny sida.
    1. **Sidbrytning efter**: Om du anger att sidbrytning efter ska vara aktiverat för en viss modul visas alltid innehållet i NÄSTA-modulen på en ny sida.
    ![Infogade datamoduler och layoutfragment](assets/insertdmandlf2.png)
