@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 076889a7-9c9f-4b6f-a45b-67a9b3923c36
 translation-type: tm+mt
-source-git-commit: ba04fe705a91717f1d9658d436056ebddda6be3a
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '10781'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,9 @@ Tjänsten Endpoint Registry ger möjlighet att programmässigt hantera slutpunkt
 * (Borttaget för AEM-formulär) Remoting
 * Aktivitetshanteraren
 
-   ***Obs **: SOAP, EJB och (Borttaget för AEM-formulär i JEE) Slutpunkter för fjärrstyrning skapas automatiskt för varje aktiverad tjänst. SOAP- och EJB-slutpunkterna aktiverar SOAP och EJB för alla serviceåtgärder.*
+   >[!NOTE]
+   >
+   >SOAP, EJB och (Borttaget för AEM-formulär i JEE) Slutpunkter för fjärrstyrning skapas automatiskt för varje aktiverad tjänst. SOAP- och EJB-slutpunkterna aktiverar SOAP och EJB för alla serviceåtgärder.
 
    En fjärrslutpunkt gör att Flex-klienter kan anropa åtgärder på den AEM Forms-tjänst som slutpunkten läggs till i. Ett Flex-mål med samma namn som slutpunkten skapas och Flex-klienter kan skapa RemoteObjects som pekar på det här målet för att anropa åtgärder på den relevanta tjänsten.
 
@@ -41,7 +46,7 @@ Tjänsten Endpoint Registry ger möjlighet att programmässigt hantera slutpunkt
 * Lägg till EJB-slutpunkter. (Se [Lägga till EJB-slutpunkter](programmatically-endpoints.md#adding-ejb-endpoints).)
 * Lägg till SOAP-slutpunkter. (Se [Lägga till SOAP-slutpunkter](programmatically-endpoints.md#adding-soap-endpoints).)
 * Lägg till övervakade mappslutpunkter (Se [Lägga till övervakade mappslutpunkter](programmatically-endpoints.md#adding-watched-folder-endpoints).)
-* Lägg till e-postslutpunkter.  (Se [Lägga till e-postslutpunkter](programmatically-endpoints.md#adding-email-endpoints).)
+* Lägg till e-postslutpunkter. (Se [Lägga till e-postslutpunkter](programmatically-endpoints.md#adding-email-endpoints).)
 * Lägg till fjärrslutpunkter. (Se [Lägga till fjärrslutpunkter](programmatically-endpoints.md#adding-remoting-endpoints).)
 * Lägg till TaskManager-slutpunkter (Se [Lägga till TaskManager-slutpunkter](programmatically-endpoints.md#adding-taskmanager-endpoints).)
 * Ändra slutpunkter (Se [Ändra slutpunkter](programmatically-endpoints.md#modifying-endpoints).)
@@ -111,7 +116,7 @@ När du har skapat en ny slutpunkt måste du aktivera den. När du har aktiverat
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-###  Lägga till en EJB-slutpunkt med Java API {#adding-an-ejb-endpoint-using-the-java-api}
+### Lägga till en EJB-slutpunkt med Java API {#adding-an-ejb-endpoint-using-the-java-api}
 
 Lägg till en EJB-slutpunkt med Java API:
 
@@ -319,7 +324,7 @@ Följande lista anger konfigurationsvärden som anges när en bevakad mappslutpu
 * **url**: Anger platsen för bevakad mapp. I en klustrad miljö måste det här värdet peka på en delad nätverksmapp som är tillgänglig från alla datorer i klustret.
 * **asynkron**: Identifierar anropstypen som asynkron eller synkron. Övergående och synkrona processer kan bara anropas synkront. Standardvärdet är true. Asynkron rekommenderas.
 * **cronExpression**: Används av kvarts för att schemalägga avsökningen av indatakatalogen. Mer information om hur du konfigurerar cron-uttrycket finns i [https://quartz.sourceforge.net/javadoc/org/quartz/CronTrigger.html](https://quartz.sourceforge.net/javadoc/org/quartz/CronTrigger.html).
-* **purgeDuration**: Detta är ett obligatoriskt attribut.  Filer och mappar i resultatmappen tas bort när de är äldre än det här värdet. Detta värde mäts i dagar. Det här attributet är användbart för att säkerställa att resultatmappen inte blir full. Värdet -1 dagar anger att resultatmappen aldrig ska tas bort. Standardvärdet är -1.
+* **purgeDuration**: Detta är ett obligatoriskt attribut. Filer och mappar i resultatmappen tas bort när de är äldre än det här värdet. Detta värde mäts i dagar. Det här attributet är användbart för att säkerställa att resultatmappen inte blir full. Värdet -1 dagar anger att resultatmappen aldrig ska tas bort. Standardvärdet är -1.
 * **repeatInterval**: Intervallet, i sekunder, för inläsning av den bevakade mappen. Om inte strypning är aktiverat ska det här värdet vara längre än tiden för att bearbeta ett genomsnittligt jobb. annars kan systemet bli överbelastat. Standardvärdet är 5.
 * **repeatCount**: Antalet gånger som en bevakad mapp genomsöker mappen eller katalogen. Värdet -1 anger obestämd skanning. Standardvärdet är -1.
 * **throttleOn**: Begränsar antalet övervakade mappjobb som kan bearbetas vid en given tidpunkt. Det maximala antalet jobb bestäms av batchSize-värdet.
@@ -576,7 +581,7 @@ Följande konfigurationsvärden anges när en e-postslutpunkt läggs till i en t
 * **charSet**: Den teckenuppsättning som används av e-postleverantören. Standardvärdet är `UTF-8`.
 * **smtpSSLEnabled**: Ange det här värdet för att tvinga e-postleverantören att använda SSL när meddelanden om resultat eller fel skickas. Kontrollera att SMTP-värden har stöd för SSL.
 * **failedJobFolder**: Anger en katalog där resultat ska lagras när SMTP-e-postservern inte är i drift.
-* **asynkron**: När det är synkront bearbetas alla indatadokument och ett svar returneras. När inställningen är asynkron skickas ett svar för varje indatadokument som bearbetas. En e-postslutpunkt skapas till exempel för den process som introduceras i det här avsnittet, och ett e-postmeddelande skickas till slutpunktens inkorg som innehåller flera oskyddade PDF-dokument. När alla PDF-dokument har krypterats med ett lösenord, och om slutpunkten har konfigurerats som synkron, skickas ett enda e-postmeddelande med alla skyddade PDF-dokument bifogade. Om slutpunkten är konfigurerad som asynkron skickas ett separat e-postmeddelande för varje skyddat PDF-dokument. Varje e-postmeddelande innehåller ett enda PDF-dokument som en bifogad fil. Standardvärdet är asynkront.
+* **asynkron**: När det är synkront bearbetas alla indatadokument och ett enda svar returneras. När inställningen är asynkron skickas ett svar för varje indatadokument som bearbetas. En e-postslutpunkt skapas till exempel för den process som introduceras i det här avsnittet, och ett e-postmeddelande skickas till slutpunktens inkorg som innehåller flera oskyddade PDF-dokument. När alla PDF-dokument har krypterats med ett lösenord, och om slutpunkten har konfigurerats som synkron, skickas ett enda e-postmeddelande med alla skyddade PDF-dokument bifogade. Om slutpunkten är konfigurerad som asynkron skickas ett separat e-postmeddelande för varje skyddat PDF-dokument. Varje e-postmeddelande innehåller ett enda PDF-dokument som en bifogad fil. Standardvärdet är asynkront.
 
 **Definiera indataparametervärden**
 
@@ -589,7 +594,7 @@ Om du vill definiera indataparametervärden som krävs för en e-postslutpunkt a
 **Mappningstyp**: Används för att konfigurera de indatavärden som krävs för att anropa tjänståtgärden. Två typer av mappningar är:
 
 * `Literal`: Slutpunkten för e-post använder det värde som anges i fältet när det visas. Alla grundläggande Java-typer stöds. Om ett API till exempel använder indata som String, long, int och Boolean, konverteras strängen till rätt typ och tjänsten anropas.
-* `Variable`: Det angivna värdet är ett filmönster som e-postslutpunkten använder för att välja indata. Om du till exempel väljer Variabel som mappningstyp och indatadokumentet måste vara en PDF-fil, kan du ange `*.pdf` som mappningsvärde.
+* `Variable`: Det angivna värdet är ett filmönster som e-postslutpunkten använder för att välja indata. Om du t.ex. väljer Variabel som mappningstyp och indatadokumentet måste vara en PDF-fil, kan du ange `*.pdf` som mappningsvärde.
 
 **Mappningsvärde**: Anger värdet för mappningstypen. Om du till exempel väljer en typ av variabelmappning kan du ange `*.pdf` som filmönster.
 
@@ -1033,7 +1038,7 @@ Ange nya konfigurationsvärden när du ändrar en slutpunkt. Om du till exempel 
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-###  Ändra en slutpunkt med Java API {#modifying-an-endpoint-using-the-java-api}
+### Ändra en slutpunkt med Java API {#modifying-an-endpoint-using-the-java-api}
 
 Ändra en slutpunkt med Java API:
 
@@ -1127,7 +1132,7 @@ När du har skapat en ny slutpunkt måste du aktivera den. När slutpunkten är 
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-###  Ta bort en slutpunkt med Java API {#removing-an-endpoint-using-the-java-api}
+### Ta bort en slutpunkt med Java API {#removing-an-endpoint-using-the-java-api}
 
 Ta bort en slutpunkt med Java API:
 
@@ -1181,7 +1186,7 @@ Utför följande uppgifter för att hämta information om slutpunktsanslutning:
 
 1. Inkludera projektfiler.
 1. Skapa ett `ConnectorRegistryClient` objekt.
-1. Ange anslutningstyp.
+1. Ange anslutningstypen.
 1. Hämta konfigurationsvärden.
 
 **Inkludera projektfiler**
@@ -1237,7 +1242,7 @@ Hämta information om slutpunktsanslutning med Java API:
    * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
    * Skapa ett `ConnectorRegistryClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
 
-1. Ange anslutningstyp.
+1. Ange anslutningstypen.
 
    Ange anslutningstypen genom att anropa `ConnectorRegistryClient` objektets `getEndpointDefinition` metod och skicka ett strängvärde som anger anslutningstypen. Om du till exempel vill ange anslutningstypen Bevakad mapp skickar du strängvärdet `WatchedFolder`. Den här metoden returnerar ett `Endpoint` objekt som motsvarar anslutningstypen.
 
