@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: 1c751a81550086371623d0ba66e4de40f7daaa16
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '5409'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +46,7 @@ Adobe Developer-webbplatsen innehåller följande artiklar som beskriver hur du 
 
 [Inkludera AEM Forms Java-biblioteksfiler](#including-aem-forms-java-library-files)
 
-[Anropa personalcentrerade, långlivade processer](/help/forms/developing/invoking-human-centric-long-lived.md#main-pars-text-0)
+[Anropa personalcentrerade, långlivade processer](invoking-human-centric-long-lived.md)
 
 [Anropa AEM-formulär med webbtjänster](/help/forms/developing/invoking-aem-forms-using-web.md)
 
@@ -444,13 +447,17 @@ Om du vill anropa en AEM Forms-tjänst anger du följande anslutningsegenskaper:
    * Om du ställer in den här anslutningsegenskapen på `WebLogic`ställs `java.naming.factory.initial` värdet in på `weblogic.jndi.WLInitialContextFactory`.
    * Om du anger den här anslutningsegenskapen som `JBoss`ställs `java.naming.factory.initial` värdet in på `org.jnp.interfaces.NamingContextFactory`.
    * Du kan ställa in egenskapen på ett värde som uppfyller dina krav om du inte vill använda standardvärdena. `java.naming.factory.initial`
-   ***Obs**! I stället för att använda en sträng för att ange `DSC_SERVER_TYPE` anslutningsegenskapen kan du använda en statisk medlem av `ServiceClientFactoryProperties` klassen. Följande värden kan användas: `ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`, `ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`eller `ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`.
+   >[!NOTE]
+   >
+   >I stället för att använda en sträng för att ange `DSC_SERVER_TYPE` anslutningsegenskapen kan du använda en statisk medlem av `ServiceClientFactoryProperties` klassen. Följande värden kan användas: `ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`, `ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`eller `ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`.
 
 * **DSC_CREDENTIAL_USERNAME:** Anger användarnamnet för AEM-formulär. För att en användare ska kunna anropa en AEM Forms-tjänst måste användaren ha användarrollen Tjänster. En användare kan även ha en annan roll som inkluderar behörigheten Tjänstanrop. Annars genereras ett undantag när de försöker anropa en tjänst. Om tjänstsäkerhet är inaktiverad behöver du inte ange den här anslutningsegenskapen.
 * **DSC_CREDENTIAL_PASSWORD:** Anger motsvarande lösenordsvärde. Om tjänstsäkerhet är inaktiverad behöver du inte ange den här anslutningsegenskapen.
 * **DSC_REQUEST_TIMEOUT:** Standardtidsgränsen för begäran för SOAP-begäran är 1200000 millisekunder (20 minuter). Ibland kan en begäran ta längre tid att slutföra åtgärden. En SOAP-begäran som hämtar en stor uppsättning poster kan till exempel kräva en längre tidsgräns. Du kan använda för `ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT` att öka tidsgränsen för begärandeanrop för SOAP-begäranden.
 
-   **Obs**: Endast SOAP-baserade anrop stöder egenskapen DSC_REQUEST_TIMEOUT.
+   >[!NOTE]
+   >
+   >Endast SOAP-baserade anrop stöder egenskapen DSC_REQUEST_TIMEOUT.
 
 Utför följande åtgärder för att ange anslutningsegenskaper:
 
