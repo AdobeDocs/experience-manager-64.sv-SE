@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 9fe48243-24c6-4e08-9886-148cd99dec87
 translation-type: tm+mt
-source-git-commit: b9d2a5b65f7ae48a9bde5580b5ddd3e55fc68d61
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '1546'
+ht-degree: 0%
 
 ---
 
@@ -51,9 +54,11 @@ Följande snabbstarter är tillgängliga för Forms-tjänsten:
 
 Programlogik som använder Forms-tjänstens API implementeras som Java-servrar. AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
 
-* **Obs**: Snabbstart i Programmering med v baseras på den formulärserver som du använder ett annat operativsystem, till exempel Unix, och ersätter Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)*
+>[!NOTE]
+>
+>Snabbstart i Programmering med v baseras på den formulärserver som du använder ett annat operativsystem, till exempel Unix, och ersätter Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-   **Tips**: Adobe Developer-webbplatsen innehåller följande artikel som handlar om hur du skapar ett ASP.NET-program som anropar Forms-tjänsten och återger formulär. Se [Skapa ASP.NET-program](https://www.adobe.com/devnet/livecycle/articles/asp_net.html)för formuläråtergivning.
+**Tips**: Adobe Developer-webbplatsen innehåller följande artikel som handlar om hur du skapar ett ASP.NET-program som anropar Forms-tjänsten och återger formulär. Se [Skapa ASP.NET-program](https://www.adobe.com/devnet/livecycle/articles/asp_net.html)för formuläråtergivning.
 
 ## Snabbstart (SOAP-läge): Återge ett interaktivt PDF-formulär med Java API {#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api}
 
