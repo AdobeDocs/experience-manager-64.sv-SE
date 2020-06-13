@@ -8,7 +8,10 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 40c0a17b-6894-44cc-b1f7-490913061532
 translation-type: tm+mt
-source-git-commit: 813675c7cd770008e8c986f87f37f36b0b193dd2
+source-git-commit: 8922b6cfecfbb592e4f073254be68b24add6c5c7
+workflow-type: tm+mt
+source-wordcount: '1821'
+ht-degree: 0%
 
 ---
 
@@ -109,7 +112,7 @@ Så här skapar du en XDP-mall för utskriftskanalen:
 
 När du har skapat en XDP-mall med Forms Designer måste du överföra den till AEM Forms-servern så att mallen kan användas när du skapar den interaktiva kommunikationen.
 
-1. Välj **[!UICONTROL Formulär]** > **[!UICONTROL Formulär och dokument]**.
+1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 1. Tryck på **Skapa** > **Filöverföring**.
 
    Navigera till och välj mallen **create_first_ic_print_template** (XDP) och tryck på **Öppna** för att importera XDP-mallen till AEM Forms-servern.
@@ -170,7 +173,7 @@ Om du vill skapa en webbkanalmall definierar du en mapp där du kan spara de ska
 
 Så här skapar du en mapp för de redigerbara mallarna:
 
-1. Tryck på **Verktyg** ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/icons/Tools.png) > **Konfigurationsläsaren**.
+1. Tryck på **Verktyg** ![Verktyg](assets/tools-icon.svg) > **Konfigurationsläsaren**.
 1. Tryck på **Skapa** på sidan Configuration Browser.
 1. I dialogrutan **Skapa konfiguration** anger du **Create_First_IC_templates** som mappens titel, markerar **Redigerbara mallar** och trycker sedan på **Skapa**.
 
@@ -244,7 +247,7 @@ När du har skapat webbmallen måste du aktivera den för användning när du sk
 
 Aktivera webbmallen genom att utföra följande steg:
 
-1. Tryck på **Verktyg** ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/icons/Tools.png) > **Mallar**.
+1. Tryck på **Verktyg** ![Verktyg](assets/tools-icon.svg) > **Mallar**.
 1. Navigera till mallen **Create_First_IC_Web_Template** , markera den och tryck sedan på **Aktivera**.
 1. Bekräfta genom att klicka på **Aktivera** igen.
 
