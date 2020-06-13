@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: interactive-communications
 discoiquuid: 954da8da-a30b-477d-bde7-3edd86a5be11
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 7c65752a969d9089ad61c29b0581327d32e022d1
+workflow-type: tm+mt
+source-wordcount: '1060'
+ht-degree: 0%
 
 ---
 
@@ -69,7 +72,7 @@ Så här skapar du en anatomi för den interaktiva kommunikationen med följande
 
    [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/planning-interactive-communications.md)
 
-## Steg 2:Skapa formulärdatamodell {#step-create-form-data-model}
+## Steg 2: Skapa formulärdatamodell {#step-create-form-data-model}
 
 ![03-create-adaptive-form-main-image_small](assets/03-create-adaptive-form-main-image_small.png)
 
@@ -86,7 +89,7 @@ Med en formulärdatamodell kan du koppla en interaktiv kommunikation till olika 
 * Redigera exempeldata
 * Testa formulärdatamodell och konfigurerade tjänster med testdata
 
-   [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-form-data-model0.md)
+   [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](create-form-data-model-tutorial.md)
 
 ## Steg 3: Skapa dokumentfragment {#step-create-document-fragments}
 
@@ -137,7 +140,7 @@ Interaktiv kommunikation kan levereras via två kanaler: Tryck och webb. Du kan 
 * Skapa ett diagram i webbversionen av Interactive Communication
 * Skapa hyperlänkar i webbversionen av interaktiv kommunikation
 
-   [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-interactive-communication0.md)
+   [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](create-interactive-communication-tutorial.md)
 
 ## Steg 6: Testa interaktiv kommunikation {#step-test-your-interactive-communication}
 
