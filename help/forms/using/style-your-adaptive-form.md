@@ -8,7 +8,10 @@ uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
 topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
 translation-type: tm+mt
-source-git-commit: 7e58d1d861f832d073fb178868804995ee8d855b
+source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+workflow-type: tm+mt
+source-wordcount: '2067'
+ht-degree: 4%
 
 ---
 
@@ -19,11 +22,11 @@ Lär dig skapa ett anpassat tema, formatera enskilda komponenter och använda we
 
 ![](do-not-localize/08-style_your_adaptiveformmain.png)
 
-Den här självstudiekursen är ett steg i serien [Create Your First Adaptive Form](https://helpx.adobe.com/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
+Den här självstudiekursen är ett steg i serien [Create Your First Adaptive Form](create-your-first-adaptive-form.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
 
-## Om självstudiekursen {#about-the-tutorial}
+## Om självstudiekursen  {#about-the-tutorial}
 
-Du kan använda teman för att ge ett anpassat formulär ett unikt utseende och en unik stil. Du kan använda färdiga teman som medföljer redigeringsprogrammet för anpassade formulär eller skapa egna teman. I AEM Forms finns en [temaredigerare](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html) för att skapa anpassade teman. Ett och samma tema kan ge olika utseenden till samma adaptiva formulär som öppnas på mobilen, surfplattan eller datorn. Du behöver inte ha någon tidigare kunskap om CSS eller LESS för att kunna använda temaredigeraren, men du vill ha den.
+Du kan använda teman för att ge ett anpassat formulär ett unikt utseende och en unik stil. Du kan använda färdiga teman som medföljer redigeringsprogrammet för anpassade formulär eller skapa egna teman. I AEM Forms finns en [temaredigerare](themes.md) för att skapa anpassade teman. Ett och samma tema kan ge olika utseenden till samma adaptiva formulär som öppnas på mobilen, surfplattan eller datorn. Du behöver inte ha någon tidigare kunskap om CSS eller LESS för att kunna använda temaredigeraren, men du vill ha den.
 
 I slutet av självstudiekursen kommer du att lära dig att:
 
@@ -57,11 +60,11 @@ Adaptiv formulärredigerare har flera färdiga teman. Om du inte tänker använd
 
 ![Adaptiv form med standardtemat](assets/default-adaptive-form.png)
 
-**** Bild: Anpassa form *med standardtemat*
+**Bild:** *Adaptiv form med standardtemat*
 
 ![Adaptiv form med undersökningstemat](assets/adaptive-form-with-survey-theme.png)
 
-**** Bild: *Adaptiv form med Undersökningstemat*
+**Bild:** *Adaptiv form med undersökningstemat*
 
 ## Steg 2: Uppdatera ditt anpassningsbara formulär {#step-update-your-adaptive-form}
 
@@ -97,10 +100,10 @@ I den här självstudiekursen kommer du att formatera sidhuvud och sidfot, text 
 ### Skapa ett tema {#create-a-theme}
 
 1. Logga in på AEM-författarinstansen och gå till **Adobe Experience Manager** > **Formulär** > **Teman**. Standardwebbadressen är [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes).
-1. Tryck på **[!UICONTROL Skapa]** och välj **[!UICONTROL tema]**. Sidan Skapa tema med de fält som krävs för att skapa ett tema visas. Fälten Titel och Namn är obligatoriska:
+1. Tryck **[!UICONTROL Create]** och välj **[!UICONTROL Theme]**. Sidan Skapa tema med de fält som krävs för att skapa ett tema visas. Fälten Titel och Namn är obligatoriska:
 
-   * **** Titel: Ange en titel på temat. Exempel: **Globalt tema.** Titeln hjälper dig att identifiera temat från listan med teman.
-   * **** Namn: Ange namnet på temat. Exempel: **Global-Theme.** En nod med det angivna namnet skapas i databasen. När du börjar skriva en titel genereras värdet för namnfältet automatiskt. Du kan ändra det föreslagna värdet. Namnfältet får endast innehålla alfanumeriska tecken, bindestreck och understreck. Alla ogiltiga indata ersätts med ett bindestreck.
+   * **Titel:** Ange en titel på temat. Exempel: **Globalt tema.** Titeln hjälper dig att identifiera temat från listan med teman.
+   * **Namn:** Ange namnet på temat. Exempel: **Global-Theme.** En nod med det angivna namnet skapas i databasen. När du börjar skriva en titel genereras värdet för namnfältet automatiskt. Du kan ändra det föreslagna värdet. Namnfältet får endast innehålla alfanumeriska tecken, bindestreck och understreck. Alla ogiltiga indata ersätts med ett bindestreck.
 
 1. Tryck på **Skapa**. Ett tema skapas och en dialogruta visas där du kan öppna formuläret för redigering. Tryck på **Öppna** för att öppna det nya temat på en ny flik. Temat öppnas i temaredigeraren. För formatering används ett anpassat formulär som levereras med AEM Forms.
 
@@ -110,17 +113,17 @@ I den här självstudiekursen kommer du att formatera sidhuvud och sidfot, text 
 
    ![anpassat tema](assets/custom-theme.png)
 
-   **** Bild: Redigera *teman med anpassningsbara formulär för leverans-adress-add-update-form*
+   **Bild:** *Theme editor with the shipping-address-add-update-form adaptive form*
 
    ![create-a-theme](assets/create-a-theme.png)
 
-   **** Bild: Anpassningsbart *formulär med standardformuläret*
+   **Bild:** *Anpassningsbart formulär med standardformuläret*
 
 ### Formatera sidhuvud och sidfot {#style-header-and-footer}
 
 Sidhuvud och sidfot ger ett konsekvent och distinkt utseende i en adaptiv form. I allmänhet innehåller sidhuvudet organisationens logotyp och namn, sidfoten innehåller copyrightinformation och dessa är identiska i flera former av en organisation. Gör så här för att formatera sidhuvud och sidfot i anpassat formulär för leverans-address-add-update:
 
-1. Navigera till alternativet **Sidhuvud** > **Text** på panelen Väljare. Väljarpanelen är till vänster om temaredigeraren. Om panelen inte visas trycker du på ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/6-2/toggle-side-panel.png) Växla sidopanel.
+1. Navigera till alternativet **Sidhuvud** > **Text** på panelen Väljare. Väljarpanelen är till vänster om temaredigeraren. Om panelen inte visas trycker du på ![Växla sidopanel](assets/toggle-side-panel.png) på/av.
 
 1. Ange följande egenskaper i dragspelet **Text** och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
@@ -155,8 +158,8 @@ Sidhuvud och sidfot ger ett konsekvent och distinkt utseende i en adaptiv form. 
     <ul> 
      <li>Överkant: 1,5 rem</li> 
      <li>Underkant: -35px</li> 
-     <li>Vänster: 1rem<strong><br /></strong></li> 
-    </ul> <p><strong></strong> Tips: Tryck på <img src="assets/link.png"> länkikonen för att ange olika värden för varje fält.<br /> </p> </td> 
+     <li>Vänster: 1 rem<strong><br /> </strong></li> 
+    </ul> <p><strong>Tips:</strong> Tryck på <img src="assets/link.png"> länkikonen för att ange olika värden för varje fält.<br /> </p> </td> 
   </tr> 
   <tr> 
    <td>Höjd</td> 
@@ -432,7 +435,7 @@ Vissa format gäller bara för en viss komponent. Sådana komponenter är format
 
 ![styled-adaptive-form-1](assets/styled-adaptive-form-1.png)
 
-## Steg 5:Bonusavsnitt: Använda webbteckensnitt i ett anpassat tema {#step-bonus-section-using-web-fonts-in-a-custom-theme}
+## Steg 5: Bonusavsnitt: Använda webbteckensnitt i ett anpassat tema {#step-bonus-section-using-web-fonts-in-a-custom-theme}
 
 Du kan använda olika teckensnitt för att utforma ett anpassat formulär. Alla enheter som det adaptiva formuläret visas på kanske inte har de teckensnitt som används för att utforma det adaptiva formuläret. Du kan använda en webbteckensnittstjänst för att leverera nödvändiga teckensnitt till målenheten.
 
