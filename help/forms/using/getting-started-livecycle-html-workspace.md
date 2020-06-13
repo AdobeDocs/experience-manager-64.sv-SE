@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: fa6e0246-6bd2-4ffb-b54c-15eda605f213
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 5e764edb3d8ed98542c50b80cac40776c886ccf5
+workflow-type: tm+mt
+source-wordcount: '1016'
+ht-degree: 0%
 
 ---
 
@@ -61,11 +64,11 @@ När du navigerar på arbetsytan i AEM Forms med ett tangentbord följer naviger
 
 Du kan ange olika inställningar för AEM Forms-arbetsytan i följande kategorier:
 
-**Frånvarande:** Ange inställningar för att styra hur uppgifter tilldelas andra personer när du inte är på kontoret. Se [Ange inställningar](/help/forms/using/todo-lists.md#main-pars-heading-22)utanför kontoret.
+**Frånvarande:** Ange inställningar för att styra hur uppgifter tilldelas andra personer när du inte är på kontoret. Se [Ange inställningar](/help/forms/using/todo-lists.md#setting-out-of-office-preferences)utanför kontoret.
 
-**Köer:** Ange inställningar för att dela din Att göra-lista med andra användare eller för att begära åtkomst till en annan användares lista. Se [Arbeta med uppgifter från grupper och delade köer](/help/forms/using/todo-lists.md#main-pars-heading-19).
+**Köer:** Ange inställningar för att dela din Att göra-lista med andra användare eller för att begära åtkomst till en annan användares lista. Se [Arbeta med uppgifter från grupper och delade köer](/help/forms/using/todo-lists.md#working-with-tasks-from-group-and-shared-queues).
 
-**Gränssnittsinställningar:** Ange inställningar för hur du interagerar med arbetsytan i AEM Forms. Se [Ange användargränssnittsinställningar](/help/forms/using/getting-started-livecycle-html-workspace.md#main-pars-heading-5).
+**Gränssnittsinställningar:** Ange inställningar för hur du interagerar med arbetsytan i AEM Forms. Se [Ange användargränssnittsinställningar](#set-user-interface-preferences).
 
 ### Ange inställningar för användargränssnitt {#set-user-interface-preferences}
 
