@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: document_services
 discoiquuid: 5ec4f0ec-a9fd-4571-9b9a-278f4622c028
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+workflow-type: tm+mt
+source-wordcount: '414'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Du kan göra följande med tjänsten Konvertera PDF:
 * Konvertera PDF-dokument till PostScript. När du konverterar till PostScript kan du använda konverteringsåtgärden för att ange källdokumentet och om det ska konverteras till PostScript-nivå 2 eller 3. PDF-dokumentet som du konverterar till en PostScript-fil måste vara icke-interaktivt.
 * Konvertera PDF-dokument till bildformaten JPEG, JPEG 2000, PNG och TIFF. När du konverterar till något av dessa bildformat kan du använda konverteringsåtgärden för att ange källdokumentet och en bildalternativsspecifikation. Specifikationen innehåller olika inställningar, till exempel bildkonverteringsformat, bildupplösning och färgkonvertering.
 
-## Konfigurera egenskaper för tjänsten {#properties}
+## Konfigurera egenskaper för tjänsten   {#properties}
 
 Du kan använda **AEMFD ConvertPDF-tjänsten** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen för AEM-konsolen är `https://[host]:[port]/system/console/configMgr`.
 
@@ -33,9 +36,9 @@ Du kan använda **AEMFD ConvertPDF-tjänsten** i AEM Console för att konfigurer
 
 ConvertPDF-tjänsten tillhandahåller följande två API:er:
 
-* **[toPS](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toPS)**: Konverterar ett PDF-dokument till en PostScript-fil.
+* **[toPS](https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toPS)**: Konverterar ett PDF-dokument till en PostScript-fil.
 
-* **[toImage](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**: Konverterar ett PDF-dokument till en bildfil. Bildformat som stöds är JPEG, JPEG2000, PNG och TIFF.
+* **[toImage](https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**: Konverterar ett PDF-dokument till en bildfil. Bildformat som stöds är JPEG, JPEG2000, PNG och TIFF.
 
 ### Använda toPS API med en JSP eller Servlets {#using-tops-api-with-a-jsp-or-servlets}
 
