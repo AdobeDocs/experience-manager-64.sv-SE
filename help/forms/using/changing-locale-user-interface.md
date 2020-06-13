@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: e4ca8188-fb9a-44bf-8437-a98abaa7521a
 translation-type: tm+mt
-source-git-commit: a5cac0d369bb40659cfde011e5d6ef9a68dc4012
+source-git-commit: 1b6f00462cc0d7b90af033d59e68fbaabe020064
+workflow-type: tm+mt
+source-wordcount: '588'
+ht-degree: 0%
 
 ---
 
@@ -49,7 +52,7 @@ Utför följande steg för att lägga till stöd för språket *Nytt* och webbl�
 
 ## Lokalisera komprimerade kategorier, köer och processer {#localizing-collapsed-categories-queues-and-processes}
 
-På arbetsytan i AEM Forms används bilder för att visa rubriker i kategorier, köer och processer. Du behöver ett utvecklingspaket för att lokalisera dessa rubriker. Mer information om hur du skapar utvecklingspaket finns i [Skapa kod för arbetsytan i AEM Forms.](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3)
+På arbetsytan i AEM Forms används bilder för att visa rubriker i kategorier, köer och processer. Du behöver ett utvecklingspaket för att lokalisera dessa rubriker. Mer information om hur du skapar utvecklingspaket finns i [Skapa kod för arbetsytan i AEM Forms.](introduction-customizing-html-workspace.md#building-html-workspace-code)
 
 I följande steg antas de nya lokaliserade bildfilerna vara *Categories_nw.png*, *Queue_nw.png* och *Processes_nw.png*. Bildernas rekommenderade bredd är 19px.
 
@@ -108,7 +111,7 @@ Utför följande steg för att lokalisera bilderna:
 
 ## Lokaliserar datumväljaren {#localizing-date-picker}
 
-Du måste ha ett utvecklingspaket för att lokalisera API:t *datepicker *. Mer information om hur du skapar utvecklingspaket finns i [Skapa kod](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3)för arbetsytan i AEM Forms.
+Du måste ha ett utvecklingspaket för att lokalisera API:t *datepicker *. Mer information om hur du skapar utvecklingspaket finns i [Skapa kod](introduction-customizing-html-workspace.md#building-html-workspace-code)för arbetsytan i AEM Forms.
 
 1. Hämta och extrahera [jQuery-gränssnittspaketet](https://jqueryui.com/download/all/), navigera till *&lt;extraherat jquery-gränssnittspaket>*\jquery-ui-1.10.2.zip\jquery-ui-1.10.2\ui\i18n.
 1. Kopiera filen jquery.ui.datepicker-nw.js för språkkod nu till apps/ws/js/libs/jqueryui och gör språkspecifika ändringar i filen.
