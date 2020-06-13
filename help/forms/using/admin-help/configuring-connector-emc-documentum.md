@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e62370a7-9d9e-43a3-8014-8e53800c870d
 translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '1047'
+ht-degree: 1%
 
 ---
 
@@ -59,13 +62,15 @@ Om du anger fel användarnamn eller lösenord får du följande resultat, beroen
 
 Du kan konfigurera vilken databastjänstleverantör som ska användas med Documentum. Databastjänstanrop delegeras till providern som du konfigurerar. Följande alternativ är tillgängliga:
 
-**** Aktuellt namn på databastjänstleverantör: Namnet på den aktuella databastjänstprovidern
+**Aktuellt namn på databastjänstleverantör:** Namnet på den aktuella databastjänstprovidern
 
-**** ECM Documentum-databasleverantör: Gör Documentum-databasprovidern till databasprovidern. Det här alternativet har tagits bort
+**ECM Documentum-databasleverantör:** Gör Documentum-databasprovidern till databasprovidern. Det här alternativet har tagits bort
 
-**** databasprovider: Gör den inbyggda databasprovidern till databasprovidern
+**databasprovider:** Gör den inbyggda databasprovidern till databasprovidern
 
-***Obs **: Om du vill välja en annan databastjänstleverantör än de som anges konfigurerar du RepositoryService i Program och tjänster > Tjänsthantering.<!-- Fix broken link (See Managing Services) -->*
+>[!NOTE]
+>
+>Om du vill välja en annan databastjänstleverantör än de som anges konfigurerar du RepositoryService i Program och tjänster > Tjänsthantering. <!-- Fix broken link (See Managing Services) -->
 
 1. I administrationskonsolen klickar du på Tjänster > Koppling för EMC Documentum > Konfigurationsinställningar.
 1. Välj den alternativa databastjänstleverantören i informationsfältet för databastjänstleverantör.
