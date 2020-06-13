@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: e7d53127-3a0f-4c74-a656-25d9cf969f98
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '2044'
+ht-degree: 0%
 
 ---
 
@@ -111,8 +114,8 @@ Tabeller i anpassningsbara formulär gör att du kan skriva uttryck i JavaScript
 
 Tabellerna och raderna har endast stöd för synlighetsuttryck som styr synligheten baserat på värdet som returneras av ett uttryck, men cellerna har stöd för följande uttryck:
 
-* **** Initieringsskript: för att utföra en åtgärd vid initiering av ett fält.
-* **** Värde för implementeringsskript: om du vill ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
+* **Initieringsskript:** för att utföra en åtgärd vid initiering av ett fält.
+* **Värde för implementeringsskript:** om du vill ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
 
 >[!NOTE]
 >
@@ -137,21 +140,23 @@ Du kan konfigurera en mobil layout för en tabell på fliken Format i dialogruta
 
 I sidhuvudena i den vänstra layouten flyttas tabellhuvudet till vänster och bara en cell visas mot en rubrik. Varje rad i den här layouten visas som ett distinkt avsnitt. I följande bilder jämförs en tabell på en dator med den på en mobil enhet.
 
-![](assets/desktopview.png) desktopView **** Figure: Vyn *Skrivbord av en tabell med sidhuvud i den vänstra layouten*
+![desktopView](assets/desktopview.png)**Figure:** *Skrivbordsvy av en tabell med sidhuvud i den vänstra layouten*
 
-![](assets/headersontheleft.png) headersontheleft **** Figure: Mobilvy *av en tabell med sidhuvud i vänsterlayout*
+![headersontheleft](assets/headersontheleft.png)**Figure:** *Mobil vy av en tabell med sidhuvud i vänster layout*
 
 ### Komprimerbar kolumnlayout {#collapsible-columns-layout}
 
 I kolumnlayouten Komprimerbar komprimeras kolumnerna i tabellen så att en eller två kolumner visas, beroende på enhetens storlek, medan andra kolumner komprimeras. Du kan klicka på ikonen för att komprimera/expandera om du vill visa andra kolumner i tabellen.
 
-***Obs**! Kolumnlayout som kan komprimeras är optimerad för mobila enheter, men fungerar även på stationära datorer, om den tillgängliga bredden inte räcker för att visa alla kolumner i en tabell. *
+>[!NOTE]
+>
+>Kolumnlayout som kan komprimeras är optimerad för mobila enheter, men fungerar även på stationära datorer, om den tillgängliga bredden inte räcker för att visa alla kolumner i en tabell.
 
 Följande bilder jämför hur en tabell ser ut på en enhet med komprimerade och expanderade kolumner.
 
-![](assets/collapsed-column.png) komprimerad kolumn **** Figur: Komprimerade *kolumner i en tabell där bara två kolumner visas på en mobil enhet*
+![komprimerad kolumn](assets/collapsed-column.png)**Figur:** *Komprimerade kolumner i en tabell där bara två kolumner visas på en mobil enhet*
 
-![](assets/collapsible_column.png) collapsible_column **** Figure: Utökad *kolumn i en tabell på en mobil enhet*
+![collapsible_column](assets/collapsible_column.png)**Figure:** *Utökad kolumn i en tabell på en mobil enhet*
 
 ## Sammanfoga data i en tabell {#merge-data-in-a-table}
 
