@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: dcf83c9f-b818-44a2-9079-80a4fc357c4f
 translation-type: tm+mt
-source-git-commit: 73d0dea62c294bea435364fb9c6892d80751d90d
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '1231'
+ht-degree: 0%
 
 ---
 
@@ -38,7 +41,7 @@ Följande snabbstarter är tillgängliga för programmässig anrop av AEM Forms-
   <tr> 
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-java.md#invoking_a_short_lived_process_using_the_invocation_api">Anropa en kort process med anrops-API</a></p></td> 
    <td><p>Ej tillämpligt</p></td> 
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_short_lived_process_using_the_invocation_api">Snabbstart:Anropa en kort process med anrops-API</a></p></td> 
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_short_lived_process_using_the_invocation_api">Snabbstart: Anropa en kort process med anrops-API</a></p></td> 
    <td><p>Ej tillämpligt</p></td> 
   </tr> 
   <tr> 
@@ -69,7 +72,7 @@ Följande snabbstarter är tillgängliga för programmässig anrop av AEM Forms-
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">Anropa AEM-formulär med BLOB-data via HTTP</a> (Exempel på Java-webbtjänst)</p></td> 
    <td><p>Ej tillämpligt</p></td> 
    <td><p>Ej tillämpligt</p></td> 
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_net_project">Snabbstart: Anropa en tjänst med BLOB-data över HTTP i ett .NET-projekt</a></p></td> 
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_net_project">Snabbstart: Anropa en tjänst med BLOB-data via HTTP i ett .NET-projekt</a></p></td> 
   </tr> 
   <tr> 
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">Anropa AEM Forms med BLOB-data via HTTP</a> (.NET web service example)</p></td> 
@@ -85,7 +88,7 @@ Följande snabbstarter är tillgängliga för programmässig anrop av AEM Forms-
   </tr> 
   <tr> 
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting">Anropa AEM Forms Using (Borttaget för AEM-formulär) AEM Forms Remoting</a></p></td> 
-   <td><p><a href="invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting">Snabbstart:Anropa en kort process genom att skicka ett osäkert dokument med hjälp av (borttaget för AEM-formulär) AEM Forms Remoting</a></p></td> 
+   <td><p><a href="invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting">Snabbstart: Anropa en kort process genom att skicka ett osäkert dokument med hjälp av (borttaget för AEM-formulär) AEM Forms Remoting</a></p></td> 
    <td><p>Ej tillämpligt</p></td> 
    <td><p>Ej tillämpligt</p></td> 
   </tr> 
@@ -106,9 +109,11 @@ Följande snabbstarter är tillgängliga för programmässig anrop av AEM Forms-
 
 AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
 
-***Obs **: Snabbstarter som finns i Programmering med AEM-formulär baseras på den formulärserver som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. (Se[Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)*
+>[!NOTE]
+>
+>Snabbstarter som finns i Programmering med AEM-formulär baseras på den formulärserver som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## Snabbstart:Anropa en kort process med anrops-API {#quick-start-invoking-a-short-lived-process-using-the-invocation-api}
+## Snabbstart: Anropa en kort process med anrops-API {#quick-start-invoking-a-short-lived-process-using-the-invocation-api}
 
 I följande Java-kodexempel anropas en kortlivad process med namnet `MyApplication/EncryptDocument`. Observera att den här processen anropas synkront. Indataparametern för den här processen namnges `inDoc`. Utdataparametern för den här processen namnges `outDoc`. Lösenordskrypterade PDF-dokument sparas som en PDF-fil med namnet `EncryptLoan.pdf`. (Se [Anropa en kort process med anrops-API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api).)
 
@@ -827,7 +832,7 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* s
  
 ```
 
-## Snabbstart: Anropa en tjänst med BLOB-data över HTTP i ett .NET-projekt {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-net-project}
+## Snabbstart: Anropa en tjänst med BLOB-data via HTTP i ett .NET-projekt {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-net-project}
 
 I följande exempel på C#-kod anropas en process med namnet `MyApplication/EncryptDocument` från ett Microsoft .NET-projekt som använder data via HTTP. (Se [Anropa AEM-formulär med BLOB-data via HTTP](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http).)
 
@@ -927,7 +932,7 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* s
  
 ```
 
-## Snabbstart:Anropa en tjänst med MTOM i ett .NET-projekt {#quick-start-invoking-a-service-using-mtom-in-a-net-project}
+## Snabbstart: Anropa en tjänst med MTOM i ett .NET-projekt {#quick-start-invoking-a-service-using-mtom-in-a-net-project}
 
 Följande exempel på C#-kod anropar en process med namnet `MyApplication/EncryptDocument` från ett Microsoft .NET-projekt med MTOM. (Se [Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom).)
 
