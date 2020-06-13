@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 7bdf1f06-c298-4695-bad1-e402cf472086
 translation-type: tm+mt
-source-git-commit: 1c79deea23ad9c5ba1c4e2471f36a40f5dbafea9
+source-git-commit: 7c65752a969d9089ad61c29b0581327d32e022d1
+workflow-type: tm+mt
+source-wordcount: '6805'
+ht-degree: 0%
 
 ---
 
@@ -44,7 +47,7 @@ Correspondence Management Solution har stöd för två typer av dynamiska dataob
 1. Tryck på **Skapa** > **Text.** Du kan också markera en textresurs och trycka på **Redigera**.
 1. Ange följande information för texten:
 
-   * **Titel: (Valfritt)** Ange titeln för textresursen. Titlar behöver inte vara unika och kan innehålla specialtecken och tecken som inte är engelska. Texterna refereras till av sina titlar (om de är tillgängliga) som miniatyrbilder och resursegenskaper.
+   * **Titel: (Valfritt)** Ange titeln för textresursen. Titlar behöver inte vara unika och kan innehålla specialtecken och tecken som inte är engelska. Texterna refereras till av sina titlar (när de är tillgängliga) som miniatyrbilder och resursegenskaper.
    * **Namn:** Det unika namnet för textresursen. Det finns inga två resurser (text, villkor eller lista) i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
    * **Beskrivning**: Ange en beskrivning av resursen.
    * **Dataordlista**: Du kan också markera det datalexikon som du vill mappa till. Med det här attributet kan du lägga till referenser till dataordlisteelement i textresursen.
@@ -63,7 +66,7 @@ Correspondence Management Solution har stöd för två typer av dynamiska dataob
 
    **Bild:** *Verktygsfält*
 
-   * **Länk**: Infoga hypertextlänk i texten. Tryck på **[!UICONTROL Länk]**, ange länken i fältet **[!UICONTROL URL]** , ta bort standardobjektnamnet från fältet **[!UICONTROL Alt Text]** och tryck på ![Spara](assets/save_icon.svg).
+   * **Länk**: Infoga hypertextlänk i texten. Tryck **[!UICONTROL Link]** på, ange länken i **[!UICONTROL URL]** fältet, ta bort standardobjektnamnet från **[!UICONTROL Alt Text]** fältet och tryck sedan på ![Spara](assets/save_icon.svg).
    * **Upprepa**: Upprepa skriver ut samlingselement i Data Dictionary med hjälp av en avgränsare.
    * **Villkor**: Tryck för att infoga ett villkor. Infoga text baserad på villkor. Om villkoret är true visas texten med bokstaven, i annat fall inte.
    * **Lägg till beskrivning**: Lägg till anteckning i ett textstycke. Detta är metadata som är synliga för författaren men inte en del av det brev som skapas.
@@ -76,15 +79,15 @@ Correspondence Management Solution har stöd för två typer av dynamiska dataob
 
    ![Verktygsfältet Stycke](assets/fonteditingtoolbar.png)
 
-   **Bild:** Verktygsfältet *Stycke*
+   **Bild:** *Verktygsfältet Stycke*
 
    ![Justering (verktygsfält)](assets/paragrapheditingtoolbar.png)
 
-   **Bild:** Verktygsfältet *Justering*
+   **Bild:** *Justering (verktygsfält)*
 
    ![Verktygsfältet Lista](assets/bulleteditingtoolbar.png)
 
-   **Bild:** Verktygsfältet *Lista*
+   **Bild:** *Verktygsfältet Lista*
 
 1. Om du vill återanvända ett av flera textstycken som finns i ett annat program, till exempel från MS Word- eller HTML-sidor, kopierar och klistrar du in texten i textredigeraren. Formateringen av den kopierade texten behålls i textredigeraren.
 
@@ -127,11 +130,11 @@ Correspondence Management Solution har stöd för två typer av dynamiska dataob
    * Lägg till ett platshållarelement i texten, tryck på Create New (Skapa nytt) på panelen Data Elements och ange information för det nya dataelementet. Tryck sedan på Create (Skapa) för att lägga till det nya elementet i listan. Den nya platshållaren kan infogas i texten på samma sätt som dataordlisteelementet. Om du vill redigera en platshållare markerar du en platshållare och trycker på Redigera.
    ![Platshållarelement](assets/placeholder_elements_in_xmldata.png)
 
-   **Bild:** Platshållarelement *som anges i exempeldatafilen för en Data Dictionary*
+   **Bild:** *Platshållarelement som anges i exempeldatafilen för en Data Dictionary*
 
    ![Platshållarelement med bokstav](assets/placeholder_elements_in_text.png)
 
-   **Bild:** Värden *för platshållarelement i CCR-vyn ifyllda från datamappningsvariablerna som anges i exempeldatafilen*
+   **Bild:** *Värden för platshållarelement i CCR-vyn ifyllda från variablerna i datamappen som anges i exempeldatafilen*
 
 1. Du kan använda textbundna villkor och upprepa för att göra brevet mycket sammanhangsberoende och välstrukturerat. Mer information om textbundna villkor och upprepning finns i [Textbundna villkor och upprepas med bokstäver](/help/forms/using/cm-inline-condition.md).
 1. Tryck på **Spara**.
@@ -153,7 +156,7 @@ Med funktionen Sök och ersätt kan du söka efter (och ersätta) alla textsträ
 
    Om du fortsätter att trycka på knappen Sök fortsätter sökningen nedåt på sidan. När den sista instansen av texten har hittats visar meddelandet **Slutet av modulen** att inga fler sökresultat hittades.
 
-   Om ingen instans av söktexten hittas i textmodulen visas meddelandet: Det **gick inte att hitta** matchningen.
+   Om ingen instans av söktexten hittas i textmodulen visas meddelandet: **Det gick inte att hitta** matchningen.
 
 1. Om du trycker på Sök igen fortsätter sökningen högst upp på sidan.
 
@@ -228,7 +231,7 @@ En lista är en grupp med relaterat innehåll som kan användas i en brevmall so
    * **Titel (valfritt): Ange** listans rubrik. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska. Listor refereras till av deras titlar (om de är tillgängliga), t.ex. i miniatyrbilder och resursegenskaper.
    * **Namn:** Listans unika namn. Det finns inga två resurser (text, villkor eller lista) i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls automatiskt i med värdet i fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
    * **Beskrivning (valfritt)**: Ange en beskrivning av resursen.
-   * **Dataordlista (valfritt)**: Du kan också välja vilken datamordlista du vill ansluta till. Endast resurser som använder samma dataordlista som listan, eller resurser som inte har någon dataordlista tilldelad, kan läggas till i listan. Om du tilldelar ett datalexikon till en lista blir det enklare för den som skapar en brevmall att hitta rätt lista.
+   * **Dataordlista (valfritt)**: Du kan också välja vilken datamordlista du vill ansluta till. Endast resurser som använder samma dataordlista som listan, eller resurser som inte har någon dataordlista tilldelad, kan läggas till i listan. Om du tilldelar ett datalexikon till en lista blir det enklare för personen som skapar en brevmall att hitta rätt lista.
    * **Taggar (valfritt)**: Markera de taggar som ska användas. Du kan också skriva namnet på en ny tagg och skapa den. (Den nya taggen skapas när du trycker på **Spara**.)
 
 1. Tryck på **Nästa**.
@@ -307,7 +310,7 @@ Med Villkorsredigeraren kan du ange ett standardvillkor. Om värdet för kontrol
 1. Om du vill lägga till en resurs i villkoret markerar du den på sidan Välj resurser och trycker på **Klar**. Resurserna läggs till i rutan Uttryck.
 1. Du kan välja följande alternativ för att ange hur villkoret fungerar under körning:
 
-   * **Inaktivera utvärdering av flera resultat\Aktivera utvärdering** av flera resultat: När det här alternativet är aktiverat (visas som&quot;Aktivera flera..&quot;) utvärderas alla villkor och resultatet är summan av alla verkliga villkor. Om det här alternativet är inaktiverat (visas som&quot;Inaktivera flera..&quot;) utvärderas endast det första villkoret som är sant och blir resultatet av villkoret.
+   * **Inaktivera utvärdering av flera resultat\Aktivera utvärdering** av flera resultat: När det här alternativet är aktiverat (visas som&quot;Aktivera flera..&quot;) utvärderas alla villkor och resultatet är summan av alla verkliga villkor. Om det här alternativet är inaktiverat (visas som&quot;Inaktivera flera..&quot;) utvärderas endast det första villkoret som är sant och blir villkorets utdata.
    * **Sidbrytning**: Välj det här alternativet ( ![break](assets/break.png)) om du vill lägga till en sidbrytning mellan villkorens moduler. Om det här alternativet inte är markerat ( ![ingen brytning](assets/nobreak.png)) flyttas hela villkoret till nästa sida, i stället för att brytas i sidan mellan villkoret, om ett villkor flödar över till nästa sida.
 
 1. Om du vill ändra ordningen på resurserna i villkoret trycker du på och håller ned pilikonen ( ![dra](assets/dragndrop.png) ) och drar. När användaren öppnar en brevmall i användargränssnittet Skapa korrespondens, monteras innehållet i den ordning som du definierade här.
@@ -401,7 +404,7 @@ Ett detaljerat exempel på hur du använder statiska och dynamiska tabeller i la
    * **Sidfot**: text som ska visas för sidfoten
    * **Typ**: typ av extra kolumn. Fält eller målområde. Typ är aktiverat för statiska platshållartabeller. Text kan definieras på kolumnnivå och inte på cellnivå. Alla celler i en utökad kolumn är av samma typ. För en dynamisk tabell är alla kolumner av fälttyp. För tabeller som inte är platshållare kan du inte definiera typen av ytterligare kolumner. I detta fall är typen av ytterligare celler i den utökade kolumnen densamma som typen av sista kolumn i den raden. och celltypen i ytterligare rader är samma som typen för den sista cellen i den kolumnen.
    * **Breddförhållande:** förhållandet mellan tabellkolumnbredderna.
-   Ett detaljerat exempel på hur du använder statiska och dynamiska tabeller i layoutfragment finns i [Exempel med exempelfiler: med statiska och dynamiska tabeller i en bokstav](#main-pars-header-28).
+   Ett detaljerat exempel på hur du använder statiska och dynamiska tabeller i layoutfragment finns i [Exempel med exempelfiler: med statiska och dynamiska tabeller i en bokstav](create-letter.md#insert-data-modules-and-layout-fragments-in-a-letter-and-configure-them).
 
 1. Tryck på **Spara**.
 
@@ -511,7 +514,7 @@ I det här exemplet visas hur du kan skapa en dynamisk och statisk tabell, binda
 1. Skapa ett layoutfragment baserat på den statiska XDP-filen. Egenskapernas flik Tabell visar att tabellen är statisk (fältet Konfiguration för). Antalet rader (1) och kolumner (3) härleds från XDP-/layoutfragmentet.
 
    Du kan ändra antalet kolumner och rader här. Beroende på vad du väljer på den här skärmen förblir antalet rader och kolumner i en statisk tabell fast i den bokstav som skapas med den här layouten.
-   [ ![Skapa en skärm för layoutfragment](assets/statictableproperties.png)](assets/statictableproperties-1.png)
+   [ ![Skapa en layoutfragmentskärm](assets/statictableproperties.png)](assets/statictableproperties-1.png)
    [Klicka för att förstora](assets/statictableproperties-1.png)
 
 1. Skapa ett brev med hjälp av båda layoutfragmenten i det. När du infogar den dynamiska XDP-filen i brevet anger du bindningen av fälten till datamappningslexikonets samlingselement.
