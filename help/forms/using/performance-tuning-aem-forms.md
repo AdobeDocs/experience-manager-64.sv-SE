@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: Configuration
 discoiquuid: 5d672b56-00c4-46a0-974b-e174fbdf07d6
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '900'
+ht-degree: 0%
 
 ---
 
@@ -54,7 +57,9 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:PermSize=256m
 set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 ```
 
-**Obs**: De rekommenderade inställningarna är för Windows 2008 R2 8 Core och Oracle HotSpot 1.7 (64-bitars) JDK och bör skalas upp eller ned enligt din systemkonfiguration.
+>[!NOTE]
+>
+>De rekommenderade inställningarna är för Windows 2008 R2 8 Core och Oracle HotSpot 1.7 (64-bitars) JDK och bör skalas upp eller ned enligt din systemkonfiguration.
 
 ## Använda en webbserver {#using-a-web-server}
 
@@ -62,7 +67,9 @@ Anpassningsbara formulär och HTML5-formulär återges i HTML5-format. Resultate
 
 Så här aktiverar du exempelvis komprimering på 32-bitars Apache Web Server 2.0 med JBoss:
 
-***Obs **: Följande instruktioner gäller inte för andra servrar än 32-bitars Apache Web Server 2.0. Om du vill ha mer information om vilka steg som gäller för andra servrar läser du i motsvarande produktdokumentation.*
+>[!NOTE]
+>
+>Följande instruktioner gäller inte för andra servrar än 32-bitars Apache Web Server 2.0. Om du vill ha mer information om vilka steg som gäller för andra servrar läser du i motsvarande produktdokumentation.
 
 I följande steg visas de ändringar som krävs för att aktivera komprimering med Apache Web Server
 
