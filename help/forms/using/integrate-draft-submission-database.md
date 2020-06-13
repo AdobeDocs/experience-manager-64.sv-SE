@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 translation-type: tm+mt
-source-git-commit: da967c43a6b4c0021ac591477bd13f3fdb026287
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '1439'
+ht-degree: 1%
 
 ---
 
@@ -40,12 +43,12 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
    [Hämta fil](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
 1. Gå till AEM-pakethanteraren på https://[*host*]:[*port*]/crx/packmgr/.
-1. Klicka på **[!UICONTROL Överför paket]**.
+1. Klicka på **[!UICONTROL Upload Package]**.
 
 1. Bläddra till paketet **aem-fp-db-integration-sample-pkg-6.1.2.zip** och klicka på **[!UICONTROL OK]**.
-1. Klicka på **[!UICONTROL Installera]** bredvid paketet för att installera paketet.
-1. Gå till konfigurationssidan för **[!UICONTROL AEM Web Console]** på https://[*host*]:[*port*]/system/console/configMgr.
-1. Klicka för att öppna **[!UICONTROL formulärportalen, utkast- och inskickningskonfiguration]** i redigeringsläge.
+1. Klicka **[!UICONTROL Install]** bredvid paketet för att installera paketet.
+1. Gå till **[!UICONTROL AEM Web Console Configuration]** sidan på https://[*host*]:[*port*]/system/console/configMgr.
+1. Klicka för att öppna **[!UICONTROL Forms Portal Draft and Submission Configuration]** i redigeringsläge.
 
 1. Ange värdena för egenskaperna enligt följande tabell:
 
@@ -73,13 +76,15 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
 
    Så här anger du ett annat namn för metadatatabellen:
 
-   * I Web Console Configuration söker du efter och klickar på Exempelimplementering av Forms Portal-metadatatjänst. Du kan ändra värdena för datakälla, metadata eller ytterligare metadatatabellnamn.
+   * I Web Console Configuration söker du efter och klickar på Implementering av Exempel på metadatatjänst för Forms Portal. Du kan ändra värdena för datakälla, metadata eller ytterligare metadatatabellnamn.
    Så här anger du ett annat namn för datatabellen:
 
    * I Web Console Configuration söker du efter och klickar på Exempelimplementering för Forms Portal Data Service. Du kan ändra värdena för datakällan och datatabellnamnet.
-   **Obs**: Om du ändrar tabellnamnen anger du dem i formulärportalskonfigurationen.
+   >[!NOTE]
+   >
+   >Om du ändrar tabellnamnen anger du dem i formulärportalskonfigurationen.
 
-1. Låt andra konfigurationer vara som de är och klicka på **[!UICONTROL Spara]**.
+1. Låt andra konfigurationer vara som de är och klicka på **[!UICONTROL Save]**.
 
 1. Databasanslutningen kan göras via den poolade datakällan för Apache Sling-anslutningen.
 1. För Apache Sling-anslutningen söker du efter och klickar för att öppna **[!UICONTROL Apache Sling Connection Pooled DataSource]** i redigeringsläge i webbkonsolkonfigurationen. Ange värdena för egenskaperna enligt följande tabell:
@@ -92,7 +97,7 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
   </tr> 
   <tr> 
    <td>Datakällans namn</td> 
-   <td><p>Ett datakällnamn för filtrering av drivrutiner från datakällpoolen</p> <p><strong>Obs! I </strong><em>exempelimplementeringen används FormsPortal som datakällnamn.</em></p> </td> 
+   <td><p>Ett datakällnamn för filtrering av drivrutiner från datakällpoolen</p> <p><strong>Obs! </strong><em>I exempelimplementeringen används FormsPortal som datakällnamn.</em></p> </td> 
   </tr> 
   <tr> 
    <td>JDBC-drivrutinsklass</td> 
@@ -161,7 +166,7 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
 
 
 
-1. Låt andra konfigurationer vara som de är och klicka på **[!UICONTROL Spara]**.
+1. Låt andra konfigurationer vara som de är och klicka på **[!UICONTROL Save]**.
 
 1. Om du redan har en tabell i databasschemat går du vidare till nästa steg.
 
@@ -306,9 +311,9 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
 
    Fortsätt om paketet inte exporteras av något paket.
 
-1. Navigera till `https://[server]:[port]/system/console/bundles` och klicka på **[!UICONTROL Installera/Uppdatera]**.
-1. Klicka på **[!UICONTROL Välj fil]** och bläddra till filen mysql-connector-java-5.1.39-bin.jar. Markera kryssrutorna **[!UICONTROL Starta paket]** och **[!UICONTROL Uppdatera paket]** .
-1. Klicka på **[!UICONTROL Installera eller Uppdatera]**. Starta om servern när du är klar.
+1. Navigera till `https://[server]:[port]/system/console/bundles` och klicka **[!UICONTROL Install/Update]**.
+1. Klicka **[!UICONTROL Choose File]** och bläddra till filen mysql-connector-java-5.1.39-bin.jar. Markera **[!UICONTROL Start Bundle]** och **[!UICONTROL Refresh Packages]** markera kryssrutor.
+1. Klicka på **[!UICONTROL Install or Update]**. Starta om servern när du är klar.
 1. (Endast *Windows*) Stäng av operativsystemets brandvägg.
 
 ## Exempelkod för formulärportaldata och metadatatjänst {#sample-code-for-forms-portal-data-and-metadata-service}
@@ -317,18 +322,18 @@ Följande ZIP innehåller `FormsPortalSampleDataServiceImpl` och `FormsPortalSam
 
 [Hämta fil](assets/sample_package.zip)
 
-## Verifiera längden på filnamnet {#verify-length-of-the-file-name}
+## Verifiera längden på filnamnet  {#verify-length-of-the-file-name}
 
 Databasimplementeringen av Forms Portal använder ytterligare metadatatabell. Tabellen har en sammansatt primärnyckel baserad på kolumnerna Key och id i tabellen. MySQL tillåter primärnycklar upp till 255 tecken. Du kan använda följande valideringsskript på klientsidan för att kontrollera längden på filnamnet som är kopplat till filwidgeten. Valideringen körs när en fil bifogas. Skriptet som ges i följande procedur visar ett meddelande när filnamnet är större än 150 (inklusive filtillägg). Du kan ändra skriptet för att kontrollera om det innehåller ett annat antal tecken.
 
 Så här skapar du [ett klientbibliotek](/help/sites-developing/clientlibs.md) och använder skriptet:
 
 1. Logga in på CRXDE och navigera till /etc/clientlibs/
-1. Skapa en nod av typen **cq:ClientLibraryFolder** och ange namnet på noden. Exempel, `validation`.
+1. Skapa en nod av typen **cq:ClientLibraryFolder** och ange namnet på noden. Till exempel, `validation`.
 
-   Klicka på **[!UICONTROL Spara alla]**.
+   Klicka på **[!UICONTROL Save All]**.
 
-1. Högerklicka på noden, klicka på **[!UICONTROL skapa en ny fil]** och skapa en fil med filnamnstillägget .txt. Du kan till exempel `js.txt`lägga till följande kod i den nyligen skapade TXT-filen och klicka på **[!UICONTROL Spara alla]**.
+1. Högerklicka på noden, klicka **[!UICONTROL create new file]** och skapa en fil med filnamnstillägget .txt. Du kan till exempel `js.txt`lägga till följande kod i den nyligen skapade TXT-filen och klicka på **[!UICONTROL Save All]**.
 
    ```
    #base=util 
@@ -337,9 +342,9 @@ Så här skapar du [ett klientbibliotek](/help/sites-developing/clientlibs.md) o
 
    I ovanstående kod `util` är namnet på mappen och `util.js` namnet på filen i `util` mappen. Mappen `util` och `util.js` filen skapas i följande steg.
 
-1. Högerklicka på den `cq:ClientLibraryFolder` nod som skapades i steg 2 och välj Skapa > Skapa mapp. Skapa en mapp med namnet `util`. Klicka på **[!UICONTROL Spara alla]**. Högerklicka på `util` mappen och välj Skapa > Skapa fil. Skapa en fil med namnet `util.js`. Klicka på **[!UICONTROL Spara alla]**.
+1. Högerklicka på den `cq:ClientLibraryFolder` nod som skapades i steg 2 och välj Skapa > Skapa mapp. Skapa en mapp med namnet `util`. Klicka på **[!UICONTROL Save All]**. Högerklicka på `util` mappen och välj Skapa > Skapa fil. Skapa en fil med namnet `util.js`. Klicka på **[!UICONTROL Save All]**.
 
-1. Lägg till följande kod i filen util.js och klicka på **[!UICONTROL Spara alla]**. Koden verifierar längden på filnamnet.
+1. Lägg till följande kod i filen util.js och klicka på **[!UICONTROL Save All]**. Koden verifierar längden på filnamnet.
 
    ```
    /*
@@ -396,15 +401,15 @@ Så här skapar du [ett klientbibliotek](/help/sites-developing/clientlibs.md) o
    >
    >Skriptet är avsett för widgetkomponenten för bifogad OTB-fil. Om du har anpassat widgeten för bifogade OTB-filer ändrar du skriptet ovan så att respektive ändringar införs.
 
-1. Lägg till följande egenskap i mappen som skapades i steg 2 och klicka på **[!UICONTROL Spara alla]**.
+1. Lägg till följande egenskap i mappen som skapades i steg 2 och klicka på **[!UICONTROL Save All]**.
 
-   * **[!UICONTROL Namn:]** kategorier
+   * **[!UICONTROL Name:]** kategorier
 
-   * **[!UICONTROL Typ:]** Sträng
+   * **[!UICONTROL Type:]** Sträng
 
-   * **[!UICONTROL Värde:]** fp.validation
+   * **[!UICONTROL Value:]** fp.validation
 
-   * **[!UICONTROL flera alternativ:]** Aktiverad
+   * **[!UICONTROL multi option:]** Aktiverad
 
 1. Navigera till `/libs/fd/af/runtime/clientlibs/guideRuntime`och lägg till `fp.validation` värdet i egenskapen **embed** .
 
@@ -414,5 +419,5 @@ Så här skapar du [ett klientbibliotek](/help/sites-developing/clientlibs.md) o
    >
    >Om du använder anpassade klientbibliotek i stället för klientbiblioteken guideRuntime och guideRuntimeWithXfa använder du kategorinamnet för att bädda in klientbiblioteket som skapas i den här proceduren i dina anpassade bibliotek som läses in vid körning.
 
-1. Klicka på **[!UICONTROL Spara alla.]** När filnamnet är större än 150 tecken (inklusive filtillägg) visas nu ett meddelande.
+1. Klicka på **[!UICONTROL Save All.]** Nu när filnamnet är större än 150 (inklusive filnamnstillägg) tecken visas ett meddelande.
 
