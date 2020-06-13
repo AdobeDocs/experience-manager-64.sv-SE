@@ -10,14 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: coding
 discoiquuid: df7b60bb-4897-479e-a05e-1b1e9429ed87
 translation-type: tm+mt
-source-git-commit: e3fcf1a117b13392b7e530a09198982c6160cb7b
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '2492'
+ht-degree: 0%
 
 ---
 
 
 # Anropa AEM-formulär med REST-begäran {#invoking-aem-forms-using-rest-requests}
 
- Processer som skapas i Workbench kan konfigureras så att du kan anropa dem via REST-begäranden (Representational State Transfer). REST-begäranden skickas från HTML-sidor. Det innebär att du kan anropa en formulärprocess direkt från en webbsida med hjälp av en REST-begäran. Du kan till exempel öppna en ny instans av en webbsida. Sedan kan du anropa en formulärprocess och läsa in ett återgivet PDF-dokument med data som skickades i en HTTP POST-begäran.
+Processer som skapas i Workbench kan konfigureras så att du kan anropa dem via REST-begäranden (Representational State Transfer). REST-begäranden skickas från HTML-sidor. Det innebär att du kan anropa en formulärprocess direkt från en webbsida med hjälp av en REST-begäran. Du kan till exempel öppna en ny instans av en webbsida. Sedan kan du anropa en formulärprocess och läsa in ett återgivet PDF-dokument med data som skickades i en HTTP POST-begäran.
 
 Det finns två typer av HTML-klienter. Den första HTML-klienten är en AJAX-klient som är skriven i JavaScript. Den andra klienten är ett HTML-formulär som innehåller en skicka-knapp. Ett HTML-baserat klientprogram är inte den enda möjliga REST-klienten. Alla klientprogram som stöder HTTP-begäranden kan anropa en tjänst med hjälp av ett REST-anrop. Du kan till exempel anropa en tjänst genom att använda ett REST-anrop från ett PDF-formulär. (Se [Anropa MyApplication/EncryptDocument-processen från Acrobat](#rest-invocation-examples).)
 
@@ -49,7 +52,11 @@ Följande datatyper stöds när AEM Forms-tjänster anropas med REST-begäran:
    Om en Forms-tjänst anropas med HTTP POST-metoden skickas argumenten inuti HTTP-begärandetexten. Om AEM Forms-tjänstens signatur har en strängindataparameter kan begärandetexten innehålla indataparameterns textvärde. Om tjänstens signatur definierar flera strängparametrar, kan begäran följa HTTP- `application/x-www-form-urlencoded` notationen med parameternamnen som används som formulärets fältnamn.
 
    Om en Forms-tjänst returnerar en strängparameter blir resultatet en textrepresentation av utdataparametern. Om en tjänst returnerar flera strängparametrar blir resultatet ett XML-dokument som kodar utdataparametrarna i följande format:
-   ` <result> <output-paramater1>output-parameter-value-as-string</output-paramater1> . . . <output-paramaterN>output-parameter-value-as-string</output-paramaterN> </result>`***Obs**! Värdet representerar `output-paramater1` utdataparameterns namn. *
+   ` <result> <output-paramater1>output-parameter-value-as-string</output-paramater1> . . . <output-paramaterN>output-parameter-value-as-string</output-paramaterN> </result>`
+
+   >[!NOTE]
+   >
+   >Värdet representerar `output-paramater1` utdataparameterns namn.
 
    Om en Forms-tjänst kräver en `com.adobe.idp.Document` parameter kan tjänsten bara anropas med HTTP POST-metoden. Om tjänsten kräver en `com.adobe.idp.Document` parameter blir HTTP-begärandetexten innehållet i indatadokumentobjektet.
 
@@ -92,7 +99,7 @@ En AEM Forms-tjänst kan anropas asynkront genom att ersätta `services` med `as
 
 Den här URL:en returnerar identifierarvärdet (i formatet &quot;text/plain&quot;) för jobbet som är ansvarig för anropet.
 
-Status för asynkront anrop kan hämtas med en anrops-URL som `services` ersätts med `async_status`. URL:en måste innehålla en `job_id` parameter som anger ID-värdet för jobbet som är associerat med det här anropet. Exempel:
+Status för asynkront anrop kan hämtas med en anrops-URL som `services` ersätts med `async_status`. URL:en måste innehålla en `job_id` parameter som anger ID-värdet för jobbet som är associerat med det här anropet. Till exempel:
 
 ```as3
  http://localhost:8080/rest/async_status/SomeService.SomeOperation?job_id=2345353443366564
@@ -102,7 +109,7 @@ Den här URL:en returnerar ett heltalsvärde (i formatet &quot;text/plain&quot;)
 
 Om jobbet är klart returnerar URL-adressen samma resultat som om tjänsten anropades synkront.
 
-När jobbet har slutförts och resultatet har hämtats kan jobbet tas bort med hjälp av en anrops-URL med som `services` ersätts med `async_dispose`. URL:en ska även innehålla en `job_id` parameter som anger jobbets identifierarvärde. Exempel:
+När jobbet har slutförts och resultatet har hämtats kan jobbet tas bort med hjälp av en anrops-URL med som `services` ersätts med `async_dispose`. URL:en ska även innehålla en `job_id` parameter som anger jobbets identifierarvärde. Till exempel:
 
 ```as3
  http://localhost:8080/rest/async_dispose/SomeService.SomeOperation?job_id=2345353443366564
@@ -178,7 +185,7 @@ Följande exempel på REST-anrop finns:
 
 **Överföra booleska värden till en process**
 
-I följande HTML-exempel skickas två `Boolean` värden till en AEM Forms-process med namnet `RestTest2`. Anropsmetodens namn är `invoke` och versionen är 1.0.Observera att metoden HTML Post används.
+I följande HTML-exempel skickas två `Boolean` värden till en AEM Forms-process med namnet `RestTest2`. Anropsmetodens namn är `invoke` och versionen är 1.0. Observera att metoden HTML Post används.
 
 ```as3
  <html> 
@@ -306,7 +313,7 @@ När den här processen anropas utför den följande åtgärder:
     </body>
    ```
 
-**Anropa MyApplication/EncryptDocument-processen från Acrobat**{#invoke-process-acrobat}
+**Anropa MyApplication/EncryptDocument-processen från Acrobat** {#invoke-process-acrobat}
 
 Du kan anropa en formulärprocess från Acrobat genom att använda en REST-begäran. Du kan till exempel anropa processen *MittProgram/KrypteraDokument* . Om du vill starta en formulärprocess från Acrobat placerar du en Skicka-knapp i en XDP-fil i Designer. (Se [Designer-hjälpen](https://www.adobe.com/go/learn_aemforms_designer_63).)
 
