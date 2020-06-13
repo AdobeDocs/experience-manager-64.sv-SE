@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: c142d7b3-301b-447c-a715-452c905565d1
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: 79dcf6816e1156604c0c9279b727ea436ad1826a
+workflow-type: tm+mt
+source-wordcount: '834'
+ht-degree: 14%
 
 ---
 
@@ -47,7 +50,7 @@ Utför följande konfigurationer om du vill att Designer ska kunna generera HTML
    >
    >Kopiera inte och klistra in det angivna värdet i fältet Autentiseringskrav eftersom det kan skada specialtecknen i värdet. Skriv i stället det angivna värdet i fältet.
 
-1. Ange ett användarnamn och lösenord i fälten **[!UICONTROL Anonymt användarnamn]** och **[!UICONTROL Anonymt användarlösenord]** . De angivna autentiseringsuppgifterna används för att hantera anonym autentisering och ge åtkomst till anonyma användare.
+1. Ange ett användarnamn och lösenord i **[!UICONTROL Anonymous User Name]** respektive **[!UICONTROL Anonymous User Password]** fält. De angivna autentiseringsuppgifterna används för att hantera anonym autentisering och ge åtkomst till anonyma användare.
 1. Klicka på **Spara** för att spara konfigurationen.
 
 ### Inaktivera skyddat läge {#disable-protected-mode}
@@ -60,7 +63,7 @@ Som standard är [skyddat läge](/help/forms/using/get-xdp-pdf-documents-aem.md)
    * URL för AEM Forms på JEE är https://[*server*]:[*port*]/lc/system/console/configMgr
 
 1. Öppna **[!UICONTROL Mobile Forms Configurations]** för redigering.
-1. Avmarkera alternativet **[!UICONTROL Skyddat läge]** och klicka på **[!UICONTROL Spara]**.
+1. Avmarkera **[!UICONTROL Protected Mode]** alternativet och klicka på **[!UICONTROL Save]**.
 
 ### Ange information om AEM Forms-servern {#provide-details-of-aem-forms-server}
 
@@ -69,15 +72,15 @@ Som standard är [skyddat läge](/help/forms/using/get-xdp-pdf-documents-aem.md)
 
    * **Server-URL**: URL till AEM Forms-server.
    * **HTTP-portnummer**: AEM-serverport. Standardvärdet är 4502.
-   * **** HTML-förhandsgranskningskontext: Sökväg till profilen för återgivning av XFA-formulär. Följande standardprofiler används för att förhandsgranska formuläret i Designer. Du kan också ange sökvägen till en anpassad profil.
+   * **HTML-förhandsgranskningskontext:** Sökväg till profilen för återgivning av XFA-formulär. Följande standardprofiler används för att förhandsgranska formuläret i Designer. Du kan också ange sökvägen till en anpassad profil.
 
       * `/content/xfaforms/profiles/default.html` (AEM Forms on OSGi)
       * `/lc/content/xfaforms/profiles/default.html` (AEM Forms on JEE)
-   * **** Forms Manager-kontext: Kontextsökväg som Forms Manager-gränssnittet distribueras till. Standardvärdena är:
+   * **Forms Manager-kontext:** Kontextsökväg som Forms Manager-gränssnittet distribueras till. Standardvärdena är:
 
       * `/aem/forms` (AEM Forms on OSGi)
       * `/lc/forms` (AEM Forms on JEE)
-   **** Obs! *Kontrollera att AEM Forms-servern körs. The HTML preview connects to the CRX server to* generate *a preview.*
+   **Obs!** *Kontrollera att AEM Forms-servern körs. The HTML preview connects to the CRX server to* generate *a preview.*
 
    ![Alternativ för AEM Forms Designer ](assets/server_options.png)
 
@@ -103,7 +106,7 @@ Om du testar formulären med exempeldata kan du kontrollera att data och fält m
 
 1. Select **File > Form Properties**.
 
-1. Klicka på fliken **Förhandsgranska **och skriv den fullständiga sökvägen till testdatafilen i rutan Datafil. Du kan också använda knappen Bläddra för att navigera till filen.
+1. Click the **Preview** tab and, in the Data File box, type the full path to your test data file. Du kan också använda knappen Bläddra för att navigera till filen.
 
 1. Click **OK**. The next time you preview the form in the **Preview HTML** tab, the data values from the sample XML file will appear in the respective objects.
 
