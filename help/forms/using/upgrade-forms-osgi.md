@@ -10,7 +10,10 @@ topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 translation-type: tm+mt
-source-git-commit: d2657bc364b7a814fac9228afdec60f96faaf175
+source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+workflow-type: tm+mt
+source-wordcount: '871'
+ht-degree: 0%
 
 ---
 
@@ -45,16 +48,16 @@ Du kan uppgradera direkt från AEM 6.2 Forms eller AEM 6.3 Forms till AEM 6.4 Fo
       >När servern har startats och körts är några av AEM Forms-paketen fortfarande i installationstillstånd. Antalet paket kan variera för varje installation. Du kan ignorera läget för dessa paket. Paketen listas på `https://[server]:[port]/system/console/`.
 
 
-1. Installera tilläggspaketet AEM Forms.  Stegen listas nedan:
+1. Installera tilläggspaketet AEM Forms. Stegen listas nedan:
 
    1. Logga in på AEM-servern som administratör och öppna paketresursen. Standardwebbadressen för paketresursen är `https://[server]:[port]/crx/packageshare`.
-   1. I paketresursen söker du efter **[!UICONTROL AEM 6.4-formulärtilläggspaket]**, klickar på det paket som gäller för ditt operativsystem och klickar på **[!UICONTROL Hämta]**. Läs och godkänn licensavtalet och klicka på **[!UICONTROL OK]**. Nedladdningen startar. När du har hämtat **[!UICONTROL visas ordet Hämtad]** bredvid paketet.
+   1. I paketresursen söker du **[!UICONTROL AEM 6.4 Forms add-on packages]** efter, klickar på det paket som gäller för ditt operativsystem och klickar på **[!UICONTROL Download]**. Läs och godkänn licensavtalet och klicka på **[!UICONTROL OK]**. Nedladdningen startar. Ordet **[!UICONTROL Downloaded]** visas bredvid paketet när du har hämtat det.
 
       Du kan också använda de hyperlänkar som visas i [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) för att hämta ett paket manuellt.
 
-   1. När nedladdningen är klar klickar du på **[!UICONTROL Nedladdad]**. Du omdirigeras till pakethanteraren. I pakethanteraren söker du efter det hämtade paketet och klickar på **[!UICONTROL Installera]**.
+   1. När nedladdningen är klar klickar du på **[!UICONTROL Downloaded]**. Du omdirigeras till pakethanteraren. I pakethanteraren söker du efter det hämtade paketet och klickar på **[!UICONTROL Install]**.
 
-      Om du hämtar paketet manuellt med hjälp av den direktlänk som visas i [AEM Forms-releaser](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)öppnar du AEM Package Manager, klickar på **[!UICONTROL Överför paket]**, markerar det hämtade paketet och klickar på Överför. När paketet har överförts klickar du på paketnamnet och sedan på **[!UICONTROL Installera]**.
+      Om du hämtar paketet manuellt med hjälp av den direktlänk som visas i [AEM Forms-releaser](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)öppnar du AEM Package Manager, klickar **[!UICONTROL Upload Package]** på det hämtade paketet och klickar på Överför. När paketet har överförts klickar du på paketnamnet och sedan på **[!UICONTROL Install]**.
 
       >[!NOTE]
       >
@@ -73,7 +76,7 @@ Du kan uppgradera direkt från AEM 6.2 Forms eller AEM 6.3 Forms till AEM 6.4 Fo
 
       Migreringsverktyget gör att anpassningsbara formulär och korrespondenshanteringsresurser i tidigare versioner blir kompatibla med AEM 6.4-formulär. Du kan hämta verktyget från AEM-paketresursen. Stegvis information om hur du konfigurerar och använder migreringsverktyget finns i [Migreringsverktyget](/help/forms/using/migration-utility.md).
 
-      Om du använder [Sample för att integrera utkast och inskickskomponenter](https://helpx.adobe.com/experience-manager/6-3/forms/using/integrate-draft-submission-database.html) i databasen och uppgradera från en tidigare version kör du följande SQL-frågor när du har utfört uppgraderingen:
+      Om du använder [Sample för att integrera utkast och inskickskomponenter](integrate-draft-submission-database.md) i databasen och uppgradera från en tidigare version kör du följande SQL-frågor när du har utfört uppgraderingen:
 
       ```
       UPDATE metadata m, additionalmetadatatable am
@@ -97,9 +100,9 @@ Du kan uppgradera direkt från AEM 6.2 Forms eller AEM 6.3 Forms till AEM 6.4 Fo
 
 1. Kontrollera att servern har uppgraderats, att alla data har migrerats och att den fungerar som vanligt.
 
-   * **** Verifiera paketens status: Kontrollera att alla paket är i aktivt läge.
-   * **** Verifiera replikering och omvänd replikering: Publicera, fyll i och skicka några migrerade formulär. Verifiera också skickade data.
-   * **** Verifiera åtkomst till användargränssnitt för administratörer och utvecklare: Logga in på AEM-instansen från ett administratörskonto och verifiera att du har tillgång till följande URL:er:
+   * **Verifiera paketens status:** Kontrollera att alla paket är i aktivt läge.
+   * **Verifiera replikering och omvänd replikering:** Publicera, fyll i och skicka några migrerade formulär. Verifiera också skickade data.
+   * **Verifiera åtkomst till användargränssnitt för administratörer och utvecklare:** Logga in på AEM-instansen från ett administratörskonto och verifiera att du har tillgång till följande URL:er:
 
       * `https://[server]:[port]/crx/packmgr`
       * `https://[server]:[port]/crx/de`
