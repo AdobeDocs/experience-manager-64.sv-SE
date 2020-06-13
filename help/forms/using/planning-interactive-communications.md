@@ -8,7 +8,10 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 75b2d424-91d3-45b4-a5d7-fb49ab558582
 translation-type: tm+mt
-source-git-commit: 9327fd06957fafc7c711f1726f5d8a363ae0c1ad
+source-git-commit: 7c65752a969d9089ad61c29b0581327d32e022d1
+workflow-type: tm+mt
+source-wordcount: '665'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ Planera anatomin för interaktiv kommunikation
 
 ![02-create-adaptive-form-main-image](assets/02-create-adaptive-form-main-image.png)
 
-Den här självstudiekursen är ett steg i [Skapa din första interaktiva kommunikationsserie](/help/forms/using/create-your-first-interactive-communication.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga självstudiekurserna.
+Den här självstudiekursen är ett steg i [Skapa din första interaktiva kommunikationsserie](/help/forms/using/create-your-first-interactive-communication.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
 
 Det första steget i planeringen av interaktiv kommunikation är att färdigställa innehållet i den interaktiva kommunikationen. Ämnesexperter från avdelningar som juridik, ekonomi, support eller marknadsföring kan hjälpa dig att slutföra innehållet. När innehållet är klart måste du analysera det för att identifiera de olika resurstyper som krävs för att skapa den interaktiva kommunikationen.
 
@@ -49,7 +52,7 @@ Anatomin innehåller data med följande indatalägen:
 * Villkorliga data
 * Bilder
 
-I varje avsnitt representerar fetstilt statisk text. Databasen innehåller kundräkningar och samtalstabeller. En formulärdatamodell kan ta emot data från alla dessa tabeller. Mer information finns i [Skapa formulärdatamodell](/help/forms/using/create-form-data-model0.md).
+I varje avsnitt representerar fetstilt statisk text. Databasen innehåller kundräkningar och samtalstabeller. En formulärdatamodell kan ta emot data från alla dessa tabeller. Mer information finns i [Skapa formulärdatamodell](create-form-data-model-tutorial.md).
 
 Följande tabell visar datakällan för varje fält i anatomin Interactive Communication:
 
