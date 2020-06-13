@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 6e4b4dfa-3af5-4c21-a2a1-b90ef02d8514
 translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '891'
+ht-degree: 0%
 
 ---
 
@@ -44,7 +47,7 @@ Du kan skapa så många sökmallar som behövs.
 
    * Välj ett processelement eller ett aktivitetselement högst upp på fliken Villkor.
 
-      **Tips**: *Om du tidigare har markerat elementet Processnamn och angett en process kan även alla processvariabler som definieras i den processen väljas.*
+      **Tips**: *Om du tidigare har markerat elementet Processnamn och angett en process kan du även välja processvariabler som definierats i den processen.*
 
       **Tips**: *Om du väljer elementet Task Visible kan användarna ta bort slutförda uppgifter från sökresultaten.*
 
@@ -65,8 +68,9 @@ Du kan skapa så många sökmallar som behövs.
    * Markera en process eller ett uppgiftselement och klicka på högerpilen för att flytta det till listan Kolumner att rapportera.
    * Markera process- eller uppgiftselementet i listan Kolumner att rapportera och klicka på uppilen eller nedpilen för att flytta det till sin plats i kolumnordningen. Kolumnrubrikerna i sökresultaten visas i den ordning som de listas här.
    * (Valfritt) Om du vill ändra namnet på elementet för kolumnrubriken markerar du elementet i listan Kolumner att rapportera och anger det nya namnet.
-
-      **Obs**: Layouten *som anges i sökmallen åsidosätter användarens inställningar som anges för kolumnrubriker i Workspace.*
+   >[!NOTE]
+   >
+   >Layouten som anges i sökmallen åsidosätter användarens inställningar som anges för kolumnrubriker i Workspace.
 
 1. (Valfritt) För varje kolumn som du vill sortera i sökresultaten klickar du på fliken Sortera och utför följande steg:
 
