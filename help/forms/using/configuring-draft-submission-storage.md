@@ -9,7 +9,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 6ebb6420-68b6-4abc-b298-c252db038416
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: 79dcf6816e1156604c0c9279b727ea436ad1826a
+workflow-type: tm+mt
+source-wordcount: '547'
+ht-degree: 0%
 
 ---
 
@@ -102,7 +105,7 @@ Data skickas direkt till den konfigurerade fjärrinstansen
 
 Förutom konfigurationen ovan anger du information om den konfigurerade fjärrbearbetningsinstansen.
 
-I AEM Web Console Configuration ( `https://[*host*]:[*port*]/system/console/configMgr`) klickar du för att öppna **AEM DS Settings Service **i redigeringsläge. I dialogrutan för AEM DS-inställningstjänsten anger du information om hur server-URL:en bearbetas, användarnamn och lösenord för servern.
+I AEM Web Console Configuration ( `https://[*host*]:[*port*]/system/console/configMgr`) klickar du för att öppna **AEM DS Settings Service** i redigeringsläge. I dialogrutan för AEM DS-inställningstjänsten anger du information om hur server-URL:en bearbetas, användarnamn och lösenord för servern.
 
 >[!NOTE]
 >
