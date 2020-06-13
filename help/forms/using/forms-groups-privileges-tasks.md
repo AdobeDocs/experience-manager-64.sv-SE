@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: Configuration
 discoiquuid: 71412f5d-ff34-415f-baf8-d300756b93a9
 translation-type: tm+mt
-source-git-commit: 17f5041c16996ec3f230650451a816c08170837c
+source-git-commit: f87d70515a385fb23b36797e468325fa1a5e9ff4
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 0%
@@ -33,7 +33,7 @@ När du har installerat [AEM Forms-tilläggspaketet](/help/forms/using/installin
    <td>Uppgifter</td> 
   </tr>
   <tr>
-   <td>formuläranvändare <sup><a href="#main-pars-text">[1]</a></sup></td> 
+   <td>formuläranvändare <sup>[1]</sup></td> 
    <td>
     <ul> 
      <li>Skapa, förhandsgranska, publicera och skicka adaptiva formulär</li> 
@@ -63,7 +63,7 @@ När du har installerat [AEM Forms-tilläggspaketet](/help/forms/using/installin
     </ul> </td> 
   </tr>
   <tr>
-   <td>template-authors <sup><a href="#main-pars-text">[2]</a></sup></td> 
+   <td>template-authors <sup>[2]</sup></td> 
    <td>
     <ul> 
      <li>Skapa och förhandsgranska anpassningsbara formulär eller mallar för interaktiv kommunikation</li> 
