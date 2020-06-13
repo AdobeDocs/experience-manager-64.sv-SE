@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: f8749793-e53f-4812-a093-8278f480e6a8
 translation-type: tm+mt
-source-git-commit: 09e069f1b0f5653dc13de3c2d5580235a7dc5dd1
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '556'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,9 @@ Beroende på vilken typ av klientprogram du använder kan du skriva formuläret 
 * Webbtjänstens (Java Base64) exempel är en Java-server.
 * Webbtjänstexemplen (MTOM) är ett konsolprogram (alla snabbstarter har inte ett MTOM-exempel).
 
-   ***Obs **: Mer information om hur du skapar ett webbprogram som använder java-servrar för att anropa Forms-tjänsten finns i[Skapa webbprogram som återger formulär](/help/forms/developing/creating-web-applications-renders-forms.md).*
+   >[!NOTE]
+   >
+   >Mer information om hur du skapar ett webbprogram som använder java-servrar för att anropa Forms-tjänsten finns i [Skapa webbprogram som återger formulär](/help/forms/developing/creating-web-applications-renders-forms.md).
 
    Du kan skicka en formulärdesign (en XDP-fil) eller ett PDF-dokument till Forms-tjänsten på något av två sätt:
 
