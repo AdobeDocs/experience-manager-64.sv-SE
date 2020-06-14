@@ -3,7 +3,10 @@ title: XMP-tillbakaskrivning till återgivningar
 description: Lär dig hur XMP-återskrivningsfunktionen sprider metadataändringar för en resurs till alla eller vissa återgivningar av resursen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: eb135e5898fe521498eecae7109b39f54d274cce
+source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
+workflow-type: tm+mt
+source-wordcount: '731'
+ht-degree: 2%
 
 ---
 
@@ -20,7 +23,7 @@ Tänk dig ett scenario där du ändrar egenskapen [!UICONTROL Title] för resurs
 
 ![metadata](assets/metadata.png)
 
-I det här fallet sparar AEM Resurser ändringarna av egenskapen **[!UICONTROL Title]** i parametern `dc:title` för resursens metadata som lagras i resurshierarkin.
+I det här fallet sparar AEM Resurser ändringarna av **[!UICONTROL Title]** egenskapen i `dc:title` parametern för resursens metadata som lagras i resurshierarkin.
 
 ![metadata_stored](assets/metadata_stored.png)
 
@@ -33,8 +36,8 @@ Med funktionen XMP-återställning kan du sprida metadataändringarna till alla 
 Om du vill att metadataändringarna ska kunna spridas till återgivningarna av resursen när du överför den ändrar du konfigurationen **Adobe CQ DAM Rendition Maker** i Configuration Manager.
 
 1. Öppna Configuration Manager från `https://[aem_server]:[port]/system/console/configMgr`.
-1. Öppna **[!UICONTROL Adobe CQ DAM Rendition Maker]** -konfigurationen.
-1. Välj alternativet **[!UICONTROL Sprid XMP]** och spara sedan ändringarna.
+1. Öppna **[!UICONTROL Adobe CQ DAM Rendition Maker]** konfigurationen.
+1. Markera **[!UICONTROL Propagate XMP]** alternativet och spara sedan ändringarna.
 
    ![chlimage_1-346](assets/chlimage_1-346.png)
 
@@ -44,11 +47,11 @@ Om du vill att XMP-återskrivningsfunktionen ska kunna sprida metadataändringar
 
 Utför dessa steg för XMP-återskrivningsfunktionen som sprider metadata till återgivningsminiatyrerna 140.100.png och 319.319.png.
 
-1. Navigera till **[!UICONTROL Verktyg > Arbetsflöde > Modeller]** i Experience Manager.
-1. Öppna arbetsflödesmodellen [!UICONTROL DAM-metadataåterställning] på sidan **[!UICONTROL Modeller]** .
-1. Öppna steget för **[!UICONTROL XMP-återskrivningsprocess]** på sidan med egenskaper för **[!UICONTROL DAM-metadataåterställning]** .
-1. I dialogrutan **[!UICONTROL Stegegenskaper]** trycker/klickar du på fliken **[!UICONTROL Process]** .
-1. Lägg till i rutan **[!UICONTROL Argument]** `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`. Tryck/klicka på **[!UICONTROL OK]**.
+1. Navigera till Experience Manager **[!UICONTROL Tools > Workflow > Models]**.
+1. Öppna arbetsflödesmodellen från [!UICONTROL Models] sidan **[!UICONTROL DAM Metadata Writeback]** .
+1. På egenskapssidan för **[!UICONTROL DAM Metadata Writeback]** öppnar du steget **[!UICONTROL XMP Writeback Process]**.
+1. I dialogrutan **[!UICONTROL Step Properties]** trycker/klickar du på fliken **[!UICONTROL Process]**.
+1. Lägg till i **[!UICONTROL Arguments]** rutan `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`. Tryck/klicka på **[!UICONTROL OK]**.
 
    ![step_properties](assets/step_properties.png)
 
@@ -65,24 +68,34 @@ Metadataändringarna sprids till återgivningarna `thumbnail.140.100.png` och `t
 
 ## Filtrera XMP-metadata {#filtering-xmp-metadata}
 
-AEM Resurser stöder både svartlistsfiltrering och vitlistsfiltrering av egenskaper/noder för XMP-metadata som läses från resurbinärfiler och lagras i JCR när resurser hämtas.
+[!DNL Experience Manager Assets] har stöd för både blockerad lista och tillåten listfiltrering av egenskaper/noder för XMP-metadata som läses från objektbinärfiler och lagras i JCR när resurser hämtas.
 
-Med svartlistsfiltrering kan du importera alla XMP-metadataegenskaper utom de egenskaper som anges för uteslutning. För resurstyper som INDD-filer som har stora mängder XMP-metadata (till exempel 1 000 noder med 10 000 egenskaper) är namnen på de noder som ska filtreras inte alltid kända i förväg. Om svartlistsfiltrering tillåter ett stort antal resurser med flera XMP-metadata att importeras, kan AEM-instansen/klustret stöta på stabilitetsproblem, till exempel övervakningsköer som stoppats.
+Genom att filtrera med hjälp av en blockerad lista kan du importera alla XMP-metadataegenskaper utom de egenskaper som har angetts för undantag. För resurstyper som INDD-filer som har stora mängder XMP-metadata (till exempel 1 000 noder med 10 000 egenskaper) är namnen på de noder som ska filtreras inte alltid kända i förväg. Om filtrering med hjälp av en blockerad lista tillåter att ett stort antal resurser med flera XMP-metadata importeras, kan AEM-instansen eller klustret stöta på stabilitetsproblem, till exempel övervakningskö med stoppning.
 
-Vitlistsfiltrering av XMP-metadata löser problemet genom att du kan definiera de XMP-egenskaper som ska importeras. På så sätt ignoreras andra/okända XMP-egenskaper. Du kan lägga till några av dessa egenskaper i svartlistningsfiltret för bakåtkompatibilitet.
+Filtrering av XMP-metadata via tillåten lista löser problemet genom att du kan definiera XMP-egenskaperna som ska importeras. På så sätt ignoreras alla andra eller okända XMP-egenskaper. För bakåtkompatibilitet kan du lägga till några av dessa egenskaper i filtret som använder en blockerad lista.
+
+<!-- TBD: The instructions don't seem to match the UI. I see com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.description
+in Config Manager. And the settings are,
+com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.apply_whitelist.name
+com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.whitelist.name
+com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.apply_blacklist.name
+com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.blacklist.name
+ 
+TBD: Make updates to configurations for allow and block list after product updates are done.
+-->
 
 >[!NOTE]
 >
 >Filtrering fungerar bara för egenskaper som härletts från XMP-källor i objektbinärfiler. För egenskaper som härleds från andra källor än XMP, t.ex. EXIF- och IPTC-format, fungerar inte filtreringen. Datumet då resursen skapades sparas till exempel i egenskapen EXIF TIFF `CreateDate` . AEM lagrar det här värdet i metadatafältet med namnet `exif:DateTimeOriginal`. Eftersom källan inte är en XMP-källa fungerar inte filtrering på den här egenskapen.
 
 1. Öppna Configuration Manager från `https://[aem_server]:[port]/system/console/configMgr`.
-1. Öppna **[!UICONTROL Adobe CQ DAM XmpFilter]** -konfigurationen.
-1. Om du vill använda vitlistsfiltrering väljer du **[!UICONTROL Använd vitlista på XMP-egenskaper]** och anger de egenskaper som ska importeras i rutan XML-namn i listan **[!UICONTROL över godkända för XMP-filtrering]** .
+1. Öppna **[!UICONTROL Adobe CQ DAM XmpFilter]** konfigurationen.
+1. Om du vill använda filtrering via en tillåten lista markerar du **[!UICONTROL Apply Whitelist to XMP Properties]** och anger de egenskaper som ska importeras i **[!UICONTROL Whitelisted XML Names for XMP filtering]** rutan.
 
    ![chlimage_1-347](assets/chlimage_1-347.png)
 
-1. Om du vill filtrera bort svartlistade XMP-egenskaper efter att ha använt vitlistsfiltrering anger du dem i rutan XML-namn med **[!UICONTROL svartlistning för XMP-filtrering]** . Spara ändringarna.
+1. Om du vill filtrera bort blockerade XMP-egenskaper efter att ha använt filtrering via tillåten lista anger du egenskaperna i **[!UICONTROL Blacklisted XML Names for XMP filtering]** rutan. Spara ändringarna.
 
    >[!NOTE]
    >
-   >Alternativet **[!UICONTROL Använd svartlista för XMP-egenskaper]** är markerat som standard. Svartlistsfiltrering är alltså aktiverat som standard. Om du vill inaktivera svartlistsfiltrering avmarkerar du **[!UICONTROL Använd svartlista för XMP-egenskaper]**.
+   >The **[!UICONTROL Apply Blacklist to XMP Properties]** option is selected by default. Som standard är filtrering med hjälp av en blockerad lista aktiverat. Om du vill inaktivera sådan filtrering avmarkerar du **[!UICONTROL Apply Blacklist to XMP Properties]** alternativet.
