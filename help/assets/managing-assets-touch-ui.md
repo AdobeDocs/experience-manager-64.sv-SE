@@ -4,9 +4,9 @@ description: Lär dig mer om olika resurshanterings- och redigeringsuppgifter so
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c407cecf4f4de9aa00ba987f96df3c75784e0171
+source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
 workflow-type: tm+mt
-source-wordcount: '9500'
+source-wordcount: '9499'
 ht-degree: 1%
 
 ---
