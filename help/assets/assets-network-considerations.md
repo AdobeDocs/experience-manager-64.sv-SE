@@ -3,7 +3,10 @@ title: Resurser - nätverksaspekter
 description: Diskutera nätverksaspekter när du utformar en AEM Resurser-distribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
+workflow-type: tm+mt
+source-wordcount: '1015'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Se till att du inkluderar följande i nätverksdiagrammet:
 
 Börja med att diagram över anslutningen mellan de enskilda klientenheterna och företagsnätverket. I det här skedet kan du identifiera delade resurser, t.ex. WiFi-anslutningar, där flera användare använder samma punkt eller Ethernet-växlar för att överföra och hämta resurser.
 
-![chlimage_1-353](assets/chlimage_1-353.png)
+![chlimage_1-355](assets/chlimage_1-353.png)
 
 Klientenheter ansluter till företagsnätverket på olika sätt, t.ex. via WiFi, Ethernet till en delad switch samt via VPN. Det är viktigt att kunna identifiera och förstå kontrollpunkter i det här nätverket för att kunna planera och ändra nätverket.
 
@@ -55,13 +58,13 @@ Företagets brandväggar och proxies kan också forma bandbredden på många oli
 
 I det här exemplet har företaget en upplänk på 10 Gbit/s. Den borde vara tillräckligt stor för flera kunder. Dessutom har brandväggen en värdhastighetsgräns på 10 Mbit/s. Denna begränsning kan potentiellt begränsa trafiken till en enda värd till 10 Mbit/s, även om uppkopplingen till Internet är på 10 Gbit/s.
 
-Det här är den minsta klientorienterade kontrollpunkten. Du kan dock utvärdera om det finns några ändringar eller vitlistor hos den nätverksåtgärdsgrupp som ansvarar för den här brandväggen.
+Det här är den minsta klientorienterade kontrollpunkten. Du kan dock utvärdera om det finns en ändring eller om det finns en lista över tillåtna användare i den nätverksåtgärdsgrupp som ansvarar för den här brandväggen.
 
 I exempeldiagrammen kan du dra slutsatsen att sex enheter delar en konceptuell kanal på 10 Mbit/s. Beroende på storleken på de tillgångar som används kan detta vara otillräckligt för att uppfylla användarnas förväntningar.
 
 ## AEM-miljöns topologi {#topology-of-the-aem-environment}
 
-![chlimage_1-356](assets/chlimage_1-356.png)
+![chlimage_1-354](assets/chlimage_1-356.png)
 
 Att designa topologin i AEM-miljön kräver detaljerade kunskaper om systemkonfigurationen och hur nätverket är anslutet i användarmiljön.
 
