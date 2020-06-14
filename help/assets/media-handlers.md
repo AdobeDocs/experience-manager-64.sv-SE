@@ -3,7 +3,10 @@ title: Bearbeta resurser med mediehanterare och arbetsflöden
 description: Lär dig mer om olika mediehanterare och hur du använder dem i arbetsflöden för att utföra åtgärder på resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a2ab97e4bfb9eca32d343d22d6570dd21885db69
+source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
+workflow-type: tm+mt
+source-wordcount: '2142'
+ht-degree: 3%
 
 ---
 
@@ -48,7 +51,7 @@ Det går att visa de aktiva mediehanterarna:
 
 1. Navigera till i webbläsaren `http://localhost:4502/system/console/components`.
 1. Klicka på länken `com.day.cq.dam.core.impl.store.AssetStoreImpl`.
-1. En lista med alla aktiva mediehanterare visas. Exempel:
+1. En lista med alla aktiva mediehanterare visas. Till exempel:
 
 ![chlimage_1-437](assets/chlimage_1-437.png)
 
@@ -56,11 +59,11 @@ Det går att visa de aktiva mediehanterarna:
 
 Mediehanterare är tjänster som vanligtvis används i kombination med arbetsflöden.
 
-AEM har vissa standardarbetsflöden för att bearbeta resurser. Om du vill visa dem öppnar du arbetsflödeskonsolen och klickar på fliken **[!UICONTROL Modeller]** : de arbetsflödesrubriker som börjar med AEM Assets är de resursspecifika.
+AEM har vissa standardarbetsflöden för att bearbeta resurser. Om du vill visa dem öppnar du arbetsflödeskonsolen och klickar på **[!UICONTROL Models]** fliken: de arbetsflödesrubriker som börjar med AEM Assets är de resursspecifika.
 
 Befintliga arbetsflöden kan utökas och nya kan skapas för att bearbeta resurser enligt specifika krav.
 
-I följande exempel visas hur du förbättrar arbetsflödet för synkronisering **[!UICONTROL av]** AEM-resurser så att delresurser genereras för alla resurser utom PDF-dokument.
+I följande exempel visas hur du förbättrar arbetsflödet **[!UICONTROL AEM Assets Synchronization]** så att delresurser genereras för alla resurser utom PDF-dokument.
 
 ### Inaktivera/aktivera en mediehanterare {#disabling-enabling-a-media-handler}
 
@@ -69,9 +72,9 @@ Mediehanterarna kan inaktiveras eller aktiveras via webbhanteringskonsolen för 
 Så här aktiverar/inaktiverar du en mediehanterare:
 
 1. Navigera till i webbläsaren `https://<host>:<port>/system/console/components`.
-1. Klicka på **[!UICONTROL Inaktivera]** bredvid namnet på mediehanteraren. Exempel: `com.day.cq.dam.handler.standard.mp3.Mp3Handler`.
+1. Klicka **[!UICONTROL Disable]** bredvid namnet på mediehanteraren. Till exempel: `com.day.cq.dam.handler.standard.mp3.Mp3Handler`.
 1. Uppdatera sidan: en ikon visas bredvid mediehanteraren som anger att den är inaktiverad.
-1. Om du vill aktivera mediehanteraren klickar du på **[!UICONTROL Aktivera]** bredvid namnet på mediehanteraren.
+1. Om du vill aktivera mediehanteraren klickar du **[!UICONTROL Enable]** bredvid namnet på mediehanteraren.
 
 ### Skapa en ny mediehanterare {#creating-a-new-media-handler}
 
@@ -97,8 +100,8 @@ Gränssnittet och klasserna omfattar:
 
 * `com.day.cq.dam.api.handler.AssetHandler` gränssnitt: Det här gränssnittet beskriver tjänsten som lägger till stöd för specifika MIME-typer. Om du lägger till en ny MIME-typ måste det här gränssnittet implementeras. Gränssnittet innehåller metoder för import och export av specifika dokument, för att skapa miniatyrbilder och extrahera metadata.
 * `com.day.cq.dam.core.AbstractAssetHandler` klass: Den här klassen fungerar som bas för alla andra tillgångshanterarimplementeringar och tillhandahåller vanliga funktioner.
-* `com.day.cq.dam.core.AbstractSubAssetHandler` klass:
-   *  Den här klassen fungerar som bas för alla andra implementeringar av tillgångshanterare och tillhandahåller vanliga funktioner plus vanliga funktioner för subresursextrahering.
+* Klassen `com.day.cq.dam.core.AbstractSubAssetHandler`:
+   * Den här klassen fungerar som bas för alla andra implementeringar av resurshanterare och tillhandahåller vanliga funktioner för extrahering av delresurser.
    * Det bästa sättet att starta en implementering är att ärva från en tillhandahållen abstrakt implementering som tar hand om de flesta saker och tillhandahåller ett rimligt standardbeteende: klassen com.day.cq.dam.core.AbstractAssetHandler.
    * Den här klassen tillhandahåller redan en abstrakt tjänstbeskrivning. Om du ärver från den här klassen och använder maven-sling-plugin-programmet måste du ange att ärvningsflaggan ska vara true.
 
@@ -130,16 +133,16 @@ När du har utfört följande procedur och överför en textfil till AEM, extrah
 
 1. Skapa `myBundle` Maven-projekt i Eclipse:
 
-   1. Klicka på **[!UICONTROL Arkiv > Nytt > Annat]** i menyraden.
-   1. Expandera mappen Maven i dialogrutan, välj Projekt av typen Maven och klicka på **[!UICONTROL Nästa]**.
-   1. Markera kryssrutan Skapa ett enkelt projekt och rutan Använd standardplatser för arbetsyta och klicka sedan på **[!UICONTROL Nästa]**.
+   1. Klicka på i menyraden **[!UICONTROL File > New > Other]**.
+   1. I dialogrutan expanderar du mappen Maven, väljer Maven Project och klickar på **[!UICONTROL Next]**.
+   1. Markera kryssrutan Skapa ett enkelt projekt och rutan Använd standardplatser för arbetsyta och klicka sedan på **[!UICONTROL Next]**.
    1. Definiera projektet Maven:
 
       * Grupp-ID: com.day.cq5.myhandler
       * Artefakt-ID: myBundle
       * Namn: Mitt AEM-paket
       * Beskrivning: Detta är mitt AEM-paket
-   1. Click **[!UICONTROL Finish]**.
+   1. Klicka på **[!UICONTROL Finish]**.
 
 
 1. Ställ in Java Compiler på version 1.5:
@@ -150,7 +153,7 @@ När du har utfört följande procedur och överför en textfil till AEM, extrah
       * Kompilatorefterlevnadsnivå
       * Kompatibilitet med genererade .class-filer
       * Källkompatibilitet
-   1. Click **[!UICONTROL OK]**. Klicka på Ja i dialogrutan.
+   1. Klicka på **[!UICONTROL OK]**. Klicka på Ja i dialogrutan.
 
 
 1. Ersätt koden i filen pom.xml med följande kod:
@@ -400,8 +403,8 @@ När du har utfört följande procedur och överför en textfil till AEM, extrah
      * * @return the number of words in the string
      * */ 
     private long wordCount(String text) { 
-     // We need to keep track of the last character, if we have two white spaces in a row we dont want to double count 
-     // The starting of the document is always a whitespace 
+     // We need to keep track of the last character, if we have two whitespace in a row we don't want to double count.
+     // The starting of the document is always a whitespace.
      boolean prevWhiteSpace = true; 
      boolean currentWhiteSpace = true; 
      char c; long numwords = 0; 
@@ -414,7 +417,7 @@ När du har utfört följande procedur och överför en textfil till AEM, extrah
       if (currentWhiteSpace && !prevWhiteSpace) { numwords++; } 
       prevWhiteSpace = currentWhiteSpace; 
      } 
-     // If we do not end with a white space then we need to add one extra word 
+     // If we do not end with a whitespace then we need to add one extra word.
      if (!currentWhiteSpace) { numwords++; } 
      return numwords; 
     } 
@@ -423,7 +426,7 @@ När du har utfört följande procedur och överför en textfil till AEM, extrah
 
 1. Kompilera Java-klassen och skapa paketet:
 
-   1. Högerklicka på projektet myBundle, välj **[!UICONTROL Kör som]** och sedan **[!UICONTROL Maven Install]**.
+   1. Högerklicka på projektet myBundle, välj **[!UICONTROL Run As]** och sedan **[!UICONTROL Maven Install]**.
    1. Paketet `myBundle-0.0.1-SNAPSHOT.jar` (som innehåller den kompilerade klassen) skapas under `myBundle/target`.
 
 1. Skapa en ny nod under i CRX Explorer `/apps/myApp`. Namn = `install`, Typ = `nt:folder`.
@@ -469,17 +472,17 @@ Använd ImageMagick för att göra detta. Installera ImageMagick på disken som 
 
    >[!NOTE]
    >
-   >I vissa versioner av Windows (till exempel Windows SE) kanske inte kommandot convert körs eftersom det står i konflikt med det inbyggda konverteringsverktyget som ingår i Windows-installationen. I det här fallet anger du den fullständiga sökvägen för verktyget ImageMagick som används för att konvertera bildfiler till miniatyrer. Exempel, `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`.
+   >I vissa versioner av Windows (till exempel Windows SE) kanske inte kommandot convert körs eftersom det står i konflikt med det inbyggda konverteringsverktyget som ingår i Windows-installationen. I det här fallet anger du den fullständiga sökvägen för verktyget ImageMagick som används för att konvertera bildfiler till miniatyrer. Till exempel, `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`.
 
 1. Om du vill se om verktyget fungerar som det ska lägger du till en JPG-bild i arbetskatalogen och kör kommandot `convert <image-name>.jpg -flip <image-name>-flipped.jpg` på kommandoraden.
 
    En speglad bild läggs till i katalogen.
 
-Lägg sedan till kommandoradsprocessteget i arbetsflödet för **[!UICONTROL DAM-uppdatering av resurser]** :
+Lägg sedan till kommandoradsprocessteget i arbetsflödet **[!UICONTROL DAM Update Asset]**:
 
-1. Gå till **[!UICONTROL arbetsflödeskonsolen]** .
-1. Redigera **[!UICONTROL DAM Update Asset]** -modellen på fliken **[!UICONTROL Modeller]** .
-1. Ändra inställningarna för det **[!UICONTROL webbaktiverade återgivningssteget]** enligt följande:
+1. Gå till **[!UICONTROL Workflow]** konsolen.
+1. Redigera **[!UICONTROL Models]** modellen på **[!UICONTROL DAM Update Asset]** fliken.
+1. Ändra inställningarna för **[!UICONTROL Web enabled rendition]** steget enligt följande:
 
    `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
@@ -488,12 +491,12 @@ Lägg sedan till kommandoradsprocessteget i arbetsflödet för **[!UICONTROL DAM
 Om du vill testa det ändrade arbetsflödet lägger du till en resurs i `/content/dam`.
 
 1. Hämta en TIFF-bild i filsystemet. Byt namn på filen till `myImage.tiff` och kopiera den till, `/content/dam`till exempel med hjälp av WebDAV.
-1. Gå till **[!UICONTROL CQ5 DAM]** -konsolen, till exempel `http://localhost:4502/libs/wcm/core/content/damadmin.html`.
+1. Gå till **[!UICONTROL CQ5 DAM]** konsolen, till exempel `http://localhost:4502/libs/wcm/core/content/damadmin.html`.
 1. Öppna resursen `myImage.tiff` och kontrollera att den vända bilden och de tre miniatyrbilderna har skapats.
 
 #### Konfigurera processteget CommandLineProcess {#configuring-the-commandlineprocess-process-step}
 
-I det här avsnittet beskrivs hur du anger **[!UICONTROL processargument]** för `CommandLineProcess`. Avgränsa värdena för [!UICONTROL processargument] med kommatecken och starta inte ett värde med ett blanksteg.
+This section describes how to set the **[!UICONTROL Process Arguments]** of the `CommandLineProcess`. Avgränsa värdena för [!UICONTROL Process Arguments] att använda kommatecken och starta inte ett värde med ett blanksteg.
 
 | Argument-Format | Beskrivning |
 |---|---|
@@ -507,11 +510,11 @@ Om till exempel ImageMagick är installerat på den disk som är värd för AEM-
 
 När arbetsflödet körs gäller steget endast resurser som har bild/gif eller mime:image/tiff som mime-types, skapar det en vänd bild av originalet, konverterar den till .jpg och skapar tre miniatyrbilder med måtten: 140x100, 48x48 och 10x250.
 
-Använd följande [!UICONTROL processargument] för att skapa de tre standardminiatyrbilderna med ImageMagick:
+Använd följande [!UICONTROL Process Arguments] för att skapa de tre standardminiatyrbilderna med ImageMagick:
 
 `mime:image/tiff,mime:image/png,mime:image/bmp,mime:image/gif,mime:image/jpeg,cmd:convert ${filename} -define jpeg:size=319x319 -thumbnail "319x319>" -background transparent -gravity center -extent 319x319 -write png:cq5dam.thumbnail.319.319.png -thumbnail "140x100>" -background transparent -gravity center -extent 140x100 -write cq5dam.thumbnail.140.100.png -thumbnail "48x48>" -background transparent -gravity center -extent 48x48 cq5dam.thumbnail.48.48.png`
 
-Använd följande [!UICONTROL processargument] för att skapa den webbaktiverade återgivningen med ImageMagick:
+Använd följande [!UICONTROL Process Arguments] för att skapa den webbaktiverade återgivningen med ImageMagick:
 
 `mime:image/tiff,mime:image/png,mime:image/bmp,mime:image/gif,mime:image/jpeg,cmd:convert ${filename} -define jpeg:size=1280x1280 -thumbnail "1280x1280>" cq5dam.web.1280.1280.jpeg`
 
