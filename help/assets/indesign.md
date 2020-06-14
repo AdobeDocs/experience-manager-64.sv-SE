@@ -3,7 +3,10 @@ title: Integrera AEM-material med Adobe InDesign Server
 description: Lär dig hur du integrerar AEM Assets med InDesign Server.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
+workflow-type: tm+mt
+source-wordcount: '1658'
+ht-degree: 1%
 
 ---
 
@@ -58,7 +61,7 @@ InDesign Server kan integreras med AEM Resurser så att filer som skapats med In
    >
    >IDML är ett XML-baserat format som återger *allt* i InDesign-filen. Den lagras som ett komprimerat paket med [Zip](https://www.techterms.com/definition/zip) -komprimering.
    >
-   >Mer information finns i [Adobe InDesign Interchange Formats INX och IDML](http://www.peachpit.com/articles/article.aspx?p=1381880&seqNum=8) .
+   >Mer information finns i [Adobe InDesign Interchange Formats INX och IDML](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8) .
 
    >[!CAUTION]
    >
@@ -107,7 +110,7 @@ Så här installerar och startar du InDesign Server för användning med AEM:
 
 ### Konfigurera arbetsflödet för AEM Resurser {#configuring-the-aem-assets-workflow}
 
-AEM Assets har ett förkonfigurerat arbetsflöde för **DAM Update Asset**, som innehåller flera processsteg specifikt för InDesign:
+AEM Assets has a pre-configured workflow **DAM Update Asset**, that has several process steps specifically for InDesign:
 
 * [Medieextrahering](#media-extraction)
 * [Sidextrahering](#page-extraction)
@@ -120,7 +123,7 @@ Efter installationen utlöses det arbetsflöde som krävs för att bearbeta resu
 
 Det här steget styr extraheringen av media från `.indd` filen.
 
-Om du vill anpassa kan du redigera fliken **[!UICONTROL Argument]** i steget **[!UICONTROL Medieextrahering]** .
+Om du vill anpassa kan du redigera **[!UICONTROL Arguments]** fliken i **[!UICONTROL Media Extraction]** steget.
 
 ![Medieextraheringsargument och skriptsökvägar](assets/media_extraction_arguments_scripts.png)
 
@@ -144,11 +147,12 @@ Du kan konfigurera arbetsflödessteget Bearbeta miniatyrbilder för att generera
 
 Då skapas en AEM-sida av de extraherade elementen. En extraheringshanterare används för att extrahera data från en återgivning (för närvarande HTML eller IDML). Dessa data används sedan för att skapa en sida med PageBuilder.
 
-Om du vill anpassa kan du redigera fliken **[!UICONTROL Argument]** i steget **Sidextrahering** .
+To customize, you can edit the **[!UICONTROL Arguments]** tab of the **Page Extraction** step.
 
 ![chlimage_1-289](assets/chlimage_1-289.png)
 
-* **Extraheringshanterare** för sida: Välj den hanterare som du vill använda i listrutan. En extraheringshanterare fungerar på en viss återgivning som väljs av en relaterad `RenditionPicker` (se `ExtractionHandler` API:t). Som standard är Extraction Handler för IDML-export tillgänglig. Det fungerar på den `IDML` återgivning som genereras i MediaExtract-steget.
+* **Extraheringshanterare** för sida: Välj den hanterare som du vill använda i listrutan. En extraheringshanterare fungerar på en viss återgivning, som väljs av en relaterad `RenditionPicker` (se API:t för `ExtractionHandler`).
+Som standard är Extraction Handler för IDML-export tillgänglig. Det fungerar på den `IDML` återgivning som genereras i MediaExtract-steget.
 
 * **Sidnamn**: Ange det namn som du vill tilldela den resulterande sidan. Om det lämnas tomt är namnet&quot;page&quot; (eller ett derivat om&quot;page&quot; redan finns).
 
@@ -168,23 +172,23 @@ Om du vill anpassa kan du redigera fliken **[!UICONTROL Argument]** i steget **S
 
 1. Expandera **[!UICONTROL Cloud Services Configurations]** i den vänstra rutan i verktygskonsolen. Expandera sedan **[!UICONTROL Cloud Proxy Configuration]**.
 
-1. Dubbelklicka på den **[!UICONTROL IDS-arbetare]** som ska öppnas för konfiguration.
+1. Dubbelklicka på **[!UICONTROL IDS worker]** för att öppna för konfiguration.
 
-1. Klicka på **[!UICONTROL Redigera]** för att öppna konfigurationsdialogrutan och definiera de nödvändiga inställningarna:
+1. Klicka **[!UICONTROL Edit]** för att öppna konfigurationsdialogrutan och definiera de nödvändiga inställningarna:
 
    ![proxy_idsworkerconfig](assets/proxy_idsworkerconfig.png)
 
    * **IDS-pool**: SOAP-slutpunkterna som ska användas för kommunikation med InDesign Server. Du kan lägga till, ta bort och beställa objekt.
 
-1. Spara genom att klicka på **[!UICONTROL OK]** .
+1. Klicka **[!UICONTROL OK]** för att spara.
 
-### Configuring Day CQ Link Externalizer {#configuring-day-cq-link-externalizer}
+### Configuring Day CQ Link Externalizer  {#configuring-day-cq-link-externalizer}
 
 Om InDesign-servern och AEM körs på olika värdar eller något eller båda programmen inte körs på standardportar, konfigurerar du **Day CQ Link Externalizer** för att ange värdnamn, port och innehållssökväg för InDesign-servern.
 
 1. Öppna Configuration Manager på URL:en `https://[AEM_server]:[port]/system/console/configMgr`.
-1. Leta reda på **[!UICONTROL Dag CQ Link Externalizer]** och klicka på ikonen **[!UICONTROL Redigera]** för att öppna den.
-1. Ange värdnamnet och kontextsökvägen för InDesign-servern och klicka på **[!UICONTROL Spara]**.
+1. Locate the configuration **[!UICONTROL Day CQ Link Externalizer]**, and click the **[!UICONTROL Edit]** icon to open it.
+1. Ange värdnamnet och kontextsökvägen för InDesign-servern och klicka på **[!UICONTROL Save]**.
 
    ![chlimage_1-290](assets/chlimage_1-290.png)
 
@@ -199,7 +203,7 @@ Först måste du bestämma hur många parallella jobb ( `x`) som InDesign Server
 
 Så här konfigurerar du antalet parallella IDS-jobb:
 
-1. Öppna fliken **[!UICONTROL Konfigurationer]** i Felix Console; till exempel:
+1. Öppna fliken **[!UICONTROL Configurations]** i Felix Console; till exempel:
 
    `http://localhost:4502/system/console/configMgr`
 
@@ -209,8 +213,8 @@ Så här konfigurerar du antalet parallella IDS-jobb:
 
 1. Uppsättning:
 
-   * **[!UICONTROL Typ]** - `Parallel`
-   * **[!UICONTROL Maximalt antal parallella jobb]** - `<*x*>` (enligt beräkning ovan)
+   * **[!UICONTROL Type]** - `Parallel`
+   * **[!UICONTROL Maximum Parallel Jobs]** - `<*x*>` (enligt beräkning ovan)
 
 1. Spara dessa ändringar.
 1. Om du vill aktivera stöd för flera sessioner för Adobe CS6 och senare markerar du kryssrutan under `enable.multisession.name` `com.day.cq.dam.ids.impl.IDSJobProcessor.name configuration`.
@@ -220,27 +224,30 @@ Så här konfigurerar du antalet parallella IDS-jobb:
 
    >[!NOTE]
    >
-   >Du kan välja att aktivera svartlistning av IDS-arbetare när du arbetar med en grupp arbetare.
+   >När du arbetar med en pool med arbetare kan du aktivera en lista med blockerade IDS-arbetare.
    >
    >Om du vill göra det aktiverar du kryssrutan&quot;enable.retry.name&quot; under `com.day.cq.dam.ids.impl.IDSJobProcessor.name` konfigurationen, som aktiverar omprövningar av IDS-jobb.
    >
-   >Under `com.day.cq.dam.ids.impl.IDSPoolImpl.name` konfigurationen anger du också ett positivt värde för parametern max.errors.to.blacklist som avgör antalet jobbomprövningar innan du tar bort ett ID från jobbhanterarlistan
+   >Under `com.day.cq.dam.ids.impl.IDSPoolImpl.name` konfigurationen anger du också ett positivt värde för `max.errors.to.blacklist` parametern som avgör antalet jobbomprövningar innan du tar bort ett ID från jobbhanterarlistan
    >
-   >Som standard valideras IDS-arbetaren efter den konfigurerbara tiden (retry.interval.to.whitelist.name) i minuter. Om arbetaren hittas online tas den bort från svartlistan
+   >Som standard valideras IDS-arbetaren efter den konfigurerbara (`retry.interval.to.whitelist.name`) tiden i minuter. Om arbetaren hittas online tas den bort från listan Blockerade.
+
+<!-- TBD: Make updates to configurations for allow and block list after product updates are done.
+-->
 
 ## Aktivera stöd för Adobe InDesign Server 10.0 eller senare {#enabling-support-for-indesign-server-or-higher}
 
 För InDesign Server 10.0 eller senare utför du följande steg för att aktivera stöd för flera sessioner.
 
-1. Öppna Configuration Manager från din AEM Resurser-instans `https://[AEM_server]:[port]/system/console/configMgr`.
+1. Öppna Configuration Manager från din [!DNL Assets] instans `https://[aem_server]:[port]/system/console/configMgr`.
 1. Redigera konfigurationen `com.day.cq.dam.ids.impl.IDSJobProcessor.name`.
-1. Välj **[!UICONTROL alternativet ids.cc.enable]** och klicka på **[!UICONTROL Spara]**.
+1. Select **[!UICONTROL ids.cc.enable]** option, and click **[!UICONTROL Save]**.
 
 >[!NOTE]
 >
->För InDesign Server-integrering med AEM Assets kan du använda en processor med flera kärnor eftersom den sessionsstödfunktion som krävs för integreringen inte stöds på enskilda kärnsystem.
+>För [!DNL InDesign Server] integrering med [!DNL Assets]måste du använda en flerkärnig processor eftersom den sessionsstödfunktion som krävs för integreringen inte stöds av enskilda kärnsystem.
 
-## Konfigurera AEM-autentiseringsuppgifter {#configure-aem-credentials}
+## Konfigurera Experience Manager-autentiseringsuppgifter {#configure-aem-credentials}
 
 Du kan ändra administratörens standardautentiseringsuppgifter (användarnamn och lösenord) för att komma åt InDesign-servern från din AEM-instans utan att avbryta integreringen med Adobe InDesign-servern.
 
