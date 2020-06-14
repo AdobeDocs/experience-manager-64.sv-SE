@@ -1,12 +1,12 @@
 ---
 title: Metodtips för att avlasta resurser
 description: Rekommenderade användningsexempel och bästa praxis för att avlasta arbetsflöden för tillgångsintag och replikering i AEM Assets.
-uuid: 7d08fda2-1c59-44ad-bd35-83d199642e01
 contentOwner: AG
-products: SG_EXPERIENCEMANAGER/6.4/ASSETS
-discoiquuid: cdb175f4-a7c6-4d9f-994a-5fc8eca51f03
 translation-type: tm+mt
-source-git-commit: c0d2172c8797a187e316e45e3f3bea0c6c7a15eb
+source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
+workflow-type: tm+mt
+source-wordcount: '1818'
+ht-degree: 0%
 
 ---
 
@@ -33,11 +33,11 @@ I följande diagram visas huvudkomponenterna i resursavlastningsprocessen:
 
 ### Arbetsflöde för DAM Update Asset Offloading {#dam-update-asset-offloading-workflow}
 
-Arbetsflödet för DAM Update Asset Offloading körs på huvudsidan (författaren) där användaren överför resurserna. Det här arbetsflödet utlöses av ett vanligt startprogram för arbetsflöden. I stället för att bearbeta den överförda resursen skapar det här avlastningsarbetsflödet ett nytt jobb med ämnet *com/adobe/granite/workflow/offloading*. Arbetsflödet för avlastning lägger till namnet på målarbetsflödet - arbetsflödet för DAM-uppdatering av resurs i det här fallet, och resursens sökväg till jobbets nyttolast. När avlastningsjobbet har skapats väntar avlastningsarbetsflödet på huvudservern tills avlastningsjobbet har körts.
+Arbetsflödet för DAM Update Asset Offloading körs på den primära (författarservern) på vilken användaren överför resurserna. Det här arbetsflödet utlöses av ett vanligt startprogram för arbetsflöden. I stället för att bearbeta den överförda resursen skapar det här avlastningsarbetsflödet ett nytt jobb med ämnet *com/adobe/granite/workflow/offloading*. Arbetsflödet för avlastning lägger till namnet på målarbetsflödet - arbetsflödet för DAM-uppdatering av resurs i det här fallet, och resursens sökväg till jobbets nyttolast. När avlastningsjobbet har skapats väntar avlastningsarbetsflödet på den primära instansen tills avlastningsjobbet har körts.
 
 ### Jobbhanterare {#job-manager}
 
-Jobbhanteraren distribuerar nya jobb till arbetarinstanser. När du utformar distributionsmekanismen är det viktigt att ta hänsyn till ämnesaktivering. Jobb kan bara tilldelas till instanser där jobbets ämne är aktiverat. Inaktivera ämnet *com/adobe/granite/workflow/offloading* på huvudsidan och aktivera det på arbetaren för att se till att jobbet tilldelas arbetaren.
+Jobbhanteraren distribuerar nya jobb till arbetarinstanser. När du utformar distributionsmekanismen är det viktigt att ta hänsyn till ämnesaktivering. Jobb kan bara tilldelas till instanser där jobbets ämne är aktiverat. Inaktivera ämnet `com/adobe/granite/workflow/offloading` på den primära arbetsytan och aktivera det på arbetaren för att säkerställa att jobbet har tilldelats arbetaren.
 
 ### AEM-avlastning {#aem-offloading}
 
@@ -104,16 +104,19 @@ Adobe rekommenderar att du inaktiverar automatisk agenthantering eftersom den in
 
 ### Använda framåtreplikering {#using-forward-replication}
 
-Som standard används omvänd replikering för att hämta avlastade resurser från arbetaren till huvudservern vid avlastning av transport. Omvända replikeringsagenter stöder inte binär replikering. Du bör konfigurera avlastning så att den använder framåtriktad replikering för att överföra de avlastade resurserna från arbetare till huvudserver.
+Som standard används omvänd replikering för att hämta avlastade resurser från arbetaren till den primära resursen för att avlasta transporten. Omvända replikeringsagenter stöder inte binär replikering. Du bör konfigurera avlastning så att den använder framåtriktad replikering för att överföra avlastade resurser från arbetare till primär.
 
-1. Om du migrerar från standardkonfigurationen med omvänd replikering kan du inaktivera eller ta bort alla agenter med namnen &quot; `offloading_outbox`&quot; och &quot; `offloading_reverse_*`&quot; på huvuddatorn och arbetaren, där &amp;stämpeln;ast; representerar Sling-ID för målinstansen.
-1. Skapa en ny framåtriktad replikeringsagent som pekar på huvudservern för varje arbetare. Proceduren är densamma som att skapa framåtagenter från master till arbetare. Se [Skapa replikeringsagenter för avlastning](../sites-deploying/offloading.md#creating-replication-agents-for-offloading) för instruktioner om hur du ställer in avlastning av replikeringsagenter.
+1. Om du migrerar från standardkonfigurationen med omvänd replikering kan du inaktivera eller ta bort alla agenter med namnen &quot; `offloading_outbox`&quot; och &quot; `offloading_reverse_*`&quot; på primär nivå och arbetare, där &amp;stämpel;ast; representerar Sling-ID för målinstansen.
+1. Skapa en ny framåtriktad replikeringsagent som pekar på den primära för varje arbetare. Proceduren är densamma som att skapa framåtagenter från primär till arbetare. Se [Skapa replikeringsagenter för avlastning](../sites-deploying/offloading.md#creating-replication-agents-for-offloading) för instruktioner om hur du ställer in avlastning av replikeringsagenter.
 1. Öppna konfiguration för `OffloadingDefaultTransporter` (`http://localhost:4502/system/console/configMgr/com.adobe.granite.offloading.impl.transporter.OffloadingDefaultTransporter`).
 1. Ändra värdet för egenskapen `default.transport.agent-to-master.prefix` från `offloading_reverse` till `offloading`.
 
-### Använda delad datalager och binär replikering mellan författare och arbetare {#using-shared-datastore-and-binary-less-replication-between-author-and-workers}
+<!-- TBD: Make updates to the configuration for allow and block list after product updates are done.
+-->
 
-Vi rekommenderar att du använder binär replikering utan extra kostnad för att minska transportkostnaderna för att avlasta resurser. Mer information om hur du konfigurerar binär replikering för ett delat datalager finns i [Konfigurera nodlager och datalager i AEM](/help/sites-deploying/data-store-config.md). Proceduren skiljer sig inte åt när det gäller avlastning av resurser, förutom att den omfattar andra replikeringsagenter. Eftersom binärfri replikering endast fungerar med framåtriktade replikeringsagenter bör du även använda framåtreplikering för alla avlastningsagenter.
+### Använda delad datalager och binär replikering mellan författare och arbetare  {#using-shared-datastore-and-binary-less-replication-between-author-and-workers}
+
+Du bör använda binär replikering utan att använda binärfiler för att minska transportkostnaderna vid avlastning av resurser. Mer information om hur du konfigurerar binär replikering för ett delat datalager finns i [Konfigurera nodlager och datalager i AEM](/help/sites-deploying/data-store-config.md). Proceduren skiljer sig inte åt när det gäller avlastning av resurser, förutom att den omfattar andra replikeringsagenter. Eftersom binärfri replikering endast fungerar med framåtriktade replikeringsagenter bör du även använda framåtreplikering för alla avlastningsagenter.
 
 ### Inaktivera transportpaket {#turning-off-transport-packages}
 
@@ -139,7 +142,7 @@ Om du vill inaktivera transport av arbetsflödesmodellen ändrar du arbetsflöde
 
 ### Optimera avsökningsintervallet {#optimizing-the-polling-interval}
 
-Avlastning av arbetsflöden implementeras med ett externt arbetsflöde på huvudsidan, som avsöker för slutförande av arbetsflödet som avlästs på arbetaren. Standardavsökningsintervallet för de externa arbetsflödesprocesserna är fem sekunder. Adobe rekommenderar att du ökar avsökningsintervallet för avlastningssteget Resurser till minst 15 sekunder för att minska avlastningskostnaderna på huvudservern.
+Avlastning av arbetsflöde implementeras med ett externt arbetsflöde på den primära, som avsöker för slutförande av arbetsflödet som avlästs på arbetaren. Standardavsökningsintervallet för de externa arbetsflödesprocesserna är fem sekunder. Adobe rekommenderar att du ökar avsökningsintervallet för avlastningssteget Resurser till minst 15 sekunder för att minska avlastningskostnaderna för det primära.
 
 1. Öppna arbetsflödeskonsolen från [http://localhost:4502/libs/cq/workflow/content/console.html](http://localhost:4502/libs/cq/workflow/content/console.html).
 
