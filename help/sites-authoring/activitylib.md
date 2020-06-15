@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 358d32bc-be5f-4500-9637-525d35cdbeff
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: adbbccd09fd76418d020b9fd2b6b9c4f585b0924
+workflow-type: tm+mt
+source-wordcount: '2023'
+ht-degree: 13%
 
 ---
 
@@ -43,13 +46,13 @@ Aktiviteter visas med en etikett som beskriver vilken typ av aktivitet som defin
 >
 >Vilka typer av aktiviteter som är tillgängliga bestäms av följande:
 >
->* Om alternativet **xt_only** är aktiverat på Adobe Target-klienten (klientkod) som används på AEM-sidan för att ansluta till Adobe Target, kan du **bara** skapa XT-aktiviteter i AEM.
+>* If the **xt_only** option is enabled on the Adobe Target tenant (clientcode) used on the AEM side to connect to Adobe Target, then you can create **only** XT activities in AEM.
    >
    >
-* Om alternativen **xt_only** **inte** är aktiverade på Adobe Target-klienten (klientkod) kan du skapa **både** XT- och A/B-aktiviteter i AEM.
+* If the **xt_only** options is **not** enabled on the Adobe Target tenant (clientcode), then you can create **both** XT and A/B activities in AEM.
 >
 >
-**** Ytterligare information: Alternativen **xt_only** är en inställning som används för en viss målklient (klientkod) och kan bara ändras direkt i Adobe Target. Du kan inte aktivera eller inaktivera det här alternativet i AEM.
+**Ytterligare information:** **Alternativen xt_only** är en inställning som används för en viss målklient (clientcode) och kan bara ändras direkt i Adobe Target. Du kan inte aktivera eller inaktivera det här alternativet i AEM.
 
 >[!CAUTION]
 >
@@ -63,7 +66,7 @@ Skapa ett varumärke som ni vill hantera marknadsföringsaktiviteter för.
 
 När du skapar ett varumärke med hjälp av aktivitetskonsolen visas det också i [offertkonsolen](/help/sites-authoring/offerlib.md) , där du kan skapa erbjudanden för upplevelserna av dina aktiviteter.
 
-1. Klicka eller tryck på **Personalisering** i navigeringskonsolen. Klicka på eller tryck på **Aktiviteter**.
+1. In the Navigation console, click or tap **Personalization**. Klicka på eller tryck på **Aktiviteter**.
 
    ![screen_shot_2018-03-21at151821](assets/screen_shot_2018-03-21at151821.png)
 
@@ -76,27 +79,27 @@ När du skapar ett varumärke med hjälp av aktivitetskonsolen visas det också 
 
 Lägg till en aktivitet eller redigera en befintlig aktivitet för att fokusera era marknadsföringssatsningar på specifika målgrupper. När du skapar/redigerar en aktivitet anger du följande information:
 
-* **** Namn: Namnet på aktiviteten.
-* **** Målmotor: Antingen [AEM](/help/sites-authoring/personalization.md#aem) eller [Adobe Target](/help/sites-authoring/personalization.md#adobe-target) som motor för riktat innehåll.
+* **Namn:** Namnet på aktiviteten.
+* **Målinriktningsmotor:** Antingen [AEM](/help/sites-authoring/personalization.md#aem) eller [Adobe Target](/help/sites-authoring/personalization.md#adobe-target) som motor för målinriktat innehåll.
 
-* **** Välj en målkonfiguration: (Endast Adobe Target) Den molnkonfiguration som den här aktiviteten ska använda för att ansluta till Adobe Target. Det här alternativet visas bara när Adobe Target har valts för målmotor.
-* **** Typ av aktivitet: Aktivitetstypen - A/B-test eller målinriktning mot upplevelsen
-* **** Mål: (Valfritt) En beskrivning av aktiviteten.
-* **** Upplevelser: Mappningar mellan målgruppsnamn och de marknadsföringssegment som ni riktar in er på.
-* **** Trafikprocent: Om A/B-test är valt kan du ändra hur mycket trafik (i procent) som går till varje upplevelse.
-* **** Varaktighet: Tidsperioden då aktiviteten används.
-* **** Prioritet: Aktivitetens relativa prioritet. När aktiviteter tillhandahåller innehåll för samma användarsegment har aktiviteten med högre prioritet företräde.
-* **** Målmått: Om du väljer Adobe Target som målmotor kan du lägga till framgångsmått till aktiviteten. Ett framgångsmått krävs.
+* **Välj en målkonfiguration:** (Endast Adobe Target) Den molnkonfiguration som den här aktiviteten ska använda för att ansluta till Adobe Target. Det här alternativet visas bara när Adobe Target har valts som målinriktningsmotor.
+* **Typ av aktivitet:** Aktivitetstypen - A/B-test eller målinriktning mot upplevelsen
+* **Mål:** (Valfritt) En beskrivning av aktiviteten.
+* **Upplevelser:** Mappningar mellan målgruppsnamn och de marknadssegment som ni riktar in er på.
+* **Trafikprocent:** Om A/B-test är valt kan du ändra hur mycket trafik (i procent) som går till varje upplevelse.
+* **Varaktighet:** Tidsperioden då aktiviteten används.
+* **Prioritet:** Aktivitetens relativa prioritet. När aktiviteter tillhandahåller innehåll för samma användarsegment har aktiviteten med högre prioritet företräde.
+* **Målmått:** Om du väljer Adobe Target som målinriktningsmotor kan du lägga till framgångsmått för aktiviteten. Ett framgångsmått krävs.
 
 >[!NOTE]
 >
->Nya Adobe Target-aktiviteter måste ***skapas*** i den riktade innehållsredigeraren, inte i **aktivitetskonsolen** , eftersom synkroniseringen med Adobe Target misslyckas.
+>Nya Adobe Target-aktiviteter måste ***skapas*** i den innehållsredigerare som angetts som mål, inte i **aktivitetskonsolen**, eftersom synkroniseringen med Adobe Target misslyckas annars.
 >
 >Du kan dock redigera befintliga Adobe Target-aktiviteter i konsolen.
 
 Så här lägger du till en aktivitet:
 
-1. Klicka på eller tryck på det varumärke som du skapar aktiviteten för och klicka eller tryck sedan på **Skapa** och sedan **Skapa aktivitet**. Om du redigerar markerar du aktiviteten på skärmen Huvudområde och klickar eller trycker på **Redigera aktivitet**.
+1. Klicka eller tryck på det varumärke som du skapar aktiviteten för och klicka eller tryck sedan på **Skapa** och slutligen på **Skapa aktivitet**. Om du redigerar markerar du aktiviteten på skärmen Masterområde och klickar eller trycker på **Redigera aktivitet**.
 1. Ange följande information och klicka eller tryck sedan på **Nästa**:
 
    * Ett namn för aktiviteten.
@@ -105,7 +108,7 @@ Så här lägger du till en aktivitet:
    * (Valfritt) Syftet med eller en beskrivning av aktiviteten.
    * Välj aktivitetstyp.
 
-1. Lägg till en eller flera upplevelser till aktiviteten. Klicka eller tryck på **Add Experience**.
+1. Lägg till en eller flera upplevelser till aktiviteten. Klicka eller tryck på **Lägg till upplevelse**.
 1. Om ni använder AEM-målinriktning eller Adobe Target-upplevelser som mål:
 
    1. Klicka eller tryck på **Välj publik **och välj det segment som upplevelsen ska rikta in sig på.
@@ -121,8 +124,8 @@ Så här lägger du till en aktivitet:
 
 1. Om du vill ange när aktiviteten ska starta använder du **listrutan Start** och väljer något av följande värden:
 
-   * **** Vid aktivering: Aktiviteten startar när sidan som innehåller målinnehållet aktiveras.
-   * **** Angivet datum och tid: En viss tid. När du väljer det här alternativet klickar eller trycker du på kalenderikonen, väljer ett datum och anger vilken tid aktiviteten ska starta.
+   * **Vid aktivering:** Aktiviteten startar när sidan som innehåller målinnehållet aktiveras.
+   * **Angivet datum och tid:** En viss tid. När du väljer det här alternativet klickar eller trycker du på kalenderikonen, väljer ett datum och anger vilken tid aktiviteten ska starta.
 
 1. Om du vill ange när aktiviteten slutar använder du den nedrullningsbara menyn Slut och väljer något av följande värden:
 
@@ -143,7 +146,7 @@ Du måste publicera aktiviteter för att göra dem tillgängliga. Omvänt kanske
 
 >[!NOTE]
 >
->När en aktivitet avpubliceras
+>När du avpublicerar en aktivitet ändras inte aktivitetens status om du inte uppdaterar sidan.
 
 Så här publicerar eller avpublicerar du aktiviteter:
 
@@ -169,7 +172,7 @@ Så här visar du aktivitetsprestanda och konverterar vinnande upplevelser:
 
 1. I **Personalisering** klickar eller trycker du på **Aktiviteter** för att navigera till **aktivitetskonsolen** .
 1. Klicka på eller peka på det varumärke som du vill se aktiviteter för.
-1. Markera aktiviteten och klicka eller tryck på **Visa egenskaper **och klicka på fliken **Rapporter** och välj den aktivitet som du vill visa prestanda för/konvertera vinnande upplevelser för. Prestandadata visas.
+1. Select the activity and click or tap **View Properties **and click the **Reports** tab and select the activity that you want to view performance for/convert winning experiences for. Resultatdata visas.
 
    ![chlimage_1-239](assets/chlimage_1-239.png)
 
