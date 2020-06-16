@@ -2,7 +2,7 @@
 title: Dekoration-tagg
 description: När en komponent på en webbsida återges kan ett HTML-element genereras och den återgivna komponenten kapslas in i sig själv. För utvecklare erbjuder AEM tydlig och enkel logik som styr de dekorationstaggar som omsluter de inkluderade komponenterna.
 translation-type: tm+mt
-source-git-commit: 440a514fa1b0b5d685fe7717caf40400e5288e02
+source-git-commit: 7b5cae8aea49b3fd4200bd902d07e1c0fe1090ce
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 0%
@@ -10,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# Dekoration-tagg{#decoration-tag}
+# Dekoration-tagg {#decoration-tag}
 
 När en komponent på en webbsida återges kan ett HTML-element genereras och den återgivna komponenten kapslas in i sig själv. Detta har främst två syften:
 
@@ -38,9 +38,7 @@ Här följer några allmänna rekommendationer för när wrapper-elementet ska t
 Följande egenskaper och noder kan tillämpas på komponenterna för att styra beteendet för deras dekorationstagg:
 
 * **`cq:noDecoration {boolean}`:**Den här egenskapen kan läggas till i en komponent och ett true-värde tvingar AEM att inte generera några wrapper-element över komponenten.
-
 * **`cq:htmlTag`node :**Den här noden kan läggas till under en komponent och kan ha följande egenskaper:
-
    * **`cq:tagName {String}`:**Detta kan användas för att ange en anpassad HTML-tagg som ska användas för att kapsla in komponenterna i stället för DIV-standardelementet.
    * **`class {String}`:**Detta kan användas för att ange CSS-klassnamn som ska läggas till i wrapper.
    * Andra egenskapsnamn läggs till som HTML-attribut med samma String-värde som anges.
