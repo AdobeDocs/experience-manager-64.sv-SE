@@ -1,8 +1,8 @@
 ---
 title: MSRP - lagringsresursprovider för MongoDB
 seo-title: MSRP - lagringsresursprovider för MongoDB
-description: Konfigurera AEM Communities så att en relationsdatabas används som gemensam butik
-seo-description: Konfigurera AEM Communities så att en relationsdatabas används som gemensam butik
+description: Konfigurera AEM Communities för att använda en relationsdatabas som gemensam lagringsplats
+seo-description: Konfigurera AEM Communities för att använda en relationsdatabas som gemensam lagringsplats
 uuid: 9fc06d4f-a60f-4ce3-8586-bcc836aa7de6
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 translation-type: tm+mt
-source-git-commit: f78f83ef3b9373bcbee3e5179a9bbec4d9462255
+source-git-commit: 09f8adac1d5fc4edeca03d6955faddf5ea045405
+workflow-type: tm+mt
+source-wordcount: '1167'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: f78f83ef3b9373bcbee3e5179a9bbec4d9462255
 
 ## Om MSRP {#about-msrp}
 
-När AEM Communities har konfigurerats att använda MSRP som gemensam lagringsplats är användargenererat innehåll (UGC) tillgängligt från alla författare och publiceringsinstanser utan behov av synkronisering eller replikering.
+När AEM Communities har konfigurerats att använda MSRP som gemensam lagringsplats är användargenererat innehåll (UGC) tillgängligt från alla författare- och publiceringsinstanser utan behov av synkronisering eller replikering.
 
 Se även [egenskaper för SRP-alternativ](working-with-srp.md#characteristics-of-srp-options) och [rekommenderade topologier](topologies.md).
 
@@ -52,28 +55,28 @@ Med konsolen [för](srp-config.md) lagringskonfiguration kan du välja standardl
 
 På författaren, för att komma åt lagringskonsolen:
 
-* Från global navigering: **[!UICONTROL Verktyg > Communities > Storage Configuration]**
+* Från global navigering: **[!UICONTROL Tools > Communities > Storage Configuration]**
 
 ![chlimage_1-28](assets/chlimage_1-28.png)
 
-* Välj **[!UICONTROL lagringsresursprovider för MongoDB (MSRP)]**
-* **[!UICONTROL mongoDB-konfiguration]**
+* Välj **[!UICONTROL MongoDB Storage Resource Provider (MSRP)]**
+* **[!UICONTROL mongoDB Configuration]**
 
    * **[!UICONTROL mongoDB URI]**
 
       *standard*: mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
 
-   * **[!UICONTROL mongoDB-databas]**
+   * **[!UICONTROL mongoDB Database]**
 
       *standard*: communities
 
-   * **[!UICONTROL mongoDB UGC-samling]**
+   * **[!UICONTROL mongoDB UGC Collection]**
 
-      *standard*:innehåll
+      *standard*: innehåll
 
    * **[!UICONTROL mongoDB Attachment Collection]**
 
-      *standard*:bilagor
+      *standard*: bilagor
 
 * **[!UICONTROL SolrConfiguration]**
 
@@ -81,12 +84,14 @@ På författaren, för att komma åt lagringskonsolen:
 
       När du kör i [SolrCloud-läge](solr.md#solrcloud-mode) med en extern ZooKeeper anger du det här värdet till `HOST:PORT` för ZooKeeper, till exempel *my.server.com:2181* För en ZooKeeper Ensemble, anger du kommaavgränsade `HOST:PORT` värden, till exempel *host1:2181,host2:211118181 Lämna* tomt om Solr körs i fristående läge med den interna ZooKeeper.\
       *Standard*: *&lt;blank>*
-   * **[!UICONTROL Solr-URL]**Den URL som används för att kommunicera med Solr i fristående läge.
+   * **[!UICONTROL Solr URL]**
+Den URL som används för att kommunicera med Solr i fristående läge.
 Lämna tomt om du kör i SolrCloud-läge.\
       *Standard*: https://127.0.0.1:8983/solr/
-   * **[!UICONTROL Solr Collection]** Namnet på Solr-samlingen.\
+   * **[!UICONTROL Solr Collection]**
+Solr-samlingens namn.\
       *Standard*: collection1
-* Välj **[!UICONTROL Skicka]**
+* Välj **[!UICONTROL Submit]**
 
 >[!NOTE]
 >
@@ -94,13 +99,13 @@ Lämna tomt om du kör i SolrCloud-läge.\
 
 ### MongoDB-replikuppsättning {#mongodb-replica-set}
 
-För produktionsmiljön rekommenderar vi starkt att du skapar en replikuppsättning, ett kluster av MongoDB-servrar som implementerar master-slave-replikering och automatiserad failover.
+För produktionsmiljön rekommenderar vi starkt att du skapar en replikuppsättning, ett kluster av MongoDB-servrar som implementerar primär-sekundär replikering och automatiserad failover.
 
 Mer information om replikuppsättningar finns i MongoDB:s [replikeringsdokumentation](https://docs.mongodb.org/manual/replication/) .
 
 Om du vill arbeta med replikuppsättningar och lära dig hur du definierar anslutningar mellan program och MongoDB-instanser går du till dokumentationen för MongoDB:s URI-format för [anslutningssträng](https://docs.mongodb.org/manual/reference/connection-string/) .
 
-#### Exempel-URL för anslutning till en replikuppsättning {#example-url-for-connecting-to-a-replica-set}
+#### Exempel-URL för anslutning till en replikuppsättning  {#example-url-for-connecting-to-a-replica-set}
 
 ```shell
 # Example url for:
@@ -137,11 +142,11 @@ MSRP måste identifieras som det gemensamma arkivet på alla författar- och pub
 Så här gör du den identiska konfigurationen tillgänglig i publiceringsmiljön:
 
 * On author:
-   * Navigera från huvudmenyn till **[!UICONTROL Verktyg > Åtgärder > Replikering]**
-   * Välj **[!UICONTROL Aktivera träd]**
-   * **[!UICONTROL Startsökväg]**:
+   * Navigera från huvudmenyn till **[!UICONTROL Tools > Operations > Replication]**
+   * Välj **[!UICONTROL Activate Tree]**
+   * **[!UICONTROL Start Path]**:
       * Bläddra till `/etc/socialconfig/srpc/`
-   * Välj **[!UICONTROL Aktivera]**
+   * Välj **[!UICONTROL Activate]**
 
 ## Hantera användardata {#managing-user-data}
 
@@ -212,7 +217,7 @@ Information om hur du konfigurerar MSRP för en demonstration- eller utvecklings
 
 Kontrollera att MSRP har konfigurerats som standardprovider genom att kontrollera konfigurationen av lagringsalternativet. Som standard är lagringsresursprovidern JSRP.
 
-Gå till konsolen [för](srp-config.md) lagringskonfiguration eller kontrollera AEM-databasen på alla författare och publicerar AEM-instanser:
+Gå till konsolen [för](srp-config.md) lagringskonfiguration eller kontrollera AEM-databasen på alla författare och publicera AEM-instanser:
 
 * I JCR, if [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
@@ -221,11 +226,11 @@ Gå till konsolen [för](srp-config.md) lagringskonfiguration eller kontrollera 
 
 ### UGC försvinner efter uppgradering {#ugc-disappears-after-upgrade}
 
-Om du uppgraderar från en befintlig AEM Communities 6.0-webbplats måste eventuell befintlig UGC konverteras så att den överensstämmer med den struktur som krävs för [SRP](srp.md) API efter uppgradering till AEM Communities 6.3.
+Om du uppgraderar från en befintlig AEM Communities 6.0-plats måste eventuell befintlig UGC konverteras så att den överensstämmer med den struktur som krävs för [SRP](srp.md) API efter uppgradering till AEM Communities 6.3.
 
 Det finns ett verktyg med öppen källkod tillgängligt på GitHub för detta ändamål:
 
-* [AEM Communities UGC Migration Tool](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
+* [AEM Communities UGC-migreringsverktyg](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
 
 Migreringsverktyget kan anpassas för att exportera UGC från tidigare versioner av AEM-sociala communities för import till AEM Communities 6.1 eller senare.
 
