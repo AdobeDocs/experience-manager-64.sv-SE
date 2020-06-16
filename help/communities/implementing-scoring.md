@@ -1,8 +1,8 @@
 ---
 title: Communities Scoring and Badges
 seo-title: Communities Scoring and Badges
-description: Med AEM Communities-poäng och -märken kan ni identifiera och belöna communitymedlemmar
-seo-description: Med AEM Communities-poäng och -märken kan ni identifiera och belöna communitymedlemmar
+description: Med AEM Communities poäng och emblem kan ni identifiera och belöna communitymedlemmar
+seo-description: Med AEM Communities poäng och emblem kan ni identifiera och belöna communitymedlemmar
 uuid: ca6f22d6-f25d-4f26-b589-81d1f2c830f9
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: b19b3c24-82a0-468c-a077-9f3edb96afc9
 tagskeywords: scoring, badging, badges, gamification
 translation-type: tm+mt
-source-git-commit: ddf92a270835259998aa28f5960abcf55f56d1fc
+source-git-commit: 09f8adac1d5fc4edeca03d6955faddf5ea045405
+workflow-type: tm+mt
+source-wordcount: '2877'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: ddf92a270835259998aa28f5960abcf55f56d1fc
 
 ## Översikt {#overview}
 
-Funktionen AEM Communities-poäng och -badges gör det möjligt att identifiera och belöna communitymedlemmar.
+Med funktionen för poängsättning och märkning av AEM Communities kan man identifiera och belöna communitymedlemmar.
 
 De viktigaste aspekterna på poängsättning och märkning är:
 
@@ -49,7 +52,7 @@ UGC har olika märken för att avgöra om de har tilldelats eller förvärvats e
 
 ### Användargränssnitt för hantering av emblem {#badge-management-ui}
 
-Konsolen Communities [Badges](badges.md) ger möjlighet att lägga till egna emblem som kan visas för en medlem när de har förtjänats (tilldelats) eller när de har en specifik roll i communityn (tilldelade).
+Konsolen Communities [Badges](badges.md) ger möjlighet att lägga till egna emblem som kan visas för en medlem när de har en viss roll i communityn (tilldelade).
 
 ### Tilldelade märken {#assigned-badges}
 
@@ -126,7 +129,7 @@ Se avsnittet [Snabbtest](#quick-test) för att aktivera poängsättning för en 
 
 Om du vill aktivera poängsättning och märken lägger du till egenskaperna `scoringRules` och `badgingRules`till en nod i platsens innehållsträd.
 
-Om webbplatsen redan är publicerad, efter att ha tillämpat alla regler och aktiverat komponenter, publicerar du om den.
+Om webbplatsen redan är publicerad, efter att ha tillämpat alla regler och aktiverat komponenter, publicerar du om webbplatsen.
 
 Reglerna som gäller för en komponent som har aktiverats för badging är reglerna för den aktuella noden eller dess överordnade nod.
 
@@ -161,7 +164,7 @@ Poängregler är grunden för poängsättning för att tilldela märken.
 
 Enkelt uttryckt är varje resultatregel en lista med en eller flera underregler. Poängregler tillämpas på communitywebbplatsinnehållet för att identifiera reglerna som ska gälla när emblem är aktiverade.
 
-Poängregler ärvs men är inte additiva. Exempel:
+Poängregler ärvs men är inte additiva. Till exempel:
 
 * Om sidan 2 innehåller bedömningsregel 2 och dess överordnade sida 1 innehåller bedömningsregel 1
 * En åtgärd för en sidkomponent2 anropar både regel1 och regel2
@@ -200,7 +203,7 @@ Som standard tilldelas poäng till den medlem som utför en åtgärd, såvida in
 
 Varje underregel kan ingå i en eller flera poängregler.
 
-Namnet på underregeln följer vanligtvis mönstret för att använda ett *ämne, ett objekt* och ett *verb*. Exempel:
+Namnet på underregeln följer vanligtvis mönstret för att använda ett *ämne, ett objekt* och ett *verb*. Till exempel:
 
 * medlem-comment-create
 * medlem-receive-voice
@@ -322,7 +325,7 @@ Regler för märkning länkar till poängregler genom att ange:
 
 Badging-regler är noder av typen `cq:Page` med egenskaper på dess `jcr:content`nod som korrelerar poängregler till poäng och emblem.
 
-Reglerna för märkning består av en obligatorisk `thresholds`egenskap som är en ordnad lista med bakgrundsmusik som är mappade till emblem. Poängen måste ordnas i högre värde. Exempel:
+Reglerna för märkning består av en obligatorisk `thresholds`egenskap som är en ordnad lista med bakgrundsmusik som är mappade till emblem. Poängen måste ordnas i högre värde. Till exempel:
 
 * `1|/etc/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
@@ -361,7 +364,7 @@ Egenskapen `scoringRules`för en badging-regel begränsar helt enkelt vilka poä
      <li>number = score</li> 
      <li>| = den lodräta linjen char (U+007C)</li> 
      <li>sökväg = fullständig sökväg till badge-bildresurs</li> 
-    </ul> Strängarna måste ordnas så att siffrorna ökar i värde och inget mellanrum ska visas mellan talet och sökvägen.<br /><br /> Exempelpost: <code>80|/etc/community/badging/images/gold-badge/jcr:content/gold.png</code></td> 
+    </ul> Strängarna måste ordnas så att siffrorna ökar i värde och ingen tom mellanslag visas mellan talet och banan.<br /> Exempelpost:<br /> <code>80|/etc/community/badging/images/gold-badge/jcr:content/gold.png</code></td> 
   </tr> 
   <tr> 
    <td>badgingType</td> 
@@ -407,17 +410,17 @@ cURL -i -X POST -H *header* -u *signin * -F *operation * -F *badge * *member-pro
 anpassad rubrik som ska skickas till servern (obligatoriskt)
 
 *signin* = administrator-id:password\
- till exempel: admin:admin
+till exempel: admin:admin
 
 *operation* = &quot;:operation=social:assignBadge&quot; OR &quot;:operation=social:deleteBadge&quot;
 
 *badge* = &quot;badgeContentPath=*badge-image-file*&quot;
 
 *badge-image-file* = platsen för badge-bildfilen i databasen\
- till exempel: /etc/community/badging/images/moderator/jcr:content/moderator.png
+till exempel: /etc/community/badging/images/moderator/jcr:content/moderator.png
 
 *member-profile-url* = slutpunkten för medlemmens profil vid publicering\
- till exempel: https://&lt;server>:&lt;port>/home/users/community/riley/profile.social.json
+till exempel: https://&lt;server>:&lt;port>/home/users/community/riley/profile.social.json
 
 >[!NOTE]
 >
@@ -470,7 +473,7 @@ För de communitykomponenter som levereras beskrivs `verbs`definitionen för var
 | POST | medlem skapar en kalenderhändelse |
 | LÄGG TILL | kommentarer från medlemmar i en kalenderhändelse |
 | UPPDATERA | medlemmens kalenderhändelse eller -kommentar har redigerats |
-| TA BORT | medlemmens kalenderhändelse eller -kommentar tas bort |
+| DELETE | medlemmens kalenderhändelse eller -kommentar tas bort |
 
 **[Comments Component](comments.md)**SocialEvent`topic`= com/adobe/cq/social/comment
 
@@ -479,7 +482,7 @@ För de communitykomponenter som levereras beskrivs `verbs`definitionen för var
 | POST | medlem skapar en kommentar |
 | LÄGG TILL | medlemssvar på kommentarer |
 | UPPDATERA | Medlemmens kommentar har redigerats |
-| TA BORT | medlemmens kommentar har tagits bort |
+| DELETE | medlemmens kommentar har tagits bort |
 
 **[File Library Component](file-library.md)**SocialEvent`topic`= com/adobe/cq/social/fileLibrary
 
@@ -488,7 +491,7 @@ För de communitykomponenter som levereras beskrivs `verbs`definitionen för var
 | POST | medlem skapar en mapp |
 | BIFOGA | medlem överför en fil |
 | UPPDATERA | medlemmen uppdaterar en mapp eller fil |
-| TA BORT | medlem tar bort en mapp eller fil |
+| DELETE | medlem tar bort en mapp eller fil |
 
 **[Forum Component](forum.md)**SocialEvent`topic`= com/adobe/cq/social/forum
 
@@ -497,7 +500,7 @@ För de communitykomponenter som levereras beskrivs `verbs`definitionen för var
 | POST | medlem skapar forumämne |
 | LÄGG TILL | medlemssvar på forumämnet |
 | UPPDATERA | Medlemmens forumämne eller svar har redigerats |
-| TA BORT | forumämnet eller svaret för en medlem tas bort |
+| DELETE | forumämnet eller svaret för en medlem tas bort |
 
 **[Journal Component](blog-feature.md)**SocialEvent`topic`= com/adobe/cq/social/journal
 
@@ -506,7 +509,7 @@ För de communitykomponenter som levereras beskrivs `verbs`definitionen för var
 | POST | medlem skapar en bloggartikel |
 | LÄGG TILL | kommentarerna på en bloggartikel |
 | UPPDATERA | Medlemmens bloggartikel eller kommentar redigeras |
-| TA BORT | Medlemmens bloggartikel eller kommentar tas bort |
+| DELETE | Medlemmens bloggartikel eller kommentar tas bort |
 
 **[QnA Component](working-with-qna.md)**SocialEvent`topic`= com/adobe/cq/social/qna
 
@@ -517,7 +520,7 @@ För de communitykomponenter som levereras beskrivs `verbs`definitionen för var
 | UPPDATERA | -medlemmens fråga eller svar har redigerats |
 | MARKERA | Medlemmens svar har valts |
 | AVMARKERA | Medlemmens svar är avmarkerat |
-| TA BORT | en medlems fråga eller svar tas bort |
+| DELETE | en medlems fråga eller svar tas bort |
 
 **[Review Component](reviews.md)**SocialEvent`topic`= com/adobe/cq/social/review
 
@@ -525,7 +528,7 @@ För de communitykomponenter som levereras beskrivs `verbs`definitionen för var
 |---|---|
 | POST | medlem skapar granskning |
 | UPPDATERA | Medlemmens granskning har redigerats |
-| TA BORT | Medlemmens granskning har tagits bort |
+| DELETE | Medlemmens granskning har tagits bort |
 
 **[Värderingskomponent](rating.md)**SocialEvent`topic`= com/adobe/cq/social/tally/rating
 
@@ -591,8 +594,8 @@ Det går snabbt att testa poängsättning och märkning med hjälp av [Komma ig�
 
    * **Namn**: `badgingRules`
    * **Typ**: `String`
-   * Markera **[!UICONTROL flera]**
-   * Välj **[!UICONTROL Lägg till]**
+   * Välj **[!UICONTROL Multi]**
+   * Välj **[!UICONTROL Add]**
    * Enter `/etc/community/badging/rules/forums-badging`
    * Välj `+`
    * Enter `/etc/community/badging/rules/comments-badging`
@@ -602,14 +605,14 @@ Det går snabbt att testa poängsättning och märkning med hjälp av [Komma ig�
 
    * **Namn**: `scoringRules`
    * **Typ**: `String`
-   * Markera **[!UICONTROL flera]**
-   * Välj **[!UICONTROL Lägg till]**
+   * Välj **[!UICONTROL Multi]**
+   * Välj **[!UICONTROL Add]**
    * Enter `/etc/community/scoring/rules/forums-scoring`
    * Välj `+`
    * Enter `/etc/community/scoring/rules/comments-scoring`
    * Välj **[!UICONTROL OK]**
 
-* Välj **[!UICONTROL Spara alla]**
+* Välj **[!UICONTROL Save All]**
 
 ![chlimage_1-370](assets/chlimage_1-370.png)
 
