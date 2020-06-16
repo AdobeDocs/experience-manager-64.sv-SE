@@ -3,7 +3,7 @@ title: XMP-tillbakaskrivning till återgivningar
 description: Lär dig hur XMP-återskrivningsfunktionen sprider metadataändringar för en resurs till alla eller vissa återgivningar av resursen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
+source-git-commit: b7180dcc7b50dca1c101a3fd28e031ef8e08f37f
 workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 2%
@@ -13,9 +13,9 @@ ht-degree: 2%
 
 # XMP-tillbakaskrivning till återgivningar {#xmp-writeback-to-renditions}
 
-Den här XMP-återskrivningsfunktionen i Adobe Experience Manager (AEM) Assets replikerar ändringar i resursens återgivningar av metadata.
+Den här XMP-återskrivningsfunktionen i Adobe Experience Manager (AEM) Resurser replikerar ändringar i resursens återgivningar av metadata.
 
-När du ändrar metadata för en resurs i AEM Resurser eller när du överför resursen, lagras ändringarna i resursnoden i Crx-De.
+När du ändrar metadata för en resurs inifrån AEM Assets eller när du överför resursen, lagras ändringarna först i resursnoden i Crx-De.
 
 Funktionen XMP-återställning sprider metadataändringarna till alla eller specifika återgivningar av resursen.
 
@@ -23,11 +23,11 @@ Tänk dig ett scenario där du ändrar egenskapen [!UICONTROL Title] för resurs
 
 ![metadata](assets/metadata.png)
 
-I det här fallet sparar AEM Resurser ändringarna av **[!UICONTROL Title]** egenskapen i `dc:title` parametern för resursens metadata som lagras i resurshierarkin.
+I det här fallet sparar AEM Assets ändringarna av **[!UICONTROL Title]** egenskapen i `dc:title` parametern för de metadata för mediefiler som lagras i resurshierarkin.
 
 ![metadata_stored](assets/metadata_stored.png)
 
-AEM Resurser sprider dock inte automatiskt några metadataändringar i återgivningarna av en resurs.
+AEM Assets sprider dock inte automatiskt några metadataändringar till återgivningar av en resurs.
 
 Med funktionen XMP-återställning kan du sprida metadataändringarna till alla eller specifika återgivningar av resursen. Ändringarna lagras dock inte under metadatanoden i resurshierarkin. I stället bäddar den här funktionen in ändringarna i de binära filerna för återgivningarna.
 
@@ -47,7 +47,7 @@ Om du vill att XMP-återskrivningsfunktionen ska kunna sprida metadataändringar
 
 Utför dessa steg för XMP-återskrivningsfunktionen som sprider metadata till återgivningsminiatyrerna 140.100.png och 319.319.png.
 
-1. Navigera till Experience Manager **[!UICONTROL Tools > Workflow > Models]**.
+1. Gå till Experience Manager **[!UICONTROL Tools > Workflow > Models]**.
 1. Öppna arbetsflödesmodellen från [!UICONTROL Models] sidan **[!UICONTROL DAM Metadata Writeback]** .
 1. På egenskapssidan för **[!UICONTROL DAM Metadata Writeback]** öppnar du steget **[!UICONTROL XMP Writeback Process]**.
 1. I dialogrutan **[!UICONTROL Step Properties]** trycker/klickar du på fliken **[!UICONTROL Process]**.
@@ -56,7 +56,7 @@ Utför dessa steg för XMP-återskrivningsfunktionen som sprider metadata till �
    ![step_properties](assets/step_properties.png)
 
 1. To regenerate the pyramid TIFF renditions for Dynamic Media images with the new attributes, add the **[!UICONTROL Dynamic Media Process Image Assets]** step to the DAM Metadata Writeback workflow.
-PTIFF-renderingar skapas och lagras endast lokalt i läget Dynamic Media Hybrid. Spara arbetsflödet.
+PTIFF-återgivningar skapas och lagras bara lokalt i ett Dynamic Media-hybridläge. Spara arbetsflödet.
 
 Metadataändringarna sprids till återgivningarna `thumbnail.140.100.png` och `thumbnail.319.319.png` till resursen, inte till de andra.
 
@@ -90,12 +90,12 @@ TBD: Make updates to configurations for allow and block list after product updat
 
 1. Öppna Configuration Manager från `https://[aem_server]:[port]/system/console/configMgr`.
 1. Öppna **[!UICONTROL Adobe CQ DAM XmpFilter]** konfigurationen.
-1. Om du vill använda filtrering via en tillåten lista markerar du **[!UICONTROL Apply Whitelist to XMP Properties]** och anger de egenskaper som ska importeras i **[!UICONTROL Whitelisted XML Names for XMP filtering]** rutan.
+1. Om du vill använda filtrering via en tillåten lista markerar du **[!UICONTROL Apply Allowlist to XMP Properties]** och anger de egenskaper som ska importeras i **[!UICONTROL Allowed XML Names for XMP filtering]** rutan.
 
    ![chlimage_1-347](assets/chlimage_1-347.png)
 
-1. Om du vill filtrera bort blockerade XMP-egenskaper efter att ha använt filtrering via tillåten lista anger du egenskaperna i **[!UICONTROL Blacklisted XML Names for XMP filtering]** rutan. Spara ändringarna.
+1. Om du vill filtrera bort blockerade XMP-egenskaper efter att ha använt filtrering via tillåten lista anger du egenskaperna i **[!UICONTROL Blocked XML Names for XMP filtering]** rutan. Spara ändringarna.
 
    >[!NOTE]
    >
-   >The **[!UICONTROL Apply Blacklist to XMP Properties]** option is selected by default. Som standard är filtrering med hjälp av en blockerad lista aktiverat. Om du vill inaktivera sådan filtrering avmarkerar du **[!UICONTROL Apply Blacklist to XMP Properties]** alternativet.
+   >The **[!UICONTROL Apply Blocklist to XMP Properties]** option is selected by default. Som standard är filtrering med hjälp av en blockerad lista aktiverat. Om du vill inaktivera sådan filtrering avmarkerar du **[!UICONTROL Apply Blocklist to XMP Properties]** alternativet.
