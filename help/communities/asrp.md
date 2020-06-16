@@ -1,8 +1,8 @@
 ---
 title: ASRP - Adobe Storage Resource Provider
 seo-title: ASRP - Adobe Storage Resource Provider
-description: Konfigurera AEM Communities så att en relationsdatabas används som gemensam butik
-seo-description: Konfigurera AEM Communities så att en relationsdatabas används som gemensam butik
+description: Konfigurera AEM Communities för att använda en relationsdatabas som gemensam lagringsplats
+seo-description: Konfigurera AEM Communities för att använda en relationsdatabas som gemensam lagringsplats
 uuid: 29826b44-633d-4586-8553-cd87ebe269a2
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 86349e4d-29ff-4baa-9fcd-c0ab1f0753e9
 translation-type: tm+mt
-source-git-commit: 565604feff7fa365a1c6b52b62a0b0eb681bb192
+source-git-commit: 09f8adac1d5fc4edeca03d6955faddf5ea045405
+workflow-type: tm+mt
+source-wordcount: '798'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 565604feff7fa365a1c6b52b62a0b0eb681bb192
 
 ## Om ASRP {#about-asrp}
 
-När AEM Communities har konfigurerats att använda ASRP som gemensam lagringsplats är användargenererat innehåll (UGC) tillgängligt från alla författare och publiceringsinstanser utan behov av synkronisering eller replikering.
+När AEM Communities har konfigurerats att använda ASRP som gemensam lagringsplats är användargenererat innehåll (UGC) tillgängligt från alla författare- och publiceringsinstanser utan behov av synkronisering eller replikering.
 
 Se även [egenskaper för SRP-alternativ](working-with-srp.md#characteristics-of-srp-options) och [rekommenderade topologier](topologies.md).
 
@@ -27,7 +30,7 @@ Se även [egenskaper för SRP-alternativ](working-with-srp.md#characteristics-of
 
 Ytterligare en licens krävs för ASRP.
 
-Om du vill konfigurera din AEM Communities-webbplats så att den använder ASRP för UGC kontaktar du din kontorepresentant för:
+Kontakta din kontorepresentant för att konfigurera din AEM Communities-webbplats så att den använder ASRP för UGC:
 
 * URL till datacenter (adress till ASRP-slutpunkten)
 * Konsumentnyckel
@@ -44,30 +47,30 @@ Med konsolen [för](srp-config.md) lagringskonfiguration kan du välja standardl
 
 **On author**:
 
-* Från global navigering: **[!UICONTROL Verktyg > Communities > Storage Configuration]**
+* Från global navigering: **[!UICONTROL Tools > Communities > Storage Configuration]**
 
 ![chlimage_1-310](assets/chlimage_1-310.png)
 
 * Välj **[!UICONTROL Adobe Storage Resource Provider (ASRP)]**
 * Följande information kommer från provisioneringsprocessen
 
-   * **[!UICONTROL URL för datacenter]**
+   * **[!UICONTROL Data Center URL]**
 
       Dra ned för att välja det produktionsdatacenter som din kontorepresentant har identifierat
 
-   * **[!UICONTROL Standard Report Suite]**
+   * **[!UICONTROL Default Report Suite]**
 
       Ange namnet på standardrapportsviten
 
-   * **[!UICONTROL Konsumentnyckel]**
+   * **[!UICONTROL Consumer Key]**
 
       Ange konsumentnyckeln
 
-   * **[!UICONTROL Hemlighet]**
+   * **[!UICONTROL Secret]**
 
       Ange den hemliga nyckeln
 
-* Välj **[!UICONTROL Skicka]**
+* Välj **[!UICONTROL Submit]**
 
 Förbered publiceringsinstanserna:
 
@@ -76,13 +79,13 @@ Förbered publiceringsinstanserna:
 
 Testa anslutningen när konfigurationen har skickats:
 
-* Välj **[!UICONTROL Testa konfiguration]** för varje författare och publiceringsinstans, testa anslutningen till datacentret från konsolen Lagringskonfiguration
+* Välj **[!UICONTROL Test Config]** för varje författare och publiceringsinstans och testa anslutningen till datacentret från konsolen Lagringskonfiguration
 
 * Kontrollera slutligen att webbplatsens URL:er för profildata kan dirigeras från datacentret genom att [externalisera länkar](#externalize-links).
 
 ### Replikera krypteringsnyckeln {#replicate-the-crypto-key}
 
-Konsumentnyckeln och hemlig nyckel är krypterade. För att nycklarna ska kunna krypteras eller dekrypteras på rätt sätt måste huvudkrypteringsnyckeln för Granite vara vara densamma för alla AEM-instanser.
+Konsumentnyckeln och hemlig nyckel är krypterade. För att nycklarna ska kunna krypteras eller dekrypteras på rätt sätt måste den primära krypteringsnyckeln för Granite vara vara densamma för alla AEM-instanser.
 
 Följ instruktionerna på [Replikera krypteringsnyckeln](deploy-communities.md#replicate-the-crypto-key).
 
@@ -104,13 +107,13 @@ Så här gör du den identiska konfigurationen tillgänglig i publiceringsmiljö
 
 * **On author**:
 
-   * Navigera från huvudmenyn till **[!UICONTROL Verktyg > Åtgärder > Replikering]**
-   * Välj **[!UICONTROL Aktivera träd]**
-   * **[!UICONTROL Startsökväg]**:
+   * Navigera från huvudmenyn till **[!UICONTROL Tools > Operations > Replication]**
+   * Välj **[!UICONTROL Activate Tree]**
+   * **[!UICONTROL Start Path]**:
 
       * Bläddra till `/etc/socialconfig/srpc/`
-   * Avmarkera **[!UICONTROL endast ändrade]**
-   * Välj **[!UICONTROL Aktivera]**
+   * Avmarkera **[!UICONTROL Only Modified]**
+   * Välj **[!UICONTROL Activate]**
 
 
 ## Uppgradera från AEM 6.0 {#upgrading-from-aem}
