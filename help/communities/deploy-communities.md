@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: d0249609-2a9c-4d3b-92ee-dbc5fbdeaac6
 translation-type: tm+mt
-source-git-commit: 9d03a3988b2c8e34b9009d80a53d8b8508b5f0aa
+source-git-commit: 09f8adac1d5fc4edeca03d6955faddf5ea045405
+workflow-type: tm+mt
+source-wordcount: '2115'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 9d03a3988b2c8e34b9009d80a53d8b8508b5f0aa
 
 * [AEM 6.4 Platform](../../help/sites-deploying/deploy.md)
 
-* AEM Communities-licens
+* AEM Communities licens
 
 * Ytterligare licenser för:
 
@@ -77,7 +80,7 @@ source-git-commit: 9d03a3988b2c8e34b9009d80a53d8b8508b5f0aa
 
    * [Installera och konfigurera FFmpeg](ffmpeg.md)
    * [Installera JDBC-drivrutinen för MySQL](#jdbc-driver-for-mysql)
-   * [Installera AEM Communities SCORM-Engine](#scorm-package)
+   * [Installera AEM Communities SCORM-motorn](#scorm-package)
    * [Installera och konfigurera MySQL för aktivering](mysql.md)
 
 
@@ -85,7 +88,7 @@ source-git-commit: 9d03a3988b2c8e34b9009d80a53d8b8508b5f0aa
 
 
 
-## Senaste releaser {#latest-releases}
+## Latest Releases {#latest-releases}
 
 AEM 6.4 Communities GA levereras med Communities-paket. Om du vill veta mer om uppdateringar av AEM 6.4- [communityn](/help/release-notes/release-notes.md#experience-manager-communities)kan du läsa [AEM 6.4 Release Notes](/help/release-notes/release-notes.md#release-information).
 
@@ -97,7 +100,7 @@ För de senaste uppdateringarna av AEM 6.4, se till att kontrollera [Adobe Exper
 
 ### Versionshistorik {#version-history}
 
-Precis som med AEM 6.4 och senare är AEM Communities-funktioner och snabbkorrigeringar en del av AEM Communities kumulativa korrigeringspaket och servicepaket. Det finns därför inga separata funktionspaket.
+Precis som i AEM 6.4 och senare är AEM Communities funktioner och snabbkorrigeringar en del av AEM Communities kumulativa korrigeringspaket och servicepaket. Det finns därför inga separata funktionspaket.
 
 ### JDBC-drivrutin för MySQL {#jdbc-driver-for-mysql}
 
@@ -142,7 +145,7 @@ Mer information om hur du installerar paket finns på [webbkonsolsidan](/help/si
 
 SCORM (Shareable Content Object Reference Model) är en samling standarder och specifikationer för e-utbildning. SCORM definierar också hur innehåll kan paketeras i en överförbar ZIP-fil.
 
-AEM Communities SCORM-motorn krävs för [aktiveringsfunktionen](overview.md#enablement-community) . SCORM-paket som stöds på AEM Communities 6.4-versionen är:
+AEM Communities SCORM-motorn krävs för [aktiveringsfunktionen](overview.md#enablement-community) . SCORM-paket som stöds i AEM Communities 6.4 är:
 
 * **[cq -social- scorm -package, version 1.2.11](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-pkg)**. SCORM-paketet stöds av alla AEM 6.4 Communities-versioner.
 
@@ -172,12 +175,12 @@ Befintliga SCORM-installationer kan uppgraderas till [**cq-social-scorm-package,
 1. Installera **[cq-social-scorm-paketet, version 2.2.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg).**
 1. Hämta paketet från `/libs/social/config/scorm/ScormEngine.zip` och extrahera det.
 1. Gå till mappen **Installer** i den extraherade katalogen.
-1. Uppdatera `SystemDatabaseConnectionString` med din `scorm db connection url` i file **[!UICONTROL EngineInstall.xml]**.
+1. Uppdatera `SystemDatabaseConnectionString` med din `scorm db connection url` fil **[!UICONTROL EngineInstall.xml]**.
 1. Kör verktyget för uppgradering av mysql-schema i installationsmappen med kommandot:
 
    `java -Dlogback.configurationFile=logback.xml -cp "lib/*" RusticiSoftware.ScormContentPlayer.Logic.Upgrade.ConsoleApp EngineInstall.xml`
 1. Övervaka `engine_upgrade.log` filen för alla typer av fel och schemauppgraderingsstatus.
-1. Lägg till `/content/communities/scorm/RecordResults` i egenskapen **[!UICONTROL Uteslutna sökvägar]** i CSRF-filter från `https://<hostname>:<port>/system/console/configMgr` utgivare.
+1. Lägg till `/content/communities/scorm/RecordResults` en egenskap i CSRF-filter från **[!UICONTROL Excluded Paths]** `https://<hostname>:<port>/system/console/configMgr` utgivare.
 
 ### SCORM-loggning {#scorm-logging}
 
@@ -210,8 +213,8 @@ Länkarna till paketen på den här sidan kräver ingen instans av AEM som körs
 
 Om du vill installera de paket som visas i `adobeaemcloud.com` en lokal AEM-instans måste paketet först hämtas till en lokal disk:
 
-* Välj fliken **[!UICONTROL Resurser]**
-* Välj **[!UICONTROL Hämta till disk]**
+* Markera **[!UICONTROL Assets]** fliken
+* Välj **[!UICONTROL download to disk]**
 
 På den lokala AEM-instansen använder du pakethanteraren (till exempel [http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)) för att överföra till den lokala AEM-paketdatabasen.
 
@@ -258,8 +261,8 @@ För alla andra (sekundära) publiceringsinstanser i en publiceringsgrupp:
 
 * Leta reda på `AEM Communities Publisher Configuration`
 * Markera redigeringsikonen
-* Avmarkera rutan **[!UICONTROL Primär utgivare]**
-* Välj **[!UICONTROL Spara]**
+* Avmarkera **[!UICONTROL Primary Publisher]** rutan
+* Välj **[!UICONTROL Save]**
 
 ### Replikeringsagenter på författare {#replication-agents-on-author}
 
@@ -273,7 +276,7 @@ Det finns två replikeringsagenter i författarmiljön som kräver att transport
 
 * Åtkomst till replikeringskonsolen på författaren
 
-   * Från global navigering: **[!UICONTROL Verktyg > Distribution > Replikering > Agenter på författare]**
+   * Från global navigering: **[!UICONTROL Tools > Deployment > Replication > Agents on author]**
 
 * Följ samma procedur för båda agenterna:
 
@@ -281,10 +284,10 @@ Det finns två replikeringsagenter i författarmiljön som kräver att transport
    * **Agenten för omvänd replikering (publicera omvänd)**
 
       1. Välj agent
-      1. Markera **[!UICONTROL redigering]**
-      1. Välj fliken **[!UICONTROL Transport]**
-      1. Om porten inte `4503`finns kan du redigera **[!UICONTROL URI]** för att ange rätt port
-      1. Om användaren inte `admin`gör det redigerar du **[!UICONTROL Användare]** och **[!UICONTROL lösenord]** för att ange en medlem i `administrators` användargruppen
+      1. Välj **[!UICONTROL edit]**
+      1. Markera **[!UICONTROL Transport]** fliken
+      1. Om porten inte `4503`är det, redigera **[!UICONTROL URI]** så att rätt port anges
+      1. Om användaren inte `admin`gör det redigerar du **[!UICONTROL User]** och **[!UICONTROL Password]** anger en medlem i `administrators` användargruppen
 
 I följande bilder visas resultatet av en ändring av porten från 4503 till 6103 med:
 
@@ -316,8 +319,8 @@ Så här aktiverar du tunneltjänsten:
 
 * Leta reda på `AEM Communities Publish Tunnel Service`
 * Markera redigeringsikonen
-* Markera **[!UICONTROL aktiveringsrutan]**
-* Välj **[!UICONTROL Spara]**
+* Markera **[!UICONTROL enable]** rutan
+* Välj **[!UICONTROL Save]**
 
 ![chlimage_1-414](assets/chlimage_1-414.png)
 
@@ -333,16 +336,16 @@ Om du vill kopiera nyckelmaterialet från författaren till alla andra instanser
 
    * Hitta paketet i det lokala filsystemet `com.adobe.granite.crypto.file`
 
-      Exempel:
+      Till exempel,
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
       * Filen identifierar `bundle.info` paketet
    * Navigera till datamappen
 
-      Exempel:
+      Till exempel,
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
-   * Kopiera hmac- och mallfilerna
+   * Kopiera hmac- och primär nodfiler
 
 
 
@@ -350,7 +353,7 @@ Om du vill kopiera nyckelmaterialet från författaren till alla andra instanser
 
    * Navigera till datamappen
 
-      Exempel:
+      Till exempel,
 
       * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
    * Klistra in de två tidigare kopierade filerna
@@ -391,7 +394,7 @@ Använda [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)
    * Till exempel [https://&lt;server>:&lt;port>/system/console/bundles](http://localhost:4503/system/console/bundles)
 
 * Hitta `Adobe Granite Crypto Support` paketet (com.adobe.granite.crypto)
-* Välj **[!UICONTROL Uppdatera]**
+* Välj **[!UICONTROL Refresh]**
 
 ![chlimage_1-416](assets/chlimage_1-416.png)
 
@@ -399,7 +402,7 @@ Använda [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)
 
    `Operation completed successfully.`
 
-### Apache HTTP-server {#apache-http-server}
+### Apache HTTP Server {#apache-http-server}
 
 Om du använder Apache HTTP-servern måste du använda rätt servernamn för alla relevanta poster.
 
@@ -424,11 +427,11 @@ Var särskilt försiktig med att använda rätt servernamn, inte `localhost`i `R
 
 ### Dispatcher {#dispatcher}
 
-Om du använder en Dispatcher läser du:
+Om du använder Dispatcher kan du läsa:
 
 * AEM&#39;s [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) documentation
-* [Installerar Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html)
-* [Konfigurera Dispatcher för Communities](dispatcher.md)
+* [Installera Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html)
+* [Konfigurera Dispatcher för webbgrupper](dispatcher.md)
 * [Kända fel](troubleshooting.md#dispatcher-refetch-fails)
 
 ## Dokumentation för relaterade communities {#related-communities-documentation}
