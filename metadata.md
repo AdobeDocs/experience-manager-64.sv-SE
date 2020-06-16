@@ -8,10 +8,13 @@ getting-started-url: https://helpx.adobe.com/experience-manager/tutorials.html
 tutorials-title: Självstudiekurser
 tutorials-url: https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html
 mini-toc-levels: 2
-git-repo: https://github.com/AdobeDocs/experience-manager-64.en
+git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-64.sv-SE
 index: y
 translation-type: tm+mt
-source-git-commit: 9b01573286810356a93d7bc632363624523cd48c
+source-git-commit: a58558fe18743e1aee0d65da7a2140561bc97e98
+workflow-type: tm+mt
+source-wordcount: '156'
+ht-degree: 8%
 
 ---
 
@@ -22,17 +25,17 @@ Filen metadata.md innehåller metadata på postnivå som skickas till TOC.md-fil
 
 | metadata | vad den gör |
 |--- |--- |
-| solution-title | Används i artikelrubriken som länk |
-| solution-hub-url | Öppnar navet för hjälpfunktioner |
-| solution-icon | Visar lösningsikonen bredvid lösningsrubriken. Inte implementerat ännu |
-| getting-started-url | Länk till hjälpsidan Komma igång |
-| tutorials-url | Länka till videosjälvstudiekurser - antingen hjälpstudiekurser eller självstudiekurser på engelska |
-| mini-toc-nivåer | Anger antalet rubriknivåer som visas i den högra listen. standard är 2 |
-| git-repo | Anger platsen för huvudrapporten för intern användning |
+| solution-title | Används i artikelrubriken som länk. |
+| solution-hub-url | Öppnar navet för utbildning och support. |
+| solution-icon | Visar lösningsikonen bredvid lösningsrubriken. Inte implementerat ännu. |
+| getting-started-url | Länk till startsidan. |
+| tutorials-url | Länka till videosjälvstudiekurserna. |
+| mini-toc-nivåer | Anger antalet rubriknivåer som visas i den högra listen. Standardvärdet är 2. |
+| git-repo | Anger platsen för huvudrapporten för intern användning. |
 
 I filen TOC.md
 
 | metadata | vad den gör |
 |--- |--- |
-| user-guide-title | Används i artikelrubriken som länk |
-| user-guide-url | Öppnar navet för hjälpfunktioner |
+| user-guide-title | Används i artikelrubriken som länk. |
+| user-guide-url | Öppnar navet för utbildning och support. |
