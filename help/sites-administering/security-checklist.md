@@ -10,7 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: a91e1264-8441-42f8-aa83-1d9c983d214a
 translation-type: tm+mt
-source-git-commit: 0e04ab8cd32dfdff47e333169c4f202e81a82fe3
+source-git-commit: 6ac5f288de51e39bccd080123ba9e094406263f8
+workflow-type: tm+mt
+source-wordcount: '2843'
+ht-degree: 0%
 
 ---
 
@@ -104,9 +107,9 @@ Adobe rekommenderar att du definierar anpassade felhanterarsidor, särskilt för
 >
 >Mer information finns i [Så här skapar jag anpassade skript eller felhanterare](https://helpx.adobe.com/experience-manager/kb/CustomErrorHandling.html) i kunskapsbasartikeln.
 
-### Slutför checklista för utskickssäkerhet {#complete-dispatcher-security-checklist}
+### Fullständig checklista för Dispatcher {#complete-dispatcher-security-checklist}
 
-AEM Dispatcher är en viktig del av din infrastruktur. Adobe rekommenderar att du slutför [säkerhetskontrolllistan](https://helpx.adobe.com/experience-manager/dispatcher/using/security-checklist.html)för dispatcher.
+AEM Dispatcher är en viktig del av er infrastruktur. Adobe rekommenderar att du slutför [säkerhetschecklistan](https://helpx.adobe.com/experience-manager/dispatcher/using/security-checklist.html)för dispatcher.
 
 >[!CAUTION]
 >
@@ -168,9 +171,9 @@ Refererarfiltertjänsten är en OSGi-tjänst som gör att du kan konfigurera:
 
 * vilka http-metoder som ska filtreras
 * om en tom referensrubrik tillåts
-* och en vit lista över servrar som ska tillåtas utöver servervärden.
+* och en lista över servrar som ska tillåtas utöver servervärden.
 
-Som standard finns alla varianter av localhost och de värdnamn som servern är bunden till i den vita listan.
+   Som standard finns alla varianter av localhost och de värdnamn som servern är bunden till i listan.
 
 Så här konfigurerar du referenspunktsfiltertjänsten:
 
@@ -187,7 +190,7 @@ Så här konfigurerar du referenspunktsfiltertjänsten:
 
    &lt;protocol>://&lt;server>:&lt;port>
 
-   Exempel:
+   Till exempel:
 
    * `https://allowed.server:80` tillåter alla begäranden från den här servern med den angivna porten.
    * Om du även vill tillåta https-begäranden måste du ange en andra rad.
@@ -314,7 +317,7 @@ För att förhindra missbruk kan du:
 >
 >Denna begränsning bör endast utföras i AEM-miljöer som inte använder Forms.
 
-Eftersom AEM inte tillhandahåller indexvärden för `FormChooserServlet`formuläret kommer formulärväljare i frågor att utlösa en kostsam databasövergång, vilket vanligen gör att AEM-instansen avbryts. Formulärväljare kan identifieras med **&amp;stämpeln;ast;.form.** &amp;ast; sträng i frågor.
+Eftersom AEM inte tillhandahåller indexvärden för `FormChooserServlet`formuläret kommer formulärväljare i frågor att utlösa en kostsam databasövergång, vilket vanligen gör att AEM-instansen avbryts. Formulärväljare kan identifieras med **&amp;stämpeln;ast;.form.&amp;ast;** sträng i frågor.
 
 Följ stegen nedan för att minska detta:
 
@@ -325,7 +328,7 @@ Följ stegen nedan för att minska detta:
 
 1. Click **Save**.
 
-**Minska mot DoS som orsakas av hämtningstjänsten**
+**Minska mot DoS som orsakas av tjänsten för hämtning av resurser**
 
 Med standardtjänsten för hämtning av resurser i AEM kan autentiserade användare skicka godtyckligt stora, samtidiga hämtningsbegäranden för att skapa ZIP-filer med resurser som är synliga för dem och som kan överbelasta servern och/eller nätverket.
 
@@ -341,7 +344,7 @@ WebDAV ska vara inaktiverat i både författar- och publiceringsmiljön. Detta k
 
    `https://<*host*>:<*port*>/system/console`
 
-   Exempel `http://localhost:4503/system/console/bundles`.
+   Till exempel `http://localhost:4503/system/console/bundles`.
 
 1. I listan med paket hittar du paketet:
 
@@ -379,7 +382,7 @@ Ingen konfiguration behöver göras för att aktivera den, eftersom detta nu är
 
 >[!NOTE]
 >
->Mer information finns i dokumentationen om [autentisering av nodnamn](https://jackrabbit.apache.org/oak/docs/security/user/authorizablenodename.html).
+>Mer information finns i dokumentationen för eko om generering av [auktoriseringsbara nodnamn](https://jackrabbit.apache.org/oak/docs/security/user/authorizablenodename.html).
 
 ### Förhindra clickjacking {#prevent-clickjacking}
 
@@ -409,12 +412,12 @@ Mer specifikt:
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
    Den `bundle.info` fil som finns i varje mapp identifierar paketnamnet.
 
-1. Navigera till datamappen. Exempel:
+1. Navigera till datamappen. Till exempel:
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
 1. Kopiera HMAC- och mallfilerna.
-1. Gå sedan till den målinstans som du vill duplicera HMAC-nyckeln till och navigera till datamappen. Exempel:
+1. Gå sedan till den målinstans som du vill duplicera HMAC-nyckeln till och navigera till datamappen. Till exempel:
 
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
