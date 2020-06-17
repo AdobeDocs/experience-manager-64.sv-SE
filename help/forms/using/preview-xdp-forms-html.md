@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: c142d7b3-301b-447c-a715-452c905565d1
 translation-type: tm+mt
-source-git-commit: 79dcf6816e1156604c0c9279b727ea436ad1826a
+source-git-commit: 801941c060e1a912f3969bca1e89962241e7fbe0
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 14%
+source-wordcount: '808'
+ht-degree: 15%
 
 ---
 
@@ -30,15 +30,15 @@ Utför följande konfigurationer om du vill att Designer ska kunna generera HTML
 
 ### Konfigurera autentiseringstjänsten för Apache Sling {#configure-apache-sling-authentication-service}
 
-1. Gå till https://[*server*]:[*port*]/system/console/configMgr på AEM Forms som körs på OSGi eller
+1. Gå till `https://[server]:[port]/system/console/configMgr` AEM Forms som körs på OSGi eller
 
-   https://[*server*]:[*port*]/lc/system/console/configMgr på AEM Forms som körs på JEE.
+   `https://[server]:[port]/lc/system/console/configMgr` på AEM Forms som kör på JEE.
 
 1. Leta reda på och klicka på konfigurationen för **Apache Sling Authentication Service** för att öppna den i redigeringsläge.
 
 1. Beroende på om du kör AEM Forms på OSGi eller JEE lägger du till följande i fältet **Autentiseringskrav** :
 
-   * AEM Forms on JEE
+   * AEM Forms på JEE
 
       * -/content/xfaforms
       * -/etc/clientlibs
@@ -59,8 +59,8 @@ Som standard är [skyddat läge](/help/forms/using/get-xdp-pdf-documents-aem.md)
 
 1. Logga in på AEM Web Console som administratör.
 
-   * URL för AEM Forms på OSGi är https://[server]:[port]/system/console/configMgr
-   * URL för AEM Forms på JEE är https://[*server*]:[*port*]/lc/system/console/configMgr
+   * URL för AEM Forms på OSGi är `https://[server]:[port]/system/console/configMgr`
+   * URL för AEM Forms på JEE är `https://[server]:[port]/lc/system/console/configMgr`
 
 1. Öppna **[!UICONTROL Mobile Forms Configurations]** för redigering.
 1. Avmarkera **[!UICONTROL Protected Mode]** alternativet och klicka på **[!UICONTROL Save]**.
@@ -70,17 +70,17 @@ Som standard är [skyddat läge](/help/forms/using/get-xdp-pdf-documents-aem.md)
 1. Gå till **Verktyg** > **Alternativ** i Designer.
 1. I fönstret Alternativ väljer du sidan **Serveralternativ** , anger följande och klickar på **OK**.
 
-   * **Server-URL**: URL till AEM Forms-server.
+   * **Server-URL**: URL för AEM Forms-server.
    * **HTTP-portnummer**: AEM-serverport. Standardvärdet är 4502.
    * **HTML-förhandsgranskningskontext:** Sökväg till profilen för återgivning av XFA-formulär. Följande standardprofiler används för att förhandsgranska formuläret i Designer. Du kan också ange sökvägen till en anpassad profil.
 
       * `/content/xfaforms/profiles/default.html` (AEM Forms on OSGi)
-      * `/lc/content/xfaforms/profiles/default.html` (AEM Forms on JEE)
+      * `/lc/content/xfaforms/profiles/default.html` (AEM Forms på JEE)
    * **Forms Manager-kontext:** Kontextsökväg som Forms Manager-gränssnittet distribueras till. Standardvärdena är:
 
       * `/aem/forms` (AEM Forms on OSGi)
-      * `/lc/forms` (AEM Forms on JEE)
-   **Obs!** *Kontrollera att AEM Forms-servern körs. The HTML preview connects to the CRX server to* generate *a preview.*
+      * `/lc/forms` (AEM Forms på JEE)
+   **Obs!** *Kontrollera att AEM Forms-servern är igång och körs. The HTML preview connects to the CRX server to* generate *a preview.*
 
    ![Alternativ för AEM Forms Designer ](assets/server_options.png)
 
