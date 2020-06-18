@@ -1,15 +1,18 @@
 ---
 title: Användarhandbok för AEM 6.4 Assets
-description: Den här guiden täcker alla AEM Assets-uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
+description: Den här guiden täcker alla uppgifter för AEM Assets, t.ex. hur man skapar, hanterar, levererar och optimerar digitala resurser.
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 6be9e5049600420c86120d0b6c84c1c321d7dc63
+workflow-type: tm+mt
+source-wordcount: '338'
+ht-degree: 18%
 
 ---
 
 
 # Användarhandbok för AEM 6.4 Assets
 
-Den här guiden täcker alla AEM Assets-uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
+Den här guiden täcker alla uppgifter för AEM Assets, t.ex. hur man skapar, hanterar, levererar och optimerar digitala resurser.
 
 ## Viktiga AEM-artiklar
 
@@ -28,7 +31,7 @@ Den här guiden täcker alla AEM Assets-uppgifter, t.ex. hur du skapar, hanterar
 | [Administratörshandbok](/help/sites-administering/home.md) | Förstå hur man administrerar AEM |
 | [Redigeringshandbok](/help/sites-authoring/home.md) | I den här guiden förklaras begreppen för redigering i AEM. |
 | [Användargränssnittets skrivguide](/help/sites-classic-ui-authoring/home.md) | I den här handboken förklaras begreppen för redigering i AEM i det klassiska användargränssnittet. |
-| [Användarhandbok för skärmar](/help/screens/home.md) | Lär dig mer om den digitala signeringslösningen för att publicera dynamiska och interaktiva digitala upplevelser. |
+| [Användarhandbok för skärmar](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html) | Lär dig mer om den digitala signeringslösningen för att publicera dynamiska och interaktiva digitala upplevelser. |
 | [Distribuera användarhandbok](/help/sites-deploying/home.md) | Den här guiden visar grunderna i AEM. |
 | [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger upp din AEM-instans. |
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM-projekt. |
@@ -38,10 +41,10 @@ Den här guiden täcker alla AEM Assets-uppgifter, t.ex. hur du skapar, hanterar
 ## Viktiga AEM-resurser
 
 * [AEM-självstudiekurser](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [Användarhandbok för Dispatcher](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
+* [Dispatcher Användarhandbok](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
 * [Användarhandbok för HTML](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 * [Användarhandbok för kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
 * [GDPR-efterlevnad](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&mv=other#solutions/experience-manager)
+* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
 * [AEM-communityforum](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
