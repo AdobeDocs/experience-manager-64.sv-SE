@@ -1,17 +1,20 @@
 ---
 title: Användarhandbok för AEM 6.4 Communities
 seo-title: Användarhandbok för AEM 6.4 Communities
-description: Den här guiden täcker alla AEM Communities-uppgifter, som att skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
-seo-description: Omfattar alla AEM Communities-uppgifter, t.ex. att skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
+description: Den här guiden täcker alla uppgifter för AEM Communities, t.ex. att skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
+seo-description: Omfattar alla uppgifter för AEM Communities, t.ex. att skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
 translation-type: tm+mt
-source-git-commit: f5c0d5032073b91c0b3199bb42709b8e679fa6a0
+source-git-commit: 6be9e5049600420c86120d0b6c84c1c321d7dc63
+workflow-type: tm+mt
+source-wordcount: '386'
+ht-degree: 16%
 
 ---
 
 
 # Användarhandbok för AEM 6.4 Communities
 
-Den här guiden täcker alla AEM Communities-uppgifter, som att skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
+Den här guiden täcker alla uppgifter för AEM Communities, t.ex. att skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
 
 ## Viktiga AEM-artiklar
 
@@ -31,7 +34,7 @@ Den här guiden täcker alla AEM Communities-uppgifter, som att skapa onlineuppl
 | [Administratörshandbok](/help/sites-administering/home.md) | Förstå hur man administrerar AEM |
 | [Redigeringshandbok](/help/sites-authoring/home.md) | I den här guiden förklaras begreppen för redigering i AEM. |
 | [Användargränssnittets skrivguide](/help/sites-classic-ui-authoring/home.md) | I den här handboken förklaras begreppen för redigering i AEM i det klassiska användargränssnittet. |
-| [Användarhandbok för skärmar](/help/screens/home.md) | Lär dig mer om den digitala signeringslösningen för att publicera dynamiska och interaktiva digitala upplevelser. |
+| [Användarhandbok för skärmar](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html) | Lär dig mer om den digitala signeringslösningen för att publicera dynamiska och interaktiva digitala upplevelser. |
 | [Distribuera användarhandbok](/help/sites-deploying/home.md) | Den här guiden visar grunderna i AEM. |
 | [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger upp din AEM-instans. |
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM-projekt. |
@@ -41,10 +44,10 @@ Den här guiden täcker alla AEM Communities-uppgifter, som att skapa onlineuppl
 ## Viktiga AEM-resurser
 
 * [AEM-självstudiekurser](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [Användarhandbok för Dispatcher](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
+* [Dispatcher Användarhandbok](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
 * [Användarhandbok för HTML](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 * [Användarhandbok för kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
 * [GDPR-efterlevnad](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&mv=other#solutions/experience-manager)
+* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
 * [AEM-communityforum](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
