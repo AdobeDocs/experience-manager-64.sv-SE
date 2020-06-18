@@ -6,7 +6,10 @@ seo-description: En översikt över de viktigaste funktionerna i AEM 6.4
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 translation-type: tm+mt
-source-git-commit: 7cb8fbc2577b9feafbcbddbd078ab06e1a341c73
+source-git-commit: 8aab981849152e6826dd4d0d68867790a85f373a
+workflow-type: tm+mt
+source-wordcount: '153'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: 7cb8fbc2577b9feafbcbddbd078ab06e1a341c73
 
 ## AEM Foundation {#aem-foundation}
 
-[Läs mer om installation, distribution och arkitekturen för Adobe Experience Manager 6.4](/help/sites-deploying/home.md), inklusive vår molndistribution av Adobe Managed Services.
+[Läs mer om installation, driftsättning och arkitekturen i Adobe Experience Manager 6.4](/help/sites-deploying/home.md), inklusive vår molndriftsättning av Adobe Managed Services.
 
 [Lär dig hantera ett AEM-projekt](/help/managing/home.md).
 
@@ -33,9 +36,9 @@ source-git-commit: 7cb8fbc2577b9feafbcbddbd078ab06e1a341c73
 
 [Skapa, hantera, publicera och uppdatera digitala formulär.](/help/forms/home.md)
 
-## AEM-skärmar {#aem-screens}
+## AEM Screens {#aem-screens}
 
-[Lär dig mer om den digitala signeringslösningen för att publicera dynamiska och interaktiva upplevelser.](/help/screens/home.md)
+[Lär dig mer om den digitala signeringslösningen för att publicera dynamiska och interaktiva upplevelser.](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
 ## AEM Communities {#aem-communities}
 
