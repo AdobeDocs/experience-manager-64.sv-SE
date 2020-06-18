@@ -1,8 +1,8 @@
 ---
-title: Allmän versionsinformation om Adobe Experience Manager 6.4
+title: Allmän versionsinformation för Adobe Experience Manager 6.4
 seo-title: Versionsinformation
-description: 'I Adobe Experience Manager 6.4 beskrivs versionsinformation, nyheter, hur du installerar och detaljerade ändringslistor. '
-seo-description: 'I Adobe Experience Manager 6.4 beskrivs versionsinformation, nyheter, hur du installerar och detaljerade ändringslistor. '
+description: 'Adobe Experience Manager 6.4 visar versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor. '
+seo-description: 'Adobe Experience Manager 6.4 visar versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor. '
 uuid: 5a220301-2727-4078-ba19-4a2dbf9657f4
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4
@@ -10,12 +10,15 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 2be468e7-2b4e-4e04-881b-b9bdd1f55e57
 translation-type: tm+mt
-source-git-commit: 2411f1aa2853a161603d15917102d5cf1a8139b6
+source-git-commit: 6be9e5049600420c86120d0b6c84c1c321d7dc63
+workflow-type: tm+mt
+source-wordcount: '2746'
+ht-degree: 1%
 
 ---
 
 
-# Allmän versionsinformation om Adobe Experience Manager 6.4 {#general-release-notes-for-adobe-experience-manager}
+# Allmän versionsinformation för Adobe Experience Manager 6.4 {#general-release-notes-for-adobe-experience-manager}
 
 ## Versionsinformation {#release-information}
 
@@ -46,7 +49,7 @@ source-git-commit: 2411f1aa2853a161603d15917102d5cf1a8139b6
 
 ### Trivia {#trivia}
 
-Versionscykeln för den här versionen av Adobe Experience Manager inleddes den 27 april 2017, genomgick 22 versioner av kvalitetssäkring och felkorrigering och avslutades den 22 mars 2018. Det totala antalet kundrelaterade problem, inklusive förbättringar och nya funktioner som har korrigerats i den här versionen, är 704.
+Versionscykeln för den här versionen av Adobe Experience Manager började den 27 april 2017, genomgick 22 versioner av kvalitetssäkring och felkorrigering och avslutades den 22 mars 2018. Det totala antalet kundrelaterade problem, inklusive förbättringar och nya funktioner som har korrigerats i den här versionen, är 704.
 
 Adobe Experience Manager 6.4 är generellt tillgängligt sedan 4 april 2018.
 
@@ -54,7 +57,7 @@ Adobe Experience Manager 6.4 är generellt tillgängligt sedan 4 april 2018.
 >
 >Adobe rekommenderar att du installerar det senaste Service Pack-versionen eftersom alla nya funktionspaket endast levereras via [Service Pack](https://helpx.adobe.com/experience-manager/maintenance-releases-roadmap.html).
 
-## Nyheter {#what-s-new}
+## What&#39;s new {#what-s-new}
 
 Adobe Experience Manager 6.4 är en uppgraderingsversion till kodbasen Adobe Experience Manager 6.3. Den innehåller nya och förbättrade funktioner, viktiga kundkorrigeringar, högprioriterade kundförbättringar och allmänna felkorrigeringar som är inriktade på produktstabilisering. Det innehåller även merparten av alla funktionspaket, hot fix och Service Pack för Adobe Experience Manager 6.3.
 
@@ -125,7 +128,7 @@ Mer information finns på [den här dokumentationssidan](/help/sites-deploying/i
 
 ### Experience Manager Sites {#experience-manager-sites}
 
-Fullständig lista över ändringar i [AEM Sites och Add-ons](sites.md).
+Fullständig lista över ändringar i [AEM Sites och tillägg](sites.md).
 
 #### Flytande upplevelser {#fluid-experiences}
 
@@ -147,23 +150,23 @@ Olika förbättringar av Sling Model Exporter och Core Components ingår för at
 
 AEM 6.4 slutför omvandlingen till nästa generations komponentmodell. Core Components-konceptet som introducerades i AEM 6.3, och nu förenas med Style System, är ett effektivt sätt att bygga nya och utöka befintliga webbplatser.
 
-Rekommenderad självstudiekurs för att lära dig hur du bäst utnyttjar den nya komponentmodellen: Komma [igång med AEM Sites - WKND, genomgång](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+Rekommenderad självstudiekurs för att lära dig hur du bäst utnyttjar den nya komponentmodellen: [Komma igång med AEM Sites - WKND självstudiekurs](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
 
 #### Tillägget Skärmar {#screens-add-on}
 
 Att leverera ett enhetligt budskap i alla marknadsföringskanaler, inklusive digitala signaturer och kiosknätverk, är vad AEM Screens står för. AEM 6.4 har stöd för att köra signeringsspelaren på maskinvaran för Microsoft Windows och Google Chrome OS. Dessutom finns det förbättringar av enhetshantering och scheman (grupper av kanaler) på fjärrbasis.
 
-Mer information om skärmuppdateringar finns i Användarhandbok för [AEM-skärmar](/help/screens/home.md).
+Mer information om skärmuppdateringar finns i [AEM Screens användarhandbok](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html).
 
 ### Experience Manager Communities {#experience-manager-communities}
 
-AEM 6.4 har många nya funktioner och förbättringar i Communities. En fullständig lista över ändringar finns i [AEM Communities](communities-release-notes.md). Högdagrar för den här versionen är:
+AEM 6.4 har många nya funktioner och förbättringar i Communities. En fullständig lista över ändringarna finns i [AEM Communities](communities-release-notes.md). Högdagrar för den här versionen är:
 
 #### Förbättringar av moderering {#enhancements-to-moderation}
 
 **Automatisk identifiering av skräppost**
 
-Ny motor för skräppostavkänning har tillhandahållits för att filtrera bort oönskat användargenererat innehåll på communitysajter och grupper. När den har aktiverats från system/console/configMgr markeras ett användargenererat innehåll som skräppost baserat på en fördefinierad uppsättning skräppostord. Mer information om motorn för skräppostavkänning finns i [Automating Community User Generating Content](/help/communities/moderate-ugc.md#spam-detection).
+Ny motor för skräppostavkänning har tillhandahållits för att filtrera bort oönskat användargenererat innehåll på communitywebbplatser och grupper. När den har aktiverats från system/console/configMgr markeras ett användargenererat innehåll som skräppost baserat på en fördefinierad uppsättning skräppostord. Mer information om motorn för skräppostavkänning finns i [Automating Community User Generating Content](/help/communities/moderate-ugc.md#spam-detection).
 
 ![skräppidentifiering](assets/spamdetection.png)
 
@@ -199,7 +202,7 @@ Tilldelnings- och katalogfunktionerna är nu tillgängliga i grupper. Detta gör
 
 ### Experience Manager Assets {#experience-manager-assets}
 
-AEM 6.4 har flera nya funktioner och förbättringar av Assets, bland annat ny, förbättrad Creative Cloud-integrering, viktiga innovationer inom artificiell intelligens, förbättrad metadatahantering, förbättrade rapporter och förbättringar av användarupplevelsen. Den fullständiga listan över tillgängliga ändringar i [AEM Resurser](assets.md). Versionens högdagrar är:
+AEM 6.4 har flera nya funktioner och förbättringar av Assets, bland annat ny, förbättrad Creative Cloud-integrering, viktiga innovationer inom artificiell intelligens, förbättrad metadatahantering, förbättrade rapporter och förbättringar av användarupplevelsen. Den fullständiga listan över tillgängliga ändringar i [AEM Assets](assets.md). Versionens högdagrar är:
 
 **Adobe Asset Link**
 
@@ -227,11 +230,11 @@ Ett antal förbättringar är möjligheten att importera och exportera metadata 
 
 **Rapporter**
 
-Resursrapporteringen genomgick en stor översyn i AEM 6.4 med nya rapporteringsramverk, användarupplevelser och fler OOTB-rapporter för kundanvändning. Mer information om hur du skapar olika rapporter finns i [Resursrapporter](/help/assets/asset-reports.md).
+Resursrapporteringen genomgick en stor översyn i AEM 6.4 med nya rapporteringsramverk, användarupplevelser och fler OTB-rapporter för kundanvändning. Mer information om hur du skapar olika rapporter finns i [Resursrapporter](/help/assets/asset-reports.md).
 
 **Användarupplevelse**
 
-Flera förbättringar som förbättrar surfning, sökning och administration för Assets-användare som bläddring, bakåtsökning, förbättrade sökfilter och mycket annat. En fullständig lista finns i [AEM Assets](assets.md).
+Flera förbättringar som förbättrar surfning, sökning och administration för Assets-användare som bläddring, bakåtsökning, förbättrade sökfilter och mycket annat. Den fullständiga listan i [AEM Assets](assets.md).
 
 **Varumärkesportal**
 
@@ -239,7 +242,7 @@ Olika förbättringar inom områden som metadata, rapportering, digitala rättig
 
 #### Dynamic Media Add-on {#dynamic-media-add-on}
 
-AEM 6.4 innehåller många nya funktioner och förbättringar för Dynamic Media. Den fullständiga listan finns i [AEM Resurser](assets.md). Viktiga högdagrar är följande:
+AEM 6.4 innehåller många nya funktioner och förbättringar av Dynamic Media. Den fullständiga listan finns i [AEM Assets](assets.md). Viktiga högdagrar är följande:
 
 **Smart beskärning**
 
@@ -247,7 +250,7 @@ Smart Crop, som drivs av Adobe Sensei, ger automatiskt icke-förstörande beskä
 
 Mer information om hur du använder smart beskärning finns i dokumentationen [Bildprofiler](/help/assets/image-profiles.md) .
 
-Mer information om hur du arbetar med Smart beskärning i komponenten Dynamic Media finns i [Lägga till dynamiska medieresurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md) .
+Mer information om hur du arbetar med smart beskärning i Dynamic Media finns i [Lägga till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md) .
 
 **Smart bildbehandling**
 
@@ -279,9 +282,9 @@ AEM 6.4 Forms innehåller flera nya funktioner och förbättringar. Högdagrarna
 * Förifyll interaktiv kommunikation från affärsapplikationer
 * Modernisering av arbetsflödet och stöd för mobila arbetare
 * Lazy loading av fragment
-* Uppgradering i ett enda steg från LiveCycle till Experience Manager Forms 6.4
+* Uppgradering från LiveCycle till Experience Manager Forms 6.4
 
-Mer information finns på sidan [AEM Forms](forms.md) Release Notes. Se även [Sammanfattning av nya funktioner och förbättringar i AEM 6.4-formulär](/help/forms/using/whats-new.md) för information om nya och förbättrade funktioner och dokumentationsresurser.
+Mer information om [AEM Forms](forms.md) versionsinformation. Se även [Sammanfattning av nya funktioner och förbättringar i AEM 6.4-formulär](/help/forms/using/whats-new.md) för information om nya och förbättrade funktioner och dokumentationsresurser.
 
 ### Experience Manager Livefyre {#experience-manager-livefyre}
 
@@ -314,7 +317,7 @@ Denna prioriteringsprocess har resulterat i över 500 kundfokuserade förändrin
 * Kärnkomponenter ([GitHub-projekt](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components))
 * Implementering av referens för butik ([läs mer](/help/sites-developing/we-retail.md))
 * Project Blueprint Archetype ([GitHub-projekt](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype))
-* AEM Screens Players för olika målplattformar ([ladda ned](https://download.macromedia.com/screens/))
+* AEM Screens Players for various target platforms ([download](https://download.macromedia.com/screens/))
 * Språkmodeller för smart innehåll. Engelska är förinstallerat - fler språk kan hämtas
 
    * [Tyska](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-de)
@@ -326,7 +329,7 @@ Denna prioriteringsprocess har resulterat i över 500 kundfokuserade förändrin
 
 **Assets**
 
-* Adobe Experience Manager-datorprogrammet ([läs mer](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html) och [hämta](https://helpx.adobe.com/experience-manager/kb/download-companion-app.html))
+* Adobe Experience Manager datorprogram ([läs mer](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html) och [ladda ned](https://helpx.adobe.com/experience-manager/kb/download-companion-app.html))
 
 * Paket för att lägga till förbättrad PDF-rastrerare ([läs mer](/help/assets/aem-pdf-rasterizer.md) och [ladda ned](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/assets/aem-assets-pdf-rasterizer-pkg))
 
@@ -334,7 +337,7 @@ Denna prioriteringsprocess har resulterat i över 500 kundfokuserade förändrin
 
 **Formulär**
 
-* Paket för AEM Forms-funktioner:
+* Paket för AEM Forms:
 
    * [adobe-aemfd-aix-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-AIX)
    * [adobe-aemfd-linux-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-LX)
@@ -357,7 +360,7 @@ Användargränssnittet finns på följande språk:
 * Traditionell kinesiska (begränsat stöd)
 * Koreanska
 
-Experience Manager 6.4 har certifierats för GB18030-2005 CITS för att använda den kinesiska kodningsstandarden.
+Experience Manager 6.4 har certifierats för GB18030-2005 CITS att använda den kinesiska kodningsstandarden.
 
 ## Installera och uppdatera {#install-update}
 
@@ -377,7 +380,7 @@ Den fullständiga matrisen med plattformar som stöds finns här. Supportnivå f
 
 Adobe utvärderar ständigt funktionerna i produkten och planerar att ersätta funktioner med kraftfullare versioner, eller bestämmer sig för att omimplementera utvalda delar så att de blir bättre förberedda för framtida förväntningar eller tillägg.
 
-För Adobe Experience Manager 6.4, [läs listan över borttagna funktioner](deprecated-removed-features.md). Sidan innehåller även förhandsmeddelanden om ändringar under 2019 och viktiga meddelanden för kunder som uppdaterar från tidigare versioner.
+I Adobe Experience Manager 6.4 [finns en lista över borttagna funktioner](deprecated-removed-features.md)som tagits bort. Sidan innehåller även förhandsmeddelanden om ändringar under 2019 och viktiga meddelanden för kunder som uppdaterar från tidigare versioner.
 
 ## Detaljerade ändringslistor {#detailed-changes-lists}
 
@@ -387,7 +390,7 @@ För Adobe Experience Manager 6.4, [läs listan över borttagna funktioner](depr
 
 [AEM Communities](communities-release-notes.md)
 
-[AEM-formulär](forms.md)
+[AEM Forms](forms.md)
 
 [AEM Foundation](wcm-platform.md)
 
@@ -399,7 +402,7 @@ För Adobe Experience Manager 6.4, [läs listan över borttagna funktioner](depr
 
 Dessa webbplatser är bara tillgängliga för kunder. Om du är kund och behöver åtkomst kontaktar du din kontoansvarige på Adobe.
 
-* [](https://daycare.day.com) Hämta [produkt på licensing.adobe.com](https://licensing.adobe.com/)
+* [](https://daycare.day.com) [Produktnedladdning på licensing.adobe.com](https://licensing.adobe.com/)
 
 * [Kundsupport på day.day.com](https://daycare.day.com)
 
