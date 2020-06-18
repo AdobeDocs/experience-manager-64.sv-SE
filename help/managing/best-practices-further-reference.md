@@ -10,7 +10,10 @@ topic-tags: managing-checklist
 content-type: reference
 discoiquuid: 6fc2751e-f42a-4519-bc8c-695057f21b69
 translation-type: tm+mt
-source-git-commit: 8145f71848e956647cb4321aaa432b33b9ef9383
+source-git-commit: b7be355f788f07eea2d1333abb4220dd645ef53f
+workflow-type: tm+mt
+source-wordcount: '3767'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ När du implementerar AEM (särskilt för första gången) måste du granska [fu
 Fundera på vilka funktioner i AEM du kommer att använda och vilken effekt det har på din design. till exempel:
 
 * [Handel](/help/sites-administering/ecommerce.md)
-* [Skärmar](/help/screens/aem-screens-introduction.md)
+* [Skärmar](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
 * [Assets](/help/assets/assets.md)
 * [Taggar](/help/sites-administering/tags.md)
 * [Hantering och översättning av flera webbplatser](/help/sites-administering/msm-and-translation.md)
@@ -130,7 +133,7 @@ Denna information kan definieras i en projekthandbok. en Wiki kan också bidra t
 * Alla berörda personer informeras tydligt om informationen. Även om det är en vanlig projekthanteringspraxis kan den inte upprepas tillräckligt ofta, så att en tydlig rolldefinition och bra kommunikation kan skapa, eller bryta, ett projekt.
 * Endast en version av all information som spåras behålls. till exempel felspårning, problemspårning osv.
 
-## Viktiga resultatindikatorer och målvärden {#key-performance-indicators-and-target-metrics}
+## Viktiga prestandaindikatorer och Target-mått {#key-performance-indicators-and-target-metrics}
 
 Organisationer använder nyckeltal (KPI:er) för att utvärdera hur de lyckades uppnå sina mål. Dessa indikatorer är mätbara värden som kan användas för att visa hur effektivt specifika mål uppfylls.
 
@@ -148,7 +151,7 @@ Dessa indikatorer kan vara
 
 Vissa indikatorer, men inte alla, kan baseras på målmåtten som du identifierar och definierar.
 
-### Måttmål {#target-metrics}
+### Target Metrics {#target-metrics}
 
 Mätvärden används för att definiera kvantitativa mått för kvaliteten på din webbplats - de är i princip en definition av de prestationsmål som du vill uppnå och kan användas för att definiera [nyckeltal (nyckeltal för prestandaindikatorer)](#key-performance-indicators-and-target-metrics).
 
@@ -160,7 +163,7 @@ Många mätvärden kan definieras, men ofta täcker de mål som du har satt upp 
 * &quot;När jag söker *stannar* systemet&quot; - vilket slags sökförfrågningar påverkar systemet?
 * &quot;det tar *lång tid* att hämta filen&quot; - vilka hämtningstider är tillåtna (under normala nätverksförhållanden)?
 
-Målmått definieras i början av ett projekt till:
+Target Metrics definieras i början av ett projekt för att:
 
 * ange de förväntade dimensionerna för den webbplats du kommer att erbjuda
 * ange den minimikvalitet som du vill uppnå
@@ -237,7 +240,7 @@ Ett viktigt problem är den tid det tar för er webbplats att svara på besökar
 
 Olika mål för skribent- och publiceringsmiljöer
 
-De svarstider du vill använda skiljer sig åt mellan skribent- och publiceringsmiljöerna, vilket återspeglar målgruppen:
+De svarstider du vill ha skiljer sig åt mellan skribent- och publiceringsmiljöerna, vilket återspeglar målgruppen:
 
 * **Författarmiljö**
 
@@ -320,7 +323,7 @@ Dessa bör planeras och integreras redan från början av projektet. De övervak
 
 * **Programmerade mekanismer för mätning av svarstider för sökningar**
 
-   Om du vill anpassa den information du samlar in om sökförfrågningar och hur de fungerar rekommenderar vi att du inkluderar informationsinsamling i projektets källkod. Mer information finns i [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) .
+   Om du vill anpassa den information du samlar in om sökförfrågningar och hur de fungerar, rekommenderar vi att du inkluderar informationsinsamling i projektets källkod. Mer information finns i [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) .
 
 ### Samtidighet {#concurrency}
 
@@ -356,7 +359,7 @@ Innan du diskuterar relaterade mätvärden ska du göra en snabb definition av t
    |---|---|---|
    | Klient | Datorkraft i användarens dator. | Sidlayoutens komplexitet. |
    | Nätverk | Nätverksbandbredd. | Sidans storlek (kod, bilder o.s.v.). |
-   | Dispatcher-cache | Webbserverns serverminne (huvudminne och hårddisk). | Webbserver (huvudminne och hårddisk). Antal och storlek för cachelagrade sidor. |
+   | Dispatcher cache | Webbserverns serverminne (huvudminne och hårddisk). | Webbserver (huvudminne och hårddisk). Antal och storlek för cachelagrade sidor. |
    | Utdatacache | AEM-serverns serverminne (huvudminne och hårddisk). | Antal och storlek för sidorna i utdatacachen, antalet beroenden per sida. Dispatcher-cachen sänker volymen. |
    | Webbserver | Webbserverns datorkraft. | Antal begäranden. Cachelagring sänker volymen. |
    | Mall | Webbserverns datorkraft. | Mallarnas komplexitet. |
