@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 6696c325-d188-41c8-a39f-c8ae7f339fe8
 translation-type: tm+mt
-source-git-commit: 4d5cc3a785be782e79a53d18cb9bb5beba60f61d
+source-git-commit: b7be355f788f07eea2d1333abb4220dd645ef53f
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 0%
+source-wordcount: '1843'
+ht-degree: 1%
 
 ---
 
@@ -59,7 +59,7 @@ När du har lärt dig grunderna hittar du mer avancerad och detaljerad informati
 * [Riktlinjer för prestanda](/help/sites-deploying/performance-guidelines.md)
 * [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md)
 * [Uppdatera definitioner för frisläppningsfordon](/help/sites-deploying/update-release-vehicle-definitions.md)
-* [Vad är AEM Screens?](/help/screens/aem-screens-introduction.md)
+* [Vad är AEM Screens?](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
 ## Grundläggande begrepp {#basic-concepts}
 
@@ -104,7 +104,7 @@ I följande avsnitt beskrivs båda scenarierna:
 
 * **Lokalt**: AEM driftsätts och hanteras i din företagsmiljö.
 
-* **Hanterade tjänster - Cloud Manager för Adobe Experience Manager**: AEM distribueras och hanteras av Adobes hanterade tjänster.
+* **Hanterade tjänster - Cloud Manager för Adobe Experience Manager**: AEM distribueras och hanteras av Adobe Managed Services.
 
 ### On-premise {#on-premise}
 
@@ -118,11 +118,11 @@ AEM Managed Services är en komplett lösning för hantering av digitala uppleve
 
 Med AEM Managed Services kan kunderna uppnå följande fördelar:
 
-**Snabbare time to market:** Med flexibel molninfrastruktur i Adobe Managed Services kan organisationer snabbt planera, lansera och optimera framgångsrika digitala upplevelser. Adobe hanterar molnarkitekturen utan ytterligare kapital-, maskinvaru- eller programvarubehov och Adobes Customer Success Engineers, hjälp med AEM-arkitektur, provisionering, anpassning för att ansluta till back-end-appar och bästa praxis för att publicera.
+**Snabbare time to market:** Med flexibel molninfrastruktur för Adobe Managed Services kan organisationer snabbt planera, lansera och optimera framgångsrika digitala upplevelser. Adobe hanterar molnarkitekturen utan ytterligare kapital-, maskinvaru- eller programvarubehov och Adobes Customer Success Engineers, hjälp med AEM-arkitektur, provisionering, anpassning för att ansluta till back-end-appar och bästa praxis för att publicera.
 
 **Högre prestanda:** Ger tillförlitliga digitala upplevelser för företaget med fyra alternativ för tillgänglighet: 99,5 %, 99,9 %, 99,95 % och 99,99 %. Dessutom kan man med programmet automatiskt säkerhetskopiera och återställa flera lägen för att säkerställa tillförlitlighet och beredskapshantering.
 
-**Optimerade IT-kostnader:** Proaktiv vägledning och expertis hjälper organisationer att hålla sig uppdaterade med den senaste versionen av AEM. Adobe Platinum Maintenance and Support ingår automatiskt i nya driftsättningar av AMS Enterprise/Basic, med teknisk expertis och driftserfarenhet som hjälper företag att underhålla sina verksamhetskritiska applikationer. Kostnadsfria grundläggande analyser eller Target-funktioner ger ytterligare värde, särskilt för medelstora organisationer med begränsade behov av analys och personalisering.
+**Optimerade IT-kostnader:** Proaktiv vägledning och expertis hjälper organisationer att hålla sig uppdaterade med den senaste versionen av AEM. Adobe Platinum Maintenance and Support ingår automatiskt i nya driftsättningar av AMS Enterprise/Basic, med teknisk expertis och driftserfarenhet som hjälper företag att underhålla sina verksamhetskritiska applikationer. Kostnadsfria grundläggande Analytics- och Target-funktioner ger ytterligare värde, särskilt för medelstora organisationer med begränsade behov av analys och personalisering.
 
 **Högsta säkerhet:** Säkerställer fysisk säkerhet, nätverks- och datasäkerhet i företagsklass genom att lagra kundapplikationer i en begränsad åtkomstfunktion, bakom brandväggssystem eller i ett virtuellt privat moln. Den innehåller virtuella datorer med en klientorganisation och robust kryptering för datalagring, antivirala program och dataisolering.
 
@@ -134,7 +134,7 @@ Mer information om Cloud Manager och dess resurser finns i användarhandboken f�
 
 ### Förutsättningar {#prerequisites}
 
-Produktionsinstanser körs vanligtvis på dedikerade datorer som kör ett operativsystem som stöds officiellt (se [Tekniska krav](/help/sites-deploying/technical-requirements.md)), men Experience Manager-servern körs i alla system som stöder [**Java Standard Edition 8 **](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+Medan produktionsinstanser vanligtvis körs på dedikerade datorer som kör ett operativsystem som stöds officiellt (se [Tekniska krav](/help/sites-deploying/technical-requirements.md)) kommer Experience Manager-servern att köras på alla system som stöder [**Java Standard Edition 8 **](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 För att bli bekant och utveckla med AEM är det mycket vanligt att använda en instans som är installerad på din lokala dator och som kör Apple OS X eller skrivbordsversioner av Microsoft Windows eller Linux.
 
@@ -321,5 +321,5 @@ Ovanstående avsnitt bör ge dig en god förståelse för grunderna i AEM-instal
 * [Riktlinjer för prestanda](/help/sites-deploying/performance-guidelines.md)
 * [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md)
 * [Uppdatera definitioner för frisläppningsfordon](/help/sites-deploying/update-release-vehicle-definitions.md)
-* [Vad är AEM Screens?](/help/screens/aem-screens-introduction.md)
+* [Vad är AEM Screens?](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
