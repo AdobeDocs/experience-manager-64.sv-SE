@@ -10,7 +10,10 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
 translation-type: tm+mt
-source-git-commit: d97828afee7a65e7a4036912c1cc8726404088c9
+source-git-commit: 97d60c4d18b7842f9fc7c81be33ac1acfca8b24d
+workflow-type: tm+mt
+source-wordcount: '2803'
+ht-degree: 1%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: d97828afee7a65e7a4036912c1cc8726404088c9
 
 ## Introduktion {#introduction}
 
-Avlastning distribuerar bearbetningsåtgärder som är Experience Manager-instanser i en topologi. Med avlastning kan du använda specifika Experience Manager-instanser för att utföra specifika typer av bearbetning. Specialiserad bearbetning gör att du kan maximera användningen av tillgängliga serverresurser.
+Avlastning av distribuerar bearbetningsuppgifter som är Experience Manager instanser i en topologi. Med avlastning kan du använda särskilda Experience Manager-instanser för att utföra vissa typer av bearbetning. Specialiserad bearbetning gör att du kan maximera användningen av tillgängliga serverresurser.
 
-Avlastningen baseras på funktionerna [Apache Sling Discovery](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html) och Sling JobManager. Om du vill använda avlastning lägger du till Experience Manager-kluster i en topologi och identifierar de jobbämnen som klusterprocessen omfattar. Kluster består av en eller flera Experience Manager-instanser, så att en enda instans betraktas som ett kluster.
+Avlastningen baseras på funktionerna [Apache Sling Discovery](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html) och Sling JobManager. Om du vill använda avlastning lägger du till Experience Manager-kluster i en topologi och identifierar de jobbämnen som klusterprocessen gör. Kluster består av en eller flera instanser av Experience Manager, så att en enda instans betraktas som ett kluster.
 
 Mer information om hur du lägger till instanser i en topologi finns i [Administrera topologier](/help/sites-deploying/offloading.md#administering-topologies).
 
@@ -53,7 +56,7 @@ När ett jobb skapas garanteras nyttolasten bara finnas på instansen som skapar
 
 Topologier är löst kopplade Experience Manager-kluster som deltar i avlastning. Ett kluster består av en eller flera Experience Manager-serverinstanser (en enda instans betraktas som ett kluster).
 
-Varje Experience Manager-instans kör följande avlastningsrelaterade tjänster:
+Varje instans i Experience Manager kör följande avlastningsrelaterade tjänster:
 
 * Discovery Service: Skickar begäranden till en Topology Connector om att gå med i topologin.
 * Topology Connector: Tar emot kopplingsbegäranden och godkänner eller avvisar varje begäran.
@@ -66,13 +69,13 @@ Varje kluster i topologin innehåller en instans som identifieras som ledare. Kl
 
 ### Visa topologin {#viewing-the-topology}
 
-Använd Topology Browser för att utforska läget för den topologi där Experience Manager-instansen deltar. Topology Browser visar kluster och instanser av topologin.
+Använd Topology Browser för att utforska läget för topologin där Experience Manager-instansen deltar. Topology Browser visar kluster och instanser av topologin.
 
 För varje kluster visas en lista med klustermedlemmar som anger i vilken ordning varje medlem har anslutit till klustret och vilken medlem som är ledare. Egenskapen Current anger instansen som du för närvarande administrerar.
 
 För varje instans i klustret kan du se flera topologirelaterade egenskaper:
 
-* En vitlista med ämnen för instansens jobbkonsument.
+* En lista över tillåtna ämnen för instansens jobbkonsument.
 * De slutpunkter som exponeras för anslutning till topologin.
 * De jobbämnen som instansen är registrerad för avlastning för.
 * Jobbämnena som instansen bearbetar.
@@ -103,12 +106,12 @@ Gör så här för att öppna sidan Topology Management i webbkonsolen:
 
 ### Konfigurera topologimedlemskap {#configuring-topology-membership}
 
-Resursbaserad sökningstjänst för Apache Sling körs på varje instans för att styra hur Experience Manager-instanser interagerar med en topologi.
+Resursbaserad sökningstjänst för Apache Sling körs på varje instans för att styra hur instanser från Experience Manager interagerar med en topologi.
 
-Identifieringstjänsten skickar periodiska POST-begäranden (hjärtslag) till Topology Connector-tjänster för att upprätta och underhålla anslutningar till topologin. Topology Connector-tjänsten underhåller en vitlista över IP-adresser eller värdnamn som tillåts ansluta till topologin:
+Identifieringstjänsten skickar periodiska POST-begäranden (hjärtslag) till Topology Connector-tjänster för att upprätta och underhålla anslutningar till topologin. Topology Connector-tjänsten upprätthåller en lista över tillåtna IP-adresser eller värdnamn som tillåts ansluta till topologin:
 
 * Om du vill koppla en instans till en topologi anger du URL:en för Topology Connector-tjänsten för rotmedlemmen.
-* Om du vill att en instans ska kunna ansluta till en topologi lägger du till instansen i vitlistan för rotmedlemmens Topology Connector-tjänst.
+* Om du vill att en instans ska kunna ansluta till en topologi lägger du till instansen i listan över tillåtna för rotmedlemmens Topology Connector-tjänst.
 
 Använd webbkonsolen eller en sling:OsgiConfig-nod för att konfigurera följande egenskaper för tjänsten org.apache.sling.discovery.impt.Config:
 
@@ -145,7 +148,7 @@ Använd webbkonsolen eller en sling:OsgiConfig-nod för att konfigurera följand
    <td>http://localhost:4502/libs/sling/topology/connector</td> 
   </tr> 
   <tr> 
-   <td>Topology Connector Whitelist</td> 
+   <td>Topology Connector - lista över tillåtna</td> 
    <td>topologyConnectorWhitelist</td> 
    <td>Listan över IP-adresser eller värdnamn som tillåts av den lokala Topology Connector-tjänsten i topologin. </td> 
    <td><p>localhost</p> <p>127.0.0.1</p> </td> 
@@ -166,16 +169,16 @@ Använd följande procedur för att ansluta en CQ-instans till rotmedlemmen i en
 1. Klicka på Konfigurera sökningstjänst.
 1. Lägg till ett objekt i egenskapen Topology Connector URL:er och ange URL:en för rotopologimedlemmens Topology Connector-tjänst. URL:en har formatet https://rootservername:4502/libs/sling/topology/connector.
 
-Utför följande procedur på rotmedlemmen i topologin. I proceduren läggs namnen på de andra topologimedlemmarna till i listan över godkända identifieringstjänster.
+Utför följande procedur på rotmedlemmen i topologin. Proceduren lägger till namnen på de andra topologimedlemmarna i listan över tillåtna identifieringstjänster.
 
 1. Öppna webbkonsolen i webbläsaren. ([http://localhost:4502/system/console](http://localhost:4502/system/console))
 1. Klicka på Meny > Topologihantering.
 1. Klicka på Konfigurera sökningstjänst.
-1. För varje medlem i topologin lägger du till ett objekt i vitlisteegenskapen för topologikopplingen och anger värdnamnet eller IP-adressen för topologimedlemmen.
+1. För varje medlem i topologin lägger du till ett objekt i listeegenskapen Tillåt i Topology Connector och anger värdnamnet eller IP-adressen för topologimedlemmen.
 
 ## Konfigurera ämnesförbrukning {#configuring-topic-consumption}
 
-Använd Avlastningsläsaren för att konfigurera ämnesförbrukning för Experience Manager-instanser i topologin. För varje förekomst kan du ange ämnen som den upptar. Om du till exempel vill konfigurera din topologi så att endast en instans förbrukar ämnen av en viss typ, inaktiverar du ämnet för alla instanser utom en.
+Använd Avlastningsläsaren för att konfigurera ämnesförbrukning för Experience Manager-instanserna i topologin. För varje förekomst kan du ange ämnen som den upptar. Om du till exempel vill konfigurera din topologi så att endast en instans förbrukar ämnen av en viss typ, inaktiverar du ämnet för alla instanser utom en.
 
 Jobb distribueras som summeringsinstanser där det associerade ämnet är aktiverat med hjälp av resurslogik.
 
@@ -197,7 +200,7 @@ Jobb distribueras som summeringsinstanser där det associerade ämnet är aktive
    * Aktiverad: Den här instansen förbrukar jobb i det här avsnittet.
    * Inaktiverad: Den här instansen förbrukar inte jobb i det här avsnittet.
    * Exklusivt: Den här instansen förbrukar endast jobb i det här avsnittet.
-   **** Obs! När du väljer Exklusiv för ett ämne ställs alla andra ämnen automatiskt in på Inaktiverad.
+   **Obs!** När du väljer Exklusiv för ett ämne ställs alla andra ämnen automatiskt in på Inaktiverad.
 
 ### Installerade jobbkonsumenter {#installed-job-consumers}
 
@@ -205,24 +208,24 @@ Flera JobConsumer-implementeringar installeras med Experience Manager. Ämnen so
 
 | Jobbämne | Tjänst-PID | Beskrivning |
 |---|---|---|
-| / | org.apache.sling.event.impl.job.deprecated.EventAdminBridge | Installerat med Apache Sling. Bearbetar jobb som genereras av OSGi-händelseadministratören för bakåtkompatibilitet. |
-| com/day/cq/replication/job/&amp;ast; | com.day.cq.replikation.impl.AgentManagerImpl | En replikeringsagent som replikerar jobbnyttolaster. |
+| / | org.apache.sling.event.impl.jobs.deprecated.EventAdminBridge | Installerat med Apache Sling. Bearbetar jobb som genereras av OSGi-händelseadministratören för bakåtkompatibilitet. |
+| com/day/cq/replication/job/&amp;ast; | com.day.cq.replication.impl.AgentManagerImpl | En replikeringsagent som replikerar jobbnyttolaster. |
 | com/adobe/granite/workflow/offloading | com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer | Bearbetar jobb som genereras av arbetsflödet DAM Update Asset Offloader. |
 
 ### Inaktivera och aktivera ämnen för en instans {#disabling-and-enabling-topics-for-an-instance}
 
-Tjänsten Apache Sling Job Consumer Manager ger ämnesvitlistnings- och svartlistningsegenskaper. Konfigurera dessa egenskaper för att aktivera eller inaktivera bearbetning av specifika ämnen i en Experience Manager-instans.
+Tjänsten Apache Sling Job Consumer Manager tillhandahåller egenskaperna för ämneslistor och blockeringslistor. Konfigurera dessa egenskaper för att aktivera eller inaktivera bearbetning av specifika ämnen i en Experience Manager-instans.
 
-**** Obs! Om instansen tillhör en topologi kan du även använda Avlastningsläsaren på vilken dator som helst i topologin för att aktivera eller inaktivera ämnen.
+**Obs!** Om instansen tillhör en topologi kan du även använda Avlastningsläsaren på vilken dator som helst i topologin för att aktivera eller inaktivera ämnen.
 
-Den logik som skapar listan med aktiverade ämnen tillåter först alla ämnen som finns i vitlistan och tar sedan bort ämnen som finns i svartlistan. Som standard aktiveras alla ämnen (vitlistvärdet är `*`) och inga ämnen inaktiveras (svartlistan har inget värde).
+Den logik som skapar listan med aktiverade ämnen tillåter först alla ämnen som finns i listan över tillåtna och tar sedan bort ämnen som finns i blocklistan. Som standard är alla ämnen aktiverade (värdet i listan över tillåtna är `*`) och inga ämnen är inaktiverade (listan över tillåtna har inget värde).
 
 Använd webbkonsolen eller en `sling:OsgiConfig` nod för att konfigurera följande egenskaper. För `sling:OsgiConfig` noder är PID för tjänsten Job Consumer Manager org.apache.sling.event.impl.job.JobConsumerManager.
 
 | Egenskapsnamn i webbkonsolen | OSGi ID | Beskrivning |
 |---|---|---|
-| Ämnesvitlista | job.sumermanager.whitelist | En lista med ämnen som den lokala JobManager-tjänsten bearbetar. Standardvärdet för &amp;ast; skickar alla ämnen till den registrerade TopicConsumer-tjänsten. |
-| Ämnessvartlista | job.sumermanager.svartlist | En lista med ämnen som den lokala JobManager-tjänsten inte bearbetar. |
+| Ämnesvitlista | job.consumermanager.whitelist | En lista med ämnen som den lokala JobManager-tjänsten bearbetar. Standardvärdet för &amp;ast; skickar alla ämnen till den registrerade TopicConsumer-tjänsten. |
+| Ämnessvartlista | job.consumermanager.blacklist | En lista med ämnen som den lokala JobManager-tjänsten inte bearbetar. |
 
 ## Skapar replikeringsagenter för avlastning {#creating-replication-agents-for-offloading}
 
@@ -270,7 +273,7 @@ Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
 ### Skapar den utgående agenten {#creating-the-outgoing-agent}
 
-1. Skapa en **replikeringsagent** på författaren. (Se [dokumentationen för replikeringsagenter](/help/sites-deploying/replication.md).) Ange en **titel**. Namnet **** måste följa namnkonventionen.
+1. Skapa en **replikeringsagent** på författaren. (Se [dokumentet för replikeringsagenter](/help/sites-deploying/replication.md).) Ange en **titel**. Namnet **** måste följa namnkonventionen.
 1. Skapa agenten med följande egenskaper:
 
    | Egenskap | Värde |
@@ -325,11 +328,11 @@ Som standard kör Experience Manager arbetsflödet DAM Update Asset när en DAM-
 
 Följande procedur utgår från följande egenskaper för avlastningstopologin:
 
-* En eller flera Experience Manager-instanser är författarinstanser som användarna interagerar med för att lägga till eller uppdatera DAM-resurser.
-* Användarna interagerar inte direkt med en eller flera Experience Manager-instanser som bearbetar DAM-resurserna. De här instanserna är dedikerade till bakgrundsbearbetning av DAM-resurser.
+* En eller flera Experience Manager-instanser är redigeringsinstanser som användare interagerar med för att lägga till eller uppdatera DAM-resurser.
+* Användare som inte interagerar direkt med en eller flera Experience Manager-instanser som bearbetar DAM-resurserna. De här instanserna är dedikerade till bakgrundsbearbetning av DAM-resurser.
 
-1. Konfigurera sökningstjänsten för varje instans av Experience Manager så att den pekar på rottopografikopplingen. (Se [Konfigurera topologimedlemskap](#title4).)
-1. Konfigurera rotTopography Connector så att de anslutande instanserna finns i vitlistan.
+1. Konfigurera sökningstjänsten för varje Experience Manager-instans så att den pekar på rotkonnektorn för topografi. (Se [Konfigurera topologimedlemskap](#title4).)
+1. Konfigurera rotTopography Connector så att anslutande instanser finns i listan över tillåtna.
 1. Öppna Avlastningsläsaren och inaktivera `com/adobe/granite/workflow/offloading` avsnittet om de instanser som användarna interagerar med för att överföra eller ändra DAM-resurser.
 
    ![chlimage_1-116](assets/chlimage_1-116.png)
