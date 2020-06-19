@@ -1,53 +1,56 @@
 ---
 title: Installera och konfigurera datainhämtningsfunktioner
 seo-title: Installera och konfigurera datainhämtningsfunktioner
-description: Installera och konfigurera adaptiva formulär, PDF-formulär och HTML5-formulär. Konfigurera Adobe Analytics och Adobe Target för adaptiva formulär för att analysera användningen av formulär och målanvändare utifrån deras profil.
-seo-description: Installera och konfigurera adaptiva formulär, PDF-formulär och HTML5-formulär. Konfigurera Adobe Analytics och Adobe Target för adaptiva formulär för att analysera användningen av formulär och målanvändare utifrån deras profil.
+description: Installera och konfigurera adaptiva formulär, PDF forms och HTML5-formulär. Konfigurera Adobe Analytics och Adobe Target för adaptiva formulär för att analysera användningen av formulär och målanvändare utifrån deras profil.
+seo-description: Installera och konfigurera adaptiva formulär, PDF forms och HTML5-formulär. Konfigurera Adobe Analytics och Adobe Target för adaptiva formulär för att analysera användningen av formulär och målanvändare utifrån deras profil.
 uuid: ce253b5a-eeb2-47d2-a6c9-e6f59384159a
 contentOwner: khsingh
 topic-tags: installing
 discoiquuid: 1bb8360c-5543-484e-9712-590822211298
 translation-type: tm+mt
-source-git-commit: 0b8a0ca75e3d440bb00f655d5af136e5e70378d9
+source-git-commit: a3e7cd30ba6933e6f36734d3b431db41365b6e20
+workflow-type: tm+mt
+source-wordcount: '1857'
+ht-degree: 0%
 
 ---
 
 
 # Installera och konfigurera datainhämtningsfunktioner {#install-and-configure-data-capture-capabilities}
 
-Installera och konfigurera adaptiva formulär, PDF-formulär och HTML5-formulär. Konfigurera Adobe Analytics och Adobe Target för adaptiva formulär för att analysera användningen av formulär och målanvändare utifrån deras profil.
+Installera och konfigurera adaptiva formulär, PDF forms och HTML5-formulär. Konfigurera Adobe Analytics och Adobe Target för adaptiva formulär för att analysera användningen av formulär och målanvändare utifrån deras profil.
 
 ## Introduktion {#introduction}
 
-AEM Forms innehåller en uppsättning formulär för att hämta data från slutanvändaren: adaptiva formulär, HTML5-formulär och PDF-formulär. Det innehåller även verktyg för att lista alla tillgängliga formulär på en webbsida, analysera formuläranvändningen och för att identifiera målanvändare utifrån deras profil. Dessa funktioner ingår i tilläggspaketet AEM Forms. Tilläggspaketet distribueras på en Author- eller Publish-instans av AEM.
+AEM Forms tillhandahåller en uppsättning formulär för att hämta data från slutanvändaren: adaptiva formulär, HTML5-formulär och PDF forms. Det innehåller även verktyg för att lista alla tillgängliga formulär på en webbsida, analysera formuläranvändningen och för att identifiera målanvändare utifrån deras profil. Dessa funktioner ingår i tilläggspaketet för AEM Forms. Tilläggspaketet distribueras på en Author- eller Publish-instans av AEM.
 
-**** Adaptiva former: Dessa formulär ändrar utseende baserat på enhetens skärmstorlek, är engagerande och interaktiva till sin natur. Adaptiva formulär kan även integreras med Adobe Analytics, Adobe Sign och Adobe Target. Ni kunde leverera personaliserade formulär och processorienterade upplevelser till användarna baserat på deras demografi och andra funktioner. Du kan även integrera adaptiva formulär med Adobe Sign.
+**Adaptiva former:** Dessa formulär ändrar utseende baserat på enhetens skärmstorlek, är engagerande och interaktiva till sin natur. Adaptiva formulär kan även integreras med Adobe Analytics, Adobe Sign och Adobe Target. Ni kunde leverera personaliserade formulär och processorienterade upplevelser till användarna baserat på deras demografi och andra funktioner. Du kan även integrera adaptiva formulär med Adobe Sign.
 
-**PDF-formulär** är lämpliga för utskrift på pixelnivå och digital information som samlas in i ett PDF-dokument. I den digitala avataren kan du använda Adobe Acrobat eller Acrobat Reader för att fylla i dessa formulär. Du kan lägga upp dessa formulär på din webbplats eller använda formulärportalen för att lista dem på en AEM-webbplats. Du kan även skicka dessa formulär till andra som bilagor. De här formulären passar bäst för skrivbordsmiljöer.
+**PDF forms** passar för pixelperfekt utskrift och digital informationsinhämtning i ett PDF-dokument. I den digitala avataren kan du använda Adobe Acrobat eller Acrobat Reader för att fylla i dessa formulär. Du kan lägga upp dessa formulär på din webbplats eller använda formulärportalen för att lista dem på en AEM-webbplats. Du kan även skicka dessa formulär till andra som bilagor. De här formulären passar bäst för skrivbordsmiljöer.
 
-**HTML5-formulär** är den webbläsarvänliga versionen av PDF-formulär. HTML5-formulär är lämpliga för miljöer som inte stöder PDF-plugin-program. HTML5-formulär möjliggör återgivning av XFA-baserade formulär på mobila enheter och webbläsare på datorer där XFA-baserad PDF inte stöds. Dessa formulär passar bäst för surfplattor och datorer.
+**HTML5-formulär** är en webbläsarvänlig version av PDF forms. HTML5-formulär är lämpliga för miljöer som inte stöder PDF-plugin-program. HTML5-formulär möjliggör återgivning av XFA-baserade formulär på mobila enheter och webbläsare på datorer där XFA-baserad PDF inte stöds. Dessa formulär passar bäst för surfplattor och datorer.
 
-AEM Forms är en kraftfull plattform i företagsklass och datainhämtning (adaptiva formulär, PDF-formulär och HTML5-formulär) är bara en av funktionerna i AEM Forms. En fullständig lista över funktioner finns i [Introduktion till AEM Forms](/help/forms/using/introduction-aem-forms.md).
+AEM Forms är en kraftfull plattform i företagsklass och datainhämtning (adaptiva formulär, PDF forms och HTML5-formulär) är bara en av AEM Forms funktioner. En fullständig lista med funktioner finns i [Introduktion till AEM Forms](/help/forms/using/introduction-aem-forms.md).
 
 ## Distributionstopologi {#deployment-topology}
 
-AEM Forms-tilläggspaketet är ett program som distribueras till AEM. Du behöver bara minst en AEM Author- och AEM Publish-instans för att kunna köra datainhämtningsfunktionerna i AEM Forms. Följande topologi rekommenderas för att köra datainsamlingsfunktionerna i AEM Forms AEM Forms. Mer information om topologin finns i [Arkitektur och distributionstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
+AEM Forms är ett program som distribueras till AEM. Du behöver bara ha minst en instans av AEM Author och AEM Publish för att kunna köra datainhämtningsfunktionerna för AEM Forms. Följande topologi rekommenderas för att köra datainhämtningsfunktionerna i AEM Forms AEM Forms. Mer information om topologin finns i [Arkitektur och distributionstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
 
 ![rekommenderad topologi](assets/recommended-topology.png)
 
 ## Systemkrav {#system-requirements}
 
-Innan du börjar installera och konfigurera funktioner för datainhämtning i AEM Forms bör du kontrollera att:
+Innan du börjar installera och konfigurera AEM Forms för datainhämtningsfunktion måste du se till att:
 
 * Maskinvaru- och programvaruinfrastruktur finns på plats. En detaljerad lista över maskin- och programvara som stöds finns i [tekniska krav](/help/sites-deploying/technical-requirements.md).
 
 * Installationssökvägen för AEM-instansen innehåller inte blanksteg.
-* En AEM-instans körs. I AEM-terminologi är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. Du måste ha minst två [AEM-instanser (en författare och en publicering)](/help/sites-deploying/deploy.md) för att kunna köra datainhämtningsfunktionerna i AEM Forms:
+* En AEM-instans körs. I AEM-terminologi är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. Du måste ha minst två [AEM-instanser (en författare och en publicering)](/help/sites-deploying/deploy.md) för att kunna köra datainhämtningsfunktioner för AEM Forms:
 
    * **Författare**: En AEM-instans som används för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
    * **Publicera**: En AEM-instans som skickar det publicerade innehållet till allmänheten via internet eller ett internt nätverk.
 
-* Minneskraven uppfylls. AEM Forms-tilläggspaket kräver:
+* Minneskraven uppfylls. AEM Forms tilläggspaket kräver:
 
    * 15 GB temporärt utrymme för Microsoft Windows-baserade installationer.
    * 6 GB temporärt utrymme för UNIX-baserade installationer.
@@ -84,18 +87,18 @@ Innan du börjar installera och konfigurera funktioner för datainhämtning i AE
  </tbody> 
 </table>
 
-## Installera AEM Forms-tilläggspaket {#install-aem-forms-add-on-package}
+## Installera tilläggspaket för AEM Forms {#install-aem-forms-add-on-package}
 
-AEM Forms-tilläggspaketet är ett program som distribueras till AEM. Paketet innehåller datainhämtning från AEM Forms och andra funktioner. Så här installerar du tilläggspaketet:
+AEM Forms är ett program som distribueras till AEM. Paketet innehåller datainhämtning från AEM Forms och andra funktioner. Så här installerar du tilläggspaketet:
 
-1. Logga in på [AEM-servern](http://localhost:4502) som administratör och öppna [paketresursen](http://localhost:4502/crx/packageshare). Du måste ha ett Adobe-id för att kunna logga in på paketresursen.
-1. I [AEM-paketresursen](http://localhost:4502/crx/packageshare/login.html)söker du efter tilläggspaket **[!UICONTROL för]** AEM 6.4-formulär, klickar på det paket som gäller för ditt operativsystem och klickar på **[!UICONTROL Hämta]**. Läs och godkänn licensavtalet och klicka på **[!UICONTROL OK]**. Nedladdningen startar. När du har hämtat **[!UICONTROL visas ordet Hämtad]** bredvid paketet.
+1. Logga in på [AEM-servern](http://localhost:4502) som administratör och öppna [paketresursen](http://localhost:4502/crx/packageshare). Du måste ha ett Adobe ID för att kunna logga in på paketresursen.
+1. I [AEM-paketresursen](http://localhost:4502/crx/packageshare/login.html)söker du **[!UICONTROL AEM 6.4 Forms add-on packages]** efter, klickar på det paket som gäller för ditt operativsystem och klickar på **[!UICONTROL Download]**. Läs och godkänn licensavtalet och klicka på **[!UICONTROL OK]**. Nedladdningen startar. Ordet **[!UICONTROL Downloaded]** visas bredvid paketet när du har hämtat det.
 
-   Du kan också använda versionsnumret för att söka efter ett tilläggspaket. Versionsnummer för det senaste paketet finns i artikeln om [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
+   Du kan också använda versionsnumret för att söka efter ett tilläggspaket. Versionsnummer för det senaste paketet finns i artikeln om [AEM Forms-releaser](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
 
-1. När nedladdningen är klar klickar du på **[!UICONTROL Nedladdad]**. Du omdirigeras till pakethanteraren. I pakethanteraren söker du efter det hämtade paketet och klickar på **[!UICONTROL Installera]**.
+1. När nedladdningen är klar klickar du på **[!UICONTROL Downloaded]**. Du omdirigeras till pakethanteraren. I pakethanteraren söker du efter det hämtade paketet och klickar på **[!UICONTROL Install]**.
 
-   Om du hämtar paketet manuellt via den direktlänk som visas i artikeln [AEM Forms Relases](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) loggar du in på pakethanteraren, klickar på **[!UICONTROL Överför paket]**, markerar det hämtade paketet och klickar på Överför. När paketet har överförts klickar du på paketnamnet och sedan på **[!UICONTROL Installera]**.
+   Om du hämtar paketet manuellt via den direktlänk som visas i artikeln om [AEM Forms-releaser](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) loggar du in på pakethanteraren, klickar **[!UICONTROL Upload Package]** på det hämtade paketet och klickar på Överför. När paketet har överförts klickar du på paketnamnet och sedan på **[!UICONTROL Install]**.
 
 1. När paketet har installerats uppmanas du att starta om AEM-instansen. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i filen [AEM-Installation-Directory]/crx-quickstart/logs/error.log och loggen är stabil.
 1. Upprepa steg 1-4 för alla författarinstanser och publiceringsinstanser.
@@ -106,7 +109,7 @@ AEM Forms har några obligatoriska och valfria konfigurationer. De obligatoriska
 
 ### Obligatoriska efterinstallationskonfigurationer {#mandatory-post-installation-configurations}
 
-#### Konfigurera RSA- och BouncyCastle-bibliotek {#configure-rsa-and-bouncycastle-libraries}
+#### Konfigurera RSA- och BouncyCastle-bibliotek  {#configure-rsa-and-bouncycastle-libraries}
 
 Utför följande steg på alla författare- och publiceringsinstanser för att starta delegeringen av biblioteken:
 
@@ -133,18 +136,18 @@ Utför följande steg på alla författare- och publiceringsinstanser för att s
 
 #### Konfigurera serialiseringsagenten {#configure-the-serialization-agent}
 
-Utför följande steg på alla Author- och Publish-instanser för att vitlista paketet:
+Utför följande steg på alla författare- och publiceringsinstanser för att lägga till paketet i listan över tillåtna:
 
 1. Öppna AEM Configuration Manager i ett webbläsarfönster. Standardwebbadressen är `https://[server]:[port]/system/console/configMgr`.
-1. Sök efter och öppna **[!UICONTROL Brandväggskonfiguration]** för deserialisering.
-1. Lägg till paketet **[!UICONTROL sun.util.calendar]** i **[!UICONTROL vitlistefältet]** . Click **[!UICONTROL Save]**.
+1. Sök och öppna **[!UICONTROL Deserialization Firewall Configuration]**.
+1. Lägg till paketet **[!UICONTROL sun.util.calendar]** i **[!UICONTROL allowlist]** fältet. Klicka på **[!UICONTROL Save]**.
 1. Upprepa steg 1-3 för alla författarinstanser och publiceringsinstanser.
 
 ### Ytterligare konfigurationer efter installation {#optional-post-installation-configurations}
 
 #### Konfigurera Dispatcher {#configure-dispatcher}
 
-Dispatcher är ett verktyg för cachelagring och lastbalansering för AEM. AEM Dispatcher skyddar även AEM-servern mot attacker. Du kan öka säkerheten för din AEM-instans genom att använda Dispatcher tillsammans med en webbserver i företagsklass. Om du använder [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)gör du följande konfigurationer för AEM Forms:
+Dispatcher är ett verktyg för cachelagring och lastbalansering för AEM. AEM Dispatcher skyddar också AEM-servern mot attacker. Du kan öka säkerheten för din AEM-instans genom att använda Dispatcher tillsammans med en webbserver i företagsklass. Om du använder [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)ska du göra följande konfigurationer för AEM Forms:
 
 1. Konfigurera åtkomst för AEM Forms:
 
@@ -156,7 +159,7 @@ Dispatcher är ett verktyg för cachelagring och lastbalansering för AEM. AEM D
 
 1. Konfigurera tjänsten för refererarfilter:
 
-   Logga in som administratör i konfigurationshanteraren för Apache Felix. Konfigurationshanterarens standardwebbadress är `https://[server]:[port_number]/system/console/configMgr`. På menyn **[!UICONTROL Konfigurationer]** väljer du alternativet **[!UICONTROL Apache Sling Reference Filter]** . I fältet Tillåt värdar anger du värdnamnet för dispatchern så att den kan användas som referent och klickar på **[!UICONTROL Spara]**. Formatet på posten är `https://[server]:[port]`.
+   Logga in som administratör i konfigurationshanteraren för Apache Felix. Konfigurationshanterarens standardwebbadress är `https://[server]:[port_number]/system/console/configMgr`. Välj **[!UICONTROL Configurations]** alternativet på **[!UICONTROL Apache Sling Referrer Filter]** menyn. I fältet Tillåt värdar anger du värdnamnet för dispatchern så att den kan refereras och klickar på **[!UICONTROL Save]**. Formatet på posten är `https://[server]:[port]`.
 
 #### Konfigurera cache {#configure-cache}
 
@@ -168,7 +171,7 @@ Cachelagring är en mekanism som förkortar dataåtkomsttider, minskar fördröj
 Utför följande steg för att konfigurera cachen för adaptiva formulär:
 
 1. Gå till konfigurationshanteraren för AEM-webbkonsolen på `https://[server]:[port]/system/console/configMgr`.
-1. Klicka på **[!UICONTROL Adaptiv form och Interactive Communication Web Channel Configuration]** för att redigera dess konfigurationsvärden. I dialogrutan Redigera konfigurationsvärden anger du det maximala antalet formulär eller dokument som en instans av AEM Forms-servern kan cachelagra i fältet **[!UICONTROL Antal adaptiva formulär]** . Standardvärdet är 100. Click **[!UICONTROL Save]**.
+1. Klicka **[!UICONTROL Adaptive Form and Interactive Communication Web Channel Configuration]** för att redigera dess konfigurationsvärden. I dialogrutan Redigera konfigurationsvärden anger du det maximala antalet formulär eller dokument som en instans av AEM Forms-servern kan cachelagra i **[!UICONTROL Number of Adaptive Forms]** fältet. Standardvärdet är 100. Klicka på **[!UICONTROL Save]**.
 
    >[!NOTE]
    >
@@ -176,7 +179,7 @@ Utför följande steg för att konfigurera cachen för adaptiva formulär:
 
 #### Konfigurera SSL-kommunikation för formulärdatamodell {#configure-ssl-communcation-for-form-data-model}
 
-Du kan aktivera SSL-kommunikation för formulärdatamodellen. Om du vill aktivera SSL-kommunikation för formulärdatamodellen ska du lägga till certifikat i Java Trust Store för alla instanser innan du startar en AEM Forms-instans. Du kan köra följande kommando för att lägga till certifikaten: &quot;
+Du kan aktivera SSL-kommunikation för formulärdatamodellen. Om du vill aktivera SSL-kommunikation för formulärdatamodellen, innan du startar en AEM Forms-instans, lägger du till certifikat i Java Trust Store för alla instanser. Du kan köra följande kommando för att lägga till certifikaten: &quot;
 
 `keytool -import -alias <alias-name> -file <pathTo .cer certificate file> -keystore <<pathToJRE>\lib\security\cacerts>`
 
@@ -186,11 +189,11 @@ Adobe Sign möjliggör e-signaturarbetsflöden för anpassningsbara formulär. E
 
 I ett typiskt Adobe Sign och anpassningsbara formulär fyller en användare i ett anpassat formulär som kan användas för en tjänst. Till exempel kan en kreditkortsansökan och en medborgare få förmåner. När en användare fyller i, skickar och signerar ansökningsformuläret skickas formuläret till tjänsteleverantören för ytterligare åtgärder. Tjänsteleverantören granskar programmet och använder Adobe Sign för att markera programmet som godkänt. Om du vill aktivera liknande arbetsflöden för elektroniska signaturer kan du integrera Adobe Sign med AEM Forms.
 
-Om du vill använda Adobe Sign med AEM-formulär [integrerar du Adobe Sign med AEM-formulär](/help/forms/using/adobe-sign-integration-adaptive-forms.md).
+Om du vill använda Adobe Sign med AEM Forms ska du [integrera Adobe Sign med AEM Forms](/help/forms/using/adobe-sign-integration-adaptive-forms.md).
 
 #### Konfigurera Adobe Analytics {#configure-adobe-analytics}
 
-AEM Forms kan integreras med Adobe Analytics så att ni kan hämta in och spåra prestandamått för era publicerade formulär och dokument. Syftet med att analysera dessa värden är att fatta välgrundade beslut baserat på uppgifter om de ändringar som krävs för att göra formulär eller dokument mer användbara.
+AEM Forms kan integreras med Adobe Analytics så att ni kan samla in och spåra prestandamått för era publicerade formulär och dokument. Syftet med att analysera dessa värden är att fatta välgrundade beslut baserat på uppgifter om de ändringar som krävs för att göra formulär eller dokument mer användbara.
 
 Information om hur du använder Adobe Analytics med AEM Forms finns i [Konfigurera analyser och rapporter](/help/forms/using/configure-analytics-forms-documents.md).
 
@@ -198,11 +201,11 @@ Information om hur du använder Adobe Analytics med AEM Forms finns i [Konfigure
 
 Kunderna överger troligtvis ett formulär om upplevelsen inte är engagerande. Även om det är frustrerande för kunderna kan det också öka supportvolymen och kostnaderna för organisationen. Det är både viktigt och utmanande att identifiera och tillhandahålla rätt kundupplevelse som ökar konverteringsgraden. AEM-formulär innehåller nyckeln till det här problemet.
 
-AEM-formulär integreras med Adobe Target, en Adobe Marketing Cloud-lösning, för att leverera personaliserade och engagerande kundupplevelser i flera digitala kanaler. Om du vill använda Adobe Target till A/B-testformulär kan du [integrera Adobe Target med AEM Forms](/help/forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms).
+AEM-formulär kan integreras med Adobe Target, en Adobe Marketing Cloud-lösning, för att leverera personaliserade och engagerande kundupplevelser i flera digitala kanaler. Om du vill använda Adobe Target till A/B-testformulär kan du [integrera Adobe Target med AEM Forms](/help/forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms).
 
 ## Nästa steg {#next-steps}
 
-Du har konfigurerat en miljö för att använda funktionerna för datainhämtning i AEM Forms. Nästa steg mot att använda funktionen är:
+Du har konfigurerat en miljö för datainhämtning från AEM Forms. Nästa steg mot att använda funktionen är:
 
 * [Skapa ditt första anpassningsbara formulär](/help/forms/using/create-your-first-adaptive-form.md)
 * [Skapa ditt första PDF-formulär](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/designer-quickstart.pdf)
