@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: f192a8a3-1116-4d32-9b57-b53d532c0dbf
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: a3e7cd30ba6933e6f36734d3b431db41365b6e20
 workflow-type: tm+mt
 source-wordcount: '1520'
 ht-degree: 0%
@@ -88,7 +88,7 @@ Innan du startar om formulärservern efter en återställning gör du följande:
    1. Klicka på **Administratörsalternativ**.
    1. Klicka på **Start** för att synkronisera resurser från databasen.
 
-1. I en klustrad miljö bör huvudnoden (med avseende på AEM) vara uppe före slavnoderna.
+1. I en klustrad miljö bör den primära noden (med avseende på AEM) vara uppe före de sekundära noderna.
 1. Se till att inga processer initieras från interna eller externa källor som Web-, SOAP- eller EJB-processinitierare förrän systemets normala funktion har validerats.
 
 Om huvuddatabasen för AEM-formulär flyttas eller ändras läser du de installationsguider som är relevanta för programservern för att få information om hur du uppdaterar databasanslutningsinformationen för AEM-formulärdatakällorna IDP_DS och EDC_DS.
