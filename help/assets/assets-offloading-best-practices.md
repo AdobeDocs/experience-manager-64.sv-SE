@@ -3,7 +3,7 @@ title: Metodtips för att avlasta resurser
 description: Rekommenderade användningsexempel och bästa praxis för att avlasta arbetsflöden för tillgångsintag och replikering i AEM Assets.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
+source-git-commit: 31d652ee04fe75e96f96c9ddc5a6f2c3c64bd630
 workflow-type: tm+mt
 source-wordcount: '1818'
 ht-degree: 0%
@@ -17,15 +17,15 @@ ht-degree: 0%
 >
 >Den här funktionen är borttagen från och med AEM 6.4 och har tagits bort i AEM 6.5. Planera därefter.
 
-Hantering av stora filer och arbetsflöden som körs i Adobe Experience Manager (AEM) Assets kan ta mycket processorkraft, minne och I/O-resurser i anspråk. I synnerhet kan storleken på resurser, arbetsflöden, antalet användare och frekvensen för tillgångsinmatning påverka systemets totala prestanda. De mest resurskrävande åtgärderna är bland annat arbetsflöden för inhämtning och replikering av AEM-resurser. Intensiv användning av dessa arbetsflöden i en enda AEM-instans kan påverka redigeringseffektiviteten negativt.
+Att hantera stora filer och köra arbetsflöden i Adobe Experience Manager (AEM) Resurser kan ta mycket processorkraft, minne och I/O-resurser i anspråk. I synnerhet kan storleken på resurser, arbetsflöden, antalet användare och frekvensen för tillgångsinmatning påverka systemets totala prestanda. De mest resurskrävande åtgärderna är bland annat arbetsflöden för inhämtning och replikering av AEM-resurser. Intensiv användning av dessa arbetsflöden i en enda AEM-instans kan påverka redigeringseffektiviteten negativt.
 
 Genom att avlasta dessa uppgifter för dedikerade arbetarinstanser kan du minska kostnaderna för processor, minne och IO. I allmänhet är tanken bakom avlastning att distribuera uppgifter som förbrukar intensiva processor-/minnes-/IO-resurser till dedikerade arbetarinstanser. Följande avsnitt innehåller rekommenderade användningsfall för avlastning av resurser.
 
-## Avlastning av AEM-resurser {#aem-assets-offloading}
+## Avlastning av AEM Assets {#aem-assets-offloading}
 
-AEM Resurser implementerar ett internt resursspecifikt arbetsflödestillägg för avlastning. Det bygger på det allmänna arbetsflödestillägget som avlastningsramverket erbjuder, men innehåller ytterligare resursspecifika funktioner i implementeringen. Målet med resursavlastning är att effektivt köra arbetsflödet för DAM-uppdatering av tillgångar på en överförd resurs. Genom att avlasta resurser får du bättre kontroll över arbetsflödena för att lägga in material.
+AEM Assets implementerar ett internt resursspecifikt arbetsflödestillägg för avlastning. Det bygger på det allmänna arbetsflödestillägget som avlastningsramverket erbjuder, men innehåller ytterligare resursspecifika funktioner i implementeringen. Målet med resursavlastning är att effektivt köra arbetsflödet för DAM-uppdatering av tillgångar på en överförd resurs. Genom att avlasta resurser får du bättre kontroll över arbetsflödena för att lägga in material.
 
-## AEM Assets Offloading Components {#aem-assets-offloading-components}
+## Komponenter för avlastning av AEM Assets {#aem-assets-offloading-components}
 
 I följande diagram visas huvudkomponenterna i resursavlastningsprocessen:
 
@@ -112,6 +112,7 @@ Som standard används omvänd replikering för att hämta avlastade resurser fr�
 1. Ändra värdet för egenskapen `default.transport.agent-to-master.prefix` från `offloading_reverse` till `offloading`.
 
 <!-- TBD: Make updates to the configuration for allow and block list after product updates are done.
+TBD: Update the property in the last step when GRANITE-30586 is fixed.
 -->
 
 ### Använda delad datalager och binär replikering mellan författare och arbetare  {#using-shared-datastore-and-binary-less-replication-between-author-and-workers}
