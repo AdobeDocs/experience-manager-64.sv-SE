@@ -1,15 +1,18 @@
 ---
 title: Lägg till anpassad åtgärd/knapp i användargränssnittet Skapa korrespondens
 seo-title: Lägg till anpassad åtgärd/knapp i användargränssnittet Skapa korrespondens
-description: Lär dig hur du lägger till en anpassad åtgärd/knapp i användargränssnittet för Skapa korrespondens
-seo-description: Lär dig hur du lägger till en anpassad åtgärd/knapp i användargränssnittet för Skapa korrespondens
+description: Lär dig hur du lägger till en anpassad åtgärd/knapp i användargränssnittet för att skapa korrespondens
+seo-description: Lär dig hur du lägger till en anpassad åtgärd/knapp i användargränssnittet för att skapa korrespondens
 uuid: e3609371-caaa-4efe-8f63-4d982cd456ab
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 481856df-5db1-4ef5-80d3-3722b5bf8b67
 translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+source-git-commit: a3e7cd30ba6933e6f36734d3b431db41365b6e20
+workflow-type: tm+mt
+source-wordcount: '1797'
+ht-degree: 1%
 
 ---
 
@@ -42,7 +45,7 @@ Om du lägger till en knapp med en åtgärd (här skickar du ett brev för grans
 1. Gå till `https://[server]:[port]/[ContextPath]/crx/de` och logga in som administratör.
 1. I mappen apps skapar du en mapp med namnet `defaultApp` med sökvägen/strukturen som liknar defaultApp-mappen (som finns i config-mappen). Så här skapar du mappen:
 
-   * Högerklicka på mappen **[!UICONTROL defaultApp]** på följande sökväg och välj **[!UICONTROL Overlay Node]**:
+   * Högerklicka på **[!UICONTROL defaultApp]** mappen i följande sökväg och välj **[!UICONTROL Overlay Node]**:
 
       /libs/fd/cm/config/defaultApp/
 
@@ -50,27 +53,27 @@ Om du lägger till en knapp med en åtgärd (här skickar du ett brev för grans
 
    * Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg:/libs/fd/cm/config/defaultApp/
+      **[!UICONTROL Path:]** /libs/fd/cm/config/defaultApp/
 
-      **** Plats för övertäckning: /apps/
+      **[!UICONTROL Overlay Location:]** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **[!UICONTROL Match Node Types:]** Markerad
 
       ![Överläggsnod](assets/2_defaultappoverlaynode.png)
 
-   * Click **[!UICONTROL OK]**.
-   * Klicka på **[!UICONTROL Spara alla]**.
+   * Klicka på **[!UICONTROL OK]**.
+   * Klicka på **[!UICONTROL Save All]**.
 
 1. Skapa en kopia av filen acmExtensionsConfig.xml (finns under grenen /libs) under grenen /apps.
 
    * Gå till&quot;/libs/fd/cm/config/defaultApp/acmExtensionsConfig.xml&quot;
 
-   * Högerklicka på filen acmExtensionsConfig.xml och välj **[!UICONTROL Kopiera]**.
+   * Högerklicka på filen acmExtensionsConfig.xml och välj **[!UICONTROL Copy]**.
 
       ![Kopiera acmExtensionsConfig.xml](assets/3_acmextensionsconfig_xml_copy.png)
 
-   * Högerklicka på mappen **[!UICONTROL defaultApp]** på &quot;/apps/fd/cm/config/defaultApp/&quot; och välj **[!UICONTROL Klistra in]**.
-   * Klicka på **[!UICONTROL Spara alla]**.
+   * Högerklicka på **[!UICONTROL defaultApp]** mappen på &quot;/apps/fd/cm/config/defaultApp/&quot; och välj **[!UICONTROL Paste]**.
+   * Klicka på **[!UICONTROL Save All]**.
 
 1. Dubbelklicka på den kopia av acmExtentionsConfig.xml som du nyss skapade i mappen apps. Filen öppnas för redigering.
 1. Leta reda på följande kod:
@@ -118,31 +121,31 @@ Om du lägger till en knapp med en åtgärd (här skickar du ett brev för grans
    | Parametrar som innehåller prefixet cm_ i taggnamnet | Om en customAction innehåller en underordnad tagg som börjar med namnet cm_ är de här parametrarna tillgängliga i post-processen (vare sig det är A4 Post Process eller den speciella process som representeras av serviceName-taggen) under den aktuella taggen med cm_-prefixet borttaget. |
    | actionName | När en inläggsprocess beror på ett klick innehåller inskickad XML en speciell tagg med namnet under taggen med namnet på användaråtgärden. |
 
-1. Klicka på **[!UICONTROL Spara alla]**.
+1. Klicka på **[!UICONTROL Save All]**.
 
 #### Skapa en lokal mapp med egenskapsfilen i grenen /apps {#create-a-locale-folder-with-properties-file-in-the-apps-branch}
 
 Filen ACMExtensionsMessages.properties innehåller etiketter och knappbeskrivningsmeddelanden för olika fält i användargränssnittet Create Correspondence. Gör en kopia av den här filen i grenen /apps för att de anpassade åtgärderna/knapparna ska fungera.
 
-1. Högerklicka på mappen **[!UICONTROL locale]** på följande sökväg och välj **[!UICONTROL Overlay Node]**:
+1. Högerklicka på **[!UICONTROL locale]** mappen i följande sökväg och välj **[!UICONTROL Overlay Node]**:
 
-    /libs/fd/cm/config/defaultApp/locale
+   /libs/fd/cm/config/defaultApp/locale
 
 1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-   **** Sökväg: /libs/fd/cm/config/defaultApp/locale
+   **[!UICONTROL Path:]** /libs/fd/cm/config/defaultApp/locale
 
-   **** Plats för övertäckning: /apps/
+   **[!UICONTROL Overlay Location:]** /apps/
 
-   **** Matcha nodtyper:Markerad
+   **[!UICONTROL Match Node Types:]** Markerad
 
-1. Click **[!UICONTROL OK]**.
-1. Klicka på **[!UICONTROL Spara alla]**.
-1. Högerklicka på följande fil och välj **[!UICONTROL Kopiera]**:
+1. Klicka på **[!UICONTROL OK]**.
+1. Klicka på **[!UICONTROL Save All]**.
+1. Högerklicka på följande fil och välj **[!UICONTROL Copy]**:
 
    `/libs/fd/cm/config/defaultApp/locale/ACMExtensionsMessages.properties`
 
-1. Högerklicka på **[!UICONTROL språkmappen]** i följande sökväg och välj **[!UICONTROL Klistra in]**:
+1. Högerklicka på **[!UICONTROL locale]** mappen i följande sökväg och välj **[!UICONTROL Paste]**:
 
    `/apps/fd/cm/config/defaultApp/locale/`
 
@@ -156,7 +159,7 @@ Filen ACMExtensionsMessages.properties innehåller etiketter och knappbeskrivnin
 
    På samma sätt kan du lägga till fler egenskaper, t.ex. för verktygstips och format, i den här filen.
 
-1. Klicka på **[!UICONTROL Spara alla]**.
+1. Klicka på **[!UICONTROL Save All]**.
 
 #### Starta om paketet Adobe Asset Composer Building Block {#restart-the-adobe-asset-composer-building-block-bundle}
 
@@ -196,31 +199,31 @@ Hanteringen av åtgärd/knapp vid klickning innehåller logik för:
 
    Så här skapar du mappen:
 
-   1. Högerklicka på **[!UICONTROL js]** -mappen vid följande sökväg och välj **[!UICONTROL Överläggsnod]**:
+   1. Högerklicka på **[!UICONTROL js]** mappen i följande sökväg och välj **[!UICONTROL Overlay Node]**:
 
       `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js`
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js
+      **[!UICONTROL Path:]** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js
 
-      **** Plats för övertäckning: /apps/
+      **[!UICONTROL Overlay Location:]** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **[!UICONTROL Match Node Types:]** Markerad
 
-   1. Click **[!UICONTROL OK]**.
-   1. Klicka på **[!UICONTROL Spara alla]**.
+   1. Klicka på **[!UICONTROL OK]**.
+   1. Klicka på **[!UICONTROL Save All]**.
 
 1. I mappen js skapar du en fil med namnet crcustomization.js med koden för knappens åtgärdshantering enligt följande:
 
-   1. Högerklicka på **[!UICONTROL js]** -mappen på följande sökväg och välj **[!UICONTROL Skapa > Skapa fil]**:
+   1. Högerklicka på **[!UICONTROL js]** mappen i följande sökväg och välj **[!UICONTROL Create > Create File]**:
 
       `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js`
 
       Ge filen namnet crcustomization.js.
 
    1. Dubbelklicka på filen crcustomization.js för att öppna den i CRX.
-   1. Klistra in följande kod i filen och klicka på **[!UICONTROL Spara alla]**:
+   1. Klistra in följande kod i filen och klicka på **[!UICONTROL Save All]**:
 
       ```
       /* for adding and handling custom actions in Extensible Toolbar.
@@ -340,13 +343,13 @@ components.zip
 LCA-processen körs på LiveCycle-servern och kräver serveradressen och inloggningsuppgifterna.
 
 1. Gå till `https://[server]:[port]/system/console/configMgr` och logga in som administratör.
-1. Leta reda på SDK-konfigurationen för Adobe LiveCycle Client och klicka på **[!UICONTROL Redigera]** (redigeringsikonen). Panelen Konfigurationer öppnas.
+1. Leta reda på SDK-konfigurationen för Adobe LiveCycle Client och klicka på **[!UICONTROL Edit]** (redigeringsikon). Panelen Konfigurationer öppnas.
 
-1. Ange följande information och klicka på **[!UICONTROL Spara]**:
+1. Ange följande information och klicka på **[!UICONTROL Save]**:
 
-   * **[!UICONTROL Server-URL]**: URL för den LC-server vars Send for Review-tjänst åtgärdshanterarkoden använder.
-   * **[!UICONTROL Användarnamn]**: Administratörsanvändarnamn för LC-servern
-   * **[!UICONTROL Lösenord]**: Lösenord för administratörens användarnamn
+   * **[!UICONTROL Server Url]**: URL för den LC-server vars Send for Review-tjänst åtgärdshanterarkoden använder.
+   * **[!UICONTROL Username]**: Administratörsanvändarnamn för LC-servern
+   * **[!UICONTROL Password]**: Lösenord för administratörens användarnamn
    ![Konfiguration av Adobe LiveCycle Client SDK](assets/3_clientsdkconfiguration.png)
 
 #### Installera LiveCycle Archive (LCA) {#install-livecycle-archive-lca}
@@ -359,34 +362,34 @@ Den LiveCycle-process som krävs för e-posttjänstprocessen.
 
 1. Logga in som administratör för LiveCycle Server-administratörer på `https:/[lc server]/:[lc port]/adminui`.
 
-1. Gå till **[!UICONTROL Hem > Tjänster > Program och tjänster > Programhantering]**.
+1. Navigera till **[!UICONTROL Home > Services > Applications and Services > Application Management]**.
 
 1. Om programmet SendLetterForReview redan finns hoppar du över de återstående stegen i den här proceduren, annars fortsätter du till nästa steg.
 
    ![SendLetterForReview-programmet i användargränssnittet](assets/12_applicationmanagementlc.png)
 
-1. Klicka på **[!UICONTROL Importera]**.
+1. Klicka på **[!UICONTROL Import]**.
 
-1. Klicka på **[!UICONTROL Välj fil]** och välj **[!UICONTROL SendLetterForReview.lca]**.
+1. Klicka på **[!UICONTROL Choose File]** och välj **[!UICONTROL SendLetterForReview.lca]**.
 
    ![Välj filen SendLetterForReview.lca](assets/14_sendletterforreview_lca.png)
 
-1. Klicka på **[!UICONTROL Förhandsgranska]**.
+1. Klicka på **[!UICONTROL Preview]**.
 
-1. Välj **[!UICONTROL Distribuera resurser till körningsmiljön när importen är klar]**.
+1. Välj **[!UICONTROL Deploy assets to runtime when import is complete]**.
 
-1. Klicka på **[!UICONTROL Importera]**.
+1. Klicka på **[!UICONTROL Import]**.
 
-#### Lägger till ServiceName i listan med vitaListade tjänster {#adding-servicename-to-the-whitelisted-service-list}
+#### Lägger till ServiceName i listan över AllowListed Service {#adding-servicename-to-the-allowlisted-service-list}
 
 I AEM-servern anger du vilka LiveCycle-tjänster du vill ha tillgång till AEM-servern.
 
 1. Logga in som administratör till `https:/[host]/:[port]/system/console/configMgr`.
 
-1. Leta upp och klicka på **[!UICONTROL Adobe LiveCycle Client SDK Configuration]**. Konfigurationspanelen för Adobe LiveCycle Client SDK visas.
-1. Klicka på +-ikonen i listan Tjänstnamn och lägg till ett serviceName **[!UICONTROL SendLetterForReview/SendLetterForReviewProcess]**.
+1. Locate and click **[!UICONTROL Adobe LiveCycle Client SDK Configuration]**. Konfigurationspanelen för Adobe LiveCycle Client SDK visas.
+1. Klicka på ikonen + i listan Tjänstnamn och lägg till ett tjänstnamn **[!UICONTROL SendLetterForReview/SendLetterForReviewProcess]**.
 
-1. Click **[!UICONTROL Save]**.
+1. Klicka på **[!UICONTROL Save]**.
 
 #### Konfigurera e-posttjänsten {#configure-the-email-service}
 
@@ -394,19 +397,19 @@ I det här fallet måste du konfigurera e-posttjänsten i LiveCycle-servern för
 
 1. Logga in med administratörsuppgifter för LiveCycle Server-administratörer på `https:/[lc server]:[lc port]/adminui`.
 
-1. Navigera till **[!UICONTROL Hem > Tjänster > Program och tjänster > Tjänsthantering]**.
+1. Navigera till **[!UICONTROL Home > Services > Applications and Services > Service Management]**.
 
-1. Leta upp och klicka på **[!UICONTROL E-posttjänst]**.
+1. Locate and click **[!UICONTROL EmailService]**.
 
-1. Konfigurera e-posttjänsten i **[!UICONTROL SMTP-värden]**.
+1. Konfigurera e-posttjänsten **[!UICONTROL SMTP Host]** i.
 
-1. Click **[!UICONTROL Save]**.
+1. Klicka på **[!UICONTROL Save]**.
 
 #### Konfigurera DSC-tjänsten {#configure-the-dsc-service}
 
 Om du vill använda Correspondence Management API hämtar du DSCSample.jar (som bifogas i det här dokumentet som en del av components.zip) och överför den till LiveCycle-servern. När filen DSCSample.jar har överförts till LiveCycle-servern använder AEM-servern filen DSCSample.jar för att komma åt API:t renderLetter.
 
-Mer information finns i [Ansluta AEM-formulär till Adobe LiveCycle](/help/forms/using/aem-livecycle-connector.md).
+Mer information finns i [Koppla AEM Forms till Adobe LiveCycle](/help/forms/using/aem-livecycle-connector.md).
 
 1. Uppdatera AEM-serverns URL i cmsa.properties i DSCSample.jar, som finns på följande plats:
 
@@ -429,12 +432,12 @@ Mer information finns i [Ansluta AEM-formulär till Adobe LiveCycle](/help/forms
 DSCSample.jar-filen använder API:t renderLetter för att återge bokstaven som PDF-byte från XML-data som C anger som indata. Mer information om renderLetter och andra API:er finns i [tjänsten](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)Letter Render.
 
 1. Starta Workbench och logga in.
-1. Välj **[!UICONTROL Fönster > Visa vyer > Komponenter]**. Vyn Komponenter läggs till i Workbench ES2.
+1. Välj **[!UICONTROL Window > Show Views > Components]**. Vyn Komponenter läggs till i Workbench ES2.
 
-1. Högerklicka på **[!UICONTROL Komponenter]** och välj **[!UICONTROL Installera komponent]**.
+1. Högerklicka **[!UICONTROL Components]** och välj **[!UICONTROL Install Component]**.
 
-1. Markera **[!UICONTROL filen DSCSample.jar]** i filläsaren och klicka på **[!UICONTROL Öppna]**.
-1. Högerklicka på **[!UICONTROL RenderWrapper]** och välj **[!UICONTROL Start Component]**. Om komponenten startar visas en grön pil bredvid komponentnamnet.
+1. Markera **[!UICONTROL DSCSample.jar]** filen i filläsaren och klicka på **[!UICONTROL Open]**.
+1. Högerklicka **[!UICONTROL RenderWrapper]** och välj **[!UICONTROL Start Component]**. Om komponenten startar visas en grön pil bredvid komponentnamnet.
 
 ## Skicka brev för granskning {#send-letter-for-review}
 
@@ -442,9 +445,9 @@ När du har konfigurerat åtgärden och knappen för att skicka brevet för gran
 
 1. Rensa webbläsarcachen.
 
-1. Klicka på **[!UICONTROL Bokföringsgranskning]** i användargränssnittet Skapa korrespondens och ange granskarens e-post-ID.
+1. Klicka på **[!UICONTROL Letter Review]** och ange granskarens e-post-ID i användargränssnittet Skapa korrespondens.
 
-1. Klicka på **[!UICONTROL Skicka]**.
+1. Klicka på **[!UICONTROL Submit]**.
 
 ![skicka](assets/sendreview.png)
 
