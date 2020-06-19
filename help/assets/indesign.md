@@ -1,9 +1,9 @@
 ---
-title: Integrera AEM-material med Adobe InDesign Server
+title: Integrera AEM Assets med Adobe InDesign Server
 description: Lär dig hur du integrerar AEM Assets med InDesign Server.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
+source-git-commit: 31d652ee04fe75e96f96c9ddc5a6f2c3c64bd630
 workflow-type: tm+mt
 source-wordcount: '1658'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 ---
 
 
-# Integrera AEM-material med Adobe InDesign Server {#integrating-aem-assets-with-indesign-server}
+# Integrera AEM Assets med Adobe InDesign Server {#integrating-aem-assets-with-indesign-server}
 
 Adobe Experience Manager (AEM) Assets använder:
 
@@ -20,7 +20,7 @@ Adobe Experience Manager (AEM) Assets använder:
 
 Dessa kan omfatta en mängd olika arbetsuppgifter. till exempel använda en Adobe InDesign Server för att bearbeta filer.
 
-För att överföra filer till AEM Resurser som du har skapat med Adobe InDesign används en proxy. Detta använder en proxyarbetare för att kommunicera med Adobe InDesign Server, där [skript](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) körs för att extrahera metadata och generera olika renderingar för AEM Assets. Proxyarbetaren möjliggör tvåvägskommunikation mellan InDesign Server och AEM-instansen/instanserna i en molnkonfiguration.
+För att överföra filer till AEM Assets som du har skapat med Adobe InDesign används en proxy. Detta använder en proxyarbetare för att kommunicera med Adobe InDesign Server, där [skript](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) körs för att extrahera metadata och generera olika renderingar för AEM Assets. Proxyarbetaren möjliggör tvåvägskommunikation mellan InDesign Server och AEM-instansen/instanserna i en molnkonfiguration.
 
 >[!NOTE]
 >
@@ -39,13 +39,13 @@ För att överföra filer till AEM Resurser som du har skapat med Adobe InDesign
 
 ## Hur extraheringen fungerar {#how-the-extraction-works}
 
-InDesign Server kan integreras med AEM Resurser så att filer som skapats med InDesign ( `.indd`) kan överföras, återgivningar genereras, *alla* medier kan extraheras (till exempel video) och lagras som resurser:
+InDesign Server kan integreras med AEM Assets så att filer som skapats med InDesign ( `.indd`) kan överföras, återgivningar genereras, *alla* media extraheras (till exempel video) och lagras som resurser:
 
 >[!NOTE]
 >
 >Tidigare versioner av AEM kunde extrahera XMP och miniatyrbilden, nu kan alla media extraheras.
 
-1. Överför din `.indd` fil till AEM Resurser.
+1. Överför din `.indd` fil till AEM Assets.
 1. Ett ramverk skickar kommandoskript till InDesign Server via SOAP (Simple Object Access Protocol).
 
    Detta kommandoskript kommer att:
@@ -56,7 +56,7 @@ InDesign Server kan integreras med AEM Resurser så att filer som skapats med In
       * Strukturen, texten och eventuella mediefiler extraheras.
       * PDF- och JPG-renderingar genereras.
       * HTML- och IDML-renderingar genereras.
-   * Lägg tillbaka de resulterande filerna i AEM Resurser.
+   * Lägg tillbaka de resulterande filerna i AEM Assets.
    >[!NOTE]
    >
    >IDML är ett XML-baserat format som återger *allt* i InDesign-filen. Den lagras som ett komprimerat paket med [Zip](https://www.techterms.com/definition/zip) -komprimering.
@@ -70,15 +70,15 @@ InDesign Server kan integreras med AEM Resurser så att filer som skapats med In
 1. Efter extraheringen och renderingen:
 
    * Strukturen replikeras till en `cq:Page` (typ av återgivning).
-   * Den extraherade texten och filerna lagras i AEM Resurser.
-   * Alla återgivningar lagras i AEM Resurser, i själva resursen.
+   * Den extraherade texten och filerna lagras i AEM Assets.
+   * Alla återgivningar lagras i AEM Assets, i själva resursen.
 
 ## Integrera InDesign Server med AEM {#integrating-the-indesign-server-with-aem}
 
-Om du vill integrera InDesign Server för användning med AEM Assets och efter att du har konfigurerat din proxy måste du:
+Om du vill integrera InDesign Server för användning med AEM Assets och efter att du har konfigurerat proxyn måste du:
 
 1. [Installera InDesign Server](#installing-the-indesign-server).
-1. Om det behövs [konfigurerar du arbetsflödet](#configuring-the-aem-assets-workflow)för AEM Resurser.
+1. Om det behövs [konfigurerar du arbetsflödet](#configuring-the-aem-assets-workflow)i AEM Assets.
 
    Detta är bara nödvändigt om standardvärdena inte passar för din instans.
 
@@ -108,7 +108,7 @@ Så här installerar och startar du InDesign Server för användning med AEM:
    >
    >`<ids-installation-dir>/InDesignServer.com -port 8080 > ~/temp/INDD-logfile.txt 2>&1`
 
-### Konfigurera arbetsflödet för AEM Resurser {#configuring-the-aem-assets-workflow}
+### Konfigurera arbetsflödet för AEM Assets {#configuring-the-aem-assets-workflow}
 
 AEM Assets has a pre-configured workflow **DAM Update Asset**, that has several process steps specifically for InDesign:
 
@@ -117,7 +117,7 @@ AEM Assets has a pre-configured workflow **DAM Update Asset**, that has several 
 
 Det här arbetsflödet är konfigurerat med standardvärden som kan anpassas för dina inställningar för de olika författarinstanserna (det här är ett standardarbetsflöde, så mer information finns under [Redigera ett arbetsflöde](/help/sites-developing/workflows-models.md#configuring-a-workflow-step)). Om du använder standardvärdena (inklusive SOAP-porten) behövs ingen konfiguration.
 
-Efter installationen utlöses det arbetsflöde som krävs för att bearbeta resursen och de olika återgivningarna när InDesign-filerna överförs till AEM Resurser (på något av de vanliga sätten). Testa konfigurationen genom att överföra en `.indd` fil till AEM Resurser för att bekräfta att du ser de olika renderingar som har skapats av IDS under `<*your_asset*>.indd/Renditions`
+Efter installationen utlöses det arbetsflöde som krävs för att bearbeta resursen och förbereda de olika återgivningarna när InDesign-filer överförs till AEM Assets (på något av de vanliga sätten). Testa konfigurationen genom att överföra en `.indd` fil till AEM Assets för att bekräfta att du ser de olika renderingar som har skapats av IDS under `<*your_asset*>.indd/Renditions`
 
 #### Medieextrahering {#media-extraction}
 
@@ -141,7 +141,7 @@ Medieextraheringsargument och skriptsökvägar
 
 Skriptet som körs av arbetsflödessteget för medieextrahering genererar en miniatyrrendering i .jpg-format. `ThumbnailExport.jsx` Den här återgivningen används i arbetsflödet Bearbeta miniatyrbilder för att generera de statiska återgivningar som krävs av AEM.
 
-Du kan konfigurera arbetsflödessteget Bearbeta miniatyrbilder för att generera statiska återgivningar i olika storlekar. Se till att du inte tar bort standardvärdena eftersom de krävs av användargränssnittet för AEM Resurser. Arbetsflödessteget Ta bort återgivning av bildförhandsvisning tar bort återgivningen av .jpg-miniatyrer eftersom den inte längre behövs.
+Du kan konfigurera arbetsflödessteget Bearbeta miniatyrbilder för att generera statiska återgivningar i olika storlekar. Se till att du inte tar bort standardinställningarna eftersom de krävs av användargränssnittet för AEM Assets. Arbetsflödessteget Ta bort återgivning av bildförhandsvisning tar bort återgivningen av .jpg-miniatyrer eftersom den inte längre behövs.
 
 #### Sidextrahering {#page-extraction}
 
@@ -232,7 +232,7 @@ Så här konfigurerar du antalet parallella IDS-jobb:
    >
    >Som standard valideras IDS-arbetaren efter den konfigurerbara (`retry.interval.to.whitelist.name`) tiden i minuter. Om arbetaren hittas online tas den bort från listan Blockerade.
 
-<!-- TBD: Make updates to configurations for allow and block list after product updates are done.
+<!-- TBD: Make updates to configurations for allow and block list after product updates are done. See CQ-4298427.
 -->
 
 ## Aktivera stöd för Adobe InDesign Server 10.0 eller senare {#enabling-support-for-indesign-server-or-higher}
@@ -247,7 +247,7 @@ För InDesign Server 10.0 eller senare utför du följande steg för att aktiver
 >
 >För [!DNL InDesign Server] integrering med [!DNL Assets]måste du använda en flerkärnig processor eftersom den sessionsstödfunktion som krävs för integreringen inte stöds av enskilda kärnsystem.
 
-## Konfigurera Experience Manager-autentiseringsuppgifter {#configure-aem-credentials}
+## Konfigurera autentiseringsuppgifter för Experience Manager {#configure-aem-credentials}
 
 Du kan ändra administratörens standardautentiseringsuppgifter (användarnamn och lösenord) för att komma åt InDesign-servern från din AEM-instans utan att avbryta integreringen med Adobe InDesign-servern.
 
