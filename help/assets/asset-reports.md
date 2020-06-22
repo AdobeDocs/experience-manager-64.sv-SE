@@ -3,10 +3,10 @@ title: Rapporter om användning och delning av digitala resurser.
 description: Rapporterar om dina resurser i [!DNL Adobe Experience Manager Assets] som hjälper dig att förstå användningen, aktiviteten och delningen av dina digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 3caa4ffb4fd1f7c43d3bb1bf5ec59c9ee80a7937
+source-git-commit: a5e9b38cd7ed7a513c2ca6b6c0c3b5d0830dfdab
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 8%
+source-wordcount: '1000'
+ht-degree: 9%
 
 ---
 
@@ -61,6 +61,10 @@ Om du vill generera rapporter måste du se till att:
    >
    >Som standard inkluderas innehållsfragment och länkdelningar i rapporten Hämtade resurser. Välj lämpligt alternativ för att skapa en rapport över länkdelningar eller för att utesluta innehållsfragment från hämtningsrapporten.
 
+   >[!NOTE]
+   >
+   >I [!UICONTROL Download] rapporten visas endast information om de resurser som har markerats individuellt och hämtats. Den innehåller dock inte information om resurserna som fanns i en hämtad mapp.
+
 1. Konfigurera rapportinformation som titel, beskrivning, miniatyrbild och mappsökväg i CRX-databasen där rapporten lagras. Som standard är mappsökvägen `/content/dam`. Du kan ange en annan sökväg.
 
    ![Sida för att lägga till rapportinformation](assets/report_configuration.png)
@@ -91,7 +95,7 @@ Om du vill generera rapporter måste du se till att:
 
    ![Detaljsida för länkdelningsrapport](assets/link_share.png)
 
-1. Klicka **[!UICONTROL Next]** i verktygsfältet.
+1. Klicka på **[!UICONTROL Next]** i verktygsfältet.
 
 1. På **[!UICONTROL Configure Columns]** sidan är vissa kolumner markerade för att visas i rapporten som standard. Du kan markera fler kolumner. Avmarkera en markerad kolumn om du vill utesluta den i rapporten.
 
@@ -101,7 +105,7 @@ Om du vill generera rapporter måste du se till att:
 
    ![Markera eller avmarkera rapportkolumner](assets/custom_columns.png)
 
-1. Klicka **[!UICONTROL Create]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
+1. Klicka på **[!UICONTROL Create]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
 1. På [!UICONTROL Asset Reports] sidan baseras rapportgenereringsstatusen på rapportjobbets aktuella tillstånd, till exempel [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued]eller [!UICONTROL Scheduled]. Samma status visas i inkorgen för meddelanden.Om du vill visa rapportsidan klickar du på rapportlänken. Alternatively, select the report, and click **[!UICONTROL View]** from the toolbar.
 
    ![En genererad rapport](assets/report_page.png)
@@ -122,7 +126,7 @@ Du kan lägga till anpassade kolumner i följande rapporter om du vill visa mer 
 
 Följ de här stegen för att lägga till anpassade kolumner i de här rapporterna:
 
-1. I [!DNL Manager interface]klickar du på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
+1. In the [!DNL Manager interface], click **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
 1. På [!UICONTROL Asset Reports] sidan klickar du **[!UICONTROL Create]** i verktygsfältet.
 
 1. På **[!UICONTROL Create Report]** sidan väljer du den rapport som du vill skapa och klickar på **[!UICONTROL Next]**.
@@ -142,7 +146,7 @@ Följ de här stegen för att lägga till anpassade kolumner i de här rapporter
 
    Om du vill lägga till fler anpassade kolumner klickar du på **[!UICONTROL Add]** och upprepar steg 5 och 6.
 
-1. Klicka **[!UICONTROL Create]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
+1. Klicka på **[!UICONTROL Create]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
 
 ## Konfigurera rensningstjänst {#configure-purging-service}
 
