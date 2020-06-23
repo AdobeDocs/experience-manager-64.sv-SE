@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 5cb571ae-eeb5-4943-a6b8-92e346e85be2
 translation-type: tm+mt
-source-git-commit: 09f8adac1d5fc4edeca03d6955faddf5ea045405
+source-git-commit: 9fa89ca34843d41a5ab5711c1090fcc7a1077760
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 0%
@@ -90,7 +90,7 @@ Antal meddelanden som ska grupperas tillsammans för en sändning när den skick
 * **[!UICONTROL maxTotalAttachmentSize.name]**
 Om supportAttachments är markerat anger det här värdet den största tillåtna totala storleken (i byte) för alla bilagor. Standardvärdet är *104857600* (100 MB).
 
-* **[!UICONTROL attachmentTypeAllowlist.name]**
+* **[!UICONTROL attachmentTypeBlocklist.name]**
 En blocklista med filtillägg, prefix med &#39;**.**&#39;, som kommer att refuseras av systemet. Om det inte blockeras tillåts tillägget. Tillägg kan läggas till eller tas bort med ikonerna **+** och **-**. Standard är *STANDARD*.
 
 * **[!UICONTROL allowedAttachmentTypes.name]**
