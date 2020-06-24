@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 9890d045-cead-4d70-b797-95319284e0d8
 translation-type: tm+mt
-source-git-commit: 95499f59b2ce7d5d864d948d596f3efaae0b0d27
+source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+workflow-type: tm+mt
+source-wordcount: '2640'
+ht-degree: 0%
 
 ---
 
@@ -47,7 +50,7 @@ Rotsidan lagras under egenskapen Målsökväg i programmet som angavs när progr
 
 De första underordnade sidorna på rotsidan är språkvariationerna för programmet. Namnet på varje sida är det språk som programmet skapas för. Engelska är till exempel namnet på den engelska varianten av programmet.
 
-**** Obs! Standardprogrammet för PhoneGap skapar bara ett engelskt program. Utvecklaren kan ändra planen så att den kan skapa fler språkvarianter.
+**Obs!** Standardprogrammet för PhoneGap skapar bara ett engelskt program. Utvecklaren kan ändra planen så att den kan skapa fler språkvarianter.
 
 ![chlimage_1-147](assets/chlimage_1-147.png)
 
@@ -66,25 +69,24 @@ Startsidan, eller index.html-sidan för en språkvariant av ett program, visas n
 
 Mobilprogram bygger på en plan som definierar en sidstruktur och egenskaper. Du kan konfigurera följande programegenskaper:
 
-* **** Titel: Programtitel.
-* **** Målsökväg: Platsen i databasen där programmet lagras. Låt standardinställningen vara om du vill skapa en sökväg baserat på programnamnet.
+* **Titel:** Programtitel.
+* **Målsökväg:** Platsen i databasen där programmet lagras. Låt standardinställningen vara om du vill skapa en sökväg baserat på programnamnet.
+* **Namn:** Standardvärdet är värdet för egenskapen Title med blankstegstecken borttagna. Namnet används i CQ för att referera till programmet, till exempel för databasnoden som representerar programmet.
+* **Beskrivning:** En beskrivning av programmet.
+* **Server-URL:** Den URL som innehåller OTA-innehåll (Over-the-Air) uppdateras i programmet. Standardvärdet är publiceringsserverns URL-adress för instansen som används för att skapa ett program (hämtas från externaliseringstjänsten). Observera att detta måste vara en publiceringsserverinstans i stället för en författare, vilket kräver autentisering.
 
-* **** Namn: Standardvärdet är värdet för egenskapen Title med blankstegstecken borttagna. Namnet används i CQ för att referera till programmet, till exempel för databasnoden som representerar programmet.
-* **** Beskrivning: En beskrivning av programmet.
-* **** Server-URL: Den URL som innehåller OTA-innehåll (Over-the-Air) uppdateras i programmet. Standardvärdet är publiceringsserverns URL-adress för instansen som används för att skapa ett program (hämtas från externaliseringstjänsten). Observera att detta måste vara en publiceringsserverinstans i stället för en författare, vilket kräver autentisering.
-
-Du kan också tillhandahålla en bildfil som du kan använda som programminiatyr, välja den PhoneGap Build-konfiguration som du vill använda och välja den mobilappsanalyskonfiguration som ska användas. Den här bilden används bara som miniatyrbild för att representera ditt mobilprogram i konsolen för mobilappar i Experience Manager.
+Du kan också tillhandahålla en bildfil som du kan använda som programminiatyr, välja den PhoneGap Build-konfiguration som du vill använda och välja den mobilappsanalyskonfiguration som ska användas. Den här bilden används bara som miniatyrbild för att representera ditt mobilprogram i mobilappskonsolen i Experience Manager.
 
 Det finns ytterligare flikar (och valfria) för att bygga molntjänster och integrera Adobe Mobile Services SDK-pluginen i appen.
 
 * Bygg: Klicka på Hantera konfigurationer och konfigurera bygg.phonegap.com här. I listrutan kan du sedan välja den nya molntjänsten PhoneGap build.
-* Analyser: Klicka på Hantera konfigurationer och konfigurera molntjänsten [Adobe Mobile Services SDK](https://marketing.adobe.com/developer/en_US/get-started/mobile/c-measuring-mobile-applications) . I listrutan kan du sedan välja den nya mobiltjänsten som ska integreras i din mobilapp.
+* Analytics: Klicka på Hantera konfigurationer och konfigurera molntjänsten [Adobe Mobile Services SDK](https://docs.adobe.com/content/help/en/mobile-services/using/manage-app-settings-ug/configuring-app/download-sdk.html) . I listrutan kan du sedan välja den nya mobiltjänsten som ska integreras i din mobilapp.
 
 >[!NOTE]
 >
 >Utvecklare kan använda AEM PhoneGap Starter Kit för att skapa appar och lägga till dem i konsolen.
 
-Följande procedur använder Touch-gränssnittet för att skapa ett mobilprogram.
+I följande procedur används Touch-gränssnittet för att skapa ett mobilprogram.
 
 1. Klicka på Appar på listen.
 1. Klicka på eller tryck på ikonen Skapa.
@@ -133,7 +135,7 @@ När du har skapat ett mobilprogram kan du ändra egenskaperna.
 
    ![](do-not-localize/chlimage_1-12.png)
 
-1. Konfigurera egenskaperna på flikarna Grundläggande, Avancerat, Version och Analytics och klicka eller tryck sedan på ikonen Done (Klar).
+1. Konfigurera egenskaperna på flikarna Basic (Grundläggande), Advanced (Avancerat), Build (Skapa) och Analytics () och klicka eller tryck sedan på ikonen Done (Klar).
 
    ![](do-not-localize/chlimage_1-13.png)
 
