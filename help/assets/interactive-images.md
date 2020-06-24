@@ -10,7 +10,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d630499d-740d-4979-8a34-9e3fcc3b5a23
 translation-type: tm+mt
-source-git-commit: 43a28b0d9552cfde74850dfd1a1d63d04f7e4540
+source-git-commit: a3a160a0281c1ea2ca050c2c747d6a5ec1d952b3
+workflow-type: tm+mt
+source-wordcount: '4204'
+ht-degree: 1%
 
 ---
 
@@ -45,7 +48,7 @@ Självstudiekursen visar hur du integrerar interaktiva bilder på din egen webbp
 
 1. **(Valfritt) Identifiera hotspot-variabler** - Om du använder fristående AEM Assets och Dynamic Media börjar du med att identifiera dynamiska variabler som används i din befintliga QuickView-implementering så att du kan ange hotspot-data när du skapar den interaktiva bilden. Se [(Valfritt) Identifiera hotspot-variabler](#optional-identifying-hotspot-variables).
 
-   Om du använder AEM Sites, AEM eCommerce eller båda är det här steget inte nödvändigt.
+   Om du använder AEM Sites, AEM e-handel eller båda är det här steget inte nödvändigt.
 
    Se [e-handelskoncept i AEM Assets](/help/sites-administering/concepts.md).
 
@@ -65,8 +68,8 @@ Självstudiekursen visar hur du integrerar interaktiva bilder på din egen webbp
 
 1. **Lägga till en interaktiv bild till din webbplats eller till din webbplats i AEM**
 
-   * Om du använder AEM Sites, AEM eCommerce eller båda, kan du lägga till den interaktiva bilden direkt på en webbsida i AEM genom att dra komponenten Interactive Media till sidan. See [Adding Dynamic Media Assets to Pages](adding-dynamic-media-assets-to-pages.md).
-   * Om du använder fristående AEM Assets och Dynamic Media måste du kopiera inbäddningskoden på din webbplats och sedan integrera den med din befintliga Quickview. Se [Integrera en interaktiv bild med webbplatsen](#integrating-an-interactive-image-with-your-website).
+   * Om du använder AEM Sites, AEM e-handel eller båda kan du lägga till den interaktiva bilden direkt på en webbsida i AEM genom att dra Interactive Media-komponenten till sidan. See [Adding Dynamic Media Assets to Pages](adding-dynamic-media-assets-to-pages.md).
+   * Om du använder fristående AEM Assets och Dynamic Media måste du kopiera inbäddningskoden på webbplatsen och sedan integrera den med din befintliga snabbvy. Se [Integrera en interaktiv bild med webbplatsen](#integrating-an-interactive-image-with-your-website).
    * Om du använder en WCM-fil (Web Content Manager) från tredje part måste du integrera den nya interaktiva videon med den befintliga QuickView-implementeringen som används på webbplatsen. Se [Integrera en interaktiv bild med en befintlig snabbvy](#integrating-an-interactive-image-with-an-existing-quickview).
 
 ## (Valfritt) Identifiera hotspot-variabler {#optional-identifying-hotspot-variables}
@@ -83,7 +86,7 @@ Om din implementering av AEM använder e-handel kan du hoppa över den här uppg
 
 Börja med att identifiera dynamiska variabler som används i den befintliga QuickView-implementeringen så att du kan ange hotspot-data för att skapa den interaktiva bilden.
 
-När du lägger till aktiveringspunkter i en banderollbild i AEM Resurser måste du tilldela en SKU (Stock Keeping Unit). en unik identifierare för varje enskild produkt eller tjänst som du erbjuder) och valfria ytterligare variabler för varje hotspot. Sådana hotspot-variabler används senare för att matcha hotspot-områden med Quickview-innehåll.
+När du lägger till aktiveringspunkter i en banderollbild i AEM Assets måste du tilldela en SKU (Stock Keeping Unit) en unik identifierare för varje enskild produkt eller tjänst som du erbjuder) och valfria ytterligare variabler för varje hotspot. Sådana hotspot-variabler används senare för att matcha hotspot-områden med Quickview-innehåll.
 
 Det är viktigt att kunna identifiera antalet och typen av variabler som ska kopplas till hotspot-data. Varje hotspot som läggs till i en banderollbild måste innehålla tillräckligt med information för att entydigt identifiera produkten i det befintliga backend-systemet.
 
@@ -93,7 +96,7 @@ Ibland kan det räcka att rådfråga IT-specialister som är ansvariga för den 
 
 De flesta QuickView-implementeringar använder följande paradigm:
 
-* Användaren aktiverar ett element i användargränssnittet på webbplatsen. Du kan till exempel klicka på en **[!UICONTROL snabbvyknapp]** .
+* Användaren aktiverar ett element i användargränssnittet på webbplatsen. For example, clicking a **[!UICONTROL Quickview]** button.
 * Webbplatsen skickar en Ajax-begäran till serverdelen för att läsa in QuickView-data eller -innehåll vid behov.
 * Quickview-data översätts till innehållet som förberedelse för återgivning på webbsidan.
 * Slutligen återges sådant innehåll på skärmen visuellt i koden.
@@ -102,13 +105,13 @@ Sedan besöker man olika delar av den befintliga webbplatsen där QuickView-funk
 
 Normalt behöver du inte använda några specialverktyg för felsökning. Moderna webbläsare har webbinspektörer som klarar ett bra jobb. Nedan följer några exempel på webbläsare som innehåller webbinspektörer:
 
-* Om du vill visa alla utgående HTTP-begäranden i Google Chrome trycker du på F12 för att öppna panelen **[!UICONTROL Utvecklarverktyg]** och sedan på fliken **[!UICONTROL Nätverk]** .
+* Om du vill visa alla utgående HTTP-begäranden i Google Chrome trycker du på F12 för att öppna **[!UICONTROL Developer Tools]** panelen och klickar sedan på **[!UICONTROL Network]** fliken.
 
-   På en Mac trycker du på **[!UICONTROL Command+Alt+I]** för att öppna panelen **[!UICONTROL Utvecklarverktyg]** och sedan på fliken Nätverk.
+   Öppna panelen genom **[!UICONTROL Command+Option+I]** **[!UICONTROL Developer Tools]** att trycka på Mac och sedan klicka på fliken Nätverk.
 
 * In Firefox, you can either activate the Firebug plug-in by pressing F12 and use its Net tab, or you can use the built-in **[!UICONTROL Inspector]** tool and its **[!UICONTROL Network]** tab.
 
-   På en Mac trycker du på **[!UICONTROL Command+Alt+I]** för att öppna panelen **[!UICONTROL Utvecklarverktyg]** och sedan på fliken **[!UICONTROL Granskare]** .
+   På en Mac trycker du på **[!UICONTROL Command+Option+I]** för att öppna **[!UICONTROL Developer Tools]** panelen och klickar sedan på **[!UICONTROL Inspector]** fliken.
 
 När nätverksövervakning är aktiverat i webbläsaren utlöser du snabbvyn på sidan.
 
@@ -141,7 +144,7 @@ Titta på följande exempel på QuickView-URL:er och deras resulterande hotspot-
          <li><p><code>https://server/product/6422350843</code></p> </li> 
          <li><p><code>https://server/product/1607745002</code></p> </li> 
          <li><p><code>https://server/product/0086724882</code></p> </li> 
-        </ul> <p>Variabeldelen finns i den sista delen av banan och blir SKU-värdet för aktiveringspunkterna: <strong><code>6422350843</code></strong>, <strong><code>1607745002</code></strong>, <strong><code>0086724882</code></strong>..</p> </td> 
+        </ul> <p>Variabeldelen finns i den sista delen av banan och blir SKU-värdet för aktiveringspunkterna: <strong><code>6422350843</code></strong>, <strong><code>1607745002</code></strong>, <strong><code>0086724882</code></strong>.</p> </td> 
       </tr> 
       <tr> 
        <td><p>SKU och kategori-ID i frågesträngen.</p> </td> 
@@ -158,7 +161,7 @@ Du kan använda samma metod som i de tre exemplen ovan på demowebbsidan:
 
 [https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html)
 
-Demonstrationswebbsidan innehåller flera produktminiatyrbilder med en QuickView-knapp med etiketten **[!UICONTROL See More]**. Med webbläsarens felsökningsverktyg fortfarande aktiverat klickar du på varje knapp och noterar de inspelade URL:erna för snabbvyn. När du har aktiverat alla fyra snabbvyerna för produkten som finns på sidan, finns följande lista över snabbvybegäranden som gjorts i bakgrunden:
+Demonstrationswebbsidan innehåller flera produktminiatyrbilder med en QuickView-knapp **[!UICONTROL See More]**. Med webbläsarens felsökningsverktyg fortfarande aktiverat klickar du på varje knapp och noterar de inspelade URL:erna för snabbvyn. När du har aktiverat alla fyra snabbvyerna för produkten som finns på sidan, finns följande lista över snabbvybegäranden som gjorts i bakgrunden:
 
 * `/datafeed/Men-Windbreaker.json`
 * `/datafeed/Men-SimpleHenley.json`
@@ -176,30 +179,30 @@ Med hjälp av den här informationen har hela snabbvyns URL följande mönster:
 
 Baserat på en sådan analys skulle ni använda `categoryId` och `SKU` för aktiveringspunkter.
 
-Du är nu redo att ladda upp en bildbanderoll och lägga till hotspot-områden i den med funktionen för interaktiv bild i AEM Assets.
+Du är nu redo att ladda upp en bildbanderoll och lägga till hotspot-områden i den med den interaktiva bildfunktionen i AEM Assets.
 
 ## (Valfritt) Skapa en förinställning för Interactive Image Viewer {#optional-creating-an-interactive-image-viewer-preset}
 
-Du kan välja att använda standardförinställningen för interaktiv bildläsare, **[!UICONTROL Shoppable_Banner]** , som medföljer AEM Assets. Du kan också skapa en egen förinställning för visningsprogrammet som kan användas med interaktiva bilder.
+Du kan välja att använda den förinställning för interaktiv bildvisning som är klar att användas som standard och som kallas **[!UICONTROL Shoppable_Banner]** för AEM Assets. Du kan också skapa en egen förinställning för visningsprogrammet som kan användas med interaktiva bilder.
 
 När du skapar en anpassad förinställning för Interactive Image Viewer kan du bestämma utseendet på aktiveringspunkter i bildbanderollen. När du skapar visningsförinställningen kan du välja att använda en aktiveringspunktsbild från ett galleri med fördefinierade bilder.
 
-När du har sparat visningsförinställningen aktiveras den automatiskt (aktiveras) på listsidan för **[!UICONTROL visningsförinställningar]** i AEM Resurser. Den här funktionen innebär att den är synlig i komponenten Interactive Media och när du visar en resurs. Om du vill *leverera* en interaktiv banderoll med den här visningsförinställningen måste du även *publicera* din visningsförinställning (detta gäller anpassade eller färdiga visningsinställningar).
+När du har sparat visningsförinställningen aktiveras den automatiskt (aktiveras) på listsidan **[!UICONTROL Viewer Preset]** i AEM Assets. Den här funktionen innebär att den är synlig i komponenten Interactive Media och när du visar en resurs. Om du vill *leverera* en interaktiv banderoll med den här visningsförinställningen måste du även *publicera* din visningsförinställning (detta gäller anpassade eller färdiga visningsinställningar).
 
 **Så här skapar du en förinställning** för Interactive Image Viewer:
 
-1. Tryck på **[!UICONTROL Verktyg > Resurser > Visningsförinställningar]** till vänster.
+1. Tryck på vänster spår **[!UICONTROL Tools > Assets > Viewer Presets]**.
 1. Near the upper-right corner of the page, tap **[!UICONTROL Create]**.
-1. I dialogrutan **[!UICONTROL Ny visningsförinställning]** för visningsprogrammet skriver du ett namn som beskriver förinställningen för det interaktiva visningsprogrammet för banderollen.
+1. Skriv ett namn som beskriver den interaktiva förinställningen för visningsprogrammet för banderollen i dialogrutan **[!UICONTROL New Viewer Preset]** .
 
-   Det här är titeln som visas på listsidan för **[!UICONTROL visningsförinställningar]** när du har sparat.
-1. In the **[!UICONTROL Rich Media Type]** pull-down menu, select **[!UICONTROL Interactive Image]**.
+   Det här är titeln som visas på listsidan när du har sparat den **[!UICONTROL Viewer Preset]** .
+1. Välj i den **[!UICONTROL Rich Media Type]** nedrullningsbara menyn **[!UICONTROL Interactive Image]**.
 1. Tryck på **Skapa**.
-1. Tryck på fliken **[!UICONTROL Utseende]** på sidan **[!UICONTROL Redigera visningsförinställning]** .
+1. Tryck på **[!UICONTROL Edit Viewer Preset]** fliken på **[!UICONTROL Appearance]** sidan.
 1. Gör något av följande:
 
-   * Om du vill överföra en egen hotspot-bild som du vill använda på bilder trycker du på ikonen **[!UICONTROL Resursväljaren]** . Navigera till den hotspot-bild som du vill använda på sidan **[!UICONTROL Välj innehåll]** , markera den och tryck sedan på ikonen **[!UICONTROL Markera]** i det övre högra hörnet.
-   * Om du vill välja en fördefinierad hotspot-bild trycker du på **[!UICONTROL ikonen för]** Hotspot-galleriet. Tryck på den hotspot-bild som du vill använda på paletten för klickbara områden.
+   * Om du vill överföra en egen hotspot-bild som du vill använda på bilder trycker du på **[!UICONTROL Asset Picker]** -ikonen. Gå till den hotspot-bild som du vill använda på **[!UICONTROL Select Content]** sidan, markera den och tryck sedan på **[!UICONTROL Check Mark]** ikonen i det övre högra hörnet.
+   * Om du vill välja en fördefinierad hotspot-bild trycker du på **[!UICONTROL Hotspot Gallery]** -ikonen. Tryck på den hotspot-bild som du vill använda på paletten för klickbara områden.
 
 1. Near the upper-right corner of the page, tap **[!UICONTROL Save]**.
 
@@ -223,7 +226,7 @@ Om du redan har överfört de bilder du vill använda går du vidare till nästa
 
 ## Lägga till aktiveringspunkter i en bildbanderoll {#adding-hotspots-to-an-image-banner}
 
-Du kan lägga till aktiveringspunkter i en bildbanderoll med redigeraren på sidan **[!UICONTROL Hantering]** av aktiveringspunkter.
+Du kan lägga till aktiveringspunkter i en bildbanderoll med redigeraren på **[!UICONTROL Hotspot Management]** sidan.
 
 När du lägger till aktiveringspunkter kan du definiera dem som en snabbvypopup-visning, som en hyperlänk eller som en upplevelsefragment.
 
@@ -233,9 +236,9 @@ Se [Upplevelsefragment](/help/sites-authoring/experience-fragments.md).
 >
 >Tänk på att verktygen för delning av sociala medier i interaktiv bild inte stöds när du bäddar in visningsprogrammet i ett Experience Fragment. Du kan undvika detta genom att använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
 
-**[!UICONTROL Alternativen Ångra]** och **[!UICONTROL Gör om]** , i det övre högra hörnet av sidan, stöds under den aktuella skaps-/redigeringssessionen.
+**[!UICONTROL Undo]** och **[!UICONTROL Redo]** alternativ, som finns i det övre högra hörnet av sidan, stöds under den aktuella skaps-/redigeringssessionen.
 
-När du är klar med att skapa en interaktiv bild kan du använda **[!UICONTROL Förhandsgranska]** för att se hur den interaktiva bilden kommer att se ut för kunderna.
+När du är klar med att skapa en interaktiv bild kan du använda för **[!UICONTROL Preview]** att se hur den interaktiva bilden kommer att se ut för kunderna.
 
 Se [(Valfritt) Förhandsvisa interaktiva bilder](#optional-previewing-interactive-images).
 
@@ -257,38 +260,38 @@ Se [(Valfritt) Förhandsvisa interaktiva bilder](#optional-previewing-interactiv
 1. Gör något av följande:
 
    * Hover on the image, then tap **[!UICONTROL Select** (checkmark icon). Tryck på **[!UICONTROL-redigering** i verktygsfältet.
-   * Håll pekaren över bilden och tryck sedan på **[!UICONTROL Fler åtgärder]** (ikonen med tre punkter) > **[!UICONTROL Redigera]**.
-   * Tryck på bilden för att öppna den på sidan **[!UICONTROL Detaljvy]** . Tryck på **[!UICONTROL-redigering** i verktygsfältet.
+   * Håll pekaren över bilden och tryck sedan på **[!UICONTROL More actions]** (ikonen med tre punkter) > **[!UICONTROL Edit]**.
+   * Tryck på bilden för att öppna den på **[!UICONTROL Detail View]** sidan. Tryck på **[!UICONTROL-redigering** i verktygsfältet.
 
 1. Near the upper-left corner of the page, tap **[!UICONTROL Add Hotspot]** (finger tap icon) to open the **[!UICONTROL Hotspot Management]** page.
 1. Near the upper-left corner of the page, tap **[!UICONTROL Hotspot]**.
-1. a. I närheten av det övre vänstra hörnet på sidan **Hantering** av hotspot trycker du på **[!UICONTROL hotspot]**.
+1. a. I närheten av det övre vänstra hörnet på sidan **Hantering** av hotspot trycker du **[!UICONTROL Hotspot]**.
 b. Tryck på den plats i bilden där du vill att hotspot-området ska visas. Dra hotspot-området om det behövs för att justera dess placering.
 c. Lägg till ytterligare hotspot-områden efter behov genom att upprepa steg a och b.
-d. (Valfritt) Om du vill ta bort en aktiveringspunkt markerar du den på bilden och trycker sedan på **[!UICONTROL Ta bort]** (skräpburkikon) under rubriken **[!UICONTROL Aktiveringspunkter]** .
+d. (Valfritt) Om du vill ta bort en aktiveringspunkt markerar du den i bilden och trycker sedan på **[!UICONTROL Delete]** (skräpburkikonen) under **[!UICONTROL Hotspots]** rubriken.
 
-1. Skriv namnet på hotspot-området i **[!UICONTROL textfältet Namn]** . Det här namnet visas också i listrutan **[!UICONTROL Markerad aktiveringspunkt]** .
+1. Skriv namnet på aktiveringspunkten i **[!UICONTROL Name]** textfältet. Det här namnet visas också i **[!UICONTROL Selected Hotspot]** listrutan.
 1. Gör något av följande:
 
-   * Tryck på **[!UICONTROL Snabbvy]**.
+   * Tryck på **[!UICONTROL Quickview]**.
 
-      * Om du är AEM Sites- eller e-handelskund trycker du på **[!UICONTROL produktväljarens]** ikon (förstoringsglas) för att öppna sidan **[!UICONTROL Välj produkt]** . Tryck på den produkt du vill använda och tryck sedan på **[!UICONTROL Välj]** i det övre högra hörnet av sidan för att gå tillbaka till sidan **[!UICONTROL Hantering]** av hotspot.
+      * Om du är AEM Sites- eller e-handelskund öppnar du **[!UICONTROL Product Picker]** sidan genom att trycka på **[!UICONTROL Select Product]** ikonen (förstoringsglas). Tryck på den produkt du vill använda och tryck sedan på **[!UICONTROL Select]** i det övre högra hörnet av sidan för att gå tillbaka till **[!UICONTROL Hotspot Management]** sidan.
       * Om du *inte* är AEM Sites- eller e-handelskund
 
          * Se [Identifiera hotspot-variabler](#optional-identifying-hotspot-variables). måste du definiera dessa variabler.
-         * Ange sedan SKU-värdet manuellt. I textfältet **[!UICONTROL SKU-värde]** skriver du produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Det angivna SKU-värdet fyller automatiskt i variabeldelen av QuickView-mallen så att systemet vet att den aktiveringspunkt som användaren går till associeras med en viss SKU:s snabbvy.
-         * (Valfritt) Om det finns andra variabler i snabbvyn som du behöver för att kunna identifiera en produkt ytterligare trycker du på **[!UICONTROL Lägg till allmän variabel]**. Ange ytterligare en variabel i textfältet. Till exempel `category=Mens` är en tillagd variabel.
+         * Ange sedan SKU-värdet manuellt. I **[!UICONTROL SKU Value]** textfältet skriver du produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Det angivna SKU-värdet fyller automatiskt i variabeldelen av QuickView-mallen så att systemet vet att den aktiveringspunkt som användaren går till associeras med en viss SKU:s snabbvy.
+         * (Valfritt) Om det finns andra variabler i snabbvyn som du behöver för att identifiera en produkt ytterligare trycker du på **[!UICONTROL Add Generic Variable]**. Ange ytterligare en variabel i textfältet. Till exempel `category=Mens` är en tillagd variabel.
    * Tryck på **Hyperlänk**.
 
-      * Om du är kund hos AEM Sites trycker du på ikonen **[!UICONTROL Platsväljare]** (mapp) för att navigera till en URL. Observera att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL:er, särskilt länkar till AEM Sites-sidor.
-      * Om du är en fristående kund anger du den fullständiga URL-sökvägen till en länkad webbsida i textfältet **[!UICONTROL HREF]** .
+      * Om du är AEM Sites-kund går du till en URL genom att trycka på **[!UICONTROL Site Selector]** ikonen (mappen). Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
+      * Om du är en fristående kund anger du den fullständiga URL-sökvägen till en länkad webbsida i **[!UICONTROL HREF]** textfältet.
       Var noga med att ange om länken ska öppnas på en ny webbläsarflik (rekommenderat standardvärde) eller på samma flik.
 
       Mer information finns i [Arbeta med väljare](working-with-selectors.md) .
 
    * Tryck på **Experience Fragment**.
 
-      * Om du är kund hos AEM Sites trycker du på **[!UICONTROL sökikonen]** (förstoringsglas) för att öppna sidan **[!UICONTROL Experience Fragment]** . Tryck på det Experience Fragment du vill använda och tryck sedan på **[!UICONTROL Select]** (Välj) längst upp till höger på sidan för att gå tillbaka till sidan för hantering av hotspot.
+      * Om du är AEM Sites-kund trycker du på **[!UICONTROL Search]** ikonen (förstoringsglaset) för att öppna **[!UICONTROL Experience Fragment]** sidan. Tryck på det Experience Fragment du vill använda och tryck sedan på **[!UICONTROL Select]** i det övre högra hörnet av sidan för att gå tillbaka till sidan för hantering av hotspot.
 
          Se [Upplevelsefragment](/help/sites-authoring/experience-fragments.md).
          >[!NOTE]
@@ -298,7 +301,7 @@ d. (Valfritt) Om du vill ta bort en aktiveringspunkt markerar du den på bilden 
 
 
 
-1. Tryck på **[!UICONTROL Spara]** för att spara ditt arbete och återgå till **[!UICONTROL sidan Bläddra]** .
+1. Tryck **[!UICONTROL Save]** för att spara ditt arbete och återgå till **[!UICONTROL Browse]** sidan.
 1. Publicera den interaktiva bilden. Med publicering kan banderollen levereras via molnet och även generera inbäddningskod om du behöver integrera med en tredjepartswebbplats.
 
    Se [Publicera resurser](managing-assets-touch-ui.md#publishing-assets).
@@ -317,14 +320,14 @@ Du kan använda Förhandsgranska för att se hur den interaktiva bilden kommer a
 
 När du är nöjd med den interaktiva bilden kan du publicera den.\
 See [Embedding the Video or Image Viewer on a Web Page](embed-code.md).\
-See [Linking URLs to your web application](linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL:er, särskilt länkar till AEM Sites-sidor.\
+See [Linking URLs to your web application](linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.\
 See [Adding Dynamic Media Assets to Pages.](adding-dynamic-media-assets-to-pages.md)
 
 **Så här förhandsvisar du interaktiva bilder**:
 
 1. Navigera till en befintlig interaktiv bild som du har skapat i resursvyn och öppna den i förhandsvisningen genom att trycka.
-1. I det övre vänstra hörnet av förhandsvisningssidan trycker du på **[!UICONTROL Visare]** i listrutan **[!UICONTROL Innehåll]**.
-1. I listan **[!UICONTROL Visare]** trycker du på **[!UICONTROL Shoppable_Banner]** eller namnet på den förinställning för visningsprogrammet för den interaktiva bilden som du har skapat.
+1. Near the upper-left corner of the Preview page, in the **[!UICONTROL Content]** drop-down list, tap **[!UICONTROL Viewers]**.
+1. Tryck på **[!UICONTROL Viewers]** eller ange namnet på den förinställning för visningsprogrammet för interaktiva bilder som du har skapat i **[!UICONTROL Shoppable_Banner]** listan.
 1. Tryck på hotspot-områden på bilden för att testa deras associerade åtgärder.
 
 ## Publicera interaktiva bildresurser {#publishing-interactive-image-assets}
@@ -335,9 +338,9 @@ Mer information om hur du publicerar interaktiva bildresurser finns i [Publicera
 
 När du har överfört en banderollbild, lagt till aktiveringspunkter i bilden och publicerat den interaktiva bilden kan du nu lägga till den på din webbsida.
 
-Om du är kund hos AEM Sites kan du lägga till den interaktiva bilden genom att dra komponenten Interactive Media till sidan. See [Adding Dynamic Media Assets to Pages.](adding-dynamic-media-assets-to-pages.md)
+Om du använder AEM Sites kan du lägga till den interaktiva bilden genom att dra Interactive Media-komponenten till din sida. See [Adding Dynamic Media Assets to Pages.](adding-dynamic-media-assets-to-pages.md)
 
-Om du är en fristående AEM Assets-kund kan du lägga till den interaktiva bilden manuellt på webbplatsen enligt beskrivningen i det här avsnittet.
+Om du är en fristående AEM Assets-kund kan du lägga till den interaktiva bilden manuellt på din webbplats enligt beskrivningen i det här avsnittet.
 
 1. Kopiera den publicerade interaktiva bildens inbäddningskod.
 
@@ -369,9 +372,9 @@ Integrationen är lika enkel som att ta bort `IMG` taggen och ersätta den med d
 
 Om du vill använda en beskärning på en interaktiv bild för en responsiv miljö kan du inkludera konfigurationsattributet Interactive Image `ZoomView.iscommand` på sökvägen, där `ZoomView` är komponenten som ska anropas och `iscommand` är det kommando för beskärning av bildvisning som du använder.
 
-Se [Konfigurationsattribut för ZoomView.iscommand](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_aem_interactive_image_config_attrib_zoomview_iscommand.html) .
+Se [Konfigurationsattribut för ZoomView.iscommand](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) .
 
-Se [kommandot för att beskära](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/r_crop.html) bilder.
+Se [kommandot för att beskära](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html) bilder.
 
 Nu kan du integrera den interaktiva bilden med en befintlig Quickview på webbplatsen.
 
@@ -379,7 +382,7 @@ Nu kan du integrera den interaktiva bilden med en befintlig Quickview på webbpl
 
 >[!NOTE]
 >
->Denna uppgift gäller endast om du är en fristående AEM Assets-kund.
+>Den här uppgiften gäller endast om du är en fristående AEM Assets-kund.
 
 Det sista steget i den här processen är att integrera den interaktiva bilden med en befintlig Quickview-implementering på din webbplats. Det finns ingen lösning på integreringen som fungerar i alla fall. Alla QuickView-implementeringar är unika och det behövs ett specifikt tillvägagångssätt som troligen inbegriper hjälp av en IT-handläggare på frontend.
 
@@ -395,7 +398,7 @@ Den befintliga Quickview-implementeringen representerar normalt en kedja av inte
 
 Dessa anrop kanske inte representerar oberoende offentliga API-anrop som kan anropas av webbsidans logik från ett godtyckligt steg. I stället är det ett kedjat anrop där varje steg döljs i den sista fasen (återanrop) av föregående steg.
 
-Samtidigt som den interaktiva bilden som kan köpas ersätter steg 1, och delvis steg 2, när en användare klickar på en hotspot i bilden som kan köpas, hanteras den här användarinteraktionen av användaren. Visningsprogrammet returnerar en händelse till webbsidan som innehåller alla hotspot-data som tidigare lagts till i AEM Assets.
+Samtidigt som den interaktiva bilden som kan köpas ersätter steg 1, och delvis steg 2, när en användare klickar på en hotspot i bilden som kan köpas, hanteras den här användarinteraktionen av användaren. Visningsprogrammet returnerar en händelse till webbsidan som innehåller alla aktiveringspunktsdata som tidigare lagts till i AEM Assets.
 
 I en sådan händelsehanterare gör koden längst fram följande:
 
