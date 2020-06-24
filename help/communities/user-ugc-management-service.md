@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 discoiquuid: f564759f-fb56-4f70-a7b1-286a223755c6
 translation-type: tm+mt
-source-git-commit: 0db56cb77628b3e81b69382a314c30b43887bde6
+source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+workflow-type: tm+mt
+source-wordcount: '607'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Mer information finns på [GDPR-sidan på Adobe Privacy Center](https://www.adob
 
 >[!NOTE]
 >
->Om du har konfigurerat [Adobe Analytics på AEM Communities](analytics.md) -webbplatsen skickas inhämtade användardata till Adobe Analytics-servern. Adobe Analytics innehåller API:er som gör att du kan komma åt, exportera och ta bort användardata och följa GDPR. Mer information finns i [Skicka begäran](https://marketing.adobe.com/resources/help/en_US/analytics/gdpr/gdpr_submit_access_delete.html)om åtkomst och borttagning.
+>Om du har konfigurerat [Adobe Analytics på AEM Communities](analytics.md) -webbplatsen skickas de inhämtade användaruppgifterna till Adobe Analytics-servern. Adobe Analytics tillhandahåller API:er som gör att du kan komma åt, exportera och ta bort användardata och följa GDPR. Mer information finns i [Skicka begäran](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-submit-access-delete.html)om åtkomst och borttagning.
 
 Om du vill använda dessa API:er måste du aktivera slutpunkten genom att aktivera tjänsten UserUgcManagement. `/services/social/ugcmanagement` Om du vill aktivera den här tjänsten installerar du [exempelservern](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-ugc-management-servlet) som finns på [GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-ugc-management-servlet). Tryck sedan på slutpunkten för publiceringsinstansen av communitywebbplatsen med lämpliga parametrar med en http-begäran, som liknar följande:
 
@@ -59,11 +62,11 @@ Om du till exempel vill ta bort användargränssnittskontrollen för en använda
 * user= weston.mccall@dodgit.com
 * operation= deleteUgc
 
-### Ta bort UGC från Adobe Analytics {#delete-ugc-from-analytics}
+### Ta bort användargenererat innehåll från Adobe Analytics {#delete-ugc-from-analytics}
 
-Om du vill ta bort användardata från Adobe Analytics följer du arbetsflödet i GDPR Analytics. eftersom API:t inte tar bort användardata från Adobe Analytics.
+Följ arbetsflödet i GDPR Analytics för att ta bort användardata från Adobe Analytics. eftersom API inte tar bort användardata från Adobe Analytics.
 
-För Adobe Analytics-variabelmappningar som används av AEM Communities, se följande bild:
+För Adobe Analytics-variabelmappningar som används av AEM Communities finns följande bild:
 
 ![Variabelmappning för AEM-communities för Adobe Analytics](assets/Analytics-Communities-Mapping.png)
 
