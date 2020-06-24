@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 36ea97a4-4e13-4e89-866b-495f3c30cb94
 translation-type: tm+mt
-source-git-commit: 09f8adac1d5fc4edeca03d6955faddf5ea045405
+source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
 workflow-type: tm+mt
-source-wordcount: '2728'
+source-wordcount: '2723'
 ht-degree: 2%
 
 ---
@@ -88,16 +88,16 @@ Om du vill konfigurera funktionerna i Analytics for Communities måste du samarb
 
 ## Adobe Analytics Report Suite for Video Reporting {#adobe-analytics-report-suite-for-video-reporting}
 
-Med Adobe Marketing Cloud [Report Suite Manager](https://marketing.adobe.com/resources/help/en_US/reference/new_report_suite.html)kan Analytics rapportsviter konfigureras så att en communitywebbplats kan aktiveras för att tillhandahålla rapporter för communityfunktioner.
+Med Adobe Marketing Cloud [Report Suite Manager](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)kan Analytics rapportsviter konfigureras så att en communitywebbplats kan aktiveras för att tillhandahålla rapporter för communityfunktioner.
 
-Genom att logga in på [Adobe Marketing Cloud](https://marketing.adobe.com/resources/help/en_US/analytics/getting-started/analytics-navigation.html) med [företagsnamn och användarnamn](analytics.md#prerequisites)kan du konfigurera en ny eller befintlig rapportserie så att den har:
+Genom att logga in på [Adobe Marketing Cloud](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/home.html) med [företagsnamn och användarnamn](analytics.md#prerequisites)kan du konfigurera en ny eller befintlig rapportserie så att den har:
 
-* [11 Konverteringsvariabler](https://marketing.adobe.com/resources/help/en_US/reference/conversion_var_admin.html) (evar)
+* [11 Konverteringsvariabler](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) (evar)
 
    * **`evar1`** via **`evar11`** aktiverad
    * Kan återanvända (byta namn på) befintliga objekt eller skapa nya som kan användas för webbgruppsfunktioner
 
-* [7 Success Events](https://marketing.adobe.com/resources/help/en_US/reference/success_event.html) (events)
+* [7 Success Events](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/success-events/success-event.html) (events)
 
    * **`event1`** via **`event7`** aktiverad
    * Typ **`Counter`**
@@ -106,7 +106,7 @@ Genom att logga in på [Adobe Marketing Cloud](https://marketing.adobe.com/resou
    * Kan återanvända (byta namn på) befintliga händelser eller skapa nya som kan användas för communityfunktioner
 
 
-* [Videohantering](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/video_analytics_config.html)
+* [Videohantering](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html)
 
    * Videorapportkonsol
 
@@ -410,7 +410,7 @@ Här följer ett exempel på standardmappningar efter att du har följt självst
 * [Resurstyp](essentials.md)för UGC-komponent: social/forum/komponenter/hbs/topic
 * UGC-komponenttitel: Hiking Topics
 * Inloggning (auktoriseringsbart ID): aaron.mcdonald@mailinator.com
-* SRP-sökväg till UGC: /content/usergenerated/asi/.../forum/jmtz-topic3 eller *sökväg till komponent som ska följas*: /content/sites/communities/en/jcr:content/content/primary/forum
+* SRP-sökväg till UGC: /content/usergenerated/asi/.../forum/jmtz-topic3 eller *komponentens sökväg som ska följas*: /content/sites/communities/en/jcr:content/content/primary/forum
 * Sökväg till innehåll på communitywebbplatsen: /content/sites/community/en
 
 ### Ändra Analytics-variabelmappning {#modifying-analytics-variable-mapping}
@@ -500,7 +500,7 @@ Frågeintervallet är som standard 10 sekunder.
 
 ### Rapportimporteraren {#report-importer}
 
-När en Analytics-aktiverad communitywebbplats har publicerats kan den primära utgivarens [OSGi-konfiguration](../../help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Report Importer`konfigureras att ange standardavsökningsintervallet för de konfigurationer som inte konfigureras individuellt i CRXDE.
+När en Analytics-aktiverad communitywebbplats har publicerats kan den primära utgivarens [OSGi-konfiguration](../../help/sites-deploying/configuring-osgi.md), `AEM Communities Analytics Report Importer`, konfigureras att ange standardavsökningsintervallet för de konfigurationer som inte konfigureras individuellt i CRXDE.
 
 Avsökningsintervallet styr hur ofta Adobe Analytics begär data som ska hämtas och sparas i [SRP](working-with-srp.md).
 
@@ -545,11 +545,11 @@ Forum-ämnet är för närvarande det enda exemplet på den här anpassningen:
 
 ## Hantera användardata i Analytics {#manage-user-data-in-analytics}
 
-Adobe Analytics innehåller API:er som gör att du kan komma åt, exportera och ta bort användardata. Mer information finns i [Skicka begäran](https://marketing.adobe.com/resources/help/en_US/analytics/gdpr/gdpr_submit_access_delete.html)om åtkomst och borttagning.
+Adobe Analytics innehåller API:er som gör att du kan komma åt, exportera och ta bort användardata. Mer information finns i [Skicka begäran](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-submit-access-delete.html)om åtkomst och borttagning.
 
 ## Resurser {#resources}
 
-* Adobe Marketing Cloud: [Analytics - hjälp och referens](https://marketing.adobe.com/resources/help/en_US/reference/)
+* Adobe Marketing Cloud: [Analytics - hjälp och referens](https://docs.adobe.com/content/help/en/analytics/landing/home.html)
 * AEM: [Integrating with Adobe Analytics](../../help/sites-administering/adobeanalytics.md)
 * AEM: [Analytics med externa leverantörer](../../help/sites-administering/external-providers.md)
 
