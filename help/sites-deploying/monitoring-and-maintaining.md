@@ -10,7 +10,10 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: de6ed870-0e69-4d16-99e4-037dd5acf413
 translation-type: tm+mt
-source-git-commit: 3bdff366a0d455b405c1f9de371ced98d25ae2e2
+source-git-commit: a3a160a0281c1ea2ca050c2c747d6a5ec1d952b3
+workflow-type: tm+mt
+source-wordcount: '5893'
+ht-degree: 0%
 
 ---
 
@@ -187,57 +190,49 @@ Olika loggfiler finns på den filserver där du installerade AEM:
 
    * `access.log`
 
-      
-Alla åtkomstbegäranden till AEM WCM och databasen registreras här.
+      Alla åtkomstbegäranden till AEM WCM och databasen registreras här.
 
    * `audit.log`
 
-      
-Modereringsåtgärder registreras här.
+      Modereringsåtgärder registreras här.
 
    * `error.log`
 
-      
-Felmeddelanden (av varierande allvarlighetsgrad) registreras här.
+      Felmeddelanden (av varierande allvarlighetsgrad) registreras här.
 
-   * [ `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_image_server_log.html)
+   * [ `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html)
 
       Den här loggen används bara om dynamiska medier är aktiverade. Det innehåller statistik och analysinformation som används för att analysera beteendet i den interna ImageServer-processen.
 
    * `request.log`
 
-      
-Varje åtkomstbegäran registreras här tillsammans med svaret.
+      Varje åtkomstbegäran registreras här tillsammans med svaret.
 
-   * [ `s7access-<yyyy>-<mm>-<dd>.log`](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_Access_Log.html)
+   * [ `s7access-<yyyy>-<mm>-<dd>.log`](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html)
 
       Den här loggen används bara om dynamiska medier är aktiverade. I s7access-loggen registreras varje begäran som gjorts till Dynamic Media via `/is/image` och `/is/content`.
 
    * `stderr.log`
 
-      
-Innehåller felmeddelanden, återigen av varierande allvarlighetsgrad, som genereras under start. Som standard är loggnivån inställd på `Warning` ( `WARN`)
+      Innehåller felmeddelanden, återigen av varierande allvarlighetsgrad, som genereras under start. Som standard är loggnivån inställd på `Warning` ( `WARN`)
 
    * `stdout.log`
 
-      
-Innehåller loggningsmeddelanden som anger händelser under start.
+      Innehåller loggningsmeddelanden som anger händelser under start.
 
    * `upgrade.log`
 
-      
-Innehåller en logg över alla uppgraderingsåtgärder som körs från `com.day.compat.codeupgrade` - och `com.adobe.cq.upgradesexecutor` paketen.
+      Innehåller en logg över alla uppgraderingsåtgärder som körs från `com.day.compat.codeupgrade` - och `com.adobe.cq.upgradesexecutor` paketen.
 
 * `<cq-installation-dir>/crx-quickstart/repository`
 
    * `revision.log`
 
-      
-Information om revideringsjournaler.
+      Information om revideringsjournaler.
 
 >[!NOTE]
 >
->ImageServer- och s7access-loggarna ingår inte i det **fullständiga** hämtningspaket som genereras från sidan **system/console/status-Bundlelist** . Om du har problem med dynamiska media bör du av supportskäl även bifoga loggarna för ImageServer och s7access när du kontaktar kundsupport.
+>ImageServer- och s7access-loggarna ingår inte i det **fullständiga** hämtningspaket som genereras från sidan **system/console/status-Bundlelist** . Om du har problem med Dynamic Media bör du av supportskäl även bifoga loggarna ImageServer och s7access när du kontaktar kundsupport.
 
 ### Aktivera felsökningsloggnivån {#activating-the-debug-log-level}
 
@@ -249,7 +244,7 @@ Om du vill aktivera felsökningsloggnivån för en loggare anger du egenskapen `
 >
 >Lämna inte loggen på felsökningsloggnivån längre än nödvändigt eftersom den genererar många loggposter och förbrukar därmed resurser.
 
-En rad i felsökningsfilen börjar oftast med DEBUG och anger sedan loggnivån, installationsåtgärden och loggmeddelandet. Exempel:
+En rad i felsökningsfilen börjar oftast med DEBUG och anger sedan loggnivån, installationsåtgärden och loggmeddelandet. Till exempel:
 
 ```shell
 DEBUG 3 WebApp Panel: WebApp successfully deployed
@@ -261,7 +256,7 @@ Loggnivåerna är följande:
 |---|---|---|
 | 1 | Fel | Åtgärden misslyckades. Installationen fortsätter, men en del av AEM WCM installerades inte korrekt och kommer inte att fungera. |
 | 2 | Varning | Åtgärden har slutförts men problem uppstod. AEM WCM fungerar eventuellt inte korrekt. |
-| 3 |  Information | Åtgärden har slutförts. |
+| 3 | Information | Åtgärden har slutförts. |
 
 ### Skapa en anpassad loggfil {#create-a-custom-log-file}
 
@@ -277,7 +272,7 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
    * Namn:
    `org.apache.sling.commons.log.LogManager.factory.config-<identifier>` (eftersom detta är en loggare)
 
-   Där `<identifier>` ersätts av fri text som du (måste) anger för att identifiera förekomsten (du kan inte utelämna den här informationen). Exempel, `org.apache.sling.commons.log.LogManager.factory.config-MINE`
+   Där `<identifier>` ersätts av fri text som du (måste) anger för att identifiera förekomsten (du kan inte utelämna den här informationen). Till exempel, `org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
    * Typ: `sling:OsgiConfig`
    >[!NOTE]
@@ -288,10 +283,9 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
 
    * Namn: `org.apache.sling.commons.log.file`
 
-      Typ:Sträng
+      Typ: Sträng
 
-      Värde: Ange loggfilen.
-till exempel `logs/myLogFile.log`
+      Värde: Ange loggfilen. till exempel `logs/myLogFile.log`
 
    * Namn: `org.apache.sling.commons.log.names`
 
@@ -304,7 +298,7 @@ till exempel `logs/myLogFile.log`
       * `com.day`
    * Namn: `org.apache.sling.commons.log.level`
 
-      Typ:Sträng
+      Typ: Sträng
 
       Värde: Ange den loggnivå som krävs ( `debug`, `info`, `warn` eller `error`). till exempel `debug`
 
@@ -366,7 +360,7 @@ till exempel `logs/myLogFile.log`
 
    * Namn: `org.apache.sling.commons.log.LogManager.factory.writer-<identifier>` (eftersom detta är ett skrivprogram)
 
-      Precis som med Logger `<identifier>` ersätts den av fri text som du (måste) anger för att identifiera instansen (du kan inte utelämna den här informationen). Exempel, `org.apache.sling.commons.log.LogManager.factory.writer-MINE`
+      Precis som med Logger `<identifier>` ersätts den av fri text som du (måste) anger för att identifiera instansen (du kan inte utelämna den här informationen). Till exempel, `org.apache.sling.commons.log.LogManager.factory.writer-MINE`
 
    * Typ: `sling:OsgiConfig`
    >[!NOTE]
@@ -389,15 +383,13 @@ till exempel `logs/myLogFile.log`
 
          Typ: `Long`
 
-         Värde: Ange hur många loggfiler du vill behålla.
-till exempel `5`
+         Värde: Ange hur många loggfiler du vill behålla. till exempel `5`
 
       * Namn: `org.apache.sling.commons.log.file.size`
 
          Typ: `String`
 
-         Värde: Ange vad som krävs för att kontrollera filens rotation efter storlek/datum.
-till exempel `'.'yyyy-MM-dd`
+         Värde: Ange vad som krävs för att kontrollera filens rotation efter storlek/datum. till exempel `'.'yyyy-MM-dd`
    >[!NOTE]
    >
    >`org.apache.sling.commons.log.file.size` styr rotationen av loggfilen genom att ange antingen:
@@ -585,17 +577,17 @@ Vissa av dessa kommer att vara beroende av operativsystemet.
   <tr> 
    <td>Tråddumpar</td> 
    <td>Observera JVM-trådar. Identifiera innehåll, lås och långa löptider.</td> 
-   <td><p><br /> Beroende på operativsystem: - Unix/Linux: <code>kill -QUIT &lt;<em>pid</em>&gt;</code><br /> - Windows (konsolläge): Ctrl-Break<br /> </p> <p>Analysverktyg finns också tillgängliga, till exempel <a href="https://java.net/projects/tda/">TDA</a>.<br /> </p> </td> 
+   <td><p>Beroende på operativsystem:<br /> - Unix/Linux: <code>kill -QUIT &lt;<em>pid</em>&gt;</code><br /> - Windows (konsolläge): Ctrl-Break<br /> </p> <p>Analysverktyg finns också tillgängliga, till exempel <a href="https://java.net/projects/tda/">TDA</a>.<br /> </p> </td> 
   </tr> 
   <tr> 
    <td>Heap Dumps</td> 
    <td>Slut på minne som orsakar långsamma prestanda.</td> 
-   <td><p><br /> Lägg till: <code>-XX:+HeapDumpOnOutOfMemoryError</code><br /> till java-anropet till AEM.</p> <p>Se <a href="https://java.sun.com/javase/6/webnotes/trouble/TSG-VM/html/clopts.html#gbzrr">felsökningsguiden för Java SE 6 med HotSpot VM</a>.</p> </td> 
+   <td><p>Lägg till:<br /> <code>-XX:+HeapDumpOnOutOfMemoryError</code><br /> till java-anropet till AEM.</p> <p>Se <a href="https://java.sun.com/javase/6/webnotes/trouble/TSG-VM/html/clopts.html#gbzrr">felsökningsguiden för Java SE 6 med HotSpot VM</a>.</p> </td> 
   </tr> 
   <tr> 
    <td>Systemanrop</td> 
    <td>Identifiera timingproblem.</td> 
-   <td><p>Anrop till <code>System.currentTimeMillis()</code> eller <code>com.day.util</code>.Timing används för att generera tidsstämplar från koden eller via <a href="#html-comments">HTML-kommentarer</a>.</p> <p><strong></strong> Obs! Dessa bör implementeras så att de kan aktiveras/avaktiveras efter behov. När ett system fungerar smidigt behövs inte de allmänna kostnaderna för att samla in statistik.</p> </td> 
+   <td><p>Anrop till <code>System.currentTimeMillis()</code> eller <code>com.day.util</code>.Timing används för att generera tidsstämplar från koden eller via <a href="#html-comments">HTML-kommentarer</a>.</p> <p><strong>Obs!</strong> Dessa bör implementeras så att de kan aktiveras/avaktiveras efter behov. När ett system fungerar smidigt behövs inte de allmänna kostnaderna för att samla in statistik.</p> </td> 
   </tr> 
   <tr> 
    <td>Apache Bench</td> 
@@ -620,12 +612,12 @@ Vissa av dessa kommer att vara beroende av operativsystemet.
   <tr> 
    <td>JConsole</td> 
    <td>Observera JVM-statistik och trådar.</td> 
-   <td><p>Användning: jconsole</p> <p>Se <a href="https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html">jconsole</a> och <a href="#monitoring-performance-using-jconsole">Monitoring Performance med JConsole</a>.</p> <p><strong></strong> Obs! Med JDK 1.6 kan JConsole byggas ut med plugin-program. till exempel Top eller TDA (Thread Dump Analyzer).</p> </td> 
+   <td><p>Användning: jconsole</p> <p>Se <a href="https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html">jconsole</a> och <a href="#monitoring-performance-using-jconsole">Monitoring Performance med JConsole</a>.</p> <p><strong>Obs!</strong> Med JDK 1.6 kan JConsole byggas ut med plugin-program. till exempel Top eller TDA (Thread Dump Analyzer).</p> </td> 
   </tr> 
   <tr> 
    <td>Java VisualVM</td> 
    <td>Observera JVM-statistik, trådar, minne och profilering.</td> 
-   <td><p>Användning: jvisualvm eller visualvm<br /> </p> <p>Se <a href="https://java.sun.com/javase/6/docs/technotes/tools/share/jvisualvm.html">jvisualvm</a>, <a href="https://visualvm.github.io/releases.html">visualvm</a> och <a href="#monitoring-performance-using-j-visualvm">Övervakningsprestanda med (J)VisualVM</a>.</p> <p><strong></strong> Obs! Med JDK 1.6 kan VisualVM utökas med plugin-program.</p> </td> 
+   <td><p>Användning: jvisualvm eller visualvm<br /> </p> <p>Se <a href="https://java.sun.com/javase/6/docs/technotes/tools/share/jvisualvm.html">jvisualvm</a>, <a href="https://visualvm.github.io/releases.html">visualvm</a> och <a href="#monitoring-performance-using-j-visualvm">Övervakningsprestanda med (J)VisualVM</a>.</p> <p><strong>Obs!</strong> Med JDK 1.6 kan VisualVM utökas med plugin-program.</p> </td> 
   </tr> 
   <tr> 
    <td>truss/strace, lsof</td> 
@@ -957,11 +949,11 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 Om du vill se det totala antalet sidaktiveringar sedan serverinstallationen använder en databasfråga, via CRXDE - Tools - Query:
 
-* **Typ**`XPath`
+* **Typ** `XPath`
 
-* **Bana**`/`
+* **Bana** `/`
 
-* **Fråga**`//element(*, cq:AuditEvent)[@cq:type='Activate']`
+* **Fråga** `//element(*, cq:AuditEvent)[@cq:type='Activate']`
 
 Beräkna sedan medelvärdet genom att beräkna antalet dagar som har gått sedan installationen.
 
@@ -969,21 +961,21 @@ Beräkna sedan medelvärdet genom att beräkna antalet dagar som har gått sedan
 
 Om du vill se antalet sidor som för närvarande finns på servern använder du en databasfråga; via CRXDE - Tools - Query:
 
-* **Typ**`XPath`
+* **Typ** `XPath`
 
-* **Bana**`/`
+* **Bana** `/`
 
-* **Fråga**`//element(*, cq:Page)`
+* **Fråga** `//element(*, cq:Page)`
 
 #### Om du använder MSM, vilket är det genomsnittliga antalet utrullningar per månad? {#if-you-use-msm-what-is-the-average-number-of-rollouts-per-month}
 
 För att fastställa det totala antalet utrullningar sedan installationen använder du en databasfråga. via CRXDE - Tools - Query:
 
-* **Typ**`XPath`
+* **Typ** `XPath`
 
-* **Bana**`/`
+* **Bana** `/`
 
-* **Fråga**`//element(*, cq:AuditEvent)[@cq:type='PageRolledOut']`
+* **Fråga** `//element(*, cq:AuditEvent)[@cq:type='PageRolledOut']`
 
 Beräkna medelvärdet genom att beräkna antalet månader som har gått sedan installationen.
 
@@ -991,11 +983,11 @@ Beräkna medelvärdet genom att beräkna antalet månader som har gått sedan in
 
 För att fastställa det totala antalet live-kopior som gjorts sedan installationen använder du en databasfråga. via CRXDE - Tools - Query:
 
-* **Typ**`XPath`
+* **Typ** `XPath`
 
-* **Bana**`/`
+* **Bana** `/`
 
-* **Fråga**`//element(*, cq:LiveSyncConfig)`
+* **Fråga** `//element(*, cq:LiveSyncConfig)`
 
 Använd återigen antalet månader som har gått sedan installationen för att beräkna genomsnittet.
 
@@ -1003,11 +995,11 @@ Använd återigen antalet månader som har gått sedan installationen för att b
 
 Om du vill se hur många DAM-resurser du för närvarande har använder du en databasfråga; via CRXDE - Tools - Query:
 
-* **Typ**`XPath`
+* **Typ** `XPath`
 
-* **Bana**`/`
+* **Bana** `/`
 
-* **Fråga**`/jcr:root/content/dam//element(*, dam:Asset)`
+* **Fråga** `/jcr:root/content/dam//element(*, dam:Asset)`
 
 #### Vilken är den genomsnittliga storleken på resurserna? {#what-is-the-average-size-of-the-assets}
 
@@ -1028,21 +1020,21 @@ Så här avgör du den totala storleken på `/var/dam` mappen:
 
 Om du vill se antalet mallar som för närvarande finns på servern använder du en databasfråga. via CRXDE - Tools - Query:
 
-* **Typ**`XPath`
+* **Typ** `XPath`
 
-* **Bana**`/`
+* **Bana** `/`
 
-* **Fråga**`//element(*, cq:Template)`
+* **Fråga** `//element(*, cq:Template)`
 
 #### Hur många komponenter används för närvarande? {#how-many-components-are-currently-used}
 
 Om du vill se antalet komponenter som för närvarande finns på servern använder du en databasfråga. via CRXDE - Tools - Query:
 
-* **Typ**`XPath`
+* **Typ** `XPath`
 
-* **Bana**`/`
+* **Bana** `/`
 
-* **Fråga**`//element(*, cq:Component)`
+* **Fråga** `//element(*, cq:Component)`
 
 #### Hur många förfrågningar per timme har du på författarsystemet vid maximal tid? {#how-many-requests-per-hour-do-you-have-on-the-author-system-at-peak-time}
 
