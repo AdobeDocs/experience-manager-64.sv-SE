@@ -10,7 +10,10 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 266634ab-21d3-4aac-acfa-b799a7485507
 translation-type: tm+mt
-source-git-commit: 9b6c1efe1f6281892648c7b41820856d2e3fcac1
+source-git-commit: 55b9105fab3947322649c7ed2b750497e486ec63
+workflow-type: tm+mt
+source-wordcount: '1034'
+ht-degree: 0%
 
 ---
 
@@ -37,35 +40,35 @@ Om du använder Mozilla Firefox som webbläsare:
 Om du använder Microsoft Edge som webbläsare:
 
 * Skriv `about:flags` i adressfältet och tryck på Retur.
-* Bläddra till Experimentella funktioner och **[!UICONTROL tryck]** sedan.
-* Klicka på **[!UICONTROL Aktivera pekhändelser]**.
-* Välj **[!UICONTROL Alltid av]**.
+* Bläddra sedan till Experimentella funktioner **[!UICONTROL Touch]**.
+* Klicka på **[!UICONTROL Enable touch events]**.
+* Välj **[!UICONTROL Always Off]**.
 * Starta om webbläsaren.
 
 ## Platform {#platform}
 
-* **** Kontrollpanel för åtgärder: Förloppsindikatorn visas inte när säkerhetskopieringsfilen saknar ZIP-tillägg. (GRANITE-10713)
-* **** HTML: Java Use-objektet med efterföljande tomt utrymme i paketdeklarationen fryser SightlyJavaCompilerService (GRANITE-20836)
-* **** Apache Felix/Sling: Konfigurationsfilen finns fortfarande i databasen även efter configuration.delete() (GRANITE-20618)
-* **** Molninställningar: Konsolen bryts efter redigering av konfigurationsbehållaren (GRANITE-20726)
-* **** Säkerhet: IMS-integrering misslyckas med anpassad kontextsökväg (GRANITE-20639)
-* **** Säkerhet: Förbättra JAAS-standardrankningen för SSO, externa och standardinloggningsmoduler (GRANITE-20590)
-* **** Tooling - CRX DE Lite: Vyn Egenskaper fortsätter att röra sig uppåt (GRANITE-12040)
-* **** Tooling - CRX DE Lite: Det går inte att spara ändringar i Long-värdetyper om du inte dubbelklickar på Property Name (GRANITE-12351)
+* **Kontrollpanel för åtgärder:** Förloppsindikatorn visas inte när säkerhetskopieringsfilen saknar ZIP-tillägg. (GRANITE-10713)
+* **HTML:** Java Use-objektet med efterföljande tomt utrymme i paketdeklarationen fryser SightlyJavaCompilerService (GRANITE-20836)
+* **Apache Felix/Sling:** Konfigurationsfilen finns fortfarande i databasen även efter configuration.delete() (GRANITE-20618)
+* **Molninställningar:** Konsolen bryts efter redigering av konfigurationsbehållaren (GRANITE-20726)
+* **Säkerhet:** IMS-integrering misslyckas med anpassad kontextsökväg (GRANITE-20639)
+* **Säkerhet:** Förbättra JAAS-standardrankningen för SSO, externa och standardinloggningsmoduler (GRANITE-20590)
+* **Tooling - CRX DE Lite:** Vyn Egenskaper fortsätter att röra sig uppåt (GRANITE-12040)
+* **Tooling - CRX DE Lite:** Det går inte att spara ändringar i Long-värdetyper om du inte dubbelklickar på Property Name (GRANITE-12351)
 
-* **** Tooling - CRX DE Lite: Ctrl+F-sökning i öppna textfiler fastnar vid RegExp-sökning (GRANITE-5996)
+* **Tooling - CRX DE Lite:** Ctrl+F-sökning i öppna textfiler fastnar vid RegExp-sökning (GRANITE-5996)
 
-* **** Tooling - CRX DE Lite: Nodegenskapen visas inte efter namnbyte av noden (GRANITE-7160)
-* **** Gränssnitt: Pulldown &quot;more..&quot; visar inte alla element när de öppnas i ett pover-element i IE och Firefox (GRANITE-16326)
-* **** Gränssnitt: Verktygstipset Info döljs när du använder fast kolumnlayout med två spalter sida vid sida (GRANITE-16869)
-* **** Gränssnitt: Ohanterat fel vid personifiering som en användare som inte finns (GRANITE-23228). Tillfällig lösning genom att [implementera en felhanterare](/help/sites-developing/customizing-errorhandler-pages.md) för att anpassa felmeddelandet.
+* **Tooling - CRX DE Lite:** Nodegenskapen visas inte efter namnbyte av noden (GRANITE-7160)
+* **Gränssnitt:** Pulldown &quot;more..&quot; visar inte alla element när de öppnas i ett pover-element i IE och Firefox (GRANITE-16326)
+* **Gränssnitt:** Verktygstipset Info döljs när du använder fast kolumnlayout med två spalter sida vid sida (GRANITE-16869)
+* **Gränssnitt:** Ohanterat fel vid personifiering som en användare som inte finns (GRANITE-23228). Tillfällig lösning genom att [implementera en felhanterare](/help/sites-developing/customizing-errorhandler-pages.md) för att anpassa felmeddelandet.
 
-* **** Omnissearch: Sökningar med omvänt snedstreck orsakar undantag (GRANITE-11769)
-* **** Omnissearch: Öppna Visa inställningar i listvyn så ändras sökfiltret (GRANITE-16524)
-* **** Omnissearch: Fel lista över kolumnkonfigurationer som visas vid resurssökning från platser (GRANITE-16527)
+* **Omnissearch:** Sökningar med omvänt snedstreck orsakar undantag (GRANITE-11769)
+* **Omnissearch:** Öppna Visa inställningar i listvyn så ändras sökfiltret (GRANITE-16524)
+* **Omnissearch:** Fel lista över kolumnkonfigurationer som visas vid resurssökning från platser (GRANITE-16527)
 
-* **** Omnissearch: Predikaten för vänster spår följer med Omnisearch-serverns begäran (GRANITE-20524)
-* **** Omnissearch: Omnisearch stöder inte kontextsökvägar (GRANITE-16044)
+* **Omnissearch:** Predikaten för vänster spår följer med Omnisearch-serverns begäran (GRANITE-20524)
+* **Omnissearch:** Omnisearch stöder inte kontextsökvägar (GRANITE-16044)
 
 ## Assets {#assets}
 
@@ -98,6 +101,7 @@ Om du använder Microsoft Edge som webbläsare:
 ### Installation och driftsättning
 
 * (Endast AEM Forms JEE) När JBoss-programservern startas om medan Configuration Manager körs returneras fel för EJB-anrop och startfel. Du kan dock ignorera dem. (Ref# CQ-4229793)
+* När AEM Forms startas visas en varning `SAX Security Manager could not be setup` . (CQ-4297403)
 
 ### Interaktiv kommunikation
 
