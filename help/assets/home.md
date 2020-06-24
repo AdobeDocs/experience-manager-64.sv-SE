@@ -2,7 +2,7 @@
 title: Användarhandbok för AEM 6.4 Assets
 description: Den här guiden täcker alla uppgifter för AEM Assets, t.ex. hur man skapar, hanterar, levererar och optimerar digitala resurser.
 translation-type: tm+mt
-source-git-commit: 6be9e5049600420c86120d0b6c84c1c321d7dc63
+source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 18%
@@ -36,7 +36,7 @@ Den här guiden täcker alla uppgifter för AEM Assets, t.ex. hur man skapar, ha
 | [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger upp din AEM-instans. |
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM-projekt. |
 | [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
-| [AEM Livefyre](https://marketing.adobe.com/resources/help/en_US/livefyre/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
+| [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM-resurser
 
