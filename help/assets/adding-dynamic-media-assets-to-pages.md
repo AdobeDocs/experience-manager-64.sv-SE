@@ -10,7 +10,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d1f45751-1761-4d6b-b17d-110b2f1117ea
 translation-type: tm+mt
-source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+source-git-commit: ec4fe78ff6101bc427570c48f80c1bd4f173e6e2
 workflow-type: tm+mt
 source-wordcount: '2714'
 ht-degree: 4%
@@ -179,15 +179,15 @@ Du måste redigera följande inställningar för Dynamic Media genom att klicka 
 >Som standard är Dynamic Media-videokomponenten adaptiv. If you want to make it a fixed size, set it in the component with the **[!UICONTROL Width]** and **[!UICONTROL Height]** in the [!UICONTROL Advanced] tab.
 
 * **[!UICONTROL Viewer preset]**
-Välj en befintlig förinställning för visningsprogrammet för video i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Se Hantera förinställningar för visningsprogram.
+Välj en befintlig förinställning för visningsprogrammet för video i listrutan. Om den visningsförinställning som du söker efter inte visas kan du behöva göra den synlig. Se Hantera förinställningar för visningsprogram.
 
 * **[!UICONTROL Viewer modifiers]**
 Visningsmodifierare har formen av namn=värde-par med en &amp;-avgränsare och du kan ändra visningsprogram enligt riktlinjerna i referenshandboken för Adobe Viewer. Ett exempel på en visningsmodifierare är posterimage=img.jpg&amp;caption=text.vtt,1
 
    Med visningsmodifierare kan du till exempel göra följande:
 
-   * Associera en bildtextfil med en [bildtext](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
-   * Koppla en navigeringsfil till en [videonavigering](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
+   * Associera en bildtextfil med en [bildtext.](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
+   * Koppla en navigeringsfil till en [videonavigering.](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
 
 Du kan redigera följande [!UICONTROL Advanced Settings] genom att klicka **[!UICONTROL Edit]** i komponenten.
 
@@ -246,7 +246,7 @@ Komponenten Interactive Media är smart - beroende på om du lägger till en bil
 You can edit the following **[!UICONTROL General]** settings by clicking **[!UICONTROL Edit]** in the component.
 
 * **[!UICONTROL Viewer preset]**
-Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Förinställningar för visningsprogram måste publiceras innan de kan användas. Se Hantera förinställningar för visningsprogram.
+Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kan du behöva göra den synlig. Förinställningar för visningsprogram måste publiceras innan de kan användas. Se Hantera förinställningar för visningsprogram.
 
 * **[!UICONTROL Title]**
 Ändra videons titel.
