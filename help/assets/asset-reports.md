@@ -3,9 +3,9 @@ title: Rapporter om användning och delning av digitala resurser.
 description: Rapporterar om dina resurser i [!DNL Adobe Experience Manager Assets] som hjälper dig att förstå användningen, aktiviteten och delningen av dina digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a5e9b38cd7ed7a513c2ca6b6c0c3b5d0830dfdab
+source-git-commit: 6faa69ee1d38ad16add95263c53f18ea0a413fd2
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1003'
 ht-degree: 9%
 
 ---
@@ -59,11 +59,11 @@ Om du vill generera rapporter måste du se till att:
 
    >[!NOTE]
    >
-   >Som standard inkluderas innehållsfragment och länkdelningar i rapporten Hämtade resurser. Välj lämpligt alternativ för att skapa en rapport över länkdelningar eller för att utesluta innehållsfragment från hämtningsrapporten.
+   >Som standard inkluderas innehållsfragment och länkdelningar i resursen [!UICONTROL Downloaded report]. Välj lämpligt alternativ för att skapa en rapport över länkdelningar eller för att utesluta innehållsfragment från hämtningsrapporten.
 
    >[!NOTE]
    >
-   >I [!UICONTROL Download] rapporten visas endast information om de resurser som har markerats individuellt och hämtats. Den innehåller dock inte information om resurserna som fanns i en hämtad mapp.
+   >I [!UICONTROL Download] rapporten visas endast information om de resurser som har markerats individuellt och som har hämtats eller hämtats med Snabbåtgärd. Den innehåller dock inte information om resurserna som fanns i en hämtad mapp.
 
 1. Konfigurera rapportinformation som titel, beskrivning, miniatyrbild och mappsökväg i CRX-databasen där rapporten lagras. Som standard är mappsökvägen `/content/dam`. Du kan ange en annan sökväg.
 
