@@ -10,9 +10,9 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 1cdb2dfc-623b-44cf-9a7b-98cfabbb1d0c
 translation-type: tm+mt
-source-git-commit: 69976917f19a695908f1d7e5276d969587671761
+source-git-commit: dea673f8999656a5c5364f74f45eba41dd17b947
 workflow-type: tm+mt
-source-wordcount: '1815'
+source-wordcount: '1732'
 ht-degree: 10%
 
 ---
@@ -49,26 +49,26 @@ Utför en rad andra åtgärder beroende på vilken datatyp som redigeras. till e
 
 ## Redigera ditt innehåll {#authoring-your-content}
 
-När du öppnar ditt innehållsfragment för redigering öppnas fliken **Variationer** som standard. Här kan du skapa innehållet, för mallen eller eventuella varianter som du har. Du kan:
+När du öppnar ditt innehållsfragment för redigering öppnas fliken **Variationer** som standard. Här kan du skapa innehållet, för mallsidor eller andra varianter som du har. Du kan:
 
 * gör redigeringar direkt på fliken **Variationer**
 * öppna [helskärmsredigeraren](#full-screen-editor) för att:
 
    * välj [Format](#formats)
-   * se fler redigeringsalternativ (för [RTF](#rich-text) -format)
-   * få tillgång till ett antal [åtgärder](#actions)
+   * see more editing options (for [Rich Text](#rich-text) format)
+   * access a range of [actions](#actions)
 
 Till exempel:
 
 * Redigera ett enkelt fragment
 
-   Ett enkelt fragment består av ett textfält med flera rader (visuella resurser kan läggas till i helskärmsredigeraren).
+   A simple fragment consists of one multi-line text field (visual assets can be added from the full-screen editor).
 
    ![cfm-6420-21](assets/cfm-6420-21.png)
 
-* Redigera ett fragment med strukturerat innehåll
+* Editing a fragment with structured content
 
-   Ett strukturerat fragment innehåller olika fält, av olika datatyper, som har definierats i innehållsmodellen. För flerradiga fält är [helskärmsredigeraren](#full-screen-editor) tillgänglig.
+   A structured fragment contains various fields, of various data-types, that were defined in the content model. For any multi-line fields the [full-screen editor](#full-screen-editor) is available.
 
    ![cfm-6420-16](assets/cfm-6420-16.png)
 
@@ -131,9 +131,9 @@ Med textredigering kan du formatera:
 
 Du kan även komma åt [funktionsmakrona](#actions) från helskärmsredigeraren.
 
-### Oformaterad text {#plain-text}
+### Plain Text {#plain-text}
 
-Med oformaterad text kan du snabbt lägga in innehåll utan formaterings- eller markeringsinformation. Du kan även öppna helskärmsredigeraren för ytterligare [åtgärder](#actions).
+Plain Text allows for rapid entry of content without formatting or markdown information. Du kan även öppna helskärmsredigeraren för ytterligare [åtgärder](#actions).
 
 >[!CAUTION]
 >
@@ -151,7 +151,7 @@ På så sätt kan du formatera texten med hjälp av markeringar. Du kan definier
 * Stycken och radbrytningar
 * Länkar
 * Bilder
-* Blockcitat
+* Block Quotes
 * Listor
 * Betoning
 * Kodblock
@@ -193,12 +193,12 @@ Att sammanfatta text är utformat för att hjälpa användare att minska längde
 >
 >Engelska finns i körklart skick.
 >
->Andra språk är tillgängliga som språkmodellpaket från paketresurs eller programdistribution:
+>Andra språk är tillgängliga som språkmodellpaket från programvarudistribution:
 >
->* [Franska (fr) från Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-fr) eller [franska (fr) från Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
->* [German (de) from Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-de) or [German (de) from Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
->* [Italian (it) from Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-it) or [Italian (it) from Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
->* [Spanska (es) från Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-es) eller [Spanska (es) från Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+>* [Franska (fr) från programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
+>* [German (de) from Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+>* [Italian (it) from Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+>* [Spanish (es) from Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
 >
 
 
@@ -206,14 +206,14 @@ Att sammanfatta text är utformat för att hjälpa användare att minska längde
 1. Välj **[!UICONTROL Master]** eller önskad variation.
 1. Öppna fullskärmsredigeraren.
 
-1. Välj **[!UICONTROL Summarize text]** i verktygsfältet.
+1. Select **[!UICONTROL Summarize text]** from the toolbar.
 
    ![cf-17](assets/cf-17.png)
 
 1. Ange målantalet ord och välj **[!UICONTROL Start]**:
 1. Den ursprungliga texten visas sida vid sida med den föreslagna sammanfattningen:
 
-   * Alla meningar som ska tas bort markeras med rött, med genomstrykning.
+   * Any sentences to be eliminated are highlighted in red, with strike-through.
    * Klicka på en markerad mening om du vill behålla den i det sammanfattande innehållet.
    * Klicka på en mening som inte är markerad för att ta bort den.
    ![cfm-6420-23](assets/cfm-6420-23.png)
@@ -262,21 +262,21 @@ De läggs till i fragmentets styckesekvens utan formatering. formatering kan gö
 >
 >Dessa resurser kan inte flyttas eller tas bort på en referenssida. Detta måste göras i fragmentredigeraren.
 >
->Formatering av resursen (t.ex. storlek) måste dock göras i [sidredigeraren](/help/sites-authoring/content-fragments.md). Representationen av resursen i fragmentredigeraren är endast till för att skapa innehållsflödet.
+>Formatering av resursen (t.ex. storlek) måste dock göras i [sidredigeraren](/help/sites-authoring/content-fragments.md). The representation of the asset in the fragment editor is purely for authoring the content flow.
 
 >[!NOTE]
 >
->Det finns olika metoder för att lägga till [bilder](content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
+>There are various methods of adding [images](content-fragments.md#fragments-with-visual-assets) to the fragment and/or page.
 
 1. Placera markören på den plats där du vill lägga till bilden.
 1. Use the **[!UICONTROL Insert Asset]** icon to open the search dialog.
 
    ![cf-insertasset-icon](assets/cf-insertasset-icon.png)
 
-1. I dialogrutan kan du antingen:
+1. In the dialog you can either:
 
-   * navigera till den nödvändiga resursen i DAM
-   * söka efter resursen i DAM
+   * navigate to the required asset in DAM
+   * search for the asset in DAM
    Välj önskad resurs genom att klicka på miniatyrbilden.
 
 1. Use **[!UICONTROL Select]** to add the asset to the paragraph system of your content fragment at the current location.
@@ -298,7 +298,7 @@ Med variationer kan du ta **mallinnehållet** och ändra det efter syfte (om det
 Så här skapar du en ny variant:
 
 1. Öppna fragmentet och se till att sidopanelen är synlig.
-1. Välj **[!UICONTROL Variations]** från ikonfältet på sidopanelen.
+1. Select **[!UICONTROL Variations]** from the icon bar in the side panel.
 1. Välj **[!UICONTROL Create Variation]**.
 1. A dialog will open, specify the **[!UICONTROL Title]** and **[!UICONTROL Description]** for the new variation.
 1. Select **[!UICONTROL Add]**; the fragment **[!UICONTROL Master]** will be copied to the new variation, which is now open for [editing](#editing-a-variation).
@@ -307,18 +307,18 @@ Så här skapar du en ny variant:
    >
    >När du skapar en ny variant är det alltid **mallsida** som kopieras, inte varianten som är öppen.
 
-### Redigera en variant {#editing-a-variation}
+### Editing a Variation {#editing-a-variation}
 
-Du kan ändra variantinnehållet efter antingen:
+You can make changes to the variation content after either:
 
 * [Skapa din variation](#creating-a-variation).
 * Öppna ett befintligt fragment och välj sedan önskad variation på sidopanelen.
 
 ![cfm-6420-26](assets/cfm-6420-26.png)
 
-### Byta namn på en variant {#renaming-a-variation}
+### Renaming a Variation {#renaming-a-variation}
 
-Så här byter du namn på en befintlig variant:
+To rename an existing variation:
 
 1. Open your fragment and select **[!UICONTROL Variations]** from the side panel.
 1. Välj önskad variant.
@@ -350,7 +350,7 @@ Så här tar du bort en befintlig variant:
 
 **Mallen** är en integrerad del av ett innehållsfragment och innehåller per definition huvudkopian av innehållet, medan varianterna innehåller de individuella uppdaterade och anpassade versionerna av det innehållet. När mallsidan uppdateras är det möjligt att dessa ändringar också är relevanta för variationerna och därför måste spridas till dem.
 
-När du redigerar en variant har du tillgång till åtgärden för att synkronisera det aktuella elementet i variationen med mallsidan. På så sätt kan du automatiskt kopiera ändringar som gjorts i mallsidan till den önskade varianten.
+When editing a variation you have access to the action for synchronizing the current element of the variation with Master. This allows you to automatically copy changes made to Master to the required variation.
 
 >[!CAUTION]
 >
@@ -362,13 +362,13 @@ När du redigerar en variant har du tillgång till åtgärden för att synkronis
 >
 >Du kan inte överföra ändringar *från en variant till **mastern ***.
 
-1. Öppna ditt innehållsfragment i fragmentredigeraren. Kontrollera att **mallsidan** har redigerats.
+1. Open your content fragment in the fragment editor. Ensure that the **Master** has been edited.
 2. Välj en specifik variant och sedan lämplig synkroniseringsåtgärd från antingen:
 
    * listrutan **Åtgärder** - **Synkronisera aktuellt element med mallsida**
    * verktygsfältet i fullskärmsredigeraren - **Synkronisera med mallsida**
 
-3. Mallen och variationen visas sida vid sida:
+3. Master and the variation will be shown side-by-side:
 
    * grönt anger innehåll som lagts till (i varianten)
    * rött anger att innehållet har tagits bort (från varianten)
