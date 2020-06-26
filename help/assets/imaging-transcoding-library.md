@@ -3,9 +3,9 @@ title: Konverteringsbibliotek för bildbehandling
 description: Lär dig hur du konfigurerar och använder Adobes Imaging Transcoding Library, en bildbehandlingslösning som kan utföra grundläggande bildhanteringsfunktioner, inklusive kodning, omkodning, bildomsampling och storleksändring.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 69976917f19a695908f1d7e5276d969587671761
+source-git-commit: dea673f8999656a5c5364f74f45eba41dd17b947
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ Om du vill konfigurera ITL-bearbetning skapar du en konfigurationsfil och uppdat
 
 Om du vill konfigurera biblioteket skapar du en .conf-fil som anger biblioteken med följande steg. Du behöver administratörs- eller rotbehörigheter.
 
-1. Ladda ned paketet Imaging Transcoding Library från [Packase Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) eller från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) och installera det med Package Manager. Paketet är kompatibelt med AEM 6.5.
+1. Hämta paketet Imaging Transcoding Library från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) och installera det med Package Manager. Paketet är kompatibelt med AEM 6.5.
 
 1. Om du vill veta ett paket-ID för `com.day.cq.dam.cq-dam-switchengine`loggar du in på webbkonsolen och trycker på **[!UICONTROL OSGi > Bundles]**. Du kan även öppna paketkonsolen genom att gå till `https://[aem_server:[port]/system/console/bundles/` URL. Hitta paketet och dess ID `com.day.cq.dam.cq-dam-switchengine` .
 
