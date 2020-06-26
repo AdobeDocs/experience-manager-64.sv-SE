@@ -8,9 +8,9 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 821eb27e-67c9-4589-9196-30dacb84fa59
 translation-type: tm+mt
-source-git-commit: 2baa172088f646752e85168d432d46942ac8244e
+source-git-commit: dea673f8999656a5c5364f74f45eba41dd17b947
 workflow-type: tm+mt
-source-wordcount: '7498'
+source-wordcount: '7458'
 ht-degree: 1%
 
 ---
@@ -30,36 +30,36 @@ Läs mer om hur du arbetar med [video](video.md) i Dynamic Media.
 
 Om du använder Adobe Experience Manager som konfigurerats för olika miljöer, till exempel en för utveckling, en för staging och en för liveproduktion, måste du konfigurera Dynamic Media-Cloud Service för var och en av dessa miljöer.
 
-Om du har problem med Dynamic Media-konfigurationen är det viktigt att du tittar på loggfilerna som är specifika för dynamiska media. Dessa installeras automatiskt när du aktiverar dynamiska media:
+If you are having issues with your Dynamic Media configuration, an important place to look are the log files specific to dynamic media. These are installed automatically when you enable dynamic media:
 
 * `s7access.log`
 * `ImageServing.log`
 
 De beskrivs i [Övervaka och underhålla din AEM-instans](/help/sites-deploying/monitoring-and-maintaining.md).
 
-Hybridpublicering och -leverans är en viktig egenskap i Dynamic Media förutom Adobe Experience Manager. Med hybridpublicering kan du leverera Dynamic Media-resurser, som bilder, uppsättningar och video, från molnet i stället för från AEM-publiceringsnoderna.
+Hybrid publishing and delivery is a core feature of the Dynamic Media addition to Adobe Experience Manager. Med hybridpublicering kan du leverera Dynamic Media-resurser, som bilder, uppsättningar och video, från molnet i stället för från AEM-publiceringsnoderna.
 
-Annat innehåll, t.ex. Dynamic Media-visningsprogram, webbplatssidor och statiskt innehåll kommer även i fortsättningen att hanteras från AEM-publiceringsnoderna.
+Other content, such as Dynamic Media viewers, Site pages, and static content will continue to be served from the AEM publish nodes.
 
-Om du är kund med Dynamic Media måste du använda hybridleverans som leveransmekanism för allt innehåll i Dynamic Media.
+If you are a customer of Dynamic Media, you are required to use hybrid delivery as the delivery mechanism for all Dynamic Media content.
 
 ## Hybrid publiceringsarkitektur för videor {#hybrid-publishing-architecture-for-videos}
 
 ![chlimage_1-506](assets/chlimage_1-506.png)
 
-## Hybrid-publiceringsarkitektur för bilder {#hybrid-publishing-architecture-for-images}
+## Hybrid publishing architecture for images {#hybrid-publishing-architecture-for-images}
 
 ![chlimage_1-507](assets/chlimage_1-507.png)
 
-## Dynamic Media-konfigurationer som stöds {#supported-dynamic-media-configurations}
+## Supported Dynamic Media configurations {#supported-dynamic-media-configurations}
 
-Konfigurationsåtgärderna som följer refererar till följande termer:
+The configuration tasks that follow reference the following terms:
 
 | **Term** | **Dynamic Media aktiverat** | **Beskrivning** |
 |---|---|---|
-| AEM-författarnod | Vit bock i en grön cirkel | Författarnoden som du distribuerar till lokal eller via hanterade tjänster. |
+| AEM author node | Vit bock i en grön cirkel | Författarnoden som du distribuerar till lokal eller via hanterade tjänster. |
 | AEM-publiceringsnod | Vitt &quot;X&quot; i en röd kvadrat. | Den publiceringsnod som du distribuerar till lokal eller via hanterade tjänster. |
-| Publiceringsnod för bildtjänst | Vit bock i en grön cirkel. | Den publiceringsnod som du kör på datacenter som hanteras av Adobe. Hänvisar till bildtjänstens URL. |
+| Publiceringsnod för bildtjänst | White check mark in a green circle. | Den publiceringsnod som du kör på datacenter som hanteras av Adobe. Refers to the image service URL. |
 
 Du kan välja att implementera Dynamic Media endast för bildåtergivning, endast för video eller för både bildåtergivning och video. Om du vill se hur du konfigurerar Dynamic Media för ditt specifika scenario använder du följande tabell.
 
@@ -68,11 +68,11 @@ Du kan välja att implementera Dynamic Media endast för bildåtergivning, endas
   <tr> 
    <td><strong>Scenario</strong></td> 
    <td><strong>Så här fungerar det</strong></td> 
-   <td><strong>Konfigurationssteg</strong></td> 
+   <td><strong>Configuration Steps</strong></td> 
   </tr> 
   <tr> 
-   <td>Leverera ENDAST bilder i produktion</td> 
-   <td>Bilderna levereras via servrar i Adobes globala datacenter och cachas sedan av en CDN för skalbara prestanda och global räckvidd.</td> 
+   <td>Deliver ONLY images in production</td> 
+   <td>Images are delivered through servers in Adobe’s worldwide data centers and then cached by a CDN for scalable performance and global reach.</td> 
    <td> 
     <ol> 
      <li>På AEM- <strong>författarnoden</strong> <a href="#enabling-dynamic-media">aktiverar du dynamiska medier</a>.</li> 
@@ -87,7 +87,7 @@ Du kan välja att implementera Dynamic Media endast för bildåtergivning, endas
   </tr> 
   <tr> 
    <td>Leverera ENDAST bilder i förproduktion (Dev, QE, Stage o.s.v.)</td> 
-   <td>Bilderna levereras via AEM-publiceringsnoden. Då trafiken är minimal behöver man inte leverera bilder till Adobes datacenter. En annan fördel är att detta ger en säker förhandsgranskning av innehållet innan produktionen startar</td> 
+   <td>Images are delivered through the AEM publish node. In this scenario, since traffic is minimal, there is no need to deliver images to Adobe’s data center. En annan fördel är att detta ger en säker förhandsgranskning av innehållet innan produktionen startar</td> 
    <td> 
     <ol> 
      <li>På AEM- <strong>författarnoden</strong> <a href="#enabling-dynamic-media">aktiverar du dynamiska medier</a>.</li> 
@@ -100,7 +100,7 @@ Du kan välja att implementera Dynamic Media endast för bildåtergivning, endas
   </tr> 
   <tr> 
    <td>Leverera ENDAST video i alla miljöer (Production, Dev, QE, Stage o.s.v.)</td> 
-   <td>Videor levereras och cachas av ett CDN för skalbara prestanda och global räckvidd. Filmminiatyrbilden (miniatyrbilden av videon som visas innan uppspelningen startar) levereras av AEM-publiceringsinstansen.</td> 
+   <td>Videor levereras och cachas av ett CDN för skalbara prestanda och global räckvidd. The video poster image (thumbnail of video which shows before playback initiates) will be delivered by the AEM publish instance.</td> 
    <td> 
     <ol> 
      <li>På AEM- <strong>författarnoden</strong> <a href="#enabling-dynamic-media">aktiverar du dynamiska medier</a>.</li> 
@@ -113,11 +113,11 @@ Du kan välja att implementera Dynamic Media endast för bildåtergivning, endas
   </tr> 
   <tr> 
    <td>Leverera både bilder och video i produktion</td> 
-   <td><p>Videor levereras och cachas av ett CDN för skalbara prestanda och global räckvidd. Bilder och filmminiatyrbilder levereras via servrar i Adobes globala datacenter och cachas sedan av en CDN för skalbara prestanda och global räckvidd.</p> <p>Se föregående avsnitt för att ställa in bild eller video i förproduktion. </p> </td> 
+   <td><p>Videor levereras och cachas av ett CDN för skalbara prestanda och global räckvidd. Bilder och filmminiatyrbilder levereras via servrar i Adobes globala datacenter och cachas sedan av en CDN för skalbara prestanda och global räckvidd.</p> <p>Please refer to previous sections to setup image or video in pre-production. </p> </td> 
    <td> 
     <ol> 
      <li>På AEM- <strong>författarnoden</strong> <a href="#enabling-dynamic-media">aktiverar du dynamiska medier</a>.</li> 
-     <li>Konfigurera video i <a href="#configuring-dynamic-media-cloud-services">Dynamic Media-Cloud Service.</a></li> 
+     <li>Configure video in <a href="#configuring-dynamic-media-cloud-services">Dynamic Media Cloud Services.</a></li> 
      <li>Konfigurera bildbehandling i <a href="#configuring-dynamic-media-cloud-services">Dynamic Media-Cloud Service.</a></li> 
      <li><a href="#configuring-image-replication">Konfigurera bildreplikering</a>.</li> 
      <li><a href="#replicating-catalog-settings">Replikera kataloginställningar</a>.</li> 
@@ -146,7 +146,7 @@ Om du vill aktivera dynamiska medier måste du aktivera körningsläget för dyn
 
 **Så här aktiverar du dynamiska medier**:
 
-1. Gör följande på kommandoraden när du startar snabbstarten:
+1. On the command line, when launching the quickstart, do the following:
 
    * Lägg **[!UICONTROL -r dynamicmedia]** till i slutet av kommandoraden när du startar filen jar.
 
@@ -154,7 +154,7 @@ Om du vill aktivera dynamiska medier måste du aktivera körningsläget för dyn
    java -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.4.0.jar -r dynamicmedia
    ```
 
-   Om du publicerar till s7delivery måste du även inkludera följande trustStore-argument:
+   If you are publishing to s7delivery, then you also need to include the following trustStore arguments:
 
    ```
    -Djavax.net.ssl.trustStore=<absoluteFilePath>/customerTrustStoreFileName>
@@ -170,31 +170,31 @@ Om du vill aktivera dynamiska medier måste du aktivera körningsläget för dyn
    >
    >* ImageServer-&lt;PortId>-&lt;ååå>&lt;mm>&lt;dd>.log - Loggen för ImageServer innehåller statistik och analytisk information som används för att analysera beteendet hos den interna ImageServer-processen.
 
-      Exempel på ett loggfilsnamn för en Image Server: `ImageServer-57346-2019-07-25.log`
+      Example of an Image Server log file name: `ImageServer-57346-2019-07-25.log`
    * s7access-&lt;åååå>&lt;mm>&lt;dd>.log - s7access-loggen registrerar varje begäran som gjorts till Dynamic Media via `/is/image` och `/is/content`.
-   Dessa loggar används bara när Dynamic Media är aktiverat. De ingår inte i det **nedladdningsbara, fullständiga** paketet som genereras från **[!UICONTROL system/console/status-Bundlelist]** sidan. när du ringer kundsupport om du har ett problem med Dynamic Media, bifoga båda loggarna till problemet.
+   Dessa loggar används bara när Dynamic Media är aktiverat. They are not included in the **Download Full** package that is generated from the **[!UICONTROL system/console/status-Bundlelist]** page; when calling Customer Support if you have a Dynamic Media issue, please append both these logs to the issue.
 
 ### Om du har installerat AEM på en annan port eller kontextsökväg ... {#if-you-installed-aem-to-a-different-port-or-context-path}
 
-Om du distribuerar [AEM till en programserver](/help/sites-deploying/application-server-install.md) och har aktiverat Dynamic Media måste du konfigurera **själv** -domänen i externaliseraren. Annars fungerar inte generering av miniatyrbilder för resurser korrekt för dynamiska medieresurser.
+Om du distribuerar [AEM till en programserver](/help/sites-deploying/application-server-install.md) och har aktiverat Dynamic Media måste du konfigurera **själv** -domänen i externaliseraren. Otherwise, thumbnail generation for assets will not work properly for dynamic media assets.
 
 Om du kör snabbstart på en annan port eller kontextsökväg måste du dessutom ändra **egen** domän.
 
-När Dynamic Media är aktiverat genereras de statiska miniatyråtergivningarna för bildobjekt med hjälp av Dynamic Media. För att miniatyrbildsgenerering ska fungera för dynamiska medier måste AEM utföra en URL-begäran till sig själv och känna till både portnumret och kontextsökvägen.
+När Dynamic Media är aktiverat genereras de statiska miniatyråtergivningarna för bildobjekt med hjälp av Dynamic Media. For thumbnail generation to work properly for dynamic media, AEM must perform a URL request to itself and must know both the port number and the context path.
 
 I AEM:
 
 * Den **egna** domänen i [externalizer](/help/sites-developing/externalizer.md) används för att hämta både portnumret och kontextsökvägen.
-* Om ingen **egen** domän har konfigurerats hämtas portnumret och kontextsökvägen från HTTP-tjänsten Jetty.
+* If no **self** domain is configured, the port number and context path are retrieved from the Jetty HTTP service.
 
 I en AEM QuickStart WAR-distribution går det inte att härleda portnumret och kontextsökvägen. Du måste därför konfigurera en **egen** domän. Se [dokumentationen](/help/sites-developing/externalizer.md) för externalisering om hur du konfigurerar **självdomänen** .
 
 >[!NOTE]
-I en fristående [AEM Quickstart-distribution](/help/sites-deploying/deploy.md)behöver en **självdomän** vanligtvis inte konfigureras eftersom portnumret och kontextsökvägen kan konfigureras automatiskt. Om alla nätverksgränssnitt är inaktiverade måste du konfigurera **egen** domän.
+I en fristående [AEM Quickstart-distribution](/help/sites-deploying/deploy.md)behöver en **självdomän** vanligtvis inte konfigureras eftersom portnumret och kontextsökvägen kan konfigureras automatiskt. However, if all network interfaces are turned off, you need to configure the **self** domain.
 
-## Inaktivera Dynamic Media  {#disabling-dynamic-media}
+## Disabling Dynamic Media  {#disabling-dynamic-media}
 
-Dynamiska medier är inte aktiverade som standard. Om du tidigare har aktiverat dynamiska medier kan du stänga av det vid ett senare tillfälle.
+Dynamiska medier är inte aktiverade som standard. However, if you have previously enabled dynamic media, you may want to turn it off at a later time.
 
 Om du vill inaktivera dynamiska medier efter att du har aktiverat dem tar du bort flaggan för **[!UICONTROL -r dynamicmedia]** körningsläge.
 
@@ -703,7 +703,7 @@ Om du använder Dynamic Media för enbart video följer du de här stegen för a
 1. I det vänstra mappträdet navigerar du till `/etc/replication/agents.author/publish`
 1. Leta upp [!UICONTROL jcr:content], högerklicka på den och välj **[!UICONTROL Paste]**.
 
-Detta ställer in AEM-publiceringsinstansen så att den levererar filmminiatyrbilden samt de videometadata som krävs för uppspelning, medan själva videon levereras av molntjänsten i Dynamic Media. Filtret exkluderar även den ursprungliga videon och statiska miniatyrrenderingar, som inte behövs i publiceringsinstansen, från replikeringen.
+Detta ställer in AEM-publiceringsinstansen så att den levererar filmminiatyrbilden samt de videometadata som krävs för uppspelning, medan själva videon levereras av Dynamic Media molntjänst. Filtret exkluderar även den ursprungliga videon och statiska miniatyrrenderingar, som inte behövs i publiceringsinstansen, från replikeringen.
 
 ### Ställa in resursfilter för bildåtergivning i distributioner som inte är i produktion {#setting-up-asset-filters-for-imaging-in-non-production-deployments}
 
@@ -961,7 +961,7 @@ I avancerade användningsfall kan en manuell konfigurationsmodifierare användas
 * **[!UICONTROL iccEmbed]** - [Bädda in färgprofil.](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html)
 
 >[!NOTE]
-Adobes standardfärgprofiler är bara tillgängliga om du har [Feature Pack 12445 från Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) eller [Feature Pack 12445 från Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) installerat. Alla funktionspaket och servicepaket är tillgängliga via [Paketresurs](https://www.adobeaemcloud.com/content/packageshare.html) och [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Funktionspaket 12445 innehåller Adobes färgprofiler.
+Adobes standardfärgprofiler är bara tillgängliga om du har [Feature Pack 12445 från Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) installerat. Alla funktionspaket och servicepaket finns på [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Funktionspaket 12445 innehåller Adobes färgprofiler.
 
 ### Installerar funktionspaket 12445 {#installing-feature-pack}
 
@@ -969,9 +969,9 @@ Du måste installera funktionspaket 12445 för att kunna använda de dynamiska f
 
 **Så här installerar du funktionspaket 12445**:
 
-1. Navigera till [Paketresurs](https://www.adobeaemcloud.com/content/packageshare.html) eller [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) och hämta båda `cq-6.3.0-featurepack-12445`.
+1. Gå till [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) och hämtning `cq-6.3.0-featurepack-12445`.
 
-   Mer information om hur du använder paketdelning och paket i AEM finns i [Arbeta med paket](/help/sites-administering/package-manager.md) .
+   Mer information om hur du använder paket i [finns i Arbeta med paket](/help/sites-administering/package-manager.md) i [!DNL Adobe Experience Manager].
 
 1. Installera funktionspaketet.
 
