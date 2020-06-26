@@ -3,9 +3,9 @@ title: Använd PDF-rastrering
 description: Generera högkvalitativa miniatyrbilder och renderingar med hjälp av Adobe PDF Rasterizer-biblioteket.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 69976917f19a695908f1d7e5276d969587671761
+source-git-commit: dea673f8999656a5c5364f74f45eba41dd17b947
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Adobe rekommenderar att du använder PDF-rastreringsbiblioteket för följande:
 
 Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har bättre kvalitet jämfört med färdiga utdata och ger därför en konsekvent visningsupplevelse på olika enheter. Adobe PDF Rasterizer-biblioteket har inte stöd för konvertering av färgrymd. Det skrivs alltid ut på RGB, oavsett källfilens färgrymd.
 
-1. Installera PDF Rasterizer-paketet på din AEM-instans från [Paketresurs](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg) eller [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg).
+1. Installera PDF Rasterizer-paketet på din AEM-instans från [programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg).
 
    >[!NOTE]
    >
