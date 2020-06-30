@@ -3,9 +3,9 @@ title: Konfigurera RTE för flera redigerare på plats.
 description: Skapa flera redigerare på plats i Adobe Experience Manager genom att konfigurera RTF-redigeraren.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6a7d9ea37d26c2eb51d136de630e737616e7cf5b
+source-git-commit: 44e7afdd5a5738dde73ab1d05a1c83a4bb24df92
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '445'
 ht-degree: 2%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 2%
 
 # Konfigurera flera redigerare på plats {#configure-multiple-in-place-editors}
 
-Du kan konfigurera RTF-redigeraren i Adobe Experience Manager så att den har flera redigerare på plats. När du har konfigurerat det kan du välja rätt innehåll och öppna rätt redigerare. Till exempel:
+Du kan konfigurera RTF-redigeraren i Adobe Experience Manager så att den har flera redigerare på plats. När du har konfigurerat det kan du välja rätt innehåll och öppna rätt redigerare.
 
-![chlimage_1-8](assets/chlimage_1-8.png)
+![En specifik redigerare på plats](assets/rte-inplace-editor.png)
 
 ## Konfigurera flera redigerare {#configure-multiple-editors}
 
@@ -42,7 +42,7 @@ Till exempel:
 
     /**
       * Configures one child editor for a sub-component. The name of the this node is
-      * be used as DD ID.
+      * used as DD ID.
       *
       * @prop type type of the inline editor. For example, ["image"].
       * @prop title Title of the inline editor.
