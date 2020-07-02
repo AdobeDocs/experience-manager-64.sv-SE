@@ -1,106 +1,96 @@
 ---
-title: Asynkrona åtgärder för att förbättra prestanda
-description: Översikt över asynkrona åtgärder i AEM Resurser.
+title: Konfigurera asynkrona åtgärder i [!DNL Adobe Experience Manager].
+description: Slutför asynkront vissa resurskrävande åtgärder för att optimera prestandan i [!DNL Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: f6aa1ab2c7a0ddeda1504e95ce4bd57fe74a65fd
+workflow-type: tm+mt
+source-wordcount: '567'
+ht-degree: 2%
 
 ---
 
 
 # Asynkrona åtgärder {#asynchronous-operations}
 
-För att minska den negativa inverkan på prestandan bearbetar Adobe Experience Manager Assets vissa långvariga och resurskrävande resursoperationer asynkront. Dessa åtgärder omfattar:
+För att minska den negativa inverkan på prestanda behandlar [!DNL Adobe Experience Manger Assets] vissa långvariga och resurskrävande resursoperationer asynkront. Asynkron bearbetning innebär att du måste placera flera uppgifter i kö och sedan utföra dem på ett seriellt sätt beroende på om det finns systemresurser tillgängliga. Dessa åtgärder omfattar:
 
 * Tar bort många resurser.
 * Flytta många resurser eller resurser med många referenser.
-* Exporterar/importerar resursmetadata i grupp.
+* Exportera och importera resursmetadata i grupp.
 
-Asynkron bearbetning innebär att du måste placera flera jobb i kö och sedan köra dem på ett seriellt sätt beroende på om det finns systemresurser tillgängliga.
-
-Du kan visa status för asynkrona jobb på sidan **[!UICONTROL Async Job Status]** .
+Du kan visa status för asynkrona uppgifter från **[!UICONTROL Async Job Status]** sidan.
 
 >[!NOTE]
 >
->Som standard körs jobb i AEM Resurser parallellt. Om N är antalet processorkärnor kan N/2-jobb köras parallellt som standard. Om du vill använda anpassade inställningar för jobbkön ändrar du konfigurationen av standardkön för **[!UICONTROL asynkron åtgärd]** från webbkonsolen. Mer information finns i [Kökonfigurationer](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations).
+>Som standard körs åtgärderna [!DNL Assets] parallellt. Om `N` är antalet processorkärnor kan `N/2` uppgifter köras parallellt som standard. Om du vill använda anpassade inställningar för uppgiftskön ändrar du **[!UICONTROL Async Operation Default Queue]** konfigurationen från [!UICONTROL Web Console]. Mer information finns i [Kökonfigurationer](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations).
 
 ## Övervaka status för asynkrona åtgärder {#monitoring-the-status-of-asynchronous-operations}
 
-När AEM Resurser bearbetar en åtgärd asynkront får du ett meddelande i inkorgen och via e-post.
+När [!DNL Assets] en åtgärd bearbetas asynkront får du ett meddelande i din [!DNL Experience Manager] Inkorg [](/help/sites-authoring/inbox.md) och via ett e-postmeddelande. Om du vill visa status för asynkrona åtgärder i detalj går du till **[!UICONTROL Async Job Status]** sidan.
 
-Om du vill visa status för asynkrona åtgärder i detalj går du till sidan **Async Job Status** .
+1. In the [!DNL Experience Manager] interface click **[!UICONTROL Operations]** > **[!UICONTROL Jobs]**.
 
-1. Tryck/klicka på AEM-logotypen och välj **[!UICONTROL Resurser > Jobb]**.
-1. Granska informationen om åtgärderna på sidan **[!UICONTROL Async Job Status]** .
+1. Granska informationen om åtgärderna på **[!UICONTROL Async Job Status]** sidan.
 
-   ![job_status](assets/job_status.png)
+   ![Status och information för asynkrona åtgärder](assets/job_status.png)
 
-   Information om förloppet för en viss åtgärd finns i värdet i kolumnen **[!UICONTROL Status]** . Beroende på förloppet visas ett av följande statusvärden:
+   Information om förloppet för en åtgärd finns i **[!UICONTROL Status]** kolumnen. Beroende på förloppet visas ett av följande statusvärden:
 
-   **Aktiv**: Åtgärden bearbetas
+   * **[!UICONTROL Active]**: Åtgärden bearbetas.
+   * **[!UICONTROL Success]**: Åtgärden har slutförts.
+   * **[!UICONTROL Fail]** eller **[!UICONTROL Error]**: Det gick inte att bearbeta åtgärden.
+   * **[!UICONTROL Scheduled]**: Åtgärden är schemalagd för bearbetning vid ett senare tillfälle.
 
-   **Slutfört**: Åtgärden har slutförts
+1. Om du vill avbryta en aktiv åtgärd markerar du den i listan och klickar på **[!UICONTROL Stop]** stoppikonen ![](assets/do-not-localize/stop_icon.svg) i verktygsfältet.
 
-   **Misslyckades**: Det gick inte att bearbeta åtgärden
+1. Om du vill visa extra information, till exempel beskrivning och loggar, markerar du åtgärden och klickar på **[!UICONTROL Open]** open_icon ![](assets/do-not-localize/edit_icon.svg) i verktygsfältet. Sidan med aktivitetsinformation visas.
 
-   **Schemalagd**: Åtgärden är schemalagd för bearbetning vid ett senare tillfälle
+   ![Information om en metadataimportaktivitet](assets/job_details.png)
 
-1. Om du vill avbryta en aktiv åtgärd markerar du den i listan och trycker/klickar på **[!UICONTROL stoppikonen]** i verktygsfältet.
-
-   ![stop_icon](assets/stop_icon.png)
-
-1. Om du vill visa extra information, till exempel beskrivning och loggar, markerar du åtgärden och trycker/klickar på ikonen **[!UICONTROL Öppna]** i verktygsfältet.
-
-   ![open_icon](assets/open_icon.png)
-
-   Sidan med jobbinformation visas.
-
-   ![job_details](assets/job_details.png)
-
-1. Om du vill ta bort åtgärden från listan väljer du **[!UICONTROL Ta bort]** i verktygsfältet. Om du vill hämta information i en CSV-fil trycker/klickar du på ikonen **[!UICONTROL Hämta]** .
+1. Om du vill ta bort åtgärden från listan väljer du **[!UICONTROL Delete]** den i verktygsfältet. Om du vill hämta information i en CSV-fil klickar du på **[!UICONTROL Download]**.
 
    >[!NOTE]
    >
-   >Du kan inte ta bort ett jobb om dess status är aktiv eller köad.
+   >Du kan inte ta bort en uppgift om dess status är aktiv eller köad.
 
-## Töm slutförda jobb {#purging-completed-jobs}
+## Töm slutförda uppgifter {#purge-completed-tasks}
 
-AEM Assets kör ett rensningsjobb varje dag klockan 1:00 för att ta bort slutförda asynkrona jobb som är mer än en dag gamla.
+[!DNL Experience Manager Assets] kör en rensningsåtgärd varje dag i 010 timmar för att ta bort slutförda asynkrona uppgifter som är mer än en dag gamla.
 
-Du kan ändra schemat för rensningsjobbet och hur länge detaljer om slutförda jobb behålls innan de tas bort. Du kan också konfigurera det maximala antalet slutförda jobb för vilka information sparas när som helst.
+<!-- TBD: Find out from the engineering team and mention the time zone of this 1:00 am task.
+-->
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Verktyg > Åtgärder > Webbkonsol]**.
-1. Öppna det schemalagda **[!UICONTROL rensningsjobbet för]** Adobe CQ DAM Async Jobs.
-1. Ange tröskelvärdet för antal dagar efter vilka slutförda jobb tas bort och det maximala antalet jobb för vilka information sparas i historiken.
+Du kan ändra schemat för rensningsaktiviteten och hur länge information om slutförda uppgifter sparas innan de tas bort. Du kan också konfigurera det maximala antalet slutförda uppgifter för vilka information sparas när som helst.
 
-   ![purge_job](assets/purge_job.png)
+1. In the [!DNL Experience Manager] interface click **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. Öppna **[!UICONTROL Adobe CQ DAM Async Jobs Purge Scheduled]** uppgiften.
+1. Ange tröskelvärdet för antal dagar efter vilka slutförda uppgifter tas bort och det högsta antalet uppgifter som detaljerna sparas för i historiken. Spara ändringarna.
 
-1. Spara ändringarna.
+   ![Konfiguration som schemalägger rensning av asynkrona uppgifter](assets/purge_job.png)
 
-## Konfigurera tröskelvärden för asynkron bearbetning {#configuring-thresholds-for-asynchronous-processing}
+## Konfigurera tröskelvärde för asynkrona borttagningsåtgärder {#configure-thresholds-for-asynchronous-delete-operations}
 
-Du kan konfigurera tröskelvärdet för antal resurser eller referenser för AEM Resurser för att bearbeta en viss åtgärd asynkront.
+Om antalet resurser eller mappar som ska tas bort överstiger det angivna tröskelvärdet, utförs borttagningsåtgärden asynkront.
 
-### Konfigurera tröskelvärdet för asynkrona borttagningsåtgärder {#configuring-thresholds-for-asynchronous-delete-operations}
+1. In the [!DNL Experience Manager] interface click **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. Öppna [!UICONTROL Web Console]konfigurationen från **[!UICONTROL Async Delete Operation Job Processing]** .
+1. I **[!UICONTROL Threshold number of assets]** rutan anger du tröskelvärden för att ta bort resurser, mappar eller referenser asynkront. Spara ändringarna.
 
-Om antalet resurser eller mappar som ska tas bort överstiger tröskelvärdet, utförs borttagningsåtgärden asynkront.
+   ![Ange tröskelgräns för när resurser ska tas bort för aktiviteten](assets/delete_threshold.png)
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Verktyg > Åtgärder > Webbkonsol]**.
-1. Öppna konfigurationen för **[!UICONTROL Async Delete Operation Job Processing]** i webbkonsolen.
-1. I rutan **[!UICONTROL Tröskelvärde för antal resurser]** anger du tröskelvärdet för antal resurser/mappar för asynkron bearbetning av borttagningsåtgärder.
+## Konfigurera tröskelvärde för asynkrona flyttåtgärder {#configure-thresholds-for-asynchronous-move-operations}
 
-   ![delete_threshold](assets/delete_threshold.png)
+Om antalet resurser, mappar eller referenser som ska flyttas överstiger det angivna tröskelvärdet, utförs flyttåtgärden asynkront.
 
-1. Spara ändringarna.
+1. In the [!DNL Experience Manager] interface, click **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. Öppna [!UICONTROL Web Console]konfigurationen från **[!UICONTROL Async Move Operation Job Processing]** .
+1. I **[!UICONTROL Threshold number of assets/references]** rutan anger du tröskelvärden för att flytta resurser, mappar eller referenser asynkront. Spara ändringarna.
 
-### Konfigurera tröskelvärdet för asynkrona flyttåtgärder {#configuring-thresholds-for-asynchronous-move-operations}
+   ![Ange tröskelgräns för när resurser ska flyttas för aktiviteten](assets/move_threshold.png)
 
-Om antalet resurser/mappar eller referenser som ska flyttas överstiger tröskelvärdet, utförs flyttåtgärden asynkront.
+>[!MORELIKETHIS]
+>
+>* [Konfigurera e-post i Experience Manager](/help/sites-administering/notification.md).
+>* [Importera och exportera resursmetadata gruppvis](/help/assets/metadata-import-export.md).
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Verktyg > Åtgärder > Webbkonsol]**.
-1. Öppna konfigurationen för **[!UICONTROL Async Move Operation Job Processing]** i webbkonsolen.
-1. I rutan **[!UICONTROL Tröskelvärde för antal resurser/referenser]** anger du tröskelvärdet för antal resurser/mappar eller referenser för asynkron bearbetning av flyttåtgärder.
-
-   ![move_threshold](assets/move_threshold.png)
-
-1. Spara ändringarna.
