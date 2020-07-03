@@ -10,7 +10,10 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 56f36dcf-8fbd-43f8-bf74-e88d5b686160
 translation-type: tm+mt
-source-git-commit: 510b6765e11a5b3238407322d847745f09183d63
+source-git-commit: 0dced2f56fcebfb03fa6264e98cd686e8e7902c6
+workflow-type: tm+mt
+source-wordcount: '727'
+ht-degree: 0%
 
 ---
 
@@ -97,7 +100,7 @@ Följande alternativ är tillgängliga:
 
 >[!NOTE]
 >
->Vi rekommenderar inte att du behåller ett stort antal versioner i databasen. Så när du konfigurerar versionsrensningsåtgärden bör du tänka på att inte utesluta för många versioner från rensningen, eftersom databasstorleken då inte optimeras korrekt. Om du har ett stort antal versioner på grund av ett affärsbehov kontaktar du Adobes support för att hitta alternativa sätt att optimera databasstorleken.
+>Vi rekommenderar inte att du behåller ett stort antal versioner i databasen. Så när du konfigurerar versionsrensningsåtgärden bör du tänka på att inte utesluta för många versioner från rensningen, eftersom databasstorleken då inte optimeras korrekt. Om du har ett stort antal versioner på grund av verksamhetskrav kontaktar du Adobes support för att hitta alternativa sätt att optimera databasstorleken.
 
 ### Kombinera kvarhållningsalternativ {#combining-retention-options}
 
