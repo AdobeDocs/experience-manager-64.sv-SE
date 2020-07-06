@@ -10,7 +10,10 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: 19cb3946-32ba-4f0b-89f0-f9272f2373d2
 translation-type: tm+mt
-source-git-commit: 4e6442ec089b7d07cc68debb5a630fb474716f4d
+source-git-commit: f98eccdb0251ff0262017fa42529576ba5feac97
+workflow-type: tm+mt
+source-wordcount: '2152'
+ht-degree: 0%
 
 ---
 
@@ -21,15 +24,14 @@ I det här avsnittet beskrivs hur du utvecklar ditt AEM-program med CRXDE Lite.
 
 Mer information om olika utvecklingsmiljöer finns i översiktsdokumentationen.
 
-CRXDE Lite är inbäddat i AEM och gör att du kan utföra standardutvecklingsuppgifter i webbläsaren. Med CRXDE Lite kan du skapa ett projekt, skapa och redigera filer (som .jsp och .java), mappar, mallar, komponenter, dialogrutor, noder, egenskaper och paket när du loggar och integrerar med SVN.
+CRXDE Lite är inbäddat i AEM och gör att du kan utföra standardutvecklingsuppgifter i webbläsaren. Med CRXDE Lite kan du skapa ett projekt, skapa och redigera filer (som .jsp och .java), mappar, mallar, komponenter, dialogrutor, noder, egenskaper och paket när du loggar.
 
 CRXDE Lite rekommenderas när du inte har direktåtkomst till AEM-servern, när du utvecklar ett program genom att utöka eller ändra körklara komponenter och Java-paket eller när du inte behöver en dedikerad felsökare, kodkomplettering och syntaxmarkering.
 
 >[!NOTE]
 >
->Som standard har alla AEM-användare åtkomst till CRXDE Lite. Om du vill kan du [konfigurera åtkomstkontrollistor](/help/sites-administering/security.md#permissions-and-acls) för följande nod så att bara utvecklare kan komma åt CRX DE Lite:
->
->`/libs/granite/crxde`
+>Från och med AEM 6.4.8.1 är anonym åtkomst av CRXDE Lite inte längre möjlig.
+>Användarna dirigeras om till inloggningsskärmen.
 
 >[!NOTE]
 >
@@ -71,7 +73,7 @@ CRXDE Lite har följande funktioner:
   </tr> 
   <tr> 
    <td>Redigeringsruta</td> 
-   <td><p><strong>Fliken Hem</strong> : Med kan du söka efter innehåll och/eller dokumentation och få tillgång till utvecklarresurser (dokumentation, utvecklarblogg, kunskapsbas) och support (Adobes hemsida och supportcenter).<br /> </p> <p>Dubbelklicka på en fil i <strong>Utforskaren</strong> för att visa dess innehåll. som till exempel en .jsp- eller .java-fil. Du kan sedan ändra den och spara ändringarna.</p> <p>När en fil har redigerats i <strong>redigeringsrutan</strong> är följande verktyg tillgängliga i verktygsfältet:<br /> </p> - <strong>Visa i träd: </strong>visar filen i databasträdet.<br /> - <strong>Sök/ersätt ...</strong>: sök och ersätt.<br /> <br /> Dubbelklicka på statusraden i <strong>rutan Redigera</strong> , så öppnas dialogrutan <strong>Gå till rad</strong> där du kan ange ett visst radnummer att gå till.<br /> </td> 
+   <td><p><strong>Fliken Hem</strong> : Med kan du söka efter innehåll och/eller dokumentation och få tillgång till utvecklarresurser (dokumentation, utvecklarblogg, kunskapsbas) och support (Adobes hemsida och supportcenter).<br /> </p> <p>Dubbelklicka på en fil i <strong>Utforskaren</strong> för att visa dess innehåll. som till exempel en .jsp- eller .java-fil. Du kan sedan ändra den och spara ändringarna.</p> <p>När en fil har redigerats i <strong>redigeringsrutan</strong> är följande verktyg tillgängliga i verktygsfältet:<br /> </p> - <strong>Visa i träd: </strong>visar filen i databasträdet.<br /> - <strong>Sök/ersätt ...</strong>: sök och ersätt.<br /> <br /> Om du dubbelklickar på statusraden i <strong>rutan Redigera</strong> öppnas dialogrutan <strong>Gå till rad</strong> så att du kan ange ett visst radnummer att gå till.<br /> </td> 
   </tr> 
   <tr> 
    <td>Fliken Egenskaper<br /> </td> 
@@ -130,10 +132,6 @@ CRXDE Lite har följande funktioner:
    <td>Gör att du kan lägga till blandningstyper i nodtypen. Blandningstyperna används oftast för att lägga till avancerade funktioner som versionshantering, åtkomstkontroll, referenser och låsning till noden.</td> 
   </tr> 
   <tr> 
-   <td>Team<br /> </td> 
-   <td><p>Listruta där du utför vanliga versionskontrolluppgifter:</p> <p>- <strong>Uppdatera</strong> databasen från SVN-servern</p> <p>- <strong>Genomför</strong> lokala ändringar av SVN-servern</p> <p>- Visa <strong>status</strong> för aktuell nod</p> <p>- Visa <strong>rekursiv status</strong> för den aktuella nodens underträd</p> <p>- <strong>Checka</strong> ut en arbetskopia från SVN-servern</p> <p>- <strong>Exportera</strong> ett projekt från SVN-servern (utan att skapa en arbetskopia)</p> <p>- <strong>Importera</strong> ett projekt från databasen till SVN-servern<br /> </p> <p>Observera att du måste vara inloggad som användare med tillräcklig behörighet för att kunna utföra vissa av uppgifterna (särskilt de som skriver till den lokala databasen).<br /> </p> </td> 
-  </tr> 
-  <tr> 
    <td>Verktyg<br /> </td> 
    <td><p>Listruta med följande verktyg:</p> <p>- <strong>Serverkonfiguration ...</strong>: för åtkomst till Felix Console.</p> <p>- <strong>Fråga ...</strong>: för att fråga databasen.</p> <p>- <strong>Behörigheter ...</strong>: för att öppna behörighetshantering, där du kan visa och lägga till behörigheter.</p> <p>- <strong>Testa åtkomstkontroll ...</strong>: en plats där du kan testa behörigheten för en viss sökväg och/eller huvudman.</p> <p>- <strong>Exportera nodtyp</strong>: om du vill exportera nodtyper i systemet som slutnotation.</p> <p>- <strong>Importera nodtyp ...</strong>: om du vill importera nodtyper med hjälp av slutnotation.</p>  <p>- <strong>Installera SiteCatalyst-felsökaren ...</strong>: anvisningar om hur du installerar Analytics Debugger.</p> </td> 
   </tr> 
@@ -144,54 +142,12 @@ CRXDE Lite har följande funktioner:
  </tbody> 
 </table>
 
-### Skapa ett projekt {#creating-a-project}
-
-Med CRXDE Lite kan du skapa ett projekt med tre klick. I projektguiden skapas ett nytt projekt under `/apps`, en del innehåll under `/conten`det och ett paket där allt innehåll under `/etc/packages`. Projektet kan användas direkt för att återge en exempelsida med **Hello World**, baserat på ett jsp-skript som återger en egenskap från databasen och anropar en Java-klass för att återge text.
-
-Så här skapar du ett projekt med CRXDE Lite:
-
-1. Öppna CRXDE Lite i webbläsaren.
-1. **Högerklicka på en nod i navigeringsrutan, välj** Skapa ...**och sedan** Skapa projekt ... .
-
-   Obs! Du kan högerklicka på valfri nod i trädnavigeringen, som de nya projektnoderna är, enligt design, skapade nedan `/apps,` och `/content` `/etc/packages`.
-
-1. Definiera:
-
-   * **Projektnamn** - projektnamnet används för att skapa nya noder och paketet, t.ex. `myproject`.
-   * **Java Package** - Java-paketets namnprefix, t.ex. `com.mycompany`.
-
-1. Klicka på **Skapa**.
-1. Klicka på **Spara alla** för att spara ändringarna på servern.
-
-Om du vill komma åt exempelsidan med **Hello World** pekar du i webbläsaren på:
-
-`http://localhost:4502/content/<project-name>.html`
-
-Sidan **Hello World** baseras på en innehållsnod som anropar ett jsp-skript via `sling:resourceType` egenskapen. Skriptet läser `jcr:title` egenskapen från databasen och hämtar brödtextinnehållet genom att anropa en metod i klassen SampleUtil, som är tillgänglig i projektpaketet.
-
-Följande noder skapas:
-
-* `/apps/<project-name>`: programbehållaren.
-* `/apps/<project-name>/components`: komponentbehållaren, som innehåller exemplet html.jsp-fil, som används för att återge en sida.
-
-* `/apps/<project-name>/src`: paketbehållaren, som innehåller ett exempelprojektpaket.
-
-* `/apps/<project-name>/install`: den kompilerade paketbehållaren, som innehåller det kompilerade exempelprojektpaketet.
-* `/content/<project-name>`: innehållsbehållaren.
-* `/etc/packages/<java-suffix>/<project-name>.zip`, ett paket som innehåller allt projektprogram och allt projektinnehåll. Du kan använda det för att återskapa projektet för vidare distribution (till exempel till andra miljöer) eller för delning via paketdelning.
-
-Strukturen ser ut så här i CRXDE Lite med ett projekt som kallas **myproject** och ett java-paketsuffix som kallas **mycompany**:
-
-![chlimage_1-239](assets/chlimage_1-239.png)
-
-![chlimage_1-240](assets/chlimage_1-240.png)
-
 ### Skapa en mapp {#creating-a-folder}
 
 Så här skapar du en mapp med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. **I navigeringsrutan högerklickar du på den mapp som du vill skapa den nya mappen i, väljer** Skapa ...**och sedan** Skapa mapp ... .
+1. I navigeringsrutan högerklickar du på den mapp som du vill skapa den nya mappen i, väljer **Skapa ...** och sedan **Skapa mapp ...**.
 
 1. Ange mappens **namn** och klicka på **OK**.
 
@@ -202,13 +158,13 @@ Så här skapar du en mapp med CRXDE Lite:
 Så här skapar du en mall med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. **I navigeringsrutan högerklickar du på den mapp där du vill skapa mallen, väljer** Skapa ...**och sedan** Skapa mall ... .
+1. I navigeringsrutan högerklickar du på den mapp där du vill skapa mallen, väljer **Skapa ...** och sedan **Skapa mall ...**.
 
-1. Ange mallens **etikett**, **titel**, **beskrivning**, **resurstyp** och **rankning** . Click **Next**.
+1. Ange mallens **etikett**, **titel**, **beskrivning**, **resurstyp** och **rankning** . Klicka på **Nästa**.
 
-1. Det här steget är valfritt: Ange **tillåtna banor**. Click **Next**
+1. Det här steget är valfritt: Ange **tillåtna banor**. Klicka på **Nästa**
 
-1. Det här steget är valfritt: Ange **tillåtna överordnade**. Click **Next**.
+1. Det här steget är valfritt: Ange **tillåtna överordnade**. Klicka på **Nästa**.
 
 1. Det här steget är valfritt: Ange **Tillåtna underordnade**. Click **OK**.
 
@@ -229,13 +185,13 @@ Funktionen som beskrivs här är bara tillgänglig om nodtypen `cq:Component` ä
 Så här skapar du en komponent med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. **I navigeringsrutan högerklickar du på den mapp där du vill skapa komponenten, väljer** Skapa ...**och sedan** Skapa komponent ... .
+1. I navigeringsrutan högerklickar du på den mapp där du vill skapa komponenten, väljer **Skapa ...** och sedan **Skapa komponent ...**.
 
-1. Ange komponentens **etikett**, **titel**, **beskrivning**, **superresurstyp** och **grupp** . Click **Next**.
+1. Ange komponentens **etikett**, **titel**, **beskrivning**, **superresurstyp** och **grupp** . Klicka på **Nästa**.
 
-1. Det här steget är valfritt: Ange komponentegenskaperna **Behållare, Ingen dekoration**, **Cellnamn** och **Dialogrutesökväg**. Click **Next**.
+1. Det här steget är valfritt: Ange komponentegenskaperna **Behållare, Ingen dekoration**, **Cellnamn** och **Dialogrutesökväg**. Klicka på **Nästa**.
 
-1. Det här steget är valfritt: Ange egenskapen **Tillåtna överordnade komponenter**. Click **Next**.
+1. Det här steget är valfritt: Ange egenskapen **Tillåtna överordnade komponenter**. Klicka på **Nästa**.
 
 1. Det här steget är valfritt: Ange egenskapen **Allowed Children**. Click **OK**.
 
@@ -252,7 +208,7 @@ Det skapar:
 Så här skapar du en dialogruta med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. **I navigeringsrutan högerklickar du på den komponent där du vill skapa dialogrutan, väljer** Skapa ...**och sedan** Skapa dialogruta ... .
+1. I navigeringsrutan högerklickar du på den komponent där du vill skapa dialogrutan, väljer **Skapa ...** och sedan **Skapa dialogruta ...**.
 
 1. Ange **etiketten** och **titeln**. Click **OK**.
 
@@ -271,7 +227,7 @@ Du kan också använda Dialogruteredigeraren för att redigera en dialogruta. Om
 Så här skapar du en nod med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. **I navigeringsrutan högerklickar du på den nod där du vill skapa den nya noden, väljer** Skapa ...**och sedan** Skapa nod ... .
+1. I navigeringsrutan högerklickar du på den nod där du vill skapa den nya noden, väljer **Skapa ...** och sedan **Skapa nod ...**.
 
 1. Ange **namn** och **typ**. Click **OK**.
 
@@ -300,173 +256,13 @@ Så här skapar du en egenskap med CRXDE Lite:
 Så här skapar du ett nytt skript:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. **I navigeringsrutan högerklickar du på den komponent där du vill skapa skriptet, väljer** Skapa ...**och sedan** Skapa fil ... .
+1. I navigeringsrutan högerklickar du på den komponent där du vill skapa skriptet, väljer **Skapa ...** och sedan **Skapa fil ...**.
 
 1. Ange **filnamnet** inklusive filnamnstillägget. Click **OK**.
 
 1. Den nya filen öppnas som en flik i rutan Redigera.
 1. Redigera filen.
 1. Klicka på **Spara alla** för att spara ändringarna.
-
-### Hantera ett paket {#managing-a-bundle}
-
-Med CRXDE Lite är det enkelt att skapa ett OSGI-paket, lägga till Java-klasser och bygga det. Paketet installeras sedan automatiskt och startas i OSGI-behållaren.
-
-I det här avsnittet beskrivs hur du skapar ett `Test` paket med en `HelloWorld` Java-klass som visar **Hello World!** i webbläsaren när resursen begärs.
-
-#### Skapa ett paket {#creating-a-bundle}
-
-Så här skapar du testpaketet med CRXDE Lite:
-
-1. I CRXDE Lite skapar du `myapp` projekt med [projektguiden](#creating-a-project). Bland annat skapas följande noder:
-
-   * `/apps/myapp/src`
-   * `/apps/myapp/install`
-
-1. `/apps/myapp/src`Högerklicka på mappen `Test` som ska innehålla **paketet, välj** Skapa ...**och sedan** Skapa paket ... .
-
-1. Ange paketegenskaperna enligt följande:
-
-   * Namn på symbolpaket: `com.mycompany.test.TestBundle`
-   * Paketnamn: `Test Bundle`
-   * Paketbeskrivning: `This is my Test Bundle`
-   * Paket:`com.mycompany.test`
-
-      Click **OK**.
-
-1. Klicka på **Spara alla** för att spara ändringarna på servern.
-
-Guiden skapar följande element:
-
-* Noden `com.mycompany.test.TestBundle` av typen `nt:folder.` Det är paketbehållarnoden.
-
-* Filen `com.mycompany.test.TestBundle.bnd`. Det fungerar som distributionsbeskrivare för ditt paket och består av en uppsättning rubriker.
-
-* Mappstrukturerna:
-
-   * `src/main/java/com/mycompany/test`. Den innehåller paketen och Java-klasserna.
-   * `src/main/resources`. Den innehåller de resurser som används i paketet.
-
-* The `Activator.java` file. Det är den valfria avlyssnarklassen som ska meddelas om start- och stopphändelser för paket.
-
-I följande tabell visas alla egenskaper i Bnd-filen, deras värden och beskrivningar:
-
-<table> 
- <tbody> 
-  <tr> 
-   <td><strong>Egenskap</strong></td> 
-   <td><strong>Värde (när paket skapas)<br /> </strong></td> 
-   <td><strong>Beskrivning</strong></td> 
-  </tr> 
-  <tr> 
-   <td>Exportera paket:</td> 
-   <td><p>*</p> <p>Obs! Detta värde måste anpassas för att återspegla paketets särart.</p> </td> 
-   <td>Rubriken Exportera paket definierar exporterade paket från paketet (kommaseparerade paketlistor). De exporterade paketen utgör den offentliga<br /> vyn av paketet.<br /> </td> 
-  </tr> 
-  <tr> 
-   <td>Import-paket:</td> 
-   <td><p>*</p> <p>Obs! Detta värde måste anpassas för att återspegla paketets särart.</p> </td> 
-   <td>Huvudet Importera paket definierar importerade paket för paketet (kommaavgränsad lista med paket)</td> 
-  </tr> 
-  <tr> 
-   <td>Privat paket:</td> 
-   <td><p>*</p> <p>Obs! Detta värde måste anpassas för att återspegla paketets särart.</p> </td> 
-   <td>Huvudet Privat paket definierar privata paket för paketet (kommaseparerade paketlistor). De privata paketen utgör den interna implementeringen.<br /> </td> 
-  </tr> 
-  <tr> 
-   <td>Paketnamn:</td> 
-   <td>Test Bundle</td> 
-   <td>Definierar ett kort, läsbart namn för paketet</td> 
-  </tr> 
-  <tr> 
-   <td>Paket - beskrivning:</td> 
-   <td>Det här är mitt testpaket</td> 
-   <td>Definierar en kort, läsbar beskrivning av paketet</td> 
-  </tr> 
-  <tr> 
-   <td>Bundle-SymbolicName:</td> 
-   <td>com.mycompany.test.TestBundle</td> 
-   <td>Anger ett unikt, icke-lokaliserbart namn för paketet</td> 
-  </tr> 
-  <tr> 
-   <td>Bundle-Version:</td> 
-   <td>1.0.0-ÖGONBLICKSBILD</td> 
-   <td>Anger paketets version</td> 
-  </tr> 
-  <tr> 
-   <td>Bundle-Activator:</td> 
-   <td>com.mincompany.test.Activator</td> 
-   <td>Anger namnet på den valfria avlyssnarklassen som ska meddelas om start- och stopphändelser för paket</td> 
-  </tr> 
- </tbody> 
-</table>
-
-Mer information om bend-formatet finns i [bnd utility](https://bndtools.org/) som används av CRXDE för att skapa OSGI-paket.
-
-#### Skapa en Java-klass {#creating-a-java-class}
-
-Så här skapar du `HelloWorld` Java-klassen i Test Bundle:
-
-1. Öppna CRXDE Lite i webbläsaren.
-1. `Activator.java`I navigeringsrutan högerklickar du på noden som innehåller `/apps/myapp/src/com.mycompany.test.TestBundle/src/main/java` filen ( **), väljer** Skapa ...**och sedan** Skapa fil ... .
-
-1. Ge filen ett namn `HelloWorld.java`. Click **OK**.
-
-1. Filen öppnas i `HelloWorld.java` rutan Redigera.
-1. Lägg till följande rader i `HelloWorld.java`:
-
-   ```
-   package com.mycompany.test;  
-   
-   public class HelloWorld { 
-     public String getString(){ 
-     return "Hello World!"; 
-     } 
-   }
-   ```
-
-1. Klicka på **Spara alla** för att spara ändringarna på servern.
-
-#### Bygga ett paket {#building-a-bundle}
-
-Så här skapar du testpaketet:
-
-1. Öppna CRXDE Lite i webbläsaren.
-1. Högerklicka på Bnd-filen i navigeringsrutan, välj **Verktyg** och sedan **Bundle**.
-
-Guiden Build Bundle:
-
-* Kompilerar Java-klasserna.
-* Skapar .jar-filen som innehåller de kompilerade Java-klasserna och resurserna och placerar den i `myapp/install` mappen.
-* Installerar och startar paketet i OSGI-behållaren.
-
-Om du vill se effekten av testpaketet skapar du en komponent som använder Java-metoden HelloWorld.getString() och en resurs som återges av den här komponenten:
-
-1. Skapa komponenten `mycomp` under `myapp/components`.
-
-1. Redigera `mycomp.jsp` och ersätt koden med följande rader:
-
-   ```
-   <%@ page import="com.mycompany.test.HelloWorld"%><% 
-   %><%@ include file="/libs/foundation/global.jsp"%><% 
-   %><% HelloWorld hello = new HelloWorld();%><% 
-   %> 
-   <html> 
-   <body> 
-   <b><%= hello.getString() %></b><br> 
-   </body> 
-   </html>
-   ```
-
-1. Skapa resursen `test_node` av typen `nt:unstructured` under `/content`.
-
-1. Skapa `test_node`följande egenskap: Namn = `sling:resourceType`, Typ = `String`, Värde = `myapp/components/mycomp`.
-
-1. Klicka på **Spara alla** för att spara ändringarna på servern.
-
-1. Begär `test_node`följande i webbläsaren: `https://<hostname>:<port>/content/test_node.html`.
-
-1. En sida visas med **Hello World!** message.
 
 ### Exportera och importera nodtyper {#exporting-and-importing-node-types}
 
@@ -483,7 +279,7 @@ Så här exporterar du en nodtypsdefinition:
 Så här importerar du en nodtypsdefinition:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. **Välj** Verktyg **och sedan** Importera nodtyp... .
+1. Välj **Verktyg** och sedan **Importera nodtyp...**.
 
 1. Ange CND-notation för definitionen i textrutan.
 1. Markera **Tillåt uppdatering** om du uppdaterar en befintlig definition.
