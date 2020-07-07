@@ -10,7 +10,7 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: aee5f5a7-8462-4d42-8d96-8a7eb317770e
 translation-type: tm+mt
-source-git-commit: 377922cc2ccf40a02467b17910a8750420202b61
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
 workflow-type: tm+mt
 source-wordcount: '2247'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Att bygga ett AEM-projekt baserat på Maven ger dig flera fördelar:
 
 ### Vad är UberJar? {#what-is-the-uberjar}
 
-&quot;UberJar&quot; är det informella namn som ges till en speciell Java Archive-fil (JAR) från Adobe. Den här JAR-filen innehåller alla Java-API:er som exponeras av Adobe Experience Manager. Det innehåller även begränsade externa bibliotek, särskilt alla publika API:er i AEM som kommer från Apache Sling, Apache Jackrabbit, Apache Lucene, Google Guava och två bibliotek som används för bildbehandling (Werner Randelshofer&#39;s CYMK JPEG ImageIO library och TwelveMonkeys bildbibliotek). UberJar innehåller bara API-gränssnitt och klasser, vilket innebär att det bara innehåller gränssnitt och klasser som exporteras av ett OSGi-paket i AEM. Den innehöll också en *MANIFEST.MF* -fil som innehöll rätt paketexportversioner för alla dessa exporterade paket, vilket säkerställer att projekt som skapats mot UberJar har rätt paketimportintervall.
+&quot;UberJar&quot; är det informella namn som ges till en speciell Java Archive-fil (JAR) från Adobe. Den här JAR-filen innehåller alla Java-API:er som visas av Adobe Experience Manager. Det innehåller även begränsade externa bibliotek, särskilt alla publika API:er i AEM som kommer från Apache Sling, Apache Jackrabbit, Apache Lucene, Google Guava och två bibliotek som används för bildbehandling (Werner Randelshofer&#39;s CYMK JPEG ImageIO library och TwelveMonkeys bildbibliotek). UberJar innehåller bara API-gränssnitt och klasser, vilket innebär att det bara innehåller gränssnitt och klasser som exporteras av ett OSGi-paket i AEM. Den innehöll också en *MANIFEST.MF* -fil som innehöll rätt paketexportversioner för alla dessa exporterade paket, vilket säkerställer att projekt som skapats mot UberJar har rätt paketimportintervall.
 
 ### Varför skapade Adobe UberJar? {#why-did-adobe-create-the-uberjar}
 
@@ -553,6 +553,7 @@ För att de klasser som kompileras från JSP:n ska kunna tas bort konfigurerar v
 >
 >Om du till exempel inkluderar `/libs/foundation/global.jsp`kan du använda följande konfiguration för `maven-resources-plugin` i stället för den konfiguration över som helt hoppar över `/libs`.
 >
+>
 ```
 > <resource>  
 >           <directory>src/main/content/jcr_root</directory>  
@@ -672,8 +673,8 @@ $ mvn -PautoInstallPackagePublish -PintegrationServer install
 </profiles>
 ```
 
-### Hur man arbetar med AEM Communities {#how-to-work-with-aem-communities}
+### Arbeta med AEM Communities {#how-to-work-with-aem-communities}
 
-Om du har licens för AEM Communities-funktionen krävs ytterligare en API-behållare.
+När licens för AEM Communities krävs ytterligare en API-behållare.
 
 Mer information finns i [Använda Maven för grupper](/help/communities/maven.md)
