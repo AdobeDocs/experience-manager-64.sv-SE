@@ -10,7 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 2a9be3b7-b325-4d74-a5bc-8d24db491920
 translation-type: tm+mt
-source-git-commit: ccc40d9ff8bf7cbd558a24a8c4fed04efd3fab7b
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
+workflow-type: tm+mt
+source-wordcount: '1471'
+ht-degree: 0%
 
 ---
 
@@ -34,27 +37,27 @@ Mappade data skickas till Adobe Analytics när sidan läses in och följande vil
 * Sidan är kopplad till ramverket.
 * Sidan använder de komponenter som har lagts till i ramverket.
 
-Använd följande procedur för att mappa CQ-komponentvariabler med rapportegenskaper i Adobe Analytics.
+Använd följande procedur för att mappa CQ-komponentvariabler med Adobe Analytics rapportegenskaper.
 
 1. I **AEM-vyn** drar du en spårningskomponent från sidosparken till ramverket. Dra till exempel komponenten **Sida** från kategorin **Allmänt** .
 
    ![aa-13](assets/aa-13.png)
 
-   Det finns flera standardkomponentgrupper: **Allmänt**, **Handel**, **Communities**, **Search&amp;Promote** och **Annat**. Din AEM-instans kan vara konfigurerad att visa olika grupper och komponenter.
+   Det finns flera standardkomponentgrupper: **General**, **Commerce**, **Communities**, **Search&amp;Promote** och **Other**. Din AEM-instans kan vara konfigurerad att visa olika grupper och komponenter.
 
-1. Om du vill mappa Adobe Analytics-variabler med variabler som är definierade i komponenten drar du en **Analytics-variabel** från innehållssökaren till ett fält i spårningskomponenten. Dra till exempel `Page Name (pageName)` till `pagedata.title`.
+1. Om du vill mappa Adobe Analytics-variabler till variabler som är definierade i komponenten drar du en **Analytics-variabel** från innehållssökaren till ett fält i spårningskomponenten. Dra till exempel `Page Name (pageName)` till `pagedata.title`.
 
    ![aa-14](assets/aa-14.png)
 
    >[!NOTE]
    >
-   >Det Report Suite-ID (RSID) som har valts för ramverket avgör vilka Adobe Analytics-variabler som visas i innehållssökaren.
+   >Det Report Suite-ID (RSID) som valts för ramverket avgör vilka Adobe Analytics-variabler som visas i innehållssökaren.
 
 1. Upprepa de två föregående stegen för andra komponenter och variabler.
 
    >[!NOTE]
    >
-   >Du kan mappa flera analysvariabler (t.ex. `props`, `eVars`, `events`) till samma CQ-variabel (t.ex. `pagedata.title`)
+   >Du kan mappa flera Analytics-variabler (t.ex. `props`, `eVars`, `events`) till samma CQ-variabel (t.ex. `pagedata.title`)
 
    >[!CAUTION]
    >
@@ -70,7 +73,7 @@ Använd följande procedur för att mappa CQ-komponentvariabler med rapportegens
 
 AEM använder en konvention för att namnge produktrelaterade variabler och händelser som ska mappas till produktrelaterade egenskaper i Adobe Analytics:
 
-| CQ-variabel | Analysvariabel | Beskrivning |
+| CQ-variabel | Analytics Variable | Beskrivning |
 |---|---|---|
 | `product.category` | `product.categor`y (konverteringsvariabel) | Produktkategorin. |
 | `product.sku` | `product.sku` (konverteringsvariabel) | Produktens sku. |
@@ -87,11 +90,11 @@ Flera AEM Commerce-komponenter använder dessa variabelnamn.
 
 ## Kontrollera rapporter om Adobe Analytics {#checking-reports-on-adobe-analytics}
 
-1. Logga in på Adobe Analytics-webbplatsen med samma inloggningsuppgifter som AEM.
+1. Logga in på Adobes Analytics webbplats med samma inloggningsuppgifter som du fått från AEM.
 1. Se till att det RSID som du valde är det som användes i föregående steg.
 1. I **Rapporter** (till vänster på sidan) väljer du **Anpassad konvertering**, sedan **Anpassad konvertering 1-10** och väljer variabeln som motsvarar `eVar7`
 
-1. Beroende på vilken version av Adobe Analytics du använder måste du vänta i genomsnitt 45 minuter på att rapporten ska uppdateras med det sökord som används. t.ex. äggplanta i exemplet
+1. Beroende på vilken version av Adobe Analytics du använder måste du vänta i genomsnitt 45 minuter tills rapporten uppdateras med söktermen som används. t.ex. äggplanta i exemplet
 
 ## Använda Content Finder (cf#) med ramverken i Adobe Analytics {#using-the-content-finder-cf-with-adobe-analytics-frameworks}
 
@@ -104,7 +107,7 @@ När du först öppnar ett Adobe Analytics-ramverk innehåller innehållssökare
 * Händelser
 
 När ett RSID är markerat läggs alla variabler som tillhör det RSID till i listan.\
-Detta `cf#` behövs för att kunna mappa Analytics-variabler till CQ-variablerna som finns i de olika spårningskomponenterna. Se Konfigurera ett ramverk för grundläggande spårning.
+Detta `cf#` behövs för att mappa Analytics-variabler till CQ-variablerna som finns i de olika spårningskomponenterna. Se Konfigurera ett ramverk för grundläggande spårning.
 
 Beroende på vilken vy som har valts för ramverket fylls innehållssökaren i av antingen Analytics-variabler (i AEM-vyn) eller CQ-variabler (i Analytics-vyn).
 
@@ -122,7 +125,7 @@ Listan kan ändras på följande sätt:
 
    >[!NOTE]
    >
-   >Search&amp;Promote-variabler tillhör även avsnittet Conversion.
+   >Search&amp;Promote-variabler tillhör även avsnittet Konvertering.
 
    1. Listan har också en sökfunktion som filtrerar elementen efter den text som anges i sökfältet.
    1. Om ett filteralternativ är aktiverat när du söker efter element i listan, filtreras även de resultat som visas enligt den aktiva knappen.
@@ -130,7 +133,7 @@ Listan kan ändras på följande sätt:
    1. Om flera RSID är markerade i ramverket visas alla variabler i listan med alla etiketter som används i de markerade RSID:erna.
 
 
-1. I Adobe Analytics-vyn visar Content Finder alla CQ-variabler som tillhör spårningskomponenterna som dras i CQ-vyn.
+1. I vyn Adobe Analytics visar Content Finder alla CQ-variabler som tillhör spårningskomponenterna som dras i CQ-vyn.
 
    * Om till exempel **Download-komponenten **är den *enda som dras* i CQ-vyn (som har två mappningsbara variabler *eventdata.downloadLink* och *eventdata.events.startDownload*) ser Content Finder ut så här när du växlar till Adobe Analytics-vyn:
    ![aa-22](assets/aa-22.png)
@@ -141,9 +144,9 @@ Listan kan ändras på följande sätt:
    >
    >Endast en CQ-variabel kan mappas till en Adobe Analytics-variabel samtidigt
 
-## Använda AEM-vyn och analysvyn {#using-aem-view-and-analytics-view}
+## Använda AEM-vyn och Analytics-vyn {#using-aem-view-and-analytics-view}
 
-Användarna kan när som helst växla mellan två sätt att visa Adobe Analytics-mappningarna när de befinner sig på en ramverkssida. De två vyerna ger en bättre översikt över mappningarna inom ramverket, från två olika perspektiv.
+Man kan när som helst växla mellan två sätt att se på Adobe Analytics-mappningarna när man är på en ramverkssida. De två vyerna ger en bättre översikt över mappningarna inom ramverket, från två olika perspektiv.
 
 ### AEM-vy {#aem-view}
 
@@ -152,8 +155,8 @@ Användarna kan när som helst växla mellan två sätt att visa Adobe Analytics
 Om du tar bilden ovan som exempel har **AEM-vyn** följande egenskaper:
 
 1. Det här är standardvyn när ramverket öppnas.
-1. Vänster sida: Innehållssökaren (cf#) fylls i av Adobe Analytics-variabler som baseras på de RSID(n) som valts.
-1. Flikrubriker (**AEM-vyn** och **analysvyn**): använder du dessa för att växla mellan de två vyerna.
+1. Vänster sida: Innehållssökaren (cf#) fylls i med Adobe Analytics-variabler baserat på de RSID(n) som valts.
+1. Flikrubriker (**AEM-vyn** och **Analytics-vyn**): använder du dessa för att växla mellan de två vyerna.
 
 1. **AEM-vy**:
 
@@ -170,15 +173,15 @@ Om du tar bilden ovan som exempel har **AEM-vyn** följande egenskaper:
       1. Tänk på att en komponent bara kan tas bort från ramverket som den skapades i och inte kan tas bort från underordnade ramverk i traditionell mening (de kan bara skrivas över).
 
 
-### Analysvy {#analytics-view}
+### Analytics View {#analytics-view}
 
 ![aa-24](assets/aa-24.png)
 
-1. Du kommer åt den här vyn genom att växla till fliken **Analysvy** i ramverket.
+1. Du kommer åt den här vyn genom att växla till fliken **Analytics-vy** i ramverket.
 1. Vänster sida: Content Finder (cf#) ifylld av CQ-variabler baserade på de komponenter som dras till ramverket i CQ-vyn.
-1. Flikrubriker (**AEM-vyn** och **analysvyn**): använder du dessa för att växla mellan de två vyerna.
+1. Flikrubriker (**AEM-vyn** och **Analytics-vyn**): använder du dessa för att växla mellan de två vyerna.
 
-1. De tre tabellerna (Traffic, Conversion, Event) innehåller alla tillgängliga Adobe Analytics-variabler. som tillhör de markerade RSID:erna. Mappningarna som visas här ska vara desamma som i AEM-vyn:
+1. I de tre tabellerna (Traffic, Conversion, Event) listas alla tillgängliga Adobe Analytics-variabler. som tillhör de markerade RSID:erna. Mappningarna som visas här ska vara desamma som i AEM-vyn:
 
    * **Trafik**:
 
@@ -200,9 +203,7 @@ Om du tar bilden ovan som exempel har **AEM-vyn** följande egenskaper:
 >
 >* t.ex. bredvid `prop3` du kan lägga till
 >* `'`* `Adobe:'+pagedata.title+':'+pagedata.sitesection`\
-   >  *om du vill skicka* titeln *på en sida som är sammanfogad med dess* platskarta *med*: (kolon) och prefix med *Adobe* som `prop3`
->
-
+   >  om du vill skicka *titeln* på en sida som är sammanfogad med dess *platskarta* med *:* (kolon) och prefix med *Adobe* som `prop3`
 
 
 >[!CAUTION]
