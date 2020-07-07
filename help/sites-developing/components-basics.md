@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: 8a612282df46f5f54ebe73c4b297eba6515ea35d
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
+workflow-type: tm+mt
+source-wordcount: '4726'
+ht-degree: 0%
 
 ---
 
@@ -58,7 +61,7 @@ Innan du börjar konfigurera eller koda komponenten bör du fråga:
 Innan du börjar diskutera hur du utvecklar komponenter måste du veta vilket gränssnitt författarna kommer att använda:
 
 * **Pekaktiverat användargränssnitt**
-   [Standardanvändargränssnittet](/help/sites-developing/touch-ui-concepts.md) som introducerades i AEM 5.6.0 som en förhandsgranskning och utökades i 6.x. Det bygger på den enhetliga användarupplevelsen för Adobe Marketing Cloud och använder de underliggande teknikerna i [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) och [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui).
+   [Standardanvändargränssnittet](/help/sites-developing/touch-ui-concepts.md) som introducerades i AEM 5.6.0 som en förhandsgranskning och utökades i 6.x. Det bygger på den enhetliga användarupplevelsen för Adobe Marketing Cloud och använder de underliggande teknikerna i användargränssnittet [Coral](/help/sites-developing/touch-ui-concepts.md#coral-ui) och användargränssnittet [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui).
 
 * **Klassiskt användargränssnitt** baserat på ExtJS-teknik som introducerades i CQ 5.1.
 
@@ -69,9 +72,10 @@ Komponenter kan implementeras för att stödja det beröringsaktiverade använda
 Därför ska vi ta upp grunderna för båda och hur de ska kännas igen på den här sidan.
 
 >[!NOTE]
-> Adobe rekommenderar att du utnyttjar det pekaktiverade användargränssnittet för att dra nytta av den senaste tekniken. [AEM Modernination Tools&amp;(modernization-tools.md) kan göra migreringen enklare.
+>
+>Adobe rekommenderar att du utnyttjar det pekaktiverade användargränssnittet för att dra nytta av den senaste tekniken. [AEM Modernination Tools&amp;(modernization-tools.md) kan göra migreringen enklare.
 
-### Innehållslogik och återgivningsmarkeringar {#content-logic-and-rendering-markup}
+### Innehållslogik och återgivningsmarkeringar  {#content-logic-and-rendering-markup}
 
 Vi rekommenderar att koden som ansvarar för kod och återgivning hålls åtskild från koden som styr logiken som används för att markera komponentens innehåll.
 
@@ -723,7 +727,7 @@ Egenskapen `cq:layout` ( `String`) definierar hur komponenten kan redigeras i de
 >
 >Begreppen överrullning och redigeringsfält kan inte användas i det beröringsaktiverade gränssnittet.
 
-Följande konfiguration lägger till en redigeringsknapp i komponentens redigeringsfält:
+I följande konfiguration läggs en redigeringsknapp till i komponentens redigeringsfält:
 
 ```
 <jcr:root xmlns:cq="https://www.day.com/jcr/cq/1.0" xmlns:jcr="https://www.jcp.org/jcr/1.0"
