@@ -10,7 +10,7 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 4b680d17-383b-4173-a444-0b7bdb24e6c8
 translation-type: tm+mt
-source-git-commit: eebb765465c90c0ede5957c8bf79a028e1b4f6ce
+source-git-commit: 4dbb6af1c0a76aabc003749d7fa76f8c6e41e726
 workflow-type: tm+mt
 source-wordcount: '1908'
 ht-degree: 0%
@@ -259,14 +259,17 @@ Nedan följer en beskrivning av effekterna i databasen när du flyttar eller sam
 
 ## Migrering av taggar {#tags-migration}
 
-Taggar från och med Experience Manager 6.4 lagras under `/content/cq:tags`, som tidigare lagrats under `/etc/tags`. I scenarier där Adobe Experience Manager har uppgraderats från en tidigare version finns dock taggarna kvar på den gamla platsen `/etc/tags`. I uppgraderade system måste taggar migreras under `/content/cq:tags`.
+Taggar från och med Experience Manager 6.4 lagras under `/content/cq:tags`, som tidigare lagrats under `/etc/tags`. I scenarier där Adobe Experience Manager har uppgraderats från en tidigare version finns dock taggarna kvar under den gamla platsen `/etc/tags`. I uppgraderade system måste taggar migreras under `/content/cq:tags`.
 
-> [!NOTE]
-> På sidan Sidegenskaper för taggar rekommenderar vi att du använder tagg-ID (till exempel `geometrixx-outdoors:activity/biking`) i stället för att hårdkoda taggbassökvägen (till exempel `/etc/tags/geometrixx-outdoors/activity/biking`).
-> Om du vill visa taggar `com.day.cq.tagging.servlets.TagListServlet` kan du använda dem.
+>[!NOTE]
+>
+>På sidan Sidegenskaper för taggar rekommenderar vi att du använder tagg-ID (till exempel `geometrixx-outdoors:activity/biking`) i stället för att hårdkoda taggbassökvägen (till exempel `/etc/tags/geometrixx-outdoors/activity/biking`).
+>
+>Om du vill visa taggar `com.day.cq.tagging.servlets.TagListServlet` kan du använda dem.
 
-> [!NOTE]
-> Vi rekommenderar att du använder tagghanterings-API som resurs.
+>[!NOTE]
+>
+>Vi rekommenderar att du använder tagghanterings-API som resurs.
 
 **Om den uppgraderade AEM-instansen har stöd för TagManager API**
 
@@ -332,9 +335,9 @@ Skriptet hämtar alla taggar som har `/etc/tags` värdet för `cq:movedTo/cq:bac
 
 **Om den uppgraderade AEM-instansen körs på klassiskt gränssnitt**
 
-> [!NOTE]
-> Klassiskt användargränssnitt är inte noll som är nedtidskompatibelt och stöder inte ny taggbassökväg. Om du vill använda ett klassiskt användargränssnitt än vad som behöver skapas, följt av `/etc/tags` `cq-tagging` komponentomstart.
-
+>[!NOTE]
+>
+>Klassiskt användargränssnitt är inte noll som är nedtidskompatibelt och stöder inte ny taggbassökväg. Om du vill använda ett klassiskt användargränssnitt än vad som behöver skapas, följt av `/etc/tags` `cq-tagging` komponentomstart.
 
 Om uppgraderade AEM-instanser stöds av TagManager API och körs i Classic UI:
 
