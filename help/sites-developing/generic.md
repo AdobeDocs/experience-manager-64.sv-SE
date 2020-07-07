@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: platform
 discoiquuid: d8ee3b57-633a-425e-bf36-646f0e0bad52
 translation-type: tm+mt
-source-git-commit: 02d043aaa51389aff658c287e11fe639b74fdcd0
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
+workflow-type: tm+mt
+source-wordcount: '1886'
+ht-degree: 0%
 
 ---
 
@@ -128,13 +131,10 @@ Alla produktresurser kan representeras av en `Product API`. De flesta anrop i pr
 Produkter (i allmänhet) kan ha många olika axlar, men produktkomponenten som finns i paketet hanterar bara två:
 >
 >1. `size`
-   >
-   >
-1. plus ytterligare\
-   >   Den här ytterligare varianten väljs via egenskapen `variationAxis` för produktreferensen (vanligtvis `color` för Geometrixx Outdoor).
+>1. plus ytterligare
 >
-
-
+>   
+Den här ytterligare varianten väljs via egenskapen `variationAxis` för produktreferensen (vanligtvis `color` för Geometrixx Outdoor).
 
 #### Produktreferenser och PIM-data {#product-references-and-pim-data}
 
@@ -193,7 +193,7 @@ public interface Product extends Adaptable {
 }
 ```
 
-#### com.adobe.cq.commerce.api.VariantFilter {#com-adobe-cq-commerce-api-variantfilter}
+#### com.adobe.cq.commerce.api.VariantFilter  {#com-adobe-cq-commerce-api-variantfilter}
 
 ```java
 /**
@@ -421,13 +421,11 @@ Det finns flera allmänna/hjälpklasser i huvudprojektet:
 
 1. `CommerceQuery`
 
-   
-Används för att beskriva en sökfråga (innehåller information om frågetext, aktuell sida, sidstorlek, sortering och valda aspekter). Alla e-handelstjänster som implementerar söknings-API:t får instanser av den här klassen för att kunna utföra sökningen. En `CommerceQuery` instans kan skapas från ett begäranobjekt ( `HttpServletRequest`).
+   Används för att beskriva en sökfråga (innehåller information om frågetext, aktuell sida, sidstorlek, sortering och valda aspekter). Alla e-handelstjänster som implementerar söknings-API:t får instanser av den här klassen för att kunna utföra sökningen. En `CommerceQuery` instans kan skapas från ett begäranobjekt ( `HttpServletRequest`).
 
 1. `FacetParamHelper`
 
-   
-Är en verktygsklass som innehåller en statisk metod - `toParams` - som används för att generera `GET` parametersträngar från en lista med facets och ett växlat värde. Detta är användbart på användargränssnittssidan, där du behöver visa en hyperlänk för varje värde i varje aspekt, så att respektive värde växlas när användaren klickar på hyperlänken (d.v.s. om den markerats tas det bort från frågan, annars läggs det till). Detta tar hand om all logik för hantering av flera-/enkelvärdesfaktorer, åsidosättningsvärden osv.
+   Är en verktygsklass som innehåller en statisk metod - `toParams` - som används för att generera `GET` parametersträngar från en lista med facets och ett växlat värde. Detta är användbart på användargränssnittssidan, där du behöver visa en hyperlänk för varje värde i varje aspekt, så att respektive värde växlas när användaren klickar på hyperlänken (d.v.s. om den markerats tas det bort från frågan, annars läggs det till). Detta tar hand om all logik för hantering av flera-/enkelvärdesfaktorer, åsidosättningsvärden osv.
 
 Startpunkten för söknings-API är den `CommerceService#search` metod som returnerar ett `CommerceResult` objekt. Mer information om det här avsnittet finns i API-dokumentationen.
 
@@ -527,7 +525,7 @@ Angiven `AbstractJcrCommerceSession` kan använda verifikationer. De vouchers so
 
 * `jcr:title` (String) - för voucherns beskrivning
 * `code` (String) - den kod som användaren måste ange för att kunna använda vouchern
-* `promotion` (String) - den befordran som ska genomföras.t.ex. `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
+* `promotion` (String) - den befordran som ska genomföras. t.ex. `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
 
 Kampanjhanterare är OSGi-tjänster som ändrar kundvagnen. Kundvagnen har stöd för flera krokar som definieras i `PromotionHandler` gränssnittet.
 
