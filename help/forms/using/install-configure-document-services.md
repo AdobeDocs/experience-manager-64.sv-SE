@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: 4c99cf4852ea21a85013d8745ade48500110e58a
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
 workflow-type: tm+mt
 source-wordcount: '4183'
 ht-degree: 0%
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 # Installera och konfigurera dokumenttjänster {#installing-and-configuring-document-services}
 
-AEM Forms innehåller en uppsättning OSGi-tjänster för att utföra olika åtgärder på dokumentnivå, till exempel tjänster för att skapa, sammanställa, distribuera och arkivera PDF-dokument, lägga till digitala signaturer för att begränsa dokumentåtkomsten samt avkoda streckkodsformulär. Dessa tjänster ingår i tilläggspaketet för AEM Forms. Tillsammans kallas dessa tjänster dokumenttjänster. Listan över tillgängliga dokumenttjänster och deras viktigaste funktioner är följande:
+AEM Forms tillhandahåller en uppsättning OSGi-tjänster för att utföra olika åtgärder på dokumentnivå, till exempel tjänster för att skapa, sammanställa, distribuera och arkivera PDF-dokument, lägga till digitala signaturer för att begränsa åtkomst till dokument och avkoda streckkodsformulär. Dessa tjänster ingår i tilläggspaketet för AEM Forms. Tillsammans kallas dessa tjänster dokumenttjänster. Listan över tillgängliga dokumenttjänster och deras viktigaste funktioner är följande:
 
-* **Assembler:** Gör att du kan kombinera, ordna om och förstärka PDF- och XDP-dokument och få information om PDF-dokument. Det hjälper även till att konvertera och validera PDF-dokument till PDF/A-standard, omvandlar PDF-formulär, XML-formulär och PDF-formulär till PDF/A-1b, PDF/A-2b och PDFA/A-3b. Mer information finns i [Assembler Service](/help/forms/using/assembler-service.md).
+* **Assembler:** Gör att du kan kombinera, ordna om och förstärka PDF- och XDP-dokument och få information om PDF-dokument. Det hjälper även till att konvertera och validera PDF-dokument till PDF/A-standard, omformar PDF forms, XML-formulär och PDF forms till PDF/A-1b, PDF/A-2b och PDFA/A-3b. Mer information finns i [Assembler Service](/help/forms/using/assembler-service.md).
 
 * **ConvertPDF-tjänst:** Gör att du kan konvertera PDF-dokument till PostScript- eller bildfiler (JPEG, JPEG 2000, PNG och TIFF). Mer information finns i [Konvertera PDF-tjänst](/help/forms/using/using-convertpdf-service.md).
 
@@ -44,31 +44,31 @@ AEM Forms innehåller en uppsättning OSGi-tjänster för att utföra olika åtg
    * AEM-servern signerar ett formulär för en offentlig notarius publicus.
    Signaturtjänsten får åtkomst till certifikat och autentiseringsuppgifter som lagras i förtroendearkivet. Mer information finns i [Signaturtjänst](/help/forms/using/aem-document-services-programmatically.md).
 
-AEM Forms är en kraftfull plattform i företagsklass och dokumenttjänsterna är bara en av funktionerna i AEM Forms. En fullständig lista över funktioner finns i [Introduktion till AEM Forms](/help/forms/using/introduction-aem-forms.md).
+AEM Forms är en kraftfull plattform för större företag och dokumenttjänsterna är bara en av AEM Forms möjligheter. En fullständig lista med funktioner finns i [Introduktion till AEM Forms](/help/forms/using/introduction-aem-forms.md).
 
 ## Distributionstopologi {#deployment-topology}
 
-AEM Forms-tilläggspaketet är ett program som distribueras till AEM. Vanligtvis krävs endast en AEM-instans (författare eller publicerad) för att köra AEM Forms-dokumenttjänster. Följande topologi rekommenderas för att köra AEM Forms dokumenttjänster. Mer information om topologier finns i [Arkitektur och distributionstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
+AEM Forms är ett program som distribueras till AEM. Vanligtvis krävs det bara en AEM-instans (författare eller publicering) för att köra AEM Forms Document Services. Följande topologi rekommenderas för att köra dokumenttjänster i AEM Forms. Mer information om topologier finns i [Arkitektur och distributionstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
 
 ![Arkitektur och driftsättningstopologier för AEM Forms](do-not-localize/document-services.png)
 
 >[!NOTE]
 >
->Även om du kan använda AEM Forms för att konfigurera och köra alla funktioner från en enda server, bör du göra kapacitetsplanering, lastbalansering och konfigurera dedikerade servrar för specifika funktioner i en produktionsmiljö. Om du till exempel använder tjänsten PDF Generator för att konvertera tusentals sidor om dagen och flera adaptiva formulär för att hämta in data, kan du skapa separata AEM Forms-servrar för tjänsten PDF Generator och funktioner för adaptiva formulär. Det ger optimala prestanda och skalar servrarna oberoende av varandra.
+>Även om du kan använda AEM Forms för att konfigurera och köra alla funktioner från en enda server, bör du göra kapacitetsplanering, lastbalansering och konfigurera dedikerade servrar för specifika funktioner i en produktionsmiljö. Om du till exempel använder tjänsten PDF Generator för att konvertera tusentals sidor om dagen och flera adaptiva formulär för att hämta in data, kan du skapa separata AEM Forms för tjänsten PDF Generator och funktioner för adaptiva formulär. Det ger optimala prestanda och skalar servrarna oberoende av varandra.
 
 ## Systemkrav {#system-requirements}
 
-Innan du börjar installera och konfigurera dokumenttjänster för AEM Forms måste du se till att:
+Innan du börjar installera och konfigurera AEM Forms Document Services bör du kontrollera att:
 
 * Maskinvaru- och programvaruinfrastruktur finns på plats. En detaljerad lista över maskin- och programvara som stöds finns i [tekniska krav](/help/sites-deploying/technical-requirements.md).
 
 * Installationssökvägen för AEM-instansen innehåller inte blanksteg.
-* En AEM-instans körs. I AEM-terminologi är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. I allmänhet behöver du bara en AEM-instans (författare eller publicerad) för att köra AEM Forms-dokumenttjänster:
+* En AEM-instans körs. I AEM-terminologi är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. I allmänhet behöver du bara en AEM-instans (författare eller publicerad) för att köra AEM Forms Document Services:
 
    * **Författare**: En AEM-instans som används för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
    * **Publicera**: En AEM-instans som skickar det publicerade innehållet till allmänheten via internet eller ett internt nätverk.
 
-* Minneskraven uppfylls. AEM Forms-tilläggspaket kräver:
+* Minneskraven uppfylls. AEM Forms tilläggspaket kräver:
 
    * 15 GB temporärt utrymme för Microsoft Windows-baserade installationer.
    * 6 GB temporärt utrymme för UNIX-baserade installationer.
@@ -254,10 +254,10 @@ Ange miljövariabler för 32- och 64-bitars Java Development Kit, tredjepartspro
 >* Miljövariabeln OpenOffice_PATH ställs in på installationsmappen i stället för på sökvägen till den körbara filen.
 >* Ställ inte in miljövariabler för Microsoft Office-program som Word, PowerPoint, Excel och Project, eller för AutoCAD. Om dessa program är installerade på servern startar tjänsten Generera PDF automatiskt dessa program.
 >* Installera OpenOffice som /root på UNIX-baserade plattformar. Om OpenOffice inte är installerat som rot kan inte PDF Generator-tjänsten konvertera OpenOffice-dokument till PDF-dokument. Om du måste installera och köra OpenOffice som en icke-rotanvändare anger du sudo-rättigheter till användaren som inte är rotanvändare.
->* Om du använder OpenOffice på en UNIX-baserad plattform kör du följande kommando för att ange variabeln path:\
-   >  `export OpenOffice_PATH=/opt/openoffice.org4`
+>* Om du använder OpenOffice på en UNIX-baserad plattform kör du följande kommando för att ange variabeln path:
 >
-
+>  
+`export OpenOffice_PATH=/opt/openoffice.org4`
 
 
 ### (Endast för IBM WebSphere) Konfigurera IBM SSL-socketprovider {#only-for-ibm-websphere-configure-ibm-ssl-socket-provider}
@@ -289,7 +289,7 @@ Utför följande steg för att konfigurera IBM SSL-socketprovidern:
    #ssl.ServerSocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLServerSocketFactory
    ```
 
-1. Om du vill att AEM Forms-servern ska kunna använda den uppdaterade java.security-filen när AEM Forms-servern startas lägger du till följande java-argument:
+1. Om du vill att AEM Forms-servern ska kunna använda den uppdaterade java.security-filen lägger du till följande java-argument när AEM Forms-servern startas:
 
    `-Djava.security.properties= [path of newly created Java.security file].`
 
@@ -353,8 +353,7 @@ Tjänsten PDF Generator tillhandahåller vägar eller metoder för WebKit, WebCa
 
 >[!NOTE]
 >
-> När du installerar nya teckensnitt i teckensnittsmappen startar du om AEM Forms-instansen.
-
+>När du installerar nya teckensnitt i teckensnittsmappen startar du om AEM Forms-instansen.
 
 ### (Endast UNIX-baserade plattformar) Extra konfigurationer för konvertering från HTML till PDF  {#extra-configurations-for-html-to-pdf-conversion}
 
@@ -384,21 +383,21 @@ Kopiera Unicode-teckensnittet till någon av följande kataloger som passar ditt
 
 
 
-## Installera AEM Forms-tilläggspaket {#install-aem-forms-add-on-package}
+## Installera tilläggspaket för AEM Forms {#install-aem-forms-add-on-package}
 
-AEM Forms-tilläggspaketet är ett program som distribueras till AEM. Paketet innehåller AEM Forms Document Services och andra AEM Forms-funktioner. Så här installerar du paketet:
+AEM Forms är ett program som distribueras till AEM. Paketet innehåller AEM Forms Document Services och andra AEM Forms-funktioner. Så här installerar du paketet:
 
-1. Logga in på [AEM-servern](http://localhost:4502) som administratör och öppna [paketresursen](http://localhost:4502/crx/packageshare). Du måste ha ett Adobe-id för att kunna logga in på paketresursen.
+1. Logga in på [AEM-servern](http://localhost:4502) som administratör och öppna [paketresursen](http://localhost:4502/crx/packageshare). Du måste ha ett Adobe ID för att kunna logga in på paketresursen.
 
 1. I [AEM-paketresursen](http://localhost:4502/crx/packageshare/login.html)söker du **[!UICONTROL AEM 6.4 Forms add-on packages]** efter, klickar på det paket som gäller för ditt operativsystem och klickar på **[!UICONTROL Download]**. Läs och godkänn licensavtalet och klicka på **[!UICONTROL OK]**. Nedladdningen startar. Ordet **[!UICONTROL Downloaded]** visas bredvid paketet när du har hämtat det.
 
-   Du kan också använda versionsnumret för att söka efter ett tilläggspaket. Versionsnummer för det senaste paketet finns i artikeln om [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
+   Du kan också använda versionsnumret för att söka efter ett tilläggspaket. Versionsnummer för det senaste paketet finns i artikeln om [AEM Forms-releaser](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
 
 1. När nedladdningen är klar klickar du på **[!UICONTROL Downloaded]**. Du omdirigeras till pakethanteraren. I pakethanteraren söker du efter det hämtade paketet och klickar på **[!UICONTROL Install]**.
 
-   Om du hämtar paketet manuellt via den direktlänk som visas i artikeln [AEM Forms Relases](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) loggar du in på pakethanteraren, klickar **[!UICONTROL Upload Package]** på det hämtade paketet och klickar på Överför. När paketet har överförts klickar du på paketnamnet och sedan på **[!UICONTROL Install]**.
+   Om du hämtar paketet manuellt via den direktlänk som visas i artikeln om [AEM Forms-releaser](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) loggar du in på pakethanteraren, klickar **[!UICONTROL Upload Package]** på det hämtade paketet och klickar på Överför. När paketet har överförts klickar du på paketnamnet och sedan på **[!UICONTROL Install]**.
 
-1. När paketet har installerats uppmanas du att starta om AEM-instansen. **Stoppa inte servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills ServiceEvent REGISTERED- och ServiceEvent UNREGISTERED-meddelandena inte längre visas i `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log-filen och loggen är stabil.
+1. När paketet har installerats uppmanas du att starta om AEM-instansen. **Stoppa inte servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills ServiceEvent REGISTERED- och ServiceEvent UNREGISTERED-meddelandena inte längre visas i filen `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log och loggen är stabil.
 
 ## Konfiguration efter installation {#post-installation-configurations}
 
@@ -437,7 +436,7 @@ AEM Forms-tilläggspaketet är ett program som distribueras till AEM. Paketet in
 
 Det krävs ett lokalt användarkonto för att köra PDF Generator-tjänsten. Anvisningar om hur du skapar en lokal användare finns i [Skapa ett användarkonto i Windows](https://support.microsoft.com/en-us/help/13951/windows-create-user-account) eller [skapa ett användarkonto på UNIX-baserade plattformar](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/s1-starting-create-account.html).
 
-1. Öppna sidan Konfiguration av [AEM Forms PDF Generator](http://localhost:4502/libs/fd/pdfg/config/ui.html) .
+1. Öppna konfigurationssidan för [AEM Forms PDF Generator](http://localhost:4502/libs/fd/pdfg/config/ui.html) .
 
 1. Ange autentiseringsuppgifter för ett lokalt användarkonto på **[!UICONTROL User Accounts]** fliken och klicka på **[!UICONTROL Submit]**. Tillåt åtkomst till användaren om Microsoft Windows tillfrågas. När den konfigurerade användaren läggs till visas den under **[!UICONTROL Your user accounts]** avsnittet på **[!UICONTROL User Accounts]** fliken.
 
@@ -541,8 +540,8 @@ Innan du konfigurerar certifikaten bör du kontrollera att du har en:
 
 Utför följande steg för att konfigurera certifikaten:
 
-1. Logga in på AEM Author-instansen som administratör. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
-1. Klicka på **[!UICONTROL name]** fältet för användarkontot. The **[!UICONTROL Edit User Settings]** page opens. På AEM Author-instansen finns certifikat i KeyStore. Om du inte har skapat en KeyStore tidigare klickar du på **[!UICONTROL Create KeyStore]** och anger ett nytt lösenord för KeyStore. Om servern redan innehåller en KeyStore hoppar du över det här steget.  Om du använder Adobe Reader Extensions-certifikatet är lösenordet för nyckelfilen alltid detsamma som lösenordet för den privata nyckeln.
+1. Logga in på AEM Author som administratör. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
+1. Klicka på **[!UICONTROL name]** fältet för användarkontot. The **[!UICONTROL Edit User Settings]** page opens. I instansen AEM Author finns certifikat i en KeyStore. Om du inte har skapat en KeyStore tidigare klickar du på **[!UICONTROL Create KeyStore]** och anger ett nytt lösenord för KeyStore. Om servern redan innehåller en KeyStore hoppar du över det här steget.  Om du använder Adobe Reader Extensions-certifikatet är lösenordet för nyckelfilen alltid detsamma som lösenordet för den privata nyckeln.
 1. Markera **[!UICONTROL Edit User Settings]** fliken på **[!UICONTROL KeyStore]** sidan. Expandera **[!UICONTROL Add Private Key from Key Store file]** alternativet och ange ett alias. Aliaset används för att utföra Reader Extensions-åtgärden.
 1. Om du vill överföra certifikatfilen klickar du på **[!UICONTROL Select Key Store File]** och överför en .pfx-fil.
 
@@ -609,7 +608,7 @@ Assembler-tjänsten är beroende av Reader Extensions-tjänsten, signaturtjänst
 
 ## Nästa steg {#next-steps}
 
-Du har en fungerande AEM Forms-dokumenttjänstmiljö. Du kan använda dokumenttjänster via:
+Du har en arbetsmiljö för dokumenttjänster i AEM Forms. Du kan använda dokumenttjänster via:
 
 * [Formulärbaserade arbetsflöden i OSGi](/help/forms/using/aem-forms-workflow.md)
 * [Bevakade mappar](/help/forms/using/watched-folder-in-aem-forms.md)
