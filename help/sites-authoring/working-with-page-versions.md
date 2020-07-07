@@ -10,7 +10,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: fa331c03-5587-452d-ab96-ac2926ae0da3
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
+workflow-type: tm+mt
+source-wordcount: '1087'
+ht-degree: 6%
 
 ---
 
@@ -164,4 +167,4 @@ Med Timewarp kan du göra ett bra försök att återskapa en sida vid en viss ti
 
 >[!CAUTION]
 >
-> Timewarp är ett verktyg som hjälper författare att förstå och skapa sitt innehåll. Den är inte avsedd som en revisionslogg eller för juridiska ändamål.
+>Timewarp är ett verktyg som hjälper författare att förstå och skapa sitt innehåll. Den är inte avsedd som en revisionslogg eller för juridiska ändamål.
