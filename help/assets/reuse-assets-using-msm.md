@@ -5,17 +5,17 @@ contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
 workflow-type: tm+mt
 source-wordcount: '3060'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
 
 # Återanvänd resurser med MSM för Assets {#reuse-assets-using-msm-for-assets}
 
-Med MSM-funktionaliteten (Multi Site Manager) i Adobe Experience Manager (AEM) kan användare återanvända innehåll som har skapats en gång och återanvänds på flera webbplatser. Samma sak gäller för digitala resurser som MSM för Assets-funktionalitet. Med MSM for Assets kan du
+Funktionen för Multi Site Manager (MSM) i Adobe Experience Manager (AEM) gör det möjligt för användare att återanvända innehåll som har skapats en gång och återanvänds på flera olika webbplatser. Samma sak gäller för digitala resurser som MSM för Assets-funktionalitet. Med MSM for Assets kan du
 
 * Skapa resurser en gång och gör sedan kopior av dessa resurser för återanvändning i andra delar av webbplatsen.
 * Håll flera kopior synkroniserade och uppdatera originalkopian en gång för att överföra ändringarna till de underordnade kopiorna.
@@ -30,7 +30,7 @@ Installera minst Service Pack 5 om du vill använda MSM för resurser. Mer infor
 
 ### Så fungerar det och fördelarna {#how-it-works-the-benefits}
 
-Om du vill veta mer om användningsscenarierna för att återanvända samma innehåll (text och resurser) på flera webbplatser läser du i [möjliga MSM-scenarier](/help/sites-administering/msm.md#possible-scenarios). AEM upprätthåller en länk mellan den ursprungliga resursen och dess länkade kopior, så kallade live-kopior. Tack vare den bevarade länken kan centraliserade ändringar skickas till många aktiva kopior. Detta ger snabbare uppdateringar och eliminerar samtidigt begränsningarna med att hantera duplicerade kopior. Spridningen av ändringar är felfri och centraliserad. Funktionen ger utrymme för uppdateringar som är begränsade till valda kopior. Användare kan koppla loss länken, d.v.s. bryta arv, och göra lokala redigeringar som inte skrivs över nästa gång den primära kopian uppdateras och ändringarna introduceras. Frånkopplingen kan göras för ett fåtal metadatafält eller för en hel resurs. Det ger flexibilitet att lokalt uppdatera resurser som ursprungligen ärvts från en primär kopia.
+Om du vill veta mer om användningsscenarierna för återanvändning av samma innehåll (text och resurser) på flera webbplatser kan du läsa om [möjliga MSM-scenarier](/help/sites-administering/msm.md#possible-scenarios). AEM upprätthåller en länk mellan den ursprungliga resursen och dess länkade kopior, så kallade live-kopior. Tack vare den bevarade länken kan centraliserade ändringar skickas till många aktiva kopior. Detta ger snabbare uppdateringar och eliminerar samtidigt begränsningarna med att hantera duplicerade kopior. Spridningen av ändringar är felfri och centraliserad. Funktionen ger utrymme för uppdateringar som är begränsade till valda kopior. Användare kan koppla loss länken, d.v.s. bryta arv, och göra lokala redigeringar som inte skrivs över nästa gång den primära kopian uppdateras och ändringarna introduceras. Frånkopplingen kan göras för ett fåtal metadatafält eller för en hel resurs. Det ger flexibilitet att lokalt uppdatera resurser som ursprungligen ärvts från en primär kopia.
 
 MSM upprätthåller en aktiv relation mellan källresursen och dess livekopior så att:
 
@@ -107,7 +107,7 @@ Du kan visa information och MSM-relaterade statusar för live-kopior som relatio
 
 Följ de här stegen för att kontrollera information och status för en live-kopia-resurs eller en mapp.
 
-1. Välj en live-kopia eller en mapp. Klicka **[!UICONTROL Properties]** i verktygsfältet. Du kan också använda kortkommandot `p`.
+1. Välj en live-kopia eller en mapp. Klicka på **[!UICONTROL Properties]** i verktygsfältet. Du kan också använda kortkommandot `p`.
 1. Klicka på **[!UICONTROL Live Copy]**. Du kan kontrollera sökvägen till källan, avbrottsstatus, synkroniseringsstatus, det senaste utrullningsdatumet och den användare som gjorde den senaste utrullningen.
    ![Live copy-information och status](assets/lc_folder_properties.png)
 1. Du kan aktivera eller inaktivera om underordnade resurser lånar konfigurationen för live-kopia.
@@ -117,7 +117,7 @@ Följ de här stegen för att kontrollera information och status för en live-ko
 
 AEM tillhandahåller en konsol för att kontrollera status för alla live-kopior av en källmapp. Den här konsolen visar status för alla underordnade resurser.
 
-1. Välj en källmapp. Klicka **[!UICONTROL Properties]** i verktygsfältet. Du kan också använda kortkommandot `p`.
+1. Välj en källmapp. Klicka på **[!UICONTROL Properties]** i verktygsfältet. Du kan också använda kortkommandot `p`.
 1. Klicka på **[!UICONTROL Live Copy Source]**. Klicka på **[!UICONTROL Live Copy Overview]** för att öppna konsolen. På den här kontrollpanelen visas status på den översta nivån för alla underordnade resurser.
    ![Visa status för live-kopior i Live Copy-konsolen](assets/lc_statuses.png)
 1. Om du vill visa detaljerad information om alla resurser i mappen med live-kopian markerar du en resurs och klickar på **[!UICONTROL Relationship Status]** i verktygsfältet.
@@ -165,8 +165,8 @@ När en källa har ändrats kan ändringarna spridas till live-kopiorna med anti
 
 Du kan initiera en utrullningsåtgärd från källresursen och uppdatera alla eller några utvalda live-kopior.
 
-1. Välj en live-kopia eller en mapp. Klicka **[!UICONTROL Properties]** i verktygsfältet. Du kan också använda kortkommandot `p`.
-1. Klicka på **[!UICONTROL Live Copy Source]**. Klicka **[!UICONTROL Rollout]** i verktygsfältet.
+1. Välj en live-kopia eller en mapp. Klicka på **[!UICONTROL Properties]** i verktygsfältet. Du kan också använda kortkommandot `p`.
+1. Klicka på **[!UICONTROL Live Copy Source]**. Klicka på **[!UICONTROL Rollout]** i verktygsfältet.
 1. Markera de live-kopior som du vill uppdatera. Klicka på **[!UICONTROL Rollout]**.
 1. Om du vill ta med uppdateringarna av de underordnade resurserna väljer du **[!UICONTROL Rollout Source and all Children]**.
    ![Fyll ut ändringarna av källan till några eller alla live-kopior](assets/lc_rollout_page.png)
@@ -223,7 +223,7 @@ Du kan ångra alla lokala ändringar och återställa resursen till källans lä
 
 Du kan ta bort relationen mellan en källa och en live-kopia helt med åtgärden Koppla loss. Den aktiva kopian blir en fristående resurs eller mapp när den har kopplats loss. Den visas som en ny resurs i AEM-gränssnittet omedelbart efter att den kopplats loss. Följ de här stegen för att koppla loss en live-kopia från källan.
 
-1. Välj en resurs eller mapp för en live-kopia. Klicka **[!UICONTROL Properties]** i verktygsfältet. Du kan också använda kortkommandot p.
+1. Välj en resurs eller mapp för en live-kopia. Klicka på **[!UICONTROL Properties]** i verktygsfältet. Du kan också använda kortkommandot p.
 1. Klicka på **[!UICONTROL Live Copy]**. Click **[!UICONTROL Detach]** in the toolbar. Klicka **[!UICONTROL Detach]** i den dialogruta som visas.
    ![Koppla loss-åtgärden tar helt bort relationen mellan källa och live-kopia](assets/lc_detach.png)
 
@@ -237,7 +237,7 @@ Du kan också snabbt frigöra flera resurser i en live-kopieringsmapp från **[!
 
 Om du har flera resurser i en live-kopieringsmapp kan initieringsåtgärder för varje resurs vara långsamma. Du kan snabbt initiera grundläggande åtgärder för många resurser från Live Copy Console. Ovanstående metoder fortsätter att fungera för enskilda resurser.
 
-1. Välj en källmapp. Klicka **[!UICONTROL Properties]** i verktygsfältet. Du kan också använda kortkommandot p.
+1. Välj en källmapp. Klicka på **[!UICONTROL Properties]** i verktygsfältet. Du kan också använda kortkommandot p.
 1. Klicka på Live Copy Source. Klicka på **[!UICONTROL Live Copy Overview]** för att öppna konsolen.
 1. På den här kontrollpanelen väljer du en live-resurs från en live-mapp. Klicka på önskade åtgärder i verktygsfältet. The actions available are **[!UICONTROL Edit]**, **[!UICONTROL Synchronize]**, **[!UICONTROL Reset]**, **[!UICONTROL Suspend]**, and **[!UICONTROL Detach]**. Du kan snabbt initiera dessa åtgärder för alla resurser i valfritt antal kopiamappar som finns i en direktrelation med den valda källmappen.
    ![Uppdatera enkelt många resurser i kopiemappar från Live Copy Overview-konsolen](assets/lc_console_update_assets.png)
@@ -253,9 +253,9 @@ Med AEM kan du utöka funktionaliteten med MSM Java API:er. För Assets fungerar
 
 >[!NOTE]
 >
-> * Blueprint in MSM for Site kallas Live Copy-källa i MSM for Assets.
-> * Det går inte att ta bort kapitelsteget i guiden Skapa plats i MSM for Assets.
-> * Det går inte att konfigurera MSM-lås för sidegenskaper (Touch-aktiverat gränssnitt) i MSM för Assets.
+>* Blueprint in MSM for Site kallas Live Copy-källa i MSM for Assets.
+>* Det går inte att ta bort kapitelsteget i guiden Skapa plats i MSM for Assets.
+>* Det går inte att konfigurera MSM-lås för sidegenskaper (Touch-aktiverat gränssnitt) i MSM för Assets.
 
 
 ## Effekter av tillgångshanteringsåtgärder på live-kopior {#impact-of-asset-management-tasks-on-live-copies}
