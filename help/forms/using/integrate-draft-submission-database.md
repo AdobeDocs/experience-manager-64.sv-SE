@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
 workflow-type: tm+mt
 source-wordcount: '1439'
 ht-degree: 1%
@@ -21,15 +21,15 @@ ht-degree: 1%
 
 ## Exempelöversikt {#sample-overview}
 
-Med AEM Forms-portalutkast och inskickningskomponenter kan användarna spara sina formulär som utkast och skicka dem senare från vilken enhet som helst. Användarna kan även se de inskickade formulären på portalen. För att aktivera den här funktionen tillhandahåller AEM Forms data- och metadatatjänster för att lagra data som fyllts i av en användare i formuläret och de formulärmetadata som är kopplade till utkast och skickade formulär. Dessa data lagras som standard i CRX-databasen. När användarna interagerar med blanketterna via AEM-publiceringsinstansen, som vanligtvis ligger utanför företagets brandvägg, kan det vara bra att anpassa datalagringen för att den ska vara säkrare och tillförlitligare.
+Med AEM Forms portal-utkast och inskickningskomponenter kan användare spara sina formulär som utkast och skicka dem senare från vilken enhet som helst. Användarna kan även se de inskickade formulären på portalen. För att aktivera den här funktionen tillhandahåller AEM Forms data- och metadatatjänster för att lagra data som fyllts i av en användare i formuläret och de formulärmetadata som är kopplade till utkast och skickade formulär. Dessa data lagras som standard i CRX-databasen. När användarna interagerar med blanketterna via AEM-publiceringsinstansen, som vanligtvis ligger utanför företagets brandvägg, kan det vara bra att anpassa datalagringen för att den ska vara säkrare och tillförlitligare.
 
 Exemplet, som behandlas i det här dokumentet, är en referensimplementering av anpassade data- och metadatatjänster för att integrera komponenter för utkast och inskickning med en databas. Databasen som används i exempelimplementeringen är **MySQL 5.6.24**. Du kan emellertid integrera komponenterna för utkast och inskickning med valfri databas.
 
 >[!NOTE]
 >
 >* De exempel och konfigurationer som beskrivs i det här dokumentet är enligt MySQL 5.6.24 och du måste ersätta dem på lämpligt sätt för ditt databassystem.
->* Kontrollera att du har installerat den senaste versionen av AEM Forms-tilläggspaketet. En lista över tillgängliga paket finns i artikeln [AEM Forms Release](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
-> * Exempelpaketet fungerar bara med åtgärder för att skicka adaptiva formulär.
+>* Kontrollera att du har installerat den senaste versionen av AEM Forms tilläggspaketet. En lista över tillgängliga paket finns i artikeln om [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
+>* Exempelpaketet fungerar bara med åtgärder för att skicka adaptiva formulär.
 
 
 ## Konfigurera och konfigurera exemplet {#set-up-and-configure-the-sample}
