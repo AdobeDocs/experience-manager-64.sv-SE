@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: upgrading
 discoiquuid: 899ea120-c96d-4dbf-85da-e5d25959d10a
 translation-type: tm+mt
-source-git-commit: 1d1914f760e3d77350665ab55025266e79d9f0fe
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
+workflow-type: tm+mt
+source-wordcount: '2178'
+ht-degree: 0%
 
 ---
 
@@ -146,7 +149,7 @@ Uppgiftslistan varierar beroende på vilket körningsläge som används för att
 
 ### Standardkonfiguration för hälsokontroller före uppgradering {#default-configuration-of-the-pre-upgrade-health-checks}
 
-OSGI- `PreUpgradeTasksMBeanImpl` komponenten levereras förkonfigurerad med en lista över hälsokontrollstaggar före uppgradering som ska köras när `runAllPreUpgradeHealthChecks` metoden anropas:
+OSGI- `PreUpgradeTasksMBeanImpl` komponenten levereras förkonfigurerad med en lista över hälsokontrollstaggar som ska köras före uppgradering när `runAllPreUpgradeHealthChecks` metoden anropas:
 
 * **system** - den tagg som används av hälsokontroller för granitunderhåll
 
@@ -176,12 +179,12 @@ Nedan visas en lista med alla tillgängliga metoder som `PreUpgradeTasksMBeanImp
   </tr> 
   <tr> 
    <td><code>getAvailablePreUpgradeTasksNames()</code></td> 
-   <td>INFORMATION</td> 
+   <td>INFO</td> 
    <td>Visar en lista med tillgängliga namn på underhållsaktiviteter före uppgradering.</td> 
   </tr> 
   <tr> 
    <td><code>getAvailablePreUpgradeHealthChecksTagNames()</code></td> 
-   <td>INFORMATION</td> 
+   <td>INFO</td> 
    <td>Visar en lista med taggar för hälsokontroller som är före uppgraderingen.</td> 
   </tr> 
   <tr> 
@@ -313,8 +316,8 @@ När du har kört revisionsrensning på CRX3-instanser bör du köra Datastore-s
 >
 >Underhållsuppgifterna är bara nödvändiga om:
 >
-> * Du uppgraderar från AEM-versioner som är äldre än AEM 6.3
-> * Du stöter på något av de fel som nämns nedan under uppgraderingen.
+>* Du uppgraderar från AEM-versioner som är äldre än AEM 6.3
+>* Du stöter på något av de fel som nämns nedan under uppgraderingen.
 
 
 Det finns exceptionella fall när serviceanvändare kan få äldre AEM-versioner som felaktigt taggade som vanliga användare.
