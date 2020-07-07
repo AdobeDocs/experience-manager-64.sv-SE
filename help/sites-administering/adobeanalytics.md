@@ -10,17 +10,20 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 0089394f-0107-49eb-ad73-52e9cabe71b1
 translation-type: tm+mt
-source-git-commit: ee380780bb7b62d348051b29edb9d13e14407377
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
+workflow-type: tm+mt
+source-wordcount: '302'
+ht-degree: 20%
 
 ---
 
 
 # Integrera med Adobe Analytics{#integrating-with-adobe-analytics}
 
-Genom att integrera Adobe Analytics och AEM kan ni följa webbsidans aktivitet:
+Genom att integrera Adobe Analytics och AEM kan du följa upp din webbsidesaktivitet:
 
-* Med en Adobe Analytics-konfiguration kan AEM autentisera med Adobe Analytics.
-* Ett ramverk identifierar de data som skickas till rapportsviten för Adobe Analytics.
+* Med en Analytics-konfiguration kan AEM autentisera med Adobe Analytics.
+* Ett ramverk identifierar de data som skickas till din Adobe Analytics-rapportsvit.
 
 Informationen innehåller sid- och användardata. till exempel:
 
@@ -40,26 +43,25 @@ Du kan också använda guiden [](/help/sites-administering/opt-in.md) Anmäl dig
 
 >[!NOTE]
 >
->Se även artikeln med instruktioner: Integrera AEM [med Adobe Target och Adobe Analytics med DTM](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html).
+>Se även artikeln med instruktioner: [Integrera AEM med Adobe Target och Adobe Analytics med DTM](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html).
 
 ## Ytterligare information {#further-information}
 
 Se:
 
-* [Utöka Adobe Analytics-integreringen](/help/sites-developing/extending-analytics.md) för information om hur du utvecklar komponenter som samlar in användardata och anpassar Adobe Analytics-ramverket.
-* Kunskapsbasartikeln, [Adobe Analytics-integrering - felsökningsproblem](https://helpx.adobe.com/experience-manager/kb/sitecatalystintegrationtroubleshooting.html), innehåller information om hur du felsöker Adobe Analytics-integreringen.
+* [Utöka Adobe Analytics Integration](/help/sites-developing/extending-analytics.md) med information om hur man utvecklar komponenter för insamling av användardata och anpassning av Adobe Analytics-ramverket.
+* Kunskapsbasartikeln om integrering med [Adobe Analytics - felsökning av problem](https://helpx.adobe.com/experience-manager/kb/sitecatalystintegrationtroubleshooting.html)- innehåller information om hur du felsöker integreringen med Adobe Analytics.
 
 >[!NOTE]
 >
->Om du använder Adobe Analytics med en anpassad proxykonfiguration måste du [konfigurera två OSGi-paket](/help/sites-deploying/configuring-osgi.md) (till exempel med webbkonsolen) som krävs för **Apache HTTP Client** -proxykonfigurationerna. Båda är obligatoriska eftersom vissa funktioner i AEM använder 3.x-API:erna, medan andra använder 4.x-API:erna. Konfigurera:
+>Om du använder Adobe Analytics med en anpassad proxykonfiguration måste du [konfigurera två OSGi-paket](/help/sites-deploying/configuring-osgi.md) (till exempel med webbkonsolen) som krävs för proxykonfigurationerna i **Apaches HTTP-klient**. Båda är obligatoriska eftersom vissa funktioner i AEM använder 3.x-API:erna, medan andra använder 4.x-API:erna. Konfigurera:
 >
 >* **Day Commons HTTP Client 3.1** för att konfigurera 3.x API;\
    >  till exempel [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
    >
    >
-* **Proxykonfiguration** för Apache HTTP Components för att konfigurera 4.x API;\
-   >  till exempel [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
+* **Proxykonfiguration** för Apache HTTP Components för att konfigurera 4.x API;
 >
-
-
+>  
+till exempel [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
 
