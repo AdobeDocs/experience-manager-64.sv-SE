@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: eb8fd2b3-0a31-425e-b0f1-38f09e1106df
 translation-type: tm+mt
-source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
+workflow-type: tm+mt
+source-wordcount: '385'
+ht-degree: 1%
 
 ---
 
@@ -105,15 +108,13 @@ Se även anpassning av [klientsidan](client-customize.md)
 >* `setSentItemsPath`()
 >
 >
-Exempel:
+Till exempel:
 >
 >
-```>
+```
 >valid: mb.setInboxPath( "/mail/inbox" );
 > not valid: mb.setInboxPath( "/mail/inbox/" );
->```>
-
-
+>```
 
 ### Community-webbplats {#community-site}
 
@@ -130,10 +131,10 @@ Om du vill testa exempelskriptet på serversidan behöver du en utvecklingsmilj�
 1. Logga in som administratör för att ` [CRXDE|Lite](http://localhost:4502/crx/de)`
 1. Skapa en `bundle node`i `/apps/engage/install` med godtyckliga namn, som
 
-   * **[!UICONTROL Symboliskt namn]**: com.engage.media.social.messaging.MessagingNotification
-   * **[!UICONTROL Namn]**: Komma igång - meddelande om självstudiekurser
-   * **[!UICONTROL Beskrivning]**: en exempeltjänst för att skicka ett e-postmeddelande till användare när de får ett meddelande
-   * **[!UICONTROL Paket]**: `com.engage.media.social.messaging.notification`
+   * **[!UICONTROL Symbolic Name]**: com.engage.media.social.messaging.MessagingNotification
+   * **[!UICONTROL Name]**: Komma igång - meddelande om självstudiekurser
+   * **[!UICONTROL Description]**: en exempeltjänst för att skicka ett e-postmeddelande till användare när de får ett meddelande
+   * **[!UICONTROL Package]**: `com.engage.media.social.messaging.notification`
 
 1. Navigera till `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`
 
@@ -141,7 +142,7 @@ Om du vill testa exempelskriptet på serversidan behöver du en utvecklingsmilj�
    1. Skapa klass `MessageEventHandler.java`
    1. Kopiera/klistra in koden nedan i `MessageEventHandler.java`
 
-1. Klicka på **[!UICONTROL Spara alla]**
+1. Klicka på **[!UICONTROL Save All]**
 1. Navigera till `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd` och lägg till alla importsatser som de skrivs i `MessageEventHandler.java` koden.
 1. Bygg paketet
 1. Kontrollera att `Day CQ Mail Service`OSGi-tjänsten är konfigurerad
