@@ -10,7 +10,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: ba74d3fb-063d-4bd6-a551-8e71ad6559e3
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
+workflow-type: tm+mt
+source-wordcount: '1379'
+ht-degree: 0%
 
 ---
 
@@ -36,8 +39,7 @@ Så här skapar du en ny version av en sida:
 1. Om du vill ange en etikett för versionen (valfritt) klickar du på knappen **Mer >>** och anger att **etiketten** ska ge versionen ett namn. Om etiketten inte är inställd blir versionen ett automatiskt ökande nummer.
 1. Klicka på **Skapa version**. Ett grått meddelande visas på sidan. till exempel:
 
-   
-Version 1.2 har skapats för: Skruvar.
+   Version 1.2 har skapats för: Skruvar.
 
 >[!NOTE]
 >
@@ -75,7 +77,7 @@ Den här metoden kan användas för att återställa en sidversion. Den kan äve
 
 1. Gå till mappen som du vill återställa i **webbplatskonsolen** och markera den.
 1. I den övre menyn väljer du **Verktyg** och sedan **Återställ**.
-1. **Väljer**&#x200B;återställningsträd.. öppnar dialogrutan där du kan välja det träd som du vill återställa:
+1. Väljer **återställningsträd..** öppnar dialogrutan där du kan välja det träd som du vill återställa:
 
    ![screen_shot_2012-02-08at45743pm-1](assets/screen_shot_2012-02-08at45743pm-1.png)
 
@@ -173,7 +175,7 @@ Om du vill visa tidslinjen i dokumentet:
       I exemplet nedan anger den röda linjen att sidan redigerades under tidsramen för den ursprungliga gröna versionen och den gula raden anger att sidan redigerades någon gång under den röda versionen osv.
    ![chlimage_1-109](assets/chlimage_1-109.png)
 
-1. Klicka:
+1. Klicka på:
 
    1. **Gå** till den publicerade sidans innehåll vid den valda tidpunkten.
    1. När du visar innehållet använder du **Avsluta tidsförvrängning** för att avsluta och återgå till den aktuella författarsidan.
@@ -190,4 +192,4 @@ Med Timewarp kan du göra ett bra försök att återskapa en sida vid en viss ti
 
 >[!CAUTION]
 >
-> Timewarp är ett verktyg som hjälper författare att förstå och skapa sitt innehåll. Den är inte avsedd som en revisionslogg eller för juridiska ändamål.
+>Timewarp är ett verktyg som hjälper författare att förstå och skapa sitt innehåll. Den är inte avsedd som en revisionslogg eller för juridiska ändamål.
