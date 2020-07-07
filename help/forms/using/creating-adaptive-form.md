@@ -1,17 +1,17 @@
 ---
 title: Skapa ett anpassat formulär
 seo-title: Skapa ett anpassat formulär
-description: Skapa ett anpassat formulär med AEM Forms. Adaptiva formulär är responsiva HTML5-formulär som effektiviserar informationsinsamling och -bearbetning.
-seo-description: Skapa ett anpassat formulär med AEM Forms. Adaptiva formulär är responsiva HTML5-formulär som effektiviserar informationsinsamling och -bearbetning.
+description: Så här skapar du ett anpassat formulär med AEM Forms. Adaptiva formulär är responsiva HTML5-formulär som effektiviserar informationsinsamling och -bearbetning.
+seo-description: Så här skapar du ett anpassat formulär med AEM Forms. Adaptiva formulär är responsiva HTML5-formulär som effektiviserar informationsinsamling och -bearbetning.
 uuid: 444f461a-9e88-4385-b5ee-e985067ab7bc
 content-type: reference
 topic-tags: author
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: f06b8cb2-6f98-465f-beec-1e91e3f45707
 translation-type: tm+mt
-source-git-commit: 5e764edb3d8ed98542c50b80cac40776c886ccf5
+source-git-commit: 4dbb6af1c0a76aabc003749d7fa76f8c6e41e726
 workflow-type: tm+mt
-source-wordcount: '1957'
+source-wordcount: '1953'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Följ de här stegen för att skapa ett anpassat formulär.
 
-1. Åtkomst till AEM Forms Author-instans på `https://[server]:[port]/<custom-context-if-any>.`
+1. Åtkomst till författarinstansen av AEM Forms på `https://[server]:[port]/<custom-context-if-any>.`
 
    ```
    
@@ -66,13 +66,13 @@ Följ de här stegen för att skapa ett anpassat formulär.
 
    Information om gränssnittet för att skapa adaptiva formulär och tillgängliga komponenter finns i Introduktion [till att skapa adaptiva formulär](/help/forms/using/introduction-forms-authoring.md).
 
-   >[!NOTE] {grayBox=&quot;true&quot;}
+   >[!NOTE]
    >
    >Tillåt att popup-fönster i webbläsaren öppnar det nya formuläret på en ny flik.
 
 ## Skapa ett anpassat formulär baserat på en formulärdatamodell {#fdm}
 
-[Med dataintegrering](/help/forms/using/data-integration.md) i AEM Forms kan ni integrera flera datakällor och sammanföra deras enheter och tjänster för att skapa en formulärdatamodell. Det är ett tillägg till JSON-schemat. Du kan använda en formulärdatamodell för att skapa ett anpassat formulär. Enheterna eller datamodellsobjekten som konfigurerats i en formulärdatamodell är tillgängliga som datamodellsobjekt för formulärutveckling. De är bundna till respektive datakällor och används för att fylla i ett formulär i förväg och skriva inlämnade data tillbaka till respektive datakälla. Du kan också anropa tjänster som konfigurerats i en formulärdatamodell med hjälp av adaptiva formulärregler.
+[Med dataintegrering](/help/forms/using/data-integration.md) i AEM Forms kan du integrera flera datakällor och sammanföra deras enheter och tjänster för att skapa en formulärdatamodell. Det är ett tillägg till JSON-schemat. Du kan använda en formulärdatamodell för att skapa ett anpassat formulär. Enheterna eller datamodellsobjekten som konfigurerats i en formulärdatamodell är tillgängliga som datamodellsobjekt för formulärutveckling. De är bundna till respektive datakällor och används för att fylla i ett formulär i förväg och skriva inlämnade data tillbaka till respektive datakälla. Du kan också anropa tjänster som konfigurerats i en formulärdatamodell med hjälp av adaptiva formulärregler.
 
 Så här använder du en formulärdatamodell för att skapa ett anpassat formulär:
 
@@ -88,7 +88,7 @@ Så här använder du en formulärdatamodell för att skapa ett anpassat formul�
 
 >[!NOTE]
 >
->Du kan också ändra formulärdatamodellen för ett anpassat formulär. Detaljerade steg finns i [Redigera formulärmodellegenskaper för ett adaptivt formulär](#edit-form-model).
+>Du kan också ändra formulärdatamodellen för ett anpassat formulär. Detaljerade steg finns i [Redigera formulärmodellegenskaper för ett anpassat formulär](#edit-form-model).
 
 ## Skapa ett anpassat formulär baserat på en XFA-formulärmall {#create-an-adaptive-form-based-on-an-xfa-form-template}
 
@@ -101,7 +101,7 @@ Du kan återanvända dina XFA-formulärmallar för att skapa anpassningsbara for
 Gör följande om du vill använda en XFA-formulärmall som formulärmodell för ditt adaptiva formulär:
 
 1. Öppna **[!UICONTROL Add Properties]** fliken på **[!UICONTROL Form Model]** sidan.
-1. Välj i listrutan på fliken Formulärmodell **[!UICONTROL Form Templates]**. Alla formulärmallar som överförs till databasen via användargränssnittet för AEM Forms visas för val. Välj en mall i listan.
+1. Välj i listrutan på fliken Formulärmodell **[!UICONTROL Form Templates]**. Alla formulärmallar som överförs till databasen via användargränssnittet i AEM Forms visas för val. Välj en mall i listan.
 
    ![Associera XFA-formulärmall med ett anpassat formulär](assets/form_model_xfa_associate.png)
    **Bild:** *Välja en formulärmall*
@@ -128,7 +128,7 @@ Gör följande om du vill använda XML- eller JSON-schema som formulärmodell f�
 
    * **[!UICONTROL Upload from disk]** - Välj det här alternativet och tryck på Överför schemadefinition för att bläddra och överföra ett XML-schema eller JSON-schema från filsystemet. Den överförda schemafilen finns i formuläret och är inte tillgänglig för andra adaptiva formulär.
    * **[!UICONTROL Search in repository]** - Välj det här alternativet om du vill välja från listan med schemadefinitionsfiler som är tillgängliga i databasen. Välj XML- eller JSON-schemafilen som formulärmodell. Det valda schemat kopplas till formuläret via referens och kan användas i andra adaptiva formulär.
-   >[!CAUTION] {grayBox=&quot;true&quot;}
+   >[!CAUTION]
    >
    >Kontrollera att JSON-schemats filnamn slutar med **.schema.json**. Till exempel: mySchema.schema.json
 
@@ -142,11 +142,11 @@ Gör följande om du vill använda XML- eller JSON-schema som formulärmodell f�
 
 >[!NOTE]
 >
->Du kan också ändra schemat för ett anpassat formulär. Detaljerade steg finns i [Redigera formulärmodellegenskaper för ett adaptivt formulär](#edit-form-model).
+>Du kan också ändra schemat för ett anpassat formulär. Detaljerade steg finns i [Redigera formulärmodellegenskaper för ett anpassat formulär](#edit-form-model).
 
 ## Adaptiva formulärmallar {#adaptive-form-templates}
 
-En mall innehåller en grundläggande struktur och definierar utseendet (layouter och format) för ett anpassat formulär. Den har förformaterade komponenter som innehåller vissa egenskaper och innehållsstruktur. Som standard innehåller AEM Forms vissa anpassningsbara formulärmallar. Om du vill hämta hela mallpaketet inklusive avancerade mallar måste du installera tilläggspaketet AEM Forms. Mer information finns i [Installera AEM Forms-tilläggspaket](/help/forms/using/installing-configuring-aem-forms-osgi.md).
+En mall innehåller en grundläggande struktur och definierar utseendet (layouter och format) för ett anpassat formulär. Den har förformaterade komponenter som innehåller vissa egenskaper och innehållsstruktur. AEM Forms tillhandahåller vissa anpassningsbara formulärmallar. Om du vill hämta hela mallpaketet med avancerade mallar måste du installera tilläggspaketet AEM Forms. Mer information finns i [Installera tilläggspaket](/help/forms/using/installing-configuring-aem-forms-osgi.md)för AEM Forms.
 
 Dessutom kan du använda mallredigeraren för att skapa egna mallar. Mer information om hur du arbetar med mallar finns i [Adaptiva formulärmallar](/help/forms/using/template-editor.md).
 
@@ -168,7 +168,7 @@ Anpassningsbara formulär skapas utan någon formulärmodell (med alternativet I
 
 ## Spara ett anpassat formulär automatiskt {#auto-save-an-adaptive-form}
 
-Som standard sparas innehållet i ett anpassat formulär vid en användaråtgärd, t.ex. när du trycker på knappen Spara. Du kan också konfigurera ett anpassat formulär så att innehållet automatiskt börjar sparas baserat på en händelse eller ett tidsintervall. Alternativet Spara automatiskt är användbart i:
+Som standard sparas innehållet i ett anpassat formulär vid en användaråtgärd, t.ex. när du trycker på knappen Spara. Du kan också konfigurera ett adaptivt formulär så att innehållet automatiskt börjar sparas baserat på en händelse eller ett tidsintervall. Alternativet Spara automatiskt är användbart i:
 
 * Spara automatiskt innehållet för anonyma och inloggade användare
 * Spara innehållet i ett formulär utan att användaren behöver göra något eller inte alls
