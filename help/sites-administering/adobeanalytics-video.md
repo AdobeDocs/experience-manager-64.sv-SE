@@ -10,7 +10,7 @@ topic-tags: integration
 content-type: reference
 discoiquuid: e7672b23-a4af-49bb-bba7-0565d3bda802
 translation-type: tm+mt
-source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
 workflow-type: tm+mt
 source-wordcount: '1776'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Det finns flera metoder för att spåra videohändelser, varav två är äldre a
 >[!NOTE]
 >
 >Innan du fortsätter bör du kontrollera att du har överfört en **uppspelningsbar video** i AEM.
-> 
+>
 >Om du vill vara säker på att dina videofilmer spelas upp på sidan kan du läsa **[den här självstudiekursen](/help/sites-authoring/default-components-foundation.md#video)**för mer information om hur du kodar om videofiler i AEM.
 
 Använd följande procedur för att konfigurera ett ramverk för videospårning med hjälp av varje metod.
@@ -348,7 +348,7 @@ När du använder metoden** för äldre sekunder** aktiveras Adobe Analytics-anr
  <tbody> 
   <tr> 
    <td>eventdata.videoName <br /> </td> 
-   <td>Variabler som mappas till detta kommer att innehålla videons <strong>användarvänliga</strong> namn (<strong>titel</strong>) om det anges i DAM. Om titeln inte är inställd skickas videons <strong>filnamn</strong> i stället. Skickas endast en gång, i början av uppspelningen av en video.<br /> </td> 
+   <td>Variabler som mappas till detta kommer att innehålla videons <strong>användarvänliga</strong> namn (<strong>titel</strong>), om det anges i DAM. Om titeln inte är inställd skickas videons <strong>filnamn</strong> i stället. Skickas endast en gång, i början av uppspelningen av en video.<br /> </td> 
   </tr> 
   <tr> 
    <td>eventdata.videoFileName </td> 
