@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 88dbfd34-1f8d-47a2-893d-20faf1a80f95
 translation-type: tm+mt
-source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+source-git-commit: fb4e6aef84d733c578e0f2ee7407016715e77cf5
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -44,11 +44,11 @@ Adobe Analytics-kontot måste
 
 ![chlimage_1-316](assets/chlimage_1-316.png)
 
-Innan du fortsätter bör du kontrollera att du har behörighet att logga in på Adobe Analytics. Via antingen:
+Innan du fortsätter bör du kontrollera att du kan logga in på Adobe Analytics på något av följande sätt:
 
-* [https://marketing.adobe.com](https://marketing.adobe.com)
+* [Adobe Experience Cloud - logga in](https://login.experiencecloud.adobe.com/exc-content/login.html)
 
-* [https://sc.omniture.com/login/](https://sc.omniture.com/login/)
+* [Adobe Analytics Sign In](https://sc.omniture.com/login/)
 
 ### Konfigurera AEM för användning av dina Adobe Analytics datacenter {#configuring-aem-to-use-your-adobe-analytics-data-centers}
 
@@ -120,6 +120,7 @@ För det Report Suite-ID (RSID) som du använder kan du styra vilka serverinstan
    * Ange en **titel**.
    * Du kan också ange **Namn** för noden som lagrar ramverkets information i databasen.
    * Välj **Adobe Analytics Framework**
+
    Klicka på **Skapa**.
 
    Ramverket öppnas för redigering.
