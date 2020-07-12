@@ -7,9 +7,9 @@ uuid: 847c3351-dc46-4e60-a023-0f4e9e057c7c
 topic-tags: installing
 discoiquuid: 7333641e-8c8c-4b52-a7da-a2976c88592c
 translation-type: tm+mt
-source-git-commit: a3e7cd30ba6933e6f36734d3b431db41365b6e20
+source-git-commit: 6a8fa45ec61014acebe09048066972ecb1284641
 workflow-type: tm+mt
-source-wordcount: '1697'
+source-wordcount: '1620'
 ht-degree: 0%
 
 ---
@@ -100,17 +100,19 @@ Innan du börjar installera och konfigurera ett formulärcentrerat arbetsflöde 
 
 AEM Forms är ett program som distribueras till AEM. Paketet innehåller formulärorienterat arbetsflöde för OSGi och andra funktioner. Så här installerar du tilläggspaketet:
 
-1. Logga in på [AEM-servern](http://localhost:4502) som administratör och öppna [paketresursen](http://localhost:4502/crx/packageshare). Du måste ha ett Adobe ID för att kunna logga in på paketresursen.
-1. I [AEM-paketresursen](http://localhost:4502/crx/packageshare/login.html)söker du efter tilläggspaket för **AEM 6.4-formulär** eller **senaste Service Pack**, klickar på det paket som gäller för ditt operativsystem och klickar på **Hämta**. Läs och godkänn licensavtalet och klicka på **OK**. Nedladdningen startar. När du har hämtat **visas ordet Hämtad** bredvid paketet.
+1. Öppna [programvarudistribution](https://experience.adobe.com/downloads). Du måste ha ett Adobe ID för att kunna logga in på Software Distribution.
+1. Tryck **[!UICONTROL Adobe Experience Manager]** på rubrikmenyn.
+1. I **[!UICONTROL Filters]** avsnittet:
+   1. Välj **[!UICONTROL Forms]** i **[!UICONTROL Solution]** listrutan.
+   2. Välj version och typ för paketet. Du kan också använda alternativet **[!UICONTROL Search Downloads]** för att filtrera resultaten.
+1. Tryck på det paketnamn som gäller för ditt operativsystem, markera **[!UICONTROL Accept EULA Terms]** och tryck **[!UICONTROL Download]**.
+1. Öppna [Pakethanteraren](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
+1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
-   Du kan också använda versionsnumret för att söka efter ett tilläggspaket. Versionsnummer för det senaste paketet finns i artikeln om [AEM Forms-releaser](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
-
-1. När nedladdningen är klar klickar du på **Nedladdad**. Du omdirigeras till pakethanteraren. I pakethanteraren söker du efter det hämtade paketet och klickar på **Installera**.
-
-   Om du hämtar paketet manuellt via den direktlänk som visas i artikeln om [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) loggar du in på pakethanteraren, klickar på **Överför paket**, markerar det hämtade paketet och klickar på Överför. När paketet har överförts klickar du på paketnamnet och sedan på **Installera.**
+   Du kan även hämta paketet via länken direkt i artikeln om [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
 
 1. När paketet har installerats uppmanas du att starta om AEM-instansen. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i filen [AEM-Installation-Directory]/crx-quickstart/logs/error.log och loggen är stabil.
-1. Upprepa steg 1-4 för alla författarinstanser och publiceringsinstanser.
+1. Upprepa steg 1-7 för alla författare- och publiceringsinstanser.
 
 ## Konfiguration efter installation {#post-installation-configurations}
 
@@ -145,11 +147,11 @@ Utför följande steg på alla författare- och publiceringsinstanser för att s
 
 #### Konfigurera serialiseringsagenten {#configure-the-serialization-agent}
 
-Utför följande steg på alla författare- och publiceringsinstanser för att lägga till paketet i listan över tillåtna:
+Utför följande steg på alla Author- och Publish-instanser för att lägga till paketet i tillåtelselista:
 
 1. Öppna AEM Configuration Manager i ett webbläsarfönster. Standardwebbadressen är `https://[server]:[port]/system/console/configMgr`.
 1. Sök efter och öppna **Brandväggskonfiguration** för deserialisering.
-1. Lägg till paketet **sun.util.calendar** i **allowlist** -fältet. Klicka på Spara.
+1. Lägg till paketet **sun.util.calendar** i fältet **tillåtelselista** . Klicka på Spara.
 1. Upprepa steg 1-3 för alla författare- och publiceringsinstanser.
 
 ### Ytterligare konfigurationer efter installation {#optional-post-installation-configurations}
@@ -168,7 +170,7 @@ Dispatcher är ett verktyg för cachelagring och lastbalansering för AEM. AEM D
 
 1. Konfigurera tjänsten för refererarfilter:
 
-   Logga in som administratör i konfigurationshanteraren för Apache Felix. Konfigurationshanterarens standardwebbadress är `https://[server]:[port_number]/system/console/configMgr`. På menyn **Konfigurationer** väljer du alternativet **Apache Sling Reference Filter** . I fältet Tillåt värdar anger du värdnamnet för dispatchern så att den kan användas som referent och klickar på **Spara**. Formatet på posten är `https://[server]:[port]`.
+   Logga in som administratör i konfigurationshanteraren för Apache Felix. Konfigurationshanterarens standardwebbadress är `https://[server]:[port_number]/system/console/configMgr`. På menyn **Konfigurationer** väljer du alternativet **Apache Sling Reference Filter** . I fältet Tillåt värdar anger du värdnamnet för dispatchern så att den kan användas som referent och klickar på **Spara**. The format of the entry is `https://[server]:[port]`.
 
 #### Konfigurera cache {#configure-cache}
 
