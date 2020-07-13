@@ -10,9 +10,9 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 2be468e7-2b4e-4e04-881b-b9bdd1f55e57
 translation-type: tm+mt
-source-git-commit: 6be9e5049600420c86120d0b6c84c1c321d7dc63
+source-git-commit: f1bf1545689b977a0f5074954df224db58cbd695
 workflow-type: tm+mt
-source-wordcount: '2746'
+source-wordcount: '2745'
 ht-degree: 1%
 
 ---
@@ -290,7 +290,7 @@ Mer information om [AEM Forms](forms.md) versionsinformation. Se även [Sammanfa
 
 Du kan integrera Livefyre med din AEM 6.4-instans. Information om hur du integrerar Livefyre med AEM finns här:
 
-* [Integrera Livefyre](https://https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html)
+* [Integrera Livefyre](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html)
 
 ### Utnyttja kundfokuserad utveckling {#leverage-customer-focused-development}
 
