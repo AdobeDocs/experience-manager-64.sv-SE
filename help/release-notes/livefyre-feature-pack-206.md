@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4
 contentOwner: alba
 discoiquuid: d445bcfb-7712-472f-bfb4-a8811c2bc4f1
 translation-type: tm+mt
-source-git-commit: 715cff841252d79504d702817f91db92df919bfc
+source-git-commit: f1bf1545689b977a0f5074954df224db58cbd695
+workflow-type: tm+mt
+source-wordcount: '653'
+ht-degree: 1%
 
 ---
 
@@ -54,7 +57,7 @@ source-git-commit: 715cff841252d79504d702817f91db92df919bfc
 
 Det här paketet integrerar Livefyres branschledande kurationsfunktioner med din AEM-instans så att du kan publicera användargenererat innehåll (UGC) från sociala nätverk till din webbplats på några minuter. Det här paketet innehåller tre olika komponenter:
 
-**Importera UGC-innehåll till AEM-resurser**
+**Importera UGC-innehåll till AEM Assets**
 
 * Importera Twitter- och Instagram-användargenererat innehåll (UGC) från Livefyre Studio till AEM Assets med UGC-importeraren.
 * Gå till Livefyre Library.
@@ -71,7 +74,7 @@ Det här paketet integrerar Livefyres branschledande kurationsfunktioner med din
 * Integrera smidigt din befintliga produktkatalog i Livefyre för att öka användarengagemanget och konverteringsgraden på era sajter, liksom för att leverera användarvänliga användarupplevelser.
 * Redigera eller ta bort artiklar i din AEM Commerce-produktkatalog och uppdatera automatiskt ändringar i Livefyre.
 
-Hjälp med installationen finns i [Integrera med Livefyre](https://https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html).
+Hjälp med installationen finns i [Integrera med Livefyre](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html).
 
 ### Ytterligare versionsinformation {#additional-release-information}
 
@@ -84,16 +87,16 @@ På grund av uppdateringar som påverkar sammanställningen av innehåll från a
 #### Ny funktion eller förbättring {#new-feature-or-improvement}
 
 * Lagt till möjligheten att söka efter UGC innan du ställer in behörigheter för sociala konton i Livefyre. Du måste konfigurera sociala konton för att begära rättigheter, eller åsidosätta rättighetsbegäran om du äger innehållet.
-* Instagram och Twitter [UGC-rättighetsarbetsflödet](https://https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html) har uppdaterats för att uppfylla de senaste API:erna.
+* Instagram och Twitter [UGC-rättighetsarbetsflödet](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html) har uppdaterats för att uppfylla de senaste API:erna.
 * Rättighetsstatus och lämpliga åtgärder visas nu på skärmen för rättighetsförfrågan.
 
 #### Felkorrigeringar {#bug-fixes}
 
 * Ett problem har korrigerats där ett socialt konto i Livefyre Studio som används för rättighetsbegäran orsakade ett fel när UGC-biblioteket lästes in i AEM.
-* Ett problem har korrigerats där inventeringen av tillgångar i Livefyre studio inte matchade antalet mediefiler i AEM UGC-biblioteket.
+* Ett problem har korrigerats där inventeringen av tillgångar i Livefyre-studion inte matchade inventeringen i AEM UGC-biblioteket.
 * Korrigerade ett fel i UGC-biblioteket där filtrerade resultat som visades efter att filteralternativen återställdes.
 * Korrigerade ett problem med AEM Commerce där knappar för att ringa till åtgärd dirigerade om användare till fel URL.
-* Korrigerade ett problem i AEM Sites där flera komponenter togs bort när de drogs och släpptes till en parsys platshållare.
+* Ett problem har korrigerats i AEM Sites där flera komponenter försvann när du drog och släppte dem i platshållaren.
 * Korrigerade ett problem där inaktiverade sociala konton var tillgängliga att välja från när en rättighetsbegäran skickades.
 * Ett problem har korrigerats där ett fel uppstod när UGC-innehåll från resurser till platser skulle dras och släppas.
 * Ett problem har korrigerats där appen inte skapades när du drog och släppte Chat- och LiveBlogg-komponenter till webbplatser.
