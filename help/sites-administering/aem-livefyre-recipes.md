@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: fdea5ede-d44f-463e-af8a-111ee7469ede
 translation-type: tm+mt
-source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+source-git-commit: f1bf1545689b977a0f5074954df224db58cbd695
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1559'
 ht-degree: 0%
 
 ---
@@ -30,9 +30,9 @@ AEM Livefyre-paketet är en färdig implementering, medan den traditionella inte
 
 ### AEM-integrering {#aem-integration}
 
-Paketet Livefyre Adobe Experience Manager är tillgängligt för AEM 6.1, 6.2SP1, 6.3, 6.4 och 6.4 SP1. AEM 5.x och 6.0 stöds inte. Mer information finns i [Integrera med Livefyre](https://https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html).
+Paketet Livefyre Adobe Experience Manager är tillgängligt för AEM 6.1, 6.2SP1, 6.3, 6.4 och 6.4 SP1. AEM 5.x och 6.0 stöds inte. Mer information finns i [Integrera med Livefyre](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html).
 
-Om du vill se vilka Livefyre-appar som stöds kan du läsa [AEM Support Matrix för Livefyre-appar](https://https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#AEMSupportMatrixforLivefyreApps).
+Om du vill se vilka Livefyre-appar som stöds kan du läsa [AEM Support Matrix för Livefyre-appar](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#AEMSupportMatrixforLivefyreApps).
 
 ### Traditionell implementering (för anpassade AEM-komponenter) {#traditional-implementation-for-customized-aem-components}
 
@@ -65,7 +65,7 @@ Se till att du följer [visningsriktlinjerna för Twitter](https://developer.twi
 
 För medieväggsintegreringar som kräver verifiering, se:
 
-* [Anpassa Single Sign on Integration](https://https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) för AEM Identity Management
+* [Anpassa Single Sign on Integration](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) för AEM Identity Management
 * [Identitetsintegrering](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html) för autentiseringsplattformar från tredje part
 
 ### Använd skiftläge - översikt {#use-case-overview}
@@ -74,9 +74,9 @@ Som AEM-kund vill jag strukturera UGC med de färdiga Livefyre AEM-komponenterna
 
 Steg som ska implementeras:
 
-1. [Komma igång](https://https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html)
-1. [Konfigurera AEM att använda Livefyre](https://https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html)
-1. [Dra och släpp AEM Media Wall-komponenten på sidan](https://https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#UseLivefyrewithAEMSites)
+1. [Komma igång](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html)
+1. [Konfigurera AEM att använda Livefyre](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html)
+1. [Dra och släpp AEM Media Wall-komponenten på sidan](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#UseLivefyrewithAEMSites)
 1. [Konfigurera strömmar och lägg till regler för att strukturera UGC och visa på Media Wall-komponenten](https://docs.adobe.com/content/help/en/livefyre/using/streams/c-streams.html)
 
 Utbildningsvideor om hur du direktuppspelar UGC finns i [Skapa automatiska innehållsströmmar och Sök socialt innehåll i Adobe Experience Manager Livefyre](https://helpx.adobe.com/experience-manager/tutorials.html).
@@ -97,7 +97,7 @@ Information om vilka Livefyre-appar som kräver autentisering finns i [Identitet
 
 ### AEM-integrering {#aem-integration-1}
 
-Paketet Livefyre Adobe Experience Manager finns för AEM 6.1, 6.2SP1, 6.3, 6.4 och 6.4 SP1. AEM 5.x och 6.0 stöds inte. Mer information finns i [Integrera med Livefyre](https://https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html).
+Paketet Livefyre Adobe Experience Manager är tillgängligt för AEM 6.1, 6.2SP1, 6.3, 6.4 och 6.4 SP1. AEM 5.x och 6.0 stöds inte. Mer information finns i [Integrera med Livefyre](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html).
 
 ### Traditionell implementering (för anpassade AEM-komponenter) {#traditional-implementation-for-customized-aem-components-1}
 
@@ -129,7 +129,7 @@ Mer information om avancerade anpassningar med SDK finns i [StreamHub SDKs](http
 
 ### Kommentarer App Authentication Integration {#comments-app-authentication-integration}
 
-* [Anpassa Single Sign on Integration](https://https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) för AEM Identity Management
+* [Anpassa Single Sign on Integration](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) för AEM Identity Management
 * [Identitetsintegrering](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html) för autentiseringsplattformar från tredje part
 
 ### Kundexempel {#customer-examples-1}
@@ -152,9 +152,9 @@ Mer information om avancerade anpassningar med SDK finns i [StreamHub SDKs](http
 
 **AEM-inställningar (för import av UGC till AEM Assets):**
 
-1. [Komma igång](https://https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#GettingStarted)
-1. [Konfigurera AEM att använda Livefyre](https://https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#ConfigureAEMtouseLivefyre)
-1. [Importera användargenererat innehåll som strukturerats av Livefyre i AEM Assets](https://https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#UseLivefyrewithAEMAssets)
+1. [Komma igång](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#GettingStarted)
+1. [Konfigurera AEM att använda Livefyre](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#ConfigureAEMtouseLivefyre)
+1. [Importera användargenererat innehåll som strukturerats av Livefyre i AEM Assets](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#UseLivefyrewithAEMAssets)
 
 * [Tourism Australia](https://www.australia.com/en-us)
 
@@ -162,9 +162,9 @@ Mer information om avancerade anpassningar med SDK finns i [StreamHub SDKs](http
 
 ### AEM-integrering {#aem-integration-2}
 
-Paketet Livefyre Adobe Experience Manager är tillgängligt för AEM 6.1, 6.2SP1, 6.3, 6.4 och 6.4 SP1. AEM 5.x och 6.0 stöds inte. Mer information finns i [Integrera med Livefyre](https://https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html).
+Paketet Livefyre Adobe Experience Manager är tillgängligt för AEM 6.1, 6.2SP1, 6.3, 6.4 och 6.4 SP1. AEM 5.x och 6.0 stöds inte. Mer information finns i [Integrera med Livefyre](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html).
 
-Komponenten Reviews stöds inte för AEM 6.1. Kontrollera [AEM-supportmatrisen för alla Livefyre-appar](https://https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#AEMSupportMatrixforLivefyreApps).
+Komponenten Reviews stöds inte för AEM 6.1. Kontrollera [AEM-supportmatrisen för alla Livefyre-appar](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#AEMSupportMatrixforLivefyreApps).
 
 ### Traditionell implementering (för anpassade AEM-komponenter) {#traditional-implementation-for-customized-aem-components-2}
 
@@ -191,7 +191,7 @@ Ytterligare API:er för klassificering och granskning finns [här](https://api.l
 
 ### Kommentarer App Authentication Integration {#comments-app-authentication-integration-1}
 
-* [Anpassa Single Sign on Integration](https://https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) för AEM Identity Management
+* [Anpassa Single Sign on Integration](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) för AEM Identity Management
 * [Identitetsintegrering](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html) för autentiseringsplattformar från tredje part
 
 ### Kundexempel {#customer-examples-2}
