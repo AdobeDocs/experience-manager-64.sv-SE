@@ -10,9 +10,9 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 2be468e7-2b4e-4e04-881b-b9bdd1f55e57
 translation-type: tm+mt
-source-git-commit: f1bf1545689b977a0f5074954df224db58cbd695
+source-git-commit: 5cf67e97775b39d6ec78ea0db46b5bc4a4476b78
 workflow-type: tm+mt
-source-wordcount: '2745'
+source-wordcount: '2780'
 ht-degree: 1%
 
 ---
@@ -320,10 +320,10 @@ Denna prioriteringsprocess har resulterat i över 500 kundfokuserade förändrin
 * AEM Screens Players for various target platforms ([download](https://download.macromedia.com/screens/))
 * Språkmodeller för smart innehåll. Engelska är förinstallerat - fler språk kan hämtas
 
-   * [Tyska](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-de)
-   * [Spanska](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-es)
-   * [Italienska](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-it)
-   * [Franska](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-fr)
+   * [Tyska](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+   * [Spanska](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+   * [Italienska](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+   * [Franska](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
 
 * [Dialogrutekonverteringsverktyg](/help/sites-developing/dialog-conversion.md) för att migrera klassiska användargränssnittskomponenter till Coral 3
 
@@ -331,7 +331,7 @@ Denna prioriteringsprocess har resulterat i över 500 kundfokuserade förändrin
 
 * Adobe Experience Manager datorprogram ([läs mer](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html) och [ladda ned](https://helpx.adobe.com/experience-manager/kb/download-companion-app.html))
 
-* Paket för att lägga till förbättrad PDF-rastrerare ([läs mer](/help/assets/aem-pdf-rasterizer.md) och [ladda ned](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/assets/aem-assets-pdf-rasterizer-pkg))
+* Paket för att lägga till förbättrad PDF-rastrerare ([läs mer](/help/assets/aem-pdf-rasterizer.md) och [ladda ned](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg))
 
 * Paket för att lägga till stöd för utökad RAW-bild ([läs mer](/help/assets/camera-raw.md))
 
