@@ -3,10 +3,10 @@ title: Metadata-scheman
 description: 'Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.  '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c5317d96ed5fccbc1bf03176f75dbaec6d8cb0b4
+source-git-commit: ed87c419557f65667bde46a9f4b32a484e3300f5
 workflow-type: tm+mt
-source-wordcount: '2392'
-ht-degree: 8%
+source-wordcount: '2398'
+ht-degree: 9%
 
 ---
 
@@ -41,6 +41,7 @@ Om du vill visa en lista med formulär/mallar går du till [!DNL Experience Mana
 |---|---|---|
 | [!UICONTROL default] |  | Basmetadataschemaformuläret för resurser. |
 |  | Följande underordnade formulär ärver egenskaperna för [!UICONTROL default] formuläret: |  |
+|  | [!UICONTROL dm_video] | Schemaformulär för Dynamic Media-videofilmer. |
 |  | <ul><li> [!UICONTROL image]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;image&quot;, till exempel image/jpeg, image/png o.s.v. <br> Formuläret har [!UICONTROL image] följande underordnade formulärmallar: <ul><li> [!UICONTROL jpeg]: Schemaformulär för resurser med undertyp [!UICONTROL jpeg].</li> <li>[!UICONTROL tiff]: Schemaformulär för resurser med undertyp [!UICONTROL tiff].</li></ul> |
 |  | <ul><li> [!UICONTROL application]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;application&quot;, till exempel application/pdf, application/zip och så vidare. <br>[!UICONTROL pdf]: Schemaformulär för resurser med undertyp pdf. |
 |  | <ul><li>[!UICONTROL video]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;video&quot;, till exempel video/avi, video/mp4 och så vidare. |
@@ -62,7 +63,7 @@ Om du vill visa en lista med formulär/mallar går du till [!DNL Experience Mana
 
 1. Ange schemaformulärets rubrik i dialogrutan och klicka **[!UICONTROL Create]** för att slutföra formulärskapandet.
 
-   ![chlimage_1-175](assets/chlimage_1-174.png)
+   ![chlimage_1-174](assets/chlimage_1-174.png)
 
 ## Redigera metadata-schemaformulär {#editing-metadata-schema-forms}
 
@@ -77,7 +78,7 @@ Du kan lägga till nya flikar eller formulärobjekt i metadatchemaformuläret. F
 
 1. In the **[!UICONTROL Schema Forms]** page, select the check box before a form and then click **[!UICONTROL Edit]** on the toolbar.
 
-   ![chlimage_1-174](assets/chlimage_1-175.png)
+   ![chlimage_1-175](assets/chlimage_1-175.png)
 
 1. På sidan **[!UICONTROL Metadata Schema Editor]** anpassar du egenskapssidan för resursen genom att dra en eller flera komponenter från listan med komponenttyper på fliken **[!UICONTROL Build Form]** till fliken **[!UICONTROL Basic]**.
 
@@ -182,7 +183,7 @@ Om du vill ta bort ett formulär markerar du det och klickar på **[!UICONTROL D
 
 >[!NOTE]
 >
->Du kan inte ta bort metadatamatchschemaformulär i AEM Resurser.
+>Du kan inte ta bort metadatamatchformulär i AEM Assets.
 
 ## Schemaformulär för MIME-typer {#schema-forms-for-mime-types}
 
@@ -225,7 +226,7 @@ Metadatchemafunktionen är bara tillgänglig för administratörer. Administrat�
 
 ## Använd mappspecifika metadata {#applying-folder-specific-metadata}
 
-Med AEM Resurser kan du definiera en variant av ett metadatamatchema och tillämpa det på en viss mapp.
+Med AEM Assets kan du definiera en variant av ett metadataram och använda det på en viss mapp.
 
 Du kan t.ex. definiera en variant av standardmetadataschemat och använda det på en mapp. När du använder det ändrade schemat åsidosätter det det ursprungliga standardmetadatarammet som används för resurser i mappen.
 
