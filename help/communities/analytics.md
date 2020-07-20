@@ -128,6 +128,7 @@ Om du använder en **befintlig rapportserie** kan det vara nödvändigt att [än
 >
 >* **`evar1`** via **`evar11`**
 >* **`event1`** via **`event7`**
+
 >
 >
 **Innan communitywebbplatsen publiceras är det** viktigt att återställa den befintliga mappningen genom att flytta AEM-variablerna som automatiskt mappades till Analytics-variabler när Analytics aktiverades för en community-webbplats.
@@ -456,6 +457,7 @@ Se avsnitt:
 >
 >* **`evar1`** via **`evar11`**
 >* **`event1`** via **`event7`**
+
 >
 >
 **Innan communitywebbplatsen publiceras är det** viktigt att återställa den befintliga mappningen och flytta de Communities AEM-variabler som automatiskt mappades (när Analytics aktiverades för communitywebbplatsen) till andra Analytics-variabler. Den här ommappningen bör vara konsekvent för alla webbgruppskomponenter.
@@ -500,7 +502,7 @@ Frågeintervallet är som standard 10 sekunder.
 
 ### Rapportimporteraren {#report-importer}
 
-När en Analytics-aktiverad communitywebbplats har publicerats kan den primära utgivarens [OSGi-konfiguration](../../help/sites-deploying/configuring-osgi.md), `AEM Communities Analytics Report Importer`, konfigureras att ange standardavsökningsintervallet för de konfigurationer som inte konfigureras individuellt i CRXDE.
+När en Analytics-aktiverad communitywebbplats har publicerats kan den primära utgivarens [OSGi-konfiguration](../../help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Report Importer`konfigureras att ange standardavsökningsintervallet för de konfigurationer som inte konfigureras individuellt i CRXDE.
 
 Avsökningsintervallet styr hur ofta Adobe Analytics begär data som ska hämtas och sparas i [SRP](working-with-srp.md).
 
