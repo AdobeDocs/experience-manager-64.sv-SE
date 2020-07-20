@@ -28,7 +28,7 @@ Du kan skapa ett anpassat formulärfragment från grunden eller spara en panel i
 
 ### Skapa fragment från grunden {#create-fragment-from-scratch}
 
-1. Logga in på AEM Forms-författarinstansen på https://[*värdnamn*]:[*port*]/aem/forms.html.
+1. Logga in på författarinstansen av AEM Forms på https://[*hostname*]:[*port*]/aem/forms.html.
 1. Klicka på **[!UICONTROL Create > Adaptive Form Fragment]**.
 1. Ange rubrik, namn, beskrivning och taggar för fragmentet.
 
@@ -40,6 +40,7 @@ Du kan skapa ett anpassat formulärfragment från grunden eller spara en panel i
 
    * **[!UICONTROL None]**: Anger att fragmentet ska skapas från grunden utan att någon formulärmodell används.
    * **[!UICONTROL Form Template]**: Anger att fragmentet ska skapas med en XDP-mall som har överförts till AEM Forms. Välj lämplig XDP-mall som formulärmodell för fragmentet.
+
    ![Skapa ett anpassat formulär med formulärmallen som modell](assets/form-template-model.png)
 
    Delformulären som är markerade som fragment i den valda formulärmallen visas också. Du kan välja ett delformulär för anpassat formulärfragment i listrutan.
@@ -49,6 +50,7 @@ Du kan skapa ett anpassat formulärfragment från grunden eller spara en panel i
    Dessutom kan du skapa ett adaptivt formulärfragment med hjälp av delformulär som inte är markerade som fragment i formulärmallen genom att ange SOM-uttrycket för delformuläret i listrutan.
 
    * **[!UICONTROL XML Schema]**: Anger att fragmentet ska skapas med ett XML-schema som har överförts till AEM Forms. Du kan överföra eller välja bland tillgängliga XML-scheman som formulärmodell för fragmentet.
+
    ![Skapa ett adaptivt formulärfragment baserat på ett XML-schema som modell](assets/xml-schema-model.png)
 
    Du kan också skapa ett adaptivt formulärfragment genom att välja en complexType som finns i det valda schemat i listrutan.
@@ -89,6 +91,7 @@ Om du dessutom har valt ett XML-schema eller en XDP-formulärmall som formulärm
 
    * **[!UICONTROL XSD Ref]**: Visas endast i XSD-baserade adaptiva formulär. Den visar platsen för XML-schemat.
    * **[!UICONTROL XDP Ref]**: Visas endast i XDP-baserade adaptiva formulär. Här visas platsen för XDP-formulärmallen.
+
    ![save-fragment](assets/save-fragment.png)
    **Bild:** *Dialogrutan Spara som fragment*
 
@@ -104,7 +107,7 @@ Om du dessutom har valt ett XML-schema eller en XDP-formulärmall som formulärm
 
 ### Konfigurera fragmentutseende {#configure-fragment-appearance}
 
-Alla fragment som du infogar i anpassningsbara formulär visas som en platshållarbild. Platshållaren visar titlar på upp till högst tio underordnade paneler i fragmentet. Du kan konfigurera AEM Forms så att hela avsnittet visas i stället för platshållarbilden.
+Alla fragment som du infogar i anpassningsbara formulär visas som en platshållarbild. Platshållaren visar titlar på upp till högst tio underordnade paneler i fragmentet. Du kan konfigurera AEM Forms så att hela fragmentet visas i stället för platshållarbilden.
 
 Utför följande steg för att visa fullständiga fragment i formulär:
 
@@ -159,11 +162,11 @@ Du kan ändra fragmentresursen och dess bindningar i dialogrutan Redigera kompon
 
 ## Hantera fragment {#manage-fragments}
 
-Du kan utföra flera åtgärder på anpassningsbara formulärfragment med hjälp av gränssnittet för AEM-formulär.
+Du kan utföra flera åtgärder på anpassningsbara formulärfragment med hjälp av användargränssnittet i AEM Forms.
 
 1. Gå till `https://[hostname]:[port]/aem/forms.html`.
 
-1. Klicka **[!UICONTROL Select]** i verktygsfältet AEM Forms UI och välj ett adaptivt formulärfragment. Verktygsfältet innehåller följande åtgärder som du kan utföra på det valda adaptiva formulärfragmentet.
+1. Klicka **[!UICONTROL Select]** i AEM Forms användargränssnittets verktygsfält och välj ett adaptivt formulärfragment. Verktygsfältet innehåller följande åtgärder som du kan utföra på det valda adaptiva formulärfragmentet.
 
 <table> 
  <tbody> 
@@ -224,7 +227,7 @@ Om du vill lokalisera ett adaptivt formulär som innehåller adaptiva formulärf
 * Om du sparar en panel som fragment som innehåller ett annat XDP-fragment i ett XDP-baserat adaptivt formulär, binds det resulterande fragmentet automatiskt till det underordnade XDP-fragmentet. Om det finns ett XSD-baserat anpassningsbart formulär binds det resulterande fragmentet till schemaroten.
 * När du skapar ett adaptivt formulärfragment skapas en fragmentnod, som liknar noden guideContainer för ett adaptivt formulär, i CRXDe Lite.
 * Ett fragment i ett adaptivt formulär som använder en annan formulärdatamodell stöds inte. Ett XDP-baserat fragment stöds till exempel inte i en XSD-baserad adaptiv form och vice versa.
-* Anpassningsbara formulärfragment kan användas via fliken Adaptiva formulärfragment i AEM Content Finder.
+* Anpassade formulärfragment kan användas via fliken Adaptiva formulärfragment i AEM Content Finder.
 * Alla uttryck, skript och format i ett fristående adaptivt formulärfragment behålls när de infogas som referens eller bäddas in i ett adaptivt formulär.
 * Du kan inte redigera ett adaptivt formulärfragment, som infogas med referens, inifrån ett adaptivt formulär. Om du vill redigera kan du antingen redigera det fristående adaptiva formulärfragmentet eller bädda in fragmentet i det adaptiva formuläret.
 * När du publicerar ett adaptivt formulär måste du publicera de fristående adaptiva formulärfragmenten som infogats som referens i det adaptiva formuläret.
@@ -234,7 +237,7 @@ Om du vill lokalisera ett adaptivt formulär som innehåller adaptiva formulärf
 
    `127.0.0.1 <Host machine>`
 
-   **Värddator**: Apple Mac-datorn där AEM Forms distribueras.
+   **Värddator**: Apple Mac-datorn som AEM Forms används på.
 
 ## Referensfragment {#reference-fragments}
 
