@@ -3,10 +3,10 @@ title: Bearbeta material för att genomföra affärsprocesser, utföra revisione
 description: Resursbearbetning för att konvertera format, skapa renderingar, hantera resurser, validera resurser och köra arbetsflöden.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c564271c88de0183df81557f1e3ab00eafb44b34
+source-git-commit: 73d440198028bfa6b47e9fde13f3a354a1b8445f
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 2%
+source-wordcount: '1010'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 För bearbetning av resurser [!DNL Experience Manager] används arbetsflöden. Arbetsflöden hjälper till att automatisera affärslogiken eller -aktiviteterna. Detaljerade steg för att utföra specifika uppgifter anges som standard och utvecklare kan skapa egna anpassade steg. Dessa steg kan kombineras i en logisk ordning för att skapa arbetsflöden. Ett arbetsflöde kan t.ex. automatiskt lägga till vattenstämpel i överförda bilder baserat på ett visst villkor, t.ex. metadata inbäddade i en bild, mapp som den överförs till, upplösning för bilden osv. Ett annat exempel är ett arbetsflöde som är konfigurerat för vattenstämpelbilder på ett sådant sätt och som samtidigt hanterar flera resurshanteringsbehov, som att lägga till metadata, skapa återgivningar, lägga till smarta taggar för tillgångsidentifiering, publicera i ett datalager, ange behörigheter för användaråtkomst och så vidare.
 
-## Standardarbetsflöden som är tillgängliga i Experience Manager {#default-workflows}
+## Standardarbetsflöden i Experience Manager {#default-workflows}
 
 Som standard bearbetas alla överförda resurser i ett [!UICONTROL DAM Update Asset] arbetsflöde. Arbetsflödet körs för varje överförd resurs och utför grundläggande resurshanteringsåtgärder som återgivningsgenerering, tillbakaskrivning av metadata, sidextrahering, medieextrahering och omkodning.
 
@@ -27,7 +27,7 @@ Information om de olika arbetsflödesmodellerna som är tillgängliga som standa
 
 ![En del av standardarbetsflödet](assets/aem-default-workflows.png)
 
-*Bild: Vissa standardarbetsflöden finns i[!DNL Experience Manager]*
+*Bild: En del av standardarbetsflödet som är tillgängligt i[!DNL Experience Manager].*
 
 ## Tillämpa arbetsflöden på resurser {#applying-workflows-to-assets}
 
@@ -55,7 +55,7 @@ Så här använder du ett arbetsflöde för en resurs:
 
 1. Klicka **[!UICONTROL Actions]** längst ned för att öppna en lista med tillgängliga åtgärder för resursen.
 
-1. Klicka **[!UICONTROL Start Workflow]** i listan.
+1. Click **[!UICONTROL Start Workflow]** from the list.
 
 1. I **[!UICONTROL Start Workflow]** dialogrutan väljer du en arbetsflödesmodell i listan.
 
@@ -105,6 +105,7 @@ För en arbetsflödesmodell kan användare skapa en startfil för arbetsflödet 
 ## God praxis och begränsningar {#best-practices-limitations-tips}
 
 * Tänk på dina behov av alla typer av återgivningar när du utformar arbetsflöden. Om du inte förutser att en återgivning behövs i framtiden tar du bort steget när du skapar den från arbetsflödet. Det går inte att ta bort återgivningar gruppvis efteråt. Oönskade återgivningar kan ta upp mycket lagringsutrymme efter långvarig användning av [!DNL Experience Manager]. För enskilda resurser kan du ta bort återgivningar manuellt från användargränssnittet. För flera resurser kan du antingen anpassa [!DNL Experience Manager] för att ta bort specifika återgivningar eller ta bort resurserna och överföra dem igen.
+* Som standard innehåller arbetsflödet några steg för att skapa miniatyrbilder och webbåtergivningar [!UICONTROL DAM Update Asset] . Om några standardåtergivningar tas bort från arbetsflödet återges inte användargränssnittet i [!DNL Assets] korrekt.
 
 >[!MORELIKETHIS]
 >
