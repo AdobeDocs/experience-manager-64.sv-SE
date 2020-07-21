@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 translation-type: tm+mt
-source-git-commit: a3a160a0281c1ea2ca050c2c747d6a5ec1d952b3
+source-git-commit: 249f2dd2553bc436a432ef68eae5cf846794ff81
 workflow-type: tm+mt
-source-wordcount: '2763'
+source-wordcount: '2759'
 ht-degree: 1%
 
 ---
@@ -147,7 +147,7 @@ Du anger dessa konfigurationsalternativ genom att öppna (dubbelklicka) en Dynam
 
 HTML5 Zoom-komponenten visar en större bild när du trycker på **[!UICONTROL +]** knappen.
 
-Resursen har zoomverktyg längst ned. Tryck **[!UICONTROL +]** för att förstora. Tryck **[!UICONTROL -]** för att minska. Om du trycker på **[!UICONTROL x]** eller återställer zoompilen återställs bilden till den ursprungliga storlek den importerades som. Tryck på de diagonala pilarna för att göra den i helskärmsläge. Tryck **[!UICONTROL Edit]** för att konfigurera komponenten. Med den här komponenten kan du konfigurera [inställningar som är gemensamma för alla [!UICONTROL Dynamic Media Classic]-komponenter](#settings-common-to-all-scene-components).
+Resursen har zoomverktyg längst ned. Tryck **[!UICONTROL +]** för att förstora. Tryck **[!UICONTROL -]** för att minska. Om du trycker på **[!UICONTROL x]** eller återställer zoompilen återställs bilden till den ursprungliga storlek den importerades som. Tryck på de diagonala pilarna för att göra den i helskärmsläge. Tryck **[!UICONTROL Edit]** för att konfigurera komponenten. Med den här komponenten kan du konfigurera [inställningar som är gemensamma för alla [!UICONTROL Dynamic Media Classic] komponenter](#settings-common-to-all-scene-components).
 
 ![chlimage_1-227](assets/chlimage_1-227.png)
 
@@ -178,7 +178,7 @@ Du kan ställa in en resurs från för att öppna en länk. Ange **[!UICONTROL U
 ![chlimage_1-230](assets/chlimage_1-230.png)
 
 * **[!UICONTROL Viewer preset]**
-Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Se [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md). Du kan inte välja en visningsförinställning om du använder en bildförinställning och vice versa.
+Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kan du behöva göra den synlig. Se [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md). Du kan inte välja en visningsförinställning om du använder en bildförinställning och vice versa.
 
 * **[!UICONTROL Dynamic Media Classic Configuration]**
 Markera den Dynamic Media Classic-konfiguration som du vill använda för att hämta aktiva bildförinställningar från SPS.
@@ -267,7 +267,7 @@ Mer information om hur videofilmer fungerar med integrering med Dynamic Media Cl
 
 ### Kända begränsningar för videokomponenten {#known-limitations-for-the-video-component}
 
-Adobe DAM och WCM visar om en mastervideo har överförts. De visar inte följande proxyresurser:
+Adobe DAM och WCM visar om en överordnad video har överförts. De visar inte följande proxyresurser:
 
 * Dynamic Media Classic-kodade återgivningar
 * Dynamic Media Classic adaptiva videouppsättningar
@@ -286,11 +286,9 @@ Om du har flera konfigurationer visar AEM som standard [standardkonfigurationen]
 >* När [Säker förhandsvisning är aktiverat](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)visas både publicerade och opublicerade resurser i Dynamic Media Classic i innehållsläsaren i Dynamic Media Classic.
 >* Om du inte ser **[!UICONTROL Dynamic Media Classic]** eller **[!UICONTROL S7]** ikonen som ett alternativ i webbläsaren måste du [konfigurera Dynamic Media Classic så att det fungerar med AEM](/help/sites-administering/scene7.md).
 >* För video har Dynamic Media Classic-innehållsläsaren stöd för:
-   >
-   >  
-* Adaptiva videouppsättningar: behållare för alla videoåtergivningar som behövs för sömlös uppspelning på flera skärmar
->  * Enkel MP4-video
->  * En F4V-video
+   >   * Adaptiva videouppsättningar: behållare för alla videoåtergivningar som behövs för sömlös uppspelning på flera skärmar
+   >   * Enkel MP4-video
+   >   * En F4V-video
 
 
 ### Bläddra i det pekoptimerade användargränssnittet {#browsing-content-in-the-touch-optimized-ui}
@@ -305,6 +303,7 @@ Bläddra bland Dynamic Media Classic-resurser genom att välja **[!UICONTROL Dyn
 >
 >* Dynamic Media Classic-innehållsläsaren läser in ungefär 100 resurser och sorterar dem efter namn.
 >* Om du har en säker förhandsgranskningsserver angiven använder webbläsaren den förhandsvisningsservern för att återge miniatyrer och resurser.
+
 >
 
 
@@ -362,6 +361,7 @@ I Dynamic Media Classic-webbläsaren kan du filtrera resultat så att de innehå
    >
 * När du söker efter video söker du efter en enskild återgivning. Resultatet returnerar den ursprungliga återgivningen (endast &amp;ast;.mp4) och den kodade återgivningen.
 >* När du söker i en adaptiv videouppsättning söker du i mappen och i alla undermappar, men bara om du har lagt till ett nyckelord i sökningen. Om du inte har lagt till något nyckelord söker AEM inte igenom undermapparna.
+
 >
 
 
