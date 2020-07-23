@@ -10,7 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8d14017d-d311-45e9-8aea-4a5ca46f1a07
 translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+source-git-commit: 263a1e514fa48f7aa7b696c801718ceff1e43ed7
+workflow-type: tm+mt
+source-wordcount: '4533'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
 
 >[!CAUTION]
 >
->I den här artikeln beskrivs hur du skapar en webbplats med JSP och baserat på det klassiska användargränssnittet. Adobe rekommenderar att du använder de senaste AEM-teknikerna för dina webbplatser enligt beskrivningen i artikeln [Komma igång med att utveckla AEM-webbplatser](/help/sites-developing/getting-started.md).
+>I den här artikeln beskrivs hur du skapar en webbplats med JSP och baserat på det klassiska användargränssnittet. Adobe rekommenderar att du använder de senaste AEM-teknikerna för dina webbplatser enligt beskrivningen i artikeln [Komma igång med att utveckla AEM Sites](/help/sites-developing/getting-started.md).
 
 Med den här självstudiekursen kan du skapa en komplett webbplats med Adobe Experience Manager (AEM). Webbplatsen kommer att vara baserad på en allmän webbplats och riktar sig främst till webbutvecklare. All utveckling sker i en författarmiljö.
 
@@ -32,12 +35,12 @@ I den här självstudien beskrivs hur du:
 1. Skapa webbplatsens rotsida och sedan innehållssidorna.
 1. Skapa följande komponenter som ska användas på sidorna:
 
-   * **[!UICONTROL Övre navigering]**
-   * **[!UICONTROL Lista underordnade]**
-   * **[!UICONTROL Logotyp]**
-   * **[!UICONTROL Bild]**
+   * **[!UICONTROL Top Navigation]**
+   * **[!UICONTROL List Children]**
+   * **[!UICONTROL Logo]**
+   * **[!UICONTROL Image]**
    * **[!UICONTROL Text-Image]**
-   * **[!UICONTROL Sökning]**
+   * **[!UICONTROL Search]**
 
 1. Inkludera olika grundkomponenter.
 
@@ -50,13 +53,13 @@ När du har utfört alla steg ser sidorna ut så här:
 Ladda ned webbplatsen-1.0.zip om du vill följa med i självstudiekursen i stället för att genomföra övningarna. Den här filen är ett AEM-innehållspaket som innehåller resultatet av den här självstudiekursen. Använd [Package Manager](/help/sites-administering/package-manager.md) för att installera paketet till din författarinstans.
 
 >[!NOTE]
-> Om du installerar det här paketet skrivs alla resurser på din redigeringsinstans som du har skapat med den här självstudiekursen över.
+>Om du installerar det här paketet skrivs alla resurser på din redigeringsinstans som du har skapat med den här självstudiekursen över.
 
 Webbplatsinnehållspaket
 
 [Hämta fil](assets/website-1_0.zip)
 
-## Installera Adobe Experience Manager {#installing-adobe-experience-manager}
+## Installerar Adobe Experience Manager {#installing-adobe-experience-manager}
 
 Om du vill installera en AEM-instans för att utveckla din webbplats följer du instruktionerna för att konfigurera en [distributionsmiljö med författare- och publiceringsinstanser](/help/sites-deploying/deploy.md#author-and-publish-installs)eller utför en [allmän installation](/help/sites-deploying/deploy.md#default-local-install). Den generiska installationen innebär att du hämtar AEM Quickstart JAR-filen, placerar filen license.properties i samma katalog som JAR-filen och dubbelklickar på JAR-filen.
 
@@ -72,15 +75,15 @@ När du har installerat AEM får du tillgång till CRXDE Lite-utvecklingsmiljön
 
 Använd CRXDE Lite för att skapa programstrukturen för mywebsite i databasen:
 
-1. Högerklicka på mappen i trädet till vänster om CRXDE Lite och klicka på **`/apps`** Skapa > Skapa mapp ****. I dialogrutan **Skapa mapp** skriver du `mywebsite` mappnamnet och klickar på **[!UICONTROL OK**.
-1. Högerklicka på `/apps/mywebsite` mappen och klicka på **[!UICONTROL Skapa > Skapa mapp]**. I dialogrutan **[!UICONTROL Skapa mapp]** skriver du `components` mappnamnet och klickar på **[!UICONTROL OK]**.
-1. Högerklicka på `/apps/mywebsite` mappen och klicka på **[!UICONTROL Skapa > Skapa mapp]**. I dialogrutan **[!UICONTROL Skapa mapp]** skriver du `templates` mappnamnet och klickar på **[!UICONTROL OK]**.
+1. Högerklicka på mappen i trädet till vänster om CRXDE Lite och klicka på **`/apps`** mappen **[!UICONTROL Create > Create Folder]**. I dialogrutan **Skapa mapp** skriver du `mywebsite` mappnamnet och klickar på **[!UICONTROL OK**.
+1. Högerklicka på `/apps/mywebsite` mappen och klicka på **[!UICONTROL Create > Create Folder]**. I **[!UICONTROL Create Folder]** dialogrutan skriver du mappnamnet `components` och klickar på **[!UICONTROL OK]**.
+1. Högerklicka på `/apps/mywebsite` mappen och klicka på **[!UICONTROL Create > Create Folder]**. I **[!UICONTROL Create Folder]** dialogrutan skriver du mappnamnet `templates` och klickar på **[!UICONTROL OK]**.
 
    Strukturen i trädet bör nu se ut ungefär så här:
 
    ![chlimage_1-101](assets/chlimage_1-101.png)
 
-1. Klicka på **[!UICONTROL Spara alla]**.
+1. Klicka på **[!UICONTROL Save All]**.
 
 ## Konfigurera designen {#setting-up-the-design}
 
@@ -94,11 +97,11 @@ Exempel på static.css-fil och bilder
 
 [Hämta fil](assets/mywebsite.zip)
 
-1. Klicka på **[!UICONTROL Verktyg]** på välkomstsidan för AEM. ([http://localhost:4502/libs/cq/core/content/welcome.html](http://localhost:4502/libs/cq/core/content/welcome.html))
+1. Klicka på på AEM-välkomstsidan **[!UICONTROL Tools]**. ([http://localhost:4502/libs/cq/core/content/welcome.html](http://localhost:4502/libs/cq/core/content/welcome.html))
 
    ![chlimage_1-102](assets/chlimage_1-102.png)
 
-1. Markera mappen **[!UICONTROL Designs]** i mappträdet och klicka sedan på **[!UICONTROL New > New Page]**. Skriv `mywebsite` som titel och klicka på **[!UICONTROL Skapa]**.
+1. Markera mappen i mappträdet och klicka sedan på **[!UICONTROL Designs]** den **[!UICONTROL New > New Page]**. Skriv `mywebsite` som titel och klicka på **[!UICONTROL Create]**.
 
 1. Om mywebsite-objektet inte visas i tabellen uppdaterar du trädet eller tabellen.
 
@@ -120,29 +123,30 @@ Skapa en mall som du kan använda som bas för webbplatsens webbsidor.
 
 En mall definierar standardinnehållet för en ny sida. Komplexa webbplatser kan använda flera mallar för att skapa olika typer av sidor på webbplatsen. I den här övningen är alla sidor baserade på en enkel mall.
 
-1. Högerklicka i mappträdet för CRXDE Lite `/apps/mywebsite/templates` och klicka på **[!UICONTROL Skapa > Skapa mall]**.
+1. Högerklicka i mappträdet i CRXDE Lite `/apps/mywebsite/templates` och klicka på **[!UICONTROL Create > Create Template]**.
 
-1. I dialogrutan Skapa mall skriver du följande värden och klickar sedan på **[!UICONTROL Nästa]**:
+1. I dialogrutan Skapa mall skriver du följande värden och klickar sedan på **[!UICONTROL Next]**:
 
-   * **[!UICONTROL Etikett]**: innehållsida
-   * **[!UICONTROL Titel]**: Min mall för webbplatsinnehållssida
-   * **[!UICONTROL Beskrivning]**: Det här är min mall för webbplatsens innehållssida
-   * **[!UICONTROL Resurstyp]**: mywebsite/components/contentpage
+   * **[!UICONTROL Label]**: innehållsida
+   * **[!UICONTROL Title]**: Min mall för webbplatsinnehållssida
+   * **[!UICONTROL Description]**: Det här är min mall för webbplatsens innehållssida
+   * **[!UICONTROL Resource Type]**: mywebsite/components/contentpage
+
    Använd standardvärdet för egenskapen Ranking.
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
    Resurstypen identifierar komponenten som återger sidan. I det här fallet återges alla sidor som skapas med innehållsidesmallen av `mywebsite/components/contentpage` komponenten.
 
-1. Om du vill ange sökvägarna för sidorna som kan använda den här mallen klickar du på plusknappen och skriver `/content(/.*)?` i textrutan som visas. Klicka sedan på **[!UICONTROL Nästa]**.
+1. Om du vill ange sökvägarna för sidorna som kan använda den här mallen klickar du på plusknappen och skriver `/content(/.*)?` i textrutan som visas. Klicka sedan på **[!UICONTROL Next]**.
 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
    Värdet för den tillåtna egenskapen path är ett *reguljärt uttryck.* Sidor som har en sökväg som matchar uttrycket kan använda mallen. I det här fallet matchar det reguljära uttrycket sökvägen till `/content` mappen och alla undersidor.
 
-   När en författare skapar en sida nedan `/content`visas **[!UICONTROL innehållsmallen]** i en lista med tillgängliga mallar som ska användas.
+   När en författare skapar en sida nedan `/content`visas **[!UICONTROL contentpage]** mallen i en lista med tillgängliga mallar.
 
-1. Klicka på **[!UICONTROL Nästa** i panelerna **[!UICONTROL Tillåtna överordnade]** och **[!UICONTROL Tillåtna underordnade]** och klicka på **[!UICONTROL OK]**. Klicka på **[!UICONTROL Spara alla]** i CRXDE Lite.
+1. Klicka **[!UICONTROL Next]** i **[!UICONTROL Allowed Parents]** - och **[!UICONTROL Allowed Children]** -panelerna och klicka **[!UICONTROL OK]**. Klicka på CRXDE Lite **[!UICONTROL Save All]**.
 
    ![chlimage_1-106](assets/chlimage_1-106.png)
 
@@ -150,19 +154,20 @@ En mall definierar standardinnehållet för en ny sida. Komplexa webbplatser kan
 
 Skapa den *komponent* som definierar innehållet och återger sidorna som använder innehållsmallen. Platsen för komponenten måste motsvara värdet för egenskapen Resurstyp i innehållsidesmallen.
 
-1. Högerklicka i CRXDE Lite `/apps/mywebsite/components` och klicka på **[!UICONTROL Skapa > Komponent]**.
-1. I dialogrutan **[!UICONTROL Skapa komponent]** skriver du följande egenskapsvärden:
+1. Högerklicka `/apps/mywebsite/components` och klicka i CRXDE Lite **[!UICONTROL Create > Component]**.
+1. In the **[!UICONTROL Create Component]** dialog, type the following property values:
 
-   * **[!UICONTROL Etikett]**: innehållsida
-   * **[!UICONTROL Titel]**: Min webbsidkomponent
-   * **[!UICONTROL Beskrivning]**: Det här är min innehållskomponent för webbplats
+   * **[!UICONTROL Label]**: innehållsida
+   * **[!UICONTROL Title]**: Min webbsidkomponent
+   * **[!UICONTROL Description]**: Det här är min innehållskomponent för webbplats
+
    ![chlimage_1-107](assets/chlimage_1-107.png)
 
    Platsen för den nya komponenten är `/apps/mywebsite/components/contentpage`. Den här sökvägen motsvarar innehållsmallens resurstyp (minus den inledande `/apps/` delen av sökvägen).
 
    Denna korrespondens kopplar mallen till komponenten och är avgörande för att webbplatsen ska fungera korrekt.
 
-1. Klicka på **[!UICONTROL Nästa]** tills panelen **[!UICONTROL Tillåtna underordnade]** i dialogrutan visas och klicka sedan på **[!UICONTROL OK]**. Klicka på **[!UICONTROL Spara alla]** i CRXDE Lite.
+1. Klicka **[!UICONTROL Next]** tills **[!UICONTROL Allowed Children]** panelen i dialogrutan visas och klicka sedan på **[!UICONTROL OK]**. Klicka på CRXDE Lite **[!UICONTROL Save All]**.
 
    Strukturen ser nu ut så här:
 
@@ -207,7 +212,7 @@ Lägg till kod i skriptet contentpage.jsp för att definiera sidinnehållet.
    </html>
    ```
 
-1. Klicka på **[!UICONTROL Spara alla]** för att spara ändringarna.
+1. Klicka **[!UICONTROL Save All]** för att spara ändringarna.
 
 ### Skapa webbsidor och innehållssidor {#creating-your-website-page-and-content-pages}
 
@@ -217,47 +222,50 @@ I det här avsnittet skapar du följande sidor som alla använder innehållsides
 
    ![chlimage_1-109](assets/chlimage_1-109.png)
 
-1. Markera mappen **[!UICONTROL Webbplatser]** i mappträdet och klicka sedan på **[!UICONTROL Ny > Ny sida]**.
-1. I fönstret **[!UICONTROL Skapa sida]** anger du följande:
+1. Markera mappen i mappträdet och klicka sedan på **[!UICONTROL Websites]** den **[!UICONTROL New > New Page]**.
+1. Ange följande i **[!UICONTROL Create Page]** fönstret:
 
-   * **[!UICONTROL Titel]**: `My Website`
-   * **[!UICONTROL Namn]**: `mywebsite`
-   * Välj mallen **[!UICONTROL Min webbplatsinnehåll]**
+   * **[!UICONTROL Title]**: `My Website`
+   * **[!UICONTROL Name]**: `mywebsite`
+   * Välj **[!UICONTROL My Website Content Page Template]**
+
    ![chlimage_1-110](assets/chlimage_1-110.png)
 
-1. Klicka på **[!UICONTROL Skapa]**. I mappträdet markerar du `/Websites/My Website` sidan och klickar på **[!UICONTROL Ny > Ny sida]**.
-1. I dialogrutan **[!UICONTROL Skapa sida]** anger du följande egenskapsvärden och klickar sedan på Skapa:
+1. Klicka på **[!UICONTROL Create]**. Markera `/Websites/My Website` sidan i mappträdet och klicka på **[!UICONTROL New > New Page]**.
+1. Ange följande egenskapsvärden i **[!UICONTROL Create Page]** dialogrutan och klicka sedan på Skapa:
 
-   * **[!UICONTROL Titel]**: Engelska
-   * **[!UICONTROL Namn]**: en
-   * Välj mallen **[!UICONTROL Min webbplatsinnehåll]**
+   * **[!UICONTROL Title]**: Engelska
+   * **[!UICONTROL Name]**: en
+   * Välj **[!UICONTROL My Website Content Page Template]**
 
-1. I mappträdet markerar du `/Websites/My Website/English` sidan och klickar på **[!UICONTROL Ny > Ny sida]**.
-1. I dialogrutan **[!UICONTROL Skapa sida]** anger du följande egenskapsvärden och klickar sedan på **[!UICONTROL Skapa]**:
+1. Markera `/Websites/My Website/English` sidan i mappträdet och klicka på **[!UICONTROL New > New Page]**.
+1. Ange följande egenskapsvärden i **[!UICONTROL Create Page]** dialogrutan och klicka sedan på **[!UICONTROL Create]**:
 
-   * **[!UICONTROL Titel]**:Produkter
-   * Välj mallen **[!UICONTROL Min webbplatsinnehåll]**
+   * **[!UICONTROL Title]**: Produkter
+   * Välj **[!UICONTROL My Website Content Page Template]**
 
-1. I mappträdet markerar du `/Websites/My Website/English` sidan och klickar på **[!UICONTROL Ny > Ny sida]**.
-1. I dialogrutan **[!UICONTROL Skapa sida]** anger du följande egenskapsvärden och klickar sedan på **[!UICONTROL Skapa]**:
+1. Markera `/Websites/My Website/English` sidan i mappträdet och klicka på **[!UICONTROL New > New Page]**.
+1. Ange följande egenskapsvärden i **[!UICONTROL Create Page]** dialogrutan och klicka sedan på **[!UICONTROL Create]**:
 
-   * **Titel**:Tjänster
-   * Välj mallen **[!UICONTROL Min webbplatsinnehåll]**
+   * **Titel**: Tjänster
+   * Välj **[!UICONTROL My Website Content Page Template]**
 
-1. I mappträdet markerar du `/Websites/My Website/English` sidan och klickar på **[!UICONTROL Ny > Ny sida]**.
-1. I dialogrutan **[!UICONTROL Skapa sida]** anger du följande egenskapsvärden och klickar sedan på **[!UICONTROL Skapa]**:
+1. Markera `/Websites/My Website/English` sidan i mappträdet och klicka på **[!UICONTROL New > New Page]**.
+1. Ange följande egenskapsvärden i **[!UICONTROL Create Page]** dialogrutan och klicka sedan på **[!UICONTROL Create]**:
 
    * **Titel**: Kunder
-   * Välj mallen **[!UICONTROL Min webbplatsinnehåll]**
+   * Välj **[!UICONTROL My Website Content Page Template]**
+
    Din struktur ser ut så här:
 
    ![chlimage_1-111](assets/chlimage_1-111.png)
 
-1. Om du vill länka sidorna till mywebsite design väljer du `/content/mywebsite/en/jcr:content` noden i CRXDE Lite. På fliken **[!UICONTROL Egenskaper]** anger du följande värden för en ny egenskap och klickar sedan på Lägg till:
+1. Om du vill länka sidorna till mywebsite design väljer du `/content/mywebsite/en/jcr:content` noden i CRXDE Lite. Ange följande värden för en ny egenskap på **[!UICONTROL Properties]** fliken och klicka sedan på Lägg till:
 
-   * **[!UICONTROL Namn]**: cq:designPath
-   * **[!UICONTROL Typ]**:Sträng
-   * **[!UICONTROL Värde]**: /etc/designs/mywebsite
+   * **[!UICONTROL Name]**: cq:designPath
+   * **[!UICONTROL Type]**: Sträng
+   * **[!UICONTROL Value]**: /etc/designs/mywebsite
+
    ![chlimage_1-112](assets/chlimage_1-112.png)
 
 1. Öppna [http://localhost:4502/content/mywebsite/en/products.html](http://localhost:4502/content/mywebsite/en/products.html) i en ny webbläsarflik eller ett nytt fönster för att se sidan Produkter:
@@ -268,7 +276,7 @@ I det här avsnittet skapar du följande sidor som alla använder innehållsides
 
 I det här avsnittet beskrivs hur du förbättrar innehållssidans skript med AEM Foundation-komponentskript och genom att skriva egna skript.
 
-Sidan **[!UICONTROL Produkter]** ser ut så här:
+Sidan ser ut så här **[!UICONTROL Products]** :
 
 ![chlimage_1-4](assets/chlimage_1-4.jpeg)
 
@@ -276,17 +284,17 @@ Sidan **[!UICONTROL Produkter]** ser ut så här:
 
 I den här övningen konfigurerar du sidinnehållskomponenten så att dess supertyp är AEM Page-komponenten. Eftersom komponenter ärver funktionerna i sin supertyp ärver sidinnehållet skripten och egenskaperna för sidkomponenten.
 
-I en komponent-JSP-kod kan du till exempel referera till de skript som supertypskomponenten tillhandahåller som om de är inkluderade i komponenten.
+I en komponent-JSP-kod kan du till exempel referera till de skript som supertypkomponenten tillhandahåller som om de är inkluderade i komponenten.
 
 1. I CRXDE Lite lägger du till en egenskap i `/apps/mywebsite/components/contentpage` noden.
 
    1. Select the `/apps/mywebsite/components/contentpage` node.
    1. Ange följande egenskapsvärden längst ned på fliken Egenskaper och klicka sedan på Lägg till:
 
-      * **[!UICONTROL Namn]**: sling:resourceSuperType
-      * **[!UICONTROL Typ]**:Sträng
-      * **[!UICONTROL Värde]**: grund/komponenter/sida
-   1. Klicka på **[!UICONTROL Spara alla]**.
+      * **[!UICONTROL Name]**: sling:resourceSuperType
+      * **[!UICONTROL Type]**: Sträng
+      * **[!UICONTROL Value]**: grund/komponenter/sida
+   1. Klicka på **[!UICONTROL Save All]**.
 
 
 1. Öppna `contentpage.jsp` filen under `/apps/mywebsite/components/contentpage` och ersätt den befintliga koden med följande kod:
@@ -302,7 +310,7 @@ I en komponent-JSP-kod kan du till exempel referera till de skript som supertyps
    ```
 
 1. Spara ändringarna.
-1. Läs in sidan **[!UICONTROL Produkter]** igen i webbläsaren. Den ser ut så här:
+1. Läs in **[!UICONTROL Products]** sidan igen i webbläsaren. Den ser ut så här:
 
    ![chlimage_1-5](assets/chlimage_1-5.jpeg)
 
@@ -319,11 +327,11 @@ I en komponent-JSP-kod kan du till exempel referera till de skript som supertyps
 
 I det här avsnittet skapar du flera skript som varje skript skapar en del av sidans brödtext. Sedan skapar du filen body.jsp i pagcontent-komponenten för att åsidosätta body.jsp i AEM Page-komponenten. I filen body.jsp tar du med skript som genererar olika delar av sidans brödtext.
 
-**** Tips: När en komponent innehåller en fil som har samma namn och relativa plats som en fil i komponentens supertyp, kallas den *overlay*.
+**Tips:** När en komponent innehåller en fil som har samma namn och relativa plats som en fil i komponentens supertyp, kallas den *overlay*.
 
 1. I CRXDE Lite skapar du filen `left.jsp` under `/apps/mywebsite/components/contentpage`:
 
-   1. Högerklicka på noden `/apps/mywebsite/components/contentpage`och välj **[!UICONTROL Skapa]** och sedan **[!UICONTROL Skapa fil]**.
+   1. Högerklicka på noden `/apps/mywebsite/components/contentpage`och välj **[!UICONTROL Create]** sedan **[!UICONTROL Create File]**.
    1. I fönstret skriver du** Name** `left.jsp` och klickar på **[!UICONTROL OK]**.
 
 1. Redigera filen `left.jsp` för att ta bort befintligt innehåll och ersätta med följande kod:
@@ -340,8 +348,8 @@ I det här avsnittet skapar du flera skript som varje skript skapar en del av si
 1. Spara ändringarna.
 1. I CRXDE Lite skapar du filen `center.jsp` under `/apps/mywebsite/components/contentpage`:
 
-   1. Högerklicka på noden `/apps/mywebsite/components/contentpage`, välj **[!UICONTROL Skapa]** och sedan **[!UICONTROL Skapa fil]**.
-   1. I dialogrutan skriver du `center.jsp` som **[!UICONTROL Namn]** och klickar på **[!UICONTROL OK]**.
+   1. Högerklicka på noden `/apps/mywebsite/components/contentpage`och välj **[!UICONTROL Create]** sedan **[!UICONTROL Create File]**.
+   1. I dialogrutan skriver du `center.jsp` som **[!UICONTROL Name]** och klickar **[!UICONTROL OK]**.
 
 1. Redigera filen `center.jsp` för att ta bort det befintliga innehållet och ersätta det med följande kod:
 
@@ -357,8 +365,8 @@ I det här avsnittet skapar du flera skript som varje skript skapar en del av si
 1. Spara ändringarna.
 1. I CRXDE Lite skapar du filen `right.jsp` under `/apps/mywebsite/components/contentpage`:
 
-   1. Högerklicka på noden `/apps/mywebsite/components/contentpage`, välj **[!UICONTROL Skapa]** och sedan **[!UICONTROL Skapa fil]**.
-   1. Skriv `right.jsp` som **[!UICONTROL Namn]** i dialogrutan och klicka på **[!UICONTROL OK]**.
+   1. Högerklicka på noden `/apps/mywebsite/components/contentpage`och välj **[!UICONTROL Create]** sedan **[!UICONTROL Create File]**.
+   1. I dialogrutan skriver du `right.jsp` som **[!UICONTROL Name]** och klickar **[!UICONTROL OK]**.
 
 1. Redigera filen `right.jsp` för att ta bort befintligt innehåll och ersätta med följande kod:
 
@@ -391,7 +399,7 @@ I det här avsnittet skapar du flera skript som varje skript skapar en del av si
    ```
 
 1. Spara ändringarna.
-1. Läs in sidan **[!UICONTROL Produkter]** igen i webbläsaren. Den ser ut så här:
+1. Läs in **[!UICONTROL Products]** sidan igen i webbläsaren. Den ser ut så här:
 
    ![chlimage_1-6](assets/chlimage_1-6.jpeg)
 
@@ -407,14 +415,14 @@ Den övre navigeringen ser ut så här:
 
 #### Skapa den övre navigeringskomponenten {#creating-the-top-navigation-component-1}
 
-1. I CRXDE Lite högerklickar du `/apps/mywebsite/components`, väljer **[!UICONTROL Skapa]** och sedan **[!UICONTROL Skapa komponent]**.
-1. Ange följande i fönstret **[!UICONTROL Skapa komponent]** :
+1. I CRXDE Lite högerklickar du `/apps/mywebsite/components`och väljer **[!UICONTROL Create]** sedan **[!UICONTROL Create Component]**.
+1. Ange följande i **[!UICONTROL Create Component]** fönstret:
 
-   * **[!UICONTROL Etikett]**: `topnav`
-   * **[!UICONTROL Titel]**: `My Top Navigation Component`
-   * **[!UICONTROL Beskrivning]**: `This is My Top Navigation Component`
+   * **[!UICONTROL Label]**: `topnav`
+   * **[!UICONTROL Title]**: `My Top Navigation Component`
+   * **[!UICONTROL Description]**: `This is My Top Navigation Component`
 
-1. Klicka på **[!UICONTROL Nästa]** tills du kommer till det sista fönstret där du klickar på **[!UICONTROL OK]**. Spara ändringarna.
+1. Klicka **[!UICONTROL Next]** tills du kommer till det sista fönstret där du klickar **[!UICONTROL OK]**. Spara ändringarna.
 
 #### Skapa det övre navigeringsskriptet med textlänkar {#creating-the-top-navigation-script-with-textual-links}
 
@@ -460,21 +468,21 @@ Så här inkluderar du topnav i innehållsideskomponenten:
    ```
 
 1. Spara ändringarna.
-1. Läs in sidan **[!UICONTROL Produkter]** igen i webbläsaren. Den översta navigeringen ser ut så här:
+1. Läs in sidan igen i webbläsaren **[!UICONTROL Products]** . Den översta navigeringen ser ut så här:
 
    ![chlimage_1-115](assets/chlimage_1-115.png)
 
 #### Förbättra sidor med undertexter {#enhancing-pages-with-subtitles}
 
-Komponenten **[!UICONTROL Sida]** definierar egenskaper som gör att du kan ange underrubriker för sidor. Lägg till undertexter med information om sidinnehållet.
+Komponenten definierar egenskaper som gör att du kan ange undertexter för sidor. **[!UICONTROL Page]** Lägg till undertexter med information om sidinnehållet.
 
-1. Öppna sidan **[!UICONTROL Produkter]** i webbläsaren.
-1. På fliken **[!UICONTROL Sidspark]** klickar du på **[!UICONTROL Sidegenskaper]**.
-1. På fliken **[!UICONTROL Grundläggande]** i dialogrutan expanderar du **[!UICONTROL Fler titlar och beskrivningar]** och för egenskapen **[!UICONTROL Underrubrik]** skriver du `what we do`. Click **[!UICONTROL OK]**.
-1. Upprepa föregående steg för att lägga till underrubriken **om våra tjänster** på sidan **[!UICONTROL Tjänster]** .
-1. Upprepa föregående steg för att lägga till underrubriken **till det förtroende vi tjänar** på sidan **[!UICONTROL Kunder]** .
+1. Öppna **[!UICONTROL Products]** sidan i webbläsaren.
+1. På **[!UICONTROL Page]** fliken Sidekick klickar du på **[!UICONTROL Page Properties]**.
+1. Expandera på fliken **[!UICONTROL Basic]** i dialogrutan **[!UICONTROL More Titles and Description]** och skriv **[!UICONTROL Subtitle]** egenskapen `what we do`. Klicka på **[!UICONTROL OK]**.
+1. Upprepa föregående steg för att lägga till underrubriken **om våra tjänster** på **[!UICONTROL Services]** sidan.
+1. Upprepa föregående steg för att lägga till underrubriken **till det förtroende vi tjänar** på **[!UICONTROL Customers]** sidan.
 
-   **** Tips: I CRXDE Lite väljer du noden /content/mywebsite/en/products/jcr:content för att se att undertextegenskapen har lagts till.
+   **Tips:** I CRXDE Lite väljer du noden /content/mywebsite/en/products/jcr:content för att se att undertextegenskapen har lagts till.
 
 #### Förbättra den övre navigeringen med hjälp av bildlänkar {#enhance-top-navigation-by-using-image-links}
 
@@ -505,8 +513,8 @@ I den här övningen matchar Sling dessa URL:er med det /apps/mywebsite/componen
    ```
 
 1. Spara ändringarna.
-1. Högerklicka på `/apps/mywebsite/components/contentpage` noden och klicka på **[!UICONTROL Skapa > Skapa fil]**.
-1. I fönstret **[!UICONTROL Skapa fil]** skriver du **[!UICONTROL Namn]**`navimage.png.java`.
+1. Högerklicka på `/apps/mywebsite/components/contentpage` noden och klicka **[!UICONTROL Create > Create File]**.
+1. I **[!UICONTROL Create File]** fönstret som **[!UICONTROL Name]** skriver du `navimage.png.java`.
 
    Filnamnstillägget .java anger för Sling att stödet för Apache Sling Scripting Java ska användas för att kompilera skriptet och skapa en serverlet.
 
@@ -632,7 +640,7 @@ I den här övningen matchar Sling dessa URL:er med det /apps/mywebsite/componen
    ```
 
 1. Spara ändringarna.
-1. Läs in sidan **[!UICONTROL Produkter]** igen i webbläsaren. Den övre navigeringen visas nu på följande sätt:
+1. Läs in **[!UICONTROL Products]** sidan igen i webbläsaren. Den övre navigeringen visas nu på följande sätt:
 
    ![screen_shot_2012-03-07at10047pm](assets/screen_shot_2012-03-07at10047pm.png)
 
@@ -644,56 +652,56 @@ Skapa komponenten listchild som genererar en lista med sidlänkar som innehålle
 
 #### Skapa produktsidor {#creating-product-pages}
 
-Skapa två sidor som finns under sidan **[!UICONTROL Produkter]** . För varje sida, som beskriver två specifika produkter, anger du en titel, en beskrivning och ett datum.
+Skapa två sidor under **[!UICONTROL Products]** sidan. För varje sida, som beskriver två specifika produkter, anger du en titel, en beskrivning och ett datum.
 
-1. I mappträdet på sidan **[!UICONTROL Webbplatser]** väljer du alternativet **[!UICONTROL Webbplatser/Min webbplats/engelska/Produkter]** och klickar på **[!UICONTROL Ny > Ny sida]**.
-1. Ange följande egenskapsvärden i dialogrutan och klicka sedan på **[!UICONTROL Skapa]**:
+1. I mappträdet på **[!UICONTROL Websites]** sidan markerar du **[!UICONTROL Websites/My Website/English/Products]** objektet och klickar på **[!UICONTROL New > New Page]**.
+1. Ange följande egenskapsvärden i dialogrutan och klicka sedan på **[!UICONTROL Create]**:
 
-   * **[!UICONTROL Titel]**: Produkt 1.
-   * **[!UICONTROL Namn]**: product1.
-   * Välj **[!UICONTROL Min webbsidmall]**
+   * **[!UICONTROL Title]**: Produkt 1.
+   * **[!UICONTROL Name]**: product1.
+   * Välj **[!UICONTROL My Website Content Page Template]**
 
 1. Skapa en till sida under Produkter med följande egenskapsvärden:
 
-   * **[!UICONTROL Titel]**: Produkt 2
-   * **[!UICONTROL Namn]**: product2
-   * Välj **[!UICONTROL Min webbsidmall]**
+   * **[!UICONTROL Title]**: Produkt 2
+   * **[!UICONTROL Name]**: product2
+   * Välj **[!UICONTROL My Website Content Page Template]**
 
 1. I CRXDE Lite anger du en beskrivning och ett datum för sidan Product 1:
 
    1. Select the `/content/mywebsite/en/products/product1/jcr:content` node.
-   1. Ange följande värden på fliken **[!UICONTROL Egenskaper]** :
+   1. Ange följande värden på **[!UICONTROL Properties]** fliken:
 
-      * **[!UICONTROL Namn]**: `jcr:description`
-      * **[!UICONTROL Typ]**: `String`
-      * **[!UICONTROL Värde]**: `This is a description of the Product 1!.`
-   1. Click **[!UICONTROL Add]**.
-   1. Skapa en annan egenskap med följande värden på fliken **[!UICONTROL Egenskaper]** :
+      * **[!UICONTROL Name]**: `jcr:description`
+      * **[!UICONTROL Type]**: `String`
+      * **[!UICONTROL Value]**: `This is a description of the Product 1!.`
+   1. Klicka på **[!UICONTROL Add]**.
+   1. Skapa en annan egenskap med följande värden på **[!UICONTROL Properties]** fliken:
 
-      * **[!UICONTROL Namn]**:datum
-      * **[!UICONTROL Typ]**:Sträng
-      * **[!UICONTROL Värde]**: 02/14/2008
-      * Click **[!UICONTROL Add]**.
-   1. Klicka på **[!UICONTROL Spara alla]**.
+      * **[!UICONTROL Name]**: date
+      * **[!UICONTROL Type]**: Sträng
+      * **[!UICONTROL Value]**: 02/14/2008
+      * Klicka på **[!UICONTROL Add]**.
+   1. Klicka på **[!UICONTROL Save All]**.
 
 
 
 1. I CRXDE Lite anger du en beskrivning och ett datum för sidan Product 2:
 
    1. Select the `/content/mywebsite/en/products/product2/jcr:content` node.
-   1. Ange följande värden på fliken **[!UICONTROL Egenskaper]** :
+   1. Ange följande värden på **[!UICONTROL Properties]** fliken:
 
-      * **[!UICONTROL Namn]**:jcr:description
-      * **[!UICONTROL Typ]**:Sträng
-      * **[!UICONTROL Värde]**: Detta är en beskrivning av produkt 2!.
-   1. Click **[!UICONTROL Add]**.
+      * **[!UICONTROL Name]**: jcr:description
+      * **[!UICONTROL Type]**: Sträng
+      * **[!UICONTROL Value]**: Detta är en beskrivning av produkt 2!.
+   1. Klicka på **[!UICONTROL Add]**.
    1. Ersätt de tidigare värdena i samma textrutor med följande värden:
 
-      * **[!UICONTROL Namn]**:datum
-      * **[!UICONTROL Typ]**:Sträng
-      * **[!UICONTROL Värde]**: 05/11/2012
-      * Click **[!UICONTROL Add]**.
-   1. Klicka på **[!UICONTROL Spara alla]**.
+      * **[!UICONTROL Name]**: date
+      * **[!UICONTROL Type]**: Sträng
+      * **[!UICONTROL Value]**: 05/11/2012
+      * Klicka på **[!UICONTROL Add]**.
+   1. Klicka på **[!UICONTROL Save All]**.
 
 
 
@@ -701,18 +709,18 @@ Skapa två sidor som finns under sidan **[!UICONTROL Produkter]** . För varje s
 
 Så här skapar du komponenten listchildren:
 
-1. I CRXDE Lite högerklickar du `/apps/mywebsite/components`, väljer **[!UICONTROL Skapa]** och sedan **[!UICONTROL Skapa komponent]**.
-1. Ange följande egenskapsvärden i dialogrutan och klicka sedan på **[!UICONTROL Nästa]**:
+1. I CRXDE Lite högerklickar du `/apps/mywebsite/components`och väljer **[!UICONTROL Create]** sedan **[!UICONTROL Create Component]**.
+1. Ange följande egenskapsvärden i dialogrutan och klicka sedan på **[!UICONTROL Next]**:
 
-   * **[!UICONTROL Etikett]**: listchildren.
-   * **[!UICONTROL Titel]**: Min ListChildren-komponent.
-   * **[!UICONTROL Beskrivning]**: Det här är min ListChildren-komponent.
+   * **[!UICONTROL Label]**: listchildren.
+   * **[!UICONTROL Title]**: Min ListChildren-komponent.
+   * **[!UICONTROL Description]**: Det här är min ListChildren-komponent.
 
-1. Fortsätt klicka på **[!UICONTROL Nästa]** tills panelen **[!UICONTROL Tillåtna underordnade]** visas och klicka sedan på **[!UICONTROL OK]**.
+1. Fortsätt klicka **[!UICONTROL Next]** tills **[!UICONTROL Allowed Children]** panelen visas och klicka sedan på **[!UICONTROL OK]**.
 
 #### Skapa skriptet List Children {#creating-the-list-children-script}
 
-Utveckla skriptet för listchild-komponenten.
+Utveckla skriptet för komponenten listchildren.
 
 1. I CRXDE Lite öppnar du filen `listchildren.jsp` under `/apps/mywebsite/components/listchildren`.
 1. Ersätt standardkoden med följande kod:
@@ -749,11 +757,12 @@ Skapa den dialogruta som används för att konfigurera komponentegenskaperna lis
 
 1. Skapa dialognoden under komponenten listchildren:
 
-   1. Högerklicka på `/apps/mywebsite/components/listchildren`noden i CRXDE Lite och klicka på **[!UICONTROL Skapa > Skapa dialogruta]**.
+   1. Högerklicka på `/apps/mywebsite/components/listchildren`noden i CRXDE Lite och klicka på **[!UICONTROL Create > Create Dialog]**.
    1. Ange följande egenskapsvärden i dialogrutan och klicka på OK
 
-      * **[!UICONTROL Etikett]**: `dialog`
-      * **[!UICONTROL Titel]**: `Edit Component` och klicka på **[!UICONTROL OK]**.
+      * **[!UICONTROL Label]**: `dialog`
+      * **[!UICONTROL Title]**: `Edit Component` och klicka på **[!UICONTROL OK]**.
+
    ![screen_shot_2012-03-07at45818pm](assets/screen_shot_2012-03-07at45818pm.png)
 
    Med följande egenskaper:
@@ -761,23 +770,25 @@ Skapa den dialogruta som används för att konfigurera komponentegenskaperna lis
    ![screen_shot_2012-03-07at50415pm](assets/screen_shot_2012-03-07at50415pm.png)
 
 1. Select the `/apps/mywebsite/components/listchildren/dialog/items/items/tab1` node.
-1. Ändra värdet på egenskapen **[!UICONTROL title]** på fliken **[!UICONTROL Egenskaper]** till `List Children`
+1. Ändra värdet för egenskapen på **[!UICONTROL Properties]** fliken till **[!UICONTROL title]** `List Children`
 
    ![chlimage_1-117](assets/chlimage_1-117.png)
 
-1. Markera noden **tab1** och klicka på **[!UICONTROL Skapa > Skapa nod]**, ange följande egenskapsvärden och klicka på **[!UICONTROL OK]**:
+1. Markera noden **tab1** och klicka **[!UICONTROL Create > Create Node]** på, ange följande egenskapsvärden och klicka på **[!UICONTROL OK]**:
 
-   * **[!UICONTROL Namn]**: objekt
-   * **[!UICONTROL Typ]**: cq:WidgetCollection
+   * **[!UICONTROL Name]**: items
+   * **[!UICONTROL Type]**: cq:WidgetCollection
+
    ![screen_shot_2012-03-07at51018pm](assets/screen_shot_2012-03-07at51018pm.png)
 
 1. Skapa en nod under noden items med följande egenskapsvärden:
 
-   * **[!UICONTROL Namn]**: listroot
-   * **[!UICONTROL Typ]**: cq:Widget
+   * **[!UICONTROL Name]**: listroot
+   * **[!UICONTROL Type]**: cq:Widget
+
    ![screen_shot_2012-03-07at51031pm](assets/screen_shot_2012-03-07at51031pm.png)
 
-1. Lägg till egenskaper för listrotnoden för att konfigurera den som ett textfält. Varje rad i följande tabell representerar en egenskap. När du är klar klickar du på **[!UICONTROL Spara alla]**.
+1. Lägg till egenskaper för listrotnoden för att konfigurera den som ett textfält. Varje rad i följande tabell representerar en egenskap. När du är klar klickar du på **[!UICONTROL Save All]**.
 
    | Namn | Typ | Värde |
    |---|---|---|
@@ -812,13 +823,13 @@ Om du vill se den här komponentens fullständiga funktion kan du visa sidan Pro
 * när den överordnade sidan (&quot;Sökväg till listrot&quot;) inte har definierats.
 * när den överordnade sidan (&quot;Sökväg till listrot&quot;) har definierats.
 
-1. Läs in sidan **[!UICONTROL Produkter]** igen i webbläsaren. Komponenten listchildren visas så här:
+1. Läs in **[!UICONTROL Products]** sidan igen i webbläsaren. Komponenten listchildren visas så här:
 
    ![chlimage_1-118](assets/chlimage_1-118.png)
 
 1. ![chlimage_1-119](assets/chlimage_1-119.png)
 
-1. Som sökväg till listroten anger du: `/content/mywebsite/en`. Click **[!UICONTROL OK]**. Komponenten listchildren på sidan ser nu ut så här:
+1. Som sökväg till listroten anger du: `/content/mywebsite/en`. Klicka på **[!UICONTROL OK]**. Komponenten listchildren på sidan ser nu ut så här:
 
    ![chlimage_1-120](assets/chlimage_1-120.png)
 
@@ -837,7 +848,7 @@ Den kommer att se ut så här:
 
 >[!NOTE]
 >
->Adobe Experience Manager är en mer komplett logotypkomponent ( `/libs/foundation/components/logo`).
+>Adobe Experience Manager har en mer komplett logotypkomponent ( `/libs/foundation/components/logo`).
 
 #### Skapa logokomponentnoden {#creating-the-logo-component-node}
 
@@ -846,9 +857,9 @@ Så här skapar du logotypkomponenten:
 1. I CRXDE Lite högerklickar du på /apps/mywebsite/components, väljer **[!UICONTROL Create]** och sedan **[!UICONTROL Create Component]**.
 1. I dialogrutan Skapa komponent anger du följande egenskapsvärden och klickar sedan på Nästa:
 
-   * **[!UICONTROL Etikett]**: `logo`.
-   * **[!UICONTROL Titel]**: `My Logo Component`.
-   * **[!UICONTROL Beskrivning]**: `This is My Logo Component`.
+   * **[!UICONTROL Label]**: `logo`.
+   * **[!UICONTROL Title]**: `My Logo Component`.
+   * **[!UICONTROL Description]**: `This is My Logo Component`.
 
 1. Klicka på Nästa tills du kommer till den sista panelen i dialogrutan och klicka sedan på **[!UICONTROL OK]**.
 
@@ -897,20 +908,20 @@ Skapa en dialogruta där du kan konfigurera logotypkomponenten i designläge. Di
 
 1. Skapa dialognoden under logokomponenten:
 
-   1. Högerklicka på `/apps/mywebsite/components/logo` noden och klicka på **[!UICONTROL Skapa > Skapa dialogruta]**.
+   1. Högerklicka på `/apps/mywebsite/components/logo` noden och klicka **[!UICONTROL Create > Create Dialog]**.
    1. Ange följande egenskapsvärden och klicka sedan på **[!UICONTROL OK]**:
 
-      * **[!UICONTROL Etikett]**`design_dialog`
-      * **[!UICONTROL Titel]**`Logo (Design)`
+      * **[!UICONTROL Label]** `design_dialog`
+      * **[!UICONTROL Title]** `Logo (Design)`
 
-1. Högerklicka på noden tab1 i grenen design_dialog och klicka på Ta bort. Klicka på **[!UICONTROL Spara alla]**.
-1. Under `design_dialog/items/items`noden skapar du en ny nod med namnet `img` av typen `cq:Widget`. Lägg till följande egenskaper och klicka sedan på **[!UICONTROL Spara alla]**:
+1. Högerklicka på noden tab1 i grenen design_dialog och klicka på Ta bort. Klicka på **[!UICONTROL Save All]**.
+1. Under `design_dialog/items/items`noden skapar du en ny nod med namnet `img` av typen `cq:Widget`. Lägg till följande egenskaper och klicka sedan på **[!UICONTROL Save All]**:
 
    | Namn | Typ | Värde |
    |---|---|---|
    | fileNameParameter | Sträng | ./imageName |
    | fileReferenceParameter | Sträng | ./imageReference |
-   | name | Sträng | ./image |
+   | name | Sträng | ./bild |
    | title | Sträng | Bild |
    | xtype | Sträng | html5smartimage |
 
@@ -920,8 +931,8 @@ Skapa en dialogruta där du kan konfigurera logotypkomponenten i designläge. Di
 
 Skapa skriptet som hämtar logotypbilden och skriver det på sidan.
 
-1. Högerklicka på logotypkomponentnoden och klicka på **[!UICONTROL Skapa > Skapa fil]** för att skapa skriptfilen img.GET.java.
-1. Öppna filen, kopiera följande kod till filen och klicka sedan på **[!UICONTROL Spara alla]**:
+1. Högerklicka på logotypkomponentnoden och klicka **[!UICONTROL Create > Create File]** för att skapa skriptfilen img.GET.java.
+1. Öppna filen, kopiera följande kod till filen och klicka sedan på **[!UICONTROL Save All]**:
 
 ```java
 package apps.mywebsite.components.logo;
@@ -1004,7 +1015,7 @@ public class img_GET extends AbstractImageServlet {
    ```
 
 1. Spara ändringarna.
-1. Läs in sidan **[!UICONTROL Produkter]** igen i webbläsaren. Logotypen ser ut så här, men för närvarande visas bara den underliggande länken:
+1. Läs in **[!UICONTROL Products]** sidan igen i webbläsaren. Logotypen ser ut så här, men för närvarande visas bara den underliggande länken:
 
    ![chlimage_1-123](assets/chlimage_1-123.png)
 
@@ -1012,16 +1023,16 @@ public class img_GET extends AbstractImageServlet {
 
 I det här avsnittet beskrivs hur du anger en bild som logotyp i dialogrutan för designläge.
 
-1. Med sidan **[!UICONTROL Produkter]** öppen i webbläsaren klickar du på knappen **[!UICONTROL Design]** längst ned i Sidekick för att gå till **[!UICONTROL designläge]** .
+1. Öppna **[!UICONTROL Products]** sidan i webbläsaren och klicka på **[!UICONTROL Design]** knappen längst ned i sidsparken för att gå in i **[!UICONTROL Design]** läget.
 
    ![](do-not-localize/chlimage_1-10.png)
 
-1. Klicka på **[!UICONTROL Redigera]** i fältet Design av logotyp för att använda dialogrutan för att redigera inställningarna för logotypkomponenten.
-1. I dialogrutan klickar du på panelen på fliken **[!UICONTROL Bild]** , bläddrar efter `logo.png` bilden som du extraherade från `mywebsite.zip` filen och klickar på **[!UICONTROL OK]**.
+1. I fältet Design of logo klickar du **[!UICONTROL Edit]** för att använda dialogrutan för att redigera inställningarna för logotypkomponenten.
+1. I dialogrutan klickar du på panelen på **[!UICONTROL Image]** fliken, bläddrar efter den `logo.png` bild du har extraherat från `mywebsite.zip` filen och klickar på **[!UICONTROL OK]**.
 
    ![chlimage_1-124](assets/chlimage_1-124.png)
 
-1. Klicka på triangeln på namnlisten i Spark för att återgå till **[!UICONTROL redigeringsläget]** .
+1. Klicka på triangeln i namnlisten Sidekick för att återgå till **[!UICONTROL Edit]** läget.
 
    ![chlimage_1-7](assets/chlimage_1-7.jpeg)
 
@@ -1046,7 +1057,7 @@ I det här avsnittet inkluderar du komponenten breadcrumb (trail), som är en av
    ```
 
 1. Spara ändringarna.
-1. Läs in sidan **[!UICONTROL Produkter 1]** igen i webbläsaren. Spåra komponenten ser ut så här:
+1. Läs in **[!UICONTROL Products 1]** sidan igen i webbläsaren. Spåra komponenten ser ut så här:
 
    ![chlimage_1-125](assets/chlimage_1-125.png)
 
@@ -1067,12 +1078,12 @@ I det här avsnittet inkluderar du titelkomponenten, som är en av grundkomponen
    ```
 
 1. Spara ändringarna.
-1. Läs in sidan **[!UICONTROL Produkter]** igen i webbläsaren. Titelkomponenten ser ut så här:
+1. Läs in **[!UICONTROL Products]** sidan igen i webbläsaren. Titelkomponenten ser ut så här:
 
    ![chlimage_1-126](assets/chlimage_1-126.png)
 
 >[!Note]
->Du kan ange en annan rubrik och typ/storlek i **[!UICONTROL redigeringsläget]** .
+>Du kan ange en annan rubrik och typ/storlek i **[!UICONTROL Edit]** läget.
 
 ### Inkludera styckesystemkomponenten {#including-the-paragraph-system-component}
 
@@ -1092,7 +1103,7 @@ Lägg till den överordnade komponenten (en av grundkomponenterna) i innehållsi
    <cq:include path="par" resourceType="foundation/components/parsys" />
    ```
 
-1. Uppdatera sidan **[!UICONTROL Produkter]** i webbläsaren. Den har nu komponenten parsys, som ser ut så här:
+1. Uppdatera **[!UICONTROL Products]** sidan i webbläsaren. Den har nu komponenten parsys, som ser ut så här:
 
    ![chlimage_1-127](assets/chlimage_1-127.png)
 
@@ -1102,13 +1113,13 @@ Skapa en komponent som visar en bild i styckesystemet. För att spara tid skapas
 
 >[!NOTE]
 >
->Adobe Experience Manager innehåller en mer komplett bildkomponent ( `/libs/foundation/components/image`).
+>Adobe Experience Manager har en mer komplett bildkomponent ( `/libs/foundation/components/image`).
 
 #### Skapa bildkomponenten {#creating-the-image-component-1}
 
-1. Högerklicka på `/apps/mywebsite/components/logo` noden och klicka på **[!UICONTROL Kopiera]**.
-1. Högerklicka på `/apps/mywebsite/components` noden och klicka på **[!UICONTROL Klistra in]**.
-1. Högerklicka på `Copy of logo` noden, klicka på **[!UICONTROL Byt namn]**, ta bort befintlig text och text `image`.
+1. Högerklicka på `/apps/mywebsite/components/logo` noden och klicka på **[!UICONTROL Copy]**.
+1. Högerklicka på `/apps/mywebsite/components` noden och klicka **[!UICONTROL Paste]**.
+1. Högerklicka på `Copy of logo` noden, klicka **[!UICONTROL Rename]** och ta bort den befintliga texten och skriv `image`.
 
 1. Markera `image` komponentnoden och ändra följande egenskapsvärden:
 
@@ -1117,9 +1128,9 @@ Skapa en komponent som visar en bild i styckesystemet. För att spara tid skapas
 
 1. Lägg till en egenskap i `image` noden med följande egenskapsvärden:
 
-   * **[!UICONTROL Namn]**: componentGroup
-   * **[!UICONTROL Typ]**:Sträng
-   * **[!UICONTROL Värde]**: MinWebbplats
+   * **[!UICONTROL Name]**: componentGroup
+   * **[!UICONTROL Type]**: Sträng
+   * **[!UICONTROL Value]**: MinWebbplats
 
 1. Under `image` noden byter du namn på `design_dialog` noden till `dialog`.
 
@@ -1163,18 +1174,18 @@ I det här avsnittet använder du en cq:editConfig-nod för att dra resurser fr�
 
 1. I CRXDE Lite, under noden /apps/mywebsite/components/image, skapar du en ny nod enligt följande:
 
-   * **[!UICONTROL Namn]**: cq:editConfig.
-   * **[!UICONTROL Typ]**: cq:EditConfig.
+   * **[!UICONTROL Name]**: cq:editConfig.
+   * **[!UICONTROL Type]**: cq:EditConfig.
 
 1. Skapa en ny nod under noden cq:editConfig enligt följande:
 
-   * **[!UICONTROL Namn]**: cq:dropTargets.
-   * **[!UICONTROL Typ]**: cq:DropTargetConfig.
+   * **[!UICONTROL Name]**: cq:dropTargets.
+   * **[!UICONTROL Type]**: cq:DropTargetConfig.
 
 1. Skapa en ny nod under noden cq:dropTargets enligt följande:
 
-   * **[!UICONTROL Namn]**: bild.
-   * **[!UICONTROL Typ]**: nt:ostrukturerad.
+   * **[!UICONTROL Name]**: bild.
+   * **[!UICONTROL Type]**: nt:ostrukturerad.
 
 1. I CRXDE anger du egenskaperna enligt följande:
 
@@ -1190,19 +1201,19 @@ I det här avsnittet använder du en cq:editConfig-nod för att dra resurser fr�
 
 I det här avsnittet lägger du till ikonen som ska visas bredvid bildkomponenten när den visas i Spark:
 
-1. Högerklicka på filen i CRXDE Lite `/libs/foundation/components/image/icon.png` och välj **[!UICONTROL Kopiera]**.
-1. Högerklicka på noden `/apps/mywebsite/components/image` och klicka på **[!UICONTROL Klistra in]**. Klicka sedan på **[!UICONTROL Spara alla]**.
+1. Högerklicka på filen i CRXDE Lite `/libs/foundation/components/image/icon.png` och välj **[!UICONTROL Copy]**.
+1. Högerklicka på noden `/apps/mywebsite/components/image` och klicka sedan **[!UICONTROL Paste]** på **[!UICONTROL Save All]**.
 
 #### Använda bildkomponenten {#using-the-image-component}
 
-I det här avsnittet ska du visa sidan **[!UICONTROL Produkter]** och lägga till bildkomponenten i styckesystemet.
+I det här avsnittet ska du visa **[!UICONTROL Products]** sidan och lägga till bildkomponenten i styckesystemet.
 
-1. Läs in sidan **[!UICONTROL Produkter]** igen i webbläsaren.
-1. Klicka på ikonen för **[!UICONTROL designläge]** i sidsparken.
-1. Klicka på knappen **[!UICONTROL Redigera]** för att redigera dekordialogrutan.
-1. I dialogrutan visas en lista över **[!UICONTROL tillåtna komponenter]** . navigera till **[!UICONTROL Min webbplats]**, markera **[!UICONTROL Min bildkomponent]** och klicka på **[!UICONTROL OK]**.
-1. Återgå till **[!UICONTROL redigeringsläget]**.
-1. Dubbelklicka på den parsys-bildrutan (på **[!UICONTROL Dra komponenter eller resurser hit**). Väljarna **[!UICONTROL Infoga ny komponent]** och **[!UICONTROL Sidekick]** ser ut så här:
+1. Läs in **[!UICONTROL Products]** sidan igen i webbläsaren.
+1. Klicka på **[!UICONTROL Design mode]** ikonen i sidosparken.
+1. Klicka på **[!UICONTROL Edit]** knappen om du vill redigera dekordialogrutan.
+1. I dialogrutan **[!UICONTROL Allowed Components]** visas en lista över navigera till **[!UICONTROL MyWebsite]**, markera **[!UICONTROL My Image Component]** och klicka på **[!UICONTROL OK]**.
+1. Återgå till **[!UICONTROL Edit mode]**.
+1. Dubbelklicka på den parsys-bildrutan (på **[!UICONTROL Drag components or assets here]**). Väljarna **[!UICONTROL Insert New Component]** och **[!UICONTROL Sidekick]** väljarna ser ut så här:
 
    ![chlimage_1-8](assets/chlimage_1-8.jpeg)
 
@@ -1224,23 +1235,23 @@ Det finns flera alternativ, både i redigeringsläge och designläge.
    <cq:include path="toolbar" resourceType="foundation/components/toolbar"/>
    ```
 
-1. I mappträdet på sidan AEM-webbplatser väljer du `Websites/My Website/English`och klickar sedan på **[!UICONTROL Ny > Ny sida]**. Ange följande egenskapsvärden och klicka på Skapa:
+1. I mappträdet på sidan AEM-webbplatser väljer du `Websites/My Website/English`och klickar sedan på **[!UICONTROL New > New Page]**. Ange följande egenskapsvärden och klicka på Skapa:
 
-   * **[!UICONTROL Titel]**:Verktygsfält
-   * Välj **[!UICONTROL Min webbsidmall]**
+   * **[!UICONTROL Title]**: Verktygsfält
+   * Välj **[!UICONTROL My Website Content Page Template]**
 
-1. Högerklicka på sidan **[!UICONTROL Verktygsfält]** i listan med sidor och klicka på **[!UICONTROL Egenskaper]**. Välj **[!UICONTROL Dölj i navigering]** och klicka på **[!UICONTROL OK]**.
+1. Högerklicka på **[!UICONTROL Toolbar]** sidan i sidlistan och klicka på **[!UICONTROL Properties]**. Markera **[!UICONTROL Hide In Navigation]** och klicka på **[!UICONTROL OK]**.
 
-   Alternativet **[!UICONTROL Dölj i navigering]** förhindrar att sidan visas i navigeringskomponenter, till exempel topnav och listchild.
+   Alternativet **[!UICONTROL Hide in Navigation]** förhindrar att sidan visas i navigeringskomponenter som topnav och listchildren.
 
-1. Skapa följande sidor i **[!UICONTROL verktygsfältet]**:
+1. Skapa följande sidor under **[!UICONTROL Toolbar]**:
 
    * Kontakter
    * Feedback
    * Inloggning
    * Sökning
 
-1. Läs in sidan **[!UICONTROL Produkter]** igen i webbläsaren. Den ser ut så här:
+1. Läs in **[!UICONTROL Products]** sidan igen i webbläsaren. Den ser ut så här:
 
    ![chlimage_1-130](assets/chlimage_1-130.png)
 
@@ -1248,34 +1259,34 @@ Det finns flera alternativ, både i redigeringsläge och designläge.
 
 I det här avsnittet skapar du komponenten som du vill söka efter innehåll på webbplatsen. Den här sökkomponenten kan placeras i styckesystemet på vilken sida som helst (till exempel på en specialiserad sökresultatsida).
 
-Din sökruta ser ut så här på den **[!UICONTROL engelska]** sidan:
+Din sökruta ser ut så här på **[!UICONTROL English]** sidan:
 
-![chlimage_1-135](assets/chlimage_1-131.png)
+![chlimage_1-131](assets/chlimage_1-131.png)
 
 #### Skapa sökkomponenten {#creating-the-search-component-1}
 
-1. I CRXDE Lite högerklickar du `/apps/mywebsite/components`, väljer **[!UICONTROL Skapa]** och sedan **[!UICONTROL Skapa komponent]**.
+1. I CRXDE Lite högerklickar du `/apps/mywebsite/components`och väljer **[!UICONTROL Create]** sedan **[!UICONTROL Create Component]**.
 1. Använd dialogrutan för att konfigurera komponenten:
 
    1. Ange följande egenskapsvärden på den första panelen:
 
-      * **[!UICONTROL Etikett]**: sök
-      * **[!UICONTROL Titel]**: Min sökkomponent
-      * **[!UICONTROL Beskrivning]**: Det här är min sökkomponent
-      * **[!UICONTROL Grupp]**: MinWebbplats
-   1. Klicka på **[!UICONTROL Nästa]** och sedan på **[!UICONTROL Nästa]** igen.
-   1. På panelen **[!UICONTROL Allowed Parents** klickar du på **[!UICONTROL +]** och skriver `*/parsys`.
+      * **[!UICONTROL Label]**: sök
+      * **[!UICONTROL Title]**: Min sökkomponent
+      * **[!UICONTROL Description]**: Det här är min sökkomponent
+      * **[!UICONTROL Group]**: MinWebbplats
+   1. Klicka **[!UICONTROL Next]** och sedan på **[!UICONTROL Next]** igen.
+   1. Klicka på knappen **[!UICONTROL Allowed Parents** (Tillåt överordnade **[!UICONTROL +]** ) och skriv `*/parsys`.
    1. Click **[!UICONTROL Next]** and then click **[!UICONTROL OK]**.
 
 
-1. Klicka på **[!UICONTROL Spara alla]**.
+1. Klicka på **[!UICONTROL Save All]**.
 1. Kopiera följande noder och klistra in dem i `apps/mywebsite/components/search` noden:
 
    * `/libs/foundation/components/search/dialog`
    * `` `/libs/foundation/components/search/i18n`
    * `/libs/foundation/components/search/icon.png`
 
-1. Klicka på **[!UICONTROL Spara alla]**.
+1. Klicka på **[!UICONTROL Save All]**.
 
 #### Skapa sökskriptet {#creating-the-search-script}
 
@@ -1472,7 +1483,7 @@ Om du vill ta med en sökruta i det vänstra avsnittet av innehållssidan gör d
    </div>
    ```
 
-1. Läs in sidan **[!UICONTROL Produkter]** igen i webbläsaren. Sökkomponenten ser ut så här:
+1. Läs in **[!UICONTROL Products]** sidan igen i webbläsaren. Sökkomponenten ser ut så här:
 
    ![chlimage_1-132](assets/chlimage_1-132.png)
 
@@ -1481,15 +1492,15 @@ Om du vill ta med en sökruta i det vänstra avsnittet av innehållssidan gör d
 I det här avsnittet lägger du till sökkomponenten i styckesystemet.
 
 1. Öppna sidan **Sök** i webbläsaren.
-1. Klicka på ikonen för **[!UICONTROL designläge]** i sidsparken.
-1. Klicka på **[!UICONTROL Redigera]** i det överordnade stycket Design (under rubriken Sök).
-1. Bläddra nedåt till gruppen **[!UICONTROL Mina webbplatser]** i dialogrutan, markera **[!UICONTROL Min sökkomponent]** och klicka på **[!UICONTROL OK]**.
-1. Klicka på triangeln när du vill återgå till **[!UICONTROL redigeringsläget]** .
-1. Dra komponenten **[!UICONTROL Min sökning]** från Sidekick till den parsys-bildrutan. Den ser ut så här:
+1. Klicka på **[!UICONTROL Design]** lägesikonen i sidsparken.
+1. Klicka på Design of par (under rubriken Sök) **[!UICONTROL Edit]**.
+1. Bläddra nedåt till **[!UICONTROL My Websites]** gruppen i dialogrutan, markera **[!UICONTROL My Search Component]** och klicka på **[!UICONTROL OK]**.
+1. Klicka på triangeln när du vill återgå till **[!UICONTROL Edit]** läget.
+1. Dra **[!UICONTROL My Search]** komponenten från Sidekick till den parsys-bildrutan. Den ser ut så här:
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
-1. Gå till **[!UICONTROL sidan Produkter]** . Sök efter kunder i inmatningsrutan och tryck på **[!UICONTROL Retur]**. Du omdirigeras till **[!UICONTROL söksidan]** . Växla till **[!UICONTROL förhandsgranskningsläge]** : Utdata har ett liknande format som följande:
+1. Navigera till din **[!UICONTROL Products]** sida. Sök efter kunder i inmatningsrutan och tryck **[!UICONTROL Enter]**. Du omdirigeras till **[!UICONTROL Search]** sidan. Växla till **[!UICONTROL Preview]** läge: Utdata har ett liknande format som följande:
 
    ![chlimage_1-134](assets/chlimage_1-134.png)
 
@@ -1512,7 +1523,7 @@ För den här komponenten kan du ange flera parametrar i både redigeringsläge 
    ```
 
 1. Spara ändringarna.
-1. Läs in sidan **[!UICONTROL Produkter]** igen i webbläsaren. Hela sidan ser ut så här:
+1. Läs in **[!UICONTROL Products]** sidan igen i webbläsaren. Hela sidan ser ut så här:
 
    ![chlimage_1-9](assets/chlimage_1-9.jpeg)
 
