@@ -10,7 +10,10 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 161b591b-5871-4b5f-9c63-823b6e67b1fd
 translation-type: tm+mt
-source-git-commit: dda8156729aa46dd6cfd779bca120b165ccc980b
+source-git-commit: d4357905fe6b7acc70f828d9b73581393e003cd5
+workflow-type: tm+mt
+source-wordcount: '3964'
+ht-degree: 1%
 
 ---
 
@@ -77,6 +80,7 @@ Du kan redigera eller ta bort en befintlig ritningskonfiguration:
 
    * **Egenskaper**; kan du använda detta för att visa och sedan redigera egenskaperna för konfigurationen.
    * **Ta bort**
+
    ![chlimage_1-211](assets/chlimage_1-211.png)
 
 ## Skapa en Live Copy {#creating-a-live-copy}
@@ -90,7 +94,7 @@ Du kan skapa en live-kopia av vilken sida eller gren som helst. När du skapar e
 
 Du kan skapa en live-kopia av vilken sida som helst:
 
-* Sidorna refereras till av en [ritningskonfiguration](#creating-a-blueprint-configuration),
+* Sidor som refereras av en [ritningskonfiguration](#creating-a-blueprint-configuration).
 * Och sidor som inte har någon anslutning till en konfiguration.
 * AEM har även stöd för att skapa en live-kopia på sidorna i en annan live-kopia.
 
@@ -105,7 +109,7 @@ Så här skapar du en live-kopia:
 
    ![chlimage_1-212](assets/chlimage_1-212.png)
 
-1. Välj källsidan och klicka eller tryck på **Nästa**. Exempel:
+1. Välj källsidan och klicka eller tryck på **Nästa**. Till exempel:
 
    ![chlimage_1-213](assets/chlimage_1-213.png)
 
@@ -121,6 +125,7 @@ Så här skapar du en live-kopia:
 
    * en **rubrik** för sidan.
    * ett **namn** som används i URL:en.
+
    ![chlimage_1-215](assets/chlimage_1-215.png)
 
 1. Använd kryssrutan **Uteslut undersidor** :
@@ -154,8 +159,8 @@ När du skapar platsen anger du värden för följande egenskaper:
 
 Så här skapar du en live-kopia av en webbplats från en designkonfiguration:
 
-1. Välj **Skapa** i konsolen **Platser** och sedan **Plats** i listrutan.
-1. Välj den designkonfiguration som ska användas som källa för live-kopian och fortsätt med **nästa**:
+1. I **Sites** -konsolen väljer du **Skapa** och sedan **Plats** i listrutan.
+1. Välj den designkonfiguration som ska användas som källa för live-kopian och fortsätt med **Nästa**:
 
    ![chlimage_1-216](assets/chlimage_1-216.png)
 
@@ -163,7 +168,7 @@ Så här skapar du en live-kopia av en webbplats från en designkonfiguration:
 
    Alla tillgängliga språk är markerade som standard. Om du vill ta bort ett språk klickar eller trycker du på det **X** som visas bredvid språket.
 
-   Exempel:
+   Till exempel:
 
    ![chlimage_1-217](assets/chlimage_1-217.png)
 
@@ -193,7 +198,7 @@ Så här visar du egenskaperna:
 1. I **Sites** -konsolen väljer du den aktiva kopieringssidan och öppnar egenskaperna.
 1. Välj fliken **Live-kopia** .
 
-   Exempel:
+   Till exempel:
 
    ![chlimage_1-218](assets/chlimage_1-218.png)
 
@@ -203,7 +208,7 @@ Så här visar du egenskaperna:
 
 ### Visa Live-kopior av en blå sida {#seeing-the-live-copies-of-a-blueprint-page}
 
-Utskriftssidor (som refereras i en ritningskonfiguration) ger dig en lista över de aktiva kopieringssidor som använder den aktuella (blå) sidan som källa. Använd den här listan för att hålla reda på live-kopior. Listan visas på fliken **Utskrift** i [sidegenskaperna](/help/sites-authoring/editing-page-properties.md).
+Utskriftssidor (som refereras i en ritningskonfiguration) ger dig en lista över de live-kopieringssidor som använder den aktuella (blå) sidan som källa. Använd den här listan för att hålla reda på live-kopior. Listan visas på fliken **Utskrift** i [sidegenskaperna](/help/sites-authoring/editing-page-properties.md).
 
 ![chlimage_1-219](assets/chlimage_1-219.png)
 
@@ -281,7 +286,7 @@ Synkronisera en live-kopia för att dra ändringar från källan till livecopy.
 
    Bekräftelse kommer att begäras. Använd **Synkronisera** för att fortsätta.
 
-#### Synkronisera en Live-kopia från Live-kopieringsöversikten {#synchronize-a-live-copy-from-the-live-copy-overview}
+#### Synkronisera en Live-kopia från Live Copy-översikt {#synchronize-a-live-copy-from-the-live-copy-overview}
 
 Åtgärden [Synkronisera är också tillgänglig från Live-kopieringsöversikten](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)när en Live-kopia-sida är markerad.
 
@@ -291,6 +296,7 @@ Synkronisera en live-kopia för att dra ändringar från källan till livecopy.
 
    * **Sidor och undersidor**
    * **Endast sida**
+
    ![chlimage_1-225](assets/chlimage_1-225.png)
 
 ## Ändra innehåll i Live Copy {#changing-live-copy-content}
@@ -356,6 +362,7 @@ Så här gör du uppehåll i arv på en sida:
 
    * **Gör uppehåll**
    * **Pausa med barn**
+
    ![chlimage_1-226](assets/chlimage_1-226.png)
 
 1. Bekräfta åtgärden **Gör uppehåll** i dialogrutan **Gör uppehåll i Live Copy **:
@@ -423,6 +430,7 @@ Så här anger eller ändrar du djup:
 
    * checked - a deep copy (the child pages are included)
    * clear - a shallow live copy (child pages are exclude)
+
    >[!CAUTION]
    >
    >Att byta till en ytlig live-kopia har omedelbar effekt och går inte att ångra.
@@ -551,7 +559,8 @@ Om du vill spåra de ändringar du har gjort kan du visa planeringsidan i **Refe
 
    * **Jämför med utkast** (när en live-kopieringssida är markerad)
    * **Jämför med Live Copy** (när en ritningssida är markerad)
-   Exempel:
+
+   Till exempel:
 
    ![chlimage_1-235](assets/chlimage_1-235.png)
 
@@ -583,12 +592,14 @@ Det påverkar var i trädet du använder **Koppla loss**:
 
    * direktrelationen tas bort för den undersidan (eller grenen)
    * och (sub-)sidorna i livekopiegrenen behandlas som om de skapats manuellt.
+
    *Undersidorna är dock fortfarande beroende* av den överordnade grenens aktiva relation, så en ytterligare utrullning av ritningssidan/-sidorna kommer att båda:
 
    1. Byt namn på den eller de frånkopplade sidorna:
 
       * Detta beror på att MSM betraktar dem som manuellt skapade sidor som orsakar en konflikt eftersom de har samma namn som de livecopy-sidor som de försöker skapa.
    1. Skapa en ny (livecopy) sida med det ursprungliga namnet som innehåller ändringarna från utrullningen.
+
    >[!NOTE]
    >
    >Se [MSM-utrullningskonflikter](/help/sites-administering/msm-rollout-conflicts.md) för mer information om sådana situationer.
