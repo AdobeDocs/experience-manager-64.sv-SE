@@ -10,9 +10,9 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: c491f0f3-375d-4203-bdf3-234987bbf685
 translation-type: tm+mt
-source-git-commit: 8cf319b54e1a2afa1385f9bea1e946eaad0e60f7
+source-git-commit: 52cefb850f413570d375b1b19f983339d743b486
 workflow-type: tm+mt
-source-wordcount: '2682'
+source-wordcount: '2671'
 ht-degree: 0%
 
 ---
@@ -187,7 +187,7 @@ I följande tabell visas de synkroniseringsåtgärder som har installerats med A
   </tr> 
   <tr> 
    <td>arbetsflöde</td> 
-   <td><p>Startar arbetsflödet som definieras av egenskapen target (endast för sidor) och tar live-kopian som nyttolast.</p> <p>Målsökvägen är sökvägen till modellnoden, till exempel /etc/workflow/models/request_for_activation/jcr:content/model</p> </td> 
+   <td><p>Startar arbetsflödet som definieras av egenskapen target (endast för sidor) och tar live-kopian som nyttolast.</p> <p>Målsökvägen är modellnodens sökväg.</p> </td> 
    <td>mål: (String) Sökvägen till arbetsflödesmodellen.<br /> </td> 
   </tr> 
   <tr> 
@@ -408,11 +408,12 @@ Observera att de underordnade sidorna för den blå sidan ärver konfigurationen
 
 Ange en utrullningskonfiguration som ska användas som systemstandard. Konfigurera OSGi-tjänsten om du vill ange standardvärdet:
 
-* **Dag CQ WCM Live Relationship Manager** som tjänst-PID är `com.day.cq.wcm.msm.impl.LiveRelationshipManagerImpl`
+* **Dag CQ WCM Live Relationship Manager** som tjänst-PID är 
+`com.day.cq.wcm.msm.impl.LiveRelationshipManagerImpl`
 
 Konfigurera tjänsten med [webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) eller en [databasnod](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository).
 
 * I webbkonsolen är namnet på egenskapen som ska konfigureras som standardkonfiguration för utrullning.
 * Om du använder en databasnod är namnet på egenskapen som ska konfigureras `liverelationshipmgr.relationsconfig.default`.
 
-Ange det här egenskapsvärdet som sökvägen till den utrullningskonfiguration som ska användas som systemstandard. Standardvärdet är `/etc/msm/rolloutconfigs/default`, vilket är **standardkonfigurationen** för utrullning.
+Ange det här egenskapsvärdet som sökvägen till den utrullningskonfiguration som ska användas som systemstandard. Standardvärdet är `/libs/msm/wcm/rolloutconfigs/default`, vilket är **standardkonfigurationen** för utrullning.
