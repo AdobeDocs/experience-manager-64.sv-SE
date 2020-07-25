@@ -3,11 +3,12 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: Versionsinformation om AEM 6.4
+user-guide-description: Learn about the latest new features in AEM 6.4 in the release notes.
 translation-type: tm+mt
-source-git-commit: 04002fdd004e11ec7a4a950dac6565fec109e55d
+source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
 workflow-type: tm+mt
-source-wordcount: '68'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -18,9 +19,9 @@ ht-degree: 2%
 + [Allmän versionsinformation](release-notes.md)
 + [Versionsinformation för Service Pack](sp-release-notes.md)
 + [Versionsinformation om ackumulerat korrigeringspaket](cfp-release-notes.md)
-+ [Versionsinformation för AEM Sites](sites.md)
-+ [Versionsinformation om AEM Resurser](assets.md)
-+ [Versionsinformation för AEM Forms](forms.md)
++ [Versionsinformation om AEM Sites](sites.md)
++ [Versionsinformation om AEM Assets](assets.md)
++ [Versionsinformation om AEM Forms](forms.md)
 + [Versionsinformation om AEM Communities](communities-release-notes.md)
 + [Versionsinformation för AEM 3D](aem3d-release-notes.md)
 + [Föråldrade och borttagna funktioner](deprecated-removed-features.md)
