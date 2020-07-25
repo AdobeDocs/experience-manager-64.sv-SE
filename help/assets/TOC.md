@@ -3,8 +3,12 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: Användarhandbok för AEM 6.4 Assets
+user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: a7d6e9fa5d72eba0899f0aadea393fe0e9126a34
+source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -16,12 +20,12 @@ source-git-commit: a7d6e9fa5d72eba0899f0aadea393fe0e9126a34
 + [Om DAM](assets.md)
 + [Förbättrade användarupplevelser](ux-improvements.md)
 + [Metodtips för resurser](best-practices-for-assets.md)
-+ Använd AEM Resurser {#using}
-   + [AEM Assets - startsida](assets-home-page.md)
++ Använd AEM Assets {#using}
+   + [AEM Assets hemsida](assets-home-page.md)
    + [Söka efter resurser i AEM](search-assets.md)
    + [Fulltextsökning i GQL](gql-search.md)
    + [Flerspråkiga resurser](multilingual-assets.md)
-   + [Använda Adobe Stock-mediefiler i AEM Resurser](aem-assets-adobe-stock.md)
+   + [Använda Adobe Stock-mediefiler i AEM Assets](aem-assets-adobe-stock.md)
    + [Granska resurser i mappar och samlingar](bulk-approval.md)
    + [Aktivitetsström på tidslinjen](activity-stream.md)
    + [Bearbeta resurser](assets-workflow.md)
@@ -31,9 +35,9 @@ source-git-commit: a7d6e9fa5d72eba0899f0aadea393fe0e9126a34
    + [Dynamic Media-nyhetsbrev från Experience League](dynamic-media-newsletter.md)
    + [Installera Dynamic Media](administering-dynamic-media.md)
    + [Arbeta med Dynamic Media](dynamic-media.md)
-   + [Konfigurera dynamiska media - Scene7-läge](config-dms7.md)
-   + [Konfigurera dynamiska media - hybridläge](config-dynamic.md)
-   + [Felsökning av dynamiska media - Scene7-läge](troubleshoot-dms7.md)
+   + [Konfigurera Dynamic Media - Scene7-läge](config-dms7.md)
+   + [Konfigurera Dynamic Media - hybridläge](config-dynamic.md)
+   + [Felsöka Dynamic Media - Scene7-läge](troubleshoot-dms7.md)
    + [Hantera Dynamic Media-resurser](managing-assets.md)
    + [Bästa tillvägagångssätt för att optimera bildkvalitet](best-practices-for-optimizing-the-quality-of-your-images.md)
    + [Hantera förinställningar för Dynamic Media Viewer](managing-viewer-presets.md)
@@ -60,7 +64,7 @@ source-git-commit: a7d6e9fa5d72eba0899f0aadea393fe0e9126a34
    + [Leverera optimerade bilder för en responsiv webbplats](responsive-site.md)
    + [Förhandsgranska Dynamic Media-resurser](previewing-assets.md)
    + [Lägga till Dynamic Media-resurser på sidor](adding-dynamic-media-assets-to-pages.md)
-   + [Bädda in läsare för Dynamic Video  eller -bilder på en webbsida](embed-code.md)
+   + [Bädda in läsare för Dynamic-video eller -bilder på en webbsida](embed-code.md)
    + [Länka URL till ett webbprogram](linking-urls-to-yourwebapplication.md)
    + [Omforma URL:er med regeluppsättningar](using-rulesets-to-transform-urls.md)
    + [Publicera Dynamic Media-resurser](publishing-dynamicmedia-assets.md)
@@ -70,12 +74,12 @@ source-git-commit: a7d6e9fa5d72eba0899f0aadea393fe0e9126a34
 + Utöka resurser {#extending}
    + [Anpassa och utöka resurser](extending-assets.md)
    + [Bearbeta resurser med mediehanterare och arbetsflöden](media-handlers.md)
-   + [Utöka resurssökning](searchx.md)
+   + [Extending Assets Search](searchx.md)
    + [Installera och konfigurera ImageMagick så att det fungerar med AEM Assets](best-practices-for-imagemagick.md)
-   + [Integrera resurser med aktivitetsström](extending-activity-stream.md)
-   + [Utöka resursredigeraren](asseteditorx.md)
+   + [Integrating Assets with Activity Stream](extending-activity-stream.md)
+   + [Extending Asset Editor](asseteditorx.md)
    + [HTTP API för Assets](mac-api-assets.md)
-   + [Resursproxyutveckling](proxy.md)
+   + [Assets Proxy Development](proxy.md)
 + Administrera resurser {#administer}
    + [Format som stöds för resurser](assets-formats.md)
    + [Söka efter fasetter](search-facets.md)
@@ -99,7 +103,7 @@ source-git-commit: a7d6e9fa5d72eba0899f0aadea393fe0e9126a34
    + [Använda PDF-rastrering](aem-pdf-rasterizer.md)
    + [Konfigurera överföringsbegränsningar för resurser](configuring-asset-upload-restrictions.md)
    + [Bästa praxis för integrering av AEM och Creative Cloud](aem-cc-integration-best-practices.md)
-   + [Integrera AEM-resurser med InDesign-server](indesign.md)
+   + [Integrera AEM Assets med InDesign-server](indesign.md)
    + [Metadataprofiler](metadata-profiles.md)
    + [Digital Rights Management i Assets](drm.md)
    + [Använda demopaket för tillgångsinsikter](touch-ui-using-demo-package-for-asset-insights.md)
@@ -119,7 +123,7 @@ source-git-commit: a7d6e9fa5d72eba0899f0aadea393fe0e9126a34
    + [Metadataschema för mapp](folder-metadata-schema.md)
    + [Hantera smarta taggar](managing-smart-tags.md)
 + Varumärkesportal {#brandportal}
-   + [Konfigurera AEM-resurser med varumärkesportalen](configure-aem-assets-with-brand-portal.md)
+   + [Konfigurera AEM Assets med varumärkesportalen](configure-aem-assets-with-brand-portal.md)
    + [Publicera resurser på varumärkesportalen](brand-portal-publish-assets.md)
    + [Publicera samlingar på varumärkesportalen](brand-portal-publish-collection.md)
    + [Publicera mappar på varumärkesportalen](brand-portal-publish-folder.md)
