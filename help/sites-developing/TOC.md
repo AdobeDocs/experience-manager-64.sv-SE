@@ -3,8 +3,12 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.4 Developing User Guide
+user-guide-description: This guide covers how to build out your AEM instance.
 translation-type: tm+mt
-source-git-commit: 44f2d12a5261f0649319f84516856c9522e0df62
+source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -29,10 +33,10 @@ source-git-commit: 44f2d12a5261f0649319f84516856c9522e0df62
    + [Skapa en webbplats med alla funktioner (Classic UI)](website.md)
    + [Designer och Designer (Classic UI)](designer.md)
 + Platform{#platform}
-   + [Sling Cheatsheet](sling-cheatsheet.md)
-   + [Använda delningsadaptrar](sling-adapters.md)
+   + [Fusklapp för Sling](sling-cheatsheet.md)
+   + [Använda Sling-adaptrar](sling-adapters.md)
    + [Taggbibliotek](taglib.md)
-   + Templates{#templates}
+   + Mallar{#templates}
       + [Mallar](templates.md)
       + [Sidmallar - redigerbara ](page-templates-editable.md)
       + [Sidmallar - statiska](page-templates-static.md)
@@ -46,8 +50,8 @@ source-git-commit: 44f2d12a5261f0649319f84516856c9522e0df62
       + [Implementera en anpassad predikatutvärderare för Query Builder](implementing-custom-predicate-evaluator.md)
       + [Predikatreferens för Query Builder](querybuilder-predicate-reference.md)
       + [Query Builder API](querybuilder-api.md)
-   + Taggning{#tagging}
-      + [Taggning](tags.md)
+   + Taggar{#tagging}
+      + [Taggar](tags.md)
       + [AEM Tagging Framework](framework.md)
       + [Bygga taggar i ett AEM-program](building.md)
    + [Anpassa sidor som visas av felhanteraren](customizing-errorhandler-pages.md)
@@ -147,7 +151,7 @@ source-git-commit: 44f2d12a5261f0649319f84516856c9522e0df62
    + [Anpassa konsolerna](customizing-consoles-touch.md)
    + [Anpassa vyer av Sidegenskaper](page-properties-views.md)
    + [Konfigurera din sida för gruppredigering av sidegenskaper](bulk-editing.md)
-   + [Anpassa och utöka innehållsfragment](customizing-content-fragments.md)
+   + [Anpassa och utöka Content Fragments](customizing-content-fragments.md)
    + Utöka arbetsflöden{#extending-workflows}
       + [Utveckla och utöka arbetsflöden](workflows.md)
       + [Skapa arbetsflödesmodeller](workflows-models.md)
@@ -157,14 +161,14 @@ source-git-commit: 44f2d12a5261f0649319f84516856c9522e0df62
       + [Bästa praxis för arbetsflöden](workflows-best-practices.md)
       + [Referens för arbetsflödesprocess](workflows-process-ref.md)
    + [Utöka Multi Site Manager](extending-msm.md)
-   + Spårning och analys{#extending-analytics}
+   + Spårning och Analytics{#extending-analytics}
       + [Utöka händelsespårning](extending-analytics.md)
-      + [Lägga till Adobe Analytics-spårning i komponenter](extending-analytics-components.md)
+      + [Lägga till Adobe Analytics Tracking i komponenter](extending-analytics-components.md)
       + [Anpassa Adobe Analytics Framework](extending-analytics-framework.md)
-      + [Implementera sidnamngivning på serversidan för analys](extending-analytics-pa-naming.md)
-   + Molntjänster{#extending-cloud-services}
-      + [Konfigurationer av molntjänster](extending-cloud-config.md)
-      + [Skapa en anpassad molntjänst](extending-cloud-config-custom-cloud.md)
+      + [Implementera sidnamngivning på serversidan för Analytics](extending-analytics-pa-naming.md)
+   + Cloud Services{#extending-cloud-services}
+      + [Cloud Service Configurations](extending-cloud-config.md)
+      + [Skapa en anpassad Cloud Service](extending-cloud-config-custom-cloud.md)
    + [Skapa anpassade tillägg](extending-campaign-extensions.md)
    + Formulär{#extending-forms}
       + [Skapa anpassade formulärmappningar](extending-campaign-form-mapping.md)
