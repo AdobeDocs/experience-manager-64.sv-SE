@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.4 Authoring User Guide
+user-guide-title: Användarhandbok för AEM 6.4-redigering
+user-guide-description: Learn key concepts for creating content and authoring in AEM.
 translation-type: tm+mt
-source-git-commit: 3a1b35b9b6591953dd6e8c03490aee15aa0780d2
+source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -47,7 +51,7 @@ source-git-commit: 3a1b35b9b6591953dd6e8c03490aee15aa0780d2
    + [Komponentkonsol](default-components-console.md)
    + [Responsiv layout](responsive-layout.md)
    + [Content Insight](content-insights.md)
-   + [Skapa hjälpmedelsanpassat innehåll (WCAG 2.0-överensstämmelse)](creating-accessible-content.md)
+   + [Skapa tillgängligt innehåll (WCAG 2.0-överensstämmelse)](creating-accessible-content.md)
    + [Ställning](scaffolding.md)
    + [Konfigurera komponenter i designläge](default-components-designmode.md)
    + [Foundation Components](default-components-foundation.md)
@@ -71,8 +75,8 @@ source-git-commit: 3a1b35b9b6591953dd6e8c03490aee15aa0780d2
 + Sidprestanda {#page-performance}
    + [Content Insight](content-insights.md)
    + [Analyserar sidprestanda](ci-analyze.md)
-   + [Visa sidanalysdata](pa-using.md)
-   + [Lägga till sök&amp;höj upp funktioner på din sida](search-and-promote.md)
+   + [Visa Analytics-data för sidan](pa-using.md)
+   + [Lägga till Search&amp;Promote på sidan](search-and-promote.md)
 + Personanpassning {#personalization}
    + [Personanpassning](personalization.md)
    + [Förhandsgranska sidor med ContextHub-data](ch-previewing.md)
@@ -86,6 +90,6 @@ source-git-commit: 3a1b35b9b6591953dd6e8c03490aee15aa0780d2
 + AEM och Adobe Campaign {aem-adobe-campaign}
    + [Arbeta med Adobe Campaign](adobe-campaign.md)
    + [Arbeta med Adobe Campaign Classic och Adobe Campaign Standard](campaign.md)
-   + [Inrikta er på Adobe Campaign](target-adobe-campaign.md)
+   + [Inrikta er mot Adobe Campaign](target-adobe-campaign.md)
    + [Skapa Adobe Campaign-formulär i AEM](adobe-campaign-forms.md)
    + [Adobe Campaign-komponenter](adobe-campaign-components.md)
