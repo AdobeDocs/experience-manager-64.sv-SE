@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.4 Communities User Guide
+user-guide-title: Användarhandbok för AEM 6.4 Communities
+user-guide-description: Create online experiences such as forums, user groups, learning resources, and other social features.
 translation-type: tm+mt
-source-git-commit: 1e867debcc1bfeed3abc4240796c9f2c2850167f
+source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -31,12 +35,12 @@ source-git-commit: 1e867debcc1bfeed3abc4240796c9f2c2850167f
    + [Distribuera webbgrupper](deploy-communities.md)
    + [Uppgradera till AEM 6.4 Communities](upgrade.md)
    + [Rekommenderade topologier för communities](topologies.md)
-   + [Konfigurera Dispatcher för Communities](dispatcher.md)
+   + [Konfigurera Dispatcher för webbgrupper](dispatcher.md)
 + Administratör {#administer}
    + [Tjänsten för hantering av användare och användargenererat innehåll i AEM Communities](user-ugc-management-service.md)
    + [Communities Sites](administer-landing.md)
    + [Communities-konsoler](consoles.md)
-   + [Analyskonfiguration för communityfunktioner](analytics.md)
+   + [Analytics Configuration for Communities - funktioner](analytics.md)
    + [Konfigurera aktiveringsfunktioner](enablement.md)
    + [Konfigurerar meddelanden](messaging.md)
    + [Moderating Community Content](moderate-ugc.md)
