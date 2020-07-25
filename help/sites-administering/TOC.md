@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: admin-user
-user-guide-title: AEM 6.4 Administering User Guide
+user-guide-title: Användarhandbok för AEM 6.4-administration
+user-guide-description: Learn about administering AEM.
 translation-type: tm+mt
-source-git-commit: 2cd539dd645f1e3a823a17b57410ca4b9fc1364a
+source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -68,8 +72,8 @@ source-git-commit: 2cd539dd645f1e3a823a17b57410ca4b9fc1364a
    + [Säkerhetschecklista](security-checklist.md)
    + [OWASP Top 10](owasp-top10.md)
    + [Köra AEM i produktionsklart läge](production-ready.md)
-   + [Identitetshantering](identity-management.md)
-   + [Adobe IMS-autentisering och stöd för Admin Console för AEM-hanterade tjänster](ims-config-and-admin-console.md)
+   + [Identity Management](identity-management.md)
+   + [Adobe IMS-autentisering och Admin Console-stöd för AEM Managed Services](ims-config-and-admin-console.md)
    + [Skapa en stängd användargrupp](cug.md)
    + [Åtgärda serialiseringsproblem i AEM](mitigating-serialization-issues.md)
    + [Användarsynkronisering](sync.md)
@@ -115,7 +119,7 @@ source-git-commit: 2cd539dd645f1e3a823a17b57410ca4b9fc1364a
    + [Mappa komponentdata med Adobe Analytics-egenskaper](adobeanalytics-mapping.md)
    + [Konfigurera videospårning för Adobe Analytics](adobeanalytics-video.md)
    + [Vanliga frågor om leverans av innehåll med HTTP2](scene7-http2faq.md)
-   + [Felsöka Adobe Campaign-integrationen](troubleshooting-campaignintegration.md)
+   + [Felsöka integreringen med Adobe Campaign](troubleshooting-campaignintegration.md)
    + [SharePoint Connector-licenser, copyrightmeddelanden och friskrivningsklausuler](sharepoint-connector-licenses.md)
    + [SharePoint-anslutning](sharepoint-connector.md)
    + [Vanliga frågor om att DHTML Viewer upphör](dhtml-viewer-endoflifefaqs.md)
@@ -134,18 +138,18 @@ source-git-commit: 2cd539dd645f1e3a823a17b57410ca4b9fc1364a
    + [Integrera med BrightEdge Content Optimizer](brightedge.md)
    + [Metodtips för e-postmallar](best-practices-for-email-templates.md)
    + [Katalogproducent](catalog-producer.md)
-   + [Konfigurera AEM Assets-integrering med Experience Cloud och Creative Cloud](configure-assets-cc-integration.md)
+   + [Konfigurera integrering av AEM Assets med Experience Cloud och Creative Cloud](configure-assets-cc-integration.md)
    + [Integrera med Silverpop Engage](silverpop.md)
    + [Integrera med Adobe Campaign](campaign.md)
    + [Integrera med ExactTarget](exacttarget.md)
-   + [Analyser med externa leverantörer](external-providers.md)
+   + [Analytics med externa leverantörer](external-providers.md)
    + [Integrera med Adobe Marketing Cloud](marketing-cloud.md)
-   + [Konfigurera integrationen med Adobe Target manuellt](target-configuring.md)
-   + [Krav för integrering med Adobe Target](target-requirements.md)
+   + [Konfigurera integreringen med Adobe Target manuellt](target-configuring.md)
+   + [Förutsättningar för integrering med Adobe Target](target-requirements.md)
    + [Adobe-klassificeringar](adobeanalytics-classifications.md)
    + [Integrera med Adobe Search&amp;Promote](search-and-promote.md)
    + [Lösningsintegrering](integration.md)
-   + [Målintegrering med upplevelsefragment](experience-fragments-target.md)
+   + [Target-integrering med Experience Fragments](experience-fragments-target.md)
    + [Metodtips för e-postmallar](best-practices-for-email-templates.md)
 + Bästa praxis {#bestpractices}
    + [Bästa praxis](administer-best-practices.md)
