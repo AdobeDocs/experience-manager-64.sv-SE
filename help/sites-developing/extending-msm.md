@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fd393bb9-f77e-4fe0-a7a9-97181ca58136
 translation-type: tm+mt
-source-git-commit: 3309352520878fd5b2bff91ce4d18d5b1a90b97d
+source-git-commit: 6d0bd714548e62dcb63298e3d26c84c1a3d37bc9
 workflow-type: tm+mt
-source-wordcount: '2598'
+source-wordcount: '2597'
 ht-degree: 0%
 
 ---
@@ -85,7 +85,7 @@ A `Blueprint` (som i [designkonfigurationen](/help/sites-administering/msm.md#so
 
    * När du konfigurerar en live-kopia för första gången används också en RolloutConfig (som utlöser LiveActions).
 
-### Skapa en ny synkroniseringsåtgärd {#creating-a-new-synchronization-action}
+## Skapa en ny synkroniseringsåtgärd {#creating-a-new-synchronization-action}
 
 Skapa anpassade synkroniseringsåtgärder som du kan använda med dina utrullningskonfigurationer. Skapa en synkroniseringsåtgärd när de [installerade åtgärderna](/help/sites-administering/msm-sync.md#installed-synchronization-actions) inte uppfyller dina specifika programkrav. Skapa då två klasser:
 
@@ -105,7 +105,7 @@ I `LiveActionFactory` skapas instanser av `LiveAction` klassen för en viss konf
    * `createAction`: Skapar en instans av `LiveAction`. Den valfria `Resource` parametern kan användas för att tillhandahålla konfigurationsinformation.
    * `createsAction`: Returnerar namnet på associerat `LiveAction`objekt.
 
-#### Åtkomst till konfigurationsnoden för LiveAction {#accessing-the-liveaction-configuration-node}
+### Åtkomst till konfigurationsnoden för LiveAction {#accessing-the-liveaction-configuration-node}
 
 Använd konfigurationsnoden i databasen för att lagra information som påverkar `LiveAction` `LiveAction` instansens körningsbeteende. Noden i databasen som lagrar `LiveAction` konfigurationen är tillgänglig för `LiveActionFactory` objektet vid körning. Därför kan du lägga till egenskaper i konfigurationsnoden och använda dem i din `LiveActionFactory` implementering efter behov.
 
@@ -125,7 +125,7 @@ public LiveAction createAction(Resource resource) throws WCMException {
 }
 ```
 
-#### Åtkomst till Target-noder, källnoder och LiveRelationship {#accessing-target-nodes-source-nodes-and-the-liverelationship}
+### Åtkomst till Target-noder, källnoder och LiveRelationship {#accessing-target-nodes-source-nodes-and-the-liverelationship}
 
 Följande objekt anges som parametrar för `execute` metoden för `LiveAction` objektet:
 
@@ -150,7 +150,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 >
 >Argumenten kan vara `Resource` eller `null` objekt som inte anpassar sig till `Resources` objekt, t.ex. `Node` [`NonExistingResource`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/NonExistingResource.html) objekt.
 
-### Skapa en ny utrullningskonfiguration {#creating-a-new-rollout-configuration}
+## Skapa en ny utrullningskonfiguration {#creating-a-new-rollout-configuration}
 
 Skapa en utrullningskonfiguration när de installerade utrullningskonfigurationerna inte uppfyller dina programkrav:
 
@@ -163,7 +163,7 @@ Den nya utrullningskonfigurationen är sedan tillgänglig för dig när du stäl
 >
 >Se även de [bästa sätten att anpassa rollouts](/help/sites-administering/msm-best-practices.md#customizing-rollouts).
 
-#### Skapa utrullningskonfiguration {#create-the-rollout-configuration}
+### Skapa utrullningskonfiguration {#create-the-rollout-configuration}
 
 Så här skapar du en ny utrullningskonfiguration:
 
@@ -212,7 +212,7 @@ Så här skapar du en ny utrullningskonfiguration:
 
 1. Klicka på **Spara alla**.
 
-#### Lägg till synkroniseringsåtgärder i utrullningskonfigurationen {#add-synchronization-actions-to-the-rollout-configuration}
+### Lägg till synkroniseringsåtgärder i utrullningskonfigurationen {#add-synchronization-actions-to-the-rollout-configuration}
 
 Utrullningskonfigurationer lagras under den [rollout-konfigurationsnod](#create-the-rollout-configuration) som du har skapat under `/apps/msm/<your-project>/rolloutconfigs` noden.
 
@@ -233,7 +233,7 @@ Namnet måste vara detsamma som **åtgärdsnamnet** i tabellen under [Synkronise
 
 1. Klicka på **Spara alla**.
 
-### Skapa och använda en enkel LiveActionFactory-klass {#creating-and-using-a-simple-liveactionfactory-class}
+## Skapa och använda en enkel LiveActionFactory-klass {#creating-and-using-a-simple-liveactionfactory-class}
 
 Följ anvisningarna i det här avsnittet för att utveckla ett `LiveActionFactory` program och använda det i en utrullningskonfiguration. Processerna använder Maven och Eclipse för att utveckla och driftsätta `LiveActionFactory`:
 
@@ -252,7 +252,7 @@ Koden för den här sidan finns på GitHub
 * [Open ExperienceManager-java-msmrollout-projekt på GitHub](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout)
 * Hämta projektet som [en ZIP-fil](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout/archive/master.zip)
 
-#### Skapa projektet Maven {#create-the-maven-project}
+### Skapa projektet Maven {#create-the-maven-project}
 
 Följande procedur kräver att du har lagt till adobe-public-profilen i Maven-inställningsfilen.
 
@@ -278,7 +278,7 @@ Följande procedur kräver att du har lagt till adobe-public-profilen i Maven-in
 
 1. Starta Eclipse och [importera projektet](/help/sites-developing/howto-projects-eclipse.md#import-the-maven-project-into-eclipse)Maven.
 
-#### Lägg till beroenden till POM-filen {#add-dependencies-to-the-pom-file}
+### Lägg till beroenden till POM-filen {#add-dependencies-to-the-pom-file}
 
 Lägg till beroenden så att Eclipse-kompilatorn kan referera till de klasser som används i `LiveActionFactory` koden.
 
@@ -368,7 +368,7 @@ Lägg till beroenden så att Eclipse-kompilatorn kan referera till de klasser so
     </dependency>
    ```
 
-#### Implementera LiveActionFactory {#implement-liveactionfactory}
+### Implementera LiveActionFactory {#implement-liveactionfactory}
 
 Följande `LiveActionFactory` klass implementerar en `LiveAction` som loggar meddelanden om käll- och målsidorna och kopierar `cq:lastModifiedBy` egenskapen från källnoden till målnoden. Den aktiva åtgärdens namn är `exampleLiveAction`.
 
@@ -534,7 +534,7 @@ Följande `LiveActionFactory` klass implementerar en `LiveAction` som loggar med
    13.08.2013 14:34:55.454 *INFO* [OsgiInstallerImpl] org.apache.sling.audit.osgi.installer Started bundle com.adobe.example.msm.MyLiveActionFactory-bundle [316]
    ```
 
-#### Skapa exempelkonfigurationen {#create-the-example-rollout-configuration}
+### Skapa exempelkonfigurationen {#create-the-example-rollout-configuration}
 
 Skapa den MSM-introduktionskonfiguration som använder `LiveActionFactory` den som du skapade:
 
@@ -544,7 +544,7 @@ Skapa den MSM-introduktionskonfiguration som använder `LiveActionFactory` den s
    * **Namn**: examplerolloutconfig
    * **cq:trigger**: `publish`
 
-#### Lägg till Live-åtgärden i exempelkonfigurationen för utrullning {#add-the-live-action-to-the-example-rollout-configuration}
+### Lägg till Live-åtgärden i exempelkonfigurationen för utrullning {#add-the-live-action-to-the-example-rollout-configuration}
 
 Konfigurera den utrullningskonfiguration som du skapade i föregående procedur så att den använder `ExampleLiveActionFactory` klassen.
 
@@ -565,7 +565,7 @@ Konfigurera den utrullningskonfiguration som du skapade i föregående procedur 
 
 1. Klicka på **Spara alla**.
 
-#### Skapa Live Copy {#create-the-live-copy}
+### Skapa Live Copy {#create-the-live-copy}
 
 [Skapa en live-kopia](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page) av engelska/produkter-grenen av referenswebbplatsen för Vi.Retail med din rollout-konfiguration:
 
@@ -581,7 +581,7 @@ Aktivera sidan **Produkter** (engelska) i källgrenen och observera de loggmedde
 ```
 
 <!--
-### Removing the Chapters Step in the Create Site Wizard {#removing-the-chapters-step-in-the-create-site-wizard}
+## Removing the Chapters Step in the Create Site Wizard {#removing-the-chapters-step-in-the-create-site-wizard}
 
 In some cases, the **Chapters** selection is not required in the create site wizard (only the **Languages** selection is required). To remove this step in the default We.Retail English blueprint:
 
@@ -600,7 +600,7 @@ In some cases, the **Chapters** selection is not required in the create site wiz
     1. **Name** = `xtype`; **Type** = `String`; **Value** = `hidden`
 -->
 
-### Ändra språknamn och standardländer {#changing-language-names-and-default-countries}
+## Ändra språknamn och standardländer {#changing-language-names-and-default-countries}
 
 AEM använder en standarduppsättning med språk- och landskoder.
 
@@ -630,9 +630,7 @@ Så här ändrar du språk:
 
    Ge den nya mappen ett namn `wcm`.
 
-1. Upprepa föregående steg för att skapa `/apps/wcm/core` mappträdet. Skapa en nod av typen `sling:Folder` i kärnan som kallas `resources`.
-
-   ![chlimage_1-39](assets/chlimage_1-39.png)
+1. Upprepa föregående steg för att skapa `/apps/wcm/core` mappträdet. Skapa en nod av typen `sling:Folder` i kärnan som kallas `resources`. <!-- ![chlimage_1-39](assets/chlimage_1-39.png) -->
 
 1. Högerklicka på `/libs/wcm/core/resources/languages` noden och klicka på **Kopiera**.
 1. Högerklicka på `/apps/wcm/core/resources` mappen och klicka på **Klistra in**. Ändra de underordnade noderna efter behov.
@@ -642,7 +640,7 @@ Så här ändrar du språk:
 
    ![chlimage_1-40](assets/chlimage_1-40.png)
 
-### Konfigurera MSM-lås på sidegenskaper (pekaktiverat gränssnitt) {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
+## Konfigurera MSM-lås på sidegenskaper (pekaktiverat gränssnitt) {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
 
 När du skapar en anpassad sidegenskap kan du behöva fundera på om den nya egenskapen ska kunna rullas ut till alla live-kopior.
 
