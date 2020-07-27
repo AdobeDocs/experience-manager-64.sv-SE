@@ -5,10 +5,10 @@ audience: end-user
 user-guide-title: Användarhandbok för AEM 6.4-redigering
 user-guide-description: Learn key concepts for creating content and authoring in AEM.
 translation-type: tm+mt
-source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+source-git-commit: e0b25517821971098978db078b2f205a8a380459
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '267'
+ht-degree: 42%
 
 ---
 
@@ -87,7 +87,7 @@ ht-degree: 0%
    + [Hantera målgrupper](managing-audiences.md)
    + [Skapa och hantera erbjudanden](offerlib.md)
    + [Förstå segmentering](segmentation-overview.md)
-+ AEM och Adobe Campaign {aem-adobe-campaign}
++ AEM och Adobe Campaign {#aem-adobe-campaign}
    + [Arbeta med Adobe Campaign](adobe-campaign.md)
    + [Arbeta med Adobe Campaign Classic och Adobe Campaign Standard](campaign.md)
    + [Inrikta er mot Adobe Campaign](target-adobe-campaign.md)
