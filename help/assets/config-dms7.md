@@ -10,7 +10,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: cd3adbac-9868-4838-9d8a-37dde8973df4
 translation-type: tm+mt
-source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
+source-git-commit: 92017a4c2c9ab9f139440e40f368958bcc3bb2ef
 workflow-type: tm+mt
 source-wordcount: '5139'
 ht-degree: 3%
@@ -24,12 +24,12 @@ Om du använder Adobe Experience Manager som konfigurerats för olika miljöer, 
 
 ## Arkitektur för Dynamic Media - Scene7-läge {#architecture-diagram-of-dynamic-media-scene-mode}
 
-I följande arkitekturdiagram beskrivs hur Dynamic Media - Scene7-läge fungerar.
+I följande arkitekturdiagram beskrivs hur Dynamic Media - Scene7-läget fungerar.
 
-Med den nya arkitekturen ansvarar AEM för överordnad material och synkronisering med Dynamic Media för bearbetning och publicering av material:
+Med den nya arkitekturen ansvarar AEM för överordnad resurser och synkronisering med Dynamic Media för bearbetning och publicering av resurser:
 
 1. När den överordnad resursen överförs till AEM replikeras den till Dynamic Media. Då hanterar Dynamic Media all bearbetning och generering av resurser, till exempel videokodning och dynamiska varianter av en bild.
-1. När återgivningarna har genererats kan AEM på ett säkert sätt komma åt och förhandsgranska de fjärranslutna Dynamic Media (inga binärfiler skickas tillbaka till AEM-instansen).
+1. När återgivningarna har genererats kan AEM på ett säkert sätt få åtkomst till och förhandsgranska de fjärranslutna Dynamic Media (inga binärfiler skickas tillbaka till den AEM instansen).
 1. När innehållet är klart att publiceras och godkännas utlöses Dynamic Media-tjänsten att skicka ut innehåll till leveransservrar och cachelagra innehåll på CDN.
 
 ![chlimage_1](assets/chlimage_1.png)
@@ -40,9 +40,9 @@ Med den nya arkitekturen ansvarar AEM för överordnad material och synkroniseri
 
 >[ANMÄRKNING]
 >
->Dynamic Media - Scene7-läget är endast till för AEM Author. Därför måste du konfigurera `runmode=dynamicmedia_scene7`på AEM Author-instansen, inte AEM Publish-instansen.
+>Dynamic Media - Scene7-läget är endast för instansen AEM Author. Därför måste du konfigurera `runmode=dynamicmedia_scene7`på AEM Author-instansen, inte AEM Publish-instansen.
 
-Om du vill aktivera Dynamic Media måste du starta AEM med `dynamicmedia_scene7` körningsläget från kommandoraden genom att ange följande i ett terminalfönster (exempelporten är 4502):
+Om du vill aktivera Dynamic Media måste du starta AEM med `dynamicmedia_scene7` runmode från kommandoraden genom att ange följande i ett terminalfönster (exempelporten är 4502):
 
 ```shell
 java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.4.0.jar -gui -r author,dynamicmedia_scene7 -p 4502
@@ -50,11 +50,11 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 ## (Valfritt) Migrera förinställningar och konfigurationer för Dynamic Media från 6.3 till 6.4 utan driftstopp {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
-Om du uppgraderar AEM-Dynamic Media från 6.3 till 6.4 (som nu innehåller funktioner för att inte ha några driftavbrott) måste du köra följande kommando för att migrera alla förinställningar och konfigurationer från `/etc` till `/conf` i CRXDE Lite.
+Om du uppgraderar AEM Dynamic Media från 6.3 till 6.4 (som nu innehåller möjligheten till noll driftsättningar under driftstopp), måste du köra följande kommando för att migrera alla dina förinställningar och konfigurationer från `/etc` till `/conf` i CRXDE Lite.
 
 >[ANMÄRKNING]
 >
->Om du kör AEM-instansen i kompatibilitetsläge, d.v.s. har kompatibilitetspaketet installerat, behöver du inte köra dessa kommandon.
+>Om du kör AEM i kompatibilitetsläge, d.v.s. har kompatibilitetspaketet installerat, behöver du inte köra dessa kommandon.
 
 Om du vill migrera dina anpassade förinställningar och konfigurationer från `/etc` till `/conf`kör du följande Linux-kommando:
 
@@ -66,7 +66,7 @@ För alla uppgraderingar, antingen med eller utan kompatibilitetspaketet, kan du
 
 ## (Valfritt) Installera funktionspaket 18912 för migrering av bulkresurser {#installing-feature-pack}
 
-Med funktionspaketet 18912 kan du antingen importera resurser gruppvis via FTP eller migrera resurser från antingen Dynamic Media - hybrid- eller Dynamic Media Classic till Dynamic Media - Scene7-läge på AEM. Den kan fås från Adobe Professional Services.
+Med funktionspaketet 18912 kan du antingen importera resurser gruppvis via FTP eller migrera resurser från antingen Dynamic Media - hybridläge eller Dynamic Media Classic till Dynamic Media - Scene7-läge AEM. Den kan fås från Adobe Professional Services.
 
 Mer information finns i [Installera funktionspaket 18912 för migrering](bulk-ingest-migrate.md) av gruppresurser.
 
@@ -80,7 +80,7 @@ Mer information finns i [Installera funktionspaket 18912 för migrering](bulk-in
 
 Så här konfigurerar du Dynamic Media-Cloud Service:
 
-1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen, trycker på verktygsikonen och sedan på **[!UICONTROL Cloud Services > Dynamic Media Configuration]**.
+1. I AEM trycker du på den AEM logotypen för att komma åt den globala navigeringskonsolen, trycker på verktygsikonen och sedan på **[!UICONTROL Cloud Services > Dynamic Media Configuration]**.
 1. Tryck på **[!UICONTROL global]** och tryck i den vänstra rutan på sidan Dynamic Media Configuration Browser (Konfigurationsläsare) **[!UICONTROL Create]**. Tryck inte på eller välj mappikonen till vänster om [!UICONTROL global].
 1. På [!UICONTROL Create Dynamic Media Configuration] sidan anger du en titel, Dynamic Media-kontots e-postadress, lösenord och väljer sedan region. Dessa tillhandahålls av Adobe i e-postmeddelandet om etablering. Kontakta supporten om du inte fått detta.
 
@@ -95,7 +95,7 @@ Så här konfigurerar du Dynamic Media-Cloud Service:
    * **[!UICONTROL Company]** - namnet på Dynamic Media-kontot. Det är möjligt att du har flera Dynamic Media för olika undervarumärken, divisioner eller olika mellanlagrings-/produktionsmiljöer.
    * **[!UICONTROL Company Root Folder Path]**
    * **[!UICONTROL Publishing Assets]** - alternativet **[!UICONTROL Immediately]** innebär att när resurser överförs, importeras resurserna och URL/Embed anges omedelbart. Ingen användaråtgärd krävs för att publicera resurser. Alternativet **[!UICONTROL Upon Activation]** innebär att du måste publicera resursen explicit innan en URL/Embed-länk anges.
-   * **[!UICONTROL Secure Preview Server]** - gör att du kan ange URL-sökvägen till förhandsgranskningsservern för säkra återgivningar. Det innebär att när återgivningarna har genererats kan AEM på ett säkert sätt komma åt och förhandsgranska de fjärranslutna Dynamic Media (inga binärfiler skickas tillbaka till AEM-instansen).
+   * **[!UICONTROL Secure Preview Server]** - gör att du kan ange URL-sökvägen till förhandsgranskningsservern för säkra återgivningar. Det innebär att när återgivningarna har genererats kan AEM på ett säkert sätt komma åt och förhandsgranska de fjärranslutna Dynamic Media (inga binärfiler skickas tillbaka till den AEM instansen).
 
       Om du inte har ett särskilt arrangemang för att använda ditt företags server eller en speciell server rekommenderar Adobe att du använder standardinställningen.
    >[!NOTE]
@@ -107,7 +107,7 @@ Så här konfigurerar du Dynamic Media-Cloud Service:
    ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
 1. Tryck på **[!UICONTROL Save]**.
-1. Om du vill förhandsgranska Dynamic Media-innehåll på ett säkert sätt innan det publiceras måste du tillåtslista AEM-författarinstansen för att ansluta till Dynamic Media:
+1. Om du vill förhandsgranska Dynamic Media-innehåll på ett säkert sätt innan det publiceras måste du tillåtslista den AEM författarinstansen för att ansluta till Dynamic Media:
 
    * Logga in på ditt Dynamic Media Classic-konto: [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html). Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
    * Tryck på i navigeringsfältet uppe till höger på sidan **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]**.
@@ -122,7 +122,7 @@ Om du vill anpassa konfigurationen ytterligare kan du utföra alla åtgärder un
 
 ## (Valfritt) Konfigurera avancerade inställningar i Dynamic Media - Scene7-läge {#optional-configuring-advanced-settings-in-dynamic-media-scene-mode}
 
-Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media - Scene7-läget ytterligare eller optimera dess prestanda kan du utföra en eller flera av följande valfria uppgifter:
+Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media - Scene7 eller optimera prestandan ytterligare kan du utföra en eller flera av följande valfria uppgifter:
 
 * [(Valfritt) Konfigurera och konfigurera Dynamic Media - Inställningar för Scene7-läge](#optional-setup-and-configuration-of-dynamic-media-scene-mode-settings-p)
 
@@ -131,7 +131,7 @@ Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media - Scene7
 
 ### (Valfritt) Konfigurera och konfigurera Dynamic Media - Inställningar för Scene7-läge</p> {#optional-setup-and-configuration-of-dynamic-media-scene-mode-settings-p}
 
-När du är i körningsläge **dynamicmedia_scene7** använder du användargränssnittet i Dynamic Media Classic (Scene7) för att göra ändringar i Dynamic Medias inställningar.
+När du är i körningsläge **dynamicmedia_scene7** använder du användargränssnittet i Dynamic Media Classic (Scene7) för att göra ändringar i Dynamic Media-inställningarna.
 
 Vissa av ovanstående uppgifter kräver att du loggar in i Dynamic Media Classic här: [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
 
@@ -164,7 +164,7 @@ Bildserverskärmen anger standardinställningar för att leverera bilder. En bes
 
 Öppna [!UICONTROL Application General Settings] sidan genom att trycka på **[!UICONTROL Setup > Application Setup > General Settings]** i fältet Global navigering i Dynamic Media Classic.
 
-**[!UICONTROL Servers]** - Vid kontoetablering tillhandahåller Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen såvida inte AEM-stödet uttryckligen har instruerat att göra det.
+**[!UICONTROL Servers]** - Vid kontoetablering tillhandahåller Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen om du inte uttryckligen har fått instruktioner om att göra det av AEM.
 
 **[!UICONTROL Overwrite Images]** - två filer kan inte ha samma namn i Dynamic Media. Varje objekts URL-ID (filnamnet minus filtillägget) måste vara unikt. De här alternativen anger hur ersättningsresurser överförs: om de ersätter originalet eller blir dubbletter. Duplicerade resurser får ett nytt namn med namnet&quot;-1&quot; (till exempel heter stol.tif stol-1.tif). Dessa alternativ påverkar resurser som överförts till en annan mapp än den ursprungliga eller resurser med ett annat filnamnstillägg än den ursprungliga (till exempel JPG, TIF eller PNG).
 
@@ -172,7 +172,7 @@ Bildserverskärmen anger standardinställningar för att leverera bilder. En bes
 
 >[!NOTE]
 >
->Välj **[!UICONTROL Overwrite in current folder, same base image name/extension]** om du vill ha enhetlighet med AEM.
+>Välj **[!UICONTROL Overwrite in current folder, same base image name/extension]** om du vill vara konsekvent med AEM.
 
 * **[!UICONTROL Overwrite in any folder, same base asset name/extension]** - Kräver att ersättningsbilden har samma filnamnstillägg som den ursprungliga bilden (till exempel ersätts `chair.jpg` och inte `chair.jpg` `chair.tif`). Du kan dock överföra ersättningsbilden till en annan mapp än den ursprungliga. Den uppdaterade bilden finns i den nya mappen; filen inte längre kan hittas på sin ursprungliga plats.
 * **[!UICONTROL Overwrite in any folder, same base asset name regardless of extension]** - Det här alternativet är den mest omfattande ersättningsregeln. Du kan överföra en ersättningsbild till en annan mapp än den ursprungliga, överföra en fil med ett annat filnamnstillägg och ersätta den ursprungliga filen. Om originalfilen finns i en annan mapp finns ersättningsbilden i den nya mappen som den överfördes till.
@@ -228,7 +228,7 @@ Se [Överföra resurser](managing-assets-touch-ui.md#uploading-assets).
 
 **Så här konfigurerar du bearbetning** av resurser:
 
-1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen, trycker sedan på **[!UICONTROL Tools]** -ikonen (hammer) och navigerar till **[!UICONTROL General > CRXDE Lite]**.
+1. I AEM trycker du på den AEM logotypen för att komma åt den globala navigeringskonsolen, sedan trycker du på ikonen **[!UICONTROL Tools]** (hammer) och navigerar till **[!UICONTROL General > CRXDE Lite]**.
 1. Navigera till följande i den vänstra listen:
 
    `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`
@@ -244,7 +244,7 @@ Se [Överföra resurser](managing-assets-touch-ui.md#uploading-assets).
 1. Gör något av följande:
 
    * Upprepa steg 3-4 om du vill redigera ytterligare MIME-typer.
-   * Tryck på **[!UICONTROL Save All]** på menyraden på sidan CRXDE Lite.
+   * Tryck på i menyraden på CRXDE Lite-sidan **[!UICONTROL Save All]**.
 
 1. Tryck för **[!UICONTROL CRXDE Lite]** att gå tillbaka till AEM i det övre vänstra hörnet på sidan.
 
@@ -280,7 +280,7 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i AEM Assets
 
    Nu kan du stänga webbläsarfliken som har den öppna konfigurationssidan för Adobe Experience Manager Web Console.
 
-1. Gå tillbaka till webbläsarfliken med din öppna AEM-konsol.
+1. Gå tillbaka till webbläsarfliken som har din öppna AEM.
 
 1. Klicka på AEM **[!UICONTROL Tools > General > CRXDE Lite]**.
 
@@ -316,7 +316,7 @@ Skapa en standardnamnkonvention som används i alla förinställda gruppuppsätt
 
 När det inte krävs någon standardnamnkonvention för att använda funktionen för gruppuppsättningsförinställningar rekommenderar vi att du använder standardnamnkonventionen för att definiera så många element i namnkonventionen som du vill gruppera i en uppsättning så att du kan effektivisera skapandet av gruppuppsättningar.
 
-Observera också att du kan använda **[!UICONTROL View Code]** utan formulärfält. I den här vyn skapar du namnkonventionens definitioner helt med hjälp av reguljära uttryck.
+Observera att du kan använda **[!UICONTROL View Code]** utan några formulärfält. I den här vyn skapar du namnkonventionens definitioner helt med hjälp av reguljära uttryck.
 
 Det finns två element att definiera **[!UICONTROL Match]** och **[!UICONTROL Base Name]**. Med dessa fält kan du definiera alla element i en namnkonvention och identifiera den del av konventionen som används för att namnge den uppsättning i vilken de finns. Ett företags personliga namnkonvention kan använda en eller flera definitionsrader för vart och ett av dessa element. Du kan använda så många rader för din unika definition och gruppera dem i distinkta element, t.ex. för Huvudbild, Färgelement, Alternativa vyer och Färgruteelement.
 
@@ -469,7 +469,7 @@ When the Spin Set is uploaded and published, you activate the name of the 2D Spi
 
 ### (Valfritt) Justera prestanda för Dynamic Media - Scene7-läge {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
 
-För att Dynamic Media Scene7-läget ska fungera smidigt rekommenderar Adobe följande tips för finjustering av synkroniseringsprestanda/skalbarhet:
+Adobe rekommenderar följande finjusteringstips för synkroniseringsprestanda/skalbarhet om du vill att Dynamic Media - Scene7-läget ska fungera smidigt:
 
 * Uppdaterar de fördefinierade jobbparametrarna för bearbetning av olika filformat.
 * Uppdaterar de fördefinierade arbetstrådarna för Granite-arbetsflödet (videoresurser).
@@ -482,10 +482,14 @@ Du kan justera jobbparametrar för snabbare bearbetning när du överför filer.
 
 Adobe rekommenderar att du använder följande&quot;justerade&quot; jobbparametrar för PDF-, PostScript- och PSD-filer:
 
+<!-- OLD PDF JOB PARAMETERS `pdfprocess=Rasterize&resolution=150&colorspace=Auto&pdfbrochure=false&keywords=false&links=false` -->
+
+<!-- OLD POSTSCRIPT JOB PARAMETERS `psprocess=Rasterize&psresolution=150&pscolorspace=Auto&psalpha=false&psextractsearchwords=false&aiprocess=Rasterize&airesolution=150&aicolorspace=Auto&aialpha=false` -->
+
 | Filtyp | Rekommenderade jobbparametrar |
 | ---| ---|
-| PDF | `pdfprocess=Rasterize&resolution=150&colorspace=Auto&pdfbrochure=false&keywords=false&links=false` |
-| Postscript | `psprocess=Rasterize&psresolution=150&pscolorspace=Auto&psalpha=false&psextractsearchwords=false&aiprocess=Rasterize&airesolution=150&aicolorspace=Auto&aialpha=false` |
+| PDF | `pdfprocess=Thumbnail&resolution=150&colorspace=Auto&pdfbrochure=false&keywords=false&links=false` |
+| Postscript | `psprocess=Rasterize&psresolution=150&pscolorspace=Auto&psalpha=false&psextractsearchwords=false&aiprocess=Thumbnail&airesolution=150&aicolorspace=Auto&aialpha=false` |
 | PSD | `process=None&layerNaming=Layername&anchor=Center&createTemplate=false&extractText=false&extendLayers=false` |
 
 Om du vill uppdatera någon av de här parametrarna följer du stegen i [Aktivera stöd](#enabling-mime-type-based-assets-scene-upload-job-parameter-support)för MIME-typbaserade resurser/Dynamic Media Classic-överföringsjobbparametrar.
@@ -506,7 +510,7 @@ Kön för Bevilja överföring av arbetsflöde används för **[!UICONTROL DAM U
 
    Som standard beror det maximala antalet parallella jobb på antalet tillgängliga processorkärnor. På en server med fyra kärnor tilldelas till exempel två arbetstrådar. (Ett värde mellan 0,0 och 1,0 är baserat på förhållandet, eller alla tal som är större än 1 tilldelar antalet arbetstrådar.)
 
-   Adobe rekommenderar att 32 **[!UICONTROL Maximum Parallel Jobs]** är konfigurerat för att ge tillräckligt stöd för överföring av stora mängder filer till Dynamic Media Classic.
+   Adobe rekommenderar att 32 **[!UICONTROL Maximum Parallel Jobs]** är konfigurerat för att ge tillräckligt stöd för överföring av filer till Dynamic Media Classic.
 
    ![chlimage_1](assets/chlimage_1.jpeg)
 
@@ -534,16 +538,16 @@ Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynam
 
 1. Tryck på **[!UICONTROL Save]**.
 
-#### Uppdaterar anslutning för överföring av Scene7 {#updating-the-scene-upload-connection}
+#### Uppdaterar Scene7 överföringsanslutning {#updating-the-scene-upload-connection}
 
-Inställningen Scene7 Upload Connection synkroniserar AEM-resurser till Dynamic Media Classic-servrar.
+Inställningen Scene7 Upload Connection synkroniserar AEM resurser till Dynamic Media Classic-servrar.
 
-**Så här uppdaterar du anslutningen för Scene7-överföring:**
+**Så här uppdaterar du Scene7 överföringsanslutning:**
 
 1. Navigera till `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl`
 1. I [!UICONTROL Number of connections] fältet och/eller i [!UICONTROL Active job timeout] fältet ändrar du numret.
 
-   Inställningen styr **[!UICONTROL Number of connections]** det maximala antalet HTTP-anslutningar som tillåts för AEM-överföring till Dynamic Media. vanligtvis räcker det fördefinierade värdet på 10 anslutningar.
+   Inställningen styr **[!UICONTROL Number of connections]** det högsta antalet HTTP-anslutningar som tillåts för överföring AEM till Dynamic Media. vanligtvis räcker det fördefinierade värdet på 10 anslutningar.
 
    Inställningen avgör **[!UICONTROL Active job timeout]** väntetiden för överförda Dynamic Media-resurser som ska publiceras på leveransservern. Det här värdet är som standard 2 100 sekunder eller 35 minuter.
 
@@ -555,11 +559,11 @@ Inställningen Scene7 Upload Connection synkroniserar AEM-resurser till Dynamic 
 
 ### (Valfritt) Filtrera resurser för replikering {#optional-filtering-assets-for-replication}
 
-I andra installationer än Dynamic Media replikerar du *alla *resurser (både bilder och video) från AEM-redigeringsmiljön till AEM-publiceringsnoden. Det här arbetsflödet är nödvändigt eftersom AEM-publiceringsservrarna också levererar resurserna.
+I distributioner som inte kommer från Dynamic Media replikerar du *alla *resurser (både bilder och video) från AEM redigeringsmiljö till AEM publiceringsnod. Det här arbetsflödet är nödvändigt eftersom AEM publiceringsservrar också levererar resurserna.
 
-I distributioner av Dynamic Media finns det dock inget behov av att replikera samma resurser till AEM-publiceringsnoder eftersom resurserna levereras via molntjänsten. Ett sådant&quot;hybridpubliceringsarbetsflöde&quot; undviker extra lagringskostnader och längre bearbetningstider för att replikera resurser. Annat innehåll, till exempel webbplatssidor, fortsätter att hanteras från AEM-publiceringsnoderna.
+I distributioner av Dynamic Media finns det dock inget behov av att replikera samma resurser till AEM publiceringsnoder eftersom resurserna levereras via molntjänsten. Ett sådant&quot;hybridpubliceringsarbetsflöde&quot; undviker extra lagringskostnader och längre bearbetningstider för att replikera resurser. Annat innehåll, t.ex. webbplatssidor, fortsätter att hanteras från de AEM publiceringsnoderna.
 
-Med filtren kan du *utesluta* resurser från replikering till AEM-publiceringsnoden.
+Med filtren kan du *utesluta* resurser från replikering till AEM publiceringsnod.
 
 #### Använda standardresursfilter för replikering {#using-default-asset-filters-for-replication}
 
@@ -600,7 +604,7 @@ Om du använder Dynamic Media för bild och/eller video kan du använda de stand
 
 #### Anpassa resursfilter för replikering {#customizing-asset-filters-for-replication}
 
-1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen, trycker på **[!UICONTROL Tools]** ikonen och navigerar till **[!UICONTROL General > CRXDE Lite]**.
+1. I AEM trycker du på den AEM logotypen för att komma åt den globala navigeringskonsolen, trycker på **[!UICONTROL Tools]** ikonen och navigerar till **[!UICONTROL General > CRXDE Lite]**.
 1. Navigera till det vänstra mappträdet för `/etc/replication/agents.author/publish/jcr:content/damRenditionFilters` att granska filtren.
 
    ![chlimage_1-2](assets/chlimage_1-2.png)
