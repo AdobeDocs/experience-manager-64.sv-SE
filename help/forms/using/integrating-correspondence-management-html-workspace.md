@@ -1,6 +1,6 @@
 ---
-title: Integrera tredjepartsprogram i AEM Forms-arbetsytan
-seo-title: Integrera tredjepartsprogram i AEM Forms-arbetsytan
+title: Integrera tredjepartsprogram i arbetsytan AEM Forms
+seo-title: Integrera tredjepartsprogram i arbetsytan AEM Forms
 description: Hur man integrerar tredjepartsappar som Correspondence Management på arbetsytan i AEM Forms.
 seo-description: Hur man integrerar tredjepartsappar som Correspondence Management på arbetsytan i AEM Forms.
 uuid: 9649157c-fe28-43bf-a7d3-52ed55a0bf4f
@@ -8,18 +8,21 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: f2bde2e8-da95-48ac-a652-85ead87f2cd3
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 3c67867637cb3fdcdce77a5d494b9b150f128a20
+workflow-type: tm+mt
+source-wordcount: '641'
+ht-degree: 0%
 
 ---
 
 
-# Integrera tredjepartsprogram i AEM Forms-arbetsytan {#integrating-third-party-applications-in-aem-forms-workspace}
+# Integrera tredjepartsprogram i arbetsytan AEM Forms {#integrating-third-party-applications-in-aem-forms-workspace}
 
-Arbetsytan i AEM Forms hanterar uppgiftstilldelning och slutförande av formulär och dokument. Dessa formulär och dokument kan vara XDP-formulär, Flex®-formulär eller stödlinjer (borttagna) som har återgetts i formaten XDP, PDF, HTML eller Flex.
+Arbetsytan i AEM Forms har stöd för hantering av uppgiftstilldelning och slutförandeaktiviteter för formulär och dokument. Dessa formulär och dokument kan vara XDP Forms, Flex® eller stödlinjer (borttagna) som har återgetts i XDP-, PDF-, HTML- eller Flex-format.
 
-Dessa funktioner har förbättrats ytterligare. AEM Forms har nu stöd för samarbete med tredjepartsprogram som stöder funktioner som liknar arbetsytan i AEM Forms. En vanlig del av den här funktionen är arbetsflödet för tilldelning och efterföljande godkännande av en uppgift. AEM Forms ger en enhetlig upplevelse för AEM Forms företagsanvändare så att alla sådana tilldelningar eller godkännanden av de program som stöds kan hanteras via arbetsytan i AEM Forms.
+Dessa funktioner har förbättrats ytterligare. AEM Forms har nu stöd för samarbete med tredjepartsprogram som stöder funktioner som liknar arbetsytan i AEM Forms. En vanlig del av den här funktionen är arbetsflödet för tilldelning och efterföljande godkännande av en uppgift. AEM Forms ger en enhetlig upplevelse för AEM Forms Enterprise-användare så att alla sådana uppgiftstilldelningar eller godkännanden för de program som stöds kan hanteras via arbetsytan i AEM Forms.
 
-Låt oss som exempel se Correspondence Management som ett kandidatexempel för integrering med arbetsytan i AEM Forms. Correspondence Management har begreppet&quot;Letter&quot; som kan återges och möjliggöra åtgärder.
+Låt oss som exempel se Korrespondenshantering som ett exempel på en kandidat för integrering med arbetsytan AEM Forms. Correspondence Management har begreppet&quot;Letter&quot; som kan återges och möjliggöra åtgärder.
 
 ## Skapa Correspondence Management-resurser {#create-correspondence-management-assets}
 
@@ -29,7 +32,7 @@ Gå till Correspondence Management-mallen på dess URL för att kontrollera om C
 
 där `encodedLetterId` är det URL-kodade brev-ID:t. Ange samma bokstav-ID när du definierar återgivningsprocessen för arbetsyteaktiviteten i Workbench.
 
-## Skapa en uppgift att återge och skicka ett brev i AEM Workspace {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
+## Skapa en uppgift för att återge och skicka ett brev AEM arbetsytan {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
 
 Innan du utför dessa steg måste du kontrollera att du är medlem i följande grupper:
 
@@ -38,7 +41,7 @@ Innan du utför dessa steg måste du kontrollera att du är medlem i följande g
 
 Mer information finns i [Lägga till och konfigurera användare](/help/forms/using/admin-help/adding-configuring-users.md).
 
-Följ de här stegen för att skapa en uppgift som återger och skickar ett brev i AEM Workspace:
+Följ de här stegen för att skapa en uppgift som återger och skickar ett brev AEM arbetsytan:
 
 1. Starta Workbench. Logga in på localhost som administratör.
 1. Klicka på Arkiv > Nytt > Program. I fältet Programnamn anger du `CMDemoSample` och klickar sedan på Slutför.
@@ -98,12 +101,12 @@ Följ de här stegen för att skapa en uppgift som återger och skickar ett brev
    }
    ```
 
-   [Hämta DSC för](assets/dscsample.zip)filhämtning: Ett exempel på DSC finns i filen DSCSample.zip som bifogas ovan. Ladda ned och zippa upp filen DSCSample.zip. Innan du använder DSC-tjänsten måste du konfigurera den. Mer information finns i [Konfigurera DSC-tjänsten](/help/forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
+   [Hämta DSC för](assets/dscsample.zip)filhämtning: Ett exempel på DSC finns i den `DSCSample.zip` fil som bifogas ovan. Ladda ned och zippa upp `DSCSample.zip` filen. Innan du använder DSC-tjänsten måste du konfigurera den. Mer information finns i [Konfigurera DSC-tjänsten](/help/forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
 
    I dialogrutan Definiera aktivitet väljer du lämplig aktivitet, till exempel getLetterInstanceInfo, och klickar på **OK**.
 
 1. Distribuera programmet. Om du uppmanas att checka in och spara resurserna.
-1. Logga in på arbetsytan för AEM-formulär på `https://[server]:[port]/lc/content/ws`.
+1. Logga in på arbetsytan AEM formulär på `https://[server]:[port]/lc/content/ws`.
 1. Öppna den uppgift du lagt till, CMRenderer. Correspondence Management-brevet visas.
 
    ![cminarbetsyta](assets/cminworkspace.png)
