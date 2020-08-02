@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 481856df-5db1-4ef5-80d3-3722b5bf8b67
 translation-type: tm+mt
-source-git-commit: a3e7cd30ba6933e6f36734d3b431db41365b6e20
+source-git-commit: 3c67867637cb3fdcdce77a5d494b9b150f128a20
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1782'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ Om du lägger till en knapp med en åtgärd (här skickar du ett brev för grans
    </extensionsConfig> 
    ```
 
-1. Du kan använda LiveCycle Forms Workflow om du vill skicka e-postbrev. Lägg till en customAction-tagg under taggen modelExtension i acmExtensionsConfig.xml enligt följande:
+1. Om du vill skicka ett e-postbrev kan du använda Formens Workflow LiveCycle. Lägg till en customAction-tagg under taggen modelExtension i acmExtensionsConfig.xml enligt följande:
 
    ```xml
     <customAction name="Letter Review" label="Letter Review" tooltip="Letter Review" styleName="" permissionName="forms-users" actionHandler="CM.domain.CCRCustomActionHandler">
@@ -163,7 +163,7 @@ Filen ACMExtensionsMessages.properties innehåller etiketter och knappbeskrivnin
 
 #### Starta om paketet Adobe Asset Composer Building Block {#restart-the-adobe-asset-composer-building-block-bundle}
 
-När du har gjort alla ändringar på serversidan startar du om paketet Adobe Asset Composer Building Block. I det här scenariot redigeras filerna acmExtensionsConfig.xml och ACMExtensionsMessages.properties på serversidan, och därför måste paketet Adobe Asset Composer Building Block startas om.
+När du har gjort alla ändringar på serversidan startar du om paketet Adobe Asset Composer Building Block. I det här scenariot redigeras filerna acmExtensionsConfig.xml och ACMExtensionsMessages.properties på serversidan, och därför krävs en omstart av paketet Adobe Asset Composer Building Block.
 
 >[!NOTE]
 >
@@ -171,9 +171,9 @@ När du har gjort alla ändringar på serversidan startar du om paketet Adobe As
 
 1. Gå till `https://[host]:[port]/system/console/bundles`. Logga in som administratör om det behövs.
 
-1. Leta reda på paketet Adobe Asset Composer Building Block. Starta om paketet: Klicka på Stopp och sedan på Start.
+1. Leta reda på byggstenspaketet för Adobe Assets Composer. Starta om paketet: Klicka på Stopp och sedan på Start.
 
-   ![Adobe Asset Composer Building Block](assets/6_assetcomposerbuildingblockbundle.png)
+   ![Byggblock för Adobe-resursdisposition](assets/6_assetcomposerbuildingblockbundle.png)
 
 När du har startat om paketet Adobe Asset Composer Building Block visas den anpassade knappen i användargränssnittet Create Correspondence. Du kan öppna ett brev i Skapa korrespondensanvändargränssnitt om du vill förhandsgranska den anpassade knappen.
 
@@ -326,11 +326,10 @@ Hanteringen av åtgärd/knapp vid klickning innehåller logik för:
 
 I det här scenariot aktiverar du följande komponenter, som är en del av den bifogade filen components.zip:
 
-* DSC-komponent jar (DSCSample.jar)
-* Skicka brev för granskning LCA (SendLetterForReview.lca)
+* DSC-komponent jar (`DSCSample.jar`)
+* Skicka brev för granskning (LCA) (`SendLetterForReview.lca`)
 
-Ladda ned och zippa upp filen components.zip för att hämta filerna DSCSample.jar och SendLetterForReview.lca. Använd dessa filer enligt följande procedurer.\
-components.zip
+Ladda ned och zippa upp `components.zip` filen för att hämta `DSCSample.jar` och `SendLetterForReview.lca` filer. Använd dessa filer enligt följande procedurer.
 
 [Hämta fil](assets/components.zip)
 
@@ -343,18 +342,19 @@ components.zip
 LCA-processen körs på LiveCycle-servern och kräver serveradressen och inloggningsuppgifterna.
 
 1. Gå till `https://[server]:[port]/system/console/configMgr` och logga in som administratör.
-1. Leta reda på SDK-konfigurationen för Adobe LiveCycle Client och klicka på **[!UICONTROL Edit]** (redigeringsikon). Panelen Konfigurationer öppnas.
+1. Leta reda på SDK-konfigurationen för Adobe-klienten och klicka på **[!UICONTROL Edit]** (redigeringsikonen). Panelen Konfigurationer öppnas.
 
 1. Ange följande information och klicka på **[!UICONTROL Save]**:
 
    * **[!UICONTROL Server Url]**: URL för den LC-server vars Send for Review-tjänst åtgärdshanterarkoden använder.
    * **[!UICONTROL Username]**: Administratörsanvändarnamn för LC-servern
    * **[!UICONTROL Password]**: Lösenord för administratörens användarnamn
-   ![Konfiguration av Adobe LiveCycle Client SDK](assets/3_clientsdkconfiguration.png)
+
+   ![SDK-konfiguration för Adobe LiveCycle-klient](assets/3_clientsdkconfiguration.png)
 
 #### Installera LiveCycle Archive (LCA) {#install-livecycle-archive-lca}
 
-Den LiveCycle-process som krävs för e-posttjänstprocessen.
+Den obligatoriska LiveCycle-processen som möjliggör e-posttjänstprocessen.
 
 >[!NOTE]
 >
@@ -380,20 +380,20 @@ Den LiveCycle-process som krävs för e-posttjänstprocessen.
 
 1. Klicka på **[!UICONTROL Import]**.
 
-#### Lägger till ServiceName i listan över AllowListed Service {#adding-servicename-to-the-allowlisted-service-list}
+#### Lägger till ServiceName i listan över Tillåtelselistad tjänster {#adding-servicename-to-the-allowlisted-service-list}
 
-I AEM-servern anger du vilka LiveCycle-tjänster du vill ha tillgång till AEM-servern.
+Ange de LiveCycle-tjänster som du vill få åtkomst till AEM på AEM server.
 
 1. Logga in som administratör till `https:/[host]/:[port]/system/console/configMgr`.
 
-1. Locate and click **[!UICONTROL Adobe LiveCycle Client SDK Configuration]**. Konfigurationspanelen för Adobe LiveCycle Client SDK visas.
+1. Locate and click **[!UICONTROL Adobe LiveCycle Client SDK Configuration]**. Konfigurationspanelen för klient-SDK för Adobe visas.
 1. Klicka på ikonen + i listan Tjänstnamn och lägg till ett tjänstnamn **[!UICONTROL SendLetterForReview/SendLetterForReviewProcess]**.
 
 1. Klicka på **[!UICONTROL Save]**.
 
 #### Konfigurera e-posttjänsten {#configure-the-email-service}
 
-I det här fallet måste du konfigurera e-posttjänsten i LiveCycle-servern för att Correspondence Management ska kunna skicka ett e-postmeddelande.
+I det här fallet måste du konfigurera e-posttjänsten på LiveCycle-servern för att Correspondence Management ska kunna skicka ett e-postmeddelande.
 
 1. Logga in med administratörsuppgifter för LiveCycle Server-administratörer på `https:/[lc server]:[lc port]/adminui`.
 
@@ -407,36 +407,37 @@ I det här fallet måste du konfigurera e-posttjänsten i LiveCycle-servern för
 
 #### Konfigurera DSC-tjänsten {#configure-the-dsc-service}
 
-Om du vill använda Correspondence Management API hämtar du DSCSample.jar (som bifogas i det här dokumentet som en del av components.zip) och överför den till LiveCycle-servern. När filen DSCSample.jar har överförts till LiveCycle-servern använder AEM-servern filen DSCSample.jar för att komma åt API:t renderLetter.
+Om du vill använda Correspondence Management API hämtar du `DSCSample.jar` (som en del av `components.zip`) dokumentet och överför det till LiveCycle-servern. När `DSCSample.jar` filen har överförts till LiveCycle-servern använder AEM filen för att få åtkomst till API:t `DSCSample.jar` renderLetter.
 
-Mer information finns i [Koppla AEM Forms till Adobe LiveCycle](/help/forms/using/aem-livecycle-connector.md).
+Mer information finns i [Ansluta AEM Forms med Adobe LiveCycle](/help/forms/using/aem-livecycle-connector.md).
 
-1. Uppdatera AEM-serverns URL i cmsa.properties i DSCSample.jar, som finns på följande plats:
+1. Uppdatera URL:en för AEM server i cmsa.properties i `DSCSample.jar`, som finns på följande plats:
 
    DSCSample.jar\com\adobe\livecycle\cmsa.properties
 
 1. Ange följande parametrar i konfigurationsfilen:
 
    * **crx.serverUrl**=https:/[host]/:[port]/[kontextsökväg]/[AEM URL]
-   * **crx.username**= AEM-användarnamn
-   * **crx.password**= AEM-lösenord
+   * **crx.username**= AEM användarnamn
+   * **crx.password**= AEM lösenord
    * **crx.appRoot**=/content/apps/cm
+
    >[!NOTE]
    >
-   >Varje gång du gör några ändringar på serversidan startar du om LiveCycle Server. Mer information om hur du skapar en egen LiveCycle-komponent finns i [Utöka LiveCycle ES via anpassad DSC-utveckling](https://www.adobe.com/devnet/livecycle/articles/dsc_development.html).
+   >Starta om LiveCycle Server varje gång du gör några ändringar på serversidan. Mer information om hur du skapar en egen LiveCycle-komponent finns i [Utöka LiveCycle ES via anpassad DSC-utveckling](https://www.adobe.com/devnet/livecycle/articles/dsc_development.html).
 
-   Filen DSCSample.jar använder API:t renderLetter. Mer information om API:t renderLetter finns i [Interface LetterRenderService](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html).
+   Filen använder `DSCSample.jar` API:t `renderLetter` . Mer information om API:t renderLetter finns i [Interface LetterRenderService](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html).
 
 #### Importera DSC till LiveCyle {#import-dsc-to-livecyle}
 
-DSCSample.jar-filen använder API:t renderLetter för att återge bokstaven som PDF-byte från XML-data som C anger som indata. Mer information om renderLetter och andra API:er finns i [tjänsten](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)Letter Render.
+`DSCSample.jar` filen använder API:t för att återge bokstaven som PDF-byte från XML-data som C anger som indata. `renderLetter` Mer information om renderLetter och andra API:er finns i [tjänsten](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)Letter Render.
 
 1. Starta Workbench och logga in.
 1. Välj **[!UICONTROL Window > Show Views > Components]**. Vyn Komponenter läggs till i Workbench ES2.
 
 1. Högerklicka **[!UICONTROL Components]** och välj **[!UICONTROL Install Component]**.
 
-1. Markera **[!UICONTROL DSCSample.jar]** filen i filläsaren och klicka på **[!UICONTROL Open]**.
+1. Markera `DSCSample.jar` filen i filläsaren och klicka på **[!UICONTROL Open]**.
 1. Högerklicka **[!UICONTROL RenderWrapper]** och välj **[!UICONTROL Start Component]**. Om komponenten startar visas en grön pil bredvid komponentnamnet.
 
 ## Skicka brev för granskning {#send-letter-for-review}
