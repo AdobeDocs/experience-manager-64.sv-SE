@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 contentOwner: alba
 discoiquuid: d445bcfb-7712-472f-bfb4-a8811c2bc4f1
 translation-type: tm+mt
-source-git-commit: f1bf1545689b977a0f5074954df224db58cbd695
+source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '657'
 ht-degree: 1%
 
 ---
@@ -20,42 +20,18 @@ ht-degree: 1%
 
 ## Versionsinformation {#release-information}
 
-<table> 
- <tbody>
-  <tr>
-   <td>Produkter</td> 
-   <td>Livefyre Feature Pack 2.0.6</td> 
-  </tr>
-  <tr>
-   <td>Version</td> 
-   <td>2.0.6</td> 
-  </tr>
-  <tr>
-   <td>Typ</td> 
-   <td>Funktionsrelease</td> 
-  </tr>
-  <tr>
-   <td>Date</td> 
-   <td>31 augusti 2018</td> 
-  </tr>
-  <tr>
-   <td>Hämta URL<br /> </td> 
-   <td>Kontakta administratören</td> 
-  </tr>
-  <tr>
-   <td>Kompatibilitet (*)</td> 
-   <td>AEM 6.4 SP1, 6.4, 6.3 GA och 6.2 SP1</td> 
-  </tr>
-  <tr>
-   <td>Beskrivning</td> 
-   <td>Med det här paketet kan du integrera Livefyres branschledande kurationsfunktioner med din AEM-instans, så att du kan publicera användargenererat innehåll (UGC) från sociala nätverk till din webbplats på några minuter.</td> 
-  </tr>
- </tbody>
-</table>
+| Produkter | Livefyre Feature Pack 2.0.6 |
+|--- |--- |
+| Version | 2.0.6 |
+| Typ | Funktionsrelease |
+| Date | 31 augusti 2018 |
+| Hämta URL | Kontakta administratören |
+| Kompatibilitet (*) | AEM 6.4 SP1, 6.4, 6.3 GA och 6.2 SP1 |
+| Beskrivning | Med det här paketet kan du integrera Livefyres branschledande kurationsfunktioner med AEM, så att du kan publicera användaranpassat användargenererat innehåll (UGC) från sociala nätverk till webbplatsen på några minuter. |
 
 ## Vad ingår i Livefyre Feature Pack 2.0.6 {#what-is-included-in-livefyre-feature-pack}
 
-Det här paketet integrerar Livefyres branschledande kurationsfunktioner med din AEM-instans så att du kan publicera användargenererat innehåll (UGC) från sociala nätverk till din webbplats på några minuter. Det här paketet innehåller tre olika komponenter:
+Det här paketet integrerar Livefyres branschledande kurationsfunktioner med AEM, så att du kan publicera användargenererat innehåll (UGC) från sociala nätverk till webbplatsen på några minuter. Det här paketet innehåller tre olika komponenter:
 
 **Importera UGC-innehåll till AEM Assets**
 
@@ -74,7 +50,7 @@ Det här paketet integrerar Livefyres branschledande kurationsfunktioner med din
 * Integrera smidigt din befintliga produktkatalog i Livefyre för att öka användarengagemanget och konverteringsgraden på era sajter, liksom för att leverera användarvänliga användarupplevelser.
 * Redigera eller ta bort artiklar i din AEM Commerce-produktkatalog och uppdatera automatiskt ändringar i Livefyre.
 
-Hjälp med installationen finns i [Integrera med Livefyre](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html).
+Hjälp med installationen finns i [Integrera med Livefyre](https://docs.adobe.com/content/help/en/experience-manager-64/administering/integration/livefyre.html).
 
 ### Ytterligare versionsinformation {#additional-release-information}
 
@@ -87,13 +63,13 @@ På grund av uppdateringar som påverkar sammanställningen av innehåll från a
 #### Ny funktion eller förbättring {#new-feature-or-improvement}
 
 * Lagt till möjligheten att söka efter UGC innan du ställer in behörigheter för sociala konton i Livefyre. Du måste konfigurera sociala konton för att begära rättigheter, eller åsidosätta rättighetsbegäran om du äger innehållet.
-* Instagram och Twitter [UGC-rättighetsarbetsflödet](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html) har uppdaterats för att uppfylla de senaste API:erna.
+* Instagram och Twitter [UGC-rättighetsarbetsflödet](https://docs.adobe.com/content/help/en/experience-manager-64/administering/integration/livefyre.html) har uppdaterats för att uppfylla de senaste API:erna.
 * Rättighetsstatus och lämpliga åtgärder visas nu på skärmen för rättighetsförfrågan.
 
 #### Felkorrigeringar {#bug-fixes}
 
 * Ett problem har korrigerats där ett socialt konto i Livefyre Studio som används för rättighetsbegäran orsakade ett fel när UGC-biblioteket lästes in i AEM.
-* Ett problem har korrigerats där inventeringen av tillgångar i Livefyre-studion inte matchade inventeringen i AEM UGC-biblioteket.
+* Ett problem har korrigerats där inventeringen av tillgångar i Livefyre studio inte matchade inventeringen i AEM UGC-bibliotek.
 * Korrigerade ett fel i UGC-biblioteket där filtrerade resultat som visades efter att filteralternativen återställdes.
 * Korrigerade ett problem med AEM Commerce där knappar för att ringa till åtgärd dirigerade om användare till fel URL.
 * Ett problem har korrigerats i AEM Sites där flera komponenter försvann när du drog och släppte dem i platshållaren.
@@ -107,5 +83,4 @@ På grund av uppdateringar som påverkar sammanställningen av innehåll från a
 * Ett problem har korrigerats där appen Recensioner lades till på en webbplats utan något fördefinierat format.
 * Korrigerade ett problem med Touch UI-funktioner och infogad redigering.
 * Ett problem som orsakade ett fel vid import av vissa Instagram-bildresurser har korrigerats.
-* Ett problem har korrigerats där Livefyre HTTP-klienten i AEM inte hade stöd för proxykonfiguration.
-
+* Ett problem har korrigerats där Livefyre HTTP-klienten i AEM inte hade stöd för proxykonfigurationen.
