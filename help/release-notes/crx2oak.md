@@ -1,8 +1,8 @@
 ---
 title: CRX2OAK-migreringsverktyg
 seo-title: CRX2OAK-migreringsverktyg
-description: Versionsinformation om Adobe Experience Manager 6.4 CRX2OAK-migreringsverktyget.
-seo-description: Versionsinformation om Adobe Experience Manager 6.4 CRX2OAK-migreringsverktyget.
+description: Versionsinformation som är specifik för migreringsverktyget Adobe Experience Manager 6.4 CRX2OAK.
+seo-description: Versionsinformation som är specifik för migreringsverktyget Adobe Experience Manager 6.4 CRX2OAK.
 uuid: 1b582faf-2dc6-41a2-9419-7e82347f9d6c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4
@@ -10,7 +10,10 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: cfdaceac-a5b3-4070-ad4c-f1457b1e2e4b
 translation-type: tm+mt
-source-git-commit: 715cff841252d79504d702817f91db92df919bfc
+source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
+workflow-type: tm+mt
+source-wordcount: '268'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +42,7 @@ source-git-commit: 715cff841252d79504d702817f91db92df919bfc
 
 * Uppdaterad Oak-version till 1.6.1
 * CQ-61847 Merge crx2oak-quickstart-extension with crx2oak (added migration profiles)
-* CQ-97488 Befordra och släppa AEM-körningslägen (genom att skriva om sling.options.file)
+* CQ-97488 Körningslägen för AEM och släpp (genom att skriva om sling.options.file)
 * GRANITE-12798/OAK-4260 Möjlighet att använda sidoklasser från eksegment till eksegment
 
 ### Version 1.4.2 (mars 2016) {#version-march-1}
@@ -61,7 +64,7 @@ source-git-commit: 715cff841252d79504d702817f91db92df919bfc
 * Datastorkatalogen bör inte flyttas efter migreringen (GRANITE-10447)
 * Merge crx2oak-quickstart-extension with crx2oak (CQ-61847)
 * crx2oak fungerar inte på dubblettvärden i databasen (CQ-61906)
-* Long AEM start after migration from CQ 5.x (GRANITE-10309)
+* Lång AEM efter migrering från CQ 5.x (GRANITE-10309)
 * Stöd för flera LDAP-servrar i crx2oak (GRANITE-9917)
 * Tvinga kontroll efter maximal nodnamnslängd (OAK-3111)
 * Stöd för S3DataSource som migreringskälla (OAK-3685)
