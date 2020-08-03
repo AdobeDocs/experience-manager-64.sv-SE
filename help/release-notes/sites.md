@@ -1,8 +1,8 @@
 ---
-title: Versionsinformation för AEM Sites
+title: Versionsinformation om AEM Sites
 seo-title: AEM Sites
-description: Versionsinformation om webbplatser i Adobe Experience Manager 6.4.
-seo-description: Versionsinformation om webbplatser i Adobe Experience Manager 6.4.
+description: Versionsinformation för webbplatser som tillhör Adobe Experience Manager 6.4.
+seo-description: Versionsinformation för webbplatser som tillhör Adobe Experience Manager 6.4.
 uuid: 593928ec-5d1a-4a88-bd73-897421c5984a
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4
@@ -10,16 +10,19 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 40225441-7cfe-4395-ac71-60504b42e764
 translation-type: tm+mt
-source-git-commit: 901a923b6ab2b6bee1738d2b8f1928571c8019cb
+source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
+workflow-type: tm+mt
+source-wordcount: '1020'
+ht-degree: 0%
 
 ---
 
 
-# Versionsinformation för AEM Sites {#aem-sites-release-notes}
+# Versionsinformation om AEM Sites {#aem-sites-release-notes}
 
 ## Sites {#sites}
 
-Se följande för förbättringar av AEM Sites 6.4:
+Se följande för AEM Sites 6.4-förbättringar i detalj:
 
 ### Webbplatsadministration {#site-administration}
 
@@ -30,10 +33,10 @@ Se följande för förbättringar av AEM Sites 6.4:
 * Möjlighet att inaktivera kortkommandon (aktivera/inaktivera i Inställningar).
 * Sluta visa tidsstämplar i alla användargränssnittsrelativa efter 7 dagar (ange som standard i Inställningar).
 
-###  Page Editor {#page-editor}
+### Page Editor {#page-editor}
 
 * Uppdaterad enhetslista för responsiv förgranskning av webbplatser, nu med Apple iPhone 8, 8 Plus och X samt Samsung S7
-* Flyttade standardplats för malldesigninformation bort från /etc/design för att stödja webbplatsspecifika inställningar i /conf. Kunder som uppgraderar från tidigare AEM-versioner kan fortsätta använda /etc/design.
+* Flyttade standardplats för malldesigninformation bort från /etc/design för att stödja webbplatsspecifika inställningar i /conf. Kunder som uppgraderar från tidigare AEM kan fortsätta använda /etc/design.
 
 ### Utveckling av komponenter och mallar {#component-amp-template-development}
 
@@ -55,7 +58,7 @@ Se följande för förbättringar av AEM Sites 6.4:
 
 >[!CAUTION]
 >
->AEM inkluderar version 1.12.4 av jQuery-biblioteket för att ge maximal kompatibilitet med befintlig anpassad kod. Adobe har gjort ändringar för att åtgärda kända säkerhetsproblem.
+>AEM innehåller version 1.12.4 av jQuery-biblioteket för att ge maximal kompatibilitet med befintlig anpassad kod. Adobe har gjort ändringar för att åtgärda kända säkerhetsproblem.
 
 ### Content Fragments &amp; Editor {#content-fragments-amp-editor}
 
@@ -64,13 +67,13 @@ Se följande för förbättringar av AEM Sites 6.4:
    * Modellredigeringsgränssnitt
    * Förkonfigurerade dataelement för innehållsfragmentmodeller (enkelradstext, flerradstext, tal, boolesk, datum&amp;tid, uppräkning, innehållsreferens, taggar)
 
-* Förbättrad användbarhet för AEM Content Fragment-redigeraren
+* Förbättrad användbarhet för AEM Content Fragment editor
 
    * Översikt över alla element
    * Helskärmsredigering för enstaka element
    * Förbättrade funktioner för textredigering (punktlistor, numrerade listor, indrag, hyperlänkar, tabeller, sök&amp;ersätt, stavningskontroll)
 
-* Förbättrade utdataalternativ för AEM Content Fragments har lagts till
+* Förbättrade utdataalternativ för AEM innehållsfragment har lagts till
 
    * Ny komponent för innehållsfragment, som en del av kärnkomponenter. [Se kod på GitHub.](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/tree/master/extension/contentfragment/content/src/content/jcr_root/apps/core/wcm/extension/components/contentfragment/v1/contentfragment)
    * Content Services-stöd med JSON-utdata via Sling Model Exporter
@@ -79,16 +82,16 @@ Se följande för förbättringar av AEM Sites 6.4:
 
 * Introducerade Experience Fragment Building Blocks, för att underlätta återanvändning av innehåll mellan Experience Fragments-variationer genom att gruppera komponenter och göra det enkelt att referera i varianter.
 * Lagt till möjlighet att lägga till Experience Fragments i översättningsprojekt via referensspåret
-* Förbättra möjligheterna att starta arbetsflöden med Experience Fragments via tidslinjen
+* Lagt till möjlighet att starta arbetsflöden med Experience Fragments via tidslinjen
 * Referensspåret visar nu var en Experience Fragment används i AEM
 * Konfiguration av mallplatser tillåter nu författare att på global nivå eller mappnivå definiera vilka Experience Fragment-mallar som får användas
 * Fasetterad sökning har nu stöd för avancerad filtrering, som publicerade/ej publicerade, som exporteras till sociala medier och Adobe Target
 * Inloggning för enstaka sociala medier har lagts till när Experience Fragments exporteras till Pinterest eller Facebook
-* Integrerade AEM Experience Fragments med Adobe Target. Synkronisering av Experience Fragments till Target skapar erbjudanden i Adobe Target som kan användas med Target Visual Experience Composer för att bädda in den i alla Target-aktiverade upplevelser.
+* Integrerade AEM Experience Fragments med Adobe Target. Synkronisering av Experience Fragments till Target skapar erbjudanden i Adobe Target som kan användas med Target Visual Experience Composer för att bädda in dem i alla Target-aktiverade upplevelser.
 
 ### Översättning {#translation}
 
-* Förbättrad användbarhet för AEM Translation-projekt:
+* Förbättrad användbarhet för AEM översättningsprojekt:
 
    * Stöd för flera målspråk i ett projekt
    * Möjlighet att automatiskt befordra och ta bort översättningsstarter
@@ -98,7 +101,7 @@ Se följande för förbättringar av AEM Sites 6.4:
 * Introducerad uppdatering av omvänt översättningsminne, för att uppdatera översättningsminnet i ett översättningssystem från tredje part efter lokala innehållsredigeringar i AEM
 * Översättningsarbetsflöden har nu stöd för grupperade språkrötter
 * Lagt till möjlighet att tilldela godtyckliga namn till språkrötter, och använd JCR-egenskapen för mappning till ISO-kod
-* Uppdateringar av smart översättning känner nu igen nya sidor som lagts till i en huvudgren för språk
+* Uppdateringar av smart översättning känner nu igen nya sidor som lagts till i en överordnad språkgren
 * Introducerad översättningsstatusrapportering i listvyn Platsadministratörer
 
 ### Hantering av flera webbplatser (MSM) {#multi-site-management-msm}
@@ -116,15 +119,15 @@ Se följande för förbättringar av AEM Sites 6.4:
 * Stödmappar för att ordna segment baserat på plats/sammanhang (CQ-94620)
 * Flyttade standardplats för segment till /conf för att ha plats-/kontextspecifika segmentlistor.
 
-### AEM &amp; Adobe Target {#aem-amp-adobe-target-nbsp}
+### AEM &amp; Adobe Target  {#aem-amp-adobe-target-nbsp}
 
-* Integrerade AEM Experience Fragments med Adobe Target. Synkronisering av Experience Fragments till Target skapar erbjudanden i Adobe Target som kan användas med Target Visual Experience Composer för att bädda in den i alla Target-aktiverade upplevelser.
-* Adobe Target mbox.js version 63 ingår nu. Adobe rekommenderar att du byter implementering till at.js.
-* at.js version 1.2.2 ingår nu. Adobe rekommenderar att du använder antingen Dynamic Tag Management (DTM) eller [Adobe Experience Platform Launch](https://www.adobe.com/enterprise/cloud-platform/launch.html) för att distribuera at.js till webbplatsen.
+* Integrerade AEM Experience Fragments med Adobe Target. Synkronisering av Experience Fragments till Target skapar erbjudanden i Adobe Target som kan användas med Target Visual Experience Composer för att bädda in dem i alla Target-aktiverade upplevelser.
+* Adobe Target mbox.js version 63 ingår nu. Adobe rekommenderar att implementeringen ändras till at.js.
+* at.js version 1.2.2 ingår nu. Adobe rekommenderar att du använder Dynamic Tag Management (DTM) eller [Adobe Experience Platform Launch](https://www.adobe.com/enterprise/cloud-platform/launch.html) för att distribuera at.js till webbplatsen.
 
-### AEM och Adobe Analytics {#aem-amp-adobe-analytics}
+### AEM &amp; Adobe Analytics {#aem-amp-adobe-analytics}
 
-* s_code.js H.27.5 ingår nu. Adobe rekommenderar att du byter implementering till AppMeasurement.js
+* s_code.js H.27.5 ingår nu. Adobe rekommenderar att implementeringen ändras till AppMeasurement.js
 * AppMeasurement.js 1.8.0 ingår nu. Adobe rekommenderar att du använder antingen Dynamic Tag Management (DTM) eller [Adobe Experience Platform Launch](https://www.adobe.com/enterprise/cloud-platform/launch.html) för att etablera AppMeasurement.js på webbplatsen.
 
 ## Webbgrupper, tillägg {#communities-add-on}
@@ -133,11 +136,10 @@ Se sidan [Versionsinformation för webbgrupper](/help/release-notes/communities-
 
 ## Skärmar, tillägg {#screens-add-on}
 
-* Stöd för Screens Players har lagts till för att ansluta till AEM-publiceringsservrar för kommando-, kontroll- och kanalnedladdning (istället för direkt till AEM-författaren).
+* Stöd har lagts till för att skärmuppspelare ska ansluta till AEM publiceringsservrar för kommando-, kontroll- och kanalnedladdning (i stället för direkt till AEM).
 * Lagt till möjlighet att gruppera kanaltilldelningar i scheman
 * Kanaltilldelningar har nu start- och slutdatum
 * Device Dashboard visar nu spelarens skal och firmware-version
 * Enhetsinstrumentpanelens lista visar anslutningsstatus för spelaren
 * Google Chrome OS-stöd för AEM Screens Player har lagts till
-* Microsoft Windows 10 har lagts till för AEM Screens Player
-
+* Microsoft Windows 10 för AEM Screens Player har lagts till
