@@ -8,7 +8,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER
 discoiquuid: 9f88c773-ddeb-4c66-ac07-7d3aa196c51b
 translation-type: tm+mt
-source-git-commit: 715cff841252d79504d702817f91db92df919bfc
+source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
+workflow-type: tm+mt
+source-wordcount: '526'
+ht-degree: 1%
 
 ---
 
@@ -19,11 +22,11 @@ source-git-commit: 715cff841252d79504d702817f91db92df919bfc
 
 Organisationer kräver att deras digitala resurser taggas baserat på den taxonomi som anställda, partners och kunder använder för att referera till och söka efter digitala resurser. Jämfört med generiska taggar är det enklare att identifiera och hämta resurser som är taggade baserat på företagstaxonomi genom taggbaserade sökningar.
 
-Tjänsten Smart Content Service använder er affärsklonomi av AEM Assets för att automatiskt tagga digitala resurser, vilket ser till att de mest relevanta resurserna visas i sökningar.
+Tjänsten Smart Content Service använder er företagsklonomi av AEM Assets för att automatiskt tagga digitala resurser, vilket ser till att de mest relevanta resurserna visas i sökningar.
 
-Du måste utbilda Smart Content Service i en välstrukturerad uppsättning med AEM-resurser och -taggar för att känna igen din företagstaxonomi. När tjänsten har tränats kan den använda dessa taggar på en liknande uppsättning resurser.
+Du måste utbilda Smart Content Service i en välstrukturerad uppsättning AEM resurser och taggar för att känna igen din företagstaxonomi. När tjänsten har tränats kan den använda dessa taggar på en liknande uppsättning resurser.
 
-Tjänsten Smart Content Service drivs av Adobe Sensei-plattformen, som gör det möjligt att utbilda bildigenkänningsalgoritmen i företagets taxonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på liknande resurser.
+Tjänsten Smart Content Service drivs av Adobe Sensei-plattformen som gör det möjligt att utbilda bildigenkänningsalgoritmen i företagets taxonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på liknande resurser.
 
 ## Viktiga förbättringar {#key-improvements}
 
@@ -82,13 +85,14 @@ Tjänsten för smart innehåll är tillgänglig för följande språk:
 
 ## Länkar {#links}
 
-* [Adobe Experience Manager Product Page på adobe.com](https://www.adobe.com/marketing-cloud/experience-manager.html)
+* [Adobe Experience Manager produktsida på adobe.com](https://www.adobe.com/marketing-cloud/experience-manager.html)
 * [Förbättrad dokumentation för smarta taggar](/help/assets/enhanced-smart-tags.md)
 
 ## Produktåtkomst och support (begränsade platser) {#product-access-and-support-restricted-sites}
 
 Dessa webbplatser är bara tillgängliga för kunder. Om du är kund och behöver åtkomst kontaktar du din kontoansvarige på Adobe.
 
-* [](https://daycare.day.com) [Produktåtkomst](https://login.marketing.adobe.com)
-
-* [Adobes kundtjänst](https://helpx.adobe.com/contact/enterprise-support.ec.html)
+* [Produktåtkomst](https://login.marketing.adobe.com)
+* [Nedladdning av produkt på licensing.adobe.com](https://licensing.adobe.com/).
+* Produktuppdateringar, patchar och paket för ytterligare funktionalitet vid [programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
+* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [nya Adobe Customer Support Experience](https://docs.adobe.com/content/help/en/customer-one/using/home.html).
