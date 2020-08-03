@@ -10,7 +10,7 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 266634ab-21d3-4aac-acfa-b799a7485507
 translation-type: tm+mt
-source-git-commit: 55b9105fab3947322649c7ed2b750497e486ec63
+source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
@@ -27,11 +27,13 @@ På den här sidan finns en lista över kända fel i Adobe Experience Manager 6.
 Hybridenheter stöds inte. Olika problem kan uppstå vid användning av sådana enheter. Följande föreslagna procedurer hjälper dig att lösa många problem:
 
 Om du använder Google Chrome som webbläsare:
+
 * Skriv `chrome://flags/` i adressfältet och tryck på Retur.
 * Klicka på Aktivera pekhändelser > Inaktiverad.
 * Starta om webbläsaren (alla flikar och fönster).
 
 Om du använder Mozilla Firefox som webbläsare:
+
 * Skriv `about:config` i adressfältet och tryck på Retur.
 * Filtrera inställningarna till `dom.w3c`.
 * Kontrollera att inställningarna är `0` och `false`.
@@ -96,7 +98,7 @@ Om du använder Microsoft Edge som webbläsare:
 
 * **Konsol** - länken Glömt användarnamn eller lösenord dirigeras om till inloggningssidan i stället för till motsvarande formulär för hämtning av lösenord (CQ-4237682)
 
-## Formulär {#forms}
+## Forms {#forms}
 
 ### Installation och driftsättning
 
@@ -134,9 +136,9 @@ Om du använder Microsoft Edge som webbläsare:
 
 ### Integrering med Adobe Sign
 
-* Adobe Sign-schemaläggaren slutar fungera regelbundet och därför flyttas inte väntande signaturer till överföring. Lös problemet genom att starta om **stödpaketet för** Apache Sling Scheduler från AEM-webbkonsolen på https://[*server*]:[*port*]/system/konsol/bundles.
+* Adobe Sign-schemaläggaren slutar fungera regelbundet och därför flyttas inte väntande signaturer till överföring. Lös problemet genom att starta om **stödpaketet för schemaläggaren** för Apache Sling från AEM webbkonsol på https://[*server*]:[*port*]/system/konsol/bundles.
 
-### Skapa adaptiva formulär
+### Skapa anpassningsbara Forms-program
 
 * Diagramkomponenten i anpassningsbara formulär tar mer utrymme än vad den normalt gör.
 * Ett undantag returneras när egenskaper sparas för adaptiva formulär, adaptiva formulärfragment eller interaktiv kommunikation i användargränssnittet i Forms Manager.
