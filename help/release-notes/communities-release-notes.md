@@ -1,8 +1,8 @@
 ---
 title: Versionsinformation om AEM Communities
 seo-title: AEM Communities
-description: Versionsinformation om Adobe Experience Manager 6.4 Communities.
-seo-description: Versionsinformation om Adobe Experience Manager 6.4 Communities.
+description: Versionsinformation för Adobe Experience Manager 6.4 Communities.
+seo-description: Versionsinformation för Adobe Experience Manager 6.4 Communities.
 uuid: 2de9f511-2a61-4003-9b2c-d6728bc9d57a
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4
@@ -10,7 +10,10 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 55a0b70e-5212-408b-8560-6e758bd8bb10
 translation-type: tm+mt
-source-git-commit: 242f60c70c7cc00871d2ff9f42d2ade4125eaa31
+source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
+workflow-type: tm+mt
+source-wordcount: '327'
+ht-degree: 0%
 
 ---
 
@@ -58,7 +61,7 @@ Moderering:
 
 Övergripande kompatibilitet med grundläggande förändringar i AEM 6.4.
 
-Obs! alla dessa funktioner är också tillgängliga för AEM 6.3. Läs versionsinformationen för AEM Communities för [6.3](https://helpx.adobe.com/experience-manager/6-3/release-notes.html).
+Obs! alla dessa funktioner finns även för AEM 6.3. Se versionsinformationen för AEM Communities för [6.3](https://helpx.adobe.com/experience-manager/6-3/release-notes.html).
 
 ## Kända fel {#known-issues}
 
@@ -71,4 +74,4 @@ Expert Scoring (*Powered by Sensei*) - används för att möjliggöra spel, som 
 
 ## Demonstrationer {#demonstrations}
 
-Alla dessa funktioner kan demonstreras med [AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki) som är allmänt tillgänglig på GitHub.com när man använder AEM Communities demoscenario och även inom den nya referensimplementeringen We.Retail.
+Alla dessa funktioner kan demonstreras med [AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki) som är allmänt tillgänglig på GitHub.com när man använder AEM Communities demoscenario och även inom den nya referensimplementeringen av We.Retail.
