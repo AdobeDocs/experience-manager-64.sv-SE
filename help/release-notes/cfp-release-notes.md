@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för Adobe Experience Manager 
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
+source-git-commit: 87843465e8e0b372dc457630b84bcb5e50628dea
 workflow-type: tm+mt
-source-wordcount: '2114'
+source-wordcount: '2148'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,8 @@ Adobe Experience Manager 6.4.8.1 innehåller korrigeringar av följande problem.
 * Det går inte att skapa en start för en AEM Sites-sida. Startskapande resulterar i ett fel (NPR-32544).
 * Hantera publikation innehåller inte refererade resurser i begäran om aktiveringsarbetsflöde (NPR-32463).
 * I Dispatcher hälsokontroll visas `Invalid cookie header` ett varningsmeddelande i loggfilerna (NPR-33630).
+* Salesforce-integrering är sårbar för SSRF (NPR-32671).
+* Speglad XSS i PreferencesServlet (NPR-33439).
 
 ### Assets {#assets-6481}
 
@@ -74,6 +76,8 @@ Adobe Experience Manager 6.4.8.1 innehåller korrigeringar av följande problem.
 
 * Resursbearbetning när massöverföring fastnar (CQ-4293916).
 
+* SSRF-sårbarhet i Experience Manager (NPR-33437).
+
 ### Platform {#platform-6481}
 
 * Filtret anropas inte om [!DNL Sling] mappningsposten skapas under `sling:match` `/etc/maps` (NPR-33308).
@@ -89,12 +93,17 @@ Adobe Experience Manager 6.4.8.1 innehåller korrigeringar av följande problem.
 
 * Ett `NullPointerException` fel visas i loggarna när ett översättningsjobb körs (NPR-3220).
 
+### Integreringar {#integrations-6481}
+
+* Serveröverskridande skriptning för JSON (NPR-32745).
+
 ### Communities {#communities-6481}
 
 * Författare som har skapat en ny grupp omdirigeras inte till avsnittet [!UICONTROL Community Group] i [!DNL Internet Explorer] 11 (NPR-33202).
 * Ett fel inträffar vid åtkomst till [!UICONTROL Activity Stream] sidan (NPR-33152).
 * När du redigerar en [!DNL Communities] grupp och ändrar miniatyrbilden uppdateras inte gruppens miniatyrbild (NPR-32603).
 * När du skapar en version av meddelanden och prenumerationer på användargenererat innehåll (UGC) lagras ett felaktigt ID för källsidan (CQ-4289703).
+* Serveröverskridande skriptproblem (NPR-33212).
 
 ### Arbetsflöde {#workflow-6481}
 
@@ -117,6 +126,8 @@ Adobe Experience Manager 6.4.8.1 innehåller korrigeringar av följande problem.
 * BackendIntegration: Begäranden från formulärdatamodellen misslyckas eftersom uppdateringstoken förfaller på grund av ett inaktivt tillstånd (NPR-33168).
 * Dokumenttjänster: Konvertering av PDF-tjänst kan inte konvertera PDF-dokument till PostScript på grund av att Gibson-jars saknas [!DNL WebLogic] på [!DNL Linux] servern (NPR-33515, CQ-4292239).
 * Dokumenttjänster: När en användare konverterar en textfil till en PDF-fil återges inte japanska tecken korrekt (NPR-33239).
+* Lagrade XSS med GuideSOMProviderServlet (NPR-32701).
+
 
 ## Installera 6.4.8.1 {#install}
 
