@@ -24,7 +24,7 @@ Du kan importera och exportera sökmallsdefinitioner och globala inställningar 
 
 >[!NOTE]
 >
->Flex Workspace används inte i AEM-formulärsversioner.
+>Flex Workspace är föråldrat för AEM formulärreleaser.
 
 Du kan till exempel gå från en utvecklingsmiljö till en produktionsmiljö genom att exportera sökmallsdefinitionerna och globala inställningar från en miljö och importera dem till en annan.
 
@@ -67,7 +67,7 @@ Du kan ändra den globala inställningsfilen; De enda inställningar du kan beh�
 
 >[!NOTE]
 >
->Flex Workspace används inte i AEM-formulärsversioner.
+>Flex Workspace är föråldrat för AEM formulärreleaser.
 
 Den globala inställningsfilen för arbetsytan innehåller följande inställningar:
 
@@ -87,7 +87,7 @@ Inställningarna för *specialRoutes* anger egenskaperna för de särskilda väg
 
 ### JGroup-inställningar {#jgroup-settings}
 
-De här inställningarna visas endast om du har uppgraderat från Adobe LiveCycle ES 2.5 eller tidigare.
+De här inställningarna visas bara om du har uppgraderat från Adobe LiveCycle ES 2.5 eller tidigare.
 
 **server_remoteevents_ClientTimeoutMilliseconds:** Den längsta tid som JGroup väntar på händelsemeddelanden. Den här inställningen bör inte ändras.
 
@@ -125,7 +125,7 @@ Mer information om JGroups och Workspace finns i [JGroups and AEM forms Workspac
 
 **server_debugLevel:** Ändra inte den här inställningen.
 
-**client_pollingInterval:** Anger avsökningsintervallet (i sekunder) som används på Flex-arbetsytan (borttagen för AEM-formulär i JEE) för att identifiera nya och ändrade uppgifter. Standardvärdet är 3 sekunder. Detta fungerar inte för AEM Forms Workspace.
+**client_pollingInterval:** Anger avsökningsintervallet (i sekunder) som används på Flex-arbetsytan (AEM borttaget för formulär i JEE) för att identifiera nya och ändrade uppgifter. Standardvärdet är 3 sekunder. Detta fungerar inte för AEM Forms Workspace.
 
 **client_systemContext_name:** Ange ett anpassat namn (t.ex. Medborgare) som ska visas i fältet Lägg till av (på fliken Bifogade filer) för de bifogade filerna för en uppgift i AEM Forms Workspace.
 
