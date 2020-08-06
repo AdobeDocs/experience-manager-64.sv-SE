@@ -1,8 +1,8 @@
 ---
 title: Övertäckningar
 seo-title: Övertäckningar
-description: 'AEM använder principen om övertäckningar för att du ska kunna utöka och anpassa konsoler och andra funktioner '
-seo-description: 'AEM använder principen om övertäckningar för att du ska kunna utöka och anpassa konsoler och andra funktioner '
+description: 'AEM använder principen för övertäckningar för att du ska kunna utöka och anpassa konsoler och andra funktioner '
+seo-description: 'AEM använder principen för övertäckningar för att du ska kunna utöka och anpassa konsoler och andra funktioner '
 uuid: d14c08fe-04c0-4925-8c99-c6644357919d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,15 +11,18 @@ content-type: reference
 discoiquuid: 0470b74c-2c34-4327-afed-b95eefb1d521
 translation-type: tm+mt
 source-git-commit: 58686148b74e63f28800b5752db0cceafc58ccdd
+workflow-type: tm+mt
+source-wordcount: '625'
+ht-degree: 0%
 
 ---
 
 
 # Övertäckningar{#overlays}
 
-AEM (och tidigare CQ) har länge använt principen med övertäckningar för att kunna utöka och anpassa [konsoler](/help/sites-developing/customizing-consoles-touch.md) och andra funktioner (till exempel [sidredigering](/help/sites-developing/customizing-page-authoring-touch.md)).
+AEM (och tidigare) har länge använt principen med övertäckningar för att kunna utöka och anpassa [konsoler](/help/sites-developing/customizing-consoles-touch.md) och andra funktioner (till exempel [sidredigering](/help/sites-developing/customizing-page-authoring-touch.md)).
 
-Övertäckning är en term som kan användas i många sammanhang. I det här sammanhanget (utökning av AEM) innebär en övertäckning att du tar de fördefinierade funktionerna och lägger in egna definitioner över dem (för att anpassa standardfunktionerna).
+Övertäckning är en term som kan användas i många sammanhang. I det här sammanhanget (utöka AEM) innebär en övertäckning att du tar de fördefinierade funktionerna och lägger in egna definitioner över dem (för att anpassa standardfunktionerna).
 
 I en standardinstans lagras den fördefinierade funktionen under `/libs` och du rekommenderas att definiera övertäckningen (anpassningar) under `/apps` grenen. AEM använder en söksökväg för att hitta en resurs, söker först i `/apps` grenen och sedan i `/libs` grenen ( [söksökvägen kan konfigureras](#configuring-the-search-paths)). Den här mekanismen innebär att övertäckningen (och de anpassningar som definieras där) kommer att ha prioritet.
 
@@ -40,7 +43,7 @@ Sedan AEM 6.0 har ändringar gjorts i hur övertäckningar implementeras och anv
       * Definiera bara om vad som faktiskt behövs.
 
 
-* Övertäckningar och övertäckningar som inte är granitövertäckningar före AEM 6.0
+* Icke-Granitövertäckningar och övertäckningar före AEM 6.0
 
    * Metod
 
