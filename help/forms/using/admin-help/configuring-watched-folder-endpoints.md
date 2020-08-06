@@ -36,7 +36,7 @@ När du har konfigurerat tjänsten Bevakade mappar lägger du till en bevakad ma
 Du kan skapa en bevakad mapp på följande två sätt:
 
 * När du konfigurerar inställningarna för en bevakad mappslutpunkt skriver du den fullständiga sökvägen till den överordnade katalogen i rutan Sökväg och lägger till namnet på den bevakade mapp som ska skapas, enligt följande exempel:
-   `  C:\MyPDFs\MyWatchedFolder`Eftersom mappen MyWatchedFolder inte redan finns försöker AEM-formulär skapa den på den platsen.
+   `  C:\MyPDFs\MyWatchedFolder`Eftersom mappen MyWatchedFolder inte redan finns försöker AEM skapa den på den platsen.
 
 * Skapa en mapp i filsystemet innan du konfigurerar en bevakad mappslutpunkt och skriv sedan den fullständiga sökvägen i rutan Sökväg.
 
@@ -63,13 +63,13 @@ Om jobbet innehåller mer än en indatafil måste användaren skapa en mapp utan
 
 >[!NOTE]
 >
->Kontrollera att programservern har tagit bort åtkomsten till filerna i den bevakade mappen. Om AEM-formulär inte kan ta bort filerna från indatamappen efter att de har skannats in, kommer den tillhörande processen att anropas i oändlighet.
+>Kontrollera att programservern har tagit bort åtkomsten till filerna i den bevakade mappen. Om AEM inte kan ta bort filerna från indatamappen efter att de har skannats in, kommer den tillhörande processen att anropas i oändlighet.
 
 ## Bevakade mapputdata {#watched-folder-output}
 
-När indata är en mapp och utdata består av flera filer skapar AEM-formulär en utdatamapp med samma namn som indatamappen och kopierar utdatafilerna till den mappen. När utdata består av en dokumentöversikt som innehåller ett nyckelvärdepar, t.ex. utdata från en utdataprocess, används nyckeln som utdatafilens namn.
+När indata är en mapp och utdata består av flera filer skapar AEM en utdatamapp med samma namn som indatamappen och kopierar utdatafilerna till den mappen. När utdata består av en dokumentöversikt som innehåller ett nyckelvärdepar, t.ex. utdata från en utdataprocess, används nyckeln som utdatafilens namn.
 
-Namn på utdatafiler som är ett resultat av en slutpunktsprocess får inte innehålla andra tecken än bokstäver, siffror och punkter (.) före filtillägget. AEM-formulär konverterar andra tecken till sina hexadecimala värden.
+Namn på utdatafiler som är ett resultat av en slutpunktsprocess får inte innehålla andra tecken än bokstäver, siffror och punkter (.) före filtillägget. AEM konverterar andra tecken till sina hexadecimala värden.
 
 Klientprogrammen hämtar resultatdokumenten från den bevakade mappens resultatmapp. Processfel loggas i den bevakade mappen för mappfel.
 
@@ -105,7 +105,7 @@ Så här anropar du en tjänst med bevakade mappar:
 1. Den måltjänst som konfigurerats för slutpunkten anropas synkront eller asynkront. Måltjänsten anropas med det användarnamn och lösenord som har konfigurerats för slutpunkten.
 
    * Synkrona anrop anropar måltjänsten direkt och hanterar omedelbart svaret.
-   * För asynkrona anrop anropas måltjänsten via tjänsten Job Manager, som placerar begäran i en kö. Jobbhanteraren anropar i sin tur provider.file_write_results_service för att hantera resultaten.
+   * För asynkrona anrop anropas måltjänsten via tjänsten Jobbhanteraren, som placerar begäran i en kö. Jobbhanteraren anropar i sin tur provider.file_write_results_service för att hantera resultaten.
 
 1. provider.file_write_results_service hanterar svaret eller felet för måltjänstens anrop. När det är klart sparas utdata i resultatmappen baserat på slutpunktskonfigurationen. provider.file_write_results_service bevarar också källan om slutpunkten är konfigurerad för att bevara resultaten när de har slutförts.
 
@@ -129,7 +129,7 @@ Använd följande inställningar för att konfigurera en bevakad mappslutpunkt.
 
 **Antal upprepningar:** Antal gånger som den bevakade mappen genomsöker mappen eller katalogen. Värdet -1 anger obestämd skanning. Standardvärdet är -1.
 
-**Begränsning:** När det här alternativet är markerat begränsas antalet bevakade mappjobb som AEM-formulär bearbetar vid en given tidpunkt. Det maximala antalet jobb bestäms av värdet för Batchstorlek. (Se Om begränsning.)
+**Begränsning:** När det här alternativet är markerat begränsas antalet bevakade mappjobb som AEM formulärprocesser vid en given tidpunkt. Det maximala antalet jobb bestäms av värdet för Batchstorlek. (Se Om begränsning.)
 
 **Användarnamn:** (Obligatoriskt) Det användarnamn som används när en måltjänst anropas från den bevakade mappen. Standardvärdet är SuperAdmin.
 
@@ -346,13 +346,14 @@ Om den bevakade mappen inte kan bearbeta källfilerna i scenmappen kan du åters
 
    * I Program och tjänster ändrar du parametern Inkludera filmönster för den bevakade mappens slutpunkt till något som inte matchar någon av de nya indatafilerna (ange till exempel `NOMATCH`).
    * Skjut upp processen som skapar nya indatafiler.
-   Vänta tills AEM-formulären återställer och bearbetar alla filer. De flesta filerna bör återställas och alla nya indatafiler bearbetas korrekt. Hur lång tid du väntar på att Bevakade mappar ska återställas och bearbetas beror på hur lång åtgärden ska vara och hur många filer som ska återställas.
+
+   Vänta tills AEM återställer och bearbetar alla filer. De flesta filerna bör återställas och alla nya indatafiler bearbetas korrekt. Hur lång tid du väntar på att Bevakade mappar ska återställas och bearbetas beror på hur lång åtgärden ska vara och hur många filer som ska återställas.
 
 1. Avgör vilka filer som inte kan bearbetas. Om du väntade en viss tid och slutförde det föregående steget och det fortfarande finns obearbetade filer kvar i scenmappen går du till nästa steg.
 
    >[!NOTE]
    >
-   >Du kan titta på datum- och tidsstämpeln för filerna i scenkatalogen. Beroende på antalet filer och den normala bearbetningstiden kan du avgöra vilka filer som är tillräckligt gamla för att betraktas som fasta.
+   >Du kan titta på datum- och tidsstämpeln för filerna i scenkatalogen. Beroende på antalet filer och den normala bearbetningstiden kan du avgöra vilka filer som är tillräckligt gamla för att anses ha fastnat.
 
 1. Kopiera de obearbetade filerna från scenkatalogen till indatakatalogen.
 1. Om du förhindrade att Bevakad mapp bearbetar nya indatafiler i steg 2, ändrar du Inkludera filmönster till dess tidigare värde eller återaktiverar den process som du inaktiverade.
@@ -405,7 +406,7 @@ Här följer några tips och råd när du konfigurerar slutpunkten för bevakad 
 
 ## Servicespecifika rekommendationer för bevakade mappar {#service-specific-recommendations-for-watched-folders}
 
-För alla tjänster bör du justera gruppstorleken och upprepningsintervallet för den bevakade mappen så att hastigheten med vilken bevakade mappar hämtar nya filer och mappar för bearbetning inte överstiger hastigheten för de jobb som kan bearbetas av AEM-formulärservern. De faktiska parametrarna som ska användas kan variera beroende på hur många bevakade mappar som har konfigurerats, vilka tjänster som använder bevakade mappar och hur intensiva jobben är för processorn.
+För alla tjänster bör du justera gruppstorleken och upprepningsintervallet för den bevakade mappen så att hastigheten med vilken bevakade mappar hämtar nya filer och mappar för bearbetning inte överstiger hastigheten för de jobb som kan bearbetas av AEM formulärserver. De faktiska parametrarna som ska användas kan variera beroende på hur många bevakade mappar som har konfigurerats, vilka tjänster som använder bevakade mappar och hur intensiva jobben är för processorn.
 
 ### Generera rekommendationer för PDF-tjänster {#generate-pdf-service-recommendations}
 
@@ -418,7 +419,7 @@ För alla tjänster bör du justera gruppstorleken och upprepningsintervallet f�
 
 * För bästa prestanda vid bearbetning av streckkodsformulär (små filer) anger du `10` Gruppstorlek och `2` Upprepa intervall.
 * När många filer placeras i indatamappen kan fel med dolda filer som kallas *thumbs.db* uppstå. Vi rekommenderar därför att du anger Inkludera filmönster för inkluderingsfilerna till samma värde som anges för indatavariabeln (till exempel `*.tiff`). Detta förhindrar att övervakad mapp bearbetar DB-filerna.
-* Ett värde för gruppstorlek på `5` och upprepningsintervall på `2` är vanligtvis tillräckligt eftersom tjänsten Barcoded Forms vanligtvis tar ca 0,5 sekunder att bearbeta en streckkod.
+* Ett värde för gruppstorlek på `5` och upprepningsintervall på `2` är vanligtvis tillräckligt eftersom tjänsten Barcoded Forms vanligtvis tar cirka 1,5 sekunder att bearbeta en streckkod.
 * Bevakad mapp väntar inte på att processmotorn ska slutföra jobbet innan nya filer eller mappar hämtas. Det fortsätter att skanna den bevakade mappen och anropa måltjänsten. Det här beteendet kan överbelasta motorn och ge upphov till resursproblem och tidsgränser. Kontrollera att du använder upprepningsintervall och gruppstorlek för att begränsa indata för bevakad mapp. Du kan öka upprepningsintervallet och minska gruppstorleken om det finns fler bevakade mappar eller aktivera strypning på slutpunkten. Mer information om strypning finns i [Om strypning](configuring-watched-folder-endpoints.md#about-throttling).
 * Bevakad mapp personifierar användaren som anges i användarnamnet och domännamnet. Bevakad mapp anropar tjänsten som den här användaren om den anropas direkt eller om processen är kort. För en långvarig process anropas processen med systemkontexten. Administratörer kan ange operativsystemprinciper för bevakad mapp för att avgöra vilken användare som ska tillåta eller neka åtkomst till.
 * Använd filmönster för att ordna resultat, fel och bevara mappar. (Se [Om filmönster](configuring-watched-folder-endpoints.md#about-file-patterns).)
