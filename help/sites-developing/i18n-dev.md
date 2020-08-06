@@ -11,6 +11,9 @@ topic-tags: components
 discoiquuid: 9da8823c-13a4-4244-bfab-a910a4fd44e7
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1112'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ En översikt över internationaliseringen och lokaliseringsprocessen finns i [In
 
 ## Internationalisering av strängar i Java- och JSP-kod {#internationalizing-strings-in-java-and-jsp-code}
 
-Med `com.day.cq.i18n` Java-paketet kan du visa lokaliserade strängar i användargränssnittet. Klassen innehåller den `I18n` `get` metod som hämtar lokaliserade strängar från AEM-ordlistan. Den enda obligatoriska parametern för `get` metoden är stränglitteralen på engelska. Engelska är standardspråk för användargränssnittet. I följande exempel lokaliseras ordet `Search`:
+Med `com.day.cq.i18n` Java-paketet kan du visa lokaliserade strängar i användargränssnittet. Klassen innehåller den `I18n` `get` metod som hämtar lokaliserade strängar från AEM. Den enda obligatoriska parametern för `get` metoden är stränglitteralen på engelska. Engelska är standardspråk för användargränssnittet. I följande exempel lokaliseras ordet `Search`:
 
 `i18n.get("Search");`
 
@@ -176,7 +179,7 @@ Testa om du har internationaliserat alla strängar i användargränssnittet. Om 
 
 `USR_*Default-String*_尠`
 
-Följande bild visar stub-översättning för AEM-startsidan:
+I följande bild visas stub-förflyttningen för AEM hemsida:
 
 ![chlimage_1](assets/chlimage_1.jpeg)
 
