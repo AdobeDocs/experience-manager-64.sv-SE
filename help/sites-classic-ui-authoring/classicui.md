@@ -1,8 +1,8 @@
 ---
 title: Om du skriver i det klassiska gränssnittet
 seo-title: Om du skriver i det klassiska gränssnittet
-description: 'Det klassiska användargränssnittet är det skrivbordsorienterade användargränssnittet som har varit tillgängligt sedan CQ5. Följande dokumentation om redigering är fokuserad på det här användargränssnittet. Det pekbaserade användargränssnittet är det nya standardgränssnittet för AEM, som är utformat för både pekskärmar och stationära enheter. Mer information finns i standarddokumentationen. '
-seo-description: 'Det klassiska användargränssnittet är det skrivbordsorienterade användargränssnittet som har varit tillgängligt sedan CQ5. Följande dokumentation om redigering är fokuserad på det här användargränssnittet. Det pekbaserade användargränssnittet är det nya standardgränssnittet för AEM, som är utformat för både pekskärmar och stationära enheter. Mer information finns i standarddokumentationen. '
+description: 'Det klassiska användargränssnittet är det skrivbordsorienterade användargränssnittet som har varit tillgängligt sedan CQ5. Följande dokumentation om redigering är fokuserad på det här användargränssnittet. Det pekbaserade användargränssnittet är det nya standardgränssnittet för AEM, som är utformat för att användas både på pekskärmar och på stationära enheter. Mer information finns i standarddokumentationen. '
+seo-description: 'Det klassiska användargränssnittet är det skrivbordsorienterade användargränssnittet som har varit tillgängligt sedan CQ5. Följande dokumentation om redigering är fokuserad på det här användargränssnittet. Det pekbaserade användargränssnittet är det nya standardgränssnittet för AEM, som är utformat för att användas både på pekskärmar och på stationära enheter. Mer information finns i standarddokumentationen. '
 uuid: 4ad03293-f36c-40ae-b668-c78ce326cf0d
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,17 +11,20 @@ content-type: reference
 discoiquuid: edc78306-5e83-45a4-a44b-ce0d21ff0f31
 translation-type: tm+mt
 source-git-commit: ee9b977515b6c1233ff87f011f7a8b4095450814
+workflow-type: tm+mt
+source-wordcount: '243'
+ht-degree: 0%
 
 ---
 
 
 # Om du skriver i det klassiska gränssnittet{#authoring-in-the-classic-ui}
 
-## Klassiskt användargränssnitt och pekaktiverat användargränssnitt {#classic-ui-and-touch-enabled-ui}
+## Classic UI and Touch-Enabled UI {#classic-ui-and-touch-enabled-ui}
 
-Det klassiska användargränssnittet är det skrivbordsorienterade användargränssnittet som har varit tillgängligt sedan CQ5 (förhandstitt på AEM). Följande dokumentation om redigering är fokuserad på det här användargränssnittet.
+Det klassiska användargränssnittet är det skrivbordsorienterade användargränssnittet som har varit tillgängligt sedan CQ5 (det föregående AEM). Följande dokumentation om redigering är fokuserad på det här användargränssnittet.
 
-Det pekaktiverade användargränssnittet är det nya standardgränssnittet för AEM, som är utformat för att användas både på pekskärmar och på stationära enheter. Mer information finns i [standarddokumentationen](/help/sites-authoring/author.md) .
+Det beröringskänsliga användargränssnittet är det nya standardgränssnittet för AEM, som är utformat för både pekskärmar och stationära enheter. Mer information finns i [standarddokumentationen](/help/sites-authoring/author.md) .
 
 >[!NOTE]
 >
