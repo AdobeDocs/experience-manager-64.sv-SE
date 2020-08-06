@@ -11,6 +11,9 @@ topic-tags: deploying
 discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '637'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
 
 ## AEM Communities {#aem-communities}
 
-För AEM Communities är det nödvändigt att konfigurera Dispatcher för att säkerställa att [communitywebbplatserna](overview.md#community-sites)fungerar korrekt. Ytterligare konfigurationer krävs när funktioner som Communities-aktivering och social inloggning inkluderas.
+För AEM Communities är det nödvändigt att konfigurera Dispatcher för att säkerställa att [communityplatserna](overview.md#community-sites)fungerar korrekt. Ytterligare konfigurationer krävs när funktioner som Communities-aktivering och social inloggning inkluderas.
 
 För att ta reda på vad som är nödvändigt för just din driftsättning och webbplatsdesign
 
@@ -31,7 +34,7 @@ Se även huvuddokumentationen för [Dispatcher](https://helpx.adobe.com/experien
 
 ### Översikt {#overview}
 
-Dispatcher-cachning för AEM Communities är en möjlighet för avsändaren att leverera fullt cachelagrade versioner av en communitywebbplats sidor.
+Dispatcher-cachning för AEM Communities är en möjlighet för dispatchern att leverera fullt cachelagrade versioner av en communitywebbplats sidor.
 
 För närvarande stöds den bara för anonyma webbplatsbesökare, t.ex. användare som bläddrar på communitywebbplatsen, eller landar på en communitysida som ett resultat av en sökning, samt för sökmotorer som indexerar sidor. Fördelen är att anonyma användare och sökmotorer får bättre prestanda.
 
@@ -61,9 +64,11 @@ OSGi-konfigurationen **ACS AEM Commons - Dispatcher Cache Control Header - Max A
 ![chlimage_1-339](assets/chlimage_1-339.png)
 
 * **Filtermönster**
-   *(obligatoriskt)* En eller flera sökvägar till communitysidor. Exempel, `/content/sites/engage/(.*)`.
+
+   *(obligatoriskt)* En eller flera sökvägar till communitysidor. Till exempel, `/content/sites/engage/(.*)`.
 
 * **Maximal ålder för cachekontroll**
+
    *(obligatoriskt)* Maximal ålder (i sekunder) som ska läggas till i cachekontrollhuvudet. Värdet måste vara större än noll (0).
 
 ## Dispatcher-klienthuvuden {#dispatcher-client-headers}
