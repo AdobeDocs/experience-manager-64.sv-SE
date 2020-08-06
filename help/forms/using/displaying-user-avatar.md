@@ -1,8 +1,8 @@
 ---
 title: Visa användarens avatar
 seo-title: Visa användarens avatar
-description: Hur man anpassar arbetsytan i AEM Forms så att bilden för en inloggad användare visas.
-seo-description: Hur man anpassar arbetsytan i AEM Forms så att bilden för en inloggad användare visas.
+description: Hur du anpassar arbetsytan i AEM Forms så att den visar bilden för en inloggad användare.
+seo-description: Hur du anpassar arbetsytan i AEM Forms så att den visar bilden för en inloggad användare.
 uuid: 2961dc93-f0d0-4842-80f1-3c239a20e348
 contentOwner: robhagat
 content-type: reference
@@ -11,13 +11,16 @@ topic-tags: forms-workspace
 discoiquuid: aec03ea5-17a6-4775-92cb-2ad361895fdf
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 0%
 
 ---
 
 
 # Visa användarens avatar {#displaying-the-user-avatar}
 
-Avatar för den inloggade användaren visas i det övre högra hörnet på arbetsytan i AEM Forms. Variatarerna för direkta rapporter i organisationshierarkin visas också i hanterarvyn. Du kan konfigurera arbetsytan för AEM Forms så att du kan välja användarbilder från din databas, till exempel LDAP-server.
+Avatar för den inloggade användaren visas i det övre högra hörnet av arbetsytan i AEM Forms. Variatarerna för direkta rapporter i organisationshierarkin visas också i hanterarvyn. Du kan konfigurera AEM Forms arbetsyta så att du kan välja användarbilder från din databas, till exempel LDAP-server.
 
 >[!NOTE]
 >
