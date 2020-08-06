@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: e0372f4a-fe7b-4526-8391-5bb345b51d70
 translation-type: tm+mt
 source-git-commit: 4e6442ec089b7d07cc68debb5a630fb474716f4d
+workflow-type: tm+mt
+source-wordcount: '501'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Med AEM Analytics kan ni spåra användarinteraktion på er webbplats. Som utvec
 
 >[!NOTE]
 >
->Den här informationen är i princip generisk, men den använder [Adobe Analytics](/help/sites-administering/adobeanalytics.md) för specifika exempel.
+>Den här informationen är i stort sett generisk, men den använder [Adobe Analytics](/help/sites-administering/adobeanalytics.md) för specifika exempel.
 >
 >Allmän information om hur du utvecklar komponenter och dialogrutor finns i [Utveckla komponenter](/help/sites-developing/components.md).
 
@@ -58,7 +61,7 @@ Ett exempel kan se ut så här:
 </span>
 ```
 
-Vid sidinläsning samlas alla `data-tracking` attribut in och läggs till i händelsearkivet i ContextHub, där de kan mappas till Adobe Analytics-händelser. Händelser som inte mappas kommer inte att spåras av Adobe Analytics. Mer information om mappningshändelser finns i Ansluta [till Adobe Analytics](/help/sites-administering/adobeanalytics.md) .
+Vid sidinläsning samlas alla `data-tracking` attribut in och läggs till i händelselagret för ContextHub, där de kan mappas till Adobe Analytics-händelser. Händelser som inte mappas kommer inte att spåras av Adobe Analytics. Mer information om mappningshändelser finns i [Ansluta till Adobe Analytics](/help/sites-administering/adobeanalytics.md) .
 
 ### Spåra anpassade händelser efter sidinläsning {#tracking-custom-events-after-page-load}
 
