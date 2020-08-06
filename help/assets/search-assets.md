@@ -1,16 +1,19 @@
 ---
-title: Söka efter resurser i AEM
-description: Lär dig hur du hittar de nödvändiga resurserna i AEM med hjälp av panelen Filter och hur du använder de resurser som visas i sökningen.
+title: Sök efter resurser i AEM
+description: Lär dig hur du söker efter nödvändiga resurser i AEM genom att använda panelen Filter och hur du använder de resurser som visas i sökningen.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
+workflow-type: tm+mt
+source-wordcount: '550'
+ht-degree: 1%
 
 ---
 
 
-# Söka efter resurser i AEM {#search-assets-in-aem}
+# Sök efter resurser i AEM {#search-assets-in-aem}
 
-Lär dig hur du hittar de nödvändiga resurserna i AEM med hjälp av panelen Filter och hur du använder de resurser som visas i sökningen.
+Lär dig hur du söker efter nödvändiga resurser i AEM genom att använda panelen Filter och hur du använder de resurser som visas i sökningen.
 
 Använd panelen Filter för att söka efter resurser, mappar, taggar och metadata. Du kan söka efter delar av en sträng med hjälp av asterisk med jokertecken.
 
@@ -46,7 +49,7 @@ Du kan anpassa panelen Filter och lägga till/ta bort sökpredikatorer med [sök
 
 Med panelen Filter kan du göra sökningen mer detaljerad och sökfunktionen mer flexibel. Du kan enkelt gå ned till önskad detaljnivå.
 
-Om du till exempel söker efter en bild använder du predikatet **[!UICONTROL Filtyp]** för att välja om du vill ha en bitmappsbild eller vektorbild.
+Om du till exempel söker efter en bild använder du predikatet för att välja om du vill ha en bitmappsbild eller en vektorbild. **[!UICONTROL File Type]**
 
 ![image_type](assets/image_type.png)
 
