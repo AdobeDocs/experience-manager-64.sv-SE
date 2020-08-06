@@ -1,8 +1,8 @@
 ---
 title: Hantera prenumerationer
 seo-title: Hantera prenumerationer
-description: Användare kan uppmanas att prenumerera på e-postleverantörens e-postlistor med hjälp av formulärkomponenten som används på en AEM-webbsida. Om du vill förbereda en AEM-sida med ett registreringsformulär för prenumeration på e-posttjänstens e-postlistor måste du tillämpa motsvarande tjänstkonfiguration på den AEM-sida som den potentiella prenumeranten kommer att besöka.
-seo-description: Användare kan uppmanas att prenumerera på e-postleverantörens e-postlistor med hjälp av formulärkomponenten som används på en AEM-webbsida. Om du vill förbereda en AEM-sida med ett registreringsformulär för prenumeration på e-posttjänstens e-postlistor måste du tillämpa motsvarande tjänstkonfiguration på den AEM-sida som den potentiella prenumeranten kommer att besöka.
+description: Användare kan uppmanas att prenumerera på e-postleverantörens e-postlistor med hjälp av formulärkomponenten som används på en AEM webbsida. Om du vill förbereda en AEM sida med ett registreringsformulär för prenumeration på e-posttjänstens e-postlistor måste du använda motsvarande tjänstkonfiguration på den AEM sidan som den potentiella prenumeranten kommer att besöka.
+seo-description: Användare kan uppmanas att prenumerera på e-postleverantörens e-postlistor med hjälp av formulärkomponenten som används på en AEM webbsida. Om du vill förbereda en AEM sida med ett registreringsformulär för prenumeration på e-posttjänstens e-postlistor måste du använda motsvarande tjänstkonfiguration på den AEM sidan som den potentiella prenumeranten kommer att besöka.
 uuid: b2578a3d-dba1-4114-b21a-5f34c0cccc5a
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 295cb0a6-29db-42aa-824e-9141b37b5086
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '977'
+ht-degree: 0%
 
 ---
 
@@ -20,28 +23,28 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 >[!NOTE]
 >
 >Adobe planerar inte att ytterligare förbättra denna funktion (Hantera leads och listor).\
->Rekommendationen är att utnyttja [Adobe Campaign och dess AEM-integrering](/help/sites-administering/campaign.md).
+>Rekommendationen är att utnyttja [Adobe Campaign och dess AEM integrering](/help/sites-administering/campaign.md).
 
-Användare kan uppmanas att prenumerera på **e-postleverantörens** e-postlistor med hjälp av **Form** -komponenten som används på en AEM-webbsida. Om du vill förbereda en AEM-sida med ett registreringsformulär för prenumeration på e-posttjänstens e-postlistor måste du tillämpa motsvarande tjänstkonfiguration på den AEM-sida som den potentiella prenumeranten kommer att besöka.
+Användare kan uppmanas att prenumerera på **e-postleverantörens** e-postlistor med hjälp av **formulärkomponenten** som används på en AEM webbsida. Om du vill förbereda en AEM sida med ett registreringsformulär för prenumeration på e-posttjänstens e-postlistor måste du använda motsvarande tjänstkonfiguration på den AEM sidan som den potentiella prenumeranten kommer att besöka.
 
 ## Tillämpar e-posttjänstkonfiguration på en sida {#applying-email-service-configuration-to-a-page}
 
-Så här konfigurerar du en AEM-sida:
+Så här konfigurerar du en AEM:
 
-1. Gå till fliken **Webbplatser** .
+1. Navigate to the **Websites** tab.
 1. Välj den sida som ska konfigureras för tjänsten. Högerklicka på sidan och välj **Egenskaper**.
 
-1. Välj **molntjänster** och sedan **Lägg till tjänst**. Välj en konfiguration i listan över tillgängliga konfigurationer.
+1. Välj **Cloud Services** och sedan **Lägg till tjänst**. Välj en konfiguration i listan över tillgängliga konfigurationer.
 
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
 1. Click **OK**.
 
-## Skapa ett anmälningsformulär på en AEM-sida för att prenumerera/avbryta prenumerationen på listor {#creating-a-sign-up-form-on-an-aem-page-for-subscribing-unsubscribing-to-lists}
+## Skapa ett anmälningsformulär på en AEM sida för att prenumerera/avbryta prenumerationer på listor {#creating-a-sign-up-form-on-an-aem-page-for-subscribing-unsubscribing-to-lists}
 
 Så här skapar du ett anmälningsformulär och konfigurerar det för prenumerationer på e-postleverantörens sändlistor:
 
-1. Öppna AEM-sidan som användaren kommer att besöka.
+1. Öppna AEM som användaren ska besöka.
 1. Använd e-postleverantörens konfiguration på sidan.
 
 1. Lägg till en **Form** -komponent på sidan genom att dra komponenten från sidosparken. Om komponenten inte är tillgänglig växlar du till designläge och aktiverar **formulärgruppen** .
@@ -65,7 +68,7 @@ Så här skapar du ett anmälningsformulär och konfigurerar det för prenumerat
    >
    >För att formulärprenumerationen ska fungera på rätt sätt måste [krypteringsnycklar från författaren exporteras och importeras till publiceringsinstansen](#exporting-keys-from-author-and-importing-on-publish).
 
-## Exportera nycklar från författare och importera vid publicering {#exporting-keys-from-author-and-importing-on-publish}
+## Exportera nycklar från författaren och importera vid publicering {#exporting-keys-from-author-and-importing-on-publish}
 
 För att e-posttjänsten ska kunna prenumerera och sluta prenumerera via anmälningsformuläret på publiceringsinstansen måste du följa dessa steg:
 
@@ -79,10 +82,10 @@ För att e-posttjänsten ska kunna prenumerera och sluta prenumerera via anmäln
 
 Så här avbeställer du användare från listor:
 
-1. Öppna sidegenskaperna för den AEM-sida som har registreringsformuläret för att avbryta prenumerationen på ett lead.
+1. Öppna sidegenskaperna för den AEM sidan som har registreringsformuläret för att avbryta prenumerationen på ett lead.
 1. Använd tjänstkonfigurationen på sidan.
 1. Skapa ett anmälningsformulär på sidan.
-1. När du konfigurerar komponenten väljer du åtgärden **E-posttjänst**: Avsluta **prenumeration på användare i listan.**
+1. När du konfigurerar komponenten väljer du åtgärden **E-posttjänst**: **Avbeställ användare från listan.**
 1. I listrutan väljer du lämplig lista som användaren ska tas bort från när prenumerationen avbryts.
 
    ![chlimage_1-11](assets/chlimage_1-11.jpeg)
@@ -93,7 +96,7 @@ Så här avbeställer du användare från listor:
 
 Så här konfigurerar du ett e-postmeddelande med automatiskt svar för en prenumerant:
 
-1. Öppna sidegenskaperna för den AEM-sida som har registreringsformuläret för att konfigurera automatisk svarare för en lead.
+1. Öppna sidegenskaperna för den AEM sidan som har registreringsformuläret för att konfigurera automatisk svarare för en lead.
 1. Använd konfigurationen ExactTarget på sidan.
 
 1. Lägg till en **Form** -komponent på sidan genom att dra komponenten från sidosparken. Om komponenten inte är tillgänglig växlar du till designläge och aktiverar **formulärgruppen** .
