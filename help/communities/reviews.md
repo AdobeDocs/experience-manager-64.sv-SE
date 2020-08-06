@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: bf4e7809-8def-4647-aaa6-3ac36865511f
 translation-type: tm+mt
 source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+workflow-type: tm+mt
+source-wordcount: '1236'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +26,7 @@ Komponenten innehåller en sammanfattning av en aktiv eller stängd instans av e
 
 >[!NOTE]
 >
->Anonym publicering av en granskning stöds inte. Besökare måste registrera sig (bli medlem) och logga in för att kunna delta. Den inloggade besökaren kan uppdatera sin granskning när som helst.
+>Anonym publicering av en granskning stöds inte. Besökarna måste registrera sig (bli medlem) och logga in för att kunna delta. Den inloggade besökaren kan uppdatera sin granskning när som helst.
 
 ## Lägga till en granskning på en sida {#adding-a-review-to-a-page}
 
@@ -41,77 +44,94 @@ Markera den monterade `Reviews` komponent som du vill öppna och välj den `Conf
 
 ![chlimage_1-341](assets/chlimage_1-341.png)
 
-Under fliken **[!UICONTROL Tillåtna klassificeringar]** anger du den fullständiga listan över klassificeringar som ska visas för medlemmarna. Det första omdömet bör vara ett övergripande/allmänt omdöme, eftersom det är omdömet som ger det genomsnittliga omdömet för `Review Summary (Display)` komponenten. De två följande klassificeringarna i standardkonfigurationen bör ha en annan rubrik än &quot;Undergrupp 1&quot; eller &quot;Undergrupp 2&quot;.
+Under **[!UICONTROL Allowed Ratings]** fliken anger du den fullständiga listan över klassificeringar som ska visas för medlemmarna. Det första omdömet bör vara ett övergripande/allmänt omdöme, eftersom det är omdömet som ger det genomsnittliga omdömet för `Review Summary (Display)` komponenten. De två följande klassificeringarna i standardkonfigurationen bör ha en annan rubrik än &quot;Undergrupp 1&quot; eller &quot;Undergrupp 2&quot;.
 
 ![chlimage_1-342](assets/chlimage_1-342.png)
 
-* **[!UICONTROL Tillåtna omdömen]**
+* **[!UICONTROL Allowed Ratings]**
 
    En lista med klassificeringar som en medlem kan välja från.
 
    Använd uppilen, nedpilen och borttagningsknapparna för att ändra de synliga markeringarna.
 
-   Klicka på **[!UICONTROL Lägg till objekt]** för att lägga till ett annat klassificeringsalternativ.
+   Klicka **[!UICONTROL Add Item]** för att lägga till ett annat klassificeringsalternativ.
 
-Under fliken **[!UICONTROL Nödvändiga omdömen]** anger du objekt igen i listan över **[!UICONTROL tillåtna omdömen]** som ska klassificeras. Om ett objekt bara anges på fliken Tillåtna klassificeringar kan det lämnas omarkerat när medlemmen skickar in det.
+Under **[!UICONTROL Required Ratings]** fliken skriver du in de objekt i listan över **[!UICONTROL Allowed Ratings]** som ska klassificeras igen. Om ett objekt bara anges på fliken Tillåtna klassificeringar kan det lämnas omarkerat när medlemmen skickar in det.
 
 På webbplatsen markeras nödvändiga klassificeringar med en asterisk. Om ett objekt är obligatoriskt och inte markerat visas ett meddelande för medlemmen och överföringen nekas tills alla nödvändiga klassificeringar har markerats.
 
 ![chlimage_1-343](assets/chlimage_1-343.png)
 
-* **[!UICONTROL Nödvändiga omdömen]**
+* **[!UICONTROL Required Ratings]**
 
    En delmängd av tillåtna klassificeringar, som anger vilka klassificeringar som krävs.
 
    Använd uppilen, nedpilen och borttagningsknapparna för att ändra de synliga markeringarna.
 
-   Klicka på **[!UICONTROL Lägg till objekt]** för att lägga till ett annat svarsalternativ.
+   Klicka **[!UICONTROL Add Item]** för att lägga till ett annat svarsalternativ.
 
 >[!NOTE]
 >
->Om ett objekt anges på fliken **[!UICONTROL Nödvändiga klassificeringar]** som inte anges på fliken **[!UICONTROL Tillåtna klassificeringar]** , inkluderas det inte i posterna som ska värderas.
+>Om ett objekt anges på **[!UICONTROL Required Ratings]** fliken som inte anges på **[!UICONTROL Allowed Ratings]** fliken, inkluderas det inte i posterna som ska värderas.
 
-Ange hur granskningar ska hanteras på fliken **[!UICONTROL Granska]** .
+Ange hur granskningar ska hanteras på fliken **[!UICONTROL Reviews]** .
 
-![chlimage_1-340](assets/chlimage_1-344.png)
+![chlimage_1-344](assets/chlimage_1-344.png)
 
-* **[!UICONTROL Tillåt svar]** Om det här alternativet är markerat tillåter du svar på granskningar. Standard är avmarkerat.
+* **[!UICONTROL Allow Replies]**
+Om det här alternativet är markerat tillåts svar på granskningar. Standard är avmarkerat.
 
-* **[!UICONTROL Stängd]** Om det här alternativet är markerat stängs granskningen av nya granskningar och svar. Standard är avmarkerat.
+* **[!UICONTROL Closed]**
+Om det här alternativet är markerat stängs granskningen av nya granskningar och svar. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt filöverföringar]** Om det här alternativet är markerat tillåter du att bifogade filer överförs för granskningen. Standard är avmarkerat.
+* **[!UICONTROL Allow File Uploads]**
+Om det här alternativet är markerat tillåter du att bifogade filer överförs för granskningen. Standard är avmarkerat.
 
-* **[!UICONTROL Maximal filstorlek]**&#x200B;är bara relevant om **[!UICONTROL Tillåt filöverföringar]** är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 10 MB.
+* **[!UICONTROL Max File Size]**
+Relevant endast om **[!UICONTROL Allow File Uploads]** är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 10 MB.
 
-* **[!UICONTROL Maximal meddelandelängd]** Maximalt antal tecken som kan anges i textrutan. Standardvärdet är 4 096 tecken.
+* **[!UICONTROL Max Message Length]**
+Maximalt antal tecken som kan anges i textrutan. Standardvärdet är 4 096 tecken.
 
-* **[!UICONTROL Tillåtna filtyper]**&#x200B;är bara relevanta om **[!UICONTROL Tillåt filöverföringar]** är markerat. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte den som inte anges. Ingen standard har angetts så att alla filtyper tillåts.
+* **[!UICONTROL Allowed File Types]**
+Relevant endast om **[!UICONTROL Allow File Uploads]** är markerat. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte den som inte anges. Ingen standard har angetts så att alla filtyper tillåts.
 
-* **[!UICONTROL RTF-redigerare]** Om det är markerat kan inlägg infogas med markeringar. Standard är avmarkerat.
+* **[!UICONTROL Rich Text Editor]**
+Om det är markerat kan inlägg markeras. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt röstning]** Om det här alternativet är markerat inkluderas röstningsfunktionen för ett ämne. Standard är avmarkerat.
+* **[!UICONTROL Allow Voting]**
+Inkludera röstfunktionen för ett ämne om det är markerat. Standard är avmarkerat.
 
-Ange hur de publicerade granskningarna ska hanteras på fliken **[!UICONTROL Användarmoderering]** . Mer information finns i [Hantera användargenererat innehåll](moderate-ugc.md).
+Ange hur de publicerade granskningarna ska hanteras på fliken **[!UICONTROL User Moderation]** . Mer information finns i [Hantera användargenererat innehåll](moderate-ugc.md).
 
 ![chlimage_1-345](assets/chlimage_1-345.png)
 
-* **[!UICONTROL Förhandsmoderering]** Om det här alternativet är markerat måste granskningarna godkännas innan de visas på en publiceringswebbplats. Standard är avmarkerat.
+* **[!UICONTROL Pre-Moderation]**
+Om du markerar det här alternativet måste granskningarna godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
 
-* **[!UICONTROL Ta bort granskningar]** Om det här alternativet är markerat kan den medlem som publicerade granskningen ta bort den. Standard är avmarkerat.
+* **[!UICONTROL Delete Reviews]**
+Om det här alternativet är markerat kan den medlem som publicerade granskningen ta bort den. Standard är avmarkerat.
 
-* **[!UICONTROL Neka granskningar]** Om det här alternativet är markerat tillåter du moderatorerna att neka granskningar. Standard är avmarkerat.
+* **[!UICONTROL Deny Reviews]**
+Tillåt moderatorerna att neka granskningar om de är markerade. Standard är avmarkerat.
 
-* **[!UICONTROL Stäng/öppna granskningar]** igen Om det här alternativet är markerat kan moderatorerna stänga och öppna granskningar igen. Standard är avmarkerat.
+* **[!UICONTROL Close / Reopen Reviews]**
+Om det här alternativet är markerat kan moderatorerna stänga och öppna granskningar igen. Standard är avmarkerat.
 
-* **[!UICONTROL Flagggranskningar]** Om det här alternativet är markerat kan medlemmarna flagga granskningar som olämpliga. Standard är avmarkerat.
+* **[!UICONTROL Flag Reviews]**
+Om det här alternativet är markerat kan medlemmarna flagga granskningar som olämpliga. Standard är avmarkerat.
 
-* **[!UICONTROL Om alternativet Flagga orsakslista]**&#x200B;är markerat kan medlemmarna i en nedrullningsbar lista välja orsaken till att en granskning flaggas som olämplig. Standard är avmarkerat.
+* **[!UICONTROL Flag Reason List]**
+Om det här alternativet är markerat kan medlemmarna välja, från en nedrullningsbar lista, anledningen till att en granskning flaggas som olämplig. Standard är avmarkerat.
 
-* **[!UICONTROL Anledning]** till anpassad flagga Om den är markerad kan medlemmar ange en egen orsak till att en granskning har flaggats som olämplig. Standard är avmarkerat.
+* **[!UICONTROL Custom Flag Reason]**
+Om det här alternativet är markerat kan medlemmarna ange en egen orsak till att en granskning har flaggats som olämplig. Standard är avmarkerat.
 
-* **[!UICONTROL Moderationströskel]** Ange hur många gånger en granskning måste flaggas av medlemmar innan moderatorerna meddelas. Standard är en gång (1).
+* **[!UICONTROL Moderation Threshold]**
+Ange hur många gånger en granskning måste flaggas av medlemmar innan moderatorerna meddelas. Standard är en gång (1).
 
-* **[!UICONTROL Flaggningsgräns]** Ange hur många gånger en granskning måste flaggas innan den döljs för den offentliga vyn. Talet måste vara större än eller lika med **[!UICONTROL modereringströskeln]**. Standardvärdet är 5.
+* **[!UICONTROL Flagging Limit]**
+Ange hur många gånger en granskning måste flaggas innan den döljs för den offentliga vyn. Talet måste vara större än eller lika med **[!UICONTROL Moderation Threshold]**. Standardvärdet är 5.
 
 ### Lägga till en granskningssammanfattning (visning) på en sida {#adding-a-review-summary-display-to-a-page}
 
@@ -137,13 +157,13 @@ Markera den monterade `Reviews Summary (Display)` komponent som du vill öppna o
 
 ![chlimage_1-347](assets/chlimage_1-347.png)
 
-Under fliken **[!UICONTROL Granskningssammanfattning]**
+Under **[!UICONTROL Review Summary]** fliken
 
 ![chlimage_1-348](assets/chlimage_1-348.png)
 
 * `Review Path`
 
-   ange eller bläddra till den placerade instansen av `reviews`komponenten som ska sammanfattas, t.ex. om den läggs till på webbsidan för webbplatsen [Geometrixx Engage,](getting-started.md) så blir sökvägen:
+   ange eller bläddra till den monterade instansen av `reviews`komponenten som ska sammanfattas, till exempel om den läggs till på webbsidan för [Geometrixx Engage-webbplatsen,](getting-started.md) så blir sökvägen:
 
    /content/sites/engage/en/page/jcr:content/content/primary/reviews
 
@@ -159,23 +179,23 @@ Genom att ändra kommentarsresurstypen kommer kommentarsystemet inte längre att
 
 När de anpassade resurstyperna är kända går du till [designläge](../../help/sites-authoring/default-components-designmode.md) och dubbelklickar på den monterade `Comments` komponenten för att öppna en dialogruta med en extra flik.
 
-Under fliken **[!UICONTROL Resurstyper]** anger du anpassad resourceType för nya instanser av `Comments or Voting`komponenterna:
+Under **[!UICONTROL Resource Types]** fliken anger du anpassad resourceType för nya instanser av `Comments or Voting`komponenterna:
 
 ![chlimage_1-349](assets/chlimage_1-349.png)
 
-* **[!UICONTROL Resurstyp för kommentar]**
+* **[!UICONTROL Comment Resource Type]**
 
-   Navigera till resourceType för en utökad `comment`komponent (en kommentar) i /apps. Exempel, `/apps/social/commons/components/hbs/comments/comment`
+   Navigera till resourceType för en utökad `comment`komponent (en kommentar) i /apps. Till exempel, `/apps/social/commons/components/hbs/comments/comment`
 
    Den här resursen identifierar den resourceType för den UGC som skapas när en besökare publicerar en kommentar.
 
-* **[!UICONTROL Typ av röstningsresurs]**
+* **[!UICONTROL Voting Resource Type]**
 
-   Navigera till resourceType för en utökad `voting`komponent i /apps. Exempel, `/apps/social/components/hbs/voting`
+   Navigera till resourceType för en utökad `voting`komponent i /apps. Till exempel, `/apps/social/components/hbs/voting`
 
    Den här resursen identifierar resurstypen för användargenererat innehåll som skapas när en besökare publicerar en röst.
 
-* **[!UICONTROL Resurstyp för kommentarsystem]**
+* **[!UICONTROL Comment System Resource Type]**
 
    Navigera till resourceType för en utökad `comments`komponent (kommentarsystemet) i /apps. Lämna tomt om inte sidmallen [dynamiskt inkluderar](scf.md#add-or-include-a-communities-component) kommentarsystemet i det underliggande skriptet i stället för att läggas till på sidan som en resurs (kommentarsnod). Läs mer om [{{include}}-hjälpen](handlebars-helpers.md#include)
 
