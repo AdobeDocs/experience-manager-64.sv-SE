@@ -1,8 +1,8 @@
 ---
-title: AEM Core Concepts
+title: AEM kärnbegrepp
 seo-title: Grunderna
-description: En översikt över de centrala begreppen för hur AEM är strukturerat och hur man utvecklar ovanpå detta, inklusive förståelse av JCR, Sling, OSGi, dispatchern, arbetsflöden och MSM
-seo-description: En översikt över de centrala begreppen för hur AEM är strukturerat och hur man utvecklar ovanpå detta, inklusive förståelse av JCR, Sling, OSGi, dispatchern, arbetsflöden och MSM
+description: En översikt över de centrala begreppen för hur AEM är uppbyggt och hur de kan utvecklas vidare, inklusive förståelse av JCR, Sling, OSGi, dispatchern, arbetsflöden och MSM
+seo-description: En översikt över de centrala begreppen för hur AEM är uppbyggt och hur de kan utvecklas vidare, inklusive förståelse av JCR, Sling, OSGi, dispatchern, arbetsflöden och MSM
 uuid: e49f29db-a5d6-48a0-af32-f8785156746e
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -18,15 +18,15 @@ ht-degree: 0%
 ---
 
 
-# AEM Core Concepts {#aem-core-concepts}
+# AEM kärnbegrepp {#aem-core-concepts}
 
 >[!NOTE]
 >
->Innan Adobe ger sig in i koncepten för AEM rekommenderar vi att du slutför WKND-självstudiekursen i dokumentet [Getting Started Developing AEM Sites](/help/sites-developing/getting-started.md) . Där finns en översikt över AEM-utvecklingsprocessen och en introduktion till de viktigaste begreppen.
+>Innan du börjar fördjupa dig i koncepten med AEM rekommenderar Adobe att du slutför WKND-självstudiekursen i [Getting Started Developing AEM Sites](/help/sites-developing/getting-started.md) -dokumentet för en översikt över AEM utvecklingsprocess och introduktion till centrala koncept.
 
-## Krav för utveckling på AEM {#prerequisites-for-developing-on-aem}
+## Krav för utveckling av AEM {#prerequisites-for-developing-on-aem}
 
-Du behöver följande färdigheter för att utveckla ovanpå AEM:
+Du behöver följande kunskaper för att kunna utveckla AEM:
 
 * Baskunskaper om webbtillämpningstekniker, inklusive:
 
@@ -44,13 +44,13 @@ Vi rekommenderar också att du läser och följer [riktlinjerna och bästa praxi
 
 Java Content Repository (JCR)-standarden, [JSR 283](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html), anger ett leverantörsoberoende och implementeringsoberoende sätt att få åtkomst till innehåll dubbelriktat på en detaljnivå i en innehållsdatabas.
 
-Adobes forskningschef (Schweiz) AG.
+Adobe Research (Schweiz) AG har en ledande specialiseringsbefattning.
 
 Paketet [JCR API 2.0](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) , javax.jcr.&amp;ast; används för direkt åtkomst och hantering av databasinnehåll.
 
 ## Experience Server (CRX) och Jackrabbit {#experience-server-crx-and-jackrabbit}
 
-Experience Server innehåller de Experience Services som AEM är byggt på, och som kan utnyttjas för att skapa anpassade program, och den bäddar in innehållsdatabasen baserat på Jackrabbit.
+Experience Server innehåller de Experience Services som AEM bygger på, och som kan utnyttjas för att skapa anpassade program, och den bäddar in innehållsdatabasen baserat på Jackrabbit.
 
 [Apache Jackrabbit](https://jackrabbit.apache.org/) är en öppen källkodsimplementering av JCR API 2.0 som följer alla regler.
 
@@ -58,11 +58,11 @@ Experience Server innehåller de Experience Services som AEM är byggt på, och 
 
 ### Introduktion till Sling {#introduction-to-sling}
 
-AEM byggs med [Sling](https://sling.apache.org/site/index.html), ett ramverk för webbapplikationer som bygger på REST-principer och som gör det enkelt att utveckla innehållsorienterade applikationer. Sling använder en JCR-databas, t.ex. Apache Jackrabbit, eller i fallet AEM, CRX Content Repository, som sitt datalager. Sling har bidragit till Apache Software Foundation - mer information finns på Apache.
+AEM byggs med [Sling](https://sling.apache.org/site/index.html), ett ramverk för webbapplikationer som bygger på REST-principer och som gör det enkelt att utveckla innehållsorienterade applikationer. Sling använder en JCR-databas, t.ex. Apache Jackrabbit, eller i AEM fall CRX Content Repository, som sitt datalager. Sling har bidragit till Apache Software Foundation - mer information finns på Apache.
 
 Med Sling är den typ av innehåll som ska återges inte den första bearbetningen. Det viktigaste är i stället om URL:en tolkas till ett innehållsobjekt för vilket ett skript sedan kan användas för återgivningen. Detta ger ett utmärkt stöd för dem som skapar webbmaterial att bygga sidor som enkelt kan anpassas efter deras behov.
 
-Fördelarna med den här flexibiliteten är uppenbara i program med många olika innehållselement eller när du behöver sidor som enkelt kan anpassas. Detta gäller särskilt vid implementering av ett system för hantering av webbinnehåll, t.ex. WCM i AEM-lösningen.
+Fördelarna med den här flexibiliteten är uppenbara i program med många olika innehållselement eller när du behöver sidor som enkelt kan anpassas. Detta gäller särskilt när man implementerar ett webbinnehållshanteringssystem som WCM i AEM.
 
 Se [Discover Sling på 15 minuter](https://sling.apache.org/documentation/getting-started/discover-sling-in-15-minutes.html) för de första stegen för att utveckla med Sling.
 
@@ -70,7 +70,7 @@ I följande diagram förklaras Sling-skriptupplösningen: visar hur du hämtar f
 
 ![chlimage_1-84](assets/chlimage_1-84.png)
 
-I följande diagram förklaras alla dolda, men kraftfulla, frågeparametrar som du kan använda när du arbetar med SlingPostServlet, standardhanteraren för alla POST-begäranden som ger dig oändliga alternativ för att skapa, ändra, ta bort, kopiera och flytta noder i databasen.
+I följande diagram förklaras alla dolda, men kraftfulla, frågeparametrar som du kan använda när du arbetar med SlingPostServlet, standardhanteraren för alla begäranden om POST som ger dig oändliga alternativ för att skapa, ändra, ta bort, kopiera och flytta noder i databasen.
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
@@ -159,7 +159,7 @@ Alla Sling-skript lagras i undermappar till antingen `/apps` eller `/libs`, som 
 
 Några andra punkter att notera är:
 
-* när metoden (GET, POST) krävs, specificeras den med versaler enligt HTTP-specifikationen, t.ex. job.POST.esp (se nedan)
+* när metoden (GET, POST) krävs, anges den med versaler enligt HTTP-specifikationen, t.ex. job.POST.esp (se nedan)
 * olika skriptmotorer stöds:
 
    * `.esp, .ecma`: ECMAScript-sidor (JavaScript) (körning på serversidan)
@@ -167,19 +167,19 @@ Några andra punkter att notera är:
    * `.java`: Java Servlet Compiler (körning på serversidan)
    * `.jst`: JavaScript-mallar (körning på klientsidan)
 
-Listan över skriptmotorer som stöds av den angivna instansen av AEM finns på Felix Management Console ( `http://<host>:<port>/system/console/slingscripting`).
+Listan över skriptmotorer som stöds av den angivna AEM finns på Felix Management Console ( `http://<host>:<port>/system/console/slingscripting`).
 
 Dessutom har Apache Sling stöd för integrering med andra populära skriptmotorer (t.ex. Groovy, JRuby, Freemarker) och är ett sätt att integrera nya skriptmotorer.
 
 Om exemplet ovan `sling:resourceType` är `hr/jobs` för:
 
-* GET/HEAD-begäranden och URL:er som slutar i .html (standardtyper, standardformat)
+* GET/HEAD och URL:er som slutar på .html (standardtyper, standardformat)
 
    Skriptet kommer att vara /apps/hr/jobs/jobs.esp; den sista delen av sling:resourceType utgör filnamnet.
 
-* POST-begäranden (alla typer av begäranden utom GET/HEAD, metodnamnet måste vara versaler)
+* Begäranden om POST (alla förfrågningstyper utom GET/HEAD, metodnamnet måste vara versaler)
 
-   POST används i skriptnamnet.
+   POSTEN används i skriptnamnet.
 
    Skriptet kommer att vara `/apps/hr/jobs/jobs.POST.esp`.
 
@@ -331,7 +331,7 @@ Detta gör att du kan utföra följande åtgärder på något av paketen i din i
 
 Mer information finns [i konfigurationsinställningarna](/help/sites-deploying/web-console.md)för Web Console [,](/help/sites-deploying/configuring-osgi.md) OSGI Configuration [och](/help/sites-deploying/osgi-configuration-settings.md) OSGi.
 
-## Utvecklingsobjekt i AEM-miljön {#development-objects-in-the-aem-environment}
+## Utvecklingsobjekt i AEM {#development-objects-in-the-aem-environment}
 
 Följande är av intresse för utvecklingen:
 
@@ -355,11 +355,11 @@ Med currentNode som aktuellt nodobjekt.
 
 Mer information om hur du hanterar nodobjekt finns i [JavaScript](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html).
 
-**Widget** I AEM hanteras alla användarindata av widgetar. De används ofta för att styra redigeringen av ett visst innehåll.
+**Widget** I AEM alla användarindata hanteras av widgetar. De används ofta för att styra redigeringen av ett visst innehåll.
 
 Dialogrutor skapas genom att widgetar kombineras.
 
-AEM har utvecklats med hjälp av ExtJS-biblioteket med widgetar.
+AEM har utvecklats med ExtJS-biblioteket med widgetar.
 
 **Dialogrutan** En dialogruta är en speciell typ av widget.
 
@@ -369,7 +369,7 @@ Dialogrutor används också för att redigera metadata och för olika administra
 
 **Komponent** En programvarukomponent är ett systemelement som erbjuder en fördefinierad tjänst eller händelse och kan kommunicera med andra komponenter.
 
-I AEM används ofta en komponent för att återge innehållet i en resurs. När resursen är en sida, kallas komponentåtergivningen för en komponent på översta nivån eller en PageComponent. En komponent behöver dock inte återge innehåll eller vara länkad till en viss resurs. En navigeringskomponent visar till exempel information om flera resurser.
+I AEM används en komponent ofta för att återge innehållet i en resurs. När resursen är en sida, kallas komponentåtergivningen för en komponent på översta nivån eller en PageComponent. En komponent behöver dock inte återge innehåll eller vara länkad till en viss resurs. En navigeringskomponent visar till exempel information om flera resurser.
 
 Definitionen av en komponent omfattar
 
@@ -432,7 +432,7 @@ I följande lista visas en översikt över strukturen som visas i databasen.
 
 * `/libs`
 
-   Bibliotek och definitioner som tillhör kärnan i AEM. Undermapparna i `/libs` representerar de färdiga AEM-funktionerna, t.ex. sökning eller replikering. Innehållet i `/libs` bör inte ändras eftersom det påverkar hur AEM fungerar. Funktioner som är specifika för din webbplats bör utvecklas under `/apps` (se [Anpassa komponenter och andra element](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)).
+   Bibliotek och definitioner som tillhör kärnan i AEM. Undermapparna i `/libs` representerar AEM funktioner som inte finns med i kartongen, till exempel sökning eller replikering. Innehållet i `/libs` ska inte ändras eftersom det påverkar hur AEM fungerar. Funktioner som är specifika för din webbplats bör utvecklas under `/apps` (se [Anpassa komponenter och andra element](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)).
 
 * `/tmp`
 
@@ -444,15 +444,15 @@ I följande lista visas en översikt över strukturen som visas i databasen.
 
 ## Miljöer {#environments}
 
-Med AEM består en produktionsmiljö ofta av två olika typer av instanser: en [författare och en publiceringsinstans](/help/sites-deploying/deploy.md#author-and-publish-installs).
+I AEM består en produktionsmiljö ofta av två olika typer av instanser: en [författare och en publiceringsinstans](/help/sites-deploying/deploy.md#author-and-publish-installs).
 
 ## Dispatcher {#the-dispatcher}
 
-Dispatcher är Adobes verktyg för både cachelagring och/eller belastningsutjämning. Mer information finns under [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html).
+Dispatcher är ett Adobe-verktyg för både cachelagring och/eller belastningsutjämning. Mer information finns under [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html).
 
 ## FileVault (system för källrevision) {#filevault-source-revision-system}
 
-FileVault förser JCR-databasen med filsystemsmappning och versionskontroll. Det kan användas för att hantera AEM-utvecklingsprojekt med fullt stöd för lagring och versionshantering av projektkod, innehåll, konfigurationer och så vidare i standardversionshanteringssystem (till exempel Subversion).
+FileVault förser JCR-databasen med filsystemsmappning och versionskontroll. Det kan användas för att hantera AEM utvecklingsprojekt med fullt stöd för lagring och versionshantering av projektkod, innehåll, konfigurationer och så vidare i standardversionskontrollsystem (till exempel Subversion).
 
 Mer information finns i dokumentationen för [FileVault-verktyget](/help/sites-developing/ht-vlttool.md) .
 
