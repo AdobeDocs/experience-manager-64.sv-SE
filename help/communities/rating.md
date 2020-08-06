@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a0e5491e-66bc-47b0-94a5-45a02bc558da
 translation-type: tm+mt
 source-git-commit: 63001012f0d865c2548703ea387c780679128ee7
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 1%
 
 ---
 
@@ -35,11 +38,12 @@ Markera den monterade `Rating` komponent som du vill öppna och välj den `Confi
 
 ![chlimage_1-494](assets/chlimage_1-494.png)
 
-Under fliken **[!UICONTROL Texter och etiketter]** anger du den interna identifieraren för klassificeringen.
+Under fliken **[!UICONTROL Texts & Labels]** anger du den interna identifieraren för klassificeringen.
 
 ![chlimage_1-495](assets/chlimage_1-495.png)
 
-**[!UICONTROL Tally Name]**(*Required*) Ett enkelt namn på den instans `Rating`som unikt identifierar den här instansen. Måste vara ett giltigt nodnamn för databasen.
+**[!UICONTROL Tally Name]**
+(*Obligatoriskt*) Ett enkelt namn `Rating`som unikt identifierar den här instansen. Måste vara ett giltigt nodnamn för databasen.
 
 ## Site Visitor Experience {#site-visitor-experience}
 
@@ -49,7 +53,7 @@ Endast en klassificering per medlem tillåts. Medlemmen kan när som helst ändr
 
 ### Anonym {#anonymous}
 
-Anonym publicering av en klassificering stöds inte. Besökare måste registrera sig (bli medlem) och logga in för att kunna delta.
+Anonym publicering av en klassificering stöds inte. Besökarna måste registrera sig (bli medlem) och logga in för att kunna delta.
 
 ## Additional Information {#additional-information}
 
