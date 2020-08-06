@@ -1,8 +1,8 @@
 ---
 title: Implementera sidnamngivning på serversidan för analys
 seo-title: Implementera sidnamngivning på serversidan för analys
-description: I Adobe Analytics används egenskapen s.pageName för att unikt identifiera sidor och för att associera data som samlas in för sidorna
-seo-description: I Adobe Analytics används egenskapen s.pageName för att unikt identifiera sidor och för att associera data som samlas in för sidorna
+description: Adobe Analytics använder egenskapen s.pageName för att unikt identifiera sidor och för att associera data som samlas in för sidorna
+seo-description: Adobe Analytics använder egenskapen s.pageName för att unikt identifiera sidor och för att associera data som samlas in för sidorna
 uuid: 37b92099-0cce-4b2d-b55c-928f636dbd7e
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,23 +11,26 @@ content-type: reference
 discoiquuid: be2aa297-5b78-4b1d-8ff1-e6a585a177dd
 translation-type: tm+mt
 source-git-commit: 3e5c3e56b950b39d0b0efe552ff54242f3d8d28a
+workflow-type: tm+mt
+source-wordcount: '885'
+ht-degree: 0%
 
 ---
 
 
 # Implementera sidnamngivning på serversidan för analys{#implementing-server-side-page-naming-for-analytics}
 
-I Adobe Analytics används egenskapen `s.pageName` för att unikt identifiera sidor och för att associera data som samlas in för sidorna. Vanligtvis utför du följande uppgifter i AEM för att tilldela den här egenskapen ett värde som AEM skickar till Analytics:
+Adobe Analytics använder egenskapen `s.pageName` för att unikt identifiera sidor och för att associera data som samlas in för sidorna. Vanligtvis utför du följande uppgifter i AEM för att tilldela ett värde till den här egenskapen som AEM skickar till Analytics:
 
 * Använd molntjänstramverket för Analytics för att mappa en CQ-variabel till `s.pageName` egenskapen Analytics. (Se [Mappa komponentdata med Adobe Analytics-egenskaper](/help/sites-administering/adobeanalytics-mapping.md).)
 
-* Designa sidkomponenten så att den innehåller CQ-variabeln som du mappar till `s.pageName` egenskapen. (Se [Implementera Adobe Analytics-spårning för anpassade komponenter](/help/sites-developing/extending-analytics-components.md).)
+* Designa sidkomponenten så att den innehåller CQ-variabeln som du mappar till `s.pageName` egenskapen. (Se [Implementera Adobe Analytics Tracking för anpassade komponenter](/help/sites-developing/extending-analytics-components.md).)
 
-För att kunna visa analysrapportdata i Sites-konsolen och i Content Insight måste AEM ha värdet för `s.pageName` egenskapen för varje sida. Java-API:t för AEM Analytics definierar det gränssnitt `AnalyticsPageNameProvider` som du implementerar för att ge webbplatskonsolen och innehållsinsikter värdet för `s.pageName` egenskapen. Tjänsten åtgärdar egenskapen pageName på servern för rapportering, eftersom den kan ställas in dynamiskt med Javascript på klienten för spårning. `AnaltyicsPageNameProvider`
+Om du vill visa analysrapportdata i Sites-konsolen och i Content Insight AEM värdet för egenskapen `s.pageName` för varje sida. Java API:t för AEM Analytics definierar det gränssnitt som du implementerar för att ge webbplatskonsolen och innehållsinsikter värdet för `AnalyticsPageNameProvider` `s.pageName` egenskapen. Tjänsten åtgärdar egenskapen pageName på servern för rapportering, eftersom den kan ställas in dynamiskt med Javascript på klienten för spårning. `AnaltyicsPageNameProvider`
 
 ## Sidnamnsprovidertjänsten för standardanalys {#the-default-analytics-page-name-provider-service}
 
-Tjänsten är standardtjänsten som avgör `DefaultPageNameProvider` värdet på den `s.pageName` egenskap som används för att hämta analysdata för en sida. Tjänsten fungerar tillsammans med sidkomponenten AEM Foundation ( `/libs/foundation/components/page`). Den här sidkomponenten definierar följande CQ-variabler som ska mappas till `s.pageName` egenskapen:
+Tjänsten är standardtjänsten som avgör `DefaultPageNameProvider` värdet på den `s.pageName` egenskap som används för att hämta analysdata för en sida. Tjänsten fungerar tillsammans med AEM på grundsidan ( `/libs/foundation/components/page`). Den här sidkomponenten definierar följande CQ-variabler som ska mappas till `s.pageName` egenskapen:
 
 * `pagedata.path`: Värdet ställs in på sidans sökväg.
 * `pagedata.title`: Värdet ställs in på sidrubriken.
