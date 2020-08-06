@@ -9,6 +9,9 @@ topic-tags: correspondence-management
 discoiquuid: 53595ac8-ca7e-4adc-9214-5d0b7cdf71a0
 translation-type: tm+mt
 source-git-commit: 48ea1c456e6f43fb5b348aa65f2380ee0b72a3f1
+workflow-type: tm+mt
+source-wordcount: '3866'
+ht-degree: 0%
 
 ---
 
@@ -36,7 +39,7 @@ Vanligtvis behöver företagsanvändare inte känna till metadata-representation
 
 ## Förutsättning {#prerequisite}
 
-Installera [Kompatibilitetspaketet](https://helpx.adobe.com/in/experience-manager/6-4/forms/using/compatibility-package.html) för att visa alternativet **Dataordlistor** på **formulärsidan** .
+Installera [Kompatibilitetspaketet](https://helpx.adobe.com/in/experience-manager/6-4/forms/using/compatibility-package.html) om du vill visa alternativet **Dataordlistor** på **Forms** -sidan.
 
 ## Skapa en dataordlista {#createdatadictionary}
 
@@ -46,7 +49,7 @@ Du använder Data Dictionary Editor för att skapa ett datalexikon eller du kan 
 >
 >Om du har flera bokstäver som kräver liknande element kan du skapa en gemensam dataordlista. En stor dataordlista med ett stort antal element kan dock leda till prestandaproblem när dataordlistan används och elementen läses in, t.ex. bokstäver och dokumentfragment. Om du stöter på prestandaproblem kan du skapa separata dataordlistor för olika bokstäver.
 
-1. Välj **Formulär** > **Dataordlistor**.
+1. Välj **Forms** > **Dataordlistor**.
 1. Tryck på **Skapa dataordlista**.
 1. Lägg till följande på skärmen Egenskaper:
 
@@ -56,6 +59,7 @@ Du använder Data Dictionary Editor för att skapa ett datalexikon eller du kan 
    * **Beskrivning**: (Valfritt) Beskrivning av dataordlistan.
    * **Taggar:** (Valfritt) Om du vill skapa en egen tagg anger du ett värde i textfältet och trycker på Retur. Du kan se taggen under textfältet med taggar. När du sparar den här texten skapas även de nya taggarna.
    * **Utökade egenskaper**: (Valfritt) Tryck på **Lägg till fält** för att ange metadataattribut för din dataordlista. Ange ett unikt egenskapsnamn i kolumnen Egenskapsnamn. Ange ett värde som ska associeras med egenskapen i kolumnen Värde.
+
    ![Dataordlistegenskaper som anges på tyska](do-not-localize/1_ddproperties.png)
 
 1. (Valfritt) Om du vill överföra en XSD-schemadefinition för ditt datalexikon trycker du på **Överför XML-schema** under strukturpanelen för dataordlista. Bläddra till XSD-filen, markera den och tryck på **Öppna**. En Data Dictionary skapas baserat på det överförda XML-schemat. Du måste ändra visningsnamn och beskrivningar för elementen i dataordlistan. Om du vill göra det markerar du namnen på elementen genom att trycka på dem och redigerar deras beskrivningar, visningsnamn och annan information i fälten i den högra rutan.
@@ -78,6 +82,7 @@ Du använder Data Dictionary Editor för att skapa ett datalexikon eller du kan 
    * En sammansatt DDE innehåller andra DDE:er, som kan vara av typen primitiv, sammansatt eller samling. Till exempel en adress som består av en gatuadress, ort, provins, land och postnummer.
    * Primitiva DDE:er är element som strängar, siffror, datum och booleska värden som innehåller information som ett stadsnamn.
    * En samling är en lista med liknande enkla eller sammansatta DDE:er. Exempel: en kund med flera platser eller olika fakturerings- och leveransadresser.
+
    Nedan följer några regler för hur du skapar en dataordlista:
 
    * Endast sammansatt typ tillåts som DDE på den översta nivån i en dataordlista.
@@ -85,6 +90,7 @@ Du använder Data Dictionary Editor för att skapa ett datalexikon eller du kan 
    * Referensnamnet måste vara unikt.
    * En överordnad DDE (sammansatt) kan inte ha två underordnade med samma namn.
    * Uppräkningar innehåller bara primitiva strängtyper.
+
    Mer information om sammansatta element, samlingselement och primitiva element och hur du arbetar med dataordlisteelement finns i [Mappa element i dataordlistan till XML-schema](#mappingddetoschema).
 
    Mer information om valideringar i Data Dictionary finns i Valideringar [av](#ddvalidations)Data Dictionary Editor.
@@ -125,6 +131,7 @@ När du redigerar eller visar ett datalexikon kan du se vilka element i dataordl
    * Håll muspekaren över ett datalexikon och tryck på Redigera.
    * Markera ett datalexikon och tryck sedan på Redigera i sidhuvudet.
    * Håll muspekaren över ett datalexikon och tryck på Välj. Tryck sedan på Redigera i sidhuvudet.
+
    Eller tryck på en dataordlista för att visa den.
 
 1. Markera ett enkelt element genom att trycka på det i dataordlistan. Sammansatta element och samlingselement har inga referenser.
@@ -357,7 +364,7 @@ För export av en XSD krävs en specifik datamappning, vilket beskrivs i följan
   </tr> 
   <tr> 
    <td><p>xs:element där maxOccurs &gt; 1<br /> </p> </td> 
-   <td><p>DDE av typen COLLECTION-<br /> En DDE-nod skapas bredvid COLLECTION DDE som hämtar information från den överordnade COLLECTION-noden. Samma sak skapas för båda samlingarna av enkla/sammansatta datatyper. När du har en SAMLING av den sammansatta typen hämtar Data Dictionary-trädet de ingående fälten i de underordnade för DDE som har skapats för att hämta typinformation.<br /> - DDE (COLLECTION)<br /> - DDE(COMPOSITE for type info)<br /> - DDE(STRING) field1<br /> - DDE(STRING) field2<br /><br /> </p> </td> 
+   <td><p>DDE av typen COLLECTION-<br /> En DDE-nod skapas bredvid COLLECTION DDE som hämtar information från den överordnade COLLECTION-noden. Samma sak skapas för båda samlingarna av enkla/sammansatta datatyper. När du har en SAMLING av den sammansatta typen hämtar Data Dictionary-trädet de ingående fälten i de underordnade för DDE som har skapats för att hämta typinformation.<br /> - DDE (COLLECTION)<br /> - DDE(COMPOSITE for type info)<br /> - DDE(STRING) field1<br /> - DDE(STRING) field2<br /> <br /> </p> </td> 
    <td>java.util.List<br /> </td> 
   </tr> 
   <tr> 
@@ -559,7 +566,7 @@ I följande exempel visas schemat för en anteckning.
    <td>/note/to</td> 
   </tr> 
   <tr> 
-   <td>from</td> 
+   <td>från</td> 
    <td>/note/from</td> 
   </tr> 
   <tr> 
