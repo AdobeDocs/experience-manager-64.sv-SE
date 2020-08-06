@@ -1,8 +1,8 @@
 ---
 title: Omstrukturering av e-handelslager i AEM 6.4
 seo-title: Omstrukturering av e-handelslager i AEM 6.4
-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 för e-handel.
-seo-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 för e-handel.
+description: Lär dig hur du gör nödvändiga ändringar för att migrera till den nya databasstrukturen i AEM 6.4 för e-handel.
+seo-description: Lär dig hur du gör nödvändiga ändringar för att migrera till den nya databasstrukturen i AEM 6.4 för e-handel.
 uuid: 1fff1a4b-c8d0-4016-92fb-e2ea26e3a302
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
@@ -10,17 +10,20 @@ topic-tags: repo_restructuring
 discoiquuid: 28c92e7d-2106-4333-afa6-c5528a00d7b4
 translation-type: tm+mt
 source-git-commit: 6449921348ef3758ec95ddba8b478691008153f3
+workflow-type: tm+mt
+source-wordcount: '226'
+ht-degree: 0%
 
 ---
 
 
 # Omstrukturering av e-handelslager i AEM 6.4{#e-commerce-repository-restructuring-in-aem}
 
-Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM E-Commerce Solution. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
+Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM e-handelslösning. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
 
 ## Med 6.4-uppgradering {#with-upgrade}
 
-### Produkt-, order-, samlings-, klassificerings-, leveransmetoder- och betalningsmetoder {#product-order-collections-classifications-shipping-methods-and-payment-methods-data}
+### Produkt, beställning, samlingar, klassificeringar, leveransmetoder och betalningsmetoder {#product-order-collections-classifications-shipping-methods-and-payment-methods-data}
 
 <table> 
  <tbody>
@@ -46,7 +49,7 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
      <li>/etc/commerce/orders<br /> </li> 
      <li>/etc/commerce/payment-methods<br /> </li> 
      <li>/etc/commerce/shipping-methods<br /> </li> 
-    </ul> <p>För större kataloger rekommenderar vi att du kör migreringsaktiviteten för e-handel separat genom att skicka följande Java-systemegenskap till AEM:</p> <p><code>propertyname: com.adobe.upgrade.forcemigration</code></p> <p><code>property value: com.day.cq.compat.codeupgrade.impl.cq64.CQ64CommerceMigrationTask</code></p> <p>Efter migreringen behöver AEM startas om.</p> </td> 
+    </ul> <p>För större kataloger rekommenderar vi att du kör migreringsaktiviteten för e-handel separat genom att skicka följande Java-systemegenskap till AEM:</p> <p><code>propertyname: com.adobe.upgrade.forcemigration</code></p> <p><code>property value: com.day.cq.compat.codeupgrade.impl.cq64.CQ64CommerceMigrationTask</code></p> <p>Efter migreringen AEM en omstart krävs.</p> </td> 
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
