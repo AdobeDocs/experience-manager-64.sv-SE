@@ -1,8 +1,8 @@
 ---
 title: Gestanpassning
 seo-title: Gestanpassning
-description: Anpassa gesterna i appen AEM Forms
-seo-description: Anpassa gesterna i appen AEM Forms
+description: Anpassa gesterna i din AEM Forms-app
+seo-description: Anpassa gesterna i din AEM Forms-app
 uuid: 117e0e21-66bd-42f1-879c-6c1443991974
 contentOwner: robhagat
 content-type: reference
@@ -11,6 +11,9 @@ topic-tags: forms-app
 discoiquuid: 747d13d3-e7cc-4aa1-bcc8-4b57157e71ed
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '306'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 Du kan anpassa gesterna i AEM Forms-appen för att skapa en distinkt metod för interaktion med appen. Du kan till exempel lägga till nya gester för att öppna eller stänga en uppgift eller startpunkt.
 
-## Anpassa gester i appen AEM Forms {#to-customize-gestures-in-aem-forms-app}
+## Anpassa gester i AEM Forms {#to-customize-gestures-in-aem-forms-app}
 
-I appen AEM Forms öppnar den vänstra svepningen en ny uppgift eller startpunkten medan den högra svepningen inte gör något. Följande exempel innehåller steg för att öppna en ny uppgift eller startpunkt för att utföra högersvepningsgester i appen AEM Forms.
+I AEM Forms-appen öppnas en ny åtgärd med den vänstra svepningen eller startpunkten medan den högra svepningen inte gör något. Följande exempel innehåller steg för att öppna en ny uppgift eller Startpunkt för att utföra högersvepningsgester i AEM Forms-appen.
 
 1. Öppna projektet.
 
@@ -34,6 +37,7 @@ I appen AEM Forms öppnar den vänstra svepningen en ny uppgift eller startpunkt
    * I Xcode navigerar du till mappen **Capture > www > wsmoble > js > runtime > views** .
    * I Eclipse navigerar du till mappen **assets > www > wsmoble > js > runtime > views** .
    * I Visual Studio går du till **MWSWindows > www > wsmoble > js > runtime > views** folder.
+
    >[!NOTE]
    >
    >Filen task.js innehåller den stamnätsvy som är associerad med varje uppgift eller startpunkt som listas i uppgifts- eller startpunktslistorna.
