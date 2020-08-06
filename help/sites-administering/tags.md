@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 69253ee9-8c28-436b-9331-6fb875f64cba
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1764'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 Taggar är ett snabbt och enkelt sätt att klassificera innehåll på en webbplats. De kan ses som nyckelord eller etiketter (metadata) som gör att innehåll kan hittas snabbare som ett resultat av en sökning.
 
-I Adobe Experience Manager (AEM) kan en tagg vara en egenskap för
+I Adobe Experience Manager (AEM) kan en -tagg vara en egenskap för
 
 * en innehållsnod för en sida (se [Använda taggar](/help/sites-authoring/tags.md))
 
@@ -90,7 +93,7 @@ Namnutrymmet är i sig en tagg och behöver inte innehålla några undertaggar. 
 
 När den obligatoriska informationen har angetts
 
-* välj **Skapa**
+* select **Create**
 
 ### Åtgärder för taggar {#operations-on-tags}
 
@@ -160,7 +163,7 @@ När ett namnutrymme eller en annan tagg är markerad (genom att markera ikonen 
 
 När den obligatoriska informationen har angetts
 
-* välj **Skapa**
+* select **Create**
 
 ### Redigera taggar {#editing-tags}
 
@@ -187,11 +190,13 @@ När ett namnutrymme eller en annan tagg är markerad kan tagghanterare och utve
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
 * **Bana**
+
    *(skrivskyddat)* Den aktuella sökvägen till den markerade taggen.
 
 * **Gå till** Bläddra till den nya sökvägen under vilken du vill flytta taggen.
 
-* **Byt namn till** Inledande visar `name`taggens aktuella namn. Du `name`kan ange ett nytt värde.
+* **Byt namn till** Inledande visar aktuell 
+`name`av -taggen. Du `name`kan ange ett nytt värde.
 
 * 
 * välj **Spara**
@@ -207,6 +212,7 @@ När du markerar ett namnutrymme eller en annan tagg öppnas en panel där sökv
 ![chlimage_1-200](assets/chlimage_1-200.png)
 
 * **Bana**
+
    *(skrivskyddat)* Sökvägen till taggen som markerats för att sammanfogas med en annan tagg.
 
 * **Lägg samman i** Bläddra för att välja sökvägen till taggen som ska sammanfogas i.
@@ -288,7 +294,7 @@ När alla översättningar har angetts väljer du **Spara **för att avsluta red
 
 I allmänhet hämtas det språk som valts för taggen från sidspråket, när det är tillgängligt. När [ `tag` widgeten](/help/sites-developing/building.md#tagging-on-the-client-side) används i andra fall (till exempel i formulär eller i dialogrutor) beror taggspråket på sammanhanget.
 
-I stället för att använda sidspråkinställningen använder taggningskonsolen språkinställningen. I taggningskonsolen för taggen Animals visas Animaux för en användare som anger språket som franska i sina användaregenskaper.
+I stället för att använda sidspråkinställningen används användarspråkinställningen i taggningskonsolen. I taggningskonsolen för taggen Animals visas Animaux för en användare som anger språket som franska i sina användaregenskaper.
 
 Mer information om hur du lägger till ett nytt språk i dialogrutan finns i [Lägga till ett nytt språk i dialogrutan](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog)Redigera tagg.
 
