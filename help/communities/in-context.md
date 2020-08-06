@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '796'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +40,7 @@ Användargränssnittet som visas för moderatorn i publiceringsinstansen finns i
 
 ## Exempel {#example}
 
-På den [Geometrixx Engage](http://localhost:4503/content/sites/engage/en.html) -webbplats som skapades när AEM Communities [](getting-started.md)startades går det snabbt att skapa en tråd i ett forum där olika modereringsaktiviteter i publiceringsmiljön kan visas, vilket framgår nedan.
+På den [Geometrixx Engage](http://localhost:4503/content/sites/engage/en.html) -webbplats som skapades när du [kom igång med AEM Communities](getting-started.md)kan du snabbt ställa in en tråd i ett forum där du kan uppleva olika modereringsaktiviteter i publiceringsmiljön, vilket visas nedan.
 
 Aaron McDonald (aaron.mcdonald@mailinator.com) identifierades som en betrodd community-medlem genom att han lades till i gruppen community-engage-moderators när webbplatsen skapades.
 
@@ -57,7 +60,7 @@ Mer information om användargrupper finns på [Hantera användare och användarg
 
    * Ange brödtexten
 
-      Jag har inte haft så stor framgång när jag har lagt på en matare till en luftfågel varje år. De verkar komma en dag eller två, då är det klart. Jag ändrar det en gång i veckan är det för långt? Måste jag ändra den tidigare?
+      Jag har inte haft så stor framgång när jag hänger upp en matare för en hummeringfågel varje år. De verkar komma en dag eller två, då är det klart. Jag ändrar det en gång i veckan är det för långt? Måste jag ändra den tidigare?
    * Välj inlägg
    * Välj Logga ut
 
@@ -145,9 +148,9 @@ Meddelande
 
 Välj menyalternativet Administration om du vill öppna [moderationskonsolen](moderation.md) från publiceringsmiljön.
 
-Observera att för en community-moderator är endast moderatbart innehåll från Geometrixx Engage-communitywebbplatsen synligt.
+Observera att för en community-moderator är det bara moderatorbart innehåll från Geometrixx Engage community-webbplatsen som visas.
 
-Observera att community-moderatorn har samma alternativ som administratören (bilden är när söksidofältet är stängt), men ingen åtkomst till andra AEM-konsoler.
+Observera att community-moderatorn har samma alternativ som administratören (bilden är när söksidofältet är stängt), men ingen åtkomst till andra AEM.
 
 Logga ut.
 
