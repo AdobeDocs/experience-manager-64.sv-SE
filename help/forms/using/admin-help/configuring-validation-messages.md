@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 5f2f8129-e45e-4f3f-ae30-c09330d0e152
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '374'
+ht-degree: 2%
 
 ---
 
@@ -24,17 +27,17 @@ För formulär som återges som HTML visas formulärvalideringsfel som inträffa
 1. Klicka på Tjänster > Formulär i administrationskonsolen.
 1. Välj något av följande alternativ i rapportlistan under Valideringsutdata:
 
-   **** Meddelanderuta: Om du vill visa valideringsmeddelanden i en separat dialogruta.
+   **Meddelanderuta:** Om du vill visa valideringsmeddelanden i en separat dialogruta.
 
-   **** Ram: Om du vill visa valideringsmeddelanden i en bildruta i samma fönster.
+   **Ram:** Om du vill visa valideringsmeddelanden i en bildruta i samma fönster.
 
-   **** Ingen bildruta: Om du vill visa valideringsmeddelanden i samma fönster. Det här värdet är standardvärdet.
+   **Ingen bildruta:** Om du vill visa valideringsmeddelanden i samma fönster. Det här värdet är standardvärdet.
 
-   **** Via API (med data): Returnera valideringsmeddelandena via API (med data). Valideringsmeddelandena visas inte på skärmen.
+   **Via API (med data):** Returnera valideringsmeddelandena via API (med data). Valideringsmeddelandena visas inte på skärmen.
 
-   **** Via API (med formulär): Returnera valideringsmeddelandena via API (med formuläret). Valideringsmeddelandena visas inte på skärmen.
+   **Via API (med formulär):** Returnera valideringsmeddelandena via API (med formuläret). Valideringsmeddelandena visas inte på skärmen.
 
-   **** Ingen: Visa inte valideringsmeddelanden.
+   **Ingen:** Visa inte valideringsmeddelanden.
 
 1. Klicka på Spara.
 
@@ -44,9 +47,9 @@ Om Rapportering är inställt på Bildruta eller Ingen bildruta kan du ange plat
 
 1. Välj något av följande alternativ i listan Position under Valideringsutdata:
 
-   **** Vänster: Om du vill visa valideringsmeddelanden till vänster i webbläsaren.
+   **Vänster:** Om du vill visa valideringsmeddelanden till vänster i webbläsaren.
 
-   **** Höger: Om du vill visa valideringsmeddelanden till höger i webbläsaren.
+   **Höger:** Om du vill visa valideringsmeddelanden till höger i webbläsaren.
 
    **Överkant**: Om du vill visa valideringsmeddelanden högst upp i webbläsaren. Det här värdet är standardvärdet.
 
