@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: d1326737-f378-46d0-9916-61ead4d31639
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '454'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 Med innehållsfragment kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. **We.Retail** (som tillgängligt i en körklar instans av AEM) innehåller fragmentet **Arktis Surfing i Lofoten** som ett grundläggande exempel. Detta visar att:
 
-* Adobe Experience Manager-innehållsfragment (AEM) [skapas och hanteras som sidoberoende resurser](/help/assets/content-fragments.md). Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer.
+* Innehållsfragment i Adobe Experience Manager (AEM) [skapas och hanteras som sidoberoende resurser](/help/assets/content-fragments.md). Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer.
 
    * Se [var innehållsfragmentresurser ska hittas i Web.Retail](#where-to-find-content-fragments-in-we-retail)
 
@@ -33,10 +36,11 @@ Den fullständiga dokumentationen om hur du skapar, hanterar, använder och utve
 
 >[!NOTE]
 >
->**Innehållsfragment** och **[Experience Fragments](/help/sites-authoring/experience-fragments.md)**är olika funktioner i AEM:
+>**Content Fragments** and **[Experience Fragments](/help/sites-authoring/experience-fragments.md)**are different features within AEM:
 >
 >* **Innehållsfragment** är redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
 >* **Experience Fragments** är helt utformat för innehåll, ett fragment av en webbsida.
+
 >
 >
 Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
