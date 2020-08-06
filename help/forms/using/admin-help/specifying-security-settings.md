@@ -11,17 +11,20 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 36a7e16f-d09d-4cc5-babd-1ccadba76e16
 translation-type: tm+mt
 source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+workflow-type: tm+mt
+source-wordcount: '79'
+ht-degree: 1%
 
 ---
 
 
 # Ange säkerhetsinställningar {#specifying-security-settings}
 
-Med Forms kan du styra om externa entiteter i XML-indata är lösta. Som standard är de lösta, men du kan ändra detta för att öka säkerheten i AEM-formulärsystemet.
+Med Forms kan du styra om externa entiteter i XML-indata är lösta. Som standard är de lösta, men du kan ändra det här beteendet för att öka säkerheten i AEM formulärsystem.
 
 **Förhindra bearbetning av XML-datafiler som innehåller referenser till externa entiteter**
 
-1. I administrationskonsolen klickar du på **[!UICONTROL Tjänster > Formulär]**.
+1. Klicka på i administrationskonsolen **[!UICONTROL Services > Forms]**.
 1. Avmarkera kryssrutan Lös externa entiteter.
-1. Click **[!UICONTROL Save]**.
+1. Klicka på **[!UICONTROL Save]**.
 
