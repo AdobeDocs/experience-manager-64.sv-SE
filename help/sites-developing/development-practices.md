@@ -1,8 +1,8 @@
 ---
 title: Utvecklingspraxis
 seo-title: Utvecklingspraxis
-description: Bästa tillvägagångssätt för utveckling på AEM
-seo-description: Bästa tillvägagångssätt för utveckling på AEM
+description: Bästa tillvägagångssätt för att utveckla AEM
+seo-description: Bästa tillvägagångssätt för att utveckla AEM
 uuid: 27a75f7f-6e2c-4113-9e9f-c5013a4594c2
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: 8b0297a1-d922-410f-9aaf-3a6b87e11dc0
 translation-type: tm+mt
 source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+workflow-type: tm+mt
+source-wordcount: '637'
+ht-degree: 0%
 
 ---
 
@@ -36,7 +39,7 @@ Utan en väldefinierad DoD är det lätt att hamna i en situation där mycket av
 
 Det kanske inte verkar viktigt med indragsnivåer och tomt utrymme, men att ha rätt formaterad kod går långt i fråga om läsbarhet och underhåll. Konventioner bör diskuteras och godkännas som ett team och sedan följas i koden.
 
-### Syfte med hög testtäckning {#aim-for-high-test-coverage}
+### Syfte med hög testtäckning  {#aim-for-high-test-coverage}
 
 När en projektimplementering växer i storlek ökar också den tid som krävs för att testa den. Utan god testtäckning kommer testteamet inte att kunna skalas om och utvecklarna kommer till slut att begravas i buggar.
 
@@ -60,9 +63,9 @@ Om enhetstester tar lång tid att köra undviker utvecklarna att köra dem och d
 
 Verktyg för kodanalys kan vara värdefulla, men bara om deras rapporter leder till åtgärder från utvecklingsteamets sida. Utan att finjustera den analys som dessa verktyg ger blir rekommendationerna som de genererar inte relevanta och de förlorar sitt värde.
 
-### Följ filmklippsregeln Boy Scout {#follow-the-boy-scout-rule}
+### Följ Pojkens Scout-regel {#follow-the-boy-scout-rule}
 
-Pojkscouterna har en regel: &quot;Låt det vara bättre än du hittade det.&quot; Så länge alla medlemmar i utvecklingsteamet följer den här regeln och lagar något när de stöter på en enda röra, kommer koden hela tiden att förbättras.
+Pojkens Scout har en regel: &quot;Låt det vara bättre än du hittade det.&quot; Så länge alla medlemmar i utvecklingsteamet följer den här regeln och lagar något när de stöter på en enda röra, kommer koden hela tiden att förbättras.
 
 ### Undvik att implementera YAGNI-funktioner {#avoid-implementing-yagni-features}
 
