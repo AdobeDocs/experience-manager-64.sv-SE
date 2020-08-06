@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 08bdade7-fdad-445d-80fe-8fc06596dace
 translation-type: tm+mt
 source-git-commit: 15bea340f3ba7d5a315d71932e521ad1f1a40073
+workflow-type: tm+mt
+source-wordcount: '795'
+ht-degree: 0%
 
 ---
 
@@ -103,7 +106,7 @@ Genom att gruppera metadata för replikering med en anpassad predikatutvärderar
 
 >[!NOTE]
 >
->Hur man skapar nya AEM-projekt med Maven beskrivs i [Så här skapar man AEM-projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
+>Hur man skapar nya AEM med Maven beskrivs i [How to Build AEM Projects med Apache Maven](/help/sites-developing/ht-projects-maven.md).
 
 Först måste du uppdatera Maven-beroendena för ditt projekt. Den `PredicateEvaluator` är en del av `cq-search` artefakten, så den måste läggas till i din Maven-pom-fil.
 
