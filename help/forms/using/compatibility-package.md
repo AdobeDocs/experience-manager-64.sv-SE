@@ -1,8 +1,8 @@
 ---
 title: Kompatibilitetspaket
 seo-title: Kompatibilitetspaket
-description: 'Genom att installera Kompatibilitetspaketet på AEM Forms 6.4 kan du använda Correspondence Management-resurser från AEM Forms 6.3 och föråldrade adaptiva formulärmallar och sidor. '
-seo-description: Genom att installera Kompatibilitetspaketet på AEM Forms 6.4 kan du använda Correspondence Management-resurser från AEM Forms 6.3 och föråldrade adaptiva formulärmallar och sidor.
+description: 'Genom att installera kompatibilitetspaketet på AEM Forms 6.4 kan du använda Correspondence Management-resurser från AEM Forms 6.3 och inaktuella adaptiva formulärmallar och sidor. '
+seo-description: Genom att installera kompatibilitetspaketet på AEM Forms 6.4 kan du använda Correspondence Management-resurser från AEM Forms 6.3 och inaktuella adaptiva formulärmallar och sidor.
 uuid: e50b1ff9-c357-422a-8da8-a791ff805317
 contentOwner: gtalwar
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,21 +11,24 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 38a80992-2eda-4535-89af-0de34b1a9686
 translation-type: tm+mt
 source-git-commit: 9a2ebded0068213903020d2c5633a05b6ffb07ef
+workflow-type: tm+mt
+source-wordcount: '387'
+ht-degree: 0%
 
 ---
 
 
 # Installera kompatibilitetspaket {#compatibility-package}
 
-Genom att installera Kompatibilitetspaketet på AEM Forms 6.4 kan du använda Correspondence Management-resurser från AEM Forms 6.3 och föråldrade adaptiva formulärmallar och sidor.
+Genom att installera kompatibilitetspaketet på AEM Forms 6.4 kan du använda Correspondence Management-resurser från AEM Forms 6.3 och inaktuella adaptiva formulärmallar och sidor.
 
 ## Översikt {#overview}
 
-Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa kundkommunikation i AEM Forms 6.4. Om du vill fortsätta använda bokstäverna från AEM 6.3-formulär och AEM 6.2-formulär måste du installera [AEMFD-kompatibilitetspaketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT).
+Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa kundkommunikation i AEM Forms 6.4. Om du vill fortsätta använda bokstäverna från AEM 6.3 Forms och AEM 6.2 Forms måste du installera [AEMFD-kompatibilitetspaketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT).
 
 Med AEMFD-kompatibilitetspaketet kan du använda följande resurser från AEM Forms 6.3 och 6.2 i AEM Forms 6.4:
 
-* Dokumentfragment skapade i AEM Forms 6.3 och 6.2
+* Dokumentfragment som skapats i AEM Forms 6.3 och 6.2
 * Bokstäver
 * Dataordlistor
 * Mallar och sidor för anpassade formulär har tagits bort
@@ -36,7 +39,7 @@ Mer information finns i [Resurser som gjorts kompatibla med AEM Forms 6.4 genom 
 
 När du har utfört en uppgradering gör du följande för att installera AEMFD-kompatibilitetspaketet och göra dina resurser kompatibla med 6.4:
 
-Kontrollera att du har förinstallerat [AEM-kompatibilitetspaketet](/help/sites-deploying/backward-compatibility.md) .
+Kontrollera att du har förinstallerat [AEM Kompatibilitetspaket](/help/sites-deploying/backward-compatibility.md) .
 
 1. Installera [Kompatibilitetspaketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT).
 
