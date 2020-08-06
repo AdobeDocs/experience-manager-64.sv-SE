@@ -1,8 +1,8 @@
 ---
 title: Säkerhetskopiera och återställa EMC Documentum-databasen
 seo-title: Säkerhetskopiera och återställa EMC Documentum-databasen
-description: I det här dokumentet beskrivs de uppgifter som krävs för att säkerhetskopiera och återställa EMC Documentum-databasen som konfigurerats för AEM-formulärmiljön.
-seo-description: I det här dokumentet beskrivs de uppgifter som krävs för att säkerhetskopiera och återställa EMC Documentum-databasen som konfigurerats för AEM-formulärmiljön.
+description: I det här dokumentet beskrivs de uppgifter som krävs för att säkerhetskopiera och återställa EMC Documentum-databasen som konfigurerats för din AEM formulärmiljö.
+seo-description: I det här dokumentet beskrivs de uppgifter som krävs för att säkerhetskopiera och återställa EMC Documentum-databasen som konfigurerats för din AEM formulärmiljö.
 uuid: ab3b1fb1-25b3-4c95-801f-82d4b58f05ff
 contentOwner: admin
 content-type: reference
@@ -11,26 +11,29 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: f146202f-25f1-46a0-9943-c483f5f09f9f
 translation-type: tm+mt
 source-git-commit: f957ca343d12c325d012034a6fdbc36f77e41d87
+workflow-type: tm+mt
+source-wordcount: '862'
+ht-degree: 0%
 
 ---
 
 
 # Säkerhetskopiera och återställa EMC Documentum-databasen {#backing-up-and-recovering-the-emc-documentum-repository}
 
-I det här avsnittet beskrivs de uppgifter som krävs för att säkerhetskopiera och återställa EMC Documentum-databasen som konfigurerats för AEM-formulärmiljön.
+I det här avsnittet beskrivs de uppgifter som krävs för att säkerhetskopiera och återställa EMC Documentum-databasen som konfigurerats för din AEM formulärmiljö.
 
 >[!NOTE]
 >
->Dessa instruktioner förutsätter att AEM-formulär med kopplingar för ECM och EMC Documentum Content Server installeras och konfigureras enligt behov.
+>Dessa instruktioner förutsätter att AEM formulär med kopplingar för ECM och EMC Documentum Content Server installeras och konfigureras enligt behov.
 
 För både säkerhetskopiering och återställning finns det två huvudsakliga uppgifter:
 
-* Säkerhetskopiera (eller återställa) AEM-formulärmiljön.
+* Säkerhetskopiera (eller återställa) AEM formulärmiljö.
 * Säkerhetskopiera (eller återställa) EMC Documentum Content Server.
 
 >[!NOTE]
 >
->Säkerhetskopiera dina AEM-formulärdata innan du säkerhetskopierar EMC Documentum-systemet och återställ sedan EMC Documentum-systemet innan du återställer AEM-formulärmiljön.
+>Säkerhetskopiera dina AEM formulärdata innan du säkerhetskopierar EMC Documentum-systemet och återställer sedan EMC Documentum-systemet innan du återställer den AEM formulärmiljön.
 
 ## Programvarukrav {#software-requirements}
 
@@ -206,8 +209,7 @@ I det här avsnittet beskrivs hur du installerar och konfigurerar EMC NetWorker-
 
       *[NetWorker_database_module_root]* `-s`*&lt;NetWorker_Server_Name>*`-U`*[användarnamn ]*`-P`*[lösenord]*`-l incr -R`*&lt;database_name>*
 
-      
-Var:
+      Var:
 
       `[NetWorker_database_module_root]` är installationskatalogen för NetWorker-modulen. Standardinstallationskatalogen för NetWorker-modulen för SQL Server är till exempel C:\Program Files\Legato\nsr\bin\nsrsqlsv.
 
@@ -224,9 +226,9 @@ Var:
 1. Högerklicka på Enheter och välj Skapa.
 1. Ange följande värden och klicka på OK:
 
-   **** Namn: Den fullständiga sökvägen till den delade katalogen
+   **Namn:** Den fullständiga sökvägen till den delade katalogen
 
-   **** Medietyp: `File`
+   **Medietyp:** `File`
 
 1. Högerklicka på den nya enheten och välj Åtgärder.
 1. Klicka på Etikett, ange ett namn, klicka på OK och sedan på Montera.
@@ -235,7 +237,7 @@ En enhet läggs till som de säkerhetskopierade filerna sparas i. Du kan lägga 
 
 ## Säkerhetskopiera EMC Documentum Content Server {#back-up-the-emc-documentum-content-server}
 
-Utför följande uppgifter när du har slutfört en fullständig säkerhetskopiering av dina AEM-formulärdata. (Se [Säkerhetskopiera AEM-formulärdata](/help/forms/using/admin-help/backing-aem-forms-data.md#backing-up-the-aem-forms-data).)
+Utför följande uppgifter när du har slutfört en fullständig säkerhetskopiering av AEM formulärdata. (Se [Säkerhetskopiera AEM formulärdata](/help/forms/using/admin-help/backing-aem-forms-data.md#backing-up-the-aem-forms-data).)
 
 >[!NOTE]
 >
@@ -250,7 +252,7 @@ Utför följande uppgifter när du har slutfört en fullständig säkerhetskopie
 
 ## Återställ EMC Documentum Content Server {#restore-the-emc-documentum-content-server}
 
-Utför följande åtgärder innan du återställer AEM-formulärdata. (Se [Återställa AEM-formulärdata](/help/forms/using/admin-help/recovering-aem-forms-data.md#recovering-the-aem-forms-data).)
+Utför följande åtgärder innan du återställer AEM formulärdata. (Se [Återställa AEM formulärdata](/help/forms/using/admin-help/recovering-aem-forms-data.md#recovering-the-aem-forms-data).)
 
 >[!NOTE]
 >
