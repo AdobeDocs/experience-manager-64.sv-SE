@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 955a1876-4882-4926-82e9-846bc8bb332c
 translation-type: tm+mt
 source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+workflow-type: tm+mt
+source-wordcount: '577'
+ht-degree: 4%
 
 ---
 
@@ -22,8 +25,8 @@ source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
 Från global navigering
 
 * Välj **[!UICONTROL Communities > Sites]**
-* Välj **[!UICONTROL en mapp]** som ska öppnas
-* Välj kort för den engelska webbplatsen **[!UICONTROL Komma igång-självstudiekursen]**
+* Välj **[!UICONTROL engage folder]** att öppna den
+* Välj kort för den **[!UICONTROL Getting Started Tutorial]** engelska webbplatsen
    * Välj kortbilden
    * Markera *inte* en ikon
 
@@ -41,7 +44,7 @@ Den här gruppen kan skapas eftersom webbplatsstrukturen för interaktion inneh�
 
 De här konsolerna liknar konsolen Webbplatser i Communities.
 
-* Välj **[!UICONTROL Skapa grupp]**
+* Välj **[!UICONTROL Create Group]**
 * `1 Community Group Template`:
    * Gruppnamn: Konstnärliga
    * Beskrivning av communitygrupp: En överordnad grupp för olika konstnärliga grupper.
@@ -50,13 +53,14 @@ De här konsolerna liknar konsolen Webbplatser i Communities.
    * Gruppnamn: konst
    * Mall: dra nedåt för att välja `Reference Group`
    * Välj `Next`
+
       ![parenttonestedgrupp](assets/parenttonestedgroup.png)
 
 Fortsätt genom de andra panelerna med följande inställningar:
 
 * **2 Design**
    * Du kan ändra designen eller tillåta att den överordnade platsens design används som standard
-   * Markera **[!UICONTROL nästa]**
+   * Välj **[!UICONTROL Next]**
 * **3 inställningar**
    * **Moderering**
       * Lämna tom (ärv från överordnad plats)
@@ -65,7 +69,7 @@ Fortsätt genom de andra panelerna med följande inställningar:
    * **Miniatyrbild**
       * `optional`
    * Välj `Next`
-* Välj **[!UICONTROL Skapa]**
+* Välj **[!UICONTROL Create]**
 
 ### Kapslade grupper inom konst {#nesting-groups-within-arts-group}
 
@@ -101,17 +105,18 @@ Gruppen bör också innehålla en `arts` `groups` mapp, men en som är tom och d
    * Titel: `Art History`
    * Namn: `history`
    * Mall: `Reference Group`
-   * Medlemskap: välj `Restricted Membership`en hemlig grupp, som bara är synlig för inbjudna medlemmar som exempel, bjuda in [demoanvändare](tutorials.md#demo-users)`emily.andrews@mailinator.com`
+   * Medlemskap: välj `Restricted Membership`en hemlig grupp, som bara visas för inbjudna medlemmar som exempel, bjuda in 
+[demoanvändare](tutorials.md#demo-users) `emily.andrews@mailinator.com`
 
 Uppdatera sidan om du vill se alla tre kapslade grupper (undergrupper).
 
 Om det behövs kan du navigera till de kapslade grupperna från konsolen Webbplatser för Communities:
 
-* Välj **[!UICONTROL mapp]**
-* Välj **[!UICONTROL Komma igång-självstudiekurskort]**
-* Markera **[!UICONTROL gruppmappen]**
-* Välj **[!UICONTROL grafikkort]**
-* Markera **[!UICONTROL gruppmappen]**
+* Välj **[!UICONTROL engage folder]**
+* Välj **[!UICONTROL Getting Started Tutorial]** kort
+* Välj **[!UICONTROL Groups folder]**
+* Välj **[!UICONTROL arts card]**
+* Välj **[!UICONTROL Groups folder]**
 
 ![chlimage_1-57](assets/chlimage_1-57.png)
 
