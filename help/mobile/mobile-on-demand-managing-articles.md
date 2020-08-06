@@ -11,6 +11,9 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: b46058f9-4691-4fba-a656-0f8507875a79
 translation-type: tm+mt
 source-git-commit: 622e613d556acda7cd98d4b3d20a20133756fd92
+workflow-type: tm+mt
+source-wordcount: '690'
+ht-degree: 0%
 
 ---
 
@@ -29,12 +32,13 @@ Artiklar representerar den text som är baserad tillsammans med grafik för att 
 
 >[!NOTE]
 >
->Läs följande resurser i onlinehjälpen om du vill veta mer om följande ämnen i AEM-mobilappar:
+>Läs följande resurser i onlinehjälpen om du vill veta mer om följande ämnen i AEM Mobile-program:
 >
 >* [Att tänka på vid design](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
    >
    >
 * [Hantera artiklar](https://helpx.adobe.com/digital-publishing-solution/help/creating-articles.html)
+
 >
 
 
@@ -74,16 +78,16 @@ Arbetsflödet för att importera en ny artikel
 
 ## Redigera en artikel {#editing-an-article}
 
-Använd den inbyggda dra och släpp-redigeraren i AEM för att lägga till eller ändra en artikel. Komponenter som text och bilder kan läggas till/tas bort. Bilder från DAM-resurser kan infogas.
+Använd den inbyggda AEM dra och släpp-redigeraren för att lägga till eller ändra en artikel. Komponenter som text och bilder kan läggas till/tas bort. Bilder från DAM-resurser kan infogas.
 
 >[!CAUTION]
 >
->Endast artiklar som har skapats i AEM kan öppnas i redigeraren.
+>Endast artiklar som skapats i AEM kan öppnas i redigeraren.
 
 Arbetsflödet för att redigera en artikel:
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Välj en AEM-källartikel på **panelen Hantera artiklar** .
+1. Välj en AEM källartikel på panelen **Hantera artiklar** .
 1. Klicka på den markerade artikeln i listvyn för att öppna den i innehållsredigeraren.
 1. Använd innehållsredigeraren för att dra artikelinnehåll (manuskript, bilder, text osv.).
 
@@ -117,7 +121,7 @@ Det allmänna arbetsflödet för att överföra en artikel:
 
 ## Ta bort en artikel {#deleting-an-article}
 
-Den här åtgärden tar bort det markerade innehållet från Mobile On-Demand och eventuellt från den lokala AEM-instansen.
+Den här åtgärden tar bort det markerade innehållet från Mobile On-Demand och eventuellt från den lokala AEM.
 
 Det allmänna arbetsflödet för att ta bort en artikel:
 
@@ -125,7 +129,7 @@ Det allmänna arbetsflödet för att ta bort en artikel:
 1. Markera den artikel som ska tas bort i **rutan Hantera artiklar** .
 1. Se till att det är markerat i listan (markera andra att ta bort efter behov).
 1. Klicka på **Ta bort** i åtgärdsfältet.
-1. Kontrollera om du vill ta bort från både AEM och Mobile On-Demand.
+1. Kontrollera om du vill ta bort från AEM och Mobile On-Demand.
 1. Click **Delete**.
 1. Artikeln har nu tagits bort från listan.
 
