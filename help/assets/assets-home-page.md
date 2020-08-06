@@ -1,24 +1,27 @@
 ---
 title: AEM Assets Home Page Experience
-description: Anpassa startsidan för AEM Assets för en rik välkomstskärm, inklusive en ögonblicksbild av nyligen gjorda aktiviteter kring resurser.
+description: Anpassa AEM Assets hemsida för att få en bra välkomstskärm, inklusive en ögonblicksbild av de senaste aktiviteterna kring materialet.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '547'
+ht-degree: 1%
 
 ---
 
 
 # AEM Assets Home Page Experience {#aem-assets-home-page-experience}
 
-Anpassa startsidan för AEM Assets för en rik välkomstskärm, inklusive en ögonblicksbild av nyligen gjorda aktiviteter kring resurser.
+Anpassa AEM Assets hemsida för att få en bra välkomstskärm, inklusive en ögonblicksbild av de senaste aktiviteterna kring materialet.
 
-Adobe Experience Manager Assets Home page (AEM) Assets Home page (startsidan för Adobe Experience Manager Assets) ger en rik och personlig välkomstskärm, som innehåller en ögonblicksbild av nyligen använda aktiviteter, till exempel resurser som nyligen har visats eller överförts.
+Adobe Experience Manager (AEM) Assets Home page (startsidan för resurser) innehåller en omfattande och personlig välkomstskärm, som innehåller en ögonblicksbild av nyligen gjorda aktiviteter, t.ex. resurser som nyligen har visats eller överförts.
 
 Hemsidan för Resurser är inaktiverad som standard. Så här aktiverar du den:
 
-1. Du öppnar AEM Configuration Manager genom att klicka på **[!UICONTROL Verktyg > Åtgärd > Webbkonsol]**.
+1. Om du vill öppna AEM Configuration Manager klickar du på **[!UICONTROL Tools > Operation > Web Console]**.
 1. Öppna tjänsten **Day CQ DAM Event Recorder** .
-1. Välj **[!UICONTROL Aktivera den här tjänsten]** för att aktivera aktivitetsinspelning.
+1. Markera alternativet **[!UICONTROL Enable this service]** för att aktivera aktivitetsinspelning.
 
    ![chlimage_1-250](assets/chlimage_1-250.png)
 
@@ -28,12 +31,12 @@ Hemsidan för Resurser är inaktiverad som standard. Så här aktiverar du den:
    >
    >Om du aktiverar alternativen Visa, Visa projekt och Samlingar, ökar antalet inspelade händelser avsevärt.
 
-1. Öppna **[!UICONTROL DAM-filens flagga]** för funktionsflagga på startsidan för resurser från Configuration Manager `https://[AEM_server]:[port]/system/console/configMgr`.
+1. Öppna **[!UICONTROL DAM Asset Home Page Feature Flag]** tjänsten från Configuration Manager `https://[AEM_server]:[port]/system/console/configMgr`.
 1. Välj alternativet **[!UICONTROL isEnabled.name]** för att aktivera funktionen Assets Home page. Spara ändringarna.
 
    ![chlimage_1-251](assets/chlimage_1-251.png)
 
-1. Öppna dialogrutan **[!UICONTROL Användarinställningar]** och välj **[!UICONTROL Aktivera startsidan]** för resurser. Spara ändringarna.
+1. Öppna **[!UICONTROL User Preferences]** dialogrutan och välj **[!UICONTROL Enable Assets Home Page]**. Spara ändringarna.
 
    ![user_preferences](assets/user_preferences.png)
 
@@ -41,7 +44,7 @@ När du har aktiverat startsidan för Resurser navigerar du till användargräns
 
 ![home_page](assets/home_page.png)
 
-Tryck/klicka på **[!UICONTROL Klicka här för att konfigurera din upplevelselänk]** för att lägga till ditt användarnamn, din bakgrundsbild och din profilbild.
+Tryck/klicka på **[!UICONTROL Click here to configure your experience link]** för att lägga till ditt användarnamn, din bakgrundsbild och din profilbild.
 
 Hemsidan för Assets innehåller följande avsnitt:
 
@@ -74,7 +77,7 @@ Välkomstskärmen innehåller enkla navigeringshjälpmedel, t.ex. ikoner i verkt
 
 >[!NOTE]
 >
->Om du aktiverar tjänsterna Day CQ DAM Event Recorder och DAM Event Rensa ökas skrivåtgärderna till JCR och sökindexering, vilket avsevärt ökar belastningen på AEM-servern. Den extra belastningen på AEM-servern kan påverka dess prestanda.
+>Om du aktiverar tjänsterna Day CQ DAM Event Recorder och DAM Event Rensa ökas skrivåtgärderna till JCR och sökindexering, vilket avsevärt ökar belastningen på AEM. Den extra belastningen på AEM kan påverka dess prestanda.
 
 >[!CAUTION]
 >
@@ -82,4 +85,4 @@ Välkomstskärmen innehåller enkla navigeringshjälpmedel, t.ex. ikoner i verkt
 >
 >Adobe rekommenderar att administratörer och användare som utför gruppåtgärder undviker att använda funktionen Startsida för resurser för att förhindra att användaraktiviteter ökar. Dessutom kan administratörer exkludera inspelningsaktiviteter för specifika användare genom att konfigurera **Dag CQ DAM Event Recorder** från Configuration Manager.
 >
->Om du använder funktionen rekommenderar Adobe att du schemalägger tömningsfrekvensen baserat på serverbelastningen.
+>Om du använder funktionen rekommenderar Adobe att du schemalägger tömningsfrekvensen baserat på serverinläsningen.
