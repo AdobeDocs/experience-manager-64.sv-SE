@@ -1,8 +1,8 @@
 ---
-title: Utveckla AEM-komponenter
-seo-title: Utveckla AEM-komponenter
-description: AEM-komponenter används för att lagra, formatera och återge innehåll som är tillgängligt på dina webbsidor.
-seo-description: AEM-komponenter används för att lagra, formatera och återge innehåll som är tillgängligt på dina webbsidor.
+title: Utveckla AEM
+seo-title: Utveckla AEM
+description: AEM används för att lagra, formatera och återge innehåll som är tillgängligt på dina webbsidor.
+seo-description: AEM används för att lagra, formatera och återge innehåll som är tillgängligt på dina webbsidor.
 uuid: bf789fb8-0bb8-406c-b4d6-c360b02a46d8
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,13 +12,16 @@ discoiquuid: 655c576f-d6e3-40a5-ab1f-6382a0c7443c
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 translation-type: tm+mt
 source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
+workflow-type: tm+mt
+source-wordcount: '3444'
+ht-degree: 0%
 
 ---
 
 
-# Utveckla AEM-komponenter{#developing-aem-components}
+# Utveckla AEM{#developing-aem-components}
 
-AEM-komponenter används för att lagra, formatera och återge innehåll som är tillgängligt på dina webbsidor.
+AEM används för att lagra, formatera och återge innehåll som är tillgängligt på dina webbsidor.
 
 * När du [redigerar sidor](/help/sites-authoring/default-components.md)tillåter komponenterna författarna att redigera och konfigurera innehållet.
 
@@ -34,7 +37,7 @@ AEM-komponenter används för att lagra, formatera och återge innehåll som är
 
 >[!NOTE]
 >
->Den här sidan är en fortsättning på dokumentet [AEM Components - The Basics](/help/sites-developing/components-basics.md).
+>Den här sidan är en fortsättning av dokumentet [AEM Komponenter - Grunderna](/help/sites-developing/components-basics.md).
 
 >[!CAUTION]
 >
@@ -42,11 +45,11 @@ AEM-komponenter används för att lagra, formatera och återge innehåll som är
 
 ## Kodexempel {#code-samples}
 
-Den här sidan innehåller referensdokumentation (eller länkar till referensdokumentation) som krävs för att utveckla nya komponenter för AEM. Se [Utveckla AEM-komponenter - Kodexempel](/help/sites-developing/developing-components-samples.md) för några praktiska exempel.
+Den här sidan innehåller referensdokumentation (eller länkar till referensdokumentation) som krävs för att utveckla nya komponenter för AEM. Se [Utveckla AEM - Kodexempel](/help/sites-developing/developing-components-samples.md) för några praktiska exempel.
 
 ## Struktur {#structure}
 
-En komponents grundläggande struktur beskrivs på sidan [AEM Components - The Basics](/help/sites-developing/components-basics.md#structure). Dokumentet omfattar både pekaktiverade och klassiska användargränssnitt. Även om du inte behöver använda de klassiska inställningarna i den nya komponenten kan det vara bra att känna till dem när du ärver från befintliga komponenter.
+En komponents grundläggande struktur beskrivs på sidan [AEM Komponenter - Grunderna](/help/sites-developing/components-basics.md#structure). Dokumentet omfattar både pekaktiverade och klassiska användargränssnitt. Även om du inte behöver använda de klassiska inställningarna i den nya komponenten kan det vara bra att känna till dem när du ärver från befintliga komponenter.
 
 ## Utöka befintliga komponenter och dialogrutor {#extending-existing-components-and-dialogs}
 
@@ -130,24 +133,24 @@ I dialogrutor kan författaren interagera med komponenten. Med hjälp av en dial
 
 ### Gränssnittet för korall och GRENITE {#coral-ui-and-granite-ui}
 
-[Gränssnittet Coral](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/index.html) och [Granite](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html) definierar det moderna utseendet på AEM.
+[Gränssnittet Coral](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/index.html) och [Granite](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html) definierar det moderna utseendet och känslan hos AEM.
 
 [Granite-gränssnittet innehåller ett stort urval av de grundläggande komponenter (widgetar)](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html) som behövs för att skapa en dialogruta i redigeringsmiljön. Vid behov kan du utöka den här markeringen och skapa en egen widget.
 
-Mer information om hur du utvecklar komponenter med resurstyperna Koral och Granite finns i: [Skapa Experience Manager-komponenter med resurstyperna](https://helpx.adobe.com/experience-manager/using/aem64_coral_resourcetypes.html)Coral/Granite.
+Mer information om hur du utvecklar komponenter med resurstyperna Koral och Granite finns i: [Skapa Experience Manager-komponenter med resurstyperna](https://helpx.adobe.com/experience-manager/using/aem64_coral_resourcetypes.html)Koral/Granite.
 
 Mer information finns i:
 
 * Coral UI
 
    * Ett enhetligt gränssnitt för alla molnlösningar
-   * [AEM Touch-aktiverat användargränssnitt - Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
+   * [Koncepten i det AEM användargränssnittet med pekskärmsfunktioner - Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
    * [Användargränssnittshandbok för Coral](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/index.html)
 
 * Granite-gränssnitt
 
    * Innehåller Coral UI-kod inkapslad i Sling-komponenter för att bygga UI-konsoler och dialogrutor
-   * [AEM Touch-aktiverat användargränssnitt - Granite-gränssnitt](/help/sites-developing/touch-ui-concepts.md#coral-ui)
+   * [AEM för användargränssnitt med pekskärmsfunktion - GRE](/help/sites-developing/touch-ui-concepts.md#coral-ui)
    * [Bevilja gränssnittsdokumentation](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html)
 
 >[!NOTE]
@@ -191,7 +194,7 @@ Se till exempel:
 
 >[!NOTE]
 >
->Om en komponent inte har någon dialogruta definierad för det beröringsaktiverade användargränssnittet, används den klassiska användargränssnittsdialogrutan som reserv i ett kompatibilitetslager. Om du vill anpassa en sådan dialogruta måste du anpassa den klassiska användargränssnittsdialogrutan. Se [AEM-komponenter för det klassiska användargränssnittet](/help/sites-developing/developing-components-classic.md).
+>Om en komponent inte har någon dialogruta definierad för det beröringsaktiverade användargränssnittet, används den klassiska användargränssnittsdialogrutan som reserv i ett kompatibilitetslager. Om du vill anpassa en sådan dialogruta måste du anpassa den klassiska användargränssnittsdialogrutan. Se [AEM komponenter för det klassiska användargränssnittet](/help/sites-developing/developing-components-classic.md).
 
 ### Anpassa dialogrutefält {#customizing-dialog-fields}
 
@@ -201,6 +204,7 @@ Se till exempel:
 >
 >* AEM Gems-sessionen om [anpassning av dialogrutefält](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html).
 >* Den relaterade exempelkoden som beskrivs i [Kodexempel - Anpassa dialogrutefält](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields).
+
 >
 
 
@@ -339,15 +343,15 @@ Mer information finns i [Utöka sidredigering - Lägg till ny åtgärd i ett kom
 
 Om den nya komponenten refererar till innehåll från andra sidor kan du överväga om du vill att den ska påverka avsnitten **Lånat innehåll** och **Lånat innehåll** i [**Reference **](/help/sites-authoring/basic-handling.md#references)Rail.
 
-Körklar AEM-kontroll kontrollerar bara Reference-komponenten. Om du vill lägga till din komponent måste du konfigurera OSGi-paketet med **WCM-redigeringsreferenskonfiguration**.
+AEM markerar bara komponenten Reference. Om du vill lägga till din komponent måste du konfigurera OSGi-paketet med **WCM-redigeringsreferenskonfiguration**.
 
-Skapa en ny post i definitionen som anger komponenten tillsammans med den egenskap som ska kontrolleras. Exempel:
+Skapa en ny post i definitionen som anger komponenten tillsammans med den egenskap som ska kontrolleras. Till exempel:
 
 `/apps/<your-Project>/components/reference@parentPath`
 
 >[!NOTE]
 >
->När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information och rekommenderade metoder finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md) .
+>När du arbetar med AEM finns det flera sätt att hantera konfigurationsinställningarna för sådana tjänster. Mer information och rekommenderade metoder finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md) .
 
 ## Aktivera och lägga till komponenten i styckesystemet {#enabling-and-adding-your-component-to-the-paragraph-system}
 
@@ -360,13 +364,14 @@ Detta kan göras antingen genom att:
 
 ## Konfigurera ett styckesystem så att en komponentinstans skapas när en resurs dras {#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance}
 
-Med AEM kan du konfigurera ett styckesystem på sidan så att [en instans av den nya komponenten skapas automatiskt när en användare drar en (lämplig) resurs till en instans av sidan](/help/sites-authoring/editing-content.md) (i stället för att alltid behöva dra en tom komponent till sidan).
+AEM erbjuder möjlighet att konfigurera ett styckesystem på sidan så att [en instans av den nya komponenten skapas automatiskt när en användare drar en (lämplig) resurs till en instans av sidan](/help/sites-authoring/editing-content.md) (i stället för att alltid behöva dra en tom komponent till sidan).
 
 Detta beteende och den nödvändiga relationen mellan resurser och komponenter kan konfigureras:
 
-1. Under styckedefinitionen för siddesignen. Exempel:
+1. Under styckedefinitionen för siddesignen. Till exempel:
 
    * `/etc/designs/<myApp>/page/par`
+
    Skapa en ny nod:
 
    * Namn: `cq:authoring`
@@ -382,13 +387,13 @@ Detta beteende och den nödvändiga relationen mellan resurser och komponenter k
 
    * Namn: text, Det rekommenderas att namnet anger tillgången och den relaterade komponenttypen. till exempel bild
    * Typ: `nt:unstructured`
+
    Var och en med följande egenskaper:
 
    * `assetGroup`:
 
       * Typ: `String`
-      * Värde: den grupp som den relaterade tillgången tillhör,
-till exempel `media`
+      * Värde: den grupp som den relaterade tillgången tillhör, till exempel `media`
    * `assetMimetype`:
 
       * Typ: `String`
@@ -396,13 +401,11 @@ till exempel `media`
    * `droptarget`:
 
       * Typ: `String`
-      * Värde: släppmålet,
-till exempel `image`
+      * Värde: släppmålet, till exempel `image`
    * `resourceType`:
 
       * Typ: `String`
-      * Värde: den tillhörande komponentresursen,
-till exempel `foundation/components/image`
+      * Värde: den tillhörande komponentresursen, till exempel `foundation/components/image`
    * `type`:
 
       * Typ: `String`
@@ -432,16 +435,16 @@ Koden för den här sidan finns på GitHub
 
 ## Använda AEM Brackets Extension {#using-the-aem-brackets-extension}
 
-Tillägget [](/help/sites-developing/aem-brackets.md) AEM Brackets ger ett smidigt arbetsflöde för redigering av AEM-komponenter och klientbibliotek. Den baseras på [Brackets](https://brackets.io/) kodredigerare.
+Med [AEM Brackets Extension](/help/sites-developing/aem-brackets.md) kan du redigera AEM komponenter och klientbibliotek på ett smidigt sätt. Den baseras på [Brackets](https://brackets.io/) kodredigerare.
 
 Tillägget:
 
-* Förenklar synkronisering (ingen Maven eller filvalv krävs) för att öka utvecklarens effektivitet och även hjälpa gränssnittsutvecklare med begränsade AEM-kunskaper att delta i projekt.
+* Förenklar synkronisering (ingen Maven eller filvalv krävs) för att öka utvecklarens effektivitet och även hjälpa gränssnittsutvecklare med begränsade AEM att delta i projekt.
 * Har stöd för [HTML](https://helpx.adobe.com/experience-manager/htl/user-guide.html) , mallspråket som är utformat för att förenkla komponentutvecklingen och öka säkerheten.
 
 >[!NOTE]
 >
->Hakparenteser är den rekommenderade mekanismen för att skapa komponenter. Den ersätter funktionen CRXDE Lite - Create Component, som är utformad för det klassiska användargränssnittet.
+>Hakparenteser är den rekommenderade mekanismen för att skapa komponenter. Den ersätter funktionaliteten CRXDE Lite - Skapa komponent, som har utformats för det klassiska användargränssnittet.
 
 ## Migrera från en klassisk komponent {#migrating-from-a-classic-component}
 
@@ -468,7 +471,7 @@ När du migrerar en komponent som har utformats för användning med det klassis
 
 ### Migrera cq:avlyssnarkod {#migrating-cq-listener-code}
 
-Om du migrerar ett projekt som har utformats för det klassiska användargränssnittet kan det hända att `cq:listener` funktioner som är specifika för det klassiska användargränssnittet (t.ex. `CQ.wcm.*`) används i koden (och komponentrelaterade klienter). För migreringen måste du uppdatera sådan kod med motsvarande objekt/funktioner i det beröringsaktiverade användargränssnittet.
+Om du migrerar ett projekt som är utformat för det klassiska användargränssnittet kan det hända att `cq:listener` koden (och komponentrelaterade klienter) använder funktioner som är specifika för det klassiska användargränssnittet (till exempel `CQ.wcm.*`). För migreringen måste du uppdatera sådan kod med motsvarande objekt/funktioner i det beröringsaktiverade användargränssnittet.
 
 Om ditt projekt ska migreras helt till det beröringskänsliga användargränssnittet måste du ersätta den koden för att använda de objekt och funktioner som är relevanta för det beröringskänsliga användargränssnittet.
 
