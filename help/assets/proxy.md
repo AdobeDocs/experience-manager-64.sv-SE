@@ -1,6 +1,6 @@
 ---
 title: Resursproxyutveckling
-description: 'En proxy är en AEM-instans som använder proxyarbetare för att bearbeta jobb. Lär dig hur du konfigurerar en AEM-proxy, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare. '
+description: 'En proxy är en AEM som använder proxyarbetare för att bearbeta jobb. Lär dig hur du konfigurerar en AEM proxy, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare. '
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Resursproxyutveckling {#assets-proxy-development}
 
-Adobe Experience Manager Assets (AEM) Assets använder en proxy för att distribuera bearbetningen för vissa uppgifter.
+Adobe Experience Manager (AEM) Assets använder en proxy för att distribuera bearbetning för vissa åtgärder.
 
-En proxy är en specifik (och ibland separat) AEM-instans som använder proxyarbetare som processorer som hanterar ett jobb och skapar ett resultat. En proxyarbetare kan användas för en mängd olika uppgifter. När det gäller en AEM Resurser-proxy kan detta användas för att läsa in resurser för återgivning i AEM Resurser. IDS- [proxyarbetaren](indesign.md) använder till exempel en InDesign-server för att bearbeta filer som ska användas i AEM Resurser.
+En proxy är en specifik (och ibland separat) AEM instans som använder proxyarbetare som processorer som hanterar ett jobb och skapar ett resultat. En proxyarbetare kan användas för en mängd olika uppgifter. Om det är en AEM Assets-proxy kan detta användas för att läsa in resurser för återgivning inom AEM Assets. IDS- [proxyarbetaren](indesign.md) använder till exempel InDesign Server för att bearbeta filer som ska användas i AEM Assets.
 
-När proxyn är en separat AEM-instans minskar detta belastningen på AEM-redigeringsinstansen/-instanserna. Som standard kör AEM Resurser resurshanteringsuppgifterna i samma JVM (externaliserat via Proxy) för att minska belastningen på AEM-redigeringsinstansen.
+När proxyn är en separat AEM blir inläsningen av AEM. Som standard kör AEM Assets resurshanteringsuppgifterna i samma JVM (externaliserat via Proxy) för att minska belastningen på AEM.
 
 ## Proxy (HTTP Access) {#proxy-http-access}
 
@@ -103,17 +103,17 @@ Här följer ett exempel på API-användning:
  proxyJobService.removeJob(jobId);
 ```
 
-### Konfigurationer av molntjänster {#cloud-service-configurations}
+### Cloud Service Configurations {#cloud-service-configurations}
 
 >[!NOTE]
 >
 >Referensdokumentation för proxy-API:t finns under [`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html).
 
-Både proxy- och proxyarbetarkonfigurationer är tillgängliga via molntjänster som nås från AEM Assets **Tools** Console eller under `/etc/cloudservices/proxy`. Varje proxyarbetare förväntas lägga till en nod under `/etc/cloudservices/proxy` för arbetarspecifik konfigurationsinformation (till exempel `/etc/cloudservices/proxy/workername`).
+Både proxy- och proxyarbetskonfigurationer är tillgängliga via molntjänster som är tillgängliga via AEM Assets **Tools** Console eller under `/etc/cloudservices/proxy`. Varje proxyarbetare förväntas lägga till en nod under `/etc/cloudservices/proxy` för arbetarspecifik konfigurationsinformation (till exempel `/etc/cloudservices/proxy/workername`).
 
 >[!NOTE]
 >
->Mer information finns i [konfigurationen](indesign.md#configuring-the-proxy-worker-for-indesign-server) av Proxy Worker för InDesign Server och [Cloud Services-konfigurationen](../sites-developing/extending-cloud-config.md) .
+>Mer information finns i [konfiguration](indesign.md#configuring-the-proxy-worker-for-indesign-server) och konfiguration [av](../sites-developing/extending-cloud-config.md) Cloud Services för InDesign Server Proxy Worker.
 
 Här följer ett exempel på API-användning:
 
@@ -132,9 +132,9 @@ Här följer ett exempel på API-användning:
 
 ### Utveckla en anpassad proxyarbetare {#developing-a-customized-proxy-worker}
 
-IDS- [proxyarbetaren](indesign.md) är ett exempel på en AEM Resurser-proxyarbetare som redan medföljer för att lägga ut bearbetning av InDesign-resurser på entreprenad.
+IDS- [proxyarbetaren](indesign.md) är ett exempel på en AEM Assets-proxyarbetare som redan finns tillgänglig för att lägga ut bearbetning av InDesign-resurser på entreprenad.
 
-Du kan också utveckla och konfigurera din egen AEM Assets-proxyarbetare för att skapa en specialiserad arbetare som kan skicka och lägga ut AEM Assets-bearbetningsuppgifter på entreprenad.
+Du kan också utveckla och konfigurera din egen AEM Assets-proxyarbetare så att du kan skapa en specialarbetare som skickar ut och lägger ut dina AEM Assets-bearbetningsuppgifter på entreprenad.
 
 Om du konfigurerar en egen anpassad proxyarbetare måste du:
 
@@ -176,9 +176,9 @@ Följande diagram och steg visar hur du fortsätter:
 
 >[!NOTE]
 >
->Det AEM Assets-proxyramverket inte har någon färdig funktion är poolmekanismen.
+>Det som inte finns i AEM Assets proxyramverk är poolmekanismen.
 >
->InDesign-integreringen ger åtkomst till en pool med indesign-servrar (IDSPool). Den här poolen är specifik för InDesign-integrering och ingår inte i AEM Assets-proxyramverket.
+>Integreringen med InDesign ger åtkomst till en pool med indesign-servrar (IDSPool). Den här poolen är specifik för InDesign-integrering och ingår inte i AEM Assets proxyramverk.
 
 >[!NOTE]
 >
