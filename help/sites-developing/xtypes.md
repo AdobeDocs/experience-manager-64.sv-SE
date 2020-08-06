@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: adb70b43-1b0b-4302-905a-c7612675dabb
 translation-type: tm+mt
 source-git-commit: 14daff213297d2435765dd46039f346ce3868ac5
+workflow-type: tm+mt
+source-wordcount: '6414'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ I ExtJS-språket är en xtype ett symboliskt namn som ges till en klass. Du kan 
 
 En fullständig information om alla tillgängliga widgetar i AEM finns i [widgetens API-dokumentation](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html).
 
-Om du vill ta reda på i vilka komponenter en viss Xtype används i AEM kan du använda följande Xpath-fråga i CRXDE genom att ersätta &quot;checkbox&quot; med den Xtype som du är intresserad av:
+Om du vill ta reda på i vilka komponenter en viss xtype används i AEM kan du använda följande Xpath-fråga i CRXDE genom att ersätta &quot;checkbox&quot; med den xtype som du är intresserad av:
 
 `//element(*, cq:Widget)[@xtype='checkbox']`
 
@@ -31,11 +34,11 @@ Om du vill ta reda på i vilka komponenter en viss Xtype används i AEM kan du a
 >
 >Den här sidan beskriver användningen av ExtJS-xtyper i det klassiska användargränssnittet.
 >
->Adobe rekommenderar att du använder det moderna, [pekaktiverade användargränssnittet](/help/sites-developing/touch-ui-concepts.md) som är standard, baserat på användargränssnittet i [Coral](/help/sites-developing/touch-ui-concepts.md#coral-ui) och användargränssnittet i [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components).
+>Adobe rekommenderar att du använder det moderna, [pekaktiverade användargränssnittet](/help/sites-developing/touch-ui-concepts.md) som är standard och som baseras på användargränssnittet [Coral](/help/sites-developing/touch-ui-concepts.md#coral-ui) och användargränssnittet [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components).
 
 ## xtypes {#xtypes}
 
-Nedan finns en lista över tillgängliga typer i Adobe Experience Manager:
+Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
 * anteckning
 
@@ -127,7 +130,7 @@ Nedan finns en lista över tillgängliga typer i Adobe Experience Manager:
 
    Paketet CQ.Ext.chart ger möjlighet att visualisera data med flash-baserade diagram. Varje diagram binds direkt till en CQ.Ext.data.Store som möjliggör automatiska uppdateringar av diagrammet. Information om hur du ändrar utseendet på ett diagram finns i [konfigurationsalternativen chartStyle](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) och [extraStyle](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) .
 
-*  kryssruta
+* kryssruta
 
    [CQ.Ext.form.Checkbox](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.Checkbox)
 
@@ -357,7 +360,7 @@ Nedan finns en lista över tillgängliga typer i Adobe Experience Manager:
 
    [CQ.Ext.form.FieldSet](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.FieldSet)
 
-   Standardbehållare som används för att gruppera artiklar i ett [formulär](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.FormPanel)....
+   Standardbehållare som används för att gruppera artiklar i ett [formulär](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.FormPanel). ...
 
 * fileuploaddialogknapp
 
@@ -579,7 +582,7 @@ Nedan finns en lista över tillgängliga typer i Adobe Experience Manager:
 
    [CQ.wcm.OfflineImporter](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.OfflineImporter)
 
-   OfflineImporter är ett verktyg för att importera och konvertera Microsoft Word-dokument till AEM-sidor. Med den här funktionen kan innehåll redigeras offline med en ordbehandlare.
+   OfflineImporter är ett verktyg för att importera och konvertera Microsoft Word-dokument till AEM sidor. Med den här funktionen kan innehåll redigeras offline med en ordbehandlare.
 
 * ownerdraw
 
@@ -741,7 +744,7 @@ Nedan finns en lista över tillgängliga typer i Adobe Experience Manager:
 
    [CQ.Ext.Slider](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Slider)
 
-   Skjutreglage som har stöd för lodrät eller vågrät orientering, tangentbordsjusteringar, konfigurerbar fästning, axelklickning och animering. Kan läggas till som ett objekt i valfri behållare. Exempelanvändning:...
+   Skjutreglage som har stöd för lodrät eller vågrät orientering, tangentbordsjusteringar, konfigurerbar fästning, axelklickning och animering. Kan läggas till som ett objekt i valfri behållare. Exempelanvändning: ...
 
 * bildspel
 
@@ -757,7 +760,7 @@ Nedan finns en lista över tillgängliga typer i Adobe Experience Manager:
 
    SmartFile är en intelligent filuppladdare.
 
-   Om ett Flash-plugin-program (version >= 9) är installerat körs överföringarna med SWFupload-biblioteket, som är ett bekvämt sätt att hantera överföringar.
+   Om ett plugin-program för Flash (version >= 9) är installerat körs överföringar med SWFupload-biblioteket som ger ett bekvämt sätt att hantera överföringar.
 
 * smartimage
 
@@ -869,7 +872,7 @@ Nedan finns en lista över tillgängliga typer i Adobe Experience Manager:
 
    [CQ.Ext.form.TimeField](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TimeField)
 
-   Tillhandahåller ett tidsinmatningsfält med en tidslistruta och automatisk tidsvalidering. Exempelanvändning:...
+   Tillhandahåller ett tidsinmatningsfält med en tidslistruta och automatisk tidsvalidering. Exempelanvändning: ...
 
 * tips
 
