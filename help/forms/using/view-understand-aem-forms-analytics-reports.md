@@ -1,6 +1,6 @@
 ---
-title: Visa och förstå analysrapporter för AEM Forms
-seo-title: Visa och förstå analysrapporter för AEM Forms
+title: Visa och förstå AEM Forms analysrapporter
+seo-title: Visa och förstå AEM Forms analysrapporter
 description: AEM Forms kan integreras med Adobe Analytics och ger er en sammanfattning och detaljerad analys av era publicerade adaptiva formulär.
 seo-description: AEM Forms kan integreras med Adobe Analytics och ger er en sammanfattning och detaljerad analys av era publicerade adaptiva formulär.
 uuid: 193f472d-4aa3-4c31-b3c7-b5a2957dfb3d
@@ -10,21 +10,24 @@ topic-tags: integrations
 discoiquuid: a9045816-cae7-42cf-a734-6c3a25d0f522
 translation-type: tm+mt
 source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+workflow-type: tm+mt
+source-wordcount: '1075'
+ht-degree: 0%
 
 ---
 
 
-# Visa och förstå analysrapporter för AEM Forms {#view-and-understand-aem-forms-analytics-reports}
+# Visa och förstå AEM Forms analysrapporter {#view-and-understand-aem-forms-analytics-reports}
 
-Adobe Experience Manager Forms kan integreras med Adobe Analytics så att ni kan hämta in och spåra prestandamått för era publicerade formulär och dokument. Syftet med att analysera dessa värden är att fatta välgrundade beslut baserat på uppgifter om de ändringar som krävs för att göra formulär eller dokument mer användbara.
+Adobe Experience Manager Forms kan integreras med Adobe Analytics så att ni kan samla in och spåra prestandamått för era publicerade formulär och dokument. Syftet med att analysera dessa värden är att fatta välgrundade beslut baserat på uppgifter om de ändringar som krävs för att göra formulär eller dokument mer användbara.
 
 ## Ställa in analyser {#setting-up-analytics}
 
-Analysfunktionen i AEM Forms är tillgänglig som en del av AEM Forms-tilläggspaketet. Mer information om hur du installerar tilläggspaketet finns i [Installera och konfigurera AEM-formulär](/help/forms/using/installing-configuring-aem-forms-osgi.md).
+Analysfunktionen i AEM Forms ingår i AEM Forms tilläggspaket. Mer information om hur du installerar tilläggspaketet finns i [Installera och konfigurera AEM Forms](/help/forms/using/installing-configuring-aem-forms-osgi.md).
 
-Förutom tilläggspaketet behöver du ett Adobe Analytics-konto. Information om lösningen finns i [Adobe Analytics](https://www.adobe.com/solutions/digital-analytics.html).
+Utöver tilläggspaketet behöver du ett Adobe Analytics-konto. Information om lösningen finns i [Adobe Analytics](https://www.adobe.com/solutions/digital-analytics.html).
 
-När du har AEM Forms-tilläggspaketet och ett Adobe Analytics-konto integrerar du Adobe Analytics-kontot med AEM Forms och aktiverar spårning i formulär och dokument enligt beskrivningen i [Konfigurera analyser och rapporter](/help/forms/using/configure-analytics-forms-documents.md).
+När du har AEM Forms-tilläggspaketet och ett Adobe Analytics-konto kan du integrera Adobe Analytics-kontot med AEM Forms och aktivera spårning av formulär och dokument enligt beskrivningen i [Konfigurera analyser och rapporter](/help/forms/using/configure-analytics-forms-documents.md).
 
 ## Hur användarinteraktionsinformation registreras {#how-user-interaction-information-is-recorded}
 
@@ -48,21 +51,21 @@ När en användare interagerar med formuläret registreras interaktionerna och s
 
 Följ de här stegen för att visa analysrapporter:
 
-1. Logga in på AEM-portalen på `https://[hostname]:[port]`
-1. Klicka på **Formulär > Formulär och dokument**.
+1. Logga in på AEM `https://[hostname]:[port]`
+1. Klicka på **Forms > Forms &amp; Documents**.
 
 1. Välj det formulär som du vill visa analysrapporterna för.
 1. Välj **Mer > Analysrapporter**.
 
 ![analytikerrapport](assets/analyticsreport.png)
 
-**** S. Analysrapport, kommando
+**S.** Analysrapport, kommando
 
 AEM Forms visar analysrapporter för formuläret och för varje panel i formuläret, enligt nedan.
 
 ![Sammanfattningsrapport för ett anpassat formulär](assets/analyticsdashboard_callout.png)
 
-************ S. Konvertering **B. Sammanfattning på formulärnivå** C.**Sammanfattning på panelnivå** D. Webbläsare för besökare - filter **E. Operativsystem för besökare - filter** F. Besökarnas språk - filter
+**S.** Konvertering **B.** Sammanfattning på formulärnivå **C.** Sammanfattning på panelnivå **D.** Webbläsare för besökare - filter **E.** Operativsystem för besökare - filter **F.** Besökarnas språk - filter
 
 Som standard visas analysrapporten för de senaste sju dagarna. Du kan visa rapporter för de senaste 15 dagarna, den senaste månaden och så vidare, eller ange ett datumintervall.
 
