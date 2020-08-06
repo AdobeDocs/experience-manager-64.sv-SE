@@ -1,8 +1,8 @@
 ---
 title: Skicka en bekräftelse på att formulär har skickats via e-post
 seo-title: Skicka en bekräftelse på att formulär har skickats via e-post
-description: Med AEM Forms kan du konfigurera e-poståtgärden som skickar en bekräftelse till en användare när formuläret skickas.
-seo-description: Med AEM Forms kan du konfigurera e-poståtgärden som skickar en bekräftelse till en användare när formuläret skickas.
+description: I AEM Forms kan du konfigurera e-poståtgärden som skickar en bekräftelse till en användare när formuläret skickas.
+seo-description: I AEM Forms kan du konfigurera e-poståtgärden som skickar en bekräftelse till en användare när formuläret skickas.
 uuid: 77b3c836-6011-48bd-831c-ebc214218efb
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,6 +10,9 @@ topic-tags: publish
 discoiquuid: 7ffe6317-174b-4d80-9ac6-9bfb5eed7e29
 translation-type: tm+mt
 source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+workflow-type: tm+mt
+source-wordcount: '586'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +37,7 @@ Med åtgärden E-post kan en författare automatiskt skicka e-post till en eller
 
 >[!NOTE]
 >
->Om du vill använda e-poståtgärden måste du konfigurera AEM-posttjänsten enligt beskrivningen i [Konfigurera e-posttjänsten](/help/sites-administering/notification.md#configuring-the-mail-service).
+>Om du vill använda åtgärden E-post måste du konfigurera AEM e-posttjänst enligt beskrivningen i [Konfigurera e-posttjänsten](/help/sites-administering/notification.md#configuring-the-mail-service).
 
 ### Aktivera e-poståtgärd i ett anpassat formulär {#enabling-email-action-on-an-adaptive-form}
 
@@ -64,7 +67,7 @@ Med åtgärden E-post kan en författare automatiskt skicka e-post till en eller
    >
    >Om du väljer åtgärden **** E-post-PDF måste du markera alternativet Inkludera bifogade filer.
 
-1. Spara ändringarna genom att klicka på **OK** .
+1. Click **OK** to save the changes.
 
 ### Använda adaptiva formulärfältsnamn för att dynamiskt skapa e-postinnehåll {#using-adaptive-form-field-names-to-dynamically-create-email-content}
 
@@ -86,7 +89,7 @@ När en användare skickar formuläret skickas ett e-postmeddelande till det e-p
 
 Variabelplatshållare kan också användas i fälten **Ämne** och **E-postmall** .
 
-Exempel:
+Till exempel:
 
 `Hi ${first_name} ${last_name},`
 
