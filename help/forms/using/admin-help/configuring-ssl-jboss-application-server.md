@@ -26,7 +26,7 @@ Du kan köra nyckelverktyget med ett enda kommando som innehåller all informati
 
 I denna procedur:
 
-* `[appserver root]` är arbetskatalogen för den programserver som kör AEM-formulär.
+* `[appserver root]` är arbetskatalogen för den programserver som kör AEM formulär.
 * `[type]` är ett mappnamn som varierar beroende på vilken typ av installation du har utfört.
 
 ## Skapa en SSL-autentiseringsuppgift {#create-an-ssl-credential}
@@ -146,7 +146,7 @@ I denna procedur:
       * Välj Åtgärd > Stoppa.
       * Vänta tills tjänstens status visas som stoppad.
       * Välj Åtgärd > Start.
-   * För förkonfigurerade eller manuellt konfigurerade JBoss-installationer från Adobe:
+   * För förkonfigurerade eller manuellt konfigurerade JBoss-installationer i Adobe:
 
       * Navigera till *`[appserver root]`*/bin från en kommandotolk.
       * Stoppa servern genom att ange följande kommando:
@@ -163,7 +163,7 @@ I denna procedur:
 
 1. Om du vill få åtkomst till administrationskonsolen med SSL skriver du `https://[host name]:[port]/adminui` i en webbläsare:
 
-   Standardporten för SSL för JBoss är 8443. Ange den här porten när du öppnar AEM-formulär härifrån.
+   Standardporten för SSL för JBoss är 8443. Ange den här porten när du öppnar AEM formulär.
 
 ## Begär en autentiseringsuppgift från en certifikatutfärdare {#request-a-credential-from-a-ca}
 
