@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 940e45b4-dbf1-4207-bd4a-cf677d645fb4
 translation-type: tm+mt
 source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+workflow-type: tm+mt
+source-wordcount: '378'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +34,7 @@ Följ de här stegen för att visa komponenterna i sidofältet baserat på en ma
 
 1. I CRXDE navigerar du till mappen där mallen skapas.
 
-   Exempel: `/conf/<your-folder>/`
+   Till exempel: `/conf/<your-folder>/`
 
 1. I CRXDE navigerar du till: `/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/`
 
@@ -39,7 +42,7 @@ Följ de här stegen för att visa komponenterna i sidofältet baserat på en ma
 
    Sökvägen till standardinnehållsprincipen är: `/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/default`
 
-   Kopiera och klistra in standardprincipen i `gridFluidLayout` mappen och byt namn på den. Exempel, `myPolicy`.
+   Kopiera och klistra in standardprincipen i `gridFluidLayout` mappen och byt namn på den. Till exempel, `myPolicy`.
 
    ![Kopierar standardprinciper](assets/crx-default1.png)
 
