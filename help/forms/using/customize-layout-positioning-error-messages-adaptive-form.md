@@ -10,6 +10,9 @@ topic-tags: customization
 discoiquuid: e1431ad9-3bae-4ac3-97e2-96dcbfce1f71
 translation-type: tm+mt
 source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+workflow-type: tm+mt
+source-wordcount: '549'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +42,7 @@ Utför följande steg för att tillämpa en anpassad layout på ett enskilt fäl
 
 ### Anpassa layouten för alla fält i ett formulär {#customize-layout-of-all-the-fields-of-a-form}
 
-Med AEM Forms kan du nu skapa ett tema och använda det i ditt formulär. Med temaredigeraren kan du ange format för formulärkomponenter på ett och samma ställe. När du skapar ett tema anger du en stil på komponentnivå. Mer information om teman finns i [Teman i AEM-formulär](/help/forms/using/themes.md).
+Med AEM Forms kan du nu skapa ett tema och använda det i ditt formulär. Med temaredigeraren kan du ange format för formulärkomponenter på ett och samma ställe. När du skapar ett tema anger du en stil på komponentnivå. Mer information om teman finns i [Teman i AEM Forms](/help/forms/using/themes.md).
 
 Skapa ett tema med hjälp av temaredigeraren för att anpassa layouten för alla fält i formuläret. När du har skapat ett tema utför du följande steg för att tillämpa det på ett formulär:
 
