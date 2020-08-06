@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 53342acb-c1a5-443d-8727-cb27cc9d6845
 translation-type: tm+mt
 source-git-commit: 8e2bd579e4c5edaaf86be36bd9d81dfffa13a573
+workflow-type: tm+mt
+source-wordcount: '533'
+ht-degree: 0%
 
 ---
 
 
 # Extern URL{#externalizing-urls}
 
-I AEM är **Externalizer** en OSGI-tjänst som du kan använda för att programmässigt omvandla en resurssökväg (t.ex. till `/path/to/my/page`en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att prefix-sökvägen med en förkonfigurerad DNS.
+I AEM är **Externalizer** en OSGI-tjänst som du kan använda för att programmässigt omvandla en resurssökväg (t.ex. `/path/to/my/page`) till en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att prefix-sökvägen med en förkonfigurerad DNS.
 
 Eftersom en instans inte känner till sin externt synliga URL-adress om den körs bakom ett webblager, och eftersom en länk ibland måste skapas utanför det begärda omfånget, utgör den här tjänsten en central plats för att konfigurera de externa URL-adresserna och skapa dem.
 
@@ -42,20 +45,22 @@ Så här definierar du en domänmappning för tjänsten **Externalizer** :
 
    `<unique-name> [scheme://]server[:port][/contextpath]`, där:
 
-   * **Schemat** är vanligtvis http eller https, men kan också vara ftp o.s.v.; använda https för att framtvinga https-länkar om det behövs;den kommer att användas om klientkoden inte åsidosätter schemat när den frågar efter en URL-adress.
+   * **Schemat** är vanligtvis http eller https, men kan också vara ftp o.s.v.; använda https för att framtvinga https-länkar om det behövs; den kommer att användas om klientkoden inte åsidosätter schemat när en URL-adress begärs externt.
    * **server** är värdnamnet (kan vara ett domännamn eller en IP-adress).
    * **port** (valfritt) är portnumret.
-   * **kontextsökväg** (valfritt) anges bara om AEM är installerat som en webbapp under en annan kontextsökväg.
-   Exempel: `production https://my.production.instance`
+   * **contextpath** (valfritt) anges bara om AEM har installerats som en webbapp under en annan kontextsökväg.
+
+   Till exempel: `production https://my.production.instance`
 
    Följande mappningsnamn är fördefinierade och måste alltid anges som AEM är beroende av dem:
 
    * **local** - den lokala instansen
    * **författare** - redigeringssystemets DNS
    * **publicera** - den offentliga webbplatsens DNS
+
    >[!NOTE]
    >
-   >Med en anpassad konfiguration kan du lägga till en ny kategori, till exempel&quot;produktion&quot;,&quot;staging&quot; eller till och med externa icke-AEM-system som&quot;my-internal-webservice&quot;, och det är användbart för att undvika hårdkodning av sådana URL:er på olika platser i ett projekts kodbas.
+   >Med en anpassad konfiguration kan du lägga till en ny kategori, till exempel&quot;produktion&quot;,&quot;staging&quot; eller till och med externa icke-AEM system som&quot;my-internal-webservice&quot;. Den är användbar för att undvika hårdkodning av sådana URL:er på olika platser i ett projekts kodbas.
 
 1. Klicka på **Spara** för att spara ändringarna.
 
