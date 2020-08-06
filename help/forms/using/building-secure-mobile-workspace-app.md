@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Bygga en säker AEM Forms-app för iOS {#building-a-secure-aem-forms-app-for-ios}
 
-Du måste arkivera Xcode-projektet för AEM Forms-appen för att skapa installationsprogrammet (en IPA-fil) och en egenskapslista (en .plist-fil). Egenskapslistfilen innehåller konfigurationsinformation för det värdbaserade interna programmet, till exempel namnet och appens värdplats. Mer information om egenskapslistfiler finns i [Om egenskapslistefiler](https://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html).
+Du måste arkivera Xcode-projektet för AEM Forms-programmet för att kunna skapa installationsprogrammet (en IPA-fil) och en egenskapslista (en PLIST-fil). Egenskapslistfilen innehåller konfigurationsinformation för det värdbaserade interna programmet, till exempel namnet och appens värdplats. Mer information om egenskapslistfiler finns i [Om egenskapslistefiler](https://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html).
 
 1. Logga in på följande webbplats:
 
@@ -41,4 +41,4 @@ Du måste arkivera Xcode-projektet för AEM Forms-appen för att skapa installat
 1. From the **[!UICONTROL Settings]** list, expand **[!UICONTROL Code Signing]**.
 1. Välj **[!UICONTROL Code Signing Identity]** lämplig signatur. Se till att samma signatur är markerad för **[!UICONTROL Debug]**, **[!UICONTROL Release]** och **[!UICONTROL Any iOS SDK]**.
 1. Under **[!UICONTROL PROJECT]** väljer du **[!UICONTROL AEM Forms]** och ser till att rätt signatur är vald för **[!UICONTROL Code Signing Identity]**, **[!UICONTROL Debug]** och **[!UICONTROL Release]** **[!UICONTROL Any iOS SDK]**.
-1. Bygg och distribuera appen AEM Forms. Detaljerade anvisningar om hur du skapar och distribuerar appen AEM Forms finns i [Skapa installationsprogrammet för appen](setup-xcode-project-build-installer.md#build-the-installer-for-the-mobile-workspace-app)AEM Forms.
+1. Bygg och distribuera appen AEM Forms. Detaljerade anvisningar om hur du skapar och distribuerar AEM Forms-program finns i [Skapa installationsprogrammet för AEM Forms-appen](setup-xcode-project-build-installer.md#build-the-installer-for-the-mobile-workspace-app).
