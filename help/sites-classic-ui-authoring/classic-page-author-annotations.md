@@ -12,6 +12,9 @@ content-type: reference
 discoiquuid: 9bee0197-f275-49cc-922d-62cba826c4e5
 translation-type: tm+mt
 source-git-commit: 363f084e086c2afd5585caa08d5b55c0e02bd4b2
+workflow-type: tm+mt
+source-wordcount: '821'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ En anteckning placerar en färgmarkör/anteckning på sidan. Med anteckningen ka
 
 >[!NOTE]
 >
->Anteckningar som skapas i det klassiska användargränssnittet visas också i det pekoptimerade användargränssnittet. Skisser är dock gränssnittsspecifika och visas endast i det användargränssnitt där de skapades.
+>Anteckningar som skapas i det klassiska användargränssnittet visas också i det pekoptimerade användargränssnittet. Skisser är dock användargränssnittsspecifika och visas endast i det användargränssnitt där de skapades.
 
 >[!CAUTION]
 >
@@ -77,6 +80,7 @@ Med de tre ikonerna längst upp till vänster kan du minimera anteckningen (till
 >
 >* ikonen visas inte.
 >* befintliga skisser som skapats i en annan webbläsare visas inte.
+
 >
 
 
