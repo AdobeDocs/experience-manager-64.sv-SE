@@ -10,6 +10,9 @@ topic-tags: develop
 discoiquuid: 6e4e3af5-4260-4f38-9b29-0818e92bc182
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '640'
+ht-degree: 0%
 
 ---
 
@@ -22,14 +25,14 @@ Läs vidare för mer information om asynkron överföring i adaptiva formulär.
 
 ## Konfigurera asynkron överföring {#configure}
 
-Så här konfigurerar du asynkron sändning för ett anpassat formulär:
+Så här konfigurerar du asynkron sändning för ett adaptivt formulär:
 
 1. I redigeringsläget för anpassningsbara formulär väljer du objektet Formulärbehållare och trycker på ![cmpr1](assets/cmppr1.png) för att öppna dess egenskaper.
-1. Aktivera **[!UICONTROL Använd asynkron sändning]** i avsnittet **[!UICONTROL Sändningsegenskaper]**.
-1. Under **[!UICONTROL Vid sändning]** väljer du något av följande alternativ för att skicka formulär.
+1. Aktivera i delen **[!UICONTROL Submission]** Egenskaper **[!UICONTROL Use asynchronous submission]**.
+1. I **[!UICONTROL On Submit]** avsnittet väljer du ett av följande alternativ för att skicka formulär.
 
-   * **[!UICONTROL Omdirigera till URL]**: Omdirigerar till angiven URL eller sida när formulär skickas. Du kan ange en URL eller bläddra för att välja sökvägen till en sida i fältet **[!UICONTROL Omdirigera URL/sökväg]** .
-   * **[!UICONTROL Visa meddelande]**: Visar ett meddelande om att formulär har skickats. Du kan skriva ett meddelande i textfältet under alternativet Visa meddelande. Textfältet har stöd för RTF-formatering.
+   * **[!UICONTROL Redirect to URL]**: Omdirigerar till angiven URL eller sida när formulär skickas. Du kan ange en URL eller bläddra för att välja sökvägen till en sida i **[!UICONTROL Redirect URL/Path]** fältet.
+   * **[!UICONTROL Show Message]**: Visar ett meddelande om att formulär har skickats. Du kan skriva ett meddelande i textfältet under alternativet Visa meddelande. Textfältet har stöd för RTF-formatering.
 
 1. Tryck på ![bockknapp1](assets/check-button1.png) för att spara egenskaperna.
 
@@ -94,9 +97,9 @@ Formulärutvecklare och författare kan skriva regler på formulärnivå i kodre
 Utför följande steg för att skriva regler i kodredigeraren för att hantera lyckade händelser och felhändelser.
 
 1. Öppna det adaptiva formuläret i redigeringsläge, markera ett formulärobjekt och tryck på ![edit-rules1](assets/edit-rules1.png) för att öppna regelredigeraren.
-1. Välj **[!UICONTROL Formulär]** i trädet Formulärobjekt och tryck på **[!UICONTROL Skapa]**.
-1. Välj **[!UICONTROL Kodredigeraren]** i listrutan för lägesval.
-1. Tryck på **[!UICONTROL Redigera kod]** i kodredigeraren. Tryck på **[!UICONTROL Redigera]** i bekräftelsedialogrutan.
-1. Välj **[!UICONTROL Slutförd sändning]** eller **[!UICONTROL Fel i överföring]** i **[!UICONTROL listrutan Händelse]** .
-1. Skriv en regel för den valda händelsen och tryck på **[!UICONTROL Klar]** för att spara regeln.
+1. Markera **[!UICONTROL Form]** i trädet Formulärobjekt och tryck på **[!UICONTROL Create]**.
+1. Välj **[!UICONTROL Code Editor]** i listrutan för lägesval.
+1. Tryck på **[!UICONTROL Edit Code]** i kodredigeraren. Tryck **[!UICONTROL Edit]** på bekräftelsedialogrutan.
+1. Välj **[!UICONTROL Successful Submission]** eller **[!UICONTROL Error in Submission]** från **[!UICONTROL Event]** listrutan.
+1. Skriv en regel för den valda händelsen och tryck för **[!UICONTROL Done]** att spara regeln.
 
