@@ -1,6 +1,6 @@
 ---
-title: Förhandsgranska Dynamic Media-material
-seo-title: Förhandsgranska Dynamic Media-material
+title: Förhandsgranska Dynamic Media-resurser
+seo-title: Förhandsgranska Dynamic Media-resurser
 description: Lär dig förhandsgranska resurser i Dynamic Media
 seo-description: Lär dig förhandsgranska resurser i Dynamic Media
 uuid: f0ff2fc4-a263-4dbe-ba46-b07077b49ae0
@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 77296bff-8429-4240-af93-26076ae431ec
 translation-type: tm+mt
 source-git-commit: 8c6fdcea0def7720062edfc564c536f8d47e8402
+workflow-type: tm+mt
+source-wordcount: '1016'
+ht-degree: 2%
 
 ---
 
 
-# Förhandsgranska Dynamic Media-material {#previewing-assets}
+# Förhandsgranska Dynamic Media-resurser {#previewing-assets}
 
-Du kan använda **[!UICONTROL Förhandsgranska]** för att se hur en dynamisk mediefil ser ut när den visas av en kund i en egen webbläsare. Standardvisningsprogrammet för inbäddade enheter som är tilldelade resursen används för **[!UICONTROL förhandsvisningen]**.
+Du kan använda **[!UICONTROL Preview]** för att se hur en digital medieresurs ser ut när den visas av en kund i en egen webbläsare. Standardvisningsprogrammet för inbäddade enheter som är tilldelade resursen används för **[!UICONTROL Preview]**.
 
 Ett visningsprogram är en samling med olika inställningar eller&quot;förinställningar&quot;, t.ex. visningsprogrammets visningsstorlek, zoombeteende, färgscheman, kanter, teckensnitt osv., som avgör hur användare visar mediefiler på datorskärmar och mobila enheter.
 
@@ -28,14 +31,14 @@ Förutom att använda den dedikerade förhandsvisningsfunktionen för video, snu
 
 >[!NOTE]
 >
->När du är på en webbsida (Sites) i AEM kan du inte förhandsgranska resurser i **[!UICONTROL redigeringsläget]** . Du måste gå till **[!UICONTROL förhandsgranskningsläget]** genom att klicka på **Förhandsgranska** i det övre högra hörnet.
+>When you are on a webpage (Sites) in AEM, you cannot preview assets in **[!UICONTROL Edit]** mode. You need to go to **[!UICONTROL Preview]** mode by clicking **Preview** in the upper right-hand corner.
 
 **Så här förhandsgranskar du resurser**:
 
-1. Från **Adobe Experience Manager**, på **[!UICONTROL navigeringssidan]** , trycker du på **Resurser **och sedan på**[!UICONTROL Filer ]**för att komma åt resurser.
-1. I närheten av det övre högra hörnet på sidan, i listrutan **[!UICONTROL Visa]** , trycker du på **[!UICONTROL listvyn]**.
-1. (Valfritt) Använd kolumnen **[!UICONTROL Typ]** för att sortera resurserna efter den typ som du vill förhandsgranska.
-1. Klicka på titelnamnet (inte miniatyrbilden) för resursen som du vill förhandsgranska i kolumnen **[!UICONTROL Titel]** .
+1. From **Adobe Experience Manager**, on the **[!UICONTROL Navigation]** page, tap **[!UICONTROL Asset]s **, then **[!UICONTROL Files]**to access assets.
+1. Near the upper-right corner of the page, from the **[!UICONTROL View]** drop-down list, tap **[!UICONTROL List View]**.
+1. (Valfritt) Använd **[!UICONTROL Type]** kolumnen för att sortera resurserna efter den typ som du vill förhandsgranska.
+1. Under **[!UICONTROL Title]** kolumnen klickar du på titelnamnet (inte miniatyrbilden) för resursen som du vill förhandsgranska.
 1. Beroende på vilken resurstyp du klickade på gör du något av följande:
 
 <table> 
