@@ -12,6 +12,9 @@ topic-tags: operations
 discoiquuid: 6d75c7b1-9c0e-47f3-bdb1-61acf16b97f9
 translation-type: tm+mt
 source-git-commit: 529b8c6556a7179a9169ff8250af6b5dc1251ef3
+workflow-type: tm+mt
+source-wordcount: '1639'
+ht-degree: 0%
 
 ---
 
@@ -38,11 +41,11 @@ Observera att källattributet är tilldelat värdet i det här DDX-dokumentet `i
 
 Om du skickar två eller flera PDF-indatadokument till Assembler-tjänsten kan du däremot anropa `invokeDDX` åtgärden. I så fall tilldelar du filnamnet för PDF-indatadokumentet till `source` -attributet.
 
-Krypteringstjänsten behöver inte vara en del av AEM-formulärsinstallationen för att kunna kryptera ett PDF-dokument med ett lösenord. Se [Kryptera och dekryptera PDF-dokument](/help/forms/developing/encrypting-decrypting-pdf-documents.md).
+Krypteringstjänsten behöver inte vara en del av installationen av AEM formulär för att kunna kryptera ett PDF-dokument med ett lösenord. Se [Kryptera och dekryptera PDF-dokument](/help/forms/developing/encrypting-decrypting-pdf-documents.md).
 
 >[!NOTE]
 >
->Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
@@ -69,10 +72,10 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
+* adobe-utilities.jar (krävs om AEM Forms används i JBoss)
+* jbossall-client.jar (krävs om AEM Forms används i JBoss)
 
-Om AEM Forms används på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms distribueras på. Information om platsen för alla AEM Forms JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Om AEM Forms körs på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms är distribuerad på. Information om platsen för alla AEM Forms JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa en Assembler-klient**
 
@@ -88,7 +91,7 @@ Ett oskyddat PDF-dokument måste refereras till och skickas till Assembler-tjän
 
 **Ange körningsalternativ**
 
-Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänsten när den utför ett jobb. Du kan till exempel ange ett alternativ som instruerar Assembler-tjänsten att fortsätta bearbeta ett jobb om ett fel uppstår. Mer information om de körningsalternativ du kan ange finns i klassreferensen `AssemblerOptionSpec` i API-referens [för](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)AEM Forms.
+Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänsten när den utför ett jobb. Du kan till exempel ange ett alternativ som instruerar Assembler-tjänsten att fortsätta bearbeta ett jobb om ett fel uppstår. Mer information om alternativ för körning som du kan ange finns i klassreferensen ( `AssemblerOptionSpec` class reference) i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **Kryptera dokumentet**
 
@@ -139,6 +142,7 @@ Om bara ett PDF-dokument skickas till Assembler-tjänsten returnerar Assembler-t
    * Ett `com.adobe.idp.Document` objekt som representerar DDX-dokumentet. Kontrollera att det här DDX-dokumentet innehåller värdet `inDoc` för PDF-källelementet.
    * Ett `com.adobe.idp.Document` objekt som innehåller det oskyddade PDF-dokumentet.
    * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` objekt som anger körningsalternativen, inklusive standardteckensnitt och jobbloggsnivå.
+
    Metoden returnerar `invokeOneDocument` ett `com.adobe.idp.Document` objekt som innehåller ett lösenordskrypterat PDF-dokument.
 
 1. Spara det krypterade PDF-dokumentet.
@@ -168,7 +172,7 @@ Om bara ett PDF-dokument skickas till Assembler-tjänsten returnerar Assembler-t
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `AssemblerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -201,6 +205,7 @@ Om bara ett PDF-dokument skickas till Assembler-tjänsten returnerar Assembler-t
    * Ett `BLOB` objekt som representerar DDX-dokumentet
    * Ett `BLOB` objekt som representerar det oskyddade PDF-dokumentet
    * Ett `AssemblerOptionSpec` objekt som anger körningsalternativ
+
    Metoden returnerar `invokeOneDocument` ett `BLOB` objekt som innehåller ett krypterat PDF-dokument.
 
 1. Spara det krypterade PDF-dokumentet.
@@ -212,4 +217,4 @@ Om bara ett PDF-dokument skickas till Assembler-tjänsten returnerar Assembler-t
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
