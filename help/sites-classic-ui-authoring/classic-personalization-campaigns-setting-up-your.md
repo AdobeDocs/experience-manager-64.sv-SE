@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: e30e5a21-ac86-4653-bd1f-7351852db3f3
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '2289'
+ht-degree: 0%
 
 ---
 
@@ -42,7 +45,7 @@ Beroende på vilken typ av upplevelse du skapar måste du sedan [skapa en upplev
 
 * Om du skapar ett Adobe Target-erbjudande (tidigare Test&amp;Target):
 
-   1. [Skapa en upplevelse](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatesttargetofferexperience)av Adobe Target-erbjudanden.
+   1. [Skapa en Adobe Target-upplevelse](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatesttargetofferexperience).
    1. [Integrera med Adobe Target](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#integratewithadobetesttarget)
 
 >[!NOTE]
@@ -55,7 +58,7 @@ Så här skapar du ett nytt varumärke:
 
 1. Öppna **MCM** och välj **Kampanjer** i den vänstra rutan.
 
-1. **Välj** ny... att ange **titel** och **namn** och mall som ska användas för ditt nya varumärke:
+1. Välj **ny...** att ange **titel** och **namn** och mall som ska användas för ditt nya varumärke:
 
    ![chlimage_1-37](assets/chlimage_1-37.png)
 
@@ -79,7 +82,7 @@ Så här skapar du en ny kampanj:
 
    Översikten visas (tom om varumärket är nytt).
 
-1. **Klicka på** Ny... och ange den **titel**, det **namn** och den mall som ska användas för den nya kampanjen.
+1. Klicka på **Ny...** och ange den **titel**, det **namn** och den mall som ska användas för den nya kampanjen.
 
    ![chlimage_1-39](assets/chlimage_1-39.png)
 
@@ -89,16 +92,16 @@ Så här skapar du en ny kampanj:
 
 Konfigurera kampanjegenskaper som styr beteendet:
 
-* **** Prioritet: Den här kampanjens prioritet i förhållande till andra kampanjer. När flera kampanjer är aktiverade samtidigt styr kampanjen som har högst prioritet besökarupplevelsen.
-* **** På- och fråntid: Dessa egenskaper styr tidsperioden när kampanjen styr besökarupplevelsen. Egenskapen On Time styr den tid då kampanjen börjar styra upplevelsen. Egenskapen Av-tid styr när kampanjerna slutar styra upplevelsen.
-* **** Bild: Bilden som representerar kampanjen i AEM.
-* **** Molntjänster: De molntjänstkonfigurationer som kampanjen är integrerad med. (Se [Integrera med Adobe Marketing Cloud](/help/sites-administering/marketing-cloud.md).)
+* **Prioritet:** Den här kampanjens prioritet i förhållande till andra kampanjer. När flera kampanjer är aktiverade samtidigt styr kampanjen som har högst prioritet besökarupplevelsen.
+* **På- och fråntid:** Dessa egenskaper styr tidsperioden när kampanjen styr besökarupplevelsen. Egenskapen On Time styr den tid då kampanjen börjar styra upplevelsen. Egenskapen Av-tid styr när kampanjerna slutar styra upplevelsen.
+* **Bild:** Bilden som representerar kampanjen i AEM.
+* **Cloud Services:** De Cloud Service som kampanjen är integrerad med. (Se [Integrera med Adobe Marketing Cloud](/help/sites-administering/marketing-cloud.md).)
 
-* **** Adobe Target: Egenskaper som konfigurerar kampanjer som är integrerade med Adobe Target. (See [Integrating with Adobe Target](/help/sites-administering/target.md).)
+* **Adobe Target:** Egenskaper som konfigurerar kampanjer som är integrerade med Adobe Target. (See [Integrating with Adobe Target](/help/sites-administering/target.md).)
 
 1. Välj ert varumärke i **Campaigns**. Välj kampanj i den högra rutan och klicka på **Egenskaper**.
 
-   Du kan ange olika egenskaper, inklusive **titel**, **beskrivning** och vilka **molntjänster** du vill ha.
+   Du kan ange olika egenskaper, bland annat en **titel**, **beskrivning** och eventuella **Cloud Services** .
 
    ![chlimage_1-40](assets/chlimage_1-40.png)
 
@@ -144,7 +147,7 @@ Om du har befintliga upplevelser kan du lägga till en kontaktyta direkt från k
 
 1. Välj kalendervy för kampanjen.
 
-1. **Klicka på** Lägg till kontaktpunkt.. för att öppna dialogrutan. Ange vilken upplevelse du vill lägga till:
+1. Klicka på **Lägg till kontaktpunkt..** för att öppna dialogrutan. Ange vilken upplevelse du vill lägga till:
 
    ![chlimage_1-41](assets/chlimage_1-41.png)
 
@@ -154,10 +157,10 @@ Om du har befintliga upplevelser kan du lägga till en kontaktyta direkt från k
 
 >[!NOTE]
 >
->Adobe planerar inte att ytterligare förbättra denna funktion (Managing Leads).\
+>Adobe planerar inte att ytterligare förbättra denna funktion (Hantera leads).\
 >Rekommendationen är att [utnyttja Adobe Campaign och integrationen med AEM](/help/sites-administering/campaign.md).
 
-I AEM MCM kan du ordna och lägga till leads antingen genom att ange dem manuellt eller importera en kommaseparerad lista, till exempel en utskickslista. Ytterligare sätt att generera leads är från nyhetsbrev eller communityregistreringar (om de är konfigurerade kan de utlösa ett arbetsflöde som fyller i leads).
+I AEM MCM kan du ordna och lägga till leads antingen genom att ange dem manuellt eller genom att importera en kommaseparerad lista, till exempel en utskickslista. Ytterligare sätt att generera leads är från nyhetsbrev eller communityregistreringar (om de är konfigurerade kan de utlösa ett arbetsflöde som fyller i leads).
 
 Leads kategoriseras vanligtvis och placeras i en lista så att du senare kan utföra åtgärder i hela listan, till exempel skicka ut ett anpassat e-postmeddelande till en viss lista.
 
@@ -175,7 +178,7 @@ När du har skapat nya leads måste du [aktivera dem](#activating-or-deactivatin
 
 Så här skapar du en ny lead manuellt:
 
-1. Navigera till MCM i AEM. Klicka på **Leads** på kontrollpanelen.
+1. I AEM navigerar du till MCM. Klicka på **Leads** på kontrollpanelen.
 1. Klicka på **Nytt**. Fönstret **Skapa nytt** öppnas.
 
    ![screen_shot_2012-02-21at115008am](assets/screen_shot_2012-02-21at115008am.png)
@@ -202,7 +205,7 @@ Till aktiva eller inaktiverade leads:
 
    ![screen_shot_2012-02-21at120620pm](assets/screen_shot_2012-02-21at120620pm.png)
 
-   Precis som för AEM-sidor anges publiceringsstatusen i kolumnen **Publicerad** .
+   Precis som för AEM sidor anges publiceringsstatusen i kolumnen **Publicerad** .
 
    ![screen_shot_2012-02-21at122901pm](assets/screen_shot_2012-02-21at122901pm.png)
 
@@ -233,11 +236,11 @@ Så här importerar du leads från en kommaavgränsad lista:
 
    ![screen_shot_2012-02-21at123055pm](assets/screen_shot_2012-02-21at123055pm.png)
 
-1. Click **Next**. Här förhandsgranskar du leads för att säkerställa att de är korrekta.
+1. Klicka på **Nästa**. Här förhandsgranskar du leads för att säkerställa att de är korrekta.
 
    ![screen_shot_2012-02-21at123104pm](assets/screen_shot_2012-02-21at123104pm.png)
 
-1. Click **Next**. Välj den lista som du vill att leads ska tillhöra. Om du inte vill att de ska tillhöra en lista tar du bort informationen i fältet. Som standard skapar AEM ett listnamn med datum och tid. Klicka på **Importera**.
+1. Klicka på **Nästa**. Välj den lista som du vill att leads ska tillhöra. Om du inte vill att de ska tillhöra en lista tar du bort informationen i fältet. Som standard skapar AEM ett listnamn som innehåller datum och tid. Klicka på **Importera**.
 
    ![screen_shot_2012-02-21at123123pm](assets/screen_shot_2012-02-21at123123pm.png)
 
@@ -253,7 +256,7 @@ Så här lägger du till leads till befintliga listor:
 
    ![screen_shot_2012-02-21at123835pm](assets/screen_shot_2012-02-21at123835pm.png)
 
-1. Välj **Lägg till i lista på menyn** Verktyg **... .** Fönstret **Lägg till i lista **öppnas.
+1. Välj **Lägg till i lista på menyn** Verktyg **....** Fönstret **Lägg till i lista **öppnas.
 
    ![screen_shot_2012-02-21at124019pm](assets/screen_shot_2012-02-21at124019pm.png)
 
@@ -314,7 +317,7 @@ Om du klickar på **Listor** kan du även visa om listan är medlem i en annan l
 
 Så här skapar du en ny lista (grupp):
 
-1. **Klicka på** Ny lista på MCM-kontrollpanelen ... eller i **Listor** klickar du på **Ny** ... Fönstret Skapa lista öppnas.
+1. Klicka på **Ny lista på MCM-kontrollpanelen ...** eller i **Listor** klickar du på **Ny** ... Fönstret Skapa lista öppnas.
 
    ![screen_shot_2012-02-21at125147pm](assets/screen_shot_2012-02-21at125147pm.png)
 
