@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: 49b195b2-78c4-49f9-b07a-a87b73624c2c
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '156'
+ht-degree: 1%
 
 ---
 
 
-# Kontrollen Extern länk{#the-external-link-checker}
+# The External Link Checker{#the-external-link-checker}
 
 En extern länkkontroll tillhandahålls i AEM. Länkkontrollen:
 
@@ -40,6 +43,7 @@ Så här använder du den externa länkkontrollen:
    * tid sedan länken senast validerades
    * tid sedan länken senast var tillgänglig
    * tid sedan länken senast användes
+
    visas.
 
 1. På de enskilda innehållssidorna visas ogiltiga länkar som brutna:
