@@ -4,13 +4,16 @@ description: Tillämpar översättningsmolntjänster på mappar
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '365'
+ht-degree: 55%
 
 ---
 
 
 # Tillämpar översättningsmolntjänster på mappar {#applying-translation-cloud-services-to-folders}
 
-Med Adobe Experience Manager (AEM) kan ni använda molnbaserade översättningstjänster från den översättningsleverantör ni väljer för att se till att era resurser översätts utifrån era behov.
+Med Adobe Experience Manager (AEM) kan du använda molnbaserade översättningstjänster från den översättningsleverantör du väljer för att se till att dina resurser översätts baserat på dina behov.
 
 Du kan använda översättningsmolntjänsten direkt i resursmappen så att den kan användas under översättningsarbetsflöden.
 
@@ -19,12 +22,12 @@ Du kan använda översättningsmolntjänsten direkt i resursmappen så att den k
 Genom att använda översättningsmolntjänster direkt i resursmappen behöver du inte konfigurera översättningstjänster när du skapar eller uppdaterar översättningsarbetsflöden.
 
 1. I resursgränssnittet väljer du den mapp som du vill använda översättningstjänster på.
-1. Klicka/tryck på ikonen **[!UICONTROL Egenskaper]** i verktygsfältet för att visa sidan **[!UICONTROL Mappegenskaper]** .
+1. Visa sidan **[!UICONTROL Folder Properties]** genom att klicka/trycka på ikonen **[!UICONTROL Properties]** i verktygsfältet.
 
    ![chlimage_1-215](assets/chlimage_1-215.png)
 
-1. Gå till fliken **[!UICONTROL Cloud-tjänster]** .
-1. Välj önskad översättningsleverantör i listan Cloud-tjänstkonfigurationer. Om du till exempel vill använda översättningstjänster från Microsoft väljer du **[!UICONTROL Microsoft Translator]**.
+1. Navigera till fliken **[!UICONTROL Cloud Services]**.
+1. I listan Cloud Service Configurations väljer du önskad översättningsleverantör. Om du till exempel vill använda översättningstjänster från Microsoft väljer du **[!UICONTROL Microsoft Translator]**.
 
    ![chlimage_1-216](assets/chlimage_1-216.png)
 
@@ -32,23 +35,23 @@ Genom att använda översättningsmolntjänster direkt i resursmappen behöver d
 
    ![chlimage_1-217](assets/chlimage_1-217.png)
 
-1. Klicka/tryck på **[!UICONTROL Spara]** i verktygsfältet och klicka sedan på **[!UICONTROL OK]** för att stänga dialogrutan.Översättningstjänsten används i mappen.
+1. Klicka/tryck på **[!UICONTROL Save]** i verktygsfältet och klicka sedan på **[!UICONTROL OK]** för att stänga dialogrutan. Översättningstjänsten används i mappen.
 
-## Använder anpassad översättningskoppling {#applying-custom-translation-connector}
+## Använder anpassad översättningskoppling  {#applying-custom-translation-connector}
 
-Om du vill använda en anpassad koppling för de översättningstjänster som du vill använda i översättningsarbetsflöden. Om du vill använda en anpassad koppling måste du först installera kopplingen från Package Manager. Konfigurera sedan anslutningen från molntjänstkonsolen. När du har konfigurerat kopplingen är den tillgänglig i listan över anslutningar på fliken Cloud-tjänster som beskrivs i [Använda översättningstjänsterna](transition-cloud-services.md#applying-the-translation-services). När du har tillämpat den anpassade kopplingen och kört översättningsarbetsflöden visas anslutningsinformationen under rubrikens **[!UICONTROL provider]** och **[!UICONTROL metod]** **** i översättningsprojektets översättningssammanfattningssida.
+Du kan använda en anpassad koppling för de översättningstjänster som du vill använda i översättningsarbetsflöden. Om du vill använda en anpassad koppling måste du först installera kopplingen från pakethanteraren. Konfigurera sedan kopplingen från Cloud Services-konsolen. När du har konfigurerat kopplingen är den tillgänglig i listan över kopplingar på fliken Cloud Services som beskrivs i [Använda översättningstjänsterna](transition-cloud-services.md#applying-the-translation-services). När du har använt den anpassade kopplingen och kört översättningsarbetsflödena visas kopplingsinformationen under rubrikerna **[!UICONTROL Provider]** och **[!UICONTROL Method]** i rutan **[!UICONTROL Translation Summary]** för översättningsprojektet.
 
 1. Installera kopplingen från Package Manager.
-1. Klicka på/tryck på AEM-logotypen och gå till **[!UICONTROL Verktyg > Distribution > Cloud-tjänster]**.
-1. Leta reda på den koppling du installerade under **[!UICONTROL tredjepartstjänster]** på sidan **[!UICONTROL Cloud-tjänster]** .
+1. Click/tap the AEM logo, and navigate to **[!UICONTROL Tools > Deployment > Cloud Services]**.
+1. Leta upp den koppling du installerade under **[!UICONTROL Third Party Services]** på sidan **[!UICONTROL Cloud Services]**.
 
    ![chlimage_1-218](assets/chlimage_1-218.png)
 
-1. Klicka på/tryck på länken **[!UICONTROL Konfigurera nu]** för att öppna dialogrutan **[!UICONTROL Skapa konfiguration]** .
+1. Klicka på/tryck på **[!UICONTROL Configure now]** länken för att öppna **[!UICONTROL Create Configuration]** dialogrutan.
 
    ![chlimage_1-219](assets/chlimage_1-219.png)
 
-1. Ange en titel och ett namn för kopplingen och klicka/tryck sedan på **[!UICONTROL Skapa]**. Den anpassade kopplingen finns i listan över anslutningar på fliken **[!UICONTROL Cloud-tjänster]** som beskrivs i steg 5 i [Använda översättningstjänsterna](#applying-the-translation-services).
-1. Kör ett översättningsarbetsflöde som beskrivs i [Skapa översättningsprojekt](translation-projects.md) när du har använt den anpassade kopplingen. Kontrollera informationen om kopplingen i **[!UICONTROL översättningssammanfattningsrutan]** i översättningsprojektet i **[!UICONTROL projektkonsolen]** .
+1. Ange en titel och ett namn för kopplingen och klicka/tryck sedan på **[!UICONTROL Create]**. Den anpassade kopplingen finns i listan över kopplingar på fliken **[!UICONTROL Cloud Services]** som beskrivs i steg 5 i [Använda översättningstjänsterna](#applying-the-translation-services).
+1. Kör ett översättningsarbetsflöde som beskrivs i [Skapa översättningsprojekt](translation-projects.md) när du har använt den anpassade kopplingen. Kontrollera informationen om kopplingen i rutan **[!UICONTROL Translation Summary]** för översättningsprojektets på konsolen **[!UICONTROL Projects]**.
 
    ![chlimage_1-220](assets/chlimage_1-220.png)
