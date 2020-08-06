@@ -21,11 +21,11 @@ ht-degree: 0%
 
 ![04-create-form-data-model-main](assets/04-create-form-data-model-main.png)
 
-Den här självstudiekursen är ett steg i serien [Create Your First Adaptive Form](/help/forms/using/create-your-first-adaptive-form.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga självstudiekurserna.
+Den här självstudiekursen är ett steg i serien [Create Your First Adaptive Form](/help/forms/using/create-your-first-adaptive-form.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
 
 ## Om självstudiekursen {#about-the-tutorial}
 
-Med dataintegreringsmodulen för AEM Forms kan du skapa en formulärdatamodell från olika backend-datakällor, till exempel AEM-användarprofil, RESTful web services, SOAP-baserade webbtjänster, OData services och relationsdatabaser. Du kan konfigurera datamodellsobjekt och datatjänster i en formulärdatamodell och koppla den till ett anpassat formulär. Anpassningsbara formulärfält är bundna till objektegenskaper för datamodell. Med tjänsterna kan du förifylla det adaptiva formuläret och skriva skickade formulärdata tillbaka till datamodellobjektet.
+Med dataintegreringsmodulen i AEM Forms kan du skapa en formulärdatamodell från olika backend-datakällor som AEM användarprofil, RESTful web services, SOAP-baserade webbtjänster, OData services och relationsdatabaser. Du kan konfigurera datamodellsobjekt och datatjänster i en formulärdatamodell och koppla den till ett anpassat formulär. Anpassningsbara formulärfält är bundna till objektegenskaper för datamodell. Med tjänsterna kan du förifylla det adaptiva formuläret och skriva skickade formulärdata tillbaka till datamodellobjektet.
 
 Mer information om integrering av formulärdata och formulärdatamodell finns i [AEM Forms-dataintegrering](/help/forms/using/data-integration.md).
 
@@ -58,7 +58,7 @@ Gör följande för att konfigurera MySQL-databasen:
 
 1. Installera JDBC-drivrutin för MySQL-databas som ett OSGi-paket:
 
-   1. Logga in på AEM Forms Author Instance som administratör och gå till AEM-webbkonsolpaket. Standardwebbadressen är [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles).
+   1. Logga in på AEM Forms Author Instance som administratör och gå till AEM webbkonsolpaket. Standardwebbadressen är [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles).
 
    1. Tryck på **Installera/Uppdatera**. Dialogrutan **Överför/Installera programpaket** visas.
 
@@ -66,7 +66,7 @@ Gör följande för att konfigurera MySQL-databasen:
 
 1. Konfigurera MySQL-databasen som en datakälla:
 
-   1. Gå till AEM-webbkonsolen på [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr).
+   1. Gå till AEM webbkonsol på [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr).
    1. Leta reda på konfigurationen **för poolad DataSource** för Apache Sling-anslutningen. Tryck för att öppna konfigurationen i redigeringsläge.
    1. Ange följande information i konfigurationsdialogrutan:
 
@@ -80,6 +80,7 @@ Gör följande för att konfigurera MySQL-databasen:
       * **Test vid retur:** Aktivera alternativet **Test on Return** .
       * **Valideringsfråga:** Ange en SELECT-fråga (SQL) för att validera anslutningar från poolen. Frågan måste returnera minst en rad. T.ex. **markera &amp;ast; från kundinformation**.
       * **Transaktionsisolering**: Ange värdet **READ_COMMTED**.
+
       Lämna övriga egenskaper med standard [värden](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) och tryck på **Spara**.
    En konfiguration som liknar följande skapas.
 
@@ -91,7 +92,7 @@ AEM Forms har ett intuitivt användargränssnitt för att [skapa en formulärdat
 
 Gör följande för att skapa formulärdatamodell:
 
-1. I AEM-författarinstansen går du till **Formulär** > **Data** integreringar.
+1. I AEM författarinstans går du till **Forms** > **Data** Integrations.
 1. Tryck på **Skapa** > **Formulärdatamodell**.
 1. I dialogrutan Skapa formulärdatamodell anger du ett **namn** för formulärdatamodellen. Exempel: **kundleveransfaktureringsuppgifter**. Tryck på **Nästa**.
 1. På skärmen Välj datakälla visas alla konfigurerade datakällor. Välj **Datakällan WeRetailMySQL** och tryck på **Create**.
@@ -109,7 +110,7 @@ I konfigurationen av formulärdatamodellen ingår:
 
 Gör följande för att konfigurera formulärdatamodellen:
 
-1. På AEM-författarinstansen går du till **Formulär > Dataintegreringar**. Standardwebbadressen är [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm).
+1. Navigera AEM författarinstansen till **Forms > Dataintegreringar**. Standardwebbadressen är [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm).
 1. Den **formulärdatamodell som du skapade för kundleveransfakturering** listas här. Öppna den i redigeringsläge.
 
    Den valda datakällan **WeRetailMySQL** har konfigurerats i formulärdatamodellen.
@@ -130,6 +131,7 @@ Gör följande för att konfigurera formulärdatamodellen:
 
       * get
       * update
+
    Tryck på **Lägg till markerade** för att lägga till markerade datamodellsobjekt och tjänster i formulärdatamodellen.
 
    ![weretail-schema](assets/weretail-schema.png)
@@ -174,6 +176,7 @@ Gör följande för att konfigurera formulärdatamodellen:
          kundinformationsschema
       * **Returmatris**: Inaktivera alternativet **Retur-array** .
       * **Argument**: Välj argument med namnet **ID**.
+
       Tryck på **Klar**. Tjänsten för att hämta kundinformation från MySQL-databasen har konfigurerats.
 
       ![shiiping-address-retrieval](assets/shiiping-address-retrieval.png)
@@ -194,6 +197,7 @@ Gör följande för att konfigurera formulärdatamodellen:
 
       * **Utdatatyp**: Välj **BOOLEAN**.
       * **Argument**: Välj argument med namnet **ID** och **kundinformation**.
+
       Tryck på **Klar**. Uppdateringstjänsten **för att** uppdatera kundinformation i MySQL-databasen har konfigurerats.
 
       ![leveransadress-uppdatering](assets/shiiping-address-update.png)
