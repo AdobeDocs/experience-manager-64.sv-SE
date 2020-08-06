@@ -1,8 +1,8 @@
 ---
 title: Anpassa konsolerna
 seo-title: Anpassa konsolerna
-description: AEM innehåller olika mekanismer som gör att du kan anpassa konsolerna i din redigeringsinstans
-seo-description: AEM innehåller olika mekanismer som gör att du kan anpassa konsolerna i din redigeringsinstans
+description: AEM innehåller olika mekanismer som gör att du kan anpassa konsolerna i redigeringsinstansen
+seo-description: AEM innehåller olika mekanismer som gör att du kan anpassa konsolerna i redigeringsinstansen
 uuid: f10cea87-ef8a-468e-94ca-89a1017dcf44
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 221ed05b-855d-4dc2-9df6-12fdeabb157a
 translation-type: tm+mt
 source-git-commit: 1dc15f323dc30d5730e2af6c0e762d623523870d
+workflow-type: tm+mt
+source-wordcount: '702'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 1dc15f323dc30d5730e2af6c0e762d623523870d
 >
 >I det här dokumentet beskrivs hur du anpassar konsoler i det moderna, pekaktiverade användargränssnittet och det gäller inte det klassiska användargränssnittet.
 
-I AEM finns olika mekanismer som gör att du kan anpassa konsolerna (och [sidredigeringsfunktionerna](/help/sites-developing/customizing-page-authoring-touch.md)) i din redigeringsinstans.
+AEM innehåller olika mekanismer som gör att du kan anpassa konsolerna (och [sidredigeringsfunktionen](/help/sites-developing/customizing-page-authoring-touch.md)) för din redigeringsinstans.
 
 * Clientlibs
 
@@ -31,7 +34,7 @@ I AEM finns olika mekanismer som gör att du kan anpassa konsolerna (och [sidred
 
    Övertäckningar är baserade på noddefinitioner och gör att du kan täcka över standardfunktionerna (i `/libs`) med dina egna anpassade funktioner (i `/apps`). När du skapar en övertäckning krävs inte en 1:1-kopia av originalet, eftersom sammanslagningen av försäljningsresurser tillåter arv.
 
-Dessa kan användas på många sätt för att utöka dina AEM-konsoler. En liten markering beskrivs nedan (på en hög nivå).
+De kan användas på många sätt för att utöka dina AEM. En liten markering beskrivs nedan (på en hög nivå).
 
 >[!NOTE]
 >
@@ -40,9 +43,10 @@ Dessa kan användas på många sätt för att utöka dina AEM-konsoler. En liten
 >* Använda och skapa [klientlibs](/help/sites-developing/clientlibs.md).
 >* Använda och skapa [övertäckningar](/help/sites-developing/overlays.md).
 >* [Granit](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html)
+
 >
 >
-Det här avsnittet behandlas också i [AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) -sessionen - [Anpassa användargränssnittet för AEM 6.0](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html).
+Det här avsnittet behandlas också i [AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) -sessionen - [Anpassning av användargränssnitt för AEM 6.0](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html).
 
 >[!CAUTION]
 >
@@ -56,6 +60,7 @@ Det här avsnittet behandlas också i [AEM Gems](https://docs.adobe.com/content/
    >
    >
 1. Gör ändringar i `/apps`
+
 >
 
 
@@ -290,8 +295,7 @@ You can find the code of this page on GitHub
 
    `jcr:content/body/content/header/items/default/items/create/items/createsite/rendercondition`
 
-   Med hjälp av egenskaper på den här noden kan du definiera vilka som `groups` får utföra den specifika åtgärden;
-till exempel `administrators`
+   Med hjälp av egenskaper på den här noden kan du definiera vilka som `groups` får utföra den specifika åtgärden; till exempel `administrators`
 
 <!-- Needs a review by Engineering -->
 <!--
