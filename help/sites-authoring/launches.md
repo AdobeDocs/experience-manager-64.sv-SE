@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: a7ec190d-056e-4fc9-8f2d-f4164273674d
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '840'
+ht-degree: 6%
 
 ---
 
@@ -47,7 +50,7 @@ Med Launes kan du:
 
 * Skapa en kopia av källsidorna:
 
-   * Copy is your launch.
+   * Kopian är startsida.
    * Källsidorna på den översta nivån kallas **Produktion**.
 
       * Källsidorna kan tas från flera (separata) grenar.
@@ -60,7 +63,7 @@ Med Launes kan du:
 * Redigera startkonfigurationen:
 
    * Lägg till eller ta bort sidor och/eller grenar till/från starten.
-   * Redigera startegenskaper; som **Title**, **Launch Date**, **Production Ready** flag.
+   * Redigera startegenskaper, som flaggorna **Titel**, **Startdatum** och **Produktionsklar**.
 
 * Du kan befordra och publicera innehållet antingen manuellt eller automatiskt:
 
@@ -71,9 +74,9 @@ Med Launes kan du:
       * Befordra antingen alla sidor eller endast ändrade sidor.
    * Automatiskt - det innebär följande:
 
-      * Fältet **Startdatum**(**Live**) **för** datum: detta kan anges när du skapar eller redigerar en programstart.
+      * The **Launch**(**Live**) **date** field: this can be set when creating or editing a launch.
       * The **Production Ready** flag: detta kan bara anges när du redigerar en programstart.
-      * Om flaggan **Production Ready** är inställd befordras starten automatiskt till produktionssidorna på det angivna **startdatumet**(**Live**) ****. Efter kampanjen publiceras produktionssidorna automatiskt.
+      * If the **Production Ready** flag is set, the launch will be automatically promoted to the production pages on the specified **Launch**(**Live**) **date**. Efter kampanjen publiceras produktionssidorna automatiskt.
 
          Om inget datum har angetts har flaggan ingen effekt.
 
@@ -82,12 +85,14 @@ Med Launes kan du:
 
    * Ändringar av källsidorna implementeras automatiskt i startkopian (om den är konfigurerad som arv). dvs. som en live-kopia).
    * Du kan göra ändringar i startversionen utan att störa dessa automatiska uppdateringar eller källsidorna.
+
    ![chlimage_1-234](assets/chlimage_1-234.png)
 
 * [Skapa en kapslad programstart](/help/sites-authoring/launches-creating.md#creating-a-nested-launch) - en programstart i en programstart:
 
    * Källan är en befintlig start.
    * Du kan [befordra en kapslad start](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch) till vilket mål som helst; detta kan vara en överordnad start eller källsidorna på den översta nivån (Produktion).
+
    ![chlimage_1-235](assets/chlimage_1-235.png)
 
    >[!CAUTION]
