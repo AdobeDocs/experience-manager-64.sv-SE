@@ -11,13 +11,16 @@ topic-tags: designer
 discoiquuid: abb5513f-c824-4dc2-8617-29ea47684afe
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '696'
+ht-degree: 0%
 
 ---
 
 
 # Använda klottersignaturer i HTML5-formulär {#using-scribble-signature-in-html-forms}
 
-HTML5-formulär används i allt större utsträckning på enheter med pekskärm, och ett vanligt krav är att stödja signaturer. Skript (skrivande med en penna eller ett finger) blir ett accepterat sätt att signera formulär på mobila enheter. HTML5-formulär och Forms Designer aktiverar nu alternativet att ha ett signaturfält i skript i formuläret. När formuläret återges i webbläsaren kan du signera dessa fält med en penna, mus eller touchpenna.
+HTML5-formulär används i allt större utsträckning på enheter med pekskärm, och ett vanligt krav är att stödja signaturer. Skript (skrivande med en penna eller ett finger) blir ett accepterat sätt att signera formulär på mobila enheter. HTML5-formulär och Forms Designer aktiverar nu alternativet att ha ett signaturfält med klotter i formuläret. När formuläret återges i webbläsaren kan du signera dessa fält med en penna, mus eller touchpenna.
 
 ## Designa ett formulär med fältet Klottsignatur {#how-to-design-a-form-using-scribble-signature-field}
 
@@ -28,7 +31,7 @@ HTML5-formulär används i allt större utsträckning på enheter med pekskärm,
 
    >[!NOTE]
    >
-   >Dimensionerna för fältet som är markerat i Forms Designer återspeglas när fältet återges. Dimensionen för den återgivna signaturrutan beräknas emellertid baserat på fältets proportioner och inte på den dimension som anges i Forms Designer.
+   >Dimensioner av fältet som är markerat i Forms Designer visas när fältet återges. Dimensionen för den återgivna signaturrutan beräknas dock baserat på fältets proportioner, inte på dimensionen som anges i Forms Designer.
 
 1. Konfigurera signaturskriptfältet.
 
