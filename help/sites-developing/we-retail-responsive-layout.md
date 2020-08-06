@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: 2d374e88-ea09-43d5-986c-5d77b0705b93
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '249'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +24,7 @@ Alla webbsidor använder komponenten Layoutbehållare för att implementera resp
 
 ## Prova {#trying-it-out}
 
-1. Redigera sidan Arktisk surfning i sektionen Erfarenheter i huvudgrenen för språk.
+1. Redigera sidan Arktisk surfning i sektionen Erfarenheter i den överordnad språkgrenen.
 
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html
 
