@@ -1,6 +1,6 @@
 ---
-title: Skapa riktade upplevelser i AEM-formulär
-seo-title: Skapa riktade upplevelser i AEM-formulär
+title: Skapa riktade upplevelser i AEM Forms
+seo-title: Skapa riktade upplevelser i AEM Forms
 description: 'Använd Target i AEM Forms för att skapa anpassade upplevelser för riktade kunder. '
 seo-description: 'Använd Target i AEM Forms för att skapa anpassade upplevelser för riktade kunder. '
 uuid: 174b6054-8fe3-4ab2-8afd-435e5dff9044
@@ -10,17 +10,20 @@ topic-tags: integrations
 discoiquuid: 6cf54a08-d429-4a58-8429-a1cb784448d1
 translation-type: tm+mt
 source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+workflow-type: tm+mt
+source-wordcount: '856'
+ht-degree: 0%
 
 ---
 
 
-# Skapa riktade upplevelser i AEM-formulär {#create-targeted-experiences-in-aem-forms}
+# Skapa riktade upplevelser i AEM Forms {#create-targeted-experiences-in-aem-forms}
 
 ## Integrera Adobe Target med AEM Forms {#integrate-adobe-target-with-aem-forms}
 
-Med Adobe Target integrerat med AEM kan ni skapa upplevelser som är anpassade för en viss målgrupp. Med Adobe Target kan ni skapa A/B-tester, mäta användarnas svar och generera anpassat webbinnehåll för målanvändare. Du kan integrera Adobe Target med AEM Forms för att rikta in bildkomponenter i adaptiva formulär och interaktiv kommunikation.
+Med Adobe Target som är integrerat med AEM kan ni skapa upplevelser som är anpassade för en viss målgrupp. Med Adobe Target kan du skapa A/B-tester, mäta användarnas svar och generera anpassat webbinnehåll för målanvändare. Du kan integrera Adobe Target med AEM Forms för att anpassa bildkomponenterna i adaptiva formulär och interaktiv kommunikation.
 
-Konfigurera Adobe Target i AEM för att använda det med adaptiva formulär och interaktiv kommunikation, se [Skapa en målkonfiguration i AEM](/help/sites-administering/target.md) och [Lägg till ett ramverk](/help/sites-administering/target.md).
+Konfigurera Adobe Target i AEM för användning med adaptiva formulär och interaktiv kommunikation, se [Skapa en målkonfiguration i AEM](/help/sites-administering/target.md) och [Lägg till ett ramverk](/help/sites-administering/target.md).
 
 >[!NOTE]
 >
@@ -28,7 +31,7 @@ Konfigurera Adobe Target i AEM för att använda det med adaptiva formulär och 
 
 ## Skapa en målaktivitet {#creating-a-target-activity}
 
-1. Tryck på **Adobe Experience Manager > Personalisering > Verksamheter**.
+1. Tryck på **Adobe Experience Manager > Personalisering > Aktiviteter**.
 
    `https://<hostname>:<port>/libs/cq/personalization/touch-ui/content/v2/activities.html`
 
@@ -39,7 +42,7 @@ Konfigurera Adobe Target i AEM för att använda det med adaptiva formulär och 
 Ditt varumärke finns nu med på aktivitetssidan.
 
 1. Tryck på ert varumärke på sidan Verksamheter.
-1. Tryck på **Skapa** > **Skapa aktivitet** i ert varumärkes huvudområde.
+1. I den Överordnad delen av varumärket trycker du på **Skapa** > **Skapa aktivitet**.
 
    När du skapar en aktivitet anger du dess information, mål och inställningar.
 
@@ -73,10 +76,10 @@ Ditt varumärke finns nu med på aktivitetssidan.
 
    Om du vill öppna ett formulär eller en interaktiv kommunikation i redigeringsläge trycker du på **Välj** och sedan på **Öppna**.
 
-   Du kan också använda fyra knappar när du flyttar pekaren över formuläret eller en interaktiv kommunikationsikon utan att markera den. Du kan trycka på knappen **Redigera** som visas för att öppna formuläret i redigeringsläge.
+   Du kan också visa fyra knappar när du flyttar pekaren över formuläret eller en interaktiv kommunikationsikon utan att markera den. Du kan trycka på knappen **Redigera** som visas för att öppna formuläret i redigeringsläge.
 
 1. Tryck på **Sidinformation** , ![temaalternativ](assets/theme-options.png) > **Öppna egenskaper**, i verktygsfältet för sidan.
-1. Välj en konfiguration för fältet **Adobe Target** på fliken Allmänt. Tryck på **Spara och stäng**.
+1. På fliken Allmänt väljer du en konfiguration för fältet **Adobe Target** . Tryck på **Spara och stäng**.
 
 ## Använda skapad aktivitet på en adaptiv formulärbild eller en interaktiv kommunikationsbild {#applying-created-activity-to-an-adaptive-form-image-or-an-interactive-communication-image}
 
@@ -86,9 +89,9 @@ Ditt varumärke finns nu med på aktivitetssidan.
 
    >[!NOTE]
    >
-   >AEM Forms har endast stöd för bildkomponenter. Kontrollera att panelen som är värd för bildkomponenten inte innehåller någon annan komponent och att antalet kolumner för panelen är 1.
+   >AEM Forms har bara stöd för bildkomponenter. Kontrollera att panelen som är värd för bildkomponenten inte innehåller någon annan komponent och att antalet kolumner för panelen är 1.
 
-1. Växla från **redigering** till **målinriktning** . Alternativet för att växla mellan lägen ligger nära det övre högra hörnet.
+1. Växla från **redigering** till **målinriktning** . Alternativet för att växla mellan lägen finns i det övre högra hörnet.
 1. Välj ett **VARUMÄRKE**, välj **AKTIVITET** och tryck på **Start Targeting**. Menyn **Publiker** visas till höger om redigeraren.
 
    ![riktad meny](assets/targeting-menu.png)
