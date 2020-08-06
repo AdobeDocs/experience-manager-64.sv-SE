@@ -11,19 +11,22 @@ content-type: reference
 discoiquuid: 91f0fd7d-4b49-4599-8f0e-fc367d51aeba
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '601'
+ht-degree: 2%
 
 ---
 
 
 # Resursavlastare för arbetsflöde{#assets-workflow-offloader}
 
-Med resursarbetsflödesavlastaren kan du aktivera flera instanser av Adobe Experience Manager-resurser (AEM) för att minska bearbetningsbelastningen på den primära (ledande) instansen. Bearbetningsinläsningen fördelas mellan ledarinstansen och de olika förinläsarinstanser (arbetare) som du lägger till i den. Genom att distribuera bearbetningslasten ökar effektiviteten och hastigheten med vilken AEM Assets bearbetar resurser. Dessutom kan du tilldela dedikerade resurser för att bearbeta resurser av en viss MIME-typ. Du kan till exempel tilldela en specifik nod i din topologi till att endast bearbeta InDesign-resurser.
+Med Resursarbetsflödesavlastaren kan du aktivera flera instanser av Adobe Experience Manager (AEM) Resurser för att minska bearbetningsbelastningen på den primära (utlösande) instansen. Bearbetningsinläsningen fördelas mellan ledarinstansen och de olika förinläsarinstanser (arbetare) som du lägger till i den. Genom att distribuera materialets bearbetningsbelastning blir det effektivare och snabbare att bearbeta materialet i AEM Assets. Dessutom kan du tilldela dedikerade resurser för att bearbeta resurser av en viss MIME-typ. Du kan till exempel tilldela en specifik nod i din topologi till att endast bearbeta InDesign-resurser.
 
 ## Konfigurera offloader-topologi {#configure-offloader-topology}
 
 Använd Configuration Manager för att lägga till URL:en för ledarinstansen och värdnamnen för offloader-instanser för anslutningsbegäranden i ledarinstansen.
 
-1. Tryck/klicka på AEM-logotypen och välj **Verktyg** > **Åtgärder** > **Webbkonsol** för att öppna Configuration Manager.
+1. Tryck/klicka på AEM logotyp och välj **Verktyg** > **Åtgärder** > **Webbkonsol** för att öppna Configuration Manager.
 1. På webbkonsolen väljer du **Sling** > **Topology Management**.
 
    ![chlimage_1-44](assets/chlimage_1-44.png)
@@ -44,11 +47,11 @@ Använd Configuration Manager för att lägga till URL:en för ledarinstansen oc
 
 ## Inaktivera avlastning {#disable-offloading}
 
-1. Tryck/klicka på AEM-logotypen och välj **Verktyg** > **Distribution** > **Avlastning**. På sidan **Avlastande webbläsare** visas ämnen och serverinstanser som kan använda ämnena.
+1. Tryck/klicka på AEM logotyp och välj **Verktyg** > **Distribution** > **Avlastning**. På sidan **Avlastande webbläsare** visas ämnen och serverinstanser som kan använda ämnena.
 
    ![chlimage_1-48](assets/chlimage_1-48.png)
 
-1. Inaktivera ämnet *com/adobe/granite/workflow/avlastning* om de ledande instanser som användarna interagerar med för att överföra eller ändra AEM-resurser.
+1. Inaktivera ämnet *com/adobe/granite/workflow/offloading* om de ledarinstanser som användarna interagerar med för att överföra eller ändra AEM resurser.
 
    ![chlimage_1-49](assets/chlimage_1-49.png)
 
@@ -56,7 +59,7 @@ Använd Configuration Manager för att lägga till URL:en för ledarinstansen oc
 
 Konfigurera arbetsflödesstarter så att arbetsflödet för **DAM Update Asset Offloading** används i ledarinstansen i stället för i arbetsflödet för **DAM Update Asset** .
 
-1. Tryck/klicka på AEM-logotypen och välj **Verktyg** > **Arbetsflöde** > **Starta** för att öppna **Workflow Launchers** -konsolen.
+1. Tryck/klicka på AEM logotyp och välj **Verktyg** > **Arbetsflöde** > **Starta** för att öppna **Workflow Launchers** -konsolen.
 
    ![chlimage_1-50](assets/chlimage_1-50.png)
 
@@ -69,7 +72,7 @@ Konfigurera arbetsflödesstarter så att arbetsflödet för **DAM Update Asset O
 
    ![chlimage_1-52](assets/chlimage_1-52.png)
 
-1. Tryck/klicka på AEM-logotypen och välj **Verktyg** > **Arbetsflöde** > **Modeller** för att öppna sidan **Arbetsflödesmodeller** .
+1. Tryck/klicka på AEM logotyp och välj **Verktyg** > **Arbetsflöde** > **Modeller** för att öppna sidan **Arbetsflödesmodeller** .
 1. Välj arbetsflödet **DAM Update Asset Offloading** och tryck/klicka på **Edit** (Redigera) i verktygsfältet för att visa information om det.
 
    ![chlimage_1-53](assets/chlimage_1-53.png)
@@ -82,7 +85,7 @@ Konfigurera arbetsflödesstarter så att arbetsflödet för **DAM Update Asset O
 
 Inaktivera arbetsflödet som startar arbetsflödet som kör arbetsflödet för **DAM-uppdatering av resurs** på ledarinstansen.
 
-1. Tryck/klicka på AEM-logotypen och välj **Verktyg** > **Arbetsflöde** > **Starta** för att öppna **Workflow Launchers** -konsolen.
+1. Tryck/klicka på AEM logotyp och välj **Verktyg** > **Arbetsflöde** > **Starta** för att öppna **Workflow Launchers** -konsolen.
 
    ![chlimage_1-55](assets/chlimage_1-55.png)
 
