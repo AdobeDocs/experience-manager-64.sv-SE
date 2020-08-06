@@ -1,8 +1,8 @@
 ---
 title: JSON-exporterare för innehållstjänster
 seo-title: JSON-exporterare för innehållstjänster
-description: 'AEM Content Services är utformat för att generalisera beskrivningen och leveransen av innehåll i/från AEM, bortom fokus på webbsidor. De levererar innehåll till kanaler som inte är traditionella AEM-webbsidor med hjälp av standardiserade metoder som kan användas av alla kunder. '
-seo-description: 'AEM Content Services är utformat för att generalisera beskrivningen och leveransen av innehåll i/från AEM, bortom fokus på webbsidor. De levererar innehåll till kanaler som inte är traditionella AEM-webbsidor med hjälp av standardiserade metoder som kan användas av alla kunder. '
+description: 'AEM Content Services är utformat för att generera beskrivning och leverans av innehåll i/från AEM utöver fokus på webbsidor. De levererar innehåll till kanaler som inte är traditionella AEM webbsidor, med standardiserade metoder som kan användas av alla kunder. '
+seo-description: 'AEM Content Services är utformat för att generera beskrivning och leverans av innehåll i/från AEM utöver fokus på webbsidor. De levererar innehåll till kanaler som inte är traditionella AEM webbsidor, med standardiserade metoder som kan användas av alla kunder. '
 uuid: be6457b1-fa9c-4f3b-b219-01a4afc239e7
 contentOwner: User
 content-type: reference
@@ -20,15 +20,15 @@ ht-degree: 3%
 
 # JSON-exporterare för innehållstjänster{#json-exporter-for-content-services}
 
-AEM Content Services är utformat för att generalisera beskrivningen och leveransen av innehåll i/från AEM, bortom fokus på webbsidor.
+AEM Content Services är utformat för att generera beskrivning och leverans av innehåll i/från AEM utöver fokus på webbsidor.
 
-De levererar innehåll till kanaler som inte är traditionella AEM-webbsidor med hjälp av standardiserade metoder som kan användas av alla kunder. Dessa kanaler kan omfatta:
+De levererar innehåll till kanaler som inte är traditionella AEM webbsidor, med standardiserade metoder som kan användas av alla kunder. Dessa kanaler kan omfatta:
 
 * [Enkelsidiga program](spa-walkthrough.md)
 * Inbyggda mobilprogram
-* andra kanaler och kontaktytor utanför AEM
+* andra kanaler och kontaktpunkter externt för AEM
 
-Med innehållsfragment som använder strukturerat innehåll kan du tillhandahålla innehållstjänster genom att använda JSON-exporteraren för att leverera innehållet på en (y) AEM-sida i JSON-datamodellsformat. Detta kan sedan användas av dina egna program.
+Med innehållsfragment som använder strukturerat innehåll kan du tillhandahålla innehållstjänster genom att använda JSON-exporteraren för att leverera innehållet på en (y) AEM sida i JSON-datamodellsformat. Detta kan sedan användas av dina egna program.
 
 >[!NOTE]
 >
@@ -36,9 +36,9 @@ Med innehållsfragment som använder strukturerat innehåll kan du tillhandahål
 
 ## JSON-exporterare med kärnkomponenter för innehållsfragment {#json-exporter-with-content-fragment-core-components}
 
-Med AEM JSON-exporteraren kan du leverera innehållet på en (y) AEM-sida i JSON-datamodellsformat. Detta kan sedan användas av dina egna program.
+Med den AEM JSON-exporteraren kan du leverera innehållet på en (y) AEM-sida i JSON-datamodellsformat. Detta kan sedan användas av dina egna program.
 
-Inom AEM uppnås leveransen med väljaren `model` och `.json` tillägget.
+Inom AEM levereras med väljaren `model` och `.json` tillägget.
 
 `.model.json`
 
