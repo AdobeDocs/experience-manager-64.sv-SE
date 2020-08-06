@@ -38,7 +38,7 @@ Att bygga AEM som bygger på Maven ger dig flera fördelar:
 
 ### Vad är UberJar? {#what-is-the-uberjar}
 
-&quot;UberJar&quot; är det informella namn som ges till en särskild Java Archive-fil (JAR) från Adobe. Den här JAR-filen innehåller alla Java-API:er som visas av Adobe Experience Manager. Det innehåller även begränsade externa bibliotek, särskilt alla publika API:er som finns i AEM som kommer från Apache Sling, Apache Jackrabbit, Apache Lucene, Google Guava och två bibliotek som används för bildbearbetning (Werner Randelshofer&#39;s CYMK JPEG ImageIO library och TwelveMonkeys bildbibliotek). UberJar innehåller bara API-gränssnitt och klasser, vilket innebär att det bara innehåller gränssnitt och klasser som exporteras av ett OSGi-paket i AEM. Den innehöll också en *MANIFEST.MF* -fil som innehöll rätt paketexportversioner för alla dessa exporterade paket, vilket säkerställer att projekt som skapats mot UberJar har rätt paketimportintervall.
+&quot;UberJar&quot; är det informella namn som ges till en särskild Java Archive-fil (JAR) från Adobe. Den här JAR-filen innehåller alla Java-API:er som exponeras av Adobe Experience Manager. Det innehåller även begränsade externa bibliotek, särskilt alla publika API:er som finns i AEM som kommer från Apache Sling, Apache Jackrabbit, Apache Lucene, Google Guava och två bibliotek som används för bildbearbetning (Werner Randelshofer&#39;s CYMK JPEG ImageIO library och TwelveMonkeys bildbibliotek). UberJar innehåller bara API-gränssnitt och klasser, vilket innebär att det bara innehåller gränssnitt och klasser som exporteras av ett OSGi-paket i AEM. Den innehöll också en *MANIFEST.MF* -fil som innehöll rätt paketexportversioner för alla dessa exporterade paket, vilket säkerställer att projekt som skapats mot UberJar har rätt paketimportintervall.
 
 ### Varför skapade Adobe UberJar? {#why-did-adobe-create-the-uberjar}
 
@@ -671,6 +671,6 @@ $ mvn -PautoInstallPackagePublish -PintegrationServer install
 
 ### Arbeta med AEM Communities {#how-to-work-with-aem-communities}
 
-När licens för AEM Communities krävs ytterligare en API-behållare.
+Om du har licens för AEM Communities krävs ytterligare en API-behållare.
 
 Mer information finns i [Använda Maven för grupper](/help/communities/maven.md)
