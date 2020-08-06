@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 62669a9d-2107-4644-a4bf-143d0ac148b3
 translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+workflow-type: tm+mt
+source-wordcount: '326'
+ht-degree: 0%
 
 ---
 
@@ -81,7 +84,7 @@ Anonym publicering av en granskning stöds inte. Besökare på webbplatsen måst
 UGC bör modereras med någon av standardmetoderna för moderering.\
 Se [Moderera användargenererat innehåll](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (t.ex. ASRP, MSRP eller JSRP).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
