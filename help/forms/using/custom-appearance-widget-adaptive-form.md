@@ -1,8 +1,8 @@
 ---
 title: Skapa anpassade utseenden för anpassade formulärfält
 seo-title: Skapa anpassade utseenden för anpassade formulärfält
-description: 'Anpassa utseendet på färdiga komponenter i adaptiva formulär. '
-seo-description: 'Anpassa utseendet på färdiga komponenter i adaptiva formulär. '
+description: 'Anpassa utseendet på färdiga komponenter i Adaptive Forms. '
+seo-description: 'Anpassa utseendet på färdiga komponenter i Adaptive Forms. '
 uuid: 1f2d2ac4-44e1-45f9-a6a0-eb95931b0633
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,6 +10,9 @@ topic-tags: customization
 discoiquuid: 1115697c-cb7d-441a-876f-3c01761568c0
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1718'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Först ska vi titta på de termer och begrepp som används i den här artikeln.
 
 **jQuery-plugin** Tillhandahåller en standardmekanism, baserad på jQuery-widgetramverket, för att implementera ett alternativt utseende.
 
-**ClientLib** Ett bibliotekssystem på klientsidan i AEM-klientbearbetning som drivs av komplex JavaScript- och CSS-kod. Mer information finns i Använda bibliotek på klientsidan.
+**ClientLib** Ett bibliotekssystem på klientsidan AEM klientbearbetning som styrs av komplex JavaScript- och CSS-kod. Mer information finns i Använda bibliotek på klientsidan.
 
 **Arketyp** En Maven-projektmallverktygslåda som definieras som ett ursprungligt mönster eller en modell för Maven-projekt. Mer information finns i Introduktion till arkitekturer.
 
@@ -38,7 +41,7 @@ Först ska vi titta på de termer och begrepp som används i den här artikeln.
 
 Stegen på en hög nivå för att skapa ett anpassat utseende är följande:
 
-1. **Skapa ett projekt**: Skapa ett Maven-projekt som genererar ett innehållspaket som ska distribueras på AEM.
+1. **Skapa ett projekt**: Skapa ett Maven-projekt som genererar ett innehållspaket som ska distribueras AEM.
 1. **Utöka en befintlig widget-klass**: Utöka en befintlig widget-klass och åsidosätt de klasser som krävs.
 1. **Skapa ett klientbibliotek**: Skapa ett `clientLib: af.customwidget` bibliotek och lägg till de JavaScript- och CSS-filer som behövs.
 
@@ -64,8 +67,8 @@ Kommandot hämtar Maven-pluginer och arkivtypsinformation från databasen och ge
 * **artifactId**: Artefakt-ID som används av det genererade Maven-projektet.
 * **version**: Version för det genererade Maven-projektet.
 * **paket**: Paket som används för filstrukturen.
-* **artifactName**: Artefaktnamn för det genererade AEM-paketet.
-* **packageGroup**: Paketgrupp för det genererade AEM-paketet.
+* **artifactName**: Artefaktnamn för det genererade AEM.
+* **packageGroup**: Paketgrupp för det genererade AEM.
 * **widgetName**: Utseendenamn som används som referens.
 
 Det genererade projektet har följande struktur:
@@ -118,18 +121,18 @@ När projektmallen har skapats gör du följande ändringar efter behov:
 <table> 
  <tbody> 
   <tr> 
-   <td><strong>Funktion</strong></td> 
+   <td><strong> -funktion</strong></td> 
    <td><strong>Beskrivning</strong></td> 
   </tr> 
   <tr> 
    <td><code>render</code></td> 
-   <td>Återgivningsfunktionen returnerar jQuery-objektet för standard-HTML-elementet i widgeten. HTML-standardelementet ska vara av fokuserbar typ. Till exempel <code>&lt;a&gt;</code>, <code>&lt;input&gt;</code>och <code>&lt;li&gt;</code>. Det returnerade elementet används som <code>$userControl</code>. Om begränsningen <code>$userControl</code> anger fungerar funktionerna i <code>AbstractWidget</code> klassen som förväntat, men vissa av de gemensamma API:erna (focus, click) kräver ändringar. </td> 
+   <td>Återgivningsfunktionen returnerar jQuery-objektet för standard-HTML-elementet i widgeten. HTML-standardelementet ska vara av fokuserbar typ. Till exempel <code>&lt;a&gt;</code>, <code>&lt;input&gt;</code>och <code>&lt;li&gt;</code>. Det returnerade elementet används som <code>$userControl</code>. Om begränsningen <code>$userControl</code> anger fungerar funktionerna i <code>AbstractWidget</code> klassen som förväntat, men vissa av de vanliga API:erna (focus, click) kräver ändringar. </td> 
   </tr> 
   <tr> 
    <td><code>getEventMap</code></td> 
    <td>Returnerar en karta som konverterar HTML-händelser till XFA-händelser. <br /> <code class="code">{
       blur: XFA_EXIT_EVENT,
-      }</code><br /> Det här exemplet visar att <code>blur</code> är en HTML-händelse och <code>XFA_EXIT_EVENT</code> är motsvarande XFA-händelse. </td> 
+      }</code><br /> I det här exemplet visas att <code>blur</code> är en HTML-händelse och <code>XFA_EXIT_EVENT</code> att det är motsvarande XFA-händelse. </td> 
   </tr> 
   <tr> 
    <td><code>getOptionsMap</code></td> 
@@ -158,7 +161,7 @@ När projektmallen har skapats gör du följande ändringar efter behov:
    * Utöka `getOptionsMap` metoden för att åsidosätta alla alternativinställningar som påverkas på grund av en ändring i widgeten. Funktionen returnerar en mappning som innehåller information om åtgärden som ska utföras vid ändring av ett alternativ. Tangenterna är alternativen som tillhandahålls widgeten och värdena är de funktioner som anropas när en ändring av alternativet upptäcks.
    * Metoden mappar händelser som utlöses av widgeten, med de händelser som krävs av den adaptiva formulärmodellen. `getEventMap` Standardvärdet mappar standard-HTML-händelser för standardwidgeten och måste uppdateras om en alternativ händelse aktiveras.
    * Använd `showDisplayValue` och `showValue` tillämpa satsen för visning och redigering av bild och kan åsidosättas om du vill ha ett alternativt beteende.
-   * Metoden anropas `getCommitValue` av det adaptiva formulärramverket när `commit`händelsen inträffar. Vanligtvis är det händelsen exit (utom för elementen för listrutor, alternativknappar och kryssrutor där det sker vid ändring). Mer information finns i [Adaptiva formuläruttryck](/help/forms/using/adaptive-form-expressions.md#p-value-commit-script-p).
+   * Metoden anropas `getCommitValue` av det adaptiva formulärramverket när `commit`händelsen inträffar. Vanligtvis är det händelsen exit (utom för elementen för listrutor, alternativknappar och kryssrutor där det sker vid ändring). Mer information finns i [Adaptiva Forms-uttryck](/help/forms/using/adaptive-form-expressions.md#p-value-commit-script-p).
    * Mallfilen innehåller exempelimplementering för olika metoder. Ta bort metoder som inte ska utökas.
 
 ### Skapa ett klientbibliotek {#create-a-client-library}
@@ -167,7 +170,7 @@ Exempelprojektet som skapas av Maven-arkitypen skapar automatiskt nödvändiga k
 
 ### Bygg och installera {#build-and-install}
 
-Om du vill skapa projektet kör du följande kommando på skalet för att generera ett CRX-paket som måste installeras på AEM-servern.
+Om du vill skapa projektet kör du följande kommando på skalet för att generera ett CRX-paket som måste installeras på AEM.
 
 `mvn clean install`
 
@@ -181,9 +184,9 @@ Så här använder du det anpassade utseendet på ett anpassat formulärfält:
 
 1. Öppna det adaptiva formuläret i redigeringsläge.
 1. Öppna dialogrutan **Egenskap** för det fält som du vill använda det anpassade utseendet på.
-1. Uppdatera **egenskapen på fliken** Format `CSS class` för att lägga till utseendenamnet i `widget_<widgetName>` formatet. Till exempel: **widget_numerisk nummerlista**
+1. Uppdatera **egenskapen på fliken** Format `CSS class` för att lägga till utseendenamnet i `widget_<widgetName>` formatet. Till exempel: **widget_numeriskStepper**
 
-## Exempel: Skapa ett anpassat utseende {#sample-create-a-custom-appearance-nbsp}
+## Exempel: Skapa ett anpassat utseende   {#sample-create-a-custom-appearance-nbsp}
 
 Nu ska vi titta på ett exempel för att skapa ett anpassat utseende så att ett numeriskt fält visas som en nummerlista eller ett reglage. Utför följande steg:
 
@@ -215,11 +218,11 @@ Nu ska vi titta på ett exempel för att skapa ett anpassat utseende så att ett
 
 1. Öppna Eclipse-verktyget och gör följande för att importera Eclipse-projektet:
 
-   1. Välj **[!UICONTROL Arkiv > Importera > Befintliga projekt till arbetsytan]**.
+   1. Välj **[!UICONTROL File > Import > Existing Projects into Workspace]**.
 
    1. Bläddra och välj den mapp där du utförde `archetype:generate` kommandot.
 
-   1. Click **[!UICONTROL Finish]**.
+   1. Klicka på **[!UICONTROL Finish]**.
 
       ![eclipse-screenshot](assets/eclipse-screenshot.png)
 
@@ -304,12 +307,12 @@ Nu ska vi titta på ett exempel för att skapa ett anpassat utseende så att ett
 
    `mvn clean install`
 
-1. Installera paketet med hjälp av AEM Package Manager.
+1. Installera paketet med AEM Package Manager.
 
 1. Öppna det adaptiva formuläret i redigeringsläge som du vill använda det anpassade utseendet på och gör följande:
 
-   1. Högerklicka på det fält som du vill använda utseendet på och klicka på **[!UICONTROL Redigera]** för att öppna dialogrutan Redigera komponent.
+   1. Högerklicka på det fält som du vill använda utseendet på och klicka på **[!UICONTROL Edit]** för att öppna dialogrutan Redigera komponent.
 
-   1. Uppdatera **[!UICONTROL CSS-klassegenskapen]** på fliken Format för att lägga till `widget_numericStepper`.
+   1. Uppdatera egenskapen som ska läggas till på fliken Format **[!UICONTROL CSS class]** `widget_numericStepper`.
 
 Det nya utseendet som du nyss skapade kan nu användas.
