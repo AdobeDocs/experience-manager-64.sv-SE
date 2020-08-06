@@ -9,6 +9,9 @@ topic-tags: author
 discoiquuid: 6a806727-28c5-430e-9a83-b43e0e9d9e1c
 translation-type: tm+mt
 source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+workflow-type: tm+mt
+source-wordcount: '510'
+ht-degree: 0%
 
 ---
 
@@ -41,10 +44,11 @@ Båda komponenterna har ett fönster, som visas nedan, för att signera ett form
 1. Tryck på ikonen **Konfigurera** ![konfigurera](assets/configure.png) . Egenskaper öppnas i webbläsaren och egenskaper för signatursteg visas. Konfigurera följande egenskaper:
 
    * **Elementnamn**: Ange komponentens namn.
-   * **** Titel: Ange komponentens unika namn.
-   * **** Mallmeddelande: Ange det meddelande som ska visas när signatur-PDF-filen läses in. Adobe Sign-tjänsterna tar lite tid att förbereda och läsa in PDF-signaturer.
-   * **** Underteckningstjänst: Välj alternativet **Skriptsignatur** .
+   * **Titel:** Ange komponentens unika namn.
+   * **Mallmeddelande:** Ange det meddelande som ska visas när signatur-PDF-filen läses in. Adobe Sign tjänster tar tid att förbereda och läsa in PDF-signaturer.
+   * **Underteckningstjänst:** Välj alternativet **Skriptsignatur** .
    * **CSS-klass**: Ange CSS-klass för klientbiblioteket, om det finns någon. Vi rekommenderar att du använder [teman](/help/forms/using/themes.md) och [infogade format](/help/forms/using/inline-style-adaptive-forms.md) i stället för CSS-klassen.
+
    Tryck på ikonen Klar ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att spara ändringarna. Signaturen har konfigurerats.
 
    När du fyller i ett formulär visas nu en PDF-version av anpassningsbara formulär och alternativ för att signera PDF-dokumentet finns. Mer information finns i [Signera ett anpassat formulär med Klottsignatur](/help/forms/using/signing-forms-using-scribble.md#p-sign-an-adaptive-form-using-scribble-signature-p).
@@ -55,7 +59,7 @@ Båda komponenterna har ett fönster, som visas nedan, för att signera ett form
 
    ![Signaturskärm för EchoSign-sida](assets/esignscribblesign.jpg)
 
-1. Klicka på **[!UICONTROL Signera]**. Dialogrutan för klottersignering visas. Signera formuläret och klicka på ikonen Klar ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att spara signaturen.
+1. Klicka på **[!UICONTROL Sign]**. Dialogrutan för klottersignering visas. Signera formuläret och klicka på ikonen Klar ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att spara signaturen.
 
    ![Dialogrutan Klottra signering](assets/scribblewidget.jpg)
 
