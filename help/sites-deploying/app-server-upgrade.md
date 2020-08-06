@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: c427c8b6-eb94-45fa-908f-c3d5a337427d
 translation-type: tm+mt
 source-git-commit: 510b6765e11a5b3238407322d847745f09183d63
+workflow-type: tm+mt
+source-wordcount: '523'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 510b6765e11a5b3238407322d847745f09183d63
 
 I det här avsnittet beskrivs den procedur som måste följas för att uppdatera AEM för programserverinstallationer.
 
-I alla exemplen i den här proceduren används JBoss som Application Server och du antyder att du har en fungerande version av AEM som redan är distribuerad. Proceduren är avsedd att dokumentera uppgraderingar som gjorts från **AEM version 5.6 till 6.3**.
+I alla exemplen i den här proceduren används JBoss som Application Server och du antyder att du har en fungerande version av AEM redan distribuerad. Proceduren är avsedd att dokumentera uppgraderingar som gjorts från **AEM version 5.6 till 6.3**.
 
 1. Börja med JBoss. I de flesta fall kan du göra detta genom att köra `standalone.sh` startskriptet genom att köra det här kommandot från terminalen:
 
@@ -27,7 +30,7 @@ I alla exemplen i den här proceduren används JBoss som Application Server och 
    jboss-install-folder/bin/standalone.sh
    ```
 
-1. Om AEM 5.6 redan är distribuerat kontrollerar du att paketen fungerar som de ska genom att köra:
+1. Om AEM 5.6 redan är distribuerad kontrollerar du att paketen fungerar korrekt genom att köra:
 
    ```shell
    wget https://<serveraddress:port>/cq/system/console/bundles
@@ -90,6 +93,7 @@ I alla exemplen i den här proceduren används JBoss som Application Server och 
    * `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg`
 
    * `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.cfg`
+
    De här två filerna konfigurerar AEM att använda ett StarMK-nodarkiv och ett File-datalager.
 
 1. Redigera konfigurationsfilerna så att de blir klara att användas. Mer specifikt:
@@ -111,7 +115,7 @@ I alla exemplen i den här proceduren används JBoss som Application Server och 
    find crx-quickstart/launchpad -type f -name "sling.options.file" -exec rm -rf {} \
    ```
 
-1. Nu måste du ändra körningslägena i AEM 6.3-krigsfilen. För att göra det skapar du först en tillfällig mapp som ska innehålla AEM 6.3-kriget. Namnet på mappen i det här exemplet blir **tillfälligt**. När krigsfilen har kopierats kan du extrahera innehållet genom att köra det inifrån den tillfälliga mappen:
+1. Nu måste du ändra körningslägena i AEM 6.3-filen. För att göra det skapar du först en tillfällig mapp som ska rymma AEM 6.3-kriget. Namnet på mappen i det här exemplet blir **tillfälligt**. När krigsfilen har kopierats kan du extrahera innehållet genom att köra det inifrån den tillfälliga mappen:
 
    ```shell
    jar xvf aem-quickstart-6.3.0.war
