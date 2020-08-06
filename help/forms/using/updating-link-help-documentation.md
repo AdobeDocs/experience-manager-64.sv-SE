@@ -1,8 +1,8 @@
 ---
 title: Uppdaterar länken till dokumentationen
 seo-title: Uppdaterar länken till dokumentationen
-description: Så här uppdaterar du målet för hjälplänken för arbetsytan i AEM Forms-arbetsytan så att den pekar på den anpassade dokumentationslänken.
-seo-description: Så här uppdaterar du målet för hjälplänken för arbetsytan i AEM Forms-arbetsytan så att den pekar på den anpassade dokumentationslänken.
+description: Så här uppdaterar du målet för hjälplänken för arbetsytan i AEM Forms så att den pekar på den anpassade dokumentationslänken.
+seo-description: Så här uppdaterar du målet för hjälplänken för arbetsytan i AEM Forms så att den pekar på den anpassade dokumentationslänken.
 uuid: 64056d10-1451-44ed-8f25-81a21037dc75
 contentOwner: robhagat
 content-type: reference
@@ -11,13 +11,16 @@ topic-tags: forms-workspace
 discoiquuid: 788c427f-190f-4580-9efd-6a4c4a008837
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '166'
+ht-degree: 0%
 
 ---
 
 
 # Uppdaterar länken till dokumentationen {#updating-the-link-to-the-documentation}
 
-Du kommer åt standardhjälpinnehållet för AEM Forms-arbetsytan genom att välja **Hjälp > Hjälp** om arbetsyta. Det hänvisar till onlinedokumentationen på Adobes webbplats. Du kan dock uppdatera den så att den pekar på en annan URL.
+Du kan komma åt standardhjälpinnehållet för arbetsytan i AEM Forms genom att välja **Hjälp > Hjälp** om arbetsyta. Den hänvisar till onlinedokumentationen på Adobe webbplats. Du kan dock uppdatera den så att den pekar på en annan URL.
 
 Här följer några exempel på hur du kan ändra standardhjälpens URL:
 
