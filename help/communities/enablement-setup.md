@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
 translation-type: tm+mt
 source-git-commit: 1bbd917ef20c4a618e93af66ffe8a6cfc8448e78
+workflow-type: tm+mt
+source-wordcount: '857'
+ht-degree: 0%
 
 ---
 
@@ -21,12 +24,12 @@ source-git-commit: 1bbd917ef20c4a618e93af66ffe8a6cfc8448e78
 
 I utvecklings- och demonstrationssyfte måste du köra en författare och en publiceringsinstans.
 
-Följ de grundläggande [anvisningarna i AEM Getting Started](../../help/sites-deploying/deploy.md#getting-started) som ger
+Följ de grundläggande AEM [Komma igång](../../help/sites-deploying/deploy.md#getting-started) -instruktionerna som ger
 
 * författarmiljö på [localhost:4502](http://localhost:4502/)
 * publiceringsmiljö på [localhost:4503](http://localhost:4503/)
 
-För AEM Communities,
+För AEM Communities
 
 * Författarmiljön är till för
 
@@ -43,7 +46,7 @@ För AEM Communities,
 
 >[!NOTE]
 >
->Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidorna](../../help/sites-authoring/qg-page-authoring.md).
+>Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till hur du skapar sidor](../../help/sites-authoring/qg-page-authoring.md).
 
 ## Installera senaste versionen av Communities {#install-latest-communities-release}
 
@@ -51,7 +54,7 @@ Den här självstudiekursen skapar en [aktiveringscommunitywebbplats](overview.m
 
 * [Senaste releaser](deploy-communities.md#latest-releases)
 
-En självstudiekurs som skapar en [engagemangscommunity](overview.md#engagement-community)finns på [Komma igång med AEM Communities](getting-started.md).
+En självstudiekurs som skapar en [engagemangscommunity](overview.md#engagement-community)finns på [Getting Started with AEM Communities](getting-started.md).
 
 ## Konfigurera aktiveringsfunktioner {#configure-enablement-features}
 
@@ -59,7 +62,7 @@ Om du vill följa den här självstudiekursen måste du installera och [konfigur
 
 ## Konfigurera analys {#configure-analytics}
 
-När [Adobe Analytics har konfigurerats för communitywebbplatsen](analytics.md)finns mer information i [rapporterna](reports.md) som genereras om aktiveringsresurser och utbildningsvägar som tilldelats communitymedlemmar (studerande).
+När [Adobe Analytics har konfigurerats för communitywebbplatsen](analytics.md)finns mer information i [rapporterna](reports.md) om aktiveringsresurser och utbildningsvägar som tilldelats communitymedlemmar (studerande).
 
 ## Konfigurera e-post för meddelanden {#configure-email-for-notifications}
 
@@ -97,7 +100,7 @@ Följ sedan instruktionerna för att
 1. [Ange taggbehörigheter](../../help/sites-administering/tags.md#setting-tag-permissions)
 1. [Publicera taggarna](../../help/sites-administering/tags.md#publishing-tags)
 
-Exempelpaket med taggar som skapats för självstudiekurserna Komma igång för AEM Communities
+Exempelpaket med taggar som skapats för Tutorials AEM Communities Getting Started
 
 [Hämta fil](assets/communities_tutorialtags-10.zip)
 
@@ -109,7 +112,7 @@ När [tunneltjänsten](#enable-the-tunnel-service) är aktiverad används i stä
 
 I den här självstudiekursen skapas tre medlemmar i publiceringsmiljön. Två medlemmar blir medlemmar i en användargrupp som är tilldelad en utbildningsväg, medan den tredje medlemmen blir en aktiveringsresurskontakt.
 
-En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgruppsadministratör och Webbgruppshanterare.
+En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgruppsadministratör och Aktivitetshanteraren i användarforumet.
 
 >[!NOTE]
 >
@@ -121,12 +124,12 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
 
 ### Riley Taylor - anmälare {#riley-taylor-enrollee}
 
-[Skapa en medlem](members.md#create-new-member) som ska läggas till i en grupp med elever - i communityklassgruppen Ski.
+[Skapa en medlem](members.md#create-new-member) som ska läggas till i en grupp med elev - Community Ski Class-gruppen.
 
 * **ID**: riley
 * **E-post**: riley.taylor@mailinator.com
-* **Lösenord**:lösenord
-* **Bekräfta lösenord**:lösenord
+* **Lösenord**: lösenord
+* **Bekräfta lösenord**: lösenord
 * **Förnamn**: Riley
 * **Efternamn**: Taylor
 
@@ -136,8 +139,8 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
 
 * **ID**: sidney
 * **E-post**: sidney.croft@mailinator.com
-* **Lösenord**:lösenord
-* **Bekräfta lösenord**:lösenord
+* **Lösenord**: lösenord
+* **Bekräfta lösenord**: lösenord
 * **Förnamn**: Sidney
 * **Efternamn**: Beskär
 
@@ -147,8 +150,8 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
 
 * **ID**: quinn
 * **E-post**: quinn.harper@mailinator.com
-* **Lösenord**:lösenord
-* **Bekräfta lösenord**:lösenord
+* **Lösenord**: lösenord
+* **Bekräfta lösenord**: lösenord
 * **Förnamn**: Quinn
 * **Efternamn**: Harper
 
@@ -161,10 +164,10 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
 * **Beskrivning**: en exempelgrupp för tilldelning av aktiveringsresurser
 * **Lägg till medlemmar i gruppen** &#39;add&#39;:
 
-   *  riley
-   *  sidney
+   * riley
+   * sidney
 
-* Välj **[!UICONTROL Spara]**
+* Välj **[!UICONTROL Save]**
 
 ### Egenskaper för Community-skalklassen {#community-ski-class-properties}
 
@@ -190,15 +193,15 @@ Skapa en användare på *författaren* som får rollen som Community Administrat
 
    * Till exempel användarnamn &#39;admin&#39; / lösenord &#39;admin&#39;
 
-* Navigera från huvudkonsolen till **[!UICONTROL Verktyg, Åtgärder > Säkerhet > Användare]**
-* Välj **[!UICONTROL Lägg till användare på menyn]** Redigera ****
+* Navigera från huvudkonsolen till **[!UICONTROL Tools, Operations > Security > Users]**
+* From the **[!UICONTROL Edit]** menu, select **[!UICONTROL Add User]**
 
-* I `Create New User` dialogrutan anger du
+* In the `Create New User` dialog enter
 
    * **ID&amp;ast;**: sirius
    * **E-postadress**: sirius.nilson@mailinator.com
-   * **Lösenords&amp;stämpel;ast;**:lösenord
-   * **Bekräfta lösenord&amp;stämpel;ast;**:lösenord
+   * **Lösenords&amp;stämpel;ast;**: lösenord
+   * **Bekräfta lösenord&amp;stämpel;ast;**: lösenord
    * **Förnamn**: Sirius
    * **Efternamn&amp;stämpel;ast;**: Nilson
 
@@ -211,7 +214,7 @@ Bläddra ned till `Add User to Groups`:
    * Välj `Community Administrators`
    * Välj `Community Enablement Managers`
 
-* Välj **[!UICONTROL Spara]**
+* Välj **[!UICONTROL Save]**
 
 ![chlimage_1-419](assets/chlimage_1-419.png)
 
