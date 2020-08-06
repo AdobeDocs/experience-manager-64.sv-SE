@@ -11,13 +11,16 @@ topic-tags: forms-workspace
 discoiquuid: 487e3966-443a-408e-b5af-899fcba6fca6
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '294'
+ht-degree: 1%
 
 ---
 
 
 # Ändra teckensnitt i gränssnittet {#changing-the-font-on-the-interface}
 
-Du kan ändra teckensnittet som visas på arbetsytan i AEM Forms. Teckensnitt som används i ett visst avsnitt i användargränssnittet definieras i motsvarande avsnitt i formatmallen. Du kan ändra teckensnitten i användargränssnittet selektivt.
+Du kan ändra vilket teckensnitt som visas på arbetsytan i AEM Forms. Teckensnitt som används i ett visst avsnitt i användargränssnittet definieras i motsvarande avsnitt i formatmallen. Du kan ändra teckensnitten i användargränssnittet selektivt.
 
 Följ de [allmänna stegen för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md) av arbetsytan i AEM Forms och följ stegen för anpassning av CSS, HTML eller båda, beroende på dina behov.
 
@@ -74,6 +77,6 @@ Om du till exempel vill ändra teckensnittet för den översta navigeringsfälte
 
 1. Starta om arbetsytan och rensa webbläsarcachen så att ändringarna syns.
 
-![change_font_before](assets/change_font_before.png)**Figure:** Övre *navigeringsfältet före teckensnittsanpassning*
+![change_font_before](assets/change_font_before.png)**Figure:** *Övre navigeringsfält före teckensnittsanpassning*
 
-![change_font_after](assets/change_font_after.png)**Figure:** Övre *navigeringsfältet efter teckensnittsanpassning för den första fliken*
+![change_font_after](assets/change_font_after.png)**Figure:** *Det övre navigeringsfältet efter teckensnittsanpassning på den första fliken*
