@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
 source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+workflow-type: tm+mt
+source-wordcount: '601'
+ht-degree: 2%
 
 ---
 
@@ -34,14 +37,14 @@ Använda CRXDE Lite:
     * Typ: `
     * Värde: &quot;foundation/components/page&quot;
 
-1. Klicka på det gröna **[!UICONTROL [+]Lägg till]**
-1. Klicka på **[!UICONTROL Spara alla]**
+1. Klicka på den gröna **[!UICONTROL[+]Add]**
+1. Klicka på **[!UICONTROL Save All]**
 
 ![chlimage_1-231](assets/chlimage_1-231.png)
 
 ### Head- och body-skript {#head-and-body-scripts}
 
-1. I rutan **CRXDE Lite** explorer navigerar du till `/apps/an-scf-sandbox/components/playpage` och dubbelklickar på filen `playpage.jsp` för att öppna den i redigeringsrutan.
+1. Navigera till **och dubbelklicka på filen i** CRXDE Lite `/apps/an-scf-sandbox/components/playpage` Explorer-rutan `playpage.jsp` för att öppna den i redigeringsrutan.
 
 #### /apps/an-scf-sandbox/components/playpage/playpage.jsp {#apps-an-scf-sandbox-components-playpage-playpage-jsp}
 
@@ -86,12 +89,13 @@ Använda CRXDE Lite:
 
    Om du vill ställa in redigering ska du lägga `body.jsp` över med ett lokalt skript och inkludera ett styckesystem (parsys) i brödtexten:
 
-   1. navigera till `/apps/an-scf-sandbox/components`
+   1. navigate to `/apps/an-scf-sandbox/components`
    1. markera `playpage`noden
    1. högerklicka och välj `Create > Create File...`
 
       * Namn: **body.jsp**
-   1. Klicka på **[!UICONTROL Spara alla]**
+   1. Klicka på **[!UICONTROL Save All]**
+
    Öppna `/apps/an-scf-sandbox/components/playpage/body.jsp` och klistra in följande text:
 
    ```xml
@@ -110,7 +114,7 @@ Använda CRXDE Lite:
    </body>
    ```
 
-1. Klicka på **[!UICONTROL Spara alla]**
+1. Klicka på **[!UICONTROL Save All]**
 
 **Visa sidan i en webbläsare i redigeringsläge:**
 
@@ -143,7 +147,7 @@ I den här sandlådan börjar du med följande **webbgruppskomponenter** (aktive
 * Sammanfattning av granskningar (visning)
 * Omröstning
 
-Välj dessutom **[!UICONTROL Allmänna]** komponenter, som
+Välj dessutom **[!UICONTROL General]** komponenter, till exempel
 
 * Bild
 * Tabell
@@ -155,7 +159,7 @@ Välj dessutom **[!UICONTROL Allmänna]** komponenter, som
 >Komponenterna som är aktiverade för sidans del lagras i databasen som värdet på egenskapen `components` för\
 >`/etc/designs/an-scf-sandbox/jcr:content/playpage/par` nod.
 
-## Landningssida {#landing-page}
+## Landing Page {#landing-page}
 
 I en flerspråkig miljö innehåller rotsidan ett skript som tolkar klientens begäran för att avgöra vilket språk som ska användas.
 
@@ -164,14 +168,14 @@ I det här enkla exemplet ställs rotsidan in statiskt för att dirigera om till
 Ändra webbläsarens URL till rotsidan: [http://localhost:4502/editor.html/content/an-scf-sandbox.html](https://locahost:4502/editor.html/content/an-scf-sandbox.html)
 
 * Välj ikonen Sidinformation
-* Välj **[!UICONTROL Öppna egenskaper]**
+* Välj **[!UICONTROL Open Properties]**
 * På fliken AVANCERAT
 
-   * Bläddra till **[!UICONTROL Webbplatser > SCF Sandbox Site > SCF Sandbox]**
-   * Click **[!UICONTROL OK]**
+   * Bläddra till posten Omdirigering **[!UICONTROL Websites > SCF Sandbox Site > SCF Sandbox]**
+   * Klicka på **[!UICONTROL OK]**
 
-* Click **[!UICONTROL OK]**
+* Klicka på **[!UICONTROL OK]**
 
 När webbplatsen har publicerats dirigeras en gång till den engelska sidan om du bläddrar till rotsidan på en publiceringsinstans.
 
-Det sista steget innan du spelar med communitykomponenterna i SCF är att lägga till en klientbiblioteksmapp (clientlibs) ... . **[⇒](add-clientlibs.md)**
+Det sista steget innan du spelar med communitykomponenterna i SCF är att lägga till en klientbiblioteksmapp (clientlibs) .... **[Mama](add-clientlibs.md)**
