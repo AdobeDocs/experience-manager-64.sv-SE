@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a91fd37e-5975-4572-a4b3-c7e8993d5f88
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '245'
+ht-degree: 5%
 
 ---
 
@@ -21,7 +24,8 @@ AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författ
 
 Med hjälp av [kontoinställningarna](#account-settings) och [användarinställningarna](#user-preferences) kan du definiera följande alternativ och inställningar:
 
-* **Redigeringsverktygsfältet** Välj om du vill ha det globala redigeringsverktygsfältet. Det här verktygsfältet, som visas högst upp i webbläsarfönstret, ger dig knapparna **Kopiera**, **Klipp ut**, **Klistra in** och **Ta bort** som du kan använda med styckekomponenterna på den sidan:
+* **Redigeringsverktygsfältet** Välj om du vill ha det globala redigeringsverktygsfältet. Det här verktygsfältet, som visas högst upp i webbläsarfönstret, ger dig 
+**Knapparna Kopiera**, **Klipp ut**, **Klistra in** och **Ta bort** för att använda med styckekomponenterna på sidan:
 
    * Visa vid behov (standard)
    * Visa alltid
@@ -33,8 +37,8 @@ Med hjälp av [kontoinställningarna](#account-settings) och [användarinställn
 
 * **Fönsterhantering** Välj antingen:
 
-   * Flera fönster (standard):Sidorna öppnas i ett nytt fönster.
-   * Enkelt fönster:Sidorna öppnas i det aktuella fönstret.
+   * Flera fönster (standard): Sidorna öppnas i ett nytt fönster.
+   * Enkelt fönster: Sidorna öppnas i det aktuella fönstret.
 
 ## Kontoinställningar {#account-settings}
 
