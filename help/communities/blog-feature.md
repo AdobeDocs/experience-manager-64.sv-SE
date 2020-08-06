@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: d5519211-8a04-4699-97bc-e162ec0f3781
 translation-type: tm+mt
 source-git-commit: 13d890d08a032fe4eef1dac793dcf2a3e682a52c
+workflow-type: tm+mt
+source-wordcount: '1482'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 13d890d08a032fe4eef1dac793dcf2a3e682a52c
 
 ## Introduktion {#introduction}
 
-Bloggfunktionen för AEM Communities har transformerats från en redigeringsaktivitet till en verklig communityaktivitet som äger rum i publiceringsmiljön.
+Bloggfunktionen för AEM Communities har transformerats från en redigeringsaktivitet till en verklig community-aktivitet som äger rum i publiceringsmiljön.
 
 Bloggfunktionen har stöd för att tillhandahålla communityinformation i journalformat. Bloggposterna görs i publiceringsmiljön av behöriga medlemmar (registrerade, inloggade användare).
 
@@ -36,7 +39,7 @@ Bloggfunktionen innehåller:
 
 Detta avsnitt i dokumentationen beskriver
 
-* Lägga till bloggfunktionen på en AEM-webbplats
+* Lägga till bloggfunktionen på en AEM webbplats
 * Konfigurationsinställningar för bloggkomponenter
 
 >[!NOTE]
@@ -72,133 +75,142 @@ Markera den monterade `Blog` komponent som du vill öppna och välj den `Configu
 
 #### Fliken Inställningar {#settings-tab}
 
-Ange bloggens grundläggande funktioner på fliken **[!UICONTROL Inställningar]** :
+Ange bloggens grundläggande funktioner på **[!UICONTROL Settings]** fliken:
 
-* **[!UICONTROL Tillåt miniatyrbild]** för bifogad fil Om det här alternativet är markerat skapas en miniatyrbild av den bifogade bilden.
+* **[!UICONTROL Allow Attachment Thumbnail]**
+Om du markerar det här alternativet skapas en miniatyrbild av den bifogade bilden.
 
-* **[!UICONTROL Maximal storlek]** för miniatyrbildsminiatyr för bifogad miniatyrbild (i pixlar). Standardvärdet är 800 x 800.
+* **[!UICONTROL Max Attach Thumbnail Size]**
+Maximal storlek (i pixlar) för miniatyrbilden för den bifogade filen. Standardvärdet är 800 x 800.
 
-* **[!UICONTROL Minsta bildstorlek för miniatyrbilder]** Minsta bildstorlek (i byte) för generering av miniatyrbilder för textbundna bilder. Standardvärdet är 100000 byte (100 kB).
+* **[!UICONTROL Min Image Size for Thumbnail]**
+Minsta bildstorlek (i byte) för generering av miniatyrbilder för textbundna bilder. Standardvärdet är 100000 byte (100 kB).
 
-* **[!UICONTROL Maximal miniatyrbildsstorlek]** Maximal storlek (i pixlar) för miniatyrbilden för textbunden bild. Standardvärdet är 800 x 800.
+* **[!UICONTROL Max Thumbnail Size]**
+Maximal storlek (i pixlar) för miniatyrbilden för textbunden bild. Standardvärdet är 800 x 800.
 
-* **[!UICONTROL Tillåt behöriga medlemmar]** Om det här alternativet är markerat tillåts endast behöriga medlemmar att skapa innehåll.
+* **[!UICONTROL Allow Privileged Members]**
+Om det här alternativet är markerat kan endast behöriga medlemmar skapa innehåll.
 
-* **[!UICONTROL Tillåtna behöriga medlemmar]** Lägg till behöriga medlemmar som har behörighet att skapa innehåll.
+* **[!UICONTROL Allowed Privileged Members]**
+Lägg till de behöriga medlemmar som har behörighet att skapa innehåll.
 
-* **[!UICONTROL Blockera användargenererat innehåll i redigeringsläge]** Om det är aktiverat blockerar användargenererat innehåll när redigering pågår i redigeringsläget.
+* **[!UICONTROL Block User Generated Content in Author Edit Mode]**
+Om det här alternativet är aktiverat blockeras användargenererat innehåll när redigering i redigeringsläge.
 
-* **[!UICONTROL Journaltitel]** Den bloggtitel som ska visas på sidan.
+* **[!UICONTROL Journal Title]**
+Den bloggtitel som ska visas på sidan.
    >Obs!
    >Journaltiteln används för att automatiskt skapa en URL för bloggen. Maximalt 50 tecken (med ytterligare 5 tecken för unikt utseende) används från journaltiteln som du anger här för att skapa en URL för bloggen.
 
-* **[!UICONTROL Journalbeskrivning]** Bloggbeskrivningen.
+* **[!UICONTROL Journal Description]**
+Bloggbeskrivningen.
 
-* **[!UICONTROL Ämnen per sida]**
+* **[!UICONTROL Topics Per Page]**
 
    Definierar antalet blogginlägg/kommentarer som visas per sida. Standardvärdet är 10.
 
-* **[!UICONTROL Kontrollerad]**
+* **[!UICONTROL Moderated]**
 
    Om du markerar det här alternativet måste du godkänna att blogginlägg och kommentarer skickas innan de visas på en publiceringsplats. Standard är avmarkerat.
 
-* **[!UICONTROL Stängd]**
+* **[!UICONTROL Closed]**
 
    Om du markerar det här alternativet stängs bloggen för nya blogginlägg och kommentarer. Standard är avmarkerat.
 
-* **[!UICONTROL RTF-redigerare]**
+* **[!UICONTROL Rich Text Editor]**
 
    Om du markerar det här alternativet kan blogginlägg och kommentarer skrivas in med kod. Standard är markerat.
 
-* **[!UICONTROL Tillåt taggning]**
+* **[!UICONTROL Allow Tagging]**
 
-   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se fliken **[!UICONTROL Taggfält]** ). Standard är avmarkerat.
+   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se **[!UICONTROL Tag field]** flik). Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt filöverföringar]**
+* **[!UICONTROL Allow File Uploads]**
 
    Om du markerar det här alternativet kan du tillåta att bifogade filer läggs till i ett blogginlägg eller en kommentar. Standard är avmarkerat.
 
-* **[!UICONTROL Maximal filstorlek]**
+* **[!UICONTROL Max File Size]**
 
    Relevant endast om `Allow File Uploads` är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
 
-* **[!UICONTROL Tillåtna filtyper]**
+* **[!UICONTROL Allowed File Types]**
 
    Relevant endast om `Allow File Uploads` är markerat. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
 
-* **[!UICONTROL Maximal filstorlek för bifogad bild]**
+* **[!UICONTROL Max Attach Image File Size]**
 
    Endast relevant om Tillåt filöverföringar är markerat. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152 (2 MB).
 
-* **[!UICONTROL Tillåt svar]**
+* **[!UICONTROL Allow Replies]**
 
    Om det här alternativet är markerat tillåts svar på kommentarer som har skickats till blogginlägget. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt användare att ta bort kommentarer och ämnen]**
+* **[!UICONTROL Allow Users to Delete Comments and Topics]**
 
    Om det här alternativet är markerat kan medlemmar ta bort kommentarer och blogginlägg som de har skickat in. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt följande]**
+* **[!UICONTROL Allow Following]**
 
    Om det här alternativet är markerat kan du inkludera följande funktion för bloggartiklar, som gör att medlemmar kan [meddelas](notifications.md) om nya inlägg. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt e-postprenumerationer]**
+* **[!UICONTROL Allow Email Subscriptions]**
 
    Om det här alternativet är markerat kan medlemmar meddelas om nya inlägg via e-post ([prenumeration](subscriptions.md)). Kräver `Allow Following` att kontrolleras och att [e-post konfigureras](email.md). Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt röstning]**
+* **[!UICONTROL Allow Voting]**
 
    Om du markerar det här alternativet inkluderas röstningsfunktionen med ett blogginlägg. Standard är avmarkerat.
 
-* **[!UICONTROL Visa emblem]**
+* **[!UICONTROL Display Badges]**
 
    Om det här alternativet är markerat visas färdiga och tilldelade [märken](implementing-scoring.md) med en medlems blogginlägg. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt innehåll]**
+* **[!UICONTROL Allow Featured Content]**
 
    om du markerar det här alternativet kan idén identifieras som [aktuellt innehåll](featured.md). Standard är avmarkerat.
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
-Under fliken **[!UICONTROL Användarmoderering]** anger du modereringsinställningarna:
+Ange modereringsinställningar under **[!UICONTROL User Moderation]** fliken:
 
-* **[!UICONTROL Neka inlägg]**
+* **[!UICONTROL Deny Posts]**
 
    Om det här alternativet är markerat kan pålitliga medlemsmoderatorer neka inlägg och förhindra att posten visas på det offentliga forumet. Standard är avmarkerat.
 
-* **[!UICONTROL Stäng/öppna avsnitt igen]**
+* **[!UICONTROL Close/Reopen Topics]**
 
    Om det här alternativet är markerat kan pålitliga medlemsmoderatorer stänga ett ämne för ytterligare redigeringar och kommentarer, och kan även öppna ett avsnitt på nytt. Standard är avmarkerat.
 
-* **[!UICONTROL Flagga inlägg]**
+* **[!UICONTROL Flag Posts]**
 
    Om det här alternativet är markerat kan medlemmar flagga andras ämnen eller kommentarer som olämpliga. Standard är avmarkerat.
 
-* **[!UICONTROL Flaggorsakslista]**
+* **[!UICONTROL Flag Reason List]**
 
    Om det här alternativet är markerat kan medlemmarna välja, från en nedrullningsbar lista, orsaken till att ett ämne eller en kommentar har flaggats som olämplig. Standard är avmarkerat.
 
-* **[!UICONTROL Anledning till anpassad flagga]**
+* **[!UICONTROL Custom Flag Reason]**
 
    Om det här alternativet är markerat kan medlemmarna ange en egen orsak till att ett ämne eller en kommentar flaggas som olämplig. Standard är avmarkerat.
 
-* **[!UICONTROL Modereringströskel]**
+* **[!UICONTROL Moderation Threshold]**
 
    Ange hur många gånger ett ämne eller en kommentar måste flaggas av medlemmar innan moderatorerna meddelas. Standardvärdet är 1 (en gång).
 
-* **[!UICONTROL Flaggningsgräns]**
+* **[!UICONTROL Flagging Limit]**
 
    Ange hur många gånger ett ämne eller en kommentar måste flaggas innan det döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det flaggade ämnet eller kommentaren från den offentliga vyn. Annars måste talet vara större än eller lika med modereringströskeln. Standardvärdet är 5.
 
 #### Fliken Taggfält {#tag-field-tab}
 
-Under fliken **[!UICONTROL Tagg]** anger du vilka taggar som kan användas om **[!UICONTROL Tillåt taggning]** är markerat på fliken **[!UICONTROL Inställningar]** :
+Under **[!UICONTROL Tag field]** fliken anger du vilka taggar som ska användas om **[!UICONTROL Allow Tagging]** är markerade på **[!UICONTROL Settings]** fliken:
 
-* **[!UICONTROL Tillåtna namnutrymmen]**
+* **[!UICONTROL Allowed Namespaces]**
 
-   Relevant om `Allow Tagging` är markerat under fliken **[!UICONTROL Inställningar]** . De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+   Relevant om `Allow Tagging` är markerat under **[!UICONTROL Settings]** fliken. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
-* **[!UICONTROL Förslagsgräns]**
+* **[!UICONTROL Suggestion Limit]**
 
    Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Värdet -1 betyder inga gränser. Standardvärdet är 0.
 
@@ -206,11 +218,11 @@ Under fliken **[!UICONTROL Tagg]** anger du vilka taggar som kan användas om **
 
 När du dubbelklickar på `Blog Sidebar` komponenten öppnas en redigeringsdialogruta.
 
-Under fliken Inställningar **[!UICONTROL för]** journalmarginaler anger du datumformatet för arkiv och vilken typ av poster som ska visas i sidofältet:
+Under **[!UICONTROL Journal Sidebar Settings]** fliken anger du datumformatet för arkiv och vilken typ av poster som ska visas i sidofältet:
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
-* **[!UICONTROL Datumformat]**
+* **[!UICONTROL Date format]**
 
    Det format som används för att visa arkiv för blogginlägg. Formatet använder platshållare enligt Java-konventionen.
 
@@ -219,23 +231,24 @@ Under fliken Inställningar **[!UICONTROL för]** journalmarginaler anger du dat
    * MMMMM: hel månad, som juni
    * MMM: kort månad, som Jun
    * MM: månadsnummer, som 06
+
    Standardvärdet är&quot;yyyy MMMM&quot;, som skulle visas t.ex.&quot;2015 Juni&quot;
 
-* **[!UICONTROL Vytyp]**
+* **[!UICONTROL View Type]**
 
    Titel och typ av blogginlägg som ska visas i sidlisten. Valet är mellan
 
-   *  Författare
+   * Författare
    * Kategorier
    * Arkiv
 
-* **[!UICONTROL Sökväg för journalkomponent]**
+* **[!UICONTROL Journal Component Path]**
 
    *(Valfritt)* Platsen för den bloggresurs som bloggartiklar ska listas från. Om det lämnas tomt används komponenten för resourceType `social/journal/components/hbs/journal` som visas på samma sida.
 
-   * Exempel, `/content/sites/engage/en/blog/jcr:content/content/primary/blog`
+   * Till exempel, `/content/sites/engage/en/blog/jcr:content/content/primary/blog`
 
-* **[!UICONTROL Förslagsgräns]**
+* **[!UICONTROL Suggestion Limit]**
 
    Antalet bloggartiklar som ska visas. Värdet -1 betyder ingen gräns. Standardvärdet är -1.
 
