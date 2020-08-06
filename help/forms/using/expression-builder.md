@@ -10,6 +10,9 @@ topic-tags: correspondence-management
 discoiquuid: 4a864547-edbe-4d2d-a8ee-39bc65dffe88
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '797'
+ht-degree: 1%
 
 ---
 
@@ -92,7 +95,7 @@ Du kan skapa ett anpassat paket för att exportera dina egna fjärrfunktioner f�
    }
    ```
 
-   Parametrarna för metoderna kan också kommenteras med @ServiceMethodParameter-anteckningen (com.adobe.exm.expeval.ServiceMethodParameter). Den här anteckningen används bara för att ange namn som kan läsas av människor och beskrivningar av metodparametrar som ska användas i utvecklingsgränssnittet. Kontrollera att gränssnittsmetodernas parametrar och returvärden tillhör någon av följande typer:
+   Parametrarna för metoderna kan också kommenteras med @ServiceMethodParameter-anteckningen (com.adobe.exm.expeval.ServiceMethodParameter). Den här anteckningen används bara för att ange namn som kan läsas av människor och beskrivningar av metodparametrar som ska användas i redigeringsgränssnittet. Kontrollera att gränssnittsmetodernas parametrar och returvärden tillhör någon av följande typer:
 
    * java.lang.String
    * java.lang.Character
