@@ -89,7 +89,7 @@ Klickuttrycket hanterar de åtgärder som utförs på en knapps klickningshände
 
 **Returtyp**: Klickuttrycket returnerar inget värde. Om något uttryck returnerar ett värde ignoreras värdet.
 
-**Exempel**: Om du vill fylla i en textruta **textruta1** på klickåtgärden för en knapp med värdet **AEM Forms**, är knappens klickuttryck `textbox1.value="AEM Forms"` &quot;
+**Exempel**: Om du vill fylla i en textruta **textruta1** vid klickåtgärden för en knapp med värdet **AEM Forms**, är knappens klickuttryck `textbox1.value="AEM Forms"` &quot;
 
 ### Initieringsskript {#initialization-script}
 
@@ -166,7 +166,7 @@ Skriptet Värde implementeras aktiveras när:
 
 >[!NOTE]
 >
->Du kan inaktivera körningen av Value Commit Script när värdet för ett fält ändras programmatiskt. Det gör du genom att gå till `https://[server]:[port]/system/console/configMgr and change` Adaptiv formulärversion för kompatibilitet **med** AEM Forms 6.1 ****. Därefter körs Value Commit Script bara när användaren ändrar fältets värde från användargränssnittet.
+>Du kan inaktivera körningen av Value Commit Script när värdet för ett fält ändras programmatiskt. Gå till `https://[server]:[port]/system/console/configMgr and change` Adaptiv Forms-version för kompatibilitet **med** AEM Forms 6.1 ****. Därefter körs Value Commit Script bara när användaren ändrar fältets värde från användargränssnittet.
 
 ### Synlighetsuttryck {#visibility-expression}
 
@@ -223,7 +223,7 @@ GuideBridge är en samling API:er som kan användas för att interagera med adap
 
 #### GuideBridge-användning i olika uttryck {#guidebridge-usage-in-various-expressions}
 
-* Om du vill återställa formulärfält kan du utlösa `guideBridge.reset()` API:t genom att klicka på ett knapputtryck. På samma sätt finns det ett API för att skicka som kan anropas som ett klickuttryck `guideBridge.submit()`**.**
+* Om du vill återställa formulärfält kan du utlösa `guideBridge.reset()` API:t genom att klicka på en knapp. På samma sätt finns det ett API för att skicka som kan anropas som ett klickuttryck `guideBridge.submit()`**.**
 
 * Du kan använda API:t för att `setFocus()` ange fokus i olika fält eller paneler (för panelfokus anges det första fältet automatiskt). `setFocus()`innehåller ett stort antal alternativ för navigering, t.ex. navigering över paneler, föregående/nästa genomgång, inställning av fokus till ett visst fält och många andra alternativ. Om du till exempel vill gå till nästa panel kan du använda: `guideBridge.setFocus(this.panel.somExpression, 'nextItem').`
 
@@ -283,7 +283,7 @@ Utför följande steg för att skapa ett anpassat mönster för en viss fälttyp
 1. Skapa en mapp för att behålla dina anpassade mönster. Skapa en nod av typen sling:folder i katalogen /apps. Skapa till exempel en nod med namnet `customPatterns`. Under den här noden skapar du en annan nod av typen `nt:unstructed` och namnger den `textboxpatterns`. Den här noden innehåller de olika anpassade mönster som du vill lägga till.
 1. Öppna fliken Egenskaper för noden som skapades. Öppna till exempel fliken Egenskaper i `textboxpatterns`. Lägg till `guideComponentType` egenskapen i den här noden och ställ in värdet på *fd/af/components/formter/guideTextBox*.
 1. Värdet för den här egenskapen varierar beroende på vilket fält du vill definiera mönstren för. För numeriska fält är värdet för `guideComponentType` egenskapen *fd/af/components/formter/guideNumericBox*. Värdet för Datepicker-fältet är *fd/af/components/formter/guideDatepicker*.
-1. Du kan lägga till ett anpassat mönster genom att tilldela en egenskap till `textboxpatterns` noden. Lägg till en egenskap med ett namn (till exempel `pattern1`) och ställ in värdet för mönstret som du vill lägga till. Du kan till exempel lägga till en egenskap `pattern1` med värdet Fax=text {99-999-99999}. Mönstret är tillgängligt för alla textrutor som du använder i adaptiva formulär.
+1. Du kan lägga till ett anpassat mönster genom att tilldela en egenskap till `textboxpatterns` noden. Lägg till en egenskap med ett namn (till exempel `pattern1`) och ställ in värdet för mönstret som du vill lägga till. Du kan till exempel lägga till en egenskap `pattern1` med värdet Fax=text {99-999-99999}. Mönstret är tillgängligt för alla textrutor som du använder i Adaptiv Forms.
 
    ![Skapa anpassade mönster för fält i CrxDe](assets/creating-custom-patterns.png)
    **Bild:** *Skapa egna mönster*
