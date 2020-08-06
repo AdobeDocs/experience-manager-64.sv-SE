@@ -40,11 +40,11 @@ Java API Quick Start (SOAP) är tillgängligt för signaturtjänsten:
 
 [Snabbstart (SOAP-läge): Ta bort en digital signatur med Java API](signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstart som finns i Programmering med AEM Forms baseras på den Forms-server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart i Programmering med AEM Forms baseras på den Forms-server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Lägga till ett signaturfält i ett PDF-dokument med Java API {#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api}
 
@@ -547,7 +547,7 @@ I följande Java-kodexempel signeras ett PDF-dokument som är baserat på en PDF
 
 ## Snabbstart (SOAP-läge): Signera ett XFA-baserat formulär digitalt med Java API {#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api}
 
-I följande Java-kodexempel signeras ett interaktivt formulär som renderas av Forms-tjänsten. Den `com.adobe.idp.Document` instans som returneras av Forms-tjänsten skickas till Signature-tjänsten. Det signerade interaktiva formuläret sparas som en PDF-fil med namnet *LoanXFASigned.pdf*.
+I följande Java-kodexempel signeras ett interaktivt formulär som återges av Forms-tjänsten. Den `com.adobe.idp.Document` instans som returneras av Forms-tjänsten skickas till signaturtjänsten. Det signerade interaktiva formuläret sparas som en PDF-fil med namnet *LoanXFASigned.pdf*.
 
 ```as3
  /* 
