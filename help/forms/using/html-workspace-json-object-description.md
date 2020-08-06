@@ -1,8 +1,8 @@
 ---
-title: Beskrivning av JSON-objekt på arbetsytan för AEM Forms
-seo-title: Beskrivning av JSON-objekt på arbetsytan för AEM Forms
-description: Konceptuell information om JSON JavaScript-objekt som används i LiveCycle AEM Forms-arbetsytan för anpassning, tillägg, ändring och återanvändning.
-seo-description: Konceptuell information om JSON JavaScript-objekt som används i LiveCycle AEM Forms-arbetsytan för anpassning, tillägg, ändring och återanvändning.
+title: JSON-objektbeskrivning för AEM Forms arbetsyta
+seo-title: JSON-objektbeskrivning för AEM Forms arbetsyta
+description: Konceptuell information om JSON JavaScript-objekt som används i arbetsytan LiveCycle AEM Forms för anpassning, tillägg, ändring och återanvändning.
+seo-description: Konceptuell information om JSON JavaScript-objekt som används i arbetsytan LiveCycle AEM Forms för anpassning, tillägg, ändring och återanvändning.
 uuid: 91c923c8-144a-4453-ba91-6a5193f1c4c4
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,13 +10,16 @@ topic-tags: forms-workspace
 discoiquuid: 61b7246d-ed28-4470-a0a2-a4aaf1a061a4
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '2134'
+ht-degree: 8%
 
 ---
 
 
-# Beskrivning av JSON-objekt på arbetsytan för AEM Forms {#aem-forms-workspace-json-object-description}
+# JSON-objektbeskrivning för AEM Forms arbetsyta {#aem-forms-workspace-json-object-description}
 
-JSON-objekt som används i arbetsytan i AEM Forms beskrivs nedan.
+JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
 
 1. Kategori
 
