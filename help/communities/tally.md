@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 9941ba90-3d40-4c90-bca8-5db49603cbfa
 translation-type: tm+mt
 source-git-commit: ad744e91e8f94d7fefb939209ba186e3b18496b7
+workflow-type: tm+mt
+source-wordcount: '310'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Du kan skapa en anpassad tally-komponent genom att utöka den abstrakta tally-kl
 
 [Att gilla](essentials-liking.md) är ett genomförande av tally som är en enkel form av att uttrycka en positiv åsikt.
 
-[Omröstning](essentials-voting.md) är ett genomförande av tally som är en enkel form av ett positivt eller negativt yttrande.
+[Omröstning](essentials-voting.md) är ett genomförande av tally som är en enkel form av uttryck för en positiv eller negativ åsikt.
 
 [Klassificering](rating-basics.md) är en implementering av tally som använder ett stjärnsystem för att uttrycka en rad åsikter från positiva till negativa.
 
@@ -48,7 +51,7 @@ Från och med AEM 6.1 är *avsökningskomponenten* inte längre tillgänglig.
 UGC bör modereras med någon av standardmetoderna för moderering.\
 Se [Moderera användargenererat innehåll](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (t.ex. ASRP, MSRP eller JSRP).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
