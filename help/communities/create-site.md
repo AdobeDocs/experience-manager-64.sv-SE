@@ -1,8 +1,8 @@
 ---
 title: Skapa en ny communitywebbplats
 seo-title: Skapa en ny communitywebbplats
-description: Skapa en ny AEM Communities-webbplats
-seo-description: Skapa en ny AEM Communities-webbplats
+description: Så här skapar du en ny AEM Communities-webbplats
+seo-description: Så här skapar du en ny AEM Communities-webbplats
 uuid: b8557416-cae4-489e-ab3b-e94d56686b7a
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: bf182bb7-e305-45be-aadb-d71efd70f8cb
 translation-type: tm+mt
 source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+workflow-type: tm+mt
+source-wordcount: '1596'
+ht-degree: 2%
 
 ---
 
@@ -38,27 +41,27 @@ Så här kommer du igång med att skapa en ny community-webbplats:
 
 I steget [](sites-console.md#step2013asitetemplate)Webbplatsmall anger du en titel, en beskrivning, namnet på webbadressen och väljer en mall för en community-webbplats, till exempel:
 
-* **[!UICONTROL Webbplatstitel]** för communityn: `Getting Started Tutorial`
+* **[!UICONTROL Community Site Title]**: `Getting Started Tutorial`
 
-* **[!UICONTROL Beskrivning]** av communityplats: `A site for engaging with the community.`
+* **[!UICONTROL Community Site Description]**: `A site for engaging with the community.`
 
-* **[!UICONTROL Rotadress]** för communityplats: (lämna tomt för standardroten `/content/sites`)
+* **[!UICONTROL Community Site Root]**: (lämna tomt för standardroten `/content/sites`)
 
-* **[!UICONTROL Molnkonfigurationer]**: (lämna tomt om ingen molnkonfiguration har angetts) ange sökvägen till de angivna molnkonfigurationerna.
-* **[!UICONTROL Grundspråk]** för communitywebbplats: (lämnas orört för ett enda språk: På engelska) använder du listrutan för att välja ett *eller flera* basspråk bland de tillgängliga språken - tyska, italienska, franska, japanska, spanska, portugisiska (Brasilien), kinesiska (traditionell) och kinesiska (förenklad). En communitywebbplats kommer att skapas för varje språk som läggs till och kommer att finnas i samma webbplatsmapp enligt bästa praxis som beskrivs i [Översätta innehåll för flerspråkiga webbplatser](../../help/sites-administering/translation.md). Rotsidan för varje webbplats kommer att innehålla en underordnad sida med språkkoden för ett av de valda språken, till exempel &quot;en&quot; för engelska eller &quot;fr&quot; för franska.
+* **[!UICONTROL Cloud Configurations]**: (lämna tomt om ingen molnkonfiguration har angetts) ange sökvägen till de angivna molnkonfigurationerna.
+* **[!UICONTROL Community Site Base Language]**: (lämnas orört för ett enda språk: På engelska) använder du listrutan för att välja ett *eller flera* basspråk bland de tillgängliga språken - tyska, italienska, franska, japanska, spanska, portugisiska (Brasilien), kinesiska (traditionell) och kinesiska (förenklad). En communitywebbplats kommer att skapas för varje språk som läggs till och kommer att finnas i samma webbplatsmapp enligt bästa praxis som beskrivs i [Översätta innehåll för flerspråkiga webbplatser](../../help/sites-administering/translation.md). Rotsidan för varje webbplats kommer att innehålla en underordnad sida med språkkoden för ett av de valda språken, till exempel &quot;en&quot; för engelska eller &quot;fr&quot; för franska.
 
-* **[!UICONTROL Namn på]** communitywebbplats: engagera
+* **[!UICONTROL Community Site Name]**: engagera
 
    * Dubbelkontrollera namnet eftersom det inte är lätt att ändra efter att webbplatsen har skapats
    * Den inledande URL:en visas under namnet på communitywebbplatsen
    * Ange en giltig URL genom att lägga till en baskod + &quot;.html&quot;
    * *Till exempel* http://localhost:4502/content/sites/ `engage/en.html`
 
-* **[!UICONTROL Mall]**: dra nedåt för att välja `Reference Site`
+* **[!UICONTROL Template]**: dra nedåt för att välja `Reference Site`
 
-Markera **[!UICONTROL nästa]**
+Välj **[!UICONTROL Next]**
 
-### Steg 2:Design {#step-design}
+### Steg 2: Design {#step-design}
 
 Designsteget presenteras i två avsnitt där du kan välja tema och varumärkesbanderoll:
 
@@ -74,13 +77,13 @@ Välj det format som du vill använda på mallen. När du väljer det här alter
 
 ![chlimage_1-353](assets/chlimage_1-353.png) ![chlimage_1-354](assets/chlimage_1-354.png)
 
-Välj **[!UICONTROL Nästa]**.
+Välj **[!UICONTROL Next]**.
 
 ### Steg 3: Inställningar {#step-settings}
 
 I steget Inställningar, innan du väljer `Next`det, ska du lägga märke till att det finns sju avsnitt som ger åtkomst till konfigurationer som användarhantering, taggning, moderering, grupphantering, analys, översättning och aktivering.
 
-Gå till [självstudiekursen Komma igång med AEM Communities för att få](getting-started-enablement.md) hjälp med att aktivera funktioner.
+Gå till självstudiekursen [Komma igång med AEM Communities för att få](getting-started-enablement.md) hjälp med att aktivera funktioner.
 
 #### ANVÄNDARHANTERING {#user-management}
 
@@ -98,11 +101,11 @@ Markera alla kryssrutor för [användarhantering](sites-console.md#user-manageme
 
 ![createplatserinställningar](assets/createsitesettings.png)
 
-#### TAGGNING {#tagging}
+#### TAGGING {#tagging}
 
-De taggar som kan användas för communityinnehåll kontrolleras genom att AEM-namnutrymmen som tidigare definierats via [taggningskonsolen](../../help/sites-administering/tags.md#tagging-console) (till exempel namnutrymmet [Tutorial](setup.md#create-tutorial-tags)) väljs.
+De taggar som kan användas för communityinnehåll kontrolleras genom att AEM namnutrymmen som tidigare definierats via [taggningskonsolen](../../help/sites-administering/tags.md#tagging-console) (till exempel namnutrymmet [Tutorial](setup.md#create-tutorial-tags)) väljs.
 
-Det är enkelt att hitta namnutrymmen med typsnittssökning. Exempel:
+Det är enkelt att hitta namnutrymmen med typsnittssökning. Till exempel,
 
 * Skriv tut
 * Välj `Tutorial`
@@ -115,7 +118,7 @@ Det är enkelt att hitta namnutrymmen med typsnittssökning. Exempel:
 
 Om du vill att en community-medlem (eller grupp av medlemmar) ska kunna uppleva webbplatsen som community-hanterare använder du typsnittssökningen och väljer medlemmens eller gruppens namn bland alternativen i listrutan.
 
-Exempel:
+Till exempel,
 
 * Skriv &quot;q&quot;
 * Välj [Quinn Harper](enablement-setup.md#publishcreateenablementmembers)
@@ -134,7 +137,7 @@ Acceptera de globala standardinställningarna för [moderering](sites-console.md
 
 #### ANALYS {#analytics}
 
-Om Adobe Analytics är licensierat och en molntjänst och ett ramverk i Analytics har konfigurerats går det att aktivera Analytics och välja ramverket.
+Om Adobe Analytics är licensierat och en molntjänst och ett ramverk för Analytics har konfigurerats går det att aktivera Analytics och välja ramverket.
 
 Se [Analyskonfiguration för communityfunktioner](analytics.md).
 
@@ -144,11 +147,11 @@ Se [Analyskonfiguration för communityfunktioner](analytics.md).
 
 I [översättningsinställningarna](sites-console.md#translation) anges grundspråket för webbplatsen samt om UGC kan översättas och till vilket språk.
 
-* Kontrollera **[!UICONTROL Tillåt maskinöversättning]**
+* Kontroll **[!UICONTROL Allow Machine Translation]**
 * Låt standardspråken vara markerade för översättning av standardmaskinöversättningstjänsten
 * Lämna standardöversättningsprovider och -konfiguration
 * Ingen global butik behövs eftersom det inte finns några språkversioner
-* Markera **[!UICONTROL Översätt hela sidan]**
+* Välj **[!UICONTROL Translate entire page]**
 * Lämna standardalternativet för beständighet
 
 ![chlimage_1-358](assets/chlimage_1-358.png)
@@ -159,11 +162,11 @@ Lämna tomt när du skapar en engagemangscommunity.
 
 En liknande självstudiekurs för att snabbt skapa en [aktiveringscommunity](overview.md#enablement-community)finns i [Komma igång med AEM Communities för aktivering](getting-started-enablement.md).
 
-Välj **[!UICONTROL Nästa]**.
+Välj **[!UICONTROL Next]**.
 
 ### Steg 4: Skapa webbgruppsplats {#step-create-communities-site}
 
-Välj **[!UICONTROL Skapa]**.
+Välj **[!UICONTROL Create]**.
 
 ![chlimage_1-359](assets/chlimage_1-359.png)
 
@@ -197,7 +200,7 @@ Från vänster till höger är de:
 
 * **Ta bort plats**
 
-   Markera borttagningsikonen om du vill ta bort communitywebbplatsen från **[!UICONTROL webbgrupper > Webbplatskonsolen]**. Den här åtgärden tar bort alla objekt som är associerade med platsen, till exempel UGC, användargrupper, resurser och databasposter.
+   Markera borttagningsikonen om du vill ta bort communitywebbplatsen från **[!UICONTROL Communities > Sites console]**. Den här åtgärden tar bort alla objekt som är associerade med platsen, till exempel UGC, användargrupper, resurser och databasposter.
 
 ![siteactions-1](assets/siteactions-1.png)
 
@@ -207,12 +210,13 @@ Från vänster till höger är de:
 >
 >På författarinstansen, från huvudmenyn
 >
->1. Navigera till **[!UICONTROL Verktyg > Åtgärder > Replikering]** -menyn
->1. Välj **[!UICONTROL agenter på författare]**
->1. Välj **[!UICONTROL standardagent (publicera)]**
->1. Vid **[!UICONTROL Inställningar]** väljer du **[!UICONTROL Redigera]**
+>1. Navigera till **[!UICONTROL Tools > Operations > Replication]** menyn
+>1. Välj **[!UICONTROL Agents on author]**
+>1. Välj **[!UICONTROL Default Agent (publish)]**
+>1. Bredvid **[!UICONTROL Settings]** val **[!UICONTROL Edit]**
 >1. I popup-dialogrutan för agentinställningar väljer du fliken Transport
 >1. I URI ändrar du portnumret 4503 till önskat portnummer
+
 >
 >
 Om du till exempel vill använda port 6103: `http://localhost:6103/bin/receive?sling:authRequestLogin=1`
@@ -240,14 +244,14 @@ Med tanke på webbplatsens namn&quot;engagera&quot; i steg 1 kan de fyra nya anv
 * Community Engage Community Managers
 * Gruppadministratörer för communityengagemang
 * Medlemmar i communityengagemang
-*  Moderatorer för communityengagemang
+* Moderatorer för communityengagemang
 * Behöriga medlemmar för communityengagemang
 * Community Engage Sitecontentmanager
 
 Observera att [Aaron McDonald](tutorials.md#demo-users) är medlem i
 
 * Community Engage Community Managers
-*  Moderatorer för communityengagemang
+* Moderatorer för communityengagemang
 * Medlemmar i communityn (indirekt som medlem i gruppen Moderatorer)
 
 ![chlimage_1-362](assets/chlimage_1-362.png)
@@ -279,7 +283,7 @@ Så här kommer du igång:
 1. Utöka i projektwebbläsaren `/etc/map`
 1. Markera `http` noden
 
-   * Välj **[!UICONTROL Skapa nod]**
+   * Välj **[!UICONTROL Create Node]**
 
       * **Namn** localhost.4503
 
@@ -303,7 +307,7 @@ Så här kommer du igång:
       * **Värde** /content/sites/engage/en.html
 
 
-1. Välj **[!UICONTROL Spara alla]**
+1. Välj **[!UICONTROL Save All]**
 1. (valfritt) Ta bort webbläsarhistoriken
 1. Gå till http://localhost:4503/
 
@@ -311,7 +315,7 @@ Så här kommer du igång:
 
 >[!NOTE]
 >
->Om du vill inaktivera det lägger du bara till egenskapsvärdet med&quot;x&quot; - `sling:match` - och `xlocalhost.4503/$` Spara alla ****.
+>Om du vill inaktivera lägger du bara till ett `sling:match` egenskapsvärde med&quot;x&quot; - `xlocalhost.4503/$` - och **[!UICONTROL Save All]**.
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
@@ -323,11 +327,11 @@ Om det inte går att spara ändringarna måste du kontrollera att nodnamnet är 
 
 #### Felsökning: Det gick inte att omdirigera {#troubleshooting-fail-to-redirect}
 
-&quot;**$**&quot; i slutet av `sling:match`strängen för det reguljära uttrycket är avgörande, så att bara exakt `http://localhost:4503/` mappas. I annat fall läggs omdirigeringsvärdet till alla sökvägar som kan finnas efter server:port i URL:en. När AEM försöker dirigera om till inloggningssidan misslyckas den således.
+&quot;**$**&quot; i slutet av `sling:match`strängen för det reguljära uttrycket är avgörande, så att bara exakt `http://localhost:4503/` mappas. I annat fall läggs omdirigeringsvärdet till alla sökvägar som kan finnas efter server:port i URL:en. När AEM försöker dirigera om till inloggningssidan misslyckas den alltså.
 
 ### Ändra platsen {#modify-the-site}
 
-När webbplatsen har skapats kan författare använda ikonen [](sites-console.md#authoring-site-content) Open Site för att utföra vanliga AEM-redigeringsaktiviteter.
+När webbplatsen har skapats kan författare använda ikonen [](sites-console.md#authoring-site-content) Öppna plats för att utföra AEM standardåtgärder.
 
 Dessutom kan administratörer använda ikonen [](sites-console.md#modifying-site-properties) Redigera plats för att ändra egenskaper för platsen, till exempel titeln.
 
@@ -335,4 +339,4 @@ Kom ihåg att **spara** och **publicera** om webbplatsen efter eventuella ändri
 
 >[!NOTE]
 >
->Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidorna](../../help/sites-authoring/qg-page-authoring.md).
+>Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till hur du skapar sidor](../../help/sites-authoring/qg-page-authoring.md).
