@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 07da66ab-dd5e-4ca8-ac6d-76fc81875fd9
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '3064'
+ht-degree: 6%
 
 ---
 
@@ -150,11 +153,13 @@ Du kan lägga till en ny komponent genom att använda rutan **Dra komponenter h�
 1. Kontrollera att sidan är i [**redigeringsläge **](/help/sites-authoring/author-environment-tools.md#page-modes).
 1. Det finns två sätt att markera och lägga till en ny komponent från styckesystemet:
 
-   * Välj alternativet **Infoga komponent** (+) antingen i verktygsfältet för en befintlig komponent eller i rutan **Dra komponenter hit** .
+   * Select the **Insert Component** option (+) from either the toolbar of an existing component or the **Drag components here** box.
+
    ![screen_shot_2018-03-22at112536](assets/screen_shot_2018-03-22at112536.png)
 
    * Om du använder en stationär enhet kan du dubbelklicka på **Dra komponenter här** .
-   Dialogrutan **Infoga ny komponent** öppnas så att du kan välja önskad komponent:
+
+   The **Insert New Component** dialog will open to allow you to select your required component:
 
    ![screen_shot_2018-03-22at112650](assets/screen_shot_2018-03-22at112650.png)
 
@@ -268,6 +273,7 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
    * Du kan klistra in på samma sida eller på en annan sida.
    * Det inklistrade objektet klistras in ovanför objektet där du väljer åtgärden Klistra in.
    * Åtgärden Klistra in visas bara om det finns innehåll i Urklipp.
+
    ![screen_shot_2018-03-22at113553](assets/screen_shot_2018-03-22at113553.png)
 
    >[!NOTE]
@@ -309,7 +315,7 @@ Det finns två sätt att lägga till och/eller redigera innehåll i komponenter:
 
 Du kan öppna en komponent och redigera innehållet med ikonen [Redigera (penna) i komponentverktygsfältet](#edit-configure-copy-cut-delete-paste).
 
-De exakta redigeringsalternativen beror på komponenten. För vissa komponenter är [alla åtgärder bara tillgängliga i helskärmsläge](#edit-content-full-screen-mode). Exempel:
+De exakta redigeringsalternativen beror på komponenten. För vissa komponenter är [alla åtgärder bara tillgängliga i helskärmsläge](#edit-content-full-screen-mode). Till exempel:
 
 * [Textkomponent](/help/sites-authoring/rich-text-editor.md)
 
@@ -328,7 +334,7 @@ De exakta redigeringsalternativen beror på komponenten. För vissa komponenter 
 
 * Bildkomponent - helskärm
 
-   [Om du aktiverar helskärmsläget](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode) för bildkomponenten får du mer utrymme för redigering av bilden och dessutom visas extra redigeringsalternativ som **Starta karta** och **Återställ zoomning**. Med helskärmsläge kan du dessutom välja förinställningar för beskärning.
+   [Om du aktiverar helskärmsläget](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode) för bildkomponenten får du mer plats att redigera bilden och dessutom visas extra redigeringsalternativ som **Startkarta** och **Återställ zoomning**. I helskärmsläget kan du dessutom välja förinställningar för beskärning.
 
    ![screen_shot_2018-03-22at120529](assets/screen_shot_2018-03-22at120529.png)
 
@@ -379,7 +385,7 @@ Så här flyttar du en styckekomponent:
 
 ## Redigera komponentlayout {#edit-component-layout}
 
-I stället för att behöva växla från redigeringsläge till [layoutläge](/help/sites-authoring/responsive-layout.md) flera gånger för att justera en komponent, kan du välja åtgärden **Layout** för en komponent för att ändra komponentens layout och spara tid genom att inte behöva lämna redigeringsläget.
+I stället för att växla från redigeringsläge till [layoutläge](/help/sites-authoring/responsive-layout.md) gång på gång för att justera en komponent, kan du välja åtgärden **Layout** för en komponent när du vill ändra dess layout och spara tid eftersom du slipper lämna redigeringsläget.
 
 1. När du väljer en komponent i **redigeringsläget** för platskonsolen visas komponentens verktygsfält.
 
@@ -394,6 +400,7 @@ I stället för att behöva växla från redigeringsläge till [layoutläge](/he
    * Storlekshandtagen för komponentvisningen.
    * Emulatorverktygsfältet visas högst upp på skärmen.
    * Layoutåtgärder i stället för standardredigeringsåtgärder visas i komponentverktygsfältet.
+
    ![screen_shot_2018-03-22at133843](assets/screen_shot_2018-03-22at133843.png)
 
    Nu kan du ändra komponentens layout på samma sätt som i [layoutläget](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode).
@@ -420,7 +427,7 @@ Du kan avbryta (och sedan återaktivera) arvet. Beroende på vilken komponent de
 
 * **Live Copy**
 
-   Komponentens verktygsfält, om komponenten finns på en sida som är en del av en live-kopia eller en start (baserat på en live-kopia). Exempel:
+   Komponentens verktygsfält, om komponenten finns på en sida som är en del av en live-kopia eller en start (baserat på en live-kopia). Till exempel:
 
    ![screen_shot_2018-03-22at134339](assets/screen_shot_2018-03-22at134339.png)
 
@@ -457,7 +464,7 @@ I [läget](/help/sites-authoring/author-environment-tools.md#page-modes) Live Co
 * Grön kantlinje: Ärvd
 * Rosa kantlinje: Arvet har annullerats
 
-Exempel:
+Till exempel:
 
 ![screen_shot_2018-03-22at134820](assets/screen_shot_2018-03-22at134820.png)
 
@@ -478,6 +485,7 @@ Det finns två alternativ för att förhandsgranska en sida:
 >* Länkarna i innehållet är synliga, men inte tillgängliga i redigeringsläget.
 >* Använd något av förhandsvisningsalternativen om du vill navigera med hjälp av länkarna.
 >* Använd [kortkommandot](/help/sites-authoring/keyboard-shortcuts.md) för att växla mellan förhandsvisning och det senast markerade läget `Ctrl-Shift-M` .
+
 >
 
 
@@ -504,20 +512,21 @@ Alternativet **Visa som publicerad** finns på menyn [Sidinformation](/help/site
 
 ## Låsa en sida {#locking-a-page}
 
-Med AEM kan du låsa en sida så att ingen annan kan ändra innehållet. Det här är användbart när du gör många ändringar på en viss sida eller när du behöver frysa en sida en kort stund.
+AEM kan du låsa en sida så att ingen annan kan ändra innehållet. Det här är användbart när du gör många ändringar på en viss sida eller när du behöver frysa en sida en kort stund.
 
 En sida kan låsas från:
 
 * **Platskonsol**
 
-   1. Markera sidan i [markeringsläge](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
+   1. Markera sidan med [markeringsläge](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
    1. Välj låsikonen.
+
    ![screen_shot_2018-03-22at134928](assets/screen_shot_2018-03-22at134928.png)
 
 * **Page Editor**
 
    1. Öppna menyn genom att klicka på ikonen **Sidinformation** .
-   1. Välj alternativet **Lås sida** .
+   1. Select the **Lock Page** option.
 
 När konsolvyn är låst uppdateras informationen och när du redigerar en låssymbol visas den i verktygsfältet.
 
@@ -533,7 +542,7 @@ När konsolvyn är låst uppdateras informationen och när du redigerar en låss
 
 Att låsa upp en sida påminner mycket om att [låsa sidan](#locking-a-page). När sidan är låst ersätts låsalternativen av upplåsningsåtgärder.
 
-På menyn Sidinformation visas **Lås upp** som ett alternativ och låsikonen i platskonsolen ersätts av en **Lås upp** -ikon.
+På menyn Sidinformation visas **Lås upp** som ett alternativ och låsikonen på Sites-konsolen ersätts av en **Lås upp**-ikon.
 
 ![screen_shot_2018-03-22at134942](assets/screen_shot_2018-03-22at134942.png)
 
@@ -578,6 +587,7 @@ Funktionen för kommandona ångra och gör om liknar den i andra program. Använ
 >* Gör om åtgärder så länge du inte har gjort någon sidredigering sedan du använde Ångra.
 >* Ångra högst 20 redigeringsåtgärder (standardinställning).
 >* Använd även [kortkommandon](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) för att ångra och göra om.
+
 >
 
 
