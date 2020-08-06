@@ -1,8 +1,8 @@
 ---
 title: Konfigurera länkspårning för Adobe Analytics
 seo-title: Konfigurera länkspårning för Adobe Analytics
-description: Lär dig hur du konfigurerar länkspårning för SiteCatalyst.
-seo-description: Lär dig hur du konfigurerar länkspårning för SiteCatalyst.
+description: Läs om hur du konfigurerar länkspårning för SiteCatalyst.
+seo-description: Läs om hur du konfigurerar länkspårning för SiteCatalyst.
 uuid: b6d5bd1c-f91a-4d38-9e9e-dc2bcb271dae
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -20,20 +20,20 @@ ht-degree: 0%
 
 # Konfigurera länkspårning för Adobe Analytics{#configuring-link-tracking-for-adobe-analytics}
 
-När användarna klickar på länkar på webbplatsens sidor kan du hämta relaterad information i Adobe Analytics. Använd till exempel länkspårning för att lära dig hur användare interagerar med webbplatsen, spåra filhämtningar och spåra avslutslänkar.
+När användare klickar på länkar på webbplatsens sidor kan du hämta relaterad information i Adobe Analytics. Använd till exempel länkspårning för att lära dig hur användare interagerar med webbplatsen, spåra filhämtningar och spåra avslutslänkar.
 
 ## Konfigurera länkspårning för ett Adobe Analytics Framework {#configuring-link-tracking-for-an-adobe-analytics-framework}
 
-1. Använd **Navigering**, gå via **Distribution**, **Cloud Service** till **Adobe Analytics** .
+1. Använd **Navigering**, gå via **Distribution**, **Cloud Services** till **Adobe Analytics** .
 
-1. Använd **Visa konfigurationer** för att öppna önskat Adobe Analytics-ramverk.
+1. Använd **Visa konfigurationer** för att öppna Adobe Analytics-ramverket.
 1. Expandera avsnittet Konfiguration **av** länkspårning och konfigurera efter behov (den här sidan innehåller mer information):
 
    ![aa-08](assets/aa-08.png)
 
 ## Spåra filhämtningar {#tracking-file-downloads}
 
-Konfigurera Adobe Analytics-ramverket så att filer som hämtas från associerade sidor automatiskt spåras som nedladdningar i Adobe Analytics. När du aktiverar spårning av hämtningar spåras bara de filtyper som du anger.
+Konfigurera Adobe Analytics-ramverket så att filer som hämtas från associerade sidor automatiskt spåras som hämtningar i Adobe Analytics. När du aktiverar spårning av hämtningar spåras bara de filtyper som du anger.
 
 Nedladdningar av följande filtyper spåras som standard:
 
@@ -60,7 +60,7 @@ s.linkDownloadFileTypes= 'exe,zip,wav,mp3,mov,mpg,avi,wmv,doc,pdf,xls';
 
 Så här aktiverar du hämtningsspårning för ditt Adobe Analytics-ramverk:
 
-1. [Öppna Adobe Analytics-ramverket och expandera konfigurationsdelen](#configuring-link-tracking-for-an-adobe-analytics-framework)Länkspårning.
+1. [Öppna Adobe Analytics-ramverket och expandera konfigurationsavsnittet](#configuring-link-tracking-for-an-adobe-analytics-framework)Länkspårning.
 1. Aktivera **Spåra hämtningar**.
 1. I rutan **Hämta filtyper** skriver du filnamnstilläggen för de filtyper som du vill spåra.
 
@@ -106,24 +106,24 @@ s.linkLeaveQueryString= false;
 
 ## Skicka variabeldata med länkklick {#sending-variable-data-with-link-clicks}
 
-Du kan konfigurera AEM så att händelser och variabeldata skickas till Adobe Analytics när en användare klickar på en länk. Med egenskaperna för **länkspårningskonfiguration** kan du ange vilka Adobe Analytics-händelser och -variabler som ska spåra när länkklick inträffar.
+Du kan konfigurera AEM att skicka händelser och variabeldata till Adobe Analytics när en användare klickar på en länk. Med egenskaperna för **länkspårningskonfiguration** kan du ange vilka Adobe Analytics-händelser och -variabler som ska spåras när länkklick inträffar.
 
 Ramverksmappningarna bestämmer händelse- och variabelvärdena. Du kan mappa Adobe Analytics-variabler till de variabler i innehållskomponenterna som lagrar data som du vill spåra när någon klickar på länkarna.
 
 Så här skickar du variabeldata med länkklick:
 
-1. [Öppna Adobe Analytics-ramverket och expandera konfigurationsdelen](#configuring-link-tracking-for-an-adobe-analytics-framework)Länkspårning.
+1. [Öppna Adobe Analytics-ramverket och expandera konfigurationsavsnittet](#configuring-link-tracking-for-an-adobe-analytics-framework)Länkspårning.
 1. Konfigurera följande egenskaper enligt dina krav.
 
 Egenskaper för att skicka variabeldata med länkklick:
 
-* **Länka spårningshändelser** Ange de händelsemariabler för Adobe Analytics som du vill använda för att räkna länkklick.
+* **Länkspårningshändelser** Ange de Adobe Analytics-händelsemariabler som du vill använda för att räkna länkklick.
 
    Avgränsa flera variabelnamn med kommatecken.
 
    Standardvärdet för `None` orsakar ingen händelsespårning.
 
-* **Länkspårningsvariabler** Ange de Adobe Analytics-variabler som du vill skicka till Adobe Analytics när någon klickar på länkarna. Avgränsa flera variabelnamn med kommatecken.
+* **Länkspårsvariabler** Ange de Adobe Analytics-variabler som du vill skicka till Adobe Analytics när någon klickar på länkarna. Avgränsa flera variabelnamn med kommatecken.
 
    Standardvärdet för `None` gör att inga variabeldata skickas.
 
@@ -243,7 +243,7 @@ Anropet ser ut så här när det visas med Adobe Marketing Cloud Debugger:
 1. Aktivera **Lämna frågesträng**.
 1. Läs in förhandsgranskningen på nytt och klicka på länken.
 
-Anropsinformationen som visas i felsökaren i Adobe Marketing Cloud liknar följande exempel:
+Samtalsinformationen som visas i Adobe Marketing Cloud Debugger liknar följande exempel:
 
 ![aa-leavequerysearch-active](assets/aa-leavequerysearch-active.png)
 
@@ -309,7 +309,7 @@ Konfigurera Adobe Analytics-ramverket för att aktivera ad hoc-länkspårning.
 
 Innan du kan konfigurera ad hoc-länkspårning för själva **textkomponenterna** måste följande konfigurationer ha implementerats:
 
-* Adobe [Analytics-ramverket är konfigurerat för att aktivera ad hoc-länkspårning](#enabling-ad-hoc-link-tracking).
+* [Adobe Analytics-ramverket är konfigurerat för att aktivera ad hoc-länkspårning](#enabling-ad-hoc-link-tracking).
 * Den [sida som innehåller **Text** -komponenten är kopplad till ramverket](/help/sites-administering/adobeanalytics-connect.md#associating-a-page-with-a-adobe-analytics-framework).
 
 Använd följande procedur för att konfigurera länkspårning för en **Text** -komponent:
@@ -324,7 +324,7 @@ Använd följande procedur för att konfigurera länkspårning för en **Text** 
 
    >[!NOTE]
    >
-   >Anpassad länkspårning visas som en separat åtgärd bredvid åtgärden Länka/Bryt länk (Analytics-ikon).
+   >Anpassad länkspårning visas som en separat åtgärd bredvid åtgärden Länka/Bryt länk (analysikonen).
    >
    >Den aktiveras bara när du har valt en giltig länk i textredigeraren.
 
@@ -332,7 +332,7 @@ Använd följande procedur för att konfigurera länkspårning för en **Text** 
 
 1. Aktivera **anpassad länkspårning** om du vill åsidosätta länkspårningskonfigurationen i Adobe Analytics-ramverket och aktivera länkspårning för den aktuella länken.
 
-1. (Valfritt) Om du vill spåra händelser med länkklickningen lägger du till händelsenamn för Adobe Analytics i fältet **Inkludera Adobe Analytics-variabler** . Separera flera händelsenamn med kommatecken, till exempel
+1. (Valfritt) Om du vill spåra händelser med länkklickningen lägger du till Adobe Analytics-händelsenamn i fältet **Inkludera Adobe Analytics-variabler** . Separera flera händelsenamn med kommatecken, till exempel
 
    `event1, event22`.
 
@@ -340,10 +340,12 @@ Använd följande procedur för att konfigurera länkspårning för en **Text** 
 
    * `*<Variable-name>*: *<Dynamic Value>*`
    * `*<Variable-name>*: *‘CONSTANT’*`
+
    I följande exempel visas varje format:
 
    * `eVar10:pagedata.title`
    * `prop1: ‘Aubergine'`
+
    Avgränsa flera värden med kommatecken.
 
 1. Välj **OK**.
