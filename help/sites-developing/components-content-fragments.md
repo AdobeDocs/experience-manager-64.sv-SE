@@ -1,8 +1,8 @@
 ---
 title: Komponenter för innehållsfragment
 seo-title: Komponenter för innehållsfragment
-description: AEM-innehållsfragment skapas och hanteras som sidoberoende resurser
-seo-description: AEM-innehållsfragment skapas och hanteras som sidoberoende resurser
+description: AEM innehållsfragment skapas och hanteras som sidoberoende resurser
+seo-description: AEM innehållsfragment skapas och hanteras som sidoberoende resurser
 uuid: 289ed9cb-9531-43a9-b0d8-a3499e2e9ee5
 contentOwner: Alison Heimoz
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,6 +12,9 @@ discoiquuid: 76b63c7c-f7ea-46be-8d10-6c1a30af2e2b
 pagetitle: Components for Content Fragments
 translation-type: tm+mt
 source-git-commit: ce717994831eb3ef90baaffa7413de50f671b07c
+workflow-type: tm+mt
+source-wordcount: '946'
+ht-degree: 1%
 
 ---
 
@@ -38,7 +41,7 @@ Se API:t för hantering av [innehållsfragment - klientsidan](/help/sites-develo
 >
 >I det här avsnittet beskrivs den ursprungliga komponenten som levererats för användning med innehållsfragment (**Content Fragment** i gruppen **General** ).
 
-Adobe Experience Manager-innehållsfragment (AEM) [skapas och hanteras som sidoberoende resurser](/help/assets/content-fragments.md). Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. [Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna](/help/sites-authoring/content-fragments.md). Du kan också använda en befintlig resurs för innehållsfragment genom [att dra den från resursläsaren till sidan](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page) (som för andra resursbaserade komponenter, som exempelvis image-konfigurationen för grundkomponenten). Komponenten för innehållsfragment som inte är klar att användas visar bara ett [element](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) i det refererade innehållsfragmentet. Med komponentdialogrutan kan du definiera [element, variationer och intervall för fragmentstycken](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) som du vill visa på sidan.
+Innehållsfragment i Adobe Experience Manager (AEM) [skapas och hanteras som sidoberoende resurser](/help/assets/content-fragments.md). Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. [Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna](/help/sites-authoring/content-fragments.md). Du kan också använda en befintlig resurs för innehållsfragment genom [att dra den från resursläsaren till sidan](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page) (som för andra resursbaserade komponenter, som exempelvis image-konfigurationen för grundkomponenten). Komponenten för innehållsfragment som inte är klar att användas visar bara ett [element](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) i det refererade innehållsfragmentet. Med komponentdialogrutan kan du definiera [element, variationer och intervall för fragmentstycken](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) som du vill visa på sidan.
 
 >[!NOTE]
 >
