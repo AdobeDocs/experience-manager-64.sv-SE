@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: f74d225e-0245-4d5a-bb93-0ee3f31557aa
 translation-type: tm+mt
 source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+workflow-type: tm+mt
+source-wordcount: '589'
+ht-degree: 2%
 
 ---
 
@@ -31,15 +34,16 @@ I den här övningen är alla sidor baserade på en enkel mall.
 1. I utforskarfönstret i CRXDE Lite
 
    * select `/apps/an-scf-sandbox/templates`
-   * **[!UICONTROL Skapa > Skapa mall]**
+   * **[!UICONTROL Create > Create Template]**
 
-1. I dialogrutan Skapa mall skriver du följande värden och klickar sedan på **[!UICONTROL Nästa]**:
+1. I dialogrutan Skapa mall skriver du följande värden och klickar sedan på **[!UICONTROL Next]**:
 
    * Etikett: `playpage`
    * Titel: `An SCF Sandbox Play Template`
    * Beskrivning: `An SCF Sandbox template for play pages`
    * Resurstyp: `an-scf-sandbox/components/playpage`
    * Rankning: &lt;lämna som standard>
+
    Etiketten används som nodnamn.
 
    Resurstypen visas som egenskap på `playpage`noden jcr:content `sling:resourceType`. Den identifierar komponenten (resursen) som återger innehållet när det begärs av en webbläsare.
@@ -50,13 +54,13 @@ I den här övningen är alla sidor baserade på en enkel mall.
 
 1. Om du använder kopiera/klistra in ska du kontrollera att värdet för Resurstyp inte har några inledande eller avslutande blanksteg.
 
-   Click **[!UICONTROL Next]**.
+   Klicka på **[!UICONTROL Next]**.
 
-1. &quot;Tillåtna sökvägar&quot; avser sökvägarna till sidor som använder den här mallen, så att mallen listas för dialogrutan **[!UICONTROL Ny sida]** .
+1. &quot;Tillåtna sökvägar&quot; avser sökvägarna till sidor som använder den här mallen, så att mallen visas för **[!UICONTROL New Page]** dialogrutan.
 
    Om du vill lägga till en bana klickar du på plusknappen `+` och skriver `/content(/.&ast;)?` i textrutan som visas. Om du använder kopiera/klistra in ska du se till att det inte finns några inledande eller avslutande blanksteg.
 
-   Obs!Värdet för den tillåtna egenskapen path är ett *reguljärt uttryck.* Innehållssidor som har en sökväg som matchar uttrycket kan använda mallen. I det här fallet matchar det reguljära uttrycket sökvägen till mappen **/content** och alla dess undersidor.
+   Obs! Värdet för den tillåtna egenskapen path är ett *reguljärt uttryck.* Innehållssidor som har en sökväg som matchar uttrycket kan använda mallen. I det här fallet matchar det reguljära uttrycket sökvägen till mappen **/content** och alla dess undersidor.
 
    När en författare skapar en sida nedan `/content`visas `playpage`mallen&quot;En SCF-sandlådesidmall&quot; i en lista med tillgängliga mallar som ska användas.
 
@@ -66,17 +70,17 @@ I den här övningen är alla sidor baserade på en enkel mall.
 
    ![chlimage_1-76](assets/chlimage_1-76.png)
 
-1. Click **[!UICONTROL Next]**.
+1. Klicka på **[!UICONTROL Next]**.
 
-   Klicka på **[!UICONTROL Nästa]** på panelen **[!UICONTROL Tillåtna överordnade]** .
+   Klicka **[!UICONTROL Next]** på **[!UICONTROL Allowed Parents]** panelen.
 
-   Klicka på **[!UICONTROL Nästa]** på panelerna **[!UICONTROL Tillåtna underordnade]** .
+   Klicka **[!UICONTROL Next]** på **[!UICONTROL Allowed Children]** panelerna.
 
-   Click **[!UICONTROL OK]**.
+   Klicka på **[!UICONTROL OK]**.
 
 1. När du har klickat på OK och skapat mallen visas röda trianglar i hörnen på egenskapsfliken för den nya `playpage`mallen. Dessa röda trianglar anger redigeringar som inte har sparats.
 
-   Klicka på **[!UICONTROL Spara alla]** för att spara den nya mallen i databasen.
+   Klicka **[!UICONTROL Save All]** för att spara den nya mallen i databasen.
 
    ![chlimage_1-77](assets/chlimage_1-77.png)
 
@@ -84,26 +88,27 @@ I den här övningen är alla sidor baserade på en enkel mall.
 
 Skapa den *komponent* som definierar innehållet och återger alla sidor som skapats baserat på [spelningssidmallen](#createthepagetemplate).
 
-1. Högerklicka i CRXDE Lite **`/apps/an-scf-sandbox/components`** och klicka på **[!UICONTROL Skapa > Komponent]**.
+1. Högerklicka **`/apps/an-scf-sandbox/components`** och klicka i CRXDE Lite **[!UICONTROL Create > Component]**.
 1. Genom att ställa in nodens namn (Label) på *uppspelningssidan*&#x200B;är sökvägen till komponenten
 
    `/apps/an-scf-sandbox/components/playpage`
 
    som motsvarar uppspelningssidmallens resurstyp (eventuellt minus den inledande **`/apps/`** delen av sökvägen).
 
-   I dialogrutan **[!UICONTROL Skapa komponent]** skriver du följande egenskapsvärden:
+   In the **[!UICONTROL Create Component]** dialog, type the following property values:
 
-   * Etikett: **uppspelningssida**
-   * Titel: **En SCF-sandlåda spelar upp komponent**
-   * Beskrivning: Det **här är den komponent som återger innehåll för en SCF-sandlådesida.**
+   * Etikett: **playpage**
+   * Titel: **En SCF-sandlådeuppspelningskomponent**
+   * Beskrivning: **Det här är den komponent som återger innehåll för en SCF-sandlådesida.**
    * Supertyp: *&lt;lämna tomt>*
    * Grupp:
+
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-1. Klicka på **[!UICONTROL Nästa]** tills panelen **[!UICONTROL Tillåtna underordnade]** i dialogrutan visas
+1. Klicka **[!UICONTROL Next]** tills **[!UICONTROL Allowed Children]** panelen i dialogrutan visas
 
-   * Click **[!UICONTROL OK]**
-   * Klicka på **[!UICONTROL Spara alla]**
+   * Klicka på **[!UICONTROL OK]**
+   * Klicka på **[!UICONTROL Save All]**
 
 1. Kontrollera att sökvägen till komponenten och resourceType för mallen matchar.
 
