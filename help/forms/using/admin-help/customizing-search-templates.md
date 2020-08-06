@@ -58,6 +58,7 @@ Du kan skapa så många sökmallar som behövs.
       * Välj en relationsoperator (till exempel &quot;vara lika med&quot;) i listan och ange operandvärdet i rutan bredvid.
       * (Valfritt) Om du vill att användare ska kunna ändra operandvärdet i arbetsytan väljer du Tillåt användaren att ändra operanden.
       * (Valfritt) Om du vill att användare ska kunna ändra relationsoperatorn markerar du Tillåt användaren att välja en annan relationsoperator. I listan som visas väljer du de operatorer som ska vara tillgängliga för användaren.
+
       **Tips**: *Om du valde Processnamn som element kan du klicka på ikonen bredvid operandfältet för att visa en lista där du kan välja en process som körs på formulärservern. När du har valt en process är alla processvariabler som definieras i den processen tillgängliga under Processvariabler i det övre avsnittet på fliken Kriterier.*
 
       **Tips**: *Du kan ta bort ett element från sökmallen genom att klicka på ikonen Ta bort bredvid elementets sökvillkor.*
@@ -68,6 +69,7 @@ Du kan skapa så många sökmallar som behövs.
    * Markera en process eller ett uppgiftselement och klicka på högerpilen för att flytta det till listan Kolumner att rapportera.
    * Markera process- eller uppgiftselementet i listan Kolumner att rapportera och klicka på uppilen eller nedpilen för att flytta det till sin plats i kolumnordningen. Kolumnrubrikerna i sökresultaten visas i den ordning som de listas här.
    * (Valfritt) Om du vill ändra namnet på elementet för kolumnrubriken markerar du elementet i listan Kolumner att rapportera och anger det nya namnet.
+
    >[!NOTE]
    >
    >Layouten som anges i sökmallen åsidosätter användarens inställningar som anges för kolumnrubriker i Workspace.
