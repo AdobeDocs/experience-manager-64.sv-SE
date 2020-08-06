@@ -12,6 +12,9 @@ discoiquuid: 410149d6-15bd-41e5-bdba-1d8e6eab7b87
 pagetitle: Communities Tools
 translation-type: tm+mt
 source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+workflow-type: tm+mt
+source-wordcount: '108'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
 
 Om du är författare kommer du åt verktygsgruppen Communities:
 
-* Från global navigering: **[!UICONTROL Verktyg > Communities]**
+* Från global navigering: **[!UICONTROL Tools > Communities]**
 
 ![chlimage_1-129](assets/chlimage_1-129.png)
 
