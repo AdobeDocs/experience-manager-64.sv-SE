@@ -1,6 +1,6 @@
 ---
-title: Använda AEM Document Services programmatiskt
-seo-title: Använda AEM Document Services programmatiskt
+title: Använda AEM dokumenttjänster programmatiskt
+seo-title: Använda AEM dokumenttjänster programmatiskt
 description: Lär dig hur du använder Document Services API:er för att digitalt signera, kryptera och generera PDF-dokument.
 seo-description: Lär dig hur du använder Document Services API:er för att digitalt signera, kryptera och generera PDF-dokument.
 uuid: bf5ee197-4daf-4a64-8b6d-2c0d1f232b1c
@@ -17,9 +17,9 @@ ht-degree: 1%
 ---
 
 
-# Använda AEM Document Services programmatiskt {#using-aem-document-services-programmatically}
+# Använda AEM dokumenttjänster programmatiskt {#using-aem-document-services-programmatically}
 
-Klientklasser som krävs för att skapa Maven-projekt med hjälp av AEM Document Services finns i [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar. Mer information om maven-projekt finns i [hur du skapar AEM-projekt med Maven](/help/sites-developing/ht-projects-maven.md).
+Klientklasser som krävs för att skapa Maven Projects med AEM Document Services finns i [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar. Mer information om maven-projekt finns i [hur du bygger AEM med Maven](/help/sites-developing/ht-projects-maven.md).
 
 >[!NOTE]
 >
@@ -31,7 +31,7 @@ Tjänsten DocAssurance innehåller följande tjänster:
 
 * Signaturtjänst
 * Krypteringstjänst
-* Tjänsten Reader Extension
+* Reader Extension Service
 
 Du kan utföra följande åtgärder med tjänsten DocAssurance:
 
@@ -1035,7 +1035,7 @@ public class ModifySignatureField {
 Du kan skydda ett PDF-dokument genom att certifiera det med en viss typ av signatur som kallas certifierad signatur. En certifierad signatur skiljer sig från en digital signatur på följande sätt:
 
 * Det måste vara den första signaturen som tillämpas på PDF-dokumentet. När den certifierade signaturen tillämpas måste andra signaturfält i dokumentet alltså vara osignerade. Endast en certifierad signatur tillåts i ett PDF-dokument. Om du vill signera och certifiera ett PDF-dokument certifierar du det innan du signerar det. När du har certifierat ett PDF-dokument kan du signera ytterligare signaturfält digitalt.
-* Författaren eller författaren till dokumentet kan ange att dokumentet kan ändras på vissa sätt utan att den certifierade signaturen blir ogiltig. Dokumentet kan t.ex. tillåta ifyllnad av formulär eller kommentarer. Om författaren anger att en viss ändring inte är tillåten, begränsar Acrobat användarna från att ändra dokumentet på det sättet. Om sådana ändringar görs är den certifierade signaturen ogiltig. Dessutom får Acrobat en varning när en användare öppnar dokumentet. (Med icke-certifierade signaturer förhindras inte ändringar och normala redigeringsåtgärder gör inte den ursprungliga signaturen ogiltig.)
+* Författaren eller författaren till dokumentet kan ange att dokumentet kan ändras på vissa sätt utan att den certifierade signaturen blir ogiltig. Dokumentet kan t.ex. tillåta ifyllnad av formulär eller kommentarer. Om författaren anger att en viss ändring inte är tillåten, begränsar Acrobat användare från att ändra dokumentet på det sättet. Om sådana ändringar görs är den certifierade signaturen ogiltig. Dessutom skickar Acrobat en varning när en användare öppnar dokumentet. (Med icke-certifierade signaturer förhindras inte ändringar och normala redigeringsåtgärder gör inte den ursprungliga signaturen ogiltig.)
 * Vid tidpunkten för signering genomsöks dokumentet efter specifika typer av innehåll som kan göra innehållet i ett dokument tvetydigt eller vilseledande. En anteckning kan t.ex. dölja text på en sida som är viktig för att förstå vad som certifieras. En förklaring (juridisk attestering) kan ges om sådant innehåll.
 
 **Syntax**:
@@ -1067,7 +1067,7 @@ secureDocument(Document inDoc, EncryptionOptions encryptionOptions,
   </tr> 
   <tr> 
    <td><code>readerExtensionOptions</code></td> 
-   <td>Inkluderar de alternativ som krävs för Reader Extending a PDF document</td> 
+   <td>Inkluderar de alternativ som krävs för att utöka ett PDF-dokument i Reader</td> 
   </tr> 
   <tr> 
    <td><code>unlockOptions</code></td> 
@@ -1366,9 +1366,9 @@ Dessutom innehåller listor över återkallade certifikat information om certifi
 
 **Tillämpa användningsbehörighet för PDF-dokument**
 
-Du kan lägga in användarrättigheter i PDF-dokument med Reader Extensions Java Client API och webbtjänsten. Användningsrättigheterna gäller funktioner som är tillgängliga som standard i Acrobat men inte i Adobe Reader, t.ex. möjligheten att lägga till kommentarer i ett formulär eller att fylla i formulärfält och spara formuläret. PDF-dokument som har användarrättigheter är aktiverade. En användare som öppnar ett rättighetsaktiverat dokument i Adobe Reader kan utföra åtgärder som är aktiverade för det specifika dokumentet.
+Du kan lägga till användningsrättigheter i PDF-dokument med hjälp av Java Client-API:t för Reader Extensions och webbtjänsten. Användningsrättigheterna gäller funktioner som är tillgängliga som standard i Acrobat men inte i Adobe Reader, t.ex. möjligheten att lägga till kommentarer i ett formulär eller att fylla i formulärfält och spara formuläret. PDF-dokument som har användarrättigheter är aktiverade. En användare som öppnar ett rättighetsaktiverat dokument i Adobe Reader kan utföra åtgärder som är aktiverade för det specifika dokumentet.
 
-Innan du kan Reader-utöka ett PDF-dokument med ett certifikat måste du se till att du lägger till certifikatet i AEM Keystore.
+Innan du kan Reader utöka ett PDF-dokument med ett certifikat måste du se till att du lägger till certifikatet AEM Keystore.
 
 **Signera PDF-dokument digitalt**
 
@@ -1402,7 +1402,7 @@ Författaren eller författaren till dokumentet kan ange att dokumentet kan änd
 
 Dokumentet kan t.ex. tillåta ifyllnad av formulär eller kommentarer. Om författaren anger att en viss ändring inte är tillåten,
 
-Acrobat hindrar användare från att ändra dokumentet på det sättet. Om sådana ändringar görs, t.ex. om ett annat program används, är den certifierade signaturen ogiltig och Acrobat utfärdar en varning när en användare öppnar dokumentet. (Med icke-certifierade signaturer förhindras inte ändringar och normala redigeringsåtgärder gör inte den ursprungliga signaturen ogiltig.)
+Acrobat hindrar användare från att ändra dokumentet på det sättet. Om sådana ändringar görs, t.ex. om ett annat program används, är den certifierade signaturen ogiltig och Acrobat skickar en varning när en användare öppnar dokumentet. (Med icke-certifierade signaturer förhindras inte ändringar och normala redigeringsåtgärder gör inte den ursprungliga signaturen ogiltig.)
 
 Vid tidpunkten för signering genomsöks dokumentet efter specifika typer av innehåll som kan göra innehållet i ett dokument tvetydigt eller vilseledande.
 
@@ -1445,7 +1445,7 @@ secureDocument(Document inDoc,
   </tr> 
   <tr> 
    <td><code>readerExtensionOptions</code></td> 
-   <td>Inkluderar de alternativ som krävs för Reader Extending a PDF Doc</td> 
+   <td>Inkluderar de alternativ som krävs för att Reader ska kunna utöka ett PDF-dokument</td> 
   </tr> 
   <tr> 
    <td><code>unlockOptions</code></td> 
@@ -1454,7 +1454,7 @@ secureDocument(Document inDoc,
  </tbody> 
 </table>
 
-**Exempel 1**: Det här exemplet används för att utföra lösenordskryptering, certifiera ett signaturfält och Reader-utöka PDF-dokumentet.
+**Exempel 1**: Det här exemplet används för att utföra lösenordskryptering, certifiera ett signaturfält och Reader för att utöka PDF-dokumentet.
 
 ```
 /*************************************************************************
@@ -1756,7 +1756,7 @@ public class PassEncryptCertifyExtend {
 }
 ```
 
-**Exempel 2**: Det här exemplet används för att utföra PKI-kryptering, signera ett signaturfält och Reader-utöka PDF-dokumentet.
+**Exempel 2**: Det här exemplet används för att utföra PKI-kryptering, signera ett signaturfält och Reader utöka PDF-dokumentet.
 
 ```java
 /*************************************************************************
@@ -2735,7 +2735,7 @@ public class VerifyFieldEncryptedPDF {
 
 ### Verifiera flera digitala signaturer {#verifying-multiple-digital-signatures}
 
-Med AEM kan du verifiera digitala signaturer i PDF-dokument. Ett PDF-dokument kan innehålla flera digitala signaturer om det genomgår en affärsprocess som kräver signaturer från flera signerare. En finansiell transaktion kräver till exempel underskrifter av både lånechefen och förvaltaren. Du kan använda API:t för signaturtjänsten för att verifiera alla signaturer i PDF-dokumentet. När du verifierar flera digitala signaturer kan du kontrollera status och egenskaper för varje signatur. Innan du litar på en digital signatur bör du verifiera den.
+AEM kan du verifiera digitala signaturer i PDF-dokument. Ett PDF-dokument kan innehålla flera digitala signaturer om det genomgår en affärsprocess som kräver signaturer från flera signerare. En finansiell transaktion kräver till exempel underskrifter av både lånechefen och förvaltaren. Du kan använda API:t för signaturtjänsten för att verifiera alla signaturer i PDF-dokumentet. När du verifierar flera digitala signaturer kan du kontrollera status och egenskaper för varje signatur. Innan du litar på en elektronisk underskrift rekommenderar Adobe att du kontrollerar den.
 
 **Syntax**: `verifyDocument(Document doc, RevocationCheckStyle revocationCheckStyle, VerificationTime verificationTime, ValidationPreferences prefStore, ResourceResolver resourceResolver)`
 
@@ -3389,7 +3389,7 @@ public class GetPDFEncryption {
 
 ### Tar bort lösenordskryptering från PDF {#removing-password-encryption-from-pdf}
 
-Ta bort lösenordsbaserad kryptering från ett PDF-dokument så att användarna kan öppna PDF-dokumentet i Adobe Reader eller Acrobat utan att behöva ange något lösenord. När du har tagit bort lösenordsbaserad kryptering från ett PDF-dokument är dokumentet inte längre säkert.
+Ta bort lösenordsbaserad kryptering från ett PDF-dokument så att användarna kan öppna PDF-dokumentet i Adobe Reader eller Acrobat utan att behöva ange ett lösenord. När du har tagit bort lösenordsbaserad kryptering från ett PDF-dokument är dokumentet inte längre säkert.
 
 **Syntax**: `Document removePDFPasswordSecurity (Document inDoc,String password)`
 
@@ -4449,7 +4449,7 @@ GeneratePDFService innehåller API:er för konvertering av olika filformat, till
 
 >[!NOTE]
 >
->API:t för HTMLtoPDF är inaktuellt för AEM Forms-servern som körs på AIX-operativsystemet.
+>API:t för HTMLtoPDF är inaktuellt för AEM Forms-servrar som körs på AIX-operativsystem.
 
 #### PDF Generator API finns för Microsoft Windows och Linux {#pdf-generator-api-available-on-microsoft-windows-and-linux}
 
@@ -4624,7 +4624,7 @@ File createPDF(File inputFile, String inputFilename, String fileTypeSettings, St
 
 #### exportPDF {#exportpdf}
 
-Konverterar ett PDF-dokument till en filtyp som stöds. Metoden godkänner en PDF-fil som indata och exporterar innehållet i PDF-filen i angivet filformat.
+Konverterar ett PDF-dokument till en filtyp som stöds. Metoden godkänner en PDF-fil som indata och exporterar innehållet i PDF-filen i det angivna filformatet.
 
 CreatePDF-tjänsten returnerar en java.util.Map med resultat. Kartans nycklar är:
 
@@ -4900,7 +4900,7 @@ File htmlToPdf(String inputUrl, String fileTypeSettingsName, String securitySett
 
 ### DistillerService {#distillerservice}
 
-Distiller konverterar PostScript-, Encapsulated PostScript- (EPS) och skrivartextfiler (PRN) till PDF-filer. Distiller-tjänsten används ofta för att konvertera stora volymer tryckta dokument till elektroniska dokument, till exempel fakturor och kontoutdrag. När man konverterar dokument till PDF kan man också skicka en pappersversion och en elektronisk version av ett dokument till sina kunder. De filformat som stöds är .ps, .eps och .prn. Tjänsten stöder följande API:
+Distiller konverterar PostScript-, Encapsulated PostScript- (EPS) och skrivartextfiler (PRN) till PDF-filer. Distiller-tjänsten används ofta för att konvertera stora volymer tryckta dokument till elektroniska dokument, som fakturor och kontoutdrag. När man konverterar dokument till PDF kan man också skicka en pappersversion och en elektronisk version av ett dokument till sina kunder. De filformat som stöds är .ps, .eps och .prn. Tjänsten stöder följande API:
 
 CreatePDF-tjänsten returnerar en java.util.Map med resultat. Kartans nycklar är:
 
