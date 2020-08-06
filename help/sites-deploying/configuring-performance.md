@@ -11,6 +11,9 @@ topic-tags: configuring
 discoiquuid: 80118cd1-73e1-4675-bbdf-85d66d150abc
 translation-type: tm+mt
 source-git-commit: c4ac10736c937198aa0c81ecf547dd489ef93366
+workflow-type: tm+mt
+source-wordcount: '6722'
+ht-degree: 1%
 
 ---
 
@@ -41,6 +44,7 @@ Den här miljön innehåller innehåll som du gör tillgängligt för användarn
 >
 >* När du har konfigurerat för prestandaoptimering följer du procedurerna i [Tough Day](/help/sites-developing/tough-day.md) för att testa miljön under tung belastning.
 >* Se även [Prestandajusteringstips](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html).
+
 >
 
 
@@ -226,11 +230,11 @@ När bilder (eller DAM-resurser i allmänhet) överförs, importeras bilderna au
 Arbetsflödesmotorn använder Apache Sling-jobbköer för hantering och schemaläggning av bearbetning av arbetsobjekt. Följande jobbkötjänster har skapats som standard från tjänsten Apache Sling Job Queue Configuration för bearbetning av arbetsflödesjobb:
 
 * Begränsa arbetsflödeskö: De flesta arbetsflödesstegen, till exempel de som bearbetar DAM-resurser, använder tjänsten Begränsa arbetsflödeskö.
-* Begränsa arbetsflöde för extern processjobbkö: Den här tjänsten används för särskilda externa arbetsflödessteg som vanligtvis används för att kontakta ett externt system och avfråga resultat. Exempel: InDesign Media Extraction Process-steget implementeras som en extern process. Arbetsflödesmotorn använder den externa kön för att bearbeta avsökningen. (Se [com.day.cq.workflow.exec.WorkflowExternalProcess](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html).)
+* Begränsa arbetsflöde för extern processjobbkö: Den här tjänsten används för särskilda externa arbetsflödessteg som vanligtvis används för att kontakta ett externt system och avfråga resultat. InDesign Media Extraheringsprocess-steget implementeras till exempel som en extern process. Arbetsflödesmotorn använder den externa kön för att bearbeta avsökningen. (Se [com.day.cq.workflow.exec.WorkflowExternalProcess](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html).)
 
 Konfigurera de här tjänsterna för att begränsa antalet arbetsflödesprocesser som körs samtidigt.
 
-**** Obs! När du konfigurerar dessa jobbköer påverkas alla arbetsflöden såvida du inte har skapat en jobbkö för en viss arbetsflödesmodell (se [Konfigurera kön för en viss arbetsflödesmodell](/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow) nedan).
+**Obs!** När du konfigurerar dessa jobbköer påverkas alla arbetsflöden såvida du inte har skapat en jobbkö för en viss arbetsflödesmodell (se [Konfigurera kön för en viss arbetsflödesmodell](/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow) nedan).
 
 **Konfiguration i databasen**
 
@@ -367,7 +371,7 @@ Baserat på följande principer.
 
 **Transaktioner**
 
-* Termen transaktion används för att representera begäran om en hel webbsida, inklusive själva sidan och alla efterföljande anrop. dvs. sidförfrågan, eventuella AJAX-anrop, bilder och andra objekt.**Begär detaljgranskning nedåt**
+* Termen transaktion används för att representera begäran om en hel webbsida, inklusive själva sidan och alla efterföljande anrop. dvs. sidförfrågan, eventuella AJAX anrop, bilder och andra objekt.**Begär detaljgranskning nedåt**
 * Om du vill analysera varje begäran fullständigt kan du representera varje element i anropsstacken och sedan summera den genomsnittliga bearbetningstiden för varje.
 
 ### Definiera prestandamål {#defining-the-performance-goals}
@@ -378,7 +382,7 @@ Du måste testa prestanda både under normala förhållanden och under toppförh
 
 Alla erfarenheter och all statistik som du har samlat in från en befintlig webbplats kan också vara användbara när du ska fastställa framtida mål. till exempel topptrafik från din webbplats.
 
-#### Enkomponentstester {#single-component-tests}
+#### Enstaka komponenttester {#single-component-tests}
 
 Viktiga komponenter måste testas - både under medelförhållanden och under högbelastningsförhållanden.
 
@@ -422,7 +426,7 @@ Under de första dagarna efter det att webbplatsen har tillgängliggjorts kan du
 
 #### Felscenariotest {#error-scenario-tests}
 
-Felscenarier måste också testas för att säkerställa att systemet reagerar korrekt och korrekt. Inte bara hur själva felet hanteras, utan även hur det kan påverka prestandan. Exempel:
+Felscenarier måste också testas för att säkerställa att systemet reagerar korrekt och korrekt. Inte bara hur själva felet hanteras, utan även hur det kan påverka prestandan. Till exempel:
 
 * vad som händer när användaren försöker ange ett ogiltigt sökord i sökrutan
 * vad som händer när söktermen är så allmän att den returnerar ett stort antal resultat
@@ -481,11 +485,11 @@ När alla tester är klara vill du rapportera om:
 
 ## Optimera prestanda när du använder Dispatcher {#optimizing-performance-when-using-the-dispatcher}
 
-Dispatcher [är](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) Adobes verktyg för cachelagring och/eller belastningsutjämning. När du använder Dispatcher bör du överväga att optimera webbplatsen för cacheprestanda.
+Dispatcher [](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) är AdobeCaching och/eller belastningsutjämningsverktyg. När du använder Dispatcher bör du överväga att optimera webbplatsen för cacheprestanda.
 
 >[!NOTE]
 >
->Dispatcher-versionerna är oberoende av AEM, men Dispatcher-dokumentationen är inbäddad i AEM-dokumentationen. Använd alltid Dispatcher-dokumentationen som är inbäddad i dokumentationen för den senaste versionen av AEM.
+>Dispatcher-versionerna är oberoende av AEM, men Dispatcher-dokumentationen är inbäddad i AEM. Använd alltid Dispatcher-dokumentationen som är inbäddad i dokumentationen för den senaste versionen av AEM.
 >
 >Du kan ha omdirigerats till den här sidan om du har följt en länk till Dispatcher-dokumentationen som är inbäddad i dokumentationen för en tidigare version av AEM.
 
@@ -497,6 +501,7 @@ Dispatcher har ett antal inbyggda funktioner som du kan använda för att optime
 >
 >* kan cachelagra allt som du kan lagra som en sida och begära med en URL
 >* kan inte lagra andra saker, som cookies, sessionsdata och formulärdata.
+
 >
 >
 I allmänhet handlar många cachelagringsstrategier om att välja bra URL:er och inte förlita sig på dessa ytterligare data.
@@ -528,7 +533,7 @@ Om du inte har en till en utgivare/utgivare måste du lägga ihop förfrågninga
 
 Med Dispatcher version 4.1.11 kan du cachelagra svarshuvuden. Om du inte cachelagrar svarshuvuden i Dispatcher kan problem uppstå om du lagrar sidkodningsinformation i sidhuvudet. I det här fallet används webbserverns standardkodning för sidan när Dispatcher visar en sida från cachen. Det finns två sätt att undvika det här problemet:
 
-* Om du bara använder en kodning kontrollerar du att kodningen som används på webbservern är densamma som standardkodningen på AEM-webbplatsen.
+* Om du bara använder en kodning kontrollerar du att den kodning som används på webbservern är densamma som standardkodningen för den AEM webbplatsen.
 * Använd en `<META>` -tagg i HTML- `head` avsnittet för att ställa in kodningen, som i följande exempel:
 
 ```xml
@@ -588,7 +593,7 @@ Du kan till exempel lagra titeln för sidan myPage.html i filen myPage.title.gif
 
 >[!NOTE]
 >
->Bildfilen finns inte nödvändigtvis fysiskt på AEM-instansen. Du kan använda ett skript som skapar bildfilen dynamiskt. Dispatcher lagrar sedan filen på webbservern.
+>Bildfilen finns inte nödvändigtvis fysiskt på AEM. Du kan använda ett skript som skapar bildfilen dynamiskt. Dispatcher lagrar sedan filen på webbservern.
 
 #### Ogiltiga bildfiler som används för navigering {#invalidating-image-files-used-for-navigation}
 
@@ -617,6 +622,7 @@ Dispatcher kan inte cachelagra anpassade data, så vi rekommenderar att du begr�
 >
 >* Använd iFrames för att dela upp sidan i en del som är densamma för alla användare och en del som är densamma för alla sidor i användaren. Du kan sedan cachelagra båda dessa delar.
 >* använda JavaScript på klientsidan för att visa personlig information. Du måste dock se till att sidan fortfarande visas korrekt om en användare stänger av JavaScript.
+
 >
 
 
@@ -632,14 +638,14 @@ Det finns två sätt som en webbläsare kan använda för att avgöra vilken typ
 1. Genom filtillägg (t.ex. .html, .gif, .jpg osv.)
 1. Med MIME-typen som servern skickar med filen.
 
-För de flesta filer används MIME-typen i filtillägget. dvs.:
+För de flesta filer används MIME-typen i filtillägget. i.e.:
 
 1. Genom filtillägg (t.ex. .html, .gif, .jpg osv.)
 1. Med MIME-typen som servern skickar med filen.
 
 Om filnamnet inte har något filtillägg visas det som oformaterad text.
 
-Med Dispatcher version 4.1.11 kan du cachelagra svarshuvuden. Om du inte cachelagrar svarshuvuden på Dispatcher bör du vara medveten om att MIME-typen är en del av HTTP-huvudet. Om ditt AEM-program returnerar filer som inte har ett känt filslut, och i stället använder MIME-typen, kan dessa filer visas felaktigt.
+Med Dispatcher version 4.1.11 kan du cachelagra svarshuvuden. Om du inte cachelagrar svarshuvuden på Dispatcher bör du vara medveten om att MIME-typen är en del av HTTP-huvudet. Om ditt AEM returnerar filer som inte har ett känt filslut, och i stället använder MIME-typen, kan dessa filer visas felaktigt.
 
 Följ dessa riktlinjer för att vara säker på att filerna cachelagras korrekt:
 
@@ -675,7 +681,7 @@ Följande tabell visar storleken på datavolymer som används i prestandatestern
  <tbody> 
   <tr> 
    <td><strong>Innehåll</strong></td> 
-   <td><strong>Noder</strong></td> 
+   <td><strong>Nodes</strong></td> 
    <td><strong>Sidor</strong></td> 
    <td><strong>Bilder</strong></td> 
    <td><strong>Taggar</strong></td> 
@@ -704,7 +710,7 @@ Följande tabell visar storleken på datavolymer som används i prestandatestern
  </tbody> 
 </table>
 
-Prestandatestvärdet för säkerhetskopiering upprepas med ytterligare innehållsuppsättningar som läggs till vid varje upprepning.
+Prestandatestvärdet för säkerhetskopiering upprepas med ytterligare innehållsuppsättningar som läggs till vid varje repetition.
 
 #### Benchmark-scenarier {#benchmark-scenarios}
 
@@ -718,7 +724,7 @@ Tidpunkter för säkerhetskopiering och storlek för säkerhetskopieringen hämt
 
 Inläsningen består av sidor som skapar/tar bort, bläddrar och frågor där större delen av inläsningen kommer från sidbläddringar och frågor. Om du lägger till och tar bort för många sidor ökar arbetsytans storlek kontinuerligt och förhindrar att säkerhetskopiorna slutförs. Distributionen av den last som skriptet ska använda är 75 % sidöverföringar, 24 % frågor och 1 % sidskapande (en nivå utan kapslade undersidor). Maximalt medelvärde för transaktioner per sekund i ett system som är inaktivt uppnås med fyra samtidiga trådar, vilket är vad som kommer att användas vid testning av säkerhetskopior under inläsning.
 
-Inläsningens inverkan på säkerhetskopieringsprestanda kan uppskattas av skillnaden mellan prestanda med och utan den här programinläsningen. Effekten av säkerhetskopieringen på programmets dataflöde hittas genom att man jämför scenariogenomströmningen i transaktioner per timme med och utan en pågående säkerhetskopiering, och med säkerhetskopieringar som körs med olika inställningar för fördröjning av säkerhetskopiering.
+Inläsningens inverkan på säkerhetskopieringsprestanda kan uppskattas av skillnaden mellan prestanda med och utan den här programinläsningen. Effekten av säkerhetskopieringen på programmets dataflöde hittas genom att man jämför scenariogenomströmningen i transaktioner per timme med och utan en pågående samtidig säkerhetskopiering och med säkerhetskopieringar som körs med olika inställningar för fördröjning av säkerhetskopiering.
 
 **Fördröjningsinställning** För flera av scenarierna varierade vi även fördröjningsinställningen för säkerhetskopiering med värden på 10 ms (standard), 1 ms och 0 ms, för att undersöka hur den här inställningen påverkade säkerhetskopieringens prestanda.
 
