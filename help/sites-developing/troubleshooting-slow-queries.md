@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: c01e42ff-e338-46e6-a961-131ef943ea91
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '2267'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +44,7 @@ Eftersom varje potentiellt resultat måste kontrolleras, växer kostnaden för a
 
 Genom att lägga till frågebegränsningar och justera index kan indexdata lagras i ett optimerat format som ger snabb resultathämtning och minskar eller eliminerar behovet av linjär kontroll av potentiella resultatuppsättningar.
 
-I AEM 6.3 misslyckas frågan som standard när en genomgång på 100 000 nås och ett undantag genereras. Den här gränsen finns inte som standard i tidigare AEM-versioner än AEM 6.3, men den kan ställas in via konfigurationen OSGi för Apache Jackrabbit Query Engine Settings och JMX-böna för QueryEngineSettings (egenskapen LimitReads).
+I AEM 6.3 misslyckas frågan som standard när en genomgång på 100 000 nås och ett undantag genereras. Den här gränsen finns inte som standard i AEM versioner före AEM 6.3, men kan anges via konfigurationen OSGi för Apache Jackrabbit Query Engine Settings och JMX-böna för QueryEngineSettings (egenskapen LimitReads).
 
 ### Identifiera indexlösa frågor {#detecting-index-less-queries}
 
@@ -49,7 +52,7 @@ I AEM 6.3 misslyckas frågan som standard när en genomgång på 100 000 nås oc
 
 Förklara **alla** frågor och se till att deras frågeplaner inte innehåller **/&amp;ast; gå igenom** förklaringar i dem. Exempel på genomgång av frågeplan:
 
-* **** PLAN: `[nt:unstructured] as [a] /* traverse "/content//*" where ([a].[unindexedProperty] = 'some value') and (isdescendantnode([a], [/content])) */`
+* **PLAN:** `[nt:unstructured] as [a] /* traverse "/content//*" where ([a].[unindexedProperty] = 'some value') and (isdescendantnode([a], [/content])) */`
 
 #### Efter distribution {#post-deployment}
 
@@ -58,7 +61,7 @@ Förklara **alla** frågor och se till att deras frågeplaner inte innehåller *
    * `*INFO* org.apache.jackrabbit.oak.query.QueryImpl Traversal query (query without index) ... ; consider creating and index`
    * Det här meddelandet loggas bara om det inte finns något index tillgängligt och om frågan eventuellt går igenom många noder. Meddelanden loggas inte om ett index är tillgängligt, men mängden att gå igenom är liten och därmed snabb.
 
-* Besök åtgärdskonsolen för AEM [Query Performance](/help/sites-administering/operations-dashboard.md#query-performance) och [förklara](/help/sites-administering/operations-dashboard.md#explain-query) långsamma frågor som letar efter stegvisa eller inga indexfrågor.
+* Besök åtgärdskonsolen för AEM [frågeprestanda](/help/sites-administering/operations-dashboard.md#query-performance) och [förklara](/help/sites-administering/operations-dashboard.md#explain-query) långsamma frågor som letar efter en genomgång eller inga indexfrågeförklaringar.
 
 ### Identifierar dåligt begränsade frågor {#detecting-poorly-restricted-queries}
 
@@ -69,7 +72,7 @@ Förklara alla frågor och kontrollera att de matchar ett index som justerats f�
 * Den idealiska frågeplanens täckning gäller `indexRules` för alla egenskapsbegränsningar och minst för de tätaste egenskapsbegränsningarna i frågan.
 * Frågor som sorterar resultat bör matchas till ett Lucene-egenskapsindex med indexregler för de sorterade efter egenskaper som anges `orderable=true.`
 
-#### Standardvärdet `cqPageLucene` har till exempel ingen indexregel för `jcr:content/cq:tags`{#for-example-the-default-cqpagelucene-does-not-have-an-index-rule-for-jcr-content-cq-tags}
+#### Standardvärdet `cqPageLucene` har till exempel ingen indexregel för `jcr:content/cq:tags` {#for-example-the-default-cqpagelucene-does-not-have-an-index-rule-for-jcr-content-cq-tags}
 
 Innan indexregeln cq:tags läggs till
 
@@ -80,6 +83,7 @@ Innan indexregeln cq:tags läggs till
 * **Fråga i Frågebyggaren**
 
    * 
+
       ```
       type=cq:Page
        property=jcr:content/cq:tags
@@ -90,13 +94,14 @@ Innan indexregeln cq:tags läggs till
 
    * `[cq:Page] as [a] /* lucene:cqPageLucene(/oak:index/cqPageLucene) *:* where [a].[jcr:content/cq:tags] = 'my:tag' */`
 
-Den här frågan löses till `cqPageLucene` indexvärdet, men eftersom det inte finns någon egenskapsindexregel för `jcr:content` eller `cq:tags`, när begränsningen utvärderas, kontrolleras alla poster i `cqPageLucene` indexet för att avgöra en matchning. Det innebär att om indexet innehåller 1 miljon `cq:Page` noder kontrolleras 1 miljon poster för att bestämma resultatet.
+Frågan löses till `cqPageLucene` indexvärdet, men eftersom det inte finns någon egenskapsindexregel för `jcr:content` eller `cq:tags`, när begränsningen utvärderas, kontrolleras alla poster i `cqPageLucene` indexet för att avgöra en matchning. Det innebär att om indexet innehåller 1 miljon `cq:Page` noder kontrolleras 1 miljon poster för att bestämma resultatet.
 
 När indexregeln cq:tags lagts till
 
 * **cq:taggindexregel**
 
    * 
+
       ```
       /oak:index/cqPageLucene/indexRules/cq:Page/properties/cqTags
        @name=jcr:content/cq:tags
@@ -106,6 +111,7 @@ När indexregeln cq:tags lagts till
 * **Fråga i Frågebyggaren**
 
    * 
+
       ```
       type=cq:Page
        property=jcr:content/cq:tags
@@ -156,7 +162,7 @@ Detta hjälper till att undvika resurskrävande frågor (t.ex. som inte backas u
    * `*WARN* ... java.lang.UnsupportedOperationException: The query read more than 500000 nodes in memory. To avoid running out of memory, processing was stopped`
    * Optimera frågan för att minska heap-minnesanvändningen
 
-För AEM 6.0-6.2-versioner kan du justera tröskelvärdet för nodgenomgång via JVM-parametrar i AEM-startskriptet för att förhindra att stora frågor överbelastar miljön. Rekommenderade värden är:
+I AEM 6.0-6.2 kan du justera tröskelvärdet för nodgenomgång via JVM-parametrar i AEM startskript för att förhindra att stora frågor överbelastar miljön. Rekommenderade värden är:
 
 * `-Doak.queryLimitInMemory=500000`
 * `-Doak.queryLimitReads=100000`
@@ -167,7 +173,7 @@ Mer information finns under: [https://jackrabbit.apache.org/oak/docs/query/query
 
 ## Justering av frågeprestanda {#query-performance-tuning}
 
-Motto för prestandaoptimering av frågor i AEM är:
+Motto för optimering av frågeprestanda i AEM är:
 
 **&quot;Ju fler begränsningar, desto bättre.&quot;**
 
@@ -181,13 +187,14 @@ AEM stöder följande frågespråk:
 * JCR-SQL2
 * XPath
 
-I följande exempel används Query Builder som det vanligaste frågespråket som används av AEM-utvecklare, men samma principer gäller för JCR-SQL2 och XPath.
+I följande exempel används Query Builder som det vanligaste frågespråket som används av AEM utvecklare, men samma principer gäller för JCR-SQL2 och XPath.
 
 1. Lägg till en nodetypbegränsning så att frågan löses till ett befintligt Lucene-egenskapsindex.
 
    * **Ooptimerad fråga**
 
       * 
+
          ```
           property=jcr:content/contentType
           property.value=article-page
@@ -195,20 +202,22 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
    * **Optimerad fråga**
 
       * 
+
          ```
           type=cq:Page 
           property=jcr:content/contentType 
           property.value=article-page
          ```
-   Frågor som saknar en begränsning av nodtyp tvingar AEM att använda `nt:base` nodtypen, som alla noder i AEM är en undertyp till, vilket i själva verket inte leder till några begränsningar av nodtypen.
+   Frågor som saknar begränsningseffekt för nodetype AEM att använda `nt:base` nodtype, som alla noder i AEM är en undertyp till, vilket i praktiken inte resulterar i någon nodtype-begränsning.
 
-   När du anger `type=cq:Page` begränsas frågan till endast `cq:Page` noder och frågan tolkas som cqPageLucene i AEM, vilket begränsar resultatet till en delmängd av noder (endast `cq:Page` noder) i AEM.
+   Om du anger `type=cq:Page` begränsas frågan till endast `cq:Page` noder och frågan tolkas till AEM cqPageLucene, vilket begränsar resultatet till en delmängd av noder (endast `cq:Page` noder) i AEM.
 
 1. Justera frågans nodetypbegränsning så att frågan matchar ett befintligt Lucene-egenskapsindex.
 
    * **Ooptimerad fråga**
 
       * 
+
          ```
          type=nt:hierarchyNode
          property=jcr:content/contentType
@@ -217,6 +226,7 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
    * **Optimerad fråga**
 
       * 
+
          ```
          type=cq:Page
          property=jcr:content/contentType
@@ -226,13 +236,15 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
 
    * Annan nod ärver från `nt:hierarchyNode` (t.ex. `dam:Asset`) som lägger till i onödan till de potentiella resultaten.
    * Det finns inget AEM-angivet index för `nt:hierarchyNode`, men eftersom det finns ett angivet index för `cq:Page`.
-   När du anger `type=cq:Page` begränsas frågan till endast `cq:Page` noder och frågan tolkas som cqPageLucene i AEM, vilket begränsar resultatet till en delmängd av noder (endast cq:Page-noder) i AEM.
+
+   När du anger `type=cq:Page` begränsas frågan till endast `cq:Page` noder och frågan tolkas till AEM cqPageLucene, vilket begränsar resultatet till en delmängd av noder (endast cq:Page-noder) i AEM.
 
 1. Du kan också justera egenskapsbegränsningar så att frågan matchar ett befintligt egenskapsindex.
 
    * **Ooptimerad fråga**
 
       * 
+
          ```
          property=jcr:content/contentType
          property.value=article-page
@@ -240,6 +252,7 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
    * **Optimerad fråga**
 
       * 
+
          ```
          property=jcr:content/sling:resourceType
          property.value=my-site/components/structure/article-page
@@ -253,6 +266,7 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
    * **Ooptimerad fråga**
 
       * 
+
          ```
          type=cq:Page
          path=/content
@@ -262,6 +276,7 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
    * **Optimerad fråga**
 
       * 
+
          ```
          type=cq:Page
          path=/content/my-site/us/en
@@ -272,11 +287,12 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
 
    Observera att när du använder `evaluatePathRestrictions` ökar indexstorleken.
 
-1. Undvik om möjligt frågefunktioner och -åtgärder som: och `LIKE` kostnaderna `fn:XXXX` kan anpassas till antalet begränsningsbaserade resultat.
+1. Undvik om möjligt frågefunktioner och -åtgärder som: `LIKE` och `fn:XXXX` kostnaderna kan anpassas till antalet begränsningsbaserade resultat.
 
    * **Ooptimerad fråga**
 
       * 
+
          ```
          type=cq:Page
          property=jcr:content/contentType
@@ -286,6 +302,7 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
    * **Optimerad fråga**
 
       * 
+
          ```
          type=cq:Page
          fulltext=article
@@ -302,6 +319,7 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
    * **Ooptimerad fråga**
 
       * 
+
          ```
          type=cq:Page
          path=/content
@@ -309,6 +327,7 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
    * **Optimerad fråga**
 
       * 
+
          ```
          type=cq:Page
          path=/content
@@ -327,6 +346,7 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
    * **Fråga i Frågebyggaren**
 
       * 
+
          ```
          query type=cq:Page
          path=/content/my-site/us/en
@@ -338,6 +358,7 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
    * **XPath genererad från frågan i Query Builder**
 
       * 
+
          ```
          /jcr:root/content/my-site/us/en//element(*, cq:Page)[jcr:content/@contentType = 'article-page'] order by jcr:content/@publishDate descending
          ```
@@ -366,9 +387,9 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
 
 1. Sammanfoga manuellt den genererade definitionen i det befintliga Lucene-egenskapsindexet på ett additivt sätt. Var försiktig så att du inte tar bort befintliga konfigurationer eftersom de kan användas för att tillgodose andra frågor.
 
-   1. Leta reda på det befintliga Lucene-egenskapsindex som omfattar cq:Page (med hjälp av Indexhanteraren). I det här fallet, `/oak:index/cqPageLucene`..
-   1. Identifiera konfigurationsförändringen mellan den optimerade indexdefinitionen (steg 4) och det befintliga indexet (/oak:index/cqPageLucene) och lägg till de saknade konfigurationerna från det optimerade indexet till den befintliga indexdefinitionen.
-   1. Enligt AEM:s bästa praxis för omindexering är det antingen en uppdatering eller omindexering i ordning, baserat på om befintligt innehåll kommer att påverkas av den här indexkonfigurationsändringen.
+   1. Leta reda på det befintliga Lucene-egenskapsindex som omfattar cq:Page (med hjälp av Indexhanteraren). In this case, `/oak:index/cqPageLucene`.
+   1. Identifiera konfigurationsdelta mellan den optimerade indexdefinitionen (steg 4) och det befintliga indexet (/oak:index/cqPageLucene) och lägg till de saknade konfigurationerna från det optimerade indexet till den befintliga indexdefinitionen.
+   1. Enligt AEM bästa praxis för omindexering är det antingen en uppdatering eller omindexering i ordning, baserat på om befintligt innehåll kommer att påverkas av den här indexkonfigurationsändringen.
 
 ## Skapa ett nytt index {#create-a-new-index}
 
@@ -378,6 +399,7 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
    * **Fråga i Frågebyggaren**
 
       * 
+
          ```
          type=myApp:Author
          property=firstName
@@ -386,6 +408,7 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
    * **XPath genererad från frågan i Query Builder**
 
       * 
+
          ```
          //element(*, myApp:Page)[@firstName = 'ira']
          ```
@@ -410,21 +433,21 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
 
 1. Distribuera den genererade indexdefinitionen för Lucene-egenskap.
 
-   Lägg till XML-definitionen från Oak Index Definition Generator för det nya indexet i det AEM-projekt som hanterar Oak-indexdefinitioner (kom ihåg att behandla Oak-indexdefinitioner som kod, eftersom koden är beroende av dem).
+   Lägg till XML-definitionen från Oak Index Definition Generator för det nya indexet i det AEM projektet som hanterar Oak-indexdefinitioner (kom ihåg att behandla Oak-indexdefinitioner som kod, eftersom koden är beroende av dem).
 
-   Distribuera och testa det nya indexet efter den vanliga utvecklingscykeln för AEM-program och kontrollera att frågan löses till indexvärdet och att frågan är korrekt.
+   Distribuera och testa det nya indexet efter den vanliga AEM programutvecklingslivscykeln och kontrollera att frågan löses till indexvärdet och att frågan är utförd.
 
    När det här indexet börjar distribueras kommer AEM att fylla i indexet med nödvändiga data.
 
 ## När är det okej med indexlösa frågor och genomgående frågor? {#when-index-less-and-traversal-queries-are-ok}
 
-På grund av AEM:s flexibla innehållsarkitektur är det svårt att förutsäga och se till att genomgången av innehållsstrukturer inte förändras över tid och blir oacceptabla.
+På grund av AEM flexibla innehållsarkitekturen är det svårt att förutsäga och se till att genomgången av innehållsstrukturer inte förändras över tid och blir oacceptabla.
 
 Se därför till att ett index uppfyller frågor, förutom om kombinationen av sökvägsbegränsning och nodetypbegränsning garanterar att **färre än 20 noder genomgås.**
 
 ## Frågeutvecklingsverktyg {#query-development-tools}
 
-### Stöd för Adobe {#adobe-supported}
+### Adobe stöds {#adobe-supported}
 
 * **Query Builder-felsökning**
 
@@ -434,19 +457,19 @@ Se därför till att ett index uppfyller frågor, förutom om kombinationen av s
 * **CRXDE Lite - Frågeverktyg**
 
    * Ett WebUI för att köra XPath- och JCR-SQL2-frågor.
-   * Besök AEM på [/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp) > Verktyg > Fråga...
+   * Finns på AEM på [/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp) > Verktyg > Fråga..
 
 * **[Förklara fråga](/help/sites-administering/operations-dashboard.md#explain-query)**
 
-   * En AEM Operations-kontrollpanel som ger en detaljerad förklaring (frågeplan, frågetid och antal resultat) för en given XPATH- eller JCR-SQL2-fråga.
+   * En kontrollpanel för AEM som ger en detaljerad förklaring (frågeplan, frågetid och antal resultat) för en given XPATH- eller JCR-SQL2-fråga.
 
 * **[Långsamma/populära frågor](/help/sites-administering/operations-dashboard.md#query-performance)**
 
-   * En AEM Operations-kontrollpanel med en lista över de senaste långsamma och populära frågorna som körts på AEM.
+   * En kontrollpanel för AEM åtgärder som listar de senaste långsamma och populära frågorna som kördes på AEM.
 
 * **[Indexhanteraren](/help/sites-administering/operations-dashboard.md#the-index-manager)**
 
-   * En AEM Operations WebUI som visar indexvärdena för AEM-instansen. gör det lättare att förstå vilka index som redan finns, vilka som kan användas eller utökas.
+   * En AEM Operations WebUI som visar indexvärdena för AEM. gör det lättare att förstå vilka index som redan finns, vilka som kan användas eller utökas.
 
 * **[Loggning](/help/sites-administering/operations-dashboard.md#log-messages)**
 
@@ -461,7 +484,7 @@ Se därför till att ett index uppfyller frågor, förutom om kombinationen av s
 * **APache Jackrabbit Query Engine Settings OSGi Config**
 
    * OSGi-konfiguration som konfigurerar felbeteende för att gå igenom frågor.
-   * Finns på AEM på [/system/console/configMgr#org.apache.jackrabbit.oak.query.QueryEngineSettingsService](http://localhost:4502/system/console/configMgr#org.apache.jackrabbit.oak.query.QueryEngineSettingsService)
+   * Finns AEM på [/system/console/configMgr#org.apache.jackrabbit.oak.query.QueryEngineSettingsService](http://localhost:4502/system/console/configMgr#org.apache.jackrabbit.oak.query.QueryEngineSettingsService)
 
 * **NodeCounter JMX Mbean**
 
@@ -474,7 +497,7 @@ Se därför till att ett index uppfyller frågor, förutom om kombinationen av s
 
    * Generera ett optimalt Lucence-egenskapsindex från XPath- eller JCR-SQL2-frågesatser.
 
-* **[Plugin-programmet AEM Chrome](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)**
+* **[AEM Chrome-plugin](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)**
 
    * Webbläsartillägget Google Chrome som visar loggdata per begäran, inklusive utförda frågor och tillhörande frågeplaner, i webbläsarens Dev Tools Console.
    * Kräver att [Sling Log Tracer 1.0.2+](https://sling.apache.org/downloads.cgi) installeras och aktiveras på AEM.
