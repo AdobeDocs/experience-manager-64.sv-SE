@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel _React_). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA-redigeraren för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel _React_). [Läs mer](/help/sites-developing/spa-overview.md).
 
 
 Utforma dina webbsidor så att de anpassas till den klientvisningsruta där de visas. Med responsiv design kan samma sidor visas effektivt på flera enheter i båda riktningarna. I följande bild visas några sätt på vilka en sida kan reagera på ändringar i visningsrutans storlek:
@@ -54,7 +54,7 @@ När du designar kan du använda **!UICONTROL Sidekick]** för att förhandsgran
 
 ## Innan du börjar utveckla {#before-you-develop}
 
-Innan du utvecklar ett AEM-program som stöder dina webbsidor bör du fatta flera designbeslut. Du måste till exempel ha följande information:
+Innan du utvecklar det AEM programmet som stöder dina webbsidor bör du fatta flera designbeslut. Du måste till exempel ha följande information:
 
 * De enheter ni riktar er mot.
 * Storleken på målvisningsrutan.
@@ -62,7 +62,7 @@ Innan du utvecklar ett AEM-program som stöder dina webbsidor bör du fatta fler
 
 ### Programstruktur {#application-structure}
 
-Den typiska AEM-programstrukturen har stöd för alla responsiva designimplementeringar:
+Den typiska AEM programstrukturen har stöd för alla responsiva designimplementeringar:
 
 * Sidkomponenter finns under /apps/*application_name*/components
 * Mallar finns under /apps/*application_name*/templates
@@ -70,7 +70,7 @@ Den typiska AEM-programstrukturen har stöd för alla responsiva designimplement
 
 ## Använda mediefrågor {#using-media-queries}
 
-Mediefrågor möjliggör selektiv användning av CSS-format för sidåtergivning. Med AEM-utvecklingsverktyg och -funktioner kan du effektivt och effektivt implementera mediefrågor i dina program.
+Mediefrågor möjliggör selektiv användning av CSS-format för sidåtergivning. Med AEM utvecklingsverktyg och funktioner kan du effektivt och effektivt implementera mediefrågor i dina program.
 
 W3C-gruppen tillhandahåller en rekommendation om [mediefrågor](https://www.w3.org/TR/css3-mediaqueries/) som beskriver denna CSS3-funktion och syntaxen.
 
@@ -101,7 +101,7 @@ I följande tabell visas filerna i css-mappen.
   </tr> 
   <tr> 
    <td>bootstrap.css</td> 
-   <td>Vanliga format, definierade av Twitter Bootstrap.</td> 
+   <td>Vanliga format som definieras av Twitter Bootstrap.</td> 
    <td>Ej tillämpligt</td> 
   </tr> 
   <tr> 
@@ -151,7 +151,7 @@ responsive-1200px.css
 
 **Tips**: Med beskrivande filnamn kan du enkelt identifiera den avsedda visningsrutans storlek.
 
-### Använda mediefrågor med AEM-sidor {#using-media-queries-with-aem-pages}
+### Använda mediefrågor med AEM sidor {#using-media-queries-with-aem-pages}
 
 Inkludera klientbiblioteksmappen i JSP-skriptet för sidkomponenten för att generera CSS-filen som innehåller mediefrågorna och för att referera till filen.
 
@@ -186,7 +186,7 @@ Inkludera följande kod i JSP som definierar `head` avsnittet:
 
 `<cq:include script="/libs/wcm/mobile/components/simulator/simulator.jsp"/>`
 
-Öppna filen i CRXDE Lite om du vill se ett exempel. `/apps/weretail/components/page/head.jsp`
+Om du vill se ett exempel öppnar du `/apps/weretail/components/page/head.jsp` filen i CRXDE Lite.
 
 ### Registrerar sidkomponenter för simulering {#registering-page-components-for-simulation}
 
@@ -222,7 +222,7 @@ Om du vill ange de enhetsgrupper som visas i listan Enheter lägger du till en `
 
 Enhetsgruppnoder finns i `/etc/mobile/groups` mappen.
 
-Rotsidan för Geometrixx Media-webbplatsen är till exempel `/content/geometrixx-media`. Noden innehåller följande `/content/geometrixx-media/jcr:content` egenskap:
+Till exempel är Geometrixx Media-platsens rotsida `/content/geometrixx-media`. Noden innehåller följande `/content/geometrixx-media/jcr:content` egenskap:
 
 * Namn: `cq:deviceGroups`
 * Typ: `String[]`
@@ -286,11 +286,11 @@ När sidan återges infogar picturefull.js ett `img` element som det sista under
 </div>
 ```
 
-På en AEM-sida är värdet för `data-src` attributet sökvägen till en resurs i databasen.
+På en AEM sida är värdet för `data-src` attributet sökvägen till en resurs i databasen.
 
 ### Implementera adaptiva bilder i AEM {#implementing-adaptive-images-in-aem}
 
-Om du vill implementera adaptiva bilder i ditt AEM-program måste du lägga till de nödvändiga javascript-biblioteken och inkludera den nödvändiga HTML-koden på sidorna.
+Om du vill implementera adaptiva bilder i ditt AEM måste du lägga till de nödvändiga javascript-biblioteken och inkludera den HTML-kod som krävs på sidorna.
 
 **Bibliotek**
 
@@ -305,7 +305,7 @@ Hämta följande javascript-bibliotek och inkludera dem i en klientbiblioteksmap
 
 **HTML**
 
-Skapa en komponent som genererar de div-element som förväntas av koden picturefill.js. På en AEM-sida är värdet för data-src-attributet sökvägen till en resurs i databasen. En sidkomponent kan till exempel hårdkoda mediefrågor och tillhörande sökvägar för bildåtergivningar i DAM. Du kan också skapa en anpassad bildkomponent som gör att författare kan välja bildåtergivningar eller ange alternativ för körningsåtergivning.
+Skapa en komponent som genererar de div-element som förväntas av koden picturefill.js. På en AEM sida är värdet för data-src-attributet sökvägen till en resurs i databasen. En sidkomponent kan till exempel hårdkoda mediefrågor och tillhörande sökvägar för bildåtergivningar i DAM. Du kan också skapa en anpassad bildkomponent som gör att författare kan välja bildåtergivningar eller ange alternativ för körningsåtergivning.
 
 I följande exempel väljer HTML två DAM-renderingar av samma bild.
 
@@ -323,6 +323,7 @@ I följande exempel väljer HTML två DAM-renderingar av samma bild.
 >
 >* Klientbiblioteksmapp: `/libs/foundation/components/adaptiveimage/clientlibs`
 >* Skript som genererar HTML: `/libs/foundation/components/adaptiveimage/adaptiveimage.jsp`
+
 >
 >
 Följande avsnitt innehåller information om den här komponenten.
@@ -330,7 +331,7 @@ Följande avsnitt innehåller information om den här komponenten.
 
 ### Bildåtergivning i AEM {#understanding-image-rendering-in-aem}
 
-Om du vill anpassa bildåtergivning bör du känna till standardimplementeringen för statisk AEM-bildåtergivning. AEM innehåller bildkomponenten och en bildåtergivningsservett som fungerar tillsammans för att återge bilder för webbsidor. Följande händelsesekvens inträffar när bildkomponenten inkluderas i sidans styckesystem:
+Om du vill anpassa bildåtergivning bör du känna till standardimplementeringen AEM statisk bildåtergivning. AEM innehåller bildkomponenten och en bildåtergivningsservett som fungerar tillsammans för att återge bilder för webbsidor. Följande händelsesekvens inträffar när bildkomponenten inkluderas i sidans styckesystem:
 
 1. Redigering: Författare redigerar bildkomponenten för att ange vilken bildfil som ska inkluderas på en HTML-sida. Filsökvägen lagras som ett egenskapsvärde för Image-komponentnoden.
 1. Sidbegäran: Sidkomponentens JSP genererar HTML-koden. JSP för Image-komponenten genererar och lägger till ett img-element på sidan.
@@ -379,7 +380,7 @@ Servern som bearbetar bildbegäran måste utföra följande åtgärder:
 AEM installerar följande implementeringar som du kan använda eller utöka.
 
 * Den adaptiva Image Foundation-komponenten som genererar mediefrågor och HTTP-begäranden till den adaptiva Image Component Server som skalar bilderna.
-* Paketet Geometrixx Commons installerar exempelservetterna i Image Reference Modification Servlet som ändrar bildupplösningen.
+* Med Geometrixx Commons-paketet installeras exempelservetterna i Image Reference Modification Servlet som ändrar bildupplösningen.
 
 ### Förstå komponenten Adaptiv bild {#understanding-the-adaptive-image-component}
 
@@ -476,7 +477,7 @@ De numeriska värdena är 0,4, 0,82 och 1,0.
 
 Använd webbkonsolen ([http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)) eller en sling:OsgiConfig-nod för att konfigurera bredderna som stöds i Adobe CQ Adaptive Image Component Server.
 
-Mer information om hur du konfigurerar AEM-tjänster finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md).
+Mer information om hur du konfigurerar AEM tjänster finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md).
 
 <table> 
  <tbody> 
@@ -663,7 +664,7 @@ Klassen åsidosätter `ImageReferenceModificationServlet` `createLayer` metoden 
 
 ## Utveckla ett flytande stödraster {#developing-a-fluid-grid}
 
-Med AEM kan du effektivt och effektivt implementera flytande stödraster. På den här sidan beskrivs hur du kan integrera ditt flytande stödraster eller en befintlig stödrasterimplementering (till exempel [Bootstrap](https://twitter.github.com/bootstrap/)) i ditt AEM-program.
+AEM gör det möjligt att effektivt implementera flytande stödraster. På den här sidan beskrivs hur du kan integrera ditt flytande stödraster eller en befintlig stödrasterimplementering (till exempel [Bootstrap](https://twitter.github.com/bootstrap/)) i AEM.
 
 Om du inte känner till flytande stödraster läser du avsnittet [Introduktion till flytande stödraster](/help/sites-developing/responsive.md#developing-a-fluid-grid) längst ned på den här sidan. Den här introduktionen ger en översikt över flytande stödraster och riktlinjer för hur du utformar dem.
 
@@ -714,7 +715,7 @@ Följande exempel på CSS är en deluppsättning av dessa format. Den här delm�
 
 >[!NOTE]
 >
->Geometrixx Media-exemplet integrerar [Bootstrap](https://twitter.github.com/bootstrap/javascript.html) javascript-ramverket i implementeringen av flytande stödraster. Bootstrap-ramverket innehåller filen bootstrap.css.
+>Geometrixx Media-exemplet integrerar [Bootstrap](https://twitter.github.com/bootstrap/javascript.html) javascript-ramverket i implementeringen av flytande stödraster. Ramverket Bootstrap innehåller filen bootstrap.css.
 
 ```xml
 /* default styles (no media queries) */
@@ -746,7 +747,7 @@ Följande exempel på CSS är en deluppsättning av dessa format. Den här delm�
 
 #### Flytta innehåll i sidkomponentens stödraster {#repositioning-content-in-the-page-component-grid}
 
-Sidorna i Geometrixx Media-programmet distribuerar rader med innehållsblock vågrätt i breda visningsrutor. I mindre visningsrutor fördelas samma block lodrätt. I följande exempel visas CSS-formaten som implementerar det här beteendet för HTML-koden som genereras av sidkomponenten media-home:
+Geometrixx Medias exempelsidor distribuerar innehållsblockrader vågrätt i breda visningsrutor. I mindre visningsrutor fördelas samma block lodrätt. I följande exempel visas CSS-formaten som implementerar det här beteendet för HTML-koden som genereras av sidkomponenten media-home:
 
 * CSS-standardformatet för sidan mediavälkomstsida tilldelar formatet `float:left` för `span*` klasser som finns inuti `row-fluid` klasser.
 
@@ -980,4 +981,4 @@ Följande CSS kan implementera detta beteende:
 
 För sidlayouten för varje visningsrutestorlek som du anger, bestämmer du antalet kolumner som varje innehållsblock omfattar. Bestäm sedan vilken klass som ska användas för div-elementen i dessa innehållsblock.
 
-När du har etablerat div-klasserna kan du implementera rutnätet med ditt AEM-program.
+När du har etablerat div-klasserna kan du implementera rutnätet med ditt AEM program.
