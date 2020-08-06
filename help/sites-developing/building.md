@@ -1,8 +1,8 @@
 ---
-title: Bygga taggar i ett AEM-program
-seo-title: Bygga taggar i ett AEM-program
-description: Arbeta programmatiskt med taggar eller utöka taggar i ett anpassat AEM-program
-seo-description: Arbeta programmatiskt med taggar eller utöka taggar i ett anpassat AEM-program
+title: Bygga taggar i ett AEM
+seo-title: Bygga taggar i ett AEM
+description: Arbeta programmatiskt med taggar eller utöka taggar i ett anpassat AEM
+seo-description: Arbeta programmatiskt med taggar eller utöka taggar i ett anpassat AEM
 uuid: 0549552e-0d51-4162-b418-babf4ceee046
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Bygga taggar i ett AEM-program{#building-tagging-into-an-aem-application}
+# Bygga taggar i ett AEM{#building-tagging-into-an-aem-application}
 
 För programmatiskt arbete med taggar eller tillägg av taggar i ett anpassat AEM-program beskriver den här sidan användningen av
 
@@ -198,5 +198,5 @@ Det nya språket (finska) är nu tillgängligt i taggdialogrutan för sidegenska
 
 >[!NOTE]
 >
->Det nya språket måste vara ett av de språk som AEM känner igen, dvs. det måste vara tillgängligt som en nod nedan `/libs/wcm/core/resources/languages`.
+>Det nya språket måste vara ett av de AEM identifierade språken, dvs. det måste vara tillgängligt som en nod nedan `/libs/wcm/core/resources/languages`.
 
