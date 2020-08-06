@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 translation-type: tm+mt
 source-git-commit: c0fbebb86385931315edd05aabe2b23fcc39c4f9
+workflow-type: tm+mt
+source-wordcount: '2006'
+ht-degree: 0%
 
 ---
 
@@ -71,7 +74,7 @@ Följande åtgärder stöds med REST API:
 
 >[!NOTE]
 >
->Genom att använda Firebug, ett Firefox-tillägg för webbutveckling, är det möjligt att följa HTTP-trafiken när konsolen används. Du kan till exempel kontrollera parametrarna och värdena som skickas till AEM-servern med en `POST` begäran.
+>Genom att använda Firebug, ett Firefox-tillägg för webbutveckling, är det möjligt att följa HTTP-trafiken när konsolen används. Du kan till exempel kontrollera parametrarna och värdena som skickas till AEM med en `POST` begäran.
 
 På den här sidan antas att AEM körs på localhost vid port `4502` och att installationskontexten är &quot; `/`&quot; (root). Om det inte är fallet med din installation måste de URI:er som HTTP-begäran gäller anpassas därefter.
 
@@ -242,7 +245,7 @@ Var `*{uri}*` är sökvägen till modellnoden i databasen.
   </tr> 
   <tr> 
    <td><code>POST</code></td> 
-   <td>Samma beteende som med PUT. Behövs eftersom AEM-widgetar inte har stöd för <code>PUT</code> åtgärder.</td> 
+   <td>Samma beteende som med PUT. Behövs eftersom AEM inte stöder <code>PUT</code> åtgärder.</td> 
   </tr> 
   <tr> 
    <td><code>DELETE</code></td> 
@@ -376,7 +379,7 @@ Följande metoder för HTTP-begäran gäller:
 
 ### Hämta en lista över alla arbetsflöden som körs med deras ID:n {#how-to-get-a-list-of-all-running-workflows-with-their-ids}
 
-Om du vill visa en lista över alla arbetsflöden som körs kan du göra en GET-åtgärd för att:
+Om du vill visa en lista över alla arbetsflöden som körs gör du en GET till:
 
 `http://localhost:4502/etc/workflow/instances.RUNNING.json`
 
@@ -424,7 +427,7 @@ curl -u admin:admin -d "action=UPDATE&workflowTitle=myWorkflowTitle" http://loca
 
 ### Lista alla arbetsflödesmodeller {#how-to-list-all-workflow-models}
 
-Om du vill visa en lista över alla tillgängliga arbetsflödesmodeller gör du en GET-åtgärd för att:
+Om du vill visa en lista över alla tillgängliga arbetsflödesmodeller gör du en GET till:
 
 `http://localhost:4502/etc/workflow/models.json`
 
@@ -492,6 +495,7 @@ När du skapar en ny modell:
 
    * `sling:resourceType`: `cq/workflow/components/pages/model`
    * `cq:template`: `/libs/cq/workflow/templates/model`
+
    När du skapar en modell måste du först skapa den här `cq:Page` noden och använda dess `jcr:content` nod som överordnad modellnod.
 
 * Argumentet som vissa metoder kräver för att identifiera modellen är den absoluta sökvägen för modellnoden i databasen: `id`
@@ -564,7 +568,7 @@ Olika metoder har parametern:
 
 Den här parametern kan ställas in så att den anger `true` att systemarbetsflöden ska uteslutas från relevanta resultat.
 
-Du [kan uppdatera OSGi-konfigurationen](/help/sites-deploying/configuring-osgi.md) i **Adobe Granite Workflow PayloadMapCache** som anger vilket arbetsflöde `Models` som ska betraktas som systemarbetsflöden. Standardarbetsflödesmodellerna (runtime) är:
+Du [kan uppdatera OSGi-konfigurationen](/help/sites-deploying/configuring-osgi.md) **Adobe Granite Workflow PayloadMapCache** som anger arbetsflödet `Models` som ska betraktas som systemarbetsflöden. Standardarbetsflödesmodellerna (runtime) är:
 
 * `/var/workflow/models/scheduled_activation/jcr:content/model`
 * `/var/workflow/models/scheduled_deactivation/jcr:content/model`
