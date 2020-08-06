@@ -1,8 +1,8 @@
 ---
-title: Omstrukturering av anläggningstillgångar i AEM 6.4
-seo-title: Omstrukturering av anläggningstillgångar i AEM 6.4
-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 for Sites.
-seo-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 for Sites.
+title: Omstrukturering av anläggningar Repository i AEM 6.4
+seo-title: Omstrukturering av anläggningar Repository i AEM 6.4
+description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 för platser.
+seo-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 för platser.
 uuid: 6dc5f8bd-1680-40af-9b8f-26c1f4bc3304
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
@@ -10,13 +10,16 @@ topic-tags: repo_restructuring
 discoiquuid: 3eccb2d5-c325-43a6-9c03-5f93f7e30712
 translation-type: tm+mt
 source-git-commit: 007930ea6f01603cd29b56cda4000d024a8cc1f6
+workflow-type: tm+mt
+source-wordcount: '1597'
+ht-degree: 0%
 
 ---
 
 
-# Omstrukturering av anläggningstillgångar i AEM 6.4{#sites-repository-restructuring-in-aem}
+# Omstrukturering av anläggningar Repository i AEM 6.4{#sites-repository-restructuring-in-aem}
 
-Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Sites Solution. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
+Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Sites-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
 
 **Med 6.4-uppgradering**
 
@@ -28,13 +31,13 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
 * [Klassisk Microsoft Word till Web Page Designs](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#classic-microsoft-word-to-web-page-designs)
 * [Konfigurationer för emulatorn för mobila enheter](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#mobile-device-emulator-configurations)
 * [Designkonfigurationer för hantering av flera webbplatser](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#multi-site-manager-blueprint-configurations)
-* [Körningskonfigurationer för flera platshanterare](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#multi-site-manager-rollout-configurations)
+* [Samlingskonfigurationer för flera platshanterare](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#multi-site-manager-rollout-configurations)
 * [E-postmall för sidhändelseavisering](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#page-event-notification-e-mail-template)
 * [Sidställningar](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#page-scaffolding)
 * [LESS-responsivt rutnät](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#responsive-grid-less)
 * [Statiska malldesigner](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#static-template-designs)
 * [Adobe Search and Promote Integration Client Libraries](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#adobe-search-and-promote-integration-client-libraries)
-* [Klientbibliotek för Adobe Target-integrering](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#adobe-target-integration-client-libraries)
+* [Adobe Target Integration Client Libraries](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#adobe-target-integration-client-libraries)
 * [Klientbibliotek för WCM Foundation](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#wcm-foundation-client-libraries)
 
 ## Med 6.4-uppgradering {#with-upgrade}
@@ -60,11 +63,11 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
     </ol> <p>Följande QueryBuilder-fråga hittar alla referenser till ContextHub-segment i de föregående platserna.<br /> <br /> <code class="code">path=/content
        property=cq:segments
        property.operation=like
-       property.value=/etc/segmentation/contexthub/%</code><br /> Detta kan utföras via <br /> AEM QueryBuilder-felsökningsgränssnittet <a href="/help/sites-developing/querybuilder-api.md" target="_blank"></a>. Observera att detta är en genomgående fråga, så kör den inte mot produktionen och se till att genomströmningsgränserna justeras efter behov.</p> </td> 
+       property.value=/etc/segmentation/contexthub/%</code><br /> <br /> Detta kan utföras via <a href="/help/sites-developing/querybuilder-api.md" target="_blank">AEM QueryBuilder-felsökningsgränssnittet</a>. Observera att detta är en genomgående fråga, så kör den inte mot produktionen och se till att genomströmningsgränserna justeras efter behov.</p> </td> 
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
-   <td><p>ContextHub-segment beständiga till föregående platsvisning som skrivskyddade i <strong>AEM &gt; Personalisering &gt; Publiker</strong>.</p> <p>Om ContextHub-segment ska kunna redigeras i AEM måste de migreras till den nya platsen (<code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>). Alla nya ContentHub-segmentsegment som skapas i AEM bevaras på den nya platsen (<code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>).</p> <p>Sidegenskaperna för AEM-platser tillåter bara att antingen föregående plats (<code>/etc</code>) eller en ny plats (<code>/apps</code>, <code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>) markeras, vilket innebär att ContextHub-segment måste migreras i enlighet med detta.</p> <p>Alla oanvända ContextHub-segment från AEM-referenswebbplatser kan tas bort och inte migreras till den nya platsen:</p> 
+   <td><p>ContextHub-segment beständiga till föregående platsvisning som skrivskyddade i <strong>AEM &gt; Personalisering &gt; Publiker</strong>.</p> <p>Om ContextHub-segment ska kunna redigeras i AEM måste de migreras till den nya platsen (<code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>). Alla nya ContentHub-segment som skapas i AEM bevaras på den nya platsen (<code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>).</p> <p>AEM Sites Sidegenskaper tillåter bara att antingen Föregående plats (<code>/etc</code>) eller en ny plats (<code>/apps</code>, <code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>) markeras, vilket innebär att ContextHub-segment måste migreras i enlighet med detta.</p> <p>Alla oanvända ContextHub-segment från AEM referensplatser kan tas bort och inte migreras till den nya platsen:</p> 
     <ul> 
      <li>/etc/segmentation/geometrixx/</li> 
      <li>/etc/segmentation/geometrixx-outdoor</li> 
@@ -91,8 +94,8 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
    <td><strong>Omstruktureringsvägledning</strong></td> 
    <td><p>All anpassad användning av dessa klientbibliotek ska referera till klientbiblioteket efter kategori och inte efter sökväg:</p> 
     <ol> 
-     <li>Alla referenser till klientbiblioteket per sökväg på platsen Föregående bör uppdateras så att <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM:s referensramverk</a>för klientbibliotek används.</li> 
-     <li>Om AEM:s referensramverk för klientbibliotek inte kan användas kan den absoluta sökvägen för klientbiblioteken refereras via AEM:s klientbiblioteksproxyserver.
+     <li>Alla referenser till klientbiblioteket per sökväg på platsen Föregående ska uppdateras så att referensramverket <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">för</a>AEM klientbibliotek används.</li> 
+     <li>Om referensramverket AEM klientbiblioteket inte kan användas kan den absoluta sökvägen för klientbiblioteken refereras via AEM klientbibliotekets proxyserver.
       <ul> 
        <li><code>/etc.clientlibs/cq/analytics/clientlibs/sitecatalyst/appmeasurement.js</code></li> 
        <li><code>/etc.clientlibs/cq/analytics/clientlibs/sitecatalyst/plugins.js</code></li> 
@@ -136,7 +139,7 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
      <li>Konvertera CSS-, JavaScript- och statiska resurser i designen till ett <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">klientbibliotek</a> med <code>allowProxy = true</code>.</li> 
      <li>Uppdatera referenser till föregående plats i egenskapen cq:designPath.</li> 
      <li>Uppdatera alla sidor som refererar till föregående plats så att den nya kategorin Klientbibliotek används (detta kräver uppdatering av koden för sidimplementering).</li> 
-     <li>Uppdatera AEM Dispatcher-reglerna så att klientbibliotek kan hanteras via <code>/etc.clientlibs/</code> proxyservern.</li> 
+     <li>Uppdatera AEM Dispatcher-regler så att klientbibliotek kan hanteras via <code>/etc.clientlibs/</code> proxyservern.</li> 
     </ol> <p>För alla designer som INTE hanterats i SCM och som ändrats under körning via designdialogrutor:</p> 
     <ul> 
      <li>Flytta inte bort redigerbara designer <code>/etc</code>.</li> 
@@ -166,7 +169,7 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
    <td>Alla nya konfigurationer för emulatorn för mobila enheter måste migreras till den nya platsen.
     <ol> 
      <li>Kopiera alla nya konfigurationer för emulatorn för mobila enheter från den tidigare platsen till den nya platsen (<code>/apps</code>, <code>/conf/global</code>, <code>/conf/&lt;tenant&gt;</code>).</li> 
-     <li>För alla AEM Sites Pages som är beroende av dessa konfigurationer för emulatorn för mobila enheter uppdaterar du sidans <span class="code"><code>
+     <li>För alla AEM Sites-sidor som är beroende av dessa konfigurationer för emulering av mobila enheter ska du uppdatera sidans <span class="code"><code>
         jcr
        </code><code>
         :content
@@ -177,9 +180,9 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
      <li>För redigerbara mallar som är beroende av dessa konfigurationer för emulatorn för mobila enheter uppdaterar du de redigerbara mallarna och pekar på <span class="code"><code>
         cq
        </code>:
-       till <code>
+       <code>
         deviceGroups
-       </code></span> den nya platsen.</li> 
+       </code></span> till den nya platsen.</li> 
     </ol> </td> 
   </tr>
   <tr>
@@ -218,12 +221,12 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
-   <td><p>Alla layoutkonfigurationer för hantering av flera webbplatser som tillhandahålls av AEM finns på den nya platsen i <code>/libs</code>.</p> <p>Innehållet refererar inte till blå konfigurationer för Multi-site Manager och det finns därför inga innehållsreferenser att justera.</p> </td> 
+   <td><p>Alla AEM som ingår i Multi-site Manager-utkastkonfigurationer finns på den nya platsen i <code>/libs</code>.</p> <p>Innehållet refererar inte till blå konfigurationer för Multi-site Manager och det finns därför inga innehållsreferenser att justera.</p> </td> 
   </tr>
  </tbody>
 </table>
 
-### Körningskonfigurationer för flera platshanterare {#multi-site-manager-rollout-configurations}
+### Samlingskonfigurationer för flera platshanterare {#multi-site-manager-rollout-configurations}
 
 <table> 
  <tbody>
@@ -240,12 +243,12 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
    <td><p>Alla nya eller ändrade implementeringar av Multi-site Manager-hanteraren måste migreras till den nya platsen.</p> 
     <ol> 
      <li>Kopiera alla nya eller ändrade Multi-site Manager Rollout-konfigurationer från föregående plats till den nya platsen (<code>/apps</code>).</li> 
-     <li>Uppdatera alla referenser på AEM Pages till Multi-site Manager Rollout Configurations på den tidigare platsen för att peka på deras motsvarigheter på de nya platserna (<code>/libs</code> eller <code>/apps</code>).</li> 
+     <li>Uppdatera alla referenser på AEM sidor till Multi-site Manager Rollout Configurations på den tidigare platsen för att peka på deras motsvarigheter på de nya platserna (<code>/libs</code> eller <code>/apps</code>).</li> 
     </ol> <p>Ta bort migrerade utrullningskonfigurationer för hantering av flera platser från föregående plats.</p> </td> 
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
-   <td>Om det inte går att ta bort migrerade flerplatshanterarens utrullningskonfigurationer från den tidigare platsen visas dubblettalternativ för AEM-författare.</td> 
+   <td>Om det inte går att ta bort migrerade flerplatshanterarens utrullningskonfigurationer från den tidigare platsen visas dubblettalternativ som visas för AEM.</td> 
   </tr>
  </tbody>
 </table>
@@ -355,7 +358,7 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
      <li>Konvertera CSS-, JavaScript- och statiska resurser i designen till ett <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">klientbibliotek</a> med <code>allowProxy = true</code>.</li> 
      <li>Uppdatera referenser till föregående plats i <code>cq:designPath</code> egenskapen via <strong>AEM &gt; Platser &gt; Anpassade webbplatssidor &gt; Sidegenskaper &gt; fliken Avancerat &gt; Designfält</strong>.</li> 
      <li>Uppdatera alla sidor som refererar till föregående plats så att den nya kategorin Klientbibliotek används (detta kräver uppdatering av koden för sidimplementering).</li> 
-     <li>Uppdatera AEM Dispatcher-reglerna så att klientbibliotek kan hanteras via <code>/etc.clientlibs/</code> proxyservern.</li> 
+     <li>Uppdatera AEM Dispatcher-regler så att klientbibliotek kan hanteras via <code>/etc.clientlibs/</code> proxyservern.</li> 
     </ol> <p>För alla designer som INTE hanterats i SCM och som ändrats under körning via designdialogrutor:</p> 
     <ul> 
      <li>Flytta inte bort redigerbara designer <code>/etc</code>.</li> 
@@ -363,7 +366,7 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
-   <td>Rekommenderat tillvägagångssätt är att bygga AEM-webbplatser och -sidor med hjälp av redigerbara mallar som använder strukturinnehåll och -profiler i stället för Designs.</td> 
+   <td>Rekommenderat tillvägagångssätt är att skapa AEM Sites och sidor med hjälp av redigerbara mallar som använder strukturinnehåll och -profiler i stället för design.</td> 
   </tr>
  </tbody>
 </table>
@@ -384,8 +387,8 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
    <td><strong>Omstruktureringsvägledning</strong></td> 
    <td><p>All anpassad användning av dessa klientbibliotek bör referera till klientbiblioteket efter kategori och inte efter sökväg.</p> 
     <ol> 
-     <li>Alla referenser till klientbiblioteket per sökväg på platsen Föregående bör uppdateras så att <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM:s referensramverk</a>för klientbibliotek används.</li> 
-     <li>Om AEM:s referensramverk för klientbibliotek inte kan användas kan den absoluta sökvägen för klientbiblioteken refereras via AEM:s klientbiblioteksproxyserver:</li> 
+     <li>Alla referenser till klientbiblioteket per sökväg på platsen Föregående ska uppdateras så att referensramverket <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">för</a>AEM klientbibliotek används.</li> 
+     <li>Om referensramverket AEM klientbiblioteket inte kan användas kan den absoluta sökvägen för klientbiblioteken refereras via AEM klientbibliotekets proxyserver:</li> 
     </ol> 
     <ul> 
      <li><code>/etc.clientlibs/cq/searchpromote/clientlibs/searchpromotei.js</code></li> 
@@ -401,7 +404,7 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
  </tbody>
 </table>
 
-### Klientbibliotek för Adobe Target-integrering {#adobe-target-integration-client-libraries}
+### Adobe Target Integration Client Libraries {#adobe-target-integration-client-libraries}
 
 <table> 
  <tbody>
@@ -417,8 +420,8 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
    <td><strong>Omstruktureringsvägledning</strong></td> 
    <td><p>All anpassad användning av dessa klientbibliotek bör referera till klientbiblioteket efter kategori och inte efter sökväg.</p> 
     <ol> 
-     <li>Alla referenser till klientbiblioteket per sökväg på platsen Föregående bör uppdateras så att <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM:s referensramverk</a>för klientbibliotek används.</li> 
-     <li>Om AEM:s referensramverk för klientbibliotek inte kan användas kan den absoluta sökvägen för klientbiblioteken refereras via AEM:s klientbiblioteksproxyserver:</li> 
+     <li>Alla referenser till klientbiblioteket per sökväg på platsen Föregående ska uppdateras så att referensramverket <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">för</a>AEM klientbibliotek används.</li> 
+     <li>Om referensramverket AEM klientbiblioteket inte kan användas kan den absoluta sökvägen för klientbiblioteken refereras via AEM klientbibliotekets proxyserver:</li> 
     </ol> 
     <ul> 
      <li><code>/etc.clientlibs/cq/testandtarget/clientlibs/testandtarget/testandtarget.js</code></li> 
@@ -462,8 +465,8 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
    <td><strong>Omstruktureringsvägledning</strong></td> 
    <td><p>All anpassad användning av dessa klientbibliotek bör referera till klientbiblioteket efter kategori och inte efter sökväg.</p> 
     <ol> 
-     <li>Alla referenser till klientbiblioteket per sökväg på platsen Föregående bör uppdateras så att <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM:s referensramverk</a>för klientbibliotek används.</li> 
-     <li>Om AEM:s referensramverk för klientbibliotek inte kan användas kan den absoluta sökvägen för klientbiblioteken refereras via AEM:s klientbiblioteksproxyserver.</li> 
+     <li>Alla referenser till klientbiblioteket per sökväg på platsen Föregående ska uppdateras så att referensramverket <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">för</a>AEM klientbibliotek används.</li> 
+     <li>Om referensramverket AEM klientbiblioteket inte kan användas kan den absoluta sökvägen för klientbiblioteken refereras via AEM klientbibliotekets proxyserver.</li> 
     </ol> 
     <ul> 
      <li><code>/etc.clientlibs/wcm/foundation/clientlibs/accessibility.css</code></li> 
