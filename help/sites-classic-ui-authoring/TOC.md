@@ -2,18 +2,18 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: Användarhandbok för AEM 6.4 Classic UI Authoring
+user-guide-title: Användarhandbok för redigering av AEM 6.4 Classic UI
 user-guide-description: This guide covers the concepts of authoring in AEM in the classic user interface.
 translation-type: tm+mt
 source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '307'
+ht-degree: 18%
 
 ---
 
 
-# Användarhandbok för AEM 6.4 Classic UI Authoring {#classic-ui}
+# Användarhandbok för redigering av AEM 6.4 Classic UI {#classic-ui}
 
 + [Översikt över redigeringshandboken för det klassiska användargränssnittet](home.md)
 + Introduktion till klassisk gränssnittsredigering {#introduction}
@@ -47,7 +47,7 @@ ht-degree: 0%
    + [Använda taggar](classic-feature-tags.md)
    + [Ställning](classic-feature-scaffolding.md)
    + [Konfigurera komponenter i designläge](classic-page-author-design-mode.md)
-   + [Lägga till Search&amp;Promote på sidan](classic-feature-search-promote.md)
+   + [Lägga till Search &amp; Promote på sidan](classic-feature-search-promote.md)
    + [Komponenter](classic-page-author-default-components.md)
 + Arbetsflöden {#workflows}
    + [Delta i arbetsflöden](classic-workflows-participating.md)
@@ -63,7 +63,7 @@ ht-degree: 0%
    + [Kampanjhantering](classic-personalization-campaigns.md)
    + [Lärare och strategier](classic-personalization-campaigns-teasers-strategy.md)
    + [Landningssidor](classic-personalization-campaigns-landingpage.md)
-   + [Target erbjuder](classic-personalization-campaigns-target-offers.md)
+   + [Målerbjudanden](classic-personalization-campaigns-target-offers.md)
    + [Arbeta med Marketing Campaign Manager](classic-personalization-campaigns-mktg-manager.md)
    + [E-postmarknadsföring](classic-personalization-campaigns-email.md)
    + [Spåra studsade e-postmeddelanden](classic-personalization-campaigns-email-tracking-bounces.md)
@@ -76,17 +76,17 @@ ht-degree: 0%
 + Adobe Campaign {#campaign}
    + [Arbeta med Adobe Campaign 6.1 och Adobe Campaign Standard](classic-personalization-ac-campaign.md)
    + [Arbeta med Adobe Campaign](classic-personalization-ac.md)
-   + [Adobe Campaign-komponenter](classic-personalization-ac-components.md)
-   + [Inrikta er mot Adobe Campaign](classic-personalization-ac-target.md)
+   + [Adobe Campaign Components](classic-personalization-ac-components.md)
+   + [Inrikta er på Adobe Campaign](classic-personalization-ac-target.md)
 + Skapa resurser i det klassiska användargränssnittet {#assets}
    + [Arbeta med resurser](classicui-assets.md)
    + [Arbeta med IBL-steg](classicui-stages-aem3d-ibl.md)
    + [Återge 3D-resurser](classicui-rendering-3d.md)
    + [Visa 3D-resurser](classicui-view-3d-assets.md)
-   + [Leverera Dynamic Media Assets](dynamic-media-assets-delivering.md)
+   + [Leverera dynamiska medieresurser](dynamic-media-assets-delivering.md)
    + [Ställa in ett standardstadium med Autodesk Maya och Mental Ray](classicui-stages-aem3d-ad-mr.md)
-   + [Lägga till Dynamic Media-resurser på sidor](dynamic-media-assets-adding-to-page.md)
-   + [Lägga till Scene7-funktioner på sidan](manage-assets-classic-s7.md)
+   + [Lägga till dynamiska medieresurser på sidor](dynamic-media-assets-adding-to-page.md)
+   + [Lägga till Scene7-funktioner på din sida](manage-assets-classic-s7.md)
    + [Arbeta med Dynamic Media](dynamic-media-assets.md)
    + [Arbeta med 3D-resurser](classicui-3dassets.md)
    + [Video](manage-assets-classic-s7-video.md)
