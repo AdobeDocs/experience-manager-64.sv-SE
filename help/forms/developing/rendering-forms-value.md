@@ -1,6 +1,6 @@
 ---
-title: Återge formulär efter värde
-seo-title: Återge formulär efter värde
+title: Återger Forms efter värde
+seo-title: Återger Forms efter värde
 description: 'null'
 seo-description: 'null'
 uuid: b932cc54-662f-40ae-94e0-20ac82845f3b
@@ -12,19 +12,22 @@ topic-tags: operations
 discoiquuid: ddbb2b82-4c57-4845-a5be-2435902d312b
 translation-type: tm+mt
 source-git-commit: 1790238e4733ca67c59234641d228e44a3d3ac3b
+workflow-type: tm+mt
+source-wordcount: '1812'
+ht-degree: 0%
 
 ---
 
 
-# Återge formulär efter värde {#rendering-forms-by-value}
+# Återger Forms efter värde {#rendering-forms-by-value}
 
 Vanligtvis skickas en formulärdesign som har skapats i Designer med referens till Forms-tjänsten. Formulärdesigner kan vara stora och därför är det mer effektivt att skicka dem med referens för att undvika att behöva konvertera byte för formulärdesign efter värde. Forms-tjänsten kan även cachelagra formulärdesignen så att den inte behöver läsa formulärdesignen kontinuerligt när den cache-lagras.
 
 Om en formulärdesign innehåller ett UUID-attribut cache-lagras den. UUID-värdet är unikt för alla formulärdesigner och används för att unikt identifiera ett formulär. När du återger ett formulär med hjälp av värde bör formuläret bara cache-lagras när det används upprepade gånger. Om formuläret inte används upprepade gånger och måste vara unikt, kan du undvika att cache-lagra formuläret med cachelagringsalternativ som har angetts med AEM Forms API.
 
-Forms-tjänsten kan också lösa platsen för länkat innehåll i formulärdesignen. Länkade bilder som refereras inifrån formulärdesignen är till exempel relativa URL-adresser. Länkat innehåll antas alltid vara relativt till formulärdesignens plats. Att lösa länkat innehåll är därför en fråga om att fastställa dess plats genom att använda den relativa sökvägen på den absoluta formulärdesignplatsen.
+Forms-tjänsten kan också lösa platsen för det länkade innehållet i formulärdesignen. Länkade bilder som refereras inifrån formulärdesignen är till exempel relativa URL-adresser. Länkat innehåll antas alltid vara relativt till formulärdesignens plats. Att lösa länkat innehåll är därför en fråga om att fastställa dess plats genom att använda den relativa sökvägen på den absoluta formulärdesignplatsen.
 
-I stället för att skicka en formulärdesign med referens kan du skicka en formulärdesign med värde. Att skicka en formulärdesign med värde är effektivt när en formulärdesign skapas dynamiskt. det vill säga när ett klientprogram genererar XML-koden som skapar en formulärdesign under körning. I det här fallet lagras inte en formulärdesign i en fysisk databas eftersom den lagras i minnet. När du dynamiskt skapar en formulärdesign vid körning och skickar den med värde, kan du cachelagra formuläret och förbättra Forms-tjänstens prestanda.
+I stället för att skicka en formulärdesign med referens kan du skicka en formulärdesign med värde. Att skicka en formulärdesign med värde är effektivt när en formulärdesign skapas dynamiskt. det vill säga när ett klientprogram genererar XML-koden som skapar en formulärdesign under körning. I det här fallet lagras inte en formulärdesign i en fysisk databas eftersom den lagras i minnet. När du dynamiskt skapar en formulärdesign vid körning och skickar den med värde, kan du cachelagra formuläret och förbättra prestanda för Forms-tjänsten.
 
 **Begränsningar för att skicka ett formulär efter värde**
 
@@ -32,22 +35,22 @@ Följande begränsningar gäller när en formulärdesign skickas med värde:
 
 * Inget relativt länkat innehåll kan finnas i formulärdesignen. Alla bilder och fragment måste vara inbäddade i formulärdesignen eller refereras till absolut.
 * Det går inte att utföra beräkningar på serversidan efter att formuläret har återgetts. Om formuläret skickas tillbaka till Forms-tjänsten extraheras data och returneras utan några beräkningar på serversidan.
-* Eftersom länkade bilder bara kan användas i HTML vid körning går det inte att generera HTML med inbäddade bilder. Detta beror på att Forms-tjänsten stöder inbäddade bilder med HTML genom att hämta bilderna från en formulärdesign som refereras. Eftersom en formulärdesign som skickas med värde inte har någon referensplats, kan inbäddade bilder inte extraheras när HTML-sidan visas. Därför måste bildreferenser vara absoluta sökvägar för att kunna återges i HTML.
+* Eftersom länkade bilder bara kan användas i HTML vid körning går det inte att generera HTML med inbäddade bilder. Detta beror på att Forms-tjänsten stöder inbäddade bilder med HTML genom att hämta bilderna från en refererad formulärdesign. Eftersom en formulärdesign som skickas med värde inte har någon referensplats, kan inbäddade bilder inte extraheras när HTML-sidan visas. Därför måste bildreferenser vara absoluta sökvägar för att kunna återges i HTML.
 
 >[!NOTE]
 >
->Även om du kan återge olika typer av formulär efter värde (t.ex. HTML-formulär eller formulär som innehåller användarrättigheter) beskrivs återgivningen av interaktiva PDF-formulär i det här avsnittet.
+>Även om du kan återge olika typer av formulär efter värde (t.ex. HTML-formulär eller formulär som innehåller användarrättigheter) beskrivs återgivningen av interaktiv PDF forms i det här avsnittet.
 
 >[!NOTE]
 >
->Mer information om Forms-tjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Forms finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Sammanfattning av steg {#summary-of-steps}
 
 Så här återger du ett formulär efter värde:
 
 1. Inkludera projektfiler.
-1. Skapa ett API-objekt för Forms Client.
+1. Skapa ett Forms Client API-objekt.
 1. Referera formulärdesignen.
 1. Återge ett formulär efter värde.
 1. Skriv formulärdataströmmen till klientens webbläsare.
@@ -56,7 +59,7 @@ Så här återger du ett formulär efter värde:
 
 Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprogram med Java inkluderar du de JAR-filer som behövs. Om du använder webbtjänster måste du inkludera proxyfilerna.
 
-**Skapa ett API-objekt för FormsClient**
+**Skapa ett Forms Client API-objekt**
 
 Innan du kan importera data programmatiskt till ett PDF-formulär-klient-API måste du skapa en klient för dataintegrering. När du skapar en tjänstklient definierar du de anslutningsinställningar som krävs för att anropa en tjänst.
 
@@ -92,19 +95,19 @@ När Forms-tjänsten återger ett formulär efter värde returneras en formulär
 
 [Snabbstart för Forms Service API](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[Skicka dokument till formulärtjänsten](/help/forms/developing/passing-documents-forms-service.md)
+[Skicka dokument till Forms-tjänsten](/help/forms/developing/passing-documents-forms-service.md)
 
-[Skapa webbprogram som återger formulär](/help/forms/developing/creating-web-applications-renders-forms.md)
+[Skapa webbprogram som återger Forms](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ## Återge ett formulär med hjälp av Java API {#render-a-form-by-value-using-the-java-api}
 
-Återge ett formulär utifrån värde med Forms API (Java):
+Återge ett formulär med hjälp av Forms API (Java):
 
 1. Inkludera projektfiler
 
    Inkludera JAR-klientfiler, t.ex. adobe-forms-client.jar, i Java-projektets klassökväg.
 
-1. Skapa ett API-objekt för FormsClient
+1. Skapa ett Forms Client API-objekt
 
    * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
    * Skapa ett `FormsServiceClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
@@ -123,6 +126,7 @@ När Forms-tjänsten återger ett formulär efter värde returneras en formulär
    * Ett `PDFFormRenderSpec` objekt som lagrar körningsalternativ. Det här är en valfri parameter och du kan ange `null` om du inte vill ange körningsalternativ.
    * Ett `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
    * Ett `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
+
    Metoden returnerar `renderPDFForm` ett `FormsResult` objekt som innehåller en formulärdataström som kan skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
@@ -138,7 +142,7 @@ När Forms-tjänsten återger ett formulär efter värde returneras en formulär
 
 **Se även**
 
-[Återge formulär efter värde](/help/forms/developing/rendering-forms.md)
+[Återger Forms efter värde](/help/forms/developing/rendering-forms.md)
 
 [Snabbstart (SOAP-läge): Återgivning med hjälp av Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
 
@@ -148,14 +152,14 @@ När Forms-tjänsten återger ett formulär efter värde returneras en formulär
 
 ## Återge ett formulär med hjälp av webbtjänstens API {#render-a-form-by-value-using-the-web-service-api}
 
-Återge ett formulär utifrån värde med Forms API (webbtjänsten):
+Återge ett formulär med hjälp av Forms API (webbtjänsten):
 
 1. Inkludera projektfiler
 
-   * Skapa Java-proxyklasser som använder Forms-tjänstens WSDL.
+   * Skapa Java-proxyklasser som använder Forms tjänst-WSDL.
    * Inkludera Java-proxyklasserna i klassökvägen.
 
-1. Skapa ett API-objekt för FormsClient
+1. Skapa ett Forms Client API-objekt
 
    Skapa ett `FormsService` objekt och ange autentiseringsvärden.
 
@@ -180,6 +184,7 @@ När Forms-tjänsten återger ett formulär efter värde returneras en formulär
    * Ett tomt `javax.xml.rpc.holders.LongHolder` objekt som fylls i av metoden. (Det här argumentet lagrar antalet sidor i formuläret.)
    * Ett tomt `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden. (Det här argumentet lagrar språkets värde.)
    * Ett tomt `com.adobe.idp.services.holders.FormsResultHolder` objekt som innehåller resultatet av den här åtgärden.
+
    Metoden `renderPDFForm` fyller i det `com.adobe.idp.services.holders.FormsResultHolder` objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
@@ -194,6 +199,6 @@ När Forms-tjänsten återger ett formulär efter värde returneras en formulär
 
 **Se även**
 
-[Återge formulär efter värde](#rendering-forms-by-value)
+[Återger Forms efter värde](#rendering-forms-by-value)
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
