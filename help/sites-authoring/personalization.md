@@ -11,6 +11,9 @@ topic-tags: personalization
 discoiquuid: 850da0da-f7c3-4dd7-bb06-404c14a2a791
 translation-type: tm+mt
 source-git-commit: 80395c4695b326474f9ae0e73caa075a5782eaf6
+workflow-type: tm+mt
+source-wordcount: '530'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ AEM tillhandahåller ett ramverk med verktyg för att skapa riktat innehåll och
 
 ## Målläge {#targeting-mode}
 
-[Skapa riktat innehåll](/help/sites-authoring/content-targeting-touch.md) med målinriktat läge i AEM. Målinriktningsläget och Target-komponenten tillhandahåller verktyg för att skapa innehåll för upplevelserna av era marknadsföringsaktiviteter.
+[Skapa riktat innehåll](/help/sites-authoring/content-targeting-touch.md) med målinriktningsläget AEM. Målinriktningsläget och Target-komponenten tillhandahåller verktyg för att skapa innehåll för upplevelserna av era marknadsföringsaktiviteter.
 
 ## Verksamhet {#activities}
 
@@ -37,9 +40,9 @@ Använd [aktivitetskonsolen](/help/sites-authoring/activitylib.md) för att skap
 
 ## Erfarenheter {#experiences}
 
-För varje aktivitet definierar ni en eller flera upplevelser som identifierar målgrupperna som ni riktar in er mot. Med AEM kan ni styra innehållet som omfattar varje upplevelse.
+För varje aktivitet definierar ni en eller flera upplevelser som identifierar målgrupperna som ni riktar in er mot. AEM gör det möjligt att styra innehållet som omfattar varje upplevelse.
 
-Målgrupperna bygger på marknadsföringssegment som skapats i antingen AEM eller Adobe Target. När en besökare öppnar en webbsida avgör sidlogiken vilken målgrupp de tillhör och visar det innehåll som du har skapat för den målgruppen.
+Målgrupperna bygger på marknadsföringssegment som skapats i AEM eller Adobe Target. När en besökare öppnar en webbsida avgör sidlogiken vilken målgrupp de tillhör och visar det innehåll som du har skapat för den målgruppen.
 
 En aktivitet definierar till exempel upplevelser för två olika målgrupper: kvinnor över 30 år och kvinnor under 30 år. Kvinnors sida på webbplatsen We.Retail visar olika produkter för varje upplevelse.
 
@@ -59,11 +62,11 @@ Målmotorn är den mekanism som driver logiken för riktat innehåll. [Aktivitet
 
 ### AEM {#aem}
 
-AEM har en inbyggd motor för målinriktning som hanterar sidförfrågningar och avgör vilket innehåll som ska visas. När ni använder AEM-målmotorn begränsas ni till att använda segment som skapats i AEM för att definiera målgrupperna för era upplevelser.
+AEM har en inbyggd motor för målinriktning som bearbetar sidförfrågningar och avgör vilket innehåll som ska visas. När ni använder den AEM målgruppsmotorn begränsas ni till att använda segment som skapas i AEM för att definiera målgrupperna för era upplevelser.
 
 ### Adobe Target {#adobe-target}
 
-Adobe Target-målmotorn gör att information som samlats in från sidbesök spåras i Adobe Target.
+Adobe Target målgruppsmotor spårar information som samlats in från sidbesök i Adobe Target.
 
 * När ni använder den här målgruppsmotorn använder ni de segment ni importerar från Adobe Target för att definiera målgrupperna för era upplevelser.
 * Aktiviteter som använder Adobe Target-motorn [synkroniseras med Target](/help/sites-authoring/activitylib.md#synchronizing-activities-with-adobe-target).
