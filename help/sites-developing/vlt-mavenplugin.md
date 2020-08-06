@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 943de371-0149-4307-be3a-b11c590b3451
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '3281'
+ht-degree: 3%
 
 ---
 
@@ -91,7 +94,7 @@ Parametrarna i följande tabell är gemensamma för alla mål utom när de anges
   <tr> 
    <td>name</td> 
    <td>Sträng</td> 
-   <td>bygg: Ja<br /> installation: Ingen<br /> rm:Ja</td> 
+   <td>bygg: Ja<br /> installation: Ingen<br /> rm: Ja</td> 
    <td>Bygg: Ingen standard.<br /> installera: Värdet på egenskapen artifactId för Maven-projektet.</td> 
    <td>Namnet på det paket som ska användas.</td> 
    <td>Alla mål utom mål.</td> 
@@ -157,7 +160,7 @@ Parametrarna i följande tabell är gemensamma för alla mål utom när de anges
 
 ### bygga {#build}
 
-Skapar ett innehållspaket som redan har definierats på en AEM-instans.
+Skapar ett innehållspaket som redan har definierats på en AEM.
 
 >[!NOTE]
 >
@@ -169,7 +172,7 @@ Alla parametrar för build-målet beskrivs i avsnittet [Common Parameters](#comm
 
 #### Exempel {#example}
 
-I följande exempel skapas det arbetsflödespaket som är installerat på AEM-instansen med IP-adressen 10.36.79.223. Målet körs med följande kommando:
+I följande exempel skapas det arbetsflödespaket som installeras på AEM med IP-adressen 10.36.79.223. Målet körs med följande kommando:
 
 ```shell
 mvn content-package:build
@@ -223,7 +226,7 @@ Förutom följande parametrar finns beskrivningarna i avsnittet [Vanliga paramet
    <td>artefakt</td> 
    <td>Sträng</td> 
    <td>Nej</td> 
-   <td> Värdet på egenskapen artifactId för Maven-projektet.</td> 
+   <td>Värdet på egenskapen artifactId för Maven-projektet.</td> 
    <td>En sträng med formulärgruppen groupId:artifactId:version[:packaging].</td> 
   </tr> 
   <tr> 
@@ -357,7 +360,7 @@ Alla parametrar för ls-målet beskrivs i avsnittet [Vanliga parametrar](#common
 
 #### Exempel {#example-2}
 
-I följande exempel visas de paket som är installerade på AEM-instansen med IP-adressen 10.36.79.223. Målet körs med följande kommando:
+I följande exempel visas de paket som är installerade på AEM med IP-adressen 10.36.79.223. Målet körs med följande kommando:
 
 ```shell
 mvn content-package:ls
@@ -398,7 +401,7 @@ Alla parametrar för RM-målet beskrivs i avsnittet [Vanliga parametrar](#common
 
 #### Exempel {#example-3}
 
-Följande exempel tar bort det arbetsflödespaket som är installerat på AEM-instansen med IP-adressen 10.36.79.223. Målet körs med följande kommando:
+Följande exempel tar bort det arbetsflödespaket som är installerat på AEM med IP-adressen 10.36.79.223. Målet körs med följande kommando:
 
 ```shell
 mvn content-package:rm
@@ -440,7 +443,7 @@ Alla parametrar för avinstallationsmålet beskrivs i avsnittet [Vanliga paramet
 
 #### Exempel {#example-4}
 
-I följande exempel avinstalleras det arbetsflödespaket som är installerat på AEM-instansen med IP-adressen 10.36.79.223. Målet körs med följande kommando:
+I följande exempel avinstalleras det arbetsflödespaket som är installerat på AEM med IP-adressen 10.36.79.223. Målet körs med följande kommando:
 
 ```shell
 mvn content-package:uninstall
@@ -554,7 +557,7 @@ Förutom följande parametrar kan du läsa beskrivningen av `name` parametern i 
    <td>Namnet på den genererade paketets ZIP-fil, utan filtillägget ZIP.</td> 
   </tr> 
   <tr> 
-   <td> grupp</td> 
+   <td>grupp</td> 
    <td>java.lang.String</td> 
    <td>Ja</td> 
    <td>Det groupID som definieras i Maven-projektet.</td> 
@@ -656,9 +659,9 @@ I följande filterexempel visas XML-strukturen som ska användas:
 
 Elementet `mode` definierar hur innehållet i databasen påverkas när paketet importeras. Följande värden kan användas:
 
-* **** Sammanfoga: Innehåll i paketet som inte redan finns i databasen läggs till. Innehåll som finns både i paketet och i databasen ändras inte. Inget innehåll tas bort från databasen.
-* **** Ersätt: Innehåll i paketet som inte finns i databasen läggs till i databasen. Innehåll i databasen ersätts med matchande innehåll i paketet. Innehåll tas bort från databasen när den inte finns i paketet.
-* **** Uppdatering: Innehåll i paketet som inte finns i databasen läggs till i databasen. Innehåll i databasen ersätts med matchande innehåll i paketet. Befintligt innehåll tas bort från databasen.
+* **Sammanfoga:** Innehåll i paketet som inte redan finns i databasen läggs till. Innehåll som finns både i paketet och i databasen ändras inte. Inget innehåll tas bort från databasen.
+* **Ersätt:** Innehåll i paketet som inte finns i databasen läggs till i databasen. Innehåll i databasen ersätts med matchande innehåll i paketet. Innehåll tas bort från databasen när den inte finns i paketet.
+* **Uppdatering:** Innehåll i paketet som inte finns i databasen läggs till i databasen. Innehåll i databasen ersätts med matchande innehåll i paketet. Befintligt innehåll tas bort från databasen.
 
 När filtret inte innehåller något `mode` element används standardvärdet för `replace` .
 
@@ -746,11 +749,11 @@ I stället för att uttrycka `package` målet i plugin- `executions` avsnittet k
 
 ## Hämta innehållspaketet Maven Plugin {#obtaining-the-content-package-maven-plugin}
 
-Plugin-programmet är tillgängligt från Adobes offentliga arkiv. Om du vill hämta plugin-programmet lägger du till följande Maven-profil i Maven-inställningsfilen och aktiverar den. När du använder kommandot Maven hämtas plugin-programmet till din lokala databas om det behövs.
+Plugin-programmet är tillgängligt från databasen public Adobe. Om du vill hämta plugin-programmet lägger du till följande Maven-profil i Maven-inställningsfilen och aktiverar den. När du använder kommandot Maven hämtas plugin-programmet till din lokala databas om det behövs.
 
 >[!NOTE]
 >
->Det går inte att bläddra i Adobe Public Releases-databasen, så om du navigerar till databas-URL:en med webbläsaren uppstår ett ej hittat fel. Maven har dock åtkomst till databaskatalogerna.
+>Databasen Adobe Public Releases kan inte bläddras, vilket innebär att det inte går att hitta ett fel om du navigerar till databas-URL:en via webbläsaren. Maven har dock åtkomst till databaskatalogerna.
 
 ```xml
 <profile>
@@ -883,17 +886,17 @@ Följande POM-kod lägger bara till en miniatyrbild i paketet. Miniatyrbilden m�
 </build>
 ```
 
-## Använda arkitekturer för att generera AEM-projekt {#using-archetypes-to-generate-aem-projects}
+## Generera AEM-projekt med hjälp av arkitekturer {#using-archetypes-to-generate-aem-projects}
 
-Flera Maven-arkitekter finns tillgängliga för att generera AEM-projekt. Använd den arkityp som motsvarar dina utvecklingsmål:
+Flera Maven-arkitekter finns tillgängliga för att generera AEM projekt. Använd den arkityp som motsvarar dina utvecklingsmål:
 
-* Ett innehållspaket som installerar resurser för ett AEM-program: [simple-content-package-archietype](#simple-content-package-archetype)
+* Ett innehållspaket som installerar resurser för ett AEM program: [simple-content-package-architype](#simple-content-package-archetype)
 * Ett innehållspaket som innehåller artefakter från tredje part: [simple-content-package-with-embedded-architype](#simple-content-package-with-embedded-archetype).
 * Ett program med flera moduler som kan användas för utveckling av Java-klasser och enhetstester: [multimodule-content-package-architype](#multimodule-content-package-archetype).
 
 >[!NOTE]
 >
->Apache Sling-projektet erbjuder också arketyper som är användbara i AEM-utveckling. Dessa finns dokumenterade på [https://sling.apache.org/site/maven-archetypes.html](https://sling.apache.org/documentation/development/maven-archetypes.html).
+>Apache Sling-projektet erbjuder också arketyper som är användbara vid AEM. Dessa finns dokumenterade på [https://sling.apache.org/site/maven-archetypes.html](https://sling.apache.org/documentation/development/maven-archetypes.html).
 
 Varje arkityp genererar följande objekt:
 
@@ -901,7 +904,7 @@ Varje arkityp genererar följande objekt:
 * POM-filer.
 * Konfigurationsfiler för FileVault.
 
-Arketype-artefakter finns i Adobe Public Maven-arkivet. Om du vill ladda ned och köra en arkityp, identifierar du typen av arkiv och Adobe-databasen med parametrarna för arkivtypen Maven:generate:
+Arketype-artefakter finns i Adobe offentliga Maven-arkivet. Om du vill ladda ned och köra en arkityp identifierar du arkivtypen och Adobe-databasen med parametrarna för arkivtypen Maven:generate:
 
 ```shell
 mvn archetype:generate -DarchetypeGroupId=com.day.jcr.vault \
@@ -935,7 +938,7 @@ Du kan ändra följande standardvärden i den genererade pom.xml-filen:
 
 ### simple-content-package-architype {#simple-content-package-archetype}
 
-Skapar ett maven-projekt som är lämpligt för att installera resurser för ett enkelt AEM-program. Mappstrukturen är den som används under `/apps` mappen i AEM-databasen. POM definierar kommandon för att paketera resurser som du placerar i mapparna och installera paketen på AEM-instansen.
+Skapar ett maven-projekt som är lämpligt för att installera resurser för ett enkelt AEM. Mappstrukturen är den som används under `/apps` mappen i AEM. POM definierar kommandon för att paketera resurser som du placerar i mapparna och installera paketen på AEM.
 
 **Artefaktegenskaper för arkityp:**
 
@@ -957,7 +960,7 @@ mvn archetype:generate -DarchetypeGroupId=com.day.jcr.vault \
 
 * groupId: groupId för det innehållspaket som Maven genererar. Värdet används automatiskt i POM-filen.
 * artifactId: Innehållspaketets namn. Värdet används också som namn på projektmappen.
-* version:Innehållspaketets version.
+* version: Innehållspaketets version.
 * paket: Det här värdet används inte för enkel-content-package-architype.
 * appsFolderName: Namnet på mappen under /apps.
 * artifactName: Beskrivning av innehållspaketet.
@@ -1013,7 +1016,7 @@ mvn archetype:generate -DarchetypeGroupId=com.day.jcr.vault \
 
 * groupId: groupId för det innehållspaket som Maven genererar. Värdet används automatiskt i POM-filen.
 * artifactId: Innehållspaketets namn. Värdet används också som namn på projektmappen.
-* version:Innehållspaketets version.
+* version: Innehållspaketets version.
 * paket: Den här parametern används inte.
 * appsFolderName: Namnet på mappen under /apps.
 * artifactName: Beskrivning av innehållspaketet.
@@ -1048,7 +1051,7 @@ ${artifactId}
 
 ### multimodule-content-package-architype {#multimodule-content-package-archetype}
 
-Skapar ett maven-projekt som innehåller mappstrukturen för utveckling av ett AEM-program och installation av resurser på servern.
+Skapar ett maven-projekt som innehåller mappstrukturen för utveckling av ett AEM och installation av resurser på servern.
 
 Mappen innehåller `bundle` mappstrukturen som lagrar Java- och JUnit-källfilerna som du utvecklar. Filen pom.xml i den här mappen skapar OSGi-paketet. Följande värden i POM identifierar artefakten och paketet:
 
@@ -1057,7 +1060,7 @@ Mappen innehåller `bundle` mappstrukturen som lagrar Java- och JUnit-källfiler
 
 `${artifactID}` och `${groupId}` är de värden som du anger för de här parametrarna när du kör arkityperna.
 
-Mappen innehåller `content` resurserna som är installerade på AEM-instansen. Värdet för artifactID är `${artifactID}multimodule-bundle`.
+Mappen innehåller de resurser som är installerade på AEM. `content` Värdet för artifactID är `${artifactID}multimodule-bundle`.
 
 Den överordnade mappen innehåller den överordnade POM som hanterar plugin-program för Maven och beroenden.
 
@@ -1081,7 +1084,7 @@ mvn archetype:generate -DarchetypeGroupId=com.day.jcr.vault \
 
 * groupId: groupId för det innehållspaket som Maven genererar. Värdet används automatiskt i POM-filen.
 * artifactId: Innehållspaketets namn. Värdet används också som namn på projektmappen.
-* version:Innehållspaketets version.
+* version: Innehållspaketets version.
 * paket: Det här värdet används inte för arkivtypen multimodule-content-package.
 * appsFolderName: Namnet på mappen under /apps.
 * artifactName: Beskrivning av innehållspaketet.
