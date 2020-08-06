@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: f453427d-c813-48b7-b2f9-adadea39c67d
 translation-type: tm+mt
 source-git-commit: 97db2126a4a20d82f964102d9ae3afcac94d830c
+workflow-type: tm+mt
+source-wordcount: '300'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 97db2126a4a20d82f964102d9ae3afcac94d830c
 
 Förutom referensfiltret för Apache Sling tillhandahåller Adobe även ett nytt CSRF-skyddsramverk som skyddar mot den här typen av attacker.
 
-Ramverket använder tokens för att garantera att kundens begäran är berättigad. Token genereras när formuläret skickas till klienten och valideras när formuläret skickas tillbaka till servern.
+Ramverket använder tokens för att garantera att kundens begäran är legitim. Token genereras när formuläret skickas till klienten och valideras när formuläret skickas tillbaka till servern.
 
 >[!NOTE]
 >
