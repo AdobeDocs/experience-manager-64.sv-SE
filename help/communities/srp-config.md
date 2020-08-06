@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 71fac7e9-814a-48b5-b816-9bdcb2a05190
 translation-type: tm+mt
 source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
+workflow-type: tm+mt
+source-wordcount: '202'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ En diskussion om lagringsalternativ och driftsättningstopologier finns på
 
 För att nå lagringskonsolen i redigeringsmiljön
 
-* Från global navigering: **[!UICONTROL Verktyg > Communities > Storage Configuration]**
+* Från global navigering: **[!UICONTROL Tools > Communities > Storage Configuration]**
 
 Så här väljer du ett annat lagringsalternativ än standard-JCR:
 
@@ -43,11 +46,11 @@ Så här väljer du ett annat lagringsalternativ än standard-JCR:
    * Se information för [val av DSRP](dsrp.md#select-dsrp)
    * Se information om hur du [väljer ASRP](asrp.md#select-asrp)
 
-* Välj **[!UICONTROL Skicka]**
+* Välj **[!UICONTROL Submit]**
 
 ### Om JCR-lagring {#about-jcr-storage}
 
-Observera att om inget val görs är standardinställningen AEM-databasen JCR.
+Observera att om inget val görs är standarddatabasen AEM JCR.
 
 JCR är *inte* en vanlig butik som delas av författaren och publiceringsmiljöerna. Community-innehåll visas bara i den författar- eller publiceringsmiljö där det skapades.
 
