@@ -11,19 +11,22 @@ topic-tags: operations
 discoiquuid: 06ad343a-f74d-41f5-b3c8-b85bb723ceeb
 translation-type: tm+mt
 source-git-commit: 11ce2d736f261daa789b94d23e2a5ca64192cefe
+workflow-type: tm+mt
+source-wordcount: '1269'
+ht-degree: 0%
 
 ---
 
 
 # Konvertera PostScript till PDF-dokument {#converting-postscript-to-pdf-documents}
 
-## Om Distiller Service {#about-the-distiller-service}
+## Om Distiller-tjänsten {#about-the-distiller-service}
 
-Tjänsten Distiller® konverterar PostScript®-, Encapsulated PostScript- (EPS) och PRN-filer till kompakta, tillförlitliga och säkrare PDF-filer i nätverket. Distiller-tjänsten används ofta för att konvertera stora volymer tryckta dokument till elektroniska dokument, till exempel fakturor och kontoutdrag. När man konverterar dokument till PDF kan man också skicka en pappersversion och en elektronisk version av ett dokument till sina kunder.
+Distiller® konverterar PostScript®-, Encapsulated PostScript- (EPS) och PRN-filer till kompakta, tillförlitliga och säkrare PDF-filer över ett nätverk. Distiller-tjänsten används ofta för att konvertera stora volymer tryckta dokument till elektroniska dokument, som fakturor och kontoutdrag. När man konverterar dokument till PDF kan man också skicka en pappersversion och en elektronisk version av ett dokument till sina kunder.
 
 >[!NOTE]
 >
->Mer information om Distiller-tjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Distiller finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Konvertera PostScript till PDF-dokument {#converting-postscript-to-pdf-documents-inner}
 
@@ -31,11 +34,11 @@ I det här avsnittet beskrivs hur du kan använda Distiller Service API (Java oc
 
 >[!NOTE]
 >
->Mer information om Distiller-tjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Distiller finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
->Om du vill konvertera PostScript-filer till PDF-dokument måste något av följande vara installerat på den server som är värd för AEM Forms: Återdistribuerbart paket för Acrobat 9 eller Microsoft Visual C++ 2005.
+>Om du vill konvertera PostScript-filer till PDF-dokument måste något av följande vara installerat på den server som är värd för AEM Forms: Acrobat 9 eller Microsoft Visual C++ 2005 återdistribuerbart paket.
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -81,7 +84,7 @@ Du kan spara PDF-dokumentet som en PDF-fil.
 
 ### Konvertera en PostScript-fil till PDF med Java API {#convert-a-postscript-file-to-pdf-using-the-java-api}
 
-Konvertera en PostScript-fil till PDF-dokument med Distiller Service API (Java):
+Konvertera en PostScript-fil till PDF-dokument med hjälp av Distiller Service API (Java):
 
 1. Inkludera projektfiler.
 
@@ -107,6 +110,7 @@ Konvertera en PostScript-fil till PDF-dokument med Distiller Service API (Java):
    * Ett `java.lang.String` objekt som innehåller namnet på skyddsinställningarna som ska användas
    * Ett valfritt `com.adobe.idp.Document` objekt som innehåller inställningar som ska användas när PDF-dokumentet genereras
    * Ett valfritt `com.adobe.idp.Document` objekt som innehåller metadatainformation som ska användas i PDF-dokumentet
+
    Metoden returnerar `createPDF` ett `CreatePDFResult` objekt som innehåller det nya PDF-dokumentet och en loggfil som kan genereras. Loggfilen innehåller vanligen fel- eller varningsmeddelanden som genereras av konverteringsbegäran.
 
 1. Spara PDF-dokumentet.
@@ -115,6 +119,7 @@ Konvertera en PostScript-fil till PDF-dokument med Distiller Service API (Java):
 
    * Anropa `CreatePDFResult` objektets `getCreatedDocument` metod. Detta returnerar ett `com.adobe.idp.Document` objekt.
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera PDF-dokumentet.
+
    Utför på samma sätt följande åtgärder för att hämta loggdokumentet.
 
    * Anropa `CreatePDFResult` objektets `getLogDocument` metod. Detta returnerar ett `com.adobe.idp.Document` objekt.
@@ -151,7 +156,7 @@ Konvertera en PostScript-fil till PDF-dokument med Distiller Service API (webbtj
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `DistillerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `DistillerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DistillerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -194,6 +199,6 @@ Konvertera en PostScript-fil till PDF-dokument med Distiller Service API (webbtj
 [Quick Start (SwaRef): Converting a PostScript file to a PDF document using the web service API](unresolvedlink-lc-qs-distiller-di.xml#ws624e3cba99b79e12e69a9941333732bac8-7eff.2)
 -->
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
