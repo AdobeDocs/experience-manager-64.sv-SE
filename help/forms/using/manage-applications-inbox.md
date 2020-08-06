@@ -1,8 +1,8 @@
 ---
-title: Hantera formulärprogram och uppgifter i AEM Inbox
-seo-title: Hantera formulärprogram och uppgifter i AEM Inbox
-description: Med AEM Inbox kan du starta formulärcentrerade arbetsflöden genom att skicka program och hantera uppgifter.
-seo-description: Med AEM Inbox kan du starta formulärcentrerade arbetsflöden genom att skicka program och hantera uppgifter.
+title: Hantera Forms-program och -uppgifter i AEM Inkorg
+seo-title: Hantera Forms-program och -uppgifter i AEM Inkorg
+description: Med AEM Inbox kan du starta Forms-centrerade arbetsflöden genom att skicka program och hantera uppgifter.
+seo-description: Med AEM Inbox kan du starta Forms-centrerade arbetsflöden genom att skicka program och hantera uppgifter.
 uuid: 5173558a-542a-4130-8bb6-5ac555ecc507
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
@@ -17,11 +17,11 @@ ht-degree: 0%
 ---
 
 
-# Hantera formulärprogram och uppgifter i AEM Inbox {#manage-forms-applications-and-tasks-in-aem-inbox}
+# Hantera Forms-program och -uppgifter i AEM Inkorg {#manage-forms-applications-and-tasks-in-aem-inbox}
 
-Ett av många sätt att starta eller utlösa ett formulärcentrerat arbetsflöde är genom program i AEM Inbox. Du måste skapa ett arbetsflödesprogram för att kunna göra ett formulärarbetsflöde tillgängligt som program i Inkorgen. Mer information om arbetsflödesprogram och andra sätt att starta formulärarbetsflöden finns i [Starta ett formulärorienterat arbetsflöde i OSGi](/help/forms/using/aem-forms-workflow.md#launch).
+Ett av många sätt att starta eller utlösa ett Forms-centrerat arbetsflöde är genom program i AEM Inbox. Du måste skapa ett arbetsflödesprogram för att göra ett Forms-arbetsflöde tillgängligt som program i Inbox. Mer information om arbetsflödesprogram och andra sätt att starta Forms-arbetsflöden finns i [Starta ett Forms-orienterat arbetsflöde i OSGi](/help/forms/using/aem-forms-workflow.md#launch).
 
-Dessutom konsoliderar AEM Inbox meddelanden och uppgifter från olika AEM-komponenter, inklusive formulärarbetsflöden. När ett formulärarbetsflöde som innehåller ett tilldelningssteg aktiveras, visas det associerade programmet som en uppgift i den tilldelades inkorg. Om den som tilldelats är en grupp visas uppgiften i Inkorgen för alla gruppmedlemmar tills en enskild person gör anspråk på eller delegerar uppgiften.
+Dessutom konsoliderar AEM Inkorg meddelanden och uppgifter från olika AEM komponenter, inklusive Forms-arbetsflöden. När ett formulärarbetsflöde som innehåller ett tilldelningssteg aktiveras, visas det associerade programmet som en uppgift i den tilldelades inkorg. Om den som tilldelats är en grupp visas uppgiften i Inkorgen för alla gruppmedlemmar tills en enskild person gör anspråk på eller delegerar uppgiften.
 
 Användargränssnittet i Inkorgen innehåller lista- och kalendervyer för att visa uppgifter. Du kan också konfigurera visningsinställningarna. Du kan filtrera uppgifter baserat på olika parametrar. Mer information om visning och filter finns i [Inkorgen](/help/sites-authoring/inbox.md).
 
@@ -29,17 +29,17 @@ Sammanfattningsvis kan du i Inkorgen skapa ett nytt program och hantera tilldela
 
 >[!NOTE]
 >
->Du måste vara medlem i gruppen med arbetsflödesanvändare för att kunna använda AEM Inbox.
+>Du måste vara medlem i gruppen för arbetsflödesanvändare för att kunna använda AEM Inkorg.
 
 ## Skapa program {#create-application}
 
-1. Gå till AEM Inbox på `https://[server]:[port]/aem/inbox`.
+1. Gå till AEM Inkorg på `https://[server]:[port]/aem/inbox`.
 1. Tryck på i Inkorgen **[!UICONTROL Create > Application]**. Sidan Välj program visas.
 1. Markera ett program och klicka på **[!UICONTROL Create]**. Det adaptiva formulär som är associerat med programmet öppnas. Fyll i formulären och tryck **[!UICONTROL Submit]**. Det startar det associerade arbetsflödet och skapar en uppgift i den tilldelades inkorg.
 
 ## Hantera uppgifter {#manage-tasks}
 
-När ett formulärarbetsflöde utlöses och du är tilldelad eller en del av den tilldelade gruppen, visas en uppgift i Inkorgen. Du kan visa uppgiftsinformation och utföra tillgängliga åtgärder för uppgiften inifrån Inkorgen.
+När ett Forms-arbetsflöde utlöses och du är tilldelad eller en del av den tilldelade gruppen, visas en uppgift i Inkorgen. Du kan visa uppgiftsinformation och utföra tillgängliga åtgärder för uppgiften inifrån Inkorgen.
 
 ### Anspråk eller delegera uppgifter {#claim-or-delegate-tasks}
 
@@ -52,14 +52,16 @@ Uppgifter som tilldelas en grupp visas i Inkorgen för alla gruppmedlemmar. Alla
 1. Gör något av följande:
 
    * Tryck på **[!UICONTROL Delegate]** om du vill delegera uppgiften. Dialogrutan Delegera objekt öppnas. Välj en användare, lägg till en kommentar och tryck på **[!UICONTROL OK]**.
+
    ![delegera](assets/delegate.png)
 
    * Tryck för att göra anspråk på uppgiften **[!UICONTROL Open]**. Dialogrutan Tilldela till mig själv öppnas. Tryck **[!UICONTROL Proceed]** för att göra anspråk på uppgiften. Uppgiften visas med dig som tilldelad i din inkorg.
+
    ![krav](assets/claim.png)
 
 ### Visa information och utför åtgärder på uppgifter {#view-details-and-perform-actions-on-tasks}
 
-När du öppnar en uppgift kan du visa uppgiftsinformation och utföra tillgängliga åtgärder. Vilka åtgärder som är tillgängliga för en uppgift definieras i steget Tilldela i det associerade formulärarbetsflödet.
+När du öppnar en uppgift kan du visa uppgiftsinformation och utföra tillgängliga åtgärder. Vilka åtgärder som är tillgängliga för en uppgift definieras i steget Tilldela uppgift i det associerade Forms-arbetsflödet.
 
 1. Tryck för att markera aktivitetens miniatyrbild. Alternativ för att öppna eller delegera den valda uppgiften visas högst upp.
 1. Tryck för **[!UICONTROL Open]** att visa aktivitetsinformation och vidta åtgärder. Den detaljerade uppgiftsvyn öppnas. I den här vyn kan du visa aktivitetsinformation och vidta åtgärder för uppgiften.
@@ -101,9 +103,9 @@ När du utför en åtgärd fortsätter den i arbetsflödet.
 
 ### Visa slutförda uppgifter {#view-completed-tasks}
 
-AEM Inbox visar endast aktiva uppgifter. Slutförda uppgifter visas inte i listan. Du kan emellertid använda inkorgsfilter för att filtrera uppgifter baserat på flera parametrar, t.ex. uppgiftstyp, status, start- och slutdatum. Så här visar du slutförda uppgifter:
+AEM Inkorg visar bara aktiva uppgifter. Slutförda uppgifter visas inte i listan. Du kan emellertid använda inkorgsfilter för att filtrera uppgifter baserat på flera parametrar, t.ex. uppgiftstyp, status, start- och slutdatum. Så här visar du slutförda uppgifter:
 
-1. I AEM Inbox trycker du på ![växlingspanel1](assets/toggle-side-panel1.png) för att öppna filterväljaren.
+1. Öppna filterväljaren genom att trycka på ![växlingspanelen1](assets/toggle-side-panel1.png) i AEM Inkorg.
 1. Tryck på **[!UICONTROL Task Status]** dragspelspanelen och välj **[!UICONTROL Complete]**. Alla slutförda uppgifter visas.
 
    ![filter-1](assets/filter-1.png)
