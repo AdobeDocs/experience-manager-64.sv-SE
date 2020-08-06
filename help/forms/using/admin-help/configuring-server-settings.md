@@ -28,11 +28,11 @@ Sidan Serverinställningar ger åtkomst till olika inställningar för formulär
 
 ## Konfigurera e-postinställningar {#configuring-email-settings}
 
-Du kan ange ett e-postkonto för formulärservern, som skickar e-postmeddelanden till AEM-formuläranvändare och -administratörer. Dessa e-postmeddelanden används för att meddela och påminna användare om uppgifter som de måste slutföra, meddela användaren om uppgifter som har nått en deadline och meddela administratören om eventuella processfel som inträffar.
+Du kan ange ett e-postkonto för formulärservern, som skickar e-postmeddelanden till användare och administratörer AEM formulär. Dessa e-postmeddelanden används för att meddela och påminna användare om uppgifter som de måste slutföra, meddela användaren om uppgifter som har nått en deadline och meddela administratören om eventuella processfel som inträffar.
 
-Om du vill aktivera sändning av e-postmeddelanden mellan AEM-formulär och användare konfigurerar du inställningarna för utgående e-post på sidan E-postinställningar. Utgående e-post måste använda en SMTP-server.
+Om du vill aktivera sändning av e-postmeddelanden mellan AEM formulär och användare konfigurerar du inställningarna för utgående e-post på sidan E-postinställningar. Utgående e-post måste använda en SMTP-server.
 
-Om du vill att AEM-formulär ska kunna ta emot och hantera inkommande e-postmeddelanden från användare skapar du en e-postslutpunkt för tjänsten Complete Task. (Se [Skapa en e-postslutpunkt för tjänsten](/help/forms/using/admin-help/configuring-email-endpoints.md#create-an-email-endpoint-for-the-complete-task-service)Slutför uppgift).
+Om du vill att AEM formulär ska kunna ta emot och hantera inkommande e-postmeddelanden från användare skapar du en e-postslutpunkt för tjänsten Complete Task. (Se [Skapa en e-postslutpunkt för tjänsten](/help/forms/using/admin-help/configuring-email-endpoints.md#create-an-email-endpoint-for-the-complete-task-service)Slutför uppgift).
 
 Om processerna har utformats och implementerats utan att e-post krävs behöver du inte konfigurera något av alternativen på sidan E-postinställningar.
 
@@ -54,13 +54,13 @@ Om processerna har utformats och implementerats utan att e-post krävs behöver 
 >
 >Om du anger felaktig information kan du klicka på Avbryt för att gå tillbaka till sidan som visades tidigare.
 
-### Konfigurera e-postmallar för att använda AEM Forms Workspace {#configuring-email-templates-to-use-html-workspace}
+### Konfigurera e-postmallar för användning av AEM Forms Workspace {#configuring-email-templates-to-use-html-workspace}
 
 >[!NOTE]
 >
->Flex Workspace är föråldrat för AEM-formulärreleaser.
+>Flex Workspace används inte AEM formulärreleasen.
 
-Som standard innehåller e-postmeddelanden som skickas från AEM-formulär länkar till (borttagna för AEM-formulär i JEE) Flex Workspace. Du kan konfigurera AEM-formulär så att e-postmeddelanden skickas med länkar till AEM Forms Workspace. Mer information om fördelarna med AEM Forms Workspace (Borttaget för AEM-formulär i JEE) finns i [den här](/help/forms/using/features-html-workspace-available-flex.md) artikeln.
+Som standard innehåller e-postmeddelanden som skickas AEM formulär länkar till (borttagna för AEM formulär i JEE) Flex Workspace. Du kan konfigurera AEM formulär att skicka ut e-postmeddelanden med länkar till AEM Forms Workspace. Läs [den här](/help/forms/using/features-html-workspace-available-flex.md) artikeln om du vill veta mer om fördelarna med AEM Forms Workspace i stället för (borttaget för AEM-formulär i JEE) Flex Workspace.
 
 1. I administrationskonsolen klickar du på Hem > Tjänster > Formulärarbetsflöde > Serverinställningar > Aktivitetsmeddelanden.
 1. Öppna mall för uppgiftstilldelning.
@@ -84,13 +84,13 @@ Om du vill generera e-postmeddelanden för en grupp anger du en e-postadress fö
 
 >[!NOTE]
 >
->Flex Workspace används inte i AEM-formulärsversioner.
+>Flex Workspace är föråldrat för AEM formulärreleaser.
 
 ### Konfigurera påminnelser för användare eller grupper {#configure-reminders-for-users-or-groups}
 
 Du kan skicka påminnelsemeddelanden till den tilldelade användaren eller gruppen när en deadline för att slutföra en uppgift närmar sig. Reglerna för att bestämma exakt när ett påminnelsemeddelande skickas bestäms av processutvecklaren.
 
-1. I administrationskonsolen klickar du på Tjänster > Formulärarbetsflöde > Serverinställningar > Aktivitetsmeddelanden.
+1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Serverinställningar > Aktivitetsmeddelanden.
 1. Klicka på Påminnelse (för användare) eller Grupp - Påminnelse (för grupper) under Meddelandetyp.
 1. Välj Aktivera påminnelse eller Aktivera grupp - påminnelse.
 1. (Endast användarmeddelanden) Markera Inkludera formulärdata om du vill inkludera en bifogad fil i formuläret och dess data med påminnelsemeddelandet.
@@ -104,7 +104,7 @@ Du kan skicka påminnelsemeddelanden till den tilldelade användaren eller grupp
 
 Du kan skicka meddelanden om uppgiftstilldelning till en användare eller grupp när de tilldelas en uppgift.
 
-1. I administrationskonsolen klickar du på Tjänster > Formulärarbetsflöde > Serverinställningar > Aktivitetsmeddelanden.
+1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Serverinställningar > Aktivitetsmeddelanden.
 1. Klicka på Uppgiftstilldelning för användare eller Grupp - Uppgiftstilldelning för grupper under Meddelandetyp.
 1. Välj Aktivera aktivitetstilldelning för användare eller Aktivera grupp - Uppgiftstilldelning för grupper.
 1. (Endast användarmeddelanden) Markera Inkludera formulärdata om du vill ta med en bifogad fil i formuläret och dess data i e-postmeddelandet för uppgiftstilldelning.
@@ -118,7 +118,7 @@ Du kan skicka meddelanden om uppgiftstilldelning till en användare eller grupp 
 
 Du kan skicka aviseringar om deadline till användare och grupper när deadline att agera efter en tilldelad uppgift har passerat. Ett meddelande om deadline är vanligtvis informativt eftersom användaren inte längre kan agera på den tilldelade uppgiften.
 
-1. I administrationskonsolen klickar du på Tjänster > Formulärarbetsflöde > Serverinställningar > Aktivitetsmeddelanden.
+1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Serverinställningar > Aktivitetsmeddelanden.
 1. Klicka på Deadline (för användare) eller Grupp - Deadline (för grupper) under Meddelandetyp.
 1. Välj Aktivera tidsgräns eller Aktivera grupp - tidsgräns.
 1. Skriv texten för ämnesraden i e-postmeddelandet i rutan Ämne. Det här fältet är förifyllt med standardtext. Mer information om hur du anpassar det här fältet finns i [Anpassa innehållet i meddelanden](configuring-server-settings.md#customizing-the-content-of-notifications).
@@ -129,7 +129,7 @@ Du kan skicka aviseringar om deadline till användare och grupper när deadline 
 
 ### Dölj taggen DO NOT DELETE för alla e-postmeddelanden {#hide-the-do-not-delete-tag-for-all-emails}
 
-Du kan konfigurera e-post så att den döljs till spårningstaggen DO NOT DELETE i alla e-postmeddelanden som skickas i en mänsklig centrerad process. Mer information finns i [Så här döljer du taggen DO-NOT-DELETE med CSS](https://blogs.adobe.com/LiveCycleHelp/2013/09/how-to-hide-the-do-not-delete-tag-with-css.html)
+Du kan konfigurera e-post så att den döljs för spårningstaggen DO NOT DELETE i alla e-postmeddelanden som skickas i en mänsklig centrerad process. Mer information finns i [Så här döljer du taggen DO-NOT-DELETE med CSS](https://blogs.adobe.com/LiveCycleHelp/2013/09/how-to-hide-the-do-not-delete-tag-with-css.html)
 
 ## Konfigurera meddelanden för administratörer {#configuring-notifications-for-administrators}
 
@@ -144,7 +144,7 @@ Du konfigurerar följande typer av meddelanden för administratörer:
 
 Om en gren avbryts (avbryter processen antingen avsiktligt eller på grund av ett fel) kan du få ett e-postmeddelande skickat till en administratör eller en annan användare som sedan kan undersöka problemet.
 
-1. I administrationskonsolen klickar du på Tjänster > Formulärarbetsflöde > Serverinställningar > Administratörsmeddelanden.
+1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Serverinställningar > Administratörsmeddelanden.
 1. Klicka på Installerad gren under Meddelandetyp.
 1. Välj Aktivera förinstallerad gren.
 1. I rutan E-postadress skriver du de adresser till användarna som ska meddelas när en gren stannar. Använd formatet user@domain.com och avgränsa adresserna med kommatecken. Den här e-postadressen är vanligtvis till för en administratör.
@@ -158,7 +158,7 @@ Om en gren avbryts (avbryter processen antingen avsiktligt eller på grund av et
 
 Om en åtgärd avbryts (avbryter processen antingen avsiktligt eller på grund av ett fel) kan du få ett e-postmeddelande skickat till en administratör eller en annan användare som kan undersöka problemet.
 
-1. I administrationskonsolen klickar du på Tjänster > Formulärarbetsflöde > Serverinställningar > Administratörsmeddelanden.
+1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Serverinställningar > Administratörsmeddelanden.
 1. Klicka på Installerad åtgärd under Meddelandetyp.
 1. Välj Aktivera förinstallerad åtgärd.
 1. I rutan E-postadresser skriver du de adresser till användarna som ska meddelas när en åtgärd avbryts. Använd formatet user@domain.com och avgränsa adresserna med kommatecken. Den här e-postadressen är vanligtvis till för en administratör.
@@ -180,7 +180,7 @@ Området Meddelandemallar är en textredigerare som du kan använda för att gen
 
 ### URL-generering {#url-generation}
 
-Endast för aktivitetsmeddelanden innehåller formulärarbetsflödet två fördefinierade URL-konfigurationer som du kan dra från listan URL-generering till rutan Meddelandemall och sedan anpassa:
+Endast för aktivitetsmeddelanden innehåller Forms-arbetsflödet två fördefinierade URL-konfigurationer som du kan dra från listan URL-generering till rutan Meddelandemall och sedan anpassa:
 
 * OpenTask är tillgängligt för meddelandetyperna Påminnelse och Uppgiftstilldelning. Den här URL:en innehåller en länk till arbetsytan så att användaren snabbt kan komma åt uppgiften via e-postmeddelandet. När du drar URL:en för OpenTask till rutan Meddelandemall har URL:en följande format:
 
@@ -192,7 +192,7 @@ Endast för aktivitetsmeddelanden innehåller formulärarbetsflödet två förde
 
 >[!NOTE]
 >
->Flex Workspace används inte i AEM-formulärsversioner.
+>Flex Workspace är föråldrat för AEM formulärreleaser.
 
 Om din lösning distribueras i en klustrad miljö ska du ersätta den `@@notification-host@@` med klusteradressen.
 
@@ -220,7 +220,7 @@ För påminnelser, uppgiftstilldelningar och deadlines för användare och grupp
 
 **instruktioner** Innehållet i egenskapen Aktivitetsinstruktioner, enligt definition i användarsteget i processen i Workbench.
 
-**notification-host** Värdnamnet för AEM-formulärprogramservern.
+**notification-host** Värdnamnet för AEM formulärprogramserver.
 
 **process-name** Processens namn.
 
@@ -244,7 +244,7 @@ För fasta grenar kan du använda följande variabler i rutorna Ämne och Meddel
 
 **process-id** Processinstansens identifierare.
 
-**notification-host** Värdnamnet för AEM-formulärprogramservern.
+**notification-host** Värdnamnet för AEM formulärprogramserver.
 
 För fasta åtgärder kan du använda följande variabler i rutorna Ämne och Meddelandemall:
 
@@ -254,7 +254,7 @@ För fasta åtgärder kan du använda följande variabler i rutorna Ämne och Me
 
 **process-id** Processinstansens identifierare.
 
-**notification-host** Värdnamnet för AEM-formulärprogramservern.
+**notification-host** Värdnamnet för AEM formulärprogramserver.
 
 ### Använda en variabel i rutan Ämne {#using-a-variable-in-the-subject-box}
 
@@ -282,7 +282,7 @@ Business Activity Monitoring, en valfri modul, innehåller en uppsättning opera
 
 På sidan BAM-konfigurationsinställningar anger du anslutningarna till servern som kör BAM så att processrelaterade händelser kan spåras och överföras till servern.
 
-1. I administrationskonsolen klickar du på Tjänster > Formulärarbetsflöde > Serverinställningar > BAM-konfigurationsinställningar.
+1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Serverinställningar > BAM-konfigurationsinställningar.
 1. Skriv namnet på servern som kör BAM i rutan BAM-värd. Standardvärdet är localhost.
 1. I rutan BAM-port skriver du den port som ska användas för att ansluta till servern som kör BAM. Standardporten för BAM för JBoss är 8080, WebLogic är 7001 och WebSphere är 9080.
 1. I rutan Servervärd skriver du namnet eller IP-adressen för värdformulärservern. Standardvärdet är localhost.
