@@ -9,6 +9,9 @@ topic-tags: develop
 discoiquuid: 93961c9c-b46c-4233-b070-7343245255d1
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '710'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +44,7 @@ Gör så här för att lägga till ett element i metadata:
    `(agebox.value >= 21) ? true : false`
 
    ![Metadatascript](assets/add-element-metadata.png)
-   **** Bild: *Skript som anges på fliken Metadata*
+   **Bild:** *Skript som anges på fliken Metadata*
 
 1. Click **OK**.
 
@@ -63,5 +66,5 @@ Du väljer en adaptiv formulärbehållare och i formuläregenskaperna lägger du
 
 >[!NOTE]
 >
->Exemplet ovan är endast avsett för inlärning. Kontrollera att du letar efter metadata på rätt plats som konfigurerats i implementeringen av AEM Forms.
+>Exemplet ovan är endast avsett för inlärning. Kontrollera att du letar efter metadata på rätt plats som konfigurerats i din AEM Forms-implementering.
 
