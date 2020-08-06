@@ -1,8 +1,8 @@
 ---
 title: Hur processrapportering fungerar
 seo-title: Hur processrapportering fungerar
-description: Beskrivning av de tjänster som utgör AEM Forms on JEE Process Reporting och en introduktion till gränssnittet för processrapportering
-seo-description: Beskrivning av de tjänster som utgör AEM Forms on JEE Process Reporting och en introduktion till gränssnittet för processrapportering
+description: Beskrivning av de tjänster som utgör AEM Forms on JEE Process Reporting och en introduktion till användargränssnittet för processrapportering
+seo-description: Beskrivning av de tjänster som utgör AEM Forms on JEE Process Reporting och en introduktion till användargränssnittet för processrapportering
 uuid: 00a2dd6d-8a6f-4c7b-b03e-81cfd4bcf50d
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,17 +10,20 @@ topic-tags: process-reporting
 discoiquuid: 4afc68fc-6b39-4c31-95fa-2ef3111c57da
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '371'
+ht-degree: 0%
 
 ---
 
 
 # Hur processrapportering fungerar {#how-process-reporting-works}
 
-Processrapportering är rapporteringsmodulen för AEM Forms on JEE.
+Processrapportering är rapporteringsmodulen för AEM Forms i JEE.
 
-Med Process Reporting kan du köra rapporter om AEM Forms-processer och -uppgifter.
+Med processrapportering kan du köra rapporter om AEM Forms processer och uppgifter.
 
-Processrapportering använder den inbäddade Process Reporting-databasen för att publicera formulärdata. Sedan används dessa data för att köra rapporter.
+Processrapportering använder den inbäddade Process Reporting-databasen för att publicera Forms-data. Sedan används dessa data för att köra rapporter.
 
 Processrapportering består av följande moduler:
 
@@ -38,7 +41,7 @@ Processrapportering består av följande moduler:
 
 ### ProcessDataPublisher-tjänst {#processdatapublisher-service-br}
 
-ProcessDataPublisher-servern körs regelbundet i AEM Forms-databasen och extraherar de data som har ändrats sedan den senaste körningen av tjänsten. Sedan publiceras data till datalagringstjänsten för processdata.
+ProcessDataPublisher-servern körs regelbundet på AEM Forms-databasen och extraherar de data som har ändrats sedan den senaste körningen av tjänsten. Sedan publiceras data till datalagringstjänsten för processdata.
 
 Mer information om hur du konfigurerar tjänsten finns i [Konfigurera tjänsten](/help/forms/using/process-reporting/install-start-process-reporting.md#p-reportconfiguration-service-p)ProcessDataPublisher.
 
