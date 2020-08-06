@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 6f8e08d1-831e-441a-ad1a-f5c8788f32d7
 translation-type: tm+mt
 source-git-commit: b4fa2d443f43cdfbf5caca4da7dcb935d099b795
+workflow-type: tm+mt
+source-wordcount: '499'
+ht-degree: 1%
 
 ---
 
 
 # Anpassa vyer av Sidegenskaper{#customizing-views-of-page-properties}
 
-Varje sida har en uppsättning [egenskaper](/help/sites-authoring/editing-page-properties.md) som kan visas och redigeras av användare. vissa krävs när du skapar sidan (skapar vy), andra kan visas och redigeras (redigeringsvy) i ett senare skede. Dessa sidegenskaper definieras och görs tillgängliga genom dialogrutan ( `cq:dialog`) för den aktuella sidkomponenten.
+Varje sida har en uppsättning [egenskaper](/help/sites-authoring/editing-page-properties.md) som kan visas och redigeras av användarna. vissa krävs när du skapar sidan (skapar vy), andra kan visas och redigeras (redigeringsvy) i ett senare skede. Dessa sidegenskaper definieras och görs tillgängliga genom dialogrutan ( `cq:dialog`) för den aktuella sidkomponenten.
 
 >[!CAUTION]
 >
@@ -83,7 +86,7 @@ Som standard visar guiden [****Skapa sida](/help/sites-authoring/managing-pages.
    >1. Gör ändringar i `/apps`
 
 
-1. Ställ in egenskapen på `path` `basic` att peka på åsidosättningen av grundfliken (se även nästa steg). Exempel:
+1. Ställ in egenskapen på `path` `basic` att peka på åsidosättningen av grundfliken (se även nästa steg). Till exempel:
 
    ```xml
    /apps/demos/components/page/tabs/basic
@@ -100,6 +103,7 @@ Som standard visar guiden [****Skapa sida](/help/sites-authoring/managing-pages.
    * **Namn**: `cq:showOnCreate`
    * **Typ**: `Boolean`
    * **Värde**: `false`
+
    Avsnittet **Fler rubriker och beskrivning** visas inte längre i guiden **Skapa sida** .
 
 >[!NOTE]
