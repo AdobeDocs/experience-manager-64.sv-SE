@@ -26,13 +26,13 @@ Utför följande konfigurationer om du vill att Designer ska kunna generera HTML
 
 * Konfigurera autentiseringstjänsten för Apache Sling
 * Inaktivera skyddat läge
-* Ange information om AEM Forms-servern
+* Ange information om AEM Forms-server
 
 ### Konfigurera autentiseringstjänsten för Apache Sling {#configure-apache-sling-authentication-service}
 
 1. Gå till `https://[server]:[port]/system/console/configMgr` AEM Forms som körs på OSGi eller
 
-   `https://[server]:[port]/lc/system/console/configMgr` på AEM Forms som kör på JEE.
+   `https://[server]:[port]/lc/system/console/configMgr` på AEM Forms som körs på JEE.
 
 1. Leta reda på och klicka på konfigurationen för **Apache Sling Authentication Service** för att öppna den i redigeringsläge.
 
@@ -46,6 +46,7 @@ Utför följande konfigurationer om du vill att Designer ska kunna generera HTML
 
       * -/content/xfaforms
       * -/etc/clientlibs/fd/xfaforms
+
    >[!NOTE]
    >
    >Kopiera inte och klistra in det angivna värdet i fältet Autentiseringskrav eftersom det kan skada specialtecknen i värdet. Skriv i stället det angivna värdet i fältet.
@@ -55,9 +56,9 @@ Utför följande konfigurationer om du vill att Designer ska kunna generera HTML
 
 ### Inaktivera skyddat läge {#disable-protected-mode}
 
-Som standard är [skyddat läge](/help/forms/using/get-xdp-pdf-documents-aem.md) aktiverat. Låt det vara aktiverat för produktionsmiljöerna. Du kan inaktivera det för en utvecklingsmiljö och förhandsgranska HTML5-formulär i Designer. Utför följande steg för att inaktivera den:
+Som standard är [skyddat läge](/help/forms/using/get-xdp-pdf-documents-aem.md) aktiverat. Låt det vara aktiverat för produktionsmiljöerna. Du kan inaktivera det för en utvecklingsmiljö och förhandsgranska HTML5 Forms i Designer. Utför följande steg för att inaktivera den:
 
-1. Logga in på AEM Web Console som administratör.
+1. Logga in på AEM webbkonsol som administratör.
 
    * URL för AEM Forms på OSGi är `https://[server]:[port]/system/console/configMgr`
    * URL för AEM Forms på JEE är `https://[server]:[port]/lc/system/console/configMgr`
@@ -65,26 +66,27 @@ Som standard är [skyddat läge](/help/forms/using/get-xdp-pdf-documents-aem.md)
 1. Öppna **[!UICONTROL Mobile Forms Configurations]** för redigering.
 1. Avmarkera **[!UICONTROL Protected Mode]** alternativet och klicka på **[!UICONTROL Save]**.
 
-### Ange information om AEM Forms-servern {#provide-details-of-aem-forms-server}
+### Ange information om AEM Forms-server {#provide-details-of-aem-forms-server}
 
 1. Gå till **Verktyg** > **Alternativ** i Designer.
 1. I fönstret Alternativ väljer du sidan **Serveralternativ** , anger följande och klickar på **OK**.
 
-   * **Server-URL**: URL för AEM Forms-server.
-   * **HTTP-portnummer**: AEM-serverport. Standardvärdet är 4502.
+   * **Server-URL**: AEM Forms server-URL.
+   * **HTTP-portnummer**: AEM serverport. Standardvärdet är 4502.
    * **HTML-förhandsgranskningskontext:** Sökväg till profilen för återgivning av XFA-formulär. Följande standardprofiler används för att förhandsgranska formuläret i Designer. Du kan också ange sökvägen till en anpassad profil.
 
       * `/content/xfaforms/profiles/default.html` (AEM Forms on OSGi)
-      * `/lc/content/xfaforms/profiles/default.html` (AEM Forms på JEE)
-   * **Forms Manager-kontext:** Kontextsökväg som Forms Manager-gränssnittet distribueras till. Standardvärdena är:
+      * `/lc/content/xfaforms/profiles/default.html` (AEM Forms on JEE)
+   * **Forms Manager Context:** Den kontextsökväg där användargränssnittet för Forms Manager distribueras. Standardvärdena är:
 
       * `/aem/forms` (AEM Forms on OSGi)
-      * `/lc/forms` (AEM Forms på JEE)
-   **Obs!** *Kontrollera att AEM Forms-servern är igång och körs. The HTML preview connects to the CRX server to* generate *a preview.*
+      * `/lc/forms` (AEM Forms on JEE)
 
-   ![Alternativ för AEM Forms Designer ](assets/server_options.png)
+   **Obs!** *Kontrollera att AEM Forms-servern är igång. The HTML preview connects to the CRX server to* generate *a preview.*
 
-   Alternativ för AEM Forms Designer
+   ![AEM Forms Designer-alternativ ](assets/server_options.png)
+
+   AEM Forms Designer-alternativ
 
 1. Om du vill förhandsgranska ett formulär i HTML klickar du på fliken **Förhandsgranska HTML** .
 
