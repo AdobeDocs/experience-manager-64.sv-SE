@@ -11,6 +11,9 @@ topic-tags: operations
 discoiquuid: 1e6cc554-aef1-463c-906b-634b80a27917
 translation-type: tm+mt
 source-git-commit: e3fcf1a117b13392b7e530a09198982c6160cb7b
+workflow-type: tm+mt
+source-wordcount: '2342'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Tjänsten DocConverter kan konvertera PDF-dokument till PDA/A-dokument. Du kan u
 
 >[!NOTE]
 >
->Mer information om tjänsten DocConverter finns i [Tjänstereferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten DocConverter finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Konvertera dokument till PDF/A-dokument {#converting-documents-to-pdf-a-documents}
 
@@ -38,7 +41,7 @@ PDF/A är standard för arkivering av PDF-dokument, men det är inte obligatoris
 
 >[!NOTE]
 >
->Mer information om tjänsten DocConverter finns i [Tjänstereferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten DocConverter finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -60,10 +63,10 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-docconverter-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss Application Server)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss Application Server)
+* adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
+* jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
-Mer information om var dessa JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa en DocConvert-klient**
 
@@ -118,7 +121,7 @@ Konvertera ett PDF-dokument till ett PDF/A-dokument med Java API:
 1. Ange spårningsinformation
 
    * Skapa ett `PDFAConversionOptionSpec` objekt med hjälp av dess konstruktor.
-   * Ange informationsspårningsnivån genom att anropa `PDFAConversionOptionSpec` objektets `setLogLevel` metod och skicka ett strängvärde som anger spårningsnivån. For example, pass the value `FINE`. Mer information om de olika värdena finns i metoden `setLogLevel` i API-referensen för [AEM Forms](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * Ange informationsspårningsnivån genom att anropa `PDFAConversionOptionSpec` objektets `setLogLevel` metod och skicka ett strängvärde som anger spårningsnivån. For example, pass the value `FINE`. Mer information om de olika värdena finns i avsnittet om metoden `setLogLevel` i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 1. Konvertera dokumentet
 
@@ -126,6 +129,7 @@ Konvertera ett PDF-dokument till ett PDF/A-dokument med Java API:
 
    * Det `com.adobe.idp.Document` objekt som innehåller det PDF-dokument som ska konverteras
    * Det `PDFAConversionOptionSpec` objekt som anger spårningsinformation
+
    Metoden `toPDFA` returnerar ett `PDFAConversionResult` objekt som innehåller PDF/A-dokumentet.
 
 1. Spara PDF/A-dokumentet
@@ -177,6 +181,7 @@ Konvertera ett PDF-dokument till ett PDF/A-dokument med hjälp av DocConverter A
 
    * Det `BLOB` objekt som innehåller det PDF-dokument som ska konverteras
    * Det `PDFAConversionOptionSpec` objekt som anger spårningsinformation
+
    Metoden `toPDFA` returnerar ett `PDFAConversionResult` objekt som innehåller PDF/A-dokumentet.
 
 1. Spara PDF/A-dokumentet
@@ -191,7 +196,7 @@ Konvertera ett PDF-dokument till ett PDF/A-dokument med hjälp av DocConverter A
 
 [Arbeta med PDF/A-dokument](pdf-a-documents.md#working-with-pdf-a-documents)
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
 [Skapa en .NET-klientsammansättning som använder Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
 
@@ -201,7 +206,7 @@ Du kan använda tjänsten DocConverter för att avgöra om ett PDF-dokument är 
 
 >[!NOTE]
 >
->Mer information om tjänsten DocConverter finns i [Tjänstereferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten DocConverter finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-1}
 
@@ -222,10 +227,10 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-docconverter-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss Application Server)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss Application Server)
+* adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
+* jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
-Mer information om var dessa JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa en DocConvert-klient**
 
@@ -275,7 +280,7 @@ Kontrollera PDF/A-kompatibiliteten med Java API:
 
    * Skapa ett `PDFAValidationOptionSpec` objekt med hjälp av dess konstruktor.
    * Ange kompatibilitetsnivån genom att anropa `PDFAValidationOptionSpec` objektets `setCompliance` metod och skicka `PDFAValidationOptionSpec.Compliance.PDFA_1B`.
-   * Ange informationsspårningsnivån genom att anropa `PDFAValidationOptionSpec` objektets `setLogLevel` metod och skicka ett strängvärde som anger spårningsnivån. For example, pass the value `FINE`. Mer information om de olika värdena finns i metoden `setLogLevel` i API-referensen för [AEM Forms](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * Ange informationsspårningsnivån genom att anropa `PDFAValidationOptionSpec` objektets `setLogLevel` metod och skicka ett strängvärde som anger spårningsnivån. For example, pass the value `FINE`. Mer information om de olika värdena finns i avsnittet om metoden `setLogLevel` i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 1. Hämta information om PDF-dokumentet
 
@@ -283,6 +288,7 @@ Kontrollera PDF/A-kompatibiliteten med Java API:
 
    * Det `com.adobe.idp.Document` objekt som innehåller PDF-dokumentet.
    * Det objekt `PDFAValidationOptionSpec` som anger körningsalternativ.
+
    Metoden returnerar `isPDFA` ett `PDFAValidationResult` objekt som innehåller resultatet av den här åtgärden.
 
 **Se även**
@@ -329,12 +335,13 @@ Kontrollera PDF/A-kompatibiliteten med hjälp av webbtjänstens API:
 
    * Det `BLOB` objekt som innehåller PDF-dokumentet.
    * Det objekt `PDFAValidationOptionSpec` som innehåller körningsalternativ.
+
    Metoden returnerar `isPDFA` ett `PDFAValidationResult` objekt som innehåller resultatet av den här åtgärden.
 
 **Se även**
 
 [Arbeta med PDF/A-dokument](pdf-a-documents.md#working-with-pdf-a-documents)
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
 [Skapa en .NET-klientsammansättning som använder Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
