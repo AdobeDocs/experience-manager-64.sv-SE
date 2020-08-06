@@ -1,14 +1,17 @@
 ---
 title: Skapa hjälpmedelsförberedda adaptiva formulär
 seo-title: Skapa hjälpmedelsförberedda adaptiva formulär
-description: Med AEM Forms får du verktyg och verktyg för att skapa hjälpmedelsförberedda formulär som uppfyller alla tillgänglighetsstandarder.
-seo-description: Med AEM Forms får du verktyg och verktyg för att skapa hjälpmedelsförberedda formulär som uppfyller alla tillgänglighetsstandarder.
+description: AEM Forms har verktyg och verktyg för att skapa hjälpmedelsförberedda, anpassningsbara blanketter som följer tillgänglighetsstandarder.
+seo-description: AEM Forms har verktyg och verktyg för att skapa hjälpmedelsförberedda, anpassningsbara blanketter som följer tillgänglighetsstandarder.
 uuid: eceb3282-0b90-4e0a-8b89-137d27029747
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 96d9ad52-074b-4084-b818-abce79282776
 translation-type: tm+mt
 source-git-commit: 7e58d1d861f832d073fb178868804995ee8d855b
+workflow-type: tm+mt
+source-wordcount: '924'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +31,7 @@ När du skapar ett anpassat formulär bör du tänka på följande när du skapa
 * Ange tillräcklig färgkontrast
 * Kontrollera att formulärkontrollerna är tangentbordstillgängliga
 
-##  Ange korrekta etiketter för formulärkontroller {#provide-proper-labels-for-form-controls}
+## Ange korrekta etiketter för formulärkontroller {#provide-proper-labels-for-form-controls}
 
 Etiketten eller titeln för en komponent identifierar vad formulärkomponenten representerar. Texten &quot;Förnamn&quot; anger till exempel att användaren måste ange sitt förnamn i ett textfält. För att skärmläsare ska kunna komma åt etiketten är den programmatiskt kopplad till en formulärkomponent. Formulärkontrollen kan även konfigureras med ytterligare hjälpmedelsinformation.
 
@@ -43,11 +46,11 @@ Så här använder du alternativet Hjälpmedel:
 
 ![Tillgänglighetsalternativ i formulärkomponenter](assets/accessibility-options.png)
 
-**Författare av anpassade textformulär** tillhandahåller innehållet i hjälpmedelsalternativet Anpassad text. Den här anpassade texten används i hjälpmedelstekniken, till exempel skärmläsare. Att använda inställningen Titel är det bästa alternativet i de flesta scenarier. Du bör endast skapa anpassad uppläsningstext när du inte kan använda titeln eller en kort beskrivning.
+**Författare av anpassade textformulär** tillhandahåller innehållet i hjälpmedelsalternativet Anpassad text. Den här anpassade texten används i hjälpmedelstekniken, till exempel skärmläsare. Att använda inställningen Titel är det bästa alternativet i de flesta scenarier. Du bör endast skapa Reader-text för anpassad skärm när du inte kan använda rubriken eller en kort beskrivning.
 
 **Kort beskrivning** För de flesta komponenter visas den korta beskrivningen vid körning när användaren placerar pekaren över komponenten. Du kan ange det här alternativet i fältet för kort beskrivning under alternativet för hjälpinnehåll.
 
-**Titel** Använd det här alternativet om du vill att AEM Forms ska använda den visuella etikett som är kopplad till formulärfältet som skärmläsartext.
+**Titel** Använd det här alternativet om du vill att den visuella etikett som är kopplad till formulärfältet ska kunna användas som skärmläsartext i AEM Forms.
 
 **Namn** Du kan ange ett värde i fältet Namn på fliken Bindning. Namnet får inte innehålla blanksteg.
 
@@ -61,7 +64,7 @@ Så här använder du alternativet Hjälpmedel:
 >
 >För XFA-baserade adaptiva formulär ärvs hjälpmedelsalternativet från de hjälpmedelsalternativ som angetts i XDP. Verktygstips från XDP mappas till Short Description och Caption mappas till Title. De andra alternativen fungerar som de är.
 
-##  Ange textmotsvarigheter för bilder {#provide-text-equivalents-for-images}
+## Ange textmotsvarigheter för bilder {#provide-text-equivalents-for-images}
 
 Bilder kan förbättra förståelsen för vissa användare. För användare som använder skärmläsare minskar dock bilderna formulärets tillgänglighet. Om du väljer att använda bilder anger du textbeskrivningar för alla bilder.
 
@@ -71,7 +74,7 @@ Markera en bildkomponent och tryck på ![cmpr](assets/cmppr.png). Ange alternati
 
 ![Alternativ text för en bild](assets/image-properties.png)
 
-##  Ange tillräcklig färgkontrast {#provide-sufficient-color-contrast}
+## Ange tillräcklig färgkontrast {#provide-sufficient-color-contrast}
 
 Hjälpmedelsdesignen inbegriper att överväga ytterligare riktlinjer för färganvändning. Formulärförfattare kan använda färger för att förbättra formulärens utseende genom att markera olika formulärkomponenter. En felaktig användning av färg kan dock göra ett formulär svårt eller omöjligt att läsa av personer med olika funktioner.
 
@@ -81,7 +84,7 @@ Vi rekommenderar att du använder standardfärgerna för teckensnitt och bakgrun
 
 Mer information om hur du ändrar färgkontrast och tema för anpassade former finns i [Skapa anpassade teman för anpassade formulär](/help/forms/using/creating-custom-adaptive-form-themes.md).
 
-##  Kontrollera att formulärkontrollerna är tangentbordstillgängliga {#ensure-that-form-controls-are-keyboard-accessible}
+## Kontrollera att formulärkontrollerna är tangentbordstillgängliga {#ensure-that-form-controls-are-keyboard-accessible}
 
 Ett hjälpmedelsanpassat formulär kan fyllas i helt med bara tangentbordet eller en motsvarande indataenhet. Användare med nedsatt rörelseförmåga eller nedsatt syn har kanske inget annat val än att använda tangentbordet och många användare som kan använda en mus föredrar tangentbordsinmatning. Genom att använda de olika indatametoderna kan du inte bara skapa hjälpmedelsförberedda formulär, du kan också skapa formulär som bättre passar alla användares önskemål.
 
@@ -94,4 +97,4 @@ Följande kortkommandon finns i AEM Forms.
 | Flytta till nästa panel | Alt + högerpil |
 | Flytta till föregående panel | Alt + vänsterpil |
 | Återställ ifyllda data i ett formulär | Alt+R |
-| Skicka ett formulär | Alt+S | configuring-watch-folder-endpoints.md |
+| Skicka ett formulär | Alt+S | configuring-watched-folder-endpoints.md |
