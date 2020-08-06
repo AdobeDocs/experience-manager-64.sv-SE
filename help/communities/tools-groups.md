@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 9a862756-58e8-47c0-a4b4-5d4aaac021e4
 translation-type: tm+mt
 source-git-commit: 13d890d08a032fe4eef1dac793dcf2a3e682a52c
+workflow-type: tm+mt
+source-wordcount: '529'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +36,7 @@ När åtgärden utförs för att skapa en ny community-grupp väljs gruppens mal
 
 I författarmiljön kan du nå gruppmallskonsolen
 
-* Från global navigering: **[!UICONTROL Verktyg > Communities > Group Templates]**
+* Från global navigering: **[!UICONTROL Tools > Communities > Group Templates]**
 
 Den här konsolen visar mallarna som en [communitywebbplats](sites-console.md) kan skapas från och tillåter att nya gruppmallar skapas.
 
@@ -41,7 +44,7 @@ Den här konsolen visar mallarna som en [communitywebbplats](sites-console.md) k
 
 ## Skapa gruppmall {#create-goup-template}
 
-Om du vill börja skapa en ny gruppmall väljer du **[!UICONTROL Skapa]**
+Om du vill börja skapa en ny gruppmall väljer du **[!UICONTROL Create]**
 
 Då öppnas panelen Platsredigeraren som innehåller tre underpaneler:
 
@@ -51,11 +54,14 @@ Då öppnas panelen Platsredigeraren som innehåller tre underpaneler:
 
 På panelen Grundläggande information konfigureras ett namn, en beskrivning och huruvida mallen är aktiverad eller inaktiverad:
 
-* **[!UICONTROL Nytt gruppmallsnamn]** Mallens namn-ID
+* **[!UICONTROL New Group Template Name]**
+Mallens namn-ID
 
-* **[!UICONTROL Beskrivning]** Mallbeskrivningen
+* **[!UICONTROL Description]**
+Mallbeskrivningen
 
-* **[!UICONTROL Inaktiverad/aktiverad]** En växlingsväxling som styr om mallen kan refereras
+* **[!UICONTROL Disabled/Enabled]**
+En växlingsväxling som styr om mallen kan refereras
 
 ### Miniatyrbild {#thumbnail}
 
@@ -67,7 +73,7 @@ På panelen Grundläggande information konfigureras ett namn, en beskrivning och
 
 >[!CAUTION]
 >
->Om du arbetar med AEM 6.1 Communities FP4 eller tidigare ska du inte lägga till någon gruppfunktion i en gruppmall.
+>Om du arbetar med AEM 6.1 Communities FP4 eller tidigare ska du inte lägga till en gruppfunktion i en gruppmall.
 >
 >Funktionen för kapslade grupper är tillgänglig från och med Communities [FP1](communities.md#latestfeaturepack).
 >
@@ -83,7 +89,7 @@ Fortsätt att dra och släppa andra communityfunktioner som du vill använda fö
 
 ![dragfunktioner](assets/dragfunctions.png)
 
-När alla önskade funktioner har släppts i mallbyggarområdet och konfigurerats väljer du **[!UICONTROL Spara]** i det övre högra hörnet.
+När alla önskade funktioner har släppts i mallbyggarområdet och konfigurerats väljer du **[!UICONTROL Save]** i det övre högra hörnet.
 
 ## Redigera gruppmall {#edit-group-template}
 
