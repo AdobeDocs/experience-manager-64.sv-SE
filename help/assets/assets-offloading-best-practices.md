@@ -15,17 +15,17 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->Den här funktionen är borttagen från och med AEM 6.4 och har tagits bort i AEM 6.5. Planera därefter.
+>Den här funktionen är borttagen AEM 6.4 och framåt och tas bort i AEM 6.5. Planera därefter.
 
-Att hantera stora filer och köra arbetsflöden i Adobe Experience Manager (AEM) Resurser kan ta mycket processorkraft, minne och I/O-resurser i anspråk. I synnerhet kan storleken på resurser, arbetsflöden, antalet användare och frekvensen för tillgångsinmatning påverka systemets totala prestanda. De mest resurskrävande åtgärderna är bland annat arbetsflöden för inhämtning och replikering av AEM-resurser. Intensiv användning av dessa arbetsflöden i en enda AEM-instans kan påverka redigeringseffektiviteten negativt.
+Hantering av stora filer och arbetsflöden som körs i Adobe Experience Manager (AEM) Resurser kan ta mycket processorkraft, minne och I/O-resurser i anspråk. I synnerhet kan storleken på resurser, arbetsflöden, antalet användare och frekvensen för tillgångsinmatning påverka systemets totala prestanda. De mest resurskrävande åtgärderna omfattar arbetsflöden för AEM och replikering. Intensiv användning av dessa arbetsflöden i en enda AEM kan påverka redigeringseffektiviteten negativt.
 
 Genom att avlasta dessa uppgifter för dedikerade arbetarinstanser kan du minska kostnaderna för processor, minne och IO. I allmänhet är tanken bakom avlastning att distribuera uppgifter som förbrukar intensiva processor-/minnes-/IO-resurser till dedikerade arbetarinstanser. Följande avsnitt innehåller rekommenderade användningsfall för avlastning av resurser.
 
-## Avlastning av AEM Assets {#aem-assets-offloading}
+## AEM Assets Offloading {#aem-assets-offloading}
 
 AEM Assets implementerar ett internt resursspecifikt arbetsflödestillägg för avlastning. Det bygger på det allmänna arbetsflödestillägget som avlastningsramverket erbjuder, men innehåller ytterligare resursspecifika funktioner i implementeringen. Målet med resursavlastning är att effektivt köra arbetsflödet för DAM-uppdatering av tillgångar på en överförd resurs. Genom att avlasta resurser får du bättre kontroll över arbetsflödena för att lägga in material.
 
-## Komponenter för avlastning av AEM Assets {#aem-assets-offloading-components}
+## AEM Assets Offloading Components {#aem-assets-offloading-components}
 
 I följande diagram visas huvudkomponenterna i resursavlastningsprocessen:
 
@@ -39,7 +39,7 @@ Arbetsflödet för DAM Update Asset Offloading körs på den primära (författa
 
 Jobbhanteraren distribuerar nya jobb till arbetarinstanser. När du utformar distributionsmekanismen är det viktigt att ta hänsyn till ämnesaktivering. Jobb kan bara tilldelas till instanser där jobbets ämne är aktiverat. Inaktivera ämnet `com/adobe/granite/workflow/offloading` på den primära arbetsytan och aktivera det på arbetaren för att säkerställa att jobbet har tilldelats arbetaren.
 
-### AEM-avlastning {#aem-offloading}
+### AEM avlastning {#aem-offloading}
 
 Avlastningsramverket identifierar arbetsflödesavlastningsjobb som tilldelats arbetsinstanser och använder replikering för att fysiskt överföra dem, inklusive deras nyttolast (till exempel bilder som ska hämtas), till arbetare.
 
@@ -49,7 +49,7 @@ När ett jobb har skrivits på arbetaren anropar jobbhanteraren den jobbkonsumen
 
 ## Sling Topology {#sling-topology}
 
-Sling-topologin grupperar AEM-instanser och gör det möjligt för dem att vara medvetna om varandra, oberoende av den underliggande persistensen. Denna egenskap hos Sling-topologin gör att du kan skapa topologier för icke-klustrade, grupperade och blandade scenarier. En instans kan visa egenskaper för hela topologin. Ramverket innehåller återanrop för avlyssning av ändringar i topologin (instanser och egenskaper). Sling-topologin utgör grunden för Sling-distribuerade jobb.
+Sling-topologigrupperna AEM instanser och gör det möjligt för dem att vara medvetna om varandra, oberoende av den underliggande persistensen. Denna egenskap hos Sling-topologin gör att du kan skapa topologier för icke-klustrade, grupperade och blandade scenarier. En instans kan visa egenskaper för hela topologin. Ramverket innehåller återanrop för avlyssning av ändringar i topologin (instanser och egenskaper). Sling-topologin utgör grunden för Sling-distribuerade jobb.
 
 ### Säljer distribuerade jobb {#sling-distributed-jobs}
 
@@ -73,14 +73,14 @@ Avlastningsramverket har också ett användargränssnitt (UI) för att visualise
 
 Alla implementeringar är unika och därför finns det ingen avlastningskonfiguration som passar alla. I följande avsnitt ges vägledning och bästa metoder för att ta bort innehåll från resurser.
 
-Avlastning av tillgångar medför också allmänna kostnader för systemet, inklusive driftskostnader. Om du stöter på problem med inläsningen av resurser rekommenderar Adobe att du först förbättrar konfigurationen utan att avlasta. Tänk på följande alternativ innan du flyttar till tillgångsavlastning:
+Avlastning av tillgångar medför också allmänna kostnader för systemet, inklusive driftskostnader. Om du stöter på problem med resursinmatningsbelastningen rekommenderar Adobe att du först förbättrar konfigurationen utan att ta bort inläsningen. Tänk på följande alternativ innan du flyttar till tillgångsavlastning:
 
 * Skala upp maskinvara
 * Optimera arbetsflöden
 * Använd tillfälliga arbetsflöden
 * Begränsa antalet kärnor som används för arbetsflöden
 
-Om du anser att avlastning av resurser är ett lämpligt sätt för dig ger Adobe följande vägledning:
+Om du kommer fram till att avlastning av resurser är ett lämpligt sätt för dig ger Adobe följande vägledning:
 
 * En TARMK-baserad distribution rekommenderas
 * Avlastning av bensinbaserade resurser med tarMK är inte utformad för omfattande horisontell skalning
@@ -88,7 +88,7 @@ Om du anser att avlastning av resurser är ett lämpligt sätt för dig ger Adob
 
 ### Rekommenderade resurser avlastar distributionen {#recommended-assets-offloading-deployment}
 
-Med AEM och Oak finns det flera möjliga driftsättningsscenarier. För avlastning av resurser rekommenderas en TARMK-baserad distribution med ett delat datalager. I följande diagram visas den rekommenderade distributionen:
+Med AEM och Oak finns det flera möjliga distributionsscenarier. För avlastning av resurser rekommenderas en TARMK-baserad distribution med ett delat datalager. I följande diagram visas den rekommenderade distributionen:
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
@@ -96,7 +96,7 @@ Mer information om hur du konfigurerar ett datalager finns i [Konfigurera nodark
 
 ### Stänger av automatisk agenthantering {#turning-off-automatic-agent-management}
 
-Adobe rekommenderar att du inaktiverar automatisk agenthantering eftersom den inte har stöd för binär replikering och kan orsaka förvirring när du konfigurerar en ny avlastningstopologi. Dessutom stöder den inte automatiskt det framåtriktade replikeringsflöde som krävs för binär replikering.
+Adobe rekommenderar att du inaktiverar automatisk agenthantering eftersom den inte har stöd för binär replikering och kan skapa förvirring när du konfigurerar en ny avlastningstopologi. Dessutom stöder den inte automatiskt det framåtriktade replikeringsflöde som krävs för binär replikering.
 
 1. Öppna Configuration Manager från URL:en `http://localhost:4502/system/console/configMgr`.
 1. Öppna konfigurationen för `OffloadingAgentManager` (`http://localhost:4502/system/console/configMgr/com.adobe.granite.offloading.impl.transporter.OffloadingAgentManager`).
