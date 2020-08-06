@@ -11,17 +11,20 @@ content-type: reference
 discoiquuid: 6a3c69b5-6df6-4b8f-afa4-7d3e9dd458b5
 translation-type: tm+mt
 source-git-commit: 02d043aaa51389aff658c287e11fe639b74fdcd0
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 2%
 
 ---
 
 
 # Kortkommandon vid sidredigering{#keyboard-shortcuts-when-editing-pages}
 
-Olika kortkommandon finns tillgängliga i hela AEM. En del gäller när du redigerar sidor, andra när du [använder konsoler](/help/sites-authoring/keyboard-shortcuts.md).
+Olika kortkommandon finns i hela AEM. En del gäller när du redigerar sidor, andra när du [använder konsoler](/help/sites-authoring/keyboard-shortcuts.md).
 
 >[!NOTE]
 >
->Vilka [modifieringstangenter](/help/sites-authoring/page-authoring-keyboard-shortcuts.md#os-specific-modifier-keys) som krävs för AEM-kortkommandon varierar beroende på operativsystem.
+>Vilka [modifieringstangenter](/help/sites-authoring/page-authoring-keyboard-shortcuts.md#os-specific-modifier-keys) som krävs för AEM kortkommandon varierar beroende på operativsystem.
 
 ## Redigera kortkommandon {#editing-keyboard-shortcuts}
 
@@ -41,7 +44,7 @@ Olika kortkommandon finns tillgängliga i hela AEM. En del gäller när du redig
 
 >[!NOTE]
 >
-> &amp;ast;När användaren börjar interagera med sidan i förhandsgranskningsläget är genvägen inte längre tillgänglig `Ctrl-Shift-m` . Användaren måste klicka på det övre redigeringsfältet eller gå tillbaka till redigeringsläget för genvägen för att bli tillgänglig igen.
+>&amp;ast; När användaren börjar interagera med sidan i förhandsgranskningsläget är genvägen inte längre tillgänglig `Ctrl-Shift-m` . Användaren måste klicka på det övre redigeringsfältet eller gå tillbaka till redigeringsläget för genvägen för att bli tillgänglig igen.
 
 Olika kortkommandon är också tillgängliga för skrivbordsanvändare när de använder [konsolerna](/help/sites-authoring/keyboard-shortcuts.md).
 
