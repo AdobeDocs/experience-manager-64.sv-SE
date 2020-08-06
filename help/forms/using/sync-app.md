@@ -1,8 +1,8 @@
 ---
 title: Synkroniserar appen
 seo-title: Synkroniserar appen
-description: Synkronisera appen AEM Forms på din mobila enhet med AEM Forms-servern.
-seo-description: Synkronisera appen AEM Forms på din mobila enhet med AEM Forms-servern.
+description: Synkronisera AEM Forms-appen på din mobila enhet med AEM Forms-servern.
+seo-description: Synkronisera AEM Forms-appen på din mobila enhet med AEM Forms-servern.
 uuid: 7e1526e1-13bd-498a-a265-cd4f2d05ccdd
 contentOwner: robhagat
 content-type: reference
@@ -11,6 +11,9 @@ topic-tags: forms-app
 discoiquuid: dae1ce32-702e-4cf0-b3c6-976551208d09
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '386'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +22,11 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ## Synkroniserar appen {#synchronizing-the-app-1}
 
-Formulären i din app hämtas från AEM Forms-servern. Formulären hämtas på flikarna Åtgärder och Formulär. Utkast som skapas från formulär hämtas på fliken Utkast och utkast som skapas från uppgifter hämtas på fliken Åtgärder. För ett fristående formulär på OSGi-servern hämtas formulär och utkast på flikarna Formulär och Utkast.
+Formulären i din app hämtas från AEM Forms-servern. Formulären hämtas på flikarna Åtgärder och Forms. Utkast som skapas från formulär hämtas på fliken Utkast och utkast som skapas från uppgifter hämtas på fliken Åtgärder. För ett fristående formulär på OSGi-server hämtas formulär och utkast på flikarna Forms respektive Draft.
 
-När du fyller i och skickar ett formulär överförs formuläret direkt tillbaka till AEM Forms-servern om appen är online. Formulären hämtas från servern när appen synkroniseras. Utkasten synkroniseras emellertid direkt med servern om appen är online.
+När du fyller i och skickar ett formulär överförs formuläret direkt till AEM Forms-servern om appen är online. Formulären hämtas från servern när appen synkroniseras. Utkasten synkroniseras emellertid direkt med servern om appen är online.
 
-När du är online med AEM Forms-servern synkroniseras din app som standard var 15:e minut. Du kan dock ändra synkroniseringsfrekvensen. Du kan också när som helst synkronisera appen manuellt.
+När du är online med AEM Forms-servern synkroniseras ditt program som standard var 15:e minut. Du kan dock ändra synkroniseringsfrekvensen. Du kan också när som helst synkronisera appen manuellt.
 
 **Synkronisera appen manuellt**
 
@@ -41,7 +44,7 @@ Tryck på knappen Synkronisera ![synkroniseringsprogram](assets/sync-app.png) l�
 
 ### Tekniska specifikationer {#technical-specifications}
 
-* Den viktigaste logiken för att skicka in data från offlineappar till AEM Forms-servern finns i runtime/offline/util/offline.js.
+* Den viktigaste logiken för att skicka offlineappdata till AEM Forms-servern finns i runtime/offline/util/offline.js.
 * I .js-filen skickar anropet till funktionen processOfflineSubmittedSavedTasks(...) de sparade/skickade uppgifterna till servern. Den hanterar även fel och konflikter i synkroniseringsprocessen. Om överföringen av en uppgift misslyckas markeras aktiviteten i programmet som misslyckad. Dessutom finns uppgiften kvar i Utkorgen.
 * Funktionerna syncSubowedTask() och syncSavedTask() utför åtgärder på enskilda uppgifter.
 * Anropet till funktionen processOfflineSubmitSavedTasks() initieras av uppgiftslistkomponenten efter att en användare har valt att synkronisera offlineläget med servern eller en automatisk synkronisering av bakgrundstråden.
