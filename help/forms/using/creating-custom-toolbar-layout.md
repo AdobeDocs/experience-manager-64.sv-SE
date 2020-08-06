@@ -10,6 +10,9 @@ topic-tags: customization
 discoiquuid: c69bb229-d680-4a55-9b2d-cd5ad0f83a9e
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '555'
+ht-degree: 0%
 
 ---
 
@@ -20,13 +23,13 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 
 När du skapar ett anpassat formulär kan du ange en verktygsfältslayout för formuläret. Verktygsfältets layout definierar kommandona och layouten för verktygsfältet i formuläret.
 
-Verktygsfältslayouten använder i hög grad klientbearbetning som styrs av komplex JavaScript- och CSS-kod. Det kan vara komplicerat att organisera och optimera serveringen av koden. För att lösa det här problemet tillhandahåller AEM biblioteksmappar på klientsidan, som gör att du kan lagra din klientkod i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten. Klientsidans bibliotekssystem tar sedan hand om att skapa rätt länkar på den slutliga webbsidan för att läsa in rätt kod. Mer information finns i [Så fungerar klientbibliotek i AEM.](/help/sites-developing/clientlibs.md)
+Verktygsfältslayouten använder i hög grad klientbearbetning som styrs av komplex JavaScript- och CSS-kod. Det kan vara komplicerat att organisera och optimera serveringen av koden. AEM tillhandahåller biblioteksmappar på klientsidan som du kan använda för att lagra din klientkod i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten. Klientsidans bibliotekssystem tar sedan hand om att skapa rätt länkar på den slutliga webbsidan för att läsa in rätt kod. Mer information finns i [Hur klientbibliotek fungerar i AEM.](/help/sites-developing/clientlibs.md)
 
-![](assets/default_toolbar_layout.png) Exempellayout för verktygsfältet **** Bild: *Exempellayout för verktygsfältet*
+![Exempellayout för verktygsfältet](assets/default_toolbar_layout.png)**Bild:** *Exempellayout för verktygsfältet*
 
 Adaptiva formulär har en uppsättning färdiga layouter:
 
-![](assets/toolbar1.png) Verktygsfältslayouter som finns färdiga **** bilder: *Verktygsfältslayouter som finns färdiga*
+![Verktygsfältslayouter som finns färdiga ](assets/toolbar1.png)**bilder:** *Verktygsfältslayouter som finns färdiga*
 
 Dessutom kan du skapa en anpassad verktygsfältslayout.
 
@@ -40,7 +43,7 @@ CustomToolbarLayoutDemo.zip
 
 ## Skapa en anpassad verktygsfältslayout {#layout-1}
 
-1. Skapa en mapp för att behålla dina anpassade verktygsfältslayouter. Exempel:
+1. Skapa en mapp för att behålla dina anpassade verktygsfältslayouter. Till exempel:
 
    `/apps/customlayout/toolbar`.
 
@@ -223,4 +226,4 @@ CustomToolbarLayoutDemo.zip
 >
 >Beskrivningen som uppdaterades i föregående steg visas i listrutan Layout.
 
-![](assets/toolbar_1.png) Skrivbordsvy över verktygsfältet **för anpassad layout**: Vyn *Skrivbord i verktygsfältet för anpassad layout*
+![Skrivbordsvy över verktygsfältet](assets/toolbar_1.png)för anpassad layout **:** *Vyn Skrivbord i verktygsfältet för anpassad layout*
