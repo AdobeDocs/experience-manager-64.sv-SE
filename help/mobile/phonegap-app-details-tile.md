@@ -11,6 +11,9 @@ topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: a87834c9-247c-49fa-9978-a969230db91c
 translation-type: tm+mt
 source-git-commit: c58437f791daa11669198d916f0756ff4830677c
+workflow-type: tm+mt
+source-wordcount: '1290'
+ht-degree: 0%
 
 ---
 
@@ -48,13 +51,13 @@ De plattformar som visas styrs av innehållet config.xml i PhoneGap:
 </widget>
 ```
 
-Alla leverantörsapplikationsbutiker, t.ex. Apple App Store eller Google Play Store, kräver en eller flera skärmdumpar av mobilappen för att kunna visa din applikationsinformation för kunderna. Skärmbilderna kan ha strikta krav när det gäller dimensioner och innehåll (de måste egentligen representera programmet). AEM-appar har stöd för att välja och hantera skärmbilderna för de plattformar som stöds och visa de portdimensioner som krävs i respektive leverantörs programbutik.
+Alla leverantörsapplikationsbutiker, t.ex. Apple App Store eller Google Play Store, kräver en eller flera skärmdumpar av mobilappen för att kunna visa din applikationsinformation för kunderna. Skärmbilderna kan ha strikta krav när det gäller dimensioner och innehåll (de måste egentligen representera programmet). AEM Apps har stöd för att välja och hantera skärmbilderna för de plattformar som stöds och visa de portdimensioner som krävs i respektive leverantörs programbutik.
 
 >[!NOTE]
 >
->Appen AEM Verify gör det möjligt att skicka skärmbilder direkt till appinformationen i AEM.
+>Med appen AEM Verifiera kan du skicka skärmbilder direkt till din appinformation i AEM.
 >
->Mer information finns i [Mobile Quickstart för AEM Verify](/help/mobile/phonegap-mobile-quickstart.md) .
+>Mer information finns i [Mobile Quickstart AEM Verify](/help/mobile/phonegap-mobile-quickstart.md) .
 
 ![chlimage_1-118](assets/chlimage_1-118.png)
 
@@ -88,15 +91,15 @@ I det här avsnittet definierar du URL:en för Content Update Server, landningss
 
 #### Plattformsmetadata {#platform-metadata}
 
-Alla plattformar som definieras i PhoneGap config.xml kan innehålla anpassade plattformsegenskaper. En AEM-utvecklare måste bidra till innehållsstrukturen för att kunna hämta dessa egenskaper. Ett angivet exempel på plattformsspecifika egenskaper finns för iOS.
+Alla plattformar som definieras i PhoneGap config.xml kan innehålla anpassade plattformsegenskaper. En AEM måste bidra med innehållsstrukturen för att kunna hämta dessa egenskaper. Ett angivet exempel på plattformsspecifika egenskaper finns för iOS.
 
 Metadata för alla konfigurerade plattformar visas nu samtidigt på fliken Avancerat i panelen Hantera program.
 
 >[!NOTE]
 >
->Plattformens metadataavsnitt används inte av PhoneGap under en CLI- eller Remote PhoneGap-version, utan istället försöker AEM hämta metadata för plattformar så att de kan användas senare när de skickas till målleverantörens programbutik.
+>Plattformens metadataavsnitt används inte av PhoneGap under en CLI- eller Remote PhoneGap-version, utan AEM försöker hämta metadata för plattformar så att de kan användas senare när de skickas till målleverantörens programbutik.
 
-För plattformar som inte kan förstås av AEM är det fortfarande möjligt för en AEM-utvecklare att utöka användargränssnittet för att hämta dessa metadata som senare kan exporteras och användas under ansökningsprocessen.
+För plattformar som inte AEM förstår går det fortfarande att utöka användargränssnittet för att hämta metadata som senare kan exporteras och användas under programinlämningsprocessen.
 
 #### iOS-metadata {#ios-metadata}
 
@@ -120,7 +123,7 @@ Exportfunktionen används för att underlätta insamling av skärmbilder och met
 
 ### URL för Content Update Server {#content-update-server-url}
 
-En av de viktigaste funktionerna i AEM-appar är möjligheten att få ett mobilprogram att begära nytt innehåll via ContentSync, där innehållet kan vara HTML-resurser, sidor, video, bilder, text med mera. När en innehållsförfattare har uppdaterat innehållet och sedan publicerat det gör servern innehållsuppdateringen tillgänglig för det mobilprogram som ska laddas ned.
+En av de viktigaste funktionerna i AEM är möjligheten att låta ett mobilprogram begära nytt innehåll via ContentSync, där innehållet kan vara HTML-resurser, sidor, video, bilder, text och mycket mer. När en innehållsförfattare har uppdaterat innehållet och sedan publicerat det gör servern innehållsuppdateringen tillgänglig för det mobilprogram som ska laddas ned.
 
 Egenskapen URL för Content Update Server är den URL som måste peka på en publiceringsinstans. antingen direkt eller via avsändaren eller CDN. Formatet på URL:en är helt enkelt:
 
@@ -148,7 +151,7 @@ På fliken **Skärmbilder** visas de skärmbildupplösningar som stöds på olik
 
 ### Fliken Autentisering {#the-authentication-tab}
 
-På fliken **Autentisering** kan du välja en OAuth-klient som ska associeras med ditt program och göra det möjligt för en utvecklare att använda OAuth-autentiseringen i Adobe Experience Manager.
+På fliken **Autentisering** kan du välja en OAuth-klient som ska associeras med ditt program och göra det möjligt för en utvecklare att använda Adobe Experience Manager OAuth-autentisering.
 
 ![chlimage_1-124](assets/chlimage_1-124.png)
 
@@ -162,7 +165,7 @@ När du har lärt dig mer om hur du hanterar apppaneler på programkontrollpanel
 * [Importera en befintlig hybridapp](/help/mobile/phonegap-adding-content-to-imported-app.md)
 * [Innehållstjänster](/help/mobile/develop-content-as-a-service.md)
 
-### Additional Resources {#additional-resources}
+### Ytterligare resurser {#additional-resources}
 
 Mer information om roller och ansvar för en administratör och utvecklare finns i resurserna nedan:
 
