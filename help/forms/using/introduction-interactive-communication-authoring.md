@@ -10,6 +10,9 @@ topic-tags: interactive-communications
 discoiquuid: 565bfb42-6099-49f4-83ba-b1f0c129aab7
 translation-type: tm+mt
 source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
+workflow-type: tm+mt
+source-wordcount: '1315'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +36,7 @@ När du [skapar en ny eller redigerar en befintlig interaktiv kommunikation](/he
 
 ![gränssnitt för framtagning av interaktiv kommunikation](assets/form-editor.png)
 
-******S. Sidofält** B. Verktygsfältet Sida **C.** Innehållsområde
+**S.** Sidofält **B.** Verktygsfältet Sida **C.** Innehållsområde
 
 ## Sidebar {#sidebar}
 
@@ -41,7 +44,7 @@ När du [skapar en ny eller redigerar en befintlig interaktiv kommunikation](/he
 
 [Klicka för att förstora](assets/sidebar-comps-1.png)
 
-**************S. Kanalwebbläsare** B. Innehållsbläddraren **C.** Properties browser **D. Resursläsaren** E. Komponentbläddraren **F. Webbläsaren Datakällor - Datamodell** G. Webbläsaren Datakällor - Huvudinnehåll
+**S.** Kanalwebbläsare **B.** Innehållsbläddraren **C.** Properties browser **D.** Resursläsaren **E.** Komponentbläddraren **F.** Webbläsaren Datakällor - Datamodell **G.** Webbläsaren Datakällor - Överordnad innehåll
 
 Sidlisten innehåller följande:
 
@@ -57,8 +60,7 @@ Sidlisten innehåller följande:
 
    Gör att du kan redigera egenskaperna för en komponent. Egenskaperna ändras beroende på komponenten. Om du till exempel vill se egenskaper för dokumentbehållaren:
 
-   
-Markera en komponent, tryck sedan på ![fältnivå](assets/field-level.png) > **Dokumentbehållare** och tryck sedan på ![cmpr](assets/cmppr.png).
+   Markera en komponent, tryck sedan på ![fältnivå](assets/field-level.png) > **Dokumentbehållare** och tryck sedan på ![cmpr](assets/cmppr.png).
 
 * **Resursläsaren**
 
@@ -74,11 +76,11 @@ Markera en komponent, tryck sedan på ![fältnivå](assets/field-level.png) > **
 | Dokumentfragment | ✓ | ✓ | Gör att du kan lägga till en återanvändbar komponent, text, lista eller villkor i en interaktiv kommunikation. Den återanvändbara komponenten som du lägger till i en interaktiv kommunikation kan antingen vara modellbaserad i form av formulärdata eller utan någon formulärdatamodell. |
 | Bild | ✓ | ✓ | Gör att du kan infoga en bild. |
 | Panel | - | ✓ | Panelkomponenten är en platshållare för att gruppera andra komponenter och styr hur en grupp med komponenter placeras i ett interaktivt meddelande. Med en panelkomponent kan du också göra en grupp komponenter repeterbara för slutanvändaren, t.ex. i flera poster som krävs för att fylla i inloggningsuppgifter. Det är också bra att använda en panel var för en flik i en interaktiv kommunikation med flera flikar. |
-| Tabell |  &amp;ast; | ✓ | Lägger till en tabell där du kan ordna data i rader och kolumner. |
+| Tabell | &amp;ast; | ✓ | Lägger till en tabell där du kan ordna data i rader och kolumner. |
 | Målområde | &amp;ast;&amp;ast; | ✓ | Infogar ett målområde i en webbkanal för att ordna de webbkanalsspecifika komponenterna. |
 | Text | - | ✓ | Lägger till text i webbkanalen i en interaktiv kommunikation. Text kan använda formulärdatamodellsobjekt för att göra innehållet dynamiskt. |
 
- &amp;ast; Använd Layoutfragment i utskriftskanalen för att lägga till tabeller.
+&amp;ast; Använd Layoutfragment i utskriftskanalen för att lägga till tabeller.
 
 &amp;ast;&amp;ast; I utskriftskanalen är målområdena fördefinierade i XDP/utskriftsmallen. Du kan inte lägga till nya målområden med hjälp av gränssnittet för redigering av interaktiv kommunikation.
 
@@ -110,7 +112,7 @@ B. **Redigera regler**: När du trycker på Redigera regler visas Regelredigerar
 
 C. **Copy**: Du kan använda kopieringsalternativet för att kopiera en komponent och klistra in den på andra platser i den interaktiva kommunikationen.
 
-D. **Klipp ut**: Du kan använda alternativet Klipp ut för att flytta en komponent från en plats till en annan i den interaktiva kommunikationen.
+D. **Klipp** ut: Du kan använda alternativet Klipp ut för att flytta en komponent från en plats till en annan i den interaktiva kommunikationen.
 
 E. **Ta bort**: Gör att du kan ta bort komponenten från den interaktiva kommunikationen.
 
