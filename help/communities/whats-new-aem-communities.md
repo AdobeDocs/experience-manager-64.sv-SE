@@ -8,6 +8,9 @@ contentOwner: mgulati
 discoiquuid: 3e3c867f-afb0-4402-94f4-16e1a556ddee
 translation-type: tm+mt
 source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+workflow-type: tm+mt
+source-wordcount: '1008'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ AEM Communities erbjuder ett ramverk för företag att samarbeta med partners, k
 
 AEM 6.4 Communities innehåller funktioner som förbättrar användarupplevelserna och förenklar rutinuppgifterna för communityadministratörer, moderatorer och chefer.
 
-Läs vidare för att få en snabb introduktion till nya funktioner och förbättringar. Se även [versionsinformation](../release-notes/communities-release-notes.md)för AEM 6.4 Communities. AEM 6.4 Communities-dokumentation finns på [AEM 6.4 Communities User Guide](home.md).
+Läs vidare för att få en snabb introduktion till nya funktioner och förbättringar. Se även AEM 6.4 Communities, [versionsinformation](../release-notes/communities-release-notes.md). AEM 6.4 Communities-dokumentation finns på [AEM 6.4 Communities User Guide](home.md).
 
 ## Hantera undergrupper eller samhällsgrupper {#managing-sub-communities-or-community-groups}
 
@@ -26,15 +29,15 @@ Med AEM Communities kan communityadministratörer skapa grupper och undergrupper
 
 ### Skapa flerspråkiga grupper i ett enda steg {#create-multi-locale-groups-in-single-step}
 
-Som en del av en communitywebbplats kan flerspråkiga grupper skapas i en enda åtgärd. **[!UICONTROL Det här är praktiskt om det finns fler tillgängliga fält för communitygruppsspråk]** på sidan **[!UICONTROL Gruppmall]** , som du kan använda när du skapar en [ny community-grupp](groups.md) på en communitywebbplats.
+Som en del av en communityplats kan flerspråkiga grupper skapas i en enda åtgärd. **[!UICONTROL Additional Available Community Group Language(s)]** -fält på **[!UICONTROL Community Group Template]** sidan, som är tillgängligt när du skapar en [ny community-grupp](groups.md) inom en community-webbplats, gör detta möjligt.
 
 ![flerspråkig grupp-1](assets/multilingualgroup-1.png)
 
-Om du vill skapa sådana grupper behöver du bara navigera till gruppsamlingen för den önskade communitywebbplatsen från webbplatskonsolen. Skapa en grupp och ange önskade språk i fältet **[!UICONTROL Ytterligare tillgängliga språk för communitygrupper]** på sidan **[!UICONTROL Gruppmall]** för användargrupper.
+Om du vill skapa sådana grupper behöver du bara navigera till gruppsamlingen för den önskade communitywebbplatsen från webbplatskonsolen. Skapa en grupp och ange önskade språk i **[!UICONTROL Additional Available Community Group Language(s)]** fältet på **[!UICONTROL Community Group Template]** sidan.
 
 ### Ta bort communitygrupper från gruppkonsolen {#delete-community-groups-from-groups-console}
 
-AEM 6.4 Communities innehåller ikonen Ta bort grupp för befintliga communitygrupper i communitygruppssamlingen i Community Sites console. Detta aktiverar [gruppborttagning](groups.md#deleting-the-group) med ett klick, tillsammans med borttagning av alla objekt som är kopplade (till exempel innehåll och användarmedlemskap) till gruppen.
+AEM 6.4 Communities innehåller ikonen Ta bort grupp för de befintliga communitygrupperna i communitygruppssamlingen i community Sites console. Detta aktiverar [gruppborttagning](groups.md#deleting-the-group) med ett klick, tillsammans med borttagning av alla objekt som är kopplade (till exempel innehåll och användarmedlemskap) till gruppen.
 
 ![ta bort](assets/deletegrp.png)
 
@@ -48,7 +51,7 @@ Utbildningsmaterial kan nu skapas, hanteras och publiceras för en viss uppsätt
 
 AEM 6.4 Communities har fått få förbättringar vad gäller moderering, som är avgörande för att underlätta den dagliga användningen för moderatorer i communityn.
 
-### Automatisk identifiering av skräppost {#automatic-spam-detection}
+### Automatisk identifiering av skräppost  {#automatic-spam-detection}
 
 Ny motor för skräppostavkänning hjälper till att filtrera bort oönskat och oombett användargenererat innehåll på communitywebbplatser eller grupper. När den här funktionen är aktiverad kan en del användargenererat innehåll markeras som skräppost eller Inte skräppost baserat på en fördefinierad uppsättning skräppostord. Moderatorerna kan agera vidare på innehållet för att neka eller tillåta att det visas på publiceringsinstansen. Dessa modereringsåtgärder kan utföras internt eller via en masmodereringskonsol.
 
@@ -68,17 +71,17 @@ När du väljer status Besvarat visas alla besvarade frågor för moderatorn i i
 
 ### Kontrollfilter för bokmärken {#bookmark-moderation-filters}
 
-Med AEM Communities kan man [bokmärka de fördefinierade modereringsfiltren](moderation.md#filter-rail) på modereringskonsolen. Dessa sparade bokmärken kan granskas senare och delas med andra användare.
+AEM Communities ger möjlighet att [skapa bokmärken för fördefinierade modereringsfilter](moderation.md#filter-rail) på modereringskonsolen. Dessa sparade bokmärken kan granskas senare och delas med andra användare.
 
 Användarna behöver bara välja önskade filter från filterkanalen i modereringskonsolen för att visa den filtrerade UGC:n och bokmärka filtren i sina webbläsare. Dessa filter läggs till i slutet av URL-strängen och kan därför delas, återanvändas och granskas senare.
 
 ## Hantera communityplatser {#managing-community-sites}
 
-AEM 6.4 Communities innehåller förbättringar av webbplatshanteringen, som gör det enkelt för webbplatsadministratörer att skapa, hantera och ta bort ett flertal communitysajter på olika språk.
+AEM 6.4 Communities innehåller förbättringar av webbplatshanteringen som gör det enkelt för webbplatsadministratörer att skapa, hantera och ta bort en mängd communitysajter på olika språk.
 
 ### Skapa communitysajter för flera språk i ett enda steg {#create-multi-locale-community-sites-in-one-step}
 
-Med AEM Communities kan man skapa [flerspråkiga communitysajter](create-site.md) i en enda åtgärd. Det här är möjligt på grund av att det finns flera språk att välja mellan i fältet **[!UICONTROL Baskråk]** för communitywebbplats på sidan **[!UICONTROL Webbplatsmall]** , samtidigt som en ny communitywebbplats skapas från webbplatskonsolen.
+Med AEM Communities kan du skapa [flerspråkiga communitysajter](create-site.md) i en enda åtgärd. Detta är möjligt på grund av att det finns flera språk att välja mellan i **[!UICONTROL Community Site Base Language]** fältet på **[!UICONTROL Site Template]** sidan, samtidigt som en ny community-webbplats skapas från webbplatskonsolen.
 
 ![multilocalesite](assets/multilocalesite.png)
 
@@ -86,17 +89,17 @@ Användarna kan välja konfigurationsmappar, branding och många andra konfigura
 
 ### Ta bort communitywebbplatser från webbplatskonsolen {#delete-community-sites-from-sites-console}
 
-AEM 6.4 Communities innehåller ikonen Ta bort plats på befintliga communitysajter i community-konsolen. Detta gör att du kan [ta bort platsen](create-site.md) och tillhörande objekt med ett klick.
+AEM 6.4 Communities innehåller ikonen Ta bort plats på befintliga communityplatser i community Sites-konsolen. Detta gör att du kan [ta bort platsen](create-site.md) och tillhörande objekt med ett klick.
 
 ![webbplatseråtgärder](assets/siteactions.png)
 
 ## Hantera användargenererat innehåll och användarprofiler {#managing-ugc-and-user-profiles}
 
-AEM Communities skyddar användarnas data i centrum för användarupplevelsen och ger tillgång till API: [er som är färdiga](user-ugc-management-service.md) och [exempelservrar](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-ugc-management-servlet). Dessa API:er hjälper till att hantera (massborttagning och bulkexport) användargenererat innehåll och ta bort användarprofiler, och är avgörande för att hantera EU GDPR-kompatibilitetsbegäranden.
+AEM Communities ger användardataskydd i centrum för communityupplevelsen och visar [API:er som är färdiga](user-ugc-management-service.md) och [exempelservrar](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-ugc-management-servlet). Dessa API:er hjälper till att hantera (massborttagning och bulkexport) användargenererat innehåll och ta bort användarprofiler, och är avgörande för att hantera EU GDPR-kompatibilitetsbegäranden.
 
 ## Vad som har ändrats {#what-s-changed}
 
-* Captcha-verifiering, när du skapar en ny community-webbplats, är inte längre tillgängligt i körklart läge i AEM 6.4 Communities. Webbplatsen Communities kan dock anpassas så att den innehåller [Google Component reCAPTCHA](https://helpx.adobe.com/experience-manager/using/aem_recaptcha.html) för bättre säkerhet.
+* Captcha-verifiering, när du skapar en ny community-webbplats, är inte längre tillgänglig i AEM 6.4 Communities. Webbplatsen Communities kan dock anpassas så att den innehåller [Google Component reCAPTCHA](https://helpx.adobe.com/experience-manager/using/aem_recaptcha.html) för bättre säkerhet.
 * Alternativet att överföra en anpassad CSS har tagits bort från communitywebbplatserna och grupptemat.
 * Ikonerna Endast innehåll och Sök har lagts till i filterraden i gränssnittet för massmoderering.
 * Filtret Sökväg för innehåll har lagts till i filterraden i gränssnittet för massmoderering.
