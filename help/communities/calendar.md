@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8b8e74c5-8b65-4117-9ef0-da9d9e47191f
 translation-type: tm+mt
 source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+workflow-type: tm+mt
+source-wordcount: '1089'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Kalenderfunktionen har stöd för att tillhandahålla information om communityev
 
 I det här avsnittet av dokumentationen beskrivs:
 
-* Lägga till kalenderfunktionen på en AEM-webbplats
+* Lägga till kalenderfunktionen på en AEM webbplats
 * Konfigurationsinställningar för `Calendar`komponenter
 
 ## Lägga till en kalender på en sida {#adding-a-calendar-to-a-page}
@@ -48,117 +51,117 @@ Markera den monterade `Calendar`komponent som du vill öppna och välj den `Conf
 
 #### Fliken Inställningar {#settings-tab}
 
-Under fliken **[!UICONTROL Inställningar]** anger du om du vill tillåta att taggar används på kalenderposter eller inte.
+Under **[!UICONTROL Settings]** fliken anger du om du vill tillåta att taggar används på kalenderposter eller inte.
 
-* **[!UICONTROL Händelser per sida]**
+* **[!UICONTROL Events Per Page]**
 
    Definierar antalet händelser som visas per sida. Standardvärdet är 10.
 
-* **[!UICONTROL Kontrollerad]**
+* **[!UICONTROL Moderated]**
 
    Om det här alternativet är markerat måste publicering av kalenderhändelser och kommentarer godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
 
-* **[!UICONTROL Stängd]**
+* **[!UICONTROL Closed]**
 
    Om du markerar det här alternativet stängs kalendern för nya händelseposter och kommentarer. Standard är avmarkerat.
 
-* **[!UICONTROL RTF-redigerare]**
+* **[!UICONTROL Rich Text Editor]**
 
    Om det här alternativet är markerat kan kalenderhändelser och kommentarer infogas med markeringar. Standard är markerat.
 
-* **[!UICONTROL Tillåt taggning]**
+* **[!UICONTROL Allow Tagging]**
 
    Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i de händelser som de publicerar (se fliken **Tagg field** ). Standard är markerat.
 
-* **[!UICONTROL Tillåt filöverföringar]**
+* **[!UICONTROL Allow File Uploads]**
 
    Om du markerar det här alternativet kan du tillåta att bifogade filer läggs till i en kalenderhändelse eller kommentar. Standard är markerat.
 
-* **[!UICONTROL Tillåt följande]**
+* **[!UICONTROL Allow Following]**
 
    Om det här alternativet är markerat tillåter du medlemmar att följa händelser som har bokförts i kalendern. Standard är markerat.
 
-* **[!UICONTROL Maximal filstorlek]**
+* **[!UICONTROL Max File Size]**
 
    Relevant endast om `Allow File Uploads` är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
 
-* **[!UICONTROL Tillåtna filtyper]**
+* **[!UICONTROL Allowed File Types]**
 
    Relevant endast om `Allow File Uploads` är markerat. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
 
-* **[!UICONTROL Maximal filstorlek för bifogad bild]**
+* **[!UICONTROL Max Attach Image File Size]**
 
    Endast relevant om Tillåt filöverföringar är markerat. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152 (2 MB).
 
-* **[!UICONTROL Tillåtna omslagsbildtyper]**
+* **[!UICONTROL Allowed Cover Image Types]**
 
    En kommaavgränsad lista med bildfilstillägg med&quot;punktavgränsaren&quot;. Standardvärdet är `.jpg,.jpeg,.png,.gif,.bmp`.
 
-* **[!UICONTROL Tillåt kopplade svar]**
+* **[!UICONTROL Allow Threaded Replies]**
 
    Om det här alternativet är markerat tillåts svar på kommentarer som har bokförts i kalenderhändelsen. Standard är markerat.
 
-* **[!UICONTROL Tillåt användare att ta bort kommentarer och händelser]**
+* **[!UICONTROL Allow Users to Delete Comments and Events]**
 
    Om det här alternativet är markerat kan medlemmar ta bort kommentarer och kalenderhändelser som de har bokfört. Standard är markerat.
 
-* **[!UICONTROL Tillåt röstning]**
+* **[!UICONTROL Allow Voting]**
 
    Om du markerar det här alternativet inkluderas röstningsfunktionen med en kalenderhändelse. Standard är markerat.
 
-* **[!UICONTROL Visa vägbeskrivningar]**
+* **[!UICONTROL Show Breadcrumbs]**
 
    Visa vägbeskrivningar på händelsesidan. Standard är markerat.
 
-* **[!UICONTROL Datumintervallfilter]**
+* **[!UICONTROL Date Range Filter]**
 
    Definierar antalet dagar som läggs till i det aktuella datumet för att beräkna Till-värdet för kalenderns sidfiltret för listsidan. Standardvärdet är 30.
 
-* **[!UICONTROL Tillåt innehåll]**
+* **[!UICONTROL Allow Featured Content]**
 
    Om du markerar det här alternativet kan idén identifieras som [aktuellt innehåll](featured.md). Standard är avmarkerat.
 
-På fliken **[!UICONTROL Användarmoderering]** anger du hur publicerade ämnen och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Hantera användargenererat innehåll](moderate-ugc.md).
+På fliken **[!UICONTROL User Moderation]** anger du hur publicerade ämnen och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Hantera användargenererat innehåll](moderate-ugc.md).
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
-* **[!UICONTROL Neka inlägg]**
+* **[!UICONTROL Deny Posts]**
 
    Om det här alternativet är markerat kan pålitliga medlemsmoderatorer neka inlägg och förhindra att posten visas på det offentliga forumet. Standard är markerat.
 
-* **[!UICONTROL Stäng/öppna händelser igen]**
+* **[!UICONTROL Close/Reopen Events]**
 
    Om det här alternativet är markerat kan pålitliga medlemsmoderatorer stänga en händelse för ytterligare redigeringar och kommentarer och även öppna en händelse igen. Standard är markerat.
 
-* **[!UICONTROL Flagga inlägg]**
+* **[!UICONTROL Flag Posts]**
 
    Om det här alternativet är markerat kan medlemmar flagga andras händelser eller kommentarer som olämpliga. Standard är markerat.
 
-* **[!UICONTROL Flaggorsakslista]**
+* **[!UICONTROL Flag Reason List]**
 
    Om det här alternativet är markerat kan medlemmarna i en nedrullningsbar lista välja orsaken till att en händelse eller kommentar flaggas som olämplig. Standard är avmarkerat.
 
-* **[!UICONTROL Anledning till anpassad flagga]**
+* **[!UICONTROL Custom Flag Reason]**
 
    Om det här alternativet är markerat kan medlemmarna ange en egen orsak till att en händelse eller kommentar flaggas som olämplig. Standard är avmarkerat.
 
-* **[!UICONTROL Modereringströskel]**
+* **[!UICONTROL Moderation Threshold]**
 
    Ange hur många gånger en händelse eller kommentar måste flaggas av medlemmar innan moderatorerna meddelas. Standardvärdet är 1 (en gång).
 
-* **[!UICONTROL Flaggningsgräns]**
+* **[!UICONTROL Flagging Limit]**
 
    Ange hur många gånger en händelse eller kommentar måste flaggas innan den döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det flaggade ämnet eller kommentaren från den offentliga vyn. Annars måste talet vara större än eller lika med modereringströskeln. Standardvärdet är 5.
 
 #### Fliken Taggfält {#tag-field-tab}
 
-Under fliken **[!UICONTROL Tagg]** begränsas de taggar som kan användas, om de tillåts under fliken **[!UICONTROL Inställningar]** , enligt de namnutrymmen som valts.
+Under **[!UICONTROL Tag field]** fliken är de taggar som kan användas, om de tillåts under **[!UICONTROL Settings]** fliken, begränsade enligt de namnutrymmen som har valts.
 
-* **[!UICONTROL Tillåtna namnutrymmen]**
+* **[!UICONTROL Allowed Namespaces]**
 
-   Relevant om `Allow Tagging` är markerat under fliken **[!UICONTROL Inställningar]** . De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+   Relevant om `Allow Tagging` är markerat under **[!UICONTROL Settings]** fliken. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
-* **[!UICONTROL Förslagsgräns]**
+* **[!UICONTROL Suggestion Limit]**
 
    Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Standardvärdet är `-1` (inga gränser).
 
@@ -168,9 +171,9 @@ Under fliken **[!UICONTROL Tagg]** begränsas de taggar som kan användas, om de
 
 #### Fliken Översättning {#translation-tab}
 
-Om översättning är aktiverat för communitywebbplatsen på fliken **[!UICONTROL Översättning]** kan översättningen ställas in så att hela tråden (händelse och kommentarer) översätts i stället för specifika inlägg.
+Om översättning är aktiverat för communitywebbplatsen under fliken **[!UICONTROL Translation]** kan översättning ställas in så att hela tråden (händelse och kommentarer) översätts i stället för specifika inlägg.
 
-* **[!UICONTROL Översätt alla]**
+* **[!UICONTROL Translate All]**
 
    Om det här alternativet är markerat översätts händelsen och kommentarerna till användarens språk. Standard är markerat.
 
