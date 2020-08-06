@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: e74ffe97-5de8-4e9c-94b4-d7d63939d40c
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '2793'
+ht-degree: 0%
 
 ---
 
 
 # Rapportering {#reporting}
 
-För att hjälpa dig att övervaka och analysera instansens status tillhandahåller AEM ett urval av standardrapporter, som kan konfigureras för dina individuella krav:
+För att hjälpa dig att övervaka och analysera instansens tillstånd finns AEM ett urval av standardrapporter som kan konfigureras för dina individuella krav:
 
 * [Komponentrapport](#component-report)
 * [Diskanvändning](#disk-usage)
@@ -30,11 +33,11 @@ För att hjälpa dig att övervaka och analysera instansens status tillhandahål
 
 Alla rapporter finns på **verktygskonsolen** . Välj **Rapporter** i den vänstra rutan och dubbelklicka sedan på önskad rapport i den högra rutan för att öppna den för visning och/eller konfiguration.
 
-Nya instanser av en rapport kan också skapas från **verktygskonsolen** . **Välj** Rapporter **i den vänstra rutan och sedan** Nytt... i verktygsfältet. Definiera en **titel** och ett **namn**, markera den rapporttyp som du vill ha och klicka sedan på **Skapa**. Den nya rapportinstansen visas i listan. Dubbelklicka på det här för att öppna och dra sedan en komponent från sidosparken för att skapa den första kolumnen och starta rapportdefinitionen.
+Nya instanser av en rapport kan också skapas från **verktygskonsolen** . Välj **Rapporter** i den vänstra rutan och sedan **Nytt...** i verktygsfältet. Definiera en **titel** och ett **namn**, markera den rapporttyp som du vill ha och klicka sedan på **Skapa**. Den nya rapportinstansen visas i listan. Dubbelklicka på det här för att öppna och dra sedan en komponent från sidosparken för att skapa den första kolumnen och starta rapportdefinitionen.
 
 >[!NOTE]
 >
->Förutom de vanliga AEM-rapporterna som finns tillgängliga direkt kan du [ta fram egna (helt nya) rapporter](/help/sites-developing/dev-reports.md).
+>Förutom de AEM standardrapporter som finns tillgängliga direkt kan du [skapa egna (helt nya) rapporter](/help/sites-developing/dev-reports.md).
 
 ## Grunderna i anpassning av rapporter {#the-basics-of-report-customization}
 
@@ -54,6 +57,7 @@ Det finns olika format för rapporter. I följande rapporter används kolumner s
 >* [Hälsokontrollen](#health-check) använder urvalsfält för att ange data som du vill rapportera om.
 >* [Diskanvändning](#disk-usage) använder länkar för att gå igenom databasstrukturen.
 >* [Arbetsflödesrapporten](/help/sites-administering/reporting.md#workflow-report) ger en översikt över arbetsflödena som körs på instansen.
+
 >
 >
 Följande procedurer för kolumnkonfiguration är därför inte lämpliga. Mer information finns i beskrivningarna av de enskilda rapporterna.
@@ -148,7 +152,7 @@ Rapporten kan genereras:
 
 1. Ange **gruppering** för den obligatoriska kolumnen.
 1. **Redigera** konfigurationen för att definiera hur ofta ögonblicksbilderna ska göras, Varje timme eller dag.
-1. **** Slutför... Definitionen som startar samlingen av ögonblicksbilder.
+1. **Slutför...** Definitionen som startar samlingen av ögonblicksbilder.
 
    Den röda/gröna reglageknappen längst upp till vänster anger när ögonblicksbilder samlas in.
 
@@ -177,7 +181,7 @@ Välj dina krav och klicka sedan på **Gå** för att tillämpa dem på rapporte
 
 När ögonblicksbilder samlas in kan du:
 
-* **Använd** slutför... igen för att initiera om samlingen.
+* Använd **slutför...** igen för att initiera om samlingen.
 
    **Slutför** rapportens struktur (dvs. kolumnerna som tilldelats rapporten och som grupperas, sorteras, filtreras osv.) och börjar ta ögonblicksbilder.
 
@@ -331,7 +335,6 @@ Rapporten börjar i databasens rot ( / ); genom att klicka på en viss gren kan 
 Den här rapporten analyserar den aktuella begärandeloggen:
 
 `<cq-installation-dir>/crx-quickstart/logs/request.log`\
-
 för att hjälpa dig att identifiera de mest dyra förfrågningarna inom en viss period.
 
 Så här skapar du rapporten:
@@ -358,13 +361,13 @@ Så här skapar du rapporten:
 
    Skicka resultat till en e-postadress.
 
-   ValfrittStandard: blank
+   Valfritt Standard: blank
 
 * **Kör dagligen (hh:mm)**
 
    Ange en tidpunkt då rapporten ska köras automatiskt varje dag.
 
-   ValfrittStandard: blank
+   Valfritt Standard: blank
 
 ![reporthealth](assets/reporthealth.png)
 
@@ -537,7 +540,7 @@ Behörigheterna som krävs beror på åtgärden:
 * Rapportdata samlas i princip in med den aktuella användarens behörighet.
 * Historiska data samlas in med behörigheten för användaren som slutförde rapporten.
 
-I en standard-AEM-installation är följande behörigheter förinställda för rapporterna:
+I en AEM är följande behörigheter förinställda för rapporterna:
 
 * **Användarrapport**
 
