@@ -560,7 +560,7 @@ Med widgeten Bifogad fil i adaptiva formulär kan du överföra filer. Du kan oc
   </tr> 
   <tr> 
    <td><p><code>filePreviewIconColor</code></p> </td> 
-   <td><p>Färg för ikonen Förhandsgranska (Bootstrap-ikon) i widgeten</p> </td> 
+   <td><p>Färg för ikonen Förhandsvisa (Bootstrap) i widgeten</p> </td> 
   </tr> 
   <tr> 
    <td><p><code>fileItemCommentHeight</code></p> </td> 
