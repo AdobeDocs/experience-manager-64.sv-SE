@@ -1,8 +1,8 @@
 ---
 title: Startar och stoppar WebSphere Application Server
 seo-title: Startar och stoppar WebSphere Application Server
-description: Flera procedurer kräver att du stoppar eller startar instansen av WebSphere där du vill distribuera AEM-formulärprodukter. I det här dokumentet beskrivs hur du startar och stoppar WebSphere Application Server.
-seo-description: Flera procedurer kräver att du stoppar eller startar instansen av WebSphere där du vill distribuera AEM-formulärprodukter. I det här dokumentet beskrivs hur du startar och stoppar WebSphere Application Server.
+description: Flera procedurer kräver att du stoppar eller startar instansen av WebSphere där du vill distribuera AEM formulärprodukter. I det här dokumentet beskrivs hur du startar och stoppar WebSphere Application Server.
+seo-description: Flera procedurer kräver att du stoppar eller startar instansen av WebSphere där du vill distribuera AEM formulärprodukter. I det här dokumentet beskrivs hur du startar och stoppar WebSphere Application Server.
 uuid: e0373197-aa57-4087-933d-92a86840a11a
 contentOwner: admin
 content-type: reference
@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: bcd16691-67ab-4694-9e6b-c9d3e0c7bf0b
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '236'
+ht-degree: 0%
 
 ---
 
 
 # Startar och stoppar WebSphere Application Server {#starting-and-stopping-websphere-application-server}
 
-Flera procedurer kräver att du stoppar eller startar instansen av WebSphere där du vill distribuera AEM-formulärprodukter. Om du är osäker på om programservern har startats kan du först visa statusen för WebSphere Application Server.
+Flera procedurer kräver att du stoppar eller startar instansen av WebSphere där du vill distribuera AEM formulärprodukter. Om du är osäker på om programservern har startats kan du först visa statusen för WebSphere Application Server.
 
 ## Visa status för WebSphere Application Server {#view-the-status-of-websphere-application-server}
 
