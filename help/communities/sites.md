@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 202d7dba-2b34-431d-b10f-87775632807f
 translation-type: tm+mt
 source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
+workflow-type: tm+mt
+source-wordcount: '449'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +30,7 @@ Konsolen Platsmallar liknar konsolen [Gruppmallar](tools-groups.md) , som är in
 
 För att nå webbcommunitywebbplatskonsolen i redigeringsmiljön
 
-* Från global navigering: **[!UICONTROL Verktyg > Communities > Site Templates]**
+* Från global navigering: **[!UICONTROL Tools > Communities > Site Templates]**
 
 Den här konsolen visar mallarna som en [community](sites-console.md) kan skapas från och som gör att nya webbplatsmallar kan skapas.
 
@@ -45,11 +48,14 @@ Då öppnas panelen Platsredigeraren som innehåller tre underpaneler:
 
 På panelen Grundläggande information konfigureras ett namn, en beskrivning och huruvida mallen är aktiverad eller inaktiverad:
 
-* **[!UICONTROL Mallnamn]** för community-webbplats Mallens namn-ID
+* **[!UICONTROL Community Site Template Name]**
+Mallens namn-ID
 
-* **[!UICONTROL Beskrivning]** av communityplatsmall
+* **[!UICONTROL Community Site Template Description]**
+Mallbeskrivningen
 
-* **[!UICONTROL Inaktiverad/aktiverad]** En växlingsväxling som styr om mallen kan refereras
+* **[!UICONTROL Disabled/Enabled]**
+En växlingsväxling som styr om mallen kan refereras
 
 ### Miniatyrbild {#thumbnail}
 
