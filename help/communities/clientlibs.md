@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 7d423dff-8710-4f43-ad55-8863169946e2
 translation-type: tm+mt
 source-git-commit: 59d40b5bddc42a4ac057ef600243f396aefc926b
+workflow-type: tm+mt
+source-wordcount: '399'
+ht-degree: 1%
 
 ---
 
@@ -47,7 +50,7 @@ När de nödvändiga klientlibs saknas kan det leda till javascript-fel och ett 
 
 Den viktigaste funktionsinformationen för utvecklare identifierar de nödvändiga klientlibs.
 
-Om du bläddrar till [Community Components Guide](components-guide.md) från en AEM-instans får du dessutom tillgång till en lista med de clientlib-kategorier som krävs för en komponent.
+Om du AEM till [Community Components Guide](components-guide.md) får du dessutom tillgång till en lista med de clientlib-kategorier som krävs för en komponent.
 
 Till exempel, högst upp på sidan [](http://localhost:4502/content/community-components/en/reviews.html) Recensioner, visas de klickbara listerna
 
@@ -79,7 +82,7 @@ Så här lägger du till en klientlib för en community-webbplats med [CRXDE Lit
 
          * Upprepa för att lägga till fler klientbibliotek
       * Välj **[!UICONTROL OK]**
-   * Välj **[!UICONTROL Spara alla]**
+   * Välj **[!UICONTROL Save All]**
 
 
 
