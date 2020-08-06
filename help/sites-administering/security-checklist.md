@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Säkerhetschecklista{#security-checklist}
 
-I det här avsnittet beskrivs olika åtgärder som du bör vidta för att se till att din AEM-installation är säker när den distribueras. Checklistan ska användas uppifrån och ned.
+I det här avsnittet beskrivs olika åtgärder som du bör vidta för att se till att AEM är säker när du distribuerar. Checklistan ska användas uppifrån och ned.
 
 >[!NOTE]
 >
@@ -48,15 +48,15 @@ Det är obligatoriskt att aktivera HTTPS-transportlagret på både författare- 
 
 Kontrollera att du har installerat de senaste [säkerhetsuppdateringarna från Adobe](https://helpx.adobe.com/experience-manager/kb/aem63-available-hotfixes.html).
 
-### Ändra standardlösenord för administratörskonton för AEM- och OSGi-konsolen {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
+### Ändra standardlösenord för AEM- och OSGi-konsolens administratörskonton {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
 
-Adobe rekommenderar att du efter installationen ändrar lösenordet för de behöriga [**AEM **-`admin`kontona](#changing-the-aem-admin-password)(i alla instanser).
+Adobe rekommenderar att du efter installationen ändrar lösenordet för de behöriga [**AEM **`admin`kontona](#changing-the-aem-admin-password)(i alla instanser).
 
 Dessa konton omfattar:
 
-* AEM- `admin` kontot
+* AEM `admin` konto
 
-   När du har ändrat lösenordet för AEM-administratörskontot måste du använda det nya lösenordet när du använder CRX.
+   När du har ändrat lösenordet för AEM administratörskonto måste du använda det nya lösenordet när du använder CRX.
 
 * Lösenordet `admin` för OSGi-webbkonsolen
 
@@ -64,9 +64,9 @@ Dessa konton omfattar:
 
 De här två kontona använder separata autentiseringsuppgifter och det är viktigt att ha tydliga, starka lösenord för var och en av dem för att driftsättningen ska vara säker.
 
-#### Ändra AEM-administratörslösenordet {#changing-the-aem-admin-password}
+#### Ändra AEM administratörslösenord {#changing-the-aem-admin-password}
 
-Lösenordet för AEM-administratörskontot kan ändras via [Granite Operations - Users](/help/sites-administering/granite-user-group-admin.md) console.
+Lösenordet för AEM administratörskonto kan ändras via [Granite Operations - Users](/help/sites-administering/granite-user-group-admin.md) console.
 
 Här kan du redigera `admin` kontot och [ändra lösenordet](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user).
 
@@ -76,7 +76,7 @@ Här kan du redigera `admin` kontot och [ändra lösenordet](/help/sites-adminis
 
 #### Viktigt att ändra lösenordet för OSGi-webbkonsolen {#importance-of-changing-the-osgi-web-console-password}
 
-Förutom från AEM- `admin` kontot kan följande hända om du inte ändrar standardlösenordet för OSGi-webbkonsolen:
+Förutom det AEM `admin` kontot kan följande hända om du inte ändrar standardlösenordet för OSGi-webbkonsolen:
 
 * Serverns exponering med ett standardlösenord vid start och avstängning (som kan ta minuter för stora servrar).
 * Exponering av servern när databasen är avstängd/startad och OSGI körs.
@@ -101,15 +101,15 @@ Så här gör du:
 
 ### Implementera anpassad felhanterare {#implement-custom-error-handler}
 
-Adobe rekommenderar att du definierar anpassade felhanterarsidor, särskilt för 404- och 500 HTTP Response-koder, för att förhindra informationsexponering.
+Adobe rekommenderar att du definierar anpassade felhanterarsidor, särskilt för 404- och 500 HTTP Response-koder för att förhindra informationsexponering.
 
 >[!NOTE]
 >
 >Mer information finns i [Så här skapar jag anpassade skript eller felhanterare](https://helpx.adobe.com/experience-manager/kb/CustomErrorHandling.html) i kunskapsbasartikeln.
 
-### Fullständig checklista för Dispatcher {#complete-dispatcher-security-checklist}
+### Slutför checklista för utskickssäkerhet {#complete-dispatcher-security-checklist}
 
-AEM Dispatcher är en viktig del av er infrastruktur. Adobe rekommenderar att du slutför [säkerhetschecklistan](https://helpx.adobe.com/experience-manager/dispatcher/using/security-checklist.html)för dispatcher.
+AEM Dispatcher är en viktig del av din infrastruktur. Adobe rekommenderar starkt att du slutför [checklistan](https://helpx.adobe.com/experience-manager/dispatcher/using/security-checklist.html)för dispatchersäkerhet.
 
 >[!CAUTION]
 >
@@ -119,7 +119,7 @@ AEM Dispatcher är en viktig del av er infrastruktur. Adobe rekommenderar att du
 
 ### Konfigurera replikerings- och transportanvändare {#configure-replication-and-transport-users}
 
-En standardinstallation av AEM anger `admin` som användare för transportreferenser inom [standardreplikeringsagenterna](/help/sites-deploying/replication.md). Administratörsanvändaren används också för att hämta replikeringen på författarsystemet.
+En standardinstallation av AEM anger `admin` som användare för transportautentiseringsuppgifter inom standardreplikeringsagenterna för [replikering](/help/sites-deploying/replication.md). Administratörsanvändaren används också för att hämta replikeringen på författarsystemet.
 
 Av säkerhetsskäl bör båda ändras för att återspegla det aktuella användningsfallet, med följande två aspekter i åtanke:
 
@@ -131,13 +131,13 @@ Av säkerhetsskäl bör båda ändras för att återspegla det aktuella användn
 
 ### Kontrollera säkerhetshälsokontrollerna för instrumentpanelen för åtgärder {#check-the-operations-dashboard-security-health-checks}
 
-I AEM 6 introduceras den nya kontrollpanelen för åtgärder, som är avsedd att hjälpa systemansvariga att felsöka problem och övervaka hälsan för en instans.
+I AEM 6 introduceras den nya kontrollpanelen för åtgärder, som är avsedd att hjälpa systemansvariga att felsöka problem och övervaka en instans hälsa.
 
 Kontrollpanelen innehåller också en samling säkerhetskontroller. Vi rekommenderar att du kontrollerar statusen för alla säkerhetshälsokontroller innan du publicerar med produktionsinstansen. Mer information finns i dokumentationen [till](/help/sites-administering/operations-dashboard.md)kontrollpanelen för åtgärder.
 
 ### Kontrollera om exempelinnehåll finns {#check-if-example-content-is-present}
 
-Allt exempelinnehåll och alla användare (t.ex. Geometrixx-projektet och dess komponenter) ska avinstalleras och tas bort helt i ett produktionssystem innan det görs tillgängligt för allmänheten.
+Allt exempelinnehåll och alla användare (t.ex. Geometrixx och dess komponenter) ska avinstalleras och tas bort helt i ett produktionssystem innan det görs tillgängligt för allmänheten.
 
 >[!NOTE]
 >
@@ -153,11 +153,11 @@ Dessa OSGi-utvecklingspaket bör avinstalleras både på författaren och public
 
 ### Kontrollera om Sling-utvecklingspaketet finns {#check-if-the-sling-development-bundle-is-present}
 
-I [AEM Developer Tools för Eclipse](/help/sites-developing/aem-eclipse.md) distribueras installationsprogrammet för Apache Sling Tooling (org.apache.sling.tooling.support.install).
+I [AEM Developer Tools for Eclipse](/help/sites-developing/aem-eclipse.md) installeras Apache Sling Tooling Support (org.apache.sling.tooling.support.install).
 
 Detta OSGi-paket bör avinstalleras både på författaren och publicera produktionssystem innan de blir tillgängliga.
 
-### Skydda mot smidning av förfrågningar på olika webbplatser {#protect-against-cross-site-request-forgery}
+### Protect mot smidning av förfrågningar mellan webbplatser {#protect-against-cross-site-request-forgery}
 
 #### CSRF Protection Framework {#the-csrf-protection-framework}
 
@@ -262,6 +262,7 @@ En denial of service-attack (DoS) är ett försök att göra en datorresurs otil
    * `.../en.ExtensionDosAttack`
    * `.../en.SelectorDosAttack.html`
    * `.../en.html/SuffixDosAttack`
+
    Alla giltiga variationer (t.ex. returnera ett `200` svar och konfigureras att cachelagras) cachas av dispatchern, vilket till slut leder till ett fullständigt filsystem och ingen tjänst för ytterligare begäranden.
 
 Det finns många konfigurationspunkter för att förhindra sådana attacker, här diskuterar vi bara de som är direkt relaterade till AEM.
@@ -300,12 +301,12 @@ För att förhindra missbruk kan du:
 
       **JSON Max-resultat** ( `json.maximumresults`)
 
-      i konfigurationen för [Apache Sling GET-servern](/help/sites-deploying/osgi-configuration-settings.md). När den här gränsen överskrids komprimeras återgivningen. Standardvärdet för Sling i AEM är `200`.
+      i konfigurationen för [Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md). När den här gränsen överskrids komprimeras återgivningen. Standardvärdet för Sling inom AEM är `200`.
 
-   * Som en förebyggande åtgärd inaktiverar du de andra standardåtergivningarna (HTML, oformaterad text, XML). Återigen genom att konfigurera [Apache Sling GET-servern](/help/sites-deploying/osgi-configuration-settings.md).
+   * Som en förebyggande åtgärd inaktiverar du de andra standardåtergivningarna (HTML, oformaterad text, XML). Återigen genom att konfigurera [Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md).
    >[!CAUTION]
    >
-   >Inaktivera inte JSON-renderaren, vilket krävs för AEM:s normala drift.
+   >Inaktivera inte JSON-renderaren, vilket krävs för att AEM ska fungera normalt.
 
 1. Använd en brandvägg för att filtrera åtkomsten till instansen.
 
@@ -315,9 +316,9 @@ För att förhindra missbruk kan du:
 
 >[!NOTE]
 >
->Denna begränsning bör endast utföras i AEM-miljöer som inte använder Forms.
+>Denna begränsning bör endast utföras i AEM som inte använder Forms.
 
-Eftersom AEM inte tillhandahåller indexvärden för `FormChooserServlet`formuläret kommer formulärväljare i frågor att utlösa en kostsam databasövergång, vilket vanligen gör att AEM-instansen avbryts. Formulärväljare kan identifieras med **&amp;stämpeln;ast;.form.&amp;ast;** sträng i frågor.
+Eftersom AEM inte tillhandahåller indexvärden för `FormChooserServlet`formuläret kommer formulärväljare i frågor att utlösa en kostsam databasgenomgång, vilket vanligen leder till att AEM avbryts. Formulärväljare kan identifieras med **&amp;stämpeln;ast;.form.&amp;ast;** sträng i frågor.
 
 Följ stegen nedan för att minska detta:
 
@@ -332,7 +333,7 @@ Följ stegen nedan för att minska detta:
 
 Med standardtjänsten för hämtning av resurser i AEM kan autentiserade användare skicka godtyckligt stora, samtidiga hämtningsbegäranden för att skapa ZIP-filer med resurser som är synliga för dem och som kan överbelasta servern och/eller nätverket.
 
-För att minska de potentiella DoS-riskerna som orsakas av den här funktionen är `AssetDownloadServlet` OSGi-komponenten inaktiverad som standard för publiceringsinstanser i de senaste AEM-versionerna.
+För att minska de potentiella DoS-riskerna som orsakas av den här funktionen är `AssetDownloadServlet` OSGi-komponenten inaktiverad som standard för publiceringsinstanser i de senaste AEM versionerna.
 
 Om installationen kräver att hämtningsservern för resurser är aktiverad kan du läsa [den här artikeln](/help/assets/download-assets-from-aem.md#disable-asset-download-servlet) för mer information.
 
@@ -360,7 +361,7 @@ WebDAV ska vara inaktiverat i både författar- och publiceringsmiljön. Detta k
 
    >[!NOTE]
    >
-   >AEM behöver inte startas om.
+   >Du behöver inte starta om AEM.
 
 ### Verifiera att du inte avslöjar personligt identifierbar information i användarens hemsökväg {#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path}
 
@@ -392,7 +393,7 @@ Mer [information om clickjacking finns på OWASP-webbplatsen](https://www.owasp.
 
 ### Se till att du replikerar krypteringsnycklar korrekt vid behov {#make-sure-you-properly-replicate-encryption-keys-when-needed}
 
-Vissa AEM-funktioner och autentiseringsscheman kräver att du replikerar dina krypteringsnycklar i alla AEM-instanser.
+Vissa AEM funktioner och autentiseringsscheman kräver att du replikerar dina krypteringsnycklar i alla AEM instanser.
 
 Innan du gör detta bör du tänka på att nyckelreplikering sker på olika sätt mellan versionerna eftersom det sätt som nycklarna lagras på skiljer sig åt mellan 6.3 och äldre versioner.
 
@@ -400,23 +401,24 @@ Mer information finns nedan.
 
 #### Replikeringsnycklar för AEM 6.3 {#replicating-keys-for-aem}
 
-I äldre versioner lagrades replikeringsnycklarna i databasen, med början från AEM 6.3, men de lagras i filsystemet.
+I äldre versioner lagrades replikeringsnycklarna i databasen, med början AEM 6.3 lagras de i filsystemet.
 
 För att replikera dina nycklar mellan instanser måste du därför kopiera dem från källinstansen till målinstansens plats i filsystemet.
 
 Mer specifikt:
 
-1. Få tillgång till AEM-instansen, vanligtvis en författarinstans, som innehåller det nyckelmaterial som ska kopieras.
+1. få åtkomst till AEM, vanligtvis en författarinstans, som innehåller det nyckelmaterial som ska kopieras,
 1. Leta reda på paketet com.adobe.granite.crypto.file i det lokala filsystemet. Under den här sökvägen:
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
+
    Den `bundle.info` fil som finns i varje mapp identifierar paketnamnet.
 
 1. Navigera till datamappen. Till exempel:
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
-1. Kopiera HMAC- och mallfilerna.
+1. Kopiera HMAC-filer och överordnad filer.
 1. Gå sedan till den målinstans som du vill duplicera HMAC-nyckeln till och navigera till datamappen. Till exempel:
 
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
@@ -427,13 +429,13 @@ Mer specifikt:
 
 >[!NOTE]
 >
->Du kan återgå till att lagra nycklar före 6.3 genom att lägga till parametern nedan när du installerar AEM första gången:
+>Du kan återgå till metoden för att lagra nycklar före 6.3 genom att lägga till parametern nedan när du först installerar AEM:
 >
 >`-Dcom.adobe.granite.crypto.file.disable=true`
 
 #### Replikeringsnycklar för AEM 6.2 och äldre versioner {#replicating-keys-for-aem-and-older-versions}
 
-I AEM 6.2 och tidigare versioner lagras nycklarna i databasen under `/etc/key` noden.
+I AEM 6.2 och tidigare lagras nycklarna i databasen under `/etc/key` noden.
 
 Det rekommenderade sättet att på ett säkert sätt replikera nycklarna mellan dina instanser är att bara replikera den här noden. Du kan selektivt replikera noder via CRXDE Lite:
 
@@ -444,8 +446,8 @@ Det rekommenderade sättet att på ett säkert sätt replikera nycklarna mellan 
 
 ### Utför ett penetrationstest {#perform-a-penetration-test}
 
-Adobe rekommenderar starkt att du testar din AEM-infrastruktur innan du börjar producera.
+Adobe rekommenderar starkt att du utför ett penetrationstest av din AEM infrastruktur innan du börjar producera.
 
 ### Bästa praxis för utveckling {#development-best-practices}
 
-Det är viktigt att ny utveckling följer [bästa säkerhetspraxis](/help/sites-developing/security.md) för att säkerställa att din AEM-miljö är säker.
+Det är viktigt att ny utveckling följer [bästa säkerhetspraxis](/help/sites-developing/security.md) för att säkerställa att AEM är säker.
