@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a07a4690-0e47-4a76-84cb-96abdc70b835
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '271'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Sökvägen till komponenten är unik och refererar standardkomponenten som en ö
 
 ## Exempel {#example}
 
-Anta att rubriken för kommentarkomponenten måste visas med ett alternativt utseende på en webbplats i AEM-instansen, samtidigt som den visas med standardvisningen på en annan webbplats. I stället för att åsidosätta standardkommentaren, som ändrar kommentarkomponenten för alla instanser, är det bättre att se till att det finns flera kommentarskomponenter tillgängliga för användning på olika platser.
+Anta att rubriken för kommentarkomponenten måste visas med ett alternativt utseende på en plats i AEM, samtidigt som den visas med standardvisningen på en annan plats. I stället för att åsidosätta standardkommentaren, som ändrar kommentarkomponenten för alla instanser, är det bättre att se till att det finns flera kommentarskomponenter tillgängliga för användning på olika platser.
 
 Om du vill implementera den här lösningen skapar du en ny komponent som utökar (åsidosätter) den befintliga och ändrar Handlebars-skriptet. Det område på webbplatsen som använder de nya kommentarerna kan använda det utökade området, medan de webbplatser som använder standardutseendet inte påverkas.
 
