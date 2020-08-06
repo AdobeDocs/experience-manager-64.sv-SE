@@ -1,8 +1,8 @@
 ---
-title: Adobe Campaign-komponenter
-seo-title: Adobe Campaign-komponenter
-description: När ni integrerar med Adobe Campaign finns det komponenter som ni kan använda när ni arbetar med nyhetsbrev och formulär
-seo-description: När ni integrerar med Adobe Campaign finns det komponenter som ni kan använda när ni arbetar med nyhetsbrev och formulär
+title: Adobe Campaign Components
+seo-title: Adobe Campaign Components
+description: När du integrerar med Adobe Campaign finns det komponenter som du kan använda när du arbetar med nyhetsbrev och formulär
+seo-description: När du integrerar med Adobe Campaign finns det komponenter som du kan använda när du arbetar med nyhetsbrev och formulär
 uuid: d1fb8649-8aae-49a5-8663-1b7cb74ee0e7
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,19 +11,22 @@ topic-tags: personalization
 discoiquuid: f328cd1e-30a3-42d2-88b7-64455ee9eb1f
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '2778'
+ht-degree: 1%
 
 ---
 
 
-# Adobe Campaign-komponenter{#adobe-campaign-components}
+# Adobe Campaign Components{#adobe-campaign-components}
 
-När ni integrerar med Adobe Campaign finns det komponenter tillgängliga för när ni arbetar med nyhetsbrev och formulär. Båda beskrivs i det här dokumentet.
+När du integrerar med Adobe Campaign finns det komponenter som du kan använda när du arbetar med nyhetsbrev och formulär. Båda beskrivs i det här dokumentet.
 
 ## Adobe Campaign Newsletter Components {#adobe-campaign-newsletter-components}
 
-Alla Campaign-komponenter följer den bästa praxis som beskrivs i [Bästa praxis för e-postmallar](/help/sites-administering/best-practices-for-email-templates.md) och baseras på Adobes [HTML-kod](https://helpx.adobe.com/experience-manager/htl/using/overview.html).
+Alla Campaign-komponenter följer den bästa praxis som beskrivs i [Bästa praxis för e-postmallar](/help/sites-administering/best-practices-for-email-templates.md) och baseras på Adobe-markeringsspråket [HTML](https://helpx.adobe.com/experience-manager/htl/using/overview.html).
 
-När du öppnar ett nyhetsbrev/e-postmeddelande som är konfigurerat för integrering med Adobe Campaign bör du se följande komponenter i **Adobe Campaign Newsletter** :
+När du öppnar ett nyhetsbrev/e-postmeddelande som är konfigurerat för integrering med Adobe Campaign, bör du se följande komponenter i **Adobe Campaign nyhetsbrev** :
 
 * Rubrik (kampanj)
 * Bild (Campaign)
@@ -176,13 +179,13 @@ I följande exempel visas en länkkomponent (Campaign).
 
 ### Scene7 Image Template (Campaign) {#scene-image-template-campaign}
 
-[Scene7-bildmallar](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) är lageruppbyggda bildfiler, där innehåll och egenskaper kan parametriseras för variabilitet. Med **bildmallskomponenten** kan du använda Scene7-mallar i nyhetsbrev och ändra värdena för mallparametrar. Dessutom kan ni använda Adobe Campaign-metadatavariabler inuti parametrarna, så att varje användare upplever bilden på ett personaliserat sätt.
+[Scene7-bildmallar](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) är lageruppbyggda bildfiler, där innehåll och egenskaper kan parametriseras för variabilitet. Med **bildmallskomponenten** kan du använda Scene7-mallar i nyhetsbrev och ändra värdena för mallparametrar. Dessutom kan du använda Adobe Campaign-metadatavariabler inuti parametrarna, så att varje användare upplever bilden på ett personaliserat sätt.
 
 ![chlimage_1-111](assets/chlimage_1-111.png)
 
-Klicka på **Redigera** för att konfigurera komponenten. Du kan konfigurera inställningarna som beskrivs i det här avsnittet. Den här Scene7-bildmallen beskrivs i detalj i [Bildmallskomponenten](/help/assets/scene7.md#image-template)Scene7.
+Klicka på **Redigera** för att konfigurera komponenten. Du kan konfigurera inställningarna som beskrivs i det här avsnittet. Den här Scene7 Image-mallen beskrivs mer ingående i [Scene7 Image Template-komponenten](/help/assets/scene7.md#image-template).
 
-Dessutom visar parameterpanelen alla mallparametrar som har definierats för mallen i Scene7. För var och en av dessa parametrar kan du anpassa värdet, infoga variabler eller återställa dem till deras standardvärde.
+Dessutom listas alla mallparametrar som har definierats för mallen i Scene7 på parameterpanelen. För var och en av dessa parametrar kan du anpassa värdet, infoga variabler eller återställa dem till deras standardvärde.
 
 ![chlimage_1-112](assets/chlimage_1-112.png)
 
@@ -259,7 +262,7 @@ I följande exempel visas en text- och bildkomponent (Campaign).
 
 ### Text och personalisering (Campaign) {#text-personalization-campaign}
 
-Med komponenten Text &amp; Personalization (Campaign) kan du ange ett textblock med en WYSIWYG-redigerare, med funktioner som tillhandahålls av [RTF-redigeraren](/help/sites-authoring/rich-text-editor.md). Med den här komponenten kan du dessutom använda kontextfält och personaliseringsblock som finns i Adobe Campaign; Se även [Infoga personalisering](/help/sites-authoring/campaign.md#inserting-personalization).
+Med komponenten Text &amp; Personalization (Campaign) kan du ange ett textblock med en WYSIWYG-redigerare, med funktioner som tillhandahålls av [RTF-redigeraren](/help/sites-authoring/rich-text-editor.md). Med den här komponenten kan du dessutom använda kontextfält och anpassningsblock som finns i Adobe Campaign; Se även [Infoga personalisering](/help/sites-authoring/campaign.md#inserting-personalization).
 
 Om du väljer ikoner kan du formatera texten, inklusive teckensnittsegenskaper, justering, länkar, listor och indrag. Funktionen är i stort sett densamma i [båda gränssnitten](/help/sites-authoring/editing-content.md), även om utseendet och känslan är annorlunda:
 
@@ -271,6 +274,7 @@ I redigeraren kan du lägga till text, ändra justeringen, lägga till och ta bo
 >
 >* Vilka anpassningsfält som är tillgängliga beror på vilken Adobe Campaign-mall nyhetsbrevet är länkat till.
 >* När du har valt en profil från ContextHub ersätts personaliseringsfälten automatiskt av data från den valda profilen.
+
 >
 >
 Se [Infoga personalisering](/help/sites-authoring/campaign.md#inserting-personalization).
@@ -281,13 +285,13 @@ Se [Infoga personalisering](/help/sites-authoring/campaign.md#inserting-personal
 >
 >Endast de fält som definieras i **nms:seedMember** -schemat eller ett av dess tillägg tas med i beräkningen. Attributen för de tabeller som är länkade till **nms:seedMember** är inte tillgängliga.
 
-## Adobe Campaign-formulärkomponenter {#adobe-campaign-form-components}
+## Adobe Campaign Form Components {#adobe-campaign-form-components}
 
-Du använder Adobe Campaign-komponenter för att skapa ett formulär som användarna fyller i för att antingen prenumerera på ett nyhetsbrev, avbryta prenumerationen på ett nyhetsbrev eller uppdatera sina användarprofiler. Mer information finns i [Skapa Adobe Campaign-formulär](/help/sites-authoring/adobe-campaign-forms.md) .
+Du använder Adobe Campaign-komponenter för att skapa ett formulär som användarna fyller i för att antingen prenumerera på ett nyhetsbrev, avbryta prenumerationen på ett nyhetsbrev eller uppdatera sina användarprofiler. Mer information finns i [Skapa Adobe Campaign Forms](/help/sites-authoring/adobe-campaign-forms.md) .
 
 Varje komponentfält kan länkas till ett Adobe Campaign-databasfält. De tillgängliga fälten skiljer sig åt beroende på vilken typ av data de innehåller, vilket beskrivs i avsnittet [Komponenter och Datatyp](#components-and-data-type). Om du utökar ditt mottagarschema i Adobe Campaign är de nya fälten tillgängliga i de komponenter vars datatyper matchar.
 
-När du öppnar ett formulär som är konfigurerat att integreras med Adobe Campaign visas följande komponenter i **Adobe Campaign** -avsnittet:
+När du öppnar ett formulär som är konfigurerat för integrering med Adobe Campaign visas följande komponenter i **Adobe Campaign** -avsnittet:
 
 * Kryssruta (kampanj)
 * Datumfält (kampanj) och Datumfält/HTML5 (kampanj)
@@ -313,7 +317,7 @@ I följande tabell beskrivs de komponenter som är tillgängliga för att visa o
  <tbody> 
   <tr> 
    <td><p><strong>Komponent</strong></p> </td> 
-   <td><p><strong>Datatyp för Adobe Campaign-fältet</strong></p> </td> 
+   <td><p><strong>Datatyp för Adobe Campaign-fält</strong></p> </td> 
    <td><p><strong>Exempelfält</strong></p> </td> 
   </tr> 
   <tr> 
@@ -376,7 +380,7 @@ Du kan konfigurera följande:
 
 * **Mappning**
 
-   Välj ett personaliseringsfält för Adobe Campaign, om det är lämpligt.
+   Välj ett personaliseringsfält från Adobe Campaign, om det är lämpligt.
 
 * **Avstämningsnyckel**
 
@@ -414,7 +418,7 @@ I följande exempel visas en CheckBox-komponent (Campaign).
 
 ### Datumfält (kampanj) och Datumfält/HTML 5 (kampanj) {#date-field-campaign-and-date-field-html-campaign}
 
-Använd datumfältet för att tillåta mottagarna att ange ett datum, Du kanske till exempel vill att mottagarna ska ange sina födelsedatum. Datumformatet matchar formatet som används i Adobe Campaign-instansen.
+Använd datumfältet för att tillåta mottagarna att ange ett datum, Du kanske till exempel vill att mottagarna ska ange sina födelsedatum. Datumformatet matchar det format som används i din Adobe Campaign-instans.
 
 Förutom de [inställningar som är gemensamma för de flesta Adobe Campaign-komponenter](#settings-common-to-most-components)kan du konfigurera följande:
 
@@ -425,7 +429,8 @@ Förutom de [inställningar som är gemensamma för de flesta Adobe Campaign-kom
 * **Begränsningsmeddelande**
 
    Dessutom kan du lägga till ett villkorsmeddelande så att användarna vet hur de formaterar sina svar på rätt sätt.
-* **Format - Bredd** Justera fältets bredd genom att klicka eller trycka på **+** - och **-** -ikonerna eller genom att ange ett tal.
+* **Format - Bredd** Justera fältets bredd genom att klicka eller trycka på 
+**+** och **-** ikoner eller ange ett tal.
 
 I följande exempel visas en datumfältskomponent (Campaign) där bredden justeras.
 
@@ -433,7 +438,7 @@ I följande exempel visas en datumfältskomponent (Campaign) där bredden juster
 
 ### Krypterad primärnyckel (kampanj) {#encrypted-primary-key-campaign}
 
-Den här komponenten definierar namnet på URL-parametern som ska innehålla identifieraren för en Adobe Campaign-profil (**Main Resource Identifier** eller **Encrypted primary key** in Adobe Campaign Standard and 6.1).
+Den här komponenten definierar namnet på URL-parametern som kommer att innehålla identifieraren för en Adobe Campaign-profil (**huvudresurs-ID** eller **krypterad primärnyckel** i Adobe Campaign Standard respektive 6.1).
 
 Varje formulär som visar och ändrar Adobe Campaign-profildata **måste** innehålla en krypterad primärnyckelkomponent.
 
@@ -442,7 +447,8 @@ Du kan konfigurera följande i komponenten Encrypted Primary Key (Campaign):
 * **Titel och text - elementnamn**
 
    Standardvärdet är encryptedPK. Du behöver bara ändra elementnamnet när det står i konflikt med namnet på ett annat element i formuläret. Två formulärfält kan inte ha samma elementnamn.
-* **Adobe Campaign - URL-parameter** Lägg till URL-parametern för EPK. Du kan till exempel använda värdet **epk**.
+* **Adobe Campaign - URL-parameter** Lägg till URL-parametern för EPK. Du kan till exempel använda värdet 
+**epk**.
 
 I följande exempel visas en krypterad primärnyckelkomponent (Campaign).
 
@@ -465,7 +471,7 @@ Du kan konfigurera följande i komponenten Dold avstämningsnyckel (Campaign):
 * **Titel och text - elementnamn**
 
    Standardvärdet är concilKey. Du behöver bara ändra elementnamnet när det står i konflikt med namnet på ett annat element i formuläret. Två formulärfält kan inte ha samma elementnamn.
-* **Adobe Campaign - Mappa** kartor till ett personaliseringsfält för Adobe Campaign.
+* **Adobe Campaign - Mappa** kartor till ett personaliseringsfält i Adobe Campaign.
 
 I följande exempel visas en komponent för dold avstämningsnyckel (Campaign).
 
@@ -484,7 +490,8 @@ Förutom de [inställningar som är gemensamma för de flesta Adobe Campaign-kom
 * **Begränsningsmeddelande**
 
    Dessutom kan du lägga till ett villkorsmeddelande så att användarna vet hur de formaterar sina svar på rätt sätt.
-* **Format - Bredd** Justera fältets bredd genom att klicka eller trycka på **+** - och **-** -ikonerna eller genom att ange ett tal.
+* **Format - Bredd** Justera fältets bredd genom att klicka eller trycka på 
+**+** och **-** ikoner eller ange ett tal.
 
 I följande exempel visas en Numeric Field-komponent (Campaign) med den konfigurerade bredden.
 
@@ -494,7 +501,7 @@ I följande exempel visas en Numeric Field-komponent (Campaign) med den konfigur
 
 I den här nedrullningsbara listan kan du välja ett alternativ; till exempel en mottagares kön eller status.
 
-Du kan [konfigurera inställningar som är gemensamma för de flesta Adobe Campaign-komponenter](#settings-common-to-most-components) i alternativfältskomponenten (Campaign). Om du vill fylla i den nedrullningsbara listan väljer du lämpligt fält i Adobe Campaign-anpassningsfälten genom att klicka eller trycka på Adobe Campaign-symbolen och navigera till fältet.
+Du kan [konfigurera inställningar som är gemensamma för de flesta Adobe Campaign-komponenter](#settings-common-to-most-components) i alternativfältskomponenten (Campaign). Om du vill fylla i den nedrullningsbara listan väljer du lämpligt fält i Adobe Campaign personaliseringsfält genom att klicka eller trycka på Adobe Campaign-symbolen och navigera till fältet.
 
 ![chlimage_1-128](assets/chlimage_1-128.png)
 
@@ -506,7 +513,7 @@ I följande exempel visas en alternativfältskomponent (Campaign).
 
 Använd komponenten **Checklista för prenumerationer (Campaign)** om du vill ändra de prenumerationer som är kopplade till en Adobe Campaign-profil.
 
-När den här komponenten läggs till i ett formulär visas alla tillgängliga prenumerationer som kryssrutor där användaren kan välja önskad prenumeration. När användare skickar formuläret prenumererar den här komponenten på användaren eller avbryter prenumerationen på de valda tjänsterna beroende på typ av formuläråtgärd (**Adobe Campaign: Prenumerera på Services** eller **Adobe Campaign: Avbeställ tjänsterna**).
+När den här komponenten läggs till i ett formulär visas alla tillgängliga prenumerationer som kryssrutor där användaren kan välja önskad prenumeration. När användare skickar formuläret prenumererar den här komponenten på eller avbryter prenumerationen för användaren från de valda tjänsterna beroende på typ av formuläråtgärd (**Adobe Campaign: Prenumerera på Services** eller **Adobe Campaign: Avbeställ tjänsterna**).
 
 >[!NOTE]
 >
@@ -538,5 +545,5 @@ Förutom de [inställningar som är gemensamma för de flesta Adobe Campaign-kom
 
 I följande exempel visas en textfältskomponent (Campaign).
 
-![chlimage_1-135](assets/chlimage_1-131.png)
+![chlimage_1-131](assets/chlimage_1-131.png)
 
