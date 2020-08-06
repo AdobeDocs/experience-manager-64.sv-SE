@@ -9,6 +9,9 @@ topic-tags: develop
 discoiquuid: d570ead9-8f9c-4668-8b23-e8984d9b25e9
 translation-type: tm+mt
 source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
+workflow-type: tm+mt
+source-wordcount: '988'
+ht-degree: 0%
 
 ---
 
@@ -29,11 +32,11 @@ Innan du konfigurerar lazy loading av fragment i ditt adaptiva formulär är det
 
    Mer information om att skapa fragment finns i [Adaptiva formulärfragment](/help/forms/using/adaptive-form-fragments.md).
 
-* **Identifiera och markera globala värden** Formulärbaserade transaktioner innefattar dynamiska element för att hämta in relevanta data från användarna och bearbeta dem för att förenkla ifyllandet av formulären. Formuläret har till exempel fält A i fragment X vars värde bestämmer giltigheten för fält B i ett annat fragment. Om fragment X i det här fallet har markerats för lazy loading måste värdet i fält A vara tillgängligt för att validera fält B även när fragment X inte har lästs in. För att uppnå detta kan du markera fält A som globalt, vilket garanterar att dess värde är tillgängligt för validering av fält B när fragment X inte har lästs in.
+* **Identifiera och märk globala värden** Forms-baserade transaktioner med dynamiska element för att hämta in relevanta data från användarna och bearbeta dem för att förenkla ifyllandet av formulär. Formuläret har till exempel fält A i fragment X vars värde bestämmer giltigheten för fält B i ett annat fragment. Om fragment X i det här fallet har markerats för lazy loading måste värdet i fält A vara tillgängligt för att validera fält B även när fragment X inte har lästs in. För att uppnå detta kan du markera fält A som globalt, vilket garanterar att dess värde är tillgängligt för validering av fält B när fragment X inte har lästs in.
 
    Mer information om hur du gör ett fältvärde globalt finns i [Konfigurera lazy loading](/help/forms/using/lazy-loading-adaptive-forms.md#p-configuring-lazy-loading-p).
 
-* **Skriv regler för att styra visningen av fält** Formulär innehåller fält och avsnitt som inte är tillämpliga för alla användare och under alla förhållanden. Formulärförfattare och utvecklare använder synlighets- eller displayregler för att styra sin synlighet baserat på användarindata. Fältet Kontorsadress visas t.ex. inte för användare som väljer Arbetslösa i fältet Anställningsstatus i ett formulär. Mer information om hur du skriver regler finns i [Använda regelredigeraren](/help/forms/using/rule-editor.md).
+* **Skriv regler för att styra visningen av fält** Forms innehåller fält och avsnitt som inte är tillämpliga för alla användare och under alla förhållanden. Forms författare och utvecklare använder synlighets- eller visningsregler för att styra synligheten baserat på användarindata. Fältet Kontorsadress visas t.ex. inte för användare som väljer Arbetslösa i fältet Anställningsstatus i ett formulär. Mer information om hur du skriver regler finns i [Använda regelredigeraren](/help/forms/using/rule-editor.md).
 
    Du kan använda synlighetsregler i de lagligen inlästa fragmenten så att villkorsfält bara visas när de är obligatoriska. Markera dessutom det villkorliga fältet globalt så att det refererar till det i synlighetsuttrycket för det lagerinlästa fragmentet.
 
@@ -43,7 +46,7 @@ Utför följande steg för att aktivera lazy loading på ett adaptivt formulärf
 
 1. Öppna det adaptiva formuläret i redigeringsläget som innehåller det fragment som du vill aktivera för lazy loading.
 1. Markera det adaptiva formulärfragmentet och tryck på ![cmpr](assets/cmppr.png).
-1. Aktivera Läs in fragment- **[!UICONTROL lager]** i sidofältet och tryck på **Klar**.
+1. Aktivera **[!UICONTROL Load fragment lazily]** och tryck på **Klar** i sidofältet.
 
    ![Aktivera lazy loading för det adaptiva formulärfragmentet](assets/lazy-loading-fragment.png)
 
@@ -53,7 +56,7 @@ Du kan markera objektvärden i det lagerinlästa fragmentet som globala så att 
 
 1. Öppna det adaptiva formulärfragmentet i redigeringsläge.
 1. Tryck på fältet vars värde du vill markera som globalt och tryck sedan på ![](assets/cmppr.png).
-1. Aktivera värdet **[!UICONTROL Use (Använd) under lazy loading]**i sidofältet.
+1. Aktivera i sidofältet **[!UICONTROL Use value during lazy loading]**.
    ![Lazy loading field in sidebar](assets/enable-lazy-loading.png)
 
    Värdet är nu markerat som globalt och kommer att vara tillgängligt för användning i skript även när det innehållande fragmentet har tagits bort.
