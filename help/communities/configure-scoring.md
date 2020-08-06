@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: ddb86546-d04b-4967-937b-50a19b0237a0
 translation-type: tm+mt
 source-git-commit: d653a5db1b12ae2d650db2894dfa602326f7a295
+workflow-type: tm+mt
+source-wordcount: '956'
+ht-degree: 1%
 
 ---
 
 
 # Grundläggande om poäng och emblem {#scoring-and-badges-essentials}
 
-Funktionen AEM Communities-poäng och -badges gör det möjligt att identifiera och belöna communitymedlemmar.
+AEM Communities poäng och badges ger möjlighet att identifiera och belöna communitymedlemmar.
 
 Information om hur du konfigurerar funktionen finns i
 
@@ -31,7 +34,7 @@ Den här sidan innehåller ytterligare teknisk information:
 
 >[!CAUTION]
 >
->Implementeringsstrukturen som visas i CRXDE Lite kan komma att ändras.
+>Den implementeringsstruktur som visas i CRXDE Lite kan komma att ändras.
 
 ## Visar emblem {#displaying-badges}
 
@@ -79,21 +82,21 @@ Detaljerade anvisningar finns i [Skapa en anpassad loggfil](../../help/sites-dep
 
 Så här konfigurerar du snabbt en slinglog-fil:
 
-1. Få åtkomst till loggstödet **[!UICONTROL för]** Adobe Experience Manager Web Console, till exempel
+1. Öppna **[!UICONTROL Adobe Experience Manager Web Console Log Support]** till exempel
 
    * http://localhost:4502/system/console/slinglog
 
-1. Välj **[!UICONTROL Lägg till ny loggare]**
+1. Välj **[!UICONTROL Add new logger]**
 
-   1. Välj `DEBUG` för **[!UICONTROL loggnivå]**
-   1. Ange ett namn för **[!UICONTROL loggfilen]**, till exempel
+   1. Välj `DEBUG` för **[!UICONTROL Log Level]**
+   1. Ange ett namn för **[!UICONTROL Log File]** exempelvis
 
       * logs/scoring-debug.log
-   1. Ange två **[!UICONTROL Logger]** -poster (klass) (med `+` ikon)
+   1. Ange två **[!UICONTROL Logger]** (klass) poster (med `+` ikon)
 
       * `com.adobe.cq.social.scoring`
       * `com.adobe.cq.social.badging`
-   1. Välj **[!UICONTROL Spara]**
+   1. Välj **[!UICONTROL Save]**
 
 
 
@@ -103,14 +106,14 @@ Så här visar du loggposter:
 
 * Från webbkonsolen
 
-   * Under menyn **[!UICONTROL Status]**
-   * Välj **[!UICONTROL loggfiler]**
+   * Under **[!UICONTROL Status]** menyn
+   * Välj **[!UICONTROL Log Files]**
    * Sök efter loggfilens namn, till exempel `scoring-debug`
 
 * På serverns lokala disk
 
    * Loggfilen finns på &lt;*server-install-dir*>/crx-quickstart/logs/&lt;*log-file-name*>.log
-   * Exempel: `.../crx-quickstart/logs/scoring-debug.log`
+   * Till exempel, `.../crx-quickstart/logs/scoring-debug.log`
 
 ![chlimage_1-249](assets/chlimage_1-249.png)
 
@@ -118,11 +121,11 @@ Så här visar du loggposter:
 
 Det går att visa användargenererat innehåll som är relaterat till poängsättning och märkning när den valda SRP är antingen JSRP eller MSRP, men inte ASRP. (Om du inte känner till dessa termer läser du Översikt över [Community Content Storage](working-with-srp.md) and [Storage Resource Provider](srp.md).)
 
-Beskrivningarna för att komma åt betygs- och badging-data använder JSRP, eftersom UGC är lätt att komma åt med [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md).
+Beskrivningarna för att komma åt betygs- och badging-data använder JSRP, eftersom användargenerationen är lättillgänglig via [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md).
 
 **JSRP on author**: när du experimenterar i redigeringsmiljön resulterar det i användargenererat innehåll som bara är synligt från författarmiljön.
 
-**JSRP vid publicering**: På samma sätt måste du vid testning i publiceringsmiljön få tillgång till CRXDE Lite med administratörsbehörighet för en publiceringsinstans. Om publiceringsinstansen körs i [produktionsläge](../../help/sites-administering/production-ready.md) (noSampleContent Runmode) måste du [aktivera CRXDE Lite](../../help/sites-administering/enabling-crxde-lite.md).
+**JSRP vid publicering**: På samma sätt måste du, om du testar i publiceringsmiljön, ha administratörsbehörighet för en publiceringsinstans i CRXDE Lite. Om publiceringsinstansen körs i [produktionsläge](../../help/sites-administering/production-ready.md) (noSampleContent Runmode) måste du [aktivera CRXDE Lite](../../help/sites-administering/enabling-crxde-lite.md).
 
 UGC:s basplats på JSRP är `/content/usergenerated/asi/jcr/`.
 
@@ -133,15 +136,15 @@ Följande API:er kan användas:
 * [com.adobe.cq.social.scoring.api](https://docs.adobe.com/content/docs/en/aem/6-3/develop/ref/javadoc/com/adobe/cq/social/scoring/api/package-summary.html)
 * [com.adobe.cq.social.badging.api](https://docs.adobe.com/content/docs/en/aem/6-3/develop/ref/javadoc/com/adobe/cq/social/badging/api/package-summary.html)
 
-De senaste Javadocs-filerna för de installerade [versionerna](deploy-communities.md#LatestReleases) är tillgängliga för utvecklare från Adobes lagringsplats. Se [Använda Maven for Communities: Javadocs](maven.md#javadocs).
+De senaste Javadocs-filerna för de installerade [versionerna](deploy-communities.md#LatestReleases) är tillgängliga för utvecklare från Adobe-databasen. Se [Använda Maven for Communities: Javadocs](maven.md#javadocs).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
 ### Exempelinställningar {#example-setup}
 
-Skärmbilderna av databasdata kommer från att konfigurera poängsättning och märkning för ett forum på två olika AEM-webbplatser:
+Skärmbilderna av databasdata kommer från hur du ställer in poängsättning och märkning för ett forum på två olika AEM:
 
-1. En AEM-webbplats med ett unikt ID (communitywebbplats skapad med guide):
+1. En AEM webbplats med ett unikt ID (communitywebbplats skapad med guide):
 
    * Använda självstudiekursen Komma igång (engagera) som skapades under självstudiekursen [Komma igång](getting-started.md)
    * Hitta forumsidnoden
@@ -167,7 +170,7 @@ Skärmbilderna av databasdata kommer från att konfigurera poängsättning och m
 
 
 
-1. En AEM-webbplats *utan* unikt ID:
+1. En AEM *utan* ett unikt ID:
 
    * Använda guiden [Community Components](components-guide.md)
    * Hitta forumsidnoden
@@ -176,12 +179,14 @@ Skärmbilderna av databasdata kommer från att konfigurera poängsättning och m
    * Lägga till egenskaper för poängsättning och märkning
 
       * 
+
          ```
          scoringRules = [/etc/community/scoring/rules/comments-scoring,
          /etc/community/scoring/rules/forums-scoring]
          ```
 
       * 
+
          ```
          badgingRules =[/etc/community/badging/rules/comments-scoring,
          /etc/community/badging/rules/forums-scoring]
@@ -220,7 +225,8 @@ När en användare har fått två bronze-märken och tilldelats ett moderatormä
    >  /etc/community/scoring/rules/site2/forums-scoring
    >
    >
-* skapa unika märkesbilder för olika AEM-webbplatser
+* skapa unika märkesbilder för olika AEM
+
 >
 
 
@@ -235,7 +241,7 @@ I undersökningssyfte, till exempel med JSRP, är baskamappen som innehåller po
 
 Den underordnade noden för `scoring`är resultatregelns namn. Det bästa sättet är alltså att betygsregelnamn på en server är globalt unika.
 
-För Geometrixx Engage-webbplatsen är användaren och poängen i en sökväg som är konstruerad med resultatregelnamnet, communityplatsens webbplats-ID ( `engage-ba81p`), ett unikt ID och användarens ID:
+För webbplatsen Geometrixx Engage finns användaren och poängen i en sökväg som är konstruerad med resultatregelnamnet, communityplatsens webbplats-ID ( `engage-ba81p`), ett unikt ID och användarens ID:
 
 * `.../scoring/forums-scoring/engage-ba81p/6d179715c0e93cb2b20886aa0434ca9b5a540401/riley`
 
