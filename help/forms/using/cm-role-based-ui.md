@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 342f111e-f15a-4f9a-8993-f90760363c02
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '487'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 I AEM kan administratören ge rollbaserad åtkomst till olika användargrupper för att utföra olika åtgärder på olika resurser. Funktionerna för att skapa eller redigera dataordlistor kan till exempel bara vara tillgängliga för användare i en viss användargrupp, medan andra användare bara kan visa och använda dataordlistorna.
 
-I AEM-gränssnittet visas alternativ, till exempel för att skapa eller redigera en resurstyp, baserat på en användares åtkomstnivå. Om en användare till exempel inte har behörighet att skapa ett datalexikon visas inte alternativet att skapa ett datalexikon i användargränssnittet.
+I AEM visas alternativen, till exempel för att skapa eller redigera en resurstyp, baserat på en användares åtkomstnivå. Om en användare till exempel inte har behörighet att skapa ett datalexikon visas inte alternativet att skapa ett datalexikon i användargränssnittet.
 
 Även om CRX tillåter att du konfigurerar åtkomsträttigheter för både användar- och gruppkonton handlar den här artikeln om rollbaserade eller användargruppbaserade åtkomsträttigheter.
 
@@ -36,11 +39,11 @@ Mer information om grupper, behörigheter, åtkomstkontrollistor och hur du hant
 
    Om ett företag t.ex. har inteckningar i hemmet, kreditkort och försäkringsavdelningar kan de skapa mappar med namn `HomeMortgage`och `CreditCard,``Insurance` behålla relevanta tillgångar och ge agenterna tillgång till vissa tillgångar som endast är relevanta för deras avdelningar.
 
-1. Gör något av följande för att få åtkomst till AEM WCM-säkerhet:
+1. Gör något av följande om du vill få åtkomst AEM WCM-säkerhet:
 
    1. Klicka på säkerhetsikonen på välkomstskärmen eller olika platser i AEM:
 
-   1. Navigera direkt till `https://[server]:[port]/useradmin`. Se till att du loggar in på AEM som administratör.
+   1. Navigera direkt till `https://[server]:[port]/useradmin`. Se till att du loggar in AEM som administratör.
 
       ![]()
    I det vänstra trädet visas alla användare och grupper som finns i systemet. Du kan markera de kolumner som du vill visa, sortera innehållet i kolumnerna och till och med ändra ordningen som kolumnerna visas i genom att dra kolumnrubriken till en ny position.
