@@ -1,8 +1,8 @@
 ---
-title: Integrera AEM-formulärarbetsytan med Microsoft Office SharePoint Server
-seo-title: Integrera AEM-formulärarbetsytan med Microsoft Office SharePoint Server
-description: 'Du kan integrera AEM-formulärarbetsytan med Microsoft Office SharePoint Server. '
-seo-description: 'Du kan integrera AEM-formulärarbetsytan med Microsoft Office SharePoint Server. '
+title: Integrera AEM formulärarbetsyta med Microsoft Office SharePoint Server
+seo-title: Integrera AEM formulärarbetsyta med Microsoft Office SharePoint Server
+description: 'Du kan integrera AEM formulärarbetsytan med Microsoft Office SharePoint Server. '
+seo-description: 'Du kan integrera AEM formulärarbetsytan med Microsoft Office SharePoint Server. '
 uuid: d43396d4-117f-47ea-91e4-10ee96107bc8
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,11 +10,14 @@ topic-tags: Configuration
 discoiquuid: 1bada670-3e0e-40f4-b9be-8b090df910be
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 0%
 
 ---
 
 
-# Integrera AEM-formulärarbetsytan med Microsoft Office SharePoint Server {#integrating-aem-forms-workspace-with-microsoft-office-sharepoint-server}
+# Integrera AEM formulärarbetsyta med Microsoft Office SharePoint Server {#integrating-aem-forms-workspace-with-microsoft-office-sharepoint-server}
 
 **- Krav**
 
@@ -22,7 +25,7 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 
 **Användarnivå**- början
 
-Du kan använda AEM Forms Workspace som en webbdel i Microsoft Office SharePoint Server( t.ex. Microsoft Office SharePoint Server 2007). Användare har tillgång till AEM Forms Workspace genom att ansluta till SharePoint-servern via en webbläsare för att ge en enhetlig upplevelse. I den här artikeln får du lära dig de grundläggande stegen för att visa AEM Forms Workspace som en webbdel i Microsoft Office SharePoint Server. Du kan utföra stegen som beskrivs i den här artikeln för att ge en enhetlig upplevelse så att användare som ansluter till din SharePoint-server kan komma åt AEM Forms Workspace från samma port.
+Du kan använda AEM Forms Workspace som en webbdel i Microsoft Office SharePoint Server( t.ex. Microsoft Office SharePoint Server 2007). Användare har åtkomst till AEM Forms Workspace genom att ansluta till SharePoint Server via en webbläsare för att ge en enhetlig upplevelse. I den här artikeln får du lära dig de grundläggande stegen för att visa AEM Forms Workspace som en webbdel i Microsoft Office SharePoint Server. Du kan utföra stegen som beskrivs i den här artikeln för att ge en enhetlig upplevelse så att användare som ansluter till din SharePoint-server kan komma åt AEM Forms Workspace från samma port.
 
 >[!NOTE]
 >
@@ -30,7 +33,7 @@ Du kan använda AEM Forms Workspace som en webbdel i Microsoft Office SharePoint
 
 ## Integrera AEM Forms Workspace med Microsoft Office SharePoint Server 2007 {#integrate-aem-forms-workspace-with-microsoft-office-sharepoint-server}
 
-Utför följande steg för att integrera AEM Forms Workspace i en webbdel:
+Så här integrerar du AEM Forms Workspace i en webbdel:
 
 1. I en webbläsare går du till SharePoint-webbplatsen, till exempel https://*[myMOSSserver]:*44299/default.aspx där *[myMOSSserver]* är namnet eller IP-adressen för SharePoint-servern.
 
@@ -49,11 +52,11 @@ Utför följande steg för att integrera AEM Forms Workspace i en webbdel:
 
    ![Sidvisningsprogrammets webbdelsruta i Microsoft Office SharePoint-servern.](assets/page-viewer-web-part-box-in-microsoft-office-sharepoint-server.png)
 
-   **** Bild: Rutan *Webbdel för sidvisningsprogrammet i Microsoft Office SharePoint-servern.*
+   **Bild:** *The Page Viewer Web Part box in Microsoft Office SharePoint server.*
 
 1. Utför följande åtgärder på sidan för sidvisningsprogrammet:
 
-   1. I rutan Länk anger du URL:en till AEM Forms Workspace, till exempel https://*[AEM_forms_Server]:*8080/lc/ws där *[AEM_forms_Server]* representerar IP:t eller namnet på AEM-formulärservern.
+   1. I rutan Länk anger du URL:en för AEM Forms Workspace, till exempel https://*[AEM_forms_Server]:*8080/lc/ws där *[AEM_forms_Server]* representerar IP-adressen eller namnet på AEM formulärserver.
    1. Klicka på **Utseende** och ändra höjd, bredd och titel så att du kan se hela gränssnittet i arbetsytan. Du kan till exempel ange höjd och bredd till 6 tum respektive 11 tum.
    1. Klicka på **Testa länk**. Ett nytt webbläsarfönster visas med arbetsytan.
    1. (Valfritt) Klicka på **Layout** och ändra layouten för arbetsytan i webbdelen.
@@ -65,7 +68,7 @@ Utför följande steg för att integrera AEM Forms Workspace i en webbdel:
 
 När du har utfört stegen ovan ser SharePoint-webbplatsen ut ungefär som på följande bild (bild 2):
 
-![AEM Forms Workspace är integrerat med Microsoft Office SharePoint Server](assets/aem-forms-workspace.jpg)
+![AEM Forms Workspace integrerat med Microsoft Office SharePoint Server](assets/aem-forms-workspace.jpg)
 
-**** Bild: *AEM Forms Workspace integrerat med Microsoft Office SharePoint Server*
+**Bild:** *AEM Forms Workspace integrerat med Microsoft Office SharePoint Server*
 
