@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: f8d85d72-0215-4680-a334-e37a530fba58
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '278'
+ht-degree: 2%
 
 ---
 
@@ -58,7 +61,7 @@ I `following`komponenten visas de medlemmar som antingen följer den aktuella me
    <td>
     <ul> 
      <li>Namn: <strong><code>outgoing</code></strong></li> 
-     <li>Typ:Boolean</li> 
+     <li>Typ: Boolean</li> 
      <li>Värde:<br /> 
       <ul> 
        <li><i>true </i>- <code>following</code> komponenten visar de medlemmar som den inloggade medlemmen <code>follows</code></li> 
