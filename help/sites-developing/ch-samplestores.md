@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 7f813b59-d904-49b6-994c-be3badf74464
 translation-type: tm+mt
 source-git-commit: 39b6af8ee815e8f6fa6e0b4a0a6dc80f29165243
+workflow-type: tm+mt
+source-wordcount: '491'
+ht-degree: 1%
 
 ---
 
@@ -109,7 +112,7 @@ I butiken används ett dataträd som liknar följande exempel:
 
 >[!NOTE]
 >
->En säkerhetsprincip som introducerades i Chrome 50.x kräver att alla geopositioneringsrelaterade anrop görs via en skyddad anslutning. Därför tvingar AEM även https-användning för API-anrop för geopositionering om AEM även körs över https. I annat fall används http för att följa principen om samma ursprung. Se [det här Google-blogginlägget](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only) för mer information om förändringen i Chrome.
+>En säkerhetsprincip som introducerades i Chrome 50.x kräver att alla geopositioneringsrelaterade anrop görs via en skyddad anslutning. AEM tvingar därför även https-användning för API-anrop för geopositionering om AEM körs över https. I annat fall används http för att följa principen om samma ursprung. Se [det här Google-blogginlägget](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only) för mer information om förändringen i Chrome.
 
 ## contexthub.surferinfo Sample Store Candidate {#contexthub-surferinfo-sample-store-candidate}
 
