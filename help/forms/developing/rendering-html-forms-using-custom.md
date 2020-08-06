@@ -1,6 +1,6 @@
 ---
-title: Återge HTML-formulär med anpassade CSS-filer
-seo-title: Återge HTML-formulär med anpassade CSS-filer
+title: Återge HTML Forms med anpassade CSS-filer
+seo-title: Återge HTML Forms med anpassade CSS-filer
 description: 'null'
 seo-description: 'null'
 uuid: a44e96f1-001d-48a2-8c96-15cb9d0c71b3
@@ -12,11 +12,14 @@ topic-tags: operations
 discoiquuid: 8fe7c072-7df0-44b7-92d0-bf39dc1e688a
 translation-type: tm+mt
 source-git-commit: e2a6f76d8fa34b2b97713aaef094a2df8164e746
+workflow-type: tm+mt
+source-wordcount: '1640'
+ht-degree: 0%
 
 ---
 
 
-# Återge HTML-formulär med anpassade CSS-filer {#rendering-html-forms-using-custom-css-files}
+# Återge HTML Forms med anpassade CSS-filer {#rendering-html-forms-using-custom-css-files}
 
 Forms-tjänsten återger HTML-formulär som svar på en HTTP-begäran från en webbläsare. När du återger ett HTML-formulär kan Forms-tjänsten referera till en anpassad CSS-fil. Du kan skapa en anpassad CSS-fil som uppfyller dina affärskrav och referera till den CSS-filen när du använder Forms-tjänsten för att återge HTML-formulär.
 
@@ -28,17 +31,17 @@ I följande lista anges format som stöds i en anpassad CSS-fil:
 * **Väljarstilspar** på identifierarnivå: Alla identifierarformat används om de används i HTML-formuläret.
 * **Elementnivåväljarliknande par**: Alla elementformat används om de används i HTML-formuläret.
 * **Formatprioritet**: Formatprioritet (som important) stöds och kan användas i en anpassad CSS-fil.
-* **Medietyp**: Ett eller flera väljarliknande par kan kapslas in i @media-format för att definiera medietypen. Tjänsten Forms kontrollerar inte om den angivna medietypen stöds. Den medietyp som anges i den anpassade CSS-filen sammanfogas i HTML-formuläret.
+* **Medietyp**: Ett eller flera väljarliknande par kan kapslas in i @media-format för att definiera medietypen. Forms-tjänsten kontrollerar inte om den angivna medietypen stöds. Den medietyp som anges i den anpassade CSS-filen sammanfogas i HTML-formuläret.
 
 Du kan hämta en CSS-exempelfil med FormsIVS-programmet. Ladda upp formuläret, markera det på sidan Testa formulärdesign och klicka på GenerateCSS. Du behöver inte ange HTML-omformningstypen innan du klickar på knappen. Välj sedan Spara. Du kan redigera den här CSS-filen så att den uppfyller dina affärskrav.
 
 >[!NOTE]
 >
->Innan du återger ett HTML-formulär som använder en anpassad CSS-fil är det viktigt att du har en god förståelse för att återge HTML-formulär. (Se [Återge formulär som HTML](/help/forms/developing/rendering-forms-html.md).)
+>Innan du återger ett HTML-formulär som använder en anpassad CSS-fil är det viktigt att du har en god förståelse för att återge HTML-formulär. (Se [Återge Forms som HTML](/help/forms/developing/rendering-forms-html.md).)
 
 >[!NOTE]
 >
->Mer information om Forms-tjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Forms finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Sammanfattning av steg {#summary-of-steps}
 
@@ -82,15 +85,15 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
 [Snabbstart för Forms Service API](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[Återgivning av interaktiva PDF-formulär](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[Återger interaktiv PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[Återger formulär som HTML](/help/forms/developing/rendering-forms-html.md)
+[Återger Forms som HTML](/help/forms/developing/rendering-forms-html.md)
 
-[Skapa webbprogram som återger formulär](/help/forms/developing/creating-web-applications-renders-forms.md)
+[Skapa webbprogram som återger Forms](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ## Återge ett HTML-formulär som använder en CSS-fil med Java API {#render-an-html-form-that-uses-a-css-file-using-the-java-api}
 
-Återge ett HTML-formulär som använder en anpassad CSS-fil med hjälp av Forms API (Java):
+Återge ett HTML-formulär som använder en anpassad CSS-fil med Forms API (Java):
 
 1. Inkludera projektfiler
 
@@ -110,13 +113,14 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
    Anropa `FormsServiceClient` objektets `(Deprecated) (Deprecated) renderHTMLForm` metod och skicka följande värden:
 
-   * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som är en del av ett formulärprogram måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
+   * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som ingår i ett Forms-program måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
    * Ett `TransformTo` uppräkningsvärde som anger HTML-inställningstypen. Om du till exempel vill återge ett HTML-formulär som är kompatibelt med dynamisk HTML för Internet Explorer 5.0 eller senare anger du `TransformTo.MSDHTML`.
    * Ett `com.adobe.idp.Document` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du ett tomt `com.adobe.idp.Document` objekt.
    * Det objekt `HTMLRenderSpec` som lagrar körningsalternativ för HTML.
    * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärdet, till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
    * Ett `URLSpec` objekt som lagrar de URI-värden som krävs för att återge ett HTML-formulär.
    * Ett `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter, och du kan ange `null` om du inte vill bifoga filer till formuläret.
+
    Metoden returnerar `(Deprecated) renderHTMLForm` ett `FormsResult` objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
@@ -131,7 +135,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
 **Se även**
 
-[Återge HTML-formulär med anpassade CSS-filer](#rendering-html-forms-using-custom-css-files)
+[Återge HTML Forms med anpassade CSS-filer](#rendering-html-forms-using-custom-css-files)
 
 [Snabbstart (SOAP-läge): Återge ett HTML-formulär som använder en CSS-fil med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-that-uses-a-css-file-using-the-java-api)
 
@@ -145,7 +149,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
 1. Inkludera projektfiler
 
-   * Skapa Java-proxyklasser som använder Forms-tjänstens WSDL.
+   * Skapa Java-proxyklasser som använder Forms tjänst-WSDL.
    * Inkludera Java-proxyklasserna i klassökvägen.
 
 1. Skapa ett Forms Java API-objekt
@@ -161,9 +165,9 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
    Anropa `FormsService` objektets `(Deprecated) renderHTMLForm` metod och skicka följande värden:
 
-   * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som är en del av ett formulärprogram måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
+   * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som ingår i ett Forms-program måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
    * Ett `TransformTo` uppräkningsvärde som anger HTML-inställningstypen. Om du till exempel vill återge ett HTML-formulär som är kompatibelt med dynamisk HTML för Internet Explorer 5.0 eller senare anger du `TransformTo.MSDHTML`.
-   * Ett `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`. (Se [Fylla i formulär i förväg med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md).)
+   * Ett `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`. (Se [Fylla i Forms i förväg med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md).)
    * Det objekt `HTMLRenderSpec` som lagrar körningsalternativ för HTML.
    * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärdet, till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. Du kan skicka en tom sträng om du inte vill ange det här värdet.
    * Ett `URLSpec` objekt som lagrar de URI-värden som krävs för att återge ett HTML-formulär.
@@ -174,6 +178,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
    * Ett tomt `javax.xml.rpc.holders.StringHolder` objekt som fylls i av `(Deprecated) renderHTMLForm` metoden. Det här argumentet lagrar språkets värde.
    * Ett tomt `javax.xml.rpc.holders.StringHolder` objekt som fylls i av `(Deprecated) renderHTMLForm` metoden. Det här argumentet lagrar det HTML-återgivningsvärde som används.
    * Ett tomt `com.adobe.idp.services.holders.FormsResultHolder` objekt som innehåller resultatet av den här åtgärden.
+
    Metoden `(Deprecated) renderHTMLForm` fyller i det `com.adobe.idp.services.holders.FormsResultHolder` objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
@@ -188,6 +193,6 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
 **Se även**
 
-[Återge HTML-formulär med anpassade CSS-filer](#rendering-html-forms-using-custom-css-files)
+[Återge HTML Forms med anpassade CSS-filer](#rendering-html-forms-using-custom-css-files)
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
