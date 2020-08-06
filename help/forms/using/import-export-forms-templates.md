@@ -1,8 +1,8 @@
 ---
-title: Importera och exportera resurser till AEM-formulär
-seo-title: Importera och exportera resurser till AEM-formulär
-description: Du kan importera och exportera adaptiva formulär och mallar från och till AEM-instanser. Detta gör det lättare att migrera formulär eller flytta dem mellan olika system.
-seo-description: Du kan importera och exportera adaptiva formulär och mallar från och till AEM-instanser. Detta gör det lättare att migrera formulär eller flytta dem mellan olika system.
+title: Importera och exportera resurser till AEM Forms
+seo-title: Importera och exportera resurser till AEM Forms
+description: Du kan importera och exportera anpassade formulär och mallar från och till AEM. Detta gör det lättare att migrera formulär eller flytta dem mellan olika system.
+seo-description: Du kan importera och exportera anpassade formulär och mallar från och till AEM. Detta gör det lättare att migrera formulär eller flytta dem mellan olika system.
 uuid: 9365dc02-fe2e-455a-8aa2-4c5bacb1fb74
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,59 +10,63 @@ topic-tags: forms-manager
 discoiquuid: 6fddb09a-ec60-4235-8ff4-0646f53f38f7
 translation-type: tm+mt
 source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+workflow-type: tm+mt
+source-wordcount: '2518'
+ht-degree: 0%
 
 ---
 
 
-# Importera och exportera resurser till AEM-formulär {#importing-and-exporting-assets-to-aem-forms}
+# Importera och exportera resurser till AEM Forms {#importing-and-exporting-assets-to-aem-forms}
 
-Du kan flytta formulär och relaterade resurser, teman, dataordlistor, dokumentfragment och bokstäver mellan olika AEM Forms-instanser. En sådan rörelse krävs när du migrerar system eller flyttar formulär från en scenserver till en produktionsserver. För de resurser för vilka det finns stöd för att överföra och importera via användargränssnittet för AEM-formulär bör du använda användargränssnittet för formulär för att exportera eller importera. Du bör inte använda AEM Package Manager för att exportera eller importera sådana resurser.
+Du kan flytta formulär och relaterade resurser, teman, dataordlistor, dokumentfragment och bokstäver mellan olika AEM Forms-instanser. En sådan rörelse krävs när du migrerar system eller flyttar formulär från en scenserver till en produktionsserver. För de mediefiler som det finns stöd för att överföra och importera via användargränssnittet i AEM Forms bör du använda användargränssnittet i Forms för att exportera eller importera. Du bör inte använda AEM Package Manager för att exportera eller importera sådana resurser.
 
 >[!NOTE]
 >
->* I AEM 6.4 Forms har strukturen och sökvägarna för crx-databaser ändrats. Om du importerar resurser från en tidigare version till AEM 6.4-formulär och formuläret har vissa beroenden av den äldre strukturen, måste du exportera beroendena manuellt. Mer information om förändringar i databasens struktur och vägar finns i [Databasomstrukturering i AEM 6.4](/help/sites-deploying/repository-restructuring.md).
+>* I AEM 6.4 Forms har strukturen och sökvägarna för crx-databaser ändrats. Om du importerar resurser från en tidigare version till AEM 6.4 Forms och formuläret har vissa beroenden av den äldre strukturen måste du exportera beroendena manuellt. Mer information om förändringar i databasens struktur och vägar finns i [Databasomstrukturering i AEM 6.4](/help/sites-deploying/repository-restructuring.md).
+
 >
 
 
 
-## Hämta eller överföra resurser för formulär och dokument {#download-or-upload-forms-amp-documents-assets}
+## Hämta eller överföra Forms &amp; Documents-resurser {#download-or-upload-forms-amp-documents-assets}
 
-Med användargränssnittet i AEM Forms kan du exportera resurser från en AEM-instans genom att hämta dem som ett AEM CRX-paket eller binära filer. Du kan sedan importera det hämtade AEM CRX-paketet eller den binära filen till en annan AEM-instans.
+Med AEM Forms användargränssnitt kan du exportera resurser från en AEM genom att hämta dem som ett AEM CRX-paket eller binära filer. Du kan sedan importera det hämtade AEM CRX-paketet eller den binära filen till en annan AEM.
 
-Exportera och importera via användargränssnittet i AEM Forms stöds för alla resurser förutom för adaptiva formulärmallar och policyer för adaptivt formulärinnehåll. När du exporterar ett anpassat formulär från användargränssnittet i AEM Forms exporteras därför inte de relaterade anpassningsbara formulärmallarna och innehållsprofilerna automatiskt som andra relaterade resurser.
+Exportera och importera via AEM Forms användargränssnitt stöds för alla resurser förutom adaptiva formulärmallar och adaptiva formulärinnehållsprofiler. När du exporterar ett anpassat formulär från AEM Forms-användargränssnittet exporteras därför inte de relaterade anpassningsbara formulärmallarna och innehållsprofilerna automatiskt som andra relaterade resurser.
 
-För dessa resurstyper måste du använda AEM Package Manager för att skapa ett CRX-paket på källans AEM-server och installera paketet på målservern. Mer information om hur du skapar och installerar paket finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
+För dessa resurstyper måste du använda AEM Package Manager för att skapa ett CRX-paket på AEM och installera paketet på målservern. Mer information om hur du skapar och installerar paket finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
 
-### Hämta resurser för formulär och dokument {#download-forms-amp-documents-assets}
+### Hämta Forms &amp; Documents-resurser {#download-forms-amp-documents-assets}
 
-Så här hämtar du resurser för formulär och dokument:
+Så här hämtar du Forms- och dokumentresurser:
 
 1. Logga in på AEM Forms-instansen.
-1. Tryck på Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) -ikonen > ikonen ![för navigeringskompilering](assets/compass.png) > Formulär > Formulär och dokument.
+1. Tryck på Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) -ikonen > ikonen för ![navigeringskompass](assets/compass.png) > Forms > Forms &amp; Documents.
 1. Markera formulärresurserna och tryck på ikonen **Hämta** .
 1. Välj något av följande alternativ i Hämta resurser och tryck sedan på **Hämta**.
 
-   * **** Hämta som CRX-paket: Använd alternativet för att hämta och flytta alla valda resurser och relaterade beroenden från en AEM Forms-instans till en annan. Alla resurser och mappar hämtas som crx-paket. Alla formulärresurser, inklusive formulär som skapats i AEM (adaptiva formulär, interaktiv kommunikation och adaptiva formulärfragment), formuläruppsättningar, formulärmallar, PDF-dokument och resurser (XSD, XFS, bilder) kan hämtas som paket från AEM Forms UI.
+   * **Hämta som CRX-paket:** Använd alternativet för att hämta och flytta alla markerade resurser och relaterade beroenden från en AEM Forms-instans till en annan. Alla resurser och mappar hämtas som crx-paket. Alla formulärresurser, inklusive formulär som skapats i AEM (adaptiva formulär, interaktiv kommunikation och adaptiva formulärfragment), formuläruppsättningar, formulärmallar, PDF-dokument och resurser (XSD, XFS, bilder) kan hämtas som paket från AEM Forms-gränssnitt.
 
       Fördelen med att hämta resurser som paket är att det även hämtar resurser som har använts av den resurs som valts för hämtning. Om du till exempel har ett adaptivt formulär som använder en formulärmall, XSD och en bild. När du väljer det här adaptiva formuläret och hämtar det som paket innehåller det hämtade paketet även formulärmallen, XSD och bilden. Alla metadataegenskaper (inklusive anpassade egenskaper) som är kopplade till resursen hämtas också.
 
-   * **** Hämta resurser som binära filer: Använd alternativet för att endast hämta formulärmallar (XDP), PDF-formulär (PDF), dokument (PDF) och resurser (bilder, scheman, formatmallar). Du kan redigera dessa resurser med externa program. Det hämtar formulärresurser som har binära filer, som XSD, XDP, bilder, PDF och XDP som en ZIP-fil.
+   * **Hämta resurser som binära filer:** Använd alternativet för att endast hämta formulärmallar (XDP), PDF forms (PDF), dokument (PDF) och resurser (bilder, scheman, formatmallar). Du kan redigera dessa resurser med externa program. Det hämtar formulärresurser som har binära filer, som XSD, XDP, bilder, PDF och XDP som en ZIP-fil.
 
       Du kan inte hämta adaptiva formulär, interaktiv kommunikation, adaptiva formulärfragment, teman och formuläruppsättningar med alternativet **Hämta resurser som binära filer** . Om du vill hämta dessa resurser använder du **alternativet Hämta som CRX-paket** .
    De valda resurserna hämtas som ett arkiv (.zip-fil).
 
    >[!NOTE]
    >
-   >Både AEM-paket och binära filer hämtas som arkiv (.zip-fil). Mallarna för resurserna hämtas inte tillsammans med resurserna. Du måste exportera resursmallarna separat.
+   >Både AEM och binära filer hämtas som arkiv (.zip-fil). Mallarna för resurserna hämtas inte tillsammans med resurserna. Du måste exportera resursmallarna separat.
 
-### Överför resurser för formulär och dokument {#upload-forms-amp-documents-assets}
+### Överför Forms- och dokumentresurser {#upload-forms-amp-documents-assets}
 
-Så här överför du resurser för formulär och dokument:
+Så här överför du Forms- och dokumentresurser:
 
 >[!VIDEO](https://vimeo.com/)
 
 1. Logga in på AEM Forms-instansen.
-1. Tryck på Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) -ikonen > ikonen ![för navigeringskompilering](assets/compass.png) > Formulär > Formulär och dokument.
+1. Tryck på Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) -ikonen > ikonen för ![navigeringskompass](assets/compass.png) > Forms > Forms &amp; Documents.
 1. Tryck på **Skapa** > **Filöverföring**. En dialogruta för att överföra formulär eller paket visas.
 1. I dialogrutan bläddrar du till och väljer paketet eller arkivet som ska importeras. Du kan också välja PDF-dokument, XSD, bilder, formatmallar och XDP-formulär. Tryck på **Öppna**.
 
@@ -76,7 +80,7 @@ Så här överför du resurser för formulär och dokument:
 
 ## Hämta eller överföra ett tema {#downloading-or-uploading-a-theme}
 
-Med AEM Forms kan du skapa, ladda ned och ladda upp teman. Ett tema skapas som andra resurser som formulär, dokument och brev. Du kan skapa ett tema, hämta det och överföra det till en separat instans för att återanvända det. Mer information om teman finns i [Teman i AEM-formulär](/help/forms/using/themes.md).
+Med AEM Forms kan du skapa, ladda ned och ladda upp teman. Ett tema skapas som andra resurser som formulär, dokument och brev. Du kan skapa ett tema, hämta det och överföra det till en separat instans för att återanvända det. Mer information om teman finns i [Teman i AEM Forms](/help/forms/using/themes.md).
 
 ### Hämta ett tema {#downloading-a-theme}
 
@@ -85,7 +89,7 @@ Du kan exportera teman i AEM Forms som du kan använda i andra projekt eller ins
 Så här hämtar du ett tema:
 
 1. Logga in på AEM Forms-instansen.
-1. Tryck på ikonen Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) > ikonen ![för navigeringskompilering](assets/compass.png) > Formulär > Teman.
+1. Tryck på Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) -ikonen > ikonen för ![navigeringskompass](assets/compass.png) > Forms> Teman.
 1. Välj temat och tryck på **Hämta**. Temat laddas ned som ett arkiv (.zip-fil).
 
 ### Överföra ett tema {#uploading-a-theme}
@@ -94,14 +98,14 @@ Du kan använda skapade teman med formatförinställningar i ditt projekt. Du ka
 
 Så här överför du ett tema:
 
-1. Navigera till **Formulär > Teman** i Experience Manager.
+1. Gå till **Forms > Teman** i Experience Manager.
 1. Klicka på **Skapa > Filöverföring** på sidan Teman.
 1. I filöverföringsprompten bläddrar du till och väljer ett temapaket på datorn och klickar på **Överför**.
 
    Det överförda temat är tillgängligt på temasidan.
 
 1. Logga in på AEM Forms-instansen.
-1. Tryck på ikonen Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) > ikonen ![för navigeringskompilering](assets/compass.png) > Formulär > Teman.
+1. Tryck på Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) -ikonen > ikonen för ![navigeringskompass](assets/compass.png) > Forms> Teman.
 1. Klicka på **Skapa** > **Filöverföring**. I filöverföringsprompten bläddrar du till och väljer ett temapaket på datorn och klickar på **Överför**. Temat överförs.
 
 ## Importera och exportera resurser i korrespondenshantering {#import-and-export-assets-in-correspondence-management}
@@ -125,15 +129,15 @@ Om du vill dela resurser, t.ex. dataordlistor, bokstäver och dokumentfragment, 
 
 ### Exportera alla Correspondence Management-resurser som ett paket {#export-all-the-correspondence-management-assets-as-a-package}
 
-Använd det här alternativet om du vill hämta alla Correspondence Management-resurser och relaterade beroenden som ett paket från en AEM-formulärinstans.
+Använd det här alternativet om du vill hämta alla Correspondence Management-resurser och relaterade beroenden som ett paket från en instans av AEM formulär.
 
 Om till exempel Correspondence Management har en bokstav som använder en bild och text innehåller det hämtade paketet även bilden och texten som hör till bokstaven. Alla metadataegenskaper (inklusive anpassade egenskaper) som är kopplade till resursen hämtas också. När du har hämtat paketet (.cmp) kan du [importera paketet till en annan AEM Forms-instans](/help/forms/using/import-export-forms-templates.md#p-upload-forms-documents-assets-p).
 
 Så här hämtar du alla Correspondence Management-resurser och relaterade beroenden som ett paket:
 
-1. Logga in på AEM Forms-servern som formuläranvändare.
+1. Logga in på AEM Forms server som formuläranvändare.
 1. Tryck på **Adobe Experience Manager** i fältet Global navigering.
-1. Tryck på verktygen ( ![tools-1](assets/tools-1.png)) och sedan på **Formulär**.
+1. Tryck på verktygen ( ![tools-1](assets/tools-1.png)) och sedan på **Forms**.
 1. Tryck på **Exportera Correspondence Management Assets**.
 
    ![publish-cmp-assets](assets/publish-cmp-assets.png)
@@ -169,23 +173,24 @@ Du kan importera resurser som har exporterats till en .cmp-fil. En .cmp-fil kan 
 
    * Författare: Visar ID:t för användaren som importerade resursen till servern
    * Ändrad: Tidpunkten då resursen importerades till servern
+
    >[!NOTE]
    >
    >För att du ska kunna överföra XDP-filer (som en del av cmp-filen eller på annat sätt) måste du vara en del av en användargrupp som hanterar formulär. Kontakta administratören om du vill ha åtkomstbehörighet.
 
 ## Exportera ett arbetsflödesprogram {#export-a-workflow-application}
 
-Du kan använda AEM-pakethanteraren för att exportera arbetsflödesprogram. Anges nedan:
+Du kan använda AEM för att exportera arbetsflödesprogram. Anges nedan:
 
-1. Öppna pakethanteraren för AEM Forms. URL för pakethanteraren är https://&lt;server>:&lt;port>/crx/packmgr.
-1. Klicka på **[!UICONTROL Skapa paket]**. The **[!UICONTROL New Package]** dialog box appears.
-1. Ange namn, version och grupp för paketet. Click **[!UICONTROL OK]**.
-1. Klicka på **[!UICONTROL Redigera]** och öppna fliken **[!UICONTROL Filter]** . Klicka på **[!UICONTROL Lägg till filter]**. Ange sökvägen till arbetsflödesprogrammet. Exempel: /etc/fd/dashboard/startpoints/homemortgage.
+1. Öppna AEM Forms pakethanterare. URL för pakethanteraren är https://&lt;server>:&lt;port>/crx/packmgr.
+1. Klicka på **[!UICONTROL Create Package]**. The **[!UICONTROL New Package]** dialog box appears.
+1. Ange namn, version och grupp för paketet. Klicka på **[!UICONTROL OK]**.
+1. Klicka **[!UICONTROL Edit]** och öppna **[!UICONTROL Filters]** fliken. Klicka på **[!UICONTROL Add Filter]**. Ange sökvägen till arbetsflödesprogrammet. Exempel: /etc/fd/dashboard/startpoints/homemortgage.
 
-   Klicka på **[!UICONTROL Lägg till regel]**.
+   Klicka på **[!UICONTROL Add rule]**.
 
-1. Öppna fliken **[!UICONTROL Avancerat]** . Välj **[!UICONTROL Sammanfoga]** eller **[!UICONTROL Skriv över]** i fältet ACL-hantering. Click **[!UICONTROL Save]**.
-1. Skapa paketet genom att klicka på **[!UICONTROL Skapa]** .
+1. Öppna **[!UICONTROL Advanced]** fliken. Markera **[!UICONTROL Merge]** eller **[!UICONTROL Overwrite]** skriv i fältet ACL-hantering. Klicka på **[!UICONTROL Save]**.
+1. Klicka **[!UICONTROL Build]** för att skapa paketet.
 
    När paketet har skapats kan du hämta det och importera det till den andra servern. Arbetsflödesprogrammet visas på servern där paketet överförs.
 
@@ -195,19 +200,20 @@ Du kan använda AEM-pakethanteraren för att exportera arbetsflödesprogram. Ang
 
 ## Mappar och ordna resurser {#folders-and-organizing-assets}
 
- AEM Forms användargränssnitt använder mappar för att ordna resurser. De här mapparna används för att ordna resurser som skapats i användargränssnittet i AEM Forms. Du kan byta namn på, skapa undermappar och lagra resurser och dokument i dessa mappar. Genom att ordna dokument och resurser i en mapp kan du gruppera filerna tillsammans för enkel hantering. Du kan markera en mapp och välja att hämta eller ta bort den.
+I AEM Forms användargränssnitt används mappar för att ordna resurser. De här mapparna används för att ordna resurser som skapats i AEM Forms användargränssnitt. Du kan byta namn på, skapa undermappar och lagra resurser och dokument i dessa mappar. Genom att ordna dokument och resurser i en mapp kan du gruppera filerna tillsammans för enkel hantering. Du kan markera en mapp och välja att hämta eller ta bort den.
 
 Så här skapar du en mapp:
 
 ### Skapa en mapp {#create-a-folder}
 
-1. Logga in i användargränssnittet för AEM Forms på `https://<server>:<port>/aem/forms.html`.
+1. Logga in på AEM Forms användargränssnitt på `https://<server>:<port>/aem/forms.html`.
 1. Navigera till den plats där du vill skapa en mapp.
 1. Tryck på Skapa > Mapp.
 1. Ange följande information:
 
-   * **** Titel: Visningsnamn för mappen
-   * **** Namn: *(Obligatoriskt)* Det nodnamn under vilket du vill lagra mappen i databasen
+   * **Titel:** Visningsnamn för mappen
+   * **Namn:** *(Obligatoriskt)* Det nodnamn under vilket du vill lagra mappen i databasen
+
    >[!NOTE]
    >
    >Som standard fylls värdet för namnfältet automatiskt i från titeln. Namnet får bara innehålla alfanumeriska tecken eller bindestreck (-) och understreck (_). Alla andra specialtecken som anges i titeln ersätts automatiskt med ett bindestreck och du uppmanas att bekräfta det nya namnet. Du kan välja att fortsätta med det föreslagna namnet eller redigera det ytterligare.
@@ -237,15 +243,15 @@ Följ de här stegen för att skapa kopior av resurser och brev:
 
 ## Sökning {#search-features}
 
-Med användargränssnittet för AEM Forms kan du söka efter ditt innehåll. I det övre fältet kan du trycka på Sök **A** om du vill söka efter resurser och dokument i ditt innehåll.
+Med AEM Forms UI kan du söka efter ditt innehåll. I det övre fältet kan du trycka på Sök **A** för att söka efter resurser och dokument i ditt innehåll.
 
 När du söker efter resurser visas sidopanelen i AEM Forms. Du kan också trycka på ![assets-browser-content-only](assets/assets-browser-content-only.png) > Filter **[B]** för att öppna sidopanelen. Du kan begränsa sökningen med hjälp av de olika filtren på sidopanelen. På sidopanelen kan du också spara dina sökningar.
 
 ![search_topbar](assets/search_topbar.png)
 
-******S. Sök** B.Filter
+**S.** Sök **B.** Filter
 
-![](assets/search_sidepanel.png) Sida - filter **** Figur: Panelen *Sida - Filter*
+![Sida - filter](assets/search_sidepanel.png)**Figur:** *Panelen Sida - Filter*
 
 På sidopanelen kan du använda följande för att begränsa sökresultaten:
 
