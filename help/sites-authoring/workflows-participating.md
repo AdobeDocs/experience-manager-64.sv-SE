@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 37c8b1bd-0e60-42d2-80ed-dece3f5c2342
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1535'
+ht-degree: 1%
 
 ---
 
@@ -46,6 +49,7 @@ När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas o
 
       * Använd vänster-/högerpilarna för att navigera i statusinformationen för de olika arbetsflödena.
       * klicka/tryck på det faktiska numret för att öppna en listruta med alla tillämpliga arbetsflöden och välj sedan det arbetsflöde som du vill visa i statusfältet.
+
    ![wf-59](assets/wf-59.png)
 
    >[!NOTE]
@@ -79,7 +83,7 @@ Du kan slutföra ett deltagarsteg från:
 
 Gör så här för att slutföra arbetsuppgiften:
 
-1. Öppna **[AEM Inbox](/help/sites-authoring/inbox.md)**.
+1. Öppna **[AEM](/help/sites-authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
 1. Välj **Fullständig** i verktygsfältet.
 1. Dialogrutan **Hela arbetsuppgiften** öppnas. Välj **Nästa steg** i listrutan och lägg till en **kommentar** om det behövs.
@@ -138,7 +142,7 @@ Du kan delegera ett deltagarsteg från antingen:
 
 Använd följande procedur för att delegera en arbetsuppgift:
 
-1. Öppna **[AEM Inbox](/help/sites-authoring/inbox.md)**.
+1. Öppna **[AEM](/help/sites-authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
 1. Välj **Delegera** i verktygsfältet.
 1. Dialogrutan öppnas. Ange **Användare** i listrutan (kan också vara en grupp) och lägg till en **kommentar** om det behövs.
@@ -188,7 +192,7 @@ Du kan utföra steg tillbaka för ett deltagarsteg från antingen:
 
 Använd följande procedur för att stega bakåt:
 
-1. Öppna **[AEM Inbox](/help/sites-authoring/inbox.md)**.
+1. Öppna **[AEM](/help/sites-authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
 1. Öppna dialogrutan genom att välja **Stega bakåt** .
 
@@ -250,7 +254,7 @@ Du kan öppna information om arbetsobjekt från:
 
 Så här öppnar du ett arbetsflödesobjekt och visar information:
 
-1. Öppna **[AEM Inbox](/help/sites-authoring/inbox.md)**.
+1. Öppna **[AEM](/help/sites-authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
 1. Välj **Öppna** för att öppna informationsflikarna.
 
@@ -273,7 +277,7 @@ Du kan visa information om nyttolasten som är kopplad till arbetsflödesinstans
 
 Så här visar du arbetsflödesinstansens nyttolast och resurser:
 
-1. Öppna **[AEM Inbox](/help/sites-authoring/inbox.md)**.
+1. Öppna **[AEM](/help/sites-authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
 1. Öppna dialogrutan genom att välja **Visa nyttolast** i verktygsfältet.
 
