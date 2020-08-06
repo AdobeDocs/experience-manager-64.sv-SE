@@ -34,7 +34,7 @@ Java API Quick Start (SOAP) är tillgängligt för komponenter och tjänster.
 
 [Snabbstart (SOAP-läge): Ta bort komponenter med Java API](components-services-java-api-quick.md#quick-start-soap-mode-removing-components-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda ty
 
 >[!NOTE]
 >
->Snabbstart i Programmering med AEM-formulär baseras på den Forms-server som distribueras på JBoss och operativsystemet Windows. Om du använder ett annat operativsystem, till exempel Unix, ersätter du fönsterspecifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstarter i Programmering med AEM baseras på den Forms-server som distribueras på JBoss och Windows. Om du använder ett annat operativsystem, till exempel Unix, ersätter du fönsterspecifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 >[!NOTE]
 >
