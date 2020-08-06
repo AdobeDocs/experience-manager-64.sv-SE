@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 752e521f-198f-425a-abfa-051993f9c694
 translation-type: tm+mt
 source-git-commit: 4b05b24a91ba9c31a19a5a96fb481d2ffc4c9bfc
+workflow-type: tm+mt
+source-wordcount: '507'
+ht-degree: 0%
 
 ---
 
@@ -22,23 +25,23 @@ source-git-commit: 4b05b24a91ba9c31a19a5a96fb481d2ffc4c9bfc
 1. Skapa en (tillfällig) referens till en representativ modell. Detta underlättar utvärdering av ljus, inställning av kameror och konfiguration av renderaren.
 1. Ställ in bildbaserad ljussättning.
 
-   1. I **[!UICONTROL Återgivningsinställningar]** väljer du **[!UICONTROL Återge med: och öppna fliken Scen]**.
-   1. Öppna dragspelet **[!UICONTROL Återgivningsmiljö]** och klicka på **[!UICONTROL Rendera Skapa bildbaserad belysning**.
-   1. Klicka på ruteikonen som har en högerpil till vänster om rutan för att markera IBL-noden `mentalRayIblShape1`och avsluta sedan **[!UICONTROL Återgivningsinställningar]**.
-   1. I **[!UICONTROL attributredigeraren]** väljer du omformningsnoden `mentalRayIbl1`och byter sedan namn på omformningsnoden till `AdobeIbl`.
+   1. I **[!UICONTROL Render Settings]** markerar du **[!UICONTROL Render Render Using: mental ray]** och öppnar fliken Scen.
+   1. Öppna dragspelsfliken och klicka på **[!UICONTROL Render Environment]** [!UICONTROL Rendera Skapa bildbaserad belysning ****.
+   1. Klicka på ruteikonen som har en högerpil till vänster om rutan för att markera IBL-noden `mentalRayIblShape1`och avsluta **[!UICONTROL Render Settings]**.
+   1. I **[!UICONTROL Attribute Editor]** markerar du omformningsnoden `mentalRayIbl1`och byter sedan namn på omformningsnoden till `AdobeIbl`.
    1. Ange skalan för noden så att systemsfären blir betydligt större än det största 3D-objektet som ska visas med den här scenen (till exempel `10000,10000,10000`).
    1. Markera `AdobeIblShape` noden och konfigurera den enligt följande:
 
-      * **[!UICONTROL Mappning]** - sfärisk
-      * **[!UICONTROL Typ]** - bildfil
-      * **[!UICONTROL Skapa ljus]** - true
+      * **[!UICONTROL Mapping]** - Sfärisk
+      * **[!UICONTROL Type]** - Bildfil
+      * **[!UICONTROL Emit Light]** - true
    1. Koppla den önskade 32-bitars TIFF-bilden till `AdobeIbl` noden.
 
 
 1. Ställ in markplanet.
 
    * Skapa ett lämpligt plan som ska användas som markplan och anpassa storleken så att den passar i IBL-sfären genom koordinatens ursprung.
-   * Koppla ett **[!UICONTROL Använd bakgrundsmaterial]** till markplanet och ge det ett namn `AdobeUseBackground` och koppla det till objektet för markplanet.
+   * Koppla ett **[!UICONTROL Use Background]** material till jordplanet och ge det ett namn `AdobeUseBackground` och koppla det till objektet för markplanet.
 
 1. (Valfritt) Skapa och konfigurera kameror.
 
@@ -46,20 +49,20 @@ source-git-commit: 4b05b24a91ba9c31a19a5a96fb481d2ffc4c9bfc
 
 1. Konfigurera rendering med Mental Ray.
 
-   Konfigurera **[!UICONTROL renderingsinställningarna]** med följande förslag.
+   Konfigurera **[!UICONTROL Render Settings]** med följande förslag.
 
-   * **[!UICONTROL Vanlig]** flik
+   * **[!UICONTROL Common]** tab
 
-      Avmarkera kryssrutan **[!UICONTROL Alfakanal (mask)]** för alla **[!UICONTROL återgivningsbara kameror]**.
+      Avmarkera **[!UICONTROL Alpha channel (mask)]** kryssrutan för alla **[!UICONTROL Renderable Cameras]**.
 
-   * **[!UICONTROL fliken Kvalitet]**
+   * **[!UICONTROL Quality]** tab
 
       * **Allmän kvalitet** - `0.5` eller mindre
       * **Läge** för indirekt diffus (GI) - `Final Gather`
       * &quot;**Filterstorlek** - `2.0`, `2.0`
    * Rendera scenen med de typiska bildstorlekar som du förväntar dig att använda. Om det behövs kan du förfina ljuskällorna, renderingsinställningarna eller båda för att få önskat resultat.
 
-      Tänk på att återgivning med Mental Ray, med bildbaserat ljus, är mycket långsamt och processorintensivt. Adobe rekommenderar att du konfigurerar inställningarna för den lägsta kvaliteten som fortfarande kan ge önskad återgivningskvalitet.
+      Tänk på att återgivning med Mental Ray, med bildbaserat ljus, är mycket långsamt och processorintensivt. Adobe rekommenderar att du konfigurerar de inställningar för lägsta kvalitet som fortfarande kan ge önskad återgivningskvalitet.
 
 
 1. Ta bort referensen som du skapade i steg 2.
@@ -74,9 +77,9 @@ source-git-commit: 4b05b24a91ba9c31a19a5a96fb481d2ffc4c9bfc
 
    Se [Lösa filberoenden](resolve-file-dependencies.md).
 
-   AEM 3D kanske inte kan identifiera den IBL-bild som konfigurerats på scenen. I sådana fall måste du lösa de saknade beroendena manuellt. Du kan tilldela samma tidigare överförda IBL PTIFF-bild för var och en av de saknade beroendena. Du kan också tilldela olika bilder för att ytterligare styra IBL-effekterna. När du har löst beroendena ska du trycka på **[!UICONTROL Spara]** för att starta ombearbetningen.
+   AEM 3D kanske inte kan identifiera den IBL-bild som konfigurerats på scenen. I sådana fall måste du lösa de saknade beroendena manuellt. Du kan tilldela samma tidigare överförda IBL PTIFF-bild för var och en av de saknade beroendena. Du kan också tilldela olika bilder för att ytterligare styra IBL-effekterna. När du har löst beroendena måste du trycka på **[!UICONTROL Save]** för att starta ombearbetningen.
 
-1. Öppna Resursegenskaper i AEM. Ange **[!UICONTROL Titel]** till en lämplig sträng som ska visas i listrutan **[!UICONTROL Scenväljare]** . Kontrollera att **[!UICONTROL Class]** är inställd på **[!UICONTROL 3D-scen]**. Spara och avsluta.
+1. Öppna Resursegenskaper i AEM. Ange **[!UICONTROL Title]** en lämplig sträng som ska visas i **[!UICONTROL Stage Selector]** listrutan. Kontrollera att **[!UICONTROL Class]** är inställt på **[!UICONTROL 3D Stage]**. Spara och avsluta.
 
 1. Öppna en 3D-resurs, markera den nya scenen och verifiera att den förhandsvisar och återger som förväntat.
 
