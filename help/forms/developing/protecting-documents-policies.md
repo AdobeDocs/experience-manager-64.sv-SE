@@ -11,6 +11,9 @@ topic-tags: operations
 discoiquuid: 9b1d2bf3-f28c-41b2-9026-1f3311556422
 translation-type: tm+mt
 source-git-commit: ba04fe705a91717f1d9658d436056ebddda6be3a
+workflow-type: tm+mt
+source-wordcount: '15466'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +44,7 @@ Du kan utföra följande uppgifter med tjänsten Dokumentsäkerhet:
 * Ta bort profiler. Mer information finns i [Ta bort profiler](protecting-documents-policies.md#deleting-policies).
 * Tillämpa profiler på PDF-dokument. Mer information finns i [Tillämpa profiler på PDF-dokument](protecting-documents-policies.md#applying-policies-to-pdf-documents).
 * Ta bort profiler från PDF-dokument. Mer information finns i [Ta bort profiler från PDF-dokument](protecting-documents-policies.md#removing-policies-from-pdf-documents).
-* Granska policyskyddade dokument. Mer information finns i [Inspektera skyddsskyddade PDF-dokument](protecting-documents-policies.md#inspecting-policy-protected-pdf-documents).
+* Inspect policyskyddade dokument. Mer information finns i [Inspektera skyddsskyddade PDF-dokument](protecting-documents-policies.md#inspecting-policy-protected-pdf-documents).
 * Återkalla åtkomst till PDF-dokument. Mer information finns i [Återkalla åtkomst till dokument](protecting-documents-policies.md#revoking-access-to-documents).
 * Återskapa åtkomst till återkallade dokument. Mer information finns i [Återställa åtkomst till återkallade dokument](protecting-documents-policies.md#reinstating-access-to-revoked-documents).
 * Skapa vattenstämplar. Mer information finns i [Skapa vattenstämplar](protecting-documents-policies.md#creating-watermarks).
@@ -49,7 +52,7 @@ Du kan utföra följande uppgifter med tjänsten Dokumentsäkerhet:
 
 >[!NOTE]
 >
->Mer information om tjänsten Document Security finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Document Security finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Skapa profiler {#creating-policies}
 
@@ -130,7 +133,7 @@ När du skapar en profil med webbtjänstens API ska du referera till en befintli
 
 >[!NOTE]
 >
->Mer information om tjänsten Document Security finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Document Security finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -150,18 +153,18 @@ Följande JAR-filer måste läggas till i projektets klassökväg:
 
 * adobe-rightsmanagement-client.jar
 * namespace.jar (om AEM Forms distribueras på JBoss)
-* jaxb-api.jar (om AEM Forms distribueras på JBoss)
-* jaxb-impl.jar (om AEM Forms distribueras på JBoss)
-* jaxb-libs.jar (om AEM Forms distribueras på JBoss)
-* jaxb-xjc.jar (om AEM Forms distribueras på JBoss)
-* relaxngDatatype.jar (om AEM Forms distribueras på JBoss)
-* xsdlib.jar (om AEM Forms distribueras på JBoss)
+* jaxb-api.jar (om AEM Forms används på JBoss)
+* jaxb-impl.jar (om AEM Forms används på JBoss)
+* jaxb-libs.jar (om AEM Forms körs på JBoss)
+* jaxb-xjc.jar (om AEM Forms används på JBoss)
+* relaxngDatatype.jar (om AEM Forms körs på JBoss)
+* xsdlib.jar (om AEM Forms körs på JBoss)
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-utilities.jar
-* jbossall-client.jar (använd en annan JAR-fil om AEM Forms inte distribueras på JBoss)
+* jbossall-client.jar (använd en annan JAR-fil om AEM Forms inte är distribuerat på JBoss)
 
-Mer information om var dessa JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa ett API-objekt för Document Security Client**
 
@@ -186,7 +189,7 @@ När du anger attribut som tillhör en profil kan du även ange krypteringsinst�
 
 * **AES256**: Representerar AES-krypteringsalgoritmen med en 256-bitars nyckel.
 * **AES128**: Representerar AES-krypteringsalgoritmen med en 128-bitars nyckel.
-* **** NoEncryption: Representerar ingen kryptering.
+* **NoEncryption:** Representerar ingen kryptering.
 
 När du anger `NoEncryption` alternativet kan du inte ange `PlaintextMetadata` alternativet till `false`. Om du försöker göra det genereras ett undantag.
 
@@ -247,7 +250,8 @@ Skapa en profil med hjälp av API:t för dokumentsäkerhet (Java):
 
       * Det objekt `Policy` som representerar principen som ska registreras.
    * Ett strängvärde som representerar den principuppsättning som principen tillhör.
-   Om du använder ett AEM-formuläradministratörskonto i anslutningsinställningarna för att skapa `DocumentSecurityClient` objektet anger du namnet på principuppsättningen när du anropar `registerPolicy` metoden. Om du skickar ett `null` värde för principuppsättningen skapas principen i principuppsättningen för administratörer *Mina principer* .
+
+   Om du använder ett AEM formuläradministratörskonto i anslutningsinställningarna för att skapa `DocumentSecurityClient` objektet anger du namnet på principuppsättningen när du anropar `registerPolicy` metoden. Om du skickar ett `null` värde för principuppsättningen skapas principen i principuppsättningen för administratörer *Mina principer* .
 
    Om du använder en dokumentsäkerhetsanvändare i anslutningsinställningarna kan du anropa den överlagrade `registerPolicy` metoden som bara accepterar profilen. Du behöver alltså inte ange namnet på principuppsättningen. Principen läggs dock till i principuppsättningen med namnet *Mina principer*. Om du inte vill lägga till den nya principen i den här principinställningen anger du ett principuppsättningsnamn när du anropar `registerPolicy` metoden.
 
@@ -279,7 +283,7 @@ Skapa en profil med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -304,7 +308,8 @@ Skapa en profil med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
 
    * Det objekt `PolicySpec` som representerar principen som ska registreras.
    * Ett strängvärde som representerar den principuppsättning som principen tillhör. Du kan ange ett `null` värde som resulterar i att profilen läggs till i *MyPolices* -principuppsättningen.
-   Om du använder ett AEM-formuläradministratörskonto i anslutningsinställningarna för att skapa `DocumentSecurityClient` objektet anger du namnet på principuppsättningen när du anropar `registerPolicy` metoden.
+
+   Om du använder ett AEM formuläradministratörskonto i anslutningsinställningarna för att skapa `DocumentSecurityClient` objektet anger du namnet på principuppsättningen när du anropar `registerPolicy` metoden.
 
    Om du använder en Document SecurityDocument Security-användare i anslutningsinställningarna kan du anropa den överlagrade `registerPolicy` metoden som bara accepterar profilen. Du behöver alltså inte ange namnet på principuppsättningen. Principen läggs dock till i principuppsättningen med namnet *Mina principer*. Om du inte vill lägga till den nya principen i den här principinställningen anger du ett principuppsättningsnamn när du anropar `registerPolicy` metoden.
 
@@ -327,7 +332,7 @@ Om du vill ändra principattribut med en webbtjänst (till exempel med Java-prox
 
 >[!NOTE]
 >
->Mer information om tjänsten Document Security finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Document Security finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-1}
 
@@ -418,7 +423,7 @@ Exempel på kod som använder tjänsten Dokumentsäkerhet finns i Snabbstart (SO
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -452,7 +457,7 @@ Du kan ta bort en befintlig princip med Java API:t för dokumentsäkerhet eller 
 
 >[!NOTE]
 >
->Mer information om tjänsten Document Security finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Document Security finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-2}
 
@@ -521,7 +526,7 @@ Ta bort en profil med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -545,17 +550,17 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 Du kan tillämpa en profil på ett PDF-dokument för att skydda dokumentet. Genom att tillämpa en profil på ett PDF-dokument begränsar du åtkomsten till dokumentet. Du kan inte tillämpa en profil på ett dokument om dokumentet redan är skyddat med en profil.
 
-När dokumentet är öppet kan du även begränsa åtkomsten till Acrobat- och Adobe Reader-funktioner, t.ex. möjligheten att skriva ut och kopiera text, göra ändringar samt lägga till signaturer och kommentarer i ett dokument. Dessutom kan du återkalla ett profilskyddat PDF-dokument när du inte längre vill att användarna ska få tillgång till dokumentet.
+Medan dokumentet är öppet kan du även begränsa åtkomsten till Acrobat- och Adobe Reader-funktioner, inklusive möjligheten att skriva ut och kopiera text, göra ändringar samt lägga till signaturer och kommentarer i ett dokument. Dessutom kan du återkalla ett profilskyddat PDF-dokument när du inte längre vill att användarna ska få tillgång till dokumentet.
 
 Du kan övervaka användningen av ett profilskyddat dokument när du har distribuerat det. Det innebär att du kan se hur dokumentet används och vem som använder det. Du kan till exempel ta reda på när någon har öppnat dokumentet.
 
 >[!NOTE]
 >
->Mer information om tjänsten Document Security finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Document Security finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-3}
 
-Så här använder du en profil i ett PDF-dokument:
+Gör så här för att tillämpa en profil på ett PDF-dokument:
 
 1. Inkludera projektfiler.
 1. Skapa ett API-objekt för Document Security Client.
@@ -621,6 +626,7 @@ Tillämpa en profil på ett PDF-dokument med dokumentets säkerhets-API (Java):
       * Ett strängvärde som representerar namnet på användarhanterardomänen för den användare som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara null (om parametern är null måste nästa parametervärde vara null).
       * Ett strängvärde som representerar namnet på den kanoniska användaren av användarhanteraren som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara `null` (om parametern är null måste det föregående parametervärdet vara `null`).
       * A `com.adobe.livecycle.rightsmanagement.Locale` som representerar det språkområde som används för att välja MS Office-mallen. Det här parametervärdet är valfritt och används inte för PDF-dokument. Om du vill skydda ett PDF-dokument anger du `null`.
+
       Metoden returnerar `protectDocument` ett `RMSecureDocumentResult` objekt som innehåller det principskyddade PDF-dokumentet.
 
 
@@ -663,7 +669,7 @@ Tillämpa en profil på ett PDF-dokument med hjälp av API:t för dokumentsäker
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -691,6 +697,7 @@ Tillämpa en profil på ett PDF-dokument med hjälp av API:t för dokumentsäker
    * En strängutdataparameter som används för att lagra principens identifierarvärde.
    * En strängutdataparameter som används för att lagra det principskyddade identifierarvärdet.
    * En strängutdataparameter som används för att lagra mime-typen (till exempel `application/pdf`).
+
    Metoden returnerar `protectDocument` ett `BLOB` objekt som innehåller det principskyddade PDF-dokumentet.
 
 1. Spara PDF-dokumentet.
@@ -713,7 +720,7 @@ Du kan ta bort en profil från ett profilskyddat dokument för att ta bort skydd
 
 >[!NOTE]
 >
->Mer information om tjänsten Document Security finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Document Security finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-4}
 
@@ -739,7 +746,7 @@ Du kan hämta ett profilskyddat PDF-dokument för att ta bort en profil. Om du f
 
 **Ta bort profilen från PDF-dokumentet**
 
-Du kan ta bort en profil från ett profilskyddat PDF-dokument under förutsättning att en administratör anges i anslutningsinställningarna. Om inte måste profilen som används för att skydda ett dokument innehålla behörigheten för att kunna ta bort en profil från ett PDF-dokument. `SWITCH_POLICY` Dessutom måste användaren som anges i inställningarna för AEM Forms-anslutningen också ha den behörigheten. Annars genereras ett undantag.
+Du kan ta bort en profil från ett profilskyddat PDF-dokument under förutsättning att en administratör anges i anslutningsinställningarna. Om inte måste profilen som används för att skydda ett dokument innehålla behörigheten för att kunna ta bort en profil från ett PDF-dokument. `SWITCH_POLICY` Dessutom måste den användare som anges i AEM Forms anslutningsinställningar också ha den behörigheten. Annars genereras ett undantag.
 
 **Spara det oskyddade PDF-dokumentet**
 
@@ -807,7 +814,7 @@ Ta bort en profil från ett profilskyddat PDF-dokument med hjälp av API:t för 
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -840,9 +847,9 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Återkalla åtkomst till dokument {#revoking-access-to-documents}
 
@@ -852,7 +859,7 @@ Möjligheten att återkalla åtkomst till ett dokument ger ytterligare säkerhet
 
 >[!NOTE]
 >
->Mer information om tjänsten Document Security finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Document Security finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-5}
 
@@ -950,7 +957,7 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -984,9 +991,9 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 [Ta bort profiler från Word-dokument](protecting-documents-policies.md#removing-policies-from-word-documents)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Återställa åtkomst till återkallade dokument {#reinstating-access-to-revoked-documents}
 
@@ -994,7 +1001,7 @@ Du kan återställa åtkomsten till ett återkallat PDF-dokument, vilket gör at
 
 >[!NOTE]
 >
->Mer information om tjänsten Document Security finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Document Security finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-6}
 
@@ -1082,7 +1089,7 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -1110,19 +1117,19 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Inspektera skyddade PDF-dokument med policyer {#inspecting-policy-protected-pdf-documents}
 
 Du kan använda API:t för dokumentsäkerhetstjänsten (Java och webbtjänsten) för att inspektera profilskyddade PDF-dokument. När du inspekterar profilskyddade PDF-dokument returneras information om det profilskyddade PDF-dokumentet. Du kan till exempel bestämma vilken profil som användes för att skydda dokumentet och datumet då dokumentet var skyddat.
 
-Du kan inte utföra den här uppgiften om din version av LiveCycle är 8.x eller en tidigare version. Stöd för granskning av principskyddade dokument finns i AEM Forms. Om du försöker inspektera ett principskyddat dokument med LiveCycle 8.x (eller tidigare) genereras ett undantag.
+Du kan inte utföra den här åtgärden om din version av LiveCycle är 8.x eller en tidigare version. I AEM Forms finns stöd för att inspektera policyskyddade dokument. Om du försöker inspektera ett principskyddat dokument med LiveCycle 8.x (eller tidigare) genereras ett undantag.
 
 >[!NOTE]
 >
->Mer information om tjänsten Document Security finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Document Security finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-7}
 
@@ -1145,7 +1152,7 @@ Skapa ett klientobjekt för tjänsten Dokumentsäkerhet innan du programmässigt
 
 Hämta ett policyskyddat dokument om du vill inspektera det. Om du försöker inspektera ett dokument som inte är skyddat med en profil eller som har återkallats genereras ett undantag.
 
-**Inspektera dokumentet**
+**Inspect dokumentet**
 
 När du har hämtat ett policyskyddat dokument kan du inspektera det.
 
@@ -1163,13 +1170,13 @@ Om dokumentet är skyddat med en profil som finns i en principuppsättning (anna
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Inspektera skyddade PDF-dokument med Java API {#inspect-policy-protected-pdf-documents-using-the-java-api}
+### Inspect Policy Protected PDF-dokument med Java API {#inspect-policy-protected-pdf-documents-using-the-java-api}
 
-Inspektera ett profilskyddat PDF-dokument med hjälp av dokumentsäkerhetstjänstens API (Java):
+Inspect är ett policyskyddat PDF-dokument med hjälp av dokumentsäkerhetstjänstens API (Java):
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, t.ex. adobe-rightsmanagement-client.jar, i Java-projektets klassökväg. Mer information om var dessa filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+   Inkludera JAR-klientfiler, t.ex. adobe-rightsmanagement-client.jar, i Java-projektets klassökväg. Information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 1. Skapa ett API-objekt för Document Security Client.
 
@@ -1181,10 +1188,10 @@ Inspektera ett profilskyddat PDF-dokument med hjälp av dokumentsäkerhetstjäns
    * Skapa ett `java.io.FileInputStream` objekt som representerar det profilskyddade PDF-dokumentet med hjälp av dess konstruktor. Skicka ett strängvärde som anger platsen för PDF-dokumentet.
    * Skapa ett `com.adobe.idp.Document` objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream` objektet.
 
-1. Granska dokumentet.
+1. Inspect dokumentet.
 
    * Skapa ett `DocumentManager` objekt genom att anropa `RightsManagementClient` objektets `getDocumentManager` metod.
-   * Granska det principskyddade dokumentet genom att anropa `LicenseManager` objektets `inspectDocument` metod. Skicka det `com.adobe.idp.Document` objekt som innehåller det profilskyddade PDF-dokumentet. Den här metoden returnerar ett `RMInspectResult` objekt som innehåller information om det principskyddade dokumentet.
+   * Inspect det principskyddade dokumentet genom att anropa `LicenseManager` objektets `inspectDocument` metod. Skicka det `com.adobe.idp.Document` objekt som innehåller det profilskyddade PDF-dokumentet. Den här metoden returnerar ett `RMInspectResult` objekt som innehåller information om det principskyddade dokumentet.
 
 1. Hämta information om det profilskyddade dokumentet.
 
@@ -1196,9 +1203,9 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 * &quot;Snabbstart (SOAP-läge): Inspektera profilskyddade PDF-dokument med Java API&quot;
 
-### Inspektera skyddade PDF-dokument med webbtjänstens API {#inspect-policy-protected-pdf-documents-using-the-web-service-api}
+### Inspect Policy Protected PDF-dokument med hjälp av webbtjänstens API {#inspect-policy-protected-pdf-documents-using-the-web-service-api}
 
-Inspektera ett profilskyddat PDF-dokument med hjälp av API:t för dokumentsäkerhetstjänsten (webbtjänsten):
+Inspect är ett policyskyddat PDF-dokument med hjälp av API:t för dokumentsäkerhetstjänsten (webbtjänsten):
 
 1. Inkludera projektfiler.
 
@@ -1216,7 +1223,7 @@ Inspektera ett profilskyddat PDF-dokument med hjälp av API:t för dokumentsäke
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -1230,9 +1237,9 @@ Inspektera ett profilskyddat PDF-dokument med hjälp av API:t för dokumentsäke
    * Fyll bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
    * Fyll objektet `BLOB` genom att tilldela dess `MTOM` fält med innehållet i bytearrayen.
 
-1. Granska dokumentet.
+1. Inspect dokumentet.
 
-   Granska det principskyddade dokumentet genom att anropa `RightsManagementServiceClient` objektets `inspectDocument` metod. Skicka det `BLOB` objekt som innehåller det profilskyddade PDF-dokumentet. Den här metoden returnerar ett `RMInspectResult` objekt som innehåller information om det principskyddade dokumentet.
+   Inspect det principskyddade dokumentet genom att anropa `RightsManagementServiceClient` objektets `inspectDocument` metod. Skicka det `BLOB` objekt som innehåller det profilskyddade PDF-dokumentet. Den här metoden returnerar ett `RMInspectResult` objekt som innehåller information om det principskyddade dokumentet.
 
 1. Hämta information om det profilskyddade dokumentet.
 
@@ -1247,9 +1254,9 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Skapa vattenstämplar {#creating-watermarks}
 
@@ -1261,7 +1268,7 @@ Vattenstämplar säkerställer dokumentets säkerhet genom att unikt identifiera
 
 >[!NOTE]
 >
->Mer information om tjänsten Document Security finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Document Security finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-8}
 
@@ -1436,7 +1443,7 @@ Skapa en vattenstämpel med API:t för dokumentsäkerhet (webbtjänst):
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -1466,9 +1473,9 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Ändra vattenstämplar {#modifying-watermarks}
 
@@ -1482,7 +1489,7 @@ När du ändrar en vattenstämpel påverkas framtida dokument med vattenstämpel
 
 >[!NOTE]
 >
->Mer information om tjänsten Document Security finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Document Security finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-9}
 
@@ -1583,7 +1590,7 @@ Exempel på kod som använder tjänsten Dokumentsäkerhet finns i Snabbstart (SO
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -1613,27 +1620,27 @@ Följande snabbstart innehåller kodexempel på hur du använder dokumentsäkerh
 
 ## Söka efter händelser {#searching-for-events}
 
-Rights Management-tjänsten spårar specifika åtgärder när de utförs, t.ex. att tillämpa en profil på ett dokument, öppna ett policyskyddat dokument och återkalla åtkomst till dokument. Händelsegranskning måste aktiveras för Rights Management-tjänsten, annars spåras inte händelser.
+Tjänsten Rights Management spårar specifika åtgärder när de inträffar, t.ex. att tillämpa en profil på ett dokument, öppna ett policyskyddat dokument och återkalla åtkomst till dokument. Händelsegranskning måste aktiveras för tjänsten Rights Management, annars spåras inte händelser.
 
 Händelser faller inom en av följande kategorier:
 
 * Administratörshändelser är åtgärder som är relaterade till en administratör, till exempel att skapa ett nytt administratörskonto.
 * Dokumenthändelser är åtgärder som är relaterade till ett dokument, t.ex. stängning av ett policyskyddat dokument.
 * Policyhändelser är åtgärder som är relaterade till en profil, till exempel att skapa en ny policy.
-* Tjänstehändelser är åtgärder som är relaterade till Rights Management-tjänsten, till exempel synkronisering med användarkatalogen.
+* Tjänstehändelser är åtgärder som är relaterade till tjänsten Rights Management, t.ex. synkronisering med användarkatalogen.
 
 Du kan söka efter specifika händelser genom att använda Java API:t för Rights Management eller webbtjänstens API. Genom att söka efter händelser kan du utföra åtgärder, till exempel skapa en loggfil med vissa händelser.
 
 >[!NOTE]
 >
->Mer information om Rights Management-tjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Rights Management finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-10}
 
 Så här söker du efter en Rights Management-händelse:
 
 1. Inkludera projektfiler.
-1. Skapa ett API-objekt för Rights Management Client.
+1. Skapa ett Rights Management Client API-objekt.
 1. Ange händelsen som du vill söka efter.
 1. Sök efter händelsen.
 
@@ -1641,9 +1648,9 @@ Så här söker du efter en Rights Management-händelse:
 
 Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprogram med Java inkluderar du de JAR-filer som behövs. Om du använder webbtjänster måste du inkludera proxyfilerna.
 
-**Skapa ett API-objekt för Rights Management Client**
+**Skapa ett Rights Management Client API-objekt**
 
-Innan du programmässigt kan utföra en Rights Management-tjänståtgärd måste du skapa ett klientobjekt för Rights Management-tjänsten. Om du använder Java API skapar du ett `DocumentSecurityClient` objekt. Om du använder webbtjänstens API för Rights Management skapar du ett `DocumentSecurityServiceService` objekt.
+Innan du programmässigt kan utföra en Rights Management-tjänståtgärd måste du skapa ett klientobjekt för tjänsten Rights Management. Om du använder Java API skapar du ett `DocumentSecurityClient` objekt. Skapa ett `DocumentSecurityServiceService` objekt om du använder Rights Management webbtjänste-API.
 
 **Ange vilka händelser som ska sökas efter**
 
@@ -1651,7 +1658,7 @@ Du måste ange vilken händelse du vill söka efter. Du kan till exempel söka e
 
 **Sök efter händelsen**
 
-När du har angett vilken händelse du vill söka efter kan du söka efter händelsen med antingen Rights Management Java API eller Rights Management-webbtjänstens API.
+När du har angett vilken händelse du vill söka efter kan du söka efter händelsen med hjälp av Rights Management Java API eller Rights Management webbtjänstAPI.
 
 **Se även**
 
@@ -1661,13 +1668,13 @@ När du har angett vilken händelse du vill söka efter kan du söka efter händ
 
 ### Söka efter händelser med Java API {#search-for-events-using-the-java-api}
 
-Sök efter händelser med Rights Management API (Java):
+Sök efter händelser med hjälp av Rights Management API (Java):
 
 1. Inkludera projektfiler
 
    Inkludera JAR-klientfiler, som adobe-rightsmanagement-client.jar, i Java-projektets klassökväg.
 
-1. Skapa ett API-objekt för Rights Management Client
+1. Skapa ett Rights Management Client API-objekt
 
    Skapa ett `DocumentSecurityClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
 
@@ -1675,7 +1682,8 @@ Sök efter händelser med Rights Management API (Java):
 
    * Skapa ett `EventManager` objekt genom att anropa `DocumentSecurityClient` objektets `getEventManager` metod. Den här metoden returnerar ett `EventManager` objekt.
    * Skapa ett `EventSearchFilter` objekt genom att anropa dess konstruktor.
-   * Ange den händelse som ska sökas igenom genom att anropa `EventSearchFilter` objektets `setEventCode` metod och skicka en statisk datamedlem som tillhör den `EventManager` klass som representerar händelsen som ska sökas efter. Om du till exempel vill söka efter principens händelse create skickar du `EventManager.POLICY_CREATE_EVENT`.
+   * Ange den händelse som ska sökas igenom genom att anropa `EventSearchFilter` objektets `setEventCode` metod och skicka en statisk datamedlem som tillhör den `EventManager` klass som representerar händelsen som ska sökas efter. Om du till exempel vill söka efter principskapningshändelsen skickar du `EventManager.POLICY_CREATE_EVENT`.
+
    >[!NOTE]
    >
    >Du kan definiera ytterligare sökvillkor genom att anropa `EventSearchFilter` objektmetoder. Anropa till exempel `setUserName` metoden för att ange en användare som är associerad med händelsen.
@@ -1686,13 +1694,13 @@ Sök efter händelser med Rights Management API (Java):
 
 **Exempel på koder**
 
-Följande snabbstarter innehåller kodexempel på hur Rights Management-tjänsten används:
+Följande snabbstarter innehåller kodexempel på hur du använder tjänsten Rights Management:
 
 * &quot;Snabbstart (SOAP): Söka efter händelser med Java API&quot;
 
 ### Sök efter händelser med hjälp av webbtjänstens API {#search-for-events-using-the-web-service-api}
 
-Sök efter händelser med Rights Management API (webbtjänsten):
+Sök efter händelser med hjälp av Rights Management API (webbtjänst):
 
 1. Inkludera projektfiler
 
@@ -1702,7 +1710,7 @@ Sök efter händelser med Rights Management API (webbtjänsten):
    >
    >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
-1. Skapa ett API-objekt för Rights Management Client
+1. Skapa ett Rights Management Client API-objekt
 
    * Skapa ett `DocumentSecurityServiceClient` objekt med hjälp av dess standardkonstruktor.
    * Skapa ett `DocumentSecurityServiceClient.Endpoint.Address` objekt med hjälp av `System.ServiceModel.EndpointAddress` konstruktorn. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.). Du behöver inte använda attributet `lc_version` . Det här attributet används när du skapar en tjänstreferens.)
@@ -1710,7 +1718,7 @@ Sök efter händelser med Rights Management API (webbtjänsten):
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -1724,6 +1732,7 @@ Sök efter händelser med Rights Management API (webbtjänsten):
    * Ange slutet på den tidsperiod under vilken händelsen inträffade genom att ange `EventSpec` objektets `lastTime.date` datamedlem med `DataTime` instansen som representerar slutet på datumintervallet när händelsen inträffade.
    * Tilldela värdet `true` till `EventSpec` objektets `lastTime.dateSpecified` datamedlem.
    * Ange händelsen som ska sökas efter genom att tilldela ett strängvärde till `EventSpec` objektets `eventCode` datamedlem. I följande tabell visas de numeriska värden som du kan tilldela den här egenskapen:
+
    <table> 
     <thead> 
     <tr> 
@@ -1929,16 +1938,16 @@ Sök efter händelser med Rights Management API (webbtjänsten):
 
 **Exempel på koder**
 
-Följande snabbstarter innehåller kodexempel på hur Rights Management-tjänsten används:
+Följande snabbstarter innehåller kodexempel på hur du använder tjänsten Rights Management:
 
 * &quot;Snabbstart (MTOM): Söka efter händelser med hjälp av webbtjänstens API&quot;
 * &quot;Snabbstart (SwaRef): Söka efter händelser med hjälp av webbtjänstens API&quot;
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Tillämpa profiler på Word-dokument {#applying-policies-to-word-documents}
 
@@ -1948,7 +1957,7 @@ Du kan övervaka användningen av ett policyskyddat Word-dokument när du har di
 
 >[!NOTE]
 >
->Mer information om tjänsten Document Security finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Document Security finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-11}
 
@@ -2018,6 +2027,7 @@ Tillämpa en profil på ett Word-dokument med hjälp av dokumentets säkerhets-A
       * Ett strängvärde som representerar namnet på användarhanterardomänen för den användare som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara null (om parametern är null måste nästa parametervärde vara null).
       * Ett strängvärde som representerar namnet på den kanoniska användaren av användarhanteraren som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara `null` (om parametern är `null`måste det föregående parametervärdet vara `null`).
       * A `com.adobe.livecycle.rightsmanagement.Locale` som representerar det språkområde som används för att välja MS Office-mallen. Det här parametervärdet är valfritt och du kan ange det `null`.
+
       Metoden returnerar `protectDocument` ett `RMSecureDocumentResult` objekt som innehåller det principskyddade Word-dokumentet.
 
 
@@ -2053,7 +2063,7 @@ Tillämpa en profil på ett Word-dokument med hjälp av API:t för dokumentsäke
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -2081,6 +2091,7 @@ Tillämpa en profil på ett Word-dokument med hjälp av API:t för dokumentsäke
    * En strängutdataparameter som används för att lagra principens identifierarvärde.
    * En strängutdataparameter som används för att lagra det principskyddade identifierarvärdet.
    * En strängutdataparameter som används för att lagra mime-typen (till exempel `application/doc`).
+
    Metoden returnerar `protectDocument` ett `BLOB` objekt som innehåller det principskyddade Word-dokumentet.
 
 1. Spara Word-dokumentet.
@@ -2102,7 +2113,7 @@ Du kan ta bort en profil från ett profilskyddat Word-dokument om du vill ta bor
 
 >[!NOTE]
 >
->Mer information om tjänsten Document Security finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Document Security finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-12}
 
@@ -2128,7 +2139,7 @@ Du måste hämta ett principskyddat Word-dokument för att kunna ta bort en prof
 
 **Ta bort profilen från Word-dokumentet**
 
-Du kan ta bort en princip från ett principskyddat Word-dokument förutsatt att en administratör har angetts i anslutningsinställningarna. Annars måste profilen som används för att skydda ett dokument innehålla behörigheten för att kunna ta bort en profil från ett Word-dokument `SWITCH_POLICY` . Dessutom måste användaren som anges i inställningarna för AEM Forms-anslutningen också ha den behörigheten. Annars genereras ett undantag.
+Du kan ta bort en princip från ett principskyddat Word-dokument förutsatt att en administratör har angetts i anslutningsinställningarna. Annars måste profilen som används för att skydda ett dokument innehålla behörigheten för att kunna ta bort en profil från ett Word-dokument `SWITCH_POLICY` . Dessutom måste den användare som anges i AEM Forms anslutningsinställningar också ha den behörigheten. Annars genereras ett undantag.
 
 **Spara det oskyddade Word-dokumentet**
 
@@ -2196,7 +2207,7 @@ Ta bort en profil från ett principskyddat Word-dokument med hjälp av API:t fö
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -2228,4 +2239,4 @@ Följande snabbstart innehåller kodexempel på hur du använder dokumentsäkerh
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
