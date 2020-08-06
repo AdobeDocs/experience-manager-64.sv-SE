@@ -11,6 +11,9 @@ topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: abfeea65-102d-4800-abeb-304d61afcc13
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1053'
+ht-degree: 0%
 
 ---
 
@@ -23,15 +26,15 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 Med AEM Mobile Dashboard kan du skapa, bygga och driftsätta mobilprogram, skapa, ta bort och redigera programmetadata. När applikationen är live kan ni analysera applikationsanalyser, inklusive livscykelvärden och användningsstatistik, för att förbättra kundkonverteringen och varumärkeslojaliteten.
 
-Information om hur du skapar ditt AEM-mobilprogram finns på sidan [Skapa mobilprogram](/help/mobile/building-app-mobile-phonegap.md) .
+Information om hur du skapar AEM Mobile-program finns på sidan [Skapa mobilprogram](/help/mobile/building-app-mobile-phonegap.md) .
 
 Mer information om hur du konfigurerar miljön och kommer igång finns i [Administrera AEM för att använda AEM PhoneGap Enterprise](/help/mobile/administer-phonegap.md).
 
-## AEM Mobile Apps Catalog {#the-aem-mobile-apps-catalog}
+## The AEM Mobile Apps Catalog {#the-aem-mobile-apps-catalog}
 
-I [AEM Mobile Apps-katalogen](http://localhost:4502/aem/apps.html/content/phonegap) visas alla mobilappar som hanteras i AEM.
+I [AEM Mobile Apps Catalog](http://localhost:4502/aem/apps.html/content/phonegap) visas alla mobilappar som hanteras i AEM.
 
-Se den här katalogen som&quot;landningssida&quot; för AEM Mobile, där administratörer kan starta en ny AEM Mobile-applikation genom att antingen skapa baserad på en mall eller överföra en befintlig app som redan startats av en mobilutvecklare.
+Se den här katalogen som&quot;landningssida&quot; för AEM Mobile, där administratörer kan starta ett nytt AEM Mobile-program genom att antingen skapa baserat på en mall eller överföra en befintlig app som redan startats av en mobilutvecklare.
 
 Följ de här stegen för att komma till startsidan för programkatalogen:
 
@@ -43,9 +46,9 @@ Följ de här stegen för att komma till startsidan för programkatalogen:
 
 ## AEM Mobile App Dashboard {#the-aem-mobile-app-dashboard}
 
-Om du väljer en AEM-mobilapp i katalogen visas dess instrumentpanel. Här kan du hantera ditt program, visa statistik, bygga, distribuera och hantera ditt innehåll för mobilappar.
+Om du väljer ett AEM Mobile-program i katalogen visas dess kontrollpanel. Här kan du hantera ditt program, visa statistik, bygga, distribuera och hantera ditt innehåll för mobilappar.
 
-Du kan expandera till varje ruta i AEM Mobile Dashboard för att visa eller redigera information genom att klicka på ... i det nedre högra hörnet.
+Du kan expandera till varje platta i AEM Mobile Dashboard om du vill visa eller redigera information genom att klicka på.. i det nedre högra hörnet.
 
 ![AEM Mobile Applications Command Center](assets/chlimage_1-136.png)
 
@@ -67,7 +70,7 @@ Innehåll kan skapas, uppdateras och tas bort i AEM Mobile på ungefär samma s�
 
 När du har lagt till eller ändrat innehåll via panelen Hantera sidinnehåll kan du skicka ut dessa ändringar till dina kunder med en uppdatering av innehållsreleasen.
 
-Med innehållspaketet kan AEM App Author hantera sidinnehåll i AEM och låta utvecklingsteamet göra ändringar i ditt PhoneGap Shell-program (t.ex. appramverk eller infrastruktur) och sedan skicka ut ändringarna till dina kunder snabbt och utan att behöva registrera en utvecklare för att skicka vidare till olika butiker för distribution.
+Med innehållspaketet kan AEM App Author hantera sidinnehåll i AEM och låta utvecklingsteamet göra ändringar i ditt PhoneGap Shell-program (t.ex. appramverk eller infrastruktur) och sedan skicka ut ändringarna till dina kunder snabbt och utan att behöva registrera en utvecklare som kan skicka in ändringarna till olika butiker för distribution.
 
 Innehållspaket skapar en ZIP-fil, som betraktas som ett innehållspaket, för varje uppdatering. Dessa paket innehåller HTML-resurser och HTML-sidor som genereras när programmet återges och är tillräckligt intelligenta för att bara paketera de filer som har ändrats sedan den senaste uppdateringen.
 
@@ -89,13 +92,13 @@ Den här ikonen representerar ett innehållsversionspaket för programskalet
 
 De här ikonerna representerar ett paket för innehållsrelease för appinnehåll
 
-### PhoneGap Build Tile {#the-phonegap-build-tile}
+### The PhoneGap Build Tile {#the-phonegap-build-tile}
 
-PhoneGap **Build Tile** ansluts till [https://build.phonegap.com](https://build.phonegap.com) för att skapa och vara värd för fjärrbuider. När bygget har byggts blir det tillgängligt antingen som nedladdning eller direkt till enheten via en QR-kod.
+**PhoneGap Build Tile** kan användas tillsammans med [https://build.phonegap.com](https://build.phonegap.com) för att skapa och vara värd för fjärrstötar. När bygget har byggts blir det tillgängligt antingen som nedladdning eller direkt till enheten via en QR-kod.
 
 Du kan också hämta enhetskällan för att bygga lokalt via [PhoneGap CLI](https://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html).
 
-![PhoneGap Build Tile](assets/chlimage_1-140.png)
+![PhoneGap Build](assets/chlimage_1-140.png)
 
 ### Mätplattan {#the-metrics-tile}
 
@@ -103,9 +106,9 @@ Du kan också hämta enhetskällan för att bygga lokalt via [PhoneGap CLI](http
 >
 >Rutan Metrics visas först när du har konfigurerat molntjänsten.
 >
->Mer information finns i [Konfigurera Adobe Mobile Services Cloud-tjänsten](/help/mobile/configure-adobe-mobile-cloud-service.md) .
+>Mer information finns i [Konfigurera Cloud Servicen](/help/mobile/configure-adobe-mobile-cloud-service.md) för Adobe-mobiltjänster.
 
-AEM Mobile integreras med Adobe Analytics via [Adobe Mobile Services SDK](https://www.adobe.com/ca/solutions/digital-marketing/mobile-services/app-sdk.html) (AMS).
+AEM Mobile integrerar med Adobe Analytics via [Adobe Mobile Services SDK](https://www.adobe.com/ca/solutions/digital-marketing/mobile-services/app-sdk.html) (AMS).
 
 Kontrollcentrets **måttpanel** visar en sammanfattning av analyser som hämtats från AMS för ditt program. Du kan gå in på kontrollpanelen för analyser genom att klicka på ... längst ned till höger.
 
@@ -121,7 +124,7 @@ Du kan gå närmare in på kontrollpanelen för enhetsinnehåll genom att klicka
 
 ![chlimage_1-142](assets/chlimage_1-142.png)
 
-#### Additional Resources {#additional-resources}
+#### Ytterligare resurser {#additional-resources}
 
 Mer information om roller och ansvar för en administratör och utvecklare finns i resurserna nedan:
 
