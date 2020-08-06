@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 86a31407-96a4-467c-9468-da4095ca38d5
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1218'
+ht-degree: 5%
 
 ---
 
@@ -21,16 +24,16 @@ Kampanjerna använder ofta teasers som en mekanism för att locka ett visst segm
 
 >[!NOTE]
 >
-> Teaser-komponenten har ersatts i AEM 6.2.
+>Teaser-komponenten har ersatts i AEM 6.2.
 
 * **Varumärkessidor** lagras i Campaigns-delen av webbplatsen. Ett varumärke innehåller de enskilda kampanjerna.
 
 * **Kampanjsidor** lagras i Campaigns-avsnittet på webbplatsen. Varje kampanj har en egen sida, där de mer detaljerade definitionerna finns. Behållaren, eller översikten, innehåller också viss information och statistik om de enskilda sidorna för teaser.
 
-Teaser inom AEM består av flera delar:
+Teaser i AEM består av flera delar:
 
 * **Teaser pages** are stored under the appropriate campaign page and hold the definition of the teaser paragraphs available for each specific campaign. Dessa definitioner används när de teaser-styckena visas. inklusive innehållsvariationer, det segment som ska användas för att välja variations- och förstärkningsfaktor.
-* Med **Teaser-komponenten** kan du skapa en instans av ditt specifika teaser-stycke på en innehållssida. Du kan dra teaserkomponenten från sidosparken och sedan ange din teaserdefinition för att skapa ett eget teaserstycke. **** Obs! Teaser-komponenten har ersatts i AEM 6.2.
+* Med **Teaser-komponenten** kan du skapa en instans av ditt specifika teaser-stycke på en innehållssida. Du kan dra teaserkomponenten från sidosparken och sedan ange din teaserdefinition för att skapa ett eget teaserstycke. **Obs!** Teaser-komponenten har ersatts i AEM 6.2.
 
 * **Teaser paragraphs** are actual instances of your teaser within a content page. Dessa locka fram ett segment av besökare till innehåll som fokuserar på deras intressen.
 * Sidor där kampanjinnehållet är inriktat på ett specifikt besökarsegment. Vanligtvis leder de smalare styckena besökaren till sådana sidor.
@@ -236,10 +239,10 @@ När ni har skapat ert varumärke och er kampanj kan ni skapa och skapa en läro
 
 >[!NOTE]
 >
-> Teaser-komponenten har ersatts i AEM 6.2.
+>Teaser-komponenten har ersatts i AEM 6.2.
 
 1. Navigera till innehållssidan där du vill placera det steg som ska leda till kampanjsidan.
-1. Lägg till en **Teaser** -komponent (tillgänglig i delen **Personalisering** i sidosparken) i önskad position. När den skapades visas att kampanjsökvägen ännu inte har konfigurerats:
+1. Lägg till en **Teaser** -komponent (tillgänglig i delen **Personalisering** i sidosparken) i önskad position. När den skapades visas att kampanjsökvägen inte har konfigurerats ännu:
 
    ![chlimage_1-4](assets/chlimage_1-4.png)
 
