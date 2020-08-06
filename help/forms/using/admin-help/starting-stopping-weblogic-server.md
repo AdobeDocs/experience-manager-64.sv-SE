@@ -1,8 +1,8 @@
 ---
 title: Startar och stoppar WebLogic-servern
 seo-title: Startar och stoppar WebLogic-servern
-description: Flera procedurer kräver att du startar eller stoppar instansen av WebLogic Server där du vill distribuera AEM-formulärmoduler. I det här dokumentet beskrivs hur du startar och stoppar WebLogic-servern.
-seo-description: Flera procedurer kräver att du startar eller stoppar instansen av WebLogic Server där du vill distribuera AEM-formulärmoduler. I det här dokumentet beskrivs hur du startar och stoppar WebLogic-servern.
+description: Flera procedurer kräver att du startar eller stoppar instansen av WebLogic Server där du vill distribuera AEM formulärmoduler. I det här dokumentet beskrivs hur du startar och stoppar WebLogic-servern.
+seo-description: Flera procedurer kräver att du startar eller stoppar instansen av WebLogic Server där du vill distribuera AEM formulärmoduler. I det här dokumentet beskrivs hur du startar och stoppar WebLogic-servern.
 uuid: 957787fe-4cea-4ecd-b49a-c33023c5c309
 contentOwner: admin
 content-type: reference
@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: c908d064-6596-473a-b218-22a2496c83f7
 translation-type: tm+mt
 source-git-commit: f1558c7dec34649d00afcd04245ea552e8c6b978
+workflow-type: tm+mt
+source-wordcount: '642'
+ht-degree: 0%
 
 ---
 
 
 # Startar och stoppar WebLogic-servern {#starting-and-stopping-weblogic-server}
 
-Flera procedurer kräver att du startar eller stoppar instansen av WebLogic Server där du vill distribuera AEM-formulärmoduler. Kontrollera att WebLogic Server har stoppats eller körs, beroende på vilken åtgärd du utför.
+Flera procedurer kräver att du startar eller stoppar instansen av WebLogic Server där du vill distribuera AEM formulärmoduler. Kontrollera att WebLogic Server har stoppats eller körs, beroende på vilken åtgärd du utför.
 
 <table> 
  <thead> 
@@ -40,7 +43,7 @@ Flera procedurer kräver att du startar eller stoppar instansen av WebLogic Serv
    <td><p>Körs</p></td> 
   </tr> 
   <tr> 
-   <td><p>Distribuera AEM-formulärprodukter</p></td> 
+   <td><p>Distribuera AEM formulärprodukter</p></td> 
    <td><p>Körs</p></td> 
   </tr> 
  </tbody> 
