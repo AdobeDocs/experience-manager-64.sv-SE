@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8e85ea7f-80ea-43b6-a67c-366852ef86ce
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1672'
+ht-degree: 4%
 
 ---
 
@@ -42,6 +45,7 @@ Egenskaperna fördelas på flera flikar.
       * Den nya taggen visas sedan med en liten stjärna till höger som anger att det är en ny tagg.
    * Med den nedrullningsbara menyn kan du välja bland befintliga taggar.
    * Ett x-tecken visas när du för musen över en taggpost i markeringsrutan, som kan användas för att ta bort taggen för den här sidan.
+
    Mer information om taggar finns i [Använda taggar](/help/sites-authoring/tags.md).
 
 * **Dölj i navigering**
@@ -84,7 +88,7 @@ Egenskaperna fördelas på flera flikar.
 
    >[!CAUTION]
    >
-   >Vanity URL:er:
+   >Alternativa URL:er:
    >
    >* Måste vara unikt så du bör vara försiktig med att värdet inte redan används av en annan sida.
    >* Använd inte regex-mönster.
@@ -169,9 +173,9 @@ Egenskaperna fördelas på flera flikar.
    * **Aktivera användardelning för Pinterest**
    * **Önskad XF-variation** Definiera variant av upplevelsefragment som används för att generera metadata för sidan
 
-### Molntjänster {#cloud-services}
+### Cloud Services {#cloud-services}
 
-* **Molntjänster**
+* **Cloud Services**
 
    Definiera egenskaper för [molntjänster](/help/sites-developing/extending-cloud-config.md).
 
@@ -181,7 +185,7 @@ Egenskaperna fördelas på flera flikar.
 
    Välj ett [varumärke om du vill ange ett omfång för målgruppsanpassning](/help/sites-authoring/personalization.md).
 
-### Permissions {#permissions}
+### Behörigheter {#permissions}
 
 * **Behörigheter**
 
@@ -190,6 +194,7 @@ Egenskaperna fördelas på flera flikar.
    * [Lägg till behörigheter](/help/sites-administering/user-group-ac-admin.md)
    * [Redigera stängd användargrupp](/help/sites-administering/cug.md#applying-your-closed-user-group-to-content-pages)
    * Visa [gällande behörigheter](/help/sites-administering/user-group-ac-admin.md)
+
    >[!CAUTION]
    >
    >På fliken **Behörigheter** kan du redigera CUG-konfigurationer baserat på förekomsten av `granite:AuthenticationRequired` mixin. Om sidbehörigheter konfigureras med inaktuella CUG-konfigurationer, baserat på närvaro av `cq:cugEnabled` egenskap, visas ett varningsmeddelande och CUG-behörigheterna kan inte redigeras. Autentiseringskravet på fliken [Avancerat](/help/sites-authoring/editing-page-properties.md#advanced) kan inte heller redigeras.
@@ -231,7 +236,7 @@ Du kan definiera sidegenskaper:
 
 * Från sidredigeraren:
 
-   * Använda **sidinformation** (och sedan **Öppna egenskaper**)
+   * Med **Sidinformation** (och sedan **Öppna egenskaper**)
 
 ### Från webbplatskonsolen - en sida {#from-the-sites-console-single-page}
 
@@ -243,6 +248,7 @@ Klicka eller tryck på **Egenskaper** för att definiera sidegenskaperna:
 
    * [Snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions)
    * [Markeringsläge](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
+
    Sidegenskaperna visas med rätt flikar.
 
 1. Visa eller redigera egenskaperna efter behov.
@@ -259,7 +265,7 @@ När du redigerar en sida kan du använda **Sidinformation** för att definiera 
 
    ![screen_shot_2018-03-22at095740](assets/screen_shot_2018-03-22at095740.png)
 
-1. Välj **Öppna egenskaper** så öppnas en dialogruta där du kan redigera egenskaperna, sorterade efter lämplig flik. Följande knappar finns också till höger om verktygsfältet:
+1. Select **Open Properties** and a dailog will open allowing you to edit the properties, sorted by the appropriate tab. Följande knappar finns också till höger om verktygsfältet:
 
    * **Avbryt**
    * **Spara och stäng**
@@ -268,7 +274,7 @@ När du redigerar en sida kan du använda **Sidinformation** för att definiera 
 
 ### Från webbplatskonsolen - flera sidor {#from-the-sites-console-multiple-pages}
 
-På **webbplatskonsolen** kan du markera flera sidor och sedan använda **Visa egenskaper** för att visa och/eller redigera sidegenskaperna. Detta kallas massredigering av sidegenskaper.
+På **Sites**-konsolen kan du markera flera sidor och sedan använda **Visa egenskaper** för att visa och/eller redigera sidegenskaperna. Detta kallas massredigering av sidegenskaper.
 
 >[!NOTE]
 >
@@ -283,7 +289,7 @@ Du kan välja flera sidor för massredigering på olika sätt, bland annat:
 
 ![screen_shot_2018-03-22at100039](assets/screen_shot_2018-03-22at100039.png)
 
-När du har markerat sidorna och sedan klickat på eller klickat på alternativet **Egenskaper** visas bulkegenskaperna:
+After selecting the pages and then clicking or tapping the **Properties** option, the bulk properties will be shown:
 
 ![screen_shot_2018-03-22at100114](assets/screen_shot_2018-03-22at100114.png)
 
@@ -314,6 +320,7 @@ När du har valt Massredigering kan du:
 
       * Endast egenskaper med ett gemensamt värde visas i visningsläget.
       * När fältet har flera värden (till exempel Taggar) visas värden bara när *alla* är gemensamma. Om bara vissa är vanliga visas de bara när du redigerar.
+
    När det inte finns några egenskaper med ett gemensamt värde visas ett meddelande.
 
 * **Redigera**
