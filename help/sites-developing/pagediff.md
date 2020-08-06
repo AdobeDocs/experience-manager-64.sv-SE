@@ -28,11 +28,11 @@ Med sidskillnader kan en användare jämföra den aktuella sidan med startsidor,
 
 ## Operationsinformation {#operation-details}
 
-När man jämför olika versioner av en sida skapas den tidigare versionen som användaren vill jämföra om av AEM i bakgrunden för att underlätta skillnaderna. Detta behövs för att kunna återge innehållet [för jämförelse](/help/sites-authoring/page-diff.md#presentation-of-differences)sida vid sida.
+När du jämför versioner av en sida skapas den tidigare versionen som användaren vill jämföra av AEM i bakgrunden för att underlätta skillnaderna. Detta behövs för att kunna återge innehållet [för jämförelse](/help/sites-authoring/page-diff.md#presentation-of-differences)sida vid sida.
 
-Denna rekreationsåtgärd utförs internt av AEM och är transparent för användaren och kräver ingen åtgärd. En administratör som visar databasen, till exempel i CRX DE Lite, skulle dock se dessa återskapade versioner i innehållsstrukturen.
+Denna rekreationsåtgärd görs internt av AEM och är transparent för användaren och kräver ingen åtgärd. En administratör som visar databasen, till exempel i CRX DE Lite, skulle dock se dessa återskapade versioner i innehållsstrukturen.
 
-Beroende på AEM-korrigeringsnivån är beteendet annorlunda och kan kräva vissa behörigheter för att fungera korrekt.
+Beroende på AEM är beteendet annorlunda och kan kräva vissa behörigheter för att fungera korrekt.
 
 ### Före AEM 6.4.3 {#prior-to-aem}
 
@@ -40,7 +40,7 @@ När innehållet jämförs återskapas hela trädet fram till sidan som ska jäm
 
 `/content/versionhistory/<userId>/<site structure>`
 
-Eftersom AEM återskapar den tidigare versionen av sidan om du använder sidskillnader, måste användaren ha vissa JCR-behörigheter för att kunna använda funktionen.
+När du använder sidans diff-mekanism återskapar AEM den tidigare versionen av sidan. För att kunna använda funktionen måste användaren ha vissa JCR-behörigheter.
 
 >[!CAUTION]
 >
@@ -58,11 +58,11 @@ En rensningsåtgärd körs automatiskt för att rensa upp det tillfälliga inneh
 
 ## Begränsningar för utvecklare {#developer-limitations}
 
-I det klassiska användargränssnittet behövde man tidigare tänka på hur man skulle kunna underlätta AEM-differentiering (t.ex. genom att använda `cq:text` tag lib eller integrera `DiffService` OSGi-tjänsten i komponenter). Det här behövs inte längre för den nya diff-funktionen, eftersom skillnaden inträffar på klientsidan via DOM-jämförelse.
+I det klassiska användargränssnittet behövde man tidigare ta särskild hänsyn till utvecklingen för att underlätta AEM (t.ex. genom att använda `cq:text` tag lib eller integrera `DiffService` OSGi-tjänsten i komponenter). Det här behövs inte längre för den nya diff-funktionen, eftersom skillnaden inträffar på klientsidan via DOM-jämförelse.
 
 Det finns dock ett antal begränsningar som måste beaktas av utvecklaren.
 
-* Den här funktionen använder CSS-klasser som inte har namnmellanrum med AEM-produkten. Om andra anpassade CSS-klasser eller CSS-klasser från tredje part med samma namn inkluderas på sidan kan visningen av skillnaderna påverkas.
+* Den här funktionen använder CSS-klasser som inte har något namnutrymme för AEM. Om andra anpassade CSS-klasser eller CSS-klasser från tredje part med samma namn inkluderas på sidan kan visningen av skillnaderna påverkas.
 
    * `html-added`
    * `html-removed`
