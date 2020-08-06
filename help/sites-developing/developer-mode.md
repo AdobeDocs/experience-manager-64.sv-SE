@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: efbe46a3-c37f-4b67-8b3a-188cfc75118b
 translation-type: tm+mt
 source-git-commit: 185bdd83b8b67671a31aa3f341b80614ed819b6c
+workflow-type: tm+mt
+source-wordcount: '708'
+ht-degree: 1%
 
 ---
 
 
 # Utvecklarläge{#developer-mode}
 
-När du redigerar sidor i AEM finns flera [lägen](/help/sites-authoring/author-environment-tools.md#page-modes) tillgängliga, bland annat i utvecklarläget. Då öppnas en sidopanel med flera flikar som ger utvecklaren information om den aktuella sidan. De tre flikarna är:
+När du redigerar sidor i AEM finns det flera [lägen](/help/sites-authoring/author-environment-tools.md#page-modes) tillgängliga, bland annat i utvecklarläget. Då öppnas en sidopanel med flera flikar som ger utvecklaren information om den aktuella sidan. De tre flikarna är:
 
 * **[Komponenter](#components)**för att visa struktur- och prestandainformation.
 * **[Test](#tests)**för att köra tester och analysera resultaten.
@@ -47,6 +50,7 @@ Detta hjälper en utvecklare att:
 >
 >* på en författarinstans med nosamplsinnehållets körningsläge
 >* en publiceringsinstans
+
 >
 >
 Det bör inaktiveras igen efter användning.
@@ -55,7 +59,7 @@ Det bör inaktiveras igen efter användning.
 >
 >Se
 >
->* Kunskapsbasartikeln [Troubleshooting AEM TouchUI issues](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html), där du hittar fler tips och verktyg.
+>* Kunskapsbasartikeln [Troubleshooting AEM TouchUI issues](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)innehåller ytterligare tips och verktyg.
 >* AEM Gems-session om [AEM 6.0 Developer Mode](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html).
 
 
@@ -100,6 +104,7 @@ Varje komponentpost kan visa (till exempel:
 
    * alla komponentskript som används för att återge komponenten.
    * databasens innehållssökväg för den här specifika komponenten.
+
    ![chlimage_1-232](assets/chlimage_1-232.png)
 
 * **Redigera skript**: en länk som:
@@ -110,6 +115,7 @@ Varje komponentpost kan visa (till exempel:
 
    * Hierarkin i den markerade komponenten.
    * Återgivningstider för den markerade komponenten separat, alla enskilda kapslade komponenter i den och den kombinerade summan.
+
    ![chlimage_1-233](assets/chlimage_1-233.png)
 
 >[!CAUTION]
