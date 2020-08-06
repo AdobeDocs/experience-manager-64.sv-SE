@@ -1,6 +1,6 @@
 ---
-title: Konfigurationer av molntjänster
-seo-title: Konfigurationer av molntjänster
+title: Cloud Service Configurations
+seo-title: Cloud Service Configurations
 description: Du kan utöka de befintliga instanserna för att skapa egna konfigurationer
 seo-description: Du kan utöka de befintliga instanserna för att skapa egna konfigurationer
 uuid: 9d20c3a4-2a12-4d3c-80c3-fcac3137a675
@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: d25c03bf-6eaa-45f4-ab60-298865935a62
 translation-type: tm+mt
 source-git-commit: 00317d1ba79f10e98b4c52713d845092b7cc6c2e
+workflow-type: tm+mt
+source-wordcount: '579'
+ht-degree: 1%
 
 ---
 
 
-# Konfigurationer av molntjänster{#cloud-service-configurations}
+# Cloud Service Configurations{#cloud-service-configurations}
 
 Konfigurationer är utformade för att tillhandahålla logik och struktur för lagring av tjänstkonfigurationer.
 
@@ -29,7 +32,7 @@ De principer som har använts vid utvecklingen av konfigurationerna har baserats
 * Konfigurationer (t.ex. egenskaper/stycken) ärvs från de överordnade.
 * Refererad från analysnod(er) efter sökväg.
 * Enkelt att bygga ut.
-* Har flexibiliteten att klara mer komplexa konfigurationer, som [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics).
+* Har flexibiliteten att klara mer komplexa konfigurationer som [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics).
 * Stöd för beroenden ( [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) -plugin-program behöver en [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) -konfiguration).
 
 ## Struktur {#structure}
@@ -137,9 +140,9 @@ propertyname
 
 Referensdokumentation om API finns i [com.day.cq.wcm.webservicesupport](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html).
 
-### AEM-integrering {#aem-integration}
+### AEM {#aem-integration}
 
-Tillgängliga tjänster visas på fliken **Molntjänster** i dialogrutan **Sidegenskaper** (för alla sidor som ärver från `foundation/components/page` eller `wcm/mobile/components/page`).
+Tillgängliga tjänster visas på fliken **Cloud Services** i dialogrutan **Sidegenskaper** (för alla sidor som ärver från `foundation/components/page` eller `wcm/mobile/components/page`).
 
 Fliken innehåller även:
 
@@ -218,10 +221,10 @@ Dessa tjänster tillhandahålls som standard:
 * [Spårarkodfragment](/help/sites-administering/external-providers.md) (Google, WebTrends etc.)
 * [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)
 * [Test&amp;Target](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-target)
-* [Search&amp;Promote](/help/sites-administering/marketing-cloud.md#integrating-with-search-promote)
+* [Search &amp; Promote](/help/sites-administering/marketing-cloud.md#integrating-with-search-promote)
 * [Scene7](/help/sites-administering/marketing-cloud.md#integrating-with-scene)
 
 >[!NOTE]
 >
->Se även [Skapa en anpassad molntjänst](/help/sites-developing/extending-cloud-config-custom-cloud.md).
+>Se även [Skapa en anpassad Cloud Service](/help/sites-developing/extending-cloud-config-custom-cloud.md).
 
