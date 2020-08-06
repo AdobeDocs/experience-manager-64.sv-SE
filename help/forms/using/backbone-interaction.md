@@ -1,8 +1,8 @@
 ---
 title: Interaktion med ryggraden
 seo-title: Interaktion med ryggraden
-description: Konceptuell information om användning av JavaScript-modeller med ryggraden på arbetsytan i AEM Forms.
-seo-description: Konceptuell information om användning av JavaScript-modeller med ryggraden på arbetsytan i AEM Forms.
+description: Konceptuell information om användning av JavaScript-modeller med Backbone på arbetsytan i AEM Forms.
+seo-description: Konceptuell information om användning av JavaScript-modeller med Backbone på arbetsytan i AEM Forms.
 uuid: c70da848-e514-42bc-a59b-44a7c00aa529
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,6 +10,9 @@ topic-tags: forms-workspace
 discoiquuid: d363eec3-172b-413e-9743-ed51804ea1e9
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '448'
+ht-degree: 0%
 
 ---
 
@@ -50,7 +53,7 @@ Ett exempel:
 
 1. Användaren klickar på en uppgiftsmall i uppgiftslistan.
 1. Aktivitetsvyn lyssnar på klickljudet och anropar återgivningsfunktionen i aktivitetsmodellen.
-1. Uppgiftsmodellen anropar sedan tjänsten, som är en vanlig punkt för all kommunikation med AEM Forms-servern.
+1. Uppgiftsmodellen anropar sedan tjänsten som är en vanlig punkt för all kommunikation med AEM Forms-servern.
 1. Tjänstklassen anropar AEM Forms REST-slutpunkten för återgivningsmetod via ajax.
 1. Återanropet för det här Ajax-anropet har definierats i aktivitetsmodellen.
 1. Uppgiftsmodellen genererar en ryggbenshändelse som ett meddelande om att återgivningsanropet är slutfört.
