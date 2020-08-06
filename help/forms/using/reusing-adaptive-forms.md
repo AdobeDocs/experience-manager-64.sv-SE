@@ -9,6 +9,9 @@ topic-tags: author
 discoiquuid: ef564750-f107-41cb-887e-fc6d22b7d32e
 translation-type: tm+mt
 source-git-commit: db4d19e3af11f04369fc7f6a7c13377962f0650a
+workflow-type: tm+mt
+source-wordcount: '553'
+ht-degree: 0%
 
 ---
 
@@ -61,7 +64,7 @@ Innehållet i en inklistrad adaptiv form kan ändras på följande sätt så att
 
    Du kan ändra metadataegenskaperna för det adaptiva formuläret, till exempel rubrik och beskrivning. Mer information om metadataegenskaper och hur de kan ändras finns i [Hantera formulärmetadata](/help/forms/using/manage-form-metadata.md)
 
-1. **Ändra XFA/XSD för XFA/XSD-baserade adaptiva formulär:**
+1. **Ändra XFA/XSD för XFA/XSD-baserad Adaptive Forms:**
 
    Du kan ändra den XFA/XSD som används i adaptiva formulär. Mer information om hur dessa anpassade formulär kan ändras finns i [Hantera formulärmetadata](/help/forms/using/manage-form-metadata.md)
 
