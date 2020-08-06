@@ -1,8 +1,8 @@
 ---
-title: Skapa en anpassad molntjänst
-seo-title: Skapa en anpassad molntjänst
-description: Standarduppsättningen av molntjänster kan utökas med anpassade molntjänsttyper
-seo-description: Standarduppsättningen av molntjänster kan utökas med anpassade molntjänsttyper
+title: Skapa en anpassad Cloud Service
+seo-title: Skapa en anpassad Cloud Service
+description: Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Service
+seo-description: Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Service
 uuid: b105a0c1-b68c-4f57-8e3b-561c8051a08e
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,19 +11,22 @@ content-type: reference
 discoiquuid: e48e87c6-43ca-45ba-bd6b-d74c969757cd
 translation-type: tm+mt
 source-git-commit: 00317d1ba79f10e98b4c52713d845092b7cc6c2e
+workflow-type: tm+mt
+source-wordcount: '437'
+ht-degree: 1%
 
 ---
 
 
-# Skapa en anpassad molntjänst{#creating-a-custom-cloud-service}
+# Skapa en anpassad Cloud Service{#creating-a-custom-cloud-service}
 
-Standarduppsättningen av molntjänster kan utökas med anpassade molntjänsttyper. På så sätt kan du lägga in egna märkord på sidan på ett strukturerat sätt. Detta kommer i första hand att användas av analytiker från tredje part, till exempel Google Analytics, Chartbeat osv. Molntjänster ärvs från överordnade sidor till underordnade sidor med möjlighet att bryta arvet på alla nivåer.
+Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Service. På så sätt kan du lägga in egna märkord på sidan på ett strukturerat sätt. Detta kommer i första hand att användas av analytiker från tredje part, t.ex. Google Analytics, Chartbeat osv. Cloud Services ärvs från överordnade sidor till underordnade sidor med möjlighet att bryta arvet på alla nivåer.
 
 >[!NOTE]
 >
->Den här steg-för-steg-guiden för att skapa en ny molntjänst är ett exempel med Google Analytics. Allt kanske inte gäller ditt användningsfall.
+>Den här steg-för-steg-guiden för att skapa en ny Cloud Service är ett exempel på hur du använder Google Analytics. Allt kanske inte gäller ditt användningsfall.
 
-1. I CRXDE Lite skapar du en ny nod under `/apps`:
+1. Skapa en ny nod under `/apps`:
 
    * **Namn**: `acs`
    * **Typ**: `nt:folder`
@@ -37,13 +40,14 @@ Standarduppsättningen av molntjänster kan utökas med anpassade molntjänsttyp
 
    * **Namn**: komponenter
    * **Typ**: `sling:Folder`
+
    och
 
    * **Namn**: mallar
    * **Typ**: `sling:Folder`
 
 
-1. Högerklicka på `/apps/acs/analytics/components`. **** Välj **Skapa... följt av** Skapa komponent.. I dialogrutan som öppnas kan du ange:
+1. Högerklicka på `/apps/acs/analytics/components`. Välj **Skapa...** följt av **Skapa komponent..** I dialogrutan som öppnas kan du ange:
 
    * **Etikett**: `googleanalyticspage`
    * **Titel**: `Google Analytics Page`
@@ -52,13 +56,14 @@ Standarduppsättningen av molntjänster kan utökas med anpassade molntjänsttyp
 
 1. Klicka på **Nästa** två gånger och ange:
 
-   * **** Tillåtna överordnade: `acs/analytics/templates/googleanalytics`
+   * **Tillåtna överordnade:** `acs/analytics/templates/googleanalytics`
+
    Klicka på **Nästa** två gånger och klicka på **OK**.
 
 1. Lägg till en egenskap i `googleanalyticspage`:
 
-   * **** Namn: `cq:defaultView`
-   * **** Värde: `html`
+   * **Namn:** `cq:defaultView`
+   * **Värde:** `html`
 
 1. Skapa en ny fil med namnet `content.jsp` under `/apps/acs/analytics/components/googleanalyticspage`, med följande innehåll:
 
@@ -120,7 +125,7 @@ Standarduppsättningen av molntjänster kan utökas med anpassade molntjänsttyp
    * **Egenskaper**:
 
       * **Namn**: `fieldLabel`
-      * **Typ**:Sträng
+      * **Typ**: Sträng
       * **Värde**: Konto-ID
 
       * **Namn**: `fieldDescription`
@@ -195,7 +200,8 @@ Standarduppsättningen av molntjänster kan utökas med anpassade molntjänsttyp
 
    * **Titel**: `Google Analytics`
    * **Namn**: `googleanalytics`
-   Gå tillbaka i CRXDE Lite och lägg under `/etc/cloudservices/googleanalytics`till följande egenskap i `jcr:content`:
+
+   Gå tillbaka i CRXDE Lite och under `/etc/cloudservices/googleanalytics`lägger du till följande egenskap i `jcr:content`:
 
    * **Namn**: `componentReference`
    * **Typ**: `String`
@@ -205,10 +211,11 @@ Standarduppsättningen av molntjänster kan utökas med anpassade molntjänsttyp
 1. Gå till den nyligen skapade tjänstsidan ( `http://localhost:4502/etc/cloudservices/googleanalytics.html`) och klicka på **+** för att skapa en ny konfiguration:
 
    * **Överordnad konfiguration**: `/etc/cloudservices/googleanalytics`
-   * **** Titel:  `My First GA Config`
-   Välj **Google Analytics Configuration** och klicka på **Create**.
+   * **Titel:**  `My First GA Config`
+
+   Välj **Google Analytics-konfiguration** och klicka på **Skapa**.
 
 1. Ange till exempel ett **konto-ID**`AA-11111111-1`. Click **OK**.
-1. Navigera till en sida och lägg till den nya konfigurationen i sidegenskaperna på fliken **Cloud-tjänster** .
+1. Navigera till en sida och lägg till den nya konfigurationen i sidegenskaperna på fliken **Cloud Services** .
 1. Den anpassade koden läggs till på sidan.
 
