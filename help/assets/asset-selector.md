@@ -1,9 +1,12 @@
 ---
 title: Resursväljare
-description: Lär dig hur du använder resursväljaren för att söka, filtrera, bläddra bland och hämta metadata för resurser i Adobe Experience Manager (AEM) Assets. Lär dig även hur du anpassar gränssnittet för resursväljaren.
+description: Lär dig hur du använder resursväljaren för att söka efter, filtrera, bläddra bland och hämta metadata för resurser i Adobe Experience Manager (AEM) Resurser. Lär dig även hur du anpassar gränssnittet för resursväljaren.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '478'
+ht-degree: 1%
 
 ---
 
@@ -12,9 +15,9 @@ source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
 
 >[!NOTE]
 >
->Resursväljaren namngavs som [tillgångsväljare](https://helpx.adobe.com/experience-manager/6-2/assets/using/asset-picker.html) i tidigare versioner av AEM.
+>Resursväljaren har fått namnet [Resursväljare](https://helpx.adobe.com/experience-manager/6-2/assets/using/asset-picker.html) i tidigare versioner av AEM.
 
-Med resursväljaren kan du söka efter, filtrera och bläddra bland resurser i Adobe Experience Manager (AEM) Assets. Du kan också hämta metadata för resurser som du väljer med resursväljaren. Om du vill anpassa resursväljargränssnittet kan du starta det med parametrar för begäran som stöds. Dessa parametrar anger kontexten för resursväljaren för ett visst scenario.
+Med resursväljaren kan du söka efter, filtrera och bläddra bland resurser i Adobe Experience Manager (AEM) Resurser. Du kan också hämta metadata för resurser som du väljer med resursväljaren. Om du vill anpassa resursväljargränssnittet kan du starta det med parametrar för begäran som stöds. Dessa parametrar anger kontexten för resursväljaren för ett visst scenario.
 
 För närvarande kan du skicka parametrarna för begäran `Asset Type` (*Bild/Video/Text*) och `Selection mode` (*En/flera*) som sammanhangsberoende information för resursväljaren, som förblir intakt genom hela markeringen.
 
@@ -48,8 +51,8 @@ Du kan skicka följande frågeparametrar i en URL för att starta resursväljare
 
    ![chlimage_1-442](assets/chlimage_1-442.png)
 
-   Om du söker efter resurser med rutan OmniSearch kan du förfina sökningen genom att välja olika filter i rutan **[!UICONTROL Filter]** .
+   Om du söker efter resurser i rutan OmniSearch kan du förfina sökningen genom att välja olika filter i **[!UICONTROL Filters]** rutan.
 
    ![chlimage_1-443](assets/chlimage_1-443.png)
 
-1. Tryck/klicka på **[!UICONTROL Välj]** i verktygsfältet.
+1. Tap/click **[!UICONTROL Select]** from the toolbar.
