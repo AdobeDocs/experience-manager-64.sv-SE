@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 0ce57ab1-e4c6-4c38-963d-556eef8757f2
 translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+workflow-type: tm+mt
+source-wordcount: '197'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
 
 Möjligheten för en community-medlem att följa [aktiviteter](activities.md) samt följa upp dem fastställs i två komponenter: `Follow`och `Following`.
 
-Komponenten `Follow`måste vara associerad med en annan resurs, och den här associationen har redan upprättats för communitymedlemmar och funktioner.
+Komponenten `Follow`måste vara associerad med en annan resurs och den här associationen är redan etablerad för community-medlemmar och -funktioner.
 
 I `Following`komponenten visas bara de medlemmar som antingen följer den aktuella medlemmen eller som följs av den aktuella medlemmen. Det här sociala diagrammet över relationerna mellan medlemmar ingår i den användarprofil som har upprättats för en [communitywebbplats](overview.md#communitiessites).
 
