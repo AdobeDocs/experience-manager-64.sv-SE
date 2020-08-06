@@ -1,8 +1,8 @@
 ---
 title: Skapa en SCF-sandlåda
 seo-title: Skapa en SCF-sandlåda
-description: Den här självstudiekursen är främst avsedd för utvecklare som är nybörjare i AEM och som är intresserade av att använda SCF-komponenter.  Här går vi igenom hur man skapar en SCF-sandlådeplats
-seo-description: Den här självstudiekursen är främst avsedd för utvecklare som är nybörjare i AEM och som är intresserade av att använda SCF-komponenter.  Här går vi igenom hur man skapar en SCF-sandlådeplats
+description: Den här självstudiekursen är främst avsedd för utvecklare som inte är AEM och som är intresserade av att använda SCF-komponenter.  Här går vi igenom hur man skapar en SCF-sandlådeplats
+seo-description: Den här självstudiekursen är främst avsedd för utvecklare som inte är AEM och som är intresserade av att använda SCF-komponenter.  Här går vi igenom hur man skapar en SCF-sandlådeplats
 uuid: ee52e670-e1e6-4bcd-9548-c963142e6704
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: e1b5c25d-cbdd-421c-b81a-feb6039610a3
 translation-type: tm+mt
 source-git-commit: 565604feff7fa365a1c6b52b62a0b0eb681bb192
+workflow-type: tm+mt
+source-wordcount: '523'
+ht-degree: 0%
 
 ---
 
@@ -23,9 +26,9 @@ Från och med AEM 6.1 Communities är det enklaste sättet att snabbt skapa en s
 
 Ett annat användbart verktyg för utvecklare är [Community Components Guide](components-guide.md), som gör det möjligt att utforska och snabbt skapa prototyper för Communities-komponenter och -funktioner.
 
-Att skapa en webbplats kan vara användbart för att förstå strukturen på en AEM-webbplats, som kan innehålla webbgruppsfunktioner, samtidigt som det finns enkla sidor där man kan utforska arbetet med ramverket för [sociala komponenter (SCF)](scf.md).
+Att skapa en webbplats kan vara användbart för att förstå strukturen hos en AEM webbplats, som kan innehålla webbgruppsfunktioner, samtidigt som det finns enkla sidor där man kan utforska arbetet med ramverket för [sociala komponenter (SCF)](scf.md).
 
-Den här självstudiekursen är främst avsedd för utvecklare som är nybörjare i AEM och som är intresserade av att använda SCF-komponenter. Här beskrivs hur du skapar en SCF-sandlådewebbplats, ungefär som självstudiekursen [How to Create a Fully Featured Internet Website](../../help/sites-developing/website.md) , som fokuserar på webbplatsstrukturer som navigering, logotyp, sökning, verktygsfält och listning av underordnade sidor.
+Den här självstudiekursen är främst avsedd för utvecklare som inte är AEM och som är intresserade av att använda SCF-komponenter. Här beskrivs hur du skapar en SCF-sandlådewebbplats, ungefär som självstudiekursen [How to Create a Fully Featured Internet Website](../../help/sites-developing/website.md) , som fokuserar på webbplatsstrukturer som navigering, logotyp, sökning, verktygsfält och listning av underordnade sidor.
 
 Utvecklingen sker i en författarinstans, medan det är bäst att experimentera med webbplatsen i en publiceringsinstans.
 
@@ -46,26 +49,26 @@ Stegen i den här självstudiekursen är:
 
 ## Förutsättningar {#prerequisites}
 
-I den här självstudien antas att du har en AEM-författare och en AEM-publiceringsinstans installerad som har den [senaste versionen](deploy-communities.md#latest-releases) av Communities.
+I den här självstudiekursen antas att du har en AEM författare och en AEM publiceringsinstans installerad som har den [senaste versionen](deploy-communities.md#latest-releases) av Communities.
 
-Nedan följer några praktiska länkar för utvecklare som är nya på AEM-plattformen:
+Nedan följer några praktiska länkar för utvecklare som är nya för den AEM plattformen:
 
-* [Komma igång](../../help/sites-deploying/deploy.md#getting-started) - För distribution av AEM-instanser
+* [Komma igång](../../help/sites-deploying/deploy.md#getting-started) - För distribution AEM instanser
 
    * [Grundläggande information](../../help/sites-developing/the-basics.md) - För utvecklare av webbplatser och funktioner
    * [Steg 1 för författare](../../help/sites-authoring/first-steps.md) - För redigering av sidinnehåll
 
 ## Använda CRXDE Lite Development Environment {#using-crxde-lite-development-environment}
 
-AEM-utvecklare tillbringar mycket tid i utvecklingsmiljön [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) på en författarinstans. CRXDE Lite ger mindre begränsad åtkomst till CRX-databasen. Klassiska användargränssnittsverktyg och pekaktiverade användargränssnittskonsoler ger mer strukturerad åtkomst till specifika delar av CRX-databasen.
+AEM utvecklare tillbringar mycket tid i utvecklingsmiljön i [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) på en författarinstans. CRXDE Lite ger mindre begränsad åtkomst till CRX-databasen. Klassiska användargränssnittsverktyg och pekaktiverade användargränssnittskonsoler ger mer strukturerad åtkomst till specifika delar av CRX-databasen.
 
 När du har loggat in med administratörsbehörighet finns det olika sätt att få åtkomst till CRXDE Lite:
 
-1. Välj Navigeringsverktyg **[!UICONTROL > CRXDE Lite]** i den globala navigeringen.
+1. Välj navigering från global navigering **[!UICONTROL Tools > CRXDE Lite]**.
 
    ![chlimage_1-350](assets/chlimage_1-350.png)
 
-2. På välkomstsidan [för det](http://localhost:4502/welcome.html)klassiska användargränssnittet bläddrar du nedåt och klickar på **[!UICONTROL CRXDE Lite]** i den högra panelen.
+2. Bläddra nedåt från den [klassiska användargränssnittets välkomstsida](http://localhost:4502/welcome.html)och klicka **[!UICONTROL CRXDE Lite]** på den högra panelen.
 
    ![chlimage_1-351](assets/chlimage_1-351.png)
 
