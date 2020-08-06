@@ -1,8 +1,8 @@
 ---
 title: Prestandajustering av AEM Forms-server
 seo-title: Prestandajustering av AEM Forms-server
-description: För att AEM Forms ska fungera optimalt kan du finjustera cacheinställningarna och JVM-parametrarna. Om du använder en webbserver kan prestanda för AEM Forms-distribution förbättras.
-seo-description: För att AEM Forms ska fungera optimalt kan du finjustera cacheinställningarna och JVM-parametrarna. Om du använder en webbserver kan prestanda för AEM Forms-distribution förbättras.
+description: För att AEM Forms ska fungera optimalt kan du finjustera cacheinställningarna och JVM-parametrarna. Om du använder en webbserver kan du dessutom få bättre prestanda vid driftsättning av AEM Forms.
+seo-description: För att AEM Forms ska fungera optimalt kan du finjustera cacheinställningarna och JVM-parametrarna. Om du använder en webbserver kan du dessutom få bättre prestanda vid driftsättning av AEM Forms.
 uuid: 77eaeecc-ca52-4d3d-92e6-1ab4d91b9edd
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Prestandajustering av AEM Forms-server {#performance-tuning-of-aem-forms-server}
 
-I den här artikeln beskrivs strategier och bästa metoder som du kan implementera för att minska flaskhalsar och optimera prestanda för driftsättningen av AEM Forms.
+I den här artikeln beskrivs strategier och bästa metoder som du kan implementera för att minska flaskhalsar och optimera prestandan för din AEM Forms-distribution.
 
 ## Cacheinställningar {#cache-settings}
 
@@ -40,11 +40,11 @@ Standardinställningarna för cacheminnet för AEM Forms kanske inte är tillrä
 * **Cachestorlek** (i antal formulär): Som krävs
 * **Maximal objektstorlek**: Som krävs
 
-![Konfigurationer av mobilformulär](assets/snap.png)
+![Mobile Forms Configurations](assets/snap.png)
 
 >[!NOTE]
 >
->Om du använder AEM Dispatcher för att cachelagra adaptiva formulär cache-lagras även adaptiva formulär som innehåller formulär med förfyllda data. Om sådana formulär hanteras från AEM Dispatcher-cachen kan det leda till att förfyllda eller inaktuella data skickas till användarna. Använd AEM Dispatcher för att cachelagra adaptiva formulär som inte använder förifyllda data. Dessutom gör inte en dispatchercache cachelagrade cachelagrade fragment automatiskt ogiltiga. Använd den alltså inte för att cachelagra formulärfragment. Använd cache för [adaptiva formulär för sådana formulär och fragment](/help/forms/using/configure-adaptive-forms-cache.md).
+>Om du använder AEM Dispatcher för att cachelagra adaptiva formulär cache-lagras även anpassningsbara formulär som innehåller formulär med förfyllda data. Om sådana formulär hanteras från AEM Dispatcher-cachen kan det leda till att förfyllda eller inaktuella data skickas till användarna. Använd AEM Dispatcher för att cachelagra adaptiva formulär som inte använder förfyllda data. Dessutom gör inte en dispatchercache cachelagrade cachelagrade fragment automatiskt ogiltiga. Använd den alltså inte för att cachelagra formulärfragment. Använd cache för [adaptiva formulär för sådana formulär och fragment](/help/forms/using/configure-adaptive-forms-cache.md).
 
 ## JVM-parametrar {#jvm-parameters}
 
@@ -142,38 +142,38 @@ Apache kan kommunicera med CRX med HTTP-protokollet. Konfigurationerna är avsed
 
 ## Använda ett antivirus på en server som kör AEM Forms {#using-an-antivirus-on-server-running-aem-forms}
 
-Du kan uppleva långsam prestanda på servrar som kör ett antivirusprogram. Ett program som alltid använder antivirusprogram (sökningsprogram vid åtkomst) söker igenom alla filer i ett system. Det kan göra servern långsammare och prestanda för AEM Forms påverkas.
+Du kan uppleva långsam prestanda på servrar som kör ett antivirusprogram. Ett program som alltid använder antivirusprogram (sökningsprogram vid åtkomst) söker igenom alla filer i ett system. Det kan göra servern långsammare och AEM Forms prestanda påverkas.
 
-För att förbättra prestanda kan du instruera antivirusprogrammet att utesluta följande AEM Forms-filer och -mappar från genomsökning som alltid är aktiverad (vid åtkomst):
+För att förbättra prestandan kan du instruera antivirusprogrammet att utesluta följande AEM Forms-filer och -mappar från sökningen (vid åtkomst):
 
-* AEM-installationskatalog. Om det inte går att exkludera hela katalogen ska du utelämna följande:
+* AEM installationskatalog. Om det inte går att exkludera hela katalogen ska du utelämna följande:
 
-   * [AEM-installationskatalog]\crx-repository\temp
-   * [AEM-installationskatalog]\crx-repository\repository
-   * [AEM-installationskatalog]\crx-repository\launchpad
+   * [AEM installationskatalog]\crx-repository\temp
+   * [AEM installationskatalog]\crx-repository\repository
+   * [AEM installationskatalog]\crx-repository\launchpad
 
 * Programserverns tillfälliga katalog. Standardplatsen är:
 
-   * (Jboss) [AEM-installationskatalog]\jboss\standalone\tmp
+   * (Jboss) [AEM installationskatalog]\jboss\standalone\tmp
    * (Weblogic) \Oracle\Middleware\user_projects\domains\LCDomain\servers\LCServer1\tmp
    * (Websphere) \Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\temp
 
-* **(AEM Forms on JEE only)** Global Document Storage (GDS)-katalog. Standardplatsen är:
+* **(Endast AEM Forms på JEE)** GDS-katalog (Global Document Storage). Standardplatsen är:
 
    * (JBoss) `[appserver root]/server/[server]/svcnative/DocumentStorage`
    * (WebLogic) `[appserverdomain]/[server]/adobe/LiveCycleServer/DocumentStorage`
    * (WebSphere) `[appserver root]/installedApps/adobe/[server]/DocumentStorage`
 
-* **(Endast AEM Forms på JEE)** AEM Forms-serverloggar och tillfällig katalog. Standardplatsen är:
+* **(Endast AEM Forms på JEE)** AEM Forms serverloggar och tillfällig katalog. Standardplatsen är:
 
    * Serverloggar - `[AEM Forms installation directory]\Adobe\AEM forms\[app-server]\server\all\logs`
-   * Temp-katalog - installationskatalog [för]AEM Forms\temp
+   * Temp-katalog - [AEM Forms installationskatalog]\temp
 
 >[!NOTE]
 >
 >* Om du använder en annan plats för GDS och en tillfällig katalog öppnar du AdminUI på `https://[server]:[port]/adminui)`och går till **Hem > Inställningar > Core System Settings > Core Configurations** för att bekräfta platsen som används.
 
-* Om AEM Forms-servern fungerar långsamt även efter att de föreslagna katalogerna har utelämnats ska du även utelämna den körbara Java-filen (java.exe).
+* Om AEM Forms-servern fungerar långsamt även efter att de föreslagna katalogerna har utelämnats, ska du även utelämna den körbara Java-filen (java.exe).
 
 
 
