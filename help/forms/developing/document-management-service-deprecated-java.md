@@ -24,7 +24,7 @@ Följande snabbstarter är tillgängliga för dokumenthanteringstjänsten (bortt
 
 >[!NOTE]
 >
->Från och med 5 augusti 2011 migrerar Adobe Content Services ES-kunder till Adobe Digital Enterprise Platform Experience Services. Produktens färdplan för kunder som använder Content Services är att gå över till den nya ADEP Experience Services - Core, som innehåller en inbyggd Content Repository som bygger på den moderna, modulära CRX-arkitekturen, som förvärvats under Adobes förvärv av Day Software.
+>Från och med den 5 augusti 2011 migrerar Adobe Content Services ES-kunder till Adobe Digital Enterprise Platform Experience Services. Produktens färdplan för kunder som använder Content Services är att gå över till den nya ADEP Experience Services - Core, som innehåller en inbyggd Content Repository som bygger på den moderna, modulära CRX-arkitekturen, som förvärvades under Adobe-förvärvet av Day Software.
 
 [Snabbstart (SOAP-läge): Skapa Content Services-space med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated)
 
@@ -42,11 +42,11 @@ Följande snabbstarter är tillgängliga för dokumenthanteringstjänsten (bortt
 
 [Snabbstart (SOAP-läge): Ange behörigheter för innehållstjänster med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstart i Programmering med AEM-formulär baseras på den Forms Server som distribueras på JBoss och operativsystemet Windows. Om du använder ett annat operativsystem, t.ex. UNIX, kan du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart i Programmering med AEM baseras på Forms Server som distribueras på JBoss och Windows. Om du använder ett annat operativsystem, t.ex. UNIX, kan du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Skapa innehållstjänstutrymmen med Java API (inaktuellt) {#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}
 
