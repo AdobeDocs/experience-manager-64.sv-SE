@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: dafe26ae-b2c5-4070-b8b1-cc1da147b464
 translation-type: tm+mt
 source-git-commit: 8e2bd579e4c5edaaf86be36bd9d81dfffa13a573
+workflow-type: tm+mt
+source-wordcount: '2172'
+ht-degree: 0%
 
 ---
 
@@ -75,8 +78,9 @@ Följ de här stegen för att konvertera en eller flera dialogrutor:
 
    Tabellen visar alla befintliga äldre dialogrutor under den angivna sökvägen. Varje dialogruta har sin Type. Typer:
 
-   * **** Klassisk: Noder av typen `cq:Dialog` som har nodnamn `dialog` eller `design_dialog`
-   * **** Korall 2: Noder med namnet `cq:dialog` eller `cq:design_dialog` som har resurstypen Granite/Coral 2 i sin underordnade innehållsnod
+   * **Klassisk:** Noder av typen `cq:Dialog` som har nodnamn `dialog` eller `design_dialog`
+   * **Korall 2:** Noder med namnet `cq:dialog` eller `cq:design_dialog` som har resurstypen Granite-gränssnitt/Coral 2 i sin underordnade innehållsnod
+
    Varje rad innehåller en länk för att visa dialogrutan och en länk till CRXDE Lite för att visa nodstrukturen.
 
    >[!NOTE]
@@ -113,7 +117,7 @@ Verktyget för konvertering av dialog använder det här sättet för att skriva
 
 Omskrivningsalgoritmen tar som parameter trädet som ska skrivas om och en uppsättning omskrivningsregler. Trädet genomkorsas i förordning och för varje nod kontrolleras om en regel gäller för det underträd som är rotat i den noden. Den första matchande regeln tillämpas på det underträdet för att det ska kunna skrivas om. Traversalen startar sedan om från roten. Algoritmen stoppas så snart hela trädet har genomkortits och ingen regel har matchat något underträd. Som optimeringsåtgärd håller algoritmen reda på en uppsättning noder som är slutgiltiga och behöver därför inte kontrolleras om det finns matchningar i efterföljande genomgångar. Det är upp till reglerna för omskrivning som definierar vilka noder i det omskrivna trädet som är slutgiltiga och vilka som bör omskrivas av framtida delar av algoritmen.
 
-Startpunkten för konverteringen är `DialogConversionServlet`, som registreras på POST-begäranden till `/libs/cq/dialogconversion/content/convert.json`. Den accepterar en sökvägsparameter, som är en array som innehåller sökvägarna till dialogrutorna som ska konverteras. För varje dialogruta skriver servern sedan om motsvarande dialogträd genom att tillämpa alla definierade regler för omskrivning av dialogrutor.
+Startpunkten för konverteringen är `DialogConversionServlet`, som registreras på POSTENS begäran till `/libs/cq/dialogconversion/content/convert.json`. Den accepterar en sökvägsparameter, som är en array som innehåller sökvägarna till dialogrutorna som ska konverteras. För varje dialogruta skriver servern sedan om motsvarande dialogträd genom att tillämpa alla definierade regler för omskrivning av dialogrutor.
 
 ### Skriv om regeltyper {#rewrite-rule-types}
 
