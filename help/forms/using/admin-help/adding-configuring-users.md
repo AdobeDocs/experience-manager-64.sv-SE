@@ -72,7 +72,7 @@ Undvik att använda understreck (_) i kanoniska namn, till exempel `sample_user`
 
 **Språk:** Användarens ISO-språk
 
-**Affärskalendernyckel:** Ger dig möjlighet att mappa en affärskalender till en användare baserat på värdet för den här inställningen. Affärskalendrar definierar affärsdagar och icke-affärsdagar. AEM-formulär kan använda affärskalendrar vid beräkning av framtida datum och tidpunkter för händelser som påminnelser, deadlines och eskalering. Hur du tilldelar användare affärskalendernycklar beror på om du använder en företagsdomän, lokal domän eller hybriddomän. (Se [Lägga till domäner](/help/forms/using/admin-help/adding-domains.md#adding-domains).)
+**Affärskalendernyckel:** Ger dig möjlighet att mappa en affärskalender till en användare baserat på värdet för den här inställningen. Affärskalendrar definierar affärsdagar och icke-affärsdagar. AEM kan använda affärskalendrar vid beräkning av framtida datum och tidpunkter för händelser som påminnelser, deadlines och eskalering. Hur du tilldelar användare affärskalendernycklar beror på om du använder en företagsdomän, lokal domän eller hybriddomän. (Se [Lägga till domäner](/help/forms/using/admin-help/adding-domains.md#adding-domains).)
 
 Om du använder en lokal domän eller hybriddomän lagras information om användare endast i databasen för användarhantering. För de här användarna anger du en sträng i Business Calendar Key. Mappa sedan affärsbokskalenyckeln (strängen) till en affärskalender i formulärarbetsflödet.
 
@@ -88,7 +88,7 @@ I företagsdomäner använder du ett icke-DN-attribut som användar-ID eftersom 
 
 Kontrollera att användar-ID:t är unikt. Använd inte en som tilldelats en borttagen användare.
 
-AEM-formulär kan inte skilja mellan användarkonton som har identiska användar-ID:n och lösenord, men som tillhör olika domäner. För att undvika det här problemet ska du inte skapa konton som har samma användar-ID på flera domäner.
+AEM kan inte skilja mellan användarkonton som har identiska användar-ID:n och lösenord, men som tillhör olika domäner. För att undvika det här problemet ska du inte skapa konton som har samma användar-ID på flera domäner.
 
 När du använder SQL Server som databas kan du inte skapa ett användar-ID som är längre än 255 tecken.
 
@@ -131,6 +131,7 @@ Undvik att skapa användarnamn som börjar med ett nummertecken (#). Vid uppgift
 
    * Klicka **[!UICONTROL Find Group]** och fyll i sökinformationen.
    * Om du vill lägga till användaren i en ny grupp markerar du kryssrutan för gruppen, klickar på **[!UICONTROL OK]** och sedan på **[!UICONTROL Save]**.
+
    >[!NOTE]
    >
    >Lokala användare kan inte läggas till i kataloggrupper. Kataloganvändare kan dock läggas till i lokala grupper.
@@ -158,16 +159,16 @@ Undvik att skapa användarnamn som börjar med ett nummertecken (#). Vid uppgift
 
 >[!NOTE]
 >
->Med AEM Forms på JEE kan även användare av AEM-formulärtillägg som körs på en OSGi identifieras som AEM-användare. Detta krävs för scenarier där enkel inloggning mellan AEM Forms på JEE- och AEM-formulär som körs på en OSGi krävs (till exempel HTML-arbetsyta). Ovannämnda borttagningsåtgärd tar endast bort en användare från AEM Forms på JEE. Användaren tas inte bort från tillägget AEM Forms som körs i OSGi-miljön. Alla inloggningsförsök som görs efter att användaren har tagits bort (ett inloggningsförsök till JEE-servern med tillägget AEM Forms eller tillägget AEM Forms i OSGi-miljön) nekas.
+>AEM Forms på JEE tillåter även användare av AEM formulär som körs på en OSGi att identifieras som AEM användare. Detta krävs för scenarier där enkel inloggning mellan AEM Forms på JEE och AEM formulär som körs på en OSGi krävs (till exempel HTML-arbetsyta). Ovannämnda borttagningsåtgärd tar endast bort en användare från AEM Forms på JEE. Användaren tas inte bort från AEM Forms-tillägget som körs i OSGi-miljön. Alla inloggningsförsök som görs efter att användaren har tagits bort (ett inloggningsförsök till AEM Forms JEE-tilläggsserver eller AEM Forms-tillägg i OSGi-miljö) nekas.
 
 ## Skapa felhanterare för anpassad inloggning {#create-custom-login-error-handler}
 
-Om en användare saknar de AEM-formulär och CQ-behörigheter som krävs försöker logga in i följande program som är inbäddade i CQ, dirigeras användaren till standardsidan för CQ 404 som innehåller felspårningen:
+Om en användare utan de obligatoriska AEM och CQ-behörigheterna försöker logga in i följande program som är inbäddade i CQ, dirigeras användaren till standardsidan för CQ 404 som innehåller felspårningen:
 
 * Correspondence Management-lösning
-* AEM-formulärarbetsyta
+* Arbetsytan AEM formulär
 
-   ***Obs **! Flex Workspace används inte i AEM-formulärsversioner.*
+   ***Obs **! Flex Workspace är föråldrat för AEM formulärreleaser.*
 
 * formulärhanterare
 * Processrapportering
