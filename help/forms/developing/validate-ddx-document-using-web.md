@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: a6fe91ab-3aa0-4b3d-87c0-6cf69a2c4cc4
 translation-type: tm+mt
 source-git-commit: e3fcf1a117b13392b7e530a09198982c6160cb7b
+workflow-type: tm+mt
+source-wordcount: '626'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ Validera ett DX-dokument med Assembler Service API (webbtjänsten):
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `AssemblerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -52,7 +55,7 @@ Validera ett DX-dokument med Assembler Service API (webbtjänsten):
 
    * Skapa ett `AssemblerOptionSpec` objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
    * Ange det körningsalternativ som instruerar Assembler-tjänsten att validera DDX-dokumentet genom att tilldela värdet true till `AssemblerOptionSpec` objektets `validateOnly` datamedlem.
-   * Ange den mängd information som Assembler-tjänsten skriver till loggfilen genom att tilldela ett strängvärde till `AssemblerOptionSpec` objektets `logLevel` datamedlem. -metod När du validerar ett DX-dokument vill du att mer information ska skrivas till loggfilen som ska vara till hjälp vid valideringsprocessen. Du kan alltså ange värdet `FINE` eller `FINER`. Mer information om de körningsalternativ du kan ange finns i klassreferensen `AssemblerOptionSpec` i API-referens [för](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)AEM Forms.
+   * Ange den mängd information som Assembler-tjänsten skriver till loggfilen genom att tilldela ett strängvärde till `AssemblerOptionSpec` objektets `logLevel` datamedlem. -metod När du validerar ett DX-dokument vill du att mer information ska skrivas till loggfilen som ska vara till hjälp vid valideringsprocessen. Du kan alltså ange värdet `FINE` eller `FINER`. Mer information om alternativ för körning som du kan ange finns i klassreferensen ( `AssemblerOptionSpec` class reference) i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 1. Utför valideringen.
 
@@ -61,7 +64,8 @@ Validera ett DX-dokument med Assembler Service API (webbtjänsten):
    * Ett `BLOB` objekt som representerar DDX-dokumentet.
    * Värdet `null` för det `Map` objekt som vanligtvis lagrar PDF-dokument.
    * Ett `AssemblerOptionSpec` objekt som anger körningsalternativ.
-   Metoden returnerar ett `invokeDDX` `AssemblerResult` objekt som innehåller information som anger om DDX-dokumentet är giltigt.
+
+   Metoden returnerar `invokeDDX` ett `AssemblerResult` objekt som innehåller information som anger om DDX-dokumentet är giltigt.
 
 1. Spara valideringsresultaten i en loggfil.
 
@@ -70,6 +74,7 @@ Validera ett DX-dokument med Assembler Service API (webbtjänsten):
    * Skapa en bytearray som lagrar innehållet i `BLOB` objektet. Fyll i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` fält.
    * Skapa ett `System.IO.BinaryWriter` objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream` objektet.
    * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` metod och skicka bytearrayen.
+
    >[!NOTE]
    >
    >Om DDX-dokumentet är ogiltigt `OperationException` genereras ett fel. I catch-satsen kan du hämta värdet för `OperationException` objektets `jobLog` medlem.
@@ -78,4 +83,4 @@ Validera ett DX-dokument med Assembler Service API (webbtjänsten):
 
 [Validerar DDX-dokument](/help/forms/developing/validating-ddx-documents.md#validating-ddx-documents)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
