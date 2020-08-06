@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 70be208d-185b-4b27-8e01-74e62f656344
 translation-type: tm+mt
 source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+workflow-type: tm+mt
+source-wordcount: '272'
+ht-degree: 1%
 
 ---
 
@@ -59,9 +62,9 @@ Ett sätt att göra detta är att
 
 * Från huvudmenyn
 
-   * Välj **[!UICONTROL Verktyg > Åtgärder > Replikering]**
+   * Välj **[!UICONTROL Tools > Operations > Replication]**
    * Välj `Activate Tree`
-   * Uppsättning `Start Path`:till `/apps/custom`
+   * Uppsättning `Start Path`: till `/apps/custom`
    * Avmarkera `Only Modified`
    * Markera `Activate` knapp
 
