@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 071cac6d-05c5-47ab-85bc-ead6693ca1f4
 translation-type: tm+mt
 source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+workflow-type: tm+mt
+source-wordcount: '234'
+ht-degree: 1%
 
 ---
 
@@ -35,15 +38,21 @@ Markera den monterade `Voting` komponent som du vill öppna och välj den `Confi
 
 ![chlimage_1-308](assets/chlimage_1-308.png)
 
-Under fliken **[!UICONTROL Texter och etiketter]** anger du vilka egenskaper som ska användas för röstinspelning.
+Ange de egenskaper som ska användas för att spela in röster på fliken **[!UICONTROL Texts & Labels]** .
 
 ![chlimage_1-309](assets/chlimage_1-309.png)
 
-* **[!UICONTROL Positiv svarsetikett]**(*obligatoriskt*) Det interna egenskapsnamnet för ett positivt svar.
+* **[!UICONTROL Positive Response Label]**
+(
+*Obligatoriskt*) Det interna egenskapsnamnet för ett positivt svar.
 
-* **[!UICONTROL Negativ svarsetikett]**(*obligatoriskt*) Det interna egenskapsnamnet för ett negativt svar.
+* **[!UICONTROL Negative Response Label]**
+(
+*Obligatoriskt*) Det interna egenskapsnamnet för ett negativt svar.
 
-* **[!UICONTROL Tally Name]**(*Required*) The internal, identifier identifier property name for this instance of a vobe component.
+* **[!UICONTROL Tally Name]**
+(
+*Obligatoriskt*) Det interna, identifierbara egenskapsnamnet för den här instansen av en röstkomponent.
 
 ## Site Visitor Experience {#site-visitor-experience}
 
