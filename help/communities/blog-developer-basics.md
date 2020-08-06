@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: de8d0e6d-827b-45fe-a538-d3fe1dec8427
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 0%
 
 ---
 
@@ -91,7 +94,7 @@ En community-webbplatsstruktur som innehåller [bloggfunktionen](functions.md#bl
 UGC bör modereras med någon av standardmetoderna för moderering.\
 Se [Moderera användargenererat innehåll](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (t.ex. ASRP, MSRP eller JSRP).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
@@ -110,9 +113,9 @@ Mer information finns i [Primär utgivare](deploy-communities.md#primary-publish
 
 ## Tillåta multimedia {#allowing-rich-media}
 
-AEM-plattformen blockerar länkar från andra webbplatser för att förhindra XSS-attacker enligt beskrivningen i
+Den AEM plattformen blockerar länkar från andra webbplatser för att förhindra XSS-attacker enligt beskrivningen i
 
-* [Skydda mot XSS (Cross-Site Scripting)](../../help/sites-developing/security.md#protect-against-cross-site-scripting-xss)
+* [Protect mot XSS (Cross-Site Scripting)](../../help/sites-developing/security.md#protect-against-cross-site-scripting-xss)
 
 Från och med AEM 6.2 inkluderas de ändringar som tidigare krävdes för att göras manuellt i standardkonfigurationsfilen för AntiSamy.
 
