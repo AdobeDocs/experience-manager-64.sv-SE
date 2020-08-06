@@ -2,7 +2,7 @@
 title: SharePoint-anslutning
 seo-title: SharePoint-anslutning
 description: Day JCR Connector för Microsoft SharePoint 2010 och Microsoft SharePoint 2013, version 4.0.
-seo-description: Läs mer om Sharepoint Connector i AEM.
+seo-description: Läs mer om SharePoint Connector i AEM.
 uuid: 2f3b90f9-ec6b-4808-bbd4-20e67b6a7573
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -29,7 +29,7 @@ SharePoint-anslutningen stöder följande grundfunktioner:
 * Läser innehåll och metadata från SharePoint.
 * Bekräftar SharePoint-säkerhetsinställningar för åtkomst av innehåll genom att tillämpa intern SharePoint-autentisering och -auktorisering
 * Innehållsintegrering med Content Finder
-* Använda AEM-komponenter, till exempel Extern resurs, för att visa SharePoint-bilder och -videor
+* Använda AEM, t.ex. Extern resurs, för att visa SharePoint-bilder och -videor
 * Synkroniserar SharePoint med AEM Assets
 
 Alla funktioner implementeras med SharePoint-webbtjänster som gränssnitt till SharePoint-innehåll och -tjänster.
@@ -56,7 +56,7 @@ Så här kommer du igång med anslutningen:
 ## Installerar SharePoint-anslutning {#installing-sharepoint-connector}
 
 Kopplingen är ett innehållspaket som underlättar enkel installation. Installera paketet med hjälp av Pakethanteraren och ange sedan URL-adressen för SharePoint-servern\
-och andra konfigurationsalternativ. SharePoint-innehållet är tillgängligt i AEM-databasen.
+och andra konfigurationsalternativ. SharePoint-innehållet är tillgängligt i AEM.
 
 ### Installationskrav {#installation-requirements}
 
@@ -74,7 +74,7 @@ SharePoint-anslutningen är tillgänglig för hämtning från [paketdelning](htt
 
 Kopplingen stöder följande:
 
-* AEM-versioner:
+* AEM versioner:
 
    * AEM 6.4, 6.3
 
@@ -83,7 +83,7 @@ Kopplingen stöder följande:
    * Microsoft Office SharePoint Server (MOSS) 2010
    * Microsoft Office SharePoint Server (MOSS) 2013
 
-* Om du behöver support för anpassad driftsättning av anslutningsprogrammet (OEM, särskilda krav, anpassade autentiseringsmetoder) kontaktar du Adobe-kontoret i din region.
+* Om du behöver support för anpassad driftsättning av anslutningsprogrammet (OEM, särskilda krav, anpassade autentiseringsmetoder) kontaktar du Adobe-kontoret i ditt område.
 
 >[!NOTE]
 >
@@ -93,14 +93,14 @@ Kopplingen stöder följande:
 
 AEM Package Share används för att distribuera produktfunktioner, exempel och snabbkorrigeringar. Mer information finns i dokumentationen [för](/help/sites-administering/package-manager.md#package-share)paketdelning.
 
-Tryck/klicka på **Verktyg** och välj sedan **Paketresurs** för att öppna Paketdelning på AEM-välkomstsidan. Du behöver ett giltigt Adobe ID som innehåller företagets e-postadress. När du har loggat in på ditt konto ansöker du dessutom om åtkomst till paketdelning.
+Om du vill få åtkomst till paketresursen på AEM välkomstsida trycker/klickar du på **Verktyg** och väljer sedan **Paketresurs**. Du behöver en giltig Adobe ID som innehåller företagets e-postadress. När du har loggat in på ditt konto ansöker du dessutom om åtkomst till paketdelning.
 
 #### Integrera med AEM {#integrating-with-aem}
 
 Så här installerar du innehållspaketet för anslutningsprogrammet.
 
 1. Öppna en Adobe Support-biljett och begär anslutningsfunktionen.
-1. Hämta paketet när det är tillgängligt och öppna sedan Package Manager för din AEM-instans.
+1. Hämta paketet när det är tillgängligt och öppna sedan Package Manager för AEM.
 1. Tryck/klicka på **Installera** på paketbeskrivningssidan.
 1. I dialogrutan **Installera paket** trycker/klickar du på **Installera**.
 
@@ -135,9 +135,9 @@ Kopplingen kan även konfigureras för flera arbetsytor. I det här fallet är v
 `<name>` är namnet på JCR-arbetsytan och\
 `<url>` är URL-adressen till SharePoint-servern för den arbetsytan.
 
-I AEM utför du ett steg till utöver konfigurationsstegen ovan. Tillåt lista med paketet &#39;**com.day.cq.dam.cq-dam-jcr-connectors**&#39;.
+I AEM utför du ett steg till utöver konfigurationsstegen ovan. Tillåtelselista i paketet &#39;**com.day.cq.dam.cq-dam-jcr-connectors**&#39;.
 
-Så här tillåter du listpaket i AEM:
+Gör så här för att tillåtelselista-paket i AEM:
 
 1. Gå till OSGi Management Console: http://localhost:4502/system/console/configMgr.
 
@@ -194,21 +194,21 @@ Du kan också konfigurera synkroniseringsfördröjningen mellan olika synkronise
 SharePoint innehåller klassiska och anspråksbaserade autentiseringsmetoder, som båda stöder följande autentiseringstyper:
 
 * Grundläggande
-* Formulärbaserad
+* Forms-baserad
 
 Bland annat finns följande typer av autentisering:
 
 * Classic-Basic
-* Klassisk-formulärbaserad
+* Klassisk-Forms-baserad
 * Claims-Basic
-* Anspråksblanketter-baserade
+* Claims-Forms-based
 
 AEM JCR Connector för Microsoft SharePoint 2010 och Microsoft SharePoint 2013, version 4.0. har stöd för anspråksbaserad autentisering (som föreslås av Microsoft) som fungerar i följande lägen:
 
 * **Grundläggande/NTLM-autentisering**: Kopplingen försöker först ansluta med grundläggande autentisering. Om den inte är tillgänglig växlar den till NTLM-baserad autentisering.
-* **Formulärbaserad autentisering**: SharePoint validerar användare baserat på inloggningsuppgifter som användare skriver i ett inloggningsformulär (vanligtvis en webbsida). Systemet utfärdar en token för autentiserade begäranden som innehåller en nyckel för att återupprätta identiteten för efterföljande begäranden.
+* **Forms-baserad autentisering**: SharePoint validerar användare baserat på inloggningsuppgifter som användare skriver i ett inloggningsformulär (vanligtvis en webbsida). Systemet utfärdar en token för autentiserade begäranden som innehåller en nyckel för att återupprätta identiteten för efterföljande begäranden.
 
-**Konfigurerar formulärbaserad autentisering**
+**Konfigurerar Forms-baserad autentisering**
 
 Gå till: [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 
@@ -230,7 +230,7 @@ Gå till: [http://localhost:4502/system/console/bundles](http://localhost:4502/s
 
 Endast användare som är autentiserade på både AEM och SharePoint kan komma åt SharePoint-innehållet via anslutningen.
 
-Du kan också använda anslutningstillägget för autentisering för att skapa en anpassad autentiseringsmodul, som t.ex. mappar AEM-användares åtkomst till specifika SharePoint-användare. Skapa AEM-användare som motsvarar SharePoint-användare (användarnamn och lösenord måste matcha) för att kunna se SharePoint-innehåll som mappas till kopplingsinstansen.
+Du kan också använda anslutningstillägget för autentisering för att skapa en anpassad autentiseringsmodul, som t.ex. mappar åtkomsten för AEM till specifika SharePoint-användare. Skapa AEM användare som motsvarar SharePoint-användare (användarnamn och lösenord måste matcha) för att kunna se SharePoint-innehåll som är mappat till kopplingsinstansen.
 
 Så här skapar du en användare i AEM:
 
@@ -264,7 +264,7 @@ Så här lägger du till användaren i administratörsgruppen:
 
 #### Stöd för olika autentiseringsmetoder i SharePoint-servern {#supporting-different-authentication-methods-of-the-sharepoint-server}
 
-I standardversionen har kopplingen stöd för standardautentisering i IIS **Windows** (Basic) och formulärbaserad autentisering (tokenbaserad). De [andra autentiseringsmetoderna](https://technet.microsoft.com/en-us/library/cc262350.aspx#section2) kan stödjas via utökningsmekanismen.
+I standardversionen stöder anslutningsprogrammet IIS **Windows** -standardautentisering (Basic) och Forms-baserad autentisering (tokenbaserad). De [andra autentiseringsmetoderna](https://technet.microsoft.com/en-us/library/cc262350.aspx#section2) kan stödjas via utökningsmekanismen.
 
 Följande steg innehåller riktlinjer om hur du utökar standardautentiseringen så att den stöder olika autentiseringsmetoder i SharePoint-servern:
 
