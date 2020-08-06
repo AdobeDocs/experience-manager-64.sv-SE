@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: d5dac1db-2dde-4b75-a31b-e057b447f6e2
 translation-type: tm+mt
 source-git-commit: 8e2bd579e4c5edaaf86be36bd9d81dfffa13a573
+workflow-type: tm+mt
+source-wordcount: '558'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 8e2bd579e4c5edaaf86be36bd9d81dfffa13a573
 
 När du skapar en anpassad tabell i Adobe Campaign kanske du vill skapa ett formulär i AEM som mappar till den anpassade tabellen.
 
-I det här dokumentet beskrivs hur du skapar anpassade formulärmappningar. När du har slutfört stegen i det här dokumentet kommer du att förse dina användare med en eventsida där de kan registrera sig för ett kommande evenemang. Därefter följer ni upp med dessa användare via Adobe Campaign.
+I det här dokumentet beskrivs hur du skapar anpassade formulärmappningar. När du har slutfört stegen i det här dokumentet kommer du att förse dina användare med en eventsida där de kan registrera sig för ett kommande evenemang. Därefter följer du upp med dessa användare via Adobe Campaign.
 
 ## Förutsättningar {#prerequisites}
 
@@ -38,7 +41,7 @@ Om du vill skapa anpassade formulärmappningar måste du följa dessa steg på h
 1. Utöka **startvärdestabellen** .
 1. Skapa en anpassad mappning.
 1. Skapa en leverans baserat på den anpassade mappningen.
-1. Bygg formuläret i AEM, som kommer att använda den skapade leveransen.
+1. Bygg formuläret i AEM, som ska använda den skapade leveransen.
 1. Skicka formuläret för att testa det.
 
 ### Skapa en anpassad tabell i Adobe Campaign {#creating-the-custom-table-in-adobe-campaign}
@@ -58,7 +61,7 @@ När du har skapat händelsetabellen kör du guiden **** Uppdatera databasstrukt
 
 ### Utöka dirigeringstabellen {#extending-the-seed-table}
 
-I Adobe Campaign trycker/klickar du på **Lägg** till för att skapa ett nytt tillägg för tabellen **dirigeringsadresser (nms)** .
+I Adobe Campaign: tryck/klicka på **Lägg** till för att skapa ett nytt tillägg till tabellen **dirigeringsadresser (nms)** .
 
 ![chlimage_1-194](assets/chlimage_1-194.png)
 
@@ -89,15 +92,15 @@ Gå till **Målmappningar** i **Administration/** Kampanjhantering och lägg til
 
 I det här steget lägger du till en leveransmall som använder den skapade **målmappningen**.
 
-I **Resurser/mallar** navigerar du till leveransmallen och duplicerar den befintliga AEM-leveransen. När du klickar på **Till** väljer du **Skapa händelsemålsmappning**.
+I **Resurser/mallar** navigerar du till leveransmallen och duplicerar den befintliga AEM. När du klickar på **Till** väljer du **Skapa händelsemålsmappning**.
 
 ![chlimage_1-196](assets/chlimage_1-196.png)
 
 ### Bygga formuläret i AEM {#building-the-form-in-aem}
 
-Kontrollera att du har konfigurerat en molntjänst i **Sidegenskaper** i AEM.
+I AEM kontrollerar du att du har konfigurerat en Cloud Service i **Sidegenskaper**.
 
-På fliken **Adobe Campaign** väljer du sedan den leverans som skapades när du [skapade en anpassad leveransmall](#creating-a-custom-delivery-template).
+På fliken **Adobe Campaign** väljer du sedan den leverans som skapades i [Skapa en anpassad leveransmall](#creating-a-custom-delivery-template).
 
 ![chlimage_1-197](assets/chlimage_1-197.png)
 
