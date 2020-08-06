@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 5b044519-d034-4f05-98c5-f1b299a3ea37
 translation-type: tm+mt
 source-git-commit: 8c6fdcea0def7720062edfc564c536f8d47e8402
+workflow-type: tm+mt
+source-wordcount: '673'
+ht-degree: 0%
 
 ---
 
@@ -27,19 +30,19 @@ Se [Redigera sidinnehåll](/help/sites-authoring/qg-page-authoring.md#editing-yo
 
 * **Val** av renderare.
 
-   Standardrenderaren för Rapid Refine™ i AEM 3D ger en viss kvalitet som ger kortare renderingstider. Det ger ändå högkvalitativa resultat för många program. Återgivare som tillhandahålls via tredjepartsprogram (t.ex. V-Ray™ eller NVIDIA® Mental Ray® som används i Autodesk® Maya® eller Autodesk® 3ds Max®) är i stort konfigurerbara och prestanda-/kvalitetshandel görs när scenen utformas.
+   Standardrenderaren för Rapid Refine™ i AEM 3D ger viss kvalitet vilket ger kortare renderingstider. Det ger ändå högkvalitativa resultat för många program. Återgivare som tillhandahålls via tredjepartsprogram (t.ex. V-Ray™ eller NVIDIA® Mental Ray® som används i Autodesk® Maya® eller Autodesk® 3ds Max®) är i stort konfigurerbara och prestanda-/kvalitetshandel görs när scenen utformas.
 
 * **IBL jämfört med traditionell belysning**.
 
    Även om den här faktorn har mindre betydelse för standardåtergivningen av Rapid Refine, går det betydligt långsammare att återge tredjepartsrenderare som Mental Ray med IBL-stadier än med traditionella punkt- eller spotlights.
 
-Renderingen Snabb förfining tar normalt några minuter att återge större bilder. Återgivare från tredje part tar ofta många minuter, till och med timmar, när de är konfigurerade för maximal kvalitet.
+Renderingen Snabb förfining tar normalt några minuter att återge större bilder. Återgivare från tredje part tar ofta många minuter, till och med timmar, när de konfigureras för maximal kvalitet.
 
 Konverterings-, bearbetnings- och renderingsjobb köas på servern efter behov för att förhindra serveröverbelastning. Meddelandet&quot;Väntar på återgivning..&quot; visas på nyligen överförda resurser i kortvyn. Den här statusen anger att andra behandlings- eller återgivningsjobb måste slutföras innan det aktuella återgivningsjobbet kan startas.
 
 >[!NOTE]
 >
->En 3D-resurs återges alltid med det ursprungliga materialet, oavsett vilket material som visas i den interaktiva vyn i AEM 3D. Den här funktionaliteten gäller både den inbyggda renderaren Rapid Refine och alla inbyggda renderare.
+>En 3D-resurs återges alltid med det ursprungliga materialet, oavsett vilket material som visas i den AEM interaktiva 3D-vyn. Den här funktionaliteten gäller både den inbyggda renderaren Rapid Refine och alla inbyggda renderare.
 
 **Så här återger du 3D-resurser**:
 
@@ -47,23 +50,23 @@ Konverterings-, bearbetnings- och renderingsjobb köas på servern efter behov f
 
    Se [Visa 3D-resurser](viewing-3d-assets.md).
 
-1. Tryck på **[!UICONTROL Resurser]** på **[!UICONTROL navigeringssidan i Adobe Experience Manager]**.
-1. I närheten av det övre högra hörnet på sidan, i listrutan **[!UICONTROL Visa]** , trycker du på **[!UICONTROL kortvyn]**.
+1. Tryck på Adobe Experience Manager på **[!UICONTROL Navigation]** sidan **[!UICONTROL Assets]**.
+1. Near the upper-right corner of the page, from the **[!UICONTROL View]** drop-down list, tap **[!UICONTROL Card View]**.
 1. Navigera till ett 3D-objekt som du vill återge.
 1. Tryck på 3D-objektets kort för att öppna det på sidan med resursinformation.
-1. I närheten av sidans övre vänstra hörn trycker du på listrutan och väljer sedan **[!UICONTROL Återgivning]**.
+1. Near the upper-left corner of the page, tap the drop-down list, then select **[!UICONTROL Render]**.
 
    ![chlimage_1-369](assets/chlimage_1-369.png)
 
-1. I närheten av det övre högra hörnet på sidan med resursinformation trycker du på ikonen **[!UICONTROL Scenväljare]** (spotlight) och väljer sedan ett scennamn med bakgrunden och ljuset som du vill använda på 3D-objektet.
+1. I närheten av det övre högra hörnet på sidan med resursinformation trycker du på **[!UICONTROL Stage Selector]** -ikonen (spotlight) och väljer sedan ett scennamn med bakgrunden och ljuset som du vill använda på 3D-objektet.
 
    Se [Använda scener i AEM 3D](about-the-use-of-stages-in-aem-3d.md).
 
    ![chlimage_1-370](assets/chlimage_1-370.png)
 
-   **[!UICONTROL Ikon för]** scenväljare
+   **[!UICONTROL Stage Selector]** icon
 
-1. Välj en renderare i listrutan **[!UICONTROL Återgivning]** till vänster på sidan med resursinformation.
+1. Välj en återgivare i listrutan till vänster på sidan med resursinformation. **[!UICONTROL Render]**
 
    Standardrenderaren för **Snabb förfining** är alltid tillgänglig. Om den scen du har valt är i ett ursprungligt format, blir motsvarande tredjepartsrenderare även tillgänglig i listan så att du kan välja den.
 
@@ -71,20 +74,20 @@ Konverterings-, bearbetnings- och renderingsjobb köas på servern efter behov f
 
 1. Gör följande:
 
-   * I fälten **[!UICONTROL Bredd]** och **[!UICONTROL Höjd]** anger du pixelbredden och -höjden som du vill att bilden ska återges.
-   * Ange namnet på den återgivna bilden i fältet **[!UICONTROL Bildnamn]** .
-   * I fältet **[!UICONTROL Exportsökväg]** anger du sökvägen där du vill att den återgivna bilden ska lagras. Du kan också trycka på ikonen **[!UICONTROL Bläddra]** och navigera till en plats.
-   * (Valfritt) Markera eller avmarkera kryssrutan **[!UICONTROL Skriv över befintlig]bild **.
+   * I fälten **[!UICONTROL Width]** och **[!UICONTROL Height]** anger du den pixelbredd och -höjd som du vill att bilden ska återges.
+   * Ange namnet på den återgivna bilden i **[!UICONTROL Image Name]** fältet.
+   * I **[!UICONTROL Export Path]** fältet anger du sökvägen där du vill att den återgivna bilden ska lagras. Du kan också trycka på **[!UICONTROL Browse]** ikonen och navigera till en plats.
+   * (Valfritt) Markera eller avmarkera **[!UICONTROL Overwrite existing imag]kryssrutan e **.
 
-1. I det övre högra hörnet av sidan med resursinformation trycker du på ikonen **[!UICONTROL Kameraväljare]** . Välj en kameravy som du vill använda på den återgivna bilden.
+1. I det övre högra hörnet av sidan med resursinformation trycker du på **[!UICONTROL Camera Selector]** -ikonen. Välj en kameravy som du vill använda på den återgivna bilden.
 
    Vänster- och högerstaplar eller övre och nedre staplar är en visuell indikator på vilka delar av vyn som ska återges. När kameran finns på den valda scenen kan du välja en fördefinierad kamera.
 
    ![chlimage_1-371](assets/chlimage_1-371.png)
 
-   **[!UICONTROL Kameraväljare,]** ikon
+   **[!UICONTROL Camera Selector]** icon
 
-1. Tryck på **[!UICONTROL Starta återgivning]** för att påbörja återgivningen.
+1. Tryck **[!UICONTROL Start Render]** för att påbörja återgivningen.
 
    Ett meddelande visas tillfälligt som anger att återgivningen har startat. För enkelhetens skull innehåller det här meddelandet även en länk till den valda utdatamappen så att du kan navigera direkt till den.
 
