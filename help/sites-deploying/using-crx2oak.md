@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: e938bdc7-f8f5-4da5-81f6-7f60c6b4b8e6
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1258'
+ht-degree: 0%
 
 ---
 
@@ -23,14 +26,14 @@ CRX2Oak är ett verktyg som är utformat för att migrera data mellan olika data
 
 Den kan användas för att migrera data från äldre CQ-versioner baserade på Apache Jackrabbit 2 till Oak, och den kan också användas för att kopiera data mellan Oak-databaser.
 
-Du kan hämta den senaste versionen av crx2oak från Adobes offentliga databas på följande plats:\
+Du kan hämta den senaste versionen av crx2oak från den offentliga Adobe-databasen på den här platsen:\
 [https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak/](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak/)
 
 Listan över ändringar och korrigeringar för den senaste versionen finns i versionsinformationen för [CRX2Oak](/help/release-notes/crx2oak.md).
 
 >[!NOTE]
 >
->Mer information om Apache Oak och viktiga koncept för AEM-beständighet finns i [Introduktion till AEM-plattformen](/help/sites-deploying/platform.md).
+>Mer information om Apache Oak och viktiga koncept för AEM finns i [Introduktion till AEM Platform](/help/sites-deploying/platform.md).
 
 ## Användningsexempel vid migrering {#migration-use-cases}
 
@@ -48,9 +51,9 @@ Bilden nedan visar alla möjliga migreringskombinationer som stöds av CRX2Oak:
 
 ## Funktioner {#features}
 
-CRX2Oak anropas under AEM-uppgraderingar på ett sätt där användaren kan ange en fördefinierad migreringsprofil som automatiserar omkonfigureringen av beständiga lägen. Detta kallas snabbstartsläge.
+CRX2Oak anropas under AEM uppgraderingar på ett sätt där användaren kan ange en fördefinierad migreringsprofil som automatiserar omkonfigureringen av beständiga lägen. Detta kallas snabbstartsläge.
 
-Den kan också köras separat om den kräver mer anpassning. Observera dock att i det här läget görs ändringar endast i databasen och att eventuella ytterligare omkonfigurationer av AEM måste utföras manuellt. Detta kallas fristående läge.
+Den kan också köras separat om den kräver mer anpassning. Observera dock att i det här läget görs ändringar endast i databasen och att ytterligare omkonfigurationer av AEM måste utföras manuellt. Detta kallas fristående läge.
 
 En annan sak att tänka på är att med standardinställningarna i fristående läge migreras endast nodarkivet och den nya databasen återanvänder den gamla binära lagringen.
 
@@ -58,7 +61,7 @@ En annan sak att tänka på är att med standardinställningarna i fristående l
 
 Sedan AEM 6.3 kan CRX2Oak hantera användardefinierade migreringsprofiler som kan konfigureras med alla migreringsalternativ som redan är tillgängliga. Detta ger både större flexibilitet och möjlighet att automatisera konfigurationen av AEM, funktioner som inte är tillgängliga om du använder verktyget i fristående läge.
 
-Om du vill växla från CRX2Oak till snabbstartläge måste du definiera sökvägen till snabbstartsmappen i AEM-installationskatalogen via den här systemvariabeln i operativsystemet:
+Om du vill växla från CRX2Oak till snabbstartläge måste du definiera sökvägen till snabbstartmappen i AEM installationskatalog via den här systemmiljövariabeln i operativsystemet:
 
 **För UNIX-baserade system och macOS:**
 
@@ -120,7 +123,7 @@ En öppen källkodsversion av CRX2Oak finns i form av ekuppgradering. Det har st
 
 * Stöd för CRX2
 * Stöd för migreringsprofiler
-* Stöd för automatisk AEM-omkonfiguration
+* Stöd för automatisk AEM
 
 Mer information finns i dokumentationen [för](https://jackrabbit.apache.org/oak/docs/migration.html) Apache.
 
@@ -149,9 +152,9 @@ Mer information finns i dokumentationen [för](https://jackrabbit.apache.org/oak
 
 ### Alternativ för Versionsarkiv {#version-store-options}
 
-* `--copy-orphaned-versions`: Hoppar över kopiering av överblivna versioner. Följande parametrar stöds: `true`, `false` och `yyyy-mm-dd`. Standardvärdet är `true`.
+* `--copy-orphaned-versions`: Hoppar över kopiering av överblivna versioner. Följande parametrar stöds: `true`, `false` och `yyyy-mm-dd`. Defaults to `true`.
 
-* `--copy-versions:` Kopierar versionslagringen. Parameters: `true`, `false`, `yyyy-mm-dd`. Standardvärdet är `true`.
+* `--copy-versions:` Kopierar versionslagringen. Parameters: `true`, `false`, `yyyy-mm-dd`. Defaults to `true`.
 
 #### Banalternativ {#path-options}
 
@@ -195,7 +198,7 @@ Du kan även aktivera felsökningsinformation för migreringsprocessen för att 
   </tr> 
   <tr> 
    <td>Snabbstartsläge</td> 
-   <td>Du kan lägga till <strong>alternativen - TRACE</strong> eller <strong></strong>—log-level DEBUG på kommandoraden när du kör CRX2Oak. I det här läget omdirigeras loggarna automatiskt till filen <strong>upgrade.log</strong>.</td> 
+   <td>Du kan lägga till <strong>loggnivåalternativen TRACE</strong> eller <strong>—log-level DEBUG </strong>på kommandoraden när du kör CRX2Oak. I det här läget omdirigeras loggarna automatiskt till filen <strong>upgrade.log</strong>.</td> 
   </tr> 
   <tr> 
    <td>Fristående läge</td> 
