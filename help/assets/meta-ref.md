@@ -4,6 +4,9 @@ description: 'Lär dig mer om standardkonventioner för att beskriva metadata f�
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '394'
+ht-degree: 2%
 
 ---
 
@@ -42,4 +45,4 @@ Förutom DCMES finns det andra metadataelement som skapats av Dublin Core Initia
 
 IPTC (International Press Telecommunications Council) är ett konsortium av nyhetsbyråer över hela världen - ett av målen är att utveckla och underhålla tekniska standarder. IPTC definierade en uppsättning metadatastandarder för foton som är nästan allmänt accepterade bland fotografer. Dessa metadatastandarder ingick i den bredare standarden IPTC Information Interchange Model (IIM) som skapades på 1990-talet.
 
-Även om IPTC-huvudinformationen till största delen har ersatts av XMP finns det ett IPTC-kärnschema och ett tilläggsschema för XMP. I bildprogram synkroniseras både XMP- och IPTC-egenskaper.
+Även om IPTC-huvudinformationen till största delen har ersatts av XMP finns det ett IPTC-kärnschema och ett tilläggsschema för XMP. I bildprogram synkroniseras både XMP och IPTC-egenskaper.
