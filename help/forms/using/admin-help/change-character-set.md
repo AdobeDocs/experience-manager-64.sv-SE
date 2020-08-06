@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 811b31f8-5465-4fb2-b1f9-513936041771
 translation-type: tm+mt
 source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+workflow-type: tm+mt
+source-wordcount: '151'
+ht-degree: 0%
 
 ---
 
@@ -19,12 +22,12 @@ source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
 
 Du kan ange den teckenuppsättning som används för att koda utdataströmmen.
 
-1. I administrationskonsolen klickar du på **[!UICONTROL Tjänster > Utdata]**.
+1. Klicka på i administrationskonsolen **[!UICONTROL Services > output]**.
 1. Välj en teckenuppsättning i listan Teckenuppsättning under Internationalisering. Den här inställningen beror på `TransformationFormat` och `PrintFormat` anges via API:t. Om du vill ange en annan teckenuppsättning än de som visas väljer du Anpassad och anger ett kodningsvärde i rutan som visas.
 
    Om `TransformationFormat` är PDF och PDF/A eller `PrintFormat` är PCL, PostScript, Zebra-etikett, IPL, DPL, TPCL, GenericColorPCL eller GenericPSLevel3 stöds endast specifika teckenuppsättningar.
 
    Teckenuppsättningen måste vara ett giltigt kanoniskt namn. Standardvärdet är ISO-8859-1.
 
-1. Click **[!UICONTROL Save]**.
+1. Klicka på **[!UICONTROL Save]**.
 
