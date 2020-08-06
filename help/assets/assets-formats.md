@@ -15,7 +15,7 @@ ht-degree: 2%
 
 AEM Assets har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika MIME-typer.
 
-Om du vill integrera AEM Assets med andra standardbaserade DAM-lösningar (Digital Asset Management) och datorprogram använder du Adobes Extensible Metadata Platform (XMP).
+Om du vill integrera AEM Assets med andra standardbaserade DAM-lösningar och datorprogram använder du Adobe Extensible Metadata Platform (XMP).
 
 Använd teckenförklaringen för att förstå supportnivån.
 
@@ -73,7 +73,7 @@ Utöver informationen ovan bör du tänka på följande:
 
 * Metadatatillbakaskrivning fungerar för PSB-filformat när det läggs till i `NComm` hanteraren.
 
-* Information om hur du använder Dynamic Media för att förhandsgranska och generera dynamiska renderingar för EPS-filer finns i [Adobe Illustrator (AI), PostScript (EPS) och PDF-filformat.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* Information om hur du använder Dynamic Media för att förhandsgranska och generera dynamiska återgivningar för EPS-filer finns i [Adobe Illustrator (AI), Postscript (EPS) och PDF-filformat.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * För EPS-filer stöds tillbakaskrivning av metadata i PostScript Document Structuring Convention (PS-Adobe) version 3.0 eller senare.
 
@@ -110,7 +110,7 @@ Se [Bildkonverteringsbibliotek](imaging-transcoding-library.md).
 
 ## Camera Raw {#supported-camera-raw}
 
-Med Adobe Camera Raw-biblioteket kan AEM Assets importera råbilder. Se [Stöd](camera-raw.md)för Camera Raw.
+Med Adobe Camera Raw-biblioteket kan AEM Assets importera råbilder. Se [Camera Raw Support](camera-raw.md).
 
 ## Dokumentformat {#supported-document-formats}
 
@@ -162,11 +162,11 @@ Dokumentformat som stöds för Dynamic Media-funktioner är följande:
 
 Utöver ovanstående funktioner bör du tänka på följande:
 
-* Information om hur du använder Dynamic Media för att generera dynamiska återgivningar för PDF-filer finns i [Adobe Illustrator (AI), PostScript (EPS) och PDF-filformat.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* Information om hur du använder Dynamic Media för att generera dynamiska återgivningar för PDF-filer finns i [Adobe Illustrator (AI), Postscript (EPS) och PDF-filformat.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* Information om hur du använder Dynamic Media för att förhandsgranska och generera dynamiska renderingar för AI-filer finns i [Adobe Illustrator (AI), PostScript (EPS) och PDF-filformat.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* Information om hur du använder Dynamic Media för att förhandsgranska och generera dynamiska renderingar för AI-filer finns i [Adobe Illustrator (AI), Postscript (EPS) och PDF-filformat.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* Information om hur du använder Dynamic Media för att generera dynamiska återgivningar för INDD-filer finns i [InDesign-filformat](../assets/managing-image-presets.md#indesign-indd-file-format)(INDD).
+* Mer information om hur du använder Dynamic Media för att generera dynamiska återgivningar för INDD-filer finns i [filformatet](../assets/managing-image-presets.md#indesign-indd-file-format)InDesign (INDD).
 
 ## Multimediaformat {#supported-multimedia-formats}
 
@@ -243,9 +243,9 @@ Hur vanliga DAM-arbetsflöden kan användas för ett par andra filformat beskriv
 
 ## MIME-typer som stöds {#supported-mime-types}
 
-Som standard identifierar AEM filtypen med hjälp av filtillägget. AEM kan identifiera det från innehållet i filerna. För den senare väljer du [!UICONTROL Detect MIME from content] ett alternativ [!UICONTROL Day CQ DAM Mime Type Service] i AEM Web Console.
+Som standard identifierar AEM filtypen med hjälp av filtillägget. AEM kan identifiera det från filernas innehåll. För den senare väljer du [!UICONTROL Detect MIME from content] ett alternativ [!UICONTROL Day CQ DAM Mime Type Service] i AEM webbkonsol.
 
-En lista över MIME-typer som stöds finns i CRXDE Lite på `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`.
+En lista över MIME-typer som stöds finns i CRXDE Lite `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`.
 
 | Filtillägg | MIME-typ/ Internetmedietyp | Standardvärde för jobParam | Tillåtet jobParam-värde |
 |---|---|---|---|
@@ -307,6 +307,6 @@ En lista över MIME-typer som stöds finns i CRXDE Lite på `/conf/global/settin
 
 >[!MORELIKETHIS]
 >
->* [Aktivera stöd](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)för MIME-typbaserade resurser/Scene7-överföringsjobbparametrar.
+>* [Aktivera stöd](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)för MIME-typbaserade resurser/Scene7 överföringsjobbparametrar.
 >* [Konfigurera MIME-typbaserad för stöd](config-dynamic.md)för överföringsjobbparametrar.
 
