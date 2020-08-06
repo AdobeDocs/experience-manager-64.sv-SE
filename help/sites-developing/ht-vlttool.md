@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: a76425e9-fd3b-4c73-80f9-0ebabb8fd94f
 translation-type: tm+mt
 source-git-commit: f0e4d958cad182c7218314ba7b117c2347f947ca
+workflow-type: tm+mt
+source-wordcount: '2748'
+ht-degree: 2%
 
 ---
 
 
 # Så här använder du VLT-verktyget {#how-to-use-the-vlt-tool}
 
-Jackrabbit FileVault-verktyget (VLT) är ett verktyg som utvecklats av Apache Foundation [](https://www.apache.org/) och som mappar innehållet i en Jackrabbit/AEM-instans till ditt filsystem. VLT-verktyget har liknande funktioner som källkontrollssystemklienten (t.ex. en Subversion-klient), med normala in-, utchecknings- och hanteringsåtgärder samt konfigurationsalternativ för flexibel representation av projektinnehållet.
+Jackrabbit FileVault-verktyget (VLT) är ett verktyg som utvecklats av [Apache Foundation](https://www.apache.org/) och som mappar innehållet i en Jackrabbit/AEM-instans till filsystemet. VLT-verktyget har liknande funktioner som källkontrollssystemklienten (t.ex. en Subversion-klient), med normala in-, utchecknings- och hanteringsåtgärder samt konfigurationsalternativ för flexibel representation av projektinnehållet.
 
 Du kör VLT-verktyget från kommandoraden. I det här dokumentet beskrivs hur du använder verktyget, inklusive hur du kommer igång och får hjälp, samt en lista över alla [kommandon](#vlt-commands) och tillgängliga [alternativ](#vlt-global-options).
 
@@ -30,8 +33,8 @@ På sidan [Fillevault Overview](https://jackrabbit.apache.org/filevault/overview
 Om du vill börja använda VLT måste du göra följande:
 
 1. Installera VLT, uppdatera miljövariabler och uppdatera globala ignorerade underversionsfiler.
-1. Konfigurera AEM-databasen (om du inte redan har gjort det).
-1. Ta en titt på AEM-databasen.
+1. Konfigurera AEM (om du inte redan har gjort det).
+1. Ta en titt på AEM.
 1. Synkronisera med databasen.
 1. Testa om synkroniseringen fungerade.
 
@@ -44,7 +47,7 @@ Om du vill använda VLT-verktyget måste du först installera det. Det installer
    >
    >VLT-verktygets källa är [tillgänglig på GitHub.](https://github.com/apache/jackrabbit-filevault)
 1. Extrahera arkivet.
-1. Lägg till `<archive-dir>/vault-cli-<version>/bin` i din miljö `PATH` så att kommandofilerna `vlt` eller `vlt.bat` de blir tillgängliga. Exempel:
+1. Lägg till `<archive-dir>/vault-cli-<version>/bin` i din miljö `PATH` så att kommandofilerna `vlt` eller `vlt.bat` de blir tillgängliga. Till exempel:
 
    `<aem-installation-dir>/crx-quickstart/opt/helpers/vault-cli-3.1.16/bin>`
 
@@ -190,7 +193,7 @@ Commands:
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```
 
-Om du vill ha hjälp med ett visst kommando skriver du hjälpkommandot följt av namnet på kommandot. Exempel:
+Om du vill ha hjälp med ett visst kommando skriver du hjälpkommandot följt av namnet på kommandot. Till exempel:
 
 ```shell
 vlt --help export
@@ -690,7 +693,7 @@ diff -N <file1> [<file2> ...]
 | `-N (--non-recursive)` | arbetar i en enda katalog |
 | `<file> [<file> ...]` | fil eller katalog som skillnaderna från |
 
-### Konsol {#console}
+### Console {#console}
 
 Kör en interaktiv konsol.
 
@@ -738,7 +741,7 @@ vlt rcp http://localhost:4502/crx/-/jcr:root/content  https://admin:admin@localh
 
 >[!NOTE]
 >
->Alternativen `--exclude` måste följas av ett annat alternativ före argumenten `<src>` och `<dst>` . Exempel:
+>Alternativen `--exclude` måste följas av ett annat alternativ före argumenten `<src>` och `<dst>` . Till exempel:
 >
 >`vlt rcp -e ".*\.txt" -r`
 
