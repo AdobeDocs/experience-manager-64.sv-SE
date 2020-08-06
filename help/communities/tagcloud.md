@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 23a5a65e-774d-4789-9659-09e8be0c2bcd
 translation-type: tm+mt
 source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
+workflow-type: tm+mt
+source-wordcount: '534'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +34,7 @@ Se [Administrera taggar](../../help/sites-administering/tags.md) för informatio
 
 ## Lägga till ett moln för sociala taggar {#adding-a-social-tag-cloud}
 
-Om du vill lägga till en `Social Tag Cloud` komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på `Communities / Social Tag Cloud` och dra komponenten till en plats på en sida där taggmolnet ska visas.
+Om du vill lägga till en `Social Tag Cloud` komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på `Communities / Social Tag Cloud` och dra komponenten till den plats på en sida där taggmolnet ska visas.
 
 Mer information finns i Grunderna för [communitykomponenter](basics.md).
 
@@ -45,41 +48,51 @@ Markera den monterade `Social Tag Cloud` komponent som du vill öppna och välj 
 
 ![chlimage_1-304](assets/chlimage_1-304.png)
 
-Under fliken **[!UICONTROL Social Tag Cloud]** anger du vilka taggar som ska visas och, om taggarna är aktiva länkar, platsen för sidan för sökresultat:
+Under **[!UICONTROL Social Tag Cloud]** fliken anger du vilka taggar som ska visas och, om taggarna är aktiva länkar, platsen för sidan där sökresultaten ska visas:
 
 ![chlimage_1-305](assets/chlimage_1-305.png)
 
-* **[!UICONTROL Sociala taggar som visas]** för att identifiera vilka UGC-taggar som ska visas. De nedrullningsbara alternativen är
+* **[!UICONTROL Social Tags to Display]**
+Identifiera vilka UGC-taggar som ska visas. De nedrullningsbara alternativen är
 
    * `From page and child pages`
    * `All tags`
+
    Standardvärdet är `From page and child pages`, där &quot;sida&quot; refererar till inställningen för **sida** nedan.
 
-* **[!UICONTROL Sida]**(krävs om inte `All tags)` Sökvägen till UGC för en sida. Standard är den aktuella sidan om den lämnas tom.
+* **[!UICONTROL Page]**
+(krävs om inte 
+`All tags)` Sökvägen till användargränssnittets användargränssnitt för en sida. Standard är den aktuella sidan om den lämnas tom.
 
-* **[!UICONTROL Inga länkar på taggar]** Om det här alternativet är markerat visas taggarna i taggmolnet som oformaterad text. Om du inte markerar det här alternativet visas taggarna som aktiva länkar som söker efter allt innehåll som taggen tillämpas på. Standardvärdet är avmarkerat och kräver att **[!UICONTROL sökresultatsökvägen]** anges.
+* **[!UICONTROL No links on tags]**
+Om du markerar det här alternativet visas taggarna i taggmolnet som oformaterad text. Om du inte markerar det här alternativet visas taggarna som aktiva länkar som söker efter allt innehåll som taggen tillämpas på. Standard är avmarkerat och kräver **[!UICONTROL Search Result Path]** att inställningen är angiven.
 
-* **[!UICONTROL Sökresultatsökväg]** Sökvägen till en sida där en `Search Result` komponent har placerats, konfigurerad att referera till UGC som innehåller den UGC-sökväg som anges av inställningen **Sida** .
+* **[!UICONTROL Search Result Path]**
+Sökvägen till en sida där 
+`Search Result` -komponenten har monterats, konfigurerats för att referera till UGC som innehåller den UGC-sökväg som anges av **sidinställningen** .
 
 ## Ändra visning av molnet för sociala taggar {#change-display-of-social-tag-cloud}
 
 Om du vill redigera visningen av **Social Tag Cloud** anger du [designläge](../../help/sites-authoring/default-components-designmode.md) och dubbelklickar på den monterade `Social Tag Cloud` komponenten för att öppna en dialogruta med en extra flik.
 
-Använd fliken **[!UICONTROL Social Tag Cloud (Design)]** för att ange hur taggar ska visas. En tagg kan vara en enkel tagg, ett enstaka ord i standardnamnutrymmet eller en hierarkisk taxonomi:
+Ange hur taggar ska visas på **[!UICONTROL Social Tag Cloud (Design)]** fliken. En tagg kan vara en enkel tagg, ett enstaka ord i standardnamnutrymmet eller en hierarkisk taxonomi:
 
 ![chlimage_1-306](assets/chlimage_1-306.png)
 
-* **[!UICONTROL Visa fullständiga titelsökvägar]** Om det här alternativet är markerat visas rubrikerna för de överordnade taggarna och namnutrymmet för varje tillämpad tagg.
+* **[!UICONTROL Show full title paths]**
+Om du markerar det här alternativet visas rubrikerna för de överordnade taggarna och namnutrymmet för varje tillämpad tagg.
 
-   Exempel:
+   Till exempel:
 
    * Markerad: `Geometrixx Media: Gadgets / Cars`
    * Avmarkerad: `Cars`
+
    Det är ingen skillnad för en enkel tagg.
 
    Standard är avmarkerat.
 
-* **[!UICONTROL Visa endast lövtaggar]** Om det här alternativet är markerat visas endast tillämpade taggar som inte innehåller några andra taggar.
+* **[!UICONTROL Show only leaf tags]**
+Om det här alternativet är markerat visas endast tillämpade taggar som inte innehåller några andra taggar.
 
    Med taggID för
 
@@ -89,13 +102,16 @@ Använd fliken **[!UICONTROL Social Tag Cloud (Design)]** för att ange hur tagg
 
    * Markerad: visas bara `Cars` om det används
    * Avmarkerad: `Geometrixx Media` och `Gadgets`även `Cars` kommer att visas, om det används
+
    En enkel tagg är en lövtagg.
 
    Standard är avmarkerat.
 
-* **[!UICONTROL Länkmall]** En annan mall än en standardmall som används för att visa länkarna i ett taggmoln när länkar aktiveras via redigeringsdialogrutan för komponenten.
+* **[!UICONTROL Link Template]**
+En annan mall än en standardmall som används för att visa länkarna i ett taggmoln när länkarna aktiveras via redigeringsdialogrutan för komponenten.
 
-* **[!UICONTROL Samma storlek för alla taggar]** Om det här alternativet är markerat formateras alla ord i taggmolnet på samma sätt. Om alternativet inte är markerat formateras ord på olika sätt beroende på hur de används. Standard är avmarkerat.
+* **[!UICONTROL Same size for all tags]**
+Om det här alternativet är markerat formateras alla ord i taggmolnet på samma sätt. Om alternativet inte är markerat formateras ord på olika sätt beroende på hur de används. Standard är avmarkerat.
 
 ## Additional Information {#additional-information}
 
