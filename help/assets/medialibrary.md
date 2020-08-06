@@ -4,42 +4,45 @@ description: Frågor och svar om AEM Assets och AEM Media Library, inklusive ski
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 6a1013715c538c39eaf40a22dbffc7f2df36f968
+workflow-type: tm+mt
+source-wordcount: '551'
+ht-degree: 0%
 
 ---
 
 
 # AEM Assets vs. AEM MediaLibrary {#aem-assets-vs-aem-medialibrary}
 
-Adobe Experience Manager Assets (AEM) är en integrerad del av AEM-plattformen. Denna smidiga integrering ses som en stor fördel i AEM och säkerställer enhetlighet i innehållshanteringen och hög produktivitet för skribenter.
+Adobe Experience Manager (AEM) Assets är en integrerad del av den AEM plattformen. Denna smidiga integrering ses som en stor fördel med AEM och säkerställer enhetlighet i innehållshanteringen och hög produktivitet för skribenter.
 
 ## Vanliga frågor {#frequently-asked-questions}
 
 ### Vad är AEM Assets? {#what-is-aem-assets}
 
-AEM Assets är en applikation på AEM Platform som gör att våra kunder kan hantera sina digitala resurser (bilder, videor, dokument och ljudklipp) i en webbaserad databas. AEM Assets innehåller stöd för metadata, renderingar, Digital Asset Management Finder och gränssnittet för administration av AEM Assets.
+AEM Assets är en applikation på AEM Platform som gör det möjligt för våra kunder att hantera sina digitala resurser (bilder, videor, dokument och ljudklipp) i en webbaserad databas. AEM Assets innehåller stöd för metadata, renderingar, Digital Asset Management Finder och AEM Assets administrationsgränssnitt.
 
 ### Vad är AEM Media Library? {#what-is-the-aem-media-library}
 
-AEM Media Library är en utsedd del av AEM WCM-innehållslagringsplatsen där bilder och andra delade resurser lagras. Mediebiblioteket använder funktionerna för hantering av digitala resurser i AEM WCM.
+AEM Media Library är en del av AEM WCM-innehållslagringsplatsen där bilder och andra delade resurser lagras. Mediebiblioteket använder funktionerna för hantering av digitala resurser AEM WCM.
 
-### Vad får jag från AEM Assets som inte ingår i AEM WCM? {#what-do-i-get-from-aem-assets-that-is-not-part-of-aem-wcm}
+### Vad får jag från AEM Assets som inte är en del av AEM WCM? {#what-do-i-get-from-aem-assets-that-is-not-part-of-aem-wcm}
 
-Unika funktioner som bara är tillgängliga för kunder som har AEM Assets är:
+Unika funktioner som endast är tillgängliga för AEM Assets kunder är:
 
 1. möjlighet att extrahera och redigera andra metadata än titel, taggar och beskrivning.
 1. AEM Assets Admin, som du kommer åt från välkomstskärmen genom att klicka på den andra knappen bredvid `siteadmin`.
-1. Alla arbetsflödessteg som rör hantering av digitala resurser, som AEM-tillgångsinhämtning, borttagning av AEM-resurser, hantering av underresurser, extrahering av AEM Assets-metadata.
+1. Alla arbetsflödessteg som rör Digital Asset Management, som AEM av resurser, borttagning av AEM Assets, hantering av underresurser i AEM Assets, extrahering av AEM Assets-metadata.
 1. bibliotek inklusive `dam` IME-paketutrymme.
 
-Dessa funktioner kräver en giltig licens för AEM Assets.
+För att använda dessa funktioner krävs en giltig licens för AEM Assets.
 
 ### Finns AEM Assets som separat paket? {#is-aem-assets-available-as-a-separate-package}
 
-Nej. För att underlätta installation och driftsättning levereras alla AEM-program och tillägg i ett enda paket med alla funktioner inkluderade. Detta innebär inte att du har behörighet att använda alla funktioner i paketet.
+Nej. För att underlätta installation och driftsättning levereras alla AEM program och tillägg i ett och samma paket med alla funktioner inkluderade. Detta innebär inte att du har behörighet att använda alla funktioner i paketet.
 
 #### Jag vill redigera metadata för digitala resurser. Behöver jag AEM Assets? {#i-want-to-edit-metadata-of-digital-assets-do-i-need-aem-assets}
 
-Om du planerar att redigera andra metadata än titel, beskrivning och taggar måste du licensiera AEM Assets.
+Om du planerar att redigera andra metadata än titel, beskrivning och taggar måste du skaffa licens för AEM Assets.
 
 #### Jag vill automatiskt ändra storlek på bilder vid import. Behöver jag AEM Assets? {#i-want-to-automatically-resize-images-upon-import-do-i-need-aem-assets}
 
@@ -47,15 +50,15 @@ Nej. Storleksändring och automatisk arbetsflödesdriven omvandling av statiska 
 
 ### Jag vill ändra storlek på bilder med en anpassad bildkomponent. Behöver jag AEM Assets? {#i-want-to-resize-images-using-a-customized-image-component-do-i-need-aem-assets}
 
-Bildkomponenten är en del av AEM WCM. Grafikbiblioteket som används av bildkomponenten (men även av AEM Assets) är en del av AEM-plattformen och kräver ingen AEM Assets-licens.
+Bildkomponenten är en del av AEM WCM. Grafikbiblioteket som används av bildkomponenten (men även av AEM Assets) är en del av AEM och kräver ingen AEM Assets-licens.
 
-### Hur kan jag hindra mina användare från att använda AEM Assets om jag inte har licensierat någon AEM Assets? {#how-can-i-prevent-my-users-from-using-aem-assets-if-i-did-not-license-aem-assets}
+### Hur förhindrar jag att mina användare använder AEM Assets om jag inte har licens för AEM Assets? {#how-can-i-prevent-my-users-from-using-aem-assets-if-i-did-not-license-aem-assets}
 
-Du kan ta bort alla AEM Assets-specifika arbetsflöden, komponenter, taxonomier, alternativ och AEM Assets-administratören från AEM. På så sätt förhindras användarna från att oavsiktligt använda AEM Resurser-funktioner som du inte licensierat.
+Du kan ta bort alla AEM Assets-specifika arbetsflöden, komponenter, taxonomier, alternativ och AEM Assets-administratören från AEM. På så sätt förhindrar du att användare av misstag använder AEM Assets-funktioner som du inte har licensierat.
 
 ### Jag vill lägga till bilder på en sida och vill beskära och ändra storlek på dessa bilder. Behöver jag AEM Assets? {#i-want-to-add-images-to-a-page-and-want-to-crop-and-resize-these-images-do-i-need-aem-assets}
 
-I det här fallet behöver man inte köpa AEM Assets, inte ens mediebiblioteket behöver använda bilder på en webbplats eftersom den smarta bildkomponenten tillåter att bilder överförs direkt till sidan.
+I det här fallet behöver du inte köpa AEM Assets, inte ens mediebiblioteket behöver använda bilder på en webbplats eftersom den smarta bildkomponenten tillåter att bilder överförs direkt till sidan.
 
 >[!MORELIKETHIS]
 >
