@@ -10,15 +10,18 @@ topic-tags: hTML5_forms
 discoiquuid: b8465471-0458-42d6-8209-8ba90f41154a
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '109'
+ht-degree: 0%
 
 ---
 
 
 # höger-till-vänster-språk i HTML5-formulär {#right-to-left-languages-in-html-forms}
 
-HTML5-formulär har stöd för höger-till-vänster-språk som hebreiska. Du kan visa och fylla i HTML5-formulär på höger-till-vänster-språk. Både höger-till-vänster och vänster-till-höger-språk finns i samma formulär. Du kan till exempel använda både engelska och hebreiska i ett gemensamt fält. I mobilformulär används språkområde för att visa lokaliserad information om dagar och datum i ett formulär.
+HTML5-formulär har stöd för höger-till-vänster-språk som hebreiska. Du kan visa och fylla i HTML5-formulär på höger-till-vänster-språk. Både höger-till-vänster och vänster-till-höger-språk finns i samma formulär. Du kan till exempel använda både engelska och hebreiska i ett gemensamt fält. Mobile Forms använder språkområde för att visa lokaliserad dagars- och datuminformation i ett formulär.
 
 **Begränsning**
 
-Mobilformulär har stöd för höger-till-vänster-språk i alla webbläsare utom Internet Explorer.
+Mobile Forms har stöd för språk som läses från höger till vänster i alla webbläsare förutom Internet Explorer.
 
