@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 96cf7c92-af98-417f-ab60-b368e3846ef8
 translation-type: tm+mt
 source-git-commit: 3fa80e73fb6e9400fbeba29d80aa57e080b6f333
+workflow-type: tm+mt
+source-wordcount: '123'
+ht-degree: 8%
 
 ---
 
@@ -25,19 +28,21 @@ source-git-commit: 3fa80e73fb6e9400fbeba29d80aa57e080b6f333
 
 Du kan visa och redigera metadata (egenskaper) för innehållsfragment:
 
-1. I **[!UICONTROL Assets]** Console navigerar du till platsen för innehållsfragmentet.
+1. Gå till innehållsfragmentets plats i **[!UICONTROL Assets]** konsolen.
 1. Antingen:
 
    * Välj [Visa egenskaper för att öppna dialogrutorna](managing-assets-touch-ui.md#editing-properties). När du har öppnat för visning kan du även redigera.
-   * Öppna [innehållsfragmentet för redigering](content-fragments-managing.md#opening-the-fragment-editor)och välj sedan **[!UICONTROL Metadata]** på sidopanelen.
+   * Öppna [innehållsfragmentet för redigering](content-fragments-managing.md#opening-the-fragment-editor)och välj sedan **[!UICONTROL Metadata]** från sidopanelen.
+
    ![cfm-6420-06](assets/cfm-6420-06.png)
 
-1. Fliken **[!UICONTROL Grundläggande]** innehåller alternativ som du kan visa eller redigera:
+1. På fliken **[!UICONTROL Basic]** finns alternativ som du kan visa eller redigera:
 
    * Miniatyrbild som du kan **överföra bild till**
    * **Titel**
    * **Beskrivning**
    * **Taggar**
    * Skapat (endast visning)
+
    ![cfm-6420-07](assets/cfm-6420-07.png)
 
