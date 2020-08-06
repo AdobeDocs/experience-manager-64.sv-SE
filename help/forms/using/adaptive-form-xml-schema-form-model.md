@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: a1070d9e-fb7c-4134-b6d5-ffa2d3e9718d
 translation-type: tm+mt
 source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+workflow-type: tm+mt
+source-wordcount: '1081'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +28,7 @@ Att skapa ett anpassat formulär med ett XML-schema som formulärmodell kräver 
 
 ## Använda ett XML-schema som formulärmodell {#using-an-xml-schema-as-form-model}
 
-AEM Forms har stöd för att skapa ett anpassningsbart formulär genom att använda ett befintligt XML-schema som formulärmodell. Det här XML-schemat representerar strukturen i vilken data produceras eller förbrukas av det bakomliggande systemet i organisationen.
+AEM Forms har stöd för att skapa ett anpassat formulär genom att använda ett befintligt XML-schema som formulärmodell. Det här XML-schemat representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i organisationen.
 
 De viktigaste funktionerna i ett XML-schema är:
 
@@ -167,6 +170,7 @@ Du kan lägga till följande attribut i XML-schemaelement om du vill lägga till
 >
 >* Inled det första tecknet i elementnamnet med versal
 >* Infoga tomt utrymme vid gränserna för Camera Case.
+
 >
 >
 Om du till exempel lägger till `userFirstName` schemaelementet, kommer den bildtext som genereras i det adaptiva formuläret att vara `User First Name`.
@@ -285,7 +289,7 @@ Du kan lägga till följande begränsningar i XML-schemaelement för att begrän
  </tbody> 
 </table>
 
-## Frågor och svar {#frequently-asked-questions}
+## Vanliga frågor {#frequently-asked-questions}
 
 **Hur vet jag vilket element i trädet som är associerat med vilket XML-element?**
 
@@ -297,7 +301,7 @@ I fältet bindRef</code> visas associationen mellan ett trädelement och ett ele
 
 >[!NOTE]
 >
->Attribut har en `@` symbol i `bindRef`värdet för att skilja dem från element. Exempel, `/config/projectDetails/@duration`.
+>Attribut har en `@` symbol i `bindRef`värdet för att skilja dem från element. Till exempel, `/config/projectDetails/@duration`.
 
 **Varför kan jag inte dra enskilda element i ett delformulär (struktur som genereras från en komplex typ) för repeterbara delformulär (värdena minOcCours och maxOccurs är större än 1)?**
 
