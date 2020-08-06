@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 42b224e5-1256-44b6-9b46-4cd6de5927fb
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1394'
+ht-degree: 11%
 
 ---
 
 
 # Projekt{#projects}
 
-Med projekt kan du gruppera resurser i en enhet. En gemensam, delad miljö gör det enkelt att hantera projekt. De typer av resurser som du kan associera med ett projekt kallas i AEM för plattor. Rutorna kan innehålla projekt- och teaminformation, resurser, arbetsflöden och andra typer av information, vilket beskrivs i detalj i [Projektrutor.](#project-tiles)
+Med projekt kan du gruppera resurser i en enhet. En gemensam, delad miljö gör det enkelt att hantera projekt. De typer av resurser som du kan associera med ett projekt kallas för Plattor i AEM. Rutorna kan innehålla projekt- och teaminformation, resurser, arbetsflöden och andra typer av information, vilket beskrivs i detalj i [Projektrutor.](#project-tiles)
 
 >[!CAUTION]
 >
@@ -39,7 +42,7 @@ Se följande ytterligare ämnen:
 
 ## Projektkonsol {#projects-console}
 
-Projektkonsolen är där du får åtkomst till och hanterar dina projekt i AEM.
+Projektkonsolen är den plats där du får åtkomst till och hanterar dina projekt i AEM.
 
 ![chlimage_1-169](assets/chlimage_1-169.png)
 
@@ -90,7 +93,7 @@ I **panelen Erfarenheter** kan du lägga till en mobilapp, en webbplats eller en
 
 ![chlimage_1-173](assets/chlimage_1-173.png)
 
-Ikonerna anger vilken typ av upplevelse som visas: webbplats, mobilapplikation eller publikation. Lägg till upplevelser genom att klicka på plustecknet eller klicka på **Lägg till upplevelse** och välja typ av upplevelse.
+Ikonerna anger vilken typ av upplevelse som visas: webbplats, mobilapp eller publikation. Lägg till upplevelser genom att klicka på plustecknet (+) eller på **Lägg till upplevelse** och välja typ av upplevelse.
 
 ![chlimage_1-174](assets/chlimage_1-174.png)
 
@@ -240,5 +243,5 @@ För kreativa projekt finns även andra roller - till exempel fotografer -. Du k
 
 >[!NOTE]
 >
->När du skapar projektet och lägger till användare till de olika rollerna skapas grupper som är kopplade till projektet automatiskt för att hantera associerade behörigheter. Ett projekt med namnet Myproject skulle till exempel ha tre grupper, **Myproject Owners**, **Myproject Editors**, **Myproject Observers**. Om projektet däremot tas bort tas de grupperna inte bort automatiskt. En administratör måste ta bort grupperna manuellt i **Verktyg** > **Dokumentskydd** > **Grupper**.
+>När du skapar projektet och lägger till användare för de olika rollerna skapas grupper som är kopplade till projektet automatiskt för att hantera associerade behörigheter. Ett projekt med namnet Myproject skulle till exempel ha tre grupper, **Myproject Owners**, **Myproject Editors** och **Myproject Observers**. Om projektet tas bort tas de grupperna dock inte bort automatiskt. En administratör måste ta bort grupperna manuellt i **Verktyg** > **Säkerhet** > **Grupper**.
 
