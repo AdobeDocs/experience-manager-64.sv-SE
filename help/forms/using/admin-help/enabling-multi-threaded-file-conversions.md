@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 85d655bb-1b6b-4b4d-ae39-eca3ef9b7fd7
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '880'
+ht-degree: 0%
 
 ---
 
@@ -57,7 +60,7 @@ Om du kör OpenOffice, Microsoft Word eller Microsoft PowerPoint på Windows Ser
 
 1. Lägg till användarkonton. (Se [Lägga till ett användarkonto](enabling-multi-threaded-file-conversions.md#add-a-user-account).)
 1. Därefter gör du ändringar i filen /etc/sudoers. Standardbehörigheten för den här filen är 440. Ändra behörigheten för den här filen till skrivbar.
-1. Lägg till poster för ytterligare användare (andra än administratören som kör formulärservern) i filen /etc/sudoers. Om du till exempel kör AEM-formulär som en användare med namnet lcadm och en server med namnet myhost, och du vill personifiera användare1 och användare2, lägger du till följande poster i /etc/sudoers:
+1. Lägg till poster för ytterligare användare (andra än administratören som kör formulärservern) i filen /etc/sudoers. Om du till exempel kör AEM formulär som en användare med namnet lcadm och en server med namnet myhost, och du vill personifiera användare1 och användare2, lägger du till följande poster i /etc/sudoers:
 
    ```as3
     lcadm myhost=(user1) NOPASSWD: ALL 
