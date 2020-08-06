@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 8ae6817a-16d3-4740-b67a-498e75adf350
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '907'
+ht-degree: 0%
 
 ---
 
 
 # Konfigurera komponenter i designläge{#configuring-components-in-design-mode}
 
-När AEM-instansen är installerad direkt är ett urval av komponenter omedelbart tillgängliga i komponentwebbläsaren.
+När AEM är installerad i körklart läge är ett urval av komponenter omedelbart tillgängliga i komponentwebbläsaren.
 
 Förutom dessa finns även andra komponenter tillgängliga. Du kan använda designläget för att [aktivera/inaktivera sådana komponenter](#enable-disable-components). När det är aktiverat och finns på sidan kan du sedan använda designläget för att [konfigurera olika aspekter av komponentdesignen](#configuring-the-design-of-a-component) genom att redigera attributparametrarna.
 
@@ -33,7 +36,7 @@ Förutom dessa finns även andra komponenter tillgängliga. Du kan använda desi
 >
 >Designläget är bara tillgängligt för designkonfigurationer som lagras som innehåll under ( `/etc`).
 >
->Från och med AEM 6.4 rekommenderar vi att du lagrar designer som konfigurationsdata under `/apps` för att stödja scenarier med kontinuerlig driftsättning. Designer som lagras under `/apps` kan inte redigeras under körning och designläget är inte tillgängligt för användare som inte är administratörer för sådana mallar.
+>Från och med AEM 6.4 rekommenderas att du lagrar designer som konfigurationsdata under `/apps` för att stödja scenarier för kontinuerlig driftsättning. Designer som lagras under `/apps` kan inte redigeras under körning och designläget är inte tillgängligt för användare som inte är administratörer för sådana mallar.
 
 Det innebär att du lägger till eller tar bort de komponenter som är tillåtna i sidans styckesystem. Styckesystemet ( `parsys`) är en sammansatt komponent som innehåller alla andra styckekomponenter. Med styckesystemet kan författare lägga till komponenter av olika typer på en sida eftersom det innehåller alla andra styckekomponenter. Varje stycketyp representeras som en komponent.
 
@@ -86,6 +89,7 @@ Så här aktiverar eller inaktiverar du en komponent:
 
    * Tillåtna komponenter
    * Inställningar
+
    **Tillåtna komponenter**
 
    På fliken **Tillåtna komponenter** definierar du vilka komponenter som är tillgängliga för parsysen.
@@ -95,11 +99,12 @@ Så här aktiverar eller inaktiverar du en komponent:
    * Ett minustecken representerar minst ett, men inte alla, objekt i en grupp markeras.
    * En sökning är tillgänglig för att filtrera efter en komponent efter namn.
    * Antalet som visas till höger om komponentgruppens namn representerar det totala antalet valda komponenter i dessa grupper oavsett filtret.
+
    Du definierar konfigurationen per sidkomponent. Om underordnade sidor använder samma mall och/eller sidkomponent (vanligtvis justerad) används samma konfiguration för motsvarande styckesystem.
 
    >[!NOTE]
    >
-   >Adaptiva formulärkomponenter är utformade för att fungera i adaptiva formulärbehållare för att utnyttja Forms-ekosystemet. Därför får dessa komponenter endast användas i en anpassad formulärredigerare och de fungerar inte i sidredigeraren Platser.
+   >Adaptiva formulärkomponenter är utformade för att fungera inuti en adaptiv formulärbehållare för att utnyttja Forms ekosystem. Därför får dessa komponenter endast användas i en anpassad formulärredigerare och de fungerar inte i sidredigeraren Platser.
 
    **Inställningar**
 
@@ -130,6 +135,7 @@ Så här aktiverar eller inaktiverar du en komponent:
    * Huvud
    * Funktioner
    * Format
+
    **Egenskaper**
 
    På fliken **Egenskaper** kan du konfigurera komponentens viktiga designparametrar. För en bildkomponent kan du till exempel definiera den största och minsta tillåtna storleken för bilden.
