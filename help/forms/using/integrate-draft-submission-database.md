@@ -21,15 +21,15 @@ ht-degree: 1%
 
 ## Exempelöversikt {#sample-overview}
 
-Med AEM Forms portal-utkast och inskickningskomponenter kan användare spara sina formulär som utkast och skicka dem senare från vilken enhet som helst. Användarna kan även se de inskickade formulären på portalen. För att aktivera den här funktionen tillhandahåller AEM Forms data- och metadatatjänster för att lagra data som fyllts i av en användare i formuläret och de formulärmetadata som är kopplade till utkast och skickade formulär. Dessa data lagras som standard i CRX-databasen. När användarna interagerar med blanketterna via AEM-publiceringsinstansen, som vanligtvis ligger utanför företagets brandvägg, kan det vara bra att anpassa datalagringen för att den ska vara säkrare och tillförlitligare.
+Med AEM Forms portalutkast och skicka-komponenter kan användarna spara sina formulär som utkast och skicka dem senare från vilken enhet som helst. Användarna kan även se de inskickade formulären på portalen. För att aktivera den här funktionen tillhandahåller AEM Forms data- och metadatatjänster för att lagra data som fyllts i av en användare i formuläret och de formulärmetadata som är kopplade till utkast och skickade formulär. Dessa data lagras som standard i CRX-databasen. När användarna interagerar med blanketterna via AEM publiceringsinstans, som vanligtvis ligger utanför företagets brandvägg, kan det vara bra att anpassa datalagringen så att den blir säkrare och tillförlitligare.
 
 Exemplet, som behandlas i det här dokumentet, är en referensimplementering av anpassade data- och metadatatjänster för att integrera komponenter för utkast och inskickning med en databas. Databasen som används i exempelimplementeringen är **MySQL 5.6.24**. Du kan emellertid integrera komponenterna för utkast och inskickning med valfri databas.
 
 >[!NOTE]
 >
 >* De exempel och konfigurationer som beskrivs i det här dokumentet är enligt MySQL 5.6.24 och du måste ersätta dem på lämpligt sätt för ditt databassystem.
->* Kontrollera att du har installerat den senaste versionen av AEM Forms tilläggspaketet. En lista över tillgängliga paket finns i artikeln om [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
->* Exempelpaketet fungerar bara med åtgärder för att skicka adaptiva formulär.
+>* Kontrollera att du har installerat den senaste versionen av AEM Forms tilläggspaket. En lista över tillgängliga paket finns i artikeln om [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
+>* Exempelpaketet fungerar bara med adaptiva Forms-sändningsåtgärder.
 
 
 ## Konfigurera och konfigurera exemplet {#set-up-and-configure-the-sample}
@@ -42,7 +42,7 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
 
    [Hämta fil](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
-1. Gå till AEM-pakethanteraren på https://[*host*]:[*port*]/crx/packmgr/.
+1. Gå till AEM på https://[*host*]:[*port*]/crx/packmgr/.
 1. Klicka på **[!UICONTROL Upload Package]**.
 
 1. Bläddra till paketet **aem-fp-db-integration-sample-pkg-6.1.2.zip** och klicka på **[!UICONTROL OK]**.
@@ -54,12 +54,12 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
 
    | **Egenskap** | **Beskrivning** | **Värde** |
    |---|---|---|
-   | Utkastdatatjänst för formulärportal | Identifierare för datatjänsten för utkast | formsportal.sampledataservice |
-   | Form Portal Draft Metadata Service | Identifierare för metadatatjänsten för utkast | formsportal.samplemetadataservice |
-   | Skicka datatjänst för formulärportal | Identifierare för Skicka datatjänst | formsportal.sampledataservice |
-   | Skicka metadatatjänst för formulärportal | Identifierare för tjänsten Skicka metadata | formsportal.samplemetadataservice |
-   | Formulärportalen väntar på att signera datatjänst | Identifierare för datatjänsten för väntande signering | formsportal.sampledataservice |
-   | Formportalen väntar på metadatatjänst för signering | Identifierare för metadatatjänsten för väntande signering | formsportal.samplemetadataservice |
+   | Forms Portal Draft Data Service | Identifierare för datatjänsten för utkast | formsportal.sampledataservice |
+   | Forms Portal Draft Metadata Service | Identifierare för metadatatjänsten för utkast | formsportal.samplemetadataservice |
+   | Forms Portal Submit Data Service | Identifierare för Skicka datatjänst | formsportal.sampledataservice |
+   | Forms Portal Submit Metadata Service | Identifierare för tjänsten Skicka metadata | formsportal.samplemetadataservice |
+   | Datatjänst för Forms Portal som väntar på signering | Identifierare för datatjänsten för väntande signering | formsportal.sampledataservice |
+   | Metadatatjänst för Forms Portal som väntar på signering | Identifierare för metadatatjänsten för väntande signering | formsportal.samplemetadataservice |
 
    >[!NOTE]
    >
@@ -76,10 +76,11 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
 
    Så här anger du ett annat namn för metadatatabellen:
 
-   * I Web Console Configuration söker du efter och klickar på Implementering av Exempel på metadatatjänst för Forms Portal. Du kan ändra värdena för datakälla, metadata eller ytterligare metadatatabellnamn.
+   * I Web Console Configuration söker du efter och klickar på Exempel på implementering av Forms Portal Metadata Service. Du kan ändra värdena för datakälla, metadata eller ytterligare metadatatabellnamn.
+
    Så här anger du ett annat namn för datatabellen:
 
-   * I Web Console Configuration söker du efter och klickar på Exempelimplementering för Forms Portal Data Service. Du kan ändra värdena för datakällan och datatabellnamnet.
+   * I Web Console Configuration söker du efter och klickar på Exempel på implementering av Forms Portal Data Service. Du kan ändra värdena för datakällan och datatabellnamnet.
    >[!NOTE]
    >
    >Om du ändrar tabellnamnen anger du dem i formulärportalskonfigurationen.
@@ -162,6 +163,7 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
 >
 > * JDBC-drivrutinen för MySQL ingår inte i exemplet. Se till att du har etablerat dig för den och ange den information som krävs för att konfigurera JDBC-anslutningspoolen.
 > * Peka författaren och publicera instanser för att använda samma databas. Värdet för URI-fältet för JDBC-anslutningen måste vara samma för alla författare- och publiceringsinstanser.
+
 >
 
 
