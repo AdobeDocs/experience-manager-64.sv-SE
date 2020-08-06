@@ -11,13 +11,16 @@ topic-tags: develop
 discoiquuid: 2fd1a21a-0f90-49d8-9f62-383b268d540d
 translation-type: tm+mt
 source-git-commit: ba04fe705a91717f1d9658d436056ebddda6be3a
+workflow-type: tm+mt
+source-wordcount: '622'
+ht-degree: 0%
 
 ---
 
 
 # Snabbstart för databastjänst-API {#repository-service-api-quick-starts}
 
-Följande snabbstarter är tillgängliga för AEM Forms-databastjänsten.
+Följande snabbstarter är tillgängliga för tjänsten AEM Forms Repository.
 
 [Snabbstart (SOAP-läge): Skapa en mapp med Java API](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api)
 
@@ -39,11 +42,11 @@ Följande snabbstarter är tillgängliga för AEM Forms-databastjänsten.
 
 [Snabbstart (SOAP-läge): Ta bort en resurs med Java API](repository-service-api-quick-starts.md#quick-start-soap-mode-deleting-a-resource-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typbestämning och anslutningsläget bör anges till SOAP
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP
 
 **Program/FormsApplication**
 
-De flesta databastjänster för AEM Forms startar snabbt och interagerar med ett program med namnet `Applications/FormsApplication,` , vilket visas på följande bild.
+De flesta AEM Forms-databastjänster börjar fungera ihop med ett program med namnet `Applications/FormsApplication,` som visas på följande bild.
 
 Mappen FormsFolder är en plats i AEM Forms-databasen. Du kan till exempel lägga till den här mappen i `Applications/FormsApplication`. (Se [Snabbstart (SOAP-läge): Skapa en mapp med Java API](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api).)
 
