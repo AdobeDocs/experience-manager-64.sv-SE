@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
 workflow-type: tm+mt
 source-wordcount: '444'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -60,7 +60,7 @@ Rotsidan för den italienska språkkopian av exempelhierarkin har till exempel `
 
 ## Visa språkrot {#viewing-language-roots}
 
-Det pekoptimerade användargränssnittet innehåller en referenspanel som visar en lista över språkrötter som har skapats i AEM Resurser.
+Det pekoptimerade användargränssnittet innehåller en referenspanel som visar en lista över språkrötter som har skapats i AEM Assets.
 
 1. I resurskonsolen väljer du det språk som är primärt för vilket du vill skapa språkkopior.
 1. Klicka på eller tryck på ikonen GlobalNav och välj **[!UICONTROL References]** att öppna referensrutan.
