@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: a777a3f1-b39f-4d90-b9b6-02d3e321a86f
 translation-type: tm+mt
 source-git-commit: 68953424eda50bf1734ac84473b442acdc9cdb24
+workflow-type: tm+mt
+source-wordcount: '1200'
+ht-degree: 0%
 
 ---
 
 
 # Community Components Guide {#community-components-guide}
 
-Community Components Guide är ett interaktivt utvecklingsverktyg för ramverket för [sociala komponenter (SCF)](scf.md). Den innehåller en lista över tillgängliga AEM Communities-komponenter eller de mer komplexa funktioner som byggts av flera komponenter.
+Community Components Guide är ett interaktivt utvecklingsverktyg för ramverket för [sociala komponenter (SCF)](scf.md). Här finns en lista med tillgängliga AEM Communities-komponenter eller mer komplexa funktioner som byggts av flera komponenter.
 
 Förutom grundläggande information för varje komponent kan du med guiden experimentera med hur SCF-komponenterna/-funktionerna fungerar och hur de kan konfigureras eller anpassas.
 
@@ -58,7 +61,7 @@ Om du vill växla till redigeringsläge infogar du antingen `editor.html` eller 
 >
 >Allmän redigeringsinformation finns i [snabbguiden till redigeringssidorna](../../help/sites-authoring/qg-page-authoring.md).
 >
->Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md).
+>Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md).
 
 ### Hemsida {#home-page}
 
@@ -107,9 +110,11 @@ Under fliken **Mallar** :
    Om alternativet inte är markerat används den befintliga resursen i databasen (en jcr-nod som är underordnad en par-nod).
 
    * texten som visas är: &quot;Den här komponenten inkluderas via dess parnod.&quot;
+
    Om det här alternativet är markerat används sling för att dynamiskt inkludera en komponent i den underordnade nodens resourceType (en resurs som inte finns).
 
    * texten som visas är: &quot;Den här komponenten inkluderas dynamiskt.&quot;
+
    Standard är avmarkerat.
 
 ### Publicera interaktioner {#publish-interactions}
@@ -128,7 +133,7 @@ Mer information finns på [Clientlibs for Communities Components](clientlibs.md)
 
 ## Personifiering {#impersonation}
 
-I författarinstansen, där en användare ofta är inloggad som administratör eller utvecklare, kan du använda textrutan till vänster om knappen **[!UICONTROL Personifiera]** för att antingen skriva användarnamnet eller välja i listrutan och sedan klicka på knappen. Klicka på Återställ för att logga ut och avsluta personifieringen.
+I författarinstansen, där en användare ofta är inloggad som administratör eller utvecklare, kan du använda textrutan till vänster om knappen för att antingen skriva användarnamnet eller välja i den nedrullningsbara listan och sedan klicka på knappen för att se komponenten inloggad som en annan användare. **[!UICONTROL Impersonate]** Klicka på Återställ för att logga ut och avsluta personifieringen.
 
 Publiceringsinstansen behöver inte personifiera. Använd bara länken Login/Logout för att personifiera olika användare, till exempel [demoanvändare](tutorials.md#demo-users).
 
@@ -152,15 +157,15 @@ Använda kommentarkomponenten som exempel, på antingen författaren eller publi
 
 1. Markera komponentens `jcr:content` nod
 
-   Exempel, `/content/community-components/en/comments/jcr:content`
+   Till exempel, `/content/community-components/en/comments/jcr:content`
 
 1. Lägg till en egenskap
 
-   * **Namn**`scg:showIde`
-   * **Typ**`String`
-   * **Värde**`true`
+   * **Namn** `scg:showIde`
+   * **Typ** `String`
+   * **Värde** `true`
 
-1. Välj **[!UICONTROL Spara alla]**
+1. Välj **[!UICONTROL Save All]**
 1. Läs in kommentarsidan igen i stödlinjen
 
    [http://localhost:4503/content/community-components/en/comments.html](http://localhost:4503/content/community-components/en/comments.html)
