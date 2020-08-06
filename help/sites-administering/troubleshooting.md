@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: b4c1cb82-865b-48dd-b5c0-946e6610ce8e
 translation-type: tm+mt
 source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 2%
 
 ---
 
@@ -37,7 +40,7 @@ Om du vill aktivera DEBUG-loggnivån använder du CRX-utforskaren för att ange
 
 egenskap som ska felsökas. Lämna inte loggen på DEBUG-loggnivån längre än nödvändigt eftersom den genererar många loggar.
 
-En rad i felsökningsfilen börjar oftast med DEBUG och anger sedan loggnivån, installationsåtgärden och loggmeddelandet. Exempel:
+En rad i felsökningsfilen börjar oftast med DEBUG och anger sedan loggnivån, installationsåtgärden och loggmeddelandet. Till exempel:
 
 ```xml
 DEBUG 3 WebApp Panel: WebApp successfully deployed
@@ -49,7 +52,7 @@ Loggnivåerna är följande:
 |---|---|---|
 | 1 | Fel | Åtgärden misslyckades. Installationen fortsätter, men en del av CRX installerades inte korrekt och kommer inte att fungera. |
 | 2 | Varning | Åtgärden har slutförts men problem uppstod. CRX fungerar eventuellt inte korrekt. |
-| 3 |  Information | Åtgärden har slutförts. |
+| 3 | Information | Åtgärden har slutförts. |
 
 ## Detaljerat alternativ som används för felsökning {#verbose-option-used-for-troubleshooting}
 
