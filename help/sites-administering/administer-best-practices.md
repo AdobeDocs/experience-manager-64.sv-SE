@@ -1,8 +1,8 @@
 ---
 title: Bästa praxis
 seo-title: Bästa praxis
-description: Här hittar du de bästa metoderna som tagits fram av Adobes tekniker och konsultteam för att hjälpa administratörerna att komma igång.
-seo-description: Här hittar du de bästa metoderna som tagits fram av Adobes tekniker och konsultteam för att hjälpa administratörerna att komma igång.
+description: Här hittar du de bästa arbetssätten som skapats av Adobe tekniker och konsultteam för att hjälpa administratörerna att komma igång.
+seo-description: Här hittar du de bästa arbetssätten som skapats av Adobe tekniker och konsultteam för att hjälpa administratörerna att komma igång.
 uuid: 862d4fcf-ca61-4228-9344-b95a49b59b32
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,13 +11,16 @@ topic-tags: best-practices
 discoiquuid: 8f6468a0-7721-454f-9334-c449968b8fe7
 translation-type: tm+mt
 source-git-commit: 978c6e5cffb557f0d42f961bdde597fabf278ddd
+workflow-type: tm+mt
+source-wordcount: '541'
+ht-degree: 2%
 
 ---
 
 
 # Bästa praxis{#best-practices}
 
-Bästa praxis beskriver hur man utvecklar, administrerar eller använder AEM på det mest effektiva och effektiva sättet. Den här växande ämneslistan innehåller en rad olika områden i AEM.
+Bästa tillvägagångssätt beskriver hur du utvecklar, administrerar eller använder AEM på det mest effektiva och effektiva sättet. Den här växande listan med ämnen innehåller en mängd olika områden i AEM.
 
 Följande områden har dokumentation om bästa praxis:
 
@@ -74,8 +77,8 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
  <tbody>
   <tr>
    <td>GDPR-efterlevnad</td> 
-   <td><a href="/help/sites-administering/gdpr-compliance-sites.md">AEM Sites GDPR-kompatibilitet</a></td> 
-   <td>Europeiska unionens allmänna dataskyddsförordning om integritetsskydd får verkan från och med maj 2018. AEM Sites är kompatibelt med GDPR. På den här sidan får kunderna hjälp med hur de hanterar GDPR-förfrågningar i AEM Sites. Den beskriver platsen för privata data som lagras och hur du tar bort dem manuellt eller med kod.</td> 
+   <td><a href="/help/sites-administering/gdpr-compliance-sites.md">AEM Sites GDPR-efterlevnad</a></td> 
+   <td>Europeiska unionens allmänna dataskyddsförordning om integritetsskydd får verkan från och med maj 2018. AEM Sites följer GDPR. På den här sidan får kunderna hjälp med hur de hanterar GDPR-förfrågningar i AEM Sites. Den beskriver platsen för privata data som lagras och hur du tar bort dem manuellt eller med kod.</td> 
   </tr>
   <tr>
    <td>Definiera standardgränssnittet för instansen.</td> 
@@ -100,7 +103,7 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
   <tr>
    <td>Arbetsflöden</td> 
    <td><a href="/help/sites-developing/workflows-best-practices.md#configuration">Bästa praxis för arbetsflöde - Konfiguration</a></td> 
-   <td>Med arbetsflöden kan du automatisera Adobe Experience Manager-aktiviteter (AEM) och representera en stor del av den bearbetning som sker i en AEM-miljö, så vi rekommenderar att du noggrant planerar och konfigurerar arbetsflödesimplementeringarna.</td> 
+   <td>Med arbetsflöden kan du automatisera Adobe Experience Manager (AEM)-aktiviteter och representera en stor del av den bearbetning som sker i en AEM miljö, så vi rekommenderar att du noggrant planerar och konfigurerar arbetsflödesimplementeringarna.</td> 
   </tr>
  </tbody>
 </table>
