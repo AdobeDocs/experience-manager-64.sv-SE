@@ -1,5 +1,5 @@
 ---
-title: Hantera dina digitala resurser med AEM Assets
+title: Hantera era digitala resurser med AEM Assets
 description: Lär dig mer om olika resurshanterings- och redigeringsuppgifter som du kan utföra med det Touch-optimerade användargränssnittet i AEM Assets
 contentOwner: AG
 mini-toc-levels: 1
@@ -7,25 +7,25 @@ translation-type: tm+mt
 source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
 workflow-type: tm+mt
 source-wordcount: '9499'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 
 # Hantera era digitala resurser {#managing-assets-with-the-touch-optimized-ui}
 
-Lär dig mer om olika resurshanterings- och redigeringsuppgifter som du kan utföra med det Touchoptimerade användargränssnittet i AEM Assets.
+Lär dig mer om olika resurshanterings- och redigeringsuppgifter som du kan utföra med det pekoptimerade användargränssnittet i AEM Assets.
 
-I den här artikeln beskrivs hur du hanterar och redigerar resurser med det Touch-optimerade användargränssnittet för Adobe Experience Manager (AEM) Assets. Mer information om användargränssnittet finns i [Grundläggande hantering av Touch-gränssnittet](/help/sites-authoring/basic-handling.md). Mer information om hur du hanterar innehållsfragment finns i [Hantera resurser för innehållsfragment](content-fragments-managing.md) .
+I den här artikeln beskrivs hur du hanterar och redigerar resurser med det användargränssnitt som är optimerat för Adobe Experience Manager (AEM) Assets Touch. Mer information om användargränssnittet finns i [Grundläggande hantering av Touch-gränssnittet](/help/sites-authoring/basic-handling.md). Mer information om hur du hanterar innehållsfragment finns i [Hantera resurser för innehållsfragment](content-fragments-managing.md) .
 
 ## Skapa mappar {#create-folders}
 
-När du organiserar en samling resurser, till exempel alla `Nature` bilder, kan du skapa mappar som håller ihop dem. Du kan använda mappar för att kategorisera och ordna dina resurser. AEM Resurser kräver inte att du ordnar resurser i mappar för att de ska fungera bättre.
+När du organiserar en samling resurser, till exempel alla `Nature` bilder, kan du skapa mappar som håller ihop dem. Du kan använda mappar för att kategorisera och ordna dina resurser. AEM Assets kräver inte att du ordnar resurser i mappar för att fungera bättre.
 
 >[!NOTE]
 >
 >* Delning av en resursmapp av den typen `sling:OrderedFolder` stöds inte vid delning till Marketing Cloud. Om du vill dela en mapp ska du inte välja Ordnad när du skapar en mapp.
->* Det går inte att använda `subassets` ordet som namn på en mapp i Experience Manager. Det är ett nyckelord som är reserverat för nod som innehåller delresurser för sammansatta resurser.
+>* Experience Manager tillåter inte att `subassets` ord används som mappnamn. Det är ett nyckelord som är reserverat för nod som innehåller delresurser för sammansatta resurser.
 
 
 1. Navigera till den plats i mappen med digitala resurser där du vill skapa en ny mapp.
@@ -40,7 +40,7 @@ Följande (blankstegsavgränsad lista med) tecken stöds inte:
 
 ## Överför resurser {#uploading-assets}
 
-Du kan överföra olika typer av resurser (inklusive bilder, PDF-filer, RAW-filer och så vidare) från den lokala mappen eller en nätverksenhet till AEM Resurser.
+Du kan överföra olika typer av resurser (inklusive bilder, PDF-filer, RAW-filer och så vidare) från en lokal mapp eller en nätverksenhet till AEM Assets.
 
 >[!NOTE]
 >
@@ -59,6 +59,7 @@ Innan du överför en resurs måste du kontrollera att den har ett format som [s
 
    * Tryck på **[!UICONTROL Create]** ikonen i verktygsfältet. Tryck sedan på menyn **[!UICONTROL Files]**. Du kan byta namn på filen i den dialogruta som visas om det behövs.
    * I en webbläsare som stöder HTML5 drar du resurserna direkt i gränssnittet. Dialogrutan för att byta namn på filen visas inte.
+
    ![create_menu](assets/create_menu.png)
 
    Om du vill markera flera filer trycker du på Ctrl/Kommando och väljer resurserna i dialogrutan för filväljaren. Från en iPad kan du bara markera en fil i taget.
@@ -77,11 +78,11 @@ Innan du överför en resurs måste du kontrollera att den har ett format som [s
 
    ![chlimage_1-6](assets/chlimage_1-6.png)
 
-   Om du vill avbryta en pågående överföring klickar du på `X` knappen bredvid förloppsindikatorn. När du avbryter överföringen tas den delvis överförda delen av resursen bort.
+   Om du vill avbryta en pågående överföring klickar du på `X` knappen bredvid förloppsindikatorn. När du avbryter överföringen tar AEM Assets bort den delvis överförda delen av resursen.
 
    Möjligheten att återuppta överföring är särskilt användbar i scenarier med låg bandbredd och nätverksfel, där det tar lång tid att överföra stora resurser. Du kan pausa överföringen och fortsätta senare när situationen förbättras. När du återupptar startar överföringen från den punkt där du pausade den.
 
-   Under överföringen sparar AEM de delar av resursen som överförs som datablock i CRX-databasen. När överföringen är klar konsoliderar AEM dessa segment till ett enda datablock.
+   Under överföringsåtgärden sparar AEM de delar av resursen som överförs som datablock i CRX-databasen. När överföringen är klar konsoliderar AEM dessa segment till ett enda datablock.
 
    Om du vill konfigurera rensningsaktiviteten för de oavslutade segmentöverföringsjobben går du till `https://[aem_server]:[port]/system/console/configMgr/org.apache.sling.servlets.post.impl.helper.ChunkCleanUpTask`.
 
@@ -95,9 +96,9 @@ Innan du överför en resurs måste du kontrollera att den har ett format som [s
    >
    >När du väljer **[!UICONTROL Replace]** i **[!UICONTROL Name Conflict]** dialogrutan genereras resurs-ID om för den nya resursen. Detta ID skiljer sig från ID:t för föregående resurs.
    >
-   >Om **[!UICONTROL Asset Insights]** är aktiverat för att spåra visningar/klickningar med Adobe Analytics blir det här återskapade resurs-ID:t ogiltigt för de data som samlats in för resursen i Adobe Analytics.
+   >Om **[!UICONTROL Asset Insights]** är aktiverat för att spåra visningar/klickningar med Adobe Analytics blir det återskapade resurs-ID:t ogiltigt för de data som hämtats för resursen på Adobe Analytics.
 
-   Om resursen som du överför finns i AEM Resurser visas ett varningsmeddelande i dialogrutan om att du försöker överföra en dubblettresurs. **[!UICONTROL Duplicates Detected]** Dialogrutan visas bara om kontrollsummevärdet SHA 1 för den befintliga resursens binära värde matchar kontrollsummevärdet för den resurs som du överför. I det här fallet är namnen på tillgångarna oväsentliga. Dialogrutan kan med andra ord även visas för resurser som har olika namn om SHA 1-värdena för deras binärfiler är desamma.
+   Om resursen som du överför finns i AEM Assets visas ett varningsmeddelande om att du försöker överföra en dubblettresurs **[!UICONTROL Duplicates Detected]** . Dialogrutan visas bara om kontrollsummevärdet SHA 1 för den befintliga resursens binära värde matchar kontrollsummevärdet för den resurs som du överför. I det här fallet är namnen på tillgångarna oväsentliga. Dialogrutan kan med andra ord även visas för resurser som har olika namn om SHA 1-värdena för deras binärfiler är desamma.
 
    >[!NOTE]
    >
@@ -105,9 +106,9 @@ Innan du överför en resurs måste du kontrollera att den har ett format som [s
 
    ![chlimage_1-8](assets/chlimage_1-8.png)
 
-   Tryck för **[!UICONTROL Keep]** att behålla den duplicerade resursen i AEM Resurser. Tryck för **[!UICONTROL Delete]** att ta bort den duplicerade resursen som du överförde.
+   Tryck för **[!UICONTROL Keep]** att behålla den duplicerade resursen i AEM Assets. Tryck för **[!UICONTROL Delete]** att ta bort den duplicerade resursen som du överförde.
 
-   AEM Resurser förhindrar att du överför resurser med förbjudna tecken i filnamnen. Om du försöker överföra en resurs som innehåller otillåtna tecken visar AEM Resurser ett varningsmeddelande om att det finns otillåtna tecken i filnamnet och stoppar överföringen tills du tar bort dessa tecken eller överför med ett tillåtet namn.
+   AEM Assets förhindrar att du överför resurser med förbjudna tecken i filnamnen. Om du försöker överföra en resurs som innehåller otillåtna tecken visar AEM Assets ett varningsmeddelande om att det finns otillåtna tecken i filnamnet och stoppar överföringen tills du tar bort dessa tecken eller överför med ett tillåtet namn.
 
    I dialogrutan kan du ange långa namn för de filer som du överför, så att de passar organisationens specifika regler för filnamn. **[!UICONTROL Upload Assets]**
 
@@ -116,19 +117,20 @@ Innan du överför en resurs måste du kontrollera att den har ett format som [s
    Följande (blankstegsavgränsad lista med) tecken stöds emellertid inte:
    * resursens filnamn får inte innehålla  `* / : [ \ \ ] | # % { } ? &`
    * resursmappens namn får inte innehålla  `* / : [ \ \ ] | # % { } ? \" . ^ ; + & \t`
+
    I gränssnittet Resurser visas dessutom den senaste resursen som du överför eller den mapp som du skapar först i alla vyer (**[!UICONTROL Card view]**, **[!UICONTROL List view]** och **[!UICONTROL Column view]**).
 
    När du överför stora resurser eller flera resurser samtidigt kan du ofta använda visuella indikatorer för att utvärdera förloppet. I **[!UICONTROL Upload Progress]** dialogrutan visas antalet överförda filer och de filer som inte kunde överföras.
 
    ![chlimage_1-10](assets/chlimage_1-10.png)
 
-   Om du avbryter överföringen innan filerna har överförts slutar AEM Resurser att överföra den aktuella filen och uppdaterar innehållet. Filer som redan har överförts tas dock inte bort.
+   Om du avbryter överföringen innan filerna har överförts, avbryter AEM Assets överföringen av den aktuella filen och uppdaterar innehållet. Filer som redan har överförts tas dock inte bort.
 
 ### Serieuppladdningar {#serial-uploads}
 
-Vid överföring av flera resurser i grupp förbrukas betydande systemresurser, vilket kan påverka prestandan i din AEM-distribution negativt. Möjliga flaskhalsar kan vara din internetanslutning, läs- och skrivåtgärder på disk, webbläsarbegränsningar för antalet POST-begäranden vid samtidig överföring av resurser. En gruppöverföring kan misslyckas eller avslutas i förtid. Med andra ord kan AEM-resurser sakna vissa filer när en grupp filer importeras eller helt och hållet inte kan importera någon fil.
+Vid överföring av flera resurser i grupp förbrukas betydande systemresurser, vilket kan påverka prestandan i AEM. Möjliga flaskhalsar kan vara din internetanslutning, läs- och skrivåtgärder på disk, webbläsarbegränsningar för antalet begäranden om POST vid samtidig överföring av resurser. En gruppöverföring kan misslyckas eller avslutas i förtid. Med andra ord kan AEM resurser sakna vissa filer när en grupp filer importeras eller inte alls kan importera någon fil.
 
-För att komma till rätta med denna situation importerar AEM Assets en resurs i taget (seriell överföring) under en gruppöverföring, i stället för att alla resurser hämtas samtidigt.
+För att komma till rätta med denna situation importerar AEM Assets en mediefil i taget (seriell överföring) under en gruppöverföring, i stället för att alla mediefiler hämtas samtidigt.
 
 Seriell överföring av resurser är aktiverat som standard. Om du vill inaktivera funktionen och tillåta samtidig överföring ska du täcka över `fileupload` noden i CRXDe och ange värdet för `parallelUploads` egenskapen till `true`.
 
@@ -142,7 +144,7 @@ Med Dynamic Media kan du batchöverföra resurser via FTP-servern. Om du tänker
 
 >[!NOTE]
 >
->Så här överför du resurser via FTP i Dynamic Media - Scene7-läget installerar funktionspaket 18912 på AEM-författaren. Kontakta Adobes kundtjänst för att få tillgång till FP-18912 och slutföra konfigurationen av ditt FTP-konto. Se [Installera funktionspaket 18912 för migrering](/help/assets/bulk-ingest-migrate.md)av gruppresurser.
+>Om du vill överföra resurser via FTP i Dynamic Media - Scene7 mode installerar funktionspaket 18912 på AEM. Kontakta Adobe kundtjänst för att få tillgång till FP-18912 och slutföra konfigurationen av ditt FTP-konto. Se [Installera funktionspaket 18912 för migrering](/help/assets/bulk-ingest-migrate.md)av gruppresurser.
 Om du använder FTP för att överföra resurser ignoreras de överföringsinställningar som anges i AEM. I stället används filbearbetningsregler, enligt definition i Dynamic Media Classic,.
 
 **Så här överför du resurser med FTP**
@@ -158,7 +160,7 @@ Om du använder FTP för att överföra resurser ignoreras de överföringsinst�
 
    >[!NOTE]
    >
-   >När du överför resurser via FTP får de alternativ för överföringsjobb som du anger i Dynamic Media Classic (Scene7) företräde framför parametrar för resursbearbetning som angetts i AEM.
+   >När du överför resurser via FTP får de överföringsjobbalternativ som du anger i Dynamic Media Classic (Scene7) företräde framför resurshanteringsparametrar som anges i AEM.
 
 1. Tryck på i det nedre högra hörnet av **[!UICONTROL Upload Job Options]** dialogrutan **[!UICONTROL Save]**.
 1. In the lower-right corner of the **[!UICONTROL Upload]** page, tap **[!UICONTROL Submit Upload]**.
@@ -177,11 +179,11 @@ Om du använder FTP för att överföra resurser ignoreras de överföringsinst�
 | Dekomprimera ZIP- eller TAR-filer vid överföring |  |  |
 | Jobbalternativ |  | Tryck/klicka för **[!UICONTROL Job Options]** att öppna [!UICONTROL Upload Job Options] dialogrutan och välj alternativ som påverkar hela överföringsjobbet. De här alternativen är desamma för alla filtyper.<br>Du kan välja standardalternativ för att överföra filer från sidan Allmänna inställningar i programmet. Öppna den här sidan genom att välja **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]**. Tryck på **[!UICONTROL Default Upload Options]** knappen för att öppna [!UICONTROL Upload Job Options] dialogrutan. |
 |  | När | Välj En gång eller Återkommande. Om du vill ställa in ett återkommande jobb väljer du alternativet Upprepa - varje dag, Varje vecka, Varje månad eller Anpassa - för att ange när du vill att FTP-överföringsjobbet ska återkomma. Ange sedan schemaläggningsalternativen efter behov. |
-|  | Inkludera undermappar | Överför alla undermappar i mappen som du vill överföra. Namnen på mappen och dess undermappar som du överför anges automatiskt i AEM Resurser. |
+|  | Inkludera undermappar | Överför alla undermappar i mappen som du vill överföra. Namnen på mappen och dess undermappar som du överför anges automatiskt i AEM Assets. |
 |  | Beskärningsalternativ | Om du vill beskära manuellt från sidorna av en bild väljer du Beskär-menyn och sedan Manuell. Ange sedan antalet pixlar att beskära från en sida eller från varje sida av bilden. Hur mycket av bilden som beskärs beror på bildfilens ppi-inställning (pixlar per tum). Om bilden till exempel visar 150 ppi och du anger 75 i textrutorna Överkant, Höger, Underkant och Vänster beskärs en halv tum från varje sida.<br> Om du vill beskära pixlar med tomt utrymme automatiskt från en bild öppnar du menyn Beskär, väljer Manuell och anger pixelmått i fälten Överkant, Höger, Underkant och Vänster för att beskära från sidorna. Du kan också välja Trimma på menyn Beskär och välja följande alternativ:<br> **Trimma bort baserat på** <ul><li>**Färg** - Välj alternativet Färg. Välj sedan menyn Hörn och välj hörnet på bilden med den färg som bäst motsvarar den tomrumsfärg som du vill beskära.</li><li>**Genomskinlighet** - Välj alternativet Genomskinlighet.<br> **Tolerans** - Dra i skjutreglaget för att ange en tolerans mellan 0 och 1. Om du vill trimma baserat på färg anger du 0 för att beskära pixlar endast om de exakt matchar den färg du valde i hörnet av bilden. Nummer som ligger närmare 1 ger större färgskillnader.<br>Om du vill trimma baserat på genomskinlighet anger du 0 så att pixlarna bara beskärs om de är genomskinliga. Siffror närmare 1 ger större genomskinlighet.</li></ul><br>Observera att dessa beskärningsalternativ är icke-förstörande. |
 |  | Alternativ för färgprofil | Välj en färgkonvertering när du skapar optimerade filer som används för leverans:<ul><li>Standardfärgbevaring: Behåller källbildens färger när bilderna innehåller färgrymdsinformation. det inte finns någon färgkonvertering. Nästan alla bilder idag har rätt färgprofil inbäddad. Om en CMYK-källbild inte innehåller någon inbäddad färgprofil konverteras färgerna till sRGB-färgrymden (standard röd grön). sRGB är den rekommenderade färgrymden för visning av bilder på webbsidor.</li><li>Behåll ursprunglig färgrymd: Bevarar de ursprungliga färgerna utan någon färgkonvertering vid punkten. För bilder utan inbäddad färgprofil görs färgkonverteringen med de standardfärgprofiler som konfigurerats i publiceringsinställningarna. Färgprofilerna kanske inte justeras mot färgen i de filer som skapas med det här alternativet. Därför bör du använda alternativet Standardfärgbevaring.</li><li>Anpassad från > Till<br> öppnar menyer så att du kan välja färgmodellen Konvertera från och Konvertera till. Det här avancerade alternativet åsidosätter eventuell färginformation som är inbäddad i källfilen. Välj det här alternativet när alla bilder som du skickar in innehåller felaktiga eller saknade färgprofildata.</li></ul> |
 |  | Bildredigeringsalternativ | Du kan bevara urklippsmaskerna i bilder och välja en färgprofil.<br> Se [Ange bildredigeringsalternativ vid överföring](#setting-image-editing-options-at-upload). |
-|  | PostScript-alternativ | Du kan rastrera PostScript®-filer, beskära filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.<br> Se [Ange överföringsalternativ](#setting-postscript-and-illustrator-upload-options)för PostScript och Illustrator. |
+|  | PostScript-alternativ | Du kan rastrera PostScript®, beskära filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.<br> Se [Ange överföringsalternativ](#setting-postscript-and-illustrator-upload-options)för PostScript och Illustrator. |
 |  | Photoshop-alternativ | Du kan skapa mallar från Adobe® Photoshop®-filer, behålla lager, ange hur lager ska namnges, extrahera text och ange hur bilder ska förankras i mallar.<br> Observera att mallar inte stöds i AEM.<br> Se [Ange överföringsalternativ](#setting-photoshop-upload-options)för Photoshop. |
 |  | PDF-alternativ | Du kan rastrera filerna, extrahera sökord och länkar, automatiskt generera en e-katalog, ange upplösningen och välja en färgrymd.<br> Observera att e-kataloger inte stöds i AEM. <br> Se [Ange överföringsalternativ](#setting-pdf-upload-options)för PDF. |
 |  | Illustrator-alternativ | Du kan rastrera Adobe Illustrator®-filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.<br> Se [Ange överföringsalternativ](#setting-postscript-and-illustrator-upload-options)för PostScript och Illustrator. |
@@ -202,8 +204,8 @@ När du överför bildfiler, inklusive AI-, EPS- och PSD-filer, kan du utföra f
 | Alternativ | Delalternativ | Beskrivning |
 |---|---|---|
 | Skapa mask från urklippsbana |  | Skapa en mask för bilden baserat på dess urklippsbaneinformation. Det här alternativet gäller bilder som skapats med bildredigeringsprogram där en urklippsbana har skapats. |
-| Oskarp mask |  | Gör att du kan finjustera en skärpefiltereffekt i den slutliga nedsamplade bilden, styra intensiteten i effekten, radien för effekten (mätt i pixlar) och ett kontrasttröskelvärde som ignoreras.<br> Den här effekten använder samma alternativ som filtret Oskarp mask i Photoshop. Till skillnad från vad namnet antyder är Oskarp mask ett skärpefilter. Under Oskarp mask anger du önskade alternativ. Inställningsalternativen beskrivs i följande: |
-|  | Belopp | Styr mängden kontrast som används på kantpixlar.<br> Tänk på det som intensiteten i effekten. Den största skillnaden mellan mängden oskarp mask i Dynamic Media och mängden värden i Adobe Photoshop är att Photoshop har ett intervall på 1 % till 500 %. I Dynamic Media är värdeintervallet 0,0 till 5,0. Värdet 5.0 motsvarar 500 % i Photoshop. värdet 0,9 motsvarar 90 % och så vidare. |
+| Oskarp mask |  | Gör att du kan finjustera en skärpefiltereffekt i den slutliga nedsamplade bilden, styra intensiteten i effekten, radien för effekten (mätt i pixlar) och ett kontrasttröskelvärde som ignoreras.<br> Den här effekten använder samma alternativ som Photoshop Oskarp mask-filter. Till skillnad från vad namnet antyder är Oskarp mask ett skärpefilter. Under Oskarp mask anger du önskade alternativ. Inställningsalternativen beskrivs i följande: |
+|  | Belopp | Styr mängden kontrast som används på kantpixlar.<br> Tänk på det som intensiteten i effekten. Den största skillnaden mellan mängden oskarp mask i Dynamic Media och mängden i Adobe Photoshop är att Photoshop har ett intervall på 1 till 500 %. I Dynamic Media är värdeintervallet 0,0 till 5,0. Värdet 5,0 motsvarar 500 % i Photoshop. värdet 0,9 motsvarar 90 % och så vidare. |
 |  | Radie | Styr radien för effekten. Värdeintervallet är 0-250.<br> Effekten körs på alla pixlar i en bild och strålar ut från alla pixlar i alla riktningar. Radien mäts i pixlar. Om du till exempel vill få en liknande skärpeeffekt för en bild på 2 000 x 2 000 pixlar och en bild på 500 x 500 pixlar anger du en radie på två pixlar för bilden på 2 000 x 2 000 pixlar och ett radievärde på en pixel för bilden på 500 x 500 pixlar . Ett större värde används för en bild som har fler pixlar. |
 |  | Tröskelvärde | Tröskelvärde är ett kontrastintervall som ignoreras när filtret Oskarp mask används. Det är viktigt så att inget &quot;brus&quot; uppstår i en bild när det här filtret används. Värdeintervallet är 0-255, vilket är antalet intensitetssteg i en gråskalebild. 0=svart, 128=50% grått och 255=vitt.<br> Ett tröskelvärde på 12 ignorerar t.ex. små variationer i hudtonens ljusstyrka för att undvika att lägga till brus, men ändå ger kantkontrast till kontrasterande områden, t.ex. där ögonfransarna möts av hud.<br> Om du t.ex. har ett foto av någons ansikte kommer Oskarp mask att påverka de kontrasterande delarna av bilden, t.ex. där ögonfransar och hud möts för att skapa ett tydligt kontrastområde, samt den utjämnade huden. Även den jämnaste huden uppvisar subtila förändringar i intensitetsvärden. Om du inte använder ett tröskelvärde framhäver filtret dessa subtila ändringar i hudpixlar. I sin tur skapas en högljudd och oönskad effekt medan kontrasten på ögonfransarna ökar, vilket ökar skärpan.<br> För att undvika det här problemet introduceras ett tröskelvärde som instruerar filtret att ignorera pixlar som inte förändrar kontrasten dramatiskt, som mjuk hud.<br> Lägg märke till texturen bredvid dragkedjan i zippargrafiken som visades tidigare. Bildbrus visas eftersom tröskelvärdena var för låga för att undertrycka bruset. |
 |  | Monokrom | Markera för att få bildintensiteten oskarp mask (intensitet).<br> Avmarkera alternativet om du vill skapa en oskarp mask för varje färgkomponent separat. |
@@ -214,7 +216,7 @@ När du överför bildfiler, inklusive AI-, EPS- och PSD-filer, kan du utföra f
 
 #### Ange överföringsalternativ för PostScript och Illustrator {#setting-postscript-and-illustrator-upload-options}
 
-När du överför PostScript- (EPS) eller Illustrator-bildfiler (AI) kan du formatera dem på olika sätt. Du kan rastrera filerna, behålla den genomskinliga bakgrunden, välja en upplösning och välja en färgrymd. Alternativ för formatering av PostScript- och Illustrator-filer finns i dialogrutan Alternativ för överföringsjobb under PostScript-alternativ och Illustrator-alternativ.
+När du överför bildfiler i PostScript (EPS) eller Illustrator (AI) kan du formatera dem på olika sätt. Du kan rastrera filerna, behålla den genomskinliga bakgrunden, välja en upplösning och välja en färgrymd. Alternativ för formatering av PostScript- och Illustrator-filer finns i dialogrutan Alternativ för överföringsjobb under PostScript-alternativ och Illustrator-alternativ.
 
 | Alternativ | Delalternativ | Beskrivning |
 |---|---|---|
@@ -229,11 +231,11 @@ När du överför PostScript- (EPS) eller Illustrator-bildfiler (AI) kan du form
 
 #### Ange överföringsalternativ för Photoshop {#setting-photoshop-upload-options}
 
-PSD-filer (Photoshop-dokument) används oftast för att skapa bildmallar. När du överför en PSD-fil kan du skapa en bildmall automatiskt från filen (välj alternativet Skapa mall på skärmen Överför).
+PSD-filer (Photoshop Document) används oftast för att skapa bildmallar. När du överför en PSD-fil kan du skapa en bildmall automatiskt från filen (välj alternativet Skapa mall på skärmen Överför).
 
 Dynamic Media skapar flera bilder från en PSD-fil med lager om du använder filen för att skapa en mall; skapas en bild för varje lager.
 
-Använd **[!UICONTROL Crop Options]** och **[!UICONTROL Color Profile Options]**, som beskrivs ovan, med uppladdningsalternativ för Photoshop.
+Använd **[!UICONTROL Crop Options]** och **[!UICONTROL Color Profile Options]**, som beskrivs ovan, med Photoshop överföringsalternativ.
 
 >[!NOTE]
 >
@@ -246,9 +248,9 @@ Använd **[!UICONTROL Crop Options]** och **[!UICONTROL Color Profile Options]**
 | Extrahera text |  | Extraherar texten så att användare kan söka efter text i ett visningsprogram. |
 | Utöka lager till bakgrundsstorlek |  | Utökar storleken på överlappade bildlager till storleken på bakgrundslagret. |
 | Namnge lager |  | Lager i PSD-filen överförs som separata bilder. |
-|  | Lagernamn | Namnger bilderna efter deras lagernamn i PSD-filen. Ett lager med namnet Price Tag i den ursprungliga PSD-filen blir till exempel en bild med namnet Price Tag. Om lagernamnen i PSD-filen är standardlagernamn för Photoshop (Bakgrund, Lager 1, Lager 2 och så vidare) får bilderna namn efter sina lagernummer i PSD-filen, inte efter deras standardlagernamn. |
-|  | Photoshop och lagernummer | Namnger bilderna efter deras lagernummer i PSD-filen och ignorerar de ursprungliga lagernamnen. Bilder namnges med Photoshops filnamn och ett nummer på lagret som läggs till. Det andra lagret i en fil som heter Spring Ad.psd får till exempel namnet Spring Ad_2 även om det har ett icke-standardnamn i Photoshop. |
-|  | Photoshop och lagernamn | Namnger bilderna efter PSD-filen följt av lagernamnet eller lagernumret. Lagernumret används om lagernamnen i PSD-filen är standardlagernamn i Photoshop. Ett lager med namnet Price Tag i en PSD-fil med namnet SpringAd får till exempel namnet Spring Ad_Price Tag. Ett lager med standardnamnet Lager2 kallas Spring Ad_2. |
+|  | Lagernamn | Namnger bilderna efter deras lagernamn i PSD-filen. Ett lager med namnet Price Tag i den ursprungliga PSD-filen blir till exempel en bild med namnet Price Tag. Om lagernamnen i PSD-filen däremot är Photoshop standardlagernamn (Bakgrund, Lager 1, Lager 2 och så vidare) får bilderna namn efter sina lagernummer i PSD-filen, inte efter deras standardlagernamn. |
+|  | Photoshop och lagernummer | Namnger bilderna efter deras lagernummer i PSD-filen och ignorerar de ursprungliga lagernamnen. Bilderna får samma namn som Photoshop-filnamnet och ett nummer i det tillagda lagret. Det andra lagret i en fil som heter Spring Ad.psd får till exempel namnet Spring Ad_2 även om det har ett icke-standardnamn i Photoshop. |
+|  | Photoshop- och lagernamn | Namnger bilderna efter PSD-filen följt av lagernamnet eller lagernumret. Lagernumret används om lagernamnen i PSD-filen är Photoshop standardlagernamn. Ett lager med namnet Price Tag i en PSD-fil med namnet SpringAd får till exempel namnet Spring Ad_Price Tag. Ett lager med standardnamnet Lager2 kallas Spring Ad_2. |
 | Fästpunkt |  | Ange hur bilder ska förankras i mallar som genereras från lagerkompositionen som skapas från PSD-filen. Som standard är ankarpunkten i mitten. Med en central ankarpunkt kan ersättningsbilder bäst fylla samma område, oavsett ersättningsbildens proportioner. Bilder med en annan aspekt som ersätter den här bilden upptar i själva verket samma utrymme när de refererar till mallen och använder parameterersättning. Ändra till en annan inställning om ditt program kräver att ersättningsbilderna fyller ut det tilldelade utrymmet i mallen. |
 
 #### Ange överföringsalternativ för PDF {#setting-pdf-upload-options}
@@ -294,17 +296,17 @@ Mer information om hur du skapar förinställningar för gruppuppsättningar fin
 
 ### Strömmade överföringar {#streamed-uploads}
 
-Om du överför flera resurser ökar I/O-anropen till AEM-servern drastiskt, vilket minskar uppladdningseffektiviteten och till och med kan göra att den tar slut. AEM Assets stöder direktuppspelad överföring av resurser. Direktuppspelad överföring minskar I/O-disken under överföringen genom att resurslagring undviks i en tillfällig mapp på servern innan den kopieras till databasen. I stället överförs data direkt till databasen. På så sätt minskas tiden det tar att överföra stora resurser och möjligheten till timeout. Direktuppspelad överföring är aktiverat som standard i AEM Resurser.
+Om du överför flera resurser ökar I/O-anropen till AEM drastiskt, vilket minskar överföringseffektiviteten och till och med kan göra att den tar slut. AEM Assets har stöd för direktuppspelad överföring av resurser. Direktuppspelad överföring minskar I/O-disken under överföringen genom att resurslagring undviks i en tillfällig mapp på servern innan den kopieras till databasen. I stället överförs data direkt till databasen. På så sätt minskas tiden det tar att överföra stora resurser och möjligheten till timeout. Direktuppspelning är aktiverat som standard i AEM Assets.
 
-Direktuppspelning är inaktiverat för AEM som körs på JEE-server med en servlet-api-version som är lägre än 3.1.
+Direktuppspelningsöverföring är inaktiverat för AEM som körs på JEE-server med en servlet-api-version som är lägre än 3.1.
 
 ### Extrahera ZIP-arkiv som innehåller resurser {#extract-zip-archive-containing-assets}
 
-Du kan överföra ZIP-arkiv precis som andra resurser som stöds. Samma filnamnsregler gäller för ZIP-filer. Med AEM kan du extrahera ett ZIP-arkiv till en DAM-plats.
+Du kan överföra ZIP-arkiv precis som andra resurser som stöds. Samma filnamnsregler gäller för ZIP-filer. AEM kan du extrahera ett ZIP-arkiv till en DAM-plats.
 
 Välj ett ZIP-arkiv i taget, klicka **[!UICONTROL Extract Archive]** och välj en målmapp. Välj ett alternativ för att hantera eventuella konflikter. Om resurserna i ZIP-filen redan finns i målmappen kan du välja något av följande alternativ: hoppa över extrahering, ersätta befintliga filer, behålla båda resurserna genom att byta namn eller skapa en ny version.
 
-När extraheringen är klar meddelar AEM dig i meddelandefältet. Medan AEM extraherar ZIP kan du gå tillbaka till arbetet utan att avbryta extraheringen.
+När extraheringen är klar meddelar AEM dig i meddelandefältet. Medan AEM extraherar ZIP-filen kan du gå tillbaka till arbetet utan att avbryta extraheringen.
 
 ![Meddelande om ZIP-extrahering](assets/zip_extract_notification.png)
 
@@ -379,6 +381,7 @@ Om du vill skapa taggar måste du ha skrivbehörighet för `/content/cq:tags/def
    * Antal gånger som resursen visats eller hämtats.
    * Kanaler/enheter som resursen användes genom.
    * Kreativa lösningar där resursen nyligen användes.
+
    Mer information finns i [Resursinsikter](touch-ui-asset-insights.md).
 
 1. Tryck på **[!UICONTROL Save & Close]**.
@@ -432,6 +435,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    * Ange namnet på resursen när den har flyttats. Tryck sedan på **[!UICONTROL Next]** för att fortsätta.
    * Tryck för **[!UICONTROL Cancel]** att stoppa processen.
+
    >[!NOTE]
    >
    >Du kan ange samma namn för resursen om det inte finns någon resurs med det namnet på den nya platsen. Du bör emellertid använda ett annat namn om du flyttar resursen till en plats där det finns en resurs med samma namn. Om du använder samma namn genereras automatiskt en variant av namnet. Om resursen till exempel har namnet Fyrkant, genereras namnet Fyrkant1 för kopian.
@@ -456,6 +460,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
    * Markera eller avmarkera referenser till resurserna i **[!UICONTROL Adjust]** kolumnen.
    * Tryck för **[!UICONTROL Back]** att gå tillbaka till **[!UICONTROL Select Destination]** sidan.
    * Tryck för **[!UICONTROL Cancel]** att stoppa flyttåtgärden.
+
    Om du inte uppdaterar referenser fortsätter de att peka på resursens tidigare sökväg. Om du justerar referenserna uppdateras de till den nya resurssökvägen.
 
 ## Hantera återgivningar {#managing-renditions}
@@ -476,7 +481,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    >[!NOTE]
    >
-   >Som standard visas inte den ursprungliga återgivningen av resursen i förhandsgranskningsläget i AEM Resurser. Om du är administratör kan du använda övertäckningar för att konfigurera AEM Resurser så att de ursprungliga återgivningarna visas i förhandsgranskningsläget.
+   >Som standard visas inte den ursprungliga återgivningen av resursen i förhandsgranskningsläget i AEM Assets. Om du är administratör kan du använda övertäckningar för att konfigurera AEM Assets så att ursprungliga återgivningar visas i förhandsgranskningsläget.
 
 1. Välj en återgivning om du vill visa eller ta bort återgivningen.
 
@@ -496,7 +501,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
    >
    >Om du väljer en återgivning på panelen **[!UICONTROL Renditions]** ändras sammanhanget för verktygsfältet och endast de åtgärder som är relevanta visas. Options, such as the **[!UICONTROL Upload Rendition]** icon is not displayed. Om du vill visa de här alternativen i verktygsfältet går du till informationssidan för resursen.
 
-   Du kan konfigurera dimensionerna för den återgivning som du vill ska visas på informationssidan för en bild- eller videoresurs. Baserat på de dimensioner du anger visar AEM Resurser återgivningen med de exakta eller närmaste dimensionerna.
+   Du kan konfigurera dimensionerna för den återgivning som du vill ska visas på informationssidan för en bild- eller videoresurs. Beroende på de dimensioner du anger visas återgivningen med de exakta eller närmaste måtten i AEM Assets.
 
    To configure rendition dimensions of an image at the asset detail level, overlay the **[!UICONTROL renditionpicker]** node `libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/renditionpicker` and configure the value of the width property. Konfigurera egenskapen **[!UICONTROL size (Long) in KB]** i stället för bredden för att anpassa återgivningen på resursdetaljsidan utifrån bildstorleken. För storleksbaserad anpassning prioriterar egenskapen **[!UICONTROL preferOriginal]** originalet om storleken på den matchade återgivningen är större än originalet.
 
@@ -535,6 +540,7 @@ Du måste ha behörighet att ta bort en resurs för att den ska kunna tas bort. 
 
       * Om resursen inte har några referenser tas resursen bort.
       * Om resursen har referenser visas ett felmeddelande om detta **[!UICONTROL One or more assets are referenced]**. Du kan välja **[!UICONTROL Force Delete]** eller **[!UICONTROL Cancel]**.
+
    >[!NOTE]
    >
    >Om du vill lösa eller ta bort inkommande referenser från andra sidor uppdaterar du de relevanta referenserna innan du tar bort en resurs.
@@ -601,14 +607,14 @@ CUG är ett extra sätt att begränsa åtkomsten till dina resurser. Du kan ocks
 
    ![add_user](assets/add_user.png)
 
-1. Om du vill visa en inloggningsskärm när användare öppnar mappen väljer du **[!UICONTROL Enable]** alternativet. Välj sedan sökvägen till en inloggningssida i AEM och spara ändringarna.
+1. Om du vill visa en inloggningsskärm när användare öppnar mappen väljer du **[!UICONTROL Enable]** alternativet. Markera sedan sökvägen till en inloggningssida i AEM och spara ändringarna.
 
    ![login_page](assets/login_page.png)
 
-   Om du inte anger sökvägen till en inloggningssida visar AEM standardinloggningssidan i publiceringsinstansen.
+   Om du inte anger sökvägen till en inloggningssida visas AEM standardinloggningssidan i publiceringsinstansen.
 
 1. Publicera mappen och försök sedan komma åt den från publiceringsinstansen. En inloggningsskärm visas.
-1. Om du är CUG-medlem anger du dina säkerhetsuppgifter. Mappen visas när du har autentiserats av AEM.
+1. Om du är CUG-medlem anger du dina säkerhetsuppgifter. Mappen visas när AEM autentiserar dig.
 
 ## Söka efter resurser {#searching-assets}
 
@@ -618,7 +624,7 @@ Grundläggande sökning finns i avsnittet [Sök och filtrera](/help/sites-author
 
 För nyligen överförda resurser är deras metadata (inklusive titlar, taggar och så vidare) inte direkt tillgängliga i listan med förslag som visas när du skriver i rutan Sök.
 
-Detta beror på att AEM Resurser väntar tills en timeout-period har gått ut (1 timme som standard) innan ett bakgrundsjobb körs för att indexera metadata för alla nyligen överförda/uppdaterade resurser och lägga till dem i listan med förslag.
+Detta beror på att AEM Assets väntar tills en timeout-period har passerats (1 timme som standard) innan ett bakgrundsjobb körs för att indexera metadata för alla nyligen överförda/uppdaterade resurser och lägga till dem i listan med förslag.
 
 ## Använd snabbåtgärder {#quick-actions}
 
@@ -645,7 +651,7 @@ Mer information finns i [Visa och välja resurser](/help/sites-authoring/basic-h
 
 ## Redigera bilder {#editing-images}
 
-Med redigeringsverktygen i AEM Resurser-gränssnittet kan du utföra små redigeringsjobb på bildresurser. Du kan beskära, rotera, vända och utföra andra redigeringsjobb på bilder. Du kan också lägga till bildscheman till resurser.
+Med redigeringsverktygen i AEM Assets gränssnitt kan du utföra små redigeringsjobb på bildresurser. Du kan beskära, rotera, vända och utföra andra redigeringsjobb på bilder. Du kan också lägga till bildscheman till resurser.
 
 Bildredigering stöds för filer som har följande format:
 
@@ -667,6 +673,7 @@ Du kan också lägga till bildscheman med bildredigeraren. Mer information finns
    * Markera resursen och klicka sedan på **[!UICONTROL Edit]** -ikonen i verktygsfältet.
    * Tryck på **[!UICONTROL Edit]** det alternativ som visas på en resurs i kortvyn.
    * Tryck på **[!UICONTROL Edit]** -ikonen i verktygsfältet på resurssidan.
+
    ![edit_icon](assets/edit_icon.png)
 
 1. Beskär bilden genom att trycka **[!UICONTROL Crop]**.
@@ -738,6 +745,7 @@ Du kan också lägga till anteckningar i en samling. Men om en samling innehåll
 
    * [Snabbåtgärder](managing-assets-touch-ui.md#quick-actions)
    * Från verktygsfältet när du har valt resursen eller navigerat till resurssidan
+
    ![chlimage_1-29](assets/chlimage_1-29.png)
 
 1. Lägg till en kommentar i rutan **[!UICONTROL Comment]** längst ned på tidslinjen. Alternatively, mark up an area on the image and add an annotation in the **[!UICONTROL Add Annotation]** dialog box.
@@ -791,7 +799,7 @@ Om en resurs har anteckningar eller har genomgått ett granskningsarbetsflöde k
 
 Du kan också välja att bara skriva ut anteckningarna eller granskningsstatusen.
 
-Långa anteckningar kanske inte återges korrekt i PDF-filen. För optimal återgivning rekommenderar Adobe att du begränsar anteckningarna till 50 ord.
+Långa anteckningar kanske inte återges korrekt i PDF-filen. För optimal återgivning rekommenderar Adobe att du begränsar kommentarerna till 50 ord.
 
 Skriv ut anteckningarna och granskningsstatusen genom att trycka på **[!UICONTROL Print]** ikonen och följa instruktionerna i guiden. Ikonen visas bara i verktygsfältet när resursen har tilldelats minst en antecknings- eller granskningsstatus. **[!UICONTROL Print]**
 
@@ -838,7 +846,7 @@ Skriv ut anteckningarna och granskningsstatusen genom att trycka på **[!UICONTR
    Återgå till den återgivna PDF-filen och uppdatera den. Den uppdaterade PDF-filen återspeglar de ändringar du har gjort.
 
 **Så här skriver du ut anteckningar på främmande språk**:
-Om en resurs innehåller anteckningar på främmande språk (särskilt icke-latinska språk) måste du först konfigurera tjänsten CQ-DAM-Handler-Gibson Font Manager på AEM-servern så att den kan skriva ut anteckningarna. När du konfigurerar Font Manager-tjänsten CQ-DAM-Handler-Gibson anger du sökvägen till teckensnitten för de önskade språken.
+Om en resurs innehåller anteckningar på främmande språk (särskilt icke-latinska språk) måste du först konfigurera tjänsten CQ-DAM-Handler-Gibson Font Manager på AEM server så att anteckningarna kan skrivas ut. När du konfigurerar Font Manager-tjänsten CQ-DAM-Handler-Gibson anger du sökvägen till teckensnitten för de önskade språken.
 
 1. Öppna **[!UICONTROL CQ-DAM-Handler-Gibson Font Manager Service]** konfigurationssidan från URL:en [https://&lt;server>:&lt;port>/system/console/configMgr/com.day.cq.dam.handler.gibson.fontmanager.impl.FontManagerServiceImpl](http://localhost:4502/system/console/configMgr/com.day.cq.dam.handler.gibson.fontmanager.impl.FontManagerServiceImpl).
 1. Gör något av följande **[!UICONTROL CQ-DAM-Handler-Gibson Font Manager Service]** om du vill konfigurera:
@@ -852,9 +860,9 @@ Om en resurs innehåller anteckningar på främmande språk (särskilt icke-lati
 
    * Inkludera strängen `<font_family_name_of_custom_font, sans-serif>` i alternativet för teckensnittsfamilj. Om du till exempel vill skriva ut anteckningar i CJK (kinesiska, japanska och koreanska), inkluderar du strängen `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif` i alternativet för teckensnittsfamilj. Om du vill skriva ut anteckningar på hindi hämtar du lämpligt teckensnitt och konfigurerar teckensnittsfamiljen som Arial Unicode MS, Noto Sans, Noto Sans CJK JP, Noto Sans Devanagari, sans-serif.
 
-1. Starta om AEM-instansen.
+1. Starta om AEM.
 
-Följande är ett exempel på hur du konfigurerar AEM för att skriva ut anteckningar i CJK (kinesiska, japanska och koreanska):
+Följande är ett exempel på hur du konfigurerar AEM att skriva ut anteckningar i CJK (kinesiska, japanska och koreanska):
 
 1. Hämta Google Noto CJK-teckensnitt från följande länkar och lagra dem i den teckensnittskatalog som konfigurerats i teckensnittshanterartjänsten.
 
@@ -871,9 +879,9 @@ Versionshantering skapar en ögonblicksbild av digitala resurser vid en viss tid
 
 Här följer exempel där du skapar versioner:
 
-* Du ändrar en bild i ett annat program och överför den till AEM Resurser. En version av bilden skapas så att originalbilden inte skrivs över.
+* Du ändrar en bild i ett annat program och överför den till AEM Assets. En version av bilden skapas så att originalbilden inte skrivs över.
 * Du redigerar metadata för en resurs.
-* Du använder AEM-datorprogrammet för att checka ut en befintlig resurs och spara ändringarna. En ny version skapas varje gång resursen sparas.
+* Du använder AEM datorprogram för att checka ut en befintlig resurs och spara ändringarna. En ny version skapas varje gång resursen sparas.
 
 Du kan även aktivera automatisk versionshantering via ett arbetsflöde. När du skapar en version för en resurs sparas metadata och återgivningar tillsammans med versionen. Återgivningar är renderingsalternativ för samma bilder, till exempel en PNG-återgivning av en överförd JPEG-fil.
 
@@ -929,7 +937,7 @@ Versionsfunktionen gör följande:
 
 ### Starta ett arbetsflöde för en resurs {#starting-a-workflow-on-an-asset}
 
-Se [Tillämpa ett arbetsflöde på en AEM-resurs](/help/assets/assets-workflow.md#apply-a-workflow-to-an-aem-asset).
+Se [Tillämpa ett arbetsflöde på en AEM resurs](/help/assets/assets-workflow.md#apply-a-workflow-to-an-aem-asset).
 
 ## Om samlingar {#collections}
 
