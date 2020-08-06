@@ -11,6 +11,9 @@ topic-tags: deploying
 discoiquuid: 9333ff84-f624-4cfa-a9e4-c5e3882171ff
 translation-type: tm+mt
 source-git-commit: 67e87dabeb2521ed9fd33895df7f6134ca60ad6f
+workflow-type: tm+mt
+source-wordcount: '382'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 67e87dabeb2521ed9fd33895df7f6134ca60ad6f
 
 Skriptet är tillgängligt under `start` katalogen &lt;cq-installation>/bin ** . Det finns både Unix- och Windows-versioner. Skriptet startar instansen som är installerad i katalogen *&lt;cq-installation>* .
 
-Dessa två versioner har stöd för en lista med miljövariabler som kan användas för att starta och justera AEM-instansen.
+Dessa två versioner har stöd för en lista med miljövariabler som kan användas för att starta och justera AEM.
 
 <table> 
  <tbody> 
@@ -66,7 +69,7 @@ Dessa två versioner har stöd för en lista med miljövariabler som kan använd
 
 >[!CAUTION]
 >
->Observera att vissa körningslägen, bland annat författare och publicering, måste anges innan AEM startas första gången och inte kan ändras efteråt. Innan du konfigurerar en AEM-instans som ska användas i produktionen bör du läsa dokumentationen [för](/help/sites-deploying/configure-runmodes.md) körningslägen för mer information.
+>Observera att vissa körningslägen, bland annat författare och publicering, måste anges innan AEM startas första gången och inte kan ändras efteråt. Innan du konfigurerar en AEM som ska användas i produktionen bör du läsa dokumentationen [för](/help/sites-deploying/configure-runmodes.md) körningslägen för mer information.
 
 ### Exempel på Windows-plattformen start.bat-skript {#windows-platform-start-bat-script-example}
 
@@ -82,7 +85,7 @@ CQ_PORT=1234 ./start
 
 >[!NOTE]
 >
->Startskriptet startar den AEM Quickstart som finns installerad under *mappen &lt;cq-installation>/app* .
+>Startskriptet startar AEM QuickStart som installeras under *mappen &lt;cq-installation>/app* .
 
 ## Stoppar Adobe Experience Manager {#stopping-adobe-experience-manager}
 
@@ -90,10 +93,10 @@ Om du vill stoppa AEM gör du något av följande:
 
 * Beroende på vilken plattform du använder:
 
-   * Om du startade AEM från antingen ett skript eller kommandoraden trycker du på **Ctrl+C** för att stänga servern.
+   * Om du AEM från ett skript eller kommandoraden trycker du på **Ctrl+C** för att stänga servern.
    * Om du har använt startskriptet på UNIX måste du använda stoppskriptet för att stoppa AEM.
 
-* Om du startade AEM genom att dubbelklicka på burkfilen klickar du på knappen **På** i startfönstret (knappen ändras sedan till **Av**) för att stänga servern.
+* Om du AEM genom att dubbelklicka på burkfilen klickar du på knappen **På** i startfönstret (knappen ändras sedan till **Av**) för att stänga servern.
 
    ![chlimage_1-63](assets/chlimage_1-63.png)
 
