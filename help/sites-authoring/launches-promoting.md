@@ -12,6 +12,9 @@ discoiquuid: 977a3dda-4292-4bd2-bfa5-af4d789d9ef9
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +29,7 @@ Du måste befordra startsidor för att kunna flytta tillbaka innehållet till k�
 
 >[!NOTE]
 >
->När du har befordrat startsidorna till målet (**Produktion**) kan du aktivera **Produktionssidorna** som en enhet (så att processen går snabbare). Lägg till sidorna i ett arbetsflödespaket och använd det som nyttolast för ett arbetsflöde som aktiverar ett sidpaket. Du måste skapa arbetsflödespaketet innan du befordrar starten. Se [Bearbeta befordrade sidor med AEM-arbetsflöde](#processing-promoted-pages-using-aem-workflow).
+>När du har befordrat startsidorna till målet (**Produktion**) kan du aktivera **Produktionssidorna** som en enhet (så att processen går snabbare). Lägg till sidorna i ett arbetsflödespaket och använd det som nyttolast för ett arbetsflöde som aktiverar ett sidpaket. Du måste skapa arbetsflödespaketet innan du befordrar starten. See [Processing Promoted Pages Using AEM Workflow](#processing-promoted-pages-using-aem-workflow).
 
 >[!CAUTION]
 >
@@ -44,6 +47,7 @@ Du måste befordra startsidor för att kunna flytta tillbaka innehållet till k�
 >
 >* [Befordra en kapslad start](#promoting-a-nested-launch) när det finns mer än en start i strukturen.
 >* [Launches - The Order of Events](/help/sites-authoring/launches.md#launches-the-order-of-events) for more details about automatic promoand publication.
+
 >
 
 
@@ -71,6 +75,7 @@ Du kan befordra starter från **Sites** Console eller **Launches** console:
    * **Befordra ändrade sidor**
    * **Höj upp aktuell sida**
    * **Befordra aktuella sidor och undersidor**
+
    Om du t.ex. väljer att bara befordra ändrade sidor:
 
    ![chlimage_1](assets/chlimage_1.png)
@@ -117,6 +122,7 @@ När du har skapat en kapslad start kan du befordra den tillbaka till någon av 
       * **Befordra ändrade sidor**
       * **Höj upp aktuell sida**
       * **Befordra aktuella sidor och undersidor**
+
    ![chlimage_1-4](assets/chlimage_1-4.png)
 
 1. Välj **Nästa**.
