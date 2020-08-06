@@ -1,8 +1,8 @@
 ---
 title: Ansluta till SQL-databaser
 seo-title: Ansluta till SQL-databaser
-description: Få tillgång till en extern SQL-databas så att dina AEM-program kan interagera med data
-seo-description: Få tillgång till en extern SQL-databas så att dina AEM-program kan interagera med data
+description: Få åtkomst till en extern SQL-databas så att dina AEM program kan interagera med data
+seo-description: Få åtkomst till en extern SQL-databas så att dina AEM program kan interagera med data
 uuid: 0af0ed08-9487-4c37-87ce-049c9b4c1ea2
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 11a11803-bce4-4099-9b50-92327608f37b
 translation-type: tm+mt
 source-git-commit: 14daff213297d2435765dd46039f346ce3868ac5
+workflow-type: tm+mt
+source-wordcount: '968'
+ht-degree: 0%
 
 ---
 
@@ -84,7 +87,7 @@ Om du känner till källkoden kan du bestämma vilken lösning som ska användas
 
 Följande länkar öppnar hämtningssidorna för några populära databasprodukter:
 
-* [Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11774)
+* [Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?displaylang=en&amp;id=11774)
 * [Oracle](https://www.oracle.com/technetwork/database/features/jdbc/index-091264.html)
 * [IBM DB2](https://www-01.ibm.com/support/docview.wss?uid=swg27007053)
 
