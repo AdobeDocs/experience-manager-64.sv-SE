@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 6911c8e3-b12c-466e-8255-5dcd09557d35
 translation-type: tm+mt
 source-git-commit: 4e5d3c0ae71f601bcf39fa768c8b5ac86decc1eb
+workflow-type: tm+mt
+source-wordcount: '657'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: 4e5d3c0ae71f601bcf39fa768c8b5ac86decc1eb
 
 >[!NOTE]
 >
->Den här funktionen kräver att [AEM 6.4 Service Pack 2 (6.4.2.0)](/help/release-notes/sp-release-notes.md) eller senare används.
+>Den här funktionen kräver att [AEM 6.4 Service Pack 2 (6.4.2.0)](/help/release-notes/sp-release-notes.md) eller senare tillämpas.
 
-Du kan exportera [Experience Fragments](/help/sites-authoring/experience-fragments.md), som har skapats i Adobe Experience Manager (AEM), till Adobe Target. De kan sedan användas som erbjudanden i Target-aktiviteter för att testa och personalisera upplevelser i stor skala. På så sätt kan du kombinera enkelheten och kraften i AEM med de kraftfulla funktionerna för automatiserad intelligens (AI) och maskininlärning (ML) i Target.
+Du kan exportera [Experience Fragments](/help/sites-authoring/experience-fragments.md), som har skapats i Adobe Experience Manager (AEM), till Adobe Target. De kan sedan användas som erbjudanden i Target-aktiviteter för att testa och personalisera upplevelser i stor skala. Detta gör att du kan kombinera enkelheten och kraften i AEM med de kraftfulla funktionerna för automatiserad intelligens (AI) och maskininlärning (ML) i Target.
 
 ## Förutsättningar {#prerequisites}
 
@@ -43,9 +46,9 @@ Innan du exporterar ett fragment måste du lägga till **molnkonfigurationen** f
    >
    >Om du lägger till molnkonfigurationen i själva Experience Fragment ärvs konfigurationen av alla variationer.
 
-1. Välj fliken **Molntjänster** .
+1. Klicka på fliken **Cloud Services** .
 
-1. Välj **Adobe Target** i listrutan under Konfiguration **av** molntjänster.
+1. Under **Konfigurera** Cloud Service väljer du **Adobe Target** i listrutan.
 1. Välj lämplig konfiguration under **Adobe Target**.
 
 1. **Spara och stäng**.
@@ -54,11 +57,11 @@ Innan du exporterar ett fragment måste du lägga till **molnkonfigurationen** f
 
 >[!NOTE]
 >
->För medieresurser, till exempel bilder, exporteras bara en referens till Target. Resursen lagras i AEM Resurser och levereras från AEM-publiceringsinstansen.
+>För medieresurser, till exempel bilder, exporteras bara en referens till Target. Resursen lagras i AEM Assets och levereras från den AEM publiceringsinstansen.
 >
 >På grund av detta måste Experience Fragment, med alla relaterade resurser, publiceras före export till Target.
 
-Så här exporterar du ett upplevelsefragment från AEM till Target (efter att du har angett molnkonfigurationen):
+Så här exporterar du ett upplevelsefragment från AEM till mål (efter att du har angett molnkonfigurationen):
 
 1. Navigera till Experience Fragment-konsolen.
 1. Välj den Experience Fragment som du vill exportera till mål.
@@ -97,15 +100,15 @@ Om du tar bort ett Experience Fragment som redan har exporterats till Target kan
 
 För att undvika sådana situationer:
 
-* Om Experience Fragment inte används för närvarande i en aktivitet kan användaren ta bort fragmentet utan ett varningsmeddelande.
-* Om Experience Fragment används av en aktivitet i Target får AEM-användaren ett felmeddelande om eventuella konsekvenser som en borttagning av fragmentet kan ha för aktiviteten.
+* Om Experience Fragment inte används för närvarande i en aktivitet kan AEM användaren ta bort fragmentet utan ett varningsmeddelande.
+* Om Experience Fragment används för närvarande av en aktivitet i Target får AEM ett felmeddelande om eventuella konsekvenser som en borttagning av fragmentet kan ha för aktiviteten.
 
    Felmeddelandet i AEM förhindrar inte användaren från att (tvinga) ta bort Experience Fragment. Om Experience Fragment tas bort:
 
-   * Target-erbjudandet med AEM Experience Fragment kan visa oönskat beteende
+   * Målerbjudandet med AEM Experience Fragment kan visa oönskat beteende
 
       * Erbjudandet kommer troligtvis fortfarande att återges eftersom Experience Fragment HTML överfördes till Target
-      * Eventuella referenser i Experience Fragment kanske inte fungerar korrekt om refererade resurser även har tagits bort i AEM.
+      * Eventuella referenser i Experience Fragment kanske inte fungerar korrekt om refererade resurser också tas bort i AEM.
    * Det är förstås inte möjligt att göra ytterligare ändringar i Experience Fragment eftersom Experience Fragment inte längre finns i AEM.
 
 
