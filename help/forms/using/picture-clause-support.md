@@ -11,6 +11,9 @@ topic-tags: hTML5_forms
 discoiquuid: 5e344be7-46cd-4e1f-ae3a-1f89c645cffe
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '636'
+ht-degree: 5%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 HTML5-formulär har stöd för XFA Picture-satsen för visningsvärde och formaterat värde för datum, text och numeriska symboler. Följande Picture-satsuttryck stöds:
 
-* category(locale){picture-clause}| category(locale){picture-clause}| category(locale){picture-clause}
+* category(locale){picture-clause} | category(locale){picture-clause} | category(locale){picture-clause}
 * category.subcategory{}
 
 >[!NOTE]
@@ -92,19 +95,19 @@ Uttryck som stöds för satsen Date Picture:
 
 ## Numerisk bildsats {#numeric-picture-clause}
 
-HTML5-formulär har stöd för numeriska bildsymboler. Det finns dock en skillnad i stöd mellan PDF-formulär och HTML-formulär.
+HTML5-formulär har stöd för numeriska bildsymboler. Det finns dock en skillnad i stöd mellan PDF forms och HTML Forms.
 
-I **PDF-formulär** formateras ett tal oavsett antalet symboler i Picture-satsen har
+I **PDF forms** formateras ett tal oavsett antalet symboler i Picture-satsen har
 
-I **HTML-formulär** formateras ett tal bara om talet har siffror som är mindre än antalet symboler i Picture-satsen.
+I **HTML Forms** formateras ett tal bara om talet har siffror som är mindre än antalet symboler i Picture-satsen.
 
 **Exempel**: Överväg en Picture-sats: num{zzz,zzz,zz9}.
 
-Talet **10000** formateras som **10 000** i både HTML- och PDF-formulär.
+Talet **10000** formateras som **10 000** i både HTML och PDF forms.
 
-Talet 1000000 formateras som 1 000 000 i PDF-formulär. I HTML-formulär förblir dock talet oformaterat som 100000.
+Talet 1000000 formateras som 1 000 000 i PDF forms. I HTML Forms förblir dock talet oformaterat som 100000.
 
-Uttrycken som stöds för Numeric Picture-satsen i **HTML-formulär** är:
+Uttryck som stöds för Numeric Picture-satsen i **HTML Forms** är:
 
 * num.integer{}
 * num.decimal{}
