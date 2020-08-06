@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 667645a0-53d0-4f9b-a0ba-cc7e366a23a1
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +32,7 @@ Du kan köra nyckelverktyget med ett enda kommando som innehåller all informati
 
 1. I en kommandotolk går du till *[JAVA HOME]*/bin och skriver följande kommando för att skapa certifikatet och nyckelbehållaren:
 
-   `keytool -genkey -keyalg RSA -dname "CN=`*Värdnamn *`, OU=`*Gruppnamn* `, O=`*Företag *`,L=`*Ort****** Namn* `, S=`*Delstat *`, C=`** `" -alias`**`-keypass``*key*`**`-keystore`** Landskod¥&quot;LC Cert&quot;¥*_*password¥keystorename `.keystore`
+   `keytool -genkey -keyalg RSA -dname "CN=`*Värdnamn *`, OU=`*Gruppnamn* `, O=`*Företag *`,L=`*Ort*****Namn* `, S=`*Delstat *`, C=`** `" -alias`**`-keypass``*key*`**`-keystore`*Landskod¥&quot;LC Cert&quot;*_*passwordUnderNyckelnamn* `.keystore`
 
    >[!NOTE]
    >
