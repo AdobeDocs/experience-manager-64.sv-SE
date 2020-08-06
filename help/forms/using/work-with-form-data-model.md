@@ -24,7 +24,7 @@ Med dataintegrering kan du konfigurera och arbeta med formulärdatamodeller.
 
 Formulärdatamodellredigeraren har ett intuitivt användargränssnitt och verktyg för att redigera och konfigurera en formulärdatamodell. Med redigeraren kan du lägga till och konfigurera datamodellsobjekt, egenskaper och tjänster från associerade datakällor i formulärdatamodellen. Dessutom kan du skapa datamodellsobjekt och -egenskaper utan datakällor och binda dem till respektive datamodellsobjekt och egenskaper senare. Du kan också generera och redigera exempeldata för datamodellsobjektsegenskaper som du kan använda för att förifylla adaptiva formulär och interaktiv kommunikation när du förhandsgranskar. Du kan testa datamodellsobjekt och tjänster som konfigurerats i en formulärdatamodell för att säkerställa att den är korrekt integrerad med datakällor.
 
-Om du inte har använt dataintegrering med Forms tidigare och inte har konfigurerat någon datakälla eller skapat en formulärdatamodell, ska du läsa följande avsnitt:
+Om du inte har använt dataintegrering med Forms tidigare och inte har konfigurerat någon datakälla eller skapat en formulärdatamodell kan du läsa följande avsnitt:
 
 * [AEM Forms dataintegrering](/help/forms/using/data-integration.md)
 * [Konfigurera datakällor](/help/forms/using/configure-data-sources.md)
@@ -34,7 +34,7 @@ Läs vidare för mer information om olika åtgärder och konfigurationer som du 
 
 >[!NOTE]
 >
->Du måste vara medlem i både **fdm-author** - och **forms-user** -grupper för att kunna skapa och arbeta med formulärdatamodellen. Kontakta din AEM-administratör om du vill bli medlem i grupperna.
+>Du måste vara medlem i både **fdm-author** - och **forms-user** -grupper för att kunna skapa och arbeta med formulärdatamodellen. Kontakta AEM om du vill bli medlem i grupperna.
 
 ## Lägga till datamodellsobjekt och -tjänster {#add-data-model-objects-and-services}
 
@@ -44,7 +44,7 @@ Du kan lägga till datamodellsobjekt och datatjänster från tillgängliga datak
 
 Så här lägger du till datamodellsobjekt och -tjänster:
 
-1. Logga in på AEM-författarinstansen, navigera till **[!UICONTROL Forms > Data Integrations]** och öppna formulärdatamodellen där du vill lägga till datamodellsobjekt.
+1. Logga in i AEM författarinstans, navigera till **[!UICONTROL Forms > Data Integrations]** och öppna formulärdatamodellen där du vill lägga till datamodellsobjekt.
 1. Expandera datakällor i rutan Datakällor för att visa tillgängliga datamodellsobjekt och tjänster.
 1. Markera datamodellsobjekt och tjänster som du vill lägga till i formulärdatamodellen och tryck på **[!UICONTROL Add Selected]**.
 
@@ -80,7 +80,7 @@ Du kan lägga till datamodellsobjekt från konfigurerade datakällor, men du kan
 
 Så här skapar du ett datamodellsobjekt utan datakällor:
 
-1. Logga in på AEM-författarinstansen, navigera till **[!UICONTROL Forms > Data Integrations]** och öppna formulärdatamodellen där du vill skapa ett datamodellsobjekt eller en datamodell.
+1. Logga in i AEM författarinstans, navigera till **[!UICONTROL Forms > Data Integrations]** och öppna formulärdatamodellen där du vill skapa ett datamodellsobjekt eller en datamodell.
 1. Tryck på **[!UICONTROL Create Entity]**.
 1. I dialogrutan Skapa datamodell anger du ett namn för datamodellobjektet och trycker på **[!UICONTROL Add]**. Ett datamodellsobjekt läggs till i formulärdatamodellen. Observera att det nya datamodellsobjektet inte är bundet till en datakälla och inte har några egenskaper som visas i följande bild.
 
@@ -160,7 +160,7 @@ Så här konfigurerar du läs- och skrivtjänster för att läsa och skriva data
 
    ![edit-argument](assets/edit-argument.png)
 
-   Binda id-argumentet till det tomma attributet för AEM-användarprofilen
+   Binda id-argumentet till empid-attributet för AEM användarprofil
 
 1. Tryck **[!UICONTROL Done]** för att spara argumentet, **[!UICONTROL Done]** för att spara egenskaperna och sedan **[!UICONTROL Save]** för att spara formulärdatamodellen.
 
@@ -196,6 +196,7 @@ Så här lägger du till en association:
    * Välj associationstyp - en till en eller en till många.
    * Markera datamodellsobjektet som du vill associera med.
    * Markera lästjänsten för att läsa data från det markerade modellobjektet. Lästjänstargumentet visas. Redigera om du vill ändra argumentet, om det behövs, och binda det till egenskapen för datamodellobjektet som ska associeras.
+
    I följande exempel är standardargumentet för läsningstjänsten för datamodellobjektet Beroende `dependentid`.
 
    ![add-association-example](assets/add-association-example.png)
@@ -233,6 +234,7 @@ Så här redigerar du egenskaper:
    * **Datamodellsobjekt**: Ange läs- och skrivtjänster och redigeringsargument.
    * **Egenskap**: Ange typ, undertyp och format för egenskapen. Du kan också ange om den valda egenskapen är primärnyckeln för datamodellobjektet.
    * **Tjänst**: Ange tjänstens indatamodell, utdatatyp och argument. För en Get-tjänst kan du ange om den förväntas returnera en array.
+
    ![edit-properties-service](assets/edit-properties-service.png)
 
    Dialogrutan Redigera egenskaper för en get-tjänst
