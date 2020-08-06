@@ -1,6 +1,6 @@
 ---
-title: 'Adobe IMS-autentisering och stöd för Admin Console för AEM-hanterade tjänster '
-seo-title: 'Adobe IMS-autentisering och stöd för Admin Console för AEM-hanterade tjänster '
+title: 'Adobe IMS-autentisering och stöd för Admin Console för AEM Managed Services '
+seo-title: 'Adobe IMS-autentisering och stöd för Admin Console för AEM Managed Services '
 description: Lär dig hur du använder Admin Console i AEM.
 seo-description: Lär dig hur du använder Admin Console i AEM.
 uuid: 3f5b32c7-cf62-41a4-be34-3f71bbf224eb
@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: f6112dea-a1eb-4fd6-84fb-f098476deab7
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '1804'
+ht-degree: 16%
 
 ---
 
 
-# Adobe IMS-autentisering och stöd för Admin Console för AEM-hanterade tjänster {#adobe-ims-authentication-and-admin-console-support-for-aem-managed-services}
+# Adobe IMS-autentisering och stöd för Admin Console för AEM Managed Services {#adobe-ims-authentication-and-admin-console-support-for-aem-managed-services}
 
 >[!NOTE]
 >
@@ -23,18 +26,18 @@ source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
 
 ## Introduktion {#introduction}
 
-AEM 6.4.3.0 introducerar stöd för Admin Console för AEM-instanser och Adobe IMS-baserad autentisering (Identity Management System) för kunder som använder **AEM Managed Services** .
+I AEM 6.4.3.0 introduceras stöd för Admin Console för AEM och Adobe IMS (Identity Management System)-baserad autentisering för **AEM Managed Services** -kunder.
 
-AEM-introduktion till Admin Console gör att AEM Managed Services-kunder kan hantera alla Experience Cloud-användare i en konsol. Användare och grupper kan tilldelas till produktprofiler som är kopplade till AEM-instanser, så att de kan logga in på en viss instans.
+AEM på Admin Console kommer att göra det möjligt för AEM Managed Services-kunder att hantera alla Experience Cloud i en konsol. Användare och grupper kan tilldelas till produktprofiler som är kopplade till AEM instanser, så att de kan logga in på en viss instans.
 
 ## Viktiga funktioner {#key-highlights}
 
 * Stöd för AEM IMS-autentisering gäller endast för AEM-författare, administratörer och utvecklare, inte för externa slutanvändare på kundens webbplats, som webbplatsbesökare
 * Admin Console kommer att representera AEM Managed Services-kunder som IMS-organisationer och deras instanser som produktkontexter. Kundsystem- och produktadministratörer kan hantera åtkomst till instanser
-* AEM Managed Services synkroniserar kundtopologier med Admin Console. Det kommer att finnas en instans av AEM Managed Services Product Context per instans i Admin Console.
-* Produktprofiler i Admin Console avgör vilka instanser en användare kan komma åt
+* AEM Managed Services kommer att synkronisera kundtopologier med Admin Console. Det kommer att finnas en instans AEM Managed Services produktkontext per instans i Admin Console.
+* Produktprofiler i Admin Console avgör vilka instanser en användare har åtkomst till
 * Federerad autentisering med kundens egna SAML 2-kompatibla identitetsleverantörer stöds
-* Endast Enterprise ID:n eller Federated ID:n (för kunder med enkel inloggning) stöds, inte personliga Adobe ID:n.
+* Endast Enterprise ID:n eller Federated ID:n (för kunder med enkel inloggning) stöds, inte Adobe ID:n.
 * Användarhantering (i Adobe Admin Console) ägs även fortsättningsvis av kundadministratörerna.
 
 ## Arkitektur {#architecture}
@@ -49,11 +52,11 @@ Inloggningsflödet för användaren visas nedan. Användaren omdirigeras till IM
 
 ### Integrera organisationer i Admin Console {#onboarding-organizations-to-admin-console}
 
-Kunden måste registrera sig på Admin Console för att använda Adobe IMS för AEM-autentisering.
+Kunden måste komma igång med Admin Console för att kunna använda Adobe IMS för AEM autentisering.
 
-Som ett första steg bör kunden ha en organisation som är etablerad i Adobe IMS. Adobe Enterprise-kunder representeras som IMS-organisationer i [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html).
+Som ett första steg bör kunden ha en organisation i Adobe IMS. Adobe Enterprise-kunder representeras som IMS-organisationer i [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html).
 
-Kunder med AEM Managed Services bör redan ha en organisation etablerad, och som en del av IMS-etableringen kommer kundinstanser att vara tillgängliga i Admin Console för hantering av användarberättiganden och åtkomst.
+AEM Managed Services-kunder bör redan ha en organisation etablerad, och som en del av IMS-etableringen kommer kundinstanser att göras tillgängliga i Admin Console för hantering av användarrättigheter och åtkomst.
 
 Övergången till IMS för användarautentisering är en gemensam åtgärd mellan AMS och kunder, där vart och ett av dem har sina arbetsflöden att slutföra.
 
@@ -64,16 +67,16 @@ När en kund finns som IMS-organisation och AMS har etablerat kunden för IMS ä
 1. Den utsedda systemadministratören får en inbjudan att logga in på Admin Console
 1. Anspråksdomänen för systemadministratören som bekräftar ägarskapet för domänen (i det här exemplet acme.com)
 1. Systemadministratören ställer in användarkataloger
-1. Systemadministratören konfigurerar identitetsleverantören (IDP) i Admin Console för enkel inloggning.
+1. Systemadministratören konfigurerar identitetsleverantören (IDP) i Admin Console för SSO-installationen.
 1. AEM Admin hanterar de lokala grupperna, behörigheterna och behörigheterna som vanligt. Se Användar- och gruppsynkronisering
 
 >[!NOTE]
 >
->Mer information om grunderna i Adobe Identity Management Basics, inklusive IDP-konfiguration, finns i artikeln på [den här sidan.](https://helpx.adobe.com/enterprise/using/set-up-identity.html)
+>Mer information om grunderna i Adobe Identity Management, inklusive IDP-konfigurationen, finns i artikeln [här.](https://helpx.adobe.com/enterprise/using/set-up-identity.html)
 >
->Mer information om Enterprise Administration och Admin Console finns i artikeln [på den här sidan](https://helpx.adobe.com/enterprise/managing/user-guide.html).
+>Mer information om Enterprise Administration och Admin Console finns i artikeln [här](https://helpx.adobe.com/enterprise/managing/user-guide.html).
 
-### Onboarding-användare till Admin Console {#onboarding-users-to-the-admin-console}
+### Användare som introduceras till Admin Console {#onboarding-users-to-the-admin-console}
 
 Det finns tre sätt att introducera användare beroende på kundens storlek och deras önskemål:
 
@@ -83,9 +86,9 @@ Det finns tre sätt att introducera användare beroende på kundens storlek och 
 
 #### Lägga till manuellt via användargränssnittet i Admin Console {#manual-addition-through-admin-console-ui}
 
-Användare och grupper kan skapas manuellt i Admin Console-gränssnittet. Den här metoden kan användas om de inte har ett stort antal användare att hantera. Ett antal färre än 50 AEM-användare.
+Användare och grupper kan skapas manuellt i Admin Console-gränssnittet. Den här metoden kan användas om de inte har ett stort antal användare att hantera. Ett antal färre än 50 AEM användare.
 
-Användarna kan också skapas manuellt om kunden redan använder den här metoden för att administrera andra Adobe-produkter som Analytics, Target eller Creative Cloud.
+Användare kan också skapas manuellt om kunden redan använder den här metoden för att administrera andra Adobe-produkter som Analytics, Target eller Creative Cloud.
 
 ![image2018-9-23_20-39-9](assets/image2018-9-23_20-39-9.png)
 
@@ -99,7 +102,7 @@ En CSV-fil kan laddas upp för att användarna ska kunna lägga till flera anvä
 
 Med verktyget för användarsynkronisering (UST i korthet) kan företagskunder skapa eller hantera Adobe-användare med hjälp av Active Directory eller andra testade OpenLDAP-katalogtjänster. Målanvändarna är IT-identitetsadministratörer (Enterprise Directory och System Admins) som kan installera och konfigurera verktyget. Verktyget med öppen källkod är anpassbart så att kunderna kan låta en utvecklare ändra det efter sina egna behov.
 
-När användarsynkronisering körs hämtar den en lista över användare från organisationens Active Directory (eller någon annan kompatibel datakälla) och jämför den med listan över användare i Admin Console. Därefter anropas API:t för Adobe User Management så att Admin Console synkroniseras med organisationens katalog. Förändringarna är helt envägs. Ändringar som görs i Admin Console skickas inte ut till katalogen.
+När användarsynkronisering körs hämtar den en lista över användare från organisationens Active Directory (eller någon annan kompatibel datakälla) och jämför den med listan över användare i Admin Console. Därefter anropas API:t för Adobe User Management så att Admin Console synkroniseras med organisationens katalog. Förändringarna är helt envägs. redigeringar som gjorts i Admin Console inte flyttas ut till katalogen.
 
 Verktyget gör att systemadministratören kan mappa användargrupper i kundens katalog med produktkonfiguration och användargrupper i Admin Console. Den nya UST-versionen gör det även möjligt att dynamiskt skapa användargrupper i Admin Console.
 
@@ -133,13 +136,13 @@ Mer information om de nya gruppfunktionerna finns här:
 
 >[!NOTE]
 >
->AEM IMS-konfigurationen hanteras av Adobe Managed Services-teamet. Kundadministratören kan dock ändra det efter behov (till exempel automatiskt gruppmedlemskap eller gruppmappning). IMS-klienten registreras även av ditt Managed Services-team.
+>Den AEM IMS-konfigurationen hanteras av Adobe Managed Services-teamet. Kundadministratören kan dock ändra det efter behov (till exempel automatiskt gruppmedlemskap eller gruppmappning). IMS-klienten registreras också av ditt Managed Services-team.
 
 ## Användning {#how-to-use}
 
 ### Hantera produkter och användaråtkomst i Admin Console {#managing-products-and-user-access-in-admin-console}
 
-När kundens produktadministratör loggar in på Admin Console visas flera instanser av produktkontexten för AEM Managed Services enligt nedan:
+När kundens produktadministratör loggar in på Admin Console visas flera instanser av AEM Managed Services produktkontext enligt nedan:
 
 ![screen_shot_2018-09-17at105804pm](assets/screen_shot_2018-09-17at105804pm.png)
 
@@ -159,11 +162,11 @@ Alla användare och grupper som läggs till under den här produktprofilen kan l
 
 ![screen_shot_2018-09-17at105623pm](assets/screen_shot_2018-09-17at105623pm.png)
 
-### Loggar in på AEM {#logging-into-aem}
+### Loggar in AEM {#logging-into-aem}
 
 #### Inloggning för lokal administratör {#local-admin-login}
 
-AEM kan fortsätta att ha stöd för lokala inloggningar för Admin-användare eftersom inloggningsskärmen har ett alternativ för att logga in lokalt:
+AEM kan fortfarande ha stöd för lokala inloggningar för administratörsanvändare eftersom inloggningsskärmen har ett alternativ för att logga in lokalt:
 
 ![screen_shot_2018-09-18at121056am](assets/screen_shot_2018-09-18at121056am.png)
 
@@ -189,7 +192,7 @@ När autentiseringen är klar omdirigeras användaren tillbaka till AEM och logg
 
 ### Migrerar befintliga användare {#migrating-existing-users}
 
-För befintliga AEM-instanser som använder en annan autentiseringsmetod och nu migreras till IMS måste det finnas ett migreringssteg.
+För befintliga AEM som använder en annan autentiseringsmetod och nu migreras till IMS måste det finnas ett migreringssteg.
 
 Befintliga användare i AEM-databasen (som hämtas lokalt via LDAP eller SAML) kan migreras till IMS som IDP med verktyget för användarmigrering.
 
@@ -197,11 +200,11 @@ Detta verktyg kommer att köras av ditt AMS-team som en del av IMS-etableringen.
 
 ### Hantera behörigheter och åtkomstkontrollistor i AEM {#managing-permissions-and-acls-in-aem}
 
-Åtkomstkontroll och behörigheter hanteras även i fortsättningen i AEM, vilket kan uppnås genom att användargrupper skiljs från IMS (t.ex. AEM-GRP-008 i exemplet nedan) och lokala grupper där behörigheter och åtkomstkontroll definieras. Användargrupperna som synkroniseras från IMS kan tilldelas lokala grupper och ärva behörigheterna.
+Åtkomstkontroll och behörigheter hanteras även i AEM, vilket kan uppnås genom att användargrupper skiljs från IMS (t.ex. AEM-GRP-008 i exemplet nedan) och lokala grupper där behörigheter och åtkomstkontroll definieras. Användargrupperna som synkroniseras från IMS kan tilldelas lokala grupper och ärva behörigheterna.
 
 I exemplet nedan lägger vi till synkroniserade grupper i den lokala gruppen *Dam_Users* som exempel.
 
-Här har en användare också tilldelats ett fåtal grupper i Admin Console. (Observera att användare och grupper kan synkroniseras från LDAP med användarsynkroniseringsverktyget eller skapas lokalt, se avsnittet **Onboarding Users (Onboarding-användare) till Admin Console** ovan).
+Här har en användare också tilldelats ett fåtal grupper i Admin Console. (Observera att användare och grupper kan synkroniseras från LDAP med användarsynkroniseringsverktyget eller skapas lokalt, se avsnittet **Onboarding Users (Påbörja användare) till Admin Console** ovan.)
 
 &amp;ast;Observera att användargrupper endast synkroniseras när användarna loggar in på instansen. För kunder som har ett stort antal användare och grupper kan ett gruppsynkroniseringsverktyg köras av AMS för att hämta grupper i förväg för åtkomstkontroll och behörighetshantering som beskrivs ovan.
 
@@ -219,7 +222,7 @@ I AEM kan användargrupper som synkroniseras från IMS läggas till som medlemma
 
 ![screen_shot_2018-09-17at95804pm](assets/screen_shot_2018-09-17at95804pm.png)
 
-Som framgår nedan ärver gruppen *AEM-GRP_008* DAM-användares behörigheter. Detta är ett effektivt sätt att hantera behörigheter för synkroniserade grupper och används ofta även i LDAP-baserade autentiseringsmetoder.
+Som framgår nedan ärver gruppen *AEM-GRP_008* DAM-användarnas behörigheter och behörigheter. Detta är ett effektivt sätt att hantera behörigheter för synkroniserade grupper och används ofta även i LDAP-baserade autentiseringsmetoder.
 
 ![screen_shot_2018-09-17at110505pm](assets/screen_shot_2018-09-17at110505pm.png)
 
