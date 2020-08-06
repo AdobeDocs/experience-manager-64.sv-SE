@@ -1,8 +1,8 @@
 ---
 title: Körningslägen
 seo-title: Körningslägen
-description: Lär dig hur du trimmar AEM-instansen för specifika syften med hjälp av körningslägen.
-seo-description: Lär dig hur du trimmar AEM-instansen för specifika syften med hjälp av körningslägen.
+description: Lär dig hur du trimmar AEM för särskilda syften med körningslägen.
+seo-description: Lär dig hur du trimmar AEM för särskilda syften med körningslägen.
 uuid: 8a0c6e5c-4fae-43e2-b745-eee58f346ceb
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 12329e26-40bc-4c94-bc60-6d9cbd01345f
 translation-type: tm+mt
 source-git-commit: d97828afee7a65e7a4036912c1cc8726404088c9
+workflow-type: tm+mt
+source-wordcount: '765'
+ht-degree: 0%
 
 ---
 
 
 # Körningslägen{#run-modes}
 
-Med körningslägena kan du trimma AEM-instansen för ett specifikt ändamål; till exempel författare eller publicera, testa, utveckla, intranät eller andra.
+Med körningslägena kan du justera AEM för ett specifikt ändamål; till exempel författare eller publicera, testa, utveckla, intranät eller andra.
 
 Du kan:
 
@@ -82,7 +85,7 @@ Körningsläget nosampling-innehåll är utformat för produktionsinstallationer
 
 En samling värden för konfigurationsegenskaper, som används för ett visst körningsläge, kan sparas i databasen.
 
-Körningsläget anges med ett suffix i mappnamnet. På så sätt kan du spara alla konfigurationer i en databas som. Exempel:
+Körningsläget anges med ett suffix i mappnamnet. På så sätt kan du spara alla konfigurationer i en databas som. Till exempel:
 
 * `config`
 
@@ -108,7 +111,7 @@ Mer information om hur du definierar enskilda konfigurationsnoder i dessa mappar
 
 ## Definiera ytterligare paket som ska installeras för ett körningsläge {#defining-additional-bundles-to-be-installed-for-a-run-mode}
 
-Ytterligare paket som ska installeras för ett visst körläge kan också anges. För dessa definitioner används installationsmappar för att lagra paketen. Återigen anges körningsläget med ett prefix:
+Ytterligare paket som ska installeras för ett visst körningsläge kan också anges. För dessa definitioner används installationsmappar för att lagra paketen. Återigen anges körningsläget med ett prefix:
 
 * `install.author`
 * `install.publish`
@@ -120,7 +123,7 @@ Dessa mappar är av typen `nt:folder` och ska innehålla rätt paket.
 Om du har definierat konfigurationer för flera körningslägen måste du definiera vilka som ska användas vid start. Det finns flera metoder för att specificera vilket körningsläge som ska användas. Upplösningsordningen är
 
 1. [ `sling.properties` fil](#using-the-sling-properties-file)
-1. [ `-r` alternativ](#using-the-r-option)
+1. [ `-r` option](#using-the-r-option)
 1. [systemegenskaper (`-D`)](#using-a-system-property-in-the-start-script)
 
 1. [Filnamnsidentifiering](#filename-detection-renaming-the-jar-file)
@@ -141,7 +144,7 @@ Filen kan `sling.properties` användas för att definiera det körningsläge som
 
 ### Använda alternativet -r {#using-the-r-option}
 
-Du kan aktivera ett anpassat körningsläge genom att använda `-r` alternativet när snabbstarten startas. Använd till exempel följande kommando för att starta en AEM-instans med körningsläget inställt på dev. &quot;
+Du kan aktivera ett anpassat körningsläge genom att använda `-r` alternativet när snabbstarten startas. Använd till exempel följande kommando för att starta en AEM med körningsläget inställt på dev. &quot;
 
 ```shell
 java -jar cq-56-p4545.jar -r dev
@@ -180,6 +183,6 @@ i filen:
 
 `WEB-INF/web.xml`
 
-Detta finns i AEM- `war` filen och bör uppdateras före distributionen.
+Detta finns i den AEM `war` filen och bör uppdateras före distributionen.
 
 Mer information finns i [Installera AEM med en programserver](/help/sites-deploying/application-server-install.md) .
