@@ -11,6 +11,9 @@ topic-tags: components
 discoiquuid: adf3364c-11f1-45c6-b41d-2c7d48b626f9
 translation-type: tm+mt
 source-git-commit: 15bea340f3ba7d5a315d71932e521ad1f1a40073
+workflow-type: tm+mt
+source-wordcount: '2345'
+ht-degree: 1%
 
 ---
 
@@ -29,13 +32,13 @@ Observera att översättningsverktyget och de ordlistor du hanterar är till fö
 >
 >Redigera bara ordlistor som har skapats för ditt projekt och som finns under `/apps`.
 >
->AEM-systemordlistor finns också i det här verktyget. Ändra inte AEM-systemordlistorna eftersom detta kan orsaka problem med AEM-användargränssnittet. Dessutom kan ändringar gå förlorade vid uppgraderingen. AEM-systemordlistor finns under `/libs`.
+>AEM systemlexikon finns också i det här verktyget. Ändra inte AEM systemordlistor eftersom detta kan orsaka problem med det AEM användargränssnittet. Dessutom kan ändringar gå förlorade vid uppgraderingen. AEM finns under `/libs`.
 
 >[!NOTE]
 >
 >Även om översättningsverktyget har ett klassiskt användargränssnitt används det för översättning av fraser oavsett vilket gränssnitt som dessa fraser finns i.
 
-Översättaren listar de texter som används i AEM med olika språköversättningar tillsammans:
+Översättaren visar de texter som används i AEM med de olika språköversättningarna tillsammans:
 
 ![chlimage_1-205](assets/chlimage_1-205.png)
 
@@ -45,7 +48,7 @@ Det går också att lägga till i18n-ordlistorna i ett översättningsprojekt fr
 
 1. Klicka på **Översätt ordlista**.
 
-   ![chlimage_1-205](assets/chlimage_1-206.png)
+   ![chlimage_1-206](assets/chlimage_1-206.png)
 
 1. Välj Skapa eller Lägg till beroende på behov. En dialogruta öppnas.
 
@@ -63,13 +66,13 @@ Det går också att lägga till i18n-ordlistorna i ett översättningsprojekt fr
 
 Skapa en ordlista för hantering av lokaliserade gränssnittssträngar. När du har skapat en ordlista kan du använda översättningsverktyget för att hantera den.
 
-1. Med CRXDE Lite lägger du till rotnoden ( `sling:Folder`) för den nya ordlistan som den struktur som ska innehålla språkdefinitionerna:
+1. Använd CRXDE Lite för att lägga till rotnoden ( `sling:Folder`) för den nya ordlistan som den struktur som ska innehålla språkdefinitionerna:
 
    ` /apps/<projectName>/i18n`
 
-   Exempel, `/apps/myProject/i18n`
+   Till exempel, `/apps/myProject/i18n`
 
-1. Lägg till den språkstruktur som krävs under den här roten. Exempel:
+1. Lägg till den språkstruktur som krävs under den här roten. Till exempel:
 
    ```shell
    /apps/myProject/i18n [sling:Folder]
@@ -99,7 +102,7 @@ Använd översättningsverktyget för att hantera strängarna i dina ordlistor. 
 >
 >Redigera bara ordlistor som har skapats för ditt projekt och som finns under `/apps`.
 >
->Ändra inte AEM-systemordlistorna eftersom detta kan orsaka problem med AEM-användargränssnittet. Dessutom kan ändringar gå förlorade vid uppgraderingen. AEM-systemordlistor finns under `/libs`.
+>Ändra inte AEM systemordlistor eftersom detta kan orsaka problem med det AEM användargränssnittet. Dessutom kan ändringar gå förlorade vid uppgraderingen. AEM finns under `/libs`.
 
 ### Lägga till, ändra och ta bort strängar {#adding-changing-and-removing-strings}
 
@@ -174,8 +177,8 @@ Använd följande procedur för att ta bort en sträng från ett lexikon.
 
 Sökfältet längst ned i översättningsverktyget innehåller alternativ för strängval:
 
-* **** Filtrera efter text: Ett mönster som matchar den engelska strängen, kommentaren eller översättningen. Endast objekt som matchar hela eller delar av mönstret visas i tabellen.
-* **** Ändringar: Valfri, ändrad, ny, borttagen: Visa objekt som har ändrats och inte sparats.
+* **Filtrera efter text:** Ett mönster som matchar den engelska strängen, kommentaren eller översättningen. Endast objekt som matchar hela eller delar av mönstret visas i tabellen.
+* **Ändringar: Valfri, ändrad, ny, borttagen:** Visa objekt som har ändrats och inte sparats.
 
    * Alla: Visa objekt som har ändrats, lagts till eller tagits bort.
    * Ändrad: Visa objekt som har ändrats.
@@ -184,7 +187,7 @@ Sökfältet längst ned i översättningsverktyget innehåller alternativ för s
    * Flera markeringar: Visa objekt som har alla markerade egenskaper.
 
 * **Har kommentar**: Visa objekt som har kommentarer för översättare.
-* **** Översättningar saknas: Visa objekt där minst ett språk inte har någon översättning.
+* **Översättningar saknas:** Visa objekt där minst ett språk inte har någon översättning.
 
 ![chlimage_1-215](assets/chlimage_1-215.png)
 
@@ -204,14 +207,16 @@ När du har lagt till den engelska strängen i ett lexikon kan du lägga till ö
    >
    >Redigera bara ordlistor som har skapats för ditt projekt och som finns under `/apps`.
    >
-   >AEM-systemordlistor finns också i det här verktyget. Ändra inte AEM-systemordlistorna eftersom detta kan orsaka problem med AEM-användargränssnittet. Dessutom kan ändringar gå förlorade vid uppgraderingen. AEM-systemordlistor finns under `/libs`.
+   >AEM systemlexikon finns också i det här verktyget. Ändra inte AEM systemordlistor eftersom detta kan orsaka problem med det AEM användargränssnittet. Dessutom kan ändringar gå förlorade vid uppgraderingen. AEM finns under `/libs`.
 
 1. Om du vill redigera den översatta texten för en av strängarna kan du antingen:
 
    * Dubbelklicka på rätt språk för strängen för att redigera den enskilda texten:
+
    ![chlimage_1-216](assets/chlimage_1-216.png)
 
    * Dubbelklicka på fälten **String** eller **Comment** för strängen för att öppna dialogrutan **Redigera sträng** , redigera översättningen/översättningarna efter behov och klicka sedan på **OK** för att stänga dialogrutan:
+
    ![chlimage_1-217](assets/chlimage_1-217.png)
 
 1. Klicka på **Spara** i verktygsfältet för att genomföra ändringarna.
@@ -287,15 +292,16 @@ Använd följande procedur för att lägga till eller ta bort språk.
 
    * **Namn**: `languages`
    * **Typ**: `Multi-String`
-   * **Värde**: listan med språk som du vill visa. Exempel:
+   * **Värde**: listan med språk som du vill visa. Till exempel:
 
       * fr
       * es
+
    >[!NOTE]
    >
    >Språkkoderna måste vara små.
 
-1. Klicka på **Spara alla** i CRXDE Lite och läs in konverteraren igen. Rutnätet uppdateras för att visa definierade språk.
+1. Klicka på **Spara alla** i CRXDE Lite och läs in översättaren igen. Rutnätet uppdateras för att visa definierade språk.
 
    >[!NOTE]
    >
@@ -305,7 +311,7 @@ Använd följande procedur för att lägga till eller ta bort språk.
 
 ### Göra språk tillgängliga för författare {#making-languages-available-to-authors}
 
-När du har definierat en ordlista för ett språk som är nytt för din AEM-instans måste du göra den tillgänglig för författare (t.ex. för användning i **Inställningar**):
+När du har definierat ett lexikon för ett språk som är nytt för AEM måste du göra det tillgängligt för författarna att välja (t.ex. för användning i **Inställningar**):
 
 1. Så här ändrar du listan över tillgängliga språk i **Inställningar** i **säkerhetskonsolen** :
 
@@ -348,7 +354,7 @@ Så här ändrar du standarddefinitionerna:
 
    `/apps/wcm/core/resources/languages`
 
-   Ändra eller utöka listan där. Egenskapen `defaultCountry` för en språknod (t.ex. `ja`) måste innehålla den fullständiga koden, t.ex. `ja_jp`, som skulle definiera `jp` som standardland för språket `ja`.
+   Ändra eller utöka listan där. Egenskapen `defaultCountry` för en språknod (t.ex. `ja`) måste innehålla den fullständiga koden, till exempel `ja_jp`, som skulle definiera `jp` som standardland för språket `ja`.
 
 1. Uppdatera **CQ WCM Language Manager**.
 
@@ -367,7 +373,7 @@ Så här ändrar du standarddefinitionerna:
 
 ## Publiceringsordlistor {#publishing-dictionaries}
 
-Lägg in dina ordlistor i processen för versionshantering av AEM-programmen. Ta till exempel med ordlistan i programinnehållspaketet för distribution till publiceringsinstansen. Denna strategi ger följande fördelar:
+Lägg in ordlistorna i processen för versionshantering av era AEM program. Ta till exempel med ordlistan i programinnehållspaketet för distribution till publiceringsinstansen. Denna strategi ger följande fördelar:
 
 * Ordlistor är tillgängliga för komponenter i deras publiceringsmiljö.
 * Ändringar i gränssnittssträngar för komponenter distribueras tillsammans med de uppdaterade översättningarna.
