@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 2d308756-79d1-4d69-b51c-d4b6e692a137
 translation-type: tm+mt
 source-git-commit: 1e867debcc1bfeed3abc4240796c9f2c2850167f
+workflow-type: tm+mt
+source-wordcount: '221'
+ht-degree: 2%
 
 ---
 
 
 # Grundläggande om komponenter, funktioner och funktioner {#component-function-and-feature-essentials}
 
-Funktionerna i AEM Communities kräver att besökarna blir medlemmar och loggar in på [communitywebbplatsen](overview.md#communitiessites) innan de kan publicera innehållet. Därför är mallarna [för](sites.md)communitysajter, som används för att [skapa](sites-console.md)en communitywebbplats, utformade för att innehålla en inloggningsfunktion samt användarprofiler, meddelanden, sökning, moderering och översättning.
+AEM Communities funktioner kräver att besökarna blir medlemmar och loggar in på [communitywebbplatsen](overview.md#communitiessites) innan de kan publicera innehållet. Därför är mallarna [för](sites.md)communitysajter, som används för att [skapa](sites-console.md)en communitywebbplats, utformade för att innehålla en inloggningsfunktion samt användarprofiler, meddelanden, sökning, moderering och översättning.
 
 En communitywebbplats kommer att stödja medlemmar som skapar communitygrupper när funktionen [för](functions.md#groups-function) communitygrupper ingår i den valda communitywebbplatsmallen.
 
@@ -48,7 +51,7 @@ Nedan följer länkar till viktig information för Communities-komponenter, -fun
 * [Grupper](essentials-groups.md)
 * [Ideation](ideation.md)
 * [Ledartavla](leaderboard.md)
-* [Frågor och svar](qna-essentials.md)`(QnA)`
+* [Frågor och svar](qna-essentials.md) `(QnA)`
 
 ## Funktioner {#features}
 
@@ -61,13 +64,13 @@ Nedan följer länkar till viktig information för Communities-komponenter, -fun
 * [Betygsättning och emblem](configure-scoring.md)
 * [Sökning](search-implementation.md)
 * [Social Graph](essentials-socialgraph.md)
-* [Lagringsresursprovider](srp-and-ugc.md)`(SRP)`
+* [Lagringsresursprovider](srp-and-ugc.md) `(SRP)`
 
-* [Taggning](tag.md)
+* [Taggar](tag.md)
 
 ## Javadocs {#javadocs}
 
-Javadoskorna [online](../../help/sites-developing/reference-materials.md) återspeglar API:erna i AEM 6.3-versionen.\
+Javadoskorna [online](../../help/sites-developing/reference-materials.md) återspeglar de API:er som finns i AEM 6.3.\
 Communities-API:er finns i `com.adobe.cq.social.*` paket.
 
 För varje [funktionspaket](deploy-communities.md#latestfeaturepack)finns en javadoc burk. Mer information finns på [Using Maven for Communities](maven.md#javadocs).
@@ -81,6 +84,6 @@ För varje [funktionspaket](deploy-communities.md#latestfeaturepack)finns en jav
    * [Översikt över lagringsresursprovider](srp.md)
 
 * [Riktlinjer för kodning](code-guide.md)
-* [Självstudiekurser](tutorials.md)
+* [Tutorials](tutorials.md)
 * [Felsökning](troubleshooting.md)
 
