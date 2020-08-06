@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 4da555b4-7fb2-4d55-b29f-8bd21f474c1a
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1161'
+ht-degree: 0%
 
 ---
 
@@ -32,16 +35,16 @@ I det här avsnittet beskrivs hur du arbetar med masredigeringsprogrammet i **ve
 
 >[!CAUTION]
 >
->Med det klassiska användargränssnittet [i AEM 6.4](/help/release-notes/deprecated-removed-features.md) har även gruppredigeraren tagits bort och Adobe planerar därför inte att förbättra gruppredigeraren ytterligare.
+>Med det klassiska användargränssnittet [i AEM 6.4](/help/release-notes/deprecated-removed-features.md) har även gruppredigeraren tagits bort, och därför tänker Adobe inte förbättra gruppredigeraren ytterligare.
 
 ## Exempel på användningsfall för den grupperade redigeraren {#example-use-case-for-the-bulk-editor}
 
 Om du t.ex. behöver alla namn och e-postadresser för användare som fyllt i en viss enkät, kan gruppredigeraren ange den informationen och du kan exportera den till ett kalkylblad.
 
-Ett exempel som illustrerar en sådan användning finns på webbplatsen Geometrixx:
+Ett exempel som illustrerar en sådan användning finns på Geometrixx webbplats:
 
 1. Gå till **supportsidan** och sedan till enkäten **Kundtjänst** .
-1. **Redigera** stycket **Början av formulär** . **Klicka på fliken** Avancerat **i dialogrutan, expandera**&#x200B;åtgärdskonfigurationen **och klicka sedan på** Visa data.. .
+1. **Redigera** stycket **Början av formulär** . Klicka på fliken **Avancerat** i dialogrutan, expandera **åtgärdskonfigurationen** och klicka sedan på **Visa data..**.
 
    ![kundundersökning](assets/custsatsurvey.png)
 
@@ -74,7 +77,7 @@ Så här använder du gruppredigeraren för att redigera flera objekt samtidigt:
   </tr> 
   <tr> 
    <td>Rotsökväg</td> 
-   <td>Anger rotsökvägen som massredigeraren söker efter.<br /> Exempel, <code>/content/geometrixx/en</code>. Massredigeraren söker igenom alla underordnade noder.</td> 
+   <td>Anger rotsökvägen som massredigeraren söker efter.<br /> Till exempel, <code>/content/geometrixx/en</code>. Massredigeraren söker igenom alla underordnade noder.</td> 
   </tr> 
   <tr> 
    <td>Frågeparametrar</td> 
@@ -90,12 +93,12 @@ Så här använder du gruppredigeraren för att redigera flera objekt samtidigt:
   </tr> 
   <tr> 
    <td>Anpassade egenskaper/kolumner</td> 
-   <td>Ange eventuella andra egenskaper som inte finns med i listan i fältet <strong>Egenskaper/Kolumner</strong> . Dessa anpassade egenskaper visas i resultatrutan. Du kan lägga till flera egenskaper genom att använda kommatecken för att skilja egenskaperna åt. <i></i> Obs! Om du lägger till en anpassad egenskap som inte finns än, visar AEM WCM en tom cell. När du ändrar den tomma cellen och sparar den läggs egenskapen till i noden. Den nya egenskapen måste respektera nodtypsbegränsningar och egenskapsnamnutrymmen.</td> 
+   <td>Ange eventuella andra egenskaper som inte finns med i listan i fältet <strong>Egenskaper/Kolumner</strong> . Dessa anpassade egenskaper visas i resultatrutan. Du kan lägga till flera egenskaper genom att använda kommatecken för att avgränsa egenskaperna. <i>Obs!</i> Om du lägger till en anpassad egenskap som inte finns än visas en tom cell AEM WCM. När du ändrar den tomma cellen och sparar den läggs egenskapen till i noden. Den nya egenskapen måste respektera nodtypsbegränsningar och egenskapsnamnutrymmen.</td> 
   </tr> 
  </tbody> 
 </table>
 
-Exempel:
+Till exempel:
 
 ![sökfilter](assets/searchfilter.png)
 
@@ -117,10 +120,10 @@ Exempel:
 
 #### Ytterligare GQL-frågeparametrar {#additional-gql-query-parameters}
 
-* **** sökväg: bara söknoder under den här sökvägen. Om du anger mer än en term med ett sökvägsprefix beaktas bara den sista.
-* **** typ: bara returnera noder av de angivna nodtyperna. Detta inkluderar både primära och blandade typer. Du kan ange flera kommaseparerade nodtyper. GQL returnerar noder som är av någon av de angivna typerna.
-* **** beställning: sortera resultatet efter de angivna egenskaperna. Du kan ange flera kommaavgränsade egenskapsnamn. Om du vill ordna resultatet i fallande ordning lägger du bara till ett minustecken som prefix för egenskapsnamnet. Exempel: order:-name. Om du använder ett plustecken returneras resultatet i stigande ordning, vilket också är standard.
-* **** gräns: begränsar antalet resultat med ett intervall. Exempel: limit:10..20 Observera att intervallet är nollbaserat, att början är inkluderat och att slutet är exklusivt. Du kan också ange ett öppet intervall:limit:10. eller limit:..20 Om punkterna utelämnas och endast ett värde anges kommer GQL att returnera maximalt detta antal resultat. T.ex. limit:10 (returnerar de första 10 resultaten)
+* **sökväg:** bara söknoder under den här sökvägen. Om du anger mer än en term med ett sökvägsprefix beaktas bara den sista.
+* **typ:** bara returnera noder av de angivna nodtyperna. Detta inkluderar både primära och blandade typer. Du kan ange flera kommaseparerade nodtyper. GQL returnerar noder som är av någon av de angivna typerna.
+* **beställning:** sortera resultatet efter de angivna egenskaperna. Du kan ange flera kommaavgränsade egenskapsnamn. Om du vill ordna resultatet i fallande ordning lägger du bara till ett minustecken som prefix för egenskapsnamnet. Exempel: order:-name. Om du använder ett plustecken returneras resultatet i stigande ordning, vilket också är standard.
+* **gräns:** begränsar antalet resultat med ett intervall. Exempel: limit:10..20 Observera att intervallet är nollbaserat, att början är inkluderat och att slutet är exklusivt. Du kan också ange ett öppet intervall:limit:10. eller limit:..20 Om punkterna utelämnas och endast ett värde anges kommer GQL att returnera maximalt detta antal resultat. T.ex. limit:10 (returnerar de första 10 resultaten)
 
 ### Exporterar innehåll {#exporting-content}
 
@@ -129,7 +132,7 @@ Du kan behöva exportera innehåll och göra ändringar i det i ett Excel-kalkyl
 Så här exporterar du innehåll:
 
 1. Sök efter innehåll enligt beskrivningen i [Söka och redigera innehåll](#searching-and-editing-content).
-1. Klicka på **Exportera** för att exportera ändringarna till ett tabbseparerat Excel-kalkylblad. AEM WCM frågar var du vill ladda ned filen.
+1. Klicka på **Exportera** för att exportera ändringarna till ett tabbseparerat Excel-kalkylblad. AEM frågar var du vill hämta filen.
 
    >[!NOTE]
    >
