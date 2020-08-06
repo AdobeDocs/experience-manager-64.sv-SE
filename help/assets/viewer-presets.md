@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 82bed457-794e-4bf2-bc80-abde24fd2851
 translation-type: tm+mt
 source-git-commit: 5acb16b1734331767554261bbcf9640947f2e23f
+workflow-type: tm+mt
+source-wordcount: '226'
+ht-degree: 22%
 
 ---
 
@@ -24,16 +27,16 @@ Om du är administratör och behöver hantera, skapa, sortera och ta bort visnin
 Se även [Publicera förinställningar](managing-viewer-presets.md#publishing-viewer-presets)för visningsprogram.
 
 Du kanske inte behöver publicera förinställningar för visningsprogrammet beroende på vilket publiceringsläge du använder.
-Eventuella problem med visningsförinställningar finns i [Felsökning av dynamiska media - Scene7](troubleshoot-dms7.md#viewers).
+Om du har problem med visningsförinställningarna läser du [Felsökning av dynamiska media - Scene7](troubleshoot-dms7.md#viewers).
 
 ## Använda en förinställning för Dynamic Media Viewer på en mediefil {#applying-a-viewer-preset-to-an-asset}
 
-1. Öppna resursen och i den vänstra listen och tryck på **[!UICONTROL Visningsprogram]**.
+1. Öppna resursen och tryck på **[!UICONTROL Viewers]** i den vänstra rutan.
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
-   * Knapparna **[!UICONTROL URL]** och **[!UICONTROL Bädda in]** visas när du har valt en visningsförinställning.
-   * Systemet visar flera förinställningar för visningsprogram när du väljer visningsprogram i en resurses **[!UICONTROL detaljvy]**. Du kan öka antalet förinställningar som visas. Se [Öka antalet visningsförinställningar som visas](managing-viewer-presets.md).
+   * Knapparna **[!UICONTROL URL]** och **[!UICONTROL Embed]** visas när du har valt en visningsförinställning.
+   * Systemet visar flera visningsförinställningar när du väljer visningsprogram för en resurs **[!UICONTROL Detail View]**. Du kan öka antalet förinställningar som visas. Se [Öka antalet visningsförinställningar som visas](managing-viewer-presets.md).
 
 1. Välj ett visningsprogram i den vänstra rutan för att använda det på resursen så som den visas i den högra rutan. Du kan också [kopiera URL-adressen för att dela](linking-urls-to-yourwebapplication.md) den med andra användare.
 
