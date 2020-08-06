@@ -11,6 +11,9 @@ topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: fec86f03-f81e-460a-9f84-d6304c95128c
 translation-type: tm+mt
 source-git-commit: 8078976ab79ccc0fefac5bfe6b000a008a917489
+workflow-type: tm+mt
+source-wordcount: '1430'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Se följande riktlinjer för utveckling av Hanterare för innehållssynkroniseri
 
 * Hanterare måste implementera *com.day.cq.contentsync.handler.ContentUpdateHandler* (antingen direkt eller genom att utöka en klass som gör det)
 * Hanterare kan utöka *com.adobe.cq.moile.platform.impl.contentsync.handler.AbstractSlingResourceUpdateHandler*
-* Hanteraren får bara rapportera true om de uppdaterade ContentSync-cachen. Om true rapporteras på fel sätt kan AEM skapa en uppdatering.
+* Hanteraren får bara rapportera true om de uppdaterade ContentSync-cachen. Felaktig rapportering av true tillåter AEM att skapa en uppdatering.
 * Hanteraren bör bara uppdatera cacheminnet om innehållet faktiskt ändras. Skriv inte till cacheminnet om en vit bild inte behövs och undvik att skapa en onödig uppdatering.
 
 ## Out-of-Box Handlers {#out-of-the-box-handlers}
@@ -58,9 +61,9 @@ I följande lista visas färdiga apphanterare:
 
 **mobilepageassets** Samlar in resurser på appsidor.
 
-**mobilecontentlisting** Visar innehållet i zip-filen ContentSync. Detta används av klientsidan js på enheten för att göra den initiala filkopian som krävs för AEM-appar.
+**mobilecontentlisting** Visar innehållet i zip-filen ContentSync. Detta används av klientsidan js på enheten för att utföra den initiala filkopiering som krävs för AEM program.
 
-Hanteraren bör läggas till i alla AEM-appar som har ContentSync-konfigurationen.
+Hanteraren bör läggas till i alla AEM Apps ContentSync Config.
 
 * ***type - String - mobilecontentlisting***
 * ***path*** - String - keep empty, måste finnas för att kunna ses som en giltig hanterare, men path härleds till aktuell ContentSync-cache. Detta värde ignoreras.
@@ -85,9 +88,9 @@ Hanteraren bör läggas till i alla AEM-appar som har ContentSync-konfiguratione
 }
 ```
 
-**mobilinnehållpaketerlista** Visar AEM-innehållspaketet i en viss app samt serverURL som uppdateringsbegäranden ska göras till. Detta används för att begära innehållsuppdateringar från klientsidan på enheten
+**mobilinnehållpaketerlista** Visar AEM innehållspaket i en viss app samt serverURL som uppdateringsbegäranden ska göras till. Detta används för att begära innehållsuppdateringar från klientsidan på enheten
 
-Hanteraren ska användas i konfigurationen för AEM App Shell ContentSync (nod med page-type=app-instance)
+Hanteraren ska användas i AEM App Shell ContentSync Config (nod med page-type=app-instance)
 
 * ***type - String - mobilecontentpackageslista***
 * ***path **-**String*** - Sökväg till ett programskal (nod med page-type=app-instance).
@@ -122,7 +125,7 @@ Hanteraren ska användas i konfigurationen för AEM App Shell ContentSync (nod m
 
 **widgetconfig** Innehåller en uppdaterad config.xml som sammanfogar alla redigeringar som gjorts via kommandocentralen med en angiven config.xml. Om den här hanteraren inte inkluderas ingen appinformation som ändras via administrationsgränssnittet i cachen.
 
-Hanteraren bör användas i en AEM App Shell ContentSync-konfiguration (nod med page-type=[app-instance]).
+Hanteraren ska användas i en AEM App Shell ContentSync-konfiguration (nod med page-type=[app-instance]).
 
 * ***type - String* - **widgetconfig
 * ***path **-**String*** - Path to any app shell child node (node with page-type=[app-instance]).
@@ -133,7 +136,7 @@ Hanteraren bör användas i en AEM App Shell ContentSync-konfiguration (nod med 
 
 Detta används vid kompileringen för att konfigurera AMS-plugin-programmet för analysstöd.
 
-Hanteraren ska användas i konfigurationen för AEM App Shell ContentSync (nod med page-type=app-instance)
+Hanteraren ska användas i AEM App Shell ContentSync Config (nod med page-type=app-instance)
 
 * ***type - String*** - mobileADBMobleConfigJSON
 * ***path - String*** - Sökväg till ett programskal (nod med page-type=app-instance eller en RT som utökar /libs/mobileapps/core/components/instance)
@@ -141,9 +144,9 @@ Hanteraren ska användas i konfigurationen för AEM App Shell ContentSync (nod m
 
 **meddelandenconfig** Extraherar meddelandekonfigurationer som krävs på enheten. Egenskaperna extraheras från respektive push-tjänstmolntjänstkonfiguration som är kopplad till appen.
 
-Icke-AEM-egenskaper i molntjänstens jcr:content-nod extraheras och läggs till i JSON-filen **page-notifications-config.json** för att inkluderas i programinnehållets www-rot.
+Egenskaper som inte AEM i molntjänstens jcr:content-nod extraheras och läggs till i JSON-filen **page-notifications-config.json** för att inkluderas i programinnehållets www-rot.
 
-AEM-egenskaper är de som är namnavgränsade med&quot;cq&quot;,&quot;sling&quot; eller&quot;jcr&quot;. Andra egenskaper kan exkluderas med hjälp av egenskapen excludeProperties på konfigurationsnoden för innehållssynkronisering.
+AEM är de som är namnmellanrumsbaserade med&quot;cq&quot;,&quot;sling&quot; eller&quot;jcr&quot;. Andra egenskaper kan exkluderas med hjälp av egenskapen excludeProperties på konfigurationsnoden för innehållssynkronisering.
 
 * ***type - String*** - meddelandenconfig
 * ***excludeProperties - String[]*** - egenskaper som ska exkluderas
@@ -200,16 +203,16 @@ Det går att ha flera hanterare för mobilappconfig konfigurerade var och en med
 * Exportera din konfiguration eller granskning på enheten
 * Om återgivningen misslyckas, sök efter saknade *format/resurser/libs* eller leta efter felaktiga sökvägar till *format/resurser/libs*
 
-**Loggning** Aktivera ContentSync-felsökningsloggning via OSGI-loggningskonfigurationer i paketet `com.day.cq.contentsync` . På så sätt kan du spåra vilka hanterare som har körts och om de har uppdaterat cachen och rapporterat att de har uppdaterat cachen.
+**Loggning** Aktivera ContentSync-felsökningsloggning via OSGI-loggningskonfigurationer i paketet `com.day.cq.contentsync` Detta gör att du kan spåra vilka hanterare som har körts och om de har uppdaterat cachen och rapporterat att de har uppdaterat cachen.
 
-## Additional Resources {#additional-resources}
+## Ytterligare resurser {#additional-resources}
 
 Mer information om roller och ansvar för en administratör och utvecklare finns i resurserna nedan:
 
-* [Om du skriver för Adobe PhoneGap Enterprise med AEM](/help/mobile/phonegap.md)
+* [Skapa för Adobe PhoneGap Enterprise med AEM](/help/mobile/phonegap.md)
 * [Administrera innehåll för Adobe PhoneGap Enterprise med AEM](/help/mobile/administer-phonegap.md)
 
 >[!NOTE]
 >
->Klicka [här](/help/mobile/getting-started-aem-mobile.md)för att komma igång med utveckling av AEM-mobilappar.
+>Klicka [här](/help/mobile/getting-started-aem-mobile.md)för att komma igång med utvecklingen av AEM Mobile-appar.
 
