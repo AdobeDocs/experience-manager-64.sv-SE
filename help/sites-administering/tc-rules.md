@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: eedff940-4a46-4c24-894e-a5aa1080d23d
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1161'
+ht-degree: 0%
 
 ---
 
@@ -31,18 +34,18 @@ Filen gäller för alla översättningsprojekt.
 
 >[!NOTE]
 >
->Efter en uppgradering till 6.4 bör du flytta filen från /etc. Mer information finns i [Omstrukturering av gemensamma databaser i AEM 6.4](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#translation-rules) .
+>Efter en uppgradering till 6.4 bör du flytta filen från /etc. Mer information finns i AEM 6.4 [,](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#translation-rules) Common Repository-omstrukturering.
 
 Reglerna innehåller följande information:
 
 * Sökvägen till noden som regeln gäller för. Regeln gäller även för nodens underordnade noder.
 * Namnen på nodegenskaperna som innehåller innehållet som ska översättas. Egenskapen kan vara specifik för en viss resurstyp eller för alla resurstyper.
 
-Du kan till exempel skapa en regel som översätter innehållet som författare lägger till i alla AEM Foundation-textkomponenter på dina sidor. Regeln kan identifiera `/content` noden och `text` egenskapen för `foundation/components/text` komponenten.
+Du kan till exempel skapa en regel som översätter innehållet som författare lägger till i alla AEM grundläggande textkomponenter på dina sidor. Regeln kan identifiera `/content` noden och `text` egenskapen för `foundation/components/text` komponenten.
 
 Det finns en [konsol](#translation-rules-ui) som har lagts till för att konfigurera översättningsregler. Definitionerna i användargränssnittet fyller i filen åt dig.
 
-En översikt över funktionerna för innehållsöversättning i AEM finns i [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md).
+En översikt över funktionerna för översättning av innehåll i AEM finns i [Översätta innehåll för flerspråkiga platser](/help/sites-administering/translation.md).
 
 >[!NOTE]
 >
@@ -95,7 +98,7 @@ Följande exempel översätter innehållet i alla `text` egenskaper och översä
 </node>
 ```
 
-## Regelsyntax för att extrahera resurser från sidor {#rule-syntax-for-extracting-assets-from-pages}
+## Regelsyntax för att extrahera resurser från sidor  {#rule-syntax-for-extracting-assets-from-pages}
 
 Använd följande regelsyntax för att inkludera resurser som är inbäddade i eller refererade från komponenter:
 
@@ -168,7 +171,7 @@ Sedan måste du markera kontexten och sedan klicka på **Redigera**. Då öppnas
 
 ![chlimage_1-58](assets/chlimage_1-58.jpeg)
 
-Det finns fyra attribut som du kan ändra via gränssnittet: `isDeep`, `inherit`, `translate` och `updateDestinationLanguage`.
+Det finns fyra attribut som du kan ändra via gränssnittet: `isDeep`, `inherit`och `translate``updateDestinationLanguage`.
 
 **isDeep** Det här attributet används för nodfilter och är som standard true. Den kontrollerar om noden (eller dess överordnade noder) innehåller den egenskapen med det angivna egenskapsvärdet i filtret. Om värdet är false kontrolleras endast den aktuella noden.
 
@@ -215,7 +218,7 @@ Resultatet i xml kommer att se ut så här:
 
 Filen translation_rules.xml som installeras med AEM innehåller en standarduppsättning med översättningsregler. Du kan redigera filen så att den uppfyller översättningsprojektens krav. Du kan till exempel lägga till regler så att innehållet i dina anpassade komponenter översätts.
 
-Om du redigerar filen translation_rules.xml sparar du en säkerhetskopia i ett innehållspaket. Om du installerar AEM-servicepaket eller installerar om vissa AEM-paket kan den aktuella filen translation_rules.xml ersättas med originalfilen. Om du vill återställa reglerna i den här situationen kan du installera det paket som innehåller säkerhetskopian.
+Om du redigerar filen translation_rules.xml sparar du en säkerhetskopia i ett innehållspaket. Om du installerar AEM Service Pack eller installerar om vissa AEM kan den aktuella filen translation_rules.xml ersättas med originalfilen. Om du vill återställa reglerna i den här situationen kan du installera det paket som innehåller säkerhetskopian.
 
 >[!NOTE]
 >
