@@ -1,8 +1,8 @@
 ---
 title: 'Introduktion till utveckling av anpassningsbara formulär '
 seo-title: 'Introduktion till utveckling av anpassningsbara formulär '
-description: AEM Forms har ett lättanvänt men ändå kraftfullt gränssnitt för framtagning av adaptiva formulär. Den innehåller en mängd komponenter och verktyg som du kan använda för att skapa formulär.
-seo-description: AEM Forms har ett lättanvänt men ändå kraftfullt gränssnitt för framtagning av adaptiva formulär. Den innehåller en mängd komponenter och verktyg som du kan använda för att skapa formulär.
+description: AEM Forms har ett lättanvänt men ändå kraftfullt gränssnitt för framtagning av adaptiva blanketter. Den innehåller en mängd komponenter och verktyg som du kan använda för att skapa formulär.
+seo-description: AEM Forms har ett lättanvänt men ändå kraftfullt gränssnitt för framtagning av adaptiva blanketter. Den innehåller en mängd komponenter och verktyg som du kan använda för att skapa formulär.
 uuid: 07ff8e79-daf7-4608-9171-91854619cc0b
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-Med adaptiva formulär kan du skapa formulär som är engagerande, responsiva, dynamiska och anpassningsbara. AEM Forms har ett intuitivt användargränssnitt och färdiga komponenter för att skapa och arbeta med adaptiva formulär. Du kan välja att skapa ett anpassat formulär baserat på en formulärmodell eller ett schema eller utan en formulärmodell. Det är viktigt att du noga väljer den formulärmodell som inte bara passar dina behov, utan som utökar dina befintliga infrastrukturinvesteringar och resurser. Du kan välja mellan följande alternativ för att skapa ett anpassat formulär:
+Med adaptiva formulär kan du skapa formulär som är engagerande, responsiva, dynamiska och anpassningsbara. AEM Forms har ett intuitivt användargränssnitt och färdiga komponenter för att skapa och arbeta med anpassningsbara formulär. Du kan välja att skapa ett anpassat formulär baserat på en formulärmodell eller ett schema eller utan en formulärmodell. Det är viktigt att du noga väljer den formulärmodell som inte bara passar dina behov, utan som utökar dina befintliga infrastrukturinvesteringar och resurser. Du kan välja mellan följande alternativ för att skapa ett anpassat formulär:
 
 * **Använda en formulärdatamodell**
    [Med dataintegrering](/help/forms/using/data-integration.md) kan ni integrera enheter och tjänster från olika datakällor i en formulärdatamodell som ni kan använda för att skapa anpassade formulär. Välj formulärdatamodell om det adaptiva formulär du skapar inbegriper hämtning och skrivning av data från och till flera datakällor.
@@ -62,7 +62,7 @@ Med sidofältet kan du
 
 * Se formulärinnehåll som paneler, komponenter, fält och layout.
 * Redigera komponentegenskaper.
-* Sök, visa och använd resurser i din AEM Digital Asset Management-databas (DAM).
+* Sök, visa och använd resurser i din AEM DAM-databas (Digital Asset Management).
 * Lägg till komponenter i formuläret.
 
    ![Sidebar](assets/sidebar-comps-2.png)
@@ -107,8 +107,8 @@ Sidlisten innehåller följande webbläsare:
    <th><strong>Funktionalitet</strong></th> 
   </tr> 
   <tr> 
-   <td>Adobe Sign-block</td> 
-   <td>Lägger till ett textblock med platshållare för fält som ska fyllas i vid signering med Adobe Sign.</td> 
+   <td>Adobe Sign Block</td> 
+   <td>Lägger till ett textblock med platshållare för fält som ska fyllas i när du signerar med Adobe Sign.</td> 
   </tr> 
   <tr> 
    <td>Knapp</td> 
@@ -152,7 +152,7 @@ Sidlisten innehåller följande webbläsare:
   </tr> 
   <tr> 
    <td>Bifogad fil</td> 
-   <td><p>Lägger till en knapp som gör att användare kan bläddra bland och bifoga stöddokument till ett formulär.</p> <p><strong>Obs! </strong>Komponenten Bifogad fil har stöd för en fördefinierad uppsättning filformat i adaptiva formulär som är aktiverade för Adobe Sign. Mer information finns i <a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html">Filformat</a>som stöds.</p> </td> 
+   <td><p>Lägger till en knapp som gör att användare kan bläddra bland och bifoga stöddokument till ett formulär.</p> <p><strong>Obs! </strong>Komponenten Bifogad fil stöder en fördefinierad uppsättning filformat i adaptiva formulär som är aktiverade för Adobe Sign. Mer information finns i <a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html">Filformat</a>som stöds.</p> </td> 
   </tr> 
   <tr> 
    <td>Lista över bifogade filer</td> 
@@ -297,9 +297,9 @@ Här följer några tips och viktiga saker du bör komma ihåg när du arbetar m
 
    1. Gå till AEM Forms-servern **[!UICONTROL Adobe Experience Manager > Tools > Operations > Web Console]**.
    1. Sök och tryck **[!UICONTROL Adaptive Forms Configuration Service]**.
-   1. Aktivera **[!UICONTROL Make File Names Unique]** i dialogrutan Adaptive Forms Configuration Service. Som standard är den inaktiverad.
+   1. Aktivera i dialogrutan Adaptiv Forms Configuration Service **[!UICONTROL Make File Names Unique]**. Som standard är den inaktiverad.
 
-* Om du vill att användare ska kunna bifoga en PDF-fil med Safari-webbläsaren måste du se till att **[!UICONTROL application/pdf]** läggs till i egenskapen Filtyper som stöds i komponenten för bifogade filer. Anpassningsbara formulär som skapats med tidigare AEM Forms-version kan innehålla **[!UICONTROL .pdf]** i stället **[!UICONTROL application/pdf]** för egenskapen Filtyper som stöds.
+* Om du vill att användare ska kunna bifoga en PDF-fil med Safari-webbläsaren måste du se till att **[!UICONTROL application/pdf]** läggs till i egenskapen Filtyper som stöds i komponenten för bifogade filer. Anpassningsbara formulär som skapats med en tidigare version av AEM Forms kan innehålla **[!UICONTROL .pdf]** i stället **[!UICONTROL application/pdf]** för egenskapen Filtyper som stöds.
 
 Mer information om adaptiva formulär finns i [Bästa tillvägagångssätt för att arbeta med adaptiva formulär](/help/forms/using/adaptive-forms-best-practices.md).
 
@@ -315,7 +315,7 @@ Verktygsfältet längst upp på sidan innehåller alternativ som gör att du kan
 
 * **[!UICONTROL Page information]** ![temaalternativ](assets/theme-options.png): Gör att du kan visa sidegenskaper, publicera/avpublicera ett formulär, starta ett formulärarbetsflöde och öppna formuläret i klassiskt gränssnitt.
 
-* **[!UICONTROL Emulator]** ![linjal](assets/ruler.png): Gör att du kan emulera formulärutseendet för olika visningsstorlekar, till exempel för surfplattor och telefoner.
+* **[!UICONTROL Emulator]** ![linjal](assets/ruler.png): Gör att du kan emulera formulärutseendet för olika visningsstorlekar, till exempel surfplattor och telefoner.
 
 * **[!UICONTROL Edit]**: Här kan du välja andra lägen, till exempel: **Redigera, Formatera, Utvecklare** och **Design**.
 
