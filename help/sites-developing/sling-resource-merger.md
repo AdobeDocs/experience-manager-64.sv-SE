@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: ec712ba0-0fd6-4bb8-93d6-07d09127df58
 translation-type: tm+mt
 source-git-commit: 507559ee6cc6b201a11bbf84da515b675534f675
+workflow-type: tm+mt
+source-wordcount: '1272'
+ht-degree: 0%
 
 ---
 
 
-# Använda Sling Resource Merger i AEM{#using-the-sling-resource-merger-in-aem}
+# Using the Sling Resource Merger in AEM{#using-the-sling-resource-merger-in-aem}
 
 ## Syfte {#purpose}
 
@@ -64,6 +67,7 @@ Målet med Sling Resource Merger i AEM är att
    >
    >
 1. Gör ändringar i `/apps`
+
 >
 
 
@@ -96,7 +100,7 @@ Dessa egenskaper påverkar hur motsvarande/ursprungliga resurser/egenskaper (fr�
 
 ### Skapa strukturen {#creating-the-structure}
 
-Om du vill skapa en övertäckning eller åsidosättning måste du återskapa den ursprungliga noden, med motsvarande struktur, under målet (vanligtvis `/apps`). Exempel:
+Om du vill skapa en övertäckning eller åsidosättning måste du återskapa den ursprungliga noden, med motsvarande struktur, under målet (vanligtvis `/apps`). Till exempel:
 
 * Övertäckning
 
@@ -168,8 +172,7 @@ Dessa tillsammans med standardfunktioner gör att du kan:
    Som standard omfattas inte automatiskt skapade egenskaper (till exempel `jcr:primaryType`) av någon övertäckning/åsidosättning för att säkerställa att den nodtyp som `/libs` används för närvarande respekteras. Om du vill lägga till en övertäckning/åsidosättning måste du återskapa noden i `/apps`och uttryckligen dölja egenskapen och definiera om den:
 
    1. Skapa motsvarande nod under `/apps` med önskat `jcr:primaryType`
-   1. Skapa egenskapen `sling:hideProperties` på den noden med värdet inställt på värdet för den automatiskt skapade egenskapen,
-till exempel `jcr:primaryType`
+   1. Skapa egenskapen `sling:hideProperties` på den noden med värdet inställt på värdet för den automatiskt skapade egenskapen, till exempel `jcr:primaryType`
 
       Den här egenskapen, som definieras under `/apps`, får nu högre prioritet än den som definieras under `/libs`
 
@@ -187,7 +190,7 @@ till exempel `jcr:primaryType`
    Egenskapen definieras i `/libs`, men krävs inte i `/apps` övertäckningen/åsidosättningen.
 
    1. Skapa motsvarande nod i `/apps`
-   1. Skapa en egenskap `sling:hideProperties` av typen `String` eller `String[]`. Använd den här inställningen för att ange vilka egenskaper som ska döljas/ignoreras. Du kan också använda jokertecken. Exempel:
+   1. Skapa en egenskap `sling:hideProperties` av typen `String` eller `String[]`. Använd den här inställningen för att ange vilka egenskaper som ska döljas/ignoreras. Du kan också använda jokertecken. Till exempel:
 
       * `*`
       * `["*"]`
@@ -213,6 +216,7 @@ till exempel `jcr:primaryType`
 
       * type: `String[]`
       * värde: en lista med underordnade noder (enligt definition i `/libs`) som ska döljas/ignoreras
+
       Jokertecknets &amp;stämpel;ast; kan användas för att dölja/ignorera alla underordnade noder.
 
 
