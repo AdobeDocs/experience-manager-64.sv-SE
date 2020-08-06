@@ -1,8 +1,8 @@
 ---
 title: SAML 2.0-autentiseringshanterare
 seo-title: SAML 2.0-autentiseringshanterare
-description: Lär dig mer om SAML 2.0 Authentication Handler i AEM.
-seo-description: Lär dig mer om SAML 2.0 Authentication Handler i AEM.
+description: Läs mer om autentiseringshanteraren för SAML 2.0 i AEM.
+seo-description: Läs mer om autentiseringshanteraren för SAML 2.0 i AEM.
 uuid: 51f97315-350a-42a4-af2c-2de87307c6ad
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -26,7 +26,7 @@ Det har stöd för:
 
 * signering och kryptering av meddelanden
 * automatiskt skapa användare
-* synkronisera grupper med befintliga i AEM
+* synkronisera grupper med befintliga grupper i AEM
 * Tjänsteleverantören och identitetsleverantören initierade autentisering
 
 Den här hanteraren lagrar det krypterade SAML-svarsmeddelandet i användarnoden ( `usernode/samlResponse`) för att underlätta kommunikationen med en tredjeparts tjänsteleverantör.
@@ -39,7 +39,7 @@ Den här hanteraren lagrar det krypterade SAML-svarsmeddelandet i användarnoden
 
 ## Konfigurera autentiseringshanteraren för SAML 2.0 {#configuring-the-saml-authentication-handler}
 
-Via [webbkonsolen](/help/sites-deploying/configuring-osgi.md) får du tillgång till [SAML](http://saml.xml.org/saml-specifications) 2.0 Authentication Handler-konfigurationen som kallas **Adobe Granite SAML 2.0 Authentication Handler**. Följande egenskaper kan anges.
+Via [webbkonsolen](/help/sites-deploying/configuring-osgi.md) får du tillgång till [SAML](http://saml.xml.org/saml-specifications) 2.0 Authentication Handler-konfigurationen med namnet **Adobe Granite SAML 2.0 Authentication Handler**. Följande egenskaper kan anges.
 
 >[!NOTE]
 >
@@ -47,6 +47,7 @@ Via [webbkonsolen](/help/sites-deploying/configuring-osgi.md) får du tillgång 
 >
 >* Identitetsleverantörens POST-URL.
 >* Tjänstleverantörens enhets-ID.
+
 >
 
 
@@ -107,7 +108,7 @@ SAML-försäkringar är signerade och kan eventuellt krypteras. För att detta s
 
    ![chlimage_1-372](assets/chlimage_1-372.png)
 
-## Lägg till tjänstleverantörens nyckel och certifikatkedja i AEM-nyckelbehållaren {#add-the-service-provider-key-and-certificate-chain-to-the-aem-keystore}
+## Lägg till tjänstleverantörens nyckel och certifikatkedja i AEM nyckelbehållare {#add-the-service-provider-key-and-certificate-chain-to-the-aem-keystore}
 
 >[!NOTE]
 >
