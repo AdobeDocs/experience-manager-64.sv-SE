@@ -32,11 +32,11 @@ Följande snabbstarter är tillgängliga för tjänsten PDF Utilities.
 
 [Snabbstart (SOAP-läge): Sanera PDF-dokument](pdf-utilities-service-java-api.md#quick-start-soap-mode-sanitizing-pdf-documents)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstarter i Programmering med AEM-formulär baseras på operativsystemet Forms Server. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstarter som finns i Programmering med AEM är baserade på operativsystemet Forms Server. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Konvertera ett PDF-dokument till ett XDP-dokument med Java API {#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api}
 
@@ -241,7 +241,7 @@ I följande kodexempel konverteras ett XDP-dokument till ett PDF-dokument. (Se [
 
 ## Snabbstart (SOAP-läge): Hämta PDF-dokumentegenskaper med Java API {#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api}
 
-I följande kodexempel avgörs om dokumentet är ett PDF-dokument och i så fall den tidigaste Acrobat-versionen som kan läsa det. (Se [Hämta PDF-dokumentegenskaper](/help/forms/developing/pdf-utilities.md#retrieving-pdf-document-properties).)
+Följande kodexempel avgör om dokumentet är ett PDF-dokument och, i så fall, den tidigaste Acrobat-versionen som kan läsa det. (Se [Hämta PDF-dokumentegenskaper](/help/forms/developing/pdf-utilities.md#retrieving-pdf-document-properties).)
 
 ```as3
  /* 
