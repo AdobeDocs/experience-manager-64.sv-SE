@@ -1,6 +1,6 @@
 ---
-title: ' Ställning'
-seo-title: ' Ställning'
+title: Ställning
+seo-title: Ställning
 description: Ibland kan du behöva skapa en stor uppsättning sidor som har samma struktur men olika innehåll. Med hjälp av ställningar kan du skapa ett formulär (en struktur) med fält som motsvarar den struktur du vill ha för sidorna och sedan använda det här formuläret för att enkelt skapa sidor som baseras på den strukturen.
 seo-description: Ibland kan du behöva skapa en stor uppsättning sidor som har samma struktur men olika innehåll. Med hjälp av ställningar kan du skapa ett formulär (en struktur) med fält som motsvarar den struktur du vill ha för sidorna och sedan använda det här formuläret för att enkelt skapa sidor som baseras på den strukturen.
 uuid: b1fdf2c0-e6d0-488a-96e5-dfbd6beb7610
@@ -11,13 +11,16 @@ topic-tags: site-features
 discoiquuid: 884b3e75-78b5-421a-938e-97fe6d77c8c2
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1507'
+ht-degree: 0%
 
 ---
 
 
-#  Ställning{#scaffolding}
+# Ställning{#scaffolding}
 
-Ibland kan du behöva skapa en stor uppsättning sidor som har samma struktur men olika innehåll. Med det vanliga AEM-gränssnittet måste du skapa varje sida, dra lämpliga komponenter till sidan och fylla i varje sida separat.
+Ibland kan du behöva skapa en stor uppsättning sidor som har samma struktur men olika innehåll. Genom det AEM standardgränssnittet skulle du behöva skapa varje sida, dra lämpliga komponenter till sidan och fylla i varje sida separat.
 
 Med hjälp av ställningar kan du skapa ett formulär (en struktur) med fält som motsvarar den struktur du vill ha för sidorna och sedan använda det här formuläret för att enkelt skapa sidor som baseras på den strukturen.
 
@@ -53,7 +56,7 @@ Skaffets brödtext är formen. När en användare vill skapa en sida med hjälp 
 * **Titel**: Det här är namnet på sidan som ska skapas. Det här fältet finns alltid på alla ställningar.
 * **Text**: Det här fältet motsvarar en textkomponent på den slutliga sidan.
 * **Bild**: Det här fältet motsvarar en bildkomponent på den slutliga sidan.
-* **Bild/Avancerat**: **Titel**:Bildens titel.
+* **Bild/Avancerat**: **Titel**: Bildens titel.
 
 * **Bild/Avancerat**: **Alt-text**: Alt-texten för bilden.
 
@@ -122,7 +125,7 @@ Eftersom vi vet att texten bör tolkas som en RTF-text anger vi egenskapen `valu
 
 >[!CAUTION]
 >
->I dialogruteredigeraren kan användaren ändra värdena för *befintliga* egenskaper i dialogdefinitionen. Om du vill lägga till en ny egenskap måste användaren använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md). När ett nytt dolt fält läggs till i en dialogrutedefinition med dialogruteredigeraren har det till exempel ingen *value* -egenskap (dvs. en egenskap med namnet &quot;value&quot;). Om det dolda fältet kräver att en *standardvärdeegenskap* ställs in, måste den här egenskapen läggas till manuellt med något av CRX-verktygen. Värdet kan inte läggas till med själva dialogruteredigeraren. Men när egenskapen finns kan dess värde redigeras med dialogruteredigeraren.
+>I dialogruteredigeraren kan användaren ändra värdena för *befintliga* egenskaper i dialogdefinitionen. Användaren måste använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)för att lägga till en ny egenskap. När ett nytt dolt fält läggs till i en dialogrutedefinition med dialogruteredigeraren har det till exempel ingen *value* -egenskap (dvs. en egenskap med namnet &quot;value&quot;). Om det dolda fältet kräver att en *standardvärdeegenskap* ställs in, måste den här egenskapen läggas till manuellt med något av CRX-verktygen. Värdet kan inte läggas till med själva dialogruteredigeraren. Men när egenskapen finns kan dess värde redigeras med dialogruteredigeraren.
 
 Det andra dolda fältet visas om du klickar på det så här:
 
@@ -136,7 +139,7 @@ Egenskapen name för det här dolda fältet är
 
 `./jcr:content/par/text/sling:resourceType`
 
-och det fasta värde som anges för den här egenskapen är
+och det fasta värdet som anges för den här egenskapen är
 
 `foundation/components/textimage`
 
