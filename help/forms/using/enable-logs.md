@@ -11,6 +11,9 @@ topic-tags: hTML5_forms
 discoiquuid: 23bc7cd2-7d06-4ef8-977a-778e290daef9
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '646'
+ht-degree: 4%
 
 ---
 
@@ -179,9 +182,9 @@ Om du använder Configuration Manager för att aktivera loggning genereras logga
 1. Sök efter och klicka på **Mobile Forms Configurations**.
 1. I textrutan Felsökningsalternativ anger du de loggkonfigurationer som beskrivs i föregående avsnitt, till exempel **2-a4-b5-c6**
 
-   ![Formulärkonfiguration](assets/forms_configuration.png)
+   ![Forms Configuration](assets/forms_configuration.png)
 
-   Formulärkonfiguration
+   Forms Configuration
 
 ## Överför loggar {#uploading-logs}
 
