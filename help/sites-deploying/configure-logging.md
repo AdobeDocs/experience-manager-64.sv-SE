@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 5aa69b10-2cd0-4d34-8104-8c3b88405926
 translation-type: tm+mt
 source-git-commit: 02aee2202a570320cd7eb40c2e566d886af4e163
+workflow-type: tm+mt
+source-wordcount: '688'
+ht-degree: 0%
 
 ---
 
 
 # Loggning{#logging}
 
-Med AEM kan du konfigurera:
+AEM ger dig möjlighet att konfigurera:
 
 * globala parametrar för den centrala loggningstjänsten
 * begära dataloggning, en särskild loggningskonfiguration för begärandeinformation
@@ -27,11 +30,11 @@ Det här är alla [OSGi-konfigurationer](/help/sites-deploying/configuring-osgi.
 
 >[!NOTE]
 >
->Inloggning med AEM baseras på Sling-principer. Mer information finns i [Sling Logging](https://sling.apache.org/site/logging.html) .
+>Inloggning AEM baseras på Sling-principer. Mer information finns i [Sling Logging](https://sling.apache.org/site/logging.html) .
 
 ## Global loggning {#global-logging}
 
-[Loggningskonfiguration](/help/sites-deploying/osgi-configuration-settings.md) för Apache Sling används för att konfigurera rotloggaren. Detta definierar de globala inställningarna för inloggning med AEM:
+[Loggningskonfiguration](/help/sites-deploying/osgi-configuration-settings.md) för Apache Sling används för att konfigurera rotloggaren. Detta definierar de globala inställningarna för inloggning AEM:
 
 * loggningsnivån
 * platsen för den centrala loggfilen
@@ -82,7 +85,7 @@ Dessa element är länkade med följande parametrar för de relevanta elementen:
 
 ### Standardloggare och -författare {#standard-loggers-and-writers}
 
-Vissa loggare och skrivprogram ingår i en AEM-standardinstallation.
+Vissa loggare och skrivprogram ingår i en AEM standardinstallation.
 
 Det första är ett specialfall eftersom det styr både `request.log` och `access.log` filer:
 
@@ -122,11 +125,11 @@ De andra paren följer standardkonfigurationen:
 
 * Loggaren:
 
-   * Konfiguration av loggningsloggare för Apache Sling (org.apache.sling.Commons.log.LogManager.factory.config.649d51b7-6425-45c9-81e6-2697a03d6be7)
+   * Konfiguration av Apache Sling Logging Logger (org.apache.sling.Commons.log.LogManager.factory.config.649d51b7-6425-45c9-81e6-2697a03d6be7)
 
    * Skriver `Warning` meddelanden till `../logs/error.log` för tjänsten `org.apache.pdfbox`.
 
-* Länkar inte till ett specifikt skrivprogram. Därför skapas och används ett implicit skrivprogram med standardkonfiguration (daglig loggrotation).
+* Länkar inte till ett specifikt skrivprogram, så skapar och använder ett implicit skrivprogram med standardkonfiguration (daglig loggrotation).
 
 ### Skapa egna loggare och författare {#creating-your-own-loggers-and-writers}
 
