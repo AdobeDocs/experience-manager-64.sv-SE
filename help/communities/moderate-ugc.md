@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: d11b8fc8-5e98-4a77-a536-d445ac88e1b3
 translation-type: tm+mt
 source-git-commit: f78f83ef3b9373bcbee3e5179a9bbec4d9462255
+workflow-type: tm+mt
+source-wordcount: '1510'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +32,7 @@ Community-innehåll, som också kallas användargenererat innehåll (UGC), skapa
 * [QnA](working-with-qna.md): medlemmar skapar en fråga eller besvarar en fråga
 * [Recensioner](reviews.md): medlemmar publicerar en kommentar när de klassificerar ett objekt
 
-Moderering av användargenererat innehåll är användbart för erkännande av positiva bidrag samt för begränsning av negativa bidrag (t.ex. skräppost och missbruk). UGC kan modereras från flera miljöer:
+Moderering av användargenererat innehåll är användbart för att redovisa positiva bidrag och begränsa negativa bidrag (t.ex. skräppost och missbruk). UGC kan modereras från flera miljöer:
 
 * [Konsol för massmoderering](moderation.md)
 
@@ -181,9 +184,9 @@ När UGC är förmodererat visas inte inlägget på den publicerade webbplatsen 
 
 * [Kommentarer](comments.md) och [granskningar](reviews.md)
 
-   på fliken **[!UICONTROL Användarmoderering]** , kontrollera **[!UICONTROL Före moderering]**
+   på **[!UICONTROL User Moderation]** -fliken, kontrollera **[!UICONTROL Pre-Moderation]**
 
-* [Forum](forum.md), [ideation](ideation-feature.md), [QnA](working-with-qna.md)och [kalender](calendar.md) på fliken **[!UICONTROL Inställningar]** , kontrollera **[!UICONTROL modererat]**
+* [Forum](forum.md), [idéer](ideation-feature.md), [QnA](working-with-qna.md)och [kalender](calendar.md) på **[!UICONTROL Settings]** fliken, kontrollera **[!UICONTROL Moderated]**
 
 ### Skräppostidentifiering {#spam-detection}
 
@@ -203,7 +206,7 @@ Så här aktiverar du skräppostavkänningsmotorn:
 
 1. Öppna [webbkonsolen](http://localhost:4502/system/console/configMgr)genom att gå till `/system/console/configMgr`.
 
-1. Leta reda på konfigurationen av automatisk moderering **[!UICONTROL av]** AEM Communities och redigera den.
+1. Leta reda på **[!UICONTROL AEM Communities Auto Moderation]** konfigurationen och redigera den.
 1. Lägg till `SpamProcess` posten.
 
 ![skräp](assets/spamprocess.png)
@@ -235,7 +238,7 @@ Från [masmodereringskonsolen](moderation.md)går det att filtrera och visa UGC 
 
 #### Bevakningsord {#watchwords}
 
-AEM Communities tillhandahåller en *bevakningsfunktion *som ett steg i processen för att utvärdera [känslan](#sentiment). Bidraget till det känslomässiga värde som tillhandahålls av bevakningsord beror på en jämförelse av negativa och positiva bevakningsord som används i det publicerade innehållet samt förbjudna ord.
+AEM communities tillhandahåller en *bevakningsfunktion *som ett steg i processen för att utvärdera [känslan](#sentiment). Bidraget till det känslomässiga värde som tillhandahålls av bevakningsord beror på en jämförelse av negativa och positiva bevakningsord som används i det publicerade innehållet samt förbjudna ord.
 
 #### Konfigurera känslolägesikoner och bevakningsord {#configure-sentiment-and-watchwords}
 
@@ -259,9 +262,11 @@ Så här konfigurerar du uttryck och bevakningsord:
 
 * **Negativa Watchwords** En kommaseparerad lista med ord som bidrar till en negativ uppfattning som åsidosätter standardvärdena. Standard är en tom lista.
 
-* **Explicit sökväg till bevakningsordsnod** Databasplatsen för en nod som innehåller standard `positive` och `negative` egenskaper som anger standardbevakningsord. Standardvärdet är `/libs/settings/community/watchwords/default`.
+* **Explicit sökväg till bevakningsordsnod** Databasplatsen för en nod som innehåller standard 
+`positive` och `negative` egenskaper som anger standardbevakningsord. Standardvärdet är `/libs/settings/community/watchwords/default`.
 
-* **Sentiment Rules** Databasplatsen för reglerna för beräkning av känslouttryck baserat på positiva och negativa bevakningsord. Standard är `/libs/cq/workflow/components/workflow/social/sentiments/rules` (men det finns inte längre något arbetsflöde).
+* **Sentiment Rules** Databasplatsen för reglerna för beräkning av uppfattning baserat på positiva och negativa bevakningsord. Standard är 
+`/libs/cq/workflow/components/workflow/social/sentiments/rules` (men det finns inte längre något arbetsflöde).
 
 Följande är ett exempel på en anpassad post för standardbevakningsorden, när `Explicit Path to Watchwords Node` är inställd på `/libs/settings/community/watchwords/default`.
 
