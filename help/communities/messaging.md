@@ -22,7 +22,7 @@ ht-degree: 1%
 
 ## Översikt {#overview}
 
-Meddelandefunktionen för AEM Communities ger möjlighet för inloggade webbplatsbesökare (medlemmar) att skicka meddelanden till varandra som är tillgängliga när de loggar in på webbplatsen.
+Meddelandefunktionen för AEM Communities gör det möjligt för besökare på den inloggade webbplatsen (medlemmar) att skicka meddelanden till varandra som är tillgängliga när de loggar in på webbplatsen.
 
 Meddelanden aktiveras för en community-webbplats genom att en kryssruta markeras när en [community-webbplats skapas](sites-console.md).
 
