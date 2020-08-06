@@ -1,8 +1,8 @@
 ---
-title: Omstrukturering av tillgångar i lager i AEM 6.4
-seo-title: Omstrukturering av tillgångar i lager i AEM 6.4
-description: Lär dig hur du gör nödvändiga ändringar för att migrera till den nya databasstrukturen i AEM 6.4 for Assets.
-seo-description: Lär dig hur du gör nödvändiga ändringar för att migrera till den nya databasstrukturen i AEM 6.4 for Assets.
+title: Omstrukturering av tillgångar Repository i AEM 6.4
+seo-title: Omstrukturering av tillgångar Repository i AEM 6.4
+description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 for Assets.
+seo-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 for Assets.
 uuid: 0e3d8163-6274-4d1b-91c7-32ca927fb83c
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
@@ -10,11 +10,14 @@ topic-tags: repo_restructuring
 discoiquuid: 212930fc-3430-4a0a-842c-2fb613ef981f
 translation-type: tm+mt
 source-git-commit: 6449921348ef3758ec95ddba8b478691008153f3
+workflow-type: tm+mt
+source-wordcount: '1057'
+ht-degree: 1%
 
 ---
 
 
-# Omstrukturering av tillgångar i lager i AEM 6.4{#assets-repository-restructuring-in-aem}
+# Omstrukturering av tillgångar Repository i AEM 6.4{#assets-repository-restructuring-in-aem}
 
 Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Assets-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
 
@@ -112,7 +115,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
     <ol> 
      <li>Kopiera designen från föregående plats till den nya platsen under <code>/apps</code>.</li> 
      <li>Konvertera CSS-, JavaScript- och statiska resurser i designen till ett <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">klientbibliotek</a> med <code>allowProxy = true</code>.</li> 
-     <li>Uppdatera referenser till föregående plats i <code>cq:designPath</code> egenskapen via <strong>AEM &gt; DAM Admin &gt; Resursdelningssida &gt; Sidegenskaper &gt; fliken Avancerat &gt; Designfält</strong>.</li> 
+     <li>Uppdatera referenser till föregående plats i <code>cq:designPath</code> egenskapen via <strong>AEM &gt; DAM-administratör &gt; Resursdelningssida &gt; Sidegenskaper &gt; fliken Avancerat &gt; Designfält</strong>.</li> 
      <li>Uppdatera alla sidor som refererar till föregående plats så att den nya kategorin Klientbibliotek används. Detta kräver uppdatering av koden för implementering av sidan.</li> 
      <li>Uppdatera Dispatcher-reglerna så att klientbibliotek kan hanteras via <code>/etc.clientlibs/</code> proxyservern.</li> 
     </ol> <p>För alla designer som inte hanteras i SCM, och som modifieras vid körning via designdialogrutor, ska du inte flytta bort författarskapande designer <code>/etc</code>.</p> </td> 
@@ -216,7 +219,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
     <ol> 
      <li>Kopiera alla anpassade eller ändrade skript från <strong><code>/etc/dam/indesign/scripts</code></strong> till <strong><code>/apps/settings/dam/indesign/scripts</code></strong><br /> 
       <ol> 
-       <li>Endast kopiera nya eller ändrade skript som oförändrade skript från AEM är tillgängliga via <strong><code>/libs/settings</code></strong> AEM 6.4</li> 
+       <li>Endast kopiera nya eller ändrade skript som oförändrade skript från AEM kommer att vara tillgängliga via <strong><code>/libs/settings</code></strong> AEM 6.4</li> 
       </ol> </li> 
      <li>Hitta alla arbetsflödesmodeller som använder WF-steget för medieextraheringsprocessen och 
       <ol> 
@@ -246,7 +249,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
   </tr> 
   <tr> 
    <td><strong>Omstruktureringsvägledning</strong></td> 
-   <td><p>Anpassningar på projektnivå måste klippas ut och klistras in under motsvarande <code>/apps</code> eller <code>/conf</code> tillämpliga sökvägar.</p> <p>Så här anpassar du dig till databasstrukturen för AEM 6.4:</p> 
+   <td><p>Anpassningar på projektnivå måste klippas ut och klistras in under motsvarande <code>/apps</code> eller <code>/conf</code> tillämpliga sökvägar.</p> <p>Så här anpassar du dig till databasstrukturen i AEM 6.4:</p> 
     <ol> 
      <li>Kopiera ändrade videokonfigurationer från <code>/etc/dam/video</code> till <code>/apps/settings/dam/video</code></li> 
      <li>Ta bort <code>/etc/dam/video</code></li> 
