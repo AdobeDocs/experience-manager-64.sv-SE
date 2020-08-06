@@ -1,6 +1,6 @@
 ---
-title: ASRP - Adobe Storage Resource Provider
-seo-title: ASRP - Adobe Storage Resource Provider
+title: ASRP - Adobe lagringsresursleverantör
+seo-title: ASRP - Adobe lagringsresursleverantör
 description: Konfigurera AEM Communities för att använda en relationsdatabas som gemensam lagringsplats
 seo-description: Konfigurera AEM Communities för att använda en relationsdatabas som gemensam lagringsplats
 uuid: 29826b44-633d-4586-8553-cd87ebe269a2
@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# ASRP - Adobe Storage Resource Provider {#asrp-adobe-storage-resource-provider}
+# ASRP - Adobe lagringsresursleverantör {#asrp-adobe-storage-resource-provider}
 
 ## Om ASRP {#about-asrp}
 
@@ -85,7 +85,7 @@ Testa anslutningen när konfigurationen har skickats:
 
 ### Replikera krypteringsnyckeln {#replicate-the-crypto-key}
 
-Konsumentnyckeln och hemlig nyckel är krypterade. För att nycklarna ska kunna krypteras eller dekrypteras på rätt sätt måste den primära krypteringsnyckeln för Granite vara vara densamma för alla AEM-instanser.
+Konsumentnyckeln och hemlig nyckel är krypterade. För att nycklarna ska kunna krypteras eller dekrypteras på rätt sätt måste den primära krypteringsnyckeln för Granite vara vara densamma för alla AEM.
 
 Följ instruktionerna på [Replikera krypteringsnyckeln](deploy-communities.md#replicate-the-crypto-key).
 
@@ -97,7 +97,7 @@ Var noga med att ange att domänerna ska vara URL:er som är routningsbara från
 
 ### Tidssynkronisering {#time-synchronization}
 
-För att autentiseringen med ASRP-slutpunkten ska lyckas måste datorerna som kör din värdbaserade AEM Communities vara tidssynkroniserade, till exempel med [NTP (Network Time Protocol)](https://www.ntp.org/).
+För att autentiseringen med ASRP-slutpunkten ska lyckas måste datorerna som kör ditt värdbaserade AEM Communities vara tidssynkroniserade, till exempel med [NTP (Network Time Protocol)](https://www.ntp.org/).
 
 ### Publicera konfigurationen {#publishing-the-configuration}
 
@@ -122,7 +122,7 @@ Så här gör du den identiska konfigurationen tillgänglig i publiceringsmiljö
 >
 >Om du aktiverar ASRP på en publicerad communitywebbplats visas inte längre UGC som redan lagrats i [JCR](jsrp.md) eftersom det inte finns någon synkronisering av data mellan lokal lagring och molnlagring.
 
-**`AEM Communities Extension`** introducerades tidigare i AEM 6.0 sociala communityn som en molntjänst. Från och med AEM 6.1 Communities behövs ingen molnkonfiguration. Välj bara ASRP från [lagringskonfigurationskonsolen](srp-config.md).
+**`AEM Communities Extension`** introducerades tidigare i AEM 6.0 sociala communities som en molntjänst. Från och med AEM 6.1 Communities behövs ingen molnkonfiguration. Välj bara ASRP från [lagringskonfigurationskonsolen](srp-config.md).
 
 På grund av den nya lagringsstrukturen är det nödvändigt att följa [uppgraderingsinstruktionerna](upgrade.md#adobe-cloud-storage) när du uppgraderar från sociala communityn till Communities.
 
@@ -143,11 +143,11 @@ Om du uppgraderar från en befintlig AEM 6.0-webbplats för sociala nätverk må
 
 Om du får autentiseringsfel mot datacenter-URL:en, och AEM error.log innehåller meddelanden om inaktuella tidsstämplar, kontrollerar du att tidssynkronisering pågår.
 
-Vi rekommenderar att du använder ett verktyg som NTP ( [Network Time Protocol)](https://www.ntp.org/) för att synkronisera alla AEM-författare och publiceringsservrar.
+Vi rekommenderar att du använder ett verktyg som NTP ( [Network Time Protocol)](https://www.ntp.org/) för att synkronisera alla AEM författare- och publiceringsservrar.
 
 ### Nytt innehåll visas inte i sökningar {#new-content-does-not-appear-in-searches}
 
-Adobes molnlagringsinfrastruktur använder *en konsekvent* lösning för att uppnå sina mål för skalning och prestanda. Därför är nytt innehåll inte tillgängligt direkt och det kan ta några sekunder innan det visas i sökresultaten.
+Lagringsinfrastrukturen i Adobe använder *en konsekvent* lösning för att uppnå sina mål för skalning och prestanda. Därför är nytt innehåll inte tillgängligt direkt och det kan ta några sekunder innan det visas i sökresultaten.
 
 Medan intervallet som påverkar den slutliga konsekvensen övervakas bör du kontakta din kontorepresentant om det tar längre tid än några sekunder innan nytt innehåll visas i sökningar.
 
@@ -155,7 +155,7 @@ Medan intervallet som påverkar den slutliga konsekvensen övervakas bör du kon
 
 Kontrollera att ASRP har konfigurerats som standardprovider genom att kontrollera konfigurationen av lagringsalternativet. Som standard är lagringsresursprovidern JSRP, inte ASRP.
 
-Gå till konsolen för lagringskonfiguration eller kontrollera AEM-databasen på alla författare och publicera AEM-instanser:
+Gå till konsolen för lagringskonfiguration eller kontrollera den AEM databasen för alla författare och publiceringsinstanser:
 
 * I JCR, if [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
