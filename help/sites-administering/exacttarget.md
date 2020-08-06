@@ -11,18 +11,21 @@ content-type: reference
 discoiquuid: d1cff2bb-9fdf-49cb-a695-d437bba5653d
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '465'
+ht-degree: 1%
 
 ---
 
 
 # Integrera med ExactTarget{#integrating-with-exacttarget}
 
-Genom att integrera AEM med Exact Target kan du hantera och skicka e-post som skapats i AEM via Exact Target. Du kan även använda leadhanteringsfunktionerna i Exact Target via AEM-formulär på AEM-sidor.
+Genom att integrera AEM med Exact Target kan du hantera och skicka e-post som skapats i AEM via Exact Target. Du kan också använda leadhanteringsfunktionerna i Exact Target via AEM på AEM sidor.
 
 Integreringen ger dig följande funktioner:
 
 * Möjlighet att skapa e-postmeddelanden i AEM och publicera dem på Exact Target för distribution.
-* Möjlighet att ange åtgärd för ett AEM-formulär för att skapa en exakt målabonnent.
+* Möjlighet att ange åtgärd för ett AEM formulär för att skapa en exakt målabonnent.
 
 När ExactTarget har konfigurerats kan du publicera nyhetsbrev och e-postmeddelanden till ExactTarget. Se [Publicera nyhetsbrev till en e-posttjänst](/help/sites-authoring/personalization.md).
 
@@ -32,9 +35,9 @@ ExactTarget-konfigurationer kan läggas till via molntjänster eller verktyg. B�
 
 ### Konfigurera ExactTarget via CloudServices {#configuring-exacttarget-via-cloudservices}
 
-Så här skapar du en ExactTarget-konfiguration i molntjänster:
+Så här skapar du en ExactTarget-konfiguration i Cloud Services:
 
-1. På välkomstsidan klickar du på **molntjänster**. (Eller direkt åtkomst på `https://<hostname>:<port>/etc/cloudservices.html`.)
+1. Klicka på **Cloud Services** på välkomstsidan. (Eller direkt åtkomst på `https://<hostname>:<port>/etc/cloudservices.html`.)
 1. Klicka på **ExactTarget** och sedan **Configure**. Konfigurationsfönstret ExactTarget öppnas.
 
    ![chlimage_1-182](assets/chlimage_1-182.png)
@@ -63,7 +66,7 @@ Så här skapar du en ExactTarget-konfiguration i molntjänster:
 Så här skapar du en ExactTarget-konfiguration i verktygen:
 
 1. På välkomstsidan klickar du på **Verktyg**. Eller navigera dit direkt genom att gå till `https://<hostname>:<port>/misadmin#/etc`.
-1. Välj **Verktyg**, **Cloud Services Configurations och** sedan **ExactTarget**.
+1. Välj **Verktyg**, **Cloud Services, konfigurationer och** sedan **ExactTarget**.
 1. Klicka på **Ny** för att öppna fönstret **Skapa sida **.
 
    ![chlimage_1-34](assets/chlimage_1-34.jpeg)
@@ -75,6 +78,6 @@ Så här skapar du en ExactTarget-konfiguration i verktygen:
 
 Så här lägger du till flera konfigurationer:
 
-1. På välkomstsidan klickar du på **molntjänster** och sedan på **ExactTarget**. Klicka på knappen **Visa konfigurationer** som visas om en eller flera ExactTarget-konfigurationer är tillgängliga. Alla tillgängliga konfigurationer visas.
+1. Klicka på **Cloud Services** på välkomstsidan och klicka på **ExactTarget**. Klicka på knappen **Visa konfigurationer** som visas om en eller flera ExactTarget-konfigurationer är tillgängliga. Alla tillgängliga konfigurationer visas.
 1. Klicka på **+** -tecknet bredvid Tillgängliga konfigurationer. Då öppnas fönstret **Skapa konfigurationer** . Följ den tidigare konfigurationsproceduren för att skapa en ny konfiguration.
 
