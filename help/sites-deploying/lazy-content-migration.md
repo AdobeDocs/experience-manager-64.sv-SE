@@ -1,8 +1,8 @@
 ---
 title: Lazy Content Migration
 seo-title: Lazy Content Migration
-description: Lär dig mer om Lazy Content Migration i AEM 6.4.
-seo-description: Lär dig mer om Lazy Content Migration i AEM 6.4.
+description: Läs mer om migrering av Lazy-innehåll i AEM 6.4.
+seo-description: Läs mer om migrering av Lazy-innehåll i AEM 6.4.
 uuid: 9c84f7fe-31d3-4b63-8975-9e75a6c44b7d
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,13 +11,16 @@ topic-tags: upgrading
 discoiquuid: 282a828a-edb2-4643-9bf7-ec30c29dc6ce
 translation-type: tm+mt
 source-git-commit: ba16a6870bc621a585b2b2d7c7536baef05adc72
+workflow-type: tm+mt
+source-wordcount: '678'
+ht-degree: 3%
 
 ---
 
 
 # Lazy Content Migration{#lazy-content-migration}
 
-För bakåtkompatibilitet kommer innehåll och konfiguration i **/etc** och **/eller innehåll** som börjar med AEM 6.3 inte att ändras eller omformas direkt med uppgraderingen. Detta görs för att säkerställa att kundapplikationernas beroenden av dessa strukturer förblir intakta. Funktionerna för dessa innehållsstrukturer är fortfarande desamma även om innehållet i en av adresserna till AEM 6.4 ligger på en annan plats.
+För bakåtkompatibilitet kommer innehåll och konfiguration i **/etc** och **/eller innehåll** som börjar med AEM 6.3 inte att ändras eller omformas omedelbart med uppgraderingen. Detta görs för att säkerställa att kundapplikationernas beroenden av dessa strukturer förblir intakta. Funktionerna för dessa innehållsstrukturer är fortfarande desamma även om innehållet i en av rutorna AEM 6.4 ligger på en annan plats.
 
 Även om inte alla dessa platser kan omvandlas automatiskt finns det några fördröjningar `CodeUpgradeTasks` som också kallas för Lazy Content Migration. Detta gör att kunderna kan utlösa dessa automatiska omformningar genom att starta om instansen med den här systemegenskapen:
 
@@ -33,7 +36,7 @@ Eftersom detta vanligtvis även kräver att du justerar programmet bör aktivite
 
 Nedan finns en fullständig lista över `CodeUpgradeTasks` som introducerades i 6.4:
 
-| **Namn** | **Relevant för AEM-versioner före** | **Migreringstyp** | **Information** |
+| **Namn** | **Relevant för AEM versioner före** | **Migreringstyp** | **Information** |
 |---|---|---|---|
 | `Cq561ProjectContentUpgrade` | &lt; 5.6.1 | Omedelbar |  |
 | `Cq60MSMContentUpgrade` | &lt; 6.0 | Omedelbar | Identifierar alla `LiveRelationShips` från `VersionStorage` som har tagits bort och lägger till exkluderingsegenskap till överordnad |
@@ -52,8 +55,8 @@ Nedan finns en fullständig lista över `CodeUpgradeTasks` som introducerades i 
 | `CQ63MobileAppsNavUpgrade` | &lt; 6.3 | Omedelbar | Justera navigeringsstrukturen |
 | `CQ63MonitoringDashboardsConfigUpdate` | &lt; 6.3 | Omedelbar | Flyttar anpassade konfigurationer för kontrollpaneler från **/libs** och **/apps** |
 | `CQ63ProcessingProfileConfigUpdate` | &lt; 6.3 | Omedelbar | Översätter egenskapen processingProfile (används till och med 6.1) i Assets för att matcha 6.3-strukturen och senare. Justerar också profilens relativa sökvägar till **/conf** i stället för **/apps**. |
-| `CQ63ToolsMenuEntriesContentUpgrade` | &lt; 6.3 | Omedelbar | Uppgradering som tar bort föråldrade menyposter för CRXDE Lite och Web Console vid en uppgradering. |
-| `CQ64CommunitiesConfigsCleanupTask` | &lt; 6.3 | Fördröjd | Flytta SRP-molnkonfigurationer, community watchwords-konfigurationer, rensa upp **/etc/social** och **/etc/enablement** (alla referenser och data måste justeras när lat migrering körs - ingen programdel ska längre vara beroende av den här strukturen). |
+| `CQ63ToolsMenuEntriesContentUpgrade` | &lt; 6.3 | Omedelbar | Uppgraderingsåtgärd som tar bort inaktuella menyposter i CRXDE Lite och webbkonsolen vid en uppgradering. |
+| `CQ64CommunitiesConfigsCleanupTask` | &lt; 6.3 | Fördröjd | Flytta SRP-molnkonfigurationer, community watchwords-konfigurationer, rensa upp **/etc/social** och **/etc/enablement** (alla referenser och data måste justeras när lat migrering körs - ingen programdel ska vara beroende av den här strukturen längre). |
 | `CQ64LegacyCloudSettingsCleanupTask` | &lt; 6.4 | Fördröjd | Rensar upp **/etc/molninställningar** (som innehåller ContextHub Configuration). Konfigurationen migreras automatiskt vid första åtkomsten. Om Lazy Content Migration startas tillsammans med en uppgradering måste innehållet i **/etc/cloudsettings** bevaras via paketet innan uppgraderingen och installeras om för att den implicita omvandlingen ska börja, tillsammans med en efterföljande avinstallation av paketet efter slutförandet. |
 | `CQ64UsersTitleFixTask` | &lt; 6.4 | Fördröjd | Justerar den äldre rubrikstrukturen till titeln i användarprofilnoden. |
 | `CQ64CommerceMigrationTask` | &lt; 6.4 | Fördröjd | Migrera e-handelsinnehåll från **/etc/commerce** till **/var/commerce**. När migreringsinnehållet flyttas och referenser till flyttat innehåll uppdateras för att återspegla den nya platsen. |
