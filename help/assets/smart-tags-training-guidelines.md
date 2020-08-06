@@ -7,6 +7,9 @@ contentOwner: AG
 discoiquuid: a5aab094-8b2d-4a23-890f-be6f9e5137bd
 translation-type: tm+mt
 source-git-commit: dc779a0d89dc4c044ca4f3e3f92c4a9b651d09a8
+workflow-type: tm+mt
+source-wordcount: '457'
+ht-degree: 12%
 
 ---
 
@@ -19,7 +22,7 @@ För att effektivt märka upp varumärkesbilderna kräver Smart Content Service 
 
 För bästa resultat bör bilderna i din utbildningsserie följa följande riktlinjer:
 
-**** Kvantitet och storlek: Minst **30 bilder per tagg**. Minst 500 pixlar på den längre sidan.
+**Kvantitet och storlek:****Minst 30 bilder per tagg**. Minst 500 pixlar på den längre sidan.
 
 **Samstämmighet**: Bilderna för en tagg bör vara visuellt lika.
 
@@ -27,7 +30,7 @@ Det är till exempel ingen bra idé att tagga alla dessa bilder som *min grupp* 
 
 ![Illustrativa bilder som exempel på riktlinjer för utbildning](assets/do-not-localize/coherence.png)
 
-**Täckning**: Det ska finnas tillräckligt med variation i bilderna i utbildningen. Tanken är att ge några exempel som är ganska olika, men som ändå är ganska olika, så att AEM lär sig att fokusera på rätt saker. Om du använder samma tagg på bilder som ser olika ut bör du ta med minst fem exempel av varje typ.
+**Täckning**: Det ska finnas tillräckligt med variation i bilderna i utbildningen. Tanken är att ge några men relativt olika exempel så att AEM lär sig att fokusera på rätt saker. Om du använder samma tagg på bilder som ser olika ut bör du ta med minst fem exempel av varje typ.
 
 För taggen *model-down* kan du t.ex. inkludera fler utbildningsbilder som liknar den markerade bilden nedan för tjänsten för att identifiera liknande bilder mer exakt under taggningen.
 
@@ -39,7 +42,7 @@ För taggen *casual-shoe*&#x200B;är den andra bilden till exempel inte en bra t
 
 ![Illustrativa bilder som exempel på riktlinjer för utbildning](assets/do-not-localize/distraction.png)
 
-**** Fullständighet: Om en bild kvalificerar för mer än en tagg lägger du till alla tillämpliga taggar innan du inkluderar bilden för utbildning. För taggar, som *regnrock* och *modellvy*, lägger du till båda taggarna i den kvalificerade resursen innan du inkluderar dem för utbildning.
+**Fullständighet:** Om en bild kvalificerar sig för mer än en tagg lägger du till alla tillämpliga taggar innan du inkluderar bilden för träning. För taggar som *regnrock* och *modellvy* lägger du till båda taggarna i den kvalificerade resursen innan du inkluderar den för träning.
 
 ![Illustrativa bilder som exempel på riktlinjer för utbildning](assets/do-not-localize/completeness.png)
 
