@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: bbc2aac9-ccf1-40c3-be4f-d59c2d0d8a6c
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '831'
+ht-degree: 0%
 
 ---
 
 
 # Inrikta er på Adobe Campaign{#targeting-your-adobe-campaign}
 
-Om du vill skapa ett nyhetsbrev om Adobe Campaign måste du först skapa segmentering, som bara finns i det klassiska användargränssnittet. Efter det kan ni skapa riktade upplevelser för Adobe Campaign.
+Om du vill använda ditt Adobe Campaign-nyhetsbrev måste du först skapa segmentering, som bara är tillgängligt i det klassiska användargränssnittet. Efter det kan ni skapa riktade upplevelser för Adobe Campaign.
 
 ## Ställa in segmentering i AEM {#setting-up-segmentation-in-aem}
 
@@ -34,7 +37,7 @@ Så här skapar du segment:
 1. Öppna [segmenteringskonsolen](http://localhost:4502/miscadmin#/etc/segmentation) på **&lt;värd>:&lt;port>/miscadmin#/etc/segmentering**.
 1. Skapa en ny sida och ange en titel - till exempel **AC-segment** - och välj mallen **Segment (Adobe Campaign)** .
 1. Markera den skapade sidan i trädvyn till vänster.
-1. Skapa ett segment, till exempel för manliga användare, genom att skapa en ny sida under segmentet som du skapade som kallas hane och välja mallen **Segment (Adobe Campaign)** .
+1. Skapa ett segment, till exempel för manliga användare, genom att skapa en ny sida under segmentet som du skapade, som kallas hane och välja mallen **Segment (Adobe Campaign)** .
 1. Öppna den skapade segmentsidan och dra och släpp ett **segment-ID** från sidosparken på sidan.
 1. Dubbelklicka på trait, ange det ID som representerar i det här fallet det manliga segment som definieras i Adobe Campaign - till exempel **MALE** - och klicka på **OK**. Följande meddelande ska visas: `targetData.segmentCode == "MALE"`
 1. Upprepa stegen för ett annat segment, till exempel ett segment som riktar sig till kvinnliga användare.
@@ -61,7 +64,7 @@ Så här skapar du upplevelser för segment:
 1. Skapa upplevelser för era segment genom att klicka på **Skapa sida** och ange en titel för sidan, till exempel&quot;Male&quot; när du skapar en upplevelse för&quot;Male&quot;-segmentet, och välj **Experience** -mallen.
 1. Öppna den skapade Experience-sidan.
 1. Klicka på **Redigera** och sedan under Segment klickar du på **Lägg till objekt**.
-1. Ange sökvägen till det manliga segmentet, till exempel `/etc/segmentation/ac-segments/male` och klicka på **OK**. Följande meddelande ska visas: Upplevelsen *inriktas på följande: Man*
+1. Ange sökvägen till det manliga segmentet, till exempel `/etc/segmentation/ac-segments/male` och klicka på **OK**. Följande meddelande ska visas: *Upplevelsen är inriktad på följande: Man*
 1. Upprepa föregående steg för att skapa en upplevelse för alla segment, till exempel kvinnligt mål.
 
 ## Skapa ett nyhetsbrev med riktat innehåll {#creating-a-newsletter-with-targeted-content}
@@ -72,7 +75,7 @@ Du kan skapa nyhetsbrevet med riktat innehåll i både det beröringsaktiverade 
 
 Så här skapar du ett nyhetsbrev med riktat innehåll:
 
-1. Skapa ett nyhetsbrev med riktat innehåll: Klicka eller tryck på **Skapa** > **Sida** och välj en av Adobe Campaign-e-postmallarna nedan för e-postkampanjer i Geometrixx Outdoor.
+1. Skapa ett nyhetsbrev med riktat innehåll: Klicka på eller tryck på **Skapa** > **Sida** under E-postkampanjer i Geometrixx Outdoors och välj en av Adobe Campaign Mail-mallarna.
 
    >[!NOTE]
    >
@@ -86,7 +89,7 @@ Så här skapar du ett nyhetsbrev med riktat innehåll:
 
    >[!NOTE]
    >
-   >Som standard använder de e-postexempel som ingår i AEM Adobe Campaign som målmotor. För anpassade nyhetsbrev kan du behöva välja Adobe Campaign som målmotor. Vid målanpassning trycker eller klickar du på + i verktygsfältet, anger en titel för den nya aktiviteten och väljer **Adobe Campaign** som målmotor.
+   >Som standard använder de e-postexempel som ingår i AEM Adobe Campaign som målmotor. För anpassade nyhetsbrev kan du behöva välja Adobe Campaign som målmotor. När du väljer mål trycker eller klickar du på + i verktygsfältet, anger en titel för den nya aktiviteten och väljer **Adobe Campaign** som målmotor.
 
 1. Klicka på **Standard** och sedan på komponenten Text och anpassning som du lade till så visas Bullseye med en pil. Klicka på ikonen om du vill ange komponenten som mål.
 
@@ -94,17 +97,17 @@ Så här skapar du ett nyhetsbrev med riktat innehåll:
 
 1. Navigera till ett annat segment (Man), klicka på **Lägg till erbjudande** och klicka på plusikonen +. Redigera sedan erbjudandet.
 1. Navigera till ett annat segment (Kvinna) och klicka på **Lägg till erbjudande** och plustecknet +. Redigera sedan erbjudandet.
-1. Klicka på **Nästa** för att se Mappning, klicka sedan på **Nästa** för att visa Inställningar, som inte gäller för Adobe Campaign, och klicka på **Spara**.
+1. Klicka på **Nästa** för att se Mappning, klicka sedan på **Nästa** för att visa Inställningar, som inte gäller för Adobe Campaign, och klicka sedan på **Spara**.
 
-   AEM genererar automatiskt rätt målkod för Adobe Campaign när innehållet används i en leverans i Adobe Campaign
+   AEM genererar automatiskt rätt målinriktningskod för Adobe Campaign när innehållet används i en leverans inom Adobe Campaign
 
-1. Skapa leveransen i Adobe Campaign - välj **E-postleverans med AEM-innehåll** och välj det lokala AEM-kontot, beroende på vad som är lämpligt, och bekräfta ändringarna.
+1. Skapa leveransen i Adobe Campaign - välj **E-postleverans med AEM innehåll** och välj det lokala AEM-kontot, beroende på vad som är lämpligt, och bekräfta ändringarna.
 
-   I HTML-vyn visas de olika upplevelserna av målkomponenter i målkoden för Adobe Campaign.
+   I HTML-vyn visas de olika upplevelserna av målkomponenter i Adobe Campaign målkod.
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
 
    >[!NOTE]
    >
-   >Om du även ställer in segmenten i Adobe Campaign kan du visa upplevelserna för varje segment genom att klicka på **Förhandsgranska** .
+   >Om du även ställer in segmenten i Adobe Campaign kan du visa upplevelsen för varje segment genom att klicka på **Förhandsgranska** .
 
