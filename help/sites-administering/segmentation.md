@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1459'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Beroende på den information du redan har samlat in om webbplatsbesökarna och v
 
 Dessa segment används sedan för att förse en besökare med specifikt riktat innehåll. Innehållet finns i avsnittet [Personalisering](/help/sites-authoring/personalization.md) på webbplatsen. [Verksamheter](/help/sites-authoring/activitylib.md) som definieras här kan inkluderas på alla sidor och definiera vilket besökarsegment det specialiserade innehållet gäller.
 
-Med AEM kan ni enkelt personalisera användarnas upplevelse. Du kan även kontrollera resultatet av segmentdefinitionerna.
+AEM gör det enkelt att personalisera användarnas upplevelse. Du kan även kontrollera resultatet av segmentdefinitionerna.
 
 ## Åtkomst till segment {#accessing-segments}
 
@@ -46,7 +49,7 @@ Med **segmentredigeraren** kan du enkelt ändra ett segment. Om du vill redigera
 
 Med komponentwebbläsaren kan du lägga till **OCH** - och **OR** -behållare för att definiera segmentlogiken, och sedan lägga till ytterligare komponenter för att jämföra egenskaper och värden eller referensskript och andra segment för att definiera urvalskriterierna (se [Skapa ett nytt segment](#creating-a-new-segment)) för att definiera det exakta scenariot för att markera segmentet.
 
-När hela programsatsen utvärderas till true är segmentet löst. Om flera segment är tillämpliga används även **ökningsfaktorn** . Mer information om [förstärkningsfaktorn finns i](#creating-a-new-segment) Skapa ett nytt segment [.](/help/sites-administering/campaign-segmentation.md#boost-factor)
+When the entire statement evaluates to true then the segment has resolved. Om flera segment är tillämpliga används även **ökningsfaktorn** . Mer information om [förstärkningsfaktorn finns i](#creating-a-new-segment) Skapa ett nytt segment [.](/help/sites-administering/campaign-segmentation.md#boost-factor)
 
 >[!CAUTION]
 >
@@ -54,7 +57,7 @@ När hela programsatsen utvärderas till true är segmentet löst. Om flera segm
 
 ### Containers {#containers}
 
-Följande behållare är tillgängliga när de är klara och gör att du kan gruppera jämförelser och referenser tillsammans för boolesk utvärdering. De kan dras från komponentwebbläsaren till redigeraren. Mer information finns i följande avsnitt [Använda OCH och ELLER behållare](/help/sites-administering/segmentation.md#using-and-and-or-containers) .
+Följande behållare är tillgängliga när de är klara och gör att du kan gruppera jämförelser och referenser tillsammans för boolesk utvärdering. They can be dragged from the components browser to the editor. See the following section [Using AND and OR Containers](/help/sites-administering/segmentation.md#using-and-and-or-containers) for more information.
 
 <table> 
  <tbody> 
@@ -89,28 +92,28 @@ Följande segmentjämförelser är tillgängliga när du vill utvärdera segment
   </tr> 
   <tr> 
    <td>Referens för egenskapsskript</td> 
-   <td>Jämför en egenskap i en butik med resultatet av ett skript<br /> </td> 
+   <td>Compares a property of a store to the results of a script<br /> </td> 
   </tr> 
   <tr> 
    <td>Referens för segmentreferens-Script</td> 
-   <td>Jämför ett hänvisat segment med resultatet av ett skript<br /> </td> 
+   <td>Compares a referenced segment to the results of a script<br /> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->Om datatypen för jämförelsen inte är inställd (d.v.s. inställd på automatisk identifiering) vid jämförelse av värden, kommer segmenteringsmotorn för ContextHub helt enkelt att jämföra värdena som javascript skulle göra. Den konverterar inte värden till de förväntade typerna, vilket kan leda till missvisande resultat. Exempel:
+>When comparing values, if the data type of the comparison is not set (i.e. set to auto detect), ContextHub&#39;s segmentation engine will simply compare the values as javascript would. Den konverterar inte värden till de förväntade typerna, vilket kan leda till missvisande resultat. Till exempel:
 >
 >`null < 30 // will return true`
 >
->När du [skapar ett segment](/help/sites-administering/segmentation.md#creating-a-new-segment)bör du därför välja en **datatyp** när typerna av jämförda värden är kända. Exempel:
+>När du [skapar ett segment](/help/sites-administering/segmentation.md#creating-a-new-segment)bör du därför välja en **datatyp** när typerna av jämförda värden är kända. Till exempel:
 >
 >När du jämför egenskapen `profile/age`vet du redan att jämförelsetypen kommer att vara **tal**, så även om `profile/age` inte är inställd returnerar en jämförelse `profile/age` som är mindre än 30 **false**, som du hade förväntat dig.
 
 ### Referenser {#references}
 
-Följande referenser är tillgängliga när du vill länka direkt till ett skript eller ett annat segment. De kan dras från komponentwebbläsaren till redigeraren.
+Följande referenser är tillgängliga när du vill länka direkt till ett skript eller ett annat segment. They can be dragged from the components browser to the editor.
 
 <table> 
  <tbody> 
@@ -140,26 +143,26 @@ Så här definierar du det nya segmentet:
    Varje segment har en startparameter som används som viktningsfaktor. Ett högre värde anger att segmentet väljs framför ett segment med ett lägre värde i de fall där flera segment är giltiga.
 
    * Minsta värde: `0`
-   * Högsta värde: `1000000`
+   * Maximum value: `1000000`
 
 1. Dra en jämförelse eller referens till segmentredigeraren som den visas i standardbehållaren OCH.
-1. Dubbelklicka på eller tryck på konfigurationsalternativet för den nya referensen eller segmentet för att redigera de specifika parametrarna. I det här exemplet testar vi för människor i San Jose.
+1. Dubbelklicka på eller tryck på konfigurationsalternativet för den nya referensen eller segmentet för att redigera de specifika parametrarna. In this example, we are testing for people in San Jose.
 
    ![screen_shot_2012-02-02at103135am](assets/screen_shot_2012-02-02at103135am.png)
 
    Ange alltid en **datatyp** om det är möjligt för att säkerställa att dina jämförelser utvärderas korrekt. Mer information finns i [Jämförelser](/help/sites-administering/segmentation.md#comparisons) .
 
-1. Spara definitionen genom att klicka på **OK** :
-1. Lägg till fler komponenter efter behov. Du kan formulera booleska uttryck med behållarkomponenterna för AND- och OR-jämförelser (se [Använda OCH och Eller behållare](/help/sites-administering/segmentation.md#using-and-and-or-containers) nedan). Med segmentredigeraren kan du ta bort komponenter som inte längre behövs eller dra dem till nya positioner i programsatsen.
+1. Click **OK** to save your definition:
+1. Add more components as required. Du kan formulera booleska uttryck med behållarkomponenterna för AND- och OR-jämförelser (se [Använda OCH och Eller behållare](/help/sites-administering/segmentation.md#using-and-and-or-containers) nedan). With the segment editor you can delete components not needed anymore, or drag them to new positions within the statement.
 
 ### Använda OCH- och ELLER-behållare {#using-and-and-or-containers}
 
-Med hjälp av komponenterna AND och OR kan du skapa komplexa segment i AEM. När du gör det är det bra att tänka på några grundläggande saker:
+Using the AND and OR container components, you can construct complex segments in AEM. När du gör det är det bra att tänka på några grundläggande saker:
 
 * Definitionens översta nivå är alltid den AND-behållare som skapas från början. Detta kan inte ändras, men påverkar inte resten av segmentdefinitionen.
 * Se till att det är rimligt att kapsla behållaren. Behållarna kan ses som parenteser i ditt booleska uttryck.
 
-Följande exempel används för att välja besökare som räknas i vår huvudåldersgrupp:
+The following example is used to select visitors who are considered in our prime age group:
 
 Man och mellan 30 och 59 år
 
@@ -173,12 +176,12 @@ Du börjar med att placera en OR-behållarkomponent i standardbehållaren AND. I
 
 ### Använda skriptreferenser {#using-script-references}
 
-Genom att använda komponenten Skriptreferens kan utvärderingen av en segmentegenskap delegeras till ett externt skript. När skriptet har konfigurerats korrekt kan det användas som en annan komponent i ett segmentvillkor.
+By using the Script Reference component, the evaluation of a segment property can be delegated to an external script. Once the script is configured properly, it can be used as any other component of a segment condition.
 
 #### Definiera ett skript som ska refereras {#defining-a-script-to-reference}
 
 1. Lägg till fil i `contexthub.segment-engine.scripts` clientlib.
-1. Implementera en funktion som returnerar ett värde. Exempel:
+1. Implementera en funktion som returnerar ett värde. Till exempel:
 
    ```
    ContextHub.console.log(ContextHub.Shared.timestamp(), '[loading] contexthub.segment-engine.scripts - script.profile-info.js');
@@ -220,19 +223,19 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 #### Referera till ett skript {#referencing-a-script}
 
 1. Skapa ContextHub-segment.
-1. Lägg till **skriptreferenskomponenten** på önskad plats i segmentet.
-1. Öppna redigeringsdialogrutan för **skriptreferenskomponenten** . Om skriptet är [korrekt konfigurerat](/help/sites-administering/segmentation.md#defining-a-script-to-reference)bör det vara tillgängligt i listrutan **Skriptnamn** .
+1. Add **Script Reference** component in the desired place of the segment.
+1. Open the edit dialog of the **Script Reference** component. If [properly configured](/help/sites-administering/segmentation.md#defining-a-script-to-reference), the script should be available in the **Script name** drop-down.
 
-## Testa tillämpningen av ett segment {#testing-the-application-of-a-segment}
+## Testing the Application of a Segment {#testing-the-application-of-a-segment}
 
-När segmentet har definierats kan potentiella resultat testas med hjälp av **[ContextHub](/help/sites-authoring/ch-previewing.md).**
+Once the segment has been defined, potential results can be tested with the help of the **[ContextHub](/help/sites-authoring/ch-previewing.md).**
 
-1. Förhandsgranska en sida
+1. Preview a page
 1. Klicka på ikonen ContextHub för att visa kontextHub-verktygsfältet
 1. Välj en profil som matchar segmentet du skapade
 1. ContextHub löser de segment som är tillämpliga för den valda personen
 
-Vår enkla segmentdefinition för att identifiera användare i vår primära åldersgrupp är till exempel en enkel segmentdefinition som baseras på användarens ålder och kön. När du läser in en specifik profil som matchar dessa villkor visas om segmentet har matchats:
+For example, our simple segment defintion to identify users in our prime age group is a simple segment definition is based on the age and gender of the user. När du läser in en specifik profil som matchar dessa villkor visas om segmentet har matchats:
 
 ![screen_shot_2012-02-02at105926am](assets/screen_shot_2012-02-02at105926am.png)
 
@@ -246,9 +249,9 @@ Eller om den inte är löst:
 
 Sådana tester kan även utföras på innehållssidor och i kombination med riktat innehåll och relaterade **aktiviteter** och **upplevelser**.
 
-Om du har konfigurerat en aktivitet och en upplevelse med hjälp av det primära åldersgruppssegmentet ovan kan du enkelt testa ditt segment med aktiviteten. Mer information om hur du konfigurerar en aktivitet finns i relaterad [dokumentation om att skapa riktat innehåll](/help/sites-authoring/content-targeting-touch.md).
+Om du har konfigurerat en aktivitet och en upplevelse med hjälp av det primära åldersgruppssegmentet ovan kan du enkelt testa ditt segment med aktiviteten. For details about setting up an activity, please see the related [documentation on authoring targeted content](/help/sites-authoring/content-targeting-touch.md).
 
-1. I redigeringsläget för en sida där du har konfigurerat riktat innehåll kan du se att innehållet har angetts som mål via en pilikon i innehållet.
+1. In editing mode of a page where you have set up targeted content, you can see that the content is targeted via arrow icon on the content.
 
    ![chlimage_1-313](assets/chlimage_1-313.png)
 
