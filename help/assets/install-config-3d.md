@@ -20,30 +20,30 @@ ht-degree: 1%
 
 # Installera och konfigurera AEM 3D {#installing-and-configuring-aem-d}
 
-Installation och konfiguration av AEM 3D (version 3.0) innefattar följande:
+Installation och konfigurering av AEM 3D (version 3.0) innefattar följande:
 
 1. Installera Autodesk® FBX® SDK-biblioteket.
 1. Hämta och installera det inbyggda 3D-kodpaketet.
-1. Konfigurerar arbetsflödet för att hämta 3D-resurser och startar om AEM.
-1. Verifierar installationen av AEM 3D.
+1. Konfigurerar arbetsflödet för inmatning av 3D-resurser och startar om AEM.
+1. Validerar inställningen av AEM 3D.
 
 Se även [Arbeta med 3D-resurser](assets-3d.md).
 
-Se även [AEM 3D Assets versionsinformation](/help/release-notes/aem3d-release-notes.md) för information om krav, webbläsare som stöds och annan viktig versionsinformation.
+Se även [AEM Versionsinformation](/help/release-notes/aem3d-release-notes.md) om 3D-resurser för information om krav, webbläsare som stöds och annan viktig versionsinformation.
 
 Se även [Arbeta med 3D-platskomponenten](using-the-3d-sites-component.md).
 
 >[!NOTE]
 >
->Innan du hämtar och installerar 3D-paketet kontrollerar du att du har installerat alla nödvändiga AEM-paket korrekt. Se versionsinformationen för [AEM 3D.](install-config-3d.md)
+>Innan du hämtar och installerar 3D-paketet kontrollerar du att du har installerat alla AEM som krävs. Se versionsinformationen för [AEM 3D.](install-config-3d.md)
 
 ## Installera Autodesk FBX SDK-biblioteket {#installing-the-autodesk-fbx-sdk-library}
 
-Den inbyggda AEM 3D-koden kräver Autodesk FBX-biblioteket för att stödja FBX-filformatet. (Adobe kan för närvarande inte återdistribuera det här biblioteket.)
+Den inbyggda AEM 3D-koden kräver Autodesk FBX-biblioteket för att stödja FBX-filformatet. (Adobe kan inte återdistribuera det här biblioteket.)
 
 Se även [Avancerade konfigurationsinställningar](advanced-config-3d.md).
 
-1. Logga in på värddatorn där AEM är installerat.
+1. Logga in på värddatorn där AEM är installerad.
 
    * Om det här är en Windows Server-distribution loggar du in på servern som administratör.
    * Om det här är ett Mac- eller Windows-skrivbord måste du ha administratörsbehörighet.
@@ -72,7 +72,7 @@ Se även [Avancerade konfigurationsinställningar](advanced-config-3d.md).
 
 >[!NOTE]
 >
->Innan du fortsätter med installationen och konfigurationen av AEM 3D rekommenderar Adobe att du distribuerar alla tillämpliga servicepaket och andra relaterade funktionspaket. Se [Versionsinformation](/help/release-notes/aem3d-release-notes.md)för AEM 3D.
+>Innan du fortsätter med installationen och konfigurationen av AEM 3D rekommenderar Adobe att du distribuerar alla tillämpliga servicepaket och andra relaterade funktionspaket. Se [AEM 3D versionsinformation](/help/release-notes/aem3d-release-notes.md).
 
 Se även [Avancerade konfigurationsinställningar](advanced-config-3d.md).
 
@@ -83,30 +83,30 @@ Se även [Avancerade konfigurationsinställningar](advanced-config-3d.md).
    * Om det här är en Windows Server-distribution loggar du in på servern som administratör.
    * Om det här är ett Mac- eller Windows-skrivbord måste du ha administratörsbehörighet.
 
-1. Kontrollera att du har en webbläsare som stöds tillgänglig för att komma åt AEM.
+1. Se till att du har en webbläsare som stöds tillgänglig för AEM.
 
    Se [Systemkrav](/help/release-notes/aem3d-release-notes.md#system-requirements).
 
 1. Gå till [Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Gå till version 3.0.1 av `AEM-6.4-DynamicMedia-3D` funktionspaketet och ladda ned det.
 
-1. I AEM klickar du på **[!UICONTROL Tools > Administration > Deployment > Package Manager]**.
+1. Klicka på AEM **[!UICONTROL Tools > Administration > Deployment > Package Manager]**.
 
 1. Överför det hämtade funktionspaketet till AEM. Leta reda på den och klicka **[!UICONTROL Install]**.
 
 1. Expandera **[!UICONTROL Install Package]** Avancerade inställningar **i** dialogrutan och ange **[!UICONTROL Access Control Handling]** till **Sammanfoga**.
 1. Klicka **[!UICONTROL Install]** för att påbörja installationen av paketet.
 
-   Filen `sample-3D-content.zip` placeras i **[!UICONTROL Assets]** rotmappen. Mer information finns i [Validera installationen av AEM 3D](#validating-the-setup-of-aem-d) .
+   Filen `sample-3D-content.zip` placeras i **[!UICONTROL Assets]** rotmappen. Mer information finns i [Validera inställningarna för AEM 3D](#validating-the-setup-of-aem-d) .
 
 ## Konfigurera arbetsflödet för inhämtning av 3D-resurser och starta om AEM {#configuring-the-d-asset-ingestion-workflow-and-restarting-aem}
 
 **Så här konfigurerar du arbetsflödet** för 3D-tillgångsinmatning:
 
-1. I AEM klickar du på AEM-logotypen för att komma åt den globala navigeringskonsolen, klickar sedan på **[!UICONTROL Tools]** ikonen och navigerar till **[!UICONTROL Workflow > Models]**.
+1. I AEM klickar du på den AEM logotypen för att komma åt den globala navigeringskonsolen, klickar sedan på **[!UICONTROL Tools]** ikonen och navigerar till **[!UICONTROL Workflow > Models]**.
 1. Håll markören över arbetsflödet på **[!UICONTROL Workflow Models]** **[!UICONTROL DAM Update Asset]** sidan och markera det när markeringen visas.
 
 1. On the toolbar, click **[!UICONTROL Edit]**.
-1. Klicka på ikonen till höger om arbetsflödet på den flytande AEM-panelen för att utöka listan på **[!UICONTROL DAM Update Asset]** skärmen **[!UICONTROL Plus]** . Markera **[!UICONTROL Process Step]** i listan.
+1. Klicka på ikonen till höger om arbetsflödet på den flytande AEM **[!UICONTROL DAM Update Asset]** **[!UICONTROL Plus]** skärmen för att utöka listan. Markera **[!UICONTROL Process Step]** i listan.
 1. Dra **[!UICONTROL Process Step]** och släpp det i arbetsflödet precis före **[!UICONTROL DAM Update Asset Workflow Completed]** komponenten i slutet av arbetsflödet.
 
    ![3d_process_step_underaem6-4](assets/3d_process_step_underaem6-4.png)
@@ -123,11 +123,11 @@ Se även [Avancerade konfigurationsinställningar](advanced-config-3d.md).
 1. I närheten av det övre högra hörnet på **[!UICONTROL DAM Update Asset]** sidan klickar du på **[!UICONTROL Sync]** för att spara den redigerade arbetsflödesmodellen.
 1. Starta om AEM.
 
-   Efter omstart är du redo att överföra 3D-innehåll och låta AEM bearbeta det.
+   Efter omstart är du redo att överföra 3D-innehåll och måste AEM bearbeta det.
 
-   Fortsätt med [valideringen av installationen av AEM 3D](#validating-the-setup-of-aem-d).
+   Fortsätt med [valideringen av AEM 3D](#validating-the-setup-of-aem-d).
 
-## Validera installationen av AEM 3D {#validating-the-setup-of-aem-d}
+## Validera inställningen av AEM 3D {#validating-the-setup-of-aem-d}
 
 1. I AEM klickar du på **[!UICONTROL Tools > Assets]**, hämtar `sample-3D-content.zip`och expanderar den hämtade filen. (Du kan nu ta bort `sample-3D-content.zip` i AEM.)
 
@@ -186,19 +186,19 @@ Se även [Avancerade konfigurationsinställningar](advanced-config-3d.md).
 
 Du kan också konfigurera stöd i AEM 3D för Adobe Dimension-resurser.
 
-Du måste konfigurera en extern konverteringstjänst så att Adobe Dimension 3D-resurser kan hämtas, förhandsgranskas och publiceras i AEM. Tjänsten konverterar från det egna Adobe Dimension-formatet (`.dn`) till en variant av glTF (formaterad som en `.glb` fil) som sparas med resursen Dn som en rendering. Återgivningen används för `.glb` webbaserad visning av 3D-resursen i AEM Assets, Sites och Screens och kan även hämtas för användning med tredjepartsprogram.
+Du måste konfigurera en extern konverteringstjänst så att den tillåter inhämtning, förhandsgranskning och publicering av Adobe Dimension 3D-resurser i AEM. Tjänsten konverterar från det egna Adobe Dimension-formatet (`.dn`) till en variant av glTF (formaterad som en `.glb` fil) som sparas med resursen Dn som en rendering. Renderingen används för webbaserad visning av 3D-resursen i AEM Assets, Sites och Screens och kan även hämtas för användning med tredjepartsprogram. `.glb`
 
 >[!NOTE]
 >
->Adobe är värd för konverteringstjänsten i Amazon AWS. När tjänsten har konfigurerats på rätt sätt kopieras filer som har överförts till AEM på ett säkert sätt till konverteringstjänsten genom tillfällig lagring i Amazon S3. `.dn` Konverteringsresultatet överförs tillbaka till AEM genom temporär S3-lagring. Alla överföringar och lagring är skyddade. Innehållet finns också kvar i S3 och konverteringstjänsten är bara kort (vanligtvis inte längre än några minuter).
+>Adobe är värd för konverteringstjänsten i Amazon AWS. När tjänsten har konfigurerats på rätt sätt kopieras `.dn` filer som överförts till AEM på ett säkert sätt till konverteringstjänsten via tillfällig lagring i Amazon S3. Konverteringsresultatet överförs tillbaka till AEM via temporär S3-lagring. Alla överföringar och lagring är skyddade. Innehållet finns också kvar i S3 och konverteringstjänsten är bara kort (vanligtvis inte längre än några minuter).
 
 **Så här konfigurerar du stöd för Adobe Dimension-resurser**:
 
-1. Kontakta er kontoansvarige på Adobe AEM, er provisioneringsexpert eller supportrepresentant för att begära inloggningsuppgifter för **AEM3D-tjänster**.
+1. Kontakta kontohanteraren, provisioneringsexperten eller supportrepresentanten för Adobe AEM om du vill ha inloggningsuppgifter för **AEM3D-tjänster**.
 
    >[!NOTE]
    >
-   >Endast en uppsättning autentiseringsuppgifter krävs för varje organisation, oavsett hur många AEM-instanser autentiseringsuppgifterna är installerade på.
+   >Endast en uppsättning autentiseringsuppgifter krävs för varje organisation, oavsett hur många AEM som autentiseringsuppgifterna är installerade på.
 
 1. Kontrollera att du har fått följande information:
 
@@ -209,7 +209,7 @@ Du måste konfigurera en extern konverteringstjänst så att Adobe Dimension 3D-
    * userPoolId
    * clientId
 
-1. Som administratör loggar du in på den AEM-författarinstans där du vill att inloggningsuppgifterna ska vara installerade och öppnar sedan **[!UICONTROL CRXDE Lite]**.
+1. Som administratör loggar du in på den AEM författarinstansen där du vill ha inloggningsuppgifterna installerade och öppnar sedan **[!UICONTROL CRXDE Lite]**.
 1. Konfigurera den nya inloggningsinformationen genom att göra följande i CRXDE Lite:
 
    1. Navigera till `/libs/settings/dam/v3D/services/dncr` och ställ in `clientId` egenskapen på det nya värdet.
@@ -222,9 +222,9 @@ Du måste konfigurera en extern konverteringstjänst så att Adobe Dimension 3D-
    1. Navigera till `/libs/settings/dam/v3D/services/dncr` i **[!UICONTROL CRXDE Lite]**.
    1. Ange `outputFormat` egenskapen till antingen `Dn` eller `generic`.
 
-      När konverteringen är inställd på `Dn``.glb` innehåller den Adobe-specifika tillägg, till exempel IBL-ljus, för bästa kvalitet när du visar Dn-resurser i AEM. Den konverterade .glb-renderingen kanske inte återges bra i tredjepartsprogram.
+      När det är inställt på `Dn`omfattar `.glb` konverteringen tillägg som är specifika för Adobe, till exempel IBL-ljus, för bästa kvalitet när du visar Dn-resurser i AEM. Den konverterade .glb-renderingen kanske inte återges bra i tredjepartsprogram.
 
-      När den anges till `generic`är `.glb` återgivningen generisk utan Adobe-specifika tillägg. Med den här inställningen kan den användas i tredjepartsprogram, medan visning med AEM 3D-visningsprogrammet blir visuellt suboptimalt.
+      När den anges till `generic`är `.glb` återgivningen generisk utan Adobe-specifika tillägg. Med den här inställningen kan den användas i tredjepartsprogram, medan visning med AEM 3D-visningsprogram blir visuellt suboptimalt.
 
 1. Aktivera Dn-filformatet genom att göra följande i **[!UICONTROL CRXDE Lite]**:
 
