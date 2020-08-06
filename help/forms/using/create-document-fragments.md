@@ -80,12 +80,14 @@ Utför följande steg för att skapa variabler för fält med användargränssni
    1. Ange **fakturanummer** som namn på variabeln.
    1. Välj **String** som typ.
    1. Tryck på **Skapa**.
+
    ![variable_create_string](assets/variable_create_string.png)
 
    Upprepa steg 4 och 5 för att skapa följande variabler:
 
    * Faktureringsperiod: Strängtyp
    * Faktureringsdatum: Datumtyp
+
    ![variabler_Bill_details](assets/variables_bill_details.png)
 
 1. Skapa statisk text för följande fält med den högra rutan:
@@ -94,6 +96,7 @@ Utför följande steg för att skapa variabler för fält med användargränssni
    * Faktureringsperiod
    * Faktureringsdatum
    * Din plan
+
    ![variabel_faktura_details_static_text](assets/variable_bill_details_static_text.png)
 
 1. Placera markören bredvid fältet **Fakturanr** och dubbelklicka på variabeln **InvoiceNumber** på fliken **Variables** i den vänstra rutan.
@@ -138,6 +141,7 @@ Utför följande steg för att skapa variabler för fält med användargränssni
    1. Ange **Placesupply** som namn på variabeln.
    1. Välj **String** som typ.
    1. Tryck på **Skapa**.
+
    Upprepa steg 4 och 5 för att skapa följande variabler:
 
    * Statskod: Nummertyp
@@ -154,6 +158,7 @@ Utför följande steg för att skapa variabler för fält med användargränssni
    * Relationsnummer
    * Statuskod
    * Antal anslutningar
+
    ![customer_details_static_text_fdm](assets/customer_details_static_text_fdm.png)
 
 1. Placera markören bredvid fältet **Mobilnummer** och dubbelklicka på **kunden** > **egenskapen mobilenum** .
@@ -197,6 +202,7 @@ Utför följande steg för att skapa variabler för fält med användargränssni
    1. Ange **Förhandsbalans** som namn på variabeln.
    1. Välj **Nummer** som typ.
    1. Tryck på **Skapa**.
+
    Upprepa steg 4 och 5 för att skapa följande variabler:
 
    * Betalningar: Nummertyp
@@ -214,6 +220,7 @@ Utför följande steg för att skapa variabler för fält med användargränssni
    * Belopp att betala
    * Förfallodatum
    * Sena betalningsavgifter efter förfallodatumet är $ 20
+
    ![Bill_summary_static](assets/bill_summary_static.png)
 
 1. Placera markören bredvid fältet **Föregående balans** och dubbelklicka på variabeln **Förhandsvisa** .
@@ -265,6 +272,7 @@ Utför följande steg för att skapa statisk text och använda modellelement fö
    * Avgifter för värdeökade tjänster
    * Totala avgifter
    * TOTALT BETALNINGSBART
+
    ![summary_Charts_static](assets/summary_charges_static.png)
 
 1. Välj fliken **Datamodellsobjekt** .
@@ -286,6 +294,7 @@ Utför följande steg för att skapa statisk text och använda modellelement fö
    1. Välj **Datamodeller och variabler** och sedan **räkningar** > **avgifter**.
    1. Markeringen **är mindre än** operatorn.
    1. Välj **Nummer** och ange värdet som **60**.
+
    Baserat på det här villkoret visas raden Värdetillägg för avgifter endast om värdet för fältet Anropsavgifter är mindre än 60.
 
    ![create_rules_caption](assets/create_rules_caption.gif)
