@@ -10,6 +10,9 @@ content-type: reference
 discoiquuid: cc0637ef-4a9e-454f-899d-655c9caebe2b
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '3137'
+ht-degree: 0%
 
 ---
 
@@ -107,6 +110,7 @@ Den förteckning över åtkomsträttigheter som är tillämpliga för föremåle
 >* CRX tar ingen hänsyn till användarhierarkin när listan kompileras.
 >* CRX använder bara en grupphierarki när du tar med en grupp som medlem i en annan grupp. Det finns inget automatiskt arv av gruppbehörigheter.
 >* Den ordning som du anger grupperna i påverkar inte åtkomsträttigheterna.
+
 >
 
 
@@ -267,6 +271,7 @@ Om ett konto personifierar ett annat är det väldigt svårt att se. Loggfilerna
 >
 >* användare
 >* grupper med många medlemmar
+
 >
 
 
@@ -278,7 +283,7 @@ Om ett konto personifierar ett annat är det väldigt svårt att se. Loggfilerna
 1. Navigera genom trädstrukturen.
 1. Klicka på det konto du vill öppna för redigering.
 1. Gör en ändring och klicka sedan på Spara (grön bocksymbol) för den posten.
-1. **Klicka på** Stäng **för att slutföra, eller** Lista... för att återgå till listan över alla användarkonton.
+1. Klicka på **Stäng** för att slutföra, eller **Lista...** för att återgå till listan över alla användarkonton.
 
 ### Ta bort ett användarkonto {#removing-a-user-account}
 
@@ -379,7 +384,7 @@ I kolumnen **Ärvd** anges medlemskap som har ärvts som ett resultat av medlems
 1. Navigera genom trädstrukturen.
 1. Klicka på det konto du vill öppna för redigering.
 1. Gör en ändring och klicka sedan på Spara (grön bocksymbol) för den posten.
-1. **Klicka på** Stäng **för att slutföra, eller** Lista... för att återgå till listan över alla gruppkonton.
+1. Klicka på **Stäng** för att slutföra, eller **Lista...** för att återgå till listan över alla gruppkonton.
 
 ### Ta bort ett gruppkonto {#removing-a-group-account}
 
@@ -414,7 +419,7 @@ Du kan lägga till medlemmar i den aktuella gruppen:
 1. Antingen:
 
    * Ange namnet på den obligatoriska medlemmen (användar- eller gruppkonto).
-   * **Eller använd** Bläddra.. om du vill söka efter och välja det huvudkonto (användar- eller gruppkonto) som du vill lägga till.
+   * Eller använd **Bläddra..** om du vill söka efter och välja det huvudkonto (användar- eller gruppkonto) som du vill lägga till.
 
 1. Klicka på Spara (grön bocksymbol) för den nya egenskapen.
 
@@ -422,7 +427,7 @@ Eller ta bort en befintlig medlem med papperskorgssymbolen.
 
 ## Behörighetshantering {#access-right-management}
 
-På fliken **Åtkomstkontroll** i CRXDE Lite kan du definiera åtkomstkontrollprinciper och tilldela relaterade behörigheter.
+På fliken **Åtkomstkontroll** på CRXDE Lite kan du definiera åtkomstkontrollprinciper och tilldela de relaterade behörigheterna.
 
 För **Aktuell sökväg** kan du till exempel välja en resurs i den vänstra rutan på fliken Åtkomstkontroll i den nedre högra rutan:
 
@@ -446,7 +451,8 @@ Du kan välja profiler för:
 
 * **Aktuell sökväg** Som i exemplet ovan väljer du en resurs i databasen. Profiler för den här &quot;aktuella sökvägen&quot; visas.
 
-* **Databas** Väljer åtkomstkontroll på databasnivå. Om du till exempel anger `jcr:namespaceManagement` privilegiet, som bara är relevant för databasen, inte en nod.
+* **Databas** Väljer åtkomstkontroll på databasnivå. När du till exempel anger 
+`jcr:namespaceManagement` privilegium, som bara är relevant för databasen, inte en nod.
 
 * **Principal** Ett huvudkonto som är registrerat i databasen.
 
@@ -550,7 +556,7 @@ Följande behörigheter är tillgängliga när du lägger till en åtkomstkontro
   </tr> 
   <tr> 
    <td><code>jcr:write</code></td> 
-   <td><br /> Detta är ett sammanställningsprivilegium som innehåller: - jcr:modifyProperties<br /> - jcr:addChildNodes<br /> - jcr:removeNode<br /> - jcr:removeChildNodes</td> 
+   <td>Detta är ett sammanställningsprivilegium som innehåller:<br /> - jcr:modifyProperties<br /> - jcr:addChildNodes<br /> - jcr:removeNode<br /> - jcr:removeChildNodes</td> 
   </tr> 
   <tr> 
    <td><code>rep:privilegeManagement</code></td> 
@@ -620,7 +626,7 @@ Ordningen i listan anger i vilken ordning profilerna tillämpas.
 
 ### Testa en åtkomstkontrollprincip {#testing-an-access-control-policy}
 
-1. **I verktygsfältet CRXDE Lite väljer du** Verktyg **och sedan** Testa åtkomstkontroll... .
+1. I verktygsfältet CRXDE Lite väljer du **Verktyg** och sedan **Testa åtkomstkontroll..**.
 
 1. En ny dialogruta öppnas i den övre högra rutan. Markera den **sökväg** och/eller det **huvudnamn** som du vill testa.
 
