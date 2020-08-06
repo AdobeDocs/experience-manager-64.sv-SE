@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: eaf65bdd-9091-4985-90bd-5eb2148965e3
 translation-type: tm+mt
 source-git-commit: 3fa80e73fb6e9400fbeba29d80aa57e080b6f333
+workflow-type: tm+mt
+source-wordcount: '468'
+ht-degree: 12%
 
 ---
 
@@ -41,7 +44,7 @@ När det gäller borttagningsbehörigheter måste innehållsfragment beaktas på
 
 >[!NOTE]
 >
->När en användare inte har någon [borttagningsbehörighet](/help/sites-administering/security.md#actions) fungerar redigeraren för innehållsfragment i *skrivskyddat* läge.
+>When a user does not have any [Delete](/help/sites-administering/security.md#actions) permissions, the Content Fragment editor operates in *read-only* mode.
 
 >[!NOTE]
 >
@@ -49,7 +52,7 @@ När det gäller borttagningsbehörigheter måste innehållsfragment beaktas på
 
 ## Behörigheter krävs endast för redigeringsfunktionen {#permissions-required-for-editor-functionality-only}
 
-För användare som behöver redigera/uppdatera ett innehållsfragment, **utan att tillåta dem att ta bort ett helt fragment**, måste specifika behörigheter tilldelas eftersom grundläggande åtgärder i innehållsfragmentredigeraren kräver att tillfälliga underelement kan tas bort.
+Användare som behöver redigera/uppdatera ett innehållsfragment, **utan att kunna ta bort ett helt fragment**, måste tilldelas specifika behörigheter, eftersom grundläggande användning av redigeraren för innehållsfragment kräver att tillfälliga underelement kan tas bort.
 
 t.ex. vid manipulering av variationer, även när du redigerar metadata eller hanterar associerat innehåll.
 
@@ -87,9 +90,9 @@ Behörigheten som krävs för att en viss användare och/eller grupp ska kunna r
 
    * `jcr:addChildNodes`, `jcr:modifyProperties` och `jcr:removeChildNodes`, `jcr:removeNode`
 
-Dessa `remove` behörigheter måste [administreras med åtkomstkontrollistor i CRXDE Lite](/help/sites-administering/user-group-ac-admin.md#access-right-management).
+Dessa `remove` behörigheter måste [administreras via åtkomstkontrollistor i CRXDE Lite](/help/sites-administering/user-group-ac-admin.md#access-right-management).
 
-Behörigheterna `add` och `modify` behörigheterna kan också administreras i CRXDE Lite eller med hjälp av användarhanteringskonsolen.
+Behörigheterna `add` och `modify` behörigheterna kan också administreras i CRXDE Lite eller med konsolen för användarhantering.
 
 Definitionen av en grupps `remove` behörigheter `content-authors-no-delete`:
 
