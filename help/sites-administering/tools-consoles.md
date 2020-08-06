@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 2bf8496d-a485-4b39-a6c9-07222b66d0cd
 translation-type: tm+mt
 source-git-commit: e9c5fcd8f939d88317c5184b6352b227918088e5
+workflow-type: tm+mt
+source-wordcount: '883'
+ht-degree: 9%
 
 ---
 
 
 # Verktygskonsoler{#tools-consoles}
 
-Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som hjälper dig att administrera webbplatser, digitala resurser och andra aspekter av ditt innehållsarkiv. Det finns för närvarande två varianter av **verktygskonsolen** beroende på vilket gränssnitt du använder:
+Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som hjälper dig att administrera webbplatser, digitala resurser och andra aspekter av ditt innehållslager. Det finns för närvarande två varianter av **verktygskonsolen** beroende på vilket gränssnitt du använder:
 
 * [Verktyg - Klassiskt användargränssnitt](#tools-classic-ui)
 * [Verktyg - Touchoptimerat gränssnitt](#tools-touch-optimized-ui)
@@ -42,7 +45,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
    <td>Klientkontexten <a href="/help/sites-developing/client-context.md"></a> representerar en dynamiskt sammansatt samling med användardata. Standardkonfigurationerna och marknadsföringskonfigurationerna för molnet finns här.<br /> </td> 
   </tr> 
   <tr> 
-   <td>Konfigurationer av molntjänster<br /> </td> 
+   <td>Konfigurationer av Cloud Services<br /> </td> 
    <td> </td> 
    <td>Innehåller konfigurationer som rör <a href="/help/sites-administering/marketing-cloud.md">integrering med Adobe Marketing Cloud</a>.</td> 
   </tr> 
@@ -52,7 +55,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
    <td>Ger importörer och olika produktdata tillgång.</td> 
   </tr> 
   <tr> 
-   <td>DAM - Hantering av digitala rättigheter<br /> </td> 
+   <td>DAM - Digital Rights Management<br /> </td> 
    <td> </td> 
    <td>Ger tillgång till information och licenser om digitala rättigheter.</td> 
   </tr> 
@@ -64,7 +67,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   <tr> 
    <td>DAM - Adobe InDesign<br /> </td> 
    <td> </td> 
-   <td>Skript som kan användas tillsammans med Adobe InDesign.</td> 
+   <td>Skript för användning tillsammans med Adobe InDesign.</td> 
   </tr> 
   <tr> 
    <td>DAM - videoprofiler<br /> </td> 
@@ -104,7 +107,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   <tr> 
    <td><a href="/help/sites-administering/external-link-checker.md">Extern länkkontroll</a></td> 
    <td> </td> 
-   <td>Söker igenom alla innehållssidor i AEM-instansen och kontrollerar eventuella externa länkar. En lista med giltiga och ogiltiga länkar visas.</td> 
+   <td>Söker igenom alla innehållssidor i AEM och kontrollerar eventuella externa länkar. En lista med giltiga och ogiltiga länkar visas.</td> 
   </tr> 
   <tr> 
    <td><a href="/help/sites-authoring/mobile.md">Mobil</a></td> 
@@ -139,7 +142,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   <tr> 
    <td><a href="/help/sites-administering/reporting.md">Rapporter</a></td> 
    <td> </td> 
-   <td>Med AEM får du ett antal anpassade rapporter som du kan använda för att skapa anpassade rapporter och/eller utveckla egna.</td> 
+   <td>AEM innehåller ett antal anpassade rapporter, med vilka du kan skapa anpassade rapporter och/eller utveckla egna.</td> 
   </tr> 
   <tr> 
    <td><a href="/help/sites-authoring/scaffolding.md">Standardsidans placering</a></td> 
@@ -235,7 +238,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr> 
   <tr> 
    <td> </td> 
-   <td><a href="/help/sites-administering/security.md">Användare och grupper</a></td> 
+   <td><a href="/help/sites-administering/security.md">Användare och grupper </a></td> 
    <td>Hantera användare och grupper.</td> 
   </tr> 
   <tr> 
@@ -245,7 +248,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr> 
   <tr> 
    <td> </td> 
-   <td><a href="https://helpx.adobe.com/cloud-manager/using/using-cloud-manager.html">Molntjänster</a></td> 
+   <td><a href="https://helpx.adobe.com/cloud-manager/using/using-cloud-manager.html">Cloud Services</a></td> 
    <td>Anslut till Adobe Marketing Cloud.</td> 
   </tr> 
   <tr> 
@@ -285,8 +288,8 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr> 
   <tr> 
    <td> </td> 
-   <td><a href="/help/sites-administering/package-manager.md#package-share">Paketresurs</a></td> 
-   <td>Ladda ned applikationer från Adobe och communityn.<br /> </td> 
+   <td><a href="/help/sites-administering/package-manager.md#package-share">Paketdelning</a></td> 
+   <td>Ladda ned program från Adobe och communityn.<br /> </td> 
   </tr> 
   <tr> 
    <td> </td> 
@@ -300,7 +303,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr> 
   <tr> 
    <td> </td> 
-   <td><a href="/help/sites-deploying/monitoring-and-maintaining.md#backups">Säkerhetskopiera</a></td> 
+   <td><a href="/help/sites-deploying/monitoring-and-maintaining.md#backups">Säkerhetskopiering</a></td> 
    <td>Utför säkerhetskopieringsuppgifter.</td> 
   </tr> 
   <tr> 
