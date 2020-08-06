@@ -1,8 +1,8 @@
 ---
 title: Konfigurerar Connector för IBM FileNet
 seo-title: Konfigurerar Connector för IBM FileNet
-description: Lär dig hur du konfigurerar anslutningsprogrammet för IBM FileNet för att möjliggöra kommunikation mellan AEM-formulär och IBM FileNet.
-seo-description: Lär dig hur du konfigurerar anslutningsprogrammet för IBM FileNet för att möjliggöra kommunikation mellan AEM-formulär och IBM FileNet.
+description: Lär dig hur du konfigurerar anslutningsprogrammet för IBM FileNet för att möjliggöra kommunikation mellan AEM och IBM FileNet.
+seo-description: Lär dig hur du konfigurerar anslutningsprogrammet för IBM FileNet för att möjliggöra kommunikation mellan AEM och IBM FileNet.
 uuid: 29d4e221-97f7-4cfb-b7e4-75a8289d2604
 contentOwner: admin
 content-type: reference
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 # Konfigurerar Connector för IBM FileNet {#configuring-connector-for-ibm-filenet}
 
-Koppling till IBM FileNet möjliggör kommunikation mellan AEM-formulär och IBM FileNet. Mer bakgrundsinformation finns i&quot;Connectors for ECM&quot; i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
+Koppling för IBM FileNet möjliggör kommunikation mellan AEM och IBM FileNet. Mer bakgrundsinformation finns i&quot;Connectors for ECM&quot; i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
->I tidigare versioner kunde resurserna lagras i en ECM-databas. I den här versionen lagras resurserna i AEM-formulärens ursprungliga databas och databasleverantörens tjänster har tagits bort. Överföring av resurser från en ECM-databas till AEM-formulärdatabasen sker när du uppgraderar till AEM-formulär. Mer information finns i uppgraderingsguiden för AEM-formulär för programservern.
+>I tidigare versioner kunde resurserna lagras i en ECM-databas. I den här versionen lagras resurser i AEM för inbyggda formulär och databasleverantörstjänsterna har tagits bort. Överföring av resurser från en ECM-databas till databasen med AEM formulär sker när du uppgraderar till AEM formulär. Mer information finns i uppgraderingsguiden för AEM formulär för programservern.
 
 ## Konfigurera anslutningen till innehållsmotorn {#configure-the-connection-to-the-content-engine}
 
@@ -51,7 +51,7 @@ IBM FileNet P8 Content Engine tillhandahåller programvarutjänster för hanteri
    * Om du valde Rensa som autentiseringsskyddsschema ignoreras det här nyckelordet och dess värde.
    * Om du valde Symmetric som autentiseringsskyddsschema pekar den sökväg du anger på platsen för en krypteringsfil på formulärservern som innehåller de kryptografiska nycklar som ska användas.
 
-1. I rutan Standardobjektarkiv anger du den objektarkivkoppling som AEM-formulär ansluter till som standard.
+1. I rutan Standardobjektarkiv anger du den objektarkivkoppling som AEM formulär ansluter till som standard.
 1. I rutan Användarnamn anger du användarnamnet för en användare som har behörighet till standardobjektarkivet som du angav i föregående steg.
 1. Ange användarens lösenord i rutan Lösenord och klicka på Spara.
 
