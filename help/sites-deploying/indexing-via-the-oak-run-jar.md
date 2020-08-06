@@ -10,6 +10,9 @@ topic-tags: deploying
 discoiquuid: c8a505ab-a075-47da-8007-43645a8c3ce5
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '879'
+ht-degree: 0%
 
 ---
 
@@ -18,9 +21,9 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 Oak-run har stöd för alla indexeringsanvändningsfall på kommandoraden utan att du behöver använda JMX-nivån. Fördelarna med att använda ekon är:
 
-1. Det är en ny indexeringsverktygslåda för AEM 6.4
+1. Det är en ny indexverktygslåda för AEM 6.4
 1. Det minskar time-to-reindex-tiden vilket påverkar omindexeringstiderna positivt för större databaser
-1. Det minskar resursförbrukningen vid omindexering i AEM, vilket ger bättre systemprestanda för andra AEM-aktiviteter
+1. Det minskar resursförbrukningen vid omindexering av AEM vilket ger bättre systemprestanda för andra AEM aktiviteter
 1. Oak-run ger out-of-band-stöd: Om produktionsvillkoren inte tillåter omindexering på produktionsinstanser, kan en klonad miljö användas för omindexering för att undvika kritiska prestandapåverkan.
 
 Nedan finns en lista med användningsfall som kan användas när du utför indexeringsåtgärder via `oak-run` verktyget.
@@ -32,7 +35,7 @@ Nedan finns en lista med användningsfall som kan användas när du utför index
 >Mer detaljerad information om detta scenario finns i [Använd fall 1 - Kontroll](/help/sites-deploying/oak-run-indexing-usecases.md#usercase1indexconsistencycheck)av indexkonsekvens.
 
 * `oak-run.jar`avgör snabbt om index för lucene-ekning är skadade.
-* Det är säkert att köra på en AEM-instans som används för konsekvenskontrollnivå 1 och 2.
+* Det är säkert att köra på en AEM som används för konsekvenskontrollnivå 1 och 2.
 
 ![screen_shot_2017-12-14at135758](assets/screen_shot_2017-12-14at135758.png)
 
@@ -44,7 +47,7 @@ Nedan finns en lista med användningsfall som kan användas när du utför index
 
 * `oak-run.jar` alla indexdefinitioner, viktiga indexvärden och indexinnehåll tas bort för offlineanalys.
 
-* Kan köras på en AEM-instans som används.
+* Kan köras på en AEM som används.
 
 ![image2017-12-19_9-47-40](assets/image2017-12-19_9-47-40.png)
 
@@ -78,9 +81,9 @@ Beroende på hur `oak-run.jar` du indexerar kommer olika steg att utföras på b
 >
 >Mer detaljerad information om det här scenariot finns i [Indexera om - DocumentNodeStore](/help/sites-deploying/oak-run-indexing-usecases.md#reindexdocumentnodestore).
 
-Detta är den rekommenderade metoden för omindexering av AEM-installationer av MongoMK (och RDBMK). Ingen annan metod bör användas.
+Detta är den rekommenderade metoden för omindexering av AEM MongoMK (och RDBMK). Ingen annan metod bör användas.
 
-Den här processen behöver bara köras mot en enda AEM-instans i klustret.
+Den här processen behöver bara köras mot en enda AEM i klustret.
 
 ![5](assets/5.png)
 
@@ -96,7 +99,7 @@ Den här processen behöver bara köras mot en enda AEM-instans i klustret.
 
 * **AEM Publish Farms (AE Publish Farms ska alltid vara tarMK)**
 
-   * För publiceringsgrupper måste det göras för alla ELLER utföra stegen för en enda publicering och sedan klona konfigurationen för andra (med alla vanliga prestationer när AEM-instanser klonas). sling.id - ska länka till något här)
+   * För publiceringsgrupper måste det göras för alla ELLER, och sedan klona konfigurationen för andra (med alla vanliga prestationer när AEM klonas). sling.id - ska länka till något här)
 
 ### Omindexering online för tarMK {#onlinere-indexingfortarmk}
 
@@ -106,7 +109,7 @@ Den här processen behöver bara köras mot en enda AEM-instans i klustret.
 
 Detta är den metod som användes innan de nya indexeringsfunktionerna i oak-run.jar introducerades. Det kan du göra genom att ställa in egenskapen `reindex=true` på ekindexet.
 
-Den här metoden kan användas om tids- och prestandaeffekterna som ska indexeras är godtagbara för kunden. Detta gäller ofta för små till medelstora AEM-installationer.
+Den här metoden kan användas om tids- och prestandaeffekterna som ska indexeras är godtagbara för kunden. Detta gäller ofta små till medelstora AEM installationer.
 
 ![6](assets/6.png)
 
@@ -114,13 +117,13 @@ Den här metoden kan användas om tids- och prestandaeffekterna som ska indexera
 
 >[!NOTE]
 >
->Mer detaljerad information om det här scenariot finns i [Online Reindex - SegmentNodeStore - AEM-instansen körs](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestoretheaeminstanceisrunning).
+>Mer detaljerad information om det här scenariot finns i [Online Reindex - SegmentNodeStore - Den AEM instansen körs](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestoretheaeminstanceisrunning).
 
 Omindexering online av tarMK är snabbare än omindexeringen av TarkMK online som beskrivs ovan. Det kräver dock även körning under ett underhållsfönster, med metoden att fönstret blir kortare och fler steg krävs för att utföra omindexeringen.
 
 >[!NOTE]
 >
->Orange betecknar åtgärder där AEM måste utföras under en underhållsperiod.
+>Orange betecknar verksamhet där AEM måste utföras under en underhållsperiod.
 
 ![7](assets/7.png)
 
@@ -128,9 +131,9 @@ Omindexering online av tarMK är snabbare än omindexeringen av TarkMK online so
 
 >[!NOTE]
 >
->Mer detaljerad information om det här scenariot finns i [Online Reindex - SegmentNodeStore - AEM-instansen är avstängd](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestoreaeminstanceisdown).
+>Mer detaljerad information om det här scenariot finns i [Online Reindex - SegmentNodeStore - Den AEM instansen är avstängd](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestoreaeminstanceisdown).
 
-Omindexering offline av tarMK är den enklaste `oak-run.jar` baserade omindexeringsmetoden för tarMK eftersom den kräver en enda `oak-run.jar` kommentar. AEM-instansen måste dock stängas av.
+Omindexering offline av tarMK är den enklaste `oak-run.jar` baserade omindexeringsmetoden för tarMK eftersom den kräver en enda `oak-run.jar` kommentar. AEM måste dock stängas.
 
 >[!NOTE]
 >
@@ -138,17 +141,17 @@ Omindexering offline av tarMK är den enklaste `oak-run.jar` baserade omindexeri
 
 ![8](assets/8.png)
 
-### Omindexerings-TarMK utanför band med oak-run.jar {#out-of-bandre-indexingtarmkusingoak-run-jar}
+### Omindexerings-TarMK utanför band med oak-run.jar  {#out-of-bandre-indexingtarmkusingoak-run-jar}
 
 >[!NOTE]
 >
 >Mer detaljerad information om det här scenariot finns i [Omindexering utanför intervall - SegmentNodeStore](/help/sites-deploying/oak-run-indexing-usecases.md#outofbandreindexsegmentnodestore).
 
-Omindexering utan band minimerar effekten av omindexering på AEM-instanser som används.
+Omindexering utan band minimerar effekten av omindexering på AEM som används.
 
 >[!NOTE]
 >
->Rött betecknar åtgärder där AEM kan vara avstängt.
+>Rött anger åtgärder där AEM kan avslutas.
 
 ![9](assets/9.png)
 
@@ -170,13 +173,13 @@ Mer information finns i dokumentationen [till att kontrollera](https://adobe-con
 
 ### Skapa och uppdatera indexdefinitioner på tarMK med oak-run.jar {#creatingandupdatingindexdefinitionsontarmkusingoak-run-jar}
 
-Om tiden eller prestandaeffekten av omindexering med icke- `oak-run.jar` metoder är för hög kan följande `oak-run.jar` baserade metod användas för att importera och indexera om Lucene-indexdefinitioner i en TarmMK-baserad AEM-installation.
+Om tiden eller prestandaeffekten av omindexering med icke- `oak-run.jar` metoder är för hög kan följande `oak-run.jar` baserade metod användas för att importera och indexera om Lucene-indexdefinitioner i en TARMK-baserad AEM.
 
 ![10](assets/10.png)
 
 ### Skapa och uppdatera indexdefinitioner på MonogMK med oak-run.jar {#creatingandupdatingindexdefinitionsonmonogmkusingoak-run-jar}
 
-Om tiden eller prestandaeffekten av omindexering med icke- `oak-run.jar` metoder är för hög kan följande `oak-run.jar` baserade metod användas för att importera och indexera om Lucene-indexdefinitioner i MongoMK-baserade AEM-installationer.
+Om tiden eller prestandaeffekten av omindexering med icke- `oak-run.jar` metoder är för hög kan följande `oak-run.jar` baserade metod användas för att importera och indexera om Lucene-indexdefinitioner i MongoMK-baserade AEM.
 
 ![11](assets/11.png)
 
