@@ -1,24 +1,27 @@
 ---
-title: Förbättrad sortering av resurser i AEM
-description: Lär dig hur AEM Assets använder sortering på serversidan för att sortera mappresurser eller en sökfråga samtidigt i stället för att sortera dem i grupper på klientsidan.
+title: Förbättrad sortering av material i AEM
+description: Lär dig hur AEM Assets använder sortering på serversidan för att sortera mappresurser eller en sökfråga samtidigt i stället för att sortera dem gruppvis på klientsidan.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '437'
+ht-degree: 3%
 
 ---
 
 
-# Förbättrad sortering av resurser i AEM {#enhanced-sorting-of-assets-in-aem}
+# Förbättrad sortering av material i AEM {#enhanced-sorting-of-assets-in-aem}
 
-Lär dig hur AEM Assets använder sortering på serversidan för att sortera mappresurser eller en sökfråga samtidigt i stället för att sortera dem i grupper på klientsidan.
+Lär dig hur AEM Assets använder sortering på serversidan för att sortera mappresurser eller en sökfråga samtidigt i stället för att sortera dem gruppvis på klientsidan.
 
-Sökfunktionen i Adobe Experience Manager Assets (AEM) Assets har förbättrats så att du effektivt kan sortera ett stort antal resurser i mapplistvyn och på sökresultatsidorna. Du kan också sortera tidslinjeposter.
+Sökfunktionen i Adobe Experience Manager (AEM) Assets har förbättrats så att du effektivt kan sortera ett stort antal resurser i mapplistvyn och söka efter resultatsidor. Du kan också sortera tidslinjeposter.
 
-AEM Resurser använder sortering på serversidan för att sortera hela uppsättningen resurser (oavsett var de är stora) i en mapp eller en sökfråga på en gång i stället för att sortera dem i grupper på klientsidan. På så sätt kan förhämtade resultat snabbt visas i användargränssnittet, vilket gör sorteringsåtgärden mer responsiv och snabb.
+AEM Assets använder sortering på serversidan för att sortera hela uppsättningen resurser (oavsett var de är stora) i en mapp eller en sökfråga på en gång i stället för att sortera dem gruppvis på klientsidan. På så sätt kan förhämtade resultat snabbt visas i användargränssnittet, vilket gör sorteringsåtgärden mer responsiv och snabb.
 
 ## Sortera resurser i listvyn {#sorting-assets-in-list-view}
 
-Med AEM Resurser kan du sortera mappresurser baserat på följande fält:
+I AEM Assets kan du sortera mappresurser baserat på följande fält:
 
 * Nat. inst
 * Status
@@ -71,18 +74,18 @@ Du kan sortera sökresultaten baserat på följande fält:
 
 ## Sortera resurser på tidslinjen {#sorting-assets-in-timeline}
 
-Med AEM Assets kan du kronologiskt sortera tidslinjeposter, t.ex. anteckningar, versioner, arbetsflöden och aktiviteter.
+Med AEM Assets kan du sortera tidslinjeposter kronologiskt, till exempel anteckningar, versioner, arbetsflöden och aktiviteter.
 
 1. I resursgränssnittet väljer du en resurs som du vill visa tidslinjen för.
-1. Klicka på/tryck på ikonen GlobalNav och välj **[!UICONTROL Tidslinje]**.
+1. Klicka på/tryck på ikonen GlobalNav och välj **[!UICONTROL Timeline]**.
 
    ![chlimage_1-399](assets/chlimage_1-399.png)
 
-1. Välj en post i listan på tidslinjen. Välj till exempel **[!UICONTROL Kommentarer]** för att visa listan med kommentarer som är associerade med resursen.
+1. Välj en post i listan på tidslinjen. Välj **[!UICONTROL Comments]** till exempel om du vill visa en lista med anteckningar som är associerade med resursen.
 
    ![chlimage_1-400](assets/chlimage_1-400.png)
 
-1. Klicka på/tryck på ikonen **[!UICONTROL Sortera]** bredvid etiketten **[!UICONTROL Datum]** . Beroende på vad du väljer listas anteckningarna i den kronologiska/omvända kronologiska ordning som de lades till i resursen.
+1. Klicka på/tryck på **[!UICONTROL Sort]** ikonen bredvid **[!UICONTROL Date]** etiketten. Beroende på vad du väljer listas anteckningarna i den kronologiska/omvända kronologiska ordning som de lades till i resursen.
 
    ![chlimage_1-401](assets/chlimage_1-401.png)
 
