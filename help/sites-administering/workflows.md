@@ -11,22 +11,25 @@ content-type: reference
 discoiquuid: 4b09cd44-434e-4834-bc0d-c9c082a4ba5a
 translation-type: tm+mt
 source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+workflow-type: tm+mt
+source-wordcount: '773'
+ht-degree: 0%
 
 ---
 
 
 # Administrera arbetsflöden{#administering-workflows}
 
-Med arbetsflöden kan ni automatisera Adobe Experience Manager-aktiviteter (AEM). Arbetsflöden:
+Med arbetsflöden kan du automatisera Adobe Experience Manager-aktiviteter (AEM). Arbetsflöden:
 
 * Består av en serie steg som körs i en viss ordning.
 
    * Varje steg har en egen verksamhet. som att vänta på användarindata, aktivera en sida eller skicka ett e-postmeddelande.
 
-* Kan samverka med resurser i databasen, användarkonton och AEM-tjänster.
-* Kan samordna komplicerade aktiviteter som berör någon aspekt av AEM.
+* Kan samverka med resurser i databasen, användarkonton och AEM.
+* Kan samordna komplicerade aktiviteter som omfattar alla aspekter av AEM.
 
-De affärsprocesser som din organisation har etablerat kan representeras som arbetsflöden. Processen med att publicera webbplatsinnehåll omfattar till exempel vanligtvis steg för godkännande och godkännande av olika intressenter. Dessa processer kan implementeras som AEM-arbetsflöden och tillämpas på innehållssidor och resurser.
+De affärsprocesser som din organisation har etablerat kan representeras som arbetsflöden. Processen med att publicera webbplatsinnehåll omfattar till exempel vanligtvis steg för godkännande och godkännande av olika intressenter. Dessa processer kan implementeras som AEM arbetsflöden och tillämpas på innehållssidor och resurser.
 
 * [Starta arbetsflöden](/help/sites-administering/workflows-starting.md)
 * [Administrera arbetsflödesinstanser](/help/sites-administering/workflows-administering.md)
@@ -38,7 +41,8 @@ De affärsprocesser som din organisation har etablerat kan representeras som arb
 >
 >* Använda och delta i arbetsflöden: [Arbeta med arbetsflöden](/help/sites-authoring/workflows.md).
 >* Skapa arbetsflödesmodeller och utöka arbetsflödesfunktioner: [Utveckla och utöka arbetsflöden](/help/sites-developing/workflows.md).
->* Förbättra prestanda för arbetsflöden som använder betydande serverresurser: [Samtidig arbetsflödesbearbetning](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing).
+>* Förbättra prestanda för arbetsflöden som använder betydande serverresurser: [Samtidig bearbetning](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing)av arbetsflöden.
+
 >
 
 
@@ -64,7 +68,7 @@ Arbetsflödesinstanser går igenom följande livscykel:
 
    1. Arbetsflödesinstansens nyttolast identifieras när modellen startas.
    1. Instansen är i själva verket en kopia av modellen (som när den skapades).
-   1. AEM-författare, administratörer och tjänster kan starta arbetsflödesmodeller.
+   1. AEM kan skapa arbetsflödesmodeller.
 
 1. Det första steget i arbetsflödesmodellen körs.
 1. Stegen slutförs och arbetsflödesmotorn använder modellen för att bestämma nästa steg som ska köras.
