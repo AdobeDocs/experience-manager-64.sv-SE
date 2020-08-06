@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2878b145-e6c0-48d3-810c-3540de13c826
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '953'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Användare och administratörer använder dokumentsäkerhetswebbsidorna för att
 
 >[!NOTE]
 >
->Du kan också logga in på dokumentsäkerhet via Acrobat och andra klientprogram med ditt användarkonto. (Se [Konfigurera åtkomst till dokumentsäkerhet från klientprogram](using-document-security-web-pages.md#setting-up-access-to-document-security-from-client-applications).)
+>Du kan även logga in på dokumentsäkerhet via Acrobat och andra klientprogram med ditt användarinloggningskonto. (Se [Konfigurera åtkomst till dokumentsäkerhet från klientprogram](using-document-security-web-pages.md#setting-up-access-to-document-security-from-client-applications).)
 
 Om du vill öppna webbsidorna måste du ha en webbläsare och en URL och inloggningsinformation för dokumentsäkerhet. URL:en för användare skiljer sig från URL:en för administratörer.
 
@@ -45,9 +48,9 @@ För administratörer skapas ett superadministratörskonto som standard under in
 
 1. Skriv URL-adressen i webbläsaren:
 
-   Dokumentets säkerhets-URL: `https://`*[värddatorns ]*`:`*[port]*`/edc`
+   Dokumentets säkerhets-URL: `https://`*[värddatorns ]*`:`*[port]* `/edc`
 
-   eller URL för administrationskonsolen: `https://`*[värddatorns ]*`:`*[port]*`/adminui`
+   eller URL för administrationskonsolen: `https://`*[värddatorns ]*`:`*[port]* `/adminui`
 
 1. Skriv ditt användarnamn och lösenord i inloggningsfönstret och klicka på OK.
 1. I administrationskonsolen klickar du på Tjänster > Dokumentsäkerhet.
@@ -70,7 +73,7 @@ Använd de här länkarna för att komma åt de olika sidorna, där du skapar oc
 
 **Gå tillbaka till föregående sida**
 
-1. Klicka på navigeringslänken högst upp på sidan för den sida som du vill gå tillbaka till.
+1. Klicka på navigeringslänken längst upp på sidan för den sida som du vill gå tillbaka till.
 
 **Uppdatera datalistan på en sida**
 
