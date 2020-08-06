@@ -1,8 +1,8 @@
 ---
 title: ConvertPDF Service
 seo-title: ConvertPDF Service
-description: 'Använd tjänsten AEM Forms ConvertPDF för att konvertera PDF-dokument till PostScript- eller bildfiler. '
-seo-description: 'Använd tjänsten AEM Forms ConvertPDF för att konvertera PDF-dokument till PostScript- eller bildfiler. '
+description: 'Använd tjänsten AEM Forms ConvertPDF för att konvertera PDF-dokument till PostScript eller bildfiler. '
+seo-description: 'Använd tjänsten AEM Forms ConvertPDF för att konvertera PDF-dokument till PostScript eller bildfiler. '
 uuid: 7fa94c8c-485b-4a77-bcd3-ed716e3cf316
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -30,7 +30,7 @@ Du kan göra följande med tjänsten Konvertera PDF:
 
 ## Konfigurera egenskaper för tjänsten   {#properties}
 
-Du kan använda **AEMFD ConvertPDF-tjänsten** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen för AEM-konsolen är `https://[host]:[port]/system/console/configMgr`.
+Du kan använda **AEMFD ConvertPDF-tjänsten** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen för AEM är `https://[host]:[port]/system/console/configMgr`.
 
 ## Använda tjänsten {#using-the-service}
 
@@ -131,7 +131,7 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 %>
 ```
 
-### Använda ConvertPDF Service med AEM-arbetsflöden {#using-convertpdf-service-with-aem-workflows}
+### Använda ConvertPDF Service med AEM arbetsflöden {#using-convertpdf-service-with-aem-workflows}
 
 Att köra ConvertPDF-tjänsten från ett arbetsflöde påminner om att köra från JSP/Servlet.
 
