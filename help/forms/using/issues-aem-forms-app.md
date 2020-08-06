@@ -1,8 +1,8 @@
 ---
-title: Felsöka appen AEM Forms
-seo-title: Felsöka appen AEM Forms
-description: 'Lär dig mer om vanliga problem med appen AEM Forms och hur du felsöker dem. '
-seo-description: 'Lär dig mer om vanliga problem med appen AEM Forms och hur du felsöker dem. '
+title: Felsök AEM Forms-appen
+seo-title: Felsök AEM Forms-appen
+description: 'Lär dig mer om vanliga problem med AEM Forms-appen och hur du felsöker dem. '
+seo-description: 'Lär dig mer om vanliga problem med AEM Forms-appen och hur du felsöker dem. '
 uuid: a5cc3065-0ebf-48c0-a8fe-f1061632ca90
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,11 +10,14 @@ topic-tags: forms-app
 discoiquuid: 2f45a965-590b-43b1-95c6-df4b74ad15b9
 translation-type: tm+mt
 source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
+workflow-type: tm+mt
+source-wordcount: '689'
+ht-degree: 0%
 
 ---
 
 
-# Felsöka appen AEM Forms {#troubleshoot-aem-forms-app}
+# Felsök AEM Forms-appen {#troubleshoot-aem-forms-app}
 
 I den här artikeln beskrivs de felmeddelanden som kan visas när du skapar en AEM Forms-app och hur du löser dem.
 
@@ -22,14 +25,14 @@ Avsnitten i den här artikeln är:
 
 * [Förlust av bifogade filer för iOS-användare](/help/forms/using/issues-aem-forms-app.md#attachment-loss-for-ios-users)
 * [HTML5-formulärutkast som skickas av arbetsyteanvändare visas inte på portalen](/help/forms/using/issues-aem-forms-app.md#html-form-drafts-submitted-by-workspace-users-are-not-visible-on-the-portal)
-* [HTML5-formulär (inte cachelagrade) kan inte läsas in i appen AEM Forms](/help/forms/using/issues-aem-forms-app.md#html-forms-not-cached-fail-to-load-in-aem-forms-app)
+* [HTML5-formulär (inte cachelagrade) kan inte läsas in i AEM Forms-appen](/help/forms/using/issues-aem-forms-app.md#html-forms-not-cached-fail-to-load-in-aem-forms-app)
 * [AEM Forms synkroniseras inte i Windows](/help/forms/using/issues-aem-forms-app.md#aem-forms-do-not-sync-on-windows)
 * [Versionen av Gradle stöds inte](/help/forms/using/issues-aem-forms-app.md#unsupported-version-of-gradle)
 * [Kompatibilitetsproblem med Gradle- och Android-insticksprogram](/help/forms/using/issues-aem-forms-app.md#gradle-and-android-gradle-plug-in-compatibility-issues)
 
 ## Förlust av bifogade filer för iOS-användare {#attachment-loss-for-ios-users}
 
-Appen AEM Forms för iOS som är konfigurerad att synkroniseras med AEM Forms i OSGi stöder endast bilagor på fältnivå. Alla bilagor måste ha unika namn. Om flera bifogade filer har samma namn behålls bara en bifogad fil och alla andra med samma namn går förlorade. Utför följande steg för att förhindra att användare på iOS-enheter drabbas av dataförlust:
+AEM Forms-app för iOS som är konfigurerad att synkroniseras med AEM Forms på OSGi stöder endast bilagor på fältnivå. Alla bilagor måste ha unika namn. Om flera bifogade filer har samma namn behålls bara en bifogad fil och alla andra med samma namn går förlorade. Utför följande steg för att förhindra att användare på iOS-enheter drabbas av dataförlust:
 
 1. På den anslutna servern går du till **Adobe Experience Manager > Verktyg > Åtgärder > Webbkonsol**.
 1. Sök efter och klicka på **tjänsten** Adaptiv formulärkonfiguration.
@@ -57,9 +60,9 @@ För HTML5-formulär som är aktiverade i AEM Forms-appen med **Spara som utkast
 
 1. Click **OK**.
 
-## HTML5-formulär (inte cachelagrade) kan inte läsas in i appen AEM Forms {#html-forms-not-cached-fail-to-load-in-aem-forms-app}
+## HTML5-formulär (inte cachelagrade) kan inte läsas in i AEM Forms-appen {#html-forms-not-cached-fail-to-load-in-aem-forms-app}
 
-När appen AEM Forms är ansluten till en äldre version av AEM Forms-servern går det inte att läsa in icke-cachelagrade HTML5-formulär i appen AEM Forms.
+När AEM Forms-appen är ansluten till en äldre version av AEM Forms-servern går det inte att läsa in icke-cachelagrade HTML5-formulär i AEM Forms-appen.
 
 Utför följande steg för att lösa problemet:
 
@@ -74,29 +77,29 @@ Utför följande steg för att lösa problemet:
 
 ## AEM Forms synkroniseras inte i Windows {#aem-forms-do-not-sync-on-windows}
 
-I appen AEM Forms i Windows synkroniseras inte ett formulär med den anslutna servern om sökvägen till formuläret eller någon av dess resurser innehåller fler än eller lika med 256 tecken.
+I AEM Forms App i Windows synkroniseras inte ett formulär med den anslutna servern om sökvägen till formuläret eller någon av dess resurser innehåller fler än eller lika med 256 tecken.
 
 Ändra formulärets sökväg och dess resurser för att minska antalet tecken till färre än 256 tecken.
 
 ## Versionen av Gradle stöds inte {#unsupported-version-of-gradle}
 
-**** Felmeddelande: Projektet använder en version av Gradle som inte stöds.
+**Felmeddelande:** Projektet använder en version av Gradle som inte stöds.
 
 Felmeddelandet visas när du skapar en AEM Forms-app i Android Studio. Problemet inträffar på grund av att en version av Gradle som inte stöds i systemet inte stöds.
 
-**** Upplösning: Klicka på **Korrigera inkapsling och importera projektet** igen för att lösa problemet.
+**Upplösning:** Klicka på **Korrigera inkapsling och importera projektet** igen för att lösa problemet.
 
 ![gradle_unsupported_version](assets/gradle_unsupported_version.png)
 
 ## Kompatibilitetsproblem med Gradle- och Android-insticksprogram {#gradle-and-android-gradle-plug-in-compatibility-issues}
 
-**** Felmeddelande: Versionerna av plugin-programmet för Android Gradle och Gradle är inte kompatibla.
+**Felmeddelande:** Versionerna av plugin-programmet för Android Gradle och Gradle är inte kompatibla.
 
 Felmeddelandet visas när du väljer alternativet **Skapa APK** på menyn **Skapa** i användargränssnittet i Android Studio.
 
 ![gradle_plugin_compatibility](assets/gradle_plugin_compatibility.png)
 
-**** Upplösning: Öppna **filen Gradle Scripts** > **gradle-wrapper.properties** och redigera **egenskapen distributionUrl** .
+**Upplösning:** Öppna **filen Gradle Scripts** > **gradle-wrapper.properties** och redigera **egenskapen distributionUrl** .
 
 Android Studio-konsolen rekommenderar till exempel att du nedgraderar Gradle-versionen till 3.5. Redigera versionen i **distributionUrl** för **filen gradle-wrapper.properties** .
 
