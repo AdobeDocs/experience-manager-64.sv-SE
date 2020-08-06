@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 32b56b48-75cb-4cc9-a077-10e335f01a35
 translation-type: tm+mt
 source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+workflow-type: tm+mt
+source-wordcount: '2410'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
 
 ## Introduktion {#introduction}
 
-I AEM Communities, från publiceringsmiljön (beroende på vilka behörigheter som har konfigurerats), kan *webbplatsbesökare* bli *medlemmar*, skapa *användargrupper* och redigera sin *medlemsprofil*.
+I AEM Communities kan *webbplatsbesökare* i publiceringsmiljön (beroende på vilka behörigheter som har konfigurerats) bli *medlemmar*, skapa *användargrupper* och redigera sin *medlemsprofil*.
 
 *Användardata* är en term som används för att referera till *användare*, *användarprofiler* och *användargrupper*.
 
@@ -43,7 +46,7 @@ Detaljerade stegvisa instruktioner om hur du aktiverar synkronisering i en publi
 
 * [Användarsynkronisering](../../help/sites-administering/sync.md)
 
-## Användarsynkronisering i bakgrunden {#user-sync-in-the-background}
+## Användarsynkronisering i bakgrunden  {#user-sync-in-the-background}
 
 ![sling-dist-workflow](assets/sling-dist-workflow.png)
 
@@ -79,7 +82,7 @@ När konsolen [Användaradministration och -säkerhet](../../help/sites-administ
 
 För användargenererat innehåll (UGC) nås data som anges i en publiceringsinstans via den [konfigurerade SRP](srp-config.md).
 
-## God praxis {#bestpractices}
+## Best practices {#bestpractices}
 
 Som standard är användarsynkronisering **inaktiverat**. Att aktivera användarsynkronisering innebär att ändra *befintliga* OSGi-konfigurationer. Inga nya konfigurationer ska läggas till som ett resultat av aktivering av användarsynkronisering.
 
@@ -93,12 +96,12 @@ Användarsynkronisering förlitar sig på redigeringsmiljön för att hantera di
 
 1. Kontrollera att den senaste koden har installerats:
 
-   * [Uppdateringar om AEM-plattformar](https://helpx.adobe.com/experience-manager/kb/aem62-available-hotfixes.html)
-   * [Uppdateringar för AEM Communities](deploy-communities.md#latestfeaturepack)
+   * [AEM plattformsuppdateringar](https://helpx.adobe.com/experience-manager/kb/aem62-available-hotfixes.html)
+   * [AEM Communities-uppdateringar](deploy-communities.md#latestfeaturepack)
 
 Följande konfigurationer krävs för att aktivera användarsynkronisering på AEM Communities. Kontrollera att dessa konfigurationer är korrekta för att förhindra att distribution av säljinnehåll misslyckas.
 
-###  Apache Sling Distribution Agent - Sync Agents Factory {#apache-sling-distribution-agent-sync-agents-factory}
+### Apache Sling Distribution Agent - Sync Agents Factory {#apache-sling-distribution-agent-sync-agents-factory}
 
 Den här konfigurationen hämtar innehållet som ska synkroniseras mellan utgivarna. Konfigurationen är på Author-instansen. Författaren måste hålla reda på alla utgivare som finns där och var all information ska synkroniseras.
 
@@ -112,7 +115,7 @@ Författarinstans skickar utgivarens slutpunkt. När en användare skapas eller 
 
 ### Så här konfigurerar du synkroniseringsagenter för Apache Sling
 
-På AEM-författarinstans:
+AEM författarinstans:
 
 1. Logga in med administratörsbehörighet.
 1. Gå till [webbkonsolen](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/configuring-osgi.html).
@@ -122,14 +125,14 @@ På AEM-författarinstans:
 
    * Välj den befintliga konfiguration som ska öppnas för redigering (pennikon).
    * Verifiera namn: **`socialpubsync`.**
-   * Markera kryssrutan **[!UICONTROL Aktiverad]** .
-   * Välj **[!UICONTROL Använd flera köer]**.
-   * Ange slutpunkter **[!UICONTROL för]** exporterare och **[!UICONTROL importslutpunkter]** (du kan lägga till fler slutpunkter för exporterare och importör).
+   * Markera **[!UICONTROL Enabled]** kryssrutan.
+   * Välj **[!UICONTROL Use Multiple queues]**.
+   * Ange **[!UICONTROL Exporter Endpoints]** och **[!UICONTROL Importer Endpoints]** (du kan lägga till fler slutpunkter för exporterare och importerare).
 
       Dessa slutpunkter definierar varifrån du vill hämta innehållet och var du vill överföra innehållet. Författaren hämtar innehållet från den angivna exporterarens slutpunkt och skickar innehållet till utgivaren (utom den utgivare som innehållet hämtades från).
    ![sync-agent-fact](assets/sync-agent-fact.png)
 
-### Adobe Granite Distribution - Krypterad lösenordsleverantör {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
+### Adobe Granite-distribution - krypterad lösenordsleverantör {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
 
 Det gör att författaren kan identifiera den behöriga användaren som har behörighet att synkronisera användardata från författaren till publiceringen.
 
@@ -141,13 +144,13 @@ När data ska installeras på eller hämtas från utgivare ansluter författaren
 
 ### Koppla författare till utgivare med hjälp av auktoriserade användare
 
-På AEM-författarinstans:
+AEM författarinstans:
 
 1. Logga in med administratörsbehörighet.
 1. Gå till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md).
 
    Till exempel [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr).
-1. Hitta **[!UICONTROL Adobe Granite Distribution - Krypterad lösenordsleverantör]**.
+1. Hitta **[!UICONTROL Adobe Granite Distribution - Encrypted Password Transport Secret Provider]**.
 1. Välj den befintliga konfiguration som ska öppnas för redigering (pennikon).
 
    Kontrollera egenskapen `name:` \- **`socialpubsync``publishUser`.**
@@ -157,26 +160,26 @@ På AEM-författarinstans:
 
    ![granite-password-trans](assets/granite-paswrd-trans.png)
 
-###  Apache Sling Distribution Agent - Queue Agents Factory {#apache-sling-distribution-agent-queue-agents-factory}
+### Apache Sling Distribution Agent - Queue Agents Factory {#apache-sling-distribution-agent-queue-agents-factory}
 
-Den här konfigurationen används för att konfigurera data som du vill synkronisera mellan utgivare. När data skapas/uppdateras i sökvägar som anges i **[!UICONTROL Tillåtna rötter]** aktiveras&quot;var/community/distribution/diff&quot; och den skapade replikatorn hämtar data från en utgivare och installerar dem på andra utgivare.
+Den här konfigurationen används för att konfigurera data som du vill synkronisera mellan utgivare. När data skapas/uppdateras i sökvägar som anges i **[!UICONTROL Allowed Roots]** aktiveras&quot;var/community/distribution/diff&quot; och den skapade replikatorn hämtar data från en utgivare och installerar dem på andra utgivare.
 
 <!--This section used to be an accordion until converted to straight Markdown. When accordions are enabled, revert-->
 
 ### Så här konfigurerar du data (nodsökvägar) att synkronisera
 
-I AEM-publiceringsinstans:
+AEM publiceringsinstans:
 
 1. Logga in med administratörsbehörighet.
 1. Gå till [webbkonsolen](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/configuring-osgi.html).
 
    Till exempel [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr).
-1. Hitta **[!UICONTROL Apache Sling Distribution Agent - köagentfabrik]**.
+1. Hitta **[!UICONTROL Apache Sling Distribution Agent - Queue Agents Factory]**.
 1. Välj den befintliga konfiguration som ska öppnas för redigering (pennikon).
 
    Verifiera namn: `socialpubsync` \-omvänd.
-1. Markera kryssrutan **[!UICONTROL Aktiverad]** och spara.
-1. Ange de nodsökvägar som ska replikeras i **[!UICONTROL tillåtna rötter]**.
+1. Markera **[!UICONTROL Enabled]** kryssrutan och spara.
+1. Ange de nodsökvägar som ska replikeras i **[!UICONTROL Allowed roots]**.
 1. Upprepa för varje `publish` instans.
 
    ![queue-agent-fact](assets/queue-agents-fact.png)
@@ -190,7 +193,7 @@ Om medlemskapet för en grupp i en utgivare inte uppdateras av andra utgivare m�
 
 ### Säkerställa medlemssynkronisering
 
-På varje AEM-publiceringsinstans:
+I varje AEM publiceringsinstans:
 
 1. Logga in med administratörsbehörighet.
 1. Gå till [webbkonsolen](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/configuring-osgi.html).
@@ -199,13 +202,13 @@ På varje AEM-publiceringsinstans:
 1. Hitta **[!UICONTROL Adobe Granite Distribution - Diff Observer Factory]**.
 1. Välj den befintliga konfiguration som ska öppnas för redigering (pennikon).
 
-   Verifiera **[!UICONTROL agentnamn]**: `socialpubsync` \-omvänd&amp;stämpel;ast;&amp;ast;.
-1. Markera kryssrutan **[!UICONTROL Aktiverad]** .
-1. Ange **rep`:members`**som`description`för propertyName i **[!UICONTROL sökta egenskapsnamn]**och Spara.
+   Verifiera **[!UICONTROL agent name]**: `socialpubsync` \-omvänd&amp;stämpel;ast;&amp;ast;.
+1. Markera **[!UICONTROL Enabled]** kryssrutan.
+1. Ange **rep`:members`**som`description`för propertyName i **[!UICONTROL looked properties names]**och Save.
 
    ![diff-obs](assets/diff-obs.png)
 
-###  Apache Sling Distribution Trigger - Factory för schemalagda utlösare {#apache-sling-distribution-trigger-scheduled-triggers-factory}
+### Apache Sling Distribution Trigger - Factory för schemalagda utlösare {#apache-sling-distribution-trigger-scheduled-triggers-factory}
 
 Med den här konfigurationen kan du konfigurera avsökningsintervallet (efter vilket utgivare pingas och ändringar hämtas av författaren) så att ändringarna synkroniseras mellan utgivare.
 
@@ -215,20 +218,21 @@ Författaren avfrågar utgivare var 30:e sekund (standard). Om det finns paket i
 
 ### Ändra avsökningsintervallet
 
-På AEM-författarinstans:
+AEM författarinstans:
 
 1. Logga in med administratörsbehörighet.
 1. Gå till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md), till exempel [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
-1. Hitta **[!UICONTROL utlösare för Apache Sling Distribution - Factory för schemalagda utlösare]**
+1. Sök **[!UICONTROL Apache Sling Distribution Trigger - Scheduled Triggers Factory]**
 
    * Välj den befintliga konfiguration som ska öppnas för redigering (pennikon)
    * Verifiera `Name:` **`socialpubsync`\-eduled-trigger **
    * Ange intervallet i sekunder till önskat intervall och spara.
+
    ![schemalagd utlösare](assets/scheduled-trigger.png)
 
-###  AEM Communities User Sync Listener {#aem-communities-user-sync-listener}
+### AEM Communities Sync Listener {#aem-communities-user-sync-listener}
 
-För problem i Sling-distributionen där det finns skillnader i prenumerationer och följande kontrollerar du om följande egenskaper i **[!UICONTROL AEM Communities User Sync Listener]** -konfigurationer är angivna:
+För problem i Sling-distributionen där det finns en diskrepans i prenumerationer och följande ska du kontrollera om följande egenskaper i **[!UICONTROL AEM Communities User Sync Listener]** konfigurationer är inställda:
 
 * NodeTypes
 * IgnorableProperties
@@ -237,13 +241,13 @@ För problem i Sling-distributionen där det finns skillnader i prenumerationer 
 
 <!--This section used to be an accordion until converted to straight Markdown. When accordions are enabled, revert-->
 
-### Så här synkroniserar du prenumerationer: följningar och meddelanden
+### Så här synkroniserar du prenumerationer:
 
-På varje AEM-publiceringsinstans:
+I varje AEM publiceringsinstans:
 
 1. Logga in med administratörsbehörighet.
 1. Gå till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md). Till exempel [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr).
-1. Sök efter **[!UICONTROL AEM Communities-användarsynkroniseringsavlyssnaren]**.
+1. Hitta **[!UICONTROL AEM Communities User Sync Listener]**.
 1. Välj den befintliga konfiguration som ska öppnas för redigering (pennikon).
 
    Verifiera namn: **`socialpubsync`\-schedule-trigger **
@@ -262,7 +266,7 @@ På varje AEM-publiceringsinstans:
    sling:OrderedFolder
 
    De nodtyper som anges i den här egenskapen synkroniseras och meddelandeinformationen (bloggar och konfigurationer som följs) synkroniseras mellan olika utgivare.
-1. Lägg till alla mappar som ska synkroniseras i **[!UICONTROL DistributedFolders]**. Exempel:
+1. Lägg till alla mappar att synkronisera i **[!UICONTROL DistributedFolders]**. Till exempel,
 
    segment/poäng
 
@@ -280,9 +284,9 @@ På varje AEM-publiceringsinstans:
 
    ![user-sync-listner](assets/user-sync-listner.png)
 
-###  Unikt försäljnings-ID {#unique-sling-id}
+### Unikt försäljnings-ID {#unique-sling-id}
 
-AEM-författarinstansen använder Sling ID för att identifiera varifrån data kommer och till vilka utgivare de behöver (eller inte behöver) skicka tillbaka paketet till.
+AEM författarinstans använder Sling ID för att identifiera varifrån data kommer och till vilka utgivare de behöver (eller inte behöver) skicka tillbaka paketet till.
 
 Se till att alla utgivare i en publiceringsgrupp har ett unikt Sling ID. Om Sling ID är samma för flera publiceringsinstanser i en publiceringsgrupp misslyckas användarsynkroniseringen. Eftersom författaren inte vet var paketet ska hämtas och var paketet ska installeras.
 
@@ -311,7 +315,7 @@ På varje publiceringsinstans:
    `use windows explorer and search for _sling.id.file_`
 
 1. Starta publiceringsinstansen. Vid start tilldelas den ett nytt Sling ID.
-1. Verifiera att **[!UICONTROL Sling ID]** nu är unikt.
+1. Verifiera att **[!UICONTROL Sling ID]** filen nu är unik.
 
 Upprepa dessa steg tills alla publiceringsinstanser har ett unikt Sling ID.
 
@@ -326,10 +330,10 @@ Användarsynkroniseringen kan avbrytas om `rep:cache `noderna synkroniseras mell
 
 ### För att säkerställa att uppdateringarna synkroniseras korrekt mellan utgivare
 
-På varje AEM-publiceringsinstans:
+I varje AEM publiceringsinstans:
 
 1. Gå till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md), till exempel [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr).
-1. Leta reda på **[!UICONTROL Apache Sling Distribution Packaging - Vaultpaketbyggaren, Factory Builder, namn]**: socialpubsync-vlt.
+1. Leta reda på **[!UICONTROL Apache Sling Distribution Packaging - Vault Package Builder Factory Builder name]**: socialpubsync-vlt.
 1. Välj redigeringsikonen.
 1. Lägg till två paketfilter:
 
@@ -350,13 +354,13 @@ På varje AEM-publiceringsinstans:
 Om Sling-distributionen misslyckas provar du följande felsökningssteg:
 
 1. **Kontrollera om det finns[felaktigt tillagda konfigurationer](../../help/sites-administering/sync.md#improperconfig).** Se till att flera konfigurationer inte läggs till eller redigeras, i stället bör de befintliga standardkonfigurationerna redigeras.
-1. **Kontrollera konfigurationer**. Se till att alla [konfigurationer](sync.md#bestpractices) är korrekt konfigurerade i din AEM Author-instans, vilket anges i [Bästa praxis](sync.md#main-pars-header-863110628).
+1. **Kontrollera konfigurationer**. Se till att alla [konfigurationer](sync.md#bestpractices) är korrekt inställda i din AEM Author-instans, vilket anges i [Bästa praxis](sync.md#main-pars-header-863110628).
 1. **Kontrollera behörigheter**. Om paketen inte är korrekt installerade kontrollerar du att den [behöriga användare](../../help/sites-administering/sync.md#createauthuser) som skapades i den första Publish-instansen har rätt åtkomstkontrollistor.
 
-   Om du vill validera detta ändrar du i stället för den [skapade behöriga användaren](../../help/sites-administering/sync.md#createauthuser) konfigurationen [Adobe Granite Distribution - Krypterad lösenordstransportprovider](../../help/sites-administering/sync.md#adobegraniteencpasswrd) på författarinstansen för att använda administratörens användarautentiseringsuppgifter. Försök sedan installera paketen igen. Om användarsynkroniseringen fungerar bra med administratörsautentiseringsuppgifter innebär det att den skapade publiceringsanvändaren inte har rätt åtkomstkontrollistor.
+   Om du vill validera detta ändrar du i stället för den [skapade behöriga användaren](../../help/sites-administering/sync.md#createauthuser) konfigurationen för [Adobe Granite Distribution - Krypterad lösenordstransportprovider](../../help/sites-administering/sync.md#adobegraniteencpasswrd) på författarinstansen för att använda administratörens användarautentiseringsuppgifter. Försök sedan installera paketen igen. Om användarsynkroniseringen fungerar bra med administratörsautentiseringsuppgifter innebär det att den skapade publiceringsanvändaren inte har rätt åtkomstkontrollistor.
 
-1. **Kontrollera konfigurationen** av Diff Observer Factory. Om bara specifika noder inte synkroniseras i hela publiceringsgruppen, till exempel, synkroniseras inte gruppmedlemmar, kontrollerar du att konfigurationen för [Adobe Granite Distribution - Diff Observer Factory](../../help/sites-administering/sync.md#diffobserver) är aktiverad och att **rep:members** anges i **sökta egenskapsnamn**.
-1. **Kontrollera konfigurationen för AEM Communities-användarsynkroniseringsavlyssnaren.** Om de användare som skapas synkroniseras men prenumerationer och följningar inte fungerar kontrollerar du att konfigurationen för AEM Communities User Sync Listener har:
+1. **Kontrollera konfigurationen** av Diff Observer Factory. Om bara specifika noder inte synkroniseras över hela publiceringsgruppen, till exempel, synkroniseras inte gruppmedlemmar, kontrollerar du att konfigurationen för [Adobe Granite Distribution - Diff Observer Factory](../../help/sites-administering/sync.md#diffobserver) är aktiverad och att **rep:members** anges i **sökta egenskapsnamn**.
+1. **Kontrollera konfigurationen för AEM Communities användarsynkroniseringsavlyssnare.** Om de användare som skapas synkroniseras men prenumerationer och följande inte fungerar kontrollerar du att konfigurationen för AEM Communities användarsynkroniseringsavlyssnaren har:
 
    * Nodtyper - inställda på **rep:User, nt:undefined**, **nt:resource**, **rep:ACL**, **sling:Folder** och **sling:OrderedFolder**
    * Ignorerbara noder - inställt på **.tokens**, **system** och **rep:cache**
@@ -381,21 +385,21 @@ Om Sling-distributionen misslyckas provar du följande felsökningssteg:
    Så här felsöker du:
 
    1. Inaktivera användarsynkronisering:
-   1. Logga in med administratörsbehörighet på AEM-författarinstansen.
+   1. Logga in AEM författarinstansen med administratörsbehörighet.
 
       1. Gå till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md). Till exempel [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr).
       1. Leta reda på konfigurationen **[!UICONTROL Apache Sling Distribution Agent - Sync Agents Factory]**.
 
-      1. Avmarkera kryssrutan **[!UICONTROL Aktiverad]** .
-      När användarsynkroniseringen inaktiveras på författarinstansen inaktiveras slutpunkterna (exporteraren och importören) och författarinstansen är statisk. De **[!UICONTROL virtuella]** paketen varken pingas eller hämtas av författaren.
+      1. Avmarkera **[!UICONTROL Enabled]** kryssrutan.
+      När användarsynkroniseringen inaktiveras på författarinstansen inaktiveras slutpunkterna (exporteraren och importören) och författarinstansen är statisk. Paketen **[!UICONTROL vlt]** varken pingas eller hämtas av författaren.
 
-      Om en användare nu skapas på en publiceringsinstans skapas **[!UICONTROL VLT]** -paketet i noden */var/sling/distribution/packages/ socialpubsync - vlt /data* . Och om de här paketen skickas av författaren till en annan tjänst. Du kan hämta och extrahera dessa data för att kontrollera vilka egenskaper som skickas till andra tjänster.
+      Om en användare nu skapas på en publiceringsinstans skapas paketet i **[!UICONTROL vlt]** */var/sling/distribution/packages/ social pubsync - vlt /data* -noden. Och om de här paketen skickas av författaren till en annan tjänst. Du kan hämta och extrahera dessa data för att kontrollera vilka egenskaper som skickas till andra tjänster.
 
    1. Gå till en utgivare och skapa en användare på utgivaren. Därför skapas händelser.
    1. Kontrollera [ordningen på loggar](sync.md#troubleshoot-sling-distribution-in-aem-communities)som skapas när användare skapas.
-   1. Kontrollera om ett **[!UICONTROL VLT]** -paket har skapats `/var/sling/distribution/packages/socialpubsync-vlt/data`.
-   1. Aktivera nu användarsynkronisering på AEM-författarinstansen.
-   1. På utgivaren ändrar du export- eller importslutpunkterna i **[!UICONTROL Apache Sling Distribution Agent - Sync Agents Factory]**.
+   1. Kontrollera om ett **[!UICONTROL vlt]** paket har skapats `/var/sling/distribution/packages/socialpubsync-vlt/data`.
+   1. Aktivera nu användarsynkronisering för AEM författarinstans.
+   1. I utgivaren ändrar du export- eller importslutpunkterna i **[!UICONTROL Apache Sling Distribution Agent - Sync Agents Factory]**.
 
       Vi kan hämta och extrahera paketdata för att kontrollera vilka egenskaper som skickas till andra utgivare och vilka data som går förlorade.
 
