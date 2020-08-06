@@ -11,6 +11,9 @@ topic-tags: operations
 discoiquuid: d816bf2e-5236-4084-b7c4-c32b72cdff97
 translation-type: tm+mt
 source-git-commit: e3fcf1a117b13392b7e530a09198982c6160cb7b
+workflow-type: tm+mt
+source-wordcount: '2548'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: e3fcf1a117b13392b7e530a09198982c6160cb7b
 
 **Om PDF Utilities Service**
 
-Tjänsten PDF Utilities kan konvertera mellan PDF- och XDP-filformat, ställa in och hämta PDF-dokumentegenskaper samt hantera XMP-metadata. Innan du konverterar ett PDF-dokument till ett annat format är det till exempel praktiskt att kontrollera egenskaperna för dokumentet för att avgöra vilken tjänståtgärd som ska anropas för konverteringen.
+Tjänsten PDF Utilities kan konvertera mellan PDF- och XDP-filformat, ställa in och hämta PDF-dokumentegenskaper samt hantera XMP metadata. Innan du konverterar ett PDF-dokument till ett annat format är det till exempel praktiskt att kontrollera egenskaperna för dokumentet för att avgöra vilken tjänståtgärd som ska anropas för konverteringen.
 
 Du kan utföra följande uppgifter med PDF-verktygstjänsten:
 
@@ -115,7 +118,7 @@ Konvertera PDF-dokument till XDP-dokument med PDF Utilities API (webbtjänst):
 
 [Konvertera PDF-dokument till XDP-dokument](pdf-utilities.md#converting-pdf-documents-into-xdp-documents)
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
 [Skapa en .NET-klientsammansättning som använder Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
 
@@ -202,7 +205,7 @@ Konvertera XDP-dokument till PDF-dokument med PDF Utilities API (web service API
 
 [Konvertera XDP-dokument till PDF-dokument](pdf-utilities.md#converting-xdp-documents-into-pdf-documents)
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
 [Skapa en .NET-klientsammansättning som använder Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
 
@@ -262,6 +265,7 @@ Hämta PDF-dokumentegenskaper med PDF Utilities API (Java):
 
    * Ett `com.adobe.idp.Document` objekt som representerar PDF-dokumentet.
    * Ett `PDFPropertiesOptionSpec` objekt som innehåller de egenskaper som ska utvärderas.
+
    Metoden returnerar ett `PDFPropertiesResult` objekt som innehåller resultatet av frågan.
 
 **Se även**
@@ -291,13 +295,14 @@ Hämta PDF-dokumentegenskaper med PDF Utilities webbtjänst-API:
 
    * Ett `BLOB` objekt som representerar PDF-dokumentet.
    * Ett `PDFPropertiesOptionSpec` objekt som innehåller de egenskaper som ska utvärderas.
+
    Metoden returnerar ett `PDFPropertiesResult` objekt som innehåller resultatet av frågan.
 
 **Se även**
 
 [Hämtar PDF-dokumentegenskaper](pdf-utilities.md#retrieving-pdf-document-properties)
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
 [Skapa en .NET-klientsammansättning som använder Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
 
@@ -383,6 +388,7 @@ Ange sparalternativ för PDF-dokument med PDF Utilities API (Java):
    * Ett `com.adobe.idp.Document` objekt som representerar PDF-dokumentet.
    * Ett `PDFUtilitySaveMode` objekt som innehåller det sparade format som ska användas.
    * Ett booleskt värde som används för att avgöra om tidigare inställningar ska åsidosättas.
+
    Metoden returnerar ett `com.adobe.idp.Document` objekt som är formaterat med det angivna sparformatet.
 
 1. Skicka PDF-dokumentet till en annan AEM Forms-åtgärd
@@ -422,9 +428,10 @@ Ange alternativ för att spara PDF-dokument med PDF Utilities AP (webbtjänst):
    * Ett `BLOB` objekt som representerar PDF-dokumentet.
    * Ett `PDFUtilitySaveMode` objekt som innehåller det sparade format som ska användas.
    * Ett booleskt värde som används för att avgöra om tidigare inställningar ska åsidosättas.
+
    Metoden returnerar ett `BLOB` objekt som är formaterat med det angivna sparformatet. Du kan sedan spara objektet som ett PDF-dokument.
 
-1. Skicka PDF-dokumentet till ett annat formulär
+1. Skicka PDF-dokumentet till en annan Forms-åtgärd
 
    * Skicka det returnerade `BLOB` objektet till en annan AEM Forms-åtgärd.
 
@@ -432,7 +439,7 @@ Ange alternativ för att spara PDF-dokument med PDF Utilities AP (webbtjänst):
 
 [Ställa in sparningsläge för PDF-dokument](pdf-utilities.md#setting-pdf-document-save-modes)
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
 [Skapa en .NET-klientsammansättning som använder Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
 
