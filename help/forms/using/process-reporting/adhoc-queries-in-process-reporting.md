@@ -1,8 +1,8 @@
 ---
 title: Ad hoc-frågor i processrapportering
 seo-title: Ad hoc-frågor i processrapportering
-description: Skapa anpassade frågor för att söka efter AEM Forms i JEE-process och uppgiftsinformation i Process Reporting
-seo-description: Skapa anpassade frågor för att söka efter AEM Forms i JEE-process och uppgiftsinformation i Process Reporting
+description: Skapa anpassade frågor för att söka efter AEM Forms om JEE-process och uppgiftsinformation i processrapportering
+seo-description: Skapa anpassade frågor för att söka efter AEM Forms om JEE-process och uppgiftsinformation i processrapportering
 uuid: bcd9eecd-5c83-402d-8533-a27f6b346191
 content-type: reference
 topic-tags: process-reporting
@@ -10,13 +10,16 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 812f9212-2732-4966-a7fa-389aa2332c7e
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '1686'
+ht-degree: 0%
 
 ---
 
 
 # Ad hoc-frågor i processrapportering {#ad-hoc-queries-in-process-reporting}
 
-Med ad hoc-frågor i processrapportering kan du skapa anpassade frågor som du kan använda för att söka efter process- och uppgiftsinformation för de AEM Forms-processinstanser som definieras i AEM Forms-miljön.
+Med ad hoc-frågor i processrapportering kan du skapa anpassade frågor som du kan använda för att söka efter process- och uppgiftsinformation för AEM Forms processinstanser som definieras i din AEM Forms-miljö.
 
 Dessutom kan ad hoc-frågor definieras med hjälp av egenskapsfilter för process och uppgift. Dessa filter kan sedan sparas och användas för att köra rapporterna senare.
 
@@ -69,7 +72,7 @@ Du använder process-/uppgiftssökning för att definiera filter för frågor i 
 
       >[!NOTE]
       >
-      >Fältlistan innehåller fält som är specifika för AEM Forms-processen/uppgiften.
+      >Fältlistan innehåller fält som är specifika för AEM Forms process/uppgift.
 
    1. Välj ett villkor.
 
@@ -120,25 +123,27 @@ Använd alternativen på panelen **Mina filter** för att **lägga till** ![lc_p
 
 1. Följande fält visas i resultatet av en processsökning:
 
-   * **Process-ID**: ID för processen. Fältet är hyperlänkat. Om du klickar på ett process-ID i det här fältet omdirigeras du till panelen **[!UICONTROL Processinformation]** för processen.
+   * **Process-ID**: ID för processen. Fältet är hyperlänkat. Om du klickar på ett process-ID i det här fältet omdirigeras du till **[!UICONTROL Process Details]** panelen för processen.
    * **Initierare**: Den AEM Forms-användare som startade processinstansen
    * **Skapad**: Datum och tid då processinstansen startades
    * **Slutförandetid**: Datum och tid då processinstansen slutfördes
    * **Varaktighet**: Varaktigheten från start till slutförande av processinstansen
    * **Status**: Processinstansens aktuella status.
+
    Som standard sorteras resultatet efter process-ID. Om du vill sortera resultatet efter något av fälten klickar du på fältrubriken.
 
    Eftersom sorteringen är en växlingsåtgärd kan du sortera resultatet i stigande ordning genom att klicka på en kolumnrubrik och sedan klicka på den igen för att sortera i fallande ordning.
 
    På samma sätt visas följande fält i ett resultat av en uppgiftssökning:
 
-   * **Aktivitets-ID**: Aktivitetens ID. Fältet är hyperlänkat. Om du klickar på ett uppgifts-ID i det här fältet omdirigeras du till panelen **[!UICONTROL Uppgiftsinformation]** för uppgiften.
+   * **Aktivitets-ID**: Aktivitetens ID. Fältet är hyperlänkat. Om du klickar på ett uppgifts-ID i det här fältet omdirigeras du till **[!UICONTROL Task Details]** panelen för uppgiften.
    * **Initierare**: Den AEM Forms-användare som startade processinstansen
    * **Skapad**: Datum och tid då processinstansen startades
 
    * **Slutförandetid**: Datum och tid då processinstansen slutfördes
    * **Varaktighet**: Varaktigheten från start till slutförande av processinstansen
    * **Status**: Processinstansens aktuella status.
+
    Som standard sorteras resultatet efter aktivitets-ID. Om du vill sortera resultatet efter något av fälten klickar du på fältrubriken. Resultatet sorteras efter den kolumn som indikeras av en mörk pil bredvid kolumnrubriken.
 
    Eftersom sorteringen är en växlingsåtgärd kan du sortera resultatet i stigande ordning genom att klicka på en fältrubrik och sedan sortera i fallande ordning genom att klicka på den igen. Den aktuella sorteringsordningen (stigande/fallande) anges med riktningen för den mörkare pilen bredvid kolumnrubriken.
@@ -150,6 +155,7 @@ Använd alternativen på panelen **Mina filter** för att **lägga till** ![lc_p
 
    * **Uppdatera**: Uppdaterar rapporten med de senaste data som finns i lagringen
    * **Exportera till CSV**: Exportera rapportdata till en kommaavgränsad fil.
+
    >[!NOTE]
    >
    >När du exporterar en rapport exporteras hela sökresultatet till en CSV-fil och inte bara till den aktuella sidan
@@ -195,6 +201,7 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
    * Processens längd
    * Processstatus
    * Processinitierare
+
    **Panelen längst upp till höger:** Visar följande information om de uppgifter som utgör den valda processen:
 
    * Aktivitets-ID
@@ -205,6 +212,7 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
    * Datum och tid för slutförande av uppgift
    * Aktivitetsvaraktighet
    * Uppgiftsstatus
+
    **Panelen längst ned till höger:** Visar följande information om processhistoriken för den valda processen:
 
    * Processnamn
@@ -212,6 +220,7 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
    * Datum och tid för processuppdatering
    * Datum och tid för slutförande av process
    * Processstatus
+
    **Resultat av aktivitetsinformation**
 
    ![task_details](assets/task_details.png)
@@ -226,12 +235,14 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
    * Aktivitetsvaraktighet
    * Uppgiftsstatus
    * Markerat uppgiftsflöde
+
    **Panelen längst upp till höger:** Visar följande information om de formulär som utgör den valda uppgiften:
 
    * Formulär-ID
    * Datum och tid då formuläret skapades
    * Datum och tid för formuläruppdatering
    * Formulärmallens URL
+
    **Panelen längst ned till höger:** Visar följande information om processhistoriken för den valda uppgiften:
 
    * Typ av aktivitetstilldelning
