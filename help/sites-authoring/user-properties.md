@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 6afbc889-c613-40e6-8a25-1570dff32d60
 translation-type: tm+mt
 source-git-commit: cfa09d2f1a78eac609cb6df7817234559c8d26dc
+workflow-type: tm+mt
+source-wordcount: '502'
+ht-degree: 2%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: cfa09d2f1a78eac609cb6df7817234559c8d26dc
 
 AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön.
 
-Med alternativet [Användare](/help/sites-authoring/user-properties.md#user-settings) i [sidhuvudet](/help/sites-authoring/basic-handling.md#the-header) och den tillhörande dialogrutan [Mina inställningar](#my-preferences) kan du ändra dina användaralternativ.
+Using the [User](/help/sites-authoring/user-properties.md#user-settings) option in the [header](/help/sites-authoring/basic-handling.md#the-header) and the associated [My Preferences](#my-preferences) dialog, you can modify your user options.
 
 ## Användarinställningar {#user-settings}
 
@@ -67,7 +70,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Visa skrivbordsåtgärder för Assets**
 
-   Det här alternativet kräver att AEM-datorprogrammet används.
+   Det här alternativet kräver AEM datorprogram.
 
 * **Anteckningsfärg**
 
@@ -84,7 +87,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
    * **Visa alltid exakt datum**: Det exakta datumet visas alltid (aldrig ett relativt datum).
    * **1 dag**: Det relativa datumet visas för datum inom en dag, annars visas ett exakt datum.
-   * **7 dagar (standard)**: Det relativa datumet visas för datum inom sju dagar, annars visas ett exakt datum.
+   * **7 dagar (standard)**: Det relativa datumet visas för datum inom sju dagar, i annat fall visas ett exakt datum.
    * **1 månad**: Det relativa datumet visas för datum inom en månad, annars visas ett exakt datum.
    * **1 år**: Det relativa datumet visas för datum inom ett år, annars visas ett exakt datum.
    * **Visa alltid relativt datum**: Exakta datum visas aldrig och endast relativa datum visas.
@@ -95,6 +98,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
    * [Kortkommandon för att redigera sidor](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
    * [Kortkommandon för konsoler](/help/sites-authoring/keyboard-shortcuts.md)
+
    Det här alternativet aktiverar kortkommandon. Som standard är de aktiverade, men kan inaktiveras om en användare har vissa tillgänglighetskrav.
 
 * **Använd klassisk redigeringsmiljö**
