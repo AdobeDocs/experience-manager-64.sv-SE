@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: fde9027b-9057-48c3-ae34-3f3258c5b371
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '761'
+ht-degree: 0%
 
 ---
 
@@ -19,17 +22,17 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 >[!NOTE]
 >
->Adobe planerar inte att ytterligare förbättra spårningen av öppnade/studsade e-postmeddelanden som skickas av AEM SMTP-tjänsten.
+>Adobe planerar inte att ytterligare förbättra spårningen av öppnade/studsade e-postmeddelanden som skickas av AEM SMTP-tjänst.
 >
->Rekommendationen är att [utnyttja Adobe Campaign och dess AEM-integrering](/help/sites-administering/campaign.md).
+>Rekommendationen är att [utnyttja Adobe Campaign och dess AEM integrering](/help/sites-administering/campaign.md).
 
 När du skickar ett nyhetsbrev till många användare finns det oftast några ogiltiga e-postadresser i listan. Skickar nyhetsbrev till adresserna som studsar tillbaka. AEM kan hantera dessa studsar och kan sluta skicka nyhetsbrev till adresserna när den konfigurerade studsräknaren har överskridits. Som standard är studsfrekvensen 3, men den kan konfigureras.
 
-Om du vill ställa in AEM så att det går att spåra studsade e-postmeddelanden måste du ställa in AEM så att en befintlig postlåda där avvisade e-postmeddelanden tas emot (vanligtvis är det den&quot;från&quot;-e-postadress som du anger var du skickar nyhetsbrevet) avgörs. AEM avsöker den här inkorgen och importerar alla e-postmeddelanden under sökvägen som anges i avsökningskonfigurationen. Ett arbetsflöde utlöses sedan för att söka efter de studsade e-postadresserna i användarna och uppdaterar användarens egenskapsvärde bounceCounter i enlighet med detta. När de konfigurerade maxgränserna har överskridits tas användaren bort från nyhetsbrevslistan.
+Om du vill ställa in AEM för att spåra utskickade e-postmeddelanden måste du ställa in AEM för att ringa en befintlig postlåda där uträknade e-postmeddelanden tas emot (vanligtvis är detta den&quot;från&quot;-e-postadress som du anger var du skickar nyhetsbrevet). AEM avsöker den här inkorgen och importerar alla e-postmeddelanden under sökvägen som anges i avsökningskonfigurationen. Ett arbetsflöde utlöses sedan för att söka efter de studsade e-postadresserna i användarna och uppdaterar användarens egenskapsvärde bounceCounter i enlighet med detta. När de konfigurerade maxgränserna har överskridits tas användaren bort från nyhetsbrevslistan.
 
 ## Konfigurera flödesimporteraren {#configuring-the-feed-importer}
 
-Med flödesimporteraren kan du importera innehåll från externa källor till din databas flera gånger. Med den här konfigurationen av flödesimportören kontrollerar AEM avsändarens postlåda om det finns avbrutna e-postmeddelanden.
+Med flödesimporteraren kan du importera innehåll från externa källor till din databas flera gånger. Med den här konfigurationen för flödesimporteraren kontrollerar AEM avsändarens postlåda om det finns utskickade e-postmeddelanden.
 
 Så här konfigurerar du feed-importeraren för att spåra utskickad e-post:
 
