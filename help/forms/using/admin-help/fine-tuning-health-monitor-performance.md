@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: b8f8bddc-0d38-4d5e-b33f-978f04bc16c6
 translation-type: tm+mt
 source-git-commit: f1558c7dec34649d00afcd04245ea552e8c6b978
+workflow-type: tm+mt
+source-wordcount: '418'
+ht-degree: 0%
 
 ---
 
 
 # Finjustera prestanda för hälsoövervakning{#fine-tuning-health-monitor-performance}
 
-När du samlar in systemstatistik som fyller i Health Monitor påverkas prestandan i AEM-formulärmiljön. Den här effekten kan styras genom att du anger de Java-alternativ som anges nedan på programservern.
+När du samlar in systemstatistik som fyller i hälsoövervakaren påverkas prestanda i AEM formulärmiljö. Den här effekten kan styras genom att du anger de Java-alternativ som anges nedan på programservern.
 
 <table> 
  <thead> 
@@ -29,17 +32,17 @@ När du samlar in systemstatistik som fyller i Health Monitor påverkas prestand
  </thead> 
  <tbody>
   <tr> 
-   <td><p>adobe.hälsothmonitor.enabled</p></td> 
+   <td><p>adobe.healthmonitor.enabled</p></td> 
    <td><p>Aktivera eller inaktivera hälsoövervakartråden</p></td> 
    <td><p>true</p></td> 
   </tr> 
   <tr> 
-   <td><p>adobe.cache.Statistics-enabled</p></td> 
+   <td><p>adobe.cache.statistics-enabled</p></td> 
    <td><p>Aktivera eller inaktivera Gemfire-cachelagring</p></td> 
    <td><p>true</p></td> 
   </tr> 
   <tr> 
-   <td><p>adobe.hälsothmonitor.refresh-interval</p></td> 
+   <td><p>adobe.healthmonitor.refresh-interval</p></td> 
    <td><p>Intervallet i millisekunder efter vilket hälsoövervakartråden samlar in statistiken</p></td> 
    <td><p>10 minuter (600 000 millisekunder)</p></td> 
   </tr> 
@@ -54,7 +57,7 @@ När du samlar in systemstatistik som fyller i Health Monitor påverkas prestand
    <td><p>600000</p></td> 
   </tr> 
   <tr> 
-   <td><p>adobe.workmanager.healthMonitor.enabled</p></td> 
+   <td><p>adobe.workmanager.healthmonitor.enabled</p></td> 
    <td><p>Den här egenskapen aktiverar eller inaktiverar insamling av statistik för Work Manager, till exempel antalet jobb eller arbetsobjekt.</p></td> 
    <td><p>true</p></td> 
   </tr> 
@@ -89,5 +92,5 @@ När du samlar in systemstatistik som fyller i Health Monitor påverkas prestand
 1. Under Serverinfrastruktur klickar du på arbetsflödet Java och formulär > Processdefinition.
 1. Klicka på Java Virtual Machine under Additional Properties (Ytterligare egenskaper).
 1. Skriv de argument du vill ha i rutan Allmänt om JVM-argument.
-1. Klicka på OK eller Använd och sedan på Spara direkt i huvudkonfigurationen.
+1. Klicka på OK eller Använd och sedan på Spara direkt i den överordnad konfigurationen.
 
