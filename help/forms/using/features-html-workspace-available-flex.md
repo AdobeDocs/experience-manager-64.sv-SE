@@ -1,8 +1,8 @@
 ---
-title: Funktioner i arbetsytan AEM Forms är inte tillgängliga i Flex-arbetsytan
-seo-title: Funktioner i arbetsytan AEM Forms är inte tillgängliga i Flex-arbetsytan
-description: Arbetsytan i AEM Forms är en nyhet utöver den Flex-baserade arbetsytan. Läs om skillnaderna i funktioner.
-seo-description: Arbetsytan i AEM Forms är en nyhet utöver den Flex-baserade arbetsytan. Läs om skillnaderna i funktioner.
+title: Funktioner i AEM Forms arbetsyta som inte finns på Flex arbetsyta
+seo-title: Funktioner i AEM Forms arbetsyta som inte finns på Flex arbetsyta
+description: AEM Forms arbetsyta är något nytt än Flex-baserade Workspace. Läs om skillnaderna i funktioner.
+seo-description: AEM Forms arbetsyta är något nytt än Flex-baserade Workspace. Läs om skillnaderna i funktioner.
 uuid: 2c22ce35-8383-4258-b6e3-3d823a453b27
 contentOwner: robhagat
 content-type: reference
@@ -11,13 +11,16 @@ topic-tags: forms-workspace
 discoiquuid: 66c3cdc4-0e4c-4597-a107-f457dd0cc166
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '405'
+ht-degree: 0%
 
 ---
 
 
-# Funktioner i arbetsytan AEM Forms är inte tillgängliga i Flex-arbetsytan {#features-of-aem-forms-workspace-not-available-in-flex-workspace}
+# Funktioner i AEM Forms arbetsyta som inte finns på Flex arbetsyta {#features-of-aem-forms-workspace-not-available-in-flex-workspace}
 
-Arbetsytan i AEM Forms är ett innovativt sätt än den Flex-baserade arbetsytan, och innehåller funktioner som hjälper till att förbättra affärsintegrationen och användarproduktiviteten.
+AEM Forms arbetsyta är ett innovativt sätt än Flex-baserade arbetsytor och innehåller funktioner som förbättrar företagsintegrering och användarproduktivitet.
 
 Här följer en kort översikt över dessa funktioner. Mer information finns i de artiklar som hör till i slutet av den här artikeln.
 
@@ -35,7 +38,7 @@ Bilder, eller avatarer, för inloggade användare kan nu visas i det övre högr
 
 ## Stöd för integrering av tredjepartsprogram {#support-for-integrating-third-party-applications}
 
-Funktionen för integrering med tredjepartsprogram kan användas för att överföra dina arbetsflöden helt till arbetsytan i AEM Forms. Du kan t.ex. återge brevmallar för hantering av korrespondenshantering som uppgifter i arbetsytan i AEM Forms. Därför kan du slutföra uppgiften utan att lämna arbetsytan i AEM Forms. Mer information finns i [Integrera korrespondenshantering i arbetsytan](/help/forms/using/integrating-correspondence-management-html-workspace.md) för AEM-formulär.
+Funktionen för integrering med tredjepartsprogram kan användas för att helt överföra dina arbetsflöden till AEM Forms arbetsyta. Du kan till exempel återge brevmallar för hantering av korrespondenshantering som uppgifter i AEM Forms-arbetsytefönstret. Därför kan du slutföra uppgiften utan att lämna arbetsytan i AEM Forms. Mer information finns i [Integrera korrespondenshantering i AEM Forms-arbetsytan](/help/forms/using/integrating-correspondence-management-html-workspace.md) .
 
 ## Stöd för anpassad aktivitetsåtergivning baserat på slutanvändarens enhet {#support-for-custom-task-rendering-based-on-end-user-s-device}
 
