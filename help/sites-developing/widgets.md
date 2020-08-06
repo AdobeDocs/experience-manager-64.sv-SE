@@ -1,8 +1,8 @@
 ---
 title: Använda och utöka widgetar (Classic UI)
 seo-title: Använda och utöka widgetar (Classic UI)
-description: AEM:s webbaserade gränssnitt använder AJAX och andra moderna webbläsartekniker för att möjliggöra WYSIWYG-redigering och -formatering av innehåll som författare gör direkt på webbsidan
-seo-description: AEM:s webbaserade gränssnitt använder AJAX och andra moderna webbläsartekniker för att möjliggöra WYSIWYG-redigering och -formatering av innehåll som författare gör direkt på webbsidan
+description: AEM webbaserade gränssnitt använder AJAX och andra moderna webbläsartekniker för att möjliggöra WYSIWYG-redigering och -formatering av innehåll från författare direkt på webbsidan
+seo-description: AEM webbaserade gränssnitt använder AJAX och andra moderna webbläsartekniker för att möjliggöra WYSIWYG-redigering och -formatering av innehåll från författare direkt på webbsidan
 uuid: e8dfa140-dab7-4e08-a790-d703adf86d6f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,19 +11,22 @@ content-type: reference
 discoiquuid: 508f4fab-dd87-4306-83ae-12e544b8b723
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '5182'
+ht-degree: 0%
 
 ---
 
 
 # Använda och utöka widgetar (Classic UI){#using-and-extending-widgets-classic-ui}
 
-Adobe Experience Managers webbaserade gränssnitt använder AJAX och andra moderna webbläsartekniker för att möjliggöra WYSIWYG-redigering och -formatering av innehåll som författare direkt på webbsidan.
+Adobe Experience Manager webbaserade gränssnitt använder AJAX och andra moderna webbläsartekniker för att möjliggöra WYSIWYG-redigering och -formatering av innehåll som författarna skapar direkt på webbsidan.
 
-Adobe Experience Manager (AEM) använder [ExtJS](https://www.sencha.com/) -widgetbiblioteket, som innehåller de mycket optimerade elementen i användargränssnittet som fungerar i alla de viktigaste webbläsarna och gör det möjligt att skapa användargränssnitt på skrivbordsnivå.
+Adobe Experience Manager (AEM) använder [ExtJS](https://www.sencha.com/) -widgetbiblioteket, som innehåller mycket eleganta gränssnittselement som fungerar i alla de viktigaste webbläsarna och gör det möjligt att skapa användargränssnitt i skrivbordsmiljö.
 
-Dessa widgetar ingår i AEM och kan användas av alla webbplatser som byggs med AEM, utöver de som används av AEM.
+Dessa widgetar ingår i AEM och kan användas av alla webbplatser som byggs med AEM, utöver AEM.
 
-En fullständig referens till alla tillgängliga widgetar i AEM finns i dokumentationen [för](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html) widgetens API eller i [listan över befintliga xtyper](/help/sites-developing/xtypes.md). Dessutom finns det många exempel som visar hur du använder ExtJS-ramverket på webbplatsen [Sencha](https://www.sencha.com/products/extjs/examples/) , ramverkets ägare.
+En fullständig referens till alla tillgängliga widgetar i AEM finns i [widgetens API-dokumentation](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html) eller i [listan över befintliga xtyper](/help/sites-developing/xtypes.md). Dessutom finns det många exempel som visar hur du använder ExtJS-ramverket på webbplatsen [Sencha](https://www.sencha.com/products/extjs/examples/) , ramverkets ägare.
 
 På den här sidan finns information om hur du använder och utökar widgetar. Först beskrivs hur du [inkluderar klientsidig kod på en sida](#including-the-client-sided-code-in-a-page). Sedan beskrivs några exempelkomponenter som har skapats för att illustrera grundläggande användning och tillägg. Dessa komponenter är tillgängliga i paketet **Använda ExtJS-widgetar** på **paketresursen**.
 
@@ -100,8 +103,7 @@ Så här inkluderar du klientbiblioteket i sidkomponentens jsp:
 
    `<ui:includeClientLib categories="<category-name1>, <category-name2>, ..."/>`
 
-   
-där `<category-nameX>` är namnet på klientbiblioteket.
+   där `<category-nameX>` är namnet på klientbiblioteket.
 
 * att endast inkludera javascript-kod:
 
@@ -119,25 +121,24 @@ I vissa fall bör ett klientbibliotek endast vara tillgängligt i redigeringslä
 
 ### Komma igång med exemplen {#getting-started-with-the-samples}
 
-Om du vill följa självstudiekurserna på den här sidan installerar du paketet **Använda ExtJS-widgetar** i en lokal AEM-instans och skapar en exempelsida där komponenterna ska inkluderas. Så här gör du:
+Om du vill följa självstudiekurserna på den här sidan installerar du paketet **Använda ExtJS-widgetar** i en lokal AEM och skapar en exempelsida där komponenterna ska inkluderas. Så här gör du:
 
-1. I din AEM-instans hämtar du paketet **Using ExtJS Widgets (v01)** från Package Share och installerar paketet. Projektet skapas `extjstraining` nedan `/apps` i databasen.
+1. Hämta paketet **Using ExtJS Widgets (v01)** från Package Share i AEM instansen och installera paketet. Projektet skapas `extjstraining` nedan `/apps` i databasen.
 
-1. Inkludera klientbiblioteket som innehåller skripten (js) och formatmallen (css) i head-taggen för geometrixx-sidan jsp, eftersom du inkluderar exempelkomponenterna på en ny sida i **Geometrixx** -grenen:
+1. Inkludera klientbiblioteket som innehåller skripten (js) och formatmallen (css) i head-taggen för geometrixx-sidan jsp, eftersom du tar med exempelkomponenterna på en ny sida i **Geometrixx** :
 
-   
-i **CRXDE Lite** öppnar du filen `/apps/geometrixx/components/page/headlibs.jsp` och lägger till `cq.extjstraining` kategorin i den befintliga `<ui:includeClientLib>` taggen enligt följande:
+   Öppna filen i **CRXDE Lite** `/apps/geometrixx/components/page/headlibs.jsp` och lägg till `cq.extjstraining` kategorin i den befintliga `<ui:includeClientLib>` taggen enligt följande:
 
    `%><ui:includeClientLib categories="apps.geometrixx-main, cq.extjstraining"/><%`
 
-1. Skapa en ny sida i grenen **Geometrixx** nedan `/content/geometrixx/en/products` och anropa den **med ExtJS-widgetar**.
+1. Skapa en ny sida i **Geometrixx** nedan `/content/geometrixx/en/products` och anropa den **med ExtJS-widgetar**.
 
 1. Gå i designläge och lägg till alla komponenter i gruppen **Using ExtJS Widgets** i designen av Geometrixx
 1. Gå tillbaka i redigeringsläge: komponenterna i gruppen **med ExtJS-widgetar** är tillgängliga i Sidekick.
 
 >[!NOTE]
 >
->Exemplen på den här sidan baseras på exempelinnehållet i Geometrixx, som inte längre levereras med AEM, som har ersatts av We.Retail. I dokumentet [We.Retail Reference Implementation](/help/sites-developing/we-retail.md#we-retail-geometrixx) finns information om hur du hämtar och installerar Geometrixx.
+>Exemplen på den här Geometrixx baseras på exempelinnehållet, som inte längre levereras med AEM, som har ersatts av We.Retail. I dokumentet [We.Retail Reference Implementation](/help/sites-developing/we-retail.md#we-retail-geometrixx) finns information om hur du hämtar och installerar Geometrixx.
 
 ### Grundläggande dialogrutor {#basic-dialogs}
 
@@ -211,7 +212,7 @@ Så här använder du dialogrutan En panel:
    1. Klicka på **Spara alla** för att spara ändringarna.
    1. Kopiera noden: `/apps/extjstraining/components/dialogbasics/singlepanel`
    1. Klistra in den kopierade noden nedan: `/apps/extjstraining/components/dialogbasics`
-   1. Markera noden: och `/apps/extjstraining/components/dialogbasics/Copy of singlepanel`byt namn på den `dialog`.
+   1. Markera noden: `/apps/extjstraining/components/dialogbasics/Copy of singlepanel`och ge den ett nytt namn `dialog`.
 
 1. Redigera komponenten: dialogrutan visas enligt följande:
 
@@ -242,8 +243,7 @@ Så här använder du dialogrutan Flera paneler:
 
 1. Ersätt dialogrutan **Dialogrutan Grundläggande** dialogruta med dialogrutan **Flera paneler** :
 
-   
-Följ stegen som beskrivs i [exempel 2: Dialogrutan En panel](#example-single-panel-dialog)
+   Följ stegen som beskrivs i [exempel 2: Dialogrutan En panel](#example-single-panel-dialog)
 
 1. Redigera komponenten: dialogrutan visas enligt följande:
 
@@ -272,8 +272,7 @@ Så här använder du dialogrutan **Multimedia** :
 
 1. Ersätt dialogrutan **Dialog Basics** -komponent med dialogrutan **Rich** :
 
-   
-Följ stegen som beskrivs i [exempel 2: Dialogrutan En panel](#example-single-panel-dialog)
+   Följ stegen som beskrivs i [exempel 2: Dialogrutan En panel](#example-single-panel-dialog)
 
 1. Redigera komponenten: dialogrutan visas enligt följande:
 
@@ -412,8 +411,7 @@ Så här använder du dialogrutan **Godtycklig** :
 
 1. Ersätt dialogrutan för komponenten **Dynamisk dialog** med dialogrutan **Godtycklig** :
 
-   
-Följ stegen som beskrivs i [exempel 2: Dialogrutan En panel](#example-single-panel-dialog)
+   Följ stegen som beskrivs i [exempel 2: Dialogrutan En panel](#example-single-panel-dialog)
 
 1. Redigera komponenten: dialogrutan visas enligt följande:
 
@@ -463,8 +461,7 @@ Så här använder du dialogrutan **Växla fält** :
 
 1. Ersätt dialogrutan för komponenten **Dynamisk dialogruta** med dialogrutan **Växla fält** :
 
-   
-Följ stegen som beskrivs i [exempel 2: Dialogrutan En panel](#example-single-panel-dialog)
+   Följ stegen som beskrivs i [exempel 2: Dialogrutan En panel](#example-single-panel-dialog)
 
 1. Redigera komponenten: dialogrutan visas enligt följande:
 
@@ -508,8 +505,7 @@ Dialogrutan **Anpassad** flerfältswidget:
 
       `/apps/extjstraining/clientlib/js/exercises.js`
 
-      
-och returnerar 2 alternativ.
+      och returnerar 2 alternativ.
 
 * Definieras av `multifield` noden vid:
 
@@ -529,7 +525,7 @@ Den anpassade widgeten för flera fält (xtype = `ejstcustom`):
 
 * Utökar [`CQ.form.CompositeField`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.CompositeField) widgeten.
 
-* Har tre fält: `hiddenField` (Textfield), `allowField` (ComboBox) och `otherField` (TextField)
+* Har tre fält: `hiddenField` (TextField), `allowField` (ComboBox) och `otherField` (TextField)
 
 * Åsidosätter `CQ.Ext.Component#initComponent` för att lägga till de tre fälten:
 
@@ -600,8 +596,7 @@ Så här använder du den **anpassade** widgetens widgetbaserade dialogruta:
 
 1. Ersätt dialogrutan med komponenten **Anpassade widgetar** med dialogrutan **Anpassad** trädbläddring:
 
-   
-Följ stegen som beskrivs i [exempel 2: Dialogrutan En panel](#example-single-panel-dialog)
+   Följ stegen som beskrivs i [exempel 2: Dialogrutan En panel](#example-single-panel-dialog)
 
 1. Redigera komponenten: dialogrutan visas enligt följande:
 
@@ -653,8 +648,7 @@ Så här använder du den **plugin-baserade** dialogrutan RTF-redigerare:
 
 1. Ersätt dialogrutan för komponenten **Anpassade widgetar** med den plugin-baserade dialogrutan **RTF-redigerare** :
 
-   
-Följ stegen som beskrivs i [exempel 2: Dialogrutan En panel](#example-single-panel-dialog)
+   Följ stegen som beskrivs i [exempel 2: Dialogrutan En panel](#example-single-panel-dialog)
 
 1. Redigera komponenten.
 1. Klicka på den sista ikonen till höger (den med fyra pilar). Ange en bana och klicka på **OK**:
@@ -773,7 +767,7 @@ Komponenten visas enligt följande:
 
 #### Exempel 1: Standardstödraster {#example-default-grid}
 
-I den färdiga versionen visas ett fönster med statiska data i tabellformat i **komponenten Stödrasteröversikt** . I det här exemplet är logiken inbäddad i komponentjsp på två sätt:
+I den färdiga versionen visas ett fönster med statiska data i ett tabellformat i **stödrasteröversiktskomponenten** . I det här exemplet är logiken inbäddad i komponentjsp på två sätt:
 
 * den generiska logiken definieras mellan &lt;script>&lt;/script>-taggar
 * den specifika logiken finns i en separat .js-fil och är länkad till den i jsp-filen. Med den här inställningen kan du enkelt växla mellan de två logiken (statisk/dynamisk) genom att kommentera de önskade &lt;script>-taggarna.
@@ -889,5 +883,5 @@ JavaScript-koden som refereras i komponent-jsp (`referencesearch.js`) definierar
    * avlyssnaren ser till att `afteredit` när en cell i kolumnen &quot;**Test**&quot; har redigerats:
 
       * egenskapen &#39; `test`&#39; för noden vid sökvägen som definieras av kolumnen &quot;**jcr:path**&quot; ställs in i databasen med cellens värde
-      * om POST lyckas läggs värdet till i `store` objektet, annars avvisas det
+      * om POSTEN lyckas läggs värdet till i `store` objektet, annars avvisas det
 
