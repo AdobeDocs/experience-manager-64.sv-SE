@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 5faf6ee5-9242-48f4-87a8-ada887a3be1e
 translation-type: tm+mt
 source-git-commit: be46329cfe5c6fee28f616f2257e215df402e94d
+workflow-type: tm+mt
+source-wordcount: '1661'
+ht-degree: 0%
 
 ---
 
@@ -42,7 +45,7 @@ För att LDAP ska fungera med AEM måste du skapa tre OSGi-konfigurationer:
 >
 >Titta på [Oak&#39;s External Login Module - Authenticating with LDAP and Beyond](https://docs.adobe.com/content/ddc/en/gems/oak-s-external-login-module---authenticating-with-ldap-and-beyon.html#) to deep dive External Login Modules.
 >
->Ett exempel på hur du konfigurerar Experience Manager med Apache DS finns i [Konfigurera Adobe Experience Manager 6.4 för att använda Apache Directory Service.](https://helpx.adobe.com/experience-manager/using/configuring-aem64-apache-directory-service.html)
+>Ett exempel på hur du konfigurerar Experience Manager med Apache DS finns i [Konfigurera Adobe Experience Manager 6.4 att använda katalogtjänsten Apache.](https://helpx.adobe.com/experience-manager/using/configuring-aem64-apache-directory-service.html)
 
 ## Konfigurera LDAP-identitetsleverantören {#configuring-the-ldap-identity-provider}
 
@@ -216,7 +219,7 @@ Följande konfigurationsalternativ är tillgängliga:
 
 | **JAAS-rankning** | Ange rangordningen (dvs. sorteringsordningen) för den här inloggningsmodulposten. Posterna sorteras i fallande ordning (dvs. högre rangordnade konfigurationer kommer först). |
 |---|---|
-| **JAAS-kontrollflagga** | Egenskap som anger om en LoginModule är OBLIGATORISK, REQUISITE, SUFFICIENT eller OPTIONAL.Mer information om vad dessa flaggor betyder finns i JAAS-konfigurationsdokumentationen. |
+| **JAAS-kontrollflagga** | Egenskap som anger om en LoginModule är OBLIGATORISK, REQUISITE, SUFFICIENT eller OPTIONAL.Mer information om flaggornas betydelse finns i JAAS-konfigurationsdokumentationen. |
 | **JAAS Realm** | Sfärnamnet (eller programnamnet) som LoginModule registreras mot. Om inget sfärnamn anges registreras LoginModule med en standardsfärk som konfigurerats i Felix JAAS-konfigurationen. |
 | **Namn på identitetsleverantör** | Identitetsleverantörens namn. |
 | **Namn på synkroniseringshanterare** | Synkroniseringshanterarens namn. |
@@ -239,7 +242,7 @@ AEM 6 kan konfigureras för autentisering med LDAP över SSL genom att följa ne
 
 ### Skapa SSL-certifikat {#creating-ssl-certificates}
 
-Självsignerade certifikat kan användas när AEM konfigureras för autentisering med LDAP via SSL. Nedan visas ett exempel på en arbetsmetod för att generera certifikat som ska användas med AEM.
+Självsignerade certifikat kan användas när AEM konfigureras för autentisering med LDAP via SSL. Nedan visas ett exempel på ett arbetssätt för att generera certifikat som ska användas med AEM.
 
 1. Kontrollera att du har ett SSL-bibliotek installerat och att det fungerar. I den här proceduren används OpenSSL som exempel.
 
@@ -255,7 +258,7 @@ Självsignerade certifikat kan användas när AEM konfigureras för autentiserin
 
    `openssl req -new -x509 -days [number of days for certification] -key certificatefile.key -out root-ca.crt -config CA/openssl.cnf`
 
-1. Kontrollera att allt är i rätt ordning genom att kontrollera det nya certifikatet:
+1. Inspect det nya certifikatet för att säkerställa att allt är i rätt ordning:
 
    `openssl x509 -noout -text -in root-ca.crt`
 
@@ -289,17 +292,17 @@ Om du vill aktivera felsökningsloggning måste du:
 
 ## Ett ord om gruppanknytning {#a-word-on-group-affiliation}
 
-Användare som synkroniseras via LDAP kan ingå i olika grupper i AEM. Dessa grupper kan vara externa LDAP-grupper som läggs till i AEM som en del av synkroniseringsprocessen, men de kan också vara grupper som läggs till separat och inte ingår i det ursprungliga LDAP-grupptillhörighetsschemat.
+Användare som synkroniseras via LDAP kan ingå i olika grupper i AEM. Dessa grupper kan vara externa LDAP-grupper som läggs till AEM som en del av synkroniseringsprocessen, men de kan också vara grupper som läggs till separat och inte ingår i det ursprungliga LDAP-grupptillhörighetsschemat.
 
-I de flesta fall kan dessa grupper läggas till av en lokal AEM-administratör eller av någon annan identitetsleverantör.
+I de flesta fall kan dessa grupper läggas till av en lokal AEM eller av någon annan identitetsleverantör.
 
-Om en användare tas bort från en grupp på LDAP-servern återspeglas ändringen även på AEM-sidan vid synkronisering. Alla andra grupptillhörigheter för användaren som inte lades till av LDAP finns dock kvar.
+Om en användare tas bort från en grupp på LDAP-servern återspeglas ändringen även på AEM sida vid synkroniseringen. Alla andra grupptillhörigheter för användaren som inte lades till av LDAP finns dock kvar.
 
 AEM identifierar och hanterar rensning av användare från externa grupper genom att använda `rep:externalId` egenskapen. Den här egenskapen läggs till automatiskt för alla användare eller grupper som synkroniseras med Synchronization Handler och den innehåller information om den ursprungliga identitetsleverantören.
 
 Mer information finns i dokumentationen för Apache Oak om [användar- och gruppsynkronisering](https://jackrabbit.apache.org/oak/docs/security/authentication/usersync.html).
 
-## Kända fel {#known-issues}
+## Known issues {#known-issues}
 
 Om du tänker använda LDAP över SSL måste du kontrollera att de certifikat du använder skapas utan alternativet Netscape-kommentar. Om det här alternativet är aktiverat misslyckas autentiseringen med ett SSL-handskakningsfel.
 
