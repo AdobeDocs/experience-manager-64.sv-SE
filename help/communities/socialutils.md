@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 4ade0d6b-041e-4a2f-98f8-3b8fcae0fb29
 translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+workflow-type: tm+mt
+source-wordcount: '305'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Paketet **com.adobe.cq.social.ugcbase.SocialUtils** har tagits bort i AEM 6.1.
 
 I följande tabell visas de metoder som ska användas i stället för SocialUtils-metoder.
 
-## Paket för SocialResourceUtilities {#socialresourceutilities-package}
+## Paket för SocialResourceUtilities  {#socialresourceutilities-package}
 
 | Metoder i com.adobe.cq.social.srp.utilities.api.SocialResourceUtilities |
 |---|
