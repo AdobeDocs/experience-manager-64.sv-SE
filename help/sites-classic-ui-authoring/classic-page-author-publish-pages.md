@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 80c9f4b7-d59f-4ed1-a457-300756962708
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1071'
+ht-degree: 0%
 
 ---
 
@@ -47,6 +50,7 @@ Du kan även publicera/avpublicera en sida direkt eller vid ett fördefinierat d
 >
 >* Ett arbetsflöde kommer att utlösas för att meddela lämplig person om din begäran om publicering.
 >* Ett meddelande om detta visas (under en kort tidsperiod).
+
 >
 
 
@@ -81,7 +85,7 @@ Du kan aktivera sidor i webbplatskonsolen. När du har öppnat en sida och ändr
 
    ![chlimage_1-135](assets/chlimage_1-135.png)
 
-1. AEM WCM aktiverar det valda innehållet. Den eller de publicerade sidorna visas i [webbplatskonsolen](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) (markerat som grön) med information om vem som aktiverat innehållet samt datum och tid för aktiveringen.
+1. AEM WCM aktiverar det markerade innehållet. Den eller de publicerade sidorna visas i [webbplatskonsolen](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) (markerat som grön) med information om vem som aktiverat innehållet samt datum och tid för aktiveringen.
 
    ![screen_shot_2012-02-08at14335pm](assets/screen_shot_2012-02-08at14335pm.png)
 
