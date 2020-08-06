@@ -36,11 +36,11 @@ Java API Quick Start (SOAP) är tillgängligt för API:t för användarhanterare
 
 [Snabbstart (SOAP-läge): Hantera inställningsnoderna programmatiskt med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstart i Programmering med AEM-formulär baseras på dokumentet om du använder ett annat operativsystem, till exempel Unix, och ersätter Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart i Programmering med AEM formulär baseras på dokumentet om du använder ett annat operativsystem, till exempel Unix, och ersätter Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 
 ## Snabbstart (SOAP-läge): Lägga till användare med Java API {#quick-start-soap-mode-adding-users-using-the-java-api}
