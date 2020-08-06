@@ -22,17 +22,17 @@ Skapa en interaktiv kommunikation med alla byggstenar
 
 ![utforma interaktiv kommunikation](assets/styleaf.png)
 
-Den här självstudiekursen är ett steg i [Skapa din första interaktiva kommunikationsserie](/help/forms/using/create-your-first-interactive-communication.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga självstudiekurserna.
+Den här självstudiekursen är ett steg i [Skapa din första interaktiva kommunikationsserie](/help/forms/using/create-your-first-interactive-communication.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
 
 När du har skapat alla byggstenar, t.ex. formulärdatamodell, dokumentfragment, mallar och teman för webbversionen, kan du börja skapa en interaktiv kommunikation.
 
-Interaktiv kommunikation kan levereras via två kanaler: Tryck och webb. Du kan också skapa en interaktiv kommunikationskanal med utskriftskanalen som master. Skriv ut som huvudalternativ för webbkanal säkerställer att innehållet, arvet och databindningen för webbkanalen hämtas från utskriftskanalen. Det ser också till att ändringarna som görs i utskriftskanalen synkroniseras i webbkanalen. De som skapar interaktiv kommunikation får dock bryta arvet för vissa komponenter i webbkanalen.
+Interaktiv kommunikation kan levereras via två kanaler: Tryck och webb. Du kan också skapa en interaktiv kommunikationskanal med utskriftskanalen som överordnad. Med alternativet Skriv ut som överordnad för webbkanalen kan du säkerställa att innehållet, arvet och databindningen för webbkanalen hämtas från Print-kanalen. Det ser också till att ändringarna som görs i utskriftskanalen synkroniseras i webbkanalen. De som skapar interaktiv kommunikation får dock bryta arvet för vissa komponenter i webbkanalen.
 
 I den här självstudiekursen får du hjälp med att skapa interaktiv kommunikation för tryck- och webbkanaler. I slutet av den här självstudiekursen kan du:
 
 * Skapa interaktiv kommunikation för tryckkanalen
 * Skapa interaktiv kommunikation för webbkanalen
-* Skapa trycksaker och webbinteraktiv kommunikation med Skriv ut som mall
+* Skapa trycksaker och interaktiv webbkommunikation med Överordnad trycksaksproduktion
 
 ## Skapa interaktiv kommunikation för tryck och webb utan synkronisering {#create-interactive-communications-for-print-and-web-with-no-synchronization}
 
@@ -50,14 +50,15 @@ Nedan följer en lista över resurser som redan har skapats i den här självstu
 
 **Bilder:** PayNow och ValueAddedServices
 
-1. Logga in på AEM-författarinstansen och navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
+1. Logga in på AEM författarinstans och navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 1. Tryck på **Skapa** och välj **Interaktiv kommunikation**. Guiden **Skapa interaktiv kommunikation** visas.
 1. Ange **create_first_ic** i fälten **Titel** och **Namn** . Välj **FDM_Create_First_IC** som formulärdatamodell och tryck på **Nästa**.
 1. I guiden **Kanaler** :
 
-   1. Ange **create_first_ic_print_template** som utskriftsmall och tryck på **Select**. Kontrollera att kryssrutan **Använd Skriv ut som mallsida för webbkanal** inte är markerad.
+   1. Ange **create_first_ic_print_template** som utskriftsmall och tryck på **Select**. Kontrollera att kryssrutan **Använd Skriv ut som Överordnad för webbkanal** inte är markerad.
    1. Ange **mappen Create_First_IC_templates** > **Create_First_IC_Web_Template** som webbmall och tryck på **Select**.
    1. Tryck på **Skapa**.
+
    Ett bekräftelsemeddelande visas om att den interaktiva kommunikationen har skapats.
 
 1. Tryck på **Redigera** för att öppna den interaktiva kommunikationen i den högra rutan.
@@ -110,14 +111,15 @@ Nedan följer en lista över resurser som redan har skapats i kursen och som beh
 
 **Bilder:** PayNowWeb och ValueAddedServicesWeb
 
-1. Logga in på AEM-författarinstansen och navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
+1. Logga in på AEM författarinstans och navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 1. Tryck på **Skapa** och välj **Interaktiv kommunikation**. Guiden **Skapa interaktiv kommunikation** visas.
 1. Ange **create_first_ic** i fälten **Titel** och **Namn** . Välj **FDM_Create_First_IC** som formulärdatamodell och tryck på **Nästa**.
 1. I guiden **Kanaler** :
 
-   1. Ange **create_first_ic_print_template** som utskriftsmall och tryck på **Select**. Kontrollera att kryssrutan **Använd Skriv ut som mallsida för webbkanal** inte är markerad.
+   1. Ange **create_first_ic_print_template** som utskriftsmall och tryck på **Select**. Kontrollera att kryssrutan **Använd Skriv ut som Överordnad för webbkanal** inte är markerad.
    1. Ange **mappen Create_First_IC_templates** > **Create_First_IC_Web_Template** som webbmall och tryck på **Select**.
    1. Tryck på **Skapa**.
+
    Ett bekräftelsemeddelande visas om att den interaktiva kommunikationen har skapats.
 
 1. Tryck på **Redigera** för att öppna den interaktiva kommunikationen i den högra rutan.
@@ -169,7 +171,8 @@ Nedan följer en lista över resurser som redan har skapats i kursen och som beh
    1. Tryck på textkomponenten och välj ![Redigera](assets/edit.png) (Redigera).
    1. I avsnittet **Kantlinje** anger du **1,5 px** som **Kantbredd**, väljer **Heldragen** som **Kantformat****** **** och anger¥46px¥ somKantradie¥.
    1. Välj Röd som bakgrundsfärg för knappen i avsnittet **Bakgrund** .
-   1. I fältet **Marginal** för avsnittet **Dimensioner och position** trycker du på ikonen **Redigera samtidigt** och anger **högermarginalen** till **450 px**. Fälten Överkant, Underkant och Vänster är tomma.
+   1. I fältet **Marginal** för **Dimensioner och position** trycker du på ikonen **Redigera samtidigt** och anger **högermarginalen** till **450 px**. Fälten Överkant, Underkant och Vänster är tomma.
+
    ![ic_web_hyperlink](assets/ic_web_hyperlink.png)
 
 1. Tryck på **målområdet Betala nu** och tryck **+** för att lägga till en **Image** -komponent.
@@ -185,25 +188,26 @@ Nedan följer en lista över resurser som redan har skapats i kursen och som beh
 
 ## Skapa interaktiv kommunikation för tryck och webb med automatisk synkronisering {#create-interactive-communications-for-print-and-web-with-auto-synchronization}
 
-Du kan också skapa en interaktiv kommunikation genom att aktivera automatisk synkronisering mellan utskrifts- och webbkanaler. Om du vill aktivera automatisk synkronisering väljer du Skriv ut som mall när du skapar den interaktiva kommunikationen. Om du väljer alternativet Skriv ut som mallsida kommer innehållet, arvet och databindningen för webbkanalen att härledas från utskriftskanalen. Det ser också till att de ändringar som görs i utskriftskanalen återspeglas i webbkanalen.
+Du kan också skapa en interaktiv kommunikation genom att aktivera automatisk synkronisering mellan utskrifts- och webbkanaler. Om du vill aktivera automatisk synkronisering väljer du Skriv ut som överordnad när du skapar den interaktiva kommunikationen. Om du väljer alternativet Skriv ut som överordnad kommer webbkanalens innehåll, arv och databindning att härledas från utskriftskanalen. Det ser också till att de ändringar som görs i utskriftskanalen återspeglas i webbkanalen.
 
 Utför följande steg för att härleda webbkanalsinnehållet med hjälp av Print channel:
 
-1. Logga in på AEM-författarinstansen och navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
+1. Logga in på AEM författarinstans och navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 1. Tryck på **Skapa** och välj **Interaktiv kommunikation**. Guiden **Skapa interaktiv kommunikation** visas.
 1. Ange **create_first_ic** i fälten **Titel** och **Namn** . Välj **FDM_Create_First_IC** som formulärdatamodell och tryck på **Nästa**.
 1. I guiden **Kanaler** :
 
    1. Ange **create_first_ic_print_template** som utskriftsmall och tryck på **Select**.
-   1. Markera kryssrutan **Använd utskrift som mallsida för webbkanal** .
+   1. Markera kryssrutan **Använd utskrift som Överordnad för webbkanal** .
    1. Ange **mappen Create_First_IC_templates** > **Create_First_IC_Web_Template** som webbmall och tryck på **Select**.
    1. Tryck på **Skapa**.
+
    Ett bekräftelsemeddelande visas om att den interaktiva kommunikationen har skapats.
 
 1. Tryck på **Redigera** för att öppna den interaktiva kommunikationen i den högra rutan.
 1. Utför steg 6-15 i [Skapa interaktiv kommunikation för](#create-interactive-communication-for-print-channel) tryckkanaler.
 1. Tryck på fliken **Kanaler** i den vänstra rutan och tryck på **Webb** för att automatiskt generera innehåll för webbkanalen från Print-kanalen.
-1. När kryssrutan **Använd utskrift som mallsida för webbkanal** är markerad i steg 4 genereras innehållet och bindningarna automatiskt för webbkanalen från utskriftskanalen.
+1. När kryssrutan **Använd Skriv ut som Överordnad för webbkanal** har markerats i steg 4 genereras innehåll och bindningar automatiskt för webbkanalen från utskriftskanalen.
 
    Utskriftskanalinnehållet infogas under webbkanalens mallinnehåll. Om du vill ändra webbkanalsinnehållet som har genererats automatiskt från utskriftskanalen kan du avbryta arvet för alla målområden.
 
@@ -221,6 +225,7 @@ Utför följande steg för att härleda webbkanalsinnehållet med hjälp av Prin
    * Faktureringssammanfattningskomponent till faktureringssammanfattningspanelen
    * Sammanfattning av avgiftskomponenten till panelen Sammanfattning av avgifter
    * Layoutfragment (tabell) till panelen Specificerade samtal
+
    ![ic_web_content_tree](assets/ic_web_content_tree.png)
 
 1. Upprepa steg 13-18 i [Create Interactive Communication for Web channel](#create-interactive-communication-for-web-channel) för att lägga in hyperlänkarna **Pay Now** och **Subscribe** i webbkanalen i Interactive Communication.
