@@ -17,7 +17,7 @@ Adobe Experience Manager (AEM) Assets konfigureras med varumärkesportalen via A
 
 >[!NOTE]
 >
->Konfigurering av AEM-resurser med varumärkesportalen via Adobe I/O stöds i AEM 6.4.8.0 och senare.
+>Det finns stöd för att konfigurera AEM Assets med varumärkesportalen via Adobe i/O i AEM 6.4.8.0 och senare.
 >
 >Tidigare konfigurerades varumärkesportalen i Classic UI via äldre OAuth Gateway, som använder JWT-tokenutbyte för att erhålla en IMS Access-token för auktorisering.
 
@@ -30,8 +30,8 @@ Adobe Experience Manager (AEM) Assets konfigureras med varumärkesportalen via A
 
 
 I den här hjälpen beskrivs följande två användningsområden:
-* [Ny konfiguration](#configure-new-integration-64): Om du är en ny Brand Portal-användare och vill konfigurera AEM Assets-författarinstansen med Brand Portal kan du skapa en ny konfiguration på Adobe I/O.
-* [Uppgraderingskonfiguration](#upgrade-integration-64): Om du är en befintlig Brand Portal-användare med en AEM Assets-författarinstans konfigurerad med Brand Portal i äldre OAuth Gateway rekommenderar vi att du tar bort de befintliga konfigurationerna och skapar en ny konfiguration på Adobe I/O.
+* [Ny konfiguration](#configure-new-integration-64): Om du är en ny Brand Portal-användare och vill konfigurera din AEM Assets-författarinstans med Brand Portal kan du skapa en ny konfiguration i Adobe I/O.
+* [Uppgraderingskonfiguration](#upgrade-integration-64): Om du är en befintlig Brand Portal-användare med din AEM Assets-författarinstans konfigurerad med Brand Portal på äldre OAuth Gateway rekommenderar vi att du tar bort de befintliga konfigurationerna och skapar en ny konfiguration på Adobe I/O.
 
 Informationen baseras på antagandet att alla som läser den här hjälpen känner till följande tekniker:
 
@@ -43,7 +43,7 @@ Informationen baseras på antagandet att alla som läser den här hjälpen känn
 
 Du behöver följande för att konfigurera AEM Assets med varumärkesportalen:
 
-* En AEM Assets-författarinstans som är igång och körs med senaste Service Pack.
+* En pågående AEM Assets-författarinstans med senaste Service Pack.
 * Varumärkesportalens klientorganisations-URL.
 * En användare med systemadministratörsbehörighet på IMS-organisationen för varumärkesportalens klient.
 
@@ -54,25 +54,25 @@ Du behöver följande för att konfigurera AEM Assets med varumärkesportalen:
 
 ### Hämta och installera AEM 6.4 {#aemquickstart}
 
-Vi rekommenderar att du har AEM 6.4 för att skapa en AEM-författarinstans. Om du inte har AEM installerat och körs hämtar du det från följande platser:
+Vi rekommenderar att du AEM 6.4 för att konfigurera en AEM författarinstans. Om du inte har AEM igång kan du hämta det från följande platser:
 
-* Om du redan är AEM-kund hämtar du AEM 6.4 från [Adobes licenswebbplats](http://licensing.adobe.com).
+* Om du redan är AEM kan du ladda ned AEM 6.4 från webbplatsen [](http://licensing.adobe.com)Adobe Licensing.
 
-* Om du är Adobe-partner kan du beställa AEM 6.4 via [Adobe Partner Training Program](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) .
+* Om du är Adobe-partner ska du använda [Adobe Partner Training Program](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) för att beställa AEM 6.4.
 
-När du har laddat ned AEM finns instruktioner om hur du konfigurerar en AEM-författarinstans i [Distribuera och underhålla](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/deploy.html#defaultlocalinstall).
+När du har laddat ned AEM finns instruktioner om hur du konfigurerar en AEM författarinstans i [Distribuera och underhålla](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/deploy.html#defaultlocalinstall).
 
-### Hämta och installera AEM Senaste Service Pack {#servicepack}
+### Hämta och installera AEM senaste Service Pack {#servicepack}
 
 Detaljerade instruktioner finns i
 
-* [Versionsinformation om AEM 6.4 Service Pack](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)
+* [AEM 6.4 Service Pack versionsinformation](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)
 
-**Kontakta kundtjänst** om du inte hittar det senaste AEM-paketet eller Service Pack.
+**Kontakta kundtjänst** om du inte kan hitta det senaste AEM eller Service Pack.
 
 ## Skapa en konfiguration {#configure-new-integration-64}
 
-Utför följande steg i den listade sekvensen om du konfigurerar AEM Resurser med varumärkesportalen för första gången:
+Utför följande steg i den listade sekvensen om du konfigurerar AEM Assets med varumärkesportalen för första gången:
 1. [Hämta ett offentligt certifikat](#public-certificate)
 1. [Skapa en Adobe I/O-integrering](#createnewintegration)
 1. [Skapa en konfiguration för IMS-kontot](#create-ims-account-configuration)
@@ -223,7 +223,7 @@ Gör så här för att skapa molntjänstkonfigurationen för varumärkesportalen
 
    ![](assets/create-cloud-service.png)
 
-1. Klicka på **[!UICONTROL Save and Close]**. Molnkonfigurationen har skapats. Din instans av AEM Assets-författaren är nu integrerad med innehavaren av varumärkesportalen.
+1. Klicka på **[!UICONTROL Save and Close]**. Molnkonfigurationen har skapats. Din AEM Assets-författarinstans är nu integrerad med innehavaren av varumärkesportalen.
 
 ### Testa konfigurationen {#test-integration}
 
@@ -277,12 +277,12 @@ Gör så här för att skapa molntjänstkonfigurationen för varumärkesportalen
    >
    >Undvik att inaktivera någon av replikeringsagenterna eftersom det kan göra att replikeringen av vissa resurser misslyckas.
 
-Varumärksportal har konfigurerats med din AEM Assets-författarinstans. Du kan nu:
+Varumärkesportalen har konfigurerats med din AEM Assets-författarinstans. Du kan nu:
 
 * [Publicera resurser från AEM Assets till varumärkesportalen](../assets/brand-portal-publish-assets.md)
 * [Publicera mappar från AEM Assets till varumärkesportalen](../assets/brand-portal-publish-folder.md)
 * [Publicera samlingar från AEM Assets till varumärkesportalen](../assets/brand-portal-publish-collection.md)
-* [Konfigurera Resurshantering](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) så att användarna på varumärkesportalen kan bidra och publicera resurser till AEM Assets.
+* [Konfigurera Resurshantering](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) så att användarna på varumärkesportalen kan bidra och publicera resurser på AEM Assets.
 
 ## Uppgraderingskonfiguration {#upgrade-integration-64}
 
@@ -293,7 +293,7 @@ Utför följande steg i den listade sekvensen för att uppgradera befintliga kon
 
 ### Verifiera jobb som körs {#verify-jobs}
 
-Kontrollera att inget publiceringsjobb körs på AEM Assets-författarinstansen innan du gör några ändringar. För detta kan du verifiera alla fyra replikeringsagenterna och se till att kön är idealisk/tom.
+Kontrollera att inget publiceringsjobb körs på din AEM Assets-författarinstans innan du gör några ändringar. För detta kan du verifiera alla fyra replikeringsagenterna och se till att kön är idealisk/tom.
 
 1. Logga in på din AEM Assets-författarinstans
 
@@ -330,7 +330,7 @@ Så här tar du bort den befintliga konfigurationen:
 
    ![](assets/delete-replication-agent.png)
 
-1. Navigera till `/etc/cloudservices/mediaportal` och ta bort **molntjänstkonfigurationen**.
+1. Navigera till `/etc/cloudservices/mediaportal` och ta bort **Cloud Servicens konfiguration**.
 
    ![](assets/delete-cloud-service.png)
 
@@ -339,7 +339,7 @@ Så här tar du bort den befintliga konfigurationen:
    ![](assets/delete-mac-user.png)
 
 
-Nu kan du [skapa konfiguration](#configure-new-integration-64) på din AEM 6.4-författarinstans på Adobe I/O.
+Nu kan du [skapa en konfiguration](#configure-new-integration-64) på AEM 6.4-författarinstansen i Adobe I/O.
 
 
 
