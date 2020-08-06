@@ -1,6 +1,6 @@
 ---
-title: Förbättra och skydda AEM-formulär i OSGi-miljö
-seo-title: Förbättra och skydda AEM-formulär i OSGi-miljö
+title: Förbättra och skydda AEM formulär i OSGi-miljö
+seo-title: Förbättra och skydda AEM formulär i OSGi-miljö
 description: Lär dig rekommendationer och bästa praxis för att skydda AEM Forms på OSGi-server.
 seo-description: Lär dig rekommendationer och bästa praxis för att skydda AEM Forms på OSGi-server.
 uuid: abca7e7c-38c3-44f5-8d8a-4615cfce26c6
@@ -8,11 +8,14 @@ topic-tags: Security
 discoiquuid: b1bd04bf-0d6d-4e6b-8c7c-eafd1a24b5fe
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1463'
+ht-degree: 0%
 
 ---
 
 
-# Förbättra och skydda AEM-formulär i OSGi-miljö {#hardening-and-securing-aem-forms-on-osgi-environment}
+# Förbättra och skydda AEM formulär i OSGi-miljö {#hardening-and-securing-aem-forms-on-osgi-environment}
 
 Lär dig rekommendationer och bästa praxis för att skydda AEM Forms på OSGi-server.
 
@@ -35,11 +38,11 @@ AEM Forms är mycket anpassningsbart och kan fungera i många olika miljöer. Vi
 
 Säkerhetsluckor i transportskiktet är bland de första hoten mot alla Internetanslutna eller intranätriktade programservrar. I det här avsnittet beskrivs processen att härja värdar i nätverket mot dessa sårbarheter. Den behandlar nätverkssegmentering, TCP/IP-stackhärdning (Transmission Control Protocol/Internet Protocol) och användning av brandväggar för värdskydd.
 
-### Begränsa öppna slutpunkter {#limit-open-endpoints}
+### Begränsa öppna slutpunkter  {#limit-open-endpoints}
 
-En organisation kan ha en extern brandvägg som begränsar åtkomsten mellan en slutanvändare och en AEM Forms-publiceringsgrupp. Organisationen kan också ha en intern brandvägg som begränsar åtkomsten mellan en publiceringsgrupp och andra element i organisationen (till exempel författarinstans, bearbetningsinstans, databaser). Tillåt att brandväggar ger åtkomst till ett begränsat antal AEM Forms-URL:er för slutanvändare och inom organisationselement:
+En organisation kan ha en extern brandvägg som begränsar åtkomsten mellan en slutanvändare och AEM Forms publiceringsgrupp. Organisationen kan också ha en intern brandvägg som begränsar åtkomsten mellan en publiceringsgrupp och andra element i organisationen (till exempel författarinstans, bearbetningsinstans, databaser). Tillåt att brandväggar ger åtkomst till ett begränsat antal AEM Forms URL:er för slutanvändare och inom organisationselement:
 
-#### Konfigurera extern brandvägg {#configure-external-firewall}
+#### Konfigurera extern brandvägg  {#configure-external-firewall}
 
 Du kan konfigurera en extern brandvägg så att vissa AEM Forms-URL:er kan ansluta till Internet. Åtkomst till dessa URL:er krävs för att fylla i eller skicka ett anpassningsbart formulär, HTML5, korrespondenshanteringsbrev eller för att logga in på en AEM Forms-server:
 
@@ -74,7 +77,7 @@ Du kan konfigurera en extern brandvägg så att vissa AEM Forms-URL:er kan anslu
     </ul> </td> 
   </tr>
   <tr>
-   <td>Formulärportal </td> 
+   <td>Forms Portal </td> 
    <td>
     <ul> 
      <li>/content/forms/portal/</li> 
@@ -93,7 +96,7 @@ Du kan konfigurera en extern brandvägg så att vissa AEM Forms-URL:er kan anslu
  </tbody>
 </table>
 
-#### Konfigurera intern brandvägg {#configure-internal-firewall}
+#### Konfigurera intern brandvägg  {#configure-internal-firewall}
 
 Du kan konfigurera den interna brandväggen så att vissa AEM Forms-komponenter (till exempel författarinstans, bearbetningsinstans, databaser) kan kommunicera med publiceringsservergruppen och andra interna komponenter som omnämns i topologidiagrammet:
 
@@ -112,7 +115,7 @@ Du kan konfigurera den interna brandväggen så att vissa AEM Forms-komponenter 
    <td>/content/forms/fp/*</td> 
   </tr>
   <tr>
-   <td>Tilläggsserver för formulärarbetsflöde (AEM Forms på JEE-server)</td> 
+   <td>Tilläggsserver för Forms Workflow (AEM Forms på JEE-server)</td> 
    <td>/soap/sdk</td> 
   </tr>
  </tbody>
@@ -126,13 +129,13 @@ Som standard är resurser som är tillgängliga på publiceringsnoderna tillgän
 * /etc.clientlibs/fd/&amp;ast;
 * /libs/fd/&amp;ast;
 
-## Hantera blankettdata på ett säkert sätt {#securely-handle-forms-data}
+## Hantera blankettdata på ett säkert sätt  {#securely-handle-forms-data}
 
 AEM Forms lagrar data till fördefinierade platser och tillfälliga mappar. Ni bör skydda uppgifterna för att förhindra obehörig användning.
 
 ### Ställ in periodisk rensning av temporär mapp {#setup-periodic-cleanup-of-temporary-folder}
 
-När du konfigurerar formulär för bifogade filer, verifiera eller förhandsgranska komponenter, lagras motsvarande data på publiceringsnoderna på /tmp/fd/. Data rensas regelbundet. Du kan ändra standardjobbet för datarensning så att det blir mer aggressivt. Om du vill ändra det schemalagda jobbet för att rensa data öppnar du AEM Web Console, öppnar AEM Forms Temporary Storage Cleaning Task och ändrar Cron-uttrycket.
+När du konfigurerar formulär för bifogade filer, verifiera eller förhandsgranska komponenter, lagras motsvarande data på publiceringsnoderna på /tmp/fd/. Data rensas regelbundet. Du kan ändra standardjobbet för datarensning så att det blir mer aggressivt. Om du vill ändra det jobb som schemalagts för att rensa data öppnar du AEM Web Console, öppnar AEM Forms Temporary Storage Cleaning Task och ändrar Cron-uttrycket.
 
 I ovanstående scenarier sparas data endast för autentiserade användare. Dessutom skyddas uppgifterna med åtkomstkontrollistor. Att ändra datarensningen är alltså ytterligare ett steg för att skydda informationen.
 
@@ -149,9 +152,9 @@ Använd autentiseringsuppgifterna för bearbetningsservern för tjänsten AEM DS
 Använd användarkonton med nödvändig minimibehörighet för att konfigurera datakällor för formulärdatamodell (FDM). Med administratörskontot kan obehöriga få tillgång till metadata och schemaentiteter.\
 Dataintegrering innehåller även metoder för att godkänna FDM-tjänstförfrågningar. Du kan infoga auktoriseringsmekanismer för före och efter körning för att validera en begäran. Tjänstförfrågningar genereras när ett formulär fylls i i förväg, när ett formulär skickas och tjänster anropas via en regel.
 
-**** Auktorisering före bearbetning: Du kan använda auktoriseringen för förbehandling för att validera en begärans äkthet innan du kör den. Du kan använda indata, tjänster och information om förfrågningar för att tillåta eller stoppa körningen av begäran. Du kan returnera ett dataintegreringsundantag för OPERATION_ACCESS_DENIED om körningen stoppas. Du kan också ändra klientbegäran innan du skickar den för körning. Du kan till exempel ändra indata och lägga till ytterligare information.
+**Auktorisering före bearbetning:** Du kan använda auktoriseringen för förbehandling för att validera en begärans äkthet innan du kör den. Du kan använda indata, tjänster och information om förfrågningar för att tillåta eller stoppa körningen av begäran. Du kan returnera ett dataintegreringsundantag för OPERATION_ACCESS_DENIED om körningen stoppas. Du kan också ändra klientbegäran innan du skickar den för körning. Du kan till exempel ändra indata och lägga till ytterligare information.
 
-**** Auktorisering efter bearbetning: Du kan använda auktoriseringen efter bearbetningen för att validera och kontrollera resultaten innan du returnerar resultaten till den som gjorde begäran. Du kan också filtrera, rensa och infoga ytterligare data i resultaten.
+**Auktorisering efter bearbetning:** Du kan använda auktoriseringen efter bearbetningen för att validera och kontrollera resultaten innan du returnerar resultaten till den som gjorde begäran. Du kan också filtrera, rensa och infoga ytterligare data i resultaten.
 
 ### Begränsa användaråtkomst {#limit-user-access}
 
@@ -183,16 +186,16 @@ En annan uppsättning användarprofiler krävs för att skapa, publicera och bea
 **Vid behandlande författare:**
 
 * Vid användning av fjärrspara och skicka skapar du en användare med behörighet att läsa, skapa och ändra innehåll/formulär/fp-sökvägen för crx-databasen.
-* Lägg till användare i användargruppen för arbetsflöden så att en användare kan använda AEM-inkorgsprogram.
+* Lägg till användare i arbetsflödets användargrupp för att göra det möjligt för en användare att använda AEM inkorgsprogram.
 
 ## Säkra intranätselement i en AEM Forms-miljö {#secure-intranet-elements-of-an-aem-forms-environment}
 
-Vanligtvis körs tillägget Bearbetningskluster och Formulärarbetsflöde (AEM Forms på JEE) bakom en brandvägg. De här anses säkra. Du kan fortfarande utföra några steg för att förbättra dessa miljöer:
+Vanligtvis körs Bearbetningskluster och tilläggsprogram för Forms Workflow (AEM Forms på JEE) bakom en brandvägg. De här anses säkra. Du kan fortfarande utföra några steg för att förbättra dessa miljöer:
 
 ### Kluster för säker bearbetning {#secure-processing-cluster}
 
 Ett bearbetningskluster körs i redigeringsläge, men använder det inte för utvecklingsaktiviteter. Tillåt inte att en normal användare inkluderas i innehållsförfattare och formuläranvändargrupper i ett bearbetningskluster.
 
-### Använd AEM:s bästa praxis för att skydda en AEM Forms-miljö {#use-aem-best-practices-to-secure-an-aem-forms-environment}
+### Använd AEM bästa praxis för att skydda en AEM Forms-miljö {#use-aem-best-practices-to-secure-an-aem-forms-environment}
 
-Det här dokumentet innehåller instruktioner som är specifika för AEM Forms-miljön. Du bör se till att den underliggande AEM-installationen är säker när den distribueras. Detaljerade instruktioner finns i dokumentationen för [AEM Security Checklist](/help/sites-administering/security-checklist.md) .
+Det här dokumentet innehåller instruktioner som är specifika för AEM Forms-miljön. Du bör se till att den underliggande AEM är säker vid driftsättning. Detaljerade anvisningar finns i dokumentationen [AEM Säkerhetschecklista](/help/sites-administering/security-checklist.md) .
