@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 62c6826d-bc8b-4177-a3bb-134ebafed8d2
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '6177'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +26,7 @@ Vissa är omedelbart tillgängliga via sidbrytaren, andra är också tillgängli
 
 >[!CAUTION]
 >
->I det här avsnittet behandlas endast komponenter som finns i en färdig AEM-installation.
+>I det här avsnittet behandlas endast komponenter som är tillgängliga i en AEM.
 >
 >Beroende på vilken instans du har kan du ha utvecklat anpassade komponenter explicit för dina behov. De kan till och med ha samma namn som vissa av de komponenter som beskrivs här.
 
@@ -69,7 +72,7 @@ Du kan använda bildfiler med följande filnamnstillägg med komponenten Adaptiv
 
 >[!CAUTION]
 >
->&amp;ast;&amp;ast;Animerade GIF-filer stöds inte i AEM för adaptiva återgivningar.
+>&amp;ast;&amp;ast; Animerade GIF-filer stöds inte i AEM för adaptiva återgivningar.
 
 #### Bildstorlekar och -kvalitet {#images-sizes-and-quality}
 
@@ -209,7 +212,7 @@ Dessa finns på två flikar:
 
 >[!NOTE]
 >
->Du kan skapa en anpassad karusellkomponent för Adobe Experience Manager som visar digitala resurser i AEM DAM. Mer information finns i [Skapa anpassade Carousel-komponenter för Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/custom-carousel-components.html).
+>Du kan skapa en anpassad karusellkomponent för Adobe Experience Manager som visar digitala resurser som finns i AEM DAM. Mer information finns i [Skapa anpassade Carousel-komponenter för Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/custom-carousel-components.html).
 
 ### Diagram {#chart}
 
@@ -245,7 +248,7 @@ I följande exempel visas ett exempel på diagramdata följt av det resulterande
 
 >[!NOTE]
 >
->Du kan skapa en anpassad AEM-diagramkontroll som visar data i AEM JCR. Mer information finns i [Visa Adobe Experience Manager-data i ett diagram](https://helpx.adobe.com/experience-manager/using/displaying-experience-manager-data-chart.html).
+>Du kan skapa en anpassad AEM som visar data i AEM JCR. Mer information finns i [Visa Adobe Experience Manager-data i ett diagram](https://helpx.adobe.com/experience-manager/using/displaying-experience-manager-data-chart.html).
 
 ### Innehållsfragment {#content-fragment}
 
@@ -281,7 +284,7 @@ I följande exempel visas komponenten Download i Geometrixx:
 
 ### External {#external}
 
-Med den externa programintegrationskomponenten (**extern**) kan du bädda in externa program på din AEM-sida med hjälp av en iframe.
+Med den externa programintegrationskomponenten (**extern**) kan du bädda in externa program på AEM med hjälp av en iframe.
 
 * **Extern**
 
@@ -301,7 +304,7 @@ Med den externa programintegrationskomponenten (**extern**) kan du bädda in ext
 
       Definiera storleken på iframe
 
-Den externa tillämpningen är integrerad i AEM-sidans styckesystem. till exempel när du använder ett Target-program av `https://en.wikipedia.org/wiki/Main_Page`:
+Den externa tillämpningen är integrerad i den AEM sidans styckesystem. till exempel när du använder ett Target-program av `https://en.wikipedia.org/wiki/Main_Page`:
 
 ![chlimage_1-27](assets/chlimage_1-27.png)
 
@@ -311,17 +314,17 @@ Den externa tillämpningen är integrerad i AEM-sidans styckesystem. till exempe
 
 ### Flash {#flash}
 
-Med Flash-komponenten kan du läsa in en Flash-film. Du kan dra en Flash-resurs från innehållssökaren till komponenten eller använda dialogrutan:
+Med komponenten Flash kan du läsa in en Flash-film. Du kan dra en Flash-resurs från innehållssökaren till komponenten eller använda dialogrutan:
 
 * **Flash**
 
-   * **Flash-film**
+   * **Flash movie**
 
       Flash-filmfilen. Dra en resurs från innehållssökaren eller klicka för att öppna ett bläddringsfönster.
 
    * **Storlek**
 
-      Mått i pixlar på visningsområdet där filmen finns.
+      Dimensioner i pixlar i visningsområdet där filmen finns.
 
 * **Alternativ bild**
 
@@ -531,7 +534,7 @@ Du kan konfigurera:
 
 ### Referens {#reference}
 
-Med **komponenten Reference** kan du referera till text från en annan sida på AEM-webbplatsen (i den aktuella instansen). Innehållet i det refererade stycket visas sedan som om det fanns på den aktuella sidan. Innehållet uppdateras när källstycket ändras (du kan behöva uppdatera sidan).
+Med **komponenten Reference** kan du referera till text från en annan sida på AEM webbplats (i den aktuella instansen). Innehållet i det refererade stycket visas sedan som om det fanns på den aktuella sidan. Innehållet uppdateras när källstycket ändras (du kan behöva uppdatera sidan).
 
 * **Styckereferens**
 
@@ -543,7 +546,7 @@ Om du vill ange sökvägen till ett stycke måste du lägga till ett suffix till
 
 `.../jcr:content/par/<paragraph-ID>`
 
-Exempel:
+Till exempel:
 
 `/content/geometrixx-outdoors/en/equipment/biking/cajamara/jcr:content/par/similar-products`
 
@@ -551,7 +554,7 @@ Förutom att referera till ett visst stycke, kan sökvägen även ändras för a
 
 `/jcr:content/par`
 
-Exempel:
+Till exempel:
 
 `/content/geometrixx-outdoors/en/equipment/biking/cajamara/jcr:content/par`
 
@@ -639,7 +642,7 @@ Om det behövs kan du konfigurera:
 
 ### Bildspel {#slideshow}
 
-Med den här komponenten kan du läsa in en serie bilder som ska visas som ett bildspel på sidan.Du kan lägga till eller ta bort bilder och tilldela varje rubrik. Under Avancerat kan du även ange storleken på visningsområdet.
+Med den här komponenten kan du läsa in en serie bilder som ska visas som ett bildspel på sidan.Du kan lägga till eller ta bort bilder och tilldela varje rubrik. Under Avancerat kan du även ange visningsområdets storlek.
 
 Du kan konfigurera:
 
@@ -729,7 +732,7 @@ Mer information om komponenten Text och funktionerna i RTF-redigeraren finns på
 
 #### Redigering på plats {#inplace-editing}
 
-Förutom det dialogbaserade redigeringsläget Rich Text, innehåller AEM även [Inplace Editing](/help/sites-authoring/editing-content.md), som gör det möjligt att redigera texten direkt när den visas i layouten på sidan.
+Förutom det dialogbaserade redigeringsläget Rich Text innehåller AEM även [Inplace Editing](/help/sites-authoring/editing-content.md), som gör att du kan redigera texten direkt när den visas i layouten på sidan.
 
 ### Text och bild {#text-image}
 
@@ -819,7 +822,8 @@ När du har placerat en instans av komponenten på sidan kan du konfigurera:
 >
 >* `.mp4`
 >* `Ogg`
->* `FLV` (Flash-video)
+>* `FLV` (Flash)
+
 >
 
 
@@ -852,13 +856,13 @@ Med komponenten Kolumnkontroll kan användarna välja hur de vill dela upp inneh
 
 ## Form {#form}
 
-Formulärkomponenter används för att skapa formulär som besökare kan skicka in indata i. Formulär och formulärkomponenter kan användas för att samla in information, t.ex. användarfeedback (t.ex. ett kundfrågeformulär) och användarinformation (t.ex. användarregistrering).
+Formulärkomponenter används för att skapa formulär som besökare kan skicka in indata i. Forms och blankettkomponenter kan användas för att samla in information, t.ex. användarfeedback (t.ex. ett kundfrågeformulär) och användarinformation (t.ex. användarregistrering).
 
 >[!NOTE]
 >
->Mer information om AEM Forms finns i hjälpen [för](/help/forms/home.md) AEM Forms.
+>Mer information om AEM Forms finns i [AEM Forms-hjälpen](/help/forms/home.md) .
 
-Formulär byggs upp av flera olika komponenter:
+Forms är uppbyggt av flera olika komponenter:
 
 * **Formulär**
 
@@ -878,7 +882,7 @@ I följande exempel visas ett exempelformulär: den består av **Form** -kompone
 
 >[!NOTE]
 >
->Information om hur du utvecklar och anpassar formulär finns på sidan [](/help/sites-developing/developing-forms.md)Utveckla formulär. Detta inkluderar bland annat att lägga till åtgärder, begränsningar, förhandsladda fält och att använda skript för att anropa en tjänst för att utföra åtgärder.
+>Mer information om hur du utvecklar och anpassar formulär finns på sidan [](/help/sites-developing/developing-forms.md)Utveckla Forms. Detta inkluderar bland annat att lägga till åtgärder, begränsningar, förhandsladda fält och att använda skript för att anropa en tjänst för att utföra åtgärder.
 
 ### Inställningar som är gemensamma för (många) formulärkomponenter {#settings-common-to-many-form-components}
 
@@ -906,7 +910,7 @@ När du konfigurerar någon av formulärkomponenterna är följande flikar tillg
 >
 >Fälten som visas varierar avsevärt beroende på den enskilda komponenten.
 
-Dessa flikar ger dig de parametrar som behövs. dessa kan bero på den enskilda komponenttypen, men kan omfatta:
+Dessa flikar ger dig de parametrar som behövs. de kan vara beroende av den enskilda komponenttypen, men kan innehålla:
 
 * **Titel och text**
 
@@ -973,7 +977,7 @@ Den här komponenten behövs för att definiera början på ett nytt formulär p
 
 * **Formulär**
 
-   * **Tack**! Sidan som ska refereras tackar besökarna för att de har skrivit in den. Om formuläret lämnas tomt visas det igen när det har skickats.
+   * **Tack**! Sidan som ska refereras till tackar besökarna för att de har gett sina synpunkter. Om formuläret lämnas tomt visas det igen när det har skickats.
    * **Starta arbetsflöde** Bestämmer vilket arbetsflöde som ska aktiveras när ett formulär skickas.
 
 * **Avancerat**
@@ -982,7 +986,7 @@ Den här komponenten behövs för att definiera början på ett nytt formulär p
 
       Ett formulär behöver en åtgärd. Åtgärden definierar den åtgärd som utlöses för körning med data som skickas av användaren (liknar action= i HTML). Vissa behöver en motsvarande **åtgärdskonfiguration**.
 
-      En rad åtgärdstyper ingår i en AEM-standardinstallation:
+      En rad åtgärdstyper ingår i en AEM standardinstallation:
 
       * **Kontobegäran**
       * **Skapa innehåll**
@@ -1015,7 +1019,7 @@ Den här komponenten behövs för att definiera början på ett nytt formulär p
 
       Sökvägen till nodegenskaper som används för att läsa in fördefinierade värden i formulärfälten.
 
-      Detta är ett valfritt fält som anger sökvägen till en nod i databasen. När den här noden har egenskaper som matchar fältnamnen förinläses motsvarande fält i formuläret med egenskapsvärdet. Om det inte finns någon matchning innehåller fältet standardvärdet.
+      Detta är ett valfritt fält som anger sökvägen till en nod i databasen. När den här noden har egenskaper som matchar fältnamnen, fylls lämpliga fält i formuläret i förväg med värdet för dessa egenskaper. Om det inte finns någon matchning innehåller fältet standardvärdet.
 
       Med **Läs in sökväg** kan du läsa in formuläret i förväg med värden i de obligatoriska fälten. Se [Förhandsladda formulärvärden](/help/sites-developing/developing-forms.md#preloading-form-values).
 
@@ -1325,7 +1329,7 @@ Du kan ange olika parametrar, inklusive namnutrymmen som kan användas med hjäl
 
    * **Tillåtna namnutrymmen**
 
-      * **Geometrixx utomhus**
+      * **Geometrixx Outdoors**
       * **Arbetsflöde**
       * **Forum**
       * **Arkivfotografier**
