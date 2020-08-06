@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: bf8fd156-4be9-43f8-8948-cf7f91c25f1b
 translation-type: tm+mt
 source-git-commit: f1a5e4c5c8411e10887efab517115fee0fd1890a
+workflow-type: tm+mt
+source-wordcount: '452'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Det finns olika färdiga konfigurationer för integrering med rätt tjänst, til
 
 Du kan också konfigurera en egen instans av **Generic Analytics-kodfragment** för att definiera en ny tjänstkonfiguration.
 
-Informationen samlas sedan in med små kodfragment som läggs till på webbsidorna. Exempel:
+Informationen samlas sedan in med små kodfragment som läggs till på webbsidorna. Till exempel:
 
 >[!CAUTION]
 >
@@ -53,7 +56,7 @@ Sådana fragment gör det möjligt att samla in data och generera rapporter. De 
 
 >[!CAUTION]
 >
->Demosplatsen Geometrixx-Outdoor är konfigurerad så att attributen som finns i Sidegenskaper läggs till i HTML-källkoden (precis ovanför `</html>` sluttaggen) i motsvarande `js` skript.
+>Demonsplatsen Geometrixx-Outdoor är konfigurerad så att attributen som finns i Sidegenskaper läggs till i HTML-källkoden (precis ovanför `</html>` sluttaggen) i motsvarande `js` skript.
 >
 >
 >Om dina egna `/apps` inte ärver från standardsidkomponenten ( `/libs/foundation/components/page`) måste du (eller dina utvecklare) se till att motsvarande `js` skript inkluderas, t.ex. genom att inkludera `cq/cloudserviceconfigs/components/servicescomponents`eller använda en liknande mekanism.
@@ -67,7 +70,7 @@ För den grundläggande konfigurationen:
 
 1. Öppna **verktygskonsolen** .
 
-1. Expandera **Cloud Services Configurations** i den vänstra rutan.
+1. Expandera **Cloud Services** i den vänstra rutan.
 
 1. Dubbelklicka på **Generic Analytics-kodfragment** för att öppna sidan:
 
@@ -89,7 +92,7 @@ När du har skapat tjänstkonfigurationen behöver du nu konfigurera de sidor so
 
 1. Navigera till sidan.
 
-1. Öppna **Sidegenskaperna** från sidosparken och sedan fliken **Cloud-tjänster** .
+1. Öppna **Sidegenskaperna** från sidosparken och sedan fliken **Cloud Services** .
 
 1. Klicka på **Lägg till tjänst** och välj sedan önskad tjänst; till exempel **kodavsnittet** för allmän analys:
 
@@ -97,7 +100,7 @@ När du har skapat tjänstkonfigurationen behöver du nu konfigurera de sidor so
 
 1. Spara genom att klicka på **OK** .
 
-1. Du kommer nu tillbaka till fliken **Cloud-tjänster** . Utdraget för **allmän analys** visas nu med meddelandet `Configuration reference missing`. Använd listrutan för att välja en specifik tjänstinstans; till exempel google-analys:
+1. Du kommer nu tillbaka till fliken **Cloud Services** . Utdraget för **allmän analys** visas nu med meddelandet `Configuration reference missing`. Använd listrutan för att välja en specifik tjänstinstans; till exempel google-analys:
 
    ![analytics_selectspecificservice](assets/analytics_selectspecificservice.png)
 
