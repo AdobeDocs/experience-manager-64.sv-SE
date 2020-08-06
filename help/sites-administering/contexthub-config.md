@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 780d1a2d-38f1-4115-a9bd-f466aa3774dd
 translation-type: tm+mt
 source-git-commit: 39b6af8ee815e8f6fa6e0b4a0a6dc80f29165243
+workflow-type: tm+mt
+source-wordcount: '1850'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Konfigurera [ContextHub](/help/sites-developing/contexthub.md) -verktygsfältet 
 
 ## Inaktiverar ContextHub {#disabling-contexthub}
 
-Som standard är ContextHub aktiverat i en AEM-installation. ContextHub kan inaktiveras för att förhindra att den läser in js/css och initierar. Det finns två alternativ för att inaktivera ContextHub:
+Som standard är ContextHub aktiverat i en AEM installation. ContextHub kan inaktiveras för att förhindra att den läser in js/css och initierar. Det finns två alternativ för att inaktivera ContextHub:
 
 * Redigera ContextHub-konfigurationen och markera alternativet **Inaktivera ContextHub**
 
@@ -34,11 +37,11 @@ Som standard är ContextHub aktiverat i en AEM-installation. ContextHub kan inak
 
 eller
 
-* Använd CRXDE Lite för att ställa in egenskapen `disabled` på **true** under `/libs/settings/cloudsettings`
+* Använd CRXDE Lite för att ange egenskapen `disabled` till **true** under `/libs/settings/cloudsettings`
 
 >[!NOTE]
 >
->[På grund av databasomstrukturering i AEM 6.4](/help/sites-deploying/repository-restructuring.md) har platsen för ContextHub-konfigurationer ändrats från `/etc/cloudsettings` till:
+>[På grund av omstrukturering av databasen i AEM 6.4 har](/help/sites-deploying/repository-restructuring.md) platsen för ContextHub-konfigurationer ändrats från `/etc/cloudsettings` till:
 >
 > * `/libs/settings/cloudsettings`
 > * `/conf/global/settings/cloudsettings`
@@ -51,10 +54,10 @@ Konfigurera Adobe Granite ContextHub OSGi-tjänsten för att visa eller dölja [
 
 Om du vill konfigurera tjänsten kan du antingen använda [webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) eller en [JCR-nod i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository):
 
-* **** Webbkonsol: Om du vill visa användargränssnittet väljer du egenskapen Visa användargränssnitt. Om du vill dölja användargränssnittet avmarkerar du egenskapen Dölj användargränssnitt.
-* **** JCR-nod: Om du vill visa användargränssnittet anger du den booleska `com.adobe.granite.contexthub.show_ui` egenskapen till `true`. Om du vill dölja användargränssnittet anger du egenskapen till `false`.
+* **Webbkonsol:** Om du vill visa användargränssnittet väljer du egenskapen Visa användargränssnitt. Om du vill dölja användargränssnittet avmarkerar du egenskapen Dölj användargränssnitt.
+* **JCR-nod:** Om du vill visa användargränssnittet anger du den booleska `com.adobe.granite.contexthub.show_ui` egenskapen till `true`. Om du vill dölja användargränssnittet anger du egenskapen till `false`.
 
-När du visar ContextHub-gränssnittet visas det bara på sidor på AEM-författarinstanser. Gränssnittet visas inte på sidor med publiceringsinstanser.
+När du visar ContextHub-gränssnittet visas det bara på sidor AEM författarinstanser. Gränssnittet visas inte på sidor med publiceringsinstanser.
 
 ## Lägga till gränssnittslägen och moduler för ContextHub {#adding-contexthub-ui-modes-and-modules}
 
@@ -73,7 +76,7 @@ Ikoner är referenser från [ikonbiblioteket](https://helpx.adobe.com/experience
 
 Lägg till ett gränssnittsläge för att gruppera relaterade ContextHub-moduler. När du skapar gränssnittsläget anger du den titel och ikon som visas i ContextHub-verktygsfältet.
 
-1. På Experience Manager-listen klickar eller trycker du på Verktyg > Platser > Kontextnav.
+1. Klicka eller tryck på Verktyg > Platser > Kontextnav på Experience Manager-listen.
 1. Klicka på eller tryck på standardkonfigurationsbehållaren.
 1. Klicka eller tryck på Kontextnavkonfigurationen.
 1. Klicka på eller tryck på knappen Skapa och klicka sedan på eller tryck på gränssnittsläget för kontextnav.
@@ -92,7 +95,7 @@ Lägg till ett gränssnittsläge för att gruppera relaterade ContextHub-moduler
 
 Lägg till en ContextHub-gränssnittsmodul i ett gränssnittsläge så att den visas i ContextHub-verktygsfältet för förhandsgranskning av sidinnehåll. När du lägger till en UI-modul skapar du en instans av en modultyp som är registrerad med ContextHub. Om du vill lägga till en gränssnittsmodul måste du känna till namnet på den associerade modultypen.
 
-AEM tillhandahåller en grundläggande gränssnittsmodultyp samt flera exempeltyper av gränssnittsmodul som du kan basera en gränssnittsmodul på. Följande tabell innehåller en kort beskrivning av vart och ett av dem. Mer information om hur du utvecklar en anpassad gränssnittsmodul finns i [Skapa ContextHub-gränssnittsmoduler](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types).
+AEM innehåller en grundläggande gränssnittsmodultyp samt flera exempeltyper av gränssnittsmodul som du kan basera en gränssnittsmodul på. Följande tabell innehåller en kort beskrivning av vart och ett av dem. Mer information om hur du utvecklar en anpassad gränssnittsmodul finns i [Skapa ContextHub-gränssnittsmoduler](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types).
 
 Egenskaperna för användargränssnittsmodulen innehåller en detaljkonfiguration där du kan ange värden för modulspecifika egenskaper. Du anger detaljkonfigurationen i JSON-format. Kolumnen Modultyp i tabellen innehåller länkar till information om den JSON-kod som krävs för varje gränssnittsmodultyp.
 
@@ -113,7 +116,7 @@ Egenskaperna för användargränssnittsmodulen innehåller en detaljkonfiguratio
 1. Klicka eller tryck på det användargränssnittsläge som du lägger till användargränssnittsmodulen i.
 1. Klicka på eller tryck på knappen Skapa och sedan på eller tryck på ContextHub UI Module (generisk).
 
-   ![chlimage_1-325](assets/chlimage_1-321.png)
+   ![chlimage_1-321](assets/chlimage_1-321.png)
 
 1. Ange värden för följande egenskaper:
 
@@ -136,7 +139,7 @@ Värdet för egenskapen Detaljkonfiguration är ett `config` objekt i JSON-forma
 
 ### Exempel på butikskandidater {#sample-store-candidates}
 
-AEM tillhandahåller följande exempel på butikskandidater som du kan basera en butik på.
+AEM innehåller följande exempel på butikskandidater som du kan basera en butik på.
 
 | Butikstyp | Beskrivning |
 |---|---|
@@ -159,15 +162,15 @@ AEM tillhandahåller följande exempel på butikskandidater som du kan basera en
 
 1. Ange värden för de grundläggande konfigurationsegenskaperna och klicka eller tryck sedan på Nästa:
 
-   * **** Konfigurationstitel: Titeln som identifierar butiken
-   * **** Lagringstyp: Värdet på egenskapen storeType för butikskandidaten som butiken ska baseras på
-   * **** Obligatoriskt: Välj
-   * **** Aktiverad: Markera för att aktivera butiken
+   * **Konfigurationstitel:** Titeln som identifierar butiken
+   * **Lagringstyp:** Värdet på egenskapen storeType för butikskandidaten som butiken ska baseras på
+   * **Obligatoriskt:** Välj
+   * **Aktiverad:** Markera för att aktivera butiken
 
 1. (Valfritt) Om du vill åsidosätta standardarkivkonfigurationen anger du ett JSON-objekt i rutan Detaljkonfiguration (JSON).
 1. Klicka på eller tryck på Spara.
 
-## Exempel: Använda en JSONP-tjänst {#example-using-a-jsonp-service}
+## Exempel: Använda en JSONP-tjänst  {#example-using-a-jsonp-service}
 
 I det här exemplet visas hur du konfigurerar en lagringsplats och visar data i en gränssnittsmodul. I det här exemplet används MD5-tjänsten på jsontest.com-webbplatsen som datakälla för en butik. Tjänsten returnerar MD5-hash-koden för en sträng i JSON-format.
 
@@ -188,10 +191,10 @@ Funktionen [init](/help/sites-developing/contexthub-api.md#init-name-config) i k
 
 Om du vill spara data från MD5-tjänsten på jsontest.com-webbplatsen använder du proceduren i [Skapa ett ContextHub Store](/help/sites-administering/contexthub-config.md#creating-a-contexthub-store) med följande egenskaper:
 
-* **** Konfigurationstitel: md5
-* **** Lagringstyp:contexthub.generic-jsonp
-* **** Obligatoriskt: Välj
-* **** Aktiverad: Välj
+* **Konfigurationstitel:** md5
+* **Lagringstyp:** contexthub.generic-jsonp
+* **Obligatoriskt:** Välj
+* **Aktiverad:** Välj
 * **Detaljkonfiguration (JSON):**
 
    ```xml
@@ -218,8 +221,8 @@ Lägg till en gränssnittsmodul i ContextHub-verktygsfältet för att visa data 
 
 Använd proceduren i [Lägga till en UI-modul](/help/sites-administering/contexthub-config.md#adding-a-ui-module) för att lägga till UI-modulen i ett befintligt UI-läge, t.ex. exemplet UI-läge. Använd följande egenskapsvärden för UI-modulen:
 
-* **** Modultitel för användargränssnitt: MD5
-* **** Modultyp:contexthub.base
+* **Modultitel för användargränssnitt:** MD5
+* **Modultyp:** contexthub.base
 * **Detaljkonfiguration (JSON):**
 
    ```xml
@@ -262,7 +265,7 @@ I tyst läge inaktiveras all felsökningsinformation. Till skillnad från det no
 
 Detta är användbart för din publiceringsinstans där du inte vill ha någon felsökningsinformation alls. Eftersom det är en global inställning aktiveras den via OSGi.
 
-1. Öppna webbkonsolkonfigurationen **för** Adobe Experience Manager på `http://<host>:<port>/system/console/configMgr`
+1. Öppna **Adobe Experience Manager Web Console-konfigurationen** på `http://<host>:<port>/system/console/configMgr`
 1. Sök efter **Adobe Granite ContextHub**
 1. Klicka på konfigurationen **Adobe Granite ContextHub** för att redigera dess egenskaper
 1. Markera alternativet **tyst läge** och klicka på **Spara**
@@ -283,7 +286,7 @@ Efter en uppgradering lagras säkerhetskopian i en mapp med namnet `contexthub` 
 
 Delen av nodnamnet är det datum då uppgraderingen utfördes. `yyyymmdd`
 
-Om du vill återställa dina ContextHub-konfigurationer använder du CRXDE Lite för att kopiera noderna som representerar dina butiker, gränssnittslägen och gränssnittsmoduler från nedanför noden till `default-pre-upgrade_yyyymmdd_xxxxxx` nedan:
+Om du vill återställa dina ContextHub-konfigurationer använder du CRXDE Lite för att kopiera noderna som representerar dina butiker, användargränssnittslägen och gränssnittsmoduler från nedanför `default-pre-upgrade_yyyymmdd_xxxxxx` noden till nedan:
 
 * `/conf/global/settings/cloudsettings` eller
 * `/conf/<tenant>/settings/cloudsettings`
