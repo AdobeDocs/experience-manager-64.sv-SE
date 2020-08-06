@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 45e67357-4524-4d25-b5f1-21182b8e803c
 translation-type: tm+mt
 source-git-commit: 8b83be510a67fadaa666f2ba96fbb3fc82b9cb3d
+workflow-type: tm+mt
+source-wordcount: '642'
+ht-degree: 4%
 
 ---
 
@@ -22,11 +25,11 @@ source-git-commit: 8b83be510a67fadaa666f2ba96fbb3fc82b9cb3d
 
 Modeller för innehållsfragment definierar innehållsstrukturen för dina [innehållsfragment](content-fragments.md).
 
-## Aktivera modeller för innehållsfragment {#enable-content-fragment-models}
+## Enable Content Fragment Models {#enable-content-fragment-models}
 
 >[!CAUTION]
 >
->Om du inte aktiverar **[!UICONTROL Content Fragment Models]** kommer alternativet **[!UICONTROL Create]** inte att vara tillgängligt när du skapar nya modeller.
+>Om du inte aktiverar **[!UICONTROL Content Fragment Models]** kan du inte **[!UICONTROL Create]** skapa nya modeller.
 
 Om du vill aktivera innehållsfragmentmodeller måste du:
 
@@ -37,37 +40,38 @@ Om du vill aktivera innehållsfragmentmodeller måste du:
 
 Om du vill [skapa en ny modell](#creating-a-content-fragment-model) för innehållsfragment **måste** du först aktivera dem med Configuration Manager:
 
-1. Navigera till **[!UICONTROL Verktyg]**, **[!UICONTROL Allmänt]** och öppna sedan **[!UICONTROL Konfigurationsläsaren]**.
+1. Navigera till **[!UICONTROL Tools]**, **[!UICONTROL General]** och öppna sedan **[!UICONTROL Configuration Browser]**.
 1. Välj lämplig plats för webbplatsen.
-1. Använd **[!UICONTROL Skapa]** för att öppna dialogrutan där du:
+1. Använd **[!UICONTROL Create]** för att öppna dialogrutan där du:
 
-   1. Ange en **[!UICONTROL titel]**.
-   1. Markera **[!UICONTROL Content Fragment Models]** för att aktivera användningen.
+   1. Ange en **[!UICONTROL Title]**.
+   1. Markera **[!UICONTROL Content Fragment Models]** om du vill aktivera deras användning.
+
    ![cfm-6420-09](assets/cfm-6420-09.png)
 
-1. Välj **[!UICONTROL Skapa]** för att spara definitionen.
+1. Välj **[!UICONTROL Create]** att spara definitionen.
 
 ### Använd konfigurationen i resursmappen {#apply-the-configuration-to-your-assets-folder}
 
-När konfigurationen **[!UICONTROL global]** är aktiverad för innehållsfragmentmodeller kan alla modeller som användarna skapar användas i alla resursmappar.
+När konfigurationen **[!UICONTROL global]** är aktiverad för innehållsfragmentmodeller kan alla modeller som användarna skapar användas i alla Resursmappar.
 
-Om du vill använda andra konfigurationer (d.v.s. exkludera globala) med en jämförbar resursmapp måste du definiera anslutningen. Detta görs med **[!UICONTROL Configuration]** på fliken **[!UICONTROL Cloud Services]** i **[!UICONTROL Mappegenskaper]** för rätt mapp.
+Om du vill använda andra konfigurationer (dvs. exkludera globala) med en jämförbar Assets-mapp måste du definiera kopplingen. This is done using **[!UICONTROL Configuration]** in the **[!UICONTROL Cloud Services]** tab of the **[!UICONTROL Folder Properties]** of the appropriate folder.
 
 ## Skapa en innehållsfragmentmodell {#creating-a-content-fragment-model}
 
-1. Navigera till **[!UICONTROL Verktyg]**, **[!UICONTROL Resurser]** och öppna sedan **[!UICONTROL Content Fragment Models]**.
+1. Navigera till **[!UICONTROL Tools]**, **[!UICONTROL Assets]** och öppna **[!UICONTROL Content Fragment Models]**.
 1. Navigera till den mapp som passar din [konfiguration](#enable-content-fragment-models).
-1. Använd **[!UICONTROL Skapa]** för att öppna guiden.
+1. Används **[!UICONTROL Create]** för att öppna guiden.
 
    >[!CAUTION]
    >
    >Om [användningen av innehållsfragmentmodeller inte har aktiverats](#enable-content-fragment-models)är alternativet **Skapa** inte tillgängligt.
 
-1. Ange **[!UICONTROL modelltitel]**. Du kan också lägga till en **[!UICONTROL beskrivning]** om det behövs.
+1. Specify the **[!UICONTROL Model Title]**. You can also add a **[!UICONTROL Description]** if required.
 
    ![cfm-6420-10](assets/cfm-6420-10.png)
 
-1. Använd **[!UICONTROL Skapa]** för att spara den tomma modellen. Ett meddelande visar att åtgärden lyckades, du kan välja **[!UICONTROL Öppna]** för att redigera modellen direkt eller **[!UICONTROL Klar]** för att återgå till konsolen.
+1. Spara **[!UICONTROL Create]** den tomma modellen. Ett meddelande visar att åtgärden lyckades, du kan välja **[!UICONTROL Open]** att redigera modellen omedelbart eller **[!UICONTROL Done]** att återgå till konsolen.
 
 ## Definiera innehållsfragmentmodellen {#defining-your-content-fragment-model}
 
@@ -77,27 +81,30 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 >
 >Om du redigerar en befintlig innehållsfragmentmodell kan det påverka beroende fragment.
 
-1. Navigera till **[!UICONTROL Verktyg]**, **[!UICONTROL Resurser]** och öppna sedan **[!UICONTROL Content Fragment Models]**.
+1. Navigera till **[!UICONTROL Tools]**, **[!UICONTROL Assets]** och öppna **[!UICONTROL Content Fragment Models]**.
 
 1. Navigera till mappen som innehåller innehållsfragmentmodellen.
-1. Öppna den modell som krävs för **[!UICONTROL redigering]**; använd snabbåtgärden eller välj modell och sedan åtgärden från verktygsfältet.
+1. Öppna den modell som krävs för **[!UICONTROL Edit]**; använd snabbåtgärden eller välj modell och sedan åtgärden från verktygsfältet.
 
    När du har öppnat modellredigeraren visas följande:
 
    * vänster: fält har redan definierats
-   * höger: **[!UICONTROL Datatyper]** som är tillgängliga för att skapa fält (och **[!UICONTROL egenskaper]** som kan användas när fält har skapats)
+   * right: **[!UICONTROL Data Types]** available for creating fields (and **[!UICONTROL Properties]** for use once fields have been created)
+
    >[!NOTE]
    >
-   >När ett fält är **obligatoriskt** markeras den **etikett** som visas i den vänstra rutan med en asterix (**&amp;ast;**).
+   >When a field is **Required**, the **Label** indicated in the left pane will be marked with an asterix (**&amp;ast;**).
 
-   ![cfm-6420-11](assets/cfm-6420-12.png)
+   ![cfm-6420-12](assets/cfm-6420-12.png)
 
 1. **Lägga till ett fält**
 
    * Dra en obligatorisk datatyp till önskad plats för ett fält:
+
    ![cfm-6420-11](assets/cfm-6420-11.png)
 
-   * När ett fält har lagts till i modellen visar den högra panelen de **egenskaper** som kan definieras för den aktuella datatypen. Här definierar du vad som krävs för fältet. Exempel:
+   * När ett fält har lagts till i modellen visar den högra panelen de **egenskaper** som kan definieras för den aktuella datatypen. Här definierar du vad som krävs för fältet. Till exempel:
+
    ![cfm-6420-13](assets/cfm-6420-13.png)
 
 1. **Ta bort ett fält**
@@ -106,7 +113,7 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 
    ![cf-32](assets/cf-32.png)
 
-1. När du har lagt till alla obligatoriska fält och definierat egenskaperna använder du **[!UICONTROL Spara]** för att behålla definitionen. Exempel:
+1. När du har lagt till alla obligatoriska fält och definierat egenskaperna använder du **[!UICONTROL Save]** för att behålla definitionen. Till exempel:
 
    ![cfm-6420-14](assets/cfm-6420-14.png)
 
@@ -118,10 +125,10 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 
 Så här tar du bort en innehållsfragmentmodell:
 
-1. Navigera till **[!UICONTROL Verktyg]**, **[!UICONTROL Resurser]** och öppna sedan **[!UICONTROL Content Fragment Models]**.
+1. Navigera till **[!UICONTROL Tools]**, **[!UICONTROL Assets]** och öppna **[!UICONTROL Content Fragment Models]**.
 
 1. Navigera till mappen som innehåller innehållsfragmentmodellen.
-1. Välj en modell, följt av **[!UICONTROL Ta bort]** i verktygsfältet.
+1. Välj en modell, följt av **[!UICONTROL Delete]** från verktygsfältet.
 
    >[!NOTE]
    >
@@ -133,10 +140,10 @@ Modeller för innehållsfragment måste publiceras när/innan beroende innehåll
 
 Så här publicerar du en innehållsfragmentmodell:
 
-1. Navigera till **[!UICONTROL Verktyg]**, **[!UICONTROL Resurser]** och öppna sedan **[!UICONTROL Content Fragment Models]**.
+1. Navigera till **[!UICONTROL Tools]**, **[!UICONTROL Assets]** och öppna **[!UICONTROL Content Fragment Models]**.
 
 1. Navigera till mappen som innehåller innehållsfragmentmodellen.
-1. Välj en modell, följt av **[!UICONTROL Publicera]** i verktygsfältet.
+1. Välj en modell, följt av **[!UICONTROL Publish]** från verktygsfältet.
 
    >[!NOTE]
    >
