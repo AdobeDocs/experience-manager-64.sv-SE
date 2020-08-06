@@ -20,7 +20,7 @@ ht-degree: 4%
 
 # Quick Guide to Authoring Pages{#quick-guide-to-authoring-pages}
 
-Dessa procedurer är avsedda som en snabbguide (på hög nivå) till de viktigaste åtgärderna vid framtagning av sidinnehåll i AEM.
+De här procedurerna är avsedda som en snabbguide (på hög nivå) till de viktigaste åtgärderna för att skapa sidinnehåll i AEM.
 
 De ska:
 
@@ -144,6 +144,7 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
       * öppna sidopanelen
       * välja fliken Komponenter ( [komponentwebbläsaren](/help/sites-authoring/author-environment-tools.md#components-browser))
       * dra den nödvändiga komponenten till sidan.
+
       Sidpanelen kan öppnas (och stängas) med:
 
       ![](do-not-localize/screen_shot_2018-03-21at160738.png)
@@ -153,6 +154,7 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
       * Öppna komponentens verktygsfält genom att trycka eller klicka. Öppna dialogrutan med ikonen **Redigera** (penna).
       * Öppna komponentens direktredigerare genom att trycka och hålla ned eller dubbelklicka. De tillgängliga åtgärderna visas (för vissa komponenter är detta ett begränsat urval).
       * Om du vill visa alla tillgängliga åtgärder går du till helskärmsläge med:
+
       ![](do-not-localize/screen_shot_2018-03-21at160706.png)
 
    * [Konfigurera egenskaperna för en befintlig komponent](/help/sites-authoring/editing-content.md#component-edit-dialog)
@@ -175,12 +177,14 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
    * [Lägg till anteckningar](/help/sites-authoring/annotations.md#annotations) på sidan:
 
       * Välj **anteckningsläget** (pratbubblarikonen). Lägg till anteckningar med ikonen **Lägg till anteckning** (plus). Avsluta anteckningsläget med X överst till höger.
+
       ![](do-not-localize/screen_shot_2018-03-21at160813.png)
 
    * [Förhandsgranska en sida](/help/sites-authoring/editing-content.md#preview-mode) (för att se hur den kommer att se ut i publiceringsmiljön)
 
       * Välj **Förhandsgranska** i verktygsfältet.
    * Återgå till redigeringsläget (eller välj ett annat läge) med **listrutan Redigera** .
+
    >[!NOTE]
    >
    >Om du vill navigera med hjälp av länkar i innehållet måste du använda [förhandsgranskningsläget](/help/sites-authoring/editing-content.md#preview-mode).
@@ -196,6 +200,7 @@ Det finns två (huvudsakliga) metoder för [redigering av sidegenskaper](/help/s
 
       * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för lämplig resurs.
       * Verktygsfältet när [sidan har markerats](#selecting-your-page-for-further-action).
+
    ![screen_shot_2018-03-21at160850](assets/screen_shot_2018-03-21at160850.png)
 
 * Sidegenskaperna visas. Du kan göra nödvändiga uppdateringar och sedan använda Spara för att behålla dessa
@@ -218,12 +223,14 @@ Det finns två huvudmetoder för att [publicera sidan](/help/sites-authoring/pub
 
       * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för lämplig resurs.
       * Verktygsfältet när [sidan har valts](#selecting-your-page-for-further-action) (ger även åtkomst till [Publicera senare](/help/sites-authoring/publishing-pages.md#manage-publication)).
+
    ![screen_shot_2018-03-21at160957](assets/screen_shot_2018-03-21at160957.png)
 
 * När du [redigerar sidan](#editing-your-page-content):
 
    1. Öppna menyn **Sidinformation** .
    1. Välj **Publicera sida**.
+
    ![screen_shot_2018-03-21at161026](assets/screen_shot_2018-03-21at161026.png)
 
 * Du kan bara avpublicera en sida från konsolen via alternativet **Hantera publikation**, som bara är tillgängligt i verktygsfältet (inte via snabbåtgärderna).
