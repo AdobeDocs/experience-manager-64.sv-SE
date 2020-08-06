@@ -12,6 +12,9 @@ topic-tags: operations
 discoiquuid: b4f57e42-60a6-407d-9764-15a11615827d
 translation-type: tm+mt
 source-git-commit: db6fbf28dc899c58d73334e2d5a694a228a53f80
+workflow-type: tm+mt
+source-wordcount: '1827'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Användaren anger värden i formuläret och klickar på knappen Beräkna för at
 * Användaren kommer åt en HTML-sida med namnet StartLoan.html som fungerar som webbprogrammets startsida. Den här sidan anropar en Java-server med namnet `GetLoanForm`.
 * Servottleten `GetLoanForm` återger ett låneformulär. Det här formuläret innehåller ett skript, interaktiva fält, en beräkningsknapp och en skicka-knapp.
 * Användaren anger värden i formulärets fält och klickar på knappen Beräkna. Formuläret skickas till den `CalculateData` Java-server där skriptet körs. Formuläret skickas tillbaka till användaren med beräkningsresultaten visade i formuläret.
-* Användaren fortsätter att ange och beräkna värden tills ett tillfredsställande resultat visas. När användaren är nöjd klickar han/hon på knappen Skicka för att bearbeta formuläret. Formuläret skickas till en annan Java-server med namnet `ProcessForm` som ansvarar för att hämta skickade data. (Se [Hantera skickade formulär](/help/forms/developing/rendering-forms.md#handling-submitted-forms).)
+* Användaren fortsätter att ange och beräkna värden tills ett tillfredsställande resultat visas. När användaren är nöjd klickar han/hon på knappen Skicka för att bearbeta formuläret. Formuläret skickas till en annan Java-server med namnet `ProcessForm` som ansvarar för att hämta skickade data. (Se [Hantera skickade Forms](/help/forms/developing/rendering-forms.md#handling-submitted-forms).)
 
 I följande diagram visas programmets logikflöde.
 
@@ -49,7 +52,7 @@ I följande tabell beskrivs stegen i det här diagrammet.
   </tr> 
   <tr> 
    <td><p>2</p></td> 
-   <td><p>Java- <code>GetLoanForm</code> serverns gränssnitt använder sig av Forms-tjänstens klient-API för att återge låneformuläret till klientens webbläsare. Skillnaden mellan återgivning av ett formulär som innehåller ett skript som är konfigurerat att köras på servern och återgivning av ett formulär som inte innehåller något skript är att du måste ange målplatsen som används för att köra skriptet. Om ingen målplats anges körs inte ett skript som är konfigurerat att köras på servern. Tänk dig till exempel programmet som introducerades i det här avsnittet. Java- <code>CalculateData</code> serverns målplats är den plats där skriptet körs.</p></td> 
+   <td><p>Java- <code>GetLoanForm</code> serverns gränssnitt använder Forms klient-API för att återge låneformuläret till klientens webbläsare. Skillnaden mellan återgivning av ett formulär som innehåller ett skript som är konfigurerat att köras på servern och återgivning av ett formulär som inte innehåller något skript är att du måste ange målplatsen som används för att köra skriptet. Om ingen målplats anges körs inte ett skript som är konfigurerat att köras på servern. Tänk dig till exempel programmet som introducerades i det här avsnittet. Java- <code>CalculateData</code> serverns målplats är den plats där skriptet körs.</p></td> 
   </tr> 
   <tr> 
    <td><p>3</p></td> 
@@ -84,18 +87,18 @@ I den här formulärdesignen är knappen Beräkna en kommandoknapp och skriptet 
 
 >[!NOTE]
 >
->Mer information om hur du skapar ett formulärdesignskript finns i [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
+>Mer information om hur du skapar formulärdesignskript finns i [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 >[!NOTE]
 >
->Mer information om Forms-tjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Forms finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Sammanfattning av steg {#summary-of-steps}
 
 Utför följande uppgifter för att beräkna formulärdata:
 
 1. Inkludera projektfiler.
-1. Skapa ett API-objekt för Forms Client.
+1. Skapa ett Forms Client API-objekt.
 1. Hämta ett formulär som innehåller ett beräkningsskript.
 1. Skriv tillbaka formulärdataströmmen till klientens webbläsare
 
@@ -103,15 +106,15 @@ Utför följande uppgifter för att beräkna formulärdata:
 
 Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprogram med Java, inkluderar du de JAR-filer som behövs. Om du använder webbtjänster måste du inkludera proxyfilerna.
 
-**Skapa ett API-objekt för FormsClient**
+**Skapa ett Forms Client API-objekt**
 
-Innan du programmässigt kan utföra en API-åtgärd för Form Service Client måste du skapa en Forms-tjänstklient. Om du använder Java API skapar du ett `FormsServiceClient` objekt. Skapa ett `FormsServiceService` objekt om du använder webbtjänstens API:t för Forms.
+Innan du programmässigt kan utföra en API-åtgärd för Forms-tjänstklienten måste du skapa en Forms-tjänstklient. Om du använder Java API skapar du ett `FormsServiceClient` objekt. Om du använder Forms webbtjänst-API:t skapar du ett `FormsServiceService` objekt.
 
 **Hämta ett formulär som innehåller ett beräkningsskript**
 
-Du använder API:t för Form Service Client för att skapa programlogik som hanterar ett formulär som innehåller ett skript som är konfigurerat att köras på servern. Processen liknar hantering av ett skickat formulär. (Se [Hantera skickade formulär](/help/forms/developing/handling-submitted-forms.md).)
+Du använder API:t för Forms-tjänstklienten för att skapa programlogik som hanterar ett formulär som innehåller ett skript som är konfigurerat att köras på servern. Processen liknar hantering av ett skickat formulär. (Se [Hantera skickade Forms](/help/forms/developing/handling-submitted-forms.md).)
 
-Kontrollera att bearbetningstillståndet som är associerat med det skickade formuläret är `1``(Calculate)`, vilket innebär att Forms-tjänsten utför en beräkningsåtgärd på formulärdata och att resultaten måste skrivas tillbaka till användaren. I så fall körs ett skript som är konfigurerat att köras på servern automatiskt.
+Kontrollera att bearbetningstillståndet som är associerat med det skickade formuläret är `1` `(Calculate)`, vilket innebär att Forms-tjänsten utför en beräkningsåtgärd på formulärdata och att resultaten måste skrivas tillbaka till användaren. I så fall körs ett skript som är konfigurerat att köras på servern automatiskt.
 
 **Skriv tillbaka formulärdataströmmen till klientens webbläsare**
 
@@ -125,19 +128,19 @@ När du har verifierat att det bearbetningstillstånd som är kopplat till ett s
 
 [Snabbstart för Forms Service API](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[Återgivning av interaktiva PDF-formulär](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[Återger interaktiv PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[Skapa webbprogram som återger formulär](/help/forms/developing/creating-web-applications-renders-forms.md)
+[Skapa webbprogram som återger Forms](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ## Beräkna formulärdata med Java API {#calculate-form-data-using-the-java-api}
 
-Beräkna formulärdata med hjälp av Forms API (Java):
+Beräkna formulärdata med Forms API (Java):
 
 1. Inkludera projektfiler
 
    Inkludera JAR-klientfiler, t.ex. adobe-forms-client.jar, i Java-projektets klassökväg.
 
-1. Skapa ett API-objekt för FormsClient
+1. Skapa ett Forms Client API-objekt
 
    * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
    * Skapa ett `FormsServiceClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
@@ -151,6 +154,7 @@ Beräkna formulärdata med hjälp av Forms API (Java):
       * Ett strängvärde som anger miljövariabler inklusive alla relevanta HTTP-huvuden. Du måste ange vilken innehållstyp som ska hanteras genom att ange ett eller flera värden för `CONTENT_TYPE` miljövariabeln. Om du till exempel vill hantera XML- och PDF-data anger du följande strängvärde för den här parametern: `CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`
       * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärdet; till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
       * Ett `RenderOptionsSpec` objekt som lagrar körningsalternativ.
+
       Metoden returnerar `processFormSubmission` ett `FormsResult` objekt som innehåller resultaten av formuläröverföringen.
 
    * Kontrollera att bearbetningstillståndet som är associerat med ett skickat formulär är `1` genom att anropa `FormsResult` objektets `getAction` metod. Om den här metoden returnerar värdet `1`utfördes beräkningen och data kan skrivas tillbaka till klientens webbläsare.
@@ -172,14 +176,14 @@ Beräkna formulärdata med hjälp av Forms API (Java):
 
 ## Beräkna formulärdata med webbtjänstens API {#calculate-form-data-using-the-web-service-api}
 
-Beräkna formulärdata med Forms API (webbtjänsten):
+Beräkna formulärdata med Forms API (webbtjänst):
 
 1. Inkludera projektfiler
 
-   * Skapa Java-proxyklasser som använder Forms-tjänstens WSDL.
+   * Skapa Java-proxyklasser som använder Forms tjänst-WSDL.
    * Inkludera Java-proxyklasserna i klassökvägen.
 
-1. Skapa ett API-objekt för FormsClient
+1. Skapa ett Forms Client API-objekt
 
    Skapa ett `FormsService` objekt och ange autentiseringsvärden.
 
@@ -205,6 +209,7 @@ Beräkna formulärdata med Forms API (webbtjänsten):
       * Ett tomt `javax.xml.rpc.holders.ShortHolder` objekt som fylls i av metoden.
       * Ett tomt `MyArrayOf_xsd_anyTypeHolder` objekt som fylls i av metoden. Den här parametern används för att lagra bifogade filer som skickas tillsammans med formuläret.
       * Ett tomt `FormsResultHolder` objekt som fylls i av metoden med det formulär som skickas.
+
       Metoden `processFormSubmission` fyller i `FormsResultHolder` parametern med resultaten av formuläröverföringen. Metoden returnerar `processFormSubmission` ett `FormsResult` objekt som innehåller resultaten av formuläröverföringen.
 
    * Kontrollera att bearbetningstillståndet som är associerat med ett skickat formulär är `1` genom att anropa `FormsResult` objektets `getAction` metod. Om den här metoden returnerar värdet `1`utfördes beräkningen och data kan skrivas tillbaka till klientens webbläsare.
@@ -219,4 +224,4 @@ Beräkna formulärdata med Forms API (webbtjänsten):
 
 **Se även**
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
