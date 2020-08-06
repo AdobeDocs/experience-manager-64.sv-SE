@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: bbbe32bb-9d97-461e-822f-a7ddc6c9f9ef
 translation-type: tm+mt
 source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+workflow-type: tm+mt
+source-wordcount: '1119'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +34,7 @@ Forumfunktionen QnA (frågor och svar) ger ett område där communitymedlemmar k
 
 Detta avsnitt i dokumentationen beskriver
 
-* Lägga till QnA-forumfunktionen på en AEM-webbplats
+* Lägga till QnA-forumfunktionen på en AEM
 * Konfigurationsinställningar för `QnA`komponenten
 
 ## Lägga till ett forum med frågor och svar på en sida {#adding-a-q-a-forum-to-a-page}
@@ -52,81 +55,119 @@ Markera den monterade `QnA` komponent som du vill öppna och välj den `Configur
 
 #### Fliken Inställningar {#settings-tab}
 
-Under fliken **[!UICONTROL Inställningar]** anger du inställningar för ämnen (frågor) och svar (svar):
+Ange inställningar för ämnen (frågor) och svar (svar) på fliken **[!UICONTROL Settings]** :
 
-* **[!UICONTROL Ämnen per sida]** Definierar antalet frågor/inlägg som visas per sida. Standardvärdet är 10.
+* **[!UICONTROL Topics Per Page]**
+Definierar antalet frågor/inlägg som visas per sida. Standardvärdet är 10.
 
-* **[!UICONTROL Moderated]** Om det här alternativet är markerat måste publicering av ämnen och kommentarer godkännas innan de visas på en publiceringswebbplats. Standard är avmarkerat.
+* **[!UICONTROL Moderated]**
+Om det här alternativet är markerat måste publicering av ämnen och kommentarer godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
 
-* **[!UICONTROL Stängt]** Om det här alternativet är markerat stängs forumet för nya frågor och kommentarer. Standard är avmarkerat.
+* **[!UICONTROL Closed]**
+Om det här alternativet är markerat stängs forumet för nya frågor och kommentarer. Standard är avmarkerat.
 
-* **[!UICONTROL RTF-redigeraren]** Om det här alternativet är markerat kan du skriva in ämnen och kommentarer med markeringar. Standard är avmarkerat.
+* **[!UICONTROL Rich Text Editor]**
+Om det här alternativet är markerat kan du skriva in ämnen och kommentarer med markeringar. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt taggning]** Om det här alternativet är markerat tillåter du medlemmar att lägga till taggetiketter i sitt inlägg (se fliken **[!UICONTROL Taggfält]** ). Standard är avmarkerat.
+* **[!UICONTROL Allow Tagging]**
+Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se **[!UICONTROL Tag field]** flik). Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt filöverföringar]** Om det här alternativet är markerat tillåter du att bifogade filer läggs till i frågan eller kommentaren. Standard är avmarkerat.
+* **[!UICONTROL Allow File Uploads]**
+Om du markerar det här alternativet kan du tillåta att bifogade filer läggs till i frågan eller kommentaren. Standard är avmarkerat.
 
-* **[!UICONTROL Maximal filstorlek]** relevant endast om `Allow File Uploads` markeras. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
+* **[!UICONTROL Max File Size]**
+Endast relevant om 
+`Allow File Uploads` är markerad. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
 
-* **[!UICONTROL Tillåtna filtyper]**&#x200B;är bara relevanta om `Allow File Uploads` markeras. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
+* **[!UICONTROL Allowed File Types]**
+Endast relevant om 
+`Allow File Uploads` är markerad. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
 
-* **[!UICONTROL Max Attach Image File Size]** Relevant only if Allow File Uploads is checked. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152 (2 MB).
+* **[!UICONTROL Max Attach Image File Size]**
+Endast relevant om Tillåt filöverföringar är markerat. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152 (2 MB).
 
-* **[!UICONTROL Tillåt följande]** om det är markerat, inkludera följande funktion för foruminlägg, som gör att medlemmar kan [meddelas](notifications.md) om nya inlägg. Standard är avmarkerat.
+* **[!UICONTROL Allow Following]**
+Om det här alternativet är markerat kan du inkludera följande funktion för foruminlägg, som gör att medlemmar kan [informeras](notifications.md) om nya inlägg. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt fästa]** Om det här alternativet är markerat kan forumämnen fästas överst i ämneslistan. Standard är avmarkerat.
+* **[!UICONTROL Allow Pinning]**
+Om det här alternativet är markerat kan forumämnen fästas överst i ämneslistan. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt e-postprenumerationer]** Om det här alternativet är markerat tillåter du medlemmar att meddelas om nya inlägg via e-post ([prenumeration](subscriptions.md)). Kräver `Allow Following` att kontrolleras och att [e-post konfigureras](email.md). Standard är avmarkerat.
+* **[!UICONTROL Allow Email Subscriptions]**
+Om det här alternativet är markerat kan medlemmar meddelas om nya inlägg via e-post ([prenumeration](subscriptions.md)). Kräver `Allow Following` att kontrolleras och att [e-post konfigureras](email.md). Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt svar]** Om det här alternativet är markerat tillåter du svar på kommentarer som skickats till frågan. Standard är avmarkerat.
+* **[!UICONTROL Allow Replies]**
+Om det här alternativet är markerat, tillåt svar på kommentarer som lagts in i frågan. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt användare att ta bort kommentarer och ämnen]** Om det är markerat tillåter du medlemmarna att ta bort de kommentarer och frågor som de har skickat in. Standard är avmarkerat.
+* **[!UICONTROL Allow Users to Delete Comments and Topics]**
+Om det här alternativet är markerat kan medlemmarna ta bort de kommentarer och frågor som de har skickat in. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt röstning]** om det är markerat, inkludera röstfunktionen med en fråga. Standard är avmarkerat.
+* **[!UICONTROL Allow Voting]**
+Om du markerar det här alternativet inkluderas röstningsfunktionen med en fråga. Standard är avmarkerat.
 
-* **[!UICONTROL Flytta markerat svar till överst]** om markerat är det första svar som visas ett markerat svar. Standard är markerat.
+* **[!UICONTROL Move Selected Answer To The Top]**
+Om det här alternativet är markerat är det första svar som visas ett valt svar. Standard är markerat.
 
-* **[!UICONTROL Visa emblem]** Om det här alternativet är markerat visar du [märken](implementing-scoring.md) som tagits emot och tilldelats av en medlem i ett blogginlägg. Standard är avmarkerat.
+* **[!UICONTROL Display Badges]**
+Om det här alternativet är markerat visas färdiga och tilldelade [märken](implementing-scoring.md) med en medlems blogginlägg. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt innehåll]** om det är markerat kan idén identifieras som [aktuellt innehåll](featured.md). Standard är avmarkerat.
+* **[!UICONTROL Allow Featured Content]**
+om du markerar det här alternativet kan idén identifieras som [aktuellt innehåll](featured.md). Standard är avmarkerat.
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
-På fliken **[!UICONTROL Användarmoderering]** anger du hur bokförda ämnen (frågor) och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Hantera användargenererat innehåll](moderate-ugc.md).
+På fliken **[!UICONTROL User Moderation]** anger du hur skickade ämnen (frågor) och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Hantera användargenererat innehåll](moderate-ugc.md).
 
-* **[!UICONTROL Neka svar]** Om det här alternativet är markerat kan pålitliga medlemsmoderatorer neka publicerade svar och förhindra att svaret visas på det offentliga forumet för frågor och svar. Standard är avmarkerat.
+* **[!UICONTROL Deny Answers]**
+Om det här alternativet är markerat kan pålitliga medlemsmoderatorer neka publicerade svar och förhindra att svaret visas på det offentliga forumet för frågor och svar. Standard är avmarkerat.
 
-* **[!UICONTROL Stäng/öppna ämnen]** igen Om det här alternativet är markerat kan pålitliga medlemsmoderatorer stänga en fråga (ämne) för ytterligare redigeringar och svar och kan även öppna en fråga igen. Standard är avmarkerat.
+* **[!UICONTROL Close / Reopen Topics]**
+Om det här alternativet är markerat kan pålitliga medlemsmoderatorer stänga en fråga (ämne) för ytterligare redigeringar och svar och kan även öppna en fråga igen. Standard är avmarkerat.
 
-* **[!UICONTROL Flytta ämnen]** Om det här alternativet är markerat tillåter du moderatorer på publiceringssidan att flytta frågor. Standard är avmarkerat.
+* **[!UICONTROL Move Topics]**
+Om det här alternativet är markerat kan du tillåta moderatorer på publiceringssidan att flytta frågor. Standard är avmarkerat.
 
-* **[!UICONTROL Flagga inlägg]** Om det är markerat kan medlemmar flagga andras frågor eller svar som olämpliga. Standard är avmarkerat.
+* **[!UICONTROL Flag Posts]**
+Om det här alternativet är markerat kan medlemmarna flagga andras frågor eller svar som olämpliga. Standard är avmarkerat.
 
-* **[!UICONTROL Flaggorsakslista]** Om det här alternativet är markerat kan medlemmarna välja, från en nedrullningsbar lista, orsaken till att en fråga eller ett svar flaggas som olämpligt. Standard är avmarkerat.
+* **[!UICONTROL Flag Reason List]**
+Om det här alternativet är markerat kan medlemmarna i en nedrullningsbar lista välja orsaken till att en fråga eller ett svar flaggas som olämplig. Standard är avmarkerat.
 
-* **[!UICONTROL Anledning till anpassad flagga]** Om den är markerad kan medlemmar ange en egen orsak för att flagga en fråga eller ett svar som olämpligt. Standard är avmarkerat.
+* **[!UICONTROL Custom Flag Reason]**
+Om det här alternativet är markerat kan medlemmarna ange en egen orsak till att en fråga eller ett svar flaggas som olämpligt. Standard är avmarkerat.
 
-* **[!UICONTROL Moderationströskel]** Ange hur många gånger en fråga eller ett svar måste flaggas av medlemmar innan moderatorerna meddelas. Standardvärdet är 1 (en gång).
+* **[!UICONTROL Moderation Threshold]**
+Ange hur många gånger en fråga eller ett svar måste flaggas av medlemmar innan moderatorerna meddelas. Standardvärdet är 1 (en gång).
 
-* **[!UICONTROL Flaggningsgräns]** Ange hur många gånger en fråga eller ett svar måste flaggas innan det döljs för den offentliga vyn. Om värdet är -1 döljs aldrig den flaggade frågan eller svaret från den offentliga vyn. Annars måste talet vara större än eller lika med modereringströskeln. Standardvärdet är 5.
+* **[!UICONTROL Flagging Limit]**
+Ange hur många gånger en fråga eller ett svar måste flaggas innan det döljs för den offentliga vyn. Om värdet är -1 döljs aldrig den flaggade frågan eller svaret från den offentliga vyn. Annars måste talet vara större än eller lika med modereringströskeln. Standardvärdet är 5.
 
 #### Fliken Taggfält {#tag-field-tab}
 
-Under fliken **[!UICONTROL Tagg]** begränsas de taggar som kan användas, om de tillåts under fliken **[!UICONTROL Inställningar]** , enligt de namnutrymmen som valts.
+Under **[!UICONTROL Tag field]** fliken är de taggar som kan användas, om de tillåts under **[!UICONTROL Settings]** fliken, begränsade enligt de namnutrymmen som har valts.
 
-* **[!UICONTROL Tillåtna]** relevanta namnutrymmen om `Allow Tagging` är markerat på fliken **Inställningar** . De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+* **[!UICONTROL Allowed Namespaces]**
+Relevant om 
+`Allow Tagging` är markerat under fliken **Inställningar** . De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
-* **[!UICONTROL Förslagsgräns]** Ange antalet taggar som ska visas som ett förslag till medlemmen som publicerar i forumet. Värdet `-1` betyder inga gränser. Standardvärdet är 0.
+* **[!UICONTROL Suggestion Limit]**
+Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Värdet för 
+`-1` innebär inga gränser. Standardvärdet är 0.
 
 #### Fliken Sorteringsinställningar {#sort-settings-tab}
 
-På fliken **[!UICONTROL Sorteringsinställningar]** anger du hur de skickade kommentarerna ska sorteras när de visas.
+Under **[!UICONTROL Sort Settings]** fliken anger du hur de bokförda kommentarerna ska sorteras när de visas.
 
-* **[!UICONTROL Sortera efter]** Markera alla tillåtna sorteringsval: `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. Standardvärdet är `Newest, Oldest, Last Updated`.
+* **[!UICONTROL Sort By]**
+Markera alla tillåtna sorteringsval: 
+`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. Standardvärdet är `Newest, Oldest, Last Updated`.
 
-* **[!UICONTROL Ange som standard]** Dra nedåt om du vill välja något av de markerade sorteringsalternativen som ska visas som standard. Standardvärdet är `Newest`.
+* **[!UICONTROL Set as Default]**
+Dra nedåt om du vill välja något av de markerade sorteringsalternativen som ska visas som standard. Standard är 
+`Newest`.
 
-* **[!UICONTROL Välj Tidsalternativ för sortering]** i listrutan Analytics (Analyssortering) för att välja ett av `All, Last 24 Hours, Last 7 Days, Last 30 Days`. Standardvärdet är `All`.
+* **[!UICONTROL Select Time Options for Analytics Sorting]**
+Dra ned för att välja något av 
+`All, Last 24 Hours, Last 7 Days, Last 30 Days`. Standardvärdet är `All`.
 
 ## Site Visitor Experience {#site-visitor-experience}
 
