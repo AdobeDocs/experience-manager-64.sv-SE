@@ -4,6 +4,9 @@ description: Läs om programmet ImageMagick, hur du installerar det, konfigurera
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: af5f8a24db589ecdbe28d603ab9583f11d29212c
+workflow-type: tm+mt
+source-wordcount: '741'
+ht-degree: 1%
 
 ---
 
@@ -14,45 +17,45 @@ ImageMagick är en plugin för att skapa, redigera, komponera och konvertera bit
 
 Använd Adobe Experience Manager-mediehanteraren (AEM) från kommandoraden för att bearbeta bilder via ImageMagick. Mer information om hur du arbetar med olika filformat med ImageMagick finns i [Metodtips](assets-file-format-best-practices.md)för resursfilformat. Mer information om alla filformat som stöds finns i Format som stöds för [resurser](assets-formats.md).
 
-Om du vill bearbeta stora filer med ImageMagick bör du tänka på högre minneskrav än vanligt, möjliga ändringar av IM-policyer och den övergripande inverkan på prestanda. Minneskraven beror på olika faktorer som upplösning, bitdjup, färgprofil och filformat. Om du tänker bearbeta mycket stora filer med ImageMagick bör du testa AEM-servern ordentligt. Äntligen finns det resurser som kan vara till hjälp.
+Om du vill bearbeta stora filer med ImageMagick bör du tänka på högre minneskrav än vanligt, möjliga ändringar av IM-policyer och den övergripande inverkan på prestanda. Minneskraven beror på olika faktorer som upplösning, bitdjup, färgprofil och filformat. Om du tänker bearbeta mycket stora filer med ImageMagick bör du testa AEM server ordentligt. Äntligen finns det resurser som kan vara till hjälp.
 
 >[!NOTE]
 >
->Om du använder AEM på Adobes hanterade tjänster (AMS) kan du kontakta Adobes kundtjänst om du tänker bearbeta många stora PSD- eller PSB-filer. Det går inte att bearbeta PSB-filer med hög upplösning som är större än 3 000 × 2 3 000 pixlar i Experience Manager.
+>Om du använder AEM på Adobes hanterade tjänster (AMS) kan du kontakta Adobe kundtjänst om du tänker bearbeta många stora PSD- eller PSB-filer. Det går inte att bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar i Experience Manager.
 
 ## Installera ImageMagick {#installing-imagemagick}
 
 Det finns flera versioner av installationsfilerna för ImageMagic för olika operativsystem. Använd rätt version för ditt operativsystem.
 
 1. Hämta rätt [ImageMagick-installationsfiler](https://www.imagemagick.org/script/download.php) för ditt operativsystem.
-1. Starta installationsfilen om du vill installera ImageMagick på den skiva som är värd för AEM-servern.
+1. Starta installationsfilen om du vill installera ImageMagick på den disk där AEM finns.
 
 1. Ange miljövariabeln path till installationskatalogen för ImageMagic.
 1. Om du vill kontrollera om installationen lyckades kör du `identify -version` kommandot.
 
 ## Ställa in kommandoradens processsteg {#set-up-the-command-line-process-step}
 
-Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfall. Följ de här stegen för att generera en bild och miniatyrbilder (140x100, 48x48, 319x319 och 1280x1280) varje gång du lägger till en JPEG-bildfil `/content/dam` på AEM-servern:
+Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfall. Följ de här stegen för att generera en bild och miniatyrbilder (140x100, 48x48, 319x319 och 1280x1280) varje gång du lägger till en JPEG-bildfil `/content/dam` på den AEM servern:
 
-1. Gå till arbetsflödeskonsolen (`https://[aem_server]:[Port]/workflow`) på AEM-servern och öppna arbetsflödesmodellen för **[!UICONTROL DAM-uppdatering]** .
-1. Öppna steget **[!UICONTROL EPS-miniatyrbilder (som drivs av ImageMagick)]** från arbetsflödesmodellen för **[!UICONTROL DAM-uppdatering av resurser]** .
-1. På fliken **** Argument lägger du `image/jpeg` till i listan **[!UICONTROL Mime-typer]** .
+1. Gå till arbetsflödeskonsolen (`https://[aem_server]:[Port]/workflow`) på AEM server och öppna **[!UICONTROL DAM Update Asset]** arbetsflödesmodellen.
+1. Öppna **[!UICONTROL DAM Update Asset]** steget från arbetsflödesmodellen **[!UICONTROL EPS thumbnails (powered by ImageMagick)]** .
+1. Lägg **[!UICONTROL Arguments tab]** till i `image/jpeg` listan i **[!UICONTROL Mime Types]** .
 
    ![mime_types_jpeg](assets/mime_types_jpeg.png)
 
-1. Ange följande kommando i rutan **[!UICONTROL Kommandon]** :
+1. Ange följande kommando i **[!UICONTROL Commands]** rutan:
 
    `convert ./${filename} -flip ./${basename}.flipped.jpg`
 
-1. Markera **[!UICONTROL Ta bort genererad återgivning]** och **[!UICONTROL Generera]** webbåtergivning.
+1. Markera **[!UICONTROL Delete Generated Rendition]** - och **[!UICONTROL Generate Web Rendition]** -flaggorna.
 
    ![select_flags](assets/select_flags.png)
 
-1. På fliken **[!UICONTROL Webbaktiverad bild]** anger du information om återgivningen med måtten 1 280 × 1 280 pixlar. Dessutom anger du *bild/jpeg* i rutan **[!UICONTROL Mimeter]** .
+1. På **[!UICONTROL Web Enabled Image]** fliken anger du information om återgivningen med måtten 1 280 × 1 280 pixlar. Dessutom anger du *image/jpeg* i **[!UICONTROL Mimetype]** rutan.
 
    ![web_enabled_image](assets/web_enabled_image.png)
 
-1. Tap/click **[!UICONTROL OK]** to save the changes.
+1. Tryck/klicka på **[!UICONTROL OK]** för att spara ändringarna.
 
    >[!NOTE]
    >
@@ -60,16 +63,16 @@ Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfa
    >
    >`"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ./${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`
 
-1. Öppna steget **[!UICONTROL Bearbeta miniatyrer]** och lägg till MIME-typen `image/jpeg` under **[!UICONTROL Hoppa över Mime-typer]**.
+1. Öppna **[!UICONTROL Process Thumbnails]** steget och lägg till MIME-typen `image/jpeg` under **[!UICONTROL Skip Mime Types]**.
 
    ![skip_mime_types](assets/skip_mime_types.png)
 
-1. På fliken **[!UICONTROL Webbaktiverad bild]** lägger du till MIME-typen `image/jpeg` under **[!UICONTROL Hoppa över lista]**. Tap/click **[!UICONTROL OK]** to save the changes.
+1. Lägg till MIME-typen **[!UICONTROL Web Enabled Image]** under fliken `image/jpeg` **[!UICONTROL Skip List]**. Tryck/klicka på **[!UICONTROL OK]** för att spara ändringarna.
 
    ![web_enabled](assets/web_enabled.png)
 
 1. Spara arbetsflödet.
-1. Om du vill kontrollera om ImageMagic kan bearbeta bilder på rätt sätt överför du en JPG-bild till AEM Assets. Kontrollera om en bild som har vänts och återgivningarna genereras för den.
+1. Om du vill kontrollera om ImageMagic kan bearbeta bilderna på rätt sätt överför du en JPG-bild till AEM Assets. Kontrollera om en bild som har vänts och återgivningarna genereras för den.
 
 ## Minska säkerhetsluckor {#mitigating-security-vulnerabilities}
 
