@@ -26,7 +26,7 @@ Den här självstudiekursen är ett steg i serien [Create Your First Adaptive Fo
 
 ## Om självstudiekursen  {#about-the-tutorial}
 
-Du kan använda teman för att ge ett anpassat formulär ett unikt utseende och en unik stil. Du kan använda färdiga teman som medföljer redigeringsprogrammet för anpassade formulär eller skapa egna teman. I AEM Forms finns en [temaredigerare](themes.md) för att skapa anpassade teman. Ett och samma tema kan ge olika utseenden till samma adaptiva formulär som öppnas på mobilen, surfplattan eller datorn. Du behöver inte ha någon tidigare kunskap om CSS eller LESS för att kunna använda temaredigeraren, men du vill ha den.
+Du kan använda teman för att ge ett anpassat formulär ett unikt utseende och en unik stil. Du kan använda färdiga teman som medföljer redigeringsprogrammet för anpassade formulär eller skapa egna teman. AEM Forms har en [temaredigerare](themes.md) för att skapa egna teman. Ett och samma tema kan ge olika utseenden till samma adaptiva formulär som öppnas på mobilen, surfplattan eller datorn. Du behöver inte ha någon tidigare kunskap om CSS eller LESS för att kunna använda temaredigeraren, men du vill ha den.
 
 I slutet av självstudiekursen kommer du att lära dig att:
 
@@ -79,6 +79,7 @@ Den design som visas ovan kräver ändringar i platshållartext och logotyp i di
    1. Tryck på logotypbilden i rubrikkomponenten och tryck på ![cmpr](assets/cmppr.png) -egenskaper. Tryck på X i egenskapen image för att ta bort den befintliga logotypbilden.
    1. Tryck på upload, välj logo.png och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att spara ändringarna. Bilden hämtades i avsnittet [Innan du började](/help/forms/using/style-your-adaptive-form.md#before-you-start) .
    1. Tryck på rubriktext `We.Retail`och tryck på ![aem_6_3_edit](assets/aem_6_3_edit.png) **edit**. Ändra rubriktext till `we retail`. Använd endast fet stil `we`i `we retail`.
+
    ![we-retail-logo-text](assets/we-retail-logo-text.png)
 
 1. Ta bort rubrik och lägg till platshållartext:
@@ -87,6 +88,7 @@ Den design som visas ovan kräver ändringar i platshållartext och logotyp i di
    1. Kopiera innehållet i **titelfältet** till **platshållartextfältet** .
    1. Ta bort innehållet i fältet **Titel** och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
    1. Upprepa de tre föregående stegen för alla textrutor, numeriska rutor och e-postfält i formuläret.
+
    ![updated-adaptive-form](assets/updated-adaptive-form.png)
 
 ## Steg 3: Skapa ett anpassat tema för ditt anpassade formulär {#step-create-a-custom-theme-for-your-adaptive-form}
@@ -99,7 +101,7 @@ I den här självstudiekursen kommer du att formatera sidhuvud och sidfot, text 
 
 ### Skapa ett tema {#create-a-theme}
 
-1. Logga in på AEM-författarinstansen och gå till **Adobe Experience Manager** > **Formulär** > **Teman**. Standardwebbadressen är [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes).
+1. Logga in på AEM författarinstans och gå till **Adobe Experience Manager** > **Forms** > **Teman**. Standardwebbadressen är [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes).
 1. Tryck **[!UICONTROL Create]** och välj **[!UICONTROL Theme]**. Sidan Skapa tema med de fält som krävs för att skapa ett tema visas. Fälten Titel och Namn är obligatoriska:
 
    * **Titel:** Ange en titel på temat. Exempel: **Globalt tema.** Titeln hjälper dig att identifiera temat från listan med teman.
@@ -140,11 +142,11 @@ Sidhuvud och sidfot ger ett konsekvent och distinkt utseende i en adaptiv form. 
 
    | Egenskap | Värde |
    |---|---|
-   | image | Överför header-style.png. Bilden hämtades i avsnittet [Innan du började](/help/forms/using/style-your-adaptive-form.md#before-you-start) . |
+   | bild | Överför header-style.png. Bilden hämtades i avsnittet [Innan du började](/help/forms/using/style-your-adaptive-form.md#before-you-start) . |
    | Position | Höger nerifrån |
    | Passram | Ingen upprepning |
 
-1. Tryck på logotypen i sidhuvudet i temaredigeraren och tryck på **rubriklogotypen**. Expandera dragspelet Dimensioner och position, ange följande egenskaper och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. Tryck på logotypen i sidhuvudet i temaredigeraren och tryck på **rubriklogotypen**. Expandera dragspelsfliken Dimensioner och position, ange följande egenskaper och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
 <table> 
  <tbody> 
@@ -215,12 +217,12 @@ Du kan använda flera komponenter i ett adaptivt formulär för att hämta data.
    <td>18px</td> 
   </tr> 
   <tr> 
-   <td>Mått och position</td> 
+   <td>Dimensioner och position</td> 
    <td>Bredd</td> 
    <td>60%</td> 
   </tr> 
   <tr> 
-   <td>Mått och position</td> 
+   <td>Dimensioner och position</td> 
    <td>Marginal</td> 
    <td> 
     <ul> 
@@ -316,17 +318,17 @@ Vissa format gäller bara för en viss komponent. Sådana komponenter är format
    <td>Värde</td> 
   </tr> 
   <tr> 
-   <td>Mått och position</td> 
+   <td>Dimensioner och position</td> 
    <td>Flyttal</td> 
    <td>Vänster</td> 
   </tr> 
   <tr> 
-   <td>Mått och position</td> 
+   <td>Dimensioner och position</td> 
    <td>Bredd</td> 
    <td>73%</td> 
   </tr> 
   <tr> 
-   <td>Mått och position</td> 
+   <td>Dimensioner och position</td> 
    <td>Utfyllnad</td> 
    <td> 
     <ul> 
@@ -334,12 +336,12 @@ Vissa format gäller bara för en viss komponent. Sådana komponenter är format
     </ul> </td> 
   </tr> 
   <tr> 
-   <td>Mått och position</td> 
+   <td>Dimensioner och position</td> 
    <td>Höjd</td> 
    <td>40px</td> 
   </tr> 
   <tr> 
-   <td>Mått och position<br /> </td> 
+   <td>Dimensioner och position<br /> </td> 
    <td>Marginal</td> 
    <td><br /> 
     <ul> 
@@ -405,12 +407,12 @@ Vissa format gäller bara för en viss komponent. Sådana komponenter är format
    <td>Värde</td> 
   </tr> 
   <tr> 
-   <td>Mått och position</td> 
+   <td>Dimensioner och position</td> 
    <td>Flyttal</td> 
    <td>Höger</td> 
   </tr> 
   <tr> 
-   <td>Mått och position</td> 
+   <td>Dimensioner och position</td> 
    <td>Marginal</td> 
    <td> 
     <ul> 
@@ -443,10 +445,10 @@ Adobe Typekit är en webbteckensnittstjänst. Du kan konfigurera och använda tj
 
 >[!NOTE]
 >
->![Typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) heter nu Adobe Fonts och ingår i Creative Cloud och andra prenumerationer. [Läs mer](https://fonts.adobe.com/).
+>![Typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) heter nu Adobe Fonts och ingår i prenumerationer på Creative Cloud och andra. [Läs mer](https://fonts.adobe.com/).
 
-1. Skapa ett [Adobe Typekit](https://typekit.com/) -konto, skapa ett kit, lägg till teckensnittet Myriad Pro i paketet, publicera paketet och få ditt Kit-ID. Du måste använda Adobe Typekit-teckensnitt (webbteckensnitt) i en anpassningsbar form.
-1. Navigera till ![adobeexperienceManager](assets/adobeexperiencemanager.png) **Adobe Experience Manager** > **Tools** ![hammer](assets/hammer.png) > **Deployment** ****> Cloud Services på AEM Forms-servern. På sidan Cloud Services går du till **Tredjepartstjänster** > **Typekit** och klickar på **Configure** Now under Typekit. Om det redan finns en konfiguration klickar du på plusknappen (+) för att skapa en ny instans.
+1. Skapa ett [Adobe Typekit](https://typekit.com/) -konto, skapa ett kit, lägg till teckensnittet Myriad Pro i paketet, publicera paketet och få ett paket-ID. Du måste använda Adobe Typekit-teckensnitt (webbteckensnitt) i en anpassningsbar form.
+1. På AEM Forms-servern går du till ![adobeexperienceManager](assets/adobeexperiencemanager.png) **Adobe Experience Manager** > **Tools** ![hammer](assets/hammer.png) > **Deployment** ****>¥Cloud Services. På sidan Cloud Services går du till **Tredjepartstjänster** > **Typekit** och klickar på **Konfigurera** nu under Typekit. Om det redan finns en konfiguration klickar du på plusknappen (+) för att skapa en ny instans.
 
    I dialogrutan Skapa konfiguration anger du en **rubrik** för konfigurationen och klickar på **Skapa**. Du omdirigeras till konfigurationssidan. Ange ditt **kit-ID** i dialogrutan Redigera komponent som visas och klicka på **OK**.
 
