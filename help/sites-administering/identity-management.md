@@ -1,6 +1,6 @@
 ---
-title: Identitetshantering
-seo-title: Identitetshantering
+title: Identity Management
+seo-title: Identity Management
 description: Läs om identitetshantering i AEM.
 seo-description: Läs om identitetshantering i AEM.
 uuid: 719601d2-b850-4114-8ece-1b11708a5078
@@ -11,15 +11,18 @@ content-type: reference
 discoiquuid: a6d9b08d-e669-4b9b-b591-c21cd72b6e22
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '1234'
+ht-degree: 0%
 
 ---
 
 
-# Identitetshantering{#identity-management}
+# Identity Management{#identity-management}
 
 Enskilda besökare på din webbplats kan bara identifieras när du ger dem möjlighet att logga in. Det finns olika skäl till att du kan behöva ange en inloggningsfunktion:
 
-* [AEM](/help/communities/overview.md)CommunitiesBesökare på webbplatsen måste logga in för att kunna publicera innehåll i communityn.
+* [AEM](/help/communities/overview.md)webbgrupperWebbplatsbesökare måste logga in för att kunna publicera innehåll i communityn.
 * [Stängda användargrupper](/help/sites-administering/cug.md)
 
    Du kan behöva begränsa åtkomsten till din webbplats (eller delar av den) till vissa besökare.
@@ -51,7 +54,7 @@ Ytterligare funktioner kan konfigureras eller utvecklas:
 >
 >Den information som anges i profilen kan också användas för att förse användaren med riktat innehåll via [segment](/help/sites-administering/campaign-segmentation.md) och [kampanjer](/help/sites-authoring/personalization.md).
 
-## Registreringsformulär {#registration-forms}
+## Registrera Forms {#registration-forms}
 
 Ett formulär kan användas för att samla in registreringsinformation och sedan generera det nya kontot och den nya profilen.
 
@@ -80,7 +83,7 @@ Användare kan till exempel antingen logga in eller skapa ett nytt konto med alt
 
 ## Loggar ut {#logging-out}
 
-Eftersom det finns en inloggningsmekanism krävs också en utloggningsmekanism. Det här är tillgängligt som alternativet **Logga ut** i Geometrixx.
+Eftersom det finns en inloggningsmekanism krävs också en utloggningsmekanism. Det här är tillgängligt som **utloggningsalternativ** i Geometrixx.
 
 ## Visa och uppdatera en profil {#viewing-and-updating-a-profile}
 
@@ -95,7 +98,7 @@ Om du vill se information om din profil klickar du på **Min profil** i det övr
 
 Du kan visa en annan profil med hjälp av [klientkontexten](/help/sites-administering/client-context.md) (i författarmiljön och med tillräcklig behörighet):
 
-1. Öppna en sida; till exempel sidan Geometrixx:
+1. Öppna en sida; till exempel Geometrixx:
 
    `http://localhost:4502/cf#/content/geometrixx/en.html`
 
@@ -115,9 +118,9 @@ Du kan visa en annan profil med hjälp av [klientkontexten](/help/sites-administ
 
 ## Lägga till fält i profildefinitionen {#adding-fields-to-the-profile-definition}
 
-Du kan lägga till fält i profildefinitionen. Om du till exempel vill lägga till fältet Favoritfärg i Geometrixx-profilen:
+Du kan lägga till fält i profildefinitionen. Om du till exempel vill lägga till ett&quot;Favoritfärg&quot;-fält i Geometrixx profil:
 
-1. Gå till Geometrixx Outdoor Site > English > User > My Profile i webbkonsolen.
+1. Gå till Geometrixx Outdoors Site > English > User > My Profile i webbplatskonsolen.
 
 1. Dubbelklicka på sidan **Min profil** för att öppna den för redigering.
 
@@ -128,8 +131,9 @@ Du kan lägga till fält i profildefinitionen. Om du till exempel vill lägga ti
 1. Dubbelklicka på **listrutekomponenten** för att öppna dialogrutan för konfiguration och ange:
 
    * **Elementnamn** - `favoriteColor`
-   * **Titel** - `Favorite Color`
+   * **Title** - `Favorite Color`
    * **Objekt** - Lägg till flera färger som objekt
+
    Spara genom att klicka på **OK** .
 
 1. Stäng sidan och gå tillbaka till **webbplatskonsolen** och aktivera sidan Min profil.
@@ -171,7 +175,7 @@ Flera lägen kan definieras; I Geometrixx är dessa till exempel:
 
 En lägesprovider hanterar den aktuella statusen för den aktuella egenskapen tillsammans med övergångarna mellan de två möjliga lägena.
 
-Statliga leverantörer implementeras som komponenter, så de kan anpassas för ditt projekt. I Geometrixx är dessa:
+Statliga leverantörer implementeras som komponenter, så de kan anpassas för ditt projekt. Bland Geometrixx finns följande:
 
 * Un-/Subscription Forum Topic
 * Lägg till/ta bort vän
