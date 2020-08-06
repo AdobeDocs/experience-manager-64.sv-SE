@@ -11,6 +11,9 @@ topic-tags: operations
 discoiquuid: eb28ac30-265c-4611-8247-1f4bc826f254
 translation-type: tm+mt
 source-git-commit: ba04fe705a91717f1d9658d436056ebddda6be3a
+workflow-type: tm+mt
+source-wordcount: '1891'
+ht-degree: 0%
 
 ---
 
@@ -21,9 +24,9 @@ source-git-commit: ba04fe705a91717f1d9658d436056ebddda6be3a
 
 Den streckkodade blanketttjänsten automatiserar inhämtning av data från ifyllda och utskrivna blanketter och integrerar inhämtad information i företagets centrala IT-system.
 
-Med hjälp av den streckkodade formulärtjänsten kan du lägga till endimensionella och tvådimensionella streckkoder i interaktiva PDF-formulär. Du kan sedan publicera streckkodsformulären på en webbplats eller distribuera dem via e-post eller cd. När en användare fyller i ett streckkodsformulär med Adobe Reader, Acrobat Professional eller Acrobat Standard uppdateras streckkoden automatiskt för att koda användarens formulärdata. Användaren kan skicka formuläret elektroniskt eller skriva ut det på papper och skicka det via post, fax eller hand. Du kan senare extrahera användardata som en del av ett automatiserat arbetsflöde och slussa data mellan godkännandeprocesser och affärssystem.
+Med den streckkodade formulärtjänsten kan du lägga till endimensionella och tvådimensionella streckkoder i interaktiva PDF forms. Du kan sedan publicera streckkodsformulären på en webbplats eller distribuera dem via e-post eller cd. När en användare fyller i ett streckkodsformulär med Adobe Reader, Acrobat Professional eller Acrobat Standard uppdateras streckkoden automatiskt för att koda de formulärdata användaren anger. Användaren kan skicka formuläret elektroniskt eller skriva ut det på papper och skicka det via post, fax eller hand. Du kan senare extrahera användardata som en del av ett automatiserat arbetsflöde och slussa data mellan godkännandeprocesser och affärssystem.
 
-Mer information om tjänsten för streckkodade formulär finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+Mer information om den streckkodade formulärtjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Avkoda streckkodade formulärdata {#decoding-barcoded-form-data}
 
@@ -31,7 +34,7 @@ Du kan använda API:t för streckkodsbaserade formulärtjänster för att avkoda
 
 >[!NOTE]
 >
->Mer information om tjänsten för streckkodade formulär finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om den streckkodade formulärtjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -53,15 +56,15 @@ Följande JAR-filer måste läggas till i projektets klassökväg:
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-barcodedforms-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
+* adobe-utilities.jar (krävs om AEM Forms används i JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 * xercesImpl.jar (finns i &lt;installationskatalog>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs\thirdparty)
 
-Om AEM Forms används på en J2EE-programserver som inte är JBOSS måste du ersätta adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms används. Information om platsen för alla AEM Forms JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Om AEM Forms körs på en J2EE-programserver som inte är JBOSS måste du ersätta adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms är distribuerad. Information om platsen för alla AEM Forms JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa ett klient-API-objekt för streckkodade formulär**
 
-Innan du programmässigt kan utföra en streckkodad formulärtjänståtgärd måste du skapa en klient för tjänsten Barcoded Forms. Om du använder Java API skapar du ett `BarcodedFormsServiceClient` objekt. Skapa ett `BarcodedFormsServiceService` objekt om du använder API:t för webbtjänsten för streckkodade formulär.
+Innan du programmässigt kan utföra en streckkodsåtgärd måste du skapa en streckkodad Forms-tjänstklient. Om du använder Java API skapar du ett `BarcodedFormsServiceClient` objekt. Skapa ett `BarcodedFormsServiceService` objekt om du använder API:t för webbtjänsten för streckkodade formulär.
 
 **Hämta ett PDF-formulär som innehåller streckkodsdata**
 
@@ -135,6 +138,7 @@ Avkoda formulärdata med hjälp av API:t för streckkodade formulär (Java):
    * Ett `java.lang.Boolean` objekt som anger om en EAN-13-streckkod ska avkodas.
    * Ett `java.lang.Boolean` objekt som anger om en EAN-8-streckkod ska avkodas.
    * Ett `com.adobe.livecycle.barcodedforms.CharSet` uppräkningsvärde som anger teckenuppsättningens kodningsvärde som används i streckkoden.
+
    Metoden `decode` returnerar ett `org.w3c.dom.Document` objekt som innehåller avkodade formulärdata.
 
 1. Konvertera data till en XML-datakälla
@@ -145,6 +149,7 @@ Avkoda formulärdata med hjälp av API:t för streckkodade formulär (Java):
    * Ett `com.adobe.livecycle.barcodedforms.Delimiter` uppräkningsvärde som anger radavgränsaren. Vi rekommenderar att du anger `Delimiter.Carriage_Return`.
    * Ett `com.adobe.livecycle.barcodedforms.Delimiter` uppräkningsvärde som anger fältavgränsaren. Ange till exempel `Delimiter.Tab`.
    * Ett `com.adobe.livecycle.barcodedforms.XMLFormat` uppräkningsvärde som anger om streckkodsdata ska konverteras till XDP- eller XFDF XML-data. Du kan till exempel ange `XMLFormat.XDP` att data ska konverteras till XDP-data.
+
    >[!NOTE]
    >
    >Ange inte samma värden för radavgränsaren och fältavgränsarparametrarna.
@@ -171,8 +176,8 @@ Avkoda formulärdata med API:t för streckkodade formulär (webbtjänst):
 
 1. Inkludera projektfiler
 
-   * Skapa en Microsoft .NET-klientsammansättning som använder WSDL för den streckkodade formulärtjänsten. Mer information finns i [Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).
-   * Referera till Microsoft .NET-klientsammansättningen. Mer information finns i&quot;Referera till .NET-klientsammansättningen&quot; i [Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).
+   * Skapa en Microsoft .NET-klientsammansättning som använder WSDL för den streckkodade formulärtjänsten. Mer information finns i [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).
+   * Referera till Microsoft .NET-klientsammansättningen. Mer information finns i&quot;Referera till .NET-klientsammansättningen&quot; i [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).
 
 1. Skapa ett klient-API-objekt för streckkodade formulär
 
@@ -200,6 +205,7 @@ Avkoda formulärdata med API:t för streckkodade formulär (webbtjänst):
    * Ett `Boolean` objekt som anger om en EAN-13-streckkod ska avkodas.
    * Ett `Boolean` objekt som anger om en EAN-8-streckkod ska avkodas.
    * Ett `CharSet` uppräkningsvärde som anger teckenuppsättningens kodningsvärde som används i streckkoden.
+
    Metoden returnerar `decode` ett strängvärde som innehåller avkodade formulärdata.
 
 1. Konvertera data till en XML-datakälla
@@ -210,6 +216,7 @@ Avkoda formulärdata med API:t för streckkodade formulär (webbtjänst):
    * Ett `Delimiter` uppräkningsvärde som anger radavgränsaren. Vi rekommenderar att du anger `Delimiter.Carriage_Return`.
    * Ett `Delimiter` uppräkningsvärde som anger fältavgränsaren. Ange till exempel `Delimiter.Tab`.
    * Ett `XMLFormat` uppräkningsvärde som anger om streckkodsdata ska konverteras till XDP- eller XFDF XML-data. Du kan till exempel ange `XMLFormat.XDP` att data ska konverteras till XDP-data.
+
    >[!NOTE]
    >
    >Ange inte samma värden för radavgränsaren och fältavgränsarparametrarna.
@@ -225,4 +232,4 @@ Avkoda formulärdata med API:t för streckkodade formulär (webbtjänst):
 
 **Se även**
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
