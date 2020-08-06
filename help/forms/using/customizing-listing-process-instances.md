@@ -1,8 +1,8 @@
 ---
 title: Anpassa listan över processinstanser
 seo-title: Anpassa listan över processinstanser
-description: Anpassa egenskaperna som visas i processinstansen på arbetsytan i AEM Forms.
-seo-description: Anpassa egenskaperna som visas i processinstansen på arbetsytan i AEM Forms.
+description: Anpassa egenskaperna som visas i processinstansen i AEM Forms arbetsyta.
+seo-description: Anpassa egenskaperna som visas i processinstansen i AEM Forms arbetsyta.
 uuid: 3b55d9b9-7f73-46dd-9eb6-42be218440a1
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,13 +10,16 @@ topic-tags: forms-workspace
 discoiquuid: 40d7d43f-ee0a-4e34-ae93-20c9c940f76b
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '302'
+ht-degree: 0%
 
 ---
 
 
 # Anpassa listan över processinstanser {#customizing-the-listing-of-process-instances}
 
-Processinstanslistan visas på fliken Spårning på arbetsytan i AEM Forms.
+Processinstanslistan visas på fliken Spåra i AEM Forms arbetsyta.
 
 I processinstanslistan visar AEM Forms-arbetsytan några egenskaper för den instansen för varje processinstans. Följande egenskaper är tillgängliga för varje processinstans. Dessa egenskaper lagras som attribut i processinstansens komponentmodell och är tillgängliga för användning i dess vy och mall.
 
