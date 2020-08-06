@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: b074ebfa-2894-4a2d-aa8e-28168049971a
 translation-type: tm+mt
 source-git-commit: 59d40b5bddc42a4ac057ef600243f396aefc926b
+workflow-type: tm+mt
+source-wordcount: '939'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Detta avsnitt i dokumentationen beskriver
 
 >[!NOTE]
 >
->Anonym publicering av en kommentar stöds inte. Besökare måste registrera sig (bli medlem) och logga in för att kunna delta.
+>Anonym publicering av en kommentar stöds inte. Besökarna måste registrera sig (bli medlem) och logga in för att kunna delta.
 
 ## Lägga till kommentarer på en sida {#adding-comments-to-a-page}
 
@@ -56,97 +59,97 @@ Markera den monterade `Comments` komponent som du vill öppna och välj den `Con
 
 ### Fliken Kommentarer {#comments-tab}
 
-Under fliken **[!UICONTROL Kommentarer]** anger du hur besökare ska ange kommentarer.
+Under **[!UICONTROL Comments]** fliken anger du hur kommentarer ska anges av besökare.
 
-* **[!UICONTROL Tillåt svar]**
+* **[!UICONTROL Allow replies]**
 
    Om det här alternativet är markerat kan medlemmarna svara på befintliga kommentarer. Standard är avmarkerat.
 
-* **[!UICONTROL Kommentarer per sida]**
+* **[!UICONTROL Comments Per Page]**
 
    Begränsar antalet kommentarer som visas per sida samt antalet svar som visas. Standardvärdet är 10.
 
-* **[!UICONTROL Tillåt filöverföringar]**
+* **[!UICONTROL Allow File Uploads]**
 
    Om du markerar det här alternativet visas textrutan för alternativet att överföra en fil. Standard är avmarkerat.
 
-* **[!UICONTROL Maximal filstorlek]**
+* **[!UICONTROL Max File Size]**
 
    Endast relevant om Tillåt filöverföringar är markerat. Det här värdet begränsar storleken på den överförda filen. Standardgränsen är 10 MB.
 
-* **[!UICONTROL Maximal meddelandelängd]**
+* **[!UICONTROL Max Message Length]**
 
    Maximalt antal tecken som kan anges i textrutan. Standardvärdet är 4 096 tecken.
 
-* **[!UICONTROL Tillåtna filtyper]**
+* **[!UICONTROL Allowed File Types]**
 
    Endast relevant om Tillåt filöverföringar är markerat. En kommaavgränsad lista med filtillägg med punktavgränsaren. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte den som inte anges. Ingen standard har angetts så att alla filtyper tillåts.
 
-* **[!UICONTROL RTF-redigerare]**
+* **[!UICONTROL Rich Text Editor]**
 
    Om det här alternativet är markerat kan kommentarer skrivas in med markeringar. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt röstning]**
+* **[!UICONTROL Allow Voting]**
 
    Om det här alternativet är markerat visas textrutan med alternativet att rösta upp eller ned. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt följande]**
+* **[!UICONTROL Allow Following]**
 
    Om det här alternativet är markerat kan medlemmarna följa kommentarerna. Standard är avmarkerat.
 
-* **[!UICONTROL Visa emblem]**
+* **[!UICONTROL Display Badges]**
 
    Om du markerar det här alternativet tillåts visning av färdiga och tilldelade märken. Standard är avmarkerat.
 
 ### Fliken Användarmoderering {#user-moderation-tab}
 
-På fliken **[!UICONTROL Användarmoderering]** anger du hur de skickade kommentarerna ska hanteras. Mer information finns i [Hantera användargenererat innehåll](moderate-ugc.md).
+Ange hur de bokförda kommentarerna ska hanteras på fliken **[!UICONTROL User Moderation]** . Mer information finns i [Hantera användargenererat innehåll](moderate-ugc.md).
 
-* **[!UICONTROL Före moderering]**
+* **[!UICONTROL Pre-Moderation]**
 
    Om det här alternativet är markerat måste kommentarerna godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
 
-* **[!UICONTROL Ta bort kommentarer]**
+* **[!UICONTROL Delete Comments]**
 
    Om det här alternativet är markerat kan den medlem som publicerade kommentaren ta bort den. Standard är avmarkerat.
 
-* **[!UICONTROL Neka kommentarer]**
+* **[!UICONTROL Deny Comments]**
 
    Om det här alternativet är markerat tillåter du moderatorerna att neka kommentarer. Standard är avmarkerat.
 
-* **[!UICONTROL Stäng/öppna kommentarer igen]**
+* **[!UICONTROL Close/Reopen Comments]**
 
    Om det här alternativet är markerat kan moderatorerna stänga och öppna kommentarerna igen. Standard är avmarkerat.
 
-* **[!UICONTROL Flagga kommentarer]**
+* **[!UICONTROL Flag Comments]**
 
    Om alternativet är markerat kan medlemmarna flagga kommentarer som olämpliga. Standard är avmarkerat.
 
-* **[!UICONTROL Flaggorsakslista]**
+* **[!UICONTROL Flag Reason List]**
 
    Om det här alternativet är markerat kan medlemmarna i en nedrullningsbar lista välja orsaken till att en kommentar flaggas som olämplig. Standard är avmarkerat.
 
-* **[!UICONTROL Anledning till anpassad flagga]**
+* **[!UICONTROL Custom Flag Reason]**
 
    Om det här alternativet är markerat kan medlemmarna ange en egen orsak till att en kommentar flaggas som olämplig. Standard är avmarkerat.
 
-* **[!UICONTROL Modereringströskel]**
+* **[!UICONTROL Moderation Threshold]**
 
    Ange hur många gånger en kommentar måste flaggas av medlemmar innan moderatorerna meddelas. Standard är en gång (1).
 
-* **[!UICONTROL Flaggningsgräns]**
+* **[!UICONTROL Flagging Limit]**
 
-   Ange hur många gånger en kommentar måste flaggas innan den döljs för den offentliga vyn. Talet måste vara större än eller lika med **[!UICONTROL modereringströskeln]**. Standardvärdet är 5.
+   Ange hur många gånger en kommentar måste flaggas innan den döljs för den offentliga vyn. Talet måste vara större än eller lika med **[!UICONTROL Moderation Threshold]**. Standardvärdet är 5.
 
 ### Fliken Sorteringsinställningar {#sort-settings-tab}
 
-På fliken **[!UICONTROL Sorteringsinställningar]** anger du hur de skickade kommentarerna ska sorteras när de visas.
+Under **[!UICONTROL Sort Settings]** fliken anger du hur de bokförda kommentarerna ska sorteras när de visas.
 
-* **[!UICONTROL Sorteringsfält]**
+* **[!UICONTROL Sort Field]**
 
    Dra nedåt för att välja ett av `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`eller `Most Liked`.
 
-* **[!UICONTROL Sorteringsordning]**
+* **[!UICONTROL Sort Order]**
 
    Dra nedåt för att välja ett av `Ascending` eller `Descending`.
 
@@ -156,23 +159,23 @@ Genom att ändra kommentarsresurstypen kommer kommentarsystemet inte längre att
 
 När de anpassade resurstyperna är kända går du till [designläge](../../help/sites-authoring/default-components-designmode.md) och dubbelklickar på den monterade `Comments` komponenten för att öppna en dialogruta med en extra flik.
 
-Under fliken **[!UICONTROL Resurstyper]** anger du anpassad resourceType för nya instanser av `Comments or Voting`komponenterna:
+Under **[!UICONTROL Resource Types]** fliken anger du anpassad resourceType för nya instanser av `Comments or Voting`komponenterna:
 
 ![chlimage_1-429](assets/chlimage_1-429.png)
 
-* **[!UICONTROL Resurstyp för kommentar]**
+* **[!UICONTROL Comment Resource Type]**
 
-   Navigera till resourceType för en utökad `comment`komponent (en kommentar) i /apps. Exempel, `/apps/social/commons/components/hbs/comments/comment`
+   Navigera till resourceType för en utökad `comment`komponent (en kommentar) i /apps. Till exempel, `/apps/social/commons/components/hbs/comments/comment`
 
    Den här resursen identifierar den resourceType för den UGC som skapas när en besökare publicerar en kommentar.
 
-* **[!UICONTROL Typ av röstningsresurs]**
+* **[!UICONTROL Voting Resource Type]**
 
-   Navigera till resourceType för en utökad `voting`komponent i /apps. Exempel, `/apps/social/components/hbs/voting`
+   Navigera till resourceType för en utökad `voting`komponent i /apps. Till exempel, `/apps/social/components/hbs/voting`
 
    Den här resursen identifierar resurstypen för användargenererat innehåll som skapas när en besökare publicerar en röst.
 
-* **[!UICONTROL Resurstyp för kommentarsystem]**
+* **[!UICONTROL Comment System Resource Type]**
 
    Navigera till resourceType för en utökad `comments`komponent (kommentarsystemet) i /apps. Lämna tomt om inte sidmallen [dynamiskt inkluderar](scf.md#add-or-include-a-communities-component) kommentarsystemet i det underliggande skriptet i stället för att läggas till på sidan som en resurs (kommentarsnod). Läs mer om [{{include}}-hjälpen](handlebars-helpers.md#include).
 
