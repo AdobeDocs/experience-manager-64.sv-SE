@@ -1,8 +1,8 @@
 ---
 title: Konfigurera administratörslösenordet vid installationen
 seo-title: Konfigurera administratörslösenordet vid installationen
-description: Lär dig hur du ändrar administratörslösenordet vid AEM-installation.
-seo-description: Lär dig hur du ändrar administratörslösenordet vid AEM-installation.
+description: Lär dig hur du ändrar administratörslösenordet vid AEM.
+seo-description: Lär dig hur du ändrar administratörslösenordet vid AEM.
 uuid: 06da9890-ed63-4fb6-88d5-fd0e16bc4ceb
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 00806e6e-3578-4caa-bafa-064f200a871f
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '322'
+ht-degree: 0%
 
 ---
 
@@ -21,9 +24,9 @@ source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
 
 Sedan version 6.3 tillåter AEM att administratörslösenordet anges med kommandoraden när en ny instans installeras.
 
-I tidigare versioner av AEM behövde lösenordet för administratörskontot, tillsammans med lösenordet för olika andra konsoler, ändras efter installationen.
+I tidigare versioner av AEM behövde lösenordet för administratörskontot samt lösenordet för olika andra konsoler ändras efter installationen.
 
-Den här funktionen lägger till möjligheten att ange ett nytt administratörslösenord för databasen och servermotorn under installationen av en AEM-instans, vilket eliminerar behovet av att göra det manuellt efteråt.
+Den här funktionen lägger till möjligheten att ange ett nytt administratörslösenord för databasen och servermotorn under installationen av en AEM, vilket eliminerar behovet av att göra det manuellt efteråt.
 
 >[!CAUTION]
 >
@@ -33,7 +36,7 @@ Den här funktionen lägger till möjligheten att ange ett nytt administratörsl
 
 Den här funktionen aktiveras automatiskt om du väljer att installera AEM via kommandoraden, i stället för att dubbelklicka på JAR från en filsystemutforskare.
 
-Den allmänna syntaxen för att köra en AEM-instans från kommandoraden är:
+Den allmänna syntaxen för att köra en AEM från kommandoraden är:
 
 ```shell
 java -jar aem6.3.jar
@@ -45,7 +48,7 @@ När du kör instansen från kommandoraden får du alternativet att ändra admin
 
 >[!NOTE]
 >
->Uppmaningen att ändra administratörslösenordet visas bara under installationen av en ny AEM-instans.
+>Uppmaningen att ändra administratörslösenordet visas bara under installationen av en ny AEM.
 
 ## Använda flaggan -nointeractive {#using-the-nointeractive-flag}
 
@@ -65,5 +68,5 @@ admin.password = 12345678
 
 >[!NOTE]
 >
->Om du bara använder `-nointeractive` parametern utan `-Dadmin.password.file` systemegenskapen kommer AEM att använda standardadministratörslösenordet utan att be dig att ändra det, vilket i huvudsak replikerar beteendet från tidigare versioner. Det här icke-interaktiva läget kan användas för automatiska installationer med kommandoraden i ett installationsskript.
+>Om du bara använder `-nointeractive` parametern utan `-Dadmin.password.file` systemegenskapen kommer AEM att använda administratörslösenordet utan att be dig att ändra det, vilket i huvudsak replikerar beteendet från tidigare versioner. Det här icke-interaktiva läget kan användas för automatiska installationer med kommandoraden i ett installationsskript.
 
