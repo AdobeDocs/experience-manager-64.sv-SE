@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 87a1f27a-765e-4882-9c06-5909e1610e1d
 translation-type: tm+mt
 source-git-commit: 0edddfde1e66ec487139f98e9ffafee885e61dfd
+workflow-type: tm+mt
+source-wordcount: '548'
+ht-degree: 0%
 
 ---
 
@@ -48,13 +51,13 @@ Automatisering av testfall är dock en betydande investering, så vissa aspekter
 
 ## Testa specifika aspekter {#testing-specific-aspects}
 
-Vid testning av AEM är några specifika detaljer av särskilt intresse:
+När AEM testas är det av särskilt intresse med vissa detaljer:
 
 Skapa och publicera miljöer
 
 Även om det ingår i [miljöer](/help/sites-developing/the-basics.md#environments) är det värt att betona en avgörande faktor för AEM när det gäller testning.
 
-Du måste tänka på AEM som två program:
+Du måste överväga AEM som två program:
 
 * i **redigeringsmiljönDen här instansen** tillåter författare att ange och publicera innehåll.
 Detta har en liten(er), förutsägbar uppsättning användare, för vilka specifika funktioner och prestanda är avgörande.
@@ -93,6 +96,6 @@ När det används för ett kundprojekt måste klustret testas för att bekräfta
 
 ## Testar program från tredje part {#testing-third-party-software}
 
-Alla tredjepartsprogram som interagerar med AEM beskrivs i Detaljerade kravspecifikationer.
+Alla tredjepartsprogram som AEM interagerar med kommer att anges i Detaljerade kravspecifikationer.
 
 Alla provningar som krävs (beroende på det definierade omfånget) ska analyseras och rena provningar utföras.
