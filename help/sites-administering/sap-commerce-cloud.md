@@ -1,8 +1,8 @@
 ---
 title: SAP Commerce Cloud
 seo-title: SAP Commerce Cloud
-description: Lär dig hur du använder AEM med SAP Commerce Cloud.
-seo-description: Lär dig hur du använder AEM med SAP Commerce Cloud.
+description: Lär dig använda AEM med SAP Commerce Cloud.
+seo-description: Lär dig använda AEM med SAP Commerce Cloud.
 uuid: cee1a781-fcba-461e-a0a4-c561a1dbcbf3
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,6 +12,9 @@ discoiquuid: 9474519d-14cc-49e0-a81d-9319966fd1f6
 pagetitle: Administering hybris
 translation-type: tm+mt
 source-git-commit: caa6c521fd6975d0b693e069a61b7a53f2ba5cd0
+workflow-type: tm+mt
+source-wordcount: '1726'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: caa6c521fd6975d0b693e069a61b7a53f2ba5cd0
 
 Efter installationen kan du konfigurera instansen:
 
-1. [Konfigurera den motsatta sökningen för Geometrixx utomhus](#configure-the-facetted-search-for-geometrixx-outdoors).
+1. [Konfigurera den motsatta sökningen efter Geometrixx Outdoors](#configure-the-facetted-search-for-geometrixx-outdoors).
 1. [Konfigurera katalogversionen](#configure-the-catalog-version).
 1. [Konfigurera importstrukturen](#configure-the-import-structure).
 1. [Konfigurera de produktattribut som ska läsas in](#configure-the-product-attributes-to-load).
@@ -28,7 +31,7 @@ Efter installationen kan du konfigurera instansen:
 1. [Konfigurera katalogimporteraren](#configure-the-catalog-importer).
 1. Använd [importeraren för att importera katalogen](#catalog-import) till en viss plats i AEM.
 
-## Konfigurera den motsatta sökningen för Geometrixx utomhus {#configure-the-facetted-search-for-geometrixx-outdoors}
+## Konfigurera den motsatta sökningen efter Geometrixx Outdoors {#configure-the-facetted-search-for-geometrixx-outdoors}
 
 >[!NOTE]
 >
@@ -42,7 +45,7 @@ Efter installationen kan du konfigurera instansen:
 1. **Öppna Redigeraren** för katalogen **Sample Solr Configuration for clothescatalog**.
 
 1. Under **Katalogversioner** använder du **Lägg till katalogversion** för att lägga till `outdoors-Staged` och `outdoors-Online` i listan.
-1. **Spara** konfigurationen.
+1. **Spara konfigurationen.**
 1. Öppna **SOLR-objekttyper** för att lägga till **SOLR-sorteringar** i `ClothesVariantProduct`:
 
    * relevans (&quot;Relevans&quot;, poäng)
@@ -50,6 +53,7 @@ Efter installationen kan du konfigurera instansen:
    * name-desc (&quot;Name (fallande)&quot;, name)
    * price-asc (&quot;Price (stigande)&quot;, priceValue)
    * price-desc (&quot;Price (fallending)&quot;, priceValue)
+
    >[!NOTE]
    >
    >Använd snabbmenyn (oftast högerklickning) för att markera `Create Solr sort`.
@@ -210,7 +214,7 @@ Följande egenskaper anger länken till hybris:
 
       `/etc/commerce/products`
 
-      Exempel:
+      Till exempel:
 
       [`http://localhost:4502/crx/de/index.jsp#/etc/commerce/products`](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
@@ -221,7 +225,7 @@ Följande egenskaper anger länken till hybris:
 
    `/etc/importers/hybris.html`
 
-   Exempel:
+   Till exempel:
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
@@ -237,17 +241,17 @@ Följande egenskaper anger länken till hybris:
        /etc/commerce/products/outdoors
    ```
 
-   Du kan öppna detta i CRXDE Lite; till exempel:
+   Du kan öppna den här i CRXDE Lite; till exempel:
 
    `[http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)`
 
 ### Inkrementell import {#incremental-import}
 
-1. Kontrollera informationen i AEM för den eller de relevanta produkterna i respektive underträd under:
+1. Kontrollera uppgifterna i AEM för den eller de berörda produkterna i respektive underträd under
 
    `/etc/commerce/products`
 
-   Du kan öppna detta i CRXDE Lite; till exempel:
+   Du kan öppna den här i CRXDE Lite; till exempel:
 
    [http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
@@ -257,14 +261,14 @@ Följande egenskaper anger länken till hybris:
 
    `/etc/importers/hybris.html`
 
-   Exempel:
+   Till exempel:
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
 1. Markera kryssrutan **Inkrementell import**.
 1. Klicka på **Importera katalog** för att starta importen.
 
-   När det är klart kan du verifiera de data som uppdaterats i AEM under:
+   När det är klart kan du verifiera de data som har uppdaterats i AEM under:
 
    ```
        /etc/commerce/products
@@ -275,11 +279,11 @@ Följande egenskaper anger länken till hybris:
 
 Importprocessen kan ta lång tid, så som ett tillägg till produktsynkroniseringen kan du välja specifika områden i katalogen för en snabb uppdatering som aktiveras manuellt. Detta använder exportflödet tillsammans med standardattributskonfigurationen.
 
-1. Kontrollera informationen i AEM för den eller de relevanta produkterna i respektive underträd under:
+1. Kontrollera uppgifterna i AEM för den eller de berörda produkterna i respektive underträd under
 
    `/etc/commerce/products`
 
-   Du kan öppna detta i CRXDE Lite; till exempel:
+   Du kan öppna den här i CRXDE Lite; till exempel:
 
    [http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
@@ -293,14 +297,14 @@ Importprocessen kan ta lång tid, så som ett tillägg till produktsynkroniserin
 
    `/etc/importers/hybris.html`
 
-   Exempel:
+   Till exempel:
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
 1. Markera kryssrutan **Express Update**.
 1. Klicka på **Importera katalog** för att starta importen.
 
-   När det är klart kan du verifiera de data som uppdaterats i AEM under:
+   När det är klart kan du verifiera de data som har uppdaterats i AEM under:
 
    ```
        /etc/commerce/products
@@ -320,7 +324,7 @@ När du arbetar med AEM finns det flera metoder för att hantera konfigurationsi
 
 ## Katalogimport {#catalog-import}
 
-hybris-paketet levereras med en katalogimportör för att skapa den inledande sidstrukturen.
+hybris-paketet levereras med en katalogimporterare för att skapa den inledande sidstrukturen.
 
 Det här är tillgängligt från:
 
@@ -346,6 +350,7 @@ Så här tar du bort en eller flera produkter från katalogen:
 
    * **Aktivera produktborttagning**
    * **Aktivera borttagning av produktresurser**
+
    >[!NOTE]
    >
    >När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md) . Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
@@ -354,6 +359,7 @@ Så här tar du bort en eller flera produkter från katalogen:
 
    * Första körningen resulterar i en uppsättning ändrade produkter som anges i logglistan.
    * För andra gången ska inga produkter uppdateras.
+
    >[!NOTE]
    >
    >Den första importen är att initiera produktinformationen. Den andra importen verifierar att allt fungerade och att dess produktuppsättning är klar.
@@ -366,17 +372,17 @@ Så här tar du bort en eller flera produkter från katalogen:
 
 1. Ta bort produkten i hybris-konsolen. Använd alternativet **Ändra godkännandestatus** för att ange statusen till `unapproved`. Produkten tas bort från liveflödet.
 
-   Exempel:
+   Till exempel:
 
    * Öppna sidan [http://localhost:9001/productcockpit](http://localhost:9001/productcockpit)
    * Markera katalogen `Outdoors Staged`
-   * Sök efter `Cajamara`
+   * Search for `Cajamara`
    * Välj den här produkten och ändra godkännandestatusen till `unapproved`
 
 1. Utför en annan stegvis uppdatering (se [Katalogimport](#catalog-import)). Loggen visar den borttagna produkten.
 1. [Utför](/help/sites-administering/generic.md#rolling-out-a-catalog) lämplig katalog. Produkt- och produktsidan har tagits bort från AEM.
 
-   Exempel:
+   Till exempel:
 
    * Öppna:
 
@@ -404,11 +410,11 @@ Så här lägger du till orderhistorik i [klientkontexten](/help/sites-developin
 
 1. Öppna [klientkontextdesignsidan](/help/sites-administering/client-context.md)genom att:
 
-   * Öppna en sida för redigering och öppna sedan klientkontexten med **Ctrl-Alt-c** (Windows) eller **Ctrl-Option-c** (Mac). Använd pennikonen i klientkontextens övre vänstra hörn för att **öppna designsidan** ClientContext.
+   * Öppna en sida för redigering och öppna sedan klientkontexten med **Ctrl-Alt-c** (Windows) eller **Ctrl-Option-c** (Mac). Använd pennikonen i det övre vänstra hörnet av klientkontexten för att **öppna designsidan** i ClientContext.
    * Navigera direkt till [http://localhost:4502/etc/clientcontext/default/content.html](http://localhost:4502/etc/clientcontext/default/content.html)
 
 1. [Lägg till komponenten **** Orderhistorik](/help/sites-administering/client-context.md#adding-a-property-component) i komponenten **Kundvagn** i klientkontexten.
-1. Du kan bekräfta att klientkontexten visar information om din orderhistorik. Exempel:
+1. Du kan bekräfta att klientkontexten visar information om din orderhistorik. Till exempel:
 
    1. Öppna [klientkontexten](/help/sites-administering/client-context.md).
    1. Lägg en artikel i kundvagnen.
@@ -419,6 +425,7 @@ Så här lägger du till orderhistorik i [klientkontexten](/help/sites-developin
 
       * Klientkontexten visar en sammanfattning av orderhistoriken.
       * Meddelandet&quot;Du är en återkommande kund&quot; visas.
+
    >[!NOTE]
    >
    >Meddelandet realiseras av:
