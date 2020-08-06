@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: ddfacc63-1840-407e-8802-3730009c84f0
 translation-type: tm+mt
 source-git-commit: c4ac10736c937198aa0c81ecf547dd489ef93366
+workflow-type: tm+mt
+source-wordcount: '539'
+ht-degree: 0%
 
 ---
 
@@ -66,7 +69,7 @@ Listorna innehåller ett **mönster**, ett reguljärt uttryck som matchar begär
 
 Till exempel:
 
-**Mönster**`^[^/]+/[^/]+/welcome$`
+**Mönster** `^[^/]+/[^/]+/welcome$`
 
 kommer att aktivera:
 
@@ -86,9 +89,9 @@ Nya mappningsdefinitioner skapas i databasen.
 >
 >Det finns många resurser som kan förklara hur du definierar reguljära uttryck. till exempel [https://www.regular-expressions.info/](https://www.regular-expressions.info/).
 
-## Skapa mappningsdefinitioner i AEM {#creating-mapping-definitions-in-aem}
+## Skapar mappningsdefinitioner i AEM {#creating-mapping-definitions-in-aem}
 
-I en standardinstallation av AEM hittar du mappen:
+I en standardinstallation av AEM finns mappen:
 
 `/etc/map/http`
 
@@ -102,23 +105,23 @@ Så här skapar du en mappning som prefixar en begäran till http://localhost:45
 
 1. Skapa en ny nod:
 
-   * **Typ**`sling:Mapping`
+   * **Typ** `sling:Mapping`
 
       Den här nodtypen är avsedd för sådana mappningar, men det är inte obligatoriskt att använda den.
 
-   * **Namn**`localhost_any`
+   * **Namn** `localhost_any`
 
 1. Klicka på **Spara alla**.
 1. **Lägg till** följande egenskaper i den här noden:
 
-   * **Namn**`sling:match`
+   * **Namn** `sling:match`
 
-      * **Typ**`String`
-      * **Värde**`localhost.4503/`
-   * **Namn**`sling:internalRedirect`
+      * **Typ** `String`
+      * **Värde** `localhost.4503/`
+   * **Namn** `sling:internalRedirect`
 
-      * **Typ**`String`
-      * **Värde**`/content/`
+      * **Typ** `String`
+      * **Värde** `/content/`
 
 
 1. Klicka på **Spara alla**.
