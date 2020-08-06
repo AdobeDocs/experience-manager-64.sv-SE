@@ -10,13 +10,16 @@ topic-tags: hTML5_forms
 discoiquuid: a9ab5a78-2add-46e1-a8f2-444d0f25f43a
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '337'
+ht-degree: 0%
 
 ---
 
 
 # Ändra standardformat för HTML5-formulär {#changing-default-styles-of-html-forms}
 
-HTML5-formulär återges med HTML5-funktioner och formateringen av det återgivna formuläret görs med CSS. Standardutseendet för HTML5-formulär liknar standardutseendet för PDF-återgivningen. Utvecklare kan använda anpassad CSS för att ändra standardutseendet på HTML5-formulär.
+HTML5-formulär återges med HTML5-funktioner och formateringen av det återgivna formuläret görs med CSS. Standardutseendet för HTML5-formulär liknar PDF-återgivningen. Utvecklare kan använda anpassad CSS för att ändra standardutseendet på HTML5-formulär.
 
 Den här artikeln innehåller stegvis information om hur du ändrar format i ett HTML5-formulär och artikeln [Introduktion till format](/help/forms/using/css-styles.md) innehåller detaljerad information om olika formateringsaspekter för HTML5-formulär. Läs Introduktion till formatartiklar innan du utför de steg som nämns i den här artikeln.
 
