@@ -1,8 +1,8 @@
 ---
 title: Testa användargränssnittet
 seo-title: Testa användargränssnittet
-description: AEM tillhandahåller ett ramverk för automatisering av tester för ditt AEM UI
-seo-description: AEM tillhandahåller ett ramverk för automatisering av tester för ditt AEM UI
+description: AEM tillhandahåller ett ramverk för automatisering av tester för ditt AEM användargränssnitt
+seo-description: AEM tillhandahåller ett ramverk för automatisering av tester för ditt AEM användargränssnitt
 uuid: b0280a70-643e-4455-82ea-fa7a90823b53
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,15 +11,18 @@ topic-tags: testing
 discoiquuid: bc0130c3-826e-47dd-b18b-85e1a7bb9936
 translation-type: tm+mt
 source-git-commit: d6c10927d437cfc9371e4baeff5a91ed9a0503c8
+workflow-type: tm+mt
+source-wordcount: '716'
+ht-degree: 2%
 
 ---
 
 
 # Testa användargränssnittet{#testing-your-ui}
 
-AEM tillhandahåller ett ramverk för automatisering av tester för ditt AEM-gränssnitt. Med hjälp av ramverket kan du skriva och köra gränssnittstester direkt i en webbläsare. Ramverket innehåller ajavascript-API för att skapa tester.
+AEM tillhandahåller ett ramverk för automatisering av tester för ditt AEM användargränssnitt. Med hjälp av ramverket kan du skriva och köra gränssnittstester direkt i en webbläsare. Ramverket innehåller ajavascript-API för att skapa tester.
 
-I AEM-testmiljön används Hobbes.js, ett testbibliotek som är skrivet i Javascript. Hobbes.js-ramverket utvecklades för att testa AEM som en del av utvecklingsprocessen. Ramverket är nu tillgängligt för allmän användning för testning av dina AEM-program.
+I AEM testramverk används Hobbes.js, ett testbibliotek skrivet i Javascript. Hobbes.js-ramverket utvecklades för testning av AEM som en del av utvecklingsprocessen. Ramverket är nu tillgängligt för allmän användning för testning av dina AEM program.
 
 >[!NOTE]
 >
@@ -115,9 +118,9 @@ Mer information om hur du skapar egna testsviter finns i [Hobbes.js API-dokument
 
    >[!NOTE]
    >
-   >**Endast AEM-formulär**
+   >**Endast AEM Forms**
    >
-   >Om du vill testa adaptiva formulär lägger du till följande värden i kategorierna och beroenden. Exempel:
+   >Om du vill testa adaptiva formulär lägger du till följande värden i kategorierna och beroenden. Till exempel:
    >
    >**kategorier**: `granite.testing.hobbes.tests, granite.testing.hobbes.af.commons`
    >
