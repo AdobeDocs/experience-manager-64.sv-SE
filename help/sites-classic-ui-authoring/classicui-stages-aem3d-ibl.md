@@ -1,8 +1,8 @@
 ---
 title: Arbeta med IBL-steg
 seo-title: Arbeta med IBL-steg
-description: AEM 3D stöder bildbaserad belysning (IBL) för både interaktiv visning och återgivning med den inbyggda Adobe Rapid Refine-renderaren och tredjepartsrenderare. Du kan skapa IBL-stadier med vanliga redigeringsverktyg som Autodesk Maya eller Autodesk 3ds Max.
-seo-description: AEM 3D stöder bildbaserad belysning (IBL) för både interaktiv visning och återgivning med den inbyggda Adobe Rapid Refine-renderaren och tredjepartsrenderare. Du kan skapa IBL-stadier med vanliga redigeringsverktyg som Autodesk Maya eller Autodesk 3ds Max.
+description: AEM 3D har stöd för bildbaserad belysning (IBL) för både interaktiv visning och återgivning med den inbyggda renderaren Adobe Rapid Refine och tredjepartsrenderare. Du kan skapa IBL-stadier med vanliga redigeringsverktyg som Autodesk Maya eller Autodesk 3ds Max.
+seo-description: AEM 3D har stöd för bildbaserad belysning (IBL) för både interaktiv visning och återgivning med den inbyggda renderaren Adobe Rapid Refine och tredjepartsrenderare. Du kan skapa IBL-stadier med vanliga redigeringsverktyg som Autodesk Maya eller Autodesk 3ds Max.
 uuid: 6598fb8a-65b0-4b84-8063-fdc94f6ea935
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: f9291151-851a-4aff-a50e-a24330ee0c13
 translation-type: tm+mt
 source-git-commit: e0ce860380a28a9dcaa6f8ce94ad278cdbe49fad
+workflow-type: tm+mt
+source-wordcount: '724'
+ht-degree: 0%
 
 ---
 
@@ -23,18 +26,18 @@ AEM 3D har stöd för bildbaserad belysning (IBL) för både interaktiv visning 
 
 Bilder som används för bildbaserad belysning bör ha HDR (High Dynamic Range) för bästa resultat. De måste vara i lat/långt format med sfärisk avbildning som täcker hela miljön.
 
-För närvarande stöder AEM 3D endast 32-bitars TIFF-filer. Använd vid behov Adobe Photoshop eller ett liknande verktyg för att konvertera HDR-bilden till en TIFF-bild med följande inställningar i dialogrutan Exportera i Adobe Photoshop TIFF:
+För närvarande stöder AEM 3D endast 32-bitars TIFF-filer. Använd vid behov Adobe Photoshop eller ett liknande verktyg för att konvertera HDR-bilden till en TIFF-bild med följande inställningar i dialogrutan Adobe Photoshop TIFF-export:
 
-* **[!UICONTROL Bitdjup]** - 32-bitars (flyttal)
-* **[!UICONTROL Pixelordning]** - Varvad (RGBRGB)
-* **[!UICONTROL Bildkomprimering]** - LZW
-* **[!UICONTROL Byteordning]** - IBM PC
+* **[!UICONTROL Bit depth]** - 32 bitar (flyttal)
+* **[!UICONTROL Pixel Order]** - Varvad (RGBRGB)
+* **[!UICONTROL Image Compression]** - LZW
+* **[!UICONTROL Byte Order]** - IBM PC
 
-En HDR-bild räcker ofta för IBL-steg, men AEM 3D ger ytterligare kontroll över IBL-effekter genom att upp till tre separata bilder tillåts:
+En enda HDR-bild räcker ofta för IBL-steg, men AEM 3D ger ytterligare kontroll över IBL-effekter genom att upp till tre separata bilder tillåts:
 
-* **[!UICONTROL Diffus ljusmiljöbild]** - Den här typen av bild ska vara en HDR-bild, men den kan vara ganska liten eftersom bilden filtreras kraftigt innan den används för diffus belysning.
-* **[!UICONTROL Reflektionsmiljöbild]** - Den här typen av bild används för att skapa speglingar i objektytor. Det kan vara en 8-bitars RGB-standardbild med en storlek och upplösning som ger önskad kvalitet och skärpa för speglingar. Om en HDR-bild anges konverterar AEM 3D den till 8-bitars RGB innan en egen algoritm används.
-* **[!UICONTROL Bakgrundsmiljöbild]** - Den här typen av bild används som bakgrund. Det kan vara en 8-bitars RGB-standardbild och bör ha önskad storlek/upplösning/detaljnivå för scenens bakgrund. Om en HDR-bild anges konverterar AEM 3D den till 8-bitars RGB med en egen algoritm.
+* **[!UICONTROL Diffuse Lighting Environment Image]** - Den här typen av bild bör vara en HDR-bild, men den kan vara ganska liten eftersom bilden filtreras mycket innan den används för diffus belysning.
+* **[!UICONTROL Reflection Environment Image]** - Den här typen av bild används för att skapa speglingar i objektytor. Det kan vara en 8-bitars RGB-standardbild med en storlek och upplösning som ger önskad kvalitet och skärpa för speglingar. Om en HDR-bild anges konverteras den AEM 3D till 8-bitars RGB innan en egen algoritm används.
+* **[!UICONTROL Background Environment Image]** - Den här typen av bild används som bakgrund. Det kan vara en 8-bitars RGB-standardbild och bör ha önskad storlek/upplösning/detaljnivå för scenens bakgrund. Om en HDR-bild anges konverterar AEM 3D den till 8-bitars RGB med en egen algoritm.
 
 >[!NOTE]
 >Konverteringsalgoritmen kan ha problem med vissa IBL-bilder. Svårigheten kan resultera i bakgrunder som är för ljusa eller för mättade i Förhandsgranska eller vid återgivning med Snabb förfining. I sådana fall rekommenderar Adobe att du använder Photoshop eller ett liknande verktyg för att manuellt konvertera IBL-bilden till en 8-bitars RGB-bild. Överför den här bilden separat och bifoga den till scenen som bakgrundsmiljöbild. Diffusera foton för belysnings- och reflektionsmiljö måste alltid vara 32-bitars TIFF-bilder.
@@ -54,7 +57,7 @@ Du kan finjustera utseendet på IBL-scenen med följande scenegenskaper:
    <td>Information om IBL Sun</td> 
    <td><p>Gör att du kan justera riktning och styrka för den extra ljuskälla som simulerar solen. <span class="diff-html-added">Ljuskällan ökar ljusstyrkan och gör att objektet kastar en skugga på markplanet. Skuggskiftning stöds vid återgivning med Rapid Refine och vid förhandsgranskning med Google Chrome. men stöds för närvarande inte av andra webbläsare.</span></p> 
     <ul> 
-     <li><strong>lat</strong> - Solljuskällans lodräta position (<code>0.0</code>-<code>1.0</code>).<br /> Inställningen är <code>0.0</code> vid horisonten (vertikal mittpunkt av bilden med diffus ljusmiljö). finns <code>1.0</code> i den övre kanten av bilden för diffus ljusmiljö.</li> 
+     <li><strong>lat</strong> - Solljuskällans lodräta position (<code>0.0</code>-<code>1.0</code>).<br /> Inställningen är <code>0.0</code> vid horisonten (vertikal mittpunkt av bilden med diffus ljusmiljö). <code>1.0</code> finns i den övre kanten av bilden för diffus ljusmiljö.</li> 
      <li><strong>long</strong> - Solljuskällans vågräta position (<code>0.0</code>-<code>1.0</code>).<br /> Inställningen 0,0 motsvarar vänster. 1.0 motsvarar högerkanten av bilden för diffus ljusmiljö.<br /> </li> 
      <li><strong>stark</strong> - Solljuskällans ljusstyrka. Öka detta värde för att göra solljuset ljusare. minska värdet för att göra det mörkare. <br /> En inställning som <code>0</code> inaktiverar extra ljus och inaktiverar skuggor. Parametern påverkar inte miljöreflektioner.<br /> </li> 
     </ul> </td> 
