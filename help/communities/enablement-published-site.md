@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
 source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+workflow-type: tm+mt
+source-wordcount: '1207'
+ht-degree: 1%
 
 ---
 
@@ -36,13 +39,13 @@ Vid första ankomsten till den publicerade webbplatsen är besökaren vanligtvis
 
 **http://localhost:4503/content/sites/enable/en.html**
 
-![chlimage_1-432](assets/chlimage_1-433.png)
+![chlimage_1-433](assets/chlimage_1-433.png)
 
 ## Anonym webbplatsbesökare {#anonymous-site-visitor}
 
 En anonym besökare visas omedelbart på inloggningssidan för den här privata aktiveringscommunityn. Observera att det inte finns något alternativ för självregistrering eller inloggning på Facebook eller Twitter.
 
-Observera att den här startsidan innehåller fyra menyalternativ: och `Assignments, Ski Catalog, What's New` `Discussions`men ingen kan nås utan att logga in.
+Observera att den här startsidan innehåller fyra menyalternativ: `Assignments, Ski Catalog, What's New` och `Discussions`, men ingen kan nås utan att logga in.
 
 >[!NOTE]
 >
@@ -51,7 +54,7 @@ Observera att den här startsidan innehåller fyra menyalternativ: och `Assignme
 
 ### Förhindra anonym åtkomst på JCR {#prevent-anonymous-access-on-jcr}
 
-En känd begränsning exponerar communityinnehållet för anonyma besökare via jcr-innehåll och json, även om anonym åtkomst **** är inaktiverat för webbplatsens innehåll. Det här beteendet kan dock styras med delningsbegränsningar som en tillfällig lösning.
+En känd begränsning visar communityinnehållet för anonyma besökare via jcr-innehåll och json, även om det **[!UICONTROL allow anonymous access]** är inaktiverat för webbplatsens innehåll. Det här beteendet kan dock styras med delningsbegränsningar som en tillfällig lösning.
 
 Följ de här stegen för att skydda communityplatsens innehåll från anonyma användare genom jcr-innehåll och json:
 
@@ -61,16 +64,16 @@ Följ de här stegen för att skydda communityplatsens innehåll från anonyma a
    >
    >Gå inte till den lokaliserade webbplatsen.
 
-1. Gå till **[!UICONTROL Sidegenskaper]**.
+1. Gå till **[!UICONTROL Page Properties]**.
 
    ![page-properties-1](assets/page-properties-1.png)
 
-1. Gå till fliken **[!UICONTROL Avancerat]** .
-1. Aktivera **[!UICONTROL autentiseringskrav]**.
+1. Gå till **[!UICONTROL Advanced]** fliken.
+1. Aktivera **[!UICONTROL Authentication Requirement]**.
 
    ![site-authentication-1](assets/site-authentication-1.png)
 
-1. Lägg till inloggningssidans sökväg. Exempel, `/content/......./GetStarted`.
+1. Lägg till inloggningssidans sökväg. Till exempel, `/content/......./GetStarted`.
 1. Publicera sidan.
 
 ## Registrerad medlem {#enrolled-member}
@@ -136,7 +139,7 @@ Observera, förutom intern moderering, att det finns alternativ för att dela ä
 
 ![chlimage_1-439](assets/chlimage_1-439.png)
 
-### Nyheter {#what-s-new}
+### What&#39;s New {#what-s-new}
 
 Menyalternativet är den titel som anges av `What's New` aktivitetsströmsfunktionen [](functions.md#activity-stream-function) i den här communityplatsens struktur.
 
@@ -235,13 +238,13 @@ För rapporter om tilldelningar:
 * On author
 * Logga in med administratörsbehörighet
 * Navigera till **[!UICONTROL Communities > Reports > Assignments Report]**
-* Välj en **[!UICONTROL plats]** i listrutan (välj `Enablement Tutorial`)
+* Välj en **[!UICONTROL Site]** i listrutan (välj `Enablement Tutorial`)
 
-* Markera **[!UICONTROL grupp]** (välj `Community Ski Class`)
+* Markera **[!UICONTROL Group]** (välj `Community Ski Class`)
 
-* Markera ett **[!UICONTROL uppdrag]** (välj `Ski Lessons`)
+* Markera en **[!UICONTROL Assignment]** (markera `Ski Lessons`)
 
-* Välj **[!UICONTROL Generera]**
+* Välj **[!UICONTROL Generate]**
 
 ![chlimage_1-445](assets/chlimage_1-445.png)
 
@@ -250,13 +253,13 @@ För rapporter om vyer:
 * On author
 * Logga in med administratörsbehörighet
 * Navigera till **[!UICONTROL Communities > Reports > Views Report]**
-* Välj en **[!UICONTROL plats]** i listrutan (välj `Enablement Tutorial`)
+* Välj en **[!UICONTROL Site]** i listrutan (välj `Enablement Tutorial`)
 
-* Välj **[!UICONTROL innehållstyp]** (välj `all`)
+* Markera **[!UICONTROL Content Type]** (välj `all`)
 
-* Välj ett **[!UICONTROL datumintervall]** (välj `Last 7 days`)
+* Markera en **[!UICONTROL date range]** (markera `Last 7 days`)
 
-* Välj **[!UICONTROL Generera]**
+* Välj **[!UICONTROL Generate]**
 
 ![chlimage_1-446](assets/chlimage_1-446.png)
 
