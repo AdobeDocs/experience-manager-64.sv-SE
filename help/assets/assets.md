@@ -1,22 +1,25 @@
 ---
 title: Om AEM Assets
-description: Lär dig vad som är digital resurshantering, användningsexempel och Adobes AEM Asset-erbjudande.
+description: Läs mer om digital resurshantering, användningsexempel och Adobe AEM Asset-erbjudanden.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 077cc39c5ed47371a4e3fae1e991209c7bfe6b80
+workflow-type: tm+mt
+source-wordcount: '900'
+ht-degree: 0%
 
 ---
 
 
 # Om AEM Assets {#about-assets}
 
-Resurser är ett DAM-verktyg (Digital Asset Management) som är helt integrerat med AEM-plattformen och som gör att ditt företag kan dela och distribuera digitala resurser. Användare i en hel organisation kan hantera, lagra och komma åt bilder, videor, dokument, ljudklipp och multimedia som Flash-filer för användning på webben, i tryck och för digital distribution.
+Resurser är ett DAM-verktyg (Digital Asset Management) som är helt integrerat med den AEM plattformen och som gör att ditt företag kan dela och distribuera digitala resurser. Användare i en hel organisation kan hantera, lagra och komma åt bilder, videor, dokument, ljudklipp och multimedia som Flash för användning på webben, i tryck och för digital distribution.
 
 ## Vad är Digital Asset Management (DAM)? {#what-is-digital-asset-management}
 
 Resurser ger möjlighet till företagsövergripande delning och distribution av en organisations viktigaste digitala resurser. Användare i en hel organisation kan lagra, hantera och komma åt digitala resurser som bilder, grafik, ljud, video och dokument via ett webbgränssnitt (eller en CIFS- eller WebDAV-mapp).
 
-Med AEM Assets kan du göra följande:
+Helt integrerat i AEM kan du göra följande med AEM Assets:
 
 * Lägg in och dela bilder, dokument, ljudfiler och videofiler i en mängd olika filformat.
 * Hantera resurser genom att gruppera dem efter taggar, ljusbord eller stjärnor (dina favoriter). Lägg till anteckningar i resurser.
@@ -25,9 +28,9 @@ Med AEM Assets kan du göra följande:
 * Utför bildredigeringsfunktioner som skalning och lägga till bildfilter. Importera och exportera flera digitala resurser samtidigt med en WebDAV- eller CIFS-mapp.
 * Använd arbetsflöden och meddelanden för att möjliggöra gemensam bearbetning och hämtning av alla typer av resurser och hantera åtkomsträttigheter till resurser.
 
-### AEM Assets är helt integrerat med AEM:s WCM-funktioner {#aem-assets-fully-integrated-in-cq-wcm}
+### AEM Assets är helt integrerat med AEM WCM-funktioner {#aem-assets-fully-integrated-in-cq-wcm}
 
-AEM Assets är helt integrerat med CQ WCM och funktionalitet finns med hjälp av DAM-ikonen:
+AEM Assets är helt integrerat med CQ WCM och funktionaliteten finns tillgänglig via DAM-ikonen:
 
 <!-- TBD: Update image for branding -->
 
@@ -41,14 +44,14 @@ Resurser som hanteras i CQ DAM kan sedan nås via innehållshanteraren i WCM:
 
 >[!NOTE]
 >
->Den grundläggande navigeringen i användargränssnittet är densamma som i resten av AEM - se [Översikt över GUI-konsolen](/help/sites-authoring/qg-page-authoring.md) för fullständig information.
+>Den grundläggande navigeringen i användargränssnittet är densamma som i resten av AEM. Mer information finns i [Översikt över GUI-konsolen](/help/sites-authoring/qg-page-authoring.md) .
 
 ### Digital Asset Management jämfört med Image-komponenten {#digital-asset-management-versus-image-component}
 
-När du avgör om en bild ska placeras i AEM Resurser eller om komponenten Image ska användas bör du överväga bildens livscykel:
+När du avgör om en bild ska placeras i AEM Assets eller om komponenten Image ska användas, bör du tänka på bildens livscykel:
 
 * Om bilden har samma livscykel som sidan använder du bildkomponenten.
-* Om bilden har en separat livscykel, till exempel om du använder bilden två gånger eller utanför WCM, använder du AEM Resurser.
+* Om bilden har en separat livscykel, till exempel om du använder bilden två gånger eller utanför WCM, använder du AEM Assets.
 
 ## Vad är digitala resurser? {#what-are-digital-assets}
 
@@ -60,13 +63,13 @@ En resurs är i stort sett en binär resurs plus metadata plus återgivningar pl
 >
 >Överföring och/eller redigering av en stor mängd resurser (särskilt bilder) kan påverka CQ-instansens prestanda.
 
-### AEM Assets-terminologi {#aem-assets-terminology}
+### AEM Assets terminologi {#aem-assets-terminology}
 
 När du arbetar med digitala resurser i AEM måste du förstå följande terminologi:
 
 * **Samling:** En samling resurser, antingen baserat på fysisk plats (mapp), gemensamma egenskaper (sparad sökmapp) eller användarval (lightbox-mappar).
 
-* **Metadata:** Resurserna har metadata. till exempel författare, förfallodatum, DRM-information (Digital Rights Management) och så vidare. Metadata är under åtkomstkontroll. AEM Resurser har stöd för följande vanliga metadatascheman:
+* **Metadata:** Resurserna har metadata. till exempel författare, förfallodatum, DRM-information (Digital Rights Management) och så vidare. Metadata är under åtkomstkontroll. AEM Assets har stöd för följande vanliga metadatascheman:
 
    * **Dublin Core**: inklusive författare, beskrivning, datum, ämne och så vidare.
    * **IPTC**: inklusive händelse, modell, plats och så vidare.
@@ -78,11 +81,11 @@ När du arbetar med digitala resurser i AEM måste du förstå följande termino
 
 * **Versioner:** Versionshantering skapar en ögonblicksbild av digitala resurser vid en viss tidpunkt. Du kan återställa resurser till tidigare versioner. Se [versionshantering i AEM Assets](managing-assets-touch-ui.md#asset-versioning).
 
-* **Deltillgångar:** Delresurser är resurser som utgör en resurs, till exempel lager i en Adobe Photoshop-fil eller sidor i en PDF-fil. I AEM Resurser kan du hantera underresurser på samma sätt som du hanterar resurser.
+* **Deltillgångar:** Delresurser är resurser som utgör en resurs, till exempel lager i en Adobe Photoshop-fil eller sidor i en PDF-fil. I AEM Assets kan du hantera underresurser på samma sätt som du hanterar resurser.
 
 ### Så här arbetar du med resurser {#how-to-work-with-assets}
 
-Du utför en åtgärd på en resurs eller samling. Funktionsmakron kan skapa och ändra resurser, samlingar och återgivningar. Många av de grundläggande åtgärder du utför på resurser - överföra, ta bort, uppdatera, spara underresurser - utlöser förkonfigurerade arbetsflöden. Dessa aktiveras automatiskt i AEM Resurser och beskrivs i detalj i mediehanterare för AEM Resurser.
+Du utför en åtgärd på en resurs eller samling. Funktionsmakron kan skapa och ändra resurser, samlingar och återgivningar. Många av de grundläggande åtgärder du utför på resurser - överföra, ta bort, uppdatera, spara underresurser - utlöser förkonfigurerade arbetsflöden. Dessa aktiveras automatiskt i AEM Assets och beskrivs i detalj i AEM Assets mediehanterare.
 
 De uppgifter du kan utföra med dessa förkonfigurerade arbetsflöden:
 
@@ -91,8 +94,8 @@ De uppgifter du kan utföra med dessa förkonfigurerade arbetsflöden:
 * Generera återgivningar och miniatyrbilder för resursen. inklusive automatisk storleksändring och beskärning vid behov.
 * Omkoda tillgången där det behövs. Video för mobil- och webbanvändning omkodas till exempel med 24 bildrutor per sekund, och video hämtas med 30 bildrutor per sekund. Ljud för mobil- och webbanvändning omkodas med 128 kbit/s, ljud för nedladdning med 192 kbit/s.
 
-Du kan förstås även använda arbetsflöden manuellt. En lista med standardarbetsflöden finns i [AEM Assets Media](media-handlers.md)Handler.
+Du kan förstås även använda arbetsflöden manuellt. En lista med standardarbetsflöden finns i [AEM Assets Media](media-handlers.md)Handlers.
 
 ## AEM DAM och AEM MediaLibrary {#cq-dam-vs-cq-medialibrary}
 
-Mer information om skillnaderna finns i [AEM DAM och AEM MediaLibrary](medialibrary.md) .
+Se [AEM DAM och AEM MediaLibrary](medialibrary.md) för information om skillnaderna.
