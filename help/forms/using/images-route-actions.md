@@ -47,7 +47,7 @@ Om du vill anpassa bilderna som används i vägåtgärder utför du stegen som b
 
 ## Åtgärdspopup för uppgiftslisteåtgärd {#task-list-task-action-popup}
 
-1. Skapa ett åtgärdsfönster för uppgiftslistan, se [Skapa kod](introduction-customizing-html-workspace.md#building-html-workspace-code)för arbetsytan i AEM Forms. Dev-paketet måste användas.
+1. Skapa ett åtgärdsfönster för uppgiftslistan, se [Skapa AEM Forms-arbetsytekod](introduction-customizing-html-workspace.md#building-html-workspace-code). Dev-paketet måste användas.
 
 1. Kopiera `/libs/ws/js/runtime/templates/task.html` till `/apps/ws/js/runtime/templates/task.html`.
 
