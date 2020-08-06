@@ -1,8 +1,8 @@
 ---
-title: AEM Development - Guidelines and Best Practices
-seo-title: AEM Development - Guidelines and Best Practices
-description: Riktlinjer och bästa praxis för utveckling på AEM
-seo-description: Riktlinjer och bästa praxis för utveckling på AEM
+title: AEM - riktlinjer och bästa praxis
+seo-title: AEM - riktlinjer och bästa praxis
+description: Riktlinjer och bästa metoder för att utveckla AEM
+seo-description: Riktlinjer och bästa metoder för att utveckla AEM
 uuid: a67de085-4441-4a1d-bec3-2f27892a67ff
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,15 +11,18 @@ content-type: reference
 discoiquuid: b4cf0ffc-973a-473b-80c8-7f530d111435
 translation-type: tm+mt
 source-git-commit: 8b7373b116a93322ae32bb9afa7028e831ca09f6
+workflow-type: tm+mt
+source-wordcount: '1105'
+ht-degree: 0%
 
 ---
 
 
-# AEM Development - Guidelines and Best Practices{#aem-development-guidelines-and-best-practices}
+# AEM - riktlinjer och bästa praxis{#aem-development-guidelines-and-best-practices}
 
 ## Riktlinjer för användning av mallar och komponenter {#guidelines-for-using-templates-and-components}
 
-AEM-komponenter och -mallar utgör en mycket kraftfull verktygslåda. De kan användas av utvecklare för att ge användare, redaktörer och administratörer på webbplatser den funktionalitet de behöver för att anpassa sina webbplatser till föränderliga affärsbehov (innehållsflexibilitet) samtidigt som webbplatsernas enhetliga layout (varumärkesskydd) bibehålls.
+AEM komponenter och mallar utgör en mycket kraftfull verktygslåda. De kan användas av utvecklare för att ge användare, redaktörer och administratörer på webbplatser den funktionalitet de behöver för att anpassa sina webbplatser till föränderliga affärsbehov (innehållsflexibilitet) samtidigt som webbplatsernas enhetliga layout (varumärkesskydd) bibehålls.
 
 En typisk utmaning för en person som ansvarar för en webbplats, eller en uppsättning webbplatser (till exempel på ett globalt företags kontor) är att presentera en ny typ av innehållspresentation på deras webbplatser.
 
@@ -35,7 +38,7 @@ Det rekommenderade sättet att hantera en sådan utmaning är att
 
 Detta visar hur detta tillvägagångssätt gör det möjligt för de medverkande användarna och administratörerna på webbplatsen att snabbt reagera på affärsbehov, utan att utvecklingsteamen behöver vara engagerade. Alternativa metoder, till exempel att skapa en ny mall, är vanligtvis en kostsam övning som kräver en ändringshanteringsprocess och att utvecklingsteamet är engagerat. Detta gör hela processen mycket längre och kostsam.
 
-Utvecklarna av AEM-baserade system bör därför använda
+Utvecklarna av AEM bör därför använda
 
 * mallar och åtkomstkontroll för styckesystemdesign för enhetligt varumärke och varumärkesskydd
 * styckesystem inklusive dess konfigurationsalternativ för flexibilitet.
@@ -44,7 +47,7 @@ Följande allmänna regler för utvecklare är bra för de flesta vanliga projek
 
 * Behåll lågt antal mallar - lika lite som antalet helt olika sidstrukturer på webbplatserna.
 * Erbjud nödvändig flexibilitet och konfigurationsfunktioner till dina anpassade komponenter.
-* Maximera användningen av det kraftfulla och flexibla AEM-styckesystemet - parsys- och iparsys-komponenterna.
+* Maximera användningen av kraften och flexibiliteten i AEM styckesystem - komponenterna parsys och iparsys.
 
 ### Anpassa komponenter och andra element {#customizing-components-and-other-elements}
 
@@ -56,7 +59,7 @@ Detta kan du göra genom att kopiera och ersätta den befintliga definitionen. M
 >
 >Mer information finns i [Använda övertäckningar](/help/sites-developing/overlays.md) .
 
-Exempel:
+Till exempel:
 
 * [Anpassa en komponent](/help/sites-developing/components.md)
 
@@ -66,7 +69,7 @@ Exempel:
 
       * Så här anpassar du komponentkopian Text:
 
-         * from `/libs/foundation/components/text`
+         * från `/libs/foundation/components/text`
          * to `/apps/myProject/components/text`
 
 * [Anpassa sidor som visas av felhanteraren](/help/sites-developing/customizing-errorhandler-pages.md#how-to-customize-pages-shown-by-the-error-handler)
@@ -75,7 +78,7 @@ Exempel:
 
    * Kopiera standardskripten i databasen:
 
-      * from `/libs/sling/servlet/errorhandler/`
+      * från `/libs/sling/servlet/errorhandler/`
       * to `/apps/sling/servlet/errorhandler/`
 
 >[!CAUTION]
@@ -126,19 +129,19 @@ Du bör använda användarsessionen, inte den administrativa sessionen. Detta in
 slingRequest.getResourceResolver().adaptTo(Session.class);
 ```
 
-### Skydda mot XSS (Cross-Site Scripting) {#protect-against-cross-site-scripting-xss}
+### Protect mot XSS (Cross-Site Scripting) {#protect-against-cross-site-scripting-xss}
 
 Med XSS (Cross-site scripting) kan angripare lägga in kod på webbsidor som visas av andra användare. Säkerhetsluckan kan utnyttjas av skadliga webbanvändare för att kringgå åtkomstkontroller.
 
-AEM tillämpar principen att filtrera allt innehåll som användaren tillhandahåller vid utskrift. Förhindrande av XSS har högsta prioritet under både utveckling och testning.
+AEM tillämpar principen om att filtrera allt innehåll som användaren tillhandahåller vid utskrift. Förhindrande av XSS har högsta prioritet under både utveckling och testning.
 
 Dessutom kan en brandvägg för ett webbprogram, till exempel [mod_security för Apache](https://modsecurity.org), ge tillförlitlig, central kontroll över säkerheten i distributionsmiljön och skydda mot tidigare oidentifierade serveröverskridande skriptattacker (cross-site scripting).
 
 >[!CAUTION]
 >
->Exempelkod som tillhandahålls med AEM kanske inte själv skyddar mot sådana attacker och är vanligtvis beroende av begärandefiltrering från en brandvägg för webbprogram.
+>Exempelkod som medföljer AEM kan inte skydda sig mot sådana attacker och är vanligtvis beroende av att en webbprogrambrandvägg filtrerar begäranden.
 
-Lathund för XSS API innehåller information som du behöver känna till för att kunna använda XSS API:t och göra en AEM-app säkrare. Du kan ladda ned den här:
+XSS API-databladet innehåller information som du behöver känna till för att kunna använda XSS API:t och göra en AEM säkrare. Du kan ladda ned den här:
 
 XSSAPI-kalkylbladet.
 
@@ -149,7 +152,7 @@ XSSAPI-kalkylbladet.
 Liksom för alla Internetprogram ska du se till att konfidentiella uppgifter skickas
 
 * trafiken säkras via SSL
-* HTTP POST används om tillämpligt
+* HTTP-POST används om tillämpligt
 
 Detta gäller information som är konfidentiell för systemet (t.ex. konfiguration eller administrativ åtkomst) samt information som är konfidentiell för användarna (t.ex. personuppgifter)
 
@@ -163,6 +166,6 @@ Mer information finns i [Anpassa felsidor som visas av felhanteraren](/help/site
 
 ### Öppna filer i Java-processen {#open-files-in-the-java-process}
 
-Eftersom AEM kan komma åt ett stort antal filer rekommenderar vi att antalet [öppna filer för en Java-process](/help/sites-deploying/configuring.md#open-files-in-the-java-process) konfigureras explicit för AEM.
+Eftersom AEM har åtkomst till ett stort antal filer rekommenderar vi att antalet [öppna filer för en Java-process](/help/sites-deploying/configuring.md#open-files-in-the-java-process) konfigureras explicit för AEM.
 
 För att minimera problemet bör du se till att alla öppnade filer stängs korrekt så snart som (meningsfullt) möjligt.
