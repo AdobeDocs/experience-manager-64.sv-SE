@@ -1,8 +1,8 @@
 ---
 title: Ändra utvärderingsordningen för autentisering
 seo-title: Ändra utvärderingsordningen för autentisering
-description: 'Du kan ändra ordningen i vilken AEM-formulär utvärderar flera autentiseringsleverantörer. '
-seo-description: 'Du kan ändra ordningen i vilken AEM-formulär utvärderar flera autentiseringsleverantörer. '
+description: 'Du kan ändra ordningen i vilken AEM utvärderas av flera autentiseringsleverantörer. '
+seo-description: 'Du kan ändra ordningen i vilken AEM utvärderas av flera autentiseringsleverantörer. '
 uuid: c2693e5b-cf09-4bb8-815a-2b20ebf6eea0
 contentOwner: admin
 content-type: reference
@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 5434df9c-ecf6-450a-aa7e-d9ab69b66fe6
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '167'
+ht-degree: 0%
 
 ---
 
 
 # Ändra utvärderingsordningen för autentisering {#change-the-order-of-evaluation-for-authentication}
 
-Om du har konfigurerat flera autentiseringsleverantörer kan du ändra ordningen i vilken AEM-formulär utvärderar dem för autentisering. Ordningen på de autentiseringsproviders som visas i filen config.xml avgör ordningen på utvärderingen av autentiseringen.
+Om du har konfigurerat flera autentiseringsleverantörer kan du ändra i vilken ordning AEM utvärderas för autentisering. Ordningen på de autentiseringsproviders som visas i filen config.xml avgör ordningen på utvärderingen av autentiseringen.
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Importera och exportera konfigurationsfiler.
 1. Om du vill exportera den aktuella konfigurationsinställningen till en fil klickar du på Exportera och sparar konfigurationsfilen på en annan plats.
