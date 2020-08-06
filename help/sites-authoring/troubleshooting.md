@@ -1,8 +1,8 @@
 ---
 title: Felsöka AEM vid redigering
 seo-title: Felsöka AEM vid redigering
-description: Problem som kan uppstå när du använder AEM
-seo-description: Problem som kan uppstå när du använder AEM
+description: Vissa problem som kan uppstå när du använder AEM
+seo-description: Vissa problem som kan uppstå när du använder AEM
 uuid: 99af51ea-8628-4811-83f2-ab3f88f0279e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: da0a5644-2e1d-4394-a6aa-11bb41406ba6
 translation-type: tm+mt
 source-git-commit: a8e0a48466c046bf1f96ff240995b499818ed0a2
+workflow-type: tm+mt
+source-wordcount: '307'
+ht-degree: 10%
 
 ---
 
@@ -25,7 +28,7 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
 
 >[!NOTE]
 >
->Användare som har administratörsbehörighet och som vill felsöka problem med AEM kan använda de felsökningsmetoder som beskrivs i [Felsökning för AEM (för administratörer)](/help/sites-administering/troubleshoot.md). Om du inte har tillräcklig behörighet kontaktar du systemadministratören för felsökning av AEM.
+>Användare som har administratörsbehörighet och som vill felsöka problem med AEM kan använda felsökningsmetoderna som beskrivs i AEM [Felsökning (för administratörer)](/help/sites-administering/troubleshoot.md). Om du inte har tillräcklig behörighet kontaktar du systemadministratören om felsökning AEM.
 
 ## Gammal sidversion finns fortfarande på publicerad webbplats {#old-page-version-still-on-published-site}
 
@@ -42,7 +45,7 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
    * Här finns olika möjligheter:
    * Bekräfta att sidan har replikerats korrekt. Kontrollera sidstatus och, om det behövs, status för replikeringskön.
    * Rensa cacheminnet i den lokala webbläsaren och öppna sidan igen.
-   * Lägg till `?` i slutet av sid-URL:en. Exempel:
+   * Lägg till `?` i slutet av sid-URL:en. Till exempel:
 
       * `http://localhost:4502/sites.html/content?`
       * Detta begär sidan direkt från AEM och kringgår Dispatcher. Om du får den uppdaterade sidan är det en indikation på att du bör rensa Dispatcher-cachen.
