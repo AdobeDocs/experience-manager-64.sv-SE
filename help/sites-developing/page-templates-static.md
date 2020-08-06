@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a483ac24-cfe7-4156-a3a8-c0f14282490c
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1662'
+ht-degree: 1%
 
 ---
 
@@ -86,12 +89,12 @@ En mall är en nod av typen cq:Template och har följande egenskaper och underor
   </tr> 
   <tr> 
    <td> thumbnail.png</td> 
-   <td>  nt:fil</td> 
+   <td> nt:fil</td> 
    <td>Mallens miniatyrbild.<br /> </td> 
   </tr> 
   <tr> 
    <td> icon.png</td> 
-   <td>  nt:fil</td> 
+   <td> nt:fil</td> 
    <td>Mallens ikon.<br /> </td> 
   </tr> 
  </tbody> 
@@ -131,7 +134,7 @@ Den här komponenten används för att definiera innehållets struktur och desig
 
 ### Innehållet som skapas av en mall {#the-content-produced-by-a-template}
 
-Mallar används för att skapa sidor av typen `cq:Page` (som tidigare nämnts är en sida en speciell typ av komponent). Varje AEM-sida har en strukturerad nod `jcr:content`. Det:
+Mallar används för att skapa sidor av typen `cq:Page` (som tidigare nämnts är en sida en speciell typ av komponent). Varje AEM har en strukturerad nod `jcr:content`. Det:
 
 * är av typen cq:PageContent
 * är en strukturerad nodtyp som innehåller en definierad innehållsdefinition
@@ -141,18 +144,18 @@ Mallar används för att skapa sidor av typen `cq:Page` (som tidigare nämnts ä
 
 AEM levereras med ett antal standardmallar som är tillgängliga direkt. I vissa fall kanske du vill använda mallarna som de är. I så fall måste du se till att mallen är tillgänglig för din webbplats.
 
-Exempel: AEM innehåller flera mallar, bland annat en innehållssida och en hemsida.
+AEM innehåller till exempel flera mallar, inklusive en innehållssida och en hemsida.
 
 | **Titel** | **Komponent** | **Plats** | **Syfte** |
 |---|---|---|---|
-| Hemsida | hemsida | geometrixx | Mallen för startsidan för Geometrixx. |
-| Innehållssida |  innehållsida | geometrixx | Mallen för innehållssidan i Geometrixx. |
+| Hemsida | hemsida | geometrixx | Geometrixx hemsidmall. |
+| Innehållssida | innehållsida | geometrixx | Innehållssidmallen för Geometrixx. |
 
 #### Visa standardmallar {#displaying-default-templates}
 
 Om du vill se en lista över alla mallar i databasen gör du så här:
 
-1. Öppna menyn **Verktyg** i CRXDE Lite och klicka på **Fråga**.
+1. Öppna **Verktyg** -menyn i CRXDE Lite och klicka på **Fråga**.
 
 1. På fliken Fråga
 1. Som **Typ** väljer du **XPath**.
@@ -172,7 +175,7 @@ När format definieras i användargränssnittet med [designläge](/help/sites-au
 
 >[!CAUTION]
 >
->Adobe rekommenderar att du bara använder design i [designläge](/help/sites-authoring/default-components-designmode.md).
+>Adobe rekommenderar att du bara använder designer i [designläge](/help/sites-authoring/default-components-designmode.md).
 >
 >Det är till exempel inte bra att ändra designen i CRX DE och tillämpningen av den kan variera från förväntat beteende.
 
@@ -180,13 +183,13 @@ Om du bara använder designläge gäller inte följande avsnitt, [Design Path Re
 
 >[!NOTE]
 >
->I det här avsnittet beskrivs beteendet för att utforma banor från och med AEM 6.4.2.0.
+>I det här avsnittet beskrivs beteendet för banupplösning i AEM 6.4.2.0.
 
 ### Design Path-upplösning {#design-path-resolution}
 
 När du återger innehåll baserat på en statisk mall försöker AEM att använda den mest relevanta designen och formaten på innehållet baserat på en genomgång av innehållshierarkin.
 
-AEM bestämmer den mest relevanta stilen för en innehållsnod i följande ordning:
+AEM avgör vilket format som är mest relevant för en innehållsnod i följande ordning:
 
 * Om det finns en design för den fullständiga och exakta sökvägen för innehållsnoden (som när designen definieras i designläge) använder du den designen.
 * Om det finns en design för den överordnade noden ska du använda den designen.
@@ -267,7 +270,7 @@ I följande tabell beskrivs hur AEM väljer en design.
 
 ## Utveckla sidmallar {#developing-page-templates}
 
-AEM-sidmallar är helt enkelt modeller som används för att skapa nya sidor. De kan innehålla så lite, eller så mycket, initialt innehåll som behövs, och deras roll är att skapa rätt initiala nodstrukturer, med de nödvändiga egenskaperna (främst sling:resourceType) inställda för redigering och återgivning.
+AEM är helt enkelt modeller som används för att skapa nya sidor. De kan innehålla så lite, eller så mycket, initialt innehåll som behövs, och deras roll är att skapa rätt initiala nodstrukturer, med de nödvändiga egenskaperna (främst sling:resourceType) inställda för redigering och återgivning.
 
 ### Skapa en ny mall (baserad på en befintlig mall) {#creating-a-new-template-based-on-an-existing-template}
 
@@ -316,7 +319,7 @@ Mer information finns i [Använda bibliotek](/help/sites-developing/clientlibs.m
 
 I det här exemplet visas hur du tillåter att en mall används för vissa innehållssökvägar. De mallar som är tillgängliga för sidförfattaren när nya sidor skapas bestäms av logiken som definieras i [Malltillgänglighet](/help/sites-developing/templates.md#template-availability).
 
-1. I CRXDE Lite navigerar du till mallen som du vill använda för sidan, till exempel mallen Newsletter.
+1. I CRXDE Lite går du till den mall som du vill använda för sidan, till exempel mallen Nyhetsbrev.
 1. Ändra `allowedPaths` egenskapen och andra egenskaper som används för [malltillgänglighet](/help/sites-developing/templates.md#template-availability). Till exempel `allowedPaths`: `/content/geometrixx-outdoors/[^/]+(/.*)?` betyder att den här mallen är tillåten i alla sökvägar under `/content/geometrixx-outdoors`.
 
    ![chlimage_1-252](assets/chlimage_1-252.png)
