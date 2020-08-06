@@ -31,7 +31,7 @@ Du kan utföra följande uppgifter med tjänsten Konvertera PDF:
 
    >[!NOTE]
    >
-   >Mer information om tjänsten Konvertera PDF finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+   >Mer information om tjänsten Convert PDF finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Konvertera PDF-dokument till PostScript {#converting-pdf-documents-to-postscript}
 
@@ -39,7 +39,7 @@ I det här avsnittet beskrivs hur du kan använda Konvertera PDF-tjänstens API 
 
 >[!NOTE]
 >
->Mer information om tjänsten Konvertera PDF finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Convert PDF finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -60,7 +60,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 Innan du programmässigt kan utföra en konvertering av PDF-tjänst måste du skapa en klient för konvertering av PDF. Om du använder Java API skapar du ett `ConvertPdfServiceClient` objekt. Om du använder webbtjänstens API skapar du ett `ConvertPDFServiceService` objekt.
 
-I det här avsnittet används webbtjänstfunktioner som introducerades i AEM Forms. Om du vill få tillgång till nya funktioner måste du konstruera proxyobjektet med hjälp av `lc_version` -attributet. (Se &quot;Åtkomst av nya funktioner med hjälp av webbtjänster&quot; i [Anropa AEM-formulär med webbtjänster](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)
+I det här avsnittet används webbtjänstfunktioner som introducerades i AEM Forms. Om du vill få tillgång till nya funktioner måste du konstruera proxyobjektet med hjälp av `lc_version` -attributet. (Se&quot;Åtkomst av nya funktioner med hjälp av webbtjänster&quot; i [Anropa AEM Forms med webbtjänster](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)
 
 **Referera PDF-dokumentet som ska konverteras till en PostScript-fil**
 
@@ -76,7 +76,7 @@ Om du markerar `ExpandToFit` alternativet (som utökar PostScript-filens utdata 
 
 >[!NOTE]
 >
->Mer information om de körningsvärden du kan ange finns i klassreferensen `ToPSOptionsSpec` i API-referens [för](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)AEM Forms.
+>Mer information om de körningsvärden du kan ange finns i klassreferensen `ToPSOptionsSpec` i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **Konvertera PDF-dokumentet till en PostScript-fil**
 
@@ -127,6 +127,7 @@ Konvertera ett PDF-dokument till PostScript med hjälp av Java (Convert PDF Serv
 
    * Ett `com.adobe.idp.Document` objekt som representerar PDF-dokumentet som ska konverteras till en PostScript-fil.
    * Ett `ToPSOptionsSpec` objekt som anger alternativ för PostScript-körning.
+
    Metoden returnerar `toPS2` ett `Document` objekt som innehåller det nya PostScript-dokumentet.
 
 1. Spara PostScript-filen.
@@ -164,7 +165,7 @@ Konvertera ett PDF-dokument till PostScript med hjälp av API:t för konverterin
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `ConvertPdfServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `ConvertPdfServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `ConvertPdfServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -188,6 +189,7 @@ Konvertera ett PDF-dokument till PostScript med hjälp av API:t för konverterin
 
    * Ett `BLOB` objekt som representerar PDF-dokumentet som ska konverteras till en PostScript-fil
    * Ett `ToPSOptionsSpec` objekt som anger körningsalternativ
+
    När konverteringen är klar extraherar du de binära data som representerar PostScript-dokumentet genom att öppna dess `BLOB` objektegenskap `MTOM` . Detta returnerar en bytearray som du kan skriva ut till en PostScript-fil.
 
 1. Spara PostScript-filen.
@@ -201,9 +203,9 @@ Konvertera ett PDF-dokument till PostScript med hjälp av API:t för konverterin
 
 [Sammanfattning av steg](converting-pdf-postscript-image-files.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Konvertera PDF-dokument till bildformat {#converting-pdf-documents-to-image-formats}
 
@@ -213,7 +215,7 @@ När du konverterar ett PDF-dokument till en bild skapar tjänsten Konvertera PD
 
 >[!NOTE]
 >
->Mer information om tjänsten Konvertera PDF finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Convert PDF finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-1}
 
@@ -240,7 +242,7 @@ Du måste hämta PDF-dokumentet för att kunna konvertera till en bild. Du kan i
 
 **Ange körningsalternativ**
 
-Du måste ange körningsalternativ som bildformat och upplösningsvärden. Mer information om körningsvärden finns i klassreferensen i `ToImageOptionsSpec` AEM Forms API Reference [](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+Du måste ange körningsalternativ som bildformat och upplösningsvärden. Mer information om körningsvärden finns i klassreferensen `ToImageOptionsSpec` i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **Konvertera PDF-filen till en bild**
 
@@ -282,6 +284,7 @@ Konvertera ett PDF-dokument till ett bildformat med Java (Convert PDF service AP
 
    * Skapa ett `ToImageOptionsSpec` objekt med hjälp av dess konstruktor.
    * Anropa metoder som tillhör det här objektet efter behov. Du kan till exempel ange bildtypen genom att anropa `setImageConvertFormat` metoden och skicka ett `ImageConvertFormat` uppräkningsvärde som anger formattypen.
+
    >[!NOTE]
    >
    >Det är obligatoriskt att ange `ImageConvertFormat` uppräkningsvärdet.
@@ -292,6 +295,7 @@ Konvertera ett PDF-dokument till ett bildformat med Java (Convert PDF service AP
 
    * Ett `com.adobe.idp.Document` objekt som representerar den PDF-fil som ska konverteras.
    * Ett `com.adobe.livecycle.converpdfservice.client.ToImageOptionsSpec` objekt som innehåller de olika inställningarna för målbildens format.
+
    Metoden `toImage2` returnerar ett `java.util.List` objekt som innehåller bilder. Varje element i samlingen är en `com.adobe.idp.Document` instans.
 
 1. Hämta bildfilerna från en samling.
@@ -322,7 +326,7 @@ Konvertera ett PDF-dokument till ett bildformat med hjälp av API:t för konvert
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `ConvertPdfServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `ConvertPdfServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `ConvertPdfServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -339,6 +343,7 @@ Konvertera ett PDF-dokument till ett bildformat med hjälp av API:t för konvert
 
    * Skapa ett `ToImageOptionsSpec` objekt med hjälp av dess konstruktor.
    * Anropa metoder som tillhör det här objektet efter behov. Du kan till exempel ange bildtypen genom att anropa metoden och skicka ett `setImageConvertFormat` `ImageConvertFormat` uppräkningsvärde som anger formattypen.
+
    >[!NOTE]
    >
    >Det är obligatoriskt att ange `ImageConvertFormat` uppräkningsvärdet.
@@ -349,6 +354,7 @@ Konvertera ett PDF-dokument till ett bildformat med hjälp av API:t för konvert
 
    * Ett `BLOB` objekt som representerar filen som ska konverteras
    * Ett `ToImageOptionsSpec` objekt som innehåller de olika inställningarna för målbildens format
+
    Metoden returnerar `toImage2` ett `MyArrayOfBLOB` objekt som innehåller de nyskapade bildfilerna.
 
 1. Hämta bildfilerna från en samling.
@@ -358,6 +364,6 @@ Konvertera ett PDF-dokument till ett bildformat med hjälp av API:t för konvert
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
