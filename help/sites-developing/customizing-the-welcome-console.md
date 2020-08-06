@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 2e408acb-3802-4837-8619-688cfc3abfa7
 translation-type: tm+mt
 source-git-commit: 14daff213297d2435765dd46039f346ce3868ac5
+workflow-type: tm+mt
+source-wordcount: '486'
+ht-degree: 4%
 
 ---
 
@@ -42,23 +45,23 @@ Här visas huvudkonsolerna för AEM.
 
 Nodnivåbehörigheter avgör om länken kan ses eller inte. De aktuella noderna är:
 
-* **** Webbplatser: `/libs/wcm/core/content/siteadmin`
+* **Webbplatser:** `/libs/wcm/core/content/siteadmin`
 
-* **** Digital Assets: `/libs/wcm/core/content/damadmin`
+* **Digital Assets:** `/libs/wcm/core/content/damadmin`
 
-* **** Community: `/libs/collab/core/content/admin`
+* **Community:** `/libs/collab/core/content/admin`
 
-* **** Kampanjer: `/libs/mcm/content/admin`
+* **Kampanjer:** `/libs/mcm/content/admin`
 
-* **** Inkorg: `/libs/cq/workflow/content/inbox`
+* **Inkorg:** `/libs/cq/workflow/content/inbox`
 
-* **** Användare: `/libs/cq/security/content/admin`
+* **Användare:** `/libs/cq/security/content/admin`
 
-* **** Systemutvärdering: `/libs/wcm/core/content/misc`
+* **Systemutvärdering:** `/libs/wcm/core/content/misc`
 
-* **** Taggning: `/libs/cq/tagging/content/tagadmin`
+* **Taggning:** `/libs/cq/tagging/content/tagadmin`
 
-Exempel:
+Till exempel:
 
 * Om du vill begränsa åtkomst till **verktyg** tar du bort läsåtkomst från
 
@@ -83,7 +86,7 @@ Det finns tre avsnitt (med ett mellanrum) som standard:
    <td> </td> 
   </tr> 
   <tr> 
-   <td> Molntjänster</td> 
+   <td> Cloud Services</td> 
    <td><code>/libs/cq/core/content/welcome/resources/cloudservices</code></td> 
   </tr> 
   <tr> 
@@ -135,7 +138,7 @@ Det finns tre avsnitt (med ett mellanrum) som standard:
    <td><code>/libs/cq/core/content/welcome/features/packages</code></td> 
   </tr> 
   <tr> 
-   <td> Paketresurs</td> 
+   <td> Paketdelning</td> 
    <td><code>/libs/cq/core/content/welcome/features/share</code></td> 
   </tr> 
   <tr> 
@@ -143,7 +146,7 @@ Det finns tre avsnitt (med ett mellanrum) som standard:
    <td><code>/libs/cq/core/content/welcome/features/cluster</code></td> 
   </tr> 
   <tr> 
-   <td> Säkerhetskopiera</td> 
+   <td> Säkerhetskopiering</td> 
    <td><code>/libs/cq/core/content/welcome/features/backup</code></td> 
   </tr> 
   <tr> 
@@ -173,7 +176,7 @@ Du kan dölja en länk för specifika användare eller grupper genom att ta bort
 
    `/libs/cq/core/content/welcome/features/<link-target>`
 
-Exempel:
+Till exempel:
 
 * Ta bort länken till **rapporter** genom att ta bort läsåtkomst från
 
@@ -196,6 +199,7 @@ ConsoleUtil `/libs/cq/core/components/welcome/welcome.jsp` används [](https://h
 >Kör följande fråga för att se den befintliga listan:
 >
 >* `select * from cq:Console`
+
 >
 
 
