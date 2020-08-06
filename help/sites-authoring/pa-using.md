@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 42d2195a-1327-45c0-a14c-1cf5ca196cfc
 translation-type: tm+mt
 source-git-commit: e99e29425578005ed9d215946d63f67e7229e8d6
+workflow-type: tm+mt
+source-wordcount: '457'
+ht-degree: 0%
 
 ---
 
@@ -59,7 +62,7 @@ Medlemmar i användargruppen analytics-administrators kan konfigurera konsolen S
 
 >[!NOTE]
 >
->När ett träd med sidor innehåller underordnade objekt som är kopplade till olika Adobe Analytics-molnkonfigurationer, kan du inte konfigurera tillgängliga datakolumner för sidorna.
+>När ett sidträd innehåller underordnade sidor som är kopplade till olika Adobe Analytics molnkonfigurationer, kan du inte konfigurera tillgängliga datakolumner för sidorna.
 
 1. I listvyn använder du vyväljarna (höger om verktygsfältet), väljer **Visa inställningar** och sedan **Lägg till anpassade analysdata**.
 
@@ -76,14 +79,14 @@ Medlemmar i användargruppen analytics-administrators kan konfigurera konsolen S
 Öppna [Content Insight](/help/sites-authoring/content-insights.md) från Sites-konsolen för att utforska hur sidan fungerar.
 
 1. I webbplatskonsolen väljer du den sida som du vill se innehållsinsikter för.
-1. Klicka på ikonen Analytics (Analyser och rekommendationer) i verktygsfältet.
+1. Klicka på ikonen Analytics (Analyser) och Recommendations () i verktygsfältet.
 
    ![](do-not-localize/chlimage_1-16.png)
 
-## Synliga analyser från sidredigeraren (aktivitetskarta) {#analytics-visible-from-the-page-editor-activity-map}
+## Synliga analyser från sidredigeraren (Activity Map) {#analytics-visible-from-the-page-editor-activity-map}
 
 >[!CAUTION]
 >
->På grund av säkerhetsändringar i Adobe Analytics-API:t är det inte längre möjligt att använda den version av Activity Map som ingår i AEM.
+>På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM.
 >
 >Det [ActivityMap-plugin som tillhandahålls av Adobe Analytics](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) bör nu användas.
