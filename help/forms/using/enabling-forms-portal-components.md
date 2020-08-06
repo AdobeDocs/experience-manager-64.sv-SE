@@ -1,8 +1,8 @@
 ---
 title: Aktivera komponenterna i formulärportalen
 seo-title: Aktivera komponenterna i formulärportalen
-description: Komponenterna i Forms Portal är inaktiverade. Aktivera grupper med Document Services och Document Services Predicates för att aktivera komponenter för Forms Portal.
-seo-description: Komponenterna i Forms Portal är inaktiverade. Aktivera grupper med Document Services och Document Services Predicates för att aktivera komponenter för Forms Portal.
+description: Forms Portal-komponenter är inaktiverade. Aktivera grupper med Document Services och Document Services Predicates för att aktivera Forms Portal-komponenter.
+seo-description: Forms Portal-komponenter är inaktiverade. Aktivera grupper med Document Services och Document Services Predicates för att aktivera Forms Portal-komponenter.
 uuid: 92d25da6-f1df-4ac0-bf84-2edf9e2722b3
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,13 +10,16 @@ topic-tags: publish
 discoiquuid: 4d318908-c724-4582-a82b-6e9b1c55705b
 translation-type: tm+mt
 source-git-commit: 2abf448e0231eb6fcd9295f498a24e81e1ead11a
+workflow-type: tm+mt
+source-wordcount: '338'
+ht-degree: 0%
 
 ---
 
 
 # Aktivera komponenterna i formulärportalen {#enabling-forms-portal-components}
 
-Komponenterna i formulärportalen är inte tillgängliga för användning. Gör så här för att visa komponenterna i listan över tillgängliga komponenter i AEM-sidosparken:
+Komponenterna i formulärportalen är inte tillgängliga för användning. Gör så här för att visa komponenterna i listan över tillgängliga komponenter i AEM.
 
 1. Logga in på webbplatsens författarinstans och öppna en AEM Sites-sida.
 
@@ -25,7 +28,7 @@ Komponenterna i formulärportalen är inte tillgängliga för användning. Gör 
    1. I sidhuvudet trycker du på ![listrutan](assets/canvas-drop-down.png) Canvas > **Design** för att öppna sidan i designläge.
    1. Tryck på en komponent (med en blå kant) och tryck sedan på ![fältnivån](assets/field-level.png) för att välja det styckesystem som innehåller den aktuella komponenten.
    1. Tryck på ![settings_icon](assets/settings_icon.png) i styckesystemet för att öppna dialogrutan Redigera för styckesystemet.
-   1. Aktivera kryssrutor för komponenterna **[!UICONTROL Tillåtna komponenter]** i listan över tillåtna komponenter för **[!UICONTROL Document Services]** och **[!UICONTROL Document Services Predicates]** . Tryck på **[!UICONTROL OK]**.
+   1. Aktivera kryssrutor för **[!UICONTROL Allowed Components]** och **[!UICONTROL Document Services]** **[!UICONTROL Document Services Predicates]** komponenter i listan med komponenter. Tryck på **[!UICONTROL OK]**.
 
 1. Utför följande steg för de sidor som använder en dynamisk mall:
 
