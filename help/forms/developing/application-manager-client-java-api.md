@@ -34,15 +34,15 @@ Följande Java API Quick Start (SOAP) är tillgängliga för Application Manager
 
 [Snabbstart (SOAP-läge): Hämta status för program med Java API](application-manager-client-java-api.md#quick-start-soap-mode-getting-status-of-applications-using-java-api)
 
-[Snabbstart (SOAP-läge):Förhandsgranska AEM-formulär och senare programarkiv med Java API](application-manager-client-java-api.md#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api)
+[Snabbstart (SOAP-läge):Förhandsgranska AEM Forms-programarkivet och senare med Java API](application-manager-client-java-api.md#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api)
 
-[Snabbstart (SOAP-läge):Ta bort AEM Forms-programarkivet med Java API](application-manager-client-java-api.md#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api)
+[Snabbstart (SOAP-läge):ta bort AEM Forms-programarkivet med Java API](application-manager-client-java-api.md#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstart i Programmering med AEM Forms baseras på den Forms Server som distribueras på JBoss och operativsystemet Windows. Om du använder ett annat operativsystem, till exempel Unix, ersätter du fönsterspecifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart i Programmering med AEM Forms baseras på Forms Server som distribueras på JBoss och Windows. Om du använder ett annat operativsystem, till exempel Unix, ersätter du fönsterspecifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Skapa programversion med Java API {#quick-start-soap-mode-creating-application-version-using-the-java-api}
 
@@ -444,7 +444,7 @@ public class GetApplication_SOAP {
 
 I följande Java-kodexempel hämtas programmen med Java API.
 
-***Obs**! Hämtningen av API:t för AEM Forms-programmet, getApplications(), returnerar endast distribuerade program. *
+***Obs**! När AEM Forms Application API hämtas, getApplications(), returneras endast distribuerade program. *
 
 ```as3
 /* 
@@ -644,9 +644,9 @@ public class GetApplicationStatus_SOAP {
 }
 ```
 
-## Snabbstart (SOAP-läge):Förhandsgranska LiveCycle ES2 och senare programarkiv med Java API {#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api}
+## Snabbstart (SOAP-läge):Förhandsgranska LiveCycle ES2-programarkivet och senare med Java API {#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api}
 
-Följande Java-kodexempel används för att förhandsgranska AEM Forms och senare programarkiv med Java API.
+Följande Java-kodexempel används för att förhandsgranska AEM Forms-programarkiv och senare med Java API.
 
 ```as3
 /* 
