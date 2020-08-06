@@ -36,6 +36,7 @@ På grund av möjligheten att det finns olika värden är sidegenskaperna inte a
 >* Inte tillgängligt i det klassiska användargränssnittet.
 >* Inte tillgängligt för sidor i en live-kopia.
 >* Endast tillgängligt för sidor med samma resurstyp.
+
 >
 
 
@@ -56,13 +57,14 @@ På grund av möjligheten att det finns olika värden är sidegenskaperna inte a
 >* `/libs/granite/ui/components/foundation/form/datepicker`
 >* `/libs/granite/ui/components/foundation/form/pathbrowser`
 >* `/libs/granite/ui/components/foundation/form/checkbox`
+
 >
 
 
 
 Fält är aktiverade i sidkomponenten (*inte* i mallen):
 
-1. Om du använder CRXDE Lite (eller en motsvarande metod) öppnar du sidkomponenten.
+1. Öppna sidkomponenten med CRXDE Lite (eller en motsvarande metod).
 
    Till exempel: `/apps/core/wcm/components/page/v1/page`
 
@@ -76,6 +78,7 @@ Fält är aktiverade i sidkomponenten (*inte* i mallen):
    * **Namn**: `allowBulkEdit`
    * **Typ**: `Boolean`
    * **Värde**: `true`
+
    Exempel: för standardkomponenten [för](/help/sites-authoring/default-components-foundation.md)sidans grund:
 
    `/libs/foundation/components/page`
