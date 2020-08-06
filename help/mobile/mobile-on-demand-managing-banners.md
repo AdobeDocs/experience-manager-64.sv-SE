@@ -11,6 +11,9 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: fb1abaa0-9c02-4f20-aa7c-073def067452
 translation-type: tm+mt
 source-git-commit: 55b6a113bcb4d39b7eb100f21a05b9b44e3fe1c3
+workflow-type: tm+mt
+source-wordcount: '676'
+ht-degree: 0%
 
 ---
 
@@ -29,12 +32,13 @@ Banderoller representerar vanligtvis grafiska marknadsföringslänkar.
 
 >[!NOTE]
 >
->Läs följande resurser i onlinehjälpen om du vill veta mer om följande ämnen i AEM-mobilappar:
+>Läs följande resurser i onlinehjälpen om du vill veta mer om följande ämnen i AEM Mobile-program:
 >
 >* [Att tänka på vid design](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
    >
    >
 * [Skapa banners](https://helpx.adobe.com/digital-publishing-solution/help/creating-banners.html)
+
 >
 
 
@@ -73,16 +77,16 @@ Arbetsflödet för att importera en ny artikel
 
 ## Redigera en banderoll {#editing-a-banner}
 
-Använd den inbyggda dra och släpp-redigeraren i AEM för att lägga till eller ändra en artikel. Komponenter som text och bilder kan läggas till/tas bort. Bilder från DAM-resurser kan infogas.
+Använd den inbyggda AEM dra och släpp-redigeraren för att lägga till eller ändra en artikel. Komponenter som text och bilder kan läggas till/tas bort. Bilder från DAM-resurser kan infogas.
 
 >[!CAUTION]
 >
->Endast banners som skapats i AEM kan öppnas i redigeraren.
+>Endast banderoller som skapats i AEM kan öppnas i redigeraren.
 
 Arbetsflödet för att redigera en artikel:
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Välj en banderoll från AEM-källa i rutan** Hantera banners**.
+1. Välj en banderoll AEM källa i rutan** Hantera banners**.
 1. Klicka på den markerade banderollen i listvyn för att öppna den i innehållsredigeraren.
 1. Använd innehållsredigeraren för att dra banderollinnehåll (manuskript, bilder, text osv.).
 
@@ -116,7 +120,7 @@ Det allmänna arbetsflödet för att överföra en banderoll:
 
 ## Ta bort en banderoll {#deleting-a-banner}
 
-Den här åtgärden tar bort den markerade banderollen från Mobile On-Demand och eventuellt från den lokala AEM-instansen.
+Den här åtgärden tar bort den markerade banderollen från Mobile On-Demand och eventuellt från den lokala AEM.
 
 Det allmänna arbetsflödet för att ta bort en banderoll:
 
@@ -124,7 +128,7 @@ Det allmänna arbetsflödet för att ta bort en banderoll:
 1. Markera den banderoll som ska tas bort i rutan **Hantera banderoller** .
 1. Se till att det är markerat i listan (markera andra att ta bort efter behov).
 1. Klicka på **Ta bort** i åtgärdsfältet.
-1. Kontrollera om du vill ta bort från både AEM och Mobile On-Demand.
+1. Kontrollera om du vill ta bort från AEM och Mobile On-Demand.
 1. Click **Delete**.
 1. Din banderoll har nu tagits bort från listan.
 
