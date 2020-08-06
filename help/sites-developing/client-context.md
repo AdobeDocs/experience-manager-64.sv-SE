@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 7b97fc27-30de-4ef9-9efe-673aec50cff2
 translation-type: tm+mt
 source-git-commit: 5f84641d87b88532f0fa0d92fada4e8cca3d9684
+workflow-type: tm+mt
+source-wordcount: '2992'
+ht-degree: 0%
 
 ---
 
@@ -68,7 +71,7 @@ Ett sessionsarkiv kan sparas mellan olika webbläsarsessioner eller kan bara var
 
 ### Context Store-komponenter {#context-store-components}
 
-En kontextlagringskomponent är en AEM-komponent som kan läggas till i klientkontexten. Komponenter i kontextarkivet visar vanligtvis data från ett sessionsarkiv som de är associerade med. Informationen som visas i kontextlagringskomponenter är dock inte begränsad till sessionsarkivdata.
+En kontextlagringskomponent är en AEM som kan läggas till i klientkontexten. Komponenter i kontextarkivet visar vanligtvis data från ett sessionsarkiv som de är associerade med. Informationen som visas i kontextlagringskomponenter är dock inte begränsad till sessionsarkivdata.
 
 Context Store-komponenter kan innehålla följande objekt:
 
@@ -184,7 +187,7 @@ Skapa en kontextlagringskomponent som återger sessionsarkivdata i klientkontext
 
 #### Utöka de medföljande komponenterna i Context Store {#extending-the-provided-context-store-components}
 
-AEM innehåller komponenterna genericstore och genericstoreproperties context store som du kan utöka. Strukturen för dina lagringsdata avgör vilken komponent du utökar:
+AEM innehåller genericstore- och genericstoreproperties-kontextlagringskomponenter som du kan utöka. Strukturen för dina lagringsdata avgör vilken komponent du utökar:
 
 * Egenskapsvärdepar: Utöka `GenericStoreProperties` komponenten. Den här komponenten återger automatiskt lager med egenskapspar. Flera interaktionspunkter finns:
 
@@ -194,13 +197,11 @@ AEM innehåller komponenterna genericstore och genericstoreproperties context st
 
    * `@param {String} store`
 
-      
-Det arkiv som ska återges
+      Det arkiv som ska återges
 
    * `@param {String} divId`
 
-      
-ID för den div som butiken ska återges i.
+      ID för den div som butiken ska återges i.
 
 >[!NOTE]
 >
@@ -327,13 +328,11 @@ Din sessionsbutik behöver sedan en renderingsmetod som anropas varje gång komp
 
 * `@param {String} store`
 
-   
-Det arkiv som ska återges
+   Det arkiv som ska återges
 
 * `@param {String} divId`
 
-   
-ID för den div som butiken ska återges i.
+   ID för den div som butiken ska återges i.
 
 ## Interagera med sessionslager {#interacting-with-session-stores}
 
@@ -394,7 +393,7 @@ Använd [`CQ_Analytics.ClientContextUtils`](/help/sites-developing/ccjsapi.md#cq
 >
 >Om du är beroende av en annan butik måste du ta hänsyn till när butiken aldrig registreras.
 
-I följande exempel används händelsen `onStoreRegistered` för `profile` sessionsarkivet. När arkivet har registrerats läggs en avlyssnare till i `update` händelsen för sessionsarkivet. När butiken uppdateras uppdateras innehållet i `<div class="welcome">` elementet på sidan med namnet från `profile` butiken.
+I följande exempel används `onStoreRegistered` händelsen för `profile` sessionsarkivet. När arkivet har registrerats läggs en avlyssnare till i `update` händelsen för sessionsarkivet. När butiken uppdateras uppdateras innehållet i `<div class="welcome">` elementet på sidan med namnet från `profile` butiken.
 
 ```
 //listen for the store registration
@@ -452,7 +451,7 @@ När du växlar från skrivbordssidan till dess mobila motsvarighet:
 
 * CSS- och body-klasserna som måste läsas in måste konfigureras manuellt.
 
-Exempel:
+Till exempel:
 
 ```
 window.CQMobileSlider["geometrixx-outdoors"] = {
@@ -502,7 +501,7 @@ Skapa ett CQ-program och lägg till den geologiska komponenten.
 1. Skapa en mapp med namnet nedan `myapp`på samma sätt som `contextstores`. &quot;
 1. Högerklicka på `/apps/myapp/contextstores` mappen och klicka på Skapa > Skapa komponent. Ange följande egenskapsvärden och klicka på Nästa:
 
-   * Etikett: **geolok**
+   * Etikett: **geoloc**
    * Titel: **Platsarkiv**
    * Supertyp: **`cq/personalization/components/contextstores/genericstoreproperties`**
    * Grupp: **Klientkontext**
@@ -524,7 +523,7 @@ Kontextlagringskomponenten kräver en redigeringsdialogruta. Dialogrutan för ge
 
 1. Högerklicka på `/apps/myapp/contextstores/geoloc/dialog/items/items/tab1/items` noden och klicka på Skapa > Skapa nod. Ange följande egenskapsvärden och klicka på OK:
 
-   * Namn: **statisk**
+   * Namn: **static**
    * Typ: **cq:Widget**
 
 1. Lägg till följande egenskaper i noden:
@@ -602,7 +601,7 @@ Lägg till koden i JSP-filen för den geologiska komponenten för att återge la
 
 Lägg till komponenten Location Store i klientkontexten så att den initieras när sidan läses in.
 
-1. Öppna startsidan för Geometrixx Outdoor på författarinstansen ([http://localhost:4502/content/geometrixx-outdoors/en.html](http://localhost:4502/content/geometrixx-outdoors/en.html)).
+1. Öppna startsidan för Geometrixx Outdoors på författarinstansen ([http://localhost:4502/content/geometrixx-outdoors/en.html](http://localhost:4502/content/geometrixx-outdoors/en.html)).
 1. Klicka på Ctrl-Alt-c (Windows) eller Ctrl-Option-c (Mac) för att öppna Klientkontext.
 1. Klicka på redigeringsikonen högst upp i klientkontexten för att öppna Client Context Designer.
 
@@ -612,9 +611,9 @@ Lägg till komponenten Location Store i klientkontexten så att den initieras n�
 
 ### Se platsinformationen i klientkontexten {#see-the-location-information-in-client-context}
 
-Öppna startsidan för Geometrixx Outdoor i redigeringsläge och öppna sedan Client Context för att se data från komponenten Location Store.
+Öppna Geometrixx Outdoors hemsida i redigeringsläge och öppna sedan Klientkontext för att visa data från komponenten Platsarkiv.
 
-1. Öppna den engelska sidan på webbplatsen Geometrixx Outdoor. ([http://localhost:4502/content/geometrixx-outdoors/en.html](http://localhost:4502/content/geometrixx-outdoors/en.html))
+1. Öppna den engelska sidan på Geometrixx Outdoors webbplats. ([http://localhost:4502/content/geometrixx-outdoors/en.html](http://localhost:4502/content/geometrixx-outdoors/en.html))
 1. Om du vill öppna klientkontexten trycker du på Ctrl-Alt-c (Windows) eller Ctrl-Option-c (Mac).
 
 ## Skapa en anpassad klientkontext {#creating-a-customized-client-context}
@@ -627,15 +626,13 @@ Om du vill skapa en andra klientkontext måste du duplicera grenen:
 
    `/content`
 
-   
-innehåller innehållet i den anpassade klientkontexten.
+   innehåller innehållet i den anpassade klientkontexten.
 
 * Mappen:
 
    `/contextstores`
 
-   
-gör att du kan definiera olika konfigurationer för kontextbutikerna.
+   gör att du kan definiera olika konfigurationer för kontextbutikerna.
 
 Om du vill använda din anpassade klientkontext redigerar du egenskapen\
 `path`\
