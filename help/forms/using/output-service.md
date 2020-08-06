@@ -10,6 +10,9 @@ topic-tags: document_services
 discoiquuid: 8b96ba2d-007e-472a-875f-2caedd35ecf4
 translation-type: tm+mt
 source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
+workflow-type: tm+mt
+source-wordcount: '524'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
 
 ## Översikt {#overview}
 
-Utdatatjänsten är en OSGi-tjänst som ingår i AEM Document Services. Utdatatjänsten har stöd för olika utdataformat och utformningsfunktioner i AEM Forms Designer. Output Service kan konvertera XFA-mallar och XML-data för att generera utskriftsdokument i olika format.
+Utdatatjänsten är en OSGi-tjänst som ingår i AEM Document Services. Utdatatjänsten har stöd för olika utformat och utformningsfunktioner i AEM Forms Designer. Output Service kan konvertera XFA-mallar och XML-data för att generera utskriftsdokument i olika format.
 
 Med Output Service kan du skapa program som gör att du kan:
 
