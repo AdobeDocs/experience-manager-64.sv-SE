@@ -11,15 +11,18 @@ content-type: reference
 discoiquuid: 6c405543-e339-4916-aa0f-b61d0b798cf3
 translation-type: tm+mt
 source-git-commit: f78f83ef3b9373bcbee3e5179a9bbec4d9462255
+workflow-type: tm+mt
+source-wordcount: '1851'
+ht-degree: 1%
 
 ---
 
 
 # Modereringskonsol {#moderation-console}
 
-I AEM Communities är det möjligt att [moderera communityinnehåll](moderate-ugc.md) både från författaren och publiceringsmiljöer av administratörer och community moderators (betrodda communitymedlemmar som utsetts till moderatorer).
+I AEM Communities går det att [moderera communityinnehåll](moderate-ugc.md) gruppvis både från författaren och publiceringsmiljöer av administratörer och community-moderatorer (betrodda communitymedlemmar som utsetts som moderatorer).
 
-Administratörer och moderatorer för communityn kan också utföra moderering [i sitt sammanhang](in-context.md) i publiceringsmiljön.
+Administratörer och moderatorer för communityn kan även utföra moderering [i sitt sammanhang](in-context.md) i publiceringsmiljön.
 
 En funktion på alla [communitysajter](sites-console.md) är ett `Administration`menyalternativ som är tillgängligt för användare som loggar in med administratörsbehörighet. Via `Administration`länken får du tillgång till modereringskonsolen.
 
@@ -144,7 +147,7 @@ Webbplatsen begränsar den refererade UGC som visas till inlägg på valda commu
 
 >[!NOTE]
 >
->När en administratör öppnar konsolen för massmoderering visas alla referenser till UGC, även webbplatser som inte skapats med guiden [Skapa](sites-console.md)plats, till exempel Geometrixxxexemplen.
+>När en administratör öppnar konsolen för gruppmoderering visas alla referenser till UGC, även webbplatser som inte skapats med guiden [Skapa](sites-console.md)plats, till exempel Geometrixx.
 >
 >När gruppmodereringskonsolen öppnas vid publicering av en betrodd community-medlem visas endast referenser till UGC som skapats för communitywebbplatser som medlemmen har behörighet att moderera och kan filtreras med platsfiltret.
 
@@ -204,7 +207,7 @@ Status begränsar den refererade UGC:n som visas till inlägg med den valda stat
 
 Flaggning begränsar det refererade användargenererat innehåll som visas till inlägg som är flaggade eller dolda.
 
-När ett innehåll har flaggats förblir det flaggat tills du bryter flaggan för det enskilda innehållet genom att markera knappen **[!UICONTROL Flagga]** en gång till. Observera att det inte finns några flaggningsnivåer, som important eller följup.
+När ett innehåll har flaggats förblir det flaggat tills du bryter flaggan för det enskilda innehållet genom att markera **[!UICONTROL Flag]** knappen en gång till. Observera att det inte finns några flaggningsnivåer, som important eller följup.
 
 ![chlimage_1-476](assets/chlimage_1-476.png)
 
@@ -319,7 +322,7 @@ När du arbetar med ett enstaka inlägg visas en ikon för historik för moderer
 
 Om du vill återgå till visning av flera UGC-inlägg i innehållsområdet markerar du X:et i det övre högra hörnet av rutan med vydetaljer.
 
-Exempel:
+Till exempel:
 
 ![chlimage_1-486](assets/chlimage_1-486.png)
 
@@ -333,7 +336,7 @@ Om du vill göra det håller du pekaren över inlägget för att visa `View Deta
 
 Om du vill återgå till visning av flera UGC-inlägg i innehållsområdet markerar du X:et i det övre högra hörnet av rutan med vydetaljer.
 
-Exempel:
+Till exempel:
 
 ![chlimage_1-488](assets/chlimage_1-488.png)
 
