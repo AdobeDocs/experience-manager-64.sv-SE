@@ -1,6 +1,6 @@
 ---
-title: Acrobat Reader DC-tillägg ServiceJava API Quick Start (SOAP)
-seo-title: Acrobat Reader DC-tillägg ServiceJava API Quick Start (SOAP)
+title: Acrobat Reader DC-tillägg ServiceJava API - snabbstart (SOAP)
+seo-title: Acrobat Reader DC-tillägg ServiceJava API - snabbstart (SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 8e72ca94-a8c1-43aa-9845-a0da597051c5
@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Acrobat Reader DC-tillägg ServiceJava API Quick Start (SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
+# Acrobat Reader DC-tillägg ServiceJava API - snabbstart (SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
 
 Följande snabbstarter är tillgängliga för tjänsten Acrobat Reader DC Extensions.
 
@@ -27,11 +27,11 @@ Följande snabbstarter är tillgängliga för tjänsten Acrobat Reader DC Extens
 
 [Snabbstart (SOAP-läge): Hämta autentiseringsinformation med Java API](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstarter i Programmering med AEM Forms är baserade på operativsystemet på Forms-servern. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstarter i Programmering med AEM Forms baseras på Forms serveroperativsystem. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge):Tillämpa användningsrättigheter med Java API {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
