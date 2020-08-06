@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: cd87e1e8-5329-4e60-ac9d-2705f54d0da6
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '520'
+ht-degree: 6%
 
 ---
 
@@ -21,7 +24,7 @@ I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende 
 
 >[!NOTE]
 >
->Utanför redigeringsmiljön finns det även andra sökfunktioner, som [Query Builder](/help/sites-developing/querybuilder-api.md) och [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+>Utanför redigeringsmiljön finns det även andra sökfunktioner, till exempel [Query Builder](/help/sites-developing/querybuilder-api.md) och [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 ## Grunderna i sökning {#search-basics}
 
@@ -70,12 +73,13 @@ Så här söker och filtrerar du resurser:
    * Sökkatalog
    * Taggar
    * Sökvillkor; till exempel Ändrade datum, Publiceringsstatus, LiveCopy-status.
+
    >[!NOTE]
    >
    >Sökvillkoren kan variera:
    >
    >* Beroende på vilken resurstyp du har valt; Exempelvis är kriterierna Assets och Communities begripligt specialiserade.
-   >* Din instans som [sökformulär](/help/sites-administering/search-forms.md) kan anpassas (lämplig för platsen i AEM).
+   >* Din instans som [Search Forms](/help/sites-administering/search-forms.md) kan anpassas (passar den plats i AEM).
 
 
    ![screen_shot_2018-03-23at101619](assets/screen_shot_2018-03-23at101619.png)
