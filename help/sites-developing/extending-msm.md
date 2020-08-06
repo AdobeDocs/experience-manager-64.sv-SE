@@ -126,7 +126,7 @@ public LiveAction createAction(Resource resource) throws WCMException {
 }
 ```
 
-### Åtkomst till Target-noder, källnoder och LiveRelationship {#accessing-target-nodes-source-nodes-and-the-liverelationship}
+### Åtkomst till målnoder, källnoder och LiveRelationship {#accessing-target-nodes-source-nodes-and-the-liverelationship}
 
 Följande objekt anges som parametrar för `execute` metoden för `LiveAction` objektet:
 
@@ -168,7 +168,7 @@ Den nya utrullningskonfigurationen är sedan tillgänglig för dig när du stäl
 
 Så här skapar du en ny utrullningskonfiguration:
 
-1. Open CRXDE Lite; till exempel:
+1. Öppna CRXDE Lite, till exempel:
    [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 
 1. Navigera till :
@@ -523,7 +523,7 @@ Följande `LiveActionFactory` klass implementerar en `LiveAction` som loggar med
    mvn -PautoInstallPackage clean install
    ```
 
-   AEM- `error.log` filen ska ange att paketet har startats.
+   Den AEM `error.log` filen ska visa att paketet har startats.
 
    Till exempel [http://localhost:4502/system/console/status-slinglogs](http://localhost:4502/system/console/status-slinglogs).
 
@@ -549,7 +549,7 @@ Skapa den MSM-introduktionskonfiguration som använder `LiveActionFactory` den s
 
 Konfigurera den utrullningskonfiguration som du skapade i föregående procedur så att den använder `ExampleLiveActionFactory` klassen.
 
-1. Open CRXDE Lite; till exempel [http://localhost:4502/crx/de](http://localhost:4502/crx/de).
+1. Öppna CRXDE Lite, till exempel [http://localhost:4502/crx/de](http://localhost:4502/crx/de).
 1. Skapa följande nod under `/apps/msm/rolloutconfigs/examplerolloutconfig/jcr:content`:
 
    * **Namn**: `exampleLiveAction`
