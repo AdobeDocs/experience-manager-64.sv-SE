@@ -46,13 +46,13 @@ All åtkomst till dataobjekt förmedlas av databasen och begränsas därför av 
 
 ## 5. CSRF (Cross-Site Request Forgery) {#cross-site-request-forgery-csrf}
 
-CSRF (Cross-Site Request Forgery) reduceras genom att en kryptografisk token automatiskt matas in i alla formulär och AJAX-begäranden och denna token verifieras på servern för varje POST.
+CSRF (Cross-Site Request Forgery) reduceras genom att en kryptografisk token automatiskt matas in i alla formulär och AJAX och denna token verifieras på servern för varje POST.
 
-Dessutom levereras AEM med ett hänvisningsrubrikbaserat filter, som kan konfigureras för att *endast* tillåta POST-begäranden från specifika värdar (definieras i en lista).
+Dessutom levereras AEM med ett hänvisningsrubrikbaserat filter, som kan konfigureras så att det *bara* tillåter förfrågningar från POSTER från specifika värdar (definieras i en lista).
 
 ## 6. Felkonfiguration av säkerhet {#security-misconfiguration}
 
-Det är omöjligt att garantera att all programvara alltid är korrekt konfigurerad. Vi strävar dock efter att ge så mycket vägledning som möjligt och göra konfigurationen så enkel som möjligt. Dessutom levereras AEM med [integrerade säkerhetshälsokontroller](/help/sites-administering/operations-dashboard.md) som hjälper dig att snabbt övervaka säkerhetskonfigurationen.
+Det är omöjligt att garantera att all programvara alltid är korrekt konfigurerad. Vi strävar dock efter att ge så mycket vägledning som möjligt och göra konfigurationen så enkel som möjligt. AEM levereras dessutom med [integrerade säkerhetshälsokontroller](/help/sites-administering/operations-dashboard.md) som hjälper dig att övervaka säkerhetskonfigurationen snabbt.
 
 Mer information finns i [checklistan](/help/sites-administering/security-checklist.md) .
 
