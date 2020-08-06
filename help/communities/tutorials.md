@@ -1,8 +1,8 @@
 ---
-title: Självstudiekurser
-seo-title: Självstudiekurser
-description: Exempel på hur du kan lära dig mer och arbeta med AEM Communities-ramverket för sociala komponenter (SCF)
-seo-description: Exempel på hur du kan lära dig mer och arbeta med AEM Communities-ramverket för sociala komponenter (SCF)
+title: Tutorials
+seo-title: Tutorials
+description: Exempel på hur du kan lära dig mer och arbeta med AEM Communities ramverk för sociala komponenter (SCF)
+seo-description: Exempel på hur du kan lära dig mer och arbeta med AEM Communities ramverk för sociala komponenter (SCF)
 uuid: c99a9d56-9630-4a79-bcd7-a15f01d6c13d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: a420b0b1-65f4-4103-a7c9-263657c7870f
 translation-type: tm+mt
 source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+workflow-type: tm+mt
+source-wordcount: '264'
+ht-degree: 0%
 
 ---
 
 
-# Självstudiekurser {#tutorials}
+# Tutorials {#tutorials}
 
-Detta är exempel som kan vara till hjälp när det gäller att lära sig och arbeta med AEM 6.1 Communities [social component framework (SCF)](scf.md).
+Detta är exempel som kan vara till hjälp när det gäller att lära sig och arbeta med AEM 6.1 Community [social component framework (SCF)](scf.md).
 
 ## Anpassning på klientsidan {#client-side-customization}
 
@@ -57,9 +60,9 @@ Exempelkod finns i [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marke
 
 ## Demo-användare {#demo-users}
 
-Paketet med Geometrixx-exempel innehåller demoanvändare. Det finns ofta en skillnad i upplevelse mellan att vara besökare (inte inloggad) eller medlem (inloggad) och, så länge som Geometrixexempelpaketen är installerade, kan du använda dessa användare för att simulera ett inloggat läge när du undersöker med guiden [för](components-guide.md)communitykomponenter.
+Paketet med exempel på Geometrixx innehåller demoanvändare. Det finns ofta en skillnad i upplevelse mellan att vara besökare (inte inloggad) eller medlem (inloggad) och, så länge som exempelpaketen är installerade, kan du använda dessa användare för att simulera ett inloggat läge när du undersöker med guiden [för](components-guide.md)communitykomponenter.
 
-Om du vill visa en fullständig lista över demoanvändare går du till **[!UICONTROL Verktyg > Åtgärder > Säkerhet > Användare]**. Eller använd den klassiska [säkerhetskonsolen](http://localhost:4502/useradmin) för användargränssnittet för att hantera användare och grupper.
+Om du vill se en fullständig lista över demoanvändare går du till **[!UICONTROL Tools > Operations > Security > Users]**. Eller använd den klassiska [säkerhetskonsolen](http://localhost:4502/useradmin) för användargränssnittet för att hantera användare och grupper.
 
 Om en [community-plats har skapats](getting-started.md)kan du tilldela demoanvändare till [communityanvändargrupper](users.md).
 
