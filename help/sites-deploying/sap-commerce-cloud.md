@@ -1,8 +1,8 @@
 ---
 title: SAP Commerce Cloud
 seo-title: SAP Commerce Cloud
-description: Lär dig hur du distribuerar e-handel med SAP Commerce Cloud.
-seo-description: Lär dig hur du distribuerar e-handel med SAP Commerce Cloud.
+description: Lär er hur ni driftsätter e-handel med SAP Commerce Cloud.
+seo-description: Lär er hur ni driftsätter e-handel med SAP Commerce Cloud.
 uuid: a16ae42b-9c33-4da8-a130-52b72a779ec7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,6 +12,9 @@ discoiquuid: 44dfa10f-497e-473f-95d4-8dccae7ebf8e
 pagetitle: Deploying eCommerce with SAP Commerce Cloud
 translation-type: tm+mt
 source-git-commit: 94dbed719c2f3360db6ba5b414230fd3f79f7955
+workflow-type: tm+mt
+source-wordcount: '731'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ source-git-commit: 94dbed719c2f3360db6ba5b414230fd3f79f7955
 
 Distribuering av [nödvändiga e-handelspaket](#packages-needed-for-ecommerce-with-hybris) kommer att ge e-handelsramverket full funktionalitet, tillsammans med en referensimplementering av e-handelsfunktionaliteten i enlighet med en hybris-implementering (inklusive en demonstrationskatalog)
 
-Det här är tillgängligt under den engelska (USA) grenen ( `/content/geometrixx-outdoors/en_US`) av webbplatsen Geometrixx Outdoor:
+Detta finns tillgängligt under den engelska (USA) grenen ( `/content/geometrixx-outdoors/en_US`) på Geometrixx Outdoors webbplats:
 
 * [Produktinformation](#productinformationwithcolorvariants) (med färgvarianter när det är lämpligt)
 
@@ -49,7 +52,8 @@ Utbyggnaden av hybris i eCommerce Integration Framework har uppdaterats för att
 >
 >* Stöder upp till hybris 6.4 med OCC version 2.
 >* Du behöver Java 7 för att köra [hybris 5-servern.](https://www.hybris.com/en/architecture-technology)
->* Tillägget hybris, [Telco Accelerator](https://www.hybris.com/en/products/telecommunication), stöds inte av AEM-tillägget.
+>* Tillägget hybris, [Telco Accelerator](https://www.hybris.com/en/products/telecommunication), stöds inte av AEM.
+
 >
 
 
@@ -59,15 +63,15 @@ Utbyggnaden av hybris i eCommerce Integration Framework har uppdaterats för att
 Så här installerar du e-handelsfunktioner:
 
 * Din hybris-server
-* AEM eCommerce Framework:
+* AEM e-handelsramverk:
 
-   * detta ingår i en AEM-standardinstallation
+   * detta ingår i en AEM
 
 * AEM Geometrixx-all-paket:
 
    * `cq-geometrixx-all-pkg`
 
-* Innehållspaket för AEM hybris:
+* Innehållspaket AEM hybris:
 
    * `cq-hybris-content-6.3.2`
    * hybrisspecifik API-implementering
@@ -76,10 +80,10 @@ Så här installerar du e-handelsfunktioner:
 
 ### Installation av e-handel med hybris {#installation-of-ecommerce-with-hybris}
 
-Så här installerar du en fullständig konfiguration (med demonstrationskatalogen, Geometrixx Outdoor):
+Så här installerar du en fullständig konfiguration (med demonstrationskatalogen Geometrixx Outdoors):
 
 1. [Installera AEM](/help/sites-deploying/deploy.md).
-1. Installera paketet Geometrixx-all
+1. Installera hela Geometrixx
 
    1. ` [cq-geometrixx-all-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq60/product/cq-geometrixx-all-pkg)`
 
@@ -185,7 +189,7 @@ Stegen i den här proceduren hämtar och bygger hybris-servern. Den kommer ocks�
    >
    >Beroende på ditt system kan det ta flera minuter att slutföra detta.
 
-### Ställ in Geometrixx Outdoor Store {#setup-the-geometrixx-outdoors-store}
+### Konfigurera Geometrixx Outdoors Store {#setup-the-geometrixx-outdoors-store}
 
 Den här proceduren överför och konfigurerar demonstrationsbutiken - Geometrixx Online.
 
