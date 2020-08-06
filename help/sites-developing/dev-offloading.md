@@ -1,8 +1,8 @@
 ---
 title: Skapa och använda jobb för avlastning
 seo-title: Skapa och använda jobb för avlastning
-description: Funktionen Apache Sling Discovery tillhandahåller ett Java-API som gör att du kan skapa JobManager-jobb och JobConsumer-tjänster som använder dem
-seo-description: Funktionen Apache Sling Discovery tillhandahåller ett Java-API som gör att du kan skapa JobManager-jobb och JobConsumer-tjänster som använder dem
+description: Funktionen Apache Sling Discovery innehåller ett Java-API som gör att du kan skapa JobManager-jobb och JobConsumer-tjänster som använder dem
+seo-description: Funktionen Apache Sling Discovery innehåller ett Java-API som gör att du kan skapa JobManager-jobb och JobConsumer-tjänster som använder dem
 uuid: d6a5beb0-0618-4b61-9b52-570862eac920
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: e7b6b9ee-d807-4eb0-8e96-75ca1e66a4e4
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '420'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Information om hur du skapar avlastningstopologier och konfigurerar ämnesförbr
 
 ## Hantera jobbnyttolaster {#handling-job-payloads}
 
-Avlastningsramverket definierar två jobbegenskaper som du använder för att identifiera jobbnyttolasten. De replikeringsagenter som avlastar använder dessa egenskaper för att identifiera de resurser som ska replikeras till instanserna i topologin:
+Avlastningsramverket definierar två jobbegenskaper som du använder för att identifiera jobbnyttolasten. Replikeringsagenterna som avlastar använder dessa egenskaper för att identifiera de resurser som ska replikeras till instanserna i topologin:
 
 * `offloading.job.input.payload`: En kommaavgränsad lista med innehållssökvägar. Innehållet replikeras till den instans som kör jobbet.
 * `offloading.job.output.payload`: En kommaavgränsad lista med innehållssökvägar. När jobbkörningen är klar replikeras jobbnyttolasten till de här sökvägarna i instansen som skapade jobbet.
