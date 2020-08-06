@@ -11,6 +11,9 @@ topic-tags: personalization
 discoiquuid: 889b5ffc-3652-47d8-b576-128f3cee513a
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '880'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +29,7 @@ Erbjudandekonsolen organiserar erbjudanden efter varumärke. Varje varumärke in
 
 ## Lägg till ett varumärke med hjälp av offertkonsolen {#add-a-brand-using-the-offers-console}
 
-Skapa ett varumärke som era erbjudanden är kopplade till. Öppna ett varumärke i offertkonsolen för att komma åt dess erbjudandebibliotek där du kan skapa mappar och erbjudanden.
+Skapa ett varumärke som era erbjudanden är kopplade till. Öppna ett varumärke i Offers-konsolen för att komma åt dess erbjudandebibliotek där du kan skapa mappar och erbjudanden.
 
 När du skapar ett varumärke med hjälp av konsolen Erbjudanden visas det också i [aktivitetskonsolen](/help/sites-authoring/activitylib.md) där du kan lägga till och administrera aktiviteter för varumärket.
 
