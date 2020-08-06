@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: adc697e1-4a1c-4985-8690-79ed77736fec
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1814'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ Dialogrutan för WYSIWYG-redigering innehåller många olika funktioner:
 
 ## Direktredigering {#in-place-editing}
 
-Förutom det dialogbaserade läget för textredigering i Rich Text, innehåller AEM även redigeringsläget på plats, som gör det möjligt att redigera texten direkt när den visas i layouten på sidan.
+Förutom det dialogbaserade läget för textredigering i Rich Text, innehåller AEM även redigeringsläget på plats, som tillåter direkt redigering av texten så som den visas i sidlayouten.
 
 Klicka två gånger på ett stycke (ett långsamt dubbelklick) för att gå in i redigeringsläget (komponentens kantlinje är nu orange).
 
@@ -111,17 +114,17 @@ Standardfunktionerna i **Klipp** ut och **Kopiera** är tillgängliga. Flera var
 
 * Klistra in som text
 
-    Tar bort alla format och formatering så att endast oformaterad text klistras in.
+   Tar bort alla format och formatering så att endast oformaterad text klistras in.
 
 * Klistra in från Word
 
-    Innehållet klistras in som HTML (med viss nödvändig formatering).
+   Innehållet klistras in som HTML (med viss nödvändig formatering).
 
 ### Ångra, Gör om {#undo-redo}
 
 ![](do-not-localize/cq55_rte_undoredo.png)
 
-AEM sparar information om dina senaste 50 åtgärder i den aktuella komponenten, i kronologisk ordning. Dessa åtgärder kan ångras (och sedan göras om) i strikt ordning om det behövs.
+AEM sparar information om dina senaste 50 åtgärder i den aktuella komponenten, som hålls i kronologisk ordning. Dessa åtgärder kan ångras (och sedan göras om) i strikt ordning om det behövs.
 
 >[!CAUTION]
 >
@@ -175,8 +178,8 @@ Du kan:
 
 * skriv in en URI direkt
 * använda webbplatskartan för att välja en sida på webbplatsen
-* Ange URI och lägg sedan till målankarpunkten.t.ex. `www.TargetUri.org#AnchorName`
-* Ange endast en ankarpunkt (för att referera till&quot;den aktuella sidan&quot;).t.ex. `#anchor`
+* Ange URI och lägg sedan till målankarpunkten. t.ex. `www.TargetUri.org#AnchorName`
+* Ange endast en ankarpunkt (för att referera till&quot;den aktuella sidan&quot;). t.ex. `#anchor`
 * söka efter en sida i innehållssökaren och sedan dra och släppa sidikonen i hyperlänksdialogrutan
 
 >[!NOTE]
@@ -206,7 +209,7 @@ Fästpunkten visas när komponenten redigeras och kan nu användas inom ett län
 
 ![](do-not-localize/cq55_rte_findreplace.png)
 
-AEM tillhandahåller både en **Sök** - och en **Ersätt** -funktion (sök och ersätt).
+AEM innehåller både en **Sök** - och **Ersätt** -funktion (sök och ersätt).
 
 Båda har en **Sök efter nästa** knapp för att söka efter den angivna textens öppna komponent. Du kan också ange om du vill att skiftläget (övre/nedre) ska matchas.
 
@@ -310,23 +313,23 @@ Tabellens grundläggande egenskaper kan konfigureras innan du klickar på **OK**
 
 * **Bredd**
 
-    Tabellens totala bredd.
+   Tabellens totala bredd.
 
 * **Höjd**
 
-    Tabellens totala höjd.
+   Tabellens totala höjd.
 
 * **Kant**
 
-    Tabellkantens storlek.
+   Tabellkantens storlek.
 
 * **Cellutfyllnad**
 
-    Detta definierar det tomma utrymmet mellan cellinnehållet och dess kanter.
+   Detta definierar det tomma utrymmet mellan cellinnehållet och dess kanter.
 
 * **Cellmellanrum**
 
-    Här definierar du avståndet mellan cellerna.
+   Här definierar du avståndet mellan cellerna.
 
 >[!NOTE]
 >
@@ -338,7 +341,7 @@ Tabellens grundläggande egenskaper kan konfigureras innan du klickar på **OK**
 
 >[!CAUTION]
 >
->Du bör ange en **bredd** för tabellen.
+>Adobe rekommenderar att du anger en **bredd** för tabellen.
 
 #### Cellegenskaper {#cell-properties}
 
@@ -362,7 +365,7 @@ Egenskaperna för en viss cell, eller serie med celler, kan konfigureras:
 
 ![cq55_rte_rows](assets/cq55_rte_rows.png)
 
-Rader kan läggas till antingen ovanför eller under den aktuella raden.
+Rader kan läggas till ovanför eller under den aktuella raden.
 
 Den aktuella raden kan också tas bort.
 
@@ -408,6 +411,7 @@ Om du skapar en kapslad tabell skapas en ny, fristående tabell i den aktuella c
 >
 >* Windows IE: Använd Ctrl+primär-musknapp-klicka (vanligen vänster) för att markera flera celler.
 >* Firefox: Markera ett cellområde genom att dra med musen.
+
 >
 
 
@@ -444,5 +448,5 @@ Ser ut så här i källäge (källan är ofta mycket längre, så du måste rull
 
 >[!CAUTION]
 >
->När du lämnar källäget gör AEM vissa valideringskontroller (till exempel ser du till att texten finns korrekt i/kapslas i block). Detta kan leda till ändringar i dina redigeringar.
+>När du lämnar källäget utför AEM vissa valideringskontroller (t.ex. ser du till att texten är korrekt innesluten/kapslad i block). Detta kan leda till ändringar i dina redigeringar.
 
