@@ -12,6 +12,9 @@ topic-tags: operations
 discoiquuid: 0ed1f69d-c212-4d47-a572-ae030f2983fc
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1876'
+ht-degree: 0%
 
 ---
 
@@ -78,7 +81,7 @@ För varje delformulär kan du lägga till ett `XDPContent` element (det här el
 
 >[!NOTE]
 >
->Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
@@ -105,8 +108,8 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
+* adobe-utilities.jar (krävs om AEM Forms används i JBoss)
+* jbossall-client.jar (krävs om AEM Forms används i JBoss)
 
 **Skapa en PDF Assembler-klient**
 
@@ -124,7 +127,7 @@ Om du vill samla ihop flera XDP-dokument refererar du till alla XDP-filer som an
  <XDPContent insertionPoint="ddx_fragment" source="tuc018_contact.xdp" fragment="subPatientContact" required="false"/>
 ```
 
-Delformuläret *subPatientContact* måste finnas i XDP-filen *tuc018_contact.xdp*.
+Delformuläret *subPatientContact* måste finnas i XDP-filen med namnet *tuc018_contact.xdp*.
 
 **Ange körningsalternativ**
 
@@ -191,6 +194,7 @@ Sammanställa flera XDP-fragment med Assembler Service API (Java):
    * Ett `com.adobe.idp.Document` objekt som representerar det DDX-dokument som ska användas
    * Ett `java.util.Map` objekt som innehåller XDP-indatafilerna
    * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` objekt som anger körningsalternativen, inklusive standardteckensnittet och jobbloggsnivån
+
    Metoden returnerar `invokeDDX` ett `com.adobe.livecycle.assembler.client.AssemblerResult` objekt som innehåller det sammansatta XDP-dokumentet.
 
 1. Hämta det monterade XDP-dokumentet.
@@ -235,7 +239,7 @@ Sammanställa flera XDP-fragment med Assembler Service API (webbtjänst):
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till `AssemblerServiceClient.ClientCredentials.UserName.UserName` fältet.
+      * Tilldela AEM användarnamn till `AssemblerServiceClient.ClientCredentials.UserName.UserName` fältet.
       * Tilldela motsvarande lösenordsvärde till `AssemblerServiceClient.ClientCredentials.UserName.Password`fältet.
       * Tilldela `HttpClientCredentialType.Basic` konstantvärdet till `BasicHttpBindingSecurity.Transport.ClientCredentialType`fältet.
       * Tilldela `BasicHttpSecurityMode.TransportCredentialOnly` konstantvärdet till `BasicHttpBindingSecurity.Security.Mode`fältet.
@@ -273,6 +277,7 @@ Sammanställa flera XDP-fragment med Assembler Service API (webbtjänst):
    * Ett `BLOB` objekt som representerar DDX-dokumentet
    * Det `MyMapOf_xsd_string_To_xsd_anyType` objekt som innehåller de nödvändiga filerna
    * Ett `AssemblerOptionSpec` objekt som anger körningsalternativ
+
    Metoden returnerar ett `invokeDDX` `AssemblerResult` objekt som innehåller resultatet av jobbet och eventuella undantag som inträffade.
 
 1. Hämta det monterade XDP-dokumentet.
@@ -287,4 +292,4 @@ Sammanställa flera XDP-fragment med Assembler Service API (webbtjänst):
 
 [Sammanställa flera XDP-fragment](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
