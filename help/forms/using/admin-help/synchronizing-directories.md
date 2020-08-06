@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 7ec0698a-9e6e-48d4-bba2-5a6eee313900
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '1040'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Katalogsynkronisering används för att hämta information från katalogservrarn
 
 Du kan också ställa in ett dagligt synkroniseringsschema så att användarhanteringsdatabasen automatiskt synkroniseras med ändringar eller uppdateringar av källkatalogservrarna. Tänk dock på att nätverks- och serverresurser används i den här processen. Välj användningstider och undvik schemaläggning av onödiga synkroniseringar som knyter samman system- och nätverksresurser. Om du vill minimera onödiga synkroniseringar använder du alternativet för omedelbar synkronisering i stället.
 
-Du kan också ange om användar- och gruppinformation ska överföras till Adobe LiveCycle Content Services 9 (utgått) när du synkroniserar domäner.
+Du kan också ange om användar- och gruppinformation ska skickas till Adobe Content Services 9 (föråldrat) när du synkroniserar domäner.
 
 >[!NOTE]
 >
@@ -35,7 +38,7 @@ Du kan också ange om användar- och gruppinformation ska överföras till Adobe
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobes livscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html). Mer information om hur du konfigurerar innehållstjänster (borttaget) finns i [Administrera innehållstjänster](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf).
+>Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe produktlivscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html). Mer information om hur du konfigurerar innehållstjänster (borttaget) finns i [Administrera innehållstjänster](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf).
 
 ## Aktivera deltakatalogsynkronisering {#enable-delta-directory-synchronization}
 
@@ -69,7 +72,7 @@ Du kan konfigurera användarhantering så att det regelbundet görs en sökning 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Konfigurera avancerade systemattribut.
 1. Under Synch Finisher Cron Expression anger du ett cron-uttryck som representerar intervallet där användarhanteringsförsök misslyckades med synkroniseringar. Användningen av cron-uttryck baseras på Quartz-systemet för jobbschemaläggning med öppen källkod, version 1.4.0.
 
-   Standardvärdet är 0 0/13 &amp;ast; ?  &amp;ast; vilket innebär att kontrollen utförs var 13:e minut.
+   Standardvärdet är 0 0/13 &amp;ast; ? &amp;ast; vilket innebär att kontrollen utförs var 13:e minut.
 
 ## Synkronisera kataloger manuellt {#manually-synchronize-directories}
 
