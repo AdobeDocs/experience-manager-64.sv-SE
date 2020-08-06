@@ -1,8 +1,8 @@
 ---
-title: Repositionsomstrukturering av AEM Communities i 6.4
-seo-title: Repositionsomstrukturering av AEM Communities i 6.4
-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 for Communities.
-seo-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 for Communities.
+title: Repositionsomstrukturering för AEM Communities i 6.4
+seo-title: Repositionsomstrukturering för AEM Communities i 6.4
+description: Lär dig hur du gör nödvändiga ändringar för att migrera till den nya databasstrukturen i AEM 6.4 för Communities.
+seo-description: Lär dig hur du gör nödvändiga ändringar för att migrera till den nya databasstrukturen i AEM 6.4 för Communities.
 uuid: d161655f-4074-44a7-8d69-38e80934c58b
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
@@ -10,13 +10,16 @@ topic-tags: repo_restructuring
 discoiquuid: 7383265b-0ed4-4ea7-b741-0a417d187bdd
 translation-type: tm+mt
 source-git-commit: 6449921348ef3758ec95ddba8b478691008153f3
+workflow-type: tm+mt
+source-wordcount: '1034'
+ht-degree: 1%
 
 ---
 
 
-# Repositionsomstrukturering av AEM Communities i 6.4{#repository-restructuring-for-aem-communities-in}
+# Repositionsomstrukturering för AEM Communities i 6.4{#repository-restructuring-for-aem-communities-in}
 
-Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Communities-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
+Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Communities-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
 
 **Med 6.4-uppgradering**
 
@@ -51,7 +54,7 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td> 
-   <td><p>Manuell migrering krävs om du vill gå till en ny sökväg under"<code>/apps/settings</code>". Du kan använda konfigurationshanteraren för Granite för att utföra migreringen.</p> <p>Du kan utföra migreringen genom att ange egenskapen <code>mergeList</code> till <code>true</code> på noden"<code>/libs/settings/community/subscriptions</code>" och lägga till en <code>nt:unstructured</code> underordnad nod.</p> </td> 
+   <td><p>Manuell migrering krävs om du vill gå till en ny sökväg under"<code>/apps/settings</code>". Du kan använda konfigurationshanteraren för Granite för att utföra migreringen.</p> <p>Du kan utföra migreringen genom att ange egenskapen <code>mergeList</code> som <code>true</code> på noden"<code>/libs/settings/community/subscriptions</code>" och lägga till en <code>nt:unstructured</code> underordnad nod.</p> </td> 
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
@@ -74,7 +77,7 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td> 
-   <td><p>Manuell migrering krävs om du vill gå till en ny sökväg under"<code>/apps/settings</code>". Du kan använda konfigurationshanteraren för Granite för att utföra migreringen.</p> <p>Du kan utföra migreringen genom att ange egenskapen <code>mergeList</code> till <code>true</code> på noden"<code>/libs/settings/community/subscriptions</code>" och lägga till en <code>nt:unstructured</code> underordnad nod.</p> </td> 
+   <td><p>Manuell migrering krävs om du vill gå till en ny sökväg under"<code>/apps/settings</code>". Du kan använda konfigurationshanteraren för Granite för att utföra migreringen.</p> <p>Du kan utföra migreringen genom att ange egenskapen <code>mergeList</code> som <code>true</code> på noden"<code>/libs/settings/community/subscriptions</code>" och lägga till en <code>nt:unstructured</code> underordnad nod.</p> </td> 
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
@@ -184,11 +187,11 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
     <ol> 
      <li>Migrera befintliga konfigurationer på den föregående platsen till den nya platsen.
       <ol> 
-       <li>Återskapa manuellt nya Facebook-konfigurationer för social inloggning via AEM-redigeringsgränssnittet på <strong>Verktyg &gt; Molntjänster &gt; Facebook-konfiguration</strong>för social inloggning.<br /> eller <br /> </li> 
+       <li>Återskapa manuellt nya Facebook-konfigurationer för social inloggning via redigeringsgränssnittet för AEM på <strong>Verktyg &gt; Cloud Services &gt; Konfiguration</strong>av social inloggning på Facebook.<br /> eller <br /> </li> 
        <li>Kopiera alla nya Facebook Cloud-konfigurationer från föregående plats till lämplig plats, under <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li> 
       </ol> </li> 
-     <li>Uppdatera alla AEM Communities-platsroter så att de refererar till den nya konfigurationen för social inloggning på Facebook genom att ange egenskapen till den absoluta sökvägen på den nya platsen. <code>[cq:Page]/jcr:content@cq:conf</code></li> 
-     <li>Avassociera den gamla Facebook Connect Cloud-tjänsten från alla AEM Communities-rötter som har uppdaterats för att referera till den nya platsen.</li> 
+     <li>Uppdatera valfri AEM Communities-platsrot för att referera till den nya konfigurationen för social inloggning på Facebook genom att ange egenskapen till den absoluta sökvägen på den nya platsen. <code>[cq:Page]/jcr:content@cq:conf</code></li> 
+     <li>Avassociera den gamla Facebook Connect-Cloud Servicen från alla AEM Communities webbplatsrötter som har uppdaterats för att referera till den nya platsen.</li> 
     </ol> </td> 
   </tr>
   <tr>
@@ -240,11 +243,11 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
     <ol> 
      <li>Migrera befintliga konfigurationer på den föregående platsen till den nya platsen.
       <ol> 
-       <li>Återskapa manuellt nya Pinterest Social Login Configurations via AEM authoring UI på <strong>Verktyg &gt; Cloud Services &gt; Pinterest Social Login Configuration</strong>.<br /> eller</li> 
+       <li>Återskapa manuellt nya Pinterest-konfigurationer för social inloggning via det AEM redigeringsgränssnittet på <strong>Verktyg &gt; Cloud Services &gt; Pinterest-konfiguration för social inloggning</strong>.<br /> eller</li> 
        <li>Kopiera alla nya Pinterest Cloud-konfigurationer från föregående plats till rätt Ny plats under <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li> 
       </ol> </li> 
-     <li>Uppdatera en AEM Communities-platsrot för att referera till den nya Pinterest Social Login Configuration genom att ställa in egenskapen på den absoluta sökvägen i den nya platsen. <code>[cq:Page]/jcr:content@cq:conf</code></li> 
-     <li>Avassociera den äldre Pinterest Connect Cloud-tjänsten från alla AEM Communities-webbplatsrötter som har uppdaterats för att referera till den nya platsen.</li> 
+     <li>Uppdatera valfri AEM Communities-platsrot för att referera till den nya Pinterest Social Login Configuration genom att ställa in egenskapen på den absoluta sökvägen i den nya platsen. <code>[cq:Page]/jcr:content@cq:conf</code></li> 
+     <li>Avassociera den gamla Pinterest Connect-Cloud Servicen från alla AEM Communities webbplatsrötter som har uppdaterats för att referera till den nya platsen.</li> 
     </ol> </td> 
   </tr>
   <tr>
@@ -306,11 +309,11 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
     <ol> 
      <li>Migrera befintliga konfigurationer på den föregående platsen till den nya platsen.
       <ol> 
-       <li>Återskapa manuellt nya Twitter-konfigurationer för social inloggning via AEM-redigeringsgränssnittet på <strong>Verktyg &gt; Molntjänster &gt; Twitter-konfiguration</strong>för social inloggning.<br /> eller <br /> </li> 
+       <li>Återskapa manuellt nya Twitter-konfigurationer för social inloggning via redigeringsgränssnittet för AEM på <strong>Verktyg &gt; Cloud Services &gt; Konfiguration</strong>av social inloggning för Twitter.<br /> eller <br /> </li> 
        <li>Kopiera alla nya Twitter Cloud-konfigurationer från tidigare plats till lämplig plats, under <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li> 
       </ol> </li> 
-     <li>Uppdatera alla AEM Communities-platsroter så att de refererar till den nya konfigurationen för social inloggning på Twitter genom att ange egenskapen till den absoluta sökvägen på den nya platsen. <code>[cq:Page]/jcr:content@cq:conf</code></li> 
-     <li>Avassociera den äldre Twitter Connect Cloud-tjänsten från alla AEM Communities-rötter som uppdaterats för att referera till den nya platsen.</li> 
+     <li>Uppdatera valfri AEM Communities-platsrot för att referera till den nya konfigurationen för social inloggning på Twitter genom att ställa in egenskapen på den absoluta sökvägen på den nya platsen. <code>[cq:Page]/jcr:content@cq:conf</code></li> 
+     <li>Avassociera den gamla Twitter Connect-Cloud Servicen från alla AEM Communities webbplatsrötter som har uppdaterats för att referera till den nya platsen.</li> 
     </ol> </td> 
   </tr>
   <tr>
@@ -334,7 +337,7 @@ Så som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td> 
-   <td><p>Adobe erbjuder ett migreringsverktyg på:</p> <p><a href="https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-template-migration">https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-template-migration</a></p> </td> 
+   <td><p>Adobe har tillhandahållit ett migreringsverktyg på:</p> <p><a href="https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-template-migration">https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-template-migration</a></p> </td> 
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
