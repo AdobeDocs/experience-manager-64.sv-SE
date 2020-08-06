@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 601108d8-f432-4a6b-9ec9-831cf054e52f
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '4460'
+ht-degree: 2%
 
 ---
 
@@ -53,11 +56,11 @@ Följ de här stegen för att lägga till en anpassad egenskap för alla resurst
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ma/gui/content/cmmetadataproperties/commonproperties/col1/items
+      **Sökväg:** /libs/fd/cm/ma/gui/content/cmmetadataproperties/commonproperties/col1/items
 
-      **** Plats: /apps/
+      **Plats:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
       ![Överläggsnod](assets/cmmetapropertiesoverlaynode.png)
 
@@ -73,9 +76,9 @@ Följ de här stegen för att lägga till en anpassad egenskap för alla resurst
 
    1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: GeoLocation (eller det namn du vill ge till den här egenskapen)
+      **Namn:** GeoLocation (eller det namn du vill ge till den här egenskapen)
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
       ![Skapa nod: GeoLocation](assets/geographicallocationcreatenode.png)
 
@@ -126,7 +129,7 @@ I det här scenariot visas hur du kan lägga till en anpassad egenskap för alla
 
 1. Lägg till en ny nod med namnet under egenskapsnoden (här geografisk placering) `items`. Under noden items lägger du till en nod för varje värde i listrutan. Som en god vana lägger du till den första noden så tom att den fungerar som standardvärde för listrutan och ett alternativ för användaren att inte ange något värde för fältet. Om du vill lägga till flera alternativ/nedrullningsbara värden upprepar du följande steg:
 
-   1. Högerklicka på egenskapsnoden (här geografisk plats) och välj **Skapa** > **Skapa nod**.
+   1. Högerklicka på egenskapsnoden (här geografisk placering) och välj **Skapa** > **Skapa nod**.
    1. Ange namnet på fältet med bibehållen typ som inte:ostrukturerad och klicka på `item1,` OK ****.
    1. Lägg till följande egenskaper i den nya noden (här post1) och klicka sedan på **Spara alla**:
 
@@ -160,11 +163,11 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ma/gui/content/cmmetadataproperties
+      **Sökväg:** /libs/fd/cm/ma/gui/content/cmmetadataproperties
 
-      **** Plats: /apps/
+      **Plats:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
    1. Click **OK**. Mappstrukturen skapas i programmappen.
 
@@ -180,9 +183,9 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
 
    1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: commontab (eller det namn du vill ge den här egenskapen)
+      **Namn:** commontab (eller det namn du vill ge den här egenskapen)
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
    1. Klicka på den nya noden som du har skapat (här vanlig flik). CRX visar nodens egenskaper.
    1. Lägg till följande egenskaper i noden (här vanlig flik):
@@ -199,9 +202,9 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
    1. Högerklicka på den relevanta noden (här vanlig flik) och välj **Skapa** > **Skapa nod**.
    1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: objekt
+      **Namn:** objekt
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
    1. Klicka på **Spara alla:**
 
@@ -210,9 +213,9 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
    1. Högerklicka på objektnoden och välj **Skapa** > **Skapa nod**.
    1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: Kolumn1 (eller namnet som du vill ge noden - det här namnet visas inte i användargränssnittet.)
+      **Namn:** Kolumn1 (eller namnet som du vill ge noden - det här namnet visas inte i användargränssnittet.)
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
    1. Lägg till följande egenskap i noden (här Kolumn1) och klicka sedan på **Spara alla**:
 
@@ -225,9 +228,9 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
    1. Högerklicka på noden (här Kolumn1) och välj **Skapa** > **Skapa nod**.
    1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: objekt
+      **Namn:** objekt
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
    1. Klicka på **Spara alla**.
 
@@ -236,9 +239,9 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
    1. Högerklicka på objektnoden och välj **Skapa** > **Skapa nod**.
    1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: GeographicalLocation (eller ett annat namn för fältegenskapen)
+      **Namn:** GeographicalLocation (eller ett annat namn för fältegenskapen)
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
    1. Lägg till följande egenskaper i fältnoden (här GeographicalLocation) och klicka på **Spara alla**.
 
@@ -263,11 +266,11 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ma/gui/content/cmmetadataproperties/properties/letter/items/tabs/items
+      **Sökväg:** /libs/fd/cm/ma/gui/content/cmmetadataproperties/properties/letter/items/tabs/items
 
-      **** Plats: /apps/
+      **Plats:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
    1. Click **OK**. Mappen skapas. Klicka på **Spara alla**.
 
@@ -276,9 +279,9 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
    1. Högerklicka på objektmappen och välj **Skapa** > **Skapa nod**.
    1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: mytab (eller det namn du vill ge den här egenskapen)
+      **Namn:** mytab (eller det namn du vill ge den här egenskapen)
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
    1. Klicka på den nya noden som du har skapat (här minfliken). CRX visar nodens egenskaper.
    1. Lägg till följande två egenskaper i noden (här fliken Custom):
@@ -334,11 +337,11 @@ Så här lägger du till en egenskap till en resurstyp:
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ma/gui/content/cmmetadataproperties/properties/[AssetType]/items/tabs/items
+      **Sökväg:** /libs/fd/cm/ma/gui/content/cmmetadataproperties/properties/[AssetType]/items/tabs/items
 
-      **** Plats: /apps/
+      **Plats:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
    1. Click **OK**. Mappstrukturen skapas i programmappen.
 
@@ -349,9 +352,9 @@ Så här lägger du till en egenskap till en resurstyp:
    1. Högerklicka på objektmappen och välj **Skapa** > **Skapa nod**.
    1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: egen flik (eller namnet som du vill ge den här egenskapen)
+      **Namn:** egen flik (eller namnet som du vill ge den här egenskapen)
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
    1. Klicka på den nya noden som du har skapat (här fliken Egen). CRX visar nodens egenskaper.
    1. Lägg till följande två egenskaper i noden (här fliken Custom):
@@ -368,9 +371,9 @@ Så här lägger du till en egenskap till en resurstyp:
    1. Högerklicka på noden (här fliken) och välj **Skapa** > **Skapa nod**.
    1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: objekt
+      **Namn:** objekt
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
    1. Klicka på **Spara alla**.
 
@@ -379,9 +382,9 @@ Så här lägger du till en egenskap till en resurstyp:
    1. Högerklicka på objektnoden och välj **Skapa** > **Skapa nod**.
    1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: Column1 (eller det namn du vill ge noden)
+      **Namn:** Column1 (eller det namn du vill ge noden)
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
    1. Lägg till följande egenskap i noden (här Kolumn1) och klicka sedan på **Spara alla**.
 
@@ -394,9 +397,9 @@ Så här lägger du till en egenskap till en resurstyp:
    1. Högerklicka på den relevanta kolumnnoden (här Kolumn1) och välj **Skapa** > **Skapa nod**.
    1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: objekt
+      **Namn:** objekt
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
    1. Klicka på **Spara alla:**
 
@@ -405,9 +408,9 @@ Så här lägger du till en egenskap till en resurstyp:
    1. Högerklicka på den relevanta noden (här objekten under Kolumn1) och välj **Skapa** > **Skapa nod**.
    1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: Välj ett namn (här GeoLocation)
+      **Namn:** Välj ett namn (här GeoLocation)
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
    1. Lägg till följande egenskaper i noden och klicka sedan på **Spara alla**.
 
@@ -436,11 +439,11 @@ Som standard visas anpassade egenskaper som lagts till på nya flikar bara på e
 
 1. Kontrollera att dialogrutan Overlay Node har följande värden för letter. För andra tillgångstyper anges sökväg i följande tabell:
 
-   **** Sökväg: /libs/fd/cm/ma/gui/content/create/asset/createletter/jcr:content/body/items/form/items/letterWizard/items/properties/items/items/items/letterproperties/items
+   **Sökväg:** /libs/fd/cm/ma/gui/content/create/asset/createletter/jcr:content/body/items/form/items/letterWizard/items/properties/items/items/items/letterproperties/items
 
-   **** Plats: /apps/
+   **Plats:** /apps/
 
-   **** Matcha nodtyper:Markerad
+   **Matcha nodtyper:** Markerad
 
    Beroende på resurstypen måste följande vara sökvägen:
 
@@ -450,7 +453,7 @@ Som standard visas anpassade egenskaper som lagts till på nya flikar bara på e
    | Lista | /libs/fd/cm/ma/gui/content/create/asset/create/list/jcr:content/body/items/form/items/list/wizard/items/editproperties/items/items/items/tabs/items/tab1/items |
    | Villkor | /libs/fd/cm/ma/gui/content/create/asset/createcondition/jcr:content/body/items/form/items/Conditionwizard/items/editproperties/items/properties/items/tabs/items/tab1/items |
    | Fragment | /libs/fd/cm/ma/gui/content/create/asset/createfragment/jcr:content/body/items/form/items/splittwizard/items/properties/items/items/items/items/tabs2/items/tab1/items |
-   | Bokstaven |  /libs/fd/cm/ma/gui/content/create/asset/createletter/jcr:content/body/items/form/items/letterWizard/items/properties/items/items/items/letterproperties/items |
+   | Bokstaven | /libs/fd/cm/ma/gui/content/create/asset/createletter/jcr:content/body/items/form/items/letterWizard/items/properties/items/items/items/letterproperties/items |
 
 1. Click **OK**. Mappstrukturen skapas i programmappen.
 
@@ -509,11 +512,11 @@ Följ de här stegen för att visa den anpassade egenskapen i resurslistan för 
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/lists/columns
+      **Sökväg:** /libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/lists/columns
 
-      **** Plats: /apps/
+      **Plats:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
    1. Click **OK**. Mappstrukturen skapas i programmappen.
 
@@ -524,9 +527,9 @@ Följ de här stegen för att visa den anpassade egenskapen i resurslistan för 
    1. Högerklicka på den relevanta noden (kolumnerna) och välj **Skapa** > **Skapa nod**.
    1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: Ett namn som du väljer (här GeographicalLocation)
+      **Namn:** Ett namn som du väljer (här GeographicalLocation)
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
    1. Lägg till följande egenskaper i noden och klicka sedan på **Spara alla**.
 
@@ -548,11 +551,11 @@ Följ de här stegen för att visa den anpassade egenskapen i resurslistan för 
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ma/gui/components/admin/childpagerenderer/childlistpage
+      **Sökväg:** /libs/fd/cm/ma/gui/components/admin/childpagerenderer/childlistpage
 
-      **** Plats: /apps/
+      **Plats:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
    1. Click **OK**. Mappstrukturen skapas i programmappen.
 
@@ -651,9 +654,9 @@ Så här tillåter du indexering av anpassade egenskaper:
    1. Högerklicka på mappen cmLucene och välj **Skapa** > **Skapa nod**.
    1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: aggregat
+      **Namn:** aggregat
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
    1. Klicka på **Spara alla**.
 
@@ -661,15 +664,15 @@ Så här tillåter du indexering av anpassade egenskaper:
 
    1. Högerklicka på aggregatmappen och välj **Skapa** > **Skapa nod**. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: cm:resource
+      **Namn:** cm:resource
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
    1. Högerklicka på mappen cm:resource och välj **Skapa** > **Skapa nod**. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: include0
+      **Namn:** include0
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
    1. Klicka på den nya noden som du har skapat (här är include0). CRX visar nodens egenskaper.
    1. Lägg till följande egenskap i noden (här include0):
@@ -686,9 +689,9 @@ Så här tillåter du indexering av anpassade egenskaper:
    1. Högerklicka på egenskapsmappen och välj **Skapa** > **Skapa nod**.
    1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: plats (eller namnet på den anpassade egenskap som du vill lägga till i sökningen)
+      **Namn:** plats (eller namnet på den anpassade egenskap som du vill lägga till i sökningen)
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
    1. Klicka på den nya noden som du har skapat (här). CRX visar nodens egenskaper.
    1. Lägg till följande egenskaper i noden (här):
@@ -721,11 +724,11 @@ Så här tillåter du indexering av anpassade egenskaper:
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/granite/ui/content/shell/omnisearch/searchresults/singleresults/views/list
+      **Sökväg:** /libs/granite/ui/content/shell/omnisearch/searchresults/singleresults/views/list
 
-      **** Plats: /apps/
+      **Plats:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
    1. Click **OK**. Mappstrukturen skapas i programmappen.
 
@@ -737,13 +740,13 @@ Så här tillåter du indexering av anpassade egenskaper:
    |---|---|---|
    | sling:orderBefore | Sträng | kort |
 
-1. Anpassningen visar sökresultaten i listvyn för alla konsoler, inklusive formulär och dokument, resurser och platser.
+1. Anpassningen visar sökresultaten i listvyn för alla konsoler, inklusive Forms och Dokument, Resurser och Webbplatser.
 
 ## Ändra standardvy för resurssidan {#change-default-view-of-the-assets-page}
 
 >[!NOTE]
 >
->Dessa steg ändrar standardvyn för alla konsoler, t.ex. formulär och dokument, resurser och platser.
+>De här stegen ändrar standardvyn för alla konsoler som Forms och Dokument, Resurser och Platser.
 
 1. Gå till `https://[server]:[port]/[ContextPath]/crx/de` och logga in som administratör.
 1. I mappen apps skapar du en mapp med namnet list med sökväg/struktur som liknar listmappen i:
@@ -756,11 +759,11 @@ Så här tillåter du indexering av anpassade egenskaper:
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/list
+      **Sökväg:** /libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/list
 
-      **** Plats: /apps/
+      **Plats:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
    1. Click **OK**. Mappstrukturen skapas i programmappen.
 
