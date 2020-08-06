@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 12268c43-93f9-42c1-8dd7-f17f9ae2219b
 translation-type: tm+mt
 source-git-commit: 835f1ba1f196c6c6303019f0cc310cad850e1682
+workflow-type: tm+mt
+source-wordcount: '985'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Det här dokumentet beskriver vad du behöver veta för att kunna planera ditt t
 
 Innan du börjar med den faktiska analysen och definitionen av tester ska du granska följande information:
 
-**AEM-arkitektur** - Se Grundläggande koncept för att presentera dig för arkitekturen och grundprinciperna i AEM.
+**AEM arkitektur** - Se Grundläggande begrepp för att ge dig lite mer information om AEM arkitektur och grundläggande principer.
 
 **Dokumentation** - Mer information finns i avsnitten om dokumentation och Använda artiklar.
 
@@ -49,7 +52,7 @@ Det är projektledarens ansvar att besluta om och initiera åtgärder beroende p
 
 ## Provningstyper {#types-of-tests}
 
-Det finns olika standardklassificeringar av tester som är lämpliga att använda vid testning av ett AEM-projekt. Du bör känna till dessa för att avgöra vilken du ska använda:
+Det finns olika standardklassificeringar av tester som är lämpliga att använda vid testning av ett AEM. Du bör känna till dessa för att avgöra vilken du ska använda:
 
 >[!NOTE]
 >
@@ -69,7 +72,7 @@ Black-box-tester är funktionstester av en komplett enhet/komponent/modul som ut
 
 De testar funktionen i svart kartong.
 
-**Prestandatester** - Prestandatester är avgörande vid testning av AEM.
+**Prestandatester** - Prestandatester är avgörande när AEM testas.
 
 De används för att illustrera prestanda under olika förhållanden:
 
