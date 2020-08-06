@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 1b79d373-73f4-4228-b309-79e74d191f3e
 translation-type: tm+mt
 source-git-commit: 3addef2141ebb831f8677d011d68faf88e648dc2
+workflow-type: tm+mt
+source-wordcount: '596'
+ht-degree: 13%
 
 ---
 
@@ -25,9 +28,9 @@ Uppgifter används också i projekt för att avgöra hur fullständiga de aktuel
 
 Du kan spåra projektförloppet genom att titta på aktiva/slutförda uppgifter i ett projekt som representeras av **aktivitetspanelen** . Projektets förlopp kan avgöras av:
 
-* **** Åtgärdsfönster: Ett övergripande förlopp för projektet visas i aktivitetsrutan på sidan med projektinformation.
+* **Uppgiftsruta:** Ett övergripande förlopp för projektet visas i uppgiftsrutan på sidan med projektinformation.
 
-* **** Uppgiftslista: När du klickar på aktivitetspanelen visas en lista med uppgifter. Den här listan innehåller detaljerad information om alla aktiviteter som är relaterade till projektet.
+* **Uppgiftsruta:** När du klickar på uppgiftsrutan visas en lista med uppgifter. Den här listan innehåller detaljerad information om alla uppgifter som rör projektet.
 
 Båda listar arbetsflödesuppgifter och uppgifter som du skapar direkt i **aktivitetspanelen** .
 
@@ -69,7 +72,7 @@ Du kan lägga till nya uppgifter i projekt. Dessa uppgifter visas sedan på akti
 
 Så här lägger du till en uppgift:
 
-1. Tryck/klicka på ikonen + i **aktivitetspanelen** i projektet. Fönstret **Lägg till uppgift** öppnas.
+1. Tryck/klicka på ikonen + i rutan **Uppgifter** i projektet. Fönstret **Lägg till uppgift** öppnas.
 1. Ange information om uppgiften. Titeln på uppgiften och vilken grupp den har tilldelats är obligatoriska. Ytterligare information som innehållssökväg, beskrivning, uppgiftsprioritet och förfallodatum är valfria. Du kan dessutom välja fliken **Avancerat** och ange namnet på uppgiften som används för att namnge URL:en.
 
    ![chlimage_1-102](assets/chlimage_1-102.png)
