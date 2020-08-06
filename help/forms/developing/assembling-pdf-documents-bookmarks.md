@@ -12,6 +12,9 @@ topic-tags: operations
 discoiquuid: 9f4711a8-033c-4051-ab41-65a26838899b
 translation-type: tm+mt
 source-git-commit: bc7fa8bd0464b9ae8c93349efb7e392de757c6a3
+workflow-type: tm+mt
+source-wordcount: '2526'
+ht-degree: 0%
 
 ---
 
@@ -84,7 +87,7 @@ När en användare klickar på *Öppna bokmärket Lånedetaljer* öppnas filen L
 
 >[!NOTE]
 >
->Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
@@ -113,10 +116,10 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
+* adobe-utilities.jar (krävs om AEM Forms används i JBoss)
+* jbossall-client.jar (krävs om AEM Forms används i JBoss)
 
-Om AEM Forms används på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms distribueras på. Information om platsen för alla AEM Forms JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Om AEM Forms körs på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms är distribuerad på. Information om platsen för alla AEM Forms JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa en PDF Assembler-klient**
 
@@ -151,7 +154,7 @@ Du måste lägga till både det PDF-dokument som bokmärken läggs till i och de
 
 **Ange körningsalternativ**
 
-Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänsten när den utför ett jobb. Du kan till exempel ange ett alternativ som instruerar Assembler-tjänsten att fortsätta bearbeta ett jobb om ett fel uppstår. Mer information om de körningsalternativ du kan ange finns i klassreferensen `AssemblerOptionSpec` i API-referens [för](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)AEM Forms.
+Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänsten när den utför ett jobb. Du kan till exempel ange ett alternativ som instruerar Assembler-tjänsten att fortsätta bearbeta ett jobb om ett fel uppstår. Mer information om alternativ för körning som du kan ange finns i klassreferensen ( `AssemblerOptionSpec` class reference) i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **Sammanställ PDF-dokumentet**
 
@@ -222,6 +225,7 @@ Sammanställa ett PDF-dokument med bokmärken med hjälp av Assembler Service AP
    * Ett `com.adobe.idp.Document` objekt som representerar det DDX-dokument som ska användas
    * Ett `java.util.Map` objekt som innehåller både PDF-indatadokumentet och XML-dokumentet för bokmärket.
    * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` objekt som anger körningsalternativen, inklusive standardteckensnitt och jobbloggsnivå
+
    Metoden returnerar `invokeDDX` ett `com.adobe.livecycle.assembler.client.AssemblerResult` objekt som innehåller resultatet av jobbet och eventuella undantag som inträffade.
 
 1. Spara PDF-dokumentet som innehåller bokmärken.
@@ -260,7 +264,7 @@ Sammanställa ett PDF-dokument med bokmärken med Assembler Service API (webbtj�
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `AssemblerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -309,6 +313,7 @@ Sammanställa ett PDF-dokument med bokmärken med Assembler Service API (webbtj�
    * Ett `BLOB` objekt som representerar DDX-dokumentet
    * Arrayen `MyMapOf_xsd_string_To_xsd_anyType` som innehåller indatadokumenten
    * Ett `AssemblerOptionSpec` objekt som anger körningsalternativ
+
    Metoden returnerar ett `invokeDDX` `AssemblerResult` objekt som innehåller resultatet av jobbet och eventuella undantag som kan ha inträffat.
 
 1. Spara PDF-dokumentet som innehåller bokmärken.
@@ -321,4 +326,4 @@ Sammanställa ett PDF-dokument med bokmärken med Assembler Service API (webbtj�
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
