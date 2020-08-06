@@ -18,28 +18,28 @@ ht-degree: 0%
 ---
 
 
-# Lägga till Search&amp;Promote på sidan {#adding-search-promote-features-to-your-page}
+# Lägga till Search &amp; Promote på sidan {#adding-search-promote-features-to-your-page}
 
-Om du vill integrera Search&amp;Promote på webbplatsen använder du komponenterna för att lägga till följande funktioner på dina : [!UICONTROL Search&Promote]
+Om du vill integrera Search &amp; Promote på webbplatsen använder du komponenterna för att lägga till följande funktioner på dina : [!UICONTROL Search&Promote]
 
 * Nyckelordssökning
 * Sökresultatsida
 * Sökförfining
 * Banderoller
 
-Observera att du bara kan använda Search&amp;Promote om AEM-administratören har aktiverat dem. Se [Integrera med Adobe-Search&amp;Promote](/help/sites-administering/search-and-promote.md).
+Observera att du bara kan använda Search &amp; Promote om AEM har aktiverat dem. Se [Integrera med Adobe Search &amp; Promote](/help/sites-administering/search-and-promote.md).
 
-Ansikten konfigureras på Search&amp;Promote, liksom den information som varje komponent tillhandahåller. Följande tabell innehåller en kort beskrivning av varje komponent. Efterföljande avsnitt innehåller detaljerad information om hur de används.
+Ansikten konfigureras på Search &amp; Promote, liksom den information som varje komponent tillhandahåller. Följande tabell innehåller en kort beskrivning av varje komponent. Efterföljande avsnitt innehåller detaljerad information om hur de används.
 
 <table> 
  <tbody> 
   <tr> 
-   <th>Search&amp;Promote-komponent</th> 
+   <th>Search &amp; Promote-komponent</th> 
    <th>Beskrivning</th> 
   </tr> 
   <tr> 
    <td>Banderoller</td> 
-   <td>Visar banderollannonser. Banderoller väljs baserat på data som samlats in via Search&amp;Promote.<br /> </td> 
+   <td>Visar banderollannonser. Banderoller väljs baserat på data som samlats in via Search &amp; Promote.<br /> </td> 
   </tr> 
   <tr> 
    <td>Breadcrumbs</td> 
@@ -74,7 +74,7 @@ Ansikten konfigureras på Search&amp;Promote, liksom den information som varje k
 
 ## Skapa sidan med sökresultat {#creating-the-search-results-page}
 
-Använd WCM-webbplatskonsolen för att skapa en sida för att visa sökresultat. Resultatet av en sökning från en sökkomponent kan visas på den här sidan om samma Search&amp;Promote används.
+Använd WCM-webbplatskonsolen för att skapa en sida för att visa sökresultat. Resultatet av en sökning från en sökkomponent kan visas på den här sidan om samma Search &amp; Promote används.
 
 De komponenter som gör det möjligt för användare att granska sökresultat är Resultat och Sidnumrering. Komponenten **[!UICONTROL Results]** har inga konfigurerbara egenskaper i [!UICONTROL Edit] eller [!UICONTROL Design] läge. Komponenten Results visar bara sökresultaten, som innehåller länkar till andra sidor, och visar antalet resultat för söknyckelordet.
 
@@ -141,13 +141,13 @@ Konfigurera följande egenskaper i **[!UICONTROL Edit]** läge för att styra k�
 
 ## Lägga till banners {#adding-banners}
 
-I **[!UICONTROL Banners]** komponenten visas banderollannonser utifrån kundens Search&amp;Promote. Logiken på Search&amp;Replace-servern avgör vilken banderoll som ska visas. En sökning på jeans kan till exempel få en moderelaterad banderoll att visas. Filtrering på Men&#39;s Department kan ytterligare förfina valet av banderoll.
+I **[!UICONTROL Banners]** komponenten visas banderollannonser utifrån kundens Search &amp; Promote. Logiken på Search&amp;Replace-servern avgör vilken banderoll som ska visas. En sökning på jeans kan till exempel få en moderelaterad banderoll att visas. Filtrering på Men&#39;s Department kan ytterligare förfina valet av banderoll.
 
-Komponenten **[!UICONTROL Banners]** innehåller en konfigurerbar egenskap med namnet **[!UICONTROL Banner Area]**. I **[!UICONTROL Edit]** läget väljer du ett av egenskapsvärdena för att ange hur banderollen ska visas. Search&amp;Promote avgör vilka värden du kan välja från.
+Komponenten **[!UICONTROL Banners]** innehåller en konfigurerbar egenskap med namnet **[!UICONTROL Banner Area]**. I **[!UICONTROL Edit]** läget väljer du ett av egenskapsvärdena för att ange hur banderollen ska visas. Search &amp; Promote avgör vilka värden du kan välja från.
 
-## Exempel på söksida för Search&amp;Promote {#example-search-promote-search-page}
+## Exempel på söksida för Search &amp; Promote {#example-search-promote-search-page}
 
-I det här diagrammet visas de komponenter som läggs till på en sida för att skapa den fullt fungerande Search&amp;Promote nedan.
+I det här diagrammet visas de komponenter som läggs till på en sida för att skapa den fullt fungerande Search &amp; Promote nedan.
 
 ![1328213789109](assets/1328213789109.png) ![sandpage example](assets/sandppageexample.png)
 
