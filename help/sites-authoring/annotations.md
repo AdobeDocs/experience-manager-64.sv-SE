@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: aa89326a-ad33-4b0b-8d09-c68c5a5c790a
 translation-type: tm+mt
 source-git-commit: b3d81da17c2de68d6ba3306bb35543eb0788e308
+workflow-type: tm+mt
+source-wordcount: '651'
+ht-degree: 0%
 
 ---
 
@@ -51,6 +54,7 @@ Ett särskilt [läge](/help/sites-authoring/author-environment-tools.md#page-mod
 >
 >* [Anteckna resurser](/help/assets/managing-assets-touch-ui.md#annotating)
 >* [Kommentera videomaterial](/help/assets/managing-video-assets.md#annotating-video-assets)
+
 >
 
 
@@ -88,9 +92,11 @@ I anteckningsläget kan du skapa, redigera, flytta eller ta bort anteckningar i 
    ![](do-not-localize/screen_shot_2018-03-22at110640.png)
 
    * Välj/ändra färg:
+
    ![](do-not-localize/chlimage_1-19.png)
 
    * Ta bort anteckningen.
+
    ![](do-not-localize/screen_shot_2018-03-22at110647.png)
 
 1. Du kan stänga anteckningsdialogrutan genom att klicka/trycka utanför dialogrutan. En trunkerad vy (det första ordet) av anteckningen, tillsammans med eventuella skisser, visas:
