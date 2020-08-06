@@ -11,19 +11,22 @@ content-type: reference
 discoiquuid: 198098c0-432b-4a93-a94e-2552337435dd
 translation-type: tm+mt
 source-git-commit: ce717994831eb3ef90baaffa7413de50f671b07c
+workflow-type: tm+mt
+source-wordcount: '317'
+ht-degree: 0%
 
 ---
 
 
 # Namnkonventioner{#naming-conventions}
 
-Noderna i databasen omfattas av namnkonventioner i [Java Content Repository](/help/sites-developing/the-basics.md#java-content-repository). AEM har dock ytterligare konventioner för sidnodernas namn.
+Noderna i databasen omfattas av namnkonventioner i [Java Content Repository](/help/sites-developing/the-basics.md#java-content-repository). AEM lägger dock till ytterligare konventioner för sidnodernas namn.
 
 ## Namnkonventioner för sidor {#naming-conventions-for-pages}
 
 Dessa namnkonventioner implementeras på olika nivåer:
 
-* JcrUtil: AEM-implementeringen av [JCR-verktygen](#jcr-utilities).
+* JcrUtil: AEM av [JCR-verktygen](#jcr-utilities).
 * PageManager: I [sidhanteraren](#page-manager) finns metoder för sidnivååtgärder.
 * Enligt det användargränssnitt som används:
 
@@ -32,7 +35,7 @@ Dessa namnkonventioner implementeras på olika nivåer:
 
 ### JCR-verktyg {#jcr-utilities}
 
-[JcrUtil](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/commons/jcr/JcrUtil.html) är AEM-implementeringen av JCR-verktygen. Det är särskilt intressant att validera namn om du kontrollerar teckenmappningar och följande valideringar:
+[JcrUtil](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/commons/jcr/JcrUtil.html) är den AEM implementeringen av JCR-verktygen. Det är särskilt intressant att validera namn om du kontrollerar teckenmappningar och följande valideringar:
 
 * `isValidName`
 
