@@ -1,8 +1,8 @@
 ---
 title: Emulatorer
 seo-title: Emulatorer
-description: Med AEM kan författare visa en sida i en emulator som simulerar miljön där slutanvändaren visar sidan
-seo-description: Med AEM kan författare visa en sida i en emulator som simulerar miljön där slutanvändaren visar sidan
+description: AEM gör det möjligt för författare att visa en sida i en emulator som simulerar den miljö i vilken slutanvändaren ska visa sidan
+seo-description: AEM gör det möjligt för författare att visa en sida i en emulator som simulerar den miljö i vilken slutanvändaren ska visa sidan
 uuid: ee1496a5-be68-4318-b5ce-b11c41e4485c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,6 +12,9 @@ discoiquuid: c51fca81-5dfc-4838-9672-acb6de62778b
 legacypath: /content/docs/en/aem/6-0/develop/mobile/emulators
 translation-type: tm+mt
 source-git-commit: ce717994831eb3ef90baaffa7413de50f671b07c
+workflow-type: tm+mt
+source-wordcount: '654'
+ht-degree: 0%
 
 ---
 
@@ -22,9 +25,9 @@ source-git-commit: ce717994831eb3ef90baaffa7413de50f671b07c
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Med Adobe Experience Manager (AEM) kan författare visa en sida i en emulator som simulerar i vilken miljö slutanvändaren ska visa sidan, till exempel på en mobil enhet eller i en e-postklient.
+Med Adobe Experience Manager (AEM) kan författare visa en sida i en emulator som simulerar den miljö i vilken slutanvändaren ska visa sidan, till exempel på en mobilenhet eller i en e-postklient.
 
-AEM-emulatorramverket:
+AEM emulatorramverk:
 
 * Innehållsutveckling i ett simulerat användargränssnitt, t.ex. en mobilenhet eller en e-postklient (används för att skapa nyhetsbrev).
 * Anpassar sidinnehållet enligt det simulerade användargränssnittet.
@@ -150,5 +153,6 @@ Så här skapar du en anpassad mobilemulator:
    * Namn = `canRotate`, Typ = `Boolean`, Värde = `true`: för att inkludera rotationsfunktionen.
 
    * Namn = `touchScrolling`, Typ = `Boolean`, Värde = `true`: för att inkludera pekskärmsfunktionen.
+
    Du kan lägga till fler funktioner genom att definiera egna plugin-program.
 
