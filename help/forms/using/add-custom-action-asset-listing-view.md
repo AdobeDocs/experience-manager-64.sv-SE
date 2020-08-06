@@ -10,6 +10,9 @@ topic-tags: correspondence-management
 discoiquuid: b35ea921-182f-4371-90f6-482d22694b42
 translation-type: tm+mt
 source-git-commit: 7e58d1d861f832d073fb178868804995ee8d855b
+workflow-type: tm+mt
+source-wordcount: '1312'
+ht-degree: 1%
 
 ---
 
@@ -45,7 +48,7 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
 1. I mappen apps skapar du en mapp med namnet items med en sökväg/struktur som liknar mappen items i en urvalsmapp enligt följande:
 
-   1. Högerklicka på **[!UICONTROL objektmappen]** i följande sökväg och välj **[!UICONTROL Overlay Node]**:
+   1. Högerklicka på **[!UICONTROL items]** mappen i följande sökväg och välj **[!UICONTROL Overlay Node]**:
 
       `/libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items`
 
@@ -60,30 +63,31 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items
+      **[!UICONTROL Path:]** /libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items
 
-      **** Plats: /apps/
+      **[!UICONTROL Location:]** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **[!UICONTROL Match Node Types:]** Markerad
 
       ![Överläggsnod](assets/2_createnodedownloadflatpdf.png)
 
-   1. Click **[!UICONTROL OK]**. Mappstrukturen skapas i programmappen.
+   1. Klicka på **[!UICONTROL OK]**. Mappstrukturen skapas i programmappen.
 
-      Klicka på **[!UICONTROL Spara alla]**.
+      Klicka på **[!UICONTROL Save All]**.
 
 1. Lägg till en nod för den anpassade knappen/åtgärden i en viss resurs under den nyligen skapade objektmappen (Exempel: downloadFlatPDF) med följande steg:
 
-   1. Högerklicka på **[!UICONTROL objektmappen]** och välj **[!UICONTROL Skapa]** > **[!UICONTROL Skapa nod]**.
+   1. Högerklicka på **[!UICONTROL items]** mappen och välj **[!UICONTROL Create]** > **[!UICONTROL Create Node]**.
 
-   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **[!UICONTROL OK]**:
+   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka sedan på **[!UICONTROL OK]**:
 
-      **** Namn: downloadFlatPDF (eller det namn du vill ge den här egenskapen)
+      **[!UICONTROL Name:]** downloadFlatPDF (eller det namn du vill ge den här egenskapen)
 
-      **** Typ:nt:ostrukturerad
+      **[!UICONTROL Type:]** nt:ostrukturerad
 
    1. Klicka på den nya noden som du har skapat (här downloadFlatPDF). CRX visar nodens egenskaper.
-   1. Lägg till följande egenskaper i noden (här downloadFlatPDF) och klicka på **[!UICONTROL Spara alla]**:
+   1. Lägg till följande egenskaper i noden (här downloadFlatPDF) och klicka på **[!UICONTROL Save All]**:
+
    <table> 
     <tbody> 
     <tr> 
@@ -136,23 +140,23 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
 1. I mappen apps skapar du en mapp med namnet js med en sökväg/struktur som liknar objektmappen i admin-mappen enligt följande steg:
 
-   1. Högerklicka på **[!UICONTROL js]** -mappen vid följande sökväg och välj **[!UICONTROL Överläggsnod]**: &quot;
+   1. Högerklicka på **[!UICONTROL js]** mappen i följande sökväg och välj **[!UICONTROL Overlay Node]**: &quot;
 
       `/libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js`
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js
+      **[!UICONTROL Path:]** /libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js
 
-      **** Plats: /apps/
+      **[!UICONTROL Location:]** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **[!UICONTROL Match Node Types:]** Markerad
 
-   1. Click **[!UICONTROL OK]**. Mappstrukturen skapas i programmappen. Klicka på **[!UICONTROL Spara alla]**.
+   1. Klicka på **[!UICONTROL OK]**. Mappstrukturen skapas i programmappen. Klicka på **[!UICONTROL Save All]**.
 
 1. I mappen js skapar du en fil med namnet formaction.js med koden för knappens åtgärder enligt följande steg:
 
-   1. Högerklicka på **[!UICONTROL js]** -mappen på följande sökväg och välj **[!UICONTROL Skapa > Skapa fil]**:
+   1. Högerklicka på **[!UICONTROL js]** mappen i följande sökväg och välj **[!UICONTROL Create > Create File]**:
 
       `/apps/fd/cm/ma/gui/components/admin/clientlibs/admin/js`
 
@@ -163,7 +167,7 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
       `/libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js/formaction.js`
 
-      Lägg sedan till följande kod i slutet av filen formaction.js (under grenen /apps) och klicka på **[!UICONTROL Spara alla]**:
+      Lägg sedan till följande kod i slutet av filen formaction.js (under grenen /apps) och klicka på **[!UICONTROL Save All]**:
 
       ```
       /* Action url for xml file to be added.*/
@@ -226,35 +230,35 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
 1. I mappen apps skapar du en mapp med namnet items med en sökväg/struktur som liknar mappen items i mappen actionhandlers med följande steg:
 
-   1. Högerklicka på **[!UICONTROL objektmappen]** i följande sökväg och välj **[!UICONTROL Overlay Node]**:
+   1. Högerklicka på **[!UICONTROL items]** mappen i följande sökväg och välj **[!UICONTROL Overlay Node]**:
 
       `/libs/fd/cm/ma/gui/content/commons/actionhandlers/items/`
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ma/gui/content/commons/actionhandlers/items/
+      **[!UICONTROL Path:]** /libs/fd/cm/ma/gui/content/commons/actionhandlers/items/
 
-      **** Plats: /apps/
+      **[!UICONTROL Location:]** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **[!UICONTROL Match Node Types:]** Markerad
 
-   1. Click **[!UICONTROL OK]**. Mappstrukturen skapas i programmappen.
+   1. Klicka på **[!UICONTROL OK]**. Mappstrukturen skapas i programmappen.
 
-   1. Klicka på **[!UICONTROL Spara alla]**.
+   1. Klicka på **[!UICONTROL Save All]**.
 
 1. Under noden för nyligen skapade objekt lägger du till en nod för den anpassade knappen/åtgärden i en viss resurs (Exempel: letterpdfdownloader) med följande steg:
 
-   1. Högerklicka på objektmappen och välj **[!UICONTROL Skapa > Skapa nod]**.
+   1. Högerklicka på objektmappen och välj **[!UICONTROL Create > Create Node]**.
 
-   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **[!UICONTROL OK]**:
+   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka sedan på **[!UICONTROL OK]**:
 
-      **** Namn: letterpdfdownloader (eller det namn du vill ge den här egenskapen) måste vara unikt. Om du använder ett annat namn här anger du samma namn i formaction.js-filens ACTION_URL-variabel.)
+      **[!UICONTROL Name:]** letterpdfdownloader (eller det namn du vill ge den här egenskapen) måste vara unikt. Om du använder ett annat namn här anger du samma namn i formaction.js-filens ACTION_URL-variabel.)
 
-      **** Typ:nt:ostrukturerad
+      **[!UICONTROL Type:]** nt:ostrukturerad
 
    1. Klicka på den nya noden som du har skapat (här downloadFlatPDF). CRX visar nodens egenskaper.
 
-   1. Lägg till följande egenskap i noden (här letterpdfdownloader) och klicka på **[!UICONTROL Spara alla]**:
+   1. Lägg till följande egenskap i noden (här letterpdfdownloader) och klicka på **[!UICONTROL Save All]**:
 
       | **Namn** | **Typ** | **Värde** |
       |---|---|---|
@@ -264,18 +268,18 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
    /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
-   1. Högerklicka på **[!UICONTROL administratörsmappen]** på följande sökväg och välj **[!UICONTROL Skapa > Skapa fil]**:
+   1. Högerklicka på **[!UICONTROL admin]** mappen i följande sökväg och välj **[!UICONTROL Create > Create File]**:
 
       /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
       Ge filen namnet POST.jsp. (Filnamnet behöver bara vara POST.jsp.)
 
-   1. Dubbelklicka på **[!UICONTROL POST.jsp]** -filen för att öppna den i CRX.
-   1. Lägg till följande kod i filen POST.jsp och klicka på **[!UICONTROL Spara alla]**:
+   1. Dubbelklicka på **[!UICONTROL POST.jsp]** filen för att öppna den i CRX.
+   1. Lägg till följande kod i filen POST.jsp och klicka på **[!UICONTROL Save All]**:
 
-      Den här koden är specifik för bokstavsåtergivningstjänsten. För andra resurser lägger du till resursens java-bibliotek i den här koden. Mer information om API:er för AEM Forms finns i API:t för [AEM Forms](https://adobe.com/go/learn_aemforms_javadocs_63_en).
+      Den här koden är specifik för bokstavsåtergivningstjänsten. För andra resurser lägger du till resursens java-bibliotek i den här koden. Mer information om AEM Forms API:er finns i [AEM Forms API](https://adobe.com/go/learn_aemforms_javadocs_63_en).
 
-      Mer information om AEM-bibliotek finns i AEM- [komponenter](/help/sites-developing/components.md).
+      Mer information om AEM finns i AEM [komponenter](/help/sites-developing/components.md).
 
       ```xml
       /*Import libraries. Here we are downloading letter flat pdf with input xml data so we require letterRender Api. For any other Module functionality we need to first import that library. */            
@@ -348,9 +352,9 @@ När du har lagt till en anpassad funktion för att ladda ned en platt PDF-fil a
 
 1. Gå till `https://[server]:[port]/[ContextPath]/projects.html` och logga in.
 
-1. Välj **[!UICONTROL Formulär > Bokstäver]**. Correspondence Management listar bokstäverna som är tillgängliga i systemet.
-1. Klicka på **[!UICONTROL Markera]** och sedan på en bokstav för att markera den.
-1. Välj **[!UICONTROL Mer]** > &lt;Ladda ned platt PDF> (De anpassade funktionerna som skapas med instruktionerna i den här artikeln). Dialogrutan Hämta brev som PDF visas.
+1. Välj **[!UICONTROL Forms > Letters]**. Correspondence Management listar bokstäverna som finns i systemet.
+1. Klicka på **[!UICONTROL Select]** och sedan på en bokstav för att markera den.
+1. Välj **[!UICONTROL More]** > &lt;Hämta platt PDF> (De anpassade funktionerna som skapas med instruktionerna i den här artikeln). Dialogrutan Hämta brev som PDF visas.
 
    Menyalternativets namn, funktioner och alt-text anpassas efter den anpassning som har skapats i [Scenario: Lägg till ett kommando i användargränssnittet för bokstavslistan om du vill hämta en platt PDF-version av ett brev.](#addcommandtoletters)
 
@@ -360,7 +364,7 @@ När du har lagt till en anpassad funktion för att ladda ned en platt PDF-fil a
 
    >[!NOTE]
    >
-   >Innan du laddar ned bokstaven som en platt PDF-fil kan du skapa XML-filen med informationen i brevet med alternativet **[!UICONTROL Skapa rapport]** .
+   >Innan du laddar ned bokstaven som en platt PDF-fil kan du skapa XML-filen med informationen i brevet med hjälp av **[!UICONTROL Create Report]** alternativet .
 
    ![Ladda ned brev som PDF](assets/6_downloadflatpdf.png)
 
