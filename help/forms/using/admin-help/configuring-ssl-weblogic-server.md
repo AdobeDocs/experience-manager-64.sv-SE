@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 968c2574-ec9a-45ca-9c64-66f4caeec285
 translation-type: tm+mt
 source-git-commit: 835618e8e0d01905ad7b476b0172dfecec41cf9d
+workflow-type: tm+mt
+source-wordcount: '1074'
+ht-degree: 0%
 
 ---
 
@@ -113,7 +116,7 @@ Mer information om hur du använder kommandot keytool finns i filen keytool.html
    >
    >Ersätt `[JAVA_HOME]`*med katalogen där JDK är installerat och ersätt texten i kursiv stil med värden som motsvarar din miljö.*
 
-   Exempel:
+   Till exempel:
 
    ```as3
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -genkey -v -alias ads-credentials -keyalg RSA -keystore "ads-credentials.jks" -validity 3650 -storepass P@ssw0rd -keypass P@ssw0rd -dname "CN=wasnode01, OU=LC, O=Adobe, L=Noida, S=UP,C=91
@@ -133,7 +136,7 @@ Mer information om hur du använder kommandot keytool finns i filen keytool.html
    >
    >Ersätt `[JAVA_HOME]` med katalogen där JDK är installerat och ersätt `store`*_*`password`* med lösenordet för nyckelbehållaren för anpassad identitet.*
 
-   Exempel:
+   Till exempel:
 
    ```as3
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -export -v -alias ads-credentials -file "ads-ca.cer" -keystore "ads-credentials.jks" -storepass P@ssw0rd
@@ -144,13 +147,13 @@ Mer information om hur du använder kommandot keytool finns i filen keytool.html
 1. Kopiera filen ads-ca.cer till alla värddatorer som behöver säker kommunikation med programservern.
 1. Infoga certifikatet i en ny nyckelfil (nyckelbehållaren Anpassat förtroende) genom att ange följande kommando:
 
-   [JAVA_HOME]`/bin/keytool -import -v -noprompt -alias bedrock -file "ads-ca.cer" -keystore "ads-ca.jks" -storepass store_password -keypass key_password`
+   [JAVA_HOME] `/bin/keytool -import -v -noprompt -alias bedrock -file "ads-ca.cer" -keystore "ads-ca.jks" -storepass store_password -keypass key_password`
 
    >[!NOTE]
    >
    >Ersätt `[JAVA_HOME]` med katalogen där JDK är installerat och ersätt `store`*_*`password`och`key`*_* `password` *med dina egna lösenord.*
 
-   Exempel:
+   Till exempel:
 
    ```as3
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -import -v -noprompt -alias bedrock -file "ads-ca.cer" -keystore "ads-ca.jks" -storepass Password1 -keypass Password1
@@ -185,7 +188,7 @@ Konfigurera WebLogic så att den använder nyckelbehållaren Custom Identity och
 
 1. Ange följande värden under Lita på:
 
-   **Namn** på nyckelfil för anpassat förtroende: `*[appserverdomain]*/adobe/*[server]*/ads-ca.jks`, var `*[appserverdomain]*` är den faktiska banan?
+   **Namn** på nyckelfil för anpassat förtroende: `*[appserverdomain]*/adobe/*[server]*/ads-ca.jks`, där `*[appserverdomain]*` är den faktiska banan
 
    **Nyckellagringstyp** för anpassat förtroende: JKS
 
