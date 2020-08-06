@@ -8,6 +8,9 @@ uuid: 0010d274-a683-499e-9fa6-ce355d7898a0
 discoiquuid: 55c08940-8c25-4938-8e49-25bce20aaf22
 translation-type: tm+mt
 source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+workflow-type: tm+mt
+source-wordcount: '1416'
+ht-degree: 1%
 
 ---
 
@@ -37,13 +40,13 @@ Du kommer att ha ett formulär som liknar följande i slutet av artikeln:
 
 ## Steg 1: Skapa det anpassade formuläret {#step-create-the-adaptive-form}
 
-1. Logga in på AEM-författarinstansen och gå till **Adobe Experience Manager** > **Formulär** > **Formulär och dokument**. Standardwebbadressen är [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
+1. Logga in på AEM författarinstans och gå till **Adobe Experience Manager** > **Forms** > **Forms &amp; Documents**. Standardwebbadressen är [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
 1. Tryck på **Skapa** och välj **Adaptivt formulär**. Ett alternativ för att välja en mall visas. Tryck på mallen **Tom** för att markera den och tryck sedan på **Nästa**.
 
 1. Ett alternativ för att **lägga till egenskaper** visas. Fälten **Titel** och **Namn** är obligatoriska:
 
-   * **** Titel: Ange `Add new or update shipping address` i fältet Titel. Titelfältet anger formulärets visningsnamn. Titeln hjälper dig att identifiera formuläret i användargränssnittet för AEM Forms.
-   * **** Namn: Ange `shipping-address-add-update-form` i fältet Namn. Fältet Namn anger formulärets namn.  En nod med det angivna namnet skapas i databasen. När du börjar skriva en titel genereras värdet för namnfältet automatiskt. Du kan ändra det föreslagna värdet. Namnfältet får endast innehålla alfanumeriska tecken, bindestreck och understreck. Alla ogiltiga indata ersätts med ett bindestreck.
+   * **Titel:** Ange `Add new or update shipping address` i fältet Titel. Titelfältet anger formulärets visningsnamn. Titeln hjälper dig att identifiera formuläret i AEM Forms användargränssnitt.
+   * **Namn:** Ange `shipping-address-add-update-form` i fältet Namn. Fältet Namn anger formulärets namn. En nod med det angivna namnet skapas i databasen. När du börjar skriva en titel genereras värdet för namnfältet automatiskt. Du kan ändra det föreslagna värdet. Namnfältet får endast innehålla alfanumeriska tecken, bindestreck och understreck. Alla ogiltiga indata ersätts med ett bindestreck.
 
 1. Tryck på **Skapa**. Ett anpassat formulär skapas och en dialogruta öppnas där du kan öppna formuläret för redigering. Tryck på **Öppna** för att öppna det nya formuläret på en ny flik. Formuläret öppnas för redigering. Här visas också sidlisten där du kan anpassa det nya formuläret efter behov.
 
@@ -53,7 +56,7 @@ Du kommer att ha ett formulär som liknar följande i slutet av artikeln:
 
 ## Steg 2: Lägg till sidhuvud och sidfot {#step-add-header-and-footer}
 
-AEM Forms innehåller många komponenter som används för att visa information i ett adaptivt formulär. Komponenterna för sidhuvud och sidfot ger formuläret ett enhetligt utseende och en enhetlig känsla. En rubrik innehåller vanligtvis ett företags logotyp, formulärets rubrik och sammanfattning. En sidfot innehåller vanligtvis copyrightinformation och länkar till andra sidor.
+AEM Forms innehåller många komponenter som visar information i ett adaptivt formulär. Komponenterna för sidhuvud och sidfot ger formuläret ett enhetligt utseende och en enhetlig känsla. En rubrik innehåller vanligtvis ett företags logotyp, formulärets rubrik och sammanfattning. En sidfot innehåller vanligtvis copyrightinformation och länkar till andra sidor.
 
 1. Tryck på ![växlingspanelen](assets/toggle-side-panel.png) > ![treeexpandall](assets/treeexpandall.png). Komponentwebbläsaren öppnas. Dra **huvudkomponenten** från komponentwebbläsaren till det adaptiva formuläret.
 1. Tryck på **Logo**. Verktygsfältet visas. Tryck på ![aem_6_3_edit](assets/aem_6_3_edit.png) i verktygsfältet, skriv **We.Retail** och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
@@ -70,7 +73,7 @@ AEM Forms innehåller många komponenter som används för att visa information 
 
 ## Steg 3: Lägga till komponenter för att hämta och visa information {#step-add-components-to-capture-and-display-information}
 
-Komponenter är byggstenar i en adaptiv form. AEM Forms innehåller många komponenter för att hämta in och visa information i en adaptiv form. Du kan dra komponenterna från ![treexpandall](assets/treeexpandall.png) till ett formulär. Mer information om tillgängliga komponenter och motsvarande funktioner finns i Introduktion [till utveckling av adaptiva formulär](/help/forms/using/introduction-forms-authoring.md).
+Komponenter är byggstenar i en adaptiv form. AEM Forms har många komponenter som behövs för att hämta in och visa information i en adaptiv form. Du kan dra komponenterna från ![treexpandall](assets/treeexpandall.png) till ett formulär. Mer information om tillgängliga komponenter och motsvarande funktioner finns i Introduktion [till utveckling av adaptiva formulär](/help/forms/using/introduction-forms-authoring.md).
 
 1. Dra Numeric Box-komponenten till det adaptiva formuläret. Placera den före sidfotskomponenten. Öppna komponentens egenskaper, ändra komponentens **titel** till **`Customer ID`**, ändra **elementnamnet** till **`customer_ID`**, aktivera alternativet **Obligatoriskt fält** , aktivera alternativet **Använd HTML5-nummerindatatyp** ![](assets/aem_6_3_forms_save.png)och tryck på¥aem_6_3_forms_save¥.
 1. Dra tre textrutekomponenter till det adaptiva formuläret. Placera dessa före sidfotskomponenten. Ange följande egenskaper för dessa textrutor.:
@@ -173,10 +176,10 @@ Med hjälp av följande steg kan du konfigurera e-poståtgärd för att skicka o
    | Från | `donotreply@weretail.com` |
    | Till | `${customer_Email}` |
    | Ämne | Bekräftelse: Du har lagt till leveransadress på webbplatsen We.Retail. |
-   | E-postmall | Hej `${customer_Name}`! Följande adress läggs till som leveransadress för ditt konto: <br>`${customer_Name}`, `${customer_Shipping_Address}`, `${customer_State}`, `${customer_ZIPCode}`<br> Med vänlig hälsning |
+   | E-postmall | Hej `${customer_Name}`! Följande adress läggs till som leveransadress för ditt konto: <br>`${customer_Name}`, `${customer_Shipping_Address}`, `${customer_State}`, `${customer_ZIPCode}`<br> Med vänlig hälsning, We.Retail |
    | Inkludera bilagor | Aktiverad |
 
-   Formuläret är klart. Nu kan du förhandsgranska formuläret och testa funktionen. Om du har använt namnet som nämns i självstudiekursen och har åtkomst till formuläret på datorn som kör AEM Forms-servern, finns formuläret på [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html).
+   Formuläret är klart. Nu kan du förhandsgranska formuläret och testa funktionen. Om du har använt namnet som nämns i självstudiekursen och har åtkomst till formuläret på den dator där AEM Forms-servern körs, finns formuläret på [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html).
 
 ## Steg 5: Förhandsgranska och skicka det anpassade formuläret {#step-preview-and-submit-the-adaptive-form}
 
@@ -188,4 +191,4 @@ Med adaptiva formulär kan du också emulera upplevelsen av ett formulär för o
 1. Använd ![linjalen](assets/ruler.png) för att visa hur formuläret ser ut på olika enheter.
 1. Fyll i formulärfälten och tryck på **Skicka**. Formuläret skickas och du omdirigeras till standardsidan **Tack** . Du kan också ange en anpassad tacksida. Mer information finns i [Konfigurera omdirigeringssidan](/help/forms/using/configuring-redirect-page.md).
 
-Det adaptiva formuläret för att lägga till en adress är klart. Om du har använt namnet som nämns i självstudiekursen och har åtkomst till formuläret på datorn som kör AEM Forms-servern, finns formuläret på [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html).
+Det adaptiva formuläret för att lägga till en adress är klart. Om du har använt namnet som nämns i självstudiekursen och har åtkomst till formuläret på den dator där AEM Forms-servern körs, finns formuläret på [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html).
