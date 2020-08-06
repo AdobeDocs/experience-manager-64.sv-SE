@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: 92971747-1c74-4917-b5a0-7b79b3ae1e68
 translation-type: tm+mt
 source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+workflow-type: tm+mt
+source-wordcount: '583'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
 
 ## Design för uppgraderingar {#design-for-upgrades}
 
-När du utökar OTB-beteenden är det viktigt att tänka på uppgraderingarna. Använd alltid anpassningar i katalogen /apps och lägg antingen över motsvarande noder i katalogen /libs eller använd sling:resourceSuperType för att utöka beteendet utanför rutan. Även om vissa ändringar kan behövas för att stödja en ny AEM-version, bör den nya versionen inte skriva över dina anpassningar om den här metoden följs.
+När du utökar OTB-beteenden är det viktigt att tänka på uppgraderingarna. Använd alltid anpassningar i katalogen /apps och lägg antingen över motsvarande noder i katalogen /libs eller använd sling:resourceSuperType för att utöka beteendet utanför rutan. Vissa ändringar kan behövas för att stödja en ny AEM, men den nya versionen bör inte skriva över dina anpassningar om den här metoden följs.
 
 ### Återanvänd mallar och komponenter när det är möjligt {#reuse-template-and-components-when-possible}
 
@@ -51,7 +54,7 @@ Taggar och testkod är en integrerad del av alla Agile-programimplementeringar, 
 
 ### Implementera skript för datamigrering i sin egen modul {#implement-data-migration-scripts-in-their-own-module}
 
-Skript för datamigrering körs vanligtvis bara en gång när en webbplats startas första gången. Så fort sajten är publicerad blir den därför död. För att säkerställa att vi inte bygger implementeringskod som är beroende av migreringsskripten, bör de implementeras i sin egen modul. Detta gör att vi kan ta bort och kassera koden direkt efter start, vilket eliminerar den döda koden från systemet.
+Skript för datamigrering körs vanligtvis bara en gång när en webbplats startas första gången. Så fort sajten är publicerad blir den därför död. För att säkerställa att vi inte bygger implementeringskod som är beroende av migreringsskripten, bör de implementeras i sin egen modul. Detta gör även att vi kan ta bort och kassera koden direkt efter start, vilket eliminerar den döda koden från systemet.
 
 ### Följ publicerade Maven-konventioner i POM-filer {#follow-published-maven-conventions-in-pom-files}
 
