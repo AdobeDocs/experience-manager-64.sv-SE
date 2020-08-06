@@ -21,9 +21,9 @@ ht-degree: 0%
 
 AEM Forms tillhandahåller den fullständiga källkoden för AEM Forms-appen. Källan innehåller alla komponenter för att skapa ett anpassat arbetsyteprogram. Källkodsarkivet `adobe-lc-mobileworkspace-src-<version>.zip`ingår i `adobe-aemfd-forms-app-src-pkg-<version>.zip` paketet om programvarudistribution.
 
-Så här hämtar du appkällan för AEM Forms:
+Så här hämtar du programkällan för AEM Forms:
 
-1. Öppna [programvarudistribution](https://experience.adobe.com/downloads). Du måste ha ett Adobe ID för att kunna logga in på Software Distribution.
+1. Öppna [programvarudistribution](https://experience.adobe.com/downloads). Du behöver en Adobe ID för att logga in på Software Distribution.
 1. Tryck **[!UICONTROL Adobe Experience Manager]** på rubrikmenyn.
 1. I **[!UICONTROL Filters]** avsnittet:
    1. Välj **[!UICONTROL Forms]** i **[!UICONTROL Solution]** listrutan.
@@ -52,22 +52,22 @@ För Windows-enheter behöver du:
 * Microsoft Visual Studio 2015
 * Microsoft Visual Studio Tools for Apache Cordova
 
-## Konfigurera Visual Studio-projekt för AEM Forms-appen {#setting-up-visual-studio-project-for-aem-forms-app}
+## Konfigurera Visual Studio Project för AEM Forms {#setting-up-visual-studio-project-for-aem-forms-app}
 
 Utför följande steg för att konfigurera AEM Forms-appprojektet i Visual Studio.
 
 1. Kopiera `adobe-lc-mobileworkspace-src-<version>.zip` arkivet till `%HOMEPATH%\Projects` mappen i Windows 8.1- eller Windows 10-enheten med Visual Studio 2015 installerat och konfigurerat.
 1. Extrahera arkivet i `%HOMEPATH%\Projects\MobileWorkspace` katalogen.
 1. Navigate to the `%HOMEPATH%\Projects\MobileWorkspace\adobe-lc-mobileworkspace-src-[versionsrc]\windows` directory.
-1. Öppna `CordovaApp.sln` filen med Visual Studio 2015 och fortsätt med att skapa appen AEM Forms.
+1. Öppna `CordovaApp.sln` filen med Visual Studio 2015 och fortsätt med att skapa AEM Forms-appen.
 
-## Bygg appen AEM Forms {#build-aem-forms-app}
+## Bygg AEM Forms-app {#build-aem-forms-app}
 
-Utför följande steg för att skapa och distribuera appen AEM Forms.
+Utför följande steg för att skapa och distribuera AEM Forms-program.
 
 >[!NOTE]
 >
->Data som lagras i Windows-filsystem för AEM Forms-appen är inte krypterade. Vi rekommenderar att du använder ett tredjepartsverktyg som Windows BitLocker-diskkryptering för att kryptera diskdata.
+>Data som lagras i Windows-filsystem för AEM Forms-program krypteras inte. Vi rekommenderar att du använder ett tredjepartsverktyg som Windows BitLocker-diskkryptering för att kryptera diskdata.
 
 1. I verktygsfältet Visual Studio Standard väljer du **Frigör** i listrutan för byggläge.
 
