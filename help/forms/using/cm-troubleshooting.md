@@ -10,11 +10,14 @@ topic-tags: correspondence-management
 discoiquuid: cc473808-e71a-4834-bb30-91e6df783e60
 translation-type: tm+mt
 source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 0%
 
 ---
 
 
-# Korrespondenshantering:Felsökning {#correspondence-management-troubleshooting}
+# Korrespondenshantering: Felsökning {#correspondence-management-troubleshooting}
 
 ## Fel när en bokstav sparades {#errors-when-saving-a-letter}
 
