@@ -11,6 +11,9 @@ topic-tags: configuring
 discoiquuid: e862c8a9-b5b6-4857-a154-03d3ffac3e67
 translation-type: tm+mt
 source-git-commit: a8e0a48466c046bf1f96ff240995b499818ed0a2
+workflow-type: tm+mt
+source-wordcount: '1282'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +46,7 @@ Kontrollera detta genom att gå till /etc/replication/agents.author.html och sed
 1. Visar köstatusen att **kön är aktiv - # väntande**? Replikeringsjobbet kan i princip fastna i en socketläsning i väntan på att publiceringsinstansen eller dispatchern ska svara. Det kan innebära att publiceringsinstansen eller dispatchern är under hög belastning eller sitter fast i ett lås. Ta tråddumpar från författaren och publicera i det här fallet.
 
    * Öppna trådsdumpar från författaren i en tråddumpsanalyserare, kontrollera om det visar att replikeringsagentens snedningsjobb har fastnat i en socketRead.
-   * Öppna trådsdumpar från publicering i en tråddumpsanalyserare, analysera vad som kan göra att publiceringsinstansen inte svarar. Du bör se en tråd med POST /bin/receive i namnet, det vill säga den tråd som tar emot replikeringen från författaren.
+   * Öppna trådsdumpar från publicering i en tråddumpsanalyserare, analysera vad som kan göra att publiceringsinstansen inte svarar. Du bör se en tråd med POSTEN /bin/receive i dess namn, det vill säga den tråd som tar emot replikeringen från författaren.
 
 **Om alla agentköer har fastnat**
 
@@ -65,7 +68,7 @@ Kontrollera detta genom att gå till /etc/replication/agents.author.html och sed
 1. Det kan också vara så att DefaultJobManager-konfigurationen försätts i ett inkonsekvent tillstånd. Detta kan inträffa när någon manuellt ändrar konfigurationen av &quot;Apache Sling Job Event Handler&quot; via OSGiconsole (t.ex. inaktiverar och återaktiverar egenskapen &quot;Jobbbearbetning aktiverad&quot; och sparar konfigurationen).
 
    * I det här läget försätts DefaultJobManager-konfigurationen som lagras på crx-quickstart/launchpad/config/org/apache/sling/event/impl/jobs/DefaultJobManager.config i ett inkonsekvent läge. Och även om egenskapen &quot;Apache Sling Job Event Handler&quot; visar att &quot;Job Processing Enabled&quot; är i markerat läge, visas meddelandet &quot;Job Processing Enabled&quot; (Jobbbearbetning är inaktiverat) när man går till fliken Sling Eventing Eventing, och replikeringen fungerar inte.
-   * För att lösa det här problemet måste du navigera till konfigurationssidan för OSGi-konsolen och ta bort konfigurationen Apache Sling Job Event Handler. Starta sedan om klusternoden för att få tillbaka konfigurationen till ett konsekvent tillstånd. Detta bör åtgärda problemet och replikeringen kommer att börja fungera igen.
+   * För att lösa det här problemet måste du navigera till konfigurationssidan för OSGi-konsolen och ta bort konfigurationen Apache Sling Job Event Handler. Starta sedan om den Överordnad noden i klustret så att konfigurationen återställs till ett konsekvent tillstånd. Detta bör åtgärda problemet och replikeringen kommer att börja fungera igen.
 
 **Skapa en replikering.log**
 
@@ -75,13 +78,13 @@ Ibland kan det vara praktiskt att ange att all replikeringsloggning ska läggas 
 1. Hitta fabriken Apache Sling Logging Logger och skapa en instans genom att klicka på **+** till höger om fabrikskonfigurationen. Detta skapar en ny loggningslogg.
 1. Ställ in konfigurationen så här:
 
-   * Loggnivå:FELSÖKNING
+   * Loggnivå: FELSÖKNING
    * Loggfilens sökväg: *(CQ5.4 och 5.3)* ../logs/replication.log *(CQ5.5)* logs/replication.log
    * Kategorier: com.day.cq.replikation
 
 1. Om du misstänker att problemet är relaterat till snedstreck/jobb på något sätt kan du även lägga till det här java-paketet under kategorier:org.apache.sling.event
 
-### Pausar kön för replikeringsagent {#pausing-replication-agent-queue}
+### Pausar kön för replikeringsagent  {#pausing-replication-agent-queue}
 
 Ibland kan det vara lämpligt att pausa replikeringskön för att minska belastningen på författarsystemet, utan att inaktivera den. För närvarande är detta endast möjligt om en port konfigureras tillfälligt. Från och med 5.4 kan du se pausknappen i replikeringsagentkön. Den har vissa begränsningar
 
