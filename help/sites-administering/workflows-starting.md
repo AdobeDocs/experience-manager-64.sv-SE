@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: e9ab4796-a050-40de-b073-af7d33cff009
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '804'
+ht-degree: 1%
 
 ---
 
@@ -26,7 +29,7 @@ När du administrerar arbetsflöden kan du starta dem på flera olika sätt:
 
 * Automatiskt:
 
-   * Som svar på nodändringar, [med Launcher](#workflows-launchers).
+   * Som svar på nodändringar, [med hjälp av en Launcher](#workflows-launchers).
 
 >[!NOTE]
 >
@@ -34,8 +37,9 @@ När du administrerar arbetsflöden kan du starta dem på flera olika sätt:
 >
 >* [Använda arbetsflöden på sidor](/help/sites-authoring/workflows-applying.md)
 >* [Tillämpa arbetsflöden på DAM-resurser](/help/assets/assets-workflow.md)
->* [AEM-formulär](https://helpx.adobe.com/aem-forms/6-2/aem-workflows-submit-process-form.html)
+>* [AEM Forms](https://helpx.adobe.com/aem-forms/6-2/aem-workflows-submit-process-form.html)
 >* [Översättningsprojekt](/help/sites-administering/tc-manage.md)
+
 >
 
 
@@ -148,6 +152,7 @@ Ett arbetsflödespaket:
       En lista över funktioner som ska aktiveras. Välj önskad(a) funktion(er) i listrutan.
 
    * **Inaktiverade funktioner**
+
    En lista över funktioner som ska inaktiveras. Välj önskad(a) funktion(er) i listrutan.
 
    * **Arbetsflödesmodell**
@@ -172,7 +177,8 @@ Ett arbetsflödespaket:
 
       * `property-name` ignorera alla `jcr` händelser som utlöses för det angivna egenskapsnamnet. &quot;
       * `event-user-data:<*someValue*>` ignorerar alla händelser som innehåller `*<someValue*`> `user-data` -uppsättningen via [ API `ObservationManager`](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String).
-      Exempel:
+
+      Till exempel:
 
       `jcr:lastModified,dc:modified,dc:format,jcr:lastModifiedBy,imageMap,event-user-data:changedByWorkflowProcess`
 
