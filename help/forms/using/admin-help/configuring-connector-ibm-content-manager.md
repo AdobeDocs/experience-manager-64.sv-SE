@@ -1,8 +1,8 @@
 ---
 title: Konfigurera Connector för IBM Content Manager
 seo-title: Konfigurera Connector för IBM Content Manager
-description: Konfigurera Connector for IBM Content Manager för att möjliggöra kommunikation mellan AEM-formulär och IBM Content Manager.
-seo-description: Konfigurera Connector for IBM Content Manager för att möjliggöra kommunikation mellan AEM-formulär och IBM Content Manager.
+description: Konfigurera Connector for IBM Content Manager för att möjliggöra kommunikation mellan AEM och IBM Content Manager.
+seo-description: Konfigurera Connector for IBM Content Manager för att möjliggöra kommunikation mellan AEM och IBM Content Manager.
 uuid: 3d55169d-93e3-4d4e-b18b-2a3394e1de3b
 contentOwner: admin
 content-type: reference
@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 3094b178-3b1a-46b3-8fbd-c20388afa3a7
 translation-type: tm+mt
 source-git-commit: 6a2455cb377a68254a5c58c6627c59716d284144
+workflow-type: tm+mt
+source-wordcount: '300'
+ht-degree: 0%
 
 ---
 
 
 # Konfigurera Connector för IBM Content Manager{#configuring-connector-for-ibm-content-manager}
 
-Koppling för IBM Content Manager möjliggör kommunikation mellan AEM-formulär och IBM Content Manager. Mer bakgrundsinformation finns i&quot;Connectors for ECM&quot; i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
+Koppling för IBM Content Manager möjliggör kommunikation mellan AEM och IBM Content Manager. Mer bakgrundsinformation finns i&quot;Connectors for ECM&quot; i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Konfigurera IBM Content Manager-anslutningen {#configure-the-ibm-content-manager-connection}
 
