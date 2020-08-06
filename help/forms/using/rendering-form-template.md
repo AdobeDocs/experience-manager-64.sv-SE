@@ -1,8 +1,8 @@
 ---
 title: Återger formulärmall för HTML5-formulär
 seo-title: Återger formulärmall för HTML5-formulär
-description: HTML5-formulärprofiler är kopplade till profilåtergivningar. Profilåtergivning är JSP-sidor som ansvarar för att generera HTML-återgivning av formuläret genom att anropa Forms OSGi-tjänsten.
-seo-description: HTML5-formulärprofiler är kopplade till profilåtergivningar. Profilåtergivning är JSP-sidor som ansvarar för att generera HTML-återgivning av formuläret genom att anropa Forms OSGi-tjänsten.
+description: HTML5-formulärprofiler är kopplade till profilåtergivningar. Profilåtergivning är JSP-sidor som ansvarar för att generera HTML-återgivning av formuläret genom att anropa tjänsten Forms OSGi.
+seo-description: HTML5-formulärprofiler är kopplade till profilåtergivningar. Profilåtergivning är JSP-sidor som ansvarar för att generera HTML-återgivning av formuläret genom att anropa tjänsten Forms OSGi.
 uuid: 34daed78-0611-4355-9698-0d7f758e6b61
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,6 +10,9 @@ topic-tags: hTML5_forms
 discoiquuid: cb75b826-d044-44be-b364-790c046513e0
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '568'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ## Återgivningsslutpunkt {#render-endpoint}
 
-HTML5-formulär har en uppfattning om **profiler** som visas som REST-slutpunkter för att aktivera mobil återgivning av formulärmallar. Dessa profiler har associerad **profilrenderare**. De är JSP-sidor som ansvarar för att generera HTML-representation av formuläret genom att anropa Forms OSGi-tjänsten. JCR-sökvägen för profilnoden avgör URL:en för återgivningens slutpunkt. Standardslutpunkten för återgivningen som pekar på standardprofilen ser ut så här:
+HTML5-formulär har en uppfattning om **profiler** som visas som REST-slutpunkter för att aktivera mobil återgivning av formulärmallar. Dessa profiler har associerad **profilrenderare**. De är JSP-sidor som ansvarar för att generera HTML-representation av formuläret genom att anropa tjänsten Forms OSGi. JCR-sökvägen för profilnoden avgör URL:en för återgivningens slutpunkt. Standardslutpunkten för återgivningen som pekar på standardprofilen ser ut så här:
 
 https://&lt;*host*>:&lt;*port*>/content/xfaforms/profiles/default.html?contentRoot=&lt;*path of the folder containing form xdp*>&amp;template=&lt;*name of the xdp*>
 
@@ -28,7 +31,7 @@ För en anpassad profil ändras slutpunkten därefter. Slutpunkten för den anpa
 
 `http://localhost:4502/content/xfaforms/profiles/hrforms.html?contentRoot=c:/xdps&template=sampleForm.xdp`
 
-Om mallen finns i AEM-databasen i ett program som heter FormSubmission är URI:n:
+Om mallen finns i AEM i ett program som heter FormSubmission är URI:n:
 
 ```
 http://localhost:4502/content/xfaforms/profiles/default.html?
@@ -80,4 +83,4 @@ HTML5-formulär har stöd för tre metoder för att skicka återgivningsparametr
 
 ### Skicka parametrar {#submit-parameters}
 
-HTML5-formulär skickar data; köra serverbaserade skript och webbtjänster på AEM-servrar. Detaljerad information om parametrar som används för att köra serverbaserade skript och webbtjänster på AEM-servrar finns i [HTML5 Forms Service Proxy](/help/forms/using/service-proxy.md).
+HTML5-formulär skickar data; köra serverbaserade skript och webbtjänster på AEM servrar. Detaljerad information om parametrar som används för att köra serverbaserade skript och webbtjänster på AEM servrar finns i [HTML5 Forms Service Proxy](/help/forms/using/service-proxy.md).
