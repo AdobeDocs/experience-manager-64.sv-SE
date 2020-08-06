@@ -22,11 +22,11 @@ ht-degree: 0%
 
 Utveckla SPA-material med denna självstudiekurs i flera delar som leder dig genom projektinställningar, komponentmappning, utvecklingsverktyg i gränssnittet och applikationsflöden för att implementera din egen SPA.
 
-## Självstudiekurser {#tutorials}
+## Tutorials {#tutorials}
 
-Ett komplett exempel på hur du skapar ett eget ensidigt program som kan redigeras med AEM från och med projektkonfigurationen via programroutning finns i WKND SPA-självstudiekurserna:
+Ett heltäckande exempel på hur du skapar ett eget ensidigt program som är redigerbart när AEM börjar med projektkonfigurationen via programroutning finns i WKND SPA-Tutorials:
 
-* [Komma igång med AEM SPA Editor och Angular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+* [Komma igång med AEM SPA-redigerare och vinkelrät](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
 * [Komma igång med AEM SPA Editor och React](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
 
-Innan du börjar ett eget SPA-projekt för AEM måste du dock även läsa igenom [Developing SPA for AEM](/help/sites-developing/spa-architecture.md) -dokumentet.
+Innan du börjar ett eget SPA-projekt för AEM ska du dock även läsa igenom [Utveckla SPA för AEM](/help/sites-developing/spa-architecture.md) .
