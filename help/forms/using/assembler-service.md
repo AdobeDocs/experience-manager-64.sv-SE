@@ -10,6 +10,9 @@ topic-tags: document_services
 discoiquuid: d34f1598-38bc-46c3-b6cd-954a3880994a
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '2161'
+ht-degree: 0%
 
 ---
 
@@ -22,13 +25,13 @@ Du kan använda sammansättningstjänsten för följande åtgärder:
 
 ## Sammanställa PDF-dokument {#assemble-pdf-documents}
 
-Du kan använda Assembler-tjänsten för att samla ihop två eller flera PDF-dokument till ett enda PDF-dokument eller PDF-portfölj. Du kan även använda funktioner i PDF-dokumentet som underlättar navigering eller förbättrar säkerheten. Här är några sätt att sammanställa PDF-dokument:
+Du kan använda Assembler-tjänsten för att samla ihop två eller flera PDF-dokument till ett enda PDF-dokument eller PDF Portfolio. Du kan även använda funktioner i PDF-dokumentet som underlättar navigering eller förbättrar säkerheten. Här är några sätt att sammanställa PDF-dokument:
 
 ### Sammanställa ett enkelt PDF-dokument {#assemble-a-simple-pdf-document}
 
 Följande bild visar tre källdokument som sammanfogas till ett enda resulterande dokument.
 
-![](assets/as_document_assembly.png) Sammanställa ett enkelt PDF-dokument från flera PDF-dokument **** Bild: Sammanställa *ett enkelt PDF-dokument från flera PDF-dokument*
+![Sammanställa ett enkelt PDF-dokument från flera PDF-dokument](assets/as_document_assembly.png)**Bild:** *Sammanställa ett enkelt PDF-dokument från flera PDF-dokument*
 
 Följande exempel är ett enkelt DDX-dokument som används för att montera dokumentet. Här anges namnen på källdokumenten som används för att skapa det resulterande dokumentet samt namnet på det resulterande dokumentet:
 
@@ -48,11 +51,11 @@ egenskaper:
 * Andra egenskaper som används från basdokumentet (Doc1), inklusive metadata, sidetiketter och sidstorlek
 * Det resulterande dokumentet innehåller en innehållsförteckning som är konstruerad av bokmärkena i källdokumenten
 
-### Skapa en PDF-portfölj {#create-a-pdf-portfolio}
+### Skapa en PDF Portfolio {#create-a-pdf-portfolio}
 
-Med Assembler-tjänsten kan du skapa PDF-portföljer som innehåller en samling dokument och ett valfritt användargränssnitt. Gränssnittet kallas för en PDF-portföljlayout eller en PDF-portföljnavigator (navigator). PDF-portföljer utökar funktionerna för PDF-paket genom att lägga till en navigator, mappar och välkomstsidor. Gränssnittet kan förbättra användarupplevelsen genom att utnyttja lokaliserade textsträngar, anpassade färgscheman och grafiska resurser. PDF-portföljen kan även innehålla mappar för att ordna filerna i portföljen.
+Med Assembler-tjänsten kan du skapa PDF-Portfolio som innehåller en dokumentsamling och ett valfritt användargränssnitt. Gränssnittet kallas för en PDF-Portfolio-layout eller en PDF Portfolio-navigator (navigator). PDF Portfolio utökar funktionerna för PDF-paket genom att lägga till en navigator, mappar och välkomstsidor. Gränssnittet kan förbättra användarupplevelsen genom att utnyttja lokaliserade textsträngar, anpassade färgscheman och grafiska resurser. PDF-Portfolio kan även innehålla mappar för att ordna filerna i portföljen.
 
-När Assembler-tjänsten tolkar följande DDX-dokument sammanställs en PDF-portfölj som innehåller en PDF-portföljnavigator och ett paket med två filer. Tjänsten hämtar navigatorn från den plats som anges av myNavigator-källan. Det ändrar navigatorns standardfärgschema till färgschemat pinkScheme.
+När Assembler-tjänsten tolkar följande DDX-dokument sammanställs ett PDF-Portfolio som innehåller en PDF-Portfolio-navigator och ett paket med två filer. Tjänsten hämtar navigatorn från den plats som anges av myNavigator-källan. Det ändrar navigatorns standardfärgschema till färgschemat pinkScheme.
 
 ```xml
 <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
@@ -83,7 +86,7 @@ När du sammanställer ett dokument kan du använda Bates-numrering för att til
 
 Följande bild visar ett PDF-dokument som innehåller en unik identifierare som finns i dokumentets sidhuvud.
 
-![](do-not-localize/as_batesnumber.png) Ett PDF-dokument som innehåller en unik identifierare i dokumentets rubrik **** Bild: *Ett PDF-dokument som innehåller en unik identifierare som finns i dokumentets rubrik*
+![Ett PDF-dokument som innehåller en unik identifierare i dokumentets rubrik](do-not-localize/as_batesnumber.png)**Bild:** *Ett PDF-dokument som innehåller en unik identifierare som finns i dokumentets rubrik*
 
 ### Förenkla och sammanställ dokument {#flatten-and-assemble-documents}
 
@@ -105,7 +108,7 @@ Här är några sätt att sammanställa XDP-dokument:
 
 Följande bild visar tre XDP-källdokument som sammanfogas till ett enda resulterande XDP-dokument. Det resulterande XDP-dokumentet innehåller de tre XDP-källdokumenten inklusive tillhörande data. Det resulterande dokumentet hämtar grundläggande attribut från basdokumentet, som är det första XDP-källdokumentet.
 
-![](assets/as_assembler_xdpassembly.png) Sammanställa ett enkelt XDP-dokument från flera XDP-dokument **** Bild: Samla *ihop ett enkelt XDP-dokument från flera XDP-dokument*
+![Sammanställa ett enkelt XDP-dokument från flera XDP-dokument](assets/as_assembler_xdpassembly.png)**Bild:** *Sammanställa ett enkelt XDP-dokument från flera XDP-dokument*
 
 Här är ett DDX-dokument som ger det resultat som visas ovan.
 
@@ -219,7 +222,7 @@ Formulärdesigners använder LiveC Cycle Designer för att skapa formulärfragme
 
 Följande bild visar två XML-formulär (XFA-mallar). Formuläret till vänster innehåller en insättningspunkt med namnet myInsertionPoint. Formuläret till höger innehåller ett fragment med namnet myFragment.
 
-![](assets/as_assembler_fragment_assy_assembled.png) Infoga formulärfragment i ett XFA-formulär **** Figur: Infoga *formulärfragment i ett XFA-formulär*
+![Infoga formulärfragment i ett XFA-formulär](assets/as_assembler_fragment_assy_assembled.png)**Figur:** *Infoga formulärfragment i ett XFA-formulär*
 
 När Assembler-tjänsten tolkar följande DDX-dokument skapas ett XML-formulär som innehåller ett annat XML-formulär. Delformuläret myFragment från dokumentet myFragmentSource infogas vid myInsertionPoint i dokumentet myFormSource.
 
@@ -257,7 +260,7 @@ Du kan använda Assembler-tjänsten för att demontera ett PDF-dokument. Tjänst
 
 På följande bild extraheras sidorna 1-3 från källdokumentet och placeras i ett nytt resulterande dokument.
 
-![](assets/as_intro_page_extraction.png) Extrahera specifika sidor från ett källdokument **** Bild: Extrahera *specifika sidor från ett källdokument*
+![Extrahera specifika sidor från ett källdokument](assets/as_intro_page_extraction.png)**Bild:** *Extrahera specifika sidor från ett källdokument*
 
 Följande exempel är ett DDX-dokument som används för att demontera dokumentet.
 
@@ -271,7 +274,7 @@ Följande exempel är ett DDX-dokument som används för att demontera dokumente
 
 På följande bild delas DocA in i flera resulterande dokument. Bokmärket på första nivån 1 på en sida identifierar början på ett nytt resulterande dokument.
 
-![](assets/as_intro_pdfsfrombookmarks.png) Dela upp ett källdokument baserat på bokmärken i flera dokument **** Bild: Dela *upp ett källdokument baserat på bokmärken i flera dokument*
+![Dela upp ett källdokument baserat på bokmärken i flera dokument](assets/as_intro_pdfsfrombookmarks.png)**Bild:** *Dela upp ett källdokument baserat på bokmärken i flera dokument*
 
 Följande exempel är ett DX-dokument som använder bokmärken för att demontera ett källdokument.
 
@@ -303,17 +306,17 @@ Du kan använda Assembler-tjänsten för att få följande information om ett PD
 
 ## Validera DDX-dokument {#validate-ddx-documents}
 
-Du kan använda Assembler-tjänsten för att avgöra om ett DDX-dokument är giltigt. Om du till exempel uppgraderar från en tidigare LiveCycle-version säkerställer valideringen att ditt DDX-dokument är giltigt.
+Du kan använda Assembler-tjänsten för att avgöra om ett DDX-dokument är giltigt. Om du till exempel uppgraderar från en tidigare version av LiveCycle säkerställer valideringen att ditt DDX-dokument är giltigt.
 
 ## Ring andra tjänster {#call-other-services}
 
-Du kan använda DDX-dokument som gör att Assembler-tjänsten anropar följande LiveC-cykeltjänster. Assembler-tjänsten kan bara anropa de tjänster som har installerats med LiveCycle.
+Du kan använda DDX-dokument som gör att Assembler-tjänsten anropar följande LiveC-cykeltjänster. Assembler-tjänsten kan bara anropa de tjänster som installeras med LiveCycle.
 
-**Tjänsten** Reader Extensions: Användare av Adobe Reader kan signera det resulterande PDF-dokumentet digitalt.
+**Tjänsten** Reader Extensions: Gör det möjligt för Adobe Reader-användare att digitalt signera det resulterande PDF-dokumentet.
 
-**Formulärtjänst**: Sammanfogar en XDP-fil och en XML-datafil för att skapa ett PDF-dokument som innehåller det ifyllda interaktiva formuläret.
+**Forms-tjänst**: Sammanfogar en XDP-fil och en XML-datafil för att skapa ett PDF-dokument som innehåller det ifyllda interaktiva formuläret.
 
-**Utdatatjänst**: Konverterar ett dynamiskt XML-formulär till ett PDF-dokument som innehåller ett icke-interaktivt formulär (förenklar formuläret). Med Assembler-tjänsten förenklas statiska XML-formulär och Acrobat-formulär utan att Output-tjänsten anropas.
+**Utdatatjänst**: Konverterar ett dynamiskt XML-formulär till ett PDF-dokument som innehåller ett icke-interaktivt formulär (förenklar formuläret). Assembler-tjänsten förenklar statiska XML-formulär och Acrobat-formulär utan att du behöver anropa Output-tjänsten.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -328,4 +331,4 @@ digitalSignatures="true"/>
 </DDX>
 ```
 
-Om du använder DDX och Assembler-tjänsten för att ringa andra LiveC Cycle-tjänster kan det förenkla ditt processdiagram. Det kan till och med minska arbetet med att anpassa arbetsflödena. (Se även [Använda AEM Document Services programmatiskt](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html))
+Om du använder DDX och Assembler-tjänsten för att ringa andra LiveC Cycle-tjänster kan det förenkla ditt processdiagram. Det kan till och med minska arbetet med att anpassa arbetsflödena. (Se även [Använda AEM dokumenttjänster programmatiskt](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html))
