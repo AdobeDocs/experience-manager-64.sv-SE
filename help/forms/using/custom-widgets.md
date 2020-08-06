@@ -1,8 +1,8 @@
 ---
 title: Skapa anpassade utseenden i HTML5-formulär
 seo-title: Skapa anpassade utseenden i HTML5-formulär
-description: Du kan koppla in anpassade widgetar i mobilformulär. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar.
-seo-description: Du kan koppla in anpassade widgetar i mobilformulär. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar.
+description: Du kan koppla in anpassade widgetar till en Mobile Forms. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar.
+seo-description: Du kan koppla in anpassade widgetar till en Mobile Forms. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar.
 uuid: afb16f42-e404-478b-82dd-4b5b59c4f184
 contentOwner: robhagat
 content-type: reference
@@ -11,19 +11,22 @@ topic-tags: hTML5_forms
 discoiquuid: 5d860f05-3257-4cf7-93dd-77d226d59b39
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '672'
+ht-degree: 0%
 
 ---
 
 
 # Skapa anpassade utseenden i HTML5-formulär {#create-custom-appearances-in-html-forms}
 
-Du kan koppla in anpassade widgetar i mobilformulär. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar med hjälp av utseenderamverket. XFA-motorn använder olika widgetar. Mer information finns i Utseenderamverket för adaptiva formulär och HTML5-formulär [](/help/forms/using/introduction-widgets.md) .
+Du kan koppla in anpassade widgetar till en Mobile Forms. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar med hjälp av utseenderamverket. XFA-motorn använder olika widgetar. Mer information finns i Utseenderamverket för adaptiva formulär och HTML5-formulär [](/help/forms/using/introduction-widgets.md) .
 
 ![Ett exempel på standardwidget och anpassad widget](assets/custom-widgets.jpg)**Bild:** *Ett exempel på standardwidget och anpassad widget*
 
 ## Integrera anpassade widgetar med HTML5-formulär {#integrating-custom-widgets-with-html-forms}
 
-### Skapa en profil {#create-a-profile-nbsp}
+### Skapa en profil  {#create-a-profile-nbsp}
 
 Du kan skapa en profil eller välja en befintlig profil för att lägga till en anpassad widget. Mer information om hur du skapar profiler finns i [Skapa anpassad profil](/help/forms/using/custom-profile.md).
 
@@ -70,7 +73,7 @@ Om du vill skapa en egen widget inkluderar du referenser till JavaScript-filen s
 window.formBridge.registerConfig("widgetConfig" , widgetConfigObject);
 ```
 
-### Registrera anpassad widget med XFA Scripting Engine {#register-custom-widget-with-xfa-scripting-engine-nbsp}
+### Registrera anpassad widget med XFA Scripting Engine  {#register-custom-widget-with-xfa-scripting-engine-nbsp}
 
 När den anpassade widgetkoden är klar registrerar du widgeten med skriptmotorn genom att använda `registerConfig`API för [Form Bridge](/help/forms/using/form-bridge-apis.md). WidgetConfigObject används som indata.
 
