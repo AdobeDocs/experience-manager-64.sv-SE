@@ -11,6 +11,9 @@ topic-tags: platform
 discoiquuid: 94a05894-743a-4ace-a292-bfee90ba9068
 translation-type: tm+mt
 source-git-commit: 14daff213297d2435765dd46039f346ce3868ac5
+workflow-type: tm+mt
+source-wordcount: '2323'
+ht-degree: 2%
 
 ---
 
@@ -58,9 +61,11 @@ Stöder facetextrahering. Tillhandahåller bucket för varje `true` eller `false
 
 #### Egenskaper {#properties}
 
-* **boolproperty** relativ sökväg till egenskap, till exempel `myFeatureEnabled` eller `jcr:content/myFeatureEnabled`
+* **boolproperty** relativ sökväg till egenskap, till exempel 
+`myFeatureEnabled` eller `jcr:content/myFeatureEnabled`
 
-* **värde** för att kontrollera egenskapen för, &quot; `true`&quot; eller &quot; `false`&quot;
+* **value** value to check property for, &quot; 
+`true`&quot; eller &quot; `false`&quot;
 
 ### innehållfragment {#contentfragment}
 
@@ -406,7 +411,7 @@ Stöder inte facetextrahering.
 
 Matchar `JCR DATE` egenskaper mot ett datum/tidsintervall med tidsförskjutningar i förhållande till den aktuella servertiden. Du kan ange `lowerBound` och `upperBound` använda antingen ett millisekundvärde eller bugzilla-syntaxen `1s 2m 3h 4d 5w 6M 7y` (en sekund, två minuter, tre timmar, fyra dagar, fem veckor, sex månader, sju år). Använd prefixet &quot; `-`&quot; för att ange en negativ förskjutning före den aktuella tiden. Om du bara anger `lowerBound` eller `upperBound`kommer den andra att få standardvärdet 0, vilket innebär den aktuella tiden.
 
-Exempel:
+Till exempel:
 
 * `upperBound=1h` (och nej `lowerBound`) väljer något under nästa timme
 * `lowerBound=-1d` (och nej `upperBound`) väljer något under de senaste 24 timmarna
@@ -496,7 +501,8 @@ Filtrering stöds inte. Stöder inte facetextrahering.
 
 * **liknande** absolut sökväg till noden där liknande noder ska hittas
 
-* **lokal** en relativ sökväg till en underordnad nod eller `.` för den aktuella noden (valfritt, standardvärdet är &quot; `.`&quot;)
+* **lokal** en relativ sökväg till en underordnad nod eller 
+`.` för den aktuella noden (valfritt, standardvärdet är &quot; `.`&quot;)
 
 ### tag {#tag}
 
