@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: b7ac457d-3689-4f5d-9ceb-ff6a9944e7eb
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '511'
+ht-degree: 0%
 
 ---
 
@@ -44,11 +47,11 @@ När den önskade strukturen är klar klickar användaren på **Spara** högst u
 
 >[!CAUTION]
 >
->Observera att dialogredigeraren är avsedd för att skapa är relativt enkla dialogrutor och kanske inte kan redigera mer komplexa dialogrutedefinitioner. Om dialogruteredigeraren inte tillåter redigering av en dialogstruktur, måste dialogdefinitionen skapas och/eller redigeras manuellt genom direkt redigering av nodstrukturen med exempelvis CRXDE Lite eller CRX Content Explorer.
+>Observera att dialogredigeraren är avsedd för att skapa är relativt enkla dialogrutor och kanske inte kan redigera mer komplexa dialogrutedefinitioner. Om dialogruteredigeraren inte tillåter redigering av en dialogstruktur, måste dialogdefinitionen skapas och/eller redigeras manuellt genom direktredigering av nodstrukturen med exempelvis CRXDE Lite eller CRX Content Explorer.
 
 ### Skapa en ny dialogruta {#creating-a-new-dialog}
 
-**** Om du vill skapa en ny dialogruta måste du markera den nödvändiga komponenten klickar du på **Skapa... och sedan** Skapa dialogruta.. .
+Om du vill skapa en ny dialogruta måste du markera den nödvändiga komponenten klickar du på **Skapa...** och sedan **Skapa dialogruta..**.
 
 Ange önskade uppgifter och klicka sedan på **Spara alla** . Nu kan du dubbelklicka på dialogrutan för att öppna den med redigeraren.
 
