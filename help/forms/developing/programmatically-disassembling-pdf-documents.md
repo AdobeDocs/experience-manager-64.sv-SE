@@ -11,6 +11,9 @@ topic-tags: operations
 discoiquuid: 8e38a597-5d22-4d83-95fe-4494fb04e4a3
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1730'
+ht-degree: 0%
 
 ---
 
@@ -46,7 +49,7 @@ Anta att följande DDX-dokument används för den här diskussionen.
 
 >[!NOTE]
 >
->Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
@@ -73,10 +76,10 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
+* adobe-utilities.jar (krävs om AEM Forms används i JBoss)
+* jbossall-client.jar (krävs om AEM Forms används i JBoss)
 
-Om AEM Forms används på en J2EE-programserver som inte är JBoss måste du ersätta adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms används.
+Om AEM Forms körs på en J2EE-programserver som stöds och som inte är JBoss, måste du ersätta adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms är distribuerad på.
 
 **Skapa en PDF Assembler-klient**
 
@@ -150,6 +153,7 @@ Disassemble a PDF document by using the Assembler Service API (Java):
    * Ett `com.adobe.idp.Document` objekt som representerar det DDX-dokument som ska användas
    * Ett `java.util.Map` objekt som innehåller det PDF-dokument som ska demonteras
    * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` objekt som anger körningsalternativen, inklusive standardteckensnittet och jobbloggsnivån
+
    Metoden returnerar `invokeDDX` ett `com.adobe.livecycle.assembler.client.AssemblerResult` objekt som innehåller de uppdelade PDF-dokumenten och eventuella undantag som har inträffat.
 
 1. Spara de upplösta PDF-dokumenten.
@@ -190,7 +194,7 @@ Dela upp ett PDF-dokument med Assembler Service API (webbtjänst):
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `AssemblerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -228,6 +232,7 @@ Dela upp ett PDF-dokument med Assembler Service API (webbtjänst):
    * Ett `BLOB` objekt som representerar det DX-dokument som demonterar PDF-dokumentet
    * Det `MyMapOf_xsd_string_To_xsd_anyType` objekt som innehåller PDF-dokumentet som ska demonteras
    * Ett `AssemblerOptionSpec` objekt som anger körningsalternativ
+
    Metoden returnerar `invokeDDX` ett `AssemblerResult` objekt som innehåller jobbresultaten och eventuella undantag som har inträffat.
 
 1. Spara de upplösta PDF-dokumenten.
@@ -242,4 +247,4 @@ Dela upp ett PDF-dokument med Assembler Service API (webbtjänst):
 
 [Dela upp PDF-dokument programmatiskt](#programmatically-disassembling-pdf-documents)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
