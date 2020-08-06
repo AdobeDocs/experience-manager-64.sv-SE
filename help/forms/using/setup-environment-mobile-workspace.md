@@ -1,8 +1,8 @@
 ---
-title: Konfigurera miljö för appen AEM Forms
-seo-title: Konfigurera miljö för appen AEM Forms
-description: Maskinvara, programvara och licenser för att bygga och driftsätta appen AEM Forms.
-seo-description: Maskinvara, programvara och licenser för att bygga och driftsätta appen AEM Forms.
+title: Konfigurera miljö för AEM Forms-program
+seo-title: Konfigurera miljö för AEM Forms-program
+description: Maskinvara, programvara och licenser för att bygga och driftsätta AEM Forms-appen.
+seo-description: Maskinvara, programvara och licenser för att bygga och driftsätta AEM Forms-appen.
 uuid: 0c8f5259-8e9f-45ce-ade4-e14f1a41c0de
 contentOwner: robhagat
 content-type: reference
@@ -11,13 +11,16 @@ topic-tags: forms-app
 discoiquuid: 72c3a451-fa57-4b12-8d25-fc2e6fa98adb
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '230'
+ht-degree: 0%
 
 ---
 
 
-# Konfigurera miljö för appen AEM Forms {#set-up-environment-for-aem-forms-app}
+# Konfigurera miljö för AEM Forms-program {#set-up-environment-for-aem-forms-app}
 
-Du behöver följande maskinvara, programvara och licenser för att skapa och distribuera appen AEM Forms:
+Du behöver följande maskinvara, programvara och licenser för att skapa och distribuera AEM Forms-appen:
 
 ## För Windows-enheter {#for-windows-devices}
 
