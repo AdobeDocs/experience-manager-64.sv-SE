@@ -1,14 +1,17 @@
 ---
 title: Skapa ett anpassat formulär med hjälp av en uppsättning anpassningsbara formulär
 seo-title: Skapa ett anpassat formulär med hjälp av en uppsättning anpassningsbara formulär
-description: 'Med AEM Forms kan man sammanföra adaptiva formulär för att ta fram ett enda stort anpassat formulär och förstå dess funktioner. '
-seo-description: 'Med AEM Forms kan man sammanföra adaptiva formulär för att ta fram ett enda stort anpassat formulär och förstå dess funktioner. '
+description: 'Med AEM Forms kan du sammanföra adaptiva formulär och ta fram ett enda stort anpassat formulär och förstå dess funktioner. '
+seo-description: 'Med AEM Forms kan du sammanföra adaptiva formulär och ta fram ett enda stort anpassat formulär och förstå dess funktioner. '
 uuid: 1423038b-8261-455b-b4ff-7be7222448c9
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 75ee94f7-e939-409b-b8cb-8fdc3f79bb63
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '597'
+ht-degree: 0%
 
 ---
 
@@ -140,5 +143,5 @@ Utför följande steg för att lägga till ett anpassat formulär som ett undero
    [ ![Välja anpassat formulär under Resurser](assets/asset.png)](assets/asset-1.png)
 
 1. Dra och släpp det adaptiva formulär som du vill lägga till som ett underordnat formulär.
-   [ Dra och ![släpp det anpassningsbara formuläret på](assets/drag-drop.png)](assets/drag-drop-1.png)webbplatsenDet anpassningsbara formuläret som du släpper läggs till som ett underordnat formulär.
+   [ ![Dra-och-släpp det anpassningsbara formuläret på din](assets/drag-drop.png)](assets/drag-drop-1.png)webbplatsDet anpassningsbara formuläret som du släpper läggs till som ett underordnat formulär.
 
