@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 79fccce2-d090-4b50-9c58-3f2a00e651b2
 translation-type: tm+mt
 source-git-commit: 73d0dea62c294bea435364fb9c6892d80751d90d
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 0%
 
 ---
 
@@ -51,10 +54,10 @@ Systeminformationstjänsten tillhandahåller en uppsättning REST API:er för at
   <tr>
    <td><p>SystemInfo.services</p></td> 
    <td><p>https://[server]:[port]/rest/services/ SystemInfo.services</p></td> 
-   <td><p>Hämtar status- och konfigurationsparametrar för AEM-formulärtjänster.</p></td> 
+   <td><p>Hämtar status- och konfigurationsparametrar för AEM formulärtjänster.</p></td> 
   </tr> 
   <tr>
-   <td><p>SystemInfo.essentialDetails</p></td> 
+   <td><p>SystemInfo.vitalDetails</p></td> 
    <td><p>https://[server]:[port]/rest/services/ SystemInfo.essentialDetails</p></td> 
    <td><p>Hämtar serverns drifttid, JVM-argument, systemminne, stackstorlek, operativsystemets namn, antal aktiva trådar och trådantal. </p></td> 
   </tr> 
@@ -85,7 +88,7 @@ Systeminformationstjänsten tillhandahåller en uppsättning REST API:er för at
   <tr>
    <td><p>SystemInfo.licenseInfo</p></td> 
    <td><p>https://[server]:[port]/rest/services/ SystemInfo.licenseInfo</p></td> 
-   <td><p>Hämtar versions- och licensinformation för installerade AEM-formulärkomponenter. </p></td> 
+   <td><p>Hämtar versions- och licensinformation för installerade AEM. </p></td> 
   </tr> 
   <tr>
    <td><p>SystemInfNo.serverConfig</p></td> 
