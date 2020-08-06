@@ -1,6 +1,6 @@
 ---
-title: API:er som används i arbetsytan i AEM Forms
-seo-title: API:er som används i arbetsytan i AEM Forms
+title: API:er som används i AEM Forms arbetsyta
+seo-title: API:er som används i AEM Forms arbetsyta
 description: Offentliga Java- och JavaScript-API:er och metoder för arbetsytan i LiveCycle AEM Forms som kan anpassas och automatiseras.
 seo-description: Offentliga Java- och JavaScript-API:er och metoder för arbetsytan i LiveCycle AEM Forms som kan anpassas och automatiseras.
 uuid: 9602990e-8ac7-42eb-b507-50b3594055ba
@@ -10,13 +10,16 @@ topic-tags: forms-workspace
 discoiquuid: 4a73a973-fccf-466b-b4a0-47652a14a080
 translation-type: tm+mt
 source-git-commit: 0ce79686522da4fb3d017068b623c76f81c6b23a
+workflow-type: tm+mt
+source-wordcount: '1020'
+ht-degree: 1%
 
 ---
 
 
-# API:er som används i arbetsytan i AEM Forms {#apis-used-in-aem-forms-workspace}
+# API:er som används i AEM Forms arbetsyta {#apis-used-in-aem-forms-workspace}
 
-Följande API:er används på arbetsytan i AEM Forms.
+Följande API:er används i AEM Forms arbetsyta.
 
 <table> 
  <tbody>
@@ -102,7 +105,7 @@ Följande API:er används på arbetsytan i AEM Forms.
    <td>submitWithData</td> 
    <td>ProcessManagementTaskService</td> 
    <td>submitWithData</td> 
-   <td>Den skickar formulärdata (skickas som sträng) som är kopplade till uppgiften med TaskManagers API. Den används för flexformulär som inte anropar TaskManagers API för att skicka.</td> 
+   <td>Den skickar formulärdata (skickas som sträng) som är kopplade till uppgiften med TaskManagers API. Det används för flexformulär som inte anropar TaskManagers API.</td> 
   </tr>
   <tr>
    <td>save</td> 
