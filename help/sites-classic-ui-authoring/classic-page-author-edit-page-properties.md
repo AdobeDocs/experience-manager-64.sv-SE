@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 23768c73-ac64-4727-8313-160c8c131b05
 translation-type: tm+mt
 source-git-commit: 02aee2202a570320cd7eb40c2e566d886af4e163
+workflow-type: tm+mt
+source-wordcount: '804'
+ht-degree: 1%
 
 ---
 
@@ -83,7 +86,7 @@ Egenskaperna fördelas på flera flikar:
 
    >[!CAUTION]
    >
-   >Vanity URL:er:
+   >Alternativa URL:er:
    >
    >* måste vara unik så du bör vara försiktig med att värdet inte redan används av en annan sida.
    >* stöder inte regex-mönster.
@@ -145,9 +148,9 @@ Egenskaperna fördelas på flera flikar:
 
       Överför en bild som ska användas som miniatyrbild.
 
-### Molntjänster {#cloud-services}
+### Cloud Services {#cloud-services}
 
-* **Molntjänster**
+* **Cloud Services**
 
    Definiera egenskaper för [molntjänster](/help/sites-developing/extending-cloud-config.md).
 
@@ -157,7 +160,7 @@ Egenskaperna fördelas på flera flikar:
 
    Välj ett [varumärke om du vill ange ett omfång för målgruppsanpassning](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md).
 
-### Permissions {#permissions}
+### Behörigheter {#permissions}
 
 * **Behörigheter** (pekoptimerat användargränssnitt)
 
