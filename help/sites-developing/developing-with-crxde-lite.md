@@ -20,22 +20,22 @@ ht-degree: 0%
 
 # Utveckla med CRXDE Lite {#developing-with-crxde-lite}
 
-I det här avsnittet beskrivs hur du utvecklar ditt AEM-program med CRXDE Lite.
+I det här avsnittet beskrivs hur du utvecklar AEM med CRXDE Lite.
 
 Mer information om olika utvecklingsmiljöer finns i översiktsdokumentationen.
 
 CRXDE Lite är inbäddat i AEM och gör att du kan utföra standardutvecklingsuppgifter i webbläsaren. Med CRXDE Lite kan du skapa ett projekt, skapa och redigera filer (som .jsp och .java), mappar, mallar, komponenter, dialogrutor, noder, egenskaper och paket när du loggar.
 
-CRXDE Lite rekommenderas när du inte har direktåtkomst till AEM-servern, när du utvecklar ett program genom att utöka eller ändra körklara komponenter och Java-paket eller när du inte behöver en dedikerad felsökare, kodkomplettering och syntaxmarkering.
+CRXDE Lite rekommenderas när du inte har direktåtkomst till AEM, när du utvecklar ett program genom att utöka eller ändra körklara komponenter och Java-paket eller när du inte behöver en dedikerad felsökare, kodkomplettering och syntaxmarkering.
 
 >[!NOTE]
 >
->Från och med AEM 6.4.8.1 är anonym åtkomst av CRXDE Lite inte längre möjlig.
+>Från och med AEM 6.4.8.1 är anonym tillgång för CRXDE Lite inte längre möjlig.
 >Användarna dirigeras om till inloggningsskärmen.
 
 >[!NOTE]
 >
->Vi rekommenderar att du använder [AEM Developer Tools för Eclipse](/help/sites-developing/aem-eclipse.md) och [AEM HTL Brackets Extension](/help/sites-developing/aem-brackets.md) under projektutvecklingen.
+>Du bör använda [AEM Developer Tools for Eclipse](/help/sites-developing/aem-eclipse.md) och [AEM HTL Brackets Extension](/help/sites-developing/aem-brackets.md) under projektutvecklingen.
 
 ## Komma igång med CRXDE Lite {#getting-started-with-crxde-lite}
 
@@ -47,7 +47,7 @@ Så här kommer du igång med CRXDE Lite:
 
 1. Click **OK**.
 
-CRXDE Lite-användargränssnittet ser ut så här i webbläsaren:
+Användargränssnittet CRXDE Lite ser ut så här i webbläsaren:
 
 ![chlimage_1-238](assets/chlimage_1-238.png)
 
@@ -61,7 +61,7 @@ CRXDE Lite har följande funktioner:
  <tbody> 
   <tr> 
    <td>Övre växlingsfält</td> 
-   <td>Gör att du snabbt kan växla mellan CRXDE Lite, Package Manager och Package Share.</td> 
+   <td>Växla snabbt mellan CRXDE Lite, Pakethanteraren och Paketresurs.</td> 
   </tr> 
   <tr> 
    <td>Widgeten Nodbana</td> 
@@ -73,7 +73,7 @@ CRXDE Lite har följande funktioner:
   </tr> 
   <tr> 
    <td>Redigeringsruta</td> 
-   <td><p><strong>Fliken Hem</strong> : Med kan du söka efter innehåll och/eller dokumentation och få tillgång till utvecklarresurser (dokumentation, utvecklarblogg, kunskapsbas) och support (Adobes hemsida och supportcenter).<br /> </p> <p>Dubbelklicka på en fil i <strong>Utforskaren</strong> för att visa dess innehåll. som till exempel en .jsp- eller .java-fil. Du kan sedan ändra den och spara ändringarna.</p> <p>När en fil har redigerats i <strong>redigeringsrutan</strong> är följande verktyg tillgängliga i verktygsfältet:<br /> </p> - <strong>Visa i träd: </strong>visar filen i databasträdet.<br /> - <strong>Sök/ersätt ...</strong>: sök och ersätt.<br /> <br /> Om du dubbelklickar på statusraden i <strong>rutan Redigera</strong> öppnas dialogrutan <strong>Gå till rad</strong> så att du kan ange ett visst radnummer att gå till.<br /> </td> 
+   <td><p><strong>Fliken Hem</strong> : Med kan du söka efter innehåll och/eller dokumentation och få tillgång till utvecklarresurser (dokumentation, utvecklarblogg, kunskapsbas) och support (Adobe hemsida och supportcenter).<br /> </p> <p>Dubbelklicka på en fil i <strong>Utforskaren</strong> för att visa dess innehåll. som till exempel en .jsp- eller .java-fil. Du kan sedan ändra den och spara ändringarna.</p> <p>När en fil har redigerats i <strong>redigeringsrutan</strong> är följande verktyg tillgängliga i verktygsfältet:<br /> </p> - <strong>Visa i träd: </strong>visar filen i databasträdet.<br /> - <strong>Sök/ersätt ...</strong>: sök och ersätt.<br /> <br /> Om du dubbelklickar på statusraden i <strong>rutan Redigera</strong> öppnas dialogrutan <strong>Gå till rad</strong> så att du kan ange ett visst radnummer att gå till.<br /> </td> 
   </tr> 
   <tr> 
    <td>Fliken Egenskaper<br /> </td> 
@@ -81,7 +81,7 @@ CRXDE Lite har följande funktioner:
   </tr> 
   <tr> 
    <td>Fliken Åtkomstkontroll</td> 
-   <td><p>Visa behörigheter baserat på aktuell sökväg, databasnivå eller säkerhetsobjekt.</p> <p>Behörigheterna delas upp i</p> <p>- <strong>Tillämplig åtkomstkontrollprincip</strong>: De profiler som kan tillämpas på den aktuella markeringen.</p> <p>- <strong>Lokala åtkomstkontrollprinciper</strong>: De aktuella principer som tillämpas lokalt på den aktuella markeringen.</p> <p>- <strong>Effektiva åtkomstkontrollprinciper</strong>: De aktuella principer som används för den aktuella markeringen kan anges lokalt eller ärvs från överordnade noder.</p> <p>Obs! För att kunna se åtkomstkontrollsinformationen alls måste användaren som är inloggad på CRXDE Lite ha behörighet att läsa ACL-poster. Den anonyma användaren kan inte se den här informationen som standard - logga in som, t.ex., administratör för att se informationen.</p> </td> 
+   <td><p>Visa behörigheter baserat på aktuell sökväg, databasnivå eller säkerhetsobjekt.</p> <p>Behörigheterna delas upp i</p> <p>- <strong>Tillämplig åtkomstkontrollprincip</strong>: De profiler som kan tillämpas på den aktuella markeringen.</p> <p>- <strong>Lokala åtkomstkontrollprinciper</strong>: De aktuella principer som tillämpas lokalt på den aktuella markeringen.</p> <p>- <strong>Effektiva åtkomstkontrollprinciper</strong>: De aktuella principer som används för den aktuella markeringen kan anges lokalt eller ärvs från överordnade noder.</p> <p>Obs! För att kunna se åtkomstkontrollsinformationen alls måste användaren som är inloggad på CRXDE Lite ha behörighet att läsa åtkomstkontrollposter. Den anonyma användaren kan inte se den här informationen som standard - logga in som, t.ex., administratör för att se informationen.</p> </td> 
   </tr> 
   <tr> 
    <td>Fliken Replikering</td> 
@@ -105,7 +105,7 @@ CRXDE Lite har följande funktioner:
   </tr> 
   <tr> 
    <td>Skapa ...<br /> </td> 
-   <td><p>Listruta för att skapa följande under den valda noden:<br /> </p> <p>- <strong>Nod</strong>: en nod med en godtycklig nodtyp<br /> </p> <p>- <strong>Fil</strong>: nt:filnod och dess nt:resursundernod</p> <p>- <strong>Mapp</strong>: nt:mappnod</p> <p>- <strong>Mall</strong>: AEM-mall</p> <p>- <strong>Komponent</strong>: AEM-komponent</p> <p>- <strong>Dialog</strong>: AEM-dialogruta</p> </td> 
+   <td><p>Listruta för att skapa följande under den valda noden:<br /> </p> <p>- <strong>Nod</strong>: en nod med en godtycklig nodtyp<br /> </p> <p>- <strong>Fil</strong>: nt:filnod och dess nt:resursundernod</p> <p>- <strong>Mapp</strong>: nt:mappnod</p> <p>- <strong>Mall</strong>: AEM</p> <p>- <strong>Komponent</strong>: AEM</p> <p>- <strong>Dialog</strong>: AEM</p> </td> 
   </tr> 
   <tr> 
    <td>Ta bort<br /> </td> 
@@ -133,7 +133,7 @@ CRXDE Lite har följande funktioner:
   </tr> 
   <tr> 
    <td>Verktyg<br /> </td> 
-   <td><p>Listruta med följande verktyg:</p> <p>- <strong>Serverkonfiguration ...</strong>: för åtkomst till Felix Console.</p> <p>- <strong>Fråga ...</strong>: för att fråga databasen.</p> <p>- <strong>Behörigheter ...</strong>: för att öppna behörighetshantering, där du kan visa och lägga till behörigheter.</p> <p>- <strong>Testa åtkomstkontroll ...</strong>: en plats där du kan testa behörigheten för en viss sökväg och/eller huvudman.</p> <p>- <strong>Exportera nodtyp</strong>: om du vill exportera nodtyper i systemet som slutnotation.</p> <p>- <strong>Importera nodtyp ...</strong>: om du vill importera nodtyper med hjälp av slutnotation.</p>  <p>- <strong>Installera SiteCatalyst-felsökaren ...</strong>: anvisningar om hur du installerar Analytics Debugger.</p> </td> 
+   <td><p>Listruta med följande verktyg:</p> <p>- <strong>Serverkonfiguration ...</strong>: för åtkomst till Felix Console.</p> <p>- <strong>Fråga ...</strong>: för att fråga databasen.</p> <p>- <strong>Behörigheter ...</strong>: för att öppna behörighetshantering, där du kan visa och lägga till behörigheter.</p> <p>- <strong>Testa åtkomstkontroll ...</strong>: en plats där du kan testa behörigheten för en viss sökväg och/eller huvudman.</p> <p>- <strong>Exportera nodtyp</strong>: om du vill exportera nodtyper i systemet som slutnotation.</p> <p>- <strong>Importera nodtyp ...</strong>: om du vill importera nodtyper med hjälp av slutnotation.</p>  <p>- <strong>Installera SiteCatalyst Debugger ...</strong>: anvisningar om hur du installerar Analytics Debugger.</p> </td> 
   </tr> 
   <tr> 
    <td>Inloggningswidget<br /> </td> 
@@ -205,7 +205,7 @@ Det skapar:
 
 ### Skapa en dialogruta {#creating-a-dialog}
 
-Så här skapar du en dialogruta med CRXDE Lite:
+Så här skapar du en dialog med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
 1. I navigeringsrutan högerklickar du på den komponent där du vill skapa dialogrutan, väljer **Skapa ...** och sedan **Skapa dialogruta ...**.
@@ -266,7 +266,7 @@ Så här skapar du ett nytt skript:
 
 ### Exportera och importera nodtyper {#exporting-and-importing-node-types}
 
-Med CRXDE Lite kan du importera och/eller exportera nodtypsdefinitioner i [CND-notation](http://jackrabbit.apache.org/jcr/node-type-notation.html)(Compact Namespace and Node Type Definition).
+Med CRXDE Lite kan du importera och/eller exportera nodtypsdefinitioner i [CND-notationen](http://jackrabbit.apache.org/jcr/node-type-notation.html)(Compact Namespace and Node Type Definition).
 
 Så här exporterar du en nodtypsdefinition:
 
