@@ -10,6 +10,9 @@ topic-tags: forms-manager
 discoiquuid: 6699e0e7-fd42-41ae-86a2-3b940d905111
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '338'
+ht-degree: 0%
 
 ---
 
@@ -20,8 +23,8 @@ Med nedladdningsåtgärden kan du, som namnet antyder, exportera formulär från
 
 I AEM Forms stöds nedladdningsåtgärden för följande resurstyper:
 
-* Formulärmallar (XFA-formulär)
-* PDF-formulär
+* Formulärmallar (XFA Forms)
+* PDF forms
 * Dokument (platta PDF-filer)
 
 AEM Forms stöder nedladdning av dessa formulärtyper individuellt eller i en mapp som innehåller ett eller flera formulär som stöds.
@@ -30,17 +33,17 @@ Förutom dessa resurser kan du hämta resurstypen `Resource` om den finns i en m
 
 ## Hämta ett eller flera formulär {#download-one-or-more-forms}
 
-1. Logga in i användargränssnittet för AEM Forms på `https://<server>:<port>/aem/forms.html`.
+1. Logga in på AEM Forms användargränssnitt på `https://<server>:<port>/aem/forms.html`.
 
 1. Navigera till platsen för resursen som du vill hämta.
 
-1. Markera resursen. Klicka på ikonen **[!UICONTROL Ladda ned]** ![aem6forms_download](assets/aem6forms_download.png) i verktygsfältet.
+1. Markera resursen. Klicka på ikonen **[!UICONTROL Download]** aem6forms_download ![](assets/aem6forms_download.png) i verktygsfältet.
 
    >[!NOTE]
    >
    >Du kan bara välja ett formulär för hämtning. Om du vill hämta flera formulär måste du hämta dem som en mapp.
 
-1. Klicka på **[!UICONTROL Hämta]** i dialogrutan som visas.
+1. Klicka på i dialogrutan som visas **[!UICONTROL Download]**.
 
    AEM Forms genererar en ZIP-fil som innehåller den valda filen eller den valda mappen.
 
@@ -52,5 +55,5 @@ Förutom dessa resurser kan du hämta resurstypen `Resource` om den finns i en m
 
 * Du kan överföra ZIP-filen till en annan plats i samma databas eller till en annan databas
 * Hierarkin för resurserna i en mapp behålls under överföringen
-* Alla metadataändringar som gjorts i det hämtade materialet innan det har hämtats återspeglas vid överföringen
+* Alla metadataändringar som gjorts i de hämtade resurserna innan de hämtas återspeglas vid överföringen
 
