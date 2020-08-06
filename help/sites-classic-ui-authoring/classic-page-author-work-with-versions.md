@@ -81,7 +81,7 @@ Den här metoden kan användas för att återställa en sidversion. Den kan äve
 
    ![screen_shot_2012-02-08at45743pm-1](assets/screen_shot_2012-02-08at45743pm-1.png)
 
-1. Klicka på **Återställ**. AEM återställer det träd du har valt.
+1. Klicka på **Återställ**. AEM återställer det markerade trädet.
 
 ## Jämföra med en tidigare version {#comparing-with-a-previous-version}
 
@@ -98,6 +98,7 @@ Så här jämför du den aktuella versionen av sidan med en tidigare version:
    * Text som har tagits bort är röd och genomstruken.
    * Text som har lagts till är grön och markerad.
    * Bilder som har lagts till eller tagits bort är gröna ramar.
+
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
 1. I Spark väljer du underfliken **Återställ version** och klickar på knappen **&lt;&lt;Bakåt** för att visa den aktuella versionen.
@@ -149,6 +150,7 @@ Kalenderversionen används om du har en viss dag att visa:
 
    * **Avsluta Timewarp** för att avsluta och återgå till den aktuella författarsidan.
    * [Visa tidslinjen](#using-the-timewarp-timeline) om du vill visa tidslinjen.
+
    ![chlimage_1-107](assets/chlimage_1-107.png)
 
 ### Använda tidslinjen för tidsförvrängning {#using-the-timewarp-timeline}
