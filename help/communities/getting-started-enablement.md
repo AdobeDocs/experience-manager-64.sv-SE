@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: 31cc7819-cc4d-4804-9fab-005d8bef0714
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
 
-# Komma igång med AEM Communities för aktivering {#getting-started-with-aem-communities-for-enablement}
+# Komma igång med AEM Communities för aktivering  {#getting-started-with-aem-communities-for-enablement}
 
 AEM Communities hjälper varumärken att skapa enhetliga upplevelser över digitala och personliga kanaler genom att underlätta aktivering för anställda och kunder med en katalog över aktiveringsresurser, tilldelat innehåll och dynamiska rekommendationer - allt som levereras inom en social community för att främja engagemang.
 
