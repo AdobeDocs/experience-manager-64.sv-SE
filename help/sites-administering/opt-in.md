@@ -1,8 +1,8 @@
 ---
 title: Ingå i Adobe Analytics och Adobe Target
 seo-title: Ingå i Adobe Analytics och Adobe Target
-description: Lär dig hur du väljer Adobe Analytics och Adobe Target.
-seo-description: Lär dig hur du väljer Adobe Analytics och Adobe Target.
+description: Läs om hur du anmäler dig till Adobe Analytics och Adobe Target.
+seo-description: Läs om hur du anmäler dig till Adobe Analytics och Adobe Target.
 uuid: 9090a0f3-d373-4826-aa68-6aa82c0fbfbb
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: de466511-d82f-4ddb-8f6a-7ca9240fdeab
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1327'
+ht-degree: 0%
 
 ---
 
 
 # Ingå i Adobe Analytics och Adobe Target{#opting-into-adobe-analytics-and-adobe-target}
 
-AEM har en anmälningsprocedur som hjälper er att integrera med Adobe Analytics och Adobe Target. Detta är tillgängligt när du vill, som en förinläst uppgift som tilldelats administratörsanvändargruppen.
+AEM har en anmälningsprocedur som hjälper dig att integrera med Adobe Analytics och Adobe Target. Detta är tillgängligt när du vill, som en förinläst uppgift som tilldelats administratörsanvändargruppen.
 
 När du loggar in som administratör är den här uppgiften (**Konfigurera analys och anpassning**) tillgänglig i [Inkorgen](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks). Baserat på de autentiseringsuppgifter du anger hjälper det dig att konfigurera och integrera dessa tjänster.
 
@@ -101,7 +104,7 @@ Om du vill avanmäla dig måste du slutföra den förinlästa uppgiften:
 
 Installera en egenskapsfil som AEM läser när servern startas för att konfigurera kontoegenskaperna för integreringen med Analytics och Target. När du använder egenskapsfilen använder anmälningsguiden automatiskt egenskaperna från filen och molnkonfigurationen skapas därefter.
 
-Egenskapsfilen är en textfil med namnet marketingcloud.properties som du sparar i arbetskatalogen som AEM-processen använder (vanligtvis samma katalog som JAR-filen). Filen innehåller följande egenskaper:
+Egenskapsfilen är en textfil med namnet marketingcloud.properties som du sparar i arbetskatalogen som används i AEM (vanligtvis samma katalog som JAR-filen). Filen innehåller följande egenskaper:
 
 * analytics.server: URL:en till det Analytics-datacenter som du använder.
 * analytics.company: Det företag som är associerat med ditt Analytics-användarkonto.
@@ -129,7 +132,7 @@ target.password=
 
 I proceduren nedan beskrivs hur du väljer att gå med i integreringen med hjälp av egenskapsfilen.
 
-1. Skapa `marketingcloud.properties` filen i arbetskatalogen som AEM-processen använder (författarinstans).
+1. Skapa `marketingcloud.properties` filen i arbetskatalogen som AEM använder (författarinstans).
 
    >[!NOTE]
    >
@@ -151,15 +154,15 @@ I proceduren nedan beskrivs hur du väljer att gå med i integreringen med hjäl
 
 När du konfigurerar integreringen med Analytics och Target skapar AEM automatiskt de molnkonfigurationer och ramverk som krävs. Molnkonfigurationen för Analytics kallas till exempel för Provisioned Analytics-konto.
 
-Du behöver inte ändra molnkonfigurationerna. Du kan dock konfigurera ramverken efter behov. (Se [Mappa komponentdata med Adobe Analytics-egenskaper](/help/sites-administering/adobeanalytics-mapping.md) och [Lägg till ett Target Framework](/help/sites-administering/target.md).)
+Du behöver inte ändra molnkonfigurationerna. Du kan dock konfigurera ramverken efter behov. (Se [Mappa komponentdata med Adobe Analytics-egenskaper](/help/sites-administering/adobeanalytics-mapping.md) och [Lägg till ett målramverk](/help/sites-administering/target.md).)
 
 >[!NOTE]
 >
->Som standard aktiveras korrekt målanpassning när du väljer att gå med i konfigurationsguiden för Adobe Target.
+>Som standard aktiveras korrekt målgruppsanpassning när du väljer att använda konfigurationsguiden för Adobe Target.
 >
 >Korrekt målinriktning innebär att molntjänstkonfigurationen väntar på att kontexten ska läsas in innan innehållet läses in. Därför kan en korrekt målinriktning i fråga om prestanda skapa en fördröjning på några millisekunder innan innehållet läses in.
 >
->Korrekt målinriktning är alltid aktiverat på författarinstansen. På publiceringsinstansen kan du dock välja att inaktivera korrekt målinriktning globalt genom att avmarkera kryssrutan bredvid Exakt målanpassning i molntjänstkonfigurationen (**http://localhost:4502/etc/cloudservices.html**). Du kan även aktivera och inaktivera exakt målinriktning för enskilda komponenter, oavsett vilken inställning du har i molntjänstkonfigurationen.
+>Korrekt målinriktning är alltid aktiverat för författarinstansen. På publiceringsinstansen kan du dock välja att inaktivera korrekt målinriktning globalt genom att avmarkera kryssrutan bredvid Exakt målanpassning i molntjänstkonfigurationen (**http://localhost:4502/etc/cloudservices.html**). Du kan även aktivera och inaktivera exakt målinriktning för enskilda komponenter, oavsett vilken inställning du har i molntjänstkonfigurationen.
 >
 >Om du ***redan*** har skapat målkomponenter och ändrar den här inställningen påverkar ändringarna inte dessa komponenter. Du måste göra ändringar i den komponenten direkt.
 
@@ -173,7 +176,7 @@ Du behöver inte ändra molnkonfigurationerna. Du kan dock konfigurera ramverken
 
 Som administratör kanske du vill aktivera konfiguration och etablering med ett skript i stället för att stega igenom guiden manuellt. Du kan göra det genom att:
 
-* Skicka en POST-begäran till **/libs/cq/cloudservicesprovisioning/content/autoprovisioning.json** med de parametrar som krävs.
+* Skicka en begäran om POST till **/libs/cq/cloudservicesprovisioning/content/autoprovisioning.json** med de parametrar som krävs.
 
 Vilka parametrar du skickar beror på följande:
 
@@ -181,7 +184,8 @@ Vilka parametrar du skickar beror på följande:
 
    * `automaticProvisioning`= `true`
    * `servicename`= `analytics|target`
-   * `path`=sökväg till en AEM-sida för att bifoga de molntjänster som skapas
+   * `path`=sökväg till en AEM sida för att koppla de molntjänster som skapats
+
    En curl-begäran som skapar både Analytics- och Target-konfigurationer och bifogar dem till sidan we.retail skulle till exempel vara:
 
    ```shell
@@ -201,6 +205,7 @@ Vilka parametrar du skickar beror på följande:
    * target.clientcode= `mycompany`
    * target.email= `me@adobe.com`
    * target.password= `password`
+
    I det här fallet skulle den begäran som skapar både Analytics- och Target-konfigurationer och bifogar dem till webbsidan vara:
 
    ```shell
