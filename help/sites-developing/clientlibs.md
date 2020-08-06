@@ -1,8 +1,8 @@
 ---
 title: Använda bibliotek på klientsidan
 seo-title: Använda bibliotek på klientsidan
-description: AEM tillhandahåller biblioteksmappar på klientsidan, som gör att du kan lagra din klientkod i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
-seo-description: AEM tillhandahåller biblioteksmappar på klientsidan, som gör att du kan lagra din klientkod i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
+description: AEM tillhandahåller biblioteksmappar på klientsidan, som gör att du kan lagra klientsidans kod i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
+seo-description: AEM tillhandahåller biblioteksmappar på klientsidan, som gör att du kan lagra klientsidans kod i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
 uuid: c022992d-a6db-4abb-8c53-4c91d6eed225
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Moderna webbplatser är starkt beroende av bearbetning på klientsidan som styrs av komplex JavaScript- och CSS-kod. Det kan vara komplicerat att organisera och optimera serveringen av koden.
 
-För att lösa det här problemet tillhandahåller AEM biblioteksmappar **på** klientsidan, där du kan lagra koden på klientsidan i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten. Klientsidans bibliotekssystem tar sedan hand om att skapa rätt länkar på den slutliga webbsidan för att läsa in rätt kod.
+För att underlätta hanteringen av det här problemet tillhandahåller AEM biblioteksmappar **på** klientsidan, som gör att du kan lagra koden på klientsidan i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten. Klientsidans bibliotekssystem tar sedan hand om att skapa rätt länkar på den slutliga webbsidan för att läsa in rätt kod.
 
 ## Hur klientbibliotek fungerar i AEM {#how-client-side-libraries-work-in-aem}
 
@@ -38,7 +38,7 @@ Det vanliga sättet att inkludera ett klientbibliotek (dvs. en JS- eller CSS-fil
 ...
 ```
 
-Detta tillvägagångssätt fungerar i AEM, men kan leda till problem när sidor och deras beståndsdelar blir komplexa. I sådana fall finns det en risk för att flera kopior av samma JS-bibliotek kan inkluderas i den slutliga HTML-utskriften. För att undvika detta och för att tillåta logisk organisering av klientbibliotek använder AEM biblioteksmappar **på** klientsidan.
+Detta tillvägagångssätt fungerar i AEM, men kan leda till problem när sidor och deras beståndsdelar blir komplexa. I sådana fall finns det en risk för att flera kopior av samma JS-bibliotek kan inkluderas i den slutliga HTML-utskriften. För att undvika detta och för att tillåta logisk organisering av klientbibliotek AEM använder biblioteksmappar **på** klientsidan.
 
 En biblioteksmapp på klientsidan är en databasnod av typen `cq:ClientLibraryFolder`. Definitionen i [CND-notation](https://jackrabbit.apache.org/node-type-notation.html) är
 
@@ -63,11 +63,11 @@ Varje `cq:ClientLibraryFolder` fylls med en uppsättning JS- och/eller CSS-filer
 
 ## Referera till bibliotek på klientsidan {#referencing-client-side-libraries}
 
-Eftersom HTML är den rekommenderade tekniken för utveckling av AEM-webbplatser bör HTML användas för att inkludera klientbibliotek i AEM. Det går dock även att göra det med JSP.
+Eftersom HTML är den rekommenderade tekniken för att utveckla AEM webbplatser bör HTML användas för att inkludera klientbibliotek i AEM. Det går dock även att göra det med JSP.
 
 ### Använda HTML {#using-htl}
 
-I HTML läses klientbibliotek in via en hjälpmall från AEM, som du kommer åt via [`data-sly-use`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#use). Det finns tre tillgängliga mallar i den här filen, som kan anropas via [`data-sly-call`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#template-call):
+I HTML läses klientbibliotek in via en hjälpmall från AEM, som du kan komma åt via [ `data-sly-use`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#use). Det finns tre tillgängliga mallar i den här filen, som kan anropas via [`data-sly-call`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#template-call):
 
 * **css** - Läser bara in CSS-filerna för de refererade klientbiblioteken.
 * **js** - Läser bara in JavaScript-filer för de refererade klientbiblioteken.
@@ -156,11 +156,11 @@ Sedan ställer du in egenskapen `allowProxy` på `foo` true.
 
 >[!CAUTION]
 >
->När du använder proxyanslutna klientbibliotek kan konfigurationen av AEM Dispatcher kräva en uppdatering för att säkerställa att URI:er med tilläggets klienter tillåts.
+>När du använder proxiderade klientbibliotek kan konfigurationen för AEM Dispatcher kräva en uppdatering för att säkerställa att URI:er med tilläggets klienter tillåts.
 
 >[!CAUTION]
 >
->Adobe rekommenderar att du söker efter klientbibliotek under `/apps` och gör dem tillgängliga med hjälp av proxyservern. Tänk dock på att bästa praxis fortfarande kräver att offentliga webbplatser aldrig innehåller något som serveras direkt över en `/apps` eller `/libs` bana.
+>Adobe rekommenderar att du letar rätt på klientbibliotek under `/apps` och gör dem tillgängliga med proxyservern. Tänk dock på att bästa praxis fortfarande kräver att offentliga webbplatser aldrig innehåller något som serveras direkt över en `/apps` eller `/libs` bana.
 
 ### Skapa en biblioteksmapp för klient {#create-a-client-library-folder}
 
@@ -286,7 +286,7 @@ body {
 }
 ```
 
-CSS-filen som `publicmain` noden genererar innehåller följande format, med den ursprungliga bildens URL:
+CSS-filen som `publicmain` noden genererar innehåller följande format med den ursprungliga bildens URL:
 
 ```xml
 body {
@@ -323,7 +323,7 @@ I följande tabell visas värdet för egenskapen `channels` för varje klientbib
 
 ## Använda preprocessorer {#using-preprocessors}
 
-AEM tillåter anslutningsbara preprocessorer och levereras med stöd för [YUI Compressor](https://github.com/yui/yuicompressor#yui-compressor---the-yahoo-javascript-and-css-compressor) för CSS och JavaScript och [Google Closure Compiler (GCC)](https://developers.google.com/closure/compiler/) för JavaScript med YUI inställt som AEM:s standardpreprocessor.
+AEM möjliggör anslutningsbara preprocessorer och levereras med stöd för [YUI Compressor](https://github.com/yui/yuicompressor#yui-compressor---the-yahoo-javascript-and-css-compressor) för CSS och JavaScript och [Google Closure Compiler (GCC)](https://developers.google.com/closure/compiler/) för JavaScript med YUI inställt som AEM standardpreprocessor.
 
 De anslutningsbara preprocessorerna möjliggör flexibel användning, inklusive:
 
@@ -392,10 +392,10 @@ Mer information om GCC-alternativ finns i [GCC-dokumentationen](https://develope
 
 ### Ange systemstandardminiatyr {#set-system-default-minifier}
 
-YUI anges som standardminiprogram i AEM. Följ de här stegen för att ändra detta till GCC.
+YUI anges som standardminifierare i AEM. Följ de här stegen för att ändra detta till GCC.
 
 1. Gå till Apache Felix Config Manager på [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
-1. Hitta och redigera **Adobe Granite HTML Library Manager**.
+1. Hitta och redigera HTML-bibliotekshanteraren för **Adobe Granite**.
 1. Aktivera alternativet **Minify** (om det inte redan är aktiverat).
 1. Ange standardkonfigurationer **för** JS-processorn till `min:gcc`.
 
@@ -447,6 +447,7 @@ Komponenten innehåller en testväljare som visar den källkod som genereras fö
    * Öppna följande URL i webbläsaren (använd en annan värd och port efter behov):
 
       * `http://<host>:<port>/libs/granite/ui/content/dumplibs.html`
+
    Standardsidan visar utdata för taggar utan värde för attributet categories.
 
 1. Om du vill visa utdata för en kategori anger du värdet för klientbibliotekets `categories` egenskap och klickar på **Skicka fråga**.
@@ -459,4 +460,4 @@ HTML Library Manager-tjänsten bearbetar `cq:ClientLibraryFolder` taggar och gen
 * Förbättra prestanda: Ta bort tomt utrymme och komprimera bibliotek.
 * Förbättra läsbarheten: Inkludera tomt utrymme och komprimera inte.
 
-Mer information om hur du konfigurerar tjänsten finns i [AEM HTML Library Manager](/help/sites-deploying/osgi-configuration-settings.md).
+Mer information om hur du konfigurerar tjänsten finns i [AEM HTML-bibliotekshanteraren](/help/sites-deploying/osgi-configuration-settings.md).
