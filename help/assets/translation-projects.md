@@ -4,6 +4,9 @@ description: Lär dig hur du skapar översättningsprojekt i AEM.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '1802'
+ht-degree: 20%
 
 ---
 
@@ -26,7 +29,7 @@ Du kör det här arbetsflödet för att översätta ytterligare en grupp resurse
 
 >[!NOTE]
 >
->Om du startar ett översättningsarbetsflöde för komplexa resurser, som PDF-filer och InDesign-filer, skickas inte delresurserna eller återgivningarna (om sådana finns) för översättning.
+>Om du startar ett översättningsarbetsflöde för komplexa resurser, till exempel PDF-filer och InDesign-filer, skickas inte delresurserna eller återgivningarna (om sådana finns) för översättning.
 
 ## Skapa och översätta arbetsflöde {#create-and-translate-workflow}
 
@@ -38,30 +41,30 @@ Du använder arbetsflödet Skapa och översätt för att generera språkkopior f
 
 ### Skapa endast struktur {#create-structure-only}
 
-Använd alternativet **Skapa endast** struktur om du vill skapa en målmappshierarki inom målspråkets rot för att matcha källmappens hierarki inom källspråkets rot. I det här fallet kopieras källresurserna till målmappen. Inget översättningsprojekt genereras emellertid.
+Använd alternativet **Skapa endast struktur** om du vill skapa en målmappshierarki i målspråkets rot för att matcha källmappens hierarki i källspråkets rot. I det här fallet kopieras källresurserna till målmappen. Inget översättningsprojekt genereras emellertid.
 
 1. I resursgränssnittet väljer du den källmapp som du vill skapa en struktur för i målspråkets rot.
-1. Öppna rutan **[!UICONTROL Referenser]** och klicka/tryck på **[!UICONTROL Språkkopior]** under **[!UICONTROL Kopior]**.
+1. Öppna rutan **[!UICONTROL References]** och klicka/tryck på **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**.
 
    ![chlimage_1-57](assets/chlimage_1-57.png)
 
-1. Klicka/tryck på **[!UICONTROL Skapa och översätt]** längst ned.
+1. Klicka/tryck **[!UICONTROL Create & Translate]** längst ned.
 
    ![chlimage_1-58](assets/chlimage_1-58.png)
 
-1. I listan **[!UICONTROL Målspråk]** väljer du det språk som du vill skapa en mappstruktur för.
+1. From the **[!UICONTROL Target Languages]** list, select the language for which you want to create a folder structure.
 
    ![chlimage_1-59](assets/chlimage_1-59.png)
 
-1. I **[!UICONTROL projektlistan]** väljer du bara **** Skapa struktur.
+1. Välj **[!UICONTROL Create structure only]** i listan **[!UICONTROL Project]**.
 
    ![chlimage_1-60](assets/chlimage_1-60.png)
 
-1. Klicka/tryck på **[!UICONTROL Skapa]**. Den nya strukturen för målspråket listas under **[!UICONTROL Språkkopior]**.
+1. Klicka/tryck på **[!UICONTROL Create]**. Den nya strukturen för målspråket listas under **[!UICONTROL Language Copies]**.
 
    ![chlimage_1-61](assets/chlimage_1-61.png)
 
-1. Klicka på/tryck på strukturen i listan och klicka/tryck sedan på **[!UICONTROL Visa i resurser]** för att navigera till mappstrukturen i målspråket.
+1. Klicka på/tryck på strukturen i listan och klicka/tryck sedan för **[!UICONTROL Reveal in Assets]** att navigera till mappstrukturen inom målspråket.
 
    ![chlimage_1-62](assets/chlimage_1-62.png)
 
@@ -70,31 +73,31 @@ Använd alternativet **Skapa endast** struktur om du vill skapa en målmappshier
 Om du använder det här alternativet kopieras resurser som ska översättas till språkroten för det språk som du vill översätta till. Beroende på vilka alternativ du väljer skapas ett översättningsprojekt för resurserna i projektkonsolen. Beroende på inställningarna kan översättningsprojektet startas manuellt eller automatiskt så snart översättningsprojektet skapas.
 
 1. I resursgränssnittet väljer du den källmapp som du vill skapa en språkkopia för.
-1. Öppna rutan **[!UICONTROL Referenser]** och klicka/tryck på **[!UICONTROL Språkkopior]** under **[!UICONTROL Kopior]**.
+1. Öppna rutan **[!UICONTROL References]** och klicka/tryck på **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**.
 
    ![chlimage_1-63](assets/chlimage_1-63.png)
 
-1. Klicka/tryck på **[!UICONTROL Skapa och översätt]** längst ned.
+1. Klicka/tryck **[!UICONTROL Create & Translate]** längst ned.
 
    ![chlimage_1-64](assets/chlimage_1-64.png)
 
-1. I listan **[!UICONTROL Målspråk]** väljer du det eller de språk som du vill skapa en mappstruktur för.
+1. I listan **[!UICONTROL Target Languages]** väljer du det/de språk du vill skapa en mappstruktur för.
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. Välj **[!UICONTROL Skapa ett nytt översättningsprojekt]** i listan **[!UICONTROL Projekt]**.
+1. From the **[!UICONTROL Project]** list, select **[!UICONTROL Create a new translation project]**.
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
-1. Ange en rubrik för projektet i fältet **[!UICONTROL Projektnamn]** .
+1. Ange en titel för projektet i fältet **[!UICONTROL Project Title]**.
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-1. Klicka/tryck på **[!UICONTROL Skapa]**. Resurser från källmappen kopieras till målmapparna för de språkinställningar du valde i steg 4.
+1. Klicka/tryck på **[!UICONTROL Create]**. Resurser från källmappen kopieras till målmapparna för de språkinställningar du valde i steg 4.
 
    ![chlimage_1-68](assets/chlimage_1-68.png)
 
-1. Om du vill navigera till mappen markerar du språkkopian och klickar på **[!UICONTROL Visa i Resurser]**.
+1. Navigera till mappen genom att markera språkkopian och klicka på **[!UICONTROL Reveal in Assets]**.
 
    ![chlimage_1-69](assets/chlimage_1-69.png)
 
@@ -110,7 +113,7 @@ Om du använder det här alternativet kopieras resurser som ska översättas til
 
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
-1. Om du vill visa översättningsjobbets status klickar du på ellipsen längst ned i rutan **[!UICONTROL Översättningsjobb]** .
+1. Om du vill visa översättningsjobbets status klickar du på ellipsen längst ned i **[!UICONTROL Translation Job]** rutan.
 
    ![chlimage_1-73](assets/chlimage_1-73.png)
 
@@ -129,29 +132,29 @@ Om du använder det här alternativet kopieras resurser som ska översättas til
 Om du använder det här alternativet körs översättningsarbetsflödet för resurser som du lägger till i källmappen efter att ha kört ett tidigare arbetsflöde för översättning. Endast resurser som nyligen lagts till kopieras till målmappen som innehåller tidigare översatta resurser. Inget nytt översättningsprojekt skapas i det här fallet.
 
 1. Navigera till källmappen som innehåller oöversatta resurser i resursgränssnittet.
-1. Markera en resurs som du vill översätta och öppna **[!UICONTROL referensrutan]**. Under **[!UICONTROL Språkkopior]** visas antalet översättningskopior som är tillgängliga.
-1. Klicka/tryck på **[!UICONTROL Språkkopior]** under **[!UICONTROL Kopior]**. En lista över tillgängliga översättningskopior visas.
-1. Klicka/tryck på **[!UICONTROL Skapa och översätt]** längst ned.
+1. Markera en resurs som du vill översätta och öppna **[!UICONTROL Reference pane]**. I avsnittet **[!UICONTROL Language Copies]** visas antalet översättningskopior som är tillgängliga.
+1. Klicka/tryck på **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**. En lista över tillgängliga översättningskopior visas.
+1. Klicka/tryck **[!UICONTROL Create & Translate]** längst ned.
 
    ![chlimage_1-75](assets/chlimage_1-75.png)
 
-1. I listan **[!UICONTROL Målspråk]** väljer du det eller de språk som du vill skapa en mappstruktur för.
+1. I listan **[!UICONTROL Target Languages]** väljer du det/de språk du vill skapa en mappstruktur för.
 
    ![chlimage_1-76](assets/chlimage_1-76.png)
 
-1. I listan **[!UICONTROL Projekt]** väljer du **[!UICONTROL Lägg till i befintligt översättningsprojekt]** för att köra översättningsarbetsflödet i mappen.
+1. I listan **[!UICONTROL Project]** väljer du **[!UICONTROL Add to existing translation project]** för att köra översättningsarbetsflödet för mappen.
 
    ![chlimage_1-77](assets/chlimage_1-77.png)
 
    >[!NOTE]
    >
-   >Om du väljer alternativet **[!UICONTROL Lägg till i befintligt översättningsprojekt]** läggs ditt översättningsprojekt till i ett befintligt projekt endast om dina projektinställningar exakt matchar inställningarna för det befintliga projektet. Annars skapas ett nytt projekt.
+   >Om du väljer **[!UICONTROL Add to existing translation project]** alternativet läggs ditt översättningsprojekt till i ett befintligt projekt endast om dina projektinställningar exakt matchar inställningarna för det befintliga projektet. Annars skapas ett nytt projekt.
 
-1. I listan **[!UICONTROL Befintliga översättningsprojekt]** väljer du ett projekt som du vill lägga till resursen för översättning.
+1. Välj ett projekt i **[!UICONTROL Existing translation project]** listan för att lägga till resursen för översättning.
 
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-1. Klicka/tryck på **[!UICONTROL Skapa]**. Resurserna som ska översättas läggs till i målmappen. Den uppdaterade mappen listas under **[!UICONTROL Språkkopior]** .
+1. Klicka/tryck på **[!UICONTROL Create]**. Resurserna som ska översättas läggs till i målmappen. Den uppdaterade mappen listas i avsnittet **[!UICONTROL Language Copies]**.
 
    ![chlimage_1-79](assets/chlimage_1-79.png)
 
@@ -174,7 +177,7 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
    >
    >Om den resurs som du lägger till i översättningsjobbet innehåller delresurser, markerar du delresurserna och tar bort dem för översättningen för att fortsätta utan några fel.
 
-1. Om du vill starta översättningen av resurserna klickar/trycker du på pilen på **[!UICONTROL översättningsjobbpanelen]** och väljer **[!UICONTROL Start]** i listan.
+1. Om du vill starta översättningen av resurserna klickar/trycker du på pilen på **[!UICONTROL Translation Job]** plattan och väljer **[!UICONTROL Start]** i listan.
 
    ![chlimage_1-81](assets/chlimage_1-81.png)
 
@@ -182,7 +185,7 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
 
    ![chlimage_1-82](assets/chlimage_1-82.png)
 
-1. Om du vill visa översättningsjobbets status klickar/trycker du på ellipsen längst ned i rutan **[!UICONTROL Översättningsjobb]** .
+1. Om du vill visa översättningsjobbets status klickar/trycker du på ellipsen längst ned i **[!UICONTROL Translation Job]** rutan.
 
    ![chlimage_1-83](assets/chlimage_1-83.png)
 
@@ -202,20 +205,20 @@ Kör det här arbetsflödet för att översätta alla ytterligare resurser och i
 Om du använder det här alternativet skapas ett översättningsprojekt för den resursuppsättning som du vill uppdatera en språkkopia för.
 
 1. I resursgränssnittet väljer du den källmapp där du lade till en resurs.
-1. Öppna rutan **[!UICONTROL Referenser]** och klicka/tryck på **[!UICONTROL Språkkopior]** under **[!UICONTROL Kopior]** för att visa listan med språkkopior.
-1. Markera kryssrutan före **[!UICONTROL Språkkopior]** och välj sedan den målmapp som motsvarar rätt språkinställning.
+1. Öppna rutan **[!UICONTROL References]** och klicka/tryck på **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** för att visa listan med språkkopior.
+1. Markera kryssrutan före **[!UICONTROL Language Copies]** och välj sedan den målmapp som motsvarar rätt språkinställning.
 
    ![chlimage_1-84](assets/chlimage_1-84.png)
 
-1. Klicka/tryck på **[!UICONTROL Uppdatera språkkopior]** längst ned.
+1. Klicka/tryck **[!UICONTROL Update language copies]** längst ned.
 
    ![chlimage_1-85](assets/chlimage_1-85.png)
 
-1. Välj **[!UICONTROL Skapa ett nytt översättningsprojekt]** i listan **[!UICONTROL Projekt]**.
+1. Välj **[!UICONTROL Create a new translation project]** i listan **[!UICONTROL Project]**.
 
    ![chlimage_1-86](assets/chlimage_1-86.png)
 
-1. Ange en rubrik för projektet i fältet **[!UICONTROL Projektnamn]** .
+1. Ange en titel för projektet i fältet **[!UICONTROL Project Title]**.
 
    ![chlimage_1-87](assets/chlimage_1-87.png)
 
@@ -232,7 +235,7 @@ Om du använder det här alternativet skapas ett översättningsprojekt för den
 
    ![chlimage_1-90](assets/chlimage_1-90.png)
 
-1. Om du vill starta översättningen av resurserna klickar du på pilen på **[!UICONTROL översättningsjobbpanelen]** och väljer **[!UICONTROL Start]** i listan.
+1. Om du vill starta översättningen av resurserna klickar du på pilen på **[!UICONTROL Translation Job]** plattan och väljer **[!UICONTROL Start]** i listan.
 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
@@ -240,7 +243,7 @@ Om du använder det här alternativet skapas ett översättningsprojekt för den
 
    ![chlimage_1-92](assets/chlimage_1-92.png)
 
-1. Om du vill visa översättningsjobbets status klickar/trycker du på ellipsen längst ned i rutan **[!UICONTROL Översättningsjobb]** .
+1. Om du vill visa översättningsjobbets status klickar/trycker du på ellipsen längst ned i **[!UICONTROL Translation Job]** rutan.
 
    ![chlimage_1-93](assets/chlimage_1-93.png)
 
@@ -253,23 +256,23 @@ Om du använder det här alternativet skapas ett översättningsprojekt för den
 Om du använder det här alternativet läggs resursuppsättningen till i ett befintligt översättningsprojekt för att uppdatera språkkopian för det språkområde du väljer.
 
 1. I resursgränssnittet väljer du den källmapp där du lade till en resursmapp.
-1. Öppna rutan **** Referenser och klicka/tryck på **[!UICONTROL Språkkopior]** under **[!UICONTROL Kopior]** för att visa listan med språkkopior.
+1. Öppna **[!UICONTROL References pane]** och klicka/tryck på **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** för att visa listan med språkkopior.
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
-1. Markera kryssrutan före **[!UICONTROL Språkkopior]**, där alla språkkopior markeras. Avmarkera andra kopior än den språkkopia (kopior) som motsvarar det eller de språk som du vill översätta till.
+1. Markera kryssrutan före **[!UICONTROL Language Copies]**, så markeras alla språkversioner. Avmarkera andra kopior än den språkkopia (kopior) som motsvarar det eller de språk som du vill översätta till.
 
    ![chlimage_1-95](assets/chlimage_1-95.png)
 
-1. Klicka/tryck på **[!UICONTROL Uppdatera språkkopior]** längst ned.
+1. Klicka/tryck **[!UICONTROL Update language copies]** längst ned.
 
    ![chlimage_1-96](assets/chlimage_1-96.png)
 
-1. Välj **[!UICONTROL Lägg till i befintligt översättningsprojekt]** i listan **[!UICONTROL Projekt]**.
+1. Välj **[!UICONTROL Add to existing translation project]** i listan **[!UICONTROL Project]**.
 
    ![chlimage_1-97](assets/chlimage_1-97.png)
 
-1. I listan **[!UICONTROL Befintliga översättningsprojekt]** väljer du ett projekt som du vill lägga till resursen för översättning.
+1. Välj ett projekt i **[!UICONTROL Existing translation project]** listan för att lägga till resursen för översättning.
 
    ![chlimage_1-98](assets/chlimage_1-98.png)
 
@@ -278,24 +281,24 @@ Om du använder det här alternativet läggs resursuppsättningen till i ett bef
 
 ## Skapa tillfälliga språkkopior {#creating-temporary-language-copies}
 
-När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia med redigerade versioner av originalresurser bevaras den befintliga språkkopian tills du godkänner översatta resurser. AEM Resurser lagrar de nyligen översatta resurserna på en tillfällig plats och uppdaterar den befintliga språkkopian när du uttryckligen har godkänt resurserna. Om du avvisar resurserna ändras inte språkkopian.
+När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia med redigerade versioner av originalresurser bevaras den befintliga språkkopian tills du godkänner översatta resurser. AEM Assets lagrar de nyligen översatta resurserna på en tillfällig plats och uppdaterar den befintliga språkkopian när du uttryckligen har godkänt resurserna. Om du avvisar resurserna ändras inte språkkopian.
 
-1. Klicka/tryck på källrotmappen under **[!UICONTROL Språkkopior]** som du redan har skapat en språkkopia för och klicka/tryck sedan på **[!UICONTROL Visa i resurser]** för att öppna mappen i AEM Resurser.
+1. Klicka/tryck på källrotmappen under **[!UICONTROL Language Copies]** som du redan har skapat en språkkopia för och klicka/tryck sedan på **[!UICONTROL Reveal in Assets]** för att öppna mappen i AEM Assets.
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
-1. I resursgränssnittet markerar du en resurs som du redan har översatt och klickar/trycker på **[!UICONTROL redigeringsikonen]** i verktygsfältet för att öppna resursen i redigeringsläge.
+1. I resursgränssnittet markerar du en resurs som du redan har översatt och klickar på/trycker på **[!UICONTROL Edit]** ikonen i verktygsfältet för att öppna resursen i redigeringsläge.
 
    ![chlimage_1-100](assets/chlimage_1-100.png)
 
 1. Redigera resursen och spara sedan ändringarna.
 1. Uppdatera språkkopian genom att utföra steg 2-14 i proceduren [Lägg till i befintligt översättningsprojekt](#add-to-existing-translation-project) .
-1. Klicka på/tryck på ellipsen längst ned i rutan **[!UICONTROL Översättningsjobb]** . I listan över resurser på sidan **[!UICONTROL Översättningsjobb]** kan du tydligt visa den tillfälliga plats där den översatta versionen av resursen lagras.
+1. Klicka/tryck på ellipsen längst ned i **[!UICONTROL Translation Job]** rutan. I listan med resurser på **[!UICONTROL Translation Job]** sidan kan du tydligt visa den tillfälliga plats där den översatta versionen av resursen lagras.
 
    ![chlimage_1-101](assets/chlimage_1-101.png)
 
-1. Markera kryssrutan bredvid **[!UICONTROL Titel]**.
-1. Klicka/tryck på **[!UICONTROL Acceptera översättning]** i verktygsfältet och klicka/tryck sedan på **[!UICONTROL Acceptera]** i dialogrutan för att skriva över den översatta resursen i målmappen med den översatta versionen av den redigerade resursen.
+1. Markera kryssrutan bredvid **[!UICONTROL Title]**.
+1. Klicka/tryck på **[!UICONTROL Accept Translation]** i verktygsfältet och klicka/tryck sedan på **[!UICONTROL Accept]** i dialogrutan för att skriva över den översatta resursen i målmappen med den översatta versionen av den redigerade resursen.
 
    ![chlimage_1-102](assets/chlimage_1-102.png)
 
@@ -303,7 +306,7 @@ När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia m
    >
    >Om du vill att översättningsarbetsflödet ska kunna uppdatera målresurserna, godkänner du både resursen och metadata.
 
-   Klicka/tryck på **[!UICONTROL Avvisa översättning]** om du vill behålla den ursprungligen översatta versionen av resursen i målspråkets rot och avvisa den redigerade versionen.
+   Klicka/tryck **[!UICONTROL Reject Translation]** för att behålla den ursprungligen översatta versionen av resursen i målspråkets rot och avvisa den redigerade versionen.
 
    ![chlimage_1-103](assets/chlimage_1-103.png)
 
