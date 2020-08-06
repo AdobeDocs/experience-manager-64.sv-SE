@@ -1,6 +1,6 @@
 ---
-title: ' Ställning'
-seo-title: ' Ställning'
+title: Ställning
+seo-title: Ställning
 description: Med hjälp av ställningar kan du skapa en struktur med fält som återspeglar den struktur du vill ha för sidorna och sedan använda det här formuläret för att enkelt skapa sidor baserade på den här strukturen
 seo-description: Med hjälp av ställningar kan du skapa en struktur med fält som återspeglar den struktur du vill ha för sidorna och sedan använda det här formuläret för att enkelt skapa sidor baserade på den här strukturen
 uuid: f2542fe2-598f-4631-ae64-a6ee14cd7748
@@ -11,13 +11,16 @@ topic-tags: site-features
 discoiquuid: f5025f64-d3ce-43e8-9666-5c7c162536c7
 translation-type: tm+mt
 source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 0%
 
 ---
 
 
-#  Ställning{#scaffolding}
+# Ställning{#scaffolding}
 
-Ibland kan du behöva skapa en stor uppsättning sidor som har samma struktur men olika innehåll. Med det vanliga AEM-gränssnittet måste du skapa varje sida, dra lämpliga komponenter till sidan och fylla i varje sida separat.
+Ibland kan du behöva skapa en stor uppsättning sidor som har samma struktur men olika innehåll. Genom det AEM standardgränssnittet skulle du behöva skapa varje sida, dra lämpliga komponenter till sidan och fylla i varje sida separat.
 
 Med hjälp av ställningar kan du skapa ett formulär (en struktur) med fält som motsvarar den struktur du vill ha för sidorna och sedan använda det här formuläret för att enkelt skapa sidor som baseras på den strukturen.
 
