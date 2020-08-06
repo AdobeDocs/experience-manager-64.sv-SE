@@ -1,8 +1,8 @@
 ---
 title: Skapa och hantera profiler
 seo-title: Skapa och hantera profiler
-description: En profil är en uppsättning sekretessinställningar och användare som kan komma åt ett dokument som profilen tillämpas på. Du kan skapa och hantera olika typer av profiler med hjälp av AEM-formulär.
-seo-description: En profil är en uppsättning sekretessinställningar och användare som kan komma åt ett dokument som profilen tillämpas på. Du kan skapa och hantera olika typer av profiler med hjälp av AEM-formulär.
+description: En profil är en uppsättning sekretessinställningar och användare som kan komma åt ett dokument som profilen tillämpas på. Du kan skapa och hantera olika typer av profiler med AEM formulär.
+seo-description: En profil är en uppsättning sekretessinställningar och användare som kan komma åt ett dokument som profilen tillämpas på. Du kan skapa och hantera olika typer av profiler med AEM formulär.
 uuid: 72be06f3-3e90-495e-8425-72380d95704a
 contentOwner: admin
 content-type: reference
@@ -40,7 +40,7 @@ När du först installerar dokumentsäkerhet innehåller den en delad princip me
 
 **Automatiskt genererade profiler för Microsoft Outlook**
 
-Med Acrobat kan du tillämpa profiler på dokument som du skickar som e-postbilagor i Microsoft Outlook. I Outlook kan du skydda ett dokument med hjälp av en befintlig profil eller med hjälp av en automatiskt genererad profil som Acrobat genererar med standardinställningar för sekretess och som gäller för dokumentet som bifogas till ett e-postmeddelande. (Se * [Acrobat-hjälp](https://help.adobe.com/en_US/acrobat/pro/using/index.html)*.)
+Med Acrobat kan du tillämpa profiler på dokument som du skickar som e-postbilagor i Microsoft Outlook. I Outlook kan du skydda ett dokument med hjälp av en befintlig profil eller med hjälp av en automatiskt genererad profil som Acrobat genererar med standardinställningar för sekretess och som gäller för dokumentet som bifogas till ett e-postmeddelande. (Se * [Acrobat Hjälp](https://help.adobe.com/en_US/acrobat/pro/using/index.html)*.)
 
 >[!NOTE]
 >
@@ -102,10 +102,12 @@ När du redigerar profiler gäller dessa begränsningar:
    * citattecken (&quot;)
    * omvänt snedstreck (\)
    * snedstreck (/)
+
    Om du använder följande tecken i namnet eller beskrivningen konverteras de till blanksteg:
 
    * vagnretur (ASCII-tecken 13)
    * ny rad (ASCII-tecken 10).
+
    >[!NOTE]
    >
    >Du kan skapa ett principnamn som innehåller utökade tecken; När en jämförelse görs mellan två strängar anses emellertid tecken med accent och tecken utan accent som &quot;e&quot; och &quot;é&quot; vara desamma. När någon skapar en profil görs en jämförelse för att kontrollera om det redan finns en princip med samma namn. Jämförelsen kan inte skilja mellan namn som är desamma förutom för tecken med accent. Vi antar att principen redan har lagts till i databasen och att den nya inte har lagts till.
@@ -176,15 +178,15 @@ Dessa dokumentbehörigheter är tillgängliga på fliken Behörigheter. Du kan t
 
 **Alla:** Användaren kan ändra PDF-filen.
 
-**Samarbeta:** Användaren kan samarbeta med andra och använda samarbetsalternativen i Adobe Acrobat. Med den här behörigheten kan användaren kopiera formulärdata även om behörigheten Kopiera inte uttryckligen anges i principen.
+**Samarbeta:** Användaren kan samarbeta med andra med hjälp av Samarbeta i Adobe Acrobat. Med den här behörigheten kan användaren kopiera formulärdata även om behörigheten Kopiera inte uttryckligen anges i principen.
 
 **Ändra sidor:** Användaren kan lägga till och ta bort sidor och redigera innehåll i PDF-filen.
 
-**Fyll i och signera:** Användaren kan fylla i formulärfält i PDF-filen och signera den.
+**Fill &amp; Sign:** Användaren kan fylla i formulärfält i PDF-filen och signera den.
 
 **Copy:** Låter användaren kopiera text från ett dokument som är skyddat med den här profilen.
 
-**Skärmläsare:** Den här behörigheten visas om du markerar kryssrutan Visa anpassade behörigheter för PDF. När det här alternativet är markerat har Adobe Acrobat behörighet att lägga till tillfälliga taggar i PDF-filen för att förbättra läsbarheten med en skärmläsare.
+**Reader:** Den här behörigheten visas om du markerar kryssrutan Visa anpassade behörigheter för PDF. När det här alternativet är markerat har Adobe Acrobat behörighet att lägga till tillfälliga taggar i PDF-filen för att förbättra läsbarheten med en skärmläsare.
 
 Dessa dokumentbehörigheter är tillgängliga på fliken Alternativ. Du kan använda dessa behörigheter för PDF-, PTC Pro/E- och Microsoft Office-filer:
 
@@ -264,13 +266,13 @@ Om du redigerar en profil och administratören har tagit bort en konfigurerad va
 
 **Använd endast certifierade Acrobat-plugin-program för PDF:** När du väljer det här alternativet för en profil måste Acrobat 8.0 och senare köras i certifierat läge när dokument som är skyddade med profilen öppnas. När Acrobat körs i certifierat läge läses inga plugin-program från tredje part in.
 
-Välj det här alternativet om du är orolig för att en dokumentmottagare ska skriva ett plugin-program som kan kringgå något av dokumentskyddet i Acrobat 8.0 eller senare. Välj inte det här alternativet om dokumentmottagarna behöver använda plugin-program från tredje part i Acrobat för att interagera med dokument.
+Välj det här alternativet om du är oroad över att en dokumentmottagare skriver ett plugin-program som kan kringgå något av dokumentskyddet i Acrobat 8.0 eller senare. Välj inte det här alternativet om dokumentmottagarna behöver använda plugin-program från tredje part i Acrobat för att interagera med dokument.
 
-Det här alternativet aktiverar endast det certifierade läget i Acrobat 8.0 eller senare. administratören måste inaktivera åtkomsten till Acrobat 7.0.
+Detta alternativ aktiverar endast certifierat läge i Acrobat 8.0 eller senare. administratören måste inaktivera åtkomst för Acrobat 7.0.
 
 (Se [Konfigurera dokumentsäkerhetsservern](/help/forms/using/admin-help/configuring-client-server-options.md#configure-the-document-security-server).)
 
-Det här alternativet gäller inte Adobe Reader.
+Detta alternativ gäller inte Adobe Reader.
 
 **Felmeddelande om nekad åtkomst:** Ett meddelande som visas för alla som försöker öppna ett policyskyddat dokument utan behörighet. Det här meddelandet visas i Acrobat. Klienter som inte kan visa det här meddelandet visar ett standardmeddelande som anger att åtkomst nekas.
 
@@ -286,7 +288,7 @@ Området Avancerade inställningar som inte kan ändras innehåller följande in
 
 **Dokumentbegränsningar:** Markera de PDF-dokumentkomponenter som ska krypteras. Andra klientprogram krypterar hela dokumentet men inte länkade eller inbäddade filer. Du kan välja mellan följande alternativ:
 
-* Hela dokumentet, inklusive dess bilagor och metadata. *Metadata* är information om dokumentet och dess innehåll som du kan visa via dialogrutan Dokumentegenskaper eller Acrobats avancerade-meny. I Acrobat kan du bifoga filer av olika typer (till exempel text-, ljud- och videofiler) till PDF-dokument.
+* Hela dokumentet, inklusive dess bilagor och metadata. *Metadata* är information om dokumentet och dess innehåll som du kan visa via dialogrutan Dokumentegenskaper eller på menyn Avancerat i Acrobat. I Acrobat kan du bifoga filer av olika typer (till exempel text-, ljud- och videofiler) till PDF-dokument.
 * Dokumentet och dess bilagor, men inte metadata.
 * Endast dokumentbilagor. Du kan kryptera de bifogade filerna till en PDF-fil utan att behöva kryptera dokumentinnehållet.
 
@@ -369,10 +371,12 @@ Externa användare kan bara kopiera profiler om administratören aktiverar den h
    * citattecken (&quot;)
    * omvänt snedstreck (\)
    * snedstreck (/)
+
    Om du använder följande tecken i namnet eller beskrivningen konverteras de till blanksteg:
 
    * vagnretur (ASCII-tecken 13)
    * ny rad (ASCII-tecken 10).
+
    >[!NOTE]
    >
    >Du kan skapa ett principnamn som innehåller utökade tecken; När en jämförelse görs mellan två strängar anses emellertid tecken med accent och tecken utan accent som &quot;e&quot; och &quot;é&quot; vara desamma. När någon skapar en profil görs en jämförelse för att kontrollera om det redan finns en princip med samma namn. Jämförelsen kan inte skilja mellan namn som är desamma förutom för tecken med accent. Vi antar att principen redan har lagts till i databasen och att den nya inte har lagts till.
@@ -392,7 +396,7 @@ Inbjudna användare kan bara ta bort profiler om administratören aktiverar den 
 
 >[!NOTE]
 >
->Du måste använda klientprogrammet för att ta bort profiler från dokument. (Se hjälpen för Acrobat eller rätt Acrobat Reader DC-tillägg.)
+>Du måste använda klientprogrammet för att ta bort profiler från dokument. (Se hjälpen för Acrobat eller motsvarande Acrobat Reader DC-tillägg.)
 
 ## Sortera principlistan {#sort-the-policy-list}
 
