@@ -87,6 +87,7 @@ Egenskapsindexet är vanligtvis användbart för frågor som har egenskapsbegrä
 
    * **typ:**  `property` (av typen String)
    * **propertyNames:**  `jcr:uuid` (av typen Namn)
+
    I det här exemplet indexeras `jcr:uuid` egenskapen, vars jobb är att visa den universellt unika identifieraren (UUID) för noden som den är kopplad till.
 
 1. Spara ändringarna.
@@ -211,6 +212,7 @@ Om du vill använda någon av de färdiga analysverktygen kan du konfigurera den
    * **Namn:** `class`
    * **Typ:** `String`
    * **Värde:** `org.apache.lucene.analysis.standard.StandardAnalyzer`
+
    Värdet är namnet på den analyserarklass som du vill använda.
 
    Du kan också ange att analyseraren ska användas med en specifik lucene-version genom att använda den valfria `luceneMatchVersion` strängegenskapen. Ett giltigt syntaxvärde för användning med Lucene 4.7 är:
@@ -218,6 +220,7 @@ Om du vill använda någon av de färdiga analysverktygen kan du konfigurera den
    * **Namn:** `luceneMatchVersion`
    * **Typ:** `String`
    * **Värde:** `LUCENE_47`
+
    Om `luceneMatchVersion` inte anges kommer Oak att använda den version av Lucene som levereras med.
 
 1. Om du vill lägga till en stoppordsfil i analyskonfigurationerna kan du skapa en ny nod under den med följande egenskaper: `default`
@@ -285,7 +288,7 @@ Syftet med Solr-indexet är i huvudsak fulltextsökning, men det kan också anv�
 
 Integrationen i AEM sker på databasnivå så att Solr är ett av de möjliga index som kan användas i Oak, den nya databasimplementeringen som levererades med AEM.
 
-Den kan konfigureras för att fungera som en inbäddad server med AEM-instansen eller som en fjärrserver.
+Den kan konfigureras för att fungera som en inbäddad server med AEM eller som en fjärrserver.
 
 ### Konfigurera AEM med en inbäddad Solr-server {#configuring-aem-with-an-embedded-solr-server}
 
@@ -293,7 +296,7 @@ Den kan konfigureras för att fungera som en inbäddad server med AEM-instansen 
 >
 >Använd inte en inbäddad Solr-server i en produktionsmiljö. Det ska endast användas i utvecklingsmiljö.
 
-AEM kan användas med en inbäddad Solr-server som kan konfigureras via webbkonsolen. I det här fallet körs Solr-servern i samma JVM som den AEM-instans som den är inbäddad i.
+AEM kan användas med en inbäddad Solr-server som kan konfigureras via webbkonsolen. I det här fallet körs Solr-servern i samma JVM som den AEM instansen den är inbäddad i.
 
 Du kan konfigurera den inbäddade Solr-servern genom att:
 
@@ -305,7 +308,7 @@ Du kan konfigurera den inbäddade Solr-servern genom att:
 
    >[!NOTE]
    >
-   >Konfigurationen av Solr-arbetskatalogen (solr.home.path) söker efter en mapp med samma namn i AEM-installationsmappen.
+   >Konfigurationen av Solr-arbetskatalogen (solr.home.path) söker efter en mapp med samma namn i AEM installationsmapp.
 
 1. Öppna CRXDE och logga in som administratör.
 1. Lägg till en nod med namnet **solnodex** av typen **oak:QueryIndexDefinition** under **oak:index** med följande egenskaper:
@@ -316,17 +319,19 @@ Du kan konfigurera den inbäddade Solr-servern genom att:
 
 1. Spara ändringarna.
 
-### Konfigurera AEM med en enda fjärrserver för Solr {#configuring-aem-with-a-single-remote-solr-server}
+### Konfigurera AEM med en enda fjärr-Solr-server {#configuring-aem-with-a-single-remote-solr-server}
 
-AEM kan även konfigureras för att fungera med en Solr-fjärrserverinstans:
+AEM kan också konfigureras för att fungera med en fjärrinstans av en Solr-server:
 
 1. Hämta och extrahera den senaste versionen av Solr. Mer information om hur du gör detta finns i dokumentationen [för installation av](https://cwiki.apache.org/confluence/display/solr/Installing+Solr)Apache Solr.
 1. Skapa nu två Solr-kort. Du kan göra detta genom att skapa mappar för varje delning i mappen där Solr har uppgraderats:
 
    * Skapa mappen för det första delfönstret:
+
    `<solrunpackdirectory>\aemsolr1\node1`
 
    * Skapa mappen för den andra delningen:
+
    `<solrunpackdirectory>\aemsolr2\node2`
 
 1. Leta reda på exempelinstansen i Solr-paketet. Den finns vanligtvis i en mapp som heter &quot; `example`&quot; i paketets rot.
@@ -379,7 +384,7 @@ AEM kan även konfigureras för att fungera med en Solr-fjärrserverinstans:
 
 #### Rekommenderad konfiguration för Solr {#recommended-configuration-for-solr}
 
-Nedan visas ett exempel på en baskonfiguration som kan användas med alla tre Solr-distributioner som beskrivs i den här artikeln. Den passar de dedikerade egenskapsindexen som redan finns i AEM och bör inte användas med andra program.
+Nedan visas ett exempel på en baskonfiguration som kan användas med alla tre Solr-distributioner som beskrivs i den här artikeln. Den rymmer de dedikerade egenskapsindex som redan finns i AEM och bör inte användas med andra program.
 
 För att kunna använda det på rätt sätt måste du placera innehållet i arkivet direkt i Solr Home Directory. Vid distributioner med flera noder bör den placeras direkt under rotmappen för varje nod.
 
@@ -387,14 +392,14 @@ Rekommenderade Solr-konfigurationsfiler
 
 [Hämta fil](assets/recommended-conf.zip)
 
-### AEM Indexing Tools {#aem-indexing-tools}
+### AEM {#aem-indexing-tools}
 
-AEM 6.1 integrerar även två indexeringsverktyg som finns i AEM 6.0 som en del av Adobe Consulting Services Commons-verktygen:
+AEM 6.1 integrerar även två indexeringsverktyg som finns i AEM 6.0 som en del av verktygsuppsättningen Adobe Consulting Services Commons:
 
 1. **Förklara frågan**, ett verktyg som hjälper administratörer att förstå hur frågor utförs.
 1. **Oak Index Manager**, ett webbanvändargränssnitt för att underhålla befintliga index.
 
-Nu kan du nå dem genom att gå till **Verktyg - Åtgärder - Kontrollpanel - Diagnos** på AEM-välkomstskärmen.
+Nu kan du nå dem genom att gå till **Verktyg - Åtgärder - Kontrollpanel - Diagnos** på AEM välkomstskärm.
 
 Mer information om hur du använder dem finns i dokumentationen [till](/help/sites-administering/operations-dashboard.md)kontrollpanelen för åtgärder.
 
@@ -426,7 +431,7 @@ Om du vill aktivera loggning måste du aktivera loggar på **DEBUG** -nivå för
 * org.apache.jackrabbit.oak.query
 * com.day.cq.search
 
-Kategorin **com.day.cq.search** gäller bara om du använder verktyget AEM provided Query Builder.
+Kategorin **com.day.cq.search** gäller bara om du använder det AEM tillhandahållna QueryBuilder-verktyget.
 
 >[!NOTE]
 >
