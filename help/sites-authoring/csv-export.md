@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: d4473758-674a-42d6-923a-b536f7f9c1f7
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 15%
 
 ---
 
@@ -27,7 +30,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 >
 >Hämtningsfunktionen och standarddestinationen för webbläsaren används.
 
-Med guiden Skapa CSV-export kan du välja:
+I guiden Skapa CSV-export kan du välja:
 
 * Egenskaper att exportera
 
@@ -59,8 +62,8 @@ Alternativet Skapa **CSV-export** är tillgängligt när du bläddrar i **webbpl
 
 Så här skapar du en CSV-export:
 
-1. Öppna konsolen **Platser** och navigera till önskad plats om det behövs.
-1. I verktygsfältet väljer du **Skapa** och sedan **CSV-export** för att öppna guiden:
+1. Öppna konsolen **Sites** och navigera till önskad plats om det behövs.
+1. From the toolbar, select **Create** then **CSV Export** to open the wizard:
 
    ![screen_shot_2018-03-21at154758](assets/screen_shot_2018-03-21at154758.png)
 
