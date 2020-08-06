@@ -11,6 +11,9 @@ topic-tags: operations
 discoiquuid: bc06d9bd-af6c-47b1-b46f-aab990ef5816
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1048'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 En autentiseringsuppgift innehåller den privata nyckelinformation som behövs för att signera eller identifiera dokument. Ett certifikat är information om offentlig nyckel som du konfigurerar för förtroende. AEM Forms använder certifikat och autentiseringsuppgifter för flera syften:
 
-* I Acrobat Reader DC-tillägg används en autentiseringsuppgift för att aktivera användarrättigheter för Adobe Reader i PDF-dokument. (Se [Använda användningsrättigheter i PDF-dokument](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).)
+* Acrobat Reader DC-tillägg använder en autentiseringsuppgift för att aktivera Adobe Reader användarrättigheter i PDF-dokument. (Se [Använda användningsrättigheter i PDF-dokument](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).)
 * Signaturtjänsten får åtkomst till certifikat och autentiseringsuppgifter när den utför åtgärder som att signera PDF-dokument digitalt. (Se [Signera PDF-dokument](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)digitalt.)
 
 Du kan programmatiskt interagera med autentiseringsuppgiften med Trust Manager Java API. Du kan utföra följande uppgifter:
@@ -35,9 +38,9 @@ Du kan programmatiskt interagera med autentiseringsuppgiften med Trust Manager J
 
 ## Importera autentiseringsuppgifter med Trust Manager API {#importing-credentials-by-using-the-trust-manager-api}
 
-Du kan programmässigt importera autentiseringsuppgifter till AEM Forms med hjälp av Trust Manager API. Du kan till exempel importera en autentiseringsuppgift som används för att signera ett PDF-dokument. (Se [Signera PDF-dokument](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)digitalt).
+Du kan programmässigt importera en autentiseringsuppgift till AEM Forms med hjälp av Trust Manager API. Du kan till exempel importera en autentiseringsuppgift som används för att signera ett PDF-dokument. (Se [Signera PDF-dokument](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)digitalt).
 
-När du importerar en autentiseringsuppgift anger du ett alias för den. Aliaset används för att utföra en formuläråtgärd som kräver en autentiseringsuppgift. När du har importerat en inloggningsinformation kan du visa den i administrationskonsolen, vilket visas på följande bild. Observera att aliaset för autentiseringsuppgifterna är *säkert*.
+När du importerar en autentiseringsuppgift anger du ett alias för den. Aliaset används för att utföra en Forms-åtgärd som kräver en autentiseringsuppgift. När du har importerat en inloggningsinformation kan du visa den i administrationskonsolen, vilket visas på följande bild. Observera att aliaset för autentiseringsuppgifterna är *säkert*.
 
 ![ww_ww_truststore](assets/ww_ww_truststore.png)
 
@@ -63,14 +66,14 @@ Följande JAR-filer måste läggas till i projektets klassökväg:
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-truststore-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
+* adobe-utilities.jar (krävs om AEM Forms används i JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Mer information om var dessa JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa en autentiseringstjänstklient**
 
-Skapa en autentiseringstjänstklient innan du programmässigt kan importera en referens till AEM Forms. Mer information finns i [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+Skapa en autentiseringstjänstklient innan du programmässigt kan importera en autentiseringsuppgift till AEM Forms. Mer information finns i [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 **Referera till autentiseringsuppgifterna**
 
@@ -78,7 +81,7 @@ Referera till en autentiseringsuppgift som du vill importera till AEM Forms. Den
 
 **Utför importåtgärden**
 
-När du har refererat till autentiseringsuppgifterna importerar du dem till AEM Forms. Om autentiseringsuppgifterna inte kan importeras genereras ett undantag. När du importerar en autentiseringsuppgift anger du ett alias för den.
+När du har refererat till inloggningsuppgifterna importerar du dem till AEM Forms. Om autentiseringsuppgifterna inte kan importeras genereras ett undantag. När du importerar en autentiseringsuppgift anger du ett alias för den.
 
 **Se även**
 
@@ -94,11 +97,11 @@ När du har refererat till autentiseringsuppgifterna importerar du dem till AEM 
 
 ### Importera autentiseringsuppgifter med Java API {#import-credentials-using-the-java-api}
 
-Importera autentiseringsuppgifter till AEM Forms med Trust Manager API (Java):
+Importera en autentiseringsuppgift till AEM Forms med Trust Manager API (Java):
 
 1. Inkludera projektfiler
 
-   Inkludera JAR-klientfiler, t.ex. adobe-truststore-client.jar, i Java-projektets klassökväg.
+   Inkludera JAR-klientfiler, som adobe-truststore-client.jar, i Java-projektets klassökväg.
 
 1. Skapa en autentiseringstjänstklient
 
@@ -118,7 +121,7 @@ Importera autentiseringsuppgifter till AEM Forms med Trust Manager API (Java):
       * Ett strängvärde som anger aliasvärdet för autentiseringsuppgiften.
       * Den `com.adobe.idp.Document` instans som lagrar autentiseringsuppgifterna.
       * Ett strängvärde som anger lösenordet som är associerat med autentiseringsuppgifterna.
-      * Den strängmatris som innehåller användningsvärdet. Du kan till exempel ange det här värdet `truststore.usage.type.sign`. Om du vill importera autentiseringsuppgifter för Reader Extension anger du `truststore.usage.type.lcre`.
+      * Den strängmatris som innehåller användningsvärdet. Du kan till exempel ange det här värdet `truststore.usage.type.sign`. Om du vill importera autentiseringsuppgifter för tillägget Reader anger du `truststore.usage.type.lcre`.
 
 **Se även**
 
@@ -153,10 +156,10 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-truststore-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
+* adobe-utilities.jar (krävs om AEM Forms används i JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Mer information om var dessa JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa en autentiseringstjänstklient**
 
@@ -176,13 +179,13 @@ Om du vill ta bort en autentiseringsuppgift anger du det alias som motsvarar aut
 
 [Importera autentiseringsuppgifter med Java API](credentials.md#import-credentials-using-the-java-api)
 
-###  Ta bort autentiseringsuppgifter med Java API {#deleting-credentials-using-the-java-api}
+### Ta bort autentiseringsuppgifter med Java API {#deleting-credentials-using-the-java-api}
 
 Ta bort en autentiseringsuppgift från AEM Forms med Trust Manager API (Java):
 
 1. Inkludera projektfiler
 
-   Inkludera JAR-klientfiler, t.ex. adobe-truststore-client.jar, i Java-projektets klassökväg.
+   Inkludera JAR-klientfiler, som adobe-truststore-client.jar, i Java-projektets klassökväg.
 
 1. Skapa en autentiseringstjänstklient
 
