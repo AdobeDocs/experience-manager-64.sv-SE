@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 8556d20a-99bd-4942-b7b8-2db69f64e67c
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '673'
+ht-degree: 12%
 
 ---
 
@@ -21,9 +24,9 @@ När du redigerar kan du anropa arbetsflöden för att göra något på sidorna;
 
 När du använder arbetsflödet anger du följande information:
 
-* Arbetsflödet som ska användas.
+* Det arbetsflöde som ska användas.
 
-   Du kan tillämpa vilket arbetsflöde som helst (som du har tillgång till, enligt din AEM-administratörs anvisningar).
+   Du kan använda vilket arbetsflöde som helst (som du fått tillgång till av AEM-administratören).
 
 * Alternativt kan du använda en titel som hjälper till att identifiera arbetsflödesinstansen i en användares inkorg.
 * Arbetsflödets nyttolast. detta kan vara en eller flera sidor.
@@ -39,13 +42,14 @@ Arbetsflöden kan startas från:
 >
 >* [Använda arbetsflöden för DAM-resurser](/help/assets/assets-workflow.md).
 >* [Arbeta med projektarbetsflöden](/help/sites-authoring/projects-with-workflows.md).
+
 >
 
 
 
 >[!NOTE]
 >
->AEM-administratörer kan [starta arbetsflöden på flera andra sätt](/help/sites-administering/workflows-starting.md).
+>AEM kan [starta arbetsflöden på flera andra sätt](/help/sites-administering/workflows-starting.md).
 
 ## Starta ett arbetsflöde från platskonsolen {#starting-a-workflow-from-the-sites-console}
 
@@ -98,6 +102,7 @@ Du kan ange information:
    * **Arbetsflödets titel**
 
       * Du kan ange en titel för den här instansen så att du lättare kan identifiera den i ett senare skede.
+
    Beroende på arbetsflödesmodellen är följande alternativ också tillgängliga. Dessa gör att det paket som skapas som nyttolast kan behållas när arbetsflödet har slutförts.
 
    * **Behåll arbetsflödespaket**
@@ -106,7 +111,7 @@ Du kan ange information:
       * Du kan ange en rubrik för paketet för att underlätta identifieringen.
    >[!NOTE]
    >
-   >Alternativet **Behåll arbetsflödespaket** är tillgängligt när arbetsflödet har konfigurerats för [Multi Resource Support](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support) och flera resurser har valts.
+   >Alternativet **Behåll arbetsflödespaket** är tillgängligt när arbetsflödet har konfigurerats med stöd för flera resurser och flera resurser har valts.[](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)
 
    När du är klar använder du **Nästa** för att fortsätta.
 
@@ -117,21 +122,23 @@ Du kan ange information:
    * **Lägg till innehåll** för att öppna [sökvägsläsaren](/help/sites-authoring/author-environment-tools.md#path-browser) och välja ytterligare resurser, när du är i webbläsaren klickar/trycker du på **Välj** för att lägga till innehållet i arbetsflödesinstansen.
    * En befintlig resurs som visar ytterligare åtgärder:
 
-      * **Inkludera underordnade objekt** för att ange att underordnade för den resursen ska inkluderas i arbetsflödet.
+      * **Inkludera underordnade objekt** för att ange att underordnade resurser ska inkluderas i arbetsflödet.
 
          En dialogruta öppnas där du kan förfina markeringen enligt:
 
          * Inkludera endast omedelbara barn.
          * Inkludera endast ändrade sidor.
          * Inkludera endast redan publicerade sidor.
+
          Alla underordnade objekt läggs till i listan över resurser som arbetsflödet gäller för.
 
       * **Ta bort markeringen** för att ta bort resursen från arbetsflödet.
+
    ![wf-53](assets/wf-53.png)
 
    >[!NOTE]
    >
-   >Om du lägger till ytterligare resurser kan du använda **Bakåt** för att justera inställningen för **Behåll arbetsflödespaket** i **egenskapssteget** .
+   >Om du lägger till ytterligare resurser kan du använda **Bakåt** för att justera inställningen för **Behåll arbetsflödespaket** i steget **Egenskaper**.
 
 1. Använd **Skapa** för att stänga guiden och skapa arbetsflödesinstansen. Ett meddelande visas i webbplatskonsolen.
 
