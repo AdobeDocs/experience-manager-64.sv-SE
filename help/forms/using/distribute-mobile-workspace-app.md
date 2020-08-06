@@ -1,6 +1,6 @@
 ---
-title: Distribuera appen AEM Forms
-seo-title: Distribuera appen AEM Forms
+title: Distribuera AEM Forms-app
+seo-title: Distribuera AEM Forms-app
 description: Använd MDM (Mobile Device Management) för storskalig driftsättning av appar på mobila enheter.
 seo-description: Använd MDM (Mobile Device Management) för storskalig driftsättning av appar på mobila enheter.
 uuid: 8a2ce42b-5e9b-42c1-a945-c069f6152f6e
@@ -10,11 +10,14 @@ topic-tags: forms-app
 discoiquuid: 5756cb52-dd47-4277-981c-fd0af9a20638
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '261'
+ht-degree: 0%
 
 ---
 
 
-# Distribuera appen AEM Forms {#distribute-aem-forms-app}
+# Distribuera AEM Forms-app {#distribute-aem-forms-app}
 
 MDM (Mobile Device Management) möjliggör storskalig driftsättning av appar på mobila enheter.
 
@@ -33,9 +36,9 @@ En MDM-lösning tillsammans med hantering av mobilappar gör att du kan hantera 
 
 MDM-administratören kan överföra både ipa- och apk-filer till MDM-servern och styra vilka användare som kan komma åt ipa- eller apk-filerna. Administratören kan också styra profilinställningarna för respektive program.
 
-## Profilinställningar som påverkar appen AEM Forms {#profile-settings-affecting-the-aem-forms-app-br}
+## Profilinställningar som påverkar AEM Forms-appen {#profile-settings-affecting-the-aem-forms-app-br}
 
-Följande profilinställningar på enheten påverkar funktionen för appen AEM Forms på din enhet:
+Följande profilinställningar på enheten påverkar hur AEM Forms-appen fungerar på din enhet:
 
 * **Tillåt användning av kameran** i avsnittet **Enhetsfunktioner**
 
