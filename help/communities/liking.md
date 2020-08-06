@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: dcde4e03-78ab-4779-96a1-05ac41f14701
 translation-type: tm+mt
 source-git-commit: f78f83ef3b9373bcbee3e5179a9bbec4d9462255
+workflow-type: tm+mt
+source-wordcount: '224'
+ht-degree: 1%
 
 ---
 
@@ -39,15 +42,21 @@ Markera den monterade `Liking` komponent som du vill öppna och välj den `Confi
 
 ![chlimage_1-94](assets/chlimage_1-94.png)
 
-Under fliken **[!UICONTROL Texter och etiketter]** anger du vilka egenskaper som ska användas för att spela in gilla-markeringar.
+Ange de egenskaper som ska användas för att spela in gilla-markeringar på fliken **[!UICONTROL Texts & Labels]** .
 
 ![chlimage_1-95](assets/chlimage_1-95.png)
 
-* **[!UICONTROL Positiv svarsetikett]**(*obligatoriskt*) Egenskapsnamnet för ett positivt svar.
+* **[!UICONTROL Positive Response Label]**
+(
+*Obligatoriskt*) Egenskapsnamnet för ett positivt svar.
 
-* **[!UICONTROL Negativ svarsetikett]**(*obligatoriskt*) Egenskapsnamnet för ett negativt svar.
+* **[!UICONTROL Negative Response Label]**
+(
+*Obligatoriskt*) Egenskapsnamnet för ett negativt svar.
 
-* **[!UICONTROL Tally Name]**(*Required*) The internal, identifier identifier property name for this instance of a vobe component.
+* **[!UICONTROL Tally Name]**
+(
+*Obligatoriskt*) Det interna, identifierbara egenskapsnamnet för den här instansen av en röstkomponent.
 
 ## Site Visitor Experience {#site-visitor-experience}
 
