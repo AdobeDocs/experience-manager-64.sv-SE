@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8f2714bc-9d6c-4e6f-97a1-3b4f977348c5
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1630'
+ht-degree: 6%
 
 ---
 
@@ -48,6 +51,7 @@ Du kan även publicera/avpublicera en sida direkt eller vid ett fördefinierat d
 >* Ett arbetsflöde kommer att utlösas för att meddela lämplig person om din begäran om publicering.
 >* Det här [arbetsflödet kan ha anpassats](/help/sites-developing/workflows-models.md) av ditt utvecklingsteam.
 >* Ett meddelande visas kort för att meddela dig att arbetsflödet har utlösts.
+
 >
 
 
@@ -74,6 +78,7 @@ Om du redigerar en sida kan den publiceras direkt från redigeraren.
 
       * Ange vilket av resurserna/taggarna/etc. du vill publicera tillsammans med sidan och sedan använda **Publicera** för att slutföra processen.
       * Använd **Avbryt** om du vill avbryta åtgärden.
+
    ![chlimage_1-50](assets/chlimage_1-50.png)
 
 1. Om du väljer **Publicera** kommer sidan att replikeras till publiceringsmiljön. I sidredigeraren visas en informationsbanderoll som bekräftar publiceringsåtgärden.
@@ -97,7 +102,7 @@ I platskonsolen finns det två alternativ för publicering:
 
 #### Snabbpublicering {#quick-publish}
 
-**Snabbpublicering** är avsett för enkla ärenden och publicerar de markerade sidorna direkt utan ytterligare interaktion. Därför kommer alla icke-publicerade referenser också att publiceras automatiskt.
+**Snabbpublicering** är avsett för enkla ärenden och publicerar den eller de markerade sidorna direkt utan ytterligare interaktion. Därför kommer alla icke-publicerade referenser också att publiceras automatiskt.
 
 Så här publicerar du en sida med Snabbpublicering:
 
@@ -129,6 +134,7 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
    * Välj om du vill publicera eller avpublicera de markerade sidorna.
    * Välj om du vill utföra åtgärden nu eller vid ett senare datum.
+
    När du publicerar senare startas ett arbetsflöde för publicering av den eller de valda sidorna vid den angivna tidpunkten. Om du inte publicerar senare startas ett arbetsflöde för att avpublicera den eller de valda sidorna vid en viss tidpunkt.
 
    Om du vill avbryta en publicering/avpublicering senare går du till [arbetsflödeskonsolen](/help/sites-administering/workflows.md) och avslutar motsvarande arbetsflöde.
@@ -141,7 +147,7 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
    ![screen_shot_2018-03-21at153354](assets/screen_shot_2018-03-21at153354.png)
 
-   Du kan använda knappen **Lägg till innehåll** för att lägga till ytterligare sidor i listan över sidor som ska publiceras om du inte har valt någon sida innan du startar guiden Hantera publikation.
+   Du kan använda knappen **Lägg till innehåll** för att lägga till ytterligare sidor i listan över sidor som ska publiceras, om du inte valde någon innan du startade guiden Hantera publikation.
 
    När du klickar på knappen Lägg till innehåll startas [sökvägsläsaren](/help/sites-authoring/author-environment-tools.md#path-browser) så att du kan välja innehåll.
 
@@ -152,6 +158,7 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
    * Inkludera dess underordnade.
    * Ta bort den från markeringen.
    * Hantera dess publicerade referenser.
+
    ![screen_shot_2018-03-21at153450](assets/screen_shot_2018-03-21at153450.png)
 
    När du klickar på **Inkludera underordnade** öppnas en dialogruta där du kan:
@@ -159,6 +166,7 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
    * Inkludera endast omedelbara barn.
    * Inkludera endast ändrade sidor.
    * Inkludera endast redan publicerade sidor.
+
    Klicka på **Lägg** till för att lägga till underordnade sidor i listan över sidor som ska publiceras eller avpubliceras baserat på de valda alternativen. Klicka på **Avbryt** om du vill avbryta markeringen och återgå till guiden.
 
    ![chlimage_1-53](assets/chlimage_1-53.png)
@@ -196,7 +204,8 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
    * Definiera arbetsflödets rubrik.
    * Behåll arbetsflödespaketet, förutsatt att arbetsflödet har stöd [för](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)flera resurser.
    * Definiera en titel på arbetsflödespaketet om alternativet att behålla arbetsflödespaketet har valts.
-   Klicka på **Publicera** eller **Publicera senare **för att slutföra publikationen.
+
+   Click **Publish** or **Publish Later **to complete the publication.
 
    ![chlimage_1-54](assets/chlimage_1-54.png)
 
@@ -244,6 +253,7 @@ Du kan använda alternativet [Hantera publikation](/help/sites-authoring/publish
 
    * Inkludera endast omedelbart underordnade
    * Inkludera endast redan publicerade sidor
+
    Dessa alternativ är markerade som standard, så du måste komma ihåg att avmarkera dem. Klicka på **Lägg till** för att bekräfta och lägga till innehållet i publikationen/avpublikationen.
 
    ![chlimage_1-57](assets/chlimage_1-57.png)
@@ -264,7 +274,7 @@ Du kan ange en sidas publiceringsstatus:
 
    ![screen_shot_2018-03-21at154336](assets/screen_shot_2018-03-21at154336.png)
 
-   Publiceringsstatusen visas i [kort](/help/sites-authoring/basic-handling.md#card-view)-, [kolumn](/help/sites-authoring/basic-handling.md#column-view)- och [listvyer](/help/sites-authoring/basic-handling.md#list-view) i webbplatskonsolen.
+   Publikationsstatusen visas i [kort](/help/sites-authoring/basic-handling.md#card-view)-, [kolumn](/help/sites-authoring/basic-handling.md#column-view)- och [list](/help/sites-authoring/basic-handling.md#list-view)vyerna i Sites-konsolen.
 
 * På [tidslinjen](/help/sites-authoring/basic-handling.md#timeline)
 
