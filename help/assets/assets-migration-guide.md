@@ -1,16 +1,19 @@
 ---
 title: Migrera resurser till Adobe Experience Manager Assets i grupp
-description: Hur man lägger in resurser i AEM, lägger in metadata, skapar renderingar och aktiverar dem för att publicera instanser.
+description: Så här lägger du in resurser i AEM, använder metadata, genererar renderingar och aktiverar dem för att publicera instanser.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 976d037d701eb7cc61a62e14e554675961d6179c
+workflow-type: tm+mt
+source-wordcount: '1789'
+ht-degree: 11%
 
 ---
 
 
 # Guide för resursmigrering {#assets-migration-guide}
 
-När du migrerar resurser till AEM finns det flera steg att tänka på. Extrahering av resurser och metadata från det aktuella hemmet ligger utanför det här dokumentets räckvidd eftersom det varierar mycket mellan implementeringar. I det här dokumentet beskrivs i stället hur du hämtar dessa resurser till AEM, använder deras metadata, genererar återgivningar och aktiverar eller publicerar resurserna.
+När du migrerar resurser till AEM finns det flera steg att tänka på. Extrahering av resurser och metadata från det aktuella hemmet ligger utanför det här dokumentets räckvidd eftersom det varierar mycket mellan implementeringar. I det här dokumentet beskrivs hur du hämtar dessa resurser till AEM, använder deras metadata, skapar återgivningar och aktiverar eller publicerar resurserna.
 
 ## Förutsättningar {#prerequisites}
 
@@ -18,20 +21,21 @@ Innan du utför något av stegen som beskrivs nedan ska du granska och implement
 
 >[!NOTE]
 >
->Följande verktyg för resursmigrering ingår inte i Adobe Experience Manager. Adobes kundtjänst stöder inte dessa verktyg.
+>Följande verktyg för resursmigrering ingår inte i Adobe Experience Manager. Adobe kundtjänst stöder inte dessa verktyg.
 >
 >* ACS AEM Tools Tag Maker
 >* ACS AEM Tools CSV Asset Importer
 >* ACS Commons - massarbetsflödeshanterare
 >* Snabbåtgärdshanteraren för ACS-kommandon
 >* Syntetiskt arbetsflöde
+
 >
 >
 Programvaran är öppen källkod och täcks av [Apache v2-licensen](https://adobe-consulting-services.github.io/pages/license.html). Om du vill ställa en fråga eller rapportera ett problem går du till [GitHub Issues for ACS AEM Tools](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues) eller [ACS AEM Commons](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues).
 
 ## Migrera till AEM {#migrate-to-aem}
 
-Att migrera resurser till AEM kräver flera steg och bör ses som en process i flera steg. Flyttningsfaserna är följande:
+Att migrera resurser till AEM kräver flera steg och bör betraktas som en process i flera steg. Flyttningsfaserna är följande:
 
 1. Inaktivera arbetsflöden.
 1. Läs in taggar.
@@ -48,7 +52,7 @@ Inaktivera startfunktionerna för `DAM Update Asset` arbetsflödet innan du star
 
 ### Läs in taggar {#load-tags}
 
-Du kanske redan har en tagg-taxonomi på plats som du tillämpar på dina bilder. Verktyg som CSV-resursimporteraren och metadataprofilfunktionerna kan hjälpa dig att automatisera användningen av taggar i resurser. Lägg till taggarna i Experience Manager innan du gör det. Med [ACS AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) -funktionen kan du fylla i taggar med hjälp av ett Microsoft Excel-kalkylblad som är inläst i systemet.
+Du kanske redan har en tagg-taxonomi på plats som du tillämpar på dina bilder. Verktyg som CSV-resursimporteraren och metadataprofilfunktionerna kan hjälpa dig att automatisera användningen av taggar i resurser. Lägg till taggarna i Experience Manager före detta. Med [ACS AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) kan du fylla i taggar med hjälp av ett Microsoft Excel-kalkylblad som är inläst i systemet.
 
 ### Ingående resurser {#ingest-assets}
 
@@ -58,7 +62,7 @@ Det finns två sätt att läsa in resurser i systemet: en push-baserad metod med
 
 #### Tryck igenom HTTP {#push-through-http}
 
-Adobes Managed Services-team använder ett verktyg som kallas Glutton för att läsa in data i kundmiljöer. Glutton är ett litet Java-program som läser in alla resurser från en katalog till en annan katalog i en AEM-instans. I stället för Glutton kan du också använda verktyg som Perl-skript för att publicera resurserna i databasen.
+Adobe Managed Services-team använder ett verktyg som heter Glutton för att läsa in data i kundmiljöer. Glutton är ett litet Java-program som läser in alla resurser från en katalog till en annan katalog i en AEM. I stället för Glutton kan du också använda verktyg som Perl-skript för att publicera resurserna i databasen.
 
 Det finns två nackdelar med att använda metoden att gå igenom https:
 
@@ -69,13 +73,13 @@ Det andra sättet att importera resurser är att hämta resurser från det lokal
 
 #### Dra från det lokala filsystemet {#pull-from-the-local-file-system}
 
-CSV-importeraren [för](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) ACS AEM-verktyg hämtar resurser från filsystemet och metadata för resurser från en CSV-fil för resursimporten. API:t för AEM Asset Manager används för att importera resurserna till systemet och tillämpa de konfigurerade metadataegenskaperna. Resurser monteras helst på servern via en nätverksfilmontering eller via en extern enhet.
+CSV-importeraren [för](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) ACS AEM hämtar resurser från filsystemet och metadata för resurser från en CSV-fil för resursimporten. AEM Asset Manager API används för att importera resurserna till systemet och använda de konfigurerade metadataegenskaperna. Resurser monteras helst på servern via en nätverksfilmontering eller via en extern enhet.
 
 När resurser inte överförs via ett nätverk förbättras prestandan avsevärt. Den här metoden är vanligtvis den mest effektiva metoden för att läsa in resurser i databasen. Dessutom kan du importera alla resurser och metadata i ett enda steg eftersom verktyget har stöd för metadatahämtning. Du behöver inte utföra något annat steg för att använda metadata, till exempel använda ett separat verktyg.
 
 ### Bearbeta återgivningar {#process-renditions}
 
-När du har läst in resurserna i systemet måste du bearbeta dem via arbetsflödet DAM Update Asset för att extrahera metadata och generera renderingar. Innan du utför det här steget måste du duplicera och ändra arbetsflödet för DAM-uppdatering av resurser efter dina behov. Vissa steg i standardarbetsflödet är kanske inte nödvändiga för dig, till exempel Scene7 PTIFF-generering eller InDesign-serverintegrering.
+När du har läst in resurserna i systemet måste du bearbeta dem via arbetsflödet DAM Update Asset för att extrahera metadata och generera renderingar. Innan du utför det här steget måste du duplicera och ändra arbetsflödet för DAM-uppdatering av resurser efter dina behov. Vissa steg i standardarbetsflödet är kanske inte nödvändiga för dig, till exempel Scene7 PTIFF-generering eller serverintegrering med InDesign.
 
 När du har konfigurerat arbetsflödet efter dina behov kan du utföra det på två sätt:
 
@@ -84,7 +88,7 @@ När du har konfigurerat arbetsflödet efter dina behov kan du utföra det på t
 
 ### Aktivera resurser {#activate-assets}
 
-För distributioner som har en publiceringsnivå måste du aktivera resurserna i publiceringsgruppen. Även om Adobe rekommenderar att du kör mer än en publiceringsinstans är det mest effektivt att replikera alla resurser till en publiceringsinstans och sedan klona den instansen. När du aktiverar ett stort antal resurser kan du behöva ingripa efter att ha aktiverat ett träd. Därför: När aktiveringar utlöses läggs objekt till i kön för delningsuppgifter/händelser. När storleken på den här kön börjar bli över cirka 40 000 objekt tar det dramatiskt lång tid att bearbeta. När storleken på den här kön överstiger 100 000 objekt börjar systemstabiliteten försämras.
+För distributioner som har en publiceringsnivå måste du aktivera resurserna i publiceringsgruppen. Adobe rekommenderar att du kör mer än en publiceringsinstans, men det är mest effektivt att replikera alla resurser till en publiceringsinstans och sedan klona den instansen. När du aktiverar ett stort antal resurser kan du behöva ingripa efter att ha aktiverat ett träd. Därför: När aktiveringar utlöses läggs objekt till i kön för delningsuppgifter/händelser. När storleken på den här kön börjar bli över cirka 40 000 objekt tar det dramatiskt lång tid att bearbeta. När storleken på den här kön överstiger 100 000 objekt börjar systemstabiliteten försämras.
 
 Du kan lösa det här problemet genom att använda [Snabb Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) för att hantera resursreplikering. Detta fungerar utan att använda Sling-köerna, vilket sänker overheadkostnaderna samtidigt som arbetsbelastningen begränsas för att förhindra att servern blir överbelastad. Ett exempel på hur du använder FAM för att hantera replikering visas på funktionens dokumentationssida.
 
@@ -94,7 +98,7 @@ För någon av dessa metoder är caveat att resurserna i författarinstansen int
 
 >[!NOTE]
 >
->Adobe underhåller eller stöder inte Grabbit.
+>Adobe stöder inte Grabbit.
 
 ### Klona publicering {#clone-publish}
 
@@ -112,20 +116,20 @@ När resurserna har aktiverats kan du klona publiceringsinstansen och skapa så 
 
 När migreringen är klar bör startarna för DAM Update Asset-arbetsflödena återaktiveras för att stödja generering av återgivningar och metadataextrahering för den dagliga systemanvändningen.
 
-## Migrera resurser mellan AEM-distributioner {#migrate-between-aem-instances}
+## Migrera resurser över AEM {#migrate-between-aem-instances}
 
-Även om det inte är nästan lika vanligt behöver du ibland migrera stora mängder data från en AEM-instans till en annan. När du till exempel utför en AEM-uppgradering uppgraderar du maskinvaran eller migrerar till ett nytt datacenter, till exempel med en AMS-migrering.
+Även om det inte är nästan lika vanligt behöver du ibland migrera stora mängder data från en AEM till en annan instans. När du till exempel utför en AEM uppgradering uppgraderar du maskinvaran eller migrerar till ett nytt datacenter, till exempel med en AMS-migrering.
 
-I det här fallet är dina resurser redan ifyllda med metadata och återgivningar har redan genererats. Du kan helt enkelt fokusera på att flytta resurser från en instans till en annan. När du migrerar mellan AEM-instanser utför du följande steg:
+I det här fallet är dina resurser redan ifyllda med metadata och återgivningar har redan genererats. Du kan helt enkelt fokusera på att flytta resurser från en instans till en annan. När du migrerar mellan AEM instanser utför du följande steg:
 
 1. Inaktivera arbetsflöden: Eftersom du migrerar återgivningar tillsammans med våra resurser, vill du inaktivera arbetsflödesstarterna för DAM Update Asset.
 
-1. Migrera taggar: Eftersom du redan har taggar inlästa i AEM-källinstansen kan du skapa dem i ett innehållspaket och installera paketet på målinstansen.
+1. Migrera taggar: Eftersom du redan har taggar inlästa i AEM kan du skapa dem i ett innehållspaket och installera paketet på målinstansen.
 
-1. Migrera resurser: Det finns två verktyg som rekommenderas för att flytta resurser från en AEM-instans till en annan:
+1. Migrera resurser: Det finns två verktyg som rekommenderas för att flytta resurser från en AEM till en annan:
 
    * **Med Vault Remote Copy**, eller `vlt rcp`, kan du använda VLT i ett nätverk. Du kan ange en käll- och målkatalog och hämta alla databasdata från en instans och läsa in dem i en annan. Vlt rcp finns på [https://jackrabbit.apache.org/filevault/rcp.html](https://jackrabbit.apache.org/filevault/rcp.html)
-   * **Grabbit** är ett verktyg för innehållssynkronisering med öppen källkod som utvecklats av Time Warner Cable för deras AEM-implementering. Eftersom den använder kontinuerliga dataströmmar har den en lägre fördröjning jämfört med vlt rcp och kräver en hastighetsförbättring på två till tio gånger snabbare än vlt rcp. Grabbit har även stöd för synkronisering av deltainnehåll, vilket gör att det kan synkronisera ändringar efter att en första migreringspass har slutförts.
+   * **Grabbit** är ett verktyg för innehållssynkronisering med öppen källkod som utvecklats av Time Warner Cable för AEM implementering. Eftersom den använder kontinuerliga dataströmmar har den en lägre fördröjning jämfört med vlt rcp och kräver en hastighetsförbättring på två till tio gånger snabbare än vlt rcp. Grabbit har även stöd för synkronisering av deltainnehåll, vilket gör att det kan synkronisera ändringar efter att en första migreringspass har slutförts.
 
 1. Aktivera resurser: Följ instruktionerna för [aktivering av resurser](#activate-assets) som dokumenterats för den första migreringen till AEM.
 
