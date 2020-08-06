@@ -1,8 +1,8 @@
 ---
-title: Integrera AEM Forms-arbetsytekomponenter i webbprogram
-seo-title: Integrera AEM Forms-arbetsytekomponenter i webbprogram
-description: Hur du återanvänder AEM Forms-arbetsytekomponenter i dina egna webbprogram för att utnyttja funktionaliteten och få en nära integrering.
-seo-description: Hur du återanvänder AEM Forms-arbetsytekomponenter i dina egna webbprogram för att utnyttja funktionaliteten och få en nära integrering.
+title: Integrera AEM Forms arbetsytekomponenter i webbprogram
+seo-title: Integrera AEM Forms arbetsytekomponenter i webbprogram
+description: Hur du återanvänder AEM Forms arbetsytekomponenter i dina egna webbprogram för att utnyttja funktionaliteten och få en nära integrering.
+seo-description: Hur du återanvänder AEM Forms arbetsytekomponenter i dina egna webbprogram för att utnyttja funktionaliteten och få en nära integrering.
 uuid: bb9b8aa0-3f41-4f44-8eb7-944e778ee8a6
 contentOwner: robhagat
 content-type: reference
@@ -11,15 +11,18 @@ topic-tags: forms-workspace
 discoiquuid: 6be87939-007e-42c7-8a41-e34ac2b8bed4
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '370'
+ht-degree: 0%
 
 ---
 
 
-# Integrera AEM Forms-arbetsytekomponenter i webbprogram {#integrating-aem-forms-workspace-components-in-web-applications}
+# Integrera AEM Forms arbetsytekomponenter i webbprogram {#integrating-aem-forms-workspace-components-in-web-applications}
 
-Du kan använda [komponenter](/help/forms/using/description-reusable-components.md) på arbetsytan för AEM Forms i ditt eget webbprogram. I följande exempelimplementering används komponenter från ett AEM Forms-utvecklingspaket som är installerat på en CRX™-instans för att skapa ett webbprogram. Anpassa lösningen nedan efter dina specifika behov. Exempelimplementeringen återanvänder `UserInfo`, `FilterList`och `TaskList`komponenter i en webbportal.
+Du kan använda AEM Forms- [arbetsytekomponenter](/help/forms/using/description-reusable-components.md) i ditt eget webbprogram. I följande exempelimplementering används komponenter från ett dev-paket för AEM Forms-arbetsytan som är installerat på en CRX™-instans för att skapa ett webbprogram. Anpassa lösningen nedan efter dina specifika behov. Exempelimplementeringen återanvänder `UserInfo`, `FilterList`och `TaskList`komponenter i en webbportal.
 
-1. Logga in i CRXDE Lite-miljön på `https://[server]:[port]/lc/crx/de/`. Kontrollera att du har ett AEM Forms-arbetsytedev-paket installerat.
+1. Logga in i CRXDE Lite-miljön på `https://[server]:[port]/lc/crx/de/`. Kontrollera att du har ett AEM Forms Workspace dev-paket installerat.
 1. Skapa en bana `/apps/sampleApplication/wscomponents`.
 1. Kopiera css, bilder, js/libs, js/runtime och js/registry.js
 
@@ -51,11 +54,11 @@ Du kan använda [komponenter](/help/forms/using/description-reusable-components.
    <div class="taskListView gcomponent" data-name="tasklist"></div> 
    ```
 
-   Inkludera även de CSS-filer som krävs för AEM Forms-arbetsytekomponenter.
+   Inkludera även de CSS-filer som krävs för AEM Forms arbetsytekomponenter.
 
    >[!NOTE]
    >
-   >Varje komponent läggs till i komponenttaggen (med klasskomponent) vid återgivningen. Kontrollera att din hemsida innehåller dessa taggar. Mer information om de här grundläggande kontrolltaggarna finns i filen för `html.jsp` arbetsytan i AEM Forms.
+   >Varje komponent läggs till i komponenttaggen (med klasskomponent) vid återgivningen. Kontrollera att din hemsida innehåller dessa taggar. Se filen med arbetsytan i AEM Forms för mer information om de här grundläggande kontrolltaggarna. `html.jsp`
 
 1. Om du vill anpassa komponenterna kan du utöka de befintliga vyerna för den önskade komponenten enligt följande:
 
