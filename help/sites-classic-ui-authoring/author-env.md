@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8c747892-c5ba-4288-b5e7-75fd40d92f5c
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '286'
+ht-degree: 1%
 
 ---
 
@@ -31,23 +34,26 @@ Det finns två grafiska användargränssnitt som är tillgängliga via alla mode
 
 1. Klassiskt användargränssnitt
 
-   * Det här gränssnittet har alltid funnits i AEM i många år.
+   * Det här gränssnittet har alltid varit tillgängligt på AEM i många år.
    * Den är främst grön.
    * Den har utformats för användning på stationära enheter.
    * Den underhålls inte längre.
    * Följande dokumentation fokuserar på det här klassiska användargränssnittet. Mer information om redigering i det moderna, pekbaserade användargränssnittet finns i [standarddokumentationen](/help/sites-authoring/author.md)för redigering.
+
    ![chlimage_1-149](assets/chlimage_1-149.png)
 
 1. Pekaktiverat användargränssnitt
 
-   * Det här är det moderna standardgränssnittet för AEM.
+   * Det här är det moderna AEM.
    * Den är främst grå, med ett rent, platt gränssnitt.
    * Den är utformad för användning både på pekskärmar och på stationära enheter (optimerad för pekskärmar). Utseendet och känslan är densamma på alla enheter, även om [visning och val av resurser](/help/sites-authoring/basic-handling.md) skiljer sig något (tryck mot klick).
    * Se [standarddokumentationen](/help/sites-authoring/author.md) för redigering för mer information om hur du skapar med det pekbaserade användargränssnittet. Följande dokumentation fokuserar på det klassiska användargränssnittet.
 
    * Skrivbord:
+
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
    * Tablet-enheter (eller stationära datorer med en bredd på mindre än 1 024 pixlar):
+
    ![chlimage_1-7](assets/chlimage_1-7.jpeg)
 
