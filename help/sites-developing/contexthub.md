@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: acf5c17a-95b7-43ba-9734-241e20f4f374
 translation-type: tm+mt
 source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+workflow-type: tm+mt
+source-wordcount: '298'
+ht-degree: 1%
 
 ---
 
@@ -36,7 +39,7 @@ ContextHub lagrar kontextdata på klienten. Med ContextHub Javascript API kan du
 Varje ContextHub-butik är en instans av en fördefinierad lagringstyp:
 
 * ContextHub innehåller flera [exempelarkivtyper](/help/sites-developing/ch-samplestores.md).
-* Använd AEM-konsoler för att [skapa butiker](/help/sites-administering/contexthub-config.md#creating-a-contexthub-store).
+* Använd AEM konsoler för att [skapa butiker](/help/sites-administering/contexthub-config.md#creating-a-contexthub-store).
 * Utvecklare kan [skapa anpassade butikstyper](/help/sites-developing/ch-extend.md#creating-custom-store-candidates).
 * Utvecklare kan [komma åt lagringsdata](/help/sites-developing/ch-adding.md#interacting-with-contexthub-stores) via Javascript.
 
@@ -51,7 +54,7 @@ Med [ContextHub-verktygsfältet](/help/sites-authoring/ch-previewing.md) kan mar
 Varje ContextHub-gränssnittsmodul är en instans av en fördefinierad modultyp:
 
 * ContextHub innehåller flera [exempelmodultyper](/help/sites-developing/ch-samplemodules.md).
-* Använd AEM-konsoler för att [lägga till gränssnittsmoduler](/help/sites-administering/contexthub-config.md#adding-a-ui-module)och för att [gruppera dem i gränssnittslägen](/help/sites-administering/contexthub-config.md#adding-a-ui-mode).
+* Använd AEM för att [lägga till gränssnittsmoduler](/help/sites-administering/contexthub-config.md#adding-a-ui-module)och för att [gruppera dem i gränssnittslägen](/help/sites-administering/contexthub-config.md#adding-a-ui-mode).
 
 * Utvecklare kan [skapa anpassade modultyper](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types).
 
