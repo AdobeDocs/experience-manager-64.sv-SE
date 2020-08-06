@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '317'
+ht-degree: 9%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
 
 Med bildförinställningar kan resurser dynamiskt leverera bilder i olika storlekar, i olika format eller med andra bildegenskaper som genereras dynamiskt. Du kan välja en förinställning när du exporterar bilder. Då formateras bilderna också om till de specifikationer som administratören har angett.
 
-Du kan dessutom välja en bildförinställning som är responsiv (anges av knappen **[!UICONTROL RESS]** när du har valt den).
+Du kan dessutom välja en bildförinställning som är responsiv (anges av knappen när du har valt den). **[!UICONTROL RESS]**
 
 I det här avsnittet beskrivs hur du använder bildförinställningar. [Administratörer kan skapa och konfigurera bildförinställningar](managing-image-presets.md).
 
@@ -31,14 +34,14 @@ Du kan använda en bildförinställning på en bild när du vill förhandsvisa d
 
 **Så här använder du förinställningar** för Dynamic Media-bilder:
 
-1. Öppna resursen och tryck på den nedrullningsbara menyn till vänster och sedan på **[!UICONTROL Återgivningar]**.
+1. Öppna resursen och tryck på den nedrullningsbara menyn till vänster och tryck sedan på **[!UICONTROL Renditions]**.
 
    >[!NOTE]
    >
-   >* Statiska återgivningar visas i den övre halvan av rutan. Dynamiska återgivningar visas i den nedre halvan. Om du bara använder dynamiska återgivningar kan du använda URL-adressen för att visa bilden. Knappen **[!UICONTROL URL]** visas bara om du väljer en dynamisk återgivning. Knappen **[!UICONTROL RESS]** visas bara om du väljer en responsiv bildförinställning.
+   >* Statiska återgivningar visas i den övre halvan av rutan. Dynamiska återgivningar visas i den nedre halvan. Om du bara använder dynamiska återgivningar kan du använda URL-adressen för att visa bilden. Knappen visas bara om du väljer en dynamisk återgivning. **[!UICONTROL URL]** Knappen visas bara om du väljer en förinställning för responsiv bild. **[!UICONTROL RESS]**
       >
       >
-   * Systemet visar flera återgivningar när du väljer **[!UICONTROL Återgivningar]** i detaljvyn för en resurs. Du kan öka antalet förinställningar som visas. Se [Öka antalet bildförinställningar som visas](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display).
+   * Systemet visar flera återgivningar när du väljer **[!UICONTROL Renditions]** i detaljvyn för en resurs. Du kan öka antalet förinställningar som visas. See [Increasing the number of image presets that display](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display).
 
 
    ![chlimage_1-208](assets/chlimage_1-208.png)
@@ -47,9 +50,10 @@ Du kan använda en bildförinställning på en bild när du vill förhandsvisa d
 
    * Välj en dynamisk återgivning om du vill förhandsgranska bildförinställningen.
    * Tryck på **[!UICONTROL URL]**, **[!UICONTROL Embed]** eller **[!UICONTROL RESS]** för att visa popup-fönstret.
+
    >[!NOTE]
    >
-   >Om resursen *och* bildförinställningen ännu inte har publicerats är knappen **[!UICONTROL URL]** (eller **[!UICONTROL URL]** - och **[!UICONTROL RESS]** -knapparna) inte tillgänglig.
+   >Om resursen *och* bildförinställningen ännu inte har publicerats är knappen **[!UICONTROL URL]** (eller knapparna **[!UICONTROL URL]** och **[!UICONTROL RESS]**, i förekommande fall) inte tillgängliga.
    >
    >Observera också att bildförinställningar automatiskt publiceras på en Dynamic Media S7-server.
 
