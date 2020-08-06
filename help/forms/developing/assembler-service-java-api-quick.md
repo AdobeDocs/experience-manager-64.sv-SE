@@ -40,15 +40,15 @@ Java API Quick Start (SOAP) är tillgängligt för Assembler-tjänsten
 
 [Snabbstart (SOAP-läge): Skapa ett DDX-dokument dynamiskt med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Sammanställa PDF-portföljer med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
+[Snabbstart (SOAP-läge): Sammanställa PDF-Portfolio med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
 
 [Snabbstart (SOAP-läge): Sammanställa flera XDP-fragment med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstart som finns i Programmering med AEM Forms baseras på den Forms Server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart i Programmering med AEM Forms baseras på den Forms-server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Sammanställa ett PDF-dokument med Java API {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
 
@@ -1381,9 +1381,9 @@ public class AssemblePDFWithDynamicDDXSOAP {
 }
 ```
 
-## Snabbstart (SOAP-läge): Sammanställa PDF-portföljer med Java API {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}
+## Snabbstart (SOAP-läge): Sammanställa PDF-Portfolio med Java API {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}
 
-I följande Java-kodexempel skapas en PDF-portfölj. PDF-portföljen sparas som en PDF-fil med namnet *AssemblerResultPortfolio.pdf*. (Se [Sammanställa PDF-portföljer](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios).)
+I följande Java-kodexempel skapas en PDF-portfölj. PDF-portföljen sparas som en PDF-fil med namnet *AssemblerResultPortfolio.pdf*. (Se [Sammanställa PDF-Portfolio](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios).)
 
 ```as3
  /* 
