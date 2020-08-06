@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 5a96f5ea-6fe3-44b1-b314-14097b9e9c01
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '292'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
 
 Med Output kan du sammanfoga XML-formulärdata med en formulärdesign som skapats i Designer för att skapa ett dokumentutdataflöde i olika format. Utdataströmmen kan skickas till en nätverksskrivare, en lokal skrivare eller en diskfil
 
-Du kan använda utdatasidan i administrationskonsolen för att administrera utdatatjänsten. De inställningar du konfigurerar används vid körning när motsvarande inställningar inte har angetts via API:t för AEM-formulär. Konfigurationen som görs via AEM-formulären SDK åsidosätter inställningarna som konfigurerats med administrationskonsolen.
+Du kan använda utdatasidan i administrationskonsolen för att administrera utdatatjänsten. De inställningar du konfigurerar används vid körning när motsvarande inställningar inte har angetts via AEM-API:t för formulär. Konfigurationen som görs via AEM formulär SDK åsidosätter inställningarna som konfigurerats med administrationskonsolen.
 
 Mer information om utdatatjänsten finns i [Tjänstreferens](https://www.adobe.com/go/learn_aemforms_services_61).
 
