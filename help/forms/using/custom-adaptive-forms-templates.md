@@ -10,6 +10,9 @@ topic-tags: customization
 discoiquuid: c6115b64-e06f-4b5e-b7f9-876553c7627f
 translation-type: tm+mt
 source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+workflow-type: tm+mt
+source-wordcount: '1159'
+ht-degree: 0%
 
 ---
 
@@ -18,13 +21,13 @@ source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
 
 ## Förutsättningar {#prerequisites}
 
-* Förståelse för AEM [Page Template](/help/sites-authoring/templates.md) och [Adaptive Form Authoring](https://helpx.adobe.com/aem-forms/6-1/introduction-forms-authoring.html)
+* Förstå AEM [sidmall](/help/sites-authoring/templates.md) och [redigering av adaptiva formulär](https://helpx.adobe.com/aem-forms/6-1/introduction-forms-authoring.html)
 
-* Förståelse för AEM [Client Side Libraries](/help/sites-developing/clientlibs.md)
+* Förstå AEM [klientbibliotek](/help/sites-developing/clientlibs.md)
 
 ## Adaptiv formulärmall {#adaptive-form-template}
 
-En mall för adaptiva formulär är en specialiserad AEM-sidmall med vissa egenskaper och innehållsstruktur som används för att skapa adaptiva formulär. Mallen innehåller förkonfigurerade layouter, format och grundläggande innehållsstruktur.
+En mall för anpassat formulär är en AEM sidmall med vissa egenskaper och innehållsstruktur som används för att skapa anpassningsbara formulär. Mallen innehåller förkonfigurerade layouter, format och grundläggande innehållsstruktur.
 
 När du har skapat ett formulär återspeglas inte ändringarna i den ursprungliga mallinnehållsstrukturen i formuläret.
 
@@ -33,8 +36,8 @@ När du har skapat ett formulär återspeglas inte ändringarna i den ursprungli
 AEM QuickStart innehåller följande adaptiva formulärmallar:
 
 * Grundläggande: Gör att du kan skapa ett anpassat formulär med flera flikar i en tabbar-till-vänster-layout, där du kan besöka flikar i valfri slumpmässig ordning.
-* Grundläggande med Adobe Sign: Skapa ett formulär med flera flikar och guider. Den har en tabbar till vänster-layout där du kan gå till flikarna i valfri ordning. Det använder Adobe Document Cloud-designtjänster för signering och verifiering.
-* Tom mall: Gör att du kan skapa ett formulär utan sidhuvud, sidfot och ursprungligt innehåll. Du kan lägga till komponenter som textrutor, knappar och bilder. Med den tomma mallen kan du skapa ett formulär som du kan [bädda in på AEM-webbplatssidor](/help/forms/using/embed-adaptive-form-aem-sites.md).
+* Grundläggande med Adobe Sign: Skapa ett formulär med flera flikar och guider. Den har en tabbar till vänster-layout där du kan gå till flikarna i valfri ordning. Den använder Adobe Document Cloud designtjänster för signering och verifiering.
+* Tom mall: Gör att du kan skapa ett formulär utan sidhuvud, sidfot och ursprungligt innehåll. Du kan lägga till komponenter som textrutor, knappar och bilder. Med den tomma mallen kan du skapa ett formulär som du kan [bädda in AEM webbplatssidor](/help/forms/using/embed-adaptive-form-aem-sites.md).
 
 De här mallarna har egenskapen `sling:resourceType` inställd på motsvarande sidkomponent. Sidkomponenten återger CQ-sidan med adaptiv formulärbehållare, som i sin tur återger adaptiv form.
 
@@ -90,7 +93,7 @@ Utför följande steg för att skapa en anpassad mall, till exempel simpleEnroll
 
 1. Navigera till mappen /libs/fd/af/templates.
 1. Kopiera `simpleEnrollmentTemplate` noden.
-1. Navigera till mappen /apps/mycompany/templates. Högerklicka på den och välj **[!UICONTROL Klistra in]**.
+1. Navigera till mappen /apps/mycompany/templates. Högerklicka på den och välj **[!UICONTROL Paste]**.
 1. Om det behövs byter du namn på mallnoden som du kopierade. Du kan t.ex. byta namn på den som en registreringsmall.
 
 1. Navigera till platsen /apps/mycompany/templates/enrollment-template.
@@ -103,7 +106,7 @@ Utför följande steg för att skapa en anpassad mall, till exempel simpleEnroll
 
 1. Navigera till platsen /apps/mycompany/templates/enrollment-template/jcr:content.
 
-1. Öppna fliken **[!UICONTROL Egenskaper]** och ändra värdet för `cq:designPath` egenskapen till /etc/designs/mincompany.
+1. Öppna **[!UICONTROL Properties]** fliken och ändra värdet på `cq:designPath` egenskapen till /etc/designs/mincompany.
 
 1. Skapa nu en /etc/designs/mincompany-nod för `cq:Page` typen.
 
