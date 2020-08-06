@@ -11,6 +11,9 @@ topic-tags: developing
 discoiquuid: a03145f7-6697-4797-b73e-6f8d241ce469
 translation-type: tm+mt
 source-git-commit: 8c66f2b0053882bd1c998d8e01dbb0573881bc87
+workflow-type: tm+mt
+source-wordcount: '414'
+ht-degree: 3%
 
 ---
 
@@ -33,7 +36,7 @@ Den största skillnaden är att den här självstudiekursen kommer att skapa en 
 
 Börja med att skapa en enkel mall [för en](sites.md)community-webbplats.
 
-Från global navigering på en författarinstans väljer du **[!UICONTROL Verktyg > Communities > Site Templates]**.
+Från global navigering på en författarinstans väljer du **[!UICONTROL Tools > Communities > Site Templates]**.
 
 ![chlimage_1-82](assets/chlimage_1-82.png)
 
@@ -63,7 +66,7 @@ Från global navigering på en författarinstans väljer du **[!UICONTROL Verkty
 
 Skapa nu en ny communitywebbplats som bygger på den enkla webbplatsmallen.
 
-När du har skapat platsmallen väljer du **[!UICONTROL Communities > Sites]** från global navigering.
+När du har skapat platsmallen väljer du från global navigering **[!UICONTROL Communities > Sites]**.
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
@@ -113,7 +116,7 @@ URL:en kommer att vara [http://localhost:4502/editor.html/content/sites/sample/e
 
 ![chlimage_1-90](assets/chlimage_1-90.png)
 
-På den enkla startsidan kan du se vad som är förkopplat via communityfunktionerna och -mallarna och spela upp med att lägga till och konfigurera communitykomponenter.
+På den enkla startsidan är det möjligt att se vad som är förkopplat via communityfunktionerna och -mallarna, och att leka med att lägga till och konfigurera communitykomponenter.
 
 ## Visa webbplats vid publicering {#view-site-on-publish}
 
