@@ -1,6 +1,6 @@
 ---
-title: Utveckla formulär (klassiskt användargränssnitt)
-seo-title: Utveckla formulär (klassiskt användargränssnitt)
+title: Utveckla Forms (Classic UI)
+seo-title: Utveckla Forms (Classic UI)
 description: Lär dig utveckla formulär
 seo-description: Lär dig utveckla formulär
 uuid: 124e63ba-8d87-4173-aa35-7809b39811d7
@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: 0ef6a3b1-e7ce-4268-a5be-a565646ecc29
 translation-type: tm+mt
 source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
+workflow-type: tm+mt
+source-wordcount: '1952'
+ht-degree: 0%
 
 ---
 
 
-# Utveckla formulär (klassiskt användargränssnitt){#developing-forms-classic-ui}
+# Utveckla Forms (Classic UI){#developing-forms-classic-ui}
 
 En formulärs grundläggande struktur är:
 
@@ -23,7 +26,7 @@ En formulärs grundläggande struktur är:
 * Formulärelement
 * Formulärslut
 
-Allt detta görs med en serie standardkomponenter [för](/help/sites-authoring/default-components.md)formulär som finns i en AEM-standardinstallation.
+Allt detta görs med en serie standardkomponenter [för](/help/sites-authoring/default-components.md)formulär som finns i en AEM standardinstallation.
 
 Förutom att [utveckla nya komponenter](/help/sites-developing/developing-components-samples.md) för dina formulär kan du också:
 
@@ -45,7 +48,7 @@ Formulärstartkomponenten innehåller ett fält för **Läs in sökväg**, en va
 
 Läs in sökväg är sökvägen till nodegenskaper som används för att läsa in fördefinierade värden till flera fält i formuläret.
 
-Detta är ett valfritt fält som anger sökvägen till en nod i databasen. När den här noden har egenskaper som matchar fältnamnen förinläses motsvarande fält i formuläret med egenskapsvärdet. Om det inte finns någon matchning innehåller fältet standardvärdet.
+Detta är ett valfritt fält som anger sökvägen till en nod i databasen. När den här noden har egenskaper som matchar fältnamnen, fylls lämpliga fält i formuläret i förväg med värdet för dessa egenskaper. Om det inte finns någon matchning innehåller fältet standardvärdet.
 
 >[!NOTE]
 >
@@ -81,7 +84,7 @@ Observera att om värdena i `String[]` är i följande format:
 * `AK=Alaska`
 * *osv.*
 
-genererar AEM listan som:
+kommer AEM att generera listan som:
 
 * `<option value="AL">Alabama</option>`
 * `<option value="AK">Alaska</option>`
@@ -92,7 +95,7 @@ Den här funktionen kan till exempel användas på ett bra sätt i en flerspråk
 
 Ett formulär behöver en åtgärd. En åtgärd definierar den åtgärd som utförs när formuläret skickas med användardata.
 
-En rad åtgärder ingår i en AEM-standardinstallation, som beskrivs nedan:
+En rad åtgärder ingår i en standardinstallation av AEM, som beskrivs nedan:
 
 `/libs/foundation/components/form/actions`
 
@@ -106,7 +109,7 @@ Du kan lägga till en egen åtgärd under `/apps` följande:
 
 1. Skapa en nod av typen `sling:Folder`. Ange ett namn som återspeglar den åtgärd som ska implementeras.
 
-   Exempel:
+   Till exempel:
 
    `/apps/myProject/components/customFormAction`
 
@@ -136,7 +139,7 @@ Du kan lägga till en egen åtgärd under `/apps` följande:
       Skriptets namn är `forward.<extension`>, t.ex. `forward.jsp`
 
       Skriptet kan definiera en sökväg. Den aktuella begäran vidarebefordras sedan till den angivna sökvägen.
-   Det nödvändiga anropet är `FormsHelper#setForwardPath` (2 varianter). Ett typiskt fall är att utföra viss validering, eller logik, för att hitta målsökvägen och sedan gå vidare till den sökvägen, och låta standardservern Sling POST göra den faktiska lagringen i JCR.
+   Det nödvändiga anropet är `FormsHelper#setForwardPath` (2 varianter). Ett typiskt fall är att utföra viss validering, eller logik, för att hitta målsökvägen och sedan gå vidare till den sökvägen, så att standardserverservern för Sling-POST kan utföra den faktiska lagringen i JCR.
 
    Det kan också finnas en annan server som utför själva bearbetningen, i så fall är det formuläråtgärden och den `forward.jsp` fungerar bara som&quot;limkod&quot;. Ett exempel på detta är poståtgärden på `/libs/foundation/components/form/actions/mail`som vidarebefordrar information till `<currentpath>.mail.html`platsen där en e-postserver finns.
 
@@ -144,6 +147,7 @@ Du kan lägga till en egen åtgärd under `/apps` följande:
 
    * a `post.POST.jsp` är användbart för små åtgärder som utförs helt av själva åtgärden
    * medan funktionen `forward.jsp` är användbar när endast delegering krävs.
+
    Körningsordningen för skripten är:
 
    * När formuläret återges ( `GET`):
@@ -206,7 +210,7 @@ Du kan lägga till egna begränsningar för ett enskilt fält (under `/apps`) en
 
 1. Skapa en nod av typen `sling:Folder`. Ange ett namn som återspeglar den begränsning som ska implementeras.
 
-   Exempel:
+   Till exempel:
 
    `/apps/myProject/components/customFormConstraint`
 
@@ -225,7 +229,7 @@ Du kan lägga till egna begränsningar för ett enskilt fält (under `/apps`) en
 
       Skriptets namn är `clientvalidation.<extension>`t.ex. `clientvalidation.jsp`
 
-      Detta anropas när formulärfältet återges. Den kan användas för att skapa klient-javascript för att validera fältet på klienten.
+      Detta anropas när formulärfältet återges. Den kan användas för att skapa javascript för klienten för att validera fältet på klienten.
 
    * Ett servervalideringsskript:
 
@@ -241,7 +245,7 @@ Du kan lägga till egna begränsningar för ett enskilt fält (under `/apps`) en
 
 #### Formulärglobala begränsningar {#form-global-constraints}
 
-Den globala valideringen av formulär anges genom att en resurstyp konfigureras i startformulärkomponenten ( `validationRT`). Exempel:
+Den globala valideringen av formulär anges genom att en resurstyp konfigureras i startformulärkomponenten ( `validationRT`). Till exempel:
 
 `apps/myProject/components/form/validation`
 
@@ -292,7 +296,8 @@ I Javascript används värdet för elementnamnsegenskapen för att referera till
       * **any** - om bara ett eller flera villkor måste vara true för att komponenten ska kunna visas eller döljas
    * Markera en komponent, operator och ange sedan ett värde på villkorslinjen (en visas som standard).
    * Lägg till fler villkor om det behövs genom att klicka på **Lägg till villkor**.
-   Exempel:
+
+   Till exempel:
 
    ![chlimage_1-227](assets/chlimage_1-227.png)
 
@@ -318,7 +323,7 @@ Visa/dölj-villkor använder värdet för elementnamnsegenskapen för att refere
 
 När konfigurationen Visa/Dölj är ogiltig anges konfigurationen bara som JavaScript-kod. Redigera koden för att korrigera problemen.Koden använder elementnamnsegenskapen som ursprungligen användes för att referera till komponenterna.
 
-### Utveckla skript för användning med formulär {#developing-scripts-for-use-with-forms}
+### Utveckla skript för användning med Forms {#developing-scripts-for-use-with-forms}
 
 Mer information om API-elementen som kan användas när skript skrivs finns i [javadokartorna för formulär](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/forms/package-summary.html).
 
