@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 72ee013a-7a60-41ee-9421-2846e4c6bc68
 translation-type: tm+mt
 source-git-commit: 8b75cf8fd862302446fbb3d8823eec2bd708febe
+workflow-type: tm+mt
+source-wordcount: '566'
+ht-degree: 0%
 
 ---
 
 
 # Begreppet redigering och publicering{#authoring}
 
-AEM ger dig två miljöer:
+AEM har två miljöer:
 
 * Författare
 * Publicera
@@ -31,11 +34,11 @@ I redigeringsmiljön finns mekanismer för att skapa, uppdatera och granska inne
 
 ![chlimage_1-289](assets/chlimage_1-289.png)
 
-I redigeringsmiljön är AEM-funktionaliteten tillgänglig via två användargränssnitt. För publiceringsmiljön utformar du hela det gränssnitt som är tillgängligt för användarna.
+I redigeringsmiljön är funktionaliteten för AEM tillgänglig via två användargränssnitt. För publiceringsmiljön utformar du hela det gränssnitt som är tillgängligt för användarna.
 
 >[!NOTE]
 >
->AEM och Dispatcher används för att publicera denna AEM-dokumentation.
+>AEM och Dispatcher används för att publicera AEM.
 
 ## Författarmiljö {#author-environment}
 
@@ -67,11 +70,11 @@ Det finns dessutom administrativa uppgifter som hjälper dig att hantera ditt in
 
 ## Publiceringsmiljö {#publish-environment}
 
-När det är klart publiceras AEM-webbplatsens innehåll i **publiceringsmiljön**. Här blir webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
+När AEM är klar publiceras webbplatsens innehåll i **publiceringsmiljön**. Här blir webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
 
 Normalt ligger publiceringsmiljön innanför den demilitariserade zonen. med andra ord, tillgängliga för Internet, men inte längre till fullständigt skydd för det interna nätverket.
 
-När AEM-webbplatsen är en [communitywebbplats](/help/communities/overview.md), eller innehåller [communitykomponenter](/help/communities/author-communities.md), kan besökare (medlemmar) som är inloggade interagera med communityfunktioner. De kan till exempel publicera på ett forum, publicera en kommentar eller följa andra medlemmar. Medlemmar kan ges behörighet att utföra åtgärder som normalt bara är avsedda för författarmiljön, t.ex. skapa nya sidor (communitygrupper), bloggartiklar och moderata inlägg från andra medlemmar.
+När den AEM webbplatsen är en [communitywebbplats](/help/communities/overview.md), eller innehåller [communitykomponenter](/help/communities/author-communities.md), kan besökare (medlemmar) som är inloggade interagera med communityfunktioner. De kan till exempel publicera på ett forum, publicera en kommentar eller följa andra medlemmar. Medlemmar kan ges behörighet att utföra åtgärder som normalt bara är avsedda för författarmiljön, t.ex. skapa nya sidor (communitygrupper), bloggartiklar och moderata inlägg från andra medlemmar.
 
 >[!NOTE]
 >
