@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 076a3064-80c3-454b-93f9-6ae925c54328
 translation-type: tm+mt
 source-git-commit: c10c0ca79a0dd2e79c2d821f11cce3d28058aaa0
+workflow-type: tm+mt
+source-wordcount: '1120'
+ht-degree: 5%
 
 ---
 
@@ -21,18 +24,19 @@ source-git-commit: c10c0ca79a0dd2e79c2d821f11cce3d28058aaa0
 >
 >Vissa funktioner för innehållsfragment kräver att [AEM 6.4 Service Pack 2 (6.4.2.0) eller senare](/help/release-notes/sp-release-notes.md)används.
 
-Adobe Experience Manager-innehållsfragment (AEM) [skapas och hanteras som sidoberoende resurser](/help/assets/content-fragments.md).
+Innehållsfragment i Adobe Experience Manager (AEM) [skapas och hanteras som sidoberoende resurser](/help/assets/content-fragments.md).
 
 Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna.
 
-Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfragment även användas för att leverera AEM-innehåll via Content Services till andra kanaler än AEM-sidor.
+Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfragment även användas för att leverera AEM innehåll via Content Services till andra kanaler än AEM.
 
 >[!NOTE]
 >
->**Innehållsfragment** och **[Experience Fragments](/help/sites-authoring/experience-fragments.md)**är olika funktioner i AEM:
+>**Content Fragments** and **[Experience Fragments](/help/sites-authoring/experience-fragments.md)**are different features within AEM:
 >
 >* **Innehållsfragment** är redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
 >* **Experience Fragments** är helt utformat för innehåll, ett fragment av en webbsida.
+
 >
 >
 Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
@@ -53,7 +57,7 @@ Innehållsfragmenten aktiverar:
 
 * **Kopiera författare**
 
-   * Skriv i redigeraren för AEM-innehållsfragment.
+   * Skriv i AEM innehållsfragmentredigerare.
    * Kan skapa innehållsvariationer.
    * Kan associera relevant innehåll med innehållsfragmentet.
    * Kan använda versionshantering/arbetsflöde.
@@ -71,17 +75,18 @@ Innehållsfragmenten aktiverar:
 
 1. Öppna sidan för redigering.
 
-1. Lägg till komponenten **[!UICONTROL Innehållsfragment]** ; från antingen **[!UICONTROL komponentwebbläsaren]** eller **[!UICONTROL Infoga ny komponent]**.
+1. Lägg till **[!UICONTROL Content Fragment]** komponenten; antingen från **[!UICONTROL Components]** webbläsaren eller **[!UICONTROL Insert New Component]**.
 
 1. Du kan antingen:
 
-   * Öppna **[!UICONTROL resursläsaren]** och filtrera efter **[!UICONTROL innehållsfragment]** (standardvärdet är Bilder). Dra sedan det önskade fragmentet till komponentinstansen.
-   * Markera innehållskomponenten och **[!UICONTROL Konfigurera]** sedan i verktygsfältet. I dialogrutan kan du öppna urvalsdialogrutan för att bläddra och välja önskat **[!UICONTROL innehållsfragment]**.
+   * Öppna **[!UICONTROL Assets]** webbläsaren och filtrera efter **[!UICONTROL Content Fragments]** (standardinställningen är Bilder). Dra sedan det önskade fragmentet till komponentinstansen.
+   * Markera innehållets fragmentkomponent och sedan **[!UICONTROL Configure]** från verktygsfältet. I dialogrutan kan du öppna urvalsdialogrutan för att bläddra och välja önskat alternativ **[!UICONTROL Content Fragment]**.
+
    >[!NOTE]
    >
    >Ett annat sätt är att dra ett visst innehållsfragment direkt till sidan. Då skapas automatiskt den associerade komponenten (innehållsfragment).
 
-1. Inledningsvis visas innehållet från **[!UICONTROL Huvudelementet]** och **[!UICONTROL mallsidan]** (variant). Du kan [markera andra element och/eller variationer](#selecting-the-element-or-variation) efter behov.
+1. Inledningsvis visas innehållet från **[!UICONTROL Main]** elementet och **[!UICONTROL Master]** (variationen). Du kan [markera andra element och/eller variationer](#selecting-the-element-or-variation) efter behov.
 
    ![cfm-6420-01](assets/cfm-6420-01.png)
 
@@ -95,44 +100,45 @@ Innehållsfragmenten aktiverar:
 
 ## Markera elementet eller variationen {#selecting-the-element-or-variation}
 
-Öppna fragmentets dialogruta **[!UICONTROL Konfiguration]** för att konfigurera fragmentet för användning på den aktuella sidan. Dialogrutan kan vara beroende av vilken komponent som används.
+Öppna fragmentets **[!UICONTROL Configuration]** dialogruta för att konfigurera fragmentet för användning på den aktuella sidan. Dialogrutan kan vara beroende av vilken komponent som används.
 
 I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland annat:
 
-* **[!UICONTROL Innehållsfragment]**
+* **[!UICONTROL Content Fragment]**
 
    Ange det fragment som ska användas.
 
-* **[!UICONTROL Visningsläge]**:
+* **[!UICONTROL Display Mode]**:
 
-   * **[!UICONTROL Enkelt textelement]**
-   * **[!UICONTROL Flera element]**
+   * **[!UICONTROL Single Text Element]**
+   * **[!UICONTROL Multiple Element]**
 
 * **[!UICONTROL Element]**
 
-   * Standard **[!UICONTROL Main]** är alltid tillgängligt.
+   * The default **[!UICONTROL Main]** will always be available.
    * En markering blir tillgänglig om fragmentet skapades med en lämplig mall.
+
    >[!NOTE]
    >
    >Vilka element som är tillgängliga beror på vilken mall som används.
 
 * **[!UICONTROL Variation]**
 
-   * Standardmallsidan **** är alltid tillgänglig.
+   * The default **[!UICONTROL Master]** will always be available.
    * En markering blir tillgänglig om variationer har skapats för fragmentet.
 
-* **[!UICONTROL Stycken]**: ange det eller de stycken som ska ingå:
+* **[!UICONTROL Paragraphs]**: ange det eller de stycken som ska ingå:
 
-   * **[!UICONTROL Alla]**
-   * **[!UICONTROL Intervall]**: t.ex. `1`, `3-5`, `9-*`
+   * **[!UICONTROL All]**
+   * **[!UICONTROL Range]**: t.ex. `1`, `3-5`, `9-*`
 
-      * **[!UICONTROL Hantera rubriker som egna stycken]**
+      * **[!UICONTROL Handle headings as their own paragraphs]**
 
-* **[!UICONTROL Hantera rubriker som egna stycken]**
+* **[!UICONTROL Handle headings as their own paragraphs]**
 
 ## Snabb anslutning till Fragment Editor {#quick-connection-to-fragment-editor}
 
-Du kan öppna fragmentkällan för redigering (resursen) med ikonen **[!UICONTROL Redigera]** i komponentverktygsfältet. På så sätt kan du [redigera och hantera innehållsfragmentet](/help/assets/content-fragments.md).
+Du kan öppna fragmentkällan för redigering (resursen) med hjälp av **[!UICONTROL Edit]** ikonen i komponentverktygsfältet. På så sätt kan du [redigera och hantera innehållsfragmentet](/help/assets/content-fragments.md).
 
 >[!CAUTION]
 >
@@ -140,7 +146,7 @@ Du kan öppna fragmentkällan för redigering (resursen) med ikonen **[!UICONTRO
 
 ## Lägga till mellaninnehåll {#adding-in-between-content}
 
-När ett visst innehållsfragment läggs till på sidan finns det en **[!UICONTROL Drag-komponent här]** som platshållare mellan varje HTML-stycke (och längst upp/längst ned) i fragmentet.
+När ett visst innehållsfragment läggs till på sidan finns det en **[!UICONTROL Drag components here]** platshållare mellan varje HTML-stycke (och längst upp/längst ned) i fragmentet.
 
 På så sätt kan du lägga till extra innehåll [däremellan (dvs. mellanliggande innehåll)](/help/assets/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments) i fragmentinnehållet (vid någon av de tillgängliga punkterna) utan att behöva ändra rotfragmentet.
 
@@ -171,6 +177,7 @@ För mellanliggande innehåll kan du:
 >* Mellanliggande komponenter har en absolut position inom komponentsekvensen i fragmentflödet. Den här positionen ändras inte, även när innehållet i styckena i fragmentet ändras.\
    >  Detta kan få det att se ut som om den relativa placeringen har ändrats, eftersom mellanliggande stycken inte har någon kontextuell relation till (fragmentet) stycken som de är placerade bredvid.
 >* Om inte de två styckestrukturerna står i konflikt med varandra. I så fall visas inte det mellanliggande innehållet (även om det fortfarande finns internt).
+
 >
 
 
@@ -185,9 +192,9 @@ Om du har [associerat innehåll](/help/assets/content-fragments-assoc-content.md
 
 >[!NOTE]
 >
->Om du har flera innehållsfragment på en sida visar fliken **[!UICONTROL Associerat innehåll]** resurser som passar alla fragment.
+>Om du har flera innehållsfragment på en sida visar fliken **[!UICONTROL Associated Content]** resurser som passar alla fragment.
 
-När du har lagt till ett fragment med associerat innehåll på sidan öppnas en ny flik (**[!UICONTROL Associerat innehåll]**) på sidopanelen.
+När du har lagt till ett fragment med associerat innehåll på sidan öppnas en ny flik (**[!UICONTROL Associated Content]**) på sidopanelen.
 
 Här kan du dra resurserna till önskad plats (antingen till en befintlig komponent eller till önskad plats där rätt komponent skapas):
 
