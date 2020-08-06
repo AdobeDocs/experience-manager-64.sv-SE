@@ -1,6 +1,6 @@
 ---
 title: Använd PDF-rastrering
-description: Generera högkvalitativa miniatyrbilder och renderingar med hjälp av Adobe PDF Rasterizer-biblioteket.
+description: Generera högkvalitativa miniatyrbilder och renderingar med Adobe PDF Rasterizer-biblioteket.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: dea673f8999656a5c5364f74f45eba41dd17b947
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Använda PDF-rastrering {#using-pdf-rasterizer}
 
-När du överför stora, innehållsintensiva PDF- eller AI-filer till Adobe Experience Manager-resurser (AEM) kanske standardbiblioteket inte genererar korrekta utdata. I sådana fall kan Adobes PDF Rasterizer-bibliotek generera tillförlitligare och exaktare utdata jämfört med utdata från ett standardbibliotek.
+Ibland när du överför stora, innehållsintensiva PDF- eller AI-filer till Adobe Experience Manager (AEM) Assets kan standardbiblioteket inte generera korrekta utdata. I sådana fall kan Adobe PDF Rasterizer-biblioteket generera tillförlitligare och exaktare utdata jämfört med utdata från ett standardbibliotek.
 
 Adobe rekommenderar att du använder PDF-rastreringsbiblioteket för följande:
 
@@ -21,22 +21,24 @@ Adobe rekommenderar att du använder PDF-rastreringsbiblioteket för följande:
 * AI- eller PDF-filer med miniatyrer som inte genererats direkt.
 * AI-filer med Pantone Matching System-färger (PMS).
 
-Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har bättre kvalitet jämfört med färdiga utdata och ger därför en konsekvent visningsupplevelse på olika enheter. Adobe PDF Rasterizer-biblioteket har inte stöd för konvertering av färgrymd. Det skrivs alltid ut på RGB, oavsett källfilens färgrymd.
+Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har bättre kvalitet jämfört med färdiga utdata och ger därför en konsekvent visningsupplevelse på olika enheter. Adobe PDF Rasterizer-biblioteket har inte stöd för någon färgmodellskonvertering. Det skrivs alltid ut på RGB, oavsett källfilens färgrymd.
 
-1. Installera PDF Rasterizer-paketet på din AEM-instans från [programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg).
+1. Installera PDF Rasterizer-paketet på din AEM från [programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg).
 
    >[!NOTE]
    >
    >PDF Rasterizer-biblioteket är endast tillgängligt för Windows och Linux.
 
-1. Gå till arbetsflödeskonsolen för AEM Assets från `https://[AEM_server]:[port]/workflow`.
+1. Öppna AEM Assets Workflow Console från `https://[AEM_server]:[port]/workflow`.
 1. Öppna **[!UICONTROL DAM Update Asset]** arbetsflödessidan.
 1. Konfigurera följande för att hoppa över standardgenerering av miniatyrbilder och webbåtergivning för PDF- och AI-filer:
 
    * Öppna **[!UICONTROL Thumbnail Process]** steget och lägg till `application/pdf` eller `application/postscript` i **[!UICONTROL Skip Mime Types]** fältet.
+
    ![skip_mime_types-2](assets/skip_mime_types-2.png)
 
    * Lägg till **[!UICONTROL Web Enabled Image]** eller `application/pdf` under på `application/postscript` fliken **[!UICONTROL Skip List]** beroende på dina behov.
+
    ![web_enabled_imageskiplist](assets/web_enabled_imageskiplist.png)
 
 1. Öppna **[!UICONTROL Rasterize PDF/AI Image Preview Rendition]** steget och ta bort MIME-typen som du vill hoppa över standardgenereringen av förhandsvisningsbildåtergivningar för. Du kan till exempel ta bort MIME-typen *application/pdf*, ** application/postscript eller *application/illustrator* från **[!UICONTROL MIME Types]** listan.
@@ -49,6 +51,7 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
    * Mime-typer: *application/pdf* or *application/postscript*
    * Kommandon: `PDFRasterizer -d -p 1 -s 1280 -t PNG -i ${file}`
    * Lägg till miniatyrstorlekar: 319:319, 140:100, 48:48. Lägg till anpassad miniatyrkonfiguration, om det behövs.
+
    Kommandoradsargumenten för `PDFRasterizer` kommandot kan innehålla följande:
 
    **-d**: Flagga för smidig återgivning av text, vektorgrafik och bilder. Skapar bilder med bättre kvalitet. Om du tar med den här parametern körs kommandot långsamt och bildstorleken ökar.
@@ -80,6 +83,7 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
    * Mime-typer: `application/pdf` eller `application/postscript`
    * Kommandon: `PDFRasterizer -d -p 1 -s 1280 -t PNG -i ${file}`
    * Lägg till miniatyrstorlekar: 319:319, 140:100, 48:48. Lägg till anpassad miniatyrkonfiguration, om det behövs.
+
    Kommandoradsargumenten för PDFRasterizer-kommandot kan innehålla följande:
 
    **-d**: Flagga för smidig återgivning av text, vektorgrafik och bilder. Skapar bilder med bättre kvalitet. Om du tar med den här parametern körs kommandot långsamt och bildstorleken ökar.
