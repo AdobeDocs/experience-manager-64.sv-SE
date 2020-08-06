@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 32143da1-09c8-45ce-b50d-32adf6efe383
 translation-type: tm+mt
 source-git-commit: 7c850ed0d20dd2ba2626242c67ba190e371f049f
+workflow-type: tm+mt
+source-wordcount: '1133'
+ht-degree: 0%
 
 ---
 
@@ -23,13 +26,13 @@ Se även [AEM 3D versionsinformation](/help/release-notes/aem3d-release-notes.md
 
 Se även [Installera och konfigurera AEM 3D](install-config-3d.md).
 
-## Om modeller och faser i AEM 3D {#about-models-and-stages-in-aem-d}
+## Om modeller och scener i AEM 3D {#about-models-and-stages-in-aem-d}
 
 Med AEM 3D kan du visa och återge statiska, fristående 3D-modeller av hög kvalitet i fördefinierade miljöer som kallas för scener. Scenen innehåller i princip&quot;ljus&quot; för 3D-scenen och inställningarna för återgivning i ett program som Autodesk® Maya® eller Autodesk 3ds Max®. Dessutom kan scenen även innehålla fördefinierade kameror, bakgrunder och geometri för markplan.
 
-Överförda 3D-filer som innehåller ljus antas vara en scen. Du kan återställa sådana resurser till enkla 3D-objekt genom att öppna resursen på sidan med resursinformation. Tryck på **[!UICONTROL Visa egenskaper]** och sedan på fliken **[!UICONTROL Grundläggande]** . Välj **[!UICONTROL 3D-objekt]** i listrutan Resursklass under rubriken Metadata.
+Överförda 3D-filer som innehåller ljus antas vara en scen. Du kan återställa sådana resurser till enkla 3D-objekt genom att öppna resursen på sidan med resursinformation. Tryck **[!UICONTROL View Properties]** och sedan på **[!UICONTROL Basic]** fliken. Välj **[!UICONTROL 3D object]** i listrutan Resursklass under rubriken Metadata.
 
-När du skapar 3D-modeller som ska användas i AEM 3D bör du tänka på följande:
+Tänk på följande när du skapar 3D-modeller för användning i AEM 3D:
 
 * 3D-modellfilerna får endast innehålla ett objekt, utan bakgrunder, markplan, scenbelysning eller kameror.
 * Placera modellen ovanför markplanet. Den här placeringen är särskilt viktig när du visar eller återger med faser som utgör ett markplan. En konfigurationsinställning är tillgänglig (och aktiverad som standard) som gör att objektet flyttas ovanför markplanet när du förhandsgranskar eller återger med Snabb förfining. Den här inställningen påverkar inte återgivning med tredjepartsrenderare (t.ex. via Maya), och därför kan objekt som inte finns ovanför markplanet vara delvis dolda.
@@ -56,7 +59,7 @@ Den primära 3D-modellfilen innehåller den faktiska 3D-modellgeometrin och defi
 
    Autodesk 3D-filutbytesformat; både binära format och ASCII-format.
 
-   När du skapar FBX-filer i tredjepartsprogram rekommenderar Adobe följande konfigurationsinställningar (se tabellen nedan). Dessa inställningar kan hjälpa dig att uppnå bästa resultat för 3D-filer som du tänker använda i AEM. Alternativnamnen hämtas från dialogrutan **[!UICONTROL Autodesk Maya FBX Export Options]** .
+   När du skapar FBX-filer i tredjepartsprogram rekommenderar Adobe följande konfigurationsinställningar (se tabellen nedan). Dessa inställningar kan hjälpa dig att uppnå bästa resultat för 3D-filer som du tänker använda i AEM. Alternativnamnen hämtas från **[!UICONTROL Autodesk Maya FBX Export Options]** dialogrutan.
 
 <table> 
  <tbody> 
@@ -98,7 +101,7 @@ Den primära 3D-modellfilen innehåller den faktiska 3D-modellgeometrin och defi
   </tr> 
   <tr> 
    <td>Bädda in media</td> 
-   <td>Båda alternativen stöds. Om inbäddad är markerat extraherar AEM 3D det inbäddade mediet till en intilliggande mapp som har samma namn som modellfilen med <code>.fbm</code> tillägg.</td> 
+   <td>Båda alternativen stöds. Om du markerar Inbäddad extraheras AEM 3D-inbäddade medier till en intilliggande mapp som har samma namn som modellfilen som har <code>.fbm</code> lagts till i den.</td> 
   </tr> 
   <tr> 
    <td>FBX-filformat - Typ</td> 
@@ -111,7 +114,7 @@ Den primära 3D-modellfilen innehåller den faktiska 3D-modellgeometrin och defi
  </tbody> 
 </table>
 
-Följande ytterligare filformat stöds om Autodesk Maya är installerat och konfigurerat på AEM-utvecklingsservrar:
+Följande ytterligare filformat stöds om Autodesk Maya är installerad och konfigurerad på AEM utvecklingsservrar:
 
 * Autodesk Maya
 
@@ -158,5 +161,5 @@ Se [Återge 3D-resurser](rendering-3d-assets.md).
 
 ## Namnge material i en primär 3D-modellfil {#naming-materials-in-a-primary-d-model-file}
 
-En *yta* definieras som ytan i en 3D-modell som täcks av samma material. Det här materialet innehåller också ytans namn. Därför rekommenderar Adobe att du namnger materialet i de primära 3D-modellfilerna därefter. Om du t.ex. använder särskilda namn som &quot;Kropp&quot;, &quot;Fönster&quot;, &quot;Däck&quot; eller &quot;Rims&quot; bör du använda vaga namn som &quot;Rött&quot;, &quot;Glas&quot;, &quot;Gummi&quot; eller &quot;Aluminium&quot;.
+En *yta* definieras som ytan i en 3D-modell som täcks av samma material. Det här materialet innehåller också ytans namn. Därför rekommenderar Adobe att du ger materialet i den primära 3D-modellfilen ett namn som passar dig. Om du t.ex. använder särskilda namn som &quot;Kropp&quot;, &quot;Fönster&quot;, &quot;Däck&quot; eller &quot;Rims&quot; bör du använda vaga namn som &quot;Rött&quot;, &quot;Glas&quot;, &quot;Gummi&quot; eller &quot;Aluminium&quot;.
 
