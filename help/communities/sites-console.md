@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 5ac2fcef-05b8-46f7-9a15-997cdd79a3db
 translation-type: tm+mt
 source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
+workflow-type: tm+mt
+source-wordcount: '3127'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ Konsolen Communities Sites ger åtkomst till:
 * Platshantering
 * [Skapa och redigera kapslade grupper](groups.md) (undergrupper)
 
-Se [Komma igång med AEM Communities](getting-started.md) om du vill veta hur snabbt en communitywebbplats kan skapas i författarmiljön, samt hur du skapar communitygrupper från författaren och publiceringsmiljöer.
+Se [Komma igång med AEM Communities](getting-started.md) om du vill veta hur snabbt en communitywebbplats kan skapas i författarmiljön, samt hur du skapar communitygrupper utifrån författarmiljön och publiceringsmiljön.
 
 >[!NOTE]
 >
@@ -79,33 +82,33 @@ Skapandeprocessen är en serie steg som presenteras som paneler med en uppsättn
 
 På panelen Platsmall anges titel, beskrivning, platsrot, grundspråk, namn och platsmall:
 
-* **[!UICONTROL Webbplatstitel]** för communityn: En visningsrubrik för webbplatsen.
+* **[!UICONTROL Community Site Title]**: En visningsrubrik för webbplatsen.
 
    Titeln visas på den publicerade webbplatsen samt i användargränssnittet för webbplatsadministratörer.
 
-* **[!UICONTROL Beskrivning]** av communityplats: En beskrivning av platsen.
+* **[!UICONTROL Community Site Description]**: En beskrivning av platsen.
 
    Beskrivningen visas inte på den publicerade webbplatsen.
 
-* **[!UICONTROL Rotadress]** för communityplats: Rotsökvägen till platsen.
+* **[!UICONTROL Community Site Root]**: Rotsökvägen till platsen.
 
    Standardroten är `/content/sites`men den kan flyttas till valfri plats på webbplatsen.
 
-* **[!UICONTROL Grundspråk]** för communitywebbplats: (lämnas orört för ett enda språk: På engelska) använder du listrutan för att välja ett *eller flera* basspråk bland de tillgängliga språken - tyska, italienska, franska, japanska, spanska, portugisiska (Brasilien), kinesiska (traditionell) och kinesiska (förenklad). En communitywebbplats kommer att skapas för varje språk som läggs till och kommer att finnas i samma webbplatsmapp enligt bästa praxis som beskrivs i [Översätta innehåll för flerspråkiga webbplatser](../../help/sites-administering/translation.md). Rotsidan för varje webbplats kommer att innehålla en underordnad sida med språkkoden för ett av de valda språken, till exempel &quot;en&quot; för engelska eller &quot;fr&quot; för franska.
+* **[!UICONTROL Community Site Base Language]**: (lämnas orört för ett enda språk: På engelska) använder du listrutan för att välja ett *eller flera* basspråk bland de tillgängliga språken - tyska, italienska, franska, japanska, spanska, portugisiska (Brasilien), kinesiska (traditionell) och kinesiska (förenklad). En communitywebbplats kommer att skapas för varje språk som läggs till och kommer att finnas i samma webbplatsmapp enligt bästa praxis som beskrivs i [Översätta innehåll för flerspråkiga webbplatser](../../help/sites-administering/translation.md). Rotsidan för varje webbplats kommer att innehålla en underordnad sida med språkkoden för ett av de valda språken, till exempel &quot;en&quot; för engelska eller &quot;fr&quot; för franska.
 
-* **[!UICONTROL Namn på]** communitywebbplats: Namnet på webbplatsens rotsida som visas i URL:en
+* **[!UICONTROL Community Site Name]**: Namnet på webbplatsens rotsida som visas i URL:en
 
    * Dubbelkontrollera namnet eftersom det inte är lätt att ändra efter att webbplatsen har skapats
    * Bas-URL:en ( `https://*server:port/site root/site name*)` visas under `Community Site Name`
    * Ange en giltig URL genom att lägga till en baskod + &quot;.html&quot;
 
-      *Exempel*, `http://localhost:4502/content/sites/mysight/en.html`
+      *Till exempel*, `http://localhost:4502/content/sites/mysight/en.html`
 
-* **[!UICONTROL Meny för]** communityplatsmall: Använd listrutan för att välja en tillgänglig mall för [communitywebbplats](tools.md).
+* **[!UICONTROL Community Site Template]** meny: Använd listrutan för att välja en tillgänglig mall för [communitywebbplats](tools.md).
 
-Markera **[!UICONTROL nästa]**
+Välj **[!UICONTROL Next]**
 
-### Steg 2:Design {#step-design}
+### Steg 2: Design {#step-design}
 
 Designpanelen innehåller två underpaneler för att välja tema och varumärkesbanderoll:
 
@@ -134,9 +137,9 @@ Tänk på följande när du skapar eller markerar en bild:
 * Det finns ingen storleksändring av bilden, så att när bildbredden är...
 
    * Bilden upprepas vågrätt under webbläsarens bredd
-   * Bilden blir större än webbläsarens bredd och ser ut att vara beskuren
+   * Bilden kommer att beskäras mer än webbläsarens bredd
 
-Välj **[!UICONTROL Nästa]**.
+Välj **[!UICONTROL Next]**.
 
 ### Steg 3: Inställningar {#step-settings}
 
@@ -172,7 +175,7 @@ Panelen Inställningar innehåller flera underpaneler med funktioner som ska kon
 >
 >En communitywebbplats är privat när anonyma besökare på webbplatsen nekas åtkomst, inte får registrera sig själv och inte får använda social inloggning.
 
-* **[!UICONTROL Tillåt användarregistrering]**
+* **[!UICONTROL Allow User Registration]**
 
    Om det här alternativet är markerat kan besökarna bli communitymedlemmar genom självregistrering.
 
@@ -180,7 +183,7 @@ Panelen Inställningar innehåller flera underpaneler med funktioner som ska kon
 
    Avmarkera för en *privat* communitywebbplats. Standard är markerat.
 
-* **[!UICONTROL Tillåt anonym åtkomst]**
+* **[!UICONTROL Allow Anonymous Access]**
 
    Om det här alternativet är markerat är communitywebbplatsen *öppen* och alla besökare kan komma åt webbplatsen.
 
@@ -188,7 +191,7 @@ Panelen Inställningar innehåller flera underpaneler med funktioner som ska kon
 
    Avmarkera för en *privat* communitywebbplats. Standard är markerat.
 
-* **[!UICONTROL Tillåt meddelanden]**
+* **[!UICONTROL Allow Messaging]**
 
    Om det här alternativet är markerat kan medlemmarna skicka meddelanden till varandra och till gruppen på communitywebbplatsen.
 
@@ -196,7 +199,7 @@ Panelen Inställningar innehåller flera underpaneler med funktioner som ska kon
 
    Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt sociala inloggningar:Facebook]**
+* **[!UICONTROL Allow Social Logins: Facebook]**
 
    Om det här alternativet är markerat kan webbplatsbesökare logga in med sina Facebook-kontouppgifter. Den valda [Facebook-molnkonfigurationen](social-login.md#create-a-facebook-connect-cloud-service) bör konfigureras för att lägga till användare i communityplatsens medlemsgrupp när communitywebbplatsen har skapats.
 
@@ -204,7 +207,7 @@ Panelen Inställningar innehåller flera underpaneler med funktioner som ska kon
 
    Låt vara omarkerat för en *privat* communitywebbplats. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt sociala inloggningar:Twitter]**
+* **[!UICONTROL Allow Social Logins: Twitter]**
 
    Om det här alternativet är markerat tillåter du webbplatsbesökare att logga in med sina Twitter-kontouppgifter. Den valda [Twitter-molnkonfigurationen](social-login.md#create-a-twitter-connect-cloud-service) bör konfigureras för att lägga till användare i communityplatsens medlemsgrupp när communitywebbplatsen har skapats.
 
@@ -214,10 +217,10 @@ Panelen Inställningar innehåller flera underpaneler med funktioner som ska kon
 
 >[!NOTE]
 
-**[!UICONTROL Tillåta sociala inloggningar]**
+**[!UICONTROL Allowing Social Logins]**
 >Det kan finnas exempelkonfigurationer för Facebook och Twitter och de kan vara valbara, men för en [produktionsmiljö](../../help/sites-administering/production-ready.md)måste du skapa anpassade Facebook- och Twitter-program. Se [Social Login med Facebook och Twitter](social-login.md).
 >
-#### TAGGNING {#tagging}
+#### TAGGING {#tagging}
 
 ![chlimage_1-450](assets/chlimage_1-450.png)
 
@@ -239,11 +242,11 @@ Det är enkelt att hitta communitymedlemmar med hjälp av typsnittssökning.
 
    Börja skriva för att välja en eller flera community-medlemmar eller medlemsgrupper som kan hantera community-medlemmar och medlemsgrupper.
 
-* **[!UICONTROL Community-moderatorer]**
+* **[!UICONTROL Community Moderators]**
 
    Börja skriva för att välja en eller flera communitymedlemmar eller medlemsgrupper som ska betraktas som pålitliga som moderatorer för användargenererat innehåll.
 
-* **[!UICONTROL Medlemmar med behörighet i communityn]**
+* **[!UICONTROL Community Privileged Members]**
 
    Börja skriva för att välja en eller flera communitymedlemmar eller medlemsgrupper som ska kunna skapa nytt innehåll när `Allow Privileged Member` de har valts för en [communityfunktion](functions.md).
 
@@ -253,11 +256,11 @@ Det är enkelt att hitta communitymedlemmar med hjälp av typsnittssökning.
 
 Den globala inställningen för moderering av användargenererat innehåll (UGC) styrs av dessa inställningar. Enskilda komponenter har ytterligare inställningar för att styra modereringen.
 
-* **[!UICONTROL Innehållet är förmodererat]**
+* **[!UICONTROL Content is Premoderated]**
 
    Om det här alternativet är markerat visas inte publicerat communityinnehåll förrän det har godkänts av en moderator. Standard är avmarkerat. Mer information finns i [Moderera communityinnehåll](moderate-ugc.md#premoderation).
 
-* **[!UICONTROL Tröskelvärde för flagga innan innehåll döljs]**
+* **[!UICONTROL Flagging threshold before content is hidden]**
 
    Om värdet är större än 0 måste antalet gånger ett ämne eller ett inlägg flaggas innan det döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det markerade ämnet eller inlägget från den offentliga vyn. Standardvärdet är 5.
 
@@ -265,7 +268,7 @@ Den globala inställningen för moderering av användargenererat innehåll (UGC)
 
 ![chlimage_1-453](assets/chlimage_1-453.png)
 
-* **[!UICONTROL Aktivera analys]**
+* **[!UICONTROL Enable Analytics]**
 
    Endast tillgängligt när Adobe Analytics har [konfigurerats](analytics.md) för communityfunktioner.
 
@@ -273,7 +276,7 @@ Den globala inställningen för moderering av användargenererat innehåll (UGC)
 
 ![chlimage_1-454](assets/chlimage_1-454.png)
 
-* **[!UICONTROL Referens för Cloud Config Framework]**
+* **[!UICONTROL Cloud Config Framework Reference]**
 
    I listrutan väljer du Analytics-molntjänstramverket som är konfigurerat för den här communitywebbplatsen.
 
@@ -283,35 +286,36 @@ Den globala inställningen för moderering av användargenererat innehåll (UGC)
 
 ![chlimage_1-455](assets/chlimage_1-455.png)
 
-* **[!UICONTROL Tillåt maskinöversättning]** När det här alternativet är markerat (standardinställningen är inte markerad) aktiveras maskinöversättning för UGC på platsen. Detta påverkar inte annat innehåll, t.ex. sidinnehåll, även om webbplatsen är konfigurerad som en flerspråkig webbplats. Mer information om hur du konfigurerar en licensierad översättningstjänst för AEM Communities finns i [Översätta användargenererat innehåll](translate-ugc.md) . En fullständig översikt finns i [Översätta innehåll för flerspråkiga webbplatser](../../help/sites-administering/translation.md) .
+* **[!UICONTROL Allow Machine Translation]**
+När det här alternativet är markerat (standardinställningen är avmarkerad) aktiveras maskinöversättning för UGC på platsen. Detta påverkar inte annat innehåll, t.ex. sidinnehåll, även om webbplatsen är konfigurerad som en flerspråkig webbplats. Mer information om hur du konfigurerar en licensierad översättningstjänst för AEM Communities finns i [Översätta användargenererat innehåll](translate-ugc.md) . En fullständig översikt finns i [Översätta innehåll för flerspråkiga webbplatser](../../help/sites-administering/translation.md) .
 
 ![chlimage_1-456](assets/chlimage_1-456.png)
 
-* **[!UICONTROL Aktivera maskinöversättning för valda språk]**
+* **[!UICONTROL Enable Machine Translation for selected languages]**
 
    Språken som är aktiverade för maskinöversättning är standardinställningen för den systeminställning som anges av [översättningsintegreringskonfigurationen](translate-ugc.md#translation-integration-configuration). Dessa standardinställningar kan åsidosättas för den här webbplatsen genom att standardinställningar tas bort och/eller genom att andra språk väljs i listrutan.
 
-* **[!UICONTROL Välj översättningsleverantör]**
+* **[!UICONTROL Choose translation provider]**
 
    Som standard är tjänsteleverantören en provtjänst som endast används `microsoft`för demonstrationer. Om ingen översättningstjänstprovider är licensierad ska **Tillåt maskinöversättning** avmarkeras.
 
-* **[!UICONTROL Välj globalt delat arkiv]**
+* **[!UICONTROL Choose global shared store]**
 
    För en webbplats med flera språkkopior innehåller ett globalt delat arkiv en enda konversationstråd som är synlig från varje språkkopia. Detta uppnås genom att välja ett av språken som ingår som en språkkopia. Standardvärdet är *Ingen global delad lagring*.
 
-* **[!UICONTROL Välj konfiguration för översättningsprovider]**
+* **[!UICONTROL Choose translation provider config]**
 
    Välj ett ramverk [för](../../help/sites-administering/tc-tic.md) översättningsintegrering som skapats för den licensierade översättningsleverantören.
 
 * **Välj översättningsalternativ för communitywebbplatsen**
 
-   * **[!UICONTROL Översätt hela sidan]**
+   * **[!UICONTROL Translate entire page]**
 
       Om du väljer det här alternativet översätts all UGC på en sida till sidans basspråk.
 
       Standard är *inte markerat*.
 
-   * **[!UICONTROL Översätt endast markering]**
+   * **[!UICONTROL Translate selection only]**
 
       Om du väljer det här alternativet visas ett översättningsalternativ intill varje inlägg som gör att enskilda inlägg kan översättas till sidans grundspråk.
 
@@ -319,13 +323,13 @@ Den globala inställningen för moderering av användargenererat innehåll (UGC)
 
 * **Välj alternativ för beständighet**
 
-   * **[!UICONTROL Översätt avgifter på användarens begäran och fortsätt efteråt]**
+   * **[!UICONTROL Translate contributions on user request and persist afterwards]**
 
       Om du väljer det här alternativet översätts inte innehållet förrän en begäran har gjorts. När översättningen är klar sparas översättningen i databasen.
 
       Standard är *inte markerat*.
 
-   * **[!UICONTROL Behåll inte översättningar]**
+   * **[!UICONTROL Don't persist translations]**
 
       Om du väljer det här alternativet lagras inte översättningar i databasen.
 
@@ -333,7 +337,8 @@ Den globala inställningen för moderering av användargenererat innehåll (UGC)
 
       Standard är *inte markerat*.
 
-* **[!UICONTROL Smart återgivning]** Välj en av
+* **[!UICONTROL Smart Render]**
+Välj en av
 
    * `Always show contributions in the original language` (standard)
    * `Always show contributions in user preferred language`
@@ -345,15 +350,15 @@ Den globala inställningen för moderering av användargenererat innehåll (UGC)
 
 Inställningarna `ENABLEMENT`gäller när den valda communityplatsmallen innehåller [tilldelningsfunktionen](functions.md#assignments-function), som är tillgänglig när aktiveringsfunktionerna är licensierade och [konfigurerade](enablement.md). Referensplatsmallen som innehåller tilldelningsfunktionen är `Reference Structured Learning Site Template.`
 
-* **[!UICONTROL Aktivitetshanterare]**
+* **[!UICONTROL Enablement Managers]**
 
    (obligatoriskt) Det går bara att välja medlemmar i `Community Enablementmanagers` gruppen för att hantera den här aktiveringscommunityn. Aktivitetshanterare ansvarar för att tilldela medlemmar till resurser. Se även [Hantera användare och användargrupper](users.md).
 
-* **[!UICONTROL Organisations-ID för Marketing Cloud]**
+* **[!UICONTROL Marketing Cloud Org Id]**
 
    (valfritt) ID:t för en [Video Heartbeat Analytics](analytics.md#video-heartbeat-analytics) -licens.
 
-Välj **[!UICONTROL Nästa]**.
+Välj **[!UICONTROL Next]**.
 
 ### Steg 4: Skapa webbgruppsplats {#step-create-communities-site}
 
@@ -384,12 +389,12 @@ När du hovrar över en webbplats med en mus eller vidrör ett platskort visas i
 
 ![chlimage_1-460](assets/chlimage_1-460.png)
 
-Innehållet på en webbplats kan redigeras med samma verktyg som andra AEM-webbplatser. Om du vill öppna webbplatsen för redigering väljer du den `Open Site` ikon som visas när du hovrar webbplatsen med musen. Webbplatsen öppnas på en ny flik så att konsolen Webbplatser fortfarande är tillgänglig.
+Innehållet i en webbplats kan redigeras med samma verktyg som andra AEM. Om du vill öppna webbplatsen för redigering väljer du den `Open Site` ikon som visas när du hovrar webbplatsen med musen. Webbplatsen öppnas på en ny flik så att konsolen Webbplatser fortfarande är tillgänglig.
 
-![chlimage_1-462](assets/chlimage_1-461.png)
+![chlimage_1-461](assets/chlimage_1-461.png)
 
 >[!NOTE]
-Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidorna](../../help/sites-authoring/qg-page-authoring.md).
+Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till hur du skapar sidor](../../help/sites-authoring/qg-page-authoring.md).
 
 ## Ändra webbplatsegenskaper {#modifying-site-properties}
 
@@ -397,7 +402,7 @@ Om du inte känner till AEM läser du dokumentationen om [grundläggande hanteri
 
 Egenskaperna för en befintlig plats, som anges när webbplatsen skapas, kan ändras genom att du markerar `Edit Site`ikonen som visas när du håller muspekaren.
 
-`Details of the following properties match the descriptions provided in the` Avsnittet Skapa [webbplats](#site-creation) .
+`Details of the following properties match the descriptions provided in the` [Avsnittet Skapa](#site-creation) webbplats.
 
 ![chlimage_1-463](assets/chlimage_1-463.png)
 
@@ -429,13 +434,11 @@ STRUKTURpanelen gör att du kan ändra den struktur som ursprungligen skapades f
 
    * **`trashcan icon`**
 
-      
-ta bort (ta bort) funktioner från platsstrukturen
+      ta bort (ta bort) funktioner från platsstrukturen
 
    * **`grid icon`**
 
-      
-ändra ordningen på funktioner som visas i navigeringsfältet på den översta nivån
+      ändra ordningen på funktioner som visas i navigeringsfältet på den översta nivån
 
 >[!NOTE]
 Du kan ändra ordningen på alla funktioner i platsstrukturen förutom funktionen längst upp. Det innebär att det inte går att ändra startsidan för communitywebbplatsen.
@@ -497,7 +500,7 @@ Efter publicering av en communitywebbplats är det nödvändigt att publicera va
 
 ## Exportera platsen {#exporting-the-site}
 
-![chlimage_1-468](assets/chlimage_1-467.png)
+![chlimage_1-467](assets/chlimage_1-467.png)
 
 Välj exportikonen när du hovrar musen över webbplatsen för att skapa ett paket av communitywebbplatsen som både lagras i [pakethanteraren](../../help/sites-administering/package-manager.md) och hämtas.\
 Observera att UGC inte ingår i platspaketet.
@@ -535,28 +538,28 @@ Som standard dirigeras en communitywebbplats om till en exempelinloggningssida n
 
 Om du vill omdirigera korrekt, när en webbplats har konfigurerats och publicerats, slutför du de här stegen för att få autentiseringsfel att omdirigera till communitywebbplatsen:
 
-* På varje AEM-publiceringsinstans
+* På varje AEM publiceringsinstans
 * Första inloggningen med administratörsbehörighet
 * Åtkomst till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md)
    * Till exempel [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
 * Sök `Adobe Granite Login Selector Authentication Handler`
 * Välj `pencil`ikonen för att öppna konfigurationen för redigering
-* Ange **[!UICONTROL Inloggningssidmappningar]** enligt följande:
+* Ange ett **[!UICONTROL Login Page Mappings]** enligt följande:
 
    `/content/sites/<site-name>/path/to/login/page:/content/sites/<site-name>`
 
-    till exempel:
+   till exempel:
 
    `/content/sites/engage/en/signin:/content/sites/engage/en`
 
-* Välj **[!UICONTROL Spara]**
+* Välj **[!UICONTROL Save]**
 
 ![chlimage_1-468](assets/chlimage_1-468.png)
 
 ### Testa autentiseringsomdirigering {#test-authentication-redirection}
 
-På samma AEM-publiceringsinstans som konfigurerats med en inloggningssidmappning för communitywebbplatsen:
+På samma AEM har publiceringsinstansen konfigurerats med en inloggningssidmappning för communitywebbplatsen:
 
 * Bläddra till startsidan för communitywebbplatsen
    * Till exempel [http://localhost:4503/content/sites/engage/en.html](http://localhost:4503/content/sites/engage/en.html)
