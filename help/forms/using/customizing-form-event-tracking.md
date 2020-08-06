@@ -1,8 +1,8 @@
 ---
 title: Anpassa spårning av formulärhändelser
 seo-title: Anpassa spårning av formulärhändelser
-description: Om en användare lägger mer än 60 sekunder på ett fält utlöses en fältbesökshändelse och informationen om fältet skickas till Adobe SiteCatalyst.
-seo-description: Om en användare lägger mer än 60 sekunder på ett fält utlöses en fältbesökshändelse och informationen om fältet skickas till Adobe SiteCatalyst.
+description: Om en användare spenderar mer än 60 sekunder på ett fält utlöses en fältbesökshändelse och informationen om fältet skickas till Adobe SiteCatalyst.
+seo-description: Om en användare spenderar mer än 60 sekunder på ett fält utlöses en fältbesökshändelse och informationen om fältet skickas till Adobe SiteCatalyst.
 uuid: 2f790085-2f1a-45be-9a69-6100c76dcae0
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,6 +10,9 @@ topic-tags: customization
 discoiquuid: 60d67c6b-5994-42ef-b159-ed6edf5cf9d4
 translation-type: tm+mt
 source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+workflow-type: tm+mt
+source-wordcount: '476'
+ht-degree: 1%
 
 ---
 
@@ -61,7 +64,7 @@ Följande händelser spåras automatiskt i en analysaktiverad Adaptiv form:
 
 ## Anpassa tidsgränsen för fältbesökshändelser {#customizing-the-field-visit-event-timeout}
 
-Om en användare tillbringar mer än 60 sekunder på ett fält i standardkonfigurationen för AEM-formulär utlöses en `fieldvisit` händelse och informationen i fältet skickas till Adobe Analytics. Du kan anpassa baslinjen för spårning av fälttid under Konfiguration av AEM Forms Analytics på AEM Configuration-konsolen (/system/console/configMgr) för att öka eller minska tidsgränsen.
+Om en användare lägger mer än 60 sekunder på ett fält i standardinställningen AEM en händelse utlöses och informationen i fältet skickas till Adobe Analytics. `fieldvisit` Du kan anpassa baslinjen för spårning av fälttid under Konfiguration av AEM Forms Analytics på AEM Configuration Console (/system/console/configMgr) för att öka eller minska tidsgränsen.
 
 ## Anpassa spårningshändelser {#customizing-the-tracking-events}
 
@@ -90,7 +93,7 @@ case 'error':
 
 ## Anpassa panelbesökshändelsen {#customizing-the-panelvisit-event}
 
-I standardinställningen för AEM Forms kontrolleras det efter var 60:e sekund om fönstret som innehåller det adaptiva formuläret är aktivt. Om fönstret är aktivt utlöses en `panelVisit`händelse för Adobe Analytics. Det hjälper till att kontrollera att dokumentet eller formuläret är aktivt och beräknar hur lång tid som har ägnats åt motsvarande formulär eller dokument.
+I standardinställningen för AEM Forms kontrolleras det efter var 60:e sekund om fönstret som innehåller det adaptiva formuläret är aktivt. Om fönstret är aktivt utlöses en `panelVisit`händelse till Adobe Analytics. Det hjälper till att kontrollera att dokumentet eller formuläret är aktivt och beräknar hur lång tid som har ägnats åt motsvarande formulär eller dokument.
 
 >[!NOTE]
 >
