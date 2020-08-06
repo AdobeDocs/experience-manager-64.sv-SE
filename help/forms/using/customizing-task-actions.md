@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Anpassa uppgiftsåtgärder {#customizing-task-actions}
 
-Med arbetsytan i AEM Forms kan användarna anpassa uppgiftsåtgärderna. Innan du anpassar uppgiftsåtgärderna måste du följa de steg som beskrivs i [Allmänna steg för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md)av arbetsytan i AEM Forms.
+Med AEM Forms arbetsyta kan användare anpassa uppgiftsåtgärderna. Innan du anpassar uppgiftsåtgärderna måste du följa de steg som beskrivs i [Allmänna steg för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md)av arbetsytan i AEM Forms.
 
 ## Anpassa textstil {#customizing-text-style}
 
@@ -138,7 +138,7 @@ Om du bara vill visa bilder för åtgärder anpassar du bilderna som används i 
 
 ### Åtgärdssnabbmeny för uppgiftslistans åtgärd {#task-list-task-action-nbsp-pop-up-menu}
 
-1. Du behöver ett utvecklingspaket för att kunna anpassa objekt på aktivitetsmenyn på arbetsytan i AEM Forms. Mer information om hur du skapar utvecklingspaket finns i [Skapa kod för arbetsytan i AEM Forms.](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
+1. Du behöver ett utvecklingspaket för att kunna anpassa alternativ på åtgärdsmenyn Åtgärd för arbetsytan i AEM Forms. Mer information om hur du skapar utvecklingspaket finns i [Skapa AEM Forms-kod för arbetsytan.](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
 
 1. Kopiera /libs/ws/js/runtime/templates/task.html för att `/apps/ws/js/runtime/templates/task.html`ersätta följande kodfragment:
 
