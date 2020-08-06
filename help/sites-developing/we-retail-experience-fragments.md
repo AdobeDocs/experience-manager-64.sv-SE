@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: fe44a941-a09b-4421-b766-1d433291f2cc
 translation-type: tm+mt
 source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
@@ -23,14 +26,15 @@ Ett [Experience Fragment](/help/sites-authoring/experience-fragments.md) är en 
 
 De gör att en författare kan återanvända delar av en sida (ett fragment av en upplevelse) utan att behöva kopiera och klistra in innehållet.
 
-Detta har stöd för CMS-fall (headless Content Management System), där författare endast vill använda AEM för att skapa, men inte för att leverera till kunden. En dator/kontaktyta från tredje part kan sedan förbruka upplevelsen och sedan leverera till slutanvändaren.
+Detta har stöd för CMS-fall (headless Content Management System), där författare bara vill använda AEM för att skapa, men inte för att leverera till kunden. En dator/kontaktyta från tredje part kan sedan förbruka upplevelsen och sedan leverera till slutanvändaren.
 
 >[!NOTE]
 >
->**[Innehållsfragment](/help/sites-developing/we-retail-content-fragments.md)**och **Experience Fragments**är olika funktioner i AEM:
+>**[Content Fragments](/help/sites-developing/we-retail-content-fragments.md)**and **Experience Fragments**are different features within AEM:
 >
 >* **Innehållsfragment** är redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
 >* **Experience Fragments** är helt utformat för innehåll, ett fragment av en webbsida.
+
 >
 >
 Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
