@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 5a96c306-790a-4721-a146-86fbceb376db
 translation-type: tm+mt
 source-git-commit: e2fbd2bb97264265ab45b436d6ac32fbf6fef2a7
+workflow-type: tm+mt
+source-wordcount: '4811'
+ht-degree: 9%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: e2fbd2bb97264265ab45b436d6ac32fbf6fef2a7
 
 När du skapar en sida måste du välja en mall som ska användas som bas för att skapa den nya sidan. Mallen definierar strukturen för den resulterande sidan, allt ursprungligt innehåll och de komponenter som kan användas.
 
-Med **mallredigeraren**&#x200B;är det inte längre bara utvecklare som skapar och underhåller mallar. En typ av avancerade användare, som kallas **mallskapare**, kan också involveras. Utvecklare måste fortfarande installera miljön, skapa klientbibliotek och skapa komponenter som ska användas, men när dessa grunder väl är på plats kan mallskaparen **** skapa och konfigurera mallar utan ett utvecklingsprojekt.
+Tack vare **mallredigeraren** är det inte längre bara utvecklare som kan skapa och underhålla mallar. En typ av superanvändare, som kallas **mallskapare**, kan också arbeta med detta. Utvecklare måste fortfarande installera miljön, skapa klientbibliotek och skapa de komponenter som ska användas, men när dessa grunder väl är på plats kan **mallskaparen** skapa och konfigurera mallar utan något utvecklingsprojekt.
 
 Med **mallkonsolen** kan mallskapare:
 
@@ -42,7 +45,7 @@ Mer information om hur redigerbara mallar fungerar på teknisk nivå finns i utv
 
 >[!NOTE]
 >
->Mallredigeraren **** har inte stöd för direkt målinriktning på mallnivå. Sidor som skapas baserat på en redigerbar mall kan ha som mål, men det går inte att använda själva mallarna.
+>**Mallredigeraren** har inte stöd för direkt målinriktning på mallnivå. Sidor som skapas utifrån en redigerbar mall kan användas för målinriktning, men inte själva mallarna.
 
 >[!CAUTION]
 >
@@ -58,18 +61,18 @@ Följande punkter är viktiga att tänka på innan du börjar:
 
 * Att skapa en ny mall kräver samarbete. Därför anges [rollen](#roles) för varje uppgift.
 
-* Beroende på hur din instans är konfigurerad kan det vara bra att vara medveten om att AEM nu tillhandahåller [två grundläggande typer av mallar](/help/sites-authoring/templates.md#editable-and-static-templates). Detta påverkar inte hur du faktiskt [använder en mall för att skapa en sida](#using-a-template-to-create-a-page), men det påverkar den typ av mall du kan skapa och hur en sida relaterar till dess mall.
+* Beroende på hur instansen är konfigurerad kan det vara bra att vara medveten om att AEM nu innehåller [två grundläggande typer av mallar](/help/sites-authoring/templates.md#editable-and-static-templates). Detta påverkar inte hur du faktiskt [använder en mall för att skapa en sida](#using-a-template-to-create-a-page), men det påverkar den typ av mall du kan skapa och hur en sida relaterar till dess mall.
 
 ### Roller {#roles}
 
-Om du vill skapa en ny mall med hjälp av **mallkonsolen** och **mallredigeraren** måste du samarbeta mellan följande roller:
+Om du vill skapa en ny mall med hjälp av **mallkonsolen** och **mallredigeraren** måste följande roller samarbeta:
 
 * **Administratör**:
 
    * Skapar en ny mapp för mallar som kräver `admin` rättigheter.
    * Sådana uppgifter kan ofta även utföras av en utvecklare
 
-* **Utvecklare**:
+* **Developer**:
 
    * Koncentrerar sig på tekniska/interna detaljer
    * Kräver erfarenhet av utvecklingsmiljön.
@@ -95,7 +98,7 @@ De uppgifter som beskrivs i det här dokumentet listas med den roll som ansvarar
 
 ### Redigerbara och statiska mallar {#editable-and-static-templates}
 
-AEM erbjuder nu två grundläggande typer av mallar:
+AEM har nu två grundläggande typer av mallar:
 
 * Redigerbara mallar
 
@@ -109,7 +112,7 @@ AEM erbjuder nu två grundläggande typer av mallar:
    * De [tillhandahålls av utvecklarna](/help/sites-developing/page-templates-static.md), så de kan inte skapas eller redigeras av författare.
    * Kopieras för att skapa den nya sidan, men det finns ingen dynamisk anslutning efter detta (även om mallnamnet är registrerat för information).
    * Använd [designläget](/help/sites-authoring/default-components-designmode.md) för att behålla designegenskaperna.
-   * Eftersom det bara är utvecklarens uppgift att redigera statiska mallar finns mer information i [utvecklardokumentet Sidmallar - statisk](/help/sites-developing/page-templates-static.md) .
+   * Eftersom det är en utvecklares enda uppgift att redigera statiska mallar finns mer information i utvecklardokumentet [Sidmallar - statisk](/help/sites-developing/page-templates-static.md) .
 
 I mallkonsolen och mallredigeraren går det bara att skapa och redigera redigerbara mallar. Därför fokuserar det här dokumentet enbart på redigerbara mallar.
 
@@ -154,11 +157,11 @@ Du bör skapa en mallmapp för ditt projekt för dina projektspecifika mallar. D
 
 ### Skapa en ny mall - mallskapare {#creating-a-new-template-template-author}
 
-1. Öppna **mallkonsolen** (via **Verktyg** -> **Allmänt**) och navigera sedan till önskad mapp.
+1. Open the **Templates Console** (via **Tools** -> **General**) then navigate to the required folder.
 
    >[!NOTE]
    >
-   >I en standard-AEM-instans finns den **globala** mappen redan i mallkonsolen. Detta innehåller standardmallar och fungerar som reserv om inga principer och/eller malltyper hittas i den aktuella mappen.
+   >I en AEM finns den **globala** mappen redan i mallkonsolen. Detta innehåller standardmallar och fungerar som reserv om inga principer och/eller malltyper hittas i den aktuella mappen.
    >
    >Vi rekommenderar att du använder en [mallmapp som skapats för ditt projekt](/help/sites-developing/page-templates-editable.md#template-folders).
 
@@ -203,7 +206,7 @@ En mall kan ha följande egenskaper:
 Så här visar och/eller redigerar du egenskaperna:
 
 1. Välj mallen på **mallkonsolen**.
-1. Välj **Visa egenskaper** i verktygsfältet eller snabbalternativ för att öppna dialogrutan.
+1. Välj **Visa egenskaper** i verktygsfältet eller från snabbalternativen för att öppna dialogrutan.
 1. Nu kan du visa eller redigera mallegenskaperna.
 
 >[!NOTE]
@@ -257,9 +260,9 @@ En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
 
 1. Öppna fliken **Avancerat** .
 
-1. Under **Mallinställningar** använder du fältet **** Lägg till för att ange sökvägen/sökvägarna till mallarna.
+1. Under **Mallinställningar** använder du **Lägg till fält** för att ange sökvägen/sökvägarna till mallarna.
 
-   Sökvägen kan vara explicit eller använda mönster. Exempel:
+   Sökvägen kan vara explicit eller använda mönster. Till exempel:
 
    `/conf/<your-folder>/settings/wcm/templates/.*`
 
@@ -282,7 +285,7 @@ En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
 När det refereras till mallen när en sida återges måste den fullständigt konfigurerade mallen publiceras så att den är tillgänglig i publiceringsmiljön.
 
 1. Välj mallen på **mallkonsolen**.
-1. Välj **Publicera** i verktygsfältet för att öppna guiden.
+1. Select **Publish** from the toolbar to open the wizard.
 1. Markera de **innehållsprinciper** som ska publiceras tillsammans.
 
 1. Välj **Publicera** i verktygsfältet för att slutföra åtgärden.
@@ -313,7 +316,7 @@ Följande aspekter av en mall kan redigeras:
 
 * [Layout](#editing-a-template-layout-template-author)
 
-   Här kan du fördefiniera mallayouten för de önskade enhetsformaten. **Layoutläget** för mallutveckling har samma funktioner som **[layoutläget](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**för sidredigering].
+   Här kan du fördefiniera mallayouten för de önskade enhetsformaten. **Layoutläget** för mallutveckling har samma funktioner som **[layoutläget](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)** för sidredigering].
 
 * [Sidprofiler](#editing-a-template-structure-template-author)
 
@@ -360,16 +363,18 @@ I **strukturläget** i mallredigeraren:
    Det finns flera sätt att lägga till komponenter i mallen:
 
    * Från **komponentwebbläsaren** på sidopanelen.
-   * Genom att använda alternativet **Infoga komponent** (**+** ikon) som finns i verktygsfältet för komponenter som redan finns i mallen eller **Dra komponenter hit** .
+   * By using the **Insert Component** option (**+** icon) available on the toolbar of components already on the template or the **Drag components here** box.
    * Genom att dra en resurs (från **Assets** -webbläsaren på sidpanelen) direkt till mallen för att generera rätt komponent på plats.
+
    När de lagts till markeras varje komponent med:
 
    * En kant
    * En markör som visar komponenttypen
    * En markör som visas när komponenten har låsts upp
+
    >[!NOTE]
    >
-   >När du lägger till en körklar **titelkomponent** i mallen kommer den att innehålla **standardtextstrukturen**.
+   >När du lägger till en färdig **titelkomponent** i mallen innehåller den **standardtextstrukturen**.
    >
    >
    >Om du ändrar detta och lägger till egen text används den uppdaterade texten när en sida skapas från mallen.
@@ -413,6 +418,7 @@ I **strukturläget** i mallredigeraren:
 
    * Till vänster i dialogrutan under **Policy** kan du välja en befintlig profil eller en befintlig.
    * Till höger i dialogrutan under **Egenskaper** kan du ange egenskaper som är specifika för komponenttypen.
+
    Vilka egenskaper som är tillgängliga beror på den valda komponenten. För en textkomponent definierar till exempel egenskaperna alternativ för kopiera och klistra in, formatering och styckeformat bland annat.
 
    ***Policy***
@@ -447,9 +453,10 @@ I **strukturläget** i mallredigeraren:
 
    * Huvud
    * Funktioner
+
    *Huvud*
 
-   De viktigaste inställningarna för komponenten definieras på fliken **Main** .
+   På fliken **Main** (Main) definieras komponentens viktigaste inställningar.
 
    För en bildkomponent kan till exempel de tillåtna bredderna definieras tillsammans med aktivering av lazy loading.
 
@@ -473,7 +480,7 @@ I **strukturläget** i mallredigeraren:
 
    >[!CAUTION]
    >
-   >Observera att i AEM definieras beskärningsproportioner som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av äldre kompatibilitetsskäl. Sidredigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar **namnet** tydligt eftersom det är det som visas i användargränssnittet.
+   >Observera att AEM beskärningsproportioner definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av äldre kompatibilitetsskäl. Sidredigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar **namnet** tydligt eftersom det är det som visas i användargränssnittet.
 
    >[!NOTE]
    >
@@ -502,6 +509,7 @@ I **strukturläget** i mallredigeraren:
    * Tillåtna komponenter
    * Standardkomponenter
    * Responsiva inställningar
+
    *Tillåtna komponenter*
 
    På fliken **Tillåtna komponenter** definierar du vilka komponenter som är tillgängliga för layoutbehållaren.
@@ -511,11 +519,12 @@ I **strukturläget** i mallredigeraren:
    * Ett minustecken representerar minst ett, men inte alla, objekt i en grupp markeras.
    * En sökning är tillgänglig för att filtrera efter en komponent efter namn.
    * Antalet som visas till höger om komponentgruppens namn representerar det totala antalet valda komponenter i dessa grupper oavsett filtret.
+
    ![chlimage_1-374](assets/chlimage_1-374.png)
 
    *Standardkomponenter*
 
-   På fliken **Standardkomponenter** definierar du vilka komponenter som automatiskt kopplas till de angivna medietyperna så att AEM vet vilken komponent som ska kopplas när en författare drar en resurs från resursläsaren. Observera att endast komponenter med släppzoner är tillgängliga för sådan konfiguration.
+   På fliken **Standardkomponenter** definierar du vilka komponenter som automatiskt kopplas till de angivna medietyperna, så att när en författare drar en resurs från resursläsaren AEM vet med vilken komponent den ska kopplas. Observera att endast komponenter med släppzoner är tillgängliga för sådan konfiguration.
 
    Klicka eller tryck på **Lägg till mappning** för att lägga till en helt ny komponent och MIME-typmappning.
 
@@ -539,15 +548,16 @@ I **strukturläget** i mallredigeraren:
 
       * Innehåll som redan har angetts betraktas som ursprungligt innehåll och visas bara i **ursprungligt innehåll** .
    * Det går inte att flytta, klippa ut eller ta bort överordnade för den olåsta komponenten.
+
    ![chlimage_1-376](assets/chlimage_1-376.png)
 
-   Detta inkluderar upplåsning av behållarkomponenter så att ytterligare komponenter kan läggas till, antingen i **ursprungligt innehåll** eller på resulterande sidor. Om du redan har lagt till komponenter/innehåll i behållaren innan du låser upp den visas dessa inte längre i **strukturläge** , men de visas i **ursprungligt innehåll** . I **strukturläge** visas bara behållarkomponenten med dess lista över **tillåtna komponenter**.
+   Detta inkluderar upplåsning av behållarkomponenter så att ytterligare komponenter kan läggas till, antingen i läget **ursprungligt innehåll** eller på resulterande sidor. Om du redan har lagt till komponenter/innehåll i behållaren innan du låser upp den visas dessa inte längre i **strukturläget**, men de visas i **ursprungligt innehåll**. I **strukturläget** visas bara själva behållarkomponenten med dess lista över **tillåtna komponenter**.
 
    ![chlimage_1-377](assets/chlimage_1-377.png)
 
    För att spara utrymme växer inte layoutbehållaren så att den passar listan över tillåtna komponenter. Behållaren blir i stället en rullningsbar lista.
 
-   Komponenter som kan konfigureras visas med en **principikon** , som du kan trycka på eller klicka på för att redigera principen och egenskaperna för den komponenten.
+   Komponenter som kan konfigureras visas med en **policyikon**, som du kan trycka eller klicka på för att redigera policyn och egenskaperna för den komponenten.
 
    ![chlimage_1-378](assets/chlimage_1-378.png)
 
@@ -575,9 +585,9 @@ I **strukturläget** i mallredigeraren:
 
    ![chlimage_1-381](assets/chlimage_1-381.png)
 
-* Om en behållarkomponent har låsts upp (i **strukturläge** ) kan du lägga till nya komponenter i behållaren (i **ursprungligt innehåll** ). Komponenter som läggs till i **ursprungligt innehåll** kan flyttas till eller tas bort från resultatsidor.
+* Om en behållarkomponent har låsts upp (i **strukturläget**) kan du lägga till nya komponenter i behållaren (i **ursprungligt innehåll**). Komponenter som läggs till i **ursprungligt innehåll** kan flyttas på eller tas bort från resultatsidor.
 
-   Du kan lägga till en komponent med hjälp av antingen **Dra komponenter här** eller alternativet **Infoga ny komponent** i verktygsfältet i lämplig behållare.
+   Du kan lägga till en komponent med hjälp av antingen **Dra komponenter hit** eller **Infoga ny komponent** i verktygsfältet för lämplig behållare.
 
    ![chlimage_1-382](assets/chlimage_1-382.png) ![chlimage_1-383](assets/chlimage_1-383.png)
 
@@ -599,7 +609,7 @@ Du kan definiera mallayouten för ett antal olika enheter. [Responsiv layout](/h
 
 ### Redigera en mall - Siddesign - Mallförfattare/utvecklare {#editing-a-template-page-design-template-author-developer}
 
-Siddesignen med nödvändiga klientbibliotek och sidprofiler hanteras under alternativet **Siddesign** på menyn **Sidinformation** .
+Siddesignen med nödvändiga klientbibliotek och sidpolicyer hanteras under alternativet **Siddesign** på menyn **Sidinformation**.
 
 Så här öppnar du dialogrutan **Siddesign** :
 
@@ -608,6 +618,7 @@ Så här öppnar du dialogrutan **Siddesign** :
 
    * Den vänstra halvan definierar [sidans profiler](/help/sites-authoring/templates.md#page-policies)
    * Den högra halvan definierar [sidegenskaperna](/help/sites-authoring/templates.md#page-properties)
+
    ![chlimage_1-385](assets/chlimage_1-385.png)
 
 #### Sidprofiler {#page-policies}
@@ -698,6 +709,7 @@ När du skapar mallar bör du tänka på följande:
 
       * Endast struktur - används omedelbart
       * Innehåller ursprungligt innehåll - endast på sidor som skapats efter ändringen
+
    Var särskilt försiktig när du:
 
    * Låsa eller låsa upp komponenter på aktiverade mallar.
@@ -705,9 +717,10 @@ När du skapar mallar bör du tänka på följande:
 
       * Upplåsning av komponenter (som var låsta) saknas på befintliga sidor.
       * Om du låser komponenter (som var redigerbara) döljs innehållet så att det inte visas på sidorna.
+
    >[!NOTE]
    >
-   >AEM ger explicita varningar när komponenternas låsstatus ändras i mallar som inte längre är utkast.
+   >AEM ger uttryckliga varningar när komponenternas låsstatus ändras i mallar som inte längre är utkast.
 
 1. [Skapa egna mappar](#creating-a-template-folder-admin) för webbplatsspecifika mallar.
 1. [Publicera mallarna](#publishing-a-template-template-author) från **mallkonsolen** .
