@@ -10,6 +10,9 @@ topic-tags: correspondence-management
 discoiquuid: 1b5e6746-3618-46fe-ba2d-ec76bb79de1d
 translation-type: tm+mt
 source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+workflow-type: tm+mt
+source-wordcount: '652'
+ht-degree: 1%
 
 ---
 
@@ -48,11 +51,11 @@ Följ de här stegen för att lägga till stöd för anpassade specialtecken:
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ma/gui/configuration/textEditorConfig/specialtecken
+      **Sökväg:** /libs/fd/cm/ma/gui/configuration/textEditorConfig/specialtecken
 
-      **** Plats för övertäckning: /apps/
+      **Plats för övertäckning:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
       >[!NOTE]
       >
@@ -67,14 +70,14 @@ Följ de här stegen för att lägga till stöd för anpassade specialtecken:
 
       Kontrollera nodstrukturtaggar när du har skapat övertäckningen. Varje nod som skapas i /apps med övertäckningen ska ha samma klass och egenskaper som definieras i /libs för den noden. Om någon egenskap eller tagg saknas i nodstrukturen under /apps-platsen synkroniserar du dess taggar med motsvarande nod i /libs.
 
-1. Kontrollera att **[!UICONTROL noden textEditorConfig]** har följande egenskaper och värden:
+1. Kontrollera att **[!UICONTROL textEditorConfig]** noden har följande egenskaper och värden:
 
    | Namn | Typ | Värde |
    |---|---|---|
    | cmConfigurationType | Sträng | cmTextEditorConfiguration |
    | cssPath | Sträng | /libs/fd/cm/ma/gui/components/admin/createasset/textcontrol/clientlibs/textcontrol |
 
-1. Högerklicka på mappen med **[!UICONTROL specialtecken]** i följande sökväg och välj **Skapa > Underordnad nod** och klicka sedan på **Spara alla**:
+1. Högerklicka på **[!UICONTROL specialcharacters]** mappen i följande sökväg och välj **Skapa > Underordnad nod** och klicka sedan på **Spara alla**:
 
    /apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters/&lt;YourChildNode>
 
@@ -133,7 +136,7 @@ Följ de här stegen för att lägga till stöd för anpassade specialtecken:
     <ol> 
      <li>Lägg till en underordnad nod under "/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters" med obligatoriska egenskaper. </li> 
      <li>Lägg till egenskapen "sling:orderBefore (String)" i den nyskapade underordnade noden. </li> 
-     <li>Lägg till nodnamn som ett värde innan det nya specialtecknet visas. </li> 
+     <li>Lägg till nodnamn som ett värde som det nya specialtecknet ska visas före. </li> 
      <li>Klicka på Spara alla. </li> 
      <li>Uppdatera textredigeraren\Skapa korrespondensgränssnitt för att se ändringarna.<br /> </li> 
     </ol> </td> 
