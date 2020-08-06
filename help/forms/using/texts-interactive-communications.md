@@ -158,6 +158,7 @@ Med hjälp av regelredigeraren i en text kan du skapa regler som visar eller dö
 
    * Egenskaper för associerad formulärdatamodell
    * Alla variabler som du kan ha skapat
+
    Välj lämpligt alternativ som ska utvärderas.
 
    ![linjalredigerare](assets/ruleeditor.png)
@@ -264,6 +265,7 @@ Med funktionen Sök och ersätt kan du söka efter (och ersätta) valfri textstr
 
    * Om en annan förekomst av söktexten hittas markeras den förekomsten i textdokumentfragmentet. Om du trycker **[!UICONTROL Replace]** igen ersätts den markerade instansen och markören flyttas framåt, om en tredje instans hittas.
    * Om det inte går att hitta någon annan instans visas ett meddelande i dialogrutan Sök och ersätt: Slutet av modulen har nåtts.
+
    Du kan också trycka på Ersätt alla om du vill ersätta alla matchningar på en gång.
 
    Sök och ersätt innehåller även en kraftfull sökning efter reguljära uttryck. Om du vill använda regex i sökningen markerar du **[!UICONTROL Reg ex]** och trycker sedan på **[!UICONTROL Find]** eller **[!UICONTROL Replace]**.
