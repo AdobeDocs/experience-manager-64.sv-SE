@@ -166,6 +166,7 @@ Följande strategier kan minimera dataförlust för utdata och indatamappar när
    * **Steg 3:** Kopieras till scenmappen och processen anropas
    * **Steg 4:** Hantering pågår
    * **Steg 5:** Returnerade resultat
+
    Om filerna finns på scen 1 ändras de. Om filerna finns i scen 2 eller 3 placerar du dem i indatamappen så att ändringarna utförs igen.
 
    >[!NOTE]
