@@ -44,10 +44,10 @@ Tjänsten Generate PDF använder inbyggda program för att konvertera följande 
 
    >[!NOTE]
    >
-   >Photoshop CS3 och CS4 stöds inte eftersom de inte stöder Windows Server 2003 eller Windows Server 2008.
+   >Photoshop CS3 och CS4 stöds inte eftersom de inte har stöd för Windows Server 2003 eller Windows Server 2008.
 
 * Adobe FrameMaker® 7.2 och 8 för att konvertera FM (endast Windows)
-* Adobe PageMaker® 7.0 för konvertering av PMD, PM6, P65 och PM (endast Windows)
+* Adobe PageMaker® 7.0 för att konvertera PMD, PM6, P65 och PM (endast Windows)
 * Inbyggda format som stöds av tredjepartsprogram (kräver utveckling av installationsfiler som är specifika för programmet) (endast Windows)
 
 Tjänsten Generate PDF konverterar följande standardbaserade filformat till PDF.
@@ -70,11 +70,11 @@ Tjänsten Generate PDF konverterar PDF till följande filformat (endast Windows)
 
 Tjänsten Generera PDF kräver att du utför följande administrativa uppgifter:
 
-* Installera nödvändiga inbyggda program på datorn som är värd för AEM-formulär
-* Installera Adobe Acrobat Professional eller Acrobat Pro Extended 9.2 på den dator där AEM Forms finns
+* Installera nödvändiga inbyggda program på den dator som är värd för AEM Forms
+* Installera Adobe Acrobat Professional eller Acrobat Pro Extended 9.2 på den dator som är värd för AEM Forms
 * Utför konfigurationsuppgifter efter installation
 
-Dessa åtgärder beskrivs i Installera och distribuera AEM-formulär med JBoss-tangenten.
+Dessa åtgärder beskrivs i Installera och distribuera AEM formulär med JBoss-tangenten.
 
 Du kan utföra följande uppgifter med tjänsten Generera PDF:
 
@@ -84,7 +84,7 @@ Du kan utföra följande uppgifter med tjänsten Generera PDF:
 
 >[!NOTE]
 >
->Mer information om tjänsten Generera PDF finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Generera PDF finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Konvertera Word-dokument till PDF-dokument {#converting-word-documents-to-pdf-documents}
 
@@ -96,7 +96,7 @@ I det här avsnittet beskrivs hur du kan använda Generate PDF API för att prog
 
 >[!NOTE]
 >
->Mer information om tjänsten Generera PDF finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Generera PDF finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -169,6 +169,7 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Gener
    * Ett `java.lang.String` objekt som innehåller namnet på de skyddsinställningar som ska användas.
    * Ett valfritt `com.adobe.idp.Document` objekt som innehåller inställningar som ska användas när PDF-dokumentet genereras.
    * Ett valfritt `com.adobe.idp.Document` objekt som innehåller metadatainformation som ska användas i PDF-dokumentet.
+
    Metoden returnerar `createPDF2` ett `CreatePDFResult` objekt som innehåller det nya PDF-dokumentet och en logginformation. Loggfilen innehåller vanligen fel- eller varningsmeddelanden som genererats av konverteringsbegäran.
 
 1. Hämta resultaten.
@@ -177,6 +178,7 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Gener
 
    * Anropa `CreatePDFResult` objektets `getCreatedDocument` metod, som returnerar ett `com.adobe.idp.Document` objekt.
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera PDF-dokumentet från objektet som skapades i föregående steg.
+
    Utför följande åtgärder om du använde metoden för att hämta loggdokumentet (gäller inte för HTML-konverteringar): `createPDF2`
 
    * Anropa `CreatePDFResult` objektets `getLogDocument` metod. Detta returnerar ett `com.adobe.idp.Document` objekt.
@@ -195,7 +197,7 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Gener
 
 ### Konvertera Word-dokument till PDF-dokument med webbtjänstens API {#convert-word-documents-to-pdf-documents-using-the-web-service-api}
 
-Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Generera PDF API (webbtjänst):
+Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Generate PDF API (webbtjänsten):
 
 1. Inkludera projektfiler.
 
@@ -213,7 +215,7 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Gener
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `GeneratePDFServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `GeneratePDFServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `GeneratePDFServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -251,9 +253,9 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Gener
 
 [Sammanfattning av steg](converting-file-formats-pdf.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Konvertera HTML-dokument till PDF-dokument {#converting-html-documents-to-pdf-documents}
 
@@ -261,7 +263,7 @@ I det här avsnittet beskrivs hur du kan använda Generate PDF API för att prog
 
 >[!NOTE]
 >
->Mer information om tjänsten Generera PDF finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Generera PDF finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-1}
 
@@ -370,7 +372,7 @@ Konvertera HTML-innehåll till ett PDF-dokument med hjälp av Generate PDF API (
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `GeneratePDFServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `GeneratePDFServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `GeneratePDFServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -401,9 +403,9 @@ Konvertera HTML-innehåll till ett PDF-dokument med hjälp av Generate PDF API (
 
 [Konvertera HTML-dokument till PDF-dokument](converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Konvertera PDF-dokument till andra format än bildformat {#converting-pdf-documents-to-non-image-formats}
 
@@ -411,7 +413,7 @@ I det här avsnittet beskrivs hur du kan använda Generate PDF Java API och webb
 
 >[!NOTE]
 >
->Mer information om tjänsten Generera PDF finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Generera PDF finns i [Services Reference for AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-2}
 
@@ -481,6 +483,7 @@ Konvertera ett PDF-dokument till en RTF-fil med hjälp av Generate PDF API (Java
    * Ett `java.lang.String` objekt som innehåller namnet på Adobe PDF-inställningarna.
    * Ett `ConvertPDFFormatType` objekt som anger målfiltypen för konverteringen.
    * Ett valfritt `com.adobe.idp.Document` objekt som innehåller inställningar som ska användas när PDF-dokumentet genereras.
+
    Metoden `exportPDF2` returnerar ett `ExportPDFResult` objekt som innehåller den konverterade filen.
 
 1. Konvertera PDF-dokumentet.
@@ -520,7 +523,7 @@ Konvertera ett PDF-dokument till en RTF-fil med hjälp av Generate PDF API (webb
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `GeneratePDFServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `GeneratePDFServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `GeneratePDFServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -555,9 +558,9 @@ Konvertera ett PDF-dokument till en RTF-fil med hjälp av Generate PDF API (webb
 
 [Sammanfattning av steg](converting-file-formats-pdf.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Stöd för fler inbyggda filformat {#adding-support-for-additional-native-file-formats}
 
@@ -614,7 +617,7 @@ I den här tabellen visas vilken typ av information som används vid utskrift av
   </tr> 
   <tr> 
    <td><p>Skript </p></td> 
-   <td><p>Anger interaktioner mellan tjänsten Generera PDF och ett systemspecifikt program. Sådana interaktioner dirigerar vanligtvis programmet till Adobe PDF-drivrutinen. </p><p>Skriptet innehåller instruktioner som instruerar det ursprungliga programmet att öppna specifika dialogrutor och som ger specifika svar på fält och knappar i dessa dialogrutor. </p></td> 
+   <td><p>Anger interaktioner mellan tjänsten Generera PDF och ett systemspecifikt program. Sådana interaktioner dirigerar vanligtvis programmet till Adobe PDF-drivrutinen för att skriva ut en fil. </p><p>Skriptet innehåller instruktioner som instruerar det ursprungliga programmet att öppna specifika dialogrutor och som ger specifika svar på fält och knappar i dessa dialogrutor. </p></td> 
    <td><p>Tjänsten Generate PDF innehåller skriptfiler för alla originalprogram som stöds. Du kan ändra dessa filer med ett XML-redigeringsprogram.</p><p>Om du vill lägga till stöd för ett nytt systemspecifikt program måste du skapa en ny skriptfil. (Se <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">Skapa eller ändra ytterligare en dialogrute-XML-fil för ett internt program</a>.) </p></td> 
   </tr> 
   <tr> 
@@ -721,8 +724,8 @@ Om du tänker arbeta med dialogruta- eller skript-XML-filer bör du installera p
 
 Dialogrutan och skriptfilerna finns i filen appmondata.jar. Innan du kan ändra någon av dessa filer eller lägga till nya skript- eller dialogfiler måste du packa upp den här JAR-filen. Anta till exempel att du vill lägga till stöd för programmet EditPlus. Du skapar två XML-filer med namnen appmon.editplus.script.en_US.xml och appmon.editplus.script.addition.en_US.xml. Dessa XML-skript måste läggas till i filen adobe-appmondata.jar på två platser, enligt vad som anges nedan:
 
-* adobe-livecycle-native-jboss-x86_win32.ear > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar\com\adobe\appmon. Filen adobe-livecycle-native-jboss-x86_win32.ear finns i exportmappen på *installationskatalogen för[AEM-formulär]\*configurationManager. (Om AEM Forms distribueras på en annan J2EE-programserver ersätter du filen adobe-livecycle-native-jboss-x86_win32.ear med den EAR-fil som motsvarar J2EE-programservern.)
-* adobe-generatepdf-dsc.jar > adobe-appmondata.jar\com\adobe\appmon (filen adobe-appmondata.jar finns i filen adobe-generatepdf-dsc.jar). Filen adobe-generatepdf-dsc.jar finns i installationskatalogen *[för]* AEM-formulär\installationsmappen.
+* adobe-livecycle-native-jboss-x86_win32.ear > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar\com\adobe\appmon. Filen adobe-livecycle-native-jboss-x86_win32.ear finns i exportmappen på *[AEM installationskatalogen]\*configurationManager. (om AEM Forms distribueras på en annan J2EE-programserver ersätter du filen adobe-livecycle-native-jboss-x86_win32.ear med den EAR-fil som motsvarar J2EE-programservern.)
+* adobe-generatepdf-dsc.jar > adobe-appmondata.jar\com\adobe\appmon (filen adobe-appmondata.jar finns i filen adobe-generatepdf-dsc.jar). Filen adobe-generatepdf-dsc.jar finns i *[AEM installationskatalog]*\installationsmapp.
 
 När du har lagt till dessa XML-filer i filen adobe-appmondata.jar måste du distribuera om komponenten GeneratePDF. Så här lägger du till dialogrute- och skript-XML-filer i filen adobe-appmondata.jar:
 
@@ -934,7 +937,7 @@ När du har skapat den nya systemvariabeln måste du starta om servern som tjän
 
 #### XML-filer {#xml-files}
 
-AEM Forms innehåller XML-exempelfiler som gör att tjänsten Generera PDF använder Anteckningar för att bearbeta filer med filnamnstillägget .txt. Den här koden ingår i det här avsnittet. Dessutom måste du göra övriga ändringar som beskrivs i det här avsnittet.
+AEM Forms innehåller XML-exempelfiler som gör att tjänsten Generate PDF använder Anteckningar för att bearbeta filer med filnamnstillägget .txt. Den här koden ingår i det här avsnittet. Dessutom måste du göra övriga ändringar som beskrivs i det här avsnittet.
 
 #### XML-fil för ytterligare dialogrutor {#additional-dialog-xml-file}
 
@@ -954,7 +957,7 @@ Det här exemplet innehåller ytterligare dialogrutor för programmet Anteckning
 
 #### Script XML-fil {#script-xml-file}
 
-I det här exemplet anges hur tjänsten Generate PDF ska samverka med Anteckningar för att skriva ut filer med Adobe PDF-skrivaren.
+I det här exemplet anges hur tjänsten Generate PDF ska samverka med Anteckningar för att skriva ut filer med hjälp av Adobe PDF-skrivaren.
 
 **XML-fil för anteckningsskript (appmon.notepad.script.en_US.xml)**
 
