@@ -1,6 +1,6 @@
 ---
 title: Utöka resurssökning
-description: Utöka sökfunktionerna i AEM Resurser utöver färdiga sökningar efter resurser efter strängar.
+description: Utöka sökfunktionerna i AEM Assets till att inte bara söka efter mediefiler med hjälp av strängar.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
@@ -13,15 +13,15 @@ ht-degree: 11%
 
 # Utöka resurssökning {#extending-assets-search}
 
-Du kan utöka sökfunktionerna i Adobe Experience Manager (AEM) Assets. När allt är klart söker AEM Resurser efter resurser efter strängar.
+Du kan utöka sökfunktionerna i Adobe Experience Manager (AEM) Assets. När allt är klart söker AEM Assets efter resurser efter strängar.
 
 Sökningen görs via gränssnittet i QueryBuilder så att sökningen kan anpassas med flera predikat. Du kan täcka över standarduppsättningen med predikat i följande katalog: `/apps/dam/content/search/searchpanel/facets`.
 
-Du kan även lägga till ytterligare flikar på AEM Resurser-administratörspanelen.
+Du kan också lägga till fler flikar på AEM Assets administratörspanel.
 
 >[!CAUTION]
 >
->Från och med AEM 6.4 är det klassiska användargränssnittet föråldrat. Information finns i [Föråldrade och Borttagna funktioner](../release-notes/deprecated-removed-features.md). Du rekommenderas att använda användargränssnittet med pekskärmsfunktioner. Anpassa finns i [Sök efter ansikten](search-facets.md).
+>Från och med AEM 6.4 används inte det klassiska användargränssnittet. Information finns i [Föråldrade och Borttagna funktioner](../release-notes/deprecated-removed-features.md). Du rekommenderas att använda användargränssnittet med pekskärmsfunktioner. Anpassa finns i [Sök efter ansikten](search-facets.md).
 
 ## Överläggning {#overlaying}
 
@@ -36,7 +36,7 @@ Om du vill täcka över de förkonfigurerade predikaten kopierar du `facets` nod
 
 ## Lägga till tabbar {#adding-tabs}
 
-Du kan lägga till fler sökflikar genom att konfigurera dem i AEM Resurser Admin. Så här skapar du ytterligare flikar:
+Du kan lägga till fler sökflikar genom att konfigurera dem i AEM Assets Admin. Så här skapar du ytterligare flikar:
 
 1. Skapa mappstrukturen `/apps/wcm/core/content/damadmin/tabs,`om den inte redan finns, och kopiera `tabs` noden från `/libs/wcm/core/content/damadmin` och klistra in den.
 1. Skapa och konfigurera den andra fliken efter behov.
@@ -47,9 +47,9 @@ Du kan lägga till fler sökflikar genom att konfigurera dem i AEM Resurser Admi
 
 ## Skapa anpassade predikat {#creating-custom-predicates}
 
-AEM Resurser innehåller en uppsättning fördefinierade predikat som kan användas för att anpassa en resursdelssida. Att anpassa en resurs på det här sättet beskrivs i [Skapa och konfigurera en resursdelssida](assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
+AEM Assets innehåller en uppsättning fördefinierade prediktiv som kan användas för att anpassa en resursdelssida. Att anpassa en resurs på det här sättet beskrivs i [Skapa och konfigurera en resursdelssida](assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
 
-Förutom att använda befintliga predikat kan AEM-utvecklare även skapa egna predikat med [Query Builder API](/help/sites-developing/querybuilder-api.md).
+Förutom att använda befintliga predikat kan AEM också skapa egna predikat med [Query Builder API](/help/sites-developing/querybuilder-api.md).
 
 Det krävs grundläggande kunskaper om [widgetramverket](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html)för att kunna skapa anpassade predikat.
 
@@ -305,4 +305,4 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 
 Presentationen av sökresultaten på en resursdelningssida styrs av det valda objektivet. AEM Assets innehåller en uppsättning fördefinierade objektiv som kan användas för att anpassa en resursdelssida. Att anpassa en resurs på det här sättet beskrivs i [Skapa och konfigurera en resursdelssida](assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
 
-Förutom att använda befintliga linser kan AEM-utvecklare även skapa egna linser.
+Förutom att använda befintliga linser kan AEM också skapa egna linser.
