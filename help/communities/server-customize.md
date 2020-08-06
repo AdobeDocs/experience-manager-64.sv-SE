@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: df5416ec-5c63-481b-99ed-9e5a91df2432
 translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+workflow-type: tm+mt
+source-wordcount: '898'
+ht-degree: 0%
 
 ---
 
@@ -61,11 +64,11 @@ En SocialComponentFactoryManager är en OSGi-tjänst och har tillgång till andr
 
 En referens till OSGi-tjänsten erhålls genom att anropa `com.adobe.cq.social.scf.SocialComponentFactoryManager`
 
-### HTTP API - POST-begäranden {#http-api-post-requests}
+### HTTP API - POSTER {#http-api-post-requests}
 
 #### Klassen PostOperation {#postoperation-class}
 
-HTTP API POST-slutpunkterna är PostOperation-klasser som definieras genom implementering av `SlingPostOperation`gränssnittet (paket `org.apache.sling.servlets.post`).
+Slutpunkterna för HTTP API-POSTEN är PostOperation-klasser som definieras genom implementering av `SlingPostOperation`gränssnittet (paket `org.apache.sling.servlets.post`).
 
 Slutpunktsimplementeringen anger `PostOperation`ett värde `sling.post.operation`som åtgärden ska svara på. Alla POST-begäranden med en:operation-parameter inställd på det värdet delegeras till den här implementeringsklassen.
 
@@ -118,7 +121,7 @@ Exempelkod finns i [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marke
 
 ## Bästa praxis {#best-practices}
 
-Se avsnittet [Kodningsriktlinjer](code-guide.md) för olika riktlinjer och bästa praxis för utvecklare av AEM Communities.
+Se avsnittet [Kodningsriktlinjer](code-guide.md) för olika riktlinjer och metodtips för AEM Communities-utvecklare.
 
 Se även [Storage Resource Provider (SRP) för UGC](srp.md) om du vill veta mer om hur du får åtkomst till användargenererat innehåll.
 
