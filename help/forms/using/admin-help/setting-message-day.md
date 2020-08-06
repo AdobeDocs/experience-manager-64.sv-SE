@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: c2b3a412-70c2-4257-bfb4-1430bb1f8891
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
 
 Du kan ange att ett meddelande ska visas på välkomstsidan i användargränssnittet för arbetsytan.
 
-Om det behövs kan du använda de HTML-taggar som stöds av Adobe Flash® Player för att formatera textens utseende:
+Om det behövs kan du använda HTML-taggarna som stöds av Adobe Flash® Player för att formatera textens utseende:
 
 * &lt;a> Ankartagg
 * &lt;b> Fet tagg
@@ -33,7 +36,7 @@ Om det behövs kan du använda de HTML-taggar som stöds av Adobe Flash® Player
 * Tagg för textformat
 * &lt;u> Understrykningstagg
 
-Mer information om de taggar som stöds finns i definitionen av egenskapen `htmlText` för klassen TextField i [Flex Language Reference](https://www.adobe.com/support/documentation/en/flex/).
+Mer information om de taggar som stöds finns i definitionen av egenskapen `htmlText` för klassen TextField i [Flex språkreferens](https://www.adobe.com/support/documentation/en/flex/).
 
 ## Ange dagens meddelande {#set-the-message-of-the-day}
 
@@ -43,5 +46,5 @@ Mer information om de taggar som stöds finns i definitionen av egenskapen `html
 
 >[!NOTE]
 >
->Flex Workspace används inte i AEM-formulärsversioner.
+>Flex Workspace är föråldrat för AEM formulärreleaser.
 
