@@ -1,8 +1,8 @@
 ---
 title: Bästa praxis
 seo-title: Bästa praxis
-description: Följ den här sidan om du vill lära dig bästa praxis och riktlinjer som hjälper erfarna AEM-utvecklare för webbplatser som vill skapa mallar och komponenter för mobilappar.
-seo-description: Följ den här sidan om du vill lära dig bästa praxis och riktlinjer som hjälper erfarna AEM-utvecklare för webbplatser som vill skapa mallar och komponenter för mobilappar.
+description: Följ den här sidan om du vill lära dig bästa praxis och riktlinjer som hjälper erfarna utvecklare AEM webbplatser som vill skapa mallar och komponenter för mobilappar.
+seo-description: Följ den här sidan om du vill lära dig bästa praxis och riktlinjer som hjälper erfarna utvecklare AEM webbplatser som vill skapa mallar och komponenter för mobilappar.
 uuid: 7733c8b1-a88c-455c-8080-f7add4205b92
 contentOwner: User
 content-type: reference
@@ -11,6 +11,9 @@ topic-tags: developing-on-demand-services-app
 discoiquuid: a0647696-72c3-409b-85ba-9275d8f99cff
 translation-type: tm+mt
 source-git-commit: 8078976ab79ccc0fefac5bfe6b000a008a917489
+workflow-type: tm+mt
+source-wordcount: '623'
+ht-degree: 1%
 
 ---
 
@@ -21,9 +24,9 @@ source-git-commit: 8078976ab79ccc0fefac5bfe6b000a008a917489
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Att skapa en app för AEM Mobile On-Demand Services skiljer sig från att skapa en app som körs direkt i Cordova-gränssnittet (eller PhoneGap-gränssnittet). Utvecklarna bör känna till
+Att skapa en AEM Mobile On-demand Services-app skiljer sig från att skapa en app som körs direkt i Cordova-skalet (eller PhoneGap-skalet). Utvecklarna bör känna till
 
-* Plugin-program som stöds direkt från paketet samt AEM Mobile-specifika plugin-program.
+* Plugin-program som kan användas direkt, liksom AEM Mobile-specifika plugin-program.
 
 >[!NOTE]
 >
@@ -31,6 +34,7 @@ Att skapa en app för AEM Mobile On-Demand Services skiljer sig från att skapa 
 >
 >* [Använda Cordova-plugin-program i AEM Mobile](https://helpx.adobe.com/digital-publishing-solution/help/cordova-api.html)
 >* [Använda AEM Mobile-specifika Cordova-aktiverade plugin-program](https://helpx.adobe.com/digital-publishing-solution/help/app-runtime-api.html)
+
 >
 
 
@@ -39,11 +43,11 @@ Att skapa en app för AEM Mobile On-Demand Services skiljer sig från att skapa 
 
    * Se till att du väntar på funktionen *deviceReady* innan du försöker få åtkomst till ett plugin-programs API.
 
-## Riktlinjer för AEM-utvecklare {#guidelines-for-aem-developers}
+## Riktlinjer för AEM utvecklare {#guidelines-for-aem-developers}
 
-Följande riktlinjer är till hjälp för erfarna AEM-utvecklare av webbplatser som vill skapa mallar och komponenter för mobilappar:
+Följande riktlinjer är till hjälp för erfarna utvecklare AEM webbplatser som vill skapa mallar och komponenter för mobilappar:
 
-**Strukturera AEM-webbplatsmallar för att uppmuntra återanvändning och utbyggbarhet**
+**Strukturera AEM webbplatsmallar för att uppmuntra återanvändning och utbyggbarhet**
 
 * Föredra flera komponentskriptfiler framför en enda monolitisk fil
 
@@ -67,7 +71,7 @@ Följande riktlinjer är till hjälp för erfarna AEM-utvecklare av webbplatser 
 **Föredra programspecifika JS- och CSS-bibliotek i klientsidan framför webbspecifika**
 
 * För att undvika att dyka upp i bibliotek som jQuery Mobile för att hantera en enorm bredd av enheter och webbläsare
-* När en mall körs i en apps webbvy har du kontroll över de plattformar och versioner som appen kommer att ha stöd för, samt kunskapen om att det finns stöd för JavaScript. Använd till exempel Ionic (kanske bara CSS) framför jQuery Mobile och Onsen-gränssnittet framför Bootstrap.
+* När en mall körs i en apps webbvy har du kontroll över de plattformar och versioner som appen kommer att ha stöd för, samt kunskapen om att det finns stöd för JavaScript. Använd till exempel Ionic (kanske bara CSS) framför jQuery Mobile och Onsen i stället för Bootstrap.
 
 >[!NOTE]
 >
