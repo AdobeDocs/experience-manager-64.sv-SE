@@ -1,6 +1,6 @@
 ---
-title: Synkronisera adaptiva formulär med XFA-formulärmallar
-seo-title: Synkronisera adaptiva formulär med XFA-formulärmallar
+title: Synkronisera adaptiv Forms med XFA-formulärmallar
+seo-title: Synkronisera adaptiv Forms med XFA-formulärmallar
 description: Synkronisera adaptiva formulär med XFA-/XDP-filer.
 seo-description: Synkronisera adaptiva formulär med XFA-/XDP-filer.
 uuid: 6613a9bf-c862-4c18-a5b5-f574d301e936
@@ -9,11 +9,14 @@ topic-tags: develop
 discoiquuid: 29c0a78c-53b5-4ce7-a2f3-63e1b089b0d0
 translation-type: tm+mt
 source-git-commit: ba04fe705a91717f1d9658d436056ebddda6be3a
+workflow-type: tm+mt
+source-wordcount: '1169'
+ht-degree: 0%
 
 ---
 
 
-# Synkronisera adaptiva formulär med XFA-formulärmallar {#synchronizing-adaptive-forms-with-xfa-form-templates}
+# Synkronisera adaptiv Forms med XFA-formulärmallar {#synchronizing-adaptive-forms-with-xfa-form-templates}
 
 ## Introduktion {#introduction}
 
@@ -25,7 +28,7 @@ Med AEM Forms kan du synkronisera fälten i de adaptiva formulären med eventuel
 
 ![Du kan dra fält från ett XFA-formulär till ett anpassat formulär](assets/drag-drop-xfa.gif.gif)
 
-I redigeringsmiljön för AEM Forms kan du dra fält från ett XFA-formulär (vänster) till ett anpassat formulär (höger)
+I AEM Forms redigeringsmiljö kan du dra fält från ett XFA-formulär (vänster) till ett anpassat formulär (höger)
 
 ## Förutsättningar {#prerequisites}
 
@@ -41,7 +44,7 @@ Om du vill använda resurserna som ett exempel i artikeln hämtar du exempelpake
 
 I artikeln används ett exempel som visar hur du synkroniserar det adaptiva formuläret med en uppdaterad XFA-formulärmall. Resurserna som används i exemplet finns i ett paket som kan hämtas från [hämtningsavsnittet](/help/forms/using/synchronizing-adaptive-forms-xfa.md#p-downloads-p) i den här artikeln.
 
-När du har överfört paketet kan du visa dessa resurser i användargränssnittet för AEM-formulär.
+När du har överfört paketet kan du visa de här resurserna i användargränssnittet för AEM Forms.
 
 Installera paketet med hjälp av pakethanteraren: `https://<server>:<port>/crx/packmgr/index.jsp`
 
@@ -64,19 +67,19 @@ Paketet innehåller följande resurser:
 
 ## Identifiera ändringar i XDP-fil {#detecting-changes-in-xdp-file}
 
-När en XDP-fil eller ett fragment ändras flaggas alla anpassningsbara formulär som är baserade på XDP-filen eller fragmentet av AEM Forms-gränssnittet.
+När en XDP-fil eller ett fragment ändras flaggas alla adaptiva formulär som är baserade på XDP-filen eller fragmentet av AEM Forms UI.
 
 När du har uppdaterat en XDP-fil måste du överföra den igen i AEM Forms-gränssnittet för att ändringarna ska flaggas.
 
 Låt oss till exempel uppdatera `sample-form.xdp` filen med följande steg:
 
 1. Navigera till `https://<server>:<port>/projects.html.` Ange dina autentiseringsuppgifter om du uppmanas till det.
-1. Klicka på fliken Formulär till vänster.
+1. Klicka på fliken Forms till vänster.
 1. Hämta `sample-form.xdp` filen till din lokala dator. XDP-filen hämtas som en `.zip` fil som kan extraheras med valfritt fildekomprimeringsverktyg.
 
 1. Öppna `sample-form.xdp` filen och ändra titeln för fältet TextField1 från **textfält** till **textfält**.
 
-1. Överför `sample-form.xdp` filen tillbaka till AEM Forms-gränssnittet.
+1. Ladda upp `sample-form.xdp` filen tillbaka till AEM Forms-gränssnittet.
 
 Om en XDP-fil uppdateras visas en ikon i redigeraren när du redigerar de adaptiva formulären baserat på XDP-filen. Den här ikonen anger att det adaptiva formuläret inte är synkroniserat med XDP-filen. I följande bild ser du ikonen bredvid i sidlisten.
 
@@ -84,7 +87,8 @@ Om en XDP-fil uppdateras visas en ikon i redigeraren när du redigerar de adapti
 
 ## Synkronisera adaptiva formulär med den senaste XDP-filen {#synchronizing-adaptive-forms-with-the-latest-xdp-file}
 
-När ett adaptivt formulär som inte är synkroniserat med XDP-filen öppnas för redigering nästa gång visas följande meddelande: Schema/**formulärmall för det anpassade formuläret har uppdaterats.`Click Here`för att basera den på den nya versionen.**
+När ett adaptivt formulär som inte är synkroniserat med XDP-filen öppnas för redigering nästa gång visas följande meddelande:
+**Schema/formulärmall för det anpassade formuläret har uppdaterats.`Click Here`för att basera den på den nya versionen.**
 
 När du klickar på meddelandet synkroniseras fälten i det adaptiva formuläret med motsvarande fält i XDP-filen.
 
@@ -104,7 +108,7 @@ Om du vill uppdatera egenskaperna i det adaptiva exempelformuläret klickar du p
 >
 >Etiketten för det numeriska AF-fältet ändrades inte eftersom du hade åsidosatt den här egenskapen från dialogrutan för komponentegenskaper, enligt beskrivningen i [Lägg till innehåll i adaptiva formulär](#p-add-content-to-adaptive-form-br-p).
 
-### Lägga till nya fält från XDP-fil i anpassat formulär {#adding-new-fields-from-xdp-file-to-adaptive-form-nbsp}
+### Lägga till nya fält från XDP-fil i anpassat formulär   {#adding-new-fields-from-xdp-file-to-adaptive-form-nbsp}
 
 Alla fält som läggs till senare i den ursprungliga XDP-filen visas på fliken Formulärhierarki och du kan dra de nya fälten till det anpassade formuläret.
 
@@ -117,7 +121,7 @@ Om ett fält som tidigare kopierats till ett adaptivt formulär tas bort från e
 Följande steg visar det här användningsflödet för resurserna i exemplet som används i den här artikeln:
 
 1. Uppdatera `sample-form.xdp` filen och ta bort NumericField1.
-1. Överför `sample-form.xdp` filen i användargränssnittet för AEM-formulär
+1. Överför `sample-form.xdp` filen i AEM Forms användargränssnitt
 1. Öppna det anpassningsbara formuläret för redigering `sample-xfa-af` . Följande felmeddelande visas: Schema/formulärmall för det anpassade formuläret har uppdaterats. `Click Here` för att basera den på den nya versionen.
 
 1. Klicka på länken (med etiketten &quot; `Click Here`&quot;) i meddelandet. Ett felmeddelande visas som anger att fältet inte längre finns i XDP-filen.
