@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 3fe5b6cc-1494-43e1-add7-2f7828b676ad
 translation-type: tm+mt
 source-git-commit: 040f776ee6a164cec57685f8a010ec82fd8bb48b
+workflow-type: tm+mt
+source-wordcount: '331'
+ht-degree: 0%
 
 ---
 
@@ -37,9 +40,9 @@ För att underlätta utvecklingen av sidor innehåller redigeringsmiljön funkti
 
 * **[Sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekickclassicui)**Ett flytande &quot;inspektörsfönster&quot; som visas på den redigerbara sidan. Härifrån kan nya komponenter dras till sidan och sidspecifika åtgärder kan utföras.
 
-* **[Innehållssökaren](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#thecontentfinderclassicui)**På vänster sida av varje redigerbar sida ger innehållssökaren snabb åtkomst till en rad olika resurser, inklusive digitala resurser (som andra bilder, Flash-element och dokument), andra sidor och stycken. Dessa objekt kan dras till sidan; till exempel för att placera resurser eller skapa länkar till andra sidor.
+* **[Innehållssökaren](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#thecontentfinderclassicui)**På vänster sida av varje redigerbar sida ger innehållssökaren snabb åtkomst till en rad olika resurser, inklusive digitala resurser (t.ex. andra bilder, element och dokument i Flash), andra sidor och stycken. Dessa objekt kan dras till sidan; till exempel för att placera resurser eller skapa länkar till andra sidor.
 
 * **Snabbmenyn** Högerklick på de flesta element på skärmen (till exempel stycken på sidan) öppnar en snabbmeny med lämpliga åtgärdsalternativ.
 
-* **Sök medan du skriver** I vissa scenarier (t.ex. sökvägsval i redigeringsdialogrutor) visas dynamiska träffar när du skriver frågan när du söker efter innehåll via AEM-gränssnittet.
+* **Sök när du skriver** I vissa scenarier (t.ex. sökvägsval i redigeringsdialogrutor) visas dynamiska träffar när du skriver frågan när du söker efter innehåll via AEM.
 
