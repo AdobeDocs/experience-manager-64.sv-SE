@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 22712b73-90f2-4329-b32f-dbb7ce802d1d
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '273'
+ht-degree: 11%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 När du använder arbetsflödet anger du följande information:
 
-* Arbetsflödet som ska användas.
+* Det arbetsflöde som ska användas.
 
-   Du kan tillämpa vilket arbetsflöde som helst (som du har tillgång till, enligt din AEM-administratörs anvisningar).
+   Du kan använda vilket arbetsflöde som helst (som du fått tillgång till av AEM-administratören).
 * Valfritt:
 
    * En kommentar som ger information om varför du startade arbetsflödet.
@@ -29,7 +32,7 @@ När du använder arbetsflödet anger du följande information:
 
 >[!NOTE]
 >
->AEM-administratörer kan starta arbetsflöden med [flera andra metoder](/help/sites-administering/workflows-starting.md).
+>AEM kan starta arbetsflöden med [flera andra metoder](/help/sites-administering/workflows-starting.md).
 
 ## Använda arbetsflöden {#applying-workflows}
 
