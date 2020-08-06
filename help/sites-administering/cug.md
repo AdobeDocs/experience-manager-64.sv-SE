@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: ba73e267-598d-4c70-a1a8-71bcfcfbf9e5
 translation-type: tm+mt
 source-git-commit: 1e55d049ad77aeed2fac6275ea2744c2b6551e43
+workflow-type: tm+mt
+source-wordcount: '808'
+ht-degree: 0%
 
 ---
 
@@ -40,7 +43,7 @@ Om du vill konfigurera ett sådant område på din webbplats:
 
 Så här skapar du en sluten användargrupp:
 
-1. Gå till **Verktyg - Säkerhet** från AEM-hemskärmen.
+1. Gå till **Verktyg - Säkerhet** från AEM hemskärm.
 
    >[!NOTE]
    >
@@ -97,7 +100,7 @@ Så här använder du CUG-filen på en sida:
 1. Tilldela vid behov en **sfär** (ett namn för sidgrupperna). Lämna tomt om du vill använda sidrubriken.
 1. Spara specifikationen genom att klicka på **OK** .
 
-Se [Identitetshantering](/help/sites-administering/identity-management.md) för information om profiler i publiceringsmiljön och formulär för in- och utloggning.
+Information om profiler i publiceringsmiljön och formulär för inloggning och utloggning finns i [Identity Management](/help/sites-administering/identity-management.md) .
 
 ## Länka till sfären {#linking-to-the-realm}
 
