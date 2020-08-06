@@ -12,6 +12,9 @@ topic-tags: operations
 discoiquuid: 3dd2b0d3-6023-490a-9b17-e29cc21c1b9d
 translation-type: tm+mt
 source-git-commit: 529b8c6556a7179a9169ff8250af6b5dc1251ef3
+workflow-type: tm+mt
+source-wordcount: '117'
+ht-degree: 1%
 
 ---
 
@@ -26,5 +29,5 @@ Från och med LiveCycle ES 8.0 och senare finns stöd för PDF-paket i Assembler
 
 >[!NOTE]
 >
->Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
