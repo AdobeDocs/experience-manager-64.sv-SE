@@ -1,8 +1,8 @@
 ---
 title: Utvecklingsverktyg
 seo-title: Utvecklingsverktyg
-description: För att utveckla dina JCR-, Apache Sling- eller AEM-program finns ett antal verktygsuppsättningar
-seo-description: För att utveckla dina JCR-, Apache Sling- eller AEM-program finns ett antal verktygsuppsättningar
+description: Det finns ett antal tillgängliga verktygsuppsättningar för att utveckla dina JCR-, Apache Sling- eller AEM-program
+seo-description: Det finns ett antal tillgängliga verktygsuppsättningar för att utveckla dina JCR-, Apache Sling- eller AEM-program
 uuid: 1bee3a52-5d76-4b0c-a222-a02e12ff3a43
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 76c570e5-46ed-46be-9864-4fe4a83f0caf
 translation-type: tm+mt
 source-git-commit: e9c5fcd8f939d88317c5184b6352b227918088e5
+workflow-type: tm+mt
+source-wordcount: '410'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: e9c5fcd8f939d88317c5184b6352b227918088e5
 
 Följande verktygsuppsättningar är tillgängliga för att utveckla dina JCR-, Apache Sling- eller AEM-program:
 
-* en uppsättning bestående av [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) och WebDAV. CRXDE Lite är inbäddat i CRX/AEM och gör att du kan utföra standardutvecklingsuppgifter i webbläsaren. Med CRXDE Lite kan du skapa och redigera filer (som .jsp och .java), mappar, mallar, komponenter, dialogrutor, noder, egenskaper och paket när du loggar och integrerar med SVN.
+* one set consisting of [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) and WebDAV. CRXDE Lite är inbäddat i CRX/AEM och gör att du kan utföra standardutvecklingsuppgifter i webbläsaren. Med CRXDE Lite kan du skapa och redigera filer (som .jsp och .java), mappar, mallar, komponenter, dialogrutor, noder, egenskaper och paket när du loggar och integrerar med SVN.
 
-   CRXDE Lite rekommenderas när du inte har direktåtkomst till CRX-/AEM-servern, när du utvecklar ett program genom att utöka eller ändra de körklara komponenterna och Java-paketen eller när du inte behöver en dedikerad felsökare, kodkomplettering och syntaxmarkering.
+   CRXDE Lite is recommended when you do not have direct access to the CRX/AEM server, when you develop an application by extending or modifying the out-of-the-box components and Java bundles or when you do not need a dedicated debugger, code completion and syntax hightlighting.
 
 * en uppsättning bestående av en integrerad utvecklingsmiljö (t.ex. [Eclipse](/help/sites-developing/howto-projects-eclipse.md) eller [IntelliJ](/help/sites-developing/ht-intellij.md)), ett byggverktyg (till exempel: [Apache Maven](/help/sites-developing/ht-projects-maven.md)), FileVault som har utvecklats av Adobe för att mappa en databas till ett filsystem, ett versionskontrollsystem (till exempel: Subversion), ett felsökningssystem (till exempel: Jira), ett centralt beroendehanteringssystem (till exempel: Apache Archiva) och ett system för automatisering av byggen (till exempel: Apache Continuum).
 
@@ -33,30 +36,30 @@ Adobe har släppt följande tillägg:
 
 * [AEM Eclipse-tillägg](/help/sites-developing/aem-eclipse.md)
 * [AEM Brackets Extension](/help/sites-developing/aem-brackets.md)
-* [AEM IntelliJ-tillägg](https://github.com/headwirecom/aem-ide-tooling-4-intellij/blob/master/documenation/AEM%20Tooling%20Plugin%20for%20IntelliJ%20IDEA.pdf) (från huvudtråden)
+* [AEM IntelliJ Extension](https://github.com/headwirecom/aem-ide-tooling-4-intellij/blob/master/documenation/AEM%20Tooling%20Plugin%20for%20IntelliJ%20IDEA.pdf) (från Headwire)
 
 ### Andra verktyg {#other-tools}
 
-AEM levereras med andra verktyg som underlättar utvecklingen:
+AEM ships with other tools that facilitate development:
 
 * [Dialogruteredigeraren](/help/sites-developing/dialog-editor.md)
 * [Använda översättare för att hantera ordlistor](/help/sites-developing/i18n-translator.md)
 * [Hantera paket med Maven](/help/sites-developing/vlt-mavenplugin.md)
-* [Utveckla AEM-projekt med Eclipse](/help/sites-developing/howto-projects-eclipse.md)
-* [Så här skapar du AEM-projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md)
-* [Utveckla AEM-projekt med IntelliJ IDEA](/help/sites-developing/ht-intellij.md)
+* [Utveckla AEM projekt med Eclipse](/help/sites-developing/howto-projects-eclipse.md)
+* [Skapa AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md)
+* [Utveckla AEM projekt med IntelliJ IDEA](/help/sites-developing/ht-intellij.md)
 * [Så här använder du VLT-verktyget](/help/sites-developing/ht-vlttool.md)
 * [Så här använder du proxyserververktyget](/help/sites-developing/ht-proxy-server.md)
 * [Verktyget Dialogkonvertering](/help/sites-developing/dialog-conversion.md)
-* [AEM Repo Tool](/help/sites-developing/aem-repo-tool.md)
+* [AEM](/help/sites-developing/aem-repo-tool.md)
 
 Verktyg som underlättar skapandet av nya projekt:
 
 * [AEM Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)
-* [AEM Lazybone-mallar](https://github.com/Adobe-Consulting-Services/lazybones-aem-templates)
+* [AEM Lazybone Templates](https://github.com/Adobe-Consulting-Services/lazybones-aem-templates)
 
 >[!NOTE]
 >
->Följande självstudiekurser kan vara intressanta när du startar ett nytt AEM-projekt:\
+>Följande självstudiekurser kan vara intressanta när du startar ett nytt AEM:\
 >[Komma igång med AEM Sites del 1 - Projektinställningar](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part1.html)
 
