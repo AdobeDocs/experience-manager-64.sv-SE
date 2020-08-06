@@ -10,6 +10,9 @@ topic-tags: correspondence-management
 discoiquuid: 7313c108-39fa-4cf4-8955-2d54be41d476
 translation-type: tm+mt
 source-git-commit: 835618e8e0d01905ad7b476b0172dfecec41cf9d
+workflow-type: tm+mt
+source-wordcount: '717'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +32,7 @@ Du kan också åsidosätta standardfunktionen för anpassade funktioner för att
 
 ## Lägger till agentsignaturbild {#adding-agent-signature-image}
 
-1. Kontrollera att agentsignaturbilden har samma namn som användarens AEM-användarnamn. (Tillägg krävs inte för bildens filnamn.)
+1. Kontrollera att agentsignaturbilden har samma namn som användarens AEM användarnamn. (Tillägg krävs inte för bildens filnamn.)
 1. I CRX skapar du en mapp med namnet `cmUserRoot` i innehållsmappen.
 
    1. Gå till `https://[server]:[port]/crx/de`. Logga in som administratör om det behövs.
@@ -54,9 +57,9 @@ Du kan också åsidosätta standardfunktionen för anpassade funktioner för att
 
       Gör följande poster i raden för ny nod och klicka sedan på den gröna bockmarkeringen.
 
-      **** Namn: JohnDoe (eller namnet på din agentsignaturfil)
+      **Namn:** JohnDoe (eller namnet på din agentsignaturfil)
 
-      **** Typ: nt:fil
+      **Typ:** nt:fil
 
       Under `cmUserRoot` mappen skapas en ny mapp med namnet `JohnDoe` (eller namnet som du angav i föregående steg).
 
