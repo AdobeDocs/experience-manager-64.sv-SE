@@ -10,6 +10,9 @@ topic-tags: Configuration
 discoiquuid: e78f539a-109c-444c-8e52-be2260c3509f
 translation-type: tm+mt
 source-git-commit: c5a78d6c2b8a55cad6266e86e9b990cafc038431
+workflow-type: tm+mt
+source-wordcount: '721'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Lokaliseringen av anpassningsbara formulär bygger på två typer av språkordli
 
 **Formulärspecifik ordlista** innehåller strängar som används i anpassningsbara formulär. Till exempel etiketter, fältnamn, felmeddelanden, hjälpbeskrivningar och så vidare. Den hanteras som en uppsättning XLIFF-filer för varje språkinställning och du kan komma åt den på https://`<host>`:`<port>`/libs/cq/i18n/translator.html.
 
-**Globala ordlistor** Det finns två globala ordlistor, som hanteras som JSON-objekt, i AEM-klientbiblioteket. De här ordlistorna innehåller standardfelmeddelanden, namn på månader, valutasymboler, datum- och tidsmönster osv. Dessa ordlistor finns i CRXDe Lite på /libs/fd/xfaforms/clientlibs/I18N. Dessa platser innehåller separata mappar för varje språkområde. Eftersom globala ordlistor vanligtvis inte uppdateras så ofta, kan webbläsare cachelagra olika JavaScript-filer för varje språkinställning och minska användningen av nätverksbandbredd när olika adaptiva formulär används på samma server.
+**Globala ordlistor** Det finns två globala ordlistor, som hanteras som JSON-objekt, i AEM klientbibliotek. De här ordlistorna innehåller standardfelmeddelanden, namn på månader, valutasymboler, datum- och tidsmönster osv. Dessa ordlistor finns i CRXDe Lite på /libs/fd/xfaforms/clientlibs/I18N. Dessa platser innehåller separata mappar för varje språkområde. Eftersom globala ordlistor vanligtvis inte uppdateras så ofta, kan webbläsare cachelagra olika JavaScript-filer för varje språkinställning och minska användningen av nätverksbandbredd när olika adaptiva formulär används på samma server.
 
 ### Hur lokalisering av anpassningsbara formulär fungerar {#how-localization-of-adaptive-form-works}
 
@@ -36,7 +39,7 @@ När ett anpassat formulär återges identifierar det det begärda språkområde
 
 * Webbläsarens språkområdesuppsättning för användaren, som anges i begäran med hjälp av `Accept-Language` rubriken.
 
-* Språkinställning för användaren som anges i AEM.
+* Språkinställningen för den användare som anges i AEM.
 
 När språkområdet har identifierats väljs den formulärspecifika ordlistan i de adaptiva formulären. Om det inte går att hitta den formulärspecifika ordlistan för den begärda språkversionen används den engelska ordlistan (en).
 
@@ -44,7 +47,7 @@ Om det inte finns något klientbibliotek för det begärda språket söker progr
 
 ## Lägg till lokaliseringsstöd för språk som inte stöds {#add-localization-support-for-non-supported-locales}
 
-AEM Forms har för närvarande stöd för lokalisering av innehåll i adaptiva formulär på engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska (Brasilien) (pt-BR, kinesiska (zh-CN), kinesiska (zh-TW) och koreanska (ko-KR).
+AEM Forms har för närvarande stöd för lokalisering av anpassningsbara formulärinnehåll på engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska-brasilianska (pt-BR, kinesiska (zh-CN), kinesiska-taiwanesiska (zh-TW) och koreanska (ko-KR).
 
 Så här lägger du till stöd för en ny språkinställning vid körning av adaptiva formulär:
 
@@ -110,7 +113,7 @@ Fältet `<locale>` visas på `https://[server]:[port]/libs/cq/i18n/translator.ht
 
 ### Starta om servern {#restart-the-server}
 
-Starta om AEM-servern så att de nya språkinställningarna börjar gälla.
+Starta om AEM för att den tillagda språkinställningen ska börja gälla.
 
 ## Exempelbibliotek för att lägga till stöd för spanska {#sample-libraries-for-adding-support-for-spanish}
 
