@@ -1,6 +1,6 @@
 ---
-title: Lägga till Adobe Analytics-spårning i komponenter
-seo-title: Lägga till Adobe Analytics-spårning i komponenter
+title: Lägga till Adobe Analytics Tracking i komponenter
+seo-title: Lägga till Adobe Analytics Tracking i komponenter
 description: 'null'
 seo-description: 'null'
 uuid: 447b140c-678c-428d-a1c9-ecbdec75cd42
@@ -11,17 +11,20 @@ content-type: reference
 discoiquuid: a11c39b4-c23b-4207-8898-33aea25f2ad0
 translation-type: tm+mt
 source-git-commit: 8e2bd579e4c5edaaf86be36bd9d81dfffa13a573
+workflow-type: tm+mt
+source-wordcount: '1265'
+ht-degree: 0%
 
 ---
 
 
-# Lägga till Adobe Analytics-spårning i komponenter{#adding-adobe-analytics-tracking-to-components}
+# Lägga till Adobe Analytics Tracking i komponenter{#adding-adobe-analytics-tracking-to-components}
 
 ## Inkludera Adobe Analytics-modulen i en sidkomponent {#including-the-adobe-analytics-module-in-a-page-component}
 
-Sidmallskomponenter (t.ex. `head.jsp, body.jsp`) behöver JSP-inkluderingar för att läsa in ContextHub och Adobe Analytics-integreringen (som är en del av molntjänsterna). Alla innehåller inläsning av JavaScript-filer.
+Sidmallskomponenter (t.ex. `head.jsp, body.jsp`) behöver JSP-inkluderingar för att läsa in ContextHub och Adobe Analytics-integreringen (som är en del av Cloud Servicens). Alla innehåller inläsning av JavaScript-filer.
 
-ContextHub-posten ska inkluderas direkt under `<head>` -taggen, medan molntjänster ska inkluderas i `<head>` och före `</body>` avsnittet. till exempel:
+ContextHub-posten ska inkluderas direkt under `<head>` -taggen, medan Cloud Services ska tas med i `<head>` och före `</body>` avsnittet. till exempel:
 
 ```xml
 <head>
@@ -38,9 +41,9 @@ ContextHub-posten ska inkluderas direkt under `<head>` -taggen, medan molntjäns
 
 Skriptet som du infogar efter `contexthub` `<head>` elementet lägger till ContextHub-funktionerna på sidan.
 
-De skript som du lägger till i `cloudservices` -avsnitten `<head>` och - `<body>` gäller för de molntjänstkonfigurationer som läggs till på sidan. (Om sidan använder mer än en molntjänstkonfiguration behöver du bara inkludera ContextHub-jsp och Cloud Services-jsp en gång.)
+De skript som du lägger till i `cloudservices` -avsnitten `<head>` och - `<body>` gäller för de molntjänstkonfigurationer som läggs till på sidan. (Om sidan använder mer än en konfiguration med Cloud Services, behöver du bara inkludera ContextHub-jsp och Cloud Servicens jsp en gång.)
 
-När ett Adobe Analytics-ramverk läggs till på sidan genererar skripten Adobe Analytics-relaterade javascript- `cloudservices` och referenser till klientbibliotek, som i följande exempel:
+När ett Adobe Analytics-ramverk läggs till på sidan genererar skripten `cloudservices` Adobe Analytics-relaterat javascript och referenser till klientbibliotek, som i följande exempel:
 
 ```xml
 <div class="sitecatalyst cloudservice">
@@ -108,7 +111,7 @@ $CQ(function(){
 </div>
 ```
 
-Alla AEM-exempelwebbplatser som Geometrixx Outdoor har den här koden med.
+Alla AEM exempelwebbplatser som Geometrixx Outdoors har den här koden med.
 
 ### Händelsen sitecatalystAfterCollect {#the-sitecatalystaftercollect-event}
 
@@ -122,18 +125,18 @@ Den här händelsen aktiveras för att ange att sidspårning har slutförts. Om 
 
 >[!NOTE]
 >
->Biblioteket innehåller koden från Adobe Analytics- `/libs/cq/analytics/clientlibs/sitecatalyst/sitecatalyst.js` `s_code.js` filen.
+>Biblioteket innehåller `/libs/cq/analytics/clientlibs/sitecatalyst/sitecatalyst.js` koden från Adobe Analytics- `s_code.js` filen.
 
-## Implementera Adobe Analytics-spårning för anpassade komponenter {#implementing-adobe-analytics-tracking-for-custom-components}
+## Implementera Adobe Analytics Tracking för anpassade komponenter {#implementing-adobe-analytics-tracking-for-custom-components}
 
-Gör det möjligt för dina AEM-komponenter att interagera med Adobe Analytics-ramverket. Konfigurera sedan ramverket så att Adobe Analytics spårar komponentdata.
+Gör det möjligt för dina AEM att interagera med Adobe Analytics ramverk. Konfigurera sedan ramverket så att Adobe Analytics spårar komponentdata.
 
 Komponenter som interagerar med Adobe Analytics-ramverket visas i SideKick när du redigerar ett ramverk. När du har dragit komponenten till ramverket visas komponentegenskaperna och du kan sedan mappa dem med Adobe Analytics-egenskaper. (Se [Konfigurera ett ramverk för grundläggande spårning](/help/sites-administering/adobeanalytics-connect.md#creating-a-adobe-analytics-framework).)
 
 Komponenter kan interagera med Adobe Analytics-ramverket när komponenten har en underordnad nod med namnet `analytics`. Noden har `analytics` följande egenskaper:
 
 * `cq:trackevents`: Identifierar de CQ-händelser som komponenten visar. (Se Anpassade händelser.)
-* `cq:trackvars`: Namnger de CQ-variabler som mappas med Adobe Analytics-egenskaper.
+* `cq:trackvars`: Namnger CQ-variablerna som mappas med Adobe Analytics-egenskaper.
 * `cq:componentName`: Namnet på komponenten som visas i Sidespark.
 * `cq:componentGroup`: Gruppen i Sidekick som innehåller komponenten.
 
@@ -142,16 +145,16 @@ Koden i komponent-JSP lägger till javascript på sidan som utlöser spårningen
 * Använd dataspårningsattributet för att spåra händelsedata när en sida läses in. (Se [Spåra anpassade händelser vid sidinläsning](/help/sites-developing/extending-analytics.md#tracking-custom-events-on-page-load).)
 * Använd funktionen CQ_Analytics.record för att spåra händelsedata när användarna interagerar med sidfunktioner. (Se [Spåra anpassade händelser efter sidinläsning](/help/sites-developing/extending-analytics.md#tracking-custom-events-after-page-load).)
 
-När du använder dessa dataspårningsmetoder utför Adobe Analytics-integreringsmodulen automatiskt anrop till Adobe Analytics för att registrera händelser och data.
+När du använder dessa dataspårningsmetoder utför Adobe Analytics integreringsmodul automatiskt anropen till Adobe Analytics för att registrera händelser och data.
 
 ### Exempel: Spåra topnav Clicks {#example-tracking-topnav-clicks}
 
-Utöka grundkomponenten så att Adobe Analytics kan spåra klickningar på navigeringslänkar högst upp på sidan. När användaren klickar på en navigeringslänk registreras länken som användaren klickade på och den sida där den klickades.
+Förläng grundkomponenten så att Adobe Analytics spårar klickningar på navigeringslänkar högst upp på sidan. När du klickar på en navigeringslänk registreras länken som användaren klickade på och den sida där den klickades.
 
 Följande procedurer kräver att du redan har utfört följande uppgifter:
 
 * Skapade ett CQ-program.
-* Skapade en Adobe Analytics-konfiguration och ett Adobe Analytics-ramverk.
+* Skapade en Adobe Analytics-konfiguration och ett Adobe Analytics Framework.
 
 #### Kopiera den övre komponenten {#copy-the-topnav-component}
 
@@ -173,26 +176,26 @@ Konfigurera den övre komponenten och redigera JSP-filen för att definiera spå
 1. Lägg till följande egenskap i analysnoden för att namnge spårningshändelsen:
 
    * Namn: cq:trackevents
-   * Typ:Sträng
+   * Typ: Sträng
    * Värde: topnavClick
 
 1. Lägg till följande egenskap i analysnoden för att namnge datavariablerna:
 
    * Namn: cq:trackvar
-   * Typ:Sträng
+   * Typ: Sträng
    * Värde: topnavTarget,topnavLocation
 
 1. Lägg till följande egenskap i analysnoden för att namnge komponenten för Sidespark:
 
    * Namn: cq:componentName
-   * Typ:Sträng
+   * Typ: Sträng
    * Värde: topnav (spärra/knip)
 
 1. Lägg till följande egenskap i analysnoden för att namnge komponentgruppen för Sidespark:
 
    * Namn: cq:componentGroup
-   * Typ:Sträng
-   * Värde:Allmänt
+   * Typ: Sträng
+   * Värde: Allmänt
 
 1. Klicka på Spara alla.
 1. Öppna filen topnav.jsp.
@@ -291,7 +294,7 @@ Innehållet i filen topnav.jsp ska se ut så här:
 
 #### Lägga till spårningskomponenten i Sidekick {#adding-the-tracking-component-to-sidekick}
 
-Lägg till komponenter som är aktiverade för spårning med Adobe Analytics i Sidekick så att ni kan lägga till dem i ert ramverk.
+Lägg till komponenter som är aktiverade för spårning med Adobe Analytics i Sidekick så att du kan lägga till dem i ditt ramverk.
 
 1. Öppna Adobe Analytics-ramverket från din Adobe Analytics-konfiguration. ([http://localhost:4502/etc/cloudservices/sitecatalyst.html](http://localhost:4502/etc/cloudservices/sitecatalyst.html))
 1. På Sidekick klickar du på knappen Design.
@@ -311,14 +314,14 @@ Dra den övre komponenten till Adobe Analytics-ramverket och mappa komponentvari
 
 ![chlimage_1-1](assets/chlimage_1-1.png)
 
-Den främsta komponenten är nu integrerad med Adobe Analytics-ramverket. När du lägger till komponenten på en sida skickas spårningsdata till Adobe Analytics om du klickar på objekten i det övre navigeringsfältet.
+Den topnav-komponenten är nu integrerad med Adobe Analytics-ramverket. När du lägger till komponenten på en sida skickas spårningsdata till Adobe Analytics om du klickar på objekten i det övre navigeringsfältet.
 
-### Skicka s.products-data till Adobe Analytics {#sending-s-products-data-to-adobe-analytics}
+### Skicka s.products Data till Adobe Analytics {#sending-s-products-data-to-adobe-analytics}
 
 Komponenter kan generera data för variabeln s.products som skickas till Adobe Analytics. Utforma komponenterna för att bidra till variabeln s.products:
 
 * Registrera ett värde med namnet `product` på en viss struktur.
-* Exponera värdeets datamedlemmar så att de kan mappas med Adobe Analytics-variabler i Adobe Analytics-ramverket. `product`
+* Visa datamedlemmarna i `product` värdet så att de kan mappas med Adobe Analytics-variabler i Adobe Analytics-ramverket.
 
 Variabeln Adobe Analytics s.products har följande syntax:
 
@@ -326,7 +329,7 @@ Variabeln Adobe Analytics s.products har följande syntax:
 s.products="category;product;quantity;price;eventY={value}|eventZ={value};evarA={value}|evarB={value}"
 ```
 
-Integreringsmodulen i Adobe Analytics skapar `s.products` variabeln med de `product` värden som AEM-komponenterna genererar. Värdet i javascript- `product` koden som AEM-komponenter genererar är en array med värden som har följande struktur:
+Adobe Analytics-integreringsmodulen konstruerar `s.products` variabeln med de `product` värden som AEM komponenterna genererar. Värdet i javascript- `product` värdet som AEM komponenter genererar är en array med värden som har följande struktur:
 
 ```
 "product": [{
@@ -438,6 +441,6 @@ eCommerce-modulen innehåller flera komponenter som genererar variabeldata för 
 
 #### Begränsa storleken på spårningsanrop {#limiting-the-size-of-tracking-calls}
 
-Webbläsare begränsar i allmänhet storleken på GET-begäranden. Eftersom CQ-produkter och SKU-värden är databassökvägar, kan produktarrayer som innehåller flera värden överskrida storleksgränsen för begäran. Därför bör dina komponenter begränsa antalet objekt i arrayen `product` för varje `CQ_Analytics.record function`. Skapa flera funktioner om antalet objekt som du måste spåra kan överskrida gränsen.
+Webbläsare begränsar i allmänhet storleken på begäranden om GET. Eftersom CQ-produkter och SKU-värden är databassökvägar, kan produktarrayer som innehåller flera värden överskrida storleksgränsen för begäran. Därför bör dina komponenter begränsa antalet objekt i arrayen `product` för varje `CQ_Analytics.record function`. Skapa flera funktioner om antalet objekt som du måste spåra kan överskrida gränsen.
 
 eCommerce-komponenten för indataorder begränsar till exempel antalet objekt i ett anrop till fyra. `product` När vagnen innehåller fler än fyra produkter genereras flera `CQ_Analytics.record` funktioner.
