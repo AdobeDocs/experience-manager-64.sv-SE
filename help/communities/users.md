@@ -1,8 +1,8 @@
 ---
 title: Hantera användare och användargrupper
 seo-title: Hantera användare och användargrupper
-description: Användare av AEM Communities kan själva registrera sig och redigera sina profiler
-seo-description: Användare av AEM Communities kan själva registrera sig och redigera sina profiler
+description: Användare av AEM Communities kan registrera sig själva och redigera sina profiler
+seo-description: Användare av AEM Communities kan registrera sig själva och redigera sina profiler
 uuid: aeba424e-ea7e-4da5-b94f-ea8af4caa7d2
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
 translation-type: tm+mt
 source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+workflow-type: tm+mt
+source-wordcount: '2168'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
 
 ## Översikt {#overview}
 
-I AEM Communities, i publiceringsmiljön, kan användarna själva registrera sig och redigera sina profiler. Med rätt tillstånd kan de också
+I AEM Communities kan användarna själva registrera och redigera sina profiler i publiceringsmiljön. Med rätt tillstånd kan de också
 
 * Skapa undergrupper på communitywebbplatsen (se [communitygrupper](creating-groups.md))
 * [Modernt](moderation.md) användargenererat innehåll (UGC)
@@ -34,7 +37,7 @@ Medlemmar och medlemsgrupper som skapats i publiceringsmiljön bör inte visas i
 
 När användare som är författare och medlemmar vid publicering kommer från samma lista med användare, t.ex. synkroniserade från samma LDAP-katalog, betraktas de inte som samma användare med samma behörigheter och gruppmedlemskap i både författar- och publiceringsmiljöer. Medlemmars och användares roll(er) måste fastställas separat vid publicering och författare, beroende på vad som är lämpligt.
 
-För en [publiceringsgrupp](topologies.md)måste registrering och ändringar som görs i en publiceringsinstans synkroniseras med andra publiceringsinstanser för att de ska ha tillgång till samma användardata. [Mer information finns i ](sync.md)Användarsynkronisering[, som innehåller ett avsnitt som beskriver ](sync.md#what-happens-when)vad som händer när... .
+För en [publiceringsgrupp](topologies.md)måste registrering och ändringar som görs i en publiceringsinstans synkroniseras med andra publiceringsinstanser för att de ska ha tillgång till samma användardata. Mer information finns i [Användarsynkronisering](sync.md), som innehåller ett avsnitt som beskriver [vad som händer när...](sync.md#what-happens-when).
 
 ### Bidragsgränser {#contribution-limits}
 
@@ -72,14 +75,14 @@ Om du vill hantera användare och användargrupper som är registrerade i förfa
 |---|---|
 | administratörer | Administratörsgruppen består av systemadministratörer som har alla funktioner som en community-administratör har samt möjlighet att hantera gruppen Community Administrators. |
 | Community-administratörer | Gruppen Community Administrators blir automatiskt medlem i alla communitysajter och i alla communitygrupper som skapas på webbplatsen. En inledande medlem i gruppen Community Administrators är gruppen Administratörer. I redigeringsmiljön kan communityadministratörer skapa communitysajter, hantera webbplatser, hantera medlemmar (de kan förbjuda medlemmar från communityn) och moderera innehåll. |
-| Webbplatskontakthanteraren för &lt;*platsnamn*> | Content Manager för communitysajt kan utföra traditionell AEM-redigering, skapa innehåll och ändra sidor för en community-sajt. |
+| Webbplatskontakthanteraren för &lt;*platsnamn*> | Content Manager för communitysajt kan utföra AEM, skapa innehåll och ändra sidor för en community-sajt. |
 | Community Enablement Managers | Gruppen Hanterare för communityaktivering består av användare som är tillgängliga för tilldelning för att hantera en communitywebbplats grupp för aktiveringshanterare. |
 | Community &lt;*site name* > SiteEnablementManagers | Gruppen Hanterare för aktivering av communitywebbplats består av användare som har tilldelats behörigheten att hantera en communitys [aktiveringsresurser](resources.md). |
 | Inget | En anonym besökare får inte åtkomst till författarmiljön. |
 
 ### Systemadministratörer {#system-administrators}
 
-Medlemmar i administratörsgruppen är systemadministratörer som kan utföra den första konfigurationen av en AEM-installation för både författarmiljön och publiceringsmiljön.
+Medlemmar i administratörsgruppen är systemadministratörer som kan utföra den första konfigurationen av en AEM för både författarmiljön och publiceringsmiljön.
 
 I demonstrations- och utvecklingssyfte har administratörsgruppen en medlem vars användar-ID är *admin* och lösenord är *admin*.
 
@@ -126,7 +129,7 @@ De valda medlemmarna tilldelas automatiskt till [rätt grupp](#publish-group-rol
 
 ### Grupp med behöriga medlemmar {#privileged-members-group}
 
-Syftet med en säkerhetsgrupp för behöriga medlemmar är att begränsa skapandet av innehåll för vissa communityfunktioner till en privilegierad delmängd av medlemmarna på en community-webbplats.
+Syftet med en privilegierad medlemssäkerhetsgrupp är att begränsa skapandet av innehåll för vissa communityfunktioner till en privilegierad delmängd av medlemmarna på en community-webbplats.
 
 Gruppen med behöriga medlemmar är en medlemsgrupp som skapas och hanteras med konsolen [](members.md)Communities-grupper.
 
@@ -203,21 +206,21 @@ På en författarinstans:
 1. Inloggad med administratörsbehörighet. Bläddra till den klassiska säkerhetskonsolen för användargränssnittet.
 Till exempel [http://localhost:4502/useradmin](http://localhost:4502/useradmin)
 
-2. Välj **[!UICONTROL Skapa användare]** på menyn Redigera.
+2. From the Edit menu, select **[!UICONTROL Create User]**.
 3. Fyll i `Create User` dialogrutan.
    * Sökvägen måste vara `/home/users/community`
-4. Välj **[!UICONTROL Skapa]**
+4. Välj **[!UICONTROL Create]**
 
 ![chlimage_1-130](assets/chlimage_1-130.png)
 
 * I den vänstra rutan söker du efter den nyskapade användaren och väljer att visa i den högra rutan.
 
-![chlimage_1-135](assets/chlimage_1-131.png)
+![chlimage_1-131](assets/chlimage_1-131.png)
 
 I den vänstra rutan:
 
-1. Avmarkera sökrutan och välj **[!UICONTROL Dölj användare]**
-2. Leta upp och dra `community-enablementmanagers` till fliken **[!UICONTROL Grupper]** för den nya användaren som visas i den högra rutan
+1. Rensa sökrutan och markera **[!UICONTROL Hide Users]**
+2. Leta rätt på och dra `community-enablementmanagers` till **[!UICONTROL Groups]** fliken för den nya användaren som visas i den högra rutan
 
 ![chlimage_1-132](assets/chlimage_1-132.png)
 
@@ -229,11 +232,11 @@ Följ samma steg som när du skapar och tilldelar en användare rollen som [akti
 
 ### LDAP-integrering {#ldap-integration}
 
-AEM stöder användningen av LDAP för autentisering av användare och skapande av användarkonton. Detta beskrivs i [Konfigurera LDAP med AEM 6](../../help/sites-administering/ldap-config.md).
+AEM stöder användning av LDAP för autentisering av användare och skapande av användarkonton. Detta beskrivs i [Konfigurera LDAP med AEM 6](../../help/sites-administering/ldap-config.md).
 
 Nedan följer några konfigurationsdetaljer som är specifika för communitymedlemmar och medlemsgrupper.
 
-1. Konfigurera LDAP för varje AEM-publiceringsinstans
+1. Konfigurera LDAP för varje AEM publiceringsinstans
 2. [LDAP-identitetsleverantören](../../help/sites-administering/ldap-config.md#configuring-the-ldap-identity-provider)
 
    * Inga särskilda instruktioner
@@ -242,9 +245,9 @@ Nedan följer några konfigurationsdetaljer som är specifika för communitymedl
 
    * Ange följande egenskaper:
 
-      * **[!UICONTROL Automatiskt medlemskap]**: `community-<site name>-<uid>-members`
-      * **[!UICONTROL Användarsökvägsprefix]**: `/community`
-      * **[!UICONTROL Prefix]** för gruppsökväg: `/community`
+      * **[!UICONTROL User auto membership]**: `community-<site name>-<uid>-members`
+      * **[!UICONTROL User Path Prefix]**: `/community`
+      * **[!UICONTROL Group Path Prefix]**: `/community`
 
 4. [Modulen Extern inloggning](../../help/sites-administering/ldap-config.md#the-external-login-module)
 
@@ -254,7 +257,7 @@ Detta leder till att användare automatiskt tilldelas till medlemsgruppen på co
 
 * Värdet `User auto membership` ska vara `rep:authorizableId` egenskapen, inte `givenName` (visningsnamn) från profilen.
 
-## Synkronisera användare mellan AEM-instanser {#synchronizing-users-among-aem-instances}
+## Synkronisera användare bland AEM instanser {#synchronizing-users-among-aem-instances}
 
 När du använder en [publiceringsgrupp](topologies.md)måste användarna ha samma sökväg för varje publiceringsinstans genom att först importera användarna till en instans och [aktivera användarsynkronisering](sync.md) för Sling, distribuera användarna till de andra publiceringsinstanserna.
 
