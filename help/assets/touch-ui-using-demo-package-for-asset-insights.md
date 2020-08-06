@@ -1,9 +1,12 @@
 ---
 title: Använda demopaket för tillgångsinsikter
-description: Använd demopaketet för att göra det möjligt för Adobe Asset Insights att hämta in data från och generera insikter för en webbsida.
+description: Använd demopaketet för att aktivera Adobe-tillgångsinsikter för att hämta data från och generera insikter för en webbsida.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '165'
+ht-degree: 0%
 
 ---
 
@@ -12,10 +15,10 @@ source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
 
 Med hjälp av demopaketet kan du göra det möjligt för Adobe Asset Insights att samla in data från och generera insikter för en exempelwebbsida.
 
-## Använda AEM Assets Insights med exempelwebbsida {#using-aem-assets-insights-with-sample-web-page}
+## Använda AEM Assets Insights med exempelwebbsidor  {#using-aem-assets-insights-with-sample-web-page}
 
 1. Konfigurera tillgångsinsikter med hjälp av instruktionerna i [Konfigurera tillgångsinsikter](touch-ui-configuring-asset-insights.md).
-1. Hämta exempelpaketet med AEM-resurser nedan och installera paketet från pakethanteraren för CRXDE.
+1. Hämta exempelpaketet för AEM Assets nedan och installera paketet från pakethanteraren för CRXDE.
 
    [Hämta fil](assets/insightsdemo.zip)
 
@@ -31,4 +34,4 @@ Med hjälp av demopaketet kan du göra det möjligt för Adobe Asset Insights at
 
    >[!NOTE]
    >
-   >Den externa webbsidan kan vara i AEM.
+   >Den externa webbsidan kan vara AEM.
