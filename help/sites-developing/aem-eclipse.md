@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a2ae76a8-50b0-4e43-b791-ad3be25b8582
 translation-type: tm+mt
 source-git-commit: 8e2bd579e4c5edaaf86be36bd9d81dfffa13a573
+workflow-type: tm+mt
+source-wordcount: '810'
+ht-degree: 1%
 
 ---
 
@@ -23,12 +26,12 @@ source-git-commit: 8e2bd579e4c5edaaf86be36bd9d81dfffa13a573
 
 AEM Developer Tools for Eclipse är en Eclipse-plugin som bygger på [Eclipse-pluginen för Apache Sling](https://sling.apache.org/documentation/development/ide-tooling.html) som lanserats under Apache License 2.
 
-Den har flera funktioner som gör AEM-utvecklingen enklare:
+Den har flera funktioner som gör AEM enklare:
 
-* Smidig integrering med AEM-instanser via Eclipse Server Connector.
+* Smidig integrering med AEM instanser via Eclipse Server Connector.
 * Synkronisering för både innehåll och OSGI-paket.
 * Felsökningsstöd med möjlighet att byta kod under drift.
-* Enkel start av AEM-projekt via en specifik projektguide.
+* Enkel start av AEM projekt via en specifik projektguide.
 * Enkel redigering av JCR-egenskaper.
 
 ## Krav {#requirements}
@@ -44,11 +47,11 @@ Innan du använder AEM Developer Tools måste du:
 >
 >I macOS måste du högerklicka på **Eclipse.app** och sedan välja **Visa paketinnehåll** för att kunna hitta `eclipse.ini`**.**
 
-## Så här installerar du AEM Developer Tools för Eclipse {#how-to-install-the-aem-developer-tools-for-eclipse}
+## Installera AEM Developer Tools for Eclipse {#how-to-install-the-aem-developer-tools-for-eclipse}
 
 När du har uppfyllt [kraven](#requirements) ovan kan du installera plugin-programmet på följande sätt:
 
-1. Bläddra på webbplatsen för [**AEM **Developer Tools](https://eclipse.adobe.com/aem/dev-tools/).
+1. Bläddra på webbplatsen [**AEM **för utvecklingsverktyg](https://eclipse.adobe.com/aem/dev-tools/).
 
 1. Kopiera **installationslänken**.
 
@@ -56,13 +59,13 @@ När du har uppfyllt [kraven](#requirements) ovan kan du installera plugin-progr
 
 1. Öppna **Hjälp** -menyn i Eclipse.
 1. Klicka på **Installera ny programvara**.
-1. **Klicka på** Lägg till... .
-1. I **Namn** skriver du AEM Developer Tools.
+1. Click **Add...**.
+1. I **Name** skriver du AEM Developer Tools.
 1. In **Location** copy the installation URL.
 1. Click **Ok**.
 1. Kontrollera både **AEM** - och **Sling** -plugin-program.
-1. Click **Next**.
-1. Click **Next**.
+1. Klicka på **Nästa**.
+1. Klicka på **Nästa**.
 1. Godkänn de linjära avtalen och klicka på **Slutför**.
 1. Klicka på **Ja** för att starta om Eclipse.
 
@@ -72,23 +75,23 @@ När du har uppfyllt [kraven](#requirements) ovan kan du installera plugin-progr
 >
 >Se [Så här arbetar du med ett paket i Eclipse när det hämtades från AEM](https://stackoverflow.com/questions/29699726/how-to-work-with-a-bundle-in-eclipse-when-it-was-downloaded-from-aem/29705407#29705407).
 
-## AEM-perspektivet {#the-aem-perspective}
+## AEM {#the-aem-perspective}
 
-AEM Development Tools for Eclipse levereras med ett perspektiv som ger dig full kontroll över dina AEM-projekt och instanser.
+AEM utvecklingsverktyg för Eclipse levereras med ett perspektiv som ger dig full kontroll över dina AEM projekt och instanser.
 
 ![chlimage_1-2](assets/chlimage_1-2.jpeg)
 
 ## Exempel på flermodulsprojekt {#sample-multi-module-project}
 
-AEM Developer Tools for Eclipse innehåller ett exempel på ett flermodulsprojekt som hjälper dig att snabbt komma igång med en projektkonfiguration i Eclipse, samt är en praktisk guide till flera AEM-funktioner. [Läs mer om Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
+I AEM Developer Tools for Eclipse finns ett exempel på ett projekt med flera moduler som hjälper dig att snabbt komma igång med en projektkonfiguration i Eclipse, och som en praktisk guide till flera AEM funktioner. [Läs mer om Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
 Så här skapar du exempelprojektet:
 
-1. Gå till **avsnittet** AEM **och välj** AEM Sample Multi-Module Project **på menyn Arkiv** > **Nytt** > **Projekt**.
+1. På menyn **Arkiv** > **Nytt** > **Projekt** bläddrar du till **AEM** och väljer **AEM Sample Multi-Module Project**.
 
    ![chlimage_1-69](assets/chlimage_1-69.png)
 
-1. Click **Next**.
+1. Klicka på **Nästa**.
 
    >[!NOTE]
    >
@@ -104,7 +107,7 @@ Så här skapar du exempelprojektet:
 
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
-1. Du bör sedan konfigurera en AEM-server som Eclipse ska ansluta till.
+1. Sedan bör du konfigurera en AEM som Eclipse ska ansluta till.
 
    Om du vill använda felsökningsfunktionen måste du ha startat AEM i felsökningsläge, vilket du kan göra genom att lägga till följande på kommandoraden:
 
@@ -133,7 +136,7 @@ Så här löser du ogiltiga beroenden och projektdefinitioner:
 
 ### Aktivera automatisk komplettering av taggbibliotek i JSP-filer {#enabling-tag-library-autocompletion-in-jsp-files}
 
-Automatisk komplettering av taggbibliotek går inte att utföra eftersom rätt beroenden läggs till i projektet. Det finns ett känt fel när du använder AEM Uber Jar, som inte innehåller de tld- och TagExtraInfo-filer som behövs.
+Automatisk komplettering av taggbibliotek går inte att utföra eftersom rätt beroenden läggs till i projektet. Det finns ett känt fel i AEM Uber Jar, som inte innehåller de tld- och TagExtraInfo-filer som behövs.
 
 Se till att artefakten org.apache.sling.scripting.jsp.taglib finns i klassökvägen före AEM Uber Jar för att undvika problemet. För Maven-projekt placerar du följande beroende i pom.xml före Uber Jar.
 
@@ -151,7 +154,7 @@ Se till att du lägger till rätt version för din distribution av AEM.
 
 Den officiella versionen av Apache Sling IDE-verktygen för Eclipse-webbplatsen innehåller användbar information:
 
-* I [**Apache Sling IDE Tooling for Eclipse **User Guide](https://sling.apache.org/documentation/development/ide-tooling.html)beskrivs de övergripande begreppen, serverintegrering och driftsättningsfunktioner som stöds av AEM Development Tools.
+* I [**Apache Sling IDE Tooling for Eclipse **User Guide](https://sling.apache.org/documentation/development/ide-tooling.html)beskrivs de övergripande begreppen, serverintegrering och distributionsfunktioner som stöds av AEM Development Tools.
 * Avsnittet [Felsökning](https://sling.apache.org/documentation/development/ide-tooling.html#troubleshooting).
 * Listan [Kända fel](https://sling.apache.org/documentation/development/ide-tooling.html#known-issues).
 
