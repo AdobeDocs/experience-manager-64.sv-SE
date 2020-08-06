@@ -22,11 +22,11 @@ Skapa formulärdatamodell för interaktiv kommunikation
 
 ![04-create-form-data-model-main](assets/04-create-form-data-model-main.png)
 
-Den här självstudiekursen är ett steg i [Skapa din första interaktiva kommunikationsserie](/help/forms/using/create-your-first-interactive-communication.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga självstudiekurserna.
+Den här självstudiekursen är ett steg i [Skapa din första interaktiva kommunikationsserie](/help/forms/using/create-your-first-interactive-communication.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
 
 ## Om självstudiekursen {#about-the-tutorial}
 
-Med dataintegreringsmodulen för AEM Forms kan du skapa en formulärdatamodell från olika backend-datakällor, till exempel AEM-användarprofil, RESTful web services, SOAP-baserade webbtjänster, OData services och relationsdatabaser. Du kan konfigurera datamodellsobjekt och datatjänster i en formulärdatamodell och koppla den till ett anpassat formulär. Anpassningsbara formulärfält är bundna till objektegenskaper för datamodell. Med tjänsterna kan du förifylla det adaptiva formuläret och skriva skickade formulärdata tillbaka till datamodellobjektet.
+Med dataintegreringsmodulen i AEM Forms kan du skapa en formulärdatamodell från olika backend-datakällor som AEM användarprofil, RESTful web services, SOAP-baserade webbtjänster, OData services och relationsdatabaser. Du kan konfigurera datamodellsobjekt och datatjänster i en formulärdatamodell och koppla den till ett anpassat formulär. Anpassningsbara formulärfält är bundna till objektegenskaper för datamodell. Med tjänsterna kan du förifylla det adaptiva formuläret och skriva skickade formulärdata tillbaka till datamodellobjektet.
 
 Mer information om integrering av formulärdata och formulärdatamodell finns i [AEM Forms-dataintegrering](data-integration.md).
 
@@ -112,7 +112,7 @@ CREATE TABLE `calls` (
 
 I **samtalstabellen** finns samtalsinformation som samtalsdatum, samtalstid, samtalsnummer, samtalslängd och samtalsavgifter. Kundregistret **är** länkat till samtalstabellen med hjälp av fältet Mobilnummer (mobilnummer). För varje mobilnummer i **kundregistret** finns det flera poster i **samtalstabellen** . Du kan till exempel hämta samtalsinformationen för **mobilnumret 1457892541** genom att referera till **anropstabellen** .
 
-Tabellen **Fakturor** innehåller fakturainformation som faktureringsdatum, faktureringsperiod, månadsavgifter och samtalsavgifter. Registret **Kund** är länkat till **räkningstabellen** med hjälp av fältet Faktureringsplan. Det finns en plan som är associerad med varje kund i **kundregistret** . Tabellen **Fakturor** innehåller prisinformation för alla befintliga planer. Du kan till exempel hämta avtalsinformationen för **Sarah** från **kundregistret** och använda dessa detaljer för att hämta prisinformation från **fakturatabellen** .
+I **räkningsregistret** finns fakturainformation som faktureringsdatum, faktureringsperiod, månadsavgifter och samtalsavgifter. Registret **Kund** är länkat till **räkningstabellen** med hjälp av fältet Faktureringsplan. Det finns en plan som är associerad med varje kund i **kundregistret** . Tabellen **Fakturor** innehåller prisinformation för alla befintliga planer. Du kan till exempel hämta avtalsinformationen för **Sarah** från **kundregistret** och använda dessa detaljer för att hämta prisinformation från **fakturatabellen** .
 
 ## Steg 2: Konfigurera MySQL-databasen som datakälla {#step-configure-mysql-database-as-data-source}
 
@@ -122,13 +122,13 @@ Gör följande för att konfigurera MySQL-databasen:
 
 1. Installera JDBC-drivrutin för MySQL-databas som ett OSGi-paket:
 
-   1. Logga in på AEM Forms Author Instance som administratör och gå till AEM-webbkonsolpaket. Standardwebbadressen är [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles).
+   1. Logga in på AEM Forms Author Instance som administratör och gå till AEM webbkonsolpaket. Standardwebbadressen är [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles).
    1. Tryck på **Installera/Uppdatera**. Dialogrutan **Överför/Installera programpaket** visas.
    1. Tryck på **Välj fil** för att bläddra och välja OSGi-paketet för MySQL JDBC-drivrutinen. Välj **Starta paket** och **uppdatera paket** och tryck sedan på **Installera** eller **Uppdatera**. Kontrollera att Oracle Corporations JDBC-drivrutin för MySQL är aktiv. Drivrutinen är installerad.
 
 1. Konfigurera MySQL-databasen som en datakälla:
 
-   1. Gå till AEM-webbkonsolen på [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr).
+   1. Gå till AEM webbkonsol på [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr).
    1. Leta reda på konfigurationen **för poolad DataSource** för Apache Sling-anslutningen. Tryck för att öppna konfigurationen i redigeringsläge.
    1. Ange följande information i konfigurationsdialogrutan:
 
@@ -142,6 +142,7 @@ Gör följande för att konfigurera MySQL-databasen:
       * **Test vid retur:** Aktivera alternativet **Test on Return** .
       * **Valideringsfråga:** Ange en SELECT-fråga (SQL) för att validera anslutningar från poolen. Frågan måste returnera minst en rad. T.ex. **markera &amp;ast; från kunden**.
       * **Transaktionsisolering**: Ange värdet **READ_COMMTED**.
+
    Lämna övriga egenskaper med standard [värden](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) och tryck på **Spara**.
 
    En konfiguration som liknar följande skapas.
@@ -150,11 +151,11 @@ Gör följande för att konfigurera MySQL-databasen:
 
 ## Steg 3: Skapa formulärdatamodell {#step-create-form-data-model}
 
-AEM Forms ger ett intuitivt användargränssnitt för att [skapa en](data-integration.md)formulärdatamodell från konfigurerade datakällor. Du kan använda flera datakällor i en formulärdatamodell. I den här självstudiekursen använder du MySQL som datakälla.
+AEM Forms har ett intuitivt användargränssnitt för att [skapa en](data-integration.md)formulärdatamodell från konfigurerade datakällor. Du kan använda flera datakällor i en formulärdatamodell. I den här självstudiekursen använder du MySQL som datakälla.
 
 Gör följande för att skapa formulärdatamodell:
 
-1. I AEM-författarinstansen går du till **Formulär** > **Dataintegreringar**.
+1. I AEM författarinstans går du till **Forms** > **Dataintegreringar**.
 1. Tryck på **Skapa** > **Formulärdatamodell**.
 1. I guiden Skapa formulärdatamodell anger du ett **namn** för formulärdatamodellen. Till exempel **FDM_Create_First_IC**. Tryck på **Nästa**.
 1. På skärmen Välj datakälla visas alla konfigurerade datakällor. Välj **MySQL** -datakälla och tryck på **Skapa**.
@@ -175,7 +176,7 @@ I konfigurationen av formulärdatamodellen ingår:
 
 ### Lägga till datamodellsobjekt och -tjänster {#add-data-model-objects-and-services}
 
-1. På AEM-författarinstansen går du till **Formulär** > **Dataintegreringar**. Standardwebbadressen är [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm).
+1. Navigera AEM författarinstansen till **Forms** > **Dataintegreringar**. Standardwebbadressen är [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm).
 1. Den **formulärdatamodell för FDM_Create_First_IC** som du skapade tidigare listas här. Markera den och tryck på **Redigera**.
 
    Den valda datakällan **MySQL** visas i rutan **Datakällor** .
@@ -193,6 +194,7 @@ I konfigurationen av formulärdatamodellen ingår:
 
       * get
       * update
+
    Tryck på **Lägg till markerade** för att lägga till markerade datamodellsobjekt och tjänster i formulärdatamodellen.
 
    ![select_data_model_objs_services](assets/select_data_model_objs_services.png)
@@ -219,6 +221,7 @@ Utför följande steg för att skapa beräknade underordnade egenskaper för dat
    1. Ange **användningskartor** som namn på den underordnade egenskapen.
    1. Aktivera **beräknat**.
    1. Välj **Float** som typ och tryck på **Done** för att lägga till egenskapen child i **datamodellsobjektet** .
+
    ![create_child_property_float](assets/create_child_property_float.png)
 
 1. Tryck på **Redigera regel** för att öppna regelredigeraren.
@@ -259,6 +262,7 @@ Utför följande steg för att skapa associationer mellan datamodellsobjekt:
    * Välj **samtal** i listrutan **Modellobjekt** .
    * Välj **Hämta** i listrutan **Tjänst** .
    * Tryck på **Lägg** till för att länka **kundens** datamodellobjekt till **anropa** datamodellsobjekt med hjälp av en egenskap. Baserat på användningsfallet måste anropsdatamodellsobjektet länkas till mobilnummeregenskapen i kunddatamodellsobjektet. Dialogrutan **Lägg till argument** öppnas.
+
    ![add_association](assets/add_association.png)
 
 1. I dialogrutan **Lägg till argument** :
@@ -271,6 +275,7 @@ Utför följande steg för att skapa associationer mellan datamodellsobjekt:
    * Välj **kund** i listrutan **Bindning till** .
    * Välj **mobilenum** i listrutan **Bindningsvärde** .
    * Tryck på **Lägg till**.
+
    ![add_association_argument](assets/add_association_argument.png)
 
    Egenskapen mobilenum visas i avsnittet **Arguments** .
@@ -294,6 +299,7 @@ Utför följande steg för att skapa associationer mellan datamodellsobjekt:
    * Välj **kund** i listrutan **Bindning till** .
    * Välj **kundplan** i listrutan **Bindningsvärde** .
    * Tryck på **Klar** för att skapa en bindning mellan egenskaperna för faktureringsplanen och kundplanen.
+
    ![add_association_customer_räkningar](assets/add_association_customer_bills.png)
 
    I följande bild visas associationerna mellan datamodellsobjekten och egenskaperna som används för att skapa associationer mellan dem:
@@ -337,6 +343,7 @@ När du har skapat associationer mellan kunden och andra datamodellsobjekt kan d
    * Ange en valfri titel och beskrivning.
    * Välj **kund** i listrutan **Utdatamodellsobjekt** .
    * Tryck på **Klar** för att spara egenskaperna.
+
    ![edit_properties_get_details](assets/edit_properties_get_details.png)
 
 1. Välj **uppdateringstjänsten** och tryck på **Redigera egenskaper**. Panelen **Redigera egenskaper** öppnas.
@@ -346,6 +353,7 @@ När du har skapat associationer mellan kunden och andra datamodellsobjekt kan d
    * Välj **kund** i listrutan **Indatamodellsobjekt** .
    * Tryck på **Klar**.
    * Tryck på **Spara** för att spara formulärdatamodellen.
+
    ![update_service_properties](assets/update_service_properties.png)
 
 ## Steg 5: Testa formulärdatamodell och -tjänster {#step-test-form-data-model-and-services}
