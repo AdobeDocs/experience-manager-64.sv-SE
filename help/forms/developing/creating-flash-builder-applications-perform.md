@@ -11,27 +11,30 @@ topic-tags: coding
 discoiquuid: 0ff30df7-b3ad-4c34-9644-87c689acc294
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1761'
+ht-degree: 0%
 
 ---
 
 
 # Skapa Flash Builder-program som utför SSO-autentisering med HTTP-tokens {#creating-flash-builder-applicationsthat-perform-sso-authentication-using-http-tokens}
 
-Du kan skapa ett klientprogram med Flash Builder som utför SSO-autentisering (single sign on) med HTTP-tokens. Anta till exempel att du skapar ett webbaserat program med Flash Builder. Anta sedan att programmet innehåller olika vyer, där varje vy anropar en annan AEM Forms-åtgärd. I stället för att autentisera en användare för varje formuläråtgärd kan du skapa en inloggningssida där användaren kan autentisera en gång. När användaren har autentiserats kan han eller hon starta flera åtgärder utan att behöva autentisera igen. Om en användare till exempel har loggat in på arbetsytan (eller ett annat formulärprogram) behöver användaren inte autentisera igen.
+Du kan skapa ett klientprogram med Flash Builder som utför SSO-autentisering (single sign on) med HTTP-tokens. Anta till exempel att du skapar ett webbaserat program med Flash Builder. Anta sedan att programmet innehåller olika vyer, där varje vy anropar en annan AEM Forms-åtgärd. I stället för att autentisera en användare för varje Forms-åtgärd kan du skapa en inloggningssida där en användare kan autentisera en gång. När användaren har autentiserats kan han eller hon starta flera åtgärder utan att behöva autentisera igen. Om en användare till exempel har loggat in på Workspace (eller ett annat Forms-program) behöver användaren inte autentisera igen.
 
-Även om klientprogrammet innehåller den programlogik som krävs för att utföra SSO-autentisering utför användarhanteringen i AEM-formulär den faktiska användarautentiseringen. Om du vill autentisera en användare med HTTP-tokens anropar klientprogrammet Autentiseringshanterarens `authenticateWithHTTPToken` åtgärd. Användarhantering kan autentisera användare med en HTTP-token. För efterföljande fjärr- eller webbtjänstanrop till AEM Forms behöver du inte skicka inloggningsuppgifter för autentisering.
+Även om klientprogrammet innehåller den programlogik som krävs för att utföra SSO-autentisering utför AEM användarhantering den faktiska användarautentiseringen. Om du vill autentisera en användare med HTTP-tokens anropar klientprogrammet Autentiseringshanterarens `authenticateWithHTTPToken` åtgärd. Användarhantering kan autentisera användare med en HTTP-token. För efterföljande fjärr- eller webbtjänstanrop till AEM Forms behöver du inte skicka inloggningsuppgifter för autentisering.
 
 >[!NOTE]
 >
->Innan du läser det här avsnittet bör du känna till hur du anropar AEM Forms med Remoting. (Se [Anropa AEM-formulär med AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
+>Innan du läser det här avsnittet bör du känna till hur du anropar AEM Forms med Remoting. (Se [Anropa AEM Forms med AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
 
-Följande kortvariga AEM Forms-process med namnet `MyApplication/EncryptDocument`anropas när en användare autentiseras med enkel inloggning. (Mer information om den här processen, till exempel in- och utdatavärden, finns i Exempel på [kortlivade processer](/help/forms/developing/aem-forms-processes.md).)
+Följande kortlivade AEM Forms-process, med namnet `MyApplication/EncryptDocument`, anropas efter att en användare har autentiserats med enkel inloggning. (Mer information om den här processen, till exempel in- och utdatavärden, finns i Exempel på [kortlivade processer](/help/forms/developing/aem-forms-processes.md).)
 
 ![cf_cf_encryptdocument process2](assets/cf_cf_encryptdocumentprocess2.png)
 
 >[!NOTE]
 >
->Den här processen baseras inte på en befintlig AEM Forms-process. Om du vill följa med i kodexemplen som beskriver hur du anropar den här processen skapar du en process med namnet `MyApplication/EncryptDocument` workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
+>Processen bygger inte på någon befintlig AEM Forms-process. Om du vill följa med i kodexemplen som beskriver hur du anropar den här processen skapar du en process med namnet `MyApplication/EncryptDocument` workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
 Klientprogrammet som skapats med Flash Builder interagerar med användarhanterarens säkerhetstjänst som konfigurerats på `/um/login` och `/um/logout`. Det innebär att klientprogrammet skickar en begäran till URL:en under `/um/login` start för att fastställa användarens status. Användarhanteraren svarar sedan med användarstatus. Klientprogrammet och säkerhetstjänsten för användarhanteraren kommunicerar med HTTP.
 
@@ -47,7 +50,7 @@ Värdet `j_password` krävs bara för autentiseringsbegäranden. Om lösenordsv�
 
 >[!NOTE]
 >
->För att i18n ska kunna hanteras på rätt sätt måste dessa värden vara i POST-format.
+>För att i18n ska kunna hanteras på rätt sätt måste dessa värden vara i POST form.
 
 **Svarsformat**
 
@@ -66,7 +69,7 @@ Säkerhetstjänsten som konfigurerats på `/um/login` svarar med `URLVariables` 
 
 **Inloggningsprocess**
 
-När ett klientprogram startas kan du göra en POST-begäran till `/um/login` säkerhetsservern. Exempel, `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true`. När begäran når användarhanterarens säkerhetstjänst utför den följande steg:
+När ett klientprogram startas kan du göra en POST-förfrågan till `/um/login` säkerhetsservern. Till exempel, `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true`. När begäran når användarhanterarens säkerhetstjänst utför den följande steg:
 
 1. Den söker efter en kaka med namnet `lcAuthToken`. Om användaren redan har loggat in i ett annat Forms-program finns denna cookie. Om cookien hittas valideras innehållet.
 1. Om huvudbaserad enkel inloggning är aktiverad letar servern efter konfigurerade rubriker för att fastställa användarens identitet.
@@ -75,13 +78,13 @@ När ett klientprogram startas kan du göra en POST-begäran till `/um/login` s�
 Om säkerhetsservern hittar en giltig token som matchar en användare kan du med säkerhetsservern fortsätta och svara med `authstate=COMPLETE`. Annars svarar säkerhetstjänsten med `authstate=CREDENTIAL_CHALLENGE`. I följande lista förklaras dessa värden:
 
 * `Case authstate=COMPLETE`: Anger att användaren är autentiserad och att `assertionid` värdet innehåller användarens kontrollidentifierare. I det här skedet kan klientprogrammet ansluta till AEM Forms. Servern som konfigurerats för den URL:en kan hämta användarens information `AuthResult` genom att anropa `AuthenticationManager.authenticate(HttpRequestToken)` metoden. Instansen kan `AuthResult` skapa användarhanterarkontexten och lagra den i sessionen.
-* `Case authstate=CREDENTIAL_CHALLENGE`: Anger att säkerhetsservern kräver användarens autentiseringsuppgifter. Som svar kan klientprogrammet visa inloggningsskärmen för användaren och skicka de inhämtade autentiseringsuppgifterna till säkerhetsservern (till exempel `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true&j_username=administrator&j_password=password)`. Om autentiseringen lyckas svarar säkerhetsservern med `authstate=COMPLETE`.
+* `Case authstate=CREDENTIAL_CHALLENGE`: Anger att säkerhetsservern kräver användarens autentiseringsuppgifter. Som svar kan klientprogrammet visa inloggningsskärmen för användaren och skicka de inhämtade inloggningsuppgifterna till säkerhetsservern (till exempel `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true&j_username=administrator&j_password=password)`. Om autentiseringen lyckas svarar säkerhetsservern med `authstate=COMPLETE`.
 
 Om autentiseringen fortfarande inte lyckas svarar säkerhetsservern med `authstate=FAILED`. För att svara på det här värdet kan klientprogrammet visa ett meddelande för att hämta inloggningsuppgifterna igen.
 
 >[!NOTE]
 >
->Klienten `authstate=CREDENTIAL_CHALLENGE`bör skicka de inhämtade autentiseringsuppgifterna till säkerhetsservern i POST-format.
+>Klienten `authstate=CREDENTIAL_CHALLENGE`bör skicka de inhämtade autentiseringsuppgifterna till säkerhetsservern i en POST.
 
 **Utloggningsprocess**
 
@@ -91,7 +94,7 @@ När ett klientprogram loggar ut kan du skicka en begäran till följande URL:
 
 När användaren tar emot den här begäran tar användarens säkerhetstjänst bort `lcAuthToken` cookien och svarar med `authstate=LOGGED_OUT`. När klientprogrammet har tagit emot det här värdet kan programmet utföra rensningsåtgärder.
 
-## Skapa ett klientprogram som autentiserar AEM-formuläranvändare med enkel inloggning {#creating-a-client-application-that-authenticates-aem-forms-users-using-sso}
+## Skapa ett klientprogram som autentiserar AEM formuläranvändare med enkel inloggning {#creating-a-client-application-that-authenticates-aem-forms-users-using-sso}
 
 Ett exempel på klientprogram skapas för att visa hur du skapar ett klientprogram som utför SSO-autentisering. Följande bild visar stegen som klientprogrammet utför för att autentisera en användare med enkel inloggning.
 
@@ -109,7 +112,7 @@ I föregående bild beskrivs det programflöde som inträffar när klientprogram
 
 Klientprogrammet består av följande filer:
 
-* `SSOStandalone.mxml`: Den MXML-huvudfil som representerar klientprogrammet. (Se [Skapa filen](creating-flash-builder-applications-perform.md#creating-the-ssostandalone-mxml-file)SSOStandalone.mxml.)
+* `SSOStandalone.mxml`: Den MXML som representerar klientprogrammet. (Se [Skapa filen](creating-flash-builder-applications-perform.md#creating-the-ssostandalone-mxml-file)SSOStandalone.mxml.)
 * `um/ISSOManager.as`: Visa åtgärder som rör enkel inloggning (SSO). (Se [Skapa filen](creating-flash-builder-applications-perform.md#creating-the-issomanager-as-file)ISSOManager.as.)
 * `um/SSOEvent.as`: Den `SSOEvent` skickas för SSO-relaterade händelser. (Se [Skapa filen](creating-flash-builder-applications-perform.md#creating-the-ssoevent-as-file)SSOEvent.as.)
 * `um/SSOManager.as`: Hanterar SSO-relaterade åtgärder och skickar lämpliga händelser. (Se [Skapa filen](creating-flash-builder-applications-perform.md#creating-the-ssomanager-as-file)SSOManager.as.)
@@ -117,7 +120,7 @@ Klientprogrammet består av följande filer:
 * `views/login.mxml`: Representerar inloggningsskärmen. (Se [Skapa filen](creating-flash-builder-applications-perform.md#creating-the-login-mxml-file)login.mxml.)
 * `views/logout.mxml`: Representerar utloggningsskärmen. (Se [Skapa filen](creating-flash-builder-applications-perform.md#creating-the-logout-mxml-file)logOut.mxml.)
 * `views/progress.mxml`: Representerar en förloppsvy. (Se [Skapa filen](creating-flash-builder-applications-perform.md#creating-the-progress-mxml-file)progress.mxml.)
-* `views/remoting.mxml`: Representerar vyn som anropar den kortvariga AEM Forms-processen som heter MyApplication/EncryptDocument med hjälp av fjärrkommunikation. (Se [Skapa filen](creating-flash-builder-applications-perform.md#creating-the-remoting-mxml-file)remoting.mxml.)
+* `views/remoting.mxml`: Representerar vyn som anropar den kortlivade AEM Forms-processen MyApplication/EncryptDocument med hjälp av fjärrkommunikation. (Se [Skapa filen](creating-flash-builder-applications-perform.md#creating-the-remoting-mxml-file)remoting.mxml.)
 
 Följande bild ger en visuell representation av klientprogrammet.
 
@@ -125,7 +128,7 @@ Följande bild ger en visuell representation av klientprogrammet.
 
 >[!NOTE]
 >
->Observera att det finns två paket som heter um och vyer. När du skapar klientprogrammet måste du placera filerna i deras egna paket. Se även till att du lägger till filen adobe-remoting-provider.swc i projektets klassökväg. (Se [Inkludera AEM Forms Flex-biblioteksfilen](/help/forms/developing/invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file).)
+>Observera att det finns två paket som heter um och vyer. När du skapar klientprogrammet måste du placera filerna i deras egna paket. Se även till att du lägger till filen adobe-remoting-provider.swc i projektets klassökväg. (Se [Inkludera biblioteksfilen](/help/forms/developing/invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)för AEM Forms Flex.)
 
 ### Skapa filen SSOStandalone.mxml {#creating-the-ssostandalone-mxml-file}
 
@@ -895,7 +898,7 @@ Därför `authstate=COMPLETE the SSOEvent.AUTHENTICATION_SUCCESS` skickas. Klien
 
 ### Användaren är redan autentiserad {#the-user-is-already-authenticated}
 
-I den här situationen har användaren redan loggat in på AEM Forms och sedan navigerat till klientprogrammet. Klientprogrammet ansluter till säkerhetstjänsten för användarhanteraren under start.
+I det här fallet har användaren redan loggat in på AEM Forms och sedan navigerar till klientprogrammet. Klientprogrammet ansluter till säkerhetstjänsten för användarhanteraren under start.
 
 ```as3
  GET /um/login?um%5Fno%5Fredirect=true HTTP/1.1 
