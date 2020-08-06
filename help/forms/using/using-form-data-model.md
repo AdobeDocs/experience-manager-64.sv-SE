@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ![](do-not-localize/data-integeration.png)
 
-Med dataintegrering med AEM Forms kan ni använda olika backend-datakällor för att skapa en formulärdatamodell som du kan använda som schema i olika adaptiva formulär och interaktiva kommunikationsarbetsflöden. Det kräver att du konfigurerar datakällor och skapar formulärdatamodell som baseras på datamodellsobjekt och tjänster som är tillgängliga i datakällor. Mer information finns i följande:
+Med AEM Forms dataintegrering kan ni använda olika backend-datakällor för att skapa en formulärdatamodell som du kan använda som schema i olika adaptiva formulär och interaktiva kommunikationsarbetsflöden. Det kräver att du konfigurerar datakällor och skapar formulärdatamodell som baseras på datamodellsobjekt och tjänster som är tillgängliga i datakällor. Mer information finns i följande:
 
 * [AEM Forms dataintegrering](/help/forms/using/data-integration.md)
 * [Konfigurera datakällor](/help/forms/using/configure-data-sources.md)
@@ -90,7 +90,7 @@ Med redigeraren för formulärdatamodell kan du generera och redigera exempeldat
 
 Så här förhandsgranskar du en interaktiv kommunikation med exempeldata för formulärdatamodell:
 
-1. Navigera till AEM-författarinstansen **[!UICONTROL Forms > Forms & Documents]**.
+1. Navigera AEM författarinstansen till **[!UICONTROL Forms > Forms & Documents]**.
 1. Välj en interaktiv kommunikation och tryck **[!UICONTROL Preview]** i verktygsfältet för att markera **[!UICONTROL Web Channel]**, **[!UICONTROL Print Channel]** eller **[!UICONTROL Both Channels]** för att förhandsgranska den interaktiva kommunikationen.
 1. I dialogrutan Förhandsgranska [*kanal*] ser du till att **[!UICONTROL Test Data of Form Data Model]** är markerad och trycker på **[!UICONTROL Preview]**.
 
@@ -102,7 +102,7 @@ Om du vill förhandsgranska ett adaptivt formulär med exempeldata öppnar du de
 
 ## Förifyll med formulärdatamodelltjänst {#prefill}
 
-AEM Forms tillhandahåller förifyllningstjänsten för formulärdatamodell som är färdig att användas, och som du kan aktivera för adaptiva formulär och interaktiv kommunikation baserat på formulärdatamodell. förifyllningstjänsten frågar efter datakällor för datamodellobjekt i det adaptiva formuläret och interaktiv kommunikation och fyller i data i förväg när formuläret eller kommunikationen återges.
+AEM Forms tillhandahåller förifyllningstjänsten för formulärdatamodell som är färdig att användas och som du kan aktivera för adaptiva formulär och interaktiv kommunikation baserat på formulärdatamodell. förifyllningstjänsten frågar efter datakällor för datamodellobjekt i det adaptiva formuläret och interaktiv kommunikation och fyller i data i förväg när formuläret eller kommunikationen återges.
 
 Om du vill aktivera förifyllningstjänsten för formulärdatamodell för ett adaptivt formulär öppnar du egenskaperna för den adaptiva formulärbehållaren och väljer **[!UICONTROL Form Data Model Prefill service]** i **[!UICONTROL Prefill Service]** listrutan i dragspelsmenyn Grundläggande. Spara sedan egenskaperna.
 
@@ -116,7 +116,7 @@ Dialogrutan Redigera egenskaper för en interaktiv kommunikation
 
 ## Skriv data från anpassade formulär till datakällor {#write-af}
 
-När en användare skickar ett formulär baserat på en formulärdatamodell kan du konfigurera formuläret så att det skriver skickade data för ett datamodellsobjekt till sina datakällor. För att uppnå detta tillhandahåller AEM Forms en åtgärd [för att skicka](/help/forms/using/configuring-submit-actions.md)formulärdatamodell, som bara finns att tillgå när det gäller anpassningsbara formulär baserade på en formulärdatamodell. Den skriver skickade data för ett datamodellsobjekt i sin datakälla.
+När en användare skickar ett formulär baserat på en formulärdatamodell kan du konfigurera formuläret så att det skriver skickade data för ett datamodellsobjekt till sina datakällor. För att uppnå detta tillhandahåller AEM Forms en åtgärd [för att skicka](/help/forms/using/configuring-submit-actions.md)formulärdatamodell, som bara är tillgänglig när den är klar, för adaptiva formulär baserade på en formulärdatamodell. Den skriver skickade data för ett datamodellsobjekt i sin datakälla.
 
 Om du vill konfigurera skickaåtgärden för formulärdatamodellen öppnar du egenskaper för adaptiv formulärbehållare och väljer **[!UICONTROL Submit using Form Data Model]** i listrutan Skicka åtgärd under dragspelsfliken. Bläddra sedan och välj ett datamodellsobjekt i **[!UICONTROL Name of the data model object to submit]** listrutan. Spara egenskaperna.
 
