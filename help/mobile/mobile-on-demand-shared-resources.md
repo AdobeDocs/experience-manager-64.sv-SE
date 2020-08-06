@@ -11,6 +11,9 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: 958461b0-4cbb-452b-88ea-9b98ada14750
 translation-type: tm+mt
 source-git-commit: 64090e3c7cf722f44968467c51291a11aeeec237
+workflow-type: tm+mt
+source-wordcount: '315'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Innehållshanteringsåtgärder är byggstenar som används för att skapa och ha
 
 >[!NOTE]
 >
->Mer information om designöverväganden för AEM-mobilappar finns i [Designöverväganden för AEM-mobilappar](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html) i onlinehjälpen.
+>Mer information om designöverväganden för AEM Mobile-program finns i [Designöverväganden för AEM Mobile-program](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html) i onlinehjälpen.
 
 >[!CAUTION]
 >
@@ -52,9 +55,9 @@ Så här överför du dina delade resurser för en artikel:
 
 När du har lärt dig skapa och publicera innehåll kan du läsa mer
 
-* [Utveckla AEM-innehåll för AEM Mobile On Demand-tjänster](/help/mobile/aem-mobile-on-demand.md)
-* [Administrera innehåll för att använda AEM Mobile On Demand Services](/help/mobile/aem-mobile.md)
+* [Utveckla AEM för AEM Mobile On-demand Services](/help/mobile/aem-mobile-on-demand.md)
+* [Administrera innehåll för användning av AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)
 
 Du kan även behöva lära dig mer om redigeringsämnen, se
 
-[Skapa AEM-innehåll för AEM-appar (On Demand Services) för mobila enheter](/help/mobile/mobile-apps-ondemand.md)
+[Skapa AEM innehåll för AEM Mobile On-demand Services-appar](/help/mobile/mobile-apps-ondemand.md)
