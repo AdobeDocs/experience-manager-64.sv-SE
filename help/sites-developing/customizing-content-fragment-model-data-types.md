@@ -1,5 +1,5 @@
 ---
-title: PUBLICERA INTE, MEN TA INTE BORT ANPASSNING AV datatyper för modeller för innehållsfragment
+title: PUBLICERA INTE, MEN ANPASSA INTE DELETE-datatyper för modeller för innehållsfragment
 seo-title: Anpassa datatyper för modeller för innehållsfragment
 description: Datatyper som används i Content Fragment Models kan anpassas.
 seo-description: Datatyper som används i Content Fragment Models kan anpassas.
@@ -10,15 +10,18 @@ discoiquuid: a8b8155c-852c-4d16-b59b-7e19527c2bd4
 noindex: true
 translation-type: tm+mt
 source-git-commit: 3bdff366a0d455b405c1f9de371ced98d25ae2e2
+workflow-type: tm+mt
+source-wordcount: '1642'
+ht-degree: 0%
 
 ---
 
 
-# PUBLICERA INTE, MEN TA INTE BORT ANPASSNING AV datatyper för modeller för innehållsfragment{#do-not-publish-but-do-not-delete-customizing-data-types-for-content-fragment-models}
+# PUBLICERA INTE, MEN ANPASSA INTE DELETE-datatyper för modeller för innehållsfragment{#do-not-publish-but-do-not-delete-customizing-data-types-for-content-fragment-models}
 
 [Innehållsfragment](/help/assets/content-fragments.md) baseras på [innehållsfragmentmodeller](/help/assets/content-fragments-models.md). Dessa modeller är uppbyggda av [element](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) av olika datatyper.
 
-Det finns olika datatyper som är tillgängliga direkt, bland annat enkelradig text, multiradig text, numeriska fält, booleska väljare, alternativ på rullgardinsmenyn, datum och tid med mera. AEM-användare kan välja datatyper baserat på redigeringsmetoden för motsvarande fragment. På så sätt kan du hantera enkla textmodeller till komplexa modeller med olika typer av innehåll och tillhörande fragmentredigeringsupplevelse.
+Det finns olika datatyper som är tillgängliga direkt, bland annat enkelradig text, multiradig text, numeriska fält, booleska väljare, alternativ på rullgardinsmenyn, datum och tid med mera. AEM kan välja datatyper baserat på redigeringsmetoden för motsvarande fragment. På så sätt kan du hantera enkla textmodeller till komplexa modeller med olika typer av innehåll och tillhörande fragmentredigeringsupplevelse.
 
 Datatyperna definieras av en [kombination av nodegenskaper](#properties) som finns på [specifika platser i databasen](#locations-in-the-repository). Du kan också skapa egna [datatyper](#creating-your-data-type) och [fieldProperties](#creating-your-own-fieldproperties-property).
 
@@ -42,7 +45,7 @@ Du kan lägga till nya datatyper genom att täcka över nodstrukturen enligt fö
 >
 >Du får inte ändra något i `/libs` banan.
 >
->Allt som kan ändras vid nästa uppgradering, eller vid installation av en tjänst eller ett korrigeringspaket.
+>Allt som kan komma att ändras vid nästa uppgradering, eller vid installation av en tjänst eller ett korrigeringspaket.
 
 ## Egenskaper {#properties}
 
@@ -176,7 +179,7 @@ Konfigurationsegenskaperna för varje datatyp. Värden för `fieldProperties`:
 
 * `datepickerfields`
 
-   Komponent som lägger till de dolda indata som behövs för att datumväljarkomponenten ska fungera. Innehåller att skapa egenskaperna `defaultDateField`, `displayedFormat`, `emptyText`, `valueFormat`och `minDate``maxDate`.
+   Komponent som lägger till de dolda indata som behövs för att datumväljarkomponenten ska fungera. Innehåller att skapa egenskaperna `defaultDateField`, `displayedFormat`, `emptyText`, `valueFormat``minDate` och `maxDate`.
 
 * `datetimepickerfields`
 
@@ -292,6 +295,7 @@ Nodstrukturen måste skapas under `/apps` för att datatyperna ska överlappa va
    * `fieldResourceType`
    * `fieldPropResourceType`
    * `fieldViewResourceType`
+
    Dessa definierar hur komponenterna för din datatyp ska återges. De kan vara vilken komponent som helst. inklusive dina egna anpassade komponenter (behöver matchande uppsättning ` [fieldProperties](#fieldproperties)`).
 
    Definiera dessa egenskaper med rätt värden på noden för din datatyp.
@@ -311,6 +315,7 @@ Nodstrukturen måste skapas under `/apps` för att datatyperna ska överlappa va
    * `renderType`
    * `valueType`
    * `listOrder`
+
    Definiera dessa egenskaper med rätt värden på noden för din datatyp.
 
 ### Använda din datatyp {#using-your-data-type}
@@ -335,7 +340,7 @@ Du kan välja bland färdiga [fältEgenskaper](#fieldproperties)eller skapa egna
 
       `sling:include`
 
-   1. Den här komponenten bör antingen återge ett fält (om en användare behöver lägga till data) eller en dold inmatning med de egenskaper som behövs för din datatyp. En flerfältskomponent kräver till exempel en underordnad nod med den typ av fält som den ska duplicera, och därför bör det finnas en inmatning som kan skapa (med sling POST-mekanik) en underordnad nod av en viss typ.
+   1. Den här komponenten bör antingen återge ett fält (om en användare behöver lägga till data) eller en dold inmatning med de egenskaper som behövs för din datatyp. En multifältskomponent kräver till exempel en underordnad nod med den typ av fält som den ska duplicera, och därför bör det finnas en inmatning som kan skapa (med hjälp av sling POST-mekanik) en underordnad nod av en viss typ.
 
 1. Komponentens basnamn bör läggas till `fieldProperties`.
 1. Upprepa för alla egenskaper du behöver.
