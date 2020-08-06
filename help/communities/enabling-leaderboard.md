@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 1e96d388-8517-4a84-bb0a-d49567eb4bdf
 translation-type: tm+mt
 source-git-commit: 1bbd917ef20c4a618e93af66ffe8a6cfc8448e78
+workflow-type: tm+mt
+source-wordcount: '389'
+ht-degree: 1%
 
 ---
 
@@ -51,35 +54,43 @@ Markera den monterade `Leaderboard` komponent som du vill öppna och välj den `
 
 ### Fliken Inställningar {#settings-tab}
 
-Under fliken **[!UICONTROL Inställningar]** anger du vilken information om medlemmen som ska visas:
+Under **[!UICONTROL Settings]** fliken anger du vilken information om medlemmen som ska visas:
 
-* **[!UICONTROL Visningsnamn]** Ett beskrivande namn som ska visas för styrelsen och som återspeglar reglerna som valts för att visa märken och bakgrundsmusik.
+* **[!UICONTROL Display Name]**
+Ett beskrivande namn som ska visas för styrelsen, som återspeglar reglerna som valts för att visa märken och bakgrundsmusik.
 
    Standard är `Leaderboard`, om inget anges.
 
-* **[!UICONTROL Badge]** Om det här alternativet är markerat inkluderas en kolumn för ikoner för emblem i rankningslistan.
+* **[!UICONTROL Badge]**
+Om du markerar det här alternativet inkluderas en kolumn för ikoner för emblem i rankningspanelen.
 
    Standard är avmarkerat.
 
-* **[!UICONTROL Om du markerar alternativet]** Badge Name (Märkesnamn) inkluderas en kolumn för märkordsnamnet i resultatlistan.
+* **[!UICONTROL Badge Name]**
+Om du markerar det här alternativet inkluderas en kolumn för märkordsnamnet i resultatlistan.
 
    Standard är avmarkerat.
 
-* **[!UICONTROL Använd Avatar]** Om du markerar det här alternativet inkluderas medlemmens avatarbild i ledningsgruppen bredvid namnlänken till medlemsprofilen.
+* **[!UICONTROL Use Avatar]**
+Om det här alternativet är markerat inkluderas medlemmens avatarbild i ledningsgruppen bredvid namnlänken till medlemsprofilen.
 
    Standard är avmarkerat.
 
 ### Fliken Regler {#rules-tab}
 
-Under fliken **[!UICONTROL Regler]** , communitywebbplatsen och dess regler för poäng och badging
+Under **[!UICONTROL Rules]** fliken, communitywebbplatsen och dess regler för poäng och utmärkelser
 
-* **[!UICONTROL Regelplats]**(obligatoriskt) Plats där regeln Klassificering/badging är konfigurerad.
+* **[!UICONTROL Rule Location]**
+(obligatoriskt) Plats där poängsättningsregeln/badging-regeln är konfigurerad.
 
-* **[!UICONTROL Poängregel]**(obligatorisk) Specifik regel som genererar de poäng som ska visas.
+* **[!UICONTROL Scoring Rule]**
+(obligatoriskt) Specifik regel som genererar poängen som ska visas.
 
-* **[!UICONTROL Badging-regel]**(obligatoriskt) Specifik regel som genererar märket som ska visas.
+* **[!UICONTROL Badging Rule]**
+(obligatoriskt) Specifik regel som genererar märket som ska visas.
 
-* **[!UICONTROL Visningsgräns]** Antal medlemmar som ska visas per sida.
+* **[!UICONTROL Display Limit]**
+Antal medlemmar som ska visas per sida.
 
    Standardvärdet är 10.
 
@@ -89,7 +100,7 @@ Den här resultatöversikten är en följd av att grundläggande poängregler ha
 
 Konfiguration av huvudpanelskomponent:
 
-* **[!UICONTROL Fliken Inställningar]** :
+* **[!UICONTROL Settings]** tab:
 
    * Visningsnamn = `Participation Board`
    * `checked`:
@@ -98,7 +109,7 @@ Konfiguration av huvudpanelskomponent:
       * Märkesnamn
       * Använd avatar
 
-* **[!UICONTROL Fliken Regler]** :
+* **[!UICONTROL Rules]** tab:
 
    * Regelplats = `/content/sites/communities/jcr:content`
    * Poängregel = `/etc/community/scoring/rules/forums-scoring`
@@ -113,7 +124,7 @@ Den här resultatöversikten är en följd av att avancerade poängregler har ti
 
 Konfiguration av huvudpanelskomponent:
 
-* **[!UICONTROL Fliken Inställningar]** :
+* **[!UICONTROL Settings]** tab:
 
    * Visningsnamn = `Expertise Board`
    * `checked`:
@@ -121,7 +132,7 @@ Konfiguration av huvudpanelskomponent:
       * Badge
       * Använd avatar
 
-* **[!UICONTROL Fliken Regler]** :
+* **[!UICONTROL Rules]** tab:
 
    * Regelplats = `/content/sites/communities/jcr:content`
    * Poängregel = `/etc/community/scoring/rules/adv-forums-scoring`
