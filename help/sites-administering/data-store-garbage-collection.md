@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 5ee9d11a-85c2-440d-b487-a38d04dc040b
 translation-type: tm+mt
 source-git-commit: 3c4b8bf3fd912406657c4cecb75eb2b77dd41bc7
+workflow-type: tm+mt
+source-wordcount: '1905'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ AEM använder databasen som lagring för ett antal interna aktiviteter och hush�
 * Arbetsflödesnyttolaster
 * Resurser som skapats temporärt under DAM-återgivning
 
-När något av dessa temporära objekt är stort nog för att kräva lagring i datalagret, och när objektet inte längre används, förblir själva datalagret som&quot;skräp&quot;. I ett typiskt WCM-program för författare/publicering är den största källan till skräp av den här typen vanligtvis processen för publiceringsaktivering. När data replikeras till Publish, samlas de in i samlingar i ett effektivt dataformat som kallas&quot;Durbo&quot; och lagras i databasen under `/var/replication/data`. Datapaketen är ofta större än den kritiska storlekströskeln för datalagret och därför lagras de som datalagringsposter. När replikeringen är klar tas noden i `/var/replication/data` bort, men datalagringsposten förblir&quot;skräp&quot;.
+När något av dessa temporära objekt är stort nog för att kräva lagring i datalagret, och när objektet inte längre används, förblir själva datalagringsposten som&quot;skräp&quot;. I ett typiskt WCM-program för författare/publicering är den största källan till skräp av den här typen vanligtvis processen för publiceringsaktivering. När data replikeras till Publish, samlas de in i samlingar i ett effektivt dataformat som kallas&quot;Durbo&quot; och lagras i databasen under `/var/replication/data`. Datapaketen är ofta större än den kritiska storlekströskeln för datalagret och därför lagras de som datalagringsposter. När replikeringen är klar tas noden i `/var/replication/data` bort, men datalagringsposten förblir&quot;skräp&quot;.
 
 En annan källa till återvinningsbart skräp är paket. Paketdata lagras, precis som allt annat, i databasen och därmed för paket som är större än 4 kB i datalagret. Under ett utvecklingsprojekt eller under en längre tid med ett system kan paket byggas och byggas om många gånger, och varje bygge resulterar i en ny datalagringspost, vilket gör den föregående byggens arkiv överbliven.
 
@@ -57,7 +60,7 @@ Den här metoden fungerar bra för en enskild nod med ett privat datalager. Men 
 
 ## Kör skräpinsamling för datalager {#running-data-store-garbage-collection}
 
-Det finns tre sätt att köra skräpinsamling för datalager, beroende på vilken datalagerinställning som AEM körs på:
+Det finns tre sätt att köra skräpinsamling för datalager, beroende på vilket datalager som AEM körs på:
 
 1. Via [Revision Cleanup](/help/sites-deploying/revision-cleanup.md) - en skräpinsamlingsmekanism som vanligtvis används för rensning av nodarkiv.
 
@@ -66,7 +69,7 @@ Det finns tre sätt att köra skräpinsamling för datalager, beroende på vilke
 
 Om tarMK används både som nodarkiv och datalager kan Revision Cleanup användas för skräpinsamling för både nodarkivet och datalagret. Om ett externt datalager har konfigurerats, till exempel ett filsystemsdatalager, måste skräpinsamlingen för datalagret aktiveras separat från Revision Cleanup. Skräpinsamlingen i datalagret kan aktiveras antingen via instrumentpanelen för åtgärder eller JMX-konsolen.
 
-Tabellen nedan visar vilken typ av skräpinsamling i datalagret som behöver användas för alla datalagerdistributioner som stöds i AEM 6:
+Tabellen nedan visar vilken typ av skräpinsamling för datalager som måste användas för alla datalager-distributioner som stöds i AEM 6:
 
 <table> 
  <tbody> 
@@ -121,7 +124,7 @@ Innan du kör skräpinsamlingen för datalagret bör du kontrollera att inga sä
 
 >[!NOTE]
 >
->Åtgärden Skräpsamling i datalagret visas bara om du har konfigurerat ett externt fildatalager. Mer information om hur du konfigurerar ett arkiv med fildata finns i [Konfigurera nodarkiv och datalager i AEM 6](/help/sites-deploying/data-store-config.md#file-data-store) .
+>Åtgärden Skräpsamling i datalagret visas bara om du har konfigurerat ett externt fildatalager. Mer information om hur du konfigurerar ett fildatalager finns i [Konfigurera nodarkiv och datalager i AEM 6](/help/sites-deploying/data-store-config.md#file-data-store) .
 
 ### Kör skräpinsamlingen för datalagret via JMX-konsolen {#running-data-store-garbage-collection-via-the-jmx-console}
 
@@ -150,7 +153,7 @@ Så här kör du skräpinsamlingen:
 
 >[!NOTE]
 >
->Datalagrets skräpinsamlingsaktivitet startar bara om du har konfigurerat ett externt fildatalager. Om ett externt fildatalager inte har konfigurerats returnerar aktiviteten meddelandet `Cannot perform operation: no service of type BlobGCMBean found` efter anropet. Mer information om hur du konfigurerar ett arkiv med fildata finns i [Konfigurera nodarkiv och datalager i AEM 6](/help/sites-deploying/data-store-config.md#file-data-store) .
+>Datalagrets skräpinsamlingsaktivitet startar bara om du har konfigurerat ett externt fildatalager. Om ett externt fildatalager inte har konfigurerats returnerar aktiviteten meddelandet `Cannot perform operation: no service of type BlobGCMBean found` efter anropet. Mer information om hur du konfigurerar ett fildatalager finns i [Konfigurera nodarkiv och datalager i AEM 6](/help/sites-deploying/data-store-config.md#file-data-store) .
 
 ## Automatisera skräpinsamling för datalager {#automating-data-store-garbage-collection}
 
@@ -168,7 +171,7 @@ Om du inte vill köra skräpinsamlingen i datalagret med fönstret för veckound
 >
 >I följande exempel kan `curl` olika parametrar behöva konfigureras för din instans: till exempel värdnamnet ( `localhost`), port ( `4502`), administratörslösenordet ( `xyz`) och olika parametrar för den faktiska skräpinsamlingen i datalagret.
 
-Här är ett exempel på ett curl-kommando som anropar skräpinsamlingen för datalagring via kommandoraden:
+Här följer ett exempel på ett curl-kommando för att anropa skräpinsamlingen för datalagring via kommandoraden:
 
 ```shell
 curl -u admin:admin -X POST --data markOnly=true  http://localhost:4503/system/console/jmx/org.apache.jackrabbit.oak"%"3Aname"%"3Drepository+manager"%"2Ctype"%"3DRepositoryManagement/op/startDataStoreGC/boolean
