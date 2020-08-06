@@ -1,8 +1,8 @@
 ---
-title: 'Initiera API:er för dokumenttjänster från AEM Workflow '
-seo-title: 'Initiera API:er för dokumenttjänster från AEM Workflow '
-description: Lär dig hur du anropar AEM Document Services på DDX eller angivna indata. Se även hur du konverterar PDF till PDF/A
-seo-description: Lär dig hur du anropar AEM Document Services på DDX eller angivna indata. Se även hur du konverterar PDF till PDF/A
+title: 'Initiera API:er för dokumenttjänster från AEM '
+seo-title: 'Initiera API:er för dokumenttjänster från AEM '
+description: Lär dig hur du anropar AEM dokumenttjänster på DDX eller angivna indata. Se även hur du konverterar PDF till PDF/A
+seo-description: Lär dig hur du anropar AEM dokumenttjänster på DDX eller angivna indata. Se även hur du konverterar PDF till PDF/A
 uuid: aacec2df-1ad6-4ff2-a99d-ef206efcdc09
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,15 +10,18 @@ topic-tags: document_services
 discoiquuid: 8b85bdc7-3864-49c9-81b0-cf15b8e986d9
 translation-type: tm+mt
 source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+workflow-type: tm+mt
+source-wordcount: '1192'
+ht-degree: 0%
 
 ---
 
 
-# Initiera API:er för dokumenttjänster från AEM Workflow {#initiate-document-services-apis-from-aem-workflow}
+# Initiera API:er för dokumenttjänster från AEM  {#initiate-document-services-apis-from-aem-workflow}
 
 ## Assembler {#assembler}
 
-AEM Forms innehåller anpassade arbetsflöden för att anropa följande API:er för Assembler-tjänster:
+AEM Forms tillhandahåller anpassade arbetsflöden för att anropa följande API:er för Assembler-tjänster:
 
 * **invoke**: Anropar åtgärder som anges i in-DDX för angivna indata.
 * **toPDFA**: Konverterar PDF-indatadokument till PDF/A-dokument.
@@ -27,9 +30,9 @@ AEM Forms innehåller anpassade arbetsflöden för att anropa följande API:er f
 
 Arbetsflödet **Anropa DDX** anropar API:t för tjänsten `Invoke` Assembler, som du kan använda för att sätta ihop eller dela upp dokument, lägga till vattenstämpel i ett PDF-dokument och så vidare.
 
-1. Dra arbetsflödessteget **[!UICONTROL Anropa DDX]** under fliken Formulärarbetsflöde i Sidekick.
+1. Dra arbetsflödessteget **[!UICONTROL Invoke DDX]** under fliken Forms Workflow i Sidekick.
 1. Dubbelklicka på det tillagda arbetsflödessteget för att redigera komponenten.
-1. Konfigurera indatadokument, miljöalternativ och utdatadokument i dialogrutan Redigera komponent och klicka på **[!UICONTROL OK]**.
+1. Konfigurera indatadokument, miljöalternativ och utdatadokument i dialogrutan Redigera komponent och klicka sedan på **[!UICONTROL OK]**.
 
 #### Indatadokument {#input-documents}
 
@@ -67,10 +70,10 @@ Beroende på indata-DDX kan invoke-API:t generera flera utdatadokument. På flik
 
 Arbetsflödessteget Konvertera till PDF/A anropar `toPDFA` Assembler-tjänstens API. Det används för att konvertera PDF-dokument till PDF/A-kompatibla dokument.
 
-1. Dra arbetsflödessteget **[!UICONTROL ConvertToPDFA]** under fliken Formulärarbetsflöde i Sidekick.
+1. Dra arbetsflödessteget **[!UICONTROL ConvertToPDFA]** under fliken Forms Workflow i Sidekick.
 
 1. Dubbelklicka på det tillagda arbetsflödessteget för att redigera komponenten.
-1. Konfigurera indatadokument, konverteringsalternativ och utdatadokument i dialogrutan Redigera komponent och klicka på **[!UICONTROL OK]**.
+1. Konfigurera indatadokument, konverteringsalternativ och utdatadokument i dialogrutan Redigera komponent och klicka sedan på **[!UICONTROL OK]**.
 
 #### Indatadokument {#input-documents-1}
 
@@ -91,7 +94,7 @@ Med konverteringsalternativen kan du ange alternativ som ändrar PDF/A-konverter
 * *Verifiera* konvertering: Anger om det konverterade PDF/A-dokumentet ska verifieras för PDF/A-kompatibilitet efter konvertering.
 * *Jobbloggnivå* : Anger loggnivån som ska användas för bearbetning av loggar.
 
-* *Metadatatilläggsschema* : Anger sökvägen till metadatatilläggsschemat som ska användas för XMP-egenskaper i PDF-dokumentets metadata.
+* *Metadatatilläggsschema* : Anger sökvägen till metadatatilläggsschemat som ska användas för XMP egenskaper i PDF-dokumentets metadata.
 
 #### Utdatadokument {#output-documents-1}
 
@@ -100,13 +103,13 @@ På fliken Utdatadokument kan du ange mål för utdatadokumenten
 * *PDFA-dokument*: Anger platsen där det konverterade PDF/A-dokumentet sparas. Det kan antingen skriva över nyttolastdokumentet eller sparas under nyttolastmappen.
 * *Konverteringslogg*: Anger platsen där konverteringsloggarna sparas. Det kan antingen skriva över nyttolastdokumentet eller sparas under nyttolastmappen.
 
-## Formulär {#forms}
+## Forms {#forms}
 
-Arbetsflödet för att återge PDF-formulär är en wrapper runt `renderPDFForm` Forms tjänst-API:t för att skapa ett PDF-formulär med en XDP-mall och data-xml.
+Arbetsflödet för att återge PDF-formulär är en wrapper runt `renderPDFForm` Forms tjänst-API för att skapa ett PDF-formulär med en XDP-mall och data-xml.
 
 ### Arbetsflöde för PDF-formulär {#render-pdf-form-workflow}
 
-1. Dra arbetsflödessteget Återge PDF-formulär under fliken Formulärarbetsflöde i Sidekick.
+1. Dra arbetsflödessteget Återge PDF-formulär under fliken Forms Workflow i Sidekick.
 1. Dubbelklicka på det tillagda arbetsflödessteget för att redigera komponenten.
 1. Konfigurera indatadokument, utdatadokument och andra parametrar i dialogrutan Redigera komponent och klicka sedan på **[!UICONTROL OK]**.
 
@@ -125,7 +128,7 @@ Arbetsflödet för att återge PDF-formulär är en wrapper runt `renderPDFForm`
 * *Innehållsrot*: Anger sökvägen till mappen i databasen där fragment eller bilder som används i XDP-indatamallen lagras.
 * *Skicka URL*: Anger standard-URL för att skicka PDF-formulär som genereras.
 * *Språk*: Anger standardspråk för det genererade PDF-formuläret.
-* *Acrobat-version*: Anger målversionen av Acrobat för det genererade PDF-formuläret.
+* *Acrobat-version*: Anger Acrobat-målversionen för det genererade PDF-formuläret.
 * *Taggad PDF*: Anger om den genererade PDF-filen ska vara tillgänglig eller inte.
 * *XCI-dokument*: Anger sökvägen till XCI-filen.
 
@@ -133,9 +136,9 @@ Arbetsflödet för att återge PDF-formulär är en wrapper runt `renderPDFForm`
 
 Arbetsflödet Generera icke-interaktiv PDF är en wrapper runt API:t för `generatePDFOutput` utdatatjänster. Den används för att generera icke-interaktiva PDF-dokument från XDP-mallar och data-xml.
 
-### Generera icke-interaktivt arbetsflöde för PDF-utdata {#generate-non-interactive-pdf-output-workflow-nbsp}
+### Generera icke-interaktivt arbetsflöde för PDF-utdata   {#generate-non-interactive-pdf-output-workflow-nbsp}
 
-1. Dra arbetsflödet för att generera icke-interaktiva PDF-utdata på fliken Formulärarbetsflöde i Sidekick.
+1. Dra arbetsflödet Generera icke-interaktiva PDF-utdata under fliken Forms Workflow i Sidekick.
 1. Dubbelklicka på det tillagda arbetsflödessteget för att redigera komponenten.
 1. Konfigurera indatadokument, utdatadokument och andra parametrar i dialogrutan Redigera komponent och klicka sedan på **[!UICONTROL OK]**.
 
@@ -153,7 +156,7 @@ Arbetsflödet Generera icke-interaktiv PDF är en wrapper runt API:t för `gener
 
 * *Innehållsrot*: Anger sökvägen till mappen i databasen där fragment eller bilder som används i XDP-indatamallen lagras.
 * *Språk*: Anger standardspråk för genererade PDF-formulär.
-* *Acrobat-version*: Anger målversionen av Acrobat för det genererade PDF-formuläret.
+* *Acrobat-version*: Anger Acrobat-målversionen för det genererade PDF-formuläret.
 * Linjär PDF: Anger om den genererade PDF-filen ska optimeras för webbvisning.
 * *Taggad PDF*: Anger om den genererade PDF-filen ska vara tillgänglig eller inte.
 * *XCI-dokument*: Anger sökvägen till XCI-filen.
