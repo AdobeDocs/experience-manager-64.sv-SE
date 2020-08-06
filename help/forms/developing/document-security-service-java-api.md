@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Snabbstart för Java API för Document Security Service (SOAP) {#document-security-service-javaapi-quick-start-soap}
 
-Java API Quick Start (SOAP) är tillgängligt för Rights Management-tjänsten:
+Java API Quick Start (SOAP) är tillgängligt för tjänsten Rights Management:
 
 [Snabbstart (SOAP-läge): Skapa en profil med Java API](document-security-service-java-api.md#quick-start-soap-mode-creating-a-policy-using-the-java-api)
 
@@ -46,11 +46,11 @@ Java API Quick Start (SOAP) är tillgängligt för Rights Management-tjänsten:
 
 [Snabbstart (SOAP-läge): Ta bort en profil från ett Word-dokument med Java API](document-security-service-java-api.md#quick-start-soap-mode-removing-a-policy-from-a-word-document-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstart som finns i Programmering med AEM Forms är baserat på operativsystemet på Forms-servern. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart i Programmering med AEM Forms är baserat på Forms serveroperativsystem. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Skapa en profil med Java API {#quick-start-soap-mode-creating-a-policy-using-the-java-api}
 
@@ -2056,7 +2056,7 @@ public class DeleteAbstractPolicySoap {
 }
 ```
 
-## Snabbstart (SOAP-läge): Skydda en PDF i ett arbetsflöde för kontoutdrag för en befintlig användare med Java API {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-an-existing-user-using-the-java-api}
+## Snabbstart (SOAP-läge): Protect a PDF in Statement Workflow for an Existing User, using the Java API {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-an-existing-user-using-the-java-api}
 
 I följande Java-kodexempel demonstreras metoden för att skydda ett dokument i ett Statement Workflow för en befintlig användare.
 
@@ -2164,7 +2164,7 @@ public class protectStatementWorkFlowExistingUserSoap {
 }
 ```
 
-## Snabbstart (SOAP-läge): Skydda en PDF-fil i Statement Workflow för en ny användare med Java API {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-a-new-user-using-the-java-api}
+## Snabbstart (SOAP-läge): Protect a PDF in Statement Workflow for a new User, using the Java API {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-a-new-user-using-the-java-api}
 
 I följande Java-kodexempel visas hur du kan skydda ett dokument i Statement Workflow. Detta är en tvåstegsprocess:
 
