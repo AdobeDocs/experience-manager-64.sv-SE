@@ -1,8 +1,8 @@
 ---
 title: Felsökning av dynamiska media - Scene7-läge
 seo-title: Felsökning av dynamiska media - Scene7-läge
-description: Felsöka Dynamic Media i Scene7 runmode.
-seo-description: Felsöka Dynamic Media i Scene7 runmode.
+description: Felsöka Dynamic Media i Scene7.
+seo-description: Felsöka Dynamic Media i Scene7.
 uuid: bd9653f7-e4c7-464f-84a8-dc1e8dc37ba2
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: eab920f4-b56e-4ed2-9ec1-03f348810ae5
 translation-type: tm+mt
 source-git-commit: 5acb16b1734331767554261bbcf9640947f2e23f
+workflow-type: tm+mt
+source-wordcount: '1295'
+ht-degree: 0%
 
 ---
 
@@ -24,15 +27,15 @@ I följande dokument beskrivs felsökning för Dynamic Media som kör körningsl
 Kontrollera att Dynamic Media har konfigurerats korrekt genom att göra följande:
 
 * Kommandot Start innehåller argumentet runmode `-r dynamicmedia_scene7` .
-* Alla kumulativa AEM 6.4-korrigeringspaket (CFP) har installerats först *före* eventuella tillgängliga Dynamic Media Feature Packs.
+* Alla AEM 6.4 kumulativa korrigeringspaket (CFP) har installerats först *innan* några tillgängliga dynamiska mediefunktionspaket finns tillgängliga.
 * Tillvalspaket 18912 är installerat.
 
    Det här tillvalspaketet är till för FTP-stöd eller om du migrerar resurser till Dynamic Media från Dynamic Media Classic (Scene7).
 
-* Navigera till användargränssnittet för molntjänster och bekräfta att det tilldelade kontot visas under **[!UICONTROL Tillgängliga konfigurationer]**.
-* Kontrollera att replikeringsagenten för aktivering av **[!UICONTROL dynamiskt mediematerial (scene7)]** är aktiverad.
+* Navigera till användargränssnittet för Cloud Services och bekräfta att det tilldelade kontot visas under **[!UICONTROL Available Configurations]**.
+* Kontrollera att **[!UICONTROL Dynamic Media Asset Activation (scene7)]** replikeringsagenten är aktiverad.
 
-   Den här replikeringsagenten finns under **[!UICONTROL Agenter]** på författare.
+   Den här replikeringsagenten finns under **[!UICONTROL Agents]** Författare.
 
 ## Allmänt (alla tillgångar) {#general-all-assets}
 
@@ -40,7 +43,7 @@ Här följer några allmänna tips och tricks för alla resurser.
 
 ### Statusegenskaper för resurssynkronisering {#asset-synchronization-status-properties}
 
-Följande resursegenskaper kan granskas i CRXDE Lite för att bekräfta den lyckade synkroniseringen av resursen från AEM till Dynamic Media:
+Följande resursegenskaper kan granskas i CRXDE Lite för att bekräfta att resursen har synkroniserats från AEM till Dynamic Media:
 
 | **Egenskap** | **Exempel** | **Beskrivning** |
 |---|---|---|
@@ -51,7 +54,7 @@ Följande resursegenskaper kan granskas i CRXDE Lite för att bekräfta den lyck
 
 ### Synkroniseringsloggning {#synchronization-logging}
 
-Synkroniseringsfel och problem loggas in `error.log` (AEM-serverkatalog `/crx-quickstart/logs/`). Tillräcklig loggning finns för att fastställa orsaken till de flesta problemen, men du kan öka loggningen till DEBUG på `com.adobe.cq.dam.ips` paketet via Sling Console ([http://localhost:4502/system/console/slinglog](http://localhost:4502/system/console/slinglog)) för att samla in mer information.
+Synkroniseringsfel och problem loggas in `error.log` (AEM serverkatalog `/crx-quickstart/logs/`). Tillräcklig loggning finns för att fastställa orsaken till de flesta problemen, men du kan öka loggningen till DEBUG på `com.adobe.cq.dam.ips` paketet via Sling Console ([http://localhost:4502/system/console/slinglog](http://localhost:4502/system/console/slinglog)) för att samla in mer information.
 
 ### Flytta, kopiera eller ta bort {#move-copy-delete}
 
@@ -65,9 +68,9 @@ Gör följande innan du utför någon av åtgärderna Flytta, Kopiera eller Ta b
 
 När du ersätter en befintlig Dynamic Media-resurs (samma namn och plats) kan du välja att behålla båda resurserna eller ersätta eller skapa en version:
 
-* Om båda behålls skapas en ny resurs med ett unikt namn för den publicerade resursens URL. Till exempel är **[!UICONTROL image.jpg]** den ursprungliga resursen och **[!UICONTROL image1.jpg]** är den nyligen överförda resursen.
+* Om båda behålls skapas en ny resurs med ett unikt namn för den publicerade resursens URL. Exempel: **[!UICONTROL image.jpg]** är den ursprungliga resursen och **[!UICONTROL image1.jpg]** är den nyligen överförda resursen.
 
-* Det går inte att skapa en version i Dynamic Media - Scene7-läge. Den nya versionen ersätter den befintliga mediefilen som levereras.
+* Det går inte att skapa en version i Dynamic Media - leverans i Scene7-läge. Den nya versionen ersätter den befintliga mediefilen som levereras.
 
 ## Bilder och uppsättningar {#images-and-sets}
 
@@ -86,7 +89,7 @@ Om du har problem med bilder och uppsättningar kan du läsa följande felsökni
     <ol> 
      <li><p>Gå till CRX/DE:</p> 
       <ul> 
-       <li>Kontrollera om förinställningen i den JCR- <code>/etc/dam/presets/viewer/&lt;preset&gt; has lastReplicationAction</code> definition som används. Observera att den här platsen gäller om du uppgraderade från AEM 6.x till 6.4 och avanmälde dig från migrering. I annat fall är platsen <code>/conf/global/settings/dam/dm/presets/viewer</code>.</li> 
+       <li>Kontrollera om förinställningen i den JCR- <code>/etc/dam/presets/viewer/&lt;preset&gt; has lastReplicationAction</code> definition som används. Observera att den här platsen gäller om du har uppgraderat från AEM 6.x till 6.4 och valt att inte migrera. I annat fall är platsen <code>/conf/global/settings/dam/dm/presets/viewer</code>.</li> 
        <li>Kontrollera att resursen i JCR-filen har <code>dam:scene7FileStatus</code><strong> under Metadata shows som </strong><code>PublishComplete</code>.</li> 
       </ul> </li> 
     </ol> </td> 
@@ -113,12 +116,12 @@ Om du har problem med bilder och uppsättningar kan du läsa följande felsökni
   </tr> 
   <tr> 
    <td>Bilden förhandsvisas inte med Dynamic Media Viewer</td> 
-   <td><p>Kontrollera att resursen innehåller metadataegenskaper <code>dam:scene7File</code> (CRXDE Lite)</p> </td> 
+   <td><p>Kontrollera att resursen innehåller metadataegenskaperna <code>dam:scene7File</code> (CRXDE Lite)</p> </td> 
    <td><p>Kontrollera att alla resurser har avslutat bearbetningen.</p> </td> 
   </tr> 
   <tr> 
    <td>Den överförda resursen visas inte i resursväljaren</td> 
-   <td><p>Kontrollera resurs har egenskap <code>jcr:content</code> &gt; <strong><code>dam:assetState</code></strong> = <code>processed</code> (CRXDE Lite)</p> </td> 
+   <td><p>Check-resursen har egenskapen <code>jcr:content</code> &gt; <strong><code>dam:assetState</code></strong> = <code>processed</code> (CRXDE Lite)</p> </td> 
    <td><p>Kontrollera att alla resurser har avslutat bearbetningen.</p> </td> 
   </tr> 
   <tr> 
@@ -172,7 +175,7 @@ Om du har problem med video kan du läsa följande felsökningsguide.
     </ul> </td> 
    <td> 
     <ol> 
-     <li>Kontrollera din AEM-instans med <span class="kbd">-r dynamicmedia_scene7</span></li> 
+     <li>Kontrollera AEM med <span class="kbd">-r dynamicmedia_scene7</span></li> 
      <li>Kontrollera att Dynamic Media Configuration under Cloud Services är korrekt konfigurerad.</li> 
      <li>Kontrollera att mappen har en videoprofil. Kontrollera även videoprofilen.</li> 
     </ol> </td> 
@@ -242,7 +245,7 @@ Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
     </ol> </td> 
    <td><p>Om exempelmaterialet eller den förinställda teckningen i visningsprogrammet inte har synkroniserats eller publicerats startar du om hela kopierings-/synkroniseringsprocessen:</p> 
     <ol> 
-     <li>Navigera till CRXDE Lite. 
+     <li>Gå till CRXDE Lite. 
       <ul> 
        <li>Ta bort <code>&lt;sync-folder&gt;/_CSS/_OOTB</code>.</li> 
       </ul> </li> 
@@ -251,9 +254,9 @@ Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
        <li>Sök efter visningsprogrampaket i listan (börjar med <span class="kbd">cq-dam-scene7-viewers-content</span>)</li> 
        <li>Klicka på <strong>Installera</strong>om.</li> 
       </ol> </li> 
-     <li>Gå till sidan Dynamisk mediekonfiguration under Cloud Services och öppna sedan konfigurationsdialogrutan för din Dynamic Media - S7-konfiguration. 
+     <li>Gå till sidan Dynamisk mediekonfiguration under Cloud Services och öppna sedan konfigurationsdialogrutan för Dynamic Media - S7-konfigurationen. 
       <ul> 
-       <li>Klicka på <strong>Spara</strong>om du inte vill göra några ändringar. <br /> Detta utlöser logiken igen för att skapa och synkronisera exempelresurserna, CSS för visningsförinställningar och teckningar. <br /> </li> 
+       <li>Klicka på <strong>Spara</strong>om du inte vill göra några ändringar. Detta utlöser logiken igen för att skapa och synkronisera exempelresurserna, CSS för visningsförinställningar och teckningar.<br /> <br /> </li> 
       </ul> </li> 
     </ol> </td> 
   </tr> 
