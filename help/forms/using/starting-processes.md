@@ -1,8 +1,8 @@
 ---
 title: Starta processer
 seo-title: Starta processer
-description: Så här använder du arbetsytan i LiveCycle AEM Forms - välj processer, lägg till anteckningar och bilagor, spara utkast och lägg till i favoriter.
-seo-description: Så här använder du arbetsytan i LiveCycle AEM Forms - välj processer, lägg till anteckningar och bilagor, spara utkast och lägg till i favoriter.
+description: Använda arbetsytan i LiveCycle AEM Forms - välj processer, lägg till anteckningar och bilagor, spara utkast och lägg till i favoriter.
+seo-description: Använda arbetsytan i LiveCycle AEM Forms - välj processer, lägg till anteckningar och bilagor, spara utkast och lägg till i favoriter.
 uuid: a61da785-25b4-4482-bd72-02e250d35dc7
 contentOwner: robhagat
 content-type: reference
@@ -11,15 +11,18 @@ topic-tags: forms-workspace
 discoiquuid: c9d3f369-3744-41d5-b340-390ab7e03f36
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '1364'
+ht-degree: 0%
 
 ---
 
 
 # Starta processer {#starting-processes}
 
-Arbetsytan i AEM Forms organiserar processer efter de kategorier som administratören eller processdesignern ställer in. Du kan också placera processer som du använder ofta i kategorin Favoriter så att du snabbt kan hitta dem.
+AEM Forms arbetsyta organiserar processerna enligt de kategorier som administratören eller processdesignern ställer in. Du kan också placera processer som du använder ofta i kategorin Favoriter så att du snabbt kan hitta dem.
 
-När du påbörjar en process kan du behöva fylla i ett formulär för att starta en affärsprocess som styrs av arbetsflödet i AEM Forms. Om ett formulär använder Förbered dataprocess kan viss information fyllas i i förväg i ett tomt formulär när en ny process initieras.
+När du påbörjar en process kan du behöva fylla i ett formulär för att starta en affärsprocess som styrs av AEM Forms arbetsflöde. Om ett formulär använder Förbered dataprocess kan viss information fyllas i i förväg i ett tomt formulär när en ny process initieras.
 
 Du vill till exempel köpa en ny datorskärm och därför starta en process som kallas *Inköpsorder*. När du startar processen öppnas ett formulär där du uppmanas att ange information om objektet som ska beställas. Ditt namn, personalnummer och chefens namn kan redan vara ifyllda i förväg i formuläret. När du skickar begäran initieras en affärsprocess. Servern dirigerar automatiskt begäran till din hanterare baserat på processdefinitionen. Uppgiften börjar visas i din chefs Att göra-lista. När din chef har godkänt begäran vidarebefordrar formulärarbetsflödet begäran till inköpsavdelningen och skickar ett e-postmeddelande till dig.
 
@@ -29,11 +32,11 @@ Du kan välja en process för att starta den eller för att visa mer information
 
 När du väljer en process att starta kan du behöva fylla i ett formulär som är kopplat till den processen. Processen startas när du skickar formuläret.
 
-Formulär i olika typer av filformat stöds, bland annat Adobe PDF-, HTML- och SWF-filer. Ett formulär kan se ut som ett vanligt utskrivbart eller webbaserat formulär eller vägleda dig genom en serie guideliknande paneler för att samla in information.
+Forms i olika typer av filformat stöds, bland annat Adobe PDF-, HTML- och SWF-filer. Ett formulär kan se ut som ett vanligt utskrivbart eller webbaserat formulär eller vägleda dig genom en serie guideliknande paneler för att samla in information.
 
 Om formuläret och processen tillåter det kan du även spara formuläret offline, fylla i det och sedan skicka det för att slutföra uppgiften. När formuläret skickas startas din e-postklient med rätt e-postadress för servern, om e-postslutpunkten har konfigurerats. Du kan sedan skicka det ifyllda formuläret till servern via e-post.
 
-När du väljer en process visas fliken Formulär och fliken Detaljer. Om processen tillåter dig att lägga till anteckningar eller bilagor, visas även fliken Bifogade filer och fliken Anteckningar. Om du även har konfigurerat sammanfattnings-URL:en med processen visas även fliken Sammanfattning. På fliken Formulär visas det associerade formuläret och på fliken Detaljer visas information om den aktuella uppgiften och den process som den är en del av.
+När du väljer en process visas fliken Formulär och fliken Detaljer. Om processen tillåter dig att lägga till anteckningar eller bilagor, visas även fliken Bifogade filer och fliken Anteckningar. Om du även har konfigurerat sammanfattnings-URL:en med processen visas även fliken Sammanfattning. På fliken Forms visas det associerade formuläret och på fliken Detaljer visas information om den aktuella uppgiften och den process som den är en del av.
 
 ### Påbörja en affärsprocess {#start-a-business-process}
 
@@ -41,7 +44,7 @@ När du väljer en process visas fliken Formulär och fliken Detaljer. Om proces
 
    >[!NOTE]
    >
-   >Om rutan Kategorier är komprimerad klickar du på Öppna kategorier i det övre vänstra området på arbetsytan i AEM Forms för att öppna rutan.
+   >Om kategorirutan är komprimerad klickar du på Öppna kategorier i det övre vänstra området på arbetsytan i AEM Forms för att öppna rutan.
 
 1. Välj en process genom att klicka på en uppgift. Formuläret som är kopplat till processen öppnas på fliken Formulär.
 
@@ -54,13 +57,14 @@ När du väljer en process visas fliken Formulär och fliken Detaljer. Om proces
 
    * Klicka på knappen Skicka i formuläret, om formuläret har en Skicka-knapp.
    * Klicka på Slutför under formuläret om formuläret inte har någon Skicka-knapp.
+
    Processhanteringen startar processen och skickar formuläret till Att göra-listorna med lämpliga personer som behöver slutföra nästa uppgift i processen.
 
-   Om du måste stänga ett formulär innan du skickar in det och utan att förlora data som du har angett, sparar du ett utkast och slutför det senare om processen tillåter det. Om formuläret och processen tillåter det kan du även klicka **offline** och skicka det från Adobe® Reader® eller Adobe® Acrobat® Professional eller Acrobat Standard senare.
+   Om du måste stänga ett formulär innan du skickar in det och utan att förlora data som du har angett, sparar du ett utkast och slutför det senare om processen tillåter det. Om formuläret och processen tillåter det kan du även klicka på **Offline** och skicka det senare från Adobe® Reader® eller Adobe® Acrobat® Professional eller Acrobat Standard.
 
    >[!NOTE]
    >
-   >Alternativet offline är endast tillgängligt för PDF-formulär.
+   >Offlinealternativet är endast tillgängligt för PDF forms.
 
 ## Lägga till anteckningar och bilagor {#adding-notes-and-attachments}
 
@@ -124,7 +128,7 @@ Du kan lägga till alla processer i kategorin Favoriter. Genom att ange favorite
 
 >[!NOTE]
 >
->Om du vanligtvis startar processer när du använder arbetsytan i AEM Forms kan du ställa in inställningen Startplats så att kategorin Favoriter visas automatiskt när du startar arbetsytan i AEM Forms. Mer information finns i Hantera inställningar i [Komma igång med arbetsytan](/help/forms/using/getting-started-livecycle-html-workspace.md)för AEM-formulär.
+>Om du vanligtvis startar processer när du använder arbetsytan i AEM Forms kan du ange inställningen Startplats som automatiskt visar kategorin Favoriter när du startar arbetsytan i AEM Forms. Mer information finns i Hantera inställningar i [Komma igång med AEM Forms-arbetsytan](/help/forms/using/getting-started-livecycle-html-workspace.md).
 
 Markera en process som favorit genom att markera den i sin kategori och klicka på den ofyllda stjärnan. Stjärnan blir guld. Om du vill avmarkera en process som en favorit klickar du på den gyllene stjärnan igen.
 
