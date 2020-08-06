@@ -27,7 +27,7 @@ Du kan använda någon av följande metoder för att skapa en bevakad mapp i fil
 
 * När du konfigurerar egenskaperna för en speciell nod i konfigurationen för bevakad mapp anger du den fullständiga sökvägen till den överordnade katalogen i egenskapen folderPath och lägger till namnet på den bevakade mapp som ska skapas, vilket visas i följande exempel: `C:/MyPDFs/MyWatchedFolder`
 
-   AEM Forms försöker skapa mappen med den angivna sökvägen eftersom `MyWatchedFolder`mappen inte finns.
+   Mappen `MyWatchedFolder`finns inte. AEM Forms försöker skapa mappen med den angivna sökvägen.
 
 * Skapa en mapp på filsystemet innan du konfigurerar en bevakad mappslutpunkt och ange sedan den fullständiga sökvägen i egenskapen folderPath. Mer information om egenskapen folderPath finns i Egenskaper [för](#watchedfolderproperties)bevakad mapp.
 
@@ -53,6 +53,7 @@ Om du vill konfigurera en bevakad mapp skapar du en konfigurationsnod för bevak
    * `inputProcessorType`
    * `inputProcessorId`
    * `outputFilePattern`
+
    En fullständig lista över egenskaper som stöds finns i Egenskaper [för](#watchedfolderproperties)bevakad mapp.
 
 1. Klicka på **Spara alla**. När noden har skapats och egenskaperna har sparats. Mapparna `input`, `result`, `failure`, `preserve`och `stage`skapas på den sökväg som anges i `folderPath` egenskapen.
@@ -140,6 +141,7 @@ Mer information om filmönster finns i [Om filmönster](/help/forms/using/watche
    * %l = millisekund
    * %R = slumptal (mellan 0 och 9)
    * %P = process- eller jobb-ID
+
    Om den till exempel är 2009-08-17 och du anger C:/Test/WF0/error/%Y/%M/%D/%H/ är resultatmappen C:/Test/WF0/error/2009/07/17/20
 
    Om sökvägen inte är absolut men relativ skapas mappen i den bevakade mappen. Standardvärdet är result/%Y/%M/%D/, som är resultatmappen i den bevakade mappen. Mer information om filmönster finns i [Om filmönster](/help/forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p).
@@ -162,7 +164,7 @@ Mer information om filmönster finns i [Om filmönster](/help/forms/using/watche
 
 * **overwriteDuplicateFilename (Boolean)**: När värdet är True skrivs filerna i resultatmappen och i den bevarade mappen över. Om värdet är Falskt används filer och mappar med ett numeriskt indexsuffix för namnet. Standardvärdet är Falskt.
 * **preserveOnFailure (Boolean)**: Bevara indatafiler om det inte går att utföra åtgärden på en tjänst. Standardvärdet är true.
-* **inputFilePattern (String)**: Anger mönstret för indatafilerna för en bevakad mapp. Skapar en lista över tillåtna filer.
+* **inputFilePattern (String)**: Anger mönstret för indatafilerna för en bevakad mapp. Skapar en tillåtelselista av filerna.
 * **asynk (Boolean)**: Identifierar anropstypen som asynkron eller synkron. Standardvärdet är true (asynkront). Filbearbetningen är en resurskrävande uppgift. Behåll värdet för asynch-flaggan till true för att förhindra att huvudtråden i sökningsjobbet kvävs. I en klustermiljö är det viktigt att flaggan är true för att det ska gå att använda belastningsutjämning för de filer som bearbetas på de tillgängliga servrarna. Om flaggan är false försöker sökningsjobbet att utföra bearbetning för varje fil/mapp på den översta nivån sekventiellt i sin egen tråd. Ange inte flaggan till false utan en specifik orsak, till exempel arbetsflödesbaserad bearbetning i en enskild serverkonfiguration.
 
 >[!NOTE]
@@ -170,7 +172,7 @@ Mer information om filmönster finns i [Om filmönster](/help/forms/using/watche
 >Arbetsflödena är asynkrona. Även om du anger värdet som false startas arbetsflödena i asynkront läge.
 
 * **enabled (Boolean)**: Inaktiverar och aktiverar skanning för en bevakad mapp. Ange true om du vill att skanningen av den bevakade mappen ska börja. Standardvärdet är true.
-* **payloadMapperFilter**: När en mapp konfigureras som bevakad mapp skapas en mappstruktur i den bevakade mappen. Strukturen har mappar för att tillhandahålla indata, ta emot utdata (resultat), spara data för fel, bevara data för långvariga processer och spara data för olika faser. Mappstrukturen för en bevakad mapp kan fungera som en nyttolast för formulärcentrerade arbetsflöden. Med en nyttolastmappare kan du definiera strukturen för en nyttolast som använder en bevakad mapp för indata, utdata och bearbetning. Om du till exempel använder standardmapparen mappas innehållet i den bevakade mappen med [nyttolast]\input och [nyttload]\output. Det finns två körklara implementeringar av nyttolastmappare. Om du inte har [någon anpassad implementering](/help/forms/using/watched-folder-in-aem-forms.md#creating-a-custom-payload-mapper-filter)kan du använda en körklar implementering:
+* **payloadMapperFilter**: När en mapp konfigureras som bevakad mapp skapas en mappstruktur i den bevakade mappen. Strukturen har mappar för att tillhandahålla indata, ta emot utdata (resultat), spara data för fel, bevara data för långvariga processer och spara data för olika faser. Mappstrukturen för en bevakad mapp kan fungera som en nyttolast för Forms-centrerade arbetsflöden. Med en nyttolastmappare kan du definiera strukturen för en nyttolast som använder en bevakad mapp för indata, utdata och bearbetning. Om du till exempel använder standardmapparen mappas innehållet i den bevakade mappen med [nyttolast]\input och [nyttload]\output. Det finns två körklara implementeringar av nyttolastmappare. Om du inte har [någon anpassad implementering](/help/forms/using/watched-folder-in-aem-forms.md#creating-a-custom-payload-mapper-filter)kan du använda en körklar implementering:
 
    * **Standardmappare:** Använd standardnyttolastmapparen för att behålla in- och utdatamaterialet för de bevakade mapparna i separata in- och utdatamappar i nyttolasten. I arbetsflödets nyttolastsökväg använder du [nyttolast]/indata/och sökvägar för [nyttolast]/utdata för att hämta och spara innehåll.
    * **Enkel filbaserad nyttolastmappare:** Använd den enkla filbaserade nyttolastmapparen för att behålla in- och utdatamaterialet direkt i nyttolastmappen. Ingen extra hierarki skapas, som standardmappare.
@@ -284,7 +286,7 @@ processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docm
 
 Som standard finns en behållarmapp (/etc/fd/watchfolder/scripts) där kunderna kan placera sina skript, och standardtjänstanvändaren som används av ramverket för bevakade mappar har de behörigheter som krävs för att läsa skript från den här platsen.
 
-Om du tänker placera dina skript på en anpassad plats, är det troligt att standardtjänstanvändaren inte har läsbehörighet över den anpassade platsen. Så här anger du nödvändig behörighet till den anpassade platsen:
+Om du tänker placera dina skript på en anpassad plats är det troligt att standardtjänstanvändaren inte har läsbehörighet över den anpassade platsen. Så här anger du nödvändig behörighet till den anpassade platsen:
 
 1. Skapa en systemanvändare programmatiskt eller via konsolen `https://[server]:[port]/crx/explorer`. Du kan också använda en befintlig systemanvändare. Det är viktigt att du arbetar med systemanvändare här i stället för med vanliga användare.
 1. Ge läsbehörighet till den nyskapade eller befintliga systemanvändaren på den anpassade plats där skripten lagras. Du kan ha flera anpassade platser. Ange minst läsbehörighet för alla anpassade platser.
@@ -297,7 +299,7 @@ Nu kan du använda konfigurerad anpassad plats för att spara skripten.
 
 Med arbetsflöden kan du automatisera aktiviteter i Experience Manager. Arbetsflöden består av en serie steg som körs i en viss ordning. Varje steg utför en distinkt aktivitet som att aktivera en sida eller skicka ett e-postmeddelande. Arbetsflöden kan samverka med resurser i databasen, användarkonton och Experience Manager-tjänster. Därför kan arbetsflöden koordinera komplicerade saker.
 
-* Innan du skapar ett arbetsflöde bör du tänka på följande:
+* Tänk på följande innan du skapar ett arbetsflöde:
 * Resultatet av ett steg måste vara tillgängligt för alla efterföljande steg.
 
    Stegen måste kunna uppdatera (eller till och med ta bort) befintliga utdata som genererats av föregående steg.
@@ -319,9 +321,9 @@ Utför följande steg för att bearbeta filer med hjälp av arbetsflöden:
    * workflowSession
    * metadata
 
-Om du använder Java-programmeringsspråket för att implementera arbetsflödet, tillhandahåller AEM-arbetsflödesmotorn värden för variablerna workItem, workflowSession och metadata. Dessa variabler skickas som argument till execute()-metoden för den anpassade WorkflowProcess-implementeringen.
+Om du använder Java-programmeringsspråket för att implementera arbetsflödet, ger den AEM arbetsflödesmotorn värdet för variablerna workItem, workflowSession och metadata. Dessa variabler skickas som argument till execute()-metoden för den anpassade WorkflowProcess-implementeringen.
 
-Om du använder ECMAScript för att implementera arbetsflödet, tillhandahåller AEM-arbetsflödesmotorn värden för graniteWorkItem, graniteWorkflowSession och metadatavariabler. Dessa variabler skickas som argument till metoden WorkflowContextService.execute().
+Om du använder ECMAScript för att implementera arbetsflödet, tillhandahåller den AEM arbetsflödesmotorn värden för graniteWorkItem, graniteWorkflowSession och metadatavariabler. Dessa variabler skickas som argument till metoden WorkflowContextService.execute().
 
 Argumentet för processWorkflowContext() är ett objekt av typen com.adobe.aemfd.watchfolder.workflow.api.WorkflowContext. WorkflowContext-gränssnittet har följande API:er för att underlätta de arbetsflödesspecifika överväganden som nämns ovan:
 
@@ -392,7 +394,7 @@ log.info("Exiting workflow script!")
 
 När du skapar en bevakad mapp skapas en mappstruktur i den mapp som bevakas. Mappstrukturen har mapparna stage, result, preserve, input och error. Mappstrukturen kan fungera som indatanyttolast för arbetsflödet och acceptera utdata från ett arbetsflöde. Den kan även visa eventuella felpunkter.
 
-Om nyttolastens struktur skiljer sig från den bevakade mappens struktur kan du skriva egna skript för att mappa strukturen för den bevakade mappen till nyttolasten. Ett sådant skript kallas nyttolastmappningsfilter. AEM Forms tillhandahåller ett nyttolastmappningsfilter för att mappa strukturen för den bevakade mappen till en nyttolast.
+Om nyttolastens struktur skiljer sig från den bevakade mappens struktur kan du skriva egna skript för att mappa strukturen för den bevakade mappen till nyttolasten. Ett sådant skript kallas nyttolastmappningsfilter. AEM Forms tillhandahåller ett nyttolastmappningsfilter som mappar strukturen i den bevakade mappen till en nyttolast.
 
 #### Skapa ett anpassat nyttolastmappningsfilter {#creating-a-custom-payload-mapper-filter}
 
@@ -400,9 +402,9 @@ Om nyttolastens struktur skiljer sig från den bevakade mappens struktur kan du 
 1. Konfigurera klient-SDK i byggsökvägen för det maven-baserade projektet. För att komma igång kan du ladda ned och öppna följande maven-baserade projekt i den utvecklingsmiljö du vill.
 1. Redigera filterkoden för nyttolastsmappare som finns i exempelpaketet efter dina behov.
 1. Använd maven för att skapa ett paket med det anpassade nyttolastmappningsfiltret.
-1. Använd [AEM-paketkonsolen](http://localhost:4502/system/console/bundles) för att installera paketet.
+1. Använd [AEM bundle-konsol](http://localhost:4502/system/console/bundles) för att installera paketet.
 
-   Nu visas ett anpassat nyttolastmappfilter i användargränssnittet för AEM-bevakade mappar. Du kan använda den i ditt arbetsflöde.
+   Nu visas det anpassade filtret för nyttolastmappning i AEM bevakade mappanvändargränssnittet. Du kan använda den i ditt arbetsflöde.
 
    Följande exempelkod implementerar en enkel filbaserad mappare för filerna som sparas i förhållande till en nyttolast. Du kan använda den för att komma igång.
 
@@ -510,7 +512,7 @@ Begränsning förhindrar att bevakad mapp anropar nya jobb när tidigare jobb in
 
 * Bevakad mapp är beroende av antalet filer som finns i scenmappen för att ta reda på hur många jobb som pågår. Om filerna inte bearbetas i scenmappen anropas inga fler jobb av den bevakade mappen. Om batchstorleken till exempel är fyra och tre jobb stoppas, kommer Bevakade mappar endast att anropa ett jobb i efterföljande anrop. Det finns flera scenarier som kan göra att filer förblir obearbetade i scenmappen. När jobb har stoppats kan administratören avsluta processen på sidan Processhantering, så att Bevakad mapp flyttar filerna från scenmappen.
 * Om AEM Forms-servern kraschar innan Bevakade mappar anropar jobben kan administratören flytta filerna från scenmappen. Mer information finns i [Felpunkter och återställning](/help/forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p).
-* Om AEM Forms-servern körs men Bevakade mappar inte körs när Job Manager-tjänsten återanropar, vilket inträffar när tjänster inte startar i den ordnade sekvensen, kan administratören flytta filerna från scenmappen. Mer information finns i [Felpunkter och återställning](/help/forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p).
+* Om AEM Forms-servern körs men Bevakade mappar inte körs när tjänsten Job Manager anropas tillbaka, vilket inträffar när tjänster inte startar i den ordnade sekvensen, kan administratören flytta filerna från scenmappen. Mer information finns i [Felpunkter och återställning](/help/forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p).
 
 ### Felpunkter och återställningFelpunkter och återställning {#failure-points-and-recoveryfailure-points-and-recovery}
 
@@ -535,6 +537,7 @@ Om den bevakade mappen inte kan bearbeta källfilerna i scenmappen kan du åters
 
    * Ändra egenskapen includeFilePattern för den bevakade mappen till något som inte matchar någon av de nya indatafilerna (ange till exempel NOMATCH).
    * Skjut upp processen som skapar nya indatafiler.
+
    Vänta tills AEM Forms återställer och bearbetar alla filer. De flesta filerna bör återställas och alla nya indatafiler bearbetas korrekt. Hur lång tid du väntar på att Bevakade mappar ska återställas och bearbetas beror på hur lång åtgärden ska vara och hur många filer som ska återställas.
 
 1. Avgör vilka filer som inte kan bearbetas. Om du väntade en viss tid och slutförde det föregående steget och det fortfarande finns obearbetade filer kvar i scenmappen går du till nästa steg.
@@ -633,7 +636,7 @@ ECMAScript använder PDF Generators createPDF-API för att konvertera Microsoft 
 
 ### Skapa ett arbetsflöde {#create-a-workflow}
 
-1. Öppna gränssnittet för AEM-arbetsflödet i ett webbläsarfönster.
+1. Öppna AEM gränssnitt i ett webbläsarfönster.
 
    https://[servernamn]:[port]/arbetsflöde
 
@@ -724,7 +727,7 @@ ECMAScript använder PDF Generators createPDF-API för att konvertera Microsoft 
 
 ### Skapa ett arbetsflöde {#create-a-workflow-1}
 
-1. Öppna gränssnittet för AEM-arbetsflödet i ett webbläsarfönster. `https://[server]:[port]/workflow`
+1. Öppna AEM gränssnitt i ett webbläsarfönster. `https://[server]:[port]/workflow`
 
 1. Klicka på **Nytt** i modellvyn. Ange **titel** i dialogrutan Nytt arbetsflöde och klicka på **OK**.
 1. Markera det nya arbetsflödet och klicka på **Redigera**. Arbetsflödet öppnas i ett nytt fönster.
