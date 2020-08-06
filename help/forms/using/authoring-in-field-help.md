@@ -9,6 +9,9 @@ topic-tags: author
 discoiquuid: 893a72c7-d68f-464f-9765-ec2272189e58
 translation-type: tm+mt
 source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+workflow-type: tm+mt
+source-wordcount: '393'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
 
 Det finns situationer när slutanvändare som fyller i ett formulär inte vet hur de ska fylla i information i ett visst formulärfält. För att åtgärda sådana problem har adaptiva formulär stöd för att lägga till text eller sammanhangsberoende hjälp i ett formulärfält. Det underlättar ifyllandet av formulär och undviker eventuella tvetydigheter för slutanvändarna.
 
-I den här artikeln beskrivs hur formulärförfattare kan lägga till sammanhangsberoende hjälp när de skapar adaptiva formulär.
+I den här artikeln beskrivs hur formulärförfattare kan lägga till sammanhangsberoende hjälp när de skriver Adaptiv Forms.
 
 ## Lägg till sammanhangsberoende hjälp {#add-in-context-help}
 
