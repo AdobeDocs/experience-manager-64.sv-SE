@@ -10,13 +10,16 @@ content-type: reference
 discoiquuid: 42df2db3-4d3c-4954-a03e-221e2f548305
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '558'
+ht-degree: 0%
 
 ---
 
 
 # Översättningsförbättringar{#translation-enhancements}
 
-Den här sidan innehåller stegvisa förbättringar och förbättringar av funktionerna för hantering av AEM-översättning.
+Den här sidan innehåller stegvisa förbättringar och förbättringar av AEM översättningshantering.
 
 ## Automatisering av översättningsprojekt {#translation-project-automation}
 
@@ -86,13 +89,14 @@ Språkrötter kan nu grupperas under noder, till exempel efter region, samtidigt
 >
 >* `/content/we-retail/language-masters/en`
 >* `/content/we-retail/language-masters/americas/central-america/es`
+
 >
 >
 Den här `es` språkkopian kommer inte att identifieras eftersom den ligger två nivåer (amerika/central-amerika) bort från `en` noden.
 
 >[!NOTE]
 >
->Språkrötter kan ha vilket sidnamn som helst, inte bara språkets ISO-kod. AEM kontrollerar alltid sökvägen och namnet först, men om sidnamnet inte identifierar något språk, kontrollerar AEM egenskapen cq:language för sidan för att se om språket är identifierat.
+>Språkrötter kan ha vilket sidnamn som helst, inte bara språkets ISO-kod. AEM kontrollerar alltid sökvägen och namnet först, men om sidnamnet inte identifierar något språk, kommer AEM att kontrollera egenskapen cq:language för sidan för språkidentifiering.
 
 ## Översättningsstatusrapportering {#translation-status-reporting}
 
