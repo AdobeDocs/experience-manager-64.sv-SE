@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Vattenstämpla dina resurser {#watermarking}
 
-Med Adobe Experience Manager (AEM) Assets kan du lägga till en digital vattenstämpel i bilder som hjälper användare att verifiera autenticiteten och upphovsrättsinnehållet i materialet. AEM Assets stöder text som ska användas som vattenstämpel i PNG- och JPEG-filer.
+Med Adobe Experience Manager (AEM) Assets kan du lägga till en digital vattenstämpel i bilder som hjälper användarna att verifiera autenticiteten och upphovsrättsinnehållet i materialet. AEM Assets stöder text som ska användas som vattenstämpel i PNG- och JPEG-filer.
 
 Om du vill kunna använda vattenstämpel på resurser lägger du till [!UICONTROL Watermark] steget i [!UICONTROL DAM Update Asset] arbetsflödet.
 
@@ -34,6 +34,6 @@ Om du vill kunna använda vattenstämpel på resurser lägger du till [!UICONTRO
    ![Ange argumenten i steget Lägg till vattenstämpel i Resurser](assets/arguments_add_watermark_aem_assets.png)
 
 1. Save the **[!UICONTROL DAM Update Asset]** workflow with the [!UICONTROL Watermark] step.
-1. Ladda upp en exempelresurs från AEM-användargränssnittet. Vattenstämpeln visas med teckensnittsstorlek, färg o.s.v. på den plats som du konfigurerade i ovanstående steg.
+1. Ladda upp en exempelresurs från AEM användargränssnitt. Vattenstämpeln visas med teckensnittsstorlek, färg o.s.v. på den plats som du konfigurerade i ovanstående steg.
 
 Om du vill skapa vattenstämplar i PDF-dokument med programkod eller med dynamisk information bör du överväga att använda [AEM Document Services](/help/forms/using/overview-aem-document-services.md) .
