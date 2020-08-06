@@ -1,8 +1,8 @@
 ---
 title: Om överföring och bearbetning av 3D-resurser i AEM
 seo-title: Om överföring och bearbetning av 3D-resurser i AEM
-description: Adobe rekommenderar att du överför alla refererade filer före eller samtidigt som du överför den primära 3D-modellfilen. När överföringen är klar konverteras dina 3D-filer och ytterligare bearbetning utförs för att förbereda resursen för visning och återgivning.
-seo-description: Adobe rekommenderar att du överför alla refererade filer före eller samtidigt som du överför den primära 3D-modellfilen. När överföringen är klar konverteras dina 3D-filer och ytterligare bearbetning utförs för att förbereda resursen för visning och återgivning.
+description: Adobe rekommenderar att du överför alla refererade filer före eller samtidigt - du överför den primära 3D-modellfilen. När överföringen är klar konverteras dina 3D-filer och ytterligare bearbetning utförs för att förbereda resursen för visning och återgivning.
+seo-description: Adobe rekommenderar att du överför alla refererade filer före eller samtidigt - du överför den primära 3D-modellfilen. När överföringen är klar konverteras dina 3D-filer och ytterligare bearbetning utförs för att förbereda resursen för visning och återgivning.
 uuid: 82ccfbf8-1f82-4960-b9e5-3ce65c16435a
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -11,23 +11,26 @@ content-type: reference
 discoiquuid: 0be4a856-951b-4cb6-8103-8004052c63a0
 translation-type: tm+mt
 source-git-commit: e0ce860380a28a9dcaa6f8ce94ad278cdbe49fad
+workflow-type: tm+mt
+source-wordcount: '804'
+ht-degree: 1%
 
 ---
 
 
 # Om överföring och bearbetning av 3D-resurser i AEM{#about-the-uploading-and-processing-of-d-assets-in-aem}
 
-Använd standardfunktioner för överföring eller synkronisering för att överföra 3D-resurser och tillhörande refererade filer till AEM Assets.
+Använd standardmekanismer för överföring eller synkronisering för att överföra 3D-resurser och tillhörande refererade filer till AEM Assets.
 
 Se [Överföra resurser](/help/assets/managing-assets-touch-ui.md#uploading-assets).
 
-Adobe rekommenderar att du överför alla refererade filer före eller samtidigt som du överför den primära 3D-modellfilen. Detta är dock inget krav.
+Adobe rekommenderar att du överför alla refererade filer före eller samtidigt - du överför den primära 3D-modellfilen. Detta är dock inget krav.
 
 När överföringen är klar konverteras dina 3D-filer och ytterligare bearbetning utförs för att förbereda resursen för visning och återgivning.
 
 ## Bästa tillvägagångssätt för att överföra 3D-resurser {#best-practices-for-uploading-d-assets}
 
-* I allmänhet finns det inga begränsningar för var du överför 3D-innehåll i mapphierarkin för AEM Resurser. AEM 3D:s automatiska upplösning av filberoenden har dock ett intervall som begränsar hur lång tid det tar att söka i stora resurslager. Därför rekommenderar Adobe att du när du överför 3D-resurser och deras filberoende resurser gör det inom rimlig avstånd från varje fil (vanlig indirekt överordnad mapp). När filberoenden är lösta kan du fritt flytta både 3D-resursen och dess underordnade objekt var som helst i databasen utan att förlora de etablerade relationerna.
+* I allmänhet finns det inga begränsningar för var du överför 3D-innehåll i mapphierarkin i AEM Assets. AEM 3D:s automatiska upplösning av filberoenden har dock ett intervall som begränsar hur lång tid det tar att söka i stora resurslager. Därför rekommenderar Adobe att du gör det inom rimlig avstånd från varje fil (vanlig indirekt överordnad mapp) när du överför 3D-resurser och deras filberoende. När filberoenden är lösta kan du fritt flytta både 3D-resursen och dess underordnade objekt var som helst i databasen utan att förlora de etablerade relationerna.
 * Adobe rekommenderar att du bestämmer dig för en konsekvent mappstruktur för 3D-innehåll *innan *du överför. Följande tips är några förslag på metoder som du kan använda:
 
    * **Underhåll en separat mapp för varje 3D-resurs som du överför**.
@@ -50,11 +53,11 @@ När överföringen är klar konverteras dina 3D-filer och ytterligare bearbetni
 
 När du konverterar och bearbetar 3D-filer förbrukas vanligtvis mycket processorkraft och minne på en server. Det tar också lång tid. Bearbetningstiden varierar ofta mycket beroende på modellens storlek och serverns kapacitet. En vanlig liten modell med mindre än 100 kB-ansikten är till exempel vanligtvis klar att visas på mindre än en minut. Den behandlas fullständigt på 2-3 minuter. En stor modell med mer än en miljon ansikten kan ta tiotals minuter att behandla helt.
 
-Konverterings-, bearbetnings- och renderingsjobb köas efter behov för att förhindra att servern blir för långsam. Meddelandet&quot;Väntar på bearbetning..&quot; visas ibland i **[!UICONTROL kortvyn]** när du överförde resurser. Den här statusen anger att andra behandlings- eller återgivningsjobb måste avslutas innan den aktuella resursen bearbetas.
+Konverterings-, bearbetnings- och renderingsjobb köas efter behov för att förhindra att servern blir för långsam. Meddelandet&quot;Väntar på bearbetning..&quot; visas ibland i **[!UICONTROL Card View]** när du överförde resurser. Den här statusen anger att andra behandlings- eller återgivningsjobb måste avslutas innan den aktuella resursen bearbetas.
 
 ## Övervaka bearbetningsstatus för dina överförda 3D-filer {#monitoring-the-processing-status-of-your-uploaded-d-files}
 
-Endast i **[!UICONTROL kortvyn]** visas bearbetningsstatus och förlopp som en förloppsbanderoll på resurskortet. Varje överförd 3D-modell genomgår vanligtvis följande 4-6 beställda bearbetningssteg:
+Bearbetningsstatus och förlopp visas **[!UICONTROL Card View]** endast som en förloppsbanderoll på resurskortet. Varje överförd 3D-modell genomgår vanligtvis följande 4-6 beställda bearbetningssteg:
 
 <table> 
  <tbody> 
@@ -81,12 +84,12 @@ Endast i **[!UICONTROL kortvyn]** visas bearbetningsstatus och förlopp som en f
   <tr> 
    <td>4</td> 
    <td>Skapa ljusbord</td> 
-   <td>valfritt. Gör att du kan förbättra kvaliteten på den interaktiva förhandsvisningen och få en snabbare återgivning med standardåtergivaren.</td> 
+   <td>Valfritt. Gör att du kan förbättra kvaliteten på den interaktiva förhandsvisningen och få en snabbare återgivning med standardåtergivaren.</td> 
   </tr> 
   <tr> 
    <td>5</td> 
    <td>Skapa animering</td> 
-   <td>valfritt. Gör att du kan återge en enkel animering som sedan används som en visuell miniatyrbild i kortvyn.</td> 
+   <td>Valfritt. Gör att du kan återge en enkel animering som sedan används som en visuell miniatyrbild i kortvyn.</td> 
   </tr> 
   <tr> 
    <td>6</td> 
@@ -98,5 +101,5 @@ Endast i **[!UICONTROL kortvyn]** visas bearbetningsstatus och förlopp som en f
 
 >[!NOTE]
 >
->Du kan visa en 3D-resurs i **[!UICONTROL detaljvyn]** eller återge den när förhandsgranskningssteget Skapa är klart. Du behöver inte vänta på att alla bearbetningsfaser ska slutföras.
+>Du kan visa en 3D-resurs i **[!UICONTROL Detail View]** eller återge den när förhandsgranskningssteget Skapa är klart. Du behöver inte vänta på att alla bearbetningsfaser ska slutföras.
 
