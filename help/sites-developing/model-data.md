@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 39546c0a-b72f-42df-859b-98428ee0d5fb
 translation-type: tm+mt
 source-git-commit: 80d451aa6a325d1b668d7d0ddae95a1a14ee877a
+workflow-type: tm+mt
+source-wordcount: '1828'
+ht-degree: 0%
 
 ---
 
@@ -21,9 +24,9 @@ source-git-commit: 80d451aa6a325d1b668d7d0ddae95a1a14ee877a
 
 Följande detaljer är idéer och kommentarer från David Nuescheler.
 
-David var en av grundarna och CTO på Day Software AG, en ledande leverantör av programvara för global innehållshantering och innehållsinfrastruktur, som Adobe förvärvade 2010. Han är nu medlem i och VP för Enterprise Technology hos Adobe och leder också utvecklingen av JSR-170, Java Content Repository (JCR), applikationsgränssnitt (API), teknikstandarden för innehållshantering.
+David var en av grundarna och CTO på Day Software AG, en ledande leverantör av programvara för global innehållshantering och innehållsinfrastruktur, som Adobe förvärvade 2010. Han är nu medlem i och VP för Enterprise Technology på Adobe och leder också utvecklingen av JSR-170, Java Content Repository (JCR), applikationsprogrammeringsgränssnittet (API), teknikstandarden för innehållshantering.
 
-Ytterligare uppdateringar finns också på [https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel).
+Ytterligare uppdateringar finns även på [https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel).
 
 ## Introduktion från David {#introduction-from-david}
 
@@ -200,7 +203,7 @@ och kanske den initiala uttarningsreaktionen är att lägga till en binär egens
 /content/myblog/posts/iphone_shipping/attachments/front.jpg/jcr:content [nt:resource]
 ```
 
-### Regel 7:ID:n är onda. {#rule-ids-are-evil}
+### Regel 7: ID:n är onda. {#rule-ids-are-evil}
 
 #### Förklaring {#explanation-7}
 
