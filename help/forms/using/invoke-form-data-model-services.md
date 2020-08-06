@@ -9,6 +9,9 @@ topic-tags: develop
 discoiquuid: aa3e50f1-8f5a-489d-a42e-a928e437ab79
 translation-type: tm+mt
 source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+workflow-type: tm+mt
+source-wordcount: '382'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +20,7 @@ source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
 
 ## Översikt {#overview}
 
-Med AEM Forms kan formulärförfattare ytterligare förenkla och förbättra ifyllandet genom att anropa tjänster som konfigurerats i en formulärdatamodell inifrån ett adaptivt formulärfält. Om du vill anropa en datamodelltjänst kan du antingen skapa en regel i den visuella redigeraren eller ange ett JavaScript med `guidelib.dataIntegrationUtils.executeOperation` -API:t i kodredigeraren för [regelredigeraren](/help/forms/using/rule-editor.md).
+Med AEM Forms kan formulärförfattare ytterligare förenkla och förbättra ifyllandet av formulär genom att anropa tjänster som konfigurerats i en formulärdatamodell inifrån ett adaptivt formulärfält. Om du vill anropa en datamodelltjänst kan du antingen skapa en regel i den visuella redigeraren eller ange ett JavaScript med `guidelib.dataIntegrationUtils.executeOperation` -API:t i kodredigeraren för [regelredigeraren](/help/forms/using/rule-editor.md).
 
 Det här dokumentet fokuserar på att skriva ett JavaScript-skript med API:t för att anropa en tjänst. `guidelib.dataIntegrationUtils.executeOperation`
 
