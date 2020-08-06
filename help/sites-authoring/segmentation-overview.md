@@ -11,6 +11,9 @@ topic-tags: personalization
 discoiquuid: 36c87684-e62a-4983-b123-87f56dbf7bc5
 translation-type: tm+mt
 source-git-commit: 9a1fe3265f1cd7907dfe576666a694b3c5b78d76
+workflow-type: tm+mt
+source-wordcount: '561'
+ht-degree: 1%
 
 ---
 
@@ -77,5 +80,5 @@ Om du till exempel kombinerar den refererande URL:en (som en beteendeegenskap) m
 
 >[!NOTE]
 >
->Mer information om segment i AEM finns i [Segmentering](/help/sites-administering/campaign-segmentation.md) .
+>Se [Segmentering](/help/sites-administering/campaign-segmentation.md) för mer information om segment i AEM.
 
