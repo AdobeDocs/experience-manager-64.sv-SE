@@ -10,6 +10,9 @@ content-type: reference
 discoiquuid: f934eb02-1f84-44f2-9f14-3f17250c9a90
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '730'
+ht-degree: 1%
 
 ---
 
@@ -26,7 +29,7 @@ Webbkonsolen i AEM baseras på [Apache Felix Web Management Console](https://fel
 
 Webbkonsolen erbjuder ett urval flikar för underhåll av OSGi-paketen, bland annat:
 
-* [Konfiguration](#configuration): används för att konfigurera OSGi-paketen och är därför den underliggande mekanismen för att konfigurera AEM-systemparametrar
+* [Konfiguration](#configuration): används för att konfigurera OSGi-paketen och är därför den underliggande mekanismen för att konfigurera AEM systemparametrar
 * [Paket](#bundles): används för att installera paket
 * [Komponenter](#components): används för att kontrollera status för komponenter som krävs för AEM
 
@@ -38,7 +41,7 @@ Konsolen kan nås från `../system/console`; till exempel:
 
 ## Konfiguration {#configuration}
 
-Fliken **Konfiguration** används för att konfigurera OSGi-paket och är därför den underliggande mekanismen för att konfigurera AEM-systemparametrar.
+Fliken **Konfiguration** används för att konfigurera OSGi-paket och är därför den underliggande mekanismen för att konfigurera AEM systemparametrar.
 
 >[!NOTE]
 >
@@ -165,7 +168,7 @@ På fliken **Komponenter** kan du aktivera och/eller inaktivera de olika kompone
 
    `http://localhost:4502/system/console/components`
 
-En lista över komponenter visas. Det finns olika ikoner som du kan använda för att aktivera, inaktivera eller (där det är lämpligt) öppna konfigurationsinformation för en viss komponent.
+En lista med komponenter visas. Det finns olika ikoner som du kan använda för att aktivera, inaktivera eller (där det är lämpligt) öppna konfigurationsinformation för en viss komponent.
 
 ![screen_shot_2012-02-15at52144pm-1](assets/screen_shot_2012-02-15at52144pm-1.png)
 
