@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 9b492b17-9029-46ae-9dc0-bb21e6b484df
 translation-type: tm+mt
 source-git-commit: 02aee2202a570320cd7eb40c2e566d886af4e163
+workflow-type: tm+mt
+source-wordcount: '455'
+ht-degree: 6%
 
 ---
 
@@ -25,7 +28,7 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
 
 >[!NOTE]
 >
->Användare som har administratörsbehörighet och som vill felsöka problem med AEM kan använda de felsökningsmetoder som beskrivs i [Felsökning för AEM (för administratörer)](/help/sites-administering/troubleshoot.md). Om du inte har tillräcklig behörighet kontaktar du systemadministratören för felsökning av AEM.
+>Användare som har administratörsbehörighet och som vill felsöka problem med AEM kan använda felsökningsmetoderna som beskrivs i AEM [Felsökning (för administratörer)](/help/sites-administering/troubleshoot.md). Om du inte har tillräcklig behörighet kontaktar du systemadministratören om felsökning AEM.
 
 ## Gammal sidversion finns fortfarande på publicerad webbplats {#old-page-version-still-on-published-site}
 
@@ -42,7 +45,7 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
    * Här finns olika möjligheter:
    * Bekräfta att sidan har replikerats korrekt. Kontrollera sidstatus och, om det behövs, status för replikeringskön.
    * Rensa cacheminnet i den lokala webbläsaren och öppna sidan igen.
-   * Lägg till `?` i slutet av sid-URL:en. Exempel:
+   * Lägg till `?` i slutet av sid-URL:en. Till exempel:
 
       `http://localhost:4502/sites.html/content?`
 
