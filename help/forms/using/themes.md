@@ -10,6 +10,9 @@ content-strategy: max-2018
 discoiquuid: c5933e2a-fb8d-4d1b-a301-c8a2bc7ee226
 translation-type: tm+mt
 source-git-commit: b9d2a5b65f7ae48a9bde5580b5ddd3e55fc68d61
+workflow-type: tm+mt
+source-wordcount: '5897'
+ht-degree: 0%
 
 ---
 
@@ -35,34 +38,34 @@ Med AEM Forms kan du skapa, ladda ned och ladda upp teman. Ett tema skapas som a
 
 Så här skapar du ett tema:
 
-1. Klicka på **[!UICONTROL Adobe Experience Manager]**, klicka på **[!UICONTROL Formulär]** och sedan på **[!UICONTROL Teman]**.
+1. Klicka **[!UICONTROL Adobe Experience Manager]**, klicka **[!UICONTROL Forms]** och sedan på **[!UICONTROL Themes]**.
 
-1. Klicka på **[!UICONTROL Skapa > Tema]** på sidan Teman.
+1. Klicka på på sidan Teman **[!UICONTROL Create > Theme]**.
 
    En guide för att skapa ett tema startas.
 
-1. Ange temats **[!UICONTROL namn]** och **[!UICONTROL namn]** på fliken Grundläggande i guiden Skapa tema. Dessa är obligatoriska fält.
+1. På fliken Grundläggande i guiden Skapa tema anger du **[!UICONTROL Title]** och anger **[!UICONTROL Name]** temat. Dessa är obligatoriska fält.
 
 1. På fliken Avancerat finns två fält:
 
-   * **[!UICONTROL Klientlib-plats]**: Plats i databasen där klienten för temat lagras.
-   * **[!UICONTROL Kategorin]** Clientlib: Innehåller ett textfält där du kan ange kategorinamn för temat.
+   * **[!UICONTROL Clientlib Location]**: Plats i databasen där klienten för temat lagras.
+   * **[!UICONTROL Clientlib Category]**: Innehåller ett textfält där du kan ange kategorinamn för temat.
 
-1. Klicka på **[!UICONTROL Skapa]** och sedan på **[!UICONTROL Redigera]** för att öppna temat i temeredigeraren, eller klicka på **[!UICONTROL Klar]** för att återgå till temasidan.
+1. Klicka **[!UICONTROL Create]** och sedan på **[!UICONTROL Edit]** för att öppna temat i temeredigeraren, eller klicka för **[!UICONTROL Done]** att återgå till temasidan.
 
 ### Hämta ett tema {#downloading-a-theme}
 
-Du kan exportera teman som en zip-fil och använda dem i andra projekt eller AEM-instanser. Så här hämtar du ett tema:
+Du kan exportera teman som en zip-fil och använda dem i andra projekt eller AEM. Så här hämtar du ett tema:
 
-1. Klicka på **[!UICONTROL Adobe Experience Manager]**, klicka på **[!UICONTROL Formulär]** och sedan på **[!UICONTROL Teman]**.
+1. Klicka **[!UICONTROL Adobe Experience Manager]**, klicka **[!UICONTROL Forms]** och sedan på **[!UICONTROL Themes]**.
 
-1. Välj ett tema på sidan Teman och klicka på **[!UICONTROL Hämta]**. En dialogruta med information om temat visas.
+1. Välj ett tema på sidan Teman och klicka på **[!UICONTROL Download]**. En dialogruta med information om temat visas.
 
-1. Klicka på **[!UICONTROL Hämta]**. Temat laddas ned som en zip-fil.
+1. Klicka på **[!UICONTROL Download]**. Temat laddas ned som en zip-fil.
 
 >[!NOTE]
 >
->Om du hämtar ett tema som har ett associerat adaptivt formulär och det tillhörande adaptiva formuläret är baserat på en anpassad mall, hämtar du även den anpassade mallen. När du överför det hämtade temat och anpassningsbara formulär till en AEM Forms-server överför du även den relaterade anpassade mallen.
+>Om du hämtar ett tema som har ett associerat adaptivt formulär och det tillhörande adaptiva formuläret är baserat på en anpassad mall, hämtar du även den anpassade mallen. När du överför det hämtade temat och anpassningsbara formuläret till en AEM Forms-server överför du även den relaterade anpassade mallen.
 
 ### Överföra ett tema {#uploading-a-theme}
 
@@ -70,10 +73,10 @@ Du kan använda skapade teman med formatförinställningar i ditt projekt. Du ka
 
 Så här överför du ett tema:
 
-1. Klicka på **[!UICONTROL Adobe Experience Manager]**, klicka på **[!UICONTROL Formulär]** och sedan på **[!UICONTROL Teman]**.
+1. Klicka **[!UICONTROL Adobe Experience Manager]**, klicka **[!UICONTROL Forms]** och sedan på **[!UICONTROL Themes]**.
 
-1. Klicka på **[!UICONTROL Skapa > Filöverföring]** på sidan Teman.
-1. I filöverföringsprompten bläddrar du till och väljer ett temapaket på datorn och klickar på **[!UICONTROL Överför]**.
+1. Klicka på på sidan Teman **[!UICONTROL Create > File Upload]**.
+1. I filöverföringsprompten bläddrar du till och väljer ett temapaket på datorn och klickar på **[!UICONTROL Upload]**.
 
    Det överförda temat är tillgängligt på temasidan.
 
@@ -172,7 +175,7 @@ Lista med metaegenskaper för ett tema (finns på egenskapssidan för ett tema).
      <li>Den användardefinierade databassökvägen inom '/etc' där de klienter som motsvarar temat lagras.</li> 
      <li>Standardvärde - '/etc/clientlibs/fd/themes' + relativ sökväg för temaresursen.</li> 
      <li>Om platsen inte finns genereras mapphierarkin automatiskt.</li> 
-     <li>När det här värdet ändras flyttas nodstrukturen för klientlib till den nya plats som anges.<br /><em> <strong></strong>Obs! Om du ändrar standardplats för klientlib tilldelar du <code>crx:replicate, rep:write, rep:glob:*, rep:itemNames:: js.txt, jcr:read </code>och <code>forms-users</code> till <code>crx:replicate</code><code>jcr:read </code><code>fd-service</code> den nya platsen i CRXDE-databasen. Bifoga även en annan ACL genom att lägga till <span class="kbd">deny jcr:addChildNodes</span> för <code>forms-user</code></em></li> 
+     <li>När det här värdet ändras flyttas nodstrukturen för klientlib till den nya plats som anges.<br /> <em><strong>Obs!</strong> Om du ändrar standardplats för klientlib tilldelar du <code>crx:replicate, rep:write, rep:glob:*, rep:itemNames:: js.txt, jcr:read </code>och <code>forms-users</code> till <code>crx:replicate</code><code>jcr:read </code><code>fd-service</code> den nya platsen i CRXDE-databasen. Bifoga även en annan ACL genom att lägga till <span class="kbd">deny jcr:addChildNodes</span> för <code>forms-user</code></em></li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -202,31 +205,30 @@ Temaredigeraren är uppdelad i två paneler:
 
 * **Sidofält**- visas på vänster sida. Den har följande objekt:
 
-   * **** Väljare: Visar den komponent som är markerad för formatering och dess egenskaper som du kan formatera. Väljaren representerar alla komponenter av en typ. Om du väljer en textrutekomponent i ett tema för formatering ärver alla textrutor i formuläret eller den interaktiva kommunikationen formatet. Med väljare kan du välja en allmän komponent eller en specifik komponent för formatering. En fältkomponent är till exempel en allmän komponent och en textruta är en specifik komponent.
+   * **Väljare:** Visar den komponent som är markerad för formatering och dess egenskaper som du kan formatera. Väljaren representerar alla komponenter av en typ. Om du väljer en textrutekomponent i ett tema för formatering ärver alla textrutor i formuläret eller den interaktiva kommunikationen formatet. Med väljare kan du välja en allmän komponent eller en specifik komponent för formatering. En fältkomponent är till exempel en allmän komponent och en textruta är en specifik komponent.
 
       **Formatera allmän komponent:**
 
-      
-Ett fält kan vara ett numeriskt fält, t.ex. age, eller ett textfält, t.ex. adress.
+      Ett fält kan vara ett numeriskt fält, t.ex. age, eller ett textfält, t.ex. adress.
 
       När du formaterar ett fält formateras alla fält, till exempel ålder, namn och adress.
 
       **Formateringsspecifik komponent**:
 
-      
-En specifik komponent påverkar objekt i den specifika kategorin. När du formaterar den numeriska rutkomponenten i temat ärver bara det numeriska ruteobjektet formatet.
+      En specifik komponent påverkar objekt i den specifika kategorin. När du formaterar den numeriska rutkomponenten i temat ärver bara det numeriska ruteobjektet formatet.
 
       Ett textrutefält som adress är t.ex. längre och ett numeriskt rutefält som ålder är kortare. Du kan markera ett numeriskt rutfält, minska dess längd och använda det i formuläret. Bredden på alla numeriska rutfält minskas i formuläret.
 
       När du anpassar alla fältkomponenter med en viss bakgrundsfärg ärver alla fält, som ålder, namn och adress, bakgrundsfärgen. När du markerar en numerisk ruta, t.ex. ålder, och minskar bredden på den, minskas bredden på alla numeriska rutor, t.ex. ålder, antalet personer i en familj. Bredden på textrutor ändras inte.
 
-   * **** Läge: Gör att du kan anpassa format för ett objekt i ett visst läge. Du kan till exempel ange hur ett objekt ska se ut när det är i standardläge, fokusläge, inaktiverat läge, hovring eller felläge.
-   * **** Egenskapskategorier: Formategenskaper delas upp i olika kategorier. Till exempel Dimension &amp; Position, Text, Bakgrund, Kant och Effekter. Under varje kategori anger du formatinformation. Under Bakgrund kan du till exempel ange Bakgrundsfärg och Bild och övertoning.
-   * **** Avancerat: Gör att du kan lägga till anpassad CSS till ett objekt, vilket åsidosätter de egenskaper som visuella kontroller definierar om det finns en överlappning.
+   * **Läge:** Gör att du kan anpassa format för ett objekt i ett visst läge. Du kan till exempel ange hur ett objekt ska se ut när det är i standardläge, fokusläge, inaktiverat läge, hovring eller felläge.
+   * **Egenskapskategorier:** Formategenskaper delas upp i olika kategorier. Till exempel Dimension och placering, Text, Bakgrund, Kant och Effekter. Under varje kategori anger du formatinformation. Under Bakgrund kan du till exempel ange Bakgrundsfärg och Bild och övertoning.
+   * **Avancerat:** Gör att du kan lägga till anpassad CSS till ett objekt, vilket åsidosätter de egenskaper som visuella kontroller definierar om det finns en överlappning.
    * **Visa CSS**: Gör att du kan visa CSS för den markerade komponenten
+
    I sidofältet finns dessutom en pil längst ned. När du klickar på pilen får du ytterligare två alternativ: **Simulera lyckade** och **simulera fel.** Dessa alternativ, tillsammans med de alternativ som beskrivs ovan, beskrivs i detalj [nedan](/help/forms/using/themes.md#using-rail).
 
-   [ Redigera ![tema med Rail och Canvas markerat.](assets/themes.png)](assets/themes-1.png)**** **A. Sidofält** B. Arbetsyta
+   [ ![Theme editor med Rail och Canvas markerade.](assets/themes.png)](assets/themes-1.png) **S.** Sidofält **B.** Arbetsyta
 
 ### Formatkomponenter {#styling-components}
 
@@ -238,13 +240,13 @@ Alternativ i sidofältet som gör att du kan markera och formatera olika kompone
 
 Om du klickar på redigeringsknappen mot en komponent i sidlisten markeras komponenten på arbetsytan. Du kan också formatera komponenten med alternativen i sidlisten.
 
-Vissa komponenter som textruta, numerisk ruta, alternativknapp och kryssruta kategoriseras under generiska komponenter som Fält. Du kan till exempel anpassa stilen på alternativknappar. Välj alternativknappar för formatering genom att välja **Fält > Widget > Alternativknapp**.
+Vissa komponenter som textruta, numerisk ruta, alternativknapp och kryssruta är kategoriserade under generiska komponenter som Fält. Du kan till exempel anpassa stilen på alternativknappar. Välj alternativknappar för formatering genom att välja **Fält > Widget > Alternativknapp**.
 
 Klicka på **UTÖKA ALLA** i sidofältet om du vill visa, markera och formatera komponenter som inte är synliga framför.
 
 ### Layout på formatpanelen {#styling-panel-layouts-br}
 
-Temana i AEM Forms stöder formatering av element i panelernas layout i formulär och interaktiv kommunikation. Formatering av element i färdiga layouter och anpassade layouter stöds.
+Temana i AEM Forms har stöd för att formatera element i panelernas layout i formulär och interaktiv kommunikation. Formatering av element i färdiga layouter och anpassade layouter stöds.
 
 De färdiga panelerna är:
 
@@ -269,7 +271,7 @@ Skräddarsydda layouter från Theme Editor innehåller:
 
 Skrivbords- och mobillayouter kan ha något eller helt olika format. För mobila enheter har surfplattor och telefoner liknande layouter förutom komponentstorlekar.
 
-Använd temaredigerarens brytpunkter för att definiera alternativ formatering för olika skärmstorlekar. Du kan välja en basenhet eller upplösning som du börjar bygga temat på, och formatvariationerna för andra upplösningar genereras automatiskt. Du kan ändra formateringen för alla upplösningar.
+Använd Theme Editor-brytpunkter för att definiera alternativ formatering för olika skärmstorlekar. Du kan välja en basenhet eller upplösning som du börjar bygga temat på, och formatvariationerna för andra upplösningar genereras automatiskt. Du kan ändra formateringen för alla upplösningar.
 
 >[!NOTE]
 >
@@ -299,14 +301,14 @@ Med plusknappen mot resursbiblioteket kan du spara formatet med ett namn som du 
 
 När du anger ett anpassat namn för ett format kopplas formatet till ett tema och är inte längre tillgängligt för andra teman. Så här tar du bort ett sparat format:
 
-1. I verktygsfältet CANVAS klickar du på **[!UICONTROL Temaalternativ]** för ![temaalternativ](assets/theme-options.png) > **[!UICONTROL Hantera format]**.
-1. Välj ett sparat format i dialogrutan Hantera format och klicka på **[!UICONTROL Ta bort]**.
+1. I verktygsfältet CANVAS klickar du på **[!UICONTROL Theme Options]** temaalternativ ![>](assets/theme-options.png) **[!UICONTROL Manage Styles]**.
+1. Välj ett sparat format i dialogrutan Hantera format och klicka på **[!UICONTROL Delete]**.
 
    ![Ta bort det sparade formatet](assets/manage-styles.png)
 
 ### Förhandsgranska, spara och ignorera ändringar {#live-preview-save-and-discard-changes}
 
-Ändringar som görs i formateringen återspeglas direkt i formuläret eller i interaktiv kommunikation som läses in på arbetsytan. Med direktförhandsvisning kan du interaktivt definiera och se hur formateringen påverkas. När du ändrar en komponents format aktiveras knappen **[!UICONTROL Klar]** i sidofältet. Använd knappen **[!UICONTROL Klar]** om du vill behålla ändringarna.
+Ändringar som görs i formateringen återspeglas direkt i formuläret eller i interaktiv kommunikation som läses in på arbetsytan. Med direktförhandsvisning kan du interaktivt definiera och se hur formateringen påverkas. När du ändrar en komponents format aktiveras knappen i sidlisten **[!UICONTROL Done]** . Använd **[!UICONTROL Done]** knappen om du vill behålla ändringarna.
 
 >[!NOTE]
 >
@@ -318,9 +320,9 @@ När du skapar ett tema skapas det med ett formulär som levereras med Theme Edi
 
 Så här ersätter du det aktuella formuläret eller den interaktiva kommunikationen på arbetsytan i temeredigeraren:
 
-1. Klicka på **[!UICONTROL Temaalternativ]** för ![temaalternativ](assets/theme-options.png) **[!UICONTROL > Konfigurera]** på panelen TEMAREDIGERARE.
+1. Klicka på **[!UICONTROL Theme Options]** temaalternativ ![på panelen TEMAREDIGERARE](assets/theme-options.png) **[!UICONTROL > Configure]**.
 
-1. På fliken Allmänt bläddrar du och väljer ett formulär eller en interaktiv kommunikation för fältet **[!UICONTROL Adaptivt formulär/dokument]** .
+1. Gå till fliken Allmänt och välj ett formulär eller en interaktiv kommunikation för **[!UICONTROL Adaptive Form/Document]** fältet.
 
 ### Gör om/Ångra {#redo-undo}
 
@@ -328,13 +330,13 @@ Du kan ångra eller göra om oönskade ändringar som inträffar av misstag. Anv
 
 ![gör om-ångra](assets/redo-undo.png)
 
-**** Bild: Knapparna *Ångra/gör om på arbetsytan*
+**Bild:** *Ångra/gör om-knappar på arbetsytan*
 
 Knappar för att göra om/ångra visas när du formaterar en komponent i temeredigeraren.
 
 ## Använda Theme Editor {#using-the-theme-editor}
 
-Med Theme Editor kan du redigera ett tema som du har skapat eller överfört. Navigera till **[!UICONTROL Formulär och dokument > Teman]**, markera ett tema och öppna det. Temat öppnas i temaredigeraren.
+Med Theme Editor kan du redigera ett tema som du har skapat eller överfört. Navigera till **[!UICONTROL Forms & Documents > Themes]** och markera ett tema och öppna det. Temat öppnas i temaredigeraren.
 
 Som nämnts ovan har temaredigeraren två paneler: Sidofältet och arbetsytan.
 ![temaredigerare](assets/theme-editor.png)
@@ -347,21 +349,21 @@ Temat skapas antingen i det färdiga formuläret eller med ett valfritt formulä
 
 I verktygsfältet Arbetsyta ser du:
 
-* **[!UICONTROL Växla panelen]** Sida vid ![sida](assets/toggle-side-panel.png): Här kan du visa eller dölja sidofältet.
+* **[!UICONTROL Toggle Side Panel]** ![växlingspanel](assets/toggle-side-panel.png): Här kan du visa eller dölja sidofältet.
 
-* **[!UICONTROL Temaalternativ]** ![för temaalternativ](assets/theme-options.png): Tillhandahåller tre alternativ
+* **[!UICONTROL Theme Options]** ![temaalternativ](assets/theme-options.png): Tillhandahåller tre alternativ
 
    * Konfigurera: Innehåller alternativ för att välja förhandsgranskningsformulär eller interaktiv kommunikation, grundläggande klientlib och typekit-konfiguration.
    * Visa tema-CSS: Genererar CSS för det valda temat.
    * Hantera format: Alternativ för att hantera text- och bildformat
    * Hjälp: Kör en guidad visning av en bild i Theme Editor.
 
-* **[!UICONTROL Emulatorns]** ![linjal](assets/ruler.png): Emulerar temats utseende för olika visningsstorlekar. En visningsstorlek behandlas som en brytpunkt i emulatorn. Du kan markera en brytpunkt och ange ett format för den. Skrivbordet och surfplattan är till exempel två brytpunkter. Du kan ange olika format för varje brytpunkt.
+* **[!UICONTROL Emulator]** ![linjal](assets/ruler.png): Emulerar temats utseende för olika visningsstorlekar. En visningsstorlek behandlas som en brytpunkt i emulatorn. Du kan markera en brytpunkt och ange ett format för den. Skrivbordet och surfplattan är till exempel två brytpunkter. Du kan ange olika format för varje brytpunkt.
 
 När du markerar en komponent på arbetsytan visas komponentens verktygsfält ovanpå. Med komponentverktygsfältet kan du välja komponenter eller växla till generiska komponenter. Du kan till exempel markera en numerisk textruta på en panel. Följande alternativ visas i komponentens verktygsfält:
 
-* **[!UICONTROL Widget]** för numeriska rutor: Gör att du kan markera komponenten och anpassa dess utseende i sidofältet.
-* **[!UICONTROL Fältwidget]**: Gör att du kan välja den generiska komponenten för formatering. I det här exemplet markeras alla textindatakomponenter (textruta/numerisk ruta/numerisk nummerlista/datumindata) för formatering.
+* **[!UICONTROL Numeric Box Widget]**: Gör att du kan markera komponenten och anpassa dess utseende i sidofältet.
+* **[!UICONTROL Field Widget]**: Gör att du kan välja den generiska komponenten för formatering. I det här exemplet markeras alla textindatakomponenter (textruta/numerisk ruta/numerisk nummerlista/datumindata) för formatering.
 
 * ![fältnivå](assets/field-level.png): Gör att du kan växla till en allmän komponent för formatering. Om du markerar en numerisk ruta och trycker på den här ikonen markeras fältkomponenten. Om du markerar en fältkomponent och trycker på den här ikonen markeras panelen. Om du fortsätter att trycka på den här ikonen för markering, kommer du att välja layouten för formatering.
 
@@ -371,7 +373,7 @@ När du markerar en komponent på arbetsytan visas komponentens verktygsfält ov
 
 ![Komponentverktygsfältet](assets/overlay.png)
 
-**** Bild: Verktygsfältet *Komponent i den numeriska rutan i Canvas*
+**Bild:** *Komponentverktygsfältet i den numeriska rutan på arbetsytan*
 
 ### Använda sidofält {#using-rail}
 
@@ -399,7 +401,7 @@ Alternativen för att anpassa lägesformat varierar för olika komponenter.
    <td><strong>Användning</strong></td> 
   </tr> 
   <tr> 
-   <td><p>Mått och position</p> </td> 
+   <td><p>Dimensioner och position</p> </td> 
    <td><p>Gör att du kan formatera justering, storlek, placering och placering av komponenter i temat. </p> <p>Du kan välja mellan visningsinställningar, utfyllnad, marginal, bredd, höjd och Z-index. </p> </td> 
   </tr> 
   <tr> 
@@ -437,13 +439,11 @@ Du kan till exempel lägga till ett numeriskt fält i formuläret och ange dess 
 
 * **Simulera lyckade**:
 
-   
-Gör att du kan se hur en komponent ser ut om du anger dess format för ett lyckat tillstånd. I ett formulär kan kunderna till exempel ange lösenord. Användare kan ange lösenord enligt de riktlinjer som du anger. När en användare skriver ett lösenord enligt alla riktlinjer du anger ändras textrutan till grön. När textrutan blir grön är den klar. Du kan ange en stil för en komponent i ett lyckat tillstånd och simulera dess utseende med alternativet Simulera lyckade.
+   Gör att du kan se hur en komponent ser ut om du anger dess format för ett lyckat tillstånd. I ett formulär kan kunderna till exempel ange lösenord. Användare kan ange lösenord enligt de riktlinjer som du anger. När en användare skriver ett lösenord enligt alla riktlinjer du anger ändras textrutan till grön. När textrutan blir grön är den klar. Du kan ange en stil för en komponent i ett lyckat tillstånd och simulera dess utseende med alternativet Simulera lyckade.
 
 * **Simulera fel**:
 
-   
-Gör att du kan se hur en komponent ser ut om du anger dess format för feltillstånd. I ett formulär kan kunderna till exempel ange lösenord. Användare kan ange lösenord enligt de riktlinjer som du anger. När en användare skriver ett lösenord som inte följer alla riktlinjer som du anger blir textrutan röd. När textrutan blir röd är den i feltillstånd. Du kan ange format för en komponent i feltillstånd och simulera dess utseende med alternativet Simulera fel.
+   Gör att du kan se hur en komponent ser ut om du anger dess format för feltillstånd. I ett formulär kan kunderna till exempel ange lösenord. Användare kan ange lösenord enligt de riktlinjer som du anger. När en användare skriver ett lösenord som inte följer alla riktlinjer som du anger blir textrutan röd. När textrutan blir röd är den i feltillstånd. Du kan ange format för en komponent i feltillstånd och simulera dess utseende med alternativet Simulera fel.
 
 ### Formatera en komponent {#styling-a-component}
 
@@ -454,17 +454,17 @@ Utför följande steg för att anpassa formateringen för en viss komponent (en 
 1. I temeredigeraren markerar du den numeriska rutan på arbetsytan.
 1. När du markerar den numeriska rutan visas komponentens verktygsfält med tre alternativ:
 
-   * **[!UICONTROL Widget för Numerisk ruta]**
-   * **[!UICONTROL Fältwidget]**
+   * **[!UICONTROL Numeric Box Widget]**
+   * **[!UICONTROL Field Widget]**
 
    * ![fältnivå](assets/field-level.png)
 
-1. Välj **[!UICONTROL Numerisk rutwidget]**.
+1. Välj **[!UICONTROL Numeric Box Widget]**.
 1. Sidofältets rubrik ändras till Numerisk rutwidget och visar alternativ för att anpassa dess utseende.
 
-   Använd alternativet **[!UICONTROL Dimension och position]** i sidofältet för att anpassa komponentens storlek. Kontrollera att läget är **[!UICONTROL Standard]**.
+   Använd **[!UICONTROL Dimension & Position]** alternativet i sidlisten för att anpassa komponentens storlek. Se till att staten är **[!UICONTROL Default]**.
 
-I stället för att välja **[!UICONTROL Numerisk rutwidget]** väljer du **[!UICONTROL Fältwidget]** i komponentverktygsfältet och utför stegen ovan. När du väljer dimensioner för alternativet **[!UICONTROL Fältwidget]** får alla textrutor utom den numeriska rutan samma storlek.
+I stället för att markera **[!UICONTROL Numeric Box Widget]** väljer du **[!UICONTROL Field Widget]** i komponentverktygsfältet och utför stegen ovan. När du väljer dimensioner för **[!UICONTROL Field Widget]** alternativet har alla textrutor utom den numeriska rutan samma storlek.
 
 ### Formatera fält för ett visst läge {#styling-fields-given-state}
 
@@ -477,12 +477,12 @@ Följ de här stegen för att anpassa formateringen för en komponent i ett viss
    I sidofältet visas alternativ för att anpassa komponentens format.
 
 1. Välj ett läge i sidofältet. Exempel: Feltillstånd.
-1. Använd alternativ som **[!UICONTROL Kant, Bakgrund]** i sidlisten för att anpassa komponentens utseende.
-1. Använd alternativet **[!UICONTROL Simulera fel]** längst ned i sidlisten för att se hur formateringen ser ut vid redigering.
+1. Använd alternativ som **[!UICONTROL Border, Background]** i sidofältet för att anpassa komponentens utseende.
+1. Använd alternativet **[!UICONTROL Simulate Error]** längst ned i sidlisten för att se hur stilen ser ut vid redigering.
 
 När du anpassar en komponents format efter att du har angett dess läge, visas anpassningen bara för komponenten för det angivna läget. Om du till exempel anpassar komponentens format när hovringsläget är markerat. Anpassningen visas för komponenten när du flyttar pekaren över komponenten i det återgivna formuläret eller den interaktiva kommunikationen som du använder temat för.
 
-Om du vill simulera beteendet för andra lägen än fel och lyckade, använder du förhandsgranskningsläget. Om du vill använda förhandsgranskningsläget klickar du på **[!UICONTROL Förhandsgranska]** i sidverktygsfältet.
+Om du vill simulera beteendet för andra lägen än fel och lyckade, använder du förhandsgranskningsläget. Om du vill använda förhandsgranskningsläget klickar du **[!UICONTROL Preview]** i sidverktygsfältet.
 
 ### Formatera layouter för mindre skärmar {#styling-layouts-for-smaller-displays}
 
@@ -501,13 +501,13 @@ Du kan formatera formulär eller interaktiva kommunikationskomponenter för fler
 
 ### Använda webbteckensnitt i ett tema {#using-web-fonts-in-a-theme}
 
-Du kan nu använda teckensnitt som finns i en webbtjänst i ett adaptivt formulär eller i en interaktiv kommunikation. Färdig, [Typekit](https://typekit.com/), Adobes webbteckensnittstjänst, är tillgänglig som en konfiguration. Om du vill använda Typekit skapar du ett kit och teckensnitt i det, och hämtar Kit-id från [Typekit-webbplatsen](https://typekit.com/).
+Du kan nu använda teckensnitt som finns i en webbtjänst i ett adaptivt formulär eller i en interaktiv kommunikation. Färdig, [Typekit](https://typekit.com/), Adobe webbteckensnittstjänst är tillgänglig som konfiguration. Om du vill använda Typekit skapar du ett kit och teckensnitt i det, och hämtar Kit-id från [Typekit-webbplatsen](https://typekit.com/).
 
-Utför följande steg för att konfigurera Typekit i AEM:
+Så här konfigurerar du Typekit i AEM:
 
-1. I författarinstansen klickar du på ![](assets/adobeexperiencemanager.png)**[!UICONTROL adobeexperienceManagerAdobe Experience Manager > Tools ]**![hammer](assets/hammer.png)**[!UICONTROL > Distribution > Cloud Services ]**.
-1. På sidan **[!UICONTROL Cloud Services]** går du till **[!UICONTROL Tredjepartstjänster]** > **[!UICONTROL Typekit]** och klickar på **[!UICONTROL Konfigurera nu]** under Typekit. Om det redan finns en konfiguration klickar du på **+** -knappen för att skapa en ny instans.
-1. I dialogrutan **[!UICONTROL Skapa konfiguration]** anger du en rubrik för konfigurationen och klickar på **[!UICONTROL Skapa]**.
+1. I författarinstansen klickar du på ![adobeexperienceManager](assets/adobeexperiencemanager.png)**[!UICONTROL Adobe Experience Manager > Tools]** ![hammer](assets/hammer.png) **[!UICONTROL > Deployment > Cloud Services]**.
+1. På **[!UICONTROL Cloud Services]** sidan går du till **[!UICONTROL Third Party Services]** > **[!UICONTROL Typekit]** och klickar **[!UICONTROL Configure Now]** under Typekit. Om det redan finns en konfiguration klickar du på **+** -knappen för att skapa en ny instans.
+1. I **[!UICONTROL Create Configuration]** dialogrutan anger du en rubrik för konfigurationen och klickar på **[!UICONTROL Create]**.
 
    Du omdirigeras till konfigurationssidan.
 
@@ -516,8 +516,8 @@ Utför följande steg för att konfigurera Typekit i AEM:
 Utför följande steg för att konfigurera ett tema så att det använder TypeKit-konfigurationen:
 
 1. Öppna ett tema i temaredigeraren i författarinstansen.
-1. Navigera till **[!UICONTROL Temaalternativ]** ![för temaalternativ](assets/theme-options.png) > **[!UICONTROL Konfigurera]** i temaredigeraren.
-1. I **[!UICONTROL fältet Typekit-konfiguration]** väljer du ett kit och klickar på **[!UICONTROL Spara]**.
+1. Gå till **[!UICONTROL Theme Options]** temaalternativ ![>](assets/theme-options.png) **[!UICONTROL Configure]** i temaredigeraren.
+1. I **[!UICONTROL Typekit Configuration]** fältet väljer du ett kit och klickar på **[!UICONTROL Save]**.
 
    Nu ser du att teckensnitten har lagts till i temats egenskap font-family.
 
@@ -526,7 +526,7 @@ Utför följande steg för att konfigurera ett tema så att det använder TypeKi
 Du kan använda tjänsten för temakonfiguration för att lägga till fler teckensnitt i temaredigeraren. Gör så här för att lägga till teckensnitt:
 
 1. Logga in på AEM Web Console med administratörsbehörighet. URL:en för AEM Web Console är `https://[server]:[port]/system/console/configMgr`.
-1. Öppna **[!UICONTROL tjänsten]** Adaptiv formulärtemakonfiguration.
+1. Öppna **[!UICONTROL Adaptive Form Theme Configuration Service]**.
 
    ![tema-config](assets/theme-config.png)
 
@@ -564,22 +564,22 @@ I exemplet nedan visas maskerade och omaskerade format i ett tema.
 
 Så här använder du ett tema i ett anpassat formulär:
 
-1. Öppna formuläret i redigeringsläge. Om du vill öppna ett formulär i redigeringsläge markerar du ett formulär och klickar på **[!UICONTROL Öppna]**.
-1. Markera en komponent i redigeringsläget, klicka på ![fältnivå](assets/field-level.png) > **[!UICONTROL Adaptiv formulärbehållare]** och klicka sedan på ![cmpr](assets/cmppr.png).
+1. Öppna formuläret i redigeringsläge. Om du vill öppna ett formulär i redigeringsläge markerar du ett formulär och klickar på **[!UICONTROL Open]**.
+1. Markera en komponent i redigeringsläget, klicka på ![fältnivå](assets/field-level.png) > **[!UICONTROL Adaptive Form Container]** och klicka sedan på ![cmpr](assets/cmppr.png).
 
    Du kan redigera egenskaperna för formuläret i sidlisten.
 
-1. Klicka på **[!UICONTROL Format]** i sidlisten.
-1. Välj temat i listrutan **[!UICONTROL Adaptivt]** formulärtema och klicka på **[!UICONTROL Klar]** ![och](assets/check-button.png).
+1. In the sidebar, click **[!UICONTROL Styling]**.
+1. Välj ditt tema i **[!UICONTROL Adaptive Form Theme]** listrutan och klicka på **[!UICONTROL Done]**![ bockknappen](assets/check-button.png).
 
 Så här använder du ett tema i en interaktiv kommunikation:
 
-1. Öppna din interaktiva kommunikation i redigeringsläge. Om du vill öppna en interaktiv kommunikation i redigeringsläge markerar du ett formulär och klickar på **[!UICONTROL Öppna]**.
-1. Markera en komponent i redigeringsläget, klicka på ![fältnivå](assets/field-level.png) >**[!UICONTROL Dokumentbehållare]** och klicka sedan på ![cmpr](assets/cmppr.png).
+1. Öppna din interaktiva kommunikation i redigeringsläge. Om du vill öppna en interaktiv kommunikation i redigeringsläge markerar du ett formulär och klickar på **[!UICONTROL Open]**.
+1. Markera en komponent i redigeringsläget, klicka på ![fältnivå](assets/field-level.png) >**[!UICONTROL Document Container]** och klicka sedan på ![cmpr](assets/cmppr.png).
 
    Du kan redigera egenskaperna för formuläret i sidlisten.
 
-1. Välj temat i listrutan **[!UICONTROL Tema]** under **[!UICONTROL Grundläggande]** i sidofältet och klicka på **[!UICONTROL Klar]** ![och markera](assets/check-button.png).
+1. Välj temat i listrutan under **[!UICONTROL Basic]** sidofältet och klicka på **[!UICONTROL Theme]****[!UICONTROL Done]** bockknappen ![](assets/check-button.png).
 
 ### Ändra tema för ett formulär vid körning {#change-theme-of-a-form-at-runtime}
 
@@ -599,9 +599,9 @@ Med AEM Forms, tillsammans med det färdiga standardtemat för arbetsytan, finns
 
 Så här kopierar du ett tema:
 
-1. Gå till **[!UICONTROL Adobe Experience Manager > Formulär > Teman]** i redigeringsinstansen.
+1. Navigera till i redigeringsinstansen **[!UICONTROL Adobe Experience Manager > Forms > Themes]**.
 1. Öppna mappen Temabibliotek.
-1. I temabiblioteksmappen håller du pekaren över motsvarande färdiga tema och trycker på **[!UICONTROL Kopiera]**.
+1. I temabiblioteksmappen håller du pekaren över motsvarande färdiga tema och trycker **[!UICONTROL Copy]**.
 1. Klistra in det kopierade temat utanför temabiblioteksmappen.
 1. Anpassa det kopierade temat.
 
@@ -613,11 +613,11 @@ När du har anpassat temat kan du använda det i formuläret eller i den interak
 
 ## Inverkan på andra användningsområden för anpassade formulär {#impact-on-other-adaptive-form-use-cases}
 
-* **** Publicera/avpublicera ett formulär: När du publicerar ett formulär publiceras även det tema som används på (om det inte redan är publicerat)
-* **** Importera/exportera ett formulär: När du importerar eller exporterar ett formulär importeras eller exporteras även det tillhörande temat automatiskt.
-* **** Referenser till ett formulär: Avsnittet Referenser i formulärreferenser innehåller en extra post för temat.
-* **** Senast ändrad i ett formulär: Uppdaterades när det associerade temat ändras.
-* **** A/B-testning: Du kan använda ett annat tema för två versioner av formuläret i A/B-testning. Information om de två temana lagras individuellt på de två stödlinebehållarna.
+* **Publicera/avpublicera ett formulär:** När du publicerar ett formulär publiceras även det tema som används på (om det inte redan är publicerat)
+* **Importera/exportera ett formulär:** När du importerar eller exporterar ett formulär importeras eller exporteras även det tillhörande temat automatiskt.
+* **Referenser till ett formulär:** Avsnittet Referenser i formulärreferenser innehåller en extra post för temat.
+* **Senast ändrad i ett formulär:** Uppdaterades när det associerade temat ändras.
+* **A/B-testning:** Du kan använda ett annat tema för två versioner av formuläret i A/B-testning. Information om de två temana lagras individuellt på de två stödlinebehållarna.
 
 ## CSS-genereringssekvens {#css-generation-sequence}
 
@@ -643,7 +643,7 @@ Du kan se den genererade CSS-koden med följande alternativ:
 
 * **Undvika resurser från ett annat tema**
 
-   När du redigerar ett tema kan du bläddra bland och lägga till resurser (till exempel bilder) från andra teman. Du redigerar till exempel bakgrunden på en sida. Om du till exempel väljer **[!UICONTROL Sida]** , ![redigera-knapp](assets/edit-button.png)> **[!UICONTROL Bakgrund > Lägg till > Bild]**, visas en dialogruta där du kan bläddra bland och lägga till bilder i andra teman.
+   När du redigerar ett tema kan du bläddra bland och lägga till resurser (till exempel bilder) från andra teman. Du redigerar till exempel bakgrunden på en sida. När du t.ex. väljer **[!UICONTROL Page]** redigeringsknapp ![>](assets/edit-button.png)**[!UICONTROL Background > Add > Image]** visas en dialogruta där du kan bläddra bland och lägga till bilder i andra teman.
 
 * Du kan stöta på problem med det aktuella temat om en resurs läggs till från ett annat tema och det andra temat flyttas eller tas bort. Du bör undvika att bläddra bland och lägga till resurser från andra teman.
 
@@ -653,11 +653,12 @@ Du kan se den genererade CSS-koden med följande alternativ:
 
       Basklientbiblioteket innehåller formatinformation. Om du vill använda formatinformation i klientbibliotek i teman.
 
-      1. Navigera till **[!UICONTROL Experience Manager > Formulär > Teman]**.
-      1. Välj ett tema på sidan Teman och klicka på **[!UICONTROL Visa egenskaper]**.
-      1. Klicka på **[!UICONTROL Avancerat]** på egenskapssidan som öppnas.
+      1. Navigera till **[!UICONTROL Experience Manager > Forms > Themes]**.
+      1. Välj ett tema på sidan Teman och klicka på **[!UICONTROL View Properties]**.
+      1. Klicka på på egenskapssidan som öppnas **[!UICONTROL Advanced]**.
       1. Gå till fliken Avancerat, i fältet Klientbiblioteksplats, bläddra och välj det klientbibliotek som du vill använda.
-      1. Click **[!UICONTROL Save]**.
+      1. Klicka på **[!UICONTROL Save]**.
+
       Det format du anger i klientbiblioteket importeras i det tema som använder det. Du kan till exempel ange format för textruta, numerisk ruta och växla i klientbiblioteket. När du importerar ditt klientbibliotek till temat importeras format för textruta, numerisk ruta och växel. Du kan sedan formatera andra komponenter med hjälp av temaredigeraren.\
       Du kan också skapa ett tema, skapa kopior av det och sedan ändra formatet som finns i de kopierade temana för liknande användningsfall.
 
