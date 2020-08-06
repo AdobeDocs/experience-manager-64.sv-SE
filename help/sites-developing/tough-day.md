@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: f48fa5ba-749b-4d3d-a4dd-c802006c8f07
 translation-type: tm+mt
 source-git-commit: 835f1ba1f196c6c6303019f0cc310cad850e1682
+workflow-type: tm+mt
+source-wordcount: '1923'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 835f1ba1f196c6c6303019f0cc310cad850e1682
 
 ## Vad är Tom Dag 2? {#what-is-tough-day}
 
-Tuff dag 2 är ett program som gör att du kan stresstesta gränserna för din AEM-instans. Den kan köras direkt med testsviten eller konfigureras för att passa dina testbehov. Du kan titta på [den här inspelningen](https://docs.adobe.com/ddc/en/gems/Toughday2---A-new-and-improved-stress-testing-and-benchmarking-tool.html) för en presentation av programmet.
+Tough Day 2 är ett program som gör att du kan stresstesta gränserna för din AEM. Den kan köras direkt med testsviten eller konfigureras för att passa dina testbehov. Du kan titta på [den här inspelningen](https://docs.adobe.com/ddc/en/gems/Toughday2---A-new-and-improved-stress-testing-and-benchmarking-tool.html) för en presentation av programmet.
 
 ## Köra Tough Day 2 {#how-to-run-tough-day}
 
@@ -54,7 +57,7 @@ java -jar toughday2.jar [--help | --help_full | --help_tests | --help_publish]  
 
 ### Få hjälp {#getting-help}
 
-Dag 2 erbjuder en mängd hjälpalternativ som du kan komma åt från kommandoraden. Exempel:
+Dag 2 erbjuder en mängd hjälpalternativ som du kan komma åt från kommandoraden. Till exempel:
 
 ```xml
 java -jar toughday2.jar --help_full
@@ -114,7 +117,7 @@ I tabellen nedan hittar du relevanta hjälpparametrar.
 
 ### Globala parametrar {#global-parameters}
 
-Tough Day 2 erbjuder globala parametrar som ställer in eller ändrar miljön för testerna. Bland dessa finns målvärden, portnummer, protokoll, användare och lösenord för instansen och många andra. Exempel:
+Tough Day 2 erbjuder globala parametrar som ställer in eller ändrar miljön för testerna. Bland dessa finns målvärden, portnummer, protokoll, användare och lösenord för instansen och många andra. Till exempel:
 
 ```xml
 java -jar toughday2.jar --host=host --protocol=https --port=4502 --duration=30m --dryrun=true 
@@ -124,7 +127,7 @@ Du hittar de relevanta parametrarna i listan nedan:
 
 | **Parameter** | **Beskrivning** | **Standardvärde** | **Möjliga värden** |
 |---|---|---|---|
-| `--installsamplecontent=<Val>` | Installerar eller hoppar över standardinnehållspaketet för Tough Day 2. | true |  true eller false |
+| `--installsamplecontent=<Val>` | Installerar eller hoppar över standardinnehållspaketet för Tough Day 2. | true | true eller false |
 | `--protocol=<Val>` | Protokollet som används för värden. | http | http eller https |
 | `--host=<Val>` | Värdnamnet eller IP-adressen som ska användas som mål. |  |  |
 | `--port=<Val>` | Värdens port. | 4502 |  |
@@ -135,8 +138,8 @@ Du hittar de relevanta parametrarna i listan nedan:
 | `--suite=<Val>` | Värdet kan vara en eller en lista (avgränsad med kommatecken) med fördefinierade testsviter. | tuffing |  |
 | `--configfile=<Val>` | Den målformade dynamiska konfigurationsfilen. |  |  |
 | `--contextpath=<Val>` | Instansens kontextsökväg. |  |  |
-| `--loglevel=<Val>` | Loggnivån för motorn Tough Day 2. | INFORMATION | ALL, DEBUG, INFO, VARNING, FEL, FATAL, AV |
-| `--dryrun=<Val>` | Om true skrivs den resulterande konfigurationen ut och inga tester körs. | false |  true eller false |
+| `--loglevel=<Val>` | Loggnivån för motorn Tough Day 2. | INFO | ALL, DEBUG, INFO, VARNING, FEL, FATAL, AV |
+| `--dryrun=<Val>` | Om true skrivs den resulterande konfigurationen ut och inga tester körs. | false | true eller false |
 
 ## Anpassa {#customizing}
 
@@ -163,7 +166,7 @@ tests:
   - add : CreateAssetTreeTest
 ```
 
-### Lägga till flera instanser av samma test {#adding-multiple-instances-of-the-same-test}
+### Lägga till flera instanser av samma test  {#adding-multiple-instances-of-the-same-test}
 
 Du kan också lägga till och köra flera instanser av samma test, men varje instans måste ha ett unikt namn. I exemplen nedan visas hur du lägger till två instanser av samma test antingen med kommandoradsparametrar eller en gul konfigurationsfil.
 
@@ -346,7 +349,7 @@ Dag 2 ger både testvärden och loggar. Mer information finns i följande avsnit
 
 ### Testmått {#test-metrics}
 
-Tuff dag 2 rapporterar för närvarande 9 testvärden som du kan utvärdera. **Mätvärden med**&amp;stämpeln;ast; symbolen rapporteras endast efter lyckade körningar:
+Tuff dag 2 rapporterar för närvarande 9 testvärden som du kan utvärdera. Mätvärden med **&amp;stämpeln;ast;** symbolen rapporteras endast efter lyckade körningar:
 
 | **Namn** | **Beskrivning** |
 |---|---|
