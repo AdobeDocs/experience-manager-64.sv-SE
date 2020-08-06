@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 0042893e-3d2c-469e-8759-404be16e7436
 translation-type: tm+mt
 source-git-commit: 63001012f0d865c2548703ea387c780679128ee7
+workflow-type: tm+mt
+source-wordcount: '530'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 63001012f0d865c2548703ea387c780679128ee7
 
 ## Översikt {#overview}
 
-För AEM Communities finns det olika rapporter som kan nås på flera sätt från författarmiljön.
+För AEM Communities finns det olika rapporter som du kan få åtkomst till på flera sätt från författarmiljön.
 
 De olika rapporterna är i allmänhet följande:
 
@@ -37,21 +40,21 @@ Tabellrapporter kan exporteras i CSV-format för efterföljande bearbetning.
 
 * Från global navigering: **[!UICONTROL Navigation > Communities > Reports]**
 * Välj från
-   * **[!UICONTROL Uppdragsrapport]**
+   * **[!UICONTROL Assignments Report]**
       * Generera en rapport för den valda communityplatsen, användaren eller gruppen samt tilldelningen
-   * **[!UICONTROL Inläggsrapport]**
+   * **[!UICONTROL Posts Report]**
       * Generera en rapport för den valda communityplatsen, innehållstypen och tidsperioden
-   * **[!UICONTROL Vyrapport]**
+   * **[!UICONTROL Views Report]**
       * Generera en rapport för den valda communityplatsen, innehållstypen och tidsperioden
          ![chlimage_1-156](assets/chlimage_1-156.png)
 
 ### Rapporter om aktiveringsresurser och utbildningsvägar {#reports-for-enablement-resources-and-learning-paths}
 
-* Från global navigering: **[!UICONTROL Navigering > Communities > Resources]**
+* Från global navigering: **[!UICONTROL Navigation > Communities > Resources]**
 * Välj en befintlig webbplats för aktiveringscommunityn
-   * Välj **[!UICONTROL rapportikonen]** om du vill generera rapporter som täcker alla aktiveringsresurser
+   * Välj **[!UICONTROL Report]** ikon om du vill generera rapporter som täcker alla aktiveringsresurser
    * Välj en utbildningsväg för aktivering
-   * Välj ikonen **[!UICONTROL Rapport]** om du vill generera rapporter för
+   * Välj **[!UICONTROL Report]** ikon om du vill generera rapporter för
       * De medföljande aktiveringsresurserna
       * De studerande som är tilldelade inlärningsbanan
 * Rapporterna innehåller följande:
@@ -74,13 +77,15 @@ Rapporten innehåller information om hur de fortskrider samt eventuella kommenta
 
 Välj villkor för rapporten:
 
-* **[!UICONTROL Site]** Select an enablement community site
-* **[!UICONTROL Användare eller grupp]**
+* **[!UICONTROL Site]**
+Välj en community-webbplats för aktivering
+* **[!UICONTROL User or Group]**
    * Välj Användare om du vill generera en rapport för en elev
    * Välj Grupp om du vill generera en rapport för en grupp deltagareTunneltjänsten kommer åt medlemmar och medlemsgrupper från publiceringsmiljön
-* **[!UICONTROL Tilldelning]** Välj bland de aktiveringsresurser som tilldelats de valda eleven/eleven/eleven
+* **[!UICONTROL Assignment]**
+Välj bland de aktiveringsresurser som tilldelats de valda eleverna
 
-Välj **[!UICONTROL Generera]** för att skapa rapporten:
+Välj **[!UICONTROL Generate]** att skapa rapporten:
 
 ![chlimage_1-158](assets/chlimage_1-158.png)
 
@@ -92,15 +97,17 @@ Med hjälp av vykonsolen kan rapporter genereras på sidvisningar av communityfu
 
 Välj villkor för rapporten:
 
-* **[!UICONTROL Site]** Select a community site
-* **[!UICONTROL Innehållstypen]** kan välja Allt innehåll eller någon av funktionerna på webbplatsen
+* **[!UICONTROL Site]**
+Välj en community-webbplats
+* **[!UICONTROL Content Type]**
+Välj allt innehåll eller någon av funktionerna på webbplatsen
 * TidsramVälj något av:
    * De senaste 7 dagarna
    * De senaste 30 dagarna
    * De senaste 90 dagarna
    * Förra året
 
-Välj **[!UICONTROL Generera]** för att skapa rapporten:
+Välj **[!UICONTROL Generate]** att skapa rapporten:
 
 ![chlimage_1-160](assets/chlimage_1-160.png)
 
@@ -112,15 +119,17 @@ Med publiceringskonsolen kan rapporter genereras om antalet inlägg till communi
 
 Välj villkor för rapporten:
 
-* **[!UICONTROL Site]** Select a community site
-* **[!UICONTROL Innehållstypen]** kan välja Allt innehåll eller någon av funktionerna på webbplatsen
+* **[!UICONTROL Site]**
+Välj en community-webbplats
+* **[!UICONTROL Content Type]**
+Välj allt innehåll eller någon av funktionerna på webbplatsen
 * TidsramVälj något av:
    * De senaste 7 dagarna
    * De senaste 30 dagarna
    * De senaste 90 dagarna
    * Förra året
 
-Välj **[!UICONTROL Generera]** för att skapa rapporten:
+Välj **[!UICONTROL Generate]** att skapa rapporten:
 
 ![chlimage_1-162](assets/chlimage_1-162.png)
 
