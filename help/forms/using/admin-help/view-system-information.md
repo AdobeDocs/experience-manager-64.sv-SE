@@ -1,8 +1,8 @@
 ---
 title: Visa systeminformation
 seo-title: Visa systeminformation
-description: Lär dig hur du kan visa resursövervakningsdiagram och information om servern som kör AEM-formulär.
-seo-description: Lär dig hur du kan visa resursövervakningsdiagram och information om servern som kör AEM-formulär.
+description: Lär dig hur du kan visa resursövervakningsdiagram och information om servern som kör AEM formulär.
+seo-description: Lär dig hur du kan visa resursövervakningsdiagram och information om servern som kör AEM formulär.
 uuid: 983c1cc7-a8b3-48b2-a4c8-7b28a2e32537
 contentOwner: admin
 content-type: reference
@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: d51460d9-c96c-4661-b93e-e015427878ab
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '561'
+ht-degree: 0%
 
 ---
 
 
 # Visa systeminformation {#view-system-information}
 
-På fliken System visas resursövervakningsdiagram och information om servern som kör AEM-formulär. Om du vill komma åt den här informationen klickar du på Hälsoövervakning i det övre högra hörnet på sidan i administrationskonsolen. Om du kör AEM-formulär i en klustermiljö visas informationen för den nod som valts i serverlistan.
+På fliken System visas resursövervakningsdiagram och information om servern som kör AEM formulär. Om du vill komma åt den här informationen klickar du på Hälsoövervakning i det övre högra hörnet på sidan i administrationskonsolen. Om du kör AEM formulär i en klustermiljö visas informationen för den nod som valts i serverlistan.
 
 Om du vill spara den aktuella systeminformationen som en egenskapsfil klickar du på Spara.
 
@@ -35,66 +38,66 @@ Du kan dra pekaren längs tidslinjen för att hämta värden för en viss tidpun
 
 I den vänstra rutan på fliken System visas följande information om servern eller noden:
 
-**** Virtuell dator: Java Virtual Machine-version (JVM) på servern.
+**Virtuell dator:** Java Virtual Machine-version (JVM) på servern.
 
-**** Leverantör av virtuell dator: Tillverkare av JVM.
+**Leverantör av virtuell dator:** Tillverkare av JVM.
 
-**** Version för virtuell dator: JVM-versionsnummer
+**Version för virtuell dator:** JVM-versionsnummer
 
-**** Datornamn: Värdnamn för servern där AEM-formulär är installerade.
+**Datornamn:** Värdnamn för den server där AEM har installerats.
 
-**** Starttid: Den tid, i timmar och minuter, som servern har körts.
+**Starttid:** Den tid, i timmar och minuter, som servern har körts.
 
-**** Just-in-time-kompilator: Namnet på den kompilator som används.
+**Just-In-Time Compiler:** The name of the compiler being used.
 
-**** Kompileringstid: Den tid som har ägnats åt kompileringen.
+**Compile Time:** The amount of time spent in compile.
 
-**** Antal live-trådar: Det totala antalet trådar som för närvarande finns i AEM-formulärsystemet.
+**Number of Live Threads:** The total number of threads currently present in the AEM forms system.
 
-**** Högsta antal trådar: Det största antalet livetrådar som någonsin spelats in i systemet.
+**Number of Threads Peak:** Largest number of live threads ever recorded on the system.
 
-**** Antal inlästa klasser: Antal klasser som har lästs in i JVM.
+**Number of Loaded Classes:** Number of classes Loaded into the JVM.
 
-**** Antal ej inlästa klasser: Antal klasser som inte har lästs in från JVM.
+**Number of Unloaded Classes:** Number of classes Unloaded from the JVM.
 
-**** Minsta heap: Den minsta stackmängden som användes.
+**Minimum Heap:** The minimum amount of heap that was used.
 
-**** Maximal heap: Den maximala stackmängden som användes.
+**Maximum Heap:** The maximum amount of heap that was used.
 
-**** Operativsystemets namn: Namnet på det operativsystem som körs på AEM-formulärservern.
+**Operating System Name:** The name of the operating system running on the AEM forms server.
 
-**** Operativsystemversion: Versionsnummer för det operativsystem som körs på AEM-formulärservern.
+**Operativsystemversion:** Versionsnummer för det operativsystem som körs på AEM formulärserver.
 
-**** Operativsystem: Den operativsystemsarkitektur som JVM körs på.
+**Operativsystem:** Den operativsystemsarkitektur som JVM körs på.
 
-**** Antal processorer: Antalet processorer i systemet.
+**Number of Processors:** The number of processors on the system.
 
-**** Argument för virtuell dator: Argumentet som används av JVM.
+**Argument för virtuell dator:** Argumentet som används av JVM.
 
-**** Klasssökväg: Klasssökvägen som används av JVM.
+**Klasssökväg:** Klasssökvägen som används av JVM.
 
-**** Bibliotekssökväg: Bibliotekssökvägen som används av JVM.
+**Bibliotekssökväg:** Bibliotekssökvägen som används av JVM.
 
-**** Startklasssökväg: Den sökväg till startklassen som används av JVM.
+**Startklasssökväg:** Den sökväg till startklassen som används av JVM.
 
-**** Programservertyp: Typ av programserver som används för att köra AEM-formulär.
+**Application Server Type:** Type of application server used to run AEM forms.
 
-**** Programserverversion: Versionsnummer för den programserver som används för att köra AEM-formulär.
+**Application Server Version:** Version number of the application server used to run AEM forms.
 
-**** Programserverleverantör: Tillverkare av programservern som används för att köra AEM-formulär.
+**Application Server Vendor:** Manufacturer of the application server used to run AEM forms.
 
-**** Installationsdatum: Datum (i formatet åååå-mm-dd) när AEM-formulär installerades.
+**Installation Date:** Date (in yyyy-mm-dd format) that AEM forms was installed.
 
-**** AEM-formulärversion: Version av AEM-formulär som är installerade.
+**AEM forms Version:** Version of AEM forms that is installed.
 
-**** Lappningsversion: AEM-formulärens korrigeringsnummer.
+**Lappningsversion:** AEM formulärkorrigeringsnummer.
 
-**** Databasnamn: Typ av databas som används av AEM-formulär.
+**Databasnamn:** Typ av databas som används av AEM formulär.
 
-**** Databasversion: Versionsnummer för den databas som används av AEM-formulär.
+**Databasversion:** Versionsnummer för den databas som används av AEM formulär.
 
-**** Namn på databasenhet: Namnet på den drivrutin som JVM använder för att ansluta till databasen.
+**Namn på databasenhet:** Namnet på den drivrutin som JVM använder för att ansluta till databasen.
 
-**** Databasdrivrutinsversion: Den version av drivrutinen som JVM använder för att ansluta till databasen.
+**Databasdrivrutinsversion:** Den version av drivrutinen som JVM använder för att ansluta till databasen.
 
 Med knappen **Spara** kan du spara systeminformationen i en egenskapsfil.
