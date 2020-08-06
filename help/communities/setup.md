@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 0d462ad1-5619-4bb6-9609-bc8987c40a0c
 translation-type: tm+mt
 source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+workflow-type: tm+mt
+source-wordcount: '677'
+ht-degree: 1%
 
 ---
 
@@ -21,12 +24,12 @@ source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
 
 I utvecklings- och demonstrationssyfte måste du köra en författare och en publiceringsinstans.
 
-Gör detta genom att följa de grundläggande AEM [Getting Started](../../help/sites-deploying/deploy.md#getting-started) -instruktionerna, som resulterar i
+Gör detta genom att följa de grundläggande AEM [Komma igång](../../help/sites-deploying/deploy.md#getting-started) -instruktionerna, som får till resultat att
 
 * Redigeringsmiljö på [localhost:4502](http://localhost:4502/)
 * Publiceringsmiljö på [localhost:4503](http://localhost:4503/)
 
-För AEM Communities,
+För AEM Communities
 
 * Författarmiljön är till för
 
@@ -40,21 +43,21 @@ För AEM Communities,
 
 >[!NOTE]
 >
->Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidorna](../../help/sites-authoring/qg-page-authoring.md).
+>Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till hur du skapar sidor](../../help/sites-authoring/qg-page-authoring.md).
 
 ## Installera senaste versionen av Communities {#install-latest-communities-release}
 
-Den här självstudiekursen skapar en [engagemangscommunitywebbplats](overview.md#engagement-community) och baseras på funktionspaketet AEM Communities 6.2 version 1.10.
+Den här självstudiekursen skapar en [engagemangscommunitywebbplats](overview.md#engagement-community) och baseras på AEM Communities 6.2 feature pack version 1.10.
 
 Se till att det senaste funktionspaketet är installerat på:
 
 * [Senaste releaser](deploy-communities.md#latest-releases)
 
-En självstudiekurs som skapar en [aktiveringscommunitywebbplats](overview.md#enablement-community)finns på [Komma igång med AEM Communities för aktivering](getting-started-enablement.md).
+En självstudiekurs om hur du skapar en [aktiveringscommunitywebbplats](overview.md#enablement-community)finns på [Komma igång med AEM Communities för aktivering](getting-started-enablement.md).
 
 ## Konfigurera analys {#configure-analytics}
 
-När [Adobe Analytics är konfigurerat för communitywebbplatsen](analytics.md)finns det information om communityaktivitet som förbättrar communitymedlemmens upplevelse och ger återkoppling till administratörer av webbplatsen.
+När [Adobe Analytics har konfigurerats för communitywebbplatsen](analytics.md)finns det information om communityaktiviteter som förbättrar communitymedlemmens upplevelse samt ger feedback till administratörer av webbplatsen.
 
 Integrering med Adobe Analytics är valfritt.
 
@@ -90,17 +93,17 @@ Skapa en användare på *författaren* som får rollen som Community Administrat
 
    * Till exempel användarnamn &#39;admin&#39; / lösenord &#39;admin&#39;
 
-* Navigera från huvudkonsolen till **[!UICONTROL Verktyg > Åtgärder > Säkerhet > Användare]**
-* Välj **[!UICONTROL Lägg till användare på menyn]** Redigera ****
+* Navigera från huvudkonsolen till **[!UICONTROL Tools > Operations > Security > Users]**
+* From the **[!UICONTROL Edit]** menu, select **[!UICONTROL Add User]**
 
-* I `Create New User` dialogrutan anger du
+* In the `Create New User` dialog enter
 
-   * **[!UICONTROL ID&amp;ast;]**: sirius
-   * **[!UICONTROL E-postadress]**: sirius.nilson@mailinator.com
-   * **[!UICONTROL Lösenords&amp;stämpel;ast;]**:lösenord
-   * **[!UICONTROL Bekräfta lösenord&amp;stämpel;ast;]**:lösenord
-   * **[!UICONTROL Förnamn]**: Sirius
-   * **[!UICONTROL Efternamn&amp;stämpel;ast;]**: Nilson
+   * **[!UICONTROL ID&ast;]**: sirius
+   * **[!UICONTROL Emai Address]**: sirius.nilson@mailinator.com
+   * **[!UICONTROL Password&ast;]**: password
+   * **[!UICONTROL Confirm Password&ast;]**: password
+   * **[!UICONTROL First Name]**: Sirius
+   * **[!UICONTROL Last Name&ast;]**: Nilson
 
 ### Tilldela Sirius till gruppen Community-administratörer {#assign-sirius-to-community-administrators-group}
 
@@ -111,7 +114,7 @@ Bläddra ned till `Add User to Groups`:
    * Välj `Community Administrators`
    * Välj `Community Enablement Managers`
 
-* Välj **[!UICONTROL Spara]**
+* Välj **[!UICONTROL Save]**
 
 ![chlimage_1-301](assets/chlimage_1-301.png)
 
@@ -146,7 +149,7 @@ Följ sedan instruktionerna för att
 1. [Ange taggbehörigheter](../../help/sites-administering/tags.md#setting-tag-permissions)
 1. [Publicera taggarna](../../help/sites-administering/tags.md#publishing-tags)
 
-Exempelpaket med taggar som skapats för självstudiekurserna Komma igång för AEM Communities
+Exempelpaket med taggar som skapats för Tutorials AEM Communities Getting Started
 
 [Hämta fil](assets/tutorial_tags-v63.zip)
 
@@ -156,4 +159,4 @@ Vi rekommenderar, men är valfria, att du ställer in [MSRP](msrp.md) (MongoDB) 
 
 Instruktioner finns i [Konfigurera MongoDB för demo](demo-mongo.md).
 
-Som standard lagras användargenererat innehåll (UGC) i [JCR-tjärlagring](../../help/sites-deploying/platform.md) som du kommer åt med [JSRP](jsrp.md)när du installerar författaren och publicerar AEM-instanser. JSRP är inte en vanlig lagringsplats, vilket innebär att UGC bara visas på den instans där den angavs. Vanligtvis anges UGC i en publiceringsinstans och skulle inte vara synligt i redigeringsmiljön, vilket resulterar i att alla modereringsåtgärder måste använda publiceringsinstansen.
+Om du installerar författaren och publicerar AEM kommer användargenererat innehåll (UGC) att lagras i [JCR-tjärlagring](../../help/sites-deploying/platform.md) som nås med [JSRP](jsrp.md). JSRP är inte en vanlig lagringsplats, vilket innebär att UGC bara visas på den instans där den angavs. Vanligtvis anges UGC i en publiceringsinstans och skulle inte vara synligt i redigeringsmiljön, vilket resulterar i att alla modereringsåtgärder måste använda publiceringsinstansen.
