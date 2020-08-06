@@ -1,6 +1,6 @@
 ---
-title: Introduktion till anpassning av arbetsytan i AEM-formulär
-seo-title: Introduktion till anpassning av arbetsytan i AEM-formulär
+title: Introduktion till Anpassa AEM formulärarbetsyta
+seo-title: Introduktion till Anpassa AEM formulärarbetsyta
 description: En snabb introduktion med konceptuell och teknisk information för att anpassa arbetsytan i LiveCycle AEM Forms för processhantering.
 seo-description: En snabb introduktion med konceptuell och teknisk information för att anpassa arbetsytan i LiveCycle AEM Forms för processhantering.
 uuid: 23d19629-b94a-46cc-bb44-9c6088669ec5
@@ -11,19 +11,22 @@ topic-tags: forms-workspace
 discoiquuid: 80a70f5c-dcc4-425f-9971-9e0feec094d6
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '1784'
+ht-degree: 0%
 
 ---
 
 
-# Introduktion till anpassning av arbetsytan i AEM-formulär {#introduction-to-customizing-aem-form-workspace}
+# Introduktion till Anpassa AEM formulärarbetsyta {#introduction-to-customizing-aem-form-workspace}
 
-AEM-formulärarbetsytan har funktioner för att ändra presentationssemantik och funktioner i gränssnittet. Typerna av anpassningar för att ändra format, layout, formatering, varumärke och grundfunktioner beskrivs nedan.
+AEM kan ändra presentationssemantik och funktionalitet i gränssnittet. Typerna av anpassningar för att ändra format, layout, formatering, varumärke och grundfunktioner beskrivs nedan.
 
 ![cu_customized_workspace_example](assets/cu_customized_workspace_example.png)
 
 ## Typer av anpassningar {#types-of-customizations}
 
-Arbetsytan i AEM Forms har stöd för en mängd anpassningar för att uppdatera användargränssnittets layout, utseende, funktioner och mycket annat. Anpassningarna innefattar att uppdatera ett eller flera av följande:
+AEM Forms arbetsyta har stöd för en mängd anpassningar för att uppdatera användargränssnittets layout, utseende, funktioner och mycket annat. Anpassningarna innefattar att uppdatera ett eller flera av följande:
 
 * Användargränssnittets utseende
 * Funktioner som använder semantiska anpassningar
@@ -31,7 +34,7 @@ Arbetsytan i AEM Forms har stöd för en mängd anpassningar för att uppdatera 
 
 ### Ändringar i användargränssnittet {#user-interface-changes}
 
-Du kan ändra utseende, layout och andra presentationssemantik för arbetsytan i AEM Forms. Ändra arbetsyta genom att anpassa CSS-, HTML-mallar och JavaScript™-filer. Alla standardfiler finns i standardinstallationen.
+Du kan ändra utseende, layout och andra presentationssemantik för AEM Forms-arbetsytan. Ändra arbetsyta genom att anpassa CSS-, HTML-mallar och JavaScript™-filer. Alla standardfiler finns i standardinstallationen.
 
 De vanligaste stegen beskrivs i [Allmänna steg för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md)av arbetsytan i AEM Forms. Specifika exempel på sådana anpassningar, inklusive detaljerade steg, finns i de relaterade artiklarna i slutet av den här artikeln.
 
@@ -39,7 +42,7 @@ De vanligaste stegen beskrivs i [Allmänna steg för anpassning](/help/forms/usi
 
 Innan du anpassar arbetsytan bör du bekanta dig med den standardformatmall som finns i AEM Forms på /libs/ws/css/style.css.
 
-Om du vill anpassa arbetsytan bör du bekanta dig med den befintliga formatmallen, style.css, som finns i mappen /libs/ws/css. Nedan beskrivs några viktiga komponenter.
+Om du vill anpassa arbetsytan bör du bekanta dig med den befintliga formatmallen, style.css, som finns i mappen /libs/ws/css. Några viktiga komponenter beskrivs nedan.
 
 <table> 
  <tbody> 
@@ -49,7 +52,7 @@ Om du vill anpassa arbetsytan bör du bekanta dig med den befintliga formatmalle
   </tr> 
   <tr> 
    <td><p>#header</p> </td> 
-   <td><p>Sidhuvud på arbetsytan för AEM-formulär</p> </td> 
+   <td><p>Sidhuvud på arbetsytan i AEM Forms</p> </td> 
   </tr> 
   <tr> 
    <td><p>.categoryList</p> </td> 
@@ -124,11 +127,11 @@ De översta stegen för CSS-anpassning är:
 * Lägg till formatobjekt i denna CSS. Mer information finns i Förstå CSS-format.
 * Uppdatera referenserna i `html.jsp`.
 
-Exakt hur du gör dessa anpassningar finns i [Allmänna steg för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md)av arbetsytan i AEM Forms. CSS-filen som levereras med arbetsytan AEM Forms finns på /libs/ws/css/. Använd [leveranspaketet](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)för CSS-relaterade anpassningar. Specifika exempel på CSS-relaterade anpassningar finns i de relaterade hjälpavsnitten i slutet av den här artikeln.
+Exakt hur du gör dessa anpassningar finns i [Allmänna steg för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md)av arbetsytan i AEM Forms. CSS-filen som levereras med arbetsytan i AEM Forms finns på /libs/ws/css/. Använd [leveranspaketet](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)för CSS-relaterade anpassningar. Specifika exempel på CSS-relaterade anpassningar finns i de relaterade hjälpavsnitten i slutet av den här artikeln.
 
 #### Bild {#image}
 
-Du kan anpassa arbetsytan i AEM Forms för att lägga till olika användare eller för att lägga till organisationens logotyp. Använd [Ship Package](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)för dessa anpassningar.
+Du kan anpassa AEM Forms-arbetsytan för att lägga till olika användare eller lägga till din organisations logotyp. Använd [Ship Package](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)för dessa anpassningar.
 
 De översta stegen för anpassning av bilderna är:
 
@@ -137,7 +140,7 @@ De översta stegen för anpassning av bilderna är:
 * Lägg till nya format som motsvarar de tillagda bilderna.
 * Länka till den nya CSS-filen i `html.jsp` filen.
 
-Om du vill komma igång med att anpassa bilderna på arbetsytan i AEM Forms följer du de [allmänna stegen för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md)av arbetsytan i AEM Forms. Specifika exempel på bildrelaterade anpassningar finns i de relaterade hjälpavsnitten i slutet av den här artikeln.
+Om du vill komma igång med att anpassa bilderna i AEM Forms arbetsyta följer du de [allmänna stegen för AEM Forms arbetsyteanpassning](/help/forms/using/generic-steps-html-workspace-customization.md). Specifika exempel på bildrelaterade anpassningar finns i de relaterade hjälpavsnitten i slutet av den här artikeln.
 
 #### HTML-mall {#html-template}
 
@@ -153,7 +156,7 @@ Specifika exempel på sådana anpassningar finns i hjälpavsnitten i slutet av d
 
 ### Semantiska ändringar {#semantic-changes}
 
-Ändra JavaScript-källkoden om du vill ändra AEM Forms-arbetsytans funktioner. Ändringarna i kärnfunktionen kallas Semantiska ändringar. Du kan ändra modeller, vyer och mallar som ingår i källkoden för arbetsytan i AEM Forms.
+Ändra JavaScript-källkoden om du vill ändra funktionaliteten för arbetsytan i AEM Forms. Ändringarna i kärnfunktionen kallas Semantiska ändringar. Du kan ändra modeller, vyer och mallar som ingår i källkoden för AEM Forms-arbetsytan.
 
 De översta stegen för att göra semantiska ändringar för att ändra funktionaliteten i AEM Forms-arbetsytan är:
 
@@ -166,11 +169,11 @@ Mer konceptuell information om komponenterna som är en del av källkoden finns 
 
 ### Återanvändbara komponenter {#reusable-components}
 
-Eftersom AEM Forms-arbetsytan är ett komponentbaserat program kan den enkelt anpassas och återanvändas. Du kan enkelt integrera arbetsytekomponenterna med dina webbprogram.
+Eftersom AEM Forms arbetsyta är ett komponentbaserat program kan det enkelt anpassas och återanvändas. Du kan enkelt integrera arbetsytekomponenterna med dina webbprogram.
 
 Mer konceptuell information finns i [Beskrivning av återanvändbara komponenter](/help/forms/using/description-reusable-components.md) och instruktioner om hur du använder komponenterna finns i [Integrera AEM Forms-arbetsytekomponenter i webbprogram](/help/forms/using/description-reusable-components.md).
 
-## Skapar kod för arbetsytan i AEM Forms {#building-html-workspace-code}
+## Skapar AEM Forms arbetsytekod {#building-html-workspace-code}
 
 ### SDK-paket {#sdk-package}
 
@@ -190,30 +193,30 @@ Det är främst avsett för anpassningar, eftersom det ger möjlighet att genere
 
 * client-html:
 
-   * assembly - Innehåller zip.xml som används av skript för att skapa SDK för arbetsytan AEM Forms.
+   * assembly - Innehåller zip.xml som används av skript för att skapa SDK för arbetsytan i AEM Forms.
    * src/main/webapp -
 
       * css - Innehåller formatmallar för AEM Forms-arbetsytan.
       * bilder - Innehåller bilder som används på arbetsytan i AEM Forms.
       * js:
 
-         * libs - Innehåller alla tredjepartsbibliotek som används i AEM Forms-arbetsytan.
+         * libs - Innehåller alla tredjepartsbibliotek som används i AEM Forms arbetsyta.
          * licenser - Innehåller licenser för HTML- och JS-filer samt kod som prefix till dessa licenser för respektive källfil.
          * minifier - Används för kombination, minifiering och uppgradering av anpassad javascript-kod.
          * resourcejs_optimizer - Används för kombination, minimering och uglifiering av javascript-källa.
          * resource_generator - Används för att generera register.js och modelcontroller.path.js.
          * runtime:
 
-            * initierare - Innehåller initierare.js som används för att initiera stambentytor och modeller som används på arbetsytan i AEM Forms.
+            * initierare - Innehåller initializer.js som används för att initiera vyer och modeller för ryggrad som används på arbetsytan i AEM Forms.
             * modeller - Innehåller stammodeller av alla komponenter som finns på arbetsytan i AEM Forms.
-            * vägar - Innehåller javascript-filer och HTML-filer som läser in startprocess, att göra, spåra och inställningar på arbetsytan i AEM Forms.
-            * services - Innehåller service.js som används på arbetsytan i AEM Forms. Alla serveranrop görs via service.js.
+            * vägar - Innehåller javascript-filer och HTML-filer som läser in startprocess, att göra-uppgift, spårning och inställningar på arbetsytan i AEM Forms.
+            * services - Innehåller service.js som används i AEM Forms arbetsyta. Alla serveranrop görs via service.js.
             * mallar - Innehåller alla mallar, det vill säga HTML-filer av alla vyer på arbetsytan i AEM Forms.
-            * util - Innehåller alla verktygsfiler (javascript) som används i AEM Forms-arbetsytan.
+            * util - Innehåller alla verktygsfiler (javascript) som används på arbetsytan i AEM Forms.
             * vyer - Innehåller ryggradsvyer av alla komponenter på arbetsytan i AEM Forms.
          * main.js
          * router.js
-      * libs/ws: pdf.html och pluginPing.pdf används för att läsa in PDF-formulär i AEM Forms-arbetsytan, och WSNextAdapter.swf används för att läsa in SWF-formulär och stödlinjer i AEM Forms-arbetsytan.
+      * libs/ws: pdf.html och pluginPing.pdf används för att läsa in PDF forms på arbetsytan i AEM Forms, och WSNextAdapter.swf används för att läsa in SWF-formulär och stödlinjer på arbetsytan i AEM Forms.
       * nationella inställningar:
 
          * de-DE - Innehåller translation.json för tyska.
@@ -341,17 +344,17 @@ mvn clean -P Dev install on client-pkg
 * bilder - Innehåller alla bilder.
 * js:
 
-   * libs - Innehåller alla bibliotek som används i AEM Forms-arbetsytan.
+   * libs - Innehåller alla bibliotek som används i AEM Forms arbetsyta.
    * require - Contains require.js
    * jqueryui - innehåller jquery.ui.datepicker.ja.js
    * runtime:
 
       * initierare - Innehåller initializer.js och modelcontroller.path.js.
       * modeller - Innehåller modeller av alla komponenter på arbetsytan i AEM Forms.
-      * vägar - Innehåller javascript-filer och HTML-filer som läser in startprocess, att göra, spåra och inställningar på arbetsytan i AEM Forms.
-      * services - Innehåller service.js som används på arbetsytan i AEM Forms.
+      * vägar - Innehåller javascript-filer och HTML-filer som läser in startprocess, att göra-uppgift, spårning och inställningar på arbetsytan i AEM Forms.
+      * services - Innehåller service.js som används i AEM Forms arbetsyta.
       * mallar - Innehåller alla mallar, det vill säga HTML-filer för alla komponenter i AEM Forms-arbetsytan.
-      * util - Innehåller alla verktygsfiler (JavaScript) som används i AEM Forms-arbetsytan.
+      * util - Innehåller alla verktygsfiler (JavaScript) som används på arbetsytan i AEM Forms.
       * vyer - Innehåller vyer över alla komponenter på arbetsytan i AEM Forms.
    * main.js
    * registry.js
