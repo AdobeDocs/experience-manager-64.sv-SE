@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: bde54663-9050-4a5a-93cb-7cd84ac7f071
 translation-type: tm+mt
 source-git-commit: 22a5e6a75fdc1f15e6e612c5ef495ac01e50252d
+workflow-type: tm+mt
+source-wordcount: '553'
+ht-degree: 4%
 
 ---
 
@@ -39,7 +42,7 @@ Du kan definiera:
 
 ## Rubriknotation {#heading-notation}
 
-Om du vill skapa en rubrik genom att placera en hash-tagg (#) framför rubriken. En hash-tagg (#) används för en H1, två hash-taggar (#) för en H2 osv. Du kan använda upp till 6 hash-taggar. Exempel:
+Om du vill skapa en rubrik genom att placera en hash-tagg (#) framför rubriken. En hash-tagg (#) används för en H1, två hash-taggar (#) för en H2 osv. Du kan använda upp till 6 hash-taggar. Till exempel:
 
     `## This is an H2`
 
@@ -47,7 +50,7 @@ Om du vill skapa en rubrik genom att placera en hash-tagg (#) framför rubriken.
 
     `###### This is a H6`
 
-Du kan också skapa en H1 genom att stryka under texten med lika stora tecken och skapa en H2 genom att stryka under texten med minustecken. Exempel:
+Du kan också skapa en H1 genom att stryka under texten med lika stora tecken och skapa en H2 genom att stryka under texten med minustecken. Till exempel:
 
     `This is an H1`
 
@@ -113,7 +116,7 @@ Där &quot;id&quot; är namnet på en definierad bildreferens. Bildreferenser de
 
 ## Blockcitat {#block-quotes}
 
-Du kan citera text genom att lägga till symbolen > före texten. Exempel:
+Du kan citera text genom att lägga till symbolen > före texten. Till exempel:
 
     `>This is block quotes`
 
@@ -121,7 +124,7 @@ Du kan citera text genom att lägga till symbolen > före texten. Exempel:
 
     `>asdfahsdlfasdfj`
 
-Du kan ha kapslade blockcitattecken. Exempel:
+Du kan ha kapslade blockcitattecken. Till exempel:
 
     `> This is the first level of quoting.`
 
@@ -137,7 +140,7 @@ Du kan ha kapslade blockcitattecken. Exempel:
 
 Du kan skapa både sorterade och osorterade listor.
 
-Om du vill skapa en osorterad lista använder du &amp;ast; -symbolen före objekten i listan. Exempel:
+Om du vill skapa en osorterad lista använder du &amp;ast; -symbolen före objekten i listan. Till exempel:
 
     `* item in list`
 
@@ -145,7 +148,7 @@ Om du vill skapa en osorterad lista använder du &amp;ast; -symbolen före objek
 
     `* item in list`
 
-Om du vill skapa en ordnad lista lägger du till siffrorna, följt av en punkt, före varje objekt i listan. Exempel:
+Om du vill skapa en ordnad lista lägger du till siffrorna, följt av en punkt, före varje objekt i listan. Till exempel:
 
     `1. First item in list.`
 
@@ -175,13 +178,13 @@ Du kan fet text enligt följande:
 
 Om du vill ange ett intervall med kod omsluter du det med citattecken (`). Till skillnad från ett förformaterat kodblock anger ett kodintervall koden i ett normalt stycke.
 
-Exempel:
+Till exempel:
 
     ``Use the `printf()` function.``
 
 ## Kodblock {#code-blocks}
 
-Kodblock används vanligtvis för att illustrera källkod. Du kan skapa kodblock genom att dra in koden med en tabb eller med minst fyra mellanslag. Exempel:
+Kodblock används vanligtvis för att illustrera källkod. Du kan skapa kodblock genom att dra in koden med en tabb eller med minst fyra mellanslag. Till exempel:
 
     `This is a normal paragraph.`
 
