@@ -9,6 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 translation-type: tm+mt
 source-git-commit: 835618e8e0d01905ad7b476b0172dfecec41cf9d
+workflow-type: tm+mt
+source-wordcount: '1349'
+ht-degree: 0%
 
 ---
 
@@ -29,8 +32,8 @@ När agenten förbereder den interaktiva kommunikationen med hjälp av agentgrä
 
 ## Förbereda interaktiv kommunikation med hjälp av agentgränssnittet {#prepare-interactive-communication-using-the-agent-ui}
 
-1. Välj **[!UICONTROL Formulär]** > **[!UICONTROL Formulär och dokument]**.
-1. Välj lämplig interaktiv kommunikation och tryck på **[!UICONTROL Open Agent-gränssnittet]**.
+1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
+1. Välj lämplig interaktiv kommunikation och tryck **[!UICONTROL Open Agent UI]**.
 
    >[!NOTE]
    >
@@ -54,7 +57,7 @@ När agenten förbereder den interaktiva kommunikationen med hjälp av agentgrä
 
 På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsvariabler i den interaktiva kommunikationen.
 
-1. Välj **[!UICONTROL Innehåll]**. Fliken Innehåll i den interaktiva kommunikationen visas.
+1. Välj **[!UICONTROL Content]**. Fliken Innehåll i den interaktiva kommunikationen visas.
 
    ![agentuicontenttab](assets/agentuicontenttab.png)
 
@@ -74,6 +77,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
       * [Markera delar av text](#highlightemphasize)
    * [Specialtecken](#specialcharacters)
    * [Kortkommandon](/help/forms/using/keyboard-shortcuts.md)
+
    Mer information om tillgängliga åtgärder för olika dokumentfragment i användargränssnittet för agenten finns i [Åtgärder och information i användargränssnittet](#actionsagentui)för agenten.
 
 1. Om du vill lägga till en sidbrytning i utskriften av den interaktiva kommunikationen placerar du markören där du vill infoga en sidbrytning och väljer Sidbrytning före eller Sidbrytning efter ( ![sidbrytning före](assets/pagebreakbeforeafter.png)).
@@ -86,7 +90,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
 ### Hantera bifogade filer {#manage-attachments}
 
-1. Välj **[!UICONTROL Bifogad fil]**. Agentgränssnittet visar de tillgängliga bifogade filerna som de har konfigurerats när interaktiv kommunikation skapas.
+1. Välj **[!UICONTROL Attachment]**. Agentgränssnittet visar de tillgängliga bifogade filerna som de har konfigurerats när interaktiv kommunikation skapas.
 
    Du kan välja att inte skicka en bifogad fil tillsammans med den interaktiva kommunikationen genom att trycka på visningsikonen och du kan trycka på krysset i den bifogade filen för att ta bort den (om agenten får ta bort eller dölja den bifogade filen) från den interaktiva kommunikationen. Ikonerna Visa och Ta bort är inaktiverade för bilagor som anges som obligatoriska när interaktiv kommunikation skapas.
 
@@ -101,7 +105,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 1. Om ordningen på de bifogade filerna inte var låst när du skapade den interaktiva kommunikationen kan du ändra ordningen på de bifogade filerna genom att markera en bifogad fil och trycka på nedåtpilen och uppåtpilen.
 1. Använd Förhandsgranska via webben och Förhandsgranska för att se om de två utdatafilerna är som du vill ha dem.
 
-   Om du tycker att förhandsvisningarna är tillräckliga trycker du på **[!UICONTROL Skicka]** för att skicka/skicka interaktiv kommunikation till en postprocess. Om du vill göra ändringar avslutar du förhandsgranskningen och går tillbaka till ändringarna.
+   Om du tycker att förhandsvisningarna är tillfredsställande kan du trycka på **[!UICONTROL Submit]** för att skicka/skicka interaktiv kommunikation till en postprocess. Om du vill göra ändringar avslutar du förhandsgranskningen och går tillbaka till ändringarna.
 
 ## Formatera text {#formattingtext}
 
