@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 translation-type: tm+mt
 source-git-commit: c53ad108620f9066179c79195f90b930d5cab0ff
+workflow-type: tm+mt
+source-wordcount: '916'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: c53ad108620f9066179c79195f90b930d5cab0ff
 
 ## Översikt {#overview}
 
-Funktionerna i AEM Communities kräver ofta att besökarna är registrerade och inloggade innan de deltar i en community i publiceringsmiljön. Användarregistreringen behöver bara finnas i publiceringsmiljön och kallas ofta *medlemmar* för att skilja dem från *användare* som är registrerade i författarmiljön.
+AEM Communities funktioner kräver ofta att besökarna är registrerade och inloggade innan de deltar i en community i publiceringsmiljön. Användarregistreringen behöver bara finnas i publiceringsmiljön och kallas ofta *medlemmar* för att skilja dem från *användare* som är registrerade i författarmiljön.
 
 ### Medlemmar (användare) vid publicering {#members-users-on-publish}
 
@@ -40,7 +43,7 @@ För att hantera användare och grupper som är registrerade i *författarmiljö
 
 I författarmiljön kan du nå Medlemskonsolen för att hantera medlemmar som är registrerade i publiceringsmiljön:
 
-* Från global navigering: **[!UICONTROL Navigering > Communities > Members]**
+* Från global navigering: **[!UICONTROL Navigation > Communities > Members]**
 
 >[!CAUTION]
 >
@@ -78,22 +81,34 @@ Välj `Create Member` för att skapa en användare i publiceringsmiljön.
 
 De flesta fält är valfria fält som medlemmen kan fylla i senare i sin profil.
 
-* **[!UICONTROL ID]**(*obligatoriskt*) Det auktoriserbara ID:t är medlemmens inloggnings-ID.
+* **[!UICONTROL ID]**
+(
+*obligatoriskt*) Det auktoriserbara ID:t är medlemmens inloggnings-ID.
 Som standard är ID inställt på värdet för den e-postadress som krävs.
    *När ID:t har skapats kan det inte ändras.*
 
-* **[!UICONTROL E-postadress]**(*obligatoriskt*) Medlemmens e-postadress.
+* **[!UICONTROL Email Address]**
+(
+*obligatoriskt*) Medlemmens e-postadress.
 Medlemmen kan ändra sin e-postadress när profilen uppdateras.Om ID:t som är standard för e-postadressen ändras *inte* ID:t när e-postadressen ändras.
 
-* **[!UICONTROL Lösenord]**(*obligatoriskt*) Inloggningslösenordet.
+* **[!UICONTROL Password]**
+(
+*obligatoriskt*) Inloggningslösenordet.
 
-* **[!UICONTROL Skriv lösenordet]** igen (*obligatoriskt*). Ange lösenordet igen för verifiering.
+* **[!UICONTROL Retype Password]**
+(
+*krävs*) Ange lösenordet igen för verifiering.
 
-* **[!UICONTROL Lägg till medlem i platser]**(*valfritt*) Välj bland befintliga communityplatser för att lägga till medlemmen i medlemsgruppen för communitywebbplatsen.
+* **[!UICONTROL Add Member to Sites]**
+(
+*(valfritt*) Välj bland befintliga communitysajter för att lägga till medlemmen i communityplatsens medlemsgrupp.
 
-* **[!UICONTROL Lägg till medlem i grupper]**(*valfritt*) Välj bland befintliga medlemsgrupper för att lägga till medlemmen i den gruppen.
+* **[!UICONTROL Add Member to Groups]**
+(
+*(valfritt*) Välj bland befintliga medlemsgrupper för att lägga till medlemmen i den gruppen.
 
-* Välj **[!UICONTROL Spara]**
+* Välj **[!UICONTROL Save]**
 
 ### ALLMÄNT - Kontoinställningar {#general-account-settings}
 
@@ -104,17 +119,20 @@ Under Kontoinställningar kan en community-administratör
       En medlem kan inte logga in, vilket förhindrar dem från att visa sidor eller delta i aktiviteter som kräver inloggning. De kan fortfarande anonymt besöka en öppen communitysajt.
 
    * Inte BannedEn medlem har fullständig åtkomst till communitywebbplatsen.
+
    Standardvärdet är `Not Banned`.
 
-* **[!UICONTROL Bidragsgränser]**Om det här alternativet är markerat är medlemmens möjlighet att publicera innehåll begränsad.
+* **[!UICONTROL Contribution Limits]**
+Om det här alternativet är markerat är medlemmens möjlighet att publicera innehåll begränsad.
 Standardvärdet beror på konfigurationen av bidragsgränser.
 Se Gränser för [medlemsbidrag](limits.md).
 
-* **[!UICONTROL Ändra lösenord]** En länk som finns när en befintlig medlem ändras. Ger en community-administratör möjlighet att återställa ett lösenord för en medlem.
+* **[!UICONTROL Change Password]**
+En länk som finns när en befintlig medlem ändras. Ger en community-administratör möjlighet att återställa ett lösenord för en medlem.
 
 ### ALLMÄNT - Foto {#general-photo}
 
-Om du vill ange en avatar för medlemmen börjar du med att välja **[!UICONTROL Överför bild]** och väljer en bild av typen .jpg, .png, .tif eller .gif. Den rekommenderade storleken för en bild är 240 x 240 pixlar vid 72 dpi.
+Om du vill ange en avatar för medlemmen börjar du med att markera **[!UICONTROL Upload Image]** och väljer en bild av typen .jpg, .png, .tif eller .gif. Den rekommenderade storleken för en bild är 240 x 240 pixlar vid 72 dpi.
 
 ### ALLMÄNT - Lägg till medlem på webbplatser {#general-add-member-to-sites}
 
@@ -132,10 +150,10 @@ Se även [Betygsättning och badges](implementing-scoring.md).
 
 ![chlimage_1-123](assets/chlimage_1-123.png)
 
-* **[!UICONTROL Lägg till emblem]**
+* **[!UICONTROL Add badges]**
    * Börja skriva för att välja bland [tillgängliga märken](badges.md). När du har valt ett märke väljer du varje webbplats, eller alla webbplatser, där märket ska visas tillsammans med medlemmens avatar.
    * Flera märken och sajter kan väljas.
-* **[!UICONTROL Ta bort emblem]**
+* **[!UICONTROL Remove badges]**
    * Markera papperskorgsikonen bredvid ett märke för att ta bort det
 
 ## Konsolen Grupper {#groups-console}
@@ -145,7 +163,7 @@ Gruppkonsolen, som är tillgänglig från författarmiljön, gör det möjligt a
 * Gruppbaserad tilldelning av [aktiveringsresurser](resources.md)
 
 Så här kommer du åt gruppkonsolen:
-* Från global navigering: **[!UICONTROL Navigering > Communities > Groups]**
+* Från global navigering: **[!UICONTROL Navigation > Communities > Groups]**
 
 >[!CAUTION]
 >
@@ -159,22 +177,30 @@ Välj `Add Group` för att skapa en grupp i publiceringsmiljön.
 
 Följande fält krävs för att skapa en ny medlemsgrupp på publiceringssidan:
 
-* **[!UICONTROL ID]**(*obligatoriskt*) Gruppens unika ID.
+* **[!UICONTROL ID]**
+(
+*obligatoriskt*) Gruppens unika ID.
    *När ID:t har skapats kan det inte ändras.*
 
-* **[!UICONTROL Namn]**(*valfritt*) Gruppens visningsnamn.
+* **[!UICONTROL Name]**
+(
+*valfritt*) Gruppens visningsnamn.
 
    Standardvärdet är ID.
 
-* **[!UICONTROL Beskrivning]**(*valfritt*) En beskrivning av gruppens syfte och behörigheter.
+* **[!UICONTROL Description]**
+(
+*(valfritt*) En beskrivning av gruppens syfte och behörigheter.
 
-* **[!UICONTROL Lägg till medlemmar i grupp]**(*valfritt*) Välj medlemmar på publiceringssidan som ska inkluderas som ursprungliga medlemmar i gruppen.
+* **[!UICONTROL Add Members To Group]**
+(
+*(valfritt*) Välj medlemmar på publiceringssidan som ska inkluderas som de ursprungliga medlemmarna i gruppen.
 
-* Välj **[!UICONTROL Spara]**
+* Välj **[!UICONTROL Save]**
 
 ## Auktoriserade administratörer {#authorized-administrators}
 
-När du arbetar med medlemmar i communitymedlemskonsolen måste du logga in som en användare med lämplig behörighet och replikeringsagenten som används av [tunneltjänsten](deploy-communities.md#tunnel-service-on-author) måste vara korrekt konfigurerad.
+När du arbetar med medlemmar i communitymedlemskonsolen måste du logga in som en användare med lämplig behörighet, och replikeringsagenten som används av [tunneltjänsten](deploy-communities.md#tunnel-service-on-author) måste vara korrekt konfigurerad.
 
 Om användaren inte är inloggad som `admin`måste användaren vara medlem i `administrators` användargruppen.
 
