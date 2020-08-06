@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 0cfe62b8-839e-414b-95e5-1bfce6a9d16a
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '309'
+ht-degree: 0%
 
 ---
 
@@ -18,13 +21,13 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ![processrapportering](assets/process-reporting.png)
 
-Process Reporting är ett webbläsarbaserat verktyg som du använder för att skapa och visa rapporter om AEM Forms-processer och -uppgifter.
+Process Reporting är ett webbläsarbaserat verktyg som du använder för att skapa och visa rapporter om AEM Forms processer och uppgifter.
 
 Processrapportering innehåller en uppsättning användningsklara rapporter som gör att du kan filtrera, visa information om långvariga processer, processers varaktighet och arbetsflödesvolym.
 
 Ytterligare processrapportering är ett gränssnitt för att köra ad hoc-frågor och integrera anpassade rapportvyer i användargränssnittet för processrapportering.
 
-En lista över webbläsare som stöds finns i [AEM Forms Supported Platforms](/help/forms/using/aem-forms-jee-supported-platforms.md).
+En lista över webbläsare som stöds finns i [AEM Forms-plattformar](/help/forms/using/aem-forms-jee-supported-platforms.md)som stöds.
 
 Processrapportering bygger på moduler som:
 
@@ -38,7 +41,7 @@ Processrapportering bygger på moduler som:
 
 ![platshantering](assets/site-management.png)
 
-Visa listan över långvariga processer, processens tidsplaneringsdiagram och kör anpassade frågor med filter.
+Visa en lista över processer som körs länge, tidsscheman för processer och kör anpassade frågor med filter.
 
 Med Process Reporting kan du också exportera rapport- och frågedata i CSV-format.
 
@@ -54,7 +57,7 @@ Du kan kombinera flera filter för att skapa specifika rapporter.
 
 Du kan sedan spara rapportfiltren så att de kan köras vid ett senare datum eller en senare tidpunkt.
 
-### Process-/aktivitetshistorik {#process-task-history}
+### Process-/uppgiftshistorik {#process-task-history}
 
 ![filhantering](assets/file-management.png)
 
