@@ -1,6 +1,6 @@
 ---
-title: Felsökning av AEM
-seo-title: Felsökning av AEM
+title: AEM
+seo-title: AEM
 description: Läs mer om felsökning av problem med AEM.
 seo-description: Läs mer om felsökning av problem med AEM.
 uuid: d68e9ead-8aa6-4108-9f1e-85d7cd7a370f
@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: 1bc19f9a-fa3f-43e3-813e-23ab0b708d43
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '555'
+ht-degree: 0%
 
 ---
 
 
-# Felsökning av AEM{#troubleshooting-aem}
+# AEM{#troubleshooting-aem}
 
 I följande avsnitt beskrivs några problem som du kan stöta på när du använder AEM, tillsammans med förslag på hur du felsöker dem.
 
@@ -47,7 +50,7 @@ Följande tabell innehåller en översikt över problem som administratörer kan
   </tr> 
   <tr> 
    <td><p>Systemadministratör</p> </td> 
-   <td><p>Välkomstskärmen i AEM visas inte i webbläsaren när du har dubbelklickat på AEM CM QuickStart</p> </td> 
+   <td><p>AEM välkomstskärm visas inte i webbläsaren när du dubbelklickat AEM CM QuickStart</p> </td> 
   </tr> 
   <tr> 
    <td><p>Systemadministratör</p> <p>admin-användare</p> </td> 
@@ -66,17 +69,17 @@ Mer information om följande felsökningsscenarier finns i [Vanliga installation
 
 * Att dubbelklicka på Quickstart-behållaren har ingen effekt och JAR-filen har ingen effekt med ett annat program (t.ex. arkivhanteraren).
 * Program som körs på CRX orsakar fel av typen slut på minne.
-* Välkomstskärmen i AEM visas inte i webbläsaren när du har dubbelklickat på AEM Quickstart.
+* AEM välkomstskärm visas inte i webbläsaren när du dubbelklickat AEM QuickStart.
 
 ## Metoder för felsökningsanalys {#methods-for-troubleshooting-analysis}
 
 ### Göra en tråddump {#making-a-thread-dump}
 
-Tråddumpen är en lista över alla Java-trådar som är aktiva. Om AEM inte svarar korrekt kan tråddumpen hjälpa dig att identifiera lås eller andra problem.
+Tråddumpen är en lista över alla Java-trådar som är aktiva. Om AEM inte reagerar som de ska kan tråddumpen hjälpa dig att identifiera lås eller andra problem.
 
 ### Använda Sling Thread Dumper {#using-sling-thread-dumper}
 
-1. Öppna **AEM Web Console**; till exempel på `http://localhost:4502/system/console/`.
+1. Öppna **AEM webbkonsol**; till exempel på `http://localhost:4502/system/console/`.
 
 1. Välj **Trådar** under **fliken Status** .
 
@@ -84,7 +87,7 @@ Tråddumpen är en lista över alla Java-trådar som är aktiva. Om AEM inte sva
 
 ### Använda jstack (kommandorad) {#using-jstack-command-line}
 
-1. Hitta PID (process-id) för AEM Java-instansen.
+1. Hitta PID (process-id) för den AEM Java-instansen.
 
    Du kan till exempel använda `ps -ef` eller `jps`.
 
@@ -104,7 +107,7 @@ Mer information finns i [Så här tar du trådmodeller från en JVM](https://hel
 
 ### Söker efter oavslutade JCR-sessioner {#checking-for-unclosed-jcr-sessions}
 
-När funktioner utvecklas för AEM WCM kan JCR-sessioner öppnas (vilket kan jämföras med att öppna en databasanslutning). Om de öppnade sessionerna aldrig stängs kan systemet få följande symtom:
+När funktionalitet utvecklas för AEM WCM kan JCR-sessioner öppnas (vilket kan jämföras med att öppna en databasanslutning). Om de öppnade sessionerna aldrig stängs kan systemet få följande symtom:
 
 * Systemet blir långsammare.
 * Du kan se många CacheManager: resizeAlla poster i loggfilen. följande nummer (size=&lt;x>) visar antalet cacheminnen. Varje session öppnar flera cacheminnen.
@@ -116,7 +119,7 @@ Om du vill analysera oavslutade sessioner och ta reda på vilken kod som inte st
 
 OSGi-paketens status kan också ge en tidig indikation på eventuella problem.
 
-1. Öppna **AEM Web Console**; till exempel på `http://localhost:4502/system/console/`.
+1. Öppna **AEM webbkonsol**; till exempel på `http://localhost:4502/system/console/`.
 
 1. Välj **Paket** under fliken **OSGI** .
 
