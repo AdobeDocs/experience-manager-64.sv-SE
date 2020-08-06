@@ -12,6 +12,9 @@ discoiquuid: 4ec6b408-a165-4617-8d90-e89d8a415bb3
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1008'
+ht-degree: 14%
 
 ---
 
@@ -22,9 +25,9 @@ Skapa en startsida för att möjliggöra uppdatering av en ny version av befintl
 
 * Titeln visas på [fliken Referenser](/help/sites-authoring/author-environment-tools.md#references) , där författare kan komma åt dem för att arbeta med dem.
 * Källsidans underordnade sidor inkluderas som standard i starten. Du kan bara använda källsidan om du vill.
-* Som standard uppdaterar [Live Copy](/help/sites-administering/msm.md) automatiskt startsidorna allt eftersom källsidorna ändras. Du kan ange att en statisk kopia ska skapas för att förhindra automatiska ändringar.
+* Som standard uppdateras startsidorna automatiskt i [Live Copy](/help/sites-administering/msm.md) när källsidorna ändras. Du kan ange att en statisk kopia ska skapas för att förhindra automatiska ändringar.
 
-Du kan också ange **startdatum** (och starttid) för att definiera när startsidorna ska befordras och aktiveras. Startdatumet **** fungerar dock endast i kombination med flaggan **Production Ready** (se [Redigera en startkonfiguration](/help/sites-authoring/launches-editing.md#editing-a-launch-configuration)). för att åtgärderna ska inträffa automatiskt måste båda anges.
+Du kan också ange **startdatum** (och starttid) för att definiera när startsidorna ska befordras och aktiveras. **Startdatumet** fungerar dock endast i kombination med flaggan **Produktionsklar** (se [Redigera en startkonfiguration](/help/sites-authoring/launches-editing.md#editing-a-launch-configuration)). För att åtgärderna ska köras automatiskt måste båda anges.
 
 ## Skapa en Launch {#creating-a-launch}
 
@@ -40,14 +43,15 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
 
    * **Launches**:
 
-      1. Välj **Skapa start** i verktygsfältet för att öppna guiden.
+      1. Select **Create Launch** from the toolbar to open the wizard.
    * **Sites**:
 
       1. Välj **Skapa** i verktygsfältet för att öppna markeringsrutan.
       1. Välj **Skapa start** för att öppna guiden.
+
    >[!NOTE]
    >
-   >I **webbplatskonsolen** kan du även använda [markeringsläget](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) för att välja en sida innan du väljer **Skapa**.
+   >I **Sites**-konsolen kan du även använda [markeringsläget](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) för att välja en sida innan du väljer **Skapa**.
    >
    >Då används den valda sidan som den ursprungliga källsidan.
 
@@ -55,6 +59,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
 
    * Navigera till önskad plats.
    * Markera källsidorna och bekräfta.
+
    Upprepa efter behov.
 
    ![chlimage_1-225](assets/chlimage_1-225.png)
@@ -70,6 +75,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
    * **Inkludera undersidor**:
 
       * Ange om du vill skapa starten med eller utan de underordnade sidorna.  Som standard inkluderas de här undersidorna.
+
    Fortsätt med **Nästa**.
 
    ![chlimage_1-226](assets/chlimage_1-226.png)
@@ -84,6 +90,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
       Som standard är det här alternativet markerat.
 
    * **Startdatum**: Datum och tid då startkopian ska aktiveras (beroende på flaggan **Production Ready** ). se [Startar - Händelsens](/help/sites-authoring/launches.md#launches-the-order-of-events)ordning).
+
    ![chlimage_1-227](assets/chlimage_1-227.png)
 
 1. Använd **Skapa** för att slutföra processen och skapa en ny start. I bekräftelsedialogrutan får du frågan om du vill öppna starten direkt.
@@ -150,7 +157,7 @@ Så här skapar du en kapslad start från **Sites** -konsolen, baserat på en be
 
 1. Använd **Skapa** för att slutföra processen och skapa en ny start. I bekräftelsedialogrutan får du frågan om du vill öppna starten direkt.
 
-   Om du väljer **Klar**&#x200B;återgår du till **Referenser** i **Sites** Console om du väljer rätt sida som visas när du startar programmet.
+   Om du väljer **Klar** återgår du till rutan **Referenser** i **Sites**-konsolen och om du väljer rätt sida visas den nya startsidan.
 
 ### Ta bort en start {#deleting-a-launch}
 
