@@ -13,7 +13,7 @@ ht-degree: 9%
 
 # Metadatascheman {#metadata-schemas}
 
-I [!DNL Experience Manager Assets]ett metadataram definieras layouten för egenskapssidan och de metadataegenskaper som visas för resurser som använder det aktuella schemat. Metadataegenskaperna innehåller titel, beskrivning, MIME-typer, taggar och så vidare. Du kan använda redigeraren Metadata Schema Forms om du vill ändra befintliga scheman eller lägga till anpassade metadatascheman.
+I [!DNL Experience Manager Assets]ett metadataram definieras layouten för egenskapssidan och de metadataegenskaper som visas för resurser som använder det aktuella schemat. Metadataegenskaperna innehåller titel, beskrivning, MIME-typer, taggar och så vidare. Du kan använda Forms-redigeraren för metadatamodeller för att ändra befintliga scheman eller lägga till anpassade metadatamatcheman.
 
 Så här visar och redigerar du egenskapssidan för en resurs:
 
@@ -29,9 +29,9 @@ Så här visar och redigerar du egenskapssidan för en resurs:
 
    ![chlimage_1-172](assets/chlimage_1-172.png)
 
-   Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatamatchschema eller ändrar ett befintligt formulär. Mer information finns i [Redigera metadata Schema-formulär](metadata-schemas.md#editing-metadata-schema-forms) . Om du ändrar metadataschemat för en viss MIME-typ ändras egenskapssidlayouten för resurser med den aktuella MIME-typen och alla resursundertyper. Om du till exempel ändrar ett `jpeg` schema under `default/image` ändras metadatalayouten (resursegenskaper) för resurser med MIME-typ `IMAGE/JPEG`. Om du redigerar standardschemat ändrar du metadatalayouten för alla typer av resurser.
+   Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatamatchschema eller ändrar ett befintligt formulär. Mer information finns i [Redigera Forms](metadata-schemas.md#editing-metadata-schema-forms) för metadatamatchning. Om du ändrar metadataschemat för en viss MIME-typ ändras egenskapssidlayouten för resurser med den aktuella MIME-typen och alla resursundertyper. Om du till exempel ändrar ett `jpeg` schema under `default/image` ändras metadatalayouten (resursegenskaper) för resurser med MIME-typ `IMAGE/JPEG`. Om du redigerar standardschemat ändrar du metadatalayouten för alla typer av resurser.
 
-## Metadata Schema Forms {#default-metadata-schema-forms}
+## Forms för metadatamatchning {#default-metadata-schema-forms}
 
 Om du vill visa en lista med formulär/mallar går du till [!DNL Experience Manager] > **[!UICONTROL Tools]** > **[!UICONTROL Assets]** i **[!UICONTROL Metadata Schemas]** gränssnittet.
 
@@ -41,7 +41,7 @@ Om du vill visa en lista med formulär/mallar går du till [!DNL Experience Mana
 |---|---|---|
 | [!UICONTROL default] |  | Basmetadataschemaformuläret för resurser. |
 |  | Följande underordnade formulär ärver egenskaperna för [!UICONTROL default] formuläret: |  |
-|  | <ul><li> [!UICONTROL dm_video]</li></ul> | Schemaformulär för Dynamic Media-videofilmer. |
+|  | <ul><li> [!UICONTROL dm_video]</li></ul> | Schemaformulär för Dynamic Media-videor. |
 |  | <ul><li> [!UICONTROL image]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;image&quot;, till exempel image/jpeg, image/png o.s.v. <br> Formuläret har [!UICONTROL image] följande underordnade formulärmallar: <ul><li> [!UICONTROL jpeg]: Schemaformulär för resurser med undertyp [!UICONTROL jpeg].</li> <li>[!UICONTROL tiff]: Schemaformulär för resurser med undertyp [!UICONTROL tiff].</li></ul> |
 |  | <ul><li> [!UICONTROL application]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;application&quot;, till exempel application/pdf, application/zip och så vidare. <br>[!UICONTROL pdf]: Schemaformulär för resurser med undertyp pdf. |
 |  | <ul><li>[!UICONTROL video]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;video&quot;, till exempel video/avi, video/mp4 och så vidare. |
@@ -173,7 +173,7 @@ Klicka `+` för att lägga till en ny flik i ett schemaformulär. Som standard h
 
 ## Ta bort metadata-schemaformulär {#deleting-metadata-schema-forms}
 
-Med AEM kan du bara ta bort anpassade schemaformulär. Du kan inte ta bort standardschemaformulär/-mallar. Du kan dock ta bort anpassade ändringar i dessa formulär.
+AEM låter dig endast ta bort anpassade schemaformulär. Du kan inte ta bort standardschemaformulär/-mallar. Du kan dock ta bort anpassade ändringar i dessa formulär.
 
 Om du vill ta bort ett formulär markerar du det och klickar på **[!UICONTROL Delete]** ikonen.
 
@@ -183,7 +183,7 @@ Om du vill ta bort ett formulär markerar du det och klickar på **[!UICONTROL D
 
 >[!NOTE]
 >
->Du kan inte ta bort metadatamatchformulär i AEM Assets.
+>Du kan inte ta bort metadatamatchschemaformulär i AEM Assets.
 
 ## Schemaformulär för MIME-typer {#schema-forms-for-mime-types}
 
@@ -285,7 +285,7 @@ Du kan definiera obligatoriska fält på mappnivå, vilket tillämpas på resurs
 
    ![chlimage_1-192](assets/chlimage_1-192.png)
 
-1. (Valfritt) Åtkomst `http://[server]:[port]/system/console/components/`. Konfigurera och aktivera `com.day.cq.dam.core.impl.MissingMetadataNotificationJob` komponenter som är inaktiverade som standard. Ange en frekvens som AEM ska kontrollera om metadata för resurserna är giltiga.
+1. (Valfritt) Åtkomst `http://[server]:[port]/system/console/components/`. Konfigurera och aktivera `com.day.cq.dam.core.impl.MissingMetadataNotificationJob` komponenter som är inaktiverade som standard. Ange en frekvens med vilken AEM kontrollerar om metadata för resurserna är giltiga.
 Den här konfigurationen lägger till en egenskap `hasValidMetadata` i jcr:content of assets. Med den här egenskapen kan AEM filtrera resultatet i en sökning.
 
 >[!NOTE]
@@ -294,4 +294,4 @@ Den här konfigurationen lägger till en egenskap `hasValidMetadata` i jcr:conte
 
 >[!Cauktion]
 >
->Valideringskontrollerna av metadata är resurskrävande och kan påverka systemets prestanda. Schemalägg kontrollerna därefter. Om AEM-distributionen har prestandaproblem kan du inaktivera det här jobbet.
+>Valideringskontrollerna av metadata är resurskrävande och kan påverka systemets prestanda. Schemalägg kontrollerna därefter. Om AEM har prestandaproblem kan du inaktivera det här jobbet.
