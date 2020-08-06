@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 29e0bdfa-1d49-47d9-a332-04da062d3d3f
 translation-type: tm+mt
 source-git-commit: f1026e4dc9e12f760509a706a92888b90c9af395
+workflow-type: tm+mt
+source-wordcount: '307'
+ht-degree: 0%
 
 ---
 
 
 # Använda RTF-redigeraren för att skapa innehåll {#using-the-rich-text-editor-to-author-content}
 
-RTE (Rich Text Editor) är ett grundläggande byggblock för redigering av text på AEM-sidor. Många komponenter som Text, Text och Bild och Tabell baseras på RTE.
+RTE (Rich Text Editor) är en grundläggande byggsten för redigering av text på AEM sidor. Många komponenter som Text, Text och Bild och Tabell baseras på RTE.
 
 >[!NOTE]
 >
@@ -55,7 +58,7 @@ Om du väljer helskärmsläget i verktygsfältet för textbaserade komponenter �
 
 ![](do-not-localize/screen_shot_2018-03-21at163236.png)
 
-I helskärmsläget visas alla alternativ i RTF-redigeraren som har konfigurerats av administratören. Dessa kan variera mellan AEM-instanser [beroende på konfigurationen](../sites-administering/rich-text-editor.md) som tillhandahålls av administratörer eller AEM-utvecklare. Om ett alternativ saknas ber du administratören att göra det tillgängligt.
+I helskärmsläget visas alla alternativ i RTF-redigeraren som har konfigurerats av administratören. Dessa kan variera mellan olika AEM instanser [beroende på konfigurationen](../sites-administering/rich-text-editor.md) som tillhandahålls av administratörer eller AEM utvecklare. Om ett alternativ saknas ber du administratören att göra det tillgängligt.
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 
