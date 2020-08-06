@@ -12,6 +12,9 @@ topic-tags: operations
 discoiquuid: 8a75c201-bd88-4809-be08-69de94656489
 translation-type: tm+mt
 source-git-commit: 529b8c6556a7179a9169ff8250af6b5dc1251ef3
+workflow-type: tm+mt
+source-wordcount: '1760'
+ht-degree: 0%
 
 ---
 
@@ -38,7 +41,7 @@ Om du skickar två eller flera PDF-indatadokument till Assembler-tjänsten kan d
 
 Det här DDX-dokumentet innehåller `NoXFA` elementet, som instruerar Assembler-tjänsten att returnera ett icke-interaktivt PDF-dokument.
 
-Med Assembler-tjänsten kan du sammanställa icke-interaktiva PDF-dokument utan att Output-tjänsten ingår i AEM-formulärinstallationen om PDF-indatadokumentet är baserat på ett Acrobat-formulär eller ett statiskt XFA-formulär. Om PDF-indatadokumentet är ett dynamiskt XFA-formulär måste utdatatjänsten ingå i installationen av AEM-formulär. Om utdatatjänsten inte ingår i AEM-formulärsinstallationen när ett dynamiskt XFA-formulär sätts ihop genereras ett undantag. Se [Skapa dokumentutdataströmmar](/help/forms/developing/creating-document-output-streams.md).
+Med Assembler-tjänsten kan du sammanställa icke-interaktiva PDF-dokument utan att Output-tjänsten ingår i installationen av AEM formulär om PDF-indatadokumentet är baserat på ett Acrobat-formulär eller ett statiskt XFA-formulär. Om PDF-indatadokumentet är ett dynamiskt XFA-formulär måste utdatatjänsten ingå i installationen av AEM formulär. Om utdatatjänsten inte är en del av installationen av AEM formulär när ett dynamiskt XFA-formulär sätts ihop genereras ett undantag. Se [Skapa dokumentutdataströmmar](/help/forms/developing/creating-document-output-streams.md).
 
 >[!NOTE]
 >
@@ -46,7 +49,7 @@ Med Assembler-tjänsten kan du sammanställa icke-interaktiva PDF-dokument utan 
 
 >[!NOTE]
 >
->Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
@@ -73,10 +76,10 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
+* adobe-utilities.jar (krävs om AEM Forms används i JBoss)
+* jbossall-client.jar (krävs om AEM Forms används i JBoss)
 
-Om AEM Forms används på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms distribueras på.
+Om AEM Forms körs på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms är distribuerad på.
 
 **Skapa en Assembler-klient**
 
@@ -145,6 +148,7 @@ Sammanställa ett icke-interaktivt PDF-dokument med Assembler Service API (Java)
    * Ett `com.adobe.idp.Document` objekt som representerar DDX-dokumentet. Kontrollera att det här DDX-dokumentet innehåller värdet `inDoc` för PDF-källelementet.
    * Ett `com.adobe.idp.Document` objekt som innehåller det interaktiva PDF-dokumentet.
    * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` objekt som anger körningsalternativen, inklusive standardteckensnitt och jobbloggsnivå.
+
    Metoden returnerar `invokeOneDocument` ett `com.adobe.idp.Document` objekt som innehåller ett icke-interaktivt PDF-dokument.
 
 1. Spara det icke-interaktiva PDF-dokumentet.
@@ -174,7 +178,7 @@ Sammanställa ett icke-interaktivt PDF-dokument med Assembler Service API (webbt
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `AssemblerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -207,6 +211,7 @@ Sammanställa ett icke-interaktivt PDF-dokument med Assembler Service API (webbt
    * Ett `BLOB` objekt som representerar DDX-dokumentet
    * Ett `BLOB` objekt som representerar det interaktiva PDF-dokumentet
    * Ett `AssemblerOptionSpec` objekt som anger körningsalternativ
+
    Metoden returnerar `invokeOneDocument` ett `BLOB` objekt som innehåller ett icke-interaktivt PDF-dokument.
 
 1. Spara det icke-interaktiva PDF-dokumentet.
@@ -220,4 +225,4 @@ Sammanställa ett icke-interaktivt PDF-dokument med Assembler Service API (webbt
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
