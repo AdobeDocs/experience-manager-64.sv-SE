@@ -4,6 +4,9 @@ description: Segmentera innehållet i CRX-databasen baserat på kundorganisation
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '230'
+ht-degree: 0%
 
 ---
 
@@ -15,11 +18,11 @@ Med funktionen Multi-tenancy kan du dela upp innehåll i CRX baserat på organis
 Adobe Experience Manager (AEM) Assets lagrar data för varje organisation på olika sätt. Varje organisationsspecifik sökväg identifieras av organisationens prefix och organisations-ID.
 som ingår i den traditionella platsen där olika typer av resurser lagras i CRX.
 
-Om du till exempel skapar en mapp med namnet `Demo`, lagrar AEM-resurser som standard mappen på `../content/dam/Demo` platsen i CRX. När funktionen för flera innehavare är aktiverad kan du lagra data på `../content/dam/<organization prefix>/<organization id>Demo`.
+Om du till exempel skapar en mapp med namnet `Demo`, lagrar AEM som standard mappen på `../content/dam/Demo` platsen i CRX. När funktionen för flera innehavare är aktiverad kan du lagra data på `../content/dam/<organization prefix>/<organization id>Demo`.
 
-För Adobe Marketing Cloud-användare av AEM Assets (on-demand) som är tilldelade till `aodpremium` organisationen kan du till exempel använda funktionen multi-tenancy för att konfigurera följande sökväg till `../content/dam/mac/aodpremiumDemo`och dela upp innehållet. I det här exemplet `mac` är organisationsprefixet och `aodpremium` organisations-ID.
+För Adobe Marketing Cloud-användare av AEM Assets (on-demand) som är tilldelade till `aodpremium` organisationen kan du till exempel använda funktionen multi-tenancy för att konfigurera följande sökväg till `../content/dam/mac/aodpremiumDemo`och separera innehållet. I det här exemplet `mac` är organisationsprefixet och `aodpremium` organisations-ID.
 
-Baserat på användarens organisation och ID visas den här kvalificerade sökvägen i gränssnittet för AEM Resurser och i olika guider, inklusive guiderna för att skapa Flytta och Fragment för att framtvinga en gruppering.
+Baserat på användarens organisation och ID visas den här kvalificerade sökvägen i AEM Assets-gränssnittet och i olika guider, inklusive guiderna för att flytta och skapa fragment för att framtvinga en gruppering.
 
 Med funktionen för flera innehavare kan du välja följande typer av resurser och komponenter:
 
