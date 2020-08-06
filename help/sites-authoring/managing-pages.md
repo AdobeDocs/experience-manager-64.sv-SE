@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a727c57c-87a9-46c2-8d9b-1348f1ed8ac4
 translation-type: tm+mt
 source-git-commit: 1bbcf870170a5bfae68861614fe1a0a83d86ff61
+workflow-type: tm+mt
+source-wordcount: '2307'
+ht-degree: 5%
 
 ---
 
@@ -31,7 +34,7 @@ I det här avsnittet beskrivs hur du skapar och hanterar sidor med Adobe Experie
 
 ## Organisera din webbplats {#organizing-your-website}
 
-Som författare måste du ordna din webbplats i AEM. Detta innebär att du skapar och namnger innehållssidorna så att:
+Som författare måste du ordna din webbplats inom AEM. Detta innebär att du skapar och namnger innehållssidorna så att:
 
 * Du kan enkelt hitta dem i redigeringsmiljön
 * Besökare på webbplatsen kan enkelt hitta dem i publiceringsmiljön
@@ -98,7 +101,7 @@ När du skapar en ny sida finns det två nyckelfält:
 
 Sidans **titel** och **namn** kan skapas separat men hänger ihop:
 
-* När du skapar en sida är endast fältet **Titel** obligatoriskt. Om inget **namn** anges när sidan skapas genererar AEM ett namn från de 64 första tecknen i titeln (med den validering som anges nedan). Endast de första 64 tecknen används för att ge stöd åt de bästa sätten med namn på korta sidor.
+* När du skapar en sida är endast fältet **Titel** obligatoriskt. Om inget **namn** anges när sidan skapas, kommer AEM att generera ett namn från de 64 första tecknen i titeln (med den validering som anges nedan). Endast de första 64 tecknen används för att ge stöd åt de bästa sätten med namn på korta sidor.
 
 * Om ett sidnamn anges manuellt av författaren gäller inte gränsen på 64 tecken, men andra tekniska begränsningar på sidnamnets längd kan förekomma.
 
@@ -108,7 +111,7 @@ Sidans **titel** och **namn** kan skapas separat men hänger ihop:
 >
 >Tänk också på att vissa webbläsare (t.ex. äldre versioner av IE) bara kan acceptera URL:er med en viss längd, så det finns också tekniska skäl att hålla sidnamnen korta.
 
-När du skapar en ny sida [validerar AEM sidans namn enligt konventionerna](/help/sites-developing/naming-conventions.md) från AEM och JCR.
+När du skapar en ny sida [validerar AEM sidnamnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som AEM och JCR har infört.
 
 Minsta tillåtna tecken är:
 
@@ -122,7 +125,7 @@ Fullständig information om alla tillåtna tecken finns i [namnkonventionen](/he
 
 >[!NOTE]
 >
->Om AEM körs på en [MongoMK persistence Manager-distribution](/help/sites-deploying/recommended-deploys.md)är sidnamnen begränsade till 150 tecken.
+>Om AEM körs på en distribution [av](/help/sites-deploying/recommended-deploys.md)MongoMK persistence Manager begränsas sidnamnen till 150 tecken.
 
 #### Titel {#title}
 
@@ -135,7 +138,7 @@ Om du bara anger en **sidtitel** när du skapar en ny sida härleds sidans **nam
 
 #### Namn {#name}
 
-När du anger ett **sidnamn** när du skapar en ny sida, [validerar AEM namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) från AEM och JCR. Du kan inte skicka ogiltiga tecken i fältet **Namn** . När AEM identifierar ogiltiga tecken markeras fältet med en förklaring.
+När du anger ett **sidnamn** när du skapar en ny sida, [validerar AEM namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som AEM och JCR har infört. Du kan inte skicka ogiltiga tecken i fältet **Namn** . När AEM upptäcker ogiltiga tecken markeras fältet med en förklaring.
 
 ![screen_shot_2018-03-22at104817](assets/screen_shot_2018-03-22at104817.png)
 
@@ -165,7 +168,7 @@ AEM innehåller flera färdiga mallar. Vilka mallar som är tillgängliga beror 
 
 ### Komponenter {#components}
 
-Komponenterna är de element som tillhandahålls av AEM så att du kan lägga till specifika typer av innehåll. AEM har en rad [färdiga komponenter](/help/sites-authoring/default-components-console.md) med omfattande funktionalitet. Bland dessa finns:
+Komponenterna är de element som AEM tillhandahåller så att du kan lägga till specifika typer av innehåll. AEM innehåller en rad [färdiga komponenter](/help/sites-authoring/default-components-console.md) med omfattande funktionalitet. Bland dessa finns:
 
 * Text
 * Bild
@@ -195,12 +198,14 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
    * Välj den mall som du vill använda för att skapa den nya sidan och klicka/tryck sedan på **Nästa** för att fortsätta.
    * **Avbryt** om du vill avbryta processen.
+
    ![chlimage_1-8](assets/chlimage_1-8.png)
 
 1. Från det sista steget i guiden kan du antingen:
 
    * Använd de tre flikarna för att ange de [sidegenskaper](/help/sites-authoring/editing-page-properties.md) som du vill tilldela den nya sidan och klicka/tryck sedan på **Skapa** för att skapa sidan.
    * Använd **Bakåt** för att återgå till mallval.
+
    Nyckelfält är:
 
    * **Titel**:
@@ -209,8 +214,9 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
    * **Namn**:
 
       * Detta används för att generera URI:n. Om inget anges hämtas namnet från titeln.
-      * Om du anger ett **sidnamn** när du skapar en ny sida, [validerar AEM namnet enligt de konventioner](/help/sites-developing/naming-conventions.md) som AEM och JCR har infört.
-      * Du **kan inte skicka ogiltiga tecken** i **namnfältet** . När AEM identifierar ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
+      * Om du anger ett **sidnamn** när du skapar en ny sida, [validerar AEM namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som AEM och JCR har angett.
+      * Du **kan inte skicka ogiltiga tecken** i **namnfältet** . När AEM upptäcker ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
+
    >[!NOTE]
    >
    >Se [Namnkonventioner](#page-naming-conventions)för sidor.
@@ -245,6 +251,7 @@ När du har skapat en sida eller navigerat till en befintlig sida (i konsolen) k
 
    * [Snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions)
    * [Markeringsläget](/help/sites-authoring/basic-handling.md#product-navigation) och verktygsfältet
+
    Välj sedan ikonen **Redigera** :
 
    ![screen_shot_2018-03-22at105355](assets/screen_shot_2018-03-22at105355.png)
@@ -264,6 +271,7 @@ Du kan kopiera en sida och alla dess underordnade sidor till en ny plats:
 
    * [Snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions)
    * [Markeringsläget](/help/sites-authoring/basic-handling.md#product-navigation) och verktygsfältet
+
    Sedan ikonen **Kopiera** :
 
    ![screen_shot_2018-03-22at105425](assets/screen_shot_2018-03-22at105425.png)
@@ -299,13 +307,14 @@ Proceduren för att flytta eller byta namn på en sida är i princip densamma oc
 * Flytta sidan utan att byta namn på den.
 * Flytta och byt namn samtidigt.
 
-Med AEM kan du uppdatera interna länkar som refererar till sidan som byter namn/flyttas. Detta kan göras sida för sida för att ge full flexibilitet.
+I AEM finns funktioner för att uppdatera interna länkar som refererar till sidan som byter namn/flyttas. Detta kan göras sida för sida för att ge full flexibilitet.
 
 1. Navigera tills du hittar sidan som du vill flytta.
 1. Välj sida med någon av följande metoder:
 
    * [Snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions)
    * [Markeringsläget](/help/sites-authoring/basic-handling.md#product-navigation) och verktygsfältet
+
    Välj sedan ikonen **Flytta** sida:
 
    ![screen_shot_2018-03-22at105534](assets/screen_shot_2018-03-22at105534.png)
@@ -316,6 +325,7 @@ Med AEM kan du uppdatera interna länkar som refererar till sidan som byter namn
 
    * Ange det namn du vill att sidan ska ha när den har flyttats och klicka/tryck sedan på **Nästa** för att fortsätta.
    * **Avbryt** om du vill avbryta processen.
+
    ![chlimage_1-11](assets/chlimage_1-11.png)
 
    Sidnamnet kan vara detsamma om du bara flyttar sidan.
@@ -331,6 +341,7 @@ Med AEM kan du uppdatera interna länkar som refererar till sidan som byter namn
       * Markera målet genom att klicka på målets miniatyrbild.
       * Klicka på **Nästa** för att fortsätta.
    * Använd **Bakåt** för att återgå till sidnamnsspecifikationen.
+
    ![chlimage_1-12](assets/chlimage_1-12.png)
 
    >[!NOTE]
@@ -397,6 +408,7 @@ Du kan skapa mappar som hjälper dig att ordna dina filer och sidor.
 >* Mappar kan bara skapas direkt under **Platser** eller under andra mappar. De kan inte skapas under en sida.
 >* Standardåtgärderna för att flytta, kopiera, klistra in, ta bort, publicera, avpublicera och visa/redigera egenskaper kan utföras på en mapp.
 >* Det går inte att välja mappar i en live-kopia.
+
 >
 
 
