@@ -1,6 +1,6 @@
 ---
-title: Fylla i formulär i förväg med flödeslayouter
-seo-title: Fylla i formulär i förväg med flödeslayouter
+title: Förifyll Forms med flödeslayouter
+seo-title: Förifyll Forms med flödeslayouter
 description: 'null'
 seo-description: 'null'
 uuid: 93ccb496-e1c2-4b79-8e89-7a2abfce1537
@@ -11,13 +11,16 @@ topic-tags: operations
 discoiquuid: 30a12fc6-07b8-4c7c-b9e2-caa2bec0ac48
 translation-type: tm+mt
 source-git-commit: 8c151c582d4355b98445ec4bf6510d668cb0d5bd
+workflow-type: tm+mt
+source-wordcount: '3489'
+ht-degree: 0%
 
 ---
 
 
-# Fylla i formulär i förväg med flödeslayouter {#prepopulating-forms-with-flowable-layouts1}
+# Förifyll Forms med flödeslayouter {#prepopulating-forms-with-flowable-layouts1}
 
-## Fylla i formulär i förväg med flödeslayouter {#prepopulating-forms-with-flowable-layouts2}
+## Förifyll Forms med flödeslayouter {#prepopulating-forms-with-flowable-layouts2}
 
 När du fyller i formulär i förväg visas data för användarna i ett återgivet formulär. Anta till exempel att en användare loggar in på en webbplats med ett användarnamn och lösenord. Om autentiseringen lyckas frågar klientprogrammet om det finns användarinformation i en databas. Informationen sammanfogas i formuläret och sedan återges formuläret för användaren. Det innebär att användaren kan visa anpassade data i formuläret.
 
@@ -29,14 +32,14 @@ Att fylla i ett formulär i förväg har följande fördelar:
 
 Följande två XML-datakällor kan fylla i ett formulär i förväg:
 
-* En XDP-datakälla, som är XML som följer XFA-syntax (eller XFDF-data för att fylla i ett formulär som skapats med Acrobat i förväg).
+* En XDP-datakälla, som är XML som följer XFA-syntax (eller XFDF-data för att fylla i ett formulär som skapats med Acrobat) i förväg.
 * En godtycklig XML-datakälla som innehåller namn/värde-par som matchar formulärets fältnamn (exemplen i det här avsnittet använder en godtycklig XML-datakälla).
 
 Det måste finnas ett XML-element för varje formulärfält som du vill fylla i i i förväg. XML-elementnamnet måste matcha fältnamnet. Ett XML-element ignoreras om det inte motsvarar ett formulärfält eller om XML-elementnamnet inte matchar fältnamnet. Det är inte nödvändigt att matcha den ordning i vilken XML-elementen visas, förutsatt att alla XML-element har angetts.
 
 När du fyller i ett formulär som redan innehåller data i förväg måste du ange de data som redan visas i XML-datakällan. Anta att ett formulär som innehåller 10 fält innehåller data i fyra fält. Anta sedan att du vill fylla i de återstående sex fälten i förväg. I det här fallet måste du ange 10 XML-element i XML-datakällan som används för att fylla i formuläret i förväg. Om du bara anger sex element är de fyra ursprungliga fälten tomma.
 
-Du kan t.ex. fylla i ett formulär i förväg, t.ex. exempelbekräftelseformuläret. (Se&quot;Bekräftelseformulär&quot; i [Återge interaktiva PDF-formulär](/help/forms/developing/rendering-interactive-pdf-forms.md).)
+Du kan t.ex. fylla i ett formulär i förväg, t.ex. exempelbekräftelseformuläret. (Se&quot;Bekräftelseformulär&quot; i [Återgivning av interaktiv PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md).)
 
 Om du vill fylla i exempelbekräftelseformuläret i förväg måste du skapa en XML-datakälla som innehåller tre XML-element som matchar de tre fälten i formuläret. Formuläret innehåller följande tre fält: `FirstName`, `LastName`och `Amount`. Det första steget är att skapa en XML-datakälla som innehåller XML-element som matchar fälten i formulärdesignen. Nästa steg är att tilldela datavärden till XML-elementen, vilket visas i följande XML-kod.
 
@@ -54,7 +57,7 @@ När du har fyllt i bekräftelseformuläret i förväg med den här XML-datakäl
 
 ### Fylla i formulär i förväg med flödeslayouter {#prepopulating_forms_with_flowable_layouts-1}
 
-Formulär med flödeslayouter är användbara för att visa en obestämd mängd data för användarna. Eftersom formulärets layout automatiskt anpassas till mängden data som sammanfogas, behöver du inte förbestämma en fast layout eller antal sidor för formuläret som du behöver göra med ett formulär med fast layout.
+Forms med flödeslayouter är användbara för att visa en obestämd mängd data för användarna. Eftersom formulärets layout automatiskt anpassas till mängden data som sammanfogas, behöver du inte förbestämma en fast layout eller antal sidor för formuläret som du behöver göra med ett formulär med fast layout.
 
 Ett formulär fylls vanligtvis i med data som hämtas under körning. Det innebär att du kan fylla i ett formulär i förväg genom att skapa en XML-datakälla i minnet och placera data direkt i XML-datakällan i minnet.
 
@@ -101,7 +104,7 @@ I följande diagram visas ett exempel på ett inköpsorderformulär. Information
 
 ### Om formulärdesign {#form-design-considerations}
 
-Formulär med flödeslayouter är baserade på formulärdesigner som har skapats i Designer. En formulärdesign specificerar en uppsättning regler för layout, presentation och datainhämtning, inklusive beräkning av värden baserat på användarens indata. Reglerna används när data anges i ett formulär. Fält som läggs till i ett formulär är delformulär som finns i formulärdesignen. I inköpsorderformuläret som visas i det föregående diagrammet är till exempel varje rad ett delformulär. Mer information om hur du skapar en formulärdesign som innehåller delformulär finns i [Skapa ett inköpsorderformulär med flödeslayout](https://www.adobe.com/go/learn_aemforms_qs_poformflowable_9).
+Forms med flödeslayouter är baserade på formulärdesigner som skapats i Designer. En formulärdesign specificerar en uppsättning regler för layout, presentation och datainhämtning, inklusive beräkning av värden baserat på användarens indata. Reglerna används när data anges i ett formulär. Fält som läggs till i ett formulär är delformulär som finns i formulärdesignen. I inköpsorderformuläret som visas i det föregående diagrammet är till exempel varje rad ett delformulär. Mer information om hur du skapar en formulärdesign som innehåller delformulär finns i [Skapa ett inköpsorderformulär med flödeslayout](https://www.adobe.com/go/learn_aemforms_qs_poformflowable_9).
 
 ### Om undergrupper med data {#understanding-data-subgroups}
 
@@ -173,7 +176,7 @@ Observera att varje datagrupp innehåller fyra XML-element som motsvarar denna i
 * Antal artiklar
 * Enhetspris
 
-Namnet på en undergrupps överordnade XML-element måste matcha namnet på delformuläret som finns i formulärdesignen. I föregående diagram kan du till exempel observera att namnet på undergruppens överordnade XML-element är `detail`. Detta motsvarar namnet på delformuläret som finns i formulärdesignen som inköpsorderformuläret baseras på. Om namnet på undergruppens överordnade XML-element och delformuläret inte matchar, fylls inte formuläret på serversidan i i förväg.
+Namnet på en undergrupps överordnade XML-element för data måste matcha namnet på delformuläret som finns i formulärdesignen. I föregående diagram kan du till exempel observera att namnet på undergruppens överordnade XML-element är `detail`. Detta motsvarar namnet på delformuläret som finns i formulärdesignen som inköpsorderformuläret baseras på. Om namnet på undergruppens överordnade XML-element och delformuläret inte matchar, fylls inte formuläret på serversidan i i förväg.
 
 Varje dataundergrupp måste innehålla XML-element som matchar fältnamnen i delformuläret. Delformuläret som finns i formulärdesignen innehåller följande fält: `detail`
 
@@ -184,11 +187,11 @@ Varje dataundergrupp måste innehålla XML-element som matchar fältnamnen i del
 
 >[!NOTE]
 >
->Om du försöker fylla i ett formulär i förväg med en datakälla som innehåller upprepade XML-element och du anger att `RenderAtClient` alternativet ska vara `No`sammanfogas endast den första dataposten i formuläret. Om du vill vara säker på att alla dataposter sammanfogas i formuläret anger du värdet `RenderAtClient` till `Yes`. Mer information om `RenderAtClient` alternativet finns i [Återgivningsformulär på klienten](/help/forms/developing/rendering-forms-client.md).
+>Om du försöker fylla i ett formulär i förväg med en datakälla som innehåller upprepade XML-element och du anger att `RenderAtClient` alternativet ska vara `No`sammanfogas endast den första dataposten i formuläret. Om du vill vara säker på att alla dataposter sammanfogas i formuläret anger du värdet `RenderAtClient` till `Yes`. Mer information om `RenderAtClient` alternativet finns i [Återge Forms på klienten](/help/forms/developing/rendering-forms-client.md).
 
 >[!NOTE]
 >
->Mer information om Forms-tjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Forms finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -231,17 +234,17 @@ Du återger ett förifyllt formulär precis som andra formulär. Den enda skilln
 
 [Snabbstart för Forms Service API](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[Återgivning av interaktiva PDF-formulär](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[Återger interaktiv PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[Skapa webbprogram som återger formulär](/help/forms/developing/creating-web-applications-renders-forms.md)
+[Skapa webbprogram som återger Forms](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ### Fylla i formulär i förväg med Java API {#prepopulating-forms-using-the-java-api}
 
-Så här fyller du i ett formulär i förväg med en flödeslayout med hjälp av Forms API (Java):
+Så här fyller du i ett formulär med flödeslayout med Forms API (Java) i förväg:
 
 1. Inkludera projektfiler
 
-   Inkludera JAR-klientfiler, t.ex. adobe-forms-client.jar, i Java-projektets klassökväg. Mer information om var dessa filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+   Inkludera JAR-klientfiler, t.ex. adobe-forms-client.jar, i Java-projektets klassökväg. Information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 1. Skapa en XML-datakälla i minnet
 
@@ -294,6 +297,7 @@ Så här fyller du i ett formulär i förväg med en flödeslayout med hjälp av
    * Ett `PDFFormRenderSpec` objekt som lagrar körningsalternativ.
    * Ett `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
    * Ett `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
+
    Metoden returnerar `renderPDFForm` ett `FormsResult` objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
 
    * Skapa ett `javax.servlet.ServletOutputStream` objekt som används för att skicka en formulärdataström till klientens webbläsare.
@@ -305,7 +309,7 @@ Så här fyller du i ett formulär i förväg med en flödeslayout med hjälp av
 
 **Se även**
 
-[Snabbstart (SOAP-läge): Fylla i formulär i förväg med flödeslayouter med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
+[Snabbstart (SOAP-läge): Förifyll Forms med flödeslayouter med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -317,7 +321,7 @@ Så här fyller du i ett formulär med flödeslayout med Forms API (webbtjänste
 
 1. Inkludera projektfiler
 
-   * Skapa Java-proxyklasser som använder Forms-tjänstens WSDL. (Se [Skapa Java-proxyklasser med hjälp av Apache-axeln](/help/forms/developing/invoking-aem-forms-using-web.md#creating-java-proxy-classes-using-apache-axis).)
+   * Skapa Java-proxyklasser som använder Forms tjänst-WSDL. (Se [Skapa Java-proxyklasser med hjälp av Apache-axeln](/help/forms/developing/invoking-aem-forms-using-web.md#creating-java-proxy-classes-using-apache-axis).)
    * Inkludera Java-proxyklasserna i klassökvägen.
 
 1. Skapa en XML-datakälla i minnet
@@ -367,13 +371,14 @@ Så här fyller du i ett formulär med flödeslayout med Forms API (webbtjänste
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget.
    * Ett `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Se till att du använder det objekt `BLOB` som skapades i steg ett och två.
-   * Ett `PDFFormRenderSpecc` objekt som lagrar körningsalternativ. Mer information finns i API-referens för [AEM-formulär](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * Ett `PDFFormRenderSpecc` objekt som lagrar körningsalternativ. Mer information finns i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
    * Ett `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
    * Ett `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
    * Ett tomt `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av metoden. Detta används för att lagra det återgivna PDF-formuläret.
    * Ett tomt `javax.xml.rpc.holders.LongHolder` objekt som fylls i av metoden. (Det här argumentet lagrar antalet sidor i formuläret).
    * Ett tomt `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden. (Det här argumentet lagrar språkets värde).
    * Ett tomt `com.adobe.idp.services.holders.FormsResultHolder` objekt som innehåller resultatet av den här åtgärden.
+
    Metoden `renderPDFForm` fyller i det `com.adobe.idp.services.holders.FormsResultHolder` objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
 
    * Skapa ett `FormResult` objekt genom att hämta värdet för `com.adobe.idp.services.holders.FormsResultHolder` objektets `value` datamedlem.
@@ -383,11 +388,12 @@ Så här fyller du i ett formulär med flödeslayout med Forms API (webbtjänste
    * Skapa ett `javax.servlet.ServletOutputStream` objekt som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse` objektets `getOutputStream` metod.
    * Skapa en bytearray och fyll i den genom att anropa `BLOB` objektets `getBinaryData` metod. Den här aktiviteten tilldelar innehållet i `FormsResult` objektet till bytearrayen.
    * Anropa `javax.servlet.http.HttpServletResponse` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` metoden.
+
    >[!NOTE]
    >
    >Metoden `renderPDFForm` fyller i det `com.adobe.idp.services.holders.FormsResultHolder` objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
 
 **Se även**
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
