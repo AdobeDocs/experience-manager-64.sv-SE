@@ -1,8 +1,8 @@
 ---
-title: Konfigurera för AEM-appar
-seo-title: Konfigurera för AEM-appar
-description: Lär dig hur du konfigurerar AEM-appar.
-seo-description: Lär dig hur du konfigurerar AEM-appar.
+title: Konfigurera för AEM program
+seo-title: Konfigurera för AEM program
+description: Lär dig hur du konfigurerar AEM.
+seo-description: Lär dig hur du konfigurerar AEM.
 uuid: ab9acd93-da7f-4bb7-8d26-224044899068
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: 34f24837-f5e2-41f0-a359-fdb695e1b8f2
 translation-type: tm+mt
 source-git-commit: f1a5e4c5c8411e10887efab517115fee0fd1890a
+workflow-type: tm+mt
+source-wordcount: '151'
+ht-degree: 0%
 
 ---
 
 
-# Konfigurera för AEM-appar{#configuring-for-aem-apps}
+# Konfigurera för AEM program{#configuring-for-aem-apps}
 
 Med Adobe Experience Manager Apps kan du uppdatera innehållet i programmet direkt (OTA). Det uppdaterade innehållet lagras på publiceringsinstansen. Om du vill att appen på enheten ska kunna ansluta till publiceringsinstansen och söka efter uppdateringar måste publiceringsinstansen konfigureras så att en tom referensrubrik tillåts.
 
@@ -26,7 +29,7 @@ Så här konfigurerar du referenspunktsfiltertjänsten:
 * Öppna Apache Felix-konsolen (**konfigurationer**) på:
 * https://&lt;server>:&lt;portnummer>/system/console/configMgr
 * Logga in som administratör.
-* Välj: **** filtret *Apache Sling Referrer*
+* Välj: **** *Apache Sling Referer-filter*
 * Markera fältet Tillåt tomt om du vill tillåta tomma/saknade hänvisningsrubriker.
 * Klicka på **Spara** för att spara ändringarna.
 
