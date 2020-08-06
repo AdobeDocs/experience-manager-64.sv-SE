@@ -1,8 +1,8 @@
 ---
 title: Utveckla (allmän)
 seo-title: Utveckla (allmän)
-description: Integreringsramverket innehåller ett integreringslager med ett API som gör att du kan skapa AEM-komponenter för e-handelsfunktioner
-seo-description: Integreringsramverket innehåller ett integreringslager med ett API som gör att du kan skapa AEM-komponenter för e-handelsfunktioner
+description: Integreringsramverket innehåller ett integreringslager med ett API som gör att du kan skapa AEM komponenter för e-handelsfunktioner
+seo-description: Integreringsramverket innehåller ett integreringslager med ett API som gör att du kan skapa AEM komponenter för e-handelsfunktioner
 uuid: 393bb28a-9744-44f4-9796-09228fcd466f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -24,9 +24,9 @@ ht-degree: 0%
 >
 >[API-dokumentation](/help/sites-developing/ecommerce.md#api-documentation) finns också tillgänglig.
 
-Integreringsramverket innehåller ett integreringslager med ett API. På så sätt kan du skapa AEM-komponenter för e-handelsfunktioner (oberoende av din specifika e-handelsmotor). Man kan också använda den interna CRX-databasen eller koppla in ett e-handelssystem och hämta produktdata till AEM.
+Integreringsramverket innehåller ett integreringslager med ett API. Detta gör att du kan bygga AEM komponenter för e-handelsfunktioner (oberoende av din specifika e-handelsmotor). Man kan också använda den interna CRX-databasen eller koppla in ett e-handelssystem och hämta in produktdata i AEM.
 
-Ett antal färdiga AEM-komponenter finns för att använda integreringslagret. För närvarande är följande:
+Det finns ett antal färdiga AEM för att använda integreringslagret. För närvarande är följande:
 
 * En produktvisningskomponent
 * En kundvagn
@@ -35,11 +35,11 @@ Ett antal färdiga AEM-komponenter finns för att använda integreringslagret. F
 * Checka ut
 * Sökning
 
-För sökning finns en integreringsfunktion som gör att du kan använda AEM-sökningen, en tredjepartssökning (som Search&amp;Promote) eller en kombination av dessa.
+För sökningar finns en integreringsfunktion som gör att du kan använda AEM sökning, en tredjepartssökning (som Search &amp; Promote) eller en kombination av dessa.
 
 ## Val av e-handelsmotor {#ecommerce-engine-selection}
 
-eCommerce-ramverket kan användas tillsammans med alla e-handelslösningar, och den motor som används måste identifieras av AEM - även när den allmänna AEM-motorn används:
+eCommerce-ramverket kan användas tillsammans med alla e-handelslösningar, och den motor som används måste identifieras av AEM - även när den AEM generiska motorn används:
 
 * eCommerce Engines är OSGi-tjänster som stöder `CommerceService` gränssnittet
 
@@ -59,7 +59,7 @@ eCommerce-ramverket kan användas tillsammans med alla e-handelslösningar, och 
    * En `cq:commerceProvider` egenskap med värdet geometrixx korrelerar till exempel till OSGi-konfigurationen för **Day CQ Commerce Factory för Geometrixx-Outdoor** (`com.adobe.cq.commerce.hybris.impl.GeoCommerceServiceFactory`), där parametern `commerceProvider` också har värdet `geometrixx`.
    * Här kan ytterligare egenskaper konfigureras (när det är lämpligt och tillgängligt).
 
-I en standard-AEM-installation krävs en specifik implementering, till exempel:
+I en AEM krävs en specifik implementering, till exempel:
 
 |  |  |
 |---|---|
@@ -84,7 +84,7 @@ I en standard-AEM-installation krävs en specifik implementering, till exempel:
 
 >[!NOTE]
 >
->Med CRXDE Lite kan du se hur detta hanteras i produktkomponenten för den allmänna implementeringen av AEM:
+>Med CRXDE Lite kan du se hur detta hanteras i produktkomponenten för den AEM allmänna implementeringen:
 >
 >`/apps/geometrixx-outdoors/components/product`
 
@@ -125,16 +125,17 @@ Alla produktresurser kan representeras av en `Product API`. De flesta anrop i pr
 >
 >I själva verket bestäms en variantaxel av vad som än `Product.getVariantAxes()` returnerar:
 >
->* för den allmänna implementeringen läser AEM den från en egenskap i produktdata ( `cq:productVariantAxes`)
+>* för den generiska implementeringen AEM läsa den från en egenskap i produktdata ( `cq:productVariantAxes`)
 >
 >
 Produkter (i allmänhet) kan ha många olika axlar, men produktkomponenten som finns i paketet hanterar bara två:
 >
 >1. `size`
 >1. plus ytterligare
+
 >
 >   
-Den här ytterligare varianten väljs via egenskapen `variationAxis` för produktreferensen (vanligtvis `color` för Geometrixx Outdoor).
+Den här ytterligare varianten väljs via egenskapen `variationAxis` för produktreferensen (vanligtvis `color` för Geometrixx Outdoors).
 
 #### Produktreferenser och PIM-data {#product-references-and-pim-data}
 
@@ -258,7 +259,7 @@ public class AxisFilter implements VariantFilter {
          * En produktnod som innehåller alla egenskaper lokalt (och inte innehåller någon productData-egenskap) ärver produktattribut direkt från sina egna överordnade.
 
 
-* **AEM-generisk produktstruktur**
+* **AEM produktstruktur**
 
    * Varje variant måste ha en egen lövnod.
    * Produktgränssnittet representerar både produkter och varianter, men den relaterade databasnoden är specifik för vilken den är.
@@ -334,16 +335,16 @@ public class AxisFilter implements VariantFilter {
 
 * Lagring
 
-   * I de allmänna AEM-kundvagnarna sparas kundvagnarna i [ClientContext](/help/sites-administering/client-context.md)
+   * I det AEM generiska fallet lagras kundvagnar i [ClientContext](/help/sites-administering/client-context.md)
 
 **Personanpassning**
 
-* Personalisering bör alltid drivas via [ClientContext](/help/sites-administering/client-context.md).
+* Personalisering bör alltid ske via [ClientContext](/help/sites-administering/client-context.md).
 * En ClientContext `/version/` i kundvagnen skapas i samtliga fall:
 
    * Produkterna ska läggas till med hjälp av `CommerceSession.addCartEntry()` metoden.
 
-* Följande illustrerar ett exempel på kundvagnsinformation i ClientContext cart:
+* Följande illustrerar ett exempel på kundvagnsinformation i kundvagnen i ClientContext:
 
 ![chlimage_1-33](assets/chlimage_1-33.png)
 
@@ -476,9 +477,9 @@ Startpunkten för söknings-API är den `CommerceService#search` metod som retur
 
       * `DiscountPromotionHandler`som ger en absolut rabatt eller en procentuell rabatt som gäller för hela varukorgen
       * `PerfectPartnerPromotionHandler`, som ger en produkt i absolut eller procentuell rabatt om partnerprodukten också finns i kundvagnen
-   * ClientContext `SegmentMgr` löser segment och ClientContext `CartMgr` löser kampanjer. Varje kampanj som gäller minst ett löst segment kommer att utlösas.
+   * ClientContext `SegmentMgr` löser segment och ClientContext `CartMgr` löser problem. Varje kampanj som gäller minst ett löst segment kommer att utlösas.
 
-      * Utlösta kampanjer skickas tillbaka till servern via ett AJAX-anrop för att beräkna kundvagnen på nytt.
+      * Utlösta kampanjer skickas tillbaka till servern via ett AJAX samtal för att beräkna kundvagnen på nytt.
       * Utlösta kampanjer (och tillagda Vouchers) visas också på panelen ClientContext.
 
 
