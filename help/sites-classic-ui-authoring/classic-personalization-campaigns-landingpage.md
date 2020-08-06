@@ -1,8 +1,8 @@
 ---
 title: Landningssidor
 seo-title: Landningssidor
-description: 'Med funktionen för landningssidor kan du snabbt och enkelt importera en design och ett innehåll direkt till en AEM-sida. En webbutvecklare kan förbereda HTML-koden och andra resurser som kan importeras som en hel sida eller som endast en del av en sida. '
-seo-description: 'Med funktionen för landningssidor kan du snabbt och enkelt importera en design och ett innehåll direkt till en AEM-sida. En webbutvecklare kan förbereda HTML-koden och andra resurser som kan importeras som en hel sida eller som endast en del av en sida. '
+description: 'Med funktionen för landningssidor kan du snabbt och enkelt importera en design och ett innehåll direkt till en AEM sida. En webbutvecklare kan förbereda HTML-koden och andra resurser som kan importeras som en hel sida eller som endast en del av en sida. '
+seo-description: 'Med funktionen för landningssidor kan du snabbt och enkelt importera en design och ett innehåll direkt till en AEM sida. En webbutvecklare kan förbereda HTML-koden och andra resurser som kan importeras som en hel sida eller som endast en del av en sida. '
 uuid: bd01c7a4-473d-4f0e-8178-a7a937ef983a
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,19 +11,22 @@ content-type: reference
 discoiquuid: 8be3adcf-5b3a-40e9-8f87-1a6f39aab554
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '3193'
+ht-degree: 1%
 
 ---
 
 
 # Landningssidor{#landing-pages}
 
-Med funktionen för landningssidor kan du snabbt och enkelt importera en design och ett innehåll direkt till en AEM-sida. En webbutvecklare kan förbereda HTML-koden och andra resurser som kan importeras som en hel sida eller som endast en del av en sida. Funktionen är användbar för att skapa landningssidor för marknadsföring som bara är aktiva under en begränsad tid och som behöver skapas snabbt.
+Med funktionen för landningssidor kan du snabbt och enkelt importera en design och ett innehåll direkt till en AEM sida. En webbutvecklare kan förbereda HTML-koden och andra resurser som kan importeras som en hel sida eller som endast en del av en sida. Funktionen är användbar för att skapa landningssidor för marknadsföring som bara är aktiva under en begränsad tid och som behöver skapas snabbt.
 
 På den här sidan beskrivs följande:
 
-* hur landningssidorna ser ut i AEM, inklusive tillgängliga komponenter
+* hur landningssidorna ser ut i AEM med tillgängliga komponenter
 * hur du skapar en landningssida och importerar ett designpaket
-* Så här arbetar du med landningssidor i AEM
+* Arbeta med landningssidor i AEM
 * konfigurera mobila landningssidor
 
 Förberedelsen av designpaketet för import beskrivs i [Utöka och konfigurera designimporteraren](/help/sites-administering/extending-the-design-importer-for-landingpages.md). Integrering med Adobe Analytics ingår i [Integrering av landningssidor med Adobe Analytics.](/help/sites-administering/integrating-landing-pages-with-adobe-analytics.md)
@@ -32,11 +35,11 @@ Förberedelsen av designpaketet för import beskrivs i [Utöka och konfigurera d
 
 Landningssidor är ensidiga eller flersidiga webbplatser som utgör&quot;slutpunkten&quot; för en marknadsföringsstrategi, till exempel e-post, lösenord/banners, sociala medier. En landningssida kan tjäna olika syften, men alla har en sak gemensamt - besökaren bör utföra en uppgift och som definierar landningssidans framgång.
 
-Med funktionen för landningssidor i AEM kan marknadsförare arbeta med webbdesigners på byråer eller interna kreativa team för att skapa siddesign som enkelt kan importeras till AEM och fortfarande kan redigeras av marknadsförarna och publiceras under samma ledning som de andra AEM-baserade webbplatserna.
+Med funktionen för landningssidor i AEM kan marknadsförare arbeta med webbdesigners på byråer eller interna kreativa team för att skapa siddesign som enkelt kan importeras till AEM och fortfarande kan redigeras av marknadsförarna och publiceras under samma ledning som resten av de AEM sajterna.
 
 I AEM skapar du landningssidor genom att utföra följande steg:
 
-1. Skapa en sida i AEM som innehåller startsidornas arbetsyta. AEM levereras med ett exempel som kallas **för importsida**.
+1. Skapa en sida i AEM som innehåller startsidornas arbetsyta. AEM levereras med ett exempel med namnet **Importörssida**.
 
 1. [Förbered HTML och resurser.](/help/sites-administering/extending-the-design-importer-for-landingpages.md)
 1. Paketera resurserna i en ZIP-fil som här kallas designpaket.
@@ -45,7 +48,7 @@ I AEM skapar du landningssidor genom att utföra följande steg:
 
 ### Startsidor för datorer {#desktop-landing-pages}
 
-Ett exempel på landningssida i AEM ser ut så här:
+En exempellandningssida i AEM ser ut så här:
 
 ![chlimage_1-3](assets/chlimage_1-3.jpeg)
 
@@ -65,7 +68,7 @@ Startsidan för mobilen skapas som en underordnad sida till startsidan för skri
 
 ## Startsideskomponenter {#landing-page-components}
 
-Om du vill göra delar av HTML-koden som importeras redigerbara i AEM, kan du mappa innehåll inom landningssidorna HTML till AEM-komponenter direkt. Designimporteraren förstår följande komponenter som standard:
+Om du vill göra delar av HTML-koden som importeras redigerbara i AEM kan du mappa innehåll i landningssidorna till HTML AEM komponenter direkt. Designimporteraren förstår följande komponenter som standard:
 
 * Text, för all text
 * Titel, för innehåll i H1-6-taggar
@@ -211,7 +214,7 @@ När du konfigurerar någon av formulärkomponenterna är följande flikar tillg
 >
 >Fälten som visas varierar beroende på den enskilda komponenten.
 >
->Alla alternativ är inte tillgängliga för alla komponenter för lead-formulär. Mer information om dessa [vanliga inställningar](/help/sites-authoring/default-components.md#formsgroup)finns i Formulär.
+>Alla alternativ är inte tillgängliga för alla komponenter för lead-formulär. Mer information om dessa [vanliga inställningar](/help/sites-authoring/default-components.md#formsgroup)finns i Forms.
 
 #### Formulärexponenter för lead {#lead-form-components}
 
@@ -269,7 +272,7 @@ Det finns två flikar för **konfigurationsformulär** och **avancerat**:
 
 * Skapa lead
 * E-posttjänst: Skapa prenumerant och lägg till i listan - Använd om du använder en e-postleverantör som ExactTarget.
-* E-posttjänst: Skicka e-post med automatisk svarare - Använd om du använder en e-postleverantör som ExactTarget.
+* E-posttjänst: Skicka e-post med automatiskt svar - Använd om du använder en e-postleverantör som ExactTarget.
 * E-posttjänst: Avbeställ användare från listan - Använd detta om du använder en e-postleverantör som ExactTarget.
 * Avbeställ
 
@@ -277,7 +280,7 @@ Det finns två flikar för **konfigurationsformulär** och **avancerat**:
 
 **Läs in sökväg** är sökvägen till nodegenskaper som används för att läsa in fördefinierade värden i lead-formulärfälten.
 
-Detta är ett valfritt fält som anger sökvägen till en nod i databasen. När den här noden har egenskaper som matchar fältnamnen förinläses motsvarande fält i formuläret med egenskapsvärdet. Om det inte finns någon matchning innehåller fältet standardvärdet.
+Detta är ett valfritt fält som anger sökvägen till en nod i databasen. När den här noden har egenskaper som matchar fältnamnen, fylls lämpliga fält i formuläret i förväg med värdet för dessa egenskaper. Om det inte finns någon matchning innehåller fältet standardvärdet.
 
 **Klientvalidering** Anger om klientvalidering krävs för det här formuläret (servervalidering sker alltid). Detta kan du göra med komponenten Forms Captcha.
 
@@ -361,7 +364,7 @@ Om du har designpaketet klart beskrivs i följande steg hur du importerar design
 
 ## Arbeta med landningssidor {#working-with-landing-pages}
 
-Designen och resurserna för en landningssida skapas vanligtvis av en designer som kan finnas på en byrå i verktyg som de används för, till exempel Adobe Photoshop eller Adobe Dreamweaver. När designen är klar skickar designern en zip-fil med alla resurser till marknadsföringen. Kontakten inom marknadsföring ansvarar sedan för att ZIP-filen släpps till AEM och innehållet publiceras.
+Designen och resurserna för en landningssida skapas vanligtvis av en formgivare som kanske finns på en byrå i verktyg som de är vana vid, till exempel Adobe Photoshop eller Adobe Dreamweaver. När designen är klar skickar designern en zip-fil med alla resurser till marknadsföringen. Kontakten inom marknadsföring ansvarar sedan för att ZIP-filen släpps AEM och innehållet publiceras.
 
 Dessutom kan det hända att designern måste göra ändringar på landningssidan efter att den har importerats genom att redigera eller ta bort innehåll och konfigurera komponenterna för att ringa in och ta bort. Slutligen vill marknadsföraren förhandsgranska landningssidan och sedan aktivera kampanjen för att säkerställa att landningssidan publiceras.
 
@@ -413,11 +416,11 @@ Om du vill lägga till komponenter på landningssidan drar och släpper du kompo
 
 >[!NOTE]
 >
->Om en komponent på landningssidan inte kan redigeras måste du importera zip-filen igen när du har [ändrat HTML-filen.](/help/sites-administering/extending-the-design-importer-for-landingpages.md) Det innebär att de icke-redigerbara delarna inte konverterades till AEM-komponenter under importen.
+>Om en komponent på landningssidan inte kan redigeras måste du importera zip-filen igen när du har [ändrat HTML-filen.](/help/sites-administering/extending-the-design-importer-for-landingpages.md) Det innebär att de icke-redigerbara delarna inte konverterades till AEM under importen.
 
 ### Ta bort en landningssida {#deleting-a-landing-page}
 
-Att ta bort en landningssida är som att ta bort en vanlig AEM-sida.
+Att ta bort en landningssida är som att ta bort en normal AEM.
 
 Det enda undantaget är att när du tar bort en landningssida på en stationär dator tas även motsvarande mobillandningssida bort (om en sådan finns), men inte tvärtom.
 
