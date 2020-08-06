@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
 source-git-commit: d2b4e6599a7b1c01dc220a03b2be9aa55e5d7458
+workflow-type: tm+mt
+source-wordcount: '414'
+ht-degree: 0%
 
 ---
 
@@ -19,19 +22,19 @@ source-git-commit: d2b4e6599a7b1c01dc220a03b2be9aa55e5d7458
 
 Med [videokomponenten](/help/sites-authoring/default-components-foundation.md#video) kan du placera ett fördefinierat OTB-videoelement (körklar) på sidan.
 
-För att korrekt omkodning ska fungera måste administratören [installera MPEG och konfigurera AEM](#install-ffmpeg) separat. De kan också [konfigurera videoprofilerna](#configure-video-profiles) för användning med HTML5-element.
+För att korrekt transkodning ska ske måste administratören [installera MPEG och konfigurera AEM](#install-ffmpeg) separat. De kan också [konfigurera videoprofilerna](#configure-video-profiles) för användning med HTML5-element.
 
 ## Konfigurera videoprofiler {#configure-video-profiles}
 
-Du kanske vill definiera videoprofiler som ska användas för HTML5-element. De som väljs här används i ordning. Använd [designläget](/help/sites-authoring/default-components-designmode.md) (endast Classic UI) och välj fliken **[!UICONTROL Profiler]** :
+Du kanske vill definiera videoprofiler som ska användas för HTML5-element. De som väljs här används i ordning. Använd [designläget](/help/sites-authoring/default-components-designmode.md) (endast Classic UI) och välj **[!UICONTROL Profiles]** fliken:
 
 ![chlimage_1-317](assets/chlimage_1-317.png)
 
-Du kan också konfigurera designen för videokomponenter och parametrar för [!UICONTROL Uppspelning], [!UICONTROL Flash]och [!UICONTROL Avancerat].
+Du kan också konfigurera designen för videokomponenterna och -parametrarna för [!UICONTROL Playback], [!UICONTROL Flash]och [!UICONTROL Advanced].
 
-## Installera MPEG och konfigurera AEM {#install-ffmpeg}
+## Installera och konfigurera AEM {#install-ffmpeg}
 
-Video Component (videokomponenten) använder öppen källkod-produkten från tredje part för korrekt omkodning av videofilmer som kan hämtas från [https://ffmpeg.org/](https://ffmpeg.org/). När du har installerat MPEG måste du konfigurera AEM så att en viss ljudkodek och specifika körningsalternativ används.
+Video Component (videokomponenten) använder öppen källkod-produkten från tredje part för korrekt omkodning av videofilmer som kan hämtas från [https://ffmpeg.org/](https://ffmpeg.org/). När du har installerat mpeg måste du konfigurera AEM att använda en viss ljudkodek och specifika körningsalternativ.
 
 **Så här installerar du FFmpeg för din plattform**:
 
@@ -84,9 +87,9 @@ Video Component (videokomponenten) använder öppen källkod-produkten från tre
    >
    >Lägg över och redigera hela profilnoden och inte bara den egenskap som behöver ändras. Sådana resurser löses inte via SlingResourceMerger.
 
-1. Om du har ändrat någon av egenskaperna klickar du på **[!UICONTROL Spara alla]**.
+1. Om du har ändrat någon av egenskaperna klickar du på **[!UICONTROL Save All]**.
 
 >[!NOTE]
 >
->Arbetsflödesmodeller från OTB bevaras inte när du uppgraderar din AEM-instans. Adobe rekommenderar att du kopierar OOTB-arbetsflödesmodeller innan du redigerar dem. Kopiera till exempel OTB DAM Update Asset-modellen innan du redigerar omkodningssteget för MPEG i DAM Update Asset-modellen för att välja videoprofilnamn som fanns före uppgraderingen. Sedan kan du täcka över noden så att AEM kan hämta de anpassade ändringarna i OOTB-modellen `/apps` .
+>Arbetsflödesmodeller från OTB bevaras inte när du uppgraderar AEM. Adobe rekommenderar att du kopierar OOTB-arbetsflödesmodeller innan du redigerar dem. Kopiera till exempel OTB DAM Update Asset-modellen innan du redigerar omkodningssteget för MPEG i DAM Update Asset-modellen för att välja videoprofilnamn som fanns före uppgraderingen. Sedan kan du täcka över noden så att AEM kan hämta de anpassade ändringarna i OTB-modellen `/apps` .
 
