@@ -1,8 +1,8 @@
 ---
 title: SPA-modellroutning
 seo-title: SPA-modellroutning
-description: För program med en sida i AEM ansvarar appen för routningen. I det här dokumentet beskrivs routningsmekanismen, kontraktet och tillgängliga alternativ.
-seo-description: För program med en sida i AEM ansvarar appen för routningen. I det här dokumentet beskrivs routningsmekanismen, kontraktet och tillgängliga alternativ.
+description: För enkelsidiga program i AEM ansvarar appen för routningen. I det här dokumentet beskrivs routningsmekanismen, kontraktet och tillgängliga alternativ.
+seo-description: För enkelsidiga program i AEM ansvarar appen för routningen. I det här dokumentet beskrivs routningsmekanismen, kontraktet och tillgängliga alternativ.
 uuid: 93b4f85a-a240-42d4-95e2-e8b790df7723
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # SPA-modellroutning{#spa-model-routing}
 
-För program med en sida i AEM ansvarar appen för routningen. I det här dokumentet beskrivs routningsmekanismen, kontraktet och tillgängliga alternativ.
+För enkelsidiga program i AEM ansvarar appen för routningen. I det här dokumentet beskrivs routningsmekanismen, kontraktet och tillgängliga alternativ.
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ För program med en sida i AEM ansvarar appen för routningen. I det här dokume
 
 ## Projektdirigering {#project-routing}
 
-Appen äger routningen och implementeras sedan av projektutvecklarna. I det här dokumentet beskrivs routningen som är specifik för den modell som returneras av AEM-servern. Sidmodellens datastruktur visar den underliggande resursens URL. Det främsta projektet kan använda vilket anpassat bibliotek eller tredjepartsbibliotek som helst som tillhandahåller routningsfunktioner. När en väg förväntar sig ett fragment av modellen kan ett anrop till `PageModelManager.getData()` funktionen göras. När en modellväg har ändrats måste en händelse aktiveras för att varna avlyssningsbibliotek som t.ex. Page Editor.
+Appen äger routningen och implementeras sedan av projektutvecklarna. Det här dokumentet beskriver routningen som är specifik för den modell som returneras av AEM. Sidmodellens datastruktur visar den underliggande resursens URL. Det främsta projektet kan använda vilket anpassat bibliotek eller tredjepartsbibliotek som helst som tillhandahåller routningsfunktioner. När en väg förväntar sig ett fragment av modellen kan ett anrop till `PageModelManager.getData()` funktionen göras. När en modellväg har ändrats måste en händelse aktiveras för att varna avlyssningsbibliotek som t.ex. Page Editor.
 
 ## Arkitektur {#architecture}
 
@@ -66,7 +66,7 @@ Som standard aktiveras det här beteendet automatiskt. Om du vill inaktivera den
 <meta property="cq:pagemodel_router" content="disable"\>
 ```
 
-Observera att alla vägar i SPA bör motsvara en tillgänglig resurs i AEM (t.ex. &quot; `/content/mysite/mypage"`) eftersom användaren `PageModelManager` automatiskt försöker att läsa in motsvarande sidmodell när flödet har valts. Vid behov kan SPA även definiera en&quot;blocklista&quot; med vägar som ska ignoreras av `PageModelManager`:
+Observera att alla vägar i SPA bör motsvara en tillgänglig resurs i AEM (t.ex. &quot; `/content/mysite/mypage"`) eftersom `PageModelManager` automatiskt försöker läsa in motsvarande sidmodell när flödet har valts. Även om det vid behov kan SPA även definiera ett &quot;blockeringslista&quot; på rutter som ska ignoreras av `PageModelManager`följande:
 
 ```
 <meta property="cq:pagemodel_route_filters" content="route/not/found,^(.*)(?:exclude/path)(.*)"/>
