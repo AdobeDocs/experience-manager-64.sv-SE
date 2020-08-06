@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 09536869-3806-4b89-adfd-68f408298c55
 translation-type: tm+mt
 source-git-commit: 3fa80e73fb6e9400fbeba29d80aa57e080b6f333
+workflow-type: tm+mt
+source-wordcount: '248'
+ht-degree: 0%
 
 ---
 
@@ -31,11 +34,11 @@ Associerat innehåll ger anslutningen så att resurser (t.ex.) kan (valfritt) an
 
 För att kunna skapa en association måste du först lägga [till dina mediefiler i en samling](managing-collections-touch-ui.md#adding-assets-to-a-collection). När det är klart kan du:
 
-1. Öppna fragmentet och välj **[!UICONTROL Associerat innehåll]** på sidopanelen.
+1. Open your fragment and select **[!UICONTROL Associated Content]** from the side panel.
 
    ![chlimage_1-207](assets/chlimage_1-207.png)
 
-1. Välj **[!UICONTROL Associera innehåll]** eller **[!UICONTROL Associera samling]** (beroende på om några samlingar redan har associerats eller inte).
+1. Select **[!UICONTROL Associate Content]** or **[!UICONTROL Associate Collection]** (as appropriate, depending on whether any collections have already been associated or not).
 1. Välj önskad samling.
 
    Du kan också lägga till själva fragmentet i den valda samlingen; detta hjälper till att spåra.
