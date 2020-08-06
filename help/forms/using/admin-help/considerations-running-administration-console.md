@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 525c4afc-e109-4546-b78c-1efee63edc43
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '146'
+ht-degree: 0%
 
 ---
 
@@ -24,6 +27,7 @@ Detta är några saker att tänka på när du kör administrationskonsolen:
 
    * När du klickar på en länk återgår du till inloggningssidan i stället för till den förväntade länken.
    * Om du klickar på en länk visas ett behörighetsfel.
+
    Det bästa sättet är att köra administrationskonsolen från en annan webbläsare, till exempel Mozilla Firefox, för att säkerställa att inga länkar fungerar.
 
 * Använd inte omvända snedstreck () vid sökningar i administrationskonsolen.
