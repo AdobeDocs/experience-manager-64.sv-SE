@@ -1,8 +1,8 @@
 ---
 title: Grundläggande hantering
 seo-title: Grundläggande hantering
-description: En översikt över grundläggande hantering när du använder AEM-redigeringsmiljön. Den använder platskonsolen som grund.
-seo-description: En översikt över grundläggande hantering när du använder AEM-redigeringsmiljön. Den använder platskonsolen som grund.
+description: En översikt över grundläggande hantering när du använder AEM redigeringsmiljö. Den använder platskonsolen som grund.
+seo-description: En översikt över grundläggande hantering när du använder AEM redigeringsmiljö. Den använder platskonsolen som grund.
 uuid: ab488d7c-7b7f-4a23-a80c-99d37ac84246
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 9737ead9-e324-43c9-9780-7abd292f4e5b
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1215'
+ht-degree: 2%
 
 ---
 
@@ -19,11 +22,12 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 >[!NOTE]
 >
->* Den här sidan är utformad för att ge en översikt över grundläggande hantering när du använder AEM-redigeringsmiljön. Den använder **platskonsolen** som grund.
+>* Den här sidan är avsedd att ge en översikt över grundläggande hantering när du använder AEM redigeringsmiljö. Den använder **platskonsolen** som grund.
    >
    >
 * Vissa funktioner är inte tillgängliga i alla konsoler och/eller så är ytterligare funktioner tillgängliga i vissa konsoler. Specifik information om de enskilda konsolerna och deras tillhörande funktioner beskrivs mer ingående på andra sidor.
 >* Kortkommandon är tillgängliga i hela AEM. Särskilt när du [använder konsoler](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md) och [redigerar sidor](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md).
+
 >
 
 
@@ -48,27 +52,27 @@ Huvudkonsolerna är:
   </tr> 
   <tr> 
    <td><strong>Välkommen</strong></td> 
-   <td>Ger en översikt och direkt åtkomst (via länkar) till huvudfunktionerna i AEM.</td> 
+   <td>Ger en översikt och direkt åtkomst (via länkar) till AEM huvudfunktioner.</td> 
   </tr> 
   <tr> 
    <td><strong>Digital Assets</strong><br /> </td> 
-   <td>Med dessa konsoler kan du importera och <a href="/help/sites-classic-ui-authoring/classicui-assets.md">hantera digitala resurser</a> som bilder, videor, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM-instans. </td> 
+   <td>Med dessa konsoler kan du importera och <a href="/help/sites-classic-ui-authoring/classicui-assets.md">hantera digitala resurser</a> som bilder, videor, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM. </td> 
   </tr> 
   <tr> 
    <td><strong>Launches</strong></td> 
-   <td>Detta hjälper dig att hantera dina <a href="/help/sites-classic-ui-authoring/classic-launches.md">starter</a>; Med dessa kan du utveckla innehåll för en framtida release av en eller flera aktiverade webbsidor.<br /> <i>Obs! I det beröringskänsliga användargränssnittet finns mycket av samma funktioner i webbplatskonsolen tillsammans med referenslisten.</i> <i>Om det behövs kan konsolen nås från verktygskonsolen. välj Åtgärder och startar sedan.</i></td> 
+   <td>Detta hjälper dig att hantera dina <a href="/help/sites-classic-ui-authoring/classic-launches.md">starter</a>; Med dessa kan du utveckla innehåll för en framtida release av en eller flera aktiverade webbsidor.<br /> <i>Obs! I det beröringskänsliga användargränssnittet finns mycket av samma funktionalitet i webbplatskonsolen tillsammans med referenslisten.</i> <i>Om det behövs är konsolen tillgänglig från verktygskonsolen. välj Åtgärder och startar sedan.</i></td> 
   </tr> 
   <tr> 
    <td><strong>Inkorg </strong></td> 
    <td>I många fall är ett antal personer inblandade i ett arbetsflödes underuppgifter och varje person måste slutföra sitt steg innan han eller hon kan lämna jobbet till nästa person. I Inkorgen kan du se meddelanden som rör sådana uppgifter. See <a href="/help/sites-administering/workflows.md">Working with Workflows</a>. <br /> </td> 
   </tr> 
   <tr> 
-   <td><strong>Taggning</strong></td> 
+   <td><strong>Taggar</strong></td> 
    <td>Med taggningskonsolerna kan du administrera taggar. Taggar är korta namn eller fraser som du kan använda för att klassificera och kommentera innehållsdelar, vilket gör det enklare att hitta och ordna dem. Mer information finns i <a href="/help/sites-classic-ui-authoring/classic-feature-tags.md">Använda och hantera taggar</a>.</td> 
   </tr> 
   <tr> 
    <td><strong>Verktyg</strong></td> 
-   <td>Med <a href="/help/sites-administering/tools-consoles.md">verktygskonsolerna</a> får du tillgång till ett antal specialiserade verktyg och konsoler som du kan använda för att administrera webbplatser, digitala resurser och andra aspekter av innehållsdatabasen.</td> 
+   <td>The <a href="/help/sites-administering/tools-consoles.md">Tools consoles</a> provide access to a number of specialized tools and consoles that help you administer your websites, digital assets and other aspects of your content repository.</td> 
   </tr> 
   <tr> 
    <td><strong>Användare</strong></td> 
@@ -76,7 +80,7 @@ Huvudkonsolerna är:
   </tr> 
   <tr> 
    <td><strong>Webbplatser</strong></td> 
-   <td>Med konsolerna Webbplatser/Webbplatser kan du <a href="/help/sites-classic-ui-authoring/classic-page-author.md">skapa, visa och hantera webbplatser</a> som körs på din AEM-instans. Med dessa konsoler kan du skapa, kopiera, flytta och ta bort webbsidor, starta arbetsflöden och aktivera (publicera) sidor. Du kan också öppna en sida för redigering.<br /> </td> 
+   <td>Med konsolerna Webbplatser/Webbplatser kan du <a href="/help/sites-classic-ui-authoring/classic-page-author.md">skapa, visa och hantera webbplatser</a> som körs på din AEM. Med dessa konsoler kan du skapa, kopiera, flytta och ta bort webbsidor, starta arbetsflöden och aktivera (publicera) sidor. Du kan också öppna en sida för redigering.<br /> </td> 
   </tr> 
   <tr> 
    <td><strong>Arbetsflöden</strong></td> 
@@ -91,7 +95,7 @@ Konsolen **Webbplatser** innehåller två rutor där du kan navigera och hantera
 
    Här visas trädstrukturen för dina webbplatser och sidorna på dessa webbplatser.
 
-   Här visas även information om andra aspekter av AEM, inklusive projekt, ritningar och resurser.
+   Här visas även information om andra aspekter eller AEM, bland annat projekt, ritningar och resurser.
 
 * Höger ruta
 
@@ -169,7 +173,7 @@ Följande finns tillgängliga: en delmängd av dessa fält visas som standard:
   </tr> 
   <tr> 
    <td>Namn</td> 
-   <td>Namnet AEM hänvisar till sidan</td> 
+   <td>Namnet AEM refererar till sidan</td> 
   </tr> 
   <tr> 
    <td>Publicerad</td> 
