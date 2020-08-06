@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: ccaebb4c-cc1c-4ee7-b080-99667f348427
 translation-type: tm+mt
 source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+workflow-type: tm+mt
+source-wordcount: '448'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +28,7 @@ Möjligheten att följa ger en annan bild av aktiviteter när communitymedlemmar
 
 Detta avsnitt i dokumentationen beskriver
 
-* Lägga till komponenten Activity Streams på en AEM-webbplats
+* Lägga till komponenten Activity Streams på en AEM
 * Konfigurationsinställningar för komponenten för aktivitetsströmmar
 
 ## Lägga till aktivitetsströmmar till en sida {#adding-activity-streams-to-a-page}
@@ -48,15 +51,20 @@ Markera den monterade `Activity Streams` komponent som du vill öppna och välj 
 
 ![chlimage_1-196](assets/chlimage_1-196.png)
 
-Ange vilka aktiviteter som ska visas på fliken **[!UICONTROL Användaraktiviteter]** :
+Ange vilka aktiviteter som ska visas under **[!UICONTROL User Activities]** fliken:
 
 ![chlimage_1-197](assets/chlimage_1-197.png)
 
-* **[!UICONTROL Maximalt antal aktiviteter]** Antalet aktiviteter som ska visas
-* **[!UICONTROL Sökväg till]** direktuppspelningsresurs Lämna tomt om du vill använda community-webbplatsen eller community-gruppen som standard. Direktuppspelningsresursens sökväg identifierar aktivitetskällan. Standardvärdet är tomt.
-* **[!UICONTROL Visa vyn]** Användaraktiviteter, om den är markerad, innehåller aktivitetssidan en flik som filtrerar aktiviteter baserat på aktiviteter som genererats i communityn av den aktuella medlemmen. Standard är markerat.
-* **[!UICONTROL Visa vyn]** Alla aktiviteter Om det här alternativet är markerat innehåller sidan Aktiviteter en flik som innehåller alla aktiviteter som har skapats i den community som den aktuella medlemmen har åtkomst till. Standard är markerat.
-* **[!UICONTROL Visa följande vy]** Om det här alternativet är markerat innehåller aktivitetssidan en flik som filtrerar aktiviteter baserat på de som den aktuella medlemmen följer. Standard är markerat.
+* **[!UICONTROL Max number of activities]**
+Antalet aktiviteter som ska visas
+* **[!UICONTROL Stream Resource Path]**
+Lämna tomt som standard till communitywebbplatsen eller community-gruppen. Direktuppspelningsresursens sökväg identifierar aktivitetskällan. Standardvärdet är tomt.
+* **[!UICONTROL Display User Activities View]**
+Om det här alternativet är markerat kommer aktivitetssidan att innehålla en flik som filtrerar aktiviteter baserat på aktiviteter som genererats i communityn av den aktuella medlemmen. Standard är markerat.
+* **[!UICONTROL Display All Activities View]**
+Om det här alternativet är markerat kommer aktivitetssidan att innehålla en flik som innehåller alla aktiviteter som har skapats i den community som den aktuella medlemmen har åtkomst till. Standard är markerat.
+* **[!UICONTROL Display Following View]**
+Om det här alternativet är markerat innehåller aktivitetssidan en flik som filtrerar aktiviteter baserat på de som den aktuella medlemmen följer. Standard är markerat.
 
 ## Följande vy {#following-view}
 
