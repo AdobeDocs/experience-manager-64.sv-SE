@@ -1,8 +1,8 @@
 ---
 title: Ändra gränssnittets färgschema
 seo-title: Ändra gränssnittets färgschema
-description: Hur man selektivt ändrar färgschemat i användargränssnittet i AEM Forms-arbetsytan.
-seo-description: Hur man selektivt ändrar färgschemat i användargränssnittet i AEM Forms-arbetsytan.
+description: Hur man selektivt ändrar färgschemat i användargränssnittet i AEM Forms arbetsyta.
+seo-description: Hur man selektivt ändrar färgschemat i användargränssnittet i AEM Forms arbetsyta.
 uuid: 32c32f7a-8271-4d2c-8a1f-ad5ab3c90b83
 contentOwner: robhagat
 content-type: reference
@@ -11,13 +11,16 @@ topic-tags: forms-workspace
 discoiquuid: 18dab82a-badf-4c32-83a2-cd5cb04cae89
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '250'
+ht-degree: 0%
 
 ---
 
 
 # Ändra gränssnittets färgschema {#changing-the-color-scheme-of-the-interface}
 
-Du kan ändra färgschemat för användargränssnittets delar i AEM Forms-arbetsytan så att de passar dina behov. Nedan följer några exempel på representativa färgschemaanpassningar. Förutom de steg som beskrivs i den här artikeln finns mer information i [Allmänna steg för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md)av arbetsytan i AEM Forms.
+Du kan ändra färgschemat för användargränssnittets delar i AEM Forms arbetsyta så att de passar dina behov. Nedan följer några exempel på representativa färgschemaanpassningar. Förutom de steg som beskrivs i den här artikeln finns mer information i [Allmänna steg för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md)av arbetsytan i AEM Forms.
 
 ## Övre navigeringsfältet {#top-navigation-bar}
 
