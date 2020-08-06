@@ -31,6 +31,7 @@ I den här exempelstrukturen skickar en medarbetare ett ledighetsansökningsform
    * empid
    * reason
    * duration
+
    >[!NOTE]
    >
    >Den här återgivaren är mallen för sammanfattningssidor.
@@ -85,7 +86,7 @@ I den här exempelstrukturen skickar en medarbetare ett ledighetsansökningsform
 
    XPath: `concat('https://[*server*]:[*port*]/lc',/process_data/@ptoSummaryNodePath,'.html')`.
 
-När du öppnar en uppgift i AEM Forms-arbetsytan får sammanfattnings-URL:en åtkomst till CRX-noden och HTML-återgivaren visar sammanfattningen.
+När du öppnar en uppgift på arbetsytan i AEM Forms får sammanfattnings-URL åtkomst till CRX-noden och HTML-återgivaren visar sammanfattningen.
 
 Sammanfattningslayouten kan ändras utan att processen ändras. HTML-återgivaren visar sammanfattningen korrekt.
 
