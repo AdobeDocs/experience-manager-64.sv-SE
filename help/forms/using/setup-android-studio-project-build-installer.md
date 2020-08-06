@@ -19,13 +19,13 @@ ht-degree: 0%
 
 # Konfigurera Android-studioprojektet och bygg Android-appen {#set-up-the-android-studio-project-and-build-the-android-app}
 
-Den här artikeln handlar om att skapa AEM Forms App 6.3.1.1 och senare versioner. Information om hur du skapar en app från källkoden för källkoden i AEM Forms App 6.3 finns i [Konfigurera Eclipse-projektet och skapa Android™-appen](/help/forms/using/setup-eclipse-project-build-installer.md).
+Den här artikeln handlar om att skapa AEM Forms App 6.3.1.1 och senare versioner. Information om hur du skapar en app utifrån källkod för källkod i AEM Forms App 6.3 finns i [Konfigurera Eclipse-projektet och skapa Android™-appen](/help/forms/using/setup-eclipse-project-build-installer.md).
 
 AEM Forms tillhandahåller den fullständiga källkoden för AEM Forms-appen. Källan innehåller alla komponenter för att skapa en anpassad AEM Forms-app. Källkodsarkivet `adobe-lc-mobileworkspace-src-<version>.zip` är en del av paketet `adobe-aemfd-forms-app-src-pkg-<version>.zip` om programvarudistribution.
 
-Så här hämtar du appkällan för AEM Forms:
+Så här hämtar du programkällan för AEM Forms:
 
-1. Öppna [programvarudistribution](https://experience.adobe.com/downloads). Du måste ha ett Adobe ID för att kunna logga in på Software Distribution.
+1. Öppna [programvarudistribution](https://experience.adobe.com/downloads). Du behöver en Adobe ID för att logga in på Software Distribution.
 1. Tryck **[!UICONTROL Adobe Experience Manager]** på rubrikmenyn.
 1. I **[!UICONTROL Filters]** avsnittet:
    1. Välj **[!UICONTROL Forms]** i **[!UICONTROL Solution]** listrutan.
@@ -42,7 +42,7 @@ Följande bild visar katalogstrukturen för `android`mappen i `src`mappen.
 
 ![Katalogstruktur för android-mappen i src](assets/android-folder.png)
 
-## Bygg standardappen AEM Forms {#set-up-the-xcode-project}
+## Bygg AEM Forms standardapp {#set-up-the-xcode-project}
 
 1. Utför följande steg för att konfigurera ett projekt i Android™ Studio och ange en signeringsidentitet:
 
