@@ -1,34 +1,35 @@
 ---
 title: Aktivera tillgångsinsikter via DTM
-description: Lär dig hur du använder Adobe Dynamic Tag Management (DTM) för att aktivera tillgångsinsikter.
+description: Lär dig hur du använder DTM (Adobe Dynamic Tag Management) för att aktivera tillgångsinsikter.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
 workflow-type: tm+mt
 source-wordcount: '574'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
 
 # Aktivera tillgångsinsikter via DTM {#enabling-asset-insights-through-dtm}
 
-Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknadsföringsverktyg. Den tillhandahålls kostnadsfritt till Adobe Analytics-kunder.
+Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknadsföringsverktyg. Det tillhandahålls kostnadsfritt till Adobe Analytics-kunder.
 
-Även om du kan anpassa din spårningskod så att CMS-lösningar från tredje part kan använda resursinsikter, rekommenderar Adobe att du använder DTM för att infoga resursinsikter-taggar.
+Även om du kan anpassa din spårningskod för att aktivera CMS-lösningar från tredje part för att använda resursinsikter, rekommenderar Adobe att du använder DTM för att infoga resursinsikter-taggar.
 
 Gör så här för att aktivera tillgångsinsikter via DTM:
 
 1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Tools > Assets > Insights Configuration]**.
-1. [Konfigurera AEM-instans med DTM Cloud-tjänsten](../sites-administering/dtm.md)
+1. [Konfigurera AEM med DTM-Cloud Service](../sites-administering/dtm.md)
 
-   API-token bör vara tillgänglig när du har loggat in på [https://dtm.adobe.com](https://dtm.adobe.com/) och går **[!UICONTROL Account Settings]** till Profilikonen. Detta steg är inte nödvändigt från tillgångsinsikter eftersom integrationen av AEM Sites med tillgångsinsikter fortfarande pågår.
+   API-token bör vara tillgänglig när du har loggat in på [https://dtm.adobe.com](https://dtm.adobe.com/) och går **[!UICONTROL Account Settings]** till Profilikonen. Detta steg är inte nödvändigt från tillgångsinsikter eftersom integrering av AEM Sites med tillgångsinsikter fortfarande är på gång.
 
 1. Logga in på [https://dtm.adobe.com](https://dtm.adobe.com/)och välj ett företag.
 1. Skapa/öppna en befintlig webbegenskap
 
    * Markera **[!UICONTROL Web Properties]** fliken och tryck/klicka sedan på **[!UICONTROL Add Property]**.
    * Uppdatera fälten efter behov och tryck/klicka **[!UICONTROL Create Property]** (se [dokumentationen](https://helpx.adobe.com/experience-manager/using/dtm.html)).
+
    ![chlimage_1-193](assets/chlimage_1-193.png)
 
 1. På **[!UICONTROL Rules]** fliken väljer du **[!UICONTROL Page Load Rules]** i navigeringsrutan och trycker/klickar på **[!UICONTROL Create New Rule]**.
@@ -47,7 +48,7 @@ Gör så här för att aktivera tillgångsinsikter via DTM:
    >* `AppMeasurement.js` har tagits bort. Den förväntas bli tillgänglig via DTM:s Adobe Analytics-verktyg.
    >* Anropet till `assetAnalytics.dispatcher.init()` tas bort. Funktionen förväntas anropas när inläsningen av DTM:s Adobe Analytics-verktyg är klar.
    >* Beroende på var sidspåraren för tillgångsinsikter finns (till exempel AEM, CDN och så vidare) kan skriptkällans ursprung kräva ändringar.
-   >* För AEM-värdbaserad sidspårare ska källan peka på en publiceringsinstans med värdnamnet för dispatcher-instansen.
+   >* För AEM sidspåraren ska källan peka på en publiceringsinstans med hjälp av värdnamnet för dispatcher-instansen.
 
 
 
@@ -109,7 +110,7 @@ Gör så här för att aktivera tillgångsinsikter via DTM:
 
       De återstående argumenten motsvarar konfigurationen på sidan Insights Configuration (**[!UICONTROL Tools > Assets > Insights Configuration]**).
 
-   * AppMeasurement-objektet hämtas genom att en fråga skickas `satelliteLib` till alla tillgängliga SiteCatalyst-motorer. Om flera taggar har konfigurerats ändrar du indexvärdet för arrayväljaren på rätt sätt. Posterna i arrayen ordnas enligt de SiteCatalyst-verktyg som finns i DTM-gränssnittet.
+   * AppMeasurement-objektet hämtas genom att en fråga skickas `satelliteLib` för alla tillgängliga SiteCatalyst-motorer. Om flera taggar har konfigurerats ändrar du indexvärdet för arrayväljaren på rätt sätt. Posterna i arrayen ordnas enligt de SiteCatalyst-verktyg som finns i DTM-gränssnittet.
 
 1. Spara och stäng fönstret Kodredigeraren och spara sedan ändringarna i verktygskonfigurationen.
 1. Godkänn båda väntande godkännanden på **[!UICONTROL Approvals]** fliken. DTM-taggen kan infogas på webbsidan. Mer information om hur du infogar DTM-taggar på webbsidor finns i [Integrera DTM i anpassade sidmallar](https://blogs.adobe.com/experiencedelivers/experience-management/integrating-dtm-custom-aem6-page-template/).
