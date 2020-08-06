@@ -4,6 +4,9 @@ description: Lär dig hur du skapar anpassade sidor i Resursredigeraren och redi
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '3196'
+ht-degree: 0%
 
 ---
 
@@ -22,17 +25,17 @@ I det här dokumentet beskrivs följande:
 
 ## Varför skapa och konfigurera resursredigeringssidor? {#why-create-and-configure-asset-editor-pages}
 
-Digital Asset Management används i allt fler scenarier. När man går över från en småskalig lösning för en liten användargrupp yrkesutbildade användare - till exempel fotografer eller taxonomier - till större och mer mångsidiga användargrupper - t.ex. affärsanvändare, WCM-författare, journalister osv. - kan det kraftfulla användargränssnittet i Adobe Experience Manager (AEM) Assets för professionella användare tillhandahålla för mycket information och intressenter börja begära specifika användargränssnitt eller applikationer för att få tillgång till de digitala resurser som är relevanta för dem.
+Digital Asset Management används i allt fler scenarier. När man går över från en småskalig lösning för en liten användargrupp yrkesutbildade användare - till exempel fotografer eller taxonomier - till större och mer mångsidiga användargrupper - t.ex. affärsanvändare, WCM-författare, journalister osv. - kan det kraftfulla användargränssnittet i Adobe Experience Manager (AEM) Assets för professionella användare tillhandahålla för mycket information och intressenter börjar begära specifika användargränssnitt eller applikationer för att få tillgång till de digitala resurserna som är relevanta för dem.
 
 Dessa resurscentrerade program kan vara enkla fotogallerier i ett intranät där medarbetarna kan ladda upp bilder från mässor eller ett presscenter på en offentlig webbplats, till exempel i Geometrixx. Tillgångscentrerade tillämpningar kan även omfatta kompletta lösningar som kundvagnar, kassor och verifieringsprocesser.
 
-Att skapa ett resurscentrerat program blir i stor utsträckning en konfigurationsprocess som inte kräver kodning, bara kunskap om användargrupper och deras behov samt kunskap om de metadata som används. Resurscentrerade program som skapats med AEM Resurser kan utökas: med måttlig kodningsansträngning kan återanvändbara komponenter för att söka, visa och ändra resurser skapas.
+Att skapa ett resurscentrerat program blir i stor utsträckning en konfigurationsprocess som inte kräver kodning, bara kunskap om användargrupper och deras behov samt kunskap om de metadata som används. Resurscentrerade program som skapats med AEM Assets kan utökas: med måttlig kodningsansträngning kan återanvändbara komponenter för att söka, visa och ändra resurser skapas.
 
-Ett resurscentrerat program i AEM består av en tillgångsredigeringssida, som kan användas för att få en detaljerad vy över en viss resurs. På en resursredigeringssida kan du även redigera metadata, förutsatt att användaren som använder resursen har de behörigheter som krävs.
+Ett resurscentrerat program i AEM består av en tillgångsredigeringssida, som kan användas för att få en detaljerad vy av en viss resurs. På en resursredigeringssida kan du även redigera metadata, förutsatt att användaren som använder resursen har de behörigheter som krävs.
 
 ## Skapa och konfigurera en resursdelningssida {#creating-and-configuring-an-asset-share-page}
 
-Du kan anpassa DAM Finder-funktionen och skapa sidor som har alla funktioner du behöver, som kallas resursdelningssidor. Om du vill skapa en ny resursdelningssida lägger du till sidan med hjälp av mallen Geometrixx Asset Share och sedan anpassar du de åtgärder som användare kan utföra på den sidan, avgör hur tittarna ser resurserna och avgör hur användarna kan skapa sina frågor.
+Du kan anpassa DAM Finder-funktionen och skapa sidor som har alla funktioner du behöver, som kallas resursdelningssidor. Om du vill skapa en ny resursdelningssida lägger du till sidan med hjälp av mallen Geometrixx Resursdelning och sedan anpassar du de åtgärder som användare kan utföra på den sidan, avgör hur tittarna ser resurserna och avgör hur användare kan skapa sina frågor.
 
 Här är några exempel på hur du kan skapa en anpassad resursdelningssida:
 
@@ -51,13 +54,13 @@ Om du vill skapa en ny resursdelningssida kan du antingen skapa den när du arbe
 
 Så här skapar du en ny resursdelningssida i **webbplatskonsolen** :
 
-1. Gå till den plats där du vill skapa en resursdelningssida på fliken **[!UICONTROL Webbplatser]** och klicka på **[!UICONTROL Ny]**.
+1. Gå till den plats där du vill skapa en resursdelningssida på **[!UICONTROL Websites]** fliken och klicka på **[!UICONTROL New]**.
 
-1. Markera sidan **[!UICONTROL Resursresurs]** och klicka på **[!UICONTROL Skapa]**. Den nya sidan skapas och resursdelningssidan visas på fliken **[!UICONTROL Webbplatser]** .
+1. Markera **[!UICONTROL Asset Share]** sidan och klicka på **[!UICONTROL Create]**. Den nya sidan skapas och resursdelningssidan visas på **[!UICONTROL Websites]** fliken.
 
 ![dam8](assets/dam8.png)
 
-Grundsidan som skapas med hjälp av mallen för resursdelning i Geometrixx DAM ser ut så här:
+Grundsidan som skapas med Geometrixx DAM-resursmallen ser ut så här:
 
 ![screen_shot_2012-04-18at115456am](assets/screen_shot_2012-04-18at115456am.png)
 
@@ -67,8 +70,8 @@ Om du vill anpassa sidan Resursdelning använder du element från sidosparken oc
 
 Så här skapar du en ny resursdelningssida via den digitala resurshanteraren:
 
-1. I den digitala resurshanteraren väljer du **[!UICONTROL Ny resurs i]** Ny **[!UICONTROL resurs]**.
-1. Ange namnet på resursdelningssidan i **[!UICONTROL Rubrik]**. Om du vill kan du ange ett namn för URL:en.
+1. I Digital Asset Manager **[!UICONTROL New]** väljer du **[!UICONTROL New Asset Share]**.
+1. I **[!UICONTROL Title]** anger du namnet på resursdelningssidan. Om du vill kan du ange ett namn för URL:en.
 
    ![screen_shot_2012-04-19at23626pm](assets/screen_shot_2012-04-19at23626pm.png)
 
@@ -76,7 +79,7 @@ Så här skapar du en ny resursdelningssida via den digitala resurshanteraren:
 
    ![screen_shot_2012-04-19at24114pm](assets/screen_shot_2012-04-19at24114pm.png)
 
-   När du skapar en resursdelningssida från **[!UICONTROL Nytt]** skapas som standard ett resursvisningsprogram och en resursredigerare automatiskt.
+   När du skapar en resursdelningssida från **[!UICONTROL New]** skapas som standard ett resursvisningsprogram och en resursredigerare automatiskt.
 
 #### Anpassa funktionsmakron {#customizing-actions}
 
@@ -84,19 +87,19 @@ Du kan avgöra vilka åtgärder användare kan utföra på valda digitala resurs
 
 Så här lägger du till åtgärder på sidan Resursresurs:
 
-1. På sidan Resursresurs som du vill anpassa klickar du på **[!UICONTROL Åtgärder]** i sidosparken.
+1. På sidan Resursresurs som du vill anpassa klickar du på **[!UICONTROL Actions]** sidan.
 
    Följande åtgärder är tillgängliga:
    ![assetshare2](assets/assetshare2.bmp)
 
 | Åtgärd | Beskrivning |
 |---|---|
-| [!UICONTROL Ta bort åtgärd] | Användare kan ta bort de markerade resurserna. |
-| [!UICONTROL Hämta åtgärd] | Tillåter användare att hämta valda resurser till sina datorer. |
-| [!UICONTROL Ljuslådeåtgärd] | Sparar resurser i en&quot;ljuslåda&quot; där du kan utföra andra åtgärder på dem. Detta är praktiskt när du arbetar med resurser på flera sidor. Ljuslådan kan också användas som kundvagn för resurser. |
-| [!UICONTROL Flytta åtgärd] | Användarna kan flytta resursen till en annan plats |
-| [!UICONTROL Taggåtgärd] | Tillåter användare att lägga till taggar i markerade resurser |
-| [!UICONTROL Visa resursåtgärd] | Öppnar resursen i tillgångsredigeraren för användarmanipulering. |
+| [!UICONTROL Delete Action] | Användare kan ta bort de markerade resurserna. |
+| [!UICONTROL Download Action] | Tillåter användare att hämta valda resurser till sina datorer. |
+| [!UICONTROL Lightbox Action] | Sparar resurser i en&quot;ljuslåda&quot; där du kan utföra andra åtgärder på dem. Detta är praktiskt när du arbetar med resurser på flera sidor. Ljuslådan kan också användas som kundvagn för resurser. |
+| [!UICONTROL Move Action] | Användarna kan flytta resursen till en annan plats |
+| [!UICONTROL Tags Action] | Tillåter användare att lägga till taggar i markerade resurser |
+| [!UICONTROL View Asset Action] | Öppnar resursen i tillgångsredigeraren för användarmanipulering. |
 
 1. Dra lämplig åtgärd till området **Åtgärder** på sidan. När du gör det skapas en knapp som används för att utföra åtgärden.
 
@@ -108,7 +111,7 @@ Du bestämmer hur resultaten ska visas i en fördefinierad lista med objektiv.
 
 Så här ändrar du hur sökresultat visas:
 
-1. På sidan Resursresurs som du vill anpassa klickar du på **[!UICONTROL Sök]**.
+1. På sidan Resursresurs som du vill anpassa klickar du på **[!UICONTROL Search]**.
 
    ![chlimage_1](assets/chlimage_1.bmp)
 
@@ -119,7 +122,7 @@ Följande linser är tillgängliga:
 | Lins | Beskrivning |
 |---|---|
 | **[!UICONTROL List Lens]** | Visar resurserna i en lista med detaljer. |
-| **[!UICONTROL Mosaik]** | Presenterar resurser på ett mosaiskt sätt. |
+| **[!UICONTROL Mosaic Lens]** | Presenterar resurser på ett mosaiskt sätt. |
 
 #### Mosaik {#mosaic-lens}
 
@@ -135,33 +138,33 @@ Med frågebyggaren kan du ange söktermer och skapa innehåll för sidan Resursd
 
 Så här anpassar du frågeverktyget:
 
-1. På sidan Resursresurs som du vill anpassa klickar du på **[!UICONTROL Redigera]** i frågeverktyget. Fliken **[!UICONTROL Allmänt]** öppnas som standard.
+1. På sidan Resursresurs som du vill anpassa klickar du på **[!UICONTROL Edit]** i frågeverktyget. By default, the **[!UICONTROL General]** tab opens.
 
 1. Välj antalet resultat per sida, sökvägen till resursredigeraren (om du har en anpassad resursredigerare) och åtgärdstiteln.
 
    ![screen_shot_2012-04-23at15055pm](assets/screen_shot_2012-04-23at15055pm.png)
 
-1. Klicka på fliken **[!UICONTROL Banor]** . Ange en eller flera sökvägar som sökningen ska köras på. Dessa sökvägar skrivs över om användaren använder Banor-predikatet.
+1. Click the **[!UICONTROL Paths]** tab. Ange en eller flera sökvägar som sökningen ska köras på. Dessa sökvägar skrivs över om användaren använder Banor-predikatet.
 
    ![screen_shot_2012-04-23at15150pm](assets/screen_shot_2012-04-23at15150pm.png)
 
 1. Ange en annan nodtyp, om du vill.
 
-1. I URL **[!UICONTROL -fältet i]** Query Builder kan du åsidosätta eller omsluta frågebyggaren och ange de nya webbadresserna med den befintliga frågebyggarkomponenten. I fältet **[!UICONTROL Feed-URL]** kan du även åsidosätta feed-URL:en.
+1. I **[!UICONTROL Query Builder URL]** fältet kan du åsidosätta eller radbryta frågebyggaren och ange de nya webbadresserna för servleten med den befintliga frågebyggarkomponenten. I **[!UICONTROL Feed URL]** fältet kan du även åsidosätta feed-URL:en.
 
    ![screen_shot_2012-04-23at15313pm](assets/screen_shot_2012-04-23at15313pm.png)
 
-1. I fältet **[!UICONTROL Text]** anger du den text som du vill ska visas för resultat och sidnummer. Klicka på **[!UICONTROL OK]** när du är klar med ändringarna.
+1. I **[!UICONTROL Text]** fältet anger du den text som du vill ska visas för resultat och sidnummer. Klicka **[!UICONTROL OK]** när du är klar med ändringarna.
 
    ![screen_shot_2012-04-23at15300pm](assets/screen_shot_2012-04-23at15300pm.png)
 
 #### Lägg till predikat {#adding-predicates}
 
-AEM Resurser innehåller ett antal predikat som du kan lägga till på sidan Resursdelning. På så sätt kan användarna begränsa sökningarna ytterligare. I vissa fall kan de åsidosätta en frågebyggarparameter (till exempel parametern Path).
+AEM Assets innehåller ett antal predikat som du kan lägga till på sidan Resursresurs. På så sätt kan användarna begränsa sökningarna ytterligare. I vissa fall kan de åsidosätta en frågebyggarparameter (till exempel parametern Path).
 
 Så här lägger du till predikat:
 
-1. På sidan Resursresurs som du vill anpassa klickar du på **[!UICONTROL Sök]**.
+1. På sidan Resursresurs som du vill anpassa klickar du på **[!UICONTROL Search]**.
 
    ![assetshare3](assets/assetshare3.bmp)
 
@@ -173,10 +176,10 @@ Så här lägger du till predikat:
 
 | Förutse | Beskrivning |
 |---|---|
-| **[!UICONTROL Datumpredikat]** | Tillåter användare att söka efter resurser som har ändrats före och efter vissa datum. |
-| **[!UICONTROL Alternativ - predikat]** | Webbplatsägaren kan ange en egenskap att söka efter (som i egenskapspredikatet, till exempel cq:tags) och ett innehållsträd att fylla i alternativen från (till exempel taggträdet). Då genereras en lista med alternativ där användarna kan välja de värden (taggar) som den valda egenskapen (taggegenskap) ska ha. Med det här predikatet kan du skapa listkontroller som listan över taggar, filtyper, bildorienteringar och så vidare. Det passar bra för en fast uppsättning alternativ. |
-| **[!UICONTROL Banförutsägelse]** | Tillåter användare att definiera sökvägen och undermapparna, om så önskas. |
-| **[!UICONTROL Egenskapspredikat]** | Webbplatsägaren anger en egenskap att söka efter, t.ex. tiff:ImageLength, och användaren kan sedan ange ett värde, t.ex. 800. Då returneras alla bilder som är 800 pixlar höga. Användbart predikat om egenskapen kan ha godtyckliga värden. |
+| **[!UICONTROL Date Predicate]** | Tillåter användare att söka efter resurser som har ändrats före och efter vissa datum. |
+| **[!UICONTROL Options Predicate]** | Webbplatsägaren kan ange en egenskap att söka efter (som i egenskapspredikatet, till exempel cq:tags) och ett innehållsträd att fylla i alternativen från (till exempel taggträdet). Då genereras en lista med alternativ där användarna kan välja de värden (taggar) som den valda egenskapen (taggegenskap) ska ha. Med det här predikatet kan du skapa listkontroller som listan över taggar, filtyper, bildorienteringar och så vidare. Det passar bra för en fast uppsättning alternativ. |
+| **[!UICONTROL Path Predicate]** | Tillåter användare att definiera sökvägen och undermapparna, om så önskas. |
+| **[!UICONTROL Property Predicate]** | Webbplatsägaren anger en egenskap att söka efter, t.ex. tiff:ImageLength, och användaren kan sedan ange ett värde, t.ex. 800. Då returneras alla bilder som är 800 pixlar höga. Användbart predikat om egenskapen kan ha godtyckliga värden. |
 
 Mer information finns i [predikatjavadokarna](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/package-summary.html).
 
@@ -198,13 +201,13 @@ När du skapar sidan Resursredigerare kan det vara bra att skapa sidan direkt un
 
 Så här skapar du en resursredigeringssida:
 
-1. Gå till den plats där du vill skapa en resursredigeringssida på fliken **[!UICONTROL Webbplatser]** och klicka på **[!UICONTROL Ny]**.
+1. Gå till den plats på fliken **[!UICONTROL Websites]** där du vill skapa en resursredigeringssida och klicka på **[!UICONTROL New]**.
 
-1. Välj **[!UICONTROL Geometrixx Resursredigerare]** och klicka på **[!UICONTROL Skapa]**. Den nya sidan skapas och sidan visas på fliken **[!UICONTROL Webbplatser]** .
+1. Select **[!UICONTROL Geometrixx Asset Editor]** and click **[!UICONTROL Create]**. Den nya sidan skapas och sidan visas på **[!UICONTROL Websites]** fliken.
 
 ![screen_shot_2012-04-23at15858pm](assets/screen_shot_2012-04-23at15858pm.png)
 
-Grundsidan som skapas med hjälp av mallen Geometrixx Asset Editor ser ut så här:
+Grundsidan som skapas med Geometrixx Resursredigeraren ser ut så här:
 
 ![assetshare5](assets/assetshare5.bmp)
 
@@ -218,13 +221,13 @@ När du har skapat den anpassade resursredigeringssidan måste du se till att n�
 
 Så här anger du sidan Resursredigeraren:
 
-1. På sidan Resursresurs klickar du på **[!UICONTROL Redigera]** bredvid Frågebyggaren.
+1. På sidan Resursresurs klickar du på **[!UICONTROL Edit]** bredvid Query Builder.
 
    ![screen_shot_2012-04-23at20123pm](assets/screen_shot_2012-04-23at20123pm.png)
 
-1. Klicka på fliken **[!UICONTROL Allmänt]** om den inte redan är markerad.
+1. Klicka på **[!UICONTROL General]** fliken om den inte redan är markerad.
 
-1. I fältet **[!UICONTROL Sökväg till resursredigeraren]** anger du sökvägen till den resursredigerare som du vill att sidan Resursdelning ska öppna resurser i och klickar på **[!UICONTROL OK]**.
+1. I **[!UICONTROL Path of Asset Editor]** fältet anger du sökvägen till resursredigeraren som du vill att sidan Resursdelning ska öppna resurser i och klickar på **[!UICONTROL OK]**.
 
    ![screen_shot_2012-04-23at21653pm](assets/screen_shot_2012-04-23at21653pm.png)
 
@@ -234,7 +237,7 @@ Du bestämmer vilken funktionalitet en resursredigerare har genom att lägga til
 
 Så här lägger du till komponenterna för redigering av resurser:
 
-1. På sidan Resursredigeraren som du vill anpassa väljer du **[!UICONTROL Resursredigeraren]** i sidosparken. Alla tillgängliga komponenterna för redigeringsprogrammet för resurser visas.
+1. På sidan Resursredigeraren som du vill anpassa väljer du **[!UICONTROL Asset Editor]** i sidosparken. Alla tillgängliga komponenterna för redigeringsprogrammet för resurser visas.
 
    >[!NOTE]
    >
@@ -248,40 +251,40 @@ Så här lägger du till komponenterna för redigering av resurser:
 
    | Komponent | Beskrivning |
    |---|---|
-   | **[!UICONTROL Metadataformulär]och[!UICONTROL metadatatextfält]** | Gör att du kan lägga till ytterligare metadata för en resurs och utföra en åtgärd, som att skicka, för den resursen. |
-   | **[!UICONTROL Deltillgångar]** | Gör att du kan anpassa underresurser. |
+   | **[!UICONTROL Metadata Form]and[!UICONTROL Metadata Text Field]** | Gör att du kan lägga till ytterligare metadata för en resurs och utföra en åtgärd, som att skicka, för den resursen. |
+   | **[!UICONTROL Sub Assets]** | Gör att du kan anpassa underresurser. |
    | **Taggar** | Tillåter användare att markera och lägga till taggar i en resurs. |
-   | **[!UICONTROL Miniatyrbild]** | Visar en miniatyrbild av resursen, dess filnamn och låter dig lägga till en alternativ text. Du kan även lägga till resursredigeringsåtgärder här. |
-   | **[!UICONTROL Titel]** | Visar resursens titel, som kan anpassas. |
+   | **[!UICONTROL Thumbnail]** | Visar en miniatyrbild av resursen, dess filnamn och låter dig lägga till en alternativ text. Du kan även lägga till resursredigeringsåtgärder här. |
+   | **[!UICONTROL Title]** | Visar resursens titel, som kan anpassas. |
 
    ![screen_shot_2012-04-23at22743pm](assets/screen_shot_2012-04-23at22743pm.png)
 
 #### Metadataformulär och textfält - Konfigurera komponenten Visa metadata {#metadata-form-and-text-field-configuring-the-view-metadata-component}
 
-Metadataformuläret är ett formulär som innehåller en start- och slutåtgärd. däremellan anger du **[!UICONTROL textfält]** . Mer information om hur du arbetar med formulär finns i [Formulär](../sites-authoring/default-components.md) .
+Metadataformuläret är ett formulär som innehåller en start- och slutåtgärd. däremellan anger du **[!UICONTROL Text]** fält. Mer information om hur du arbetar med formulär finns i [Forms](../sites-authoring/default-components.md) .
 
-1. Skapa en startåtgärd genom att klicka på **[!UICONTROL Redigera]** i formulärets startdel. Om du vill kan du ange en Box-titel. Som standard är rutans rubrik **[!UICONTROL Metadata]**. Markera kryssrutan Klientvalidering om du vill att Java-script-klientkoden ska genereras för validering.
+1. Skapa en startåtgärd genom att klicka **[!UICONTROL Edit]** i formulärets startdel. Om du vill kan du ange en Box-titel. Som standard är Box-titeln **[!UICONTROL Metadata]**. Markera kryssrutan Klientvalidering om du vill att Java-script-klientkoden ska genereras för validering.
 
    ![screen_shot_2012-04-23at22911pm](assets/screen_shot_2012-04-23at22911pm.png)
 
-1. Skapa en slutåtgärd genom att klicka på **[!UICONTROL Redigera]** i formulärets slutområde. Du kan till exempel skapa en **[!UICONTROL Skicka]** -knapp som tillåter användare att skicka metadataändringar. Du kan också lägga till en **[!UICONTROL återställningsknapp]** som återställer metadata till det ursprungliga läget.
+1. Skapa en End-åtgärd genom att klicka **[!UICONTROL Edit]** i formulärets slutområde. Du kan till exempel skapa en **[!UICONTROL Submit]** knapp som tillåter användare att skicka sina metadataändringar. Du kan också lägga till en **[!UICONTROL Reset]** knapp som återställer metadata till det ursprungliga läget.
 
    ![screen_shot_2012-04-23at23138pm](assets/screen_shot_2012-04-23at23138pm.png)
 
-1. Dra metadatatextfält mellan **[!UICONTROL Formulärstart]** och **Formulärslut** till formuläret. Användare fyller i metadata i dessa textfält som de kan skicka eller slutföra en annan åtgärd på.
+1. Dra metadatatextfält mellan **[!UICONTROL Form Start]** och **formulärets slut** till formuläret. Användare fyller i metadata i dessa textfält som de kan skicka eller slutföra en annan åtgärd på.
 
-1. Dubbelklicka på fältnamnet, till exempel **Titel** , för att öppna metadatafältet och göra ändringar. På fliken **[!UICONTROL Allmänt]** i fönstret [!UICONTROL Redigera komponent] definierar du namnutrymmet och fältetiketten samt typ, till exempel `dc:title`.
+1. Dubbelklicka på fältnamnet, till exempel **Titel** , för att öppna metadatafältet och göra ändringar. På fliken **[!UICONTROL General]** i [!UICONTROL Edit Component] fönstret definierar du namnutrymmet, fältetiketten och typen, till exempel `dc:title`.
 
 
    ![screen_shot_2012-04-23at23305pm](assets/screen_shot_2012-04-23at23305pm.png)
 
-   Mer information om hur du ändrar namnutrymmen i metadataformuläret finns i [Anpassa och utöka AEM-resurser](extending-assets.md) .
+   Mer information om hur du ändrar namnutrymmen i metadataformuläret finns i [Anpassa och utöka AEM Assets](extending-assets.md) .
 
-1. Klicka på fliken **[!UICONTROL Begränsningar]** . Här kan du välja om ett fält är obligatoriskt och vid behov lägga till begränsningar.
+1. Click the **[!UICONTROL Constraints]** tab. Här kan du välja om ett fält är obligatoriskt och vid behov lägga till begränsningar.
 
    ![screen_shot_2012-04-23at23435pm](assets/screen_shot_2012-04-23at23435pm.png)
 
-1. Klicka på fliken **[!UICONTROL Visa]** . Här kan du ange en ny bredd och ett nytt antal rader för metadatafältet. Markera kryssrutan **Fältet är skrivskyddat** om du vill tillåta användare att redigera metadata.
+1. Click the **[!UICONTROL Display]** tab. Här kan du ange en ny bredd och ett nytt antal rader för metadatafältet. Markera kryssrutan **Fältet är skrivskyddat** om du vill tillåta användare att redigera metadata.
 
    ![screen_shot_2012-04-23at23446pm](assets/screen_shot_2012-04-23at23446pm.png)
 
@@ -333,7 +336,7 @@ Miniatyrkomponenten är den plats där den valda miniatyrbilden visas (för mån
 
 ![screen_shot_2012-04-23at25452pm](assets/screen_shot_2012-04-23at25452pm.png)
 
-Dubbelklicka på miniatyrkomponenten för att öppna dialogrutan med miniatyrbilder där du kan ändra alternativ text. Som standard används miniatyrbilden för alternativ text som **[!UICONTROL Klicka för att hämta]** resursen.
+Dubbelklicka på miniatyrkomponenten för att öppna dialogrutan med miniatyrbilder där du kan ändra alternativ text. Som standard används **[!UICONTROL Click to download]** resursen som miniatyrtext.
 
 ![screen_shot_2012-04-23at25604pm](assets/screen_shot_2012-04-23at25604pm.png)
 
@@ -367,19 +370,20 @@ Du kan avgöra vilka åtgärder användare kan utföra på valda digitala resurs
 
 Så här lägger du till åtgärder på sidan Resursredigeraren:
 
-1. På sidan Resursredigeraren som du vill anpassa klickar du på **[!UICONTROL Resursredigeraren]** i sidosparken.<br>
+1. På sidan Resursredigeraren som du vill anpassa klickar du **[!UICONTROL Asset Editor]** i sidosparken.<br>
+
    ![välj resursredigerare i sidosparläge](assets/screen_shot_2012-04-23at35515pm.png)
 
    Följande åtgärder är tillgängliga:
 
    | Åtgärd | Beskrivning |
    |---|---|
-   | [!UICONTROL Hämta] | Tillåter användare att hämta valda resurser till sina datorer. |
-   | [!UICONTROL Redigerare] | Tillåter användare att redigera en bild (interaktiv redigering) |
-   | [!UICONTROL Ljuslåda] | Sparar resurser i en&quot;ljuslåda&quot; där du kan utföra andra åtgärder på dem. Detta är praktiskt när du arbetar med resurser på flera sidor. |
-   | [!UICONTROL Låsning] | Tillåter användare att låsa en resurs. Den här funktionen är inte aktiverad som standard och måste aktiveras i komponentlistan. |
-   | [!UICONTROL Referenser] | Klicka här för att visa på vilka sidor resursen används. |
-   | [!UICONTROL Versionshantering] | Gör att du kan skapa och återställa versioner av en resurs. |
+   | [!UICONTROL Download] | Tillåter användare att hämta valda resurser till sina datorer. |
+   | [!UICONTROL Editors] | Tillåter användare att redigera en bild (interaktiv redigering) |
+   | [!UICONTROL Lightbox] | Sparar resurser i en&quot;ljuslåda&quot; där du kan utföra andra åtgärder på dem. Detta är praktiskt när du arbetar med resurser på flera sidor. |
+   | [!UICONTROL Locking] | Tillåter användare att låsa en resurs. Den här funktionen är inte aktiverad som standard och måste aktiveras i komponentlistan. |
+   | [!UICONTROL References] | Klicka här för att visa på vilka sidor resursen används. |
+   | [!UICONTROL Versioning] | Gör att du kan skapa och återställa versioner av en resurs. |
 
 1. Dra lämplig åtgärd till området **Åtgärder** på sidan. När du gör det skapas en knapp som används för att utföra åtgärden.
 
@@ -394,32 +398,35 @@ Med AEM Assets kan du ändra flera resurser samtidigt. När du har valt resurser
 
 Så här gör du om du vill redigera flera resurser på sidan Resursredigeraren:
 
-1. Öppna sidan Geometrixx **[!UICONTROL Press Center]** på `http://localhost:4502/content/geometrixx/en/company/press.html`.
+1. Öppna Geometrixx **[!UICONTROL Press Center]** på `http://localhost:4502/content/geometrixx/en/company/press.html`.
 1. Välj resurser:
 
-   * i Windows: `Ctrl + click` varje tillgång.
-   * på Mac: `Cmd + click` varje tillgång.
+   * i Windows: `Ctrl + click` varje resurs.
+   * på Mac: `Cmd + click` varje resurs.
+
    Så här väljer du en rad resurser: klicka på den första resursen och sedan på `Shift + click` den sista resursen.
 
-1. Klicka på **[!UICONTROL Redigera metadata]** i fältet **Åtgärder** (vänster del av sidan).
+1. Klicka **[!UICONTROL Edit Metadata]** i fältet **Åtgärder** (vänster del av sidan).
 
-1. Sidan Geometrixx **[!UICONTROL Press Center Asset Editor]** öppnas på en ny flik. Resursernas metadata visas enligt följande:
+1. Geometrixx **[!UICONTROL Press Center Asset Editor]** öppnas på en ny flik. Resursernas metadata visas enligt följande:
 
    * En tagg som inte gäller för alla resurser utan bara för ett fåtal, visas i kursiv stil.
    * En tagg som gäller för alla resurser visas med ett vanligt teckensnitt.
    * Andra metadata än taggar: värdet för fältet visas bara om det är samma för alla markerade resurser.
 
-1. Klicka på **[!UICONTROL Hämta]** för att hämta en ZIP-fil som innehåller de ursprungliga resursåtergivningarna.
-1. Klicka på pennikonen bredvid fältet **[!UICONTROL Taggar]** för att redigera taggarna:
+1. Klicka **[!UICONTROL Download]** för att hämta en ZIP-fil som innehåller resursens ursprungliga återgivningar.
+1. Klicka på pennikonen bredvid **[!UICONTROL Tags]** fältet för att redigera taggarna:
 
    * En tagg som inte gäller för alla resurser, men bara för ett fåtal har en grå bakgrund.
    * En tagg som gäller för alla resurser har en vit bakgrund.
+
    Du kan:
 
    * Klicka på `x` ikonen för att ta bort taggen för alla resurser.
    * Klicka på `+` ikonen för att lägga till taggen i alla resurser.
    * Klicka på `arrow` och markera en tagg för att lägga till en ny tagg till alla resurser.
-   Klicka på **[!UICONTROL OK]** för att skriva ändringarna i formuläret. Rutan bredvid fältet **Taggar** markeras automatiskt.
+
+   Klicka **[!UICONTROL OK]** för att skriva ändringarna i formuläret. Rutan bredvid fältet **Taggar** markeras automatiskt.
 
 1. Redigera beskrivningsfältet. Ange det till exempel till: `This is a common description`. När ett fält redigeras skrivs de befintliga värdena för de valda resurserna över när formuläret skickas. Rutan bredvid fältet markeras automatiskt när fältet redigeras.
 
@@ -429,4 +436,4 @@ Så här gör du om du vill redigera flera resurser på sidan Resursredigeraren:
 
    Obs! kryssrutan bredvid fältet markeras automatiskt när fältet redigeras.
 
-1. Klicka på **[!UICONTROL Uppdatera metadata]** för att skicka formuläret och spara ändringarna för alla resurser. Endast markerade metadata ändras.
+1. Klicka **[!UICONTROL Update Metadata]** för att skicka formuläret och spara ändringarna för alla resurser. Endast markerade metadata ändras.
