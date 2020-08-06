@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 0763f236-5648-49e9-8a24-dbc8f4c77ee3
 translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+workflow-type: tm+mt
+source-wordcount: '739'
+ht-degree: 0%
 
 ---
 
@@ -103,7 +106,7 @@ Följande beskrivningar av lagringsplats kan vara till hjälp när du utvecklar 
 
 **komponentplacering**
 
-När en medlem går in i UGC i publiceringsmiljön interagerar de med en komponent som en del av en AEM-webbplats.
+När en medlem går in i UGC i publiceringsmiljön interagerar de med en komponent som en del av en AEM.
 
 Ett exempel på en sådan komponent är [kommentarkomponenten](http://localhost:4502/content/community-components/en/comments.html) som finns på webbplatsen för [Community Components Guide](components-guide.md) . Sökvägen till kommentarnoden i den lokala databasen är:
 
@@ -123,7 +126,7 @@ UGC skapas på båda dessa platser och ska bara nås med en [verktygsmetod](#uti
 * Rotsökväg = /content/usergenerated/asi/srp-choice
 * UGC-nod för JSRP = /content/usergenerated/asi/jcr/content/community-components/en/comments/jcr:content/includable/comments/srzd-let_it_be_
 
-*Observera* att UGC-noden för JSRP *endast* finns i AEM-instansen (antingen författaren eller publiceringen) som den angavs för. Om det anges i en publiceringsinstans går det inte att moderera från modereringskonsolen på författaren.
+*För JSRP är du medveten* om att UGC-noden *bara* finns på den AEM instansen (antingen författaren eller publiceringen) som den angavs för. Om det anges i en publiceringsinstans går det inte att moderera från modereringskonsolen på författaren.
 
 ## Relaterad information {#related-information}
 
