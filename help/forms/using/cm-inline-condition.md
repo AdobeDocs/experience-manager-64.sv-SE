@@ -10,6 +10,9 @@ topic-tags: interactive-communications
 discoiquuid: f376b8c1-e176-4fe6-b298-f3d493c59319
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1715'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Med hjälp av textbundna villkor och upprepningar i Interactive Communications o
 
 ## Textbundna villkor {#inline-conditions}
 
-Med AEM Forms kan du använda textbundna villkor i textmoduler för att automatisera återgivning av text som är beroende av sammanhanget eller data som är kopplade till formulärdatamodellen (i Interaktiv kommunikation) eller datamordlistan (med bokstäver). Textbundna villkor visar specifikt innehåll baserat på att villkorsutvärderingen är true eller false.
+I AEM Forms kan du använda textbundna villkor i textmoduler för att automatisera återgivning av text som är beroende av sammanhanget eller data som är kopplade till formulärdatamodellen (i Interactive Communication) eller datamordlistan (med bokstäver). Textbundna villkor visar specifikt innehåll baserat på att villkorsutvärderingen är true eller false.
 
 Villkoren utför beräkningar på datavärden som tillhandahålls av formulärdatamodellen/datamordlistan eller av slutanvändarna. Med textbundna villkor kan du spara tid och minska antalet mänskliga fel samtidigt som du skapar sammanhangsberoende och personaliserade interaktiva kommunikationer/brev.
 
@@ -38,7 +41,7 @@ Mer information finns i Skapa regel i text i [Texter i interaktiv kommunikation]
 
 När du har inkluderat textavsnittet i ett interaktivt kommunikations- och agentgränssnitt för att förbereda en interaktiv kommunikation, utvärderas (formulärdatamodell)-data för mottagarna och texten visas endast för mottagarna i USA.
 
-### Exempel: Använda textbundna villkor i en bokstav för att återge rätt adress {#example-using-inline-condition-in-a-letter-to-render-the-appropriate-address}
+### Exempel: Använda textbundna villkor i en bokstav för att återge rätt adress  {#example-using-inline-condition-in-a-letter-to-render-the-appropriate-address}
 
 Du kan infoga ett textbundet villkor i en bokstav genom att infoga det textbundna villkoret i rätt textmodul. I följande exempel används två villkor för att utvärdera och visa lämplig adress, Sir eller Ma&#39;am, i ett brev baserat på DD-elementets kön. Om du använder liknande steg kan du skapa andra villkor.
 
@@ -82,6 +85,7 @@ Du kan infoga ett textbundet villkor i en bokstav genom att infoga det textbundn
 
    * Ett exempel på en XML-datafil som skapats baserat på den relevanta dataordlistan när bokstaven förhandsgranskas med exempeldata.
    * En XML-datafil som är kopplad till den relevanta dataordlistan.
+
    Mer information finns i [Dataordlista](/help/forms/using/data-dictionary.md).
 
    ![5_letterutdata](assets/5_letteroutput.png)
@@ -96,7 +100,7 @@ Du kan dessutom ange regel/villkor i den upprepade konstruktionen för att villk
 
 I följande exempel visas hur du använder upprepning för att strukturera och återge kreditkortstransaktionerna i en interaktiv kommunikation.
 
-1. I ett formulärdatamodellbaserat textdokumentfragment infogar du relevanta datamodellsobjekt (och inbäddad text som krävs för etiketterna, som i det här exemplet):
+1. I ett formulärdatamodellbaserat textdokumentfragment infogar du relevanta formulärdatamodellsobjekt (och inbäddad text som krävs för etiketterna, som i det här exemplet):
 
    ![1_elementstext](assets/1_elementstext.png)
 
@@ -149,7 +153,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
    Dessa DD-element återger en lista över de transaktioner som gjorts på kreditkortet med följande information:
 
-   Transaktionsdatum, Transaktionsbelopp och Transaktionstyp (Debit eller Credit)
+   Transaktionsdatum, Transaktionsbelopp och Transaktionstyp (debet eller kredit)
 
 1. Bädda in texten i DD-elementen för att göra satsen mer läsbar, till exempel:
 
@@ -185,6 +189,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
    * **Radbrytning**: Infogar radbrytning efter varje transaktionspost i utdatabokstaven.
    * **Text**: Infogar det angivna texttecknet efter varje transaktionspost i utdatabokstaven.
+
    När villkoret har infogats markeras den upprepade texten i rött och ett handtag visas till vänster. Du kan hålla muspekaren över handtaget till vänster om upprepningen för att visa den upprepade konstruktionen.
 
    ![4_repeat_hoverdetail](assets/4_repeat_hoverdetail.png)
@@ -197,6 +202,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
    * Ett exempel på en XML-datafil som skapats baserat på den relevanta dataordlistan när bokstaven förhandsgranskas med exempeldata.
    * En XML-datafil som är kopplad till den relevanta dataordlistan.
+
    Mer information finns i [Dataordlista](https://helpx.adobe.com/aem-forms/6-2/data-dictionary.html).
 
    ![6_repeatOutputPreview](assets/6_repeatoutputpreview.png)
@@ -207,7 +213,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
    >
    >Du kan bara infoga villkor och upprepa medan du skapar eller redigerar den relevanta textmodulen. Även om du kan redigera i textmodulen när du förhandsgranskar brevet kan du inte infoga villkor eller upprepa.
 
-## Använda internt villkor och upprepning - vissa användningsfall {#using-inline-condition-and-repeat-some-use-cases}
+## Använda internt villkor och upprepning - vissa användningsfall  {#using-inline-condition-and-repeat-some-use-cases}
 
 ### Upprepa i villkor {#repeat-within-condition}
 
