@@ -12,6 +12,9 @@ discoiquuid: 10940000-808a-48ae-8e46-61eccef71eab
 legacypath: /content/docs/en/aem/6-2/administer/operations/page-authoring/configuring-responsive-layouting
 translation-type: tm+mt
 source-git-commit: 3097133c42e1d9c291706516a0dbc2aa2d15ef50
+workflow-type: tm+mt
+source-wordcount: '1324'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +27,7 @@ source-git-commit: 3097133c42e1d9c291706516a0dbc2aa2d15ef50
 >
 >Detta kan jämföras med [Mobile Web](/help/sites-developing/mobile-web.md) -funktionerna, som använder adaptiv webbdesign (främst för det klassiska användargränssnittet).
 
-AEM implementerar responsiv layout för dina sidor med en kombination av mekanismer:
+AEM realiserar responsiv layout för dina sidor med en kombination av mekanismer:
 
 * [**Komponenten Layoutbehållare **](/help/sites-authoring/responsive-layout.md#adding-a-layout-container-and-its-content-edit-mode)
 
@@ -42,7 +45,8 @@ AEM implementerar responsiv layout för dina sidor med en kombination av mekanis
 
          Du kan ha layoutbehållaren som standard för sidan, samtidigt som användaren kan lägga till fler layoutbehållare i den här versionen. till exempel för att uppnå kolumnkontroll.
 
-* **[Layoutläge](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**När layoutbehållaren har placerats på sidan kan du använda **layoutläget**för att placera innehåll i det responsiva rutnätet.
+* **[Layoutläge](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**När layoutbehållaren har placerats på sidan kan du använda
+**Layoutläge** för att placera innehåll i det responsiva rutnätet.
 
 * [**Emulator **](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)Med den här funktionen kan du skapa och redigera responsiva webbplatser som ordnar om layouten enligt enhetens/fönstrets storlek genom att ändra storlek på komponenterna interaktivt. Användaren kan sedan se hur innehållet återges med hjälp av emulatorn.
 
@@ -114,13 +118,14 @@ Om du migrerar ett befintligt projekt (med befintligt innehåll) måste du:
 >* lägga till brytpunkter i mallar
 >* lägga till samma brytpunkter på befintliga sidor\
    >  När arv används kan du begränsa detta till innehållets rotsida.
+
 >
 
 
 
 #### Konfigurera brytpunkter med CRXDE Lite {#configuring-breakpoints-using-crxde-lite}
 
-1. Navigera med CRXDE Lite (eller motsvarande) till antingen:
+1. Använd CRXDE Lite (eller motsvarande) för att navigera till:
 
    * Din malldefinition.
    * Sidans `jcr:content` nod.
@@ -200,7 +205,7 @@ I följande två exempel visas definitionen:
 
 #### CSS för brytpunkter med LESS {#css-for-breakpoints-using-less}
 
-AEM använder LESS för att generera delar av den CSS som behövs, och dessa måste ingå i dina projekt.
+AEM använder LESS för att generera delar av den CSS som behövs, och dessa måste inkluderas för dina projekt.
 
 Du måste också skapa ett [klientbibliotek](https://docs.adobe.com/content/docs/en/aem/6-0/develop/the-basics/clientlibs.html) för att kunna tillhandahålla ytterligare konfigurations- och funktionsanrop. Följande LESS-extrakt är ett exempel på det minsta du behöver lägga till i ditt projekt:
 
@@ -238,7 +243,7 @@ Basrutnätsdefinitionen finns under:
 
 Komponenter som finns i en responsiv behållare ändrar storlek (tillsammans med deras respektive HTML DOM-element) beroende på stödrastrets responsiva storlek. Därför bör du under dessa omständigheter undvika (eller uppdatera) definitioner av DOM-element med fast bredd (som finns).
 
-Exempel:
+Till exempel:
 
 * Före:
 
@@ -260,7 +265,7 @@ Om du ändrar storlek på en komponent i rutnätet utlöses följande avlyssnare
 
 Om du vill ändra storlek på och uppdatera innehållet i en adaptiv bild som ingår i ett responsivt rutnät måste du lägga till en uppsättning som `afterEdit` avlyssnare i `REFRESH_PAGE` `EditConfig` filen för varje ingående komponent.
 
-Exempel:
+Till exempel:
 
 `<cq:listeners jcr:primaryType="cq:EditListenersConfig" afteredit="REFRESH_PAGE" />`
 
@@ -288,7 +293,7 @@ Om du vill att författare ska kunna lägga till fler responsiva rutnät på inn
 
 ### Konfigurera stödrastret för layoutbehållaren {#configure-the-grid-of-the-layout-container}
 
-Du kan konfigurera antalet kolumner som är tillgängliga för varje specifik instans av layoutbehållaren:
+Du kan konfigurera antalet kolumner som är tillgängliga för varje särskild instans av layoutbehållaren:
 
 1. **Författarmiljö**
 
