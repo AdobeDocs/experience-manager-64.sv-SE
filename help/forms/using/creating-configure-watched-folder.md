@@ -31,15 +31,15 @@ Du kan använda användargränssnittet för bevakad mapp för att:
 
 Innan du konfigurerar en bevakad mapp bör du kontrollera följande:
 
-* Bevakade mappar är en avancerad funktion i AEM-formulär. AEM-formulärtilläggspaket krävs för att funktionen ska fungera. Kontrollera att lämpligt AEM Forms-tilläggspaket är installerat och konfigurerat.
-* Du kan skapa den bevakade mappen i en delad eller lokal lagringsplats. Se till att AEM-formuläranvändare som är konfigurerade att köra den bevakade mappen har läs- och skrivbehörigheter i den bevakade mappen.
+* Bevakade mappar är en avancerad funktion i AEM formulär. Det kräver AEM formulärtilläggspaket för att fungera. Kontrollera att rätt AEM Forms-tilläggspaket är installerat och konfigurerat.
+* Du kan skapa den bevakade mappen i en delad eller lokal lagringsplats. Se till att AEM formuläranvändare som är konfigurerade att köra den bevakade mappen har läs- och skrivbehörighet för den bevakade mappen.
 * Du kan använda en tjänst, ett arbetsflöde eller ett skript för att automatisera en åtgärd med bevakad mapp. Kontrollera att motsvarande tjänst, arbetsflöde eller skript har skapats och är redo att köras. Mer information om hur du skapar en tjänst, ett arbetsflöde och ett skript finns i [Olika metoder för att bearbeta filer](/help/forms/using/watched-folder-in-aem-forms.md#various-methods-for-processing-files).
 * En bevakad mapp har olika egenskaper, se Egenskaper för [bevakad mapp](/help/forms/using/watched-folder-in-aem-forms.md#watchedfolderproperties).
 
 Så här skapar du en bevakad mapp:
 
-1. Tryck på **Adobe Experience Manager** -ikonen i skärmens övre vänstra hörn.
-1. Tryck på **Verktyg** > **Formulär** > **Konfigurera bevakad mapp.** En lista över redan konfigurerade bevakade mappar visas.
+1. Tryck på **Adobe Experience Manager** -ikonen längst upp till vänster på skärmen.
+1. Tryck på **Verktyg** > **Forms** > **Konfigurera bevakad mapp.** En lista över redan konfigurerade bevakade mappar visas.
 1. Tryck på **Nytt**. En lista över fält som krävs för att skapa den bevakade mappen visas:
 
    * **Namn**: Identifierar den bevakade mappen. Använd bara alfanumeriska tecken som namn.
@@ -50,6 +50,7 @@ Så här skapar du en bevakad mapp:
       * Ange arbetsflödesmodellen som ska köras i Arbetsflöde. Till exempel /etc/workflow/models/&lt;arbetsflödes_namn>/jcr:content/model
       * I Skript anger du JCR-sökvägen för skriptet som ska köras. Till exempel /etc/watchfolder/test/testScript.ecma
       * Under Tjänst anger du det filter som används för att hitta en OSGi-tjänst. Tjänsten är registrerad som en implementering av gränssnittet com.adobe.aemfd.watchfolder.service.api.ContentProcessor. Följande kod är till exempel en anpassad implementering av gränssnittet ContentProcessor med en anpassad (foo=bar) egenskap.
+
    >[!NOTE]
    >
    >Om du har valt **Service** för fältet **Bearbeta filer med** måste värdet för fältet Service Name(inputProcessorType) omslutas av parenteser. Till exempel (foo=bar).
@@ -105,7 +106,7 @@ Så här skapar du en bevakad mapp:
 
       Om skanningsintervallet är litet genomsöks indatamappen ofta av trådarna. Om filer ofta placeras i den bevakade mappen bör du hålla sökintervallet litet. Om filerna tas bort sällan bör du använda ett större inläsningsintervall så att de andra tjänsterna kan använda trådarna.
 
-   * **Begränsning på:** När det här alternativet är aktiverat begränsas antalet bevakade mappjobb som AEM-formulär bearbetar vid en given tidpunkt. Värdet för Batchstorlek avgör det maximala antalet jobb. For more information, see [throttling](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#about-throttling)
+   * **Begränsning på:** När det här alternativet är aktiverat begränsas antalet bevakade mappjobb som AEM formulärprocesser vid en given tidpunkt. Värdet för Batchstorlek avgör det maximala antalet jobb. For more information, see [throttling](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#about-throttling)
    * **Skriv över befintliga filer med liknande namn**: När värdet är True skrivs filerna i resultatmappen och i den bevarade mappen över. Om värdet är Falskt används filer och mappar med ett numeriskt indexsuffix för namnet. Standardvärdet är Falskt.
    * **Bevara filer vid fel:** Om du anger True bevaras indatafilerna om fel uppstår. Standardvärdet är true.
    * **Inkludera filer med mönster:** Ange en semikolonavgränsad lista (;) med mönster som den bevakade mappen använder för att avgöra vilka mappar och filer som ska genomsökas och hämtas. Om till exempel Inkludera filmönster är indata&amp;ast;, alla filer och mappar som matchar indata&amp;ast; plockas upp. Mer information finns i [Administrationshjälp](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md)
@@ -119,7 +120,7 @@ Så här skapar du en bevakad mapp:
 Förutom att ändra namnet på den bevakade mappen kan du ändra alla egenskaper i en befintlig bevakad mapp. Så här ändrar du egenskaper för en bevakad mapp:
 
 1. Tryck på **Adobe Experience Manager** -ikonen längst upp till vänster på skärmen.
-1. Tryck på **Verktyg** > **Formulär** > **Konfigurera bevakad mapp.** En lista över redan konfigurerade bevakade mappar visas.
+1. Tryck på **Verktyg** > **Forms** > **Konfigurera bevakad mapp.** En lista över redan konfigurerade bevakade mappar visas.
 1. Till vänster på skärmen Bevakade mappar markerar du bevakningsmappen och trycker på **Redigera.** En lista över fält som krävs för att skapa den bevakade mappen visas. De fält som visas på fliken **Grundläggande** är obligatoriska. Den avancerade fliken innehåller fler fält. De flesta av dessa fält innehåller ett standardvärde. Du kan ändra dessa egenskaper efter dina behov.
 1. När du har ändrat egenskaperna trycker du på **Uppdatera**. De ändrade egenskaperna sparas.
 
