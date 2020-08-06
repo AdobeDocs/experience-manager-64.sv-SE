@@ -1,6 +1,6 @@
 ---
-title: Återge HTML-formulär med anpassade verktygsfält
-seo-title: Återge HTML-formulär med anpassade verktygsfält
+title: Återge HTML Forms med CustomToolbars
+seo-title: Återge HTML Forms med CustomToolbars
 description: 'null'
 seo-description: 'null'
 uuid: b9c9464e-ff19-4051-a39b-4ec71c512d10
@@ -12,13 +12,16 @@ topic-tags: operations
 discoiquuid: 7eb0e8a8-d76a-43f7-a012-c21157b14cd4
 translation-type: tm+mt
 source-git-commit: e3fcf1a117b13392b7e530a09198982c6160cb7b
+workflow-type: tm+mt
+source-wordcount: '2304'
+ht-degree: 0%
 
 ---
 
 
-# Återge HTML-formulär med anpassade verktygsfält {#rendering-html-forms-with-customtoolbars}
+# Återge HTML Forms med CustomToolbars {#rendering-html-forms-with-customtoolbars}
 
-## Återge HTML-formulär med anpassade verktygsfält {#rendering-html-forms-with-custom-toolbars}
+## Återge HTML Forms med anpassade verktygsfält {#rendering-html-forms-with-custom-toolbars}
 
 Med Forms-tjänsten kan du anpassa ett verktygsfält som återges med ett HTML-formulär. Ett verktygsfält kan anpassas för att ändra utseendet genom att åsidosätta CSS-standardformat och lägga till dynamiskt beteende genom att åsidosätta Java-skript. Ett verktygsfält anpassas med hjälp av en XML-fil med namnet fscmenu.xml. Som standard hämtar Forms-tjänsten den här filen från en internt angiven URI-plats.
 
@@ -26,7 +29,7 @@ Med Forms-tjänsten kan du anpassa ett verktygsfält som återges med ett HTML-f
 >
 >Denna URI-plats finns i filen adobe-forms-core.jar som finns i filen adobe-forms-dsc.jar. Filen adobe-forms-dsc.jar finns i C:\Adobe\Adobe_Experience_Manager_forms\ folder (C:\ is the installation directory). Du kan använda ett filextraheringsverktyg, till exempel Win RAR, för att öppna Adobe-filen.
 
-Du kan kopiera fscmenu.xml från den här platsen, ändra den så att den uppfyller dina krav och sedan placera den på en anpassad URI-plats. Sedan anger du med API:t för Forms Service att körningsalternativen som resulterar i att Forms-tjänsten använder filen fscmenu.xml från den angivna platsen. Dessa åtgärder resulterar i att Forms-tjänsten återger ett HTML-formulär som har ett anpassat verktygsfält.
+Du kan kopiera fscmenu.xml från den här platsen, ändra den så att den uppfyller dina krav och sedan placera den på en anpassad URI-plats. Använd sedan Forms Service API för att ange körningsalternativ som resulterar i att Forms-tjänsten använder fscmenu.xml-filen från den angivna platsen. Dessa åtgärder resulterar i att Forms-tjänsten återger ett HTML-formulär som har ett anpassat verktygsfält.
 
 Förutom filen fscmenu.xml behöver du även följande filer:
 
@@ -41,7 +44,7 @@ fscJS är det Java-skript som associeras med varje nod. Det är nödvändigt att
 
 fscCSS är en formatmall som är kopplad till en viss nod. Formaten i CSS-filerna anger verktygsfältets utseende. *fscVCSS* är en formatmall för ett lodrätt verktygsfält som visas till vänster om det återgivna HTML-formuläret. *fscIECSS* är en formatmall som används för HTML-formulär som återges i Internet Explorer.
 
-Kontrollera att det finns referenser till alla ovanstående filer i filen fscmenu.xml. Det vill säga, i filen fscmenu.xml anger du URI-platser som pekar på dessa filer så att Forms-tjänsten kan hitta dem. Som standard är de här filerna tillgängliga på URI-platser som börjar med interna nyckelord `FSWebRoot` eller `ApplicationWebRoot`.
+Kontrollera att det finns referenser till alla ovanstående filer i filen fscmenu.xml. I filen fscmenu.xml anger du URI-platser som ska peka på dessa filer så att Forms-tjänsten kan hitta dem. Som standard är de här filerna tillgängliga på URI-platser som börjar med interna nyckelord `FSWebRoot` eller `ApplicationWebRoot`.
 
 Om du vill anpassa verktygsfältet ersätter du nyckelorden med hjälp av det externa nyckelordet `FSToolBarURI`. Nyckelordet representerar den URI som skickas till Forms-tjänsten vid körning (den här metoden visas senare i det här avsnittet).
 
@@ -51,7 +54,7 @@ Du kan också ange de absoluta platserna för dessa JS- och CSS-filer, till exem
 >
 >Vi rekommenderar inte att du blandar de sätt på vilka dessa filer refereras. Det innebär att alla URI:er ska refereras med antingen nyckelordet `FSToolBarURI` eller en absolut plats.
 
-Du kan hämta JS- och CSS-filerna genom att öppna filen adobe-forms-&lt;appserver>.ear. I den här filen öppnar du adobe-forms-res.war. Alla dessa filer finns i WAR-filen. Filen adobe-forms-&lt;appserver>.ear finns i installationsmappen för AEM-formulär (C:\ is the installation directory). Du kan öppna adobe-forms-&lt;appserver>.ear med ett filextraheringsverktyg som WinRAR.
+Du kan hämta JS- och CSS-filerna genom att öppna filen adobe-forms-&lt;appserver>.ear. I den här filen öppnar du adobe-forms-res.war. Alla dessa filer finns i WAR-filen. Filen adobe-forms-&lt;appserver>.ear finns i installationsmappen för AEM (C:\ is the installation directory). Du kan öppna adobe-forms-&lt;appserver>.ear med ett filextraheringsverktyg som WinRAR.
 
 I följande XML-syntax visas ett exempel på filen fscmenu.xml.
 
@@ -150,9 +153,9 @@ Ange också ett giltigt språkvärde genom att anropa `HTMLRenderSpec` objektets
 
 >[!NOTE]
 >
->Innan du återger ett HTML-formulär som använder ett anpassat verktygsfält måste du veta hur HTML-formulär återges. (Se [Återge formulär som HTML](/help/forms/developing/rendering-forms-html.md).)
+>Innan du återger ett HTML-formulär som använder ett anpassat verktygsfält måste du veta hur HTML-formulär återges. (Se [Återge Forms som HTML](/help/forms/developing/rendering-forms-html.md).)
 
-Mer information om Forms-tjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+Mer information om tjänsten Forms finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -170,7 +173,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa ett Forms Java API-objekt**
 
-Innan du programmässigt kan utföra en åtgärd som stöds av Forms-tjänsten måste du skapa ett Forms-klientobjekt.
+Innan du programmässigt kan utföra en åtgärd som stöds av Forms måste du skapa ett Forms-klientobjekt.
 
 **Referera en anpassad fscmenu XML-fil**
 
@@ -198,11 +201,11 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
 [Snabbstart för Forms Service API](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[Återgivning av interaktiva PDF-formulär](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[Återger interaktiv PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[Återger formulär som HTML](/help/forms/developing/rendering-forms-html.md)
+[Återger Forms som HTML](/help/forms/developing/rendering-forms-html.md)
 
-[Skapa webbprogram som återger formulär](/help/forms/developing/creating-web-applications-renders-forms.md)
+[Skapa webbprogram som återger Forms](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ### Återge ett HTML-formulär med ett anpassat verktygsfält med Java API {#render-an-html-form-with-a-custom-toolbar-using-the-java-api}
 
@@ -223,6 +226,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
    * Om du vill återge ett HTML-formulär med ett verktygsfält anropar du `HTMLRenderSpec` objektets `setHTMLToolbar` metod och skickar ett `HTMLToolbar` uppräkningsvärde. Om du till exempel vill visa ett lodrätt HTML-verktygsfält skickar du `HTMLToolbar.Vertical`.
    * Ange platsen för fscmenu XML-filen genom att anropa `HTMLRenderSpec` objektets `setToolbarURI` metod och skicka ett strängvärde som anger URI-platsen för XML-filen.
    * Om det är tillämpligt anger du språkvärdet genom att anropa `HTMLRenderSpec` objektets `setLocale` -metod och skicka ett strängvärde som anger språkvärdet. Standardvärdet är engelska.
+
    >[!NOTE]
    >
    >Snabbstart som är associerad med det här avsnittet anger det här värdet till `fr_FR`*.*
@@ -231,13 +235,14 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
    Anropa `FormsServiceClient` objektets `renderHTMLForm` metod och skicka följande värden:
 
-   * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som är en del av ett formulärprogram måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
+   * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som ingår i ett Forms-program måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
    * Ett `TransformTo` uppräkningsvärde som anger HTML-inställningstypen. Om du till exempel vill återge ett HTML-formulär som är kompatibelt med dynamisk HTML för Internet Explorer 5.0 eller senare anger du `TransformTo.MSDHTML`.
    * Ett `com.adobe.idp.Document` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du ett tomt `com.adobe.idp.Document` objekt.
    * Det objekt `HTMLRenderSpec` som lagrar körningsalternativ för HTML.
    * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärdet, till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
    * Ett `URLSpec` objekt som lagrar URI-värden som krävs för att återge ett HTML-formulär.
    * Ett `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter, och du kan ange `null` om du inte vill bifoga filer till formuläret.
+
    Metoden returnerar `renderHTMLForm` ett `FormsResult` objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
@@ -260,11 +265,11 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
 ### Återge ett HTML-formulär med ett anpassat verktygsfält med hjälp av webbtjänstens API {#rendering-an-html-form-with-a-custom-toolbar-using-the-web-service-api}
 
-Återge ett HTML-formulär som innehåller ett anpassat verktygsfält med hjälp av Forms Service API (webbtjänsten):
+Återge ett HTML-formulär som innehåller ett anpassat verktygsfält med hjälp av Forms Service API (webbtjänst):
 
 1. Inkludera projektfiler
 
-   * Skapa Java-proxyklasser som använder Forms-tjänstens WSDL.
+   * Skapa Java-proxyklasser som använder Forms tjänst-WSDL.
    * Inkludera Java-proxyklasserna i klassökvägen.
 
 1. Skapa ett Forms Java API-objekt
@@ -277,6 +282,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
    * Om du vill återge ett HTML-formulär med ett verktygsfält anropar du `HTMLRenderSpec` objektets `setHTMLToolbar` metod och skickar ett `HTMLToolbar` uppräkningsvärde. Om du till exempel vill visa ett lodrätt HTML-verktygsfält skickar du `HTMLToolbar.Vertical`.
    * Ange platsen för fscmenu XML-filen genom att anropa `HTMLRenderSpec` objektets `setToolbarURI` metod och skicka ett strängvärde som anger URI-platsen för XML-filen.
    * Om det är tillämpligt anger du språkvärdet genom att anropa `HTMLRenderSpec` objektets `setLocale` -metod och skicka ett strängvärde som anger språkvärdet. Standardvärdet är engelska.
+
    >[!NOTE]
    >
    >Snabbstart som är associerad med det här avsnittet anger det här värdet till `fr_FR`*.*
@@ -285,7 +291,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
    Anropa `FormsService` objektets `renderHTMLForm` metod och skicka följande värden:
 
-   * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som är en del av ett formulärprogram måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
+   * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som ingår i ett Forms-program måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
    * Ett `TransformTo` uppräkningsvärde som anger HTML-inställningstypen. Om du till exempel vill återge ett HTML-formulär som är kompatibelt med dynamisk HTML för Internet Explorer 5.0 eller senare anger du `TransformTo.MSDHTML`.
    * Ett `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`.
    * Det objekt `HTMLRenderSpec` som lagrar körningsalternativ för HTML.
@@ -298,6 +304,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
    * Ett tomt `javax.xml.rpc.holders.StringHolder` objekt som fylls i av `renderHTMLForm` metoden. Det här argumentet lagrar språkets värde.
    * Ett tomt `javax.xml.rpc.holders.StringHolder` objekt som fylls i av `renderHTMLForm` metoden. Det här argumentet lagrar det HTML-återgivningsvärde som används.
    * Ett tomt `com.adobe.idp.services.holders.FormsResultHolder` objekt som innehåller resultatet av den här åtgärden.
+
    Metoden `renderHTMLForm` fyller i det `com.adobe.idp.services.holders.FormsResultHolder` objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
@@ -312,4 +319,4 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
 **Se även**
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
