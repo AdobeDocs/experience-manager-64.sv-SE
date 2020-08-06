@@ -1,8 +1,8 @@
 ---
 title: Sidexporteraren
 seo-title: Sidexporteraren
-description: Lär dig hur du använder AEM Page Exporter.
-seo-description: Lär dig hur du använder AEM Page Exporter.
+description: Lär dig hur du använder AEM sidexporteraren.
+seo-description: Lär dig hur du använder AEM sidexporteraren.
 uuid: 2ca2b8f1-c723-4e6b-8c3d-f5886cd0d3f1
 contentOwner: Chiradeep Majumdar
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 6ab07b5b-ee37-4029-95da-be2031779107
 translation-type: tm+mt
 source-git-commit: aac5026a249e1cb09fec66313cc03b58597663f0
+workflow-type: tm+mt
+source-wordcount: '1019'
+ht-degree: 0%
 
 ---
 
 
 # Sidexporteraren{#the-page-exporter}
 
-Med AEM kan du exportera en sida som en komplett webbsida med bilder, .js- och .css-filer.
+Med AEM kan du exportera en sida som en fullständig webbsida, inklusive bilder, .js- och .css-filer.
 
 När exporten är konfigurerad begär du bara en sida i webbläsaren genom att ersätta `html` med `export.zip` i URL:en så får du en ZIP-filnedladdning som innehåller den återgivna sidan i html-format och de refererade resurserna. Alla sökvägar på sidan, t.ex. sökvägar till bilder, skrivs om så att de pekar antingen på filerna som finns i zip-filen eller på resurserna på servern.
 
@@ -27,11 +30,11 @@ I följande steg beskrivs hur du exporterar en sida och förutsätter att det fi
 
 Så här exporterar du en sida:
 
-1. Öppna sidan i webbläsaren. Exempel:
+1. Öppna sidan i webbläsaren. Till exempel:
 1. `http://localhost:4502/content/geometrixx/en/products/triangle.html`
 1. Öppna dialogrutan för sidegenskaper, välj fliken **Avancerat** och expandera fältuppsättningen **Exportera** .
 
-1. Klicka på förstoringsikonen och välj en konfigurationsmall. Välj **geometrixx** -mallen som standard för Geometrixx-platsen. Click **OK**.
+1. Klicka på förstoringsikonen och välj en konfigurationsmall. Markera **geometrixmallen** , eftersom det är standardmallen för Geometrixx. Click **OK**.
 
 1. Klicka på **OK** för att stänga dialogrutan för sidegenskaper.
 1. Begär sidan genom att ersätta den `html` med `export.zip` i URL:en.
@@ -56,13 +59,13 @@ AEM bäddar in några mallar, bland annat:
    * Är reservmallen när ingen konfigurationsmall hittas i databasen.
    * Kan fungera som bas för en ny konfigurationsmall.
 
-* En som är dedikerad till **Geometrixx** -webbplatsen, på `/etc/contentsync/templates/geometrixx`. Den här mallen kan användas som exempel för att skapa en ny mall.
+* En som är tillägnad **Geometrixx** , på `/etc/contentsync/templates/geometrixx`. Den här mallen kan användas som exempel för att skapa en ny mall.
 
 Så här skapar du en konfigurationsmall för sidexporterare:
 
 1. Skapa en nod nedan i **CRXDE Lite**`/etc/contentsync/templates`:
 
-   * Namn:t.ex. `mysite`. Namnet visas i dialogrutan för sidegenskaper när du väljer sidexportmall.
+   * Namn: t.ex. `mysite`. Namnet visas i dialogrutan för sidegenskaper när du väljer sidexportmall.
    * Typ: `nt:unstructured`
 
 1. Under mallnoden, som anropas här, `mysite`skapar du en nodstruktur med hjälp av konfigurationsnoderna som beskrivs nedan.
@@ -124,13 +127,13 @@ Följande konfigurationsnod kopierar till exempel geometrixx clientlibs .js-file
 }
 ```
 
-Konfigurationsmallen för export av **Geometrixx** -sidor visar hur en sidexport kan konfigureras. Om du vill visa nodstrukturen för mallen i webbläsaren som json-format begär du följande URL:
+Konfigurationsmallen för **Geometrixx** -sidexport visar hur en sidexport kan konfigureras. Om du vill visa nodstrukturen för mallen i webbläsaren som json-format begär du följande URL:
 
 `http://localhost:4502/etc/contentsync/templates/geometrixx.-1.json`
 
 **Implementera en anpassad konfiguration**
 
-Som du kanske har märkt i nodstrukturen har **mallen för konfiguration av sidexport Geometrixx** en `logo` nod med en `type` egenskap som är inställd på `image`. Detta är en speciell konfigurationstyp som har skapats för att kopiera bildlogotypen till zip-filen. För att uppfylla vissa specifika krav kan du behöva implementera en anpassad `type` egenskap: Mer information finns i avsnittet Implementera en anpassad uppdateringshanterare på sidan Innehållssynkronisering.
+Som du kanske har märkt i nodstrukturen har **Geometrixx** -sidexportkonfigurationsmallen en en `logo` nod med en `type` egenskap som är inställd på `image`. Detta är en speciell konfigurationstyp som har skapats för att kopiera bildlogotypen till zip-filen. För att uppfylla vissa specifika krav kan du behöva implementera en anpassad `type` egenskap: Mer information finns i avsnittet Implementera en anpassad uppdateringshanterare på sidan Innehållssynkronisering.
 
 ## Programmatisk export av en sida {#programmatically-exporting-a-page}
 
