@@ -11,15 +11,18 @@ topic-tags: deploying
 discoiquuid: ea70758f-6726-4634-bfb4-a957187baef0
 translation-type: tm+mt
 source-git-commit: d97828afee7a65e7a4036912c1cc8726404088c9
+workflow-type: tm+mt
+source-wordcount: '1486'
+ht-degree: 0%
 
 ---
 
 
 # Felsöka ekindex{#troubleshooting-oak-indexes}
 
-## Långsam omindexering {#slow-re-indexing}
+## Långsam omindexering  {#slow-re-indexing}
 
-AEM:s interna omindexeringsprocess samlar in databasdata och lagrar dem i Oak-index för att ge stöd för prestandafrågor. I undantagsfall kan processen bli långsam eller till och med fastna. Den här sidan fungerar som en felsökningsguide som hjälper dig att identifiera om indexeringen är långsam, hitta orsaken och lösa problemet.
+AEM interna omindexeringsprocess samlar in databasdata och lagrar dem i Oak-index för att ge stöd för prestandafrågor. I undantagsfall kan processen bli långsam eller till och med fastna. Den här sidan fungerar som en felsökningsguide som hjälper dig att identifiera om indexeringen är långsam, hitta orsaken och lösa problemet.
 
 Det är viktigt att skilja mellan omindexering som tar en otillräckligt lång tid och omindexering som tar lång tid eftersom det indexerar enorma mängder innehåll. Den tid det tar att indexera innehåll skalas till exempel med mängden innehåll, så stora produktionsdatabaser tar längre tid att indexera om än små utvecklingsdatabaser.
 
@@ -27,10 +30,10 @@ Mer information om när och hur du indexerar om innehåll finns i [Bästa praxis
 
 ## Inledande identifiering {#initial-detection}
 
-Inledande identifiering av långsam indexering kräver granskning av `IndexStats` JMX MBeans. Gör följande på den påverkade AEM-instansen:
+Inledande identifiering av långsam indexering kräver granskning av `IndexStats` JMX MBeans. Gör följande på den påverkade AEM:
 
 1. Öppna webbkonsolen och klicka på fliken JMX eller gå till https://&lt;host>:&lt;port>/system/console/jmx (t.ex. [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx)).
-1. Navigera till `IndexStats` Mbeans.
+1. Navigate to the `IndexStats` Mbeans.
 1. Öppna `IndexStats` MBeans för &quot; `async`&quot; och &quot; `fulltext-async`&quot;.
 
 1. För båda MBeans ska du kontrollera om tidsstämpeln **Done** och **LastIndexTime** är mindre än 45 minuter från den aktuella tiden.
@@ -39,37 +42,39 @@ Inledande identifiering av långsam indexering kräver granskning av `IndexStats
 
 ## Indexeringen pausas efter en tvingad avstängning {#indexing-is-paused-after-a-forced-shutdown}
 
-En framtvingad avstängning resulterar i att AEM pausar asynkron indexering i upp till 30 minuter efter omstarten, och kräver normalt ytterligare 15 minuter för att slutföra den första omindexeringsprocessen, i totalt cirka 45 minuter (återkoppling till tidsramen för [ursprunglig identifiering](/help/sites-deploying/troubleshooting-oak-indexes.md#initial-detection) i 45 minuter). Om du misstänker att indexering har pausats efter en tvingad avstängning:
+En framtvingad avstängning leder till att AEM avbryter asynkron indexering i upp till 30 minuter efter omstarten och kräver normalt ytterligare 15 minuter för att slutföra den första omindexeringsprocessen i totalt cirka 45 minuter (återkoppling till tidsramen för [ursprunglig identifiering](/help/sites-deploying/troubleshooting-oak-indexes.md#initial-detection) i 45 minuter). Om du misstänker att indexering har pausats efter en tvingad avstängning:
 
-1. Börja med att avgöra om AEM-instansen stängdes av på ett tvingat sätt (AEM-processen avbröts eller ett strömavbrott inträffade) och sedan startades om.
+1. För det första ska du avgöra om AEM stängdes av på ett tvingat sätt (den AEM processen tvångsdödades eller ett strömavbrott inträffade) och därefter starta om.
 
-   * [AEM-loggning](/help/sites-deploying/configure-logging.md) kan granskas i detta syfte.
+   * [AEM loggning](/help/sites-deploying/configure-logging.md) kan granskas i detta syfte.
 
-1. Om den framtvingade avstängningen inträffar, upphör AEM automatiskt med omindexering i upp till 30 minuter när programmet startas om.
-1. Vänta i ungefär 45 minuter tills AEM återupptar normala asynkrona indexeringsåtgärder.
+1. Om den framtvingade avstängningen inträffar kommer AEM automatiskt att avbryta omindexering i upp till 30 minuter vid omstart.
+1. Vänta ca 45 minuter tills AEM återupptar vanliga asynkrona indexeringsåtgärder.
 
 ## Trådpoolen har överlästs {#thread-pool-overloaded}
 
 >[!NOTE]
 >
->För AEM 6.1 kontrollerar du att [AEM 6.1 CFP 11](https://helpx.adobe.com/experience-manager/release-notes-aem-6-1-cumulative-fix-pack.html) är installerat.
+>För AEM 6.1 ska du se till att [AEM 6.1 CFP 11](https://helpx.adobe.com/experience-manager/release-notes-aem-6-1-cumulative-fix-pack.html) är installerad.
 
-I undantagsfall kan den trådpool som används för att hantera asynkron indexering bli överbelastad. För att isolera indexeringsprocessen kan en trådpool konfigureras för att förhindra att andra AEM-arbeten stör Oaks förmåga att indexera innehåll i tid. För att göra detta bör du:
+I undantagsfall kan den trådpool som används för att hantera asynkron indexering bli överbelastad. För att isolera indexeringsprocessen kan en trådpool konfigureras för att förhindra att andra AEM stör Oaks förmåga att indexera innehåll i tid. För att göra detta bör du:
 
 1. Definiera en ny isolerad trådpool för Apache Sling Scheduler som ska användas för asynkron indexering:
 
-   * På den AEM-instans som påverkas går du till AEM OSGi Web Console>OSGi>Configuration>Apache Sling Scheduler eller till https://&lt;host>:&lt;port>/system/console/configMgr (t.ex. [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr))
+   * På den berörda AEM-instansen går du till AEM OSGi Web Console>OSGi>Configuration>Apache Sling Scheduler eller till https://&lt;host>:&lt;port>/system/console/configMgr (t.ex. [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr))
    * Lägg till en post i fältet Tillåtna trådpooler med värdet eke.
    * Klicka på Spara längst ned till höger för att spara ändringarna.
+
    ![chlimage_1-119](assets/chlimage_1-119.png)
 
 1. Kontrollera att den nya trådpoolen för Apache Sling Scheduler är registrerad och visas i webbkonsolen för Apache Sling Scheduler Status.
 
-   * Navigera till AEM OSGi Web console>Status>Sling Scheduler eller gå till https://&lt;port>/system/console/status-slingscheduler (t.ex. [http://localhost:4502/system/console/status-slingscheduler](http://localhost:4502/system/console/status-slingscheduler))
+   * Gå till AEM OSGi Web console>Status>Sling Scheduler eller gå till https://&lt;port>/system/console/status-slingscheduler (t.ex. [http://localhost:4502/system/console/status-slingscheduler](http://localhost:4502/system/console/status-slingscheduler))
    * Kontrollera att följande poolposter finns:
 
       * ApacheSlingoak
       * ApacheSlingdefault
+
    ![chlimage_1-120](assets/chlimage_1-120.png)
 
 ## Observationskön är full {#observation-queue-is-full}
@@ -124,8 +129,8 @@ Så här identifierar och åtgärdar du en fast omindexeringsprocess:
 
 1. När du har samlat in all information som beskrivs i steg 1 startar du om AEM.
 
-   * Att starta om AEM kan lösa problemet vid hög samtidig belastning (spill i observationskön eller liknande).
-   * Om en omstart inte löser problemet kan du öppna ett problem med [Adobes kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) och ange all information som samlats in i steg 1.
+   * Om du startar om AEM kan problemet åtgärdas vid hög samtidig belastning (spill i observationskön eller liknande).
+   * Om en omstart inte löser problemet kan du öppna ett problem med [Adobe kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) och lämna all information som samlats in i steg 1.
 
 ## Säkert avbryter asynkron omindexering {#safely-aborting-asynchronous-re-indexing}
 
@@ -138,11 +143,12 @@ Så här avbryter du omindexering:
 
 1. Identifiera det IndexStats MBean som styr det omindexeringsintervall som behöver stoppas.
 
-   * Navigera till rätt IndexStats MBean via JMX-konsolen genom att gå till antingen AEM OSGi Web Console>Main>JMX eller https://&lt;host>:&lt;port>/system/console/jmx (t.ex. [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))
+   * Navigera till rätt IndexStats MBean via JMX-konsolen genom att antingen gå till AEM OSGi Web Console>Main>JMX eller https://&lt;host>:&lt;port>/system/console/jmx (t.ex. [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))
    * Öppna IndexStats MBean baserat på det omindexeringsfält som du vill stoppa ( `async`, `async-reindex`eller `fulltext-async`)
 
       * Titta på egenskapen async för att identifiera lämpligt intervall och därmed instansen IndexStats MBean. Egenskapen &quot;async&quot; kommer att innehålla körfältets namn: `async`, `async-reindex`eller `fulltext-async`.
-      * Fältet är också tillgängligt genom att du öppnar AEM&#39;s Index Manager i kolumnen &quot;Async&quot;. Om du vill komma åt indexhanteraren går du till Åtgärder > Diagnostik > Indexhanteraren.
+      * Fältet är också tillgängligt genom att du öppnar AEM Index Manager i kolumnen &quot;Async&quot;. Om du vill komma åt indexhanteraren går du till Åtgärder > Diagnostik > Indexhanteraren.
+
    ![chlimage_1-121](assets/chlimage_1-121.png)
 
 1. Anropa `abortAndPause()` kommandot på lämplig `IndexStats` MBean.
@@ -157,6 +163,7 @@ Så här avbryter du omindexering:
 
          * `/oak:index/someNewIndex@type=disabled`
       * eller ta bort indexdefinitionen helt
+
    Genomför ändringarna i databasen när de är klara.
 
 1. Slutligen kan du återuppta asynkron indexering på det avbrutna indexeringsfältet.
@@ -165,4 +172,4 @@ Så här avbryter du omindexering:
 
 ## Förhindra långsam omindexering {#preventing-slow-re-indexing}
 
-Det är bäst att indexera om under tysta perioder (till exempel inte under en stor innehållsimport) och helst under underhållsperioder när AEM-inläsningen är känd och kontrollerad. Se även till att omindexeringen inte sker under andra underhållsaktiviteter.
+Det är bäst att indexera om under tysta perioder (t.ex. inte under en stor innehållsimport) och helst under underhållsperioder när AEM är känd och kontrollerad. Se även till att omindexeringen inte sker under andra underhållsaktiviteter.
