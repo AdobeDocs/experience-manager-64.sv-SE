@@ -1,8 +1,8 @@
 ---
 title: Skapa ett anpassat formulär
 seo-title: Skapa ett anpassat formulär
-description: Så här skapar du ett anpassat formulär med AEM Forms. Adaptiva formulär är responsiva HTML5-formulär som effektiviserar informationsinsamling och -bearbetning.
-seo-description: Så här skapar du ett anpassat formulär med AEM Forms. Adaptiva formulär är responsiva HTML5-formulär som effektiviserar informationsinsamling och -bearbetning.
+description: Skapa ett anpassat formulär med AEM Forms. Adaptiva formulär är responsiva HTML5-formulär som effektiviserar informationsinsamling och -bearbetning.
+seo-description: Skapa ett anpassat formulär med AEM Forms. Adaptiva formulär är responsiva HTML5-formulär som effektiviserar informationsinsamling och -bearbetning.
 uuid: 444f461a-9e88-4385-b5ee-e985067ab7bc
 content-type: reference
 topic-tags: author
@@ -23,13 +23,13 @@ ht-degree: 0%
 
 Följ de här stegen för att skapa ett anpassat formulär.
 
-1. Åtkomst till författarinstansen av AEM Forms på `https://[server]:[port]/<custom-context-if-any>.`
+1. Öppna AEM Forms Author-instansen på `https://[server]:[port]/<custom-context-if-any>.`
 
    ```
    
    ```
 
-1. Ange dina inloggningsuppgifter på AEM-inloggningssidan.
+1. Ange dina inloggningsuppgifter på AEM inloggningssida.
 
    När du är inloggad trycker du på **[!UICONTROL Adobe Experience Manage > Forms > Forms & Documents]**.
 
@@ -41,7 +41,7 @@ Följ de här stegen för att skapa ett anpassat formulär.
 1. Ett alternativ för att välja en mall visas. Mer information om mallar finns i [Adaptiva formulärmallar](/help/forms/using/creating-adaptive-form.md#p-adaptive-form-templates-p). Tryck på en mall för att markera den och tryck sedan på Nästa.
 1. Ett alternativ för Lägg till egenskaper visas. Ange värdena för följande egenskapsfält. Fälten Titel och Namn är obligatoriska:
 
-   * **[!UICONTROL Title:]** Anger formulärets visningsnamn. Titeln hjälper dig att identifiera formuläret i användargränssnittet för AEM Forms.
+   * **[!UICONTROL Title:]** Anger formulärets visningsnamn. Titeln hjälper dig att identifiera formuläret i AEM Forms användargränssnitt.
    * **[!UICONTROL Name:]** Anger formulärets namn. En nod med det angivna namnet skapas i databasen. När du börjar skriva en titel genereras värdet för namnfältet automatiskt. Du kan ändra det föreslagna värdet. Namnfältet får endast innehålla alfanumeriska tecken, bindestreck och understreck. Alla ogiltiga indata ersätts med ett bindestreck.
    * **[!UICONTROL Description:]** Anger detaljerad information om formuläret.
    * **[!UICONTROL Tags:]** Anger taggar som unikt identifierar det adaptiva formuläret. Taggar hjälper dig att söka i formuläret. Om du vill skapa taggar skriver du nya taggnamn i rutan **Taggar** .
@@ -52,6 +52,7 @@ Följ de här stegen för att skapa ett anpassat formulär.
    * [XFA-formulärmall](/help/forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p)
    * [XML- eller JSON-schema](/help/forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-xml-or-json-schema-p)
    * Ingen eller utan någon formulärmodell
+
    Du kan konfigurera dessa på **[!UICONTROL Form Model]** fliken på **[!UICONTROL Add Properties]** sidan. Som standard är den valda formulärmodellen **[!UICONTROL None]**.
 
 1. Tryck på **Skapa**. Ett anpassat formulär skapas och en dialogruta öppnas där du kan öppna formuläret för redigering.
@@ -72,7 +73,7 @@ Följ de här stegen för att skapa ett anpassat formulär.
 
 ## Skapa ett anpassat formulär baserat på en formulärdatamodell {#fdm}
 
-[Med dataintegrering](/help/forms/using/data-integration.md) i AEM Forms kan du integrera flera datakällor och sammanföra deras enheter och tjänster för att skapa en formulärdatamodell. Det är ett tillägg till JSON-schemat. Du kan använda en formulärdatamodell för att skapa ett anpassat formulär. Enheterna eller datamodellsobjekten som konfigurerats i en formulärdatamodell är tillgängliga som datamodellsobjekt för formulärutveckling. De är bundna till respektive datakällor och används för att fylla i ett formulär i förväg och skriva inlämnade data tillbaka till respektive datakälla. Du kan också anropa tjänster som konfigurerats i en formulärdatamodell med hjälp av adaptiva formulärregler.
+[Med AEM Forms dataintegrering](/help/forms/using/data-integration.md) kan ni integrera flera datakällor och sammanföra deras enheter och tjänster för att skapa en formulärdatamodell. Det är ett tillägg till JSON-schemat. Du kan använda en formulärdatamodell för att skapa ett anpassat formulär. Enheterna eller datamodellsobjekten som konfigurerats i en formulärdatamodell är tillgängliga som datamodellsobjekt för formulärutveckling. De är bundna till respektive datakällor och används för att fylla i ett formulär i förväg och skriva inlämnade data tillbaka till respektive datakälla. Du kan också anropa tjänster som konfigurerats i en formulärdatamodell med hjälp av adaptiva formulärregler.
 
 Så här använder du en formulärdatamodell för att skapa ett anpassat formulär:
 
@@ -88,7 +89,7 @@ Så här använder du en formulärdatamodell för att skapa ett anpassat formul�
 
 >[!NOTE]
 >
->Du kan också ändra formulärdatamodellen för ett anpassat formulär. Detaljerade steg finns i [Redigera formulärmodellegenskaper för ett anpassat formulär](#edit-form-model).
+>Du kan också ändra formulärdatamodellen för ett anpassat formulär. Detaljerade steg finns i [Redigera formulärmodellegenskaper för ett adaptivt formulär](#edit-form-model).
 
 ## Skapa ett anpassat formulär baserat på en XFA-formulärmall {#create-an-adaptive-form-based-on-an-xfa-form-template}
 
@@ -101,14 +102,14 @@ Du kan återanvända dina XFA-formulärmallar för att skapa anpassningsbara for
 Gör följande om du vill använda en XFA-formulärmall som formulärmodell för ditt adaptiva formulär:
 
 1. Öppna **[!UICONTROL Add Properties]** fliken på **[!UICONTROL Form Model]** sidan.
-1. Välj i listrutan på fliken Formulärmodell **[!UICONTROL Form Templates]**. Alla formulärmallar som överförs till databasen via användargränssnittet i AEM Forms visas för val. Välj en mall i listan.
+1. Välj i listrutan på fliken Formulärmodell **[!UICONTROL Form Templates]**. Alla formulärmallar som överförs till databasen via AEM Forms UI visas för val. Välj en mall i listan.
 
    ![Associera XFA-formulärmall med ett anpassat formulär](assets/form_model_xfa_associate.png)
    **Bild:** *Välja en formulärmall*
 
    >[!NOTE]
    >
-   >Du kan också ändra formulärmallen för ett anpassat formulär. Detaljerade steg finns i [Redigera formulärmodellegenskaper för ett anpassat formulär](#edit-form-model).
+   >Du kan också ändra formulärmallen för ett anpassat formulär. Detaljerade steg finns i [Redigera formulärmodellegenskaper för ett adaptivt formulär](#edit-form-model).
 
 ## Skapa ett anpassat formulär baserat på XML- eller JSON-schema {#create-an-adaptive-form-based-on-xml-or-json-schema}
 
@@ -128,6 +129,7 @@ Gör följande om du vill använda XML- eller JSON-schema som formulärmodell f�
 
    * **[!UICONTROL Upload from disk]** - Välj det här alternativet och tryck på Överför schemadefinition för att bläddra och överföra ett XML-schema eller JSON-schema från filsystemet. Den överförda schemafilen finns i formuläret och är inte tillgänglig för andra adaptiva formulär.
    * **[!UICONTROL Search in repository]** - Välj det här alternativet om du vill välja från listan med schemadefinitionsfiler som är tillgängliga i databasen. Välj XML- eller JSON-schemafilen som formulärmodell. Det valda schemat kopplas till formuläret via referens och kan användas i andra adaptiva formulär.
+
    >[!CAUTION]
    >
    >Kontrollera att JSON-schemats filnamn slutar med **.schema.json**. Till exempel: mySchema.schema.json
@@ -146,13 +148,13 @@ Gör följande om du vill använda XML- eller JSON-schema som formulärmodell f�
 
 ## Adaptiva formulärmallar {#adaptive-form-templates}
 
-En mall innehåller en grundläggande struktur och definierar utseendet (layouter och format) för ett anpassat formulär. Den har förformaterade komponenter som innehåller vissa egenskaper och innehållsstruktur. AEM Forms tillhandahåller vissa anpassningsbara formulärmallar. Om du vill hämta hela mallpaketet med avancerade mallar måste du installera tilläggspaketet AEM Forms. Mer information finns i [Installera tilläggspaket](/help/forms/using/installing-configuring-aem-forms-osgi.md)för AEM Forms.
+En mall innehåller en grundläggande struktur och definierar utseendet (layouter och format) för ett anpassat formulär. Den har förformaterade komponenter som innehåller vissa egenskaper och innehållsstruktur. AEM Forms har vissa anpassningsbara blankettmallar. Om du vill hämta hela mallpaketet med avancerade mallar måste du installera AEM Forms-tilläggspaketet. Mer information finns i [Installera AEM Forms-tilläggspaket](/help/forms/using/installing-configuring-aem-forms-osgi.md).
 
 Dessutom kan du använda mallredigeraren för att skapa egna mallar. Mer information om hur du arbetar med mallar finns i [Adaptiva formulärmallar](/help/forms/using/template-editor.md).
 
 >[!NOTE]
 >
->När du öppnar ett adaptivt formulär som skapats med den avancerade mallen för redigering visas ett felmeddelande. Den avancerade mallen har en signaturstegskomponent och Adobe Sign är aktiverat som standard för den. Skapa och välj en [Adobe Sign-molnkonfiguration](/help/forms/using/adobe-sign-integration-adaptive-forms.md) och [konfigurera en signerare](/help/forms/using/working-with-adobe-sign.md#addsignerstoanadaptiveform) för att lösa felet.
+>När du öppnar ett adaptivt formulär som skapats med den avancerade mallen för redigering visas ett felmeddelande. Den avancerade mallen har en signaturstegskomponent och Adobe Sign är aktiverat som standard för den. Skapa och välj en molnkonfiguration [för](/help/forms/using/adobe-sign-integration-adaptive-forms.md) Adobe Sign och [konfigurera en signerare](/help/forms/using/working-with-adobe-sign.md#addsignerstoanadaptiveform) för att lösa problemet.
 
 ## Redigera formulärmodellegenskaper för ett anpassat formulär {#edit-form-model}
 
@@ -186,10 +188,12 @@ Som standard är alternativet för att spara automatiskt inte aktiverat. Du kan 
 
    * **[!UICONTROL Time based:]** Välj alternativet för att börja spara innehållet baserat på ett visst tidsintervall.
    * **[!UICONTROL Event based:]** Välj alternativet för att börja spara innehållet baserat på när en händelse utlöses.
+
    När du väljer en utlösare aktiveras rutan Strategisk konfiguration. I rutan Strategisk konfiguration kan du:
 
    * Ange ett tidsintervall om du väljer **[!UICONTROL Time based]** utlösare.
    * Ange ett händelsenamn om du väljer **[!UICONTROL Event based]** utlösare.
+
    Du kan också skapa och lägga till en egen anpassad strategi i listan. Mer information finns i [Implementera en anpassad strategi för att automatiskt spara formulären](/help/forms/using/auto-save-an-adaptive-form.md#p-implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms-p).
 
 1. (Endast tidsbaserad autosparfunktion) Utför följande steg för att konfigurera alternativ för tidsbaserad autosparning.
@@ -204,6 +208,6 @@ Som standard är alternativet för att spara automatiskt inte aktiverat. Du kan 
 
    >[!NOTE]
    >
-   >För att alternativet Spara automatiskt ska fungera för anonyma användare måste du konfigurera Forms Common Configuration Service så att alla användare kan förhandsgranska, verifiera och signera formulär.
+   >Om du vill att alternativet Spara automatiskt ska fungera för anonyma användare måste du konfigurera Forms Common Configuration Service så att alla användare kan förhandsgranska, verifiera och signera formulär.
    >
-   >Om du vill konfigurera tjänsten går du till AEM Web Console-konfigurationen på `https://[server]:[host]/system/console/configMgr` och redigerar **[!UICONTROL Forms Common Configuration Service]** för att välja **[!UICONTROL All Users]** alternativet i **[!UICONTROL Allow]** fältet och sparar konfigurationen.
+   >Om du vill konfigurera tjänsten går du till AEM Web Console-konfiguration på `https://[server]:[host]/system/console/configMgr` och redigerar **[!UICONTROL Forms Common Configuration Service]** för att välja **[!UICONTROL All Users]** alternativet i **[!UICONTROL Allow]** fältet och sparar konfigurationen.
