@@ -1,8 +1,8 @@
 ---
 title: Ändra organisationslogotyp för varumärken
 seo-title: Ändra organisationslogotyp för varumärken
-description: Om du vill märka ut AEM Forms-arbetsytan anger du organisationens logotyp genom att anpassa standardlogotypen.
-seo-description: Om du vill märka ut AEM Forms-arbetsytan anger du organisationens logotyp genom att anpassa standardlogotypen.
+description: Om du vill märka ut AEM Forms arbetsyta anger du din organisations logotyp genom att anpassa standardlogotypen.
+seo-description: Om du vill märka ut AEM Forms arbetsyta anger du din organisations logotyp genom att anpassa standardlogotypen.
 uuid: f0c340ee-2e54-4bb0-9c30-383cc1bbadb8
 contentOwner: robhagat
 content-type: reference
@@ -11,13 +11,16 @@ topic-tags: forms-workspace
 discoiquuid: 2c651302-f4ef-4211-b897-f5942ed0ffb1
 translation-type: tm+mt
 source-git-commit: a5cac0d369bb40659cfde011e5d6ef9a68dc4012
+workflow-type: tm+mt
+source-wordcount: '156'
+ht-degree: 0%
 
 ---
 
 
 # Ändra organisationslogotyp för varumärken {#changing-the-organization-logo-for-branding}
 
-Organisationens logotyp visas i det övre vänstra hörnet på arbetsytan i AEM Forms. Om du vill uppdatera logotypen följer du de [allmänna stegen för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md#generic-steps-for-html-workspace-customization) av arbetsytan i AEM Forms och följande steg.
+Organisationslogotypen visas i det övre vänstra hörnet på arbetsytan i AEM Forms. Om du vill uppdatera logotypen följer du de [allmänna stegen för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md#generic-steps-for-html-workspace-customization) av arbetsytan i AEM Forms och följande steg.
 
 1. Skapa en logotyp och ge filen namnet `NewWorkspace.png`. Placera bildfilen i mappen /apps/ws/images med en WebDAV-klient.
 
