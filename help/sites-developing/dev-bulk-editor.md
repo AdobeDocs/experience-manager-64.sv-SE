@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: e9a1ff95-e88e-41f0-9731-9a59159b4653
 translation-type: tm+mt
 source-git-commit: d6c10927d437cfc9371e4baeff5a91ed9a0503c8
+workflow-type: tm+mt
+source-wordcount: '1849'
+ht-degree: 1%
 
 ---
 
@@ -162,13 +165,13 @@ Här följer en lista med frågeparametrar för massredigering:
 
 ### Utveckla en gruppredigeringsbaserad komponent: produktlistkomponenten {#developing-a-bulk-editor-based-component-the-product-list-component}
 
-I det här avsnittet finns en översikt över hur du använder massredigeraren och en beskrivning av den befintliga Geometrixx-komponenten baserat på massredigeraren: komponenten Produktlista.
+I det här avsnittet finns en översikt över hur du använder gruppredigeraren och en beskrivning av den befintliga Geometrixx baserat på gruppredigeraren: komponenten Produktlista.
 
 Med komponenten Produktlista kan användare visa och redigera en datatabell. Du kan till exempel använda komponenten Produktlista för att representera produkter i en katalog. Informationen visas i en vanlig HTML-tabell och redigering utförs i dialogrutan **Redigera** , som innehåller en BulkEditor-widget. (Den här gruppredigeraren är exakt densamma som den som finns på /etc/importers/bulkeditor.html eller via Verktyg-menyn). Produktlistkomponenten har konfigurerats för specifika, begränsade massredigeringsfunktioner. Alla delar av gruppredigeraren (eller komponenter som härletts från gruppredigeraren) kan konfigureras.
 
 Med gruppredigeraren kan du lägga till, ändra, ta bort, filtrera och exportera raderna, spara ändringar och importera en uppsättning rader. Varje rad lagras som en nod under själva produktlistkomponentinstansen. Varje cell är en egenskap för varje nod. Det här är ett designalternativ och kan enkelt ändras. Du kan till exempel lagra noder någon annanstans i databasen. Frågeserverns roll är att returnera listan över noder som ska visas. sökvägen definieras som en produktlistinstans.
 
-Källkoden för produktlistkomponenten finns i databasen i /apps/geometrixx/components/productlist och består av flera delar, som alla AEM-komponenter:
+Källkoden för produktlistkomponenten finns i databasen i /apps/geometrixx/components/productlist och består av flera delar, som alla AEM:
 
 * HTML-återgivning: återgivningen görs i en JSP-fil (/apps/geometrixx/components/productlist/productlist.jsp). JSP läser delnoderna för den aktuella produktlistkomponenten och visar var och en av dem som en rad i en HTML-tabell.
 * Dialogrutan Redigera, där du definierar konfigurationen för gruppredigeraren. Konfigurera dialogrutan så att den matchar komponentens behov: tillgängliga kolumner och möjliga åtgärder som utförs i rutnätet eller i sökningen. Mer information om alla konfigurationsegenskaper finns i [konfigurationsegenskaper](#bulk-editor-configuration-properties) för gruppredigeraren.
@@ -528,7 +531,7 @@ Frågeservern fungerar så här: tar emot en GQL-fråga och de kolumner som ska 
 
 I produktlistekomponenterna är de två parametrar som skickas till frågeservern följande:
 
-*  fråga: &quot;path:/content/geometrixx/en/customers/jcr:content/par/productlist Cube&quot;
+* fråga: &quot;path:/content/geometrixx/en/customers/jcr:content/par/productlist Cube&quot;
 * Protokoll: &quot;Markering,ProductId,ProductName,Color,CatalogCode,SellingSku&quot;
 
 och den returnerade JSON-strömmen är följande:
@@ -554,7 +557,7 @@ Du kan utöka frågeservern för att returnera en komplex arvsmodell eller retur
 
 ### Spara server {#save-servlet}
 
-I standardkonfigurationen för gruppredigeraren är varje rad en nod och sökvägen för den här noden lagras i radposten. Massredigeraren behåller länken mellan raden och noden genom jcr-sökvägen. När en användare redigerar stödrastret skapas en lista över alla ändringar. När en användare klickar på **Spara** skickas en POST-fråga till varje sökväg med de uppdaterade egenskapsvärdena. Detta är grunden för Sling-konceptet och fungerar bra om varje cell är en nodegenskap. Men om frågeservern implementeras för arvsberäkning kan modellen inte fungera som en egenskap som returneras av frågeservern kan ärvas från en annan nod.
+I standardkonfigurationen för gruppredigeraren är varje rad en nod och sökvägen för den här noden lagras i radposten. Massredigeraren behåller länken mellan raden och noden genom jcr-sökvägen. När en användare redigerar stödrastret skapas en lista över alla ändringar. När en användare klickar på **Spara** skickas en POST med de uppdaterade egenskapsvärdena till varje sökväg. Detta är grunden för Sling-konceptet och fungerar bra om varje cell är en nodegenskap. Men om frågeservern implementeras för arvsberäkning kan modellen inte fungera som en egenskap som returneras av frågeservern kan ärvas från en annan nod.
 
 Konceptet Spara serverlet är att ändringarna inte publiceras direkt till varje nod, utan att de bokförs på en server som utför sparandet. Detta ger den här servern möjlighet att analysera ändringarna och spara egenskaperna på rätt nod.
 
@@ -572,4 +575,4 @@ Servern behöver veta var egenskapen catalogCode lagras.
 
 En standardserverimplementering för Spara finns på /libs/wcm/bulkeditor/save/POST.jsp och används i produktlistkomponenten. Den tar alla parametrar från begäran (med formatet &lt;jcr path>/&lt;egenskapsnamn>) och skriver egenskaper på noder med JCR API. Noden skapas också om den inte finns (rutnätsinfogade rader).
 
-Standardkoden ska inte användas som den är eftersom den återimplementerar det som servern gör (en POST på &lt;jcr path>/&lt;egenskapsnamn>) och är därför bara en bra startpunkt för att skapa en Spara-server som hanterar en egenskapsarvsmodell.
+Standardkoden ska inte användas som den är eftersom den återimplementerar det som servern gör (en POST på &lt;jcr path>/&lt;egenskapsnamn>) och därför bara är en bra utgångspunkt för att skapa en Spara-server som hanterar en egenskapsarvsmodell.
