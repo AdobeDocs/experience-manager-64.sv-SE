@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: da8fc33b-84ae-4ead-87bb-5a7870a38b1f
 translation-type: tm+mt
 source-git-commit: 4b05b24a91ba9c31a19a5a96fb481d2ffc4c9bfc
+workflow-type: tm+mt
+source-wordcount: '412'
+ht-degree: 0%
 
 ---
 
@@ -25,6 +28,7 @@ source-git-commit: 4b05b24a91ba9c31a19a5a96fb481d2ffc4c9bfc
    * Riktningsljus
    * Strålkastare
    * Punktljus
+
    Andra ljustyper ignoreras eller konverteras till någon av de ovanstående typerna som stöds när scenen överförs till AEM 3D. De konverterade typerna används när du visar resursen och när du återger med den inbyggda funktionen för snabb förfining. De ursprungliga ljustyperna används vid återgivning med Maya.
 
 1. Skapa ett markplan, om det behövs, och använd lämpligt material.
@@ -39,18 +43,18 @@ source-git-commit: 4b05b24a91ba9c31a19a5a96fb481d2ffc4c9bfc
 
    Konfigurera renderingsinställningarna med följande förslag:
 
-   * **[!UICONTROL Vanlig]** flik
+   * **[!UICONTROL Common]** tab
 
-      Avmarkera kryssrutan **[!UICONTROL Alfakanal (mask)]** för alla återgivningsbara kameror.
+      Avmarkera **[!UICONTROL Alpha channel (mask)]** kryssrutan för alla återgivningsbara kameror.
 
-   * **[!UICONTROL fliken Kvalitet]**
+   * **[!UICONTROL Quality]** tab
 
-      * **[!UICONTROL Total kvalitet]** `- 0.5` eller mindre
-      * **[!UICONTROL Läge]** för indirekt diffus (GI) - `Final Gather`
-      * **[!UICONTROL Filterstorlek]** - `2.0`, `2.0`
-   * Rendera scenen med de typiska bildstorlekar som du förväntar dig att använda. Om det behövs kan du finjustera ljusen eller renderingsinställningarna, eller göra båda för att få önskat resultat.
+      * **[!UICONTROL Overall quality]** `- 0.5` eller mindre
+      * **[!UICONTROL Indirect Diffuse (GI) Mode]** - `Final Gather`
+      * **[!UICONTROL Filter Size]** - `2.0`, `2.0`
+   * Rendera scenen med de typiska bildstorlekar som du förväntar dig att använda. Om det behövs kan du finjustera ljusen, renderingsinställningarna eller båda för att få önskat resultat.
 
-      Tänk på att återgivning med Mental Ray, med bildbaserat ljus, är mycket långsamt och processorintensivt. Adobe rekommenderar att du konfigurerar inställningarna för den lägsta kvaliteten som fortfarande kan ge önskad återgivningskvalitet.
+      Tänk på att återgivning med Mental Ray, med bildbaserat ljus, är mycket långsamt och processorintensivt. Adobe rekommenderar att du konfigurerar de inställningar för lägsta kvalitet som fortfarande kan ge önskad återgivningskvalitet.
 
 
 1. Ta bort referensen som du skapade i steg 2.
@@ -60,8 +64,8 @@ source-git-commit: 4b05b24a91ba9c31a19a5a96fb481d2ffc4c9bfc
 
    Se [Överföra resurser](managing-assets-touch-ui.md#uploading-assets).
 
-   Om Autodesk® Maya® inte är konfigurerad på AEM-servern exporterar du en FBX från Maya och överför den till AEM.
+   Om Autodesk® Maya® inte är konfigurerad på AEM server exporterar du en FBX från Maya och överför den till AEM.
 
-1. Öppna Resursegenskaper i AEM. Ange **[!UICONTROL Titel]** till en lämplig sträng som ska visas i listrutan **[!UICONTROL Scenväljare]** . Kontrollera att **[!UICONTROL Class]** är inställd på **[!UICONTROL 3D-scen]**. Spara och avsluta.
+1. Öppna Resursegenskaper i AEM. Ange **[!UICONTROL Title]** en lämplig sträng som ska visas i **[!UICONTROL Stage Selector]** listrutan. Kontrollera att **[!UICONTROL Class]** är inställt på **[!UICONTROL 3D Stage]**. Spara och avsluta.
 1. Öppna en 3D-resurs, markera den nya scenen och verifiera att den förhandsvisar och återger som förväntat.
 
