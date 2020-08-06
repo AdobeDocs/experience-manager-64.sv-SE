@@ -1,6 +1,6 @@
 ---
-title: Java APIQuick Start(SOAP) för streckkodsblanketttjänst
-seo-title: Java APIQuick Start(SOAP) för streckkodsblanketttjänst
+title: Streckkodad Forms Service Java APIQuick Start(SOAP)
+seo-title: Streckkodad Forms Service Java APIQuick Start(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: a6739695-ee0b-4480-8cef-0f91a72deaad
@@ -18,17 +18,17 @@ ht-degree: 0%
 ---
 
 
-# Java API-snabbstart (SOAP) för streckkodsblanketttjänst {#barcoded-forms-service-java-apiquick-start-soap}
+# Streckkodad Forms Service Java API Quick Start (SOAP) {#barcoded-forms-service-java-apiquick-start-soap}
 
 Java API Quick Start (SOAP) är tillgängligt för tjänsten Barcoded Forms:
 
 [Snabbstart (SOAP-läge): Avkoda streckkodsdata med Java API](barcoded-forms-service-java-api.md#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstarter i Programmering med AEM Forms baseras på den Forms-server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstarter som finns i Programmering med AEM Forms baseras på den Forms-server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Avkoda streckkodsdata med Java API {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}
 
