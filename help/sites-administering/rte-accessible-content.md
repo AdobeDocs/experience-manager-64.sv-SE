@@ -1,8 +1,8 @@
 ---
 title: Konfigurera RTE för produktion av tillgängliga platser
 seo-title: Konfigurera RTE för produktion av tillgängliga platser
-description: Lär dig hur du konfigurerar AEM Rich Text Editor för att skapa tillgängliga webbplatser.
-seo-description: Lär dig hur du konfigurerar AEM Rich Text Editor för att skapa tillgängliga webbplatser.
+description: Lär dig hur du konfigurerar AEM RTF-redigerare för att skapa tillgängliga webbplatser.
+seo-description: Lär dig hur du konfigurerar AEM RTF-redigerare för att skapa tillgängliga webbplatser.
 uuid: 87539fee-3ecc-49f4-af3d-8dde72399c28
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: ff0f006d-461c-4cc4-b6eb-d665f3f3b498
 translation-type: tm+mt
 source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
+workflow-type: tm+mt
+source-wordcount: '937'
+ht-degree: 0%
 
 ---
 
@@ -50,6 +53,7 @@ Komponenten **Text** i AEM är tillgänglig för både beröringsaktiverade och 
 >
 >* [Plugins och deras funktioner](/help/sites-administering/rich-text-editor.md#aboutplugins)
 >* [Plugin-program och deras funktioner - användargränssnittet aktiverat för pekfunktioner](/help/sites-administering/rich-text-editor.md#aboutplugins)
+
 >
 
 
@@ -63,7 +67,7 @@ Fullständiga anvisningar om hur du konfigurerar textredigeraren finns på [sida
 * [Aktivera ett plugin-program och konfigurera egenskapen features](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins)
 * [Konfigurera övriga funktioner i textredigeringsprojektet](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins)
 
-Genom att konfigurera ett plugin-program inom rätt `rtePlugins` underavdelning i CRXDE Lite (se bilden nedan) kan du aktivera alla eller specifika funktioner för det plugin-programmet.
+Genom att konfigurera ett plugin-program i rätt `rtePlugins` underavdelning i CRXDE Lite (se bilden nedan) kan du aktivera alla eller specifika funktioner för det plugin-programmet.
 
 ![CRXDE Lite med exempelplugin-programmet ratePlugin.](assets/chlimage_1-208.png)
 
@@ -77,6 +81,7 @@ Nya semantiska blockformat kan göras tillgängliga för markering genom att:
 1. Styckeformaten är sedan tillgängliga för innehållsförfattaren från markeringsfälten i textredigeraren. De kan nås:
 
    * Använda ikonen för stycke ([pilbåge](https://en.wikipedia.org/wiki/Pilcrow)) i det beröringsaktiverade användargränssnittet:
+
    ![Styckeikon (pilbåge).](do-not-localize/chlimage_1-7.png)
 
    * Använda fältet **Format** (nedrullningsbar väljare) i det klassiska användargränssnittet.
