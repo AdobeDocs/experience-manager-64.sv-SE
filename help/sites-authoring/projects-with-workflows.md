@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 9d2bf30c-5190-4924-82cd-bcdfde24eb39
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '739'
+ht-degree: 8%
 
 ---
 
@@ -42,7 +45,7 @@ Beroende på vilken projektmall du väljer finns det vissa arbetsflöden:
 
 >[!NOTE]
 >
-> &amp;ast; Dessa arbetsflöden startas inte från **arbetsflödespanelen** i Projekt. Se [Skapa språkkopior för resurser.](/help/sites-administering/tc-manage.md)
+>&amp;ast; Dessa arbetsflöden startas inte från **arbetsflödespanelen** i Projekt. Se [Skapa språkkopior för resurser.](/help/sites-administering/tc-manage.md)
 
 Stegen för att starta och slutföra arbetsflöden är desamma oavsett vilket arbetsflöde du väljer. Bara stegen ändras.
 
@@ -60,10 +63,10 @@ I det här avsnittet beskrivs de arbetsflöden som är tillgängliga för projek
 
 Med det här arbetsflödet kan du begära ett manuskript från en användare och sedan godkänna det. Så här startar du arbetsflödet för begärandekopia:
 
-1. I ditt medieprojekt väljer du **+** -signeringen i rutan **Arbetsflöden** och väljer **Begär kopieringsarbetsflöde**.
+1. I medieprojektet väljer du plustecknet (**+**) i rutan **Arbetsflöden** och väljer **arbetsflödet Begär kopiering**.
 1. Ange en titel och en kort sammanfattning av vad du begär. Ange ett målordsantal, uppgiftsprioritet och ett förfallodatum om tillämpligt.
 
-   ![chlimage_1-325](assets/chlimage_1-321.png)
+   ![chlimage_1-321](assets/chlimage_1-321.png)
 
 1. Klicka på **Skapa**. Arbetsflödet startar. Uppgiften visas på **aktivitetspanelen** .
 
@@ -77,7 +80,7 @@ Arbetsflödena för produktfotografering (både handel och utan handel) beskrivs
 
 I arbetsflödet för projektgodkännande tilldelar du innehåll till en användare, granskar och godkänner sedan innehållet.
 
-1. I ditt enkla projekt väljer du ****+** -signaturen i rutan **Arbetsflöden** och väljer **Arbetsflöde** för projektgodkännande.
+1. In your Simple project, select the ****+** sign in the **Workflows** tile and select **Project Approval Workflow**.
 1. Ange en titel och välj vem du vill tilldela den till i grupplistan. Ange en beskrivning, innehållssökväg, uppgiftsprioritet och ett förfallodatum om tillämpligt.
 
    ![chlimage_1-323](assets/chlimage_1-323.png)
@@ -90,18 +93,18 @@ I arbetsflödet för projektgodkännande tilldelar du innehåll till en använda
 
 Med det här arbetsflödet kan du begära att programmet startas.
 
-1. I ditt enkla projekt väljer du **+** -signeringen i rutan **Arbetsflöden** och väljer **Begär startarbetsflöde**.
+1. I det enkla projektet väljer du plustecknet (**+**) i rutan **Arbetsflöden** och väljer **arbetsflödet Begär start**.
 1. Ange en rubrik för startprogrammet och ange startkällans sökväg. Du kan också lägga till en beskrivning och ett live-datum, om du vill. Välj Ärv källsidans livedata eller exkludera undersidor beroende på hur du vill att startsidan ska fungera.
 
    ![chlimage_1-325](assets/chlimage_1-325.png)
 
-1. Klicka på **Skapa**. Arbetsflödet startar. **Arbetsflödet visas i listan** Arbetsflöden **(klicka på ovaler**..). på panelen **Arbetsflöden** för att komma åt den här listan).
+1. Klicka på **Skapa**. Arbetsflödet startar. Arbetsflödet visas i listan **Arbetsflöden** (klicka på ovaler **..).** på panelen **Arbetsflöden** för att komma åt den här listan).
 
 ## Begär arbetsflöde för landningssida {#request-landing-page-workflow}
 
 Med det här arbetsflödet kan du begära en landningssida.
 
-1. I ditt enkla projekt väljer du **+** -signeringen i rutan **Arbetsflöden** och väljer Begär arbetsflöde för landningssida.
+1. In your Simple project, select the **+** sign in the **Workflows** tile and select Request Landing Page Workflow.
 1. Ange en rubrik för landningssidan och den överordnade sökvägen. Ange eventuellt ett live-datum eller välj en fil för landningssidan.
 
    ![chlimage_1-326](assets/chlimage_1-326.png)
@@ -112,7 +115,7 @@ Med det här arbetsflödet kan du begära en landningssida.
 
 Med det här arbetsflödet kan du begära ett e-postmeddelande. Det är samma arbetsflöde som visas i rutan **E-post** .
 
-1. I ditt Media- eller Simple-projekt väljer du **+** -signeringen i rutan **Arbetsflöden** och väljer **Begär e-postarbetsflöde**.
+1. In your Media or Simple project, select the **+** sign in the **Workflows** tile and select **Request Email Workflow**.
 1. Ange en e-posttitel samt kampanj- och mallsökvägar. Dessutom kan du ange namn, beskrivning och live-datum.
 
    ![chlimage_1-327](assets/chlimage_1-327.png)
@@ -123,4 +126,4 @@ Med det här arbetsflödet kan du begära ett e-postmeddelande. Det är samma ar
 
 ## Skapa (och översätt) språkkopieringsarbetsflöde för resurser {#create-and-translate-language-copy-workflow-for-assets}
 
-Arbetsflödena **Skapa språkkopia** och **Skapa och översätt språkkopia** beskrivs närmare i [Skapa språkkopior för resurser.](/help/assets/translation-projects.md)
+The **Create Language Copy** and the **Create and Translate Language Copy** workflows are covered in detail in [Creating Language Copies for Assets.](/help/assets/translation-projects.md)
