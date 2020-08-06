@@ -24,7 +24,7 @@ När du visar dina Att göra-listor kan du se uppgifter från en affärsprocess 
 
 ## Om att göra-listor {#about-todo-lists}
 
-På arbetsytan i AEM Forms finns följande tre typer av Att göra-listor:
+AEM Forms arbetsyta har följande tre typer av Att göra-listor:
 
 * Enskilda listor, som innehåller uppgifter som har tilldelats direkt till dig.
 * Grupplistor, som innehåller uppgifter som har tilldelats en grupp. Alla medlemmar i gruppen kan öppna och slutföra uppgifterna. Om du vill öppna en uppgift måste en medlem i en grupp göra anspråk på uppgiften först.
@@ -135,6 +135,7 @@ Du kan vidarebefordra en uppgift tillsammans med anteckningar eller bilagor till
    * **Framåt**
    * **Dela**
    * **Konsult**
+
    >[!NOTE]
    >
    >Beroende på vilken uppgift det är kan du även utföra dessa åtgärder från Att göra-listan utan att öppna uppgiften.
@@ -230,8 +231,9 @@ När du har slutfört en uppgift kan en bekräftelsedialogruta visas som bekräf
 1. Utför något av följande steg:
 
    * Markera uppgiften och klicka på lämplig knapp för nästa steg som krävs i processen längst ned i listan.
-   * Om formuläret inte har några knappar och knappen Slutför på arbetsytan i AEM Forms är tillgänglig klickar du på **Slutför**.
-   * Om formuläret har knappar och knappen Slutför inte är tillgänglig på arbetsytan i AEM Forms klickar du på lämplig knapp i formuläret för nästa steg i processen.
+   * Om formuläret inte har några knappar och knappen Slutför i AEM Forms-arbetsytan är tillgänglig klickar du på **Slutför**.
+   * Om formuläret har knappar och knappen Slutför i AEM Forms inte är tillgänglig klickar du på lämplig knapp i formuläret för nästa steg som ska utföras.
+
    Om formuläret inte har några knappar och knappen Slutför i AEM Forms inte är tillgänglig visas ett meddelande om att formuläret inte kan skickas.
 
 1. Om en bekräftelsedialogruta visas gör du något av följande:
@@ -241,7 +243,7 @@ När du har slutfört en uppgift kan en bekräftelsedialogruta visas som bekräf
 
 >[!NOTE]
 >
->Du kan se knappen Skicka i HTML-formulär när Processegenskaper används i ett formulär. Den här knappen visas inte när samma formulär återges som PDF. Slutför en åtgärd genom att klicka på knappen Skicka längst ned på AEM Forms-arbetsytan, utanför formuläret och inte på knappen Skicka i formuläret.
+>Du kan se knappen Skicka i HTML-formulär när Processegenskaper används i ett formulär. Den här knappen visas inte när samma formulär återges som PDF. Slutför en åtgärd genom att klicka på knappen Skicka längst ned på arbetsytan i AEM Forms, utanför formuläret och inte på Skicka-knappen i formuläret.
 
 ### Godkänn uppgifter gruppvis {#bulk-approve-tasks}
 
@@ -270,33 +272,33 @@ Du kan skicka flera uppgifter från din Att göra-lista. Det går endast att ski
 
 Du kan ta emot och slutföra uppgifter via e-post. Genom att delta i uppgifter via e-post slipper du regelbundet kontrollera din att-göra-lista innehåller nya uppgifter eller kontrollera om det finns status för en uppgift på spårningssidan.
 
-Först anger du dina inställningar för AEM Forms-arbetsytan så att du får e-postmeddelanden. AEM Forms-arbetsytan kan skicka e-postmeddelanden för uppgifter i din Att göra-lista eller vilka gruppAtt göra-listor du tillhör. Administratören avgör när e-postmeddelanden skickas och vem som tar emot dem.
+Först ställer du in inställningarna för din AEM Forms-arbetsyta så att du får e-postmeddelanden. AEM Forms arbetsyta kan skicka e-postmeddelanden för uppgifter i din Att göra-lista eller vilka gruppAtt göra-listor du tillhör. Administratören avgör när e-postmeddelanden skickas och vem som tar emot dem.
 
-E-postmeddelandena kan innehålla en länk som öppnar uppgiften på arbetsytan i AEM Forms, en bifogad fil som används för uppgiften eller åtgärder för att slutföra uppgiften via e-post. Om ett formulär ingår i e-postmeddelandet kan du öppna formuläret och slutföra åtgärden om knapparna för att slutföra uppgiften finns i formuläret. Om åtgärder för att slutföra uppgiften ingår i e-postmeddelandet kan du slutföra uppgiften genom att klicka på åtgärderna i e-postmeddelandet eller genom att svara på e-postmeddelandet med åtgärden som är skriven som första rad i e-postmeddelandet.
+E-postmeddelandena kan innehålla en länk som öppnar uppgiften i AEM Forms arbetsyta, en bifogad fil som används för uppgiften eller åtgärder för att slutföra uppgiften via e-post. Om ett formulär ingår i e-postmeddelandet kan du öppna formuläret och slutföra åtgärden om knapparna för att slutföra uppgiften finns i formuläret. Om åtgärder för att slutföra uppgiften ingår i e-postmeddelandet kan du slutföra uppgiften genom att klicka på åtgärderna i e-postmeddelandet eller genom att svara på e-postmeddelandet med åtgärden som är skriven som första rad i e-postmeddelandet.
 
 >[!NOTE]
 >
 >Information om hur du konfigurerar arbetsytan så att den använder rätt e-postmallar finns i [AEM Forms JEE Administrator Guide](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/).
 
-När du slutför en uppgift via e-post tas uppgiften bort från din Att göra-lista på arbetsytan i AEM Forms.
+När du slutför en uppgift via e-post tas uppgiften bort från din att göra-lista i AEM Forms arbetsyta.
 
 >[!NOTE]
 >
->Om användaren inte är inloggad på AEM Forms-arbetsytan i webbläsaren och öppnar en länk till en Att göra-uppgift, kan länken för att göra-uppgift inte öppnas och ett undantag visas. Logga in på arbetsytan i AEM Forms innan du klickar på länkar i e-postmeddelanden.
+>Om användaren inte är inloggad på AEM Forms-arbetsytan i webbläsaren och öppnar en länk till en Att göra-uppgift, kan länken för att göra-uppgift inte öppnas och ett undantag visas. Logga in på arbetsytan i AEM Forms innan du klickar på länkarna i e-postmeddelandena.
 
 >[!NOTE]
 >
->Du kan inte vidarebefordra ett e-postmeddelande för att tilldela en uppgift till någon annan. Du kan bara vidarebefordra uppgifter till andra användare från AEM Forms-arbetsytan.
+>Du kan inte vidarebefordra ett e-postmeddelande för att tilldela en uppgift till någon annan. Du kan bara vidarebefordra uppgifter till andra användare från AEM Forms arbetsyta.
 
 ### Ta emot e-postmeddelanden {#receive-email-notification-messages}
 
 1. Klicka på **Inställningar**.
 1. Välj **Ja** i listan **Meddela aktivitetshändelser via e-post**.
-1. Om du vill inkludera formuläret och data med e-postmeddelandet väljer du **Ja** i listan **Bifoga formulär i e-post**.
+1. Om du vill inkludera formuläret och data med e-postmeddelandet väljer du **Ja** i listan **Bifoga Forms i e-post**.
 
 ## Delta i uppgifter via mobila enheter {#participating-in-tasks-through-mobile-devices}
 
-Du kan använda arbetsyteappen AEM Forms för att delta i uppgifter från din mobila enhet. Innan du installerar programmet bör du kontakta systemadministratören för att kontrollera att din organisation stöder användningen av arbetsytan i AEM Forms.
+Du kan använda AEM Forms arbetsyteapp för att delta i uppgifter från din mobila enhet. Innan du installerar programmet bör du kontakta systemadministratören för att kontrollera att din organisation stöder användningen av AEM Forms-arbetsyteprogrammet.
 
 ## Om deadlines och påminnelser {#about-deadlines-and-reminders}
 
@@ -367,7 +369,7 @@ Om du får åtkomst till en annan användares Att göra-lista kan du inte visa n
 
 Om du tänker vara utanför kontoret kan du ange vad som ska hända med uppgifter som har tilldelats dig för den perioden.
 
-Du kan ange ett startdatum och en sluttid och ett slutdatum och en sluttid så att dina inställningar som inte är på kontoret börjar gälla. Om du befinner dig i en annan tidszon än servern används tidszonen för servern.
+Du kan ange startdatum och -tid och slutdatum och sluttid så att dina inställningar som inte är på kontoret börjar gälla. Om du befinner dig i en annan tidszon än servern används tidszonen för servern.
 
 Du kan ange en standardperson som alla dina uppgifter skickas till. Du kan också ange undantag för uppgifter från specifika processer som ska skickas till en annan användare eller som ska finnas kvar i din Att göra-lista tills du kommer tillbaka. Om den utsedda personen även är utanför kontoret, kommer uppgiften att utföras av den användare som han/hon har utsett. Om uppgiften inte kan tilldelas till en användare som inte är utanför kontoret finns uppgiften kvar i din Att göra-lista.
 
