@@ -1,8 +1,8 @@
 ---
 title: Visa ytterligare data i ToDo-listan
 seo-title: Visa ytterligare data i ToDo-listan
-description: Anpassa visningen av Att göra-listan på arbetsytan i LiveCycle AEM Forms så att mer information visas utöver standardinställningen.
-seo-description: Anpassa visningen av Att göra-listan på arbetsytan i LiveCycle AEM Forms så att mer information visas utöver standardinställningen.
+description: Anpassa visningen av Att göra-listan på arbetsytan i LiveCycle AEM Forms så att du kan visa mer information än standardinställningen.
+seo-description: Anpassa visningen av Att göra-listan på arbetsytan i LiveCycle AEM Forms så att du kan visa mer information än standardinställningen.
 uuid: 4c678d9c-7794-4b62-8705-d62c7780c13f
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,13 +10,16 @@ topic-tags: forms-workspace
 discoiquuid: b74a0933-2b96-4a88-9995-6fb21df141aa
 translation-type: tm+mt
 source-git-commit: a5cac0d369bb40659cfde011e5d6ef9a68dc4012
+workflow-type: tm+mt
+source-wordcount: '308'
+ht-degree: 0%
 
 ---
 
 
 # Visa ytterligare data i ToDo-listan {#displaying-additional-data-in-todo-list}
 
-Som standard visas aktivitetens visningsnamn och beskrivning i listan Att göra på arbetsytan i AEM Forms. Du kan dock lägga till annan information, t.ex. skapandedatum och deadlinedatum. Du kan också lägga till ikoner och ändra visningsformatet.
+Som standard visas uppgiftens visningsnamn och beskrivning i listan Uppgift på arbetsytan i AEM Forms. Du kan dock lägga till annan information, t.ex. skapandedatum och deadlinedatum. Du kan också lägga till ikoner och ändra visningsformatet.
 
 ![En titt på fliken Att göra-uppgifter i HTML-arbetsytan som visar standardkonfigurationen](assets/html-todo-list.png)
 
