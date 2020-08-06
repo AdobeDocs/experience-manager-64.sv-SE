@@ -1,6 +1,6 @@
 ---
-title: Anpassa och utöka innehållsfragment
-seo-title: Anpassa och utöka innehållsfragment
+title: Anpassa och utöka Content Fragments
+seo-title: Anpassa och utöka Content Fragments
 description: Ett innehållsfragment utökar en standardresurs.
 seo-description: Ett innehållsfragment utökar en standardresurs.
 uuid: f8d0bb22-0b51-4488-a1c8-29e50213c913
@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: af95c6c7-0475-4f55-88a8-ec5e39a9ddcd
 translation-type: tm+mt
 source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
+workflow-type: tm+mt
+source-wordcount: '2759'
+ht-degree: 1%
 
 ---
 
 
-# Anpassa och utöka innehållsfragment{#customizing-and-extending-content-fragments}
+# Anpassa och utöka Content Fragments{#customizing-and-extending-content-fragments}
 
 >[!CAUTION]
 >
@@ -32,7 +35,7 @@ Ett innehållsfragment utökar en standardresurs; se:
 De grundläggande [beståndsdelarna](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) i ett innehållsfragment är:
 
 * Ett *innehållsfragment,*
-* bestående av ett eller flera *innehållselement* och
+* består av ett eller flera *innehållselement*,
 * och som kan ha en eller flera *innehållsvariationer*.
 
 Beroende på fragmenttypen används även modeller eller mallar:
@@ -50,6 +53,7 @@ Beroende på fragmenttypen används även modeller eller mallar:
    * Ett fragment refererar till modellen. så ändringar i modellen kan/kommer att påverka beroende fragment.
    * Modeller är inbyggda i datatyper.
    * Funktioner för att lägga till nya varianter, osv., måste uppdatera fragmentet därefter.
+
    >[!CAUTION]
    >
    >Alla ändringar i en befintlig innehållsfragmentmodell kan påverka beroende fragment. detta kan leda till egenskaper som är överblivna i dessa fragment.
@@ -60,12 +64,12 @@ Beroende på fragmenttypen används även modeller eller mallar:
    * Mallar definierar (grundläggande, endast text) strukturen för ett innehållsfragment när det skapas.
    * Mallen kopieras till fragmentet när den skapas. så att ytterligare ändringar av mallen inte återspeglas i befintliga fragment.
    * Funktioner för att lägga till nya varianter, osv., måste uppdatera fragmentet därefter.
-   * [Mallar](/help/sites-developing/content-fragment-templates.md) för innehållsfragment fungerar på ett annat sätt än andra mallfunktioner i AEM-ekosystemet (t.ex. sidmallar). De bör därför beaktas separat.
+   * [Mallar](/help/sites-developing/content-fragment-templates.md) för innehållsfragment fungerar på ett annat sätt än andra mallfunktioner i det AEM ekosystemet (t.ex. sidmallar). De bör därför beaktas separat.
    * När MIME-typen för innehållet baseras på en mall hanteras det faktiska innehållet. det innebär att varje element och variant kan ha olika MIME-typer.
 
 ## Integrering med Assets {#integration-with-assets}
 
-CFM (Content Fragment Management) ingår i AEM Assets som:
+Content Fragment Management (CFM) ingår i AEM Assets som:
 
 * Innehållsfragment är resurser.
 * De använder befintliga Assets-funktioner.
@@ -79,7 +83,7 @@ Innehållsfragment med strukturerat innehåll (dvs. baserat på en innehållsfra
 
 * Allt innehåll lagras under resursens `jcr:content/data` nod:
 
-   * Elementdata lagras under huvudundernoden:
+   * Elementdata lagras under den överordnad undernoden:
 
       `jcr:content/data/master`
 
@@ -89,8 +93,7 @@ Innehållsfragment med strukturerat innehåll (dvs. baserat på en innehållsfra
 
    * Data för varje element lagras i respektive undernod som en egenskap med elementnamnet:
 
-      
-Elementets innehåll `text` lagras som egenskap `text` på `jcr:content/data/master`
+      Elementets innehåll `text` lagras som egenskap `text` på `jcr:content/data/master`
 
 * Metadata och tillhörande innehåll lagras nedan `jcr:content/metadata`
 
@@ -134,7 +137,7 @@ Mer information finns i [Innehållsfragment - Ta bort överväganden](/help/asse
 >
 >Core-komponenten för [innehållsfragment](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) rekommenderas nu. Mer information finns i [Utveckla kärnkomponenter](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) .
 
-Innehållsfragment kan refereras från AEM-sidor, precis som andra resurstyper. AEM innehåller kärnkomponenten [**för **innehållsfragment](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)- en[komponent som gör att du kan ta med innehållsfragment på sidorna](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page). Du kan också utöka den här kärnkomponenten för** innehållsfragment **.
+Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. AEM innehåller kärnkomponenten [**för **innehållsfragment](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)- en[komponent som gör att du kan ta med innehållsfragment på sidorna](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page). Du kan också utöka den här kärnkomponenten för** innehållsfragment **.
 
 * Komponenten använder egenskapen `fragmentPath` för att referera till det faktiska innehållsfragmentet. Egenskapen hanteras på samma sätt som liknande egenskaper för andra tillgångstyper. `fragmentPath` till exempel när innehållsfragmentet flyttas till en annan plats.
 
@@ -193,7 +196,7 @@ Det finns fortfarande några riktlinjer som du måste följa för att se till at
 
 * Om fragmentet återges för `displayMode` == `singleText` (implicit eller explicit) spelas följande ytterligare egenskaper upp:
 
-   * `paragraphScope` definierar om alla stycken, eller bara ett styckeintervall, ska återges (värden: jämfört `all` med `range`)
+   * `paragraphScope` definierar om alla stycken, eller bara ett styckeintervall, ska återges (värden: `all` jämfört med `range`)
    * if `paragraphScope` == `range` definierar egenskapen `paragraphRange` det styckeintervall som ska återges
 
 ### Integrering med andra ramar {#integration-with-other-frameworks}
@@ -202,7 +205,7 @@ Innehållsfragment kan integreras med:
 
 * **Översättningar**
 
-   Content Fragments är helt integrerat med arbetsflödet [för](/help/sites-administering/tc-manage.md)AEM-översättning. Arkitekturnivå innebär följande:
+   Innehållsfragment är helt integrerade med arbetsflödet [för](/help/sites-administering/tc-manage.md)AEM. Arkitekturnivå innebär följande:
 
    * De enskilda översättningarna av ett innehållsfragment är i själva verket separata fragment. till exempel:
 
@@ -224,7 +227,7 @@ Innehållsfragment kan integreras med:
    * Förutom de regelbaserade sökvägarna finns det ingen ytterligare koppling mellan de olika språkversionerna av ett innehållsfragment. De hanteras som två separata fragment, även om användargränssnittet ger möjlighet att navigera mellan språkvarianterna.
    >[!NOTE]
    >
-   >Arbetsflödet för AEM-översättning fungerar med `/content`:
+   >Det AEM arbetsflödet för översättning fungerar med `/content`:
    >
    >  * När innehållsfragmentmodellerna finns i `/conf`inkluderas de inte i sådana översättningar. Du kan [internationalisera gränssnittssträngarna](/help/sites-developing/i18n-dev.md).
    >  * Mallar kopieras för att skapa fragmentet så detta är implicit.
@@ -270,6 +273,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
 
    * antingen en modell för innehållsfragment eller en mall för innehållsfragment från vilken ett innehållsfragment ska skapas,
    * och (efter det att fragmentet har skapats) strukturinformationen
+
    Denna information kan omfatta:
 
    * Få tillgång till grundläggande data (titel, beskrivning)
@@ -284,6 +288,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
       * Hämta strukturinformation för en viss variation
       * Åtkomst till variantmallen (se `VariationTemplate`)
    * Hämta initialt associerat innehåll
+
    Gränssnitt som representerar viktig information:
 
    * `ElementTemplate`
@@ -327,6 +332,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
       * Lägg till samlingar
       * Ta bort samlingar
    * Åtkomst till fragmentets modell eller mall
+
    Gränssnitt som representerar de primära elementen i ett fragment är:
 
    * **Innehållselement**
@@ -350,6 +356,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
       * Hämta grundläggande data (namn, titel, beskrivning)
       * Hämta/ange innehåll
       * Enkel synkronisering, baserat på den senast ändrade informationen
+
    Alla tre gränssnitten (, `ContentFragment`, `ContentElement`, `ContentVariation`) utökar `Versionable` gränssnittet, med nya versionshanteringsfunktioner som krävs för innehållsfragment:
 
    * Skapa en ny version av elementet
@@ -452,7 +459,7 @@ Processerna är följande:
 * Redigering
 
    * Alla ändringar (autosparande ingår) görs på det aktiva innehållsfragmentet - inte i ett avgränsat, skyddat område.
-   * Därför återspeglas dessa ändringar direkt på AEM-sidor som refererar till respektive innehållsfragment
+   * Därför återspeglas dessa ändringar direkt på AEM sidor som refererar till respektive innehållsfragment
 
 ### Åtgärder {#actions}
 
@@ -487,7 +494,7 @@ För att uppnå detta kan du anpassa resursen som representerar API:t till:
 
 `com.adobe.cq.dam.cfm.ContentFragment`
 
-Exempel:
+Till exempel:
 
 ```java
 // first, get the resource
@@ -505,7 +512,7 @@ Om du vill skapa ett nytt innehållsfragment programmatiskt måste du använda:
 
 `com.adobe.cq.dam.cfm.ContentFragmentManager#create`
 
-Exempel:
+Till exempel:
 
 ```java
 Resource templateOrModelRsc = resourceResolver.getResource("...");
@@ -538,7 +545,7 @@ Mer information finns i Mallar [för](/help/sites-developing/content-fragment-te
 
 ## Komponenter för sidredigering {#components-for-page-authoring}
 
-Mer information finns på
+Mer information finns i
 
 * [Kärnkomponenter - Innehållsfragmentkomponent](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) (rekommenderas)
 * [Content Fragment Components - Components for Page Authoring](/help/sites-developing/components-content-fragments.md#components-for-page-authoring)
