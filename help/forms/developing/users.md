@@ -11,6 +11,9 @@ topic-tags: operations
 discoiquuid: 95804bff-9e6f-4807-aae4-790bd9e7cb57
 translation-type: tm+mt
 source-git-commit: f1558c7dec34649d00afcd04245ea552e8c6b978
+workflow-type: tm+mt
+source-wordcount: '6191'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: f1558c7dec34649d00afcd04245ea552e8c6b978
 
 **Om användarhantering**
 
-Du kan använda API:t för användarhantering för att skapa klientprogram som kan hantera roller, behörigheter och principer (som kan vara användare eller grupper) samt autentisera användare. API:t för användarhantering består av följande API:er för AEM Forms:
+Du kan använda API:t för användarhantering för att skapa klientprogram som kan hantera roller, behörigheter och principer (som kan vara användare eller grupper) samt autentisera användare. API:t för användarhantering består av följande AEM Forms-API:er:
 
 * Tjänst-API för kataloghanteraren
 * Tjänst-API för Autentiseringshanteraren
@@ -80,7 +83,7 @@ I följande tabell beskrivs varje steg i autentiseringsprocessen.
 
 >[!NOTE]
 >
->Om serverns tidszon inte är densamma som klientens tidszon kan följande autentiseringsfel uppstå när WSDL används för tjänsten AEM Forms Generera PDF i en inbyggd SOAP-stack med en .NET-klient i ett WebSphere Application Server-kluster:
+>Om serverns tidszon inte är densamma som klientens tidszon kan följande autentiseringsfel uppstå när WSDL används för tjänsten AEM Forms Generate PDF i en inbyggd SOAP-stack med en .NET-klient i ett WebSphere Application Server-kluster:
 
 `[com.adobe.idp.um.webservices.WSSecurityHandler] errorCode:12803 errorCodeHEX:0x3203 message:WSSecurityHandler: UM authenticate returns exception : An error was discovered processing the <wsse:Security> header. (WSSecurityEngine: Invalid timestamp The security semantics of message have expired).`
 
@@ -104,7 +107,7 @@ Ett `objectSID` värde ändras om ett objekt flyttas från en Active Directory-d
 
 ## Lägga till användare {#adding-users}
 
-Du kan använda kataloghanterarens tjänst-API (Java och webbtjänst) för att programmässigt lägga till användare i AEM Forms. När du har lagt till en användare kan du använda den användaren när du utför en tjänståtgärd som kräver en användare. Du kan till exempel tilldela en uppgift till den nya användaren.
+Du kan använda kataloghanterarens tjänst-API (Java och webbtjänst) för att lägga till användare i AEM Forms via programkod. När du har lagt till en användare kan du använda den användaren när du utför en tjänståtgärd som kräver en användare. Du kan till exempel tilldela en uppgift till den nya användaren.
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -176,6 +179,7 @@ Lägg till användare med hjälp av kataloghanterarens tjänst-API (Java):
    * Ange det kanoniska namnet genom att anropa `UserImpl` objektets `setCanonicalName` metod. Skicka ett strängvärde som anger användarens kanoniska namn. Du kan till exempel ange `wblue`.
    * Ange det angivna namnet genom att anropa `UserImpl` objektets `setGivenName` metod. Skicka ett strängvärde som anger användarens angivna namn. Du kan till exempel ange `Wendy`.
    * Ange familjens namn genom att anropa `UserImpl` objektets `setFamilyName` metod. Skicka ett strängvärde som anger användarens familjenamn. Du kan till exempel ange `Blue`.
+
    >[!NOTE]
    >
    >Anropa en metod som hör till `UserImpl` objektet för att ange andra värden. Du kan till exempel ange språkvärdet genom att anropa `UserImpl` objektets `setLocale` metod.
@@ -186,6 +190,7 @@ Lägg till användare med hjälp av kataloghanterarens tjänst-API (Java):
 
    * Det `UserImpl` objekt som representerar den nya användaren
    * Ett strängvärde som representerar användarens lösenord
+
    Metoden returnerar `createLocalUser` ett strängvärde som anger det lokala användaridentifierarvärdet.
 
 1. Kontrollera att användaren har lagts till.
@@ -224,7 +229,7 @@ Lägg till användare med hjälp av kataloghanterarens tjänst-API (webbtjänst)
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DirectoryManagerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -245,6 +250,7 @@ Lägg till användare med hjälp av kataloghanterarens tjänst-API (webbtjänst)
 
    * Det `UserImpl` objekt som representerar den nya användaren
    * Ett strängvärde som representerar användarens lösenord
+
    Metoden returnerar `createLocalUser` ett strängvärde som anger det lokala användaridentifierarvärdet.
 
 1. Kontrollera att användaren har lagts till.
@@ -257,9 +263,9 @@ Lägg till användare med hjälp av kataloghanterarens tjänst-API (webbtjänst)
 
 [Sammanfattning av steg](users.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Ta bort användare {#deleting-users}
 
@@ -352,7 +358,7 @@ Ta bort användare med hjälp av kataloghanterarens tjänst-API (webbtjänst):
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DirectoryManagerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -371,13 +377,13 @@ Ta bort användare med hjälp av kataloghanterarens tjänst-API (webbtjänst):
 
 [Sammanfattning av steg](users.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Skapa grupper {#creating-groups}
 
-Du kan använda kataloghanterarens tjänst-API (Java och webbtjänst) för att skapa AEM Forms-grupper programmatiskt. När du har skapat en grupp kan du använda den gruppen för att utföra en tjänståtgärd som kräver en grupp. Du kan till exempel tilldela en användare till den nya gruppen. (Se [Hantera användare och grupper](users.md#managing-users-and-groups).)
+Du kan använda API:t för kataloghanteringstjänsten (Java och webbtjänst) för att skapa AEM Forms-grupper programmatiskt. När du har skapat en grupp kan du använda den gruppen för att utföra en tjänståtgärd som kräver en grupp. Du kan till exempel tilldela en användare till den nya gruppen. (Se [Hantera användare och grupper](users.md#managing-users-and-groups).)
 
 ### Sammanfattning av steg {#summary_of_steps-2}
 
@@ -397,10 +403,10 @@ Följande JAR-filer måste läggas till i projektets klassökväg:
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
+* adobe-utilities.jar (krävs om AEM Forms används i JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Mer information om var dessa JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa en DirectoryManagerService-klient**
 
@@ -460,6 +466,7 @@ Skapa en grupp med hjälp av kataloghanterarens tjänst-API (Java):
    * Anropa `Group` objektets `setDescription` metod och skicka ett strängvärde som anger gruppbeskrivningen.
    * Anropa `Group` objektets `setDomainName` metod och skicka ett strängvärde som anger domännamnet.
    * Anropa `DirectoryManagerServiceClient` objektets `createLocalGroup` metod och skicka `Group` instansen.
+
    Metoden returnerar `createLocalUser` ett strängvärde som anger det lokala användaridentifierarvärdet.
 
 1. Utför en åtgärd med gruppen.
@@ -477,7 +484,7 @@ Skapa en grupp med hjälp av kataloghanterarens tjänst-API (Java):
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## Hantera användare och grupper {#managing-users-and-groups}
+## Managing Users and Groups {#managing-users-and-groups}
 
 I det här avsnittet beskrivs hur du kan använda (Java) för att programmässigt tilldela, ta bort och fråga domäner, användare och grupper.
 
@@ -524,13 +531,13 @@ När du har skapat tjänstklienten kan du sedan anropa användar- eller grupphan
 
 [API-snabbstart för användarhanteraren](/help/forms/developing/user-manager-java-api-quick.md#user-manager-java-api-quick-start-soap)
 
-###  Hantera användare och grupper med Java API {#managing-users-and-groups-using-the-java-api}
+### Hantera användare och grupper med Java API {#managing-users-and-groups-using-the-java-api}
 
 Utför följande uppgifter för att programmässigt hantera användare, grupper och domäner med (Java):
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, t.ex. adobe-usermanager-client.jar, i Java-projektets klassökväg. Mer information om var dessa filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+   Inkludera JAR-klientfiler, t.ex. adobe-usermanager-client.jar, i Java-projektets klassökväg. Information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 1. Skapa en DirectoryManagerService-klient.
 
@@ -562,7 +569,7 @@ Utför följande uppgifter för att programmässigt hantera användare, grupper 
 
 1. Inkludera projektfiler.
 
-   * Skapa en Microsoft .NET-klientsammansättning som använder kataloghanterarens WSDL. (Se [Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
+   * Skapa en Microsoft .NET-klientsammansättning som använder kataloghanterarens WSDL. (Se [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
    * Referera till Microsoft .NET-klientsammansättningen. (Se [Skapa en .NET-klientsammansättning som använder Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding).)
 
 1. Skapa en DirectoryManagerService-klient.
@@ -575,7 +582,7 @@ Utför följande uppgifter för att programmässigt hantera användare, grupper 
 
    >[!NOTE]
    >
-   >Om det maximala antalet resultat inte anges i sökfiltret (via `PrincipalSearchFilter.resultsMax` fältet) returneras maximalt 1 000 resultat. Detta är ett annat beteende än det som inträffar med Java API, där 10 resultat är standardvärdet. Dessutom ger sökmetoderna som `findGroupMembers` inte några resultat om inte det maximala antalet resultat anges i sökfiltret (till exempel via `GroupMembershipSearchFilter.resultsMax` fältet). Detta gäller alla sökfilter som ärver från `GenericSearchFilter` klassen. Mer information finns i API-referens för [AEM-formulär](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   >Om det maximala antalet resultat inte anges i sökfiltret (via `PrincipalSearchFilter.resultsMax` fältet) returneras maximalt 1 000 resultat. Detta är ett annat beteende än det som inträffar med Java API, där 10 resultat är standardvärdet. Dessutom ger sökmetoderna som `findGroupMembers` inte några resultat om inte det maximala antalet resultat anges i sökfiltret (till exempel via `GroupMembershipSearchFilter.resultsMax` fältet). Detta gäller alla sökfilter som ärver från `GenericSearchFilter` klassen. Mer information finns i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
    Eftersom returvärdet i det här fallet är ett `object[]` objekt som innehåller `Principal` objekt, itererar du genom resultatet och konverterar `Principal` objekten till antingen `User` eller `Group` .
 
@@ -589,13 +596,13 @@ Utför följande uppgifter för att programmässigt hantera användare, grupper 
 
 [Sammanfattning av steg](users.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
 ## Hantera roller och behörigheter {#managing-roles-and-permissions}
 
 I det här avsnittet beskrivs hur du kan använda Java (Authorization Manager Service API) för att programmässigt tilldela, ta bort och fastställa roller och behörigheter.
 
-I AEM Forms är en *roll* en grupp behörigheter för åtkomst till en eller flera resurser på systemnivå. Dessa behörigheter skapas med hjälp av användarhantering och används av tjänstkomponenterna. En administratör kan t.ex. tilldela rollen &quot;Principuppsättningens författare&quot; till en grupp användare. Rights Management skulle sedan ge användarna i den gruppen med den rollen möjlighet att skapa principuppsättningar via administrationskonsolen.
+I AEM Forms är en *roll* en grupp behörigheter för åtkomst till en eller flera resurser på systemnivå. Dessa behörigheter skapas med hjälp av användarhantering och används av tjänstkomponenterna. En administratör kan t.ex. tilldela rollen &quot;Principuppsättningens författare&quot; till en grupp användare. Rights Management skulle sedan tillåta användare i den gruppen med den rollen att skapa principuppsättningar via administrationskonsolen.
 
 Det finns två typer av roller: *standardroller* och *anpassade roller*. Standardroller (*systemroller)* finns redan i AEM Forms. Det antas att standardroller inte kan tas bort eller ändras av administratören och därför inte kan ändras. Anpassade roller som skapas av administratören, som senare kan ändra eller ta bort dem, kan därför ändras.
 
@@ -633,7 +640,7 @@ När du har skapat tjänstklienten kan du sedan anropa rollen eller behörighets
 
 [API-snabbstart för användarhanteraren](/help/forms/developing/user-manager-java-api-quick.md#user-manager-java-api-quick-start-soap)
 
-###  Hantera roller och behörigheter med Java API {#managing-roles-and-permissions-using-the-java-api}
+### Hantera roller och behörigheter med Java API {#managing-roles-and-permissions-using-the-java-api}
 
 Så här hanterar du roller och behörigheter med Java (Authorization Manager Service API):
 
@@ -651,6 +658,7 @@ Så här hanterar du roller och behörigheter med Java (Authorization Manager Se
 
    * Ett `java.lang.String` objekt som innehåller rollidentifieraren
    * En array med `java.lang.String` objekt som innehåller huvudidentifierarna.
+
    Om du vill ta bort en roll från ett huvudkonto anropar du `AuthorizationManagerServiceClient` objektets `unassignRole` metod och skickar följande värden:
 
    * Ett `java.lang.String` objekt som innehåller rollidentifieraren.
@@ -687,7 +695,7 @@ Hantera roller och behörigheter med hjälp av API:t för tjänsten Authorizatio
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `AuthorizationManagerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `AuthorizationManagerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `AuthorizationManagerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -698,6 +706,7 @@ Hantera roller och behörigheter med hjälp av API:t för tjänsten Authorizatio
 
    * Ett `string` objekt som innehåller rollidentifieraren
    * Ett `MyArrayOf_xsd_string` objekt som innehåller huvudidentifierarna.
+
    Om du vill ta bort en roll från ett huvudkonto anropar du `AuthorizationManagerServiceService` objektets `unassignRole` metod och skickar följande värden:
 
    * Ett `string` objekt som innehåller rollidentifieraren.
@@ -708,7 +717,7 @@ Hantera roller och behörigheter med hjälp av API:t för tjänsten Authorizatio
 
 [Sammanfattning av steg](users.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
 ## Autentiserar användare {#authenticating-users}
 
@@ -716,7 +725,7 @@ I det här avsnittet beskrivs hur du kan använda tjänstAPI:t för Autentiserin
 
 Användarautentisering kan krävas för interaktion med en företagsdatabas eller andra företagsdatabaser där säkra data lagras.
 
-Tänk dig till exempel ett scenario där en användare anger ett användarnamn och lösenord på en webbsida och skickar värdena till en J2EE-programserver som är värd för Forms. Ett anpassat Forms-program kan autentisera användaren med tjänsten Authentication Manager.
+Tänk dig till exempel ett scenario där en användare anger ett användarnamn och lösenord på en webbsida och skickar värdena till en J2EE-programserver som är värd för Forms. Ett anpassat Forms-program kan autentisera användaren med tjänsten Autentiseringshanteraren.
 
 Om autentiseringen lyckas får programmet åtkomst till en skyddad företagsdatabas. Annars skickas ett meddelande till användaren om att användaren inte är en behörig användare.
 
@@ -736,7 +745,7 @@ I följande tabell beskrivs stegen i det här diagrammet
  <tbody>
   <tr> 
    <td><p>1</p></td> 
-   <td><p>Användaren kommer åt en webbplats och anger användarnamn och lösenord. Denna information skickas till en J2EE-programserver som är värd för AEM Forms.</p></td> 
+   <td><p>Användaren kommer åt en webbplats och anger användarnamn och lösenord. Den här informationen skickas till en J2EE-programserver som är värd för AEM Forms.</p></td> 
   </tr> 
   <tr> 
    <td><p>2</p></td> 
@@ -776,7 +785,7 @@ När du har skapat tjänstklienten kan du sedan anropa autentiseringsåtgärden.
 
 **Hämta autentiseringskontexten**
 
-När du har autentiserat användaren kan du skapa en kontext baserad på den autentiserade användaren. Sedan kan du använda innehållet för att anropa en annan AEM Forms-tjänst. Du kan till exempel använda kontexten för att skapa ett `EncryptionServiceClient` och kryptera ett PDF-dokument med ett lösenord. Kontrollera att den användare som autentiserades har rollen som krävs för `Services User` att anropa en AEM Forms-tjänst.
+När du har autentiserat användaren kan du skapa en kontext baserad på den autentiserade användaren. Sedan kan du använda innehållet för att anropa andra AEM Forms-tjänster. Du kan till exempel använda kontexten för att skapa ett `EncryptionServiceClient` och kryptera ett PDF-dokument med ett lösenord. Kontrollera att den autentiserade användaren har rollen som krävs för `Services User` att anropa en AEM Forms-tjänst.
 
 **Se även**
 
@@ -806,6 +815,7 @@ Autentisera en användare med tjänstens API (Java) för Autentiseringshanterare
 
    * Ett `java.lang.String` objekt som innehåller användarens namn.
    * En bytearray (ett `byte[]` objekt) som innehåller användarens lösenord. Du kan hämta `byte[]` objektet genom att anropa `java.lang.String` objektets `getBytes` metod.
+
    Metoden authenticate returnerar ett `AuthResult` objekt som innehåller information om den autentiserade användaren.
 
 1. Hämta autentiseringskontexten.
@@ -820,8 +830,8 @@ Autentisera en användare med Authentication Manager Service API (webbtjänst):
 
 1. Inkludera projektfiler.
 
-   * Skapa en Microsoft .NET-klientsammansättning som använder WSDL för Autentiseringshanteraren. (Se [Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
-   * Referera till Microsoft .NET-klientsammansättningen. (Se&quot;Referera till .NET-klientsammansättningen&quot; i [Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
+   * Skapa en Microsoft .NET-klientsammansättning som använder WSDL för Autentiseringshanteraren. (Se [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
+   * Referera till Microsoft .NET-klientsammansättningen. (Se&quot;Referera till .NET-klientsammansättningen&quot; i [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
 
 1. Skapa en AuthenticationManagerService-klient.
 
@@ -837,13 +847,13 @@ Autentisera en användare med Authentication Manager Service API (webbtjänst):
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Synkronisera användare programmatiskt {#programmatically-synchronizing-users}
 
-Du kan synkronisera användare programmatiskt med API:t för användarhantering. När du synkroniserar användare uppdaterar du AEM-formulär med användardata som finns i din användardatabas. Anta till exempel att du lägger till nya användare i din användardatabas. När du har utfört en synkroniseringsåtgärd blir de nya användarna AEM-formuläranvändare. Även användare som inte längre finns i din användardatabas tas bort från AEM Forms.
+Du kan synkronisera användare programmatiskt med API:t för användarhantering. När du synkroniserar användare uppdaterar du AEM Forms med användardata som finns i din användardatabas. Anta till exempel att du lägger till nya användare i din användardatabas. När du har utfört en synkroniseringsåtgärd blir de nya användarna AEM formuläranvändare. Även användare som inte längre finns i din användardatabas tas bort från AEM Forms.
 
 I följande diagram visas AEM Forms-synkronisering med en användardatabas.
 
@@ -918,7 +928,7 @@ När du har utfört en synkroniseringsåtgärd programmatiskt kan du avgöra om 
 
 [Kryptera PDF-dokument med ett lösenord](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)
 
-###  Synkronisera användare programmatiskt med Java API {#programmatically-synchronizing-users-using-the-java-api}
+### Synkronisera användare programmatiskt med Java API {#programmatically-synchronizing-users-using-the-java-api}
 
 Synkronisera användare med hjälp av API:t för användarhantering (Java):
 
