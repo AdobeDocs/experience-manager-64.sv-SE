@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: af3cd818-61cf-4da1-bfb5-87540911ddd5
 translation-type: tm+mt
 source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
+workflow-type: tm+mt
+source-wordcount: '539'
+ht-degree: 4%
 
 ---
 
@@ -21,7 +24,7 @@ De centrala komponenterna är moderna, flexibla komponenter som är enkla att ut
 
 ## Prova {#trying-it-out}
 
-1. Starta AEM med exempelinnehållet We.Retail och öppna [komponentkonsolen](/help/sites-authoring/default-components-console.md).
+1. Börja AEM med exempelinnehållet för We.Retail och öppna [komponentkonsolen](/help/sites-authoring/default-components-console.md).
 
    **Global navigering -> Verktyg -> Komponenter**
 
@@ -29,11 +32,12 @@ De centrala komponenterna är moderna, flexibla komponenter som är enkla att ut
 
    * `.core-wcm`: Standardkärnkomponenterna
    * `.core-wcm-form`: Baskomponenter för att skicka in formulär
+
    Choose `.core-wcm`.
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
-1. Observera att alla kärnkomponenter heter **v1**, vilket visar att det är den första versionen av kärnkomponenten. Vanliga versioner kommer att släppas framöver, vilket blir versionskompatibelt med AEM och gör det enkelt att uppgradera så att du kan utnyttja de senaste funktionerna.
+1. Observera att alla kärnkomponenter heter **v1**, vilket visar att det är den första versionen av kärnkomponenten. Vi kommer att lansera de senaste versionerna, som blir versionskompatibla med AEM och gör det enkelt att uppgradera så att du kan dra nytta av de senaste funktionerna.
 1. Klicka på **Text (v1)**.
 
    Se till att komponentens **resurstyp** är `/apps/core/wcm/components/text/v1/text`. Kärnkomponenter finns under `/apps/core/wcm/components` och versionsindelas per komponent.
