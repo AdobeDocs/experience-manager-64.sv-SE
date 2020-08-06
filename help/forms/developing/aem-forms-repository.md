@@ -1,6 +1,6 @@
 ---
-title: Arbeta med AEM Forms-databasen
-seo-title: Arbeta med AEM Forms-databasen
+title: Arbeta med AEM Forms Repository
+seo-title: Arbeta med AEM Forms Repository
 description: 'null'
 seo-description: 'null'
 uuid: 6ead49f9-ca0d-4ee4-86a6-0a9ced6ec4f8
@@ -11,17 +11,20 @@ topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '9082'
+ht-degree: 0%
 
 ---
 
 
-# Arbeta med AEM Forms-databasen {#working-with-aem-forms-repository}
+# Arbeta med AEM Forms Repository {#working-with-aem-forms-repository}
 
 **Om databastjänsten**
 
-Databastjänsten tillhandahåller tjänster för lagring och hantering av resurser till AEM Forms. När utvecklare skapar ett *AEM Forms* -program kan de distribuera resurserna i databasen i stället för i filsystemet. Materialet kan innehålla alla typer av material, inklusive XML-formulär, PDF-formulär (inklusive Acrobat-formulär), formulärfragment, bilder, profiler, profiler, SWF-filer, DDX-filer, XML-scheman, WSDL-filer och testdata.
+Databastjänsten tillhandahåller lagringstjänster och hanteringstjänster för resurser till AEM Forms. När utvecklare skapar ett *AEM Forms* -program kan de distribuera resurserna i databasen i stället för i filsystemet. Resurserna kan innehålla alla typer av material, inklusive XML-formulär, PDF forms (inklusive Acrobat-formulär), formulärfragment, bilder, profiler, profiler, SWF-filer, DDX-filer, XML-scheman, WSDL-filer och testdata.
 
-Ta till exempel följande Forms-program som heter *Applications/FormsApplication*:
+Ta till exempel följande Forms-program med namnet *Applications/FormsApplication*:
 
 ![ww_ww_formdatabase](assets/ww_ww_formrepository.png)
 
@@ -29,7 +32,7 @@ Observera att det finns en fil med namnet Loan.xdp i FormsFolder. Du öppnar den
 
 >[!NOTE]
 >
->Mer information om hur du skapar ett formulärprogram med Workbench finns i [Workbench-hjälpen](https://www.adobe.com/go/learn_aemforms_workbench_63).
+>Mer information om hur du skapar ett Forms-program med Workbench finns i [Workbench-hjälpen](https://www.adobe.com/go/learn_aemforms_workbench_63).
 
 Sökvägen till en resurs i AEM Forms-databasen är:
 
@@ -73,7 +76,7 @@ Med hjälp av API:t för databastjänsten kan du utföra följande uppgifter:
 
 >[!NOTE]
 >
->Mer information om databastjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om databastjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Skapar mappar {#creating-folders}
 
@@ -83,7 +86,7 @@ Filerna ärver åtkomstkontrollistor (ACL:er) från mappar, och undermappar ärv
 
 >[!NOTE]
 >
->Mer information om databastjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om databastjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -142,7 +145,8 @@ Skapa en mapp med hjälp av Repository Service API (Java):
 
    * En `com.adobe.repository.infomodel.Id` UUID-identifierare som ska tilldelas resursen.
    * En `com.adobe.repository.infomodel.Lid` UUID-identifierare som ska tilldelas resursen.
-   * En `java.lang.String` som innehåller resurssamlingens namn. Exempel, `FormsFolder`.
+   * En `java.lang.String` som innehåller resurssamlingens namn. Till exempel, `FormsFolder`.
+
    Metoden returnerar ett `com.adobe.repository.infomodel.bean.ResourceCollection` objekt som representerar den nya mappen.
 
    Ange mappens beskrivning med hjälp av metoden `setDescription` och skicka följande parameter:
@@ -200,13 +204,13 @@ Skapa en mapp med hjälp av Repository-tjänstens API (webbtjänst):
 
 [Skapar mappar](aem-forms-repository.md#creating-folders)
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
 ## Skriver resurser {#writing-resources}
 
 Du kan skapa resurser på en viss plats i databasen. Den naturliga filstorleken kan begränsas av databasen och tidsgränsen för sessioner kan överskridas. För standardkonfigurationen är filerna begränsade till 25 MB. Om du vill öka eller minska den maximala filstorleken måste du ändra databaskonfigurationen.
 
-Att skriva resurser motsvarar att lagra data i databasen. När du har skrivit en resurs till databasen blir den tillgänglig för alla klienter i databasens ekosystem. När du skriver resurser, t.ex. XML-scheman, XDP-filer och XSD-filer, till databasen analyseras innehållet baserat på MIME-typen. Om MIME-typen stöds avgör parsern om det finns en underförstådd relation till annat innehåll. Om en CSS (Cascading Style Sheet) till exempel har en relativ URL som refererar till en vanlig CSS-formatmall förväntas du att du även ska skicka den vanliga CSS-koden till databasen. Relationen mellan de två resurserna lagras som en väntande relation under en icke-justerbar period på 30 dagar. När du skickar den vanliga CSS-koden till databasen inom 30 dagar skapas relationen.
+Att skriva resurser motsvarar att lagra data i databasen. När du har skrivit en resurs till databasen blir den tillgänglig för alla klienter i databasens ekosystem. När du skriver resurser, t.ex. XML-scheman, XDP-filer och XSD-filer, till databasen analyseras innehållet baserat på MIME-typen. Om MIME-typen stöds avgör parsern om det finns en underförstådd relation till annat innehåll. Om en CSS (Cascading Style Sheet) till exempel har en relativ URL som refererar till en vanlig CSS, förväntas du att du även ska skicka den vanliga CSS-koden till databasen. Relationen mellan de två resurserna lagras som en väntande relation under en icke-justerbar period på 30 dagar. När du skickar den vanliga CSS-koden till databasen inom 30 dagar skapas relationen.
 
 När du skapar en resurs ärvs åtkomstkontrollistan (ACL) från den överordnade mappen. Rotmappen har behörighet på systemnivå tills en ursprunglig resurs eller mapp skapas. Då får resursen eller mappen standardbehörigheter för åtkomstkontrollista.
 
@@ -214,7 +218,7 @@ Du kan skriva resurser programmatiskt med hjälp av Java API:t för databastjän
 
 >[!NOTE]
 >
->Mer information om databastjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om databastjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-1}
 
@@ -286,6 +290,7 @@ Skriv en resurs med hjälp av Repository Service API (Java):
    * Ett `com.adobe.repository.infomodel.Id` objekt som skapas genom att standardkonstruktorn för `Id` klassen anropas.
    * Ett `com.adobe.repository.infomodel.Lid` objekt som skapas genom att standardkonstruktorn för `Lid` klassen anropas.
    * En `java.lang.String` som innehåller resursens filnamn.
+
    Om du vill ange resursens beskrivning anropar du `Resource` objektets `setDescription` metod och skickar en sträng som innehåller beskrivningen. I det här exemplet är beskrivningen `"test resource"`.
 
 1. Ange resursinnehållet
@@ -294,7 +299,8 @@ Skriv en resurs med hjälp av Repository Service API (Java):
 
    * Anropa `ResourceContent` objektets `setDataDocument` metod och skicka ett `com.adobe.idp.Document` objekt
    * Anropa `ResourceContent` objektets `setSize` metod och ange storleken i byte för `Document` objektet
-   Lägg till innehållet i resursen genom att anropa `Resource` objektets `setContent` metod och skicka in `ResourceContent` objektet. Mer information finns i API-referens för [AEM-formulär](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+
+   Lägg till innehållet i resursen genom att anropa `Resource` objektets `setContent` metod och skicka in `ResourceContent` objektet. Mer information finns i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 1. Skriv resursen till målmappen
 
@@ -342,6 +348,7 @@ Skriv en resurs med hjälp av Repository-tjänstens API (webbtjänst):
 
    * Tilldela ett `BLOB` objekt som innehåller ett dokument till `ResourceContent` objektets `dataDocument` fält.
    * Tilldela storleken i byte för `BLOB` objektet till `ResourceContent` objektets `size` fält.
+
    Lägg till innehållet i resursen genom att tilldela `ResourceContent` objektet till `Resource` objektets `content` fält.
 
 1. Skriv resursen till målmappen
@@ -352,7 +359,7 @@ Skriv en resurs med hjälp av Repository-tjänstens API (webbtjänst):
 
 [Skriver resurser](aem-forms-repository.md#writing-resources)
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
 ## Resurser listas {#listing-resources}
 
@@ -364,7 +371,7 @@ Listresurser hanteras efter relation: är medlemmar i mappar. Medlemskapet repre
 
 >[!NOTE]
 >
->Mer information om databastjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om databastjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-2}
 
@@ -462,7 +469,7 @@ Visa resurser med hjälp av Repository-tjänstens API (webbtjänst):
 
 [Resurser](aem-forms-repository.md#listing-resources)listas.
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
 ## Läser resurser {#reading-resources}
 
@@ -481,7 +488,7 @@ Du kan läsa resurser programmatiskt med hjälp av Java API:t för databastjäns
 
 >[!NOTE]
 >
->Mer information om databastjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om databastjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-3}
 
@@ -575,7 +582,7 @@ Läs en resurs med hjälp av Repository Service API (webbtjänsten):
 
 [Läser resurser](aem-forms-repository.md#reading-resources)
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
 ## Uppdaterar resurser {#updating-resources}
 
@@ -591,7 +598,7 @@ Du kan uppdatera resurser programmatiskt med hjälp av Java API:t för databastj
 
 >[!NOTE]
 >
->Mer information om databastjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om databastjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-4}
 
@@ -698,7 +705,7 @@ Uppdatera en resurs med hjälp av Repository API (webbtjänsten):
 
 [Uppdaterar resurser](aem-forms-repository.md#updating-resources)
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
 ## Söker efter resurser {#searching-for-resources}
 
@@ -720,7 +727,7 @@ Sedan anropar du `ResourceRepositoryClient` objektets `searchProperties` metod o
 
 >[!NOTE]
 >
->Mer information om databastjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om databastjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-5}
 
@@ -806,6 +813,7 @@ Sök efter en resurs med hjälp av Repository Service API (Java):
    * En vänsteroperand som innehåller resursattributskonstanten. I det här exemplet `Resource.ATTRIBUTE_NAME` används det statiska värdet eftersom resursens namn används som grund för sökningen.
    * En operator som innehåller villkoret som används i sökningen efter attributet. Operatorn måste vara en av de statiska konstanterna i `Query.Statement` klassen. I det här exemplet `Query.Statement.OPERATOR_BEGINS_WITH` används det statiska värdet.
    * En högeroperand som innehåller attributvärdet som sökningen ska utföras på. I det här exemplet används name-attributet, som `String` innehåller värdet `"testResource"`.
+
    Ange namnutrymmet för den vänstra operanden genom att anropa `Query.Statement` objektets `setNamespace` metod och ange ett av de statiska värdena i `com.adobe.repository.infomodel.bean.ResourceProperty` klassen. I det här exemplet `ResourceProperty.RESERVED_NAMESPACE_REPOSITORY` används .
 
    Lägg till varje sats i frågan genom att anropa `Query` objektets `addStatement` metod och skicka in `Query.Statement` objektet.
@@ -828,6 +836,7 @@ Sök efter en resurs med hjälp av Repository Service API (Java):
    * Ett `int` värde som anger den första raden från vilken den ej växlade resultatmängden ska väljas. I det här exemplet `0` anges.
    * Ett `int` värde som anger det maximala antalet resultat som ska returneras. I det här exemplet `10` anges.
    * Sorteringsordningen som används i sökningen.
+
    Metoden returnerar ett `java.util.List` antal `Resource` objekt i den angivna sorteringsordningen.
 
 1. Hämta resurserna från sökresultatet
@@ -858,7 +867,7 @@ Du kan programmatiskt ange relationer mellan resurser med Java API:t för databa
 
 >[!NOTE]
 >
->Mer information om databastjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om databastjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-6}
 
@@ -921,11 +930,13 @@ Skapa relationsresurser genom att använda Java API för databastjänsten och ut
    * Målresursens URI.
    * Relationstypen, som är en av de statiska konstanterna i `com.adobe.repository.infomodel.bean.Relation` klassen. I det här exemplet skapas ett beroendeförhållande genom att ange värdet `Relation.TYPE_DEPENDANT_OF`.
    * Ett `boolean` värde som anger om målresursen automatiskt uppdateras till den `com.adobe.repository.infomodel.Id`baserade identifieraren för den nya huvudresursen. I det här exemplet `true` anges värdet på grund av beroendeförhållandet.
+
    Du kan också hämta en lista över relaterade resurser för en viss resurs genom att anropa `ResourceRepositoryClient` objektets `getRelated` metod och skicka följande parametrar:
 
    * URI för resursen som relaterade resurser ska hämtas för. I det här exemplet anges källresursen ( `"/testFolder/testResource1"`).
    * Ett `boolean` värde som anger om den angivna resursen är källresursen i relationen. I det här exemplet `true` anges värdet eftersom så är fallet.
    * Relationstypen, som är en av de statiska konstanterna i `Relation` klassen. I det här exemplet anges en beroenderelation med samma värde som användes tidigare: `Relation.TYPE_DEPENDANT_OF`.
+
    Metoden returnerar ett `getRelated` antal `java.util.List` objekt som du kan använda för att iterera från de relaterade resurserna och omvandla objekten i `Resource` till `List` `Resource` på samma sätt. I det här exemplet `testResource2` förväntas finnas i listan över returnerade resurser.
 
 **Se även**
@@ -966,6 +977,7 @@ Skapa relationsresurser med hjälp av Repository API (webbtjänsten):
    * Ett `boolean` värde som anger om målresursen automatiskt uppdateras till den `Id`baserade identifieraren för den nya huvudresursen. I det här exemplet `true` anges värdet på grund av beroendeförhållandet.
    * Ett `boolean` värde som anger om målhuvudet har angetts. I det här exemplet `true` anges värdet.
    * Skicka `null` för den sista parametern.
+
    Du kan också hämta en lista över relaterade resurser för en viss resurs genom att anropa `RepositoryServiceService` objektets `getRelated` metod och skicka följande parametrar:
 
    * URI för resursen som relaterade resurser ska hämtas för. I det här exemplet anges källresursen ( `"/testFolder/testResource1"`).
@@ -973,17 +985,18 @@ Skapa relationsresurser med hjälp av Repository API (webbtjänsten):
    * Ett `boolean` värde som anger om källresursen har angetts. I det här exemplet `true` anges värdet.
    * En array med heltal som innehåller relationstyperna. I det här exemplet anges en beroenderelation med samma värde i arrayen som tidigare: `3`.
    * Skicka `null` för de återstående två parametrarna.
+
    Metoden returnerar en array med objekt som kan bytas ut mot `getRelated` `Resource` objekt, genom vilka du kan iterera för att hämta de relaterade resurserna. I det här exemplet `testResource2` förväntas finnas i listan över returnerade resurser.
 
 **Se även**
 
 [Skapar resursrelationer](aem-forms-repository.md#creating-resource-relationships)
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
 ## Låser resurser {#locking-resources}
 
-Du kan låsa en resurs eller en uppsättning resurser så att de bara kan användas av en viss användare eller för delad användning av flera användare. Ett delat lås är en indikation på att något kommer att hända med resursen, men det förhindrar inte någon annan från att vidta åtgärder med den resursen. Ett delat lås bör betraktas som en signaleringsmekanism. Ett exklusivt lås innebär att den användare som låste resursen kommer att ändra resursen och låset garanterar att ingen annan kan göra det förrän användaren inte längre behöver åtkomst till resursen och har släppt låset. Om en databasadministratör låser upp en resurs tas alla exklusiva och delade lås bort automatiskt för den resursen. Den här typen av åtgärd är avsedd för situationer där en användare inte längre är tillgänglig och inte har låst upp resursen.
+Du kan låsa en resurs eller en uppsättning resurser för exklusiv användning av en viss användare eller delad användning bland flera användare. Ett delat lås är en indikation på att något kommer att hända med resursen, men det förhindrar inte någon annan från att vidta åtgärder med den resursen. Ett delat lås bör betraktas som en signaleringsmekanism. Ett exklusivt lås innebär att den användare som låste resursen kommer att ändra resursen och låset garanterar att ingen annan kan göra det förrän användaren inte längre behöver åtkomst till resursen och har släppt låset. Om en databasadministratör låser upp en resurs tas alla exklusiva och delade lås bort automatiskt för den resursen. Den här typen av åtgärd är avsedd för situationer där en användare inte längre är tillgänglig och inte har låst upp resursen.
 
 När en resurs är låst visas en låsikon när du visar fliken Resurser i Workbench, vilket visas på följande bild.
 
@@ -993,7 +1006,7 @@ Du kan programmässigt styra åtkomsten till resurser med hjälp av Java API:t f
 
 >[!NOTE]
 >
->Mer information om databastjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om databastjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-7}
 
@@ -1065,6 +1078,7 @@ Lås resurser med hjälp av Repository Service API (Java):
    * Resursens URI.
    * Låsomfånget. I det här exemplet anges låsomfånget som `com.adobe.repository.infomodel.bean.Lock.SCOPE_EXCLUSIVE`eftersom resursen kommer att låsas exklusivt.
    * Låsdjupet. I det här exemplet anges låsningsdjupet som `Lock.DEPTH_ZERO`eftersom låsning endast gäller för den aktuella resursen och ingen av dess medlemmar eller underordnade.
+
    >[!NOTE]
    >
    >Den överlagrade versionen av metoden som kräver fyra parametrar genererar ett undantag. `lockResource` Se till att du använder den `lockResource` metod som kräver tre parametrar som visas i genomgången.
@@ -1075,7 +1089,7 @@ Lås resurser med hjälp av Repository Service API (Java):
 
 1. Lås upp resursen
 
-   Anropa `ResourceRepositoryClient` objektets `unlockResource` metod och skicka URI:n för resursen som en parameter. Mer information finns i API-referens för [AEM Forms](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   Anropa `ResourceRepositoryClient` objektets `unlockResource` metod och skicka URI:n för resursen som en parameter. Mer information finns i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **Se även**
 
@@ -1126,7 +1140,7 @@ Lås resurser med hjälp av Repository-tjänstens API (webbtjänst):
 
 [Låser resurser](aem-forms-repository.md#locking-resources)
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
 ## Resurser tas bort {#deleting-resources}
 
@@ -1144,7 +1158,7 @@ En raderingsåtgärd är inte transaktionssäker i ECM-system. Om du till exempe
 
 >[!NOTE]
 >
->Mer information om databastjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om databastjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-8}
 
@@ -1238,4 +1252,4 @@ Ta bort en resurs med Repository API (webbtjänsten):
 
 [Resurser tas bort](aem-forms-repository.md#deleting-resources)
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
