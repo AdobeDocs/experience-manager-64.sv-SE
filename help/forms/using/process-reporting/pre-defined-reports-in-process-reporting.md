@@ -1,8 +1,8 @@
 ---
 title: Fördefinierade rapporter i processrapportering
 seo-title: Fördefinierade rapporter i processrapportering
-description: Fråga efter AEM-formulär om JEE-processdata om du vill skapa rapporter om långvariga processer, processens varaktighet och arbetsflödesvolym
-seo-description: Fråga efter AEM-formulär om JEE-processdata om du vill skapa rapporter om långvariga processer, processens varaktighet och arbetsflödesvolym
+description: Fråga efter AEM Forms om JEE-processdata om du vill skapa rapporter om långvariga processer, processens varaktighet och arbetsflödets volym
+seo-description: Fråga efter AEM Forms om JEE-processdata om du vill skapa rapporter om långvariga processer, processens varaktighet och arbetsflödets volym
 uuid: ba3a1809-270e-4c94-ade4-d2f6af86d860
 content-type: reference
 topic-tags: process-reporting
@@ -23,7 +23,7 @@ AEM Forms Process Reporting levereras med följande *färdiga* rapporter:
 
 * **[Långa processer](/help/forms/using/process-reporting/pre-defined-reports-in-process-reporting.md#p-long-running-processes-p)**: En rapport över alla AEM Forms-processer som tog mer än en angiven tid att slutföra
 
-* **[Process Duration Chart](/help/forms/using/process-reporting/pre-defined-reports-in-process-reporting.md#p-process-duration-report-br-p)**: En rapport över en specificerad AEM-formulärprocess efter varaktighet
+* **[Process Duration Chart](/help/forms/using/process-reporting/pre-defined-reports-in-process-reporting.md#p-process-duration-report-br-p)**: En rapport över en angiven AEM Forms-process utifrån varaktighet
 
 * **[Arbetsflödesvolym](/help/forms/using/process-reporting/pre-defined-reports-in-process-reporting.md#p-workflow-volume-report-p)**: En rapport över pågående och slutförda instanser av angiven process per datum
 
@@ -44,7 +44,7 @@ Rapporten Långa processer visar de AEM Forms-processer som tagit mer än en ang
 
    Parametrar:
 
-   * **Varaktighet**(*obligatoriskt*): Ange varaktighet och tidsenhet. Visa alla AEM Forms-processer som har körts under längre tid än angivet.
+   * **Varaktighet**(*obligatoriskt*): Ange varaktighet och tidsenhet. Visa alla AEM Forms-processer som har körts under mer än den angivna varaktigheten.
    * **Startat efter** (*valfritt*): Välj ett datum. Filtrera rapporten så att processinstanser som har startats efter det angivna datumet visas.
    * **Startades före** (*valfritt*): Välj ett datum. Filtrera rapporten så att processinstanser som startats före det angivna datumet visas.
 
@@ -62,7 +62,7 @@ Rapporten Långa processer visar de AEM Forms-processer som tagit mer än en ang
 
 ## Processvaraktighet - rapport {#process-duration-report-br}
 
-Processvaraktighetsrapporten visar antalet instanser av en formulärprocess i antal dagar som varje instans har körts.
+Processvaraktighetsrapporten visar antalet instanser av en Forms-process i antal dagar som varje instans har körts.
 
 ### Så här kör du en rapport för processvaraktighet {#to-execute-a-process-duration-report-br}
 
@@ -93,7 +93,7 @@ Processvaraktighetsrapporten visar antalet instanser av en formulärprocess i an
 
 ## Rapport över arbetsflödesvolym {#workflow-volume-report}
 
-Volymrapporten för arbetsflöde visar antalet aktuella och slutförda instanser av en AEM Forms-process per kalenderdag.
+Volymrapporten Arbetsflöde visar antalet pågående och slutförda instanser av en AEM Forms-process per kalenderdag.
 
 ### Så här kör du en arbetsflödesvolymrapport {#to-execute-a-workflow-volume-report-br}
 
