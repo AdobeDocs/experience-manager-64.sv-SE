@@ -11,19 +11,22 @@ topic-tags: best-practices
 discoiquuid: 3cc8ac23-98ff-449f-bd76-1203c7cbbed7
 translation-type: tm+mt
 source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
+workflow-type: tm+mt
+source-wordcount: '485'
+ht-degree: 11%
 
 ---
 
 
 # Provar Editable Templates in We.Retail{#trying-out-editable-templates-in-we-retail}
 
-Med de redigerbara mallarna är det inte längre bara en uppgift för utvecklare att skapa och underhålla mallar. En typ av avancerade användare, som kallas mallskapare, kan nu skapa mallar. Utvecklare måste fortfarande konfigurera miljön, skapa klientbibliotek och skapa komponenter som ska användas, men när dessa grunder väl är på plats kan mallskaparen skapa och konfigurera mallar utan ett utvecklingsprojekt.
+Med de redigerbara mallarna är det inte längre bara en uppgift för utvecklare att skapa och underhålla mallar. En typ av avancerade användare, som kallas mallskapare, kan nu skapa mallar. Utvecklare måste fortfarande installera miljön, skapa klientbibliotek och skapa de komponenter som ska användas, men när dessa grunder väl är på plats kan mallskaparen skapa och konfigurera mallar utan något utvecklingsprojekt.
 
 Alla sidor i We.Retail baseras på redigerbara mallar, vilket gör att icke-utvecklare kan anpassa och anpassa mallarna.
 
 ## Prova {#trying-it-out}
 
-1. Redigera sidan Utrustning i huvudgrenen för språk.
+1. Redigera utrustningssidan för den överordnad språkgrenen.
 
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/equipment.html
 
@@ -46,6 +49,7 @@ Alla sidor i We.Retail baseras på redigerbara mallar, vilket gör att icke-utve
    * Välj en befintlig profil eller skapa en ny profil för behållaren
    * Välj vilka komponenter som tillåts i behållaren
    * Definiera de standardkomponenter som ska placeras när en resurs dras till behållaren
+
    ![chlimage_1-140](assets/chlimage_1-140.png)
 
 1. I mallredigeraren kan du redigera principen för textkomponenten i layoutbehållaren.
@@ -59,6 +63,7 @@ Alla sidor i We.Retail baseras på redigerbara mallar, vilket gör att icke-utve
       * Formateringsalternativ
       * Tillåtna styckeformat
       * Tillåtna specialtecken
+
    Många komponenter som bygger på kärnkomponenterna gör det möjligt att konfigurera alternativ på komponentnivå med hjälp av redigerbara mallar, vilket eliminerar behovet av anpassning av utvecklare.
 
    ![chlimage_1-141](assets/chlimage_1-141.png)
