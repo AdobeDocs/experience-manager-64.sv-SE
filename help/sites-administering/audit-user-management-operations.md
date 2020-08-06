@@ -1,8 +1,8 @@
 ---
 title: Granska åtgärder för användarhantering i AEM
 seo-title: Granska åtgärder för användarhantering i AEM
-description: Lär dig hur du granskar användarhanteringsåtgärder i AEM.
-seo-description: Lär dig hur du granskar användarhanteringsåtgärder i AEM.
+description: Lär dig hur du granskar åtgärder för användarhantering i AEM.
+seo-description: Lär dig hur du granskar åtgärder för användarhantering i AEM.
 uuid: 4ea704b4-9150-4b5f-b9cb-cdac95cfd70c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 437fa139-2dde-41a0-9649-6bb110039618
 translation-type: tm+mt
 source-git-commit: aac5026a249e1cb09fec66313cc03b58597663f0
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 0%
 
 ---
 
@@ -37,10 +40,11 @@ Om du vill omdirigera loggningsutdata till en separat loggfil måste du skapa en
 1. Sök efter **loggningskonfiguration** för Apache Sling-loggning. Tryck sedan på + till höger om posten för att skapa en ny fabrikskonfiguration.
 1. Skapa följande konfiguration:
 
-   * **** Loggnivå: Information
-   * **** Loggfil: logs/useraudit.log
-   * **** Meddelandemönster: standardnivå
-   * **** Logger: com.adobe.granite.security.user.internal.audit, com.adobe.granite.security.user.internal.servlets.AuthorizableServlet
+   * **Loggnivå:** Information
+   * **Loggfil:** logs/useraudit.log
+   * **Meddelandemönster:** standardnivå
+   * **Logger:** com.adobe.granite.security.user.internal.audit, com.adobe.granite.security.user.internal.servlets.AuthorizableServlet
+
    Om du vill ange båda loggarna i fältet **Logger** måste du ange namnet på den första, sedan skapa ett annat fält genom att trycka på plusknappen (+) och ange namnet på den andra loggen.
 
 ## Exempelutdata {#example-output}
@@ -81,7 +85,7 @@ Om utdata är korrekt konfigurerade bör de se ut så här:
 
 I det klassiska användargränssnittet är information om CRUD-åtgärder som registreras i granskningsloggen för att lägga till och ta bort användare begränsad till ID:t för den användare som påverkas och när ändringen inträffade.
 
-Exempel:
+Till exempel:
 
 ```
 10.05.2019 18:01:09.123 INFO [0:0:0:0:0:0:0:1 [1557491469096] POST /libs/cq/security/authorizables/POST HTTP/1.1] com.adobe.granite.security.user.internal.audit.AuditAuthorizableAction User 'test' was created
