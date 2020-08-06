@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: b76d7d93-23a5-4c08-81f5-a56267b1556a
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '346'
+ht-degree: 0%
 
 ---
 
@@ -27,4 +30,4 @@ Vid generering av månadsfakturor för ett telekomföretag skapar du en abstrakt
 
 Det går bara att skapa en abstrakt profil via Java SDK för dokumentsäkerhet. Du kan dock administrera profilerna som du skapar utifrån den abstrakta profilen från dokumentsäkerhetswebbsidorna. Profiler som skapas med den här metoden har samma beteende som de som skapas från webbsidor för dokumentsäkerhet.
 
-Mer information finns i [Programmering med AEM-formulär](https://www.adobe.com/go/learn_aemforms_programming_63) .
+Mer information finns i [Programmera med AEM formulär](https://www.adobe.com/go/learn_aemforms_programming_63) .
