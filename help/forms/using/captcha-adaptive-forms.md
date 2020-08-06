@@ -27,7 +27,7 @@ AEM Forms stöder CAPTCHA i adaptiva former. Du kan använda tjänsten reCAPTCHA
 >
 >AEM Forms har endast stöd för reCaptcha v2. Andra versioner stöds inte.
 >
->CAPTCHA i adaptiva formulär stöds inte i offlineläge i appen AEM Forms.
+>CAPTCHA i adaptiva formulär stöds inte i offlineläge i AEM Forms-appen.
 
 ## Konfigurera ReCAPTCHA-tjänsten av Google {#google-recaptcha}
 
@@ -53,10 +53,11 @@ Så här implementerar du tjänsten reCAPTCHA i AEM Forms:
 
 1. Konfigurera molntjänsten för reCAPTCHA.
 
-   1. Gå till ![verktyg](assets/tools.png) > **Cloud Service** i din AEM-författarinstans.
+   1. Gå till ![Verktyg](assets/tools.png) > **Cloud Services** i AEM författare.
    1. Tryck på **[!UICONTROL reCAPTCHA]**. Sidan Konfigurationer öppnas. Välj den konfigurationsbehållare som skapades i föregående steg och tryck sedan på **[!UICONTROL Create]**.
    1. Ange Namn, Webbplatsnyckel och Hemlig nyckel för reCAPTCHA-tjänsten och tryck för **[!UICONTROL Create]** att skapa molntjänstkonfigurationen.
    1. I dialogrutan Redigera komponent anger du platsen och de hemliga nycklarna som fås i steg 1. Tryck **[!UICONTROL Save Settings]** och tryck sedan på **[!UICONTROL OK]** för att slutföra konfigurationen.
+
    När reCAPTCHA-tjänsten har konfigurerats är den tillgänglig för användning i adaptiva formulär. Mer information finns i [Använda CAPTCHA i adaptiva formulär](#using-captcha).
 
 ## Använd CAPTCHA i anpassningsbara formulär {#using-captcha}
@@ -85,7 +86,7 @@ Så här använder du CAPTCHA i adaptiva former:
 
    >[!NOTE]
    >
-   >Välj inte **[!UICONTROL Default]** i listrutan Captcha-tjänst eftersom standardtjänsten AEM CAPTCHA är inaktuell.
+   >Välj inte **[!UICONTROL Default]** i listrutan Captcha-tjänst eftersom AEM CAPTCHA-standardtjänsten är föråldrad.
 
 1. Spara egenskaperna.
 
