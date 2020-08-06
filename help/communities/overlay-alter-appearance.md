@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: da3891d3-fa07-4c88-b4ac-077926b3a674
 translation-type: tm+mt
 source-git-commit: 1ae2d7f99286e0b958d343778159e2d35095510e
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 2%
 
 ---
 
@@ -25,9 +28,9 @@ Så här visar du inte avataren bredvid varje publicerad kommentar:
 
 1. Kopiera `comment.hbs`från `libs`till `apps`
    1. Välj `/libs/social/commons/components/hbs/comments/comment/comment.hbs`
-   1. Markera **[!UICONTROL kopia]**
+   1. Välj **[!UICONTROL Copy]**
    1. Välj `/apps/social/commons/components/hbs/comments/comment`
-   1. Markera **[!UICONTROL Klistra in]**
+   1. Välj **[!UICONTROL Paste]**
 1. Öppna överlägg `comment.hbs`
    * Dubbelklicka på noden `comment.hbs`i `/apps/social/commons/components/hbs/comments/comment folder`
 1. Hitta följande rader och ta bort eller kommentera dem:
@@ -53,9 +56,9 @@ Radera linjerna eller omge dem med &quot;&lt;!—&#39; och &#39;—>&#39; för a
 >
 >En robustare form av replikering skulle vara att skapa ett paket i Package Manager och [aktivera](../../help/sites-administering/package-manager.md#replicating-packages) det. Ett paket kan exporteras och arkiveras.
 
-I den globala navigeringen väljer du **[!UICONTROL Verktyg > Distribution > Replikering]** och sedan **[!UICONTROL Aktivera träd]**.
+I den globala navigeringen väljer du **[!UICONTROL Tools > Deployment > Replication]** och sedan **[!UICONTROL Activate Tree]**.
 
-Ange `/apps/social/commons` och välj **[!UICONTROL Aktivera]** som startsökväg.
+Ange `/apps/social/commons` och välj Start Path **[!UICONTROL Activate]**.
 
 ![chlimage_1-42](assets/chlimage_1-42.png)
 
