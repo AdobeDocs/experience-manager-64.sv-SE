@@ -11,6 +11,9 @@ topic-tags: hTML5_forms
 discoiquuid: fbe70162-ced6-4989-9322-e12772edbcbc
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '1895'
+ht-degree: 0%
 
 ---
 
@@ -23,11 +26,11 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
 1. Varför visas inte streckkoder och signaturfält i mitt formulär?
 
-   Svar: Streckkoder och signaturfält är inte relevanta i HTML- och mobilscenarier. Dessa fält visas som icke-interaktiva områden. Men AEM Forms Designer har ett nytt signaturskriptfält som kan användas istället för signaturfält. Du kan också lägga till en [anpassad widget](/help/forms/using/custom-widgets.md) för streckkoder och integrera den.
+   Svar: Streckkoder och signaturfält är inte relevanta i HTML- och mobilscenarier. Dessa fält visas som icke-interaktiva områden. AEM Forms Designer har dock ett nytt signaturskriptfält som kan användas istället för signaturfält. Du kan också lägga till en [anpassad widget](/help/forms/using/custom-widgets.md) för streckkoder och integrera den.
 
 1. Stöds RTF för XFA-textfältet?
 
-   Svar: XFA-fältet, som tillåter avancerat innehåll i AEM Forms Designer, stöds inte och återges som normal text utan stöd för formatering av texten från användargränssnittet. Dessutom visas XFA-fält med kombinationsegenskaper som ett vanligt fält, även om det fortfarande finns begränsningar för antalet tillåtna tecken baserat på värdet för kombinationssiffror.
+   Svar: XFA-fältet, som tillåter multimediematerial i AEM Forms Designer, stöds inte och återges som normal text utan stöd för formatering av texten från användargränssnittet. Dessutom visas XFA-fält med kombinationsegenskaper som ett vanligt fält, även om det fortfarande finns begränsningar för antalet tillåtna tecken baserat på värdet för kombinationssiffror.
 
 1. Finns det några begränsningar för användning av repeterbara delformulär?
 
@@ -87,7 +90,7 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
 1. Varför viss text trunkeras eller visas felaktigt i HTML5?
 
-   Svar: Om ett Draw- eller Caption-textelement inte har fått tillräckligt med utrymme för att visa innehåll, visas texten som trunkerad i mobil formuläråtergivning. Den här trunkeringen visas också i designvyn i AEM Forms Designer. Även om den här trunkeringen kan hanteras i PDF-filer kan den inte hanteras i HTML5-formulär. Du kan undvika problemet genom att ange tillräckligt med utrymme för att rita eller bildtext så att den inte kortas av i designläget i AEM Forms Designer.
+   Svar: Om ett Draw- eller Caption-textelement inte har fått tillräckligt med utrymme för att visa innehåll, visas texten som trunkerad i mobil formuläråtergivning. Den här trunkeringen visas även i designvyn i AEM Forms Designer. Även om den här trunkeringen kan hanteras i PDF-filer kan den inte hanteras i HTML5-formulär. Du kan undvika problemet genom att ange tillräckligt med utrymme för Rita eller Bildtext så att den inte kortas av i designläget i AEM Forms Designer.
 
 1. Jag observerar layoutproblem med saknat innehåll eller överlappande innehåll. Vad är orsaken?
 
@@ -95,7 +98,7 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
 1. Varför visas vissa teckensnitt i HTML-formuläret på ett annat sätt än de som används när formuläret utformas?
 
-   Svar: HTML5-formulär bäddar inte in teckensnitt (till skillnad från PDF-formulär där teckensnitt är inbäddade i formuläret). För att HTML-versionen av formuläret ska kunna återges som förväntat måste teckensnitten som anges i XDP-filen vara tillgängliga på servern och på klientdatorn. Om de nödvändiga teckensnitten inte finns på servern används de som standard. Om du dessutom använder teckensnitt i formulärmallen som inte finns på klientenheten, används webbläsarens standardteckensnitt för att återge texten.
+   Svar: HTML5-formulär bäddar inte in teckensnitt (till skillnad från PDF forms där teckensnitt är inbäddade i formuläret). För att HTML-versionen av formuläret ska kunna återges som förväntat måste teckensnitten som anges i XDP-filen vara tillgängliga på servern och på klientdatorn. Om de nödvändiga teckensnitten inte finns på servern används de som standard. Om du dessutom använder teckensnitt i formulärmallen som inte finns på klientenheten, används webbläsarens standardteckensnitt för att återge texten.
 
 1. Stöds vAlign- och hAlign-attribut i HTML-formulär?
 
@@ -109,11 +112,11 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
    Svar: Ja, HTML5-formulär har några begränsningar. Om antalet siffror är fler än antalet som anges i bildsatsen, lokaliseras inte siffrorna och visas på engelska.
 
-1. Varför är HTML-formulär större än PDF-formulär?
+1. Varför är HTML-formulär större än PDF forms?
 
    Det krävs många mellanliggande datastrukturer och objekt som formulärdom, datatilldom och layoutdom för att återge en XDP till ett HTML-formulär.
 
-   För PDF-formulär har Adobe Acrobat en inbyggd XTG-motor för att skapa mellanliggande datastrukturer och objekt. Acrobat hanterar också layout och skript.
+   För PDF forms har Adobe Acrobat en inbyggd XTG-motor för att skapa mellanliggande datastrukturer och objekt. Acrobat hanterar också layout och skript.
 
    För HTML5-formulär har webbläsarna ingen inbyggd XTG-motor för att skapa mellanliggande datastrukturer och objekt från rå XDP-byte. För HTML5-formulär genereras därför mellanliggande strukturer på servern och skickas till klienten. På klienten använder javascript-baserade skript- och layoutmotorer dessa mellanliggande strukturer.
 
@@ -148,7 +151,7 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
    Svar: HTML5-formulär ignorerar de anpassade utseendeegenskaperna för alternativknappar och kryssrutor. Alternativknapparna och kryssrutorna visas enligt specifikationerna för den underliggande webbläsaren.
 
-1. När ett HTML5-formulär öppnas i en webbläsare som stöds justeras inte kanten på de fält som placeras intill korrekt, eller så visas delformulär som överlappande. När samma HTML5-formulär förhandsgranskas i Forms Designer visas inte fälten och layouten feljusterade och delformulären visas på rätt plats. Hur löser jag problemet?
+1. När ett HTML5-formulär öppnas i en webbläsare som stöds justeras inte kanten på de fält som placeras intill korrekt, eller så visas delformulär som överlappande. När samma HTML5-formulär förhandsgranskas i Forms Designer ser inte fält och layout feljusterade ut och delformulär visas på rätt plats. Hur löser jag problemet?
 
    När ett delformulär är inställt på att flöda innehåll och delformuläret har ett dolt ramelement, justeras inte kanten på de fält som placeras inåt korrekt eller så visas delformulär som överlappande. Du kan lösa problemet genom att ta bort eller kommentera dolda &lt;border>-element från motsvarande XDP. Följande &lt;border>-element markeras som en kommentar:
 
@@ -161,7 +164,7 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
 ## Skript {#scripting}
 
-1. Finns det några begränsningar i JavaScript-implementeringen för HTML-formulär?
+1. Finns det några begränsningar i JavaScript-implementeringen för HTML Forms?
 
    Svar:
 
@@ -180,7 +183,7 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
 1. Har HTML5-formulär stöd för flytande fält?
 
-   Ja, HTML5-formulär har stöd för flytande fält. Om du vill aktivera flytande fält lägger du till följande egenskap i återgivningsprofilen:
+   Ja, HTML5 Forms har stöd för flytande fält. Om du vill aktivera flytande fält lägger du till följande egenskap i återgivningsprofilen:
 
    >[!NOTE]
    >
@@ -188,7 +191,7 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
    1. Öppna CRXde lite och navigera till `/content/xfaforms/profiles/default` noden.
    1. Lägg till en egenskap `mfDataDependentFloatingField` av typen String och ställ in värdet för egenskapen på `true`**.**
-   1. Klicka på **Spara alla**. Nu aktiveras de flytande fälten för HTML-formulären med den uppdaterade återgivningsprofilen.
+   1. Klicka på **Spara alla**. Nu aktiveras de flytande fälten för HTML Forms med den uppdaterade återgivningsprofilen.
 
       >[!NOTE]
       >
