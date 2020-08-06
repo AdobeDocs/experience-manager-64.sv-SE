@@ -4,27 +4,30 @@ description: Videoåtergivningar
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
 
 # Videoåtergivningar {#video-renditions}
 
-Adobe Experience Manager (AEM) Assets genererar videoåtergivningar för videomaterial i olika format, bland annat OGG och FLV.
+Adobe Experience Manager (AEM) Assets genererar videoåtergivningar för videoresurser i olika format, bland annat OGG, FLV.
 
-AEM Assets stöder statiska och dynamiska återgivningar (DM-kodade återgivningar) för medieresurser.
+AEM Assets har stöd för statiska och dynamiska återgivningar (DM-kodade återgivningar) för medieresurser.
 
 Statiska återgivningar genereras internt med hjälp av FFMPEG (som är installerat och tillgängligt på systemsökvägen) och lagras i innehållsdatabasen.
 
 DM-kodade återgivningar lagras på proxyservern och hanteras vid körning.
 
-AEM-resurser har uppspelningsstöd för dessa återgivningar på klientsidan.
+AEM resurser har uppspelningsstöd för dessa återgivningar på klientsidan.
 
-Om du vill visa återgivningarna för en viss videoresurs öppnar du resurssidan och trycker på ikonen Global navigering. Välj sedan **[!UICONTROL Återgivningar]** i listan.
+Om du vill visa återgivningarna för en viss videoresurs öppnar du resurssidan och trycker på ikonen Global navigering. Välj sedan **[!UICONTROL Renditions]** från listan.
 
 ![chlimage_1-478](assets/chlimage_1-478.png)
 
-Listan med videoåtergivningar visas på panelen **[!UICONTROL Återgivningar]** .
+Listan med videoåtergivningar visas på **[!UICONTROL Renditions]** panelen.
 
 ![chlimage_1-479](assets/chlimage_1-479.png)
 
