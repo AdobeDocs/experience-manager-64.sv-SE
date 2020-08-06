@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: d674458c-d5f3-4dee-a673-b0777c02ad30
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '423'
+ht-degree: 2%
 
 ---
 
@@ -34,13 +37,13 @@ Vi.Retail har byggts med en global webbplatsstruktur som erbjuder språkmallar s
 
    ![chlimage_1-89](assets/chlimage_1-89.png)
 
-1. Återgå till kolumnvyn och klicka på Language Master och se språkinställningens rötter med innehåll. Observera att endast engelska har innehåll.
+1. Gå tillbaka till kolumnvyn och klicka på Överordnad Språk och se det språk som är överordnad med innehåll. Observera att endast engelska har innehåll.
 
    Vi.Retail innehåller inget översatt innehåll, men strukturen och konfigurationen finns på plats så att du kan demonstrera översättningstjänsterna.
 
    ![chlimage_1-90](assets/chlimage_1-90.png)
 
-1. När den engelska språkmallen är markerad öppnar du **referenslisten** i webbplatskonsolen och väljer **Språkkopior**.
+1. När Överordnad för engelska är markerad öppnar du **referenslisten** i webbplatskonsolen och väljer **Språkkopior**.
 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
@@ -66,7 +69,7 @@ Vi.Retail har byggts med en global webbplatsstruktur som erbjuder språkmallar s
 
 >[!NOTE]
 >
->Den här proceduren demonstrerade den inbyggda integrationen med Microsoft maskinöversättning. Med hjälp av [AEM Translation Integration Framework](/help/sites-administering/translation.md)kan du integrera med många standardöversättningstjänster för att översätta AEM.
+>Den här proceduren demonstrerade den inbyggda integrationen med Microsoft maskinöversättning. Med hjälp av [AEM TLF](/help/sites-administering/translation.md)(Translation Integration Framework) kan du integrera med många standardöversättningstjänster för att samordna översättning av AEM.
 
 ## Ytterligare information {#further-information}
 
