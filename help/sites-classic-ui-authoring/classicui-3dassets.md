@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: c601a44a-6604-4cc2-b35a-60d2c5a950e1
 translation-type: tm+mt
 source-git-commit: 7c850ed0d20dd2ba2626242c67ba190e371f049f
+workflow-type: tm+mt
+source-wordcount: '127'
+ht-degree: 0%
 
 ---
 
@@ -25,5 +28,5 @@ Se även [Installera och konfigurera AEM 3D](/help/assets/install-config-3d.md).
 
 >[!NOTE]
 >
->AEM 3D är bara tillgängligt från AEM Touch-gränssnittet, inte det klassiska användargränssnittet. Mer information finns i [Arbeta med 3D-resurser](/help/assets/assets-3d.md) i standarddokumentationen för redigering.
+>AEM 3D är bara tillgängligt från användargränssnittet med AEM touch, inte det klassiska användargränssnittet. Mer information finns i [Arbeta med 3D-resurser](/help/assets/assets-3d.md) i standarddokumentationen för redigering.
 
