@@ -10,6 +10,9 @@ topic-tags: hTML5_forms
 discoiquuid: 8eebfcd6-0597-44ed-b718-bf9a1baa6c12
 translation-type: tm+mt
 source-git-commit: 12905ca1540e5b280975724a7fb3635dc4afffca
+workflow-type: tm+mt
+source-wordcount: '335'
+ht-degree: 0%
 
 ---
 
@@ -27,6 +30,7 @@ Du kan överföra, förhandsgranska och skicka bilagor med HTML5-formulär. Som 
    * **fileSizeLimit** -> value_in_mb (say 5) (2 MB som standard)
    * **buttonText** -> Button text for pop-up window (&quot;Attach&quot; as default)
    * **acceptera** -> filtyper att acceptera (&quot;ljud/&amp;ast;, video/&amp;ast;, bild/&amp;ast;, text/&amp;ast;, .pdf&quot; som standard)
+
    >[!NOTE]
    >
    >I Microsoft Internet Explorer 9 kan användare bifoga filer som är större än den angivna gränsen. Det är ett känt problem.
