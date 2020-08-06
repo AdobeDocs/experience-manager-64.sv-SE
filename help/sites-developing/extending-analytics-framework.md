@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 11c0aac6-a7f6-4d6b-a080-b04643045a64
 translation-type: tm+mt
 source-git-commit: 4e6442ec089b7d07cc68debb5a630fb474716f4d
+workflow-type: tm+mt
+source-wordcount: '1620'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Adobe Analytics-ramverket avgör vilken information som spåras med Adobe Analyt
 
 När en sida är kopplad till ett Adobe Analytics-ramverk och sidan innehåller [referenser till analysmodulen](/help/sites-administering/adobeanalytics.md), genereras automatiskt filen analytics.sitecatalyst.js för sidan.
 
-Javascript på sidan skapar ett `s_gi`objekt (som Adobe Analytics-biblioteket s_code.js definierar) och tilldelar värden till dess egenskaper. Namnet på objektinstansen är `s`. De kodexempel som presenteras i det här avsnittet innehåller flera referenser till den här `s` variabeln.
+JavaScript på sidan skapar ett `s_gi`objekt (som definieras av Adobe Analytics-biblioteket s_code.js) och tilldelar värden till dess egenskaper. Namnet på objektinstansen är `s`. De kodexempel som presenteras i det här avsnittet innehåller flera referenser till den här `s` variabeln.
 
 Följande exempelkod liknar koden i en analytics.sitecatalyst.js-fil:
 
@@ -91,7 +94,7 @@ s.trackingServerSecure = "xxxxxxx.net";
 
 Använd följande procedur för att lägga till variabler i listan:
 
-1. På din Adobe Analytics-ramverkssida expanderar du området **Allmänna analysinställningar** .
+1. Utöka området **Allmänna analysinställningar** på din Adobe Analytics-ramverkssida.
 1. Under variabellistan klickar du på Lägg till objekt för att lägga till en ny variabel i listan.
 1. I den vänstra cellen skriver du ett namn på variabeln, till exempel `prop10`.
 
@@ -103,7 +106,7 @@ Använd följande procedur för att lägga till variabler i listan:
 >
 >När du anger variabler och värden måste du se till att de är korrekt formaterade och stavade, annars skickas **inte** anropen med rätt värde/variabelpar. Felstavade variabler och värden kan till och med förhindra anrop.
 >
->Kontakta din Adobe Analytics-representant för att kontrollera att dessa variabler är korrekt inställda.
+>Kontakta din Adobe Analytics-representant för att kontrollera att dessa variabler är rätt inställda.
 
 >[!CAUTION]
 >
@@ -139,7 +142,7 @@ Följande procedur visar hur du använder javascript-rutan för att anpassa Adob
 
    >[!CAUTION]
    >
-   >Den här koden är nödvändig om du vill skicka variabler i ett Adobe Analytics-anrop som har anpassats på något sätt som inte går att göra via det grundläggande dra&amp;släpp-gränssnittet ELLER via det infogade javascript-objektet i Adobe Analytics-vyn.
+   >Den här koden är nödvändig om du vill skicka variabler i ett Adobe Analytics-anrop som har anpassats på något sätt som inte går att göra via dra och släpp-gränssnittet ELLER via infogat javascript i Adobe Analytics View.
    >
    >Om de anpassade variablerna ligger utanför s_doPlugins-funktionen skickas de som *undefined *i Adobe Analytics-anropet
 
@@ -171,7 +174,7 @@ Följande värden genereras till exempel i Adobe Analytics:
 
 ### Lägga till global anpassad kod för alla Adobe Analytics-ramverk {#adding-global-custom-code-for-all-adobe-analytics-frameworks}
 
-Skapa anpassad javascript-kod som är integrerad i alla Adobe Analytics-ramverk. När en sidas Adobe Analytics-ramverk inte innehåller något anpassat Javascript [med](/help/sites-administering/adobeanalytics.md)fri form läggs det javascript som genereras av /libs/cq/analytics/components/sitecatalyst/config.js.jsp-skriptet till i [filen analytics.sitecatalyst.js](/help/sites-administering/adobeanalytics.md) . Skriptet har som standard ingen effekt eftersom det kommenteras ut. Koden anges också `s.usePlugins` till `false`:
+Skapa egen javascript-kod som är integrerad i alla Adobe Analytics ramverk. När en sidas Adobe Analytics-ramverk inte innehåller något anpassat JavaScript [med](/help/sites-administering/adobeanalytics.md)fri form läggs det javascript som genereras av /libs/cq/analytics/components/sitecatalyst/config.js.jsp-skriptet till i [filen analytics.sitecatalyst.js](/help/sites-administering/adobeanalytics.md) . Skriptet har som standard ingen effekt eftersom det kommenteras ut. Koden anges också `s.usePlugins` till `false`:
 
 ```
 /* Plugin Config */
@@ -192,7 +195,7 @@ Därför bör javascript anges `s.usePlugins` till `true` så att all kod i `s_d
 
 >[!NOTE]
 >
->Redigera inte filen /libs/cq/analytics/components/sitecatalyst/config.js.jsp. Vissa AEM-uppgraderings- eller underhållsåtgärder kan installera om originalfilen och ta bort ändringarna.
+>Redigera inte filen /libs/cq/analytics/components/sitecatalyst/config.js.jsp. Vissa AEM kan installera om originalfilen och ta bort ändringarna.
 
 1. I CRXDE Lite skapar du mappstrukturen /apps/cq/analytics/components:
 
@@ -239,7 +242,7 @@ Därför bör javascript anges `s.usePlugins` till `true` så att all kod i `s_d
 
 ### Använda Adobe Analytics-plugin-program i AEM {#using-adobe-analytics-plugins-in-aem}
 
-Hämta javascript-koden för Adobe Analytics-pluginer och integrera dem i Adobe Analytics-ramverket i AEM. Lägg till koden i en klientbiblioteksmapp i kategorin `sitecatalyst.plugins` så att den är tillgänglig för din anpassade javascript-kod.
+Hämta javascript-koden för Adobe Analytics-plugin-program och integrera dem i ditt Adobe Analytics-ramverk i AEM. Lägg till koden i en klientbiblioteksmapp i kategorin `sitecatalyst.plugins` så att den är tillgänglig för din anpassade javascript-kod.
 
 Om du till exempel integrerar `getQueryParams` -plugin-programmet kan du anropa plugin-programmet från funktionen `s_doPlugins` i ditt anpassade javascript. Följande exempelkod skickar frågesträngen i **&quot;pid&quot;** från referentens URL som **eVar1** när ett Adobe Analytics-anrop utlöses.
 
@@ -262,7 +265,7 @@ Klientbiblioteksmappen /libs/cq/analytics/clientlibs/sitecatalyst/plugins inneh�
 
 >[!NOTE]
 >
->Skapa en ny biblioteksmapp för dina plugin-program. Lägg inte till plugin-program i `/libs/cq/analytics/clientlibs/sitecatalyst/plugins` mappen. Detta säkerställer att ditt bidrag till `sitecatalyst.plugins` kategorin inte skrivs över under AEM-ominstallationer eller uppgraderingar.
+>Skapa en ny biblioteksmapp för dina plugin-program. Lägg inte till plugin-program i `/libs/cq/analytics/clientlibs/sitecatalyst/plugins` mappen. Detta säkerställer att ditt bidrag till `sitecatalyst.plugins` kategorin inte skrivs över vid AEM eller uppgraderingar.
 
 Använd följande procedur för att skapa klientbiblioteksmappen för dina plugin-program. Du behöver bara utföra den här proceduren en gång. Om du vill lägga till ett plugin-program i klientbiblioteksmappen gör du följande.
 
@@ -277,16 +280,17 @@ Använd följande procedur för att skapa klientbiblioteksmappen för dina plugi
 1. Markera klientbiblioteksmappen som du nyss skapade och använd egenskapsfältet längst ned till höger för att lägga till följande egenskap:
 
    * Namn: kategorier
-   * Typ:Sträng
+   * Typ: Sträng
    * Värde: sitecatalyst.plugins
    * Flera: markerad
+
    Klicka på OK i redigeringsfönstret för att bekräfta egenskapsvärdet.
 
 1. Högerklicka på klientbiblioteksmappen som du nyss skapade och klicka på Skapa > Skapa fil. För filnamnstypen js.txt och klicka sedan på OK.
 
 1. Klicka på Spara alla.
 
-Gör så här för att hämta plugin-programkoden, lagra koden i AEM-databasen och lägga till koden i klientbiblioteksmappen.
+Använd följande procedur för att hämta plugin-programkoden, lagra koden i AEM och lägga till koden i klientbiblioteksmappen.
 
 1. Logga in på [sc.omniture.com](https://sc.omniture.com) med ditt Adobe Analytics-konto.
 1. På landningssidan går du till Hjälp > Hem för hjälpen.
