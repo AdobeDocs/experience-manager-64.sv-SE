@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 4dc54701-68b9-49dd-a212-b0b53330c1c0
 translation-type: tm+mt
 source-git-commit: 63001012f0d865c2548703ea387c780679128ee7
+workflow-type: tm+mt
+source-wordcount: '1131'
+ht-degree: 1%
 
 ---
 
@@ -59,16 +62,16 @@ Följ de här stegen för att skydda communityplatsens innehåll från anonyma a
    >
    >Gå inte till den lokaliserade webbplatsen.
 
-1. Gå till **[!UICONTROL Sidegenskaper]**.
+1. Gå till **[!UICONTROL Page Properties]**.
 
    ![webbplatsautentisering](assets/site-authentication.png)
 
-1. Gå till fliken **[!UICONTROL Avancerat]** .
+1. Gå till **[!UICONTROL Advanced]** fliken.
 
    ![page-properties](assets/page-properties.png)
 
-1. Aktivera **[!UICONTROL autentiseringskrav]**.
-1. Lägg till inloggningssidans sökväg. Exempel, `/content/......./GetStarted`.
+1. Aktivera **[!UICONTROL Authentication Requirement]**.
+1. Lägg till inloggningssidans sökväg. Till exempel, `/content/......./GetStarted`.
 1. Publicera sidan.
 
 ## Betrodd medlem i användargruppen {#trusted-community-member}
@@ -93,6 +96,7 @@ Observera att kalendersidan är hemsidan eftersom den valda referensplatsmallen 
 >
 >* [Communities-komponenter](author-communities.md) (för författare)
 >* [Komponent-, funktions- och](essentials.md) funktionsfunktioner (för utvecklare)
+
 >
 
 
@@ -119,15 +123,15 @@ Grupper kan också skapas i författarmiljön och hanteras i communitywebbplatse
 
 Skapa en referensgrupp:
 
-1. Välj **[!UICONTROL ny grupp]**
-1. **[!UICONTROL Fliken Inställningar]**
+1. Välj **[!UICONTROL New Group]**
+1. **[!UICONTROL Settings tab]**
    * Gruppnamn: `Sports`
    * Beskrivning: `A parent group for various sporting groups`
    * Grupp-URL-namn: `sports`
    * välj `Open Group` (tillåt alla community-medlemmar att delta genom att gå med)
-1. **[!UICONTROL Fliken Mallar]**
+1. **[!UICONTROL Template tab]**
    * Markera `Reference Group` (innehåller en gruppfunktion i sin struktur för att tillåta kapslade grupper)
-1. Välj **[!UICONTROL Skapa grupp]**
+1. Välj **[!UICONTROL Create Group]**
 
 ![chlimage_1-317](assets/chlimage_1-317.png)
 
@@ -152,7 +156,8 @@ Som ett exempel lägger du till två n `ew groups.`
 * Den här mallen innehåller inte *gruppfunktionen, så det går inte att kapsla in grupper ytterligare
 * På författaren har [gruppkonsolen](groups.md) ett tredje val - ett `Public Group` (valfritt medlemskap)
 
-När båda grupperna har skapats väljer du Baseball-gruppen, en öppen grupp, och lägger märke till dess länkar: `Discussions` Gruppens länkar `What's New` `Members`visas under huvudplatsens länkar och ger följande resultat:
+När båda grupperna har skapats väljer du Baseball-gruppen, en öppen grupp, och lägger märke till dess länkar: `Discussions` `What's New` `Members`
+Gruppens länkar visas under huvudplatsens länkar och ger följande resultat:
 
 ![chlimage_1-319](assets/chlimage_1-319.png)
 
@@ -173,11 +178,11 @@ Logga in som Weston McCall (weston.mccall@dodgit.com / lösenord) och navigera t
 
 ## Länk till webbsida {#web-page-link}
 
-Visa den grundläggande webbsidan som finns på webbplatsen genom att välja länken Webbsida. Standardverktygen för AEM-redigering kan användas för att lägga till innehåll på den här sidan i författarmiljön.
+Visa den grundläggande webbsidan som finns på webbplatsen genom att välja länken Webbsida. Standardverktygen AEM kan användas för att lägga till innehåll på den här sidan i författarmiljön.
 
 Gå till exempel till **författarinstansen** , öppna `engage` mappen i [webbgruppskonsolen](sites-console.md)och välj ikonen **Öppna webbplats** för att öppna redigeringsläget. Välj sedan förhandsvisningsläget för att markera `Web Page`länken och välj sedan redigeringsläget för att lägga till titel- och textkomponenter. Publicera sedan om antingen bara sidan eller hela webbplatsen.
 
-![chlimage_1-325](assets/chlimage_1-321.png)
+![chlimage_1-321](assets/chlimage_1-321.png)
 
 ## Administrationslänk {#administration-link}
 
