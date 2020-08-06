@@ -1,8 +1,8 @@
 ---
 title: Steg 1 för författare
 seo-title: Steg 1 för författare
-description: En översikt över de viktigaste uppgifterna du kommer att använda när du börjar skapa innehåll med AEM
-seo-description: En översikt över de viktigaste uppgifterna du kommer att använda när du börjar skapa innehåll med AEM
+description: En översikt över de huvudåtgärder som du kommer att använda när du börjar redigera innehåll med AEM
+seo-description: En översikt över de huvudåtgärder som du kommer att använda när du börjar redigera innehåll med AEM
 uuid: 13aec50b-f902-4b5e-9e8b-bc94810d7b88
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 9086b14c-cd75-4fc9-928e-81c8ad6b6292
 translation-type: tm+mt
 source-git-commit: b01e95110bffc1ee96e0814e782d716ed949c1b4
+workflow-type: tm+mt
+source-wordcount: '462'
+ht-degree: 0%
 
 ---
 
 
 # Steg 1 för författare{#first-steps-for-authors}
 
-I det här avsnittet får du en översikt över de viktigaste uppgifter du kommer att utföra när du [börjar skapa innehåll](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) med Adobe Experience Manager (AEM).
+I det här avsnittet får du en översikt över de huvudåtgärder du kommer att utföra när du [börjar skapa innehåll](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) med Adobe Experience Manager (AEM).
 
 Den omfattar följande:
 
