@@ -37,7 +37,7 @@ Först måste en segmentmodell definieras för komponenten.
 
 >[!NOTE]
 >
->Ett exempel på hur du använder Sling Models finns i artikeln [Developing Sling Model Exporters in AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/sling-model-exporter-tutorial-develop.html).
+>Ett exempel på hur du använder delningsmodeller finns i artikeln [Developing Sling Model Exporters in AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/sling-model-exporter-tutorial-develop.html).
 
 Implementeringsklassen för Sling-modellen måste kommenteras med följande:
 
