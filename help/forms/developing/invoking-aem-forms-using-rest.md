@@ -1,6 +1,6 @@
 ---
-title: Anropa AEM-formulär med REST-begäran
-seo-title: Anropa AEM-formulär med REST-begäran
+title: Anropa AEM Forms med REST-begäran
+seo-title: Anropa AEM Forms med REST-begäran
 description: 'null'
 seo-description: 'null'
 uuid: 3a19a296-f3fe-4e50-9143-b68aed37f9ef
@@ -18,17 +18,17 @@ ht-degree: 0%
 ---
 
 
-# Anropa AEM-formulär med REST-begäran {#invoking-aem-forms-using-rest-requests}
+# Anropa AEM Forms med REST-begäran {#invoking-aem-forms-using-rest-requests}
 
-Processer som skapas i Workbench kan konfigureras så att du kan anropa dem via REST-begäranden (Representational State Transfer). REST-begäranden skickas från HTML-sidor. Det innebär att du kan anropa en formulärprocess direkt från en webbsida med hjälp av en REST-begäran. Du kan till exempel öppna en ny instans av en webbsida. Sedan kan du anropa en formulärprocess och läsa in ett återgivet PDF-dokument med data som skickades i en HTTP POST-begäran.
+Processer som skapas i Workbench kan konfigureras så att du kan anropa dem via REST-begäranden (Representational State Transfer). REST-begäranden skickas från HTML-sidor. Det innebär att du kan anropa en Forms-process direkt från en webbsida med hjälp av en REST-begäran. Du kan till exempel öppna en ny instans av en webbsida. Sedan kan du anropa en Forms-process och läsa in ett återgivet PDF-dokument med data som skickats i en HTTP-POST-begäran.
 
-Det finns två typer av HTML-klienter. Den första HTML-klienten är en AJAX-klient som är skriven i JavaScript. Den andra klienten är ett HTML-formulär som innehåller en skicka-knapp. Ett HTML-baserat klientprogram är inte den enda möjliga REST-klienten. Alla klientprogram som stöder HTTP-begäranden kan anropa en tjänst med hjälp av ett REST-anrop. Du kan till exempel anropa en tjänst genom att använda ett REST-anrop från ett PDF-formulär. (Se [Anropa MyApplication/EncryptDocument-processen från Acrobat](#rest-invocation-examples).)
+Det finns två typer av HTML-klienter. Den första HTML-klienten är en AJAX klient som är skriven i JavaScript. Den andra klienten är ett HTML-formulär som innehåller en skicka-knapp. Ett HTML-baserat klientprogram är inte den enda möjliga REST-klienten. Alla klientprogram som stöder HTTP-begäranden kan anropa en tjänst med hjälp av ett REST-anrop. Du kan till exempel anropa en tjänst genom att använda ett REST-anrop från ett PDF-formulär. (Se [Anropa MyApplication/EncryptDocument-processen från Acrobat](#rest-invocation-examples).)
 
 När du använder REST-begäranden bör du inte anropa Forms-tjänster direkt. Anropa i stället processer som skapats i Workbench. När du skapar en process som är avsedd för REST-anrop ska du använda en programmatisk startpunkt. I så fall läggs REST-slutpunkten till automatiskt. Mer information om hur du skapar processer i Workbench finns i [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).
 
-När du anropar en tjänst med REST uppmanas du att ange användarnamn och lösenord för AEM-formulär. Om du inte vill ange användarnamn och lösenord kan du inaktivera tjänstens säkerhet.
+När du anropar en tjänst med REST uppmanas du att ange ett användarnamn och lösenord för AEM formulär. Om du inte vill ange användarnamn och lösenord kan du inaktivera tjänstens säkerhet.
 
-Konfigurera en REST-slutpunkt om du vill anropa en formulärtjänst (en process blir en tjänst när processen aktiveras) med REST. (Se Hantera slutpunkter i [administrationshjälpen](https://www.adobe.com/go/learn_aemforms_admin_63).)
+Konfigurera en REST-slutpunkt om du vill anropa en Forms-tjänst (en process blir en tjänst när processen aktiveras) med REST. (Se Hantera slutpunkter i [administrationshjälpen](https://www.adobe.com/go/learn_aemforms_admin_63).)
 
 När en REST-slutpunkt har konfigurerats kan du anropa en Forms-tjänst med hjälp av en HTTP GET-metod eller en POST-metod.
 
@@ -36,11 +36,11 @@ När en REST-slutpunkt har konfigurerats kan du anropa en Forms-tjänst med hjä
  action="https://hiro-xp:8080/rest/services/[ServiceName]/[OperationName]:[ServiceVersion]" method="post" enctype="multipart/form-data"
 ```
 
-Det obligatoriska `ServiceName` värdet är namnet på den formulärtjänst som ska anropas. Det valfria `OperationName` värdet är namnet på tjänstens åtgärd. Om det här värdet inte anges blir det här namnet som standard `invoke`, vilket är det åtgärdsnamn som startar processen. Det valfria `ServiceVersion` värdet är den version som är kodad i X.Y-format. Om det här värdet inte anges används den senaste versionen. Värdet `enctype` kan också vara `application/x-www-form-urlencoded`.
+Det obligatoriska `ServiceName` värdet är namnet på den Forms-tjänst som ska anropas. Det valfria `OperationName` värdet är namnet på tjänstens åtgärd. Om det här värdet inte anges blir det här namnet som standard `invoke`, vilket är det åtgärdsnamn som startar processen. Det valfria `ServiceVersion` värdet är den version som är kodad i X.Y-format. Om det här värdet inte anges används den senaste versionen. Värdet `enctype` kan också vara `application/x-www-form-urlencoded`.
 
 ## Datatyper som stöds {#supported-data-types}
 
-Följande datatyper stöds när AEM Forms-tjänster anropas med REST-begäran:
+Följande datatyper stöds vid anrop av AEM Forms-tjänster med REST-begäran:
 
 * primitiva Java-datatyper, som strängar och heltal
 * `com.adobe.idp.Document` datatyp
@@ -49,7 +49,7 @@ Följande datatyper stöds när AEM Forms-tjänster anropas med REST-begäran:
 
    Dessa datatyper accepteras vanligen som indatavärden till processer som skapats i Workbench.
 
-   Om en Forms-tjänst anropas med HTTP POST-metoden skickas argumenten inuti HTTP-begärandetexten. Om AEM Forms-tjänstens signatur har en strängindataparameter kan begärandetexten innehålla indataparameterns textvärde. Om tjänstens signatur definierar flera strängparametrar, kan begäran följa HTTP- `application/x-www-form-urlencoded` notationen med parameternamnen som används som formulärets fältnamn.
+   Om en Forms-tjänst anropas med metoden HTTP-POST, skickas argumenten inuti HTTP-begärandetexten. Om AEM Forms-tjänstens signatur har en strängindataparameter kan begärandetexten innehålla indataparameterns textvärde. Om tjänstens signatur definierar flera strängparametrar, kan begäran följa HTTP- `application/x-www-form-urlencoded` notationen med parameternamnen som används som formulärets fältnamn.
 
    Om en Forms-tjänst returnerar en strängparameter blir resultatet en textrepresentation av utdataparametern. Om en tjänst returnerar flera strängparametrar blir resultatet ett XML-dokument som kodar utdataparametrarna i följande format:
    ` <result> <output-paramater1>output-parameter-value-as-string</output-paramater1> . . . <output-paramaterN>output-parameter-value-as-string</output-paramaterN> </result>`
@@ -58,7 +58,7 @@ Följande datatyper stöds när AEM Forms-tjänster anropas med REST-begäran:
    >
    >Värdet representerar `output-paramater1` utdataparameterns namn.
 
-   Om en Forms-tjänst kräver en `com.adobe.idp.Document` parameter kan tjänsten bara anropas med HTTP POST-metoden. Om tjänsten kräver en `com.adobe.idp.Document` parameter blir HTTP-begärandetexten innehållet i indatadokumentobjektet.
+   Om en Forms-tjänst kräver en `com.adobe.idp.Document` parameter kan tjänsten bara anropas med HTTP-POST-metoden. Om tjänsten kräver en `com.adobe.idp.Document` parameter blir HTTP-begärandetexten innehållet i indatadokumentobjektet.
 
    Om en AEM Forms-tjänst kräver flera indataparametrar måste HTTP-begärandetexten vara ett MIME-meddelande i flera delar enligt RFC 1867. (RFC 1867 är en standard som används av webbläsare för att överföra filer till webbplatser.) Varje indataparameter måste skickas som en separat del av multipart-meddelandet och kodas i `multipart/form-data` formatet. Namnet på varje del måste matcha parameterns namn.
 
@@ -145,7 +145,7 @@ Elementet är valfritt och finns bara om undantaget är en instans av `DSCError`
 
 ## Säkerhet och autentisering {#security-and-authentication}
 
-För att tillhandahålla REST-anrop med en säker transport kan en AEM-formuläradministratör aktivera HTTPS-protokollet på J2EE-programservern som är värd för AEM Forms. Den här konfigurationen är specifik för J2EE-programservern. den ingår inte i formulärserverkonfigurationen.
+För att tillhandahålla REST-anrop med en säker transport kan en AEM formuläradministratör aktivera HTTPS-protokollet på J2EE-programservern som är värd för AEM Forms. Den här konfigurationen är specifik för J2EE-programservern. den ingår inte i formulärserverkonfigurationen.
 
 >[!NOTE]
 >
@@ -161,10 +161,10 @@ I stället för att skicka en REST-begäran för att skapa en princip (som skull
 
 På så sätt behöver du inte skapa en REST-anropsbegäran som innehåller komplexa datatyper som krävs för åtgärden. Processen definierar de komplexa datatyperna och allt du gör från REST-klienten anropar processen och skickar primitiva datatyper. Mer information om hur du anropar en process med REST finns i [Anropa MyApplication/EncryptDocument-processen med REST](#rest-invocation-examples).
 
-Följande listor anger vilka AEM Forms-tjänster som stöder direkt REST-anrop.
+I följande lista anges vilka AEM Forms-tjänster som har stöd för direktanrop av REST.
 
-* Distiller Service
-* Rights Management-tjänst
+* Distiller-tjänst
+* Tjänsten Rights Management
 * GeneratePDF-tjänst
 * Generate3dPDF-tjänst
 * FormDataIntegration
@@ -173,13 +173,13 @@ Följande listor anger vilka AEM Forms-tjänster som stöder direkt REST-anrop.
 
 Följande exempel på REST-anrop finns:
 
-* Skicka booleska värden till en AEM-formulärprocess
-* Skicka datumvärden till en AEM-formulärprocess
-* Skicka dokument till en AEM-formulärprocess
-* Skicka dokument- och textvärden till en AEM-formulärsprocess
-* Skicka uppräkningsvärden till en AEM-formulärprocess
+* Skicka booleska värden till en AEM Forms-process
+* Skicka datumvärden till en AEM Forms-process
+* Skicka dokument till en AEM Forms-process
+* Skicka dokument- och textvärden till en AEM Forms-process
+* Skicka uppräkningsvärden till en AEM Forms-process
 * Anropa processen MyApplication/EncryptDocument med REST
-* Anropa MyApplication/EncryptDocument-processen från Acrobat
+* Anropa processen MyApplication/EncryptDocument från Acrobat
 
    Varje exempel visar hur olika datatyper skickas till en AEM Forms-process
 
@@ -224,7 +224,7 @@ I följande HTML-exempel skickas ett datumvärde till en AEM Forms-process med n
 
 **Skicka dokument till en process**
 
-I följande HTML-exempel anropas en AEM Forms-process med namnet `MyApplication/EncryptDocument` som kräver ett PDF-dokument. Mer information om detta finns i [Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom).
+I följande HTML-exempel anropas en AEM Forms-process med namnet `MyApplication/EncryptDocument` som kräver ett PDF-dokument. Mer information om detta finns i [Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom).
 
 ```as3
  <html> 
@@ -285,11 +285,11 @@ I följande HTML-exempel anropas en AEM Forms-process med namnet `SOAPEchoServic
 
 **Anropa processen MyApplication/EncryptDocument med REST**
 
-Du kan anropa en kort AEM Forms-process med namnet *MyApplication/EncryptDocument* genom att använda REST.
+Du kan anropa en kortlivad AEM Forms-process som heter *MyApplication/EncryptDocument* genom att använda REST.
 
 >[!NOTE]
 >
->Den här processen baseras inte på en befintlig AEM Forms-process. Om du vill följa med i kodexemplet skapar du en process med namnet `MyApplication/EncryptDocument` med workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
+>Processen bygger inte på någon befintlig AEM Forms-process. Om du vill följa med i kodexemplet skapar du en process med namnet `MyApplication/EncryptDocument` med workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
 När den här processen anropas utför den följande åtgärder:
 
@@ -313,9 +313,9 @@ När den här processen anropas utför den följande åtgärder:
     </body>
    ```
 
-**Anropa MyApplication/EncryptDocument-processen från Acrobat** {#invoke-process-acrobat}
+**Anropa processen MyApplication/EncryptDocument från Acrobat** {#invoke-process-acrobat}
 
-Du kan anropa en formulärprocess från Acrobat genom att använda en REST-begäran. Du kan till exempel anropa processen *MittProgram/KrypteraDokument* . Om du vill starta en formulärprocess från Acrobat placerar du en Skicka-knapp i en XDP-fil i Designer. (Se [Designer-hjälpen](https://www.adobe.com/go/learn_aemforms_designer_63).)
+Du kan anropa en Forms-process från Acrobat genom att använda en REST-begäran. Du kan till exempel anropa processen *MittProgram/KrypteraDokument* . Om du vill starta en Forms-process från Acrobat placerar du en Skicka-knapp i en XDP-fil i Designer. (Se [Designer-hjälpen](https://www.adobe.com/go/learn_aemforms_designer_63).)
 
 Ange URL-adressen som processen ska anropas i fältet *Skicka till URL* för knappen, vilket visas på följande bild.
 
@@ -323,4 +323,4 @@ Den fullständiga URL:en för att anropa processen är https://hiro-xp:8080/rest
 
 Om processen kräver ett PDF-dokument som indatavärde måste du skicka formuläret som PDF, vilket visades i föregående bild. Dessutom måste processen returnera ett PDF-dokument för att kunna anropa en process. Annars kan Acrobat inte hantera returvärdet och ett fel inträffar. Du behöver inte ange namnet på indataprocessvariabeln. Processen* MyApplication/EncryptDocument* har till exempel en indatavariabel med namnet `inDoc`. Du behöver inte ange inDoc så länge formuläret skickas som PDF.
 
-Du kan också skicka formulärdata som XML till en formulärprocess. Om du vill skicka XML-data kontrollerar du att XML anges i `Submit As` listrutan. Eftersom processens returvärde måste vara ett PDF-dokument, visas PDF-dokumentet i Acrobat.
+Du kan också skicka formulärdata som XML till en Forms-process. Om du vill skicka XML-data kontrollerar du att XML anges i den `Submit As` nedrullningsbara listan. Eftersom processens returvärde måste vara ett PDF-dokument, visas PDF-dokumentet i Acrobat.
