@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: e8b70971-4f23-45f8-8c23-e147413243c2
 translation-type: tm+mt
 source-git-commit: 02aee2202a570320cd7eb40c2e566d886af4e163
+workflow-type: tm+mt
+source-wordcount: '668'
+ht-degree: 0%
 
 ---
 
@@ -33,11 +36,14 @@ I det här dokumentet beskrivs de olika element som utgör kampanjer. Mer detalj
 
 Kampanjhanteringen består av olika delar:
 
-* **Varumärken** i AEM är varumärken den främsta enheten och utgör en samling **kampanjer**.
+* **Varumärkena** I AEM är varumärken den viktigaste enheten och utgör en samling 
+**Kampanjer**.
 
-* **Kampanjer** En kampanj är en samling individuella **upplevelser**.
+* **Kampanjer** En kampanj är en samling individuella kampanjer 
+**Upplevelser**.
 
-* **Upplevelser** Det fokuserade innehållet utgör de olika upplevelserna, som presenteras för besökaren vid **kontaktpunkter**. Det finns flera olika typer av upplevelser:
+* **Upplevelser** Det fokuserade innehållet utgör de olika upplevelserna, som presenteras för besökaren på 
+**Pekpunkter**. Det finns flera olika typer av upplevelser:
 
    * **Lärare**
       [Teaser Pages/Paragraphs](#teasers) används för att styra specifika **besökarsegment** till innehåll som är inriktat på deras intressen.
@@ -46,15 +52,16 @@ Kampanjhanteringen består av olika delar:
 
       * har en rad alternativ som besökaren kan välja bland
       * visa endast ett teaser-stycke som är baserat på det specifika besökarsegmentet, Det streckade stycket kan t.ex. vara beroende av besökarens ålder.
+
       Vanligtvis är en&quot;teaser&quot;-sida en tillfällig åtgärd som varar en viss tid tills den ersätts av nästa&quot;teaser&quot;-sida.
 
    * **Nyhetsbrev**
 
-      [E-mail Communications](#emailmarketing) används för att engagera användare och uppmuntra dem att besöka din webbplats. Dessa består vanligtvis av ett nyhetsbrev som skickas till dina **leads** (som vanligtvis grupperas i **listor**). **** Obs! Adobe planerar inte att ytterligare förbättra denna funktion. Rekommendationen är att [utnyttja Adobe Campaign och integrationen med AEM](/help/sites-administering/campaign.md).
+      [E-mail Communications](#emailmarketing) används för att engagera användare och uppmuntra dem att besöka din webbplats. Dessa består vanligtvis av ett nyhetsbrev som skickas till dina **leads** (som vanligtvis grupperas i **listor**). **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet. Rekommendationen är att [utnyttja Adobe Campaign och integrationen med AEM](/help/sites-administering/campaign.md).
 
    * **Adobe Target**
 
-      Detta möjliggör integrering med Adobe Target (tidigare Test&amp;Target), som ger marknadsförarna ett optimeringsverktyg för konverteringswebbplatser med nödvändiga funktioner för att kontinuerligt göra sitt onlineinnehåll mer relevant för sina kunder, vilket ger större konverteringsgrad. Adobe Target har ett intuitivt gränssnitt för att utforma och köra tester, skapa målgruppssegment och målinrikta innehåll - allt från ett och samma program.
+      Detta möjliggör integrering med Adobe Target (tidigare Test&amp;Target), som ger marknadsförarna ett optimeringsverktyg för konverteringswebbplatser med de funktioner som krävs för att kontinuerligt göra sitt onlineinnehåll mer relevant för sina kunder, vilket ger större konverteringsgrad. Adobe Target har ett intuitivt gränssnitt för att utforma och köra tester, skapa målgruppssegment och målinrikta innehåll - allt från ett och samma program.
 
 
 * **Pekpunkter**
@@ -65,13 +72,13 @@ Kampanjhanteringen består av olika delar:
 
 * **Leads**
 
-   Den information som ni har samlat in om era besökare och hur ni kontaktar dem utgör grunden för era leads. **** Obs! Adobe planerar inte att ytterligare förbättra denna funktion.
+   Den information som ni har samlat in om era besökare och hur ni kontaktar dem utgör grunden för era leads. **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet.
 
    Rekommendationen är att [utnyttja Adobe Campaign och integrationen med AEM](/help/sites-administering/campaign.md).
 
 * **Listor**
 
-   Leads grupperas vanligtvis i listor så att du kan vidta kollektiva åtgärder för dem. **Obs!** Obs! Adobe planerar inte att ytterligare förbättra denna funktion.
+   Leads grupperas vanligtvis i listor så att du kan vidta kollektiva åtgärder för dem. Obs! **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet.
 
    Rekommendationen är att [utnyttja Adobe Campaign och integrationen med AEM.](/help/sites-administering/campaign.md)
 
@@ -83,7 +90,7 @@ Kampanjhanteringen består av olika delar:
 
    Marketing Campaign Manager (MCM) är en konsol som ger er tillgång till alla funktioner ni behöver för att skapa och kontrollera kampanjer, varumärken, upplevelser, kontaktytor, leads, listor, segment och rapporter.
 
-   Den kan nås från olika platser (märkta som **Kampanjer**) eller med till exempel URL:en:
+   Den kan nås från olika platser (märkta som **Campaigns**) eller med till exempel URL:en:
 
    `http://localhost:4502/libs/mcm/content/admin.html`
 
