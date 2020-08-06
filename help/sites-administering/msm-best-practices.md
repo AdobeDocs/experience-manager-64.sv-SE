@@ -1,8 +1,8 @@
 ---
 title: MSM Best Practices
 seo-title: MSM Best Practices
-description: Här hittar du bästa praxis som sammanställts av Adobes tekniker och konsultteam för att hjälpa till att komma igång med AEM Multi Site Manager.
-seo-description: Här hittar du bästa praxis som sammanställts av Adobes tekniker och konsultteam för att hjälpa till att komma igång med AEM Multi Site Manager.
+description: Här hittar du de bästa arbetssätten som skapats av Adobe tekniker och konsultteam så att de kan komma igång med AEM Multi Site Manager.
+seo-description: Här hittar du de bästa arbetssätten som skapats av Adobe tekniker och konsultteam så att de kan komma igång med AEM Multi Site Manager.
 uuid: cbb598bb-ec8f-4985-97af-7c87f5891c66
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: 04344537-7485-40a9-ad14-804ba448f1e2
 translation-type: tm+mt
 source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
+workflow-type: tm+mt
+source-wordcount: '1530'
+ht-degree: 0%
 
 ---
 
@@ -34,6 +37,7 @@ MSM är ett konfigurerbart ramverk för automatisering av innehållsdistribution
 >
 >* [Vanliga frågor om MSM](https://helpx.adobe.com/experience-manager/kb/index/msm_faq.html)
 >* [Felsökning av MSM-problem](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-msm-issues.html)
+
 >
 
 
@@ -44,6 +48,7 @@ MSM är ett konfigurerbart ramverk för automatisering av innehållsdistribution
 >
 >* MSM är flexiblare och ger detaljerad kontroll över vilket innehåll som synkroniseras och när.
 >* [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) rekommenderas nu framför grundkomponenterna.
+
 >
 
 
@@ -114,11 +119,11 @@ MSM kan hjälpa till att skapa flerspråkiga webbplatser på två sätt:
 
          Kontakta översättningstjänsten för mer information.
 
-      * Ett annat sätt att skapa och översätta språkmallar är att använda språkkopior i kombination med AEM:s färdiga ramverk för översättningsintegrering.
+      * Ett annat sätt att skapa och översätta språkmallsidor är att använda språkkopior i kombination med AEM färdiga integrationsramverk för översättning.
 
 * När du distribuerar innehåll från språkmallsidor.
 
-   * Till exempel, från den franska huvudpersonen till landsspecifika webbplatser, som Frankrike/Frankrike, Kanada/franska, Schweiz/franska.
+   * Till exempel från franska överordnad till landsspecifika webbplatser, som Frankrike/Frankrike, Kanada/franska, Schweiz/franska.
 
 Mer information finns i [Översätta innehåll för flerspråkiga platser](/help/sites-administering/translation.md) och [Översättningsmetoder](/help/sites-administering/tc-bp.md).
 
@@ -130,7 +135,7 @@ Mer information finns i [Översätta innehåll för flerspråkiga platser](/help
 
 * **Om du tar bort** sidor i en plan kommer motsvarande sidor att tas bort från live-kopior efter utrullning med standardkonfigurationen.
 
-* **Om du flyttar** sidor i en plan kommer motsvarande sidor **inte** att flyttas i live-kopior efter utrullning med standardkonfigurationen:
+* **Om du flyttar** sidor i en plan kommer motsvarande sidor **inte** att flyttas i live-kopior efter utrullning med standardkonfiguration:
 
    * Orsaken till detta är att en sidflyttning implicit inkluderar en sidborttagning. Detta kan eventuellt leda till oväntat beteende vid publicering, eftersom om du tar bort sidor på författaren inaktiveras motsvarande innehåll automatiskt vid publicering. Detta kan också få en &quot;spara på&quot;-effekt på relaterade objekt som länkar, bokmärken och andra.
    * Innehållsarv i respektive live-kopia uppdateras för att återspegla den nya platsen för deras källor i planen.
