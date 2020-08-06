@@ -7,8 +7,8 @@ user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
 source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '718'
+ht-degree: 31%
 
 ---
 
@@ -16,16 +16,16 @@ ht-degree: 0%
 # Användarhandbok för AEM 6.4 Assets {#assets}
 
 + [Användarhandbok för resurser](home.md)
-+ [Versionsinformation om AEM 6.4 Assets](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/assets.html)
++ [AEM 6.4 Versionsinformation om tillgångar](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/assets.html)
 + [Om DAM](assets.md)
 + [Förbättrade användarupplevelser](ux-improvements.md)
 + [Metodtips för resurser](best-practices-for-assets.md)
 + Använd AEM Assets {#using}
    + [AEM Assets hemsida](assets-home-page.md)
-   + [Söka efter resurser i AEM](search-assets.md)
+   + [Sök efter resurser i AEM](search-assets.md)
    + [Fulltextsökning i GQL](gql-search.md)
    + [Flerspråkiga resurser](multilingual-assets.md)
-   + [Använda Adobe Stock-mediefiler i AEM Assets](aem-assets-adobe-stock.md)
+   + [Använda Adobe Stock-resurser i AEM Assets](aem-assets-adobe-stock.md)
    + [Granska resurser i mappar och samlingar](bulk-approval.md)
    + [Aktivitetsström på tidslinjen](activity-stream.md)
    + [Bearbeta resurser](assets-workflow.md)
@@ -36,8 +36,8 @@ ht-degree: 0%
    + [Installera Dynamic Media](administering-dynamic-media.md)
    + [Arbeta med Dynamic Media](dynamic-media.md)
    + [Konfigurera Dynamic Media - Scene7-läge](config-dms7.md)
-   + [Konfigurera Dynamic Media - hybridläge](config-dynamic.md)
-   + [Felsöka Dynamic Media - Scene7-läge](troubleshoot-dms7.md)
+   + [Konfigurera dynamiska media - hybridläge](config-dynamic.md)
+   + [Felsökning av dynamiska media - Scene7-läge](troubleshoot-dms7.md)
    + [Hantera Dynamic Media-resurser](managing-assets.md)
    + [Bästa tillvägagångssätt för att optimera bildkvalitet](best-practices-for-optimizing-the-quality-of-your-images.md)
    + [Hantera förinställningar för Dynamic Media Viewer](managing-viewer-presets.md)
@@ -74,17 +74,17 @@ ht-degree: 0%
 + Utöka resurser {#extending}
    + [Anpassa och utöka resurser](extending-assets.md)
    + [Bearbeta resurser med mediehanterare och arbetsflöden](media-handlers.md)
-   + [Extending Assets Search](searchx.md)
+   + [Utöka resurssökning](searchx.md)
    + [Installera och konfigurera ImageMagick så att det fungerar med AEM Assets](best-practices-for-imagemagick.md)
-   + [Integrating Assets with Activity Stream](extending-activity-stream.md)
-   + [Extending Asset Editor](asseteditorx.md)
+   + [Integrera resurser med aktivitetsström](extending-activity-stream.md)
+   + [Utöka resursredigeraren](asseteditorx.md)
    + [HTTP API för Assets](mac-api-assets.md)
-   + [Assets Proxy Development](proxy.md)
+   + [Resursproxyutveckling](proxy.md)
 + Administrera resurser {#administer}
    + [Format som stöds för resurser](assets-formats.md)
    + [Söka efter fasetter](search-facets.md)
    + [Hantera metadata för resurser](metadata.md)
-   + [XMP-tillbakaskrivning till återgivningar](xmp-writeback.md)
+   + [XMP till återgivning](xmp-writeback.md)
    + [Resurslänkdelning](link-sharing.md)
    + [Materialrapporter](asset-reports.md)
    + [Förbättrade smarta taggar](enhanced-smart-tags.md)
@@ -105,12 +105,12 @@ ht-degree: 0%
    + [Bästa praxis för integrering av AEM och Creative Cloud](aem-cc-integration-best-practices.md)
    + [Integrera AEM Assets med InDesign-server](indesign.md)
    + [Metadataprofiler](metadata-profiles.md)
-   + [Digital Rights Management i Assets](drm.md)
+   + [Digital Rights Management in Assets](drm.md)
    + [Använda demopaket för tillgångsinsikter](touch-ui-using-demo-package-for-asset-insights.md)
    + [Metodtips för att avlasta resurser](assets-offloading-best-practices.md)
    + [Bästa metoder för att använda filformat](assets-file-format-best-practices.md)
    + [Metodtips för resursövervakning](assets-monitoring-best-practices.md)
-   + [Stöd för Camera Raw](camera-raw.md)
+   + [Camera Raw support](camera-raw.md)
    + [Identifiera MIME-typ av resurser med Apache Tika](detect-asset-mime-type-with-tika.md)
    + [Konverteringsbibliotek för bildbehandling](imaging-transcoding-library.md)
    + [Stöd för IPTC-metadata](iptc-support.md)
@@ -119,7 +119,7 @@ ht-degree: 0%
    + [Vattenstämpel](watermarking.md)
    + [Importera och exportera massmetadata](metadata-import-export.md)
    + [Resursmallar](asset-templates.md)
-   + [Metodtips för AEM-mappdelning i Creative Cloud](aem-cc-folder-sharing-best-practices.md)
+   + [Metodtips för att dela AEM till Creative Cloud](aem-cc-folder-sharing-best-practices.md)
    + [Metadataschema för mapp](folder-metadata-schema.md)
    + [Hantera smarta taggar](managing-smart-tags.md)
 + Varumärkesportal {#brandportal}
@@ -145,7 +145,7 @@ ht-degree: 0%
    + [Checka in och checka ut filer i Resurser](check-out-and-submit-assets.md)
    + [Konfigurera resurstaggning med Smart Content Service](config-smart-tagging.md)
    + [Aktivera dubblettidentifiering](duplicate-detection.md)
-   + [Förbättrad sortering av resurser i AEM](enhance-sort.md)
+   + [Förbättrad sortering av material i AEM](enhance-sort.md)
    + [Ordna digitala resurser](organize-assets.md)
    + [Hantera videomaterial](managing-video-assets.md)
    + [Skapa översättningsprojekt](translation-projects.md)
@@ -165,7 +165,7 @@ ht-degree: 0%
    + [Riktlinjer för utbildning i smarta innehållstjänster](smart-tags-training-guidelines.md)
    + [Videoåtergivningar](video-renditions.md)
 + 3D-resurser {#three-d}
-   + [Versionsinformation om AEM 3D](../release-notes/aem3d-release-notes.md)
+   + [Versionsinformation för AEM 3D](../release-notes/aem3d-release-notes.md)
    + [Arbeta med 3D-resurser](assets-3d.md)
    + [Installera och konfigurera AEM 3D](install-config-3d.md)
    + [Avancerade konfigurationsinställningar](advanced-config-3d.md)
