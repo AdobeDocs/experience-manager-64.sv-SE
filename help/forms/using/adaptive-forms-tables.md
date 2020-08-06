@@ -1,8 +1,8 @@
 ---
 title: Tabeller i anpassningsbara former
 seo-title: Tabeller i anpassningsbara former
-description: 'Med tabellkomponenten i AEM Forms kan du skapa tabeller i adaptiva formulär som svarar på mobila layouter, och som även tillåter användning av XDP-tabellkomponenter. '
-seo-description: 'Med tabellkomponenten i AEM Forms kan du skapa tabeller i adaptiva formulär som svarar på mobila layouter, och som även tillåter användning av XDP-tabellkomponenter. '
+description: 'Med tabellkomponenten i AEM Forms kan du skapa tabeller i adaptiva formulär som är responsiva för mobila layouter, och som även tillåter användning av XDP-tabellkomponenter. '
+seo-description: 'Med tabellkomponenten i AEM Forms kan du skapa tabeller i adaptiva formulär som är responsiva för mobila layouter, och som även tillåter användning av XDP-tabellkomponenter. '
 uuid: 604cd51f-2a47-4410-b414-9cb13fe63713
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Att använda tabeller är ett effektivt, förenklat och organiserat sätt att presentera komplexa data. Det gör det enkelt för användarna att identifiera information och ge indata i en ordnad ordning av rader och kolumner. De flesta formulär från finanssektorn och myndigheter kräver stora datatabeller för att skicka siffror och utföra beräkningar.
 
-AEM Forms innehåller en tabellkomponent i komponentwebbläsaren i sidofältet som gör att du kan skapa tabeller i anpassningsbara formulär. Några av de viktigaste funktionerna i den är:
+AEM Forms tillhandahåller en tabellkomponent i komponentwebbläsaren i sidofältet som gör att du kan skapa tabeller i adaptiva formulär. Några av de viktigaste funktionerna i den är:
 
 * Responsiv layout på mobila enheter
 * Konfigurerbara rader och kolumner
@@ -36,7 +36,7 @@ AEM Forms innehåller en tabellkomponent i komponentwebbläsaren i sidofältet s
 
 Om du vill skapa en tabell drar och släpper du tabellkomponenten från komponentwebbläsaren i sidosparken på det adaptiva formuläret. Tabellen innehåller som standard två kolumner och tre rader, inklusive rubrikraden.
 
-![Tabellkomponent i AEM-sidofältet](assets/sidebar-tables.png)
+![Tabellkomponent i AEM](assets/sidebar-tables.png)
 
 ### Om rubrik- och brödceller {#about-header-and-body-cells}
 
@@ -90,7 +90,7 @@ Du kan definiera formatet för en tabell med hjälp av stilläget i verktygsfäl
 
 >[!NOTE]
 >
->Du kan ändra färgtemat för huvud- och innehållsrader genom att ändra värdena för LESS-variabler. Mer information finns i [Teman i AEM-formulär](/help/forms/using/themes.md).
+>Du kan ändra färgtemat för huvud- och innehållsrader genom att ändra värdena för LESS-variabler. Mer information finns i [Teman i AEM Forms](/help/forms/using/themes.md).
 
 ## Lägga till eller ta bort en rad dynamiskt {#add-or-delete-a-row-dynamically}
 
@@ -242,7 +242,7 @@ Om du vill sammanfoga dessa data med tabellen vid körning måste vi peka det ad
 
 ## Använd XDP-komponenter och komplexa XSD-typer {#use-xdp-components-and-xsd-complex-types}
 
-Om du har skapat ett adaptivt formulär baserat på en XFA-formulärmall är XFA-elementen tillgängliga på fliken Datamodell i AEM Content Finder. Du kan dra och släppa dessa XFA-element, inklusive tabeller, i det anpassningsbara formuläret.
+Om du har skapat ett adaptivt formulär baserat på en XFA-formulärmall är XFA-elementen tillgängliga på fliken Datamodell AEM Content Finder. Du kan dra och släppa dessa XFA-element, inklusive tabeller, i det anpassningsbara formuläret.
 
 XFA-tabellelementet mappas till tabellkomponenten och fungerar som det ska i adaptiva former. Alla egenskaper och funktioner i XDP-tabellen bevaras när den flyttas till ett anpassat formulär, och du kan utföra vilken åtgärd som helst på den på samma sätt som du gör med en intern adaptiv formulärtabell. Om en rad i en XDP-tabell till exempel är markerad som upprepningsbar, upprepas den även när den tas bort i anpassningsbara former.
 
