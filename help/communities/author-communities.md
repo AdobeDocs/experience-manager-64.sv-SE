@@ -1,8 +1,8 @@
 ---
 title: Communities-komponenter
 seo-title: Communities-komponenter
-description: 'Lägga till communityfunktioner på alla AEM-webbplatser '
-seo-description: 'Lägga till communityfunktioner på alla AEM-webbplatser '
+description: 'Lägga till communityfunktioner på alla AEM webbplatser '
+seo-description: 'Lägga till communityfunktioner på alla AEM webbplatser '
 uuid: 676abcda-3021-498d-a6eb-b60004315349
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: dc149196-fa56-494e-975c-b11ca1ef193b
 translation-type: tm+mt
 source-git-commit: 1e867debcc1bfeed3abc4240796c9f2c2850167f
+workflow-type: tm+mt
+source-wordcount: '295'
+ht-degree: 2%
 
 ---
 
@@ -19,11 +22,11 @@ source-git-commit: 1e867debcc1bfeed3abc4240796c9f2c2850167f
 
 ## Introduktion {#introduction}
 
-När AEM Communities är licensierat går det, utöver att skapa communitysajter, att lägga till Communities-funktioner på alla AEM-sajter med standardverktyg för AEM-utveckling.
+När AEM Communities är licensierat går det, förutom att skapa communitysajter, att lägga till webbgruppsfunktioner på alla AEM sajter med hjälp av standardverktyg för AEM.
 
 Mer information om hur du skapar en community-webbplats finns på:
 
-* [Översikt över AEM Communities](overview.md)
+* [AEM Communities - översikt](overview.md)
 * [Komma igång med AEM Communities](getting-started.md)
 * [Komma igång med AEM Communities för aktivering](getting-started-enablement.md)
 
@@ -76,7 +79,7 @@ Se även handboken [för interaktiva](components-guide.md)communitykomponenter.
 
 >[!NOTE]
 >
->Avsökningskomponenten är inte längre tillgänglig och stöds inte i Experience Manager Communities.
+>Avsökningskomponenten är inte längre tillgänglig och stöds i Experience Manager Communities.
 
 ## Dokumentation för relaterade communities {#related-communities-documentation}
 
