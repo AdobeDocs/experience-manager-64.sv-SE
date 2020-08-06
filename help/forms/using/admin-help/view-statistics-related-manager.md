@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 8e1b2f7c-2609-474b-a1b2-fa820df74ae3
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '1241'
+ht-degree: 0%
 
 ---
 
@@ -26,53 +29,53 @@ Fliken Arbetshanterare visar statistik som relaterar till Work Manager-objekt. D
 
 ### Kategori {#category}
 
-**** Standard: Alla arbetsobjekt som klienten inte tilldelade en kategori till när de skickades. Work Manager hanterar dessa objekt och statusvärdena tillhör Work Manager.
+**Standard:** Alla arbetsobjekt som klienten inte tilldelade en kategori till när de skickades. Work Manager hanterar dessa objekt och statusvärdena tillhör Work Manager.
 
-**** Jobbhanteraren: Alla jobb som tillhör jobbhanteraren. Jobbhanteraren hanterar sina egna jobb och har egna jobbstatusvärden. Se de specifika jobbstatusarna som beskrivs nedan.
+**Jobbhanteraren:** Alla jobb som tillhör jobbhanteraren. Jobbhanteraren hanterar sina egna jobb och har egna jobbstatusvärden. Se jobbstatusvärdena som beskrivs nedan.
 
-**** Arbetsflöde: Alla arbetsobjekt som tillhör arbetsflödeskörningen. Arbetsflödet hanterar inte sina egna arbetsuppgifter utan är beroende av Work Manager. Statusen tillhör därför Work Manager.
+**Arbetsflöde:** Alla arbetsobjekt som tillhör arbetsflödeskörningen. Arbetsflödet hanterar inte sina egna arbetsuppgifter utan är beroende av Work Manager. Statusen tillhör därför Work Manager.
 
-**** Händelser: Alla arbetsobjekt som tillhör händelsehantering. Händelsehantering hanterar inte sina egna arbetsobjekt utan är beroende av Work Manager. Statusen tillhör därför Work Manager.
+**Händelser:** Alla arbetsobjekt som tillhör händelsehantering. Händelsehantering hanterar inte sina egna arbetsobjekt utan är beroende av Work Manager. Statusen tillhör därför Work Manager.
 
 ### Status (endast för kategorierna Standard, Arbetsflöde och Händelser) {#status-for-default-workflow-or-events-categories-only}
 
-**** Visa alla: Visar alla aktuella arbetsobjekt.
+**Visa alla:** Visar alla aktuella arbetsobjekt.
 
-**** Schemalagd: Visar alla arbetsobjekt som är klara för körning av programservern men som ännu inte startats.
+**Schemalagd:** Visar alla arbetsobjekt som är klara för körning av programservern men som ännu inte startats.
 
-**** Pausad: Visar alla schemalagda arbetsobjekt som klientprogrammet har pausat. Dessa objekt kan köras eller tas bort. (Se Hantera arbetsobjekt eller jobb.)
+**Pausad:** Visar alla schemalagda arbetsobjekt som klientprogrammet har pausat. Dessa objekt kan köras eller tas bort. (Se Hantera arbetsobjekt eller jobb.)
 
-**** Pågår: Visar alla arbetsobjekt som programserverns Work Manager har hämtat och som antingen kommer att slutföras eller misslyckas. Du kan inte använda åtgärder för dessa arbetsobjekt.
+**Pågår:** Visar alla arbetsobjekt som programserverns Work Manager har hämtat och som antingen kommer att slutföras eller misslyckas. Du kan inte använda åtgärder för dessa arbetsobjekt.
 
-**** Fullständigt: Visar alla arbetsobjekt som har körts. Beständiga arbetsobjekt behålls i det här läget och icke-beständiga objekt tas bort när återanrop till återanropshanterarna slutförs. Du kan ta bort dessa objekt genom att använda åtgärden Ta bort objekt. (Se Hantera arbetsobjekt eller jobb.)
+**Fullständigt:** Visar alla arbetsobjekt som har körts. Beständiga arbetsobjekt behålls i det här läget och icke-beständiga objekt tas bort när återanrop till återanropshanterarna slutförs. Du kan ta bort dessa objekt genom att använda åtgärden Ta bort objekt. (Se Hantera arbetsobjekt eller jobb.)
 
-**** Misslyckades: Visar alla arbetsobjekt som inte slutfördes korrekt på grund av ett feltillstånd. Du kan göra om de här arbetsobjekten några gånger genom att använda åtgärden Försök igen. (Se Hantera arbetsobjekt eller jobb.) En fellänk i statuskolumnen ger dig åtkomst till information om felet.
+**Misslyckades:** Visar alla arbetsobjekt som inte slutfördes korrekt på grund av ett feltillstånd. Du kan göra om de här arbetsobjekten några gånger genom att använda åtgärden Försök igen. (Se Hantera arbetsobjekt eller jobb.) En fellänk i statuskolumnen ger dig åtkomst till information om felet.
 
-**** Okänd: Visar alla arbetsobjekt vars status är okänd.
+**Okänd:** Visar alla arbetsobjekt vars status är okänd.
 
 ### Status (endast för jobbhanterarkategorin) {#status-for-job-manager-category-only}
 
-**** Slutförd: Visar alla jobb som har slutförts. Beständiga arbetsobjekt behålls i det här läget och icke-beständiga objekt tas bort när återanrop till återanropshanterarna slutförs.
+**Slutförd:** Visar alla jobb som har slutförts. Beständiga arbetsobjekt behålls i det här läget och icke-beständiga objekt tas bort när återanrop till återanropshanterarna slutförs.
 
-**** Fullständigt begärt: Visar jobb för vilka en fullständig begäran har gjorts.
+**Fullständigt begärt:** Visar jobb för vilka en fullständig begäran har gjorts.
 
-**** Misslyckades: Visar jobb för vilka en misslyckad begäran har gjorts.
+**Misslyckades:** Visar jobb för vilka en misslyckad begäran har gjorts.
 
-**** Misslyckades: Visar jobb som inte slutfördes korrekt på grund av ett feltillstånd. En fellänk i statuskolumnen ger dig åtkomst till information om felet.
+**Misslyckades:** Visar jobb som inte slutfördes korrekt på grund av ett feltillstånd. En fellänk i statuskolumnen ger dig åtkomst till information om felet.
 
-**** Avsluta begärd: Visar jobb för vilka en avslutningsbegäran har gjorts.
+**Avsluta begärd:** Visar jobb för vilka en avslutningsbegäran har gjorts.
 
-**** Avbruten: Visar jobb som avslutats utan att slutföras.
+**Avbruten:** Visar jobb som avslutats utan att slutföras.
 
-**** Begärt uppehåll: Visar jobb för vilka en pausbegäran har gjorts.
+**Begärt uppehåll:** Visar jobb för vilka en pausbegäran har gjorts.
 
-**** Avbruten: Visar jobb som har pausats.
+**Avbruten:** Visar jobb som har pausats.
 
-**** Återuppta begärd: Visar jobb för vilka en CV-begäran har gjorts.
+**Återuppta begärd:** Visar jobb för vilka en CV-begäran har gjorts.
 
-**** Köad: Visar jobb som finns i kön.
+**Köad:** Visar jobb som finns i kön.
 
-**** Körs: Visar jobb som körs.
+**Körs:** Visar jobb som körs.
 
 ### Servernamn {#server-name}
 
@@ -106,13 +109,13 @@ När du klickar på Mer information visas en lista med de arbetsobjekt eller job
    >
    >Åtgärderna är tillgängliga beroende på objektets status.
 
-   **** Ta bort objekt: Tar bort den valda arbetsuppgiften eller jobbet.
+   **Ta bort objekt:** Tar bort den valda arbetsuppgiften eller jobbet.
 
-   **** Pausa objekt: Pausar det markerade arbetsobjektet eller jobbet.
+   **Pausa objekt:** Pausar det markerade arbetsobjektet eller jobbet.
 
-   **** Återuppta objekt: Återupptar det markerade arbetsobjektet eller jobbet från det pausade läget.
+   **Återuppta objekt:** Återupptar det markerade arbetsobjektet eller jobbet från det pausade läget.
 
-   **** Försök igen: Försöker köra det markerade arbetsobjektet eller jobbet igen från det aktuella läget.
+   **Försök igen:** Försöker köra det markerade arbetsobjektet eller jobbet igen från det aktuella läget.
 
    Du kan kontrollera om en åtgärd lyckades genom att klicka på Mer information ovanför listan. En dialogruta som innehåller de valda arbetsobjekten eller jobben och deras status visas.
 
