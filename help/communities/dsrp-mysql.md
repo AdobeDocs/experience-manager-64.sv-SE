@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
 translation-type: tm+mt
 source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+workflow-type: tm+mt
+source-wordcount: '728'
+ht-degree: 1%
 
 ---
 
@@ -84,7 +87,7 @@ När MySQL Workbench startas första gången visas inga anslutningar, såvida de
 1. Markera `+` ikonen till höger om `MySQL Connections`.
 1. I dialogrutan `Setup New Connection`anger du värden som passar din plattform
 
-   I demonstrationssyfte med författaren AEM-instans och MySQL på samma server:
+   I demonstrationssyfte med författarinstansen AEM och MySQL på samma server:
 
    * Anslutningsnamn: `Communities`
    * Anslutningsmetod: `Standard (TCP/IP)`
@@ -112,7 +115,7 @@ När MySQL Workbench startas första gången visas inga anslutningar, såvida de
 
 ### Hämta SQL-skriptet {#obtain-the-sql-script}
 
-SQL-skriptet hämtas från AEM-databasen:
+SQL-skriptet hämtas från AEM:
 
 1. Bläddra till CRXDE Lite
 
@@ -163,11 +166,11 @@ När skriptet har körts måste du uppdatera `SCHEMAS`avsnittet i skriptet `Navi
 
 OSGi-konfigurationen för **Day Commons JDBC Connections Pool** konfigurerar MySQL JDBC-drivrutinen.
 
-Alla AEM-instanser för publicering och författare ska peka på samma MySQL-server.
+Alla publicerings- och författarinstanser AEM peka på samma MySQL-server.
 
-När MySQL körs på en annan server än AEM måste servervärdnamnet anges i stället för localhost i JDBC-anslutningen.
+När MySQL körs på en annan server än AEM måste servervärdnamnet anges i stället för localhost i JDBC-kopplingen.
 
-* På varje författare och publicera AEM-instansen
+* På varje författare och publicera AEM
 * Inloggad med administratörsbehörighet
 * Åtkomst till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md)
 
@@ -180,23 +183,23 @@ När MySQL körs på en annan server än AEM måste servervärdnamnet anges i st
 
 * Ange följande värden:
 
-   * **[!UICONTROL JDBC-drivrutinsklass]**: `com.mysql.jdbc.Driver`
-   * **[!UICONTROL JDBC-anslutnings-URI]**: `jdbc:mysql://localhost:3306/communities?characterEncoding=UTF-8`
+   * **[!UICONTROL JDBC driver class]**: `com.mysql.jdbc.Driver`
+   * **[!UICONTROL JDBC connection URI]**: `jdbc:mysql://localhost:3306/communities?characterEncoding=UTF-8`
 
-      Ange en server i stället för localhost om MySQL-servern inte är samma som den här AEM-servern
+      Ange en server i stället för localhost om MySQL-servern inte är samma som &#39;this&#39; AEM server
 
       *Communities* är standarddatabasens (schemats) namn
 
-   * **[!UICONTROL Användarnamn]**: `root`
+   * **[!UICONTROL Username]**: `root`
 
       Eller ange det konfigurerade användarnamnet för MySQL-servern, om inte &#39;root&#39;
 
-   * **[!UICONTROL Lösenord]**:
+   * **[!UICONTROL Password]**:
 
       Rensa det här fältet om inget lösenord har angetts för MySQL,
 
       Annars anger du det konfigurerade lösenordet för MySQL-användarnamnet
-   * **[!UICONTROL Datakällans namn]**: namn som angetts för [MySQL-anslutningen](#new-connection-settings), till exempel &#39;communities&#39;
+   * **[!UICONTROL Datasource name]**: namn som angetts för [MySQL-anslutningen](#new-connection-settings), till exempel &#39;communities&#39;
 
-* Välj **[!UICONTROL Spara]**
+* Välj **[!UICONTROL Save]**
 
