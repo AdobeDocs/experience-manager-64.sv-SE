@@ -39,7 +39,7 @@ Använd arbetsflöden i digitala resurser för att aktivera resursen eller skapa
 >
 >Om ett arbetsflöde i Classic UI inte är tillgängligt i Touch-aktiverat gränssnitt, som [!UICONTROL Request to Activate] och [!UICONTROL Request to Deactivate], ska du läsa [Skapa arbetsflödesmodeller](/help/sites-developing/workflows-models.md#make-workflow-models-available-in-touchui).
 
-## Tillämpa ett arbetsflöde på en AEM-resurs {#apply-a-workflow-to-an-aem-asset}
+## Tillämpa ett arbetsflöde på en AEM {#apply-a-workflow-to-an-aem-asset}
 
 <!-- 
 TBD: Add animated GIF for these steps instead of all these screenshots.
