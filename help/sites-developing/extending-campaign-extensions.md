@@ -1,8 +1,8 @@
 ---
 title: Skapa anpassade tillägg
 seo-title: Skapa anpassade tillägg
-description: Du kan ringa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign
-seo-description: Du kan ringa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign
+description: Du kan anropa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign
+seo-description: Du kan anropa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign
 uuid: 8392aa0d-06cd-4b37-bb20-f67e6a0550b1
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: f536bcc1-7744-4f05-ac6a-4cec94a1ffb6
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '538'
+ht-degree: 0%
 
 ---
 
 
 # Skapa anpassade tillägg{#creating-custom-extensions}
 
-När du implementerar ett projekt har du vanligtvis anpassad kod i både AEM och Adobe Campaign. Med hjälp av det befintliga API:t kan du anropa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign. I det här dokumentet beskrivs hur du gör det.
+När du implementerar ett projekt har du vanligtvis anpassad kod i både AEM och Adobe Campaign. Med det befintliga API:t kan du anropa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign. I det här dokumentet beskrivs hur du gör det.
 
 ## Förutsättningar {#prerequisites}
 
@@ -38,7 +41,7 @@ Standardintegrationen mellan AEM och Campaign baseras på JSON och JSSP (JavaScr
 >
 >[Det här exemplet finns i Geometrixx](/help/sites-developing/we-retail.md), som är tillgänglig från Paketresurs.
 
-I det här exemplet skapar vi en ny anpassad JSSP-fil och anropar den från AEM-sidan för att hämta resultatet. Detta kan till exempel användas för att hämta data från Adobe Campaign eller för att spara data i Adobe Campaign.
+I det här exemplet skapar vi en ny anpassad JSSP-fil och anropar den från AEM sida för att hämta resultatet. Detta kan till exempel användas för att hämta data från Adobe Campaign eller för att spara data i Adobe Campaign.
 
 1. Om du vill skapa en ny JSSP-fil i Adobe Campaign klickar du på ikonen **Nytt** .
 
@@ -58,10 +61,11 @@ I det här exemplet skapar vi en ny anpassad JSSP-fil och anropar den från AEM-
    ```
 
 1. Spara ditt arbete. Det återstående arbetet är i AEM.
-1. Skapa en enkel servlet på AEM-sidan för att anropa denna JSSP. I det här exemplet antar vi följande:
+1. Skapa en enkel servett på AEM sida för att anropa denna JSSP. I det här exemplet antar vi följande:
 
-   * Anslutningen fungerar mellan AEM och Campaign
+   * Kopplingen fungerar mellan AEM och Campaign
    * Kampanjmolntjänsten är konfigurerad på **/content/geometrixx-outdoor**
+
    Det viktigaste objektet i det här exemplet är **GenericCampaignConnector**, som gör att du kan anropa (hämta och posta) jssp-filer på Adobe Campaign-sidan.
 
    Här är ett litet kodfragment:
@@ -159,7 +163,7 @@ public class CustomServlet extends SlingSafeMethodsServlet {
 }
 ```
 
-## Exempel 2: Adobe Campaign to AEM {#example-adobe-campaign-to-aem}
+## Exempel 2: Adobe Campaign till AEM {#example-adobe-campaign-to-aem}
 
 AEM erbjuder API:er som kan hämta objekt var som helst i platadminutforskarvyn.
 
