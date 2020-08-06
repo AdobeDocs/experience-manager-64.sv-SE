@@ -1,8 +1,8 @@
 ---
 title: Komma igång med utveckling i AEM Sites – WKND-självstudiekurs
 seo-title: Komma igång med utveckling i AEM Sites – WKND-självstudiekurs
-description: Är du inte van vid att utveckla AEM? Behöver du en uppdatering av bästa praxis? Här börjar du! Målet med den här självstudiekursen är att lära en utvecklare som är nybörjare på AEM hur man implementerar en webbplats i AEM med hjälp av de senaste standarderna och teknologierna.
-seo-description: Är du inte van vid att utveckla AEM? Behöver du en uppdatering av bästa praxis? Här börjar du! Målet med den här självstudiekursen är att lära en utvecklare som är nybörjare på AEM hur man implementerar en webbplats i AEM med hjälp av de senaste standarderna och teknologierna.
+description: Är du inte van vid att utveckla AEM? Behöver du en uppdatering av bästa praxis? Här börjar du! Målet med den här självstudiekursen är att lära en utvecklare som är ny att AEM hur man implementerar en webbplats i AEM med de senaste standarderna och teknikerna.
+seo-description: Är du inte van vid att utveckla AEM? Behöver du en uppdatering av bästa praxis? Här börjar du! Målet med den här självstudiekursen är att lära en utvecklare som är ny att AEM hur man implementerar en webbplats i AEM med de senaste standarderna och teknikerna.
 uuid: 42db7bc5-5818-40e4-83b4-0cafc1acac42
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ topic-tags: introduction
 discoiquuid: 54e48abc-be75-4477-83fa-bd74d5b995af
 translation-type: tm+mt
 source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
+workflow-type: tm+mt
+source-wordcount: '311'
+ht-degree: 10%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
 
 Är du inte van vid att utveckla AEM? Behöver du en uppdatering av bästa praxis? Här börjar du!
 
-Målet med den här självstudiekursen är att lära en utvecklare som är nybörjare på AEM hur man implementerar en webbplats i AEM med hjälp av de senaste standarderna och teknologierna. Hoppas att du kommer att förstå grunderna i AEM-plattformen och kunskaper om några av de vanliga designmönstren.
+Målet med den här självstudiekursen är att lära en utvecklare som är ny att AEM hur man implementerar en webbplats i AEM med de senaste standarderna och teknikerna. Hoppas att du kommer att förstå grunderna i den AEM plattformen och kunskaper om några av de gemensamma designmönstren.
 
 ## WKND Developer Tutorial {#wknd-developer-tutorial}
 
@@ -31,7 +34,7 @@ Självstudiekursen finns [här](https://docs.adobe.com/content/help/en/experienc
 
 ## Viktiga begrepp {#core-concepts}
 
-Implementeringen av självstudiekurserna utnyttjar många kraftfulla funktioner i AEM. Webbplatsen kommer att implementeras med:
+Självstudiekursen utnyttjar många kraftfulla funktioner i AEM. Webbplatsen kommer att implementeras med:
 
 * [HTL](https://helpx.adobe.com/experience-manager/htl/user-guide.html)
 * [Sling Models](https://sling.apache.org/documentation/bundles/models.html)
