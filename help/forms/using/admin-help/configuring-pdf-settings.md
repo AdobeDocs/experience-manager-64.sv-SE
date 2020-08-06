@@ -20,9 +20,9 @@ ht-degree: 0%
 
 # Konfigurera Adobe PDF-inställningar{#configuring-adobe-pdf-settings}
 
-På sidan Adobe PDF-inställningar visas de konverteringsinställningar som du kan ange för källorna. Du kan använda någon av de fördefinierade PDF-inställningarna eller skapa en egen. PDF-inställningarna avgör exakt hur filer konverteras och deras resulterande PDF-struktur och funktioner. Adobe PDF-inställningarna kallades tidigare Distiller®-parametrar eller jobbalternativ.
+På sidan Inställningar i Adobe PDF visas de konverteringsinställningar som du kan ange för dina källor. Du kan använda någon av de fördefinierade PDF-inställningarna eller skapa en egen. PDF-inställningarna avgör exakt hur filer konverteras och deras resulterande PDF-struktur och funktioner. Adobe PDF-inställningarna kallades tidigare Distiller®-parametrar eller jobbalternativ.
 
-På sidan Adobe PDF-inställningar kan du göra följande:
+På sidan Inställningar i Adobe PDF kan du göra följande:
 
 * Visa de fördefinierade PDF-inställningarna. (Se [Om de fördefinierade PDF-inställningarna](configuring-pdf-settings.md#about-the-predefined-pdf-settings).)
 * Skapa en PDF-inställning eller redigera en som du har skapat tidigare. (Se [Lägga till eller redigera PDF-inställningar](configuring-pdf-settings.md#add-or-edit-pdf-settings).)
@@ -56,7 +56,7 @@ PDF Generator innehåller flera fördefinierade PDF-inställningar som du kan an
 
 Dessa PDF-filer kan öppnas i Adobe Acrobat 5 och Adobe Acrobat Reader® 5 eller senare.
 
-**Stora sidor:** Skapar PDF-dokument som är lämpliga för visning och utskrift av ingenjörsritningar som är större än 200 x 200 tum. Skapade PDF-dokument kan öppnas i Adobe Acrobat Professional och Acrobat Standard, version 7 eller senare samt Adobe Reader 7 eller senare.
+**Stora sidor:** Skapar PDF-dokument som är lämpliga för visning och utskrift av ingenjörsritningar som är större än 200 x 200 tum. Skapade PDF-dokument kan öppnas i Adobe Acrobat Professional och Acrobat Standard, version 7 eller senare samt i Adobe Reader 7 eller senare.
 
 **PDF/A-1B 2005 CMYK / PDF/A-1B 2005 RGB:** Kontrollerar om inkommande jobb uppfyller ISO-standarden för långtidsarkivering av elektroniska dokument och skapar bara PDF/A-filer om de uppfyller kraven. De här filerna används främst för arkivering. Kompatibla filer kan bara innehålla text, rasterbilder och vektorobjekt. de får inte innehålla kryptering och skript. Dessutom måste alla teckensnitt bäddas in så att dokumenten kan öppnas och visas som de skapats. PDF/A-1b använder PDF 1.4 och konverterar alla färger till antingen CMYK eller RGB, beroende på vilken standard du väljer. PDF-filer som skapas med den här inställningsfilen kan öppnas i Acrobat 5 och Acrobat Reader 5 eller senare. Mer information om PDF/A finns i Adobe och branschstandarder.
 
@@ -87,7 +87,7 @@ Utskriftsjobb misslyckas om de har teckensnitt som inte kan bäddas in. Dessa PD
 
 PDF-inställningarna avgör exakt hur filer konverteras och deras resulterande PDF-struktur och funktioner. Definiera en ny PDF-inställning eller redigera en som du har skapat tidigare. Du kan inte ändra fördefinierade inställningar, men du kan skapa en inställning som baseras på en befintlig inställning genom att redigera inställningen och spara den under ett nytt namn.
 
-1. I administrationskonsolen klickar du på Tjänster > PDF Generator > Adobe PDF-inställningar.
+1. I administrationskonsolen klickar du på Tjänster > PDF Generator > Adobe PDF Settings.
 1. Klicka antingen på Ny eller på namnet på en befintlig inställning.
 1. Fyll i den obligatoriska informationen i följande avsnitt på sidan Ny/Redigera Adobe PDF-inställning:
 
@@ -121,7 +121,7 @@ Du kan ha PDF-inställningar tillgängliga på PDF Generator-servern genom att �
 
 Du kan ta bort PDF-inställningar permanent om de inte längre behövs.
 
-1. I administrationskonsolen klickar du på Tjänster > PDF Generator > Adobe PDF-inställningar.
+1. I administrationskonsolen klickar du på Tjänster > PDF Generator > Adobe PDF Settings.
 1. Markera kryssrutan bredvid inställningen som ska tas bort. Du kan välja flera inställningar.
 1. Klicka på Ta bort och klicka på Ta bort igen på sidan Ta bort bekräftelse.
 
@@ -131,7 +131,7 @@ Använd de allmänna alternativen för att ange vilken version av Acrobat som sk
 
 ### Filalternativ {#file-options}
 
-**Kompatibilitet:** PDF-filens kompatibilitetsnivå. För dokument som ska distribueras i stor omfattning bör du överväga att välja Acrobat 4 (PDF 1.3) eller Acrobat 5 (PDF 1.4) för att vara säker på att alla användare kan visa och skriva ut dokumentet. Om du skapar filer med Acrobat 5-kompatibilitet eller senare kanske de inte är kompatibla med tidigare versioner av Acrobat. I följande underavsnitt visas några av skillnaderna mellan PDF-filer som har skapats med olika nivåer av Acrobat-kompatibilitet.
+**Kompatibilitet:** PDF-filens kompatibilitetsnivå. För dokument som ska distribueras i stor omfattning bör du överväga att välja Acrobat 4 (PDF 1.3) eller Acrobat 5 (PDF 1.4) för att säkerställa att alla användare kan visa och skriva ut dokumentet. Om du skapar filer med Acrobat 5-kompatibilitet eller senare kanske de inte är kompatibla med tidigare versioner av Acrobat. I följande underavsnitt visas några av skillnaderna mellan PDF-filer som har skapats med olika kompatibilitetsnivåer för Acrobat.
 
 <table> 
  <tbody> 
@@ -149,9 +149,9 @@ Använd de allmänna alternativen för att ange vilken version av Acrobat som sk
   </tr> 
   <tr> 
    <td><p>Får inte innehålla teckningar som använder live-genomskinlighetseffekter. Genomskinlighet måste förenklas innan du konverterar till PDF 1.3.</p> </td> 
-   <td><p>Stöder användning av live-genomskinlighet i teckningar. (Acrobat Distiller-funktionen förenklar genomskinlighet.)</p> </td> 
-   <td><p>Stöder användning av live-genomskinlighet i teckningar. (Acrobat Distiller-funktionen förenklar genomskinlighet.)</p> </td> 
-   <td><p>Stöder användning av live-genomskinlighet i teckningar. (Acrobat Distiller-funktionen förenklar genomskinlighet.)</p> </td> 
+   <td><p>Stöder användning av live-genomskinlighet i teckningar. (Acrobat Distiller förenklar genomskinlighet.)</p> </td> 
+   <td><p>Stöder användning av live-genomskinlighet i teckningar. (Acrobat Distiller förenklar genomskinlighet.)</p> </td> 
+   <td><p>Stöder användning av live-genomskinlighet i teckningar. (Acrobat Distiller förenklar genomskinlighet.)</p> </td> 
   </tr> 
   <tr> 
    <td><p>Lager stöds inte.</p> </td> 
@@ -182,7 +182,7 @@ Använd de allmänna alternativen för att ange vilken version av Acrobat som sk
 
 **Objektnivåkomprimering:** Konsoliderar små objekt (som var och en inte är komprimeringsbar) till strömmar som sedan kan komprimeras effektivt.
 
-**Av:** Komprimerar ingen strukturell information i PDF-dokumentet. Välj det här alternativet om du vill att användarna ska kunna visa, navigera och interagera med bokmärken och annan strukturell information med Acrobat 5 eller senare.
+**Av:** Komprimerar ingen strukturell information i PDF-dokumentet. Välj det här alternativet om du vill att användarna ska kunna visa, navigera och interagera med bokmärken och annan strukturinformation med Acrobat 5 och senare.
 
 **Endast taggar:** Komprimerar strukturinformation i PDF-dokumentet. Om du använder det här alternativet skapas en PDF-fil som kan öppnas och skrivas ut med Acrobat 5. Användare kan inte visa hjälpmedel, struktur eller taggad PDF-information i Acrobat 5 eller Acrobat Reader 5.0, men de kan visa informationen i Acrobat 6 och Adobe Reader 6.0.
 
@@ -206,7 +206,7 @@ Använd de allmänna alternativen för att ange vilken version av Acrobat som sk
 
 ### Standardsidstorlek {#default-page-size}
 
-Alternativen för Standardsidstorlek anger vilken sidstorlek som ska användas när ingen sidstorlek har angetts i originalfilen. Vanligtvis innehåller Adobe PostScript-filer den här informationen, förutom för EPS-filer (Encapsulated PostScript), som ger en begränsningsram men inte en sidstorlek. Den största tillåtna sidstorleken är 31 800 000 cm i båda riktningarna. De här alternativen konfigurerar standardsidstorleken:
+Alternativen för Standardsidstorlek anger vilken sidstorlek som ska användas när ingen sidstorlek har angetts i originalfilen. Vanligtvis innehåller Adobe PostScript-filer den här informationen, förutom EPS-filer (Encapsulated PostScript) som ger en begränsningsramstorlek men inte en sidstorlek. Den största tillåtna sidstorleken är 31 800 000 cm i båda riktningarna. De här alternativen konfigurerar standardsidstorleken:
 
 **Bredd:** Sidans bredd
 
@@ -291,7 +291,7 @@ Teckensnittsalternativen anger vilka teckensnitt som ska bäddas in i en PDF-fil
 
 >[!NOTE]
 >
->När du kombinerar PDF-filer med samma teckensnittsdeluppsättning försöker PDF Generator kombinera deluppsättningarna med teckensnitt.
+>När du kombinerar PDF-filer med samma teckensnittsdelmängd försöker PDF Generator kombinera teckensnittsdeluppsättningarna.
 
 **Bädda in alla teckensnitt:** Alla teckensnitt som används i filen bäddas in. Teckensnittsinbäddning krävs för PDF/X-kompatibilitet.
 
@@ -303,7 +303,7 @@ Teckensnittsalternativen anger vilka teckensnitt som ska bäddas in i en PDF-fil
 
 ### Ange vilka teckensnitt som ska bäddas in {#specify-which-fonts-to-embed}
 
-1. I administrationskonsolen klickar du på Tjänster > PDF Generator > Adobe PDF-inställningar.
+1. I administrationskonsolen klickar du på Tjänster > PDF Generator > Adobe PDF Settings.
 1. Klicka på Ny eller klicka på namnet på en inställning.
 1. Klicka på Teckensnitt och avmarkera Bädda in alla teckensnitt.
 1. Välj en teckensnittskälla i listan Teckensnittskälla och klicka på Gå för att uppdatera listan med teckensnitt i rutan till vänster.
@@ -317,13 +317,13 @@ Teckensnittsalternativen anger vilka teckensnitt som ska bäddas in i en PDF-fil
 
 >[!NOTE]
 >
->Teckensnitt hämtas från Windows-systemets teckensnittscache och en systemomstart krävs för att uppdatera cachen. När du har angett kundens teckensnittskatalog måste du starta om datorn där AEM-formulär är installerade.
+>Teckensnitt hämtas från Windows-systemets teckensnittscache och en systemomstart krävs för att uppdatera cachen. När du har angett kundens teckensnittskatalog måste du starta om systemet där AEM är installerat.
 
 ## Färgalternativ {#color-options}
 
 Färgalternativen anger all färghanteringsinformation för PDF Generator. Instruktioner om hur du får åtkomst till färgalternativen finns i [Lägga till eller redigera PDF-inställningar](configuring-pdf-settings.md#add-or-edit-pdf-settings).
 
-### Adobe Color Settings {#adobe-color-settings}
+### Adobe Color-inställningar {#adobe-color-settings}
 
 **Inställningsfil:** Listan innehåller en lista med färginställningar som också används i de flesta grafikprogram, till exempel Adobe Photoshop och Adobe Illustrator. Den färginställning du väljer avgör vilka andra Adobe-färginställningar som finns på den här sidan. Om du t.ex. väljer en annan inställning än Ingen, fördefinieras och nedtonas alla andra alternativ än de som används för enhetsberoende data. Du kan bara redigera färghanteringsprofiler och inställningar för arbetsfärgrymder om du väljer Ingen för inställningsfilen.
 
@@ -337,7 +337,7 @@ Om du valde Ingen för inställningsfilen anger området Färghanteringsprofiler
 
 **Tagga endast bilder för färghantering:** Bäddar endast in ICC-profiler i bilder, inte i text eller bilder, när du bearbetar filer om du har valt kompatibilitet med Acrobat 4 (PDF 1.3). Det här alternativet förhindrar att svart text genomgår några färgförändringar. Enhetsberoende färgrymder i bilder (RGB, Gråskala och CMYK) konverteras dock till enhetsoberoende färgrymder (CalRGB, CalGray och LAB). Text och bilder konverteras inte.
 
-**Konvertera alla färger till sRGB eller Konvertera alla färger till CMYK:** Kalibrerar färgen i filen, vilket gör färghanteringen enhetsoberoende, som Tagga allt för färghantering. Om du valde kompatibilitet med Acrobat 4 (PDF 1.3) eller senare och konverterar till sRGB konverteras CMYK- och RGB-bilderna till sRGB.
+**Konvertera alla färger till sRGB eller Konvertera alla färger till CMYK:** Kalibrerar färgen i filen, vilket gör färghanteringen enhetsoberoende, som Tagga allt för färghantering. Om du har valt kompatibilitet med Acrobat 4 (PDF 1.3) eller senare och konverterar till sRGB konverteras CMYK- och RGB-bilderna till sRGB.
 
 Oavsett vilket kompatibilitetsalternativ du väljer ändras inte gråskalebilder. Detta minskar vanligtvis storleken och ökar visningshastigheten för PDF-filer eftersom mindre information behövs för att beskriva RGB-bilder än för att beskriva CMYK-bilder. Eftersom RGB är den inbyggda färgrymden som används på bildskärmar behövs ingen färgkonvertering vid visning, vilket ger snabb visning online. Det här alternativet rekommenderas om PDF-filen ska användas online eller med skrivare med låg upplösning.
 
@@ -375,7 +375,7 @@ För alla värden i listan under Färghanteringsprofiler, utom Ändra inte färg
 
 ### Enhetsberoende data {#device-dependent-data}
 
-Dessa alternativ gäller om du arbetar med dokument som har skapats med avancerade dokument- och grafikprogram, till exempel Adobe Illustrator och Adobe InDesign. Mer information finns i dokumentationen som medföljde programmet.
+De här alternativen gäller om du arbetar med dokument som har skapats med avancerade dokument- och grafikprogram, till exempel Adobe Illustrator och Adobe InDesign. Mer information finns i dokumentationen som medföljde programmet.
 
 Överföringsfunktioner används för en konstnärlig effekt och för att anpassa efter specifikationerna för en viss utdataenhet. En fil som är avsedd för utskrift på en viss fotosättare kan t.ex. innehålla överföringsfunktioner som kompenserar för den punktförstoring som är inbyggd i skrivaren.
 
@@ -391,7 +391,7 @@ Dessa alternativ gäller om du arbetar med dokument som har skapats med avancera
 
 **Bevara rasterinformation:** Bevarar rasterinformation i filer. Rasterinformation består av punkter som styr hur mycket bläckhalvtonsenheter som finns på en viss plats på papperet. Genom att variera punktstorleken och densiteten skapas en illusion av variationer av grått eller kontinuerliga färger. För en CMYK-bild används fyra raster, ett för varje tryckfärg som används i utskriftsprocessen.
 
-I traditionell tryckproduktion skapas ett raster genom att en raster placeras mellan en film och bilden och sedan exponeras för filmen. Elektroniska motsvarigheter, som Adobe Photoshop, gör att användarna kan ange rasterattribut innan de producerar film eller papper. Rasterinformation är avsedd att användas med en viss utdataenhet.
+I traditionell tryckproduktion skapas ett raster genom att en raster placeras mellan en film och bilden och sedan exponeras för filmen. Elektroniska motsvarigheter, t.ex. i Adobe Photoshop, gör det möjligt för användare att ange rasterattribut innan de producerar film eller papper. Rasterinformation är avsedd att användas med en viss utdataenhet.
 
 ## Avancerade alternativ {#advanced-options}
 
@@ -403,7 +403,7 @@ När du arbetar med de avancerade alternativen är det praktiskt att ha en förs
 
 * komprimering av text och grafik
 * nedsampling och kodning av provbilder
-* inbäddning av Type 1-teckensnitt och instanser av Type 1 Multiple Master-teckensnitt
+* inbäddning av Type 1-teckensnitt och instanser av Type 1-teckensnitt med flera Överordnad teckensnitt
 
 **Tillåt PostScript XObjects:** PostScript XObjects lagrar information som visas på många sidor i samma fil, till exempel en bakgrundsbild eller sidhuvud- och sidfotsinformation. PostScript XObjects kan ge snabbare utskrift men kräver mer skrivarminne. Om du vill förhindra att PostScript XObjects skapas avmarkerar du det här alternativet om du skapar PDF-filer med Acrobat 5 (PDF 1.4) eller senare kompatibilitet.
 
@@ -433,7 +433,7 @@ När du arbetar med de avancerade alternativen är det praktiskt att ha en förs
 
 **Bevara OPI-kommentarer:** Bevarar information som krävs för att ersätta en FPO-bild (For Placement Only) eller -kommentar med den högupplösta bilden som finns på servrar som stöder OPI-versionerna 1.3 och 2.0 (Open Prepress Interface).
 
-**Bevara dokumentinformation från DSC:** Bevarar information som titel, skapandedatum och tid. När du öppnar en PDF-fil i Acrobat visas den här informationen på panelen Beskrivning av dokumentegenskaper.
+**Bevara dokumentinformation från DSC:** Bevarar information som titel, skapandedatum och tid. När du öppnar en PDF-fil i Acrobat visas den här informationen på panelen Dokumentegenskaper.
 
 **Ändra storlek på sida och centrera teckningar för EPS-filer:** Centrerar en EPS-bild och ändrar storleken på sidan så att den passar bilden. Det här alternativet gäller endast för jobb som består av en enda EPS-fil.
 
@@ -451,7 +451,7 @@ PDF/A-kompatibla filer används främst för arkivering. Eftersom långsiktig ar
 
 Instruktioner om hur du får åtkomst till standardrapporter och kompatibilitetsalternativ finns i [Lägga till eller redigera PDF-inställningar](configuring-pdf-settings.md#add-or-edit-pdf-settings).
 
-**Kompatibilitetsstandard:** Välj en standard för att skapa en rapport som anger om filen uppfyller kraven och, om inte, vilka problem som påträffades. När kompatibiliteten på sidan Allmänna inställningar är inställd på Acrobat 4.0 är följande alternativ aktiverade. Om kompatibiliteten är inställd på Acrobat 5.0 är endast alternativen i Acrobat 5.0 tillgängliga. När Kompatibilitet är inställt på ett alternativt alternativ är följande alternativ nedtonade:
+**Kompatibilitetsstandard:** Välj en standard för att skapa en rapport som anger om filen uppfyller kraven och, om inte, vilka problem som påträffades. När kompatibiliteten på sidan Allmänna inställningar är inställd på Acrobat 4.0 aktiveras följande alternativ. Om kompatibiliteten är inställd på Acrobat 5.0 är endast alternativen för Acrobat 5.0 tillgängliga. När Kompatibilitet är inställt på ett alternativt alternativ är följande alternativ nedtonade:
 
 * PDF/X-1a (Acrobat 4.0-kompatibel)
 * PDF/X-3 (Acrobat 4.0-kompatibel)
@@ -493,7 +493,7 @@ Instruktioner om hur du får åtkomst till standardrapporter och kompatibilitets
 
 ### Alternativ för PDF/A-standard {#options-for-pdf-a-standard}
 
-Dessa alternativ aktiveras när kompatibiliteten (under Allmänt) är inställd på Acrobat 4 (PDF 1.3) eller Acrobat 5 (PDF 1.4).
+Dessa alternativ aktiveras när kompatibiliteten (i området Allmänt) är inställd på Acrobat 4 (PDF 1.3) eller Acrobat 5 (PDF 1.4).
 
 **Ej kompatibel:** Anger om PDF-filen ska skapas om PostScript-filen inte uppfyller PDF/A-kraven.
 
@@ -561,19 +561,19 @@ Dessa filer har många syften. Prologgfiler kan t.ex. redigeras för att ange f�
 
 ### Ladda ned en prolog- eller epilogfil {#download-a-prologue-or-epilogue-file}
 
-1. I administrationskonsolen klickar du på Tjänster > PDF Generator > Adobe PDF-inställningar.
+1. I administrationskonsolen klickar du på Tjänster > PDF Generator > Adobe PDF Settings.
 1. Klicka på Ny eller klicka på namnet på en inställning.
 1. Klicka på Avancerat och klicka sedan på Hämta bredvid alternativet Använd Prolog.ps och Epilogue.ps.
 1. Klicka på Prolog.ps eller Epilogue.ps på sidan Hämta prolog- och e-postfiler och klicka på Spara.
 
 ### Överföra en prolog- eller epilogfil {#upload-a-prologue-or-epilogue-file}
 
-1. I administrationskonsolen klickar du på Tjänster > PDF Generator > Adobe PDF-inställningar.
+1. I administrationskonsolen klickar du på Tjänster > PDF Generator > Adobe PDF Settings.
 1. Klicka på Ny eller klicka på namnet på en inställning.
 1. Klicka på Avancerat och klicka sedan på Överför bredvid alternativet Använd Prolog.ps och Epilogue.ps.
 1. Klicka på Bläddra på sidan Överför prologg och e-postfiler för att välja en prologfil eller en epilogfil.
 1. Leta reda på filen och klicka på Öppna.
-1. Om du vill använda filen kontrollerar du att Använd Prolog.ps och Epilogue.ps är markerat under Avancerat på sidan Ny/redigera Adobe PDF-inställning.
+1. Om du vill använda filen måste du se till att Använd Prolog.ps och Epilogue.ps är markerat under Avancerat på sidan Ny/redigera Adobe PDF-inställning.
 1. Klicka på Spara
 
 >[!NOTE]
