@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: ee39435d-80f5-4758-ae01-1ea0d221b00b
 translation-type: tm+mt
 source-git-commit: 1bbd917ef20c4a618e93af66ffe8a6cfc8448e78
+workflow-type: tm+mt
+source-wordcount: '339'
+ht-degree: 2%
 
 ---
 
@@ -58,14 +61,18 @@ Markera den monterade `Featured Content` komponent som du vill öppna och välj 
 
 ### Fliken Inställningar {#settings-tab}
 
-Under fliken **[!UICONTROL Inställningar]** identifierar du innehållet som ska visas:
+Under **[!UICONTROL Settings]** fliken identifierar du innehållet som ska visas:
 
-* **[!UICONTROL Visningsnamn]** Titeln för listan med aktuellt innehåll. Till exempel `Featured Questions` eller `Featured Ideas`. Standard är `Featured Content` om det lämnas tomt.
+* **[!UICONTROL Display Name]**
+Namnet på listan med aktuellt innehåll. Till exempel 
+`Featured Questions` eller `Featured Ideas`. Standard är `Featured Content` om det lämnas tomt.
 
-* **[!UICONTROL Plats för det aktuella innehållet]**
-   *(Obligatoriskt)* Bläddra till sidan med det innehåll som kan vara funktionellt (komponenterna på den sidan måste konfigureras för att tillåta aktuellt innehåll). Exempel, `/content/sites/engage/en/forum`
+* **[!UICONTROL Location of the Featured Content]**
 
-* **[!UICONTROL Visningsgräns]** Det maximala antalet funktioner som kan visas. Standardvärdet är 5.
+   *(Obligatoriskt)* Bläddra till sidan med innehållet som kan vara funktionellt (komponenterna på den sidan måste konfigureras för att tillåta aktuellt innehåll). Till exempel, `/content/sites/engage/en/forum`
+
+* **[!UICONTROL Display Limit]**
+Det maximala antalet innehåll som kan visas. Standardvärdet är 5.
 
 ## Site Visitor Experience {#site-visitor-experience}
 
