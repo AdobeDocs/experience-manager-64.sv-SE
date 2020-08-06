@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 422ee332-23ae-46bd-8394-a4e0915beaa2
 translation-type: tm+mt
 source-git-commit: a210d3bf80b7e7ec62c76a21f1cc2e71e986a4dc
+workflow-type: tm+mt
+source-wordcount: '1107'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Kontrollera om webbläsarens JavaScript-konsol visar några fel. Ohanterade fel 
 
 ### Inloggning på komponentnivå {#logging-on-component-level}
 
-I vissa fall kan det vara praktiskt att lägga till ytterligare programsatser på komponentnivå. Eftersom komponenten återges kan du lägga till en temporär markering för att visa variabelvärden som kan hjälpa dig att identifiera potentiella problem. Exempel:
+I vissa fall kan det vara praktiskt att lägga till ytterligare programsatser på komponentnivå. Eftersom komponenten återges kan du lägga till en temporär markering för att visa variabelvärden som kan hjälpa dig att identifiera potentiella problem. Till exempel:
 
 ```
 <%
@@ -60,14 +63,14 @@ Mer information om hur du skapar anpassade dataimporteringstjänster i AEM finns
 
 ### Avstängningen tar lång tid på grund av PollingImporter {#shutdown-takes-a-long-time-due-to-the-pollingimporter}
 
-Analyserna har utformats med en arvsmekanism i åtanke. Vanligtvis aktiverar du Analytics för en webbplats genom att lägga till en referens till en Analytics-konfiguration på sidegenskaperna på fliken [Cloud Services](/help/sites-developing/extending-cloud-config.md) . Konfigurationen ärvs sedan automatiskt till alla undersidor utan att du behöver referera till den igen, såvida inte en sida kräver en annan konfiguration. När du lägger till en referens till en webbplats skapas automatiskt flera noder (12 för AEM 6.3 och tidigare eller 6 för AEM 6.4) av den typ `cq;PollConfig` som initierar de PollingImporters som används för att importera Analytics-data till AEM. Resultatet blir:
+Analyserna har utformats med en arvsmekanism i åtanke. Vanligtvis aktiverar du Analytics för en webbplats genom att lägga till en referens till en Analytics-konfiguration på fliken [Cloud Services](/help/sites-developing/extending-cloud-config.md) för sidegenskaper. Konfigurationen ärvs sedan automatiskt till alla undersidor utan att du behöver referera till den igen, såvida inte en sida kräver en annan konfiguration. När du lägger till en referens till en plats skapas automatiskt flera noder (12 för AEM 6.3 och tidigare eller 6 för AEM 6.4) av den typ `cq;PollConfig` som initierar de PollingImporters som används för att importera Analytics-data till AEM. Resultatet blir:
 
 * Många sidor som refererar till Analytics leder till en stor mängd PollingImporters.
 * Om du dessutom kopierar och klistrar in sidor med en referens till en Analytics-konfiguration dupliceras dess PollingImporters.
 
 #### Lösning {#solution-1}
 
-För det första kan en analys av [error.log](/help/sites-deploying/configure-logging.md) ge dig insikt i mängden aktiva eller registrerade PollingImporters. Exempel:
+För det första kan en analys av [error.log](/help/sites-deploying/configure-logging.md) ge dig insikt i mängden aktiva eller registrerade PollingImporters. Till exempel:
 
 ```
 # Count PollingImporter entries
@@ -89,13 +92,13 @@ Mer information om hur du skapar anpassade dataimporteringstjänster i AEM finns
 
 ### DTM-skripttaggen återges inte i sidkällan {#the-dtm-script-tag-is-not-rendered-in-the-page-source}
 
-Skripttaggen [DTM](/help/sites-administering/dtm.md) inkluderas inte korrekt på sidan trots att det finns referenser till konfigurationen på fliken för sidegenskaper i [molntjänster](/help/sites-developing/extending-cloud-config.md) .
+Skripttaggen [DTM](/help/sites-administering/dtm.md) inkluderas inte korrekt på sidan trots att konfigurationen har refererats till på fliken [Cloud Services](/help/sites-developing/extending-cloud-config.md) för sidegenskaper.
 
 #### Lösning {#solution-2}
 
 Du kan åtgärda problemet genom att göra följande:
 
-* Kontrollera att krypterade egenskaper kan dekrypteras (observera att krypteringen kan använda olika automatiskt genererade nycklar på varje AEM-instans). Mer information finns också i [Krypteringsstöd för konfigurationsegenskaper](/help/sites-administering/encryption-support-for-configuration-properties.md).
+* Se till att krypterade egenskaper kan dekrypteras (observera att krypteringen kan använda olika automatiskt genererade nycklar för varje AEM). Mer information finns också i [Krypteringsstöd för konfigurationsegenskaper](/help/sites-administering/encryption-support-for-configuration-properties.md).
 * Publicera konfigurationerna som finns i `/etc/cloudservices/dynamictagmanagement`
 * Kontrollera åtkomstkontrollistor på `/etc/cloudservices`. Åtkomstkontrollistorna ska vara:
 
@@ -145,7 +148,7 @@ Problemet kan uppstå när Adobe Analytics implementeras på webbplatsen med DTM
 
 #### Lösning {#solution-4}
 
-Använd `s_gi` i stället för `new AppMeasurement` instansieringsmetoden. Exempel:
+Använd `s_gi` i stället för `new AppMeasurement` instansieringsmetoden. Till exempel:
 
 ```
 var s_account="INSERT-RSID-HERE"
@@ -169,7 +172,7 @@ Du kan testa följande lösningar:
 
 ### Ett standarderbjudande visas alltid i stället för rätt erbjudande när AT.js 1.3+ används {#a-default-offer-is-always-displayed-instead-of-correct-offer-when-using-at-js}
 
-Som standard är AEM 6.2 och 6.3 inte kompatibelt med AT.js version 1.3.0+. Med AT.js version 1.3.0 som lägger in parametervalidering för sina API:er, `adobe.target.applyOffer()` krävs en &quot;mbox&quot;-parameter som inte finns i `atjs-itegration.js` koden.
+Ut ur kartongen AEM 6.2 och 6.3 är inte kompatibla med AT.js version 1.3.0+. Med AT.js version 1.3.0 som lägger in parametervalidering för sina API:er, `adobe.target.applyOffer()` krävs en &quot;mbox&quot;-parameter som inte finns i `atjs-itegration.js` koden.
 
 #### Lösning {#solution-6}
 
@@ -190,7 +193,7 @@ adobe.target.getOffer({
 
 ### Sidan Mål och inställningar visar inte avsnittet Rapporteringskällor {#the-goals-settings-page-does-not-show-the-reporting-sources-section}
 
-Det här problemet är troligen ett [A4T Analytics Cloud Configuration](/help/sites-administering/target-configuring.md) Provisioning-problem.
+Problemet är troligen ett [A4T Analytics Cloud Configuration](/help/sites-administering/target-configuring.md) Provisioning-problem.
 
 #### Lösning {#solution-7}
 
@@ -210,7 +213,7 @@ http://localhost:4502/etc/cloudservices/testandtarget/<YOUR-CONFIG>/jcr:content.
 }
 ```
 
-Om svaret innehåller raden kontaktar du `a4tEnabled:false`Adobes kundtjänst [](https://helpx.adobe.com/contact.html) för att få ditt konto etablerat korrekt.
+Om svaret innehåller raden kontaktar du `a4tEnabled:false`Adobe kundtjänst [](https://helpx.adobe.com/contact.html) för att få ditt konto etablerat korrekt.
 
 ### Användbara mål-API:er {#helpful-target-apis}
 
