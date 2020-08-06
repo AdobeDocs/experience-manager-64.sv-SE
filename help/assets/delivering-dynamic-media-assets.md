@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: ec394bd3-2fa6-4f50-b974-bc10f643ecac
 translation-type: tm+mt
 source-git-commit: 15d933a2e71a44e84cdcc9ae28f60c67b43bd8f4
+workflow-type: tm+mt
+source-wordcount: '330'
+ht-degree: 10%
 
 ---
 
@@ -21,8 +24,8 @@ Hur du kan leverera dynamiska medieresurser - både video och bilder - beror på
 
 Med Dynamic Media har du flera alternativ:
 
-* Om din webbplats ligger hos AEM vill du lägga till de dynamiska medieresurserna direkt på sidan.
-* Om din webbplats inte finns på AEM kan du välja något av följande:
+* Om du har AEM som värd för webbplatsen vill du lägga till de dynamiska medieresurserna direkt på sidan.
+* Om webbplatsen inte finns AEM kan du välja mellan följande:
 
    * Bädda in videon eller bilden på webbplatsen.
    * Länka URL:er till webbprogrammet. Använd länkning när du vill leverera en videospelare som ett popup-fönster eller modalt fönster.
