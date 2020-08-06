@@ -10,6 +10,9 @@ topic-tags: Configuration
 discoiquuid: dd18f7b5-882d-4e81-ab3d-85f1e5d74992
 translation-type: tm+mt
 source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+workflow-type: tm+mt
+source-wordcount: '311'
+ht-degree: 1%
 
 ---
 
@@ -30,13 +33,13 @@ Ett cacheminne är en mekanism som förkortar dataåtkomsttider, minskar latense
 
 Utför följande steg för att konfigurera cachen för adaptiva formulär:
 
-1. Gå till konfigurationshanteraren för AEM-webbkonsolen på `https://[server]:[port]/system/console/configMgr`.
+1. Gå AEM webbkonsolens konfigurationshanterare på `https://[server]:[port]/system/console/configMgr`.
 1. Klicka på **Adaptiv form och Interactive Communication Web Channel Configuration** för att redigera dess konfigurationsvärden.
-1. I dialogrutan Redigera konfigurationsvärden anger du det maximala antalet formulär eller dokument som en instans av AEM Forms-servern kan cachelagra i fältet **Antal adaptiva formulär** . Standardvärdet är 100.
+1. I dialogrutan Redigera konfigurationsvärden anger du det maximala antalet formulär eller dokument som en instans av AEM Forms-servern kan cachelagra i fältet **Antal adaptiva Forms** . Standardvärdet är 100.
 
    >[!NOTE]
    >
-   >Om du vill inaktivera cachen anger du värdet **0** i fältet Antal adaptiva formulär. Cacheminnet återställs och alla formulär och dokument tas bort från cacheminnet när du inaktiverar eller ändrar cachekonfigurationen.
+   >Om du vill inaktivera cachen anger du värdet **0** i fältet Antal adaptiva Forms. Cacheminnet återställs och alla formulär och dokument tas bort från cacheminnet när du inaktiverar eller ändrar cachekonfigurationen.
 
    ![Konfigurationsdialogruta för HTML-cache för adaptiva formulär](assets/cache-configuration-edit.png)
 
