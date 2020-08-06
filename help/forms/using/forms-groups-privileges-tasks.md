@@ -24,7 +24,7 @@ Tilldela användare till grupperna för att hantera AEM Forms på OSGi
 
 Du kan [skapa grupper](/help/sites-administering/user-group-ac-admin.md#group-administration) och tilldela profiler och [användare](/help/sites-administering/user-group-ac-admin.md#user-administration) till grupperna i AEM. Dessa profiler styr behörigheter för de användare som är en del av gruppen.
 
-När du har installerat [AEM Forms-tilläggspaketet](/help/forms/using/installing-configuring-aem-forms-osgi.md)blir de grupper som omnämns i den här artikeln automatiskt tillgängliga för tilldelning, till exempel formuläranvändare och användare med formulärfunktioner. I följande tabell visas de uppgifter som en användare kan utföra för AEM Forms på OSGi baserat på grupptilldelningarna:
+När du har installerat [AEM Forms-tilläggspaketet](/help/forms/using/installing-configuring-aem-forms-osgi.md)blir de grupper som nämns i den här artikeln automatiskt tillgängliga för tilldelning, till exempel formuläranvändare och användare med formulärbehörighet. I följande tabell visas de uppgifter som en användare kan utföra för AEM Forms på OSGi baserat på grupptilldelningarna:
 
 <table> 
  <tbody>
@@ -38,7 +38,7 @@ När du har installerat [AEM Forms-tilläggspaketet](/help/forms/using/installin
     <ul> 
      <li>Skapa, förhandsgranska, publicera och skicka adaptiva formulär</li> 
      <li>Skapa, förhandsgranska och publicera interaktiv kommunikation och dokumentfragment</li> 
-     <li>Överföra resurser till en AEM-instans</li> 
+     <li>Överföra resurser till en AEM instans</li> 
      <li>Skapa teman</li> 
     </ul> </td> 
   </tr>
@@ -95,7 +95,7 @@ När du har installerat [AEM Forms-tilläggspaketet](/help/forms/using/installin
    <td>workflow-user</td> 
    <td>
     <ul> 
-     <li>Använda AEM-inkorgsprogram</li> 
+     <li>Använda AEM</li> 
      <li>Hantera arbetsflödesinstanser</li> 
     </ul> </td> 
   </tr>
