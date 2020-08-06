@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 104d1c64-b9b3-40f5-8f9b-fe92d9daaa1f
 translation-type: tm+mt
 source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
+workflow-type: tm+mt
+source-wordcount: '648'
+ht-degree: 2%
 
 ---
 
@@ -55,11 +58,11 @@ När du definierar ditt dolda uttryck ska du tänka på:
 
 ## Exempel {#example}
 
-Exempel på gömda förhållanden finns i hela AEM och i synnerhet i [kärnkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) . Ta till exempel huvudkomponenten [för](https://helpx.adobe.com/experience-manager/core-components/using/list.html)listan.
+Exempel på gömda förhållanden finns i AEM och i [huvudkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) i synnerhet. Ta till exempel huvudkomponenten [för](https://helpx.adobe.com/experience-manager/core-components/using/list.html)listan.
 
 [Med mallredigeraren](/help/sites-authoring/templates.md)kan mallskaparen i designdialogrutan definiera vilka alternativ för listkomponenten som är tillgängliga för sidförfattaren. Alternativ som om listan ska kunna vara en statisk lista, en lista med underordnade sidor, en lista med taggade sidor osv. kan aktiveras eller inaktiveras.
 
-Om en mallskapare väljer att inaktivera alternativet för underordnade sidor, ställs en designegenskap in och ett dolt villkor utvärderas mot den, vilket gör att alternativet inte återges för sidförfattaren.
+Om en mallskapare väljer att inaktivera alternativet med underordnade sidor, ställs en designegenskap in och ett dolt villkor utvärderas mot den, vilket gör att alternativet inte återges för sidförfattaren.
 
 1. Som standard kan sidförfattaren använda listkärnkomponenten för att skapa en lista med underordnade sidor genom att välja alternativet **Underordnade sidor**.
 
