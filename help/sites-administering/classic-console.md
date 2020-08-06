@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a7f31bc8-c583-439f-b2af-1dcc58f9c481
 translation-type: tm+mt
 source-git-commit: f1a5e4c5c8411e10887efab517115fee0fd1890a
+workflow-type: tm+mt
+source-wordcount: '890'
+ht-degree: 0%
 
 ---
 
@@ -45,12 +48,15 @@ Så här kommer du åt konsolen Klassisk UI-taggning:
 
 1. I båda fallen anger du
 
-   * **Titel**(*obligatoriskt*) Visningsrubriken för taggen. Alla tecken kan anges
+   * **Titel**
+(
+*Obligatoriskt*) Visningsrubriken för taggen. Alla tecken kan anges
 
       vi rekommenderar att du inte använder följande specialtecken:
 
       * `colon (:)` - namnutrymmesavgränsare
       * `forward slash (/)` - avgränsare för undertagg
+
       Dessa tecken visas inte om de anges.
 
    * **Namn**
@@ -61,7 +67,7 @@ Så här kommer du åt konsolen Klassisk UI-taggning:
 
       (*Valfritt*) En beskrivning av taggen.
 
-   * välj **Skapa**
+   * select **Create**
 
 
 ## Redigera taggar {#editing-tags}
@@ -81,7 +87,7 @@ Så här kommer du åt konsolen Klassisk UI-taggning:
 
 ## Aktivera och inaktivera taggar {#activating-and-deactivating-tags}
 
-1. I den högra rutan markerar du namnutrymmet eller taggen som du vill aktivera (publicera) eller inaktivera (avpublicera).
+1. Markera namnutrymmet eller taggen som du vill aktivera (publicera) eller inaktivera (avpublicera) i den högra rutan.
 1. Klicka på **Aktivera** eller **Inaktivera** efter behov.
 
 ## Lista - visa var taggar refereras {#list-showing-where-tags-are-referenced}
@@ -95,7 +101,7 @@ Så här kommer du åt konsolen Klassisk UI-taggning:
 För att tagga administratörer och utvecklare så att de kan rensa taxonomin eller byta namn på ett tagg-ID kan du flytta en tagg till en ny plats:
 
 1. Öppna **taggningskonsolen** .
-1. **Markera taggen och klicka på** Flytta... i det övre verktygsfältet (eller på snabbmenyn).
+1. Markera taggen och klicka på **Flytta...** i det övre verktygsfältet (eller på snabbmenyn).
 1. I dialogrutan **Flytta tagg** definierar du:
 
    * **till** målnoden.
@@ -118,7 +124,7 @@ Du kan använda sammanfogningstaggar när en taxonomi har dubbletter. När tagg 
 Så här sammanfogar du en tagg till en annan:
 
 1. Öppna **taggningskonsolen** .
-1. **Markera taggen och klicka på** Sammanfoga... i det övre verktygsfältet (eller på snabbmenyn).
+1. Markera taggen och klicka på **Sammanfoga...** i det övre verktygsfältet (eller på snabbmenyn).
 1. I dialogrutan **Sammanfoga tagg** definierar du:
 
    * **till** målnoden.
@@ -167,7 +173,7 @@ Om du vill lägga till ett nytt språk i dialogrutan läser du avsnittet [Lägga
 Som standard visas taggen `titles`i sidegenskaperna på sidspråket. Dialogrutan Tagg i sidegenskaperna har ett språkfält där du kan visa taggen `titles`på ett annat språk. I proceduren nedan beskrivs hur du visar taggen `titles`på franska:
 
 1. Se föregående avsnitt för att lägga till den franska översättningen till **Djur** under **Taggar** > **Stock Photography**.
-1. Öppna sidegenskaperna för sidan **Produkter** i den engelska grenen av webbplatsen **Geometrixx** .
+1. Öppna sidegenskaperna för sidan **Produkter** i den engelska delen av **Geometrixx** .
 1. Öppna dialogrutan **Taggar/nyckelord** (genom att välja den nedrullningsbara menyn till höger om visningsområdet Taggar/nyckelord) och välj det **franska** språket i den nedrullningsbara menyn i det nedre högra hörnet.
 1. Bläddra med vänster-/högerpilarna tills du kan välja fliken **Stock Photography**
 
