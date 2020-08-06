@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 0f977264-fe58-4478-bd38-aca5c75f36aa
 translation-type: tm+mt
 source-git-commit: 60f36a33471dbbd9ca877dbbedc82ade606a125c
+workflow-type: tm+mt
+source-wordcount: '311'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 60f36a33471dbbd9ca877dbbedc82ade606a125c
 
 ## Testning {#testing}
 
-AEM ger:
+AEM tillhandahåller:
 
 * [ett ramverk för testning av komponentens användargränssnitt](/help/sites-developing/hobbes.md).
 * [en mekanism för att testa och felsöka komponenter](/help/sites-developing/developer-mode.md).
@@ -57,7 +60,7 @@ Om dessa används för spårning:
 * de ska vara enkla.
 * Antalet enskilda kalkylblad bör begränsas till ett minimum.
 * måste uppdateras regelbundet.
-* endast en originalkopia ska bevaras och alla ska veta var originalkopian finns.
+* endast en överordnad kopia ska bevaras och alla ska veta var den överordnad kopian finns.
 * De ska vara tillgängliga för alla projektmedlemmar.
 * Om säkerhet är ett problem (ofta i stora företag) och gemensam åtkomst inte är möjlig, kan kopior distribueras så länge alla förstår att det är kopior som inte kan uppdateras.
 
