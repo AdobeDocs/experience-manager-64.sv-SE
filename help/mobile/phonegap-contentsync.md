@@ -1,8 +1,8 @@
 ---
 title: Mobil med innehållssynkronisering
 seo-title: Mobil med innehållssynkronisering
-description: Följ den här sidan om du vill veta mer om Content Sync for Adobe PhoneGap Enterprise with AEM.
-seo-description: Följ den här sidan om du vill veta mer om Content Sync for Adobe PhoneGap Enterprise with AEM.
+description: Följ den här sidan för att lära dig mer om Content Sync for Adobe PhoneGap Enterprise med AEM.
+seo-description: Följ den här sidan för att lära dig mer om Content Sync for Adobe PhoneGap Enterprise med AEM.
 uuid: 65ee4138-b79a-44a7-83da-3e933ccae854
 contentOwner: User
 content-type: reference
@@ -11,6 +11,9 @@ topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 7941987a-2f4c-4c62-8ab2-0f6f30ceb064
 translation-type: tm+mt
 source-git-commit: 95499f59b2ce7d5d864d948d596f3efaae0b0d27
+workflow-type: tm+mt
+source-wordcount: '2909'
+ht-degree: 0%
 
 ---
 
@@ -23,19 +26,19 @@ source-git-commit: 95499f59b2ce7d5d864d948d596f3efaae0b0d27
 
 >[!NOTE]
 >
->Det här dokumentet ingår i [Getting Started with AEM Mobile](/help/mobile/getting-started-aem-mobile.md) Guide, en rekommenderad startpunkt för AEM Mobile-referens.
+>Det här dokumentet är en del av guiden [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md) , en rekommenderad startpunkt för AEM Mobile.
 
-Använd Innehållssynkronisering för att paketera innehåll så att det kan användas i inbyggda mobilprogram. Sidor som har skapats i AEM kan användas som appinnehåll, även när enheten är offline. Eftersom AEM-sidor dessutom bygger på webbstandarder fungerar de på olika plattformar så att du kan bädda in dem i alla inbyggda wrapper. Den här strategin minskar utvecklingsinsatserna och gör att du enkelt kan uppdatera appinnehåll.
+Använd Innehållssynkronisering för att paketera innehåll så att det kan användas i inbyggda mobilprogram. Sidor som har skapats i AEM kan användas som appinnehåll, även när enheten är offline. Eftersom AEM bygger på webbstandarder fungerar de på olika plattformar så att du kan bädda in dem i alla inbyggda wrapper. Den här strategin minskar utvecklingsinsatserna och gör att du enkelt kan uppdatera appinnehåll.
 
 >[!NOTE]
 >
->PhoneGap-appar som du skapar med AEM-verktyg är redan konfigurerade att använda AEM-sidor som innehåll via Innehållssynkronisering.
+>PhoneGap-appar som du skapar med AEM verktyg är redan konfigurerade att använda AEM sidor som innehåll via Innehållssynkronisering.
 
 I ramverket för innehållssynkronisering skapas en arkivfil som innehåller webbinnehållet. Innehållet kan vara allt från enkla sidor, bilder, PDF-filer eller hela webbprogram. API:t för innehållssynkronisering ger åtkomst till arkivfilen från mobilappar eller byggprocesser så att innehållet kan hämtas och inkluderas i appen.
 
 Följande stegsekvens visar ett typiskt användningsfall för Innehållssynkronisering:
 
-1. AEM-utvecklaren skapar en konfiguration för innehållssynkronisering som anger vilket innehåll som ska inkluderas.
+1. AEM skapar en konfiguration för innehållssynkronisering som anger vilket innehåll som ska inkluderas.
 1. Innehållssynkroniseringsramverket samlar in och cachelagrar innehållet.
 1. På en mobil enhet startas mobilprogrammet och begär innehåll från servern, som levereras i en ZIP-fil.
 1. Klienten packar upp ZIP-innehållet i det lokala filsystemet. Mappstrukturen i ZIP-filen simulerar de sökvägar som en klient (t.ex. en webbläsare) normalt skulle begära från servern.
@@ -44,13 +47,13 @@ Följande stegsekvens visar ett typiskt användningsfall för Innehållssynkroni
 
 >[!NOTE]
 >
->Mer information om riktlinjer för utveckling av hanterare för innehållssynkronisering finns i [Utveckla hanterare](/help/mobile/contentsync-app-handlers.md)för innehållssynkronisering.
+>Mer information om riktlinjer för utveckling av hanterare för innehållssynkronisering finns i [Utveckla hanterare för innehållssynkronisering](/help/mobile/contentsync-app-handlers.md).
 
 ## Konfigurera innehåll för innehållssynkronisering {#configuring-the-content-sync-content}
 
 Skapa en konfiguration för innehållssynkronisering för att ange innehållet i ZIP-filen som skickas till klienten. Du kan skapa valfritt antal konfigurationer för innehållssynkronisering. Varje konfiguration har ett namn för identifieringsändamål.
 
-Om du vill skapa en konfiguration för innehållssynkronisering lägger du till en `cq:ContentSyncConfig` nod i databasen med `sling:resourceType` egenskapen inställd på `contentsync/config`. Noden kan finnas var som helst i databasen, men noden måste vara tillgänglig för användare på AEM-publiceringsinstansen. `cq:ContentSyncConfig` Därför bör du lägga till noden nedan `/content`.
+Om du vill skapa en konfiguration för innehållssynkronisering lägger du till en `cq:ContentSyncConfig` nod i databasen med `sling:resourceType` egenskapen inställd på `contentsync/config`. Noden kan `cq:ContentSyncConfig` finnas var som helst i databasen, men noden måste vara tillgänglig för användare på AEM publiceringsinstans. Därför bör du lägga till noden nedan `/content`.
 
 Om du vill ange innehållet i ZIP-filen för innehållssynkronisering lägger du till underordnade noder i cq:ContentSyncConfig-noden. Följande egenskaper för varje underordnad nod identifierar ett innehållsobjekt som ska inkluderas och hur det bearbetas när det läggs till:
 
@@ -87,7 +90,7 @@ Om du [konfigurerar i databasen](/help/sites-deploying/configuring-osgi.md#osgi-
 Om du vill konfigurera hämtningsåtkomst för en viss konfiguration för innehållssynkronisering lägger du till följande egenskap i `cq:ContentSyncConfig` noden:
 
 * Namn: auktoriseringsbar
-* Typ:Sträng
+* Typ: Sträng
 * Värde: Namnet på den användare eller grupp som kan hämtas.
 
 Med din app kan användare till exempel installera uppdateringar direkt från innehållssynkronisering. Om du vill att alla användare ska kunna hämta uppdateringen anger du värdet för egenskapen authorized till `everyone`.
@@ -103,7 +106,7 @@ Du kan åsidosätta standardanvändaren och ange en användare eller grupp som u
 Om du vill åsidosätta standardanvändaren anger du en användare eller grupp som utför uppdateringar för en specifik konfiguration för innehållssynkronisering genom att lägga till följande egenskap i cq:ContentSyncConfig-noden:
 
 * Namn: updateuser
-* Typ:Sträng
+* Typ: Sträng
 * Värde: Namnet på den användare eller grupp som kan utföra uppdateringarna.
 
 Om cq:ContentSyncConfig-noden inte har någon updateuser-egenskap, uppdaterar standard anonym användare cachen.
@@ -140,7 +143,7 @@ Samla in ursprungliga återgivningar av resurser.
 
 Bildtypen används för att inkludera logotypen We.Retail i zip-filen.
 
-**sidor** Återge AEM-sidor och samla in refererade resurser.
+**sidor** Återge AEM sidor och samla in refererade resurser.
 
 * **path** - Path to a page.
 * **extension** - Extension that should be used in the request. För sidor är detta nästan alltid *html*, men andra är fortfarande möjliga.
@@ -224,7 +227,7 @@ I listan nedan visas ett exempel på en konfiguration för innehållssynkroniser
 
 I exemplet ska händelselistsidan vara den inledande sidan. Den här informationen finns i egenskapen **indexPage** och kan därför enkelt ändras när som helst. En andra egenskap definierar sökvägen till filen *events.plist* . Som vi kommer att se senare kan klientprogrammet nu läsa manifestet och agera utifrån det.
 
-När konfigurationen är klar kan innehållet laddas ned med en webbläsare eller en annan HTTP-klient, eller om du utvecklar för iOS kan du använda det dedikerade WAppKitSync-klientbiblioteket. Hämtningsplatsen består av konfigurationens sökväg och tillägget *.zip* , t.ex. när du arbetar med en lokal AEM-instans: *http://localhost:4502/content/weretail_go.zip*
+När konfigurationen är klar kan innehållet laddas ned med en webbläsare eller en annan HTTP-klient, eller om du utvecklar för iOS kan du använda det dedikerade WAppKitSync-klientbiblioteket. Hämtningsplatsen består av konfigurationens sökväg och tillägget *.zip* , t.ex. när du arbetar med en lokal AEM: *http://localhost:4502/content/weretail_go.zip*
 
 ### Konsolen Innehållssynkronisering {#the-content-sync-console}
 
@@ -282,7 +285,7 @@ Observera att *fabriksdefinitionen* innehåller det gemensamma gränssnittet och
 
 ### Implementera en anpassad uppdateringshanterare {#implementing-a-custom-update-handler}
 
-På varje sida för e-butiksmobilen finns en logotyp i det övre vänstra hörnet som vi förstås vill inkludera i zip-filen. För cacheoptimering refererar inte AEM till bildfilens verkliga plats i databasen, vilket förhindrar oss från att bara använda konfigurationstypen för **kopian** . Vi måste istället tillhandahålla en egen **logotypkonfigurationstyp** som gör bilden tillgänglig på den plats som AEM begär. I följande kodexempel visas den fullständiga implementeringen av hanteraren för uppdatering av logotyp:
+På varje sida för e-butiksmobilen finns en logotyp i det övre vänstra hörnet som vi förstås vill inkludera i zip-filen. För cacheoptimering refererar AEM inte till bildfilens verkliga plats i databasen, vilket förhindrar oss från att bara använda konfigurationstypen **kopia** . Vi måste istället tillhandahålla en egen **logotypkonfigurationstyp** som gör bilden tillgänglig på den plats som AEM begär. I följande kodexempel visas den fullständiga implementeringen av hanteraren för uppdatering av logotyp:
 
 #### LogoUpdateHandler.java {#logoupdatehandler-java}
 
@@ -368,10 +371,10 @@ Innehållssynkronisering levererar innehåll på ett intelligent sätt: Endast d
 
 Alla överförda data kan extraheras till samma katalogstruktur, det finns inga ytterligare steg (t.ex. beroendekontroller) som krävs när data extraheras. I iOS lagras alla data i en undermapp i mappen Documents i iOS-appen.
 
-Vanlig körningssökväg för en iOS-baserad AEM-mobilapp:
+Vanlig körningssökväg för en iOS-baserad AEM Mobile-app:
 
 * Användaren startar programmet på en iOS-enhet.
-* Appen försöker ansluta till AEM-serverdelen och begär dataändringar sedan den senaste körningen.
+* Appen försöker ansluta till AEM och begär dataändringar sedan den senaste körningen.
 * Servern hämtar data i fråga och packar in dem i en fil.
 * Data returneras till klientenheten där de extraheras till dokumentmappen.
 * UIWebView-komponenten startar/uppdaterar.
@@ -382,5 +385,5 @@ Om det inte går att upprätta en anslutning visas tidigare hämtade data.
 
 Mer information om roller och ansvar för en administratör och utvecklare finns i resurserna nedan:
 
-* [Om du skriver för Adobe PhoneGap Enterprise med AEM](/help/mobile/phonegap.md)
+* [Skapa för Adobe PhoneGap Enterprise med AEM](/help/mobile/phonegap.md)
 * [Administrera innehåll för Adobe PhoneGap Enterprise med AEM](/help/mobile/administer-phonegap.md)
