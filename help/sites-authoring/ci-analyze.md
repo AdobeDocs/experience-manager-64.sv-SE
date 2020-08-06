@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: ead74e39-3b07-488e-aeb1-fcb4aa6ff200
 translation-type: tm+mt
 source-git-commit: 3addef2141ebb831f8677d011d68faf88e648dc2
+workflow-type: tm+mt
+source-wordcount: '681'
+ht-degree: 0%
 
 ---
 
@@ -19,16 +22,16 @@ source-git-commit: 3addef2141ebb831f8677d011d68faf88e648dc2
 
 Öppna [Content Insight](/help/sites-authoring/content-insights.md) -sidan för att analysera prestandan för den sida som du redigerar. Konfigurera rapporteringsperioden så att analysen fokuseras.
 
-## Öppna analyser och rekommendationer för en sida {#opening-analytics-and-recommendations-for-a-page}
+## Öppna Analytics och Recommendations för en sida {#opening-analytics-and-recommendations-for-a-page}
 
-Använd följande procedur för att se Analytics and Recommendations för en sida:
+Använd följande procedur för att visa Analytics och Recommendations för en sida:
 
 1. Navigera till sidan som du vill analysera.
-1. Klicka eller tryck på **Analytics (Analyser) och Recommendations (Rekommendationer**) i verktygsfältet.
+1. Klicka eller tryck på **Analytics (Analyser) och Recommendations** i verktygsfältet.
 
    >[!NOTE]
    >
-   >Analyser och rekommendationer för en sida visas bara om du har konfigurerat AEM för [integrering med Adobe Analytics](/help/sites-administering/adobeanalytics-connect.md).
+   >Analyser och Recommendations för en sida visas bara om du har konfigurerat AEM att [integrera med Adobe Analytics](/help/sites-administering/adobeanalytics-connect.md).
 
    ![screen_shot_2017-11-29at135651](assets/screen_shot_2017-11-29at135651.png)
 
@@ -73,9 +76,9 @@ Granulariteten påverkar rapporter som anger data i förhållande till tid, t.ex
 
 1. Klicka eller tryck på önskad granularitet. När du har valt det här alternativet uppdateras rapporten automatiskt med granulariteten.
 
-## Tilldela uppgifter för SEO-rekommendationer {#assigning-tasks-for-seo-recommendations}
+## Tilldela uppgifter för SEO Recommendations {#assigning-tasks-for-seo-recommendations}
 
-Använd SEO-rekommendationsrapporten för att skapa uppgifter för att förbättra synligheten på sidan för sökmotorer. För varje rekommendation i rapporten som inte har någon bock kan du skapa en uppgift som du tilldelar en användare för att utföra det arbete som krävs.
+Använd SEO Recommendations-rapporten för att skapa uppgifter för att förbättra sidsynligheten för sökmotorer. För varje rekommendation i rapporten som inte har någon bock kan du skapa en uppgift som du tilldelar en användare för att utföra det arbete som krävs.
 
 ![chlimage_1-252](assets/chlimage_1-252.png)
 
@@ -108,4 +111,4 @@ Använd följande procedur för att skapa en uppgift för en SEO-rekommendation.
 
 >[!NOTE]
 >
-> Uppgiften som skapas innehåller även sökvägen till sidan som SEO-rekommendationen gäller för.
+>Uppgiften som skapas innehåller även sökvägen till sidan som SEO-rekommendationen gäller för.
