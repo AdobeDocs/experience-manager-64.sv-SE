@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 73e57f20-4022-46ab-aa5c-ec866298b645
 translation-type: tm+mt
 source-git-commit: 4e6442ec089b7d07cc68debb5a630fb474716f4d
+workflow-type: tm+mt
+source-wordcount: '798'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Konsolen Administrera webbplatser kan utökas till att visa anpassade kolumner. 
 
 I den här stegvisa självstudiekursen beskrivs hur du visar en ny kolumn i administrationskonsolen för webbplatser genom att implementera `ListInfoProvider` gränssnittet. Det består av följande steg:
 
-1. [Skapa OSGI-tjänsten](#creating-the-osgi-service) och distribuera det paket som innehåller den till AEM-servern.
+1. [Skapa OSGI-tjänsten](#creating-the-osgi-service) och distribuera paketet som innehåller det till AEM.
 1. (valfritt) [Testa den nya tjänsten](#testing-the-new-service) genom att utfärda ett JSON-anrop för att begära JSON-objektet som används för att skapa konsolen.
 1. [Visa den nya kolumnen](#displaying-the-new-column) genom att utöka nodstrukturen för konsolen i databasen.
 
@@ -33,6 +36,7 @@ I den här stegvisa självstudiekursen beskrivs hur du visar en ny kolumn i admi
 >
 >* Digital Assets-konsolen
 >* Community-konsolen
+
 >
 
 
@@ -109,21 +113,22 @@ public class StarredListInfoProvider implements ListInfoProvider {
 >* Implementeringen bör, baserat på den angivna begäran och/eller resursen, avgöra om den ska lägga till informationen till JSON-objektet eller inte.
 >* Om implementeringen definierar en egenskap som redan finns i svarsobjektet skrivs dess värde över av den som du anger. `ListInfoProvider`\
    >  Du kan använda [servicerankning](https://www.osgi.org/javadoc/r2/org/osgi/framework/Constants.html#SERVICE_RANKING) för att hantera körningsordningen för flera `ListInfoProvider` implementeringar.
+
 >
 
 
 
 ### Testa den nya tjänsten {#testing-the-new-service}
 
-När du öppnar administrationskonsolen för webbplatser och bläddrar igenom webbplatsen skickar webbläsaren ett ajax-anrop för att hämta JSON-objektet som används för att skapa konsolen. Om du till exempel bläddrar till `/content/geometrixx` mappen skickas följande begäran till AEM-servern för att skapa konsolen:
+När du öppnar administrationskonsolen för webbplatser och bläddrar igenom webbplatsen skickar webbläsaren ett ajax-anrop för att hämta JSON-objektet som används för att skapa konsolen. Om du till exempel bläddrar till `/content/geometrixx` mappen skickas följande begäran till AEM för att skapa konsolen:
 
-[http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](http://localhost:4502/content/geometrixx.pages.json?start=0&limit=30&predicate=siteadmin)
+[http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin)
 
 Så här kontrollerar du att den nya tjänsten körs efter att du har distribuerat paketet som innehåller den:
 
 1. Peka webbläsaren på följande URL:
 
-   [http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](http://localhost:4502/content/geometrixx.pages.json?start=0&limit=30&predicate=siteadmin)
+   [http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin)
 
 1. Svaret ska visa de nya egenskaperna enligt följande:
 
@@ -131,7 +136,7 @@ Så här kontrollerar du att den nya tjänsten körs efter att du har distribuer
 
 ### Visa den nya kolumnen {#displaying-the-new-column}
 
-Det sista steget är att anpassa nodstrukturen i administrationskonsolen för webbplatser så att den nya egenskapen för alla Geometrixx-sidor visas genom att täcka över `/libs/wcm/core/content/siteadmin`. Gör så här:
+Det sista steget är att anpassa nodstrukturen i administrationskonsolen för webbplatser så att den nya egenskapen för alla Geometrixx visas genom att täcka över `/libs/wcm/core/content/siteadmin`. Gör så här:
 
 1. I CRXDE Lite skapar du nodstrukturen `/apps/wcm/core/content` med noder av typen `sling:Folder` som återspeglar strukturen `/libs/wcm/core/content`.
 
@@ -164,7 +169,7 @@ Det sista steget är att anpassa nodstrukturen i administrationskonsolen för we
 
    Om du vill omdirigera detta till din version av siteAdmin när du definierar egenskapen `/apps/wcm/core/content/siteadmin` så att den har ett högre värde än det som är definierat `sling:vanityOrder` `/libs/wcm/core/content/siteadmin`. Standardvärdet är 300, så allt högre är lämpligt.
 
-1. Gå till administrationskonsolen för webbplatser och navigera till Geometrixx-webbplatsen:
+1. Gå till administrationskonsolen för webbplatser och navigera till Geometrixx:
 
    [http://localhost:4502/siteadmin#/content/geometrixx](http://localhost:4502/siteadmin#/content/geometrixx).
 
