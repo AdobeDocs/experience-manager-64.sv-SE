@@ -1,8 +1,8 @@
 ---
 title: eCommerce
 seo-title: eCommerce
-description: 'AEM eCommerce hjälper marknadsförare att leverera varumärkesanpassade, personaliserade shoppingupplevelser över webben, mobiler och sociala kontaktytor. '
-seo-description: 'AEM eCommerce hjälper marknadsförare att leverera varumärkesanpassade, personaliserade shoppingupplevelser över webben, mobiler och sociala kontaktytor. '
+description: 'AEM e-handel hjälper marknadsförare att leverera varumärkesanpassade, personaliserade shoppingupplevelser på webben, i mobilen och via sociala kontaktytor. '
+seo-description: 'AEM e-handel hjälper marknadsförare att leverera varumärkesanpassade, personaliserade shoppingupplevelser på webben, i mobilen och via sociala kontaktytor. '
 uuid: 14af7a3a-7211-4a56-aeef-1603128d5d8a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 68799110-8183-40fe-be4f-2a7c7a7b3018
 translation-type: tm+mt
 source-git-commit: eb1ae2b4910e7adef48865996db4837175f588d9
+workflow-type: tm+mt
+source-wordcount: '776'
+ht-degree: 0%
 
 ---
 
@@ -27,13 +30,13 @@ Adobe tillhandahåller två versioner av Commerce Integration Framework:
 
 |  | CIF lokal | CIF Cloud |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| AEM-versioner som stöds | AEM on-prem eller AMS 6.x | AEM AMS 6.4 och 6.5 |
-| Back-end | - AEM, Java <br> - Monolitisk integrering, mappning före bygge (mall)<br> - JCR-databas | - Magento <br>- Java och Javascript <br>- Inga Commerce-data lagras i JCR-databasen |
-| Front-end | Återgivna sidor på AEM-serversidan | Blandat sidprogram (hybridåtergivning) |
+| AEM | AEM på plats eller AMS 6.x | AEM AMS 6.4 och 6.5 |
+| Back-end | - AEM, Java <br> - Monolitisk integrering, mappning före bygge (mall)<br> - JCR-databas | - Magento <br>- Java och Javascript <br>- Inga handelsdata lagras i JCR-databasen |
+| Front-end | AEM återgivna sidor på serversidan | Blandat sidprogram (hybridåtergivning) |
 | Produktkatalog | - Produktimport, redigerare, cachelagring i AEM <br>- Vanliga kataloger med AEM- eller proxysidor | - Ingen produktimport <br>- generiska mallar <br>- on demand-data via anslutning |
 | Skalbarhet | - Kan hantera upp till ett fåtal miljoner produkter (beroende på användningsfall) <br> - Cachelagring av Dispatcher | - Ingen volymbegränsning <br>- Cachelagring av Dispatcher eller CDN |
-| Standardiserad datamodell | Nej | Ja, Magento GraphQL schema |
-| Tillgänglighet | <br> Ja: - SAP Commerce Cloud (tillägget har uppdaterats med stöd för AEM 6.4 och Hybris 5 (standard) och bibehåller kompatibiliteten med Hybris 4 <br>- Salesforce Commerce Cloud (Connector har öppen källkod som stöd för AEM 6.4) | Ja via öppen källkod via GitHub. <br> Magento Commerce (stöder Magento 2.3.2 (standard) och är kompatibel med Magento 2.3.1). |
+| Standardiserad datamodell | Nej | Ja, Magento GraphQL-schema |
+| Tillgänglighet | Ja:<br> - SAP Commerce Cloud (tillägget har uppdaterats för att stödja AEM 6.4 och Hybris 5 (standard) och bibehåller kompatibiliteten med Hybris 4 <br>- Salesforce Commerce Cloud (Connector open-sourced för att stödja AEM 6.4) | Ja via öppen källkod via GitHub. <br> Magento Commerce (Stöder Magento 2.3.2 (standard) och är kompatibelt med Magento 2.3.1). |
 | När ska användas | Begränsad användning: För scenarier där små, statiska kataloger kan behöva importeras | Rekommenderad lösning i de flesta fall |
 
 eCommerce hanterar tillsammans med Product Information Management (PIM) verksamheten på en webbplats som är inriktad på att sälja produkter via en webbutik:
@@ -45,7 +48,7 @@ eCommerce hanterar tillsammans med Product Information Management (PIM) verksamh
 * Live och centraliserad lagringspost
 * Webbgränssnitt
 
-AEM eCommerce hjälper marknadsförare att leverera varumärkesanpassade, personaliserade shoppingupplevelser över webben, mobiler och sociala kontaktytor. I AEM-redigeringsmiljön kan du anpassa sidor och komponenter baserat på målgruppskontext och försäljningsstrategier. till exempel:
+AEM e-handel hjälper marknadsförare att leverera varumärkesanpassade, personaliserade shoppingupplevelser på webben, i mobilen och via sociala kontaktytor. I AEM kan du anpassa sidor och komponenter baserat på målgruppskontext och försäljningsstrategier. till exempel:
 
 * Produktsidor
 * Kundvagnskomponenter
@@ -66,9 +69,9 @@ Implementeringen ger åtkomst i realtid till produktinformation. Detta kan anvä
 
 ## Huvudfunktioner {#main-features}
 
-AEM eCommerce erbjuder:
+AEM eCommerce tillhandahåller:
 
-* Ett antal färdiga AEM- **komponenter** som visar vad du kan göra med ditt projekt:
+* Ett antal färdiga **AEM komponenter** som visar vad du kan göra med ditt projekt:
 
    * Produktvisning
    * Kundvagn
@@ -76,25 +79,27 @@ AEM eCommerce erbjuder:
    * Nyligen visade produkter
    * Vouchers
    * och andra
+
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
    >[!NOTE]
    >
-   >Integreringsramverket som tillhandahålls av AEM gör det även möjligt att bygga ytterligare AEM-komponenter för handelsfunktioner oberoende av din specifika e-handelsmotor.
+   >Integreringsramverket som AEM tillhandahåller gör det även möjligt att skapa ytterligare AEM komponenter för handelsfunktioner oberoende av din specifika e-handelsmotor.
 
 * **Sök** - med antingen:
 
-   * AEM-sökningen
+   * AEM
    * sökningen i e-handelssystemet
-   * en tredje parts sökning (t.ex. Sök&amp;Befordra)
+   * en sökning efter tredje part (till exempel Search &amp; Promote)
    * eller en kombination av dessa.
+
    ![chlimage_1-151](assets/chlimage_1-151.png)
 
-* Använder AEM-möjligheten för att **presentera ditt innehåll i flera kanaler**, oavsett om det är hela webbläsarfönstret eller en mobil enhet. Detta levererar innehållet i det format som besökarna behöver.
+* Använder AEM möjlighet att **presentera innehåll i flera kanaler**, oavsett om det är hela webbläsarfönstret eller en mobil enhet. Detta levererar innehållet i det format som besökarna behöver.
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 
-* Möjlighet att **utveckla er egen integreringsimplementering baserat på[AEM eCommerce-ramverket](#the-framework)**.
+* Möjlighet att **utveckla er egen integreringsimplementering baserat på[AEM e-handelsramverk](#the-framework)**.
 
    De två implementeringar som är tillgängliga för närvarande är båda byggda på samma grund - utöver det allmänna API:t (ramverket). Implementering av en ny integrering innebär bara implementering av de funktioner som din integrering behöver. Front end-komponenter kan användas av alla nya implementeringar när de använder gränssnitt (så är oberoende av implementeringen).
 
@@ -102,6 +107,7 @@ AEM eCommerce erbjuder:
 
    * Ett exempel kan vara minskade fraktkostnader när den totala ordern överstiger ett visst belopp.
    * Ett annat kan göra att du kan erbjuda säsongserbjudanden som använder profildata (t.ex. plats). Dessa kan sedan markeras ytterligare, beroende på andra faktorer vid behov.
+
    I exemplet nedan visas en teaser eftersom innehållet i vagnen är mindre än $75:
 
    ![chlimage_1-153](assets/chlimage_1-153.png)
