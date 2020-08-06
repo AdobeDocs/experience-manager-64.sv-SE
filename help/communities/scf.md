@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: d7b5b5e3-2d84-4a6b-bcc2-d490882ff3ed
 translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+workflow-type: tm+mt
+source-wordcount: '1506'
+ht-degree: 0%
 
 ---
 
@@ -54,7 +57,7 @@ Om du vill anpassa eller utöka komponenterna skriver du bara övertäckningar o
    * Ändra JS-mall och CSS
 * For Look, Feel och UX
    * Ändra JS-mallen, CSS och [utöka/åsidosätt JavaScript](client-customize.md#extending-javascript)
-* Ändra informationen som är tillgänglig för JS-mallen eller för GET-slutpunkten
+* Ändra den tillgängliga informationen för JS-mallen eller GETENS slutpunkt
    * Utöka [SocialComponent](server-customize.md#socialcomponent-interface)
 * Lägga till anpassad bearbetning under åtgärder
    * Skriv en [OperationExtension](server-customize.md#operationextension-class)
@@ -93,19 +96,19 @@ The `DefaultSocialGetServlet`
 
 **`GET Request`**
 
-En GET-standardserver lyssnar på .social.json-begäranden som SocialComponent svarar på med anpassningsbar JSON.
+En standardserver för GET lyssnar på .social.json-begäranden som SocialComponent svarar på med anpassningsbar JSON.
 
 ![chlimage_1-26](assets/chlimage_1-26.png)
 
-### HTTP API - POST-begäranden {#http-api-post-requests}
+### HTTP API - POSTER {#http-api-post-requests}
 
-Förutom GET-åtgärder (läsåtgärder) definierar ramverket ett slutpunktsmönster som möjliggör andra åtgärder för en komponent, inklusive Skapa, Uppdatera och Ta bort. Dessa slutpunkter är HTTP-API:er som accepterar indata och svarar med antingen en HTTP-statuskod eller med ett JSON-svarsobjekt.
+Förutom åtgärderna GET (Läs) definierar ramverket ett slutpunktsmönster som möjliggör andra åtgärder för en komponent, inklusive Skapa, Uppdatera och Ta bort. Dessa slutpunkter är HTTP-API:er som accepterar indata och svarar med antingen en HTTP-statuskod eller med ett JSON-svarsobjekt.
 
 Det här ramverkets slutpunktsmönster gör CUD-åtgärder utökningsbara, återanvändbara och testbara.
 
 **`POST Request`**
 
-Det finns en Sling POST:operation för varje SocialComponent-åtgärd. Affärslogik och underhållskod för varje åtgärd omsluts av en OperationService som är tillgänglig via HTTP-API:t eller någon annanstans som en OSGi-tjänst. Det finns kopplingar med stöd för utökningar av anslutningsbara åtgärder för åtgärder före/efter.
+Det finns en Sling-POST:åtgärd för alla SocialComponent-åtgärder. Affärslogik och underhållskod för varje åtgärd omsluts av en OperationService som är tillgänglig via HTTP-API:t eller någon annanstans som en OSGi-tjänst. Det finns kopplingar med stöd för utökningar av anslutningsbara åtgärder för åtgärder före/efter.
 
 ![chlimage_1-27](assets/chlimage_1-27.png)
 
@@ -129,7 +132,7 @@ HBS-skript är enkla, logikfria, kompilerade på både server och klient, är en
 
 Ramverket innehåller flera [handtag](handlebars-helpers.md) som är användbara när du utvecklar sociala komponenter.
 
-När Sling löser en GET-begäran på servern identifieras skriptet som ska användas för att svara på begäran. Om skriptet är en HBS-mall (.hbs) delegerar Sling begäran till Handlebars Engine. Handlebars Engine hämtar sedan SocialComponent från lämplig SocialComponentFactory, skapar en kontext och återger HTML.
+När Sling löser en GET-begäran på servern identifieras det skript som ska användas för att svara på begäran. Om skriptet är en HBS-mall (.hbs) delegerar Sling begäran till Handlebars Engine. Handlebars Engine hämtar sedan SocialComponent från lämplig SocialComponentFactory, skapar en kontext och återger HTML.
 
 ### Ingen åtkomstbegränsning {#no-access-restriction}
 
@@ -155,9 +158,9 @@ Resultatet är en underordnad JCR-nod under en par-nod, som är Sling-adresserba
 
 Att inkludera en komponent avser processen att lägga till en referens till en [&quot;icke-befintlig&quot; resurs](srp.md#for-non-existing-resources-ners) (ingen JCR-nod) i mallen, till exempel med hjälp av ett skriptspråk.
 
-Från och med AEM 6.1 går det att redigera komponentens egenskaper i *design *läge när en komponent inkluderas dynamiskt i stället för att läggas till.
+Från och med AEM 6.1 går det att redigera komponentens egenskaper i *design-läget när en komponent inkluderas dynamiskt i stället för att läggas till.
 
-Endast ett urval av AEM Communities-komponenterna kan inkluderas dynamiskt. De är:
+Endast ett fåtal av AEM Communities-komponenterna kan inkluderas dynamiskt. De är:
 
 * [Kommentarer](essentials-comments.md)
 * [Klassificering](rating-basics.md)
@@ -198,7 +201,7 @@ Ramverket använder mallar för serversidans handtag för att återge komponente
 Följande är rekommenderade konventioner för att definiera och använda CSS-klasser:
 
 * Använd CSS-klassväljarnamn med tydligt namn och undvik generiska namn som heading, image osv.
-* Definiera specifika klassväljarformat så att CSS-formatmallarna fungerar bra med andra element och format på sidan. Exempel: `.social-forum .topic-list .li { color: blue; }`
+* Definiera specifika klassväljarformat så att CSS-formatmallarna fungerar bra med andra element och format på sidan. Till exempel: `.social-forum .topic-list .li { color: blue; }`
 * Håll CSS-klasser för formatering åtskilda från CSS-klasser för UX som drivs av JavaScript
 
 ### Anpassningar på klientsidan {#client-side-customizations}
