@@ -1,8 +1,8 @@
 ---
 title: Skapa en ny inloggningsskärm
 seo-title: Skapa en ny inloggningsskärm
-description: Hur man ändrar inloggningssidan för LiveCycle-moduler, till exempel arbetsytan i AEM Forms eller Forms Manager.
-seo-description: Hur man ändrar inloggningssidan för LiveCycle-moduler, till exempel arbetsytan i AEM Forms eller Forms Manager.
+description: Så här ändrar du inloggningssidan för moduler i LiveCycle, till exempel AEM Forms Workspace eller Forms Manager.
+seo-description: Så här ändrar du inloggningssidan för moduler i LiveCycle, till exempel AEM Forms Workspace eller Forms Manager.
 uuid: c7643f87-4a08-4c63-b87c-f987dbe18ece
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,13 +10,16 @@ topic-tags: forms-workspace
 discoiquuid: cfaa6b49-3fd0-4c08-84a2-e86c7e7e3532
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '490'
+ht-degree: 2%
 
 ---
 
 
 # Skapa en ny inloggningsskärm {#creating-a-new-login-screen}
 
-Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inloggningsskärmen i AEM Forms. Ändringarna påverkar till exempel inloggningsskärmen för både Forms Manager och AEM Forms.
+Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inloggningsskärmen för AEM Forms. Ändringarna påverkar till exempel inloggningsskärmen för både Forms Manager och AEM Forms.
 
 ## Förutsättning {#prerequisite}
 
@@ -45,6 +48,7 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
 
    1. Byt namn på mappen till det språknamn som du vill ha stöd för. Till exempel, `ar`.
    1. Ändra egenskapsvärdet `jcr:language` till `ar`(för `ar` mappen).
+
    >[!NOTE]
    >
    >Om språkinställningen är en kombination av språk och land, till exempel `ar-DZ`ändrar du mappnamnet och egenskapsvärdet till `ar-DZ`.
@@ -192,6 +196,7 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
       * från `/libs/livecycle/core/components/login`
       * to `/apps/livecycle/core/components/login`
    1. Ändra `/apps/livecycle/core/components/login/login.jsp` så att den nya texten läggs till.
+
    ![hämtning](assets/capture.png)
 
    ```
