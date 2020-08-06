@@ -2,7 +2,7 @@
 title: Innehållsarkitektur
 seo-title: Innehållsarkitektur
 description: Tips för att skapa ditt innehåll (tips - allt är innehåll)
-seo-description: Tips för att skapa ditt innehåll i Adobe Experience Manager (AEM). (tips - allt är innehåll)
+seo-description: Tips för att skapa innehåll i Adobe Experience Manager (AEM). (tips - allt är innehåll)
 uuid: fef2bf0f-70ec-4621-8479-a62b7e1fbc07
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: ca46b74c-6114-458b-98c0-2a93abffcdc3
 translation-type: tm+mt
 source-git-commit: 14daff213297d2435765dd46039f346ce3868ac5
+workflow-type: tm+mt
+source-wordcount: '448'
+ht-degree: 0%
 
 ---
 
@@ -49,7 +52,7 @@ Nodtyper fungerar på en låg nivå i infrastrukturlagret och de flesta krav kan
 
 ### Anta namnkonventioner i den gemensamma CR-rapporten {#adhere-to-naming-conventions-in-the-jcr}
 
-Om du följer namngivningskonventioner blir kodbasen mer konsekvent, vilket minskar förekomsten av defekter och ökar hastigheten för utvecklare som arbetar i systemet. Följande konventioner används av Adobe vid utveckling av AEM:
+Om du följer namngivningskonventioner blir kodbasen mer konsekvent, vilket minskar förekomsten av defekter och ökar hastigheten för utvecklare som arbetar i systemet. Adobe använder följande konventioner för att utveckla AEM:
 
 * Nodnamn
 
