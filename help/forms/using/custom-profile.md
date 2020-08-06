@@ -10,6 +10,9 @@ topic-tags: hTML5_forms
 discoiquuid: 9cd22244-9aa6-4b5f-96cf-c9cb3d6f9c8a
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '689'
+ht-degree: 0%
 
 ---
 
@@ -20,9 +23,9 @@ En profil är en resursnod i [Apache Sling](https://sling.apache.org/). Den repr
 
 Profilnoden har egenskapen **sling:resourceSuperType** och standardvärdet är **xfaforms/profile**. Återgivningsskriptet för noden finns på /libs/xfaforms/profile.
 
-Sling-skripten är JSP-skript. Dessa JSP-skript fungerar som behållare för att sätta ihop HTML för det begärda formuläret och de JS-/CSS-artefakter som krävs. Dessa Sling-skript kallas även **profilåtergivningsskript.** Profilåtergivaren anropar Forms OSGi-tjänsten för att återge det begärda formuläret.
+Sling-skripten är JSP-skript. Dessa JSP-skript fungerar som behållare för att sätta ihop HTML för det begärda formuläret och de JS-/CSS-artefakter som krävs. Dessa Sling-skript kallas även **profilåtergivningsskript.** Profilåtergivaren anropar tjänsten Forms OSGi för att återge det begärda formuläret.
 
-Profilskriptet är i html.jsp och html.POST.jsp för GET- och POST-begäranden. Du kan kopiera och ändra en eller flera filer för att åsidosätta och lägga till anpassningar. Gör inga ändringar på plats, så skriver uppdateringen över sådana ändringar.
+Profilskriptet finns i html.jsp och html.POST.jsp för begäranden om GET och POST. Du kan kopiera och ändra en eller flera filer för att åsidosätta och lägga till anpassningar. Gör inga ändringar på plats, så skriver uppdateringen över sådana ändringar.
 
 En profil innehåller olika moduler. Modulerna är formRuntime.jsp, config.jsp, toolbar.jsp, formBody.jsp, nav_footer.jsp och footer.jsp.
 
@@ -56,7 +59,7 @@ Så här skapar du en anpassad profil:
 
 ### Skapa profilnod {#create-profile-node}
 
-1. Navigera till CRX DE-gränssnittet på URL:en: och logga `https://[server]:[port]/crx/de` in i gränssnittet med administratörsautentiseringsuppgifter.
+1. Navigera till CRX DE-gränssnittet på URL:en: `https://[server]:[port]/crx/de` och logga in i gränssnittet med administratörsuppgifter.
 
 1. Navigera till platsen */content/xfaforms/profiles* i den vänstra rutan.
 
@@ -80,4 +83,4 @@ När du har skapat en anpassad profil lägger du till återgivningsinformation i
 
 1. Kontrollera att profilen har skapats genom att öppna URL `https://[server]:[port]/content/xfaforms/profiles/hrform.html`
 
-Verifiera formulären genom att [importera formulären](/help/forms/using/get-xdp-pdf-documents-aem.md) från det lokala filsystemet till AEM Forms och [förhandsgranska formuläret](/help/forms/using/previewing-forms.md) på AEM-serverns författarinstans.
+Kontrollera formulären genom att [importera formulären](/help/forms/using/get-xdp-pdf-documents-aem.md) från det lokala filsystemet till AEM Forms och [förhandsgranska formuläret](/help/forms/using/previewing-forms.md) AEM serverns författarinstans.
