@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 237b8cc6-158e-4c51-970d-4c9cc74f6496
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '335'
+ht-degree: 0%
 
 ---
 
@@ -28,6 +31,7 @@ I följande procedur används det klassiska användargränssnittet för att skap
       * Den språkkod som stöds är en kod med två bokstäver och gemener som definieras av ISO-639-1
       * Den landskod som stöds är gemen eller versal, tvåbokstavskod enligt ISO 3166
    1. Markera mallen och klicka på Skapa.
+
    ![newpagefr](assets/newpagefr.png)
 
 1. I webbplatskonsolen väljer du webbplatsens rotsida i webbplatsträdet.
