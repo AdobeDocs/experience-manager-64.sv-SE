@@ -1,8 +1,8 @@
 ---
 title: Grunderna för communitykomponenter
 seo-title: Grunderna för communitykomponenter
-description: Lägg till webbgruppsfunktioner på AEM-webbplatser i redigeringsläge och konfigurera komponenter
-seo-description: Lägg till webbgruppsfunktioner på AEM-webbplatser i redigeringsläge och konfigurera komponenter
+description: Lägg till communityfunktioner AEM webbplatser i redigeringsläge och konfigurera komponenter
+seo-description: Lägg till communityfunktioner AEM webbplatser i redigeringsläge och konfigurera komponenter
 uuid: c017a7c5-40d1-4592-9317-96fd727dac86
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 21714581-7645-4b47-a9b0-9f1424013240
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '380'
+ht-degree: 2%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
 
 ## Översikt {#overview}
 
-I redigeringsavsnittet i dokumentationen beskrivs hur du lägger till webbgruppsfunktioner på AEM-webbplatser i redigeringsläge för författare samt hur du beskriver komponentkonfigurationer.
+I redigeringsavsnittet i dokumentationen beskrivs hur du lägger till communityfunktioner AEM webbplatser i redigeringsläge för författare samt beskriver komponentkonfigurationer.
 
-Komponenter kan utforskas med hjälp av en AEM-instans och den interaktiva [communitykomponentguiden](components-guide.md).
+Komponenter kan undersökas med hjälp av en AEM och den interaktiva [communitykomponentguiden](components-guide.md).
 
 ## Åtkomst till webbgruppskomponenter {#accessing-communities-components}
 
@@ -33,7 +36,7 @@ Tillgängliga webbgruppskomponenter listas [här](author-communities.md#availabl
 >
 >Allmän redigeringsinformation finns i [snabbguiden till redigeringssidorna](../../help/sites-authoring/qg-page-authoring.md).
 >
->Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md).
+>Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md).
 
 ### Gå in i designläge {#entering-design-mode}
 
@@ -53,7 +56,7 @@ De valda komponenterna är nu tillgängliga i komponentwebbläsaren:
 
 [Klientbaserade bibliotek](../../help/sites-developing/clientlibs.md) (clientlibs) krävs för att en komponent ska fungera korrekt (JavaScript) och formatera (CSS).
 
-När du lägger till en webbgruppskomponent på en sida, om resultatet är ett fel eller ett oväntat utseende, är det första du bör försöka att lägga till de nödvändiga klientlibs för webbkomponenterna. Mer information finns i [Clientlibs for Communities Components](clientlibs.md).
+När du lägger till en webbgruppskomponent på en sida, om resultatet är ett fel eller ett oväntat utseende, är det första du ska försöka att lägga till de nödvändiga klientlibs för webbkomponenterna. Mer information finns i [Clientlibs for Communities Components](clientlibs.md).
 
 ### Exempel: Inledningsvis placerade granskningar utan klientbibliotek... {#example-initially-placed-reviews-without-client-libraries}
 
@@ -63,7 +66,7 @@ När du lägger till en webbgruppskomponent på en sida, om resultatet är ett f
 
 ![chlimage_1-427](assets/chlimage_1-427.png)
 
-## Taggning {#tagging}
+## Taggar {#tagging}
 
 Många webbgruppsfunktioner kan konfigureras så att medlemmar kan tagga innehåll som anges (publiceras) i publiceringsmiljön.
 
@@ -71,7 +74,7 @@ Om taggning tillåts kan communityplatsens konfiguration ställas in så att den
 
 Funktioner som tillåter taggning: [blogg](blog-feature.md), [kalender](calendar.md), [filbibliotek](file-library.md), [forum](forum.md)
 
-Funktioner som använder taggar: [katalog](catalog.md), [sökning](search.md), [socialt taggmoln](tagcloud.md)
+Funktioner som använder taggar: [katalog](catalog.md), [sökning](search.md), moln för [sociala taggar](tagcloud.md)
 
 För redigeringsinformation:
 
@@ -79,13 +82,13 @@ För redigeringsinformation:
 
 För administrativ information:
 
-* Skapa taggnamnutrymmen (taxonomi): Administrera [taggar](../../help/sites-administering/tags.md)
+* Skapa taggnamnutrymmen (taxonomi): [Administrera taggar](../../help/sites-administering/tags.md)
 * Konfiguration av communityplats: se [TAGGNING](sites-console.md#tagging)
 * [Tagga användargenererat innehåll](../../help/sites-authoring/tags.md)
 * [Aktiveringsresurser för taggning](tag-resources.md)
 
 För utvecklarinformation:
 
-* [AEM Tagging Framework](../../help/sites-developing/framework.md)
+* [AEM Taggningsramverk](../../help/sites-developing/framework.md)
 * [Tagga viktiga](tag.md)
 
