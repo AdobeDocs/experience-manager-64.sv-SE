@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: dfbc1d2f-80c1-4564-a01c-a5028b7257d7
 translation-type: tm+mt
 source-git-commit: 0edddfde1e66ec487139f98e9ffafee885e61dfd
+workflow-type: tm+mt
+source-wordcount: '967'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 0edddfde1e66ec487139f98e9ffafee885e61dfd
 
 Proxyservern fungerar som en mellanliggande server som vidarebefordrar begäranden mellan en klient och en server. Proxyservern håller reda på alla klient-server-interaktioner och genererar en logg över hela TCP-kommunikationen. På så sätt kan du övervaka exakt vad som händer, utan att behöva komma åt huvudservern.
 
-Du hittar proxyservern i din AEM-installation här:
+Proxyservern finns i AEM här:
 
 `crx-quickstart/opt/helpers/proxy-2.1.jar`
 
@@ -46,7 +49,7 @@ Det här är värdadressen för den CRX-instans som du vill ansluta till. Om ins
 
 `<remoteport>`
 
-Det här är värdporten för mål-CRX-instansen. Standardinställningen för en nyinstallerad AEM-installation är **`4502`** och standardinställningen för en nyinstallerad AEM-författarinstans är `4502`.
+Det här är värdporten för mål-CRX-instansen. Standardinställningen för en nyinstallerad AEM är **`4502`** och standardinställningen för en nyinstallerad AEM författarinstans är `4502`.
 
 `<localport>`
 
@@ -126,13 +129,13 @@ Innehållet i `test.html` är:
 </html>
 ```
 
-Anta att AEM-instansen körs när `localhost:4502` vi startar proxyn så här:
+Om AEM körs när `localhost:4502` proxyn startas:
 
 `java -jar proxy.jar localhost 4502 4444 -logfile test.log`
 
 CQ/CRX-instansen kan nu nås via proxyn på `localhost:4444` och all kommunikation via den här porten loggas till `test.log`.
 
-Om vi nu tittar på utdata från proxyn ser vi interaktionen mellan webbläsaren och AEM-instansen.
+Om vi nu tittar på utdata från proxyn ser vi interaktionen mellan webbläsaren och AEM.
 
 Vid start skickar proxyn följande:
 
@@ -162,7 +165,7 @@ C-0-#000684 -> [59-7913-4285-8857-832c087bafd5_c484727d3b3665ad%3acrx.default; y
 C-0-#000824 -> [ ]
 ```
 
-AEM-instansen svarar med innehållet i filen `test.html`:
+AEM svarar med filens innehåll `test.html`:
 
 ```shell
 S-0-#000000 -> [HTTP/1.1 200 OK ]
