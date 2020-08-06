@@ -1,8 +1,8 @@
 ---
 title: Tjänstanvändare i AEM
 seo-title: Tjänstanvändare i AEM
-description: Läs mer om serviceanvändare i AEM.
-seo-description: Läs mer om serviceanvändare i AEM.
+description: Läs mer om tjänstanvändare i AEM.
+seo-description: Läs mer om tjänstanvändare i AEM.
 uuid: 4efab5fb-ba11-4922-bd68-43ccde4eb355
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 9cfe5f11-8a0e-4a27-9681-a8d50835c864
 translation-type: tm+mt
 source-git-commit: dda8156729aa46dd6cfd779bca120b165ccc980b
+workflow-type: tm+mt
+source-wordcount: '1788'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: dda8156729aa46dd6cfd779bca120b165ccc980b
 
 ## Översikt {#overview}
 
-Huvudsättet att få en administrativ session eller resurslösare i AEM var att använda de `SlingRepository.loginAdministrative()` - och `ResourceResolverFactory.getAdministrativeResourceResolver()` metoder som Sling tillhandahåller.
+Det huvudsakliga sättet att få en administrativ session eller resurslösare i AEM var att använda `SlingRepository.loginAdministrative()` - och `ResourceResolverFactory.getAdministrativeResourceResolver()` -metoderna från Sling.
 
 Ingen av dessa metoder har dock utformats kring [principen om minst privilegium](https://en.wikipedia.org/wiki/Principle_of_least_privilege) och gör det för enkelt för en utvecklare att inte planera för en korrekt struktur och motsvarande åtkomstkontrollnivåer för sitt innehåll tidigt. Om det finns en säkerhetslucka i en sådan tjänst leder det ofta till eskalering av behörigheter till `admin` användaren, även om koden i sig inte behöver administratörsbehörighet för att fungera.
 
@@ -90,7 +93,7 @@ Om ovanstående misslyckas erbjuder Sling 7 en tjänst för Mappning av tjänsta
 * `service-id` mappas till en resurslösare och/eller JCR-databasens användar-ID för autentisering
 * `service-name` är det symboliska namnet på det paket som tillhandahåller tjänsten
 
-## Andra rekommendationer {#other-recommendations}
+## Andra Recommendations {#other-recommendations}
 
 ### Ersätta administratörssessionen med en tjänstanvändare {#replacing-the-admin-session-with-a-service-user}
 
@@ -111,7 +114,7 @@ Om du vill ersätta administratörssessionen med en tjänstanvändare utför du 
 
 ## Skapa en ny tjänstanvändare {#creating-a-new-service-user}
 
-När du har verifierat att ingen användare i listan över AEM-tjänstanvändare kan användas för ditt användningsfall och att motsvarande RTC-problem har godkänts, kan du lägga till den nya användaren i standardinnehållet.
+När du har verifierat att ingen användare i listan över AEM användare kan användas för ditt användningsfall och att motsvarande RTC-problem har godkänts, kan du lägga till den nya användaren i standardinnehållet.
 
 Rekommenderad metod är att skapa en tjänstanvändare som kan använda databasutforskaren på *https://&lt;server>:&lt;port>/crx/explorer/index.jsp*
 
@@ -191,8 +194,8 @@ Om du vill lägga till en mappning från tjänsten till motsvarande systemanvän
 
 Samtal som `loginAdministrative()` ofta visas tillsammans med delade sessioner. Dessa sessioner hämtas vid aktivering av tjänsten och loggas bara ut när tjänsten har stoppats. Även om detta är vanligt leder det till två problem:
 
-* **** Säkerhet: Sådana administratörssessioner används för att cachelagra och returnera resurser eller andra objekt som är bundna till den delade sessionen. Senare i anropsstacken kan dessa objekt anpassas till sessioner eller resurslösare med utökad behörighet, och ofta är det inte tydligt för anroparen att det är en administratörssession som de arbetar med.
-* **** Prestanda: I Oak-delade sessioner kan prestandaproblem uppstå och du bör inte använda dem för närvarande.
+* **Säkerhet:** Sådana administratörssessioner används för att cachelagra och returnera resurser eller andra objekt som är bundna till den delade sessionen. Senare i anropsstacken kan dessa objekt anpassas till sessioner eller resurslösare med utökad behörighet, och ofta är det inte tydligt för anroparen att det är en administratörssession som de arbetar med.
+* **Prestanda:** I Oak-delade sessioner kan prestandaproblem uppstå och du bör inte använda dem för närvarande.
 
 Den mest uppenbara lösningen för säkerhetsrisken är att helt enkelt ersätta `loginAdministrative()` samtalet med ett `loginService()` till en användare med begränsad behörighet. Detta påverkar dock inte eventuella prestandaförsämringar. En möjlighet att begränsa detta är att kapsla in all begärd information i ett objekt som inte har någon koppling till sessionen. Skapa sedan (eller förstör) sessionen på begäran.
 
@@ -215,21 +218,21 @@ När händelser eller jobb bearbetas, och i vissa fall arbetsflöden, förloras 
 
 1. Skicka `user-id` i händelsens nyttolast och använd personifiering.
 
-   **** Fördelar: Lätt att använda.
+   **Fördelar:** Lätt att använda.
 
-   **** Nackdelar: Använder fortfarande `loginAdministrative()`. Den autentiserar en begäran som redan har autentiserats.
+   **Nackdelar:** Använder fortfarande `loginAdministrative()`. Den autentiserar en begäran som redan har autentiserats.
 
 1. Skapa eller återanvänd en tjänstanvändare som har åtkomst till data.
 
-   **** Fördelar: Enhetlig med den aktuella designen. Behöver minimala förändringar.
+   **Fördelar:** Enhetlig med den aktuella designen. Behöver minimala förändringar.
 
-   **** Nackdelar: Behöver mycket kraftfulla tjänstanvändare vara flexibla, vilket enkelt kan leda till eskalering av behörigheter. Omvandlar säkerhetsmodellen.
+   **Nackdelar:** Behöver mycket kraftfulla tjänstanvändare vara flexibla, vilket enkelt kan leda till eskalering av behörigheter. Omvandlar säkerhetsmodellen.
 
 1. Skicka en serialisering av `Subject` i händelsens nyttolast och skapa en `ResourceResolver` baserad på det ämnet. Ett exempel är JAAS `doAsPrivileged` i `ResourceResolverFactory`.
 
-   **** Fördelar: Ren implementering ur säkerhetssynpunkt. Det undviker omautentisering och arbetar med de ursprungliga behörigheterna. Kod som är relevant för säkerheten är transparent för händelsens konsument.
+   **Fördelar:** Ren implementering ur säkerhetssynpunkt. Det undviker omautentisering och arbetar med de ursprungliga behörigheterna. Kod som är relevant för säkerheten är transparent för händelsens konsument.
 
-   **** Nackdelar: Behov av omfaktorisering. Det faktum att den säkerhetsrelaterade koden som är genomskinlig för händelsekonsumenten också kan leda till problem.
+   **Nackdelar:** Behov av omfaktorisering. Det faktum att den säkerhetsrelaterade koden som är genomskinlig för händelsekonsumenten också kan leda till problem.
 
 Den tredje metoden är för närvarande den bästa behandlingstekniken.
 
@@ -239,6 +242,6 @@ I implementeringar av arbetsflödesprocesser förloras vanligtvis motsvarande an
 
 För att åtgärda dessa problem rekommenderar vi att samma metoder som anges i [Bearbetningshändelser, Förprocessorer för replikering och Jobb](/help/sites-administering/security-service-users.md#processing-events-replication-preprocessors-and-jobs) används.
 
-## Sling POST-processorer och borttagna sidor {#sling-post-processors-and-deleted-pages}
+## Processorerna för att dela POST och borttagna sidor {#sling-post-processors-and-deleted-pages}
 
-Det finns ett par administrativa sessioner som används för att slinga POST-processorimplementeringar. Vanligtvis används administrativa sessioner för att komma åt noder som väntar på att tas bort inom den POST som bearbetas. De är därför inte längre tillgängliga via begärandesessionen. En nod som väntar på att tas bort kan nås för att visa metadata som annars inte ska vara tillgängliga.
+Det finns några administrativa sessioner som används för att skicka POST-processorimplementeringar. Vanligtvis används administrativa sessioner för att komma åt noder som väntar på att tas bort inom den POST som bearbetas. De är därför inte längre tillgängliga via begärandesessionen. En nod som väntar på att tas bort kan nås för att visa metadata som annars inte ska vara tillgängliga.
