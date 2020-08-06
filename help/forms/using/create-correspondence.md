@@ -43,6 +43,7 @@ Markera den bokstav du vill förhandsgranska genom att följa följande steg:
 
    * formulär-användare (för förhandsgranskning på författarinstans)
    * cm-agent-users (för återgivning vid publicering)
+
    Om du inte har de behörigheter som krävs ber du administratören om rätt åtkomst. Mer information om hur du skapar och lägger till användare i grupper finns i [Lägga till användare eller grupper i en grupp](/help/sites-administering/security.md). Om du försöker återge en korrespondens utan att ha rätt behörighet visas felsidan 404.
 
 1. Om du har valt **Förhandsvisa** > **Egen**&#x200B;öppnas en dialogruta. I dialogrutan markerar du en datafil, som motsvarar dataordlistan, som du vill förhandsgranska bokstaven med och väljer sedan **Förhandsgranska**. En datafil skapas baserat på ett datalexikon för en viss bokstav. Mer information om datafilen finns i [Dataordlista](/help/forms/using/data-dictionary.md#p-working-with-test-data-p).
@@ -51,13 +52,13 @@ Markera den bokstav du vill förhandsgranska genom att följa följande steg:
 
 1. Bokstaven HTML-förhandsgranskning (förhandsgranskning av mobilformulär) öppnas som standard med fliken Data i fokus.
 
-   Mer information om mobilformulär och vilka funktioner de har stöd för finns i [Funktionsdifferentiering mellan mobilformulär och PDF-formulär](https://helpx.adobe.com/livecycle/help/mobile-forms/feature-differentiation-mobile-forms-pdf.html).
+   Mer information om mobilformulär och vilka funktioner de har stöd för finns i [Funktionsdifferentiering mellan Mobile Forms och PDF forms](https://helpx.adobe.com/livecycle/help/mobile-forms/feature-differentiation-mobile-forms-pdf.html).
 
    Det finns tre flikar: data, innehåll och bilagor. Om det inte finns några dataelement (platshållarvariabler och layoutfält) öppnas bokstaven direkt i med fliken Innehåll. Fliken Bifogade filer är bara tillgänglig när det finns bifogade filer eller när biblioteksåtkomst är aktiverat.
 
    >[!NOTE]
 
-   >Mer information om hur du växlar mellan HTML- och PDF-återgivningsläget för förhandsgranskning av brev finns i [Ändra återgivningsläget för bokstaven](#changerenditionmode). Mer information om PDF-stöd i Correspondence Management och AEM finns i [Avbryta webbläsarplugin-program för NPAPI och dess effekt](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html) samt [PDF-formulär till HTML5-formulär](https://helpx.adobe.com/aem-forms/kb/pdf-forms-to-html5-forms.html).
+   >Mer information om hur du växlar mellan HTML- och PDF-återgivningsläget för förhandsgranskning av brev finns i [Ändra återgivningsläget för bokstaven](#changerenditionmode). Mer information om PDF-stöd i Correspondence Management och AEM finns i [Avbryta webbläsarplugin-program för NPAPI och dess effekt](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html) och [PDF forms till HTML5 Forms](https://helpx.adobe.com/aem-forms/kb/pdf-forms-to-html5-forms.html).
 
 ### Ange data {#enterdata}
 
@@ -128,6 +129,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
    * Valutasymboler som €,¥ och £
    * Matematiska symboler som t.ex.¥, Ð och ^
    * Interpunktionssymboler som ‟ och&quot;
+
    ![specialtecken-1](assets/specialcharacters-1.png)
 
    Correspondence Management har inbyggt stöd för 210 specialtecken. Administratören kan [lägga till stöd för fler/anpassade specialtecken genom anpassning](/help/forms/using/custom-special-characters.md).
@@ -158,6 +160,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
    * Obligatoriska fält.
    * Layoutfält om de är obligatoriska och bundna till användaren.
    * Endast unika variabelinstanser. Om en modul, målområde eller brevmall innehåller två eller flera instanser av samma variabel, visas antalet som 1 (en). För var och en av förekomsterna visas dock antalet som 1.
+
    Antal ofyllda variabler inkluderar inte avmarkerade moduler. Om en modul ingår i en brevmall men inte i bokstaven visas inte antalet ofyllda variabler i den här modulen.
 
    För målområdet, modulen och variabeln visas antalet till höger om varje objekt i bokstavsmallen. För den fullständiga mallen visas dock antalet i statusfältet Skapa korrespondens.
@@ -168,6 +171,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
    * **Villkor** Visar summan av de unika, ofyllda villkorsvariablerna i villkoret och variablerna i de resulterande modulerna.
    * **Lista** Visar summan av alla unika ofyllda variabler som finns i modulerna som är tilldelade till listan.
    * **Målområde** Visar summan av alla unika ofyllda variabler som finns i modulerna som tilldelats målområdet.
+
    Observera följande när det gäller variabler med standardvärden:
 
    * Ett booleskt variabelfält får standardvärdet *false*. Variabeln anses dock vara ofylld. Det innebär att variabelantalet innehåller alla booleska variabelfält med värdet *false*.
@@ -255,7 +259,7 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
 
    >[!NOTE]
    >
-   >Om du använder Mozilla Firefox- och HTML-återgivningstypen och vill förhandsgranska bokstaven som en förenklad PDF-fil, kontrollerar du att du använder det inbyggda plugin-programmet för webbläsaren och inte plugin-programmet för Acrobat. Om du vill välja insticksprogrammet för webbläsaren går du till inställningarna för Mozilla Firefox och väljer Förhandsgranska i Firefox för innehållstypen PDF.
+   >Om du använder Mozilla Firefox- och HTML-återgivningstypen och vill förhandsgranska bokstaven som en förenklad PDF-fil måste du använda det inbyggda plugin-programmet för webbläsaren och inte plugin-programmet för Acrobat. Om du vill välja insticksprogrammet för webbläsaren går du till inställningarna för Mozilla Firefox och väljer Förhandsgranska i Firefox för innehållstypen PDF.
 
 1. Om du tycker att den förenklade PDF-förhandsgranskningen är tillräcklig trycker du på **Skicka** för att skicka brevet. Du kan också ändra brevet genom att trycka på **Avsluta förhandsgranskning** för att gå tillbaka till förhandsgranskningen av brevet för att skapa korrespondens för att göra ändringar i brevet. När du trycker på Submit (Skicka), om konfigurationen Hantera bokstavsinstans är aktiverad på Publish-instansen, genereras instansen för att skicka brev.
 
@@ -265,7 +269,7 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
 
    När du har gjort de ändringar du vill kan du antingen skicka brevet från HTML5-förhandsgranskningen eller trycka på Förhandsgranska igen för att granska den förenklade PDF-utdatafilen.
 
-   Mer information om skillnader mellan HTML5-formulär och PDF-formulär finns i [Funktionsdifferentiering mellan HTML5-formulär och PDF-formulär](/help/forms/using/feature-differentiation-html5-forms-pdf-forms.md).
+   Mer information om skillnader mellan HTML5-formulär och PDF forms finns i [Funktionsskillnad mellan HTML5-formulär och PDF forms](/help/forms/using/feature-differentiation-html5-forms-pdf-forms.md).
 
 ## Spara utkast och skicka brev {#savingdrafts}
 
@@ -279,7 +283,7 @@ Det finns två typer av bokstavsinstanser som kan sparas: Utkastinstans och Skic
 
 Sådana instanser kan bara sparas när brevet visas på en publiceringsinstans. Som standard är sparandet av instanser inaktiverat. Gör så här om du vill att instanser av bokstäver ska kunna sparas:
 
-1. Öppna Adobe Experience Manager Web Console-konfiguration för servern i AEM med följande URL: https://&lt;server>:&lt;port>/&lt;kontextsökväg>/system/console/configMgr
+1. I AEM öppnar du Adobe Experience Manager Web Console Configuration för servern med följande URL: https://&lt;server>:&lt;port>/&lt;kontextsökväg>/system/console/configMgr
 1. Leta upp **[!UICONTROL Correspondence Management Configurations]** och klicka på den.
 1. Kontrollera **[!UICONTROL Manage Letter Instances on Publish]** konfigurationen och klicka sedan på **[!UICONTROL Save]**.
 
@@ -291,23 +295,23 @@ Bokstavsinstanser sparas på publiceringsinstansen och replikeras omvänt på f�
 
 ### Fjärrspara {#remote-save}
 
-Det här alternativet finns för personer som har problem med att spara användardata vid publiceringsinstanser, vilket vanligtvis är utanför företagets brandvägg. När fjärrsparning är aktiverat sparas inte bokstavsinstanserna i publiceringsinstansen, men de sparas på fjärrbasis på den behandlande författaren som har angetts via LiveCycle Client SDK-konfigurationerna.
+Det här alternativet finns för personer som har problem med att spara användardata vid publiceringsinstanser, vilket vanligtvis är utanför företagets brandvägg. När fjärrsparning är aktiverat sparas inte bokstavsinstanserna i publiceringsinstansen, men de sparas på fjärrbasis på den bearbetningsförfattare som har angetts via SDK-konfigurationerna för LiveCycle-klienten.
 
 #### Aktivera fjärrsparande {#enable-remote-save}
 
-1. Öppna Adobe Experience Manager Web Console-konfiguration för servern i AEM med följande URL: `https://<server>:<port>/<contextpath>/system/console/configMgr`
+1. I AEM öppnar du Adobe Experience Manager Web Console Configuration för servern med följande URL: `https://<server>:<port>/<contextpath>/system/console/configMgr`
 1. Sök efter **[!UICONTROL Correspondence Management Configurations]** och klicka på den.
 1. Leta reda på **[!UICONTROL Remote Save]** konfigurationen, kontrollera den och klicka på **[!UICONTROL Save]**.
 
 #### Ange inställningar för bearbetningsförfattare {#specify-processing-author-settings}
 
-1. Öppna Adobe Experience Manager Web Console-konfiguration för servern i AEM med följande URL: `https://<server>:<port>/<contextpath>/system/console/configMgr`
+1. I AEM öppnar du Adobe Experience Manager Web Console Configuration för servern med följande URL: `https://<server>:<port>/<contextpath>/system/console/configMgr`
 
    ![Konfiguration av Adobe Experience Manager Web Console](assets/2configmanager.png)
 
-1. På den här sidan letar du upp Adobe LiveCycle Client SDK Configuration och expanderar den genom att klicka på den.
+1. På den här sidan letar du upp SDK-konfigurationen för LiveCycle-klienten och expanderar den genom att klicka på den.
 
-1. Ange namnet på LiveCycle-servern i URL:en för bearbetningsservern, ange inloggningsinformationen och klicka sedan på **Spara**.
+1. Ange LiveCycle-serverns namn, ange inloggningsinformationen och klicka sedan på **Spara** i URL:en för bearbetningsservern.
 
    ![Ange namn och inloggningsinformation för LiveCycle-servern](assets/3configmanager.png)
 
@@ -322,7 +326,7 @@ Det här alternativet finns för personer som har problem med att spara använda
 
 ## Återgivningslägen för förhandsgranskning av brev: Förhandsgranskning av mobilformulär och PDF-förhandsgranskning {#rendition-modes-of-letter-preview-mobile-forms-preview-and-pdf-preview}
 
-I AEM Forms Correspondence Management visas en bokstav som HTML i användargränssnittet Skapa korrespondens. Korrespondenshanteringen har dock fortfarande stöd för att återgå till PDF-förhandsgranskning i stället för HTML-förhandsgranskning. Mer information om hur du växlar mellan förhandsgranskningsläget för HTML och PDF finns i [Ändra återgivningsläget för bokstaven](#changerenditionmode).
+AEM Forms Correspondence Management visar en bokstav som HTML i användargränssnittet Create Correspondence. Korrespondenshanteringen har dock fortfarande stöd för att återgå till PDF-förhandsgranskning i stället för HTML-förhandsgranskning. Mer information om hur du växlar mellan förhandsgranskningsläget för HTML och PDF finns i [Ändra återgivningsläget för bokstaven](#changerenditionmode).
 
 Nedan följer de fördelar och funktioner som finns i HTML- och PDF-förhandsgranskning.
 
@@ -338,7 +342,7 @@ Nedan följer de fördelar och funktioner som finns i HTML- och PDF-förhandsgra
 * **Sidbrytning**: I PDF-förhandsgranskningen kan du se exakt hur sidbrytningarna i brevet påverkar utdata.
 * **Slutlig förhandsgranskning**: I PDF-förhandsgranskningen kan du visa den exakta formateringen och utseendet på brevet så som det kommer att se ut i utskriften.
 
-Mer information om skriptstöd i PDF-formulär finns i [Skriptstöd](https://help.adobe.com/en_US/livecycle/11.0/ScriptingSupport/index.html).
+Mer information om skriptstöd i PDF forms finns i [Skriptstöd](https://help.adobe.com/en_US/livecycle/11.0/ScriptingSupport/index.html).
 
 Mer information om skriptstöd i HTML5-formulär finns i [Skriptstöd för HTML5-formulär](/help/forms/using/scripting-support.md).
 
