@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Som standard använder AEM Token Authentication Handler för att autentisera varje begäran. För att autentiseringsbegäranden ska kunna hanteras måste hanteraren för tokenautentisering ha åtkomst till databasen för varje begäran. Detta inträffar eftersom cookies används för att upprätthålla autentiseringstillståndet. Logiskt sett måste tillståndet sparas i databasen för att efterföljande begäranden ska kunna valideras. Detta innebär att autentiseringsmekanismen är tillståndskänslig.
+Som standard använder AEM hanteraren för tokenautentisering för att autentisera varje begäran. För att autentiseringsbegäranden ska kunna hanteras måste hanteraren för tokenautentisering ha åtkomst till databasen för varje begäran. Detta inträffar eftersom cookies används för att upprätthålla autentiseringstillståndet. Logiskt sett måste tillståndet sparas i databasen för att efterföljande begäranden ska kunna valideras. Detta innebär att autentiseringsmekanismen är tillståndskänslig.
 
 Detta är särskilt viktigt för horisontell skalbarhet. I en konfiguration med flera instanser som den publiceringsgrupp som visas nedan kan belastningsutjämning inte uppnås på ett optimalt sätt. Med tillståndskänslig autentisering är det beständiga autentiseringstillståndet bara tillgängligt för den instans där användaren först autentiseras.
 
@@ -38,7 +38,7 @@ Om en publiceringsinstans inte blir tillgänglig förlorar alla användare som a
 
 ## Tillståndslös autentisering med den inkapslade token {#stateless-authentication-with-the-encapsulated-token}
 
-Lösningen för horisontell skalbarhet är tillståndslös autentisering med hjälp av det nya stödet för inkapslad token i AEM.
+Lösningen för horisontell skalbarhet är tillståndslös autentisering med hjälp av det nya stödet för kapslad token i AEM.
 
 Encapsulated Token är en kryptografi som gör att AEM kan skapa och validera autentiseringsinformation offline på ett säkert sätt utan att behöva komma åt databasen. På så sätt kan en autentiseringsbegäran ske på alla publiceringsinstanser utan att några snäva anslutningar behövs. Det har också en fördel med att förbättra autentiseringsprestanda eftersom databasen inte behöver nås för varje autentiseringsbegäran.
 
@@ -77,17 +77,18 @@ HMAC-nyckeln finns som en binär egenskap för `/etc/key` i databasen. Du kan h�
 
 För att replikera nyckeln mellan instanser måste du:
 
-1. Få tillgång till AEM-instansen, vanligtvis en författarinstans, som innehåller det nyckelmaterial som ska kopieras.
+1. få åtkomst till AEM, vanligtvis en författarinstans, som innehåller det nyckelmaterial som ska kopieras,
 1. Leta reda på paketet i det lokala filsystemet `com.adobe.granite.crypto.file` . Under den här sökvägen:
 
    * &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21
+
    Den `bundle.info` fil som finns i varje mapp identifierar paketnamnet.
 
 1. Navigera till datamappen. Till exempel:
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
-1. Kopiera HMAC- och mallfilerna.
+1. Kopiera HMAC-filer och överordnad filer.
 1. Gå sedan till den målinstans som du vill duplicera HMAC-nyckeln till och navigera till datamappen. Till exempel:
 
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
