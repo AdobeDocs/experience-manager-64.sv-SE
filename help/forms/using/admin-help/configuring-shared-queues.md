@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: fc403a60-b635-4334-9bf8-2f3d2036b2f3
 translation-type: tm+mt
 source-git-commit: 6a2455cb377a68254a5c58c6627c59716d284144
+workflow-type: tm+mt
+source-wordcount: '672'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ När uppgifterna har delats kan de utföras av användaren, med åtkomst till k�
 
 >[!NOTE]
 >
->Flex Workspace används inte i AEM-formulärsversioner.
+>Flex Workspace är föråldrat för AEM formulärreleaser.
 
 ### Konfigurera åtkomst till en vald användarkö {#configuring-access-to-a-selected-user-queue}
 
@@ -63,7 +66,7 @@ När användaren har tilldelats dessa uppgifter kan de slutföras med Workspace.
 
 >[!NOTE]
 >
->Flex Workspace används inte i AEM-formulärsversioner.
+>Flex Workspace är föråldrat för AEM formulärreleaser.
 
 ### Bevilja åtkomst till en vald användarkö {#granting-access-to-a-selected-user-queue}
 
