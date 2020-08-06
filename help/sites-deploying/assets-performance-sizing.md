@@ -11,6 +11,9 @@ topic-tags: configuring
 discoiquuid: a79839e2-be39-418b-a3bd-f5457e555172
 translation-type: tm+mt
 source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+workflow-type: tm+mt
+source-wordcount: '1247'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ Dåliga prestanda inom digital resurshantering kan påverka användarupplevelsen
 
 Interaktiva prestanda mäts i svarstid för sidor. Detta är den tid det tar från att ta emot HTTP-begäran till att stänga HTTP-svaret, som kan avgöras av loggfilerna för begäran. Vanliga målprestanda är en sidsvarstid på mindre än två sekunder.
 
-**2. Resurshantering** Ett problem med resurshanteringen är när användare överför resurser och det tar några minuter tills resurser konverteras och hämtas till AEM DAM.
+**2. Resursbearbetning** Ett problem med tillgångsbearbetning är när användare överför resurser och det tar några minuter tills resurser konverteras och hämtas till AEM DAM.
 
 Prestanda för tillgångsbearbetning mäts i genomsnittlig slutförandetid för arbetsflödet. Det här är den tid det tar från det att arbetsflödet för resursuppdatering anropas till det slutförs, vilket kan avgöras av användargränssnittet för arbetsflödesrapporter. Normala målprestanda beror på storleken och typen av resurser som bearbetas och antalet renderingar. Exempel på målprestanda kan vara följande:
 
@@ -38,7 +41,7 @@ Prestanda för tillgångsbearbetning mäts i genomsnittlig slutförandetid för 
 * under en minut för bilder som är mindre än 100 MB med standardrenderingar
 * under fem minuter för HD-videoklipp som är kortare än en minut
 
-**3. Hämtningshastighet** Ett genomströmningsproblem uppstår när hämtningen från AEM DAM tar lång tid och miniatyrerna visas inte direkt när du bläddrar i DAM-administratören eller DAM Finder.
+**3. Hämtningshastighet** Ett genomströmningsproblem uppstår när det tar lång tid att hämta från AEM DAM och miniatyrerna visas inte direkt när du bläddrar i DAM-administratören eller DAM Finder.
 
 Dataöverföringsprestanda mäts i antal kilobit per sekund. Det vanliga målet för prestanda är 300 kB per sekund för 100 samtidiga hämtningar.
 
@@ -47,7 +50,7 @@ Dataöverföringsprestanda mäts i antal kilobit per sekund. Det vanliga målet 
 För att kunna uppskatta vilken maskinvara du behöver för att bearbeta resurser måste följande aspekter beaktas:
 
 * Bildernas upplösning i antal pixlar
-* Den heap som tilldelats AEM:s process
+* Den heap som tilldelats AEM processen
 
 Mängden pixlar i bilden avgör bearbetningstiden - fler pixlar innebär att bearbetningen tar längre tid.\
 Bildtyp, komprimeringshastighet eller den relaterade storleken på filen som bilden lagras i påverkar inte den övergripande prestandan nämnvärt.
@@ -60,7 +63,7 @@ DAM-processerna är väl lämpade att utföras parallellt för stora mängder. N
 
 Omfattande bearbetning av digitala resurser kräver optimerade maskinvaruresurser, de viktigaste faktorerna är bildstorlek och högsta genomströmning för bearbetade bilder.
 
-Allokera minst 16 GB stackutrymme och konfigurera arbetsflödet för DAM-uppdatering av resurser så att det använder [Camera Raw-paketet](/help/assets/camera-raw.md) för att lägga in råbilder.
+Tilldela minst 16 GB stackutrymme och konfigurera arbetsflödet för DAM-uppdatering av resurs så att det använder det [Camera Raw paketet](/help/assets/camera-raw.md) för att lägga in råbilder.
 
 ## Förstå systemet {#understanding-the-system}
 
@@ -72,7 +75,7 @@ I följande förklaring beskrivs de möjliga prestandafallsområdena med vissa l
 
 **Tillfälligt filsystem** Ett långsamt lokalt filsystem kan orsaka interaktiva prestandaproblem, särskilt när det gäller sökning, eftersom sökindexen lagras på den lokala disken. Det kan dessutom orsaka problem med resursbearbetningen om kommandoradsprocessen används.
 
-**AEM DAM Finder** Interaktiva prestandaproblem som ofta uppstår i sökningar orsakas av hög processoranvändning på grund av många samtidiga användare eller andra CPU-krävande processer i samma instans. Genom att gå från virtuella datorer till dedikerade datorer och se till att inga andra tjänster körs på datorn kan du förbättra prestandan. Om hög processorbelastning orsakas av resursbearbetning och många samtidiga användare rekommenderar dag att du lägger till ytterligare klusternoder.
+**AEM DAM Finder** Interaktiva prestandaproblem som ofta förekommer i sökningar orsakas av hög processoranvändning på grund av många samtidiga användare eller andra CPU-krävande processer i samma instans. Genom att gå från virtuella datorer till dedikerade datorer och se till att inga andra tjänster körs på datorn kan du förbättra prestandan. Om hög processorbelastning orsakas av resursbearbetning och många samtidiga användare rekommenderar dag att du lägger till ytterligare klusternoder.
 
 **AEM DAM-arbetsflöde** Långvariga arbetsflödesprocesser vid tillgångsinmatning orsakar prestandaproblem vid bearbetning av resurser. Beroende på vilken typ av resurser som bearbetas kan detta visa på överanvändning av processorn. Dag rekommenderar att du minskar antalet andra processer som körs i systemet och ökar antalet tillgängliga processorer genom att lägga till klusternoder.
 
@@ -102,7 +105,7 @@ För varje digitalt resurshanteringsprojekt måste du se till att det finns ett 
 
 Följande prestandaförbättringar har hittills använts i projekt:
 
-* Selektiv renderingsgenerering: generera bara de återgivningar du behöver genom att lägga till villkor i arbetsflödet för resursbearbetning, så att mer kostsamma återgivningar bara genereras för vissa resurser.
+* Selektiv renderingsgenerering: generera bara de återgivningar du behöver genom att lägga till villkor i arbetsflödet för resursbearbetning, så att mer kostsamma återgivningar bara genereras för utvalda resurser.
 * Delat datalager bland instanser: när diskutrymmet börjar ta slut kan detta avsevärt minska det diskutrymme som behövs, till priset av högre konfigurationsinsatser och förlorad automatisk rensning av datalagret.
 
 ## Ytterligare läsning {#further-reading}
