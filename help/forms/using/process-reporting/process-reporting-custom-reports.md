@@ -1,8 +1,8 @@
 ---
 title: Anpassade rapporter i processrapportering
 seo-title: Anpassade rapporter i processrapportering
-description: Du kan skapa anpassade rapporter och lägga till dessa rapporter i gränssnittet för AEM Forms on JEE Process Reporting.
-seo-description: Du kan skapa anpassade rapporter och lägga till dessa rapporter i gränssnittet för AEM Forms on JEE Process Reporting.
+description: Du kan skapa anpassade rapporter och lägga till de här rapporterna i användargränssnittet för JEE-processrapportering.
+seo-description: Du kan skapa anpassade rapporter och lägga till de här rapporterna i användargränssnittet för JEE-processrapportering.
 uuid: 8974ec2d-ac54-4b44-9758-b1cf44b732fa
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,6 +10,9 @@ topic-tags: process-reporting
 discoiquuid: c668bd53-f2d8-4f8c-83f2-be0afd65392a
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '1042'
+ht-degree: 0%
 
 ---
 
@@ -45,7 +48,7 @@ CRX QueryBuilder REST-gränssnittet exponerar funktionerna i Asset Share Query B
    >
    >I varje fråga pekar parametern path på lagringsplatsen crx och tecknen escape-konverteras enligt URL-standarden.
 
-## Skapa en tjänst med hjälp av Query Builder API {#creating-a-service-using-query-builder-api-nbsp}
+## Skapa en tjänst med hjälp av Query Builder API  {#creating-a-service-using-query-builder-api-nbsp}
 
 Förutsättningen för att skapa en tjänst med hjälp av Query Builder API är [att skapa och distribuera CQ OSGI-paket](https://docs.adobe.com/docs/v5_2/html-resources/cq5_guide_developer/cq5_guide_developer.html) och [använda Query Builder API](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html).
 
@@ -420,7 +423,7 @@ Exempelfilen `pom.xml`som ska skapas ovanför tjänsten är:
 </project>
 ```
 
-## Skapa ett separat gränssnitt {#creating-a-separate-ui-nbsp}
+## Skapa ett separat gränssnitt  {#creating-a-separate-ui-nbsp}
 
 Förutsättningen för att skapa ett separat användargränssnitt för att visa resultat är [Sling Basics](https://docs.adobe.com/docs/en/cq/5-6-1/developing/the_basics.html), [Creating a CRX Node](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) och som ger rätt [åtkomstbehörighet](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control).
 
@@ -628,7 +631,7 @@ response.setCharacterEncoding("utf-8");
 </html>
 ```
 
-## Integrera rapportgränssnitt i befintligt processrapporteringsgränssnitt {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
+## Integrera rapportgränssnitt i befintligt processrapporteringsgränssnitt  {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
 
 Förutsättningen för att skapa ett separat användargränssnitt för att visa resultat är [Sling Basics](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html), [Creating a CRX Node](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) och som ger rätt [åtkomstbehörighet](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control).
 
@@ -640,6 +643,7 @@ Förutsättningen för att skapa ett separat användargränssnitt för att visa 
    * **link**- Anger relativ länk till renderaren för det separata användargränssnittet. Länken skapas i steg 1.
    * **description**- Anger rapportens enradsbeskrivning. Du kan lämna beskrivningsfältet tomt.
    * **icon**- Anger bilden som ska representera rapporten i bilder. Du kan lämna ikonfältet tomt.
+
    ![Egenskaper för nod ](assets/nodeproperties.png)
 
    Egenskaper för nod
