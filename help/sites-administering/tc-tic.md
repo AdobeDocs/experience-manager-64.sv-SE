@@ -20,17 +20,17 @@ ht-degree: 0%
 
 # Konfigurera översättningsintegreringsramverket{#configuring-the-translation-integration-framework}
 
-Översättningsintegreringsramverket integreras med översättningstjänster från tredje part för att samordna översättningen av AEM-innehåll.
+Översättningsintegreringsramverket integreras med översättningstjänster från tredje part för att samordna översättningen av AEM.
 
 * Anslut till översättningstjänsten.
 * Skapa en konfiguration för Translation Integration Framework.
 * Associera molnkonfigurationerna med sidorna.
 
-En översikt över funktionerna för innehållsöversättning i AEM finns i [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md).
+En översikt över funktionerna för översättning av innehåll i AEM finns i [Översätta innehåll för flerspråkiga platser](/help/sites-administering/translation.md).
 
 ## Ansluta till en översättningstjänstleverantör {#connecting-to-a-translation-service-provider}
 
-Skapa en molnkonfiguration som ansluter AEM till din översättningstjänstleverantör. AEM har funktioner för att ansluta till Microsoft Translator som standard.
+Skapa en molnkonfiguration som ansluter AEM till översättningstjänstleverantören. AEM kan ansluta till Microsoft Translator som standard.
 Följande översättningsleverantörer tillhandahåller en implementering av det nya API:t för översättningsprojekten. Länkar för mer information om integrationen:
 
 * [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html) (Adobe Exchange Premier Partner)
@@ -51,8 +51,9 @@ Följande översättningsleverantörer tillhandahåller en implementering av det
 >Här hittar du en lista över de senaste leverantörerna av personal- och maskinöversättning:
 >
 >
->* [AEM Human Translation](https://www.adobe.com/go/aem-human-translation-connectors)
->* [AEM Machine Translation](https://www.adobe.com/go/aem-machine-translation-connectors)
+>* [AEM mänsklig översättning](https://www.adobe.com/go/aem-human-translation-connectors)
+>* [AEM maskinöversättning](https://www.adobe.com/go/aem-machine-translation-connectors)
+
 >
 
 
@@ -77,7 +78,7 @@ Om olika delar av webbplatsen har olika översättningskrav skapar du flera ramv
 
 När du har konfigurerat ett ramverk för översättningsintegrering kan du [koppla det till sidorna](/help/sites-administering/tc-prep.md) som använder det.
 
-**Obs!** En översikt över funktionerna för innehållsöversättning i AEM finns i [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md).
+**Obs!** En översikt över funktionerna för översättning av innehåll i AEM finns i [Översätta innehåll för flerspråkiga platser](/help/sites-administering/translation.md).
 
 En enda konfiguration av ramverket styr hur sidinnehåll, communityinnehåll och resurser ska översättas.
 ![chlimage_1-386](assets/translation-config-64.jpg)
@@ -185,7 +186,7 @@ Resursegenskaperna styr hur resurser konfigureras. Mer information om översätt
  </tbody> 
 </table>
 
-1. Klicka på eller tryck på Verktyg > Åtgärder > Moln > Cloud Service i sidofältet.
+1. Klicka på eller tryck på Verktyg > Åtgärder > Moln > Cloud Services i sidofältet.
 1. I området Översättningsintegrering avgör om några konfigurationer har skapats vilken länk som visas:
 
    * Om inga konfigurationer har skapats klickar du på eller trycker på Konfigurera nu.
@@ -214,7 +215,7 @@ Dessutom, för alla communitykomponenter [för](/help/communities/scf.md) SCF p�
 Koppla en sida till översättningsleverantören som du använder för att översätta sidan och underordnade sidor.
 
 1. På webbplatskonsolen markerar du sidan som du vill konfigurera och klickar eller trycker på Visa egenskaper.
-1. Klicka eller tryck på Redigera och sedan på fliken Cloud Service.
+1. Klicka eller tryck på Redigera och sedan på fliken Cloud Services.
 1. Klicka eller tryck på Add Configuration (Lägg till konfiguration) > Translation Integration (Översättningsintegrering).
 1. Välj den översättningsleverantör som ska användas och klicka eller tryck sedan på Klar.
 
@@ -223,7 +224,7 @@ Koppla en sida till översättningsleverantören som du använder för att över
 Koppla en sida till översättningsintegreringsramverket som definierar hur du vill översätta sidan och underordnade sidor.
 
 1. På webbplatskonsolen markerar du sidan som du vill konfigurera och klickar eller trycker på Visa egenskaper.
-1. Klicka eller tryck på Redigera och sedan på fliken Cloud Service.
+1. Klicka eller tryck på Redigera och sedan på fliken Cloud Services.
 1. Klicka eller tryck på Add Configuration (Lägg till konfiguration) > Translation Integration (Översättningsintegrering).
 1. Markera det översättningsintegreringsramverk som ska användas och klicka eller tryck sedan på Klar.
 
