@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: fb354c72-debb-4fb6-9ccf-56ff5785c3ae
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '1061'
+ht-degree: 11%
 
 ---
 
@@ -29,7 +32,7 @@ I Projekt kan du skapa ett projekt, associera resurser med projektet och även t
 >
 >6.2 har gjort det möjligt att ordna projekt i mappar. På sidan Projekt kan du skapa ett projekt eller en mapp.
 >
->Om en mapp skapas kommer användaren till den mappen där han/hon kan skapa en annan mapp eller ett projekt. Det hjälper dig att ordna projekt i mappar baserat på kategorier som produktkampanjer, plats, översättningsspråk och så vidare.
+>Om en mapp skapas, flyttas användaren till den mappen där han/hon kan skapa en annan mapp eller ett projekt. Det hjälper dig att ordna projekt i mappar baserat på kategorier som produktkampanjer, plats, översättningsspråk och så vidare.
 >
 >Projekt och mappar kan visas i en listvy och även sökas igenom.
 
@@ -39,16 +42,16 @@ I Projekt kan du skapa ett projekt, associera resurser med projektet och även t
 
 ## Skapa ett projekt {#creating-a-project}
 
-När du skapar ett projekt innehåller AEM följande mallar som du kan välja mellan:
+AEM innehåller de här mallarna som du kan välja mellan när du skapar ett projekt:
 
 * Enkelt projekt
 * Medieprojekt
 * Fotoprojekt för produkt
 * Översättningsprojekt
 
-Du skapar ett projekt på samma sätt, från projekt till projekt. Skillnaden mellan projekttyperna inkluderar tillgängliga [användarroller](/help/sites-authoring/projects.md) och [arbetsflöden](/help/sites-authoring/projects-with-workflows.md).  Så här skapar du ett nytt projekt:
+Du skapar ett projekt på samma sätt med alla projekt. Projekttyperna skiljer sig åt bland annat vad gäller tillgängliga [användarroller](/help/sites-authoring/projects.md) och [arbetsflöden](/help/sites-authoring/projects-with-workflows.md).  Så här skapar du ett nytt projekt:
 
-1. I **Projekt**: tryck/klicka på **Skapa** för att öppna guiden **Skapa projekt** :
+1. I **Projekt** trycker/klickar du på **Skapa** för att öppna guiden **Skapa projekt**:
 1. Välj en mall. Enkelt projekt, medieprojekt, [översättningsprojekt](/help/sites-administering/tc-manage.md)och fotoprodukter [](/help/sites-authoring/managing-product-information.md) finns tillgängliga i kartongen och klicka på **Nästa**.
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
@@ -92,7 +95,7 @@ Samma metod används för att ta bort ett projekt från konsolen eller en länka
 
 >[!NOTE]
 >
->När du skapar projektet och lägger till användare till de olika rollerna skapas grupper som är kopplade till projektet automatiskt för att hantera associerade behörigheter. Ett projekt med namnet Myproject skulle till exempel ha tre grupper, **Myproject Owners**, **Myproject Editors**, **Myproject Observers**. Om projektet däremot tas bort tas de grupperna inte bort automatiskt. En administratör måste ta bort grupperna manuellt i **Verktyg** > **Dokumentskydd** > **Grupper**.
+>När du skapar projektet och lägger till användare för de olika rollerna skapas grupper som är kopplade till projektet automatiskt för att hantera associerade behörigheter. Ett projekt med namnet Myproject skulle till exempel ha tre grupper, **Myproject Owners**, **Myproject Editors** och **Myproject Observers**. Om projektet tas bort tas de grupperna dock inte bort automatiskt. En administratör måste ta bort grupperna manuellt i **Verktyg** > **Säkerhet** > **Grupper**.
 
 ### Lägga till objekt i en platta {#adding-items-to-a-tile}
 
