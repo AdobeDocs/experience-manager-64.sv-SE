@@ -1,6 +1,6 @@
 ---
-title: Använda delningsadaptrar
-seo-title: Använda delningsadaptrar
+title: Använda Sling-adaptrar
+seo-title: Använda Sling-adaptrar
 description: Sling erbjuder ett adaptermönster för att enkelt översätta objekt som implementerar gränssnittet Adaptable
 seo-description: Sling erbjuder ett adaptermönster för att enkelt översätta objekt som implementerar gränssnittet Adaptable
 uuid: 07f66a33-072d-49e1-8e67-8b80a6a9072a
@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: c081b242-67e4-4820-9bd3-7e4495df459e
 translation-type: tm+mt
 source-git-commit: 730a874376c21d5d137223e35662b42e722049cf
+workflow-type: tm+mt
+source-wordcount: '1747'
+ht-degree: 0%
 
 ---
 
 
-# Använda delningsadaptrar{#using-sling-adapters}
+# Använda Sling-adaptrar{#using-sling-adapters}
 
 [Sling](https://sling.apache.org) erbjuder ett [adaptermönster](https://sling.apache.org/site/adapters.html) för att enkelt översätta objekt som implementerar det [adapterbara](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29) gränssnittet. Det här gränssnittet innehåller en generisk [customiTo()](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29) -metod som översätter objektet till den klasstyp som skickas som argument.
 
@@ -237,7 +240,7 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
 <table> 
  <tbody> 
   <tr> 
-   <td><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html">Resurs</a><a href="https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html"><br /></a></td> 
+   <td><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html">Resurs</a><a href="https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html"><br /> </a></td> 
    <td>Mallens resurs.</td> 
   </tr> 
   <tr> 
@@ -272,7 +275,7 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
 | [Nod](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | Nod för resursen. |
 | ... | Allt som resursen kan anpassas till. |
 
-#### Taggning {#tagging}
+#### Taggar {#tagging}
 
 [**Taggen **](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/tagging/Tag.html)anpassas till:
 
