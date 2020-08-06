@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: aff8b79f-dd4e-486e-9d59-5d09dfe34f27
 translation-type: tm+mt
 source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+workflow-type: tm+mt
+source-wordcount: '1697'
+ht-degree: 2%
 
 ---
 
@@ -28,7 +31,7 @@ Använda [författarinstansen](http://localhost:4502/)
 * Logga in med administratörsbehörighet
 * Navigera till **[!UICONTROL Communities > Sites]**
 
-* Välj **[!UICONTROL Skapa]**
+* Välj **[!UICONTROL Create]**
 
 ### Steg 1: Webbplatsmall {#step-site-template}
 
@@ -45,18 +48,18 @@ I steget **Webbplatsmall** anger du en titel, en beskrivning, namnet på webbadr
 * **Molnkonfigurationer**: (lämna tomt om ingen molnkonfiguration har angetts) ange sökvägen till de angivna molnkonfigurationerna.
 * **Grundspråk** för communitywebbplats: (lämnas orört för ett enda språk: På engelska) använder du listrutan för att välja ett *eller flera* basspråk bland de tillgängliga språken - tyska, italienska, franska, japanska, spanska, portugisiska (Brasilien), kinesiska (traditionell) och kinesiska (förenklad). En communitywebbplats kommer att skapas för varje språk som läggs till och kommer att finnas i samma webbplatsmapp enligt bästa praxis som beskrivs i [Översätta innehåll för flerspråkiga webbplatser](../../help/sites-administering/translation.md). Rotsidan för varje webbplats kommer att innehålla en underordnad sida med språkkoden för ett av de valda språken, till exempel &quot;en&quot; för engelska eller &quot;fr&quot; för franska.
 
-* **[!UICONTROL Namn på]** communitywebbplats: `enable`
+* **[!UICONTROL Community Site Name]**: `enable`
 
    * den inledande URL:en visas under namnet på communityplatsen
    * för en giltig URL, lägg till en baskod + &quot;.html&quot;
 
       *till exempel* http://localhost:4502/content/sites/ `enable/en.html`
 
-* **[!UICONTROL Referensplatsmall]**: dra nedåt för att välja `Reference Structured Learning Site Template`
+* **[!UICONTROL Reference Site Template]**: dra nedåt för att välja `Reference Structured Learning Site Template`
 
-Markera **[!UICONTROL nästa]**
+Välj **[!UICONTROL Next]**
 
-### Steg 2:Design {#step-design}
+### Steg 2: Design {#step-design}
 
 Designsteget presenteras i två avsnitt där du kan välja tema och varumärkesbanderoll:
 
@@ -72,7 +75,7 @@ Välj det format som du vill använda på mallen. När du väljer det här alter
 
 ![chlimage_1-284](assets/chlimage_1-284.png) ![chlimage_1](assets/chlimage_1.jpeg)
 
-Välj **[!UICONTROL Nästa]**.
+Välj **[!UICONTROL Next]**.
 
 ### Steg 3: Inställningar {#step-settings}
 
@@ -94,13 +97,13 @@ Kontrollera att de flesta kryssrutor är avmarkerade för [användarhantering](s
 
 ![chlimage_1-285](assets/chlimage_1-285.png)
 
-#### TAGGNING {#tagging}
+#### TAGGING {#tagging}
 
-De taggar som kan användas för communityinnehåll kontrolleras genom att AEM-namnutrymmen som tidigare definierats via [taggningskonsolen](../../help/sites-administering/tags.md#tagging-console) (till exempel namnutrymmet [Tutorial](enablement-setup.md#create-tutorial-tags)) väljs.
+De taggar som kan användas för communityinnehåll kontrolleras genom att AEM namnutrymmen som tidigare definierats via [taggningskonsolen](../../help/sites-administering/tags.md#tagging-console) (till exempel namnutrymmet [Tutorial](enablement-setup.md#create-tutorial-tags)) väljs.
 
 Om du väljer Taggnamnutrymmen för communitywebbplatsen begränsas dessutom det urval som visas när du definierar kataloger och aktiveringsresurser. Viktig information finns i [Tagga aktiveringsresurser](tag-resources.md) .
 
-Det är enkelt att hitta namnutrymmen med typsnittssökning. Exempel:
+Det är enkelt att hitta namnutrymmen med typsnittssökning. Till exempel,
 
 * Skriv tut
 * Välj `Tutorial`
@@ -113,7 +116,7 @@ Det är enkelt att hitta namnutrymmen med typsnittssökning. Exempel:
 
 Om du vill att en community-medlem (eller grupp av medlemmar) ska kunna uppleva webbplatsen som community-hanterare använder du typsnittssökningen och väljer medlemmens eller gruppens namn bland alternativen i listrutan.
 
-Exempel:
+Till exempel,
 
 * Skriv &quot;q&quot;
 * Välj [Quinn Harper](enablement-setup.md#publishcreateenablementmembers)
@@ -142,7 +145,7 @@ Det som visas på skärmbilden `Communities`är ramverksexemplet från [konfigur
 
 I [översättningsinställningarna](sites-console.md#translation) anges om UGC kan översättas och till vilket språk.
 
-* Kontrollera **[!UICONTROL Tillåt maskinöversättning]**
+* Kontroll **[!UICONTROL Allow Machine Translation]**
 * Använd standardinställningarna
 
 ![chlimage_1-289](assets/chlimage_1-289.png)
@@ -151,20 +154,23 @@ I [översättningsinställningarna](sites-console.md#translation) anges om UGC k
 
 För en aktiveringscommunity måste du identifiera en eller flera aktiveringsansvariga i communityn.
 
-* **[!UICONTROL Aktivitetshanterare]**(krävs) Medlemmar i `Community Enablement Managers` gruppen kan väljas för att hantera den här communitywebbplatsen.
+* **[!UICONTROL Enablement Managers]**
+(obligatoriskt) Medlemmar i 
+`Community Enablement Managers` gruppen är tillgänglig för att väljas för att hantera den här communitywebbplatsen.
 
    * Skriv &quot;s&quot;
    * Välj `Sirius Nilson`
 
-* **[!UICONTROL Organisations-ID]** för Marketing Cloud (valfritt) ID:t för ett Adobe Analytics-konto som är nödvändigt när [Video Heartbeat Analytics](analytics.md#video-heartbeat-analytics) inkluderas i aktiveringsrapporten.
+* **[!UICONTROL Marketing Cloud Org Id]**
+(valfritt) ID:t för ett Adobe Analytics-konto som krävs när [Video Heartbeat Analytics](analytics.md#video-heartbeat-analytics) inkluderas i aktiveringsrapporteringen.
 
 ![chlimage_1-290](assets/chlimage_1-290.png)
 
-Välj **[!UICONTROL Nästa]**.
+Välj **[!UICONTROL Next]**.
 
-### Steg 4:Skapa communitywebbplats {#step-create-community-site}
+### Steg 4: Skapa communitywebbplats {#step-create-community-site}
 
-Välj **[!UICONTROL Skapa]**.
+Välj **[!UICONTROL Create]**.
 
 ![chlimage_1-291](assets/chlimage_1-291.png)
 
@@ -180,7 +186,7 @@ När du har valt communityplatsens mapp för du muspekaren över platsikonen så
 
 ![siteactionicons](assets/siteactionicons.png)
 
-När du väljer ellipsikonen (ikonen Fler åtgärder) visas alternativen Exportera plats och Ta bort plats.
+När du markerar ellipsikonen (ikonen Fler åtgärder) visas alternativen Exportera plats och Ta bort plats.
 
 ![siteactionsnya](assets/siteactionsnew.png)
 
@@ -228,14 +234,14 @@ Med hjälp av gruppkonsolen kan medlemmar läggas till individuellt eller genom 
 
 I det här exemplet `Community Ski Class` läggs gruppen till som medlem i gruppen `Community Enable Members` samt medlem `Quinn Harper`.
 
-* Navigera till **[!UICONTROL Communities > Groups]** console
-* Markera gruppen Aktivera medlemmar **[!UICONTROL för]** grupp
-* Ange `ski` i sökrutan **[!UICONTROL Lägg till medlemmar i grupp]**
-* Välj **[!UICONTROL Community Ski Class]** (grupp av elever)
+* Navigera till **[!UICONTROL Communities > Groups]** konsol
+* Markera **[!UICONTROL Community Enable Members]** grupp
+* Ange `ski` i **[!UICONTROL Add Members To Group]** sökrutan
+* Select **[!UICONTROL Community Ski Class]** (grupp av deltagare)
 * Ange `quinn` i sökrutan
-* Välj **[!UICONTROL Quinn Harper]** (kontakt för aktiveringsresurs)
+* Välj **[!UICONTROL Quinn Harper]** (aktivera resurskontakt)
 
-* Välj **[!UICONTROL Spara]**
+* Välj **[!UICONTROL Save]**
 
 ![chlimage_1-295](assets/chlimage_1-295.png)
 
@@ -268,7 +274,7 @@ För att komma igång
 1. Utöka i projektwebbläsaren `/etc/map`
 1. Markera `http` noden
 
-   * Välj **[!UICONTROL Skapa nod]**
+   * Välj **[!UICONTROL Create Node]**
 
       * **Namn** localhost.4503
 
@@ -292,7 +298,7 @@ För att komma igång
       * **Värde** /content/sites/enable/en.html
 
 
-1. Välj **[!UICONTROL Spara alla]**
+1. Välj **[!UICONTROL Save All]**
 1. (valfritt) Ta bort webbläsarhistoriken
 1. Gå till http://localhost:4503/
 
@@ -300,7 +306,7 @@ För att komma igång
 
 >[!NOTE]
 >
->Om du vill inaktivera det lägger du bara till egenskapsvärdet med&quot;x&quot; - `sling:match` - och `xlocalhost.4503/$` Spara alla ****.
+>Om du vill inaktivera lägger du bara till ett `sling:match` egenskapsvärde med&quot;x&quot; - `xlocalhost.4503/$` - och **[!UICONTROL Save All]**.
 
 ![chlimage_1-297](assets/chlimage_1-297.png)
 
@@ -312,11 +318,11 @@ Om det inte går att spara ändringarna måste du kontrollera att nodnamnet är 
 
 #### Felsökning: Det gick inte att omdirigera {#troubleshooting-fail-to-redirect}
 
-&quot;**$**&quot; i slutet av `sling:match`strängen för det reguljära uttrycket är avgörande, så att bara exakt `http://localhost:4503/` mappas. I annat fall läggs omdirigeringsvärdet till alla sökvägar som kan finnas efter server:port i URL:en. När AEM försöker dirigera om till inloggningssidan misslyckas den således.
+&quot;**$**&quot; i slutet av `sling:match`strängen för det reguljära uttrycket är avgörande, så att bara exakt `http://localhost:4503/` mappas. I annat fall läggs omdirigeringsvärdet till alla sökvägar som kan finnas efter server:port i URL:en. När AEM försöker dirigera om till inloggningssidan misslyckas den alltså.
 
 ## Ändra communityplatsen {#modifying-the-community-site}
 
-När webbplatsen har skapats kan författare använda ikonen [](sites-console.md#authoring-site-content) Open Site för att utföra vanliga AEM-redigeringsaktiviteter.
+När webbplatsen har skapats kan författare använda ikonen [](sites-console.md#authoring-site-content) Öppna plats för att utföra AEM standardåtgärder.
 
 Dessutom kan administratörer använda ikonen [](sites-console.md#modifying-site-properties) Redigera plats för att ändra egenskaper för platsen, till exempel titeln.
 
@@ -324,7 +330,7 @@ Kom ihåg att **spara** och **publicera** webbplatsen igen efter eventuella änd
 
 >[!NOTE]
 >
->Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidorna](../../help/sites-authoring/qg-page-authoring.md).
+>Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till hur du skapar sidor](../../help/sites-authoring/qg-page-authoring.md).
 
 ### Lägg till en katalog {#add-a-catalog}
 
@@ -334,7 +340,7 @@ Om inte kan du enkelt lägga till katalogfunktionen. På så sätt kan andra med
 
 Om platsstrukturen redan innehåller katalogfunktionen kan dess namn ändras.
 
-Om du vill ändra platsens struktur går du till konsolen **[!UICONTROL Webbplatser]** , öppnar `enable` mappen och väljer ikonen **Redigera plats** för att komma åt egenskaperna för `Enablement Tutorial`.
+Om du vill ändra platsens struktur går du till **[!UICONTROL Communities, Sites]** konsolen, öppnar `enable` mappen och väljer ikonen **Redigera plats** för att komma åt egenskaperna för `Enablement Tutorial`.
 
 Välj STRUKTURpanelen om du vill lägga till en katalog eller ändra en befintlig katalog:
 
@@ -343,7 +349,7 @@ Välj STRUKTURpanelen om du vill lägga till en katalog eller ändra en befintli
 * **URL**: `catalog`
 
 * **Markera alla namnutrymmen**: lämna som standard.
-* Välj **[!UICONTROL Spara]**
+* Välj **[!UICONTROL Save]**
 
 ![chlimage_1-299](assets/chlimage_1-299.png)
 
@@ -351,6 +357,6 @@ Använd placeringsikonen för att flytta katalogfunktionen till den andra positi
 
 ![chlimage_1-300](assets/chlimage_1-300.png)
 
-Välj **[!UICONTROL Spara]** i det övre högra hörnet om du vill spara ändringarna på communitywebbplatsen.
+Välj **[!UICONTROL Save]** i det övre högra hörnet för att spara ändringarna på communitywebbplatsen.
 
 Publicera sedan om **webbplatsen** .
