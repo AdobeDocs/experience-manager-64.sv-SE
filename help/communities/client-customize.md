@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 translation-type: tm+mt
 source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+workflow-type: tm+mt
+source-wordcount: '1273'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +34,7 @@ Två större metoder är att täcka över eller utöka en komponent.
 
 ## Övertäckningar {#overlays}
 
-Att ersätta en komponent är ett sätt att göra ändringar i en standardkomponent och påverka alla förekomster som använder standardkomponenten.
+Att täcka över en komponent är ett sätt att göra ändringar i en standardkomponent och påverka alla förekomster som använder standardkomponenten.
 
 Övertäckningen uppnås genom att en kopia av standardkomponenten i katalogen /**apps** ändras, i stället för att originalkomponenten i katalogen /**libs** ändras. Komponenten är konstruerad med en identisk relativ sökväg, förutom att &#39;libs&#39; ersätts med &#39;apps&#39;.
 
@@ -102,7 +105,7 @@ De anpassade formaten åsidosätter nu standardramverksformaten och komponenten 
 
 >[!CAUTION]
 >
->**Alla CSS-klassnamn som har prefixet** scf-js-&amp;ast; har en specifik användning i javascript-kod. Dessa klasser påverkar en komponents tillstånd (till exempel växla från dold till synlig) och bör varken åsidosättas eller tas bort.
+>Alla CSS-klassnamn som har prefixet **scf-js-&amp;ast;** har en specifik användning i javascript-kod. Dessa klasser påverkar en komponents tillstånd (till exempel växla från dold till synlig) och bör varken åsidosättas eller tas bort.
 >
 >Medan scf-js-&amp;ast; klasser påverkar inte format. Klassnamnen kan användas i formatmallar med det intrycket att det kan finnas biverkningar när de styr elementens lägen.
 
@@ -116,7 +119,7 @@ Om du vill utöka en Javascript-implementering av komponenter behöver du bara
 1. Utöka metoden
 1. Använd SCF.registerComponent() för att registrera alla metoder med antingen standardvärdena eller anpassade objekt och vyer.
 
-### forum.js: Exempeltillägg för forum - HBS {#forum-js-sample-extension-of-forum-hbs}
+### forum.js: Exempeltillägg för forum - HBS  {#forum-js-sample-extension-of-forum-hbs}
 
 ```xml
 (function($CQ, _, Backbone, SCF) {
@@ -166,7 +169,7 @@ Dessa versioner finns i:
 
 * /etc/clientlibs/social/hbs/&lt;komponentnamn>
 
-Exempel:
+Till exempel:
 
 * Klientmappsnod: /etc/clientlibs/social/hbs/forum
 * Egenskapen Kategorier: cq.social.hbs.forum
@@ -185,7 +188,7 @@ Dessa versioner finns i mappen SCF libs:
 
 * /libs/social/&lt;feature>/components/hbs/&lt;component name>/clientlibs
 
-Exempel:
+Till exempel:
 
 * Klientmappsnod: /libs/social/forum/hbs/forum/clientlibs
 * Egenskapen Kategorier: cq.social.author.hbs.forum
