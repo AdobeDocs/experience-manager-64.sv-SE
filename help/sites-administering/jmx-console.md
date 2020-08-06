@@ -375,7 +375,7 @@ Information om CRX-databasen
   </tr> 
   <tr> 
    <td>crx.cluster.preferredMaster</td> 
-   <td>true anger att den här klusternoden är den primära huvudnoden i klustret.</td> 
+   <td>true anger att den här klusternoden är den rekommenderade överordnad i klustret.</td> 
   </tr> 
   <tr> 
    <td>option.transactions.supported</td> 
@@ -440,7 +440,7 @@ Information om CRX-databasen
   </tr> 
   <tr> 
    <td>crx.cluster.master</td> 
-   <td>true anger att den här databasnoden är huvudnoden i klustret.</td> 
+   <td>true anger att den här databasnoden är den överordnad noden i klustret.</td> 
   </tr> 
   <tr> 
    <td>level.1.supported</td> 
@@ -523,7 +523,7 @@ Skrivskyddad.
 
 **ClusterId** Identifieraren för det här databaskluster. Skrivskyddad.
 
-**ClusterMasterId** Identifieraren för databasklustrets huvudnod. Skrivskyddad.
+**ClusterMasterId** Identifieraren för den överordnad noden i det här databaskluster. Skrivskyddad.
 
 **ClusterNodeId** Identifieraren för den här noden i databaskluster. Skrivskyddad.
 
@@ -597,16 +597,16 @@ Skrivskyddad.
 
 * Returnerat värde: ingen
 
-**becomesClusterMaster** Anger denna databasnod som huvudnod i klustret. Om det inte redan är en huvudserver stoppar det här kommandot den aktuella huvudinstansens avlyssnare och startar en huvudavlyssnare på den aktuella noden. Den här noden anges sedan som huvudnod och startas om, vilket gör att alla andra noder i klustret (dvs. de som styrs av huvudnoden) ansluter till den här instansen.
+**becomesClusterMaster** Anger den här databasnoden som överordnad nod i klustret. Om det inte redan är överordnad stoppar det här kommandot den aktuella överordnad instansens avlyssnare och startar en överordnad avlyssnare på den aktuella noden. Den här noden anges sedan som den överordnad noden och startas om, vilket gör att alla andra noder i klustret (dvs. de som styrs av den överordnad) ansluter till den här instansen.
 
 * Argument: ingen
 * Returnerat värde: ingen
 
-**joinCluster** Lägger till den här databasen i ett kluster som en nod som styrs av klusterhanteraren. Du måste ange ett användarnamn och lösenord för autentisering. Anslutningen använder grundläggande autentisering. Säkerhetsuppgifterna är base-64-kodade innan de skickas till servern.
+**joinCluster** Lägger till den här databasen i ett kluster som en nod som styrs av överordnad i klustret. Du måste ange ett användarnamn och lösenord för autentisering. Anslutningen använder grundläggande autentisering. Säkerhetsuppgifterna är base-64-kodade innan de skickas till servern.
 
 * Argument:
 
-   * `master`: Ett strängvärde som representerar IP-adressen eller datornamnet för den dator som kör huvuddatabasnoden.
+   * `master`: Ett strängvärde som representerar IP-adressen eller datornamnet för den dator som kör den överordnad databasnoden.
    * `username`: Namnet som ska användas för att autentisera med klustret.
    * `password`: Lösenordet som ska användas för autentisering.
 
