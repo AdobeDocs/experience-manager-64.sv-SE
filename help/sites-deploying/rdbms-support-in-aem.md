@@ -1,8 +1,8 @@
 ---
 title: Stöd för RDBMS i AEM 6.4
 seo-title: Stöd för RDBMS i AEM 6.4
-description: Lär dig mer om relationsdatabasens beständighetsstöd i AEM 6.4 och de tillgängliga konfigurationsalternativen.
-seo-description: Lär dig mer om relationsdatabasens beständighetsstöd i AEM 6.4 och de tillgängliga konfigurationsalternativen.
+description: Läs mer om stöd för relationsdatabasens beständighet i AEM 6.4 och de tillgängliga konfigurationsalternativen.
+seo-description: Läs mer om stöd för relationsdatabasens beständighet i AEM 6.4 och de tillgängliga konfigurationsalternativen.
 uuid: 599d3e61-99eb-4a1c-868b-52b20a615500
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ topic-tags: deploying
 discoiquuid: 56a984a5-4b7f-4a95-8a17-95d2d355bfed
 translation-type: tm+mt
 source-git-commit: 5513b24953438cc6c1b3f0027ff5535b4a1874d8
+workflow-type: tm+mt
+source-wordcount: '718'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +34,7 @@ Mer information om implementeringen finns i dokumentationen för [RDBDocumentSto
 
 ## Databaser som stöds {#supported-databases}
 
-Mer information om nivån på Relational Database-stödet i AEM finns på sidan [](/help/sites-deploying/technical-requirements.md)Tekniska krav.
+Mer information om nivån på Relational Database-stöd i AEM finns på sidan [](/help/sites-deploying/technical-requirements.md)Tekniska krav.
 
 ## Konfigurationssteg {#configuration-steps}
 
@@ -50,7 +53,7 @@ Anvisningar om hur du skapar OSGi-paket för JDBC-drivrutiner finns i den här [
 När paketen är på plats följer du stegen nedan för att konfigurera AEM med RDB-beständighet:
 
 1. Kontrollera att databasdaemon har startats och att du har en aktiv databas som kan användas med AEM.
-1. Kopiera AEM 6.3 jar till installationskatalogen.
+1. Kopiera AEM 6.3 burk till installationskatalogen.
 1. Skapa en mapp som anropas `crx-quickstart\install` i installationskatalogen.
 1. Konfigurera dokumentnodarkivet genom att skapa en konfigurationsfil med följande namn i `crx-quickstart\install` katalogen:
 
@@ -74,7 +77,7 @@ När paketen är på plats följer du stegen nedan för att konfigurera AEM med 
       * Bläddra till det valda paketet som extraherats från det hämtade ZIP-arkivet
       * Kontrollera att **Oracle Corporations JDBC-drivrutin för MySQLcom.mysql.jdbc** är aktiv och starta den.
 
-1. Slutligen startar du AEM med `crx3` - och `crx3rdb` runmodes:
+1. Börja slutligen AEM med `crx3` - och `crx3rdb` runmodes:
 
    ```java
    java -jar quickstart.jar -r crx3,crx3rdb
@@ -104,7 +107,7 @@ Följande konfigurationsalternativ är tillgängliga:
 
 ### URL-strängformat {#url-string-formats}
 
-Ett annat URL-strängformat används i datakällkonfigurationen beroende på vilken databastyp som ska användas. Nedan finns en lista över format för de databaser som AEM stöder:
+Ett annat URL-strängformat används i datakällkonfigurationen beroende på vilken databastyp som ska användas. Nedan visas en lista över format för de databaser som AEM för närvarande stöder:
 
 * `jdbc:postgresql:databasename` för PostgreSQL,
 
@@ -116,7 +119,7 @@ Ett annat URL-strängformat används i datakällkonfigurationen beroende på vil
 
 ## Kända begränsningar {#known-limitations}
 
-Samtidigt bruk av flera AEM-instanser med en databas stöds av RDBMS-persistence, men inte samtidiga installationer.
+Samtidigt bruk av flera AEM-instanser med en databas stöds av RDBMS-beständighet, men inte samtidiga installationer.
 
 För att undvika detta måste du först köra installationen med en enda medlem och lägga till de andra efter att den första installationen är klar.
 
