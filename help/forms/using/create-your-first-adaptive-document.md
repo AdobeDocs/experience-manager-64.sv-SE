@@ -8,6 +8,9 @@ uuid: 2cb2bf82-130f-4d6b-a711-df0b97cb0504
 discoiquuid: f3ca177f-7c0d-4b8b-ab4b-bf04668d634c
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '791'
+ht-degree: 0%
 
 ---
 
@@ -20,10 +23,10 @@ Vi på finansområdet är en ledande organisation inom finanssektorn som erbjude
 
 En av kundernas automatiska försäkringsavtal upphör att gälla och de skickar en påminnelse till henne, som är interaktiv och innehåller en PDF-fil, med förnyelseofferten. Meddelandet innehåller även annan information, t.ex. om lojalitetsprogram och rabatterbjudanden.
 
-Portalen körs på Adobe AEM. Webben och utskriften av välkomstkanaler skapas med de flerkanalsfunktioner som finns i det adaptiva dokumentet.
+Portalen går på Adobe AEM. Webben och utskriften av välkomstkanaler skapas med de flerkanalsfunktioner som finns i det adaptiva dokumentet.
 
 Du kommer att ha ett adaptivt dokument som liknar följande i slutet av självstudiekursen:
-[ ad-1 ![](assets/ad-1.png)](https://blogs.adobe.com/contentcorner/files/2017/07/PAF_Mobile.pdf)[ ad-2 ![](assets/ad-2.png)](https://blogs.adobe.com/contentcorner/files/2017/07/PAF_Desktop.pdf)Skapa din första självstudiekurs om adaptiva dokument kategoriseras i steg. Varje steg är en komplett artikel i sig.
+[ ![ad-1](assets/ad-1.png)](https://blogs.adobe.com/contentcorner/files/2017/07/PAF_Mobile.pdf) [ ad-2 ![](assets/ad-2.png)](https://blogs.adobe.com/contentcorner/files/2017/07/PAF_Desktop.pdf)Skapa din första adaptiva dokumentsjälvstudiekurs kategoriseras i steg. Varje steg är en komplett artikel i sig.
 
 <table> 
  <tbody>
@@ -41,8 +44,8 @@ Du kommer att ha ett adaptivt dokument som liknar följande i slutet av självst
    <td>Förutsättning</td> 
    <td>
     <ul> 
-     <li>Konfigurera AEM-författarinstans. </li> 
-     <li>Installera tillägget AEM Forms. Mer information finns i <a href="/help/forms/using/installing-configuring-aem-forms-osgi.md" target="_blank">Installera och konfigurera AEM-formulär</a>.</li> 
+     <li>AEM författarinstans. </li> 
+     <li>Installera AEM Forms-tillägg. Mer information finns i <a href="/help/forms/using/installing-configuring-aem-forms-osgi.md" target="_blank">Installera och konfigurera AEM Forms</a>.</li> 
      <li>Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudien är baserade på MySQL-databasen och använder Oracles JDBC-databasdrivrutin MySQL. </li> 
      <li>Konfigurera en databas som innehåller kunddata. En databas är nödvändig för att skapa ett adaptivt dokument. I den här självstudien används en databas för att visa formulärdatamodell och beständighetsfunktioner i AEM Forms. </li> 
      <li>Skapa/importera och aktivera <a href="/help/forms/using/web-channel-print-channel.md">mallar för utskrift och webbkanal</a>.</li> 
@@ -54,7 +57,7 @@ Du kommer att ha ett adaptivt dokument som liknar följande i slutet av självst
 
 ## Steg 1: Skapa formulärdatamodell {#step-create-form-data-model}
 
-En formulärdatamodell gör det möjligt att koppla ett adaptivt dokument till olika datakällor. Exempel: AEM-användarprofil, RESTful-webbtjänster, SOAP-baserade webbtjänster, OData-tjänster och relationsdatabaser. En formulärdatamodell är ett enhetligt datarepresentationsschema för affärsenheter och tjänster som är tillgängliga i anslutna datakällor. Du kan använda formulärdatamodellen med ett adaptivt dokument för att hämta data från anslutna datakällor. Mer information om formulärdatamodell finns i [AEM Forms-dataintegrering](/help/forms/using/data-integration.md).
+En formulärdatamodell gör det möjligt att koppla ett adaptivt dokument till olika datakällor. Till exempel AEM användarprofil, RESTful-webbtjänster, SOAP-baserade webbtjänster, OData-tjänster och relationsdatabaser. En formulärdatamodell är ett enhetligt datarepresentationsschema för affärsenheter och tjänster som är tillgängliga i anslutna datakällor. Du kan använda formulärdatamodellen med ett adaptivt dokument för att hämta data från anslutna datakällor. Mer information om formulärdatamodell finns i [AEM Forms-dataintegrering](/help/forms/using/data-integration.md).
 
 Mål:
 
@@ -68,7 +71,7 @@ Mål:
 
 Customer Communications centraliserar och hanterar framtagning, sammanställning och leverans av säkra, personaliserade och interaktiva korrespondenser som affärskorrespondens, brev, dokument, kontoutdrag, förmånsmeddelanden, förmögenhetsförvaltningsprospekt, marknadsföringsmejl, räkningar och välkomstpaket.
 
-Med adaptiva dokument kan ni skapa kundkommunikation som är engagerande, responsiv, dynamisk och anpassningsbar till sin natur. I AEM Forms finns en WYSIWYG-redigerare som du kan dra och släppa för att skapa anpassningsbara dokument.
+Med adaptiva dokument kan ni skapa kundkommunikation som är engagerande, responsiv, dynamisk och anpassningsbar till sin natur. AEM Forms har en WYSIWYG-redigerare som du kan dra och släppa för att skapa anpassningsbara dokument.
 
 <!--`For more information about adaptive documents, see [Introduction to authoring adaptive documents](/forms/using/introduction-ad-authoring.md).`-->
 
