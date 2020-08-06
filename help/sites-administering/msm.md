@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: c21debc3-ecf4-4aa9-ab5a-18ddd5cf2fff
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '2684'
+ht-degree: 0%
 
 ---
 
@@ -154,7 +157,7 @@ MSM är direkt tillgängligt i användargränssnittet med hjälp av olika altern
 
 >[!NOTE]
 >
->Aspekter på MSM-funktioner används i flera andra AEM-funktioner (till exempel Launches, Catalog). i dessa fall hanteras den aktiva kopian av den funktionen.
+>Aspekter på MSM-funktioner används i flera andra AEM (t.ex. Launches, Catalog). i dessa fall hanteras den aktiva kopian av den funktionen.
 
 ### Villkor {#terms-used}
 
@@ -271,7 +274,7 @@ En MSM-live kopia är en kopia av specifikt webbplatsinnehåll för vilket en di
 
 * Synkroniseringsregler, som kallas rollout-konfigurationer, avgör vilka egenskaper som synkroniseras och när synkroniseringen sker.
 
-I föregående exempel `/content/we-retail/language-masters/en` är den globala huvudwebbplatsen på engelska. För att återanvända innehållet på den här webbplatsen skapas MSM-kopior:
+I föregående exempel `/content/we-retail/language-masters/en` är den globala överordnad webbplatsen på engelska. För att återanvända innehållet på den här webbplatsen skapas MSM-kopior:
 
 * Innehållet nedan `/content/we-retail/language-masters/en` är källan.
 
@@ -306,7 +309,7 @@ Den grundläggande formen av en live-kopia har:
 
 #### Live Copy med icke-Live-Copy-sidor {#live-copy-with-non-live-copy-pages}
 
-När du skapar en live-kopia i AEM kan du se och navigera genom livekopiegrenen - och använda de vanliga AEM-funktionerna i livekopiegrenen. Det innebär att du (eller en process) kan skapa nya resurser (sidor och/eller stycken) inuti den aktiva kopiegrenen (t.ex. `myCanadaOnlyProduct`).
+När du skapar en live-kopia i AEM kan du se och navigera genom den aktiva kopieringsgrenen - och använda normal AEM på den aktiva kopieringsgrenen. Det innebär att du (eller en process) kan skapa nya resurser (sidor och/eller stycken) inuti den aktiva kopiegrenen (t.ex. `myCanadaOnlyProduct`).
 
 * Sådana resurser har ingen aktiv relation till käll-/ritningssidorna och är inte synkroniserade.
 * Scenarier kan inträffa som MSM hanterar som specialfall. När du till exempel (eller en process) skapar en sida med samma position och namn i både källans/ritytans och live-kopians grenar. Mer information finns i [MSM-utrullningskonflikter](/help/sites-administering/msm-rollout-conflicts.md) .
@@ -326,7 +329,7 @@ När du (eller en process) skapar en [ny sida i en befintlig live-kopia](#live-c
 
 >[!NOTE]
 >
->Om du flyttar/byter namn på en sida i en livekopiegren behandlas detta som en kapslad livekopia så att AEM kan spåra relationerna.
+>Om du flyttar/byter namn på en sida inom en gren för live-kopia behandlas detta som en kapslad live-kopia för att AEM ska kunna spåra relationerna.
 
 #### Skiktade Live-kopior {#stacked-live-copies}
 
@@ -393,7 +396,7 @@ Utrullningskonfigurationer kan återanvändas så att fler än en live-kopia kan
 
 ### utrullningskonflikter {#rollout-conflicts}
 
-Utrullningar kan bli komplicerade, särskilt när författare redigerar innehåll i både källan och den aktiva kopian, så det är praktiskt att känna till hur AEM hanterar eventuella [konflikter som kan uppstå under utrullning](/help/sites-administering/msm-rollout-conflicts.md).
+Utrullningar kan bli komplicerade, särskilt när författare redigerar innehåll i både källan och den aktiva kopian, så det är praktiskt att vara medveten om hur AEM hanterar eventuella [konflikter som kan uppstå under utrullning](/help/sites-administering/msm-rollout-conflicts.md).
 
 ### Inaktivera och avbryta arv och synkronisering {#suspending-and-cancelling-inheritance-and-synchronization}
 
