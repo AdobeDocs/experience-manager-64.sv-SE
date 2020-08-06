@@ -10,16 +10,19 @@ topic-tags: customization
 discoiquuid: 49453dda-7b05-4470-866e-1946bff70f27
 translation-type: tm+mt
 source-git-commit: a2f6deda8b3a34aa5893843a442241920edd6718
+workflow-type: tm+mt
+source-wordcount: '346'
+ht-degree: 0%
 
 ---
 
 
-# Fylla i nedrullningsbara listor dynamiskt {#dynamically-populating-drop-down-lists}
+# Fylla i nedrullningsbara listor dynamiskt  {#dynamically-populating-drop-down-lists}
 
 ## Förutsättningar {#prerequisites}
 
 * [Skapa OSGI-paket](https://helpx.adobe.com/experience-manager/using/creating-osgi-bundles-digital-marketing.html)
-* [Utveckla AEM-komponenter](/help/sites-developing/components.md)
+* [Utveckla AEM](/help/sites-developing/components.md)
 * [Skapa anpassat formulär](/help/forms/using/creating-adaptive-form.md)
 * [Skapa anpassat formulär](/help/forms/using/introduction-forms-authoring.md)
 
