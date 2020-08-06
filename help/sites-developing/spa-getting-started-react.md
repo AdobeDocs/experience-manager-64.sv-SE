@@ -11,15 +11,18 @@ content-type: reference
 discoiquuid: 0843ceff-2607-4733-8383-681820e513d1
 translation-type: tm+mt
 source-git-commit: 0e7f4a78f63808bea2aa7a5abbb31e7e5b9d21b3
+workflow-type: tm+mt
+source-wordcount: '1215'
+ht-degree: 0%
 
 ---
 
 
 # Komma igång med SPA i AEM - Reaktion {#getting-started-with-spas-in-aem-react}
 
-Single page applications (SPAs) can offer compelling experiences for website users. Utvecklare vill kunna bygga webbplatser med SPA-ramverk och författare vill smidigt redigera innehåll i AEM för en webbplats som byggts med SPA-ramverk.
+Single page applications (SPAs) can offer compelling experiences for website users. Utvecklare vill kunna skapa webbplatser med SPA-ramverk och författare vill smidigt redigera innehåll i AEM för en webbplats som byggts med SPA-ramverk.
 
-SPA-funktionen är en omfattande lösning för att ge stöd åt SPA:er i AEM. I den här artikeln presenteras en förenklad SPA-applikation i React-ramverket, som förklarar hur det är uppbyggt, så att du snabbt kan komma igång med din egen SPA.
+SPA-funktionen är en omfattande lösning för SPA-program i AEM. I den här artikeln presenteras en förenklad SPA-applikation i React-ramverket, som förklarar hur det är uppbyggt, så att du snabbt kan komma igång med din egen SPA.
 
 >[!NOTE]
 >
@@ -46,7 +49,7 @@ Mer information om hur SPA fungerar i AEM finns i följande dokument:
 >
 >För att kunna skapa innehåll i ett SPA måste innehållet lagras i AEM och kunna visas av innehållsmodellen.
 >
->En SPA som utvecklats utanför AEM kommer inte att vara generös om den inte följer innehållsmodellkontraktet.
+>Ett SPA-program som utvecklats utanför AEM är inte tilltalande om det inte följer innehållsmodellkontraktet.
 
 Det här dokumentet kommer att gå igenom strukturen i en förenklad SPA som skapats med React-ramverket och illustrera hur det fungerar så att du kan tillämpa den här förståelsen på din egen SPA.
 
@@ -56,7 +59,7 @@ Förutom det förväntade React-beroendet kan SPA-exemplet utnyttja ytterligare 
 
 ### Beroenden {#dependencies}
 
-Filen definierar kraven för det övergripande SPA-paketet `package.json` . Här listas de lägsta AEM-beroendena för en fungerande SPA.
+Filen definierar kraven för det övergripande SPA-paketet `package.json` . Här listas de minsta AEM beroendena för en fungerande SPA.
 
 ```
   "dependencies": {
@@ -118,17 +121,17 @@ Genom att bygga appen används [Webpack](https://webpack.js.org/) för distribut
 
 `"build": "webpack && clientlib --verbose"`
 
-När paketet har skapats kan det överföras till en AEM-instans.
+När paketet har skapats kan det överföras till en AEM.
 
 ### AEM Project Archetype {#aem-project-archetype}
 
-Alla AEM-projekt bör utnyttja [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA-projekt med React eller Angular och utnyttjar SPA SDK.
+Alla AEM ska utnyttja den [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)som stöder SPA-projekt med React eller Angular och som utnyttjar SPA SDK.
 
 ## Programstruktur {#application-structure}
 
-Om du tar med beroenden och bygger din app enligt beskrivningen ovan får du ett fungerande SPA-paket som du kan överföra till din AEM-instans.
+Om du tar med beroenden och bygger din app enligt beskrivningen ovan får du ett fungerande SPA-paket som du kan överföra till din AEM.
 
-I nästa avsnitt av det här dokumentet får du information om hur ett SPA i AEM är strukturerat, vilka filer som är viktiga för programmet och hur de fungerar tillsammans.
+I nästa avsnitt av det här dokumentet får du information om hur en SPA i AEM är strukturerad, vilka filer som är viktiga för programmet och hur de fungerar tillsammans.
 
 En förenklad bildkomponent används som exempel, men alla komponenter i programmet är baserade på samma koncept.
 
@@ -226,11 +229,11 @@ class Image extends Component {
 MapTo('my-react-app/components/content/image')(Image, ImageEditConfig);
 ```
 
-Den centrala idén med SPA i AEM är att mappa SPA-komponenter till AEM-komponenter och uppdatera komponenten när innehållet ändras (och vice versa). I dokumentet [SPA Editor Overview](/help/sites-developing/spa-overview.md) finns en sammanfattning av kommunikationsmodellen.
+Den centrala idén med SPA i AEM är att mappa SPA-komponenter till AEM och uppdatera komponenten när innehållet ändras (och vice versa). I dokumentet [SPA Editor Overview](/help/sites-developing/spa-overview.md) finns en sammanfattning av kommunikationsmodellen.
 
 `MapTo('my-react-app/components/content/image')(Image, ImageEditConfig);`
 
-Metoden mappar `MapTo` SPA-komponenten till AEM-komponenten. Det stöder användningen av en enda sträng eller en array med strängar.
+Metoden mappar `MapTo` SPA-komponenten till AEM. Det stöder användningen av en enda sträng eller en array med strängar.
 
 `ImageEditConfig` är ett konfigurationsobjekt som bidrar till att aktivera en komponents redigeringsfunktioner genom att tillhandahålla de metadata som behövs för att redigeraren ska kunna generera platshållare
 
@@ -282,7 +285,7 @@ Det är regelbundet nödvändigt att komponenter i ett ensidigt program delar in
 
 En stegvis guide till hur du skapar en egen SPA finns i [Komma igång med AEM SPA Editor - WKND Events Tutorial](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html).
 
-Mer information om hur du organiserar dig för att utveckla SPA för AEM finns i artikeln [Developing SPAs for AEM](/help/sites-developing/spa-architecture.md).
+Mer information om hur du organiserar dig själv för att utveckla SPA för AEM finns i artikeln [Developing SPAs for AEM](/help/sites-developing/spa-architecture.md).
 
 Mer information om den dynamiska mappningen av modell till komponent och hur den fungerar i SPA i AEM finns i artikeln [Dynamic Model to Component Mapping for SPA](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
 
