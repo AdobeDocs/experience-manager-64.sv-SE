@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 1eaf7afe-a181-45df-8766-bd564b1ad22a
 translation-type: tm+mt
 source-git-commit: dda8156729aa46dd6cfd779bca120b165ccc980b
+workflow-type: tm+mt
+source-wordcount: '1152'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +42,7 @@ AEM visar databasinnehållet på följande sätt:
 
 * En nod av den typen `nt:file` visas som en fil. Noder under `nt:file` noden visas inte, men de utgör filens innehåll.
 
-När du använder WebDAV för att skapa och redigera mappar och filer skapar och redigerar AEM de nödvändiga `nt:folder` och `nt:file` noderna. Om du tänker använda WebDAV för att importera och exportera innehåll kan du försöka arbeta med `nt:file` - och `nt:folder` nodtyperna så mycket som möjligt.
+När du använder WebDAV för att skapa och redigera mappar och filer skapar AEM och redigerar de nödvändiga `nt:folder` noderna och `nt:file` noderna. Om du tänker använda WebDAV för att importera och exportera innehåll kan du försöka arbeta med `nt:file` - och `nt:folder` nodtyperna så mycket som möjligt.
 
 >[!NOTE]
 >
@@ -81,7 +84,7 @@ URL:en för WebDAV-servern har följande struktur:
   <tr>
    <td><strong>Beskrivning</strong></td> 
    <td>Värd och port som AEM körs på</td> 
-   <td>Sökväg till webbprogrammet för AEM-databasen</td> 
+   <td>Sökväg till webbprogrammet AEM databasen</td> 
    <td>Sökväg till vilken WebDAV-servleten mappas</td> 
    <td>Arbetsytans namn</td> 
   </tr>
@@ -106,9 +109,9 @@ Instruktioner om hur du ansluter följande operativsystem:
 
 ### Windows {#windows}
 
-Om du vill ansluta ett Microsoft Windows 7-system (och senare) till en AEM-instans som inte är säker med SSL, måste alternativet att upprätta grundläggande autentisering över ett oskyddat nätverk uttryckligen aktiveras i Windows. Detta kräver en ändring i Windows-registret för WebClient.
+Om du vill ansluta ett Microsoft Windows 7-system (och senare) till en AEM som inte är säker med SSL, måste alternativet att upprätta grundläggande autentisering över ett oskyddat nätverk uttryckligen aktiveras i Windows. Detta kräver en ändring i Windows-registret för WebClient.
 
-När registret har uppdaterats kan AEM-instansen mappas som en enhet.
+När registret har uppdaterats kan AEM mappas som en enhet.
 
 #### Konfiguration av Windows 7 och senare {#windows-and-greater-configuration}
 
@@ -156,6 +159,7 @@ Så här ansluter du till AEM via WebDAV i en Windows-miljö:
    * **Enhet**: Välj en tillgänglig bokstav
    * **Mapp**: `http://localhost:4502`
    * Kontrollera **anslutning med andra autentiseringsuppgifter**
+
    Klicka på Slutför
 
    ![chlimage_1-113](assets/chlimage_1-113.png)
@@ -172,14 +176,14 @@ Så här ansluter du till AEM via WebDAV i en Windows-miljö:
 
    ![chlimage_1-115](assets/chlimage_1-115.png)
 
-Nu har AEM mappats som en enhet via WebDAV och du kan använda den som vilken enhet som helst.
+Windows har nu mappat AEM som en enhet via WebDAV och du kan använda den som vilken enhet som helst.
 
 ### macOS {#macos}
 
 Det krävs inga konfigurationssteg för att ansluta via WebDAV i macOS. Du behöver bara ansluta till WebDAV-servern.
 
 1. Navigera till ett **Finder** -fönster och klicka på **Gå** och **Anslut till server** eller tryck på **Kommando+k**.
-1. I fönstret **Anslut till server** anger du AEM-platsen:
+1. Ange AEM plats i fönstret **Anslut till server** :
 
    * `http://localhost:4502`
    >[!NOTE]
@@ -213,7 +217,7 @@ Så här ansluter du till AEM via WebDAV med GNOME:
 1. Klicka på **Anslut**. AEM ber dig ange ditt lösenord.
 1. Ange lösenordet `admin` och klicka på **Anslut**.
 
-GNOME har nu monterat AEM som en volym och du kan använda den precis som vilken annan volym som helst.
+GNOME har nu monterat AEM som en volym och du kan använda den som vilken annan volym som helst.
 
 #### KDE {#kde}
 
@@ -232,4 +236,4 @@ GNOME har nu monterat AEM som en volym och du kan använda den precis som vilken
 1. Klicka på **Spara och anslut**.
 1. Ange lösenordet när du uppmanas att ange det `admin` och klicka på **Anslut**.
 
-KDE har nu monterat AEM som en volym och du kan använda den precis som vilken annan volym som helst.
+KDE har nu monterat AEM som en volym och du kan använda den som vilken annan volym som helst.
