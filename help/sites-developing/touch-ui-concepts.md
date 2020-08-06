@@ -1,8 +1,8 @@
 ---
-title: AEM Touch-aktiverat användargränssnitt
-seo-title: AEM Touch-aktiverat användargränssnitt
-description: Med AEM 5.6 introducerade Adobe ett nytt pekoptimerat gränssnitt med responsiv design för redigeringsmiljön
-seo-description: Med AEM 5.6 introducerade Adobe ett nytt pekoptimerat gränssnitt med responsiv design för redigeringsmiljön
+title: Koncepten i det AEM användargränssnittet med pekskärm
+seo-title: Koncepten i det AEM användargränssnittet med pekskärm
+description: Med AEM 5.6 Adobe introducerades ett nytt pekoptimerat gränssnitt med responsiv design för redigeringsmiljön
+seo-description: Med AEM 5.6 Adobe introducerades ett nytt pekoptimerat gränssnitt med responsiv design för redigeringsmiljön
 uuid: 8ec6514e-f623-40be-a7bf-2e85bf4385ca
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,15 +11,18 @@ content-type: reference
 discoiquuid: 8c7e5667-14c5-40f3-968a-c574b04671e3
 translation-type: tm+mt
 source-git-commit: da7f86f36de0688ebe234d813959000068ef67ff
+workflow-type: tm+mt
+source-wordcount: '2218'
+ht-degree: 0%
 
 ---
 
 
-# AEM Touch-aktiverat användargränssnitt{#concepts-of-the-aem-touch-enabled-ui}
+# Koncepten i det AEM användargränssnittet med pekskärm{#concepts-of-the-aem-touch-enabled-ui}
 
-Med AEM 5.6 introducerade Adobe ett nytt pekaktiverat användargränssnitt med [responsiv design](/help/sites-authoring/responsive-layout.md) för redigeringsmiljön. Detta skiljer sig avsevärt från det klassiska användargränssnittet eftersom det är utformat för att fungera både på pekskärmar och på stationära enheter.
+Med AEM 5.6 Adobe introducerades ett nytt pekaktiverat användargränssnitt med [responsiv design](/help/sites-authoring/responsive-layout.md) för redigeringsmiljön. Detta skiljer sig avsevärt från det klassiska användargränssnittet eftersom det är utformat för att fungera både på pekskärmar och på stationära enheter.
 
-Det här pekaktiverade gränssnittet är nu standardgränssnittet för AEM och ersätter det klassiska användargränssnittet.
+Det här pekaktiverade användargränssnittet är nu standardgränssnittet för AEM och ersätter det klassiska användargränssnittet.
 
 >[!NOTE]
 >
@@ -31,7 +34,7 @@ Användargränssnittet med pekfunktioner innehåller:
 
    * Visar logotypen
    * Tillhandahåller en länk till den globala navigeringen
-   * Tillhandahåller länk till andra allmänna åtgärder. som Sök, Hjälp, Marketing Cloud-lösningar, Meddelanden och Användarinställningar.
+   * Tillhandahåller länk till andra allmänna åtgärder. som Sök, Hjälp, Marketing Cloud Solutions, Notifications och User Settings.
 
 * Den vänstra listen (visas när den behövs och är dold) som kan visa:
 
@@ -58,11 +61,11 @@ Användargränssnittet med pekfunktioner innehåller:
 
 >[!NOTE]
 >
->Nästan alla AEM-funktioner har porterats till det pekaktiverade användargränssnittet. I vissa begränsade fall återställs dock funktionen till det klassiska användargränssnittet. Mer information finns i [Funktionsstatus](/help/release-notes/touch-ui-features-status.md) för pekskärmsgränssnittet.
+>Nästan alla AEM funktioner har porterats till det pekaktiverade användargränssnittet. I vissa begränsade fall återställs dock funktionen till det klassiska användargränssnittet. Mer information finns i [Funktionsstatus](/help/release-notes/touch-ui-features-status.md) för pekskärmsgränssnittet.
 
-Användargränssnittet med pekfunktioner har utformats av Adobe för att ge en konsekvent användarupplevelse för flera produkter. Den bygger på följande:
+Det pekaktiverade användargränssnittet har utformats av Adobe för att ge en konsekvent användarupplevelse för flera produkter. Den bygger på följande:
 
-* **Coral UI** (CUI) är en implementering av Adobes visuella stil för det pekaktiverade användargränssnittet. Coral UI innehåller allt som produkten/projektet/webbprogrammet behöver för att använda den visuella gränssnittsstilen.
+* **Coral UI** (CUI) är en implementering av Adobe visuell stil för det pekaktiverade användargränssnittet. Coral UI innehåller allt som produkten/projektet/webbprogrammet behöver för att använda den visuella gränssnittsstilen.
 * **Gränssnittskomponenter i Granite** är byggda med Coral UI.
 
 De grundläggande principerna för det beröringskänsliga användargränssnittet är:
@@ -75,7 +78,7 @@ De grundläggande principerna för det beröringskänsliga användargränssnitte
 * Inkludera inbäddade tester
 * Nedifrån och upp-design för att säkerställa att dessa principer tillämpas på alla element och komponenter
 
-Mer information om den beröringsaktiverade gränssnittsstrukturen finns i artikelstrukturen [för det AEM Touch-aktiverade gränssnittet](/help/sites-developing/touch-ui-structure.md).
+Mer information om den beröringsaktiverade gränssnittsstrukturen finns i artikelstrukturen [för det AEM beröringsaktiverade användargränssnittet](/help/sites-developing/touch-ui-structure.md).
 
 ## AEM Technology Stack {#aem-technology-stack}
 
@@ -85,7 +88,7 @@ AEM använder Granite-plattformen som bas och Granite-plattformen innehåller bl
 
 ## Granit {#granite}
 
-Granite är Adobes Open Web-stack med olika komponenter:
+Granite är en Adobe Open Web-stack med olika komponenter:
 
 * En programstart
 * Ett OSGi-ramverk där allt distribueras
@@ -99,7 +102,7 @@ Granite är Adobes Open Web-stack med olika komponenter:
 >
 >Granite körs som ett öppet utvecklingsprojekt i Adobe: bidrag till koden, diskussioner och frågor görs i hela företaget.
 >
->Granite är dock **inte** ett öppen källkodsprojekt. Det bygger till stor del på flera öppen källkodsprojekt (särskilt Apache Sling, Felix, Jackrabbit och Lucene), men Adobe har en tydlig gräns mellan vad som är offentligt och vad som är internt.
+>Granite är dock **inte** ett öppen källkodsprojekt. Den bygger till stor del på flera öppen källkodsprojekt (särskilt Apache Sling, Felix, Jackrabbit och Lucene), men Adobe drar en tydlig linje mellan vad som är offentligt och vad som är internt.
 
 ## Granite-gränssnitt {#granite-ui}
 
@@ -125,7 +128,7 @@ Gränssnittet för Granite:
 * Tillhandahåller ett standardgränssnitt
 * Är utökningsbar
 * Är utformad för både mobila och stationära enheter (respekterar mobilen först)
-* Kan användas i alla Granite-baserade plattformar/produkter/projekt. eg AEM
+* Kan användas i alla Granite-baserade plattformar/produkter/projekt. e AEM
 
 ![chlimage_1-186](assets/chlimage_1-186.png)
 
@@ -282,19 +285,20 @@ Implementering:
 
 ## Coral UI {#coral-ui}
 
-Coral UI (CUI) är en implementering av Adobes visuella stil för det beröringsaktiverade användargränssnittet, som har utformats för att ge en konsekvent användarupplevelse för flera produkter. Coral UI innehåller allt du behöver för att använda den visuella stil som används i redigeringsmiljön.
+Coral UI (CUI) är en implementering av Adobe visuell stil för det beröringsaktiverade användargränssnittet, som har utformats för att ge en konsekvent användarupplevelse för flera produkter. Coral UI innehåller allt du behöver för att använda den visuella stil som används i redigeringsmiljön.
 
 >[!CAUTION]
 >
->Coral UI är ett användargränssnittsbibliotek som är tillgängligt för AEM-kunder för att skapa applikationer och webbgränssnitt inom gränserna för deras licensierade användning av produkten.
+>Coral UI är ett användargränssnittsbibliotek som AEM kunder kan använda för att skapa applikationer och webbgränssnitt inom gränserna för deras licensierade användning av produkten.
 >
 >Användning av Coral UI är endast tillåten:
 >
 >* När den har levererats och paketerats med AEM.
 >* Används när du utökar det befintliga gränssnittet i redigeringsmiljön.
->* Adobes marknadsmaterial, annonser och presentationer.
->* Användargränssnittet i Adobe-program (teckensnittet får inte vara lätt tillgängligt för andra användningsområden).
+>* Material, annonser och presentationer för Adobe.
+>* Gränssnittet för program med Adobe-varumärke (teckensnittet får inte vara lätt tillgängligt för annan användning).
 >* Med mindre anpassningar.
+
 >
 >
 Användning av Coral UI bör undvikas vid:
@@ -302,6 +306,7 @@ Användning av Coral UI bör undvikas vid:
 >* Dokument och andra objekt som inte är relaterade till Adobe.
 >* Miljöer där innehållet skapas (där föregående objekt kan genereras av andra).
 >* Program/komponenter/webbsidor som inte är tydligt kopplade till Adobe.
+
 >
 
 
@@ -312,7 +317,7 @@ Coral UI är en samling byggstenar för utveckling av webbapplikationer.
 
 Varje modul är utformad för att vara modulär från början och utgör ett distinkt lager baserat på dess primära roll. Även om lagren har utformats för att stödja varandra kan de också användas oberoende av varandra vid behov. Detta gör det möjligt att implementera Corals användarupplevelse i alla HTML-kompatibla miljöer.
 
-Med Coral UI är det inte obligatoriskt att använda en viss utvecklingsmodell och/eller plattform. Det främsta målet för Coral är att tillhandahålla enhetlig och ren HTML5-kod, oberoende av den metod som används för att generera den här koden. Detta kan användas för återgivning på klient- eller serversidan, mallar, JSP, PHP eller till och med Adobe Flash RIA-program - bara för att nämna några få.
+Med Coral UI är det inte obligatoriskt att använda en viss utvecklingsmodell och/eller plattform. Det främsta målet för Coral är att tillhandahålla enhetlig och ren HTML5-kod, oberoende av den metod som används för att generera den här koden. Detta kan användas för återgivning på klient- eller serversidan, mallar, JSP, PHP eller till och med Adobe Flash RIA-program - för att nämna några få.
 
 ### HTML-element - markeringslagret {#html-elements-the-markup-layer}
 
