@@ -1,9 +1,12 @@
 ---
 title: Konfigurera RTF-redigeraren
-description: Lär dig konfigurera AEM Rich Text Editor.
+description: Lär dig att konfigurera AEM RTF-redigerare.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 7849a3e2d9d8241382652fb1c8e6e302ffd853e0
+workflow-type: tm+mt
+source-wordcount: '2661'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 7849a3e2d9d8241382652fb1c8e6e302ffd853e0
 
 Med textredigeraren får författarna ett stort antal funktioner för redigering av textinnehåll. Ikoner, markeringsrutor, verktygsfält och menyer finns för WYSIWYG-textredigering.
 
-Mer information om hur du använder RTE-funktioner för redigering finns i [Använda RTF-redigerare för redigering](/help/sites-authoring/rich-text-editor.md). RTE kan konfigureras för att aktivera, inaktivera och utöka de funktioner som är tillgängliga i redigeringskomponenterna. Följande arbetsflöde visar en rekommenderad ordning för slutförande av RTE-konfigurationsåtgärder i Experience Manager.
+Mer information om hur du använder RTE-funktioner för redigering finns i [Använda RTF-redigerare för redigering](/help/sites-authoring/rich-text-editor.md). RTE kan konfigureras för att aktivera, inaktivera och utöka de funktioner som är tillgängliga i redigeringskomponenterna. Följande arbetsflöde visar den rekommenderade ordningen för att slutföra RTE-konfigurationsuppgifterna i Experience Manager.
 
 ![Normalt arbetsflöde för att konfigurera RTF-redigeraren](assets/rte_workflow_v1.png)
 
@@ -33,14 +36,14 @@ Det användargränssnitt som har stöd för pekskärm är standardgränssnittet 
 >[!MORELIKETHIS]
 >
 >* [Gränssnittsrekommendationer](/help/sites-deploying/ui-recommendations.md)
->* Information om hur du ersätter det klassiska användargränssnittet finns i [Versionsinformation för AEM 6.4](/help/release-notes/deprecated-removed-features.md)
+>* Information om hur du ersätter det klassiska användargränssnittet finns i [AEM 6.4](/help/release-notes/deprecated-removed-features.md)
 >* Skillnaden mellan användargränssnitten finns i [Touch-gränssnittet och det klassiska användargränssnittet](https://aemcq5pedia.wordpress.com/2018/01/05/touch-enabled-ui-aem6-3/)
->* Mer information om användargränssnittet med pekfunktioner finns i [avsnittet om användargränssnittet i AEM Touch](/help/sites-developing/touch-ui-concepts.md)
+>* Mer information om användargränssnittet som har stöd för pekfunktioner finns i [avsnittet om användargränssnittet för AEM](/help/sites-developing/touch-ui-concepts.md)
 
 
 ## Olika redigeringslägen {#editingmodes}
 
-Författare kan skapa och redigera textinnehåll i AEM med hjälp av de olika komponentlägena. Alternativen i verktygsfältet för att skapa och formatera innehåll och användarupplevelsen i komponenter med RTE-funktioner i olika redigeringslägen varierar beroende på RTE-konfigurationer.
+Författare kan skapa och redigera textinnehåll i AEM med de olika komponentlägena. Alternativen i verktygsfältet för att skapa och formatera innehåll och användarupplevelsen i komponenter med RTE-funktioner i olika redigeringslägen varierar beroende på RTE-konfigurationer.
 
 | Redigeringsläge | Redigeringsområde | Rekommenderade funktioner som ska aktiveras | Pekgränssnitt | Klassiskt användargränssnitt |
 |--- |--- |--- |--- |--- |
@@ -65,7 +68,7 @@ I det klassiska användargränssnittet kan du med en långsam dubbelklickning p�
 
 ### Helskärmsredigering {#full-screen-editing}
 
-AEM-komponenter kan öppnas i helskärmsläge som döljer sidinnehållet och tar upp den tillgängliga skärmen. Överväg att redigera i helskärmsläge som en detaljerad version av den infogade redigeringen eftersom den erbjuder de flesta redigeringsalternativen. Du kan öppna den genom att klicka på ![rte_fullscreen](assets/rte_fullscreen.png)i det kompakta verktygsfältet när du använder det infogade redigeringsläget.
+AEM kan öppnas i helskärmsläge som döljer sidinnehållet och tar upp den tillgängliga skärmen. Överväg att redigera i helskärmsläge som en detaljerad version av den infogade redigeringen eftersom den erbjuder de flesta redigeringsalternativen. Du kan öppna den genom att klicka på ![rte_fullscreen](assets/rte_fullscreen.png)i det kompakta verktygsfältet när du använder det infogade redigeringsläget.
 
 I helskärmsläget i dialogrutan finns ett detaljerat verktygsfält för textredigering, samt alternativ och komponenter som är tillgängliga i dialogruteläget. Det gäller endast för en dialogruta som innehåller RTE tillsammans med andra komponenter.
 
@@ -109,7 +112,7 @@ I följande tabell visas de aktuella plugin-programmen:
 | redigera | cut copy paste-default paste-plaintext paste-wordhtml | [Klipp ut, kopiera och, de tre inklistringslägena](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
 | [findreplace](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FindReplacePlugin) | sök och ersätt | Sök och ersätt. |
 | [format](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FormatPlugin) | fet kursiv understrykning | [Grundläggande textformatering](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
-| [image](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ImagePlugin) | image | Grundläggande bildstöd (dra från innehåll eller Innehållssökning). Beroende på webbläsaren har stödet olika beteenden för författare |
+| [bild](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ImagePlugin) | bild | Grundläggande bildstöd (dra från innehåll eller Innehållssökning). Beroende på webbläsaren har stödet olika beteenden för författare |
 | [tangenter](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.KeyPlugin) |  | Mer information om hur du definierar det här värdet finns i [Tabbstorlek](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tabsize). |
 | [justera](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.JustifyPlugin) | justera vänster justera mitten justera höger | Styckejustering. |
 | [länkar](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.LinkPlugin) | ändra länkavlänkningsankarpunkt | [Hyperlänkar och ankare](/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles). |
@@ -144,6 +147,7 @@ Det [läge för RTE-redigering (och användargränssnittet)](#editingmodes) som 
 >* **Namn**: `configPath`
 >* **Typ**: `String`
 >* **Värde**: sökväg till noden som innehåller den faktiska konfigurationen
+
 >
 >
 Ge inte RTE-konfigurationsnoden namnet `config`. Annars gäller RTE-konfigurationerna bara för administratörerna och inte för användarna i gruppen `content-author`.
@@ -191,13 +195,14 @@ Hämta den här exempelkonfigurationen för att förstå hur du konfigurerar RTE
 >
 >* `/libs/wcm/foundation/components/text`
 >* `/libs/foundation/components/text`
+
 >
 >
 Om du vill skapa en egen textkomponent kopierar du ovanstående komponent i stället för att redigera de här komponenterna.
 
 ## Verktygsfältet Konfigurera RTE {#dialogfullscreen}
 
-Med AEM kan du konfigurera gränssnittet för RichText Editor på olika sätt för de olika redigeringslägena. Standardinställningarna anges nedan. Du kan åsidosätta dessa standardinställningar baserat på dina behov.
+I AEM kan du konfigurera gränssnittet för RichText Editor på olika sätt för de olika redigeringslägena. Standardinställningarna anges nedan. Du kan åsidosätta dessa standardinställningar baserat på dina behov.
 
 För bästa redigeringsmiljö:
 
@@ -243,7 +248,7 @@ För bästa redigeringsmiljö:
 </uiSettings>
 ```
 
-Olika gränssnittsinställningar används för textbundet läge och helskärmsläge. Verktygsfältsegenskapen används för att ange knapparna i verktygsfältet. Om knappen i sig själv är en funktion (till exempel `Bold`), anges den som `PluginName#FeatureName` (till exempel `links#modifylink`). Om knappen är en pekare (som innehåller vissa funktioner i ett plugin-program) anges den som `#PluginName` (till exempel `#format`). Avgränsare (| ) mellan en grupp knappar kan anges med &#39;-&#39;.
+Olika gränssnittsinställningar används för textbundet läge och helskärmsläge. Verktygsfältsegenskapen används för att ange knapparna i verktygsfältet. Om knappen i sig själv är en funktion (till exempel `Bold`), anges den som `PluginName#FeatureName` (till exempel `links#modifylink`). Om knappen är en pekare (som innehåller vissa funktioner i ett plugin-program) anges den som `#PluginName` (till exempel `#format`). Avgränsare ( | ) mellan en grupp knappar kan anges med &#39;-&#39;.
 
 Popup-noden under infogat läge eller helskärmsläge innehåller en lista över de poseringar som används. Varje underordnad nod under `popovers` noden namnges efter plugin-programmet (till exempel `format`). Den har en egenskap `items` som innehåller en lista med funktioner för plugin-programmet (till exempel `format#bold`).
 
@@ -251,7 +256,7 @@ Popup-noden under infogat läge eller helskärmsläge innehåller en lista över
 
 Administratörer kan styra textredigeringsalternativen med hjälp av innehållsprinciper, till exempel i stället för att göra konfigurationen enligt beskrivningen ovan. Innehållsprofiler definierar designegenskaperna för en komponent när de används som en del av en [redigerbar mall](../sites-authoring/templates.md). Om en textkomponent som använder textredigeraren till exempel används med en redigerbar mall kan innehållsprincipen definiera att det feta alternativet är tillgängligt och att några styckeformateringsalternativ är tillgängliga. Innehållsprofilerna kan återanvändas och kan tillämpas på flera mallar.
 
-Från och med AEM 6.4 Service Pack 3 flödar de tillgängliga alternativen i RTE nedåt från användargränssnittskonfigurationerna till innehållsprinciperna.
+AEM 6.4 Service Pack 3 och senare flödar de tillgängliga alternativen i RTE nedåt från användargränssnittskonfigurationerna till innehållsprinciperna.
 
 * Konfigurationsinställningarna för användargränssnittet definierar vilka alternativ som är tillgängliga för innehållsprinciperna.
 * Om användargränssnittskonfigurationen för textredigeraren har tagits bort eller inte aktiverar ett objekt kan innehållsprincipen inte konfigurera det.
@@ -296,7 +301,7 @@ På en sida kan du antingen inkludera CoralUI 2 RTE clientlib eller CoralUI 3 RT
 
 >[!NOTE]
 >
->Adobe rekommenderar inte detta som en god praxis. Växla till CoralUI 2 RTE som sista utväg. Anpassade plugin-program för CoralUI 2 RTE fungerar med CoralUI 3 RTE om plugin-programmen inte är beroende av interna RTE-komponenter, till exempel klasser. Om du använder anpassade plugin-program för CoralUI 3 RTE använder du `rte.coralui3` library.
+>Adobe rekommenderar inte att bytet är en bra metod. Växla till CoralUI 2 RTE som sista utväg. Anpassade plugin-program för CoralUI 2 RTE fungerar med CoralUI 3 RTE om plugin-programmen inte är beroende av interna RTE-komponenter, till exempel klasser. Om du använder anpassade plugin-program för CoralUI 3 RTE använder du `rte.coralui3` library.
 
 1. Lägg noden `/libs/cq/gui/components/authoring/editors/clientlibs/core` under `/apps`och gör följande:
 
@@ -318,7 +323,7 @@ På en sida kan du antingen inkludera CoralUI 2 RTE clientlib eller CoralUI 3 RT
 
 ## Ytterligare information {#further-information}
 
-Mer information om hur du konfigurerar RTE finns i API-referensen för [AEM Widget](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html) .
+Mer information om hur du konfigurerar RTE finns i [AEM Widget API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html) reference.
 
 Du kan särskilt se vilka plugin-program och relaterade alternativ som är tillgängliga:
 
@@ -334,9 +339,9 @@ Ovanstående alternativ kan användas för att utöka och anpassa din egen RTE. 
 
 ## Kända begränsningar {#known-limitations}
 
-Funktionen AEM RTE har följande begränsningar:
+AEM har följande begränsningar:
 
-* RTE-funktioner stöds endast i AEM-komponentdialogrutor. RTE stöds inte på guider eller grundformulär som [Sidegenskaper](/help/sites-developing/page-properties-views.md) och [Scaffolding](/help/sites-authoring/scaffolding.md) på användargränssnittet som har stöd för pekfunktioner.
+* RTE-funktioner stöds bara i AEM komponentdialogrutor. RTE stöds inte på guider eller grundformulär som [Sidegenskaper](/help/sites-developing/page-properties-views.md) och [Scaffolding](/help/sites-authoring/scaffolding.md) på användargränssnittet som har stöd för pekfunktioner.
 
 * AEM fungerar inte på [hybridenheter](/help/release-notes/known-issues.md).
 
