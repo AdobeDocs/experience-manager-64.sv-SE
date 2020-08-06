@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Administratörer behöver ofta automatisera eller förenkla vanliga uppgifter inom alla system. I AEM är till exempel hantering av användare, installation av paket och hantering av OSGi-paket uppgifter som måste utföras ofta.
 
-På grund av Sling-ramverkets RESTful-karaktär, som AEM bygger på, kan de flesta åtgärder minskas till ett URL-anrop. cURL kan användas för att köra sådana URL-anrop och kan vara ett användbart verktyg för AEM-administratörer.
+På grund av Sling-ramverkets RESTful-karaktär, som AEM bygger på, kan de flesta åtgärder minskas till ett URL-anrop. cURL kan användas för att köra sådana URL-anrop och kan vara ett användbart verktyg för AEM administratörer.
 
 ## Vad är cURL? {#what-is-curl}
 
@@ -34,7 +34,7 @@ På grund av Sling-ramverkets RESTful-karaktär, som AEM bygger på, kan de fles
 
 >[!NOTE]
 >
->Alla AEM-kommandon som utförs via cURL måste auktoriseras precis som alla användare till AEM. Alla åtkomstkontrollistor och åtkomsträttigheter respekteras när cURL används för att köra ett AEM-kommando.
+>Alla AEM som utförs via cURL måste godkännas precis som alla andra användare som ska AEM. Alla åtkomstkontrollistor och åtkomsträttigheter respekteras när cURL används för att köra ett AEM.
 
 ## Hämtar cURL {#downloading-curl}
 
@@ -42,15 +42,15 @@ cURL är en standarddel i macOS och vissa Linux-miljöer. Det finns dock för de
 
 Källdatabasen för cURL finns även på GitHub.
 
-## Skapa ett cURL-klart AEM-kommando {#building-a-curl-ready-aem-command}
+## Skapa ett cURL-klart AEM {#building-a-curl-ready-aem-command}
 
-cURL-kommandon kan byggas för de flesta åtgärder i AEM, till exempel för att utlösa arbetsflöden, kontrollera OSGi-konfigurationer, utlösa JMX-kommandon, skapa replikeringsagenter och mycket annat.
+cURL-kommandon kan byggas för de flesta åtgärder i AEM, som att utlösa arbetsflöden, kontrollera OSGi-konfigurationer, utlösa JMX-kommandon, skapa replikeringsagenter och mycket annat.
 
-Om du vill hitta exakt det kommando som du behöver för en viss åtgärd måste du använda utvecklarverktygen i webbläsaren för att hämta POST-anropet till servern när du kör AEM-kommandot.
+Om du vill hitta exakt det kommando som du behöver för en viss åtgärd måste du använda utvecklarverktygen i webbläsaren för att fånga upp anropet till POSTEN när du kör AEM.
 
 I följande steg beskrivs hur du gör detta genom att skapa en ny sida i webbläsaren Chrome.
 
-1. Förbered den åtgärd du vill anropa i AEM. I det här fallet har vi gått till slutet av guiden **Skapa sida** , men ännu inte klickat på **Skapa**.
+1. Förbered den åtgärd som du vill anropa inom AEM. I det här fallet har vi gått till slutet av guiden **Skapa sida** , men ännu inte klickat på **Skapa**.
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
@@ -59,7 +59,7 @@ I följande steg beskrivs hur du gör detta genom att skapa en ny sida i webblä
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
 1. Klicka på **Skapa** i guiden **Skapa sida** för att skapa arbetsflödet.
-1. Högerklicka på den resulterande POST-åtgärden och välj **Kopiera** -> **Kopiera som cURL**.
+1. Högerklicka på den slutliga POSTEN och välj **Kopiera** -> **Kopiera som cURL**.
 
    ![chlimage_1-68](assets/chlimage_1-68.png)
 
@@ -73,11 +73,11 @@ I följande steg beskrivs hur du gör detta genom att skapa en ny sida i webblä
 
 ## Vanliga AEM cURL-kommandon {#common-operational-aem-curl-commands}
 
-Här är en lista med AEM cURL-kommandon för vanliga administrativa och operativa uppgifter.
+Här är en lista AEM cURL-kommandon för vanliga administrativa och operativa uppgifter.
 
 >[!NOTE]
 >
->I följande exempel antas att AEM körs på `localhost` en port `4502` och att användaren `admin` använder lösenordet `admin`. Ytterligare kommandoplatshållare anges inom vinkelparenteser.
+>I följande exempel antas att AEM körs `localhost` på port `4502` och att användaren `admin` använder lösenordet `admin`. Ytterligare kommandoplatshållare anges inom vinkelparenteser.
 
 ### Pakethantering {#package-management}
 
@@ -312,13 +312,13 @@ Mer information finns [i avsnittet om att välja till Adobe Analytics och Adobe 
 
 Mer information finns i [Enkel inloggning](/help/sites-deploying/single-sign-on.md) .
 
-## AEM cURL-kommandon för Common Content Manipulation {#common-content-manipulation-aem-curl-commands}
+## Vanlig innehållshantering AEM cURL-kommandon {#common-content-manipulation-aem-curl-commands}
 
-Här är en lista med AEM cURL-kommandon för innehållsändring.
+Här är en lista AEM cURL-kommandon för innehållsändring.
 
 >[!NOTE]
 >
->I följande exempel antas att AEM körs på `localhost` en port `4502` och att användaren `admin` använder lösenordet `admin`. Ytterligare kommandoplatshållare anges inom vinkelparenteser.
+>I följande exempel antas att AEM körs `localhost` på port `4502` och att användaren `admin` använder lösenordet `admin`. Ytterligare kommandoplatshållare anges inom vinkelparenteser.
 
 ### Sidhantering {#page-management}
 
