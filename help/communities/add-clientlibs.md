@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: c84040b0-7850-4960-b676-ffa0a74c8cb2
 translation-type: tm+mt
 source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+workflow-type: tm+mt
+source-wordcount: '652'
+ht-degree: 5%
 
 ---
 
@@ -23,36 +26,36 @@ Skapa en ClientLibraryFolder med namnet `clientlibs`som innehåller den JS och C
 
 Det `categories`egenskapsvärde som anges för det här klientbiblioteket är den identifierare som används för att ta med klientlibben direkt från en innehållssida eller för att bädda in den i andra klientlibs.
 
-1. Expandera med **[!UICONTROL CRXDE Lite]**`/etc/designs`
+1. Använda **[!UICONTROL CRXDE Lite]** expanderar `/etc/designs`
 
 1. Högerklicka på `an-scf-sandbox` och välj `Create Node`
 
    * Namn: `clientlibs`
    * Typ: `cq:ClientLibraryFolder`
 
-1. Click **[!UICONTROL OK]**
+1. Klicka på **[!UICONTROL OK]**
 
 ![chlimage_1-220](assets/chlimage_1-220.png)
 
-Ange **[!UICONTROL egenskapen på fliken]** Egenskaper `clientlibs` för den nya **`categories`** noden:
+På fliken **[!UICONTROL Properties]** för den nya `clientlibs` noden anger du **`categories`** egenskapen:
 
-* Namn: **[!UICONTROL kategorier]**
+* Namn: **[!UICONTROL categories]**
 * Typ: **[!UICONTROL String]**
 * Värde: **[!UICONTROL apps.an-scf-sandbox]**
-* Click **[!UICONTROL Add]**
-* Klicka på **[!UICONTROL Spara alla]**
+* Klicka på **[!UICONTROL Add]**
+* Klicka på **[!UICONTROL Save All]**
 
 Obs! för att visa kategorivärdet med appar. är en konvention som identifierar att det ägande programmet finns i /apps-mappen, inte /libs.  VIKTIGT! Lägg till platshållare `js.txt` och `css.txt` filer. (Det är inte officiellt en cq:ClientLibraryFolder utan dem.)
 
 
 1. Högerklicka på **`/etc/designs/an-scf-sandbox/clientlibs`**
-1. Välj **[!UICONTROL Skapa fil..]**
-1. Ange **[!UICONTROL namn]**: `css.txt`
+1. Välj **[!UICONTROL Create File...]**
+1. Enter **[!UICONTROL Name]**: `css.txt`
 
-1. Välj **[!UICONTROL Skapa fil..]**
-1. Ange **[!UICONTROL namn]**: `js.txt`
+1. Välj **[!UICONTROL Create File...]**
+1. Enter **[!UICONTROL Name]**: `js.txt`
 
-1. Klicka på **[!UICONTROL Spara alla]**
+1. Klicka på **[!UICONTROL Save All]**
 
 ![chlimage_1-221](assets/chlimage_1-221.png)
 
@@ -75,7 +78,7 @@ Skapa sedan en fil under clientlibs med namnet style.css och ställ in innehåll
 
 ## Bädda in SCF-klienter {#embed-scf-clientlibs}
 
-På fliken **[!UICONTROL Egenskaper]** för `clientlibs` noden anger du strängegenskapen **[!UICONTROL embed]** med flera värden. Då bäddas nödvändiga [klientbibliotek (klientlibs) in för SCF-komponenter](client-customize.md#clientlibs-for-scf). I den här självstudiekursen ska vi lägga till många av de klientlibs som behövs för webbkomponenterna.
+Ange egenskapen String med flera värden på fliken **[!UICONTROL Properties]** för `clientlibs` noden **[!UICONTROL embed]**. Då bäddas nödvändiga [klientbibliotek (klientlibs) in för SCF-komponenter](client-customize.md#clientlibs-for-scf). I den här självstudiekursen ska vi lägga till många av de klientlibs som behövs för webbkomponenterna.
 
 **Observera** att detta kan vara det önskade tillvägagångssättet för en produktionsplats, eftersom det kan vara en god idé jämfört med storleken/hastigheten på de klienter som laddas ned för varje sida.
 
@@ -86,7 +89,7 @@ I det här fallet tar vi med alla, och föredrar därför de mer grundläggande 
 * Namn: **`embed`**
 * Typ: **`String`**
 
-* Click **`Multi`**
+* Klicka på **`Multi`**
 * Värde: **`cq.social.scf`**
 
    *&lt;enter> öppnar en dialogruta*
@@ -99,9 +102,9 @@ I det här fallet tar vi med alla, och föredrar därför de mer grundläggande 
    * **`cq.social.author.hbs.rating`**
    * **`cq.social.author.hbs.reviews`**
    * **`cq.social.author.hbs.voting`**
-   * Click **[!UICONTROL OK]**
+   * Klicka på **[!UICONTROL OK]**
 
-* Klicka på **[!UICONTROL Spara alla]**
+* Klicka på **[!UICONTROL Save All]**
 
 ![chlimage_1-222](assets/chlimage_1-222.png)
 
@@ -125,16 +128,16 @@ Programsatsen include tillhör <head><meta http-equiv="Content-Type" content="te
 
 **Copy headlibs.jsp and include clientlibs:**
 
-1. Med **[!UICONTROL CRXDE Lite]** väljer du **`/libs/foundation/components/page/headlibs.jsp`**
-1. Högerklicka och välj **[!UICONTROL Kopiera]** (eller välj Kopiera från verktygsfältet)
+1. Använd **[!UICONTROL CRXDE Lite]** och markera **`/libs/foundation/components/page/headlibs.jsp`**
+1. Högerklicka och välj **[!UICONTROL Copy]** (eller välj Kopiera från verktygsfältet)
 1. Välj **`/apps/an-scf-sandbox/components/playpage`**
-1. Högerklicka och välj **[!UICONTROL Klistra in]** (eller välj Klistra in i verktygsfältet)
+1. Högerklicka och välj **[!UICONTROL Paste]** (eller välj Klistra in i verktygsfältet)
 1. Dubbelklicka på **`headlibs.jsp`** för att öppna den
 1. Lägg till följande rad i slutet av filen
 
    **`<ui:includeClientLib categories="apps.an-scf-sandbox"/>`**
 
-1. Klicka på **[!UICONTROL Spara alla]**
+1. Klicka på **[!UICONTROL Save All]**
 
 
 ```xml
@@ -162,30 +165,30 @@ Paketet finns i självstudiekursen [Skapa en exempelsida](create-sample-page.md)
 Så här skapar du ett paket:
 
 
-* Från **[!UICONTROL CRXDE Lite]** klickar du på ikonen [Packa](http://localhost:4502/crx/packmgr/)
-* Klicka på **[!UICONTROL Skapa paket]**
+* Klicka **[!UICONTROL CRXDE Lite]** på [paketikonen](http://localhost:4502/crx/packmgr/)
+* Klicka på **[!UICONTROL Create Package]**
 
    * Paketnamn: `an-scf-sandbox-minimal-pkg`
    * Version: `0.1`
    * Grupp: &lt;lämna som standard>
-   * Click **[!UICONTROL OK]**
+   * Klicka på **[!UICONTROL OK]**
 
-* Click **[!UICONTROL Edit]**
+* Klicka på **[!UICONTROL Edit]**
 
-   * Välj **[!UICONTROL fliken Filter]**
+   * Välj **[!UICONTROL Filters]** flik
 
-      * Klicka på **[!UICONTROL Lägg till filter]**
+      * Klicka på **[!UICONTROL Add filter]**
       * Rotsökväg: &lt;bläddra till `/apps/an-scf-sandbox`>
-      * Klicka på **[!UICONTROL Klar]**
-      * Klicka på **[!UICONTROL Lägg till filter]**
+      * Klicka på **[!UICONTROL Done]**
+      * Klicka på **[!UICONTROL Add filter]**
       * Rotsökväg: &lt;bläddra till `/etc/designs/an-scf-sandbox`>
-      * Klicka på **[!UICONTROL Klar]**
-      * Klicka på **[!UICONTROL Lägg till filter]**
+      * Klicka på **[!UICONTROL Done]**
+      * Klicka på **[!UICONTROL Add filter]**
       * Rotsökväg: &lt;bläddra till `/content/an-scf-sandbox`>
-      * Klicka på **[!UICONTROL Klar]**
-   * Click **[!UICONTROL Save]**
+      * Klicka på **[!UICONTROL Done]**
+   * Klicka på **[!UICONTROL Save]**
 
 
-* Klicka på **[!UICONTROL Skapa]**
+* Klicka på **[!UICONTROL Build]**
 
-Nu kan du välja **[!UICONTROL Hämta]** för att spara den på hårddisken och **[!UICONTROL Överför paket]** någon annanstans. Du kan även välja **[!UICONTROL Mer > Replikera]** för att överföra sandlådan till en lokal värdpubliceringsinstans för att utöka sandlådan.
+Nu kan du välja **[!UICONTROL Download]** att spara den på disk och **[!UICONTROL Upload Package]** någon annanstans, samt välja **[!UICONTROL More > Replicate]** för att överföra sandlådan till en lokal publiceringsinstans för att utöka sandlådans sfär.
