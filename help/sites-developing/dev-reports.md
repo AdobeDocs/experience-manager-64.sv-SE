@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 50fafc64-d462-4386-93af-ce360588d294
 translation-type: tm+mt
 source-git-commit: 8e2bd579e4c5edaaf86be36bd9d81dfffa13a573
+workflow-type: tm+mt
+source-wordcount: '5252'
+ht-degree: 0%
 
 ---
 
 
 # Utveckla rapporter{#developing-reports}
 
-AEM tillhandahåller ett urval av [standardrapporter](/help/sites-administering/reporting.md) som de flesta baseras på ett rapporteringsramverk.
+AEM tillhandahåller ett urval av [standardrapporter](/help/sites-administering/reporting.md) som de flesta bygger på ett rapporteringsramverk.
 
 Med hjälp av ramverket kan du antingen utöka dessa standardrapporter eller utveckla egna helt nya rapporter. Rapporteringsramverket är nära integrerat med befintliga CQ5-koncept och CQ5-principer så att utvecklarna kan använda sina befintliga kunskaper om CQ5 som en språngbräda för att utveckla rapporter.
 
@@ -68,7 +71,8 @@ För standardrapporter som levereras med AEM:
    >
    >
 * Indrag visar hierarkiska beroenden mellan noderna.
->* Objekt avgränsade med| betecknar en lista över möjliga poster, till exempel typer eller namn:
+>* Objekt avgränsade med | betecknar en lista över möjliga poster, till exempel typer eller namn:
+
 >
 >  
 Det betyder t.ex. `String|String[]` att egenskapen kan vara String eller String[].
@@ -285,7 +289,7 @@ N:queryBuilder
 
    Kan användas för att begränsa resultatet som angetts till noder som har specifika egenskaper med specifika värden. Om flera begränsningar anges måste noden uppfylla alla (AND-åtgärd).
 
-   Exempel:
+   Till exempel:
 
    ```
    N:propertyConstraints
@@ -354,7 +358,7 @@ N:charting
 
    * `type`
 
-      Diagramtyp som är tillgänglig. Välj bland:
+      Diagramtyp som är tillgänglig. Välj  från:
 
       * `pie`
 Cirkeldiagram. Genereras endast från aktuella data.
@@ -384,13 +388,13 @@ standard: `false`
          * `series` ( `Long`)
 
             Antal rader/serier som ska visas.
-standard: `9` (detta är också det högsta tillåtna värdet)
+standard: `9` (detta är också högsta tillåtna)
 
          * `hoverLimit` ( `Long`)
 
             Maximalt antal aggregerade ögonblicksbilder (punkter som visas på varje vågrät linje, som representerar distinkta värden) som popup-fönster ska visas för, dvs när användaren för musen över ett distinkt värde eller motsvarande etikett i diagramförklaringen.
 
-            standard: `35` (d.v.s. inga popup-fönster visas om fler än 35 distinkta värden gäller för de aktuella diagraminställningarna).
+            standard: `35` (d.v.s. inga popup-fönster visas om fler än 35 distinkta värden kan användas för de aktuella diagraminställningarna).
 
             Det finns ytterligare en begränsning på 10 popup-fönster som kan visas parallellt (flera popup-fönster kan visas när muspekaren förs över förklaringstexterna).
 
@@ -398,7 +402,7 @@ standard: `9` (detta är också det högsta tillåtna värdet)
 
 ### Konfigurationsdialogruta {#configuration-dialog}
 
-Varje rapport kan ha en konfigurationsdialogruta där användaren kan ange olika parametrar för rapporten. Dialogrutan är tillgänglig via knappen **Redigera** när rapportsidan är öppen.
+Varje rapport kan ha en konfigurationsdialogruta där användaren kan ange olika parametrar för rapporten. Den här dialogrutan är tillgänglig via knappen **Redigera** när rapportsidan är öppen.
 
 Den här dialogrutan är en standard-CQ- [dialogruta](/help/sites-developing/components-basics.md#dialogs) och kan konfigureras som sådan (mer information finns i [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog) ).
 
@@ -627,7 +631,7 @@ N:definitions
 
    * `page`
 
-      Löser ett sökvägsvärde till sökvägen för rätt sida. mer exakt, till motsvarande `jcr:content` nod. Till exempel `/content/.../page/jcr:content/par/xyz` löses det som `/content/.../page/jcr:content`.
+      Löser ett sökvägsvärde till sökvägen för rätt sida. mer exakt, till motsvarande `jcr:content` nod. For example, `/content/.../page/jcr:content/par/xyz` is resolved to `/content/.../page/jcr:content`.
 
    * `path`
 
@@ -773,7 +777,7 @@ Du kan ange något av följande för förbearbetning:
 
    Konverterar ett numeriskt värde till en relativ sträng; Värdet&quot;som representerar en tidsskillnad på 1 timme&quot; skulle till exempel matchas med en sträng som `1:24PM (1 hour ago)`.
 
-Exempel:
+Till exempel:
 
 ```xml
 N:definitions
@@ -824,7 +828,7 @@ En exempelersättning kan delas upp som:
 
 Dessa formaterare konverterar ett numeriskt värde till en relativ sträng.
 
-Detta kan till exempel användas för en tidskolumn som tillåter `min`, `avg` och `max` aggregat. As `min`/ `avg`/ `max` aggregates visas som en *tidsskillnad* (t.ex. `10 days ago`) kräver de ett dataformat. För detta används en `datedelta` formaterare för `min`/ `avg`/- `max` aggregeringsvärdena. Om en sammanställning också är tillgänglig behöver den inte någon formaterare, och det ursprungliga värdet behövs inte heller. `count`
+Detta kan till exempel användas för en tidskolumn som tillåter `min`, `avg` och `max` aggregat. As `min`/ `avg`/ `max` aggregates visas som en *tidsskillnad* (t.ex. `10 days ago`) krävs en dataformaterare. För detta används en `datedelta` formaterare för `min`/ `avg`/- `max` aggregeringsvärdena. Om en sammanställning också är tillgänglig behöver den inte någon formaterare, och det ursprungliga värdet behövs inte heller. `count`
 
 Följande datatypsformaterare är tillgängliga:
 
@@ -1056,7 +1060,7 @@ Så här gör du en kolumn generisk:
 
    Se `/libs/cq/reporting/components/userreport/genericcol/cq:editConfig`
 
-* Använd AEM-standardmetoder för att definiera (ytterligare) kolumnegenskaper.
+* Använd AEM standardmetoder för att definiera (ytterligare) kolumnegenskaper.
 
    Observera att för egenskaper som definieras för både komponent- och kolumninstanser har värdet för kolumninstansen företräde.
 
@@ -1069,6 +1073,7 @@ Så här gör du en kolumn generisk:
    * `definitions/data/resolver` och `definitions/data/resolverConfig` (men inte `definitions/data/preprocessing` eller `.../clientFilter`) - lösaren och konfigurationen
    * `definitions/queryBuilder` - konfiguration av frågebyggaren
    * `defaults/aggregate` - standardsammanställningen
+
    När det gäller en ny instans av den generiska kolumnen i **användarrapporten** bevaras egenskaperna som definierats med dialogrutan under:
 
    `/etc/reports/userreport/jcr:content/report/columns/genericcol/settings/generic`
@@ -1312,6 +1317,7 @@ För att illustrera dessa steg definierar följande exempel en rapport som visar
    * har rubriken `Bundle` (kolumnrubrik i tabellen)
    * finns i sidospartsgruppen `OSGi Report`
    * uppdateras vid angivna händelser
+
    >[!NOTE]
    >
    >I det här exemplet finns inga definitioner av `N:data` och `P:clientFilter`. Detta beror på att värdet som tas emot från servern returneras på 1:1-basis, vilket är standardbeteendet.
@@ -1381,7 +1387,7 @@ En instans av din nya rapport kan nu skapas:
 1. Öppna **verktygskonsolen** .
 
 1. Välj **Rapporter** i den vänstra rutan.
-1. **Sedan** Nytt... i verktygsfältet. Definiera en **titel** och ett **namn**, välj den nya rapporttypen ( **OSGi-rapportmallen**) i listan med mallar och klicka sedan på **Skapa**.
+1. Sedan **Nytt...** i verktygsfältet. Definiera en **titel** och ett **namn**, välj den nya rapporttypen ( **OSGi-rapportmallen**) i listan med mallar och klicka sedan på **Skapa**.
 1. Den nya rapportinstansen visas i listan. Dubbelklicka här för att öppna.
 1. Dra en komponent (till exempel **Bundle** i **OSGi Report** -gruppen) från sidosparken för att skapa den första kolumnen och [starta rapportdefinitionen](/help/sites-administering/reporting.md#the-basics-of-report-customization).
 
@@ -1405,7 +1411,7 @@ Dessa kan visas med hjälp av webbkonsolens konfigurationsmeny (finns t.ex. på 
 
 ### Grundläggande tjänst (dagskonfiguration för CQ-rapportering) {#basic-service-day-cq-reporting-configuration}
 
-* **Tidszonen** definierar tidszonens historiska data som skapas för. Detta är för att säkerställa att det historiska diagrammet visar samma data för varje användare över hela världen.
+* **Tidszonen** definierar tidszonens historiska data som skapas för. Detta är för att säkerställa att det historiska diagrammet visar samma data för varje användare runt om i världen.
 * **Språkinställning** definierar det språkområde som ska användas tillsammans med **tidszonen** för historiska data. Språkinställningen används för att bestämma vissa språkspecifika kalenderinställningar (t.ex. om den första dagen i en vecka är söndag eller måndag).
 
 * **Sökväg** till ögonblicksbild definierar rotsökvägen där ögonblicksbilder för historiska diagram lagras.
@@ -1439,6 +1445,7 @@ Dessa kan visas med hjälp av webbkonsolens konfigurationsmeny (finns t.ex. på 
 >
 >* en rapport för två användare med olika språkinställningar
 >* en användare och två rapporter
+
 >
 
 
