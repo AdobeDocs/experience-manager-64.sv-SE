@@ -11,15 +11,18 @@ topic-tags: development-tools
 discoiquuid: 38fd51ec-347e-4ae3-86d4-9d2429f79bdd
 translation-type: tm+mt
 source-git-commit: e3fcf1a117b13392b7e530a09198982c6160cb7b
+workflow-type: tm+mt
+source-wordcount: '507'
+ht-degree: 0%
 
 ---
 
 
 # Introducing Java API Quick Start {#introducing-java-api-quickstart}
 
-Med API-snabbstarten för Adobe AEM Forms kan du snabba upp arbetet med att utveckla program som interagerar med AEM Forms-tjänster. *Quick* Starts är ett komplett program som du kan kopiera och klistra in i dina egna projekt och använda som utgångspunkt. Du kan köra en snabbstart för att se hur den fungerar och ändra den efter dina egna behov.
+Snabbstart för Adobe AEM Forms kan hjälpa dig att snabba upp arbetet med att utveckla program som interagerar med AEM Forms tjänster. *Quick* Starts är ett komplett program som du kan kopiera och klistra in i dina egna projekt och använda som utgångspunkt. Du kan köra en snabbstart för att se hur den fungerar och ändra den efter dina egna behov.
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 Java-API Quick Start innehåller en lista över JAR-filer som krävs för att köra Java-programmet. De flesta Java Quick Starts är konsolprogram som körs i `main`. Snabbstart för Forms Java-typbestämd API implementeras dock som Java-server som körs i ett webbprogram.
 
@@ -62,15 +65,15 @@ JAR-fillistan finns i ett kommentaravsnitt som finns i början av snabbstarten. 
 
 ## Snabbstart för flera tjänster {#multiple-services-quick-start}
 
-De flesta snabbstarter som finns i *Programmering med AEM Forms *anropar en specifik tjänst för att utföra en åtgärd. Vissa snabbstarter anropar dock flera AEM Forms-tjänster för att kunna utföra ett visst arbetsflöde. Följande lista innehåller Java-snabbstarter som anropar mer än en AEM Forms-tjänst:
+De flesta snabbstarter som finns i *Programmering med AEM Forms *anropar en specifik tjänst för att utföra en åtgärd. Vissa snabbstarter anropar dock flera AEM Forms-tjänster för att kunna utföra ett visst arbetsflöde. Följande lista innehåller Java-snabbstarter som anropar fler än en AEM Forms-tjänst:
 
-[Snabbstart (SOAP-läge): Skicka ett dokument som finns i AEM Forms-databasen till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) (anropar Repository- och Output-tjänsten)
+[Snabbstart (SOAP-läge): Skicka ett dokument som finns i AEM Forms-databasen till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) (anropar tjänsten Repository och Output)
 
 [Snabbstart (SOAP-läge): Skapa ett PDF-dokument baserat på fragment med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api) (anropar Assembler- och Output-tjänsten)
 
 [Snabbstart (SOAP-läge): Skapa PDF-dokument med inskickade XML-data med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api) (anropar tjänsten Forms, Output och Document Management)
 
-[Snabbstart (SOAP-läge): Skicka dokument till Forms Service med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api) (anropar Forms- och Document Management-tjänsten)
+[Snabbstart (SOAP-läge): Skicka dokument till Forms-tjänsten med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api) (anropar Forms och Document Management Service)
 
 [Snabbstart (SOAP-läge): Signera ett XFA-baserat formulär digitalt med Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api) (anropar Forms- och Signature-tjänsten)
 
@@ -80,9 +83,9 @@ De flesta snabbstarter som finns i *Programmering med AEM Forms *anropar en spec
 
 >[!NOTE]
 >
->Snabbstart som finns i Programmering med AEM Forms baseras på AEM Forms som distribueras på JBoss® Application Server och operativsystemet Microsoft® Windows®. Om du använder ett annat operativsystem, till exempel UNIX®, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+>Snabbstart i Programmering med AEM Forms baseras på att AEM Forms körs på JBoss® Application Server och operativsystemet Microsoft® Windows®. Om du använder ett annat operativsystem, till exempel UNIX®, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
 
 >[!NOTE]
 >
->De flesta snabbstarter för webbtjänster skrivs i C# och använder .NET-ramverket. Du kan dock skapa klientprogramlogik som kan anropa AEM Forms-tjänster i alla utvecklingsmiljöer som stöder SOAP-standarder. (Se [Anropa AEM-formulär med webbtjänster](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)
+>De flesta snabbstarter för webbtjänster skrivs i C# och använder .NET-ramverket. Du kan dock skapa klientprogramlogik som kan anropa AEM Forms-tjänster i alla utvecklingsmiljöer som stöder SOAP-standarder. (Se [Anropa AEM Forms med webbtjänster](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)
 
