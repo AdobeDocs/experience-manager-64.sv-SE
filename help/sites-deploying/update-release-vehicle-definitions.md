@@ -1,8 +1,8 @@
 ---
 title: Uppdatera definitioner för frisläppningsfordon
 seo-title: Uppdatera definitioner för frisläppningsfordon
-description: I den här artikeln beskrivs de olika typerna av AEM-versioner, inklusive fullständiga versioner, funktionspaket och servicepaket.
-seo-description: I den här artikeln beskrivs de olika typerna av AEM-versioner, inklusive fullständiga versioner, funktionspaket och servicepaket.
+description: I den här artikeln beskrivs de olika typerna av AEM, inklusive fullständiga versioner, funktionspaket och servicepaket.
+seo-description: I den här artikeln beskrivs de olika typerna av AEM, inklusive fullständiga versioner, funktionspaket och servicepaket.
 uuid: 388fb6f5-0249-41e2-a460-1bb4cd0f8494
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,13 +11,16 @@ topic-tags: deploying
 discoiquuid: 32695db5-d62d-4959-8a24-3d56b4a19904
 translation-type: tm+mt
 source-git-commit: d9387009bca3ce1ea5993658959c1070e07e11d0
+workflow-type: tm+mt
+source-wordcount: '998'
+ht-degree: 2%
 
 ---
 
 
-# AEM Update Release Vehicle Definitions {#update-release-vehicle-definitions}
+# Definitioner av AEM Uppdatera utgivningsfordon {#update-release-vehicle-definitions}
 
-Det här dokumentet innehåller information om de olika typerna av Adobe Experience Manager-versioner (AEM), inklusive fullständiga releaser, funktionspaket och servicepaket som Adobe levererar till sina kunder.
+Det här dokumentet innehåller information om de olika typerna av Adobe Experience Manager (AEM)-releaser, inklusive fullständiga releaser, funktionspaket och servicepaket som Adobe levererar till sina kunder.
 
 ## Fullversion {#full-release}
 
@@ -65,7 +68,7 @@ Det här dokumentet innehåller information om de olika typerna av Adobe Experie
    <td>
     <ul> 
      <li>Levereras som ett fristående installationsprogram</li> 
-     <li>Finns på licenswebbplatsen och webbplatsen för Managed Services Licensing</li> 
+     <li>Finns på licenswebbplatsen och Managed Services Licensing Website</li> 
      <li>Kan kräva migrering av innehållsdatabas</li> 
     </ul> </td> 
   </tr>
@@ -245,7 +248,7 @@ Det här dokumentet innehåller information om de olika typerna av Adobe Experie
   </tr>
   <tr>
    <td><strong>Dokumentation</strong></td> 
-   <td>Versionsinformation om de offentliga snabbkorrigeringarna är endast tillgängliga baserat på kundens begäran via AEM Support Portal.</td> 
+   <td>Versionsinformation om de offentliga snabbkorrigeringarna är endast tillgänglig baserat på kundens begäran via AEM supportportal.</td> 
   </tr>
   <tr>
    <td><strong>Cadence</strong></td> 
@@ -266,7 +269,7 @@ Det här dokumentet innehåller information om de olika typerna av Adobe Experie
    <td>
     <ul> 
      <li>Validerad av Kundtjänst</li> 
-     <li>AEM-snabbkorrigeringar har inte samma kvalitetssäkring som servicepaket eller produktreleaser. Därför bör de först valideras i en testmiljö som en del av kvalitetsdistributionsprocesserna.</li> 
+     <li>AEM snabbkorrigeringar har inte samma kvalitetssäkring som servicepaket eller produktreleaser. Därför bör de först valideras i en testmiljö som en del av kvalitetsdistributionsprocesserna.</li> 
     </ul> </td> 
   </tr>
  </tbody>
@@ -300,7 +303,7 @@ Det här dokumentet innehåller information om de olika typerna av Adobe Experie
    <td><strong>Tillgänglighet och installation</strong></td> 
    <td>
     <ul> 
-     <li>Levereras som paket av AEM Customer Care</li> 
+     <li>Levereras som paket av AEM kundtjänst</li> 
      <li>Ingår inte nödvändigtvis i Service Pack eller fullständiga versioner</li> 
     </ul> </td> 
   </tr>
@@ -319,9 +322,9 @@ Det här dokumentet innehåller information om de olika typerna av Adobe Experie
    <td><strong>Definition</strong></td> 
    <td>
     <ul> 
-     <li>Funktionspaket är tilläggsfunktioner och levereras via Service Pack. Om en AEM-version har släppt sitt senaste Service Pack kommer Adobe inte att leverera något funktionspaket till den i framtiden.</li> 
-     <li>FP:er innehåller produktförbättringar, som planeras för en senare produktrelease, men levereras i ett tidigt skede baserat på beslut av Adobes produktledning.</li> 
-     <li>Funktionerna sammanfogas alltid med nästa större release och backporteras sedan till den AEM-version som kunden behöver</li> 
+     <li>Funktionspaket är tilläggsfunktioner och levereras via Service Pack. Om en AEM har släppt sitt senaste Service Pack kommer Adobe inte att leverera något funktionspaket till den i framtiden.</li> 
+     <li>FP:er innehåller produktförbättringar, som planeras för en senare produktrelease, men levereras tidigt baserat på beslut av Adobe Product Management.</li> 
+     <li>Funktioner sammanfogas alltid med nästa större release och backporteras sedan till den AEM versionen som kunden behöver</li> 
      <li>Funktionspaket för gemensamt intresse och GA sammanfogas i nästa servicepaket</li> 
     </ul> </td> 
   </tr>
@@ -351,7 +354,7 @@ Det här dokumentet innehåller information om de olika typerna av Adobe Experie
    <td>
     <ul> 
      <li>Levereras som ett paket</li> 
-     <li>Finns på paketresurs. Kunderna godkänner Adobes villkor via paketresursen.</li> 
+     <li>Finns på paketresurs. Kunderna godkänner Adobe och villkor via paketresursen.</li> 
     </ul> </td> 
   </tr>
   <tr>
