@@ -1,6 +1,6 @@
 ---
-title: Anropa AEM-formulär med JavaAPI
-seo-title: Anropa AEM-formulär med JavaAPI
+title: Anropa AEM Forms med JavaAPI
+seo-title: Anropa AEM Forms med JavaAPI
 description: 'null'
 seo-description: 'null'
 uuid: 5e2fef2a-05f3-4283-8fd3-2d7dca411000
@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# Anropa AEM-formulär med Java API {#invoking-aem-forms-using-the-javaapi}
+# Anropa AEM Forms med Java API {#invoking-aem-forms-using-the-javaapi}
 
-AEM Forms kan anropas med AEM Forms Java API. När du använder AEM Forms Java API kan du antingen använda anrops-API eller Java-klientbibliotek. Java-klientbibliotek är tillgängliga för tjänster som Rights Management-tjänsten. Med dessa starkt typbestämda API:er kan du utveckla Java-program som anropar AEM Forms.
+AEM Forms kan anropas med AEM Forms Java API. När du använder AEM Forms Java API kan du antingen använda anrops-API eller Java-klientbibliotek. Java-klientbibliotek är tillgängliga för tjänster som Rights Management. Med dessa starkt typbestämda API:er kan du utveckla Java-program som anropar AEM Forms.
 
 Anrops-API:t är klasser som finns i `com.adobe.idp.dsc` paketet. Med dessa klasser kan du skicka en anropsbegäran direkt till en tjänst och hantera ett anropssvar som returneras. Använd anrops-API:t för att anropa kortlivade eller långvariga processer som skapats med Workbench.
 
@@ -36,9 +36,9 @@ Java API har stöd för följande funktioner:
 
 **Adobe Developer website**
 
-Adobe Developer-webbplatsen innehåller följande artiklar som beskriver hur du anropar AEM Forms-tjänster med Java API:
+På webbplatsen Adobe Developer finns följande artiklar om hur du anropar AEM Forms-tjänster med Java API:
 
-[Använda Java-servrar för att anropa AEM Forms-processer](https://www.adobe.com/devnet/livecycle/articles/java_servlets.html)
+[Använda Java-servrar för att starta AEM Forms-processer](https://www.adobe.com/devnet/livecycle/articles/java_servlets.html)
 
 [Anropa AEM Forms Distiller API från Java](https://www.adobe.com/devnet/livecycle/articles/distiller_java_03.html)
 
@@ -48,7 +48,7 @@ Adobe Developer-webbplatsen innehåller följande artiklar som beskriver hur du 
 
 [Anropa personalcentrerade, långlivade processer](invoking-human-centric-long-lived.md)
 
-[Anropa AEM-formulär med webbtjänster](/help/forms/developing/invoking-aem-forms-using-web.md)
+[Anropa AEM Forms med Web Services](/help/forms/developing/invoking-aem-forms-using-web.md)
 
 [Ange anslutningsegenskaper](#setting-connection-properties)
 
@@ -69,9 +69,9 @@ Om du vill anropa en AEM Forms-tjänst med hjälp av Java API:t inkluderar du n�
 
 >[!NOTE]
 >
->(Endast inaktivera) Starta AEM Forms-servern med kommando `standalone.bat -b <Server IP> -c lc_turnkey.xml` för att ange en server-IP för EJB.
+>(Endast inaktivera) Starta AEM Forms-servern med kommandot `standalone.bat -b <Server IP> -c lc_turnkey.xml` för att ange en server-IP för EJB.
 
-* J2EE-programservern där AEM Forms distribueras.
+* J2EE-programservern som AEM Forms är distribuerad på.
 
 ### Tjänstspecifika JAR-filer {#service-specific-jar-files}
 
@@ -178,7 +178,7 @@ I följande tabell visas de JAR-filer som krävs för att anropa AEM Forms-tjän
   </tr>
   <tr>
    <td><p>adobe-pdfutility-client.jar</p></td>
-   <td><p>Krävs för att anropa PDF-verktygen eller XMP-verktygstjänsten.</p></td>
+   <td><p>Krävs för att anropa tjänsten PDF Utilities eller XMP Utilities.</p></td>
    <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
   </tr>
   <tr>
@@ -203,7 +203,7 @@ I följande tabell visas de JAR-filer som krävs för att anropa AEM Forms-tjän
      <li><p>relaxngDatatype.jar</p></li>
      <li><p>xsdlib.jar</p></li>
     </ul></td>
-   <td><p>Krävs för att anropa Rights Management-tjänsten.</p><p>Om AEM Forms distribueras på JBoss inkluderar du alla dessa filer. </p></td>
+   <td><p>Krävs för att anropa tjänsten Rights Management.</p><p>Om AEM Forms distribueras på JBoss inkluderar du alla dessa filer. </p></td>
    <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p><p>JBoss-specifik bibliotekskatalog</p></td>
   </tr>
   <tr>
@@ -260,17 +260,17 @@ I följande tabell visas de JAR-filer som är beroende av anslutningsläget och 
      <li>xercesImpl.jar<br /> </li>
      <li>commons-httpclient-3.1.jar</li>
     </ul> <p> </p> </td>
-   <td><p>Om AEM Forms anropas i SOAP-läge ska du inkludera dessa JAR-filer.</p> </td>
+   <td><p>om AEM Forms anropas i SOAP-läge, inkludera dessa JAR-filer.</p> </td>
    <td><p>&lt;<em>installationskatalog</em>&gt;/sdk/client-libs/thirdparty</p> </td>
   </tr>
   <tr>
    <td><p> jboss-client.jar</p> </td>
-   <td><p>om AEM Forms distribueras på JBoss Application Server, inkludera den här JAR-filen.</p> <p>Klassinläsaren hittar inte nödvändiga klasser om jboss-client.jar och de refererade burkarna inte finns tillsammans.</p> </td>
+   <td><p>om AEM Forms distribueras på JBoss Application Server, inkludera denna JAR-fil.</p> <p>Klassinläsaren hittar inte nödvändiga klasser om jboss-client.jar och de refererade burkarna inte finns tillsammans.</p> </td>
    <td><p>JBoss-klientbibliotekskatalog</p> <p>Om du distribuerar klientprogrammet på samma J2EE-programserver behöver du inte inkludera den här filen.</p> </td>
   </tr>
   <tr>
    <td><p>wlclient.jar</p> </td>
-   <td><p>Om AEM Forms används på BEA WebLogic Server® ska du bifoga den här JAR-filen.</p> </td>
+   <td><p>om AEM Forms körs på BEA WebLogic Server® ska du ta med denna JAR-fil.</p> </td>
    <td><p>WebLogic-specifik bibliotekskatalog</p> <p>Om du distribuerar klientprogrammet på samma J2EE-programserver behöver du inte inkludera den här filen.</p> </td>
   </tr>
   <tr>
@@ -281,7 +281,7 @@ I följande tabell visas de JAR-filer som är beroende av anslutningsläget och 
     </ul> </td>
    <td>
     <ul>
-     <li><p>om AEM Forms distribueras på WebSphere Application Server ska du inkludera dessa JAR-filer.</p> </li>
+     <li><p>om AEM Forms distribueras på WebSphere Application Server, inkludera dessa JAR-filer.</p> </li>
      <li><p>(com.ibm.ws.webservices.thinclient_6.1.0.jar krävs för webbtjänstanrop).</p> </li>
     </ul> </td>
    <td><p>WebSphere-specifik bibliotekskatalog (<em>[WAS_HOME]</em>/runtimes)</p> <p>Om du distribuerar klientprogrammet på samma J2EE-programserver behöver du inte inkludera de här filerna.</p> </td>
@@ -291,7 +291,7 @@ I följande tabell visas de JAR-filer som är beroende av anslutningsläget och 
 
 ### Anropa scenarier {#invoking-scenarios}
 
-I följande tabell anges vilka scenarier som anropas och vilka JAR-filer som krävs för att AEM Forms ska kunna anropas.
+I följande tabell anges vilka scenarier som anropas och vilka JAR-filer som krävs för att anropa AEM Forms.
 
 <table>
  <thead>
@@ -304,7 +304,7 @@ I följande tabell anges vilka scenarier som anropas och vilka JAR-filer som kr�
  &lt;/thead align="left"&gt;
  <tbody>
   <tr>
-   <td><p>Formulärtjänst</p> </td>
+   <td><p>Forms-tjänst</p> </td>
    <td><p>EJB</p> </td>
    <td><p>JBoss</p> </td>
    <td>
@@ -321,7 +321,7 @@ I följande tabell anges vilka scenarier som anropas och vilka JAR-filer som kr�
     </ul> </td>
   </tr>
   <tr>
-   <td><p>Formulärtjänst</p> <p>Tilläggstjänsten Acrobat Reader DC</p> <p>Signaturtjänst</p> </td>
+   <td><p>Forms-tjänst</p> <p>Acrobat Reader DC-tilläggstjänst</p> <p>Signaturtjänst</p> </td>
    <td><p>EJB</p> </td>
    <td><p>JBoss</p> </td>
    <td>
@@ -340,7 +340,7 @@ I följande tabell anges vilka scenarier som anropas och vilka JAR-filer som kr�
     </ul> </td>
   </tr>
   <tr>
-   <td><p>Formulärtjänst</p> </td>
+   <td><p>Forms-tjänst</p> </td>
    <td><p>SOAP</p> </td>
    <td><p>WebLogic</p> </td>
    <td>
@@ -369,7 +369,7 @@ I följande tabell anges vilka scenarier som anropas och vilka JAR-filer som kr�
     </ul> </td>
   </tr>
   <tr>
-   <td><p>Formulärtjänst</p> <p>Tilläggstjänsten Acrobat Reader DC</p> <p>Signaturtjänst</p> </td>
+   <td><p>Forms-tjänst</p> <p>Acrobat Reader DC-tilläggstjänst</p> <p>Signaturtjänst</p> </td>
    <td><p>SOAP</p> </td>
    <td><p>WebLogic</p> </td>
    <td>
@@ -404,9 +404,9 @@ I följande tabell anges vilka scenarier som anropas och vilka JAR-filer som kr�
 
 ### Uppgraderar JAR-filer {#upgrading-jar-files}
 
-Om du uppgraderar från LiveCycle till AEM Forms bör du inkludera AEM Forms JAR-filerna i Java-projektets klassökväg. Om du till exempel använder tjänster som Rights Management, stöter du på ett kompatibilitetsproblem om du inte inkluderar AEM Forms JAR-filer i klassökvägen.
+Om du uppgraderar från LiveCycle till AEM Forms bör du ta med AEM Forms JAR-filerna i Java-projektets klassökväg. Om du till exempel använder tjänster som Rights Management stöter du på ett kompatibilitetsproblem om du inte inkluderar AEM Forms JAR-filer i klassökvägen.
 
-Anta att du uppgraderar till AEM Forms. Om du vill använda ett Java-program som anropar Rights Management-tjänsten inkluderar du AEM Forms-versionerna av följande JAR-filer:
+Anta att du uppgraderar till AEM Forms. Om du vill använda ett Java-program som anropar tjänsten Rights Management inkluderar du AEM Forms-versionerna av följande JAR-filer:
 
 * adobe-rightsmanagement-client.jar
 * adobe-livecycle-client.jar
@@ -414,7 +414,7 @@ Anta att du uppgraderar till AEM Forms. Om du vill använda ett Java-program som
 
 **Se även**
 
-[Anropa AEM-formulär med Java API](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
+[Anropa AEM Forms med Java API](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
 
 [Ange anslutningsegenskaper](invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -424,34 +424,35 @@ Anta att du uppgraderar till AEM Forms. Om du vill använda ett Java-program som
 
 ## Ange anslutningsegenskaper {#setting-connection-properties}
 
-Du ställer in anslutningsegenskaper för att anropa AEM Forms när du använder Java API. När du anger anslutningsegenskaper anger du om tjänsterna ska anropas från fjärrdatorn eller lokalt, och anger även anslutnings- och autentiseringsvärden. Autentiseringsvärden krävs om tjänstsäkerhet är aktiverat. Om tjänstsäkerhet är inaktiverad behöver du inte ange autentiseringsvärden.
+Du anger anslutningsegenskaper som anropar AEM Forms när du använder Java API. När du anger anslutningsegenskaper anger du om tjänsterna ska anropas från fjärrdatorn eller lokalt, och anger även anslutnings- och autentiseringsvärden. Autentiseringsvärden krävs om tjänstsäkerhet är aktiverat. Om tjänstsäkerhet är inaktiverad behöver du inte ange autentiseringsvärden.
 
 Anslutningsläget kan antingen vara SOAP- eller EJB-läge. I EJB-läget används RMI/IIOP-protokollet, och prestanda för EJB-läget är bättre än för SOAP-läget. SOAP-läget används för att ta bort ett J2EE-serverberoende eller när en brandvägg finns mellan AEM Forms och klientprogrammet. SOAP-läget använder https-protokollet som underliggande transport och kan kommunicera över brandväggsgränserna. Om varken ett J2EE-programserverberoende eller en brandvägg är ett problem rekommenderar vi att du använder EJB-läget.
 
 Om du vill anropa en AEM Forms-tjänst anger du följande anslutningsegenskaper:
 
-* **DSC_DEFAULT_EJB_ENDPOINT:** Om du använder EJB-anslutningsläget representerar det här värdet webbadressen till J2EE-programservern där AEM Forms distribueras. Om du vill fjärranropa AEM Forms anger du det J2EE-programservernamn på vilket AEM Forms distribueras. Om klientprogrammet finns på samma J2EE-programserver kan du ange `localhost`. Beroende på vilken J2EE-programserver AEM Forms distribueras på anger du ett av följande värden:
+* **DSC_DEFAULT_EJB_ENDPOINT:** Om du använder EJB-anslutningsläget representerar det här värdet URL:en för J2EE-programservern som AEM Forms distribueras på. Om du vill fjärranropa AEM Forms anger du namnet på J2EE-programservern som AEM Forms distribueras på. Om klientprogrammet finns på samma J2EE-programserver kan du ange `localhost`. Beroende på vilken J2EE-programserver AEM Forms distribueras på anger du något av följande värden:
 
    * JBoss: `https://<ServerName>:8080 (default port)`
    * WebSphere: `iiop://<ServerName>:2809 (default port)`
    * WebLogic: `t3://<ServerName>:7001 (default port)`
 
-* **DSC_DEFAULT_SOAP_ENDPOINT**: Om du använder SOAP-anslutningsläget representerar det här värdet slutpunkten dit en anropsbegäran skickas. Om du vill fjärranropa AEM Forms anger du det J2EE-programservernamn på vilket AEM Forms distribueras. Om klientprogrammet finns på samma J2EE-programserver kan du ange `localhost` (till exempel `http://localhost:8080`.)
+* **DSC_DEFAULT_SOAP_ENDPOINT**: Om du använder SOAP-anslutningsläget representerar det här värdet slutpunkten dit en anropsbegäran skickas. Om du vill fjärranropa AEM Forms anger du namnet på J2EE-programservern som AEM Forms distribueras på. Om klientprogrammet finns på samma J2EE-programserver kan du ange `localhost` (till exempel `http://localhost:8080`.)
 
    * Portvärdet `8080` gäller om J2EE-programmet är JBoss. Om J2EE-programservern är IBM® WebSphere® ska du använda port `9080`. Om J2EE-programservern är WebLogic använder du port `7001`. (Dessa värden är standardportvärden. Om du ändrar portvärdet använder du det tillämpliga portnumret.)
 
 * **DSC_TRANSPORT_PROTOCOL**: Om du använder EJB-anslutningsläget anger du `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` det här värdet. Om du använder SOAP-anslutningsläget anger du `ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`.
-* **DSC_SERVER_TYPE**: Anger den J2EE-programserver där AEM Forms distribueras. Giltiga värden är `JBoss`, `WebSphere`, `WebLogic`.
+* **DSC_SERVER_TYPE**: Anger J2EE-programservern som AEM Forms distribueras på. Giltiga värden är `JBoss`, `WebSphere`, `WebLogic`.
 
    * Om du ställer in den här anslutningsegenskapen på `WebSphere`ställs `java.naming.factory.initial` värdet in på `com.ibm.ws.naming.util.WsnInitCtxFactory`.
    * Om du ställer in den här anslutningsegenskapen på `WebLogic`ställs `java.naming.factory.initial` värdet in på `weblogic.jndi.WLInitialContextFactory`.
    * Om du anger den här anslutningsegenskapen som `JBoss`ställs `java.naming.factory.initial` värdet in på `org.jnp.interfaces.NamingContextFactory`.
    * Du kan ställa in egenskapen på ett värde som uppfyller dina krav om du inte vill använda standardvärdena. `java.naming.factory.initial`
+
    >[!NOTE]
    >
    >I stället för att använda en sträng för att ange `DSC_SERVER_TYPE` anslutningsegenskapen kan du använda en statisk medlem av `ServiceClientFactoryProperties` klassen. Följande värden kan användas: `ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`, `ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`eller `ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`.
 
-* **DSC_CREDENTIAL_USERNAME:** Anger användarnamnet för AEM-formulär. För att en användare ska kunna anropa en AEM Forms-tjänst måste användaren ha användarrollen Tjänster. En användare kan även ha en annan roll som inkluderar behörigheten Tjänstanrop. Annars genereras ett undantag när de försöker anropa en tjänst. Om tjänstsäkerhet är inaktiverad behöver du inte ange den här anslutningsegenskapen.
+* **DSC_CREDENTIAL_USERNAME:** Anger AEM användarnamn. För att en användare ska kunna anropa en AEM Forms-tjänst måste användaren ha användarrollen Tjänster. En användare kan även ha en annan roll som inkluderar behörigheten Tjänstanrop. Annars genereras ett undantag när de försöker anropa en tjänst. Om tjänstsäkerhet är inaktiverad behöver du inte ange den här anslutningsegenskapen.
 * **DSC_CREDENTIAL_PASSWORD:** Anger motsvarande lösenordsvärde. Om tjänstsäkerhet är inaktiverad behöver du inte ange den här anslutningsegenskapen.
 * **DSC_REQUEST_TIMEOUT:** Standardtidsgränsen för begäran för SOAP-begäran är 1200000 millisekunder (20 minuter). Ibland kan en begäran ta längre tid att slutföra åtgärden. En SOAP-begäran som hämtar en stor uppsättning poster kan till exempel kräva en längre tidsgräns. Du kan använda för `ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT` att öka tidsgränsen för begärandeanrop för SOAP-begäranden.
 
@@ -466,6 +467,7 @@ Utför följande åtgärder för att ange anslutningsegenskaper:
 
    * Uppräkningsvärdet `ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT`
    * Ett strängvärde som anger URL:en för J2EE-programservern som är värd för AEM Forms
+
    >[!NOTE]
    >
    >Om du använder SOAP-anslutningsläget anger du `ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT` uppräkningsvärdet i stället för `ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT` uppräkningsvärdet.
@@ -474,6 +476,7 @@ Utför följande åtgärder för att ange anslutningsegenskaper:
 
    * Uppräkningsvärdet `ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL`
    * Uppräkningsvärdet `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL`
+
    >[!NOTE]
    >
    >Om du använder SOAP-anslutningsläget anger du `ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`uppräkningsvärdet i stället för `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` uppräkningsvärdet.
@@ -481,11 +484,11 @@ Utför följande åtgärder för att ange anslutningsegenskaper:
 1. Om du vill ange egenskapen `DSC_SERVER_TYPE` connection anropar du `java.util.Properties` objektets `setProperty` metod och skickar följande värden:
 
    * Uppräkningsvärdet `ServiceClientFactoryProperties.DSC_SERVER_TYPE`
-   * Ett strängvärde som anger den J2EE-programserver som är värd för AEM Forms (om t.ex. AEM Forms distribueras på JBoss anger du `JBoss`).
+   * Ett strängvärde som anger den J2EE-programserver som är värd för AEM Forms (om AEM Forms till exempel distribueras på JBoss anger du `JBoss`).
 
       1. Om du vill ange egenskapen `DSC_CREDENTIAL_USERNAME` connection anropar du `java.util.Properties` objektets `setProperty` metod och skickar följande värden:
    * Uppräkningsvärdet `ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME`
-   * Ett strängvärde som anger det användarnamn som krävs för att anropa AEM Forms
+   * Ett strängvärde som anger vilket användarnamn som krävs för att anropa AEM Forms
 
       1. Om du vill ange egenskapen `DSC_CREDENTIAL_PASSWORD` connection anropar du `java.util.Properties` objektets `setProperty` metod och skickar följande värden:
    * Uppräkningsvärdet `ServiceClientFactoryProperties.DSC_CREDENTIAL_PASSWORD`
@@ -495,7 +498,7 @@ Utför följande åtgärder för att ange anslutningsegenskaper:
 
 **Ställa in EJB-anslutningsläget för JBoss**
 
-I följande Java-kodexempel ställs anslutningsegenskaperna in så att AEM Forms anropas som distribueras på JBoss och EJB-anslutningsläget används.
+I följande Java-kodexempel ställs anslutningsegenskaperna in så att AEM Forms anropas i JBoss och EJB-anslutningsläget används.
 
 ```java
  Properties ConnectionProps = new Properties();
@@ -509,7 +512,7 @@ I följande Java-kodexempel ställs anslutningsegenskaperna in så att AEM Forms
 
 **Ställa in EJB-anslutningsläget för WebLogic**
 
-I följande Java-kodexempel ställs anslutningsegenskaperna in så att AEM-formulär som distribueras på WebLogic anropas och EJB-anslutningsläget används.
+I följande Java-kodexempel ställs anslutningsegenskaperna in så att AEM Forms anropas i WebLogic och EJB-anslutningsläget används.
 
 ```as3
  Properties ConnectionProps = new Properties();
@@ -522,7 +525,7 @@ I följande Java-kodexempel ställs anslutningsegenskaperna in så att AEM-formu
 
 **Ställa in EJB-anslutningsläget för WebSphere**
 
-I följande Java-kodexempel ställs anslutningsegenskaperna in så att AEM Forms anropas som distribuerats på WebSphere och som använder EJB-anslutningsläget.
+I följande Java-kodexempel ställs anslutningsegenskaperna in så att AEM Forms anropas i WebSphere och EJB-anslutningsläget används.
 
 ```as3
  Properties ConnectionProps = new Properties();
@@ -535,7 +538,7 @@ I följande Java-kodexempel ställs anslutningsegenskaperna in så att AEM Forms
 
 **Ställa in SOAP-anslutningsläget**
 
-I följande Java-kodexempel ställs anslutningsegenskaper in i SOAP-läge så att AEM Forms anropas som distribueras på JBoss.
+I följande Java-kodexempel ställs anslutningsegenskaperna in i SOAP-läge så att AEM Forms anropas i JBoss.
 
 ```as3
  Properties ConnectionProps = new Properties();
@@ -552,7 +555,7 @@ I följande Java-kodexempel ställs anslutningsegenskaper in i SOAP-läge så at
 
 **Ange anslutningsegenskaper när tjänstsäkerhet är inaktiverat**
 
-I följande Java-kodexempel ställs anslutningsegenskaper in som krävs för att anropa AEM Forms som distribueras på JBoss Application Server och när tjänstsäkerhet är inaktiverat.
+I följande Java-kodexempel ställs anslutningsegenskaper in som krävs för att anropa AEM Forms som distribueras på JBoss Application Server och när tjänstsäkerhet är inaktiverad.
 
 ```as3
  Properties ConnectionProps = new Properties();
@@ -563,7 +566,7 @@ I följande Java-kodexempel ställs anslutningsegenskaper in som krävs för att
 
 >[!NOTE]
 >
->Alla Java Quick Starts som är kopplade till programmering med AEM Forms visar både EJB- och SOAP-anslutningsinställningar.
+>Alla Java Quick Starts som är kopplade till Programmering med AEM Forms visar både EJB- och SOAP-anslutningsinställningar.
 
 **Ställa in SOAP-anslutningsläget med tidsgräns för anpassad begäran**
 
@@ -577,9 +580,9 @@ I följande Java-kodexempel ställs anslutningsegenskaper in som krävs för att
 ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, "1800000"); // Request timeout limit 30 Minutes
 ```
 
-**Anropa AEM Forms med ett Context-objekt**
+**Använda ett Context-objekt för att anropa AEM Forms**
 
-Du kan använda ett `com.adobe.idp.Context` objekt för att anropa en AEM Forms-tjänst med en autentiserad användare (objektet `com.adobe.idp.Context` representerar en autentiserad användare). När du använder ett `com.adobe.idp.Context` objekt behöver du inte ange egenskaperna `DSC_CREDENTIAL_USERNAME` eller `DSC_CREDENTIAL_PASSWORD` . Du kan hämta ett `com.adobe.idp.Context` objekt när du autentiserar användare med hjälp av `AuthenticationManagerServiceClient` objektets `authenticate` metod.
+Du kan använda ett `com.adobe.idp.Context` `com.adobe.idp.Context` objekt för att anropa en AEM Forms-tjänst med en autentiserad användare (objektet representerar en autentiserad användare). När du använder ett `com.adobe.idp.Context` objekt behöver du inte ange egenskaperna `DSC_CREDENTIAL_USERNAME` eller `DSC_CREDENTIAL_PASSWORD` . Du kan hämta ett `com.adobe.idp.Context` objekt när du autentiserar användare med hjälp av `AuthenticationManagerServiceClient` objektets `authenticate` metod.
 
 Metoden returnerar `authenticate` ett `AuthResult` objekt som innehåller autentiseringsresultatet. Du kan skapa ett `com.adobe.idp.Context` objekt genom att anropa dess konstruktor. Anropa sedan `com.adobe.idp.Context` objektets `initPrincipal` -metod och skicka `AuthResult` objektet, vilket visas i följande kod:
 
@@ -588,7 +591,7 @@ Metoden returnerar `authenticate` ett `AuthResult` objekt som innehåller autent
  myCtx.initPrincipal(authResult);
 ```
 
-I stället för att ställa in `DSC_CREDENTIAL_USERNAME` - eller `DSC_CREDENTIAL_PASSWORD` -egenskaperna kan du anropa `ServiceClientFactory` objektets `setContext` metod och skicka `com.adobe.idp.Context` objektet. När du använder en AEM-formuläranvändare för att anropa en tjänst måste du se till att de har den roll som krävs för `Services User` att anropa en AEM Forms-tjänst.
+I stället för att ställa in `DSC_CREDENTIAL_USERNAME` - eller `DSC_CREDENTIAL_PASSWORD` -egenskaperna kan du anropa `ServiceClientFactory` objektets `setContext` metod och skicka `com.adobe.idp.Context` objektet. När du använder en AEM formuläranvändare för att anropa en tjänst måste du se till att de har rollen som behövs för `Services User` att anropa en AEM Forms-tjänst.
 
 I följande kodexempel visas hur du använder ett `com.adobe.idp.Context` objekt i anslutningsinställningarna för att skapa ett `EncryptionServiceClient` objekt.
 
@@ -628,26 +631,26 @@ I följande kodexempel visas hur du använder ett `com.adobe.idp.Context` objekt
 
 Följande scenarier beskrivs i det här avsnittet:
 
-* Ett klientprogram som körs i en egen JVM (Java Virtual Machine) anropar en fristående AEM Forms-instans.
-* Ett klientprogram som körs i en egen JVM anropar grupperade AEM Forms-instanser.
+* Ett klientprogram som körs i en egen Java Virtual Machine (JVM) anropar en fristående AEM Forms-instans.
+* Ett klientprogram som körs i en egen JVM anropar klustrade AEM Forms-instanser.
 
 ### Klientprogram som anropar en fristående AEM Forms-instans {#client-application-invoking-a-stand-alone-aem-forms-instance}
 
 I följande diagram visas ett klientprogram som körs i en egen JVM och som anropar en fristående AEM Forms-instans.
 
-I det här scenariot körs ett klientprogram i sin egen JVM och anropar AEM Forms-tjänster.
+I det här scenariot körs ett klientprogram i sin egen JVM och anropar AEM Forms tjänster.
 
 >[!NOTE]
 >
 >Det här scenariot är det scenario som alla snabbstarter baseras på.
 
-### Klientprogram som anropar grupperade AEM Forms-instanser {#client-application-invoking-clustered-aem-forms-instances}
+### Klientprogrammet anropar klustrade AEM Forms-instanser {#client-application-invoking-clustered-aem-forms-instances}
 
 I följande diagram visas ett klientprogram som körs i en egen JVM och som anropar AEM Forms-instanser i ett kluster.
 
 Detta scenario liknar ett klientprogram som anropar en fristående AEM Forms-instans. Leverantörens URL är dock annorlunda. Om ett klientprogram vill ansluta till en specifik J2EE-programserver måste programmet ändra URL:en så att den refererar till den specifika J2EE-programservern.
 
-Att referera till en specifik J2EE-programserver rekommenderas inte eftersom anslutningen mellan klientprogrammet och AEM Forms avbryts om programservern avbryts. Vi rekommenderar att provider-URL refererar till en JNDI-hanterare på cellnivå i stället för en specifik J2EE-programserver.
+Du bör inte referera till en specifik J2EE-programserver eftersom anslutningen mellan klientprogrammet och AEM Forms avbryts om programservern avbryts. Vi rekommenderar att provider-URL refererar till en JNDI-hanterare på cellnivå i stället för en specifik J2EE-programserver.
 
 Klientprogram som använder SOAP-anslutningsläget kan använda HTTP-belastningsutjämnarporten för klustret. Klientprogram som använder EJB-anslutningsläget kan ansluta till EJB-porten för en viss J2EE-programserver. Den här åtgärden hanterar belastningsutjämning mellan klusternoder.
 
@@ -694,9 +697,9 @@ I följande exempel visas innehållet i en jndi.properties-fil som används för
 
 ## Skicka data till AEM Forms-tjänster med Java API {#passing-data-to-aem-forms-services-using-the-java-api}
 
-AEM Forms-tjänster använder eller producerar vanligtvis PDF-dokument. När du anropar en tjänst kan det ibland vara nödvändigt att skicka ett PDF-dokument (eller andra dokumenttyper som XML-data) till tjänsten. Ibland är det också nödvändigt att hantera ett PDF-dokument som returneras från tjänsten. Java-klassen som gör att du kan skicka data till och från AEM Forms-tjänster är `com.adobe.idp.Document`.
+AEM Forms serviceåtgärder använder eller producerar vanligtvis PDF-dokument. När du anropar en tjänst kan det ibland vara nödvändigt att skicka ett PDF-dokument (eller andra dokumenttyper som XML-data) till tjänsten. Ibland är det också nödvändigt att hantera ett PDF-dokument som returneras från tjänsten. Den Java-klass som gör att du kan skicka data till och från AEM Forms-tjänster är `com.adobe.idp.Document`.
 
-AEM Forms-tjänster accepterar inte PDF-dokument som andra datatyper, till exempel ett `java.io.InputStream` objekt eller en bytearray. Ett `com.adobe.idp.Document` objekt kan också användas för att skicka andra typer av data, till exempel XML-data, till tjänster.
+AEM Forms tjänster accepterar inte PDF-dokument som andra datatyper, t.ex. ett `java.io.InputStream` objekt eller en bytearray. Ett `com.adobe.idp.Document` objekt kan också användas för att skicka andra typer av data, till exempel XML-data, till tjänster.
 
 Ett `com.adobe.idp.Document` objekt är en Java-serialiserbar typ, så det kan skickas via ett RMI-anrop. Mottagande sida kan sorteras (samma värd, samma klassinläsare), lokal (samma värd, annan klassinläsare) eller fjärransluten (en annan värd). Dokumentinnehållet är optimerat för varje enskilt fall. Om till exempel avsändaren och mottagaren finns på samma värd, överförs innehållet via ett lokalt filsystem. (I vissa fall kan dokument skickas i minnet.)
 
@@ -708,7 +711,7 @@ Objektet försöker `com.adobe.idp.Document` att bestämma innehållstypen med h
 
 Om det finns flera filer i samma filsystem går det snabbare att skapa ett `com.adobe.idp.Document` objekt. Om det finns filer som kan användas i fjärranslutna filsystem måste en kopieringsåtgärd utföras, vilket påverkar prestandan.
 
-Ett program kan innehålla både `com.adobe.idp.Document` - och `org.w3c.dom.Document` datatyper. Se dock till att du kvalificerar `org.w3c.dom.Document` datatypen fullständigt. Mer information om hur du konverterar ett `org.w3c.dom.Document` objekt till ett `com.adobe.idp.Document` objekt finns i [Snabbstart (EJB-läge): Fylla i formulär i förväg med flödeslayouter med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api).
+Ett program kan innehålla både `com.adobe.idp.Document` - och `org.w3c.dom.Document` datatyper. Se dock till att du kvalificerar `org.w3c.dom.Document` datatypen fullständigt. Mer information om hur du konverterar ett `org.w3c.dom.Document` objekt till ett `com.adobe.idp.Document` objekt finns i [Snabbstart (EJB-läge): Förifyll Forms med flödeslayouter med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api).
 
 >[!NOTE]
 >
@@ -753,7 +756,7 @@ Ett program kan innehålla både `com.adobe.idp.Document` - och `org.w3c.dom.Doc
 
 **Se även**
 
-[Anropa AEM-formulär med Java API](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
+[Anropa AEM Forms med Java API](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
 
 [Ange anslutningsegenskaper](invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -850,7 +853,7 @@ Filen c:/temp/input.pdf måste finnas på klientdatorn (inte på serverdatorn). 
 
 **Se även**
 
-[Anropa AEM-formulär med Java API](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
+[Anropa AEM Forms med Java API](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
 
 [Ange anslutningsegenskaper](invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -884,13 +887,13 @@ I följande kodexempel kopieras innehållet i ett `com.adobe.idp.Document` objek
 
 **Se även**
 
-[Anropa AEM-formulär med Java API](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
+[Anropa AEM Forms med Java API](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
 
 [Ange anslutningsegenskaper](invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ### Bestämma innehållstypen för ett dokument {#determining-the-content-type-of-a-document}
 
-Bestäm MIME-typen för ett `com.adobe.idp.Document` objekt genom att anropa `com.adobe.idp.Document` objektets `getContentType` metod. Den här metoden returnerar ett strängvärde som anger innehållstypen för `com.adobe.idp.Document` objektet. I följande tabell beskrivs de olika innehållstyper som returneras av AEM Forms.
+Bestäm MIME-typen för ett `com.adobe.idp.Document` objekt genom att anropa `com.adobe.idp.Document` objektets `getContentType` metod. Den här metoden returnerar ett strängvärde som anger innehållstypen för `com.adobe.idp.Document` objektet. I följande tabell beskrivs de olika innehållstyper som AEM Forms returnerar.
 
 <table>
  <thead>
@@ -918,7 +921,7 @@ Bestäm MIME-typen för ett `com.adobe.idp.Document` objekt genom att anropa `co
   </tr>
   <tr>
    <td><p><code>application/vnd.adobe.xfdf</code></p></td>
-   <td><p>XFDF (XML Forms Data Format), som används för exporterade Acrobat-formulär</p></td>
+   <td><p>XML Forms Data Format (XFDF), som används för exporterade Acrobat-formulär</p></td>
   </tr>
   <tr>
    <td><p><code>application/rdf+xml</code></p></td>
@@ -947,7 +950,7 @@ Följande kodexempel avgör innehållstypen för ett `com.adobe.idp.Document` ob
 
 **Se även**
 
-[Anropa AEM-formulär med Java API](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
+[Anropa AEM Forms med Java API](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
 
 [Ange anslutningsegenskaper](invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -957,7 +960,7 @@ När du inte längre behöver ett `Document` objekt bör du ta bort det genom at
 
 **Se även**
 
-[Anropa AEM-formulär med Java API](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
+[Anropa AEM Forms med Java API](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -965,7 +968,7 @@ När du inte längre behöver ett `Document` objekt bör du ta bort det genom at
 
 ## Anropa en tjänst med ett Java-klientbibliotek {#invoking-a-service-using-a-java-client-library}
 
-AEM Forms-tjänståtgärder kan anropas med hjälp av en tjänsts starkt typbestämda API, som kallas Java-klientbibliotek. Ett *Java-klientbibliotek* är en uppsättning konkreta klasser som ger åtkomst till tjänster som distribueras i tjänstbehållaren. Du instansierar ett Java-objekt som representerar tjänsten som ska anropas i stället för att skapa ett `InvocationRequest` objekt med anrops-API:t. Anrops-API:t används för att anropa processer, till exempel långvariga processer, som skapats i Workbench. (Se [Anropa humancentrerade, långvariga processer](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes).)
+AEM Forms tjänståtgärder kan anropas med hjälp av en tjänsts starkt typbestämda API, som kallas Java-klientbibliotek. Ett *Java-klientbibliotek* är en uppsättning konkreta klasser som ger åtkomst till tjänster som distribueras i tjänstbehållaren. Du instansierar ett Java-objekt som representerar tjänsten som ska anropas i stället för att skapa ett `InvocationRequest` objekt med anrops-API:t. Anrops-API:t används för att anropa processer, till exempel långvariga processer, som skapats i Workbench. (Se [Anropa humancentrerade, långvariga processer](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes).)
 
 Om du vill utföra en tjänståtgärd anropar du en metod som tillhör Java-objektet. Ett Java-klientbibliotek innehåller metoder som vanligtvis mappar en-till-en med serviceåtgärder. Ange nödvändiga anslutningsegenskaper när du använder ett Java-klientbibliotek. (Se [Ange anslutningsegenskaper](invoking-aem-forms-using-java.md#setting-connection-properties).)
 
@@ -973,7 +976,7 @@ När du har angett anslutningsegenskaper skapar du ett `ServiceClientFactory` ob
 
 Även om det oftast går snabbt att få en produkt `ServiceClientFactory` är det en del omkostnader som uppstår när fabriken används för första gången. Objektet är optimerat för återanvändning och därför, när det är möjligt, ska du använda samma `ServiceClientFactory` objekt när du skapar flera Java-klientobjekt. Det vill säga, skapa inte ett separat `ServiceClientFactory` objekt för varje klientbiblioteksobjekt som du skapar.
 
-Det finns en inställning för användarhantering som styr livslängden för SAML-försäkran som finns inuti `com.adobe.idp.Context` objektet som påverkar `ServiceClientFactory` objektet. Den här inställningen styr alla livstider för autentiseringskontext i AEM-formulär, inklusive alla anrop som utförs med Java API. Som standard är den tidsperiod under vilken ett `ServiceCleintFactory` objekt kan användas två timmar.
+Det finns en inställning för användarhantering som styr livslängden för SAML-försäkran som finns inuti `com.adobe.idp.Context` objektet som påverkar `ServiceClientFactory` objektet. Den här inställningen styr alla livstider för autentiseringskontext i hela AEM Forms, inklusive alla anrop som utförs med Java API. Som standard är den tidsperiod under vilken ett `ServiceCleintFactory` objekt kan användas två timmar.
 
 >[!NOTE]
 >
@@ -981,7 +984,7 @@ Det finns en inställning för användarhantering som styr livslängden för SAM
 
 Du kan anropa databastjänsten med hjälp av ett Java-klientbibliotek och genom att utföra följande steg:
 
-1. Inkludera JAR-klientfiler, till exempel adobe-database-client.jar, i Java-projektets klassökväg. Mer information om var dessa filer finns i [Inkludera Java-biblioteksfiler](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+1. Inkludera JAR-klientfiler, till exempel adobe-database-client.jar, i Java-projektets klassökväg. Information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 1. Ange anslutningsegenskaper som krävs för att anropa en tjänst.
 1. Skapa ett `ServiceClientFactory` objekt genom att anropa `ServiceClientFactory` objektets statiska `createInstance` metod och skicka `java.util.Properties` objektet som innehåller anslutningsegenskaper.
 1. Skapa ett `ResourceRepositoryClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet. Använd objektet `ResourceRepositoryClient` för att anropa databastjänståtgärder.
@@ -991,6 +994,7 @@ Du kan anropa databastjänsten med hjälp av ett Java-klientbibliotek och genom 
    * Ett unikt ID-värde genom att ange `new Id()`.
    * Ett unikt UUID-värde genom att ange `new Lid()`.
    * Resursens namn. Du kan ange filnamnet för XDP-filen.
+
    Sänd returvärdet till `Resource`.
 
 1. Skapa ett `ResourceContent` objekt genom att anropa `RepositoryInfomodelFactoryBean` objektets `newImage` metod och omvandla returvärdet till `ResourceContent`. Det här objektet representerar innehållet som läggs till i databasen.
@@ -1008,7 +1012,7 @@ Du kan anropa databastjänsten med hjälp av ett Java-klientbibliotek och genom 
 
 [Snabbstart (EJB-läge): Skriva en resurs med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api)
 
-[Anropa AEM-formulär med Java API](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
+[Anropa AEM Forms med Java API](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1024,7 +1028,7 @@ Här handlar det om att använda anrops-API för att anropa följande kortlivade
 
 >[!NOTE]
 >
->Den här processen baseras inte på en befintlig AEM Forms-process. Om du vill följa med i kodexemplet skapar du en process med namnet `MyApplication/EncryptDocument` med Workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
+>Processen bygger inte på någon befintlig AEM Forms-process. Om du vill följa med i kodexemplet skapar du en process med namnet `MyApplication/EncryptDocument` med Workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
 När den här processen anropas utför den följande åtgärder:
 
