@@ -11,17 +11,20 @@ content-type: reference
 discoiquuid: 1ef15e76-fe7c-4ced-a20d-c0a9385e3ee4
 translation-type: tm+mt
 source-git-commit: 63001012f0d865c2548703ea387c780679128ee7
+workflow-type: tm+mt
+source-wordcount: '2861'
+ht-degree: 1%
 
 ---
 
 
 # Resurskonsol för aktivering {#enablement-resources-console}
 
-För AEM Communities är resurskonsolen där [Enabled Managers](users.md) skapar, hanterar och tilldelar resurser till medlemmar på en community för aktivering.
+För AEM Communities är resurskonsolen där [aktiveringshanterare](users.md) skapar, hanterar och tilldelar resurser till medlemmar på en community-webbplats för aktivering.
 
 ## Krav {#requirements}
 
-Innan du lägger till aktiveringsresurser för en community-webbplats måste AEM-instanserna vara korrekt konfigurerade, inklusive:
+Innan du lägger till aktiveringsresurser för en communityplats måste AEM instanser vara korrekt konfigurerade, inklusive:
 
 * SCORM
 * FFmpeg
@@ -60,7 +63,7 @@ En inlärningsväg är en logisk uppsättning aktiveringsresurser som grupperats
 
 När en communitywebbplats skapas används det namn som tilldelats webbplatsen för URL:en när de [platsspecifika användargrupperna](users.md) som konfigurerats med olika behörigheter för olika roller skapas. Alla automatiskt skapade grupper har prefix `Community *<site-name>*`.
 
-En sådan användargrupp är `Community *<site-name>* Members` grupp, som identifierar registrerade användare i publiceringsmiljön som communitymedlemmar. Ett exempel finns i självstudiekursen [Komma igång med AEM Communities for Enablement](getting-started-enablement.md) .
+En sådan användargrupp är `Community *<site-name>* Members` grupp, som identifierar registrerade användare i publiceringsmiljön som communitymedlemmar. Ett exempel finns i självstudiekursen [Komma igång med AEM Communities för](getting-started-enablement.md) aktivering.
 
 För [engagemangscommunityn](overview.md#egagementcommunity)är det rimligt att låta besökare på webbplatsen registrera sig själva eller använda social inloggning, då de automatiskt läggs till i medlemsgruppen.
 
@@ -72,7 +75,7 @@ För [aktiveringsgrupper](overview.md#enablement-community)bör du göra webbpla
 
 För att nå Resurskonsolen i redigeringsmiljön
 
-* Från global navigering: **[!UICONTROL Navigering > Communities > Resources]**
+* Från global navigering: **[!UICONTROL Navigation > Communities > Resources]**
 
 ![chlimage_1-163](assets/chlimage_1-163.png)
 
@@ -123,45 +126,45 @@ När resursen är en del av en kurs, en inlärningsväg, ska medlemmar endast ti
 
 ![chlimage_1-169](assets/chlimage_1-169.png)
 
-* **[!UICONTROL Lägg till bild]**
+* **[!UICONTROL Add Image]**
 
    (*valfritt*) En bild som ska visas på kortet för aktiveringsresursen på medlemmens tilldelningssida samt på resurskonsolen. Bilden väljs från serverns lokala filsystem. Om ingen bild anges skapas en miniatyrbild för den överförda resursen.
 
    ***Obs***: den rekommenderade bildstorleken är inte bara 480 x 480 pixlar. På grund av kortens responsiva design för olika webbläsardimensioner varierar visningsstorleken mellan 220 x 165 pixlar och 400 x 165 pixlar.
 
-* **[!UICONTROL Platsnamn]**
+* **[!UICONTROL Site Name]**
 
    (*skrivskyddat*) Den communitywebbplats som resursen läggs till i.
 
-* **[!UICONTROL Resursnamn&amp;stämpel;senaste;]**
+* **[!UICONTROL Resource Name&ast;]**
 
    (*obligatoriskt*) Resursens visningsnamn. Ett giltigt nodnamn skapas från visningsnamnet.
 
-* **[!UICONTROL Taggar]**
+* **[!UICONTROL Tags]**
 
    (*valfritt*) Du kan välja en eller flera taggar som associerar aktiveringsresursen med en eller flera kataloger. Se [Tagga aktiveringsresurser](tag-resources.md).
 
-* **[!UICONTROL Visa i katalog]**
+* **[!UICONTROL Show in Catalog]**
 
    Om alternativet inte är markerat visas inte aktiveringsresursen i någon katalog. Om det här alternativet är markerat visas aktiveringsresursen i alla kataloger, såvida den inte [förfiltrerats](catalog-developer-essentials.md#pre-filters) eller medlemsfiltren från användargränssnittet. Standard är avmarkerat.
 
-* **[!UICONTROL Beskrivning]**
+* **[!UICONTROL Description]**
 
    (*valfritt*) Beskrivning som ska visas för aktiveringsresursen.
 
-* **[!UICONTROL Liten resurs]**
+* **[!UICONTROL Small Asset]**
 
-   (*valfritt*) Välj bland AEM-resurser. En miniatyrbild som representerar resursen i publiceringsmiljön, t.ex. i en katalog.
+   (*valfritt*) Markerat från AEM Assets. En miniatyrbild som representerar resursen i publiceringsmiljön, t.ex. i en katalog.
 
-* **[!UICONTROL Stor resurs]**
+* **[!UICONTROL Large Asset]**
 
-   (*valfritt*) Välj bland AEM-resurser. En stor bild som representerar resursen i publiceringsmiljön, till exempel på huvudsidan för en resurs.
+   (*valfritt*) Markerat från AEM Assets. En stor bild som representerar resursen i publiceringsmiljön, till exempel på huvudsidan för en resurs.
 
-* **[!UICONTROL Innehållsfragmentresurs]**
+* **[!UICONTROL Content Fragment Asset]**
 
-   (*valfritt*) Välj bland AEM-resurser. Ett innehållsfragment som kan refereras i publiceringsmiljön, men som inte används som standard.
+   (*valfritt*) Markerat från AEM Assets. Ett innehållsfragment som kan refereras i publiceringsmiljön, men som inte används som standard.
 
-* Markera **[!UICONTROL nästa]**
+* Välj **[!UICONTROL Next]**
 
 ### 2 Lägg till innehåll {#add-content}
 
@@ -173,49 +176,51 @@ Markera `'+' icon`i det övre högra hörnet när du vill börja välja resursen
 
 ![chlimage_1-171](assets/chlimage_1-171.png)
 
-* **[!UICONTROL Överföring från mina lokala filer]**&#x200B;Överföring från det lokala filsystemet använder den inbyggda filläsaren för att välja och överföra en fil. Filtyper som stöds är SCORM.zip (HTML5 eller SWF), MP4-video, SWF, PDF och bildtyper (JPG, PNG, GIF, BMP). Filnamnet blir namnet på resursen som läggs till i resursbiblioteket.
+* **[!UICONTROL Upload from my local files]**
+Vid överföring från det lokala filsystemet används den inbyggda filläsaren för att välja och överföra en fil. Filtyper som stöds är SCORM.zip (HTML5 eller SWF), MP4-video, SWF, PDF och bildtyper (JPG, PNG, GIF, BMP). Filnamnet blir namnet på resursen som läggs till i resursbiblioteket.
 
-* **[!UICONTROL Bläddra bland resursbibliotek]** Välj från resursbibliotek. Markeringen begränsas till de som visas på communitywebbplatsen.
+* **[!UICONTROL Browse Asset Library]**
+Välj från Resursbibliotek. Markeringen begränsas till de som visas på communitywebbplatsen.
 
-* **[!UICONTROL Lägg till en extern URL]**
+* **[!UICONTROL Add an external URL]**
 
    Ange en länk till utbildningsmaterialet.
 
    I den dialogruta som öppnas anger du:
 
-   * **[!UICONTROL Titel]**
+   * **[!UICONTROL Title]**
 
       Namnet på resursen för aktiveringsresursen.
 
-   * **[!UICONTROL Webbadress]**
+   * **[!UICONTROL URL]**
 
       URL:en till en resurs.
 
-* **[!UICONTROL Lägg till en Adobe Connect-URL]**
+* **[!UICONTROL Add an Adobe Connect URL]**
 
    Ange en länk till en Adobe Connect-session.
 
    I den dialogruta som öppnas anger du:
 
-   * **[!UICONTROL Titel]**
+   * **[!UICONTROL Title]**
 
       Namnet på resursen för aktiveringsresursen.
 
-   * **[!UICONTROL Webbadress]**
+   * **[!UICONTROL URL]**
 
       URL:en till en Adobe Connect-session.
 
-* **[!UICONTROL Definiera en extern resurs]**
+* **[!UICONTROL Define an External Resource]**
 
    Ange den plats där materialet ska presenteras. Värdena för resultatstatus och poängställning anges manuellt (se [Rapporter](reports.md)). En överförd omslagsbild kan användas för att ge ytterligare information.
 
    I den dialogruta som öppnas anger du:
 
-   * **[!UICONTROL Titel]**
+   * **[!UICONTROL Title]**
 
       Namnet på resursen för aktiveringsresursen.
 
-   * **[!UICONTROL Plats]**
+   * **[!UICONTROL Location]**
 
       Platsen för en fysisk plats, till exempel ett klassrum.
 
@@ -223,13 +228,13 @@ Markera `'+' icon`i det övre högra hörnet när du vill börja välja resursen
 
 ![chlimage_1-172](assets/chlimage_1-172.png)
 
-* **[!UICONTROL Resursförsättsbild]**
+* **[!UICONTROL Resource Cover Image]**
 
    Omslagsbilden är en bild som visas när aktiveringsresursen visas för första gången. Omslagsbilden visas t.ex. när en videoresurs ännu inte spelas upp. Om en anpassad bild inte överförs visas en standardbild. För videoresurser kan det vara möjligt att [generera en miniatyrbild](enablement.md#ffmpeg), men bara när den har överförts och inte när videon refereras till som en URL-adress. För platsresurser kan bilden användas för att ge ytterligare information.
 
    Den rekommenderade storleken för omslagsbilden är 640 x 360 px.
 
-* Markera **[!UICONTROL nästa]**
+* Välj **[!UICONTROL Next]**
 
 ### 3 inställningar {#settings}
 
@@ -241,41 +246,43 @@ Markera `'+' icon`i det övre högra hörnet när du vill börja välja resursen
 >
 >Om en medlem är registrerad i både en resurs och en utbildningsväg som refererar till den resursen, kommer deras tilldelningar att visa både den enskilda resursen och resursen i utbildningsvägen.
 
-* **[!UICONTROL Sociala inställningar]**
+* **[!UICONTROL Social Settings]**
 
    Inställningarna styr om eleverna kan ange indata för aktiveringsresursen eller inte. De [modereringsinställningar](sites-console.md#moderation) som gäller för den överordnade communitywebbplatsen.
 
-   * **[!UICONTROL Tillåt kommentarer]**
+   * **[!UICONTROL Allow Commenting]**
 
       Om det här alternativet är markerat kan medlemmar kommentera resursen. Standard är markerat.
 
-   * **[!UICONTROL Tillåt klassificeringar]**
+   * **[!UICONTROL Allow Ratings]**
 
       Om det här alternativet är markerat kan medlemmar betygsätta resursen. Standard är markerat.
 
-   * **[!UICONTROL Tillåt anonym åtkomst]**
+   * **[!UICONTROL Allow Anonymous Access]**
 
       Om det här alternativet är markerat kan anonyma webbplatsbesökare visa resursen i en katalog när communitywebbplatsen även tillåter anonym åtkomst. Standard är avmarkerat.
 
-* **[!UICONTROL Förfallodatum]**
+* **[!UICONTROL Due Date]**
+
    *(Valfritt)* Ett datum då uppdraget ska vara slutfört kan väljas.
 
-* **[!UICONTROL Resursförfattare]**
+* **[!UICONTROL Resource Author]**
    *(Valfritt)* Författaren till aktiveringsresursen. Använd listrutan för att välja bland de användare som är medlemmar i [medlemsgruppen](#members-group).
 
-* **[!UICONTROL Resurskontakt&amp;stämpel;ast;]**
+* **[!UICONTROL Resource Contact&ast;]**
    *(Obligatoriskt)* En person som medlemmen kan kontakta angående aktiveringsresursen. Använd listrutan för att välja bland de användare som är medlemmar i [medlemsgruppen](#members-group).
 
-* **[!UICONTROL Resursexpert]**
+* **[!UICONTROL Resource Expert]**
    *(Valfritt)* En person som medlemmen kan kontakta och som har kunskaper om aktiveringsresursen. Använd listrutan för att välja bland användare som är medlemmar i [medlemsgruppen](#members-group).
 
 ### 4 uppdrag {#assignments}
 
 ![chlimage_1-174](assets/chlimage_1-174.png)
 
-* **[!UICONTROL Lägg till tilldelningar]** Använd listrutan för att välja bland [medlemmarna](#members-group) - användarna och användargrupperna (med fet stil) - som ska registreras som elev. När medlemmar loggar in på communitywebbplatsen visas de aktiveringsresurser (och utbildningsvägar) som de är inskrivna i på deras [uppdragssida](functions.md#assignments-function) .
+* **[!UICONTROL Add Assignees]**
+Använd listrutan för att välja bland [medlemmar](#members-group) - användare och användargrupper (med fet stil) - som ska registreras som elev. När medlemmar loggar in på communitywebbplatsen visas de aktiveringsresurser (och utbildningsvägar) som de är inskrivna i på deras [uppdragssida](functions.md#assignments-function) .
 
-* välj **[!UICONTROL Skapa]**
+* select **[!UICONTROL Create]**
 
 ![chlimage_1-175](assets/chlimage_1-175.png)
 
@@ -306,63 +313,65 @@ För aktiveringsresurser som ingår i en inlärningsväg ska tilldelningarna end
 
 ![chlimage_1-177](assets/chlimage_1-177.png)
 
-* **[!UICONTROL Lägg till bild]**
+* **[!UICONTROL Add Image]**
 
    (*valfritt*) En bild som ska visas på kortet för utbildningssökvägen på medlemmens uppdragssida samt på Resurskonsolen. Bilden väljs från serverns lokala filsystem. Om ingen bild anges skapas en miniatyrbild för den överförda resursen.
 
    ***Obs***: den rekommenderade bildstorleken inte längre bara är 480 x 480 pixlar. På grund av kortens responsiva design för olika webbläsardimensioner varierar visningsstorleken mellan 220 x 165 pixlar och 400 x 165 pixlar.
 
-* **[!UICONTROL Platsnamn]**
+* **[!UICONTROL Site Name]**
 
    (*skrivskyddat*) Den communitywebbplats som resursen läggs till i.
 
-* **[!UICONTROL Namn på utbildningssökväg]**
+* **[!UICONTROL Learning Path Name]**
 
    (*obligatoriskt*) Visningsnamnet för utbildningssökvägen. Ett giltigt nodnamn skapas från visningsnamnet.
 
-* **[!UICONTROL Taggar]**
+* **[!UICONTROL Tags]**
 
    (*valfritt*) Du kan välja en eller flera taggar som associerar utbildningsvägen med en eller flera kataloger. Se [Tagga aktiveringsresurser](tag-resources.md).
 
-* **[!UICONTROL Visa i katalog]**
+* **[!UICONTROL Show in Catalog]**
 
    Om du inte markerar det här alternativet visas inte utbildningssökvägen i någon katalog. Om det här alternativet är markerat visas utbildningssökvägen i alla kataloger, såvida den inte är [förfiltrerad](catalog-developer-essentials.md#pre-filters) eller medlemsfiltren från användargränssnittet. Om du visar inlärningsvägen i en katalog får READ indirekt åtkomst till alla resurser som finns i den. Standard är avmarkerat.
 
-* **[!UICONTROL Beskrivning]**
+* **[!UICONTROL Description]**
 
    (*valfritt*) Beskrivning som ska visas för aktiveringsresursen.
 
-* **[!UICONTROL Liten resurs]**
+* **[!UICONTROL Small Asset]**
 
-   (*valfritt*) Välj bland AEM-resurser. En miniatyrbild som representerar resursen i publiceringsmiljön, t.ex. i en katalog.
+   (*valfritt*) Markerat från AEM Assets. En miniatyrbild som representerar resursen i publiceringsmiljön, t.ex. i en katalog.
 
-* **[!UICONTROL Stor resurs]**
+* **[!UICONTROL Large Asset]**
 
-   (*valfritt*) Välj bland AEM-resurser. En stor bild som representerar resursen i publiceringsmiljön, till exempel på huvudsidan för en resurs.
+   (*valfritt*) Markerat från AEM Assets. En stor bild som representerar resursen i publiceringsmiljön, till exempel på huvudsidan för en resurs.
 
-* **[!UICONTROL Innehållsfragmentresurs]**
+* **[!UICONTROL Content Fragment Asset]**
 
-   (*valfritt*) Välj bland AEM-resurser. Ett innehållsfragment som kan refereras i publiceringsmiljön, men som inte används som standard.
+   (*valfritt*) Markerat från AEM Assets. Ett innehållsfragment som kan refereras i publiceringsmiljön, men som inte används som standard.
 
-* Markera **[!UICONTROL nästa]**
+* Välj **[!UICONTROL Next]**
 
 ### Lägg till krav {#add-prerequisites}
 
 ![chlimage_1-178](assets/chlimage_1-178.png)
 
-* **[!UICONTROL Nödvändiga utbildningsvägar]**(*valfritt*) När andra publicerade utbildningsvägar väljs måste de slutföras innan en elev kan välja den här utbildningsvägen.
+* **[!UICONTROL Prerequisite Learning Paths]**
+(
+*(valfritt*) När andra publicerade utbildningsvägar har valts måste de vara slutförda innan en elev kan välja den här utbildningsvägen.
 
-* Markera **[!UICONTROL nästa]**
+* Välj **[!UICONTROL Next]**
 
 ### Lägg till resurser {#add-resources}
 
 ![chlimage_1-179](assets/chlimage_1-179.png)
 
-* **[!UICONTROL Använd beställning i utbildningsväg]**
+* **[!UICONTROL Enforce Order in Learning Path]**
 
    (*valfritt*) Om värdet är På är den ordning som eleverna måste gå igenom inlärningsvägen i den ordning som aktiveringsresurserna läggs till. Standardvärdet är Av.
 
-* **[!UICONTROL Resurser]**
+* **[!UICONTROL Resources]**
 
    En eller flera resurser som valts bland *publicerade *aktiveringsresurser som skapats för den aktuella communitywebbplatsen.
 
@@ -370,21 +379,21 @@ För aktiveringsresurser som ingår i en inlärningsväg ska tilldelningarna end
 >
 >Du kan bara välja resurser på samma nivå som utbildningsvägen. För en inlärningsväg som skapats i en grupp är t.ex. endast resurserna på gruppnivå tillgängliga. för en inlärningsväg som skapats på en community-webbplats finns resurserna på den webbplatsen tillgängliga för tillägg till inlärningsvägen.
 
-* Välj **[!UICONTROL Nästa]**.
+* Välj **[!UICONTROL Next]**.
 
-###  Inställningar {#settings-1}
+### Inställningar {#settings-1}
 
 ![chlimage_1-180](assets/chlimage_1-180.png)
 
-* **[!UICONTROL Lägg till registreringar]**
+* **[!UICONTROL Add Enrollments]**
 
    Använd listrutan för att välja bland de medlemmar och medlemsgrupper (med fet stil) som är medlemmar i communityns [medlemsgrupp](#members-group). Du behöver inte lägga till uppdrag när du först skapar inlärningsbanan. Du kan ändra egenskaperna för utbildningsvägar för att lägga till deltagare vid ett senare tillfälle.
 
-* **[!UICONTROL Lär dig sökvägskontakt&amp;stämpel;ast;]**
+* **[!UICONTROL Learning Path Contact&ast;]**
 
    *(Obligatoriskt)* En person som medlemmen kan kontakta angående utbildningsvägen. Använd listrutan för att välja bland de användare som är medlemmar i communityns [medlemsgrupp](#members-group).
 
-* Välj **[!UICONTROL Skapa]**
+* Välj **[!UICONTROL Create]**
 
 >[!NOTE]
 >
@@ -431,8 +440,8 @@ Genom att markera kontrollkanarikonen blir aktiveringsresursen `Delete`d efter b
 Innan eleverna kan se en tilldelad aktiveringskurs måste den publiceras:
 
 * Välj världsikonen för att `Publish`
-* Välj **[!UICONTROL Publicera]** igen i dialogrutan som öppnas
-* Välj **[!UICONTROL Stäng]**
+* I den dialogruta som öppnas väljer du **[!UICONTROL Publish]** igen
+* Välj **[!UICONTROL Close]**
 
 Även om det står i dialogrutan att åtgärden står i kö publiceras den ofta omedelbart.
 
@@ -452,9 +461,9 @@ För alla utbildningsvägar är det möjligt att visa en rapport som baseras ant
 
 ![chlimage_1-186](assets/chlimage_1-186.png)
 
-Den här rapporten gäller specifikt för den aktuella aktiveringsresursen eller utbildningsvägen. Hur detaljerad rapportering som ges beror på om [Adobe Analytics](analytics.md) är licensierat och aktiverat för communitywebbplatsen eller inte. Rapporterna om [tidslinje](#timeline), [visningsengagemang](#viewer-engagement)och [engagemang via enhet](#engagement-by-device) importeras från Adobe Analytics utifrån [avsökningsintervallet](analytics.md#report-importer).
+Den här rapporten gäller specifikt för den aktuella aktiveringsresursen eller utbildningsvägen. Hur detaljerad rapporteringen är beror på om [Adobe Analytics](analytics.md) är licensierat och aktiverat för communitywebbplatsen eller inte. Rapporterna om [tidslinje](#timeline), [visningsengagemang](#viewer-engagement)och [engagemang via enhet](#engagement-by-device) importeras från Adobe Analytics utifrån [avsökningsintervallet](analytics.md#report-importer).
 
-För alla aktiveringsresurser, oavsett om Adobe Analytics är aktiverat eller inte, finns det rapporter om status [och](#assignee-status) graderingar [för](#ratings) tilldelningsmottagaren samt en [rapportsammanfattningstabell](#report-summary) .
+För alla aktiveringsresurser, oavsett om Adobe Analytics är aktiverat eller inte, finns det rapporter om status [för](#assignee-status) tilldelad och [graderingar](#ratings) samt en [rapportsammanfattningstabell](#report-summary) .
 
 ![chlimage_1-187](assets/chlimage_1-187.png)
 
@@ -492,13 +501,13 @@ Den lodräta axeln är antalet deltagare som har tittat på resursen.
 
 Den vågräta axeln är varaktigheten för den här resursen.
 
-[Marketing Cloud-organisationsnummer krävs](sites-console.md#enablement).
+[Marketing Cloud organisation-ID krävs](sites-console.md#enablement).
 
 #### Engagemang per enhet {#engagement-by-device}
 
 Analytics Engagement by Device-rapporten beskriver, för videoresurser, hur många visningar som spelats upp från både dator och mobil.
 
-[Marketing Cloud-organisationsnummer krävs](sites-console.md#enablement).
+[Marketing Cloud organisation-ID krävs](sites-console.md#enablement).
 
 #### Tilldelningsstatus {#assignee-status}
 
