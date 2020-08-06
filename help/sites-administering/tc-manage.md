@@ -1,8 +1,8 @@
 ---
 title: Hantera översättningsprojekt
 seo-title: Hantera översättningsprojekt
-description: Lär dig hur du hanterar översättningsprojekt i AEM.
-seo-description: Lär dig hur du hanterar översättningsprojekt i AEM.
+description: Lär dig hantera översättningsprojekt i AEM.
+seo-description: Lär dig hantera översättningsprojekt i AEM.
 uuid: f6f79b5b-dc08-4dde-b464-719345d233a6
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: c8672774-6911-497d-837b-1e5953c4226a
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '3429'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
 
 När du har förberett innehåll för översättning måste du slutföra språkstrukturen genom att skapa saknade språkkopior och skapa översättningsprojekt.
 
-Med översättningsprojekt kan du hantera översättning av AEM-innehåll. Ett översättningsprojekt är en typ av AEM- [projekt](/help/sites-authoring/projects.md) som innehåller resurser som ska översättas till andra språk. Dessa resurser är sidorna och resurserna för de [språkkopior](/help/sites-administering/tc-prep.md) som skapas från språkinställningen.
+Med översättningsprojekt kan du hantera översättning av AEM. Ett översättningsprojekt är en typ av AEM [projekt](/help/sites-authoring/projects.md) som innehåller resurser som ska översättas till andra språk. De här resurserna är de sidor och resurser för [språkkopior](/help/sites-administering/tc-prep.md) som skapas från överordnad.
 
 När resurser läggs till i ett översättningsprojekt skapas ett översättningsjobb för dem. Jobb innehåller kommandon och statusinformation som du använder för att hantera de mänskliga översättnings- och maskinöversättningsarbetsflödena som körs på resurserna.
 
@@ -37,32 +40,32 @@ När resurser läggs till i ett översättningsprojekt skapas ett översättning
 
 >[!NOTE]
 >
->Alternativ 3 är inte relaterat till översättningsjobb/översättningsprojekt. Du kan kopiera innehåll och strukturella ändringar i språkmallen till (oöversatta) språkkopior. Du kan använda detta för att synkronisera dina språkmallsidor, även utan översättning.
+>Alternativ 3 är inte relaterat till översättningsjobb/översättningsprojekt. Du kan kopiera innehåll och strukturella ändringar på det överordnad språket till (oöversatta) språkversioner. Du kan använda detta för att synkronisera dina språkmallsidor, även utan översättning.
 
 ## Utföra initiala översättningar och uppdatera befintliga översättningar {#performing-initial-translations-and-updating-existing-translations}
 
 AEM identifierar om ett översättningsprojekt skapas för den inledande översättningen av innehåll eller för att uppdatera redan översatta språkkopior. När du skapar ett översättningsprojekt för en sida och anger vilka språkkopior du översätter för, identifierar AEM om källsidan redan finns i målspråkskopiorna:
 
-* **** Språkkopian innehåller inte sidan: AEM behandlar denna situation som den inledande översättningen. Sidan kopieras omedelbart till språkkopian och inkluderas i projektet. När den översatta sidan importeras till AEM kopieras den direkt till språkkopian.
-* **** Språkkopian innehåller redan sidan: AEM behandlar den här situationen som en uppdaterad översättning. En startsida skapas och en kopia av sidan läggs till i startprogrammet och ingår i projektet. Med det här programmet kan du granska uppdaterade översättningar innan du implementerar dem i språkkopian:
+* **Språkkopian innehåller inte sidan:** AEM behandlar denna situation som den inledande översättningen. Sidan kopieras omedelbart till språkkopian och inkluderas i projektet. När den översatta sidan importeras till AEM kopieras AEM den direkt till språkkopian.
+* **Språkkopian innehåller redan sidan:** AEM behandlar den här situationen som en uppdaterad översättning. En startsida skapas och en kopia av sidan läggs till i startprogrammet och ingår i projektet. Med det här programmet kan du granska uppdaterade översättningar innan du implementerar dem i språkkopian:
 
-   * När den översatta sidan importeras till AEM skrivs sidan över vid start.
+   * När den översatta sidan importeras till AEM, skrivs sidan över vid start.
    * Den översatta sidan skriver bara över språkkopian när startsidan höjs.
 
-Språkroten /content/geometrixx/fr skapas till exempel för den franska översättningen av huvudspråket /content/geometrixx/en. Det finns inga andra sidor i den franska språkversionen.
+Språkroten /content/geometrixx/fr skapas till exempel för den franska översättningen av det överordnad språket /content/geometrixx/en. Det finns inga andra sidor i den franska språkversionen.
 
 * Ett översättningsprojekt skapas för sidan /content/geometrixx/en/products och alla underordnade sidor med den franska språkkopian som mål. Eftersom språkkopian inte innehåller sidan /content/geometrixx/fr/products kopierar AEM omedelbart sidan /content/geometrixx/en/products och alla underordnade sidor till den franska språkkopian. Kopiorna ingår också i översättningsprojektet.
 * Ett översättningsprojekt skapas för sidan /content/geometrixx/en och alla underordnade sidor med den franska språkkopian som mål. Eftersom språkkopian innehåller den sida som motsvarar sidan /content/geometrixx/en (språkroten), kopierar AEM sidan /content/geometrixx/en och alla underordnade sidor och lägger till dem i en start. Kopiorna ingår också i översättningsprojektet.
 
 ## Skapa översättningsprojekt med referenspanelen {#creating-translation-projects-using-the-references-panel}
 
-Skapa översättningsprojekt så att du kan köra och hantera arbetsflödet för översättning av resurserna i din språkinställning. När du skapar projekt anger du sidan i den språkmall som du översätter och de språkkopior som du utför översättningen för:
+Skapa översättningsprojekt så att du kan köra och hantera arbetsflödet för översättning av språkresurserna på din överordnad. När du skapar projekt anger du sidan på det språk-överordnad som du översätter och de språkkopior som du utför översättningen för:
 
 * Molnkonfigurationen för översättningsintegreringsramverket som är associerat med den valda sidan avgör många egenskaper för översättningsprojekten, till exempel översättningsarbetsflödet som ska användas.
 * Ett projekt skapas för varje vald språkkopia.
 * En kopia av den valda sidan och associerade resurser skapas och läggs till i varje projekt. Dessa kopior skickas senare till översättningsleverantören för översättning.
 
-Du kan ange att de underordnade sidorna för den markerade sidan också ska vara markerade. I det här fallet läggs kopior av de underordnade sidorna också till i varje projekt så att de översätts. När underordnade sidor är kopplade till olika konfigurationer för översättningsintegrering skapar AEM ytterligare projekt.
+Du kan ange att de underordnade sidorna för den markerade sidan också ska vara markerade. I det här fallet läggs kopior av de underordnade sidorna också till i varje projekt så att de översätts. När underordnade sidor är kopplade till olika konfigurationer för översättningsintegreringsramverk skapar AEM ytterligare projekt.
 
 Du kan också [skapa översättningsprojekt](#creating-a-translation-project-using-the-projects-console)manuellt.
 
@@ -80,7 +83,7 @@ Efter översättning kan du [granska översättningen](#reviewing-and-promoting-
 
 1. Använd webbplatskonsolen för att välja sidan som du lägger till i översättningsprojekt.
 
-   Om du till exempel vill översätta de engelska sidorna på demowebbplatsen Geometrixx väljer du Geometrixx Demo Site > English.
+   Om du till exempel vill översätta de engelska sidorna på demowebbplatsen väljer du Geometrixx Demo Site > English.
 
 1. Klicka på eller tryck på Referenser i verktygsfältet.
 
@@ -93,6 +96,7 @@ Efter översättning kan du [granska översättningen](#reviewing-and-promoting-
    * Om du vill översätta den markerade sidan och alla underordnade sidor väljer du Markera alla underordnade sidor. Om du bara vill översätta den markerade sidan avmarkerar du alternativet.
    * För Projekt väljer du Skapa nytt översättningsprojekt.
    * Ange ett namn för projektet.
+
    ![chlimage_1-242](assets/chlimage_1-242.png)
 
 1. Klicka eller tryck på Skapa.
@@ -101,7 +105,7 @@ Efter översättning kan du [granska översättningen](#reviewing-and-promoting-
 
 1. Använd webbplatskonsolen för att välja sidan som du lägger till i översättningsprojekten.
 
-   Om du till exempel vill översätta de engelska sidorna på demowebbplatsen Geometrixx väljer du Geometrixx Demo Site > English.
+   Om du till exempel vill översätta de engelska sidorna på demowebbplatsen väljer du Geometrixx Demo Site > English.
 
 1. Klicka på eller tryck på Referenser i verktygsfältet.
 
@@ -113,6 +117,7 @@ Efter översättning kan du [granska översättningen](#reviewing-and-promoting-
    * Om du vill översätta den markerade sidan och alla underordnade sidor väljer du Markera alla underordnade sidor. Om du bara vill översätta den markerade sidan avmarkerar du alternativet.
    * För Projekt väljer du Skapa nytt översättningsprojekt.
    * Ange ett namn för projektet.
+
    ![chlimage_1-244](assets/chlimage_1-244.png)
 
 1. Klicka eller tryck på Start.
@@ -127,7 +132,7 @@ Precis som när du skapar ett nytt projekt läggs kopior av sidorna till i en pr
 
 1. Använd webbplatskonsolen för att välja sidan som du lägger till i översättningsprojektet.
 
-   Om du till exempel vill översätta de engelska sidorna på demowebbplatsen Geometrixx väljer du Geometrixx Demo Site > English.
+   Om du till exempel vill översätta de engelska sidorna på demowebbplatsen väljer du Geometrixx Demo Site > English.
 
 1. Klicka på eller tryck på Referenser i verktygsfältet.
 
@@ -142,6 +147,7 @@ Precis som när du skapar ett nytt projekt läggs kopior av sidorna till i en pr
    * Om du vill översätta den markerade sidan och alla underordnade sidor väljer du Markera alla underordnade sidor. Om du bara vill översätta den markerade sidan avmarkerar du alternativet.
    * För Projekt väljer du Lägg till i befintligt översättningsprojekt.
    * Välj projektet.
+
    >[!NOTE]
    >
    >Målspråket som anges i översättningsprojektet ska matcha sökvägen till språkkopian enligt referenspanelen.
@@ -260,8 +266,8 @@ Om du vill visa status för varje fil i jobbet klickar eller trycker du på elli
 
 Ange det datum före vilket översättningsleverantören måste returnera översatta filer. Du kan ange förfallodatum för projektet eller för ett specifikt jobb:
 
-* **** Projekt: Översättningsjobb i projektet ärver förfallodatumet.
-* **** Jobb: Förfallodatumet som du anger för jobbet åsidosätter förfallodatumet som har angetts för projektet.
+* **Projekt:** Översättningsjobb i projektet ärver förfallodatumet.
+* **Jobb:** Förfallodatumet som du anger för jobbet åsidosätter förfallodatumet som har angetts för projektet.
 
 Inställningen av förfallodatumet fungerar bara korrekt när översättningsleverantören som du använder har stöd för den här funktionen.
 
@@ -306,7 +312,7 @@ Omfånget fungerar bara korrekt när den översättningsleverantör som du anvä
 
    ![chlimage_1-264](assets/chlimage_1-264.png)
 
-1. När jobbstatusen ändras till SCOPE_COMPLETED klickar du på panelen Översättningsjobb eller trycker på kommandomenyn och sedan på Visa omfång.
+1. När jobbstatusen ändras till SCOPE_COMPLETED klickar du på eller trycker på kommandomenyn på panelen Översättningsjobb och sedan på Visa omfång.
 
 ## Starta ett översättningsjobb {#starting-a-translation-job}
 
@@ -349,7 +355,7 @@ När innehåll översätts för en befintlig språkkopia granskar du översättn
 
 ![chlimage_1-269](assets/chlimage_1-269.png)
 
-1. Markera sidan i språkinställningen, klicka eller tryck på Referenser och sedan på eller klicka på Språkkopior.
+1. Markera sidan på överordnad, klicka eller tryck på Referenser och sedan på eller klicka på Språkkopior.
 1. Klicka på eller tryck på den språkkopia som du vill granska.
 
    ![chlimage_1-270](assets/chlimage_1-270.png)
@@ -364,12 +370,12 @@ När innehåll översätts för en befintlig språkkopia granskar du översättn
 
 ## Jämför språkkopior {#comparing-language-copies}
 
-Så här jämför du språkkopior med språkinställningen:
+Så här jämför du språkkopior med Överordnad:
 
 1. Gå till den språkkopia du vill jämföra i **webbplatskonsolen** .
 1. Öppna panelen **[Referenser](/help/sites-authoring/basic-handling.md#references)**.
 1. Under rubriken **Kopior** väljer du **Språkkopior.**
-1. Välj en viss språkkopia och klicka sedan på **Jämför med mallsida **eller **Jämför med föregående **om tillämpligt.
+1. Välj en språkversion och klicka sedan på **Jämför med Överordnad **eller **Jämför med tidigare **om tillämpligt.
 
    ![chlimage_1-37](assets/chlimage_1-37.jpeg)
 
@@ -389,9 +395,9 @@ Arkivera ett översättningsjobb när det är klart och du behöver inte längre
 
 ## Skapa strukturen för en språkkopia {#creating-the-structure-of-a-language-copy}
 
-Fyll i din språkkopia så att den innehåller innehåll från huvudspråket som du översätter. Du måste ha [skapat språkroten](/help/sites-administering/tc-prep.md#creating-a-language-root) för språkkopian innan du kan fylla i den.
+Fyll i din språkkopia så att den innehåller innehåll från det överordnad språk som du översätter. Du måste ha [skapat språkroten](/help/sites-administering/tc-prep.md#creating-a-language-root) för språkkopian innan du kan fylla i den.
 
-1. Använd webbplatskonsolen för att välja språkroten för huvudspråket som du använder som källa. Om du till exempel vill översätta de engelska sidorna på demowebbplatsen Geometrixx väljer du Innehåll > Demonstrationswebbplats för geometrixx > Engelska.
+1. Använd webbplatskonsolen för att välja språkroten för det överordnad språk som du använder som källa. Om du till exempel vill översätta de engelska sidorna på demowebbplatsen väljer du Innehåll > Demonsplats för Geometrixx > Engelska.
 1. Klicka på eller tryck på Referenser i verktygsfältet.
 
    ![chlimage_1-273](assets/chlimage_1-273.png)
@@ -404,6 +410,7 @@ Fyll i din språkkopia så att den innehåller innehåll från huvudspråket som
 
    * Markera alternativet Markera alla undersidor.
    * För Projekt väljer du Skapa endast struktur.
+
    ![chlimage_1-39](assets/chlimage_1-39.jpeg)
 
 1. Klicka eller tryck på Start.
@@ -414,10 +421,10 @@ Du kan skapa ett översättningsprojekt manuellt om du föredrar att använda pr
 
 När du skapar ett översättningsprojekt manuellt måste du ange värden för följande översättningsrelaterade egenskaper utöver de [grundläggande egenskaperna](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project):
 
-* **** Namn: Projektnamn.
-* **** Källspråk: Språket för källinnehållet.
-* **** Målspråk: Språket som innehållet översätts till.
-* **** Översättningsmetod: Välj Human Translation för att ange att översättningen ska utföras manuellt.
+* **Namn:** Projektnamn.
+* **Källspråk:** Språket för källinnehållet.
+* **Målspråk:** Språket som innehållet översätts till.
+* **Översättningsmetod:** Välj Human Translation för att ange att översättningen ska utföras manuellt.
 
 1. Klicka eller tryck på Skapa i verktygsfältet i projektkonsolen.
 1. Välj mallen Översättningsprojekt och klicka eller tryck sedan på Nästa.
@@ -435,7 +442,7 @@ Du kan hämta innehållet i ett översättningsjobb, till exempel för att skick
 
 ## Importera ett översättningsjobb {#importing-a-translation-job}
 
-Du kan importera översatt innehåll till AEM, till exempel när översättningsleverantören skickar det till dig eftersom de inte är integrerade med AEM via en anslutning.
+Du kan importera översatt innehåll till AEM, till exempel när översättningsleverantören skickar det till dig eftersom de inte är integrerade med AEM via en koppling.
 
 1. Klicka på eller tryck på Importera i listrutan i rutan Översättningsjobb.
 1. Använd webbläsarens dialogruta för att markera filen som ska importeras.
