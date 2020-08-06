@@ -11,18 +11,21 @@ content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 translation-type: tm+mt
 source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
+workflow-type: tm+mt
+source-wordcount: '896'
+ht-degree: 10%
 
 ---
 
 
 # Din inkorg{#your-inbox}
 
-Du kan få meddelanden från olika AEM-områden, inklusive arbetsflöden och projekt. om:
+Du kan få meddelanden från olika AEM, inklusive arbetsflöden och projekt. om:
 
 * Uppgifter:
 
-   * dessa kan också skapas vid olika punkter i AEM-gränssnittet, t.ex. under **Projekt**,
-   * dessa kan vara produkten av ett arbetsflöde **Skapa uppgift** eller **Skapa projektuppgift** .
+   * dessa kan också skapas vid olika punkter i AEM, t.ex. under **Projekt**,
+   * these can be the product of a workflow **Create Task** or **Create Project Task** step.
 
 * Arbetsflöden:
 
@@ -36,7 +39,7 @@ Du får dessa meddelanden i din egen Inkorg där du kan visa dem och vidta åtg�
 
 >[!NOTE]
 >
->Körklar AEM levereras förinläst med administrativa uppgifter som tilldelats administratörsanvändargruppen. Mer information finns [i Administrativa uppgifter](#out-of-the-box-administrative-tasks) som inte är installerade på kartongen.
+>AEM levereras förinläst med administrativa uppgifter som tilldelats administratörsanvändargruppen. Mer information finns [i Administrativa uppgifter](#out-of-the-box-administrative-tasks) som inte är installerade på kartongen.
 
 >[!NOTE]
 >
@@ -45,7 +48,8 @@ Du får dessa meddelanden i din egen Inkorg där du kan visa dem och vidta åtg�
 >* [Projekt](/help/sites-authoring/touch-ui-managing-projects.md)
 >* [Projekt - arbeta med uppgifter](/help/sites-authoring/task-content.md)
 >* [Arbetsflöden](/help/sites-authoring/workflows.md)
->* [Formulär](/help/forms/home.md)
+>* [Forms](/help/forms/home.md)
+
 >
 
 
@@ -60,22 +64,22 @@ Från någon av konsolerna visas det aktuella antalet objekt i din inkorg i sidh
 >
 >Vissa åtgärder visas även i [kortvyn för den aktuella resursen](/help/sites-authoring/basic-handling.md#card-view).
 
-## Administrativa arbetsmoment som inte går att köra {#out-of-the-box-administrative-tasks}
+## Administrativa arbetsmoment som inte går att köra  {#out-of-the-box-administrative-tasks}
 
-Körklar AEM levereras förinläst med fyra uppgifter som tilldelats administratörsanvändargruppen.
+Färdiga AEM levereras förinläst med fyra uppgifter tilldelade till administratörsanvändargruppen.
 
 * [Konfigurera analys och målgruppsanpassning](/help/sites-administering/opt-in.md)
-* [Använd AEM Security Checklist](/help/sites-administering/security-checklist.md)
+* [Använd AEM checklista](/help/sites-administering/security-checklist.md)
 * Aktivera insamling av aggregerad användningsstatistik
 * [Konfigurera HTTPS](/help/sites-administering/ssl-by-default.md)
 
 ## Öppna Inkorgen {#opening-the-inbox}
 
-Så här öppnar du Inkorgen för AEM-meddelanden:
+Så här öppnar du AEM inkorg:
 
 1. Klicka/tryck på indikatorn i verktygsfältet.
 
-1. Välj **Visa alla**. AEM **Inbox** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
+1. Välj **Visa alla**. **AEM -inkorgen** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
 1. Standardvyn är [Listvy](#inbox-list-view), men du kan även växla till [Kalendervy](#inbox-calendar-view). Detta görs med vyväljaren (verktygsfält, överst till höger).
 
    För båda vyerna kan du även definiera [visningsinställningar](#inbox-view-settings). vilka alternativ som är tillgängliga beror på den aktuella vyn.
@@ -84,7 +88,7 @@ Så här öppnar du Inkorgen för AEM-meddelanden:
 
 >[!NOTE]
 >
->Inkorgen fungerar som en konsol, så använd [Global navigering](/help/sites-authoring/basic-handling.md#global-navigation) eller [Sök](/help/sites-authoring/search.md) för att navigera till en annan plats när du är klar.
+>Inkorgen fungerar som en konsol, och du kan använda [Global navigering](/help/sites-authoring/basic-handling.md#global-navigation) eller [Sök](/help/sites-authoring/search.md) för att navigera till en annan plats när du är klar.
 
 ### Inkorg - listvy {#inbox-list-view}
 
@@ -102,7 +106,7 @@ Du kan:
 
 * välja en specifik vy, **Tidslinje**, **kolumn**, **lista**
 
-* specificera de uppgifter som ska visas enligt **tidsplanen**, **Alla**, **Planerat**, **Pågår**, **Förfaller snart**, **Förfallodatum**
+* specify the tasks to display according to **Schedule**; **All**, **Planned**, **In Progress**, **Due Soon**, **Past Due**
 
 * detaljgranska för mer detaljerad information om ett objekt
 * markera ett datumintervall som vyn ska fokuseras i:
@@ -118,8 +122,9 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    I **kalendervyn** kan du konfigurera:
 
    * **Gruppera efter**
-   * **Schemalägg** eller **ingen**
+   * **Schema** eller **Ingen**
    * **Kortstorlek**
+
    ![wf-92](assets/wf-92.png)
 
 * **Listvy**
@@ -128,6 +133,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
    * **Sortera efter**
    * **Sorteringsordning**
+
    ![wf-83](assets/wf-83.png)
 
 ## Vidta åtgärder för ett objekt {#taking-action-on-an-item}
@@ -148,6 +154,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    * **Gå tillbaka** till ett tidigare steg.
    * Visa nyttolasten för ett arbetsflöde.
    * Skapa ett projekt från objektet.
+
    >[!NOTE]
    >
    >Mer information finns i:
@@ -160,6 +167,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    * en dialogruta som är lämplig för åtgärden öppnas.
    * en åtgärdsguide startas.
    * en dokumentationssida öppnas.
+
    Om du till exempel **tilldelar** om öppnas en dialogruta:
 
    ![wf-85](assets/wf-85.png)
@@ -176,7 +184,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 I inkorgen kan du skapa uppgifter:
 
 1. Välj **Skapa** och sedan **Aktivitet**.
-1. Fyll i de nödvändiga fälten på flikarna **Grundläggande** och **Avancerat** . Endast **titeln** är obligatorisk, alla andra är valfria:
+1. Complete the necessary fields in the **Basic** and **Advanced** tabs; only the **Title** is mandatory, all others are optional:
 
    * **Grundläggande**:
 
@@ -188,11 +196,13 @@ I inkorgen kan du skapa uppgifter:
       * **Aktivitetsprioritet**
       * **Startdatum**
       * **Förfallodatum**
+
    ![wf-86](assets/wf-86.png)
 
    * **Avancerat**
 
       * **Namn**: detta kommer att användas för att skapa URL:en, om det är tomt baseras den på **titeln**.
+
    ![wf-87](assets/wf-87.png)
 
 1. Välj **Skicka**.
@@ -210,7 +220,7 @@ För vissa uppgifter kan du skapa ett [projekt](/help/sites-authoring/projects.m
    >Arbetsobjekt (från ett arbetsflöde) kan inte användas för att skapa ett projekt.
 
 1. Välj **Skapa projekt** i verktygsfältet för att öppna guiden.
-1. Välj lämplig mall och sedan **Nästa**.
+1. Select the appropriate template, then **Next**.
 1. Ange de nödvändiga egenskaperna:
 
    * **Grundläggande**
@@ -229,11 +239,11 @@ För vissa uppgifter kan du skapa ett [projekt](/help/sites-authoring/projects.m
 
 1. Bekräfta åtgärden genom att välja **Skapa** .
 
-## Filtrera objekt i AEM Inbox {#filtering-items-in-the-aem-inbox}
+## Filtrera objekt i AEM {#filtering-items-in-the-aem-inbox}
 
 Du kan filtrera objekten i listan:
 
-1. Öppna **AEM Inbox**.
+1. Öppna **AEM**.
 
 1. Öppna filterväljaren:
 
