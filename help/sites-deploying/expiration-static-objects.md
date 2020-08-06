@@ -1,8 +1,8 @@
 ---
 title: Förfallotid för statiska objekt
 seo-title: Förfallotid för statiska objekt
-description: Lär dig hur du konfigurerar AEM så att statiska objekt inte upphör att gälla (under en rimlig tidsperiod).
-seo-description: Lär dig hur du konfigurerar AEM så att statiska objekt inte upphör att gälla (under en rimlig tidsperiod).
+description: Lär dig hur du konfigurerar AEM så att statiska objekt inte förfaller (under en rimlig tidsperiod).
+seo-description: Lär dig hur du konfigurerar AEM så att statiska objekt inte förfaller (under en rimlig tidsperiod).
 uuid: ee019a3d-4133-4d40-98ec-e0914b751fb3
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 73f37b3c-5dbe-4132-bb60-daa8de871884
 translation-type: tm+mt
 source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+workflow-type: tm+mt
+source-wordcount: '436'
+ht-degree: 0%
 
 ---
 
