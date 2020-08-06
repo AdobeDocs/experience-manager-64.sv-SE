@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 93a112fc-ef34-4281-89b8-a0f1b3d3aca9
 translation-type: tm+mt
 source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+workflow-type: tm+mt
+source-wordcount: '345'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +32,7 @@ Detta avsnitt i dokumentationen beskriver
 
 ## Krav {#requirement}
 
-Data för webbplatsen `Community Activity List` är bara tillgängliga när Adobe Analytics är licensierat och konfigurerat för communitywebbplatsen.
+Data för `Community Activity List` webbplatsen är bara tillgängliga när Adobe Analytics har licens och konfigurerats för communitywebbplatsen.
 
 Se [Analyskonfiguration för communityfunktioner](analytics.md).
 
@@ -43,47 +46,49 @@ När komponenten placeras på en sida i en community-webbplats är det så här 
 
 ![chlimage_1-227](assets/chlimage_1-227.png)
 
-## Konfigurerar lista över communityaktiviteter {#configuring-community-activity-list}
+## Konfigurerar lista över communityaktiviteter  {#configuring-community-activity-list}
 
 Markera den monterade `Community Activity List` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
 ![chlimage_1-228](assets/chlimage_1-228.png)
 
-Under fliken **[!UICONTROL Kommentarer]** anger du om och hur kommentarer för överförda filer ska visas:
+Under **[!UICONTROL Comments]** fliken anger du om och hur kommentarer för överförda filer ska visas:
 
 ![chlimage_1-229](assets/chlimage_1-229.png)
 
-* **[!UICONTROL Typ]**
+* **[!UICONTROL Type]**
 
    Ange om data ska visas för communitymedlemmar eller användargenererat innehåll (UGC).
 
-   Välj från
+   Välj  från
    * `Members`
    * `Content`
+
    Standardvärdet är `Members`.
 
-* **[!UICONTROL Visa titel]**
+* **[!UICONTROL Display title]**
 
    En beskrivande rubrik som ska visas ovanför data, till exempel `Trending Content`.
 
    Standard är ingen titel.
 
-* **[!UICONTROL Visa antal]**
+* **[!UICONTROL Display count]**
 
    Antalet objekt som ska listas.
 
    Standardvärdet är 10.
 
-* **[!UICONTROL Typ av aktivitet]**
+* **[!UICONTROL Activity type]**
 
    Välj en av
    * `Views`(sidbesök)
    * `Posts`(skapa UGC)
    * `Follows`
    * `Likes`
+
    Standardvärdet är Vyer.
 
-* **[!UICONTROL Tidsperiod]**
+* **[!UICONTROL Time period]**
 
    Välj en av
    * `Last 24 hours`
@@ -92,15 +97,16 @@ Under fliken **[!UICONTROL Kommentarer]** anger du om och hur kommentarer för �
    * `Last 90 days`
    * `This year (since Jan 1st)`
    * `Total`
+
    Standardvärdet är `Total`.
 
-* **[!UICONTROL Kontextbana]**
+* **[!UICONTROL Context path]**
 
    Gör det möjligt att omfång aktiviteten till en delmängd av platsen, t.ex. en viss blogg.
 
    Standard är hela communitywebbplatsen.
 
-* **[!UICONTROL Medlemsräkningsaggregering]**
+* **[!UICONTROL Member count aggregation]**
 
    När alternativet är avmarkerat (inaktiverat) räknas endast inlägg på den översta nivån. Om till exempel kontexten är rotsidan (standardinställningen) `Activity Type`visas ingen aktivitet `Posts`i den, eftersom det inte går att publicera innehåll på rotsidan. När du markerar det här alternativet inkluderas antalet på alla underordnade sidor.
 
