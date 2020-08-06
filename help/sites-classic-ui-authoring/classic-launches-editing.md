@@ -12,6 +12,9 @@ discoiquuid: 666b967a-e94b-4f94-a676-00adf150580f
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 2%
 
 ---
 
@@ -47,6 +50,7 @@ När du har skapat en programstart kan du ändra startnamnet och startdatumet. D
       * **Titel**
       * **Live-datum**: detta motsvarar startdatumet
       * **Produktionsklar**
+
       Se [Startar - Ordning för händelser](/help/sites-authoring/launches.md#launches-the-order-of-events) för information om syftet med och interaktionen med dessa fält.
 
    * På fliken **Bild** kan du överföra en bildfil.
