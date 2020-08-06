@@ -1,8 +1,8 @@
 ---
 title: Utveckla med SAP Commerce Cloud
 seo-title: Utveckla med SAP Commerce Cloud
-description: Integreringsramverket i SAP Commerce Cloud innehåller ett integreringslager med ett API
-seo-description: Integreringsramverket i SAP Commerce Cloud innehåller ett integreringslager med ett API
+description: Integreringsramverket för SAP Commerce Cloud innehåller ett integreringslager med ett API
+seo-description: Integreringsramverket för SAP Commerce Cloud innehåller ett integreringslager med ett API
 uuid: a780dd17-027a-4a61-af8f-3e2f600524c7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -26,8 +26,8 @@ ht-degree: 0%
 
 Integreringsramverket innehåller ett integreringslager med ett API. På så sätt kan du:
 
-* koppla in ett e-handelssystem och hämta produktdata till AEM
-* bygga AEM-komponenter för handelsfunktioner oberoende av e-handelsmotorn
+* koppla in ett e-handelssystem och hämta in produktdata i AEM
+* bygga AEM för handelsfunktioner oberoende av e-handelsmotorn
 
 ![chlimage_1-11](assets/chlimage_1-11.png)
 
@@ -35,17 +35,17 @@ Integreringsramverket innehåller ett integreringslager med ett API. På så sä
 >
 >[API-dokumentation](/help/sites-developing/ecommerce.md#api-documentation) finns också tillgänglig.
 
-Ett antal färdiga AEM-komponenter finns för att använda integreringslagret. För närvarande är följande:
+Det finns ett antal färdiga AEM för att använda integreringslagret. För närvarande är följande:
 
 * en produktvisningskomponent
 * en kundvagn
 * utcheckning
 
-För sökning tillhandahålls en integreringsfunktion som gör att du kan använda AEM-sökningen, sökningen i e-handelssystemet, en sökning från tredje part (som Search&amp;Promote) eller en kombination av dessa.
+För sökningar finns en integreringsfunktion som gör att du kan använda AEM sökning, sökning i e-handelssystemet, en sökning från tredje part (som Search &amp; Promote) eller en kombination av dessa.
 
 ## Val av e-handelsmotor {#ecommerce-engine-selection}
 
-eCommerce-ramverket kan användas med alla e-handelslösningar, och den motor som används måste kunna identifieras av AEM:
+eCommerce-ramverket kan användas tillsammans med alla e-handelslösningar, och den motor som används måste kunna identifieras av AEM:
 
 * eCommerce Engines är OSGi-tjänster som stöder `CommerceService` gränssnittet
 
@@ -68,7 +68,7 @@ eCommerce-ramverket kan användas med alla e-handelslösningar, och den motor so
 
 Se följande exempel nedan:
 
-| `cq:commerceProvider = geometrixx` | I en AEM-standardinstallation krävs en specifik implementering. till exempel exemplet geometrixx, som innehåller minimala tillägg till det generiska API:t |
+| `cq:commerceProvider = geometrixx` | Vid en AEM standardinstallation krävs en specifik implementering. Exempel på geometrixx, som innehåller minimala tillägg till det generiska API:t |
 |---|---|
 | `cq:commerceProvider = hybris` | hybriimplementering |
 
@@ -153,25 +153,26 @@ hybris använder en användarsession för att lagra information som kundens kund
 
 ### Produktsynkronisering och -publicering {#product-synchronization-and-publishing}
 
-Produktdata som underhålls i hybris måste finnas tillgängliga i AEM. Följande mekanism har implementerats:
+Produktdata som bevaras i hybris måste finnas tillgängliga i AEM. Följande mekanism har implementerats:
 
 * En initial belastning av ID:n tillhandahålls av hybris som foder. Denna feed kan uppdateras.
-* hybris kommer att tillhandahålla uppdateringsinformation via en feed (som AEM polls).
-* När AEM använder produktdata skickar det tillbaka begäranden till hybris om aktuella data (villkorlig begäran om hämtning med det senaste ändringsdatumet).
-* På hybris är det möjligt att ange foderinnehållet på ett deklarativt sätt.
-* Mappning av matningsstrukturen till AEM-innehållsmodellen sker i matningsadaptern på AEM-sidan.
+* hybris kommer att tillhandahålla uppdateringsinformation via ett foder (som AEM undersökningar).
+* När AEM använder produktdata skickar den begäranden tillbaka till hybris om aktuella data (villkorlig begäran om hämtning med det senaste ändringsdatumet).
+* On hybris it is possible to specify feed contents in a declarative way.
+* Matningsstrukturen mappas till AEM innehållsmodell i matningsadaptern på AEM.
 
 ![chlimage_1-12](assets/chlimage_1-12.png)
 
-* Importören (b) används för den första konfigurationen av sidträdstrukturen i AEM för kataloger.
-* Katalogförändringar i hybris anges till AEM via en feed, som sedan sprids till AEM (b)
+* The importer (b) is used for the initial setup of the page tree structure in AEM for catalogs.
+* Catalog changes in hybris are indicated to AEM via a feed, these then propagate to AEM (b)
 
-   * Produkt som lagts till/tagits bort/ändrats i förhållande till katalogversionen.
-   * Produkten är godkänd.
+   * Product added/deleted/changed with respect to catalog version.
+   * Product approved.
 
-* Tillägget hybris erbjuder en polling-importör (&quot;hybris&quot;-schema&quot;) som kan konfigureras att importera ändringar till AEM med ett angivet intervall (t.ex. var 24:e timme där intervallet anges i sekunder):
+* The hybris extension provides a polling importer (&quot;hybris&quot; scheme&quot;), which can be configured to import changes into AEM at a specified interval (for example, every 24 hours where the interval is specified in seconds):
 
    * 
+
       ```
       http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
        {
@@ -183,33 +184,33 @@ Produktdata som underhålls i hybris måste finnas tillgängliga i AEM. Följand
        }
       ```
 
-* Katalogkonfigurationen i AEM känner igen katalogversionerna **Staged** och **Online** .
+* The catalog configuration in AEM recognizes **Staged** and **Online** catalog versions.
 
-* För att kunna synkronisera produkter mellan katalogversioner måste man (ta bort) aktivera motsvarande AEM-sida (a, c)
+* Syncing products between catalog versions will require a (de-)activation of the corresponding AEM page (a, c)
 
-   * Om du vill lägga till en produkt i en **katalogversion online** måste du aktivera produktens sida.
-   * Borttagning av en produkt kräver inaktivering.
+   * Adding a product to an **Online** catalog version requires activation of the product&#39;s page.
+   * Removing a product requires deactivation.
 
-* Aktivera en sida i AEM (c) kräver en kontroll (b) och är bara möjligt om
+* Activating a page in AEM (c) requires a check (b) and is only possible if
 
-   * Produkten finns i en **katalogversion online** för produktsidor.
-   * De produkter som det hänvisas till finns i en **katalogversion online** för andra sidor (t.ex. kampanjsidor).
+   * The product is in an **Online** catalog version for product pages.
+   * The referenced products are available in an **Online** catalog version for other pages (e.g. campaign pages).
 
 * Aktiverade produktsidor måste ha tillgång till produktdatans **onlineversion** (d).
 
-* AEM-publiceringsinstansen kräver tillgång till hybris för hämtning av produktdata och personaliserade data (d).
+* The AEM publish instance requires access to hybris for the retrieval of product and personalized data (d).
 
 ### Arkitektur {#architecture}
 
-#### Arkitektur för produkt och varianter {#architecture-of-product-and-variants}
+#### Architecture of Product and Variants {#architecture-of-product-and-variants}
 
-En och samma produkt kan ha flera variationer. den kan till exempel variera beroende på färg och/eller storlek. En produkt måste definiera vilka egenskaper som driver variationen. vi kallar dessa *variantaxlar*.
+A single product can have multiple variations; for instance, it might vary by color and/or size. A product must define which properties drive variation; we term these *variant axes*.
 
-Alla egenskaper är dock inte olika axlar. Variationer kan också påverka andra egenskaper. Priset kan till exempel vara beroende av storleken. Dessa egenskaper kan inte väljas av kunden och betraktas därför inte som olika axlar.
+However, not all properties are variant axes. Variations can also affect other properties; for example, the price might be dependant on size. These properties cannot be selected by the shopper and therefore are not considered variant axes.
 
-Varje produkt och/eller variant representeras av en resurs och mappar därför 1:1 till en databasnod. Det är en extra konsekvens att en specifik produkt och/eller variant kan identifieras unikt genom sin sökväg.
+Each product and/or variant is represented by a resource, and therefore maps 1:1 to a repository node. It is a corollary that a specific product and/or variant can be uniquely identified by its path.
 
-Produkt-/variantresursen innehåller inte alltid den faktiska produktinformationen. Det kan vara en representation av data som faktiskt finns i ett annat system (t.ex. hybris). Produktbeskrivningar, priser osv. lagras inte i AEM, utan hämtas i realtid från eCommerce-motorn.
+The product/variant resource does not always hold the actual product dataIt might be a representation of data actually held on another system (such as hybris). Produktbeskrivningar, priser osv. lagras inte i AEM utan hämtas i realtid från eCommerce-motorn.
 
 Alla produktresurser kan representeras av en `Product API`. De flesta anrop i produkt-API:t är variationsspecifika (även om variationer kan ärva delade värden från ett överordnat element), men det finns också anrop som listar variantuppsättningen ( `getVariantAxes()`, `getVariants()`osv.).
 
@@ -228,11 +229,11 @@ Produkter (i allmänhet) kan ha många olika axlar, men produktkomponenten som f
 1. plus ytterligare
 >
 >   
-Den här ytterligare varianten väljs via egenskapen `variationAxis` för produktreferensen (vanligtvis `color` för Geometrixx Outdoor).
+Den här ytterligare varianten väljs via egenskapen `variationAxis` för produktreferensen (vanligtvis `color` för Geometrixx Outdoors).
 
 #### Produktreferenser och produktdata {#product-references-and-product-data}
 
-I allmänhet:
+In general:
 
 * produktdata finns under `/etc`
 
@@ -352,7 +353,7 @@ public class AxisFilter implements VariantFilter {
          * En produktnod som innehåller alla egenskaper lokalt (och inte innehåller någon productData-egenskap) ärver produktattribut direkt från sina egna överordnade.
 
 
-* **AEM-generisk produktstruktur**
+* **AEM produktstruktur**
 
    * Varje variant måste ha en egen lövnod.
    * Produktgränssnittet representerar både produkter och varianter, men den relaterade databasnoden är specifik för vilken den är.
@@ -428,16 +429,16 @@ public class AxisFilter implements VariantFilter {
 * Lagring
 
    * I hybris-fallet äger hybris-servern kundvagnen.
-   * I det generiska AEM-fallet lagras kundvagnar i [ClientContext](/help/sites-administering/client-context.md).
+   * I de AEM generiska fallen lagras varukorgar i [ClientContext](/help/sites-administering/client-context.md).
 
 **Personanpassning**
 
-* Personalisering bör alltid drivas via [ClientContext](/help/sites-administering/client-context.md).
+* Personalisering bör alltid ske via [ClientContext](/help/sites-administering/client-context.md).
 * En ClientContext `/version/` i kundvagnen skapas i samtliga fall:
 
    * Produkterna ska läggas till med hjälp av `CommerceSession.addCartEntry()` metoden.
 
-* Följande illustrerar ett exempel på kundvagnsinformation i ClientContext cart:
+* Följande illustrerar ett exempel på kundvagnsinformation i kundvagnen i ClientContext:
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
@@ -504,7 +505,7 @@ De tre elementen `CommerceSession` äger:
    >
 * Kontrollera om metoden är tillgänglig
 >* Lägga till prisinformation
->* Att göra det möjligt för kunderna att uppdatera ordersidan i AEM (inklusive överflödet av leveransmetoder och texten som beskriver dem), samtidigt som de fortfarande har möjlighet att visa relevant `CommerceSession` information.
+>* För att kunderna ska kunna uppdatera beställningssidan i AEM (inklusive överflödet av leveransmetoder och texten som beskriver dem), samtidigt som de fortfarande har möjlighet att visa relevant `CommerceSession` information.
 
 
 **Betalningshantering**
@@ -551,7 +552,7 @@ Startpunkten för söknings-API är den `CommerceService#search` metod som retur
 
 ### Användarintegrering {#user-integration}
 
-Integrering sker mellan AEM och olika e-handelssystem. Detta kräver en strategi för att synkronisera kunder mellan de olika systemen så att AEM-specifik kod bara behöver känna till om AEM och vice versa:
+Integrering sker mellan AEM och olika e-handelssystem. Detta kräver en strategi för att synkronisera kunder mellan de olika systemen så att AEM specifik kod bara behöver känna till AEM och vice versa:
 
 * Autentisering
 
@@ -559,18 +560,18 @@ Integrering sker mellan AEM och olika e-handelssystem. Detta kräver en strategi
 
 * Konton i Hybris
 
-   AEM skapar ett motsvarande (underordnat) konto i hybris för varje kund. Användarnamnet för det här kontot är detsamma som AEM-användarnamnet. Ett kryptografiskt slumpmässigt lösenord genereras automatiskt och lagras (krypteras) i AEM.
+   AEM skapar ett motsvarande (underordnat) konto i hybris för varje kund. Användarnamnet för det här kontot är samma som AEM användarnamn. Ett kryptografiskt slumpmässigt lösenord genereras automatiskt och lagras (krypteras) i AEM.
 
 #### Befintliga användare {#pre-existing-users}
 
-En AEM-front kan placeras framför en befintlig hybris-implementering. En hybris-motor kan också läggas till i en befintlig AEM-installation. För att göra detta måste systemen kunna hantera befintliga användare på ett effektivt sätt i båda systemen:
+En AEM kan placeras framför en befintlig hybris-implementering. En hybris-motor kan också läggas till i en befintlig AEM. För att göra detta måste systemen kunna hantera befintliga användare på ett effektivt sätt i båda systemen:
 
 * AEM -> hybris
 
-   * När du loggar in på hybris, om AEM-användaren inte redan finns:
+   * När du loggar in på hybris, om den AEM användaren inte redan finns:
 
       * skapa en ny hybris-användare med ett kryptografiskt slumpmässigt lösenord
-      * lagra hybris-användarnamnet i AEM-användarens användarkatalog
+      * lagra hybris-användarnamnet i AEM användarkatalog
    * Se: `com.adobe.cq.commerce.hybris.impl.HybrisSessionImpl#login()`
 
 
