@@ -10,6 +10,9 @@ topic-tags: correspondence-management
 discoiquuid: cb232931-60b7-4956-bc77-10636c19325e
 translation-type: tm+mt
 source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+workflow-type: tm+mt
+source-wordcount: '497'
+ht-degree: 3%
 
 ---
 
@@ -35,7 +38,7 @@ Om portalen har mallnamnet Letter kan URL:en vara\
 
 >[!NOTE]
 >
->Anrop på ett sådant sätt är inte säkert eftersom de nödvändiga parametrarna skickas som en GET-begäran, genom att samma (tydligt synliga) visas i URL-adressen.
+>Anrop på ett sådant sätt är inte säkert eftersom de nödvändiga parametrarna skickas som en GET-förfrågan, eftersom samma (tydligt synliga) visas i URL-adressen.
 
 >[!NOTE]
 >
@@ -43,7 +46,7 @@ Om portalen har mallnamnet Letter kan URL:en vara\
 
 ## Inline databaserat anrop {#inline-data-based-invocation}
 
-Ett annat (och säkrare) sätt att anropa programmet Create Correspondence kan vara att bara trycka på URL:en `https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html`samtidigt som parametrar och data skickas för att anropa programmet Create Correspondence som en POST-begäran (dölja dem för slutanvändaren). Det innebär också att du nu kan skicka XML-data för Create Correspondence-programmet (som en del av samma begäran, med parametern cmData), vilket inte var möjligt/idealiskt i den tidigare metoden.
+Ett annat (och säkrare) sätt att anropa programmet Create Correspondence kan vara att bara trycka på URL:en `https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html`samtidigt som parametrarna och data skickas för att anropa programmet Create Correspondence som en POST (dölja dem för slutanvändaren). Det innebär också att du nu kan skicka XML-data för Create Correspondence-programmet (som en del av samma begäran, med parametern cmData), vilket inte var möjligt/idealiskt i den tidigare metoden.
 
 ### Parametrar för att ange bokstav {#parameters-for-specifying-letter}
 
