@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Konfigurera tjänstinställningar {#configure-service-settings}
 
-Du kan använda sidan Tjänsthantering för att konfigurera inställningar för var och en av de tjänster som ingår i AEM-formulär. De tillgängliga inställningarna varierar beroende på vilken tjänst som konfigureras.
+Du kan använda sidan Tjänsthantering för att konfigurera inställningar för var och en av de tjänster som är en del av AEM formulär. De tillgängliga inställningarna varierar beroende på vilken tjänst som konfigureras.
 
 1. I administrationskonsolen klickar du på Tjänster > Program och tjänster > Tjänsthantering.
 1. Stoppa tjänsten innan du ändrar den. (Se [Starta och stoppa tjänster](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services).)
@@ -69,7 +69,7 @@ Följande inställningar är tillgängliga för den streckkodade formulärtjäns
 
 ## Inställningar för tjänsten Central Migration Bridge (inaktuellt) {#central-migration-bridge-service-settings}
 
-Tjänsten Central Migration Bridge ( `CentralMigrationBridge`) anropar en delmängd av funktionerna i Adobe Central Pro Output Server (Central), som innehåller kommandona JFMERGE, JFTRANS och XMLIMPORT. Med tjänståtgärderna för central migreringsbrygga kan du återanvända följande centrala resurser i AEM-formulär:
+Tjänsten Central Migration Bridge ( `CentralMigrationBridge`) anropar en delmängd av Adobe Central Pro Output Server (Central)-funktionen, som innehåller kommandona JFMERGE, JFTRANS och XMLIMPORT. Med tjänståtgärderna för central migreringsbrygga kan du återanvända följande centrala resurser i AEM formulär:
 
 * malldesign (&amp;ast;.ifd)
 * utdatamallar (&amp;ast;.mdf)
@@ -87,7 +87,7 @@ Med tjänsten Content Repository Connector for EMC Documentum ( `EMCDocumentumCo
 
 Följande inställning är tillgänglig för tjänsten Content Repository Connector for EMC Documentum.
 
-**Standardsökväg för resurslänksobjekt:** Standarddelen av sökvägen i Documentum-databasen för lagring av objektet Resurslänk. Den faktiska sökvägen består av standardsökvägen och platsen för formulärmallen i AEM-formulärdatabasen.
+**Standardsökväg för resurslänksobjekt:** Standarddelen av sökvägen i Documentum-databasen för lagring av objektet Resurslänk. Den faktiska sökvägen består av standardsökvägen och platsen för formulärmallen i AEM formulärdatabas.
 
 Om standardsökvägen till exempel är inställd på `/LiveCycleES/ConnectorforEMCDocumentum/AssetLinkObjects`och formulärmallen lagras i en mapp `/Docbase/forms/`, lagras objektet Resurslänk på följande plats:
 
@@ -101,7 +101,7 @@ Med Content Repository Connector för IBM FileNet kan du skapa processer som int
 
 Följande inställning är tillgänglig för Content Repository Connector för tjänsten IBM FileNet.
 
-**Standardsökväg för resurslänksobjekt:** Standarddelen av sökvägen i IBM FileNet-databasen för lagring av objektet Asset Link. Den faktiska sökvägen består av standardsökvägen och platsen för formulärmallen i AEM-formulärdatabasen.
+**Standardsökväg för resurslänksobjekt:** Standarddelen av sökvägen i IBM FileNet-databasen för lagring av objektet Asset Link. Den faktiska sökvägen består av standardsökvägen och platsen för formulärmallen i AEM formulärdatabas.
 
 Om standardsökvägen till exempel är inställd på `/LiveCycleES/ConnectorforIBMFileNet/AssetLinkObjects`och formulärmallen lagras i en mapp `/Docbase/forms/`, lagras objektet Resurslänk på följande plats:
 
@@ -131,11 +131,11 @@ Följande inställningar är tillgängliga för tjänsten Konvertera PDF.
 
 **Använd utjämning på bilder:** Använder utjämning för att minimera abrupta ändringar i bilder.
 
-## Distiller-tjänstinställningar {#distiller-service-settings}
+## Distiller tjänstinställningar {#distiller-service-settings}
 
 Distiller-tjänsten ( `DistillerService`) konverterar PostScript-, Encapsulated PostScript- (EPS) och PRN-filer till PDF-filer över ett nätverk.
 
-Följande inställningar är tillgängliga för Distiller-tjänsten.
+Följande inställningar är tillgängliga för tjänsten Distiller.
 
 **Adobe PDF-inställningar:** Följande förkonfigurerade inställningar används för den genererade PDF-filen:
 
@@ -153,13 +153,13 @@ Nya inställningar kan skapas med användargränssnittet i PDF Generator.
 
 **Säkerhetsinställningar:** Förkonfigurerade säkerhetsinställningar som används för genererade PDF-dokument. Standardvärdet är Ingen säkerhet. Du måste skapa skyddsinställningar med PDF Generator och sedan ange inställningen här.
 
-**Poolstorlek:** Poolens ursprungliga storlek. När Distiller-tjänsten distribueras, används det här numret för att fastställa antalet instanser för tjänstimplementering som skapas och tilldelas den fripool som väntar på anrop. Tjänstbehållaren kan sedan svara direkt på anropsbegäranden utan att först initiera en tjänstinstans.
+**Poolstorlek:** Poolens ursprungliga storlek. När Distiller-tjänsten distribueras används det här numret för att avgöra hur många instanser av tjänstimplementering som skapas och tilldelas den kostnadsfria poolen som väntar på anrop. Tjänstbehållaren kan sedan svara direkt på anropsbegäranden utan att först initiera en tjänstinstans.
 
 ## Inställningar för dokumenthanteringstjänsten {#document-management-service-settings}
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobes livscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html). Mer information om hur du konfigurerar innehållstjänster (borttaget) finns i [Administrera innehållstjänster](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf).
+>Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe produktlivscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html). Mer information om hur du konfigurerar innehållstjänster (borttaget) finns i [Administrera innehållstjänster](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf).
 
 Med Document Management Service ( `DocumentManagementService`) kan processer använda innehållshanteringsfunktionen som tillhandahålls av Content Services (Borttagen). Dokumenthanteringsåtgärder innehåller grundläggande uppgifter som krävs för att underhålla utrymme och innehåll i innehållshanteringssystemet. Exempel på sådana uppgifter är kopiera, ta bort, flytta, hämta och lagra innehåll, skapa blanksteg och associationer samt hämta och ange innehållsattribut.
 
@@ -255,13 +255,13 @@ Följande inställningar är tillgängliga för tjänsten Generera PDF.
 
 **Filtypsinställningar:** Namnet på den förkonfigurerade filtypsinställningen som ska användas för ett konverteringsjobb, om dessa inställningar inte anges som en del av API-anropsparametrarna. Filtypsinställningarna konfigureras i administrationskonsolen genom att klicka på Tjänster > PDF Generator > Filtypsinställningar.
 
-**Använd Acrobat WebCapture (endast Windows):** När den här inställningen är true använder tjänsten Generera PDF Acrobat X Pro för alla HTML-till-PDF-konverteringar. Detta kan förbättra kvaliteten på PDF-filer som skapas från HTML, men prestanda kan vara något lägre. Standardvärdet är false.
+**Använd Acrobat WebCapture (endast Windows):** När den här inställningen är true använder tjänsten Generera PDF Acrobat X Pro för alla HTML- till PDF-konverteringar. Detta kan förbättra kvaliteten på PDF-filer som skapas från HTML, men prestanda kan vara något lägre. Standardvärdet är false.
 
 **Använd Acrobat Image Conversion (endast Windows):** När den här inställningen är true använder tjänsten Generera PDF Acrobat X Pro för alla Image till PDF-konverteringar. Den här inställningen är bara användbar om standardkonverteringsfunktionen för ren Java inte kan konvertera en stor del av indatabilderna korrekt. Standardvärdet är false.
 
-**Aktivera Acrobat-baserade AutoCAD-konverteringar (endast Windows):** När den här inställningen är true använder tjänsten Generera PDF Acrobat X Pro för alla DWG till PDF-konverteringar. Den här inställningen är bara användbar om AutoCAD inte är installerat på servern eller om AutoCAD-konverteringsfunktionen inte kan konvertera filer.
+**Aktivera Acrobat-baserade AutoCAD-konverteringar (endast Windows):** När den här inställningen är true används Acrobat X Pro för alla DWG till PDF-konverteringar. Den här inställningen är bara användbar om AutoCAD inte är installerat på servern eller om AutoCAD-konverteringsfunktionen inte kan konvertera filer.
 
-**Reguljära uttryck för att hitta förbjudna specialtecken i användarnamnet (endast Windows):** Anger tecken som stör åtgärderna Exportera PDF och Optimera PDF när tecknen visas i användarens namn.
+**Reguljära uttryck för att hitta förbjudna specialtecken i användarnamnet (endast Windows):** Anger tecken som stör åtgärderna Export PDF och Optimize PDF när tecknen visas i användarens namn.
 
 **Poolstorlek för ImageToPDF:** Poolstorleken för standardkonverteraren (ren Java) för bild till PDF i tjänsten Generera PDF. Den här inställningen kontrollerar det maximala antalet samtidiga Image-to-PDF-konverteringar som tjänsten Generate PDF kan utföra. Standardvärdet för den här inställningen (rekommenderas för enprocessorsystem) är 3, som du kan öka på flerprocessorsystem.
 
@@ -269,7 +269,7 @@ Följande inställningar är tillgängliga för tjänsten Generera PDF.
 
 **OCR-poolstorlek:** Poolstorleken för den PaperCaptureService som PDF Generator använder för OCR. Standardvärdet för den här inställningen (rekommenderas för enprocessorsystem) är 3, som du kan öka på flerprocessorsystem. Den här inställningen gäller endast Windows-system.
 
-**Reservteckensnittsfamilj för konvertering från HTML till PDF:** Namnet på den teckensnittsfamilj som ska användas i PDF-dokument när teckensnittet som används i den ursprungliga HTML-koden inte är tillgängligt för AEM-formulärservern. Ange en teckensnittsfamilj om du förväntar dig att konvertera HTML-sidor som använder otillgängliga teckensnitt. På sidor som skapats på regionala språk kan t.ex. otillgängliga teckensnitt användas.
+**Reservteckensnittsfamilj för konvertering från HTML till PDF:** Namnet på den teckensnittsfamilj som ska användas i PDF-dokument när teckensnittet som används i den ursprungliga HTML-koden inte är tillgängligt för den AEM formulärservern. Ange en teckensnittsfamilj om du förväntar dig att konvertera HTML-sidor som använder otillgängliga teckensnitt. På sidor som skapats på regionala språk kan t.ex. otillgängliga teckensnitt användas.
 
 **Återförsökslogik för systemspecifika konverteringar** styr återskapande av PDF-filer om det första konverteringsförsöket har misslyckats:
 
@@ -287,7 +287,7 @@ Försök konvertera PDF igen om den tid som förbrukats för det första konvert
 
 ## Guides ES4 Utilities service settings {#guides-es4-utilities-service-settings}
 
-När du skapar en stödlinje bäddas vissa resurser, till exempel en definition av stödlinjen, in i stödlinjen. Resurser kan också finnas som referenser till programresurser som lagras lokalt eller på AEM-formulärservern. Handboken innehåller inga data, och värdena för sändningsplatsen och indata passar inte för alla externa miljöer.
+När du skapar en stödlinje bäddas vissa resurser, till exempel en definition av stödlinjen, in i stödlinjen. Resurser kan också finnas som referenser till programresurser som lagras lokalt eller på AEM formulärserver. Handboken innehåller inga data, och värdena för sändningsplatsen och indata passar inte för alla externa miljöer.
 
 I de flesta fall räcker standardåtergivningstjänsten för stödlinjer för att förbereda en guide för användning i arbetsytor eller andra externa miljöer. (I vyn Tjänster i Workbench är standardtjänsten Guides (system)/Processes/Render Guide - 1.0.) Med tjänsten Guide Utilities ( `GuidesUtility`) kan du vid behov skapa en anpassad process för återgivning av en guide.
 
@@ -304,7 +304,7 @@ Med guideverktygen kan du lägga till följande guideåtergivningsåtgärder i e
 
 Standardvärdena för tjänsten Guide Utilities stöder de flesta fall. Om det behövs kan du dock ändra följande värden.
 
-**publicPaths:** Det här alternativet har tagits bort. Använd inte det här alternativet med AEM-formulär.
+**publicPaths:** Det här alternativet har tagits bort. Använd inte det här alternativet för AEM formulär.
 
 **pathInfoExpiryInSeconds:** Det intervall efter vilket en begäran om sökvägsinformation från en klient upphör att gälla. Standardvärdet är 1.
 
@@ -334,7 +334,7 @@ Om du använder stödlinjer i ett serverkluster som inte använder kladdiga sess
 
 Värdet macKeySeed är startvärdet för den slumpmässiga talgeneratorn som används för att generera säkra URL:er. Om du anger det här värdet initierar varje klusternod den slumpmässiga talgeneratorn på samma sätt och får tillgång till samma säkra URL:er. Du kan använda valfri slumpmässig sträng för detta dirigerade värde.
 
-Ändra värdet för macKeySeed när du behöver uppdatera säkra URL:er. Uppdatering av säkra URL:er beror på din säkerhetsprincip och liknar uppdateringsprincipen för ändring av huvudrotlösenordet för servern. macSeedValue är detsamma som huvudlösenordet för säkra URL:er, eftersom det används för att generera ett nytt unikt slumpmässigt nummer som kan användas för säker URL-generering och hämtning.
+Ändra värdet för macKeySeed när du behöver uppdatera säkra URL:er. Uppdatering av säkra URL:er beror på din säkerhetsprincip och liknar uppdateringsprincipen för att ändra serverns överordnad rotlösenord. macSeedValue är detsamma som det överordnad lösenordet för säkra URL:er, eftersom det används för att generera ett nytt unikt slumpmässigt nummer som kan användas för att skapa och hämta säkra URL:er.
 
 Du måste starta om klustret eftersom macSeedValue är skrivskyddat när datorn startas. Alla noder måste startas om för att kunna läsa värdet, eftersom de använder det oberoende av varandra för att initiera sina interna slumptal med startvärdet.
 
@@ -344,17 +344,17 @@ JDBC-tjänsten ( `JdbcService`) möjliggör för processer att interagera med da
 
 Följande inställning är tillgänglig för JDBC-tjänsten.
 
-**Datakällans namn:** Ett strängvärde som representerar JNDI-namnet på datakällan som ska användas för att ansluta till databasservern. Datakällan måste definieras på den programserver som är värd för formulärservern. Standardvärdet är JNDI-namnet på datakällan för AEM-formulärdatabasen.
+**Datakällans namn:** Ett strängvärde som representerar JNDI-namnet på datakällan som ska användas för att ansluta till databasservern. Datakällan måste definieras på den programserver som är värd för formulärservern. Standardvärdet är JNDI-namnet på datakällan för AEM formulärdatabas.
 
 ## JMS-tjänstinställningar {#jms-service-settings}
 
 JMS-tjänsten ( `JMS`) möjliggör interaktion med Java Messaging System-leverantörer (JMS) som implementerar både peka-till-punkt-meddelanden och publicerar/prenumererar-meddelanden.
 
-Konfigurera JMS-tjänsten med standardegenskaper så att tjänståtgärderna kan ansluta till och interagera med en JMS-provider och en associerad JNDI-tjänst. Värdena för tjänsteegenskaperna ställs in på standardvärden baserat på JBoss Application Server. Ändra dessa värden om du använder en annan programserver som värd för AEM-formulär.
+Konfigurera JMS-tjänsten med standardegenskaper så att tjänståtgärderna kan ansluta till och interagera med en JMS-provider och en associerad JNDI-tjänst. Värdena för tjänsteegenskaperna ställs in på standardvärden baserat på JBoss Application Server. Ändra dessa värden om du använder en annan programserver som värd AEM formulär.
 
 Följande inställningar är tillgängliga för JMS-tjänsten.
 
-**Provider-URL:** URL för JNDI-tjänstprovidern. Standardvärdet baseras på JBoss-programservern. Följande URL är standardvärden för de programservrar som AEM-formulär stöder:
+**Provider-URL:** URL för JNDI-tjänstprovidern. Standardvärdet baseras på JBoss-programservern. Följande URL är standardvärden för de programservrar som AEM formulär stöder:
 
 **JBoss:** `<server name>:1099`
 
@@ -366,7 +366,7 @@ Följande inställningar är tillgängliga för JMS-tjänsten.
 
 **JNDI-lösenord:** Lösenordet som är associerat med det användarnamn som har angetts för JNDI-användarnamn. Standardvärdet är gäst.
 
-**Initial Context Factory:** Den Java-klass som ska användas som inledande kontextfabrik. JMS-tjänsten använder den här klassen för att skapa en inledande kontext, som är utgångspunkten för att matcha namn på ämnen och köer. Standardvärdet är den inledande kontextfabriken för JMS-tjänsten på JBoss. Följande klasser är de inledande kontextfabrikerna för de programservrar som AEM-formulär har stöd för:
+**Initial Context Factory:** Den Java-klass som ska användas som inledande kontextfabrik. JMS-tjänsten använder den här klassen för att skapa en inledande kontext, som är utgångspunkten för att matcha namn på ämnen och köer. Standardvärdet är den inledande kontextfabriken för JMS-tjänsten på JBoss. Följande klasser är de inledande kontextfabrikerna för de programservrar som AEM formulär stöder:
 
 **JBoss:** org.jnp.interfaces.NamingContextFactory
 
@@ -392,7 +392,7 @@ Följande inställningar är tillgängliga för LDAP-tjänsten.
 
 **Initial Context Factory:** Den Java-klass som ska användas som kontextfabrik. Den här klassen används för att skapa en anslutning till LDAP-servern. Standardvärdet är com.sun.jndi.ldap.LdapCtxFactory, vilket är lämpligt för de flesta LDAP-servrar.
 
-**Provider-URL:** Den URL som ska användas för att ansluta till LDAP-tjänsten. Värdets format är `ldap://server name:port`
+**Provider-URL:** Den URL som ska användas för att ansluta till LDAP-tjänsten. The format of the value is `ldap://server name:port`
 
 *servernamn* är namnet på den dator som är värd för LDAP-servern
 
@@ -410,7 +410,7 @@ Beroende på LDAP-servern kan användarnamnet vara ett enkelt användarnamn, til
 
 ## Inställningar för konfigurationstjänsten för Microsoft SharePoint {#microsoft-sharepoint-configuration-service-settings}
 
-Med konfigurationstjänsten för Microsoft SharePoint `(MSSharePointConfigService)`kan du ange autentiseringsuppgifter för den AEM-formuläranvändare som har personifieringsbehörigheter. Mer information om personifieringsbehörigheter finns i [Konfigurera anslutningsprogrammet för Microsoft SharePoint](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html).
+Med konfigurationstjänsten för Microsoft SharePoint `(MSSharePointConfigService)`kan du ange autentiseringsuppgifter för AEM formuläranvändare som har personifieringsbehörigheter. Mer information om personifieringsbehörigheter finns i [Konfigurera anslutningsprogrammet för Microsoft SharePoint](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html).
 
 Följande inställningar är tillgängliga för konfigurationstjänsten för Microsoft SharePoint:
 
@@ -423,7 +423,7 @@ Följande inställningar är tillgängliga för konfigurationstjänsten för Mic
 
 **Kryptering:** Anger om data som lagras på den mobila enheten ska krypteras.
 
-**Formulärprogram:** Aktiverar formulärfunktionen i mobilklientprogrammen. När det här alternativet är markerat kan användare öppna formulär och initiera processer från sina mobila enheter.
+**Forms-program:** Aktiverar funktionen Forms i mobilklientprogrammen. När det här alternativet är markerat kan användare öppna formulär och initiera processer från sina mobila enheter.
 
 **Aktivitetsprogram:** Aktiverar funktionen Uppgifter i mobilklientprogrammen. När det här alternativet är markerat kan användare komma åt sina uppgiftslistor och slutföra uppgifter från sina mobila enheter.
 
@@ -443,7 +443,7 @@ Följande inställningar är tillgängliga för konfigurationstjänsten för Mic
 
 **BlackBerry:** Tillåter BlackBerry-enheter att ansluta till servern.
 
-**Android Microsoft Exchange ActiveSync krävs:** Anger om Microsoft Exchange ActiveSync Policy Manager (EAS) måste vara installerat och aktivt på Android-enheter. När det här alternativet är markerat måste EAS användas på Android-enheten. När det här alternativet inte är markerat utförs ingen kontroll, även om andra krav fortfarande gäller.
+**Android Microsoft Exchange ActiveSync krävs:** Anger om Microsoft Exchange ActiveSync-principhanterare (EA) måste installeras och vara aktiv på Android-enheter. När det här alternativet är markerat måste EA tillämpas på Android-enheten. När det här alternativet inte är markerat utförs ingen kontroll, även om andra krav fortfarande gäller.
 
 **Minsta PIN-kodslängd för Android:** Android-enheter måste ha en global inställning som tvingar PIN-koden eller lösenordet att vara minst så lång. Det räcker inte att bara ha en PIN-kod med den angivna längden. PIN-kodens längd måste framtvingas av systemet så att användarna inte kan ta bort eller korta ned PIN-koden senare. Standardvärdet är 4.
 
@@ -453,7 +453,7 @@ Följande inställningar är tillgängliga för konfigurationstjänsten för Mic
 
 ## Inställningar för utdatatjänst {#output-service-settings}
 
-Med Output Service `(OutputService)`kan du sammanfoga XML-formulärdata med en formulärdesign som skapats i AEM Forms Designer för att skapa en dokumentutdataström i något av följande format:
+Med Output Service `(OutputService)`kan du sammanfoga XML-formulärdata med en formulärdesign som skapats i AEM Designer för att skapa en dokumentutdataström i något av följande format:
 
 * En PDF- eller PDF/A-dokumentutdataström.
 * En Adobe PostScript-utdataström.
@@ -478,17 +478,17 @@ När du bearbetar stora datafiler eller arbetar på en server med många operati
 
 Följande inställningar är tillgängliga för PDFG Config-tjänsten ( `PDFGConfigService`).
 
-**Katalog för alternativ för användarjobb:** Sökvägen till filsystemmappen där c-tjänsten skriver de jobbalternativsfiler som är tillgängliga för Acrobat Pro Extended. Standardvärdet är [user.home]/Application Data/Adobe/Adobe PDF/Settings.
+**Katalog för alternativ för användarjobb:** Sökvägen till filsystemmappen där tjänsten c skriver de jobbalternativsfiler som är tillgängliga för Acrobat Pro Extended. Standardvärdet är [user.home]/Application Data/Adobe/Adobe PDF/Settings.
 
-**PS-startkatalog:** Sökvägen till filsystemmappen där de startfiler som krävs av Adobe Acrobat Distiller sparas. Standardvärdet är [user.home]/Application Data/Adobe/Adobe PDF/Distiller/Startup.
+**PS-startkatalog:** Sökvägen till filsystemmappen där startfilerna som krävs av Adobe Acrobat Distiller sparas. Standardvärdet är [user.home]/Application Data/Adobe/Adobe PDF/Distiller/Startup.
 
-**PS-startfil:** Namnet på den startfil som krävs av Adobe Acrobat Distiller. Standardvärdet är example.ps.
+**PS-startfil:** Namnet på startfilen som krävs av Adobe Acrobat Distiller. Standardvärdet är example.ps.
 
-**Timeout för serverkonvertering:** Den maximala tidsgränsen för jobbkonvertering (i sekunder) för tjänsten Generera PDF och Distiller. Den här inställningen begränsar den maximala konverteringstimeout som kan anges i filen config.xml och i administrationskonsolsidorna för PDF Generator. Standardvärdet är 270.
+**Timeout för serverkonvertering:** Den maximala tidsgränsen för jobbkonvertering (i sekunder) för tjänsten Generera PDF och tjänsten Distiller. Den här inställningen begränsar den maximala konverteringstimeout som kan anges i filen config.xml och i administrationskonsolsidorna för PDF Generator. Standardvärdet är 270.
 
 **Serverns globala timeout:** Vid PDF-konvertering tar en formulärserver hänsyn till timeoutgränsen. Konfigurera timeout-värdet för att lösa problemet.
 
-**Prefix för jobbalternativ:** Ett prefix som används av tjänsten Generera PDF för att lägga till en kort sträng i jobbalternativsfilerna som skapas temporärt för Acrobat Distiller. Standardvärdet är pdfg.
+**Prefix för jobbalternativ:** Ett prefix som används av tjänsten Generera PDF för att lägga till en kort sträng i jobbalternativsfilerna som skapas temporärt för användning i Acrobat Distiller. Standardvärdet är pdfg.
 
 **Icke-Unicode-appar:** En kommaavgränsad lista med programnamn som är kända för att inte vara Unicode-kompatibla. Listan är förifylld med namnen på flera program, som har stöd för i förväg konfigurerats i PDF Generator. Om du väljer att lägga till stöd för PDF-konverteringar via andra tredjepartsprogram som inte kan hantera Unicode måste du lägga till dem i listan. Standardvärdet är AutoCAD, Excel, PowerPoint, Project, Publisher, Visio, Word, WordPerfect.
 
@@ -516,19 +516,19 @@ Följande tjänster utökar Data Services och visar sammansättningar som Worksp
 
 ## Fjärrtjänstinställningar {#remoting-service-settings}
 
-De flesta tjänster är konfigurerade så att du kan komma åt dem via (borttaget för AEM-formulär) AEM Forms Remoting. Mer information om (Borttagning för AEM-formulär) AEM-formulär finns i [Programmering med AEM-formulär](https://adobe.com/go/learn_aemforms_programming_63).
+De flesta tjänster är konfigurerade så att du kan komma åt dem via (Borttagning för AEM formulär) AEM formulär. Mer information om (Borttagning för AEM formulär) AEM formulär finns i [Programmering med AEM formulär](https://adobe.com/go/learn_aemforms_programming_63).
 
 Följande inställningar är tillgängliga för tjänsten Remoting.
 
 **Autentiseringsmetod för Flex-klient:** Bestämmer vilken typ av svar som servern skickar tillbaka till klienten när den anropade tjänsten är säkerhetsaktiverad, den anropade åtgärden inte stöder anonyma anrop och klienten skickar antingen inga eller ogiltiga autentiseringsuppgifter. Välj Anpassad eller Grundläggande. Standardvärdet är Grundläggande.
 
-**Tillåt serialisering av icke-serialiserbara klasser:** De flesta slutpunkter för AEM-formulär tillåter endast serialiserbara klasser att användas för anrop. I äldre versioner tillät slutpunkten Remoting icke-serialiserbara klasser att användas för anrop från Flex-baserade klienter. För att förhindra en säkerhetslucka som beskrivs i APS11-15 har detta ändrats. Markera den här kryssrutan om du vill fortsätta använda icke-serialiserbara klasser med slutpunkten för Flex Remoting.
+**Tillåt serialisering av icke-serialiserbara klasser:** De flesta AEM formulärslutpunkter tillåter bara att serialiserbara klasser används för anrop. I äldre versioner tillät slutpunkten Remoting icke-serialiserbara klasser att användas för anrop från Flex-baserade klienter. För att förhindra en säkerhetslucka som beskrivs i APS11-15 har detta ändrats. Markera den här kryssrutan om du vill fortsätta använda icke-serialiserbara klasser med slutpunkten för Flex Remoting.
 
 ## Inställningar för databastjänst {#repository-service-settings}
 
-Databastjänsten ( `RepositoryService`) tillhandahåller tjänster för lagring och hantering av resurser i AEM-formulär. När utvecklare skapar ett program kan de distribuera resurserna i databasen i stället för i ett filsystem. Materialet kan innehålla alla typer av material, inklusive XML-formulär, PDF-formulär (inklusive Acrobat-formulär), formulärfragment, bilder, profiler, profiler, SWF-filer, DDX-filer, XML-scheman, WSDL-filer och testdata.
+Databastjänsten ( `RepositoryService`) tillhandahåller tjänster för lagring och hantering av resurser för att AEM formulär. När utvecklare skapar ett program kan de distribuera resurserna i databasen i stället för i ett filsystem. Resurserna kan innehålla alla typer av material, inklusive XML-formulär, PDF forms (inklusive Acrobat-formulär), formulärfragment, bilder, profiler, profiler, SWF-filer, DDX-filer, XML-scheman, WSDL-filer och testdata.
 
-Du kan använda standarddatabasen som ingår i AEM-formulär eller en tredjepartsdatabas (EMC Documentum Content Server, IBM FileNet Content Manager eller IBM Content Manager).
+Du kan använda standarddatabasen som ingår i AEM eller använda en tredjepartsdatabas (EMC Documentum Content Server, IBM FileNet Content Manager eller IBM Content Manager).
 
 Databasprovidertjänsten är en tjänstdelegat som fungerar som gränssnitt till en providertjänst. Detta gör att du kan ansluta till ett vanligt API och inte behöver vara medveten om vilken providertjänst som implementerar lagringsfunktionerna. Databasprovidertjänsten tillhandahåller databaslagring för resurserna för databastjänsten.
 
@@ -538,19 +538,19 @@ Följande inställning är tillgänglig för databastjänsten.
 
 ## Inställningar för signaturtjänst {#signature-service-settings}
 
-Signaturtjänsten ( `SignatureService`) gör det möjligt för er att skydda säkerheten och integriteten i de Adobe PDF-dokument som ni distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att dokumenten inte ändras. Om du ändrar ett dokument bryts signaturen. Eftersom säkerhetsfunktionerna tillämpas på själva dokumentet förblir dokumentet säkert och kontrollerat under hela sin livscykel. utanför brandväggen, när den laddas ned offline och när den skickas tillbaka till din organisation.
+Med signaturtjänsten ( `SignatureService`) kan din organisation skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att dokumenten inte ändras. Om du ändrar ett dokument bryts signaturen. Eftersom säkerhetsfunktionerna tillämpas på själva dokumentet förblir dokumentet säkert och kontrollerat under hela sin livscykel. utanför brandväggen, när den laddas ned offline och när den skickas tillbaka till din organisation.
 
 Följande inställningar är tillgängliga för signaturtjänsten.
 
-**Namn på fjärr-HSM SPI-tjänsten:** Det här alternativet används när HSM är installerat på en fjärrdator. Ange det här alternativet när AEM-formulär installeras i ett 64-bitars Windows och du använder HSM-enheter för signering.
+**Namn på fjärr-HSM SPI-tjänsten:** Det här alternativet används när HSM är installerat på en fjärrdator. Ange det här alternativet när AEM har installerats i ett 64-bitars Windows och du använder HSM-enheter för signering.
 
-**URL för fjärr-HSM-webbtjänsten:** Ange det här alternativet när AEM-formulär installeras i 64-bitars Windows och du använder HSM-enheter för signering.
+**URL för fjärr-HSM-webbtjänsten:** Ange det här alternativet när AEM har installerats på 64-bitars Windows och du använder HSM-enheter för signering.
 
 **Certifiering för att inkludera formulärinläsningsändringar:** När det här alternativet är markerat certifieras XFA-formulärstatusen utöver XFA-mallen. Observera att aktivering av det här alternativet kan ha en negativ inverkan på prestandan. Standardvärdet är true.
 
 **Kör JavaScript-skript för dokument:** Anger om dokument-JavaScript-skript ska köras under signeringsåtgärder. Standardvärdet är false.
 
-**Bearbeta dokument med kompatibilitet med Acrobat 9:** Anger om Acrobat 9-kompatibilitet ska aktiveras. Om du till exempel väljer det här alternativet aktiveras Synlig certifiering i dynamiska PDF-filer. Standardvärdet är false.
+**Bearbeta dokument som är kompatibla med Acrobat 9:** Anger om Acrobat 9-kompatibilitet ska aktiveras. Om du till exempel väljer det här alternativet aktiveras Synlig certifiering i dynamiska PDF-filer. Standardvärdet är false.
 
 **Bädda in spärrinformation vid undertecknande:** Anger om spärrinformation bäddas in när PDF-dokumentet signeras. Standardvärdet är false.
 
@@ -560,9 +560,9 @@ Följande inställningar är tillgängliga för signaturtjänsten.
 
 **Återkallningskontrollordning:** Anger ordningen för spärrkontroll när det är möjligt att kontrollera detta med hjälp av både CRL- (Certificate Revocation List) och OCSP-mekanismer (Online Certificate Status Protocol). Standardvärdet är OCSPFirst.
 
-**Maximal storlek för information om återkallningsarkivering:** Den största tillåtna storleken för arkiveringsinformation för återkallning i kB. AEM-formulär försöker lagra så mycket spärrinformation som möjligt utan att överskrida gränsen. Standardvärdet är 10 kB.
+**Maximal storlek för information om återkallningsarkivering:** Den största tillåtna storleken för arkiveringsinformation för återkallning i kB. AEM försöker lagra så mycket spärrinformation som möjligt utan att överskrida gränsen. Standardvärdet är 10 kB.
 
-**Supportsignaturer som skapats i PreRelease-versioner av Adobe-produkter:** När det här alternativet är markerat valideras signaturer som skapats med en förhandsversion av Adobe-produkter korrekt. Standardvärdet är false.
+**Supportsignaturer som skapats i PreRelease-versioner av Adobe-produkter:** När det här alternativet är markerat valideras signaturen som skapats med en förhandsversion av Adobe-produkter korrekt. Standardvärdet är false.
 
 **Alternativ för verifieringstid:** Anger tidpunkten för verifiering av en signerares certifikat. Standardvärdet är Säker tid för annan aktuell tid.
 
@@ -570,7 +570,7 @@ Följande inställningar är tillgängliga för signaturtjänsten.
 
 **Använd valideringsinformation som lagras i dokumentet för validering av signaturer:** När det här alternativet är markerat används den valideringsinformation (inklusive information om återkallning och tidsstämplar) som är inbäddad i dokumentet för att validera signaturer. Standardvärdet är true.
 
-**Högsta antal tillåtna kapslade verifieringssessioner:** Högsta tillåtna antal kapslade verifieringssessioner. AEM-formulär använder det här värdet för att förhindra en oändlig slinga när OCSP- eller CRL-signerarcertifikaten verifieras när OCSP- eller CRL-certifikatet inte är korrekt konfigurerat. Standardvärdet är 10.
+**Högsta antal tillåtna kapslade verifieringssessioner:** Högsta tillåtna antal kapslade verifieringssessioner. AEM använder det här värdet för att förhindra en oändlig slinga när OCSP- eller CRL-signerarcertifikaten verifieras när OCSP- eller CRL-certifikatet inte är korrekt konfigurerat. Standardvärdet är 10.
 
 **Maximal låsskevning för verifiering:** Den maximala tiden, i minuter, som signeringstiden kan vara efter valideringstiden. Om klockskevningen är större än det här värdet är signaturen inte giltig. Standardvärdet är 65 minuter.
 
@@ -743,7 +743,7 @@ Om sökvägen inte är absolut men relativ skapas mappen i den bevakade mappen. 
 
 **Bevara vid fel:** Om true bevaras originalfilerna i felmappen vid fel.
 
-**Begränsning:** När det här alternativet är markerat begränsas antalet bevakade mappjobb som AEM-formulär bearbetar vid en given tidpunkt. Värdet för Gruppstorlek avgör det maximala antalet jobb (se Om begränsning).
+**Begränsning:** När det här alternativet är markerat begränsas antalet bevakade mappjobb som AEM formulärprocesser vid en given tidpunkt. Värdet för Gruppstorlek avgör det maximala antalet jobb (se Om begränsning).
 
 ## Inställningar för webbtjänst {#web-service-service-settings}
 
@@ -832,9 +832,9 @@ Standardsäkerhetsprofiler installeras, som sedan kan konfigureras för att uppf
    * **DELETE_VERSION_PERM:** Så här tar du bort en version av tjänsten
    * **MODIFY_VERSION_PERM:** Ändra en version av tjänsten
    * **READ_PERM:** Så här visar du tjänsten
-   * **PROCESS_OWNER_PERM:** För användning i framtida versioner av AEM-formulär. Använd inte den här behörigheten.
-   * **SERVICE_MANAGER_PERM:** För användning i framtida versioner av AEM-formulär. Använd inte den här behörigheten.
-   * **SERVICE_AGENT_PERM:** För användning i framtida versioner av AEM-formulär. Använd inte den här behörigheten.
+   * **PROCESS_OWNER_PERM:** För användning i en framtida version av AEM formulär. Använd inte den här behörigheten.
+   * **SERVICE_MANAGER_PERM:** För användning i en framtida version av AEM formulär. Använd inte den här behörigheten.
+   * **SERVICE_AGENT_PERM:** För användning i en framtida version av AEM formulär. Använd inte den här behörigheten.
 
 1. Klicka på Lägg till
 
