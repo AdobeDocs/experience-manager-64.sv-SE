@@ -12,6 +12,9 @@ topic-tags: operations
 discoiquuid: 2ad227de-68a8-446f-8c4f-a33a6f95bec8
 translation-type: tm+mt
 source-git-commit: 674af8b7657cf11f5e78fd39e652a6dcaa23c70a
+workflow-type: tm+mt
+source-wordcount: '2123'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +40,7 @@ Det här DDX-dokumentet demonterar ett PDF-dokument. Vi rekommenderar att du är
 
 >[!NOTE]
 >
->Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
@@ -64,8 +67,8 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
+* adobe-utilities.jar (krävs om AEM Forms används i JBoss)
+* jbossall-client.jar (krävs om AEM Forms används i JBoss)
 
 **Skapa en PDF Assembler-klient**
 
@@ -170,6 +173,7 @@ Skapa ett DX-dokument dynamiskt och demontera ett PDF-dokument med Assembler Ser
    * Ett `com.adobe.idp.Document` objekt som representerar det dynamiskt skapade DDX-dokumentet
    * Ett `java.util.Map` objekt som innehåller det PDF-dokument som ska demonteras
    * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` objekt som anger körningsalternativen, inklusive standardteckensnittet och jobbloggsnivån
+
    Metoden returnerar `invokeDDX` ett `com.adobe.livecycle.assembler.client.AssemblerResult` objekt som innehåller de uppdelade PDF-dokumenten och eventuella undantag som har inträffat.
 
 1. Spara de upplösta PDF-dokumenten.
@@ -208,7 +212,7 @@ Skapa ett DX-dokument dynamiskt och demontera ett PDF-dokument med Assembler Ser
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `AssemblerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -258,6 +262,7 @@ Skapa ett DX-dokument dynamiskt och demontera ett PDF-dokument med Assembler Ser
    * Ett `BLOB` objekt som representerar det dynamiskt skapade DDX-dokumentet
    * Arrayen `mapItem` som innehåller PDF-indatadokumentet
    * Ett `AssemblerOptionSpec` objekt som anger körningsalternativ
+
    Metoden returnerar ett `invokeDDX` `AssemblerResult` objekt som innehåller resultatet av jobbet och eventuella undantag som inträffade.
 
 1. Spara de upplösta PDF-dokumenten.
@@ -270,6 +275,6 @@ Skapa ett DX-dokument dynamiskt och demontera ett PDF-dokument med Assembler Ser
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
