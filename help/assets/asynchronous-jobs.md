@@ -1,21 +1,21 @@
 ---
 title: Konfigurera asynkrona åtgärder i [!DNL Adobe Experience Manager].
-description: Slutför asynkront vissa resurskrävande åtgärder för att optimera prestandan i [!DNL Experience Manager Assets].
+description: Slutför asynkront vissa resurskrävande uppgifter för att optimera prestandan i [!DNL Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: f6aa1ab2c7a0ddeda1504e95ce4bd57fe74a65fd
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 2%
+source-wordcount: '559'
+ht-degree: 21%
 
 ---
 
 
-# Asynkrona åtgärder {#asynchronous-operations}
+# Asynchronous operations {#asynchronous-operations}
 
 För att minska den negativa inverkan på prestanda behandlar [!DNL Adobe Experience Manger Assets] vissa långvariga och resurskrävande resursoperationer asynkront. Asynkron bearbetning innebär att du måste placera flera uppgifter i kö och sedan utföra dem på ett seriellt sätt beroende på om det finns systemresurser tillgängliga. Dessa åtgärder omfattar:
 
-* Tar bort många resurser.
+* Att ta bort många resurser..
 * Flytta många resurser eller resurser med många referenser.
 * Exportera och importera resursmetadata i grupp.
 
@@ -23,32 +23,32 @@ Du kan visa status för asynkrona uppgifter från **[!UICONTROL Async Job Status
 
 >[!NOTE]
 >
->Som standard körs åtgärderna [!DNL Assets] parallellt. Om `N` är antalet processorkärnor kan `N/2` uppgifter köras parallellt som standard. Om du vill använda anpassade inställningar för uppgiftskön ändrar du **[!UICONTROL Async Operation Default Queue]** konfigurationen från [!UICONTROL Web Console]. Mer information finns i [Kökonfigurationer](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations).
+>Som standard körs åtgärderna [!DNL Assets] parallellt. If `N` is the number of CPU cores, `N/2` tasks can execute in parallel, by default. Om du vill använda anpassade inställningar för uppgiftskön ändrar du **[!UICONTROL Async Operation Default Queue]** konfigurationen från [!UICONTROL Web Console]. Mer information finns i [konfigurationer av kön](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations).
 
-## Övervaka status för asynkrona åtgärder {#monitoring-the-status-of-asynchronous-operations}
+## Monitor the status of asynchronous operations {#monitoring-the-status-of-asynchronous-operations}
 
-När [!DNL Assets] en åtgärd bearbetas asynkront får du ett meddelande i din [!DNL Experience Manager] Inkorg [](/help/sites-authoring/inbox.md) och via ett e-postmeddelande. Om du vill visa status för asynkrona åtgärder i detalj går du till **[!UICONTROL Async Job Status]** sidan.
+Whenever [!DNL Assets] processes an operation asynchronously, you receive a notification in your [!DNL Experience Manager] [Inbox](/help/sites-authoring/inbox.md) and via an email. Gå till sidan **[!UICONTROL Async Job Status]** för att se detaljerad status gällande asynkrona åtgärder.
 
 1. In the [!DNL Experience Manager] interface click **[!UICONTROL Operations]** > **[!UICONTROL Jobs]**.
 
-1. Granska informationen om åtgärderna på **[!UICONTROL Async Job Status]** sidan.
+1. Granska informationen om åtgärderna på sidan **[!UICONTROL Async Job Status]**.
 
-   ![Status och information för asynkrona åtgärder](assets/job_status.png)
+   ![Status och information om asynkrona åtgärder](assets/job_status.png)
 
    Information om förloppet för en åtgärd finns i **[!UICONTROL Status]** kolumnen. Beroende på förloppet visas ett av följande statusvärden:
 
-   * **[!UICONTROL Active]**: Åtgärden bearbetas.
-   * **[!UICONTROL Success]**: Åtgärden har slutförts.
-   * **[!UICONTROL Fail]** eller **[!UICONTROL Error]**: Det gick inte att bearbeta åtgärden.
-   * **[!UICONTROL Scheduled]**: Åtgärden är schemalagd för bearbetning vid ett senare tillfälle.
+   * **[!UICONTROL Active]**: åtgärden bearbetas.
+   * **[!UICONTROL Success]**: åtgärden har slutförts.
+   * **[!UICONTROL Fail]** eller **[!UICONTROL Error]**: det gick inte att bearbeta åtgärden.
+   * **[!UICONTROL Scheduled]**: åtgärden är schemalagd för bearbetning vid ett senare tillfälle.
 
-1. Om du vill avbryta en aktiv åtgärd markerar du den i listan och klickar på **[!UICONTROL Stop]** stoppikonen ![](assets/do-not-localize/stop_icon.svg) i verktygsfältet.
+1. To stop an active operation, select it from the list and click **[!UICONTROL Stop]** ![stop icon](assets/do-not-localize/stop_icon.svg) from the toolbar.
 
-1. Om du vill visa extra information, till exempel beskrivning och loggar, markerar du åtgärden och klickar på **[!UICONTROL Open]** open_icon ![](assets/do-not-localize/edit_icon.svg) i verktygsfältet. Sidan med aktivitetsinformation visas.
+1. To view extra details, for example description and logs, select the operation and click **[!UICONTROL Open]** ![open_icon](assets/do-not-localize/edit_icon.svg) from the toolbar. Sidan med aktivitetsinformation visas.
 
    ![Information om en metadataimportaktivitet](assets/job_details.png)
 
-1. Om du vill ta bort åtgärden från listan väljer du **[!UICONTROL Delete]** den i verktygsfältet. Om du vill hämta information i en CSV-fil klickar du på **[!UICONTROL Download]**.
+1. Välj **[!UICONTROL Delete]** i verktygsfältet för att ta bort åtgärden från listan. Klicka på **[!UICONTROL Download]** för att ladda ned informationen i en CSV-fil.
 
    >[!NOTE]
    >
@@ -92,5 +92,5 @@ Om antalet resurser, mappar eller referenser som ska flyttas överstiger det ang
 >[!MORELIKETHIS]
 >
 >* [Konfigurera e-post i Experience Manager](/help/sites-administering/notification.md).
->* [Importera och exportera resursmetadata gruppvis](/help/assets/metadata-import-export.md).
+>* [Importera och exportera resursers metadata gruppvis](/help/assets/metadata-import-export.md).
 
