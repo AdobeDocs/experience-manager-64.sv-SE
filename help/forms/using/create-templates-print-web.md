@@ -24,15 +24,15 @@ Skapa utskrifts- och webbmallar för interaktiv kommunikation
 
 Den här självstudiekursen är ett steg i [Skapa din första interaktiva kommunikationsserie](/help/forms/using/create-your-first-interactive-communication.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
 
-Om du vill skapa en interaktiv kommunikation måste du ha mallar tillgängliga på AEM-servern för utskrifts- och webbkanaler.
+Om du vill skapa en interaktiv kommunikation måste du ha mallar tillgängliga på AEM server för utskrifts- och webbkanaler.
 
-Mallarna för utskriftskanalen skapas i Adobe Forms Designer och överförs till AEM-servern. Mallarna kan sedan användas när du skapar en interaktiv kommunikation.
+Mallarna för utskriftskanalen skapas i Adobe Forms Designer och överförs till AEM. Mallarna kan sedan användas när du skapar en interaktiv kommunikation.
 
 Mallarna för webbkanalen skapas i AEM. Mallförfattare och administratörer kan skapa, redigera och aktivera webbmallar. När mallarna har skapats och aktiverats kan de användas när du skapar en interaktiv kommunikation.
 
 I den här självstudiekursen får du hjälp med att skapa mallar för utskrifts- och webbkanaler så att de blir tillgängliga när du skapar interaktiv kommunikation. I slutet av den här självstudiekursen kan du:
 
-* Skapa XDP-mallar för tryckkanaler med Adobe Forms Designer
+* Skapa XDP-mallar för utskriftskanalen med Adobe Forms Designer
 * Överför XDP-mallarna till AEM Forms Server
 * Skapa och aktivera mallar för webbkanalen
 
@@ -73,12 +73,14 @@ Så här skapar du en XDP-mall för utskriftskanalen:
 
    1. Ange **fakturainformation** i **fältet Namn** .
    1. Välj **Ingen databindning** i listrutan **Databindning** .
+
    ![forms_designer_subform](assets/forms_designer_subform.png)
 
 1. Markera på samma sätt rotdelformuläret, markera fliken **Delformulär** och välj **Flödat** i listrutan **Innehåll** . På fliken **Bindningar** :
 
    1. Ange **TelecaBill** i fältet **Name** (Namn).
    1. Välj **Ingen databindning** i listrutan **Databindning** .
+
    ![root_subform_print_template](assets/root_subform_print_template.png)
 
 1. Upprepa steg 2-5 för att skapa följande delformulär:
@@ -93,6 +95,7 @@ Så här skapar du en XDP-mall för utskriftskanalen:
    * SpecificeradeAnrop
    * PayNow
    * ValueAddedServices
+
    För att spara tid kan du även kopiera och klistra in befintliga delformulär för att skapa nya delformulär.
 
    Om du vill flytta delformuläret **Diagram** till höger om delformuläret Diagram markerar du delformuläret **Diagram** i den vänstra rutan, väljer fliken **Layout** och anger ett värde för fältet **FästpunktX** . Värdet måste vara större än värdet för fältet **Bredd** för delformuläret **Avgifter** . Markera delformuläret **Avgifter** och välj fliken **Layout** för att visa värdet för fältet **Bredd** .
@@ -156,6 +159,7 @@ Om du vill skapa ett layoutfragment för tryckkanalen i den interaktiva kommunik
    1. Navigera till platsen där du vill spara filen och ange namnet som **table_lf**.
    1. Välj **.xdp** i listrutan **Spara som typ** .
    1. Tryck på **Spara**.
+
    När du har skapat en XDP-mall för layoutfragment med Forms Designer måste du [överföra](/help/forms/using/create-templates-print-web.md#upload-xdp-template-to-the-aem-forms-server) den till AEM Forms-servern så att mallen är tillgänglig för användning när du skapar layoutfragment.
 
 ## Skapa mall för webbkanal {#create-template-for-web-channel}
@@ -224,6 +228,7 @@ Så här skapar du en mall för webbkanalen i mappen **Create_First_IC_templates
    1. Ange **fakturainformation** i fältet Titel.
    1. Välj **1** i listrutan **Antal kolumner** .
    1. Tryck på ![made_icon](assets/done_icon.png) för att spara egenskaperna.
+
    Panelens namn uppdateras till **Fakturainformation** i innehållsträdet.
 
 1. Upprepa steg 7-11 om du vill lägga till paneler med följande egenskaper i mallen:
