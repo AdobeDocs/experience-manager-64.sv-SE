@@ -11,23 +11,26 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: a0319701-21eb-4b7f-8b2e-ac81a7a75875
 translation-type: tm+mt
 source-git-commit: 5acb16b1734331767554261bbcf9640947f2e23f
+workflow-type: tm+mt
+source-wordcount: '815'
+ht-degree: 1%
 
 ---
 
 
 # Om överföring och bearbetning av 3D-resurser i AEM {#about-the-uploading-and-processing-of-d-assets-in-aem}
 
-Använd standardfunktioner för överföring eller synkronisering för att överföra 3D-resurser och tillhörande refererade filer till AEM Assets.
+Använd standardmekanismer för överföring eller synkronisering för att överföra 3D-resurser och tillhörande refererade filer till AEM Assets.
 
 Se [Överföra resurser](managing-assets-touch-ui.md#uploading-assets).
 
-Adobe rekommenderar att du överför alla refererade filer före eller samtidigt som du överför den primära 3D-modellfilen. Detta är dock inget krav.
+Adobe rekommenderar att du överför alla refererade filer före eller samtidigt - du överför den primära 3D-modellfilen. Detta är dock inget krav.
 
 När överföringen är klar konverteras dina 3D-filer och ytterligare bearbetning utförs för att förbereda resursen för visning och återgivning.
 
 ## Bästa tillvägagångssätt för att överföra 3D-resurser {#best-practices-for-uploading-d-assets}
 
-* I allmänhet finns det inga begränsningar för var du överför 3D-innehåll i mapphierarkin för AEM Resurser. AEM 3D:s automatiska upplösning av filberoenden har dock ett intervall som begränsar hur lång tid det tar att söka i stora resurslager. Därför rekommenderar Adobe att du när du överför 3D-resurser och deras filberoende resurser gör det inom rimlig avstånd från varje fil (vanlig indirekt överordnad mapp). När filberoenden är lösta kan du fritt flytta både 3D-resursen och dess underordnade objekt var som helst i databasen utan att förlora de etablerade relationerna.
+* I allmänhet finns det inga begränsningar för var du överför 3D-innehåll i mapphierarkin i AEM Assets. AEM 3D:s automatiska upplösning av filberoenden har dock ett intervall som begränsar hur lång tid det tar att söka i stora resurslager. Därför rekommenderar Adobe att du gör det inom rimlig avstånd från varje fil (vanlig indirekt överordnad mapp) när du överför 3D-resurser och deras filberoende. När filberoenden är lösta kan du fritt flytta både 3D-resursen och dess underordnade objekt var som helst i databasen utan att förlora de etablerade relationerna.
 * Adobe rekommenderar att du bestämmer dig för en konsekvent mappstruktur för 3D-innehåll *innan* du överför det. Följande tips är några förslag på metoder som du kan använda:
 
    * **Underhåll en separat mapp för varje 3D-resurs som du överför**.
@@ -50,13 +53,13 @@ När överföringen är klar konverteras dina 3D-filer och ytterligare bearbetni
 
 När du konverterar och bearbetar 3D-filer förbrukas vanligtvis mycket processorkraft och minne på en server. Det tar också lång tid. Bearbetningstiden varierar ofta mycket beroende på modellens storlek och serverns kapacitet. En vanlig liten modell med mindre än 100 kB-ansikten är till exempel vanligtvis klar att visas på mindre än en minut. Den behandlas fullständigt på 2-3 minuter. En stor modell med mer än en miljon ansikten kan ta tiotals minuter att behandla helt.
 
-Konverterings-, bearbetnings- och renderingsjobb köas efter behov för att förhindra att servern blir för långsam. Meddelandet&quot;Väntar på bearbetning..&quot; visas ibland i **[!UICONTROL kortvyn]** när du överförde resurser. Den här statusen anger att andra behandlings- eller återgivningsjobb måste avslutas innan den aktuella resursen bearbetas.
+Konverterings-, bearbetnings- och renderingsjobb köas efter behov för att förhindra att servern blir för långsam. Meddelandet&quot;Väntar på bearbetning..&quot; visas ibland i **[!UICONTROL Card View]** när du överförde resurser. Den här statusen anger att andra behandlings- eller återgivningsjobb måste avslutas innan den aktuella resursen bearbetas.
 
 Det finns mekanismer för att begränsa processoranvändningen för matningsbearbetning och för återgivning. Mer information om hur du konfigurerar CPU-gränserna finns i [Avancerade konfigurationsinställningar](advanced-config-3d.md) .
 
 ## Övervaka bearbetningsstatus för dina överförda 3D-filer {#monitoring-the-processing-status-of-your-uploaded-d-files}
 
-Endast i **[!UICONTROL kortvyn]** visas bearbetningsstatus och förlopp som en förloppsbanderoll på resurskortet. Varje överförd 3D-modell genomgår vanligtvis följande 4-6 beställda bearbetningssteg:
+Bearbetningsstatus och förlopp visas **[!UICONTROL Card View]** endast som en förloppsbanderoll på resurskortet. Varje överförd 3D-modell genomgår vanligtvis följande 4-6 beställda bearbetningssteg:
 
 <table> 
  <tbody> 
@@ -83,17 +86,17 @@ Endast i **[!UICONTROL kortvyn]** visas bearbetningsstatus och förlopp som en f
   <tr> 
    <td>4</td> 
    <td>Skapa markskugga</td> 
-   <td>valfritt. Gör att du kan generera en skugga för omgivande ocklusion på markplanet under 3D-objektet. Se <a href="/help/assets/advanced-config-3d.md">Avancerade konfigurationsinställningar</a> för att aktivera eller inaktivera den här bearbetningen.</td> 
+   <td>Valfritt. Gör att du kan generera en skugga för omgivande ocklusion på markplanet under 3D-objektet. Se <a href="/help/assets/advanced-config-3d.md">Avancerade konfigurationsinställningar</a> för att aktivera eller inaktivera den här bearbetningen.</td> 
   </tr> 
   <tr> 
    <td>5<br /> </td> 
    <td>Skapa ljusbord</td> 
-   <td>valfritt. Gör att du kan förbättra kvaliteten på den interaktiva förhandsvisningen och få en snabbare återgivning med standardåtergivaren. Se <a href="/help/assets/advanced-config-3d.md">Avancerade konfigurationsinställningar</a> för att aktivera eller inaktivera den här bearbetningen.</td> 
+   <td>Valfritt. Gör att du kan förbättra kvaliteten på den interaktiva förhandsvisningen och få en snabbare återgivning med standardåtergivaren. Se <a href="/help/assets/advanced-config-3d.md">Avancerade konfigurationsinställningar</a> för att aktivera eller inaktivera den här bearbetningen.</td> 
   </tr> 
   <tr> 
    <td>6<br /> </td> 
    <td>Skapa animering</td> 
-   <td>valfritt. Gör att du kan återge en enkel animering som sedan används som en visuell miniatyrbild i kortvyn. Se <a href="/help/assets/advanced-config-3d.md">Avancerade konfigurationsinställningar</a> för att aktivera eller inaktivera den här bearbetningen.</td> 
+   <td>Valfritt. Gör att du kan återge en enkel animering som sedan används som en visuell miniatyrbild i kortvyn. Se <a href="/help/assets/advanced-config-3d.md">Avancerade konfigurationsinställningar</a> för att aktivera eller inaktivera den här bearbetningen.</td> 
   </tr> 
   <tr> 
    <td>7<br /> </td> 
@@ -105,5 +108,5 @@ Endast i **[!UICONTROL kortvyn]** visas bearbetningsstatus och förlopp som en f
 
 >[!NOTE]
 >
->Du kan visa en 3D-resurs i **[!UICONTROL detaljvyn]** eller återge den när förhandsgranskningssteget Skapa är klart. Du behöver inte vänta på att alla bearbetningsfaser ska slutföras.
+>Du kan visa en 3D-resurs i **[!UICONTROL Detail View]** eller återge den när förhandsgranskningssteget Skapa är klart. Du behöver inte vänta på att alla bearbetningsfaser ska slutföras.
 
