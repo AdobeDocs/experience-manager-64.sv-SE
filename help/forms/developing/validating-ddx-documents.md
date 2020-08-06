@@ -12,17 +12,20 @@ topic-tags: operations
 discoiquuid: 693859b0-a0c3-43f1-95c0-be48a90d7d8d
 translation-type: tm+mt
 source-git-commit: e3fcf1a117b13392b7e530a09198982c6160cb7b
+workflow-type: tm+mt
+source-wordcount: '1503'
+ht-degree: 0%
 
 ---
 
 
 # Validerar DDX-dokument {#validating-ddx-documents}
 
-Du kan programmässigt validera ett DDX-dokument som används av Assembler-tjänsten. Med andra ord kan du med hjälp av API:t för Assembler-tjänsten avgöra om ett DDX-dokument är giltigt eller inte. Om du till exempel uppgraderade från en tidigare AEM Forms-version och vill vara säker på att ditt DDX-dokument är giltigt, kan du validera det med hjälp av Assembler-tjänst-API:t.
+Du kan programmässigt validera ett DDX-dokument som används av Assembler-tjänsten. Med andra ord kan du med hjälp av API:t för Assembler-tjänsten avgöra om ett DDX-dokument är giltigt eller inte. Om du till exempel uppgraderade från en tidigare version av AEM Forms och vill vara säker på att ditt DDX-dokument är giltigt, kan du validera det med hjälp av Assembler-tjänst-API:t.
 
 >[!NOTE]
 >
->Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
@@ -48,10 +51,10 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
+* adobe-utilities.jar (krävs om AEM Forms används i JBoss)
+* jbossall-client.jar (krävs om AEM Forms används i JBoss)
 
-Om AEM Forms används på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms distribueras på.
+Om AEM Forms körs på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms är distribuerad på.
 
 **Skapa en PDF Assembler-klient**
 
@@ -118,13 +121,15 @@ Validera ett DX-dokument med Assembler Service API (Java):
    * Ett `com.adobe.idp.Document` objekt som representerar DDX-dokumentet.
    * Värdet `null` för det java.io.Map-objekt som vanligtvis lagrar PDF-dokument.
    * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` objekt som anger körningsalternativen.
-   Metoden returnerar ett `invokeDDX` `AssemblerResult` objekt som innehåller information som anger om DDX-dokumentet är giltigt.
+
+   Metoden returnerar `invokeDDX` ett `AssemblerResult` objekt som innehåller information som anger om DDX-dokumentet är giltigt.
 
 1. Spara valideringsresultaten i en loggfil.
 
    * Skapa ett `java.io.File` objekt och kontrollera att filnamnstillägget är .xml.
    * Anropa `AssemblerResult` objektets `getJobLog` metod. Den här metoden returnerar en `com.adobe.idp.Document` instans som innehåller valideringsinformation.
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `com.adobe.idp.Document` objektet till filen.
+
    >[!NOTE]
    >
    >Om DDX-dokumentet är ogiltigt `OperationException` genereras ett fel. I catch-satsen kan du anropa `OperationException` objektets `getJobLog` metod.
@@ -159,7 +164,7 @@ Validera ett DX-dokument med Assembler Service API (webbtjänsten):
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `AssemblerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -176,7 +181,7 @@ Validera ett DX-dokument med Assembler Service API (webbtjänsten):
 
    * Skapa ett `AssemblerOptionSpec` objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
    * Ange det körningsalternativ som instruerar Assembler-tjänsten att validera DDX-dokumentet genom att tilldela värdet true till `AssemblerOptionSpec` objektets `validateOnly` datamedlem.
-   * Ange den mängd information som Assembler-tjänsten skriver till loggfilen genom att tilldela ett strängvärde till `AssemblerOptionSpec` objektets `logLevel` datamedlem. -metod När du validerar ett DX-dokument vill du att mer information ska skrivas till loggfilen som ska vara till hjälp vid valideringsprocessen. Du kan alltså ange värdet `FINE` eller `FINER`. Mer information om de körningsalternativ du kan ange finns i klassreferensen `AssemblerOptionSpec` i API-referens [för](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)AEM Forms.
+   * Ange den mängd information som Assembler-tjänsten skriver till loggfilen genom att tilldela ett strängvärde till `AssemblerOptionSpec` objektets `logLevel` datamedlem. -metod När du validerar ett DX-dokument vill du att mer information ska skrivas till loggfilen som ska vara till hjälp vid valideringsprocessen. Du kan alltså ange värdet `FINE` eller `FINER`. Mer information om alternativ för körning som du kan ange finns i klassreferensen ( `AssemblerOptionSpec` class reference) i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 1. Utför valideringen.
 
@@ -185,7 +190,8 @@ Validera ett DX-dokument med Assembler Service API (webbtjänsten):
    * Ett `BLOB` objekt som representerar DDX-dokumentet.
    * Värdet `null` för det `Map` objekt som vanligtvis lagrar PDF-dokument.
    * Ett `AssemblerOptionSpec` objekt som anger körningsalternativ.
-   Metoden returnerar ett `invokeDDX` `AssemblerResult` objekt som innehåller information som anger om DDX-dokumentet är giltigt.
+
+   Metoden returnerar `invokeDDX` ett `AssemblerResult` objekt som innehåller information som anger om DDX-dokumentet är giltigt.
 
 1. Spara valideringsresultaten i en loggfil.
 
@@ -194,6 +200,7 @@ Validera ett DX-dokument med Assembler Service API (webbtjänsten):
    * Skapa en bytearray som lagrar innehållet i `BLOB` objektet. Fyll i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` fält.
    * Skapa ett `System.IO.BinaryWriter` objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream` objektet.
    * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` metod och skicka bytearrayen.
+
    >[!NOTE]
    >
    >Om DDX-dokumentet är ogiltigt `OperationException` genereras ett fel. I catch-satsen kan du hämta värdet för `OperationException` objektets `jobLog` medlem.
@@ -202,4 +209,4 @@ Validera ett DX-dokument med Assembler Service API (webbtjänsten):
 
 [Validerar DDX-dokument](#validating-ddx-documents)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
