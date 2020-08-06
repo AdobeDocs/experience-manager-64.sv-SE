@@ -1,6 +1,6 @@
 ---
-title: Formulär-JEE-arbetsflöden | Hantera användardata
-seo-title: Formulär-JEE-arbetsflöden | Hantera användardata
+title: Forms JEE-arbetsflöden | Hantera användardata
+seo-title: Forms JEE-arbetsflöden | Hantera användardata
 description: 'null'
 seo-description: 'null'
 uuid: 3b06ef19-d3c4-411e-9530-2c5d2159b559
@@ -16,7 +16,7 @@ ht-degree: 0%
 ---
 
 
-# Formulär-JEE-arbetsflöden | Hantera användardata {#forms-jee-workflows-handling-user-data}
+# Forms JEE-arbetsflöden | Hantera användardata {#forms-jee-workflows-handling-user-data}
 
 AEM Forms JEE-arbetsflöden innehåller verktyg för att utforma, skapa och hantera affärsprocesser. En arbetsflödesprocess består av en serie steg som körs i en angiven ordning. Varje steg utför en specifik åtgärd, till exempel att tilldela en uppgift till en användare eller skicka ett e-postmeddelande. En process kan samverka med resurser, användarkonton och tjänster och kan aktiveras på något av följande sätt:
 
@@ -26,11 +26,11 @@ AEM Forms JEE-arbetsflöden innehåller verktyg för att utforma, skapa och hant
 * Använda bevakad mapp
 * Använda e-post
 
-Mer information om hur du skapar arbetsflöden för AEM Forms JEE finns i [Workbench-hjälpen](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/WorkbenchHelp.pdf).
+Mer information om hur du skapar arbetsflöden i AEM Forms JEE finns i [Workbench-hjälpen](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/WorkbenchHelp.pdf).
 
 ## Användardata och datalager {#user-data-and-data-stores}
 
-När en process aktiveras och fortskrider, hämtas data om processdeltagarna, data som anges av deltagarna i det formulär som är kopplat till processen samt bilagor som läggs till i formuläret. Data lagras i JEE-serverdatabasen för AEM Forms, och om de är konfigurerade lagras vissa data, som bilagor, i GDS-katalogen (Global Document Storage). GDS-katalogen kan konfigureras på ett delat filsystem eller en databas.
+När en process aktiveras och fortskrider, hämtas data om processdeltagarna, data som anges av deltagarna i det formulär som är kopplat till processen samt bilagor som läggs till i formuläret. Data lagras i AEM Forms JEE-serverdatabasen, och om de är konfigurerade lagras vissa data, som bilagor, i GDS-katalogen (Global Document Storage). GDS-katalogen kan konfigureras på ett delat filsystem eller en databas.
 
 ## Få åtkomst till och ta bort användardata {#access-and-delete-user-data}
 
@@ -39,14 +39,14 @@ När en process aktiveras genereras ett unikt processinstans-ID och ett långliv
 Du kan dock inte identifiera processens instans-ID för en initierare i följande scenarier:
 
 * **Processen som utlöses via en bevakad mapp**: Det går inte att identifiera en processinstans med dess initierare om processen aktiveras av en bevakad mapp. I det här fallet kodas användarinformationen i de lagrade data.
-* **Process initierad från publicera AEM-instans**: Alla processinstanser som utlöses från AEM-publiceringsinstansen samlar inte in information om initieraren. Användardata kan dock hämtas i det format som är associerat med processen, som lagras i arbetsflödesvariabler.
+* **Processen har initierats från publiceringsinstansen** AEM: Alla processinstanser som aktiveras från AEM publiceringsinstans samlar inte in information om initieraren. Användardata kan dock hämtas i det format som är associerat med processen, som lagras i arbetsflödesvariabler.
 * **Process initierad via e-post**: Avsändarens e-post-ID hämtas som en egenskap i en ogenomskinlig blobbkolumn i `tb_job_instance` databastabellen, som inte kan frågas direkt.
 
 ### Identifiera processinstans-ID när arbetsflödesinitieraren eller deltagaren är känd {#initiator-participant}
 
 Utför följande steg för att identifiera processinstans-ID för en arbetsflödesinitierare eller en deltagare:
 
-1. Kör följande kommando i AEM Forms-serverdatabasen för att hämta det primära ID:t för arbetsflödesinitieraren eller deltagaren från `edcprincipalentity` databastabellen.
+1. Kör följande kommando i AEM Forms serverdatabas om du vill hämta det primära ID:t för arbetsflödesinitieraren eller deltagaren från `edcprincipalentity` databastabellen.
 
    ```sql
    select id from edcprincipalentity where canonicalname='user_ID'
@@ -147,7 +147,7 @@ Enstaka uppgifter är de uppgifter vars innehållsprocess har initierats men int
 
 När du har uppgifts-ID:n gör du följande för att rensa de associerade filerna och data med en överbliven åtgärd från GDS och databasen.
 
-1. Kör följande kommando i AEM Forms-serverdatabasen för att hämta ID:n för de identifierade uppgifts-ID:n.
+1. Kör följande kommando i AEM Forms serverdatabas för att hämta ID:n för de identifierade uppgifts-ID:n.
 
    ```sql
    select id from tb_form_data where task_id=<task_id>
@@ -187,7 +187,7 @@ När du har uppgifts-ID:n gör du följande för att rensa de associerade filern
 
 
 
-1. Utför följande kommandon för att ta bort data för aktivitets-ID:n från AEM Forms-serverdatabasen:
+1. Kör följande kommandon för att ta bort data för uppgifts-ID:n från AEM Forms serverdatabas:
 
    ```sql
    delete from tb_task_acl where task_id=<task_id>
