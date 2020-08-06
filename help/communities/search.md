@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 3acac082-efbe-4995-b374-851cb9aaf62d
 translation-type: tm+mt
 source-git-commit: a6d50dbcbfec85d21072d51a5fa48e3667835f06
+workflow-type: tm+mt
+source-wordcount: '448'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: a6d50dbcbfec85d21072d51a5fa48e3667835f06
 
 Sökfunktionen fungerar med olika andra funktioner, till exempel forum, som gör det möjligt att söka efter innehåll.
 
-När du lägger till möjligheten att söka efter inlägg som lagts in av communitymedlemmar, så kallade användargenererat innehåll (UGC), finns det två komponenter: [ och `Search`](#search-features) [ `Search Results`](#search-results).
+När du lägger till möjligheten att söka efter inlägg som lagts in av communitymedlemmar, så kallade användargenererat innehåll (UGC), finns det två komponenter: [ `Search`](#search-features) och [ `Search Results`](#search-results).
 
 Sidan som innehåller `Search Results` komponenten har stöd för både sökning och visning av resultat.
 
@@ -45,15 +48,18 @@ Markera den monterade `Search` komponent som du vill öppna och välj den `Confi
 
 ![chlimage_1-374](assets/chlimage_1-374.png)
 
-Under fliken **[!UICONTROL Sökinställningar]** anger du hur sökvägarna ska sökas igenom när en fråga anges av en besökare.
+Ange hur sökvägar ska sökas igenom när en fråga anges av en besökare på fliken **[!UICONTROL Search Settings]** .
 
 ![chlimage_1-375](assets/chlimage_1-375.png)
 
-* **[!UICONTROL Sökvägar]** Genom att lägga till sökvägar med knappen Lägg till objekt begränsas innehållssökningen. Om du till exempel vill begränsa sökningen till ett specifikt forum väljer du en forumkomponent som placeras på en sida:
+* **[!UICONTROL Search Paths]**
+Genom att lägga till sökvägar med knappen Lägg till objekt begränsas innehållssökningen. Om du till exempel vill begränsa sökningen till ett specifikt forum väljer du en forumkomponent som placeras på en sida:
 
    * `/content/community-components/en/forum/jcr:content/content/forum`
 
-* **[!UICONTROL Resultatsida]** Resultatet visas på en separat sida som du anger genom att använda webbläsaren för att välja en sida som innehåller `Search Results` komponenten.
+* **[!UICONTROL Result Page]**
+Resultatet visas på en separat sida som du anger med webbläsaren för att välja en sida som innehåller 
+`Search Results` -komponenten.
 
 ## Sökresultat {#search-results}
 
@@ -79,13 +85,15 @@ Markera den monterade `Search Results` komponent som du vill öppna och välj de
 
 ![chlimage_1-377](assets/chlimage_1-377.png)
 
-På fliken **[!UICONTROL Sökresultatinställningar]** kan du ange vilka sökvägar som ska ingå i sökningen när en fråga anges av en besökare.
+På fliken **[!UICONTROL Search Result Settings]** kan du ange vilka sökvägar som ska ingå i sökningen när en fråga anges av en besökare.
 
 ![chlimage_1-378](assets/chlimage_1-378.png)
 
-* **[!UICONTROL Sökresultat per sida]** Definiera antalet ämnen/inlägg som visas per sida. Standardvärdet är 10.
+* **[!UICONTROL Search Results Per Page]**
+Definiera antalet ämnen/inlägg som visas per sida. Standardvärdet är 10.
 
-* **[!UICONTROL Sökvägar]** Genom att lägga till sökvägar med knappen Lägg till objekt begränsas innehållssökningen.
+* **[!UICONTROL Search Paths]**
+Genom att lägga till sökvägar med knappen Lägg till objekt begränsas innehållssökningen.
 
 ## Additional Information {#additional-information}
 
