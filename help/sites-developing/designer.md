@@ -1,8 +1,8 @@
 ---
 title: Designer och Designer
 seo-title: Designer och Designer
-description: Du måste skapa en design för din webbplats och i AEM gör du det med hjälp av Designer
-seo-description: Du måste skapa en design för din webbplats och i AEM gör du det med hjälp av Designer
+description: Du måste skapa en design för webbplatsen och i AEM gör du det med hjälp av Designer
+seo-description: Du måste skapa en design för webbplatsen och i AEM gör du det med hjälp av Designer
 uuid: b880ab49-8bea-4925-9b7b-e911ebda14ee
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: f9bcb6eb-1df4-4709-bcec-bef0931f797a
 translation-type: tm+mt
 source-git-commit: e9c5fcd8f939d88317c5184b6352b227918088e5
+workflow-type: tm+mt
+source-wordcount: '389'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: e9c5fcd8f939d88317c5184b6352b227918088e5
 
 >[!CAUTION]
 >
->I den här artikeln beskrivs hur du skapar en webbplats baserat på det klassiska användargränssnittet. Adobe rekommenderar att du använder de senaste AEM-teknikerna för dina webbplatser enligt beskrivningen i artikeln [Komma igång med att utveckla AEM-webbplatser](/help/sites-developing/getting-started.md).
+>I den här artikeln beskrivs hur du skapar en webbplats baserat på det klassiska användargränssnittet. Adobe rekommenderar att du utnyttjar den senaste AEM tekniken för dina webbplatser enligt beskrivningen i artikeln [Komma igång med att utveckla AEM Sites](/help/sites-developing/getting-started.md).
 
-Du måste skapa en design för din webbplats och i AEM gör du det med hjälp av Designer.
+Du måste skapa en design för webbplatsen och i AEM gör du det med hjälp av Designer.
 
 >[!NOTE]
 >
