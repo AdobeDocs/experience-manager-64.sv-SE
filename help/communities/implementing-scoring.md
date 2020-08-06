@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## Översikt {#overview}
 
-Med funktionen för poängsättning och märkning av AEM Communities kan man identifiera och belöna communitymedlemmar.
+AEM Communities poäng och badges ger möjlighet att identifiera och belöna communitymedlemmar.
 
 De viktigaste aspekterna på poängsättning och märkning är:
 
@@ -36,7 +36,7 @@ De viktigaste aspekterna på poängsättning och märkning är:
 
 >[!CAUTION]
 >
->Implementeringsstrukturen som visas i CRXDE Lite kan ändras när användargränssnittet blir tillgängligt.
+>Den implementeringsstruktur som visas i CRXDE Lite kan ändras när användargränssnittet blir tillgängligt.
 
 ## Badges {#badges}
 
@@ -129,7 +129,7 @@ Se avsnittet [Snabbtest](#quick-test) för att aktivera poängsättning för en 
 
 Om du vill aktivera poängsättning och märken lägger du till egenskaperna `scoringRules` och `badgingRules`till en nod i platsens innehållsträd.
 
-Om webbplatsen redan är publicerad, efter att ha tillämpat alla regler och aktiverat komponenter, publicerar du om webbplatsen.
+Om webbplatsen redan är publicerad, efter att ha tillämpat alla regler och aktiverat komponenter, publicerar du om den.
 
 Reglerna som gäller för en komponent som har aktiverats för badging är reglerna för den aktuella noden eller dess överordnade nod.
 
@@ -345,7 +345,7 @@ Egenskapen `scoringRules`för en badging-regel begränsar helt enkelt vilka poä
 
 >[!NOTE]
 >
->Bästa praxis: skapa unika märkesbilder för varje AEM-webbplats.
+>Bästa praxis: skapa unika emblem-bilder för varje AEM.
 
 ![chlimage_1-369](assets/chlimage_1-369.png)
 
@@ -364,7 +364,7 @@ Egenskapen `scoringRules`för en badging-regel begränsar helt enkelt vilka poä
      <li>number = score</li> 
      <li>| = den lodräta linjen char (U+007C)</li> 
      <li>sökväg = fullständig sökväg till badge-bildresurs</li> 
-    </ul> Strängarna måste ordnas så att siffrorna ökar i värde och ingen tom mellanslag visas mellan talet och banan.<br /> Exempelpost:<br /> <code>80|/etc/community/badging/images/gold-badge/jcr:content/gold.png</code></td> 
+    </ul> Strängarna måste ordnas så att siffrorna ökar i värde och inget tomt utrymme ska visas mellan talet och banan.<br /> Exempelpost:<br /> <code>80|/etc/community/badging/images/gold-badge/jcr:content/gold.png</code></td> 
   </tr> 
   <tr> 
    <td>badgingType</td> 
@@ -428,6 +428,7 @@ till exempel: https://&lt;server>:&lt;port>/home/users/community/riley/profile.s
 >
 >* Kan referera till en författarinstans om [tunneltjänsten](users.md#tunnel-service) är aktiverad
 >* Kan vara ett otydligt, slumpmässigt namn - se [Säkerhetschecklista](../../help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path) för auktoriserat ID
+
 >
 
 
@@ -585,7 +586,7 @@ Om funktionen inte fungerar som väntat kontrollerar du att data har angetts kor
 
 Det går snabbt att testa poängsättning och märkning med hjälp av [Komma igång-självstudiekursen](getting-started.md) (engagera):
 
-* Använd CRXDE Lite på författaren
+* Gå till CRXDE Lite på författaren
 * Bläddra till bassidan:
 
    * /content/sites/engage/en/jcr:content
