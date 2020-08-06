@@ -10,6 +10,9 @@ topic-tags: correspondence-management
 discoiquuid: 3efd8f5a-9f38-4d9b-88d6-d8fde6c9a644
 translation-type: tm+mt
 source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+workflow-type: tm+mt
+source-wordcount: '1106'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Med Correspondence Management kan ni varumärka om sin lösningsmall för att f�
 
 Du kan ändra logotypen i användargränssnittet Create Correspondence med din organisations logotyp.
 
-![](assets/0_1_introscreenshot.png) Den anpassade ikonen i användargränssnittet **** Create Correspondence: Den anpassade *ikonen i gränssnittet Skapa korrespondens*
+![Den anpassade ikonen i användargränssnittet](assets/0_1_introscreenshot.png)**Create Correspondence:** *Den anpassade ikonen i gränssnittet Skapa korrespondens*
 
 ### Ändra logotypen i användargränssnittet för Create Correspondence {#changing-the-logo-in-the-create-correspondence-ui}
 
@@ -44,7 +47,7 @@ Avdelningen /apps (mappstruktur):
 
 * Säkerställer att dina filer är säkra om systemet uppdateras. Om det gäller uppgradering, funktionspaket eller en snabbkorrigering uppdateras grenen /libs och om du har dina ändringar i grenen /libs skrivs de över.
 * Hjälper dig att inte störa det aktuella systemet/den aktuella grenen, som du kanske kan lösa upp av misstag om du använder standardplatserna för lagring av anpassade filer.
-* Hjälper dina resurser att få högre prioritet när AEM söker efter resurser. AEM är konfigurerat att söka igenom grenen /apps först och sedan grenen /libs för att hitta en resurs. Den här mekanismen innebär att systemet använder övertäckningen (och de anpassningar som definieras där).
+* Hjälper dina resurser att få högre prioritet när AEM söker efter resurser. AEM är konfigurerad att söka igenom grenen /apps först och sedan grenen /libs för att hitta en resurs. Den här mekanismen innebär att systemet använder övertäckningen (och de anpassningar som definieras där).
 
 Följ de här stegen för att skapa den nödvändiga mappstrukturen i grenen /apps:
 
@@ -59,11 +62,11 @@ Följ de här stegen för att skapa den nödvändiga mappstrukturen i grenen /ap
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css
+      **Sökväg:** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css
 
-      **** Plats för övertäckning: /apps/
+      **Plats för övertäckning:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
       ![Sökväg till överläggsnod](assets/0_1_5ioverlaynodedialog.png)
 
@@ -83,11 +86,11 @@ Följ de här stegen för att skapa den nödvändiga mappstrukturen i grenen /ap
    1. Högerklicka på mappen **imgs** på följande sökväg och välj **Overlay Node**: `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs
+      **Sökväg:** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs
 
-      **** Plats för övertäckning: /apps/
+      **Plats för övertäckning:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
    1. Click **OK**.
 
@@ -139,7 +142,7 @@ Följ de här stegen för att överföra den anpassade logotypfilen till CRX:
    De bildfilformat som stöds är beroende av vilken webbläsare du använder för att få åtkomst till AEM Forms. Alla webbläsare har stöd för JPEG, GIF och PNG. Mer information finns i den webbläsarspecifika dokumentationen om de bildformat som stöds.
 
    ![Exempel på anpassad logotypfil](assets/geometrixx-outdoors.png)
-   **** Bild: *Exempel - CustomLogo.png som ska användas som egen logotyp*
+   **Bild:** *Exempel - CustomLogo.png som ska användas som anpassad logotyp*
 
 1. Klicka på **Spara alla**.
 
@@ -172,5 +175,5 @@ Följ de här stegen för att konfigurera formatmallen för återgivning av logo
 
 Rensa webbläsarcachen och öppna sedan instansen Create Correspondence UI i webbläsaren. Du bör se din egen logotyp.
 
-![](assets/0_1_introscreenshot-1.png) Skapa korrespondensgränssnitt med egen logotyp **** Bild: Den anpassade *ikonen i gränssnittet Skapa korrespondens*
+![Skapa korrespondensgränssnitt med egen logotyp](assets/0_1_introscreenshot-1.png)**Bild:** *Den anpassade ikonen i gränssnittet Skapa korrespondens*
 
