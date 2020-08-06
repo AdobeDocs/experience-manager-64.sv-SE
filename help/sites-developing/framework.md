@@ -1,8 +1,8 @@
 ---
-title: AEM Tagging Framework
-seo-title: AEM Tagging Framework
-description: Tagga innehåll och utnyttja AEM Tagging-infrastrukturen
-seo-description: Tagga innehåll och utnyttja AEM Tagging-infrastrukturen
+title: AEM Taggningsramverk
+seo-title: AEM Taggningsramverk
+description: Tagga innehåll och utnyttja infrastrukturen för AEM taggar
+seo-description: Tagga innehåll och utnyttja infrastrukturen för AEM taggar
 uuid: 55ba5977-217b-4b0f-a794-ddb9216ee62b
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# AEM Tagging Framework{#aem-tagging-framework}
+# AEM Taggningsramverk{#aem-tagging-framework}
 
-Så här taggar du innehåll och använder AEM Taggning-infrastrukturen:
+Så här taggar du innehåll och använder infrastrukturen för AEM taggar:
 
 * Taggen måste finnas som en nod av typen [`cq:Tag`](#tags-cq-tag-node-type) under [taxonomirotnoden](#taxonomy-root-node)
 
@@ -165,7 +165,7 @@ Om du dessutom nekar läsbehörighet för vissa taggar eller namnutrymmen kan du
 
 Ett typiskt exempel är:
 
-* Tillåta skrivåtkomst för grupper/roller till alla namnutrymmen (lägg till/ändra under `tag-administrators` `/content/cq:tags`). Den här gruppen levereras med färdiga AEM-program.
+* Tillåta skrivåtkomst för grupper/roller till alla namnutrymmen (lägg till/ändra under `tag-administrators` `/content/cq:tags`). Den här gruppen levereras med AEM.
 
 * Ge användare/författare läsåtkomst till alla namnutrymmen som ska vara läsbara för dem (oftast alla).
 * Ge användare/författare skrivåtkomst till de namnutrymmen där taggar ska kunna definieras fritt av användare/författare (add_node under `/content/cq:tags/some_namespace`)
@@ -184,6 +184,7 @@ Den `cq:OwnerTaggable` mixin som ärver från `cq:Taggable`är avsedd att indike
    >
    >
 * resurser ( `cq:Asset`) där `jcr:content/metadata` noden alltid har `cq:Taggable` mixin.
+
 >
 
 
@@ -215,7 +216,7 @@ Egenskapen `cq:tags` är en String-array som används för att lagra ett eller f
 
 >[!NOTE]
 >
->För att utnyttja AEM-taggningsfunktionen bör anpassade utvecklade program inte definiera andra taggegenskaper än `cq:tags`.
+>För att utnyttja AEM taggningsfunktion bör anpassade utvecklade program inte definiera andra taggegenskaper än `cq:tags`.
 
 ## Flytta och sammanfoga taggar {#moving-and-merging-tags}
 
@@ -259,7 +260,7 @@ Nedan följer en beskrivning av effekterna i databasen när du flyttar eller sam
 
 ## Migrering av taggar {#tags-migration}
 
-Taggar från och med Experience Manager 6.4 lagras under `/content/cq:tags`, som tidigare lagrats under `/etc/tags`. I scenarier där Adobe Experience Manager har uppgraderats från en tidigare version finns dock taggarna kvar under den gamla platsen `/etc/tags`. I uppgraderade system måste taggar migreras under `/content/cq:tags`.
+Taggar från och med Experience Manager 6.4 lagras under `/content/cq:tags`, som tidigare lagrats under `/etc/tags`. I scenarier där Adobe Experience Manager har uppgraderats från en tidigare version finns dock taggarna kvar på den gamla platsen `/etc/tags`. I uppgraderade system måste taggar migreras under `/content/cq:tags`.
 
 >[!NOTE]
 >
@@ -271,9 +272,9 @@ Taggar från och med Experience Manager 6.4 lagras under `/content/cq:tags`, som
 >
 >Vi rekommenderar att du använder tagghanterings-API som resurs.
 
-**Om den uppgraderade AEM-instansen har stöd för TagManager API**
+**Om den uppgraderade AEM har stöd för TagManager API**
 
-1. I början av komponenten identifierar TagManager API om det är en uppgraderad AEM-instans. I uppgraderat system lagras taggarna under `/etc/tags`.
+1. I början av komponenten identifierar TagManager API om det är en uppgraderad AEM. I uppgraderat system lagras taggarna under `/etc/tags`.
 
 1. API:t TagManager körs sedan i bakåtkompatibilitetsläge, vilket innebär att API:t använder `/etc/tags` som grundsökväg. Annars används en ny plats `/content/cq:tags`.
 
@@ -333,13 +334,13 @@ println "---------------------------------Success-------------------------------
 
 Skriptet hämtar alla taggar som har `/etc/tags` värdet för `cq:movedTo/cq:backLinks` egenskapen. Sedan itereras den genom den hämtade resultatuppsättningen och löser värdena för `cq:movedTo` och `cq:backlinks` egenskapen till `/content/cq:tags` sökvägar (i det fall där `/etc/tags` värdet identifieras).
 
-**Om den uppgraderade AEM-instansen körs på klassiskt gränssnitt**
+**Om den uppgraderade AEM instansen körs på det klassiska användargränssnittet**
 
 >[!NOTE]
 >
 >Klassiskt användargränssnitt är inte noll som är nedtidskompatibelt och stöder inte ny taggbassökväg. Om du vill använda ett klassiskt användargränssnitt än vad som behöver skapas, följt av `/etc/tags` `cq-tagging` komponentomstart.
 
-Om uppgraderade AEM-instanser stöds av TagManager API och körs i Classic UI:
+Vid uppgradering AEM instanser som stöds av TagManager API och körs i Classic UI:
 
 1. När referenser till den gamla taggbassökvägen `/etc/tags` har ersatts med tagId eller en ny taggplats `/content/cq:tags`kan du migrera taggar till den nya platsen `/content/cq:tags` i CRX följt av komponentomstart.
 
