@@ -1,8 +1,8 @@
 ---
 title: Adobe-klassificeringar
 seo-title: Adobe-klassificeringar
-description: Läs om Adobe Classifications.
-seo-description: Läs om Adobe Classifications.
+description: Läs mer om Adobe Classifications.
+seo-description: Läs mer om Adobe Classifications.
 uuid: 57fb59f4-da90-4fe7-a5b1-c3bd51159a16
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 6787511a-2ce0-421a-bcfb-90d5f32ad35e
 translation-type: tm+mt
 source-git-commit: be46329cfe5c6fee28f616f2257e215df402e94d
+workflow-type: tm+mt
+source-wordcount: '579'
+ht-degree: 2%
 
 ---
 
@@ -21,8 +24,8 @@ Med Adobe Classifications exporteras klassificeringsdata till [Adobe Analytics](
 
 Så här konfigurerar du:
 
-1. Navigera via **Verktyg, Cloud-tjänster** till avsnittet **Adobe Analytics** .
-1. Lägg till en ny konfiguration. Du kommer att se att konfigurationsmallen för **Adobe Analytics-klassificeringar** visas under **Adobe Analytics Framework** -konfigurationen. Ange **titel** och **namn** :
+1. Navigera via **Verktyg, CloudServices** till **Adobe Analytics** .
+1. Lägg till en ny konfiguration. Mallen **Adobe Analytics Classifications** Configuration visas under konfigurationen av **Adobe Analytics Framework** . Ange **titel** och **namn** :
 
    ![aa-25](assets/aa-25.png)
 
@@ -34,10 +37,10 @@ Så här konfigurerar du:
 
    | **Fält** | **Beskrivning** |
    |---|---|
-   | Aktiverad | Välj **Ja** om du vill aktivera inställningarna för Adobe-klassificeringar. |
+   | Aktiverad | Markera **Ja** om du vill aktivera inställningarna för klassificering i Adobe. |
    | Skriv över vid konflikt | Välj **Ja** om du vill skriva över datakollisioner. Som standard är inställningen **Nej**. |
    | Ta bort bearbetade | Om du anger **Ja** tas bearbetade noder bort när de har exporterats. Standardvärdet är **False**. |
-   | Exportera jobbbeskrivning | Ange en beskrivning för Adobe Classifications-jobbet. |
+   | Exportera jobbbeskrivning | Ange en beskrivning för jobbet Adobe Classifications. |
    | E-postmeddelande | Ange en e-postadress för Adobe Classifications-meddelanden. |
    | Report Suite | Ange den rapportsvit som du vill köra importjobbet för. |
    | Datauppsättning | Ange det datauppsättningsrelations-ID som importjobbet ska köras för. |
@@ -51,7 +54,7 @@ Så här konfigurerar du:
 
 Poster behandlas på sidor. Som standard skapas sidor med sidstorleken 1 000 i Adobe Classifications.
 
-En sida kan vara högst 25 000 per definition i Adobe Classifications och kan ändras från Felix-konsolen. Vid exporten låses källnoden av Adobe Classifications för att förhindra samtidiga ändringar. Noden låses upp efter export, vid fel eller när sessionen stängs.
+En sida kan vara högst 25000, per definition i Adobe Classifications och kan ändras från Felix-konsolen. Vid exporten låses källnoden med Adobe-klassificeringar för att förhindra samtidiga ändringar. Noden låses upp efter export, vid fel eller när sessionen stängs.
 
 Så här ändrar du sidstorlek:
 
@@ -65,9 +68,9 @@ Så här ändrar du sidstorlek:
 
 >[!NOTE]
 >
->Adobe Classifications kallades tidigare SAINT Exporter.
+>Adobe-klassificeringar kallades tidigare för SAINT Exporter.
 
-En exportör kan använda en transformator för att omforma exportdata till ett visst format. För Adobe-klassificeringar har ett undergränssnitt `SAINTTransformer<String[]>` som implementerar Transformer-gränssnittet angetts. Det här gränssnittet används för att begränsa den datatyp `String[]` som används av SAINT API och för att ha ett markörgränssnitt för att hitta sådana tjänster för markering.
+En exportör kan använda en transformator för att omforma exportdata till ett visst format. För Adobe-klassificeringar har ett undergränssnitt `SAINTTransformer<String[]>` som implementerar Transformerargränssnittet angetts. Det här gränssnittet används för att begränsa den datatyp `String[]` som används av API:t för SAINT och för att ha ett markörgränssnitt för att hitta sådana tjänster för markering.
 
 I standardimplementeringen SAINTDefaultTransformer behandlas de underordnade resurserna för exportörkällan som poster med egenskapsnamn som nycklar och egenskapsvärden som värden. Kolumnen **Nyckel** läggs automatiskt till som första kolumn - dess värde blir nodnamnet. Namngivna egenskaper (som innehåller :) ignoreras.
 
