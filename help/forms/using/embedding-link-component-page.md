@@ -10,6 +10,9 @@ topic-tags: publish
 discoiquuid: a4a36e73-3f7a-4173-8807-931f26daa35a
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '432'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 ## Förutsättningar {#prerequisites}
 
-Länkkomponenten är medlem i kategorin Dokumenttjänster. Kontrollera att kategorin Document Services är synlig i webbläsaren för AEM-komponenter. Om kategorin inte finns med i listan följer du stegen som beskrivs i [Aktivera komponenter](/help/forms/using/enabling-forms-portal-components.md)i formulärportalen.
+Länkkomponenten är medlem i kategorin Dokumenttjänster. Kontrollera att kategorin Dokumenttjänster är synlig i AEM. Om kategorin inte finns med i listan följer du stegen som beskrivs i [Aktivera komponenter](/help/forms/using/enabling-forms-portal-components.md)i formulärportalen.
 
 ## Länkkomponent {#link-component}
 
@@ -40,7 +43,7 @@ Utför följande steg för att lägga till en länkkomponent på sidan:
 
    * **Resurssökväg**: Databassökväg där resursen lagras.
    * **Återgivningstyp**: Återgivningsformatet - PDF, HTML eller Auto. Återgivningstypen Automatisk identifierar användarmiljön och återger formuläret som HTML eller PDF. Om formuläret till exempel nås från en mobil enhet återges formuläret i HTML av återgivningstypen Auto.
-   * **** Skicka URL:  URL till den server där formulärdata skickas.
+   * **Skicka URL:**  URL till den server där formulärdata skickas.
    * **HTML-profil**: Profil för återgivning av formuläret som HTML.
    * **PDF-profil**: Profil för återgivning av formuläret som PDF-dokument.
 
@@ -54,6 +57,6 @@ Utför följande steg för att lägga till en länkkomponent på sidan:
 * Skicka-URL för ett formulär kan anges på flera ställen och prioritetsordningen är följande:
 
    1. Skicka-URL som är inbäddad i formuläret (med Skicka-knappen) har högsta prioritet.
-   1. Överförings-URL:en som nämns i Forms Manager har medelprioritet.
+   1. Skicka-URL som nämns i Forms Manager har medelhög prioritet.
    1. Överförings-URL som anges i formulärportalen har lägst prioritet.
 
