@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: ac8f44df-39fb-44ea-ae17-ead0dbd1f6c0
 translation-type: tm+mt
 source-git-commit: 39b6af8ee815e8f6fa6e0b4a0a6dc80f29165243
+workflow-type: tm+mt
+source-wordcount: '1033'
+ht-degree: 0%
 
 ---
 
@@ -48,11 +51,11 @@ Alla butikstyper är tillägg till [`ContextHub.Store.Core`](/help/sites-develop
 
 Kontextnavlager använder ett av följande beständiga lägen:
 
-* **** Lokal: HTML5 localStorage används för att lagra data. Lokal lagring sparas i webbläsaren i alla sessioner.
-* **** Session: Använder HTML5 sessionStorage för att behålla data. Sessionslagringsplatsen sparas under hela webbläsarsessionen och är tillgänglig för alla webbläsarfönster.
-* **** Cookie: Använder webbläsarens inbyggda stöd för cookies för datalagring. Cookie-data skickas till och från servern i HTTP-begäranden.
-* **** Fönster.namn: Använder egenskapen window.name för att behålla data.
-* **** Minne: Använder ett JavaScript-objekt för att bevara data.
+* **Lokal:** HTML5 localStorage används för att lagra data. Lokal lagring sparas i webbläsaren i alla sessioner.
+* **Session:** Använder HTML5 sessionStorage för att behålla data. Sessionslagringsplatsen sparas under hela webbläsarsessionen och är tillgänglig för alla webbläsarfönster.
+* **Cookie:** Använder webbläsarens inbyggda stöd för cookies för datalagring. Cookie-data skickas till och från servern i HTTP-begäranden.
+* **Fönster.namn:** Använder egenskapen window.name för att behålla data.
+* **Minne:** Använder ett JavaScript-objekt för att bevara data.
 
 Som standard använder Context Hub det lokala beständighetsläget. Om webbläsaren inte stöder eller tillåter lokal lagring i HTML5 används sessionens beständighet. Om webbläsaren inte stöder eller tillåter HTML5 sessionStorage, används Window.name persistence.
 
@@ -173,7 +176,7 @@ De regler som används för att lösa dessa segment sammanfattas enligt följand
 
 ## Felsökningsmeddelanden för loggning för ContextHub {#logging-debug-messages-for-contexthub}
 
-Konfigurera tjänsten Adobe Granite ContextHub OSGi (PID = `com.adobe.granite.contexthub.impl.ContextHubImpl`) för att logga detaljerade felsökningsmeddelanden som är användbara vid utveckling.
+Konfigurera Adobe Granite ContextHub OSGi-tjänsten (PID = `com.adobe.granite.contexthub.impl.ContextHubImpl`) för att logga detaljerade felsökningsmeddelanden som är användbara vid utveckling.
 
 Om du vill konfigurera tjänsten kan du antingen använda [webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) eller en [JCR-nod i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository):
 
