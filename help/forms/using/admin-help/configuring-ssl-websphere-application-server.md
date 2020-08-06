@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 7c0efcb3-5b07-4090-9119-b7318c8b7980
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '1242'
+ht-degree: 0%
 
 ---
 
@@ -70,7 +73,7 @@ För att aktivera SSL behöver WebSphere åtkomst till ett användarkonto i det 
 1. Under Administrativ säkerhet väljer du **Administrativa användarroller**.
 1. Klicka på Lägg till och gör följande:
 
-   1. **Type**&amp;ast; i sökrutan och klicka på Sök.
+   1. Type **&amp;ast;** i sökrutan och klicka på Sök.
    1. Klicka på **Administratör** under roller.
    1. Lägg till den nyskapade användaren i Mappad till roll och mappa den till Administratör.
 
@@ -81,7 +84,7 @@ För att aktivera SSL behöver WebSphere åtkomst till ett användarkonto i det 
 
 1. I administrationskonsolen för WebSphere väljer du **Säkerhet > Global säkerhet**.
 1. Klicka på **guiden** Säkerhetskonfiguration.
-1. Kontrollera att kryssrutan **Aktivera programsäkerhet** är aktiverad. Click **Next**.
+1. Kontrollera att kryssrutan **Aktivera programsäkerhet** är aktiverad. Klicka på **Nästa**.
 1. Välj **Federated databaser** och klicka på **Nästa**.
 1. Ange de autentiseringsuppgifter som du vill ange och klicka på **Nästa**.
 1. Click **Finish**.
@@ -100,7 +103,7 @@ Du kan skapa förtroendelager och nyckelbehållare med hjälp av nyckelverktyget
 1. Ange sökvägen där du vill att nyckelbehållaren ska skapas. Om du redan har skapat en nyckelbehållare via nyckelbehållaren anger du sökvägen till nyckelbehållarfilen.
 1. Ange och bekräfta lösenordet.
 1. Välj typ av nyckelbehållare och klicka på **Använd**.
-1. Spara huvudkonfigurationen.
+1. Spara den överordnad konfigurationen.
 1. Klicka på **Personligt certifikat**.
 1. Om du redan har skapat en nyckelbehållare med nyckelhanteraren visas ditt certifikat. Annars måste du lägga till ett nytt självsignerat certifikat genom att utföra följande steg:
 
@@ -119,12 +122,12 @@ Du kan skapa förtroendelager och nyckelbehållare med hjälp av nyckelverktyget
 1. Välj **NodeDefaultSSLSetting**.
 1. I listrutorna för förvaltararkivnamn och nyckelbehållarnamn väljer du det anpassade förvaltararkivet och nyckelbehållaren som du skapade.
 1. Klicka på **Använd**.
-1. Spara huvudkonfigurationen.
+1. Spara den överordnad konfigurationen.
 1. Starta om WebSphere-profilen.
 
    Din profil kan nu köras med anpassade SSL-inställningar och ditt certifikat.
 
-## Stöd för AEM-blankettens inbyggda {#enabling-support-for-aem-forms-natives}
+## Aktivera stöd för AEM {#enabling-support-for-aem-forms-natives}
 
 1. I administrationskonsolen för WebSphere väljer du **Säkerhet > Global säkerhet**.
 1. Expandera **RMI/IIOP-säkerhet** i avsnittet Autentisering och klicka på **CSIv2-inkommande kommunikation**.
