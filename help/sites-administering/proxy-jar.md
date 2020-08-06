@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: ff0b1e93-2fd2-4dc1-898f-4ba4db1b3d98
 translation-type: tm+mt
 source-git-commit: be46329cfe5c6fee28f616f2257e215df402e94d
+workflow-type: tm+mt
+source-wordcount: '1173'
+ht-degree: 0%
 
 ---
 
@@ -31,11 +34,11 @@ Du kan använda proxyservern för att övervaka all klient-server-interaktion, o
 * SMTP för e-postmeddelanden
 * LDAP för användarhantering
 
-Du kan till exempel placera proxyservern mellan två program som kommunicerar via ett TCP/IP-nätverk; t.ex. en webbläsare och AEM. På så sätt kan du övervaka exakt vad som händer när du begär en AEM-sida.
+Du kan till exempel placera proxyservern mellan två program som kommunicerar via ett TCP/IP-nätverk; t.ex. en webbläsare och AEM. På så sätt kan du övervaka exakt vad som händer när du begär en AEM.
 
 ## Starta proxyserververktyget {#starting-the-proxy-server-tool}
 
-Verktyget finns i mappen /opt/help i AEM-installationen. Börja med att skriva:
+Verktyget finns i mappen /opt/help i AEM. Börja med att skriva:
 
 ```xml
 java -jar proxy.jar <host> <remoteport> <localport> [options]
@@ -141,7 +144,7 @@ Vi ska granska en enkel mall som ger följande kod när vi begär det:
 </html>
 ```
 
-Om AEM körs på lokal värd:4303 startar du proxyservern enligt följande:
+Om AEM körs på localhost:4303 startar du proxyservern enligt följande:
 
 ```xml
 java -jar proxy.jar localhost 4303 4444 -logfile test.log
