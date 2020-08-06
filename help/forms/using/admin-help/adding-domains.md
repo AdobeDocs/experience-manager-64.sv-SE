@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: d4004ffe-c981-487d-b803-dc4492ae5998
 translation-type: tm+mt
 source-git-commit: ccf4f4232d6a7af0781480106526c4c6fcb7c40e
+workflow-type: tm+mt
+source-wordcount: '946'
+ht-degree: 0%
 
 ---
 
@@ -55,12 +58,12 @@ Tänk på följande när du väljer ett domännamn och ett ID:
 
 ### Allmänna överväganden {#general-considerations}
 
-* När du använder en annan databasleverantör än DB2 kan domän-ID:t innehålla upp till 50 byte. Om du använder ASCII-tecken med en byte är gränsen 50 tecken. Om domänidentifieraren innehåller flerbytetecken reduceras den här gränsen. Om du till exempel skapar en domän vars identifierare innehåller 3-byte-tecken är gränsen 16 tecken. Du kan inte heller skapa domäner som innehåller 4-byte-tecken. Om du skapar ett domän-ID som överskrider den här gränsen kommer AEM-formulär att vara i ett instabilt tillstånd. Information om hur du återställer det här instabila läget finns i &quot; [Ta bort en domän som innehåller tecken](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters)med flera byte&quot; på den här sidan.
-* Antalet företagsdomäner och lokala domäner som kan skapas i AEM-formulär beror på längden på varje domän-ID. När du lägger till en företagsdomän eller hybriddomän uppdaterar Hanteraren configInstance-strängen i AuthProviders-noden i AEM-formulärkonfigurationsfilen (config.xml). Strängen configInstance innehåller en kolonavgränsad lista med absoluta sökvägar för alla domäner som är associerade med auktoriseringsprovidern. Strängen får innehålla högst 8 192 tecken. När den gränsen nås kan du inte skapa fler domäner.
+* När du använder en annan databasleverantör än DB2 kan domän-ID:t innehålla upp till 50 byte. Om du använder ASCII-tecken med en byte är gränsen 50 tecken. Om domänidentifieraren innehåller flerbytetecken reduceras den här gränsen. Om du till exempel skapar en domän vars identifierare innehåller 3-byte-tecken är gränsen 16 tecken. Du kan inte heller skapa domäner som innehåller 4-byte-tecken. Om du skapar ett domän-ID som överskrider den här gränsen kommer AEM att vara i ett instabilt tillstånd. Information om hur du återställer det här instabila läget finns i &quot; [Ta bort en domän som innehåller tecken](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters)med flera byte&quot; på den här sidan.
+* Antalet företagsdomäner och lokala domäner som kan skapas i AEM formulär beror på längden på varje domän-ID. När du lägger till en företagsdomän eller hybriddomän uppdaterar Hanteraren configInstance-strängen i AuthProviders-noden i konfigurationsfilen för AEM formulär (config.xml). Strängen configInstance innehåller en kolonavgränsad lista med absoluta sökvägar för alla domäner som är associerade med auktoriseringsprovidern. Strängen får innehålla högst 8 192 tecken. När den gränsen nås kan du inte skapa fler domäner.
 
 ### Att tänka på när du använder DB2 {#considerations-when-using-db2}
 
-När du använder DB2 för din AEM-formulärdatabas beror den maximala tillåtna längden för domän-ID på vilken typ av tecken som används:
+När du använder DB2 för AEM formulärdatabas beror den maximala tillåtna längden för domän-ID på vilken typ av tecken som används:
 
 * 100 enkelbyte (ASCII) (t.ex. tecken som används på engelska, franska eller tyska språk)
 * 50 dubbelbyte (t.ex. tecken som används på kinesiska, japanska eller koreanska språk)
@@ -68,9 +71,9 @@ När du använder DB2 för din AEM-formulärdatabas beror den maximala tillåtna
 
 ### Att tänka på när du använder MySQL {#considerations-when-using-mysql}
 
-När du använder MySQL som AEM-formulärdatabas gäller följande begränsningar:
+När du använder MySQL som AEM formulärdatabas gäller följande begränsningar:
 
-* Använd endast ASCII-tecken (single-byte) för domän-ID och domännamn. Om du använder utökade ASCII-tecken är AEM-formulär i ett instabilt tillstånd och kan generera ett undantag om du försöker ta bort domänen. Information om hur du återställer det här instabila läget finns i avsnittet [Ta bort en domän som innehåller tecken](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters)med flera byte på den här sidan.
+* Använd endast ASCII-tecken (single-byte) för domän-ID och domännamn. Om du använder utökade ASCII-tecken är AEM i ett instabilt tillstånd och kan utlösa ett undantag om du försöker ta bort domänen. Information om hur du återställer det här instabila läget finns i avsnittet [Ta bort en domän som innehåller tecken](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters)med flera byte på den här sidan.
 * Du kan inte skapa två domäner som har samma namn men som skiljer sig åt. Om du till exempel försöker skapa en domän med namnet *Adobe* när det redan finns en domän med namnet *adobe* uppstår ett fel.
 * Användarhantering kan inte skilja mellan två domännamn som bara skiljer sig åt när utökade tecken används. Om du till exempel skapar en domän med namnet *abcde* och en domän med namnet *âbcdè *, betraktas de som samma.
 
