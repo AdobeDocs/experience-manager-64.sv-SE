@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 5271feb9-70c6-4c82-8ac7-34a63d80e3aa
 translation-type: tm+mt
 source-git-commit: f78f83ef3b9373bcbee3e5179a9bbec4d9462255
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: f78f83ef3b9373bcbee3e5179a9bbec4d9462255
 
 När du skapar en plats för en Java-klass måste du vara medveten om att paketnamnet måste matcha databasmappens namn med eventuella bindestreck i sökvägen som escape-konverterats.
 
-När du använder bindestreck i namn på databasobjekt rekommenderas AEM-utveckling, men bindestreck är ogiltiga i Java-paketnamn.
+När du använder bindestreck i namn på databasobjekt rekommenderas AEM utveckling, men bindestreck är ogiltiga i Java-paketnamn.
 
 Den underliggande CRX-plattformen måste kunna skilja mellan det faktiska understrecket &#39;_&#39; och ett bindestreck &#39;-&#39;. I JCR måste därför bindestrecket ersättas med sitt unicode-värde (u002d) och escape-konverteras med understrecket &#39;_&#39;.
 
