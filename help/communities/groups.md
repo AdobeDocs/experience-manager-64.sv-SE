@@ -12,6 +12,9 @@ discoiquuid: 1293c01a-7308-494a-ab48-bd9938205b81
 pagetitle: Community Groups Console
 translation-type: tm+mt
 source-git-commit: 28948f1f8678512f8fc970a4289cb01cde86c5c2
+workflow-type: tm+mt
+source-wordcount: '1615'
+ht-degree: 0%
 
 ---
 
@@ -56,7 +59,7 @@ Så här kommer du åt gruppkonsolen:
 
 ![chlimage_1-133](assets/chlimage_1-133.png)
 
-Öppna **[!UICONTROL gruppmappen]** .
+Markera rutan **[!UICONTROL Groups folder]** för att öppna den.
 
 När de öppnas visas alla befintliga grupper, oavsett om de har skapats vid författare eller publicering.
 
@@ -64,34 +67,34 @@ Från den här gruppkonsolen går det att skapa nya grupper.
 
 ![chlimage_1-134](assets/chlimage_1-134.png)
 
-* Knappen Välj **[!UICONTROL Skapa grupp]**
+* Markera **[!UICONTROL Create Group]** knapp
 
 ### Steg 1: Community-gruppmall {#step-community-group-template}
 
 ![flerspråkig grupp](assets/multilingualgroup.png)
 
-* **[!UICONTROL Gruppnamn]**: En visningsrubrik för gruppen.
+* **[!UICONTROL Community Group Title]**: En visningsrubrik för gruppen.
 
    Titeln visas på den publicerade webbplatsen för gruppen.
 
-* **[!UICONTROL Gruppbeskrivning]**: En beskrivning av gruppen.
-* **[!UICONTROL Grupprot]** för användargrupper: Rotsökvägen till gruppen.
+* **[!UICONTROL Community Group Description]**: En beskrivning av gruppen.
+* **[!UICONTROL Community Group Root]**: Rotsökvägen till gruppen.
 
    Standardroten är den överordnade platsen, men roten kan flyttas till valfri plats på webbplatsen. Vi rekommenderar inte att du ändrar den.
 
-* **[!UICONTROL Fler tillgängliga språk för communitygrupper]** : Använd listrutan för att välja tillgängliga språk för communitygrupper. Menyn innehåller alla språk som den överordnade communitywebbplatsen skapas i. Användarna kan välja mellan dessa språk för att skapa grupper i flera språkområden i det här steget. Samma grupp skapas på flera angivna språk i gruppkonsolen för respektive communityplats.
+* **[!UICONTROL Additional Available Community Group Languages(s)]** meny: Använd listrutan för att välja tillgängliga språk för communitygrupper. Menyn innehåller alla språk som den överordnade communitywebbplatsen skapas i. Användarna kan välja mellan dessa språk för att skapa grupper i flera språkområden i det här steget. Samma grupp skapas på flera angivna språk i gruppkonsolen för respektive communityplats.
 
-* **[!UICONTROL Gruppnamn]**: Namnet på gruppens rotsida som visas i URL:en
+* **[!UICONTROL Community Group Name]**: Namnet på gruppens rotsida som visas i URL:en
 
    * Dubbelkontrollera namnet eftersom det inte är lätt att ändra efter att gruppen har skapats
    * Bas-URL:en visas under `Community Group Name`
    * Lägg till &quot;.html&quot; för en giltig URL
 
-      *Exempel*, `http://localhost:4502/content/sites/mysight/en/mygroup.html`
+      *Till exempel*, `http://localhost:4502/content/sites/mysight/en/mygroup.html`
 
-* **[!UICONTROL Menyn Community Group Template]** : Använd listrutan för att välja en tillgänglig mall för [communitygrupper](tools.md).
+* **[!UICONTROL Community Group Template]** meny: Använd listrutan för att välja en tillgänglig mall för [communitygrupper](tools.md).
 
-### Steg 2:Design {#step-design}
+### Steg 2: Design {#step-design}
 
 #### SAMHÄLLSGRUPPTEMA {#community-group-theme}
 
@@ -120,7 +123,7 @@ Tänk på följande när du skapar eller markerar en bild:
 * Det finns ingen storleksändring av bilden, så att när bildbredden är...
 
    * Bilden upprepas vågrätt under webbläsarens bredd
-   * Bilden blir större än webbläsarens bredd och ser ut att vara beskuren
+   * Bilden kommer att beskäras mer än webbläsarens bredd
 
 ### Steg 3: Inställningar {#step-settings}
 
@@ -183,7 +186,7 @@ När processen är klar visas kortet för den nya undercommunitywebbplatsen (gru
 
 ![chlimage_1-141](assets/chlimage_1-141.png)
 
-Sidinnehållet i en grupp kan redigeras med samma verktyg som andra AEM-sidor. Om du vill öppna gruppen för redigering väljer du ikonen Öppna plats som visas när du håller pekaren över gruppkortet.
+Sidinnehållet i en grupp kan redigeras med samma verktyg som andra AEM. Om du vill öppna gruppen för redigering väljer du ikonen Öppna plats som visas när du håller pekaren över gruppkortet.
 
 ## Ändra gruppegenskaper {#modifying-group-properties}
 
