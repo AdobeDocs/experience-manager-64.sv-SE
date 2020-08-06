@@ -28,14 +28,14 @@ Tjänsten Endpoint Registry ger möjlighet att programmässigt hantera slutpunkt
 * SOAP
 * Bevakad mapp
 * E-post
-* (Borttaget för AEM-formulär) Remoting
+* (Borttaget för AEM formulär) Remoting
 * Aktivitetshanteraren
 
    >[!NOTE]
    >
-   >SOAP, EJB och (Borttaget för AEM-formulär i JEE) Slutpunkter för fjärrstyrning skapas automatiskt för varje aktiverad tjänst. SOAP- och EJB-slutpunkterna aktiverar SOAP och EJB för alla serviceåtgärder.
+   >SOAP, EJB och (Borttaget för AEM formulär i JEE) Slutpunkter för fjärrstyrning skapas automatiskt för varje aktiverad tjänst. SOAP- och EJB-slutpunkterna aktiverar SOAP och EJB för alla serviceåtgärder.
 
-   En fjärrslutpunkt gör att Flex-klienter kan anropa åtgärder på den AEM Forms-tjänst som slutpunkten läggs till i. Ett Flex-mål med samma namn som slutpunkten skapas och Flex-klienter kan skapa RemoteObjects som pekar på det här målet för att anropa åtgärder på den relevanta tjänsten.
+   En fjärrslutpunkt gör att Flex-klienter kan anropa åtgärder för den AEM Forms-tjänst som slutpunkten läggs till i. Ett Flex-mål med samma namn som slutpunkten skapas och Flex-klienter kan skapa RemoteObjects som pekar på det här målet för att anropa åtgärder på den aktuella tjänsten.
 
    Slutpunkterna för e-post, Aktivitetshanteraren och Bevakade mappar visar bara en viss åtgärd för tjänsten. För att lägga till dessa slutpunkter krävs ett andra konfigurationssteg för att välja en metod att anropa, ange konfigurationsparametrar och ange in- och utdataparametermappningar.
 
@@ -55,7 +55,7 @@ Tjänsten Endpoint Registry ger möjlighet att programmässigt hantera slutpunkt
 
 ## Lägga till EJB-slutpunkter {#adding-ejb-endpoints}
 
-Du kan programmässigt lägga till en EJB-slutpunkt till en tjänst med hjälp av Java-API:t för AEM Forms. Genom att lägga till en EJB-slutpunkt till en tjänst aktiverar du ett klientprogram att anropa tjänsten i EJB-läge. Det innebär att du kan välja EJB-läge när du anger anslutningsegenskaper som krävs för att anropa AEM Forms. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+Du kan programmässigt lägga till en EJB-slutpunkt till en tjänst med AEM Forms Java API. Genom att lägga till en EJB-slutpunkt till en tjänst aktiverar du ett klientprogram att anropa tjänsten i EJB-läge. Det innebär att du kan välja EJB-läge när du anger anslutningsegenskaper som krävs för att anropa AEM Forms. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
 
 >[!NOTE]
 >
@@ -81,10 +81,10 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Följande JAR-filer måste 
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss Application Server)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss Application Server)
+* adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
+* jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
-Mer information om var dessa JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa ett EndpointRegistry-klientobjekt**
 
@@ -158,7 +158,7 @@ Lägg till en EJB-slutpunkt med Java API:
 
 ## Lägga till SOAP-slutpunkter {#adding-soap-endpoints}
 
-Du kan programmässigt lägga till en SOAP-slutpunkt till en tjänst med hjälp av Java-API:t för AEM Forms. Genom att lägga till en SOAP-slutpunkt aktiverar du ett klientprogram att anropa tjänsten i SOAP-läge. Det innebär att när du anger de anslutningsegenskaper som krävs för att anropa AEM Forms kan du välja SOAP-läge.
+Du kan programmässigt lägga till en SOAP-slutpunkt till en tjänst med hjälp av AEM Forms Java API. Genom att lägga till en SOAP-slutpunkt aktiverar du ett klientprogram att anropa tjänsten i SOAP-läge. När du anger de anslutningsegenskaper som krävs för att anropa AEM Forms kan du alltså välja SOAP-läge.
 
 >[!NOTE]
 >
@@ -186,8 +186,8 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss Application Server)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss Application Server)
+* adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
+* jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
 Dessa JAR-filer krävs för att skapa en SOAP-slutpunkt. Du behöver emellertid ytterligare JAR-filer om du använder SOAP-slutpunkten för att anropa tjänsten. Mer information om AEM Forms JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
@@ -263,9 +263,9 @@ Lägg till en SOAP-slutpunkt till en tjänst med hjälp av Java API:
 
 ## Lägga till bevakade mappslutpunkter {#adding-watched-folder-endpoints}
 
-Du kan programmässigt lägga till en bevakad mappslutpunkt till en tjänst med hjälp av Java-API:t för AEM Forms. Genom att lägga till en bevakad mappslutpunkt kan användarna placera en fil (t.ex. en PDF-fil) i en mapp. När filen placeras i mappen anropas den konfigurerade tjänsten och filen ändras. När tjänsten har utfört den angivna åtgärden sparas den ändrade filen i en angiven utdatamapp. En bevakad mapp är konfigurerad för att skannas med ett fast intervall eller med ett cron-schema, till exempel varje måndag, onsdag och fredag kl. 12.00.
+Du kan programmässigt lägga till en bevakad mappslutpunkt till en tjänst med hjälp av AEM Forms Java API. Genom att lägga till en bevakad mappslutpunkt kan användarna placera en fil (t.ex. en PDF-fil) i en mapp. När filen placeras i mappen anropas den konfigurerade tjänsten och filen ändras. När tjänsten har utfört den angivna åtgärden sparas den ändrade filen i en angiven utdatamapp. En bevakad mapp är konfigurerad för att skannas med ett fast intervall eller med ett cron-schema, till exempel varje måndag, onsdag och fredag kl. 12.00.
 
-Om du vill lägga till en övervakad mappslutpunkt i en tjänst programmatiskt bör du överväga följande kortlivade process med namnet *EncryptDocument*. (Se [Förstå AEM-formulärprocesser](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes).)
+Om du vill lägga till en övervakad mappslutpunkt i en tjänst programmatiskt bör du överväga följande kortlivade process med namnet *EncryptDocument*. (Se [Förstå AEM Forms-processer](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes).)
 
 ![aw_aw_encryptdocumentProcess](assets/aw_aw_encryptdocumentprocess.png)
 
@@ -296,10 +296,10 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss Application Server)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss Application Server)
+* adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
+* jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
-Mer information om var dessa JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa ett EndpointRegistry-klientobjekt**
 
@@ -417,6 +417,7 @@ Lägg till en bevakad mappslutpunkt med AEM Forms Java API:
 
    * Ett strängvärde som anger namnet på konfigurationsvärdet. När du anger `url` konfigurationsvärdet anger du `url`.
    * Ett strängvärde som anger värdet för konfigurationsvärdet. När du anger `url` konfigurationsvärdet anger du platsen för bevakad mapp.
+
    >[!NOTE]
    >
    >Om du vill se alla konfigurationsvärden som angetts för EncryptDocument-tjänsten läser du Java-kodexemplet som finns på [QuickStart: Lägga till en bevakad mappslutpunkt med Java API](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api).
@@ -429,6 +430,7 @@ Lägg till en bevakad mappslutpunkt med AEM Forms Java API:
    * Ett strängvärde som anger datatypen för indataparametern. Datatypen för parametern `InDoc` input är till exempel `com.adobe.idp.Document`.
    * Ett strängvärde som anger mappningstypen. Du kan till exempel ange `variable`.
    * Ett strängvärde som anger mappningstypsvärdet. Du kan till exempel ange &amp;ast;.pdf som filmönster.
+
    >[!NOTE]
    >
    >Anropa metoden `setInputParameterMapping` för varje indataparametervärde som ska definieras. Eftersom EncryptDocument-processen bara har en indataparameter, måste du anropa den här metoden en gång.
@@ -494,9 +496,9 @@ Snabbstart [: När du lägger till en bevakad mappslutpunkt med Java API](/help/
 
 ## Lägga till e-postslutpunkter {#adding-email-endpoints}
 
-Du kan programmässigt lägga till en e-postslutpunkt till en tjänst med hjälp av Java-API:t för AEM Forms. Genom att lägga till en e-postslutpunkt kan du göra det möjligt för användare att skicka ett e-postmeddelande med en eller flera bifogade filer till ett angivet e-postkonto. Sedan anropas åtgärden för konfigurationstjänsten och filerna ändras. När tjänsten har utfört den angivna åtgärden skickas ett e-postmeddelande till avsändaren med de ändrade filerna som bifogade filer.
+Du kan programmässigt lägga till en e-postslutpunkt till en tjänst med AEM Forms Java API. Genom att lägga till en e-postslutpunkt kan du göra det möjligt för användare att skicka ett e-postmeddelande med en eller flera bifogade filer till ett angivet e-postkonto. Sedan anropas åtgärden för konfigurationstjänsten och filerna ändras. När tjänsten har utfört den angivna åtgärden skickas ett e-postmeddelande till avsändaren med de ändrade filerna som bifogade filer.
 
-Om du vill lägga till en e-postslutpunkt i en tjänst programmatiskt bör du överväga följande kortlivade process med namnet *MyApplication\EncryptDocument*. Mer information om kortvariga processer finns i [Förstå AEM-formulärprocesser](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes).
+Om du vill lägga till en e-postslutpunkt i en tjänst programmatiskt bör du överväga följande kortlivade process med namnet *MyApplication\EncryptDocument*. Mer information om kortvariga processer finns i [Förstå AEM Forms-processer](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes).
 
 ![ae_ae_encryptdokumentprocess](assets/ae_ae_encryptdocumentprocess.png)
 
@@ -527,10 +529,10 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss Application Server)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss Application Server)
+* adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
+* jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
-Mer information om var dessa JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa ett EndpointRegistry-klientobjekt**
 
@@ -581,7 +583,7 @@ Följande konfigurationsvärden anges när en e-postslutpunkt läggs till i en t
 * **charSet**: Den teckenuppsättning som används av e-postleverantören. Standardvärdet är `UTF-8`.
 * **smtpSSLEnabled**: Ange det här värdet för att tvinga e-postleverantören att använda SSL när meddelanden om resultat eller fel skickas. Kontrollera att SMTP-värden har stöd för SSL.
 * **failedJobFolder**: Anger en katalog där resultat ska lagras när SMTP-e-postservern inte är i drift.
-* **asynkron**: När det är synkront bearbetas alla indatadokument och ett enda svar returneras. När inställningen är asynkron skickas ett svar för varje indatadokument som bearbetas. En e-postslutpunkt skapas till exempel för den process som introduceras i det här avsnittet, och ett e-postmeddelande skickas till slutpunktens inkorg som innehåller flera oskyddade PDF-dokument. När alla PDF-dokument har krypterats med ett lösenord, och om slutpunkten har konfigurerats som synkron, skickas ett enda e-postmeddelande med alla skyddade PDF-dokument bifogade. Om slutpunkten är konfigurerad som asynkron skickas ett separat e-postmeddelande för varje skyddat PDF-dokument. Varje e-postmeddelande innehåller ett enda PDF-dokument som en bifogad fil. Standardvärdet är asynkront.
+* **asynkron**: När det är synkront bearbetas alla indatadokument och ett svar returneras. När inställningen är asynkron skickas ett svar för varje indatadokument som bearbetas. En e-postslutpunkt skapas till exempel för den process som introduceras i det här avsnittet, och ett e-postmeddelande skickas till slutpunktens inkorg som innehåller flera oskyddade PDF-dokument. När alla PDF-dokument har krypterats med ett lösenord, och om slutpunkten har konfigurerats som synkron, skickas ett enda e-postmeddelande med alla skyddade PDF-dokument bifogade. Om slutpunkten är konfigurerad som asynkron skickas ett separat e-postmeddelande för varje skyddat PDF-dokument. Varje e-postmeddelande innehåller ett enda PDF-dokument som en bifogad fil. Standardvärdet är asynkront.
 
 **Definiera indataparametervärden**
 
@@ -660,6 +662,7 @@ Lägg till en e-postslutpunkt med Java API:
 
    * Ett strängvärde som anger namnet på konfigurationsvärdet. När du anger `smtpHost` konfigurationsvärdet anger du `smtpHost`.
    * Ett strängvärde som anger värdet för konfigurationsvärdet. När du ställer in `smtpHost` konfigurationsvärdet anger du ett strängvärde som anger namnet på SMTP-servern.
+
    >[!NOTE]
    >
    >Om du vill se alla konfigurationsvärden som angetts för EncryptDocument-tjänsten som introducerades i det här avsnittet, ska du läsa Java-kodexemplet som finns på [QuickStart: Lägga till en e-postslutpunkt med Java API](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api).
@@ -672,6 +675,7 @@ Lägg till en e-postslutpunkt med Java API:
    * Ett strängvärde som anger datatypen för indataparametern. Datatypen för parametern `InDoc` input är till exempel `com.adobe.idp.Document`.
    * Ett strängvärde som anger mappningstypen. Du kan till exempel ange `variable`.
    * Ett strängvärde som anger mappningstypsvärdet. Du kan till exempel ange &amp;ast;.pdf som filmönster.
+
    >[!NOTE]
    >
    >Anropa metoden `setInputParameterMapping` för varje indataparametervärde som ska definieras. Eftersom EncryptDocument-processen bara har en indataparameter, måste du anropa den här metoden en gång.
@@ -746,9 +750,9 @@ Snabbstart [: När du lägger till en e-postslutpunkt med Java API](/help/forms/
 
 >[!NOTE]
 >
->LiveCycle Remoting-API:er har tagits bort för AEM-formulär på JEE.
+>LiveCycle Remoting API:er har tagits bort för AEM formulär på JEE.
 
-Du kan programmatiskt lägga till en fjärrslutpunkt till en tjänst med hjälp av Java-API:t för AEM Forms. Genom att lägga till en fjärrslutpunkt aktiverar du ett Flex-program att anropa tjänsten med hjälp av fjärrkommunikation. (Se [Anropa AEM-formulär med (borttaget för AEM-formulär) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
+Du kan programmässigt lägga till en fjärrslutpunkt till en tjänst med hjälp av AEM Forms Java API. Genom att lägga till en fjärrslutpunkt aktiverar du ett Flex-program att anropa tjänsten med hjälp av fjärrkommunikation. (Se [Anropa AEM Forms med (borttaget för AEM formulär) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
 
 Om du vill lägga till en fjärrslutpunkt till en tjänst programmatiskt bör du överväga följande kortlivade process med namnet *EncryptDocument*.
 
@@ -780,10 +784,10 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss Application Server)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss Application Server)
+* adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
+* jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
-Mer information om var dessa JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa ett EndpointRegistry-klientobjekt**
 
@@ -805,7 +809,7 @@ När du har angett slutpunktsattribut för Remoting kan du skapa en slutpunkt f�
 
 **Aktivera slutpunkten**
 
-När du har skapat en ny slutpunkt måste du aktivera den. När en fjärrslutpunkt är aktiverad aktiveras Flex-klienten för att anropa tjänsten.
+När du har skapat en ny slutpunkt måste du aktivera den. När en fjärrslutpunkt är aktiverad aktiveras den av en Flex-klient för att anropa tjänsten.
 
 **Se även**
 
@@ -857,7 +861,7 @@ Lägg till en fjärrslutpunkt med Java API:
 
 ## Lägger till TaskManager-slutpunkter {#adding-taskmanager-endpoints}
 
-Du kan programmässigt lägga till en TaskManager-slutpunkt till en tjänst med hjälp av Java-API:t för AEM Forms. Genom att lägga till en TaskManager-slutpunkt till en tjänst kan du aktivera tjänsten för en Workspace-användare. Det innebär att en användare som arbetar i Workspace kan anropa en process som har en motsvarande TaskManager-slutpunkt.
+Du kan programmässigt lägga till en TaskManager-slutpunkt till en tjänst med hjälp av AEM Forms Java API. Genom att lägga till en TaskManager-slutpunkt till en tjänst kan du aktivera tjänsten för en Workspace-användare. Det innebär att en användare som arbetar i Workspace kan anropa en process som har en motsvarande TaskManager-slutpunkt.
 
 >[!NOTE]
 >
@@ -882,10 +886,10 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss Application Server)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss Application Server)
+* adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
+* jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
-Mer information om var dessa JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa ett EndpointRegistry-klientobjekt**
 
@@ -978,7 +982,7 @@ Lägg till en TaskManager-slutpunkt med Java API:
 
 ## Ändra slutpunkter {#modifying-endpoints}
 
-Du kan programmässigt ändra en befintlig slutpunkt med hjälp av Java-API:t för AEM Forms. Genom att ändra en slutpunkt kan du ändra beteendet för slutpunkten. Tänk dig till exempel en bevakad mappslutpunkt som anger en mapp som används som bevakad mapp. Du kan programmässigt ändra konfigurationsvärden som tillhör slutpunkten Bevakade mappar, vilket resulterar i att en annan mapp fungerar som bevakade mappar. Mer information om konfigurationsvärden som tillhör en bevakad mappslutpunkt finns i [Lägga till bevakade mappslutpunkter](programmatically-endpoints.md#adding-watched-folder-endpoints).
+Du kan programmässigt ändra en befintlig slutpunkt med AEM Forms Java API. Genom att ändra en slutpunkt kan du ändra beteendet för slutpunkten. Tänk dig till exempel en bevakad mappslutpunkt som anger en mapp som används som bevakad mapp. Du kan programmässigt ändra konfigurationsvärden som tillhör slutpunkten Bevakade mappar, vilket resulterar i att en annan mapp fungerar som bevakade mappar. Mer information om konfigurationsvärden som tillhör en bevakad mappslutpunkt finns i [Lägga till bevakade mappslutpunkter](programmatically-endpoints.md#adding-watched-folder-endpoints).
 
 För att visa hur du ändrar en slutpunkt ändrar det här avsnittet en bevakad mappslutpunkt genom att ändra mappen som fungerar som bevakad mapp.
 
@@ -1003,10 +1007,10 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss Application Server)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss Application Server)
+* adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
+* jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
-Mer information om var dessa JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa ett EndpointRegistry-klientobjekt**
 
@@ -1053,7 +1057,7 @@ Ange nya konfigurationsvärden när du ändrar en slutpunkt. Om du till exempel 
 
 1. Hämta slutpunkten som ska ändras.
 
-   * Hämta en lista över alla slutpunkter som den aktuella användaren (som anges i anslutningsegenskaperna) kan komma åt genom att anropa `EndpointRegistryClient` objektets `getEndpoints` metod och skicka ett `PagingFilter` objekt som fungerar som ett filter. Du kan skicka ett `(PagingFilter)null` värde för att returnera alla slutpunkter. Den här metoden returnerar ett `java.util.List` objekt där varje element är ett `Endpoint` objekt. Mer information om ett `PagingFilter` objekt finns i API-referens för [AEM Forms](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * Hämta en lista över alla slutpunkter som den aktuella användaren (som anges i anslutningsegenskaperna) kan komma åt genom att anropa `EndpointRegistryClient` objektets `getEndpoints` metod och skicka ett `PagingFilter` objekt som fungerar som ett filter. Du kan skicka ett `(PagingFilter)null` värde för att returnera alla slutpunkter. Den här metoden returnerar ett `java.util.List` objekt där varje element är ett `Endpoint` objekt. Mer information om ett `PagingFilter` objekt finns i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
    * Iterera genom objektet för `java.util.List` att avgöra om det har slutpunkter. Om det finns slutpunkter är varje element en `EndPoint` instans.
    * Fastställ den tjänst som motsvarar en slutpunkt genom att anropa `EndPoint` objektets `getServiceId` metod. Den här metoden returnerar ett strängvärde som anger tjänstnamnet.
    * Bestäm typen av slutpunkt genom att anropa `EndPoint` objektets `getConnectorId` metod. Den här metoden returnerar ett strängvärde som anger typen av slutpunkt. Om slutpunkten till exempel är en bevakad mappslutpunkt returnerar metoden `WatchedFolder`.
@@ -1080,7 +1084,7 @@ Ange nya konfigurationsvärden när du ändrar en slutpunkt. Om du till exempel 
 
 ## Tar bort slutpunkter {#removing-endpoints}
 
-Du kan ta bort en slutpunkt programmatiskt från en tjänst med hjälp av Java-API:t för AEM Forms. När du har tagit bort en slutpunkt kan tjänsten inte anropas med den anropsmetod som slutpunkten aktiverade. Om du till exempel tar bort en SOAP-slutpunkt från en tjänst kan du inte anropa tjänsten i SOAP-läge.
+Du kan ta bort en slutpunkt från en tjänst genom att använda AEM Forms Java API. När du har tagit bort en slutpunkt kan tjänsten inte anropas med den anropsmetod som slutpunkten aktiverade. Om du till exempel tar bort en SOAP-slutpunkt från en tjänst kan du inte anropa tjänsten i SOAP-läge.
 
 För att visa hur du tar bort en slutpunkt från en tjänst tar det här avsnittet bort en EJB-slutpunkt från en tjänst med namnet *EncryptDocument*.
 
@@ -1105,10 +1109,10 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss Application Server)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss Application Server)
+* adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
+* jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
-Mer information om var dessa JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa ett EndpointRegistry-klientobjekt**
 
@@ -1168,7 +1172,7 @@ Ta bort en slutpunkt med Java API:
 
 ## Hämtar information om slutpunktsanslutning {#retrieving-endpoint-connector-information}
 
-Med API:t för AEM Forms kan du programmässigt hämta information om slutpunktsanslutningar. En koppling gör att en slutpunkt kan anropa en tjänst med hjälp av olika anropsmetoder. En övervakad mappkoppling gör det till exempel möjligt för en slutpunkt att anropa en tjänst med bevakade mappar. Genom att hämta information om slutpunktskopplingar programmatiskt kan du hämta konfigurationsvärden som är kopplade till en koppling, t.ex. vilka konfigurationsvärden som krävs och vilka som är valfria.
+Med AEM Forms API kan du programmässigt hämta information om slutpunktsanslutningar. En koppling gör att en slutpunkt kan anropa en tjänst med hjälp av olika anropsmetoder. En övervakad mappkoppling gör det till exempel möjligt för en slutpunkt att anropa en tjänst med bevakade mappar. Genom att hämta information om slutpunktskopplingar programmatiskt kan du hämta konfigurationsvärden som är kopplade till en koppling, t.ex. vilka konfigurationsvärden som krävs och vilka som är valfria.
 
 Det här avsnittet visar hur du hämtar information om slutpunktsanslutningar genom att hämta information om en övervakad mappkoppling. (Se [Lägga till bevakade mappslutpunkter](programmatically-endpoints.md#adding-watched-folder-endpoints).)
 
@@ -1178,7 +1182,7 @@ Det här avsnittet visar hur du hämtar information om slutpunktsanslutningar ge
 
 >[!NOTE]
 >
->I det här avsnittet används API:t för att hämta information om slutpunktsanslutningar `ConnectorRegistryClient` . (Se API-referens för [AEM-formulär](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).)
+>I det här avsnittet används API:t för att hämta information om slutpunktsanslutningar `ConnectorRegistryClient` . (Se [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).)
 
 ### Sammanfattning av steg {#summary_of_steps-8}
 
@@ -1197,10 +1201,10 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss Application Server)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss Application Server)
+* adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
+* jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
-Om AEM Forms används på en J2EE-programserver som inte är JBoss ersätter du adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms används. Information om platsen för alla AEM Forms JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Om AEM Forms körs på en J2EE-programserver som stöds och som inte är JBoss, ska du ersätta adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms är installerat. Information om platsen för alla AEM Forms JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa ett klientobjekt för ConnectorRegistry**
 
