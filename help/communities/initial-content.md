@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: e8f28cd5-7950-4aab-bf62-3d4ed3d33cbd
 translation-type: tm+mt
 source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+workflow-type: tm+mt
+source-wordcount: '442'
+ht-degree: 4%
 
 ---
 
@@ -39,35 +42,36 @@ Nu när det finns en [sidmall](initial-app.md#createthepagetemplate)kan vi skapa
 
    Möjligheten att växla till det klassiska användargränssnittet måste [aktiveras av en administratör](../../help/sites-administering/enable-classic-ui.md).
 
-1. På den [klassiska användargränssnittets välkomstsida](http://localhost:4502/welcome.html)väljer du **[!UICONTROL Webbplatser]**.
+1. På välkomstsidan [för det](http://localhost:4502/welcome.html)klassiska användargränssnittet väljer du **[!UICONTROL Websites]**.
 
    ![chlimage_1-37](assets/chlimage_1-37.png)
 
    Du kan även få tillgång till det klassiska användargränssnittet för webbplatser direkt genom att gå till [/siteAdmin.](http://localhost:4502/siteadmin)
 
-1. Välj **[!UICONTROL Webbplatser]** i utforskarrutan och välj sedan **[!UICONTROL Ny > Ny sida]** i verktygsfältet.
+1. I utforskarrutan markerar du **[!UICONTROL Websites]** och sedan väljer du **[!UICONTROL New > New Page]**.
 
-   Ange följande i dialogrutan **[!UICONTROL Skapa sida]** :
+   Ange följande i **[!UICONTROL Create Page]** dialogrutan:
 
    * Titel: `SCF Sandbox Site`
    * Namn: `an-scf-sandbox`
-   * Välj **[!UICONTROL en SCF-sandlådeuppspelningsmall]**
-   * Klicka på **[!UICONTROL Skapa]**
+   * Välj **[!UICONTROL An SCF Sandbox Play Template]**
+   * Klicka på **[!UICONTROL Create]**
+
    ![chlimage_1-38](assets/chlimage_1-38.png)
 
-1. Markera den sida du just skapade i Utforskarfönstret `/Websites/SCF Sandbox Site`och klicka på **[!UICONTROL Ny > Ny sida]**:
+1. Markera den sida du just skapade i Utforskarfönstret `/Websites/SCF Sandbox Site`och klicka på **[!UICONTROL New > New Page]**:
 
    * Titel: `SCF Sandbox`
    * Namn: `en`
    * Välj **en SCF-sandlådeuppspelningsmall **
    * Klicka på **Skapa **
 
-1. Markera den sida du just skapade i Utforskarfönstret `/Websites/SCF Sandbox Site/SCF Sandbox`och klicka på **[!UICONTROL Ny > Ny sida]**
+1. Markera den sida du just skapade i Utforskaren `/Websites/SCF Sandbox Site/SCF Sandbox`och klicka på **[!UICONTROL New > New Page]**
 
    * Titel: `SCF Play`
    * Namn: `play`
-   * Välj **[!UICONTROL en SCF-sandlådeuppspelningsmall]**
-   * Klicka på **[!UICONTROL Skapa]**
+   * Välj **[!UICONTROL An SCF Sandbox Play Template]**
+   * Klicka på **[!UICONTROL Create]**
 
 1. Så här visas webbplatsen nu i webbplatskonsolen. Observera att underordnade sidor för objektet som är markerat i utforskarrutan visas i den högra rutan där de kan hanteras.
 
@@ -83,7 +87,7 @@ Egenskapen &quot; ` [/etc/designs/an-scf-sandbox](setup-website.md#setupthedesig
 
 * `cq:template="/libs/wcm/core/templates/designpage"`
 
-har definierats, vilket ger möjlighet att referera till designresurser i ett skript med `currentDesign.getPath()`. Exempel
+har definierats, vilket ger möjlighet att referera till designresurser i ett skript med `currentDesign.getPath()`. Till exempel
 
 * &lt;% String favIcon = currentDesign.getPath() + &quot;/favicon.ico&quot;; %>
 
@@ -98,11 +102,11 @@ Databasen ska vara som följer:
 
 ![chlimage_1-41](assets/chlimage_1-41.png)
 
-* Klicka på **[!UICONTROL Spara alla]**
+* Klicka på **[!UICONTROL Save All]**
 
 [ Svårt att spara? Återinloggning! ]
 
 >[!NOTE]
 >
->Det är valfritt att använda cq:designPath och det har inget samband med [användningen av clientlibs](develop-app.md#includeclientlibsintemplate), vilket i huvudsak krävs eftersom SCF-komponenterna använder [klientlibs](client-customize.md#clientlibs-for-scf) för att hantera sina JS- och CSS-filer.
+>Det är valfritt att använda cq:designPath och det har inget samband med [användningen av clientlibs](develop-app.md#includeclientlibsintemplate), som i huvudsak krävs eftersom SCF-komponenterna använder [klientlibs](client-customize.md#clientlibs-for-scf) för att hantera sina JS- och CSS-filer.
 
