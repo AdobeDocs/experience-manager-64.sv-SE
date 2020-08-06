@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 5150867a-02a9-45c9-b2fd-e536b60ffa8c
 translation-type: tm+mt
 source-git-commit: f1a5e4c5c8411e10887efab517115fee0fd1890a
+workflow-type: tm+mt
+source-wordcount: '573'
+ht-degree: 0%
 
 ---
 
@@ -66,6 +69,7 @@ Om arbetsflödesmodellen lagras i `/var/workflow/models` kan du tilldela en spec
    * **Typ**: `Deny`
    * **Behörigheter**: `jcr:read`
    * **rep:glob**: referens till det specifika arbetsflödet
+
    ![wf-108](assets/wf-108.png)
 
    Registret **Åtkomstkontrollista** innehåller nu begränsningen för `content-authors` i `prototype-wfm-01` arbetsflödesmodellen.
@@ -101,6 +105,7 @@ Du kan sedan lägga till en ACL i själva mappen.
    * **Huvudkonto**: `content-authors`
    * **Typ**: `Deny`
    * **Behörigheter**: `jcr:read`
+
    >[!NOTE]
    >
    >Precis som med [Tillämpa en åtkomstkontrollista för den specifika arbetsflödesmodellen på /var/workflow/models](/help/sites-administering/workflows-managing.md#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models) kan du inkludera en rep:glob för att begränsa åtkomsten till ett visst arbetsflöde.
