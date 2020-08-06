@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8774c38a-abd2-4dc2-868e-d6760c96f3f6
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '262'
+ht-degree: 22%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 Med komponentkonsolen kan du bläddra igenom alla komponenter som definierats för instansen och visa nyckelinformation för varje komponent.
 
-Den kan nås via **Verktyg** -> **Allmänt** -> **Komponenter**. I konsolen är kort- och listvyn tillgängliga. Eftersom det inte finns någon trädstruktur för komponenter är kolumnvyn inte tillgänglig.
+It can be accessed from **Tools** -> **General** -> **Components**. I konsolen finns kortvyn och listvyn. Eftersom det inte finns någon trädstruktur för komponenter är kolumnvyn inte tillgänglig.
 
 ![chlimage_1-301](assets/chlimage_1-301.png)
 
@@ -29,7 +32,7 @@ Den kan nås via **Verktyg** -> **Allmänt** -> **Komponenter**. I konsolen är 
 
 ## Sökning {#search-features}
 
-Med ikonen Endast **** innehåll (överst till vänster) kan du öppna **sökpanelen** och söka efter och/eller filtrera komponenterna:
+Med ikonen **Endast innehåll** (överst till vänster) kan du öppna **sökpanelen** och söka efter och/eller filtrera komponenterna:
 
 ![chlimage_1-302](assets/chlimage_1-302.png)
 
