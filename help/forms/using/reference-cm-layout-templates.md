@@ -10,6 +10,9 @@ topic-tags: correspondence-management
 discoiquuid: afeb9f4d-3feb-4a0e-8884-e3ec1309b33b
 translation-type: tm+mt
 source-git-commit: db4d19e3af11f04369fc7f6a7c13377962f0650a
+workflow-type: tm+mt
+source-wordcount: '496'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: db4d19e3af11f04369fc7f6a7c13377962f0650a
 
 I Correspondence Management innehåller en brevmall typiska formulärfält, layoutfunktioner som sidhuvud och sidfot samt tomma målområden för innehållsplacering.
 
-Correspondence Management tillhandahåller brevmallar i AEM Forms-paketet [AEM-FORMS-REFERENCE-LAYOUT-TEMPLATES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES). Information om hur du installerar ett paket finns i [Arbeta med paket](/help/sites-administering/package-manager.md). Du kan anpassa mallarna i Designer efter företagets grafiska profil och behov. Paketet innehåller följande mallar:
+Correspondence Management innehåller brevmallar i AEM Forms package [AEM-FORMS-REFERENCE-LAYOUT-TEMPLATES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES). Information om hur du installerar ett paket finns i [Arbeta med paket](/help/sites-administering/package-manager.md). Du kan anpassa mallarna i Designer efter företagets grafiska profil och behov. Paketet innehåller följande mallar:
 
 * Klassisk
 * Klassisk enkel
