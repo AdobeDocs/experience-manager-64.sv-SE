@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 542467ef-3793-4347-8424-c365c5a166f6
 translation-type: tm+mt
 source-git-commit: 59d40b5bddc42a4ac057ef600243f396aefc926b
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 3%
 
 ---
 
@@ -21,7 +24,7 @@ Den här sidan innehåller viktig information om hur du arbetar med katalogfunkt
 
 När katalogfunktionen ingår i en community-webbplats kan communitymedlemmar bläddra bland och välja aktiveringsresurser som finns listade i en katalog.
 
-Komponenten [ gör att communitymedlemmar kan komma åt en katalog med `enablement catalog` aktiveringsresurser](catalog.md) [](resources.md). Användningen av AEM-taggar är en viktig del i hanteringen av utseendet på aktiveringsresurser i en katalog.
+Komponenten [ gör att communitymedlemmar kan komma åt en katalog med `enablement catalog` aktiveringsresurser](catalog.md) [](resources.md). Användningen av AEM taggar är en viktig del av att hantera utseendet på aktiveringsresurser i en katalog.
 
 Se [Tagga aktiveringsresurser](tag-resources.md).
 
@@ -75,16 +78,16 @@ Använda exemplet med [självstudiekursen](getting-started-enablement.md):
 
 * Navigera till katalogresursen på katalogsidan
 
-   * Exempel, `/content/sites/enable/en/catalog/jcr:content/content/primary/catalog`
+   * Till exempel, `/content/sites/enable/en/catalog/jcr:content/content/primary/catalog`
 
 * Lägga till en underordnad filternod
 
    * Markera `catalog`noden
-   * Välj **[!UICONTROL Skapa nod]**
+   * Välj **[!UICONTROL Create Node]**
 
       * Namn: `filters`
       * Typ: `nt:unstructured`
-   * Välj **[!UICONTROL Spara alla]**
+   * Välj **[!UICONTROL Save All]**
 
 
 * Lägg till `se_resource-tags` egenskap till `filters` noden
@@ -93,10 +96,10 @@ Använda exemplet med [självstudiekursen](getting-started-enablement.md):
    * Lägg till en Multi-egenskap
 
       * Namn: `se_resource-tags`
-      * Typ:Sträng
+      * Typ: Sträng
       * Värde: *&lt;ange ett[tagg-ID](#pre-filter-tagids)>*
-      * Markera **[!UICONTROL flera]**
-      * Välj **[!UICONTROL Lägg till]**
+      * Välj **[!UICONTROL Multi]**
+      * Välj **[!UICONTROL Add]**
 
          * I popup-dialogrutan väljer du `+` att lägga till ytterligare förfiltertagg-ID:n
 
