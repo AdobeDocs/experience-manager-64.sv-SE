@@ -9,6 +9,9 @@ topic-tags: author
 discoiquuid: 91a41bc1-3fa3-4467-b3f8-5570ba7757c0
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '557'
+ht-degree: 1%
 
 ---
 
@@ -32,7 +35,7 @@ Så här lägger du till infogade format i en komponent:
 
 1. Klicka på en flik i sidofältet för att ange CSS-egenskaper. Du kan ange egenskaper som:
 
-   * Mått och position (visningsinställning, utfyllnad, höjd, bredd, marginal, position, z-index, flyttal, klar, spill)
+   * Dimensioner och position (visningsinställning, utfyllnad, höjd, bredd, marginal, position, z-index, flyttal, klar, spill)
    * Text (teckensnittsfamilj, vikt, färg, storlek, radhöjd och justering)
    * Bakgrund (bild och övertoning, bakgrundsfärg)
    * Kant (bredd, stil, färg, radie)
@@ -93,7 +96,7 @@ Lägg märke till ändringen i textrutans format, så som visas i följande bild
  </tbody> 
 </table>
 
-![](assets/applied-style.png) Textrutans format när den infogade formateringen har tillämpats **** Bild: Komponenten för *textrutan när du har använt egenskaper för infogat format*
+![Textrutans format när den infogade formateringen har tillämpats](assets/applied-style.png)**Bild:** *Textrutekomponent efter användning av egenskaper för infogat format*
 
 Följ stegen ovan för att markera och formatera andra komponenter, till exempel paneler, skicka-knappar och alternativknappar.
 
