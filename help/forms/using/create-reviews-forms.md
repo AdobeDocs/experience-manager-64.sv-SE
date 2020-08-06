@@ -10,6 +10,9 @@ topic-tags: forms-manager
 discoiquuid: 43fd720f-2a5a-47fb-b9d9-d19f866cd0a0
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '689'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ En granskning är en mekanism som gör att en eller flera granskare kan kommente
 
 ## Konfigurera en granskning {#setting-up-a-review}
 
-1. Navigera till fliken Formulär och markera ett formulär.
+1. Navigera till fliken Forms och markera ett formulär.
 1. Om resursen inte har någon pågående granskning visas ikonen Starta granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) i åtgärdsfältet. Klicka på ikonen Starta granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) .
 1. Ange följande information:
 
@@ -41,7 +44,7 @@ I det här avsnittet beskrivs vad som händer när en granskning skapas eller ko
 1. Alla granskare tilldelas en granskningsuppgift. Uppgiften visas i meddelandeavsnittet. Granskaren kan klicka på ett meddelande eller gå till Inkorgen för att visa uppgiften. Granskaren kan klicka för att öppna granskningsprocessen, visa formuläret och börja lägga till kommentarer.
 
    ![Aviseringsvarning för granskare](assets/noti.png)
-   **** Bild: Avisering *om granskningsmeddelanden*
+   **Bild:** *Aviseringsvarning för granskare*
 
 1. Kommentarsrutan är tillgänglig för initieraren och granskarna av resursen. Andra kan visa kommentarerna, men inte skriva kommentarer.
 
@@ -51,7 +54,7 @@ I det här avsnittet beskrivs vad som händer när en granskning skapas eller ko
 >
 >Endast pågående granskningar kan ändras. Fullständiga granskningar kan inte ändras.
 
-1. Navigera till fliken Formulär och markera ett formulär.
+1. Navigera till fliken Forms och markera ett formulär.
 
 1. Om en granskning pågår för en resurs och du är initierare för granskningen, visas ikonerna Hantera granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) i åtgärdsfältet. Det är bara granskningsinitieraren som kan hantera (uppdatera/avsluta) granskningen.
 
@@ -69,7 +72,7 @@ I det här avsnittet beskrivs vad som händer när en granskning skapas eller ko
 1. Redigera de nödvändiga fälten och klicka sedan på Uppdatera.
 
    ![Granska uppdaterat läge i Aktivitetshanteraren](assets/tskmgr.png)
-   **** Bild: Uppdaterat *granskningstillstånd i Aktivitetshanteraren*
+   **Bild:** *Granska uppdaterat läge i Aktivitetshanteraren*
 
 1. Klicka på Slutför för att avsluta granskningen.
 
@@ -83,7 +86,7 @@ I det här avsnittet beskrivs vad som händer när granskningen avslutas/ändras
 1. Om en granskare tas bort:
 
    ![Ta bort en granskare](assets/removeduser.png)
-   **** Bild: Ta *bort en granskare*
+   **Bild:** *Ta bort en granskare*
 
    1. Om den tilldelade aktiviteten är ofullständig avslutas den.
    1. Granskaren kan inte längre kommentera resursen.
@@ -91,14 +94,14 @@ I det här avsnittet beskrivs vad som händer när granskningen avslutas/ändras
 1. Om en granskare läggs till:
 
    ![Lägga till en granskare](assets/addedreviewer.png)
-   **** Bild: Lägga *till en granskare*
+   **Bild:** *Lägga till en granskare*
 
    1. En granskningsåtgärd skapas och tilldelas den nya granskaren.
    1. Granskaren kan lägga till kommentarer för resursen.
 
 1. När en granskning avslutas:
 
-   1. **Granskare**: För varje granskare avslutas den ofullständiga uppgiften som är relaterad till granskningen. Aktiviteten visas inte längre som Väntande i granskarens meddelandeavsnitt.
+   1. **Granskare**: För varje granskare avslutas den ofullständiga uppgift som är relaterad till granskningen. Aktiviteten visas inte längre som Väntande i granskarens meddelandeavsnitt.
    1. **Initierare**: Uppgiften som tilldelats granskningsinitieraren är markerad som slutförd. Aktiviteten tas bort från meddelandeavsnittet för granskningsinitieraren.
    1. **Alla**: Granskningen visas i avsnittet Tidigare granskningar. Inga fler kommentarer kan läggas till.
 
