@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8e568c59-5455-422f-94a6-baf6d2aae070
 translation-type: tm+mt
 source-git-commit: be46329cfe5c6fee28f616f2257e215df402e94d
+workflow-type: tm+mt
+source-wordcount: '5365'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Med paket kan du importera och exportera databasinnehåll. Du kan till exempel a
 
 Paket kan öppnas och/eller underhållas från följande sidor:
 
-* [Package Manager](#package-manager), som du använder för att hantera paketen i din lokala AEM-instans.
+* [Package Manager](#package-manager), som du använder för att hantera paketen i den lokala AEM instansen.
 
 * [Paketresurs](#package-share), en centraliserad server som innehåller både offentligt tillgängliga paket och de som är privata för ditt företag. De publika paketen kan innehålla snabbkorrigeringar, nya funktioner, dokumentation m.m.
 
@@ -49,8 +52,8 @@ Du kan utföra följande åtgärder på eller med paket:
 * Ändra definitionen för befintliga paket
 * Återskapa befintliga paket
 * Radbryt paket
-* Hämta paket från AEM till ditt filsystem
-* Överför paket från filsystemet till den lokala AEM-instansen
+* Hämta paket från AEM till filsystemet
+* Överför paket från filsystemet till den lokala AEM
 * Validera paketinnehåll före installation
 * Utför en torr installation
 * Installera paket (AEM installerar inte paket automatiskt efter överföring)
@@ -83,7 +86,7 @@ Dialogrutan **Paketinställningar** är tillgänglig via knappen **Redigera** n�
 | Beskrivning | En kort beskrivning av paketet. HTML-kod kan användas för formatering. |
 | Miniatyrbild | Ikonen som visas med paketlistan. Klicka på Bläddra för att välja en lokal fil. |
 
-![chlimage_1-340](assets/chlimage_1-344.png)
+![chlimage_1-344](assets/chlimage_1-344.png)
 
 <table> 
  <tbody> 
@@ -180,7 +183,7 @@ Följande tabell beskriver dessa regler och innehåller exempel:
   </tr> 
   <tr> 
    <td> exclude</td> 
-   <td>Du kan ange en sökväg eller använda ett reguljärt uttryck för att ange alla noder som du vill utesluta.<br /> Om du <br /> exkluderar en katalog exkluderas den katalogen <i>och</i> alla filer och mappar i den katalogen (dvs. hela underträdet).<br /> </td> 
+   <td>Du kan ange en sökväg eller använda ett reguljärt uttryck för att ange alla noder som du vill utesluta.<br /> <br /> Om du utesluter en katalog utesluts katalogen <i>och</i> alla filer och mappar i den katalogen (dvs. hela underträdet).<br /> </td> 
    <td>/libs/wcm/foundation/components(/.*)?</td> 
   </tr> 
  </tbody> 
@@ -210,7 +213,7 @@ Officiellt snabbkorrigeringspaket:
 
 ![](do-not-localize/chlimage_1-28.png)
 
-Officiell AEM-installation eller tilläggspaket:
+AEM eller tilläggspaket:
 
 Officiella funktionspaket:
 
@@ -218,7 +221,7 @@ Officiella funktionspaket:
 
 ## Pakethanteraren {#package-manager}
 
-Pakethanteraren hanterar paketen i din lokala AEM-installation. När du har [tilldelat nödvändiga behörigheter](#permissions-needed-for-using-the-package-manager) kan du använda pakethanteraren för olika åtgärder, bland annat för att konfigurera, bygga, hämta och installera dina paket. Nyckelelementen som ska konfigureras är:
+Pakethanteraren hanterar paketen i din lokala AEM. När du har [tilldelat nödvändiga behörigheter](#permissions-needed-for-using-the-package-manager) kan du använda pakethanteraren för olika åtgärder, bland annat för att konfigurera, bygga, hämta och installera dina paket. Nyckelelementen som ska konfigureras är:
 
 * [Paketinställningar](#package-settings)
 * [Paketfilter](#package-filters)
@@ -236,7 +239,7 @@ Se [Ange behörigheter](/help/sites-administering/security.md) för instruktione
 
 Så här skapar du en ny paketdefinition:
 
-1. På välkomstskärmen i AEM klickar du på **Paket** (eller från **verktygskonsolen** dubbelklickar du på **Paket**).
+1. På AEM välkomstskärm klickar du på **Paket** (eller på **verktygskonsolen** dubbelklickar du på **Paket**).
 
 1. Välj sedan **Pakethanteraren**.
 1. Klicka på **Skapa paket**.
@@ -329,13 +332,13 @@ Ett paket skapas ofta samtidigt som du [skapar paketdefinitionen](#creating-a-ne
    >
    >Detta är särskilt viktigt när du återskapar ett paket eftersom paketinnehållet skrivs över.
 
-1. Click **OK**. AEM kommer att bygga paketet med allt innehåll som läggs till i paketet. När AEM är klart visas en bekräftelse på att paketet har skapats och (när du stänger dialogrutan) information om paketlistan uppdateras.
+1. Click **OK**. AEM skapar paketet med allt innehåll som läggs till i paketet. När AEM är klar visas en bekräftelse på att paketet har skapats och (när du stänger dialogrutan) information om paketlistan uppdateras.
 
 ### Rewrapping a Package {#rewrapping-a-package}
 
 När ett paket har byggts kan det vid behov rewrappas.
 
-När du återställer paket ändras paketinformationen *utan* att paketinnehållet ändras. Paketinformationen är miniatyrbilden, beskrivningen osv., vilket innebär att allt du kan redigera i dialogrutan **Paketinställningar** (för att öppna den här klickningen på **Redigera**).
+När du gör om en paketering ändras paketinformationen *utan* att paketinnehållet ändras. Paketinformationen är miniatyrbilden, beskrivningen osv., vilket innebär att allt du kan redigera i dialogrutan **Paketinställningar** (för att öppna den här klickningen på **Redigera**).
 
 Ett viktigt användningsområde för ombrytning är när du förbereder ett paket för paketresursen. Du kan till exempel ha ett befintligt paket och bestämma dig för att dela det med andra. För det vill du lägga till en miniatyrbild och lägga till en beskrivning. I stället för att återskapa hela paketet med alla dess funktioner (vilket kan ta en stund och innebär att paketet inte längre är identiskt med originalpaketet) kan du kapsla in det och bara lägga till miniatyrbilden och beskrivningen.
 
@@ -379,7 +382,7 @@ När ett paket har skapats kan du visa innehållet:
 
 ### Hämtar paket till filsystemet {#downloading-packages-to-your-file-system}
 
-I det här avsnittet beskrivs hur du hämtar ett paket från AEM till ditt filsystem med hjälp av **Package Manager**.
+I det här avsnittet beskrivs hur du hämtar ett paket från AEM till filsystemet med hjälp av **Package Manager**.
 
 >[!NOTE]
 >
@@ -387,23 +390,24 @@ I det här avsnittet beskrivs hur du hämtar ett paket från AEM till ditt filsy
 >
 >Från paketresurs kan du:
 >
->* hämta paket från [Package Share direkt till din lokala AEM-instans](#downloading-and-installing-packages-from-package-share).\
+>* hämta paket från [Package Share direkt till din lokala AEM](#downloading-and-installing-packages-from-package-share).\
    >  När du laddar ned paketet importeras det till din databas, varefter du omedelbart kan installera det på din lokala instans med **Pakethanteraren**. Dessa paket innehåller snabbkorrigeringar och andra delade paket.
    >
    >
 * hämta paket från [Package Share till filsystemet](#downloading-packages-to-your-file-system-from-package-share).
+
 >
 
 
 
-1. På välkomstskärmen i AEM klickar du på **Paket** och väljer sedan **Pakethanteraren**.
+1. På AEM välkomstskärm klickar du på **Paket** och väljer sedan **Pakethanteraren**.
 1. Navigera till paketet som du vill hämta.
 
    ![paketerladda ned](assets/packagesdownload.png)
 
 1. Klicka på länken som utgörs av zip-filens namn (understruken) för paketet som du vill hämta; till exempel `export-for-offline.zip`.
 
-   AEM hämtar paketet till din dator (med en standarddialogruta för hämtning av webbläsare).
+   AEM hämtar paketet till datorn (med en standarddialogruta för hämtning av webbläsare).
 
 ### Överför paket från filsystemet {#uploading-packages-from-your-file-system}
 
@@ -425,7 +429,7 @@ Så här överför du ett paket:
 
    * **Arkiv**
 
-      **Du kan antingen skriva filnamnet direkt eller använda** Bläddra.. för att välja det paket som krävs från det lokala filsystemet (efter att du har valt **OK**).
+      Du kan antingen skriva filnamnet direkt eller använda **Bläddra..** för att välja det paket som krävs från det lokala filsystemet (efter att du har valt **OK**).
 
    * **Tvinga överföring**
 
@@ -434,7 +438,7 @@ Så här överför du ett paket:
 
    >[!NOTE]
    >
-   >Om du vill göra innehållet tillgängligt för AEM måste du [installera paketet](#installing-packages).
+   >Se till att du [installerar paketet](#installing-packages)för att göra innehållet tillgängligt för AEM.
 
 ### Verifierar paket {#validating-packages}
 
@@ -454,11 +458,11 @@ Dessa alternativ beskrivs nedan.
 
    **Vad är markerat**
 
-   Den här valideringen undersöker paketet för alla JAR-filer (OSGi-paket), extraherar deras `manifest.xml` (som innehåller de versionshanteringsberoenden som OSGi-paketet är beroende av) och verifierar AEM-instansens export av dessa beroenden med rätt versioner.
+   Den här valideringen undersöker paketet för alla JAR-filer (OSGi-paket), extraherar deras `manifest.xml` (som innehåller de versionshanteringsberoenden som OSGi-paketet är beroende av) och verifierar den AEM instansexporten som anger beroenden med rätt versioner.
 
    **Hur det rapporteras**
 
-   Versionsberoenden som inte kan uppfyllas av AEM-instansen visas i **aktivitetsloggen** för pakethanteraren.
+   Alla versionshanteringsberoenden som inte kan uppfyllas av den AEM instansen visas i **aktivitetsloggen** för pakethanteraren.
 
    **Fellägen**
 
@@ -472,7 +476,7 @@ Dessa alternativ beskrivs nedan.
 
    **Vad är markerat**
 
-   Valideringen avgör om paketet som installeras innehåller en fil som redan finns i AEM-målinstansen.
+   Valideringen avgör om det paket som installeras innehåller en fil som redan finns i AEM.
 
    Om det till exempel finns en övertäckning på `/apps/sling/servlet/errorhandler/404.jsp`är det ett paket som innehåller `/libs/sling/servlet/errorhandler/404.jsp`så att den ändrar den befintliga filen på `/libs/sling/servlet/errorhandler/404.jsp`.
 
@@ -512,14 +516,14 @@ Dessa alternativ beskrivs nedan.
 
    >[!CAUTION]
    >
-   >Vi rekommenderar att paketen inte påverkar AEM-tillhandahållna ACL:er eftersom detta kan leda till oväntade produktbeteenden.
+   >Som god praxis rekommenderas att paket inte påverkar AEM-tillhandahållna åtkomstkontrollistor eftersom detta kan leda till oväntade produktbeteenden.
 
 #### Utför validering {#performing-validation}
 
 Paketvalidering kan göras på två olika sätt:
 
 * Via pakethanterarens gränssnitt
-* Via HTTP POST-begäran, till exempel med cURL
+* Via HTTP-POST-begäran, till exempel med cURL
 
 >[!NOTE]
 >
@@ -538,9 +542,9 @@ Paketvalidering kan göras på två olika sätt:
 
 1. De valda valideringarna körs sedan. Resultaten visas i aktivitetsloggen för Package Manager.
 
-**Paketvalidering via HTTP POST-begäran**
+**Paketvalidering via HTTP-POST-begäran**
 
-POST-begäran har följande format.
+Begäran om POST har följande format.
 
 ```
 https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImports,overlays,acls
@@ -553,6 +557,7 @@ https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImpor
 >* `osgiPackageImports`
 >* `overlays`
 >* `acls`
+
 >
 >
 Standardvärdet är `type``osgiPackageImports` om det inte skickas.
@@ -569,7 +574,7 @@ Följande är ett exempel på hur du använder cURL för att köra en paketvalid
 
 >[!NOTE]
 >
->Svaret på en HTTP POST-begäran för validering är ett JSON-objekt med valideringsresultatet.
+>Svaret på en begäran om validering av HTTP-POST blir ett JSON-objekt med valideringsresultatet.
 
 ### Installerar paket {#installing-packages}
 
@@ -591,6 +596,7 @@ När du har överfört ett paket måste du installera innehållet. Om paketinneh
    >
 * Se en lista med paketets innehåll:\
    >  Öppna paketet och klicka på **Innehåll**.
+
 >
 
 
@@ -640,7 +646,7 @@ Om instansen körs och du lägger till ett paket till `install` mappen startar �
 
 ### Avinstallerar paket {#uninstalling-packages}
 
-Med AEM kan du avinstallera paket. Den här åtgärden återställer innehållet i databasen som påverkas av ögonblicksbilden som skapades omedelbart före paketinstallationen.
+AEM kan du avinstallera paket. Den här åtgärden återställer innehållet i databasen som påverkas av ögonblicksbilden som skapades omedelbart före paketinstallationen.
 
 >[!NOTE]
 >
@@ -666,6 +672,7 @@ Så här tar du bort ett paket från pakethanterarlistan:
 
    * Klicka på **Ta bort** i verktygsfältmenyn.
    * Högerklicka och välj **Ta bort**.
+
    ![paket:ta bort](assets/packagesdelete.png)
 
 1. AEM ber om en bekräftelse på att du vill ta bort paketet. Bekräfta borttagningen genom att klicka på **OK** .
@@ -683,7 +690,7 @@ Replikera innehållet i ett paket för att installera det på publiceringsinstan
 1. Klicka på ikonen eller på namnet på det paket som du vill replikera för att expandera det.
 1. Välj **Replikera** i listrutan **Mer** i verktygsfältet.
 
-## Paketresurs {#package-share}
+## Paketdelning {#package-share}
 
 Paketresursen är en centraliserad server som är allmänt tillgänglig för delning av innehållspaket.
 
@@ -702,7 +709,7 @@ Så här får du åtkomst till Paketresurs:
 * Använda [inloggningssidan](#signing-in-to-package-share)
 * Första gången du använder inloggningssidan måste du:
 
-   * [Registrera dig för ett Adobe-ID](#registering-for-package-share) och/eller [validera ditt befintliga Adobe-ID](#validating-your-adobe-id)
+   * [Registrera dig för en Adobe ID](#registering-for-package-share) och/eller [validera din befintliga Adobe ID](#validating-your-adobe-id)
    * så att ditt [paketdelningskonto](#package-share-account) kan skapas
 
 >[!NOTE]
@@ -711,22 +718,23 @@ Så här får du åtkomst till Paketresurs:
 
 #### Logga in på paketresurs {#signing-in-to-package-share}
 
-1. På välkomstskärmen i AEM klickar du på **Verktyg** -> **Distribution**
+1. På välkomstskärmen klickar du på **Verktyg** -> **Distribution**
 1. Välj sedan **Paketresurs**. Du måste antingen:
 
-   * logga in med ditt Adobe ID
-   * [Skapa ett Adobe-ID](#registering-for-package-share)
+   * logga in med din Adobe ID
+   * [Skapa en Adobe ID](#registering-for-package-share)
+
    >[!NOTE]
    >
-   >Första gången du loggar in med ditt Adobe ID måste du slutföra [valideringen av din e-postadress](#validating-your-adobe-id).
+   >Första gången du loggar in med din Adobe ID måste du slutföra [valideringen av din e-postadress](#validating-your-adobe-id).
 
    >[!NOTE]
    >
    >Om du har glömt lösenordet kan du använda **inloggningsfunktionen?** i inloggningsdialogrutan.
 
-#### Validerar ditt Adobe-ID {#validating-your-adobe-id}
+#### Validera din Adobe ID {#validating-your-adobe-id}
 
-Första gången du loggar in på Package Share med ditt Adobe ID valideras din e-postadress.
+Första gången du loggar in på Package Share med din Adobe ID valideras din e-postadress.
 
 1. Du får ett e-postmeddelande med en länk.
 1. Du måste klicka på den här länken.
@@ -743,13 +751,13 @@ Första gången du loggar in på Package Share med ditt Adobe ID valideras din e
 
 #### Registrerar för paketresurs {#registering-for-package-share}
 
-Om du behöver ha tillgång till Package Share måste du registrera dig för ett Adobe ID:
+Om du behöver ha tillgång till Package Share måste du registrera dig för en Adobe ID:
 
-* Inloggningssidan [för](#signing-in-to-package-share) paketdelning innehåller en länk för att registrera ett Adobe-ID.
-* Du kan registrera dig för ett Adobe ID från vissa Adobe-program.
-* Du kan även registrera dig online på [Adobe Sign-sidan](https://www.adobe.com/cfusion/membership/index.cfm?nf=1&nl=1).
+* Inloggningssidan [för](#signing-in-to-package-share) paketdelning innehåller en länk för att registrera en Adobe ID.
+* Du kan registrera dig för en Adobe ID från vissa datorprogram från Adobe.
+* Du kan även registrera dig online på [Adobe Sign In-sidan](https://www.adobe.com/cfusion/membership/index.cfm?nf=1&amp;nl=1).
 
-Du kan skapa ett Adobe-ID genom att ange:
+Man kan skapa en Adobe ID genom att tillhandahålla:
 
 * din e-postadress
 * ett valfritt lösenord
@@ -780,13 +788,13 @@ För att undvika det här problemet kan du få åtkomst till paketresursen från
 
 Paketresursen är för närvarande inte tillgänglig om ditt företag kör en http-proxy som kräver autentisering.
 
-Paketresursen är bara tillgänglig när din AEM-server har åtkomst till Internet utan att någon autentisering krävs. Om du vill konfigurera proxyn för alla tjänster som använder http-klienten (inklusive paketresursen) använder du [OSGi-konfigurationen för Day Commons HTTP Client 3.1-paketet](/help/sites-deploying/osgi-configuration-settings.md).
+Paketresursen är bara tillgänglig när AEM har åtkomst till Internet utan att någon autentisering krävs. Om du vill konfigurera proxyn för alla tjänster som använder http-klienten (inklusive paketresursen) använder du [OSGi-konfigurationen för Day Commons HTTP Client 3.1-paketet](/help/sites-deploying/osgi-configuration-settings.md).
 
 ### Delning i insida {#inside-package-share}
 
 Paket i paketresurspaket är ordnade i trädunderträd:
 
-* Adobe-paket från Adobe.
+* Adobe paket från Adobe.
 * Delade paket som har tillhandahållits av andra företag och har offentliggjorts av Adobe.
 * Företagspaket som är privata.
 
@@ -803,9 +811,9 @@ Du kan också ändra villkorsoperatorn från OR till AND till höger om filtersa
 
 ### Hämta och installera paket från paketresurs {#downloading-and-installing-packages-from-package-share}
 
-Om du vill hämta paket från Package Share och installera dem på din lokala instans är det enklare att få åtkomst till Package Share från din AEM-instans. Paketet laddas ned och registreras omedelbart i pakethanteraren där det kan installeras.
+Om du vill hämta paket från paketresursen och installera dem på den lokala instansen är det enklare att komma åt paketresursen från AEM. Paketet laddas ned och registreras omedelbart i pakethanteraren där det kan installeras.
 
-1. På AEM-välkomstskärmen klickar du på **Verktyg** och väljer sedan **Paketdelning** för att öppna sidan Paketdelning.
+1. På AEM välkomstskärm klickar du på **Verktyg** och väljer sedan **Paketdelning** för att öppna sidan Paketdelning.
 1. Logga in på Paketresurs med din kontoinformation. Landningssidan visas med en lista över Adobe-mappen, den delade mappen och en som är specifik för ditt företag.
 
    >[!NOTE]
@@ -814,7 +822,7 @@ Om du vill hämta paket från Package Share och installera dem på din lokala in
 
 1. Navigera till paketet som du vill hämta och klicka på **Hämta**.
 
-1. Gå tillbaka eller navigera till **Package Manager** på din AEM-instans. Navigera sedan till det paket du just laddat ned.
+1. Gå tillbaka eller navigera till **Package Manager** i AEM. Navigera sedan till det paket du just laddat ned.
 
    >[!NOTE]
    >
@@ -824,7 +832,7 @@ Om du vill hämta paket från Package Share och installera dem på din lokala in
    I Package Manager på den lokala instansen visas paketet också under:
    **Paket** > **Allmänt** > **Programfixar**
 
-1. Klicka på **Installera** för att installera paketet i den lokala AEM-installationen.
+1. Klicka på **Installera** för att installera paketet i den lokala AEM.
 
    >[!NOTE]
    Om paketet redan har installerats på din instans visas indikatorn för **installerad** bredvid paketet i stället för knappen **Installera** .
@@ -844,7 +852,7 @@ Om du vill hämta paket från Package Share och installera dem på din lokala in
 
 Med Paketdelning kan du överföra paket till företagets interna del av paketresursen. Detta gör dem tillgängliga för delning inom företaget.
 
-Dessa paket är *inte* tillgängliga för den allmänna AEM-communityn, men är tillgängliga för alla användare som är registrerade hos ditt företag.
+Dessa paket är *inte* tillgängliga för AEM användare, men är tillgängliga för alla användare som är registrerade hos ditt företag.
 
 Så här överför du paket till företagets interna paketresurs:
 
@@ -864,7 +872,7 @@ Paket i pakethanterarens hemlista eller i andra mappar kan inte delas.
 
 1. Klicka på **Dela** för att överföra paketet till företagets interna paketresurs.
 
-   AEM visar status och anger när paketet har överförts. Sedan kan du klicka på **x** (övre högra hörnet) för att stänga fönstret **Dela paket** .
+   AEM visar statusen och anger när paketet har överförts. Sedan kan du klicka på **x** (övre högra hörnet) för att stänga fönstret **Dela paket** .
 
 1. När överföringen är klar kan du navigera till företagets interna mapp och se det paket du just delade.
 
@@ -885,5 +893,5 @@ Du kan bara ta bort paket som du har överfört genom att göra så här:
 
 ### Göra paket halvprivata {#making-packages-semi-private}
 
-Du kan dela paket utanför organisationen, men inte offentligt. Dessa paket betraktas som semiprivata. Om du vill dela dessa halvprivata paket behöver du hjälp från Adobe Support. Du kan göra detta genom att öppna en biljett där Adobe Support begär att ett paket ska vara tillgängligt utanför din organisation. De kommer att be dig om en lista över de Adobe ID:n som du vill ge åtkomst till dina paket.
+Du kan dela paket utanför organisationen, men inte offentligt. Dessa paket betraktas som semiprivata. Om du vill dela dessa halvprivata paket behöver du hjälp från Adobe Support. Du kan göra detta genom att öppna en biljett där Adobe Support begär att ett paket ska vara tillgängligt utanför din organisation. De kommer att be dig om en lista över Adobe ID som du vill ge åtkomst till dina paket.
 
