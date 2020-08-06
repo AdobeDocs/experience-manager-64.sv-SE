@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 244cd43c-a573-495d-b80c-b97ba9d19b75
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +26,7 @@ Arbetet med AEM Communities har utvecklats från att vara starkt beroende av Jav
 
 Ytterligare flexibilitet när det gäller att arbeta med användargenererat innehåll (UGC) är via API:t SocialResourceProvider, som eliminerar behovet av att känna till vilket [SRP](srp.md) -alternativ som valdes för distributionen.
 
-Nedan följer olika riktlinjer för kodning och god praxis för utvecklare av AEM Communities:
+Nedan följer olika riktlinjer för kodning och metodtips för AEM Communities-utvecklare:
 
 ### Kod {#code}
 
