@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: b9618913-5433-4baf-9ff6-490a26860505
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1128'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ Om du vill publicera din e-post till e-postleverantören måste du utföra följ
 
 ## Skapa ett e-postmeddelande {#creating-an-email}
 
-Ett e-postmeddelande eller nyhetsbrev som du vill publicera till en e-posttjänst kan skapas under en kampanj med mallen **Geometrixx Newsletter** . Du kan också använda mallen **Geometrixx Outdoor E-Mail** . Exempel på e-post/nyhetsbrev som baseras på mallen **Geometrixx Outdoor E-Mail** finns på `https://<hostname>:<port>/cf#/content/campaigns/geometrixx-outdoors/e-mails.html`.
+Ett e-postmeddelande eller nyhetsbrev som du vill publicera till en e-posttjänst kan skapas under en kampanj med hjälp av mallen **Geometrixx Newsletter** . Du kan också använda **Geometrixx Outdoors-e-postmallen** . Exempel på e-post/nyhetsbrev som baseras på **Geometrixx Outdoors-e-postmallen** finns på `https://<hostname>:<port>/cf#/content/campaigns/geometrixx-outdoors/e-mails.html`.
 
 Så här skapar du ett nytt e-postmeddelande som publiceras till den konfigurerade e-posttjänsten:
 
@@ -109,6 +112,7 @@ Med **e-postverktygskomponenten** för ExactTarget kan du lägga till fler e-pos
    >
    >
 * Två av e-postverktygen krävs: **Fysisk e-postadress (obligatoriskt)** och **profilcenter (obligatoriskt)**. När e-postmeddelandet publiceras på ExactTarget läggs dessa två e-postverktyg till längst ned i varje e-post som standard.
+
 >
 
 
@@ -133,7 +137,7 @@ Så här använder du e-posttjänstkonfigurationen i ett nyhetsbrev:
 1. Skapa en konfiguration för e-posttjänsten.
 1. Öppna e-post/nyhetsbrev.
 1. Öppna inställningarna för e-post/nyhetsbrev genom att antingen klicka på **Inställningar** eller genom att klicka på **Sidegenskaper i** sidosparken.
-1. Klicka på **Lägg till tjänst** på fliken **Molntjänster** . Du ser listan över tjänster. Välj önskad konfiguration - antingen **ExactTarget** eller **Silverpop** - från listan i listrutan.
+1. Klicka på **Lägg till tjänst** på fliken **Cloud Services** . Du ser listan över tjänster. Välj önskad konfiguration - antingen **ExactTarget** eller **Silverpop** - från listan i listrutan.
 
    ![chlimage_1-5](assets/chlimage_1-5.jpeg)
 
@@ -146,7 +150,7 @@ E-post/nyhetsbrev kan publiceras till din e-posttjänst genom att följa dessa s
 1. Öppna e-postmeddelandet.
 1. Innan du publicerar ett e-postmeddelande måste du kontrollera att du har tillämpat rätt konfiguration i e-postmeddelandet.
 1. Klicka på **Publicera**. Då öppnas fönstret **Publish Newsletter To E-mail Service Provider** .
-1. Fyll i fältet **Namn** på nyhetsbrev. E-postmeddelandet/nyhetsbrevet publiceras till en e-postleverantör med det här namnet. Om inget e-postnamn anges publiceras e-postmeddelandet med sidnamnet för nyhetsbrevet i AEM.
+1. Fyll i fältet **Namn** på nyhetsbrev. E-postmeddelandet/nyhetsbrevet publiceras till en e-postleverantör med det här namnet. Om inget e-postnamn anges publiceras e-postmeddelandet med det sidnamn som nyhetsbrevet i AEM har.
 1. Klicka på **Publicera**.
 
    ![chlimage_1-6](assets/chlimage_1-6.jpeg)
@@ -159,7 +163,7 @@ E-post/nyhetsbrev kan publiceras till din e-posttjänst genom att följa dessa s
 >
 >Om ett e-postmeddelande/nyhetsbrev publiceras med samma namn som ett redan publicerat e-postmeddelande/nyhetsbrev ersätts inte det tidigare e-postmeddelandet/nyhetsbrevet. I stället skapas ett nytt e-postnyhetsbrev med samma namn (ID:n för två nyhetsbrev är dock olika).
 >
->När du publicerar e-post/nyhetsbrev till e-postleverantören publiceras även e-post/nyhetsbrevet till AEM-publiceringsinstansen.
+>När du publicerar e-post/nyhetsbrev till e-postleverantören publiceras även e-post/nyhetsbrevet till den AEM publiceringsinstansen.
 
 
 ### Uppdatera ett publicerat e-postmeddelande {#updating-a-published-e-mail}
