@@ -1,8 +1,8 @@
 ---
-title: Ändra språkområdet för arbetsytan i AEM Forms
-seo-title: Ändra språkområdet för arbetsytan i AEM Forms
-description: Hur man ändrar arbetsytan i AEM Forms för att lokalisera text, komprimerade kategorier, köer och processer samt datumväljaren i gränssnittet.
-seo-description: Hur man ändrar arbetsytan i AEM Forms för att lokalisera text, komprimerade kategorier, köer och processer samt datumväljaren i gränssnittet.
+title: Ändra språkområdet för användargränssnittet i AEM Forms arbetsyta
+seo-title: Ändra språkområdet för användargränssnittet i AEM Forms arbetsyta
+description: Så här ändrar du arbetsytan i AEM Forms för att lokalisera text, komprimerade kategorier, köer och processer samt datumväljaren i gränssnittet.
+seo-description: Så här ändrar du arbetsytan i AEM Forms för att lokalisera text, komprimerade kategorier, köer och processer samt datumväljaren i gränssnittet.
 uuid: f8e7d399-98d9-4655-b51f-0346a5713f06
 contentOwner: robhagat
 content-type: reference
@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# Ändra språkområdet för arbetsytan i AEM Forms {#changing-the-locale-of-aem-forms-workspace-user-interface}
+# Ändra språkområdet för användargränssnittet i AEM Forms arbetsyta {#changing-the-locale-of-aem-forms-workspace-user-interface}
 
-Arbetsytan i AEM Forms har stöd för engelska, franska, tyska och japanska. Det gör det också möjligt att lokalisera användargränssnittet för AEM Forms-arbetsytan till vilket annat språk som helst.
+AEM Forms arbetsyta har stöd för engelska, franska, tyska och japanska. Det gör det även möjligt att lokalisera användargränssnittet för AEM Forms-arbetsytan till andra språk.
 
 Så här lokaliserar du användargränssnittet för AEM Forms-arbetsytan till det språk du vill:
 
@@ -28,11 +28,11 @@ Så här lokaliserar du användargränssnittet för AEM Forms-arbetsytan till de
 * Lokalisera dolda kategorier, köer och processer.
 * Lokalisera datumväljare
 
-Innan du utför ovanstående steg måste du följa de steg som beskrivs i [Allmänna steg för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md)av arbetsytan i AEM Forms.
+Innan du utför ovanstående steg måste du följa de steg som beskrivs i [Allmänna steg för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md)av AEM Forms arbetsyta.
 
 >[!NOTE]
 >
->Information om hur du ändrar språket för inloggningsskärmen i AEM Forms-arbetsytan finns i [Skapa en ny inloggningsskärm](/help/forms/using/creating-new-login-screen.md).
+>Information om hur du ändrar språk för inloggningsskärmen i AEM Forms finns i [Skapa en ny inloggningsskärm](/help/forms/using/creating-new-login-screen.md).
 
 ## Lokalisera text {#localizing-text}
 
@@ -46,13 +46,13 @@ Utför följande steg för att lägga till stöd för språket *Nytt* och webbl�
 1. Kopiera filen `translation.json`från platsen `/apps/ws/locales/en-US` till platsen `/apps/ws/locales/nw`.
 1. Navigera till `/apps/ws/locales/nw` och öppna `translation.json` för redigering. Gör språkspecifika ändringar i filen translation.json.
 
-   Följande exempel innehåller filen translation.json för engelska och franska på arbetsytan AEM Forms.
+   Följande exempel innehåller filen translation.json för engelska och franska i AEM Forms arbetsyta.
 
    ![translation_json_in_en](assets/translation_json_in_en.png) ![translation_json_in_fr](assets/translation_json_in_fr.png)
 
 ## Lokalisera komprimerade kategorier, köer och processer {#localizing-collapsed-categories-queues-and-processes}
 
-På arbetsytan i AEM Forms används bilder för att visa rubriker i kategorier, köer och processer. Du behöver ett utvecklingspaket för att lokalisera dessa rubriker. Mer information om hur du skapar utvecklingspaket finns i [Skapa kod för arbetsytan i AEM Forms.](introduction-customizing-html-workspace.md#building-html-workspace-code)
+På arbetsytan i AEM Forms används bilder för att visa rubriker för kategorier, köer och processer. Du behöver ett utvecklingspaket för att lokalisera dessa rubriker. Mer information om hur du skapar utvecklingspaket finns i [Skapa AEM Forms-kod för arbetsytan.](introduction-customizing-html-workspace.md#building-html-workspace-code)
 
 I följande steg antas de nya lokaliserade bildfilerna vara *Categories_nw.png*, *Queue_nw.png* och *Processes_nw.png*. Bildernas rekommenderade bredd är 19px.
 
@@ -111,7 +111,7 @@ Utför följande steg för att lokalisera bilderna:
 
 ## Lokaliserar datumväljaren {#localizing-date-picker}
 
-Du måste ha ett utvecklingspaket för att lokalisera API:t *datepicker *. Mer information om hur du skapar utvecklingspaket finns i [Skapa kod](introduction-customizing-html-workspace.md#building-html-workspace-code)för arbetsytan i AEM Forms.
+Du måste ha ett utvecklingspaket för att lokalisera API:t *datepicker *. Mer information om hur du skapar utvecklingspaket finns i [Skapa AEM Forms-arbetsytekod](introduction-customizing-html-workspace.md#building-html-workspace-code).
 
 1. Hämta och extrahera [jQuery-gränssnittspaketet](https://jqueryui.com/download/all/), navigera till *&lt;extraherat jquery-gränssnittspaket>*\jquery-ui-1.10.2.zip\jquery-ui-1.10.2\ui\i18n.
 1. Kopiera filen jquery.ui.datepicker-nw.js för språkkod nu till apps/ws/js/libs/jqueryui och gör språkspecifika ändringar i filen.
@@ -126,6 +126,7 @@ Du måste ha ett utvecklingspaket för att lokalisera API:t *datepicker *. Mer i
 
    * `js/runtime/views/outofoffice.js`
    * `js/runtime/views/searchtemplatedetails.js`
+
    I exempelkoden nedan visas hur du lägger till posten för jquery.ui.datepicker-nw.js:
 
    ```
@@ -167,6 +168,7 @@ Du måste ha ett utvecklingspaket för att lokalisera API:t *datepicker *. Mer i
 
    * apps\ws\js\runtime\views\searchtemplatedetails.js
    * apps\ws\js\runtime\views\outofoffice.js
+
    Ändra följande kod för att lägga till den nya språkinställningen:
 
    ```
