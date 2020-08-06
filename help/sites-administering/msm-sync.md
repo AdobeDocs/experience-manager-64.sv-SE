@@ -262,7 +262,7 @@ Den nya utrullningskonfigurationen är sedan tillgänglig för dig när du stäl
 
 ### Exkludera egenskaper och nodtyper från synkronisering {#excluding-properties-and-node-types-from-synchronization}
 
-Du kan konfigurera flera OSGi-tjänster som stöder motsvarande synkroniseringsåtgärder så att de inte påverkar specifika nodtyper och egenskaper. Många egenskaper och delnoder som rör AEM:s interna funktion bör till exempel inte inkluderas i en live-kopia. Endast det innehåll som är relevant för sidans användare ska kopieras.
+Du kan konfigurera flera OSGi-tjänster som stöder motsvarande synkroniseringsåtgärder så att de inte påverkar specifika nodtyper och egenskaper. Många egenskaper och delnoder som rör AEM interna funktion ska till exempel inte tas med i en live-kopia. Endast det innehåll som är relevant för sidans användare ska kopieras.
 
 När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information och rekommendationer finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md) .
 
