@@ -8,6 +8,9 @@ topic-tags: author
 discoiquuid: null
 translation-type: tm+mt
 source-git-commit: 19dcda357b34e7160792d43cb9335fc3be0dedbc
+workflow-type: tm+mt
+source-wordcount: '2745'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Det här dokumentet innehåller anvisningar om hur du installerar och konfigurer
 ## Om {#about}
 
 Det här dokumentet är avsett för administratörer och utvecklare som ansvarar för att installera, konfigurera, administrera eller distribuera Workbench.
-Här finns också information som behövs för att konfigurera systemet så att det stöder de uppgraderade Adobe® AEM-formulären® Enterprise Suite (ES) Update 1 (8.2.x) och Adobe® AEM-formulären® Enterprise Suite 2 (ES2).
+Här finns också information som behövs för att konfigurera systemet så att det stöder de uppgraderade Adobe® AEM forms® Enterprise Suite (ES) Update 1 (8.2.x) och Adobe® AEM forms® Enterprise Suite 2 (ES2).
 Informationen baseras på antagandet att alla som läser det här dokumentet känner till operativsystemet Microsoft® Windows®.
 
 ## Ytterligare information {#additional-information}
@@ -37,30 +40,30 @@ Resurserna i den här tabellen kan hjälpa dig att lära dig mer om och komma ig
   </tr> 
   <tr> 
    <td><p>Allmän information om AEM Forms och hur det integreras med andra Adobe-produkter</p> </td> 
-   <td><p><a href="http://adobe.com/go/learn_aemforms_introduction_65">Översikt över</a><br /> AEM-formulär <br /> </p> </td> 
+   <td><p><a href="http://adobe.com/go/learn_aemforms_introduction_65">AEM Forms - översikt</a><br /> <br /> </p> </td> 
   </tr> 
   <tr> 
-   <td><p>En självstudiekurs för att skapa ett AEM Forms-program och testa det på arbetsytan</p> </td> 
-   <td><p><a href="http://adobe.com/go/learn_aemforms_firstapp_ds_65">Skapa ditt första AEM Forms-program</a><br /><br /> </p> </td> 
+   <td><p>En självstudiekurs om hur du skapar ett AEM Forms-program och testar det på arbetsytan</p> </td> 
+   <td><p><a href="http://adobe.com/go/learn_aemforms_firstapp_ds_65">Skapa ditt första AEM Forms-program</a><br /> <br /> </p> </td> 
   </tr> 
   <tr> 
    <td><p>All tillgänglig dokumentation för AEM Forms</p> </td> 
-   <td><p><a href="http://adobe.com/go/learn_aemforms_introduction_65">AEM Forms-dokumentation</a><br /><br /> </p> </td> 
+   <td><p><a href="http://adobe.com/go/learn_aemforms_introduction_65">AEM Forms-dokumentation</a><br /> <br /> </p> </td> 
   </tr> 
   <tr> 
    <td><p>Andra tjänster och produkter som kan integreras med AEM Forms</p> </td> 
-   <td><p><a href="http://www.adobe.com/">www.adobe.com</a><br /><br /> </p> </td> 
+   <td><p><a href="http://www.adobe.com/">www.adobe.com</a><br /> <br /> </p> </td> 
   </tr> 
   <tr> 
    <td><p>Lappa uppdateringar, tekniska anteckningar och ytterligare information om den här produktversionen</p> </td> 
-   <td><p><a href="https://www.adobe.com/account/sign-in.supportportal.html">Kontakta Adobe Enterprise Support</a><br /><br /> </p> </td> 
+   <td><p><a href="https://www.adobe.com/account/sign-in.supportportal.html">Kontakta Adobe Enterprise Support</a><br /> <br /> </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->Flex Workspace används inte i AEM Forms. Det finns för AEM Forms-versionen.
+>Flex Workspace används inte i AEM Forms. Den finns för AEM Forms.
 
 ## Innan du installerar {#before-you-install}
 
@@ -74,7 +77,7 @@ Följande bild visar Workbench-installationen:
 
 >[!NOTE]
 >
->AEM Forms-servern kräver ett separat installationsprogram. Mer information finns i AEM Forms om JEE-installation.
+>AEM Forms-servern kräver ett separat installationsprogram. Mer information finns i installationsdokumentationen för AEM Forms om JEE.
 
 ## Systemkrav {#system-prerequisites}
 
@@ -110,7 +113,7 @@ Diskutrymme för installation:
 
 ### Plattformar som stöds {#supported-platforms}
 
-Se den fullständiga listan över plattformar som stöds för Workbench på [plattformar](http://adobe.com/go/learn_aemforms_supportedplatforms_65)som stöds i AEM Forms.
+Se den fullständiga listan över plattformar som stöds för Workbench på [AEM Forms Supported Platforms](http://adobe.com/go/learn_aemforms_supportedplatforms_65).
 
 ## Installationsfrågor för Designer {#designer-installation-considerations}
 
@@ -125,14 +128,13 @@ Tabellen nedan innehåller en fullständig lista över möjliga installationssce
   </tr> 
   <tr> 
    <td><p>Acrobat Pro eller Acrobat Pro Extended (inkluderar Designer)</p> </td> 
-   <td><p>Inget.  
-Workbench-installationen identifierar en instans av Designer på datorn som installerats med antingen Acrobat Pro eller Acrobat Pro Extended.
+   <td><p>Inget. Workbench-installationen identifierar en instans av Designer på datorn som installerats med antingen Acrobat Pro eller Acrobat Pro Extended.
 Olika versioner av Designer kan finnas samtidigt i samma system, till exempel Designer 8.2.x och 9.0.x. Du behöver inte avinstallera den version av Designer som har installerats med Acrobat 10 Pro eller Acrobat 10 Pro Extended.
 <br /> <br /> </p> </td> 
   </tr> 
   <tr> 
    <td><p>Designer (fristående)</p> </td> 
-   <td><p>Inget. Den version av Designer som ingår i Workbench är endast engelsk. Installationsprogrammet för Workbench kommer inte att installera om en ny version av Designer. Istället kommer en uppdaterad version, som medföljer installationsprogrammet för Workbench, att korrigeras. <br /> På så sätt kan du även använda din lokaliserade version av Designer i Workbench. <br /> </p> </td> 
+   <td><p>Inget. Den version av Designer som ingår i Workbench är endast engelsk. Installationsprogrammet för Workbench kommer inte att installera om en ny version av Designer. Istället kommer en uppdaterad version, som medföljer installationsprogrammet för Workbench, att korrigeras. På så sätt kan du även använda din lokaliserade version av Designer i Workbench.<br /> <br /> </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -140,13 +142,13 @@ Olika versioner av Designer kan finnas samtidigt i samma system, till exempel De
 ### Avinstallera Designer (fristående) {#uninstall-designer-standalone}
 
 1. Gå till **Kontrollpanelen > Program > Program och funktioner**
-1. Välj **Adobe Designer** i listan Installerade program.
+1. I listan Installerade program väljer du **Adobe Designer**.
 1. Klicka på **Avinstallera** och sedan på **Ja**.
 
 ### Så här avinstallerar du Designer (fristående) i Windows 10 {#uninstall-designer-standalone-windows10}
 
 1. Gå till **Kontrollpanelen > Program > Program och funktioner**
-1. Välj **Adobe Designer** i listan Installerade program.
+1. I listan Installerade program väljer du **Adobe Designer**.
 1. Klicka på **Avinstallera** och sedan på **Ja**.
 
 ### Avinstallera Designer som ingår i Acrobat Pro eller Acrobat Pro Extended {#uninstall-designer-included-with-acrobatpro-or-acrobatextended}
@@ -155,7 +157,7 @@ Olika versioner av Designer kan finnas samtidigt i samma system, till exempel De
 1. I listan Installerade program väljer du **Adobe Acrobat Pro** eller **Adobe Acrobat Pro Extended**.
 1. Klicka på **Ändra** och sedan på **Nästa**.
 1. Välj **Ändra** och klicka sedan på **Nästa**.
-1. Välj **Adobe Designer**, välj **Den här funktionen är inte tillgänglig** och klicka sedan på **Nästa**
+1. Markera **Adobe Designer**, markera **Den här funktionen är inte tillgänglig** och klicka sedan på **Nästa**
 1. Click **Update** and then click **Finish**
 
 ### Avinstallera Designer som ingår i Acrobat Pro eller Acrobat Pro Extended i Windows 10 {#uninstall-designer-included-with-acrobatpro-or-acrobatextended-windows10}
@@ -164,7 +166,7 @@ Olika versioner av Designer kan finnas samtidigt i samma system, till exempel De
 1. I listan Installerade program väljer du **Adobe Acrobat Pro** eller **Adobe Acrobat Pro Extended**.
 1. Klicka på **Ändra** och sedan på **Nästa**.
 1. Välj **Ändra** och klicka sedan på **Nästa**.
-1. Välj **Adobe Designer**, välj **Den här funktionen är inte tillgänglig** och klicka sedan på **Nästa**
+1. Markera **Adobe Designer**, markera **Den här funktionen är inte tillgänglig** och klicka sedan på **Nästa**
 1. Click **Update** and then click **Finish**
 
 ## Installerar Workbench {#installing-workbench}
@@ -180,6 +182,7 @@ Innan du installerar Workbench måste du kontrollera att miljön innehåller den
 1. Gör något av följande:
    * Navigera till katalogen \workbench på installationsmediet och dubbelklicka på filen run_windows_installer.bat.
    * Ladda ned och expandera Workbench till filsystemet. Navigera sedan till katalogen \workbench och dubbelklicka på filen run_windows_installer.bat.
+
    >[!IMPORTANT]
    >
    >Installationsprogrammet för Workbench körs bara från en dvd-skiva eller lokal enhet. Den kan inte köras från en fjärrplats.
@@ -190,7 +193,7 @@ Innan du installerar Workbench måste du kontrollera att miljön innehåller den
 
 1. Klicka på Nästa på skärmen Introduktion.
 1. Läs produktlicensavtalet, välj Jag accepterar villkoren i licensavtalet och klicka sedan på Nästa.
-1. (Valfritt) Välj Installera Adobe Designer om du behöver det här verktyget för att skapa och ändra formulär.
+1. (Valfritt) Markera Installera Adobe Designer om du behöver det här verktyget för att skapa och ändra formulär.
 
    >[!NOTE]
    >
@@ -240,6 +243,7 @@ Workbench har stöd för uppdateringsfunktionen för att säkerställa att du an
 * WST XML Core [org.eclipse.wst.xml_core.feature.group]: Detta finns i Eclipse XML Editors and Tools [org.eclipse.wst.xml_ui.feature.group]
 
 * Plug-in &#39;org.apache.Commons.lang_2.3.0&#39; [n/a]: Detta finns i &quot;Mylyn Task List (Required)&quot; [org.eclipse.mylyn_feature.feature.group]
+
    </p> </td> 
   </tbody>
   </table>
@@ -256,15 +260,15 @@ Workbench har stöd för uppdateringsfunktionen för att säkerställa att du an
 
    >[!NOTE]
    >
-   >Med plugin-programmet Adobe AEM Forms Discovery för Flash Builder kan du snabbt skapa Adobe Flex- och AIR-program som anropar en tjänst som är en del av AEM Forms via dess slutpunkter. Information om hur du installerar och uppdaterar plugin-programmet finns på Adobes webbplats på **Link Required**.
+   >Med insticksprogrammet Adobe AEM Forms Discovery för Flash Builder kan du snabbt skapa Adobe Flex- och AIR-program som anropar en tjänst som ingår i AEM Forms via dess fjärranslutna slutpunkter. Information om hur du installerar och uppdaterar plugin-programmet finns på Adobe webbplats på **Link Required**.
 
 ### Konfigurera och logga till servern {#configuring-and-logging-server}
 
-Om du vill använda Workbench måste du ha en instans av AEM Forms igång, vanligtvis på en separat dator. Du måste ha ett användarnamn och lösenord för att kunna logga in på AEM Forms, samt information om var servern finns.
+Om du vill använda Workbench måste du ha en instans av AEM Forms igång, vanligtvis på en separat dator. Du måste ha ett användarnamn och lösenord för att logga in på AEM Forms, samt information om serverns plats.
 
 >[!NOTE]
 >
->Om du konfigurerade AEM Forms att använda databasprovidern EMC Documentum eller IBM FileNet och du vill logga in i en annan databas än den som är konfigurerad som standard i administrationskonsolen för AEM-formulär anger du användarnamnet som username@Repository.
+>Om du har konfigurerat AEM Forms att använda databasprovidern EMC Documentum eller IBM FileNet och du vill logga in i en annan databas än den som är konfigurerad som standard i administrationskonsolen för formulär, anger du användarnamnet som username@Repository.
 
 ### Konfigurera timeout-inställningar {#configuring-timeout-settings}
 
@@ -276,7 +280,7 @@ Om du vill ansluta Workbench till en AEM Forms-server via HTTPS måste du se til
 
 >[!NOTE]
 >
->[Workbench_HOME] representerar katalogen där du installerade Workbench. Standardplatsen är C:\Program Files (x86)\Adobe Experience Manager Forms Workbench.
+>[Workbench_HOME] representerar katalogen där du installerade Workbench. Standardplatsen är C:\Program Files (x86)\Adobe Experience Manager forms Workbench.
 
 Kontrollera att du ansluter till HTTPS med det namn som anges i certifikatet. Det här namnet är vanligtvis det fullständiga, kvalificerade värdnamnet.
 
@@ -320,7 +324,7 @@ Forms-tjänsten tar emot mallar utifrån filnamn eller databasplats, eller efter
 * **Mallar som skickas med referens**: Innehållsroten och formulärnamnet används. Om unika mallar med olika filnamn skickas i varje begäran med den här metoden kommer diskcachen att växa oändligt och aldrig återanvändas. För att förhindra detta bör unika mallar skickas med samma filnamn för att säkerställa att samma cache uppdateras för alla begäranden.
 * **Mallar som skickas av värde**: Använder mallbyte som skickas tillsammans med data med parametern inDataDoc. Om unika mallar med olika UUID skickas med den här metoden kommer diskcachen att växa oändligt och aldrig återanvändas. För att förhindra detta bör UUID-attributet tas bort från alla mallar för att säkerställa att ingen cache skapas för mallen. Om du skickar samma UUID som inte är null kan cacheobjekten skapas, men det säkerställer att samma cache uppdateras vid varje begäran.
 
-För att förhindra att cacheminnet växer i oändlighet bör du överväga följande faktorer för att återge dynamiskt genererade mallar med de nya API:erna för AEM Forms, som renderHTMLForm2 och renderPDFForm2.
+För att förhindra att cacheminnet växer i oändlighet bör du överväga följande faktorer för att återge dynamiskt genererade mallar med de nya AEM Forms-API:erna, som renderHTMLForm2 och renderPDFForm2.
 
 När du använder de nya API:erna skickas mallen som ett dokumentobjekt, som hanteras i Forms-tjänsten baserat på om den är passiv eller inte.
 
@@ -346,10 +350,10 @@ Med XDC-redigeringsprogrammet kan nätverksskrivaradministratörer skapa och än
 Innan administratören för nätverksskrivaren använder XDC-redigeringsprogrammet ska du flytta XDC-exempelfilerna och läsa Skapa enhetsprofiler med XDC-redigeringsprogrammet.
 
 **Så här hämtar du XDC-exempelfilerna**:
-1. På AEM Forms-servern letar du reda på XDC-mappen i [AEM Forms-rotmappen]\sdk\samples\Output\IVS.
+1. På AEM Forms-servern letar du reda på XDC-mappen i [AEM Forms root]\sdk\samples\Output\IVS.
 1. Kopiera innehållet i den här mappen till en katalog som är tillgänglig från Workbench- eller Eclipse-systemet.
 
 **Så här får du hjälp** om XDC Editor:
-1. Gå till dokumentationswebbplatsen för AEM Forms.
+1. Gå till AEM Forms dokumentationswebbplats.
 1. Klicka på fliken Framkalla och navigera till Skapa enhetsprofiler med XDC-redigeringsprogrammet. Hämta filen xdc_editor_help_web.zip och installera hjälpfilerna genom att följa instruktionerna i Viktigt-filen.
 
