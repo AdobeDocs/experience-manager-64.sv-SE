@@ -11,6 +11,9 @@ topic-tags: developing-on-demand-services-app
 discoiquuid: bc681589-5d46-44cd-888d-b0722a2fd006
 translation-type: tm+mt
 source-git-commit: 622e613d556acda7cd98d4b3d20a20133756fd92
+workflow-type: tm+mt
+source-wordcount: '321'
+ht-degree: 0%
 
 ---
 
@@ -27,11 +30,11 @@ source-git-commit: 622e613d556acda7cd98d4b3d20a20133756fd92
 >
 >Innan du får lära dig mer om hur du skapar och ändrar delade resurser läser du [Innehållssynkronisering](/help/mobile/mobile-ondemand-contentsync.md) för att förstå de grundläggande begreppen.
 
-AEM Mobile-användare använder innehållssynkronisering för att exportera live-innehåll till statiskt innehåll för användning i mobilappar, och den här exporten sker när innehåll överförs till Mobile On-Demand Services från AEM Mobile.
+AEM Mobile-användare använder Innehållssynkronisering för att exportera live-innehåll till statiskt innehåll för användning i mobilappar, och den här exporten sker när innehåll överförs till Mobile On-Demand Services från AEM Mobile.
 
 Egenskapen ***dps-exportTemplate*** som nämns i tabellen ovan definierar sökvägen till programmets exportkonfigurationer. Ange den här egenskapen för att skapa och ändra delade resurser.
 
-Följande resurser beskriver hur du exporterar innehåll från Adobe Experience Manager (AEM) för överföring till AEM Mobile.
+I följande resurser beskrivs hur du exporterar innehåll från Adobe Experience Manager (AEM) för överföring till AEM Mobile.
 
 Artiklar har innehåll som behöver exporteras och överföras. En del av det här innehållet kan delas mellan artiklar.
 
@@ -44,15 +47,16 @@ ContentSync-konfigurationen som finns i **&lt;dps-exportTemplate>/dps-article>**
 >Du kan bara utföra stegen nedan för att visa delade exempelresurser om du har:
 >
 >* har installerat exempelinnehållet
->* kör AEM-instans
+>* kör AEM
 >* ingen konfigurerad anpassad kontext eller en annan port
+
 >
 
 
 
 Om du vill visa exempel på delad resurs, se stegen nedan:
 
-1. Öppna CRXDE Lite på AEM-servern.
+1. Öppna CRXDE Lite på AEM.
 1. Bläddra till den här sökvägen [/etc/contentsync/templates/dps-we-unlimited-app/dps-article](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-article)för att visa delade exempelresurser.
 
    Du kan visa alla egenskaper som krävs för att skapa dina delade resurser enligt bilden nedan:
@@ -61,5 +65,5 @@ Om du vill visa exempel på delad resurs, se stegen nedan:
 
 >[!NOTE]
 >
->Artiklar bör laddas upp eller exporteras till AEM Mobile On-Demand Services när innehållet i artiklar ändras.
+>Artiklar bör laddas upp eller exporteras till AEM Mobile On-demand Services när ett artikelinnehåll ändras.
 
