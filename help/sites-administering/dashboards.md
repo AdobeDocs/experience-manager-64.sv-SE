@@ -1,8 +1,8 @@
 ---
 title: Kontrollpaneler
 seo-title: Kontrollpaneler
-description: Lär dig hur du skapar, konfigurerar och utvecklar nya AEM-kontrollpaneler.
-seo-description: Lär dig hur du skapar, konfigurerar och utvecklar nya AEM-kontrollpaneler.
+description: Lär dig hur du skapar, konfigurerar och utvecklar nya AEM.
+seo-description: Lär dig hur du skapar, konfigurerar och utvecklar nya AEM.
 uuid: 3eadbba2-0ce1-41be-a9f8-e6cafa109893
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 40560e06-2508-45a4-a648-39629ed54f28
 translation-type: tm+mt
 source-git-commit: dda8156729aa46dd6cfd779bca120b165ccc980b
+workflow-type: tm+mt
+source-wordcount: '846'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +24,7 @@ När du använder AEM kan du hantera många olika typer av innehåll (t.ex. sido
 
 >[!NOTE]
 >
->AEM Dashboards skapas per användare, så en användare kan bara komma åt sin egen kontrollpanel.
+>AEM Dashboards skapas per användare så att en användare bara kan komma åt sin egen kontrollpanel.
 >
 >
 >Du kan dock använda [kontrollpanelsmallar](#creating-a-dashboard-template) för att dela en gemensam konfiguration och en gemensam kontrollpanelslayout.
@@ -46,7 +49,7 @@ Så här skapar du en ny kontrollpanel:
 
 ### Klona en instrumentpanel {#cloning-a-dashboard}
 
-Du kanske vill ha flera kontrollpaneler för att snabbt se information om ditt innehåll från olika vyer. För att hjälpa dig att skapa en ny Dashboard har AEM en klonfunktion som du kan använda för att duplicera en befintlig Dashboard. Så här klonar du en kontrollpanel:
+Du kanske vill ha flera kontrollpaneler för att snabbt se information om ditt innehåll från olika vyer. AEM innehåller en klonfunktion som du kan använda för att duplicera en befintlig Dashboard för att hjälpa dig att skapa en ny Dashboard. Så här klonar du en kontrollpanel:
 
 1. Klicka på **Konfigurationskonsol i** avsnittet Verktyg ****.
 
@@ -72,7 +75,7 @@ Du kanske vill ha flera kontrollpaneler för att snabbt se information om ditt i
 
 ### Översikt {#overview}
 
-Kontrollpanelskomponenter är inget annat än vanliga [AEM-komponenter](/help/sites-developing/developing-components-samples.md). I det här avsnittet beskrivs rapportkomponenter som levereras med AEM.
+Kontrollpanelskomponenter är inget annat än vanliga [AEM](/help/sites-developing/developing-components-samples.md). I det här avsnittet beskrivs rapportkomponenter som levereras med AEM.
 
 ### Rapporteringskomponenter för Web Analytics {#web-analytics-reporting-components}
 
@@ -82,7 +85,7 @@ Varje rapportkomponent har minst tre flikar:
 
 * **Grundläggande**: innehåller huvudkonfigurationen.
 
-* **** Rapport: innehåller konfigurationen som är specifik för varje rapport.
+* **Rapport:** innehåller konfigurationen som är specifik för varje rapport.
 * **Format**: innehåller formatkonfiguration som diagramstorlek och marginal.
 
 Rapporteringskomponenterna initieras med en standardkonfiguration som hjälper dig att snabbt konfigurera instrumentpanelen.
@@ -95,9 +98,9 @@ Fliken **Grundläggande** ger åtkomst till följande konfigurationsposter:
 
 **Typ** av begäran Det sätt på vilket data begärs.
 
-**SiteCatalyst-konfiguration (valfritt)** Den konfiguration du vill använda för att ansluta till SiteCatalyst. Om den inte anges antas konfigurationen vara konfigurerad på instrumentpanelssidan (via sidegenskaper).
+**Konfiguration i SiteCatalyst (valfritt)** Den konfiguration som du vill använda för att ansluta till SiteCatalyst. Om den inte anges antas konfigurationen vara konfigurerad på kontrollpanelssidan (via sidegenskaper).
 
-**Report Suite ID (valfritt)** SiteCatalyst-rapportsviten som du vill använda för att generera diagrammet.
+**Report Suite ID (valfritt)** Rapportsviten SiteCatalyst som du vill använda för att generera diagrammet.
 
 #### Rapportkonfiguration {#report-configuration}
 
@@ -167,7 +170,7 @@ Kontrollpaneler är normala sidor ( `cq:Page`), och därför kan alla komponente
 
 Det finns en standardkomponentgrupp `Dashboard` som innehåller analysrapportkomponenter som är aktiverade i mallen som standard.
 
-### Skapa en instrumentpanelsmall {#creating-a-dashboard-template}
+### Creating A Dashboard Template {#creating-a-dashboard-template}
 
 En mall definierar standardinnehållet för en ny kontrollpanel. Du kan använda flera mallar för att skapa olika typer av kontrollpaneler.
 
@@ -179,7 +182,7 @@ Instrumentpanelsmallar skapas som andra sidmallar, förutom att de lagras under 
 
 ### Utveckla en kontrollpanelskomponent {#developing-a-dashboard-component}
 
-Utveckla en Dashboard-komponent genom att skapa en vanlig AEM-komponent. I det här avsnittet beskrivs ett exempel på en komponent som visar de 10 viktigaste deltagarna.
+Utveckla en kontrollpanelskomponent genom att skapa en vanlig AEM. I det här avsnittet beskrivs ett exempel på en komponent som visar de 10 viktigaste deltagarna.
 
 ![chlimage_1-31](assets/chlimage_1-31.png)
 
