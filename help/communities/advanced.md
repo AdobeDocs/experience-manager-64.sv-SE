@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 42fb3c50-8728-4897-ade9-6b839294a10e
 translation-type: tm+mt
 source-git-commit: ddf92a270835259998aa28f5960abcf55f56d1fc
+workflow-type: tm+mt
+source-wordcount: '1128'
+ht-degree: 1%
 
 ---
 
@@ -37,11 +40,11 @@ Skillnaderna i hur du ställer in poängsättnings- och badging-regler är:
 
 * Konfigurerbar avancerad bedömningsmotor
 * Avancerade poängregler:
-   * `scoringType` ställs in på **[!UICONTROL avancerat]**
+   * `scoringType` ange till **[!UICONTROL advanced]**
    * Kräver stoppord
 
 * Avancerade märkningsregler:
-   * `badgingType` ställs in på **[!UICONTROL avancerat]**
+   * `badgingType` ange till **[!UICONTROL advanced]**
    * `badgingLevels` ange till antalet expertnivåer att tilldela
    * Kräver `badgingPaths` en matris med emblem i stället för att mappa punkter till badges för arrayen threshold
 
@@ -55,31 +58,31 @@ Den avancerade bedömningsmotorn tillhandahåller en OSGi-konfiguration med para
 
 ![chlimage_1-260](assets/chlimage_1-260.png)
 
-* **[!UICONTROL Poängvikter]** För ett ämne anger du det verb som ska ha högst prioritet när poängen beräknas. Ett eller flera ämnen kan anges, men begränsas till **ett verb per ämne**. Se [Ämnen och Verb](implementing-scoring.md#topics-and-verbs).
+* **[!UICONTROL Scoring weights]**
+För ett ämne anger du det verb som ska ha högst prioritet när du beräknar poängen. Ett eller flera ämnen kan anges, men begränsas till **ett verb per ämne**. Se [Ämnen och Verb](implementing-scoring.md#topics-and-verbs).
 
-   Angicks som `topic,verb` med kommatecknet escape. Exempel:
+   Angicks som `topic,verb` med kommatecknet escape. Till exempel:
 
    `/social/forum/hbs/social/forum\,ADD`
 
-   
-Standardvärdet är ADD-verbet för QnA- och forumkomponenter.
+   Standardvärdet är ADD-verbet för QnA- och forumkomponenter.
 
 
-* **[!UICONTROL Poängintervall]**
+* **[!UICONTROL Scoring range]**
 
    Intervallet för avancerade poängtal definieras av det här värdet (högsta möjliga poäng) och 0 (lägsta möjliga poäng).
 
    Standardvärdet är 100 så att poängintervallet är 0-100.
 
 
-* **[!UICONTROL Tidsintervall för entitetsminskning]**
+* **[!UICONTROL Entity decay time interval]**
 
    Den här parametern representerar det antal timmar efter vilket alla entitetspoäng dekoreras. Detta krävs för att inte längre inkludera gammalt innehåll i poängen för en community-webbplats.
 
    Standardvärdet är 216000 timmar (~24 år).
 
 
-* **[!UICONTROL Poängökningstakt]**
+* **[!UICONTROL Scoring growth rate]**
 
    Detta anger poängen. mellan 0 och poängintervallet, där tillväxten saktar ned för att begränsa antalet experter.
 
