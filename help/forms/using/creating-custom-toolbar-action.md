@@ -1,8 +1,8 @@
 ---
 title: Skapa en anpassad verktygsfältsåtgärd
 seo-title: Skapa en anpassad verktygsfältsåtgärd
-description: Formulärutvecklare kan skapa anpassade verktygsfältsåtgärder för adaptiva formulär i AEM Forms. Med anpassade åtgärder kan formulärförfattare tillhandahålla fler arbetsflöden och alternativ till sina slutanvändare.
-seo-description: Formulärutvecklare kan skapa anpassade verktygsfältsåtgärder för adaptiva formulär i AEM Forms. Med anpassade åtgärder kan formulärförfattare tillhandahålla fler arbetsflöden och alternativ till sina slutanvändare.
+description: Formulärutvecklare kan skapa anpassade verktygsfältsåtgärder för anpassningsbara formulär i AEM Forms. Med anpassade åtgärder kan formulärförfattare tillhandahålla fler arbetsflöden och alternativ till sina slutanvändare.
+seo-description: Formulärutvecklare kan skapa anpassade verktygsfältsåtgärder för anpassningsbara formulär i AEM Forms. Med anpassade åtgärder kan formulärförfattare tillhandahålla fler arbetsflöden och alternativ till sina slutanvändare.
 uuid: 6761f389-1baa-4a59-a6e0-0f86f70fc692
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,6 +10,9 @@ topic-tags: customization
 discoiquuid: b80a2bfe-6f57-4229-a9ee-1ec87f3c3306
 translation-type: tm+mt
 source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+workflow-type: tm+mt
+source-wordcount: '529'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
 
 ## Förutsättningar {#prerequisite}
 
-Innan du skapar en anpassad verktygsfältåtgärd bör du bekanta dig med [Använda bibliotek](/help/sites-developing/clientlibs.md) på klientsidan och [Utveckla med CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+Innan du skapar en anpassad verktygsfältåtgärd bör du bekanta dig med [Använda bibliotek på klientsidan](/help/sites-developing/clientlibs.md) och [Utveckla med CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 ## Vad är en åtgärd? {#what-is-an-action-br}
 
@@ -40,7 +43,7 @@ Följande steg visar hur du skapar en anpassad verktygsfältåtgärd och hur du 
 
    ![Hierarki med noder för anpassning av verktygsfältet](assets/action3.png)
 
-1. Markera `cq:template` noden i `reviewbeforesubmit` noden. Kontrollera att värdet för `guideNodeClass` egenskapen är `guideButton` och ändra `jcr:title` egenskapen därefter.
+1. Markera `cq:template` noden i `reviewbeforesubmit` noden. Se till att värdet för `guideNodeClass` egenskapen är `guideButton` och ändra `jcr:title` egenskapen därefter.
 1. Ändra type-egenskapen i `cq:Template` noden. I det aktuella exemplet ändrar du type-egenskapen till button.
 
    Typvärdet läggs till som en CSS-klass i den genererade HTML-koden för komponenten. Användare kan använda den CSS-klassen för att formatera sina åtgärder. Standardformatet för både mobila och stationära enheter finns för knappar, skicka, återställa och spara typvärden.
