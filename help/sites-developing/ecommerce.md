@@ -11,6 +11,9 @@ topic-tags: platform
 discoiquuid: a8c0cd0f-268f-4b37-83de-0ccbd819a016
 translation-type: tm+mt
 source-git-commit: 3cdb22af4d3b9b8450263fd843c8af13fc772bfe
+workflow-type: tm+mt
+source-wordcount: '186'
+ht-degree: 2%
 
 ---
 
@@ -19,8 +22,8 @@ source-git-commit: 3cdb22af4d3b9b8450263fd843c8af13fc772bfe
 
 Integreringsramverket innehåller ett integreringslager med ett API. På så sätt kan du:
 
-* koppla in ett e-handelssystem och hämta produktdata till AEM
-* bygga AEM-komponenter för handelsfunktioner oberoende av e-handelsmotorn
+* koppla in ett e-handelssystem och hämta in produktdata i AEM
+* bygga AEM för handelsfunktioner oberoende av e-handelsmotorn
 
 Mer information finns i:
 
@@ -47,5 +50,5 @@ Mer information finns i [API-dokumentationen](https://helpx.adobe.com/experience
 
 >[!NOTE]
 >
->En komplett artikel med information om alla steg som krävs för att bygga en e-handelsleverantör finns i [Skapa anpassade e-handelsleverantörer](https://helpx.adobe.com/experience-manager/using/ecommerce62.html)för Adobe Experience Manager 6.2.
+>En fullständig artikel med information om alla steg som krävs för att skapa en e-handelsleverantör finns i [Skapa anpassade Adobe Experience Manager 6.2-e-handelsleverantörer](https://helpx.adobe.com/experience-manager/using/ecommerce62.html).
 
