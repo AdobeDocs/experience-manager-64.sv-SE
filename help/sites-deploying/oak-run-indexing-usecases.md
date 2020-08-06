@@ -11,29 +11,32 @@ discoiquuid: 084075b8-826d-4f27-9342-35f33368f24f
 noindex: true
 translation-type: tm+mt
 source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+workflow-type: tm+mt
+source-wordcount: '1392'
+ht-degree: 0%
 
 ---
 
 
 # Exempel på indexeringsanvändning för Oak-run.jar{#oak-run-jar-indexing-use-cases}
 
-Oak-run har stöd för indexering av användningsfall på kommandoraden utan att man behöver samordna körningen av dessa användningsfall via AEM:s JMX-konsol.
+Oak-run har stöd för indexering av användningsfall på kommandoraden utan att du behöver utföra dessa användningsfall via AEM JMX-konsol.
 
 De största fördelarna med att använda indexkommandot oak-run.jar för att hantera Oak-index är:
 
-1. Kommandot för index vid körning ger en ny indexeringsverktygslåda för AEM 6.4.
+1. Kommandot för index som körs på baksidan innehåller en ny indexverktygsuppsättning för AEM 6.4.
 1. Oak-run minskar tiden för omindexering vilket minskar omindexeringstiden för större databaser.
-1. Oak-run minskar resursförbrukningen vid omindexering i AEM, vilket ger bättre systemprestanda.
+1. Oak-run minskar resursförbrukningen vid omindexering av AEM, vilket ger bättre systemprestanda.
 1. Oak-run ger omindexering utan band, stöd för situationer där produktionen måste vara tillgänglig och klarar inte underhåll eller driftavbrott som annars krävs för omindexering.
 
 I avsnitten nedan finns exempelkommandon. Oak-run index-kommandot stöder alla NodeStore- och BlobStore-inställningar. Exemplen nedan handlar om inställningar som har FileDataStore och SegmentNodeStore.
 
 ## Användningsfall 1 - Kontroll av indexöverensstämmelse {#usercase1indexconsistencycheck}
 
-Det här är ett användningsexempel som rör skadade index. I vissa fall gick det inte att avgöra vilken av indexen som är skadad. Därför har Adobe tagit fram verktyg som:
+Det här är ett användningsexempel som rör skadade index. I vissa fall gick det inte att avgöra vilken av indexen som är skadad. Adobe har därför tillhandahållit verktyg som
 
 1. Utför konsekvenskontroller av index för alla index och tillhandahåller en rapport om vilka index som är giltiga och vilka som inte är giltiga.
-1. Verktygen är användbara även om AEM inte är tillgängligt.
+1. Verktygen är användbara även om AEM inte är åtkomliga.
 1. Den är lätt att använda.
 
 Kontroll av skadade index kan göras via `--index-consistency-check` åtgärden:
@@ -72,7 +75,7 @@ Den här verktygen kan nu användas av supporten och systemadministratören för
 
 ## Användningsfall 2 - Indexstatistik {#usecase2indexstatistics}
 
-För diagnostisering av vissa av fallen kring frågeprestanda behövde Adobe ofta en befintlig indexdefinition, indexrelaterad statistik från kundinställningarna. Hittills har denna information spridits över flera resurser. För att underlätta felsökningen har Adobe skapat verktyg som
+För diagnostisering av vissa fall kring frågeprestanda behövde Adobe ofta en befintlig indexdefinition, indexrelaterad statistik från kundinställningarna. Hittills har denna information spridits över flera resurser. För att underlätta felsökningen har Adobe skapat verktyg som gör att:
 
 1. Dumpa alla indexdefinitioner som finns i systemet i en enda JSON-fil.
 
@@ -80,7 +83,7 @@ För diagnostisering av vissa av fallen kring frågeprestanda behövde Adobe oft
 
 1. Dumpa indexinnehåll för offlineanalys.
 
-1. Kan användas även om AEM inte är tillgängligt
+1. Kan användas även om AEM inte är tillgänglig
 
 Ovanstående åtgärder kan nu utföras med följande kommandon för åtgärdsindex:
 
@@ -115,14 +118,14 @@ Några punkter att tänka på när det gäller omindexering:
 * Omindexering är mycket långsammare på `DocumentNodeStore` uppsättningar jämfört med `SegmentNodeStore` uppsättningar där allt innehåll är lokalt.
 
 * I den aktuella designen blockeras den asynkrona indexeraren medan omindexering sker och alla andra asynkrona index blir inaktuella och uppdateras inte under indexeringstiden. På grund av detta kanske användarna inte ser aktuella resultat om systemet används.
-* Omindexering innebär att hela databasen gås igenom, vilket kan göra AEM-installationen mycket belastad och därmed påverka slutanvändarens upplevelse.
+* Omindexering innebär att hela databasen gås igenom, vilket kan göra AEM mycket belastad och därmed påverka slutanvändarens upplevelse.
 * För en `DocumentNodeStore` anläggning där omindexering kan ta lång tid, måste indexeringen startas om från början om anslutningen till Mongo-databasen misslyckas under operationen.
 
 * I vissa fall kan omindexering ta lång tid på grund av textrahering. Detta gäller främst för inställningar med många PDF-filer, där den tid som går åt för textrahering kan påverka indexeringstiden.
 
 För att uppnå dessa mål har indexverktygen för ekningskörning stöd för olika omindexeringslägen som kan användas efter behov. Indexkommandot för ekning ger följande fördelar:
 
-* **omindexering** utanför band - omindexering vid ekning kan göras separat från en AEM-konfiguration som körs och minimerar därmed effekten på den AEM-instans som används.
+* **omindexering** utanför band - omindexering vid ekning kan göras separat från en AEM som körs och minimerar därmed påverkan på den AEM instansen som används.
 
 * **omindexering** utanför intervall - Omindexeringen utförs utan att indexeringen påverkas. Detta innebär att den asynkrona indexeraren kan fortsätta att indexera andra index.
 
@@ -140,7 +143,7 @@ java -jar oak-run*.jar index --reindex --index-paths=/oak:index/lucene --read-wr
 
 Detta ger följande fördelar
 
-* Minimal effekt på AEM-instanser som körs. De flesta läsningar kan göras från sekundära servrar, och körning av AEM-cacher påverkas inte negativt på grund av all den genomgång som krävs för omindexering.
+* Minimal påverkan på pågående AEM. De flesta läsningar kan göras från sekundära servrar och AEM som körs påverkas inte negativt på grund av all den genomgång som krävs för omindexering.
 * Användare kan även tillhandahålla en JSON-fil med ett nytt eller uppdaterat index via `--index-definitions-file` alternativet.
 
 ### Indexera om - SegmentNodeStore {#reindexsegmentnodestore}
@@ -151,7 +154,7 @@ För `SegmentNodeStore` installationer kan omindexering göras på något av fö
 
 Följ det etablerade sättet där omindexering sker via `reindex` inställningsflaggan.
 
-#### Online Reindex - SegmentNodeStore - AEM-instansen körs {#onlinereindexsegmentnodestoretheaeminstanceisrunning}
+#### Online Reindex - SegmentNodeStore - Den AEM instansen körs {#onlinereindexsegmentnodestoretheaeminstanceisrunning}
 
 För `SegmentNodeStore` installationer kan bara en process få åtkomst till segmentfiler i läs- och skrivläge. På grund av detta måste ytterligare manuella åtgärder vidtas för att vissa åtgärder i körning ska kunna utföras.
 
@@ -166,11 +169,11 @@ Detta skulle innebära följande:
 
 1. Importera slutligen de skapade indexfilerna via `IndexerMBean#importIndex` åtgärden från den sökväg där körningen sparade indexfilerna när ovanstående kommando kördes.
 
-I det här fallet behöver du inte stoppa AEM-servern eller etablera en ny instans. När indexering innebär att hela databasen gås igenom, ökar dock I/O-belastningen i installationen, vilket påverkar körningens prestanda negativt.
+I det här fallet behöver du inte stoppa AEM eller etablera någon ny instans. När indexering innebär att hela databasen gås igenom, ökar dock I/O-belastningen i installationen, vilket påverkar körningens prestanda negativt.
 
-#### Online Reindex - SegmentNodeStore - AEM-instansen är avstängd {#onlinereindexsegmentnodestoreaeminstanceisdown}
+#### Online Reindex - SegmentNodeStore - Den AEM instansen är avstängd {#onlinereindexsegmentnodestoreaeminstanceisdown}
 
-För `SegmentNodeStore` installationer kan omindexering göras via ett enda ekupkommando. AEM-instansen måste dock stängas av.
+För `SegmentNodeStore` installationer kan omindexering göras via ett enda ekupkommando. AEM måste dock stängas av.
 
 Du kan aktivera omindexering med följande kommando:
 
@@ -182,13 +185,13 @@ Skillnaden mellan det här sättet och det som förklaras ovan är att skapande 
 
 #### Out of Band Reindex - SegmentNodeStore {#outofbandreindexsegmentnodestore}
 
-I det här fallet kan du indexera om en klonad installation för att minimera påverkan på den AEM-instans som körs:
+I det här fallet kan du indexera om en klonad installation för att minimera påverkan på den AEM som körs:
 
-1. Skapa en kontrollpunkt via en JMX-åtgärd. Du kan göra detta genom att gå till [JMX-konsolen](/help/sites-administering/jmx-console.md) och söka efter `CheckpointManager`. Klicka sedan på åtgärden **createCheckpoint(long p1)** med ett högt värde som anger att den upphör att gälla i sekunder (till exempel **2592000**).
+1. Skapa kontrollpunkt med en JMX-åtgärd. Du kan göra detta genom att gå till [JMX-konsolen](/help/sites-administering/jmx-console.md) och söka efter `CheckpointManager`. Klicka sedan på åtgärden **createCheckpoint(long p1)** med ett högt värde som anger att den upphör att gälla i sekunder (till exempel **2592000**).
 1. Kopiera `crx-quickstart` mappen till en ny dator
 1. Indexera om via indexkommandot för ekvering
 
-1. Kopiera de genererade indexfilerna till AEM-servern
+1. Kopiera de genererade indexfilerna till AEM server
 
 1. Importera indexfilerna via JMX.
 
@@ -196,7 +199,7 @@ I det här fallet antas det att datalagret är tillgängligt i en annan instans,
 
 ## Användningsfall 4 - Uppdaterar indexdefinitioner {#usecase4updatingindexdefinitions}
 
-För närvarande kan du skicka indexdefinitionsändringar via [ACS-paketet Kontrollera index](https://adobe-consulting-services.github.io/acs-aem-commons/features/ensure-oak-index/index.html) . Detta gör att indexdefinitionerna kan levereras via innehållspaket som senare kräver omindexering via att `reindex` flaggan ställs in på `true`.
+För närvarande kan du skicka indexdefinitionsändringar via [ACS-paketet Kontrollera index](https://adobe-consulting-services.github.io/acs-aem-commons/features/ensure-oak-index/index.html) . På så sätt kan indexdefinitioner levereras via innehållspaket som senare kräver omindexering via att `reindex` flaggan ställs in på `true`.
 
 Detta fungerar bra för mindre installationer där omindexering inte tar lång tid. För mycket stora databaser kommer dock omindexering att göras på betydligt längre tid. I sådana fall kan vi nu använda indexverktygen för ekakning.
 
@@ -208,5 +211,5 @@ Den process du behöver tänka på för detta ändamål är:
 
 1. Den uppdaterade JSON-versionen ges sedan till systemadministratören
 1. Systemadministratören följer out-of-band-metoden och förbereder indexet för en annan installation
-1. När detta är klart importeras de genererade indexfilerna till en AEM-installation som körs.
+1. När detta är klart importeras de genererade indexfilerna till en AEM som körs.
 
