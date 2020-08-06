@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 9161c8ca-ef33-4ec9-affc-94b5b3e48a4c
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '864'
+ht-degree: 0%
 
 ---
 
@@ -43,19 +46,19 @@ Resultatet av en uppgiftssökning visas på sidan Uppgiftslista. Du kan välja e
 
 Uppgifterna visas med följande information:
 
-**** Aktivitets-ID: Det positiva heltal som formulärarbetsflödet tilldelar när uppgiften instansieras (initieras av en användare). Du kan använda den här identifieraren för att spåra uppgiften genom dess livscykel. Klicka på ett aktivitets-ID om du vill visa information om aktivitetshistoriken eller om du vill tilldela om uppgiften till en annan användare.
+**Aktivitets-ID:** Det positiva heltal som formulärarbetsflödet tilldelar när uppgiften instansieras (initieras av en användare). Du kan använda den här identifieraren för att spåra uppgiften genom dess livscykel. Klicka på ett aktivitets-ID om du vill visa information om aktivitetshistoriken eller om du vill tilldela om uppgiften till en annan användare.
 
-**** Status: Tilldelad innebär att uppgiften för närvarande är tilldelad användaren. Ej tilldelad innebär att uppgiften tidigare har tilldelats användaren. Status kan också vara Slutförd.
+**Status:** Tilldelad innebär att uppgiften för närvarande är tilldelad användaren. Ej tilldelad innebär att uppgiften tidigare har tilldelats användaren. Status kan också vara Slutförd.
 
-**** Aktivitet: Visar formuläret och namnet på en inledande åtgärd eller processåtgärden som genererade uppgiften.
+**Aktivitet:** Visar formuläret och namnet på en inledande åtgärd eller processåtgärden som genererade uppgiften.
 
-**** Process-ID: Detta positiva heltal som tilldelas av formulärarbetsflödet när processen initieras (det vill säga när en användare eller ett automatiskt steg initierar en process). Du kan använda den här identifieraren för att spåra processinstansen genom dess livscykel.
+**Process-ID:** Detta positiva heltal som tilldelas av formulärarbetsflödet när processen initieras (det vill säga när en användare eller ett automatiskt steg initierar en process). Du kan använda den här identifieraren för att spåra processinstansen genom dess livscykel.
 
-**** Processnamn - version: Processens namn, enligt definition i Workbench.
+**Processnamn - version:** Processens namn, enligt definition i Workbench.
 
-**** Program: Namnet på programmet som processen tillhör, enligt definitionen i Workbench.
+**Program:** Namnet på programmet som processen tillhör, enligt definitionen i Workbench.
 
-**** Skapad: Datum och tid då uppgiften skapades.
+**Skapad:** Datum och tid då uppgiften skapades.
 
 ## Visa aktivitetshistorik och tilldela om uppgifter {#viewing-task-history-and-reassigning-tasks}
 
@@ -63,29 +66,29 @@ På sidan Uppgiftshistorik visas en lista över de användare och grupper som ha
 
 För varje uppgiftstilldelning visas följande information i listan:
 
-**** Namn: Användarens namn.
+**Namn:** Användarens namn.
 
-**** Status: Tilldelad innebär att uppgiften för närvarande är tilldelad användaren. Ej tilldelad innebär att uppgiften tidigare har tilldelats användaren.
+**Status:** Tilldelad innebär att uppgiften för närvarande är tilldelad användaren. Ej tilldelad innebär att uppgiften tidigare har tilldelats användaren.
 
-**** Worklist-ID: Den numeriska identifieraren för den användarkö som uppgiften tillhör. En process kan delas av flera användare.
+**Worklist-ID:** Den numeriska identifieraren för den användarkö som uppgiften tillhör. En process kan delas av flera användare.
 
-**** Typ: Anger hur uppgiften tilldelades:
+**Typ:** Anger hur uppgiften tilldelades:
 
-**** Inledande: Användaren tilldelades ursprungligen uppgiften.
+**Inledande:** Användaren tilldelades ursprungligen uppgiften.
 
-**** Framåt: Den ursprungliga aktivitetsägaren tilldelade uppgiften till en annan användare.
+**Framåt:** Den ursprungliga aktivitetsägaren tilldelade uppgiften till en annan användare.
 
-**** Avvisa: En vidarebefordrad uppgift avvisades eller så returnerades en uppgift till en arbetslista utan att ha slutförts.
+**Avvisa:** En vidarebefordrad uppgift avvisades eller så returnerades en uppgift till en arbetslista utan att ha slutförts.
 
-**** Anspråk: Användaren gjorde anspråk på uppgiften i en delad arbetslista.
+**Anspråk:** Användaren gjorde anspråk på uppgiften i en delad arbetslista.
 
-**** Eskalering: En förbestämd tid förflutit (enligt inställningen i åtgärden Användare i Workbench) utan användarinteraktion och en annan användare tilldelades uppgiften.
+**Eskalering:** En förbestämd tid förflutit (enligt inställningen i åtgärden Användare i Workbench) utan användarinteraktion och en annan användare tilldelades uppgiften.
 
-**** Konsult: Aktivitetsägaren har vidarebefordrat denna uppgift till en annan användare för konsultation som kan öppna formuläret, spara data, ändra bilagor och anteckningar, men inte slutföra steget. Användaren måste returnera uppgiften till aktivitetsägaren som har rådfrågat användaren.
+**Konsult:** Aktivitetsägaren har vidarebefordrat denna uppgift till en annan användare för konsultation som kan öppna formuläret, spara data, ändra bilagor och anteckningar, men inte slutföra steget. Användaren måste returnera uppgiften till aktivitetsägaren som har rådfrågat användaren.
 
-**** Administratörsomtilldelning: Uppgiften har tilldelats om av en administratör.
+**Administratörsomtilldelning:** Uppgiften har tilldelats om av en administratör.
 
-**** Tilldelningsdatum: Det datum och den tidpunkt då uppgiften tilldelades användaren.
+**Tilldelningsdatum:** Det datum och den tidpunkt då uppgiften tilldelades användaren.
 
 ### Tilldela en ny användare till en uppgift {#assigning-a-new-user-to-a-task}
 
