@@ -13,6 +13,9 @@ pagetitle: Query Builder API
 tagskeywords: querybuilder
 translation-type: tm+mt
 source-git-commit: dbb6156b375382a23b9a3faece2dcdf47fd7cd82
+workflow-type: tm+mt
+source-wordcount: '2350'
+ht-degree: 0%
 
 ---
 
@@ -31,15 +34,15 @@ REST API ger åtkomst till exakt samma funktioner via HTTP med svar som skickas 
 
 >[!NOTE]
 >
->QueryBuilder-API:t byggs med JCR-API:t. Du kan också fråga JCR-läsaren för Adobe Experience Manager genom att använda JCR-API:t i ett OSGi-paket. Mer information finns i [Fråga Adobe Experience Manager-data med JCR-API:t](https://helpx.adobe.com/experience-manager/using/querying-experience-manager-data-using1.html).
+>QueryBuilder-API:t byggs med JCR-API:t. Du kan även fråga Adobe Experience Manager JCR genom att använda JCR-API:t i ett OSGi-paket. Mer information finns i [Fråga Adobe Experience Manager-data med JCR API](https://helpx.adobe.com/experience-manager/using/querying-experience-manager-data-using1.html).
 
 ## Gem-session {#gem-session}
 
-[AEM Gems](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html) är en serie tekniska djupdykningar i Adobe Experience Manager som levereras av Adobes experter. Den här sessionen som är avsedd för frågebyggaren är mycket användbar för en översikt över och användning av verktyget.
+[AEM Gems](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html) är en serie tekniska djupdykningar i Adobe Experience Manager som levereras av Adobe experter. Den här sessionen som är avsedd för frågebyggaren är mycket användbar för en översikt över och användning av verktyget.
 
 >[!NOTE]
 >
->Se AEM Gem-sessionen [Söka enkelt i formulär med AEM querybuilder](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-search-forms-using-querybuilder.html) för en detaljerad översikt av frågebyggaren.
+>Se AEM Gem session [Search forms made easy with the AEM querybuilder](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-search-forms-using-querybuilder.html) för en detaljerad översikt över query builder.
 
 ## Exempelfrågor {#sample-queries}
 
@@ -323,7 +326,7 @@ avgränsat med blanksteg:
 
 `http://localhost:4502/bin/querybuilder.json?p.hits=selective&property=jcr%3atitle&property.value=Triangle`
 
-[ `http://localhost:4502/bin/querybuilder.json?`](http://localhost:4502/bin/querybuilder.json?p.hits=selective&p.properties=sling%3aresourceType%20jcr%3aprimaryType&property=jcr%3atitle&property.value=Triangle)[p.hits=selective&amp;](http://localhost:4502/bin/querybuilder.json?p.hits=selective&p.nodedepth=5&p.properties=sling%3aresourceType%20jcr%3apath&property=jcr%3atitle&property.value=Triangle)p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=Triangle
+[ `http://localhost:4502/bin/querybuilder.json?`](http://localhost:4502/bin/querybuilder.json?p.hits=selective&amp;p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=Triangle) [p.hits=selective&amp;](http://localhost:4502/bin/querybuilder.json?p.hits=selective&amp;p.nodedepth=5&amp;p.properties=sling%3aresourceType%20jcr%3apath&amp;property=jcr%3atitle&amp;property.value=Triangle)p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=Triangle
 
 ```xml
 property=jcr:title
@@ -467,7 +470,7 @@ eller också kan querybuilder json servlet på
 
 ( `path=/tmp` är bara ett exempel).
 
-### Allmänna felsökningsrekommendationer {#general-debugging-recommendations}
+### Allmän felsökning av Recommendations {#general-debugging-recommendations}
 
 ### Få förklarlig XPath via loggning {#obtain-explain-able-xpath-via-logging}
 
@@ -486,7 +489,7 @@ Förklara **alla** frågor under utvecklingscykeln mot målindexuppsättningen.
 
 ### Hämta förklaringsbar XPath via felsökningsfunktionen i Query Builder {#obtain-explain-able-xpath-via-the-query-builder-debugger}
 
-* Använd felsökningsprogrammet AEM Query Builder för att generera en förklarande XPath-fråga:
+* Använd AEM QueryBuilder-felsökningsprogrammet för att generera en förklarande XPath-fråga:
 
 Förklara **alla** frågor under utvecklingscykeln mot målindexuppsättningen.
 
@@ -505,7 +508,7 @@ Förklara **alla** frågor under utvecklingscykeln mot målindexuppsättningen.
 
 **Hämta förklaringsbar XPath via felsökningsfunktionen i Query Builder**
 
-* Använd felsökningsprogrammet AEM Query Builder för att generera en förklarande XPath-fråga:
+* Använd AEM QueryBuilder-felsökningsprogrammet för att generera en förklarande XPath-fråga:
 
 ![chlimage_1-66](assets/chlimage_1-66.png)
 
