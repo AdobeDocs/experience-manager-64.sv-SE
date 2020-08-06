@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 868a3d5d-d505-4ce5-8776-5bbe68a30ccb
 translation-type: tm+mt
 source-git-commit: 8c66f2b0053882bd1c998d8e01dbb0573881bc87
+workflow-type: tm+mt
+source-wordcount: '511'
+ht-degree: 1%
 
 ---
 
@@ -29,39 +32,47 @@ En eller flera gruppmallar väljs för gruppfunktionen när funktionen läggs ti
 
 Möjligheten att skapa en ny community-grupp bygger på att det finns en community-webbplats som innehåller gruppfunktionen, till exempel en som skapats från ` [Reference Site Template](sites.md)`.
 
-Exemplen som följer använder den communitywebbplats som skapats från `Reference Site Template` enligt beskrivningen i självstudiekursen [Komma igång med AEM Communities](getting-started.md) .
+Exemplen som följer använder den communitywebbplats som skapats från `Reference Site Template` enligt beskrivningen i [självstudiekursen Komma igång med AEM Communities](getting-started.md) .
 
-Det här är sidan som läses in vid publicering när menyalternativet **[!UICONTROL Grupper]** är markerat:
+Det här är sidan som läses in vid publicering när **[!UICONTROL Groups]** menyalternativet är markerat:
 
 ![chlimage_1-236](assets/chlimage_1-236.png)
 
-När du väljer ikonen **[!UICONTROL Ny grupp]** öppnas en redigeringsdialogruta.
+När du väljer **[!UICONTROL New Group]** ikonen öppnas en redigeringsdialogruta.
 
-Under fliken **[!UICONTROL Inställningar]** kan du ange gruppens grundläggande funktioner:
+Under **[!UICONTROL Settings]** fliken anger du grundläggande funktioner för gruppen:
 
 ![chlimage_1-237](assets/chlimage_1-237.png)
 
-* **[!UICONTROL Gruppnamn]** Namnet på gruppen som ska visas på communitywebbplatsen.
+* **[!UICONTROL Group Name]**
+Namnet på gruppen som ska visas på communitywebbplatsen.
 
-* **[!UICONTROL Beskrivning]** En beskrivning av gruppen som ska visas på communitywebbplatsen.
+* **[!UICONTROL Description]**
+En beskrivning av gruppen som ska visas på communitywebbplatsen.
 
-* **[!UICONTROL Bjud in]** en lista med medlemmar som ska bjudas in till gruppen. I typsnittssökningen ges förslag på communitymedlemmar som ska bjudas in.
+* **[!UICONTROL Invite]**
+En lista med medlemmar som ska bjudas in för att gå med i gruppen. I typsnittssökningen ges förslag på communitymedlemmar som ska bjudas in.
 
-* **[!UICONTROL Grupp-URL-namn]** Namnet på gruppsidan som blir en del av URL-adressen.
+* **[!UICONTROL Group URL Name]**
+Namnet på gruppsidan som blir en del av URL:en.
 
-* **[!UICONTROL Open Group]** Selecting `Open Group` (Öppna gruppmarkering) anger att en anonym besökare kan visa innehållet och avmarkerar `Member Only Group`.
+* **[!UICONTROL Open Group]**
+Markera 
+`Open Group` visar att en anonym besökare kan visa innehållet och kommer att avmarkera `Member Only Group`.
 
-* **[!UICONTROL Gruppmarkering endast för medlemmar]** anger `Member Only Group` att endast medlemmar i gruppen kan visa innehållet och kommer att avmarkera `Open Group`.
+* **[!UICONTROL Member Only Group]**
+Markera 
+`Member Only Group` används för att endast medlemmar i gruppen ska kunna visa innehållet och avmarkera `Open Group`.
 
-Under fliken **[!UICONTROL Mall]** kan du välja från listan med gruppmallar som angavs när gruppfunktionen inkluderades i communityplatsens struktur eller i en mall för communitywebbplatser.
+Under fliken **[!UICONTROL Template]** kan du välja i listan med communitygruppsmallar som angavs när gruppfunktionen inkluderades i communityplatsens struktur eller i en community-platsmall.
 
 ![chlimage_1-238](assets/chlimage_1-238.png)
 
-Under fliken **[!UICONTROL Bild]** finns möjligheten att överföra en bild som ska visas för gruppen på gruppwebbplatsens gruppsida. Standardformatmallen ändrar bildens storlek till 170 x 90 pixlar.
+Under **[!UICONTROL Image]** fliken kan du överföra en bild som ska visas för gruppen på gruppwebbplatsens gruppsida. Standardformatmallen ändrar bildens storlek till 170 x 90 pixlar.
 
 ![chlimage_1-239](assets/chlimage_1-239.png)
 
-Genom att klicka på knappen **[!UICONTROL Skapa grupp]** skapas sidorna för gruppen baserat på den valda mallen, och en användargrupp skapas för medlemskap och sidan Grupper uppdateras för att visa den nya undergruppen.
+Genom att markera **[!UICONTROL Create Group]** knappen skapas sidorna för gruppen baserat på den valda mallen, och en användargrupp skapas för medlemskap och sidan Grupper uppdateras för att visa den nya undergruppen.
 
 Sidan Grupper med en ny undercommunity med namnet&quot;Focus Group&quot;, som en miniatyrbild överfördes för, ser ut så här (fortfarande inloggad som administratör för en community-grupp):
 
