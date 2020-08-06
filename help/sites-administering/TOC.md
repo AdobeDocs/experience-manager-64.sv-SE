@@ -2,18 +2,18 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: admin-user
-user-guide-title: Användarhandbok för AEM 6.4-administration
+user-guide-title: AEM 6.4 Handbok för administrationsanvändare
 user-guide-description: Learn about administering AEM.
 translation-type: tm+mt
 source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '619'
+ht-degree: 6%
 
 ---
 
 
-# Användarhandbok för AEM 6.4-administration {#administering}
+# AEM 6.4 Handbok för administrationsanvändare {#administering}
 
 + [Administrera användarhandboken - översikt](home.md)
 + Webbplatsfunktioner {#introduction}
@@ -34,7 +34,7 @@ ht-degree: 0%
    + [Guiden Kopiera språk](tc-wizard.md)
    + [Översättningsförbättringar](tc-enhancements.md)
    + [Bästa praxis för översättning](tc-bp.md)
-   + [Vanliga frågor om AEM](aem-faqs.md)
+   + [AEM frågor och svar](aem-faqs.md)
 + Användning {#operations}
    + [Kontrollpaneler](dashboards.md)
    + [Instrumentpanel för åtgärder](operations-dashboard.md)
@@ -48,14 +48,14 @@ ht-degree: 0%
    + [Konfigurerar e-postmeddelande](notification.md)
    + [Konfigurera RTE för produktion av tillgängliga platser](rte-accessible-content.md)
    + [Kontrollen Extern länk](external-link-checker.md)
-   + [Felsökning av AEM](troubleshoot.md)
+   + [AEM](troubleshoot.md)
    + [Granskningslogghantering i AEM 6](operations-audit-log.md)
    + [Redigerare](enable-classic-ui-editor.md)
    + [Hantera åtkomst till arbetsflöden](workflows-managing.md)
    + [Använda cURL med AEM](curl.md)
    + [Konfigurera Ångra för sidredigering](config-undo.md)
    + [Proxy Server Tool (proxy.jar)](proxy-jar.md)
-   + [Konfigurera för AEM-appar](config-apps.md)
+   + [Konfigurera för AEM program](config-apps.md)
    + [Administrera arbetsflöden](workflows.md)
    + [Konfigurera sökformulär](search-forms.md)
    + [Verktygskonsoler](tools-consoles.md)
@@ -65,7 +65,7 @@ ht-degree: 0%
    + [Aktivera åtkomst till klassiskt gränssnitt](enable-classic-ui.md)
    + [Starta arbetsflöden](workflows-starting.md)
    + [Konfigurera plugin-programmen för RTF-redigeraren](configure-rich-text-editor-plug-ins.md)
-   + [Admin Consoles](enable-classic-ui-admin.md)
+   + [Admin Console](enable-classic-ui-admin.md)
 + Dokumentskydd {#security}
    + [Användaradministration och -säkerhet](security.md)
    + [Behörighetsadministration för användare, grupp och åtkomst](user-group-ac-admin.md)
@@ -73,7 +73,7 @@ ht-degree: 0%
    + [OWASP Top 10](owasp-top10.md)
    + [Köra AEM i produktionsklart läge](production-ready.md)
    + [Identity Management](identity-management.md)
-   + [Adobe IMS-autentisering och Admin Console-stöd för AEM Managed Services](ims-config-and-admin-console.md)
+   + [Adobe IMS-autentisering och stöd för Admin Console för AEM Managed Services](ims-config-and-admin-console.md)
    + [Skapa en stängd användargrupp](cug.md)
    + [Åtgärda serialiseringsproblem i AEM](mitigating-serialization-issues.md)
    + [Användarsynkronisering](sync.md)
@@ -107,7 +107,7 @@ ht-degree: 0%
    + [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
    + [SAP Commerce Cloud](sap-commerce-cloud.md)
    + [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
-   + [AEM Commerce - beredskap för GDPR](gdpr-compliance-commerce.md)
+   + [AEM Commerce - GDPR-beredskap](gdpr-compliance-commerce.md)
 + Integrering {#integration}
    + [Integrera med tredjepartstjänster](third-party-services.md)
    + [Integrera med Salesforce](salesforce.md)
@@ -119,7 +119,7 @@ ht-degree: 0%
    + [Mappa komponentdata med Adobe Analytics-egenskaper](adobeanalytics-mapping.md)
    + [Konfigurera videospårning för Adobe Analytics](adobeanalytics-video.md)
    + [Vanliga frågor om leverans av innehåll med HTTP2](scene7-http2faq.md)
-   + [Felsöka integreringen med Adobe Campaign](troubleshooting-campaignintegration.md)
+   + [Felsöka Adobe Campaign-integreringen](troubleshooting-campaignintegration.md)
    + [SharePoint Connector-licenser, copyrightmeddelanden och friskrivningsklausuler](sharepoint-connector-licenses.md)
    + [SharePoint-anslutning](sharepoint-connector.md)
    + [Vanliga frågor om att DHTML Viewer upphör](dhtml-viewer-endoflifefaqs.md)
@@ -129,35 +129,35 @@ ht-degree: 0%
    + [Meddelande om att Flash Viewer har upphört](flash-viewers-eol.md)
    + [Integrera med Adobe Creative Cloud](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/aem-cc-integration-best-practices.html)
    + [Produktfeed](product-feed.md)
-   + [Integrera med Adobe Dynamic Tag Management](dtm.md)
+   + [Integrera med dynamisk tagghantering i Adobe](dtm.md)
    + [Ingå i Adobe Analytics och Adobe Target](opt-in.md)
-   + [AEM Portaler och Portlets](aem-as-portal.md)
+   + [AEM portaler och portlets](aem-as-portal.md)
    + [Integrera med Dynamic Media Classic (Scene7)](scene7.md)
-   + [AEM Livefyre - recept](aem-livefyre-recipes.md)
+   + [AEM Livefyre-recept](aem-livefyre-recipes.md)
    + [Felsöka integreringsproblem](troubleshooting-integration-issues.md)
    + [Integrera med BrightEdge Content Optimizer](brightedge.md)
    + [Metodtips för e-postmallar](best-practices-for-email-templates.md)
    + [Katalogproducent](catalog-producer.md)
-   + [Konfigurera integrering av AEM Assets med Experience Cloud och Creative Cloud](configure-assets-cc-integration.md)
+   + [Konfigurera AEM Assets-integrering med Experience Cloud och Creative Cloud](configure-assets-cc-integration.md)
    + [Integrera med Silverpop Engage](silverpop.md)
    + [Integrera med Adobe Campaign](campaign.md)
    + [Integrera med ExactTarget](exacttarget.md)
-   + [Analytics med externa leverantörer](external-providers.md)
+   + [Analyser med externa leverantörer](external-providers.md)
    + [Integrera med Adobe Marketing Cloud](marketing-cloud.md)
    + [Konfigurera integreringen med Adobe Target manuellt](target-configuring.md)
-   + [Förutsättningar för integrering med Adobe Target](target-requirements.md)
+   + [Krav för integrering med Adobe Target](target-requirements.md)
    + [Adobe-klassificeringar](adobeanalytics-classifications.md)
-   + [Integrera med Adobe Search&amp;Promote](search-and-promote.md)
+   + [Integrera med Adobe Search &amp; Promote](search-and-promote.md)
    + [Lösningsintegrering](integration.md)
-   + [Target-integrering med Experience Fragments](experience-fragments-target.md)
+   + [Målintegrering med upplevelsefragment](experience-fragments-target.md)
    + [Metodtips för e-postmallar](best-practices-for-email-templates.md)
 + Bästa praxis {#bestpractices}
    + [Bästa praxis](administer-best-practices.md)
    + [Bästa praxis för översättning](tc-bp.md)
    + [MSM Best Practices](msm-best-practices.md)
-   + [AEM Sites - beredskap för GDPR](gdpr-compliance-sites.md)
+   + [AEM Sites - GDPR-beredskap](gdpr-compliance-sites.md)
    + [Hantera GDPR-begäranden för AEM Foundation](handling-gdpr-requests-for-aem-platform.md)
-   + [AEM Commerce - beredskap för GDPR](gdpr-compliance-commerce.md)
+   + [AEM Commerce - GDPR-beredskap](gdpr-compliance-commerce.md)
 + Innehållshantering {#contentmanagement}
    + [Så här arbetar du med paket](package-manager.md)
    + [Resursavlastare för arbetsflöde](workflow-offloader.md)
