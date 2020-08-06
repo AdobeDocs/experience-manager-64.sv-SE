@@ -1,8 +1,8 @@
 ---
 title: Anpassad fristående installation
 seo-title: Anpassad fristående installation
-description: 'Läs mer om de alternativ som är tillgängliga när du installerar en fristående AEM-instans. '
-seo-description: 'Läs mer om de alternativ som är tillgängliga när du installerar en fristående AEM-instans. '
+description: 'Lär dig mer om de alternativ som är tillgängliga när du installerar en fristående AEM. '
+seo-description: 'Lär dig mer om de alternativ som är tillgängliga när du installerar en fristående AEM. '
 uuid: e1cb45c4-3b2b-4951-8f67-213072e825b3
 contentOwner: Tyler Rushton
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,13 +11,16 @@ topic-tags: deploying
 discoiquuid: c9e51008-6009-49a2-9c74-1c610cef2e7f
 translation-type: tm+mt
 source-git-commit: b7e5c42009acb5044d1112e66b8e65b528355736
+workflow-type: tm+mt
+source-wordcount: '1523'
+ht-degree: 0%
 
 ---
 
 
 # Anpassad fristående installation{#custom-standalone-install}
 
-I det här avsnittet beskrivs de alternativ som är tillgängliga när du installerar en fristående AEM-instans. Du kan även läsa [Storage Elements](/help/sites-deploying/storage-elements-in-aem-6.md) för mer information om hur du väljer lagringstyp för serverdelen efter att du installerat AEM 6.
+I det här avsnittet beskrivs de alternativ som är tillgängliga när du installerar en fristående AEM. Du kan även läsa [Storage Elements](/help/sites-deploying/storage-elements-in-aem-6.md) för mer information om hur du väljer lagringstyp för serverdelen efter att du installerat AEM 6.
 
 ## Ändra portnumret genom att byta namn på filen {#changing-the-port-number-by-renaming-the-file}
 
@@ -39,6 +42,7 @@ Det finns olika regler som ska följas när man byter namn på filen quickstart 
 >* dessa siffror måste komma efter ett streck
 >* om det finns andra siffror i filnamnet måste portnumret föregås av `-p`
 >* &quot;cq5&quot;-prefixet i början av filnamnet ignoreras
+
 >
 
 
@@ -49,7 +53,7 @@ Det finns olika regler som ska följas när man byter namn på filen quickstart 
 
 ## Körningslägen {#run-modes}
 
-**Med körningslägena** kan du trimma AEM-instansen för ett specifikt ändamål; till exempel författare eller publicera, testa, utveckla, intranät etc. Med dessa lägen kan du styra användningen av exempelinnehåll. Det här exempelinnehållet definieras innan snabbstarten byggs och kan innehålla paket, konfigurationer osv. Detta kan vara särskilt användbart för produktionsklara installationer när du vill hålla installationen ren och utan exempelinnehåll. Mer information finns i:
+**Med körningslägen** kan du justera AEM för ett specifikt ändamål. till exempel författare eller publicera, testa, utveckla, intranät etc. Med dessa lägen kan du styra användningen av exempelinnehåll. Det här exempelinnehållet definieras innan snabbstarten byggs och kan innehålla paket, konfigurationer osv. Detta kan vara särskilt användbart för produktionsklara installationer när du vill hålla installationen ren och utan exempelinnehåll. Mer information finns i:
 
 * [Körningslägen](/help/sites-deploying/configure-runmodes.md)
 
@@ -86,13 +90,14 @@ Så här installerar och startar du AEM som en Windows-tjänst:
 
    * prunsrv_amd64
    * prunsrv_ia64
+
    Det här kommandot anropar rätt skript som startar Windows-tjänstdaemon i 64-bitars Java i stället för 32-bitars Java.
 
 1. Om du vill förhindra processen från att förfalska till mer än en process ökar du den maximala stackstorleken och JVM-parametrarna för PermGen. Leta reda på `set jvm_options` kommandot och ange värdet enligt följande:
 
    `set jvm_options=-XX:MaxPermSize=256M;-Xmx1792m`
 
-1. Öppna kommandotolken, ändra den aktuella katalogen till mappen crx-quickstart/opt/help i AEM-installationen och ange följande kommando för att skapa tjänsten:
+1. Öppna kommandotolken, ändra den aktuella katalogen till mappen crx-quickstart/opt/help i AEM installation och ange följande kommando för att skapa tjänsten:
 
    `instsrv.bat cq5`
 
@@ -101,12 +106,14 @@ Så här installerar och startar du AEM som en Windows-tjänst:
 1. Starta tjänsten genom att göra något av följande:
 
    * Klicka på cq5 på kontrollpanelen Tjänster och klicka på Start.
+
    ![chlimage_1-71](assets/chlimage_1-71.png)
 
    * Skriv net start cq5 på kommandoraden.
+
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
-1. Windows anger att tjänsten körs. AEM startar och den körbara prunsrv-filen visas i Aktivitetshanteraren. I webbläsaren går du till exempel till AEM `http://localhost:4502` för att börja använda AEM.
+1. Windows anger att tjänsten körs. AEM startar och den körbara filen prunsrv visas i Task Manager. I webbläsaren navigerar du till AEM, till exempel `http://localhost:4502` för att börja använda AEM.
 
    ![chlimage_1-73](assets/chlimage_1-73.png)
 
@@ -116,7 +123,7 @@ Så här installerar och startar du AEM som en Windows-tjänst:
 
 >[!NOTE]
 >
->När du installerar AEM som tjänst måste du ange den absoluta sökvägen för loggkatalogen i `com.adobe.xmp.worker.files.ncomm.XMPFilesNComm` från Configuration Manager.
+>När du installerar AEM som tjänst måste du ange den absoluta sökvägen för loggkatalogen i `com.adobe.xmp.worker.files.ncomm.XMPFilesNComm` Configuration Manager.
 
 Om du vill avinstallera tjänsten klickar du antingen på **Stopp** på **tjänstens** kontrollpanel eller på kommandoraden, navigerar till mappen och skriver `instsrv.bat -uninstall cq5`. Tjänsten tas bort från listan på kontrollpanelen **Tjänster** eller från listan på kommandoraden när du skriver `net start`.
 
@@ -226,7 +233,7 @@ Log files
 
 ## Installera AEM i Amazon EC2-miljön {#installing-aem-in-the-amazon-ec-environment}
 
-När du installerar AEM på en instans av Amazon Elastic Compute Cloud (EC2) installeras Author-instansen korrekt om du installerar både författaren och publicerar på EC2-instansen enligt proceduren för hur du [installerar en instans av AEM](/help/sites-deploying/custom-standalone-install.md). Publiceringsinstansen blir dock författare.
+När du installerar AEM på en Amazon Elastic Compute Cloud-instans (EC2) installeras Author-instansen korrekt om du installerar både författaren och publicerar på EC2-instansen enligt proceduren för hur du [installerar en instans av AEM](/help/sites-deploying/custom-standalone-install.md). Publiceringsinstansen blir dock författare.
 
 Innan du installerar Publish-instansen i EC2-miljön gör du följande:
 
@@ -248,7 +255,7 @@ Innan du installerar Publish-instansen i EC2-miljön gör du följande:
 
    >[!CAUTION]
    >
-   >Kontrollera att du först kör instansen när du har packat upp den genom att köra kommandot ovan. Annars genereras inte fyllningen quickstart.properties. Utan den här filen kommer eventuella framtida AEM-uppgraderingar att misslyckas.
+   >Kontrollera att du först kör instansen när du har packat upp den genom att köra kommandot ovan. Annars genereras inte fyllningen quickstart.properties. Utan den här filen kommer eventuella framtida AEM inte att kunna uppgraderas.
 
 1. Öppna **startskriptet** i mappen **bin** och kontrollera följande avsnitt:
 
@@ -276,26 +283,24 @@ Följande länkar kan användas för att verifiera att installationen fungerar (
 
 * `http://localhost:8080/crx/de`
 
-   
-CRXDE Lite-konsolen.
+   CRXDE Lite-konsolen.
 
 * `http://localhost:8080/system/console`
 
-   
-Webbkonsolen.
+   Webbkonsolen.
 
 ## Åtgärder efter installation {#actions-after-installation}
 
 Även om det finns många möjligheter att konfigurera AEM WCM bör vissa åtgärder vidtas eller åtminstone granskas omedelbart efter installationen:
 
 * Se [Säkerhetschecklistan](/help/sites-administering/security-checklist.md) för uppgifter som krävs för att säkerställa att systemet förblir säkert.
-* Granska listan över standardanvändare och -grupper som har installerats med AEM WCM. Kontrollera om du vill vidta åtgärder för andra konton - se [Säkerhet och användaradministration](/help/sites-administering/security.md) för mer information.
+* Granska listan över standardanvändare och -grupper som installeras med AEM WCM. Kontrollera om du vill vidta åtgärder för andra konton - se [Säkerhet och användaradministration](/help/sites-administering/security.md) för mer information.
 
 ## Åtkomst till CRXDE Lite och webbkonsolen {#accessing-crxde-lite-and-the-web-console}
 
 När AEM WCM har startats kan du även få åtkomst till:
 
-* [CRXDE Lite](#accessing-crxde-lite) - används för att få åtkomst till och hantera databasen
+* [CRXDE Lite](#accessing-crxde-lite) - används för att komma åt och hantera databasen
 * [Webbkonsol](#accessing-the-web-console) - används för att hantera eller konfigurera OSGi-paket (kallas även OSGi-konsolen)
 
 ### Åtkomst till CRXDE Lite {#accessing-crxde-lite}
@@ -306,20 +311,20 @@ Om du vill öppna CRXDE Lite kan du välja **CRXDE Lite** från välkomstskärme
  https://<<i>host</i>>:<<i>port</i>>/crx/de/index.jsp
 ```
 
-Exempel:\
+Till exempel:\
 `http://localhost:4502/crx/de/index.jsp` ``
 
 ![installcq_crxdelite](assets/installcq_crxdelite.png)
 
 ### Åtkomst till webbkonsolen {#accessing-the-web-console}
 
-Om du vill komma åt Adobe CQ Web Console kan du välja **OSGi Console** från välkomstskärmen eller använda webbläsaren för att navigera till
+Om du vill komma åt Adobe CQ webbkonsol väljer du **OSGi Console** från välkomstskärmen eller använder webbläsaren för att navigera till
 
 ```
  https://<<i>host</i>>:<<i>port</i>>/system/console
 ```
 
-Exempel:\
+Till exempel:\
 `http://localhost:4502/system/console`\
 eller för sidan Bundles\
 `http://localhost:4502/system/console/bundles`
@@ -336,9 +341,9 @@ Information om hur du hanterar problem som kan uppstå under installationen finn
 
 ## Avinstallerar Adobe Experience Manager {#uninstalling-adobe-experience-manager}
 
-Eftersom AEM installeras i en enda katalog behövs inget avinstallationsverktyg. Avinstallation kan vara så enkelt som att ta bort hela installationskatalogen, men hur du avinstallerar AEM beror på vad du vill uppnå och vilken beständig lagring du använder.
+Eftersom AEM installeras i en enda katalog behövs inget avinstallationsverktyg. Avinstallationen kan vara så enkel som att ta bort hela installationskatalogen, men hur du avinstallerar AEM beror på vad du vill uppnå och vilken beständig lagring du använder.
 
-Om beständig lagring är inbäddad i installationskatalogen, till exempel i standardinstallationen för TPM, tas även data bort om du tar bort mappar.
+Om beständig lagring är inbäddad i installationskatalogen, till exempel i standardinstallationen av TPM, tas även data bort när du tar bort mappar.
 
 >[!NOTE]
 >
