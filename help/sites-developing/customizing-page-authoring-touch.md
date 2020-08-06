@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 6825dcd6-fa75-4410-b6b2-e7bd4a391224
 translation-type: tm+mt
 source-git-commit: 14daff213297d2435765dd46039f346ce3868ac5
+workflow-type: tm+mt
+source-wordcount: '1375'
+ht-degree: 0%
 
 ---
 
@@ -38,7 +41,7 @@ AEM innehåller olika mekanismer som gör att du kan anpassa sidredigeringsfunkt
 >
 >Mer information finns i [JS-dokumentationsuppsättningen](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html).
 
-Dessa kan användas på många sätt för att utöka sidredigeringsfunktionerna i din AEM-instans. En markering beskrivs nedan (på en hög nivå).
+De kan användas på många sätt för att utöka sidredigeringsfunktionen i AEM. En markering beskrivs nedan (på en hög nivå).
 
 >[!NOTE]
 >
@@ -48,9 +51,10 @@ Dessa kan användas på många sätt för att utöka sidredigeringsfunktionerna 
 >* Använda och skapa [övertäckningar](/help/sites-developing/overlays.md).
 >* [Granit](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 >* [Struktur för det AEM Touch-aktiverade gränssnittet](/help/sites-developing/touch-ui-structure.md) för mer information om de strukturella områden som används för sidredigering.
+
 >
 >
-Det här avsnittet behandlas också i [AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) -sessionen - [Anpassa användargränssnittet för AEM 6.0](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-user-interface-customization-for-aem6.html).
+Det här avsnittet behandlas också i [AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) -sessionen - [Anpassning av användargränssnitt för AEM 6.0](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-user-interface-customization-for-aem6.html).
 
 >[!CAUTION]
 >
@@ -68,9 +72,9 @@ Det här avsnittet behandlas också i [AEM Gems](https://docs.adobe.com/content/
 
 När du redigerar en sida finns det olika [lägen](/help/sites-authoring/author-environment-tools.md#page-modes) . Dessa lägen implementeras med [lager](/help/sites-developing/touch-ui-structure.md#layer). Dessa ger åtkomst till olika typer av funktioner för samma sidinnehåll. Standardlagren är: redigera, förhandsgranska, kommentera, utveckla och målinrikta.
 
-### Exempel på lager:Live Copy-status {#layer-example-live-copy-status}
+### Exempel på lager: Live Copy-status {#layer-example-live-copy-status}
 
-En standard-AEM-instans innehåller MSM-lagret. Detta ger åtkomst till data som är relaterade till hantering [av](/help/sites-administering/msm.md) flera webbplatser och markerar dem i lagret.
+En AEM standardinstans innehåller MSM-lagret. Detta ger åtkomst till data som är relaterade till hantering [av](/help/sites-administering/msm.md) flera webbplatser och markerar dem i lagret.
 
 För att se hur det fungerar kan du redigera vilken [webbsida som helst.](/help/sites-developing/we-retail-globalized-site-structure.md) Återförsäljarsida (eller någon annan live-kopia) och välja **Live Copy-status** .
 
@@ -150,14 +154,14 @@ I en vanlig AEM-installation:
 
    * `cq:inplaceEditing`
 
-       till exempel:
+      till exempel:
 
       * `/libs/foundation/components/text/cq:editConfig`
       * `/libs/foundation/components/image/cq:editConfig`
 
          * property: `editorType`
 
-            Definierar vilken typ av infogad redigerare som ska användas när redigeringen på plats aktiveras för den komponenten.t.ex. `text`, `textimage`, `image`, `title`..
+            Definierar vilken typ av infogad redigerare som ska användas när redigeringen på plats aktiveras för den komponenten. t.ex. `text`, `textimage`, `image`, `title`.
 
 1. Ytterligare konfigurationsinformation om redigeraren kan konfigureras med en `config` nod som innehåller konfigurationer samt en annan `plugin` nod som innehåller nödvändig konfigurationsinformation för plugin-programmet.
 
@@ -185,7 +189,7 @@ I en vanlig AEM-installation:
 
    >[!CAUTION]
    >
-   >Observera att i AEM-beskärningsförhållanden, som anges av `ratio` egenskapen, definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av äldre kompatibilitetsskäl. Redigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar egenskapen tydligt eftersom det är det som visas i användargränssnittet. `name`
+   >Observera att i AEM beskärningsproportioner, som anges av `ratio` egenskapen, definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av äldre kompatibilitetsskäl. Redigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar egenskapen tydligt eftersom det är det som visas i användargränssnittet. `name`
 
 #### Skapa en ny lokal redigerare {#creating-a-new-in-place-editor}
 
