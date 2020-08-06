@@ -26,11 +26,11 @@ Följande snabbstarter är tillgängliga för konvertering av PDF-tjänstens API
 
 [Snabbstart (SOAP-läge): Konvertera ett PDF-dokument till JPEG-filer med Java API](convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstart som finns i Programmering med AEM-formulär baseras på den Forms Server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart som finns i Programmering med AEM baseras på den Forms-server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Konvertera ett PDF-dokument till PostScript med Java API {#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api}
 
