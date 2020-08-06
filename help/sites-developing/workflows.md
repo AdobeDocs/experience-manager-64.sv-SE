@@ -1,8 +1,8 @@
 ---
 title: Utveckla och utöka arbetsflöden
 seo-title: Utveckla och utöka arbetsflöden
-description: AEM innehåller flera verktyg och resurser för att skapa arbetsflödesmodeller, utveckla arbetsflödessteg och för programmeringsinkoppling med arbetsflöden
-seo-description: AEM innehåller flera verktyg och resurser för att skapa arbetsflödesmodeller, utveckla arbetsflödessteg och för programmeringsinkoppling med arbetsflöden
+description: AEM innehåller flera verktyg och resurser för att skapa arbetsflödesmodeller, utveckla arbetsflödessteg och för att interagera programmatiskt med arbetsflöden
+seo-description: AEM innehåller flera verktyg och resurser för att skapa arbetsflödesmodeller, utveckla arbetsflödessteg och för att interagera programmatiskt med arbetsflöden
 uuid: 5a857589-3b13-4519-bda2-b1dab6005550
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8954e3df-3afa-4d53-a7e1-255f3b8f499f
 translation-type: tm+mt
 source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
+workflow-type: tm+mt
+source-wordcount: '1535'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
 
 AEM innehåller flera verktyg och resurser för att skapa arbetsflödesmodeller, utveckla arbetsflödessteg och för programmässig interaktion med arbetsflöden.
 
-Med arbetsflöden kan ni automatisera processer för hantering av resurser och publicering av innehåll i AEM-miljön. Arbetsflödena består av en serie steg där varje steg utför en viss uppgift. Du kan använda logik- och körtidsdata för att avgöra när en process kan fortsätta och välja nästa steg i ett av flera möjliga steg.
+Med arbetsflöden kan ni automatisera processer för hantering av resurser och publicering av innehåll i AEM. Arbetsflödena består av en serie steg där varje steg utför en viss uppgift. Du kan använda logik- och körtidsdata för att avgöra när en process kan fortsätta och välja nästa steg i ett av flera möjliga steg.
 
-Affärsprocesserna för att skapa och publicera webbsidor innefattar till exempel att godkänna och godkänna av olika deltagare. Dessa processer kan utformas med hjälp av AEM-arbetsflöden och tillämpas på specifikt innehåll.
+Affärsprocesserna för att skapa och publicera webbsidor innefattar till exempel att godkänna och godkänna av olika deltagare. Dessa processer kan utformas med hjälp AEM arbetsflöden och tillämpas på specifikt innehåll.
 
 Nedan beskrivs de viktigaste aspekterna, medan följande sidor innehåller mer information:
 
@@ -40,8 +43,9 @@ Nedan beskrivs de viktigaste aspekterna, medan följande sidor innehåller mer i
 >* Administrera arbetsflöden och arbetsflödesinstanser, se [Administrera arbetsflöden](/help/sites-administering/workflows.md).
 >* En communityartikel från början till slut finns i [Ändra digitala resurser med hjälp av Adobe Experience Manager-arbetsflöden.](https://helpx.adobe.com/experience-manager/using/modify_asset_workflow.html)
 >* Se [Ask the AEM Experts Webinar om arbetsflöden](https://bit.ly/ATACE218).
->* En communityartikel från början till slut finns i [Skapa ett anpassat steg](https://helpx.adobe.com/experience-manager/using/dynamic-steps-aem63.html)för dynamiska Adobe Experience Manager 6.3.
->* Ändringar av informationsplatserna finns i [Databasomstrukturering i AEM 6.4](/help/sites-deploying/repository-restructuring.md) och Bästa [arbetsflöden - platser](/help/sites-developing/workflows-best-practices.md#locations).
+>* En artikel från början till slut finns i [Skapa ett dynamiskt Adobe Experience Manager 6.3-steg](https://helpx.adobe.com/experience-manager/using/dynamic-steps-aem63.html).
+>* Förändringar av informationsplatserna, se [Databasomstrukturering i AEM 6.4](/help/sites-deploying/repository-restructuring.md) och Bästa [arbetsflöden - platser](/help/sites-developing/workflows-best-practices.md#locations).
+
 >
 
 
@@ -125,7 +129,7 @@ Det finns olika typer av arbetsflöden som anges i konsolen Arbetsflödesmodelle
 
 * **Standard**
 
-   Det här är färdiga arbetsflöden som ingår i en standard-AEM-instans.
+   Det här är färdiga arbetsflöden som ingår i en AEM.
 
 * Anpassade arbetsflöden (ingen indikator i konsolen)
 
@@ -157,6 +161,7 @@ Standardarbetsflöden sparar körningsinformation (historik) under körningen. D
 >* Nyttolasttypen (till exempel video) kräver externa steg för bearbetning. I sådana fall krävs körtidshistoriken för statusbekräftelse.
 >* Arbetsflödet går in i en **AND-delning**. I sådana fall krävs körtidshistoriken för statusbekräftelse.
 >* När det tillfälliga arbetsflödet går in i ett deltagarsteg ändras läget (vid körning) till icke-tillfälligt. när aktiviteten skickas till en person måste historiken bevaras
+
 >
 
 
@@ -195,6 +200,7 @@ För ett arbetsflöde med sex steg och fyra steg:
 
    * Du kan skapa flera scennamn.
    * Sedan tilldelas varje steg ett enskilt scennamn (ett scennamn kan tilldelas ett eller flera steg).
+
    | **Stegnamn** | **Scen (tilldelad till steget)** |
    |---|---|
    | Steg 1 | Skapa |
@@ -206,9 +212,9 @@ För ett arbetsflöde med sex steg och fyra steg:
 
 1. När arbetsflödet körs kan användaren visa förloppet enligt scennamnen (i stället för stegnamnen). Arbetsflödets förlopp visas på fliken [ARBETSFLÖDESINFO i fönstret med uppgiftsinformation för arbetsposten](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions) som visas i [Inkorgen](/help/sites-authoring/inbox.md).
 
-### Arbetsflöden och formulär {#workflows-and-forms}
+### Arbetsflöden och Forms {#workflows-and-forms}
 
-Vanligtvis används arbetsflöden för att bearbeta formulärinskickade formulär i AEM. Detta kan vara fallet med [kärnkomponenterna](https://helpx.adobe.com/experience-manager/core-components/using/form-container.html) som finns i en AEM-standardinstans eller med [AEM Forms-lösningen](/help/forms/using/aem-forms-workflow.md).
+Vanligtvis används arbetsflöden för att bearbeta formulärinskickade formulär i AEM. Det kan vara med [kärnkomponenterna](https://helpx.adobe.com/experience-manager/core-components/using/form-container.html) som finns i en AEM eller med [AEM Forms-lösningen](/help/forms/using/aem-forms-workflow.md).
 
 När du skapar ett nytt formulär är det enkelt att koppla formulärinlämningen till en arbetsflödesmodell. t.ex. för att lagra innehållet på en viss plats i databasen eller för att meddela en användare om att formuläret har skickats in och dess innehåll.
 
