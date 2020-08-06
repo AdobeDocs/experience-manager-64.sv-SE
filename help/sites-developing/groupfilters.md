@@ -12,6 +12,9 @@ discoiquuid: 4c4a7bc4-3fb1-44c1-823f-d789790f5e06
 legacypath: /content/docs/en/aem/6-0/develop/mobile/groupfilters
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '819'
+ht-degree: 0%
 
 ---
 
@@ -186,11 +189,11 @@ Följande POM-kod är användbar om du använder Maven för att skapa program. P
 
 * `org.apache.felix.scr.annotations.jar`: Tillhandahåller komponentanteckningar och tjänstanteckningar.
 
-Gränssnitten DeviceGroup och DeviceGroupFilter ingår i Day Communique 5 WCM Mobile API bundle. Felix-anteckningarna ingår i paketet Apache Felix Declarative Services. Du kan hämta denna JAR-fil från Adobe-databasen.
+Gränssnitten DeviceGroup och DeviceGroupFilter ingår i Day Communique 5 WCM Mobile API bundle. Felix-anteckningarna ingår i paketet Apache Felix Declarative Services. Du kan hämta den här JAR-filen från den offentliga Adobe-databasen.
 
-Vid redigeringen är 5.5.2 den version av WCM Mobile API-paketet som finns i den senaste versionen av AEM. Använd Adobe Web Console ([http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)) för att säkerställa att det här är den paketversion som används i din miljö.
+Vid redigeringen är 5.5.2 den version av WCM Mobile API-paketet som finns i den senaste versionen av AEM. Använd Adobe Web Console ([http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)) för att säkerställa att det här är den paketversion som distribueras i din miljö.
 
-**** POM: (Din POM använder ett annat groupId och en annan version.)
+**POM:** (Din POM använder ett annat groupId och en annan version.)
 
 ```xml
 <project xmlns="https://maven.apache.org/POM/4.0.0"
@@ -255,4 +258,4 @@ Vid redigeringen är 5.5.2 den version av WCM Mobile API-paketet som finns i den
 </project>
 ```
 
-Lägg till den profil som finns i [sektionen med innehållspaketet Maven-plugin](/help/sites-developing/vlt-mavenplugin.md) till din maven-inställningsfil för att använda den offentliga Adobe-databasen.
+Lägg till den profil som finns i avsnittet [Hämta plugin-programmet](/help/sites-developing/vlt-mavenplugin.md) för innehållspaket Maven i din maven-inställningsfil för att använda den publika Adobe-databasen.
