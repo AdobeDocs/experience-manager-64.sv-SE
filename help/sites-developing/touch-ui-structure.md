@@ -1,8 +1,8 @@
 ---
-title: Struktur för det AEM Touch-aktiverade gränssnittet
-seo-title: Struktur för det AEM Touch-aktiverade gränssnittet
-description: Det pekoptimerade användargränssnittet, som det implementeras i AEM, har flera underliggande principer och består av flera nyckelelement
-seo-description: Det pekoptimerade användargränssnittet, som det implementeras i AEM, har flera underliggande principer och består av flera nyckelelement
+title: Struktur för det AEM användargränssnittet med pekskärm
+seo-title: Struktur för det AEM användargränssnittet med pekskärm
+description: Det pekoptimerade användargränssnittet, som implementeras i AEM, har flera underliggande principer och består av flera nyckelelement
+seo-description: Det pekoptimerade användargränssnittet, som implementeras i AEM, har flera underliggande principer och består av flera nyckelelement
 uuid: 9a255238-1adc-4a40-9c37-30cb53ffb26c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,21 +11,24 @@ content-type: reference
 discoiquuid: 55dba890-4847-4986-b272-33480bc1d573
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '886'
+ht-degree: 1%
 
 ---
 
 
-# Struktur för det AEM Touch-aktiverade gränssnittet{#structure-of-the-aem-touch-enabled-ui}
+# Struktur för det AEM användargränssnittet med pekskärm{#structure-of-the-aem-touch-enabled-ui}
 
-Det användargränssnitt som har AEM touch-funktioner har flera underliggande principer och består av flera nyckelelement:
+Det AEM användargränssnittet med pekskärm har flera underliggande principer och består av flera nyckelelement:
 
 ## Konsoler {#consoles}
 
 ### Grundläggande layout och storleksändring {#basic-layout-and-resizing}
 
-Gränssnittet fungerar både för mobila och stationära enheter, men i stället för att skapa två format som Adobe har valt att använda använder Adobe ett format som fungerar för alla skärmar och enheter.
+Gränssnittet fungerar både för mobila och stationära enheter, men i stället för att skapa två format har Adobe valt att använda ett format som fungerar för alla skärmar och enheter.
 
-Alla moduler använder samma grundläggande layout, i AEM ser du det här:
+Alla moduler använder samma grundläggande layout, AEM detta kan ses som:
 
 ![chlimage_1-142](assets/chlimage_1-142.png)
 
@@ -41,7 +44,7 @@ Om upplösningen till exempel ligger under 1 024 px (som på en mobil enhet) jus
 
 Rubrikraden visar globala element som:
 
-* logotypen och den specifika produkt/lösning som du för närvarande använder, för AEM utgör detta också en länk till Global Navigation
+* logotypen och den specifika produkt/lösning som du för närvarande använder, för AEM utgör detta också en länk till den globala navigeringen
 * Sökning
 * ikon för att komma åt hjälpresurserna
 * ikon för att komma åt andra lösningar
@@ -140,7 +143,7 @@ Ett lager är ett oberoende funktionspaket som kan aktiveras för att:
 
 Lagren har avancerade funktioner för hela sidan, i motsats till specifika åtgärder för en enskild komponent.
 
-AEM innehåller flera lager som redan är implementerade för att skapa sidor. som till exempel redigering, förhandsgranskning och anteckning.
+AEM innehåller flera lager som redan har implementerats för sidredigering, som till exempel redigering, förhandsgranskning och anteckning.
 
 >[!NOTE]
 >
