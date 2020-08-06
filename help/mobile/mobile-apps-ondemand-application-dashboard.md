@@ -11,6 +11,9 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: 42a38399-f5a7-4d2f-aa6a-d409a7ec60f7
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '625'
+ht-degree: 2%
 
 ---
 
@@ -49,7 +52,7 @@ I **Manage App** Tile visas tillgänglig programinformation:
 
 ## Hantera anslutningspanel {#the-manage-connection-tile}
 
-I rutan **Hantera anslutning** visas anslutningsinformation för AEM Mobile On Demand Services:
+Under **Hantera anslutning** visas anslutningsinformationen för AEM Mobile On-demand Services:
 
 * Namn på molnkonfiguration
 * Projektnamn och ID
@@ -77,11 +80,11 @@ Du kan expandera varje ruta för att få en mer detaljerad listvy genom att klic
 
 I rutan **Hantera banderoller** kan du hantera innehållet för en banderoll. Följande information visas för en banderoll:
 
-* image
+* bild
 * **RUBRIK**: banderollens namn
 * **ÄNDRAT**: senast ändrad i AEM
 * **ÖVERFÖRD**: senast överförd från AEM
-* **PUBLICERAT**: senaste publicerade begäran från AEM
+* **PUBLICERAT**: senaste publicerade AEM
 * **KÄLLA**: källa (AEM lokal eller fjärransluten från Mobile On Demand)
 
 Följande bild visar panelen **Hantera banners** i AEM Mobile Application Dashboard:
@@ -96,11 +99,11 @@ Följande bild visar panelen **Hantera banners** i AEM Mobile Application Dashbo
 
 På **panelen Hantera artiklar** kan du hantera innehållet för en artikel. Följande information visas för en artikel:
 
-* image
+* bild
 * **RUBRIK**: artikelns namn
 * **ÄNDRAT**: senast ändrad i AEM
 * **ÖVERFÖRD**: senast överförd från AEM
-* **PUBLICERAT**: senaste publicerade begäran från AEM
+* **PUBLICERAT**: senaste publicerade AEM
 * **KÄLLA**: källa (AEM lokal eller fjärransluten från Mobile On-Demand)
 
 Följande bild visar **panelen Hantera artiklar** på AEM Mobile Application Dashboard:
@@ -115,14 +118,14 @@ Följande bild visar **panelen Hantera artiklar** på AEM Mobile Application Das
 
 I **rutan Hantera samlingar** kan du hantera innehållet i en samling. Följande information visas för en samling:
 
-* image
+* bild
 * **RUBRIK**: samlingens namn
 * **ÄNDRAT**: senast ändrad i AEM
 * **ÖVERFÖRD**: senast överförd från AEM
-* **PUBLICERAT**: senaste publicerade begäran från AEM
+* **PUBLICERAT**: senaste publicerade AEM
 * **KÄLLA**: källa (AEM lokal eller fjärransluten från Mobile On-Demand)
 
-I följande bild visas panelen **Hantera samlingar** i AEM Mobile Application Dashboard:
+Följande bild visar panelen **Hantera samlingar** i AEM Mobile Application Dashboard:
 
 ![chlimage_1-59](assets/chlimage_1-59.png)
 
@@ -138,10 +141,10 @@ När du känner till kontrollpanelen för program kan du läsa följande resurse
 * [Associera en app på begäran med en molnkonfiguration](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)
 * [Innehållshanteringsåtgärder](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
 
-### Additional Resources {#additional-resources}
+### Ytterligare resurser {#additional-resources}
 
 Mer information om roller och ansvar för en administratör och utvecklare finns i resurserna nedan:
 
-* [Utveckla AEM-innehåll för AEM Mobile On Demand-tjänster](/help/mobile/aem-mobile-on-demand.md)
-* [Administrera innehåll för att använda AEM Mobile On Demand Services](/help/mobile/aem-mobile.md)
+* [Utveckla AEM för AEM Mobile On-demand Services](/help/mobile/aem-mobile-on-demand.md)
+* [Administrera innehåll för användning av AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)
 
