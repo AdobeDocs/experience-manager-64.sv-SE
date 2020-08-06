@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: e75ce118-3850-4440-ad58-89569cb8c8eb
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1780'
+ht-degree: 1%
 
 ---
 
@@ -35,11 +38,11 @@ Det finns flera flikar och ikoner, bland annat:
 
 * Komponenter
 * Sidan
-*  Information
+* Information
 * Versionshantering
 * Arbetsflöde
 * Lägen
-*  Ställning
+* Ställning
 * Klientkontext
 * Webbplatser
 
@@ -71,9 +74,10 @@ Så här infogar du en ny komponent:
 
 1. Det finns flera sätt att välja den typ av stycke som du vill infoga:
 
-   * **Dubbelklicka på området med etiketten** Dra komponenter eller resurser här... - verktygsfältet **Infoga ny komponent** öppnas. Markera en komponent och klicka på **OK**.
+   * Dubbelklicka på området med etiketten **Dra komponenter eller resurser här...** - verktygsfältet **Infoga ny komponent** öppnas. Markera en komponent och klicka på **OK**.
    * Dra en komponent från det flytande verktygsfältet (kallas sidospark) för att infoga ett nytt stycke.
-   * **Högerklicka på ett befintligt stycke och välj** Nytt... - verktygsfältet Infoga ny komponent öppnas. Markera en komponent och klicka på **OK**.
+   * Högerklicka på ett befintligt stycke och välj **Nytt...** - verktygsfältet Infoga ny komponent öppnas. Markera en komponent och klicka på **OK**.
+
    ![screen_shot_2012-02-15at115605am](assets/screen_shot_2012-02-15at115605am.png)
 
 1. I både sidospåret och verktygsfältet **Infoga ny komponent** visas en lista med tillgängliga komponenter (stycketyper). Dessa kan delas upp i olika avsnitt (t.ex. Allmänt, Kolumner o.s.v.) som kan färdigställas efter behov.
@@ -182,9 +186,11 @@ Du kan avbryta (och sedan återaktivera) arvet. Beroende på vilken komponent de
    Om en komponent är en del av en livecopy eller en start visas den med en hänglåsikon. Du kan klicka på hänglåset för att avbryta arvet.
 
    * hänglåsikonen visas när komponenten är markerad; till exempel:
+
    ![chlimage_1-102](assets/chlimage_1-102.png)
 
    * hänglåset visas också i komponentdialogen, till exempel:
+
    ![chlimage_1-103](assets/chlimage_1-103.png)
 
 1. **Ett ärvt styckesystem**
@@ -221,11 +227,11 @@ För större skalredigeringar av samma fras kan du med menyalternativet **[Sök 
 
 ## Låsa en sida {#locking-a-page}
 
-Med AEM kan du låsa en sida så att ingen annan kan ändra innehållet. Detta är praktiskt när du gör många ändringar på en viss sida eller när du behöver frysa en sida en kort stund.
+AEM kan du låsa en sida så att ingen annan kan ändra innehållet. Detta är praktiskt när du gör många ändringar på en viss sida eller när du behöver frysa en sida en kort stund.
 
 >[!CAUTION]
 >
->Låsning av en sida bör användas med försiktighet eftersom den enda person som kan låsa upp en sida är den person som har låst den (eller ett konto med administratörsbehörighet).
+>Låsning av en sida bör användas med försiktighet eftersom den enda person som kan låsa upp en sida är den person som låste den (eller ett konto med administratörsbehörighet).
 
 Så här låser du en sida:
 
@@ -235,7 +241,7 @@ Så här låser du en sida:
 
    ![screen_shot_2012-02-08at15750pm](assets/screen_shot_2012-02-08at15750pm.png)
 
-   Ett meddelande visar att sidan är låst för andra användare. Dessutom visas sidan som låst i den högra rutan i konsolen **Webbplatser** , där AEM WCM anger vilken användare som har låst sidan.
+   Ett meddelande visar att sidan är låst för andra användare. Dessutom visas sidan som låst i den högra rutan i konsolen **Webbplatser** AEM WCM, vilket anger vilken användare som har låst sidan.
 
    ![screen_shot_2012-02-08at20657pm](assets/screen_shot_2012-02-08at20657pm.png)
 
@@ -279,6 +285,7 @@ Funktionen för kommandona ångra och gör om liknar den i andra program. Använ
 >* gör om åtgärder så länge du inte har gjort någon sidredigering sedan du använde Ångra.
 >* Ångra högst 20 redigeringsåtgärder (standardinställning).
 >* Du kan även använda [kortkommandon](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) för att ångra och göra om.
+
 >
 
 
