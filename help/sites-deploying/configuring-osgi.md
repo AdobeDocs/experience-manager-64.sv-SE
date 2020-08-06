@@ -1,8 +1,8 @@
 ---
 title: Konfigurerar OSGi
 seo-title: Konfigurerar OSGi
-description: OSGi är en viktig del i teknikhögen i Adobe Experience Manager (AEM). Det används för att styra de sammansatta paketen av AEM och deras konfiguration. I den här artikeln beskrivs hur du kan hantera konfigurationsinställningarna för sådana paket.
-seo-description: OSGi är en viktig del i teknikhögen i Adobe Experience Manager (AEM). Det används för att styra de sammansatta paketen av AEM och deras konfiguration. I den här artikeln beskrivs hur du kan hantera konfigurationsinställningarna för sådana paket.
+description: OSGi är en grundläggande del i Adobe Experience Manager (AEM) teknikstack. Det används för att styra de sammansatta AEM och deras konfiguration. I den här artikeln beskrivs hur du kan hantera konfigurationsinställningarna för sådana paket.
+seo-description: OSGi är en grundläggande del i Adobe Experience Manager (AEM) teknikstack. Det används för att styra de sammansatta AEM och deras konfiguration. I den här artikeln beskrivs hur du kan hantera konfigurationsinställningarna för sådana paket.
 uuid: b39059a5-dd61-486a-869a-0d7a732c3a47
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: d701e4ba-417f-4b57-b103-27fd25290736
 translation-type: tm+mt
 source-git-commit: d97828afee7a65e7a4036912c1cc8726404088c9
+workflow-type: tm+mt
+source-wordcount: '2013'
+ht-degree: 0%
 
 ---
 
 
 # Konfigurerar OSGi{#configuring-osgi}
 
-[OSGi](https://www.osgi.org/) är en grundläggande del i teknikhögen i Adobe Experience Manager (AEM). Det används för att styra de sammansatta paketen av AEM och deras konfiguration.
+[OSGi](https://www.osgi.org/) är en grundläggande del i Adobe Experience Manager (AEM) teknikstack. Det används för att styra de sammansatta AEM och deras konfiguration.
 
 OSGi&quot;*innehåller standardmallar som gör att applikationer kan byggas av små, återanvändbara och samverkande komponenter. Dessa komponenter kan sammanställas i ett program och distribueras*&quot;.
 
@@ -25,13 +28,13 @@ Detta gör det enkelt att hantera paket när de kan stoppas, installeras och sta
 
 Du kan hantera konfigurationsinställningarna för sådana paket genom att antingen:
 
-* med [Adobe CQ Web Console](#osgi-configuration-with-the-web-console)
+* med [Adobe CQ webbkonsol](#osgi-configuration-with-the-web-console)
 * använda [konfigurationsfiler](#osgi-configuration-with-configuration-files)
 * konfigurera [content-nodes ( `sling:OsgiConfig`) i databasen](#osgi-configuration-in-the-repository)
 
 Båda metoderna kan användas trots att det finns små skillnader, främst i förhållande till [körningslägena](/help/sites-deploying/configure-runmodes.md):
 
-* [Adobe CQ Web Console](#osgi-configuration-with-the-web-console)
+* [Adobe CQ webbkonsol](#osgi-configuration-with-the-web-console)
 
    * Webbkonsolen är standardgränssnittet för OSGi-konfiguration. Det innehåller ett användargränssnitt för redigering av de olika egenskaperna, där möjliga värden kan väljas från fördefinierade listor.
 
@@ -63,7 +66,7 @@ Alla dessa konfigurationsmetoder, oavsett vilken metod du använder:
 
 ## OSGi-konfiguration med webbkonsolen {#osgi-configuration-with-the-web-console}
 
-Webbkonsolen [i](/help/sites-deploying/web-console.md) AEM har ett standardiserat gränssnitt för att konfigurera paketen. Fliken **Konfiguration** används för att konfigurera OSGi-paket och är därför den underliggande mekanismen för att konfigurera AEM-systemparametrar.
+Webbkonsolen [i AEM](/help/sites-deploying/web-console.md) har ett standardiserat gränssnitt för att konfigurera paketen. Fliken **Konfiguration** används för att konfigurera OSGi-paket och är därför den underliggande mekanismen för att konfigurera AEM systemparametrar.
 
 Alla ändringar som görs tillämpas omedelbart på den aktuella OSGi-konfigurationen, ingen omstart krävs.
 
@@ -75,7 +78,7 @@ Alla ändringar som görs tillämpas omedelbart på den aktuella OSGi-konfigurat
 >
 >På webbkonsolen finns beskrivningar som anger standardinställningar för Sling.
 >
->Adobe Experience Manager har egna standardinställningar, så standarduppsättningen kan skilja sig från dem som finns dokumenterade på konsolen.
+>Adobe Experience Manager har sina egna standardinställningar, så standarduppsättningen kan skilja sig från dem som finns dokumenterade på konsolen.
 
 Så här uppdaterar du en konfiguration med webbkonsolen:
 
@@ -129,7 +132,7 @@ Webbkonsolen visar ingen indikation på var i databasen dina ändringar har spar
 
 1. Skapa konfigurationsfilen genom [att göra en första ändring i webbkonsolen](#osgi-configuration-with-the-web-console).
 1. Öppna CRXDE Lite.
-1. **Välj** Fråga på menyn **Verktyg**... .
+1. Välj **Fråga på menyn** Verktyg **...** .
 1. Skicka en fråga av **typen** `SQL` för att söka efter PID för konfigurationen som du har uppdaterat.
 
    Exempel: **Apache Felix OSGi Management Console** har den beständiga identiteten (PID):
@@ -182,7 +185,7 @@ Om du vill lägga till en ny konfiguration i databasen måste du känna till fö
 
    Referera till fältet **Konfigurationer** i webbkonsolen. Namnet visas inom parentes efter paketnamnet (eller i **konfigurationsinformationen** längst ned på sidan).
 
-   Skapa till exempel en nod `com.day.cq.wcm.core.impl.VersionManagerImpl.` för att konfigurera **AEM WCM Version Manager**.
+   Skapa till exempel en nod `com.day.cq.wcm.core.impl.VersionManagerImpl.` för att konfigurera **AEM WCM-versionshanteraren**.
 
    ![chlimage_1-141](assets/chlimage_1-141.png)
 
@@ -227,7 +230,7 @@ Så här lägger du till den nya konfigurationen i databasen:
    * Typ: `sling:OsgiConfig`
    * Namn: Den beständiga identiteten (PID).
 
-      t.ex. för AEM WCM Version Manager `com.day.cq.wcm.core.impl.VersionManagerImpl`
+      till exempel AEM WCM Version Manager använder `com.day.cq.wcm.core.impl.VersionManagerImpl`
    >[!NOTE]
    >
    >När en fabrikskonfiguration läggs till `-<identifier>` i namnet.
@@ -243,7 +246,8 @@ Så här lägger du till den nya konfigurationen i databasen:
    * Namn: parameternamnet som visas i webbkonsolen, namnet visas inom parentes i slutet av fältbeskrivningen. Till exempel för `Create Version on Activation` användning `versionmanager.createVersionOnActivation`
    * Typ: i tillämpliga fall.
    * Värde: efter behov.
-   Du behöver bara skapa egenskaper för de parametrar som du vill konfigurera, andra använder fortfarande standardvärdena som angetts av AEM.
+
+   Du behöver bara skapa egenskaper för de parametrar som du vill konfigurera, medan andra fortfarande använder standardvärdena som de har angetts av AEM.
 
 1. Spara alla ändringar.
 
