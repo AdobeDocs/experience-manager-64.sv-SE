@@ -4,17 +4,20 @@ description: I den här artikeln beskrivs hur du importerar och exporterar flera
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 254a9dec248255f8f76db3531c65b54fb4ebff0c
+workflow-type: tm+mt
+source-wordcount: '603'
+ht-degree: 8%
 
 ---
 
 
 # Importera och exportera massvis med metadata {#bulk-metadata-import-and-export}
 
-Med AEM Resurser kan du importera resursmetadata i grupp med hjälp av en CSV-fil. Du kan göra satsvisa uppdateringar för de nyligen överförda resurserna eller för befintliga resurser genom att importera en CSV-fil. Du kan också importera resursmetadata i grupp från tredjepartssystem i CSV-format.
+Med AEM Assets kan du importera resursmetadata i grupp med hjälp av en CSV-fil. Du kan göra satsvisa uppdateringar för de nyligen överförda resurserna eller för befintliga resurser genom att importera en CSV-fil. Du kan också importera resursmetadata i grupp från tredjepartssystem i CSV-format.
 
 ## Importera metadata {#import-metadata}
 
-Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig uppdatering av metadata för flera resurser kan vara resurskrävande på grund av XMP-återskrivningsaktivitet om arbetsflödesflaggan är markerad. Planera en sådan import under begränsad serveranvändning för att förhindra prestandapåverkan för andra användare.
+Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig uppdatering av metadata för flera resurser kan vara resurskrävande på grund av XMP återskrivningsaktivitet om arbetsflödesflaggan är markerad. Planera en sådan import under begränsad serveranvändning för att förhindra prestandapåverkan för andra användare.
 
 >[!NOTE]
 >
@@ -22,20 +25,20 @@ Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig
 
 Så här importerar du flera metadata samtidigt:
 
-1. Navigera till användargränssnittet Resurser och tryck/klicka på **[!UICONTROL Skapa]** i verktygsfältet.
-1. From the menu, select **[!UICONTROL Metadata]**.
-1. På sidan **[!UICONTROL Metadataimport]** trycker/klickar du på **[!UICONTROL Välj fil]**.  Markera CSV-filen med metadata.
+1. Navigera till användargränssnittet Resurser och tryck/klicka på **[!UICONTROL Create]** i verktygsfältet.
+1. Välj **[!UICONTROL Metadata]** i menyn.
+1. På **[!UICONTROL Metadata Import]** sidan trycker/klickar du på **[!UICONTROL Select File]**.  Markera CSV-filen med metadata.
 1. Kontrollera att CSV-filen innehåller följande parametrar:
 
    | Parametrar för metadataimport | Beskrivning |
    |:---|:---|
-   | [!UICONTROL Batchstorlek] | Antal resurser i en grupp som metadata ska importeras för. Standardvärdet är 50. Maxvärdet är 100. |
-   | [!UICONTROL Fältavgränsare] | Standardvärdet är `,` - ett komma. Du kan ange andra tecken. |
-   | [!UICONTROL Flervärdesavgränsare] | Avgränsare för metadatavärden. Standardvärdet är `|` - en pipe. |
-   | [!UICONTROL Starta arbetsflöden] | Falskt som standard. När värdet är true används Launcher-inställningarna för `DAM Metadata WriteBack Workflow` (som skriver metadata till binära XMP-data). Aktivering av startarbetsflöden påverkar systemets prestanda. |
-   | [!UICONTROL Kolumnnamn för resurssökväg] | Definierar kolumnnamnet för CSV-filen med resurser. |
+   | [!UICONTROL Batch Size] | Antal resurser i en grupp som metadata ska importeras för. Standardvärdet är 50. Maxvärdet är 100. |
+   | [!UICONTROL Field Separator] | Standardvärdet är `,` - ett komma. Du kan ange andra tecken. |
+   | [!UICONTROL Multi Value Delimiter] | Avgränsare för metadatavärden. Standardvärdet är `|` - en pipe. |
+   | [!UICONTROL Launch Workflows] | Falskt som standard. När värdet är true används Launcher-inställningarna för `DAM Metadata WriteBack Workflow` (som skriver metadata till binära XMP). Aktivering av startarbetsflöden påverkar systemets prestanda. |
+   | [!UICONTROL Asset Path Column Name] | Definierar kolumnnamnet för CSV-filen med resurser. |
 
-1. Tryck/klicka på **[!UICONTROL Importera]** i verktygsfältet. När metadata har importerats skickas ett meddelande till din meddelandeinkorg. Navigera till egenskapssidan för resurser och kontrollera om metadatavärdena har importerats korrekt för resurser.
+1. Tap/click **[!UICONTROL Import]** from the toolbar. När metadata har importerats skickas ett meddelande till din meddelandeinkorg. Navigera till egenskapssidan för resurser och kontrollera om metadatavärdena har importerats korrekt för resurser.
 
 Om du vill lägga till datum och tidsstämpel när du importerar metadata använder du `YYYY-MM-DDThh:mm:ss.fff-00:00` format för datum och tid. Datum och tid avgränsas med `T`, `hh` är timmar i 24-timmarsformat, `fff` är nanosekunder och `-00:00` är tidszonsförskjutning. Exempel: `2020-03-26T11:26:00.000-07:00` är 26 mars 2020 kl. 11:26:00.000 PST.
 
@@ -56,17 +59,17 @@ Du kan exportera metadata för flera resurser i ett CSV-format. Metadata exporte
 
 Så här exporterar du metadata för flera resurser samtidigt:
 
-1. Välj den resursmapp som innehåller resurser som du vill exportera metadata för. Välj **[!UICONTROL Exportera metadata]** i verktygsfältet.
+1. Välj den resursmapp som innehåller resurser som du vill exportera metadata för. Välj **[!UICONTROL Export metadata]** i verktygsfältet.
 
-1. Ange ett namn för CSV-filen i dialogrutan [!UICONTROL Metadataexport] . Om du vill exportera metadata för resurser i undermappar väljer du **[!UICONTROL Inkludera resurser i undermappar]**.
+1. In the [!UICONTROL Metadata Export] dialog, specify a name for the CSV file. Om du vill exportera metadata för resurser i undermappar väljer du **[!UICONTROL Include assets in sub-folders]**.
 
    ![export_metadata_page](assets/export_metadata_page.png)
 
 1. Välj önskade alternativ. Ange ett filnamn och vid behov ett datum.
-1. I **[!UICONTROL Egenskaper som ska exporteras]** anger du om du vill exportera alla eller specifika egenskaper. Om du väljer **[!UICONTROL Selektiva]** egenskaper som ska exporteras lägger du till önskade egenskaper.
+1. I **[!UICONTROL Properties to be exported]** anger du om du vill exportera alla eller specifika egenskaper. Om du väljer **[!UICONTROL Selective]** egenskaper som ska exporteras lägger du till önskade egenskaper.
 
-1. Tryck/klicka på **[!UICONTROL Exportera]** i verktygsfältet. Ett meddelande bekräftar att metadata exporteras. Stäng meddelandet.
+1. From the toolbar, tap/click **[!UICONTROL Export]**. Ett meddelande bekräftar att metadata exporteras. Stäng meddelandet.
 
-1. Öppna inkorgsmeddelandet för exportjobbet. Select the job and click **[!UICONTROL Open]** from the toolbar. To download the CSV file with the metadata, tap/click **[!UICONTROL CSV Download]** from the toolbar. Click **[!UICONTROL Close]**.
+1. Öppna inkorgsmeddelandet för exportjobbet. Markera jobbet och klicka på **[!UICONTROL Open]** i verktygsfältet. Om du vill hämta CSV-filen med metadata trycker/klickar du på **[!UICONTROL CSV Download]** i verktygsfältet. Klicka på **[!UICONTROL Close]**.
 
    ![csv_download](assets/csv_download.png)
