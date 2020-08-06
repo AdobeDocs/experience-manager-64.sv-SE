@@ -1,6 +1,6 @@
 ---
-title: Rekommendationer för användargränssnitt för kunder
-seo-title: Rekommendationer för användargränssnitt för kunder
+title: Användargränssnitt Recommendations för kunder
+seo-title: Användargränssnitt Recommendations för kunder
 description: 'En lista med rekommendationer relaterade till de klassiska och pekoptimerade användargränssnitten. '
 seo-description: 'En lista med rekommendationer relaterade till de klassiska och pekoptimerade användargränssnitten. '
 uuid: c661fb10-4dbc-4f8b-93be-3e77af1ad095
@@ -11,19 +11,22 @@ topic-tags: best-practices
 discoiquuid: 42bf42cb-0c6c-4390-8170-2c540c4d3ed3
 translation-type: tm+mt
 source-git-commit: b01e95110bffc1ee96e0814e782d716ed949c1b4
+workflow-type: tm+mt
+source-wordcount: '808'
+ht-degree: 0%
 
 ---
 
 
-# Rekommendationer för användargränssnitt för kunder{#user-interface-recommendations-for-customers}
+# Användargränssnitt Recommendations för kunder{#user-interface-recommendations-for-customers}
 
-Adobe Experience Manager 6.4 har två användargränssnitt - det enhetliga användargränssnittet i Experience Cloud och det klassiska användargränssnittet.
+Adobe Experience Manager 6.4 har två användargränssnitt - det enhetliga användargränssnittet för Experience Cloud och det klassiska användargränssnittet.
 
 Det här dokumentet är avsett att vägleda kunderna att välja vilket användargränssnitt som ska användas beroende på deras situation.
 
 Intressevillkor:
 
-* **Användargränssnitt (eller standardgränssnitt)** Modernt användargränssnitt som introducerades i 5.6.0 som en förhandstitt på teknik och utökades i efterföljande versioner. Det baseras på den enhetliga användarupplevelsen för Adobe Experience Cloud, som tidigare kallades användargränssnitt med pekfunktion eller användargränssnitt.
+* **Användargränssnitt (eller standardgränssnitt)** Modernt användargränssnitt som introducerades i 5.6.0 som en förhandstitt på teknik och utökades i efterföljande versioner. Det bygger på den enhetliga användarupplevelsen för Adobe Experience Cloud, som tidigare kallades användargränssnitt med pekfunktion eller användargränssnitt.
 
 * **Klassiskt användargränssnitt** baserat på ExtJS-teknik som introducerades med CQ 5.1 2008.
 
@@ -33,19 +36,19 @@ Intressevillkor:
 
 * **DAM/Assets Admin** Capabilities to manage digital assets (including images, video, documents, downloads).
 
-* **ContextHub** Capabilities för att samla information om besökaren och använda den för olika syften. Tillhandahåller ett användargränssnitt för att simulera personer som besöker webbplatsen. Med början från AEM 6.2 ersatte ContextHub den tidigare tekniken, Client Context.
+* **ContextHub** Capabilities för att samla information om besökaren och använda den för olika syften. Tillhandahåller ett användargränssnitt för att simulera personer som besöker webbplatsen. Med början AEM 6.2 ersatte ContextHub den tidigare tekniken, Client Context.
 
 ## Allmänt {#general}
 
-Under de senaste åren har Adobe uppdaterat alla Adobe Experience Cloud-lösningar med ett enhetligt användargränssnitt. Användare i hela Experience Cloud-lösningar får en enhetlig upplevelse av vanliga mönster för hur de använder och använder programmen. I varje release har Adobe förfinat användargränssnittet baserat på feedback från kunder som arbetar med de olika lösningarna.
+Under de senaste åren har Adobe uppdaterat alla Adobe Experience Cloud-lösningar med ett enhetligt användargränssnitt. De olika Experience Cloud-lösningarna har en enhetlig upplevelse av de vanligaste mönstren för hur programmen används och används. I varje release har Adobe förfinat sitt användargränssnitt baserat på feedback från kunder som arbetar med de olika lösningarna.
 
-Det ursprungliga användargränssnittet för Adobe Experience Manager (tidigare kallat CQ5), som introducerades 2008 och används av kunder som kör version 5.0-5.6.1, finns i AEM 6.4. Detta garanterar att kunderna kan uppdatera till 6.4 och dra nytta av en uppdaterad plattform med nya funktioner samtidigt som de använder samma användargränssnitt.
+Det ursprungliga användargränssnittet för Adobe Experience Manager (tidigare CQ5), som introducerades 2008 och används av kunder som kör version 5.0-5.6.1, finns i AEM 6.4. Detta garanterar att kunderna kan uppdatera till 6.4 och dra nytta av en uppdaterad plattform med nya funktioner samtidigt som de använder samma användargränssnitt.
 
-Adobe rekommenderar kunder att gå över till det nya användargränssnittet under 2018/2019. Detta kan antingen göras under uppdateringen till 6.4, eller i ett separat projekt efter uppdateringen som innehåller nödvändiga justeringar av anpassningarna och komponentdialogrutorna.
+Adobe rekommenderar att man planerar att gå över till det nya användargränssnittet under 2018/2019. Detta kan antingen göras under uppdateringen till 6.4, eller i ett separat projekt efter uppdateringen som innehåller nödvändiga justeringar av anpassningarna och komponentdialogrutorna.
 
-Adobe planerar inte att göra fler förbättringar av det klassiska användargränssnittet med början från AEM 6.4.Observera att Classic-användargränssnittet fortfarande stöds fullt ut när det är inaktuellt.
+Adobe planerar inte att göra fler förbättringar av det klassiska användargränssnittet från och med AEM 6.4. Observera att Classic-användargränssnittet fortfarande stöds fullt ut när det är inaktuellt.
 
-## Regler och rekommendationer {#rules-and-recommendations}
+## Regler och Recommendations {#rules-and-recommendations}
 
 Nedan följer en lista med rekommendationer från Product Management för Adobe Experience Manager 6.4:
 
@@ -53,10 +56,10 @@ Nedan följer en lista med rekommendationer från Product Management för Adobe 
  <tbody> 
   <tr> 
    <th>Mitt projekt...</th> 
-   <th>Rekommendationer</th> 
+   <th>Recommendations</th> 
   </tr> 
   <tr> 
-   <td>Vi börjar precis använda Adobe Experience Manager.</td> 
+   <td>Börjar bara använda Adobe Experience Manager.</td> 
    <td>Använd standardgränssnittet.</td> 
   </tr> 
   <tr> 
@@ -64,11 +67,11 @@ Nedan följer en lista med rekommendationer från Product Management för Adobe 
    <td> 
     <ol> 
      <li>Uppdatera till 6.4</li> 
-     <li>Använd standardgränssnittet för platsadministration, resurser, ... osv.<br /> </li> 
+     <li>Använd standardgränssnittet för platsadministration, resurser, ... etc.<br /> </li> 
      <li>Konfigurera åtgärden Redigera sida för att öppna den klassiska sidredigeraren i användargränssnittet. Se <a href="#selecting-your-ui">Välja användargränssnitt</a>.</li> 
     </ol> <p>I en andra fas:</p> 
     <ol> 
-     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du uppdaterar komponenterna med <a href="/help/sites-developing/dialog-conversion.md">Dialog Conversion Tool</a> .</li> 
+     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du använder <a href="/help/sites-developing/dialog-conversion.md">Dialog Conversion Tool</a> för att uppdatera komponenterna.</li> 
     </ol> </td> 
   </tr> 
   <tr> 
@@ -80,8 +83,8 @@ Nedan följer en lista med rekommendationer från Product Management för Adobe 
      <li>Konfigurera åtgärden Redigera sida för att öppna den klassiska sidredigeraren i användargränssnittet. Se <a href="#selecting-your-ui">Välja användargränssnitt</a>.</li> 
     </ol> <p>I en andra fas:</p> 
     <ol> 
-     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du uppdaterar komponenterna med <a href="/help/sites-developing/dialog-conversion.md">Dialog Conversion Tool</a> .</li> 
-     <li>Konfigurera ContextHub (ersättning för ClientContext) och uppdatera sidmallarna så att ContextHub används. Observera att ContextHub har ett kompatibilitetsläge som tillåter inläsning av anpassade ClientContext-lager.</li> 
+     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du använder <a href="/help/sites-developing/dialog-conversion.md">Dialog Conversion Tool</a> för att uppdatera komponenterna.</li> 
+     <li>Konfigurera ContextHub (ersättning för ClientContext) och uppdatera sidmallarna så att ContextHub används. Observera att ContextHub har ett kompatibilitetsläge som tillåter inläsning av anpassade ClientContext-arkiv.</li> 
     </ol> </td> 
   </tr> 
   <tr> 
@@ -123,6 +126,6 @@ Detaljerad utvecklingsinformation:
 
 * [Anpassa sidredigering i det pekoptimerade användargränssnittet](/help/sites-developing/customizing-page-authoring-touch.md) (inkluderar exempelkod).
 
-* [AEM Gem Session vid pekoptimerad anpassning](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html).
+* [AEM Gem Session om pekoptimerad anpassning](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html).
 * [Bevilja gränssnittsdokumentation](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html).
 
