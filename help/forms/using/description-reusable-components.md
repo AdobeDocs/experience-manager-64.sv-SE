@@ -1,8 +1,8 @@
 ---
 title: Beskrivning av återanvändbara komponenter
 seo-title: Beskrivning av återanvändbara komponenter
-description: En fullständig lista över återanvändbara komponenter med filnamn och beroenden som hjälper dig att integrera arbetsytekomponenten för AEM Forms i dina webbprogram.
-seo-description: En fullständig lista över återanvändbara komponenter med filnamn och beroenden som hjälper dig att integrera arbetsytekomponenten för AEM Forms i dina webbprogram.
+description: En fullständig lista över återanvändbara komponenter med filnamn och beroenden som hjälper dig att integrera arbetsytekomponenten i AEM Forms i dina webbprogram.
+seo-description: En fullständig lista över återanvändbara komponenter med filnamn och beroenden som hjälper dig att integrera arbetsytekomponenten i AEM Forms i dina webbprogram.
 uuid: 8e6accc7-0935-4d7b-b838-d23676df5cda
 contentOwner: robhagat
 content-type: reference
@@ -11,13 +11,16 @@ topic-tags: forms-workspace
 discoiquuid: d3facd17-ceb0-4799-8cd9-ff9e81e09793
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '1257'
+ht-degree: 6%
 
 ---
 
 
 # Beskrivning av återanvändbara komponenter {#description-of-reusable-components}
 
-Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrating-html-ws-components-web.md) komponenter som är ordnade i en viss [mappstruktur](/help/forms/using/folder-structure.md) i CRX™. Varje komponent har modell-, vy- och mallfil på den plats som anges i mappstrukturen, JavaScript™-beroenden på andra komponentfiler, händelser som avlyssnas av komponenten och JavaScript-objekt som utlöser dessa händelser på arbetsytan i AEM Forms. En fullständig lista över återanvändbara komponenter med komponentens filnamn och beroenden anges här.
+AEM Forms arbetsyta består av [återanvändbara](/help/forms/using/integrating-html-ws-components-web.md) komponenter som är ordnade i en viss [mappstruktur](/help/forms/using/folder-structure.md) i CRX™. Varje komponent har modell-, vy- och mallfil på den plats som anges i mappstrukturen, JavaScript™-beroenden på andra komponentfiler, händelser som avlyssnas av komponenten och JavaScript-objekt som utlöser dessa händelser på arbetsytan i AEM Forms. En fullständig lista över återanvändbara komponenter med komponentens filnamn och beroenden anges här.
 
 ## AktivitetLista {#tasklist}
 
@@ -66,7 +69,7 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
 
 >[!NOTE]
 >
->Den här komponenten kan användas oberoende av arbetsytan i AEM Forms, förutsatt att du utlöser händelsen filterSelected för den här komponenten från ditt anpassade program.
+>Den här komponenten kan användas oberoende av AEM Forms arbetsyta, förutsatt att du utlöser händelsen filterSelected för den här komponenten från ditt anpassade program.
 
 ## Uppgift {#task}
 
