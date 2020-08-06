@@ -51,7 +51,7 @@ I stället för att skapa en layoutmall från grunden kan du välja att ändra o
 
 ### Skapa dokumentfragment {#document-fragment-creation}
 
-Dokumentfragment är återanvändbara delar\komponenter av en korrespondens som du kan använda för att skapa bokstäver\korrespondens.
+Dokumentfragment är återanvändbara delar\komponenter i en korrespondens som du kan använda för att skapa bokstäver\korrespondens.
 
 Dokumentfragmenten är av följande typer:
 
@@ -69,7 +69,7 @@ Med villkor kan du definiera vilket innehåll som ska inkluderas när korrespond
 
 #### Layoutfragment {#layout-fragment}
 
-Ett layoutfragment är en layout som kan användas i en eller flera bokstäver. Ett layoutfragment används för att skapa repeterbara mönster, särskilt dynamiska tabeller. Layouten kan innehålla typiska formulärfält som &quot;Adress&quot; och &quot;Referensnummer&quot;. Den innehåller också tomma delformulär som anger målområden. Layouterna (XDP) skapas i Designer och [överförs sedan till Forms and Documents](/help/forms/using/get-xdp-pdf-documents-aem.md).
+Ett layoutfragment är en layout som kan användas i en eller flera bokstäver. Ett layoutfragment används för att skapa repeterbara mönster, särskilt dynamiska tabeller. Layouten kan innehålla typiska formulärfält som &quot;Adress&quot; och &quot;Referensnummer&quot;. Den innehåller också tomma delformulär som anger målområden. Layouterna (XDP) skapas i Designer och [överförs sedan till Forms och Documents](/help/forms/using/get-xdp-pdf-documents-aem.md).
 
 ### Skapa brev {#letter-creation}
 
@@ -95,7 +95,7 @@ Den slutliga korrespondensen kan skickas till en back-end-process för efterbear
 1. Skickat för granskning och godkännande.
 1. Skyddas genom digitala signaturer, certifiering, kryptering eller behörighetshantering.
 1. Konverteras till ett sökbart PDF-dokument som innehåller alla metadata som behövs för arkivering och revision.
-1. Ingår i en PDF-portfölj som innehåller fler dokument, t.ex. marknadsföringsmaterial. PDF-portföljen kan sedan skickas som slutgiltig korrespondens.
+1. Ingår i ett PDF-Portfolio som innehåller fler dokument, t.ex. marknadsföringsmaterial. PDF-Portfolio kan sedan skickas som slutgiltig korrespondens.
 
 ### Correspondence Management-lösningsarkitektur {#correspondence-management-solution-architecture}
 
@@ -139,7 +139,7 @@ Detta meddelande om annullering är ett exempel på en vanlig korrespondens:
   <tr> 
    <td>Lagrade<br /> bilder från den centrala databasen</td> 
    <td>Bilder som logotyper och signaturbilder. Bilder som företagslogotyper visas i de flesta eller alla meddelanden. Signaturbilderna är specifika för brevet och för den person för vars räkning brevet skickas.</td> 
-   <td><p>Bilder som lagras i AEM-resurser (DAM)<br /> </p> <p> </p> </td> 
+   <td><p>Bilder som lagras i AEM (DAM)<br /> </p> <p> </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -228,7 +228,7 @@ Tabellen innehåller några riktlinjer som du kan använda för att klassificera
 
 Du behöver följande innan du kan skapa en korrespondens:
 
-* [Kompatibilitetspaket](https://helpx.adobe.com/in/experience-manager/6-4/forms/using/compatibility-package.html). Installera Kompatibilitetspaketet för att visa alternativet **Bokstäver** på **formulärsidan** .
+* [Kompatibilitetspaket](https://helpx.adobe.com/in/experience-manager/6-4/forms/using/compatibility-package.html). Installera Kompatibilitetspaketet för att visa alternativet **Bokstäver** på **Forms** -sidan.
 
 * Bokstaven XDP ([layout](/help/forms/using/document-fragments.md)).
 * Andra XDP-filer ([layoutfragment](/help/forms/using/document-fragments.md)) som utgör delar av bokstaven. XDP:er\Layouts skapas i [Designer](https://help.adobe.com/en-US/AEMForms/6.1/DesignerHelp/).
@@ -241,7 +241,7 @@ Du behöver följande innan du kan skapa en korrespondens:
 
 ### Markera en layout och ange bokstavsegenskaperna {#select-a-layout-and-enter-the-letter-properties}
 
-1. Välj **Formulär** > **Bokstäver**.
+1. Välj **Forms** > **Bokstäver**.
 
 1. Välj **Skapa > Bokstav**. Correspondence Management visar tillgängliga layouter (XDP). De här layouterna kommer från Designer. Layouterna innehåller också brevmallar som Correspondence Management tillhandahåller direkt. Mer information om Correspondence Management-mallar finns i [Referensbrevmallar](/help/forms/using/reference-cm-layout-templates.md). Om du vill lägga till egna layouter skapar du XDP-filer (layout) i Designer och [överför dem sedan till AEM Forms](/help/forms/using/get-xdp-pdf-documents-aem.md).
 
@@ -258,7 +258,8 @@ Du behöver följande innan du kan skapa en korrespondens:
    * **Beskrivning (valfritt):** Beskriv referensbrevet.
    * **Dataordlista (valfritt)**: Dataordlistan kan kopplas till korrespondensen. Resurserna som du senare infogar i den här korrespondensen bör antingen ha samma dataordlista som den du väljer för korrespondensen här eller ingen dataordlista.
    * **Taggar (valfritt):** Markera de taggar som ska användas för korrespondensen. Du kan också skriva in ett nytt/anpassat taggnamn och trycka på Retur för att skapa det.
-   * **Efterprocess (valfritt):** Välj den bokföringsprocess som ska användas för brevmallen. Det finns fler inlämningsprocesser och de du har skapat med AEM, som e-post och utskrift.
+   * **Efterprocess (valfritt):** Välj den bokföringsprocess som ska användas för brevmallen. Det finns färdiga publiceringsprocesser och de som du har skapat med AEM, som e-post och utskrift.
+
    ![Korrespondensegenskaper](assets/createcorrespondenceproperties.png)
 
 1. Systemet visar ett meddelande: &quot;Bokstaven har skapats.&quot; (i varningsmeddelandet) Tryck på **Öppna** för att konfigurera datamodulerna och layoutfragmenten i det. Eller tryck på **Klar** för att gå tillbaka till föregående sida.
@@ -289,9 +290,10 @@ När du har skapat en korrespondens när du trycker på Öppna, visar Korrespond
    1. **Redigerbar**: När det här alternativet är markerat kan innehållet redigeras i användargränssnittet Skapa korrespondens. Markera innehåll som redigerbart endast om det kräver att företagsanvändaren (till exempel en anspråksjustering) ändrar det.
    1. **Obligatoriskt**: När det här alternativet är markerat krävs innehållet i användargränssnittet Skapa korrespondens.
    1. **Markerad**: När det här alternativet är markerat markeras innehållet som standard i användargränssnittet Skapa korrespondens.
-   1. **Indrag**: Öka eller minska indraget för modulen/innehållet i bokstaven. Indrag anges som nivåer, med början 0. Varje nivå drar in 36pts. Mer information om hur du anpassar formulär finns **[!UICONTROL Correspondence Management Configurations]** i [Formulärarbetsflödet](/help/forms/using/submit-letter-topostprocess.md#formsworkflow).
+   1. **Indrag**: Öka eller minska indraget för modulen/innehållet i bokstaven. Indrag anges som nivåer, med början 0. Varje nivå drar in 36pts. Mer information om hur du anpassar formulär finns **[!UICONTROL Correspondence Management Configurations]** i [Forms-arbetsflöde](/help/forms/using/submit-letter-topostprocess.md#formsworkflow).
    1. **Sidbrytning före**: Om du anger sidbrytningen före visas alltid innehållet i den här modulen på en ny sida.
    1. **Sidbrytning efter**: Om du anger att sidbrytning efter ska vara aktiverat för en viss modul visas alltid innehållet i NÄSTA-modulen på en ny sida.
+
    ![Infogade datamoduler och layoutfragment](assets/insertdmandlf2.png)
 
 1. Om du vill redigera en modul trycker du på ikonen Redigera bredvid den. När du har redigerat modulerna trycker du på **Spara**.
@@ -300,6 +302,7 @@ När du har skapat en korrespondens när du trycker på Öppna, visar Korrespond
 
    1. **Tillåt fri text**: Om Tillåt fri text är aktiverat kan användaren lägga till textbunden text i CCR-vyn. I CCR-vyn är en T-åtgärd aktiverad för de målområden där Tillåt fri text är aktiverat och när användaren trycker på den efterfrågas namn och beskrivning av texten och när användaren trycker på OK öppnas texten i redigeringsläge där användaren kan lägga till text. Detta fungerar som andra textmoduler
    1. **Lås ordning**: Låser delformulärens ordning i bokstaven. Författaren får inte ändra ordning på delformulären/komponenterna när brevet skapas.
+
    På den här sidan kan du även göra följande för varje resurs i delformulären:
 
    1. **Ändra ordningen på resurserna**: dra och släpp en resurs som innehåller en sorteringsikon för en resurs ( ![dra och släpp](assets/dragndrop.png)).
@@ -314,6 +317,7 @@ När du har skapat en korrespondens när du trycker på Öppna, visar Korrespond
 
    * Du kan länka **fältelementen** till en litteral, ett dataordlisteelement, en resurs eller ett användarspecificerat värde. Du kan också ignorera ett fältelement genom att binda det till alternativet Ignorera.
    * **Variabelelementen** kan länkas till en litteral, ett dataordlisteelement, ett fält, en variabel, en resurs eller ett användarspecificerat värde.
+
    Här följer några huvudfält i länkningen:
 
    * **Flera rader**: Du kan ange om datainmatningen för ett fält eller en variabel är flerradig. Om du väljer det här alternativet visas inmatningsrutan för fältet eller variabeln som en inmatningsruta med flera rader i datoredigeringsvyn. Fältet eller variabeln visas också som flera rader i Data- och Content-vyerna i användargränssnittet Skapa korrespondens. Indatafältet med flera rader liknar fältet för att skriva en kommentar i en TextModule. Flerradsalternativet är bara tillgängligt för fält och variabler med länkningstypen Användare eller oskyddade element i dataordlistan.
@@ -321,6 +325,7 @@ När du har skapat en korrespondens när du trycker på Öppna, visar Korrespond
 
    * **Fält/variabelvalidering**: Om du vill ha förbättrad validering av värdet för ett fält eller en variabel kan du tilldela en validerare till fältet eller variabeln. Det här alternativet är endast tillgängligt för fält och variabler med länkningstypen Användare eller oskyddade element i datamordlistan.
    * **Bildtext** och **verktygstips**: Bildtext är etiketten för det fält som visas före fältet i CCR-användargränssnittet. Det här alternativet är tillgängligt för fält och variabler med länktypen Användare eller oskyddade element i dataordlistan.
+
    Följande valideringstyper kan du använda för fälten:
 
    * **Strängvaliderare**: Använd strängvalideraren för att ange en minsta och högsta längd för strängen som anges i fältet eller variabeln. När du skapar en strängvaliderare måste du ange giltiga valideringsparametrar. Ange en giltig längd för både min- och maxvärdena. För String-valideraren kan du ange min- och maxlängden för värdet som kan anges. Om det angivna värdet inte överensstämmer med det angivna minsta och högsta värdet markeras det relevanta fältet i CCR-användargränssnittet med röd färg.
@@ -443,7 +448,7 @@ Följande värden i tabellen
    <td>Ej tillämpligt</td> 
   </tr> 
   <tr> 
-   <td><strong>image</strong></td> 
+   <td><strong>bild</strong></td> 
    <td>Nej</td> 
    <td>endast bild</td> 
    <td>Nej</td> 
