@@ -1,8 +1,8 @@
 ---
 title: Skapa och hantera A/B-tester för adaptiva formulär
 seo-title: Skapa och hantera A/B-tester för adaptiva formulär
-description: AEM Forms kan integreras med Adobe Target för att köra A/B-tester för adaptiva formulär för att förbättra kundupplevelsen och konverteringsgraden.
-seo-description: AEM Forms kan integreras med Adobe Target för att köra A/B-tester för adaptiva formulär för att förbättra kundupplevelsen och konverteringsgraden.
+description: AEM Forms kan integreras med Adobe Target som gör det möjligt att köra A/B-tester för adaptiva formulär för att förbättra kundupplevelsen och öka konverteringsgraden.
+seo-description: AEM Forms kan integreras med Adobe Target som gör det möjligt att köra A/B-tester för adaptiva formulär för att förbättra kundupplevelsen och öka konverteringsgraden.
 uuid: c41aea04-f4d9-41b9-b1a8-df2bb710354c
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,6 +10,9 @@ topic-tags: integrations
 discoiquuid: a69ff832-7955-4b10-b47f-287ac385b786
 translation-type: tm+mt
 source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+workflow-type: tm+mt
+source-wordcount: '1581'
+ht-degree: 0%
 
 ---
 
@@ -18,13 +21,13 @@ source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
 
 ## Översikt {#overview-br}
 
-Kunderna överger troligtvis ett formulär om upplevelsen inte är engagerande. Även om det är frustrerande för kunderna kan det också öka supportvolymen och kostnaderna för organisationen. Det är både viktigt och utmanande att identifiera och tillhandahålla rätt kundupplevelse som ökar konverteringsgraden. Adobe Experience Manager Forms innehåller nyckeln till det här problemet.
+Kunderna överger troligtvis ett formulär om upplevelsen inte är engagerande. Även om det är frustrerande för kunderna kan det också öka supportvolymen och kostnaderna för organisationen. Det är både viktigt och utmanande att identifiera och tillhandahålla rätt kundupplevelse som ökar konverteringsgraden. Adobe Experience Manager Forms har nyckeln till det här problemet.
 
 AEM Forms kan integreras med Adobe Target, en Adobe Marketing Cloud-lösning, för att leverera personaliserade och engagerande kundupplevelser i flera digitala kanaler. En av de viktigaste funktionerna i Target är A/B-testning som gör att ni snabbt kan ställa in samtidiga A/B-tester, presentera relevant innehåll för målanvändare och identifiera upplevelsen som ökar konverteringsgraden.
 
 Med AEM Forms kan du konfigurera och köra A/B-tester på adaptiva formulär i realtid. Den har också färdiga och anpassningsbara rapportfunktioner som visualiserar formulärupplevelserna i realtid och identifierar den som maximerar användarengagemanget och konverteringsgraden.
 
-## Konfigurera och integrera Target i AEM-formulär {#set-up-and-integrate-target-in-aem-forms}
+## Konfigurera och integrera Target i AEM Forms {#set-up-and-integrate-target-in-aem-forms}
 
 Innan du börjar skapa och analysera A/B-tester för adaptiva formulär måste du konfigurera målservern och integrera den i AEM Forms.
 
@@ -34,12 +37,12 @@ Om du vill integrera AEM med Target måste du ha ett giltigt Adobe Target-konto.
 
 Klientkoden identifierar Adobe Target-kundkontot och används som en underdomän i URL:en när Adobe Target-servern anropas. Innan du fortsätter bör du kontrollera att du har behörighet att logga in på [https://testandtarget.omniture.com/](https://testandtarget.omniture.com/).
 
-### Integrera mål i AEM-formulär {#integrate-target-in-aem-forms}
+### Integrera Target i AEM Forms {#integrate-target-in-aem-forms}
 
 Utför följande steg för att integrera en målserver som körs med AEM Forms:
 
-1. På AEM-servern går du till https://&lt;*värdnamn*>:&lt;*port*>/libs/cq/core/content/tools/cloudservices.html.
-1. Klicka på **Visa konfigurationer** i delen **Adobe Target** och sedan på ikonen **+** för att lägga till en ny konfiguration.
+1. På AEM server går du till https://&lt;*värdnamn*>:&lt;*port*>/libs/cq/core/content/tools/cloudservices.html.
+1. Klicka på **Visa konfigurationer** under **Adobe Target** och sedan på ikonen **+** för att lägga till en ny konfiguration.
 
    Om du konfigurerar målet för första gången klickar du på **Konfigurera nu**.
 
@@ -64,7 +67,7 @@ Om du har en fullständig licens för att använda Adobe Target ska du starta se
 
 `parameter -Dabtesting.enabled=true java -Xmx2048m -XX:MaxPermSize=512M -jar -Dabtesting.enabled=true`
 
-Om AEM-instansen körs på JBoss, startades som en tjänst från körningsnyckeln, i `jboss\bin\standalone.conf.bat` filen, lägger du till parametern -Dabtesting.enabled=true i följande post:
+Om AEM körs på JBoss, startades som en tjänst från körningsnyckeln, i `jboss\bin\standalone.conf.bat` filen, lägger du till parametern -Dabtesting.enabled=true i följande post:
 
 `set "JAVA_OPTS=%JAVA_OPTS% -Dadobeidp.serverName=server1 -Dfile.encoding=utf8 -Djava.net.preferIPv4Stack=true -Dabtesting.enabled=true"`
 
@@ -77,12 +80,12 @@ Förutom jboss-servern kan du lägga till argumentet -Dabtesting.enabled=true jv
 
 ## Skapa målgrupper i AEM {#create-audiences-within-aem}
 
-Med AEM kan du skapa en målgrupp och använda den för ett A/B-test. Den målgrupp du skapar i AEM finns i AEM Forms. Utför följande steg för att skapa målgrupper i AEM:
+Med AEM kan du skapa en målgrupp och använda den för ett A/B-test. Den målgrupp du skapar i AEM är tillgänglig i AEM Forms. Utför följande steg för att skapa målgrupper i AEM:
 
 1. I redigeringsinstansen trycker du på **Adobe Experience Manager** > **Personalisering** > **Publiker**.
 
 1. På sidan Publiker trycker du på **Create Audience > Create Target Audience**.
-1. I dialogrutan Adobe Target Configuration väljer du en målkonfiguration och klickar på **OK**.
+1. I dialogrutan Adobe Target-konfiguration väljer du en målkonfiguration och klickar på **OK**.
 1. Skapa regler på sidan Skapa ny publik. Med regler kan ni kategorisera målgruppen. Du vill till exempel kategorisera målgrupper baserat på operativsystem. Din målgrupp A kommer från Windows, och målgrupp B kommer från Linux.
 
    * Om du vill kategorisera målgruppen baserat på Windows väljer du **OS** -attributtyp i regel 1. Välj **Windows** i listrutan När.
@@ -96,13 +99,13 @@ Du kan välja målgrupp när du konfigurerar A/B-testning för ett formulär, vi
 
 Utför följande steg för att skapa ett A/B-test för ett anpassat formulär.
 
-1. Gå till **Formulär och dokument** på https://&lt;*värdnamn*>:&lt;*port*>/aem/forms.html/content/dam/formSanddocuments.
+1. Gå till **Forms &amp; Documents** på https://&lt;*värdnamn*>:&lt;*port*>/aem/forms.html/content/dam/formSanddocuments.
 
 1. Navigera till mappen som innehåller det adaptiva formuläret.
 1. Klicka på **markeringsverktyget** i verktygsfältet och välj det anpassade formuläret.
 1. Klicka på **Mer** i verktygsfältet och välj **Konfigurera A/B-testning**. Sidan Konfigurera A/B-testning öppnas.
 
-   [ Konfigurationssida ![för A/B-tester för adaptiva formulär](assets/ab-test-configure.png)](assets/ab-test-configure-1.png)
+   [ ![A/B-testkonfigurationssida för adaptiva formulär](assets/ab-test-configure.png)](assets/ab-test-configure-1.png)
 
 1. Ange ett **aktivitetsnamn** för A/B-testet.
 
@@ -121,7 +124,7 @@ Utför följande steg för att skapa ett A/B-test för ett anpassat formulär.
    * Valideringar (både klient- och serversidor)
    * Tema för upplevelse B. (Du kan välja ett alternativt tema för upplevelse B)
 
-1. Gå till gränssnittet för formulär och dokument, markera det adaptiva formuläret, klicka på **Mer** och välj **Starta A/B-testning**.
+1. Gå till användargränssnittet för Forms och dokument, markera det adaptiva formuläret, klicka på **Mer** och välj **Starta A/B-testning**.
 
 A/B-testet körs nu och den angivna målgruppen kommer att få slumpvis betjänade upplevelser baserat på den angivna fördelningen.
 
@@ -129,7 +132,7 @@ A/B-testet körs nu och den angivna målgruppen kommer att få slumpvis betjäna
 
 Du kan uppdatera målgruppen och upplevelsedistributionen för ett A/B-test som körs. Så här gör du:
 
-1. Navigera till mappen som innehåller det adaptiva formuläret som A/B-testet körs på i gränssnittet för Formulär och dokument.
+1. I användargränssnittet för Forms &amp; Documents navigerar du till den mapp som innehåller det adaptiva formuläret som A/B-testet körs på.
 1. Markera det adaptiva formuläret.
 1. Klicka på **Mer** och välj sedan **Redigera A/B-testning**. Sidan Uppdatera A/B-testning öppnas.
 
@@ -142,7 +145,7 @@ När du har tillåtit A/B-testet att köras under den önskade perioden kan du g
 
 1. Markera det adaptiva formuläret, klicka på **Mer** och sedan på **A/B-testrapport**. Rapporten visas.
 
-   [ Provningsrapport ![A/B](assets/ab-test-report.png)](assets/ab-test-report-1.png)
+   [ ![A/B-testrapport](assets/ab-test-report.png)](assets/ab-test-report-1.png)
 
 1. Analysera rapporten och se om ni har tillräckligt många datapunkter för att kunna deklarera en av de mest framgångsrika upplevelserna som en vinnare. Du kan välja att fortsätta med samma A/B-test längre eller deklarera en vinnare och avsluta A/B-testet.
 1. Om du vill deklarera en vinnare och avsluta A/B-testet klickar du på knappen **End A/B test** på kontrollpanelen för rapporter. En dialogruta uppmanar er att förklara en av de två upplevelserna som vinnare. Välj en vinnare och bekräfta att du vill avsluta A/B-testet.
