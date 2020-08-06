@@ -1,8 +1,8 @@
 ---
 title: Komma igång med processrapportering
 seo-title: Komma igång med processrapportering
-description: De steg du måste följa för att komma igång med AEM Forms i JEE Process Reporting
-seo-description: De steg du måste följa för att komma igång med AEM Forms i JEE Process Reporting
+description: De steg du måste följa för att komma igång med AEM Forms om JEE Process Reporting
+seo-description: De steg du måste följa för att komma igång med AEM Forms om JEE Process Reporting
 uuid: 86ba17da-57e5-4e7a-a864-583d8c0f830e
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -19,31 +19,31 @@ ht-degree: 0%
 
 # Komma igång med processrapportering {#getting-started-with-process-reporting}
 
-Med Process Reporting kan AEM Forms-användare ställa frågor om AEM Forms-processer som för närvarande är definierade i AEM Forms-implementeringen. Processrapportering kommer dock inte åt data direkt från AEM Forms-databasen. Data publiceras först till Process Reporting-databasen på schemalagd basis (*av* tjänsterna ProcessDataPublisher och ProcessDataStorage). Rapporterna och frågorna i Process Reporting genereras sedan från de processrapporteringsdata som publiceras till databasen. Processrapportering installeras som en del av modulen Formulärarbetsflöde.
+Med Process Reporting kan AEM Forms-användare ställa frågor om AEM Forms-processer som för närvarande är definierade i AEM Forms-implementeringen. Processrapportering kommer dock inte åt data direkt från AEM Forms-databasen. Data publiceras först till Process Reporting-databasen på schemalagd basis (*av* tjänsterna ProcessDataPublisher och ProcessDataStorage). Rapporterna och frågorna i Process Reporting genereras sedan från de processrapporteringsdata som publiceras till databasen. Processrapportering installeras som en del av modulen Forms Workflow.
 
-I den här artikeln beskrivs stegen för hur du aktiverar publicering av AEM Forms-data till Process Reporting-databasen. Därefter kan du använda processrapportering för att köra rapporter och frågor. Artikeln innehåller även de alternativ som är tillgängliga för att konfigurera Process Reporting Services.
+I den här artikeln beskrivs stegen för hur du aktiverar publicering av AEM Forms-data i Process Reporting-databasen. Därefter kan du använda processrapportering för att köra rapporter och frågor. Artikeln innehåller även de alternativ som är tillgängliga för att konfigurera Process Reporting Services.
 
 ## Krav för processrapportering {#process-reporting-pre-requisites}
 
 ### Rensa processer som inte är nödvändiga {#purge-non-essential-processes}
 
-Om du använder formulärarbetsflödet kan AEM Forms-databasen innehålla en stor mängd data
+Om du använder Forms Workflow kan AEM Forms-databasen innehålla en stor mängd data
 
-Publiceringstjänsterna för processrapportering kommer att publicera alla AEM Forms-data som för närvarande finns i databasen. Detta innebär att om databasen innehåller äldre data som du inte vill köra rapporter och frågor på, kommer alla dessa data också att publiceras i databasen, även om de inte behövs för rapportering. Du rekommenderas att rensa dessa data innan du kör tjänsterna för att publicera data i Process Reporting-databasen. Detta förbättrar prestandan för både utgivartjänsten och tjänsten som frågar efter data för rapportering.
+Publiceringstjänsterna för processrapportering publicerar alla AEM Forms-data som för närvarande finns i databasen. Detta innebär att om databasen innehåller äldre data som du inte vill köra rapporter och frågor på, kommer alla dessa data också att publiceras i databasen, även om de inte behövs för rapportering. Du rekommenderas att rensa dessa data innan du kör tjänsterna för att publicera data i Process Reporting-databasen. Detta förbättrar prestandan för både utgivartjänsten och tjänsten som frågar efter data för rapportering.
 
-Mer information om hur du rensar AEM Forms-processdata finns i [Tömma processdata](https://help.adobe.com/en_US/livecycle/11.0/AdminHelp/WS92d06802c76abadb-5145d5d12905ce07e7-7cb2.2.html).
+Mer information om att rensa AEM Forms processdata finns i [Rensa processdata](https://help.adobe.com/en_US/livecycle/11.0/AdminHelp/WS92d06802c76abadb-5145d5d12905ce07e7-7cb2.2.html).
 
 >[!NOTE]
 >
->Tips och tricks för rensningsverktyget finns i Adobe Developer Connection-artikeln om [rensningsprocesser och jobb](https://www.adobe.com/content/dam/Adobe/en/devnet/livecycle/pdfs/purging_processes_jobs.pdf).
+>Tips och tricks för verktyget Rensa finns i Adobe Developer Connection artikel om [Rensa processer och jobb](https://www.adobe.com/content/dam/Adobe/en/devnet/livecycle/pdfs/purging_processes_jobs.pdf).
 
 ## Konfigurerar Process Reporting Services {#configuring-process-reporting-services}
 
 ### Schemalägg publicering av processdata {#schedule-process-data-publishing}
 
-Tjänsten Process Reporting publicerar schemalagda data från AEM Forms-databasen till Process Reporting-databasen.
+Process Reporting Services publicerar schemalagda data från AEM Forms-databasen till Process Reporting-databasen.
 
-Den här åtgärden kan vara resurskrävande och kan påverka prestanda för AEM Forms-servrarna. Du rekommenderas att schemalägga detta utanför AEM Forms-serverns lediga tidsrymder.
+Den här åtgärden kan vara resurskrävande och kan påverka prestandan för AEM Forms-servrarna. Du rekommenderas att schemalägga detta utanför AEM Forms serverns upptagna tidsrymder.
 
 Som standard kommer publiceringen av data att köras varje dag kl. 02:00.
 
@@ -51,7 +51,7 @@ Gör så här för att ändra publiceringsschemat:
 
 >[!NOTE]
 >
->Om du kör implementeringen av AEM Forms på ett kluster utför du följande steg på varje nod i klustret.
+>Om du kör din AEM Forms-implementering på ett kluster utför du följande steg på varje nod i klustret.
 
 #### JBoss-programserver {#jboss-application-server}
 
@@ -61,13 +61,13 @@ Gör så här för att ändra publiceringsschemat:
 
 1. Lägg till JVM-argumentet `-Dreporting.publisher.cron = <expression>.`
 
-   Exempel: Följande huvuduttryck gör att processrapportering publicerar AEM Forms-data till Process Reporting-databasen var femte timme:
+   Exempel: Följande huvuduttryck gör att Process Reporting publicerar AEM Forms-data i Process Reporting-databasen var femte timme:
 
    * `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
 1. Spara och stäng `run.conf.bat` filen.
 
-1. Starta om serverinstansen för AEM Forms.
+1. Starta om serverinstansen av AEM Forms.
 
 #### WebSphere Application Server {#websphere-application-server}
 
@@ -80,13 +80,13 @@ Gör så här för att ändra publiceringsschemat:
 
    Lägg till argumentet i rutan Allmänt om JVM-argument `-Dreporting.publisher.cron = <expression>.`
 
-   **Exempel**: Följande huvuduttryck gör att processrapportering publicerar AEM Forms-data till Process Reporting-databasen var femte timme:
+   **Exempel**: Följande huvuduttryck gör att Process Reporting publicerar AEM Forms-data i Process Reporting-databasen var femte timme:
 
    * `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
-1. Klicka på **Använd**, klicka på OK och sedan på **Spara direkt i huvudkonfigurationen**.
+1. Klicka på **Använd**, klicka på OK och sedan på **Spara direkt i den överordnad konfigurationen**.
 
-1. Starta om serverinstansen för AEM Forms.
+1. Starta om serverinstansen av AEM Forms.
 
 #### WebLogic Application Server {#weblogic-application-server}
 
@@ -101,13 +101,13 @@ Gör så här för att ändra publiceringsschemat:
 
 1. Lägg till JVM-argumentet i rutan Argument `-Dreporting.publisher.cron = <expression>`.
 
-   **Exempel**: Följande huvuduttryck gör att processrapportering publicerar AEM Forms-data till Process Reporting-databasen var femte timme:
+   **Exempel**: Följande huvuduttryck gör att Process Reporting publicerar AEM Forms-data i Process Reporting-databasen var femte timme:
 
    `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
 1. Klicka på **Spara** och sedan på **Aktivera ändringar**.
 
-1. Starta om serverinstansen för AEM Forms.
+1. Starta om serverinstansen av AEM Forms.
 
 ![procesdatapublisherservice](assets/processdatapublisherservice.png)
 
@@ -196,7 +196,7 @@ Du kan också använda det här alternativet för att inaktivera publicering av 
 
 **Gruppintervall (sek)**
 
-Varje gång tjänsten ProcessDataPublisher körs delar tjänsten först tiden sedan den senaste körningen av tjänsten via batchintervallet. Tjänsten bearbetar sedan varje intervall med AEM Forms-data separat.
+Varje gång tjänsten ProcessDataPublisher körs delar tjänsten först tiden sedan den senaste körningen av tjänsten via batchintervallet. Tjänsten behandlar sedan varje intervall med AEM Forms-data separat.
 
 Detta hjälper till att kontrollera storleken på data som utgivaren bearbetar från början till slut under varje körning (batch) i en cykel.
 
@@ -278,7 +278,7 @@ Information om hur du skapar och visar anpassade rapporter finns i [Anpassade ra
 
 Klicka på titeln när som helst för att gå tillbaka till hemskärmen.
 
-**Senaste uppdateringstid:** Processdata publiceras på schemalagd basis från AEM Forms-databasen till Process Reporting-databasen.
+**Senaste uppdateringstid:** Processdata publiceras schemalagt från AEM Forms-databasen till Process Reporting-databasen.
 
 Senaste uppdateringstid visar det senaste datumet och den senaste tiden fram till vilket datapresentationerna överfördes till Process Reporting-databasen.
 
@@ -288,7 +288,7 @@ Mer information om datapubliceringstjänsten och hur du schemalägger den här t
 
 **Listruta med namnlist för Processrapportering:** Listrutan till höger i namnlisten Processrapportering innehåller följande alternativ:
 
-* **[!UICONTROL Sync]**: Synkronisera den inbäddade processrapportdatabasen med AEM Forms-databasen.
+* **[!UICONTROL Sync]**: Synkronisera den inbäddade Process Reporting-databasen med AEM Forms-databasen.
 * **[!UICONTROL Help]**: Visa hjälpdokumentationen om processrapportering.
 * **[!UICONTROL Logout]**: Logga ut från processrapportering
 
