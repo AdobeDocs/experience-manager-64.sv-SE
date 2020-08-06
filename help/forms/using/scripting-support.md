@@ -1,8 +1,8 @@
 ---
 title: Skriptstöd för HTML5-formulär
 seo-title: Skriptstöd för HTML5-formulär
-description: JavaScript, FormCalc-egenskaper och andra metoder som stöds i HTML5-formulär.
-seo-description: JavaScript, FormCalc-egenskaper och andra metoder som stöds i HTML5-formulär.
+description: JavaScript, FormCalc-egenskaper och andra metoder som stöds i HTML5 Forms.
+seo-description: JavaScript, FormCalc-egenskaper och andra metoder som stöds i HTML5 Forms.
 uuid: 697d5ec4-c818-41e4-b813-883c01b7ff3a
 contentOwner: robhagat
 content-type: reference
@@ -11,6 +11,9 @@ topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '3911'
+ht-degree: 35%
 
 ---
 
@@ -104,7 +107,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
   <tr> 
    <td><code>numPages</code></td> 
    <td>Returnerar antalet sidor i dokumentet.</td> 
-   <td>Sidnumreringsprincipen för HTML5-formulär är inte identisk med sidnumreringsprincipen för PDF-formulär. API:t numPages kan alltså returnera olika värden i båda fallen.</td> 
+   <td>Sidindelningsprincipen för HTML5-formulär är inte identisk med sidiningsprincipen för PDF forms. API:t numPages kan alltså returnera olika värden i båda fallen.</td> 
   </tr> 
   <tr> 
    <td><code>platform</code></td> 
@@ -114,7 +117,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
   <tr> 
    <td><code>title</code></td> 
    <td>Anger dokumentets titel. Den är bara tillgänglig för klientprogram.</td> 
-   <td>Det returnerar HTML-dokumentets titel i form av ett formulär i stället för formulärets metadatanamn, som i PDF-formulär.</td> 
+   <td>Det returnerar HTML-dokumentets titel i form av ett formulär i stället för formulärets metadatanamn som i PDF forms.</td> 
   </tr> 
   <tr> 
    <td><code>version</code></td> 
@@ -1310,7 +1313,7 @@ FormCalc är ett XFA-specifikt språk för att skapa e-formulärbaserade logiska
   <tr> 
    <td>app.calculate</td> 
    <td>Om true (standardvärdet) kan beräkningar utföras. Om false tillåts inte beräkningar.</td> 
-   <td>Alltid true för HTML5-formulär.</td> 
+   <td>Alltid true för HTMl5 Forms.</td> 
   </tr> 
   <tr> 
    <td>app.constants</td> 
