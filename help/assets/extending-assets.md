@@ -4,15 +4,18 @@ description: Lär dig hur du kan anpassa och utöka Resursresurs- och Resursredi
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '261'
+ht-degree: 0%
 
 ---
 
 
 # Anpassa och utöka resurser {#customizing-and-extending-assets}
 
-Resursredigeraren är den primära åtkomstpunkten som användare av en Adobe Enterprise Manager-webbplats (AEM) kommer att använda för att hitta, visa och ändra digitala resurser i din databas.
+Resursredigeraren är den primära åtkomstpunkten som användare på en Adobe Enterprise Manager-webbplats (AEM) använder för att hitta, visa och ändra digitala resurser i din databas.
 
-Som AEM-utvecklare kan du anpassa och utöka resursredigeraren på flera olika sätt och ge användarna ett särskilt skräddarsytt gränssnitt och en uppsättning funktioner.
+Som AEM kan du anpassa och utöka resursredigeraren på flera olika sätt och ge användarna ett särskilt skräddarsytt gränssnitt och en uppsättning funktioner.
 
 Följande funktionalitetsaspekter kan anpassas eller förbättras:
 
