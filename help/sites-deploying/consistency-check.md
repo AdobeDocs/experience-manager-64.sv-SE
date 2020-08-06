@@ -10,6 +10,9 @@ content-type: reference
 discoiquuid: af9a3e9d-194a-42e5-be28-b238e0c1e55e
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '168'
+ht-degree: 0%
 
 ---
 
@@ -30,11 +33,11 @@ javax.jcr.RepositoryException: Error indexing workspace: Error indexing workspac
 
 ## Utför en konsekvenskontroll {#perform-a-consistency-check}
 
-Navigera till administrationssidan för JMX Mbean**.adobe.granite (Repository)** för att utföra en konsekvenskontroll. Från AEM-huvudskärmen går du till:
+Navigera till administrationssidan för JMX Mbean**.adobe.granite (Repository)** för att utföra en konsekvenskontroll. Från AEM huvudskärm går du till:
 
 **Verktyg > Webbkonsol > Huvudmeny (på menyraden) > JMX > com.adobe.granite (databas)**
 
-**[I en standardinstallation finns den här:  |Visa mig|](http://localhost:4502/system/console/jmx/com.adobe.granite%3Atype%3DRepository)**
+I en standardinstallation finns den här:  **[|Visa mig|](http://localhost:4502/system/console/jmx/com.adobe.granite%3Atype%3DRepository)**
 
 Under **Åtgärder** på sidan finns två metoder: **`traversalCheck`** och **`consistencyCheck`**. Om du vill utföra en kontroll klickar du på åtgärden och anger önskade parametrar.
 
