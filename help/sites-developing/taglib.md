@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 6678e3c3-fb0f-4300-8838-38f23f14db07
 translation-type: tm+mt
 source-git-commit: 835f1ba1f196c6c6303019f0cc310cad850e1682
+workflow-type: tm+mt
+source-wordcount: '2487'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +40,7 @@ Den globala filen deklarerar även [Sling-biblioteket](/help/sites-developing/ta
 
 ### <ui:includeClientLib> {#ui-includeclientlib}
 
-Taggen innehåller `<ui:includeClientLib>` ett AEM html-klientbibliotek, som kan vara ett js-, css- eller temabibliotek. För flera inkluderingar av olika typer, till exempel js och css, måste den här taggen användas flera gånger i jsp. Den här taggen är ett bekvämt brytningstecken runt ` [com.adobe.granite.ui.clientlibs.HtmlLibraryManager](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/ui/clientlibs/HtmlLibraryManager.html)` tjänstgränssnittet.
+Taggen `<ui:includeClientLib>` Inkluderar ett AEM HTML-klientbibliotek, som kan vara ett js-, css- eller temabibliotek. För flera inkluderingar av olika typer, till exempel js och css, måste den här taggen användas flera gånger i jsp. Den här taggen är ett bekvämt brytningstecken runt ` [com.adobe.granite.ui.clientlibs.HtmlLibraryManager](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/ui/clientlibs/HtmlLibraryManager.html)` tjänstgränssnittet.
 
 Den har följande attribut:
 
@@ -89,7 +92,7 @@ Om du vill använda CQ-taggbiblioteket i skriptet måste skriptet börja med fö
 >
 >När `/libs/foundation/global.jsp` filen inkluderas i skriptet deklareras taglib automatiskt.
 
-När du utvecklar jsp-skriptet för en AEM-komponent bör du inkludera följande kod högst upp i skriptet:
+När du utvecklar jsp-skriptet för en AEM bör du ta med följande kod högst upp i skriptet:
 
 ```xml
 <%@include file="/libs/foundation/global.jsp"%>
@@ -179,7 +182,7 @@ Om attributet inte är `source` inställt:
 
 * Om `language` attributet inte är inställt blir standardvärdet för `source` attributet `auto`.
 
-&quot;Innehållspaketet&quot; kan helt enkelt användas av vanliga JSTL- `<fmt:message>` taggar. Nyckelsökningen efter meddelanden är två gånger:
+&quot;Innehållspaketet&quot; kan helt enkelt användas av vanliga JSTL- `<fmt:message>` taggar. Nyckelsökningen efter meddelanden är tvåfaldig:
 
 1. För det första genomsöks JCR-egenskaperna för den underliggande resurs som återges för närvarande efter översättningar. På så sätt kan du definiera en enkel komponentdialogruta för att redigera dessa värden.
 1. Om noden inte innehåller någon egenskap med namnet exakt som nyckeln, är reservdelen att läsa in ett resurspaket från försäljningsbegäran ( `SlingHttpServletRequest.getResourceBundle(Locale)`). Språket eller språkområdet för det här paketet definieras av `<cq:setContentBundle>` taggens språk- och källattribut.
@@ -249,16 +252,16 @@ Ska du använda `<%@ include file="myScript.jsp" %>` eller `<cq:include script="
 
 Ska du använda `<cq:include>` eller `<sling:include>`?
 
-* När du utvecklar AEM-komponenter bör du använda `<cq:include>`.
+* När du utvecklar AEM bör du använda dem i Adobe `<cq:include>`.
 * `<cq:include>` gör att du kan inkludera skriptfiler direkt efter deras namn när du använder skriptattributet. Detta tar hänsyn till arv av komponent- och resurstyp och är ofta enklare än att följa Sling:s skriptupplösning med väljare och tillägg.
 
 ### <cq:includeClientLib> {#cq-includeclientlib}
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>` har tagits bort sedan AEM 5.6. [ ska `<ui:includeClientLib>`](/help/sites-developing/taglib.md#ui-includeclientlib) användas istället.
+>`<cq:includeClientLib>` har tagits bort sedan AEM 5.6. [ `<ui:includeClientLib>`](/help/sites-developing/taglib.md#ui-includeclientlib) ska användas istället.
 
-Taggen `<cq:includeClientLib>` Inkluderar ett AEM html-klientbibliotek, som kan vara ett js, en css eller ett temabibliotek. För flera inkluderingar av olika typer, till exempel js och css, måste den här taggen användas flera gånger i jsp. Den här taggen är ett bekvämt brytningstecken runt `com.day.cq.widget.HtmlLibraryManager` tjänstgränssnittet.
+Taggen innehåller ett AEM HTML-klientbibliotek, som kan vara ett js-, css- eller temabibliotek. `<cq:includeClientLib>` För flera inkluderingar av olika typer, till exempel js och css, måste den här taggen användas flera gånger i jsp. Den här taggen är ett bekvämt brytningstecken runt `com.day.cq.widget.HtmlLibraryManager` tjänstgränssnittet.
 
 Den har följande attribut:
 
@@ -326,7 +329,7 @@ Taggen visar följande, ofta använda, skriptobjekt som utvecklaren kan referera
 
 **editContext**
 
-* redigeringskontextobjektet för AEM-komponenten (com.day.cq.wcm.api.components.EditContext interface).
+* redigeringskontextobjektet för AEM (com.day.cq.wcm.api.components.EditContext interface).
 
 **pageManager**
 
