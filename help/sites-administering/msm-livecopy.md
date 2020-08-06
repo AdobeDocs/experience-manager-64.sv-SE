@@ -96,7 +96,7 @@ Du kan skapa en live-kopia av vilken sida som helst:
 
 * Sidor som refereras av en [ritningskonfiguration](#creating-a-blueprint-configuration).
 * Och sidor som inte har någon anslutning till en konfiguration.
-* AEM har även stöd för att skapa en live-kopia på sidorna i en annan live-kopia.
+* AEM har också stöd för att skapa en live-kopia på sidorna i en annan live-kopia.
 
 Den enda skillnaden är att tillgängligheten för **utrullningskommandot** på käll-/ritningssidorna är beroende av om källan refereras av en ritningskonfiguration:
 
