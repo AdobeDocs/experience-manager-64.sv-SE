@@ -11,6 +11,9 @@ topic-tags: interactive-communications
 discoiquuid: 1aef2a51-4391-4075-8841-a62ace5606f9
 translation-type: tm+mt
 source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+workflow-type: tm+mt
+source-wordcount: '542'
+ht-degree: 6%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
 
 Redigera standardkonfigurationsegenskaper för interaktiv kommunikation
 
-Interactive Communications innehåller egenskaper som konfigureras automatiskt efter installation av [AEM Forms-tilläggspaketet](/help/forms/using/installing-configuring-aem-forms-osgi.md) . Författare av interaktiv kommunikation kan redigera dessa standardkonfigurationsegenskaper med hjälp av konfigurationssidan för **Adobe Experience Manager Web Console** .
+Interactive Communications innehåller egenskaper som konfigureras automatiskt efter installation av [AEM Forms-tilläggspaketet](/help/forms/using/installing-configuring-aem-forms-osgi.md) . De som skapar interaktiv kommunikation kan redigera dessa standardkonfigurationsegenskaper på sidan Konfiguration **av** Adobe Experience Manager Web Console.
 
 Öppna konfigurationssidan för **Adobe Experience Manager Web Console** med följande URL:
 
@@ -30,7 +33,7 @@ Konfigurationsegenskaperna omfattar:
 * [Konfiguration av dokumentfragment](#document-fragments-configuration)
 * [Skapa korrespondenskonfiguration](#create-correspondence-configuration)
 * [Konfiguration av webbkanal för adaptiv form och interaktiv kommunikation](#adaptive-form-and-interactive-communication-web-channel-configuration)
-* [Konfiguration av tema för adaptiv form och interaktiv kommunikation - webbkanal](#adaptive-form-and-interactive-communication-web-channel-theme-configuration)
+* [Konfiguration av temat Adaptiv form och interaktiv kommunikation via webbkanal](#adaptive-form-and-interactive-communication-web-channel-theme-configuration)
 
 ## Konfiguration av dokumentfragment {#document-fragments-configuration}
 
@@ -89,15 +92,15 @@ Tryck på **Skapa korrespondenskonfiguration** på **Adobe Experience Manager We
 
 ## Konfiguration av webbkanal för adaptiv form och interaktiv kommunikation {#adaptive-form-and-interactive-communication-web-channel-configuration}
 
-Tryck på **Adaptive Form and Interactive Communication Web Channel Configuration** på **Adobe Experience Manager Web Console Configuration** för att visa konfigurationsegenskaperna för Adaptive Forms och Interactive Communications Web channel. I följande tabell beskrivs egenskaperna för interaktiv kommunikation:
+Tryck på **Adaptive Form and Interactive Communication Web Channel Configuration** på **Adobe Experience Manager Web Console Configuration** -sidan för att visa konfigurationsegenskaperna för Adaptive Forms och Interactive Communications Web channel. I följande tabell beskrivs egenskaperna för interaktiv kommunikation:
 
 | Egenskap | Beskrivning | Standard | Godtagbara värden |
 |---|---|---|---|
 | Visa platshållare | Markera kryssrutan för att aktivera visning av platshållare för fält som ingår i adaptiva formulär och interaktiv kommunikation. | Markerad | Ej relevant |
 | Maximalt antal cacheposter | Ange det maximala antalet adaptiva formulär och interaktiv kommunikation som kan hämtas med cacheminnet. | 100 | Siffra |
-| Gör filnamnet unikt | Markera kryssrutan om du vill att unika namn för filer ska inkluderas som bilagor i Adaptive Forms och Interactive Communications. | Inte markerad | Ej relevant |
+| Gör filnamnet unikt | Markera kryssrutan om du vill ha unika namn för filer inkluderade som bilagor i Adaptive Forms och Interactive Communications. | Inte markerad | Ej relevant |
 
-## Konfiguration av tema för adaptiv form och interaktiv kommunikation - webbkanal {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
+## Konfiguration av temat Adaptiv form och interaktiv kommunikation via webbkanal {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
 
 Tryck på **Adaptive Form and Interactive Communication Web Channel Theme Configuration** på **Adobe Experience Manager Web Console Configuration** -sidan för att visa konfigurationsegenskaperna för Adaptive Forms och Interactive Communications Web channel themes.
 
@@ -111,7 +114,7 @@ Tryck på **Adaptive Form and Interactive Communication Web Channel Theme Config
   </tr> 
   <tr> 
    <td>Namn på teckensnittslista</td> 
-   <td>Lista med teckensnitt som kan användas när adaptiva formulär och interaktiv kommunikation skapas.</td> 
+   <td>Lista över teckensnitt som kan användas när Adaptive Forms och Interactive Communications skapas.</td> 
    <td><p>Georgien</p> <p>Book Antiqua</p> <p>Times New Roman</p> <p>Arial</p> <p>Arial Black</p> <p>Effekt</p> <p>Palation Linotype</p> </td> 
    <td>Alla giltiga Adobe-serverteckensnitt</td> 
   </tr> 
