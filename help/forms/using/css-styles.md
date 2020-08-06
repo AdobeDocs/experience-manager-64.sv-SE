@@ -11,6 +11,9 @@ topic-tags: hTML5_forms
 discoiquuid: a8d986ab-2a4c-488b-957e-4606f7391bd3
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '838'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +26,7 @@ HTML5-återgivningen av en XFA-baserad formulärmall består av flera HTML-eleme
 >
 >I CSS-klasserna ska du inte ändra värdet för attributen width, height, border-tjocklek, top, left, right, bottom, padding, margin och other position and size. Alla ändringar i attributen position och storlek medför ändringar i formulärets layout.
 
-## CSS-klasser för element {#css-classes-nbsp-for-elements-nbsp}
+## CSS-klasser för element  {#css-classes-nbsp-for-elements-nbsp}
 
 Alla element innehåller väldefinierade CSS-klasser. Du kan ändra dessa klasser om du vill ändra utseendet på ett element. Alla element, förutom fältet och draw-elementen, har två CSS-klasser - Type-klassen och Name-klassen.
 
@@ -35,7 +38,7 @@ Alla element innehåller väldefinierade CSS-klasser. Du kan ändra dessa klasse
 >
 >Vissa XFA-element har inget namn. Om du vill ändra formaten för sådana komponenter ändrar du alla komponenter av den typen.
 
-För sidor som inte är namngivna i AEM Forms Designer namnges sidorna i ett HTML5-formulär i stigande ordningsföljd. För ett HTML5-formulär med två sidor heter sidorna t.ex. Page1, Page2.
+För sidor som inte är namngivna i AEM Forms Designer namnges sidorna i ett HTML5-formulär i nummerordningen. För ett HTML5-formulär med två sidor heter sidorna t.ex. Page1, Page2.
 
 ## Fältelement {#field-element}
 
@@ -122,7 +125,7 @@ Förutom klassen type och name innehåller fältkomponenten även en annan CSS-k
 
 ## CSS-klasser för olika fält {#css-classes-for-different-fields}
 
-AEM Forms Designer stöder olika typer av fält i ett formulär, t.ex. NumericField, DecimalField och Date Field. Alla dessa fält i HTML innehåller de ovannämnda CSS-klasserna. De innehåller också vissa extra klasser beroende på fälttypen.
+AEM Forms Designer har stöd för olika typer av fält i ett formulär som NumericField, DecimalField och Date Field. Alla dessa fält i HTML innehåller de ovannämnda CSS-klasserna. De innehåller också vissa extra klasser beroende på fälttypen.
 
 Varje fält har en tillhörande widget som representerar gränssnittselementet. Klasserna för varje fält och de widgetar som är kopplade till varje fält listas nedan.
 
@@ -224,12 +227,12 @@ Varje fält har en tillhörande widget som representerar gränssnittselementet. 
 
 ## CSS-klasser för olika Draw-element {#css-classes-for-different-draw-elements}
 
-Du kan infoga statiska ritelement som text och bilder med hjälp av AEM Forms Designer. För varje draw-element kopplas en separat CSS-klass till det elementet. Listan med CSS-klasser för draw-element visas nedan. Alla draw-element har en draw-klass kopplad till sig.
+Du kan infoga statiska ritelement som text och bilder med AEM Forms Designer. För varje draw-element kopplas en separat CSS-klass till det elementet. Listan med CSS-klasser för draw-element visas nedan. Alla draw-element har en draw-klass kopplad till sig.
 
 | **Rita typ** | **CSS, klass** |
 |---|---|
 | Text | text |
-| Bild | image |
+| Bild | bild |
 | Rektangel | rectangle |
 | Linje | line |
 
