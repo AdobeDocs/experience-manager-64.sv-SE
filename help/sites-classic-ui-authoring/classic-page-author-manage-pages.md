@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 14b8758b-f164-429a-b299-33b0703f8bec
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1935'
+ht-degree: 3%
 
 ---
 
@@ -27,7 +30,7 @@ I det här avsnittet beskrivs hur du skapar och hanterar sidor med Adobe Experie
 
 ## Organisera din webbplats {#organizing-your-website}
 
-Som författare måste du ordna din webbplats i AEM. Detta innebär att du skapar och namnger innehållssidorna så att:
+Som författare måste du ordna din webbplats inom AEM. Detta innebär att du skapar och namnger innehållssidorna så att:
 
 * kan du enkelt hitta dem i redigeringsmiljön
 * besökare på er webbplats kan enkelt bläddra bland dem i publiceringsmiljön
@@ -36,7 +39,7 @@ Du kan också använda [mappar](#creating-a-new-folder) för att ordna innehåll
 
 Strukturen på en webbplats kan ses som en *trädstruktur* som innehåller dina innehållssidor. Namnen på dessa innehållssidor används för att skapa URL-adresserna, medan titeln visas när sidinnehållet visas.
 
-Följande visar ett utdrag från Geometrixx-platsen. där du t.ex. kommer åt `Triangle` sidan:
+Följande visar ett utdrag från Geometrixx: där du t.ex. kommer åt `Triangle` sidan:
 
 * Författarmiljö
 
@@ -86,7 +89,7 @@ När du skapar en ny sida finns det två nyckelfält:
    * Detta används för att generera URI:n.
    * Användarindata för det här fältet är valfria. Om inget anges hämtas namnet från titeln.
 
-När du skapar en ny sida [validerar AEM sidnamnet enligt konventionerna](/help/sites-developing/naming-conventions.md) från AEM och JCR.
+När du skapar en ny sida [validerar AEM sidnamnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som AEM och JCR har infört.
 
 Implementeringen och listan över tillåtna tecken skiljer sig något beroende på användargränssnittet (det är mer omfattande för det beröringsaktiverade användargränssnittet), men det minsta tillåtna är:
 
@@ -100,21 +103,21 @@ Använd bara dessa tecken om du vill vara säker på att de accepteras/används 
 
 #### Titel {#title}
 
-Om du bara anger en **sidrubrik** när du skapar en ny sida, kommer AEM att härleda sidans **namn** från den här strängen och [validera namnet i enlighet med konventionerna](/help/sites-developing/naming-conventions.md) från AEM och JCR. I båda användargränssnitten accepteras ett **titelfält** som innehåller ogiltiga tecken, men namnet som härleds får de ogiltiga tecknen. Exempel:
+Om du bara anger en **sidtitel** när du skapar en ny sida härleds sidans **namn**[ i AEM från den här strängen och namnet valideras enligt konventionerna i AEM och JCR. ](/help/sites-developing/naming-conventions.md) I båda användargränssnitten accepteras ett **titelfält** som innehåller ogiltiga tecken, men namnet som härleds får de ogiltiga tecknen. Till exempel:
 
 | Titel | Härlett namn |
 |---|---|
-| Schön | school.html |
-| SC%&amp;&amp;ast;ç+ | sc—c-.html |
+| Schön | schoen.html |
+| SC%&amp;&amp;ast;ç+ | sc---c-.html |
 
 #### Namn {#name}
 
-Om du anger ett **sidnamn** när du skapar en ny sida, kommer AEM att [validera namnet i enlighet med konventionerna](/help/sites-developing/naming-conventions.md) från AEM och JCR.
+Om du anger ett **sidnamn** när du skapar en ny sida kommer AEM att [validera namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som AEM och JCR har infört.
 
 I det klassiska användargränssnittet **kan du inte ange ogiltiga tecken** i **namnfältet** .
 
 >[!NOTE]
->I det beröringsaktiverade användargränssnittet **kan du inte skicka ogiltiga tecken** i **namnfältet** . När AEM identifierar ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
+>I det beröringsaktiverade användargränssnittet **kan du inte skicka ogiltiga tecken** i **namnfältet** . När AEM upptäcker ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
 
 >[!NOTE]
 >
@@ -122,7 +125,7 @@ I det klassiska användargränssnittet **kan du inte ange ogiltiga tecken** i **
 >
 >See [Preparing Content for Translation](/help/sites-administering/tc-prep.md) for more information.
 
-### Templates {#templates}
+### Mallar {#templates}
 
 I AEM anger en mall en speciell typ av sida. En mall kommer att användas som bas för alla nya sidor som skapas.
 
@@ -138,7 +141,7 @@ AEM innehåller flera färdiga mallar. Vilka mallar som visas beror på den ensk
 
 ### Komponenter {#components}
 
-Komponenterna är de element som tillhandahålls av AEM så att du kan lägga till specifika typer av innehåll. AEM har en rad färdiga komponenter som ger omfattande funktionalitet. bland annat följande:
+Komponenterna är de element som AEM tillhandahåller så att du kan lägga till specifika typer av innehåll. AEM innehåller en rad färdiga komponenter som ger omfattande funktionalitet. bland annat följande:
 
 * Text
 * Bild
@@ -160,16 +163,16 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
    ![screen_shot_2012-02-15at114413am](assets/screen_shot_2012-02-15at114413am.png)
 
-1. **** I **New.. (klicka på pilen bredvid** Ny...**), välj** Ny sida.. . Fönstret **Skapa sida** öppnas.
+1. I **New..** (klicka på pilen bredvid **Ny...**), välj **Ny sida..**. Fönstret **Skapa sida** öppnas.
 
-   **** Klicka på **Ny... fungerar också som genväg till** Ny sida... alternativ.
+   Klicka på **Ny...** fungerar också som genväg till **Ny sida...** alternativ.
 
 1. I dialogrutan **Skapa sida** kan du:
 
    * Ange en **titel**. detta visas för användaren.
    * Ange ett **namn**. detta används för att generera URI:n. Om inget anges hämtas namnet från titeln.
 
-      * Om du anger ett **sidnamn** när du skapar en ny sida, [validerar AEM namnet enligt de konventioner](/help/sites-developing/naming-conventions.md) som AEM och JCR har infört.
+      * Om du anger ett **sidnamn** när du skapar en ny sida, [validerar AEM namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som AEM och JCR har angett.
       * I det klassiska användargränssnittet **kan du inte ange ogiltiga tecken** i fältet **Namn** .
    * Klicka på den mall som du vill använda för att skapa den nya sidan.
 
@@ -208,7 +211,7 @@ Du kan öppna sidan som ska [redigeras](/help/sites-classic-ui-authoring/classic
 
 Vid kopiering kan du antingen kopiera:
 
-*  en sida
+* en sida
 * en sida med alla undersidor
 
 1. På **webbplatskonsolen** väljer du den sida du vill kopiera.
@@ -223,6 +226,7 @@ Vid kopiering kan du antingen kopiera:
 
    * **Klistra in** - för att klistra in sidan tillsammans med alla underordnade sidor
    * **Skift + Klistra in** - om du bara vill klistra in den markerade sidan
+
    Sidorna klistras in på den nya platsen.
 
    >[!NOTE]
@@ -245,7 +249,7 @@ Proceduren för att flytta eller byta namn på en sida är densamma. Med samma �
 * byta namn på en sida på samma plats
 * flytta en sida till en ny plats och byta namn på den samtidigt
 
-Med AEM kan du uppdatera interna länkar till sidan som byter namn eller flyttas. Detta kan göras sida för sida för att ge full flexibilitet.
+I AEM finns funktioner för att uppdatera interna länkar till sidan som byter namn eller flyttas. Detta kan göras sida för sida för att ge full flexibilitet.
 
 Så här flyttar eller byter du namn på en sida:
 
@@ -325,7 +329,7 @@ Du kan [låsa/låsa upp en sida](/help/sites-classic-ui-authoring/classic-page-a
 >Mappar lyder även under [Sidnamngivningskonventioner](#page-naming-conventions) när du anger det nya mappnamnet.
 
 1. Öppna **webbplatskonsolen** och navigera till önskad plats.
-1. **** I **New.. (klicka på pilen bredvid** Ny...**), välj** Ny mapp.. .
+1. I **New..** (klicka på pilen bredvid **Ny...**), välj **Ny mapp..**.
 1. Dialogrutan **Skapa mapp** öppnas. Här anger du **namn** och **titel**:
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
