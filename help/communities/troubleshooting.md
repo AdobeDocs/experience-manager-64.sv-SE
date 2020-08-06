@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: cdb2d80a-2fbf-4ee6-b89b-b5d74e6d3bfc
 translation-type: tm+mt
 source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+workflow-type: tm+mt
+source-wordcount: '373'
+ht-degree: 1%
 
 ---
 
@@ -62,7 +65,7 @@ Under start (inte under den första - men efter den) kan följande varning visas
 
 * 11.04.2014 08:38:07.223 **WARN** []FelixStartLevelcom.github.jknack.handlebars.Handlebars Helper &#39;i18n&#39; har ersatts med &#39;com.adobe.cq.social.handlebars.I18nHelper@15bac645&#39;
 
-Denna varning kan ignoreras eftersom jknack.handlebars.Handlebars, som används av [SCF](scf.md#handlebarsjavascripttemplatinglanguage), har ett eget i18n-hjälpverktyg. Från början ersätts den med en AEM-specifik [i18n-hjälpreda](handlebars-helpers.md#i-n). Den här varningen genereras av tredjepartsbiblioteket för att bekräfta åsidosättningen av en befintlig hjälpreda.
+Denna varning kan ignoreras eftersom jknack.handlebars.Handlebars, som används av [SCF](scf.md#handlebarsjavascripttemplatinglanguage), har ett eget i18n-hjälpverktyg. Från början ersätts den med en AEM specifik [i18n-hjälpreda](handlebars-helpers.md#i-n). Den här varningen genereras av tredjepartsbiblioteket för att bekräfta åsidosättningen av en befintlig hjälpreda.
 
 ### Varning i loggar: OakResourceListener processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 
@@ -81,7 +84,7 @@ Dessa varningar kan ignoreras.
 
 ### Fel i loggar: NoClassDefFoundError för IndexElementFactory {#error-in-logs-noclassdeffounderror-for-indexelementfactory}
 
-Uppgradering av AEM 5.6.1 GA till den senaste cq-socialcommunities-pkg-1.4.x eller till AEM 6.0 resulterar i fel i loggfilen under start, vilket ger en problemlösning som visas av felet som inte visas vid omstart.
+Om du uppgraderar AEM 5.6.1 GA till den senaste cq-socialcommunities-pkg-1.4.x eller till AEM 6.0 uppstår fel i loggfilen under starten, vilket ger en problemlösning som visas av det fel som inte visas vid omstart.
 
 ```xml
 14.11.2013 20:52:39.453 ERROR [Apache Sling JCR Resource Event Queue Processor for path '/'] com.adobe.cq.social.storage.index.impl.IndexService Error occurred while processing event java.util.ConcurrentModificationException
