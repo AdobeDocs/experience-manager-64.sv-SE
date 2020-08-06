@@ -11,13 +11,16 @@ topic-tags: forms-app
 discoiquuid: c72f608e-052a-4bf9-b7bc-ddf57483af35
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '235'
+ht-degree: 0%
 
 ---
 
 
 # Temaanpassning {#theme-customization}
 
-Du kan anpassa HTML-koden och CSS-filen för att ge AEM Forms-appen ett distinkt organisationsspecifikt utseende och känsla. Du kan till exempel ändra bakgrundsfärgen och höjden på uppgifter eller startpunkter. I följande exempel finns instruktioner för hur du ändrar:
+Du kan anpassa HTML-koden och CSS-filen för att ge AEM Forms-appen ett distinkt organisationsspecifikt utseende. Du kan till exempel ändra bakgrundsfärgen och höjden på uppgifter eller startpunkter. I följande exempel finns instruktioner för hur du ändrar:
 
 * visningsanvisningar i stället för beskrivningen
 * antal visningsrutter
@@ -81,5 +84,5 @@ Du kan anpassa HTML-koden och CSS-filen för att ge AEM Forms-appen ett distinkt
 1. Spara ändringarna och stäng `_style.css` filen.
 1. Öppna appen AEM Forms.
 
-   AEM Forms-appen visar nu instruktioner i stället för beskrivning.
+   Nu visas instruktioner i stället för beskrivningar i AEM Forms-appen.
 
