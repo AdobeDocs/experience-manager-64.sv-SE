@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 5d607b9f-584b-4ffc-ab0b-d0318dc69dec
 translation-type: tm+mt
 source-git-commit: 0e7f4a78f63808bea2aa7a5abbb31e7e5b9d21b3
+workflow-type: tm+mt
+source-wordcount: '783'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +34,7 @@ Sidkomponenten för en SPA tillhandahåller inte HTML-elementen för dess undero
 
 ## Sidmodellshantering {#page-model-management}
 
-Sidmodellens upplösning och hantering delegeras till en angiven [`PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) modul. SPA måste interagera med `PageModelManager` modulen när den initieras för att hämta den första sidmodellen och registrera sig för modelluppdateringar - oftast när författaren redigerar sidan via sidredigeraren. SPA-projektet `PageModelManager` är tillgängligt som npm-paket. Som tolk mellan AEM och SPA ska `PageModelManager` avtalet medfölja SPA.
+Sidmodellens upplösning och hantering delegeras till en angiven [`PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) modul. SPA måste interagera med `PageModelManager` modulen när den initieras för att hämta den första sidmodellen och registrera sig för modelluppdateringar - oftast när författaren redigerar sidan via sidredigeraren. SPA-projektet `PageModelManager` är tillgängligt som npm-paket. Som tolk mellan AEM och SPA ska `PageModelManager` avtalet åtfölja SPA.
 
 För att sidan ska kunna redigeras måste ett klientbibliotek med namnet `cq.authoring.pagemodel.messaging` läggas till för att ge en kommunikationskanal mellan SPA och sidredigeraren. Om SPA-sidkomponenten ärver från sidans wcm/core-komponent finns det följande alternativ för att göra `cq.authoring.pagemodel.messaging` klientbibliotekskategorin tillgänglig:
 
@@ -42,7 +45,7 @@ Glöm inte att begränsa inkludering av `cq.authoring.pagemodel.messaging` kateg
 
 ## Kommunikationsdatatyp {#communication-data-type}
 
-Kommunikationsdatatypen ställs in på ett HTML-element i AEM Page-komponenten med hjälp av `data-cq-datatype` -attributet. När kommunikationens datatyp är JSON, når GET-förfrågningarna en komponents Sling Model-slutpunkter. När en uppdatering har gjorts i sidredigeraren skickas JSON-representationen av den uppdaterade komponenten till sidmodellsbiblioteket. Sidmodellbiblioteket varnar sedan SPA för uppdateringar.
+Kommunikationsdatatypen ställs in som ett HTML-element inuti AEM Page-komponenten med hjälp av `data-cq-datatype` -attributet. När kommunikationsdatatypen är JSON, når GET-förfrågningarna en komponents Sling Model-slutpunkter. När en uppdatering har gjorts i sidredigeraren skickas JSON-representationen av den uppdaterade komponenten till sidmodellsbiblioteket. Sidmodellbiblioteket varnar sedan SPA för uppdateringar.
 
 **SPA-sidkomponent -`body.html`**
 
@@ -92,7 +95,7 @@ Meta-resursegenskaperna som beskriver SPA-innehållet:
 >
 >Det här dokumentet använder appen We.Retail Journal endast i demonstrationssyfte. Det ska inte användas för något projektarbete.
 >
->Alla AEM-projekt bör utnyttja [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA-projekt med React eller Angular och utnyttjar SPA SDK. Alla SPA-projekt på AEM bör baseras på Maven Archetype för SPA Starter Kit.
+>Alla AEM ska utnyttja den [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)som stöder SPA-projekt med React eller Angular och som utnyttjar SPA SDK. Alla SPA-projekt på AEM ska baseras på Maven Archetype för SPA Starter Kit.
 
 ## Synkronisering av sidredigeringsövertäckning {#page-editor-overlay-synchronization}
 
@@ -100,9 +103,9 @@ Synkroniseringen av övertäckningarna garanteras av exakt samma Mutation-observ
 
 ## Sling Model JSON Exported Structure Configuration {#sling-model-json-exported-structure-configuration}
 
-När routningsfunktionerna är aktiverade antas att JSON-exporten av SPA innehåller de olika vägarna i programmet tack vare JSON-exporten av AEM-navigeringskomponenten. JSON-utdata för AEM-navigeringskomponenten kan konfigureras i SPA:s innehållsprincip för rotsidor via följande två egenskaper:
+När routningsfunktionerna är aktiverade antas att JSON-exporten av SPA innehåller de olika vägarna i programmet tack vare JSON-exporten av den AEM navigeringskomponenten. JSON-utdata för den AEM navigeringskomponenten kan konfigureras i SPA:s innehållsprincip för rotsidor via följande två egenskaper:
 
 * `structureDepth`: Nummer som motsvarar djupet i det exporterade trädet
-* `structurePatterns`: Regex för en matris av regexter som motsvarar den sida som ska exporteras
+* `structurePatterns`: Regex för en matris med regexter som motsvarar den sida som ska exporteras
 
 Detta kan visas i SPA-exempelinnehållet i `/conf/we-retail-journal/react/settings/wcm/policies/we-retail-journal/react/components/structure/page/root`.
