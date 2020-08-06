@@ -228,7 +228,7 @@ XML-taggarna för användardata som skickas för olika fält genereras med fält
 
 ## Konfigurera förifyllningstjänsten med Configuration Manager {#configuring-prefill-service-using-configuration-manager}
 
-Om du vill aktivera förifyllningstjänsten anger du standardkonfigurationen för förifyllningstjänsten i AEM Web Console-konfigurationen. Gör så här för att konfigurera förifyllningstjänsten:
+Om du vill aktivera förifyllningstjänsten anger du standardkonfigurationen för förifyllningstjänsten i AEM webbkonsolkonfiguration. Gör så här för att konfigurera förifyllningstjänsten:
 
 >[!NOTE]
 >
@@ -244,9 +244,10 @@ Om du vill aktivera förifyllningstjänsten anger du standardkonfigurationen fö
 
    * file:///C:/Users/public/Document/Prefill/.&amp;ast;
    * http://localhost:8000/somesamplexmlfile.xml
+
    >[!NOTE]
    >
-   >Som standard är förifyllning tillåtet via crx-filer för alla typer av adaptiva formulär (XSD, XDP, JSON, FDM och utan formulärmodellbaserad). Förifyll tillåts bara med JSON- och XML-filer.
+   >Som standard är förifyllning tillåtet via crx-filer för alla typer av adaptiva Forms (XSD, XDP, JSON, FDM och utan formulärmodellbaserad). Förifyll tillåts bara med JSON- och XML-filer.
 
 1. Förifyllningstjänsten har nu konfigurerats för ditt formulär.
 
@@ -340,7 +341,7 @@ Du kan använda en anpassad förifyllningstjänst för scenarierna, där du hela
 
 ### Skapa och köra en förifyllningstjänst {#create-and-run-a-prefill-service}
 
-Förifyllningstjänsten är en OSGi-tjänst och paketeras via OSGi-paketet. Du skapar OSGi-paketet, överför det och installerar det i AEM Forms-paketen. Innan du börjar skapa paketet:
+Förifyllningstjänsten är en OSGi-tjänst och paketeras via OSGi-paketet. Du skapar OSGi-paketet, överför det och installerar det i AEM Forms-paket. Innan du börjar skapa paketet:
 
 * [Ladda ned AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
 * [Hämta mallpaketet](assets/prefill-sumbit-xmlsandcontentpackage.zip)
@@ -349,7 +350,7 @@ Förifyllningstjänsten är en OSGi-tjänst och paketeras via OSGi-paketet. Du s
 
 #### Skapa en förifyllningstjänst {#create-a-prefill-service}
 
-Mallpaketet (exempelpaketet för förifyllning) innehåller exempel på implementering av tjänsten AEM Forms prefill. Öppna mallpaketet i en kodredigerare. Öppna till exempel mallprojektet i Eclipse för redigering. När du har öppnat mallpaketet i en kodredigerare gör du följande för att skapa tjänsten.
+Mallpaketet (exempelpaketet för förifyllningstjänsten) innehåller exempelimplementering av AEM Forms förifyllningstjänst. Öppna mallpaketet i en kodredigerare. Öppna till exempel mallprojektet i Eclipse för redigering. När du har öppnat mallpaketet i en kodredigerare gör du följande för att skapa tjänsten.
 
 1. Öppna src\main\java\com\adobe\test\Prefill.java för redigering.
 1. I koden anger du värdet:
@@ -365,7 +366,7 @@ Mallpaketet (exempelpaketet för förifyllning) innehåller exempel på implemen
 
 Starta förifyllningstjänsten genom att överföra JAR-filen till AEM Forms Web Console och aktivera tjänsten. Nu börjar tjänsten visas i en anpassad formulärredigerare. Så här associerar du en förifyllningstjänst till ett anpassat formulär:
 
-1. Öppna det adaptiva formuläret i formulärredigeraren och öppna egenskapspanelen för formulärbehållaren.
+1. Öppna det adaptiva formuläret i Forms Editor och öppna egenskapspanelen för formulärbehållaren.
 1. Gå till egenskapskonsolen **[!UICONTROL AEM Forms container > Basic > Prefill Service]**.
 1. Välj standardtjänsten för förifyllnad och klicka på **[!UICONTROL Save]**. Tjänsten är kopplad till formuläret.
 
