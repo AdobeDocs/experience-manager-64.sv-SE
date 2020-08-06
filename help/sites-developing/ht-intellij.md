@@ -1,8 +1,8 @@
 ---
-title: Utveckla AEM-projekt med IntelliJ IDEA
-seo-title: Utveckla AEM-projekt med IntelliJ IDEA
-description: Använda IntelliJ IDEA för att utveckla AEM-projekt
-seo-description: Använda IntelliJ IDEA för att utveckla AEM-projekt
+title: Utveckla AEM projekt med IntelliJ IDEA
+seo-title: Utveckla AEM projekt med IntelliJ IDEA
+description: Använda IntelliJ IDEA för att utveckla AEM projekt
+seo-description: Använda IntelliJ IDEA för att utveckla AEM projekt
 uuid: 382b5008-2aed-4e08-95be-03c48f2b549e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,20 +11,23 @@ content-type: reference
 discoiquuid: df6410a2-794e-4fa2-ae8d-37271274d537
 translation-type: tm+mt
 source-git-commit: 5f84641d87b88532f0fa0d92fada4e8cca3d9684
+workflow-type: tm+mt
+source-wordcount: '657'
+ht-degree: 1%
 
 ---
 
 
-# Utveckla AEM-projekt med IntelliJ IDEA{#how-to-develop-aem-projects-using-intellij-idea}
+# Utveckla AEM projekt med IntelliJ IDEA{#how-to-develop-aem-projects-using-intellij-idea}
 
 ## Översikt {#overview}
 
-För att komma igång med AEM-utveckling på IntelliJ krävs följande steg.
+För att komma igång med utvecklingen AEM IntelliJ krävs följande steg.
 
 Var och en av dem förklaras mer ingående i resten av handboken.
 
 * Installera IntelliJ
-* Konfigurera ditt AEM-projekt baserat på Maven
+* Konfigurera ditt AEM baserat på Maven
 * Förbered JSP-stöd för IntelliJ i Maven POM
 * Importera Maven Project till IntelliJ
 
@@ -38,11 +41,11 @@ Hämta IntelliJ IDEA från [nedladdningssidan på JetBrains](https://www.jetbrai
 
 Följ sedan installationsanvisningarna på den sidan.
 
-### Konfigurera ditt AEM-projekt baserat på Maven {#set-up-your-aem-project-based-on-maven}
+### Konfigurera ditt AEM baserat på Maven {#set-up-your-aem-project-based-on-maven}
 
-Konfigurera sedan projektet med Maven enligt [How-To Build AEM Projects med Apache Maven](/help/sites-developing/ht-projects-maven.md).
+Konfigurera sedan projektet med Maven enligt beskrivningen i [How-To Build AEM Projects med Apache Maven](/help/sites-developing/ht-projects-maven.md).
 
-För att börja arbeta med AEM-projekt i IntelliJ IDEA räcker det med grundinställningarna i [Komma igång om 5 minuter](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) .
+För att börja arbeta med AEM projekt i IntelliJ IDEA räcker det med grundinställningarna i [Komma igång om 5 minuter](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) .
 
 ### Förbered JSP-stöd för IntelliJ IDEA {#prepare-jsp-support-for-intellij-idea}
 
@@ -116,7 +119,7 @@ IntelliJ IDEA behöver förstå var JSP:er för felsökning ska hittas. Eftersom
 
 #### Konfigurera AEM för felsökningsläge {#configure-aem-for-debug-mode}
 
-Det sista steget som krävs är att starta AEM med de JVM-alternativ som föreslås av IntelliJ IDEA.
+Det sista steget är att börja AEM med de JVM-alternativ som IntelliJ IDEA föreslår.
 
 Du kan göra detta genom att starta AEM jar-filen direkt och lägga till dessa alternativ, till exempel med följande kommandorad:
 
