@@ -380,7 +380,7 @@ Den obligatoriska LiveCycle-processen som möjliggör e-posttjänstprocessen.
 
 1. Klicka på **[!UICONTROL Import]**.
 
-#### Lägger till ServiceName i listan över Tillåtelselistad tjänster {#adding-servicename-to-the-allowlisted-service-list}
+#### Lägger till ServiceName i listan över Tillåtslista tjänster {#adding-servicename-to-the-allowlisted-service-list}
 
 Ange de LiveCycle-tjänster som du vill få åtkomst till AEM på AEM server.
 
@@ -409,7 +409,7 @@ I det här fallet måste du konfigurera e-posttjänsten på LiveCycle-servern f�
 
 Om du vill använda Correspondence Management API hämtar du `DSCSample.jar` (som en del av `components.zip`) dokumentet och överför det till LiveCycle-servern. När `DSCSample.jar` filen har överförts till LiveCycle-servern använder AEM filen för att få åtkomst till API:t `DSCSample.jar` renderLetter.
 
-Mer information finns i [Ansluta AEM Forms med Adobe LiveCycle](/help/forms/using/aem-livecycle-connector.md).
+Mer information finns i [Ansluta AEM Forms till Adobe LiveCycle](/help/forms/using/aem-livecycle-connector.md).
 
 1. Uppdatera URL:en för AEM server i cmsa.properties i `DSCSample.jar`, som finns på följande plats:
 
