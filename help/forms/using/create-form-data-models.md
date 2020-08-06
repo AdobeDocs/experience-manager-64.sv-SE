@@ -9,6 +9,9 @@ topic-tags: integration
 discoiquuid: 3a3a6ede-52af-4c37-8a51-c2ea721a28dc
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '935'
+ht-degree: 0%
 
 ---
 
@@ -27,33 +30,34 @@ AEM Forms dataintegrering ger ett intuitivt användargränssnitt för att skapa 
 
 >[!NOTE]
 >
->Du måste vara medlem i både **fdm-author** - och **forms-user** -grupper för att kunna skapa och arbeta med formulärdatamodellen. Kontakta din AEM-administratör om du vill bli medlem i grupperna.
+>Du måste vara medlem i både **fdm-author** - och **forms-user** -grupper för att kunna skapa och arbeta med formulärdatamodellen. Kontakta AEM om du vill bli medlem i grupperna.
 
 ## Skapa formulärdatamodell {#data-sources}
 
 Kontrollera att du har konfigurerat de datakällor som du vill använda i formulärdatamodellen enligt beskrivningen i [Konfigurera datakällor](/help/forms/using/configure-data-sources.md). Så här skapar du en formulärdatamodell som baseras på konfigurerade datakällor:
 
-1. I AEM-författarinstansen går du till **[!UICONTROL Formulär > Dataintegreringar]**.
-1. Tryck på **[!UICONTROL Skapa > Formulärdatamodell]**.
+1. Navigera AEM författarinstansen till **[!UICONTROL Forms > Data Integrations]**.
+1. Tryck på **[!UICONTROL Create > Form Data Model]**.
 1. I dialogrutan Skapa formulärdatamodell:
 
    * Ange ett namn för formulärdatamodellen.
    * (**Valfritt**) Ange rubrik, beskrivning och taggar för formulärdatamodellen.
-   * (**Valfritt och endast tillämpligt om datakällor har konfigurerats**) Tryck på bockikonen bredvid fältet **[!UICONTROL Datakällkonfiguration]** och välj den konfigurationsnod där molntjänster för de datakällor som du vill använda finns. Den begränsar listan med datakällor som är tillgängliga för val på nästa sida till de som är tillgängliga i den valda konfigurationsnoden. Alla datakällor i JDBC-databaser och AEM-användarprofiler listas som standard. Om du inte väljer en konfigurationsnod visas datakällor från alla konfigurationsnoder.
-   Tryck på **[!UICONTROL Nästa]**.
+   * (**Valfritt och endast tillämpligt om datakällor har konfigurerats**) Tryck på bockikonen bredvid **[!UICONTROL Data Source Configuration]** fältet och välj konfigurationsnoden där molntjänster för de datakällor som du vill använda finns. Den begränsar listan med datakällor som är tillgängliga för val på nästa sida till de som är tillgängliga i den valda konfigurationsnoden. Alla JDBC-databaser och AEM datakällor för användarprofiler listas som standard. Om du inte väljer en konfigurationsnod visas datakällor från alla konfigurationsnoder.
 
-1. (**Gäller endast om datakällor har konfigurerats**) Skärmen **[!UICONTROL Välj datakälla]** visar tillgängliga datakällor, om det finns några. Välj datakällor som du vill använda i formulärdatamodellen.
-1. Tryck på **[!UICONTROL Skapa]** och tryck på **[!UICONTROL Öppna]** i bekräftelsedialogrutan för att öppna formulärdatamodellens redigerare.
+   Tryck på **[!UICONTROL Next]**.
+
+1. (**Gäller endast om datakällor har konfigurerats**) På skärmen visas tillgängliga datakällor, om det finns några, på **[!UICONTROL Select Datasource]** skärmen. Välj datakällor som du vill använda i formulärdatamodellen.
+1. Tryck **[!UICONTROL Create]** och tryck på bekräftelsedialogrutan för **[!UICONTROL Open]** att öppna formulärdatamodellens redigerare.
 
 Låt oss granska de olika komponenterna i användargränssnittet för formulärdatamodellsredigeraren.
 
-![En formulärdatamodell med tre datakällor - en RESTful-tjänst, en AEM-användarprofil och ett RDBMS](assets/fdm-ui.png)
+![En formulärdatamodell med tre datakällor - en RESTful-tjänst, AEM användarprofil och ett RDBMS](assets/fdm-ui.png)
 
-**S. Datakällor** Visar datakällor i en formulärdatamodell. Expandera en datakälla om du vill visa dess datamodellsobjekt och -tjänster.
+**S. Datakällor** Visar datakällor i en formulärdatamodell. Expandera en datakälla för att visa dess datamodellsobjekt och tjänster.
 
 **B. Uppdatera definitioner** för datakälla Hämtar alla ändringar i datakälldefinitioner från konfigurerade datakällor och uppdaterar dem på fliken Datakällor i formulärdatamodellens redigerare.
 
-**C. Modellinnehållsområde** där tillagda datamodellsobjekt visas.
+**C. Modellinnehållsområdet** där datamodellsobjekt som lagts till visas.
 
 **D. Området Services** Content där tillagda datakällåtgärder eller -tjänster visas.
 
@@ -67,18 +71,19 @@ Mer information om formulärdatamodellredigerare och hur du kan arbeta med den f
 
 Gör följande för att lägga till eller uppdatera datakällor till en befintlig formulärdatamodell.
 
-1. Gå till **[!UICONTROL Formulär > Dataintegrering]**, välj den formulärdatamodell i vilken du vill lägga till eller uppdatera datakällor och tryck sedan på **[!UICONTROL Egenskaper]**.
-1. Gå till fliken **[!UICONTROL Uppdatera källa]** i egenskaperna för formulärdatamodellen.
+1. Gå till **[!UICONTROL Forms > Data Integrations]** och välj den formulärdatamodell i vilken du vill lägga till eller uppdatera datakällor. Tryck sedan på **[!UICONTROL Properties]**.
+1. Gå till fliken **[!UICONTROL Update Source]** i egenskaperna för formulärdatamodellen.
 
    På fliken Uppdateringskälla:
 
-   * Tryck på bläddringsikonen i fältet **[!UICONTROL Kontextmedveten konfiguration]** och välj en konfigurationsnod där molnkonfigurationen för den datakälla som du vill lägga till finns. Om du inte väljer en nod visas molnkonfigurationer som bara finns i `global` noden när du trycker på **[!UICONTROL Lägg till källor]**.
-   * Om du vill lägga till en ny datakälla trycker du på **[!UICONTROL Lägg till källor]** och väljer de datakällor som ska läggas till i formulärdatamodellen. Alla datakällor som är konfigurerade i `global` och den valda konfigurationsnoden (om det finns någon) visas.
-   * Om du vill ersätta en befintlig datakälla med en annan datakälla av samma typ trycker du på ikonen **[!UICONTROL Redigera]** för datakällan och väljer i listan över tillgängliga datakällor.
-   * Om du vill ta bort en befintlig datakälla trycker du på ikonen **[!UICONTROL Ta bort]** för datakällan. Ikonen Ta bort är inaktiverad om ett datamodellsobjekt i datakällan läggs till i formulärdatamodellen.
+   * Tryck på bläddringsikonen i **[!UICONTROL Context-Aware Configuration]** fältet och välj en konfigurationsnod där molnkonfigurationen för den datakälla som du vill lägga till finns. Om du inte väljer en nod visas molnkonfigurationer som bara finns i noden när du trycker `global` **[!UICONTROL Add Sources]**.
+   * Om du vill lägga till en ny datakälla trycker du på **[!UICONTROL Add Sources]** och väljer de datakällor som ska läggas till i formulärdatamodellen. Alla datakällor som är konfigurerade i `global` och den valda konfigurationsnoden (om det finns någon) visas.
+   * Om du vill ersätta en befintlig datakälla med en annan datakälla av samma typ trycker du på **[!UICONTROL Edit]** ikonen för datakällan och väljer i listan med tillgängliga datakällor.
+   * Om du vill ta bort en befintlig datakälla trycker du på **[!UICONTROL Delete]** ikonen för datakällan. Ikonen Ta bort är inaktiverad om ett datamodellsobjekt i datakällan läggs till i formulärdatamodellen.
+
    ![fdm-properties](assets/fdm-properties.png)
 
-1. Tryck på **[!UICONTROL Spara och stäng]** för att spara uppdateringarna.
+1. Tryck **[!UICONTROL Save & Close]** för att spara uppdateringarna.
 
 >[!NOTE]
 >
