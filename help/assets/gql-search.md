@@ -1,16 +1,19 @@
 ---
 title: Fulltextsökning i GQL
-description: Utforska fulltextsökningsfunktionen i AEM Assets. Använd det för att söka efter resurser baserat på specifika metadata, som titel, beskrivning och författarnamn.
+description: Utforska fulltextsökningsfunktionen i GQL i AEM Assets. Använd det för att söka efter resurser baserat på specifika metadata, som titel, beskrivning och författarnamn.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: adf44677a0ac833a131aad8187529b094aaca9ef
+workflow-type: tm+mt
+source-wordcount: '836'
+ht-degree: 0%
 
 ---
 
 
 # Fulltextsökning i GQL {#gql-full-text-search}
 
-Utforska fulltextsökningsfunktionen i AEM Assets. Använd det för att söka efter resurser baserat på specifika metadata, som titel, beskrivning och författarnamn.
+Utforska fulltextsökningsfunktionen i GQL i AEM Assets. Använd det för att söka efter resurser baserat på specifika metadata, som titel, beskrivning och författarnamn.
 
 Med fulltextsökningsfunktionen i GQL kan du söka efter resurser baserat på specifika metadata, som titel, beskrivning, författare och så vidare.
 
@@ -20,13 +23,13 @@ Om du till exempel vill söka efter resurser som har titeln &quot;Mål&quot; utf
 
 ## Söka efter resurser {#searching-assets}
 
-1. I verktygsfältet i Assets-användargränssnittet klickar eller trycker du på **[!UICONTROL sökikonen]** för att visa rutan Omnissearch.
+1. I verktygsfältet i användargränssnittet för Resurser klickar eller trycker du på **[!UICONTROL Search]** -ikonen för att visa rutan Sök.
 
    ![](assets/do-not-localize/chlimage_1.png)
 
 1. Tryck på Retur med markören i rutan Sök.
-1. Klicka på eller tryck på ikonen GlobalNav för att visa panelen **[!UICONTROL Filter]** .
-1. Ange värdet &quot;Target&quot; i rutan Omni Search. Om du vill begränsa sökningen till en viss mapp klickar eller trycker du på bläddringsikonen på panelen Filter och väljer mappen. I det här fallet söks matchningen endast efter i mappen och i undermapparna under den.
+1. Klicka på eller tryck på ikonen GlobalNav för att visa **[!UICONTROL Filters]** panelen.
+1. Ange värdet &quot;Target&quot; i rutan Omni Search. Om du vill begränsa sökningen till en viss mapp klickar eller trycker du på ikonen Bläddra i panelen Filter och väljer mappen. I det här fallet söks matchningen endast efter i mappen och i undermapparna under den.
 
    >[!NOTE]
    >
@@ -34,7 +37,7 @@ Om du till exempel vill söka efter resurser som har titeln &quot;Mål&quot; utf
 
    ![gql_search](assets/gql_search.png)
 
-1. Press **[!UICONTROL Enter]**. I användargränssnittet för AEM Resurser visas endast de resurser vars namn exakt matchar&quot;Mål&quot;.
+1. Tryck **[!UICONTROL Enter]**. AEM Assets användargränssnitt visar endast de resurser vars namn exakt matchar&quot;Target&quot;.
 
 Med fulltextsökningsfunktionen i GQL kan du söka efter resurser baserat på följande:
 
@@ -50,27 +53,27 @@ Med fulltextsökningsfunktionen i GQL kan du söka efter resurser baserat på f�
 
 | Egenskap | Sökformat (fasetvärde) |
 |---|---|
-| [!UICONTROL Titel] | title:John |
-| [!UICONTROL Originalformat] | skapare:John |
-| [!UICONTROL Medarbetare] | medarbetare:John |
-| [!UICONTROL Plats] | plats:Indien |
-| [!UICONTROL Beskrivning] | description:&quot;Sample Image&quot; |
-| [!UICONTROL Skapare] | creator:&quot;Adobe Photoshop 7.0&quot; |
-| [!UICONTROL Copyright-ägare] | copyrightowner:&quot;Adobe Systems&quot; |
-| [!UICONTROL Medarbetare] | medarbetare:John |
-| [!UICONTROL Användningsvillkor] | usageterms:&quot;CopyRights Reserved&quot; |
-| [!UICONTROL Skapad] | skapat:YYY-MM-DDTHH:MM:SS.000+05:30..YYY-MM-DDTHH:MM:SS.000+05:30 |
-| [!UICONTROL Utgångsdatum] | förfaller:ÅÅÅ-MM-DDTHH:MM:SS.000+05:30..YYY-MM-DDTHH:MM:SS.000+05:30 |
-| [!UICONTROL I tid] | ontime:YYY-MM-DDTHH:MM:SS.000+05:30.YYY-MM-DDTHH:MM:SS.000+05:30 |
-| [!UICONTROL Fråntid] | offtime:YYY-MM-DDTHH:MM:SS.000+05:30..YYY-MM-DDTHH:MM:SS.000+05:30 |
-| [!UICONTROL Tidsintervall] (förfaller dateontime, offtime) | faktafält: nedsänkt..upperbound |
-| [!UICONTROL Bana] | /content/dam/&lt;mappnamn> |
-| [!UICONTROL PDF-titel] | pdftitle:&quot;Adobe Document&quot; |
-| [!UICONTROL Ämne] | ämne:&quot;Utbildning&quot; |
-| [!UICONTROL Taggar] | taggar:&quot;Plats och resa&quot; |
-| [!UICONTROL Typ] | type:&quot;image\png&quot; |
-| [!UICONTROL Bildens bredd] | width:lowerbound..upperbound |
-| [!UICONTROL Bildens höjd] | height:lowerbound..upperbound |
+| [!UICONTROL Title] | title:John |
+| [!UICONTROL Creator] | skapare:John |
+| [!UICONTROL Contributor] | medarbetare:John |
+| [!UICONTROL Location] | plats:Indien |
+| [!UICONTROL Description] | description:&quot;Sample Image&quot; |
+| [!UICONTROL Creator tool] | creatortool:&quot;Adobe Photoshop 7.0&quot; |
+| [!UICONTROL Copyright Owner] | copyrightowner:&quot;Adobe Systems&quot; |
+| [!UICONTROL Contributor] | medarbetare:John |
+| [!UICONTROL Usage Terms] | usageterms:&quot;CopyRights Reserved&quot; |
+| [!UICONTROL Created] | skapat:YYY-MM-DDTHH:MM:SS.000+05:30..YYY-MM-DDTHH:MM:SS.000+05:30 |
+| [!UICONTROL Expires Date] | förfaller:ÅÅÅ-MM-DDTHH:MM:SS.000+05:30..YYY-MM-DDTHH:MM:SS.000+05:30 |
+| [!UICONTROL On time] | ontime:YYY-MM-DDTHH:MM:SS.000+05:30.YYY-MM-DDTHH:MM:SS.000+05:30 |
+| [!UICONTROL Off time] | offtime:YYY-MM-DDTHH:MM:SS.000+05:30..YYY-MM-DDTHH:MM:SS.000+05:30 |
+| [!UICONTROL Range of time] (förfaller dateontime, offtime) | faktafält: nedsänkt..upperbound |
+| [!UICONTROL Path] | /content/dam/&lt;mappnamn> |
+| [!UICONTROL PDF Title] | pdftitle:&quot;Adobe-dokument&quot; |
+| [!UICONTROL Subject] | ämne:&quot;Utbildning&quot; |
+| [!UICONTROL Tags] | taggar:&quot;Plats och resa&quot; |
+| [!UICONTROL Type] | type:&quot;image\png&quot; |
+| [!UICONTROL Width of image] | width:lowerbound..upperbound |
+| [!UICONTROL Height of image] | height:lowerbound..upperbound |
 | [!UICONTROL Person] | person:John |
 
 Här är några exempel på sökformat för komplexa frågor:
@@ -99,7 +102,7 @@ title:&quot;Reynolds&quot;
 
 title:&quot;Meeting&quot;;
 
-* Så här visar du resurser som innehåller en viss sträng och har ett specifikt egenskapsvärde (till exempel: sök efter Adobe-sträng i resurser med titel=John Doe)
+* Så här visar du resurser som innehåller en viss sträng och har ett specifikt egenskapsvärde (till exempel: sök efter strängen Adobe i resurser med rubriken=John Doe)
 
 &amp;ast;Adobe&amp;ast; title:&quot;John Doe &quot;OR title:&quot;John Doe&quot; &amp;ast;Adobe&amp;ast;
 
@@ -121,13 +124,13 @@ Fulltextsökning stöder även operatorer som -, ^ och så vidare. Om du vill s�
 Du kan förbättra nyckelordens relevans för vissa resurser för att öka sökningen baserat på nyckelorden. Det innebär att de bilder som du befordrar särskilda nyckelord för visas högst upp i sökresultatet när du söker baserat på dessa nyckelord.
 
 1. Öppna egenskapssidan för resursen som du vill befordra ett nyckelord för i resursgränssnittet.
-1. Växla till fliken **[!UICONTROL Avancerat]** och klicka/tryck på **[!UICONTROL Lägg till]** under **[!UICONTROL Upphöjd för att söka efter nyckelord]**.
+1. Växla till **[!UICONTROL Advanced]** fliken och klicka/tryck **[!UICONTROL Add]** under **[!UICONTROL Elevate for search keywords]**.
 
    ![elevate_for_search](assets/elevate_for_search.png)
 
-1. I rutan **[!UICONTROL Sök efter]** ökning anger du ett nyckelord som du vill öka sökningen efter bilden för och klickar/trycker sedan på **[!UICONTROL Lägg till]**. Ange vid behov flera nyckelord på samma sätt.
+1. I **[!UICONTROL Search Promote]** rutan anger du ett nyckelord som du vill öka sökningen efter bilden för och klickar/trycker sedan på **[!UICONTROL Add]**. Ange vid behov flera nyckelord på samma sätt.
 
    ![add_search_word](assets/add_search_word.png)
 
-1. Klicka/tryck på **[!UICONTROL Spara och stäng]**.
+1. Klicka/tryck på **[!UICONTROL Save & Close]**.
 1. Sök efter nyckelordet med rutan Sök. Den resurs som du befordrade nyckelordet för visas bland de översta sökresultaten.
