@@ -10,19 +10,22 @@ topic-tags: Configuration
 discoiquuid: 2c8cea3c-8d8b-41d4-8ef9-a0ada8f86be6
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '306'
+ht-degree: 0%
 
 ---
 
 
 # Konfigurera synkroniseringsplaneraren {#configuring-the-synchronization-scheduler}
 
-Som standard körs synkroniseringsschemaläggaren efter var tredje minut för att synkronisera alla resurser som ändrats och uppdaterats i databasen via LiveCycle Workbench 11. Program som innehåller formulär och resurser visas i AEM Forms-användargränssnittet när synkroniseringsprocessen är slutförd.
+Som standard körs synkroniseringsschemaläggaren efter var tredje minut för att synkronisera alla resurser som ändrats och uppdaterats i databasen via LiveCycle Workbench 11. Program som innehåller formulär och resurser visas i AEM Forms användargränssnitt när synkroniseringsprocessen är klar.
 
 ## Ändra intervall för synkroniseringsschemaläggaren {#change-interval-of-the-synchronization-scheduler}
 
 Utför följande steg för att ändra intervallet för synkroniseringsplaneraren:
 
-1. Logga in på AEM Configuration Manager. URL:en för Configuration Manager är `https://[Server]:[Port]/lc/system/console/configMgr`
+1. Logga in AEM Configuration Manager. URL:en för Configuration Manager är `https://[Server]:[Port]/lc/system/console/configMgr`
 
 1. Leta upp och öppna **FormsManagerConfiguration** -paketet.
 
@@ -38,13 +41,13 @@ Du kan använda alternativet **Synkronisera resurser från databas** om du vill 
 
    ![AEM Forms användargränssnitt](assets/aem_forms_ui.png)
 
-   **** Bild: Användargränssnittet *AEM Forms*
+   **Bild:** *AEM Forms användargränssnitt*
 
 1. Klicka på ![ikonen aem6forms_sync](assets/aem6forms_sync.png) i verktygsfältet. Om du inte har några resurser på den senast konfigurerade sökvägen visas dialogrutan enligt nedan. Klicka på **Start** för att starta synkroniseringen.
 
    ![Synkroniseringsdialogruta](assets/migrate-and-syncronize.png)
 
-   **** Bild: Dialogrutan *Synkronisering*
+   **Bild:** *Synkroniseringsdialogruta*
 
 ## Felsökning av synkroniseringsfel {#troubleshooting-synchronization-error}
 
@@ -56,5 +59,5 @@ Lös konflikten genom att byta namn på programmet och manuellt synkronisera res
 
 ![Konflikter i dialogrutan för resurssynkronisering](assets/sync-conflict.png)
 
-**** Bild: Konflikter *i dialogrutan för resurssynkronisering*
+**Bild:** *Konflikter i dialogrutan för resurssynkronisering*
 
