@@ -1,14 +1,17 @@
 ---
 title: Genomgång av referenswebbplats för rekrytering av medarbetare
 seo-title: Rekrytering av personal
-description: AEM Forms referenswebbplats visar hur organisationer kan använda AEM Forms-funktioner för att implementera arbetsflöden för rekrytering av medarbetare.
-seo-description: AEM Forms referenswebbplats visar hur organisationer kan använda AEM Forms-funktioner för att implementera arbetsflöden för rekrytering av medarbetare.
+description: AEM Forms referenswebbplats visar hur man kan använda AEM Forms funktioner för att genomföra rekryteringsarbetsflöden.
+seo-description: AEM Forms referenswebbplats visar hur man kan använda AEM Forms funktioner för att genomföra rekryteringsarbetsflöden.
 uuid: 27e456ba-3c08-4c43-ad54-1ba0070995ad
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 5f04b13e-ea40-4c86-9168-e020c52435a2
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1449'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 ## Förutsättning {#prerequisite}
 
-Konfigurera referenswebbplatserna enligt beskrivningen i [Konfigurera och konfigurera AEM Forms-referenswebbplatser](/help/forms/using/setup-reference-sites.md).
+Konfigurera referenswebbplatserna enligt beskrivningen i [Konfigurera och konfigurera AEM Forms referenswebbplatser](/help/forms/using/setup-reference-sites.md).
 
 ## Översikt {#overview}
 
@@ -84,17 +87,17 @@ Sarah klickar på Apply på ett jobbinlägg. Jobbansökningsformuläret öppnas.
 
 ### Så här fungerar det {#how-it-works}
 
-Startsidan för We.Finance och karriärsidan är AEM Sites-sidor. På karriärsidan bäddas ett anpassat formulär in, som använder en upprepningsbar panel för att hämta jobböppningar med hjälp av en tjänst och visa dem på sidan. Du kan granska det adaptiva formuläret på `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/employee/recruitment/jobs.html`.
+Startsidan för We.Finance och karriärsidan är AEM Sites sidor. På karriärsidan bäddas ett anpassat formulär in, som använder en upprepningsbar panel för att hämta jobböppningar med hjälp av en tjänst och visa dem på sidan. Du kan granska det adaptiva formuläret på `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/employee/recruitment/jobs.html`.
 
 ### Se det själv {#see-it-yourself}
 
-Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en.html` och klicka på **[!UICONTROL Jobb]**. Klicka på **[!UICONTROL Sök]** för att fylla i jobblistan och klicka sedan på **[!UICONTROL Tillämpa]** för ett jobb. Fyll i uppgifterna i formuläret och skicka in ansökan.
+Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en.html` och klicka **[!UICONTROL Career]**. Klicka **[!UICONTROL Search]** för att fylla i jobblistan och klicka sedan **[!UICONTROL Apply]** för ett jobb. Fyll i uppgifterna i formuläret och skicka in ansökan.
 
 Se till att du anger ett giltigt e-post-ID i programmet eftersom all kommunikation genom genomgången skickas till det angivna e-post-ID:t.
 
 ## John Jacobs korthåller Sarah Rose profil för rekryteringschefens screening {#john-jacobs-shortlists-sarah-rose-s-profile-for-the-hiring-manager-s-screening}
 
-Organisationen får den jobbansökan som har skickats in av Sarah. John Jacobs, en rekryterare, får i uppdrag att granska Sarah profil. Han granskar uppgiften i sin AEM Inbox, hittar profilen som matchar jobbbehovet och klickar på Kortlista. Sarah&#39;s profil vidarebefordras till Gloria Rios, anställningschef, för godkännande.
+Organisationen får den jobbansökan som har skickats in av Sarah. John Jacobs, en rekryterare, får i uppdrag att granska Sarah profil. Han granskar uppgiften i sin AEM Inkorg, hittar profilen som matchar jobbbehovet och klickar på Kortlista. Sarah&#39;s profil vidarebefordras till Gloria Rios, anställningschef, för godkännande.
 
 ![jjacobs-inbox-1](assets/jjacobs-inbox-1.png)
 
@@ -126,7 +129,7 @@ Gloria godkänner Sarah Rose för en intervju
 
 **Så här fungerar det**
 
-När Gloria godkänner kandidaten till en intervju skapar arbetsflödet en uppgift i AEM Inbox på John Doe, som är rekryterare för We.Finance.
+När Gloria godkänner kandidaten till en intervju skapar arbetsflödet en uppgift i AEM Inbox för John Doe, som är rekryterare för We.Finance.
 
 ### Se det själv {#see-it-yourself-2}
 
@@ -140,7 +143,7 @@ John Doe får i uppdrag att schemalägga en intervju i sin inkorg. John Doe väl
 
 ![johnjacobsaeminbox](assets/johnjacobsaeminbox.png)
 
-John Does AEM-inkorg
+John Does AEM inkorg
 
 ![johndoescheduleintervju](assets/johndoescheduleinterview.png)
 
@@ -198,7 +201,7 @@ John Doe väljer begäran om kandidatgranskning och öppnar den. John Doe hittar
 
 ![johndoeadditionainformationinkorg](assets/johndoeadditionainformationinbox.png)
 
-John Does AEM Inbox
+John Doe&#39;s AEM Inbox
 
 ![johndoeadditionalinformationreview-copy](assets/johndoeadditionalinformationreview-copy.png)
 
@@ -210,7 +213,7 @@ John Jacobs ser begäran om bakgrundskontroll i sin inkorg. John Jacobs öppnar 
 
 ![johnjacobsbackgroundCheckInbox](assets/johnjacobsbackgroundcheckinbox.png)
 
-John Jacobs&#39;s AEM inbox
+John Jacobs AEM inkorg
 
 ![johnjacobsbackground checkgoahead](assets/johnjacobsbackgroundcheckgoahead.png)
 
@@ -218,11 +221,11 @@ När John Jacobs utfört bakgrundskontrollen klickar han på Gå framåt
 
 ## John Doe skickar ut brevet till Sarah Rose {#john-doe-sends-out-the-joining-letter-to-sarah-rose}
 
-John Doe får en förfrågan i sin AEM-inkorg om att skicka det kopplade brevet. John öppnar förfrågan och ser detaljerna. John Doe bifogar PDF-dokumentet med det kopplade brevet och klickar sedan på Bifoga och skicka det kopplade brevet.
+John Doe får en begäran i sin AEM inkorg om att skicka det kopplade brevet. John öppnar förfrågan och ser detaljerna. John Doe bifogar PDF-dokumentet med det kopplade brevet och klickar sedan på Bifoga och skicka det kopplade brevet.
 
 ![johndoejoiningletterinbox](assets/johndoejoiningletterinbox.png)
 
-John Does AEM-inkorg
+John Does AEM inkorg
 
 ![johndoejoiningletterattachandsend](assets/johndoejoiningletterattachandsend.png)
 
