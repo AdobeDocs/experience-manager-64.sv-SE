@@ -79,6 +79,7 @@ När en version har skapats kan du vid behov återgå till den versionen.
 >* Återställa den första versionen. dvs. 1.0.
 >* Skapa nya versioner igen.
 >* De genererade etiketterna och nodnamnen blir nu 1.0.0, 1.0.1, 1.0.2 osv.
+
 >
 
 
