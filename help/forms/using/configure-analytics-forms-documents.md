@@ -10,23 +10,26 @@ topic-tags: integrations
 discoiquuid: 6301e0ef-3faa-4e6f-932d-37b049577cec
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '1542'
+ht-degree: 0%
 
 ---
 
 
 # Konfigurera analyser och rapporter {#configuring-analytics-and-reports}
 
-AEM Forms kan integreras med Adobe Analytics så att ni kan hämta in och spåra prestandamått för era publicerade formulär och dokument. Syftet med att analysera dessa värden är att fatta välgrundade beslut baserat på uppgifter om de ändringar som krävs för att göra formulär eller dokument mer användbara.
+AEM Forms kan integreras med Adobe Analytics så att ni kan samla in och spåra prestandamått för era publicerade formulär och dokument. Syftet med att analysera dessa värden är att fatta välgrundade beslut baserat på uppgifter om de ändringar som krävs för att göra formulär eller dokument mer användbara.
 
 >[!NOTE]
 >
->Analysfunktionen i AEM Forms är tillgänglig som en del av AEM Forms-tilläggspaketet. Mer information om hur du installerar tilläggspaketet finns i [Installera och konfigurera AEM-formulär](/help/forms/using/installing-configuring-aem-forms-osgi.md).
+>Analysfunktionen i AEM Forms ingår i AEM Forms tilläggspaket. Mer information om hur du installerar tilläggspaketet finns i [Installera och konfigurera AEM Forms](/help/forms/using/installing-configuring-aem-forms-osgi.md).
 >
->Förutom tilläggspaketet behöver du ett Adobe Analytics-konto och administratörsbehörighet för AEM-instansen. Information om lösningen finns i [Adobe Analytics](https://www.adobe.com/solutions/digital-analytics.html).
+>Utöver tilläggspaketet behöver du ett Adobe Analytics-konto och administratörsbehörighet för AEM. Information om lösningen finns i [Adobe Analytics](https://www.adobe.com/solutions/digital-analytics.html).
 
 ## Översikt {#overview}
 
-Du kan använda Adobe Analytics för att identifiera interaktionsmönster och problem som användare ställs inför när de använder adaptiva formulär, HTML5-formulär och interaktiv kommunikation. Adobe analytics håller reda på och lagrar information om följande parametrar:
+Du kan använda Adobe Analytics för att upptäcka interaktionsmönster och problem som användare ställs inför när de använder adaptiva formulär, HTML5-formulär och interaktiv kommunikation. Med Adobe kan man spåra och lagra information om följande parametrar:
 
 * **Genomsnittlig fyllningstid**: Genomsnittlig tid för att fylla i formuläret.
 * **Återgivningar**: Antal gånger ett formulär öppnas.
@@ -62,10 +65,10 @@ Utför följande steg för att skapa en rapportserie.
 
 1. Välj en **tidszon** i listrutan. Alla data som ingår i den här rapportsviten registreras baserat på den definierade tidszonen.
 
-1. Lämna fälten **Bas-URL** och **Standardsida** tomma. Dessa två värden används bara från Adobe Marketing Cloud-gränssnittet för att länka till din webbplats.
+1. Lämna fälten **Bas-URL** och **Standardsida** tomma. Dessa två värden används bara från Adobe Marketing Cloud gränssnitt för att länka till din webbplats.
 1. Låt **Go Live Date** vara inställt på idag. Startdatumet avgör vilken dag rapportsviten aktiveras.
 
-1. I fältet **Uppskattad sidvisning per dag** skriver du 100. Använd det här fältet för att uppskatta antalet sidvisningar som du förväntar dig för din webbplats per dag. Tack vare denna uppskattning kan Adobe installera lämplig mängd maskinvara för att bearbeta de data som ska samlas in.
+1. I fältet **Uppskattad sidvisning per dag** skriver du 100. Använd det här fältet för att uppskatta antalet sidvisningar som du förväntar dig för din webbplats per dag. Denna uppskattning gör att Adobe kan installera lämplig mängd maskinvara för att bearbeta de data som ska samlas in.
 
 1. Välj en **basvaluta** i listrutan. Alla valutadata som ingår i den här rapportsviten konverteras och lagras i det här valutaformatet.
 
@@ -74,7 +77,7 @@ Utför följande steg för att skapa en rapportserie.
 1. Välj den nya rapportsviten. Navigera till **Redigera inställningar** > **Allmänt** > **Allmänna kontoinställningar**.
 
    ![Allmänna kontoinställningar](assets/geographic_settings.png)
-   **** Bild: *Allmänna kontoinställningar*
+   **Bild:** *Allmänna kontoinställningar*
 
 1. Aktivera **Geografisk rapportering** på skärmen för allmänna kontoinställningar och klicka på **Spara**.
 1. Navigera till **Redigera inställningar** > **Trafik** > **Trafikvariabler**.
@@ -106,17 +109,17 @@ Utför följande steg för att skapa en rapportserie.
 
    >[!NOTE]
    >
-   >Ett händelsenummer och ett prop-nummer som används för att konfigurera AEM Forms-analys måste skilja sig från det händelsenummer och det prop-nummer som används i konfigurationen för [AEM-analys](/help/sites-administering/adobeanalytics.md) .
+   >Ett händelsenummer och ett prop-nummer som används för att konfigurera AEM Forms-analys måste skilja sig från det händelsenummer och det prop-nummer som används i [AEM](/help/sites-administering/adobeanalytics.md) analyskonfiguration.
 
 1. Logga ut från Adobe Marketing Cloud-kontot.
 
-## Skapar molntjänstkonfiguration {#creating-cloud-service-configuration}
+## Skapar konfiguration av Cloud Service {#creating-cloud-service-configuration}
 
-Konfigurationen av molntjänsten är information om ditt Adobe Analytics-konto. Tack vare konfigurationen kan Adobe Experience Manager (AEM) ansluta till Adobe Analytics. Skapa en separat konfiguration för varje Analytics-konto som du använder.
+Konfigurationen av Cloud Servicen är information om ditt Adobe Analytics-konto. Med konfigurationen kan Adobe Experience Manager (AEM) ansluta till Adobe Analytics. Skapa en separat konfiguration för varje Analytics-konto som du använder.
 
-1. Logga in på din AEM-författarinstans som administratör.
-1. I det övre vänstra hörnet klickar du på **Adobe Experience Manager** > **Tools** ![tools](assets/tools.png)> **Deployment** > **Cloud Services**.
-1. Hitta **Adobe Analytics** -ikonen. Klicka på **Visa konfigurationer** och fortsätt sedan att klicka **[+]** för att lägga till en ny konfiguration.
+1. Logga in på AEM författarinstans som administratör.
+1. Klicka på **Adobe Experience Manager** > **Verktyg** > ![Verktyg](assets/tools.png)> **Distribution** > **Cloud Services** i det övre vänstra hörnet.
+1. Leta upp **Adobe Analytics** -ikonen. Klicka på **Visa konfigurationer** och fortsätt sedan att klicka **[+]** för att lägga till en ny konfiguration.
 
    Om du är förstagångsanvändare klickar du på **Konfigurera nu**.
 
@@ -124,7 +127,7 @@ Konfigurationen av molntjänsten är information om ditt Adobe Analytics-konto. 
 
 1. När panelen Redigera öppnas på konfigurationssidan fyller du i fälten:
 
-   * **Företag**: Ditt företags namn visas i Adobe Analytics.
+   * **Företag**: Ditt företags namn visas på Adobe Analytics.
 
    * **Användarnamn**: Namnet som används för att logga in på Adobe Analytics.
 
@@ -134,18 +137,18 @@ Konfigurationen av molntjänsten är information om ditt Adobe Analytics-konto. 
 
 1. Klicka på **Anslut till analys**. En dialogruta visas med ett meddelande om att anslutningen lyckades. Click **OK**.
 
-## Skapar ramverk för molntjänster {#creating-cloud-service-framework}
+## Skapar Cloud Service Framework {#creating-cloud-service-framework}
 
-Ett Adobe Analytics-ramverk är en uppsättning mappningar mellan Adobe Analytics-variabler och AEM-variabler. Använd ett ramverk för att konfigurera hur formulären fyller i data till Adobe Analytics-rapporter. Ramverk är kopplade till en Adobe Analytics-konfiguration. Du kan skapa flera ramverk för varje konfiguration.
+Ett Adobe Analytics-ramverk är en uppsättning mappningar mellan Adobe Analytics-variabler och AEM. Använd ett ramverk för att konfigurera hur formulären fyller i data i Adobe Analytics-rapporter. Ramverk är kopplade till en Adobe Analytics-konfiguration. Du kan skapa flera ramverk för varje konfiguration.
 
 1. På AEM Cloud Services-konsolen klickar du på **Visa konfigurationer** under Adobe Analytics.
 
 1. Klicka på **[+]** -länken bredvid Analytics-konfigurationen.
 
    ![Adobe Analytics-konfiguration](assets/adobe-analytics-cloud-services.png)
-   **** Bild: Konfiguration av *Adobe Analytics*
+   **Bild:** *Adobe Analytics-konfiguration*
 
-1. Ange en **titel** och ett **namn** för ramverket, välj **Adobe Analytics** Framework och klicka på **Skapa**. Ramverket öppnas för redigering.
+1. Ange en **titel** och ett **namn** för ramverket, välj **Adobe Analytics** Framework och klicka sedan på **Skapa**. Ramverket öppnas för redigering.
 
 1. Klicka på **Lägg till objekt** i delen Rapportsviter och använd listrutan för att välja det Report Suite-ID (till exempel JEsquire) som ramverket ska interagera med.
 
@@ -156,24 +159,25 @@ Ett Adobe Analytics-ramverk är en uppsättning mappningar mellan Adobe Analytic
 1. Dra en **Form Analytics-komponent** från den **andra** kategorin från SideSpark till ramverket.
 1. Om du vill mappa Analytics-variabler med variabler som är definierade i komponenten drar du en variabel från AEM Content Finder till ett fält i spårningskomponenten.
 
-   ![Mappa AEM-variabler med Adobe Analytics-variabler](assets/analytics.png)
+   ![Mappa AEM variabler med Adobe Analytics-variabler](assets/analytics.png)
 
 1. Aktivera ramverket med hjälp av **sidfliken** i sidosparken och klicka på **Aktivera ramverk**.
 
-## Konfigurationstjänsten för AEM Forms Analytics {#configuring-aem-forms-analytics-configuration-service}
+## Konfigurationstjänsten för AEM Forms Analytics konfigureras {#configuring-aem-forms-analytics-configuration-service}
 
-1. Öppna konfigurationshanteraren för AEM Web Console på https://&lt;*server*>:&lt;*port*>/system/console/configMgr.
-1. Hitta och öppna konfigurationen för AEM Forms Analytics
+1. Öppna konfigurationshanteraren AEM Web Console på https://&lt;*server*>:&lt;*port*>/system/console/configMgr.
+1. Leta rätt på och öppna AEM Forms Analytics-konfigurationen
 
    ![Konfigurationstjänst för AEM Forms Analytics](assets/analytics_configuration.png)
-   **** Bild: Konfigurationstjänst för *AEM Forms Analytics*
+   **Bild:** *Konfigurationstjänst för AEM Forms Analytics*
 
 1. Ange lämpliga värden för följande fält och klicka på **Spara**.
 
    * **SiteCatalyst Framework**: Välj ramverket/konfigurationen som du definierade i avsnittet Konfigurera ett ramverk för spårning.
    * **Baslinje** för spårning av fälttid: Ange efter hur lång tid (i sekunder) som fältbesöket ska spåras. Standardvärdet är 0. När värdet är större än 0 (noll) skickas två separata spårningshändelser till Adobe Analytics-servern. Den första händelsen instruerar analysservern att sluta spåra det avslutade fältet. Den andra händelsen skickas efter att den angivna längden har gått. Den andra händelsen instruerar analysservern att börja spåra det besökta fältet. Genom att använda två olika händelser kan du mäta tiden som läggs på ett fält på ett korrekt sätt. När värdet är 0 (noll) skickas en enda spårningshändelse till Adobe Analytics-servern.
    * **Synkkron** för analysrapport: Ange cron-uttryck för att hämta rapporter från Adobe Analytics. Standardvärdet är 0 0 2 ?.
-   * **** Tidsgräns för hämtning av rapport: Ange hur länge (i sekunder) som servern ska svara på analysrapporten. Standardtiden är 120 sekunder.
+   * **Tidsgräns för hämtning av rapport:** Ange hur länge (i sekunder) som servern ska svara på analysrapporten. Standardtiden är 120 sekunder.
+
    >[!NOTE]
    >
    >Det kan ta upp till 10 sekunder till att tidsgränsen för hämtning av rapporter överskrids och det angivna antalet sekunder.
@@ -184,13 +188,13 @@ Nu kan ni aktivera analyser för formulär och generera en analysrapport.
 
 ## Aktivera analys för ett formulär eller dokument {#enabling-analytics-for-a-form-or-document}
 
-1. Logga in på AEM-portalen på `https://[hostname]:[port]`.
-1. Klicka på **Formulär > Formulär och dokument**, markera ett formulär eller dokument och klicka på **Aktivera analys**. Analysen är aktiverad.
+1. Logga in på AEM portal på `https://[hostname]:[port]`.
+1. Klicka på **Forms > Forms &amp; Documents**, markera ett formulär eller dokument och klicka på **Aktivera analys**. Analysen är aktiverad.
 
    ![Aktivera analys för ett formulär eller dokument](assets/enable-analytics-1.png)
-   **** Bild: Aktivera *analys för ett formulär*
+   **Bild:** *Aktivera analys för ett formulär*
 
-   ******S. Aktivera knappen Analytics (Analyser)** B. Markerat formulär
+   **S.** Aktivera knappen Analytics (Analyser) **B.** Markerat formulär
 
-   Mer information om hur du visar analysrapporter för formulär finns i [Visa och förstå analysrapporter för AEM Forms](/help/forms/using/view-understand-aem-forms-analytics-reports.md)
+   Mer information om hur du visar analysrapporter för formulär finns i [Visa och förstå AEM Forms analysrapporter](/help/forms/using/view-understand-aem-forms-analytics-reports.md)
 
