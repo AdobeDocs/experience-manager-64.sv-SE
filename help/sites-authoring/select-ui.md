@@ -1,8 +1,8 @@
 ---
 title: Välja användargränssnitt
 seo-title: Välja användargränssnitt
-description: Konfigurera vilket gränssnitt du ska använda i AEM
-seo-description: Konfigurera vilket gränssnitt du ska använda i AEM
+description: Konfigurera vilket gränssnitt du ska använda för AEM
+seo-description: Konfigurera vilket gränssnitt du ska använda för AEM
 uuid: af956219-178e-477b-a0cd-dd2341ed2ff0
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 9cadec1b-f435-4fd8-b4bc-1a23a0cf11f3
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '920'
+ht-degree: 1%
 
 ---
 
@@ -29,14 +32,16 @@ Det finns två grafiska användargränssnitt för att uppnå detta. De är tillg
 
 1. Pekaktiverat användargränssnitt
 
-   * Det här är det moderna standardgränssnittet för AEM.
+   * Det här är det moderna AEM.
    * Den är främst grå, med ett rent, platt gränssnitt.
    * Utseendet och känslan är densamma på alla enheter, och de är avsedda att användas både på pekskärmar och på stationära datorer, även om [visning och val av resurser](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) skiljer sig något (knapp eller klick).
 
       * Skrivbord:
+
    ![screen_shot_2018-03-23at115248](assets/screen_shot_2018-03-23at115248.png)
 
    * Tablet-enheter (eller stationära datorer med en bredd på mindre än 1 024 pixlar):
+
    ![screen_shot_2018-03-23at115505](assets/screen_shot_2018-03-23at115505.png)
 
 1. Klassiskt användargränssnitt
@@ -45,6 +50,7 @@ Det finns två grafiska användargränssnitt för att uppnå detta. De är tillg
    * Den är främst grön.
    * Den har utformats för användning på stationära enheter.
    * Följande dokumentation fokuserar på det moderna användargränssnittet. Information om hur du skapar i det klassiska användargränssnittet finns i [redigeringsdokumentationen för det klassiska användargränssnittet](/help/sites-classic-ui-authoring/classicui.md).
+
    ![chlimage_1-232](assets/chlimage_1-232.png)
 
 ## Byta gränssnitt
@@ -110,13 +116,13 @@ När du använder det beröringskänsliga användargränssnittet kan det vara br
 
 * **Webbadress**
 
-   Det klassiska användargränssnittet kan nås via webbadressen för välkomstskärmen på `welcome.html`. Exempel:
+   Det klassiska användargränssnittet kan nås via webbadressen för välkomstskärmen på `welcome.html`. Till exempel:
 
    `http://localhost:4502/welcome.html`
 
    >[!NOTE]
    >
-   >Det beröringskänsliga användargränssnittet är tillgängligt via `sites.html`. Exempel:
+   >Det beröringskänsliga användargränssnittet är tillgängligt via `sites.html`. Till exempel:
    >
    >
    >`http://localhost:4502/sites.html`
@@ -139,11 +145,11 @@ De inställningar som definieras av en användare eller systemadministratör kan
 
 * När du redigerar sidor:
 
-   * Den klassiska redigeraren måste användas när sidan öppnas med hjälp av `cf#` URL:en. Exempel:
+   * Den klassiska redigeraren måste användas när sidan öppnas med hjälp av `cf#` URL:en. Till exempel:
 
       `http://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
-   * Den pekaktiverade redigeraren måste användas när du använder `/editor.html` URL:en eller en pekenhet. Exempel:
+   * Den pekaktiverade redigeraren måste användas när du använder `/editor.html` URL:en eller en pekenhet. Till exempel:
 
       `http://localhost:4502/editor.html/content/geometrixx/en/products/triangle.html`
 
@@ -167,6 +173,7 @@ De inställningar som definieras av en användare eller systemadministratör kan
 >
 >* Redigera URL:en manuellt - En URL som inte är standard kan resultera i en okänd situation och bristande funktionalitet.
 >* Ha båda redigerarna öppna samtidigt - till exempel i separata fönster.
+
 >
 
 
