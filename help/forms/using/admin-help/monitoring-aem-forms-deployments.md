@@ -1,8 +1,8 @@
 ---
-title: Övervaka användning av AEM-formulär
-seo-title: Övervaka användning av AEM-formulär
-description: Du kan övervaka AEM-formulärdistributioner både på systemnivå och på intern nivå. Läs mer om hur du övervakar AEM-formulärdistributioner i det här dokumentet.
-seo-description: Du kan övervaka AEM-formulärdistributioner både på systemnivå och på intern nivå. Läs mer om hur du övervakar AEM-formulärdistributioner i det här dokumentet.
+title: Övervaka AEM
+seo-title: Övervaka AEM
+description: Du kan övervaka AEM formulärdistributioner både på systemnivå och intern nivå. Läs mer om övervakning AEM formulärdistributioner i det här dokumentet.
+seo-description: Du kan övervaka AEM formulärdistributioner både på systemnivå och intern nivå. Läs mer om övervakning AEM formulärdistributioner i det här dokumentet.
 uuid: 032b7a93-3069-4ad5-a8c6-4c160f290669
 contentOwner: admin
 content-type: reference
@@ -11,22 +11,25 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: b3e7bca0-5aaf-4f28-bddb-fd7e8ed72ee8
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '643'
+ht-degree: 0%
 
 ---
 
 
-# Övervaka användning av AEM-formulär {#monitoring-aem-forms-deployments}
+# Övervaka AEM {#monitoring-aem-forms-deployments}
 
-Du kan övervaka AEM-formulärdistributioner både på systemnivå och på intern nivå. Du kan använda specialhanteringsverktyg som HP OpenView, IBM Tivoli och CA UniCenter samt en JMX-bildskärm från tredje part som kallas *JConsole* för att specifikt övervaka Java-aktivitet. Implementeringen av en övervakningsstrategi förbättrar tillgängligheten, tillförlitligheten och prestandan för era AEM-blanketter.
+Du kan övervaka AEM formulärdistributioner både på systemnivå och intern nivå. Du kan använda specialhanteringsverktyg som HP OpenView, IBM Tivoli och CA UniCenter samt en JMX-bildskärm från tredje part som kallas *JConsole* för att specifikt övervaka Java-aktivitet. Implementeringen av en övervakningsstrategi förbättrar tillgängligheten, tillförlitligheten och prestandan för era AEM formulär.
 
-Mer information om hur du övervakar AEM-formulärdistributioner finns i [En teknisk guide för övervakning av AEM-formulärdistributioner](https://www.adobe.com/devnet/livecycle/pdfs/lc_monitoring_wp_ue.pdf).
+Mer information om övervakning AEM formulärdistributioner finns i [En teknisk guide för övervakning AEM formulärdistributioner](https://www.adobe.com/devnet/livecycle/pdfs/lc_monitoring_wp_ue.pdf).
 
 ## Övervaka med MBeans {#monitoring-using-mbeans}
 
-AEM-formulär innehåller två registrerade MBeans som tillhandahåller navigering och statistisk information. Detta är de enda MBeans som stöds för integrering och inspektion:
+AEM tillhandahåller två registrerade MBeans som tillhandahåller navigerings- och statistikinformation. Det här är de enda MBeans som stöds för integrering och inspektion:
 
-* **** ServiceStatistic: Denna MBean ger information om tjänstens namn och version.
-* **** OperationStatistic: Denna MBean ger statistik för alla formulärservertjänster. Här kan administratörer få information om en viss tjänst, t.ex. starttid, antal fel osv.
+* **ServiceStatistic:** Denna MBean ger information om tjänstens namn och version.
+* **OperationStatistic:** Denna MBean ger statistik för alla formulärservertjänster. Här kan administratörer få information om en viss tjänst, t.ex. starttid, antal fel osv.
 
 ### ServiceStatisticMbean public interfaces {#servicestatisticmbean-public-interfaces}
 
@@ -72,33 +75,33 @@ Med en JMX-konsol (JConsole) finns statistik från OperationStatistic MBean till
 
 **MBean-träd**
 
-**** Adobe-domännamn: Beroende på programserver. Om programservern inte definierar domänen är adobe.com som standard.
+**Domännamn för Adobe:** Beroende på programserver. Om programservern inte definierar domänen är adobe.com som standard.
 
-**** ServiceType: AdobeService är det namn som används för att lista alla tjänster.
+**ServiceType:** AdobeService är det namn som används för att lista alla tjänster.
 
-**** AdobeServiceName: Tjänstnamn eller tjänst-ID.
+**AdobeServiceName:** Tjänstnamn eller tjänst-ID.
 
-**** Version: Tjänstens version.
+**Version:** Tjänstens version.
 
 **Åtgärdsstatistik**
 
-**** Anropstid: Tidsåtgång för körning av metoden. Detta inkluderar inte den tidpunkt då begäran serialiseras, överförs från klient till server och avserialiseras.
+**Anropstid:** Tidsåtgång för körning av metoden. Detta inkluderar inte den tidpunkt då begäran serialiseras, överförs från klient till server och avserialiseras.
 
-**** Antal anrop: Antalet gånger som tjänsten anropas.
+**Antal anrop:** Antalet gånger som tjänsten anropas.
 
-**** Genomsnittlig anropstid: Genomsnittlig tid för alla anrop som har körts sedan servern startades.
+**Genomsnittlig anropstid:** Genomsnittlig tid för alla anrop som har körts sedan servern startades.
 
-**** Maximal starttid: Varaktigheten för det längsta anropet som har körts sedan servern startades.
+**Maximal starttid:** Varaktigheten för det längsta anropet som har körts sedan servern startades.
 
-**** Minsta anropstid: Varaktigheten för det kortaste anropet som har körts sedan servern startades.
+**Minsta anropstid:** Varaktigheten för det kortaste anropet som har körts sedan servern startades.
 
-**** Antal undantag: Antal anrop som har resulterat i fel.
+**Antal undantag:** Antal anrop som har resulterat i fel.
 
-**** Undantagsmeddelande: Felmeddelandet för det senaste undantaget som inträffade.
+**Undantagsmeddelande:** Felmeddelandet för det senaste undantaget som inträffade.
 
-**** Datum och tid för senaste provtagning: Datum för det senaste anropet.
+**Datum och tid för senaste provtagning:** Datum för det senaste anropet.
 
-**** Tidsenhet: Standardvärdet är millisekunder.
+**Tidsenhet:** Standardvärdet är millisekunder.
 
 För att JMX-övervakning ska kunna aktiveras behöver programservrarna vanligtvis någon konfiguration. Mer information finns i programserverdokumentationen.
 
