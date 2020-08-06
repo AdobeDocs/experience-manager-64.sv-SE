@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 49584fb4-8c3a-4d73-acd6-0879a67f6093
 translation-type: tm+mt
 source-git-commit: 529b8c6556a7179a9169ff8250af6b5dc1251ef3
+workflow-type: tm+mt
+source-wordcount: '705'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ Dela upp ett PDF-dokument med Assembler Service API (webbtjänst):
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `AssemblerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -73,6 +76,7 @@ Dela upp ett PDF-dokument med Assembler Service API (webbtjänst):
    * Ett `BLOB` objekt som representerar det DX-dokument som demonterar PDF-dokumentet
    * Det `MyMapOf_xsd_string_To_xsd_anyType` objekt som innehåller PDF-dokumentet som ska demonteras
    * Ett `AssemblerOptionSpec` objekt som anger körningsalternativ
+
    Metoden returnerar `invokeDDX` ett `AssemblerResult` objekt som innehåller jobbresultaten och eventuella undantag som har inträffat.
 
 1. Spara de upplösta PDF-dokumenten.
@@ -87,4 +91,4 @@ Dela upp ett PDF-dokument med Assembler Service API (webbtjänst):
 
 [Dela upp PDF-dokument programmatiskt](/help/forms/developing/programmatically-disassembling-pdf-documents.md#programmatically-disassembling-pdf-documents)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
