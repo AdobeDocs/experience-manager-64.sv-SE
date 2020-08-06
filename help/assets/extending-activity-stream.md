@@ -4,13 +4,16 @@ description: Beskriver inspelningsfunktionerna i AEM och hur du konfigurerar AEM
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '270'
+ht-degree: 1%
 
 ---
 
 
 # Integrera resurser med aktivitetsström {#integrating-assets-with-activity-stream}
 
-Adobe Experience Manager Assets-användare (AEM) utför många åtgärder, till exempel att skapa, överföra och ta bort resurser. Dessa åtgärder kan spelas in så att du kan ge en historik över vad en användare har gjort. I det här avsnittet beskrivs inspelningsfunktionerna i AEM och hur du konfigurerar AEM för att registrera specifika händelser.
+Adobe Experience Manager (AEM) Assets-användare utför många åtgärder, till exempel att skapa, överföra och ta bort resurser. Dessa åtgärder kan spelas in så att du kan ge en historik över vad en användare har gjort. I det här avsnittet beskrivs inspelningsfunktionerna i AEM och hur du konfigurerar AEM för att spela in specifika händelser.
 
 ## Prestandaöverväganden och standardbeteende {#performance-considerations-and-default-behavior}
 
@@ -38,19 +41,19 @@ Följande händelser kan konfigureras för inspelning:
 
 ## Konfigurera inspelning av AEM Assets-händelser {#configuring-aem-assets-events-recording}
 
-Via [webbkonsolen](/help/sites-deploying/configuring-osgi.md) får du tillgång till AEM Assets Event Recorder-justeringen. Så här konfigurerar du händelseinspelaren för AEM Assets:
+Via [webbkonsolen](/help/sites-deploying/configuring-osgi.md) får du tillgång till AEM Assets Event Recorder-inställningarna. Så här konfigurerar du AEM Assets Event Recorder:
 
-1. Navigera till **[!UICONTROL webbkonsolen]**
+1. Navigate to the **[!UICONTROL Web console]**
 
-1. Klicka på **[!UICONTROL Konfiguration]**.
+1. Klicka på **[!UICONTROL Configuration]**.
 
-1. Dubbelklicka på **[!UICONTROL Day CQ DAM Event Recorder]**.
+1. Dubbelklicka **[!UICONTROL Day CQ DAM Event Recorder]**.
 
-1. Markera **[!UICONTROL Aktiverar den här tjänsten]**.
+1. Kontroll **[!UICONTROL Enables this service]**.
 
-1. Kontrollera vilka **[!UICONTROL händelsetyper]** du vill spela in i användaraktivitetsströmmen.
+1. Kontrollera vilka **[!UICONTROL Event Types]** du vill spela in i användaraktivitetsströmmen.
 
-1. Click **[!UICONTROL Save]**.
+1. Klicka på **[!UICONTROL Save]**.
 
 ## Läsa inspelade händelser {#reading-recorded-events}
 
