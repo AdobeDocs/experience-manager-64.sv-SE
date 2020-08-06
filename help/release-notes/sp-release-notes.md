@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 translation-type: tm+mt
-source-git-commit: 1a6431f19b7eae73150ea3b0bfa00a719e155c41
+source-git-commit: f318a14b3d0e4abf25a73c0f19afdef969658b9c
 workflow-type: tm+mt
 source-wordcount: '21623'
 ht-degree: 0%
@@ -409,7 +409,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.6.0 är:
 * Tolkningsfel vid öppning av ett innehållsfragment som innehåller tecknen USD ($) och inledande klammerparentes ({) efter varandra. Programfix för CQ-4270266
 * VersionPreviewServlet fungerar inte i NullPointerException vid försök att visa en version av ett Experience Fragment i tidslinjen. NPR-30074: Programfix för CQ-4271881
 * Det går inte att låsa innehållsfragment via incheckningsfunktionen. NPR-29923: Programfix för CQ-4258785
-* Signaturverifieringsfel i SAML-autentiseringshanteraren. NPR-30379: Begäran om backport för GRANITE-26567.
+* Signaturverifieringsfel i SAML-autentiseringshanteraren. NPR-30379: Begäran om backport för GRANITE-26567
 
 **Replikering**
 
@@ -1073,7 +1073,7 @@ Några viktiga högdagrar i AEM 6.4.3.0 är:
 * När RTF-redigeraren kombineras med flera fält visas ett TypeError-undantag: fieldAPI.getName är inte en funktion vid foundation.js-fel inträffar. NPR-27146: Programfix för CQ-4253155
 * Salesforce-integrering kan inte använda proxykonfigurationen. NPR-27244: Programfix för CQ-4245300
 * När du schemalägger en sida för aktivering med alternativet Hantera publikation för ett senare datum och växlar till listvyn saknas kalenderikonen. NPR-26974: Programfix för CQ-4239206
-* Användare kan inte redigera behörigheter för slutna användargrupper i sidegenskaperna. NPR-27138: Programfix för CQ-4256089Det går inte att redigera taggar via taggning. NPR-26957: Programfix för CQ-4254858
+* Användare kan inte redigera behörigheter för slutna användargrupper i sidegenskaperna. NPR-27138: Programfix för CQ-4256089Det går inte att redigera taggar via taggning. NPR-26958: Programfix för CQ-4254858
 * När en tagg som refereras från en strukturerad innehållsfragmentmodell flyttas, uppdateras inte de befintliga referenserna till taggen i ett innehållsfragment. Detta händer i redigeringsskärmen för innehållsfragmentmodellen. NPR-26776: Programfix för CQ-4251805
 * När du skapar och befordrar en start med flera sidor skapas flera versioner för varje sida. NPR-26917: Programfix för CQ-4254663
 * AEM siteadmin hanterar inte sökvägar som anges i webbläsarens adressfält. NPR-26780: Programfix för CQ-4254097
@@ -1108,9 +1108,9 @@ Några viktiga högdagrar i AEM 6.4.3.0 är:
 * Prestandaproblem med org.apache.sling.i18n. NPR-26812: Programfix för SLING-7543
 * Det går inte att se nodegenskaperna när XML-indata formateras och distribueras. NPR-26198: Programfix för CQ-4250448
 * IndexOutOfBoundsException i ResourceProviderTracker. NPR-26968: Programfix för GRANITE-23310
-* JMX-konsolen samlar många administratörssessioner och en ny session öppnas var femte minut. NPR-26958: Programfix för CQ-4251090
+* JMX-konsolen samlar många administratörssessioner och en ny session öppnas var femte minut. NPR-26957: Programfix för CQ-4251090
 * När du har uppgraderat från 6.2 till 6.4 visar loggfilen stackspårning för resurslösaren com.adobe.granite.repository.hc.impl.content.sling.SlingContentHealthCheck. NPR-26176: Programfix för Granite-21734
-* När en rensningsagent som är klar att användas för att uppdatera alias konfigureras, misslyckas åtgärden med ett StackOverflowError-undantag. NPR-26373: Programfix för CQ-4243928
+* När en rensningsagent som är klar att användas för att uppdatera alias konfigureras, misslyckas åtgärden med ett StackOverflowError-undantag. NPR-26373: Programfix för CQ-4242928
 * Replikeringen använder utgången OAuth-token tills den misslyckas. NPR-25894
 * Begränsad sida (sidan Stängd användargrupp) med sling: alias inte omdirigerar användaren till inloggningssidan. NPR-25715: Programfix för Granite=22263
 * Vid publicering av taggar visas ingen aktivitet i användargränssnittet. Programfix för CQ-4255961
@@ -1139,7 +1139,7 @@ Några viktiga högdagrar i AEM 6.4.3.0 är:
 * Endast 10 grupper visas på sidan för aktiveringsresurser, även om sidnumrering är aktiverat för grupplistning. NPR-26934: Programfix för CQ-4252985
 * Alternativet att aktivera/inaktivera sökning för schemalagd post i journalkomponenten finns i ConfigMgr, och jobbet SearchScheduledPosts har optimerats. NPR-26923: Programfix för CQ-4250463
 * Sökningar efter nyckelord i adresser fungerar inte på komponentsidor i kalendern när AEM community är inställt att fungera med DSRP. NPR-26737: Programfix för CQ-4258493
-* En direkt länk till kommentaren i stället för huvudposten i en kommentars detalj har implementerats för modereringsgränssnitt och aktiveringsresurser. NPR-26702: Programfix för CQ-4251381
+* En direkt länk till kommentaren i stället för huvudposten i en kommentars detalj har implementerats för modereringsgränssnitt och aktiveringsresurser. NPR-26704: Programfix för CQ-4251381
 * Innehåll som modereras via flerval på modereringskonsolen visas inte på aktivitetsströmmen. NPR-26695: Programfix för CQ-4253244
 * Sökningen med Förnamn och Efternamn i fältet Till i Communities Messaging returnerar inte det förväntade resultatet. NPR-26385: Programfix för CQ-4248673
 * Ett fel uppstod vid överföring av en annan bifogad fil än bilden (till exempel .pdf) i forum. NPR-27360: Programfix för CQ-4257753
@@ -1313,7 +1313,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 * Generering av delresurser för pptx-filen innehåller inga bilder eller miniatyrbilder. NPR-24286: Programfix för CQ-4217986
 * migrateAllAssets - Lägg till stöd för gruppbearbetning och förbättra AEM som lägger till UUID till gamla resurser. NPR-24861: Programfix för CQ-4242863 och CQ-4247874
 * Prestandaproblem med generering av miniatyrbilder. NPR-24693: Programfix för CQ-4246960
-* (Touch UI) Komponenten &quot;options predikate&quot; är tom när den läggs till på utgivarsidan för resursresurs. NPR-24643: Programfix för CQ-4245295
+* (Touch UI) Komponenten för optionspredikat förblir tom när den läggs till på utgivarsidan för resursresurs. NPR-24643: Programfix för CQ-4245295
 * (Arbetsflöde) Resurser för smarta taggar bearbetas inte via proxykonfigurationen. NPR-25840: Programfix för CQ-4248202
 * (Omnissearch) När du tar bort filtypen:image från sökvillkoren tas inte bildtypen bort. NPR-25232: Programfix för CQ-4248280
 * När du försöker flytta en fil till en annan mapp visas inte mappar med apostrof i namnet. NPR-25125: Programfix för CQ-4248660
@@ -1440,7 +1440,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 * Om du bifogar en fil två gånger med samma namn till ett foruminlägg uppstår ett serverfel. NPR-24172: Programfix för CQ-4244367
 * Prestandakorrigeringar för bakomliggande nätverk - gruppnumrering vid författare och publicering, gruppsökning vid författare, undvikande av serialisering av svar för journal, kalender och idéer samt lazy loading för att hämta gruppmedlemskap (inbjudan/avinbjudan) för varje grupp när grupplistsidan visas. NPR-24538: Programfix för CQ-4246515
 * Aktiveringsresurser visas inte på författaren. Programfix för CQ-4252618
-* Meddelanden genereras inte för tråd från okända användare. Programfix för CQ-4245132
+* Meddelanden genereras inte för tråd från okända användare. Programfix för CQ-4244133
 * Gruppsökning visas inte i den vänstra listen. Programfix för CQ-4252621
 * (Författare) Sidindelning fungerar inte för gruppkonsolen. Programfix för CQ-4242786
 * Uppgradering av jQuery-gränssnitt. Programfix för CQ-4248894
@@ -1742,7 +1742,7 @@ AEM 6.4.1.0 kan installeras på AEM 6.4 GA. Några av huvudpunkterna i Service P
 * Internationalisering fungerar inte på språknivå. NPR-22967, NPR-23046: Programfix för Granite-2111
 * Proaktiv backport för granite.ui.commons-korrigeringar. NPR-23537
 * Proaktiv backport för granite.ui.content fixes. NPR-23535
-* Proaktiv backport för granite.ui.coralui-korrigeringar. NPR-23538
+* Proaktiv backport för granite.ui.coralui-korrigeringar. NPR-23536
 * Det går inte att ta bort flera användare från gruppen samtidigt. NPR-23846
 * (OMEGA) Rapportera&quot;Funktion&quot; endast på engelska. NPR-23989: Programfix för Granite-21231
 * (Designimporterare) Om du importerar en sida importeras inte js, css. NPR-25203: Programfix för Granite-2236
@@ -1801,7 +1801,7 @@ AEM 6.4.1.0 kan installeras på AEM 6.4 GA. Några av huvudpunkterna i Service P
 * Det går inte att redigera något arbetsflöde efter att ha redigerat det en gång. NPR-23742: Programfix för CQ-4238526
 * (Klassiskt användargränssnitt) När arbetsflödet startas försvinner villkoren och arbetsflödena startar utan några villkor. NPR-23835: Programfix för CQ-4239153
 * Projektinkorg: när du växlar till kalendervyn visas huvudinnehållet i inkorgen. NPR-23947: Programfix för CQ-4241236
-* Nödvändig att visa nyttolastdetaljer i paketet så att HTML-komponenten kan visa värdet i listvyn. NPR-23948: Programfix för CQ-4240953
+* Nödvändig att visa nyttolastdetaljer i paketet så att HTML-komponenten kan visa värdet i listvyn. NPR-23947: Programfix för CQ-4240953
 * Det går inte att lagra dialogdata i dialogdeltagarsteget. NPR-23965: Programfix för CQ-4234123
 * (Touch-gränssnittet) När du sparar en arbetsflödesmodell ändras knappen Synkronisera till Synkroniserad vilket resulterar i ett stavfel. Programfix för CQ-4244843
 * Projektinkorg: när du växlar till kalendervyn visas huvudinnehållet i inkorgen. Programfix för CQ-4244436
@@ -1850,7 +1850,7 @@ AEM 6.4.1.0 kan installeras på AEM 6.4 GA. Några av huvudpunkterna i Service P
 * Filtyps- och filstorlekspredikat är inte tillgängliga i publicerade sökformulär. Programfix för CQ-4242026
 * Sökningen i katalogpredikatet ska filtreras bort eller inte visas i sökfiltren. Programfix för CQ-4241386
 * Standardsökning från bör finnas efter avpublicering. Programfix för CQ-4241383, CQ-424113
-* Publicera till varumärkesportalgester fungerar inte för bildförinställningar. Programfix för CQ-4241074
+* Publicera till varumärkesportalgester fungerar inte för bildförinställningar. Programfix för CQ-4241076
 * Publicera på varumärkesportalen fungerar inte för samlingar. Programfix för CQ-4241122, CQ-4246558
 
 **DAM - DM-klient**
