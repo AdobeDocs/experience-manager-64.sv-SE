@@ -11,17 +11,20 @@ topic-tags: Security
 discoiquuid: 3a1817cd-357b-473d-9a09-e18bbfc60dfd
 translation-type: tm+mt
 source-git-commit: eb3ac73ebe3189c144dafa02a2596ea5d512ffba
+workflow-type: tm+mt
+source-wordcount: '773'
+ht-degree: 0%
 
 ---
 
 
 # SSL som standard{#ssl-by-default}
 
-I ett försök att kontinuerligt förbättra säkerheten hos AEM har Adobe introducerat en funktion som kallas SSL som standard. Syftet är att uppmuntra användningen av HTTPS för att ansluta till AEM-instanser.
+I ett försök att kontinuerligt förbättra AEM säkerhet har Adobe introducerat en funktion som kallas SSL som standard. Syftet är att uppmuntra användningen av HTTPS för att ansluta till AEM instanser.
 
 ## Aktivera SSL som standard {#enabling-ssl-by-default}
 
-Du kan börja konfigurera SSL som standard genom att klicka på det relevanta inkorgsmeddelandet från AEM-hemskärmen. Tryck på klockikonen i skärmens övre högra hörn för att nå Inkorgen. Klicka sedan på **Visa alla**. Då visas en lista med alla aviseringar som har beställts i en listvy.
+Du kan börja konfigurera SSL som standard genom att klicka på det relevanta inkorgsmeddelandet från AEM startskärm. Tryck på klockikonen i skärmens övre högra hörn för att nå Inkorgen. Klicka sedan på **Visa alla**. Då visas en lista med alla aviseringar som har beställts i en listvy.
 
 Markera och öppna meddelandet **Konfigurera HTTPS** i listan:
 
@@ -53,7 +56,7 @@ En tjänstanvändare med namnet **ssl-service** har skapats för den här funkti
 
 Det finns tre sätt att automatisera SSL som standard.
 
-### Via HTTP POST {#via-http-post}
+### Via HTTP-POST {#via-http-post}
 
 Den första metoden innebär publicering till SSLSetup-servern som används av konfigurationsguiden:
 
@@ -61,7 +64,7 @@ Den första metoden innebär publicering till SSLSetup-servern som används av k
 POST /libs/granite/security/post/sslSetup.html
 ```
 
-Du kan använda följande nyttolast i POST för att automatisera konfigurationen:
+Du kan använda följande nyttolast i POSTEN för att automatisera konfigurationen:
 
 ```xml
 ------WebKitFormBoundaryyBO4ArmGlcfdGDbs
@@ -90,7 +93,7 @@ Content-Disposition: form-data; name="httpsPort"
 8443
 ```
 
-Servern, precis som alla sling POST-servrar, svarar med 200 OK eller en felkod för HTTP-status. Du hittar information om status i svarets HTML-brödtext.
+Servern kommer, precis som vilken server som helst för POST av sling, att svara med 200 OK eller en felkod för HTTP-status. Du hittar information om status i svarets HTML-brödtext.
 
 Nedan finns exempel på både ett lyckat svar och ett fel.
 
