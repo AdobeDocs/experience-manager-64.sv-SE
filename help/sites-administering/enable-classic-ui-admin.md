@@ -1,8 +1,8 @@
 ---
-title: Admin Consoles
-seo-title: Admin Consoles
-description: Lär dig hur du använder de Admin Consoles som finns i AEM.
-seo-description: Lär dig hur du använder de Admin Consoles som finns i AEM.
+title: Admin Console
+seo-title: Admin Console
+description: Lär dig hur du använder Admin Console som finns i AEM.
+seo-description: Lär dig hur du använder Admin Console som finns i AEM.
 uuid: 701dc57c-f7b4-421e-a847-577ae2585e80
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: 98ba3093-1edb-4891-abbe-47cf6e4f1feb
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '239'
+ht-degree: 0%
 
 ---
 
 
-# Admin Consoles{#admin-consoles}
+# Admin Console{#admin-consoles}
 
 Som standard har möjligheten att växla till det klassiska användargränssnittet via administratörskonsolerna inaktiverats. Därför visas inte längre de popup-ikoner som visades när användaren placerade musen över vissa konsolikoner, vilket ger åtkomst till det klassiska gränssnittet.
 
@@ -25,11 +28,11 @@ Alla konsoler som har en klassisk användargränssnittsversion i `/libs/cq/core/
 
 I det här exemplet återaktiverar vi det klassiska gränssnittet för webbplatskonsolen.
 
-1. Använd CRXDE Lite för att hitta noden som motsvarar administrationskonsolen som du vill återaktivera det klassiska användargränssnittet för. De finns under:
+1. Använd CRXDE Lite för att hitta noden som motsvarar den Admin Console som du vill aktivera Classic-gränssnittet för igen. De finns under:
 
    `/libs/cq/core/content/nav`
 
-   Exempel
+   Till exempel
 
    [ `http://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav`](http://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav)
 
