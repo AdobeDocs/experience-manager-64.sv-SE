@@ -54,7 +54,7 @@ Så här kommer du igång snabbt:
 
    You can also create image sets automatically through [batch set presets](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets).
 
-   **Viktigt** - Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsintag och är endast tillgängliga i Dynamic Media - Scene7-läge.
+   **Viktigt** - Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsintag och är endast tillgängliga i läget Dynamic Media - Scene7.
 
    Se [Förbereda bilduppsättningsresurser för överföring och överföring av filer](#uploading-assets-in-image-sets).
 
@@ -85,7 +85,7 @@ Så här kommer du igång snabbt:
 
 Mer information om hur du redigerar bilduppsättningar finns i [Redigera bilduppsättningar.](#editing-image-sets) Dessutom kan du visa och redigera [bilduppsättningsegenskaper](managing-assets-touch-ui.md#editing-properties).
 
-Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättningar i [Felsökning av Dynamic Media - Scen7-läge](troubleshoot-dms7.md#images-and-sets).
+Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättningar i [Felsökning av dynamiska media - Scene7-läge](troubleshoot-dms7.md#images-and-sets).
 
 ## Överföra resurser i bilduppsättningar {#uploading-assets-in-image-sets}
 
@@ -122,7 +122,7 @@ Du kan skapa bilduppsättningar via användargränssnittet eller via API:t. I de
 >
 >You can also create image sets automatically through [batch set presets](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets).
 
-**Viktigt:** Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsintag och är endast tillgängliga i Dynamic Media - Scene7-läge.
+**Viktigt:** Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsinmatningen och är endast tillgängliga i läget Dynamic Media - Scene7.
 
 När du lägger till resurser i uppsättningen läggs de automatiskt till i alfanumerisk ordning. Du kan ändra ordning på eller sortera resurser manuellt när de har lagts till.
 
@@ -176,7 +176,7 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
 Du kan skapa bilduppsättningar antingen i användargränssnittet eller automatiskt med hjälp av [gruppuppsättningsförinställningar](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets).
 
-**Viktigt** - Batchuppsättningar skapas av IPS [Image Production System] som en del av tillgångsintag och är endast tillgängliga i Dynamic Media - Scene7-läge.)
+**Viktigt** - Batchuppsättningar skapas av IPS [Image Production System] som en del av tillgångsintag och är endast tillgängliga i läget Dynamic Media - Scene7.)
 
 Uppsättningar som skapats med gruppuppsättningsförinställningar visas *inte* i användargränssnittet. Du kan visa uppsättningarna på tre olika sätt. (Dessa metoder är tillgängliga även om du har skapat bilduppsättningarna i användargränssnittet).
 
@@ -190,7 +190,7 @@ Uppsättningar som skapats med gruppuppsättningsförinställningar visas *inte*
 
 * From search, you can select **[!UICONTROL Filters]**, then expand **[!UICONTROL Dynamic Media]** and select **[!UICONTROL Sets]**.
 
-   Sökningen returnerar matchande uppsättningar som skapats manuellt i användargränssnittet eller automatiskt skapats med gruppuppsättningsförinställningar. För automatiserade uppsättningar utförs sökfrågan med sökvillkoren &quot;Börjar med&quot;, som skiljer sig från AEM-sökning, som baseras på sökvillkoren &quot;Innehåller&quot;. Det enda sättet att söka efter automatiska uppsättningar är att ställa in filtret på **[!UICONTROL Sets]** .
+   Sökningen returnerar matchande uppsättningar som skapats manuellt i användargränssnittet eller automatiskt skapats med gruppuppsättningsförinställningar. För automatiserade uppsättningar utförs sökfrågan med sökvillkoren &quot;Börjar med&quot;, som skiljer sig från AEM sökning som baseras på sökvillkoren &quot;Innehåller&quot;. Det enda sättet att söka efter automatiska uppsättningar är att ställa in filtret på **[!UICONTROL Sets]** .
 
    ![chlimage_1-345](assets/chlimage_1-345.png)
 
