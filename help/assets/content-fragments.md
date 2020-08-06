@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 22ae0d3a-083f-40e4-bf4a-7a755ae9e312
 translation-type: tm+mt
 source-git-commit: 2d25f3154ac4a2b43aec98cf63699cabf0d113cf
+workflow-type: tm+mt
+source-wordcount: '2002'
+ht-degree: 3%
 
 ---
 
@@ -21,9 +24,9 @@ source-git-commit: 2d25f3154ac4a2b43aec98cf63699cabf0d113cf
 >
 >Vissa funktioner för innehållsfragment kräver att [AEM 6.4 Service Pack 2 (6.4.2.0) eller senare](/help/release-notes/sp-release-notes.md)används.
 
-Med Adobe Experience Manager (AEM) Content Fragments kan ni utforma, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-authoring/content-fragments.md). Med dem kan du förbereda innehåll som är klart för användning på flera platser/i flera kanaler.
+Med Adobe Experience Manager (AEM) Content Fragments kan du utforma, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-authoring/content-fragments.md). Med dem kan du förbereda innehåll som är klart för användning på flera platser/i flera kanaler.
 
-Innehållsfragment kan också levereras i JSON-format med JSON-exportfunktionerna (Sling Model) i AEM Core-komponenterna. Leveranssätt:
+Innehållsfragment kan också levereras i JSON-format med exportfunktionerna i Sling Model (JSON) AEM kärnkomponenterna. Leveranssätt:
 
 * gör att du kan använda komponenten för att hantera vilka element i ett fragment som ska levereras
 * tillåter massleverans genom att lägga till flera kärnkomponenter för innehållsfragment på sidan som används för API-leverans
@@ -34,7 +37,7 @@ På den här och följande sidor beskrivs hur du skapar, konfigurerar och underh
 
 * [Content Fragment Models](content-fragments-models.md) - aktivera, skapa och definiera dina modeller
 
-* [Variationer - Innehåll](content-fragments-variations.md) för redigeringsfragment - skapa fragmentinnehållet och skapa varianter av mallsidan
+* [Variationer - Innehåll](content-fragments-variations.md) för redigeringsfragment - skapa fragmentinnehållet och skapa varianter av det Överordnad
 
 * [Markering](content-fragments-markdown.md) - med markeringssyntax för ditt fragment
 
@@ -65,26 +68,27 @@ Dessa innehållsfragment kan sedan samlas ihop för att ge upplevelser över en 
 
 ## Innehållsfragment och innehållstjänster {#content-fragments-and-content-services}
 
-AEM Content Services är utformat för att generalisera beskrivningen och leveransen av innehåll i/från AEM, bortom fokus på webbsidor.
+AEM Content Services är utformat för att generera beskrivning och leverans av innehåll i/från AEM utöver fokus på webbsidor.
 
-De levererar innehåll till kanaler som inte är traditionella AEM-webbsidor med hjälp av standardiserade metoder som kan användas av alla kunder. Dessa kanaler kan omfatta:
+De levererar innehåll till kanaler som inte är traditionella AEM webbsidor, med standardiserade metoder som kan användas av alla kunder. Dessa kanaler kan omfatta:
 
 * Enkelsidiga program
 * Inbyggda mobilprogram
-* andra kanaler och kontaktytor utanför AEM
+* andra kanaler och kontaktpunkter externt för AEM
 
 Leveransen görs i JSON-format.
 
-AEM Content Fragments kan användas för att beskriva och hantera strukturerat innehåll. Strukturerat innehåll definieras i modeller som kan innehålla olika innehållstyper. inklusive text, numeriska data, boolesk information, datum och tid med mera.
+AEM kan användas för att beskriva och hantera strukturerat innehåll. Strukturerat innehåll definieras i modeller som kan innehålla olika innehållstyper. inklusive text, numeriska data, boolesk information, datum och tid med mera.
 
-Tillsammans med JSON-exportfunktionerna i AEM Core-komponenterna kan detta strukturerade innehåll sedan användas för att leverera AEM-innehåll till andra kanaler än AEM-sidor.
+Tillsammans med JSON-exportfunktionerna i AEM kärnkomponenter kan detta strukturerade innehåll sedan användas för att leverera AEM till andra kanaler än AEM.
 
 >[!NOTE]
 >
->**Innehållsfragment** och **[Experience Fragments](/help/sites-authoring/experience-fragments.md)**är olika funktioner i AEM:
+>**Content Fragments** and **[Experience Fragments](/help/sites-authoring/experience-fragments.md)**are different features within AEM:
 >
 >* **Innehållsfragment** är redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
 >* **Experience Fragments** är helt utformat för innehåll, ett fragment av en webbsida.
+
 >
 >
 Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
@@ -99,7 +103,7 @@ Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men in
 
 >[!NOTE]
 >
->AEM har även stöd för översättning av fragmentinnehåll. Mer information finns i [Skapa översättningsprojekt för innehållsfragment](creating-translation-projects-for-content-fragments.md) .
+>AEM har också stöd för översättning av fragmentinnehåll. Mer information finns i [Skapa översättningsprojekt för innehållsfragment](creating-translation-projects-for-content-fragments.md) .
 
 ## Typer av innehållsfragment {#types-of-content-fragment}
 
@@ -148,6 +152,7 @@ Resurser kan användas med ett innehållsfragment på flera sätt. var och en me
    * Är en integrerad del av fragmentet (se [Ingående delar i ett innehållsfragment](#constituent-parts-of-a-content-fragment)).
    * Definiera tillgångens position.
    * Mer information finns i [Infoga resurser i fragmentredigeraren](content-fragments-variations.md#inserting-assets-into-your-fragment) .
+
    >[!NOTE]
    >
    >Visuella resurser som infogats i själva innehållsfragmentet kopplas till föregående stycke. När fragmentet läggs till på en sida flyttas dessa resurser i relation till det stycket när mellanliggande innehåll läggs till.
@@ -159,7 +164,7 @@ Resurser kan användas med ett innehållsfragment på flera sätt. var och en me
    * Är enkelt tillgängliga för användning (som mellanliggande innehåll) när du använder fragmentet på en sida.
    * Mer information finns i [Associerat innehåll](content-fragments-assoc-content.md) .
 
-* Resurser som är tillgängliga från **Assets-webbläsaren** i sidredigeraren
+* Resurser som är tillgängliga från **resursläsaren** i sidredigeraren
 
    * Möjliggör full flexibilitet för val av en resurs.
    * Möjliggör viss flexibilitet för placering.
@@ -185,7 +190,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 
       * avgränsat med lodräta blanksteg (vagnretur)
       * i flerradiga textelement, i enkla eller strukturerade fragment
-   * I lägena [RTF](content-fragments-variations.md#rich-text) och [Märken](content-fragments-variations.md#markdown) kan ett stycke formateras som en rubrik. I så fall hör det ihop med ett stycke.
+   * I lägena [RTF](content-fragments-variations.md#rich-text) och [Markdown-kod](content-fragments-variations.md#markdown) kan ett stycke formateras som en rubrik, och då utgör det och det efterföljande stycket en enhet.
    * Aktivera innehållskontroll vid sidredigering.
 
 
@@ -198,6 +203,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
    * Kan endast läggas till, tas bort från eller flyttas inom ett fragment med [RTF-format i fragmentredigeraren](content-fragments-variations.md#inserting-assets-into-your-fragment).
    * Kan endast läggas till i flerradiga textelement (alla fragmenttyper).
    * Kopplas till föregående text (stycke).
+
    >[!CAUTION]
    >
    >Kan tas bort (oavsiktligt) från ett fragment genom att växla till oformaterad text.
@@ -227,27 +233,28 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 
          * Genom att visa/redigera **fragmentegenskaperna** från konsolen
          * Genom att redigera **metadata** i fragmentredigeraren
+
    >[!CAUTION]
    >
    >Metadatabearbetningsprofiler gäller inte för innehållsfragment.
 
-* **Master**
+* **Överordnad**
 
    * En integrerad del av fragmentet
 
-      * Alla innehållsfragment har en instans av Master.
-      * Mallen kan inte tas bort.
-   * Mallen är tillgänglig i fragmentredigeraren under **[Variationer](content-fragments-variations.md)**.
-   * Huvudet är inte en variation i sig, utan baserar alla variationer.
+      * Alla innehållsfragment har en instans av Överordnad.
+      * Överordnad kan inte tas bort.
+   * Överordnad är tillgängligt i fragmentredigeraren under **[Variationer](content-fragments-variations.md)**.
+   * Överordnad är inte en variation i sig, utan är grunden för alla variationer.
 
 
 * **Variationer**
 
    * Återgivning av fragmenttext som är specifik för redaktionella ändamål. kan vara relaterat till kanalen men inte obligatoriskt, kan också vara för lokala ad hoc-ändringar.
-   * skapas som kopior av **mallsida**, men kan sedan redigeras efter behov, det ofta finns innehållsöverlappning mellan själva variationerna.
+   * skapas som kopior av **Överordnad**, men kan sedan redigeras efter behov, det ofta finns innehållsöverlappning mellan själva variationerna.
    * Kan definieras under fragmentutveckling eller fördefinieras i fragmentmallar.
    * Lagras i fragmentet för att undvika spridning av innehållskopior.
-   * Variationer kan [synkroniseras](content-fragments-variations.md#synchronizing-with-master) med mallsidan om mallinnehållet har uppdaterats.
+   * Variationer kan [synkroniseras](content-fragments-variations.md#synchronizing-with-master) med Överordnad om det Överordnad innehållet har uppdaterats.
    * Kan [sammanfattas](content-fragments-variations.md#summarizing-text) för att snabbt korta av texten till en fördefinierad längd.
    * Tillgängligt på fliken [Variationer](content-fragments-variations.md) i fragmentredigeraren.
 
@@ -278,8 +285,8 @@ Om du vill skapa, redigera och använda innehållsfragment behöver du också:
 * **Fragmentmall**
 
    * Krävs för att [skapa ett enkelt fragment](content-fragments-managing.md#creating-content-fragments).
-   * vanligtvis [utvecklas under genomförandet](/help/sites-developing/content-fragment-templates.md)av projektet, kan inte skapas vid redigering.
-   * Definierar grundläggande egenskaper för ett enkelt fragment (rubrik, antal textelement, taggdefinitioner).
+   * Usually [developed during project implementation](/help/sites-developing/content-fragment-templates.md); cannot be created when authoring.
+   * Definierar grundläggande egenskaper för ett enkelt fragment (titel, antal textelement, taggdefinitioner).
    * Malldefinitioner kräver en titel och ett textelement. allt annat är valfritt. Mallen definierar ett minimalt omfång för fragmentet och standardinnehållet om tillämpligt. Författare kan senare utöka ett fragment utöver det som definieras i mallen.
 
 * **Innehållsfragmentkomponent**
