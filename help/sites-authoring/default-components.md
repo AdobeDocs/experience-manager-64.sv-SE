@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 53c37f8c-eb75-4134-9f91-8adb0a574360
 translation-type: tm+mt
 source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
+workflow-type: tm+mt
+source-wordcount: '445'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +26,7 @@ Komponenterna är tillgängliga när du [redigerar en sida](/help/sites-authorin
 
 >[!NOTE]
 >
->I det här avsnittet behandlas endast komponenter som finns i en färdig AEM-installation.
+>I det här avsnittet behandlas endast komponenter som är tillgängliga i en AEM.
 >
 >Beroende på vilken instans du har kan du ha utvecklat anpassade komponenter explicit för dina behov. De kan till och med ha samma namn som vissa av de komponenter som beskrivs här.
 
@@ -49,7 +52,7 @@ Komponenterna sorteras efter olika kategorier som kallas komponentgrupper. Exemp
 
 ## Översikt över alla komponenter {#overview-of-all-components}
 
-Med [komponentkonsolen](/help/sites-authoring/default-components-console.md) får du en översikt över komponentgrupperna, och komponenterna, som finns i din AEM-installation. Du kan visa viktig information om de enskilda komponenterna och deras användning.
+Med [komponentkonsolen](/help/sites-authoring/default-components-console.md) får du en översikt över komponentgrupperna, och komponenterna, som finns i AEM. Du kan visa viktig information om de enskilda komponenterna och deras användning.
 
 ## Komponenter - större områden {#components-major-areas}
 
