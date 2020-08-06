@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 translation-type: tm+mt
 source-git-commit: 8c66f2b0053882bd1c998d8e01dbb0573881bc87
+workflow-type: tm+mt
+source-wordcount: '344'
+ht-degree: 1%
 
 ---
 
@@ -72,4 +75,4 @@ Om du vill komma åt de olika webbgruppskonsolerna väljer du **navigering, Webb
 
 ## Verktygskonsol {#tools-console}
 
-Så här kommer du åt [webbgruppsverktyg](tools.md) (tidigare administrationskonsolen) från global navigering: **[!UICONTROL Verktyg > Communities]**
+Så här kommer du åt [webbgruppsverktyg](tools.md) (tidigare administrationskonsolen) från global navigering: **[!UICONTROL Tools > Communities]**
