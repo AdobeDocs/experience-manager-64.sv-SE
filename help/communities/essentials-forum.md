@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 059c5bbe-07eb-4873-8157-2196df887b27
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '257'
+ht-degree: 0%
 
 ---
 
@@ -69,7 +72,7 @@ En community-webbplatsstruktur som innehåller [forumfunktionen](functions.md#fo
 UGC bör modereras med någon av standardmetoderna för moderering.\
 Se [Moderera användargenererat innehåll](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (t.ex. ASRP, MSRP eller JSRP).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
