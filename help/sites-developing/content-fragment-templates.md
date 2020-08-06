@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8c399a27-abdb-41fb-bd76-f30d22f1d68f
 translation-type: tm+mt
 source-git-commit: 0e1dc3ea47f03cd2e0cbeb2bf98eeec9ccc5d64f
+workflow-type: tm+mt
+source-wordcount: '655'
+ht-degree: 4%
 
 ---
 
@@ -37,13 +40,11 @@ Du kan skapa webbplatsspecifika mallar för innehållsfragment under:
 
 * `/apps/settings/dam/cfm/templates`
 
-   
-Plats för att täcka över färdiga mallar eller tillhandahålla kundspecifika, programövergripande mallar som inte är avsedda att utökas/ändras under körning.
+   Plats för att täcka över färdiga mallar eller tillhandahålla kundspecifika, programövergripande mallar som inte är avsedda att utökas/ändras under körning.
 
 * `/conf/global/settings/dam/cfm/templates`
 
-   
-Platsen för användarspecifika mallar för hela instansen som behöver ändras vid körning.
+   Platsen för användarspecifika mallar för hela instansen som behöver ändras vid körning.
 
 Prioritetsordningen är (i fallande ordning) `/conf`, `/apps`, `/libs`.
 
@@ -59,6 +60,7 @@ Prioritetsordningen är (i fallande ordning) `/conf`, `/apps`, `/libs`.
    >
    >
 1. Gör ändringar i `/apps`
+
 >
 
 
@@ -139,7 +141,7 @@ Mer information om noderna och deras egenskaper är:
   <tr> 
    <td><code>precreateElements</code></td> 
    <td><p><code>Boolean</code></p> <p>required</p> </td> 
-   <td><p><code>true</code>, om de delresurser som representerar elementen (utom huvudelementet) i innehållsfragmentet ska skapas när innehållsfragmentet skapas, <em>false</em> om de ska skapas "i farten".</p> <p><strong>Obs</strong>: för närvarande måste den här parametern anges till <code>true</code>.</p> </td> 
+   <td><p><code>true</code>, om de delresurser som representerar elementen (utom det överordnad elementet) i innehållsfragmentet ska skapas när innehållsfragmentet skapas, <em>false</em> om de ska skapas "i farten".</p> <p><strong>Obs</strong>: för närvarande måste den här parametern anges till <code>true</code>.</p> </td> 
   </tr> 
   <tr> 
    <td><code>version</code></td> 
