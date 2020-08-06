@@ -1,8 +1,8 @@
 ---
 title: API:er för att arbeta med inskickade formulär på formulärportalen
 seo-title: API:er för att arbeta med inskickade formulär på formulärportalen
-description: 'AEM Forms innehåller API:er som du kan använda för att fråga efter och vidta åtgärder för skickade formulärdata i formulärportalen. '
-seo-description: 'AEM Forms innehåller API:er som du kan använda för att fråga efter och vidta åtgärder för skickade formulärdata i formulärportalen. '
+description: 'AEM Forms tillhandahåller API:er som du kan använda för att fråga efter och vidta åtgärder för skickade formulärdata i formulärportalen. '
+seo-description: 'AEM Forms tillhandahåller API:er som du kan använda för att fråga efter och vidta åtgärder för skickade formulärdata i formulärportalen. '
 uuid: c47c8392-e5a9-4c40-b65e-4a7f379a6b45
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,13 +10,16 @@ topic-tags: developer-reference
 discoiquuid: 9457effd-3595-452f-a976-ad9eda6dc909
 translation-type: tm+mt
 source-git-commit: db4d19e3af11f04369fc7f6a7c13377962f0650a
+workflow-type: tm+mt
+source-wordcount: '570'
+ht-degree: 5%
 
 ---
 
 
 # API:er för att arbeta med inskickade formulär på formulärportalen {#apis-to-work-with-submitted-forms-on-forms-portal}
 
-AEM Forms innehåller API:er som du kan använda för att fråga formulärdata som skickas via formulärportalen. Dessutom kan du publicera kommentarer eller uppdatera egenskaper för skickade formulär med de API:er som beskrivs i det här dokumentet.
+AEM Forms tillhandahåller API:er som du kan använda för att fråga efter formulärdata som skickas via formulärportalen. Dessutom kan du publicera kommentarer eller uppdatera egenskaper för skickade formulär med de API:er som beskrivs i det här dokumentet.
 
 >[!NOTE]
 >
@@ -92,7 +95,7 @@ Ange följande parametrar i begärande-URL:
   </tr> 
   <tr> 
    <td><code>cutPoints</code> <br /> (valfritt)</td> 
-   <td>Anger en kommaavgränsad lista med formuläregenskaper som ska inkluderas i resultaten. <br /> Standardegenskaperna är: <code>formName</code>, <code>formPath</code>, <code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td> 
+   <td>Anger en kommaavgränsad lista med formuläregenskaper som ska inkluderas i resultaten. Standardegenskaperna är:<br /> <code>formName</code>, <code>formPath</code>, <code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td> 
   </tr> 
   <tr> 
    <td><code>search</code> <br /> (valfritt)</td> 
@@ -157,7 +160,7 @@ https://[host:[port]/content/forms/portal/submission.review.json?func=addComment
 1403873422601300
 ```
 
-## GET /content/forms/portal/submission.review.json?func=getComments {#get-content-forms-portal-submission-review-json-func-getcomments-nbsp}
+## GET /content/forms/portal/submission.review.json?func=getComments   {#get-content-forms-portal-submission-review-json-func-getcomments-nbsp}
 
 Returnerar alla kommentarer som har publicerats på den angivna inskickningsinstansen.
 
