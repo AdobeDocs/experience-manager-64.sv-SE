@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 13a908ae-6965-4438-96d0-93516b500884
 translation-type: tm+mt
 source-git-commit: 0982b1378c5edad000ad3dea4406093d4f13c496
+workflow-type: tm+mt
+source-wordcount: '666'
+ht-degree: 0%
 
 ---
 
@@ -49,7 +52,7 @@ myStoreCandidate = function(){};
 ContextHub.Utils.inheritance.inherit(myStoreCandidate,ContextHub.Store.PersistedStore);
 ```
 
-I realiteten definierar dina anpassade butikskandidater ytterligare funktioner eller åsidosätter butikens ursprungliga konfiguration. Flera [exempel på arkivkandidater](/help/sites-developing/ch-samplestores.md) installeras i databasen nedan `/libs/granite/contexthub/components/stores`. Använd CRXDE Lite för att öppna javascript-filerna.
+I realiteten definierar dina anpassade butikskandidater ytterligare funktioner eller åsidosätter butikens ursprungliga konfiguration. Flera [exempel på arkivkandidater](/help/sites-developing/ch-samplestores.md) installeras i databasen nedan `/libs/granite/contexthub/components/stores`. Använd CRXDE Lite för att öppna javascript-filerna om du vill lära dig av dessa exempel.
 
 ### Registrerar en ContextHub Store-kandidat {#registering-a-contexthub-store-candidate}
 
