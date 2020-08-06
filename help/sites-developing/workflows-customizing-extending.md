@@ -68,6 +68,7 @@ Komponenten är den närmaste gemensamma överordnade för `/libs/cq/workflow/co
 
    * **Vanliga**: för att redigera titeln och beskrivningen.
    * **Avancerat**: för att redigera egenskaper för e-postmeddelanden.
+
    ![wf-44](assets/wf-44.png) ![wf-45](assets/wf-45.png)
 
    >[!NOTE]
@@ -121,6 +122,7 @@ Använd följande procedur för att ange standardvärden för fälten **Titel** 
 >* I redigeringsdialogrutan för steget lagras titeln och beskrivningen på följande platser: >
 >* `./jcr:title`
 >* `./jcr:description` platser
+
 >
 >  
 Detta krav uppfylls när redigeringsdialogrutan använder fliken Allmänt som `/libs/cq/flow/components/step/step` komponenten implementerar.
@@ -132,6 +134,7 @@ Detta krav uppfylls när redigeringsdialogrutan använder fliken Allmänt som `/
 
    * Namn: `cq:editConfig`
    * Typ: `cq:EditConfig`
+
    >[!NOTE]
    >
    >Mer information om cq:editConfig-noden finns i [Konfigurera redigeringsbeteendet för en komponent](/help/sites-developing/developing-components.md#configuring-the-edit-behavior).
@@ -182,6 +185,7 @@ Om du vill fokusera komponenten för användning i ett specifikt arbetsflödessc
 
    * Namn: `cq:editConfig`
    * Typ: `cq:EditConfig`
+
    Mer information om cq:editConfig-noden finns i [Konfigurera redigeringsbeteendet för en komponent](/help/sites-developing/developing-components.md#configuring-the-edit-behavior).
 
 1. Under cq:EditConfig-noden lägger du till följande nod:
@@ -203,7 +207,7 @@ Om du vill fokusera komponenten för användning i ett specifikt arbetsflödessc
 
 1. Om du vill ta bort möjligheten för modellutvecklare att ändra egenskapsvärden åsidosätter du dialogrutan för komponentens supertyp.
 
-### Lägga till formulär och dialogrutor i deltagarsteg {#adding-forms-and-dialogs-to-participant-steps}
+### Lägga till Forms och dialogrutor i deltagarsteg {#adding-forms-and-dialogs-to-participant-steps}
 
 Anpassa deltagarstegskomponenten för att tillhandahålla funktioner som finns i komponenterna [Formulärdeltagarsteg](/help/sites-developing/workflows-step-ref.md#form-participant-step) och [Dialog Participant Step](/help/sites-developing/workflows-step-ref.md#dialog-participant-step) :
 
@@ -216,6 +220,7 @@ Utför följande procedur för den nya komponenten (se [Skapa anpassade stegkomp
 
    * Namn: `cq:editConfig`
    * Typ: `cq:EditConfig`
+
    Mer information om cq:editConfig-noden finns i [Konfigurera redigeringsbeteendet för en komponent](/help/sites-developing/components-basics.md#edit-behavior).
 
 1. Under cq:EditConfig-noden lägger du till följande nod:
@@ -665,6 +670,7 @@ function getParticipant() {
 >
 >* [`com.day.cq.wcm.workflow.process.ActivatePageProcess`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/workflow/process/ActivatePageProcess.html)
 >* [`com.day.cq.wcm.workflow.process.DeactivatePageProcess`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/workflow/process/DeactivatePageProcess.html)
+
 >
 
 
@@ -843,17 +849,18 @@ Ett enkelt sätt att börja skapa ett eget anpassat steg är att kopiera ett bef
 
       * Arbetsflöde för samarbete
       * DAM-arbetsflöde
-      * Formulärarbetsflöde
+      * Forms Workflow
       * Projekt
       * WCM-arbetsflöde
       * Arbetsflöde
+
    ![wf-35](assets/wf-35.png)
 
 1. Nu kan du öppna en arbetsflödesmodell för redigering. I stegwebbläsaren kan du filtrera så att **Mina anpassade steg** visas:
 
    ![wf-36](assets/wf-36.png)
 
-   Kortet visas när du drar **Mitt anpassade steg** till modellen:
+   Kortet visas när **du drar det anpassade steget** till modellen:
 
    ![wf-37](assets/wf-37.png)
 
@@ -887,6 +894,7 @@ När du har [skapat det grundläggande steget](#creating-the-basic-step)definier
       Anger standardtiteln på stegkortet i modellkartan och i fältet **Titel** i dialogrutan **Min egen konfiguration - stegegenskaper** .
 
    * Du kan också definiera egna anpassade egenskaper.
+
    ![wf-40](assets/wf-40.png)
 
 1. Konfigurera egenskaperna på noden `cq:listeners`.
@@ -899,6 +907,7 @@ När du har [skapat det grundläggande steget](#creating-the-basic-step)definier
    * `afterdelete: CQ.workflow.flow.Step.afterDelete`
    * `afteredit: CQ.workflow.flow.Step.afterEdit`
    * `afterinsert: CQ.workflow.flow.Step.afterInsert`
+
    Den här konfigurationen är viktig för att redigeraren ska fungera korrekt. I de flesta fall får den här konfigurationen inte ändras.
 
    Om du ställer in `cq:inherit` på true (på `cq:editConfig` noden se ovan) kan du ärva den här konfigurationen utan att explicit behöva inkludera den i stegdefinitionen. Om inget arv finns på plats måste du lägga till den här noden med följande egenskaper och värden.
@@ -1030,7 +1039,7 @@ Det exempel som används i det här exemplet `_cq_dialog/.content.xml` :
 >
 >Klassiska dialogrutor för modellredigering i användargränssnittet fungerar fortfarande med den pekaktiverade standardredigeraren.
 >
->Även om AEM har ett [dialogkonverteringsverktyg](/help/sites-developing/dialog-conversion.md) om du vill uppgradera dina klassiska dialogrutor för användargränssnittssteg till standarddialogrutor för användargränssnitt. Efter konverteringen finns det fortfarande några manuella förbättringar som kan göras i dialogrutan för vissa fall.
+>AEM har dock ett [dialogkonverteringsverktyg](/help/sites-developing/dialog-conversion.md) om du vill uppgradera dina klassiska dialogrutor för användargränssnittssteg till standarddialogrutor. Efter konverteringen finns det fortfarande några manuella förbättringar som kan göras i dialogrutan för vissa fall.
 >
 >* Om en uppgraderad dialogruta är tom kan du titta på dialogrutor i `/libs` som har liknande funktionalitet som exempel på hur en lösning kan tillhandahållas. Till exempel:
    >
@@ -1040,6 +1049,7 @@ Det exempel som används i det här exemplet `_cq_dialog/.content.xml` :
 >* `/libs/dam/components`
 >* `/libs/wcm/workflow/components/autoassign`
 >* `/libs/cq/projects`
+
 >
 >  
 Du får inte ändra något i `/libs`utan bara använda dem som exempel. Om du vill utnyttja något av de befintliga stegen kopierar du dem till `/apps` och ändrar dem där.
