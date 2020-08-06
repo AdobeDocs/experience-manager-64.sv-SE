@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 505bf3e3-ce3c-40aa-9619-e1b9f6634deb
 translation-type: tm+mt
 source-git-commit: 8e2bd579e4c5edaaf86be36bd9d81dfffa13a573
+workflow-type: tm+mt
+source-wordcount: '969'
+ht-degree: 0%
 
 ---
 
@@ -27,11 +30,12 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 >[!NOTE]
 >
->Om du behöver sidinformation i JSON-format för att kunna leverera innehåll till kanaler som inte är traditionella AEM-webbsidor, till exempel:
+>Om du behöver sidinformation i JSON-format för att kunna leverera innehåll till kanaler som inte är traditionella AEM webbsidor, till exempel:
 >
 >* Enkelsidiga program
 >* Inbyggda mobilprogram
->* Andra kanaler och kontaktpunkter utanför AEM
+>* Andra kanaler och kontaktpunkter som inte är AEM
+
 >
 >
 Se dokumentet [JSON Exporter for Content Services](/help/sites-developing/json-exporter.md).
@@ -55,13 +59,13 @@ Sidkomponenter kan kopplas till en eller flera `com.day.cq.wcm.api.PageInfoProvi
 
 Komponenten `/libs/foundation/components/page` är kopplad till följande PageInfoProvider-tjänster:
 
-* **** Standardsidstatusprovider: Information om sidstatus, t.ex. om sidan är låst, om sidan är nyttolasten för ett aktivt arbetsflöde och vilka arbetsflöden som är tillgängliga för sidan.
-* **** Provider för Live Relationship Info: Information om Multi Site Management (MSM), t.ex. om sidan är en del av en blå utskrift och om den är en Live-kopia.
-* **** Språkserver för innehåll: Den aktuella sidans språk och information om varje språk som sidan finns på.
-* **** Statusprovider för arbetsflöde: Statusinformation om det arbetsflöde som körs och som har sidan som nyttolast.
-* **** Info-provider för arbetsflödespaket: Information om varje arbetsflödespaket som lagras i databasen och om varje paket innehåller den aktuella resursen.
-* **** Emulatorinformationsprovider: Information om de emulatorer för mobila enheter som är tillgängliga för den här resursen. Om sidkomponenten inte återger mobilsidor finns inga emulatorer tillgängliga.
-* **** Anteckningsinformationsprovider: Information om anteckningar som finns på sidan.
+* **Standardsidstatusprovider:** Information om sidstatus, t.ex. om sidan är låst, om sidan är nyttolasten för ett aktivt arbetsflöde och vilka arbetsflöden som är tillgängliga för sidan.
+* **Provider för Live Relationship Info:** Information om Multi Site Management (MSM), t.ex. om sidan är en del av en blå utskrift och om den är en Live-kopia.
+* **Språkserver för innehåll:** Den aktuella sidans språk och information om varje språk som sidan finns på.
+* **Statusprovider för arbetsflöde:** Statusinformation om det arbetsflöde som körs och som har sidan som nyttolast.
+* **Info-provider för arbetsflödespaket:** Information om varje arbetsflödespaket som lagras i databasen och om varje paket innehåller den aktuella resursen.
+* **Emulatorinformationsprovider:** Information om de emulatorer för mobila enheter som är tillgängliga för den här resursen. Om sidkomponenten inte återger mobilsidor finns inga emulatorer tillgängliga.
+* **Anteckningsinformationsprovider:** Information om anteckningar som finns på sidan.
 
 PageInfo-servern returnerar till exempel följande JSON-svar för `/content/we-retail/us/en` noden:
 
@@ -494,7 +498,7 @@ Tjänsten tillämpar det kumulativa resultatet för alla filter. Följande filte
 
 >[!NOTE]
 >
->När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md) .
+>När du arbetar med AEM finns det flera sätt att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md) .
 
 Så här konfigurerar du till exempel tjänsten med CRXDE Lite:
 
@@ -514,7 +518,7 @@ Så här konfigurerar du till exempel tjänsten med CRXDE Lite:
 
 Så här konfigurerar du tjänsten i din projektkälla:
 
-1. Leta reda på eller skapa konfigurationsmappen för ditt AEM-program i projektkällan.
+1. Leta reda på eller skapa konfigurationsmappen för AEM i projektkällan.
 
    Om du t.ex. använde en flermodulsarketyp för plugin-programmet för innehållspaket Maven för att skapa ditt projekt blir mappsökvägen `<projectroot>/content/src/ for example content/src/main/content/jcr_root/apps/<appname>/config`.
 1. Skapa en textfil med namnet com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider.xml i konfigurationsmappen
@@ -547,7 +551,7 @@ Skapa en anpassad tjänst för sidinformationsleverantör för att lägga till m
 1. Lägg till följande egenskap i PageInfoProvider-noden:
 
    * Namn: className
-   * Typ:Sträng
+   * Typ: Sträng
    * Värde: PID för PageInfoProvider-tjänsten.
 
 För resurser där programsidans komponent används som `sling:resourceType`standard returnerar PageInfo-servleten de anpassade PageInfoProvider-metadatan förutom standardmetadatan för PageInfoProvider.
@@ -601,7 +605,7 @@ public class PageUrlInfoProvider implements PageInfoProvider {
 }
 ```
 
-I följande exempel i CRXDE Lite visas den sidkomponent som är konfigurerad att använda tjänsten PageUrlInfoProvider:
+I följande exempel i CRXDE Lite visas sidkomponenten som är konfigurerad att använda tjänsten PageUrlInfoProvider:
 
 ![chlimage_1-3](assets/chlimage_1-3.png)
 
