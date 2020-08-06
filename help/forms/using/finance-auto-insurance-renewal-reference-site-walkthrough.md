@@ -9,6 +9,9 @@ topic-tags: introduction
 discoiquuid: a960d489-f5a3-436a-b028-54292648c7be
 translation-type: tm+mt
 source-git-commit: 4466161992d877b17d43fe73e3298dd6252733c0
+workflow-type: tm+mt
+source-wordcount: '759'
+ht-degree: 0%
 
 ---
 
@@ -17,13 +20,13 @@ source-git-commit: 4466161992d877b17d43fe73e3298dd6252733c0
 
 ## Krav {#pre-requisites}
 
-Konfigurera referenswebbplatsen enligt beskrivningen i [Konfigurera och konfigurera AEM 6.4 Forms Reference Site](/help/forms/using/setup-reference-sites.md).
+Konfigurera referensplatsen enligt beskrivningen i [Konfigurera och konfigurera AEM 6.4 Forms Reference Site](/help/forms/using/setup-reference-sites.md).
 
-## Scenario för referenswebbplats för ekonomi {#we-finance-reference-site-scenario}
+## Scenario för referenswebbplats för ekonomi  {#we-finance-reference-site-scenario}
 
-Webbplatsen We.Finance är en webbplats för finansiella tjänster som är utformad för att hjälpa dig att lära dig interaktiva kommunikationsfunktioner i AEM Forms.
+Webbplatsen We.Finance är en sajt för finansiella tjänster som är utformad för att hjälpa dig att lära dig interaktiva kommunikationsfunktioner i AEM Forms.
 
-Läs mer om genomgången av Web.Finance Auto Insurance - exempel på hur AEM-formulär och integrationen med Microsoft Dynamics hjälper till att personalisera kundupplevelsen i ett finansföretag. Den interaktiva genomgången är utformad för att underlätta implementering av komplexa digitala transaktioner och kundkommunikation i ett finansföretag.
+Läs mer om genomgången av Web.Finance Auto Insurance-exempel som visar hur AEM formulär och dess integrering med Microsoft Dynamics hjälper till att personalisera kundupplevelsen i ett finansföretag. Den interaktiva genomgången är utformad för att underlätta implementering av komplexa digitala transaktioner och kundkommunikation i ett finansföretag.
 
 **Resan börjar med följande exempel:**
 
@@ -38,7 +41,7 @@ Scenariot för automatisk försäkring för Web.Finance är en visuell berättar
 
 ### Gloria skickar ett meddelande om förnyelse av försäkringsavtal från We.Finance {#gloria-sends-an-insurance-policy-renewal-communication-from-we-finance}
 
-Gloria loggar in på AEM-instansen, klickar på Förnyelse av **autoförsäkring** och klickar sedan på användargränssnittet i **Open Agent.** Klicket fyller i försäkringsdokumentet med information om Sarah Rose. Gloria klickar på&#x200B;**Skicka** och ett meddelande visas på skärmen&quot;Inskickning initierad&quot; och sedan på några sekunder&quot;Inskickad klar&quot;.
+Gloria loggar in AEM instansen, klickar på **Förnyelse av försäkring** och klickar sedan på **Open Agent-gränssnittet.** Klicket fyller i försäkringsdokumentet med information om Sarah Rose. Gloria klickar på&#x200B;**Skicka** och ett meddelande visas på skärmen&quot;Inskickning initierad&quot; och sedan på några sekunder&quot;Inskickad klar&quot;.
 
 Sarah får ett mejl med rubriken&quot;Din förnyelse av autoförsäkring&quot;.
 
@@ -46,7 +49,7 @@ Sarah får ett mejl med rubriken&quot;Din förnyelse av autoförsäkring&quot;.
 
 #### Se det själv {#see-it-yourself}
 
-Gå till **Adobe Experience Manager** > **Formulär** > **Formulär och dokument** > **We.Finance** > **Auto Insurance**. Välj **den interaktiva kommunikationen Förnyelse** av automatisk försäkring och klicka på **Öppna agentgränssnitt**. Den interaktiva kommunikationen öppnas i agentgränssnittet. Ange en giltig e-postadress för att ta emot e-postmeddelandet med det bifogade principdokumentet och klicka på Skicka.
+Gå till **Adobe Experience Manager** > **Forms** > **Forms &amp; Documents** > **We.Finance** > **Auto Insurance**. Välj **den interaktiva kommunikationen Förnyelse** av automatisk försäkring och klicka på **Öppna agentgränssnitt**. Den interaktiva kommunikationen öppnas i agentgränssnittet. Ange en giltig e-postadress för att ta emot e-postmeddelandet med det bifogade principdokumentet och klicka på Skicka.
 
 Du kan öppna och granska den interaktiva kommunikationen om förnyelse av autoförsäkring direkt från `https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal.`
 
