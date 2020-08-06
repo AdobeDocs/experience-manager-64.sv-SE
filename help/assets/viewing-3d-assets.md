@@ -1,8 +1,8 @@
 ---
 title: Visa 3D-resurser
 seo-title: Visa 3D-resurser
-description: Läs mer om det interaktiva 3D-visningsprogrammet som finns på sidan med tillgångsinformation i AEM och hur du använder det för att visa 3D-resurser.
-seo-description: Läs mer om det interaktiva 3D-visningsprogrammet som finns på sidan med tillgångsinformation i AEM och hur du använder det för att visa 3D-resurser.
+description: Lär dig mer om det interaktiva 3D-visningsprogrammet som finns på sidan med resursinformation i AEM och hur du använder det för att visa 3D-resurser.
+seo-description: Lär dig mer om det interaktiva 3D-visningsprogrammet som finns på sidan med resursinformation i AEM och hur du använder det för att visa 3D-resurser.
 uuid: 7d8133ac-3110-4979-8e19-e65090e791be
 contentOwner: Rick Brough
 topic-tags: 3D
@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 65040923-a8a8-4e27-82c0-67a04348e238
 translation-type: tm+mt
 source-git-commit: 5acb16b1734331767554261bbcf9640947f2e23f
+workflow-type: tm+mt
+source-wordcount: '1694'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ I det här dokumentet beskrivs både hur du visar 3D-resurser i resursinformatio
 
 ## Visa 3D-resurser på sidan Resursinformation {#viewing-d-assets-in-the-asset-details-page}
 
-Det interaktiva 3D-visningsprogrammet finns på sidan med resursinformation i AEM. Visningsprogrammet innehåller bland annat en samling interaktiva kamerakontroller som du kan använda för att rotera, zooma och panorera 3D-resursen.
+Det interaktiva 3D-visningsprogrammet är tillgängligt från sidan med resursinformation i AEM. Visningsprogrammet innehåller bland annat en samling interaktiva kamerakontroller som du kan använda för att rotera, zooma och panorera 3D-resursen.
 
 ![chlimage_1-139](assets/chlimage_1-139.png)
 
@@ -46,12 +49,12 @@ Dessutom är funktioner i klientdatorn, t.ex. en arbetsstation, bärbar dator el
 
 **Så här visar du 3D-resurser**:
 
-1. Kontrollera att du har överfört 3D-resurser till AEM.
+1. Se till att du har överfört 3D-resurser till AEM.
 
    Se [Om överföring och bearbetning av 3D-resurser i AEM](upload-processing-3d-assets.md).
 
-1. Tryck på **[!UICONTROL Resurser]** på **[!UICONTROL navigeringssidan i AEM]**.
-1. I närheten av det övre högra hörnet på sidan, i listrutan **[!UICONTROL Visa]** , trycker du på **[!UICONTROL kortvyn]**.
+1. Tryck på AEM på **[!UICONTROL Navigation]** sidan **[!UICONTROL Assets]**.
+1. Near the upper-right corner of the page, from the **[!UICONTROL View]** drop-down list, tap **[!UICONTROL Card View]**.
 1. Navigera till en 3D-resurs som du vill visa.
 1. Tryck på 3D-resursens kort för att öppna den på sidan med resursinformation.
 1. Gör något av följande:
@@ -98,28 +101,30 @@ Dessutom är funktioner i klientdatorn, t.ex. en arbetsstation, bärbar dator el
     </tbody> 
     </table>
 
-   * I det övre högra hörnet av sidan med resursinformation trycker du på ikonen **[!UICONTROL Scenväljare]** . Välj ett scennamn med den bakgrund och det ljus som du vill använda på 3D-resursen.
+   * I det övre högra hörnet av sidan med resursinformation trycker du på **[!UICONTROL Stage Selector]** -ikonen. Välj ett scennamn med den bakgrund och det ljus som du vill använda på 3D-resursen.
+
    ![chlimage_1-140](assets/chlimage_1-140.png)
 
    Stegen tillhandahåller den miljö-bakgrund, det markplan och det ljus-in som 3D-modellen visas i.
 
    Se [Använda scener i AEM 3D](about-the-use-of-stages-in-aem-3d.md).
 
-   * I det övre högra hörnet av sidan med resursinformation trycker du på ikonen **[!UICONTROL Kameraväljare]** och väljer sedan en kameravy som du vill använda för 3D-resursen.
+   * I det övre högra hörnet av sidan med resursinformation trycker du på **[!UICONTROL Camera Selector]** -ikonen och väljer sedan en kameravy som du vill använda för 3D-resursen.
+
    ![chlimage_1-141](assets/chlimage_1-141.png)
 
    Stegen innehåller ofta fördefinierade kameror. Du kan välja den aktuella kameran igen om du vill återställa den till de fördefinierade inställningarna.
 
    Se [Använda scener i AEM 3D](about-the-use-of-stages-in-aem-3d.md).
 
-1. Tryck på **[!UICONTROL Spara]** i det övre högra hörnet på sidan.
+1. In the upper-right corner of the page, tap **[!UICONTROL Save]**.
 1. Gör något av följande:
 
    * Återge 3D-resursen.
 
       Se [Återge 3D-resurser](rendering-3d-assets.md).
 
-   * Tryck på **[!UICONTROL Stäng]** i det övre högra hörnet av sidan för att gå tillbaka till sidan Resurser.
+   * I det övre högra hörnet av sidan trycker du på **[!UICONTROL Close]** för att gå tillbaka till sidan Resurser.
 
 ## Visa 3D-resurser i 3D-komponenten Sites {#viewing-d-assets-in-the-sites-d-component}
 
@@ -147,11 +152,11 @@ Så här arbetar du med 3D-komponenter med enheter med pekskärm:
 
 1. Dra kameran närmare eller längre bort från objektet med en nypa med två fingrar. Den här åtgärden liknar att zooma in eller ut och gör att du kan granska information om objektet. Du kan också trycka på och hålla ned knapparna + eller - för att flytta kameran närmare eller längre bort från objektet.
 
-1. Dra med två fingrar för att panorera kameran. Den här åtgärden flyttar kameran i sidled så att du kan titta på olika delar av objektet när du zoomar in. Du kan också växla till panoreringsläget genom att trycka på **[!UICONTROL Växla]** /Panorera och sedan panorera med ett finger. Tryck på växlingsknappen för **[!UICONTROL omloppsbana/panorering]** för att återgå till **[!UICONTROL omloppsläge]** .
+1. Dra med två fingrar för att panorera kameran. Den här åtgärden flyttar kameran i sidled så att du kan titta på olika delar av objektet när du zoomar in. Du kan också trycka på **[!UICONTROL Orbit/Pan Toggle]** knappen för att växla till panoreringsläge och sedan använda ett finger för att panorera kameran. Tryck på **[!UICONTROL Orbit/Pan Toggle]** knappen för att återgå till **[!UICONTROL Orbit]** läge.
 
-1. Tryck på **[!UICONTROL Återställ visningsprogram]** för att återställa kameran. Den här åtgärden återför objektet till den fullständiga vyn och, om den är aktiverad, återtar den automatiska rotationen.
+1. Tryck **[!UICONTROL Reset Viewer]** för att återställa kameran. Den här åtgärden återför objektet till den fullständiga vyn och, om den är aktiverad, återtar den automatiska rotationen.
 
-1. Tryck på **[!UICONTROL Helskärm]** för att aktivera helskärmsläget (om det stöds av enheten). Tryck på **[!UICONTROL Helskärm]** igen för att återställa 3D-visningsprogrammet till sidinbäddat läge.
+1. Tryck för **[!UICONTROL Full Screen]** att aktivera helskärmsläget (om det stöds av enheten). Tryck **[!UICONTROL Full Screen]** igen för att återställa 3D-visningsprogrammet till sidinbäddat läge.
 
 ### Styrplattor {#touchpad-devices}
 
@@ -159,13 +164,13 @@ Så här arbetar du med 3D-komponenter med pekplatteenheter:
 
 1. Använd ett finger och dra samtidigt som du håller ned (vänster)-knappen för att flytta (&quot;omloppsbana&quot;) vypunkten (&quot;kamera&quot;) runt objektet. Du kan visa objektet från vilken riktning som helst.
 
-1. Dra upp eller ned med knapparna på styrplattan uppåt eller nedåt med två fingrar för att flytta kameran närmare eller längre bort från objektet. Den här åtgärden liknar att zooma in eller ut och gör det möjligt att inspektera information om objektet. Du kan också klicka och hålla ned **[!UICONTROL Zooma in]** eller **[!UICONTROL Zooma ut]** för att flytta kameran närmare eller längre bort från objektet.
+1. Dra upp eller ned med knapparna på styrplattan uppåt eller nedåt med två fingrar för att flytta kameran närmare eller längre bort från objektet. Den här åtgärden liknar att zooma in eller ut och gör det möjligt att inspektera information om objektet. Du kan också klicka och hålla ned **[!UICONTROL Zoom In]** eller **[!UICONTROL Zoom Out]** knapparna för att flytta kameran närmare eller längre bort från objektet.
 
-1. Använd ett finger och dra samtidigt som du håller ned **ALT/Option** -tangenten och (vänster) styrplatteknappen för att panorera kameran. Den här åtgärden flyttar kameran i sidled så att du kan titta på olika delar av objektet när du zoomar in. Du kan också klicka på knappen Växla **[!UICONTROL omloppsbana/panorering]** för att växla till **[!UICONTROL panoreringsläget]** och sedan använda ett finger för att panorera kameran samtidigt som du håller ned knappen (vänster). Klicka på växlingsknappen för **[!UICONTROL omloppsbana/panorering]** igen för att återgå till **[!UICONTROL omloppsläge]** .
+1. Använd ett finger och dra samtidigt som du håller ned **ALT/Option** -tangenten och (vänster) styrplatteknappen för att panorera kameran. Den här åtgärden flyttar kameran i sidled så att du kan titta på olika delar av objektet när du zoomar in. Du kan också klicka på **[!UICONTROL Orbit/Pan Toggle]** knappen för att växla till **[!UICONTROL Pan]** läge och sedan använda ett finger för att panorera kameran medan du håller ned knappen (vänster). Klicka på **[!UICONTROL Orbit/Pan Toggle]** knappen igen för att återgå till **[!UICONTROL Orbit]** läge.
 
-1. Klicka på **[!UICONTROL Återställ visningsprogram]** för att återställa kameran. Den här åtgärden återför objektet till den fullständiga vyn och, om den är aktiverad, återtar den automatiska rotationen.
+1. Klicka **[!UICONTROL Reset Viewer]** för att återställa kameran. Den här åtgärden återför objektet till den fullständiga vyn och, om den är aktiverad, återtar den automatiska rotationen.
 
-1. Klicka på **[!UICONTROL Helskärm]** för att aktivera helskärmsläget. Använd **Esc** på tangentbordet eller klicka på **[!UICONTROL Helskärm]** igen för att återställa 3D-visningsprogrammet till sidinbäddat läge.
+1. Klicka **[!UICONTROL Full Screen]** för att aktivera helskärmsläget. Använd **Esc** på tangentbordet eller klicka **[!UICONTROL Full Screen]** igen för att återställa 3D-visningsprogrammet till sidinbäddat läge.
 
 ### Mus- och styrkuleenheter {#mouse-and-trackball-devices}
 
@@ -173,9 +178,9 @@ Så här arbetar du med 3D-komponenter med mus- och styrkuleenheter:
 
 1. Dra medan du håller ned den vänstra musknappen för att flytta (&quot;omloppsbana&quot;) vypunkten (&quot;kamera&quot;) runt objektet. Du kan visa objektet från vilken riktning som helst.
 
-1. Använd rullningshjulet för att flytta kameran närmare eller längre bort från objektet. Det liknar att zooma in och ut och gör att du kan granska information om objektet. Du kan också klicka och hålla ned **[!UICONTROL Zooma in]** eller **[!UICONTROL Zooma ut]** för att flytta kameran närmare eller längre bort från objektet.
+1. Använd rullningshjulet för att flytta kameran närmare eller längre bort från objektet. Det liknar att zooma in och ut och gör att du kan granska information om objektet. Du kan också klicka och hålla ned **[!UICONTROL Zoom In]** eller **[!UICONTROL Zoom Out]** knapparna för att flytta kameran närmare eller längre bort från objektet.
 
-1. Dra med **ALT/Option** -tangenten och vänster musknapp för att panorera kameran. Då flyttas kameran i sidled så att du kan titta på olika delar av objektet när du zoomar in. Du kan också klicka på knappen Växla **[!UICONTROL omloppsbana/panorering]** för att växla till **[!UICONTROL panoreringsläge]** och sedan dra med vänster musknapp för att panorera kameran. Klicka på Växla **[!UICONTROL omloppsbana/panorering]** igen för att återgå till **[!UICONTROL omloppsläge]** .
-1. Klicka på **[!UICONTROL Återställ visningsprogram]** för att återställa kameran. Den här åtgärden återför objektet till den fullständiga vyn och, om den är aktiverad, återtar den automatiska rotationen.
-1. Klicka på **[!UICONTROL Helskärm]** för att aktivera helskärmsläget. Använd **[!UICONTROL Esc]** på tangentbordet eller klicka på **[!UICONTROL Helskärm]** igen för att återställa 3D-visningsprogrammet till sidinbäddat läge.
+1. Dra med **ALT/Option** -tangenten och vänster musknapp för att panorera kameran. Då flyttas kameran i sidled så att du kan titta på olika delar av objektet när du zoomar in. Du kan också klicka på **[!UICONTROL Orbit/Pan Toggle]** knappen för att växla till **[!UICONTROL Pan]** läge och sedan dra med vänster musknapp för att panorera kameran. Klicka på **[!UICONTROL Orbit/Pan Toggle]** igen för att återgå till **[!UICONTROL Orbit]** läge.
+1. Klicka **[!UICONTROL Reset Viewer]** för att återställa kameran. Den här åtgärden återför objektet till den fullständiga vyn och, om den är aktiverad, återtar den automatiska rotationen.
+1. Klicka **[!UICONTROL Full Screen]** för att aktivera helskärmsläget. Använd tangenten på tangentbordet eller klicka **[!UICONTROL Escape]** **[!UICONTROL Full Screen]** igen för att återställa 3D-visningsprogrammet till sidinbäddat läge.
 
