@@ -1,8 +1,8 @@
 ---
 title: Anpassa datatjänster för utkast och överföring
 seo-title: Anpassa datatjänster för utkast och överföring
-description: AEM Forms lagrar som standard utkast och skickade adaptiva formulär i en standardnod på Publish-instansen. Du kan dock konfigurera tjänsterna för utkast och inskickning av data i AEM Forms för att anpassa lagringen av utkast och skickade adaptiva formulär.
-seo-description: AEM Forms lagrar som standard utkast och skickade adaptiva formulär i en standardnod på Publish-instansen. Du kan dock konfigurera tjänsterna för utkast och inskickning av data i AEM Forms för att anpassa lagringen av utkast och skickade adaptiva formulär.
+description: AEM Forms lagrar som standard utkast och skickade adaptiva formulär i en standardnod på Publish-instansen. Du kan dock konfigurera AEM Forms tjänster för utkast och inskickning av data för att anpassa lagringen av utkast och inskickade adaptiva formulär.
+seo-description: AEM Forms lagrar som standard utkast och skickade adaptiva formulär i en standardnod på Publish-instansen. Du kan dock konfigurera AEM Forms tjänster för utkast och inskickning av data för att anpassa lagringen av utkast och inskickade adaptiva formulär.
 uuid: c3ec1708-3b11-4142-93f0-1cffb6643f34
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,6 +10,9 @@ topic-tags: customization
 discoiquuid: 602fd6a9-9a65-411c-8475-a4082a3fdee0
 translation-type: tm+mt
 source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+workflow-type: tm+mt
+source-wordcount: '323'
+ht-degree: 0%
 
 ---
 
@@ -18,9 +21,9 @@ source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
 
 ## Översikt {#overview}
 
-Med AEM Forms kan användarna spara ett anpassat formulär som ett utkast. Utkastfunktionen ger användarna möjlighet att behålla ett pågående formulär. Användaren kan sedan fylla i och skicka formuläret när som helst från vilken enhet som helst.
+Med AEM Forms kan användare spara ett anpassat formulär som ett utkast. Utkastfunktionen ger användarna möjlighet att behålla ett pågående formulär. Användaren kan sedan fylla i och skicka formuläret när som helst från vilken enhet som helst.
 
-Som standard lagrar AEM Forms de användardata som är associerade med utkastet och överföringen på Publish-instansen i `/content/forms/fp` noden.
+Som standard lagrar AEM Forms användardata som är kopplade till utkastet och överföringen på Publish-instansen i `/content/forms/fp` noden.
 
 AEM Forms portalkomponenter innehåller dock datatjänster som gör att du kan anpassa implementeringen av lagring av användardata för utkast och inskickningar. Du kan till exempel lagra data i ett datalager som är implementerat i din organisation.
 
@@ -28,7 +31,7 @@ Om du vill anpassa lagringen av användardata måste du implementera tjänsterna
 
 ## Förutsättningar {#prerequisites}
 
-* Aktivera komponenter i [Forms-portalen](/help/forms/using/enabling-forms-portal-components.md)
+* Aktivera [Forms portalkomponenter](/help/forms/using/enabling-forms-portal-components.md)
 * Skapa en [formulärportalsida](/help/forms/using/creating-form-portal-page.md)
 * Aktivera [anpassningsbara formulär för formulärportalen](/help/forms/using/draft-submission-component.md)
 * Lär dig [implementeringsinformation för anpassad lagring](/help/forms/using/draft-submission-component.md#customizing-the-storage)
