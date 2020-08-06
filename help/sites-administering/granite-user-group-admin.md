@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '936'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 Eftersom Granite innehåller CRX-databasimplementeringen av JCR API-specifikationen har det en egen användar- och gruppadministration.
 
-Dessa konton utgör den underliggande grunden för [AEM-konton](/help/sites-administering/security.md) och eventuella kontoändringar som görs i Granite-administrationen återspeglas om/när kontona nås från [AEM-användarkonsolen](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console) (t.ex. `http://localhost:4502/useradmin`). På AEM Users Console kan du även hantera behörigheter och andra AEM-specifikationer.
+Dessa konton utgör den underliggande grunden för [AEM konton](/help/sites-administering/security.md) och eventuella kontoändringar som görs i Granite-administrationen återspeglas om/när kontona nås från [AEM användarkonsolen](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console) (t.ex. `http://localhost:4502/useradmin`). På AEM användarkonsol kan du även hantera behörigheter och andra AEM.
 
 Administrationskonsoler för vissa användare och grupper finns båda tillgängliga via **[verktygskonsolen](/help/sites-administering/tools-consoles.md)**i det pekoptimerade användargränssnittet:
 
@@ -89,7 +92,8 @@ Om du väljer **Användare** eller **Grupper** från verktygskonsolen öppnas r�
    * **Om**
    * **Kontoinställningar**
 
-      * **Status** Du kan flagga kontot som **aktivt** eller **inaktivt**.
+      * **Status** Du kan flagga kontot som antingen 
+**aktiv** eller **inaktiv**.
    * **Foto**
 
       Här kan du ladda upp ett foto som ska användas som avatar.
@@ -187,7 +191,7 @@ Om du väljer **Användare** eller **Grupper** från verktygskonsolen öppnas r�
 
    * **Beskrivning**
 
-       En beskrivning av gruppen.
+      En beskrivning av gruppen.
 
    * **Lägg till medlemmar i grupp**
 
