@@ -12,6 +12,9 @@ discoiquuid: a28539fc-c1dd-43bf-a47b-5f158c5611a7
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '515'
+ht-degree: 19%
 
 ---
 
@@ -32,12 +35,12 @@ Om lanseringen baseras på en [live-kopia](/help/sites-administering/msm.md) kom
 * se låssymboler (små hänglås) när du redigerar en komponent (innehåll och/eller egenskaper).
 * se fliken **Live-kopia** i **Sidegenskaper**
 
-En livecopy används för att synkronisera innehåll *från* källgrenen *till* startgrenen (för att hålla igång programmet uppdaterat med ändringarna i källan).
+En live-kopia används för att synkronisera innehåll *från* källgrenen *till* startgrenen (för att hålla startsidan uppdaterad med ändringarna i källan).
 
 Du kan göra ändringar på samma sätt som du kan redigera en vanlig Live-kopia; till exempel:
 
 * Om du klickar på ett stängt hänglås bryts synkroniseringen och du kan göra nya uppdateringar av innehållet när du startar programmet. När du har låst upp (öppet hänglås) skrivs inte ändringarna över av ändringar som gjorts på samma plats i källgrenen.
-* **Skjut upp** (och **återuppta**) arv för en viss sida.
+* **Gör uppehåll i** (och **återuppta**) arv för en viss sida.
 
 Mer information finns i [Ändra Live Copy-innehåll](/help/sites-administering/msm-livecopy.md#changing-live-copy-content) .
 
@@ -67,6 +70,7 @@ Du kan när som helst lägga till eller ta bort sidor till/från intervallet med
    * [Referenser (platskonsolen)](/help/sites-authoring/launches.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder:
 
       * Välj **Redigera start**.
+
    Källsidorna visas.
 
 1. Gör önskade ändringar och bekräfta sedan med **Spara**.
@@ -86,12 +90,13 @@ Du kan när som helst redigera egenskaperna för en start:
       * Välj **Egenskaper**.
    * [Referenser (platskonsolen)](/help/sites-authoring/launches.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder:
 
-      * Välj **Redigera egenskaper**.
+      * Select **Edit Properties**.
+
    Detaljerna visas.
 
 1. Gör önskade ändringar och bekräfta sedan med **Spara**.
 
-   Se [Startprogram - Evenemangsordningen](/help/sites-authoring/launches.md#launches-the-order-of-events) för information om syftet med och interaktionen mellan fälten **Startdatum** och **Produktionsklar** .
+   Avsnittet [Startsidor och händelseordning](/help/sites-authoring/launches.md#launches-the-order-of-events) innehåller information om syftet med och interaktionen mellan fälten **Startdatum** och **Produktionsklar**.
 
 ## Identifiera startstatus för en sida {#discovering-the-launch-status-of-a-page}
 
