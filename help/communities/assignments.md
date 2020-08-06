@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: aeacddc5-a128-40cd-a4c3-07fa173f90c4
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Komponenterna för aktiveringstilldelningar och [aktiveringskatalog](catalog.md)
 
 Med komponenten Aktivera tilldelningar kan den inloggade communitymedlemmen (instruktören) få åtkomst till sina tilldelade [aktiveringsresurser](resources.md).
 
-I självstudiekursen [Komma igång med AEM Communities för aktivering](getting-started-enablement.md) kan du se en medlems vy över tilldelningar och kataloger i [Experience the Published Site](enablement-published-site.md) (Upplev publicerad webbplats).
+I självstudiekursen [Komma igång med AEM Communities för aktivering](getting-started-enablement.md) kan du se en medlems vy över tilldelningar och kataloger i [Experience the Published Site](enablement-published-site.md) .
 
 ## Additional Information {#additional-information}
 
