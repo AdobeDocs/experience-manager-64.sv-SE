@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: d0b0e47b-e68d-407d-9d06-deca2039dede
 translation-type: tm+mt
 source-git-commit: 8326ee711558a390f79fc185fc37bbbb3097e309
+workflow-type: tm+mt
+source-wordcount: '690'
+ht-degree: 3%
 
 ---
 
@@ -34,15 +37,15 @@ Taggar är ett snabbt och enkelt sätt att klassificera innehåll på en webbpla
 
 1. Flexibel taggning: Taggar har många namn och ansikten: taggar, taxonomitermer, kategorier, etiketter och mycket annat. De är flexibla i sin innehållsmodell och i hur de kan användas. om du t.ex. anger målgrafik, kategoriserar och klassificerar innehåll eller skapar en sekundär innehållshierarki.
 
-1. Förbättrad sökning: standardsökkomponenten i AEM omfattar i stort sett skapade taggar och använda taggar som du kan använda filter på för att begränsa resultaten till de som är relevanta.
+1. Förbättrad sökning: standardsökkomponenten i AEM innehåller i stort sett skapade taggar och använda taggar som du kan använda filter på för att begränsa resultaten till de som är relevanta.
 
 1. SEO-aktivering: taggar som används som sidegenskaper visas automatiskt i de metataggar på sidan som gör den synlig för sökmotorer.
 
 1. Enkel sofistikering: -taggar kan skapas från ett ord och med en knapptryckning. Därefter kan en titel, beskrivning och ett obegränsat antal etiketter läggas till för att ge taggen mer semantik.
 
-1. Styckesammans konsekvens: taggningssystemet är en kärnkomponent i AEM och används av alla AEM-funktioner för att kategorisera innehåll. Programmeringsgränssnittet för taggning är även tillgängligt för utvecklare som skapar taggningsaktiverade program med tillgång till samma taxonomier.
+1. Styckesammans konsekvens: taggningssystemet är en kärnkomponent i AEM och används av alla AEM för att kategorisera innehåll. Programmeringsgränssnittet för taggning är även tillgängligt för utvecklare som skapar taggningsaktiverade program med tillgång till samma taxonomier.
 
-1. Kombinerar struktur och flexibilitet: AEM är idealiskt för att arbeta med strukturerad information på grund av inkapsling av sidor och sökvägar. Det är lika kraftfullt när du arbetar med ostrukturerad information på grund av den inbyggda textsökningen. Taggning kombinerar styrkan hos både strukturen och flexibiliteten.
+1. Kombinerar struktur och flexibilitet: AEM är idealiskt för att arbeta med strukturerad information på grund av inkapsling av sidor och banor. Det är lika kraftfullt när du arbetar med ostrukturerad information på grund av den inbyggda textsökningen. Taggning kombinerar styrkan hos både strukturen och flexibiliteten.
 
 När du utformar innehållsstrukturen för en plats och metadatarammet för resurser bör du tänka på att taggningen är enkel och tillgänglig.
 
@@ -50,7 +53,7 @@ När du utformar innehållsstrukturen för en plats och metadatarammet för resu
 
 I redigeringsmiljön kan författare lägga till taggar genom att gå till sidegenskaperna och ange en eller flera taggar i fältet **Taggar/nyckelord** .
 
-Om du vill använda [fördefinierade taggar](/help/sites-administering/tags.md)använder du fältet **Taggar** och fönstret **Markera taggar** i fönstret **Sidegenskaper** . Fliken **Standardtaggar** är standardnamnutrymmet, vilket innebär att det inte finns något `namespace-string:` prefix till taxonomin.
+To apply [pre-defined tags](/help/sites-administering/tags.md), in the **Page Properties** window use the **Tags** field and the **Select Tags** window. Fliken **Standardtaggar** är standardnamnutrymmet, vilket innebär att taxonomin inte har prefixet `namespace-string:`. 
 
 ![chlimage_1-92](assets/chlimage_1-92.png)
 
