@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8bd67d71-bcb7-4ca0-9751-3ff3ee054011
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '692'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 Flerspråkiga webbplatser har i allmänhet en viss mängd innehåll på flera språk. Webbplatsen är skriven på ett språk och sedan översatt till andra språk. Vanligtvis består flerspråkiga webbplatser av sidgrenar, där varje gren innehåller webbplatsens sidor på ett annat språk.
 
-Exemplet Geometrixx Demo Site innehåller flera språkgrenar och har följande struktur:
+Exempelversionen av Geometrixx Demo Site innehåller flera språkgrenar och har följande struktur:
 
 ```xml
 /content
@@ -35,13 +38,13 @@ Exemplet Geometrixx Demo Site innehåller flera språkgrenar och har följande s
 
 Varje språkgren på en webbplats kallas för en språkkopia. Rotsidan för en språkkopia, som kallas språkroten, identifierar språket för innehållet i språkkopian. är t.ex. `/content/geometrixx/fr` språkroten för den franska språkkopian. För språkkopior måste en [korrekt konfigurerad språkrot](/help/sites-administering/tc-prep.md#creating-a-language-root) användas, så att rätt språk används när översättningar av en källplats utförs.
 
-Den språkkopia som du ursprungligen skapade webbplatsinnehållet för är språkinställningen. Språkmallsidan är källan som översätts till andra språk.
+Den språkkopia som du ursprungligen skapade webbplatsinnehållet för är överordnad. överordnad språk är källan som översätts till andra språk.
 
 Gör så här för att förbereda webbplatsen för översättning:
 
-1. Skapa språkroten för din språkinställning. Exempelvis är språkroten för demowebbplatsen English Geometrixx /content/geometrixx/en. Kontrollera att språkroten är korrekt konfigurerad enligt informationen i [Skapa en språkrot](/help/sites-administering/tc-prep.md#creating-a-language-root).
-1. Skriv innehållet i din språkmaster.
-1. Skapa språkroten för varje språkkopia för webbplatsen. Den franska språkkopian av exempelwebbplatsen Geometrixx är till exempel /content/geometrixx/fr.
+1. Skapa språkroten för din överordnad. Exempelvis är språkroten för demowebbplatsen för engelska Geometrixx /content/geometrixx/en. Kontrollera att språkroten är korrekt konfigurerad enligt informationen i [Skapa en språkrot](/help/sites-administering/tc-prep.md#creating-a-language-root).
+1. Skriv innehåll på ditt språk överordnad.
+1. Skapa språkroten för varje språkkopia för webbplatsen. Den franska språkkopian av exempelwebbplatsen för Geometrixx är till exempel /content/geometrixx/fr.
 
 När du har förberett innehållet för översättning kan du automatiskt skapa saknade sidor i dina språkkopior och tillhörande översättningsprojekt. (Se [Skapa ett översättningsprojekt](/help/sites-administering/tc-manage.md).) En översikt över innehållsöversättningsprocessen i AEM finns i [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md).
 
@@ -55,14 +58,14 @@ Om du vill skapa språkroten skapar du en sida och använder en ISO-språkkod so
 
 * `<language-code>_<country-code>` eller `<language-code>-<country-code>`Den landskod som stöds är en gemen- eller versal tvåbokstavskod enligt definitionen i ISO 3166, till exempel `en_US`, `en_us`, `en_GB`, `en-gb`.
 
-Du kan använda båda formaten enligt den struktur som du har valt för den globala platsen.  Rotsidan för den franska språkkopian av Geometrixx-webbplatsen har `fr` egenskapen Name. Observera att egenskapen Namn används som namn på sidnoden i databasen och därför bestämmer sökvägen till sidan. (http://localhost:4502/content/geometrixx/fr.html)
+Du kan använda båda formaten enligt den struktur som du har valt för den globala platsen.  Rotsidan för den franska språkkopian av Geometrixx har till exempel `fr` egenskapen Namn. Observera att egenskapen Namn används som namn på sidnoden i databasen och därför bestämmer sökvägen till sidan. (http://localhost:4502/content/geometrixx/fr.html)
 
 I följande procedur används det pekoptimerade användargränssnittet för att skapa en språkkopia av en webbplats. Instruktioner om hur du använder det klassiska användargränssnittet finns i [Skapa en språkrot med det klassiska användargränssnittet](/help/sites-administering/tc-lroot-classic.md).
 
 1. Navigera till Webbplatser.
 1. Klicka på eller tryck på den webbplats där du vill skapa en språkkopia.
 
-   Om du till exempel vill skapa en språkkopia av webbplatsen Geometrixx Outdoor klickar eller trycker du på Geometrixx Outdoor Site.
+   Om du till exempel vill skapa en språkkopia av Geometrixx Outdoors-webbplatsen klickar du på eller trycker på Geometrixx Outdoors webbplats.
 
 1. Klicka eller tryck på Skapa och sedan på eller på Skapa sida.
 
