@@ -28,7 +28,7 @@ Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid si
 
 >[!CAUTION]
 >
->Om du kör en version som är äldre än AEM 6.4.3 måste användaren ha **behörigheten Ändra/Skapa/Ta bort** på noden `/content/versionhistory` för att kunna använda funktionen.
+>Om du kör en version som är äldre än AEM 6.4.3 måste användaren ha behörigheten **Ändra/Skapa/Ta bort** på noden `/content/versionhistory` för att kunna använda funktionen.
 >
 >Mer teknisk information om den här funktionen finns i [Developing and Page Diff](/help/sites-developing/pagediff.md#operation-details) .
 
