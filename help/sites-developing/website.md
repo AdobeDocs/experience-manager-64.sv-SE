@@ -22,14 +22,14 @@ ht-degree: 3%
 
 >[!CAUTION]
 >
->I den här artikeln beskrivs hur du skapar en webbplats med JSP och baserat på det klassiska användargränssnittet. Adobe rekommenderar att du använder de senaste AEM-teknikerna för dina webbplatser enligt beskrivningen i artikeln [Komma igång med att utveckla AEM Sites](/help/sites-developing/getting-started.md).
+>I den här artikeln beskrivs hur du skapar en webbplats med JSP och baserat på det klassiska användargränssnittet. Adobe rekommenderar att du utnyttjar den senaste AEM tekniken för dina webbplatser enligt beskrivningen i artikeln [Komma igång med att utveckla AEM Sites](/help/sites-developing/getting-started.md).
 
 Med den här självstudiekursen kan du skapa en komplett webbplats med Adobe Experience Manager (AEM). Webbplatsen kommer att vara baserad på en allmän webbplats och riktar sig främst till webbutvecklare. All utveckling sker i en författarmiljö.
 
 I den här självstudien beskrivs hur du:
 
 1. Installera AEM.
-1. Få åtkomst till CRXDE Lite (utvecklingsmiljön).
+1. Öppna CRXDE Lite (utvecklingsmiljön).
 1. Ställ in projektstrukturen i CRXDE Lite.
 1. Skapa mallen, komponenten och skripten som används som bas för att skapa innehållssidor.
 1. Skapa webbplatsens rotsida och sedan innehållssidorna.
@@ -50,7 +50,7 @@ När du har utfört alla steg ser sidorna ut så här:
 
 **Ladda ned slutresultatet**
 
-Ladda ned webbplatsen-1.0.zip om du vill följa med i självstudiekursen i stället för att genomföra övningarna. Den här filen är ett AEM-innehållspaket som innehåller resultatet av den här självstudiekursen. Använd [Package Manager](/help/sites-administering/package-manager.md) för att installera paketet till din författarinstans.
+Ladda ned webbplatsen-1.0.zip om du vill följa med i självstudiekursen i stället för att genomföra övningarna. Den här filen är ett AEM innehållspaket som innehåller resultatet av den här självstudiekursen. Använd [Package Manager](/help/sites-administering/package-manager.md) för att installera paketet till din författarinstans.
 
 >[!NOTE]
 >Om du installerar det här paketet skrivs alla resurser på din redigeringsinstans som du har skapat med den här självstudiekursen över.
@@ -59,23 +59,23 @@ Webbplatsinnehållspaket
 
 [Hämta fil](assets/website-1_0.zip)
 
-## Installerar Adobe Experience Manager {#installing-adobe-experience-manager}
+## Installera Adobe Experience Manager {#installing-adobe-experience-manager}
 
-Om du vill installera en AEM-instans för att utveckla din webbplats följer du instruktionerna för att konfigurera en [distributionsmiljö med författare- och publiceringsinstanser](/help/sites-deploying/deploy.md#author-and-publish-installs)eller utför en [allmän installation](/help/sites-deploying/deploy.md#default-local-install). Den generiska installationen innebär att du hämtar AEM Quickstart JAR-filen, placerar filen license.properties i samma katalog som JAR-filen och dubbelklickar på JAR-filen.
+Om du vill installera en AEM för att utveckla din webbplats följer du instruktionerna för att konfigurera en [distributionsmiljö med författare- och publiceringsinstanser](/help/sites-deploying/deploy.md#author-and-publish-installs)eller utför en [allmän installation](/help/sites-deploying/deploy.md#default-local-install). Den generiska installationen innefattar att hämta den AEM QuickStart JAR-filen, placera filen license.properties i samma katalog som JAR-filen och dubbelklicka på JAR-filen.
 
-När du har installerat AEM får du tillgång till CRXDE Lite-utvecklingsmiljön genom att klicka på länken CRXDE Lite på välkomstsidan:
+När du har installerat AEM kommer du åt utvecklingsmiljön i CRXDE Lite genom att klicka på länken CRXDE Lite på välkomstsidan:
 
 ![chlimage_1-100](assets/chlimage_1-100.png)
 
 >[!NOTE]
 >
->URL:en för CRXDE Lite för en AEM-redigeringsinstans som installeras lokalt med standardporten är [http://localhost:4502/crx/de/](http://localhost:4502/crx/de/).
+>URL:en för CRXDE Lite för en AEM som installeras lokalt med standardporten är [http://localhost:4502/crx/de/](http://localhost:4502/crx/de/).
 
 ## Konfigurera projektstrukturen i CRXDE Lite {#setting-up-the-project-structure-in-crxde-lite}
 
 Använd CRXDE Lite för att skapa programstrukturen för mywebsite i databasen:
 
-1. Högerklicka på mappen i trädet till vänster om CRXDE Lite och klicka på **`/apps`** mappen **[!UICONTROL Create > Create Folder]**. I dialogrutan **Skapa mapp** skriver du `mywebsite` mappnamnet och klickar på **[!UICONTROL OK**.
+1. Högerklicka på **`/apps`** mappen i trädet till vänster om CRXDE Lite och klicka på **[!UICONTROL Create > Create Folder]**. I dialogrutan **Skapa mapp** skriver du `mywebsite` mappnamnet och klickar på **[!UICONTROL OK**.
 1. Högerklicka på `/apps/mywebsite` mappen och klicka på **[!UICONTROL Create > Create Folder]**. I **[!UICONTROL Create Folder]** dialogrutan skriver du mappnamnet `components` och klickar på **[!UICONTROL OK]**.
 1. Högerklicka på `/apps/mywebsite` mappen och klicka på **[!UICONTROL Create > Create Folder]**. I **[!UICONTROL Create Folder]** dialogrutan skriver du mappnamnet `templates` och klickar på **[!UICONTROL OK]**.
 
@@ -97,7 +97,7 @@ Exempel på static.css-fil och bilder
 
 [Hämta fil](assets/mywebsite.zip)
 
-1. Klicka på på AEM-välkomstsidan **[!UICONTROL Tools]**. ([http://localhost:4502/libs/cq/core/content/welcome.html](http://localhost:4502/libs/cq/core/content/welcome.html))
+1. På AEM välkomstsida klickar du på **[!UICONTROL Tools]**. ([http://localhost:4502/libs/cq/core/content/welcome.html](http://localhost:4502/libs/cq/core/content/welcome.html))
 
    ![chlimage_1-102](assets/chlimage_1-102.png)
 
@@ -177,7 +177,7 @@ Skapa den *komponent* som definierar innehållet och återger sidorna som använ
 
 Lägg till kod i skriptet contentpage.jsp för att definiera sidinnehållet.
 
-1. Öppna filen i CRXDE Lite `contentpage.jsp` i `/apps/mywebsite/components/contentpage`. Filen innehåller följande kod som standard:
+1. Öppna filen `contentpage.jsp` i CRXDE Lite `/apps/mywebsite/components/contentpage`. Filen innehåller följande kod som standard:
 
    ```java
    <%--
@@ -218,7 +218,7 @@ Lägg till kod i skriptet contentpage.jsp för att definiera sidinnehållet.
 
 I det här avsnittet skapar du följande sidor som alla använder innehållsidesmallen: Min webbplats, engelska, produkter, tjänster och kunder.
 
-1. Klicka på Webbplatser på AEM-välkomstsidan ([http://localhost:4502/libs/cq/core/content/welcome.html](http://localhost:4502/libs/cq/core/content/welcome.html)).
+1. Klicka på Webbplatser på AEM välkomstsida ([http://localhost:4502/libs/cq/core/content/welcome.html](http://localhost:4502/libs/cq/core/content/welcome.html)).
 
    ![chlimage_1-109](assets/chlimage_1-109.png)
 
@@ -260,7 +260,7 @@ I det här avsnittet skapar du följande sidor som alla använder innehållsides
 
    ![chlimage_1-111](assets/chlimage_1-111.png)
 
-1. Om du vill länka sidorna till mywebsite design väljer du `/content/mywebsite/en/jcr:content` noden i CRXDE Lite. Ange följande värden för en ny egenskap på **[!UICONTROL Properties]** fliken och klicka sedan på Lägg till:
+1. Om du vill länka sidorna till webbplatsdesignen väljer du `/content/mywebsite/en/jcr:content` noden i CRXDE Lite. Ange följande värden för en ny egenskap på **[!UICONTROL Properties]** fliken och klicka sedan på Lägg till:
 
    * **[!UICONTROL Name]**: cq:designPath
    * **[!UICONTROL Type]**: Sträng
@@ -274,7 +274,7 @@ I det här avsnittet skapar du följande sidor som alla använder innehållsides
 
 ### Förbättra innehållssidans skript {#enhancing-the-contentpage-script}
 
-I det här avsnittet beskrivs hur du förbättrar innehållssidans skript med AEM Foundation-komponentskript och genom att skriva egna skript.
+I det här avsnittet beskrivs hur du förbättrar innehållsidesskriptet med AEM Foundation-komponentskript och genom att skriva egna skript.
 
 Sidan ser ut så här **[!UICONTROL Products]** :
 
@@ -282,7 +282,7 @@ Sidan ser ut så här **[!UICONTROL Products]** :
 
 #### Använda skript för startsidan {#using-the-foundation-page-scripts}
 
-I den här övningen konfigurerar du sidinnehållskomponenten så att dess supertyp är AEM Page-komponenten. Eftersom komponenter ärver funktionerna i sin supertyp ärver sidinnehållet skripten och egenskaperna för sidkomponenten.
+I den här övningen konfigurerar du sidinnehållskomponenten så att dess överordnade typ är AEM sidkomponent. Eftersom komponenter ärver funktionerna i sin supertyp ärver sidinnehållet skripten och egenskaperna för sidkomponenten.
 
 I en komponent-JSP-kod kan du till exempel referera till de skript som supertypkomponenten tillhandahåller som om de är inkluderade i komponenten.
 
@@ -415,7 +415,7 @@ Den övre navigeringen ser ut så här:
 
 #### Skapa den övre navigeringskomponenten {#creating-the-top-navigation-component-1}
 
-1. I CRXDE Lite högerklickar du `/apps/mywebsite/components`och väljer **[!UICONTROL Create]** sedan **[!UICONTROL Create Component]**.
+1. Högerklicka i CRXDE Lite `/apps/mywebsite/components`och välj **[!UICONTROL Create]** sedan **[!UICONTROL Create Component]**.
 1. Ange följande i **[!UICONTROL Create Component]** fönstret:
 
    * **[!UICONTROL Label]**: `topnav`
@@ -428,7 +428,7 @@ Den övre navigeringen ser ut så här:
 
 Lägg till återgivningsskriptet längst upp för att generera textlänkar till underordnade sidor:
 
-1. I CRXDE Lite öppnar du filen `topnav.jsp` under `/apps/mywebsite/components/topnav`.
+1. Öppna filen i CRXDE Lite `topnav.jsp` under `/apps/mywebsite/components/topnav`.
 1. Ersätt koden som finns där genom att kopiera och klistra in följande kod:
 
    ```xml
@@ -709,7 +709,7 @@ Skapa två sidor under **[!UICONTROL Products]** sidan. För varje sida, som bes
 
 Så här skapar du komponenten listchildren:
 
-1. I CRXDE Lite högerklickar du `/apps/mywebsite/components`och väljer **[!UICONTROL Create]** sedan **[!UICONTROL Create Component]**.
+1. Högerklicka i CRXDE Lite `/apps/mywebsite/components`och välj **[!UICONTROL Create]** sedan **[!UICONTROL Create Component]**.
 1. Ange följande egenskapsvärden i dialogrutan och klicka sedan på **[!UICONTROL Next]**:
 
    * **[!UICONTROL Label]**: listchildren.
@@ -722,7 +722,7 @@ Så här skapar du komponenten listchildren:
 
 Utveckla skriptet för komponenten listchildren.
 
-1. I CRXDE Lite öppnar du filen `listchildren.jsp` under `/apps/mywebsite/components/listchildren`.
+1. Öppna filen i CRXDE Lite `listchildren.jsp` under `/apps/mywebsite/components/listchildren`.
 1. Ersätt standardkoden med följande kod:
 
    ```xml
@@ -802,7 +802,7 @@ Skapa den dialogruta som används för att konfigurera komponentegenskaperna lis
 
 Så här tar du med komponenten listchild i innehållsideskomponenten:
 
-1. I CRXDE Lite öppnar du filen `left.jsp` under `/apps/mywebsite/components/contentpage` och hittar följande kod (rad 4):
+1. Öppna filen i CRXDE Lite `left.jsp` under `/apps/mywebsite/components/contentpage` och leta reda på följande kod (rad 4):
 
    ```xml
    <div>newslist</div>
@@ -867,7 +867,7 @@ Så här skapar du logotypkomponenten:
 
 I det här avsnittet beskrivs hur du skapar skriptet för att visa logotypbilden med en länk till hemsidan.
 
-1. I CRXDE Lite öppnar du filen `logo.jsp` under `/apps/mywebsite/components/logo`.
+1. Öppna filen i CRXDE Lite `logo.jsp` under `/apps/mywebsite/components/logo`.
 1. Följande kod skapar länken till webbplatsens hemsida och lägger till en referens till logotypbilden. Kopiera koden till `logo.jsp`:
 
    ```xml
@@ -1235,7 +1235,7 @@ Det finns flera alternativ, både i redigeringsläge och designläge.
    <cq:include path="toolbar" resourceType="foundation/components/toolbar"/>
    ```
 
-1. I mappträdet på sidan AEM-webbplatser väljer du `Websites/My Website/English`och klickar sedan på **[!UICONTROL New > New Page]**. Ange följande egenskapsvärden och klicka på Skapa:
+1. I mappträdet på sidan AEM webbplatser väljer du `Websites/My Website/English`och klickar sedan på **[!UICONTROL New > New Page]**. Ange följande egenskapsvärden och klicka på Skapa:
 
    * **[!UICONTROL Title]**: Verktygsfält
    * Välj **[!UICONTROL My Website Content Page Template]**
@@ -1265,7 +1265,7 @@ Din sökruta ser ut så här på **[!UICONTROL English]** sidan:
 
 #### Skapa sökkomponenten {#creating-the-search-component-1}
 
-1. I CRXDE Lite högerklickar du `/apps/mywebsite/components`och väljer **[!UICONTROL Create]** sedan **[!UICONTROL Create Component]**.
+1. Högerklicka i CRXDE Lite `/apps/mywebsite/components`och välj **[!UICONTROL Create]** sedan **[!UICONTROL Create Component]**.
 1. Använd dialogrutan för att konfigurera komponenten:
 
    1. Ange följande egenskapsvärden på den första panelen:
@@ -1450,7 +1450,7 @@ I det här avsnittet beskrivs hur du skapar sökskriptet:
 
 Om du vill ta med en sökruta i det vänstra avsnittet av innehållssidan gör du så här:
 
-1. I CRXDE Lite öppnar du filen `left.jsp` under `/apps/mywebsite/components/contentpage` och hittar följande kod (rad 2):
+1. Öppna filen i CRXDE Lite `left.jsp` under `/apps/mywebsite/components/contentpage` och leta reda på följande kod (rad 2):
 
    ```xml
    %><div class="left">
@@ -1510,7 +1510,7 @@ I det här avsnittet inkluderar du komponenten Inheritance Paragraph System (ipa
 
 För den här komponenten kan du ange flera parametrar i både redigeringsläge och designläge.
 
-1. I CRXDE Lite navigerar du till `/apps/mywebsite/components/contentpage`filen `right.jsp` och ersätter:
+1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`, öppnar filen `right.jsp` och ersätter:
 
    ```java
    <div>iparsys</div>
