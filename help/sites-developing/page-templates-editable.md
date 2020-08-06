@@ -54,13 +54,13 @@ Det här dokumentet förutsätter att du redan är bekant med att skapa och redi
 >[!NOTE]
 >
 >Följande självstudiekurs kan också vara intressant för att konfigurera en redigerbar sidmall i ett nytt projekt:\
->[Getting Started with AEM Sites Part 2 - Creating a Base Page and Template](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part2.html)
+>[Komma igång med AEM Sites del 2 - Skapa en bassida och mall](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part2.html)
 
 ## Creating a New Template {#creating-a-new-template}
 
 Skapandet av redigerbara mallar görs huvudsakligen med [mallkonsolen och mallredigeraren](/help/sites-authoring/templates.md) av en mallskapare. I det här avsnittet ges en översikt över processen och en beskrivning av vad som händer på teknisk nivå.
 
-Mer information om hur du använder redigerbara mallar i ett AEM-projekt finns i [Skapa ett AEM-projekt med Lazybone](https://helpx.adobe.com/experience-manager/using/aem_lazybones.html).
+Mer information om hur du använder redigerbara mallar i ett AEM projekt finns i [Skapa ett AEM projekt med Lazybone](https://helpx.adobe.com/experience-manager/using/aem_lazybones.html).
 
 När du skapar en ny redigerbar mall:
 
@@ -81,6 +81,7 @@ När du skapar en ny redigerbar mall:
       * Om du skapar en mall i en anpassad mapp utanför Web.Retail-exempelinnehållet kan du välja Foundation Components eller använda [Core Components](https://helpx.adobe.com/experience-manager/core-components/using/developing.html).
    * Om du vill att sidförfattare ska kunna lägga till och ta bort komponenter lägger du till ett styckesystem i mallen.
    * Komponenter kan låsas upp och låsas igen så att du kan definiera ursprungligt innehåll.
+
    Mer information om hur en mallskapare definierar strukturen finns i [Skapa sidmallar](/help/sites-authoring/templates.md#editing-a-template-structure-template-author).
 
    Information om strukturens tekniska detaljer finns i [Struktur](/help/sites-developing/page-templates-editable.md#structure) i det här dokumentet.
@@ -91,6 +92,7 @@ När du skapar en ny redigerbar mall:
 
       * Till exempel de tillgängliga komponenterna eller minimi-/maximidimensionerna.
    * Dessa gäller för mallen (och sidor som skapas med mallen).
+
    Mer information om hur en mallskapare definierar profiler finns i [Skapa sidmallar](/help/sites-authoring/templates.md#editing-a-template-structure-template-author).
 
    Mer teknisk information om profiler finns i [Innehållsprinciper](/help/sites-developing/page-templates-editable.md#content-policies) i det här dokumentet.
@@ -99,6 +101,7 @@ När du skapar en ny redigerbar mall:
 
    * Ursprungligt innehåll definierar innehåll som visas när en sida skapas baserat på mallen.
    * Startinnehållet kan sedan redigeras av sidförfattare.
+
    Mer information om hur en mallskapare definierar strukturen finns i [Skapa sidmallar](/help/sites-authoring/templates.md#editing-a-template-initial-content-author).
 
    Teknisk information om ursprungligt innehåll finns i [Inledande innehåll](/help/sites-developing/page-templates-editable.md#initial-content) i det här dokumentet.
@@ -107,6 +110,7 @@ När du skapar en ny redigerbar mall:
 
    * Du kan definiera mallayouten för ett antal olika enheter.
    * Responsiv layout för mallar fungerar på samma sätt som för sidredigering.
+
    Mer information om hur mallskaparen definierar mallayouten finns i [Skapa sidmallar](/help/sites-authoring/templates.md#editing-a-template-layout-template-author).
 
    Mer teknisk information om mallayout finns i [Layout](/help/sites-developing/page-templates-editable.md#layout) i det här dokumentet.
@@ -115,6 +119,7 @@ När du skapar en ny redigerbar mall:
 
    * En mall kan aktiveras eller inaktiveras för att göra den tillgänglig eller inte tillgänglig för sidförfattare.
    * En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
+
    Mer information om hur mallskaparen aktiverar en mall finns i [Skapa sidmallar](/help/sites-authoring/templates.md#enabling-and-allowing-a-template-template-author).
 
    Mer teknisk information om hur du aktiverar en mall finns i [Aktivera och tillåta en mall att](/help/sites-developing/page-templates-editable.md#enabling-and-allowing-a-template-for-use)använda i det här dokumentet
@@ -123,6 +128,7 @@ När du skapar en ny redigerbar mall:
 
    * När du använder en mall för att skapa en ny sida finns det ingen synlig skillnad och ingen indikation mellan statiska och redigerbara mallar.
    * För sidförfattaren är processen genomskinlig.
+
    Mer information om hur en sidförfattare använder mallar för att skapa en sida finns i [Skapa och ordna sidor](/help/sites-authoring/managing-pages.md#templates).
 
    Mer teknisk information om hur du skapar sidor med redigerbara mallar finns i [Gällande innehållssidor](/help/sites-developing/page-templates-editable.md#resultant-content-pages) i det här dokumentet.
@@ -152,7 +158,7 @@ Du kan använda följande mappar för att ordna dina mallar:
 >
 >Även om du kan kapsla dina mappar visas de som en platt struktur när användaren visar dem i **mallkonsolen** .
 
-I en standard-AEM-instans finns den **globala** mappen redan i mallkonsolen. Detta innehåller standardmallar och fungerar som reserv om inga principer och/eller malltyper hittas i den aktuella mappen. Du kan lägga till dina standardmallar i den här mappen eller skapa en ny mapp (rekommenderas).
+I en AEM finns den **globala** mappen redan i mallkonsolen. Detta innehåller standardmallar och fungerar som reserv om inga principer och/eller malltyper hittas i den aktuella mappen. Du kan lägga till dina standardmallar i den här mappen eller skapa en ny mapp (rekommenderas).
 
 >[!NOTE]
 >
@@ -424,7 +430,7 @@ När du skapar en ny redigerbar mall kopieras värdet från malltypen till den e
 Om du har skapat en mall som kan användas som bas för andra mallar kan du kopiera den här mallen som en malltyp.
 
 1. Skapa en mall på samma sätt som du skapar redigerbara mallar [som här](/help/sites-authoring/templates.md#creating-a-new-template-template-author), som fungerar som bas för din malltyp.
-1. Med CRXDE Lite kopierar du den nya mallen från `templates` noden till `template-types` noden under [mallmappen](/help/sites-developing/page-templates-editable.md#template-folders).
+1. Kopiera med CRXDE Lite den nya mallen från `templates` noden till `template-types` noden under [mallmappen](/help/sites-developing/page-templates-editable.md#template-folders).
 1. Ta bort mallen från `templates` noden under [mallmappen](/help/sites-developing/page-templates-editable.md#template-folders).
 1. Ta bort alla `template-types` och `cq:template``cq:templateType` egenskaper i kopian av mallen som finns under `jcr:content` noden.
 
