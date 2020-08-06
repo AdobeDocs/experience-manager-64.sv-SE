@@ -1,8 +1,8 @@
 ---
 title: Avlastar jobb
 seo-title: Avlastar jobb
-description: Lär dig hur du konfigurerar och använder AEM-instanser i en topologi för att utföra specifika typer av bearbetning.
-seo-description: Lär dig hur du konfigurerar och använder AEM-instanser i en topologi för att utföra specifika typer av bearbetning.
+description: Lär dig hur du konfigurerar och använder AEM instanser i en topologi för att utföra specifika typer av bearbetning.
+seo-description: Lär dig hur du konfigurerar och använder AEM instanser i en topologi för att utföra specifika typer av bearbetning.
 uuid: e971d403-dfd2-471f-b23d-a67e35f1ed88
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -75,7 +75,7 @@ För varje kluster visas en lista med klustermedlemmar som anger i vilken ordnin
 
 För varje instans i klustret kan du se flera topologirelaterade egenskaper:
 
-* En lista över tillåtna ämnen för instansens jobbkonsument.
+* En tillåtelselista med ämnen för förekomstens jobbkonsument.
 * De slutpunkter som exponeras för anslutning till topologin.
 * De jobbämnen som instansen är registrerad för avlastning för.
 * Jobbämnena som instansen bearbetar.
@@ -108,10 +108,10 @@ Gör så här för att öppna sidan Topology Management i webbkonsolen:
 
 Resursbaserad sökningstjänst för Apache Sling körs på varje instans för att styra hur instanser från Experience Manager interagerar med en topologi.
 
-Identifieringstjänsten skickar periodiska POST-begäranden (hjärtslag) till Topology Connector-tjänster för att upprätta och underhålla anslutningar till topologin. Topology Connector-tjänsten upprätthåller en lista över tillåtna IP-adresser eller värdnamn som tillåts ansluta till topologin:
+Identifieringstjänsten skickar periodiska POSTER (hjärtslag) till Topology Connector-tjänster för att upprätta och underhålla kopplingar till topologin. Topology Connector-tjänsten underhåller en tillåtelselista med IP-adresser eller värdnamn som kan ansluta till topologin:
 
 * Om du vill koppla en instans till en topologi anger du URL:en för Topology Connector-tjänsten för rotmedlemmen.
-* Om du vill att en instans ska kunna ansluta till en topologi lägger du till instansen i listan över tillåtna för rotmedlemmens Topology Connector-tjänst.
+* Om du vill göra det möjligt för en instans att ansluta till en topologi lägger du till instansen tillåtelselista i rotmedlemmens Topology Connector-tjänst.
 
 Använd webbkonsolen eller en sling:OsgiConfig-nod för att konfigurera följande egenskaper för tjänsten org.apache.sling.discovery.impt.Config:
 
@@ -148,7 +148,7 @@ Använd webbkonsolen eller en sling:OsgiConfig-nod för att konfigurera följand
    <td>http://localhost:4502/libs/sling/topology/connector</td> 
   </tr> 
   <tr> 
-   <td>Topology Connector - lista över tillåtna</td> 
+   <td>Topology Connector tillåtelselista</td> 
    <td>topologyConnectorWhitelist</td> 
    <td>Listan över IP-adresser eller värdnamn som tillåts av den lokala Topology Connector-tjänsten i topologin. </td> 
    <td><p>localhost</p> <p>127.0.0.1</p> </td> 
@@ -169,16 +169,16 @@ Använd följande procedur för att ansluta en CQ-instans till rotmedlemmen i en
 1. Klicka på Konfigurera sökningstjänst.
 1. Lägg till ett objekt i egenskapen Topology Connector URL:er och ange URL:en för rotopologimedlemmens Topology Connector-tjänst. URL:en har formatet https://rootservername:4502/libs/sling/topology/connector.
 
-Utför följande procedur på rotmedlemmen i topologin. Proceduren lägger till namnen på de andra topologimedlemmarna i listan över tillåtna identifieringstjänster.
+Utför följande procedur på rotmedlemmen i topologin. Proceduren lägger till namnen på de andra topologimedlemmarna i tillåtelselista för sökningstjänsten.
 
 1. Öppna webbkonsolen i webbläsaren. ([http://localhost:4502/system/console](http://localhost:4502/system/console))
 1. Klicka på Meny > Topologihantering.
 1. Klicka på Konfigurera sökningstjänst.
-1. För varje medlem i topologin lägger du till ett objekt i listeegenskapen Tillåt i Topology Connector och anger värdnamnet eller IP-adressen för topologimedlemmen.
+1. För varje medlem i topologin lägger du till ett objekt i tillåtelselista-egenskapen Topology Connector och anger värdnamnet eller IP-adressen för topologimedlemmen.
 
 ## Konfigurera ämnesförbrukning {#configuring-topic-consumption}
 
-Använd Avlastningsläsaren för att konfigurera ämnesförbrukning för Experience Manager-instanserna i topologin. För varje förekomst kan du ange ämnen som den upptar. Om du till exempel vill konfigurera din topologi så att endast en instans förbrukar ämnen av en viss typ, inaktiverar du ämnet för alla instanser utom en.
+Använd Avlastningsläsaren för att konfigurera ämnesförbrukning för Experience Manager-instanserna i topologin. För varje förekomst kan du ange ämnen som den upptar. Om du till exempel vill konfigurera din topologi så att bara en instans förbrukar ämnen av en viss typ, inaktiverar du ämnet för alla instanser utom en.
 
 Jobb distribueras som summeringsinstanser där det associerade ämnet är aktiverat med hjälp av resurslogik.
 
@@ -200,6 +200,7 @@ Jobb distribueras som summeringsinstanser där det associerade ämnet är aktive
    * Aktiverad: Den här instansen förbrukar jobb i det här avsnittet.
    * Inaktiverad: Den här instansen förbrukar inte jobb i det här avsnittet.
    * Exklusivt: Den här instansen förbrukar endast jobb i det här avsnittet.
+
    **Obs!** När du väljer Exklusiv för ett ämne ställs alla andra ämnen automatiskt in på Inaktiverad.
 
 ### Installerade jobbkonsumenter {#installed-job-consumers}
@@ -214,11 +215,11 @@ Flera JobConsumer-implementeringar installeras med Experience Manager. Ämnen so
 
 ### Inaktivera och aktivera ämnen för en instans {#disabling-and-enabling-topics-for-an-instance}
 
-Tjänsten Apache Sling Job Consumer Manager tillhandahåller egenskaperna för ämneslistor och blockeringslistor. Konfigurera dessa egenskaper för att aktivera eller inaktivera bearbetning av specifika ämnen i en Experience Manager-instans.
+Tjänsten Apache Sling Job Consumer Manager innehåller egenskaperna tillåtelselista och blockeringslista. Konfigurera dessa egenskaper för att aktivera eller inaktivera bearbetning av specifika ämnen i en Experience Manager-instans.
 
 **Obs!** Om instansen tillhör en topologi kan du även använda Avlastningsläsaren på vilken dator som helst i topologin för att aktivera eller inaktivera ämnen.
 
-Den logik som skapar listan med aktiverade ämnen tillåter först alla ämnen som finns i listan över tillåtna och tar sedan bort ämnen som finns i blocklistan. Som standard är alla ämnen aktiverade (värdet i listan över tillåtna är `*`) och inga ämnen är inaktiverade (listan över tillåtna har inget värde).
+Den logik som skapar listan med aktiverade ämnen tillåter först alla ämnen som finns i tillåtelselista och tar sedan bort ämnen som finns i blockeringslista. Som standard aktiveras alla ämnen (värdet tillåtelselista är `*`) och inga ämnen inaktiveras (blockeringslista har inget värde).
 
 Använd webbkonsolen eller en `sling:OsgiConfig` nod för att konfigurera följande egenskaper. För `sling:OsgiConfig` noder är PID för tjänsten Job Consumer Manager org.apache.sling.event.impl.job.JobConsumerManager.
 
@@ -332,7 +333,7 @@ Följande procedur utgår från följande egenskaper för avlastningstopologin:
 * Användare som inte interagerar direkt med en eller flera Experience Manager-instanser som bearbetar DAM-resurserna. De här instanserna är dedikerade till bakgrundsbearbetning av DAM-resurser.
 
 1. Konfigurera sökningstjänsten för varje Experience Manager-instans så att den pekar på rotkonnektorn för topografi. (Se [Konfigurera topologimedlemskap](#title4).)
-1. Konfigurera rotTopography Connector så att anslutande instanser finns i listan över tillåtna.
+1. Konfigurera Topography Connector för roten så att anslutande instanser finns på tillåtelselista.
 1. Öppna Avlastningsläsaren och inaktivera `com/adobe/granite/workflow/offloading` avsnittet om de instanser som användarna interagerar med för att överföra eller ändra DAM-resurser.
 
    ![chlimage_1-116](assets/chlimage_1-116.png)
