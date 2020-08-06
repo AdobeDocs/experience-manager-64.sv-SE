@@ -10,6 +10,9 @@ topic-tags: correspondence-management
 discoiquuid: a80254a2-245c-48fa-b460-958eeda085af
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '614'
+ht-degree: 0%
 
 ---
 
@@ -47,11 +50,11 @@ Så här anpassar du teckensnitt genom att redigera filen tbxeditor-config.xml:
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/config
+      **Sökväg:** /libs/fd/cm/config
 
-      **** Plats: /apps/
+      **Plats:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
       ![Överläggsnod](assets/2-2.png)
 
@@ -163,6 +166,7 @@ Så här anpassar du teckensnitt genom att redigera filen tbxeditor-config.xml:
       * Egenskaper som höjd och teckenavstånd
       * Standardvärden för teckensnittsfamilj och -storlek, höjd, teckenavstånd och datumformat
       * Punktindrag
+
       Om du till exempel vill lägga till ett japanskt teckensnitt med namnet Sazanami Mincho Medium måste du göra följande i XML-filen: `<font>Sazanami Mincho Medium</font>`. Du måste också ha det här teckensnittet installerat på klientdatorn för att kunna komma åt och arbeta med teckensnittsanpassningen. Mer information finns i [Lägga till anpassade teckensnitt på klientdatorn](#addcustomfonts).
 
       Du kan också ändra standardinställningarna för olika delar av texten och ta bort teckensnitten från textredigeraren genom att ta bort posterna.
@@ -181,7 +185,7 @@ Mer information om hur du installerar teckensnitt finns i:
 
 ## Få tillgång till teckensnittsanpassningar {#access-font-customizations}
 
-När du har ändrat teckensnitt i filen tbxeditor-config.xml i CRX och installerat de nödvändiga teckensnitten på klientdatorn som används för att komma åt AEM Forms visas ändringarna i textredigeraren.
+När du har ändrat teckensnitten i filen tbxeditor-config.xml i CRX och installerat teckensnitten på klientdatorn som används för att få åtkomst till AEM Forms, visas ändringarna i textredigeraren.
 
 Teckensnittet Sazanami Mincho Medium som har lagts till i [Anpassa teckensnitt genom att redigera filen tbxeditor-config.xml i CRX](#customizefonts) -proceduren visas i textredigerarens användargränssnitt enligt följande:
 
