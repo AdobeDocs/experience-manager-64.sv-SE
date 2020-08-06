@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8231a30a-dcb7-4156-bb45-c5a23e5b56ef
 translation-type: tm+mt
 source-git-commit: 8e2bd579e4c5edaaf86be36bd9d81dfffa13a573
+workflow-type: tm+mt
+source-wordcount: '926'
+ht-degree: 1%
 
 ---
 
@@ -19,22 +22,22 @@ source-git-commit: 8e2bd579e4c5edaaf86be36bd9d81dfffa13a573
 
 ## Översikt {#overview}
 
-AEM Brackets Extension ger ett smidigt arbetsflöde för redigering av AEM-komponenter och klientbibliotek, och utnyttjar [Brackets](https://brackets.io/) kodredigerare, som ger åtkomst till Photoshop-filer och -lager inifrån kodredigeraren. Den enkla synkronisering som tillägget ger (ingen Maven eller filvalv krävs) ökar utvecklarens effektivitet och hjälper även gränssnittsutvecklare med begränsade AEM-kunskaper att delta i projekt. Det här tillägget har också stöd för HTML- [mallspråket (HTL)](https://helpx.adobe.com/experience-manager/htl/user-guide.html), vilket gör JSP-komponentutvecklingen enklare och säkrare.
+AEM Brackets Extension ger ett smidigt arbetsflöde för att redigera AEM komponenter och klientbibliotek och utnyttjar [Brackets](https://brackets.io/) kodredigerare, som ger åtkomst till filer och lager från Photoshop i kodredigeraren. Den enkla synkronisering som tillägget ger (ingen Maven eller filvalv krävs) ökar utvecklarens effektivitet och hjälper även gränssnittsutvecklare med begränsade AEM att delta i projekt. Det här tillägget har även stöd för HTML- [mallspråket (HTL)](https://helpx.adobe.com/experience-manager/htl/user-guide.html), vilket gör JSP-komponentutvecklingen enklare och säkrare.
 
 ![chlimage_1-53](assets/chlimage_1-53.png)
 
 ### Funktioner {#features}
 
-Huvudfunktionerna i AEM Brackets Extension är:
+De viktigaste funktionerna i AEM Brackets Extension är:
 
-* Automatisk synkronisering av ändrade filer till AEM-utvecklingsinstansen.
+* Automatisk synkronisering av ändrade filer till AEM.
 * Manuell dubbelriktad synkronisering av filer och mappar.
 * Fullständig innehållspaketsynkronisering av projektet.
 * HTML-kodkomplettering för uttryck och `data-sly-*` blocksatser.
 
-Brackets har dessutom många användbara funktioner för utvecklare av AEM-teckensnitt:
+Brackets innehåller dessutom många användbara funktioner för AEM teckensnittsutvecklare:
 
-* Stöd för Photoshop-filer för att extrahera information från en PSD-fil, som lager, mått, färger, teckensnitt, texter osv.
+* Stöd för Photoshop-filer för att extrahera information från PSD-filer som lager, mått, färger, teckensnitt, texter m.m.
 * Kodtips från PSD-filen för att enkelt återanvända den extraherade informationen i koden.
 * Stöd för CSS-preprocessorer, som LESS och SCSS.
 * Och hundratals tillägg som täcker mer specifika behov.
@@ -51,7 +54,7 @@ Ladda ned den senaste Brackets-versionen från [brackets.io](https://brackets.io
 
 Så här installerar du tillägget:
 
-1. Öppna hakparenteser. Välj **Extension Manager på menyn** Arkiv **...**
+1. Öppna hakparenteser. I menyn **Arkiv** väljer du **Extension Manager..**
 1. Ange **AEM** i sökfältet och sök efter **AEM Brackets Extension**.
 
    ![chlimage_1-54](assets/chlimage_1-54.png)
@@ -63,7 +66,7 @@ Så här installerar du tillägget:
 
 ### Innehållspaketprojektet {#the-content-package-project}
 
-När tillägget har installerats kan du börja utveckla AEM-komponenter genom att öppna en innehållspaketmapp från filsystemet med Brackets.
+När tillägget har installerats kan du börja utveckla AEM komponenter genom att öppna en innehållspaketmapp från filsystemet med hakparenteser.
 
 Projektet måste innehålla minst följande:
 
@@ -75,13 +78,13 @@ På **Arkiv** -menyn i hakparenteser väljer du **Öppna mapp...** och väljer a
 
 >[!NOTE]
 >
->Om du inte har något eget projekt med ett innehållspaket kan du prova [HTML TodoMVC-exemplet](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc). På GitHub klickar du på **Hämta ZIP**, extraherar filerna lokalt och enligt instruktionerna ovan öppnar du `jcr_root` mappen i Brackets. Följ sedan stegen nedan för att konfigurera **projektinställningarna** och slutligen överföra hela paketet till din AEM-utvecklingsinstans genom att göra ett **Exportera innehållspaket** enligt anvisningarna längre ned i avsnittet Fullständig synkronisering av innehållspaket.
+>Om du inte har något eget projekt med ett innehållspaket kan du prova [HTML TodoMVC-exemplet](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc). På GitHub klickar du på **Hämta ZIP**, extraherar filerna lokalt och enligt instruktionerna ovan öppnar du `jcr_root` mappen i Brackets. Följ sedan stegen nedan för att konfigurera **projektinställningarna** och slutligen överföra hela paketet till din AEM utvecklingsinstans genom att göra ett **Exportera innehållspaket** enligt anvisningarna längre ned i avsnittet Fullständig synkronisering av innehållspaket.
 >
->Efter dessa steg bör du kunna komma åt `/content/todo.html` URL:en för din AEM-utvecklingsinstans och du kan börja göra ändringar i koden i Brackets och se hur ändringarna synkroniserades direkt till AEM-servern när du har gjort en uppdatering i webbläsaren.
+>Efter de här stegen bör du kunna komma åt URL:en för din AEM-utvecklingsinstans och du kan börja göra ändringar i koden i hakparenteser och se hur ändringarna synkroniserades direkt till AEM-servern när du har gjort en uppdatering i webbläsaren. `/content/todo.html`
 
 ### Projektinställningar {#project-settings}
 
-Om du vill synkronisera ditt innehåll till och från en AEM-utvecklingsinstans måste du definiera dina projektinställningar. Det gör du genom att gå till **AEM** -menyn och välja **Projektinställningar...**
+Om du vill synkronisera ditt innehåll till och från en AEM utvecklingsinstans måste du definiera dina projektinställningar. Det gör du genom att gå till **AEM** -menyn och välja **Projektinställningar...**
 
 ![chlimage_1-55](assets/chlimage_1-55.png)
 
@@ -98,7 +101,7 @@ Tillägget AEM Brackets ger följande typer av innehållssynkronisering för fil
 
 ### Automatisk synkronisering av ändrade filer {#automated-synchronization-of-changed-files}
 
-Detta synkroniserar endast ändringar från Brackets till AEM-instansen, men inte tvärtom.
+Detta synkroniserar endast ändringar från hakparenteser till AEM, men inte tvärtom.
 
 ### Manuell dubbelriktad synkronisering {#manual-bidirectional-synchronization}
 
@@ -112,13 +115,13 @@ I projektutforskaren öppnar du snabbmenyn genom att högerklicka på en fil ell
 
 ### Fullständig synkronisering av innehållspaket {#full-content-package-synchronization}
 
-På **AEM** -menyn kan du synkronisera hela projektet med servern med alternativen **Exportera innehållspaket** eller **Importera innehållspaket** .
+På menyn **AEM** kan alternativen **Exportera innehållspaket** eller **Importera innehållspaket** synkronisera hela projektet med servern.
 
 ![chlimage_1-57](assets/chlimage_1-57.png)
 
 ### Synkroniseringsstatus {#synchronization-status}
 
-AEM Brackets Extension har en meddelandeikon i verktygsfältet till höger om fönstret Brackets, som anger status för den senaste synkroniseringen:
+I AEM Brackets Extension finns en meddelandeikon i verktygsfältet till höger om Brackets-fönstret, som anger status för den senaste synkroniseringen:
 
 * grön - alla filer har synkroniserats
 * blue - en synkroniseringsåtgärd pågår
@@ -150,12 +153,12 @@ Inom ett uttryck `${}`fylls vanliga variabelnamn i automatiskt.
 
 ## Mer information {#more-information}
 
-AEM Brackets Extension är ett öppen källkodsprojekt som hanteras av GitHub av [Adobe Marketing Cloud](https://github.com/Adobe-Marketing-Cloud) -organisationen, under Apache-licensen, version 2.0:
+AEM Brackets Extension är ett öppen källkodsprojekt som hanteras av [Adobe Marketing Cloud](https://github.com/Adobe-Marketing-Cloud) -organisationen med GitHub, under Apache License, version 2.0:
 
 * Koddatabas: [https://github.com/Adobe-Marketing-Cloud/aem-sightly-brackets-extension](https://github.com/Adobe-Marketing-Cloud/aem-sightly-brackets-extension)
 * Apache License, version 2.0: [https://www.apache.org/licenses/LICENSE-2.0.html](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-Brackets kodredigerare är också ett öppen källkodsprojekt som hanteras av [Adobe Systems Incorporated](https://github.com/adobe) :
+Kodredigeraren Brackets är också ett öppen källkodsprojekt som hanteras av [Adobe Systems Incorporated](https://github.com/adobe) -organisationen på GitHub:
 
 * Koddatabas: [https://github.com/adobe/brackets](https://github.com/adobe/brackets)
 
