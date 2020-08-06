@@ -9,6 +9,9 @@ topic-tags: author
 discoiquuid: 10bf1d44-9660-44d9-b2c3-dd9a252efc3a
 translation-type: tm+mt
 source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
+workflow-type: tm+mt
+source-wordcount: '1169'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Med Adobe Experience Manager (AEM) kan ni skapa lättanvända, anpassningsbara f
 
 Innan du får veta mer om de olika layoutfunktionerna i adaptiva formulär kan du läsa följande artiklar för att få mer information om adaptiva formulär.
 
-[Introduktion till AEM-formulär](/help/forms/using/introduction-aem-forms.md)
+[Introduktion till AEM Forms](/help/forms/using/introduction-aem-forms.md)
 
 [Introduktion till att skapa formulär](/help/forms/using/introduction-forms-authoring.md)
 
@@ -51,21 +54,21 @@ En formulärförfattare kan koppla en layout till varje panel i ett anpassat for
 
 Panellayouterna är tillgängliga på `/libs/fd/af/layouts/panel` platsen.
 
-![](assets/layouts.png) Lista över panellayouter för rotpanelen i ett adaptivt formulär **** Bild: Lista *över panellayouter i anpassningsbara formulär*
+![Lista över panellayouter för rotpanelen i ett adaptivt formulär](assets/layouts.png)**Bild:** *Lista över panellayouter i anpassningsbara formulär*
 
 ### Responsiv - allt på en sida utan navigering {#responsive-everything-on-one-page-without-navigation-br}
 
 Använd den här panellayouten för att skapa en responsiv layout som anpassar sig efter enhetens skärmstorlek utan att behöva använda någon särskild navigering.
 
-Med den här layouten kan du montera flera **[!UICONTROL paneladaptiva]** formulärkomponenter efter varandra på panelen.
+Med den här layouten kan du montera flera **[!UICONTROL Panel adaptive form]** komponenter i en och samma komponent i panelen.
 
 ![Ett formulär med responsiv layout som det visas på en liten skärm](assets/responsive_layout_seen_on_small_screen.png)
 
-**** Bild: *Ett formulär med responsiv layout som visas på en liten skärm*
+**Bild:** *Ett formulär med responsiv layout som det visas på en liten skärm*
 
 ![Ett formulär med responsiv layout som det visas på en stor skärm](assets/responsive_layout_seen_on_large_screen.png)
 
-**** Bild: *Ett formulär med responsiv layout som det visas på en stor skärm*
+**Bild:** *Ett formulär med responsiv layout som det visas på en stor skärm*
 
 ### Guide - ett flerstegsformulär med ett steg i taget {#wizard-a-multi-step-form-showing-one-step-at-a-time}
 
@@ -79,11 +82,11 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ![Uttryck för att slutföra ett steg i guidelayouten för ett flerstegsformulär](assets/layout-sidebar.png)
 
-**** Bild: Uttryck för *stegkomplettering i guidelayout för ett flerstegsformulär*
+**Bild:** *Uttryck för att slutföra ett steg i guidelayouten för ett flerstegsformulär*
 
 ![Ett formulär med guidelayout](assets/wizard-layout.png)
 
-**** Bild: *Ett formulär med hjälp av guiden*
+**Bild:** *Ett formulär som använder guiden*
 
 ### Layout för dragspelsdesign {#layout-for-accordion-design}
 
@@ -93,7 +96,7 @@ Sammanfattningsuttryck kan användas för att visa de värden som slutanvändare
 
 ![Repeterbara paneler med dragspelslayout i adaptiva former](assets/repeatable_panels_using_accordion_layout.png)
 
-**** Bild: Upprepningsbara *paneler som skapats med dragspelslayout*
+**Bild:** *Repeterbara paneler som skapats med dragspelslayout*
 
 ### Fliklayout - flikar visas till vänster {#tabbed-layout-tabs-appear-on-the-left}
 
@@ -101,7 +104,7 @@ Med den här layouten kan du placera `Panel adaptive form` komponenten på en pa
 
 ![I fliklayouten visas flikarna till vänster](assets/tabbed_layout_left.png)
 
-**** Bild: Tabbar *till vänster på en panel*
+**Bild:** *Tabbar som visas till vänster på en panel*
 
 ### Fliklayout - flikarna visas högst upp {#tabbed-layout-tabs-appear-on-the-top}
 
@@ -109,7 +112,7 @@ Med den här layouten kan du placera `Panel adaptive form` komponenten på en pa
 
 ![Fliklayout i adaptiva formulär med flikar överst](assets/tabbed_layout_top.png)
 
-**** Bild: Tabbar *högst upp på en panel*
+**Bild:** *Tabbar som visas högst upp på en panel*
 
 ## Mobillayouter {#mobile-layouts}
 
@@ -121,7 +124,7 @@ Mobillayouterna är tillgängliga på `/libs/fd/af/layouts/mobile/` platsen. Fö
 
 ![Lista över mobila layouter i adaptiva formulär](assets/mobile-navigation.png)
 
-**** Bild: Lista *över mobila layouter i adaptiva formulär*
+**Bild:** *Lista över mobila layouter i adaptiva formulär*
 
 När du använder en mobil layout är formulärmenyn, för att få åtkomst till olika formulärpaneler, tillgänglig genom att trycka på ![ikonen aem6forms_form_menu](assets/aem6forms_form_menu.png) .
 
@@ -131,7 +134,7 @@ I den här layouten, som namnet föreslår, visas panelrubriker tillsammans med 
 
 ![Mobila layouter med paneltitlar i formulärrubriker](assets/mobile_layout_with.png)
 
-**** Bild: *Mobillayouter med paneltitlar i formulärrubriker*
+**Bild:** *Mobila layouter med paneltitlar i formulärrubriker*
 
 ### Layout utan panelrubriker i formulärrubriken {#layout-without-panel-titles-in-the-form-header}
 
@@ -139,7 +142,7 @@ Den här layouten, som namnet föreslår, visar bara navigeringsmenyn och navige
 
 ![Mobila layouter utan panelrubriker i formulärrubriker](assets/mobile_layout_without.png)
 
-**** Bild: Mobila layouter utan panelrubriker i formulärrubriker **
+**Bild:** *Mobila layouter utan panelrubriker i formulärrubriker*
 
 ## Verktygsfältslayouter {#toolbar-layouts}
 
@@ -147,7 +150,7 @@ En verktygsfältslayout styr placeringen och visningen av de åtgärdsknappar so
 
 ![En lista med verktygsfältslayouter i anpassningsbara formulär som styr knapplayouten](assets/toolbar-layouts.png)
 
-**** Bild: *En lista med verktygsfältslayouter i anpassningsbara formulär*
+**Bild:** *En lista med verktygsfältslayouter i anpassningsbara formulär*
 
 Verktygsfältslayouter är tillgängliga på `/libs/fd/af/layouts/toolbar` platsen. adaptiva formulär har som standard följande verktygsfältslayouter.
 
@@ -159,7 +162,7 @@ Du kan också lägga till flera verktygsfält som innehåller åtgärdsknappar s
 
 ![Standardvy för verktygsfältet](assets/toolbar_layout_default.png)
 
-**** Bild: *Standardvy för verktygsfältet*
+**Bild:** *Standardvy för verktygsfältet*
 
 ### Mobil fast layout för verktygsfältet {#mobile-fixed-layout-for-toolbar}
 
@@ -171,5 +174,5 @@ För den mobila layouten kan du lägga till åtgärdsknappar med ikoner.
 
 ![Mobil fast layout för verktygsfältet](assets/toolbar_layout_mobile_fixed.png)
 
-**** Bild: Fast *mobillayout för verktygsfält*
+**Bild:** *Mobil fast layout för verktygsfältet*
 
