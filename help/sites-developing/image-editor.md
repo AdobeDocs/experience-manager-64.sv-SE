@@ -1,8 +1,8 @@
 ---
 title: Bildredigeraren
 seo-title: Bildredigeraren
-description: Bildredigeraren är en viktig del av AEM och kan utnyttjas av komponenter för att underlätta redigering av bilder av innehållsförfattare.
-seo-description: Bildredigeraren är en viktig del av AEM och kan utnyttjas av komponenter för att underlätta redigering av bilder av innehållsförfattare.
+description: Bildredigeraren är en AEM och kan utnyttjas av komponenter för att underlätta redigering av bilder av innehållsförfattare.
+seo-description: Bildredigeraren är en AEM och kan utnyttjas av komponenter för att underlätta redigering av bilder av innehållsförfattare.
 uuid: de6ac71b-380a-4b67-b697-ac34a79a9cc4
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,13 +11,16 @@ topic-tags: components
 discoiquuid: f6347492-cf48-4835-b8fd-ce9a75a09abe
 translation-type: tm+mt
 source-git-commit: 15bea340f3ba7d5a315d71932e521ad1f1a40073
+workflow-type: tm+mt
+source-wordcount: '331'
+ht-degree: 0%
 
 ---
 
 
 # Bildredigeraren{#image-editor}
 
-Bildredigeraren är en viktig del av AEM och kan utnyttjas av komponenter för att underlätta redigering av bilder av innehållsförfattare.
+Bildredigeraren är en AEM och kan utnyttjas av komponenter för att underlätta redigering av bilder av innehållsförfattare.
 
 >[!CAUTION]
 >
