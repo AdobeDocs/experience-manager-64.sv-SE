@@ -2,7 +2,7 @@
 title: PhoneGap
 seo-title: PhoneGap
 description: null
-seo-description: 'Följ den här sidan för att komma igång med utvecklingen för Adobe PhoneGap Enterprise i AEM.  '
+seo-description: 'Följ den här sidan för att komma igång med att skapa för Adobe PhoneGap Enterprise i AEM.  '
 uuid: 256a9f66-4c66-434c-be79-01be3c02d688
 contentOwner: msm-service
 content-type: reference
@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 discoiquuid: d9ab4d38-1c17-477d-9341-02bda80f3c23
 translation-type: tm+mt
 source-git-commit: 64090e3c7cf722f44968467c51291a11aeeec237
+workflow-type: tm+mt
+source-wordcount: '215'
+ht-degree: 1%
 
 ---
 
@@ -20,12 +23,12 @@ source-git-commit: 64090e3c7cf722f44968467c51291a11aeeec237
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Adobe Experience Manager Mobile (AEM) är bara en av grundpelarna i den kompletta AEM-plattformen.
+Adobe Experience Manager (AEM) Mobile är bara en av de två pelarna som utgör den kompletta AEM.
 
-Att starta en ny upplevelse av AEM-mobilappen kräver att rollerna är enhetliga innan det är klart för innehållsredigering. Följande roller är en utgångspunkt när du skapar ett nytt AEM Mobile-program:
+För att starta en ny AEM Mobile-appupplevelse krävs det att rollerna är enhetliga innan man kan redigera innehåll. Följande roller är en startpunkt när du skapar ett nytt AEM Mobile-program:
 
 * **Administratör**
-* **Utvecklare**
+* **Developer**
 * **Författare**
 
 ## Om du redigerar PhoneGap-program {#authoring-phonegap-applications}
@@ -44,7 +47,7 @@ Se följande resurser för att komma igång:
 
 Mer information om **innehållstjänster** finns i Översikt över [innehållstjänster](/help/mobile/develop-content-as-a-service.md) för att komma igång.
 
-## Additional Resources {#additional-resources}
+## Ytterligare resurser {#additional-resources}
 
 Mer information om administratörens och utvecklarens roller och ansvar finns i resurserna nedan:
 
