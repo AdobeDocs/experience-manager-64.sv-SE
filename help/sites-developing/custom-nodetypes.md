@@ -1,8 +1,8 @@
 ---
 title: Anpassade nodtyper
 seo-title: Anpassade nodtyper
-description: AEM baseras på Sling och använder en JCR-databas med de nodtyper som erbjuds av båda, men AEM erbjuder även en rad anpassade nodtyper
-seo-description: AEM baseras på Sling och använder en JCR-databas med de nodtyper som erbjuds av båda, men AEM erbjuder även en rad anpassade nodtyper
+description: AEM baseras på Sling och använder en JCR-databas med nodtyper som erbjuds av båda, men AEM innehåller även en rad anpassade nodtyper
+seo-description: AEM baseras på Sling och använder en JCR-databas med nodtyper som erbjuds av båda, men AEM innehåller även en rad anpassade nodtyper
 uuid: f2022504-e433-4b42-9cc1-eef41086483a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -449,7 +449,7 @@ Behållarlista.
 
 **Beskrivning**
 
-`cq:attributes` är nodtypen för ContentBus-versionstaggarna. Den här noden har bara en serie egenskaper; av vilka tre är fördefinierade &quot;created&quot;, &quot;csd&quot; och &quot;timestamp&quot;.
+`cq:attributes` är nodtypen för ContentBus versionstaggar. Den här noden har bara en serie egenskaper; av vilka tre är fördefinierade &quot;created&quot;, &quot;csd&quot; och &quot;timestamp&quot;.
 
 * `@prop created (long) mandatory copy` - Tidsstämpel för när versionsinformationen skapades, vanligtvis tiden för incheckning av den tidigare versionen eller tiden då sidan skapades.
 * `@prop csd (string) mandatory copy` - csd-standardattribut, kopia av egenskapen cq:csd för sidnoden
@@ -468,11 +468,11 @@ Behållarlista.
 
 **Beskrivning**
 
-Nodtypen `cq:contentPage` innehåller egenskaps- och undernoddefinitioner för ContentBus-innehållssidor. Endast när den här blandningstypen läggs till i en nod av typen `cq:page`blir en nod en ContentBus-innehållssida.
+Nodtypen `cq:contentPage` innehåller egenskaps- och undernoddefinitioner för innehållssidor i ContentBus. Endast när den här blandningstypen läggs till i en nod av typen `cq:page`blir en nod en innehållssida för ContentBus.
 
 Objekten i en `cq:Cq4ContentPage` är:
 
-* `@prop cq:csd` - ContentBus-värdepapperscentralen på sidan.
+* `@prop cq:csd` - Sidans ContentBus värdepapperscentral.
 * `@node cq:content` - Sidans innehåll. Den underordnade noden finns inte om sidnoden är i läget &quot;Befintlig utan innehåll&quot; eller &quot;Borttagen&quot;.
 * `@node cq:attributes` - Listan med sidattribut, som tidigare kallades versionstaggar. Den här noden är obligatorisk för typen cq:contentPage. Attributnoden får en ny version när sidan får en ny version.
 
@@ -493,7 +493,7 @@ Avsökningskonfiguration.
 * `@prop source (String) mandatory` - Datakällans URI, detta är obligatoriskt och får inte vara tomt
 * `@prop target (String)` - Målplatsen där data som hämtats från datakällan lagras. Detta är valfritt och standard är cq:PollConfig-noden.
 * `@prop interval (Long)` - Intervallet i sekunder som nya eller uppdaterade data från datakällan ska avsökas. Detta är valfritt och standardvärdet är 30 minuter (1 800 sekunder).
-* [Skapar anpassade dataimporttjänster för Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/polling.html)
+* [Skapa anpassade dataportortjänster för Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/polling.html)
 
 **Definition**
 
@@ -618,7 +618,7 @@ Konfiguration av Live Sync.
    * `- cq:isDeep (boolean)`
    * `- cq:trigger (string) /** deprecated **/`
 
-För AEM 5.4 ska följande läggas till i slutet av listan:
+I AEM 5.4 ska följande läggas till i slutet av listan:
 
 * `- cq:rolloutConfigs (string) multiple /** deprecated **/`
 
