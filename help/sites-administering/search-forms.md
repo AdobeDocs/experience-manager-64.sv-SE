@@ -1,8 +1,8 @@
 ---
 title: Konfigurera sökformulär
 seo-title: Konfigurera sökformulär
-description: Lär dig hur du konfigurerar sökformulär.
-seo-description: Lär dig hur du konfigurerar sökformulär.
+description: Lär dig hur du konfigurerar Search Forms.
+seo-description: Lär dig hur du konfigurerar Search Forms.
 uuid: 0d30921c-0d4d-4ab6-b796-7833cd321e5d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: abc27987-960e-48da-9580-1008a2bdc94c
 translation-type: tm+mt
 source-git-commit: dda8156729aa46dd6cfd779bca120b165ccc980b
+workflow-type: tm+mt
+source-wordcount: '2065'
+ht-degree: 2%
 
 ---
 
 
 # Konfigurera sökformulär{#configuring-search-forms}
 
-Använd **sökformulär** för att anpassa urvalet av sökpredikt som används i de sökpaneler som finns i olika AEM-konsoler och/eller paneler i författarmiljön. När du anpassar panelerna blir sökfunktionen mångsidig efter dina specifika behov.
+Använd **Sök i Forms** för att anpassa urvalet av sökpredikt som används i de sökpaneler som finns i olika AEM och/eller paneler i författarmiljön. När du anpassar panelerna blir sökfunktionen mångsidig efter dina specifika behov.
 
 Det finns ett [antal](#predicates-and-their-settings)predikat att tillgå direkt. Du kan lägga till flera predikat, bland annat fulltextpredikatet för fulltextsökningar, egenskapspredikatet för att söka efter resurser som matchar en enskild egenskap som du har angett, eller alternativet för att söka efter resurser som matchar ett eller flera värden som du anger för en viss egenskap.
 
@@ -61,7 +64,7 @@ Standardkonfigurationerna är:
 
    Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter produkter i resursläsaren (när du redigerar en sida).
 
-* **Page Editor (Scene7-sökning)**:
+* **Page Editor (Scene7 Search)**:
 
    Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter Scene7-resurser i resursläsaren (när du redigerar en sida).
 
@@ -350,6 +353,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
 * Sökpredikat som bara är relaterade till siteadmin (klassiskt användargränssnitt) finns under:
    > `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
    >   * Dessa är inaktuella och endast tillgängliga för bakåtkompatibilitet.
+
 > 
 >
 Informationen är endast avsedd som referens och du får inte ändra den `/libs`.
@@ -398,19 +402,20 @@ Beroende på predikatet finns ett urval av inställningar tillgängliga för kon
 
    `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
 
-* **Alternativnodssökväg**&#x200B;är i princip samma som **Alternativsökväg**, men bara det här är i det vanliga predikatfältet, det andra är specifikt för resurser.
+* **Alternativnodens sökväg**&#x200B;är i princip densamma som 
+**Alternativsökväg**, bara detta är i det vanliga predikatfältet, den andra är specifik för resurser.
 
-* **Enkelval** Om det här alternativet är markerat återges alternativen som kryssrutor som bara tillåter en markering. Om du av misstag markerar kryssrutan kan den avmarkeras.
+* **Enkelval** Om det här alternativet är markerat återges alternativen som kryssrutor som endast tillåter en markering. Om du av misstag markerar kryssrutan kan den avmarkeras.
 
 * **Egenskapsnamn för publicering och live-kopia** Etiketterna för kryssrutorna för publicering och live-kopia för det platsspecifika predikatet.
 
 * &amp;Klona;ast; på fältetiketterna på fliken **Inställningar** betyder att fälten är obligatoriska och om de lämnas tomma visas ett felmeddelande
 
-## Konfigurera dina sökformulär {#configuring-your-search-forms}
+## Konfigurera din sökning i Forms {#configuring-your-search-forms}
 
 ### Skapa/öppna en anpassad konfiguration {#creating-opening-a-customized-configuration}
 
-1. Navigera till **Verktyg**, **Åtgärder** och **Sökformulär**.
+1. Navigera till **Verktyg**, **Åtgärder** och **Sök i Forms**.
 
 1. Välj den konfiguration som du vill anpassa.
 1. Använd ikonen **Redigera** för att öppna konfigurationen för uppdatering.
@@ -502,6 +507,7 @@ I följande exempel (som används för att söka efter mallen som används för 
 
    * `jcr:title` - den fältetikett som ska visas i sökfältet
    * `value` - egenskapsvärdet som ska genomsökas
+
    ![chlimage_1-379](assets/chlimage_1-379.png)
 
    >[!NOTE]
@@ -517,7 +523,7 @@ I följande exempel (som används för att söka efter mallen som används för 
    >1. Gör ändringar i `/apps.`
 
 
-1. Öppna konsolen **Sök efter formulär** och välj den konfiguration som du vill uppdatera. Exempel: **Sökväg** för webbplatsadministratörer.
+1. Öppna Forms **-konsolen för** sökning och välj den konfiguration som du vill uppdatera. Exempel: **Sökväg** för webbplatsadministratörer.
 
    Klicka/tryck sedan på ikonen **Redigera sökformulär** .
 
@@ -526,13 +532,13 @@ I följande exempel (som används för att söka efter mallen som används för 
 
    * **Egenskapsnamn**
 
-      Specificera den nodegenskap som du vill söka efter på målnoderna. Exempel:
+      Specificera den nodegenskap som du vill söka efter på målnoderna. Till exempel:
 
       `jcr:content/cq:template`
 
    * **Alternativ nodsökväg**
 
-      Välj den sökväg där du vill ha dina alternativ. Exempel:
+      Välj den sökväg där du vill ha dina alternativ. Till exempel:
 
       `/apps/cq/gui/content/common/options/predicates/templatetype`
    ![chlimage_1-380](assets/chlimage_1-380.png)
