@@ -11,23 +11,26 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 9a8b4e3a-f416-4dc6-a90a-9018df5c844e
 translation-type: tm+mt
 source-git-commit: f1558c7dec34649d00afcd04245ea552e8c6b978
+workflow-type: tm+mt
+source-wordcount: '1047'
+ht-degree: 0%
 
 ---
 
 
 # Arbetshanteraren och begränsning{#work-manager-and-throttling}
 
-AEM-formulär (och tidigare versioner) använde JMS-köer för att köra åtgärder asynkront. I AEM-formulär har JMS-köer ersatts av Work Manager. Det här dokumentet innehåller bakgrundsinformation om Work Manager och anvisningar om hur du konfigurerar begränsningsalternativ för Work Manager.
+AEM (och tidigare versioner) använde JMS-köer för att köra åtgärder asynkront. I AEM har JMS-köer ersatts av Work Manager. Det här dokumentet innehåller bakgrundsinformation om Work Manager och anvisningar om hur du konfigurerar begränsningsalternativ för Work Manager.
 
 ## Om långvariga (asynkrona) åtgärder {#about-long-lived-asynchronous-operations}
 
-I AEM-formulär kan åtgärder som utförs av tjänster vara antingen kortlivade (synkrona) eller långlivade (asynkrona). Kortlivade åtgärder slutförs synkront på samma tråd som de anropades från. Dessa åtgärder väntar på ett svar innan de fortsätter.
+I AEM kan åtgärder som utförs av tjänster vara antingen kortlivade (synkrona) eller långlivade (asynkrona). Kortlivade åtgärder slutförs synkront på samma tråd som de anropades från. Dessa åtgärder väntar på ett svar innan de fortsätter.
 
 Långvariga operationer kan spänna över flera system eller till och med sträcka sig utanför organisationen, t.ex. när en kund måste fylla i och skicka in en låneblankett som en del av en större lösning som integrerar flera automatiserade och mänskliga uppgifter. Sådana åtgärder måste fortsätta i väntan på svar. Långvariga åtgärder utför sitt underliggande arbete asynkront, vilket gör att resurser kan användas på annat sätt i väntan på slutförande. Till skillnad från en kortvarig åtgärd hanterar Work Manager inte en långvarig åtgärd som slutförs när den anropas. En extern utlösare, till exempel ett system som begär en annan åtgärd på samma tjänst eller en användare som skickar ett formulär, måste inträffa för att åtgärden ska kunna slutföras.
 
 ## Om Work Manager {#about-work-manager}
 
-AEM-formulär (och tidigare versioner) använde JMS-köer för att köra åtgärder asynkront. AEM-formulär använder Work Manager för att schemalägga och köra asynkrona åtgärder via hanterade trådar.
+AEM (och tidigare versioner) använde JMS-köer för att köra åtgärder asynkront. AEM använder Work Manager för att schemalägga och köra asynkrona åtgärder via hanterade trådar.
 
 Asynkrona åtgärder hanteras på följande sätt:
 
@@ -35,7 +38,7 @@ Asynkrona åtgärder hanteras på följande sätt:
 1. Arbetshanteraren lagrar arbetsuppgiften i en databastabell och tilldelar en unik identifierare till arbetsuppgiften. Databasposten innehåller all information som krävs för att köra arbetsposten.
 1. Arbetshanterartrådar hämtar in arbetsobjekt när trådarna blir kostnadsfria. Innan du drar in arbetsobjekten kan trådarna kontrollera om de nödvändiga tjänsterna har startats, om det finns tillräckligt med stackstorlek för att dra in nästa arbetsuppgift och om det finns tillräckligt med processorcykler för att bearbeta arbetsobjektet. Arbetshanteraren utvärderar också attribut för arbetsuppgiften (till exempel prioritet) när körningen schemaläggs.
 
-AEM-formuläradministratörer kan använda Health Monitor för att kontrollera Work Manager-statistik, t.ex. antalet arbetsobjekt i kön och deras status. Du kan också använda Hälsoövervakning för att pausa, återuppta, försöka igen eller ta bort arbetsobjekt. (Se [Visa statistik för Work Manager](/help/forms/using/admin-help/view-statistics-related-manager.md#view-statistics-related-to-work-manager).)
+AEM formuläradministratörer kan använda Health Monitor för att kontrollera Work Manager-statistik, t.ex. antalet arbetsobjekt i kön och deras status. Du kan också använda Hälsoövervakning för att pausa, återuppta, försöka igen eller ta bort arbetsobjekt. (Se [Visa statistik för Work Manager](/help/forms/using/admin-help/view-statistics-related-manager.md#view-statistics-related-to-work-manager).)
 
 ## Konfigurera begränsningsalternativ för Work Manager {#configuring-work-manager-throttling-options}
 
@@ -63,7 +66,7 @@ Du kan konfigurera begränsning för Work Manager så att arbetsobjekt schemalä
   </tr> 
   <tr> 
    <td><code> adobe.workmanager.memory-control.high-limit</code></td> 
-   <td><p>Anger den maximala procentandel av minnet som kan användas innan Work Manager stryper inkommande jobb.</p><p>Standardvärdet för det här alternativet är <code>95</code>. Det här värdet bör vara bra för de flesta system. Öka den bara om ditt system behöver utnyttja sin maximala kapacitet. Men tänk på att när du ökar det här värdet ökar även risken för minnesbrist.</p><p>Om du kör AEM-formulär i en klustermiljö kanske du vill ange inställningar för minneskontrollgräns på olika noder i klustret. Du kan till exempel ha en lägre hög gräns för noderna A och B, som är programmerade i belastningsutjämnaren för interaktivt arbete. Och du kan ha högre höga gränser för noderna C och D, som inte används av belastningsutjämnaren, utan reserveras för asynkront arbete.</p></td> 
+   <td><p>Anger den maximala procentandel av minnet som kan användas innan Work Manager stryper inkommande jobb.</p><p>Standardvärdet för det här alternativet är <code>95</code>. Det här värdet bör vara bra för de flesta system. Öka den bara om ditt system behöver utnyttja sin maximala kapacitet. Men tänk på att när du ökar det här värdet ökar även risken för minnesbrist.</p><p>Om du kör AEM formulär i en klustermiljö kanske du vill ange inställningar för minneskontrollgräns på olika noder i klustret. Du kan till exempel ha en lägre hög gräns för noderna A och B, som är programmerade i belastningsutjämnaren för interaktivt arbete. Och du kan ha högre höga gränser för noderna C och D, som inte används av belastningsutjämnaren, utan reserveras för asynkront arbete.</p></td> 
   </tr> 
   <tr> 
    <td><code> adobe.workmanager.memory-control.low-limit</code></td> 
@@ -102,5 +105,5 @@ Du kan konfigurera begränsning för Work Manager så att arbetsobjekt schemalä
 1. Under Serverinfrastruktur klickar du på arbetsflödet Java och formulär > Processdefinition.
 1. Klicka på Java Virtual Machine under Additional Properties (Ytterligare egenskaper).
 1. Skriv de argument du vill ha i rutan Allmänt om JVM-argument.
-1. Klicka på OK eller Använd och sedan på Spara direkt i huvudkonfigurationen.
+1. Klicka på OK eller Använd och sedan på Spara direkt i den överordnad konfigurationen.
 
