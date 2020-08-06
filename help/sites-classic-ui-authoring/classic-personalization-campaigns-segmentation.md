@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: bb75f4ab-d983-45f6-98a3-da8bd9b63751
 translation-type: tm+mt
 source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+workflow-type: tm+mt
+source-wordcount: '591'
+ht-degree: 1%
 
 ---
 
@@ -79,5 +82,5 @@ Om du till exempel kombinerar den refererande URL:en (som en beteendeegenskap) m
 
 >[!NOTE]
 >
->Mer information om segment i AEM finns i [Segmentering](/help/sites-administering/campaign-segmentation.md) .
+>Se [Segmentering](/help/sites-administering/campaign-segmentation.md) för mer information om segment i AEM.
 
