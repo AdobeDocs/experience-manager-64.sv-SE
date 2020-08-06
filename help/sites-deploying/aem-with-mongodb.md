@@ -1,8 +1,8 @@
 ---
 title: AEM med MongoDB
 seo-title: AEM med MongoDB
-description: 'Lär dig mer om de uppgifter och överväganden som krävs för en lyckad AEM med MongoDB-distribution. '
-seo-description: 'Lär dig mer om de uppgifter och överväganden som krävs för en lyckad AEM med MongoDB-distribution. '
+description: 'Lär dig mer om de uppgifter och överväganden som behövs för att AEM med MongoDB-distributionen. '
+seo-description: 'Lär dig mer om de uppgifter och överväganden som behövs för att AEM med MongoDB-distributionen. '
 uuid: 51c463aa-d467-4857-8fff-e5f81d694145
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 3c59ec8f-b72f-48dd-bac8-9817005ae210
 translation-type: tm+mt
 source-git-commit: 77997d6d8744cf1498add91a0aa2dab4e29f8e3d
+workflow-type: tm+mt
+source-wordcount: '6512'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Mer distributionsrelaterad information finns i avsnittet [Distribuera och underh
 
 ## När MongoDB ska användas med AEM {#when-to-use-mongodb-with-aem}
 
-MongoDB används vanligtvis för att stödja AEM-utvecklardistributioner där något av följande villkor uppfylls:
+MongoDB används vanligtvis för att stödja AEM författardistributioner där något av följande villkor uppfylls:
 
 * Mer än 1000 unika användare per dag.
 * Mer än 100 samtidiga användare.
@@ -40,15 +43,15 @@ Om villkoren inte uppfylls rekommenderar vi en aktiverings-/standby-distribution
 
 ### Minimal MongoDB-distribution för AEM {#minimal-mongodb-deployment-for-aem}
 
-Nedan visas en minimal driftsättning för AEM på MongoDB. För enkelhetens skull har SSL-terminering och HTTP-proxykomponenter generaliserats. Den består av en enda MongoDB-replikuppsättning, med en primär och två sekundära.
+Nedan visas en minimal distribution för AEM på MongoDB. För enkelhetens skull har SSL-terminering och HTTP-proxykomponenter generaliserats. Den består av en enda MongoDB-replikuppsättning, med en primär och två sekundära.
 
 ![chlimage_1-94](assets/chlimage_1-94.png)
 
 En minimal distribution kräver 3 `mongod` instanser konfigurerade som en replikuppsättning. En instans väljs som primär och de andra instanserna är sekundära, med valet hanterat av `mongod`. Kopplade till varje instans är en lokal disk. För att klustret ska stödja inläsningen rekommenderas en genomströmning på minst 12 MB/s med mer än 3 000 I/O-åtgärder per sekund (IOPS).
 
-AEM-författarna är anslutna till `mongod` instanserna, där varje AEM-författare ansluter till alla tre `mongod` instanserna. Skrivningar skickas till det primära och läsningar kan läsas från någon av instanserna. Trafiken distribueras baserat på inläsning av en dispatcher till någon av de aktiva AEM-författarinstanserna. OAK-datalagret är ett `FileDataStore`och MongoDB-övervakning tillhandahålls av MMS eller MongoDB Ops Manager beroende på platsen för distributionen. Operativsystemnivå och loggövervakning tillhandahålls av tredjepartslösningar som Splunk eller Ganglia.
+AEM författare är anslutna till `mongod` instanserna, där varje AEM författare ansluter till alla tre `mongod` instanserna. Skrivningar skickas till det primära och läsningar kan läsas från någon av instanserna. Trafiken distribueras baserat på inläsningen av en dispatcher till någon av de aktiva AEM författarinstanserna. OAK-datalagret är ett `FileDataStore`och MongoDB-övervakning tillhandahålls av MMS eller MongoDB Ops Manager beroende på platsen för distributionen. Operativsystemnivå och loggövervakning tillhandahålls av tredjepartslösningar som Splunk eller Ganglia.
 
-I den här distributionen krävs alla komponenter för en lyckad implementering. Komponenter som saknas kommer att lämna implementeringen som icke-fungerande.
+I den här distributionen krävs alla komponenter för en lyckad implementering. Komponenter som saknas kommer att lämna implementeringen ofunktionell.
 
 ### Operativsystem {#operating-systems}
 
@@ -72,7 +75,7 @@ För att uppnå läs- och skrivgenomströmningen för bästa prestanda utan beho
 
 MongoDB version 2.6 och 3.0 som använder MMAP-lagringsmotorn kräver att databasens arbetsuppsättning och dess index passar i RAM-minnet.
 
-Otillräckligt RAM-minne ger en avsevärd prestandaförsämring. Storleken på arbetsuppsättningen och databasen är mycket programberoende. Även om det går att göra vissa uppskattningar är det mest tillförlitliga sättet att fastställa mängden RAM-minne som krävs att bygga AEM-programmet och testa det.
+Otillräckligt RAM-minne ger en avsevärd prestandaförsämring. Storleken på arbetsuppsättningen och databasen är mycket programberoende. Även om vissa uppskattningar kan göras, är det mest tillförlitliga sättet att fastställa mängden RAM-minne som krävs att bygga AEM och testa det.
 
 För att underlätta inläsningstestningsprocessen kan följande förhållande mellan arbetsuppsättningens och databasens totala storlek förutsättas:
 
@@ -81,7 +84,7 @@ För att underlätta inläsningstestningsprocessen kan följande förhållande m
 
 Detta innebär att 200 GB RAM krävs för en databas på 2 TB vid SSD-driftsättning.
 
-Även om samma begränsningar gäller för lagringsmotorn WiredTiger i MongoDB 3.0 är korrelationen mellan arbetsmängden, RAM och sidfel inte så starka eftersom WiredTiger inte använder minnesmappning på samma sätt som MMAP-lagringsmotorn.
+Även om samma begränsningar gäller för lagringsmotorn WiredTiger i MongoDB 3.0 är korrelationen mellan arbetsmängden, RAM och sidfel inte så starka som WiredTiger inte använder minnesmappning på samma sätt som MMAP-lagringsmotorn.
 
 >[!NOTE]
 >
@@ -89,11 +92,11 @@ Detta innebär att 200 GB RAM krävs för en databas på 2 TB vid SSD-driftsätt
 
 ### Datalager {#data-store}
 
-På grund av begränsningar i MongoDB-arbetsflödet rekommenderas starkt att datalagret upprätthålls oberoende av MongoDB. I de flesta miljöer bör man använda en NAS `FileDataStore` som är tillgänglig för alla AEM-instanser. I situationer där Amazon Web Services används finns det också en `S3 DataStore`. Om datalagret av någon anledning bevaras i MongoDB, bör datalagrets storlek läggas till i den totala databasstorleken och arbetsmängdsberäkningarna justeras på lämpligt sätt. Det kan innebära att du måste tilldela betydligt mer RAM-minne för att kunna upprätthålla prestanda utan sidfel.
+På grund av begränsningar i MongoDB-arbetsflödet rekommenderas starkt att datalagret upprätthålls oberoende av MongoDB. I de flesta miljöer bör man använda en NAS `FileDataStore` som är tillgänglig för alla AEM instanser. För situationer där Amazon webbtjänster används finns det också en `S3 DataStore`. Om datalagret av någon anledning bevaras i MongoDB, bör datalagrets storlek läggas till i den totala databasstorleken och arbetsmängdsberäkningarna justeras på lämpligt sätt. Det kan innebära att du måste tilldela betydligt mer RAM-minne för att kunna upprätthålla prestanda utan sidfel.
 
 ## Övervakning {#monitoring}
 
-Övervakning är en nödvändig förutsättning för ett framgångsrikt genomförande av projektet. Även om det med tillräcklig kunskap är möjligt att köra AEM på MongoDB utan övervakning, finns denna kunskap vanligtvis hos ingenjörer som är specialiserade för varje avsnitt i distributionen.
+Övervakning är en nödvändig förutsättning för ett framgångsrikt genomförande av projektet. Även om det med tillräcklig kunskap går att köra AEM på MongoDB utan övervakning, finns vanligtvis den kunskapen hos tekniker som är specialiserade för varje avsnitt i distributionen.
 
 Detta innebär vanligtvis att en FoU-tekniker arbetar på Apache Oak Core och en MongoDB-specialist.
 
@@ -131,7 +134,7 @@ Med ett kluster av flera servrar är central loggaggregering ett krav för ett p
 
 ## Checklistor {#checklists}
 
-I det här avsnittet beskrivs olika åtgärder som du bör vidta för att se till att dina AEM- och MongoDB-distributioner är korrekt konfigurerade innan du implementerar ditt projekt.
+I det här avsnittet behandlas olika åtgärder som du bör vidta för att se till att dina AEM- och MongoDB-distributioner är korrekt konfigurerade innan du implementerar ditt projekt.
 
 ### Nätverk {#network}
 
@@ -139,18 +142,18 @@ I det här avsnittet beskrivs olika åtgärder som du bör vidta för att se til
 1. Alla värdar ska kunna matchas genom sin DNS-post från alla andra routningsbara värdar
 1. Alla MongoDB-värdar kan dirigeras från alla andra MongoDB-värdar i samma kluster
 1. MongoDB-värdar kan dirigera paket till MongoDB Cloud Manager och de andra övervakningsservrarna
-1. AEM-servrar kan dirigera paket till alla MongoDB-servrar
-1. Fördröjning för paket mellan en AEM-server och en MongoDB-server är mindre än två millisekunder utan paketförlust och standarddistribution på en millisekund eller mindre.
-1. Kontrollera att det inte finns mer än två hopp mellan en AEM- och en MongoDB-server
+1. AEM kan dirigera paket till alla MongoDB-servrar
+1. Fördröjning för paket mellan AEM och MongoDB-servrar är mindre än två millisekunder utan paketförlust och standarddistribution på en millisekund eller mindre.
+1. Kontrollera att det inte finns mer än två hopp mellan en AEM och en MongoDB-server
 1. Det finns inte mer än två hopp mellan två MongoDB-servrar
 1. Det finns inga routrar som är högre än OSI Level 3 mellan några huvudservrar (MongoDB eller AEM eller någon kombination).
 1. Om VLAN-trunkering eller någon form av nätverkstunnling används måste den uppfylla paketets latenskontroller.
 
-### AEM-konfiguration {#aem-configuration}
+### AEM {#aem-configuration}
 
 #### Konfiguration av nodarkiv {#node-store-configuration}
 
-AEM-instanserna måste konfigureras att använda AEM med MongoMK. Basen på mongoMK-implementeringen i AEM är Document Node Store.
+AEM instanser måste konfigureras att använda AEM med MongoMK. Basen på mongoMK-implementeringen i AEM är Document Node Store.
 
 Mer information om hur du konfigurerar nodarkiv finns i [Konfigurera nodarkiv och datalager i AEM](/help/sites-deploying/data-store-config.md).
 
@@ -171,39 +174,33 @@ cache=2048
 blobCacheSize=1024
 ```
 
-
 Var:
 
 * `mongodburi`
 
-   
-Det här är MongoDB-servern som AEM behöver ansluta till. Anslutningar görs till alla kända medlemmar i standardreplikuppsättningen. Om MongoDB Cloud Manager används aktiveras serversäkerhet. Därför måste anslutningssträngen innehålla ett lämpligt användarnamn och lösenord. Icke-företagsversioner av MongoDB stöder endast autentisering av användarnamn och lösenord. Mer information om syntaxen för anslutningssträngar finns i [dokumentationen](https://docs.mongodb.org/manual/reference/connection-string/).
+   Det här är den MongoDB-server AEM måste ansluta till. Anslutningar görs till alla kända medlemmar i standardreplikuppsättningen. Om MongoDB Cloud Manager används aktiveras serversäkerhet. Därför måste anslutningssträngen innehålla ett lämpligt användarnamn och lösenord. Icke-företagsversioner av MongoDB stöder endast autentisering av användarnamn och lösenord. Mer information om syntaxen för anslutningssträngar finns i [dokumentationen](https://docs.mongodb.org/manual/reference/connection-string/).
 
 * `db`
 
-   
-Namnet på databasen. Standardvärdet för AEM är `aem-author`.
+   Namnet på databasen. Standardvärdet för AEM är `aem-author`.
 
 * `customBlobStore`
 
-   
-Om distributionen lagrar binärfiler i databasen utgör de en del av arbetsuppsättningen. Därför bör du inte lagra binärfiler i MongoDB, vilket kan innebära att du kan använda ett alternativt datalager som ett `FileSystem` datalager på en NAS.
+   Om distributionen lagrar binärfiler i databasen utgör de en del av arbetsuppsättningen. Därför bör du inte lagra binärfiler i MongoDB, vilket kan innebära att du kan använda ett alternativt datalager som ett `FileSystem` datalager på en NAS.
 
 * `cache`
 
-   
-Cachestorleken i megabyte. Detta fördelas mellan olika cacheminnen som används i `DocumentNodeStore`. Standardvärdet är 256 MB. Oak-läsningsprestanda kan dock utnyttja ett större cacheminne.
+   Cachestorleken i megabyte. Detta fördelas mellan olika cacheminnen som används i `DocumentNodeStore`. Standardvärdet är 256 MB. Oak-läsningsprestanda kan dock utnyttja ett större cacheminne.
 
 * `blobCacheSize`
 
-   
-Ofta använda bloggar kan cachas av AEM för att undvika att de hämtas från datalagret. Detta påverkar prestandan mer, särskilt när du lagrar blobbar i MongoDB-databasen. Alla filsystembaserade datalager kan utnyttja diskcachen på operativsystemnivå.
+   Ofta använda bloggar kan cachas av AEM för att undvika att de hämtas från datalagret. Detta påverkar prestandan mer, särskilt när du lagrar blobbar i MongoDB-databasen. Alla filsystembaserade datalager kan utnyttja diskcachen på operativsystemnivå.
 
 #### Konfiguration av datalager {#data-store-configuration}
 
-Datalagret används för att lagra filer som är större än ett tröskelvärde. Under det tröskelvärdet lagras filer som egenskaper i Document Node Store. Om `MongoBlobStore` används skapas en dedikerad samling i MongoDB för att lagra blobben. Den här samlingen bidrar till `mongod` instansens arbetsuppsättning och kräver att `mongod` det finns mer RAM-minne för att undvika prestandaproblem. Av den anledningen bör du konfigurera så att du undviker problemet `MongoBlobStore` för produktionsdistributioner och användning `FileDataStore` som stöds av en NAS som delas av alla AEM-instanser. Eftersom cacheminnet på operativsystemnivå är effektivt vid filhantering bör den minsta storleken på en fil på disken ställas in på nära blockstorleken på disken så att filsystemet används effektivt och många små dokument inte bidrar mycket till `mongod` instansens arbetssätt.
+Datalagret används för att lagra filer som är större än ett tröskelvärde. Under det tröskelvärdet lagras filer som egenskaper i Document Node Store. Om `MongoBlobStore` används skapas en dedikerad samling i MongoDB för att lagra blobben. Den här samlingen bidrar till `mongod` instansens arbetsuppsättning och kräver att `mongod` det finns mer RAM-minne för att undvika prestandaproblem. Av den anledningen bör du konfigurera så att du undviker problemet `MongoBlobStore` för produktionsdistributioner och användning `FileDataStore` som stöds av en NAS som delas av alla AEM instanser. Eftersom cacheminnet på operativsystemnivå är effektivt vid filhantering bör den minsta storleken på en fil på disken ställas in på nära blockstorleken på disken så att filsystemet används effektivt och många små dokument inte bidrar mycket till `mongod` instansens arbetssätt.
 
-Här är en typisk datalagerkonfiguration för en minimal AEM-distribution med MongoDB:
+Här är en typisk datalagerkonfiguration för en minimal AEM med MongoDB:
 
 ```xml
 # org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config
@@ -214,28 +211,23 @@ maxCachedBinarySize=4096
 cacheSizeInMB=128
 ```
 
-
 Var:
 
 * `minRecordLength`
 
-   
-Storlek i byte. Binärfiler som är mindre än eller lika med den här storleken lagras med Document Node Store. I stället för att lagra blobbens ID lagras innehållet i binärfilen. För binära filer som är större än den här storleken lagras binärfilens ID som en egenskap för dokumentet i nodsamlingen, och binärfilens brödtext lagras på `FileDataStore` disken. 4 096 byte är en typisk blockstorlek i filsystemet.
+   Storlek i byte. Binärfiler som är mindre än eller lika med den här storleken lagras med Document Node Store. I stället för att lagra blobbens ID lagras innehållet i binärfilen. För binära filer som är större än den här storleken lagras binärfilens ID som en egenskap för dokumentet i nodsamlingen, och binärfilens brödtext lagras på `FileDataStore` disken. 4 096 byte är en typisk blockstorlek i filsystemet.
 
 * `path`
 
-   
-Sökvägen till datalagrets rot. För en MongoMK-distribution måste det här vara ett delat filsystem som är tillgängligt för alla AEM-instanser. Vanligtvis används en NAS-server (Network Attached Storage). För molnbaserade distributioner som Amazon Web Services finns också `S3DataFileStore` lösningen.
+   Sökvägen till datalagrets rot. För en MongoMK-distribution måste det här vara ett delat filsystem som är tillgängligt för alla AEM instanser. Vanligtvis används en NAS-server (Network Attached Storage). För molnbaserade distributioner som Amazon Web Services finns också `S3DataFileStore` lösningen.
 
 * `cacheSizeInMB`
 
-   
-Den totala storleken på binärt cacheminne i megabyte. Den används för att cachelagra binärfiler som är mindre än `maxCacheBinarySize` inställningen.
+   Den totala storleken på binärt cacheminne i megabyte. Den används för att cachelagra binärfiler som är mindre än `maxCacheBinarySize` inställningen.
 
 * `maxCachedBinarySize`
 
-   
-Maximal storlek i byte för en binär cache-lagring i den binära cachen. Om ett filsystembaserat datalager används bör du inte använda höga värden för datalagrets cache eftersom binärfilerna redan cachas av operativsystemet.
+   Maximal storlek i byte för en binär cache-lagring i den binära cachen. Om ett filsystembaserat datalager används bör du inte använda höga värden för datalagrets cache eftersom binärfilerna redan cachas av operativsystemet.
 
 #### Inaktivera frågetipset {#disabling-the-query-hint}
 
@@ -243,9 +235,9 @@ Du bör inaktivera frågetipset som skickas med alla frågor genom att lägga ti
 
 `-Doak.mongo.disableIndexHint=true`
 
-när du startar AEM. På så sätt beräknas MongoDB utifrån det lämpligaste indexvärdet som ska användas baserat på intern statistik.
+när AEM startas. På så sätt beräknas MongoDB utifrån det lämpligaste indexvärdet som ska användas baserat på intern statistik.
 
-Om frågetipset inte är inaktiverat kommer prestandajustering av index inte att påverka AEM-prestanda.
+Om frågetipset inte är inaktiverat kommer prestandajustering av index inte att påverka AEM prestanda.
 
 #### Aktivera beständig cache för MongoMK {#enable-persistent-cache-for-mongomk}
 
@@ -285,7 +277,7 @@ MongoDB kan köras i ett antal operativsystem, bland annat en mängd olika Linux
    * andkernel.threads-max value of 64000
 
 * Kontrollera att utbytesutrymmet är konfigurerat på datorn. Mer information om lämplig storlek finns i dokumentationen för ditt operativsystem.
-* Kontrollera att systemets standardinställning för TCP Keepalive är korrekt. Värdet 300 ger ofta bättre prestanda för replikuppsättningar och delade kluster. Se: Påverkar [TCP-livstid MongoDB-distributioner?](https://docs.mongodb.com/manual/faq/diagnostics/#faq-keepalive) i Vanliga frågor för mer information.
+* Kontrollera att systemets standardinställning för TCP Keepalive är korrekt. Värdet 300 ger ofta bättre prestanda för replikuppsättningar och delade kluster. Se: [Påverkar TCP-livstid MongoDB-distributioner?](https://docs.mongodb.com/manual/faq/diagnostics/#faq-keepalive) i Vanliga frågor för mer information.
 
 #### Windows {#windows}
 
@@ -378,7 +370,7 @@ Information om hur du justerar storleken på det interna WiredTiger-cacheminnet 
 
 ### NUMA {#numa}
 
-Med åtkomst till icke-enhetligt minne (NUMA) kan en kärna hantera hur minne mappas till processorkärnorna. Även om detta försöker göra minnesåtkomsten snabbare för kärnor som ser till att de kan komma åt de data som krävs, stör NUMA MMAP och lägger till ytterligare fördröjning eftersom läsningar inte kan förutsägas. Därför måste NUMA inaktiveras för processen på alla operativsystem som har den `mongod` funktionen.
+Med åtkomst till icke-enhetligt minne (NUMA) kan en kärna hantera hur minne mappas till processorkärnorna. Även om detta försöker göra minnesåtkomsten snabbare för kärnor som ser till att de kan komma åt de data som krävs, stör NUMA MMAP och lägger till ytterligare fördröjning eftersom läsningar inte kan förutsägas. På grund av detta måste NUMA inaktiveras för processen för alla operativsystem som har den `mongod` funktionen.
 
 I ett NUMA-arkitekturminne är alltså anslutet till CPU:er och CPU:er är anslutna till en buss. I en SMP- eller UMA-arkitektur är minnet anslutet till bussen och delas av CPU:er. När en tråd allokerar minne på en NUMA-processor tilldelas den enligt en princip. Standardinställningen är att tilldela minne som är kopplat till trådens lokala CPU, såvida det inte finns något ledigt utrymme, och då används minne från en ledig CPU till en högre kostnad. När minnet har tilldelats flyttas det inte mellan processorer. Allokeringen utförs av en princip som ärvs från den överordnade tråden, vilket i slutändan är den tråd som startade processen.
 
@@ -404,28 +396,23 @@ MongoDB-processen fungerar på olika sätt med olika allokeringsprinciper:
 
 * `-membind=<nodes>`
 
-   
-Allokera bara på noderna i listan. Mongod allokerar inte minne på noder som visas och kanske inte använder allt tillgängligt minne.
+   Allokera bara på noderna i listan. Mongod allokerar inte minne på noder som visas och kanske inte använder allt tillgängligt minne.
 
 * `-cpunodebind=<nodes>`
 
-   
-Kör bara på noderna. Mongud körs bara på de angivna noderna och använder bara minne som är tillgängligt på dessa noder.
+   Kör bara på noderna. Mongud körs bara på de angivna noderna och använder bara minne som är tillgängligt på dessa noder.
 
 * `-physcpubind=<nodes>`
 
-   
-Kör bara på de angivna CPU:erna (kärnor). Mongod kan bara köras på de angivna CPU:erna och bara använda minne som finns på dessa processorer.
+   Kör bara på de angivna CPU:erna (kärnor). Mongod körs bara på de angivna processorerna och använder bara minne som är tillgängligt på dessa processorer.
 
 * `--localalloc`
 
-   
-Alltid allokera minne på den aktuella noden, men använd alla noder som tråden körs på. Om en tråd utför allokering kommer endast det minne som är tillgängligt för den processorn att användas.
+   Alltid allokera minne på den aktuella noden, men använd alla noder som tråden körs på. Om en tråd utför allokering kommer endast det minne som är tillgängligt för den processorn att användas.
 
 * `--preferred=<node>`
 
-   
-Prioriterar allokering till en nod, men återgår till andra om den önskade noden är full. Relativ notation för att definiera en nod kan användas. Dessutom körs trådarna på alla noder.
+   Prioriterar allokering till en nod, men återgår till andra om den önskade noden är full. Relativ notation för att definiera en nod kan användas. Dessutom körs trådarna på alla noder.
 
 Vissa av profilerna kan resultera i mindre än allt tillgängligt RAM-minne för `mongod` processen. Till skillnad från MySQL undviker MongoDB aktivt sidindelning på operativsystemnivå, och därför kan `mongod` processen få mindre minne som verkar tillgängligt.
 
@@ -522,7 +509,7 @@ Du kan inaktivera det genom att följa nedanstående procedur:
 
 #### Inaktivera NUMA {#disable-numa}
 
-I de flesta installationer där NUMA är aktiverat inaktiveras MongoDB-daemon automatiskt om det körs som en tjänst från `/etc/init.d` mappen.
+I de flesta installationer där NUMA är aktiverat kommer MongoDB-daemon att inaktivera det automatiskt om det körs som en tjänst från `/etc/init.d` mappen.
 
 Om så inte är fallet kan du inaktivera NUMA per processnivå. Kör följande kommandon om du vill inaktivera den:
 
@@ -599,7 +586,7 @@ Om du använder WMWare ESX för att hantera och driftsätta dina virtualiserade 
 1. Använd I/O-kontroll för lagring för att tilldela tillräcklig I/O till `mongod` processen.
 1. Garantera processorresurser för de datorer som är värdar för MongoDB genom att ställa in [CPU-reservation](https://pubs.vmware.com/vsphere-4-esx-vcenter/index.jsp?topic=/com.vmware.vsphere.vmadmin.doc_41/vsp_vm_guide/configuring_virtual_machines/t_allocate_cpu_resources.html)
 
-1. Överväg att använda ParaVirtual I/O-drivrutiner. Mer information finns i den här [kunskapsbasartikeln](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1010398).
+1. Överväg att använda ParaVirtual I/O-drivrutiner. Mer information finns i den här [kunskapsbasartikeln](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1010398).
 
 ### Amazon Web Services {#amazon-web-services}
 
@@ -607,7 +594,7 @@ Mer information om hur du konfigurerar MongoDB med Amazon Web Services finns i f
 
 ## Säkra MongoDB före distribution {#securing-mongodb-before-deployment}
 
-Se det här inlägget om [säker driftsättning av MongoDB](https://blogs.adobe.com/security/2015/07/securely-deploying-mongodb-3-0.html) för råd om hur du skyddar konfigurationen av dina databaser före driftsättning.
+I det här inlägget om [säker driftsättning av MongoDB](https://blogs.adobe.com/security/2015/07/securely-deploying-mongodb-3-0.html) finns information om hur du skyddar konfigurationen av dina databaser före driftsättning.
 
 ## Dispatcher {#dispatcher}
 
@@ -619,11 +606,11 @@ Se även till att alla bibliotek som används i ditt bygge är uppdaterade för 
 
 ### Dispatcher-konfiguration {#dispatcher-configuration}
 
-En typisk Dispatcher-konfiguration fungerar mellan tio och tjugo gånger så mycket som dataflödet för en enda AEM-instans.
+En typisk Dispatcher-konfiguration fungerar mellan tio och tjugo gånger så mycket som genomströmningen för en enda AEM.
 
 Eftersom Dispatcher i huvudsak är tillståndslös kan den enkelt skalas vågrätt. I vissa distributioner måste författare hindras från att komma åt vissa resurser. Därför rekommenderar vi att du använder en dispatcher med författarinstanserna.
 
-För att köra AEM utan en dispatcher krävs att SSL-terminering och belastningsutjämning utförs av ett annat program. Detta är nödvändigt eftersom sessioner måste ha tillhörighet till den AEM-instans som de skapade, ett koncept som kallas klibbiga anslutningar. Syftet med detta är att säkerställa att uppdateringar av innehållet uppvisar minimal fördröjning.
+Om du kör AEM utan en dispatcher måste SSL-avslutning och belastningsutjämning utföras av ett annat program. Detta är nödvändigt eftersom sessioner måste ha tillhörighet till den AEM instansen som de skapades i, ett koncept som kallas klibbiga anslutningar. Syftet med detta är att säkerställa att uppdateringar av innehållet uppvisar minimal fördröjning.
 
 Mer information om hur du konfigurerar [Dispatcher-dokumentationen](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) finns i Dispatcher-dokumentationen.
 
@@ -631,13 +618,13 @@ Mer information om hur du konfigurerar [Dispatcher-dokumentationen](https://help
 
 #### Fästiga anslutningar {#sticky-connections}
 
-Antikiga anslutningar säkerställer att alla personaliserade sidor och sessionsdata för en användare är sammansatta på samma instans av AEM. Dessa data lagras på instansen, så efterföljande begäranden från samma användare kommer att återgå till samma instans.
+Antikiga anslutningar säkerställer att personaliserade sidor och sessionsdata för en användare består av samma instans av AEM. Dessa data lagras på instansen, så efterföljande begäranden från samma användare kommer att återgå till samma instans.
 
-Vi rekommenderar att klisterlappande anslutningar aktiveras för alla inre lagerroutningsbegäranden till AEM-instanserna, vilket uppmuntrar efterföljande begäranden att nå samma AEM-instans. Detta bidrar till att minimera fördröjning som annars syns när innehållet uppdateras mellan olika instanser.
+Vi rekommenderar att klisterlappande anslutningar aktiveras för alla inre lagers routningsbegäranden till AEM instanser, vilket uppmuntrar efterföljande begäranden att nå samma AEM. Detta bidrar till att minimera fördröjning som annars syns när innehållet uppdateras mellan olika instanser.
 
 #### Långt förfallodatum {#long-expires}
 
-Som standard har innehåll som skickas ut från en AEM-dispatcher rubriker med senaste ändring och Etag-rubriker, utan någon indikation på innehållets förfallodatum. Detta garanterar att användargränssnittet alltid får den senaste versionen av resursen, men det innebär också att webbläsaren utför en GET-åtgärd för att kontrollera om resursen har ändrats. Detta kan resultera i flera begäranden till vilka HTTP-svaret är 304 (inte ändrat), beroende på sidinläsningen. Om du anger en förfallotid för resurser som inte går ut och tar bort rubrikerna Senaste ändring och ETag, kommer innehållet att cachelagras och inga ytterligare uppdateringsbegäranden kommer att göras förrän datumet i rubriken Förfaller är uppfyllt.
+Som standard har innehåll som skickas från en AEM avsändare rubrikerna Senaste ändring och Etag utan att det finns någon indikation på att innehållet har upphört att gälla. Detta garanterar att användargränssnittet alltid får den senaste versionen av resursen, men det innebär också att webbläsaren kommer att utföra en GET-åtgärd för att kontrollera om resursen har ändrats. Detta kan resultera i flera begäranden till vilka HTTP-svaret är 304 (inte ändrat), beroende på sidinläsningen. Om du anger en förfallotid för resurser som inte går ut och tar bort rubrikerna Senaste ändring och ETag, kommer innehållet att cachelagras och inga ytterligare uppdateringsbegäranden kommer att göras förrän datumet i rubriken Förfaller är uppfyllt.
 
 Men om du använder den här metoden finns det inget rimligt sätt att låta resursen förfalla i webbläsaren innan rubriken Förfaller förfaller. För att minska detta kan HtmlClientLibraryManager konfigureras att använda oföränderliga URL:er för klientbibliotek.
 
@@ -657,7 +644,7 @@ Header unset Pragma "expr=(%{REQUEST_STATUS} -eq 200) && (%{REQUEST_URI} =~ /.*l
 
 Om innehåll skickas ut utan innehållstyp försöker många webbläsare gissa vilken typ av innehåll det är genom att läsa de första byten i innehållet. Det här kallas &quot;sniffing&quot;. Sniffing öppnar en säkerhetsrisk eftersom användare som kan skriva till databasen kan överföra skadligt innehåll utan innehållstyp.
 
-Därför är det lämpligt att lägga till en rubrik till resurser som hanteras av dispatchern. `no-sniff` Dispatcharen cache-lagrar emellertid inte rubriker. Det innebär att innehåll som hanteras från det lokala filsystemet kommer att ha innehållstypen som bestäms av dess tillägg, i stället för att den ursprungliga innehållstyprubriken från den ursprungliga AEM-servern används.
+Därför är det lämpligt att lägga till en rubrik till resurser som hanteras av dispatchern. `no-sniff` Dispatcharen cache-lagrar emellertid inte rubriker. Det innebär att innehåll som hanteras från det lokala filsystemet kommer att ha innehållstypen som bestäms av dess tillägg, i stället för att den ursprungliga innehållstyprubriken från den ursprungliga AEM servern.
 
 Inga kodavsnitt kan aktiveras på ett säkert sätt om webbprogrammet är känt för att aldrig hantera cachelagrade resurser utan filtyp.
 
@@ -707,7 +694,7 @@ För att undvika detta måste du först köra installationen med en enda medlem 
 
 ### Sidnamnslängd {#page-name-length}
 
-Om AEM körs på en distribution av en beständig MongoMK-hanterare, är [sidnamnen begränsade till 150 tecken](/help/sites-authoring/managing-pages.md#page-name-restrictions-and-best-practices).
+Om AEM körs på en MongoMK persistence Manager-distribution är [sidnamnen begränsade till 150 tecken](/help/sites-authoring/managing-pages.md#page-name-restrictions-and-best-practices).
 
 >[!NOTE]
 >
