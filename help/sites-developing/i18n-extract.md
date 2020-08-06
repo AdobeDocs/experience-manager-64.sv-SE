@@ -11,6 +11,9 @@ topic-tags: components
 discoiquuid: 034f70f1-fbd2-4f6b-b07a-5758f0461a5b
 translation-type: tm+mt
 source-git-commit: a39d0c895a9e3c8ef418100a153d29b79dda6e6a
+workflow-type: tm+mt
+source-wordcount: '492'
+ht-degree: 0%
 
 ---
 
@@ -65,8 +68,8 @@ Mönsterdelen av en regel används för att matcha namnen på de filer som ska i
 | Prefix | Effekt |
 |---|---|
 | / | Anger en JCR-sökväg. Det innebär att det här prefixet matchar filer under katalogen jcr_root. |
-|  &amp;ast; | Anger en vanlig fil i filsystemet. |
-| inga | Inget prefix, eller ett mönster som börjar med en mapp eller ett filnamn, anger att filen är en vanlig fil i filsystemet. |
+| &amp;ast; | Anger en vanlig fil i filsystemet. |
+| inga | Inget prefix, eller ett mönster som börjar med en mapp eller ett filnamn, visar att filen är en vanlig fil i filsystemet. |
 
 Vid användning inom ett mönster anger tecknet / en underkatalog och &amp;ast; tecken matchar alla. I följande tabell visas flera exempelregler.
 
@@ -97,7 +100,7 @@ Vid användning inom ett mönster anger tecknet / en underkatalog och &amp;ast; 
  </tbody> 
 </table>
 
-### Extrahera strängarna {#extracting-the-strings}
+### Extrahera strängarna  {#extracting-the-strings}
 
 ingen POM:
 
