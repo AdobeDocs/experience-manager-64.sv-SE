@@ -1,8 +1,8 @@
 ---
-title: 'Skillnaden mellan HTML5-formulär och PDF-formulär '
-seo-title: 'Skillnaden mellan HTML5-formulär och PDF-formulär '
-description: Funktion som stöds i HTML5-formulär och PDF-formulär
-seo-description: Funktion som stöds i HTML5-formulär och PDF-formulär
+title: 'Skillnaden mellan HTML5-formulär och PDF forms '
+seo-title: 'Skillnaden mellan HTML5-formulär och PDF forms '
+description: Funktion som stöds i HTML5-formulär och PDF forms
+seo-description: Funktion som stöds i HTML5-formulär och PDF forms
 uuid: b0a96da5-31d3-4f99-b100-91ad51736ffb
 contentOwner: robhagat
 content-type: reference
@@ -11,19 +11,22 @@ topic-tags: hTML5_forms
 discoiquuid: 273096d0-b0e1-4519-8af6-11b3414cc172
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '501'
+ht-degree: 2%
 
 ---
 
 
-# Skillnaden mellan HTML5-formulär och PDF-formulär {#feature-differentiation-between-html-forms-and-pdf-forms}
+# Skillnaden mellan HTML5-formulär och PDF forms {#feature-differentiation-between-html-forms-and-pdf-forms}
 
-Följande tabell anger vilka funktioner som finns för HTML5-formulär och PDF-formulär:
+Följande tabell anger vilka funktioner som stöds för HTML5-formulär och PDF forms:
 
 <table> 
  <tbody>
   <tr>
    <th>Funktion</th> 
-   <th>HTML5-formulär</th> 
+   <th>HTML5 Forms</th> 
    <th>PDF</th> 
   </tr>
   <tr>
@@ -48,12 +51,12 @@ Följande tabell anger vilka funktioner som finns för HTML5-formulär och PDF-f
   </tr>
   <tr>
    <td>Sidnumrering<br /> </td> 
-   <td><p>Ett HTML5-formulär är uppdelat i paneler och rutor för att ge det ett utseende som liknar PDF-formulär. Sidstorleken beräknas dynamiskt. Om allt innehåll på en sida i ett HTML5-formulär tas bort eller markeras som dolt, döljs den tomma sidan och inget tomt utrymme (blanksteg) visas mellan sidorna ovanför och under den tomma sidan.</p> <p>Om datasammanfogning eller skript lägger till innehåll på en sida utökas sidans längd så att det nya innehållet får plats. Inga nya sidor läggs till i formuläret så att det nya innehållet får plats. </p> <p><strong>Obs!</strong> När allt innehåll på en sida i ett HTML5-formulär tas bort eller markeras som dolt, förblir den tomma sidan (tomt utrymme) synlig mellan första och andra sidan, men inte mellan andra sidor.</p> </td> 
+   <td><p>Ett HTML5-formulär är uppdelat i paneler och rutor för att ge det ett utseende som liknar PDF forms. Sidstorleken beräknas dynamiskt. Om allt innehåll på en sida i ett HTML5-formulär tas bort eller markeras som dolt, döljs den tomma sidan och inget tomt utrymme (blanksteg) visas mellan sidorna ovanför och under den tomma sidan.</p> <p>Om datasammanfogning eller skript lägger till innehåll på en sida utökas sidans längd så att det nya innehållet får plats. Inga nya sidor läggs till i formuläret så att det nya innehållet får plats. </p> <p><strong>Obs!</strong> När allt innehåll på en sida i ett HTML5-formulär tas bort eller markeras som dolt, förblir den tomma sidan (tomt utrymme) synlig mellan första och andra sidan, men inte mellan andra sidor.</p> </td> 
    <td>Sidnumrering i PDF-dokument beror på det sammanfogade datainnehållet eller på om användarinnehållet och antalet sidor ökar eller minskar baserat på det.</td> 
   </tr>
   <tr>
    <td>Sidhuvuden/sidfötter </td> 
-   <td>Stöds. <br /> <br /> Eftersom HTML5-mobilformulär inte stöder sidbrytningar visas sidhuvuden och sidfötter endast en gång. Du kan dock konfigurera dem i layouten så att de visas på flera ställen i förhandsgranskningen av mobilformulär.<br /> </td> 
+   <td>Stöds. <br /> <br /> Eftersom mobilformulär i HTML5 inte stöder sidbrytningar visas sidhuvuden och sidfötter endast en gång. Du kan dock konfigurera dem i layouten så att de visas på flera ställen i förhandsgranskningen av mobilformulär.<br /> </td> 
    <td>Stöds.</td> 
   </tr>
   <tr>
@@ -69,7 +72,7 @@ Följande tabell anger vilka funktioner som finns för HTML5-formulär och PDF-f
   <tr>
    <td>Acrobat Script API:er </td> 
    <td>HTML5-formulär har stöd för de vanligaste API:erna. Mer information finns i <a href="/help/forms/using/scripting-support.md">Skriptstöd</a>.</td> 
-   <td>Om PDF-filen öppnas i Acrobat eller Reader stöder den även alla skript-API:er som finns i Acrobat.</td> 
+   <td>Om PDF-filen öppnas i Acrobat eller Reader stöds även alla skript-API:er som finns i Acrobat.</td> 
   </tr>
   <tr>
    <td>Stöd för höger-till-vänster-språk </td> 
