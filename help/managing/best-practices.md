@@ -1,8 +1,8 @@
 ---
 title: Hantera projekt - checklista för bästa praxis
 seo-title: Hantera projekt - checklista för bästa praxis
-description: 'Att hantera ett projekt för att implementera Adobe Experience Manager (AEM) kräver planering och förståelse. Projektchecklistor är avsedda som en uppsättning bästa metoder för projektleverans. De vägleder dig genom alla faser i projektets livscykel och ger dig möjlighet att övervaka din nuvarande status på hög nivå. '
-seo-description: 'Att hantera ett projekt för att implementera Adobe Experience Manager (AEM) kräver planering och förståelse. Projektchecklistor är avsedda som en uppsättning bästa metoder för projektleverans. De vägleder dig genom alla faser i projektets livscykel och ger dig möjlighet att övervaka din nuvarande status på hög nivå. '
+description: 'Planering och förståelse krävs för att hantera ett projekt som ska implementera Adobe Experience Manager (AEM). Projektchecklistor är avsedda som en uppsättning bästa metoder för projektleverans. De vägleder dig genom alla faser i projektets livscykel och ger dig möjlighet att övervaka din nuvarande status på hög nivå. '
+seo-description: 'Planering och förståelse krävs för att hantera ett projekt som ska implementera Adobe Experience Manager (AEM). Projektchecklistor är avsedda som en uppsättning bästa metoder för projektleverans. De vägleder dig genom alla faser i projektets livscykel och ger dig möjlighet att övervaka din nuvarande status på hög nivå. '
 uuid: 61b45b1b-af0b-4b1b-9a52-6767611fc1ab
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/MANAGING
@@ -11,13 +11,16 @@ topic-tags: introduction
 discoiquuid: b891009b-d3b1-402a-920a-014366f342f0
 translation-type: tm+mt
 source-git-commit: f5c0d5032073b91c0b3199bb42709b8e679fa6a0
+workflow-type: tm+mt
+source-wordcount: '3313'
+ht-degree: 0%
 
 ---
 
 
 # Hantera projekt - checklista för bästa praxis{#managing-projects-best-practices-checklist}
 
-Att hantera ett projekt för att implementera Adobe Experience Manager (AEM) kräver planering och förståelse för att du är medveten om de problem och (relaterade) beslut som du måste fatta (både före och under implementeringen av projektet).
+För att hantera ett projekt som ska implementera Adobe Experience Manager (AEM) måste du planera och förstå för att vara säker på att du är medveten om de problem och (relaterade) beslut som du måste fatta (både före och under implementeringen av projektet).
 
 De bästa sätten är att
 
@@ -166,7 +169,7 @@ Att planera utvecklingsarbetet är avgörande för att säkerställa att projekt
    Innehållsarkitekturen definierar och beskriver innehållets framtida arkitektur. inklusive:
 
    * Innehållsträdet. inklusive tillgångar
-   * Grundläggande strukturer. inklusive kampanjer, etc.
+   * Grundläggande strukturer. inklusive kampanjer etc.
    * Strukturer för flera webbplatser och språk (MSM, översättning osv.)
    * Innehåll som stöds (inklusive taggar och taggar)
    * Strategier för cachning och återanvändning av innehåll
@@ -194,6 +197,7 @@ Att planera utvecklingsarbetet är avgörande för att säkerställa att projekt
 
    * Hur de interagerar med varandra och med användarna.
    * De data som ska användas och produceras av program, i stället för deras interna struktur.
+
    Definitionerna bör omfatta följande:
 
    * Grundläggande kodstruktur för projektet
@@ -221,11 +225,11 @@ Att planera utvecklingsarbetet är avgörande för att säkerställa att projekt
    * Förberedelse av allt innehåll som krävs för dessa tester
    * Information om eventuella testverktyg som ska användas
    * Uppgifter på hög nivå om vilka som kommer att delta i testningen. särskilt grupper utanför kvalitetsteamet
-   * Detaljer om automatisering av tester. med till exempel Selenium eller AEM Developer Mode
+   * Detaljer om automatisering av tester. med till exempel läget Selenium eller AEM Developer
 
 * **Experience Design**
 
-   Experience Design (XD) innebär att utforma användarupplevelsen för din lösning.
+   Experience Design (XD) handlar om att utforma användarupplevelsen för er lösning.
 
    Användarupplevelsen bör analyseras och utvecklas för både författarna och slutanvändarna av webbplatsen.
 
@@ -233,7 +237,7 @@ Att planera utvecklingsarbetet är avgörande för att säkerställa att projekt
 
    Innan alla supportprocesser som krävs för driftsättning, lansering, testning och rapportering tas fram bör fastställas.
 
-   Se även [Adobes supportportal](https://helpx.adobe.com/marketing-cloud/contact-support.html).
+   Se även [Adobe supportportal](https://helpx.adobe.com/marketing-cloud/contact-support.html).
 
 ### Planering och drift {#operations-planning-and-operations}
 
@@ -245,13 +249,13 @@ På liknande sätt måste åtgärderna planeras på rätt sätt för att säkers
 
    Du måste planera och sedan implementera ett rolls- och rättighetskoncept för alla användare/grupper som ska använda lösningen.
 
-   Exempel:
+   Till exempel:
 
    * En lista över roller (dvs. grupper) med `read`/ `write` åtkomstdefinitioner för varje
-   * Fastställande av användningen av befogenheter som påverkar publiceringsmiljön.
-till exempel `replicate`
+   * Fastställande av användningen av befogenheter som påverkar publiceringsmiljön. till exempel `replicate`
    * För användare med minimal behörighet bör arbetsflöden definieras
    * Användare i `editor` gruppen bör inte ha `admin` rättigheter eller vara en del av `administrators` gruppen
+
    Mer information finns i [Användaradministration och -säkerhet](/help/sites-administering/security.md).
 
 * **Övervakning och underhåll**
@@ -260,6 +264,7 @@ till exempel `replicate`
 
    * Vad behöver övervakas
    * Underhållsuppgifter. både vanliga och speciella fall
+
    Se även [Övervakning och underhåll](/help/sites-deploying/monitoring-and-maintaining.md) för mer information.
 
 * **Migrering**
@@ -268,7 +273,7 @@ till exempel `replicate`
 
 * **Återställningsplan**
 
-   Kontrollera att du har en återställningsplan. I en krissituation måste detta finnas tillgängligt för att säkerställa produktionsanvändningen av AEM. Detta bör omfatta situationer som säkerhetskopiering, återställning, återställning och reservlösningar.
+   Kontrollera att du har en återställningsplan. I en krissituation måste detta finnas tillgängligt för att säkerställa produktionsanvändningen av AEM. Detta bör omfatta situationer som säkerhetskopiering, återställning, reserv och andra.
 
 ### Utveckling {#development}
 
@@ -359,6 +364,7 @@ När det nya programmet är tillgängligt måste det genomgå strikta tester, b�
 
    * Lösningen uppfyller användar-/kundkraven
    * Kunden/användarna accepterar lösningen (funktion, design och prestanda)
+
    Det bör finnas en formaliserad checklista för överlämnande av kunder. helst automatiseras och körs på nightly mot en ögonblicksbild. Resultatet ska skickas till projektledaren och utvecklingsteamet
 
 * **Prestanda- och belastningstester**
@@ -370,6 +376,7 @@ När det nya programmet är tillgängligt måste det genomgå strikta tester, b�
    * [Prestandatestning](/help/sites-deploying/configuring-performance.md)
    * [Planera och köra testning](/help/sites-developing/planning.md)
    * [Riktlinjer för grundläggande prestanda](/help/sites-deploying/configuring-performance.md#basic-performance-guidelines)
+
    >[!NOTE]
    >
    >Denna process måste fortsätta under normal användning av AEM, men dessa inledande steg är de viktigaste.
@@ -432,7 +439,7 @@ Du vill att ditt Go Live ska vara så smidigt som möjligt. Återigen behöver d
 
 * **Reserv**
 
-   Se till att alla system, procedurer och mekanismer som krävs för reservlösningar finns på plats innan du publicerar.
+   Se till att alla system, procedurer och mekanismer som krävs för reservdriftsättning finns på plats innan du går live.
 
 * **Stöd**
 
@@ -477,7 +484,7 @@ Lösningsarkitekten:
 
 * Ansvarar för lösningens och systemets konstruktion på hög nivå.
 * Hjälper till att definiera implementeringsstrategin för AEM. Exempel: om en klustrad installation ska implementeras, om ett kallt vänteläge eller när ett leveransnätverk (CDN) krävs.
-* Definiera också arkitekturen för AEM-lösningar utifrån kundernas behov. Detta kan omfatta konceptet för användarroller (med relaterade behörigheter), relationen mellan mallar och komponenter eller när flera platser ska användas.
+* Definiera också den AEM lösningsarkitekturen baserat på kundens krav. Detta kan omfatta konceptet för användarroller (med relaterade behörigheter), relationen mellan mallar och komponenter eller när flera platser ska användas.
 
 ### Affärsanalytiker {#business-analyst}
 
@@ -497,7 +504,7 @@ Affärsanalytiker:
 Utvecklingsledd:
 
 * Ansvarar för det tekniska genomförandet av projektet.
-* Ansvarar för att välja en utvecklingsmetod som är kompatibel med kundens krav.
+* Ansvarar för att välja en utvecklingsmetod som uppfyller kundens krav.
 * Utarbeta en utvecklingsstrategi:
    * säkerställa att den är anpassad efter nyckeltal för verksamhet och prestanda
    * med beaktande av kriterier för framgång och definition,
@@ -579,7 +586,7 @@ Slutprodukter används ofta som **obligatoriska dokument** för antingen den akt
 
 De bästa sätten att distribuera, administrera, utveckla eller skapa finns i följande:
 
-* Övriga bästa metoder och riktlinjer för att hantera ett AEM-projekt:
+* Övriga bästa metoder och riktlinjer för att hantera ett AEM projekt:
    * [Riktlinjer för maskinvarans storlek](/help/managing/hardware-sizing-guidelines.md)
    * [Enterprise DevOps](/help/managing/enterprise-devops.md)
    * [Bästa praxis för hantering av SEO och URL](/help/managing/seo-and-url-management.md)
@@ -592,18 +599,18 @@ De bästa sätten att distribuera, administrera, utveckla eller skapa finns i f�
 
 ## Viktiga dokumentationsområden {#key-documentation-areas}
 
-* AEM-dokumentation
+* AEM
 
-   Dessutom är följande avsnitt av AEM-dokumentationen av särskilt intresse (listan är dock inte uttömmande):
+   Dessutom är följande avsnitt av AEM dokumentation av särskilt intresse (denna förteckning är dock inte uttömmande):
 
    * [Dokumentskydd](/help/sites-developing/security.md)
    * [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md)
    * [Enterprise DevOps](/help/managing/enterprise-devops.md)
    * [Maskinvarustorlek](/help/managing/hardware-sizing-guidelines.md)
-   * AEM-koncept:
+   * AEM:
       * [Utveckla - grunderna](/help/sites-developing/the-basics.md)
       * [MSM-koncept](/help/sites-administering/msm.md)
       * [HTML-mallspråk (HTL)](https://helpx.adobe.com/experience-manager/htl/user-guide.html)
 
 * Relaterad dokumentation
-   * Adobe Experience Cloud - [Planera för Adobe Experience Cloud](https://helpx.adobe.com/marketing-cloud/how-to/planning.html)
+   * Adobe Experience Cloud - [Planering för Adobe Experience Cloud](https://helpx.adobe.com/marketing-cloud/how-to/planning.html)
