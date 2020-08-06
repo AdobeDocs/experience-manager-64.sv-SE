@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 25b7ac08-6cdc-4dd5-a756-d6169b86f9ab
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '679'
+ht-degree: 1%
 
 ---
 
@@ -34,7 +37,7 @@ Följande tabeller beskriver vilka communitykomponenter som `verbs`definierats f
 | POST | medlem skapar en kalenderhändelse |
 | LÄGG TILL | kommentarer från medlemmar i en kalenderhändelse |
 | UPPDATERA | medlemmens kalenderhändelse eller -kommentar har redigerats |
-| TA BORT | medlemmens kalenderhändelse eller -kommentar tas bort |
+| DELETE | medlemmens kalenderhändelse eller -kommentar tas bort |
 
 [Comments Component](essentials-comments.md)SocialEvent `topic`= com/adobe/cq/social/comment
 
@@ -43,7 +46,7 @@ Följande tabeller beskriver vilka communitykomponenter som `verbs`definierats f
 | POST | medlem skapar en kommentar |
 | LÄGG TILL | medlemssvar på kommentarer |
 | UPPDATERA | Medlemmens kommentar har redigerats |
-| TA BORT | medlemmens kommentar har tagits bort |
+| DELETE | medlemmens kommentar har tagits bort |
 
 [File Library Component](essentials-file-library.md)SocialEvent `topic`= com/adobe/cq/social/fileLibrary
 
@@ -52,7 +55,7 @@ Följande tabeller beskriver vilka communitykomponenter som `verbs`definierats f
 | POST | medlem skapar en mapp |
 | BIFOGA | medlem överför en fil |
 | UPPDATERA | medlemmen uppdaterar en mapp eller fil |
-| TA BORT | medlem tar bort en mapp eller fil |
+| DELETE | medlem tar bort en mapp eller fil |
 
 [Forum Component](essentials-forum.md)SocialEvent `topic`= com/adobe/cq/social/forum
 
@@ -61,7 +64,7 @@ Följande tabeller beskriver vilka communitykomponenter som `verbs`definierats f
 | POST | medlem skapar forumämne |
 | LÄGG TILL | medlemssvar på forumämnet |
 | UPPDATERA | Medlemmens forumämne eller svar har redigerats |
-| TA BORT | forumämnet eller svaret för en medlem tas bort |
+| DELETE | forumämnet eller svaret för en medlem tas bort |
 
 [Journal Component](blog-developer-basics.md)SocialEvent `topic`= com/adobe/cq/social/journal
 
@@ -70,7 +73,7 @@ Följande tabeller beskriver vilka communitykomponenter som `verbs`definierats f
 | POST | medlem skapar en bloggartikel |
 | LÄGG TILL | kommentarerna på en bloggartikel |
 | UPPDATERA | Medlemmens bloggartikel eller kommentar redigeras |
-| TA BORT | Medlemmens bloggartikel eller kommentar tas bort |
+| DELETE | Medlemmens bloggartikel eller kommentar tas bort |
 
 [QnA Component](qna-essentials.md)SocialEvent `topic` = com/adobe/cq/social/qna
 
@@ -81,7 +84,7 @@ Följande tabeller beskriver vilka communitykomponenter som `verbs`definierats f
 | UPPDATERA | -medlemmens fråga eller svar har redigerats |
 | MARKERA | Medlemmens svar har valts |
 | AVMARKERA | Medlemmens svar är avmarkerat |
-| TA BORT | en medlems fråga eller svar tas bort |
+| DELETE | en medlems fråga eller svar tas bort |
 
 [Review Component](reviews-basics.md)SocialEvent `topic`= com/adobe/cq/social/review
 
@@ -89,7 +92,7 @@ Följande tabeller beskriver vilka communitykomponenter som `verbs`definierats f
 |---|---|
 | POST | medlem skapar granskning |
 | UPPDATERA | Medlemmens granskning har redigerats |
-| TA BORT | Medlemmens granskning har tagits bort |
+| DELETE | Medlemmens granskning har tagits bort |
 
 [Värderingskomponent](rating-basics.md)SocialEvent `topic`= com/adobe/cq/social/tally
 
