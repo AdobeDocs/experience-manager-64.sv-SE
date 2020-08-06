@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: cc993b71-e2f2-48e7-ad4e-469cb5ce2dc1
 translation-type: tm+mt
 source-git-commit: 28948f1f8678512f8fc970a4289cb01cde86c5c2
+workflow-type: tm+mt
+source-wordcount: '2431'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 28948f1f8678512f8fc970a4289cb01cde86c5c2
 
 Den typ av funktioner som förväntas av en community-upplevelse är välkända. Community-funktioner är tillgängliga som communityfunktioner. De är i princip en eller flera sidor som är färdiga för implementering av en communityfunktion som kräver mer än att bara lägga till en komponent på en sida i redigeringsläge. De är byggstenarna som används för att definiera strukturen för en mall [för en](sites.md) community-webbplats från vilken communitysajter [skapas](sites-console.md).
 
-När en community-webbplats har skapats kan innehåll läggas till på de resulterande sidorna med hjälp av standardläget [för](../../help/sites-authoring/editing-content.md)AEM-redigering.
+När en community-webbplats har skapats kan innehåll läggas till på de resulterande sidorna med hjälp av standardläget [för](../../help/sites-authoring/editing-content.md)AEM.
 
 Ett antal communityfunktioner är omedelbart tillgängliga enligt vad som visas i användarfunktionskonsolen. Fler communityfunktioner kommer att levereras i framtida versioner och anpassade funktioner kan också skapas.
 
@@ -31,13 +34,13 @@ Ett antal communityfunktioner är omedelbart tillgängliga enligt vad som visas 
 
 För att nå användarfunktionskonsolen i redigeringsmiljön
 
-* Från global navigering: **[!UICONTROL Verktyg > Communities > Community Functions]**
+* Från global navigering: **[!UICONTROL Tools > Communities > Community Functions]**
 
 ![chlimage_1-379](assets/chlimage_1-379.png)
 
 ## Fördefinierade funktioner {#pre-built-functions}
 
-Här följer en kort beskrivning av funktionerna som levereras med AEM Communities. Varje funktion består av en eller flera AEM-sidor som innehåller webbgruppskomponenter som är kopplade till en funktion som enkelt kan integreras i en [communitymall](sites.md).
+Här följer en kort beskrivning av funktionerna i AEM Communities. Varje funktion består av en eller flera AEM sidor som innehåller webbgruppskomponenter som är kopplade till en funktion som enkelt kan integreras i en mall [för](sites.md)communitysajter.
 
 En mall för en community-webbplats innehåller strukturen för en community-webbplats, inklusive inloggning, användarprofiler, meddelanden, meddelanden, webbplatsmeny, sökning, teman och varumärken.
 
@@ -51,9 +54,12 @@ När en communityfunktion läggs till i en mall för en community-webbplats elle
 
 ![chlimage_1-380](assets/chlimage_1-380.png)
 
-* **[!UICONTROL Titel]**(*obligatoriskt*) Den text som visas på menyn med funktioner för webbplatsen
+* **[!UICONTROL Title]**
+(
+*obligatorisk*) Den text som visas på menyn med funktioner för webbplatsen
 
-* **[!UICONTROL URL]**(*obligatoriskt*) Namnet som används för att generera URI:n. Namnet måste följa de [namngivningskonventioner](../../help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR.
+* **[!UICONTROL URL]**
+(*obligatoriskt*) Namnet som används för att generera URI:n. Namnet måste följa de [namnkonventioner](../../help/sites-developing/naming-conventions.md) som AEM och JCR har fastställt.
 
 Om du till exempel använder den webbplats som skapas i [självstudiekursen Komma igång](getting-started.md) , om
 
@@ -75,11 +81,14 @@ När du lägger till en mall öppnas följande dialogruta:
 ![chlimage_1-382](assets/chlimage_1-382.png)
 
 * Se [Titel- och URL-inställningar](#title-and-url-settings)
-* **[!UICONTROL Visa vyn]**&quot;Mina aktiviteter&quot; Om den är markerad innehåller sidan Aktiviteter en flik som filtrerar aktiviteter baserat på aktiviteter som genererats i communityn av den aktuella medlemmen. Standard är markerat.
+* **[!UICONTROL Show "My Activities" view]**
+Om det här alternativet är markerat innehåller sidan Aktiviteter en flik som filtrerar aktiviteter baserat på aktiviteter som genererats i communityn av den aktuella medlemmen. Standard är markerat.
 
-* **[!UICONTROL Visa vyn]** Alla aktiviteter Om den är markerad innehåller sidan Aktiviteter en flik som innehåller alla aktiviteter som genereras i den community som den aktuella medlemmen har åtkomst till. Standard är markerat.
+* **[!UICONTROL Show "All Activities" view]**
+Om det här alternativet är markerat innehåller sidan Aktiviteter en flik som innehåller alla aktiviteter som har skapats i den community som den aktuella medlemmen har åtkomst till. Standard är markerat.
 
-* **[!UICONTROL Visa vyn]** Nyhetsfeed Om den är markerad innehåller sidan Aktiviteter en flik som filtrerar aktiviteter baserade på de som den aktuella medlemmen följer. Standard är markerat.
+* **[!UICONTROL Show "News Feed" view]**
+Om det här alternativet är markerat innehåller sidan Aktiviteter en flik som filtrerar aktiviteter baserat på de som den aktuella medlemmen följer. Standard är markerat.
 
 ### Tilldelningsfunktion {#assignments-function}
 
@@ -98,13 +107,17 @@ När du lägger till en mall öppnas följande dialogruta:
 ![chlimage_1-383](assets/chlimage_1-383.png)
 
 * Se [Titel- och URL-inställningar](#title-and-url-settings)
-* **[!UICONTROL Tillåt behöriga medlemmar]** Om det här alternativet är markerat tillåter bloggen endast behöriga medlemmar att skapa artiklar genom att tillåta val av en [privilegierad medlemsgrupp](users.md#privileged-members-group). Om det inte är markerat kan alla community-medlemmar skapa. Standard är avmarkerat.
+* **[!UICONTROL Allow Privileged Members]**
+Om det här alternativet är markerat tillåter bloggen endast behöriga medlemmar att skapa artiklar genom att tillåta val av en [privilegierad medlemsgrupp](users.md#privileged-members-group). Om det inte är markerat kan alla community-medlemmar skapa. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt filöverföringar]** Om det här alternativet är markerat innehåller bloggen möjligheten för medlemmar att överföra filer. Standard är markerat.
+* **[!UICONTROL Allow File Uploads]**
+Om det här alternativet är markerat innehåller bloggen möjligheten för medlemmar att överföra filer. Standard är markerat.
 
-* **[!UICONTROL Tillåt kopplade svar]** Om det inte är markerat tillåter bloggen svar (kommentarer) på en artikel, men det är inte tillåtet att svara på kommentarer. Standard är markerat.
+* **[!UICONTROL Allow Threaded Replies]**
+Om den inte är markerad tillåter bloggen svar (kommentarer) på en artikel, men det är inte tillåtet att svara på kommentarer. Standard är markerat.
 
-* **[!UICONTROL Tillåt aktuellt innehåll]** Om det är markerat kan idén identifieras som [aktuellt innehåll](featured.md). Standard är markerat.
+* **[!UICONTROL Allow Featured Content]**
+Om du markerar det här alternativet kan idén identifieras som [aktuellt innehåll](featured.md). Standard är markerat.
 
 ### Kalenderfunktion {#calendar-function}
 
@@ -115,15 +128,20 @@ När du lägger till en mall öppnas följande dialogruta:
 ![chlimage_1-384](assets/chlimage_1-384.png)
 
 * Se [Titel- och URL-inställningar](#title-and-url-settings)
-* **[!UICONTROL Tillåt fästa]** Om det här alternativet är markerat kan ämnessvar fästs till början av kommentarlistan. Standard är markerat.
+* **[!UICONTROL Allow Pinning]**
+Om det här alternativet är markerat kan ämnessvar fästas i början av kommentarlistan. Standard är markerat.
 
-* **[!UICONTROL Tillåt behöriga medlemmar]** Om det här alternativet är markerat tillåter bloggen endast behöriga medlemmar att skapa artiklar genom att tillåta val av en [privilegierad medlemsgrupp](users.md#privileged-members-group). Om det inte är markerat kan alla community-medlemmar skapa. Standard är avmarkerat.
+* **[!UICONTROL Allow Privileged Members]**
+Om det här alternativet är markerat tillåter bloggen endast behöriga medlemmar att skapa artiklar genom att tillåta val av en [privilegierad medlemsgrupp](users.md#privileged-members-group). Om det inte är markerat kan alla community-medlemmar skapa. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt filöverföringar]** Om det här alternativet är markerat innehåller bloggen möjligheten för medlemmar att överföra filer. Standard är markerat.
+* **[!UICONTROL Allow File Uploads]**
+Om det här alternativet är markerat innehåller bloggen möjligheten för medlemmar att överföra filer. Standard är markerat.
 
-* **[!UICONTROL Tillåt kopplade svar]** Om det inte är markerat tillåter bloggen svar (kommentarer) på en artikel, men det är inte tillåtet att svara på kommentarer. Standard är markerat.
+* **[!UICONTROL Allow Threaded Replies]**
+Om den inte är markerad tillåter bloggen svar (kommentarer) på en artikel, men det är inte tillåtet att svara på kommentarer. Standard är markerat.
 
-* **[!UICONTROL Tillåt aktuellt innehåll]** Om det är markerat kan idén identifieras som [aktuellt innehåll](featured.md). Standard är markerat.
+* **[!UICONTROL Allow Featured Content]**
+Om du markerar det här alternativet kan idén identifieras som [aktuellt innehåll](featured.md). Standard är markerat.
 
 ### Katalogfunktion {#catalog-function}
 
@@ -136,7 +154,7 @@ När den läggs till i en mall tillåter konfigurationen att du anger taggnamnut
 ![catalogfunc](assets/catalogfunc.png)
 
 * Se [Titel- och URL-inställningar](#title-and-url-settings)
-* **[!UICONTROL Markera alla namnutrymmen]**
+* **[!UICONTROL Select All Namespaces]**
 
    * De markerade taggnamnutrymmena definierar vilka taggar som besökare kan markera för att filtrera listan med aktiveringsresurser som finns i katalogen.
    * Om det här alternativet är markerat är alla taggnamnutrymmen som är tillåtna för communitywebbplatsen tillgängliga.
@@ -168,15 +186,20 @@ När du lägger till en mall öppnas följande dialogruta:
 ![chlimage_1-385](assets/chlimage_1-385.png)
 
 * Se [Titel- och URL-inställningar](#title-and-url-settings)
-* **[!UICONTROL Tillåt fästa]** Om det här alternativet är markerat kan ämnessvar fästs till början av kommentarlistan. Standard är markerat.
+* **[!UICONTROL Allow Pinning]**
+Om det här alternativet är markerat kan ämnessvar fästas i början av kommentarlistan. Standard är markerat.
 
-* **[!UICONTROL Tillåt behöriga medlemmar]** Om alternativet är markerat tillåter forumet endast behöriga medlemmar att publicera ämnen genom att tillåta val av en [privilegierad medlemsgrupp](users.md#privileged-members-group). Om det inte är markerat kan alla community-medlemmar publicera. Standard är avmarkerat.
+* **[!UICONTROL Allow Privileged Members]**
+Om det här alternativet är markerat tillåter forumet endast behöriga medlemmar att publicera ämnen genom att tillåta val av en [privilegierad medlemsgrupp](users.md#privileged-members-group). Om det inte är markerat kan alla community-medlemmar publicera. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt filöverföringar]** Om det här alternativet är markerat innehåller forumet möjlighet för medlemmar att överföra filer. Standard är markerat.
+* **[!UICONTROL Allow File Uploads]**
+Om det här alternativet är markerat innehåller forumet möjlighet för medlemmar att överföra filer. Standard är markerat.
 
-* **[!UICONTROL Tillåt kopplade svar]** Om det inte är markerat tillåter forumet kommentarer om ett ämne, men det är inte tillåtet att svara på dessa kommentarer. Standard är markerat.
+* **[!UICONTROL Allow Threaded Replies]**
+Om det inte är markerat tillåter forumet kommentarer om ett ämne, men svar på dessa kommentarer tillåts inte. Standard är markerat.
 
-* **[!UICONTROL Tillåt aktuellt innehåll]** Om det är markerat kan idén identifieras som [aktuellt innehåll](featured.md). Standard är markerat.
+* **[!UICONTROL Allow Featured Content]**
+Om du markerar det här alternativet kan idén identifieras som [aktuellt innehåll](featured.md). Standard är markerat.
 
 ### Funktionen Grupper {#groups-function}
 
@@ -199,11 +222,14 @@ När du lägger till en mall öppnas följande dialogruta:
 ![chlimage_1-386](assets/chlimage_1-386.png)
 
 * Se [Titel- och URL-inställningar](#title-and-url-settings)
-* **[!UICONTROL Välj Gruppmallar]** En listruta där du kan välja mellan en eller flera aktiverade gruppmallar som den som skapar en ny community (i publiceringsmiljön) kan välja.
+* **[!UICONTROL Select Group Templates]**
+En nedrullningsbar meny som gör att du kan välja mellan en eller flera aktiverade gruppmallar som den som skapar en ny community (i publiceringsmiljön) kan välja mellan.
 
-* **[!UICONTROL Tillåt behöriga medlemmar]** Om alternativet är markerat tillåter forumet endast behöriga medlemmar att publicera ämnen genom att tillåta val av en [behörig medlemssäkerhetsgrupp](users.md#privileged-members-group). Om det inte är markerat kan alla community-medlemmar publicera. Standard är avmarkerat.
+* **[!UICONTROL Allow Privileged Members]**
+Om det här alternativet är markerat tillåter forumet endast behöriga medlemmar att publicera ämnen genom att tillåta val av en [behörig medlemssäkerhetsgrupp](users.md#privileged-members-group). Om det inte är markerat kan alla community-medlemmar publicera. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt publiceringsskapande]** Om det här alternativet är markerat kan behöriga communitymedlemmar skapa en grupp i publiceringsmiljön. Om alternativet inte är markerat kan nya grupper (undergrupper) bara skapas i författarmiljön från gruppkonsolen för Communities.
+* **[!UICONTROL Allow Publish Creation]**
+Om det här alternativet är markerat kan behöriga communitymedlemmar skapa en grupp i publiceringsmiljön. Om alternativet inte är markerat kan nya grupper (undergrupper) bara skapas i författarmiljön från gruppkonsolen för Communities.
 
    Standardvärdet är `checked`.
 
@@ -216,13 +242,17 @@ När du lägger till en mall öppnas följande dialogruta, som anger standardnam
 ![chlimage_1-387](assets/chlimage_1-387.png)
 
 * Se [Titel- och URL-inställningar](#title-and-url-settings)
-* **[!UICONTROL Tillåt behöriga medlemmar]** Om alternativet är markerat tillåter forumet endast behöriga medlemmar att publicera ämnen genom att tillåta val av en [behörig medlemssäkerhetsgrupp](users.md#privileged-members-group). Om det inte är markerat kan alla community-medlemmar publicera. Standard är avmarkerat.
+* **[!UICONTROL Allow Privileged Members]**
+Om det här alternativet är markerat tillåter forumet endast behöriga medlemmar att publicera ämnen genom att tillåta val av en [behörig medlemssäkerhetsgrupp](users.md#privileged-members-group). Om det inte är markerat kan alla community-medlemmar publicera. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt filöverföringar]** Om det här alternativet är markerat inkluderar idén möjligheten för medlemmar att överföra filer. Standard är markerat.
+* **[!UICONTROL Allow File Uploads]**
+Om alternativet är markerat innehåller idén möjligheten för medlemmar att överföra filer. Standard är markerat.
 
-* **[!UICONTROL Tillåt kopplade svar]** Om alternativet inte är markerat tillåter idén svar (kommentarer) på ett ämne, men svar på kommentarer tillåts inte. Standard är markerat.
+* **[!UICONTROL Allow Threaded Replies]**
+Om alternativet inte är markerat tillåts svar (kommentarer) på ett ämne, men det är inte tillåtet att svara på kommentarer. Standard är markerat.
 
-* **[!UICONTROL Tillåt aktuellt innehåll]** Om det är markerat kan idén identifieras som [aktuellt innehåll](featured.md). Standard är markerat.
+* **[!UICONTROL Allow Featured Content]**
+Om du markerar det här alternativet kan idén identifieras som [aktuellt innehåll](featured.md). Standard är markerat.
 
 ### Ledarbordsfunktion {#leaderboard-function}
 
@@ -235,21 +265,24 @@ När du lägger till en mall öppnas följande dialogruta, som anger standardnam
 ![chlimage_1-388](assets/chlimage_1-388.png)
 
 * Se [Titel- och URL-inställningar](#title-and-url-settings)
-* **[!UICONTROL Visa märke]** Om det här alternativet är markerat inkluderas en kolumn för emblem-ikoner i rankningslistan.
+* **[!UICONTROL Display Badge]**
+Om du markerar det här alternativet inkluderas en kolumn för ikoner för emblem i rankningspanelen.
 
    Standard är avmarkerat.
 
-* **[!UICONTROL Visa märkesnamn]** Om det här alternativet är markerat inkluderas en kolumn för märkesnamnet i resultatlistan.
+* **[!UICONTROL Display Badge Name]**
+Om du markerar det här alternativet inkluderas en kolumn för märkordsnamnet i resultatlistan.
 
    Standard är avmarkerat.
 
-* **[!UICONTROL Visa Avatar]** Om det här alternativet är markerat inkluderas medlemmens avatarbild i ledningsgruppen bredvid namnlänken till medlemsprofilen.
+* **[!UICONTROL Display Avatar]**
+Om det här alternativet är markerat inkluderas medlemmens avatarbild i ledningsgruppen bredvid namnlänken till medlemsprofilen.
 
    Standard är avmarkerat.
 
 ### Sidfunktion {#page-function}
 
-Sidfunktionen lägger till en tom sida på communitywebbplatsen som den är kopplad till funktionerna på communitywebbplatsen: inloggning, meny, meddelanden, meddelanden, teman och branding. Innehåll kan läggas till på sidan med [standardläget](../../help/sites-authoring/editing-content.md)för AEM-redigering.
+Sidfunktionen lägger till en tom sida på communitywebbplatsen som den är kopplad till funktionerna på communitywebbplatsen: inloggning, meny, meddelanden, meddelanden, teman och branding. Innehåll kan läggas till på sidan med [standardläget](../../help/sites-authoring/editing-content.md)för AEM.
 
 När du lägger till en mall är den enda konfigurationen för [titel- och URL-inställningarna](#title-and-url-settings).
 
@@ -262,19 +295,24 @@ När konfigurationen läggs till i en mall tillåts begränsningar för behörig
 ![chlimage_1-389](assets/chlimage_1-389.png)
 
 * Se [Titel- och URL-inställningar](#title-and-url-settings)
-* **[!UICONTROL Tillåt fästa]** Om det här alternativet är markerat kan ämnessvar fästs till början av kommentarlistan. Standard är markerat.
+* **[!UICONTROL Allow Pinning]**
+Om det här alternativet är markerat kan ämnessvar fästas i början av kommentarlistan. Standard är markerat.
 
-* **[!UICONTROL Tillåt behöriga medlemmar]** Om det här alternativet är markerat tillåter QnA-forumet endast behöriga medlemmar att skicka frågor genom att tillåta val av en [privilegierad medlemsgrupp](users.md#privileged-members-group). Om det inte är markerat kan alla community-medlemmar publicera. Standard är avmarkerat.
+* **[!UICONTROL Allow Privileged Members]**
+Om alternativet är markerat tillåter QnA-forumet endast behöriga medlemmar att ställa frågor genom att tillåta val av en [privilegierad medlemsgrupp](users.md#privileged-members-group). Om det inte är markerat kan alla community-medlemmar publicera. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt filöverföringar]** Om det här alternativet är markerat innehåller QnA-forumet möjlighet för medlemmar att överföra filer. Standard är markerat.
+* **[!UICONTROL Allow File Uploads]**
+Om det här alternativet är markerat innehåller QnA-forumet möjlighet för medlemmar att överföra filer. Standard är markerat.
 
-* **[!UICONTROL Tillåt kopplade svar]** Om det inte är markerat tillåter QnA-forumet att kommentarer (svar) till en publicerad fråga, men svar på svar tillåts inte. Standard är markerat.
+* **[!UICONTROL Allow Threaded Replies]**
+Om det inte är markerat tillåter QnA-forumet att det finns kommentarer (svar) på en publicerad fråga, men svar på svar tillåts inte. Standard är markerat.
 
-* **[!UICONTROL Tillåt aktuellt innehåll]** Om det är markerat kan idén identifieras som [aktuellt innehåll](featured.md). Standard är markerat.
+* **[!UICONTROL Allow Featured Content]**
+Om du markerar det här alternativet kan idén identifieras som [aktuellt innehåll](featured.md). Standard är markerat.
 
 ## Skapa community-funktion {#create-community-function}
 
-Du kan skapa en communityfunktion genom att välja `Create Community Function` -ikonen längst upp i användarfunktionskonsolen. Flera funktioner som är baserade på samma AEM-skiss kan skapas och sedan anpassas unikt genom att man öppnar dem i redigeringsläget.
+Du kan skapa en communityfunktion genom att välja `Create Community Function` -ikonen längst upp i användarfunktionskonsolen. Flera funktioner som är baserade på samma AEM kan skapas och sedan anpassas unikt genom att du öppnar i redigeringsläget.
 
 ![chlimage_1-390](assets/chlimage_1-390.png)
 
@@ -284,11 +322,14 @@ Du kan skapa en communityfunktion genom att välja `Create Community Function` -
 
 På panelen Community Function Name konfigureras ett namn, en beskrivning och om funktionen är aktiverad eller inaktiverad:
 
-* **[!UICONTROL Community-funktionsnamn]** Funktionsnamnet som används för visning och lagring
+* **[!UICONTROL Community Function Name]**
+Det funktionsnamn som används för visning och lagring
 
-* **[!UICONTROL Community Function Description]** The function description for display
+* **[!UICONTROL Community Function Description]**
+Funktionsbeskrivningen för visning
 
-* **[!UICONTROL Inaktiverad/aktiverad]** En växlingsväxling som kontrollerar om funktionen kan refereras
+* **[!UICONTROL Disabled/Enabled]**
+En växlingsväxling som styr om funktionen kan refereras
 
 ### AEM Blueprint {#aem-blueprint}
 
@@ -316,7 +357,7 @@ Markera `Open Community Function` ikonen om du vill aktivera redigeringsläget f
 
 ### Konfigurera komponenter {#configuring-components}
 
-En communityfunktion implementeras som en Live-kopia av ett AEM-utkast, vars information finns under [Multi Site Manager](../../help/sites-administering/msm.md).
+En communityfunktion implementeras som en Live-kopia av en AEM, som beskrivs under [Multi Site Manager](../../help/sites-administering/msm.md).
 
 Det går inte bara att skapa sidinnehåll utan även att konfigurera komponenter.
 
