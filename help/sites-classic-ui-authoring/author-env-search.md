@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: b20e0f78-9ae4-47ba-8e9a-452a0a78b663
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '488'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +24,7 @@ I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende 
 
 >[!NOTE]
 >
->Utanför redigeringsmiljön finns det även andra sökfunktioner, som [Query Builder](/help/sites-developing/querybuilder-api.md) och [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+>Utanför redigeringsmiljön finns det även andra sökfunktioner, till exempel [Query Builder](/help/sites-developing/querybuilder-api.md) och [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 ## Grunderna i sökning {#search-basics}
 
@@ -42,11 +45,13 @@ Med sökpanelen kan du söka på alla webbplatssidor. Den innehåller fält och 
 >
 >* [Jokertecken](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Wildcard_Searches)
 >* [Booleska operatorer](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boolean_operators)
+
    >
    >
 * [Reguljära uttryck](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Regexp_Searches)
 >* [Fältgruppering](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Field_Grouping)
 >* [Boosting](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boosting_a_Term)
+
 >
 
 
@@ -61,7 +66,7 @@ På olika platser kan ett filter ställas in (och rensas) för att detaljgranska
 
 ## Sök och ersätt {#find-and-replace}
 
-I konsolen **Webbplatser** kan du med menyalternativet **Sök och ersätt** söka efter och ersätta flera förekomster av en sträng inom ett avsnitt på webbplatsen.
+I konsolen **Webbplatser** kan du med menyalternativet **Sök och ersätt** söka efter och ersätta flera förekomster av en sträng i ett avsnitt på webbplatsen.
 
 1. Markera rotsidan, eller mappen, där du vill att åtgärden Sök och ersätt ska utföras.
 1. Välj **Verktyg** och sedan **Sök och ersätt**:
@@ -75,6 +80,7 @@ I konsolen **Webbplatser** kan du med menyalternativet **Sök och ersätt** sök
    * definierar termen som ska ersätta den
    * anger om sökningen ska vara skiftlägeskänslig
    * anger om endast hela ord ska hittas (i annat fall hittas även delsträngar)
+
    Om du klickar på **Förhandsgranska** visas var termen har hittats. Du kan markera/rensa specifika förekomster som ska ersättas:
 
    ![screen_shot_2012-02-15at120719pm](assets/screen_shot_2012-02-15at120719pm.png)
@@ -92,7 +98,7 @@ Omfånget kan ändras med Apache Felix Web Management Console (till exempel på 
 
 >[!NOTE]
 >
->I en standardinstallation av AEM använder Sök och ersätt Lucene för sökfunktionen.
+>I en standardinstallation AEM Sök och ersätt används Lucene för sökfunktionen.
 >
 >Lucene indexerar strängegenskaper på upp till 16 kB. Strängar som överskrider detta söks inte igenom.
 
