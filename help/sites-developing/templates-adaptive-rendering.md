@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: f5cb0e98-0d6e-4f14-9b94-df1a9d8cbe5b
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '488'
+ht-degree: 1%
 
 ---
 
@@ -74,7 +77,7 @@ I det här exemplet ska vi konfigurera den befintliga enhetsgruppen **Smarta tel
 
 När du nu använder [emulatorn](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints) i sidredigeraren (till exempel när du [ändrar layouten](/help/sites-authoring/responsive-layout.md)) och väljer en enhet i den konfigurerade enhetsgruppen, återges sidan med en väljare som en del av URL-adressen.
 
-När du redigerar en sida som är baserad på mallen **Experience Page** och väljer iPhone 4 i emulatorn återges sidan med väljaren som `arctic-surfing-in-lofoten.smart.html``arctic-surfing-in-lofoten.html`
+När du redigerar en sida som är baserad på mallen **Experience Page** och väljer iPhone 4 i emulatorn återges sidan med väljaren som `arctic-surfing-in-lofoten.smart.html` `arctic-surfing-in-lofoten.html`
 
 Du kan även anropa sidan direkt med den här väljaren.
 
