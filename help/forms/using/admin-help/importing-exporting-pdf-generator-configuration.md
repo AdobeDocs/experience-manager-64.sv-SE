@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e25c1b35-73eb-4353-8e39-a2d4cdccd101
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '395'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Konfigurationsfilen innehåller PDF-generatorns konverteringsinformation, inklus
 
 >[!NOTE]
 >
->Du kan inte ändra timeout-inställningen för PDF Generator genom att importera en anpassad native2pdfconfig.xml-fil. Tidsgränsen i den filen är endast avsedd som information och den aktuella inställningen visas i PDF Generator. Information om hur du ändrar timeout-inställningen finns i&quot;Setting PDF Generator performance parameters&quot; i [Installera och distribuera AEM-formulär](https://www.adobe.com/go/learn_aemforms_installJBoss_63).
+>Du kan inte ändra timeout-inställningen för PDF Generator genom att importera en anpassad native2pdfconfig.xml-fil. Tidsgränsen i den filen är endast avsedd som information och den aktuella inställningen visas i PDF Generator. Information om hur du ändrar timeout-inställningen finns i&quot;Setting PDF Generator performance parameters&quot; i [Installera och distribuera AEM](https://www.adobe.com/go/learn_aemforms_installJBoss_63).
 
 ## Exportera den aktuella konfigurationsfilen {#export-your-current-configuration-file}
 
