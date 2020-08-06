@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 278195a6-3452-4966-9d56-022815cf6fb4
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '933'
+ht-degree: 2%
 
 ---
 
@@ -45,7 +48,7 @@ Eller genom att använda **hjälpknappen** i redigeringsdialogrutan för specifi
 
 ## Sidekick {#sidekick}
 
-På fliken **Komponenter** i sidsparten kan du bläddra bland de komponenter som är tillgängliga för att läggas till på den aktuella sidan. Den önskade gruppen kan expanderas och sedan dras en komponent till önskad plats på sidan.
+På fliken **Komponenter** i sidosparken kan du bläddra bland de komponenter som är tillgängliga för att läggas till på den aktuella sidan. Den önskade gruppen kan expanderas och sedan dras en komponent till önskad plats på sidan.
 
 ![chlimage_1-155](assets/chlimage_1-155.png)
 
@@ -84,7 +87,7 @@ När du har skapat ett nedladdningsstycke på sidan kan du dra ett objekt och sl
 
 ### Söka efter filmer {#finding-movies}
 
-På den här fliken visas alla filmer (till exempel Flash-objekt) i databasen.
+På den här fliken visas alla filmer (till exempel Flash) i databasen.
 
 När du har skapat ett lämpligt stycke (till exempel Flash) på sidan kan du dra ett objekt och släppa det i stycket.
 
@@ -146,7 +149,7 @@ följande sökmönster hittar den (och alla andra bilder som matchar mönstret):
 
 ## Visar referenser {#showing-references}
 
-Med AEM kan du visa vilka sidor som är länkade till den sida du arbetar med just nu.
+AEM låter dig se vilka sidor som är länkade till den sida du arbetar med just nu.
 
 Så här visar du direkta sidreferenser:
 
@@ -154,7 +157,7 @@ Så här visar du direkta sidreferenser:
 
    ![screen_shot_2012-02-16at83127pm](assets/screen_shot_2012-02-16at83127pm.png)
 
-1. **Välj** Visa referenser... AEM öppnar fönstret Referenser och visar vilka sidor som refererar till den valda sidan, inklusive deras sökvägar.
+1. Välj **Visa referenser...** AEM öppnar fönstret Referenser och visar vilka sidor som refererar till den markerade sidan, inklusive deras sökvägar.
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
