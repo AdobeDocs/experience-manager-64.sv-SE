@@ -1,8 +1,8 @@
 ---
 title: Grundläggande hantering
 seo-title: Grundläggande hantering
-description: Bekväm navigering i AEM och dess grundläggande användning
-seo-description: Bekväm navigering i AEM och dess grundläggande användning
+description: Bekanta dig med navigering i AEM och dess grundläggande användning
+seo-description: Bekanta dig med navigering i AEM och dess grundläggande användning
 uuid: 12958209-6a49-41ad-8a8e-b112503d26b1
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 616d42c8-2316-4c56-b89f-660903270620
 translation-type: tm+mt
 source-git-commit: 11d4d4c4aa633974df2047631cf92f3226aaf6ca
+workflow-type: tm+mt
+source-wordcount: '2764'
+ht-degree: 4%
 
 ---
 
@@ -19,11 +22,12 @@ source-git-commit: 11d4d4c4aa633974df2047631cf92f3226aaf6ca
 
 >[!NOTE]
 >
->* Den här sidan är utformad för att ge en översikt över grundläggande hantering när du använder AEM-redigeringsmiljön. Den använder **platskonsolen** som grund.
+>* Den här sidan är avsedd att ge en översikt över grundläggande hantering när du använder AEM redigeringsmiljö. Den använder **platskonsolen** som grund.
    >
    >
 * Vissa funktioner är inte tillgängliga i alla konsoler, och i vissa konsoler kan ytterligare funktioner vara tillgängliga. Specifik information om de enskilda konsolerna och deras tillhörande funktioner beskrivs mer ingående på andra sidor.
 >* Kortkommandon är tillgängliga i hela AEM. Särskilt när du [använder konsoler](/help/sites-authoring/keyboard-shortcuts.md) och [redigerar sidor](/help/sites-authoring/page-authoring-keyboard-shortcuts.md).
+
 >
 
 
@@ -32,7 +36,7 @@ source-git-commit: 11d4d4c4aa633974df2047631cf92f3226aaf6ca
 
 ### Ett pekaktiverat användargränssnitt {#a-touch-enabled-ui}
 
-AEM:s användargränssnitt har aktiverats för beröring. Med ett pekaktiverat gränssnitt kan du använda touchfunktioner för att interagera med programvaran med gester som att trycka, hålla ned och dra. Detta står i kontrast till hur ett vanligt skrivbordsgränssnitt fungerar med musåtgärder som att klicka, dubbelklicka, högerklicka och föra musen över. Eftersom bara gester krävs fungerar det pekaktiverade användargränssnittet fullt ut på mobila surfplattor och har fortfarande full funktionalitet på datorn.
+AEM användargränssnitt har aktiverats för beröring. Med ett pekaktiverat gränssnitt kan du använda touchfunktioner för att interagera med programvaran med gester som att trycka, hålla ned och dra. Detta står i kontrast till hur ett vanligt skrivbordsgränssnitt fungerar med musåtgärder som att klicka, dubbelklicka, högerklicka och föra musen över. Eftersom bara gester krävs fungerar det pekaktiverade användargränssnittet fullt ut på mobila surfplattor och har fortfarande full funktionalitet på datorn.
 
 ### Steg 1 {#first-steps}
 
@@ -40,13 +44,13 @@ Direkt efter inloggningen kommer du till [navigeringspanelen](/help/sites-author
 
 ![screen_shot_2018-03-23at102603](assets/screen_shot_2018-03-23at102603.png)
 
-Om du klickar på något av alternativen öppnas respektive konsol. För att få en god förståelse för den grundläggande användningen av AEM är det här dokumentet baserat på **webbplatskonsolen** .
+Om du klickar på något av alternativen öppnas respektive konsol. För att få en bättre förståelse för AEM basanvändning är det här dokumentet baserat på **webbplatskonsolen** .
 
 Klicka på eller tryck på **Sites** för att komma igång.
 
 ### Produktnavigering {#product-navigation}
 
-När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudiekurs. Klicka eller tryck dig fram en stund för att få en bra överblick över den grundläggande hanteringen av AEM.
+När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudiekurs. Klicka eller tryck en minut för att få en bra överblick över den grundläggande hanteringen av AEM.
 
 ![chlimage_1-357](assets/chlimage_1-357.png)
 
@@ -56,7 +60,7 @@ Klicka eller tryck på **Jag har den!** för att gå vidare till nästa sida i �
 
 ## Global navigering {#global-navigation}
 
-Du kan navigera mellan konsolerna med den globala navigeringspanelen. Detta aktiveras som en listruta i helskärmsläge när du klickar på eller trycker på länken Adobe Experience Manager längst upp till vänster på skärmen.
+Du kan navigera mellan konsolerna med den globala navigeringspanelen. Detta aktiveras som en listruta i helskärmsläge när du klickar eller trycker på länken Adobe Experience Manager längst upp till vänster på skärmen.
 
 Du kan stänga den globala navigeringspanelen genom att klicka eller trycka på **Stäng** för att gå tillbaka till föregående plats.
 
@@ -87,7 +91,7 @@ De alternativ som är tillgängliga på dessa paneler beskrivs nedan.
   </tr>
   <tr>
    <td>Assets<br /> </td> 
-   <td>Med dessa konsoler kan du importera och <a href="/help/assets/assets.md">hantera digitala resurser</a> som bilder, videor, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM-instans. </td> 
+   <td>Med dessa konsoler kan du importera och <a href="/help/assets/assets.md">hantera digitala resurser</a> som bilder, videor, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM. </td> 
   </tr>
   <tr>
    <td>Communities</td> 
@@ -102,7 +106,7 @@ De alternativ som är tillgängliga på dessa paneler beskrivs nedan.
    <td>Ett <a href="/help/sites-authoring/experience-fragments.md">upplevelsefragment</a> är en fristående upplevelse som kan återanvändas i olika kanaler och ha olika varianter, vilket sparar problem med att kopiera och klistra in upplevelser eller delar av upplevelser upprepade gånger.</td> 
   </tr>
   <tr>
-   <td>Formulär</td> 
+   <td>Forms</td> 
    <td>Med den här konsolen kan du skapa, hantera och bearbeta <a href="/help/forms/using/introduction-aem-forms.md">formulär och dokument</a>&gt;.</td> 
   </tr>
   <tr>
@@ -115,12 +119,12 @@ De alternativ som är tillgängliga på dessa paneler beskrivs nedan.
   </tr>
   <tr>
    <td>Sites</td> 
-   <td>På webbplatskonsolerna kan du <a href="/help/sites-authoring/author-environment-tools.md">skapa, visa och hantera webbplatser</a> som körs på din AEM-instans. Med dessa konsoler kan du skapa, redigera, kopiera, flytta och ta bort webbsidor, starta arbetsflöden och publicera sidor.<br /> </td> 
+   <td>Med platskonsolerna kan du <a href="/help/sites-authoring/author-environment-tools.md">skapa, visa och hantera webbplatser</a> som körs på din AEM. Med dessa konsoler kan du skapa, redigera, kopiera, flytta och ta bort webbsidor, starta arbetsflöden och publicera sidor.<br /> </td> 
   </tr>
  </tbody>
 </table>
 
-1. På verktygspanelen innehåller varje alternativ på sidopanelen ett intervall med undermenyer. De [verktygskonsoler](/help/sites-administering/tools-consoles.md) som finns här ger tillgång till ett antal specialiserade verktyg och konsoler som hjälper dig att administrera dina webbplatser, digitala resurser och andra aspekter av ditt innehållslager.
+1. På verktygspanelen innehåller varje alternativ på sidopanelen ett intervall med undermenyer. The [Tools consoles](/help/sites-administering/tools-consoles.md) available here provide access to a number of specialized tools and consoles that help you administer your websites, digital assets and other aspects of your content repository.
 
    ![screen_shot_2018-03-23at103406](assets/screen_shot_2018-03-23at103406.png)
 
@@ -158,7 +162,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
    >[!NOTE]
    >
-   >Körklar AEM levereras förinläst med administrativa uppgifter som tilldelats administratörsanvändargruppen. Mer information finns i [Inkorgen - administrativa uppgifter](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks) som inte är tillgängliga.
+   >AEM levereras förinläst med administrativa uppgifter som tilldelats administratörsanvändargruppen. Mer information finns i [Inkorgen - administrativa uppgifter](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks) som inte är tillgängliga.
 
 * [Användaregenskaper](/help/sites-authoring/user-properties.md)
 
@@ -214,7 +218,7 @@ Det finns olika hjälpresurser:
 
 * **Navigering**
 
-   Första gången du navigerar i systemet introduceras AEM-navigering i [en serie bilder](/help/sites-authoring/basic-handling.md#product-navigation).
+   Första gången du navigerar i systemet visas [en serie bilder med AEM navigering](/help/sites-authoring/basic-handling.md#product-navigation).
 
 * **Page Editor**
 
@@ -255,7 +259,7 @@ Den åtgärd som är tillgänglig i verktygsfältet ändras så att den återspe
 
 Hur du [väljer en resurs](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) beror på vyn.
 
-På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt bli längre än det tillgängliga utrymmet. När detta inträffar visas ytterligare alternativ. Om du klickar eller trycker på ellipsen (de tre punkterna eller **...**) öppnas en listruta med alla återstående åtgärder. När du till exempel har valt en sida i **platskonsolen** :
+På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt bli längre än det tillgängliga utrymmet. När detta inträffar visas ytterligare alternativ. Om du klickar eller trycker på ellipsen (de tre punkterna eller **...**) öppnas en listruta med alla återstående åtgärder. När du till exempel har valt en sida i **Sites**-konsolen:
 
 ![screen_shot_2018-03-23at104827](assets/screen_shot_2018-03-23at104827.png)
 
@@ -284,7 +288,7 @@ Du kan visa, navigera i och välja (för ytterligare åtgärder) dina resurser m
 
 >[!NOTE]
 >
->Som standard visar AEM Resurser inte de ursprungliga återgivningarna av resurser i användargränssnittet som miniatyrbilder i någon av vyerna. Om du är administratör kan du använda övertäckningar för att konfigurera AEM Resurser så att de ursprungliga återgivningarna visas som miniatyrbilder.
+>Som standard visas inte de ursprungliga återgivningarna av resurser i användargränssnittet som miniatyrbilder i någon av vyerna i AEM Assets. Om du är administratör kan du använda övertäckningar för att konfigurera AEM Assets så att ursprungliga återgivningar visas som miniatyrbilder.
 
 ### Välja resurser {#selecting-resources}
 
@@ -370,6 +374,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 * Du kan navigera uppåt och nedåt i trädet genom att trycka eller klicka på resursnamnet eller nedåt till höger om resursnamnet.
 
    * Resursnamnet och förvrängningen markeras när användaren knackar på eller klickar på den.
+
    ![chlimage_1-361](assets/chlimage_1-361.png)
 
    * De underordnade resurserna för den resurs som användaren klickar på/trycker på visas i kolumnen till höger om den resurs som användaren klickar på/trycker på.
@@ -380,6 +385,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 
    * När du väljer det här alternativet åsidosätts en bock på miniatyrbilden och resursnamnet markeras också.
    * Information om den valda resursen visas i den sista kolumnen.
+
    ![chlimage_1-362](assets/chlimage_1-362.png)
 
    När en sida är markerad i kolumnvyn visas den markerade sidan i den sista kolumnen tillsammans med följande information:
@@ -433,7 +439,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
       * Klicka eller tryck på kryssrutan igen för att avmarkera alla.
 
 
-* Markera de kolumner som ska visas med alternativet **Vyinställningar **under knappen Vyer. Följande kolumner är tillgängliga för visning:
+* Markera kolumnerna som ska visas med alternativet **Vyinställningar **under knappen Vyer. Följande kolumner är tillgängliga för visning:
 
    * **Namn** - Sidnamn, som kan vara användbart i en flerspråkig redigeringsmiljö eftersom det är en del av sidans URL och inte ändras oavsett språk
    * **Ändrad** - Senast ändrat den och senast ändrad av användaren
@@ -442,6 +448,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
    * **Sidanalys**
    * **Unika besökare**
    * **Tid på sidan**
+
    ![screen_shot_2018-03-23at105952](assets/screen_shot_2018-03-23at105952.png)
 
    Som standard visas kolumnen **Namn** , som utgör en del av sidans URL. I vissa fall kan författaren behöva komma åt sidor som är på ett annat språk och det kan vara bra att se sidans namn (som vanligtvis är oföränderligt) om författaren inte kan sidans språk.
@@ -513,7 +520,7 @@ I tidslinjekolumnen kan du:
       * och Visa alla
 
 
-* [Lägg till/visa kommentarer](#TimelineAddingandViewingComments) om det markerade objektet. Rutan **Kommentar** visas längst ned i händelselistan. Om du skriver en kommentar följt av Retur registreras kommentaren. Den visas när **Kommentarer** eller **Visa alla** är markerat.
+* [Lägg till/visa kommentarer om det markerade objektet. ](#TimelineAddingandViewingComments) Rutan **Kommentar** visas längst ned i händelselistan. Om du skriver en kommentar följt av Retur registreras kommentaren. Den visas när **Kommentarer** eller **Visa alla** markeras.
 
 * Specifika konsoler har ytterligare funktioner. I Platskonsolen kan du till exempel:
 
