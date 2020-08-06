@@ -1,8 +1,8 @@
 ---
 title: Replikering med ömsesidig SSL
 seo-title: Replikering med ömsesidig SSL
-description: 'Lär dig hur du konfigurerar AEM så att en replikeringsagent på författarinstansen använder gemensam SSL (MSSL) för att ansluta till publiceringsinstansen. Med MSSL använder replikeringsagenten och HTTP-tjänsten på publiceringsinstansen certifikat för att autentisera varandra. '
-seo-description: 'Lär dig hur du konfigurerar AEM så att en replikeringsagent på författarinstansen använder gemensam SSL (MSSL) för att ansluta till publiceringsinstansen. Med MSSL använder replikeringsagenten och HTTP-tjänsten på publiceringsinstansen certifikat för att autentisera varandra. '
+description: 'Lär dig konfigurera AEM så att en replikeringsagent på författarinstansen använder gemensam SSL (MSSL) för att ansluta till publiceringsinstansen. Med MSSL använder replikeringsagenten och HTTP-tjänsten på publiceringsinstansen certifikat för att autentisera varandra. '
+seo-description: 'Lär dig konfigurera AEM så att en replikeringsagent på författarinstansen använder gemensam SSL (MSSL) för att ansluta till publiceringsinstansen. Med MSSL använder replikeringsagenten och HTTP-tjänsten på publiceringsinstansen certifikat för att autentisera varandra. '
 uuid: f4bc5e61-a58c-4fd2-9a24-b31e0c032c15
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ topic-tags: configuring
 discoiquuid: 8bc307d9-fa5c-44c0-bff9-2d68d32a253b
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1456'
+ht-degree: 2%
 
 ---
 
@@ -233,7 +236,7 @@ Om du vill aktivera MSSL konfigurerar du egenskaperna på fliken Transport enlig
   </tr> 
   <tr> 
    <td>URI</td> 
-   <td><p>https://server_name:SSL_port/bin/receive?sling:authRequestLogin=1</p> <p>Exempel:</p> <p>http://localhost:8443/bin/receive?sling:authRequestLogin=1</p> </td> 
+   <td><p>https://server_name:SSL_port/bin/receive?sling:authRequestLogin=1</p> <p>Till exempel:</p> <p>http://localhost:8443/bin/receive?sling:authRequestLogin=1</p> </td> 
   </tr> 
   <tr> 
    <td>Användare</td> 
