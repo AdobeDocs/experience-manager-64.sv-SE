@@ -11,6 +11,9 @@ topic-tags: operations
 discoiquuid: 9e8db506-9ace-4e1f-8a7b-c4e9b15dde7e
 translation-type: tm+mt
 source-git-commit: ba04fe705a91717f1d9658d436056ebddda6be3a
+workflow-type: tm+mt
+source-wordcount: '3895'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: ba04fe705a91717f1d9658d436056ebddda6be3a
 
 ## Om Acrobat Reader DC-tilläggstjänsten {#about-the-acrobat-reader-dc-extensions-service}
 
-Med Acrobat Reader DC-tilläggstjänsten kan din organisation enkelt dela interaktiva PDF-dokument genom att utöka funktionaliteten i Adobe Reader. Tilläggstjänsten Acrobat Reader DC har fullt stöd för alla PDF-dokument, till och med PDF 1.7. Det fungerar med Adobe Reader 7.0 och senare. Tjänsten lägger till användarrättigheter i ett PDF-dokument och aktiverar funktioner som inte är tillgängliga när ett PDF-dokument öppnas med Adobe Reader. Tredjepartsanvändare behöver inte några extra program eller plugin-program för att kunna arbeta med upphovsrättsaktiverade dokument.
+Med Acrobat Reader DC Extensions kan man enkelt utbyta interaktiva PDF-dokument genom att utöka funktionaliteten i Adobe Reader. Acrobat Reader DC Extensions-tjänsten har fullt stöd för alla PDF-dokument, upp till och med PDF 1.7. Det fungerar med Adobe Reader 7.0 och senare. Tjänsten lägger till användarrättigheter i ett PDF-dokument och aktiverar funktioner som normalt inte är tillgängliga när ett PDF-dokument öppnas med Adobe Reader. Tredjepartsanvändare behöver inte några extra program eller plugin-program för att kunna arbeta med upphovsrättsaktiverade dokument.
 
-Du kan utföra följande uppgifter med hjälp av tilläggstjänsten i Acrobat Reader DC:
+Du kan utföra följande uppgifter med hjälp av Acrobat Reader DC-tilläggstjänsten:
 
 * Använd användningsbehörighet för PDF-dokument. Mer information finns i [Använda användningsrättigheter i PDF-dokument](assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).
 * Ta bort användningsrättigheter från PDF-dokument. Mer information finns i [Ta bort användningsrättigheter från PDF-dokument](assigning-usage-rights.md#removing-usage-rights-from-pdf-documents).
@@ -29,11 +32,11 @@ Du kan utföra följande uppgifter med hjälp av tilläggstjänsten i Acrobat Re
 
 >[!NOTE]
 >
->Mer information om Acrobat Reader DC-tilläggstjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om Acrobat Reader DC-tilläggstjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Tillämpa användningsrättigheter på PDF-dokument {#applying-usage-rights-to-pdf-documents}
 
-Du kan lägga till användningsrättigheter i PDF-dokument med Acrobat Reader DC-tilläggen för Java Client API och webbtjänsten. Användningsrättigheterna gäller funktioner som är tillgängliga som standard i Acrobat men inte i Adobe Reader, t.ex. möjligheten att lägga till kommentarer i ett formulär eller att fylla i formulärfält och spara formuläret. PDF-dokument som har användarrättigheter är aktiverade. En användare som öppnar ett rättighetsaktiverat dokument i Adobe Reader kan utföra åtgärder som är aktiverade för det specifika dokumentet.
+Du kan lägga till användningsrättigheter i PDF-dokument med Acrobat Reader DC Extensions Java Client API och webbtjänsten. Användningsrättigheterna gäller funktioner som är tillgängliga som standard i Acrobat men inte i Adobe Reader, t.ex. möjligheten att lägga till kommentarer i ett formulär eller att fylla i formulärfält och spara formuläret. PDF-dokument som har användarrättigheter är aktiverade. En användare som öppnar ett rättighetsaktiverat dokument i Adobe Reader kan utföra åtgärder som är aktiverade för det specifika dokumentet.
 
 >[!NOTE]
 >
@@ -41,7 +44,7 @@ Du kan lägga till användningsrättigheter i PDF-dokument med Acrobat Reader DC
 
 >[!NOTE]
 >
->Mer information om Acrobat Reader DC-tilläggstjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om Acrobat Reader DC-tilläggstjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -60,15 +63,15 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa ett klientobjekt för Acrobat Reader DC-tillägg**
 
-För att programmässigt kunna utföra en tilläggsåtgärd i Acrobat Reader DC måste du skapa ett klientobjekt för tjänsten Acrobat Reader DC extensions. Om du använder Java API:t för Acrobat Reader DC-tilläggen skapar du ett `ReaderExtensionsServiceClient` objekt. Skapa ett `ReaderExtensionsServiceService` objekt om du använder webbtjänstens API för Acrobat Reader DC-tillägg.
+Om du vill utföra en programstyrd Acrobat Reader DC extensions service-åtgärd måste du skapa ett klientobjekt för Acrobat Reader DC extensions-tjänsten. Om du använder Java API:t för Acrobat Reader DC-tillägg skapar du ett `ReaderExtensionsServiceClient` objekt. Om du använder webbtjänstens API för Acrobat Reader DC-tillägg skapar du ett `ReaderExtensionsServiceService` objekt.
 
 **Hämta ett PDF-dokument**
 
-Du måste hämta ett PDF-dokument för att kunna tillämpa användningsrättigheter. PDF-dokument med aktiverade rättigheter innehåller en ordlista med användningsrättigheter. När Adobe Reader öppnar ett dokument som innehåller en sådan ordlista aktiveras de användningsrättigheter som anges i ordlistan endast för det dokumentet. Om dokumentet inte innehåller någon användarrättighetsordlista skapar Acrobat Reader DC-tilläggstjänsten en sådan. Om den redan innehåller en ordlista skriver Acrobat Reader DC-tilläggstjänsten över befintliga användningsrättigheter med de som du anger. Ordlistan anger vilka användarrättigheter som är aktiverade. När en användare öppnar dokumentet i Adobe Reader tillåts bara de användningsrättigheter som anges i ordlistan.
+Du måste hämta ett PDF-dokument för att kunna tillämpa användningsrättigheter. PDF-dokument med aktiverade rättigheter innehåller en ordlista med användningsrättigheter. När Adobe Reader öppnar ett dokument som innehåller ett sådant lexikon aktiveras de användningsrättigheter som anges i lexikonet endast för det dokumentet. Om dokumentet inte innehåller någon användarrättighetsordlista skapar Acrobat Reader DC-tjänsten en sådan. Om den redan innehåller en ordlista skriver Acrobat Reader DC-tilläggstjänsten över befintliga användningsrättigheter med de som du anger. Ordlistan anger vilka användarrättigheter som är aktiverade. När en användare öppnar dokumentet i Adobe Reader tillåts bara de användningsrättigheter som anges i ordlistan.
 
 **Ange användningsbehörighet att använda**
 
-Vilka användarrättigheter du kan ange avgörs av de autentiseringsuppgifter du köper från Adobe Systems Incorporated. Autentiseringsuppgifterna ger vanligtvis behörighet att ange en grupp användarrättigheter, t.ex. de som gäller interaktiva formulär. Varje behörighet ger rätt att skapa ett visst antal rättighetsaktiverade PDF-dokument. Med en utvärderingsautentisering får man skapa ett obegränsat antal utkast till dokument.
+Vilka användarrättigheter du kan ange avgörs av en inloggningsinformation som du köper från Adobe Systems Incorporated. Autentiseringsuppgifterna ger vanligtvis behörighet att ange en grupp användarrättigheter, t.ex. de som gäller interaktiva formulär. Varje behörighet ger rätt att skapa ett visst antal rättighetsaktiverade PDF-dokument. Med en utvärderingsautentisering får man skapa ett obegränsat antal utkast till dokument.
 
 >[!NOTE]
 >
@@ -80,7 +83,7 @@ Om du vill tillämpa användarbehörighet för ett PDF-dokument refererar du til
 
 **Spara det aktiverade PDF-dokumentet**
 
-När Acrobat Reader DC-tilläggstjänsten har tillämpat användarrättigheter på ett PDF-dokument kan du spara det aktiverade PDF-dokumentet som en PDF-fil.
+När Acrobat Reader DC Extensions-tjänsten har tillämpat användarrättigheter på ett PDF-dokument kan du spara det aktiverade PDF-dokumentet som en PDF-fil.
 
 **Se även**
 
@@ -92,7 +95,7 @@ När Acrobat Reader DC-tilläggstjänsten har tillämpat användarrättigheter p
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Snabbstart för tjänsten Acrobat Reader DC Extensions Service API](/help/forms/developing/acrobat-reader-dc-extensions-service.md#acrobat-reader-dc-extensions-service-java-api-quick-start-soap)
+[API-snabbstart för Acrobat Reader DC Extensions Service](/help/forms/developing/acrobat-reader-dc-extensions-service.md#acrobat-reader-dc-extensions-service-java-api-quick-start-soap)
 
 ### Använd användningsrättigheter med Java API {#apply-usage-rights-using-the-java-api}
 
@@ -122,13 +125,14 @@ Tillämpa användningsrättigheter på ett PDF-dokument med Acrobat Reader DC Ex
    * Skapa ett `ReaderExtensionsOptionSpec` objekt med hjälp av dess konstruktor. Det här objektet innehåller körningsalternativ som krävs av Acrobat Reader DC-tilläggstjänsten. När du anropar den här konstruktorn måste du ange följande värden:
 
       * Det objekt `UsageRights` som innehåller användningsrättigheterna som ska tillämpas på dokumentet.
-      * Ett strängvärde som anger ett meddelande som användaren ser när det aktiverade PDF-dokumentet öppnas i Adobe Reader 7.x. Det här meddelandet visas inte i Adobe Reader 8.0.
+      * Ett strängvärde som anger ett meddelande som användaren ser när det rättighetsaktiverade PDF-dokumentet öppnas i Adobe Reader 7.x. Det här meddelandet visas inte i Adobe Reader 8.0.
    * Tillämpa användningsbehörighet för PDF-dokumentet genom att anropa `ReaderExtensionsServiceClient` objektets `applyUsageRights` metod och skicka följande värden:
 
       * Det objekt `com.adobe.idp.Document` som innehåller PDF-dokumentet som användningsrättigheterna tillämpas på.
       * Ett strängvärde som anger det alias för autentiseringsuppgiften som gör att du kan tillämpa användningsbehörighet.
       * Ett strängvärde som anger motsvarande lösenordsvärde. (Den här parametern ignoreras för närvarande. Du kan gå `null`.)
    * Det objekt `ReaderExtensionsOptionSpec` som innehåller körningsalternativ.
+
    Metoden returnerar `applyUsageRights` ett `com.adobe.idp.Document` objekt som innehåller det aktiverade PDF-dokumentet.
 
 1. Spara det aktiverade PDF-dokumentet.
@@ -166,7 +170,7 @@ Tillämpa användningsrättigheter på ett PDF-dokument med Acrobat Reader DC Ex
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `ReaderExtensionsServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -188,13 +192,14 @@ Tillämpa användningsrättigheter på ett PDF-dokument med Acrobat Reader DC Ex
 
    * Skapa ett `ReaderExtensionsOptionSpec` objekt med hjälp av dess konstruktor. Det här objektet innehåller körningsalternativ som krävs av Acrobat Reader DC-tilläggstjänsten.
    * Tilldela `UsageRights` objektet till `ReaderExtensionsOptionSpec` objektets `usageRights` datamedlem.
-   * Tilldela ett strängvärde som anger det meddelande som användaren ser när det rättighetsaktiverade PDF-dokumentet öppnas i Adobe Reader till `ReaderExtensionsOptionSpec` objektets `message` datamedlem.
+   * Tilldela ett strängvärde som anger det meddelande som en användare ser när det rättighetsaktiverade PDF-dokumentet öppnas i Adobe Reader till `ReaderExtensionsOptionSpec` objektets `message` datamedlem.
    * Tillämpa användningsbehörighet för PDF-dokumentet genom att anropa `ReaderExtensionsServiceClient` objektets `applyUsageRights` metod och skicka följande värden:
 
       * Det objekt `BLOB` som innehåller PDF-dokumentet som användningsrättigheterna tillämpas på.
       * Ett strängvärde som anger det alias för autentiseringsuppgiften som gör att du kan tillämpa användningsbehörighet.
       * Ett strängvärde som anger motsvarande lösenordsvärde. (Den här parametern ignoreras för närvarande. Du kan gå `null`.)
    * Det objekt `ReaderExtensionsOptionSpec` som innehåller körningsalternativ.
+
    Metoden returnerar `applyUsageRights` ett `BLOB` objekt som innehåller det aktiverade PDF-dokumentet.
 
 1. Spara det aktiverade PDF-dokumentet.
@@ -208,9 +213,9 @@ Tillämpa användningsrättigheter på ett PDF-dokument med Acrobat Reader DC Ex
 
 [Tillämpa användningsrättigheter på PDF-dokument](assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Ta bort användningsrättigheter från PDF-dokument {#removing-usage-rights-from-pdf-documents}
 
@@ -218,7 +223,7 @@ Du kan ta bort användarrättigheter från ett rättighetsaktiverat dokument. De
 
 >[!NOTE]
 >
->Mer information om Acrobat Reader DC-tilläggstjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om Acrobat Reader DC-tilläggstjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-1}
 
@@ -236,7 +241,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa ett klientobjekt för Acrobat Reader DC-tillägg**
 
-Innan du programmässigt kan utföra en tilläggsåtgärd i Acrobat Reader DC måste du skapa ett klientobjekt för Acrobat Reader DC-tilläggsprogrammet. Om du använder Java API skapar du ett `ReaderExtensionsServiceClient` objekt. Skapa ett `ReaderExtensionsServiceService` objekt om du använder webbtjänstens API för Acrobat Reader DC-tillägg.
+Innan du programmässigt kan utföra en Acrobat Reader DC-tilläggstjänståtgärd måste du skapa ett klientobjekt för Acrobat Reader DC-tilläggstjänsten. Om du använder Java API skapar du ett `ReaderExtensionsServiceClient` objekt. Om du använder webbtjänstens API för Acrobat Reader DC-tillägg skapar du ett `ReaderExtensionsServiceService` objekt.
 
 **Hämta ett rättighetsaktiverat PDF-dokument**
 
@@ -260,7 +265,7 @@ Du kan spara PDF-dokumentet som inte längre innehåller användningsrättighete
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Snabbstart för tjänsten Acrobat Reader DC Extensions Service API](/help/forms/developing/acrobat-reader-dc-extensions-service.md#acrobat-reader-dc-extensions-service-java-api-quick-start-soap)
+[API-snabbstart för Acrobat Reader DC Extensions Service](/help/forms/developing/acrobat-reader-dc-extensions-service.md#acrobat-reader-dc-extensions-service-java-api-quick-start-soap)
 
 [Tillämpa användningsrättigheter på PDF-dokument](assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)
 
@@ -302,7 +307,7 @@ Ta bort användningsrättigheter från ett rättighetsaktiverat PDF-dokument med
 
 ### Ta bort användningsrättigheter med webbtjänstens API {#remove-usage-rights-using-the-web-service-api}
 
-Ta bort användningsrättigheter från ett rättighetsaktiverat PDF-dokument med hjälp av Acrobat Reader DC-tilläggs-API:t (webbtjänsten):
+Ta bort användningsrättigheter från ett rättighetsaktiverat PDF-dokument med Acrobat Reader DC Extensions API (webbtjänst):
 
 1. Inkludera projektfiler.
 
@@ -320,7 +325,7 @@ Ta bort användningsrättigheter från ett rättighetsaktiverat PDF-dokument med
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `ReaderExtensionsServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -347,9 +352,9 @@ Ta bort användningsrättigheter från ett rättighetsaktiverat PDF-dokument med
 
 [Ta bort användningsrättigheter från PDF-dokument](assigning-usage-rights.md#removing-usage-rights-from-pdf-documents)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Hämtar information om autentiseringsuppgifter {#retrieving-credential-information}
 
@@ -357,7 +362,7 @@ Du kan hämta information om de autentiseringsuppgifter som användes för att t
 
 >[!NOTE]
 >
->Mer information om Acrobat Reader DC-tilläggstjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om Acrobat Reader DC-tilläggstjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-2}
 
@@ -374,7 +379,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa ett klientobjekt för Acrobat Reader DC-tillägg**
 
-Innan du programmässigt kan utföra en tilläggsåtgärd i Acrobat Reader DC måste du skapa ett klientobjekt för Acrobat Reader DC-tilläggsprogrammet. Om du använder Java API skapar du ett `ReaderExtensionsServiceClient` objekt. Skapa ett `ReaderExtensionsServiceService` objekt om du använder webbtjänstens API för Acrobat Reader DC-tillägg.
+Innan du programmässigt kan utföra en Acrobat Reader DC-tilläggstjänståtgärd måste du skapa ett klientobjekt för Acrobat Reader DC-tilläggstjänsten. Om du använder Java API skapar du ett `ReaderExtensionsServiceClient` objekt. Om du använder webbtjänstens API för Acrobat Reader DC-tillägg skapar du ett `ReaderExtensionsServiceService` objekt.
 
 **Hämta ett rättighetsaktiverat PDF-dokument**
 
@@ -400,7 +405,7 @@ När du har hämtat ett rättighetsaktiverat PDF-dokument kan du få information
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Snabbstart för tjänsten Acrobat Reader DC Extensions Service API](/help/forms/developing/acrobat-reader-dc-extensions-service.md#acrobat-reader-dc-extensions-service-java-api-quick-start-soap)
+[API-snabbstart för Acrobat Reader DC Extensions Service](/help/forms/developing/acrobat-reader-dc-extensions-service.md#acrobat-reader-dc-extensions-service-java-api-quick-start-soap)
 
 ### Hämta autentiseringsuppgifter med Java API {#retrieve-credential-information-using-the-java-api}
 
@@ -437,7 +442,7 @@ Hämta inloggningsinformation med Acrobat Reader DC Extensions API (Java):
 
 ### Hämta autentiseringsuppgifter med webbtjänstens API {#retrieve-credential-information-using-the-web-service-api}
 
-Hämta inloggningsinformation med Acrobat Reader DC Extensions API (webbtjänst):
+Hämta autentiseringsinformation med Acrobat Reader DC Extensions API (webbtjänst):
 
 1. Inkludera projektfiler.
 
@@ -455,7 +460,7 @@ Hämta inloggningsinformation med Acrobat Reader DC Extensions API (webbtjänst)
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `ReaderExtensionsServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -479,6 +484,6 @@ Hämta inloggningsinformation med Acrobat Reader DC Extensions API (webbtjänst)
 
 [Hämtar information om autentiseringsuppgifter](assigning-usage-rights.md#retrieving-credential-information)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
