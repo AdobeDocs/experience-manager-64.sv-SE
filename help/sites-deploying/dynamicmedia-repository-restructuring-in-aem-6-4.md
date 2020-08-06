@@ -1,8 +1,8 @@
 ---
 title: Omstrukturering av Dynamic Media-databasen i AEM 6.4
 seo-title: Omstrukturering av Dynamic Media-databasen i AEM 6.4
-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 for Dynamic Media.
-seo-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 for Dynamic Media.
+description: Lär dig hur du gör nödvändiga ändringar för att migrera till den nya databasstrukturen i AEM 6.4 för Dynamic Media.
+seo-description: Lär dig hur du gör nödvändiga ändringar för att migrera till den nya databasstrukturen i AEM 6.4 för Dynamic Media.
 uuid: e26d61a4-47b6-493a-9ba2-4c58b200ddd9
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
@@ -10,6 +10,9 @@ topic-tags: repo_restructuring
 discoiquuid: 61cd5751-0dc8-48e0-873e-3a64899489bb
 translation-type: tm+mt
 source-git-commit: 5dce4bcf4b10cce65798fd142a3eeb1956caf726
+workflow-type: tm+mt
+source-wordcount: '440'
+ht-degree: 1%
 
 ---
 
@@ -22,13 +25,13 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
 
 * [Anpassade konfigurationer för adaptiv videokodning](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md#custom-adaptive-video-encoding-configurations)
 * [Konfiguration av Dynamic Media (DMS7) Cloud](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md#dynamic-media-dms-cloud-configuration)
-* [Konfiguration av molntjänst för Dynamic Media (DM Hybrid)](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md#cloudserviceconfiguration)
-* [Dynamiska media - konfiguration av YouTube Cloud-tjänster](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md#youtubecloudserviceconfiguration)
+* [Konfiguration av DM-Cloud Service (Dynamic Media)](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md#cloudserviceconfiguration)
+* [Dynamic Media - konfiguration av YouTube-Cloud Service](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md#youtubecloudserviceconfiguration)
 * [Diverse](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md#misc)
 
 ## Före 6.5-uppgradering {#prior-to-upgrade}
 
-### Anpassade adaptiva videokodningskonfigurationer {#custom-adaptive-video-encoding-configurations}
+### Anpassade adaptiva videokodningskonfigurationer  {#custom-adaptive-video-encoding-configurations}
 
 <table> 
  <tbody>
@@ -42,7 +45,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td> 
-   <td><p>Du kan köra följande migreringsskript för att migrera till den nya platsen:</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>Du kan också redigera konfigurationen i AEM UI, och ändringarna sparas på den nya platsen.</p> </td> 
+   <td><p>Du kan köra följande migreringsskript för att migrera till den nya platsen:</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>Du kan också redigera konfigurationen i AEM och ändringarna sparas på den nya platsen.</p> </td> 
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
@@ -78,7 +81,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
  </tbody>
 </table>
 
-### Konfiguration av molntjänsten Dynamic Media (DM Hybrid) {#cloudserviceconfiguration}
+### Konfiguration av Cloud Servicen Dynamic Media (DM Hybrid) {#cloudserviceconfiguration}
 
 <table> 
  <tbody>
@@ -101,7 +104,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
  </tbody>
 </table>
 
-### Dynamic Media - konfiguration av YouTube Cloud-tjänsten {#youtubecloudserviceconfiguration}
+### Dynamic Media - konfiguration av YouTube-Cloud Service  {#youtubecloudserviceconfiguration}
 
 <table> 
  <tbody>
@@ -138,7 +141,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td> 
-   <td><p>Kunden kan köra migreringsskriptet nedan.</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>Du kan också redigera konfigurationen i AEM UI, och ändringarna sparas på den nya platsen.</p> </td> 
+   <td><p>Kunden kan köra migreringsskriptet nedan.</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>Du kan också redigera konfigurationen i AEM och ändringarna sparas på den nya platsen.</p> </td> 
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
