@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 25f0e0f7-9570-4748-81cb-ccec6492c0b4
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '2603'
+ht-degree: 0%
 
 ---
 
@@ -25,29 +28,30 @@ Arbetsflödesmodeller består av en serie steg av olika typer. Beroende på typ 
 >
 >För modulspecifika steg, se även:
 >
->* [Stegreferens för arbetsflöde för AEM Forms](/help/forms/using/aem-forms-workflow-step-reference.md)
+>* [AEM Forms Workflow Step Reference](/help/forms/using/aem-forms-workflow-step-reference.md)
 >* [Bearbeta resurser med mediehanterare och arbetsflöden](/help/assets/media-handlers.md)
+
 >
 
 
 
 ## Stegegenskaper {#step-properties}
 
-Varje stegkomponent har en dialogruta för **[!UICONTROL stegegenskaper]** där du kan definiera och redigera de egenskaper som behövs.
+Varje stegkomponent har en **[!UICONTROL Step Properties]** dialogruta där du kan definiera och redigera de önskade egenskaperna.
 
 ### Stegegenskaper - fliken Allmänt {#step-properties-common-tab}
 
-En kombination av följande egenskaper är tillgängliga för de flesta arbetsflödesstegkomponenter på fliken **[!UICONTROL Allmänt]** i dialogrutan Egenskaper:
+En kombination av följande egenskaper är tillgängliga för de flesta arbetsflödesstegkomponenter på fliken **[!UICONTROL Common]** i dialogrutan Egenskaper:
 
-* **[!UICONTROL Titel]**
+* **[!UICONTROL Title]**
 
    Stegets titel.
 
-* **[!UICONTROL Beskrivning]**
+* **[!UICONTROL Description]**
 
    En beskrivning av steget.
 
-* **[!UICONTROL Arbetsflödesfas]**
+* **[!UICONTROL Workflow Stage]**
 
    En nedrullningsbar väljare som använder en [scen](/help/sites-developing/workflows.md#workflow-stages) i steget.
 
@@ -55,45 +59,45 @@ En kombination av följande egenskaper är tillgängliga för de flesta arbetsfl
 
    Den period efter vilken steget&quot;har gått ut&quot;.
 
-   Du kan välja mellan: **[!UICONTROL Av]**, **[!UICONTROL Omedelbar]**, **[!UICONTROL 1h]**, **[!UICONTROL 6h]**, **[!UICONTROL 12h]******,¥24h¥.
+   Du kan välja mellan: **[!UICONTROL Off]**, **[!UICONTROL Immediate]**, **[!UICONTROL 1h]**, **[!UICONTROL 6h]**, **[!UICONTROL 12h]**, **[!UICONTROL 24h]**.
 
-* **[!UICONTROL Timeout-hanterare]**
+* **[!UICONTROL Timeout Handler]**
 
    Den hanterare som ska styra arbetsflödet när steget går ut; till exempel:
 
    `Auto Advancer`
 
-* **[!UICONTROL Avancerad hanterare]**
+* **[!UICONTROL Handler Advance]**
 
    Välj det här alternativet om du vill att arbetsflödet automatiskt ska gå vidare till nästa steg efter körningen. Om du inte väljer det här alternativet måste implementeringsskriptet hantera arbetsflödets utveckling.
 
 #### Stegegenskaper - fliken Användare/grupp {#step-properties-user-group-tab}
 
-Följande egenskaper är tillgängliga för många arbetsflödesstegkomponenter på fliken **[!UICONTROL Användare/grupp]** i dialogrutan Egenskaper:
+Följande egenskaper är tillgängliga för många arbetsflödesstegkomponenter på fliken **[!UICONTROL User/Group]** i dialogrutan Egenskaper:
 
-* **[!UICONTROL Meddela användare via e-post]**
+* **[!UICONTROL Notify user via email]**
 
    * Du kan meddela deltagare genom att skicka ett e-postmeddelande när arbetsflödet når steget.
-   * Om det här alternativet är aktiverat skickas ett e-postmeddelande till den användare som definieras av egenskapen **[!UICONTROL Användare/grupp]** eller till varje medlem i gruppen om en grupp har definierats.
+   * Om det här alternativet är aktiverat skickas ett e-postmeddelande till användaren som definieras av egenskapen **[!UICONTROL User/Group]** eller till varje medlem i gruppen om en grupp har definierats.
 
-* **[!UICONTROL Användare/grupp]**
+* **[!UICONTROL User/Group]**
 
    * I en listruta kan du navigera och välja en användare eller grupp.
    * Om du tilldelar ett steg till en viss användare kan bara den här användaren utföra en åtgärd på steget.
-   * Om du tilldelar steget till en hel grupp kommer alla användare i gruppen att få åtgärden i sin **[!UICONTROL arbetsflödesinkorg]** när arbetsflödet når det här steget.
+   * Om du tilldelar steget till en hel grupp kommer alla användare i gruppen att ha åtgärden i sin **[!UICONTROL Workflow Inbox]** grupp när arbetsflödet når det här steget.
    * Mer information finns i [Delta i arbetsflöden](/help/sites-authoring/workflows-participating.md) .
 
 ## OCH dela {#and-split}
 
-Med **[!UICONTROL OCH Dela]** skapas en delning i arbetsflödet, varefter båda grenarna blir aktiva. Du kan lägga till arbetsflödessteg i varje gren efter behov. I det här steget kan du införa flera bearbetningssökvägar i arbetsflödet. Du kan t.ex. tillåta att vissa granskningssteg utförs parallellt, vilket sparar tid.
+Sedan **[!UICONTROL AND Split]** skapas en delning i arbetsflödet, varefter båda grenarna blir aktiva. Du kan lägga till arbetsflödessteg i varje gren efter behov. I det här steget kan du införa flera bearbetningssökvägar i arbetsflödet. Du kan t.ex. tillåta att vissa granskningssteg utförs parallellt, vilket sparar tid.
 
 ![wf-26](assets/wf-26.png)
 
 ### AND Split - Configuration {#and-split-configuration}
 
-* Redigera **[!UICONTROL OCH dela]** -egenskaperna:
+* Redigera **[!UICONTROL AND Split]** egenskaperna:
 
-   * **[!UICONTROL Delningsnamn]**: Ange ett namn för förklarande ändamål.
+   * **[!UICONTROL Split Name]**: Ange ett namn för förklarande ändamål.
    * Ange antalet filialer som krävs. 2, 3, 4 eller 5.
 
 * Lägg till arbetsflödessteg i grenarna efter behov.
@@ -102,9 +106,9 @@ Med **[!UICONTROL OCH Dela]** skapas en delning i arbetsflödet, varefter båda 
 
 ## Behållarsteg {#container-step}
 
-Ett **[!UICONTROL behållarsteg]** startar en annan arbetsflödesmodell som körs som ett underordnat arbetsflöde.
+Ett **[!UICONTROL Container]** steg startar en annan arbetsflödesmodell som körs som ett underordnat arbetsflöde.
 
-Med den här **[!UICONTROL behållaren]]**kan du återanvända arbetsflödesmodeller för att implementera vanliga stegsekvenser. En arbetsflödesmodell för översättning kan till exempel användas i flera redigeringsarbetsflöden.
+På så sätt **[!UICONTROL Container]]**kan du återanvända arbetsflödesmodeller för att implementera vanliga stegsekvenser. En arbetsflödesmodell för översättning kan till exempel användas i flera redigeringsarbetsflöden.
 
 ![wf-28](assets/wf-28.png)
 
@@ -112,35 +116,35 @@ Med den här **[!UICONTROL behållaren]]**kan du återanvända arbetsflödesmode
 
 Om du vill konfigurera steget redigerar du och använder följande flikar:
 
-* [**[!UICONTROL Vanliga]**](#step-properties-common-tab)
-* **[!UICONTROL Behållare]**
+* [**[!UICONTROL Common]**](#step-properties-common-tab)
+* **[!UICONTROL Container]**
 
-   * **[!UICONTROL Delarbetsflöde]**: Välj arbetsflödet som ska startas.
+   * **[!UICONTROL Sub Workflow]**: Välj arbetsflödet som ska startas.
 
 ## Gå till steg {#goto-step}
 
-Med **[!UICONTROL Gå till steg]** kan du ange nästa steg i arbetsflödesmodellen som ska köras, beroende på resultatet av ett ECMAScript:
+I **[!UICONTROL Goto Step]** kan du ange nästa steg i arbetsflödesmodellen som ska köras, beroende på resultatet av ett ECMAScript:
 
-* `true`: Gå-steget **** slutförs och arbetsflödesmotorn kör det angivna steget.
+* `true`: Slutför **[!UICONTROL Goto Step]** och arbetsflödesmotorn kör det angivna steget.
 
-* `false`: Stegsteget **** Gå till slutförs och den normala routningslogiken avgör nästa steg som ska köras.
+* `false`: Detta **[!UICONTROL Goto Step]** slutförs och den normala routningslogiken avgör nästa steg som ska köras.
 
-Med **[!UICONTROL Gå till steg]** kan du implementera avancerade routningsstrukturer i dina arbetsflödesmodeller. Om du till exempel vill implementera en slinga kan du definiera **[!UICONTROL Gå till steg]** så att ett föregående steg körs i arbetsflödet, där skriptet utvärderar ett slingvillkor.
+Med **[!UICONTROL Goto Step]** den kan du implementera avancerade routningsstrukturer i arbetsflödesmodeller. Om du till exempel vill implementera en slinga kan den definieras så att ett föregående steg i arbetsflödet körs, där skriptet utvärderar ett slingvillkor. **[!UICONTROL Goto Step]**
 
 ### Gå till steg - konfiguration {#goto-step-configuration}
 
 Om du vill konfigurera steget redigerar du och använder följande flikar:
 
-* [**[!UICONTROL Vanliga]**](#step-properties-common-tab)
+* [**[!UICONTROL Common]**](#step-properties-common-tab)
 * **[!UICONTROL Process]**
 
-   * **[!UICONTROL Stegen att gå till]]**: Välj det steg som ska köras.
-   * **[!UICONTROL Skriptsökväg]**: Sökvägen till ECMAScript som avgör om **[!UICONTROL Goto Step]** ska köras eller inte.
-   * **[!UICONTROL Skript]**: Det ECMAScript som avgör om **[!UICONTROL Goto Step]** ska köras.
+   * **[!UICONTROL The step to go to]]**: Välj det steg som ska köras.
+   * **[!UICONTROL Script Path]**: Sökvägen till ECMAScript som avgör om körningen ska utföras **[!UICONTROL Goto Step]**.
+   * **[!UICONTROL Script]**: Det ECMAScript som avgör om körningen ska utföras **[!UICONTROL Goto Step]**.
 
 >[!CAUTION]
 >
->Ange antingen **[!UICONTROL skriptsökvägen]** eller **[!UICONTROL skriptet]**. Båda alternativen kan inte användas samtidigt. Om du anger värden för båda egenskaperna används **[!UICONTROL skriptsökvägen]** i steget.
+>Ange antingen **[!UICONTROL Script Path]** eller **[!UICONTROL Script]**. Båda alternativen kan inte användas samtidigt. Om du anger värden för båda egenskaperna använder steget **[!UICONTROL Script Path]**.
 
 #### Simulera en for-slinga {#simulating-a-for-loop}
 
@@ -149,7 +153,7 @@ När du simulerar en for-slinga måste du behålla antalet upprepningar av sling
 * Antalet representerar vanligtvis ett index med objekt som hanteras i arbetsflödet.
 * Antalet utvärderas som avslutningskriterier för slingan.
 
-Om du till exempel vill implementera ett arbetsflöde som utför en åtgärd på flera JCR-noder kan du använda en loopräknare som index för noderna. Om du vill behålla antalet lagrar du ett `integer` värde i datamappningen för arbetsflödesinstansen. Använd skriptet för **[!UICONTROL Gå till steg]** om du vill öka antalet samt jämföra antalet med avslutningskriterierna.
+Om du till exempel vill implementera ett arbetsflöde som utför en åtgärd på flera JCR-noder kan du använda en loopräknare som index för noderna. Om du vill behålla antalet lagrar du ett `integer` värde i datamappningen för arbetsflödesinstansen. Använd skriptet för **[!UICONTROL Goto Step]** att öka antalet samt jämföra antalet med avslutningskriterierna.
 
 ```
 function check(){
@@ -177,7 +181,7 @@ function check(){
 
 ## ELLER Dela {#or-split}
 
-Med **[!UICONTROL ELLER Dela]** skapas en delning i arbetsflödet, varefter endast en gren är aktiv. I det här steget kan du lägga in sökvägar för villkorlig bearbetning i arbetsflödet. Du kan lägga till arbetsflödessteg i varje gren efter behov.
+Sedan **[!UICONTROL OR Split]** skapas en delning i arbetsflödet, varefter endast en gren är aktiv. I det här steget kan du lägga in sökvägar för villkorlig bearbetning i arbetsflödet. Du kan lägga till arbetsflödessteg i varje gren efter behov.
 
 >[!NOTE]
 >
@@ -187,16 +191,17 @@ Med **[!UICONTROL ELLER Dela]** skapas en delning i arbetsflödet, varefter enda
 
 ### Eller delad - konfiguration {#or-split-configuration}
 
-* Redigera egenskaperna **[!UICONTROL ELLER Dela]** :
+* Redigera **[!UICONTROL OR Split]** egenskaperna:
 
-   * **[!UICONTROL Vanliga]**
+   * **[!UICONTROL Common]**
 
       * Ange antalet filialer som krävs. 2, 3, 4 eller 5.
-   * **[!UICONTROL Gren:*x*>]**
+   * **[!UICONTROL Branch : *x *>]**
 
-      * **[!UICONTROL Skriptsökväg]**: Sökvägen till en fil som innehåller skriptet.
-      * **[!UICONTROL Skript]**: Lägg till skriptet i rutan.
-      * **[!UICONTROL Standardflöde]**: Standardförgreningen följs när flera förgreningar utvärderas som true. Du kan bara ange en gren som standard.
+      * **[!UICONTROL Script Path]**: Sökvägen till en fil som innehåller skriptet.
+      * **[!UICONTROL Script]**: Lägg till skriptet i rutan.
+      * **[!UICONTROL Default Route]**: Standardförgreningen följs när flera förgreningar utvärderas som true. Du kan bara ange en gren som standard.
+
    >[!NOTE]
    >
    >Det finns en separat flik för varje gren:
@@ -209,7 +214,7 @@ Med **[!UICONTROL ELLER Dela]** skapas en delning i arbetsflödet, varefter enda
 
    >[!CAUTION]
    >
-   >Ange antingen **[!UICONTROL skriptsökvägen]** eller **[!UICONTROL skriptet]**. Båda alternativen kan inte användas samtidigt. Om du anger värden för båda egenskaperna används **[!UICONTROL skriptsökvägen]** i steget.
+   >Ange antingen **[!UICONTROL Script Path]** eller **[!UICONTROL Script]**. Båda alternativen kan inte användas samtidigt. Om du anger värden för båda egenskaperna använder steget **[!UICONTROL Script Path]**.
 
    >[!NOTE]
    >
@@ -221,7 +226,7 @@ Med **[!UICONTROL ELLER Dela]** skapas en delning i arbetsflödet, varefter enda
 
 ### Deltagarsteg {#participant-step}
 
-Med ett **[!UICONTROL deltagarsteg]** kan du tilldela ägarskap för en viss åtgärd. Arbetsflödet fortsätter bara när användaren har bekräftat steget manuellt. Detta används när du vill att någon ska vidta en åtgärd i arbetsflödet; till exempel ett granskningssteg.
+På så sätt kan du **[!UICONTROL Participant Step]** tilldela ägarskap för en viss åtgärd. Arbetsflödet fortsätter bara när användaren har bekräftat steget manuellt. Detta används när du vill att någon ska vidta en åtgärd i arbetsflödet; till exempel ett granskningssteg.
 
 Även om det inte är direkt relaterat måste användarauktorisering beaktas när en åtgärd tilldelas. användaren måste ha åtkomst till sidan som är arbetsflödets nyttolast.
 
@@ -229,8 +234,8 @@ Med ett **[!UICONTROL deltagarsteg]** kan du tilldela ägarskap för en viss åt
 
 Om du vill konfigurera steget redigerar du och använder följande flikar:
 
-* [**[!UICONTROL Vanliga]**](#step-properties-common-tab)
-* [**[!UICONTROL Användare/grupp]**](#step-properties-user-group-tab)
+* [**[!UICONTROL Common]**](#step-properties-common-tab)
+* [**[!UICONTROL User/Group]**](#step-properties-user-group-tab)
 
 >[!NOTE]
 >
@@ -238,6 +243,7 @@ Om du vill konfigurera steget redigerar du och använder följande flikar:
 >
 >* Arbetsflödet är slutfört (färdigt).
 >* Arbetsflödet avbryts (avslutas).
+
 >
 
 
@@ -248,9 +254,9 @@ Om du vill konfigurera steget redigerar du och använder följande flikar:
 
 ### Steg för dialogdeltagare {#dialog-participant-step}
 
-Använd ett **[!UICONTROL dialogdeltagarsteg]** för att samla in information från användaren som är tilldelad arbetsposten. Det här steget är användbart när du vill samla in små mängder data som används senare i arbetsflödet.
+Använd en **[!UICONTROL Dialog Participant Step]** för att samla in information från den användare som har tilldelats arbetsuppgiften. Det här steget är användbart när du vill samla in små mängder data som används senare i arbetsflödet.
 
-När du är klar med steget innehåller dialogrutan **[!UICONTROL Fullständig arbetsuppgift]** de fält som du har definierat i dialogrutan. De data som samlas in i fälten lagras i noder i arbetsflödets nyttolast. Efterföljande arbetsflödessteg kan sedan läsa värdet från databasen.
+När du är klar med steget innehåller **[!UICONTROL Complete Work Item]** dialogrutan de fält som du har definierat i dialogrutan. De data som samlas in i fälten lagras i noder i arbetsflödets nyttolast. Efterföljande arbetsflödessteg kan sedan läsa värdet från databasen.
 
 Om du vill konfigurera steget anger du vilken grupp eller användare som arbetsposten ska tilldelas till och sökvägen till dialogrutan.
 
@@ -258,8 +264,8 @@ Om du vill konfigurera steget anger du vilken grupp eller användare som arbetsp
 
 Om du vill konfigurera steget redigerar du och använder följande flikar:
 
-* [**[!UICONTROL Vanliga]**](#step-properties-common-tab)
-* [**[!UICONTROL Användare/grupp]**](#step-properties-user-group-tab)
+* [**[!UICONTROL Common]**](#step-properties-common-tab)
+* [**[!UICONTROL User/Group]**](#step-properties-user-group-tab)
 * **[!UICONTROL Dialog]**
 
    * **[!UICONTROL-dialogsökväg**: Sökvägen till dialognoden i den [dialogruta som du skapar](#dialog-participant-step-creating-a-dialog).
@@ -275,7 +281,7 @@ Så här skapar du en dialogruta:
 
 Du kan lagra widgetdata i arbetsflödets nyttolast eller i arbetsobjektets metadata. Formatet för widgetnodens egenskap avgör var data lagras. `name` Det är den här noden.
 
-* **[!UICONTROL Lagra data med nyttolasten]**
+* **[!UICONTROL Store Data with the Payload]**
 
    * Om du vill lagra widgetdata som en egenskap för arbetsflödets nyttolast använder du följande format för värdet för namnegenskapen för widgetnoden:
 
@@ -284,7 +290,7 @@ Du kan lagra widgetdata i arbetsflödets nyttolast eller i arbetsobjektets metad
    * Data lagras i nyttolastnodens `nodename` egenskap. Om noden inte innehåller den egenskapen skapas egenskapen.
    * När den lagras med nyttolasten skriver efterföljande användning av dialogrutan med samma nyttolast över egenskapens värde.
 
-* **[!UICONTROL Lagra data med arbetsobjektet]**
+* **[!UICONTROL Store Data with the Work Item]**
 
    * Om du vill lagra widgetdata som en egenskap för arbetsobjektets metadata använder du följande format för värdet för egenskapen name:
 
@@ -294,7 +300,7 @@ Du kan lagra widgetdata i arbetsflödets nyttolast eller i arbetsobjektets metad
 
 #### Steg för dialogdeltagare - Dialogrutedefinition {#dialog-participant-step-dialog-definition}
 
-1. **[!UICONTROL Dialogrutans struktur]**
+1. **[!UICONTROL Dialog Structure]**
 
    Dialogrutorna för Dialog Deltagare-steg liknar dialogrutor som du skapar för redigeringskomponenter. De lagras under:
 
@@ -319,15 +325,15 @@ Du kan lagra widgetdata i arbetsflödets nyttolast eller i arbetsobjektets metad
    >
    >Mer information finns i [Skapa och konfigurera en dialogruta](/help/sites-developing/developing-components.md#creating-and-configuring-a-dialog).
 
-1. **[!UICONTROL Dialogrutans sökvägsegenskap]**
+1. **[!UICONTROL Dialog Path Property]**
 
-   Steget för **[!UICONTROL dialogdeltagare]** har egenskapen **[!UICONTROL Dialogsökväg]** (tillsammans med egenskaperna för ett [deltagarsteg](#participant-step)). Värdet för egenskapen **[!UICONTROL Dialogsökväg]** är sökvägen till `dialog` noden i dialogrutan.
+   Egenskapen **[!UICONTROL Dialog Participant Step]** har **[!UICONTROL Dialog Path]** egenskapen (tillsammans med egenskaperna för ett [deltagarsteg](#participant-step)). Värdet för **[!UICONTROL Dialog Path]** egenskapen är sökvägen till `dialog` noden i dialogrutan.
 
    Dialogrutan finns till exempel i en komponent med namnet `EmailWatch` som lagras i noden:
 
    `/apps/myapp/workflows/dialogs`
 
-   För det beröringsaktiverade användargränssnittet används följande värde för egenskapen **[!UICONTROL Dialog Path]** :
+   För det beröringsaktiverade användargränssnittet används följande värde för **[!UICONTROL Dialog Path]** egenskapen:
 
    `/apps/myapp/workflow/dialogs/EmailWatch/cq:dialog`
 
@@ -369,24 +375,24 @@ Du kan lagra widgetdata i arbetsflödets nyttolast eller i arbetsobjektets metad
 
 ### Dynamiskt deltagarsteg {#dynamic-participant-step}
 
-Komponenten **[!UICONTROL Dynamic Participant Step]** liknar **[!UICONTROL Deltagarsteg]** med skillnaden att deltagaren väljs automatiskt vid körning.
+Komponenten liknar **[!UICONTROL Dynamic Participant Step]** skillnaden **[!UICONTROL Participant Step]** på att deltagaren väljs automatiskt vid körning.
 
-Om du vill konfigurera steget väljer du en **[!UICONTROL deltagarväljare]** som identifierar deltagaren som arbetsposten ska tilldelas till, tillsammans med en dialogruta.
+Om du vill konfigurera steget väljer du en **[!UICONTROL Participant Chooser]** som identifierar deltagaren som arbetsposten ska tilldelas till tillsammans med en dialogruta.
 
 #### Dynamiskt deltagarsteg - konfiguration {#dynamic-participant-step-configuration}
 
 Om du vill konfigurera steget redigerar du och använder följande flikar:
 
-* [**[!UICONTROL Vanliga]**](#step-properties-common-tab)
-* **[!UICONTROL Väljare för deltagare]**
+* [**[!UICONTROL Common]**](#step-properties-common-tab)
+* **[!UICONTROL Participant Chooser]**
 
-   * **[!UICONTROL Väljare]**: Namnet på den [deltagarväljare som du skapar](#dynamic-participant-step-developing-the-participant-chooser).
-   * **[!UICONTROL Argument]**: Alla obligatoriska argument.
-   * **[!UICONTROL E-post]**: Anger om ett e-postmeddelande ska skickas till användaren.
+   * **[!UICONTROL Participant Chooser]**: Namnet på den [deltagarväljare som du skapar](#dynamic-participant-step-developing-the-participant-chooser).
+   * **[!UICONTROL Arguments]**: Alla obligatoriska argument.
+   * **[!UICONTROL Email]**: Anger om ett e-postmeddelande ska skickas till användaren.
 
 * **[!UICONTROL Dialog]**
 
-   * **[!UICONTROL Dialogrutans sökväg]**: Sökvägen till dialognoden i den [dialogruta som du skapar (som med steget **för** dialogdeltagare)](#dialog-participant-step-creating-a-dialog).
+   * **[!UICONTROL Dialog Path]**: Sökvägen till dialognoden i den [dialogruta som du skapar (som med steget **för** dialogdeltagare)](#dialog-participant-step-creating-a-dialog).
 
 #### Dynamiskt deltagarsteg - Utveckla deltagarväljaren {#dynamic-participant-step-developing-the-participant-chooser}
 
@@ -398,7 +404,7 @@ Skapa en OSGi-tjänst eller ett ECMAScript-skript som väljer en användare att 
 
    Skript måste innehålla en funktion med namnet getParticipant som returnerar ett användar-ID som ett `String` värde. Lagra dina egna skript i till exempel `/apps/myapp/workflow/scripts` mappen eller en undermapp.
 
-   Ett exempelskript ingår i en standard-AEM-instans:
+   Ett exempelskript ingår i en AEM standardinstans:
 
    `/libs/workflow/scripts/initiator-participant-chooser.ecma`
 
@@ -419,26 +425,27 @@ Skapa en OSGi-tjänst eller ett ECMAScript-skript som väljer en användare att 
 
    >[!NOTE]
    >
-   >Komponenten **[!UICONTROL Arbetsflödesinitierarens deltagarväljare]** utökar det **[!UICONTROL dynamiska deltagarsteget]** och använder det här skriptet som stegimplementering.
+   >Komponenten **[!UICONTROL Workflow Initiator Participant Chooser]** utökar **[!UICONTROL Dynamic Participant Step]** och använder skriptet som stegimplementering.
 
-* **[!UICONTROL OSGi-tjänst]**
+* **[!UICONTROL OSGi service]**
 
    Tjänsterna måste implementera [gränssnittet com.day.cq.workflow.exec.ParticipantStepChooser](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/ParticipantStepChooser.html) . Gränssnittet definierar följande medlemmar:
 
-   * `SERVICE_PROPERTY_LABEL` fält: Använd det här fältet för att ange namnet på deltagarväljaren. Namnet visas i en lista över tillgängliga deltagarval i egenskaperna för **[!UICONTROL dynamiskt deltagarsteg]** .
+   * `SERVICE_PROPERTY_LABEL` fält: Använd det här fältet för att ange namnet på deltagarväljaren. Namnet visas i en lista över tillgängliga deltagarval i **[!UICONTROL Dynamic Participant Step]** egenskaperna.
    * `getParticipant` metod: Returnerar det dynamiskt lösta huvud-ID:t som ett `String` värde.
+
    >[!CAUTION]
    >
    >Metoden returnerar det dynamiskt matchade huvud-ID:t. `getParticipant` Detta kan vara ett grupp-ID eller användar-ID.
    >
    >
-   >Ett grupp-ID kan dock bara användas för ett **[!UICONTROL deltagarsteg]** när en lista med deltagare returneras. För ett **[!UICONTROL dynamiskt deltagarsteg]** returneras en tom lista som inte kan användas för delegering.
+   >Ett grupp-ID kan dock bara användas för en **[!UICONTROL Participant Step]** grupp när en lista med deltagare returneras. För en **[!UICONTROL Dynamic Participant Step]** tom lista returneras och den kan inte användas för delegering.
 
-   Om du vill göra implementeringen tillgänglig för komponenter i **[!UICONTROL Dynamic Participant Step]** lägger du till din Java-klass i ett OSGi-paket som exporterar tjänsten och distribuerar paketet till AEM-servern.
+   Om du vill göra implementeringen tillgänglig för **[!UICONTROL Dynamic Participant Step]** komponenter lägger du till din Java-klass i ett OSGi-paket som exporterar tjänsten och distribuerar paketet till den AEM servern.
 
    >[!NOTE]
    >
-   >**[!UICONTROL Slumpmässig deltagarväljare]** är en exempeltjänst som väljer en slumpmässig användare ( `com.day.cq.workflow.impl.process.RandomParticipantChooser`). Stegexemplet **[!UICONTROL Slumpmässig]** deltagarväljare utökar det **[!UICONTROL dynamiska deltagarsteget]** och använder den här tjänsten som stegimplementering.
+   >**[!UICONTROL Random Participant Chooser]** är en exempeltjänst som väljer en slumpmässig användare ( `com.day.cq.workflow.impl.process.RandomParticipantChooser`). Stegkomponentexemplet **[!UICONTROL Random Participant Chooser]** utökar **[!UICONTROL Dynamic Participant Step]** och använder den här tjänsten som stegimplementering.
 
 #### Dynamiskt deltagarsteg - Exempel på deltagarväljartjänst {#dynamic-participant-step-example-participant-chooser-service}
 
@@ -483,7 +490,7 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 }
 ```
 
-I dialogrutan **[!UICONTROL Egenskaper för dynamiskt deltagarsteg]** inkluderar listan **[!UICONTROL Deltagarväljare]** objektet `Workflow Initiator Participant Chooser (script)`, som representerar den här tjänsten.
+I dialogrutan **[!UICONTROL Dynamic Participant Step]** Egenskaper innehåller **[!UICONTROL Participant Chooser]** listan objektet `Workflow Initiator Participant Chooser (script)`, som representerar den här tjänsten.
 
 &quot;När arbetsflödesmodellen startas visar loggen ID:t för den användare som initierade arbetsflödet och som tilldelats arbetsposten. I det här exemplet startade `admin` användaren arbetsflödet.
 
@@ -491,43 +498,43 @@ I dialogrutan **[!UICONTROL Egenskaper för dynamiskt deltagarsteg]** inkluderar
 
 ### Steg för formulärdeltagare {#form-participant-step}
 
-Steget **[!UICONTROL Formulärdeltagare]** visar ett formulär när arbetsuppgiften öppnas. När användaren fyller i och skickar formuläret lagras fältdata i noderna i arbetsflödets nyttolast.
+När arbetsuppgiften öppnas visas ett formulär **[!UICONTROL Form Participant Step]** . När användaren fyller i och skickar formuläret lagras fältdata i noderna i arbetsflödets nyttolast.
 
 Om du vill konfigurera steget anger du vilken grupp eller användare som arbetsposten ska tilldelas till och sökvägen till formuläret.
 
 >[!CAUTION]
 >
->Det här avsnittet handlar om [Forms-avsnittet i Foundation Components för sidredigering](/help/sites-authoring/default-components-foundation.md#form).
+>I det här avsnittet behandlas [Forms-delen av Foundation Components för sidredigering](/help/sites-authoring/default-components-foundation.md#form).
 
 #### Steg för formulärdeltagare - Konfiguration {#form-participant-step-configuration}
 
 Om du vill konfigurera steget redigerar du och använder följande flikar:
 
-* [**[!UICONTROL Vanliga]**](#step-properties-common-tab)
-* [**[!UICONTROL Användare/grupp]**](#step-properties-user-group-tab)
-* **[!UICONTROL Formulär]**
+* [**[!UICONTROL Common]**](#step-properties-common-tab)
+* [**[!UICONTROL User/Group]**](#step-properties-user-group-tab)
+* **[!UICONTROL Form]**
 
    * **[!UICONTROL-formulärsökväg**: Sökvägen till det [formulär du skapar](#form-participant-step-creating-the-form).
 
 #### Steg för formulärdeltagare - Skapa formuläret {#form-participant-step-creating-the-form}
 
-Skapa ett formulär som ska användas med ett steg **[!UICONTROL för]** formulärdeltagare som vanligt. Formulär för ett steg för formulärdeltagare måste dock ha följande konfigurationer:
+Skapa ett formulär som ska användas med ett **[!UICONTROL Form Participant Step]** standardformulär. Formulär för ett steg för formulärdeltagare måste dock ha följande konfigurationer:
 
-* Egenskapen **[!UICONTROL Åtgärdstyp]** måste vara inställd på **[!UICONTROL Start av formulär]** -komponenten `Edit Workflow Controlled Resource(s)`.
+* Komponenten **[!UICONTROL Start of Form]** måste ha **[!UICONTROL Action Type]** egenskapen inställd på `Edit Workflow Controlled Resource(s)`.
 
-* Komponenten **[!UICONTROL Början av formulär]** måste ha ett värde för `Form Identifier` egenskapen.
+* Komponenten **[!UICONTROL Start of Form]** måste ha ett värde för `Form Identifier` egenskapen.
 
 * Formulärkomponenterna måste ha egenskapen **Elementnamn** inställd på sökvägen till noden där fältdata lagras. Sökvägen måste hitta en nod i arbetsflödets nyttolastinnehåll. Värdet har följande format:
 
    `./jcr:content/path_to_node`
 
-* Formuläret måste innehålla en **[!UICONTROL komponent för att skicka]** arbetsflöden. Du konfigurerar inga egenskaper för komponenten.
+* Formuläret måste innehålla en **[!UICONTROL Workflow Submit Button(s)]** komponent. Du konfigurerar inga egenskaper för komponenten.
 
-Arbetsflödets krav avgör var fältdata ska lagras. Fältdata kan till exempel användas för att konfigurera egenskaper för sidinnehåll. Följande värde för egenskapen **[!UICONTROL Elementnamn]** lagrar fältdata som värdet för `redirectTarget` egenskapen för `jcr:content` noden:
+Arbetsflödets krav avgör var fältdata ska lagras. Fältdata kan till exempel användas för att konfigurera egenskaper för sidinnehåll. Följande värde för en **[!UICONTROL Element Name]** egenskap lagrar fältdata som värdet för `redirectTarget` egenskapen för `jcr:content` noden:
 
 `./jcr:content/redirectTarget`
 
-I följande exempel används fältdata som innehåll i en **[!UICONTROL Text]** -komponent på nyttolastsidan:
+I följande exempel används fältdata som innehåll i en **[!UICONTROL Text]** komponent på nyttolastsidan:
 
 `./jcr:content/par/text_3/text`
 
@@ -537,7 +544,7 @@ Formuläret kan finnas var som helst i databasen, men arbetsflödesanvändare m�
 
 ### Slumpmässig deltagarväljare {#random-participant-chooser}
 
-Steget **[!UICONTROL Slumpmässig deltagarväljare]** är en deltagarväljare som tilldelar det genererade arbetsobjektet till en användare som väljs slumpmässigt från en lista.
+Stegen är en deltagarväljare som tilldelar den genererade arbetsposten till en användare som väljs slumpmässigt från en lista. **[!UICONTROL Random Participant Chooser]**
 
 ![wf-31](assets/wf-31.png)
 
@@ -545,24 +552,24 @@ Steget **[!UICONTROL Slumpmässig deltagarväljare]** är en deltagarväljare so
 
 Om du vill konfigurera steget redigerar du och använder följande flikar:
 
-* [**[!UICONTROL Vanliga]**](#step-properties-common-tab)
-* **[!UICONTROL Argument]**
+* [**[!UICONTROL Common]**](#step-properties-common-tab)
+* **[!UICONTROL Arguments]**
 
-   * **[!UICONTROL Deltagare]**: Anger listan med användare som är tillgängliga för markering. Om du vill lägga till en användare i listan klickar du på **[!UICONTROL Lägg till objekt]** och skriver hemsökvägen för användarnoden eller användar-ID:t. Användarnas ordning påverkar inte sannolikheten att tilldelas en arbetsuppgift.
+   * **[!UICONTROL Participants]**: Anger listan med användare som är tillgängliga för markering. Om du vill lägga till en användare i listan klickar du på **[!UICONTROL Add Item]** och skriver hemsökvägen för användarnoden eller användar-ID:t. Användarnas ordning påverkar inte sannolikheten att tilldelas en arbetsuppgift.
 
 ### Väljare för deltagare i arbetsflödesinitieraren {#workflow-initiator-participant-chooser}
 
-Steget **[!UICONTROL Arbetsflödesinitierarens deltagarväljare]** är en deltagarväljare som tilldelar det genererade arbetsobjektet till användaren som startade arbetsflödet. Det finns inga andra egenskaper att konfigurera än de **[!UICONTROL gemensamma]** egenskaperna.
+Stegen är en deltagarväljare som tilldelar den genererade arbetsposten till den användare som startade arbetsflödet. **[!UICONTROL Workflow Initiator Participant Chooser]** Det finns inga andra egenskaper att konfigurera än **[!UICONTROL Common]** egenskaperna.
 
 #### Väljare för deltagare i arbetsflödesinitiering - Konfiguration {#workflow-initiator-participant-chooser-configuration}
 
 Om du vill konfigurera steget redigerar du på följande flikar:
 
-* [**[!UICONTROL Vanliga]**](#step-properties-common-tab)
+* [**[!UICONTROL Common]**](#step-properties-common-tab)
 
 ## Processsteg {#process-step}
 
-Ett **[!UICONTROL processteg]** kör ett ECMAScript eller anropar en OSGi-tjänst för att utföra automatisk bearbetning.
+A **[!UICONTROL Process Step]** kör ett ECMAScript eller anropar en OSGi-tjänst för att utföra automatisk bearbetning.
 
 ![wf-32](assets/wf-32.png)
 
@@ -570,15 +577,15 @@ Ett **[!UICONTROL processteg]** kör ett ECMAScript eller anropar en OSGi-tjäns
 
 Om du vill konfigurera steget redigerar du och använder följande flikar:
 
-* [**[!UICONTROL Vanliga]**](#step-properties-common-tab)
+* [**[!UICONTROL Common]**](#step-properties-common-tab)
 * **[!UICONTROL Process]**
 
    * **[!UICONTROL Process]**: Processimplementeringen som ska köras. Använd listrutan för att välja ECMAScript- eller OSGi-tjänsten. Mer information om:
 
       * Standardtjänsterna ECMAScripts och OSGi, se [Inbyggda processer för processteg](/help/sites-developing/workflows-process-ref.md).
-      * Skapa ECMAScript för ett **[!UICONTROL processteg]** , se [Implementera ett processteg med ett ECMAScript](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript).
-      * Skapa OSGi-tjänster för ett **[!UICONTROL processteg]** , se [Implementera ett processteg med en Java-klass](/help/sites-developing/workflows-customizing-extending.md#implementing-a-process-step-with-a-java-class).
-   * **[!UICONTROL Handler Advance]**:Välj det här alternativet om du vill att arbetsflödet automatiskt ska gå vidare till nästa steg efter körningen. Om du inte väljer det här alternativet måste implementeringsskriptet hantera arbetsflödets utveckling.
-   * **[!UICONTROL Argument]**: Argument som ska skickas till processen.
+      * Skapa ECMAScript för ett **[!UICONTROL Process]** steg, se [Implementera ett processsteg med ett ECMAScript](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript).
+      * Skapa OSGi-tjänster för ett **[!UICONTROL Process]** steg, se [Implementera ett processsteg med en Java-klass](/help/sites-developing/workflows-customizing-extending.md#implementing-a-process-step-with-a-java-class).
+   * **[!UICONTROL Handler Advance]**: Välj det här alternativet om du vill att arbetsflödet automatiskt ska gå vidare till nästa steg efter körningen. Om du inte väljer det här alternativet måste implementeringsskriptet hantera arbetsflödets utveckling.
+   * **[!UICONTROL Arguments]**: Argument som ska skickas till processen.
 
 
