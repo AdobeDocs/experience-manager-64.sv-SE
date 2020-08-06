@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 3cc7efc5-bcb2-41c9-b78b-308f6b7a298e
 translation-type: tm+mt
 source-git-commit: dda8156729aa46dd6cfd779bca120b165ccc980b
+workflow-type: tm+mt
+source-wordcount: '718'
+ht-degree: 0%
 
 ---
 
@@ -43,34 +46,40 @@ Du kan konfigurera dessa OSGi-tjänstegenskaper för din egen instans.
 
 I följande lista visas egenskaperna så som de visas i webbkonsolen, följt av namnet på motsvarande OSGi-parameter, tillsammans med en beskrivning och standardvärdet (där det är lämpligt):
 
-* **Enable**( `cq.wcm.undo.enabled`)
+* **Enable**( 
+`cq.wcm.undo.enabled`)
 
    * **Beskrivning**: Avgör om sidförfattare kan ångra och göra om ändringar.
    * **Standard**: `Selected`
    * **Typ**: `Boolean`
 
-* **Path**( `cq.wcm.undo.path`)
+* **Path**( 
+`cq.wcm.undo.path`)
 
    * **Beskrivning**: Databassökvägen för beständiga binära ångra-data. När författare ändrar binära data, t.ex. bilder, behålls den ursprungliga versionen av dessa data här. När ändringar av binära data ångras återställs dessa binära ångra-data till sidan.
    * **Standard**: `/var/undo`
    * **Typ**: `String`
+
    >[!NOTE]
    >
    >Som standard har bara administratörer åtkomst till `/var/undo` noden. Författare kan bara ångra och göra om åtgärder för binärt innehåll efter att de har fått behörighet att komma åt binära ångra-data.
 
-* **Min. validity**( `cq.wcm.undo.validity`)
+* **Min. validity**( 
+`cq.wcm.undo.validity`)
 
    * **Beskrivning**: Den kortaste tiden som binära ångra-data lagras, i timmar. Efter den här tidsperioden är binära data tillgängliga för borttagning för att spara diskutrymme.
    * **Standard**: `10`
    * **Typ**: `Integer`
 
-* **Steg**( `cq.wcm.undo.steps`)
+* **Steg**( 
+`cq.wcm.undo.steps`)
 
    * **Beskrivning**: Det maximala antalet sidåtgärder som lagras i ångra-historiken.
    * **Standard**: `20`
    * **Typ**: `Integer`
 
-* **Persistence**( `cq.wcm.undo.persistence`)
+* **Persistence**( 
+`cq.wcm.undo.persistence`)
 
    * **Beskrivning**: Klassen som innehåller ångra-historiken. Två beständiga klasser finns:
 
@@ -80,7 +89,8 @@ I följande lista visas egenskaperna så som de visas i webbkonsolen, följt av 
    * **Typ**: `String`
 
 
-* **Beständiga lägen**( `cq.wcm.undo.persistence.mode`)
+* **Beständigt läge**( 
+`cq.wcm.undo.persistence.mode`)
 
    * **Beskrivning**: Avgör när ångra-historiken sparas. Välj det här alternativet om du vill behålla ångra-historiken efter varje sidredigering. Avmarkera det här alternativet om du bara vill behålla när en sidinläsning sker (användaren t.ex. navigerar till en annan sida).
 
@@ -89,17 +99,19 @@ I följande lista visas egenskaperna så som de visas i webbkonsolen, följt av 
    * **Standard**: `Selected`
    * **Typ**: `Boolean`
 
-* **Markörläge**( `cq.wcm.undo.markermode`)
+* **Markörläge**( 
+`cq.wcm.undo.markermode`)
 
    * **Beskrivning**: Anger den visuella referens som ska användas för att ange vilka stycken som påverkas när en ångra eller gör om inträffar. Följande värden är giltiga:
 
       * flash: Markeringsindikatorn för styckena blinkar tillfälligt.
-      *  välj: Stycket är markerat.
+      * välj: Stycket är markerat.
    * **Standard**: `flash`
    * **Typ**: `String`
 
 
-* **Bra komponenter**( `cq.wcm.undo.whitelist`)
+* **Bra komponenter**( 
+`cq.wcm.undo.whitelist`)
 
    * **Beskrivning**: En lista över komponenter som du vill ska påverkas av kommandona Ångra och Gör om. Lägg till komponentsökvägar i den här listan när de fungerar korrekt med ångra/gör om. Lägg till en asterisk (&amp;ast;) för att ange en grupp komponenter:
 
@@ -116,12 +128,14 @@ I följande lista visas egenskaperna så som de visas i webbkonsolen, följt av 
    * **Typ**: `String[]`
 
 
-* **Felaktiga komponenter**( `cq.wcm.undo.blacklist`)
+* **Felaktiga komponenter**( 
+`cq.wcm.undo.blacklist`)
 
    * **Beskrivning**: En lista med komponenter och/eller komponentåtgärder som du inte vill ska påverkas av kommandot Ångra. Lägg till komponenter och komponentåtgärder som inte fungerar som de ska med kommandot Ångra:
 
       * Lägg till en komponentsökväg när du inte vill ha någon av komponentens åtgärder i ångra-historiken, till exempel `collab/forum/components/post`
       * Lägg till ett kolon (:) och en åtgärd i sökvägen när du vill att den specifika åtgärden ska utelämnas från ångra-historiken (andra åtgärder fungerar korrekt), till exempel `collab/forum/components/post:insertParagraph.`
+
    >[!NOTE]
    >
    >När en åtgärd finns i listan läggs den fortfarande till i ångra-historiken. Användare kan inte ångra åtgärder som finns tidigare än en **Dålig komponent** -åtgärd i ångra-historiken.
