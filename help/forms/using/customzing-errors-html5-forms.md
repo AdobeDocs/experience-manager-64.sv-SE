@@ -9,6 +9,9 @@ topic-tags: customization
 discoiquuid: 44e49789-9075-41b3-bce8-03e8efce2d5a
 translation-type: tm+mt
 source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+workflow-type: tm+mt
+source-wordcount: '541'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Artikeln innehåller stegen för att anpassa felmeddelanden för HTML5-formulär
 * visa felmeddelanden för flera fält vid en given tidpunkt.
 * visa felet oavsett om ett fält är markerat eller inte.
 
-## Anpassa felmeddelanden {#customizing-error-messages-nbsp}
+## Anpassa felmeddelanden  {#customizing-error-messages-nbsp}
 
 Innan du anpassar felmeddelandena hämtar och extraherar du det bifogade paketet (CustomErrorManager-1.0-SNAPSHOT.zip).
 
@@ -31,7 +34,7 @@ När du har extraherat paketet öppnar du mappen CustomErrorManager-1.0-SNAPSHOT
 
 [Hämta fil](assets/customerrormanager-1.0-snapshot.zip)
 
-### Anpassa felmeddelandenas placering {#customizing-the-position-of-error-messages-nbsp}
+### Anpassa felmeddelandenas placering  {#customizing-the-position-of-error-messages-nbsp}
 
 Om du vill anpassa placeringen av felmeddelandet lägger du till taggen &lt;div> för varje fel- och varningsfält, placerar taggen &lt;div> till vänster eller höger och tillämpar CSS-format på taggen &lt;div>. Detaljerade anvisningar finns i proceduren nedan:
 
@@ -77,7 +80,7 @@ Om du vill anpassa placeringen av felmeddelandet lägger du till taggen &lt;div>
 1. Navigera till `CustomErrorManager-1.0-SNAPSHOT` mappen och skapa ett arkiv med mapparna jcr_root och META-INF. Byt namn på arkivet till CustomErrorManager-1.0-SNAPSHOT.zip.
 1. Använd pakethanteraren för att överföra och installera paketet.
 
-## Visa felmeddelanden för flera fält {#display-error-messages-for-multiple-fields-nbsp}
+## Visa felmeddelanden för flera fält  {#display-error-messages-for-multiple-fields-nbsp}
 
 Använd det bifogade paketet för att samtidigt visa felmeddelanden för alla fält. Om du vill visa ett enda felmeddelande använder du standardprofilen.
 
