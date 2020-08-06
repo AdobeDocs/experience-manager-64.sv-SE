@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: cbcfbe88-e60c-446c-bbfe-2509831d6c22
 translation-type: tm+mt
 source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 0%
 
 ---
 
@@ -21,9 +24,9 @@ Stegen är lättviktiga 3D-scenfiler som innehåller den grundläggande visnings
 
 >[!NOTE]
 >
->OBJ 3D-formatet stöder inte ljus. Det kan därför inte användas för att tillhandahålla faser till AEM 3D.
+>OBJ 3D-formatet stöder inte ljus. Därför kan den inte användas för att tillhandahålla faser till AEM 3D.
 
 Scenens filformat avgör vilken renderare du kan använda med den scenen. Om till exempel Autodesk® Maya® används för återgivning av hög kvalitet måste scenen vara i `.ma` eller i `.mb` format. Om du bara tänker använda standardåtergivaren för Rapid Refine™ kan du välja vilket scenfilformat som stöds.
 
-Alla renderingsinställningar i AEM 3D, förutom bildtyp och storlek för utdata, måste vara förkonfigurerade och sparade i scenfilen innan de kan överföras till AEM.
+Alla renderingsinställningar i AEM 3D, förutom utdatabildstyp och -storlek, måste förkonfigureras och sparas i scenfilen innan du kan överföra till AEM.
 
