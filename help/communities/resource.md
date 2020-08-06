@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8fe97181-600e-42ac-af25-d5d4db248740
 translation-type: tm+mt
 source-git-commit: 28948f1f8678512f8fc970a4289cb01cde86c5c2
+workflow-type: tm+mt
+source-wordcount: '656'
+ht-degree: 4%
 
 ---
 
@@ -28,8 +31,8 @@ Så här lägger du till en aktiveringsresurs på den nya communitywebbplatsen:
    ![chlimage_1-200](assets/chlimage_1-200.png)
 * Välj den community där aktiveringsresurser läggs till
    * Välj `Enablement Tutorial`
-* Välj ` Create`
-* Välj **[!UICONTROL resurs]**
+* From the menu, select ` Create`
+* Välj **[!UICONTROL Resource]**
 
 ![chlimage_1-201](assets/chlimage_1-201.png)
 
@@ -37,15 +40,15 @@ Så här lägger du till en aktiveringsresurs på den nya communitywebbplatsen:
 
 Fyll i grundläggande information för resursen:
 
-* **[!UICONTROL Platsnamn]**:
+* **[!UICONTROL Site Name]**:
 ange namnet på den valda communitywebbplatsen: Självstudiekurs om aktivering
-* **[!UICONTROL Resurs&amp;namn;senaste;]**: Ski Lesson 1
-* **[!UICONTROL Taggar]**:Självstudiekurs: Idrott/skidåkning
-* **[!UICONTROL Visa i katalog]**: På
-* **[!UICONTROL Beskrivning]**: Snön snurrar för nybörjare
-* **[!UICONTROL Lägg till bild]**: Lägg till en bild som representerar resursen för medlemmen i uppdragsvyn
+* **[!UICONTROL Resource Name&ast;]**: Ski Lesson 1
+* **[!UICONTROL Tags]**: Självstudiekurs: Idrott/skidåkning
+* **[!UICONTROL Show in Catalog]**: På
+* **[!UICONTROL Description]**: Snön snurrar för nybörjare
+* **[!UICONTROL Add Image]**: Lägg till en bild som representerar resursen för medlemmen i uppdragsvyn
    ![chlimage_1-202](assets/chlimage_1-202.png)
-* Markera **[!UICONTROL nästa]**
+* Välj **[!UICONTROL Next]**
 
 ### Lägg till innehåll {#add-content}
 
@@ -59,30 +62,36 @@ Markera `'+' icon`i det övre högra hörnet när du vill börja välja resursen
 
 ![chlimage_1-205](assets/chlimage_1-205.png)
 
-* välj **[!UICONTROL Nästa]**
+* select **[!UICONTROL Next]**
 
-###  Inställningar {#settings}
+### Inställningar {#settings}
 
-* **[!UICONTROL Sociala inställningar]** Lämna standardinställningarna så att eleverna kan kommentera och betygsätta aktiveringsresurser.
-* **[!UICONTROL Förfallodatum]**
+* **[!UICONTROL Social Settings]**
+Lämna standardinställningarna så att eleverna kan kommentera och betygsätta aktiveringsresurser.
+* **[!UICONTROL Due Date]**
+
    *(Valfritt)* Ett datum då uppdraget ska vara slutfört kan väljas.
-* **[!UICONTROL Resursförfattare]**
+* **[!UICONTROL Resource Author]**
+
    *(Valfritt)* Lämna tomt.
-* **[!UICONTROL Resurskontakt&amp;stämpel;ast;]**
+* **[!UICONTROL Resource Contact&ast;]**
+
    *(Obligatoriskt)* Använd listrutan för att välja medlem `Quinn Harper`.
-* **[!UICONTROL Resursexpert]**
+* **[!UICONTROL Resource Expert]**
+
    *(Valfritt)* Lämna tomt.
    **Obs**: Om användare eller grupper inte visas kontrollerar du att de har lagts till i `Community Enable Members` gruppen och *sparats* i publiceringsinstansen.
-   ![chlimage_1-205](assets/chlimage_1-206.png)
-* Markera **[!UICONTROL nästa]**
+   ![chlimage_1-206](assets/chlimage_1-206.png)
+* Välj **[!UICONTROL Next]**
 
 ### Uppdrag {#assignments}
 
-* **[!UICONTROL Lägg till tilldelningar]** Lämna inaktiverade eftersom den här aktiveringsresursen läggs till i en utbildningssökväg. Om en elev tilldelas till den enskilda aktiveringsresursen samt en learningsökväg som innehåller aktiveringsresursen, tilldelas eleven till aktiveringsresursen två gånger.
+* **[!UICONTROL Add Assignees]**
+Låt vara unset eftersom den här aktiveringsresursen läggs till i en utbildningsväg. Om en elev tilldelas till den enskilda aktiveringsresursen samt en learningsökväg som innehåller aktiveringsresursen, tilldelas eleven till aktiveringsresursen två gånger.
 
 ![chlimage_1-207](assets/chlimage_1-207.png)
 
-* Välj **[!UICONTROL Skapa]**
+* Välj **[!UICONTROL Create]**
 
 ![chlimage_1-208](assets/chlimage_1-208.png)
 
@@ -119,24 +128,24 @@ Gå tillbaka till självstudiekursen om aktivering av dess resurser.
 En inlärningsväg är en logisk gruppering av aktiveringsresurser som utgör en kurs.
 
 * I resurskonsolen väljer du `+ Create`
-* Välj **[!UICONTROL utbildningssökväg]**
+* Välj **[!UICONTROL Learning Path]**
 
 ![chlimage_1-212](assets/chlimage_1-212.png)
 
-Lägg till **[!UICONTROL grundläggande information]**:
+Lägg till **[!UICONTROL Basic Info]**:
 
-* **[!UICONTROL Namn på]** utbildningssökväg: Ski-lektioner
-* **[!UICONTROL Taggar]**:Självstudiekurs: Skickar
-* **[!UICONTROL Visa i katalog]**: lämna ej markerat
-* **[!UICONTROL Överför en bild]** som representerar utbildningssökvägen i resurskonsolen
+* **[!UICONTROL Learning Path Name]**: Ski-lektioner
+* **[!UICONTROL Tags]**: Självstudiekurs: Skickar
+* **[!UICONTROL Show in Catalog]**: lämna ej markerat
+* **[!UICONTROL Upload an image]** för att visa utbildningssökvägen i resurskonsolen
 
 ![chlimage_1-213](assets/chlimage_1-213.png)
 
-* Markera **[!UICONTROL nästa]**
+* Välj **[!UICONTROL Next]**
 
 Hoppa över nästa panel eftersom det inte finns några nödvändiga inlärningsvägar att lägga till.
 
-* Markera **[!UICONTROL nästa]**
+* Välj **[!UICONTROL Next]**
 
 På panelen Lägg till resurser
 
@@ -148,20 +157,23 @@ På panelen Lägg till resurser
 >
 >Du kan bara välja resurser på samma nivå som utbildningsvägen. För en inlärningsväg som skapats i en grupp är t.ex. endast resurserna på gruppnivå tillgängliga. för en inlärningsväg som skapats på en community-webbplats finns resurserna på den webbplatsen tillgängliga för tillägg till inlärningsvägen.
 
-* Välj **[!UICONTROL Skicka]**.
+* Välj **[!UICONTROL Submit]**.
 
 ![chlimage_1-214](assets/chlimage_1-214.png) ![chlimage_1-215](assets/chlimage_1-215.png)
 
-* Markera **[!UICONTROL nästa]**
+* Välj **[!UICONTROL Next]**
 
 ![chlimage_1-216](assets/chlimage_1-216.png)
 
-* **[!UICONTROL Lägg till tilldelningar]** Använd listrutan för att markera `Community Ski Class` gruppen, som bör innehålla medlemmar `Riley Taylor` och `Sidney Croft.`
+* **[!UICONTROL Add Assignees]**
+Använd listrutan för att välja 
+`Community Ski Class` en grupp som bör omfatta medlemmar `Riley Taylor` och `Sidney Croft.`
 
-* **[!UICONTROL Lär dig sökvägskontakt&amp;stämpel;ast;]**
+* **[!UICONTROL Learning Path Contact&ast;]**
+
    *(Obligatoriskt)* Använd listrutan för att välja medlem `Quinn Harper`.
 
-* Välj **[!UICONTROL Skapa]**
+* Välj **[!UICONTROL Create]**
 
 ![chlimage_1-217](assets/chlimage_1-217.png)
 
