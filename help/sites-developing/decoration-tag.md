@@ -1,6 +1,6 @@
 ---
 title: Dekoration-tagg
-description: När en komponent på en webbsida återges kan ett HTML-element genereras och den återgivna komponenten kapslas in i sig själv. För utvecklare erbjuder AEM tydlig och enkel logik som styr de dekorationstaggar som omsluter de inkluderade komponenterna.
+description: När en komponent på en webbsida återges kan ett HTML-element genereras och den återgivna komponenten kapslas in i sig själv. För utvecklare har AEM en tydlig och enkel logik som styr de dekorationstaggar som omsluter de inkluderade komponenterna.
 translation-type: tm+mt
 source-git-commit: 7b5cae8aea49b3fd4200bd902d07e1c0fe1090ce
 workflow-type: tm+mt
@@ -20,12 +20,12 @@ När en komponent på en webbsida återges kan ett HTML-element genereras och de
    * layoutinformation
    * formatinformation
 
-För utvecklare erbjuder AEM tydlig och enkel logik som styr de dekorationstaggar som omsluter de inkluderade komponenterna. Om och hur dekorationstaggen återges definieras av en kombination av två faktorer som den här sidan kommer att dyka upp i:
+För utvecklare har AEM en tydlig och enkel logik som styr de dekorationstaggar som omsluter de inkluderade komponenterna. Om och hur dekorationstaggen återges definieras av en kombination av två faktorer som den här sidan kommer att dyka upp i:
 
 * Själva komponenten kan konfigurera sin dekorationstagg med en uppsättning egenskaper.
 * De skript som innehåller komponenter (HTL, JSP, dispatcher osv.) kan definiera aspekterna för dekorationstaggen med include-parametrar.
 
-## Rekommendationer {#recommendations}
+## Recommendations {#recommendations}
 
 Här följer några allmänna rekommendationer för när wrapper-elementet ska tas med, som hjälper dig att undvika att stöta på oväntade problem:
 
@@ -37,7 +37,7 @@ Här följer några allmänna rekommendationer för när wrapper-elementet ska t
 
 Följande egenskaper och noder kan tillämpas på komponenterna för att styra beteendet för deras dekorationstagg:
 
-* **`cq:noDecoration {boolean}`:**Den här egenskapen kan läggas till i en komponent och ett true-värde tvingar AEM att inte generera några wrapper-element över komponenten.
+* **`cq:noDecoration {boolean}`:**Den här egenskapen kan läggas till i en komponent och ett true-värde AEM inte generera några wrapper-element över komponenten.
 * **`cq:htmlTag`node :**Den här noden kan läggas till under en komponent och kan ha följande egenskaper:
    * **`cq:tagName {String}`:**Detta kan användas för att ange en anpassad HTML-tagg som ska användas för att kapsla in komponenterna i stället för DIV-standardelementet.
    * **`class {String}`:**Detta kan användas för att ange CSS-klassnamn som ska läggas till i wrapper.
@@ -138,7 +138,7 @@ Resultat `/content/test.html`:
 
 ## JSP {#jsp}
 
-När du inkluderar en komponent som använder `cq:includ`e eller `sling:include`e är standardbeteendet i AEM att använda en DIV för att kapsla in elementet. Denna radbrytning kan dock anpassas på två sätt:
+När du inkluderar en komponent som använder `cq:includ`e eller `sling:include`, är standardbeteendet i AEM att använda en DIV för att kapsla in elementet. Denna radbrytning kan dock anpassas på två sätt:
 
 * Säg uttryckligen åt AEM att inte kapsla in komponenten med `cq:noDecoration`.
 * Använd en anpassad HTML-tagg för att kapsla in komponenten med `cq:htmlTag`/ `cq:tagName` eller `decorationTagName`.
