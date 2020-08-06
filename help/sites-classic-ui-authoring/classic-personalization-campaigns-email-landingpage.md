@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: dfe0ad66-9df5-4ea3-9e66-543b5ccd594a
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '658'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +32,7 @@ Om du vill skapa en effektiv startsida för nyhetsbrevet måste du göra följan
 >[!NOTE]
 >
 >Adobe planerar inte att ytterligare förbättra denna funktion (Hantera leads och listor).\
->Rekommendationen är att utnyttja [Adobe Campaign och dess AEM-integrering](/help/sites-administering/campaign.md).
+>Rekommendationen är att utnyttja [Adobe Campaign och dess AEM integrering](/help/sites-administering/campaign.md).
 
 ## Skapa en lista för nyhetsbrevet {#creating-a-list-for-the-newsletter}
 
@@ -41,9 +44,9 @@ I följande exempel visas ett exempel på en lista:
 
 ## Skapa ett anmälningsformulär {#create-a-sign-up-form}
 
-Skapa ett registreringsformulär för nyhetsbrev där användarna kan prenumerera på taggar. Exempelwebbplatsen Geometrixx innehåller en nyhetsbrevsida i Geometrixx-verktygsfältet där du kan skapa formuläret.
+Skapa ett registreringsformulär för nyhetsbrev där användarna kan prenumerera på taggar. Exempelwebbplatsen för Geometrixx innehåller en nyhetsbrevsida i verktygsfältet Geometrixx där du kan skapa ditt formulär.
 
-Om du vill skapa ett eget nyhetsbrevformulär läser du information om hur du skapar formulär i [formulärdokumentationen](/help/sites-authoring/default-components.md#form). Nyhetsbrevet använder taggarna från taggbiblioteket. Mer information om hur du lägger till ytterligare taggar finns i [Tagghantering](/help/sites-authoring/tags.md#tagadministration).
+Om du vill skapa ett eget nyhetsbrevformulär läser du i informationen om hur du skapar formulär i [Forms-dokumentationen](/help/sites-authoring/default-components.md#form). Nyhetsbrevet använder taggarna från taggbiblioteket. Mer information om hur du lägger till ytterligare taggar finns i [Tagghantering](/help/sites-authoring/tags.md#tagadministration).
 
 De dolda fälten i följande exempel anger den minsta mängden information (e-post). Du kan dessutom lägga till fler fält senare, men detta påverkar konverteringsgraden.
 
@@ -63,7 +66,7 @@ Följande exempel är ett formulär som skapats på http://localhost:4502/cf#/co
 
 ## Skapa en tacksida {#creating-a-thank-you-page}
 
-När användare klickar på **Prenumerera nu** vill du att en Tack-sida ska öppnas automatiskt. Skapa sidan Tack på sidan Nyhetsbrev om Geometrixx. När du har skapat nyhetsbrevformuläret redigerar du formulärelementet och lägger till sökvägen på tacksidan.
+När användare klickar på **Prenumerera nu** vill du att en Tack-sida ska öppnas automatiskt. Skapa sidan Tack på sidan Geometrixx Newsletter. När du har skapat nyhetsbrevformuläret redigerar du formulärelementet och lägger till sökvägen på tacksidan.
 
 Om du skickar begäran kommer användaren till en **Tack** -sida där han/hon får ett e-postmeddelande. Denna tacksida skapades på /content/geometrixx/en/toolbar/newsletter/thanks_you.
 
