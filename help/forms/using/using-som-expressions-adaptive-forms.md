@@ -9,13 +9,16 @@ topic-tags: develop
 discoiquuid: 7dff7ef2-80d1-434a-b9b0-ac6654736602
 translation-type: tm+mt
 source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+workflow-type: tm+mt
+source-wordcount: '346'
+ht-degree: 0%
 
 ---
 
 
 # Använda SOM-uttryck i adaptiva former {#using-som-expressions-in-adaptive-forms}
 
-Anpassningsbara formulär modelleras som AEM Page, som representeras som JCR-innehållsstruktur i AEM-databasen. Nyckelelementet i innehållsstrukturen är noden guideContainer. Under guideContainer finns det rootPanel som kan innehålla kapslade paneler och fält.
+Anpassade formulär modelleras som AEM sida, som representeras som JCR-innehållsstruktur i AEM. Nyckelelementet i innehållsstrukturen är noden guideContainer. Under guideContainer finns det rootPanel som kan innehålla kapslade paneler och fält.
 
 Du kan använda en skriptobjektmodell (SOM) för att referera till värden, egenskaper och metoder i en viss dokumentobjektmodell (DOM). En DOM organiserar minnesobjekt och egenskaper i en trädhierarki. A SOM expression references Fields/Draw elements and panels.
 
