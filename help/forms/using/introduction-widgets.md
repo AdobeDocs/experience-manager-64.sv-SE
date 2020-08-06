@@ -1,8 +1,8 @@
 ---
 title: Utseenderamverk för adaptiva formulär och HTML5-formulär
 seo-title: Utseenderamverk för adaptiva formulär och HTML5-formulär
-description: 'Mobilformulär återger formulärmallar som HTML5-formulär. Dessa formulär använder jQuery-, Backbone.js- och Underscore.js-filer för utseendet och för att aktivera skript. '
-seo-description: 'Mobilformulär återger formulärmallar som HTML5-formulär. Dessa formulär använder jQuery-, Backbone.js- och Underscore.js-filer för utseendet och för att aktivera skript. '
+description: 'Mobile Forms återger formulärmallar som HTML5-formulär. Dessa formulär använder jQuery-, Backbone.js- och Underscore.js-filer för utseendet och för att aktivera skript. '
+seo-description: 'Mobile Forms återger formulärmallar som HTML5-formulär. Dessa formulär använder jQuery-, Backbone.js- och Underscore.js-filer för utseendet och för att aktivera skript. '
 uuid: 183b8d71-44fc-47bf-8cb2-1cf920ffd23a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,13 +10,16 @@ topic-tags: customization
 discoiquuid: 3c2a44a7-24e7-49ee-bf18-eab0e44efa42
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '1200'
+ht-degree: 2%
 
 ---
 
 
 # Utseenderamverk för adaptiva formulär och HTML5-formulär {#appearance-framework-for-adaptive-and-html-forms}
 
-I formulär (adaptiva formulär och HTML5-formulär) används biblioteken [jQuery](https://jquery.com/), [Backbone.js](https://backbonejs.org/) och [Underscore.js](https://underscorejs.org/) för utseende och skript. Formulären använder också [jQuery-gränssnittets](https://jqueryui.com/) **widgetarkitektur** för alla interaktiva element (till exempel fält och knappar) i formuläret. Med den här arkitekturen kan formulärutvecklare använda en mängd tillgängliga jQuery-widgetar och plugin-program i Forms. Du kan också implementera formulärspecifik logik samtidigt som du hämtar in data från användare som leadDigits/trailDigits-restriktioner eller implementerar bildklausuler. Formulärutvecklare kan skapa och använda anpassade utseenden för att förbättra datainhämtningen och göra den mer användarvänlig.
+Forms (adaptiva formulär och HTML5-formulär) använder [jQuery](https://jquery.com/)-, [Backbone.js](https://backbonejs.org/) - och [Underscore.js](https://underscorejs.org/) -bibliotek för utseende och skript. Formulären använder också [jQuery-gränssnittets](https://jqueryui.com/) **widgetarkitektur** för alla interaktiva element (till exempel fält och knappar) i formuläret. Med den här arkitekturen kan formulärutvecklare använda en mängd tillgängliga jQuery-widgetar och plugin-program i Forms. Du kan också implementera formulärspecifik logik samtidigt som du hämtar in data från användare som leadDigits/trailDigits-begränsningar eller implementerar bildklausuler. Formulärutvecklare kan skapa och använda anpassade utseenden för att förbättra datainhämtningen och göra den mer användarvänlig.
 
 Den här artikeln är avsedd för utvecklare med tillräcklig kunskap om jQuery- och jQuery-widgetar. Den ger insikt i utseenderamverket och gör det möjligt för utvecklare att skapa ett alternativt utseende för ett formulärfält.
 
@@ -50,7 +53,7 @@ Här följer de angivna globala alternativen. Dessa alternativ är tillgängliga
   </tr>
   <tr>
    <td>screenReaderText</td> 
-   <td>Skärmläsare använder det här värdet för att lägga till en berättarinformation om fältet. Formuläret innehåller värdet och du kan åsidosätta värdet.<br /> </td> 
+   <td>Skärm Reader använder det här värdet för att lägga till en berättarinformation om fältet. Formuläret innehåller värdet och du kan åsidosätta värdet.<br /> </td> 
   </tr>
   <tr>
    <td>tabIndex</td> 
@@ -216,7 +219,7 @@ Alla anpassade widgetar ska följa ovanstående specifikationer. Om du vill anv�
    <td>Lägger till ett objekt i listan.</td> 
   </tr>
   <tr>
-   <td>deleteItem<em>: function(nIndex)<br /> nIndex: index för det objekt som ska tas bort från listan<br /> </em><br /><br /> </td> 
+   <td>deleteItem<em>: function(nIndex)<br /> nIndex: index för det objekt som ska tas bort från listan<br /> </em><br /> <br /> </td> 
    <td>Tar bort ett alternativ från listan.</td> 
   </tr>
   <tr>
