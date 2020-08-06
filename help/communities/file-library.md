@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: cdcae09f-c3cb-471e-863f-b33130e9df0f
 translation-type: tm+mt
 source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+workflow-type: tm+mt
+source-wordcount: '619'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +22,11 @@ source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
 
 ## Introduktion {#introduction}
 
-Funktionen för filbibliotek är en plats där besökare på den inloggade webbplatsen (community-medlemmar) kan överföra, hantera och hämta filer inom communitywebbplatsen.
+Filbiblioteksfunktionen är en plats där besökare på den inloggade webbplatsen (community-medlemmar) kan överföra, hantera och hämta filer inom communitywebbplatsen.
 
 Detta avsnitt i dokumentationen beskriver
 
-* Lägga till filbiblioteksfunktionen på en AEM-webbplats
+* Lägga till filbiblioteksfunktionen på en AEM
 * Konfigurationsinställningar för `File Library` komponenten
 
 ## Lägga till ett filbibliotek på en sida {#adding-a-file-library-to-a-page}
@@ -48,55 +51,80 @@ Markera den monterade `File Library` komponent som du vill öppna och välj den 
 
 ### Fliken Kommentarer {#comments-tab}
 
-Under fliken **[!UICONTROL Kommentarer]** anger du om och hur kommentarer för överförda filer ska visas:
+Under **[!UICONTROL Comments]** fliken anger du om och hur kommentarer för överförda filer ska visas:
 
-* **[!UICONTROL Tillåt kommentarer om filer]** Om det här alternativet är markerat tillåts kommentarer om överförda filer. Standard är avmarkerat.
+* **[!UICONTROL Allow Comments on Files]**
+Om det här alternativet är markerat tillåts kommentarer för överförda filer. Standard är avmarkerat.
 
-* **[!UICONTROL Kommentarer per sida]** Begränsar antalet kommentarer som visas per sida samt antalet svar som visas. Standardvärdet är **10**.
+* **[!UICONTROL Comments Per Page]**
+Begränsar antalet kommentarer som visas per sida samt antalet svar som visas. Standard är 
+**10**.
 
-* **[!UICONTROL Maximal filstorlek]** Det här värdet begränsar storleken på den överförda filen. Standardgränsen är 104857600 (10 MB).
+* **[!UICONTROL Max File Size]**
+Det här värdet begränsar storleken på den överförda filen. Standardgränsen är 104857600 (10 MB).
 
-* **[!UICONTROL Maximal meddelandelängd]** Maximalt antal tecken som kan anges i textrutan. Standardvärdet är 4 096 tecken.
+* **[!UICONTROL Max Message Length]**
+Maximalt antal tecken som kan anges i textrutan. Standardvärdet är 4 096 tecken.
 
-* **[!UICONTROL Tillåtna filtyper]** En kommaavgränsad lista över filtillägg med avgränsaren &quot;punkt&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte den som inte anges. Ingen standard har angetts så att alla filtyper tillåts.
+* **[!UICONTROL Allowed File Types]**
+En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte den som inte anges. Ingen standard har angetts så att alla filtyper tillåts.
 
-* **[!UICONTROL RTF-redigerare]** Om det här alternativet är markerat kan kommentarerna infogas med kod. Standard är avmarkerat.
+* **[!UICONTROL Rich Text Editor]**
+Om det här alternativet är markerat kan kommentarer skrivas in med markeringar. Standard är avmarkerat.
 
-* **[!UICONTROL Ta bort kommentarer]** Om det här alternativet är markerat kan användarna ta bort sina egna kommentarer. Standard är markerat.
+* **[!UICONTROL Delete Comments]**
+Om det här alternativet är markerat kan användarna ta bort sina egna kommentarer. Standard är markerat.
 
-* **[!UICONTROL Tillåt taggning]** Om det här alternativet är markerat aktiveras möjligheten att lägga till en tagg i filen. Standard är avmarkerat.
+* **[!UICONTROL Allow Tagging]**
+Om du markerar det här alternativet aktiveras möjligheten att lägga till en tagg i filen. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåtna namnutrymmen]** Om Tillåt taggning är markerat begränsas de tillgängliga taggarna till de namnutrymmen som är markerade. Om inga är markerade tillåts alla. Standard är alla namnutrymmen.
+* **[!UICONTROL Allowed Namespaces]**
+Om Tillåt taggning är markerat begränsas de tillgängliga taggarna till de namnutrymmen som är markerade. Om inga är markerade tillåts alla. Standard är alla namnutrymmen.
 
-* **[!UICONTROL Förslagsgräns]** Om Tillåt taggning är markerat begränsas det antal föreslagna taggar som visas med den här inställningen. Om värdet är -1 finns det ingen gräns. Standardvärdet är -1.
+* **[!UICONTROL Suggestion Limit]**
+Om Tillåt taggning är markerat begränsas det antal föreslagna taggar som ska visas med den här inställningen. Om värdet är -1 finns det ingen gräns. Standardvärdet är -1.
 
-* **[!UICONTROL Tillåt röstning]** Om det här alternativet är markerat aktiveras möjligheten att rösta för en fil. Standard är avmarkerat.
+* **[!UICONTROL Allow Voting]**
+Om det här alternativet är markerat aktiveras möjligheten att rösta efter en fil. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt följande]** om det är markerat inkluderar du följande funktion för bloggartiklar, som gör att medlemmar kan [meddelas](notifications.md) om nya inlägg. Standard är avmarkerat.
+* **[!UICONTROL Allow Following]**
+Om det här alternativet är markerat kan du inkludera följande funktion för bloggartiklar, som gör att medlemmar kan [meddelas](notifications.md) om nya inlägg. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt kopplade svar]** Om det här alternativet är markerat tillåter du svar på bokförda kommentarer. Standard är avmarkerat.
+* **[!UICONTROL Allow Threaded Replies]**
+Om det här alternativet är markerat tillåts svar på publicerade kommentarer. Standard är avmarkerat.
 
 ### Fliken Användarmoderering {#user-moderation-tab}
 
-Konfigurera moderering av kommentarer under fliken **[!UICONTROL Användarmoderering]** , om kommentarer tillåts:
+Konfigurera moderering av kommentarer under **[!UICONTROL User Moderation]** fliken, om kommentarer tillåts:
 
-* **[!UICONTROL Förhandsmoderering]** Om det här alternativet är markerat måste kommentarerna godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
+* **[!UICONTROL Pre-Moderation]**
+Om det här alternativet är markerat måste kommentarerna godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
 
-* **[!UICONTROL Ta bort kommentarer]** Om det här alternativet är markerat kan den besökare som publicerade kommentaren ta bort den. Standard är markerat.
+* **[!UICONTROL Delete Comments]**
+Om det här alternativet är markerat kan den besökare som publicerade kommentaren ta bort den. Standard är markerat.
 
-* **[!UICONTROL Neka kommentarer]** Om det här alternativet är markerat tillåter du pålitliga medlemsmoderatorer att neka kommentarer. Standard är avmarkerat.
+* **[!UICONTROL Deny Comments]**
+Om det här alternativet är markerat tillåter du att pålitliga medlemsmoderatorer nekar kommentarer. Standard är avmarkerat.
 
-* **[!UICONTROL Stäng/öppna kommentarer]** igen Om det här alternativet är markerat tillåter du pålitliga medlemsmoderatorer att stänga och öppna kommentarer igen. Standard är avmarkerat.
+* **[!UICONTROL Close / Reopen Comments]**
+Om det här alternativet är markerat kan du tillåta att pålitliga medlemsmoderatorer stänger och öppnar kommentarer igen. Standard är avmarkerat.
 
-* **[!UICONTROL Flagga kommentarer]** Om det är markerat kan besökarna flagga kommentarer som olämpliga. Standard är avmarkerat.
+* **[!UICONTROL Flag Comments]**
+Om det här alternativet är markerat kan besökarna flagga kommentarer som olämpliga. Standard är avmarkerat.
 
-* **[!UICONTROL Flaggorsakslista]** Om det här alternativet är markerat kan besökare välja, från en nedrullningsbar lista, orsaken till att en kommentar flaggas som olämplig. Standard är avmarkerat.
+* **[!UICONTROL Flag Reason List]**
+Om det här alternativet är markerat kan besökare välja, från en nedrullningsbar lista, orsaken till att en kommentar flaggas som olämplig. Standard är avmarkerat.
 
-* **[!UICONTROL Anledning]** till anpassad flagga Om den är markerad kan besökarna ange en egen orsak till att en kommentar flaggas som olämplig. Standard är avmarkerat.
+* **[!UICONTROL Custom Flag Reason]**
+Om det här alternativet är markerat kan besökarna ange en egen orsak till att en kommentar flaggas som olämplig. Standard är avmarkerat.
 
-* **[!UICONTROL Moderationströskel]** Ange hur många gånger en kommentar måste flaggas av besökare innan moderatorerna meddelas. Standard är en gång (**1**).
+* **[!UICONTROL Moderation Threshold]**
+Ange hur många gånger en kommentar måste flaggas av besökare innan moderatorerna meddelas. Standard är en gång (
+**1**).
 
-* **[!UICONTROL Flaggningsgräns]** Ange hur många gånger en kommentar måste flaggas innan den döljs i den offentliga vyn. Talet måste vara större än eller lika med **modereringströskeln**. Standardvärdet är 5.
+* **[!UICONTROL Flagging Limit]**
+Ange hur många gånger en kommentar måste flaggas innan den döljs för den offentliga vyn. Talet måste vara större än eller lika med 
+**Modereringströskel**. Standardvärdet är 5.
 
 ## Additional Information {#additional-information}
 
