@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: 3f06f7a1-bdf0-4700-8a7f-1d73151893ba
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '4620'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Förutom övergången till Oak i AEM 6 har några stora förändringar gjorts i 
 
 I den här artikeln beskrivs när du ska skapa index och när de inte behövs, hur du undviker att använda frågor när de inte är nödvändiga och hur du optimerar index och frågor så att de fungerar så optimalt som möjligt.
 
-Läs även [Eak-dokumentationen om hur du skriver frågor och index](/help/sites-deploying/queries-and-indexing.md). Förutom att index är ett nytt koncept i AEM 6 finns det syntaktiska skillnader i Oak-frågor som måste beaktas när kod migreras från en tidigare AEM-installation.
+Läs även [Eak-dokumentationen om hur du skriver frågor och index](/help/sites-deploying/queries-and-indexing.md). Förutom att index är ett nytt koncept i AEM 6 finns det syntaktiska skillnader i Oak-frågor som måste beaktas när du migrerar kod från en tidigare AEM.
 
 ## När frågor ska användas {#when-to-use-queries}
 
@@ -35,7 +38,7 @@ När du utformar en taxonomi är det dessutom viktigt att tänka på om det är 
 
 ### Frågor i komponenter {#queries-in-components}
 
-Eftersom frågor kan vara en av de mer beskattningsbara åtgärder som utförs i ett AEM-system är det bra att undvika dem i dina komponenter. Om flera frågor körs varje gång en sida återges kan det ofta försämra systemets prestanda. Det finns två strategier som du kan använda för att undvika att köra frågor när du återger komponenter: **gå igenom noder** och **förhämta resultat**.
+Eftersom frågor kan vara en av de mer beskattningsbara åtgärder som utförs i ett AEM är det bra att undvika dem i dina komponenter. Om flera frågor körs varje gång en sida återges kan det ofta försämra systemets prestanda. Det finns två strategier som du kan använda för att undvika att köra frågor när du återger komponenter: **gå igenom noder** och **förhämta resultat**.
 
 #### Går igenom noder {#traversing-nodes}
 
@@ -73,7 +76,7 @@ När du kör en fråga som inte använder ett index, loggas varningar om nodgeno
 
 När du kör komplexa frågor kan det finnas fall där frågan delas upp i flera mindre frågor och data kopplas till kod efter att uppgiften har blivit mer presterande. Rekommendationen för dessa fall är att jämföra prestandan för de två metoderna för att avgöra vilket alternativ som är bäst för det aktuella användningsfallet.
 
-Med AEM kan du skriva frågor på ett av tre sätt:
+AEM tillåter skrivfrågor på ett av tre sätt:
 
 * Via [QueryBuilder-API:er](/help/sites-developing/querybuilder-api.md) (rekommenderas)
 * Använda XPath (rekommenderas)
@@ -123,7 +126,7 @@ Ange låga tröskelvärden för `oak.queryLimitInMemory` (t.ex. 10000) och ek. `
 
 Detta hjälper till att undvika resurskrävande frågor (t.ex. som inte backas upp av något index eller backas upp av mindre täckande index). En fråga som till exempel läser 1 miljon noder skulle leda till ökad I/O och negativt påverka programmets totala prestanda. Alla frågor som misslyckas på grund av att gränserna överskrids bör analyseras och optimeras.
 
-#### **Efter distribution**{#post-deployment}
+#### **Efter distribution** {#post-deployment}
 
 * Övervaka loggarna för frågor som utlöser genomgång av stora noder eller stor minnesförbrukning i stackar: &quot;
 
@@ -135,7 +138,7 @@ Detta hjälper till att undvika resurskrävande frågor (t.ex. som inte backas u
    * `*WARN* ... java.lang.UnsupportedOperationException: The query read more than 500000 nodes in memory. To avoid running out of memory, processing was stopped`
    * Optimera frågan för att minska heap-minnesanvändningen
 
-För AEM 6.0-6.2-versioner kan du justera tröskelvärdet för nodgenomgång via JVM-parametrar i AEM-startskriptet för att förhindra att stora frågor överbelastar miljön.
+I AEM 6.0-6.2 kan du justera tröskelvärdet för nodgenomgång via JVM-parametrar i AEM startskript för att förhindra att stora frågor överbelastar miljön.
 
 Rekommenderade värden är:
 
@@ -158,7 +161,7 @@ Dessutom är index bara användbara om de data som finns i indexet är unika nog
 
 ### Lucene eller Property Indexes? {#lucene-or-property-indexes}
 
-Lucene-index introducerades i Oak 1.0.9 och erbjuder några kraftfulla optimeringar av egenskapsindexen som introducerades vid den första starten av AEM 6. När du bestämmer dig för att använda Lucene-index eller egenskapsindex ska du ta hänsyn till följande:
+Lucene-index introducerades i Oak 1.0.9 och erbjuder några kraftfulla optimeringar av egenskapsindexen som introducerades i den första starten av AEM 6. När du bestämmer dig för att använda Lucene-index eller egenskapsindex ska du ta hänsyn till följande:
 
 * Lucene-index har många fler funktioner än egenskapsindex. Ett egenskapsindex kan till exempel bara indexera en enda egenskap, medan ett Lucene-index kan innehålla många. Mer information om alla funktioner som finns i Lucene-index finns i [dokumentationen](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
 * Lucene-index är asynkrona. Detta ger en avsevärd prestandaökning men kan även medföra en fördröjning mellan när data skrivs till databasen och när indexet uppdateras. Om det är viktigt att frågorna returnerar 100 % korrekta resultat krävs ett egenskapsindex.
@@ -168,17 +171,17 @@ Vanligtvis rekommenderar vi att du använder Lucene-index, såvida det inte finn
 
 ### Solr-indexering {#solr-indexing}
 
-AEM har även stöd för Solr-indexering som standard. Detta används främst för att stödja textsökning, men det kan också användas för att stödja alla typer av JCR-frågor. Solr bör beaktas när AEM-instanserna inte har processorkapacitet att hantera antalet frågor som krävs vid sökintensiva distributioner, som sökdrivna webbplatser med ett stort antal samtidiga användare. Solr kan också implementeras i en crawlningsbaserad metod för att utnyttja några av de mer avancerade funktionerna i plattformen.
+AEM har även stöd för Solr-indexering som standard. Detta används främst för att stödja textsökning, men det kan också användas för att stödja alla typer av JCR-frågor. Solr bör beaktas när AEM inte har processorkapacitet att hantera antalet frågor som krävs vid sökintensiva distributioner, som sökdrivna webbplatser med ett stort antal samtidiga användare. Solr kan också implementeras i en crawlningsbaserad metod för att utnyttja några av de mer avancerade funktionerna i plattformen.
 
-Solr-index kan konfigureras för att köras inbäddade på AEM-servern för utvecklingsmiljöer eller avlastas till en fjärrinstans för att förbättra sökskalbarheten i produktions- och stagningsmiljöer. När du avlastar sökningen kommer skalbarheten att förbättras, och därför rekommenderas inte fördröjning om det inte krävs. Mer information om hur du konfigurerar Solr-integrering och hur du skapar Solr-index finns i dokumentationen [för](/help/sites-deploying/queries-and-indexing.md#the-solr-index)Oak Queries och Indexing.
+Solr-index kan konfigureras för att köras inbäddade på AEM server för utvecklingsmiljöer eller avlastas till en fjärrinstans för att förbättra sökskalbarheten i produktions- och stagningsmiljöer. När du avlastar sökningen kommer skalbarheten att förbättras, och därför rekommenderas inte fördröjning om det inte krävs. Mer information om hur du konfigurerar Solr-integrering och hur du skapar Solr-index finns i dokumentationen [för](/help/sites-deploying/queries-and-indexing.md#the-solr-index)Oak Queries och Indexing.
 
 >[!NOTE]
 >
 >När du använder den integrerade Solr-sökmetoden kan du avlasta indexering till en Solr-server. Om de mer avancerade funktionerna i Solr-servern används via en crawlningsbaserad metod krävs ytterligare konfigurationsarbete. Headwire har skapat en anslutning [med](https://www.aemsolrsearch.com/#/) öppen källkod som snabbar upp dessa typer av implementeringar.
 
-Nackdelen med det här tillvägagångssättet är att AEM-frågor som standard respekterar åtkomstkontrollistor och därmed döljer resultat som en användare inte har tillgång till, men att externalisera sökningar till en Solr-server saknar stöd för den här funktionen. Om sökningen ska göras externt på det här sättet måste man se till att användarna inte får resultat som de inte ska se.
+Nackdelen med det här tillvägagångssättet är att även om AEM frågor som standard respekterar åtkomstkontrollistor och därmed döljer resultat som en användare inte har tillgång till, så kommer inte den här funktionen att stödjas genom extern sökning till en Solr-server. Om sökningen ska göras externt på det här sättet måste man se till att användarna inte får resultat som de inte ska se.
 
-Potentiella användningsfall där denna metod kan vara lämplig är fall där sökdata från flera källor kan behöva sammanställas. Du kan till exempel ha en webbplats som ligger hos AEM samt en annan webbplats som ligger hos en tredjepartsplattform. Solr kunde konfigureras för att crawla innehållet på båda webbplatserna och lagra dem i ett aggregerat index. Detta skulle möjliggöra sökningar mellan webbplatser.
+Potentiella användningsfall där denna metod kan vara lämplig är fall där sökdata från flera källor kan behöva sammanställas. Du kan till exempel ha en webbplats som finns på AEM samt en annan webbplats som finns på en tredjepartsplattform. Solr kunde konfigureras för att crawla innehållet på båda webbplatserna och lagra dem i ett aggregerat index. Detta skulle möjliggöra sökningar mellan webbplatser.
 
 ### Design Considerations {#design-considerations}
 
@@ -215,7 +218,7 @@ När du tar bort ett index för en MongoDB-instans är borttagningskostnaden pro
 
 I det här avsnittet beskrivs de **enda** godtagbara skälen att indexera om ekindexvärden.
 
-Utanför de orsaker som anges nedan kommer initiering av omindexering av Oak-index **inte** att ändra beteendet eller lösa problem och öka belastningen på AEM i onödan.
+Utanför de orsaker som anges nedan ändras **inte** beteendet eller problemen, och belastningen på AEM ökar i onödan om omindex av Oak-index inleds.
 
 Omindexering av index för eke ska undvikas såvida inte detta omfattas av en motivering i tabellen nedan.
 
@@ -226,6 +229,7 @@ Omindexering av index för eke ska undvikas såvida inte detta omfattas av en mo
 >* frågan är korrekt
 >* frågan löses till det förväntade indexvärdet (med [Förklara fråga](/help/sites-administering/operations-dashboard.md#diagnosis-tools))
 >* indexeringsprocessen har slutförts
+
 >
 
 
@@ -234,7 +238,7 @@ Omindexering av index för eke ska undvikas såvida inte detta omfattas av en mo
 
 Det enda acceptabla felskrivningsvillkoret för omindexering av ekindexeringar är om konfigurationen av ett ekindexvärde har ändrats.
 
-*Omindexering bör alltid ske med vederbörlig hänsyn tagen till hur den påverkar AEM:s totala prestanda och utföras under perioder med låg aktivitet eller underhållsperioder.*
+*Omindexering bör alltid ske med vederbörlig hänsyn till hur den påverkar AEM övergripande prestanda och utföras under perioder med låg aktivitet eller underhållsperioder.*
 
 Här följer information om möjliga problem tillsammans med lösningar:
 
@@ -303,7 +307,7 @@ Här följer information om möjliga problem tillsammans med lösningar:
 
 I följande tabell beskrivs den enda godtagbara felsökningen och exceptionella situationer där omindexering av ekindexeringar löser problemet.
 
-Om ett problem uppstår med AEM som inte uppfyller villkoren nedan, ska du **inte** indexera om några index eftersom problemet inte kan lösas.
+Om ett problem uppstår med AEM som inte uppfyller villkoren som beskrivs nedan, ska du **inte** indexera om några index, eftersom problemet då inte kan lösas.
 
 Här följer information om möjliga problem tillsammans med lösningar:
 
@@ -386,7 +390,7 @@ Här följer information om möjliga problem tillsammans med lösningar:
 
 * Indexera om egenskapsindexet asynkront med webbkonsolen via **PropertyIndexAsyncReindex** MBean;
 
-    till exempel
+   till exempel
 
    [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DPropertyIndexAsyncReindex](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DPropertyIndexAsyncReindex)
 
@@ -399,7 +403,7 @@ Här följer information om möjliga problem tillsammans med lösningar:
 
 >[!NOTE]
 >
->I det föregående avsnittet sammanfattas och bildrutas riktlinjerna för omindexering av eken från dokumentationen [för](https://jackrabbit.apache.org/oak/docs/query/indexing.html#reindexing) Apache Oak i samband med AEM.
+>I det föregående avsnittet sammanfattas och bildrutas riktlinjerna för omindexering av eken från dokumentationen [för](https://jackrabbit.apache.org/oak/docs/query/indexing.html#reindexing) Apache Oak i AEM.
 
 ### Textförextrahering av binärfiler {#text-pre-extraction-of-binaries}
 
@@ -414,11 +418,11 @@ Textförextrahering är processen att extrahera och bearbeta text från binärfi
 
 Indexera om ett **befintligt** lucene-index med binär extrahering aktiverad
 
-* Omindexering av **allt** innehåll i databasen. när binärfilerna som ska extraheras är många eller komplexa, läggs en ökad arbetsbörda vid extraheringen av fulltext på AEM. Textextrahering flyttar det&quot;beräkningsmässigt kostsamma arbetet&quot; med textredigering till en isolerad process som direkt öppnar AEM:s datalager, och undviker problem med overhead och resurser i AEM.
+* Omindexering av **allt** innehåll i databasen. om de binärfiler som ska extraheras är många eller komplexa, läggs en större beräkningsbörda på AEM. Textförextrahering flyttar det&quot;beräkningsmässigt kostsamma arbetet&quot; med textredigering till en isolerad process som har direkt åtkomst AEM datalagret och undviker problem med overhead och resurser i AEM.
 
-Stöd för driftsättning av ett **nytt** lucene-index till AEM med binär extrahering aktiverad
+Stöd för driftsättning av ett **nytt** lucene-index för AEM med binär extrahering aktiverad
 
-* När ett nytt index (med binär extrahering aktiverad) distribueras till AEM indexeras automatiskt allt kandidatinnehåll vid nästa asynkrona fulltextindexkörning. Av samma skäl som beskrivs i omindexering ovan kan detta resultera i en onödig belastning på AEM.
+* När ett nytt index (med binär extrahering aktiverad) distribueras till AEM indexeras automatiskt allt kandidatinnehåll vid nästa asynkrona fulltextindexkörning. Av samma skäl som beskrivs i omindexering ovan kan detta leda till onödig belastning på AEM.
 
 #### När kan förextrahering av text INTE användas? {#when-can-text-pre-extraction-not-be-used}
 
@@ -426,7 +430,7 @@ Textförextrahering kan inte användas för nytt innehåll som läggs till i dat
 
 Nytt innehåll läggs till i databasen naturligt och inkrementellt efter den asynkrona fulltextindexeringsprocessen (som standard var femte sekund).
 
-Under normal drift av AEM, till exempel när Assets överförs via webbgränssnittet eller programmatisk import av Assets, indexeras det nya binära innehållet automatiskt och stegvis i heltext. Eftersom datamängden är inkrementell och relativt liten (ungefär den datamängd som kan sparas i databasen på 5 sekunder) kan AEM utföra fulltextextraheringen från binärfilerna under indexeringen utan att påverka den övergripande systemprestandan.
+Vid normal AEM, till exempel överföring av resurser via webbgränssnittet eller programmatisk import av resurser, indexeras det nya binära innehållet automatiskt och stegvis i heltextindexet av AEM. Eftersom datamängden är inkrementell och relativt liten (ungefär den datamängd som kan sparas i databasen på 5 sekunder) kan AEM utföra fulltextextraheringen från binärfilerna under indexeringen utan att påverka den övergripande systemprestandan.
 
 #### Förutsättningar för att använda förextrahering av text {#prerequisites-to-using-text-pre-extraction}
 
@@ -435,9 +439,9 @@ Under normal drift av AEM, till exempel när Assets överförs via webbgränssni
 * Ett underhållsfönster för att generera CSV-filen OCH för att utföra den slutliga omindexeringen
 * Oak-version: 1.0.18+, 1.2.3+
 * [oak-run.](https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-run/)jarversion 1.7.4+
-* En mapp/resurs i filsystemet för att lagra extraherad text som är tillgänglig från indexerade AEM-instanser
+* En mapp/resurs i filsystemet för att lagra extraherad text som är tillgänglig från indexeringsinstansen/AEM
 
-   * OSGi-konfigurationen för förextrahering av text kräver en filsystemsökväg till de extraherade textfilerna, så de måste vara tillgängliga direkt från AEM-instansen (lokal enhet eller filresursmontering)
+   * OSGi-konfigurationen för förextrahering av text kräver en filsystemsökväg till de extraherade textfilerna, så de måste vara tillgängliga direkt från AEM (lokal enhet eller filresursmontering)
 
 #### Så här utför du förextrahering av text {#how-to-perform-text-pre-extraction}
 
@@ -461,17 +465,17 @@ Observera att hela nodarkivet gås igenom (enligt sökvägarna i ekrun-kommandot
 
 **Extrahera text i filsystemet**
 
-*Steg 2(a-c) kan utföras under en normal åtgärd av AEM om det bara interagerar med datalagret.*
+*Steg 2(a-c) kan utföras under normal AEM om det bara interagerar med datalagret.*
 
-2a. Execute `oak-run.jar --tika` to pre-extract text for the binary nodes enumerated in the CSV file generated in (1b)
+2a. Kör `oak-run.jar --tika` för att extrahera text för binära noder som räknas upp i CSV-filen som genereras i (1b)
 
 2b. Den process som initieras i (2a) får direkt åtkomst till binära noder som definieras i CSV-filen i datalagret och extraherar text.
 
 2c.  Extraherad text lagras i ett filsystem i ett format som kan användas i omindexeringsprocessen för eken (3a)
 
-Förextraherad text identifieras i CSV-filen av det binära fingeravtrycket. Om den binära filen är densamma kan samma extraherade text användas i alla AEM-instanser. Eftersom AEM Publish vanligtvis är en deluppsättning av AEM Author kan den förextraherade texten från AEM Author ofta användas för att indexera om AEM Publish även (förutsatt att AEM Publish har tillgång till de extraherade textfilerna i filsystemet).
+Förextraherad text identifieras i CSV-filen av det binära fingeravtrycket. Om den binära filen är densamma kan samma extraherade text användas i alla AEM. Eftersom AEM Publish vanligtvis är en deluppsättning av AEM Author kan den förextraherade texten från AEM Author ofta användas för att indexera om AEM Publish även (förutsatt att AEM Publish har tillgång till de extraherade textfilerna i filsystemet).
 
-Förutextraherad text kan läggas till i efterhand. Extrahering av text hoppar över extrahering för tidigare extraherade binärfiler, så det är bäst att behålla den extraherade texten om omindexering måste ske igen i framtiden (förutsatt att det extraherade innehållet inte är oöverkomligt stort). Om den är det, bör du utvärdera om innehållet i mellanrummet ska zippa, eftersom texten komprimeras väl).
+Förutextraherad text kan läggas till i efterhand. Extrahering av text hoppar över extrahering för tidigare extraherade binärfiler, så det är bäst att behålla den extraherade texten om omindexering måste ske igen i framtiden (förutsatt att det extraherade innehållet inte är oöverkomligt stort). Om så är fallet bör du utvärdera hur innehållet ska komprimeras eftersom texten komprimeras väl).
 
 **Indexera om offlineindex, hämta fulltext från extraherade textfiler**
 
