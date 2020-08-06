@@ -86,10 +86,12 @@ På författaren, för att komma åt lagringskonsolen:
       *Standard*: *&lt;blank>*
    * **[!UICONTROL Solr URL]**
 Den URL som används för att kommunicera med Solr i fristående läge.
-Lämna tomt om du kör i SolrCloud-läge.\
+Lämna tomt om du kör i SolrCloud-läge.
+\
       *Standard*: https://127.0.0.1:8983/solr/
    * **[!UICONTROL Solr Collection]**
-Solr-samlingens namn.\
+Solr-samlingens namn.
+\
       *Standard*: collection1
 * Välj **[!UICONTROL Submit]**
 
@@ -217,7 +219,7 @@ Information om hur du konfigurerar MSRP för en demonstration- eller utvecklings
 
 Kontrollera att MSRP har konfigurerats som standardprovider genom att kontrollera konfigurationen av lagringsalternativet. Som standard är lagringsresursprovidern JSRP.
 
-Gå till konsolen [för](srp-config.md) lagringskonfiguration eller kontrollera AEM-databasen på alla författare och publicera AEM-instanser:
+Gå till konsolen [för](srp-config.md) lagringskonfiguration eller kontrollera den AEM databasen för alla författare och AEM:
 
 * I JCR, if [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
@@ -226,13 +228,13 @@ Gå till konsolen [för](srp-config.md) lagringskonfiguration eller kontrollera 
 
 ### UGC försvinner efter uppgradering {#ugc-disappears-after-upgrade}
 
-Om du uppgraderar från en befintlig AEM Communities 6.0-plats måste eventuell befintlig UGC konverteras så att den överensstämmer med den struktur som krävs för [SRP](srp.md) API efter uppgradering till AEM Communities 6.3.
+Om du uppgraderar från en befintlig AEM Communities 6.0-webbplats måste eventuell befintlig UGC konverteras så att den överensstämmer med den struktur som krävs för [SRP](srp.md) API efter uppgradering till AEM Communities 6.3.
 
 Det finns ett verktyg med öppen källkod tillgängligt på GitHub för detta ändamål:
 
 * [AEM Communities UGC-migreringsverktyg](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
 
-Migreringsverktyget kan anpassas för att exportera UGC från tidigare versioner av AEM-sociala communities för import till AEM Communities 6.1 eller senare.
+Migreringsverktyget kan anpassas för att exportera UGC från tidigare versioner av AEM sociala communities för import till AEM Communities 6.1 eller senare.
 
 ### Fel - odefinierad fältprovider_id {#error-undefined-field-provider-id}
 
@@ -258,8 +260,8 @@ Om du vill åtgärda felet måste du se till att du följer instruktionerna för
 Om ett försök att skapa en säker anslutning till MongoDB-servern misslyckas på grund av att en klassdefinition saknas, är det nödvändigt att uppdatera MongoDB-drivrutinspaketet, `mongo-java-driver`som är tillgängligt från den offentliga maven-databasen.
 
 1. Hämta drivrutinen från [https://search.maven.org/#artifactdetails%7Corg.mongodb%7Cmongo-java-driver%7C2.13.2%7Cjar](https://search.maven.org/#artifactdetails%7Corg.mongodb%7Cmongo-java-driver%7C2.13.2%7Cjar) (version 2.13.2 eller senare)
-1. Kopiera paketet till mappen&quot;crx-quickstart/install&quot; för en AEM-instans
-1. Starta om AEM-instansen
+1. Kopiera paketet till mappen &quot;crx-quickstart/install&quot; för en AEM instans
+1. Starta om AEM
 
 ## Resurser {#resources}
 
