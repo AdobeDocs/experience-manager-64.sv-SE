@@ -35,7 +35,7 @@ Du kan utföra följande uppgifter med krypteringstjänsten:
 
    >[!NOTE]
    >
-   >Mer information om krypteringstjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+   >Mer information om krypteringstjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Kryptera PDF-dokument med ett lösenord {#encrypting-pdf-documents-with-a-password}
 
@@ -43,11 +43,11 @@ När du krypterar ett PDF-dokument med ett lösenord måste användaren ange lö
 
 >[!NOTE]
 >
->Om du överför ett krypterat PDF-dokument till AEM Forms-databasen kan det inte dekryptera PDF-dokumentet och extrahera XDP-innehållet. Du bör inte kryptera ett dokument innan du skickar det till AEM Forms-databasen. (Se [Skriva resurser](/help/forms/developing/aem-forms-repository.md#writing-resources).)
+>Om du överför ett krypterat PDF-dokument till AEM Forms-databasen kan det inte dekryptera PDF-dokumentet och extrahera XDP-innehållet. Vi rekommenderar att du inte krypterar ett dokument innan du överför det till AEM Forms-databasen. (Se [Skriva resurser](/help/forms/developing/aem-forms-repository.md#writing-resources).)
 
 >[!NOTE]
 >
->Mer information om krypteringstjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om krypteringstjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -69,8 +69,8 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
+* adobe-utilities.jar (krävs om AEM Forms används i JBoss)
+* jbossall-client.jar (krävs om AEM Forms används i JBoss)
 
 **Skapa ett API-objekt för krypteringsklient**
 
@@ -82,7 +82,7 @@ Du måste få ett okrypterat PDF-dokument för att kunna kryptera dokumentet med
 
 **Ange alternativ för kryptering vid körning**
 
-Om du vill kryptera ett PDF-dokument med ett lösenord anger du fyra värden, inklusive två lösenordsvärden. Det första lösenordsvärdet används för att kryptera PDF-dokumentet och måste anges när PDF-dokumentet öppnas. Det andra lösenordsvärdet, som heter huvudlösenordsvärdet, används för att ta bort kryptering från PDF-dokumentet. Lösenordsvärdena är skiftlägeskänsliga och dessa två lösenordsvärden kan inte vara samma.
+Om du vill kryptera ett PDF-dokument med ett lösenord anger du fyra värden, inklusive två lösenordsvärden. Det första lösenordsvärdet används för att kryptera PDF-dokumentet och måste anges när PDF-dokumentet öppnas. Det andra lösenordsvärdet, som heter överordnad lösenord, används för att ta bort kryptering från PDF-dokumentet. Lösenordsvärdena är skiftlägeskänsliga och dessa två lösenordsvärden kan inte vara samma.
 
 Du måste ange vilka PDF-dokumentresurser som ska krypteras. Du kan kryptera hela PDF-dokumentet, allt utom dokumentets metadata eller bara dokumentets bilagor. Om du bara krypterar dokumentets bilagor uppmanas användaren att ange ett lösenord när de försöker få åtkomst till de bifogade filerna.
 
@@ -141,9 +141,9 @@ Kryptera ett PDF-dokument med ett lösenord med hjälp av krypterings-API (Java)
    * Ange vilka PDF-dokumentresurser som ska krypteras genom att anropa `PasswordEncryptionOptionSpec` objektets `setEncryptOption` metod och skicka ett `PasswordEncryptionOption` uppräkningsvärde som anger vilka dokumentresurser som ska krypteras. Om du till exempel vill kryptera hela PDF-dokumentet, inklusive dess metadata och bilagor, anger du `PasswordEncryptionOption.ALL`.
    * Skapa ett `java.util.List` objekt som lagrar krypteringsbehörigheterna med hjälp av `ArrayList` konstruktorn.
    * Ange en behörighet genom att anropa `java.util.List` objektets `add` metod och skicka ett uppräkningsvärde som motsvarar den behörighet som du vill ange. Om du till exempel vill ange den behörighet som gör att en användare kan kopiera data som finns i PDF-dokumentet, anger du `PasswordEncryptionPermission.PASSWORD_EDIT_COPY`. (Upprepa det här steget för varje behörighet att ange).
-   * Ange kompatibilitetsalternativet för Acrobat genom att anropa `PasswordEncryptionOptionSpec` objektets `setCompatability` metod och skicka ett uppräkningsvärde som anger Acrobats kompatibilitetsnivå. Du kan till exempel ange `PasswordEncryptionCompatability.ACRO_7`.
+   * Ange kompatibilitetsalternativet för Acrobat genom att anropa `PasswordEncryptionOptionSpec` objektets `setCompatability` metod och skicka ett uppräkningsvärde som anger kompatibilitetsnivån för Acrobat. Du kan till exempel ange `PasswordEncryptionCompatability.ACRO_7`.
    * Ange det lösenordsvärde som gör att en användare kan öppna det krypterade PDF-dokumentet genom att anropa `PasswordEncryptionOptionSpec` objektets `setDocumentOpenPassword` metod och skicka ett strängvärde som representerar det öppna lösenordet.
-   * Ange det huvudlösenordsvärde som gör att en användare kan ta bort kryptering från PDF-dokumentet genom att anropa `PasswordEncryptionOptionSpec` objektets `setPermissionPassword` metod och skicka ett strängvärde som representerar huvudlösenordet.
+   * Ange det överordnad lösenordsvärde som gör att en användare kan ta bort kryptering från PDF-dokumentet genom att anropa `PasswordEncryptionOptionSpec` objektets `setPermissionPassword` metod och skicka ett strängvärde som representerar det överordnad lösenordet.
 
 1. Lägg till lösenordet.
 
@@ -151,6 +151,7 @@ Kryptera ett PDF-dokument med ett lösenord med hjälp av krypterings-API (Java)
 
    * Det objekt `com.adobe.idp.Document` som innehåller PDF-dokumentet som ska krypteras med lösenordet.
    * Det objekt `PasswordEncryptionOptionSpec` som innehåller alternativ för kryptering vid körning.
+
    Metoden returnerar `encryptPDFUsingPassword` ett `com.adobe.idp.Document` objekt som innehåller ett lösenordskrypterat PDF-dokument.
 
 1. Spara det krypterade PDF-dokumentet som en PDF-fil.
@@ -188,7 +189,7 @@ Kryptera ett PDF-dokument med ett lösenord med hjälp av krypterings-API:t (web
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `EncryptionServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -205,9 +206,9 @@ Kryptera ett PDF-dokument med ett lösenord med hjälp av krypterings-API:t (web
 
    * Skapa ett `PasswordEncryptionOptionSpec` objekt med hjälp av dess konstruktor.
    * Ange vilka PDF-dokumentresurser som ska krypteras genom att tilldela ett `PasswordEncryptionOption` uppräkningsvärde till `PasswordEncryptionOptionSpec` objektets `encryptOption` datamedlem. Om du vill kryptera hela PDF-filen, inklusive dess metadata och bilagor, tilldelar du `PasswordEncryptionOption.ALL` den här datamedlemmen.
-   * Ange kompatibilitetsalternativet för Acrobat genom att tilldela ett `PasswordEncryptionCompatability` uppräkningsvärde till `PasswordEncryptionOptionSpec` objektets `compatability` datamedlem. Tilldela till exempel `PasswordEncryptionCompatability.ACRO_7` den här datamedlemmen.
+   * Ange kompatibilitetsalternativet Acrobat genom att tilldela ett `PasswordEncryptionCompatability` uppräkningsvärde till `PasswordEncryptionOptionSpec` objektets `compatability` datamedlem. Tilldela till exempel `PasswordEncryptionCompatability.ACRO_7` den här datamedlemmen.
    * Ange det lösenordsvärde som gör att en användare kan öppna det krypterade PDF-dokumentet genom att tilldela ett strängvärde som representerar det öppna lösenordet till `PasswordEncryptionOptionSpec` objektets `documentOpenPassword` datamedlem.
-   * Ange det lösenordsvärde som gör att en användare kan ta bort kryptering från PDF-dokumentet genom att tilldela ett strängvärde som representerar huvudlösenordet till `PasswordEncryptionOptionSpec` objektets `permissionPassword` datamedlem.
+   * Ange det lösenordsvärde som gör att en användare kan ta bort kryptering från PDF-dokumentet genom att tilldela ett strängvärde som representerar det överordnad lösenordet till `PasswordEncryptionOptionSpec` objektets `permissionPassword` datamedlem.
 
 1. Lägg till lösenordet.
 
@@ -215,6 +216,7 @@ Kryptera ett PDF-dokument med ett lösenord med hjälp av krypterings-API:t (web
 
    * Det objekt `BLOB` som innehåller PDF-dokumentet som ska krypteras med lösenordet.
    * Det objekt `PasswordEncryptionOptionSpec` som innehåller alternativ för kryptering vid körning.
+
    Metoden returnerar `encryptPDFUsingPassword` ett `BLOB` objekt som innehåller ett lösenordskrypterat PDF-dokument.
 
 1. Spara det krypterade PDF-dokumentet som en PDF-fil.
@@ -228,9 +230,9 @@ Kryptera ett PDF-dokument med ett lösenord med hjälp av krypterings-API:t (web
 
 [Sammanfattning av steg](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Kryptera PDF-dokument med certifikat {#encrypting-pdf-documents-with-certificates}
 
@@ -245,7 +247,7 @@ Ett certifikat för offentlig nyckel innehåller en användares offentliga nycke
 
 >[!NOTE]
 >
->Om du överför ett krypterat PDF-dokument till AEM Forms-databasen kan det inte dekryptera PDF-dokumentet och extrahera XDP-innehållet. Du bör inte kryptera ett dokument innan du skickar det till AEM Forms-databasen. (Se [Skriva resurser](/help/forms/developing/aem-forms-repository.md#writing-resources).)
+>Om du överför ett krypterat PDF-dokument till AEM Forms-databasen kan det inte dekryptera PDF-dokumentet och extrahera XDP-innehållet. Vi rekommenderar att du inte krypterar ett dokument innan du överför det till AEM Forms-databasen. (Se [Skriva resurser](/help/forms/developing/aem-forms-repository.md#writing-resources).)
 
 >[!NOTE]
 >
@@ -253,7 +255,7 @@ Ett certifikat för offentlig nyckel innehåller en användares offentliga nycke
 
 >[!NOTE]
 >
->Mer information om krypteringstjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om krypteringstjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-1}
 
@@ -276,8 +278,8 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss Application Server)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss Application Server)
+* adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
+* jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
 **Skapa ett API-objekt för krypteringsklient**
 
@@ -355,7 +357,7 @@ Kryptera ett PDF-dokument med ett certifikat med hjälp av krypterings-API (Java
 
    * Skapa ett `CertificateEncryptionOptionSpec` objekt genom att anropa dess konstruktor.
    * Ange vilka PDF-dokumentresurser som ska krypteras genom att anropa `CertificateEncryptionOptionSpec` objektets `setOption` metod och skicka ett `CertificateEncryptionOption` uppräkningsvärde som anger vilka dokumentresurser som ska krypteras. Om du till exempel vill kryptera hela PDF-dokumentet, inklusive dess metadata och bilagor, anger du `CertificateEncryptionOption.ALL`.
-   * Ange kompatibilitetsalternativet för Acrobat genom att anropa `CertificateEncryptionOptionSpec` objektets `setCompat` metod och skicka ett `CertificateEncryptionCompatibility` uppräkningsvärde som anger Acrobats kompatibilitetsnivå. Du kan till exempel ange `CertificateEncryptionCompatibility.ACRO_7`.
+   * Ange kompatibilitetsalternativet för Acrobat genom att anropa `CertificateEncryptionOptionSpec` objektets `setCompat` metod och skicka ett `CertificateEncryptionCompatibility` uppräkningsvärde som anger kompatibilitetsnivån för Acrobat. Du kan till exempel ange `CertificateEncryptionCompatibility.ACRO_7`.
 
 1. Skapa ett certifikatkrypterat PDF-dokument.
 
@@ -364,6 +366,7 @@ Kryptera ett PDF-dokument med ett certifikat med hjälp av krypterings-API (Java
    * Det `com.adobe.idp.Document` objekt som innehåller det PDF-dokument som ska krypteras.
    * Objektet `java.util.List` som lagrar certifikatinformation.
    * Det objekt `CertificateEncryptionOptionSpec` som innehåller alternativ för kryptering vid körning.
+
    Metoden returnerar `encryptPDFUsingCertificates` ett `com.adobe.idp.Document` objekt som innehåller ett certifikatkrypterat PDF-dokument.
 
 1. Spara det krypterade PDF-dokumentet som en PDF-fil.
@@ -401,7 +404,7 @@ Kryptera ett PDF-dokument med ett certifikat med hjälp av krypterings-API:t (we
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `EncryptionServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -431,7 +434,7 @@ Kryptera ett PDF-dokument med ett certifikat med hjälp av krypterings-API:t (we
 
    * Skapa ett `CertificateEncryptionOptionSpec` objekt med hjälp av dess konstruktor.
    * Ange vilka PDF-dokumentresurser som ska krypteras genom att tilldela ett `CertificateEncryptionOption` uppräkningsvärde till `CertificateEncryptionOptionSpec` objektets `option` datamedlem. Om du vill kryptera hela PDF-dokumentet, inklusive dess metadata och bilagor, tilldelar du `CertificateEncryptionOption.ALL` den här datamedlemmen.
-   * Ange kompatibilitetsalternativet för Acrobat genom att tilldela ett `CertificateEncryptionCompatibility` uppräkningsvärde till `CertificateEncryptionOptionSpec` objektets `compat` datamedlem. Tilldela till exempel `CertificateEncryptionCompatibility.ACRO_7` den här datamedlemmen.
+   * Ange kompatibilitetsalternativet Acrobat genom att tilldela ett `CertificateEncryptionCompatibility` uppräkningsvärde till `CertificateEncryptionOptionSpec` objektets `compat` datamedlem. Tilldela till exempel `CertificateEncryptionCompatibility.ACRO_7` den här datamedlemmen.
 
 1. Skapa ett certifikatkrypterat PDF-dokument.
 
@@ -440,6 +443,7 @@ Kryptera ett PDF-dokument med ett certifikat med hjälp av krypterings-API:t (we
    * Det `BLOB` objekt som innehåller det PDF-dokument som ska krypteras.
    * Arrayen `Object` som lagrar certifikatinformation.
    * Det objekt `CertificateEncryptionOptionSpec` som innehåller alternativ för kryptering vid körning.
+
    Metoden returnerar `encryptPDFUsingCertificates` ett `BLOB` objekt som innehåller ett certifikatkrypterat PDF-dokument.
 
 1. Spara det krypterade PDF-dokumentet som en PDF-fil.
@@ -453,9 +457,9 @@ Kryptera ett PDF-dokument med ett certifikat med hjälp av krypterings-API:t (we
 
 [Sammanfattning av steg](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Tar bort certifikatbaserad kryptering {#removing-certificate-based-encryption}
 
@@ -463,7 +467,7 @@ Certifikatbaserad kryptering kan tas bort från ett PDF-dokument så att använd
 
 >[!NOTE]
 >
->Mer information om krypteringstjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om krypteringstjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-2}
 
@@ -484,8 +488,8 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss Application Server)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss Application Server)
+* adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
+* jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
 **Skapa en krypteringstjänstklient**
 
@@ -543,6 +547,7 @@ Ta bort certifikatbaserad kryptering från ett PDF-dokument med krypterings-API 
 
    * Det `com.adobe.idp.Document` objekt som innehåller det krypterade PDF-dokumentet.
    * Ett strängvärde som anger aliasnamnet för den privata nyckel som motsvarar nyckeln som används för att kryptera PDFf-dokumentet.
+
    Metoden `removePDFCertificateSecurity` returnerar ett `com.adobe.idp.Document` objekt som innehåller ett oskyddat PDF-dokument.
 
 1. Spara PDF-dokumentet.
@@ -580,7 +585,7 @@ Ta bort certifikatbaserad kryptering med hjälp av krypterings-API:t (webbtjäns
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `EncryptionServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -599,6 +604,7 @@ Ta bort certifikatbaserad kryptering med hjälp av krypterings-API:t (webbtjäns
 
    * Det objekt `BLOB` som innehåller filströmsdata som representerar ett krypterat PDF-dokument.
    * Ett strängvärde som anger aliasnamnet för den offentliga nyckeln som motsvarar den privata nyckel som används för att kryptera PDFf-dokumentet.
+
    Metoden `removePDFCredentialSecurity` returnerar ett `BLOB` objekt som innehåller ett oskyddat PDF-dokument.
 
 1. Spara PDF-dokumentet.
@@ -612,17 +618,17 @@ Ta bort certifikatbaserad kryptering med hjälp av krypterings-API:t (webbtjäns
 
 [Sammanfattning av steg](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Tar bort lösenordskryptering {#removing-password-encryption}
 
-Lösenordsbaserad kryptering kan tas bort från ett PDF-dokument så att användarna kan öppna PDF-dokumentet i Adobe Reader eller Acrobat utan att behöva ange något lösenord. När lösenordsbaserad kryptering har tagits bort från ett PDF-dokument är dokumentet inte längre säkert.
+Lösenordsbaserad kryptering kan tas bort från ett PDF-dokument så att användare kan öppna PDF-dokumentet i Adobe Reader eller Acrobat utan att behöva ange något lösenord. När lösenordsbaserad kryptering har tagits bort från ett PDF-dokument är dokumentet inte längre säkert.
 
 >[!NOTE]
 >
->Mer information om krypteringstjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om krypteringstjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-3}
 
@@ -643,8 +649,8 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
+* adobe-utilities.jar (krävs om AEM Forms används i JBoss)
+* jbossall-client.jar (krävs om AEM Forms används i JBoss)
 
 **Skapa en krypteringstjänstklient**
 
@@ -656,7 +662,7 @@ Du måste få ett krypterat PDF-dokument för att kunna ta bort lösenordsbasera
 
 **Ta bort lösenordet**
 
-Om du vill ta bort lösenordsbaserad kryptering från ett krypterat PDF-dokument måste du ha både ett krypterat PDF-dokument och ett huvudlösenordsvärde som används för att ta bort kryptering från PDF-dokumentet. Lösenordet som används för att öppna ett lösenordskrypterat PDF-dokument kan inte användas för att ta bort kryptering. Ett huvudlösenord anges när PDF-dokumentet krypteras med ett lösenord. (Se [Kryptera PDF-dokument med ett lösenord](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password).)
+Om du vill ta bort lösenordsbaserad kryptering från ett krypterat PDF-dokument måste du ha både ett krypterat PDF-dokument och ett överordnad lösenordsvärde som används för att ta bort kryptering från PDF-dokumentet. Lösenordet som används för att öppna ett lösenordskrypterat PDF-dokument kan inte användas för att ta bort kryptering. Ett överordnad lösenord anges när PDF-dokumentet krypteras med ett lösenord. (Se [Kryptera PDF-dokument med ett lösenord](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password).)
 
 **Spara PDF-dokumentet**
 
@@ -695,7 +701,8 @@ Ta bort lösenordsbaserad kryptering från ett PDF-dokument med krypterings-API 
    Ta bort lösenordsbaserad kryptering från PDF-dokumentet genom att anropa `EncryptionServiceClient` objektets `removePDFPasswordSecurity` metod och skicka följande värden:
 
    * Ett `com.adobe.idp.Document` objekt som innehåller det krypterade PDF-dokumentet.
-   * Ett strängvärde som anger det huvudlösenordsvärde som används för att ta bort kryptering från PDF-dokumentet.
+   * Ett strängvärde som anger det överordnad lösenordsvärdet som används för att ta bort kryptering från PDF-dokumentet.
+
    Metoden `removePDFPasswordSecurity` returnerar ett `com.adobe.idp.Document` objekt som innehåller ett oskyddat PDF-dokument.
 
 1. Spara PDF-dokumentet.
@@ -727,7 +734,7 @@ Ta bort lösenordsbaserad kryptering med hjälp av krypterings-API:t (webbtjäns
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `EncryptionServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -746,6 +753,7 @@ Ta bort lösenordsbaserad kryptering med hjälp av krypterings-API:t (webbtjäns
 
    * Det objekt `BLOB` som innehåller filströmsdata som representerar ett krypterat PDF-dokument.
    * Ett strängvärde som anger det lösenordsvärde som används för att ta bort kryptering från PDF-dokumentet. Det här värdet anges när PDF-dokumentet krypteras med ett lösenord.
+
    Metoden `removePDFPasswordSecurity` returnerar ett `BLOB` objekt som innehåller ett oskyddat PDF-dokument.
 
 1. Spara PDF-dokumentet.
@@ -757,17 +765,17 @@ Ta bort lösenordsbaserad kryptering med hjälp av krypterings-API:t (webbtjäns
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Låsa upp krypterade PDF-dokument {#unlocking-encrypted-pdf-documents}
 
-Ett lösenordskrypterat eller certifikatkrypterat PDF-dokument måste låsas upp innan en annan AEM Forms-åtgärd kan utföras på det. Om du försöker utföra en åtgärd på ett krypterat PDF-dokument genereras ett undantag. När du har låst upp ett krypterat PDF-dokument kan du utföra en eller flera åtgärder på det. Dessa åtgärder kan tillhöra andra tjänster, till exempel Acrobat Reader DC-tilläggstjänsten.
+Ett lösenordskrypterat eller certifikatkrypterat PDF-dokument måste låsas upp innan en annan AEM Forms-åtgärd kan utföras på det. Om du försöker utföra en åtgärd på ett krypterat PDF-dokument genereras ett undantag. När du har låst upp ett krypterat PDF-dokument kan du utföra en eller flera åtgärder på det. De här åtgärderna kan tillhöra andra tjänster, till exempel Acrobat Reader DC-tilläggstjänsten.
 
 >[!NOTE]
 >
->Mer information om krypteringstjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om krypteringstjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-4}
 
@@ -788,8 +796,8 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss Application Server)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss Application Server)
+* adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
+* jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
 **Skapa en krypteringstjänstklient**
 
@@ -847,10 +855,12 @@ Lås upp ett krypterat PDF-dokument med krypterings-API (Java):
 
    * Ett `com.adobe.idp.Document` objekt som innehåller det lösenordskrypterade PDF-dokumentet.
    * Ett strängvärde som anger det lösenordsvärde som används för att öppna ett lösenordskrypterat PDF-dokument. Det här värdet anges när PDF-dokumentet krypteras med ett lösenord.
+
    Om du vill låsa upp ett PDF-dokument som är krypterat med ett certifikat anropar du `unlockPDFUsingCredential` metoden och skickar följande värden:
 
    * Ett `com.adobe.idp.Document` objekt som innehåller det certifikatkrypterade PDF-dokumentet.
    * Ett strängvärde som anger aliasnamnet för den offentliga nyckeln som motsvarar den privata nyckel som används för att kryptera PDF-dokumentet.
+
    Metoderna `unlockPDFUsingPassword` och `unlockPDFUsingCredential` returnerar båda ett `com.adobe.idp.Document` objekt som du skickar till en annan AEM Forms Java-metod för att utföra en åtgärd.
 
 1. Utför en AEM Forms-åtgärd.
@@ -889,7 +899,7 @@ Lås upp ett krypterat PDF-dokument med krypterings-API:t (webbtjänsten):
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `EncryptionServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -910,10 +920,12 @@ Lås upp ett krypterat PDF-dokument med krypterings-API:t (webbtjänsten):
 
    * Ett `BLOB` objekt som innehåller det lösenordskrypterade PDF-dokumentet.
    * Ett strängvärde som anger det lösenordsvärde som används för att öppna ett lösenordskrypterat PDF-dokument. Det här värdet anges när PDF-dokumentet krypteras med ett lösenord.
+
    Om du vill låsa upp ett PDF-dokument som är krypterat med ett certifikat anropar du `unlockPDFUsingCredential` metoden och skickar följande värden:
 
    * Ett `BLOB` objekt som innehåller det certifikatkrypterade PDF-dokumentet.
    * Ett strängvärde som anger aliasnamnet för den offentliga nyckeln som motsvarar den privata nyckel som används för att kryptera PDFf-dokumentet.
+
    Metoderna `unlockPDFUsingPassword` och `unlockPDFUsingCredential` returnerar båda ett `com.adobe.idp.Document` objekt som du skickar till en annan AEM Forms-metod för att utföra en åtgärd.
 
 1. Utför en AEM Forms-åtgärd.
@@ -924,24 +936,24 @@ Lås upp ett krypterat PDF-dokument med krypterings-API:t (webbtjänsten):
 
 [Sammanfattning av steg](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Bestämmer krypteringstyp {#determining-encryption-type}
 
-Du kan programmatiskt avgöra vilken typ av kryptering som skyddar ett PDF-dokument med hjälp av Java-krypteringstjänstens API eller webbtjänstens krypteringstjänsts API. Ibland är det nödvändigt att dynamiskt avgöra om ett PDF-dokument är krypterat och i så fall krypteringstypen. Du kan till exempel avgöra om ett PDF-dokument är skyddat med lösenordsbaserad kryptering eller en Rights Management-profil.
+Du kan programmatiskt avgöra vilken typ av kryptering som skyddar ett PDF-dokument med hjälp av Java-krypteringstjänstens API eller webbtjänstens krypteringstjänsts API. Ibland är det nödvändigt att dynamiskt avgöra om ett PDF-dokument är krypterat och i så fall krypteringstypen. Du kan t.ex. avgöra om ett PDF-dokument är lösenordsbaserat eller om en Rights Management-profil är skyddad.
 
 Ett PDF-dokument kan skyddas med följande krypteringstyper:
 
 * Lösenordsbaserad kryptering
 * Certifikatbaserad kryptering
-* En profil som skapas av Rights Management-tjänsten
+* En policy som skapas av tjänsten Rights Management
 * En annan typ av kryptering
 
 >[!NOTE]
 >
->Mer information om krypteringstjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om krypteringstjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-5}
 
@@ -961,8 +973,8 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss Application Server)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss Application Server)
+* adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
+* jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
 **Skapa en tjänstklient**
 
@@ -1043,7 +1055,7 @@ Bestäm vilken typ av kryptering som skyddar ett PDF-dokument med hjälp av kryp
    * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `EncryptionServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -1065,6 +1077,6 @@ Bestäm vilken typ av kryptering som skyddar ett PDF-dokument med hjälp av kryp
 
 [Sammanfattning av steg](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
