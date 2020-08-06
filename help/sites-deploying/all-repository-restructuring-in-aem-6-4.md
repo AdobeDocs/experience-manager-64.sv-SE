@@ -1,8 +1,8 @@
 ---
-title: Omstrukturering av gemensamma lager i AEM 6.4
-seo-title: Omstrukturering av gemensamma lager i AEM 6.4
-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 som är gemensamma för alla AEM-områden.
-seo-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 som är gemensamma för alla AEM-områden.
+title: Omstrukturering av de gemensamma tillgångarna i AEM 6.4
+seo-title: Omstrukturering av de gemensamma tillgångarna i AEM 6.4
+description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 som är gemensamma för alla AEM.
+seo-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 som är gemensamma för alla AEM.
 uuid: a4bb64e5-387b-4084-9258-54e68db12f3b
 contentOwner: chaikels
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# Omstrukturering av gemensamma lager i AEM 6.4{#common-repository-restructuring-in-aem}
+# Omstrukturering av de gemensamma tillgångarna i AEM 6.4{#common-repository-restructuring-in-aem}
 
 Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som eventuellt kan påverka alla lösningar. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
 
@@ -33,15 +33,15 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
 **Före 6.5-uppgradering**
 
 * [ContextHub-konfigurationer](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#contexthub-configurations)
-* [Designer för klassiska molntjänster](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#classic-cloud-services-designs)
+* [Designer för klassiska Cloud Services](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#classic-cloud-services-designs)
 * [Designer för klassiska instrumentpaneler](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#classic-dashboards-designs)
 * [Designer för klassiska rapporter](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#classic-reports-designs)
 * [Standarddesigner](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#default-designs)
 * [Adobe DTM JavaScript-slutpunkt](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#adobe-dtm-javascript-endpoint)
-* [Adobe DTM Web-Hook Endpoint](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#adobe-dtm-web-hook-endpoint)
+* [Adobe DTM-webbhook-slutpunkt](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#adobe-dtm-web-hook-endpoint)
 * [Inkorgsuppgifter](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#inbox-tasks)
 * [Designkonfigurationer för hantering av flera webbplatser](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#multi-site-manager-blueprint-configurations)
-* [Gadgetkonfigurationer för AEM Projects Dashboard](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#aem-projects-dashboard-gadget-configurations)
+* [Konfigurationer för instrumentpanelswidgetar för AEM projekt](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#aem-projects-dashboard-gadget-configurations)
 * [E-postmall för replikeringsmeddelande](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#replication-notification-e-mail-template)
 * [Taggar](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#tags)
 * [Cloud Services för översättning](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#translation-cloud-services)
@@ -49,7 +49,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
 * [Översättningsregler](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#translation-rules)
 * [Klientbibliotek för översättningswidget](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#translation-widget-client-library)
 * [Webbkonsol för träaktivering](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#tree-activation-web-console)
-* [Molntjänster för leverantörskonverteringsanslutning](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#vendor-translation-connector-cloud-services)
+* [Cloud Services för leverantörsöversättningens koppling](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#vendor-translation-connector-cloud-services)
 * [E-postmallar för arbetsflödesmeddelanden](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#workflow-notification-email-templates)
 
 ## Med 6.4-uppgradering {#with-upgrade}
@@ -86,9 +86,9 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
    <td><strong>Omstruktureringsvägledning</strong></td> 
    <td><p>Alla nya eller ändrade arbetsflödesmodeller måste migreras till /conf/global/workflow/models.</p> 
     <ol> 
-     <li>Distribuera de ändrade arbetsflödesmodellerna till en lokal AEM 6.4-utvecklingsinstans, så att de finns på platsen Previous.</li> 
-     <li>Redigera arbetsflödesmodellen med AEM:s arbetsflödesmodellredigerare på AEM &gt; Verktyg &gt; Arbetsflöde &gt; Modeller.</li> 
-     <li>Vid migrering av ändrade arbetsflödesmodeller som tillhandahålls av AEM
+     <li>Distribuera de ändrade arbetsflödesmodellerna till en lokal AEM 6.4-utvecklingsinstans, så att de finns på platsen Föregående.</li> 
+     <li>Redigera arbetsflödesmodellen med AEM Workflow Model Editor på AEM &gt; Verktyg &gt; Arbetsflöde &gt; Modeller.</li> 
+     <li>Vid migrering av AEM medföljande arbetsflödesmodeller
       <ol> 
        <li>När modellredigeraren för arbetsflöde är öppen ändrar du webbläsarens adress-URL och ersätter sökvägssegmentet /libs/settings/workflow/models med /etc/workflow/models.
         <ul> 
@@ -97,7 +97,7 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
       </ol> </li> 
      <li>Aktivera redigeringsläget i arbetsflödesmodellredigeraren, som kopierar arbetsflödesmodelldefinitionen till /conf/global/workflow/models.</li> 
      <li>Tryck på knappen Synkronisera för att synkronisera ändringarna till arbetsflödesmodellen för körning under /var/workflow/models.</li> 
-     <li>Exportera både arbetsflödesmodellen (/conf/global/workflow/models/&lt;workflow-model&gt;) och körningsarbetsflödesmodellen (/var/workflow/models/&lt;workflow-model&gt;) och integrera i AEM-projektet.
+     <li>Exportera både arbetsflödesmodellen (/conf/global/workflow/models/&lt;workflow-model&gt;) och körningsarbetsflödesmodellen (/var/workflow/models/&lt;workflow-model&gt;) och integrera i AEM.
       <ol> 
        <li>Exportera till exempel:
         <ul> 
@@ -114,7 +114,7 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
      <li><code>/conf/global/settings/workflow/models</code></li> 
      <li><code>/libs/settings/workflow/models</code></li> 
      <li><code>/etc/workflow/models</code></li> 
-    </ol> <p>Alla anpassningar av arbetsflödesmodeller som tillhandahålls av AEM och som finns kvar på platsen Föregående måste flyttas till /conf/global/settings/workflow/models om de ska behållas, annars ersätts de av definitionen av arbetsflödesmodellen som tillhandahålls av AEM i /libs/settings/workflow/models.</p> </td> 
+    </ol> <p>Alla anpassningar av AEM arbetsflödesmodeller som finns kvar på platsen Föregående måste flyttas till /conf/global/settings/workflow/models om de ska behållas, annars ersätts de av den AEM arbetsflödesmodelldefinitionen i /libs/settings/workflow/models.</p> </td> 
   </tr>
  </tbody>
 </table>
@@ -139,7 +139,7 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
    <td><strong>Anteckningar</strong></td> 
    <td>Alla explicita sökvägsreferenser i <code>
      custom
-    </code> koden till den föregående platsen bör också ta hänsyn till den nya platsen. Vi rekommenderar att koden ändras så att den använder API:erna för AEM-arbetsflöden.</td> 
+    </code> koden till den föregående platsen bör också ta hänsyn till den nya platsen. Vi rekommenderar att koden ändras så att den använder API:erna för AEM arbetsflöde.</td> 
   </tr>
  </tbody>
 </table>
@@ -170,7 +170,7 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
      <li><code>/conf/global/settings/workflow/launcher</code></li> 
      <li><code>/libs/settings/workflow/launcher</code></li> 
      <li><code>/etc/workflow/launcher</code></li> 
-    </ol> <p>Alla anpassningar av AEM-tillhandahållna Workflow Launcher som finns kvar på platsen Previous måste flyttas till den nya platsen (<code>/conf/global/settings/workflow/launcher</code> om de ska behållas, i annat fall ersätts de av AEM-tillhandahållna Workflow Launcher-definitionen i <code>/libs/settings/workflow/launcher</code>.</p> </td> 
+    </ol> <p>Alla anpassningar av AEM Workflow Launcher som finns kvar på platsen Previous måste flyttas till den nya platsen (<code>/conf/global/settings/workflow/launcher</code> om de ska behållas, annars ersätts de av den AEM arbetsflödesstartdefinitionen i <code>/libs/settings/workflow/launcher</code>.</p> </td> 
   </tr>
  </tbody>
 </table>
@@ -200,9 +200,9 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
-   <td><p>När AEM 6.4 SP1 släpps kommer den att ske så att omstruktureringen kan skjutas upp till 6.5 <code>
+   <td><p>AEM 6.4 SP1, när den släpps, gör detta så att omstruktureringen kan skjutas upp till 6.5 <code>
       upgrade
-     </code>.</p> <p>Om du uppgraderar till AEM 6.4 innan AEM 6.4 SP1 släpps bör denna omstrukturering utföras som en del av uppgraderingsprojektet. Om du inte gör det kommer redigering och sparande av arbetsflödessteg som refererar till skript på den föregående platsen att ta bort skriptreferensen för arbetsflöde från arbetsflödessteget helt och hållet, och endast arbetsflödesskript på nya platser kommer att vara tillgängliga i listrutan för skriptval.</p> </td> 
+     </code>.</p> <p>Om man uppgraderar till AEM 6.4 innan AEM 6.4 SP1 släpps bör denna omstrukturering genomföras som en del av uppgraderingsprojektet. Om du inte gör det kommer redigering och sparande av arbetsflödessteg som refererar till skript på den föregående platsen att ta bort skriptreferensen för arbetsflöde från arbetsflödessteget helt och hållet, och endast arbetsflödesskript på nya platser kommer att vara tillgängliga i listrutan för skriptval.</p> </td> 
   </tr>
  </tbody>
 </table>
@@ -226,11 +226,11 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
    <td><p>Alla nya eller ändrade ContextHub-konfigurationer måste migreras till den nya platsen och de refererande AEM Sites-sidorna måste uppdateras för att återspegla den nya platsen.</p> 
     <ol> 
      <li>Kopiera nya eller ändrade ContextHub-konfigurationer från föregående plats till den nya platsen.</li> 
-     <li>Associera de tillämpliga AEM-konfigurationerna med AEM-innehållshierarkierna.
+     <li>Associera de tillämpliga AEM med AEM innehållshierarkier.
       <ol> 
-       <li><strong>AEM Sites-sidhierarkier via AEM Sites &gt; Page Properties &gt; Advanced Tab &gt; Cloud Configuration</strong>.</li> 
+       <li><strong>AEM Sites sidhierarkier via AEM Sites &gt; Sida &gt; Sidegenskaper &gt; fliken Avancerat &gt; Molnkonfiguration</strong>.</li> 
       </ol> </li> 
-     <li>Avassociera migrerade äldre ContextHub-konfigurationer från de tidigare AEM-innehållshierarkierna.</li> 
+     <li>Avassociera migrerade äldre ContextHub-konfigurationer från de tidigare AEM innehållshierarkierna.</li> 
     </ol> </td> 
   </tr>
   <tr>
@@ -240,7 +240,7 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
  </tbody>
 </table>
 
-### Designer för klassiska molntjänster {#classic-cloud-services-designs}
+### Designer för klassiska Cloud Services {#classic-cloud-services-designs}
 
 <table> 
  <tbody>
@@ -265,7 +265,7 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
         designPath
        </code></span> -egenskap.</li> 
      <li>Uppdatera alla sidor som refererar till föregående plats så att den nya kategorin Klientbibliotek används (detta kräver uppdatering av koden för sidimplementering).</li> 
-     <li>Uppdatera AEM Dispatcher-reglerna så att du kan visa klientbibliotek via /etc.clientlibs/.. proxyserver.</li> 
+     <li>Uppdatera AEM Dispatcher-regler så att klientbibliotek kan visas via /etc.clientlibs/.. proxyserver.</li> 
     </ol> <p>För alla designer som INTE hanterats i SCM och som ändrats under körning via designdialogrutor.</p> 
     <ul> 
      <li>Flytta inte bort redigerbara designer <code>/etc</code>.</li> 
@@ -303,7 +303,7 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
        designPath
       </code> -egenskap.</li> 
      <li>Uppdatera alla sidor som refererar till föregående plats så att den nya kategorin Klientbibliotek används (detta kräver uppdatering av koden för sidimplementering).</li> 
-     <li>Uppdatera AEM Dispatcher-reglerna så att du kan visa klientbibliotek via /etc.clientlibs/.. proxyserver.</li> 
+     <li>Uppdatera AEM Dispatcher-regler så att klientbibliotek kan visas via /etc.clientlibs/.. proxyserver.</li> 
     </ol> <p>För alla designer som INTE hanterats i SCM och som ändrats under körning via designdialogrutor.</p> 
     <ul> 
      <li>Flytta inte bort redigerbara designer <code>/etc</code>.</li> 
@@ -341,7 +341,7 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
        designPath
       </code> -egenskap.</li> 
      <li>Uppdatera alla sidor som refererar till föregående plats så att den nya kategorin Klientbibliotek används (detta kräver uppdatering av koden för sidimplementering).</li> 
-     <li>Uppdatera AEM Dispatcher-reglerna så att du kan visa klientbibliotek via /etc.clientlibs/.. proxyserver.</li> 
+     <li>Uppdatera AEM Dispatcher-regler så att klientbibliotek kan visas via /etc.clientlibs/.. proxyserver.</li> 
     </ol> <p>För alla designer som INTE hanterats i SCM och som ändrats under körning via designdialogrutor.</p> 
     <ul> 
      <li>Flytta inte bort redigerbara designer <code>/etc</code>.</li> 
@@ -379,7 +379,7 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
        designPath
       </code> -egenskap.</li> 
      <li>Uppdatera alla sidor som refererar till föregående plats så att den nya kategorin Klientbibliotek används (detta kräver uppdatering av koden för sidimplementering).</li> 
-     <li>Uppdatera AEM Dispatcher-reglerna så att du kan visa klientbibliotek via /etc.clientlibs/.. proxyserver.</li> 
+     <li>Uppdatera AEM Dispatcher-regler så att klientbibliotek kan visas via /etc.clientlibs/.. proxyserver.</li> 
     </ol> <p>För alla designer som INTE hanterats i SCM och som ändrats under körning via designdialogrutor.</p> 
     <ul> 
      <li>Flytta inte bort redigerbara designer <code>/etc</code>.</li> 
@@ -415,7 +415,7 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
  </tbody>
 </table>
 
-### Adobe DTM Web-Hook Endpoint {#adobe-dtm-web-hook-endpoint}
+### Adobe DTM-webbhook-slutpunkt {#adobe-dtm-web-hook-endpoint}
 
 <table> 
  <tbody>
@@ -492,7 +492,7 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
  </tbody>
 </table>
 
-### Gadgetkonfigurationer för AEM Projects Dashboard {#aem-projects-dashboard-gadget-configurations}
+### Konfigurationer för instrumentpanelswidgetar för AEM projekt {#aem-projects-dashboard-gadget-configurations}
 
 <table> 
  <tbody>
@@ -506,18 +506,18 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td> 
-   <td><p>Alla nya eller ändrade Gadget-konfigurationer för AEM Projects Dashboard måste migreras till den nya platsen (<code>/apps</code>).</p> 
+   <td><p>Alla nya eller ändrade AEM Project Dashboard Gadget Configurations måste migreras till den nya platsen (<code>/apps</code>).</p> 
     <ol> 
-     <li>Kopiera alla nya eller ändrade AEM Projects Dashboard Gadget Configurations från föregående plats till den nya platsen (<code>/apps</code>).
+     <li>Kopiera alla nya eller ändrade Gadget-konfigurationer AEM Project Dashboard från föregående plats till den nya platsen (<code>/apps</code>).
       <ol> 
-       <li>Kopiera inte oförändrade Gadget-konfigurationer för AEM Projects Dashboard eftersom dessa nu finns på den nya platsen (<code>/libs</code>).</li> 
+       <li>Kopiera inte oförändrade AEM Project Dashboard Gadget Configurations eftersom dessa nu finns på den nya platsen (<code>/libs</code>).</li> 
       </ol> </li> 
-     <li>Uppdatera alla AEM Projects-mallar som refererar till föregående plats så att de pekar på rätt ny plats.</li> 
+     <li>Uppdatera alla AEM projektmallar som refererar till föregående plats så att de pekar på rätt ny plats.</li> 
     </ol> </td> 
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
-   <td>Om AEM 6.4-kompatibilitetspaketet används måste databasjusteringsaktiviteterna utföras när kompatibilitetspaketet tas bort.</td> 
+   <td>Om kompatibilitetspaketet AEM 6.4 används måste databasjusteringsaktiviteterna utföras när kompatibilitetspaketet tas bort.</td> 
   </tr>
  </tbody>
 </table>
@@ -573,12 +573,12 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
     <ol> 
      <li>Kopiera alla taggar från föregående plats till den nya platsen.</li> 
      <li>Ta bort alla taggar från föregående plats.</li> 
-     <li>Via AEM Web Console startar du om paketet Day Communique 5 Tagging OSGi på <em>https://serveraddress:serverport/system/console/bundles/com.day.cq.cq-tagging</em> for AEM för att identifiera den nya platsen som innehåller innehåll och bör användas.</li> 
+     <li>Via AEM Web Console startar du om paketet Day Communique 5 Tagging OSGi på <em>https://serveraddress:serverport/system/console/bundles/com.day.cq.cq-tagging</em> för att AEM ska känna igen att den nya platsen innehåller innehåll och bör användas.</li> 
     </ol> </td> 
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
-   <td><p>Om du startar om paketet Day Communique Tagging OSGi registreras den nya platsen endast som taggrot om den föregående platsen är tom.</p> <p>Referenser till föregående plats fortsätter att fungera efter migrering till Ny plats för alla funktioner som utnyttjar AEM:s TagManager-API för taggupplösning.</p> <p>All anpassad kod som uttryckligen refererar till sökvägen <code>/etc/tags</code> måste uppdateras till <span class="code">/innehåll/ <code>
+   <td><p>Om du startar om paketet Day Communique Tagging OSGi registreras den nya platsen endast som taggrot om den föregående platsen är tom.</p> <p>Referenser till den föregående platsen fortsätter att fungera efter migrering till den nya platsen för alla funktioner som använder AEM TagManager API för taggupplösning.</p> <p>All anpassad kod som uttryckligen refererar till sökvägen <code>/etc/tags</code> måste uppdateras till <span class="code">/innehåll/ <code>
        cq
       </code><code>
        :tags
@@ -601,33 +601,33 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td> 
-   <td><p>Alla nya översättningsmolntjänster måste migreras till den nya platsen (<code>/apps</code>, <code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>).</p> 
+   <td><p>Alla nya översättningsadresser måste migreras till den nya Cloud Servicens (<code>/apps</code>, <code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>).</p> 
     <ol> 
      <li>Migrera befintliga konfigurationer på föregående plats till den nya platsen.
       <ul> 
-       <li>Återskapa nya konfigurationer av Translation Cloud Services manuellt via AEM-redigeringsgränssnittet på <strong>Verktyg &gt; Cloud-tjänster &gt; Översättningsmolntjänster</strong>.<br /> ELLER </li> 
-       <li>Kopiera alla nya konfigurationer av Translation Cloud Services från den tidigare platsen till den nya platsen (<code>/apps</code>, <code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>).</li> 
+       <li>Återskapa manuellt nya Translation Cloud Services-konfigurationer via redigeringsgränssnittet för AEM på <strong>Verktyg &gt; Cloud Services &gt; ÖversättningsCloud Services</strong>.<br /> ELLER </li> 
+       <li>Kopiera alla nya konfigurationer av översättningsadresser från den tidigare Cloud Servicens till den nya platsen (<code>/apps</code>, <code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>).</li> 
       </ul> </li> 
-     <li>Associera de tillämpliga AEM-konfigurationerna med AEM-innehållshierarkierna.
+     <li>Associera de tillämpliga AEM med AEM innehållshierarkier.
       <ol> 
-       <li>Sidhierarkier för AEM Sites via <strong>AEM Sites &gt; Sida &gt; Sidegenskaper &gt; fliken Avancerat &gt; Molnkonfiguration</strong>.</li> 
+       <li>AEM Sites sidhierarkier via <strong>AEM Sites &gt; Sida &gt; Sidegenskaper &gt; fliken Avancerat &gt; Molnkonfiguration</strong>.</li> 
        <li>AEM Experience Fragment-hierarkier via <strong>AEM Experience Fragments &gt; Experience Fragment &gt; Properties &gt; Cloud Services Tab &gt; Cloud Configuration</strong>.</li> 
-       <li>AEM Experience Fragment Folder-hierarkier via <strong>AEM Experience Fragments &gt; Folder &gt; Properties &gt; Cloud Services Tab &gt; Cloud Configuration</strong>.<br /> </li> 
-       <li>Mapphierarkier för AEM Resurser via <strong>AEM Resurser &gt; Mapp &gt; Mappegenskaper &gt; fliken Molntjänster &gt; Konfiguration</strong>.</li> 
-       <li>AEM-projekt via <strong>AEM-projekt &gt; Projekt &gt; Projektegenskaper &gt; fliken Avancerat &gt; Molnkonfiguration</strong>.</li> 
+       <li>AEM Experience Fragment Folder-hierarkier via <strong>AEM Experience Fragments &gt; Folder &gt; Properties &gt; Cloud Services tab &gt; Cloud Configuration</strong>.<br /> </li> 
+       <li>AEM Assets mapphierarkier via <strong>AEM Assets &gt; Mapp &gt; Mappegenskaper &gt; fliken Cloud Services &gt; Konfiguration</strong>.</li> 
+       <li>AEM projekt via <strong>AEM Projekt &gt; Projekt &gt; Projektegenskaper &gt; fliken Avancerat &gt; Molnkonfiguration</strong>.</li> 
       </ol> </li> 
-     <li>Avassociera migrerade äldre översättningsmolntjänster från de tidigare AEM-innehållshierarkierna.</li> 
+     <li>Avassociera migrerade äldre översättningshierarkier från de tidigare AEM innehållshierarkierna.</li> 
     </ol> </td> 
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
-   <td><p>Översättningsmolntjänsternas upplösning sker i följande ordning:</p> 
+   <td><p>Översättningens Cloud Services visas i följande ordning:</p> 
     <ol> 
      <li><code>/conf/&lt;tenant&gt;/settings/cloudconfigs/translations/translationcfg</code></li> 
      <li><code>/conf/global/settings/cloudconfigs/translations/translationcfg</code></li> 
      <li><code>/apps/settings/cloudconfigs/translations/translationcfg</code></li> 
      <li><code>/libs/settings/cloudconfigs/translations/translationcfg</code></li> 
-    </ol> <p>Migrerade översättningsmolntjänster måste vara kompatibla med AEM 6.4.</p> </td> 
+    </ol> <p>Migrerade översättningsfunktioner måste vara kompatibla med AEM 6.4.</p> </td> 
   </tr>
  </tbody>
 </table>
@@ -719,7 +719,7 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
        designPath
       </code> -egenskap.</li> 
      <li>Uppdatera alla sidor som refererar till föregående plats så att den nya kategorin Klientbibliotek används (detta kräver uppdatering av koden för sidimplementering).</li> 
-     <li>Uppdatera AEM Dispatcher-reglerna så att du kan visa klientbibliotek via /etc.clientlibs/.. proxyserver.</li> 
+     <li>Uppdatera AEM Dispatcher-regler så att klientbibliotek kan visas via /etc.clientlibs/.. proxyserver.</li> 
     </ol> <p>För alla designer som INTE hanterats i SCM och som ändrats under körning via designdialogrutor.</p> 
     <ul> 
      <li>Flytta inte bort redigerbara designer <code>/etc</code>.</li> 
@@ -740,7 +740,7 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
 | **Omstruktureringsvägledning** | Ingen åtgärd krävs. |
 | **Anteckningar** | Webbkonsolen Trädaktivering är nu tillgänglig via **Verktyg > Distribution > Replikering > Aktivera träd**. |
 
-### Molntjänster för leverantörskonverteringsanslutning {#vendor-translation-connector-cloud-services}
+### Cloud Services för leverantörsöversättningens koppling {#vendor-translation-connector-cloud-services}
 
 <table> 
  <tbody>
@@ -756,27 +756,27 @@ Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td> 
-   <td><p>Alla nya tjänster för leverantörsöversättningsanslutning i molnet måste migreras till den nya platsen (<code>/apps</code>, <code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>).</p> 
+   <td><p>Alla nya Cloud Services för leverantörsöversättningsanslutning måste migreras till den nya platsen (<code>/apps</code>, <code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>).</p> 
     <ol> 
      <li>Migrera befintliga konfigurationer på den föregående platsen till den nya platsen.
       <ul> 
-       <li>Skapa manuellt nya konfigurationer av leverantörens Translation Connector Cloud Services via <strong>AEM-redigeringsgränssnittet på Verktyg &gt; Molntjänster &gt; Översättningsmolntjänster</strong>.<br /> ELLER </li> 
-       <li>Kopiera alla nya konfigurationer för leverantörsöversättningsanslutning för molntjänster från föregående plats till den nya platsen (<code>/apps</code>eller <code>/conf/global </code><code>/conf/&lt;tenant&gt;</code>).</li> 
+       <li>Skapa manuellt nya konfigurationer av Cloud Services för leverantörsöversättningskoppling via <strong>AEM redigeringsgränssnitt på Verktyg &gt; Cloud Services &gt; ÖversättningsCloud Services</strong>.<br /> ELLER </li> 
+       <li>Kopiera alla nya konfigurationer av Cloud Services för leverantörsöversättningsanslutning från föregående plats till den nya platsen (<code>/apps</code>eller <code>/conf/global </code><code>/conf/&lt;tenant&gt;</code>).</li> 
       </ul> </li> 
-     <li>Associera de tillämpliga AEM-konfigurationerna med AEM-innehållshierarkierna.
+     <li>Associera de tillämpliga AEM med AEM innehållshierarkier.
       <ol> 
-       <li>Sidhierarkier för AEM Sites via <strong>AEM Sites &gt; Sida &gt; Sidegenskaper &gt; fliken Avancerat &gt; Molnkonfiguration</strong>.</li> 
+       <li>AEM Sites sidhierarkier via <strong>AEM Sites &gt; Sida &gt; Sidegenskaper &gt; fliken Avancerat &gt; Molnkonfiguration</strong>.</li> 
        <li>AEM Experience Fragment-hierarkier via <strong>AEM Experience Fragments &gt; Experience Fragment &gt; Properties &gt; Cloud Services Tab &gt; Cloud Configuration</strong>.</li> 
-       <li>AEM Experience Fragment Folder-hierarkier via <strong>AEM Experience Fragments &gt; Folder &gt; Properties &gt; Cloud Services Tab &gt; Cloud Configuration</strong>.</li> 
-       <li>Mapphierarkier för AEM Resurser via <strong>AEM Resurser &gt; Mapp &gt; Mappegenskaper &gt; fliken Molntjänster &gt; Konfiguration</strong>.</li> 
-       <li>AEM-projekt via <strong>AEM-projekt &gt; Projekt &gt; Projektegenskaper &gt; fliken Avancerat &gt; Molnkonfiguration</strong>.</li> 
+       <li>AEM Experience Fragment Folder-hierarkier via <strong>AEM Experience Fragments &gt; Folder &gt; Properties &gt; Cloud Services tab &gt; Cloud Configuration</strong>.</li> 
+       <li>AEM Assets mapphierarkier via <strong>AEM Assets &gt; Mapp &gt; Mappegenskaper &gt; fliken Cloud Services &gt; Konfiguration</strong>.</li> 
+       <li>AEM projekt via <strong>AEM Projekt &gt; Projekt &gt; Projektegenskaper &gt; fliken Avancerat &gt; Molnkonfiguration</strong>.</li> 
       </ol> </li> 
-     <li>Avassociera migrerade äldre översättningsmolntjänster från de tidigare AEM-innehållshierarkierna.</li> 
+     <li>Avassociera migrerade äldre översättningshierarkier från de tidigare AEM innehållshierarkierna.</li> 
     </ol> </td> 
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
-   <td><p>Översättningsmolntjänsternas upplösning sker i följande ordning:</p> 
+   <td><p>Översättningens Cloud Services visas i följande ordning:</p> 
     <ol> 
      <li><code>/conf/&lt;tenant&gt;/settings/cloudconfigs/translations/&lt;vendor&gt;</code></li> 
      <li><code>/conf/global/settings/cloudconfigs/translations/&lt;vendor&gt;</code></li> 
