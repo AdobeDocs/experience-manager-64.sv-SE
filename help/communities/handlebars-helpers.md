@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '1540'
+ht-degree: 2%
 
 ---
 
@@ -25,7 +28,7 @@ Handlister Hjälpprogram är metoder som kan anropas från Handlebars-skript fö
 
 Implementeringen innehåller en definition på klientsidan och en serversida. Det är också möjligt för utvecklare att skapa anpassade hjälpprogram.
 
-De anpassade SCF-hjälprarna som levereras med AEM Communities definieras i [klientbiblioteket](../../help/sites-developing/clientlibs.md):
+De anpassade SCF-hjälpen som levereras med AEM Communities definieras i [klientbiblioteket](../../help/sites-developing/clientlibs.md):
 
 * /etc/clientlibs/social/commons/scf/helpers.js
 
@@ -45,7 +48,7 @@ Om safeString är true är den returnerade strängen SafeString.
 
 ### Parametrar {#parameters}
 
-* **kontext**:Sträng
+* **kontext**: Sträng
 
    (valfritt) Standard är den tomma strängen
 
@@ -57,7 +60,7 @@ Om safeString är true är den returnerade strängen SafeString.
 
    (valfritt) Standard är antalet ord i den trimmade strängen.
 
-* **safeString**:Boolean
+* **safeString**: Boolean
 
    (valfritt) Returnerar en Handlebars.SafeString() om true. Standardvärdet är false.
 
@@ -93,7 +96,7 @@ Ett hjälpmedel för att lägga till två intervall under en div, ett för den f
 
 ### Parametrar {#parameters-1}
 
-* **kontext**:Sträng
+* **kontext**: Sträng
 
    (valfritt) Default är den tomma strängen.
 
@@ -101,15 +104,15 @@ Ett hjälpmedel för att lägga till två intervall under en div, ett för den f
 
    (valfritt) Det antal tecken som ska visas när den fullständiga texten inte visas. Standardvärdet är 100.
 
-* **moreText**:Sträng
+* **moreText**: Sträng
 
    (valfritt) Texten som ska visas anger att det finns mer text att visa. Standardvärdet är &quot;more&quot;.
 
-* **ellipsesText**:Sträng
+* **ellipsesText**: Sträng
 
    (valfritt) Den text som ska visas som indikation på dold text. Standardvärdet är &quot;..&quot;.
 
-* **safeString**:Boolean
+* **safeString**: Boolean
 
    (valfritt) Ett booleskt värde som anger om Handlebars.SafeString() ska användas eller inte innan resultatet returneras. Standardvärdet är false.
 
@@ -137,7 +140,7 @@ En hjälp som returnerar en formaterad datumsträng.
 
    (valfritt) en millisekundförskjutning från 1 januari 1970 (epok). Standard är aktuellt datum.
 
-* **format**:Sträng
+* **format**: Sträng
 
    (valfritt) Datumformatet som ska användas. Standardvärdet är &quot;YYY-MM-DDTHH:mm:ss.sssZ&quot; och resultatet visas som &quot;2015-03-18T18:17:13-07:00&quot;
 
@@ -161,11 +164,11 @@ En hjälpfunktion som returnerar innehåll beroende på ett likhetsvillkor.
 
 ### Parametrar {#parameters-3}
 
-* **lvalue**:Sträng
+* **lvalue**: Sträng
 
    Det vänstra värdet som ska jämföras
 
-* **värde**:Sträng
+* **värde**: Sträng
 
    Högervärdet som ska jämföras
 
@@ -185,11 +188,11 @@ En blockhjälp som testar det aktuella värdet för [WCM-läget](https://helpx.a
 
 ### Parametrar {#parameters-4}
 
-* **kontext**:Sträng
+* **kontext**: Sträng
 
    (valfritt) Den sträng som ska översättas. Obligatoriskt om inget standardvärde har angetts.
 
-* **läge**:Sträng
+* **läge**: Sträng
 
    (valfritt) En kommaseparerad lista med [WCM-lägen](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) som ska testas om de anges.
 
@@ -211,15 +214,15 @@ Se även [Internationalisering av strängar i JavaScript-kod](../../help/sites-d
 
 ### Parametrar {#parameters-5}
 
-* **kontext**:Sträng
+* **kontext**: Sträng
 
    (valfritt) Den sträng som ska översättas. Obligatoriskt om inget standardvärde har angetts.
 
-* **standard**:Sträng
+* **standard**: Sträng
 
    (valfritt) Standardsträngen som ska översättas. Obligatoriskt om ingen kontext har angetts.
 
-* **kommentar**:Sträng
+* **kommentar**: Sträng
 
    (valfritt) Ett översättningstips
 
@@ -236,7 +239,7 @@ En hjälp som du kan använda för att inkludera en komponent som en icke-befint
 
 Detta gör att resursen kan anpassas programmatiskt enklare än vad som är möjligt för en resurs som lagts till som en JCR-nod. Se [Lägga till eller inkludera en webbgruppskomponent](scf.md#add-or-include-a-communities-component).
 
-Endast ett urval av webbgruppskomponenter kan inkluderas. För AEM 6.1 är de som ingår [kommentarer](essentials-comments.md), [omdömen](rating-basics.md), [granskningar](reviews-basics.md)och [omröstningar](essentials-voting.md).
+Endast ett urval av webbgruppskomponenter kan inkluderas. I AEM 6.1 ingår [kommentarer](essentials-comments.md), [omdömen](rating-basics.md), [granskningar](reviews-basics.md)och [omröstningar](essentials-voting.md).
 
 Den här hjälpen, som bara är lämplig på serversidan, innehåller funktioner som liknar [cq:include](../../help/sites-developing/taglib.md) för JSP-skript.
 
@@ -246,23 +249,23 @@ Den här hjälpen, som bara är lämplig på serversidan, innehåller funktioner
 
    (valfritt, såvida det inte finns en relativ sökväg)
 
-   använd `this`för att skicka aktuell kontext
+   använd `this`för att skicka den aktuella kontexten
 
    använd `this.id` för att hämta resursen vid `id` återgivning av begärd resourceType
 
-* **resourceType**:Sträng
+* **resourceType**: Sträng
 
    (valfritt) resurstypen blir standard för resurstypen från kontext
 
-* **mall**:Sträng
+* **mall**: Sträng
 
    sökväg till komponentskript
 
-* **sökväg**:Sträng
+* **sökväg**: Sträng
 
    (obligatoriskt) Sökvägen till resursen. Om sökvägen är relativ måste en kontext anges, annars returneras den tomma strängen.
 
-* **authoringDisabled**:Boolean
+* **authoringDisabled**: Boolean
 
    (valfritt) Standardvärdet är false. Endast för internt bruk.
 
@@ -276,25 +279,25 @@ Det här kommer att innehålla en ny kommentarkomponent på `this.id` + /comment
 
 ## IncludeClientLib {#includeclientlib}
 
-En handledare som innehåller ett AEM html-klientbibliotek, som kan vara ett js, en css eller ett temabibliotek. För flera inkluderingar av olika typer, till exempel js och css, måste den här taggen användas flera gånger i Handlebars-skriptet.
+En handledare som innehåller ett AEM HTML-klientbibliotek, som kan vara ett js, en css eller ett temabibliotek. För flera inkluderingar av olika typer, till exempel js och css, måste den här taggen användas flera gånger i Handlebars-skriptet.
 
 Den här hjälpen, som bara är lämplig på serversidan, innehåller funktioner som liknar [ui:includeClientLib](../../help/sites-developing/taglib.md) för JSP-skript.
 
 ### Parametrar {#parameters-7}
 
-* **kategorier**:Sträng
+* **kategorier**: Sträng
 
    (valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla JavaScript- och CSS-bibliotek för de angivna kategorierna. Temanamnet extraheras från begäran.
 
-* **tema**:Sträng
+* **tema**: Sträng
 
    (valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla temarelaterade bibliotek (både CSS och JS) för de angivna kategorierna. Temanamnet extraheras från begäran.
 
-* **js**:Sträng
+* **js**: Sträng
 
    (valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla JavaScript-bibliotek för de angivna kategorierna.
 
-* **css**:Sträng
+* **css**: Sträng
 
    (valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla CSS-bibliotek för de angivna kategorierna.
 
@@ -342,7 +345,7 @@ Den här hjälpen, som bara är lämplig på serversidan, innehåller funktioner
 
 En hjälpfunktion som visar hur mycket tid som har gått upp till en brytpunkt, efter vilken ett vanligt datumformat visas.
 
-Exempel:
+Till exempel:
 
 * För 12 timmar sedan
 * 7 dagar sedan
@@ -393,7 +396,7 @@ OBS! det här är inte en validerare och ska inte användas för att skriva attr
 
 ## Xss-htmlAttr {#xss-htmlattr}
 
-En handledare som kodar en källsträng för skrivning till ett HTML-attributvärde för att skydda mot XSS.
+En handledare som kodar en källsträng för att skriva till ett HTML-attributvärde för att skydda mot XSS.
 
 OBS! det här är inte en validerare och ska inte användas för att skriva åtgärdbara attribut (href, src, händelsehanterare).
 
@@ -528,7 +531,7 @@ Anpassade hjälpprogram måste implementeras både på serversidan och på klien
 
 För att implementera och registrera en anpassad SCF-hjälp på serversidan behöver du bara implementera Java-gränssnittet [TemplateHelper](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html), göra det till en [OSGi-tjänst](../../help/sites-developing/the-basics.md#osgi) och installera den som en del av ett OSGi-paket.
 
-Exempel:
+Till exempel:
 
 ### FooTextHelper.java {#footexthelper-java}
 
@@ -575,7 +578,7 @@ public class FooTextHelper implements TemplateHelper<String>{
 ### Anpassade hjälpmedel på klientsidan {#client-side-custom-helpers}
 
 Hjälpprogram på klientsidan är Handlebars-skript som registreras genom anrop `Handlebars.registerHelper()`.\
-Exempel:
+Till exempel:
 
 ### custom-helpers.js {#custom-helpers-js}
 
