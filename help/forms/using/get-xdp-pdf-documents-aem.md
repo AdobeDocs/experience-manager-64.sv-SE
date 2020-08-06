@@ -10,6 +10,9 @@ topic-tags: forms-manager
 discoiquuid: 99da0d37-726e-42b9-b98a-5dd6c2165af6
 translation-type: tm+mt
 source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+workflow-type: tm+mt
+source-wordcount: '702'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
 Du kan importera formulär från ditt lokala filsystem till CRX-databasen genom att överföra dem till AEM Forms. Överföringsåtgärden stöds för följande resurstyper:
 
 * Formulärmallar (XFA-formulär)
-* PDF-formulär
+* PDF forms
 * Dokument (platta PDF-dokument)
 
 Du kan överföra de resurstyper som stöds individuellt eller som ett ZIP-arkiv. Du kan bara överföra en resurs av den typen `Resource`tillsammans med ett XFA-formulär i ett ZIP-arkiv.
@@ -32,11 +35,11 @@ Du kan överföra de resurstyper som stöds individuellt eller som ett ZIP-arkiv
 
 ## Överföra formulär {#uploading-forms}
 
-1. Logga in i användargränssnittet för AEM Forms via `https://[server]:[port]/aem/forms.html`.
+1. Logga in i AEM Forms användargränssnitt med hjälp av `https://[server]:[port]/aem/forms.html`.
 1. Navigera till mappen där du vill överföra formuläret eller mappen som innehåller formulär.
 1. Tryck på **Skapa > Filöverföring** i verktygsfältet för åtgärder.
 
-   ![Filer från lokal lagring under Skapa](assets/step.png)
+   ![Filer från lokal lagring, alternativ under Skapa](assets/step.png)
 
 1. I dialogrutan Skicka formulär eller paket kan du bläddra och välja vilken fil du vill överföra. I filläsaren visas endast de filformat som stöds (ZIP, XDP och PDF).
 
@@ -60,11 +63,11 @@ När överföringen är klar genererar ett bakgrundsarbetsflöde miniatyrer för
 
 ### Skyddat läge {#protected-mode}
 
-Med AEM Forms-servern kan du köra JavaScript-kod. En skadlig JavaScript-kod kan skada en AEM Forms-miljö. Skyddat läge begränsar AEM Forms till att köra XDP-filer endast från tillförlitliga resurser och platser. Alla XDP som finns i användargränssnittet för AEM Forms betraktas som tillförlitliga resurser.
+Med AEM Forms-servern kan du köra JavaScript-kod. En skadlig JavaScript-kod kan skada en AEM Forms-miljö. Skyddat läge begränsar AEM Forms till att köra XDP-filer endast från tillförlitliga resurser och platser. Alla XDP som finns i AEM Forms UI betraktas som tillförlitliga resurser.
 
 Det skyddade läget är aktiverat som standard. Om det behövs kan du inaktivera skyddat läge:
 
-1. Logga in på AEM Web Console som administratör. URL:en är `https://[server]:[port]/system/console/configMgr`
+1. Logga in på AEM webbkonsol som administratör. URL:en är `https://[server]:[port]/system/console/configMgr`
 1. Öppna Mobile Forms Configurations för redigering.
 1. Avmarkera alternativet Skyddat läge och klicka på **Spara**. Skyddat läge är inaktiverat.
 
@@ -74,7 +77,7 @@ I AEM Forms kan en XFA-formulärmall refereras av ett adaptivt formulär eller e
 
 Ett adaptivt formulär som refererar till en XFA har sina fält bundna till de fält som är tillgängliga i XFA. När en formulärmall uppdateras försöker det tillhörande adaptiva formuläret synkronisera med XFA. Mer information finns i [Synkronisera adaptiva formulär med tillhörande XFA](/help/forms/using/synchronizing-adaptive-forms-xfa.md).
 
-Om du tar bort en formulärmall skadas det beroende adaptiva formuläret eller formulärmallen. En sådan anpassningsbar form kallas ibland i allmänhet för en smutsig form. I användargränssnittet för AEM Forms hittar du de felaktiga formulären på följande två sätt.
+Om du tar bort en formulärmall skadas det beroende adaptiva formuläret eller formulärmallen. En sådan anpassningsbar form kallas ibland i allmänhet för en smutsig form. I AEM Forms användargränssnitt kan du hitta de felaktiga formulären på följande två sätt.
 
 * En varningsikon visas på miniatyrbilden för det adaptiva formuläret i resurslistan och följande meddelande visas när du håller pekaren över varningsikonen.
 
