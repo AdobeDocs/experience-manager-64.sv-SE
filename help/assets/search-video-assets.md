@@ -1,9 +1,12 @@
 ---
 title: Söka efter videoresurser
-description: Använd nyckelord, filegenskaper som Mime-typ, storlek eller nyligen ändrad tidsstämpel för att snabbt hitta filen i AEM Resurser.
+description: Använd nyckelord, filegenskaper som Mime-typ, storlek eller nyligen ändrad tidsstämpel för att snabbt hitta filen i AEM Assets.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '558'
+ht-degree: 0%
 
 ---
 
@@ -18,13 +21,13 @@ Du kan söka efter digitala resurser baserat på en eller flera av följande ege
 
 | Sökfält | Sök egenskapsvärden |
 |---|---|
-| Mime-typer | [!UICONTROL Bilder], [!UICONTROL dokument], [!UICONTROL multimedia], [!UICONTROL arkiv]eller annat. |
-| [!UICONTROL Senast ändrad] | Timme, Dag, Vecka, Månad eller År. |
-| [!UICONTROL Filstorlek] | Liten, Medel eller Stor. |
-| [!UICONTROL Publiceringsstatus] | Publicerad eller opublicerad. |
-| [!UICONTROL Godkännandestatus] | Godkänd eller Avvisad. |
-| [!UICONTROL Orientering] | Vågrät, Lodrät eller Fyrkant. |
-| [!UICONTROL Format] | Färg eller Svartvitt. |
+| Mime-typer | [!UICONTROL Images], [!UICONTROL Documents], [!UICONTROL Multimedia], [!UICONTROL Archives]eller Annat. |
+| [!UICONTROL Last Modified] | Timme, Dag, Vecka, Månad eller År. |
+| [!UICONTROL File Size] | Liten, Medel eller Stor. |
+| [!UICONTROL Publish] Status | Publicerad eller opublicerad. |
+| [!UICONTROL Approval] Status | Godkänd eller Avvisad. |
+| [!UICONTROL Orientation] | Vågrät, Lodrät eller Fyrkant. |
+| [!UICONTROL Style] | Färg eller Svartvitt. |
 | Videohöjd | Anges som lägsta och högsta värde. Värdet lagras endast i metadata för videoåtergivningar. |
 | Videobredd | Anges som lägsta och högsta värde. Värdet lagras endast i metadata för videoåtergivningar. |
 | Videoformat | DVI, Flash, MPEG4, MPEG, OGG Theora, QuickTime, Windows Media.Value lagras i källvideons metadata och eventuella återgivningar. |
@@ -33,7 +36,7 @@ Du kan söka efter digitala resurser baserat på en eller flera av följande ege
 | Ljudkodek | Libvorbis, Lame Mp3, AAC Encoding.Value lagras endast i metadata för videoåtergivningar. |
 | Bithastighet för ljud | Anges som lägsta och högsta värde. Värdet lagras endast i metadata för videoåtergivningar. |
 
-1. Tryck på **[!UICONTROL Assets]** i det vänstra fältet på sidan **[!UICONTROL Experience Manager]**.
+1. Tryck på **[!UICONTROL Experience Manager]** sidan i den vänstra listen **[!UICONTROL Assets]**.
 
    Om den vänstra listen inte visas trycker du på ikonen Växla linje (linjerna i ikonen blir antingen mörkgrå eller blå).
 
@@ -55,4 +58,4 @@ Du kan söka efter digitala resurser baserat på en eller flera av följande ege
 
       Ange ett nyckelord, men i stället för att trycka på Retur, expanderar du en video- eller ljudegenskapslista och anger sedan önskade värden.
 
-1. (Valfritt) Långt ned på sidan trycker du på **[!UICONTROL Spara smart samling]** och anger ett namn för sökningen. Markera **[!UICONTROL Offentlig]** om du vill att den sparade sökningen ska vara tillgänglig för andra användare av Adobe Experience Manager-kontot. Avmarkera om du bara vill att sökningen ska vara tillgänglig för dig när du är inloggad på kontot. Tryck på **[!UICONTROL Spara]**.
+1. (Valfritt) Långt ned på sidan trycker du på **[!UICONTROL Save Smart Collection]** och anger ett namn för sökningen. Markera **[!UICONTROL Public]** om du vill att den sparade sökningen ska vara tillgänglig för andra användare av Adobe Experience Manager-kontot. Avmarkera om du bara vill att sökningen ska vara tillgänglig för dig när du är inloggad på kontot. Tryck på **[!UICONTROL Save]**.
