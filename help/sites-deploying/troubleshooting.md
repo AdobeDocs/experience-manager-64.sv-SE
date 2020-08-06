@@ -1,8 +1,8 @@
 ---
 title: Felsökning
 seo-title: Felsökning
-description: I den här artikeln beskrivs några av de installationsproblem som kan uppstå med AEM.
-seo-description: I den här artikeln beskrivs några av de installationsproblem som kan uppstå med AEM.
+description: I den här artikeln beskrivs några av de installationsproblem som du kan råka ut för AEM.
+seo-description: I den här artikeln beskrivs några av de installationsproblem som du kan råka ut för AEM.
 uuid: 2ca898c3-b074-4ccd-a383-b92f226e6c14
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,17 +11,20 @@ topic-tags: deploying
 discoiquuid: 5542de4e-6262-4300-9cf8-0eac79ba4f9a
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1126'
+ht-degree: 0%
 
 ---
 
 
 # Felsökning{#troubleshooting}
 
-I det här avsnittet finns detaljerad information om loggar som kan hjälpa dig att felsöka. Här finns även information om några av de problem du kan råka ut för med AEM.
+I det här avsnittet finns detaljerad information om loggar som kan hjälpa dig att felsöka. Här finns även information om några av de problem som du kan råka ut för AEM.
 
 ## Felsöka författarprestanda {#troubleshoot-author-performance}
 
-Det kan bli ganska komplicerat att analysera långsamma prestanda i redigeringsinstansen. Som ett första steg måste du ta reda på vilken nivå av teknikhögen som prestandan minskar.
+Det kan bli ganska komplicerat att analysera långsamma prestanda i redigeringsinstansen. Som ett första steg måste du ta reda på vilken nivå av teknikhögen som prestandan minskar på.
 
 Följande beslutsträd ger vägledning för att minska flaskhalsen.
 
@@ -33,7 +36,7 @@ Följande beslutsträd ger vägledning för att minska flaskhalsen.
 
 ## Konfigurera loggfiler och granskningsloggar {#configuring-log-files-and-audit-logs}
 
-AEM registrerar detaljerade loggar som du kan behöva konfigurera för att felsöka installationsproblem. Mer information finns i avsnittet [Arbeta med granskningsposter och loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) .
+AEM loggar som du kan behöva konfigurera för att felsöka installationsproblem. Mer information finns i avsnittet [Arbeta med granskningsposter och loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) .
 
 ## Använda alternativet Detaljerad {#using-the-verbose-option}
 
@@ -54,8 +57,8 @@ När man använder burkfiler i ZIP-format kan vissa av arkiveringsprogrammen aut
 Så här felsöker du:
 
 * Kontrollera att du har minst Java version 1.6 installerad.
-* Testa en snabbmeny (oftast högerklickning) på snabbstarten för AEM WCM och välj&quot;Öppna med...&quot;..&quot;
-* Kontrollera om Java eller Sun Java finns med och försök köra AEM WCM med det. Om du har flera Java-versioner installerade väljer du en som stöds.
+* Testa en snabbmeny (oftast högerklickning) i AEM WCM QuickStart och välj&quot;Öppna med...&quot;..&quot;
+* Kontrollera om Java eller Sun Java visas och försök köra AEM WCM med det. Om du har flera Java-versioner installerade väljer du en som stöds.
 
    Om du lyckas med det här steget, och operativsystemet har ett alternativ för att alltid använda det valda programmet för att köra .jar-filerna, markerar du det. Dubbelklickning bör fungera från och med nu.
 
@@ -73,7 +76,7 @@ CRX har i sig mycket lite minnesutrymme. Om programmet som körs i CRX har stör
 
 Använd Java-kommandoalternativen för att definiera minnesinställningar för JVM (t.ex. java -Xmx512m -jar crx&amp;ast;.jar för att ange heapsize till 512 MB).
 
-Ange minnesinställningsalternativet när du startar AEM WCM från kommandoraden. AEM WCM-skript för start/stopp eller egna skript för hantering av AEM WCM-start kan också ändras för att definiera de nödvändiga minnesinställningarna.
+Ange minnesinställningsalternativet när du startar AEM WCM från kommandoraden. AEM WCM-skript för start/stopp eller anpassade skript för hantering AEM WCM-start kan också ändras för att definiera de nödvändiga minnesinställningarna.
 
 Om du redan har definierat stackstorleken till 512 MB kan du analysera minnesproblemet ytterligare genom att skapa en stackdump:
 
@@ -83,15 +86,15 @@ java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
 
 Detta genererar en heap dump-fil (**java_...hprof**) när minnet tar slut. Processen kan fortsätta att köras efter att stackdumpen har skapats. Vanligtvis räcker det med en stackdumpfil för att analysera problemet.
 
-### **Välkomstskärmen i AEM visas inte i webbläsaren när du har dubbelklickat på AEM Quickstart{#the-aem-welcome-screen-does-not-display-in-the-browser-after-double-clicking-aem-quickstart}**
+### **AEM välkomstskärm visas inte i webbläsaren när du dubbelklickat AEM QuickStart{#the-aem-welcome-screen-does-not-display-in-the-browser-after-double-clicking-aem-quickstart}**
 
-I vissa situationer visas inte välkomstskärmarna för AEM WCM automatiskt även om själva databasen körs. Detta kan bero på operativsystemets konfiguration, webbläsarkonfigurationen eller liknande faktorer.
+I vissa situationer visas inte AEM WCM-välkomstskärmar automatiskt även om själva databasen körs. Detta kan bero på operativsystemets konfiguration, webbläsarkonfigurationen eller liknande faktorer.
 
 Det vanligaste symtomet är att AEM WCM QuickStart-fönstret visar&quot;AEM WCM startar och väntar på att servern ska startas....&quot; Om det meddelandet visas under en relativt lång tid anger du AEM WCM-URL:en i webbläsarfönstret manuellt med standardporten 4502 eller den port som instansen körs på: http://localhost:4502/.
 
 Loggar kan också visa orsaken till att webbläsaren inte startas.
 
-Ibland visas meddelandet&quot;AEM WCM körs på http://localhost:port/&quot; i fönstret för AEM WCM Quickstart och webbläsaren startar inte automatiskt. I så fall klickar du på URL:en i fönstret AEM WCM QuickStart (det är en hyperlänk) eller anger URL:en manuellt i webbläsaren.
+Ibland visas meddelandet &quot;AEM WCM som körs på http://localhost:port/&quot; i fönstret AEM WCM QuickStart och webbläsaren startar inte automatiskt. I så fall klickar du på URL:en i AEM WCM QuickStart-fönster (det är en hyperlänk) eller anger URL:en manuellt i webbläsaren.
 
 Om allt annat misslyckas, kontrollera loggarna för att ta reda på vad som har hänt.
 
@@ -103,19 +106,19 @@ Om allt annat misslyckas, kontrollera loggarna för att ta reda på vad som har 
 
 När en begäran om geometrixx-outdoor/en page returnerar 404 (Page Not Foun), kan du kontrollera att du har angett den extra sling-egenskapen i filen sling.properties som behövs för dessa specifika programservrar.
 
-Mer information finns i *Distribuera AEM-webbprogram* .
+Mer information finns i *Distribuera AEM* .
 
 ### **Svarshuvudets storlek kan vara större än 4 kB{#response-header-size-can-be-greater-than-kb}**
 
-502 fel kan tyda på att webbservern inte kan hantera storleken på AEM HTTP-svarshuvudet. AEM kan generera HTTP-svarshuvuden som innehåller cookies som är större än 4 kB. Kontrollera att serverbehållaren är konfigurerad så att den maximala svarshuvudets storlek kan överskrida 4 kB.
+502 fel kan indikera att webbservern inte kan hantera storleken på AEM HTTP-svarshuvud. AEM kan generera HTTP-svarshuvuden som innehåller cookies som är större än 4 kB. Kontrollera att serverbehållaren är konfigurerad så att den maximala svarshuvudets storlek kan överskrida 4 kB.
 
 För Tomcat 7.0 styr till exempel attributet maxHttpHeaderSize för [HTTP Connector](https://tomcat.apache.org/tomcat-7.0-doc/config/http.html) begränsningar för rubrikstorlek.
 
 ## Avinstallerar Adobe Experience Manager {#uninstalling-adobe-experience-manager}
 
-Eftersom AEM installeras i en enda katalog behövs inget avinstallationsverktyg. Avinstallation kan vara så enkelt som att ta bort hela installationskatalogen, men hur du avinstallerar AEM beror på vad du vill uppnå och vilken beständig lagring du använder.
+Eftersom AEM installeras i en enda katalog behövs inget avinstallationsverktyg. Avinstallationen kan vara så enkel som att ta bort hela installationskatalogen, men hur du avinstallerar AEM beror på vad du vill uppnå och vilken beständig lagring du använder.
 
-Om beständig lagring är inbäddad i installationskatalogen, till exempel i standardinstallationen för TPM, tas även data bort om du tar bort mappar.
+Om beständig lagring är inbäddad i installationskatalogen, till exempel i standardinstallationen av TPM, tas även data bort när du tar bort mappar.
 
 >[!NOTE]
 >
