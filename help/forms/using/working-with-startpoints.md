@@ -10,32 +10,35 @@ topic-tags: forms-app
 discoiquuid: 265eee8a-364e-4edf-b2a0-f42617169944
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 0%
 
 ---
 
 
 # Arbeta med startpunkter {#working-with-startpoints}
 
-En startpunkt anropar en process som skapats i Workbench. Den är kopplad till ett formulär som anropar processen när formuläret skickas. Gå igenom genomgången av [Geometrixx Finance Reference Site](/help/forms/using/finance-reference-site-walkthrough.md) för att få information om processerna.
+En startpunkt anropar en process som skapats i Workbench. Den är kopplad till ett formulär som anropar processen när formuläret skickas. Se genomgång av [Geometrixx Finance Reference Site](/help/forms/using/finance-reference-site-walkthrough.md) för att förstå processerna.
 
 >[!NOTE]
 >
 >Termerna startpunkter, startprocess och formulär används omväxlande när de refererar till det här konceptet.
 
-Om du vill initiera en process från appen AEM Forms måste du ha en startpunkt av typen **Workspace** i processen. Du måste också markera alternativet **[!UICONTROL Visio i mobil arbetsyta]** för startpunkten.
+Om du vill initiera en process från AEM Forms-programmet måste du ha en startpunkt av typen **Arbetsyta** i processen. Du måste också välja alternativet **[!UICONTROL Visibile in Mobile Workspace]** för startpunkten.
 
 ![mws_startpoint_select_option](assets/mws_startpoint_select_option.png)
 
 **Så här startar du en process som definieras i Workbench**
 
-1. Om du vill visa startpunkterna som är tillgängliga i appen AEM Forms går du till [startsidan](/help/forms/using/home-screen.md).
-1. Listan **[!UICONTROL Alla formulär]** visas som standard på **[!UICONTROL startskärmen]** .
+1. Om du vill visa startpunkterna som är tillgängliga i AEM Forms-appen går du till [startskärmen](/help/forms/using/home-screen.md).
+1. Listan visas som standard på **[!UICONTROL Home]** skärmen **[!UICONTROL All Forms]** .
 
    Startpunkten är kopplad till ett formulär. Tryck på det startpunktassocierade formuläret i listan för att öppna det.
 
    Formuläret som är kopplat till startpunkten öppnas.
 
-1. Ange informationen i **[!UICONTROL startpunktsformuläret]** .
+1. Ange informationen i **[!UICONTROL Startpoint]** formuläret.
 
    Du kan lägga till anteckningar i den här uppgiften med knappen [Bifogad](/help/forms/using/add-attachments.md) fil.
 
