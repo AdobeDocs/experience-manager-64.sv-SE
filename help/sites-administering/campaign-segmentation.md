@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 49c9c9ab-632a-40f7-8c30-d6a8c0f1b420
 translation-type: tm+mt
 source-git-commit: be46329cfe5c6fee28f616f2257e215df402e94d
+workflow-type: tm+mt
+source-wordcount: '1106'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Beroende på den information du redan har samlat in om webbplatsbesökarna och v
 
 Dessa segment används sedan för att förse en besökare med specifikt riktat innehåll. Detta innehåll underhålls i [kampanjavsnittet](/help/sites-authoring/personalization.md) på webbplatsen. Teaser pages defined here can be included as teaser paragraphs on any page and define which visitor segment the specialized content is applicable for.
 
-Med AEM kan ni enkelt skapa och uppdatera segment, teasers och kampanjer. Du kan även verifiera resultatet av dina definitioner.
+AEM gör det enkelt att skapa och uppdatera segment, teasers och kampanjer. Du kan även verifiera resultatet av dina definitioner.
 
 Med **segmentredigeraren** kan du enkelt definiera ett segment:
 
@@ -129,7 +132,7 @@ Så här definierar du det nya segmentet:
 
    ![screen_shot_2012-02-02at101726am](assets/screen_shot_2012-02-02at101726am.png)
 
-1. **Använd antingen sidosparken eller snabbmenyn (oftast högerklickning med musknappen) och välj sedan** Nytt... för att öppna fönstret Infoga ny komponent) för att hitta det segment du behöver. Dra den sedan till **segmentredigeraren** som den kommer att visas i standardbehållaren **AND** .
+1. Använd antingen sidosparken eller snabbmenyn (oftast högerklickning med musknappen) och välj sedan **Nytt...** för att öppna fönstret Infoga ny komponent) för att hitta det segment du behöver. Dra den sedan till **segmentredigeraren** som den kommer att visas i standardbehållaren **AND** .
 1. Dubbelklicka på den nya egenskapen för att redigera de specifika parametrarna. till exempel musens position:
 
    ![screen_shot_2012-02-02at103135am-1](assets/screen_shot_2012-02-02at103135am-1.png)
