@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 16db5334-604f-44e2-9993-10d683dee5bb
 translation-type: tm+mt
 source-git-commit: aac5026a249e1cb09fec66313cc03b58597663f0
+workflow-type: tm+mt
+source-wordcount: '923'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +44,7 @@ I följande avsnitt använder vi exemplet med en ny sida `b`som har skapats båd
 
 * skiss: `/b`
 
-   En mallsida; med 1 underordnad sida, bp-level-1.
+   En överordnad sida; med 1 underordnad sida, bp-level-1.
 
 * live copy: `/b`
 
@@ -89,7 +92,7 @@ AEM har [fördefinierat beteende när konflikthantering har inaktiverats](#behav
 
 AEM använder konflikthanterare för att lösa eventuella sidkonflikter som uppstår när innehåll distribueras från en ritning till en live-kopia. Att byta namn på sidor är en (vanlig) metod för att lösa sådana konflikter. Mer än en konflikthanterare kan vara användbar för att tillåta ett urval av olika beteenden.
 
-AEM ger:
+AEM tillhandahåller:
 
 * Konflikthanteraren [som](#default-conflict-handler)standard:
 
@@ -129,8 +132,8 @@ Den här konflikthanteraren ger prioritet åt ritningen. Den aktiva kopieringssi
    <td><strong>skiss efter utrullning</strong></td> 
    <td><strong>live copy efter utrullning</strong><br /> </td> 
    <td></td>
-   <td><strong>live copy efter utrullning</strong><br /> <br /><br /> </td> 
-   <td><strong>publicera efter utrullning</strong><br /><br /> </td> 
+   <td><strong>live copy efter utrullning</strong><br /> <br /> <br /> </td> 
+   <td><strong>publicera efter lansering</strong><br /> <br /> </td> 
   </tr> 
   <tr> 
    <td><code>b</code></td> 
@@ -167,7 +170,7 @@ Anpassade konflikthanterare kan:
 
 ### Beteende vid inaktiverad konflikthantering {#behavior-when-conflict-handling-deactivated}
 
-Om du manuellt [inaktiverar konflikthantering](#rollout-manager-and-conflict-handling) utför inte AEM någon åtgärd på sidor som är i konflikt (sidor som inte är i konflikt rullas ut som förväntat).
+Om du manuellt [inaktiverar konflikthantering](#rollout-manager-and-conflict-handling) utför AEM ingen åtgärd på sidor som är i konflikt (sidor som inte är i konflikt rullas ut som förväntat).
 
 >[!CAUTION]
 >
@@ -190,8 +193,8 @@ I det här fallet har live-kopian företräde. Den blå sidan `/b` kopieras inte
  <tbody> 
   <tr> 
    <td><strong>skiss efter utrullning</strong></td> 
-   <td><strong>live copy efter utrullning</strong><br /> <br /><br /> </td> 
-   <td><strong>publicera efter utrullning</strong><br /><br /> </td> 
+   <td><strong>live copy efter utrullning</strong><br /> <br /> <br /> </td> 
+   <td><strong>publicera efter lansering</strong><br /> <br /> </td> 
   </tr> 
   <tr> 
    <td><code>b</code></td> 
