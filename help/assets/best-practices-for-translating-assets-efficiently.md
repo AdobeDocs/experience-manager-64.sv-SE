@@ -4,13 +4,16 @@ description: Bästa tillvägagångssätt för effektiv hantering av resurser fö
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '501'
+ht-degree: 0%
 
 ---
 
 
 # Bästa tillvägagångssätt för att översätta resurser effektivt {#best-practices-for-translating-assets-efficiently}
 
-Adobe Experience Manager (AEM) Assets stöder flerspråkiga arbetsflöden för att översätta binära filer, metadata och taggar för digitala resurser till flera språkområden och för att hantera de översatta resurserna. Mer information finns i [Flerspråkiga resurser](multilingual-assets.md).
+Adobe Experience Manager (AEM) Assets stöder flerspråkiga arbetsflöden för att översätta binära filer, metadata och taggar för digitala resurser till flera språkområden och för att hantera översatta resurser. Mer information finns i [Flerspråkiga resurser](multilingual-assets.md).
 
 För effektiv hantering av resurser, för att säkerställa att olika översatta versioner förblir synkroniserade, skapar du [språkkopior](preparing-assets-for-translation.md) av resurser innan du kör översättningsarbetsflöden.
 
@@ -35,12 +38,12 @@ Du kan också göra några konfigurationsändringar i ett par arbetsflöden och 
 
    >[!NOTE]
    >
-   >Om du inaktiverar arbetsflödet *DAM MetaData Writeback* inaktiveras skrivningen av XMP-metadata för objektbinärfiler. Därför sparas inte längre framtida metadataändringar i resurserna. Utvärdera konsekvenserna innan du inaktiverar arbetsflödet.
+   >Om du inaktiverar arbetsflödet *DAM MetaData Writeback* inaktiveras XMP metadata write-back för objektbinärfiler. Därför sparas inte längre framtida metadataändringar i resurserna. Utvärdera konsekvenserna innan du inaktiverar arbetsflödet.
 
 1. Aktivera arbetsflödet *Ange senaste ändringsdatum* .
 
-   Arbetsflödet *DAM MetaData Writeback* konfigurerar det senast ändrade datumet för en resurs. Eftersom du inaktiverar det här arbetsflödet i steg 2 kan AEM Resurser inte längre hålla det senaste ändrade datumet för resurser uppdaterat. Aktivera därför arbetsflödet *Ange senaste ändringsdatum* för att se till att senaste ändrade datum för resurser är uppdaterade. Resurser med inaktuella senast ändrade datum kan orsaka fel.
+   Arbetsflödet *DAM MetaData Writeback* konfigurerar det senast ändrade datumet för en resurs. Eftersom du inaktiverar det här arbetsflödet i steg 2 kan AEM Assets inte längre hålla det senaste ändrade datumet för mediefiler uppdaterat. Aktivera därför arbetsflödet *Ange senaste ändringsdatum* för att se till att senaste ändrade datum för resurser är uppdaterade. Resurser med inaktuella senast ändrade datum kan orsaka fel.
 
 1. [Konfigurera översättningsintegreringsramverket](/help/sites-administering/tc-tic.md) så att översättningen av resursbinärfiler avbryts. Avmarkera alternativet &quot;Översätt resurser&quot; på fliken Resurser för att stoppa översättningen av resurbinärfiler.
-1. Översätt metadata/taggar för resurser med hjälp av arbetsflöden [för](multilingual-assets.md)flerspråkiga resurser.
+1. Översätt metadata/taggar för resurser med hjälp av [flerspråkiga resursarbetsflöden](multilingual-assets.md).
 
