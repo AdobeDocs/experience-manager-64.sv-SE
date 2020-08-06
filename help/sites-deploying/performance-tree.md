@@ -11,13 +11,16 @@ topic-tags: best-practices
 discoiquuid: 5febbb1e-795c-49cd-a8f4-c6b4b540673d
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1207'
+ht-degree: 0%
 
 ---
 
 
 # Prestandaträd{#performance-tree}
 
-## Scope {#scope}
+## Omfång {#scope}
 
 Bilden nedan är avsedd att ge vägledning om vilka åtgärder som behöver vidtas för att felsöka prestandaproblem. Den delas upp i fem avsnitt för enklare läsning.
 
@@ -25,7 +28,7 @@ Varje steg i diagrammet är länkat till en dokumentationsresurs eller en rekomm
 
 ## Förutsättningar och antaganden {#prerequisites-and-assumptions}
 
-Antagandet är att ett prestandaproblem observeras på en viss sida (antingen en AEM-konsol eller en webbsida) och kan återges på ett enhetligt sätt. Att kunna testa eller övervaka prestanda är en förutsättning innan undersökningen inleds.
+Antagandet är att ett prestandaproblem observeras på en viss sida (antingen en AEM konsol eller en webbsida) och kan återges på ett enhetligt sätt. Att kunna testa eller övervaka prestanda är en förutsättning innan undersökningen inleds.
 
 Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, extern värd eller AEM) som ansvarar för prestandaproblemet och sedan avgöra vilket område (server eller nätverk) som ska undersökas.
 
@@ -115,7 +118,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
   </tr> 
   <tr> 
    <td><strong>Steg 12</strong></td> 
-   <td>Felsök AEM-server</td> 
+   <td>Felsök AEM server</td> 
    <td>Mer information finns i följande delsteg i diagrammet.</td> 
   </tr> 
   <tr> 
@@ -171,7 +174,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
   <tr> 
    <td><strong>Steg 22 och 22.1</strong></td> 
    <td>Cachenivåer</td> 
-   <td><a href="/help/sites-deploying/configuring-performance.md#calculating-the-dispatcher-cache-ratio"> Se </a>Beräkna Dispatcher-cachens förhållande<br />. <br /> </td> 
+   <td>Se <a href="/help/sites-deploying/configuring-performance.md#calculating-the-dispatcher-cache-ratio">Beräkna Dispatcher-cachens förhållande</a>.<br /> <br /> </td> 
   </tr> 
   <tr> 
    <td><strong>Steg 23</strong></td> 
@@ -231,7 +234,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
   </tr> 
   <tr> 
    <td><strong>Steg 32</strong></td> 
-   <td>Använd sessionshantering på dispatchernivå för att avlasta AEM-server</td> 
+   <td>Använd sessionshantering på dispatchernivå för att avlasta AEM server</td> 
    <td><p><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement">Aktivera säkra sessioner</a></p> </td> 
   </tr> 
   <tr> 
@@ -271,12 +274,12 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
   <tr> 
    <td><strong>Steg 37 och 38</strong></td> 
    <td>Lazyladdning</td> 
-   <td><a href="https://docs.adobe.com/ddc/en/gems/aem-web-performance.html">Se Gem-sessionen om AEM Web Performance.</a><br /> </td> 
+   <td><a href="https://docs.adobe.com/ddc/en/gems/aem-web-performance.html">Se Gem Session om AEM webbprestanda.</a><br /> </td> 
   </tr> 
   <tr> 
    <td><strong>Steg 39</strong></td> 
    <td>Använd pre-connect för att minska anslutningens belastning</td> 
-   <td>Se Gem Session som anges ovan. <a href="https://www.w3.org/TR/resource-hints/#dfn-preconnect"> Dessutom kan du föransluta ytterligare dokumentation på W3c: https://www.w3.org/TR/resource-hints/#dfn-preconnect</a></td> 
+   <td>Se Gem Session som anges ovan. Dessutom kan du föransluta ytterligare dokumentation på W3c:<a href="https://www.w3.org/TR/resource-hints/#dfn-preconnect"> https://www.w3.org/TR/resource-hints/#dfn-preconnect</a></td> 
   </tr> 
   <tr> 
    <td><strong>Steg 40 och 41</strong><br /> </td> 
