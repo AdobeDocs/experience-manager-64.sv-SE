@@ -11,15 +11,18 @@ content-type: reference
 discoiquuid: 0be8b88c-6f57-4dcc-ae11-77b378a2decd
 translation-type: tm+mt
 source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
+workflow-type: tm+mt
+source-wordcount: '1922'
+ht-degree: 0%
 
 ---
 
 
 # Bästa praxis för arbetsflöden{#workflow-best-practices}
 
-Med arbetsflöden kan ni automatisera Adobe Experience Manager-aktiviteter (AEM).
+Med arbetsflöden kan du automatisera Adobe Experience Manager-aktiviteter (AEM).
 
-De representerar ofta en stor del av den bearbetning som sker i en AEM-miljö, så när anpassade arbetsflödessteg inte skrivs enligt bästa praxis, eller när färdiga arbetsflöden inte är konfigurerade att köras så effektivt som möjligt, kan systemet drabbas av detta.
+De representerar ofta en stor del av den bearbetning som sker i en AEM miljö, så när anpassade arbetsflödessteg inte skrivs enligt bästa praxis, eller när färdiga arbetsflöden inte är konfigurerade att köras så effektivt som möjligt, kan systemet drabbas av detta.
 
 Vi rekommenderar därför att du noga planerar implementeringarna av arbetsflödena.
 
@@ -46,21 +49,21 @@ Fördelarna kan vara:
 
 ### Justera arbetsflöden för DAM {#tuning-dam-workflows}
 
-Riktlinjer för prestandajustering för DAM-arbetsflöden finns i prestandajusteringsguiden för [AEM Resurser](/help/assets/performance-tuning-guidelines.md).
+Riktlinjer för prestandajustering för DAM-arbetsflöden finns i [AEM Assets Performance Tuning Guide](/help/assets/performance-tuning-guidelines.md).
 
 ### Konfigurera maximalt antal samtidiga arbetsflöden {#configure-the-maximum-number-of-concurrent-workflows}
 
-AEM kan tillåta flera arbetsflödestrådar att köras samtidigt. Som standard är antalet trådar konfigurerat till halva antalet processorkärnor i systemet.
+AEM kan tillåta att flera arbetsflödestrådar körs samtidigt. Som standard är antalet trådar konfigurerat till halva antalet processorkärnor i systemet.
 
-I de fall där arbetsflödena som körs kräver systemresurser, kan detta innebära att det inte finns mycket kvar för AEM att använda för andra åtgärder, som att återge redigeringsgränssnittet. Det kan leda till att systemet blir trögt under aktiviteter som massöverföring av bilder.
+I de fall där arbetsflödena som körs kräver systemresurser, kan detta innebära att det inte finns mycket kvar AEM att använda för andra åtgärder, som att återge redigeringsgränssnittet. Det kan leda till att systemet blir trögt under aktiviteter som massöverföring av bilder.
 
-Adobe rekommenderar att du konfigurerar antalet **maximala parallella jobb** till mellan hälften och tre fjärdedelar av antalet processorkärnor i systemet för att åtgärda problemet. Detta bör ge tillräcklig kapacitet för att systemet ska kunna vara responsivt när dessa arbetsflöden bearbetas.
+För att åtgärda detta rekommenderar Adobe att du konfigurerar antalet **maximala parallella jobb** till mellan hälften och tre fjärdedelar av antalet processorkärnor i systemet. Detta bör ge tillräcklig kapacitet för att systemet ska kunna vara responsivt när dessa arbetsflöden bearbetas.
 
 Om du vill konfigurera **maximalt antal parallella jobb** kan du antingen:
 
-* Konfigurera **[OSGi-konfigurationen](/help/sites-deploying/configuring-osgi.md)**från AEM Web Console; för **kö: Begränsa arbetsflödeskö**(en **konfiguration**för Apache Sling-jobbkö).
+* Konfigurera **[OSGi-konfigurationen](/help/sites-deploying/configuring-osgi.md)**från AEM webbkonsol; för **kö: Begränsa arbetsflödeskö**(en **konfiguration**för Apache Sling-jobbkö).
 
-* Konfigurera kön med alternativet **Sling Jobs** i AEM Web Console. för **jobbkökonfiguration: Begränsa arbetsflödeskö**, på `http://localhost:4502/system/console/slingevent`.
+* Konfigurera kön med alternativet **Sling Jobs** i AEM webbkonsol. för **jobbkökonfiguration: Begränsa arbetsflödeskö**, på `http://localhost:4502/system/console/slingevent`.
 
 Dessutom finns det en separat konfiguration för **jobbkön** för den externa processen Bevilja arbetsflöde. Detta används för arbetsflödesprocesser som startar externa binärfiler, till exempel **InDesign Server** eller **Image Magick**.
 
@@ -72,11 +75,11 @@ Enskilda jobbköer kan även läggas till för tillfälliga arbetsflöden.
 
 ### Konfigurera rensning av arbetsflöde {#configure-workflow-purging}
 
-I en standardinstallation tillhandahåller AEM en underhållskonsol där dagliga och veckovisa underhållsaktiviteter kan schemaläggas och konfigureras. till exempel:
+I en standardinstallation AEM en underhållskonsol där underhållsaktiviteter per dag och vecka kan schemaläggas och konfigureras. till exempel:
 
 `http://localhost:4502/libs/granite/operations/content/maintenance.html`
 
-Som standard har **veckounderhållsfönstret** en **tömningsåtgärd** för arbetsflöde, men detta måste konfigureras innan det kan köras. Om du vill konfigurera rensning av arbetsflöden måste en ny **Adobe Granite Workflow Renge Configuration** läggas till i webbkonsolen.
+Som standard har **veckounderhållsfönstret** en **tömningsåtgärd** för arbetsflöde, men detta måste konfigureras innan det kan köras. Om du vill konfigurera rensning av arbetsflöden måste en ny **Adobe Granite-arbetsflödeskonfiguration** för tömning läggas till i webbkonsolen.
 
 Mer information om underhållsåtgärder i AEM finns i [Operations Dashboard](/help/sites-administering/operations-dashboard.md).
 
@@ -106,6 +109,7 @@ Arbetsflödesmodeller lagras i databasen enligt typ:
    >
    >* placera någon av dina anpassade arbetsflödesmodeller i den här mappen
    >* redigera vad som helst i `/libs`
+
    >
    >Alla ändringar kan skrivas över vid uppgradering eller vid installation av snabbkorrigeringar, kumulativa korrigeringspaket eller servicepaket.
 
@@ -125,7 +129,7 @@ Arbetsflödesmodeller lagras i databasen enligt typ:
 
    >[!NOTE]
    >
-   >Om dessa designer redigeras *med AEM UI* kopieras informationen till de nya platserna.
+   >Om dessa designer redigeras *med AEM gränssnitt* kopieras informationen till de nya platserna.
 
 #### Platser - Starta arbetsflöden {#locations-workflow-launchers}
 
@@ -141,6 +145,7 @@ Definitioner av arbetsflödets startprogram lagras också i databasen enligt typ
    >
    >* placera någon av dina anpassade startsidor för arbetsflöden i den här mappen
    >* redigera vad som helst i `/libs`
+
    >
    >Alla ändringar kan skrivas över vid uppgradering eller vid installation av snabbkorrigeringar, kumulativa korrigeringspaket eller servicepaket.
 
@@ -156,7 +161,7 @@ Definitioner av arbetsflödets startprogram lagras också i databasen enligt typ
 
    >[!NOTE]
    >
-   >Om dessa definitioner redigeras *med AEM-gränssnittet* kopieras informationen till de nya platserna.
+   >Om dessa definitioner redigeras *med AEM gränssnitt* kopieras informationen till de nya platserna.
 
 #### Platser - arbetsflödesskript {#locations-workflow-scripts}
 
@@ -172,6 +177,7 @@ Arbetsflödesskript lagras också i databasen enligt typ:
    >
    >* placera något av dina anpassade arbetsflödesskript i den här mappen
    >* redigera vad som helst i `/libs`
+
    >
    >Alla ändringar kan skrivas över vid uppgradering eller vid installation av snabbkorrigeringar, kumulativa korrigeringspaket eller servicepaket.
 
@@ -199,6 +205,7 @@ Arbetsflödesmeddelanden lagras också i databasen enligt typ:
    >
    >* placera någon av de anpassade definitionerna för arbetsflödesmeddelanden i den här mappen
    >* redigera vad som helst i `/libs`
+
    >
    >Alla ändringar kan skrivas över vid uppgradering eller vid installation av snabbkorrigeringar, kumulativa korrigeringspaket eller servicepaket.
 
@@ -230,7 +237,7 @@ När en arbetsflödesprocess implementeras:
 
 * En arbetsflödessession tillhandahålls och bör användas om det inte finns någon tvingande anledning att inte göra det.
 * Nya sessioner ska inte skapas från arbetsflödessteg eftersom detta orsakar inkonsekvenser i tillståndet/tillstånden tillsammans med eventuella samtidiga problem i arbetsflödesmotorn.
-* Du bör inte hämta en ny JCR-session från ett processsteg i ett arbetsflöde. du bör anpassa arbetsflödessessionen som tillhandahålls av API:t för processsteg till en jcr-session. Exempel:
+* Du bör inte hämta en ny JCR-session från ett processsteg i ett arbetsflöde. du bör anpassa arbetsflödessessionen som tillhandahålls av API:t för processsteg till en jcr-session. Till exempel:
 
 ```
 public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap args) throws WorkflowException {
@@ -246,7 +253,7 @@ Spara en session:
 * Om arbetsflödet används för att ändra databasen och sessionen inte sparas explicit i arbetsflödet, kommer arbetsflödet att spara sessionen när den är klar. `WorkflowSession`
 * `Session.Save` ska inte anropas inifrån ett arbetsflödessteg:
 
-   * Vi rekommenderar att arbetsflödets jcr-session anpassas. är då inte `save` nödvändigt eftersom arbetsflödesmotorn sparar sessionen automatiskt när arbetsflödet har slutförts.
+   * Vi rekommenderar att man anpassar arbetsflödets jcr-session. är då inte `save` nödvändigt eftersom arbetsflödesmotorn sparar sessionen automatiskt när arbetsflödet har slutförts.
    * rekommenderas inte för ett processsteg för att skapa en egen jcr-session.
 
 * Genom att eliminera onödiga besparingar kan du minska omkostnaderna och på så sätt effektivisera arbetsflödena.
@@ -266,7 +273,7 @@ Om du skapar för många startprogram kommer utvärderingsprocessen att gå lån
 
 Om du skapar en globbningssökväg i roten av databasen för en enskild startfunktion kan arbetsflödesmotorn avlyssna och utvärdera händelserna create/modify för alla noder i databasen. Därför rekommenderar vi att du bara skapar startprogram som behövs och att du gör ordlistan så specifik som möjligt.
 
-På grund av hur de här startverktygen påverkar arbetsflödets beteende kan det även vara bra att inaktivera användningsklara startprogram som inte används.
+På grund av hur de här startverktygen påverkar arbetsflödets beteende kan det även vara praktiskt att inaktivera användningsklara startprogram som inte används.
 
 ### Konfigurationsförbättringar för startare {#configuration-enhancements-for-launchers}
 
@@ -318,7 +325,7 @@ När du uppgraderar din instans:
 
 ## Systemverktyg {#system-tools}
 
-Det finns många systemverktyg som du kan använda för att övervaka, underhålla och felsöka arbetsflöden. Alla exempel-URL:er nedan använder `localhost:4502`men bör vara tillgängliga för alla författarinstanser ( `<hostname>:<port>`).
+Det finns många systemverktyg som kan användas för att övervaka, underhålla och felsöka arbetsflöden. Alla exempel-URL:er nedan använder `localhost:4502`men bör vara tillgängliga för alla författarinstanser ( `<hostname>:<port>`).
 
 ### Sling Job Handling Console {#sling-job-handling-console}
 
