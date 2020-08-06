@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
 translation-type: tm+mt
 source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+workflow-type: tm+mt
+source-wordcount: '1082'
+ht-degree: 2%
 
 ---
 
@@ -27,10 +30,10 @@ Innan du konfigurerar aktiveringsfunktionen i MySQL för Communities måste du s
 
 * Installera [MySQL server](https://dev.mysql.com/downloads/mysql/) Community Server version 5.6
    * Version 5.7 stöds inte för SCORM
-   * Kan vara samma server som författarens AEM-instans
-* Installera den officiella [JDBC-drivrutinen för MySQL på alla AEM-instanser](deploy-communities.md#jdbc-driver-for-mysql)
+   * Kan vara samma server som AEM författarinstans
+* Installera den officiella [JDBC-drivrutinen för MySQL på alla AEM instanser](deploy-communities.md#jdbc-driver-for-mysql)
 * Installera [MySQL Workbench](https://dev.mysql.com/downloads/tools/workbench/)
-* Installera [SCORM-paketet på alla AEM-instanser](enablement.md#scorm)
+* Installera [SCORM-paketet på alla AEM instanser](enablement.md#scorm)
 
 ## Installerar MySQL {#installing-mysql}
 
@@ -75,7 +78,7 @@ När MySQL Workbench startas första gången visas inga anslutningar, såvida de
 ### Nya anslutningsinställningar {#new-connection-settings}
 
 1. Markera +-ikonen till höger om `MySQL Connections`.
-1. I dialogrutan `Setup New Connection`anger du värden som är lämpliga för din plattform i demonstrationssyfte, med författarens AEM-instans och MySQL på samma server:
+1. I dialogrutan `Setup New Connection`anger du värden som är lämpliga för din plattform i demonstrationssyfte, med författarinstansen AEM och MySQL på samma server:
    * Anslutningsnamn: `Enablement`
    * Anslutningsmetod: `Standard (TCP/IP)`
    * Värdnamn: `127.0.0.1`
@@ -128,7 +131,9 @@ Den Aktivera SCORM-databas som ska skapas är:
 * name: `ScormEngineDB`
 * som skapats från skript:
    * schema: `database_scormengine.sql`
-   * data: `database_scorm_integration.sql`Följ stegen nedan ([öppna](#step-open-sql-file), [kör](#step-execute-sql-script)) för att installera varje [SQL-skript](#obtain-sql-scripts) . [Uppdatera](#refresh) vid behov för att se resultatet av skriptkörningen.
+   * data: `database_scorm_integration.sql`
+Follow the steps below (
+[öppna](#step-open-sql-file), [kör](#step-execute-sql-script)) för att installera varje [SQL-skript](#obtain-sql-scripts) . [Uppdatera](#refresh) vid behov för att se resultatet av skriptkörningen.
 
 Installera schemat innan du installerar data.
 
@@ -138,6 +143,7 @@ Installera schemat innan du installerar data.
 >
 >* [JDBC-konfiguration](#configure-jdbc-connections)
 >* [SCORM-konfiguration](#configure-scorm)
+
 >
 
 
@@ -178,11 +184,11 @@ När du har installerat och uppdaterat SCHEMAS **`scormenginedb`** visas den.
 
 OSGi-konfigurationen för **Day Commons JDBC Connections Pool** konfigurerar MySQL JDBC-drivrutinen.
 
-Alla AEM-instanser för publicering och författare ska peka på samma MySQL-server.
+Alla publicerings- och författarinstanser AEM peka på samma MySQL-server.
 
-När MySQL körs på en annan server än AEM måste serverns värdnamn anges i stället för localhost i JDBC-kopplingen (som fyller i [ScormEngine](#configurescormengineservice) -konfigurationen).
+När MySQL körs på en annan server än AEM måste servervärdnamnet anges i stället för localhost i JDBC-kopplingen (som fyller i [ScormEngine](#configurescormengineservice) -konfigurationen).
 
-* På varje författare och publicera AEM-instansen
+* På varje författare och publicera AEM
 * Inloggad med administratörsbehörighet
 * Åtkomst till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md)
    * Till exempel [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
@@ -192,12 +198,12 @@ När MySQL körs på en annan server än AEM måste serverns värdnamn anges i s
 ![chlimage_1-336](assets/chlimage_1-336.png)
 
 * Ange följande värden:
-   * **[!UICONTROL JDBC-drivrutinsklass]**: `com.mysql.jdbc.Driver`
-   * **URIJ **för DBC-anslutning:`jdbc:mysql://localhost:3306/aem63reporting`ange server i stället för localhost om MySQL-servern inte är samma som den här AEM-servern
-   * **[!UICONTROL Användarnamn]**: Rot eller ange det konfigurerade användarnamnet för MySQL-servern, om inte &#39;root&#39;
-   * **[!UICONTROL Lösenord]**: Rensa det här fältet om inget lösenord har angetts för MySQL, annars anger du det konfigurerade lösenordet för MySQL-användarnamnet
-   * **[!UICONTROL Datakällans namn]**: Namn som angetts för [MySQL-anslutningen](#new-connection-settings), till exempel &#39;enablement&#39;
-* Välj **[!UICONTROL Spara]**
+   * **[!UICONTROL JDBC driver class]**: `com.mysql.jdbc.Driver`
+   * **URIJ **för DBC-anslutning:`jdbc:mysql://localhost:3306/aem63reporting`ange server i stället för localhost om MySQL-servern inte är samma som &#39;this&#39; AEM server
+   * **[!UICONTROL Username]**: Rot eller ange det konfigurerade användarnamnet för MySQL-servern, om inte &#39;root&#39;
+   * **[!UICONTROL Password]**: Rensa det här fältet om inget lösenord har angetts för MySQL, annars anger du det konfigurerade lösenordet för MySQL-användarnamnet
+   * **[!UICONTROL Datasource name]**: Namn som angetts för [MySQL-anslutningen](#new-connection-settings), till exempel &#39;enablement&#39;
+* Välj **[!UICONTROL Save]**
 
 ## Konfigurera korm {#configure-scorm}
 
@@ -209,9 +215,9 @@ Den här konfigurationen finns när [SCORM-paketet](deploy-communities.md#scorm-
 
 Alla publicerings- och författarinstanser pekar på samma MySQL-server.
 
-När MySQL körs på en annan server än AEM, måste serverns värdnamn anges i stället för localhost i ScormEngine-tjänsten, som vanligtvis fylls i från konfigurationen för [JDBC-anslutningen](#configure-jdbc-connections) .
+När MySQL körs på en annan server än AEM måste servervärdnamnet anges i stället för localhost i ScormEngine-tjänsten, som vanligtvis fylls i från konfigurationen för [JDBC-anslutningen](#configure-jdbc-connections) .
 
-* På varje författare och publicera AEM-instansen
+* På varje författare och publicera AEM
 * Inloggad med administratörsbehörighet
 * Åtkomst till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md)
    * Till exempel [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
@@ -219,27 +225,27 @@ När MySQL körs på en annan server än AEM, måste serverns värdnamn anges i 
 * Markera redigeringsikonen
    ![chlimage_1-337](assets/chlimage_1-337.png)
 * Kontrollera att följande parametervärden är konsekventa med [JDBC Connection](#configurejdbcconnectionspool) -konfigurationen:
-   * **[!UICONTROL JDBC-anslutnings-URI]**: `jdbc:mysql://localhost:3306/ScormEngineDB` ScormEngineDB ** är standarddatabasnamnet i SQL-skripten
-   * **[!UICONTROL Användarnamn]**: Rot eller ange det konfigurerade användarnamnet för MySQL-servern, om inte &#39;root&#39;
-   * **[!UICONTROL Lösenord]**: Rensa det här fältet om inget lösenord har angetts för MySQL, annars anger du det konfigurerade lösenordet för MySQL-användarnamnet
+   * **[!UICONTROL JDBC connection URI]**: `jdbc:mysql://localhost:3306/ScormEngineDB` *ScormEngineDB* är standarddatabasnamnet i SQL-skript
+   * **[!UICONTROL Username]**: Rot eller ange det konfigurerade användarnamnet för MySQL-servern, om inte &#39;root&#39;
+   * **[!UICONTROL Password]**: Rensa det här fältet om inget lösenord har angetts för MySQL, annars anger du det konfigurerade lösenordet för MySQL-användarnamnet
 * Angående följande parameter:
-   * **[!UICONTROL Lösenord]**: REDIGERA INTE
+   * **[!UICONTROL Scorm User Password]**: REDIGERA INTE
 
       Endast för internt bruk. Den är avsedd för en särskild serviceanvändare som används av AEM Communities för att kommunicera med scorm-motorn.
-* Välj **[!UICONTROL Spara]**
+* Välj **[!UICONTROL Save]**
 
 ### Adobe Granite CSRF-filter {#adobe-granite-csrf-filter}
 
 För att se till att aktiveringskurser fungerar korrekt i alla webbläsare måste Mozilla läggas till som en användaragent som inte är markerad av CSRF-filtret.
 
-* På varje publicerad AEM-instans
+* På varje publiceringsinstans AEM
 * Inloggad med administratörsbehörighet
 * Åtkomst till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md)
    * Till exempel [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 * Sök `Adobe Granite CSRF Filter`
 * Markera redigeringsikonen
-   ![chlimage_1-337](assets/chlimage_1-338.png)
+   ![chlimage_1-338](assets/chlimage_1-338.png)
 * Välj `[+]` ikonen för att lägga till en säker användaragent
 * Enter `Mozilla/*`
-* Välj **[!UICONTROL Spara]**
+* Välj **[!UICONTROL Save]**
 
