@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: d9c96e7f-9416-48e1-a6af-47384f7bee92
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '827'
+ht-degree: 0%
 
 ---
 
@@ -38,7 +41,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 
    ![wf-96](assets/wf-96.png)
 
-1. Markera ett specifikt objekt och **öppna historik** för att se mer information:
+1. Markera ett specifikt objekt och **öppna historik** för mer information:
 
    ![wf-97](assets/wf-97.png)
 
@@ -68,7 +71,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
    >* när en sida, som är underställd ett arbetsflöde, tas bort (framtvingar), avslutas arbetsflödet
 
 
-1. Markera ett specifikt objekt och **öppna historik** för att se mer information:
+1. Markera ett specifikt objekt och **öppna historik** för mer information:
 
    ![wf-99](assets/wf-99.png)
 
@@ -76,7 +79,8 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 
 När ett arbetsflöde misslyckas tillhandahåller AEM konsolen **Fel** så att du kan undersöka och vidta lämpliga åtgärder när den ursprungliga orsaken har hanterats:
 
-* **Felinformation**&#x200B;Öppnar ett fönster där **felmeddelandet**, **steget** och **felstacken** visas.
+* **Felinformation**&#x200B;Öppnar ett fönster där 
+**Felmeddelande**, **steg** och **felstack**.
 
 * **Öppna historik** Visar information om arbetsflödeshistoriken.
 
@@ -96,7 +100,7 @@ Så här undersöker du fel och sedan återupptar eller avslutar du arbetsflöde
 
 Om du minimerar antalet arbetsflödesinstanser ökas arbetsflödesmotorns prestanda, så att du regelbundet kan rensa avslutade eller pågående arbetsflödesinstanser från databasen.
 
-Konfigurera **Adobe Granite Workflow Renge Configuration** för att rensa arbetsflödesinstanser efter ålder och status. Du kan också rensa arbetsflödesinstanser av alla modeller eller av en viss modell.
+Konfigurera **Adobe Granite Workflow Renge Configuration** för att rensa arbetsflödesinstanser utifrån deras ålder och status. Du kan också rensa arbetsflödesinstanser av alla modeller eller av en viss modell.
 
 Du kan också skapa flera konfigurationer av tjänsten för att rensa arbetsflödesinstanser som uppfyller olika villkor. Skapa till exempel en konfiguration som tömmer instanser av en viss arbetsflödesmodell när de körs mycket längre än förväntat. Skapa en annan konfiguration som tömmer alla slutförda arbetsflöden efter ett visst antal dagar för att minimera databasens storlek.
 
@@ -121,12 +125,12 @@ Om du vill konfigurera tjänsten kan du använda [webbkonsolen](/help/sites-depl
   </tr> 
   <tr> 
    <td>Jobbnamn</td> 
-   <td>schemalagd tömning.namn</td> 
+   <td>scheduledpurge.name</td> 
    <td>Ett beskrivande namn för den schemalagda rensningen.</td> 
   </tr> 
   <tr> 
    <td>Arbetsflödesstatus</td> 
-   <td>schemalagd tömning.workflowStatus</td> 
+   <td>scheduledpurge.workflowStatus</td> 
    <td><p>Status för de arbetsflödesinstanser som ska rensas. Följande värden är giltiga:</p> 
     <ul> 
      <li>SLUTFÖRT: Slutförda arbetsflödesinstanser rensas.</li> 
@@ -135,20 +139,20 @@ Om du vill konfigurera tjänsten kan du använda [webbkonsolen](/help/sites-depl
   </tr> 
   <tr> 
    <td>Modeller att tömma</td> 
-   <td>schemalagd tömning.modelIds</td> 
-   <td><p>ID:t för arbetsflödesmodellerna som ska rensas. <br /> ID är sökvägen till modellnoden, till exempel: /conf/global/settings/workflow/models/dam/update_asset/jcr:content/model<br /> Ange inget värde för att rensa instanser av alla arbetsflödesmodeller.</p> <p>Om du vill ange flera modeller klickar du på plusknappen (+) i webbkonsolen. </p> </td> 
+   <td>scheduledpurge.modelIds</td> 
+   <td><p>ID:t för arbetsflödesmodellerna som ska rensas. ID är sökvägen till modellnoden, till exempel:<br /> /conf/global/settings/workflow/models/dam/update_asset/jcr:content/model<br /> Ange inget värde för att rensa instanser av alla arbetsflödesmodeller.</p> <p>Om du vill ange flera modeller klickar du på plusknappen (+) i webbkonsolen. </p> </td> 
   </tr> 
   <tr> 
    <td>Arbetsflödesålder</td> 
-   <td>schemalagd tömning.dag såld</td> 
-   <td> Åldern på arbetsflödesinstanserna som ska rensas, i dagar.</td> 
+   <td>scheduledpurge.daysold</td> 
+   <td>Åldern på arbetsflödesinstanserna som ska rensas, i dagar.</td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Ange maximal storlek för inkorgen {#setting-the-maximum-size-of-the-inbox}
 
-Du kan ange den maximala storleken på inkorgen genom att konfigurera **Adobe Granite Workflow Service**, använda [webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) eller [lägga till en OSGi-konfiguration i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). I följande tabell beskrivs egenskapen som du konfigurerar för båda metoderna.
+Du kan ange den största tillåtna storleken på inkorgen genom att konfigurera arbetsflödestjänsten **för** Adobe Granite med hjälp av [webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) eller [lägga till en OSGi-konfiguration i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). I följande tabell beskrivs egenskapen som du konfigurerar för båda metoderna.
 
 >[!NOTE]
 >
