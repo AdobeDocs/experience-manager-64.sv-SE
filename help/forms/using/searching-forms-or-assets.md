@@ -1,8 +1,8 @@
 ---
 title: Söka efter formulär och resurser
 seo-title: Söka efter formulär och resurser
-description: Du kan söka efter formulär och resurser i din AEM-instans med hjälp av AEM-sökning. Med grundläggande och avancerad sökning kan du snabbt hitta dina resurser.
-seo-description: Du kan söka efter formulär och resurser i din AEM-instans med hjälp av AEM-sökning. Med grundläggande och avancerad sökning kan du snabbt hitta dina resurser.
+description: Du kan söka efter formulär och resurser i AEM med AEM. Med grundläggande och avancerad sökning kan du snabbt hitta dina resurser.
+seo-description: Du kan söka efter formulär och resurser i AEM med AEM. Med grundläggande och avancerad sökning kan du snabbt hitta dina resurser.
 uuid: db6970aa-910a-4190-9790-9ffbbdc8adcc
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,6 +10,9 @@ topic-tags: forms-manager
 discoiquuid: f7f19679-cfc2-4ac0-9a26-685fad09276f
 translation-type: tm+mt
 source-git-commit: db4d19e3af11f04369fc7f6a7c13377962f0650a
+workflow-type: tm+mt
+source-wordcount: '713'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ Klicka på ![aem6forms_search](assets/aem6forms_search.png)för att visa eller d
 
 ## Grundläggande sökning {#basic-search}
 
-En grundläggande sökning är standardsökningen, som körs utan att du behöver ange några filter. En fulltextsökning av metadataegenskaper utförs av AEM Forms.
+En grundläggande sökning är standardsökningen, som körs utan att du behöver ange några filter. En textsökning av metadataegenskaper utförs av AEM Forms.
 
 Om du vill utföra en grundläggande sökning anger du sökfrågan i textfältet och trycker på Retur. Du kan också ange jokertecknet (&amp;ast;) så att det matchar ett valfritt antal tecken.
 
@@ -45,7 +48,7 @@ Observera följande om grundsökningen:
 
 Förutom frågan kan du i sökvillkoren ange vissa sökparametrar som gör den grundläggande sökningen effektivare och mer fokuserad.
 
-![Sökfält och parametrar eller filter för AEM-formulär och resurssökning](assets/search_forms_assets.png)
+![Sökfält och parametrar eller filter AEM formulär- och resurssökning](assets/search_forms_assets.png)
 
 ### Resurssökväg {#asset-path}
 
