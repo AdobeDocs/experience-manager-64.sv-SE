@@ -15,9 +15,9 @@ ht-degree: 3%
 
 Adobe Experience Manager Assets innehåller en uppsättning standardarbetsflöden och mediehanterare för att bearbeta resurser. Ett arbetsflöde definierar en typisk resurshanterings- och bearbetningsuppgift och delegerar sedan de specifika åtgärderna till mediehanterarna, till exempel generering av miniatyrer eller metadataextrahering.
 
-Ett arbetsflöde kan definieras som körs automatiskt när en resurs av en viss typ eller ett visst format överförs till servern. Bearbetningsstegen definieras som en serie mediehanterare för AEM Resurser. AEM innehåller vissa [inbyggda hanterare,](#default-media-handlers) och ytterligare kan antingen [anpassas](#creating-a-new-media-handler) eller definieras genom att delegera processen till ett [kommandoradsverktyg](#command-line-based-media-handler).
+Ett arbetsflöde kan definieras som körs automatiskt när en resurs av en viss typ eller ett visst format överförs till servern. Bearbetningsstegen definieras som en serie AEM Assets mediehanterare. AEM innehåller vissa [inbyggda hanterare,](#default-media-handlers) och ytterligare kan antingen [anpassas](#creating-a-new-media-handler) eller definieras genom att delegera processen till ett [kommandoradsverktyg](#command-line-based-media-handler).
 
-Mediehanterare är tjänster i AEM Resurser som utför specifika åtgärder på resurser. När till exempel en MP3-ljudfil överförs till AEM utlöses en MP3-hanterare som extraherar metadata och skapar en miniatyrbild. Mediehanterare används vanligtvis i kombination med arbetsflöden. De vanligaste MIME-typerna stöds i AEM. Specifika uppgifter kan utföras på resurser genom att antingen utöka/skapa arbetsflöden, utöka/skapa mediehanterare eller inaktivera/aktivera mediehanterare.
+Mediehanterare är tjänster i AEM Assets som utför specifika åtgärder för resurser. När till exempel en MP3-ljudfil överförs till AEM utlöses en MP3-hanterare som extraherar metadata och skapar en miniatyrbild. Mediehanterare används vanligtvis i kombination med arbetsflöden. De flesta vanliga MIME-typer stöds i AEM. Specifika uppgifter kan utföras på resurser genom att antingen utöka/skapa arbetsflöden, utöka/skapa mediehanterare eller inaktivera/aktivera mediehanterare.
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ Mediehanterare är tjänster i AEM Resurser som utför specifika åtgärder på 
 
 ## Standardmediehanterare {#default-media-handlers}
 
-Följande mediehanterare är tillgängliga i AEM Resurser och hanterar de vanligaste MIME-typerna:
+Följande mediehanterare är tillgängliga i AEM Assets och hanterar de vanligaste MIME-typerna:
 
 | Hanterarnamn | Tjänstnamn (i systemkonsolen) | MIME-typer som stöds |
 |---|---|---|
@@ -59,7 +59,7 @@ Det går att visa de aktiva mediehanterarna:
 
 Mediehanterare är tjänster som vanligtvis används i kombination med arbetsflöden.
 
-AEM har vissa standardarbetsflöden för att bearbeta resurser. Om du vill visa dem öppnar du arbetsflödeskonsolen och klickar på **[!UICONTROL Models]** fliken: de arbetsflödesrubriker som börjar med AEM Assets är de resursspecifika.
+AEM har vissa standardarbetsflöden för att bearbeta resurser. Om du vill visa dem öppnar du arbetsflödeskonsolen och klickar på **[!UICONTROL Models]** fliken: de arbetsflödesrubriker som börjar med AEM Assets är resursspecifika.
 
 Befintliga arbetsflöden kan utökas och nya kan skapas för att bearbeta resurser enligt specifika krav.
 
@@ -129,7 +129,7 @@ Gör så här:
 
 Se [Utvecklingsverktyg](../sites-developing/dev-tools.md) för att installera och konfigurera Eclipse med en Maven-plugin och för att ställa in beroenden som behövs för Maven-projektet.
 
-När du har utfört följande procedur och överför en textfil till AEM, extraheras filens metadata och två miniatyrer med vattenstämpel genereras.
+När du har utfört följande procedur och överför en textfil till AEM, extraheras filens metadata och två miniatyrbilder med vattenstämpel genereras.
 
 1. Skapa `myBundle` Maven-projekt i Eclipse:
 
@@ -140,8 +140,8 @@ När du har utfört följande procedur och överför en textfil till AEM, extrah
 
       * Grupp-ID: com.day.cq5.myhandler
       * Artefakt-ID: myBundle
-      * Namn: Mitt AEM-paket
-      * Beskrivning: Detta är mitt AEM-paket
+      * Namn: Mitt AEM
+      * Beskrivning: Det här är mitt AEM paket
    1. Klicka på **[!UICONTROL Finish]**.
 
 
@@ -435,9 +435,9 @@ När du har utfört följande procedur och överför en textfil till AEM, extrah
 
 ## Kommandoradsbaserad mediehanterare {#command-line-based-media-handler}
 
-Med AEM kan du köra valfritt kommandoradsverktyg i ett arbetsflöde för att konvertera resurser (till exempel ImageMagick) och lägga till den nya återgivningen i resursen. Du behöver bara installera kommandoradsverktyget på den disk där AEM-servern finns och lägga till och konfigurera ett processsteg i arbetsflödet. Den anropade processen, som kallas `CommandLineProcess`, gör det även möjligt att filtrera efter specifika MIME-typer och skapa flera miniatyrbilder baserat på den nya återgivningen.
+Med AEM kan du köra valfritt kommandoradsverktyg i ett arbetsflöde för att konvertera resurser (till exempel ImageMagick) och lägga till den nya återgivningen i resursen. Du behöver bara installera kommandoradsverktyget på den disk som är värd för AEM och lägga till och konfigurera ett processteg i arbetsflödet. Den anropade processen, som kallas `CommandLineProcess`, gör det även möjligt att filtrera efter specifika MIME-typer och skapa flera miniatyrbilder baserat på den nya återgivningen.
 
-Följande konverteringar kan automatiskt köras och lagras i AEM Resurser:
+Följande konverteringar kan köras och lagras automatiskt i AEM Assets:
 
 * EPS- och AI-omvandling med [ImageMagick](https://www.imagemagick.org/script/index.php) och [Ghostscript](https://www.ghostscript.com/)
 * FLV-videotranskodning med [FFmpeg](https://ffmpeg.org/)
@@ -451,18 +451,18 @@ Följande konverteringar kan automatiskt köras och lagras i AEM Resurser:
 Processen `CommandLineProcess` utför följande åtgärder i den ordning de anges:
 
 * Filtrerar filen enligt specifika MIME-typer, om det anges.
-* Skapar en tillfällig katalog på den disk som är värd för AEM-servern.
+* Skapar en tillfällig katalog på den disk som är värd för AEM.
 * Direktuppspelar originalfilen till den tillfälliga katalogen.
 * Kör det kommando som definieras av argumenten i steget. Kommandot körs i den tillfälliga katalogen med behörigheten för den användare som kör AEM.
-* Flyttar tillbaka resultatet till AEM-serverns återgivningsmapp.
+* Flyttar tillbaka resultatet till återgivningsmappen på AEM.
 * Tar bort den tillfälliga katalogen.
 * Skapar miniatyrbilder baserade på dessa återgivningar, om de anges. Miniatyrbildernas antal och mått definieras av stegets argument.
 
 ### Ett exempel med ImageMagick {#an-example-using-imagemagick}
 
-I följande exempel visas hur du ställer in kommandoradsprocessteget så att varje gång en resurs med mime-type gif eller tiff läggs till i /content/dam på AEM-servern skapas en vänd bild av originalet tillsammans med tre ytterligare miniatyrbilder (140x100, 48x48 och 10x250).
+I följande exempel visas hur du ställer in kommandoradsprocesssteget så att varje gång en resurs med mime-type gif eller tiff läggs till i /content/dam på AEM skapas en vänd bild av originalet tillsammans med tre ytterligare miniatyrbilder (140x100, 48x48 och 10x250).
 
-Använd ImageMagick för att göra detta. Installera ImageMagick på disken som är värd för AEM-servern:
+Använd ImageMagick för att göra detta. Installera ImageMagick på den disk där AEM finns:
 
 1. Installera ImageMagick. Mer information finns i dokumentationen [till](https://www.imagemagick.org/script/download.php) ImageMagick.
 1. Konfigurera verktyget så att du kan köra konverteringen på kommandoraden.
@@ -504,7 +504,7 @@ This section describes how to set the **[!UICONTROL Process Arguments]** of the 
 | tn:&lt;width>:&lt;height> | Valfritt argument. Processen skapar en miniatyrbild med de dimensioner som definieras i argumentet. <br>Flera miniatyrbilder kan definieras. |
 | cmd: &lt;kommando> | Definierar det kommando som ska köras. Syntaxen beror på kommandoradsverktyget. Endast ett kommando kan definieras. <br>Följande variabler kan användas för att skapa kommandot:<br>`${filename}`: indatafilens namn, till exempel original.jpg <br> `${file}`: den fullständiga sökvägen till indatafilen, till exempel /tmp/cqdam0816.tmp/original.jpg <br> `${directory}`: indatafilens katalog, till exempel /tmp/cqdam0816.tmp <br>`${basename}`: namnet på indatafilen utan filnamnstillägg, till exempel original <br>`${extension}`: tillägg för indatafilen, till exempel jpg |
 
-Om till exempel ImageMagick är installerat på den disk som är värd för AEM-servern och du skapar ett processsteg med **CommandLineProcess** som implementering och följande värden som **Processargument**:
+Om till exempel ImageMagick är installerat på den disk som är värd för AEM och du skapar ett processsteg med **CommandLineProcess** som implementering och följande värden som **Processargument**:
 
 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
