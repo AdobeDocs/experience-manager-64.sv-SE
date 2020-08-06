@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: d211d8b0-e75f-49c3-808d-5d0e26ad3a6b
 translation-type: tm+mt
 source-git-commit: 4466161992d877b17d43fe73e3298dd6252733c0
+workflow-type: tm+mt
+source-wordcount: '884'
+ht-degree: 0%
 
 ---
 
@@ -20,11 +23,11 @@ Lär dig hur du administrerar användarkonton och tjänster som, trots att de kr
 
 I allmänhet använder inte utvecklare produktionsmiljön för att bygga och testa applikationer. Därför måste du administrera användarkonton och tjänster som, trots att de krävs i en privat utvecklingsmiljö, inte krävs i en produktionsmiljö.
 
-I den här artikeln beskrivs metoder för att minska den totala attackytan med hjälp av administrationsalternativ som tillhandahålls av AEM Forms på JEE.
+I den här artikeln beskrivs metoder för att minska den totala attackytan med hjälp av administrationsalternativ som finns i AEM Forms på JEE.
 
 ## Inaktiverar icke nödvändig fjärråtkomst till tjänster {#disabling-non-essential-remote-access-to-services}
 
-När AEM Forms på JEE har installerats och konfigurerats finns många tjänster tillgängliga för fjärranrop via SOAP och Enterprise JavaBeans™ (EJB). Termen fjärranrop avser i detta fall alla anropare som har nätverksåtkomst till SOAP-, EJB- eller AMF-portarna (Action Message Format) för programservern.
+När AEM Forms har installerats och konfigurerats på JEE är många tjänster tillgängliga för fjärranrop via SOAP och Enterprise JavaBeans™ (EJB). Termen fjärranrop avser i det här fallet alla anropare som har nätverksåtkomst till SOAP-, EJB- eller AMF-portarna (Action Message Format) för programservern.
 
 Även om AEM Forms på JEE-tjänster kräver att giltiga autentiseringsuppgifter skickas för en auktoriserad anropare, bör du endast tillåta fjärråtkomst till de tjänster som du behöver för att kunna fjärråtkomst. För att uppnå begränsad tillgänglighet bör du minska uppsättningen fjärranslutna tjänster till minsta möjliga för ett fungerande system och sedan aktivera fjärranrop för de ytterligare tjänster du behöver.
 
@@ -99,13 +102,14 @@ Vissa formulärservertjänster tillåter oautentiserade (anonyma) anrop för vis
    * WorkspacePropertyService
    * OutputService
    * FormsService
+
    Om du tänker visa någon av dessa tjänster för fjärranrop bör du även inaktivera anonym åtkomst för dessa tjänster. Annars kan anropare med nätverksåtkomst till den här tjänsten anropa tjänsten utan att skicka giltiga autentiseringsuppgifter.
 
    Anonym åtkomst bör inaktiveras för alla tjänster som inte behövs. Många interna tjänster kräver att anonym autentisering är aktiverat eftersom de måste anropas av en potentiell användare i systemet utan att vara förauktoriserade.
 
 ## Ändra standardtimeout för global {#changing-the-default-global-time-out}
 
-Slutanvändare kan autentisera till AEM Forms via Workbench, AEM Forms webbprogram eller anpassade program som anropar AEM Forms servertjänster. En global timeout-inställning används för att ange hur lång tid dessa användare kan interagera med AEM Forms (med hjälp av en SAML-baserad försäkran) innan de tvingas att autentisera igen. Standardinställningen är två timmar. I en produktionsmiljö måste tiden minskas till det minsta antal minuter som tillåts.
+Slutanvändare kan autentisera till AEM Forms via Workbench, AEM Forms webbprogram eller anpassade program som anropar AEM Forms servertjänster. En global timeout-inställning används för att ange hur lång tid dessa användare kan interagera med AEM Forms (med en SAML-baserad försäkran) innan de tvingas autentisera igen. Standardinställningen är två timmar. I en produktionsmiljö måste tiden minskas till det minsta antal minuter som tillåts.
 
 ### Minimera tidsgränsen för omautentisering {#minimize-reauthentication-time-limit}
 
