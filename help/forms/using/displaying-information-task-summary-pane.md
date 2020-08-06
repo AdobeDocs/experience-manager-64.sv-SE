@@ -11,15 +11,18 @@ topic-tags: forms-workspace
 discoiquuid: 90d0f584-b598-4b21-85d7-31da5f13d404
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '305'
+ht-degree: 0%
 
 ---
 
 
 # Visa information i åtgärdssammanfattningsrutan {#displaying-information-in-the-task-summary-pane}
 
-När du öppnar en uppgift på arbetsytan i AEM Forms kan en åtgärdssammanfattning visa en sammanfattning av uppgiften. Denna ytterligare och relevanta information för en uppgift tillför mer värde för slutanvändaren av arbetsytan i AEM Forms.
+När du öppnar en uppgift på arbetsytan i AEM Forms kan en åtgärdssammanfattning visa en sammanfattning av uppgiften. Denna ytterligare och relevanta information för en uppgift ger mer värde för slutanvändaren av AEM Forms arbetsyta.
 
-Med arbetsytan i AEM Forms kan du visa en webbsida som du väljer i rutan Sammanfattning av uppgifter. En process kan skapas för att visa en åtgärdssammanfattningsruta med Workbench.
+På arbetsytan i AEM Forms kan du visa en webbsida som du väljer i rutan Sammanfattning av uppgifter. En process kan skapas för att visa en åtgärdssammanfattningsruta med Workbench.
 
 1. Skapa en process för tilldelning av uppgift i Workbench. Mer information om åtgärden Tilldela uppgift finns i servicereferensavsnittet i hjälpen [för](https://help.adobe.com/en_US/AEMForms/6.1/WorkbenchHelp/)Workbench.
 
@@ -49,4 +52,4 @@ Med arbetsytan i AEM Forms kan du visa en webbsida som du väljer i rutan Samman
    ```
 
    * Ange värdet för uppgiftssammanfattnings-URL:en som `/lc/content/SampleSummary.html` i steget Tilldela uppgift.
-   * När den uppgift som är associerad med det här steget Tilldela uppgift öppnas i arbetsytan i AEM Forms, kommer `html.esp` vid `/apps/SampleSummary` att renderas i åtgärdssammanfattningsfönstret.
+   * När den uppgift som är associerad med det här steget Tilldela uppgift öppnas på arbetsytan i AEM Forms, `html.esp` återges den `/apps/SampleSummary` i åtgärdssammanfattningsrutan.
