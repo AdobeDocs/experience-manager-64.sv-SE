@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: f8991416-995b-4160-a705-d131e78089ee
 translation-type: tm+mt
 source-git-commit: dda8156729aa46dd6cfd779bca120b165ccc980b
+workflow-type: tm+mt
+source-wordcount: '3509'
+ht-degree: 0%
 
 ---
 
@@ -72,7 +75,7 @@ Om du vill kunna importera HTML-koden måste du lägga till en arbetsytans div i
 
 Arbetsytans div är en html- **div** med `id="cqcanvas"` som måste infogas i HTML- `<body>` taggen och måste kapsla in innehållet som ska konverteras.
 
-Ett exempel på HTML-koden för landningssidan när arbetsytans div har lagts till är följande:
+Ett exempel på HTML-koden för landningssidan efter att arbetsytans div lagts till är följande:
 
 ```xml
 <!doctype html>
@@ -92,17 +95,17 @@ Ett exempel på HTML-koden för landningssidan när arbetsytans div har lagts ti
 
 ### Förbereda HTML-koden för att inkludera redigerbara AEM-komponenter {#preparing-the-html-to-include-editable-aem-components}
 
-När du importerar en landningssida kan du välja att importera sidan i befintligt skick, vilket innebär att du inte kan redigera något av de importerade objekten i AEM när du har importerat landningssidan (du kan fortfarande lägga till ytterligare AEM-komponenter på sidan).
+När du importerar en landningssida kan du välja att importera sidan i befintligt skick, vilket innebär att när landningssidan har importerats kan du inte redigera något av de importerade objekten i AEM (du kan fortfarande lägga till ytterligare AEM på sidan).
 
-Innan du importerar landningssidan kanske du vill konvertera vissa delar av landningssidan så att de är redigerbara i AEM-komponenter. På så sätt kan du snabbt redigera delar av landningssidan även efter det att landningssidans design har importerats.
+Innan du importerar landningssidan kanske du vill konvertera vissa delar av landningssidan så att de är redigerbara AEM. På så sätt kan du snabbt redigera delar av landningssidan även efter det att landningssidans design har importerats.
 
 Det gör du genom att lägga `data-cq-component` till en lämplig komponent i den HTML-fil som du importerar.
 
-I följande avsnitt beskrivs hur du redigerar HTML-filen så att du konverterar vissa delar av landningssidorna till olika redigerbara AEM-komponenter. Komponenter beskrivs i detalj i Komponenter för [landningssidor](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md).
+I följande avsnitt beskrivs hur du redigerar HTML-filen så att du konverterar vissa delar av landningssidorna till olika redigerbara AEM. Komponenter beskrivs i detalj i Komponenter för [landningssidor](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md).
 
 >[!NOTE]
 >
->HTML-kod som konverterar delar av landningssidan till AEM-komponenter har både lång form och en kortskriftsdeklaration. Båda beskrivs för varje komponent.
+>HTML-kod som konverterar delar av landningssidan till AEM komponenter har både en lång form och en förkortad taggdeklaration. Båda beskrivs för varje komponent.
 
 ### Begränsningar {#limitations}
 
@@ -140,7 +143,7 @@ HTML-kod som infogar en textkomponent ( `foundation/components/text`) i HTML-des
 
 Om du tar med ovanstående kod i HTML-koden gör du följande:
 
-* Skapar en redigerbar AEM-textkomponent ( `sling:resourceType=foundation/components/text`) på landningssidan som skapas när designpaketet har importerats.
+* Skapar en redigerbar AEM textkomponent ( `sling:resourceType=foundation/components/text`) på landningssidan som skapas efter att designpaketet har importerats.
 * Ställer in egenskapen `text` för den skapade textkomponenten på HTML-koden som finns i `div`.
 
 **Kortfattad deklaration** av komponenttagg:
@@ -180,7 +183,7 @@ HTML-kod som infogar en titelkomponent ( `wcm/landingpage/components/title`) i H
 
 Om du tar med ovanstående kod i HTML-koden gör du följande:
 
-* Skapar en redigerbar AEM-titelkomponent ( `sling:resourceType=wcm/landingpage/components/title`) på landningssidan som skapas när designpaketet har importerats.
+* Skapar en redigerbar AEM title-komponent ( `sling:resourceType=wcm/landingpage/components/title`) på landningssidan som skapas när designpaketet har importerats.
 * Ställer in egenskapen `jcr:title` för den skapade titelkomponenten på texten inom rubriktaggen som är omsluten av div.
 * Anger egenskapen `type` till rubriktaggen, i det här fallet `h1`.
 
@@ -204,7 +207,7 @@ HTML-kod som infogar en bildkomponent (grund/komponenter/bild) i HTML-koden i de
 
 Om du tar med ovanstående kod i HTML-koden gör du följande:
 
-* Skapar en redigerbar AEM-bildkomponent ( `sling:resourceType=foundation/components/image`) på landningssidan som skapas när designpaketet har importerats.
+* Skapar en redigerbar AEM bildkomponent ( `sling:resourceType=foundation/components/image`) på landningssidan som skapas när designpaketet har importerats.
 * Ställer in den skapade bildkomponentens `fileReference` egenskap på den sökväg till vilken bilden som anges i src-attributet importeras.
 * Ställer in egenskapen på värdet för alt-attributet i img-taggen. `alt`
 * Anger värdet för attributet title i img-taggen för egenskapen. `title`
@@ -316,7 +319,7 @@ Ett lead-formulär är ett formulär som används för att samla in profilinform
 
 **Funktioner som stöds**
 
-* Fördefinierade lead-fält - förnamn, efternamn, adress, dob, kön, about, userId, emailId, submit-knapp är tillgängliga i sidosparken. Dra-och-släpp den komponent du behöver i ditt lead-formulär.
+* Fördefinierade lead-fält - förnamn, efternamn, adress, dob, kön, about, userId, emailId, submit-knapp är tillgängliga i sidosparken. Dra-och-släpp den nödvändiga komponenten i ditt lead-formulär.
 * Med hjälp av dessa komponenter kan författaren utforma ett fristående lead-formulär, motsvarar dessa fält formulärfält lead. I det fristående eller importerade ZIP-programmet kan användaren lägga till extra fält med cq:form eller cta lead-formulärfält, namnge och utforma dem enligt kraven.
 * Mappa lead-formulärfält med specifika fördefinierade namn för CTA-lead-formulär, till exempel firstName för förnamn i lead-formulär och så vidare.
 * Fält som inte är mappade till lead-formulär mappas till cq:form components - text, radio, checkbox, dropdown, hidden, password.
@@ -362,7 +365,7 @@ HTML-tagg om du vill ta med en grafisk länkkomponent i den importerade zippen. 
 
 ### Parsys {#parsys}
 
-AEM-parsyskomponenten är en behållarkomponent som kan innehålla andra AEM-komponenter. Det går att lägga till en parsyskomponent i den importerade HTML-koden. Detta gör att användaren kan lägga till/ta bort redigerbara AEM-komponenter på landningssidan även efter att den har importerats.
+AEM är en behållarkomponent som kan innehålla andra AEM. Det går att lägga till en parsyskomponent i den importerade HTML-koden. Detta gör att användaren kan lägga till/ta bort redigerbara AEM på landningssidan även efter att den har importerats.
 
 Styckesystemet ger användarna möjlighet att lägga till komponenter med hjälp av sidbrytaren.
 
@@ -377,7 +380,7 @@ HTML-kod som infogar en parsys-komponent ( `foundation/components/parsys`) i HTM
 
 Om du tar med ovanstående kod i HTML-koden gör du följande:
 
-* Infogar en AEM-parsyskomponent (grund/komponenter/parsys) på landningssidan som skapas efter att designpaketet har importerats.
+* Infogar en AEM parsys-komponent (grund/komponenter/parsys) på landningssidan som skapas när designpaketet har importerats.
 * Initierar sidsparken med standardkomponenter. Du kan lägga till nya komponenter på landningssidan genom att dra komponenter från sidosparken till den parsytiska komponenten.
 * Två titelkomponenter ingår också i parsytan.
 
@@ -405,7 +408,7 @@ html-koden som infogar en målkomponent och skapar också olika upplevelser i en
 
 ## Fler importalternativ {#additional-importing-options}
 
-Förutom att ange om de importerade komponenterna är redigerbara AEM-komponenter, kan du även konfigurera följande innan du importerar designpaketet:
+Förutom att ange om de importerade komponenterna är redigerbara AEM kan du konfigurera följande innan du importerar designpaketet:
 
 * Ange sidegenskaper genom att extrahera metadata som definierats i den importerade HTML-koden.
 * Ange teckenuppsättningens kodning i HTML-koden.
@@ -437,7 +440,7 @@ Om ingen kodning anges i den importerade HTML-koden är standardkodningen som st
 
 Mallen Tom landningssida kan överlagras genom att en ny skapas på: `/apps/<appName>/designimporter/templates/<templateName>`
 
-Steg för att skapa en ny mall i AEM beskrivs [här](/help/sites-developing/templates.md).
+Hur du skapar en ny mall i AEM beskrivs [här](/help/sites-developing/templates.md).
 
 ### Referera en komponent från landningssidan {#referring-a-component-from-landing-page}
 
@@ -463,7 +466,7 @@ Du bör inte använda CSS-väljare som liknar följande för element som är mar
 
 Detta beror på att ytterligare HTML-element som &lt;div>-taggen läggs till i den genererade HTML-koden efter importen.
 
-* Skript som förlitar sig på en struktur som liknar den ovan rekommenderas inte heller för element som markerats för konvertering till AEM-komponenter.
+* Skript som använder en struktur som liknar den ovan rekommenderas inte heller för element som är markerade för konvertering till AEM.
 * Du bör inte använda format i märkordstaggar för komponentkonvertering som &lt;div data-cq-component=&quot;&amp;ast;&quot;>.
 * Designlayouten bör följa vedertagna standarder från HTML5-mallsidan. Läs mer om: [https://html5boilerplate.com/](https://html5boilerplate.com/).
 
@@ -508,7 +511,7 @@ Tabellen nedan beskriver kortfattat egenskaperna:
   <tr> 
    <td>Inmatningsförprocessor för landningssida</td> 
    <td>Sökmönster </td> 
-   <td>Det mönster som ska sökas efter i arkivpostens innehåll. Det reguljära uttrycket matchas med posten content line for line. Vid matchning ersätts den matchande texten med det angivna ersättningsmönstret.<br /> <br /> Se anmärkningen nedan om aktuella begränsningar för preprocessorer för inmatning på startsidan.</td> 
+   <td>Det mönster som ska sökas efter i arkivpostens innehåll. Det reguljära uttrycket matchas med posten content line for line. Vid matchning ersätts den matchande texten med det angivna ersättningsmönstret.<br /> <br /> Se anmärkningen nedan angående aktuella begränsningar för preprocessor för inmatning av startsida.</td> 
   </tr> 
   <tr> 
    <td> </td> 
@@ -585,7 +588,7 @@ med en CSS tillämpad på klassen `box` enligt följande:
 { width: 450px; padding:10px; border: 1px #C5DBE7 solid; margin: 0px auto 0 auto; background-image:url(assets/box.gif); background-repeat:repeat-x,y; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#6D6D6D; }
 ```
 
-När sedan `box img` används i designimportverktyget verkar den resulterande landningssidan inte ha bevarat formateringen. För att undvika detta bör du vara medveten om att AEM lägger till div-taggar i CSS och skriver om koden i enlighet med detta. Annars är vissa CSS-regler ogiltiga.
+När sedan `box img` används i designimportverktyget verkar den resulterande landningssidan inte ha bevarat formateringen. För att undvika detta bör du vara medveten om att AEM lägger till div-taggar i CSS och skriver om koden därefter. Annars är vissa CSS-regler ogiltiga.
 
 ```xml
 .box img
