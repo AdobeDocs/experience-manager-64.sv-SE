@@ -1,6 +1,6 @@
 ---
-title: Taggning
-seo-title: Taggning
+title: Taggar
+seo-title: Taggar
 description: Taggar gör att innehållet kan kategoriseras och struktureras
 seo-description: Taggar gör att innehållet kan kategoriseras och struktureras
 uuid: fbbce525-ebc4-484b-bec9-2d68314cf15a
@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: 2d0835e0-5602-49a9-b9ad-636ce5a8ad2a
 translation-type: tm+mt
 source-git-commit: 5f84641d87b88532f0fa0d92fada4e8cca3d9684
+workflow-type: tm+mt
+source-wordcount: '109'
+ht-degree: 2%
 
 ---
 
 
-# Taggning{#tagging}
+# Taggar{#tagging}
 
 Taggning gör att innehållet kan kategoriseras och struktureras. Taggar kan klassificeras med ett namnutrymme och en taxonomi.
 
@@ -26,4 +29,4 @@ Följande information är tillgänglig för utvecklare:
 
 * [AEM Tagging Framework](/help/sites-developing/framework.md) - En beskrivning av de noder och egenskaper som används för taggning
 
-* [Bygga taggar i ett AEM-program](/help/sites-developing/building.md) - En beskrivning av de API:er som fungerar med taggningsramverket från klient- och serversidans kod
+* [Bygga taggar i ett AEM-program](/help/sites-developing/building.md) - en beskrivning av de API:er som fungerar med taggningsramverket från klientsidan och serverkod
