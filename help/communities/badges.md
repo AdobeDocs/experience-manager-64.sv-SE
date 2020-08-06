@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 4194278f-5127-4105-b181-60961c7a1def
 translation-type: tm+mt
 source-git-commit: 59d40b5bddc42a4ac057ef600243f396aefc926b
+workflow-type: tm+mt
+source-wordcount: '310'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +36,7 @@ För närvarande visas emblem som en medlem i communityn får eller tilldelas ti
 
 För att nå Badges-konsolen i redigeringsmiljön
 
-* Från global navigering: **[!UICONTROL Verktyg > Communities > Badges]**
+* Från global navigering: **[!UICONTROL Tools > Communities > Badges]**
 
 Den här konsolen visar de emblem som är tillgängliga för tillfället och från vilka nya emblem kan läggas till.
 
@@ -47,19 +50,19 @@ Om publiceringsmiljön är en grupp utgivare måste du konfigurera [användarsyn
 
 ![chlimage_1-243](assets/chlimage_1-243.png)
 
-* **[!UICONTROL Överför bild]**
+* **[!UICONTROL Upload Image]**
 
    (*Obligatoriskt*) En badge-bild med en rekommenderad storlek på 32 x 32 pixlar vid 72 dpi i antingen JPEG- eller PNG-format.
 
-* **[!UICONTROL Namn]**
+* **[!UICONTROL Name]**
 
    (*Obligatoriskt*) Namnet på märket. Det är standardnodnamnet `Display Name` och databasnodnamnet. Om `Name` databasen inte är ett giltigt databasnodnamn ändras det.
 
-* **[!UICONTROL Visningsnamn]**
+* **[!UICONTROL Display Name]**
 
    (*Valfritt*) Namnet som ska visas för märket i användargränssnittet. Standard är den oförändrade text som anges för `Name`.
 
-* **[!UICONTROL Beskrivning]**
+* **[!UICONTROL Description]**
 
    (*Valfritt*) En beskrivning av märket.
 
