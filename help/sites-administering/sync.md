@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 707b150b-7759-437f-9150-9f4784856754
 translation-type: tm+mt
 source-git-commit: 39c9ca8fb7b73d74904a56d9e6a5418950a8c98b
+workflow-type: tm+mt
+source-wordcount: '2502'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +30,7 @@ De flesta användardata som skapas i redigeringsmiljön är avsedda att finnas k
 
 Registrering och ändringar som görs på en publiceringsinstans måste synkroniseras med andra publiceringsinstanser för att de ska ha tillgång till samma användardata.
 
-Från och med AEM 6.1 synkroniseras användardata automatiskt mellan publiceringsinstanserna i servergruppen när användarsynkronisering är aktiverad och skapas inte på författaren.
+När användarsynkronisering är aktiverat synkroniseras användardata automatiskt mellan publiceringsinstanserna i servergruppen från och med AEM 6.1 och skapas inte av författaren.
 
 ## Sling Distribution {#sling-distribution}
 
@@ -73,8 +76,8 @@ Följande steg är nödvändiga för att aktivera användarsynkronisering, följ
 
 1. Kontrollera att den senaste koden har installerats:
 
-* [Uppdateringar om AEM-plattformar](https://helpx.adobe.com/experience-manager/kb/aem62-available-hotfixes.html)
-* [Uppdateringar för AEM Communities](/help/communities/deploy-communities.md#latest-releases)
+* [AEM plattformsuppdateringar](https://helpx.adobe.com/experience-manager/kb/aem62-available-hotfixes.html)
+* [AEM Communities-uppdateringar](/help/communities/deploy-communities.md#latest-releases)
 
 ### 1. Apache Sling Distribution Agent - Sync Agents Factory {#apache-sling-distribution-agent-sync-agents-factory}
 
@@ -125,13 +128,14 @@ Följande steg är nödvändiga för att aktivera användarsynkronisering, följ
 >
 >* Standardanvändaren som är tilldelad är **`admin`**.
 >* Använd inte `*communities-user-admin *user*.*`
+
 >
 
 
 
 #### Lägga till ACL {#addacls}
 
-* åtkomst till CRXDE Lite
+* access CRXDE Lite
 
    * till exempel [http://localhost:4503/crx/de](http://localhost:4503/crx/de)
 
@@ -154,7 +158,7 @@ Se även
 * [Behörighetshantering](/help/sites-administering/user-group-ac-admin.md#access-right-management)
 * Felsökningsavsnittet [Ändra åtgärdsundantag under](#modify-operation-exception-during-response-processing)svarsbearbetning.
 
-### 3. Adobe Granite Distribution - Krypterad lösenordsleverantör {#adobegraniteencpasswrd}
+### 3. Adobe Granite-distribution - krypterad lösenordsleverantör {#adobegraniteencpasswrd}
 
 **Konfigurera behörigheter**
 
@@ -283,7 +287,7 @@ Standardkonfigurationen är för en enda publiceringsinstans. Eftersom orsaken t
 
 * select `Save`
 
-### 8. AEM Communities User Sync Listener {#aem-communities-user-sync-listener}
+### 8. AEM Communities Sync Listener {#aem-communities-user-sync-listener}
 
 **(Valfritt) Synkronisera ytterligare JCR-noder**
 
@@ -382,7 +386,7 @@ Upprepa dessa steg tills alla publiceringsinstanser har ett unikt Sling ID.
 
 För att uppdateringarna ska kunna synkroniseras på rätt sätt måste du ändra valvpaketets byggare för användarsynkronisering:
 
-* på varje AEM-publiceringsinstans
+* på varje AEM publiceringsinstans
 * åtkomst till [webbkonsolen](/help/sites-deploying/configuring-osgi.md)
 
    * till exempel [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
@@ -490,7 +494,7 @@ Här följer några vyer över hur den redigerade bilden visas standardkonfigura
 
 ![chlimage_1-399](assets/chlimage_1-399.png)
 
-#### (författare) En Adobe Granite Distribution - Krypterad lösenordstransportör {#author-one-adobe-granite-distribution-encrypted-password-transport-secret-provider}
+#### (författare) One Adobe Granite Distribution - Krypterad lösenordsleverantör {#author-one-adobe-granite-distribution-encrypted-password-transport-secret-provider}
 
 ![chlimage_1-400](assets/chlimage_1-400.png)
 
@@ -498,7 +502,7 @@ Här följer några vyer över hur den redigerade bilden visas standardkonfigura
 
 ![chlimage_1-401](assets/chlimage_1-401.png)
 
-#### (publicera) En Adobe Granite Distribution - Diff Observer Factory {#publish-one-adobe-granite-distribution-diff-observer-factory}
+#### (publicera) One Adobe Granite Distribution - Diff Observer Factory {#publish-one-adobe-granite-distribution-diff-observer-factory}
 
 ![chlimage_1-402](assets/chlimage_1-402.png)
 
@@ -562,7 +566,7 @@ Se avsnitt [9. Unikt försäljnings-ID](#unique-sling-id)
 
    * [importera paketet](/help/sites-administering/package-manager.md#installing-packages)
 
-Om du vill konfigurera eller aktivera användarsynkronisering går du till steg 1: Agenten för [Apache Sling Distribution - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)
+Om du vill konfigurera eller aktivera användarsynkronisering går du till steg 1: [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)
 
 ### När en utgivare blir otillgänglig {#when-a-publisher-becomes-unavailable}
 
