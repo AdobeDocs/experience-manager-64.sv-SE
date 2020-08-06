@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: f5316a73-84e2-4a18-98c1-a384eeaa77cf
 translation-type: tm+mt
 source-git-commit: 43421a3068fdc8cc7a88c98a2e9045b54cc8f99e
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 1%
 
 ---
 
@@ -35,25 +38,25 @@ Med konsolen [för](srp-config.md) lagringskonfiguration kan du välja standardl
 
 För att nå konsolen Lagringskonfiguration i redigeringsmiljön
 
-* Från global navigering: **[!UICONTROL Verktyg > Communities > Storage Configuration]**
+* Från global navigering: **[!UICONTROL Tools > Communities > Storage Configuration]**
 
 ![chlimage_1-234](assets/chlimage_1-234.png)
 
-* Välj **[!UICONTROL JSRP (JCR Storage Resource Provider)]**
-* Välj **[!UICONTROL Skicka]**
+* Välj **[!UICONTROL JCR Storage Resource Provider (JSRP)]**
+* Välj **[!UICONTROL Submit]**
 
 ### Publicera konfigurationen {#publishing-the-configuration}
 
-När JSRP är standardkonfigurationen, kontrollerar du att den identiska konfigurationen är inställd i publiceringsmiljön:
+JSRP är standardkonfigurationen, och för att säkerställa att den identiska konfigurationen ställs in i publiceringsmiljön:
 
 * On author:
 
-   * Från global navigering: **[!UICONTROL Verktyg > Distribution > Replikering]**
-   * Välj **[!UICONTROL Aktivera träd]**
-   * **[!UICONTROL Startsökväg]**:
+   * Från global navigering: **[!UICONTROL Tools > Deployment > Replication]**
+   * Välj **[!UICONTROL Activate Tree]**
+   * **[!UICONTROL Start Path]**:
 
       * Bläddra till `/conf/global/settings/community/srpc/`
-   * Välj **[!UICONTROL Aktivera]**
+   * Välj **[!UICONTROL Activate]**
 
 
 ## Hantera användardata {#managing-user-data}
@@ -69,7 +72,7 @@ Information om *användare*, *användarprofiler* och *användargrupper* som ofta
 
 Kontrollera att JSRP har konfigurerats som standardprovider genom att kontrollera konfigurationen av lagringsalternativet. Som standard är lagringsresursprovidern JSRP.
 
-Gå till konsolen för lagringskonfiguration eller kontrollera AEM-databasen på alla författare och publicera AEM-instanser:
+Gå till konsolen för lagringskonfiguration eller kontrollera den AEM databasen för alla författare och publiceringsinstanser:
 
 * i JCR, if [/conf/global/settings/community](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
 
