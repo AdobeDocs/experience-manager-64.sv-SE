@@ -11,15 +11,18 @@ content-type: reference
 discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
 translation-type: tm+mt
 source-git-commit: 9b6c1efe1f6281892648c7b41820856d2e3fcac1
+workflow-type: tm+mt
+source-wordcount: '457'
+ht-degree: 8%
 
 ---
 
 
 # Arbeta med Dynamic Media {#working-with-dynamic-media}
 
-[Dynamic Media](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobilsajter och sociala medier. Med hjälp av en uppsättning masterresurser genererar och levererar Dynamic Media flera varianter av multimediematerial i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
+[Dynamic Media](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobilsajter och sociala medier. Med en uppsättning överordnad resurser genererar och levererar Dynamic Media flera varianter av multimediematerial i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
 
-Dynamiska medier ger interaktiva tittarupplevelser som zoomning, 360-graders rotation och video. Dynamiska medier införlivar arbetsflödena i Adobe Experience Managers lösning för digital resurshantering (Assets) för att förenkla och effektivisera hanteringen av digitala kampanjer.
+Dynamiska medier ger interaktiva tittarupplevelser som zoomning, 360-graders rotation och video. Dynamic Media innehåller arbetsflödena från Adobe Experience Manager Digital Asset Management (Assets) för att förenkla och effektivisera hanteringen av digitala kampanjer.
 
 >[!NOTE]
 >
@@ -62,7 +65,7 @@ När du klickar på en bildresurs ser resursen annorlunda ut med Dynamic Media [
 
 ### Dynamiska renderingar {#dynamic-renditions}
 
-Dynamiska renderingar som bild- och visningsförinställningar (under **[!UICONTROL Dynamisk]**) är tillgängliga när Dynamic Media är aktiverat.
+Dynamiska återgivningar som bild- och visningsinställningar (under **[!UICONTROL Dynamic]**) är tillgängliga när Dynamic Media är aktiverat.
 
 ![chlimage_1-358](assets/chlimage_1-358.png)
 
