@@ -11,6 +11,9 @@ topic-tags: deploying
 discoiquuid: 0c2b1c67-2fa4-4b2e-8512-0973177656e2
 translation-type: tm+mt
 source-git-commit: 0db56cb77628b3e81b69382a314c30b43887bde6
+workflow-type: tm+mt
+source-wordcount: '312'
+ht-degree: 0%
 
 ---
 
@@ -19,25 +22,25 @@ source-git-commit: 0db56cb77628b3e81b69382a314c30b43887bde6
 
 ## Introduktion {#introduction}
 
-Du kan hjälpa till att förbättra Adobe Marketing Cloud genom att skicka Adobe-statistik om hur du interagerar med AEM. Denna information innehåller inga data om besökarna på företagets webbplats och kommer endast att användas för att hjälpa Adobe att leverera, ge support och förbättra användarupplevelsen.
+Du kan hjälpa till att förbättra Adobe Marketing Cloud genom att skicka statistik om hur du interagerar med AEM till Adobe. Den här informationen innehåller inga data om besökarna på företagets webbplats och kommer endast att användas för att hjälpa Adobe att leverera, ge support och förbättra användarupplevelsen.
 
 Du kan välja att samla in användningsstatistik med hjälp av Touch-gränssnittet eller webbkonsolen.
 
 >[!NOTE]
 >
->Det finns olika regler för skydd av personuppgifter och integritet. inklusive t.ex. GDPR och CCPA. AEM Sites är redo att hjälpa kunderna med deras skyldigheter när det gäller dataskydd och sekretess. På den här sidan får kunderna hjälp med att välja (eller inte) av Aggregated Usage Statistics Collection.
+>Det finns olika regler för skydd av personuppgifter och integritet. inklusive t.ex. GDPR och CCPA. AEM Sites hjälper sina kunder med sina skyldigheter när det gäller skydd av personuppgifter och integritet. På den här sidan får kunderna hjälp med att välja (eller inte) av Aggregated Usage Statistics Collection.
 >
->Mer information finns även på [Adobes Sekretesscenter](https://www.adobe.com/privacy.html).
+>Mer information finns också i [Adobe:s sekretesscenter](https://www.adobe.com/privacy.html).
 
 >[!NOTE]
 >
->Du kan också när som helst avanmäla dig genom att antingen använda [webbkonsolen](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console) eller genom att inte välja avanmälningsalternativet på skärmen för AEM-avanmälan.
+>Du kan också när som helst avanmäla dig genom att antingen använda [webbkonsolen](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console) eller genom att inte välja att avanmäla dig på AEM avanmälningsskärm.
 
 ## Anmäl dig med Touch-gränssnittet {#opt-in-by-using-the-touch-ui}
 
 Första gången du startar AEM kan du välja att använda Touch-gränssnittet på följande sätt:
 
-1. På skärmen AEM Navigation (AEM-navigering) klickar du på ikonen **Inbox** (klocka).
+1. Klicka på ikonen **Inkorg** (klocka) på AEM.
 
    ![användningsstatistikNavigeringarskärm](assets/usage_statisticsnavigationscreen.png)
 
@@ -55,7 +58,7 @@ Första gången du startar AEM kan du välja att använda Touch-gränssnittet p�
 
 Du kan välja att delta (eller välja bort) med webbkonsolen på följande sätt:
 
-1. På skärmen AEM Navigation klickar du på **Tools** och sedan **Operations**.
+1. På AEM navigeringsskärm klickar du på **Verktyg** och sedan på **Åtgärder**.
 
    ![usage_statistiticsopsdashboard](assets/usage_statisticsopsdashboard.png)
 
