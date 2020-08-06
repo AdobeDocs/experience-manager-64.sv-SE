@@ -1,5 +1,5 @@
 ---
-title: PUBLICERA INTE, MEN TA INTE BORT ANPASSNING AV modeller FÖR innehållsfragment
+title: PUBLICERA INTE, MEN ANPASSA INTE DELETE-modeller FÖR innehållsfragment
 seo-title: Anpassa modeller för innehållsfragment
 description: Content Fragment Models kan anpassas och utökas.
 seo-description: Content Fragment Models kan anpassas och utökas.
@@ -10,11 +10,14 @@ discoiquuid: 208225ee-9052-4a45-9cfd-f8d27d4d70ed
 noindex: true
 translation-type: tm+mt
 source-git-commit: 3bdff366a0d455b405c1f9de371ced98d25ae2e2
+workflow-type: tm+mt
+source-wordcount: '598'
+ht-degree: 0%
 
 ---
 
 
-# PUBLICERA INTE, MEN TA INTE BORT ANPASSNING AV modeller FÖR innehållsfragment{#do-not-publish-but-do-not-delete-customizing-content-fragment-models}
+# PUBLICERA INTE, MEN ANPASSA INTE DELETE-modeller FÖR innehållsfragment{#do-not-publish-but-do-not-delete-customizing-content-fragment-models}
 
 Redigeraren för innehållsfragmentmodellen är en guide som baseras på `Formbuilder`, ärvd från:
 
@@ -26,7 +29,8 @@ Komponenten har de verktyg som krävs för att återge gränssnittet för dra oc
 
 Modeller sparas och skapas under `/conf`, under en mapp som har egenskapen [](/help/assets/content-fragments-models.md#enable-content-fragment-models) Content Fragment Models aktiverad. Den här inställningen finns även i **Konfigurationsegenskaper** som du når via **Konfigurationsläsaren**.
 
-1. Navigera till webbläsaren via **Verktyg**, **Allmänt**, **Konfigurationsläsaren**, till exempel `http://localhost:4502/libs/granite/configurations/content/view.html/conf`
+1. Navigera till webbläsaren via **Verktyg**, **Allmänt**, **Konfigurationsläsaren**, till exempel 
+`http://localhost:4502/libs/granite/configurations/content/view.html/conf`
 
 1. Välj lämplig konfiguration i webbläsaren och sedan **Egenskaper** i verktygsfältet.
 
@@ -59,7 +63,7 @@ Guiden skapar en post med den här strukturen:
    * innehåller informationsegenskaper om modellen, t.ex. `jcr:title`, `lastModified`, `lastModifiedBy`
    * har vanligtvis `sling:ResourceType` formen av `dam/cfm/models/console/components/data/entity/default`,
 
-      med `sling:ResourceSuperType``dam/cfm/models/console/components/data/entity`
+      med `sling:ResourceSuperType` `dam/cfm/models/console/components/data/entity`
 
 * `model`
 
@@ -73,7 +77,7 @@ Guiden skapar en post med den här strukturen:
 >
 >Alla datatyper som dras och släpps i en modellredigerare, och som sådana instansierade, **måste** ha användarens `name` egenskapsindata.
 >
->**Det här betraktas som** egenskapsnamn&amp;stämpel;ast; på fliken **Egenskaper** i modellredigeraren.
+>Det här betraktas som **egenskapsnamn&amp;stämpel;ast;** på fliken **Egenskaper** i modellredigeraren.
 
 ## Modellredigerarens struktur {#structure-of-the-model-editor}
 
@@ -109,7 +113,7 @@ The properties on the right side define a form that is submitted directly into J
 
 När en datatyp instansieras skapas HTML-indata för varje egenskap som komponenten behöver återges i ett innehållsfragment. De innehåller till exempel:
 
-* **** Egenskapsnamn&amp;stämpel;ast; ( `name`) - fungerar som en identifierare för komponenter
+* **Egenskapsnamn&amp;stämpel;ast;** ( `name`) - fungerar som en identifierare för komponenter
 
 * **Återge som** ( `metaType`) - typ som komponenten ska återges som
 
