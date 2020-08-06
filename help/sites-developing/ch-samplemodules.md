@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: fa68c786-5102-4cc3-b61c-2565ee919768
 translation-type: tm+mt
 source-git-commit: 39b6af8ee815e8f6fa6e0b4a0a6dc80f29165243
+workflow-type: tm+mt
+source-wordcount: '1194'
+ht-degree: 1%
 
 ---
 
@@ -31,11 +34,11 @@ Modultypen context.base är bastypen för alla andra gränssnittsmodultyper. Det
 
 Följande funktioner är tillgängliga:
 
-* **** Titel och ikon: Ange en rubrik för användargränssnittsmodulen och en ikon. Ikonen kan refereras via en URL eller från ikonbiblioteket för Coral UI.
-* **** Lagra data: Identifiera ett eller flera arkiv som data ska hämtas från.
-* **** Innehåll: Ange innehållet som visas i gränssnittsmodulen så som det visas i ContextHub-verktygsfältet.
-* **** Leveransinnehåll: Ange innehållet som visas i en pekare när användaren klickar eller trycker på gränssnittsmodulen.
-* **** Helskärmsläge: Kontrollera om helskärmsläge tillåts.
+* **Titel och ikon:** Ange en rubrik för användargränssnittsmodulen och en ikon. Ikonen kan refereras via en URL eller från ikonbiblioteket för Coral UI.
+* **Lagra data:** Identifiera ett eller flera arkiv som data ska hämtas från.
+* **Innehåll:** Ange innehållet som visas i gränssnittsmodulen så som det visas i ContextHub-verktygsfältet.
+* **Leveransinnehåll:** Ange innehållet som visas i en pekare när användaren klickar eller trycker på gränssnittsmodulen.
+* **Helskärmsläge:** Kontrollera om helskärmsläge tillåts.
 
 Källkoden finns på /libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js.
 
@@ -43,29 +46,29 @@ Källkoden finns på /libs/granite/contexthub/code/ui/container/js/ContextHub.UI
 
 Konfigurera gränssnittsmodulen contexthub.base med hjälp av ett JavaScript-objekt i JSON-format. Inkludera någon av följande egenskaper för att konfigurera gränssnittsmodulens funktioner:
 
-* **** bild: En URL till en bild som ska visas som ikon.
-* **** ikon: Namnet på en [Coral UI-ikonklass](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) . Om du anger ett värde för både ikonen och bildegenskaperna används bilden.
+* **bild:** En URL till en bild som ska visas som ikon.
+* **ikon:** Namnet på en [Coral UI-ikonklass](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) . Om du anger ett värde för både ikonen och bildegenskaperna används bilden.
 
-* **** titel: En rubrik för gränssnittsmodulen. Titeln visas när pekaren pausas över ikonen för modulen Gränssnitt.
-* **** helskärm: Ett booleskt värde som anger om UI-modulen stöder helskärmsläge. Används `true` för helskärmsläge och `false` för att förhindra helskärmsläge.
+* **titel:** En rubrik för gränssnittsmodulen. Titeln visas när pekaren pausas över ikonen för modulen Gränssnitt.
+* **helskärm:** Ett booleskt värde som anger om gränssnittsmodulen stöder helskärmsläge. Används `true` för helskärmsläge och `false` för att förhindra helskärmsläge.
 
-* **** mall: En [Handlebars](https://handlebarsjs.com/) -mall som anger innehållet som ska återges i ContextHub-verktygsfältet. Använd högst två `<p>` taggar.
+* **mall:** En [Handlebars](https://handlebarsjs.com/) -mall som anger innehållet som ska återges i ContextHub-verktygsfältet. Använd högst två `<p>` taggar.
 
-* **** storeMapping: En nyckel/arkivmappning. Använd nyckeln i Handlebar-mallar för att komma åt associerade ContextHub-lagringsdata.
-* **** lista: En array med objekt som ska visas som en lista i en portfölj när användaren klickar på gränssnittsmodulen. Om du tar med det här objektet ska du inte ta med poverTemplate. Värdet är en array med objekt med följande tangenter:
+* **storeMapping:** En nyckel/arkivmappning. Använd nyckeln i Handlebar-mallar för att komma åt associerade ContextHub-lagringsdata.
+* **lista:** En array med objekt som ska visas som en lista i en portfölj när användaren klickar på gränssnittsmodulen. Om du tar med det här objektet ska du inte ta med poverTemplate. Värdet är en array med objekt med följande tangenter:
 
    * titel: Den text som ska visas för det här objektet
    * bild: (Valfritt) En URL till en bild som ska visas till vänster
    * ikon: (Valfritt) En CUI-ikonklass som ska visas till vänster. ignoreras om en bild anges
    * markerat: (Valfritt) Ett booleskt värde som anger om det här objektet ska visas som markerat (true=selected). Som standard visas markerade objekt med ett fetstil. Använd en `listType` egenskap för att konfigurera andra utseenden (se nedan).
 
-* **** listType: Det format som ska användas för att överföra listobjekt. Använd något av följande värden:
+* **listType:** Det format som ska användas för att överföra listobjekt. Använd något av följande värden:
 
    * bock
-   *  kryssruta
+   * kryssruta
    * radio
 
-* **** popoverTemplate: En mall för hanteringsfält som anger innehållet som ska återges i pekaren när användaren klickar på gränssnittsmodulen. Om du tar med det här objektet ska du inte ta med `list` objektet.
+* **popoverTemplate:** En mall för hanteringsfält som anger innehållet som ska återges i pekaren när användaren klickar på gränssnittsmodulen. Om du tar med det här objektet ska du inte ta med `list` objektet.
 
 ### Exempel {#example}
 
