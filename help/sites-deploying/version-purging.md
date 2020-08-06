@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Rensning av version{#version-purging}
 
-I en standardinstallation skapar AEM en ny version av en sida eller nod när du aktiverar en sida efter att innehållet har uppdaterats.
+I en standardinstallation AEM en ny version av en sida eller nod när du aktiverar en sida efter att innehållet har uppdaterats.
 
 >[!NOTE]
 >
@@ -100,7 +100,7 @@ Följande alternativ är tillgängliga:
 
 >[!NOTE]
 >
->Vi rekommenderar inte att du behåller ett stort antal versioner i databasen. Så när du konfigurerar versionsrensningsåtgärden bör du tänka på att inte utesluta för många versioner från rensningen, eftersom databasstorleken då inte optimeras korrekt. Om du har ett stort antal versioner på grund av verksamhetskrav kontaktar du Adobes support för att hitta alternativa sätt att optimera databasstorleken.
+>Vi rekommenderar inte att du behåller ett stort antal versioner i databasen. Så när du konfigurerar versionsrensningsåtgärden bör du tänka på att inte utesluta för många versioner från rensningen, eftersom databasstorleken då inte optimeras korrekt. Om du har ett stort antal versioner på grund av verksamhetskrav kontaktar du supporten för Adobe för att hitta alternativa sätt att optimera databasstorleken.
 
 ### Kombinera kvarhållningsalternativ {#combining-retention-options}
 
