@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: fbfe8097-3c3f-4a05-97ad-1ce526362a26
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '406'
+ht-degree: 1%
 
 ---
 
@@ -19,13 +22,13 @@ source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
 
 ## Översikt {#overview}
 
-AEM Communities förenklar skapandet och anpassningen av communityfunktioner som forum, användargrupper, bloggar, frågor och svar, kalendrar, kommentarer, granskningar, omröstningar, omdömen och uppdrag. Dessa funktioner gör att användargenererat innehåll (UGC) anges i publiceringsmiljön.
+AEM Communities gör det enklare att skapa och anpassa communityfunktioner som forum, användargrupper, bloggar, frågor och svar, kalendrar, kommentarer, recensioner, omröstningar, omdömen och uppdrag. Dessa funktioner gör att användargenererat innehåll (UGC) anges i publiceringsmiljön.
 
-Grunden för en [communitywebbplats](overview.md#communitiessites) är den [sociala komponentens ramverk](scf.md) (SCF). Skapandet av en community-webbplats börjar med att en mall [för en](sites-console.md) community väljs som består av [communityfunktioner](functions.md).
+Grunden för en [communitywebbplats](overview.md#communitiessites) är den [sociala komponentens ramverk](scf.md) (SCF). Skapandet av en communitywebbplats börjar med att en mall [för en](sites-console.md) community väljs som består av [communityfunktioner](functions.md).
 
 En översikt och självstudiekurser för att komma igång finns på:
 
-* [Översikt över AEM Communities](overview.md)
+* [AEM Communities - översikt](overview.md)
 * [Komma igång med AEM Communities](getting-started.md)
 * [Komma igång med AEM Communities för aktivering](getting-started-enablement.md)
 
@@ -50,7 +53,7 @@ En översikt och självstudiekurser för att komma igång finns på:
 
 ## Grundläggande om komponenter, funktioner och funktioner {#component-function-and-feature-essentials}
 
-Komponenter, funktioner och funktioner i AEM Communities utgör byggstenarna för [communitysajter](sites-console.md).
+AEM Communities komponenter, funktioner och funktioner utgör byggstenarna för [communitysajter](sites-console.md).
 
 * [Grundläggande om komponenter, funktioner och funktioner](essentials.md)
 * [Clientlibs for Communities Components](clientlibs.md)
@@ -65,7 +68,7 @@ Komponenter, funktioner och funktioner i AEM Communities utgör byggstenarna fö
 
 ## Community-grupper {#community-groups}
 
-[Community-grupper](overview.md#communitygroups) är konceptet att tillåta communitymedlemmar att bilda undergrupper på communitywebbplatsen. Skapande av en community-grupp kan ske i publicerings- eller författarmiljön.
+[Community-grupper](overview.md#communitygroups) är konceptet att tillåta communitymedlemmar att bilda undergrupper på communitywebbplatsen. En community-grupp kan skapas i publicerings- eller författarmiljön.
 
 * [Grundläggande om communitygrupper](essentials-groups.md)
 * [Funktionen Grupper](functions.md#groups-function)
@@ -78,7 +81,7 @@ Komponenter, funktioner och funktioner i AEM Communities utgör byggstenarna fö
 * [SRP och UGC Essentials](srp-and-ugc.md) - metoder och exempel för SRP API-verktyg
 * [Tagg Essentials](tag.md) - möjlighet för communitymedlemmar att tagga UGC- och/eller katalogaktiveringsresurser
 
-## Självstudiekurser {#tutorials}
+## Tutorials {#tutorials}
 
 * [Självstudiekurser på klientsidan](tutorials.md#client-side-customization)
 * [Självstudiekurser på serversidan](tutorials.md#server-side-customization)
