@@ -22,7 +22,7 @@ ht-degree: 0%
 
 På sidan Processlista visas de processer som en användare har initierat eller som startades automatiskt.
 
-1. I administrationskonsolen klickar du på Tjänster > Formulärarbetsflöde > Formulärarbetsflöde. I processlistan visas följande information:
+1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Forms-arbetsflöde. I processlistan visas följande information:
 
    **Processnamn - version:** Processens namn, enligt definition i Workbench.
 
@@ -96,7 +96,7 @@ När du avbryter uppehållet för en processinstans ändras dess status till RUN
 
 När du gör uppehåll i en processinstans som har anropat andra processer (underordnade processer) med sin invoke-åtgärd, pausas även de underordnade processerna.
 
-1. I administrationskonsolen klickar du på Tjänster > Formulärarbetsflöde > Formulärarbetsflöde.
+1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Forms-arbetsflöde.
 1. Markera processen på sidan Processinstans och klicka på Gör uppehåll eller Gör uppehåll.
 
 ### Avsluta en processinstans {#terminate-a-process-instances}
@@ -107,7 +107,7 @@ Du kan avsluta processinstanser som har vilken status som helst.
 
 När du avslutar en processinstans ändras dess status till TERMINATING, sedan TERMINATED, och processen stoppas vid den aktuella åtgärden. Inga fler åtgärder körs och alla associerade åtgärder och uppgifter avslutas.
 
-1. I administrationskonsolen klickar du på Tjänster > Formulärarbetsflöde > Formulärarbetsflöde.
+1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Forms-arbetsflöde.
 1. Markera processen på processinstanssidan och klicka på Avsluta.
 
 ## Arbeta med processinstansinformation {#working-with-process-instance-details}
@@ -179,7 +179,7 @@ Du kan inte avsluta processer som har gatewayelement i processdiagrammet. Om du 
 
 Du kan försöka utföra en åtgärd som har statusen STALLED igen.
 
-När du försöker utföra en åtgärd på nytt skickas en begäran om att starta om åtgärden. Om begäran lyckas ändras statusen till RUNNING. Om åtgärden inte kan startas om, förblir den STALLED och du kan behöva avsluta den.
+När du försöker utföra en åtgärd på nytt skickas en begäran om att starta om åtgärden från Forms. Om begäran lyckas ändras statusen till RUNNING. Om åtgärden inte kan startas om, förblir den STALLED och du kan behöva avsluta den.
 
 1. Klicka på fliken Åtgärder på sidan Processinstansinformation.
 1. Markera åtgärden och klicka på Försök igen.
@@ -188,7 +188,7 @@ När du försöker utföra en åtgärd på nytt skickas en begäran om att start
 
 På sidan Åtgärdsinformation visas en sammanfattning av en åtgärd i en process och dess aktuella användartilldelningar.
 
-1. I administrationskonsolen klickar du på Tjänster > Formulärarbetsflöde > Formulärarbetsflöde.
+1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Forms-arbetsflöde.
 1. Klicka på ett processnamn för att visa dess processinstanser. Klicka på en processinstans för att visa sidan Processinstansinformation och välj sedan en åtgärd för att visa sidan Åtgärdsinformation.
 
    För varje uppgift visas följande information i listan:
