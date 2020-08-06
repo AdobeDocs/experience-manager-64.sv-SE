@@ -2,7 +2,7 @@
 title: Använda diagram i interaktiv kommunikation
 seo-title: Diagramkomponent i interaktiv kommunikation
 description: 'Med diagram i en interaktiv kommunikation kan du komprimera stora mängder information till ett enkelt sätt att analysera och förstå visuellt format  '
-seo-description: AEM Forms innehåller en diagramkomponent som du kan använda för att skapa diagram i din interaktiva kommunikation. I det här dokumentet förklaras grundläggande konfigurationer och agentkonfigurationer för diagramkomponenten.
+seo-description: AEM Forms har en diagramkomponent som du kan använda för att skapa diagram i din interaktiva kommunikation. I det här dokumentet förklaras grundläggande konfigurationer och agentkonfigurationer för diagramkomponenten.
 uuid: dedd670c-030b-4497-bbcb-3ad935cebcda
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,6 +10,9 @@ topic-tags: interactive-communications
 discoiquuid: 16c7e698-258d-4e63-9828-f538dc7d3294
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '2394'
+ht-degree: 0%
 
 ---
 
@@ -35,39 +38,41 @@ När du skapar en interaktiv kommunikation kan du lägga till diagram som visuel
 
 Gör så här för att lägga till ett diagram i en interaktiv kommunikation:
 
-1. Dra och släpp diagramkomponenten från komponenterna i sidofältet i AEM i någon av följande kanaler i en interaktiv kommunikation:
+1. Dra och släpp diagramkomponenten från komponenterna i AEM sidofältet i någon av följande kanaler i en interaktiv kommunikation:
 
    * Utskriftskanal: Målområde och bildfält
    * Webbkanal: Panel- och målområde
+
    Den släppta diagramkomponenten skapar en platshållare för ett diagram.
 
-1. Tryck på diagramkomponenten i redigeraren för interaktiv kommunikation och välj **[!UICONTROL Konfigurera (]** configure_icon ![](assets/configure_icon.png)) i verktygsfältet Komponent.
+1. Tryck på diagramkomponenten i redigeraren för interaktiv kommunikation och välj **[!UICONTROL Configure (]** configure_icon ![](assets/configure_icon.png)i verktygsfältet Komponent.
 
    Sidlisten Egenskaper visas med de grundläggande egenskaperna för diagrammet i fokus.
 
    ![Grundläggande egenskaper för ett linjediagram i en utskriftskanal](assets/chart_basicproperties.png)
-   **** Bild: Grundläggande *egenskaper för ett linjetypsdiagram i en utskriftskanal*
+   **Bild:** *Grundläggande egenskaper för ett linjediagram i en utskriftskanal*
 
    ![Grundläggande egenskaper för ett linjediagram i en webbkanal](assets/basicpropertieswebchannel.png)
-   **** Bild: Grundläggande *egenskaper för ett linjetypsdiagram i webbkanalen*
+   **Bild:** *Grundläggande egenskaper för ett linjediagram i en webbkanal*
 
 1. Konfigurera diagrammets grundläggande egenskaper för utskriftskanaler och webbkanaler. Förutom de gemensamma egenskaperna finns det egenskaper som är specifika för utskrift, webbkanal och diagramtyp.
 
-   * **[!UICONTROL Namn]**: Diagramobjektets namn. Namnet på diagrammet som du anger här visas inte i diagrammets utdata, men används i regler för att referera till diagrammet.
-   * **[!UICONTROL Diagramtyp]**: Ange diagramtyp: Cirkel, Kolumn, Ring, Linje, Linje och Punkt, Punkt eller Yta.
-   * **[!UICONTROL Dölj objekt]**:Välj det här alternativet om du vill dölja diagrammet i det slutliga resultatet.
-   * Ange följande för **[!UICONTROL x-axel]** och **[!UICONTROL y-axel]**:
+   * **[!UICONTROL Name]**: Diagramobjektets namn. Namnet på diagrammet som du anger här visas inte i diagrammets utdata, men används i regler för att referera till diagrammet.
+   * **[!UICONTROL Chart Type]**: Ange diagramtyp: Cirkel, Kolumn, Ring, Linje, Linje och Punkt, Punkt eller Yta.
+   * **[!UICONTROL Hide Object]**: Välj det här alternativet om du vill dölja diagrammet i det slutliga resultatet.
+   * Ange följande för **[!UICONTROL x-axis]** och **[!UICONTROL y-axis]**:
 
-      * **[!UICONTROL Titel]**: Ange rubrikerna för X- och Y-axeln som ska visas i den interaktiva kommunikationen.
-      * **[!UICONTROL Datamodellobjekt *]**: Bläddra och markera datamodellsobjekt för X- och Y-axeln i diagrammet från den formulärdatamodell som angavs när den interaktiva kommunikationen skapades. Välj två samlings-/arraytypegenskaper för samma överordnade datamodellsobjekt som är meningsfulla i förhållande till varandra för att rita på X- och Y-axeln i ett diagram.
-      * **[!UICONTROL Funktion]**: Om du vill använda statistiska funktioner för att beräkna värdena på axeln väljer du funktionen för X-/Y-axeln. Mer information om funktioner finns i [Använda funktioner i diagram](#usefunction) och [exempel 2: Användning av summor- och medelfunktioner i ett linjediagram](#applicationsumfrequency).
+      * **[!UICONTROL Title]**: Ange rubrikerna för X- och Y-axeln som ska visas i den interaktiva kommunikationen.
+      * **[!UICONTROL Data Model Object *]**: Bläddra och markera datamodellsobjekt för X- och Y-axeln i diagrammet från den formulärdatamodell som angavs när den interaktiva kommunikationen skapades. Välj två samlings-/arraytypegenskaper för samma överordnade datamodellsobjekt som är meningsfulla i förhållande till varandra för att rita på X- och Y-axeln i ett diagram.
+      * **[!UICONTROL Function]**: Om du vill använda statistiska funktioner för att beräkna värdena på axeln väljer du funktionen för X-/Y-axeln. Mer information om funktioner finns i [Använda funktioner i diagram](#usefunction) och [exempel 2: Användning av summor- och medelfunktioner i ett linjediagram](#applicationsumfrequency).
+
    >[!NOTE]
    >
    >För utskriftskanaler på X-axeln ska datamodellobjektet som du binder vara av typen Number, String eller Date. På Y-axeln ska datamodellobjektet som du binder ha typen Number. Vi rekommenderar att du använder högersidesförklaringen i utskriftskanalen.
 
    Mer information om diagramegenskaper finns i [Grundläggande egenskaper i diagram](#basicpropertiescharts).
 
-1. (Endast skrivarkanal) Ange om agenten måste använda det här diagrammet i agentinställningarna. Om alternativet **[!UICONTROL Det är obligatoriskt för agenten att använda det här diagrammet]** inte är markerat kan agenten trycka på ögonikonen för diagrammet på fliken Innehåll i agentanvändargränssnittet för att visa/dölja diagrammet.
+1. (Endast skrivarkanal) Ange om agenten måste använda det här diagrammet i agentinställningarna. Om det här **[!UICONTROL t Is Mandatory For the Agent To Use This Chart]** alternativet inte är markerat kan agenten trycka på ögonikonen för diagrammet på fliken Innehåll i agentanvändargränssnittet för att visa/dölja diagrammet.
 
    ![chart_agentproperties](assets/chart_agentproperties.png)
 
@@ -85,26 +90,26 @@ Låt oss i detalj förstå vilken information som minst krävs i grundläggande 
 
 För att uppnå detta måste du ange:
 
-* **[!UICONTROL Diagramtyp]** - i det här exemplet kolumn för utskriftskanalen och Ring för webbkanalen
-* **[!UICONTROL Datamodellsobjekt]** som källa för diagrammets X- och Y-axel - i det här exemplet Transaktionsbelopp för X-axeln och utgiftsnamn för Y-axeln
-* **[!UICONTROL Rubrik]** för X- och Y-axeln (för stapeldiagram i utskriftskanalen endast i det här exemplet) - Mängd ($) för X-axeln och Utgift för Y-axeln.
-* **[!UICONTROL Etikettriktning]** (för stapeldiagram i utskriftskanalen endast i det här exemplet) - i det här exemplet `Tilt Left`
+* **[!UICONTROL Chart Type]** - i det här exemplet, Column for the print channel and Donut for the web channel
+* **[!UICONTROL Data Model Objects]** som källa för diagrammets X- och Y-axel - i det här exemplet Transaktionsbelopp för X-axeln och utgiftsnamn för Y-axeln
+* **[!UICONTROL Title]** för X- och Y-axeln (endast för kolumndiagram i utskriftskanalen i det här exemplet) - Mängd ($) för X-axeln och Utgift för Y-axeln.
+* **[!UICONTROL Label Direction]** (för stapeldiagram i utskriftskanalen endast i det här exemplet) - i det här exemplet `Tilt Left`
 
-* **[!UICONTROL Verktygstips]** som visas när muspekaren förs över en utgift (endast webbkanal) - i det här exemplet `${x}: $ ${y}`som visas som [utgiftsetikett: $ Belopp] (exempel: Theme Park Visit: $ 315)
+* **[!UICONTROL Tooltip]** om du vill visa en utgift med musen (endast webbkanal) - i det här exemplet `${x}: $ ${y}`som visas som [utgiftsetikett: $ Belopp] (exempel: Theme Park Visit: $ 315)
 
-![](assets/chartprintchannel.png) Kolumndiagram i tryckt utskrift av en interaktiv kommunikation ****: Stapeldiagram *i utskrift av interaktiv kommunikation*
+![Kolumndiagram i tryckt utskrift av en interaktiv kommunikation](assets/chartprintchannel.png)**:** *Kolumndiagram i utskrift av interaktiv kommunikation*
 
-******S. Y-axel - Mängd hämtad från formulärdatamodellens egenskap och Title-egenskapen har värdet Amount ($)** B. Etikettorientering för X-axel inställd på Lutning åt vänster **C.** X-axel - utgiftsbeskrivning hämtad från formulärdatamodellens egenskap och Title-egenskap inställd på Utgift
+**S.** Y-axel - Mängd hämtad från formulärdatamodellens egenskap och Title-egenskapen har värdet Amount ($) **B.** Etikettorientering för X-axel inställd på Lutning åt vänster **C.** X-axel - utgiftsbeskrivning hämtad från formulärdatamodellens egenskap och Title-egenskap inställd på Utgift
 
-![](assets/chartwebchannel.png) Visa diagram i webbutdata från en interaktiv kommunikation ****: Ringdiagram *i webbutdata för interaktiv kommunikation*
+![Visa diagram i webbutdata från en interaktiv kommunikation](assets/chartwebchannel.png)**:** *Visa diagram i webbutdata för interaktiv kommunikation*
 
-******S. Egenskapen Innerradie för munstycket anges till** B. Egenskapen Visa förklaring är markerad och egenskapen Förklaringsposition är inställd på Höger **C.** Verktygstips visar detaljerna för objektet när muspekaren förs över - Funktionsbeskrivning är inställd på ${x}: $ ${y}
+**S.** Egenskapen Innerradie för munstycket anges till **B.** Egenskapen Visa förklaring är markerad och egenskapen Förklaringsposition är inställd på Höger **C.** Verktygstips visar detaljerna för objektet när muspekaren förs över - Funktionsbeskrivning är inställd på ${x}: $ ${y}
 
 ## Exempel 2: Användning av summerings- och frekvensfunktioner i ett linjediagram {#applicationsumfrequency}
 
 Genom att använda funktioner i ett diagram kan du rita data som inte tillhandahålls direkt av formulärdatamodellen. I det här exemplet använder vi ett kreditkortsexempel för att förstå hur summerings- och frekvensfunktioner kan användas i diagrammet.
 
-![](assets/creditcarddatalinechartcopy.png) Linjediagram utan funktion med tre&quot;Bed and Breakfast&quot;-transaktioner ****: Bild: *Linjediagram utan funktion med tre &quot;Bed and Breakfast&quot;-transaktioner*
+![Linjediagram utan funktion med tre&quot;Bed and Breakfast&quot;-transaktioner](assets/creditcarddatalinechartcopy.png)**: Bild:** *Linjediagram utan funktion med tre&quot;Bed and Breakfast&quot;-transaktioner*
 
 ### Summeringsfunktion {#sum-function}
 
@@ -132,7 +137,7 @@ På fliken Grundläggande kan du konfigurera följande egenskaper:
 
 **X-axel > Titel** Anger x-axelns rubrik.
 
-**** X-axel > Datamodellobjekt&amp;stämpel;ast; Ange namnet på den formulärdatamodellsamling som ska ritas på x-axeln.
+**X-axel > Datamodellobjekt&amp;stämpel;ast;** Ange namnet på den formulärdatamodellsamling som ska ritas på x-axeln.
 
 **X-axel > Funktion** Anger den statistiska/anpassade funktion som ska användas för att beräkna värdena på x-axeln. Mer information om funktioner finns i Använda funktioner i diagram och exempel 2: Användning av summor- och medelfunktioner i ett linjediagram.
 
@@ -140,7 +145,7 @@ På fliken Grundläggande kan du konfigurera följande egenskaper:
 
 **Y-axel > Titel** Anger rubriken för y-axeln.
 
-**** Y-axel > datamodellobjekt&amp;stämpel;ast; Anger det objekt i formulärdatamodellens samling som ska ritas på y-axeln. I utskriftskanalen ska datamodellobjektet för Y-axeln vara av typen Number.
+**Y-axel > datamodellobjekt&amp;stämpel;ast;** Anger det objekt i formulärdatamodellens samling som ska ritas på y-axeln. I utskriftskanalen ska datamodellobjektet för Y-axeln vara av typen Number.
 
 **Y-axel > Funktion** Anger den statistiska/anpassade funktion som ska användas för att beräkna värdena på y-axeln. Mer information om funktioner finns i Använda funktioner i diagram och exempel 2: Användning av summor- och medelfunktioner i ett linjediagram.
 
@@ -212,7 +217,7 @@ Följande funktioner är tillgängliga som standard med komponenten Chart:
 
 Förutom att använda standardfunktionerna i diagram kan du skriva anpassade funktioner i JavaScript™ och göra dem tillgängliga i listan med funktioner i diagramkomponenten för webbkanalen.
 
-En funktion tar en eller flera matriser och ett kategorinamn som indata och returnerar ett värde. Exempel:
+En funktion tar en eller flera matriser och ett kategorinamn som indata och returnerar ett värde. Till exempel:
 
 ```
 Multiply(valueArray, category) {
