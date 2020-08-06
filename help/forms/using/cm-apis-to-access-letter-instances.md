@@ -10,6 +10,9 @@ topic-tags: correspondence-management
 discoiquuid: 9c27f976-972a-4250-b56d-b84a7d72f8c8
 translation-type: tm+mt
 source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+workflow-type: tm+mt
+source-wordcount: '592'
+ht-degree: 1%
 
 ---
 
@@ -106,7 +109,7 @@ submittedLetterInstances = letterInstanceService.getAllLetterInstances(query);
 
 Hämta den bokstavsinstans som identifieras av det angivna bokstavsinstansens ID. Det returnerar &quot;null om instans-ID inte matchas.
 
-**** Syntax: `public LetterInstanceVO getLetterInstance(String letterInstanceId) throws ICCException;`
+**Syntax:** `public LetterInstanceVO getLetterInstance(String letterInstanceId) throws ICCException;`
 
 ```java
 @Reference
@@ -139,7 +142,7 @@ Bokstavsinstans kan vara av typen Skickat eller Utkast. Om du öppnar båda boks
 * Om det är en instans av skickad bokstav öppnas en PDF som representerar bokstavsinstansen. Instansen Letter som finns kvar på servern innehåller även dataXML och bearbetad XDP, som kan användas för att åstadkomma och ytterligare anpassad användning av exempelvis PDF/A.
 * Om det gäller en instans av ett utkast, läses gränssnittet för att skapa korrespondens in på nytt till exakt föregående läge som det var när utkastet skapades
 
-### Instans för inledande av utkast {#opening-draft-letter-instance-nbsp}
+### Instans för inledande av utkast  {#opening-draft-letter-instance-nbsp}
 
 CCR-gränssnittet stöder parametern cmLetterInstanceId som kan användas för att läsa in bokstaven igen.
 
