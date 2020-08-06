@@ -12,6 +12,9 @@ topic-tags: operations
 discoiquuid: 62490230-a24e-419d-95bb-c0bb04a03f96
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1279'
+ht-degree: 0%
 
 ---
 
@@ -20,16 +23,16 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 ## Skapa PDF-dokument med inskickade XML-data {#creating-pdf-documents-with-submitted-xml-data}
 
-Webbaserade tillämpningar där användarna kan fylla i interaktiva formulär kräver att data skickas tillbaka till servern. Med hjälp av Forms-tjänsten kan du hämta formulärdata som användaren har angett i ett interaktivt formulär. Sedan kan du skicka formulärdata till en annan AEM Forms-åtgärd och skapa ett PDF-dokument med hjälp av data.
+Webbaserade tillämpningar där användarna kan fylla i interaktiva formulär kräver att data skickas tillbaka till servern. Med tjänsten Forms kan du hämta formulärdata som användaren har angett i ett interaktivt formulär. Sedan kan du skicka formulärdata till en annan AEM Forms-åtgärd och skapa ett PDF-dokument med hjälp av data.
 
 >[!NOTE]
 >
->Innan du läser det här innehållet bör du ha en god förståelse för hur skickade formulär hanteras. Begrepp som förhållandet mellan en formulärdesign och inlämnade XML-data behandlas i Hantera inskickade formulär.
+>Innan du läser det här innehållet bör du ha en god förståelse för hur skickade formulär hanteras. Begrepp som förhållandet mellan en formulärdesign och inlämnade XML-data behandlas i Hantera inlämnade Forms.
 
 Tänk på följande arbetsflöde som innefattar tre AEM Forms-tjänster:
 
 * En användare skickar XML-data till Forms-tjänsten från ett webbaserat program.
-* Tjänsten Forms används för att bearbeta skickade formulär och extrahera formulärfält. Formulärdata kan bearbetas. Data kan till exempel skickas till en företagsdatabas.
+* Forms-tjänsten används för att bearbeta skickade formulär och extrahera formulärfält. Formulärdata kan bearbetas. Data kan till exempel skickas till en företagsdatabas.
 * Formulärdata skickas till utdatatjänsten för att skapa ett icke-interaktivt PDF-dokument.
 * Det icke-interaktiva PDF-dokumentet lagras i Content Services (utgått).
 
@@ -46,8 +49,8 @@ När användaren har skickat formuläret från klientens webbläsare lagras det 
 Så här skapar du ett icke-interaktivt PDF-dokument med inskickade XML-data och sparar det i PDF-dokumentet i Content Services (borttaget):
 
 1. Inkludera projektfiler.
-1. Skapa objekt för formulär, utdata och dokumenthantering.
-1. Hämta formulärdata med Forms-tjänsten.
+1. Skapa Forms-, Output- och Document Management-objekt.
+1. Hämta formulärdata med hjälp av tjänsten Forms.
 1. Skapa ett icke-interaktivt PDF-dokument med hjälp av utdatatjänsten.
 1. Lagra PDF-formuläret i Content Services (föråldrat) med hjälp av tjänsten Document Management.
 
@@ -55,13 +58,13 @@ Så här skapar du ett icke-interaktivt PDF-dokument med inskickade XML-data och
 
 Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprogram med Java, inkluderar du de JAR-filer som behövs. Om du använder webbtjänster måste du inkludera proxyfilerna.
 
-**Skapa formulär-, utdata- och dokumenthanteringsobjekt**
+**Skapa Forms-, Output- och Document Management-objekt**
 
-Skapa ett API-objekt för Forms-klienten innan du programmässigt kan utföra en åtgärd i API:t för Forms-tjänsten. Eftersom arbetsflödet anropar utdata- och dokumenthanteringstjänsterna skapar du både ett Output Client API-objekt och ett Document Management Client API-objekt.
+Skapa ett Forms Client API-objekt innan du programmässigt utför en API-åtgärd för Forms-tjänster. Eftersom arbetsflödet anropar utdata- och dokumenthanteringstjänsterna skapar du både ett Output Client API-objekt och ett Document Management Client API-objekt.
 
-**Hämta formulärdata med Forms-tjänsten**
+**Hämta formulärdata med tjänsten Forms**
 
-Hämta formulärdata som har skickats till Forms-tjänsten. Du kan bearbeta inskickade data så att de uppfyller dina affärskrav. Du kan till exempel lagra formulärdata i en företagsdatabas. Om du vill skapa ett icke-interaktivt PDF-dokument skickas formulärdata till utdatatjänsten.
+Hämta formulärdata som skickats till Forms-tjänsten. Du kan bearbeta inskickade data så att de uppfyller dina affärskrav. Du kan till exempel lagra formulärdata i en företagsdatabas. Om du vill skapa ett icke-interaktivt PDF-dokument skickas formulärdata till utdatatjänsten.
 
 **Skapa ett icke-interaktivt PDF-dokument med hjälp av utdatatjänsten.**
 
@@ -81,20 +84,20 @@ Använd API:t för dokumenthanteringstjänsten för att lagra ett PDF-dokument i
 
 ### Skapa ett PDF-dokument med inskickade XML-data med Java API {#create-a-pdf-document-with-submitted-xml-data-using-the-java-api}
 
-Skapa ett PDF-dokument med inskickade XML-data med API:t för formulär, utdata och dokumenthantering (Java):
+Skapa ett PDF-dokument med inskickade XML-data med Forms, Output och Document Management API (Java):
 
 1. Inkludera projektfiler
 
    Inkludera JAR-klientfiler, t.ex. adobe-forms-client.jar, adobe-output-client.jar och adobe-contentservices-client.jar i Java-projektets klassökväg.
 
-1. Skapa formulär-, utdata- och dokumenthanteringsobjekt
+1. Skapa Forms-, Output- och Document Management-objekt
 
    * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
    * Skapa ett `FormsServiceClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
    * Skapa ett `OutputClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
    * Skapa ett `DocumentManagementServiceClientImpl` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
 
-1. Hämta formulärdata med Forms-tjänsten
+1. Hämta formulärdata med tjänsten Forms
 
    * Anropa `FormsServiceClient` objektets `processFormSubmission` metod och skicka följande värden:
 
@@ -102,6 +105,7 @@ Skapa ett PDF-dokument med inskickade XML-data med API:t för formulär, utdata 
       * Ett strängvärde som anger miljövariabler, inklusive alla relevanta HTTP-rubriker. Ange den innehållstyp som ska hanteras genom att ange ett eller flera värden för `CONTENT_TYPE` miljövariabeln. Om du till exempel vill hantera XML-data anger du följande strängvärde för den här parametern: `CONTENT_TYPE=text/xml`.
       * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärdet, till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
       * Ett `RenderOptionsSpec` objekt som lagrar körningsalternativ.
+
       Metoden returnerar `processFormSubmission` ett `FormsResult` objekt som innehåller resultaten av formuläröverföringen.
 
    * Avgör om Forms-tjänsten har slutfört bearbetningen av formulärdata genom att anropa `FormsResult` objektets `getAction` metod. Om den här metoden returnerar värdet `0`är data klara att bearbetas.
@@ -139,6 +143,7 @@ Skapa ett PDF-dokument med inskickade XML-data med API:t för formulär, utdata 
    * Ett `UpdateVersionType` uppräkningsvärde som anger hur versionsinformation ska hanteras (t.ex. för `UpdateVersionType.INCREMENT_MAJOR_VERSION` att öka innehållsversionen. ) Det här värdet är en obligatorisk parameter.
    * En `java.util.List` instans som anger aspekter som är relaterade till innehållet. Det här värdet är en valfri parameter som du kan ange `null`.
    * Ett `java.util.Map` objekt som lagrar innehållsattribut.
+
    Metoden `storeContent` returnerar ett `CRCResult` objekt som beskriver innehållet. Om du använder ett `CRCResult` objekt kan du till exempel få innehållets unika identifierarvärde. Om du vill utföra den här åtgärden anropar du `CRCResult` objektets `getNodeUuid` metod.
 
 **Se även**
