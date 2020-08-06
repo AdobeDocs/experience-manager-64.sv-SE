@@ -1,8 +1,8 @@
 ---
 title: Konfigurera komponenter i designläge
 seo-title: Konfigurera komponenter i designläge
-description: 'När AEM-instansen är installerad direkt är ett urval av komponenter omedelbart tillgängliga i sidosparken. Förutom dessa finns även andra komponenter tillgängliga. Du kan använda designläget för att aktivera/inaktivera sådana komponenter. '
-seo-description: 'När AEM-instansen är installerad direkt är ett urval av komponenter omedelbart tillgängliga i sidosparken. Förutom dessa finns även andra komponenter tillgängliga. Du kan använda designläget för att aktivera/inaktivera sådana komponenter. '
+description: 'När AEM är installerad i en körklar version är ett urval av komponenter omedelbart tillgängliga i sidosparken. Förutom dessa finns även andra komponenter tillgängliga. Du kan använda designläget för att aktivera/inaktivera sådana komponenter. '
+seo-description: 'När AEM är installerad i en körklar version är ett urval av komponenter omedelbart tillgängliga i sidosparken. Förutom dessa finns även andra komponenter tillgängliga. Du kan använda designläget för att aktivera/inaktivera sådana komponenter. '
 page-status-flag: de-activated
 uuid: 57249965-3a30-49ce-9fb0-864c5daaa262
 contentOwner: User
@@ -12,13 +12,16 @@ content-type: reference
 discoiquuid: 93f98f7b-7ab8-4d9c-b179-dc99b80ffc91
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '541'
+ht-degree: 0%
 
 ---
 
 
 # Konfigurera komponenter i designläge{#configuring-components-in-design-mode}
 
-När AEM-instansen är installerad direkt är ett urval av komponenter omedelbart tillgängliga i sidosparken.
+När AEM är installerad i en körklar version är ett urval av komponenter omedelbart tillgängliga i sidosparken.
 
 Förutom dessa finns även andra komponenter tillgängliga. Du kan använda designläget för att [aktivera/inaktivera sådana komponenter](#enabledisablecomponentsusingdesignmode). När det är aktiverat och finns på sidan kan du sedan använda designläget för att [konfigurera olika aspekter av komponentdesignen](#configuringcomponentsusingdesignmode) genom att redigera attributparametrarna.
 
