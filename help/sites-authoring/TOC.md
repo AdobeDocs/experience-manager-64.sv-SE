@@ -2,7 +2,7 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: Användarhandbok för AEM 6.4-redigering
+user-guide-title: Användarhandbok för redigering av AEM 6.4
 user-guide-description: Learn key concepts for creating content and authoring in AEM.
 translation-type: tm+mt
 source-git-commit: e0b25517821971098978db078b2f205a8a380459
@@ -13,10 +13,10 @@ ht-degree: 42%
 ---
 
 
-# Användarhandbok för AEM 6.4-redigering {#authoring}
+# Användarhandbok för redigering av AEM 6.4 {#authoring}
 
 + [Översikt över användarhandboken för redigering](home.md)
-+ Viktiga uppgifter, verktyg och koncept för AEM Authoring {#essentials}
++ Viktiga uppgifter, verktyg och begrepp för AEM {#essentials}
    + [Steg 1 för författare](first-steps.md)
    + [Snabbguide till framtagning av sidor](qg-page-authoring.md)
    + [Begreppet redigering](author.md)
@@ -75,8 +75,8 @@ ht-degree: 42%
 + Sidprestanda {#page-performance}
    + [Content Insight](content-insights.md)
    + [Analyserar sidprestanda](ci-analyze.md)
-   + [Visa Analytics-data för sidan](pa-using.md)
-   + [Lägga till Search&amp;Promote på sidan](search-and-promote.md)
+   + [Visa sidanalysdata](pa-using.md)
+   + [Lägga till Search &amp; Promote på sidan](search-and-promote.md)
 + Personanpassning {#personalization}
    + [Personanpassning](personalization.md)
    + [Förhandsgranska sidor med ContextHub-data](ch-previewing.md)
@@ -90,6 +90,6 @@ ht-degree: 42%
 + AEM och Adobe Campaign {#aem-adobe-campaign}
    + [Arbeta med Adobe Campaign](adobe-campaign.md)
    + [Arbeta med Adobe Campaign Classic och Adobe Campaign Standard](campaign.md)
-   + [Inrikta er mot Adobe Campaign](target-adobe-campaign.md)
-   + [Skapa Adobe Campaign-formulär i AEM](adobe-campaign-forms.md)
-   + [Adobe Campaign-komponenter](adobe-campaign-components.md)
+   + [Inrikta er på Adobe Campaign](target-adobe-campaign.md)
+   + [Skapa Adobe Campaign Forms i AEM](adobe-campaign-forms.md)
+   + [Adobe Campaign Components](adobe-campaign-components.md)
