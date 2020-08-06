@@ -7,7 +7,7 @@ user-guide-description: Create online experiences such as forums, user groups, l
 translation-type: tm+mt
 source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '471'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 0%
 + [Översikt över användarhandboken för Communities](home.md)
 + Introduktion till AEM Communities {#introduction}
    + [Communities Sites](administer-landing.md)
-   + [Översikt över AEM Communities](overview.md)
+   + [AEM Communities - översikt](overview.md)
    + [Nyheter i AEM 6.4 Communities](whats-new-aem-communities.md)
-   + [Versionsinformation om AEM Communities](/help/release-notes/communities-release-notes.md)
+   + [Versionsinformation för AEM Communities](/help/release-notes/communities-release-notes.md)
    + [Komma igång med AEM Communities](getting-started.md)
    + [Komma igång med AEM Communities för aktivering](getting-started-enablement.md)
    + [Inledande konfiguration](setup.md)
@@ -35,12 +35,12 @@ ht-degree: 0%
    + [Distribuera webbgrupper](deploy-communities.md)
    + [Uppgradera till AEM 6.4 Communities](upgrade.md)
    + [Rekommenderade topologier för communities](topologies.md)
-   + [Konfigurera Dispatcher för webbgrupper](dispatcher.md)
+   + [Konfigurera Dispatcher för Communities](dispatcher.md)
 + Administratör {#administer}
    + [Tjänsten för hantering av användare och användargenererat innehåll i AEM Communities](user-ugc-management-service.md)
    + [Communities Sites](administer-landing.md)
    + [Communities-konsoler](consoles.md)
-   + [Analytics Configuration for Communities - funktioner](analytics.md)
+   + [Analyskonfiguration för communityfunktioner](analytics.md)
    + [Konfigurera aktiveringsfunktioner](enablement.md)
    + [Konfigurerar meddelanden](messaging.md)
    + [Moderating Community Content](moderate-ugc.md)
@@ -67,7 +67,7 @@ ht-degree: 0%
    + [FFmpeg for Communities](ffmpeg.md)
    + [Sammanhangsbaserad moderering](in-context.md)
    + [Advanced Scoring and Badges](advanced.md)
-   + [ASRP - Adobe Storage Resource Provider](asrp.md)
+   + [ASRP - Adobe lagringsresursleverantör](asrp.md)
    + [MSRP - lagringsresursprovider för MongoDB](msrp.md)
    + [Så här konfigurerar du MongoDB för demo](demo-mongo.md)
    + [DSRP - Resursprovider för relativ databaslagring](dsrp.md)
@@ -84,7 +84,7 @@ ht-degree: 0%
    + [Ramverk för sociala komponenter](scf.md)
    + [Community Components Guide](components-guide.md)
    + [Grundläggande om komponenter, funktioner och funktioner](essentials.md)
-   + [Självstudiekurser](tutorials.md)
+   + [Tutorials](tutorials.md)
    + [Felsökning](troubleshooting.md)
    + [Riktlinjer för kodning](code-guide.md)
    + [Anpassning på serversidan](server-customize.md)
