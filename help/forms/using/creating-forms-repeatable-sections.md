@@ -9,6 +9,9 @@ topic-tags: author
 discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
 translation-type: tm+mt
 source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+workflow-type: tm+mt
+source-wordcount: '1136'
+ht-degree: 16%
 
 ---
 
@@ -17,13 +20,13 @@ source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
 
 Upprepningsbara avsnitt är paneler som kan läggas till eller tas bort dynamiskt i ett formulär.
 
-När du t.ex. ansöker om ett jobb, ger den jobbsökande tidigare anställningsinformation som företagsnamn, roll, projekt och annan information. Information om alla arbetsgivare kräver olika men likartade sektioner. I ett sådant scenario tillhandahåller anställningsblanketten en arbetsgivaravdelning och ger även möjlighet att dynamiskt lägga till fler sådana avsnitt. Dessa avsnitt, som läggs till dynamiskt, kallas upprepningsbara avsnitt.
+När du t.ex. ansöker om ett jobb, ger den jobbsökande tidigare anställningsinformation som företagsnamn, roll, projekt och annan information. Information om alla arbetsgivare kräver olika men likartade sektioner. I ett sådant scenario tillhandahåller anställningsblanketten en arbetsgivaravdelning och ger också möjlighet att dynamiskt lägga till fler sådana avsnitt. Dessa avsnitt, som läggs till dynamiskt, kallas upprepningsbara avsnitt.
 
 Du kan använda någon av följande metoder för att skapa repeterbara paneler:
 
-## Använda Instanshanteraren via skript {#using-instance-manager-via-scripts-nbsp}
+## Använda Instanshanteraren via skript  {#using-instance-manager-via-scripts-nbsp}
 
-1. Markera en panel i redigeringsläget och tryck sedan på ![cmpr](assets/cmppr.png). Aktivera **Gör panelen upprepningsbar** under Egenskaper i sidofältet. Ange värden för fälten **[!UICONTROL Maximum]** och **[!UICONTROL Minimum]** .
+1. Markera en panel i redigeringsläget och tryck sedan på ![cmpr](assets/cmppr.png). Aktivera **Gör panelen upprepningsbar** under Egenskaper i sidofältet. Ange värden för **[!UICONTROL Maximum]** - och **[!UICONTROL Minimum]** fälten.
 
    Fältet Maximum anger det maximala antalet gånger en panel kan visas på sidan. Du kan ange -1 i fältet Maximalt antal om du vill att panelen ska visas ett obegränsat antal gånger.
 
@@ -45,10 +48,12 @@ Du kan använda någon av följande metoder för att skapa repeterbara paneler:
 
          * Om du vill skapa en knapp för att lägga till en panel väljer du **Lägg till instans** och drar och släpper panelen med hjälp av en ![växlingspanel](assets/toggle-side-panel.png) eller markerar den med **Släpp-objektet eller väljer här.**
          * Om du vill skapa en knapp för en borttagningspanel väljer du **Ta bort instans** och drar och släpper panelen med ![växlingspanelen](assets/toggle-side-panel.png) eller markerar den med **Släpp-objektet eller väljer här.**
+
       Välj **Kodredigeraren** på raden Formulärobjekt och funktioner. Klicka på **Redigera regler** och i kodområdet:
 
       * Om du vill skapa en knapp för panelen Lägg till anger du `this.panel.instanceManager.addInstance()`
       * Om du vill skapa en knapp för borttagningspanelen anger du `this.panel.instanceManager.removeInstance(this.panel.instanceIndex)`
+
       Klicka på **Klar**.
 
       >[!NOTE]
@@ -103,9 +108,9 @@ Du kan använda någon av följande metoder för att skapa repeterbara paneler:
 
 
 
-## Använda dragspelslayouten för den överordnade panelen {#using-the-accordion-layout-for-the-parent-panel-nbsp}
+## Använda dragspelslayouten för den överordnade panelen   {#using-the-accordion-layout-for-the-parent-panel-nbsp}
 
-På en panel finns olika layoutalternativ. Alternativet Layout för dragspelsdesign har stöd för upprepningsbara paneler. Utför följande steg på en repeterbar panel med alternativet Layout för dragspelsdesign:
+En panel har olika layoutalternativ. Alternativet Layout för dragspelsdesign har stöd för upprepningsbara paneler. Utför följande steg på en repeterbar panel med alternativet Layout för dragspelsdesign:
 
 1. Tryck på ![cmpr](assets/cmppr.png)på den överordnade panelen för att upprepa. Du kan se egenskaperna i sidlisten. I listrutan **Layout** väljer du **Dragspel**.
 1. Tryck på ![cmpr](assets/cmppr.png)på en panel som ska upprepas. Panelegenskaperna visas i sidofältet. Aktivera fliken **Gör panelen upprepningsbar** och ange ett värde för fälten **Maximum** och **Minimum** .
@@ -114,7 +119,7 @@ På en panel finns olika layoutalternativ. Alternativet Layout för dragspelsdes
 
 ## Använda upprepade delformulär från formulärmallen (XDP/XSD) {#using-repeating-subforms-from-form-template-xdp-xsd}
 
-Upprepningsbart delformulär liknar de repeterbara panelerna i adaptiva formulär. Gör så här i AEM Forms Designer för att skapa ett upprepande delformulär:
+Upprepningsbart delformulär liknar de repeterbara panelerna i Adaptiv Forms. Gör så här i AEM Forms Designer för att skapa ett upprepande delformulär:
 
 1. Välj överordnat delformulär till det delformulär du vill repetera på paletten Hierarki.
 1. Välj Flödat i listan Innehåll på fliken Delformulär på paletten Objekt.
