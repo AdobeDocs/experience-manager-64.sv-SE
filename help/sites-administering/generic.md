@@ -1,8 +1,8 @@
 ---
 title: Administrera allmän e-handel
 seo-title: Administrera allmän e-handel
-description: Den generiska AEM-lösningen innehåller metoder för att hantera den handelsinformation som finns i databasen.
-seo-description: Den generiska AEM-lösningen innehåller metoder för att hantera den handelsinformation som finns i databasen.
+description: Den AEM generiska lösningen innehåller metoder för att hantera den handelsinformation som finns i databasen.
+seo-description: Den AEM generiska lösningen innehåller metoder för att hantera den handelsinformation som finns i databasen.
 uuid: 8af6933a-2dee-4b73-bc15-71b8394d082f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: ad80505f-116e-43f1-8d93-ffe6e8b1ac46
 translation-type: tm+mt
 source-git-commit: fc2c7b62960a0a3cb45d595673b8dcfeb990d7c2
+workflow-type: tm+mt
+source-wordcount: '3004'
+ht-degree: 1%
 
 ---
 
 
 # Administrera allmän e-handel{#administering-generic-ecommerce}
 
-Den generiska AEM-lösningen innehåller metoder för att hantera den handelsinformation som finns i databasen (till skillnad från att använda en extern e-handelsmotor). Detta omfattar följande:
+Den AEM generiska lösningen innehåller metoder för att hantera den handelsinformation som finns i databasen (till skillnad från att använda en extern e-handelsmotor). Detta omfattar följande:
 
 * [Produkter](/help/sites-administering/concepts.md#products)
 * [Produktvarianter](/help/sites-administering/concepts.md#product-variants)
@@ -30,7 +33,7 @@ Den generiska AEM-lösningen innehåller metoder för att hantera den handelsinf
 
 >[!NOTE]
 >
->Standardinstallationen av AEM innehåller den generiska implementeringen av AEM (JCR) för e-handel.
+>Standardinstallationen AEM innehåller den allmänna AEM (JCR)-implementeringen av e-handel.
 >
 >Detta är för närvarande avsett för demonstrationssyften, eller som en grundläggande grund för en anpassad implementering enligt dina krav.
 
@@ -49,7 +52,7 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 
 >[!NOTE]
 >
->I butiken Geometrixx-Outdoor finns en enda produkttyp (och därför en enda koffel):
+>I Geometrixx-utomhusbutiken finns en enda produkttyp (och därmed ett enda schafet):
 >
 >`/etc/scaffolding/geometrixx-outdoors`
 >
@@ -133,7 +136,7 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 
 >[!NOTE]
 >
->Standardprodukthanteringen är grundläggande eftersom produktuppsättningen Geometrixx-Outdoor har hållits grundläggande. Komplexiteten bygger på [produktversionerna](/help/sites-authoring/scaffolding.md), så med din egen produktanpassning kan du göra mer avancerad redigering.
+>Standardprodukthanteringen är grundläggande eftersom produktuppsättningen för Geometrixx-utomhusbruk har hållits grundläggande. Komplexiteten bygger på [produktversionerna](/help/sites-authoring/scaffolding.md), så med din egen produktanpassning kan du göra mer avancerad redigering.
 
 #### Skapa produktinformation - Touchoptimerat gränssnitt {#creating-product-information-touch-optimized-ui}
 
@@ -142,6 +145,7 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 
    * **Skapa produkt**
    * **Skapa produktvariation**
+
    ![](do-not-localize/chlimage_1-14.png)
 
 1. Guiden öppnas. Använd flikarna **Grundläggande** och **Produkt** för att ange [produktattributen](/help/sites-administering/concepts.md#product-attributes) för den nya produkten eller produktvarianten.
@@ -175,6 +179,7 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 
    * [snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions)
    * [markeringsläge](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
+
    Välj ikonen **Visa produktdata** :
 
    ![](do-not-localize/chlimage_1-15.png)
@@ -199,6 +204,7 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 
    * Navigera till produktsidan
    * Redigera produktsida
+
    ![chlimage_1-327](assets/chlimage_1-327.png)
 
 ### Sök efter produkter {#search-for-products}
@@ -298,7 +304,7 @@ Mekanismen för att välja den bild som ska visas är följande:
 1. Skriv den **bildkategori** du valde (till `cat1` exempel).
 1. Tryck/klicka på **Klar**. Sidan uppdateras och rätt resurs ska visas.
 
-#### Katalog {#catalog}
+#### Katalog  {#catalog}
 
 1. Navigera till katalogen.
 1. Tryck/klicka på **Visa egenskaper**.
@@ -325,13 +331,14 @@ Mekanismen för att välja den bild som ska visas är följande:
 >
 >Produktinformationen publiceras ofta via de sidor som refererar till den. Om du till exempel publicerar sidan X som refererar till produkten Y, frågar AEM om du även vill publicera produkten Y.
 >  
->I speciella fall stöder AEM även publicering direkt från produktdata.
+>I särskilda fall kan AEM även publicera direkt från produktinformationen.
 
 1. Gå till produktinformationen med **Products** Console (via **Commerce**).
 1. Använd antingen:
 
    * [snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions)
    * [markeringsläge](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
+
    Välj ikonen **Publicera** eller **Avpublicera** efter behov:
 
    ![](do-not-localize/chlimage_1-18.png) ![](do-not-localize/chlimage_1-19.png)
@@ -340,12 +347,12 @@ Mekanismen för att välja den bild som ska visas är följande:
 
 ### Produktfeed {#product-feed}
 
-Med Search&amp;Promote-integreringen kan du:
+Integreringen av Search &amp; Promote gör att du kan:
 
 * använda eCommerce API, oberoende av den underliggande databasstrukturen och handelsplattformen.
-* Använd funktionen Index Connector i Search&amp;Promote för att skapa en produktfeed i XML-format.
-* utnyttja funktionen Fjärrstyrning i Search&amp;Promote för att utföra on-demand- eller schemalagda begäranden i produktflödet
-* feed-generering för olika Search&amp;Promote-konton, konfigurerade som molntjänster.
+* utnyttja funktionen Index Connector i Search &amp; Promote för att ge en produktfeed i XML-format.
+* utnyttja funktionen Fjärrstyrning i Search &amp; Promote för att utföra on-demand- eller schemalagda begäranden i produktflödet
+* feed-generering för olika Search &amp; Promote, konfigurerad som molntjänster.
 
 Mer information finns i [Produktfeed](/help/sites-administering/product-feed.md).
 
@@ -368,7 +375,7 @@ Du kan titta på dem i webbkonsolen i OSGI-händelser ( `/system/console/events`
 
 >[!NOTE]
 >
->Läs även [händelsehantering i AEM](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/). [](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/)
+>Läs även [Händelsehantering i AEM](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/). [](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/)
 
 ### Bild med Lägg till i kundvagnslänkar {#image-with-add-to-cart-links}
 
@@ -464,7 +471,7 @@ Så här skapar du en katalog:
 1. Tryck/klicka på knappen **Välj** och tryck/klicka på önskad katalogutkast.
 1. Tryck/klicka på **Nästa**.
 
-   ![chlimage_1-337](assets/chlimage_1-338.png)
+   ![chlimage_1-338](assets/chlimage_1-338.png)
 
 1. Skriv en **titel** och ett **namn**.
 1. Tryck/klicka på knappen **Skapa** . Katalogen skapas och en dialogruta öppnas.
@@ -483,17 +490,17 @@ Så här skapar du en katalog:
 
 1. Gå till din **katalogutkast** med hjälp av **webbplatskonsolen** och gå sedan till baskatalogen.
 
-   Exempel:
+   Till exempel:
 
    `http://localhost:4502/siteadmin#/content/catalogs/geometrixx-outdoors/base-catalog`
 
 1. Skapa en ny sida med hjälp av mallen **Avsnittsutkast** .
 
-   Exempel, `Swimwear`.
+   Till exempel, `Swimwear`.
 
 1. Öppna den nya `Swimwear` sidan och klicka sedan på **Redigera utkast** för att öppna dialogrutan **Egenskaper** där du kan ställa in **produktvalet** .
 
-   Öppna till exempel fältet **Taggar/nyckelord** för att välja Aktivitet och sedan Simma i sektionen Geometrixx-Outdoor.
+   Öppna till exempel fältet **Taggar/nyckelord** för att välja Aktivitet och sedan Simma i avsnittet Geometrixx-utomhus.
 
 1. Klicka på **OK** för att spara dina egenskaper; exempelprodukter visas under **produkturvalskriterierna** på sidan om skiss.
 1. Klicka på **Överrullningsändringar..**, välj **Överrullningssida och alla undersidor**, klicka sedan på **Nästa** och sedan **Övergång**. När utrullningen är klar visas **statusindikatorn** som grön.
@@ -501,8 +508,7 @@ Så här skapar du en katalog:
 
    `http://localhost:4502/cf#/content/geometrixx-outdoors/en/swimwear.html`
 
-1. Klicka på **Redigera utkast** på sidan för utkast och öppna fliken **Genererad sida** i dialogrutan **Egenskaper** . I fältet Banderolllista väljer du den bild som du vill visa;
-till exempel `summer.jpg`
+1. Klicka på **Redigera utkast** på sidan för utkast och öppna fliken **Genererad sida** i dialogrutan **Egenskaper** . I fältet Banderolllista väljer du den bild som du vill visa; till exempel `summer.jpg`
 1. Klicka på **OK** för att spara dina egenskaper; bannerinformation visas under **Produkturvalskriterierna** på plansidan.
 1. Utför de här nya ändringarna.
 
@@ -518,6 +524,7 @@ Så här distribuerar du en katalog:
 
    * [snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions)
    * [markeringsläge](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
+
    Välj ikonen **Utrullningsändringar** :
 
    ![](do-not-localize/chlimage_1-24.png)
@@ -529,7 +536,7 @@ Så här distribuerar du en katalog:
 
 Så här distribuerar du en katalog:
 
-1. Navigera till den katalog som du vill lansera. Exempel:
+1. Navigera till den katalog som du vill lansera. Till exempel:
 
    `http://localhost:4502/cf#/content/catalogs/geometrixx-outdoors/base-catalog.html`
 
@@ -557,7 +564,7 @@ Så här distribuerar du en katalog:
 
 1. Navigera till **Commerce** med **verktygskonsolen**.
 
-   Exempel:
+   Till exempel:
 
    `http://localhost:4502/miscadmin#/etc/commerce`
 
@@ -587,7 +594,8 @@ Så här distribuerar du en katalog:
 1. Redigera **egenskaper** genom att antingen:
 
    * öppnar sidan och klickar sedan på knappen Redigera för att öppna dialogrutan Egenskaper
-   * **markera sidan i webbplatskonsolen och sedan använda snabbmenyn (vanligtvis höger musknapp) för att välja** Egenskaper... och öppna egenskapsdialogrutan
+   * markera sidan i webbplatskonsolen och sedan använda snabbmenyn (vanligtvis höger musknapp) för att välja **Egenskaper...** och öppna egenskapsdialogrutan
+
    Ange **erbjudandetyp**, **rabatttyp**, **rabattvärde** och eventuella andra fält.
 
 1. Spara genom att klicka på **OK** .
@@ -631,13 +639,13 @@ Om du vill ändra egenskaperna för en voucher eller kampanj kan du dubbelklicka
 
 Om du vill att användare ska kunna lägga till vouchers i sina kundvagnar kan du använda den inbyggda **Vouchers** -komponenten (handelskategori). Du måste lägga till det här på samma sida som kundvagnen visas på (men är inte obligatoriskt). Verifikationskomponenten är bara ett formulär där användaren kan ange en verifikationskod, det är kundvagnskomponenten som faktiskt visar listan över använda verifikationer och deras rabatt.
 
-På demowebbplatsen (Geometrixx Outdoor - English) kan du se kupongformuläret på kundvagnssidan, under den faktiska kundvagnen.
+På demowebbplatsen (Geometrixx Outdoors - engelska) kan du se kupongformuläret på kundvagnssidan, under den faktiska kundvagnen.
 
 ## Beställningar {#orders}
 
 >[!NOTE]
 >
->Observera att körklar AEM inte har några åtgärder som krävs för standardfunktioner i samband med order, som att returnera varor, uppdatera orderstatus, utföra leveranser och generera följesedlar. Den är främst avsedd som en förhandstitt på teknik.
+>Det bör noteras att färdiga AEM inte har åtgärder som krävs för standardfunktioner som rör order, som att returnera varor, uppdatera orderstatus, utföra leveranser och generera följesedlar. Den är främst avsedd som en förhandstitt på teknik.
 >
 >Den allmänna orderhanteringen i AEM har hållits grundläggande. Vilka fält som är tillgängliga i guiden beror på skalan:\
 >`/etc/scaffolding/geometrixx-outdoors/order/jcr:content/cq:dialog`
@@ -646,7 +654,7 @@ På demowebbplatsen (Geometrixx Outdoor - English) kan du se kupongformuläret p
 
 >[!NOTE]
 >
->Orderkonsolen visar information om leverantörsorder, som aldrig publiceras.
+>Orderkonsolen visar leverantörsorderinformationen, som aldrig publiceras.
 >  
 >Kundorderinformationen finns i deras hemkataloger och visas i orderhistoriken för deras konto. Denna information publiceras tillsammans med resten av deras hemkatalog.
 
@@ -672,6 +680,7 @@ På demowebbplatsen (Geometrixx Outdoor - English) kan du se kupongformuläret p
 
    * [snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions)
    * [markeringsläge](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
+
    Välj ikonen **Visa orderdata** :
 
    ![](do-not-localize/chlimage_1-27.png)
