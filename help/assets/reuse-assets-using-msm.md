@@ -1,6 +1,6 @@
 ---
 title: Återanvänd resurser med MSM för Assets
-description: Använd resurser på flera sidor/mappar som är härledda från och länkade till överordnade resurser. Resurserna är synkroniserade med en primär kopia och med några klick får du uppdateringar från överordnade resurser.
+description: Använd resurser på flera sidor/mappar som är härledda från och länkade till överordnade resurser. Resurserna hålls synkroniserade med en primär kopia och med några klick får du uppdateringar från överordnade resurser.
 contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 mini-toc-levels: 1
@@ -15,7 +15,7 @@ ht-degree: 10%
 
 # Återanvänd resurser med MSM för Assets {#reuse-assets-using-msm-for-assets}
 
-Funktionen för Multi Site Manager (MSM) i Adobe Experience Manager (AEM) gör det möjligt för användare att återanvända innehåll som har skapats en gång och återanvänds på flera olika webbplatser. Samma sak gäller för digitala resurser som MSM för Assets-funktionalitet. Med MSM for Assets kan du
+Med MSM-funktionaliteten (Multi Site Manager) i Adobe Experience Manager (AEM) kan man återanvända material som skrivits en gång och återanvänds på flera olika webbplatser. Samma sak gäller för digitala resurser som MSM för Assets-funktionalitet. Med MSM for Assets kan du
 
 * Skapa resurser en gång och gör sedan kopior av dessa resurser för återanvändning i andra delar av webbplatsen.
 * Håll flera kopior synkroniserade och uppdatera originalkopian en gång för att överföra ändringarna till de underordnade kopiorna.
@@ -65,7 +65,7 @@ MSM upprätthåller en aktiv relation mellan källresursen och dess livekopior s
 Om du vill skapa en live-kopia av en eller flera källresurser eller mappar gör du något av följande:
 
 * **Metod 1**: Välj källresurserna och klicka på **[!UICONTROL Create > Live Copy]** i verktygsfältet högst upp.
-* **Metod 2**: I AEM-användargränssnittet klickar du på **[!UICONTROL Create > Live Copy]** i det övre högra hörnet av gränssnittet.
+* **Metod 2**: I AEM användargränssnitt klickar du **[!UICONTROL Create > Live Copy]** i det övre högra hörnet av gränssnittet.
 
 Du kan skapa live-kopior av en resurs eller en mapp åt gången. Du kan skapa live-kopior som är härledda från en resurs eller en mapp som är en live-kopia.
 
@@ -74,15 +74,15 @@ Content Fragments (CF) stöds inte för användningsfallet. När de försöker s
 Så här skapar du live-kopior med den första metoden:
 
 1. Välj källmaterial eller mappar. Klicka på **[!UICONTROL Create > Live Copy]** i verktygsfältet.
-   ![Skapa en live-kopia från AEM-gränssnittet](assets/lc_create1.png)
+   ![Skapa en live-kopia från AEM gränssnitt](assets/lc_create1.png)
 1. Välj källresurs eller källmapp. Klicka på **[!UICONTROL Next]**.
 1. Ange titel och namn. Resurserna har inga underordnade. När du skapar en live-kopia av mappar kan du välja att ta med eller exkludera underordnade.
 1. Välj en utrullningskonfiguration. Klicka på **[!UICONTROL Create]**.
 
 Så här skapar du live-kopior med den andra metoden:
 
-1. I AEM-gränssnittet klickar du i det övre högra hörnet **[!UICONTROL Create > Live Copy]**.
-   ![Skapa en live-kopia från AEM-gränssnittet](assets/lc_create2.png)
+1. Klicka AEM i det övre högra hörnet **[!UICONTROL Create > Live Copy]**.
+   ![Skapa en live-kopia från AEM gränssnitt](assets/lc_create2.png)
 1. Välj källresurs eller källmapp. Klicka på **[!UICONTROL Next]**.
 1. Välj målmapp. Klicka på **[!UICONTROL Next]**.
 1. Ange titel och namn. Resurserna har inga underordnade. När du skapar en live-kopia av mappar kan du välja att ta med eller exkludera underordnade.
@@ -94,7 +94,7 @@ Så här skapar du live-kopior med den andra metoden:
 
 ## Visa olika egenskaper och statusvärden för käll- och livekopia {#view-properties-statuses-source-and-lc}
 
-Du kan visa information och MSM-relaterade statusar för live-kopior som relation, synkronisering, rollouts med mera från de olika områdena i AEM-användargränssnittet. Följande två metoder fungerar för resurser och mappar:
+Du kan visa information och MSM-relaterade statusar för en live-kopia som relation, synkronisering, rollouts med mera från de olika områdena i AEM användargränssnitt. Följande två metoder fungerar för resurser och mappar:
 
 * Välj en live-kopia och hitta informationen på **[!UICONTROL Properties]** sidan.
 * Välj källmapp och sök efter detaljerad information om varje live-kopia i **[!UICONTROL Live Copy Console]**.
@@ -132,7 +132,7 @@ AEM tillhandahåller en konsol för att kontrollera status för alla live-kopior
 För en källresurs eller källmapp kan du se följande information och utföra följande åtgärder direkt från referensfältet:
 
 * Se sökvägarna för live-kopior.
-* Öppna eller visa en specifik live-kopia i AEM-användargränssnittet.
+* Öppna eller visa en viss live-kopia AEM användargränssnittet.
 * Synkronisera uppdateringarna till en specifik live-kopia.
 * Pausa relationen eller ändra utrullningskonfiguration för en specifik live-kopia.
 * Få åtkomst till översiktskonsolen för live-kopian.
@@ -150,7 +150,7 @@ För en specifik live-kopia klickar du på **[!UICONTROL Edit Live Copy]** för 
 För en resurs eller mapp för en live-kopia kan du se följande information och utföra följande åtgärder direkt från referenslisten:
 
 * Se källans sökväg.
-* Öppna eller visa en specifik live-kopia i AEM-användargränssnittet.
+* Öppna eller visa en viss live-kopia AEM användargränssnittet.
 * Fyll i uppdateringarna.
 
 Välj en resurs eller mapp med en live-kopia, öppna den vänstra rutan och klicka på **[!UICONTROL References]**. Du kan också markera en resurs eller mapp och använda kortkommandot `Alt + 4`.
@@ -183,7 +183,7 @@ Du kan också starta en utrullningsåtgärd från [!UICONTROL References] listen
 
 Med en synkroniseringsåtgärd hämtas ändringarna från en källa endast till den markerade Live-kopian. Synkroniseringsåtgärden respekterar och underhåller lokala ändringar som gjorts efter att arv har annullerats. De lokala ändringarna skrivs inte över och arvet som avbryts återupprättas inte. Du kan initiera en synkroniseringsåtgärd på tre sätt.
 
-| Var i AEM-gränssnittet finns | När och varför ska du använda | Så här använder du |
+| Var i AEM gränssnitt | När och varför ska du använda | Så här använder du |
 |---|---|---|
 | [!UICONTROL References] järnväg | Synkronisera snabbt när du redan har markerat källan. | Se [Snabbåtgärder från referensfältet för källa](#quick-actions-from-references-rail-for-source) |
 | Verktygsfält på [!UICONTROL Properties] sidan | Starta en synkronisering när du redan har live-kopieringsegenskaperna öppna. | Se [Synkronisera en live-kopia](#synchronize-live-copy) |
@@ -221,7 +221,7 @@ Du kan ångra alla lokala ändringar och återställa resursen till källans lä
 
 ## Ta bort direktrelation {#remove-live-relationship}
 
-Du kan ta bort relationen mellan en källa och en live-kopia helt med åtgärden Koppla loss. Den aktiva kopian blir en fristående resurs eller mapp när den har kopplats loss. Den visas som en ny resurs i AEM-gränssnittet omedelbart efter att den kopplats loss. Följ de här stegen för att koppla loss en live-kopia från källan.
+Du kan ta bort relationen mellan en källa och en live-kopia helt med åtgärden Koppla loss. Den aktiva kopian blir en fristående resurs eller mapp när den har kopplats loss. Den visas som en ny resurs i AEM, omedelbart efter att den kopplats loss. Följ de här stegen för att koppla loss en live-kopia från källan.
 
 1. Välj en resurs eller mapp för en live-kopia. Klicka på **[!UICONTROL Properties]** i verktygsfältet. Du kan också använda kortkommandot p.
 1. Klicka på **[!UICONTROL Live Copy]**. Click **[!UICONTROL Detach]** in the toolbar. Klicka **[!UICONTROL Detach]** i den dialogruta som visas.
@@ -244,7 +244,7 @@ Om du har flera resurser i en live-kopieringsmapp kan initieringsåtgärder för
 
 ## Utöka MSM för resurser {#extend-msm-for-assets}
 
-Med AEM kan du utöka funktionaliteten med MSM Java API:er. För Assets fungerar utökningen på samma sätt som för MSM för Site. Mer information finns i [Extending the MSM](../sites-developing/extending-msm.md) och i följande avsnitt:
+AEM gör att du kan utöka funktionaliteten med MSM Java API:er. För Assets fungerar utökningen på samma sätt som för MSM för Site. Mer information finns i [Extending the MSM](../sites-developing/extending-msm.md) och i följande avsnitt:
 
 * [Översikt över API:er](../sites-developing/extending-msm.md#overview-of-the-java-api)
 * [Skapa en ny synkroniseringsåtgärd](../sites-developing/extending-msm.md#creating-a-new-synchronization-action)
