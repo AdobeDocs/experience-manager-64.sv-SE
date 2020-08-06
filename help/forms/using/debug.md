@@ -68,12 +68,15 @@ Kontrollera följande parametrar:
    Kontrollera att status för följande paket är &quot;aktiv&quot;:
 
    * scala-lang.bundle [osgi]
+
    (com.adobe.livecyclescala-lang.bundle)
 
    * Adobe XFA Forms Renderer
+
    (com.adobe.livecycle.adobe-lc-forms-core)
 
    * Adobe XFA Forms LC Connector
+
    (com.adobe.livecycle.adobe-lc-forms-lc-connector)
 
 ## Problem: Formuläråtergivning utan format {#problem-form-renders-without-styles}
@@ -114,7 +117,7 @@ Kontrollera följande parametrar:
 
 ## Problem: Det går inte att skicka formuläret {#problem-unable-to-submit-the-form}
 
-1. Kontrollera att du har behörighet att komma åt AEM-servern och att du är ansluten till servern.
+1. Kontrollera att du har behörighet att komma åt AEM och att du är ansluten till servern.
 1. Kontrollera att parametern submitUrl är korrekt.
 1. Aktivera loggarna på klientsidan enligt [loggarna för HTML5-formulären](/help/forms/using/enable-logs.md) med felsökningsalternativet **1-a5-b5-c5**. Återge sedan formuläret och klicka på Skicka. Öppna webbläsarens felsökningskonsol och kontrollera om det finns något fel.
 1. Leta reda på serverloggarna som anges i [Logs för HTML5-formulären](/help/forms/using/enable-logs.md). Kontrollera om det uppstod något fel i serverloggarna under överföringen.
