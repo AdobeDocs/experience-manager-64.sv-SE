@@ -12,6 +12,9 @@ discoiquuid: ba90b25f-f672-42c5-8b06-07bb32cc51de
 targetaudience: target-audience upgrader
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '835'
+ht-degree: 0%
 
 ---
 
@@ -20,9 +23,9 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 >[!NOTE]
 >
->Uppgraderingen kräver driftstopp för Author-nivån eftersom de flesta AEM-uppgraderingar utförs på plats. Genom att följa dessa metodtips kan driftstopp i publiceringsskiktet minimeras eller elimineras.
+>Uppgraderingen kräver driftstopp för Author-nivån eftersom de flesta AEM uppgraderingar utförs på plats. Genom att följa dessa rutiner kan driftstopp i publiceringsskiktet minimeras eller elimineras.
 
-När du uppgraderar dina AEM-miljöer måste du ta hänsyn till skillnaderna i tillvägagångssätt mellan att uppgradera författarmiljöer eller publiceringsmiljöer för att minimera driftstoppen för både författare och slutanvändare. På den här sidan beskrivs hur du uppgraderar en AEM-topologi som för närvarande körs på en version av AEM 6.x. Eftersom processen skiljer sig mellan redigerings- och publiceringsnivåer samt Mongo- och TarmMK-baserade distributioner, har varje nivå och mikrokärna listats i ett separat avsnitt. När du utför din distribution rekommenderar vi att du först uppgraderar din utvecklingsmiljö, avgör om du lyckas och sedan fortsätter till publiceringsmiljöerna.
+När du uppgraderar dina AEM-miljöer måste du ta hänsyn till skillnaderna i tillvägagångssätt mellan att uppgradera författarmiljöer eller publiceringsmiljöer för att minimera driftstoppen för både författare och slutanvändare. På den här sidan beskrivs den höga nivån för uppgradering av en AEM topologi som för närvarande körs på en version av AEM 6.x. Eftersom processen skiljer sig mellan redigerings- och publiceringsnivåer samt Mongo- och TarmMK-baserade distributioner, har varje nivå och mikrokärna listats i ett separat avsnitt. När du utför din distribution rekommenderar vi att du först uppgraderar din utvecklingsmiljö, avgör om du lyckas och sedan fortsätter till publiceringsmiljöerna.
 
 ## Stjärtmaskförfattarnivå {#tarmk-author-tier}
 
@@ -105,7 +108,7 @@ Den topologi som antas för det här avsnittet består av ett MongoMK Author-klu
 1. Starta om Author-instanserna, en i taget
 1. Ta bort det klonade datalagret.
 
-### Om misslyckades (återställning) {#if-unsuccessful}
+### Om misslyckades (återställning)  {#if-unsuccessful}
 
 ![mongo-rollback](assets/mongo-rollback.jpg)
 
