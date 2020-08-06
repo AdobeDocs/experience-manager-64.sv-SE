@@ -56,7 +56,7 @@ Skapa eller redigera en filtypsinställning för att ange hur konverteringen av 
 
    [Inställningar för HTML-till-PDF](#html-to-pdf-settings)
 
-   [Inställningar för Flash-videor till PDF](#flash-videos-to-pdf-settings)
+   [Flash-videofilmer till PDF-inställningar](#flash-videos-to-pdf-settings)
 
    [Inställningar för XPS till PDF](#xps-to-pdf-settings)
 
@@ -84,14 +84,14 @@ Skapa eller redigera en filtypsinställning för att ange hur konverteringen av 
 
 1. När du är klar med alla avsnitt klickar du på **[!UICONTROL Save]** eller **[!UICONTROL Save As]** anger ett namn för inställningen.
 
-Stöd för olika filtyper kan anpassas. (Se&quot; [Lägga till stöd för fler inbyggda filformat](https://help.adobe.com/en_US/AEMForms/6.1/ProgramLC/WS624e3cba99b79e12e69a9941333732bac8-7756.2.html)&quot; i [Programmering med AEM-formulär](https://www.adobe.com/go/learn_lc_programming_11).)
+Stöd för olika filtyper kan anpassas. (Se&quot; [Lägga till stöd för fler inbyggda filformat](https://help.adobe.com/en_US/AEMForms/6.1/ProgramLC/WS624e3cba99b79e12e69a9941333732bac8-7756.2.html)&quot; i [Programmering med AEM formulär](https://www.adobe.com/go/learn_lc_programming_11).)
 
 ## Ändra standardinställningarna {#change-the-default-settings}
 
-Du kan ändra standardvärdet för de Adobe PDF-inställningar, skyddsinställningar och filtypsinställningar som gäller för nya källor. Om du ändrar standardinställningarna påverkas inte inställningarna för befintliga källor.
+Du kan ändra standardvärdet för de Adobe PDF-inställningar, säkerhetsinställningar och filtypsinställningar som gäller för nya källor. Om du ändrar standardinställningarna påverkas inte inställningarna för befintliga källor.
 
 1. Klicka på i administrationskonsolen **[!UICONTROL Services > PDF Generator]**.
-1. Klicka på **[!UICONTROL Adobe PDF Settings]**, **[!UICONTROL File Type Settings]** eller **[!UICONTROL Security Settings]** sidan **[!UICONTROL Set Default Settings]**.
+1. On the **[!UICONTROL Adobe PDF Settings]**, **[!UICONTROL File Type Settings]**, or **[!UICONTROL Security Settings]** page, click **[!UICONTROL Set Default Settings]**.
 1. Välj standardinställningar. En eller flera av följande inställningar är tillgängliga på sidan Ange standardinställningar:
 
    **[!UICONTROL Adobe PDF Setting]**: Det ursprungliga standardvärdet är Standard (Acrobat 6).
@@ -140,7 +140,7 @@ Följande alternativ bestämmer hur bildfiler konverteras till PDF. Instruktione
 
 ## Exportinställningar för Adobe PDF (endast Windows) {#adobe-pdf-export-settings-windows-only}
 
-Inställningen Exportera filtyp i avsnittet Adobe PDF-exportinställningar används för att konvertera en PDF-fil till ett annat format. Standardvärdet är HTML 4.01 med CSS 1.0 (*.htm, *.html).
+Inställningen Exportera filtyp i avsnittet Adobe PDF exportinställningar används för att konvertera en PDF-fil till ett annat format. Standardvärdet är HTML 4.01 med CSS 1.0 (*.htm, *.html).
 
 Instruktioner om hur du använder den här inställningen finns i [Skapa eller redigera filtypsinställningar](configuring-file-type-settings.md#create-or-edit-file-type-settings).
 
@@ -186,11 +186,11 @@ Aktivera dessa alternativ för att ange hur HTML-sidorna ska konverteras. Basera
 
 Aktivera de här alternativen för att ange hur innehåll ska visas, hur sidor ska visas i PDF-dokumentet och hur förstoringsnivån ska anges:
 
-**Visa:** Markera de rutor som ska öppnas i Acrobat när PDF-dokumentet öppnas.
+**Visa:** Markera rutorna som ska öppnas i Acrobat när PDF-dokumentet öppnas.
 
 **Sidlayout:** Välj typ av sidlayout för PDF-dokumentet.
 
-**Förstoring:** Välj förinställd förstoring för den inledande vyn av PDF-dokumentet eller välj ett anpassat värde. Om du väljer en standardinställning används standardförstoringen i Acrobat.
+**Förstoring:** Välj förinställd förstoring för den inledande vyn av PDF-dokumentet eller välj ett anpassat värde. Om du väljer en standardinställning används standardförstoringen för Acrobat.
 
 **Öppna på sidnummer:** Ange det sidnummer som PDF-filen öppnas på.
 
@@ -198,7 +198,7 @@ Aktivera de här alternativen för att ange hur innehåll ska visas, hur sidor s
 
 Aktivera de här alternativen för att ange hur fönstret ska storleksändras och visas.
 
-**Ändra fönstrets storlek till startsidan:** Ändrar storleken på Acrobat-fönstret till den inledande sidans storlek.
+**Ändra fönstrets storlek till startsidan:** Ändrar storlek på Acrobat-fönstret till den inledande sidans storlek.
 
 **Centrera fönstret på skärmen:** Öppnar fönstret mitt på skärmen.
 
@@ -216,15 +216,15 @@ Aktivera dessa alternativ för att ange fönstrets utseende:
 
 **Dölj fönsterkontroller:** Döljer fönsterkontrollerna i PDF-dokumentet.
 
-## Inställningar för Flash-videor till PDF {#flash-videos-to-pdf-settings}
+## Flash-videofilmer till PDF-inställningar {#flash-videos-to-pdf-settings}
 
-PDF Generator stöder möjligheten att skicka en video för Adobe Flash (SWF- eller FLV-fil) och skapa en PDF-fil med en inbäddad video för Adobe Flash. Den här konverteringen kräver inte att Adobe Flash Player är installerat på formulärservern. Instruktioner om hur du använder det här alternativet finns i [Skapa eller redigera filtypsinställningar](configuring-file-type-settings.md#create-or-edit-file-type-settings).
+PDF Generator stöder möjligheten att skicka en video för Adobe Flash (SWF- eller FLV-fil) och skapa en PDF-fil med en inbäddad video för Adobe Flash. Denna konvertering kräver inte att Adobe Flash Player är installerat på formulärservern. Instruktioner om hur du använder det här alternativet finns i [Skapa eller redigera filtypsinställningar](configuring-file-type-settings.md#create-or-edit-file-type-settings).
 
 **Filnamnstillägg:** Kommaavgränsad lista med filnamnstillägg som kan konverteras.
 
 ## Inställningar för XPS till PDF {#xps-to-pdf-settings}
 
-XML Paper Specification (XPS) används i en Windows-utskriftsmaskin. Det här är ett Microsoft-format och kan skapas från alla Microsoft Office-program. Med AEM-formulär kan du konvertera XPS-filer till PDF.
+XML Paper Specification (XPS) används i en Windows-utskriftsmaskin. Det här är ett Microsoft-format och kan skapas från alla Microsoft Office-program. AEM kan konvertera XPS-filer till PDF.
 
 **Filnamnstillägg:** En kommaavgränsad lista över alla XPS-filnamnstillägg som kan konverteras. Det finns för närvarande ett format: .xps.
 
@@ -254,6 +254,7 @@ Instruktioner om hur du använder den här inställningen finns i [Skapa eller r
    * Om det behövs väljer du en annan teckensnittskatalog i listrutan **Teckensnittskälla** . I den här listrutan visas teckensnittskataloger som anges i **Hem > Inställningar > Kärnsystem > Huvudkonfigurationer**.
    * Markera ett eller flera teckensnitt i listan **Tillgängliga teckensnitt** och klicka på **Lägg till**. De här teckensnitten läggs till i listan **Teckensnitt som inte ska bäddas in** .
    * Om du vill ta bort inbäddningen för vissa teckensnitt som inte finns på formulärservern anger du namnen på teckensnitten i rutan **Lägg till teckensnitt för att ta bort inbäddning** . Click **Add**.
+
    >[!NOTE]
    >
    >*Om du vill ta bort inbäddningen för vissa teckensnitt vars deluppsättningar är inbäddade i dokumentet, ska du lägga till +-tecknet som prefix för teckensnittsnamnet. Till exempel &quot;+Helvetica&quot;.*
@@ -274,7 +275,7 @@ Om PDF-dokumentet innehåller bilder som innehåller genomskinlighet kan du anv�
 
 >[!NOTE]
 >
->Om Acrobat 4.0 och senare väljs som PDF-målversion förenklas alla genomskinliga objekt. För andra Target PDF-versioner stöds genomskinlighet och du kan konfigurera genomskinlighetsinställningarna.
+>Om Acrobat 4.0 och senare väljs som målversion av PDF förenklas alla genomskinliga objekt. För andra Target PDF-versioner stöds genomskinlighet och du kan konfigurera genomskinlighetsinställningarna.
 
 Välj **Genomskinlighet** om du vill konfigurera genomskinlighetsinställningarna när du optimerar PDF-dokument.
 
@@ -365,7 +366,7 @@ I följande tabell visas vanliga typer av skrivare och deras upplösning mätt i
 
 Markera **Ignorera användardata** om du vill ta bort all personlig information som du inte vill distribuera eller dela med andra användare.
 
-* **Ignorera alla kommentarer, formulär och multimedia**: Tar bort alla kommentarer, formulär, formulärfält och multimedia från PDF-filen.
+* **Ignorera alla kommentarer, Forms och multimedia**: Tar bort alla kommentarer, formulär, formulärfält och multimedia från PDF-filen.
 * **Ignorera alla objektdata**: Tar bort alla objekt från PDF-filen.
 * **Ignorera externa korsreferenser**: Tar bort länkar till andra dokument. Länkar som hoppar till andra platser i PDF-filen tas inte bort.
 * **Ignorera dolt lagerinnehåll och förenkla synliga lager**: Minskar filstorleken. Det optimerade dokumentet ser ut som den ursprungliga PDF-filen, men innehåller ingen lagerinformation.
@@ -411,7 +412,7 @@ De här alternativen avgör hur Microsoft Excel-filer konverteras. Instruktioner
 
 **Skapa en PDF/A-1a-kompatibel fil**: Tvingar fram användningen av Adobe PDF-inställningen PDF/A-1b:2005 RGB.
 
-**Lägg in bokmärken i Adobe PDF**: Konverterar Excel-kalkylbladsnamn till bokmärken. Det här alternativet är markerat som standard.
+**Lägg till bokmärken i Adobe PDF**: Konverterar Excel-kalkylbladsnamn till bokmärken. Det här alternativet är markerat som standard.
 
 **Anpassa kalkylblad till en sida**: Minskar textstorleken så att den passar kalkylbladet på en sida.
 
@@ -425,7 +426,7 @@ De här alternativen avgör hur Microsoft Excel-filer konverteras. Instruktioner
 
 **Bifoga källfil till Adobe PDF**: När det här alternativet är markerat infogas det ursprungliga Excel-kalkylbladet som en bifogad fil i det genererade PDF-dokumentet.
 
-**Aktivera tillgänglighet och flödesomformning med taggad Adobe PDF**: Bäddar in taggar i PDF-dokumentet för att aktivera tillgänglighet och flödesomformning.
+**Aktivera tillgänglighet och Reflow med taggad Adobe PDF**: Bäddar in taggar i PDF-dokumentet för att aktivera tillgänglighet och flödesomformning.
 
 **Lista över Excel-tillägg som ska läsas in**: Som standard (av säkerhetsskäl) körs inga Excel-tillägg när en Excel-fil konverteras till PDF. Om du vill tillåta vissa Excel-tillägg att köras under konverteringen anger du en kommaavgränsad lista med tilläggens namn.
 
@@ -494,7 +495,7 @@ De här alternativen avgör hur Microsoft Word-filer konverteras. Instruktioner 
 
 **[!UICONTROL Enable Accessibility And Reflow With Tagged Adobe PDF]**: Bäddar in taggar i PDF-filen. Det här alternativet är markerat som standard.
 
-**[!UICONTROL Create PDF/A-1a Compliant File]**: Om det här alternativet är markerat används Adobe PDF-inställningen PDF/A-1b:2005 RGB.
+**[!UICONTROL Create PDF/A-1a Compliant File]**: Om du väljer det här alternativet används Adobe PDF-inställningen PDF/A-1b:2005 RGB.
 
 **[!UICONTROL Run Macros Automatically]**: Kör eventuella makron i Word-dokumentet (t.ex. ett makro som infogar den aktuella tiden) innan du konverterar dokumentet.
 
@@ -524,7 +525,7 @@ Om ett Microsoft Word-formatnamn innehåller ett komma (,) eller likhetstecken (
 
 **Lägg till länkar i Adobe PDF**: Bevarar alla länkar. Det här alternativet är markerat som standard.
 
-**Lägg in bokmärken i Adobe PDF**: Konverterar rubriker till bokmärken. Det här alternativet är markerat som standard.
+**Lägg till bokmärken i Adobe PDF**: Konverterar rubriker till bokmärken. Det här alternativet är markerat som standard.
 
 **Bifoga källfil till Adobe PDF**: Lägger till källfilen i PDF-filen som en bifogad fil.
 
@@ -532,7 +533,7 @@ Om ett Microsoft Word-formatnamn innehåller ett komma (,) eller likhetstecken (
 
 **Konvertera alla sidor**: Konverterar alla sidor i Visio-filen.
 
-**Öppna panelen Lager när den visas i Adobe Acrobat**: Om Visio-lagren inte förenklas öppnas ett fönster där du kan ange vilka lager som ska bevaras i PDF-filen när den öppnas med Acrobat. Det här alternativet är markerat som standard.
+**Öppna lagerpanelen när den visas i Adobe Acrobat**: Om Visio-lagren inte förenklas öppnas ett fönster där du kan ange vilka lager som ska bevaras i PDF-filen när den öppnas i Acrobat. Det här alternativet är markerat som standard.
 
 **Skapa en PDF/A-1b-kompatibel fil**: Tvingar fram användningen av Adobe PDF-inställningen PDF/A-1b:2005 (RGB).
 
@@ -605,7 +606,7 @@ Du kan också ange hur formulär ska skickas. Alternativen är XML, FDF, PDF ell
 
 **Använd övergångseffekter**: Konverterar bildruteövergångseffekterna i OpenOffice-presentationer till motsvarande PDF-övergångseffekter.
 
-**Skicka formulär i format**: Skapar ett PDF-formulär som kan fyllas i och skrivas ut av användaren av PDF-dokumentet.
+**Skicka in Forms i format**: Skapar ett PDF-formulär som kan fyllas i och skrivas ut av användaren av PDF-dokumentet.
 
 **Exportera automatiskt infogade tomma sidor**: När det här alternativet är markerat inkluderas automatiskt tomma sidor i det genererade PDF-dokumentet. Detta är praktiskt om du skriver ut ett PDF-dokument dubbelsidigt. En bok kan till exempel konfigureras så att den första sidan i kapitlet alltid börjar på en sida med udda nummer. Om det föregående kapitlet slutar på en sida med ojämnt nummer infogar OpenOffice en tom sida med jämnt nummer. Det här alternativet styr om den jämna sidan ska inkluderas i den genererade PDF-filen.
 
@@ -618,6 +619,6 @@ Du kan inte ändra inställningarna för andra program via administrationskonsol
 * Adobe FrameMaker: `fm`
 * Adobe Photoshop: `psd`
 
-Stöd för dessa filtyper kan behöva anpassas. Mer information finns i&quot;Adding Support for Additional Native File Formats&quot; (Lägga till stöd för fler inbyggda filformat) i [Programmering med AEM-formulär](https://www.adobe.com/go/learn_aemforms_programming_62).
+Stöd för dessa filtyper kan behöva anpassas. Mer information finns i&quot;Adding Support for Additional Native File Formats&quot; (Lägga till stöd för fler inbyggda filformat) i [Programmering med AEM formulär](https://www.adobe.com/go/learn_aemforms_programming_62).
 
 Hjälp om hur du konfigurerar en PDFG-nätverksskrivare finns i [Konfigurera en PDFG-nätverksskrivare (endast Windows)](/help/forms/using/admin-help/setting-pdfg-network-printer-windows.md).
