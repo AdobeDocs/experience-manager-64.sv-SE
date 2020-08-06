@@ -10,6 +10,9 @@ topic-tags: forms-workspace
 discoiquuid: 58f95138-5439-4540-a8dc-193b4cb42203
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '927'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ En XDP kan återges som ett PDF-formulär eller ett HTML-formulär. Bland de nya
 
 ### Ny HTML Forms-tjänst {#new-html-forms-service}
 
-Den nya tjänsten HTML Forms använder den nya funktionen i Forms för att ge stöd för återgivning av XDP-formulär som HTML. Den nya HTML Forms-tjänsten har följande metoder:
+Den nya tjänsten HTML Forms utnyttjar den nya funktionen i Forms för att ge stöd för återgivning av XDP-formulär som HTML. Den nya HTML Forms-tjänsten visar följande metoder:
 
 ```java
 /*
@@ -140,7 +143,7 @@ Och likvärdiga sändningsprocesser.
 
 ![gen_question_b_20](assets/gen_question_b_20.png) **Vilka åtgärdsprofiler kommer att vara tillgängliga?**
 
-För XDP-formulär:
+För XDP Forms:
 
 * Standard (återge/skicka med de nya standardprocesserna för återgivning/sändning)
 
@@ -154,7 +157,7 @@ Användaren måste välja HTML-alternativknappen för standardprofilen.
 
 ![gen_question_b_20](assets/gen_question_b_20.png) **Kommer uppgraderingen att påverka hur standardåtgärdsprofilen fungerar?**
 
-Ja, eftersom de tidigare återgivnings- och skicketjänsterna som är kopplade till standardåtgärdsprofilen var olika, behandlas dessa som en anpassning av befintliga formulär. När du klickar på **[!UICONTROL Återställ standardvärden]** ställs standardtjänsterna för återgivning och sändning in i stället.
+Ja, eftersom de tidigare återgivnings- och skicketjänsterna som är kopplade till standardåtgärdsprofilen var olika, behandlas dessa som en anpassning av befintliga formulär. När du klickar **[!UICONTROL Restore Defaults]** anges i stället standardtjänsterna för återgivning och sändning.
 
 Om du har ändrat befintliga tjänster för återgivning eller skickning av PDF-formulär eller skapat anpassade tjänster (till exempel custom1) och nu vill använda samma funktioner för HTML-återgivning. Du måste replikera den nya renderings- eller skicka-tjänsten (till exempel custom2) och tillämpa liknande anpassningar på dessa. Nu kan du ändra åtgärdsprofilen för XDP-filen så att den börjar använda anpassade2-tjänster i stället för custom1 för rendering eller sändning.
 
