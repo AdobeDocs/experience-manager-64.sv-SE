@@ -44,7 +44,7 @@ Ange de kataloger som autentiseringsprovidern efterfrågar användarinformation 
 
 ### Lägga till en anpassad SPI {#add-a-custom-spi}
 
-Mer information om hur du skapar en anpassad SPI finns i&quot;Utveckla SPI för AEM-formulär&quot; i [Programmering med AEM-formulär](https://www.adobe.com/go/learn_aemforms_programming_63). Om du vill göra en nyligen distribuerad anpassad SPI tillgänglig för association med domänen startar du om servern.
+Mer information om hur du skapar en anpassad SPI finns i&quot;Utveckla SPI för AEM&quot; i [Programmering med AEM formulär](https://www.adobe.com/go/learn_aemforms_programming_63). Om du vill göra en nyligen distribuerad anpassad SPI tillgänglig för association med domänen startar du om servern.
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
 1. Klicka på Ny företagsdomän eller välj en befintlig företagsdomän.
@@ -137,7 +137,7 @@ Om du valde alternativet Aktivera hänvisning i kataloginställningarna anger du
 
 **Initialer:** Schemaattribut för användarens initialer
 
-**Affärskalender:** Ger dig möjlighet att mappa en affärskalender till en användare baserat på värdet för den här inställningen (affärskalendernyckeln). Affärskalendrar definierar affärsdagar och icke-affärsdagar. AEM-formulär kan använda affärskalendrar vid beräkning av framtida datum och tidpunkter för händelser som påminnelser, deadlines och eskalering. Hur du tilldelar användare affärskalendernycklar beror på om du använder en företagsdomän, lokal domän eller hybriddomän. (Se Konfigurera affärskalendrar.)
+**Affärskalender:** Ger dig möjlighet att mappa en affärskalender till en användare baserat på värdet för den här inställningen (affärskalendernyckeln). Affärskalendrar definierar affärsdagar och icke-affärsdagar. AEM kan använda affärskalendrar vid beräkning av framtida datum och tidpunkter för händelser som påminnelser, deadlines och eskalering. Hur du tilldelar användare affärskalendernycklar beror på om du använder en företagsdomän, lokal domän eller hybriddomän. (Se Konfigurera affärskalendrar.)
 
 Om du använder en företagsdomän kan du mappa inställningen för Business Calendar till ett fält i LDAP-katalogen. Om till exempel varje användarpost i din katalog innehåller ett *landfält* och du vill tilldela affärskalendrar baserat på det land där användaren finns, anger du fältnamnet *land* som värde för inställningen för affärskalender. Du kan sedan mappa affärskalendernycklarna (de värden som definieras för fältet *land* i LDAP-katalogen) till affärskalendrar i formulärarbetsflödet.
 
@@ -159,7 +159,7 @@ Mängden utrymme som används för att visa namnet på affärskalendernyckeln p�
 
 **Tidszon:** Schemaattribut som innehåller tidszonen där användaren finns. Värdet är en sträng som Ort/Land.
 
-**Aktivera VLV-kontroll (Virtual List View):** En LDAP-kontroll som gör att AEM-formulär kan hämta data i grupper från katalogservern. Om du använder Sun One som LDAP-katalog och katalogen innehåller många användare, skapar aktivering av VLV ett index som kan användas av användarhantering vid sökning efter användare. Den här funktionen är användbar när du använder ett vanligt användarkonto som bara kan synkronisera en begränsad mängd data. Du kan också aktivera VLV för grupper. Om du väljer Aktivera VLV-kontroll (Virtual List View) anger du ett namn i rutan Sorteringsfält.
+**Aktivera VLV-kontroll (Virtual List View):** En LDAP-kontroll som gör det möjligt för AEM att hämta data gruppvis från katalogservern. Om du använder Sun One som LDAP-katalog och katalogen innehåller många användare, skapar aktivering av VLV ett index som kan användas av användarhantering vid sökning efter användare. Den här funktionen är användbar när du använder ett vanligt användarkonto som bara kan synkronisera en begränsad mängd data. Du kan också aktivera VLV för grupper. Om du väljer Aktivera VLV-kontroll (Virtual List View) anger du ett namn i rutan Sorteringsfält.
 
 >[!NOTE]
 >
@@ -201,7 +201,7 @@ Om DN anges som en unik identifierare behöver du inte konfigurera Unik identifi
 
 **Ändra tidsstämpel:** Om du vill aktivera deltakatalogsynkronisering anger du det här värdet till att ändra TimeStamp. (Se Aktivera katalogsynkronisering av ändringar.)
 
-**Aktivera VLV-kontroll (Virtual List View):** En LDAP-kontroll som gör att AEM-formulär kan hämta data i grupper från katalogservern. Om du använder Sun One som LDAP-katalog och katalogen innehåller många grupper, skapar aktivering av VLV ett index som användarhantering kan använda när grupper söks. Den här funktionen är användbar när du använder ett vanligt användarkonto som bara kan synkronisera en begränsad mängd data. Du kan även aktivera VLV för användare. Om du väljer Aktivera VLV-kontroll (Virtual List View) anger du ett sorteringsfältnamn.
+**Aktivera VLV-kontroll (Virtual List View):** En LDAP-kontroll som gör det möjligt för AEM att hämta data gruppvis från katalogservern. Om du använder Sun One som LDAP-katalog och katalogen innehåller många grupper, skapar aktivering av VLV ett index som användarhantering kan använda när grupper söks. Den här funktionen är användbar när du använder ett vanligt användarkonto som bara kan synkronisera en begränsad mängd data. Du kan även aktivera VLV för användare. Om du väljer Aktivera VLV-kontroll (Virtual List View) anger du ett sorteringsfältnamn.
 
 >[!NOTE]
 >
@@ -219,9 +219,9 @@ Om DN anges som en unik identifierare behöver du inte konfigurera Unik identifi
 
 ## Konfigurera användarhantering för att använda VLV (Virtual List View) {#configure-user-management-to-use-virtual-list-view-vlv}
 
-Katalogsynkronisering är ett viktigt krav för användarhantering. Användare och grupper synkroniseras från en Enterprise-katalog till AEM-formulärdatabasen för att tilldela roller och behörigheter. Antalet användare varierar mellan 100 och 10000+ beroende på vilka krav som ställs, och det är en utmaning att effektivt synkronisera data.
+Katalogsynkronisering är ett viktigt krav för användarhantering. Användare och grupper synkroniseras från en Enterprise-katalog till AEM formulärdatabas för tilldelning av roller och behörigheter. Antalet användare varierar mellan 100 och 10000+ beroende på vilka krav som ställs, och det är en utmaning att effektivt synkronisera data.
 
-LDAP-protokollet innehåller en mekanism för att fråga stora datauppsättningar på ett sidnumrerat sätt med hjälp av begärandekontroller. När du använder Microsoft Active Directory används PagedResultsControl för att hämta data i grupper av en viss storlek vid databassynkroniseringen av LDAP-till-AEM-formulär. Sun ONE Directory Server stöder inte den här kontrollen. Om du vill slutföra en sidnumrerad fråga mot Sun ONE Directory Server använder du VLV-kontrollen (Virtual List View). Den här kontrollen omfattar både konfiguration på katalogservern och implementering på klientsidan.
+LDAP-protokollet innehåller en mekanism för att fråga stora datauppsättningar på ett sidnumrerat sätt med hjälp av begärandekontroller. När du använder Microsoft Active Directory används PagedResultsControl för att AEM formulärdatabassynkroniseringen i LDAP för att hämta data i grupper av en viss storlek. Sun ONE Directory Server stöder inte den här kontrollen. Om du vill slutföra en sidnumrerad fråga mot Sun ONE Directory Server använder du VLV-kontrollen (Virtual List View). Den här kontrollen omfattar både konfiguration på katalogservern och implementering på klientsidan.
 
 >[!NOTE]
 >
@@ -233,7 +233,7 @@ LDAP-protokollet innehåller en mekanism för att fråga stora datauppsättninga
 
 ### Konfigurera Sun ONE Directory Server for VLV {#configuring-the-sun-one-directory-server-for-vlv}
 
-För att skapa en VLV krävs ett par poster som innehåller klasserna `vlvSearch` och `vlvIndex` object. vlvSearch-posten innehåller en sökbas och attributet `vlvFilter` , som anger objektklassen som innehåller de attribut du vill sortera. Objektklassen innehåller `vlvIndex` attributet `vlvSort` , som anger ett eller flera attribut att sortera och i vilken ordning de ska sorteras. (Ett minustecken (-) anger omvänd alfabetisk ordning). Användning av VLV med AEM-formulär kräver separata poster för användare och grupper.
+För att skapa en VLV krävs ett par poster som innehåller klasserna `vlvSearch` och `vlvIndex` object. vlvSearch-posten innehåller en sökbas och attributet `vlvFilter` , som anger objektklassen som innehåller de attribut du vill sortera. Objektklassen innehåller `vlvIndex` attributet `vlvSort` , som anger ett eller flera attribut att sortera och i vilken ordning de ska sorteras. (Ett minustecken (-) anger omvänd alfabetisk ordning). Att använda VLV med AEM formulär kräver separata poster för användare och grupper.
 
 >[!NOTE]
 >
@@ -260,7 +260,7 @@ Här följer ett exempel på LDIF för VLV-post för användare:
 
 **Skapa objektposter med hjälp av ett skript**
 
-1. Exempelskriptet har en LDAP-post med namnet `lcuser`. Den här posten är avsedd för VLV-relaterad konfiguration för användarsynkronisering i AEM-formulär. Ändra följande egenskaper i enlighet med detta:
+1. Exempelskriptet har en LDAP-post med namnet `lcuser`. Den här posten är avsedd för VLV-relaterad konfiguration för användarsynkronisering i AEM formulär. Ändra följande egenskaper i enlighet med detta:
 
    **Postnamn:** Posten i det här exemplet är `lcuser`. Om `lcuser` ändras måste den ändras i alla områden i exempelskriptet.
 
