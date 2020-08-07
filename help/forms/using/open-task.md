@@ -10,13 +10,16 @@ topic-tags: forms-app
 discoiquuid: cdce7a6a-2bbf-492f-bf91-5b8f07d02207
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '336'
+ht-degree: 0%
 
 ---
 
 
 # Öppna en uppgift {#opening-a-task}
 
-Om AEM Forms-appen synkroniseras med en AEM Forms-server kan du arbeta med uppgifter som du har tilldelats. Uppgifter är steg i arbetsflödet som definieras i workbench eller i AEM-arbetsflödesredigeraren. Se till exempel [Konard hämtar utvärderingsaktiviteten på Geometrixx Gov-referenswebbplatsen](/help/forms/using/gov-reference-site-walkthrough.md#conard-assessment-task). Du kan ändra alla uppgifter som är tilldelade dig. Alla uppgifter är tillgängliga på fliken Uppgift. Uppgifter som sparas som utkast finns kvar på fliken Åtgärder.
+Om AEM Forms-programmet synkroniseras med en AEM Forms-server kan du arbeta med uppgifter som du har tilldelats. Uppgifter är steg i arbetsflödet som definieras i workbench eller i AEM arbetsflödesredigerare. Se till exempel [Konard hämtar utvärderingsaktiviteten på Geometrixx Gov-referenswebbplats](/help/forms/using/gov-reference-site-walkthrough.md#conard-assessment-task). Du kan ändra alla uppgifter som är tilldelade dig. Alla uppgifter är tillgängliga på fliken Uppgift. Uppgifter som sparas som utkast finns kvar på fliken Åtgärder.
 
 Andra formulär sparas som utkast på fliken Utkast. Se [Spara ett utkast](/help/forms/using/save-as-draft.md).
 
@@ -35,7 +38,7 @@ Andra formulär sparas som utkast på fliken Utkast. Se [Spara ett utkast](/help
 
 **Öppna ett program**
 
-1. Tryck på **programmet** på fliken **Formulär** .
+1. Tryck på **programmet** på fliken **Forms** .
 
    När du väljer ett program visas programbeskrivningen under programnamnet. Efter beskrivningen visas den användaråtgärd/de användaråtgärder som är kopplade till programmet.
 
