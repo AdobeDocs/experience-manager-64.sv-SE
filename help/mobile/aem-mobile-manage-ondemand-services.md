@@ -11,6 +11,9 @@ topic-tags: administering-on-demand-services-app
 discoiquuid: c08729f6-1512-4aee-82bb-7cc05749a72f
 translation-type: tm+mt
 source-git-commit: 55b6a113bcb4d39b7eb100f21a05b9b44e3fe1c3
+workflow-type: tm+mt
+source-wordcount: '327'
+ht-degree: 0%
 
 ---
 
@@ -43,20 +46,20 @@ Med preflight-appen Mobile On Demand kan du visa alla projekt som du har tillgå
 
 >[!NOTE]
 >
->Appen AEM Preflight används för att förhandsgranska innehåll och bläddra bland sidor. Klicka [här](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html)om du vill veta mer om Preflight-appen.
+>AEM Preflight-appen används för att förhandsgranska innehåll och bläddra bland sidor. Klicka [här](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html)om du vill veta mer om Preflight-appen.
 >
->Appen AEM Preflight finns i [iTunes App Store](https://itunes.apple.com/us/app/adobe-experience-manager-mobile/id1042687518?mt=8), [Google Play Store](https://play.google.com/store/apps/details?id=com.adobe.dps.preflight&hl=en)och [Windows Store](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-mobile-preflight/9nblggh5wmxq).
+>Den AEM Preflight-appen finns i [iTunes App Store](https://itunes.apple.com/us/app/adobe-experience-manager-mobile/id1042687518?mt=8), [Google Play Store](https://play.google.com/store/apps/details?id=com.adobe.dps.preflight&amp;hl=en)och [Windows Store](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-mobile-preflight/9nblggh5wmxq).
 
 ### Komma framåt {#getting-ahead}
 
-Om du fortfarande behöver mer information om hur du skapar innehåll kan du läsa följande resurser för att skapa och hantera innehåll i en AEM-mobilapp:
+Om du fortfarande behöver mer information om hur du skapar innehåll kan du läsa följande resurser för att skapa och hantera innehåll i ett AEM Mobile-program:
 
 * [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md)
 * [Hantera innehåll](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
 
-## Additional Resources {#additional-resources}
+## Ytterligare resurser {#additional-resources}
 
-Mer information om de två andra rollerna och ansvarsområdena för att skapa en AEM Mobile On-Demand Services-app finns i följande resurser:
+Mer information om de två andra rollerna och ansvarsområdena för att skapa en AEM Mobile On-demand Services-app finns i följande resurser:
 
-* [Utveckla AEM-innehåll för AEM Mobile On Demand-tjänster](/help/mobile/aem-mobile-on-demand.md)
-* [Skapa AEM-innehåll för AEM Mobile On Demand Services-app](/help/mobile/mobile-apps-ondemand.md)
+* [Utveckla AEM för AEM Mobile On-demand Services](/help/mobile/aem-mobile-on-demand.md)
+* [AEM innehåll för AEM Mobile On-demand Services App](/help/mobile/mobile-apps-ondemand.md)
