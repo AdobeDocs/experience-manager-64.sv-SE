@@ -1,8 +1,8 @@
 ---
 title: The Anatomy of an App
 seo-title: The Anatomy of an App
-description: 'Den här sidan innehåller en beskrivning av de sidkomponenter som du skapar för din app baserat på /libs/mobileapps/components/angular/ng-page-komponenten (CRXDE Lite på en lokal server). '
-seo-description: 'Den här sidan innehåller en beskrivning av de sidkomponenter som du skapar för din app baserat på /libs/mobileapps/components/angular/ng-page-komponenten (CRXDE Lite på en lokal server). '
+description: 'Den här sidan innehåller en beskrivning av de sidkomponenter som du skapar för appen baserat på /libs/mobileapps/components/angular/ng-page-komponenten (CRXDE Lite på en lokal server). '
+seo-description: 'Den här sidan innehåller en beskrivning av de sidkomponenter som du skapar för appen baserat på /libs/mobileapps/components/angular/ng-page-komponenten (CRXDE Lite på en lokal server). '
 uuid: 4c1a74c1-85af-4a79-b723-e9fbfc661d35
 contentOwner: User
 content-type: reference
@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 discoiquuid: 55667e62-a61b-4794-b292-8d54929c41ac
 translation-type: tm+mt
 source-git-commit: 39dc4bc0b52cf34519f0375acdf4c0b34510dbbf
+workflow-type: tm+mt
+source-wordcount: '2721'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: 39dc4bc0b52cf34519f0375acdf4c0b34510dbbf
 
 ## Sidmallar för mobilappar {#page-templates-for-mobile-apps}
 
-Sidkomponenter som du skapar för din app baseras på /libs/mobileapps/components/angular/ng-page ([öppna i CRXDE Lite på en lokal server](http://localhost:4502/crx/de/index.jsp#/libs/mobileapps/components/angular/ng-page)). Den här komponenten innehåller följande JSP-skript som din komponent antingen ärver eller åsidosätter:
+Sidkomponenter som du skapar för din app baseras på /libs/mobileapps/components/angular/ng-page-komponenten ([öppnas i CRXDE Lite på en lokal server](http://localhost:4502/crx/de/index.jsp#/libs/mobileapps/components/angular/ng-page)). Den här komponenten innehåller följande JSP-skript som din komponent antingen ärver eller åsidosätter:
 
 * ng-page.jsp
 * head.jsp
@@ -60,7 +63,7 @@ Brödtexten på en vinkelsida återges på olika sätt beroende på om wcmMode i
 
 I redigeringsläge återges varje enskild sida separat. Vinkeln hanterar inte dirigering mellan sidor och inte heller en ng-vy som används för att läsa in en del av en mall som innehåller sidans komponenter. I stället inkluderas sidmallens innehåll (template.jsp) på serversidan via `cq:include` -taggen.
 
-Den här strategin aktiverar författarfunktioner (som att lägga till och redigera komponenter i styckesystemet, Sidekick, designläge osv.) att fungera utan ändringar. Sidor som är beroende av klientåtergivning, t.ex. de för appar, fungerar inte så bra i AEM-redigeringsläge.
+Den här strategin aktiverar författarfunktioner (som att lägga till och redigera komponenter i styckesystemet, Sidekick, designläge osv.) att fungera utan ändringar. Sidor som förlitar sig på klientsidans återgivning, t.ex. de för appar, fungerar inte så bra i AEM.
 
 Observera att include i template.jsp är omsluten i ett `div` -element som innehåller `ng-controller` direktivet. Den här strukturen gör att DOM-innehållet kan länkas till kontrollenheten. Även om sidor som återges på klientsidan misslyckas, fungerar därför enskilda komponenter som gör det bra (se avsnittet Komponenter nedan).
 
@@ -98,7 +101,7 @@ Det här skriptet definierar vinkelmodulen för programmet. Skriptets utdata är
 ng-app="<c:out value='${applicationName}'/>"
 ```
 
-Det här attributet anger för vinkeln att innehållet i det här DOM-elementet ska länkas till följande modul. Den här modulen länkar vyerna (i AEM är dessa cq:Page-resurser) med motsvarande styrenheter.
+Det här attributet anger för vinkeln att innehållet i det här DOM-elementet ska länkas till följande modul. Den här modulen länkar vyerna (i AEM är de cq:Page-resurser) till motsvarande kontrollenheter.
 
 Den här modulen definierar också en kontrollenhet på den översta nivån med namnet `AppController` som visar `wcmMode` variabeln för omfånget och konfigurerar URI:n som uppdateringsnyttolasterna för innehållssynkronisering ska hämtas från.
 
@@ -177,10 +180,10 @@ Ett skript som placerar statiskt innehåll längst ned i programmet. Det här in
 
 ## Appkomponenter {#app-components}
 
-Programkomponenter får inte bara fungera på en AEM-instans (publicera eller författare), utan även när programinnehållet exporteras till filsystemet via Innehållssynkronisering. Komponenten måste därför innehålla följande egenskaper:
+Programkomponenter får inte bara fungera på en AEM (publicera eller författare), utan även när programinnehållet exporteras till filsystemet via Innehållssynkronisering. Komponenten måste därför innehålla följande egenskaper:
 
 * Alla resurser, mallar och skript i ett PhoneGap-program måste refereras relativt.
-* Hanteringen av länkar skiljer sig om AEM-instansen körs i författar- eller publiceringsläge.
+* Hanteringen av länkar skiljer sig om AEM fungerar i redigerings- eller publiceringsläge.
 
 ### Relativa resurser {#relative-assets}
 
@@ -230,7 +233,7 @@ Skriptet visar antingen komponentinnehållet eller en lämplig platshållare nä
 
 #### template.jsp {#template-jsp-1}
 
-Skriptet template.jsp återger komponentens kod. Om komponenten i fråga drivs av JSON-data som hämtats från AEM (till exempel &#39;ng-text&#39;): /libs/mobileapps/components/angular/ng-text/template.jsp) kommer det här skriptet att vara ansvarigt för att dra markeringen med data som exponeras av sidans kontrollomfång.
+Skriptet template.jsp återger komponentens kod. Om komponenten i fråga drivs av JSON-data som har extraherats från AEM (till exempel &#39;ng-text&#39;): /libs/mobileapps/components/angular/ng-text/template.jsp) kommer det här skriptet att vara ansvarigt för att dra markeringen med data som exponeras av sidans kontrollomfång.
 
 Prestandakraven kan dock ibland innebära att ingen klientsidans mall (dvs databindning) utförs. I det här fallet återger du bara komponentens kod på serversidan, så inkluderas den i sidmallsinnehållet.
 
@@ -240,13 +243,13 @@ I komponenter som drivs av JSON-data (till exempel &#39;ng-text&#39;): /libs/mob
 
 #### controller.js.jsp {#controller-js-jsp-1}
 
-Så som beskrivs i AEM-sidmallar kan varje komponent generera ett JavaScript-fragment för att förbruka det JSON-innehåll som exponeras av `data` löftet. I enlighet med vinkelregler bör en kontrollenhet endast användas för att tilldela variabler till omfånget.
+Så som beskrivs i AEM Page Templates kan varje komponent generera ett JavaScript-fragment för att förbruka det JSON-innehåll som exponeras av `data` löftet. I enlighet med vinkelregler bör en kontrollenhet endast användas för att tilldela variabler till omfånget.
 
 #### angular.json.jsp {#angular-json-jsp}
 
 Skriptet inkluderas som ett fragment i den sidövergripande filen &lt;page-name>.angular.json&quot; som exporteras för varje sida som utökar ng-page. I den här filen kan komponentutvecklaren visa alla JSON-strukturer som komponenten behöver. I exemplet &#39;ng-text&#39; inkluderar den här strukturen bara komponentens textinnehåll och en flagga som anger om komponenten innehåller RTF-text eller inte.
 
-Produktkomponenten för Geometrixx-appen utomhus är ett mer komplext exempel (/apps/geometrixx-outdoor-app/components/angular/ng-product):
+Produktkomponenten för appen utomhus för Geometrixx är ett mer komplext exempel (/apps/geometrixx-outdoor-app/components/angular/ng-product):
 
 ```xml
 {
@@ -321,7 +324,7 @@ Katalogen after-prepare innehåller `copy_resource_files.js` filen. Skriptet kop
 
 Katalogen before_platform_add innehåller `install_plugins.js` filen. Skriptet itererar genom en lista med identifierare för Cordova-plugin-program, och installerar de som identifieras inte redan är tillgängliga.
 
-Denna strategi kräver inte att du paketerar och installerar plugin-program till AEM varje gång kommandot Maven `content-package:install` körs. Den alternativa strategin för att checka in filerna i SCM-systemet kräver repetitiva paketerings- och installationsaktiviteter.
+Den här strategin kräver inte att du paketerar och installerar plugin-program för att AEM varje gång kommandot Maven `content-package:install` körs. Den alternativa strategin för att checka in filerna i SCM-systemet kräver repetitiva paketerings- och installationsaktiviteter.
 
 #### .cordova/hooks/andra krokar {#cordova-hooks-other-hooks}
 
@@ -360,7 +363,7 @@ När du har skapat programmet för en viss plattform skapas motsvarande katalog 
 
 #### plugins/ {#plugins}
 
-Katalogen för plugin-program fylls i av varje plugin-program som visas i `.cordova/hooks/before_platform_add/install_plugins.js` filen när du har kört `phonegap run <platform>` kommandot. Katalogen är från början tom.
+Katalogen plugin-program fylls i av varje plugin-program som visas i `.cordova/hooks/before_platform_add/install_plugins.js` filen när du har kört `phonegap run <platform>` kommandot. Katalogen är från början tom.
 
 #### www/ {#www}
 
@@ -390,18 +393,18 @@ Katalogen res innehåller bilder och ikoner på välkomstskärmen. Skriptet kopi
 
 #### www/etc {#www-etc}
 
-I AEM innehåller noden /etc som regel statiskt clientlib-innehåll. Katalogen etc innehåller biblioteken Toprock, AngularJS och Geometrixx ng-clientlibsall.
+AEM noden /etc innehåller som standard statiskt clientlib-innehåll. Katalogen etc innehåller biblioteken Toprock, AngularJS och Geometrixx ng-clientlibsall.
 
 #### www/apps {#www-apps}
 
-Programkatalogen innehåller kod som är relaterad till välkomstsidan. Den unika egenskapen hos startsidan för en AEM-app är att den initierar programmet utan någon användarinteraktion. Klientlibbinnehållet (både CSS och JS) i appen är därför minimalt för att maximera prestanda.
+Programkatalogen innehåller kod som är relaterad till välkomstsidan. Den unika egenskapen hos startsidan för en AEM är att den initierar programmet utan någon användarinteraktion. Klientlibbinnehållet (både CSS och JS) i appen är därför minimalt för att maximera prestanda.
 
 #### www/content {#www-content}
 
 Innehållskatalogen innehåller resten av programmets webbinnehåll. Innehållet kan innehålla, men är inte begränsat till, följande filer:
 
 * HTML-sidinnehåll, som skapas direkt i AEM
-* Bildresurser som är associerade med AEM-komponenter
+* Bildresurser som är associerade med AEM
 * JavaScript-innehåll som serverskript genererar
 * JSON-filer som beskriver sidor- eller komponentinnehåll
 
