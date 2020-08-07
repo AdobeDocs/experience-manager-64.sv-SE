@@ -11,6 +11,9 @@ topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: 5c8971ab-b07c-4131-b4cb-f34c52425014
 translation-type: tm+mt
 source-git-commit: 55b6a113bcb4d39b7eb100f21a05b9b44e3fe1c3
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +32,7 @@ Slutligen publicerar administratörer det uppdaterade programinnehållet strateg
 >
 >**Krav**:
 >
->Vid [driftsättning och underhåll](/help/sites-deploying/deploy.md)bekantades utvecklarna med AEM:s system med komponenter och mallar.
+>Vid [driftsättning och underhåll](/help/sites-deploying/deploy.md)blev utvecklarna bekanta med AEM system för komponenter och mallar.
 
 ## Panelen Hantera sidinnehåll {#the-manage-page-content-tile}
 
@@ -47,19 +50,19 @@ När innehållet har uppdaterats kan administratörer publicera en nyttolast fö
 
 ![chlimage_1-161](assets/chlimage_1-161.png)
 
-Välj något av innehållspaketen i listan om du vill skapa eller redigera innehåll, till exempel skapa, redigera eller ta bort sidor, ändra navigerings- och sidordning, skapa eller uppdatera innehåll som text och media.
+Välj ett av innehållspaketen i listan om du vill skapa eller redigera innehåll, till exempel skapa, redigera eller ta bort sidor, ändra navigerings- och sidordning, skapa eller uppdatera innehåll som text och media.
 
 Observera att *allt är innehåll*, vilket innebär att programformat, text, media, sidor, navigering och målgruppsanpassning för innehåll kan redigeras och uppdateras i OTA, utan att man behöver besöka en app-butik.
 
-*För att kunna redigera AEM Mobile-innehåll behöver AEM-författare *en god förståelse för AEM:s gränssnitt för innehållsredigering: Skapa [sidor i AEM.](/help/sites-authoring/qg-page-authoring.md)
+*AEM behöver en bra förståelse för gränssnittet AEM innehållsredigering för att kunna redigera AEM Mobile-innehåll: [Redigerar sidor i AEM.](/help/sites-authoring/qg-page-authoring.md)
 
 ## Panelen Hantera innehållspaket {#the-manage-content-packages-tile}
 
-Här kan *AEM-administratörer* snabbt och enkelt uppdatera sina appar för att leverera engagerande upplevelser och aktuellt innehåll som ökar varumärkesengagemanget och uppfyller affärsmålen utan att behöva skicka in något nytt till utvecklare eller appbutiker.
+Här kan *AEM administratörer* snabbt och enkelt uppdatera sina appar för att leverera engagerande upplevelser och aktuellt innehåll som ökar varumärkesengagemanget och uppfyller affärsmålen utan att behöva skicka in något nytt till utvecklare eller appbutiker.
 
 ![chlimage_1-162](assets/chlimage_1-162.png)
 
-När *AEM-författare* har lagt till eller ändrat innehåll via panelen Hantera innehåll kan *AEM-administratörer* skicka ut ändringarna till kunder med en innehållspaketuppdatering.
+När *AEM-författare* har lagt till eller ändrat innehåll via panelen Hantera innehåll kan *AEM administratörer* skicka ut dessa ändringar till kunder med en innehållspaketuppdatering.
 
 Med åtgärden Innehållspaket kan *AEM Author* skapa och redigera sidinnehåll medan utvecklingsteamet gör ändringar i utformningen och implementeringen av ett värdprogram, inklusive navigering, format, logik på serversidan, mallar och komponenter, och sedan skickar ut ändringarna till kunder utan att behöva skicka in dem till olika butiker för distribution igen.
 
@@ -79,9 +82,9 @@ Genom att mellanlagra en uppdatering av innehållet kan flera uppdateringar gör
 
 >[!NOTE]
 >
->Det mellanlagrade innehållet kan verifieras med appen AEM Verify innan det publiceras.
+>Det mellanlagrade innehållet kan verifieras med AEM Verifiera-appen före publicering.
 >
->Se [Mobile Quickstart för AEM Verify](/help/mobile/phonegap-mobile-quickstart.md) för mer information om appen AEM Verify.
+>Se [Mobile Quickstart för AEM Verifiera](/help/mobile/phonegap-mobile-quickstart.md) för mer information om AEM Verifiera app.
 
 ![chlimage_1-165](assets/chlimage_1-165.png)
 
@@ -99,7 +102,7 @@ När du har lärt dig mer om att skapa och hantera appinnehåll i programkontrol
 * [Skapa ett nytt program med guiden Skapa app](/help/mobile/phonegap-create-new-app.md)
 * [Importera en befintlig hybridapp](/help/mobile/phonegap-adding-content-to-imported-app.md)
 
-### Additional Resources {#additional-resources}
+### Ytterligare resurser {#additional-resources}
 
 Mer information om roller och ansvar för en administratör och utvecklare finns i resurserna nedan:
 
