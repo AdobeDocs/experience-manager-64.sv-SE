@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: c01e42ff-e338-46e6-a961-131ef943ea91
 translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+source-git-commit: ffa45c8fa98e1ebadd656ea58e4657b669ddd830
 workflow-type: tm+mt
-source-wordcount: '2267'
+source-wordcount: '2293'
 ht-degree: 0%
 
 ---
@@ -82,13 +82,11 @@ Innan indexregeln cq:tags läggs till
 
 * **Fråga i Frågebyggaren**
 
-   * 
-
-      ```
-      type=cq:Page
-       property=jcr:content/cq:tags
-       property.value=my:tag
-      ```
+   ```
+   type=cq:Page
+    property=jcr:content/cq:tags
+    property.value=my:tag
+   ```
 
 * **Frågeplan**
 
@@ -100,24 +98,20 @@ När indexregeln cq:tags lagts till
 
 * **cq:taggindexregel**
 
-   * 
-
-      ```
-      /oak:index/cqPageLucene/indexRules/cq:Page/properties/cqTags
-       @name=jcr:content/cq:tags
-       @propertyIndex=true
-      ```
-
+       &quot;
+ /oak:index/cqPageLucene/indexRules/cq:Page/properties/cqTags     
+ @name=jcr:content/cq:tags     
+ @propertyIndex=true     
+     &quot;
+   
 * **Fråga i Frågebyggaren**
 
-   * 
-
-      ```
-      type=cq:Page
-       property=jcr:content/cq:tags
-       property.value=myTagNamespace:myTag
-      ```
-
+       &quot;
+    type=cq:Page
+     property=jcr:content/cq:tags
+     property.value=myTagNamespace:myTag
+     &quot;
+   
 * **Frågeplan**
 
    * `[cq:Page] as [a] /* lucene:cqPageLucene(/oak:index/cqPageLucene) jcr:content/cq:tags:my:tag where [a].[jcr:content/cq:tags] = 'my:tag' */`
@@ -193,21 +187,18 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
 
    * **Ooptimerad fråga**
 
-      * 
+      ```
+       property=jcr:content/contentType
+       property.value=article-page
+      ```
 
-         ```
-          property=jcr:content/contentType
-          property.value=article-page
-         ```
    * **Optimerad fråga**
 
-      * 
-
-         ```
-          type=cq:Page 
-          property=jcr:content/contentType 
-          property.value=article-page
-         ```
+      ```
+       type=cq:Page 
+       property=jcr:content/contentType 
+       property.value=article-page
+      ```
    Frågor som saknar begränsningseffekt för nodetype AEM att använda `nt:base` nodtype, som alla noder i AEM är en undertyp till, vilket i praktiken inte resulterar i någon nodtype-begränsning.
 
    Om du anger `type=cq:Page` begränsas frågan till endast `cq:Page` noder och frågan tolkas till AEM cqPageLucene, vilket begränsar resultatet till en delmängd av noder (endast `cq:Page` noder) i AEM.
@@ -216,22 +207,19 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
 
    * **Ooptimerad fråga**
 
-      * 
+      ```
+      type=nt:hierarchyNode
+      property=jcr:content/contentType
+      property.value=article-page
+      ```
 
-         ```
-         type=nt:hierarchyNode
-         property=jcr:content/contentType
-         property.value=article-page
-         ```
    * **Optimerad fråga**
 
-      * 
-
-         ```
-         type=cq:Page
-         property=jcr:content/contentType
-         property.value=article-page
-         ```
+      ```
+      type=cq:Page
+      property=jcr:content/contentType
+      property.value=article-page
+      ```
    `nt:hierarchyNode` är den överordnade nodtypen för `cq:Page`, och förutsatt att `jcr:content/contentType=article-page` bara tillämpas på `cq:Page` noder via vårt anpassade program, returnerar den här frågan bara `cq:Page` noder där `jcr:content/contentType=article-page`. Detta är dock en suboptimal begränsning eftersom:
 
    * Annan nod ärver från `nt:hierarchyNode` (t.ex. `dam:Asset`) som lägger till i onödan till de potentiella resultaten.
@@ -243,20 +231,17 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
 
    * **Ooptimerad fråga**
 
-      * 
+      ```
+        property=jcr:content/contentType
+        property.value=article-page
+      ```
 
-         ```
-         property=jcr:content/contentType
-         property.value=article-page
-         ```
    * **Optimerad fråga**
 
-      * 
-
-         ```
-         property=jcr:content/sling:resourceType
-         property.value=my-site/components/structure/article-page
-         ```
+      ```
+      property=jcr:content/sling:resourceType
+      property.value=my-site/components/structure/article-page
+      ```
    Om du ändrar egenskapsbegränsningen från `jcr:content/contentType` (ett anpassat värde) till den välkända egenskapen `sling:resourceType` kan frågan lösas till egenskapsindexet `slingResourceType` som indexerar allt innehåll med `sling:resourceType`.
 
    Egenskapsindex (till skillnad från Lucene-egenskapsindex) används bäst när frågan inte identifieras av nodetype, och en enskild egenskapsbegränsning dominerar resultatuppsättningen.
@@ -265,24 +250,21 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
 
    * **Ooptimerad fråga**
 
-      * 
+      ```
+      type=cq:Page
+      path=/content
+      property=jcr:content/contentType
+      property.value=article-page
+      ```
 
-         ```
-         type=cq:Page
-         path=/content
-         property=jcr:content/contentType
-         property.value=article-page
-         ```
    * **Optimerad fråga**
 
-      * 
-
-         ```
-         type=cq:Page
-         path=/content/my-site/us/en
-         property=jcr:content/contentType
-         property.value=article-page
-         ```
+      ```
+      type=cq:Page
+      path=/content/my-site/us/en
+      property=jcr:content/contentType
+      property.value=article-page
+      ```
    Om du omsluter sökvägsbegränsningen från `path=/content`till `path=/content/my-site/us/en` kan indexen minska antalet indexposter som behöver undersökas. När frågan kan begränsa sökvägen mycket bra, bortom bara `/content` eller `/content/dam`måste du se till att indexet har `evaluatePathRestrictions=true`.
 
    Observera att när du använder `evaluatePathRestrictions` ökar indexstorleken.
@@ -291,23 +273,20 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
 
    * **Ooptimerad fråga**
 
-      * 
+      ```
+      type=cq:Page
+      property=jcr:content/contentType
+      property.operation=like
+      property.value=%article%
+      ```
 
-         ```
-         type=cq:Page
-         property=jcr:content/contentType
-         property.operation=like
-         property.value=%article%
-         ```
    * **Optimerad fråga**
 
-      * 
-
-         ```
-         type=cq:Page
-         fulltext=article
-         fulltext.relPath=jcr:content/contentType
-         ```
+      ```
+      type=cq:Page
+      fulltext=article
+      fulltext.relPath=jcr:content/contentType
+      ```
    Villkoret LIKE tar lång tid att utvärdera eftersom inget index kan användas om texten börjar med ett jokertecken (&quot;%..&quot;). jcr:contains-villkoret tillåter att ett fulltextindex används och är därför att föredra. Detta kräver att det matchade Lucene-egenskapsindexet har indexRule för `jcr:content/contentType` med `analayzed=true`.
 
    Att använda funktioner som `fn:lowercase(..)` kan vara svårare att optimera eftersom det inte finns snabbare motsvarigheter (utanför mer komplexa och diskreta indexanalysatorkonfigurationer). Det är bäst att identifiera andra omfångsbegränsningar för att förbättra den övergripande frågeprestandan, vilket kräver att funktionerna arbetar på den minsta möjliga uppsättningen möjliga resultat.
@@ -318,21 +297,18 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
 
    * **Ooptimerad fråga**
 
-      * 
+      ```
+      type=cq:Page
+      path=/content
+      ```
 
-         ```
-         type=cq:Page
-         path=/content
-         ```
    * **Optimerad fråga**
 
-      * 
-
-         ```
-         type=cq:Page
-         path=/content
-         p.guessTotal=100
-         ```
+      ```
+      type=cq:Page
+      path=/content
+      p.guessTotal=100
+      ```
    För fall där frågekörningen är snabb men där antalet resultat är stort är p. `guessTotal` en viktig optimering för frågor i Query Builder.
 
    `p.guessTotal=100` anger för Query Builder att endast samla in de första 100 resultaten och anger en boolesk flagga som anger om det finns minst ett resultat till (men inte hur många fler, eftersom det skulle bli långsamt om talet räknades). Den här optimeringen är utmärkt för sidnumrering eller oändlig inläsning, där bara en delmängd av resultaten visas stegvis.
@@ -345,24 +321,20 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
 
    * **Fråga i Frågebyggaren**
 
-      * 
+      ```
+      query type=cq:Page
+      path=/content/my-site/us/en
+      property=jcr:content/contentType
+      property.value=article-page
+      orderby=@jcr:content/publishDate
+      orderby.sort=desc
+      ```
 
-         ```
-         query type=cq:Page
-         path=/content/my-site/us/en
-         property=jcr:content/contentType
-         property.value=article-page
-         orderby=@jcr:content/publishDate
-         orderby.sort=desc
-         ```
    * **XPath genererad från frågan i Query Builder**
 
-      * 
-
-         ```
-         /jcr:root/content/my-site/us/en//element(*, cq:Page)[jcr:content/@contentType = 'article-page'] order by jcr:content/@publishDate descending
-         ```
-
+      ```
+      /jcr:root/content/my-site/us/en//element(*, cq:Page)[jcr:content/@contentType = 'article-page'] order by jcr:content/@publishDate descending
+      ```
 
 1. Ange XPath (eller JCR-SQL2) till [Oak Index Definition Generator](https://oakutils.appspot.com/generate/index) för att generera den optimerade definitionen av Lucene-egenskapsindex.
 
@@ -398,21 +370,17 @@ I följande exempel används Query Builder som det vanligaste frågespråket som
 
    * **Fråga i Frågebyggaren**
 
-      * 
+      ```
+      type=myApp:Author
+      property=firstName
+      property.value=ira
+      ```
 
-         ```
-         type=myApp:Author
-         property=firstName
-         property.value=ira
-         ```
    * **XPath genererad från frågan i Query Builder**
 
-      * 
-
-         ```
-         //element(*, myApp:Page)[@firstName = 'ira']
-         ```
-
+      ```
+      //element(*, myApp:Page)[@firstName = 'ira']
+      ```
 
 1. Ange XPath (eller JCR-SQL2) till [Oak Index Definition Generator](https://oakutils.appspot.com/generate/index) för att generera den optimerade definitionen av Lucene-egenskapsindex.
 
