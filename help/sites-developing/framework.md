@@ -10,7 +10,7 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 4b680d17-383b-4173-a444-0b7bdb24e6c8
 translation-type: tm+mt
-source-git-commit: 4dbb6af1c0a76aabc003749d7fa76f8c6e41e726
+source-git-commit: ffa45c8fa98e1ebadd656ea58e4657b669ddd830
 workflow-type: tm+mt
 source-wordcount: '1908'
 ht-degree: 0%
@@ -233,14 +233,20 @@ Nedan följer en beskrivning av effekterna i databasen när du flyttar eller sam
 
    Ett specialvärde för `cq:movedTo` egenskapen är `nirvana`: används när taggen tas bort men inte kan tas bort från databasen eftersom det finns undertaggar med en `cq:movedTo` som måste behållas.
 
-   >[!NOTE]Egenskapen läggs bara till i den flyttade eller sammanfogade taggen om något av följande villkor uppfylls: `cq:movedTo`
+   >[!NOTE]
+   >
+   >Egenskapen läggs bara till i den flyttade eller sammanfogade taggen om något av följande villkor uppfylls: `cq:movedTo`
+   >
    >1. Taggen används i innehåll (vilket betyder att den har en referens) ELLER
    >1. Taggen har underordnade objekt som redan har flyttats.
 
 
 * `cq:backlinks` behåller referenserna i den andra riktningen, dvs. en lista över alla taggar som har flyttats till eller sammanfogats med tagg B. Detta krävs oftast för att hålla `cq:movedTo`egenskaperna uppdaterade även när tagg B flyttas/sammanfogas/tas bort eller när tagg B aktiveras, och då måste även alla dess bakåttaggar aktiveras.
 
->[!NOTE]Egenskapen läggs bara till i den flyttade eller sammanfogade taggen om något av följande villkor uppfylls: `cq:backlinks`
+>[!NOTE]
+>
+>Egenskapen läggs bara till i den flyttade eller sammanfogade taggen om något av följande villkor uppfylls: `cq:backlinks`
+>
 >1. Taggen används i innehåll (vilket betyder att den har en referens) ELLER
 >1. Taggen har underordnade objekt som redan har flyttats.
 
