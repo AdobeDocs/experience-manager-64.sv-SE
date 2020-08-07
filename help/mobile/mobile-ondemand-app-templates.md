@@ -1,8 +1,8 @@
 ---
 title: Skapa och lägga till mallar och komponenter
 seo-title: Skapa och lägga till mallar och komponenter
-description: Följ den här sidan om du vill veta mer om hur du skapar och lägger till mallar och komponenter i programmet. På sidan används Geometrixx Unlimited App som app som innehåller en exempelapp-mall och sidmallar.
-seo-description: Följ den här sidan om du vill veta mer om hur du skapar och lägger till mallar och komponenter i programmet. På sidan används Geometrixx Unlimited App som app som innehåller en exempelapp-mall och sidmallar.
+description: Följ den här sidan om du vill veta mer om hur du skapar och lägger till mallar och komponenter i programmet. På sidan används Geometrixx Unlimited App som ett program som innehåller en exempelprogrammall och sidmallar.
+seo-description: Följ den här sidan om du vill veta mer om hur du skapar och lägger till mallar och komponenter i programmet. På sidan används Geometrixx Unlimited App som ett program som innehåller en exempelprogrammall och sidmallar.
 uuid: 3a93017c-8094-413f-a01c-9b72025a2b20
 contentOwner: User
 content-type: reference
@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 discoiquuid: ec4ada04-e429-4ad4-a060-2dccac847cf0
 translation-type: tm+mt
 source-git-commit: e9a322b73631e6cc48446ef44cda824dfbe4ea63
+workflow-type: tm+mt
+source-wordcount: '1198'
+ht-degree: 0%
 
 ---
 
@@ -20,11 +23,11 @@ source-git-commit: e9a322b73631e6cc48446ef44cda824dfbe4ea63
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-AEM Mobile On-Demand tillhandahåller en fullständigt konfigurerad appmall, en artikelmall och artikelkomponenter.
+AEM Mobile On-Demand tillhandahåller en fullständigt konfigurerad programmall, en artikelmall och artikelkomponenter.
 
 We.Unlimited App är en exempelmall som representerar gränssnittet i en fullt konfigurerbar och hanterbar AEM Mobile On-Demand-applikation.
 
-Om du väljer den här exempelmallen när du skapar en ny app får du en avancerad instrumentpanel för AEM Mobile-funktioner.
+Om du väljer den här exempelmallen när du skapar en ny app får du en funktionsrik instrumentpanel i AEM Mobile.
 
 ![chlimage_1-70](assets/chlimage_1-70.png)
 
@@ -42,14 +45,14 @@ När du skapar ett nytt program baserat på en mall för ett annat program får 
 
 Steg för att skapa ett nytt program baserat på en appmall:
 
-1. Gå till AEM Mobile-appkatalogen: *&lt;server-url>/aem/apps.html/content/mobileapps*
+1. Gå till AEM Mobile programkatalog: *&lt;server-url>/aem/apps.html/content/mobileapps*
 1. Välj **Skapa** —> **App** enligt nedan
 
-När du har skapat ett program med den här mallen kan du lägga till artiklar, banners och samlingar i programmet. Mer information om hur du återbesöker, skapar artiklar, banners och samlingar finns i [Innehållshanteringsåtgärder](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
+När du har skapat ett program med den här mallen kan du lägga till artiklar, banners och samlingar i programmet. Mer information om hur du återbesöker, skapar artiklar, banners och samlingar finns i [Content Management Actions](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 
 >[!NOTE]
 >
->Du kan också välja en exempelprogrammall, till exempel **We.Unlimited** app, som är tillgänglig för dig av en AEM-utvecklare. Om du använder den här exempelmallen för din app får du några exempelartiklar och samlingar att arbeta med. Du kan använda exempelmallarna och -komponenterna, anpassa befintliga mallar eller skapa nya för programmet.
+>Du kan också välja en exempelprogrammall, till exempel **We.Unlimited** app, som är tillgänglig för dig av en AEM. Om du använder den här exempelmallen för din app får du några exempelartiklar och samlingar att arbeta med. Du kan använda exempelmallarna och -komponenterna, anpassa befintliga mallar eller skapa nya för programmet.
 
 >[!CAUTION]
 >
@@ -66,8 +69,8 @@ När du har skapat ett program med den här mallen kan du lägga till artiklar, 
 
 Varje entitetstyp har två färdiga mallar. Dessa är:
 
-* **** Standardmallar: används för att skapa innehåll med tillämpliga standardegenskaper/standardstruktur
-* **** Importerade mallar: används för att importera innehåll från AEM Mobile med tillämpliga standardegenskaper/standardstruktur
+* **Standardmallar:** används för att skapa innehåll med tillämpliga standardegenskaper/standardstruktur
+* **Importerade mallar:** används för att importera innehåll från AEM Mobile med tillämpliga standardegenskaper/standardstruktur
 
 ### Artikelmallar {#article-templates}
 
@@ -86,7 +89,7 @@ Obegränsad artikel är en exempelmall som representerar en typisk AEM Mobile On
 
 ### Lägga till komponenter i artikel {#adding-components-to-article}
 
-När en författare har skapat en artikel kan han eller hon redigera dess innehåll genom att lägga till komponenter som text och bilder. Artiklar är ett tillägg till AEM-sidmallar.
+När en författare har skapat en artikel kan han eller hon redigera dess innehåll genom att lägga till komponenter som text och bilder. Artiklar är ett tillägg till AEM sidmallar.
 
 Markera en artikel som du vill redigera och klicka på **Redigera** för att lägga till komponenter i artikeln.
 
@@ -98,15 +101,15 @@ Välj &#39;**+**&#39; i den vänstra panelen för att lägga till komponenter i 
 
 ### Skapa färdiga mallar {#creating-out-of-the-box-templates}
 
-Det finns inga färdiga artikelmallar, men det finns en standardmall som anpassade mallar ska utöka, se Geometrixx Unlimited App&#39;s [Article template sample](http://localhost:4502/crx/de/index.jsp#/apps/geometrixx-unlimited-app/templates/article).
+Det finns inga färdiga artikelmallar, men det finns en standardmall som anpassade mallar ska utöka, se exemplet [med](http://localhost:4502/crx/de/index.jsp#/apps/geometrixx-unlimited-app/templates/article)artikelmallen för Geometrixx Unlimited App.
 
-De viktigaste egenskaperna utöver de vanliga AEM-mallarna som krävs är bland annat
+De viktigaste egenskaperna utöver de normala AEM mallegenskaper som krävs är bland annat
 
 ***dps-resourceType=&quot;dps:Article&quot;***
 
-Den här egenskapen ser till att AEM-sidan känns igen som en AEM Mobile-målartikelsida.
+Den här egenskapen ser till att AEM kan identifieras som en artikelmålsida från AEM Mobile.
 
-Enligt AEM-mallar kan du lägga till alla standardegenskaper eller underordnade noder i mallens ***jcr:content***.
+Som AEM mallar kan du lägga till alla standardegenskaper eller underordnade noder i mallens ***jcr:content***.
 
 ### Mallar för banner och samling {#banner-and-collection-templates}
 
@@ -118,18 +121,18 @@ Enligt AEM-mallar kan du lägga till alla standardegenskaper eller underordnade 
 
 Komponenterna använder och tillåter åtkomst till widgetar, och de används för att återge innehållet.
 
-En enkel komponent ingår i koddatabasen, vars källa finns i AEM. Därefter kan den även öppnas lokalt i CRXDE Lite.
+En enkel komponent ingår i koddatabasen, vars källa finns i AEM. Därefter kan den också öppnas lokalt i CRXDE Lite.
 
 >[!NOTE]
 >
 >Det finns för närvarande inga färdiga komponenter för AEM Mobile.
 
 
-Du kan lägga till komponenter på sidan. Alla komponenter kan användas i en AEM-mobilapp, men de kanske inte återges korrekt när de används.
+Du kan lägga till komponenter på sidan. Alla komponenter kan användas i en AEM Mobile-app, men de kanske inte återges korrekt när de används.
 
-Anpassade komponenter kanske inte exporterar och överför till AEM Mobile On-Demand Services på rätt sätt utan en anpassad innehållssynkroniseringshanterare för export som återges i AEM.
+Anpassade komponenter kanske inte exporteras och överförs korrekt till AEM Mobile On-demand Services utan en anpassad Content Sync-hanterare för export som återges i AEM.
 
-När komponenten redan har inkluderats på en AEM-sida, tillsammans med några andra byggblockskomponenter, kan du lägga till ytterligare en komponent på sidan eller redigera en befintlig.
+När komponenten redan har inkluderats på en AEM sida, tillsammans med några andra byggblockskomponenter, kan du lägga till ytterligare en komponent på sidan eller redigera en befintlig.
 
 **Så här lägger du till en annan komponent på sidan:**
 
@@ -147,11 +150,11 @@ När komponenten redan har inkluderats på en AEM-sida, tillsammans med några a
 
 >[!NOTE]
 >
->Du kan skapa en komponent i AEM och anpassa den med [Developing with CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md). När du har anpassat den befintliga komponenten som du vill kan du lägga till den på sidan med hjälp av alternativet **Redigera** under **Hantera artiklar** enligt bilden ovan.
+>Du kan skapa en komponent i AEM och anpassa den med [Utveckla med CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md). När du har anpassat den befintliga komponenten som du vill kan du lägga till den på sidan med hjälp av alternativet **Redigera** under **Hantera artiklar** enligt bilden ovan.
 
 >[!NOTE]
 >
->Läs [Bästa praxis för utveckling](/help/mobile/best-practices-aem-mobile.md) av mallar och komponenter i AEM Mobile.
+>Läs [Best Practices for Templates and Components Development](/help/mobile/best-practices-aem-mobile.md) in AEM Mobile.
 
 ### Nästa steg {#the-next-steps}
 
