@@ -1,8 +1,8 @@
 ---
 title: Åtkomst till enhetsfunktioner
 seo-title: Åtkomst till enhetsfunktioner
-description: Följ den här sidan om du vill veta mer om hur du skapar AEM-komponenter som har åtkomst till enhetsfunktioner. AEM PhoneGap Kitchen Sink Github-databasen ger utvecklare en funktionell AEM-app som illustrerar användningen av ett antal centrala Cordova-API:er.
-seo-description: Följ den här sidan om du vill veta mer om hur du skapar AEM-komponenter som har åtkomst till enhetsfunktioner. AEM PhoneGap Kitchen Sink Github-databasen ger utvecklare en funktionell AEM-app som illustrerar användningen av ett antal centrala Cordova-API:er.
+description: Följ den här sidan om du vill veta mer om hur du skapar AEM komponenter som har åtkomst till enhetsfunktioner. AEM PhoneGap Kitchen Sink Github-databasen ger utvecklare en funktionell AEM-app som illustrerar användningen av ett antal centrala Cordova-API:er.
+seo-description: Följ den här sidan om du vill veta mer om hur du skapar AEM komponenter som har åtkomst till enhetsfunktioner. AEM PhoneGap Kitchen Sink Github-databasen ger utvecklare en funktionell AEM-app som illustrerar användningen av ett antal centrala Cordova-API:er.
 uuid: 1996f017-21d3-4d90-9f55-95c626bc4c60
 contentOwner: User
 content-type: reference
@@ -11,6 +11,9 @@ topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 0019e367-8edc-4a23-bfa4-5beda266ace6
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '237'
+ht-degree: 0%
 
 ---
 
@@ -21,9 +24,9 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-## Bygga AEM-komponenter som har åtkomst till enhetsfunktioner {#building-aem-components-that-access-device-features}
+## Bygga AEM komponenter som har åtkomst till enhetsfunktioner {#building-aem-components-that-access-device-features}
 
-I [AEM PhoneGap Kitchen Sink](https://github.com/blefebvre/aem-phonegap-kitchen-sink) Github-databasen finns en funktionell AEM-app som illustrerar användningen av ett antal centrala Cordova-API:er. När appen körs på iOS eller Android via PhoneGap CLI öppnas den på följande sida, som innehåller en länk till varje enhets-API som visas:
+I [AEM PhoneGap Kitchen Sink](https://github.com/blefebvre/aem-phonegap-kitchen-sink) Github-databasen finns en funktionell AEM som visar hur ett antal centrala Cordova-API:er används. När appen körs på iOS eller Android via PhoneGap CLI öppnas den på följande sida, som innehåller en länk till varje enhets-API som visas:
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
