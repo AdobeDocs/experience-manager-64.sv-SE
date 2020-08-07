@@ -1,8 +1,8 @@
 ---
 title: Riktlinjer för maskinvarans storlek
 seo-title: Riktlinjer för maskinvarans storlek
-description: Dessa riktlinjer för storleksändring ger en uppskattning av de maskinvaruresurser som krävs för att driftsätta ett AEM-projekt.
-seo-description: Dessa riktlinjer för storleksändring ger en uppskattning av de maskinvaruresurser som krävs för att driftsätta ett AEM-projekt.
+description: Dessa riktlinjer för storleksändring ger en uppskattning av de maskinvaruresurser som krävs för att driftsätta ett AEM projekt.
+seo-description: Dessa riktlinjer för storleksändring ger en uppskattning av de maskinvaruresurser som krävs för att driftsätta ett AEM projekt.
 uuid: 83f928e3-986b-461b-8b3e-8faacd11172e
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/MANAGING
@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 3f4feb38-eca0-4852-88f8-9b20625e18ad
 translation-type: tm+mt
 source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+workflow-type: tm+mt
+source-wordcount: '2843'
+ht-degree: 0%
 
 ---
 
 
 # Riktlinjer för maskinvarans storlek {#hardware-sizing-guidelines}
 
-Dessa riktlinjer för storleksändring ger en uppskattning av de maskinvaruresurser som krävs för att driftsätta ett AEM-projekt. Beräkningar av storleken beror på projektets arkitektur, lösningens komplexitet, förväntad trafik och projektkraven. Den här guiden hjälper dig att fastställa maskinvarubehoven för en viss lösning eller att hitta en övre och nedre uppskattning av maskinvarukraven.
+Dessa riktlinjer för storleksändring ger en uppskattning av de maskinvaruresurser som krävs för att driftsätta ett AEM projekt. Beräkningar av storleken beror på projektets arkitektur, lösningens komplexitet, förväntad trafik och projektkraven. Den här guiden hjälper dig att fastställa maskinvarubehoven för en viss lösning eller att hitta en övre och nedre uppskattning av maskinvarukraven.
 
 Grundläggande faktorer att beakta är (i denna ordning):
 
@@ -49,7 +52,7 @@ Grundläggande faktorer att beakta är (i denna ordning):
 
 ## Arkitektur {#architecture}
 
-En vanlig AEM-konfiguration består av en författare och en publiceringsmiljö. De här miljöerna har olika krav på den underliggande maskinvarans storlek och systemkonfiguration. Detaljerade överväganden för båda miljöerna beskrivs i avsnitten om [författarmiljö](/help/managing/hardware-sizing-guidelines.md#author-environment-specific-calculations) och [publiceringsmiljö](/help/managing/hardware-sizing-guidelines.md#publish-environment-specific-calculations) .
+En vanlig AEM består av en författare och en publiceringsmiljö. De här miljöerna har olika krav på den underliggande maskinvarans storlek och systemkonfiguration. Detaljerade överväganden för båda miljöerna beskrivs i avsnitten om [författarmiljön](/help/managing/hardware-sizing-guidelines.md#author-environment-specific-calculations) och [publiceringsmiljön](/help/managing/hardware-sizing-guidelines.md#publish-environment-specific-calculations) .
 
 I en typisk projektkonfiguration har du flera miljöer där du ska fasa ut projektet:
 
@@ -63,7 +66,7 @@ I en typisk projektkonfiguration har du flera miljöer där du ska fasa ut proje
 
 * **Publicera produktionsmiljö** för publicerat innehåll.
 
-Dessutom kan miljöerna variera, från ett enserversystem som kör AEM och en programserver till en mycket skalad uppsättning multiserverinstanser med flera processorer. Vi rekommenderar att du använder en separat dator för varje produktionssystem och att du inte kör andra program på dessa datorer.
+Miljöerna kan dessutom variera, från ett enserversystem som kör AEM och en programserver till en mycket skalad uppsättning multiserverinstanser med flera processorer. Vi rekommenderar att du använder en separat dator för varje produktionssystem och att du inte kör andra program på dessa datorer.
 
 ## Allmän hänsyn till maskinvarustorlek {#generic-hardware-sizing-considerations}
 
@@ -88,7 +91,7 @@ Det diskutrymme som krävs beror till stor del på både volymen och typen av we
 
 Diskutrymmet övervakas kontinuerligt under rensning online och offline. Om det tillgängliga diskutrymmet sjunker under ett kritiskt värde avbryts processen. Det kritiska värdet är 25 % av databasens aktuella diskutrymme och kan inte konfigureras. Vi rekommenderar att du ändrar storlek på disken minst två eller tre gånger så stor som databasstorleken, inklusive den beräknade tillväxten.
 
-Överväg att konfigurera redundanta matriser med oberoende diskar (RAID, t.ex. RAID10) för dataredundans.
+Överväg en konfiguration av redundanta matriser med oberoende diskar (RAID, t.ex. RAID10) för dataredundans.
 
 >[!NOTE]
 >
@@ -98,7 +101,7 @@ Diskutrymmet övervakas kontinuerligt under rensning online och offline. Om det 
 
 AEM fungerar bra i virtualiserade miljöer, men det kan finnas faktorer som CPU eller I/O som inte direkt kan jämföras med fysisk maskinvara. En rekommendation är att välja en högre I/O-hastighet (i allmänhet) eftersom detta är en viktig faktor i de flesta fall. Det är nödvändigt att testa miljön för att få en mer detaljerad förståelse för vilka resurser som kommer att behövas.
 
-### Parallalisering av AEM-instanser {#parallelization-of-aem-instances}
+### Parallalisering av AEM {#parallelization-of-aem-instances}
 
 #### Säkert fel {#fail-safeness}
 
@@ -115,7 +118,7 @@ Beräkningen av hur många klusternoder som behövs baseras på de grundläggand
 
 ## Specifika beräkningar för redigeringsmiljön {#author-environment-specific-calculations}
 
-Adobe har utvecklat prestandatester för fristående författarinstanser för testresultat.
+I syfte att göra jämförelser har Adobe utvecklat några test för fristående författarinstanser.
 
 * **Benchmark test 1**
 
@@ -141,13 +144,13 @@ De två ovanstående testerna visar tydligt att flödet varierar beroende på ty
 
 ### Cachelagring {#caching}
 
-I redigeringsmiljön är cachningseffektiviteten vanligtvis mycket lägre eftersom det är vanligare att ändra webbplatsen och innehållet är mycket interaktivt och personaliserat. Med hjälp av dispatchern kan du cachelagra AEM-bibliotek, JavaScript-skript, CSS-filer och layoutbilder. Detta snabbar upp vissa delar av redigeringsprocessen. Om du konfigurerar webbservern för att ytterligare ange rubriker för webbläsarcachelagring på dessa resurser, kommer antalet HTTP-begäranden att minskas och på så sätt blir systemet mer responsivt som författarna upplever.
+I redigeringsmiljön är cachningseffektiviteten vanligtvis mycket lägre eftersom det är vanligare att ändra webbplatsen och innehållet är mycket interaktivt och personaliserat. Med hjälp av dispatchern kan du cachelagra AEM bibliotek, JavaScript-skript, CSS-filer och layoutbilder. Detta snabbar upp vissa delar av redigeringsprocessen. Om du konfigurerar webbservern för att ytterligare ange rubriker för webbläsarcachelagring på dessa resurser, kommer antalet HTTP-begäranden att minskas och på så sätt blir systemet mer responsivt som författarna upplever.
 
 ### Författare som arbetar parallellt {#authors-working-in-parallel}
 
 I redigeringsmiljön är antalet författare som arbetar parallellt och den belastning som deras interaktioner lägger till i systemet de viktigaste begränsande faktorerna. Därför rekommenderar vi att du skalar ditt system baserat på det delade dataflödet.
 
-För sådana scenarier utförde Adobe prestandatester på ett kluster av författare som inte har några delade noder.
+För sådana scenarier utförde Adobe prestandatester på ett kluster med delade noder (ingen) som består av flera författare.
 
 * **Benchmark test 1a**
 
@@ -169,7 +172,7 @@ För sådana scenarier utförde Adobe prestandatester på ett kluster av förfat
 >
 >Genomströmningsfrekvensen skiljer inte mellan transaktionstyper i en lastprofil. Den metod som används för att mäta genomströmning säkerställer att en fast andel av varje typ av transaktion inkluderas i arbetsbelastningen.
 
-De två ovanstående testerna visar tydligt att AEM är skalbart väl för författare som utför grundläggande redigeringsåtgärder med AEM. I allmänhet är AEM mest effektivt vid skalning av läsåtgärder.
+De två testerna ovan visar tydligt att AEM kan skalas bra för författare som utför grundläggande redigeringsåtgärder med AEM. I allmänhet är AEM mest effektivt vid skalning av läsåtgärder.
 
 På en vanlig webbplats sker de flesta redigeringar under projektfasen. När webbplatsen har publicerats har antalet författare som arbetar parallellt vanligtvis sjunkit till ett lägre (driftsläge) genomsnitt.
 
@@ -181,11 +184,11 @@ Den här formeln kan fungera som en allmän riktlinje för skalning av CPU:er n�
 
 Se även de ytterligare kommentarerna om [parallellisering](/help/managing/hardware-sizing-guidelines.md#parallelization-of-aem-instances) och [prestandaoptimering](/help/sites-deploying/configuring-performance.md).
 
-### Maskinvarurekommendationer {#hardware-recommendations}
+### Maskinvarubaserad Recommendations {#hardware-recommendations}
 
-Vanligtvis kan du använda samma maskinvara för din författarmiljö som du rekommenderas för din publiceringsmiljö. Vanligtvis är webbplatstrafiken mycket lägre i redigeringssystemen, men cacheeffektiviteten är också lägre. Den grundläggande faktorn här är dock antalet författare som arbetar parallellt, tillsammans med den typ av åtgärder som görs i systemet. I allmänhet är AEM-klustring (i författarmiljön) mest effektivt vid skalning av läsåtgärder. Med andra ord kan ett AEM-kluster skalas väl tillsammans med författare som utför grundläggande redigeringsåtgärder.
+Vanligtvis kan du använda samma maskinvara för din författarmiljö som du rekommenderas för din publiceringsmiljö. Vanligtvis är webbplatstrafiken mycket lägre i redigeringssystemen, men cacheeffektiviteten är också lägre. Den grundläggande faktorn här är dock antalet författare som arbetar parallellt, tillsammans med den typ av åtgärder som görs i systemet. I allmänhet är AEM (i författarmiljön) mest effektivt vid skalning av läsåtgärder. Ett AEM kluster kan med andra ord skalas bra tillsammans med författare som utför grundläggande redigeringsåtgärder.
 
-Testerna på Adobe utfördes med operativsystemet RedHat 5.5, som körs på en Hewlett-Packard ProLiant DL380 G5-maskinvaruplattform med följande konfiguration:
+Testerna på Adobe utfördes med operativsystemet RedHat 5.5 som körs på en Hewlett-Packard ProLiant DL380 G5-maskinvaruplattform med följande konfiguration:
 
 * Två Intel Xeon X5450-processorer med fyra kärnor på 3,00 GHz
 * 8 GB RAM
@@ -194,13 +197,13 @@ Testerna på Adobe utfördes med operativsystemet RedHat 5.5, som körs på en H
 * Två 146 GB SAS-diskar med 10 000 RPM konfigurerade som en RAID0-stripe-uppsättning
 * SPEC CINT2006 Rate-poängen är 110
 
-AEM-instanser kördes med en minsta stackstorlek på 256 MB, en maximal stackstorlek på 1 024 MB.
+AEM kördes med en minsta stackstorlek på 256 MB, som är den maximala stackstorleken 1 024 MB.
 
 ## Specifika beräkningar för publiceringsmiljön {#publish-environment-specific-calculations}
 
 ### Cachelagring av effektivitet och trafik {#caching-efficiency-and-traffic}
 
-Cache-effektiviteten är avgörande för webbplatsens hastighet. I följande tabell visas hur många sidor per sekund ett optimerat AEM-system kan hantera med hjälp av en omvänd proxy, till exempel dispatchern:
+Cache-effektiviteten är avgörande för webbplatsens hastighet. I följande tabell visas hur många sidor per sekund ett optimerat AEM kan hantera med hjälp av en omvänd proxy, som dispatchern:
 
 | Cachenivåer | Sidor/s (topp) | Miljoner sidor/dag (genomsnitt) |
 |---|---|---|
@@ -223,7 +226,7 @@ Om du använder komplexa mallar behöver AEM mer tid för att återge en sida. S
 
 ### Formel {#formula}
 
-Med följande formel kan du beräkna en uppskattning av hur komplex din AEM-lösning är:
+Med följande formel kan du beräkna en uppskattning av den totala komplexiteten hos din AEM:
 
 `complexity = applicationComplexity + ((1-cacheRatio) * templateComplexity)`
 
@@ -252,7 +255,7 @@ Variablerna i ekvationen är följande:
   </tr>
   <tr>
    <td>cacheRatio</td>
-   <td>Procentandelen sidor som kommer från dispatchercachen. Använd 1 om alla sidor kommer från cacheminnet, eller 0 om alla sidor beräknas av AEM.</td>
+   <td>Procentandelen sidor som kommer från dispatchercachen. Använd 1 om alla sidor kommer från cacheminnet, eller 0 om varje sida beräknas av AEM.</td>
   </tr>
   <tr>
    <td>templateComplexity</td>
@@ -281,7 +284,7 @@ Om du har en mer komplex webbplats behöver du också kraftfullare webbservrar s
 
 >[!NOTE]
 >
-> &amp;ast; Reservera tillräckligt mycket RAM-minne för ditt operativsystem utöver det minne som krävs för din JVM.
+>&amp;ast; Reservera tillräckligt mycket RAM-minne för ditt operativsystem utöver det minne som krävs för din JVM.
 
 ## Ytterligare användningsspecifika beräkningar {#additional-use-case-specific-calculations}
 
@@ -291,7 +294,7 @@ Förutom beräkningen för ett standardwebbprogram kan du behöva ta hänsyn til
 
 Omfattande bearbetning av digitala resurser kräver optimerade maskinvaruresurser, de viktigaste faktorerna är bildstorlek och högsta genomströmning för bearbetade bilder.
 
-Allokera minst 16 GB stackutrymme och konfigurera arbetsflödet för DAM-uppdatering av resurser så att det använder [Camera Raw-paketet](/help/assets/camera-raw.md) för att lägga in råbilder.
+Tilldela minst 16 GB stackutrymme och konfigurera arbetsflödet för DAM-uppdatering av resurs så att det använder det [Camera Raw paketet](/help/assets/camera-raw.md) för att lägga in råbilder.
 
 >[!NOTE]
 >
@@ -305,24 +308,24 @@ Allokera minst 16 GB stackutrymme och konfigurera arbetsflödet för DAM-uppdate
 
 ### Hanterare för flera platser {#multi-site-manager}
 
-Resursanvändningen när AEM MSM används i en redigeringsmiljö beror till stor del på de specifika användningsområdena. De grundläggande faktorerna är:
+Resursanvändningen när du använder AEM MSM i en redigeringsmiljö beror till stor del på de specifika användningsfallen. De grundläggande faktorerna är:
 
 * Antal live-kopior
 * Periodicitet för utrullningar
 * Innehållsträdets storlek som ska rullas ut
 * Anslutna funktioner för utrullningsåtgärderna
 
-Genom att testa det planerade användningsexemplet med ett representativt utdrag kan du få en bättre förståelse för resursanvändningen. Om du extrapolerar resultaten med den planerade genomströmningen kan du utvärdera de ytterligare resurser som krävs för AEM MSM.
+Genom att testa det planerade användningsexemplet med ett representativt utdrag kan du få en bättre förståelse för resursanvändningen. Om du extrapolerar resultaten med det planerade dataflödet kan du utvärdera de ytterligare resurser som krävs för AEM MSM.
 
-Tänk också på att skribenter som arbetar parallellt kommer att uppleva biverkningar om AEM MSM använder fler resurser än planerat.
+Tänk också på att skribenter som arbetar parallellt kommer att uppleva biverkningar om AEM används mer resurser än planerat.
 
-### Viktigt om storleksändring av AEM Communities {#aem-communities-sizing-considerations}
+### Viktigt om AEM Communities-storleksändring {#aem-communities-sizing-considerations}
 
-AEM-webbplatser som innehåller funktioner för AEM Communities (communitysajter) upplever en hög nivå av interaktion från webbplatsbesökare (medlemmar) i publiceringsmiljön.
+AEM webbplatser som innehåller AEM Communities-funktioner (communitysajter) upplever en hög nivå av interaktion från webbplatsbesökare (medlemmar) i publiceringsmiljön.
 
 Att tänka på vid storleksändring av en community-webbplats beror på den förväntade interaktionen från communitymedlemmar och huruvida optimala prestanda för sidinnehåll är av högre betydelse.
 
-Användargenererat innehåll (UGC) som skickas till medlemmar lagras separat från sidinnehållet. AEM-plattformen använder ett nodarkiv som replikerar webbplatsinnehåll från författaren till publiceringen, men AEM Communities använder en enda gemensam butik för UGC som aldrig replikeras.
+Användargenererat innehåll (UGC) som skickas till medlemmar lagras separat från sidinnehållet. Även om den AEM plattformen använder ett nodarkiv som replikerar webbplatsinnehåll från författaren till publiceringen, använder AEM Communities en gemensam lagringsplats för UGC som aldrig replikeras.
 
 För UGC-arkivet är det nödvändigt att välja en lagringsresursleverantör (SRP) som påverkar den valda distributionen.\
 Se
