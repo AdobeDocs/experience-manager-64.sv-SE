@@ -1,8 +1,8 @@
 ---
 title: Konfigurera dina användare och användargrupper
 seo-title: Konfigurera dina användare och användargrupper
-description: Följ den här sidan om du vill veta mer om användarroller och hur du konfigurerar användare och grupper som stöder redigering och hantering av dina mobilappar.
-seo-description: Följ den här sidan om du vill veta mer om användarroller och hur du konfigurerar användare och grupper som stöder redigering och hantering av dina mobilappar.
+description: Följ den här sidan om du vill veta mer om användarroller och hur du konfigurerar användare och grupper så att de kan hantera redigering och hantering av dina mobilappar.
+seo-description: Följ den här sidan om du vill veta mer om användarroller och hur du konfigurerar användare och grupper så att de kan hantera redigering och hantering av dina mobilappar.
 uuid: 55cea2b3-d7e6-4174-92b3-ee97e46b59c4
 contentOwner: User
 content-type: reference
@@ -11,6 +11,9 @@ topic-tags: administering-adobe-phonegap-enterprise
 discoiquuid: 167f3bd9-7dbc-4e6b-9868-3ee53935641b
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '666'
+ht-degree: 0%
 
 ---
 
@@ -23,26 +26,26 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 I det här kapitlet beskrivs användarrollerna och hur du konfigurerar användare och grupper så att de kan hantera redigering och hantering av dina mobilappar.
 
-## Användare och gruppadministration av AEM Mobile-program {#aem-mobile-application-users-and-group-administration}
+## AEM Mobile Application Users and Group Administration {#aem-mobile-application-users-and-group-administration}
 
-Följande två grupper är tillgängliga för att hjälpa till att organisera och hantera behörighetsmodellen för AEM-appar:
+Följande två grupper är tillgängliga för att du ska kunna ordna och hantera behörighetsmodellen för AEM program:
 
 * appadministratörer för appadministratörer
 * appförfattare för appförfattare
 
 ### AEM Mobile Application Content Authors (app-author group) {#aem-mobile-application-content-authors-app-author-group}
 
-Medlemmar i gruppen som skapar appar ansvarar för att skapa innehåll för AEM-mobilappar, inklusive sidor, text, bilder och videor.
+Medlemmar i gruppen app-author ansvarar för att skapa AEM innehåll för mobilappar som sidor, text, bilder och videor.
 
 #### Gruppkonfiguration - programförfattare {#group-configuration-app-authors}
 
 1. Skapa en ny användargrupp med namnet&quot;app-authors&quot;:
 
-   Navigera till Admin Console för användare: [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
+   Navigera till User Admin Console: [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
-   I användargruppkonsolen väljer du plusknappen (+) för att skapa en grupp.
+   I användargruppskonsolen väljer du plusknappen (+) för att skapa en grupp.
 
-   Ange ID:t för den här gruppen som&quot;appförfattare&quot; för att ange att det är en specifik typ av författaranvändargrupp som är specifik för utveckling av mobilprogram i AEM.
+   Ange ID:t för den här gruppen som&quot;app-authors&quot; för att ange att det är en specifik typ av författaranvändargrupp som är specifik för utveckling av mobilprogram i AEM.
 
 1. Lägg till medlem i grupp: Författare
 
@@ -67,12 +70,12 @@ Medlemmar i gruppen som skapar appar ansvarar för att skapa innehåll för AEM-
 
 Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörigheter som finns i appförfattarna **AND** ansvarar även för:
 
-* Konfigurera PhoneGap Build och Adobe Mobile Services-molntjänster i AEM
+* Konfigurera molntjänster för PhoneGap Build och Adobe Mobile Services i AEM
 * Mellanlagring, publicering och rensning av uppdateringar av innehållssynkronisering, OTA
 
 >[!NOTE]
 >
->Behörigheterna avgör tillgängligheten för vissa användaråtgärder i AEM App Command Center.
+>Behörigheter avgör tillgängligheten för vissa användaråtgärder i AEM App Command Center.
 >
 >Du kommer att märka att vissa alternativ inte är tillgängliga för appförfattare som är tillgängliga för appadministratörer.
 
@@ -83,6 +86,7 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
 
    * innehållsförfattare
    * arbetsflöde-användare
+
    ![chlimage_1-20](assets/chlimage_1-20.png)
 
 1. Navigera till [behörighetskonsolen](http://localhost:4502/useradmin) och lägg till behörigheter för att administrera molntjänster
@@ -94,6 +98,7 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
 
    * (Läs, Ändra, Skapa, Ta bort, Replikera) på /etc/packages/mobileapp
    * (Läs) på /var/contentsync
+
    >[!NOTE]
    >
    >Paketreplikering används för att publicera appuppdateringar från författarinstansen till publiceringsinstansen
