@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: introduction
 discoiquuid: 0c1b6ad7-9d25-41dc-b1fe-a4cb9366c259
 translation-type: tm+mt
-source-git-commit: 7c65752a969d9089ad61c29b0581327d32e022d1
+source-git-commit: ffa45c8fa98e1ebadd656ea58e4657b669ddd830
 workflow-type: tm+mt
 source-wordcount: '9161'
 ht-degree: 0%
@@ -305,7 +305,10 @@ Utför följande steg för att skapa ett A/B-test för ansökningsformuläret We
 1. Öppna formuläret i webbläsaren flera gånger med följande URL:
 
    `https://[hostname]:[port]/content/dam/formsanddocuments/we-finance/cc-app/jcr:content?wcmmode=disabled`
-   >[!NOTE] Ta bort cookien med **namnrutan** från webbläsarens cookie-beständighet innan du öppnar formuläret nästa gång. Du kommer att se upplevelsen A och B av formuläret på måfå.
+
+   >[!NOTE]
+   >
+   >Ta bort cookien med **namnrutan** från webbläsarens cookie-beständighet innan du öppnar formuläret nästa gång. Du kommer att se upplevelsen A och B av formuläret på måfå.
 
 1. Markera formuläret, klicka på **Mer** och klicka på **A/B-testrapport**. Du hittar inte så mycket data i rapporten som du just har påbörjat testningen. Nu ska vi tillhandahålla vissa startdata för att se hur A/B-testrapporten ser ut.
 
@@ -451,7 +454,7 @@ Välkomstpaketet är personaliserat för Sarah och visar information som är rel
 
 #### Så här fungerar det {#how-it-works-9}
 
-Välkomstpaketet är en interaktiv kommunikation som ingår i `cq-we-finance-content-pkg.zip` paketet. Kampanjerbjudandena i välkomstpaketet tillhandahålls av Adobe Target server. Erbjudandena är anpassade och riktade till specifika kundsegment. Välkomstpaketet hämtar erbjudanden från en förkonfigurerad Adobe Target-server för ett målgruppssegment med kvinnliga kunder.
+Välkomstpaketet är en interaktiv kommunikation som ingår i `cq-we-finance-content-pkg.zip` paketet. Kampanjerbjudandena i välkomstpaketet tillhandahålls av Adobe Target server. Erbjudandena är anpassade och inriktade på specifika kundsegment. Välkomstpaketet hämtar erbjudanden från en förkonfigurerad Adobe Target-server för ett målgruppssegment med kvinnliga kunder.
 
 De interaktiva korten i skrivbordsversionen av välkomstpaketet använder en anpassad layout som skapats med standardkortlayouten för ett dokumentfragment.
 
@@ -552,13 +555,19 @@ Utför följande steg i författarinstansen för att skapa A/B-test för lånean
 1. Öppna formuläret i webbläsaren flera gånger med följande URL:
 
    `https://[hostname]:[port]/content/dam/formsanddocuments/we-finance/hm-app/jcr:content?wcmmode=disabled`
-   >[!NOTE] Ta bort cookien med **namnrutan** från webbläsarens cookie-beständighet innan du öppnar formuläret nästa gång. Du kommer att se upplevelsen A och B av formuläret på måfå.
+
+   >[!NOTE]
+   >
+   >Ta bort cookien med **namnrutan** från webbläsarens cookie-beständighet innan du öppnar formuläret nästa gång. Du kommer att se upplevelsen A och B av formuläret på måfå.
 
 1. Markera formuläret, klicka på **Mer** och klicka på **A/B-testrapport**. Du hittar inte så mycket data i rapporten som du just har påbörjat testningen. Nu ska vi tillhandahålla vissa startdata för att se hur A/B-testrapporten ser ut.
 
 1. Öppna CRXDE Lite och gör en säkerhetskopia av följande fil: /libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
 1. Ersätt definitionen av `onReportLoadSuccess` funktionen i den ovannämnda filen med funktionsdefinitionen i följande fil: /apps/we-finance/demo-artifacts/targetreport.js
-   >[!NOTE] Dessa ändringar är endast avsedda för demonstrationssyften. Se till att du återställer filinnehållet när du har slutfört den här proceduren.
+
+   >[!NOTE]
+   >
+   >Dessa ändringar är endast avsedda för demonstrationssyften. Se till att du återställer filinnehållet när du har slutfört den här proceduren.
 
 1. Uppdatera rapporten som du skapade så ser du något liknande. Granska rapportkontrollpanelen.
 
@@ -885,7 +894,7 @@ Logga nu in på **Web.Finance Auto Insurance Dashboard** som Conrad Simms (csimm
 
 Sarah får ett mejl med en bilaga från We.Finance som påminner henne om att hennes bilförsäkring håller på att gå ut. Den bifogade filen är den utskrivna versionen av hennes förnyelseinformation för bilförsäkring.
 
-Sarah klickar på **Förnya nu** och dirigeras till webbversionen av sitt bilförsäkringsbrev. Utöver det här brevet hittar Sarah ett antal dagar kvar innan hennes policy upphör att gälla. Sidan ger Sarah en översikt över sin försäkringsinformation, t.ex. försäkringsnummer, förfallobelopp och annan information som rabatterbjudanden och förmånsersättningar. Sarah klickar igen på **Förnya nu** längst ned i policyn.
+Sarah klickar på **Förnya nu** och är dirigerad till webbversionen av sitt bilförsäkringsbrev. Utöver det här brevet hittar Sarah ett antal dagar kvar innan hennes policy upphör att gälla. Sidan ger Sarah en översikt över sin försäkringsinformation, t.ex. försäkringsnummer, förfallobelopp och annan information som rabatterbjudanden och förmånsersättningar. Sarah klickar igen på **Förnya nu** längst ned i policyn.
 
 ![bilförsäkring-förnyelse-e-post](assets/auto-insurance-renewal-email.png)
 
