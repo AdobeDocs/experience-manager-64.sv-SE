@@ -11,6 +11,9 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: 64c6d198-983f-4a52-9c83-560206363868
 translation-type: tm+mt
 source-git-commit: 55b6a113bcb4d39b7eb100f21a05b9b44e3fe1c3
+workflow-type: tm+mt
+source-wordcount: '824'
+ht-degree: 0%
 
 ---
 
@@ -29,12 +32,13 @@ Samlingar är en väldefinierad *bucket* som fylls med innehåll som artiklar el
 
 >[!NOTE]
 >
->Läs följande resurser i onlinehjälpen om du vill veta mer om följande ämnen i AEM-mobilappar:
+>Läs följande resurser i onlinehjälpen om du vill veta mer om följande ämnen i AEM Mobile-program:
 >
 >* [Att tänka på vid design](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
    >
    >
 * [Hantera samlingar](https://helpx.adobe.com/digital-publishing-solution/help/creating-collections.html)
+
 >
 
 
@@ -73,12 +77,12 @@ Arbetsflödet för att importera en ny samling
 
 ## Redigera en samling {#editing-a-collection}
 
-Använd den inbyggda dra och släpp-redigeraren i AEM för att lägga till eller ändra en artikel. Komponenter som text och bilder kan läggas till/tas bort. Bilder från DAM-resurser kan infogas.
+Använd den inbyggda AEM dra och släpp-redigeraren för att lägga till eller ändra en artikel. Komponenter som text och bilder kan läggas till/tas bort. Bilder från DAM-resurser kan infogas.
 
 Arbetsflödet för att redigera en samling:
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Välj en AEM-källartikel på panelen **Hantera samlingar** .
+1. Välj en AEM källartikel på panelen **Hantera samlingar** .
 1. Klicka på den markerade samlingen i listvyn för att öppna den i innehållsredigeraren.
 1. Använd innehållsredigeraren för att dra innehåll i samlingen (manuskript, bilder, text osv.).
 
@@ -110,7 +114,7 @@ Det allmänna arbetsflödet för att överföra en samling:
 
 ## Ta bort en samling {#deleting-a-collection}
 
-Den här åtgärden tar bort den valda samlingen från Mobile On-Demand och eventuellt från den lokala AEM-instansen.
+Den här åtgärden tar bort den valda samlingen från Mobile On-Demand och eventuellt från den lokala AEM.
 
 Det allmänna arbetsflödet för att ta bort en samling:
 
@@ -118,13 +122,13 @@ Det allmänna arbetsflödet för att ta bort en samling:
 1. Markera den artikel som ska tas bort på panelen **Hantera samlingar** .
 1. Se till att det är markerat i listan (markera andra att ta bort efter behov).
 1. Klicka på **Ta bort** i åtgärdsfältet.
-1. Kontrollera om du vill ta bort från både AEM och Mobile On-Demand.
+1. Kontrollera om du vill ta bort från AEM och Mobile On-Demand.
 1. Click **Delete**.
 1. Din samling har nu tagits bort från listan.
 
 ## Lägga till innehåll i samlingar {#adding-content-to-collections}
 
-Samlingar är i princip en kategori med relaterat innehåll.  De samlar ihop innehåll som artiklar, banners i paket som definierar navigeringsstrukturen i ditt program. Samlingar kan kapslas.
+Samlingar är i princip en kategori med relaterat innehåll. De samlar ihop innehåll som artiklar, banners i paket som definierar navigeringsstrukturen i ditt program. Samlingar kan kapslas.
 
 >[!NOTE]
 >
