@@ -11,6 +11,9 @@ topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: 860dde0b-7cb4-4668-9fac-6f954f1ec0a7
 translation-type: tm+mt
 source-git-commit: c58437f791daa11669198d916f0756ff4830677c
+workflow-type: tm+mt
+source-wordcount: '267'
+ht-degree: 1%
 
 ---
 
@@ -25,11 +28,11 @@ Appdefinitioner är ett sätt att identifiera vilka utrymmen och andra konfigura
 
 >[!NOTE]
 >
->Appdefinitioner är knutna till en app, och därför måste en app skapas i AEM Mobile App-konsolen.
+>Appdefinitioner är knutna till en app, och därför måste en app skapas i AEM Mobile App Console.
 
 ## Skapa en ny programdefinition {#creating-a-new-app-definition}
 
-1. Välj **Mobil** på AEM Navigation Console.
+1. Välj **Mobil** på AEM navigeringskonsol.
 
    ![chlimage_1-170](assets/chlimage_1-170.png)
 
@@ -47,7 +50,7 @@ När du känner till appdefinitioner kan du läsa mer om följande redigeringsre
 * [Skapa en ny app med guiden Skapa app](/help/mobile/phonegap-create-new-app.md)
 * [Innehållstjänster](/help/mobile/develop-content-as-a-service.md)
 
-## Additional Resources {#additional-resources}
+## Ytterligare resurser {#additional-resources}
 
 Mer information om administratörens och utvecklarens roller och ansvar finns i resurserna nedan:
 
