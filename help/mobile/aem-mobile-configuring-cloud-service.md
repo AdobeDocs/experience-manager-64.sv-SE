@@ -1,6 +1,6 @@
 ---
-title: Konfigurera Adobe Target Cloud-tjänsten
-seo-title: Konfigurera Adobe Target Cloud-tjänsten
+title: Konfigurera Adobe Target Cloud Service
+seo-title: Konfigurera Adobe Target Cloud Service
 description: Följ den här sidan för att lära dig hur du får rätt uppsättning behörigheter för användare och grupper, skapar molntjänster, konfigurerar programmet för aktiviteten och slutligen skapar innehållet.
 seo-description: Följ den här sidan för att lära dig hur du får rätt uppsättning behörigheter för användare och grupper, skapar molntjänster, konfigurerar programmet för aktiviteten och slutligen skapar innehållet.
 uuid: 569f9c6d-f521-488a-9e51-f43b7a214dd9
@@ -11,11 +11,14 @@ topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 8cd6480f-cb4f-40dd-a444-8ba463b78604
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1333'
+ht-degree: 0%
 
 ---
 
 
-# Konfigurera Adobe Target Cloud-tjänsten {#configuring-adobe-target-cloud-service}
+# Konfigurera Adobe Target Cloud Service {#configuring-adobe-target-cloud-service}
 
 >[!NOTE]
 >
@@ -23,43 +26,43 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 >[!NOTE]
 >
->Det här dokumentet ingår i [Getting Started with AEM Mobile](/help/mobile/getting-started-aem-mobile.md) Guide, en rekommenderad startpunkt för AEM Mobile-referens.
+>Det här dokumentet är en del av guiden [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md) , en rekommenderad startpunkt för AEM Mobile.
 
 Det finns ett antal steg som måste sammanställas innan innehållsförfattare kan börja generera riktat innehåll för mobilappar: Vi får rätt behörighetsgrupp för användare och grupper, skapar molntjänster, konfigurerar programmet för aktiviteten och till slut skapar innehållet.
 
 Det förutsätts att [AEM Mobile Hybrid Reference Application](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) har distribuerats och är tillgängligt via AEM Mobile Dashboard.
 
-## Permissions {#permissions}
+## Behörigheter {#permissions}
 
 Användare som behöver åtkomst till personaliseringskonsolen måste ingå i `target-activity-authors` gruppen. Som en del av användar- och gruppinställningarna bör målaktivitetsgruppen läggas till i gruppen som administrerar program. Genom att lägga till gruppen target-activity-authors kan användarna se menyposten för personalisering.
 
 Om du glömmer att lägga till de användare eller grupper som du vill ska ha tillgång till Admin Console för personalisering i gruppen target-activity-authors kommer det att förhindra användare från att se personaliseringskonsolen.
 
-## Molntjänster {#cloud-services}
+## Cloud Services {#cloud-services}
 
-För att få målinriktat innehåll att fungera för mobilprogram finns det två tjänster som måste konfigureras: Adobe Target-tjänsten och Adobe Mobile Services-tjänsten. Adobe Target Service är motorn för bearbetning av klientförfrågningar och returnering av det personaliserade innehållet. Adobe Mobile Services-tjänsten tillhandahåller anslutningen mellan Adobes tjänster och mobilprogrammet via filen ADBMomobileConfig.json som används av plugin-programmet AMS Cordova. Från AEM Mobile Dashboard kan du konfigurera programmet genom att lägga till de två tjänsterna.
+För att få målinriktat innehåll att fungera för mobilprogram finns det två tjänster som måste konfigureras: Adobe Target och Adobe Mobile Services. Adobe Target-tjänsten tillhandahåller motorn för bearbetning av klientförfrågningar och returnering av det anpassade innehållet. Tjänsten Adobe Mobile Services tillhandahåller anslutningen mellan Adobe-tjänsterna och mobilprogrammet via filen ADBMobleConfig.json, som används av plugin-programmet AMS Cordova. Från AEM Mobile Dashboard kan du konfigurera programmet genom att lägga till de två tjänsterna.
 
-## Adobe Target Cloud-tjänst {#adobe-target-cloud-service}
+## Adobe Target Cloud Service {#adobe-target-cloud-service}
 
-På AEM Mobile Dashboard går du till Hantera molntjänster och klickar på plusknappen (+).
+På AEM Mobile Dashboard går du till Cloud Servicens Hantera och klickar på plusknappen (+).
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
-I guiden Lägg till molntjänst väljer du molntjänstkortet&quot;Adobe Target&quot; och klickar på Nästa.
+I guiden Lägg till Cloud Service väljer du molntjänstkortet&quot;Adobe Target&quot; och klickar på Nästa.
 
 ![chlimage_1-9](assets/chlimage_1-9.png)
 
-I listrutan Välj en konfiguration kan du antingen skapa en ny konfiguration eller välja en befintlig konfiguration. Om du vill skapa en ny konfiguration väljer du Skapa konfiguration i listrutan. Ange en rubrik för målkonfigurationen. Ange klientkod, e-postadress och lösenord som är kopplade till ditt Target-konto. Om du inte känner till värdena för dessa fält kontaktar du Adobe Target-supporten. Klicka på Verifiera för att validera inloggningsuppgifterna. Klicka på knappen Skicka för att skapa molntjänsten.
+I listrutan Välj en konfiguration kan du antingen skapa en ny konfiguration eller välja en befintlig konfiguration. Om du vill skapa en ny konfiguration väljer du Skapa konfiguration i listrutan. Ange en rubrik för målkonfigurationen. Ange klientkod, e-postadress och lösenord som är kopplade till ditt Target-konto. Om du inte känner till värdena för dessa fält kontaktar du Adobe Target support. Klicka på Verifiera för att validera inloggningsuppgifterna. Klicka på knappen Skicka för att skapa molntjänsten.
 
-Molntjänsten som skapas kopplas automatiskt till mobilprogrammet via guiden. Egenskapsvärdet cq:cloudserviceconfigs ställs in på jcr:content-noden i programgruppsnoden. För hybridappexemplet ställs det in på /content/mobileapps/hybrid-reference-app/jcr:content med värdet som pekar på den automatiskt genererade ramverksnoden som finns på /etc/cloudservices/testandtarget/adobe-target—aem-apps/framework. Ramverksnoden har två egenskaper inställda som standard, kön och ålder. Ramverket används bara av AEM-förhandsgranskning och påverkar inte enheten.
+Molntjänsten som skapas kopplas automatiskt till mobilprogrammet via guiden. Egenskapsvärdet cq:cloudserviceconfigs ställs in på jcr:content-noden i programgruppsnoden. För hybridappexemplet ställs det in på /content/mobileapps/hybrid-reference-app/jcr:content med värdet som pekar på den automatiskt genererade ramverksnoden som finns på /etc/cloudservices/testandtarget/adobe-target—aem-apps/framework. Ramverksnoden har två egenskaper inställda som standard, kön och ålder. Ramverket används bara för AEM förhandsgranskning och påverkar inte enheten.
 
-När guiden har slutförts innehåller tjänstrutan Hantera molnet molntjänsten Target, men den innehåller en varning om att ett Adobe Mobile Service-konto saknas.
+När guiden har slutförts innehåller rutan Hantera Cloud Service molntjänsten Target, men den innehåller en varning om att ett Adobe-mobiltjänstkonto saknas.
 
 ![chlimage_1-10](assets/chlimage_1-10.png)
 
-## Adobe Mobile Service {#adobe-mobile-service}
+## Mobiltjänsten Adobe {#adobe-mobile-service}
 
-Det är också nödvändigt att länka ett Adobe Mobile Services-konto (AMS) till programmet. AMS-tjänsten tillhandahåller den ADBMobleConfig.json-fil som krävs och som innehåller målklientens kodinformation. Innan du skapar en association med AMS-kontot måste AMS-kontot ändras av en användare som har behörighet till AMS.
+Det är också nödvändigt att länka ett AMS-konto (Adobe Mobile Services) till programmet. AMS-tjänsten tillhandahåller den ADBMobleConfig.json-fil som krävs och som innehåller målklientens kodinformation. Innan du skapar en association med AMS-kontot måste AMS-kontot ändras av en användare som har behörighet till AMS.
 
 ### Klientkod {#client-code}
 
@@ -71,23 +74,23 @@ När nu klientkoden har kopplats till mobilprogrammet levereras inställningarna
 
 ### Adobe Mobile Service Could Service {#adobe-mobile-service-could-service}
 
-Nu när AMS har konfigurerats är det dags att koppla mobilappen till Adobe Mobile Dashboard. På AEM Mobile Dashboard går du till Hantera molntjänster och klickar på plusknappen (+).
+Nu när AMS har konfigurerats är det dags att associera mobilappen i Adobe Mobile Dashboard. På AEM Mobile Dashboard går du till Cloud Servicens Hantera och klickar på plusknappen (+).
 
 ![chlimage_1-12](assets/chlimage_1-12.png)
 
-Välj Adobe Mobile Services-kortet och klicka på Nästa.
+Markera Adobe Mobile Services-kortet och klicka på Next.
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
-Välj listrutan Mobiltjänst i steget Skapa eller Välj guide och välj posten Skapa konfiguration. Ange titel, företag, användarnamn, lösenord och välj lämpligt datacenter. Om du inte känner till dessa värden kontaktar du Adobe Mobile Service-administratören för att få dem. När alla fält har fyllts i klickar du på knappen Verifiera. Verifieringsprocessen går till AMS och verifierar kontots inloggningsuppgifter, och när valideringen är klar fylls en lista över mobilprogram i där du väljer det associerade mobilprogrammet i listrutan. Klicka på knappen Skicka för att slutföra guiden. Det kan ta en stund att hämta konfigurationsdata och associerade analyser till programmet. När processen är klar klickar du på knappen Klar på den modala för att återgå till Adobe Mobile Dashboard.
+Välj listrutan Mobiltjänst i steget Skapa eller Välj guide och välj posten Skapa konfiguration. Ange titel, företag, användarnamn, lösenord och välj lämpligt datacenter. Om du inte känner till de här värdena kontaktar du Adobe-administratören för mobila tjänster för att få dem. När alla fält har fyllts i klickar du på knappen Verifiera. Verifieringsprocessen går till AMS och verifierar kontots inloggningsuppgifter, och när valideringen är klar fylls en lista över mobilprogram i där du väljer det associerade mobilprogrammet i listrutan. Klicka på knappen Skicka för att slutföra guiden. Det kan ta en stund att hämta konfigurationsdata och associerade analyser till programmet. När processen är klar klickar du på knappen Klar på den modala för att återgå till instrumentpanelen för mobiler i Adobe.
 
-Om du går tillbaka till Mobile Dashboard kommer panelen Hantera molntjänster att innehålla AMS-molntjänsten. Du kommer också att lägga märke till att rutan Analysera mått fylls i med livscykelrapporter.
+Om du går tillbaka till Mobile Dashboard innehåller rutan Hantera Cloud Services AMS-molntjänsten. Du kommer också att lägga märke till att rutan Analysera mått fylls i med livscykelrapporter.
 
 ![chlimage_1-14](assets/chlimage_1-14.png)
 
 ## Synkroniseringshanterare för målinnehåll {#target-content-sync-handlers}
 
-Att leverera innehåll till användarens enhetsinnehåll genereras genom att de erbjudanden som skapas av AEM-innehållsförfattare återges. Det finns en ny hanterare för innehållssynkronisering som hanterar återgivningen av målerbjudanden. Med Hybrid Reference Application som exempel innehåller det engelska innehållspaketet ContentSyncConfig med en [mobileappoffers](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/aem-package/content-author/src/main/content/jcr_root/content/mobileapps/hybrid-reference-app/en/_jcr_content/pge-app/app-config-dev/targetOffers/.content.xml) -hanterare. Nästa steg är avgörande för att återge erbjudanden till enheten. Hanteraren för mobileappoffers har en path-egenskap som identifierar sökvägen till den personaliseringsaktivitet som ska användas för programmet.
+Att leverera innehåll till användarens enhetsinnehåll genereras genom att de erbjudanden som skapas AEM innehållsförfattare återges. Det finns en ny hanterare för innehållssynkronisering som hanterar återgivningen av målerbjudanden. Med Hybrid Reference Application som exempel innehåller det engelska innehållspaketet ContentSyncConfig med en [mobileappoffers](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/aem-package/content-author/src/main/content/jcr_root/content/mobileapps/hybrid-reference-app/en/_jcr_content/pge-app/app-config-dev/targetOffers/.content.xml) -hanterare. Nästa steg är avgörande för att återge erbjudanden till enheten. Hanteraren för mobileappoffers har en path-egenskap som identifierar sökvägen till den personaliseringsaktivitet som ska användas för programmet.
 
 Om det till exempel finns en aktivitet som finns på */content/campaign/hybridref* kopierar du den här sökvägen och klistrar in den som värde för egenskapen *path* för hanteraren mobileappoffers.
 
