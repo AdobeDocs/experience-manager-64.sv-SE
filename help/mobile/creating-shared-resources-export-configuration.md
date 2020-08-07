@@ -11,6 +11,9 @@ topic-tags: developing-on-demand-services-app
 discoiquuid: 1edf6c76-ccb1-40b6-bdf6-924f1461cd28
 translation-type: tm+mt
 source-git-commit: 95499f59b2ce7d5d864d948d596f3efaae0b0d27
+workflow-type: tm+mt
+source-wordcount: '326'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ source-git-commit: 95499f59b2ce7d5d864d948d596f3efaae0b0d27
 >
 >Innan du får lära dig mer om hur du skapar och ändrar delade resurser läser du [Innehållssynkronisering](/help/mobile/mobile-ondemand-contentsync.md) för att förstå de grundläggande begreppen.
 
-AEM Mobile-användare använder innehållssynkronisering för att exportera live-innehåll till statiskt innehåll för användning i mobilappar, och den här exporten sker när innehåll överförs till Mobile On-Demand Services från AEM Mobile.
+AEM Mobile-användare använder Innehållssynkronisering för att exportera live-innehåll till statiskt innehåll för användning i mobilappar, och den här exporten sker när innehåll överförs till Mobile On-Demand Services från AEM Mobile.
 
 Egenskapen ***dps-exportTemplate*** som nämns i tabellen ovan definierar sökvägen till programmets exportkonfigurationer. Ange den här egenskapen för att skapa och ändra delade resurser.
 
@@ -42,15 +45,16 @@ Konfigurationen för innehållssynkronisering som finns i **&lt;dps-exportTempla
 >Du kan bara utföra stegen nedan för att visa delade exempelresurser om du har:
 >
 >* har installerat exempelinnehållet
->* kör AEM-instans
+>* kör AEM
 >* ingen konfigurerad anpassad kontext eller en annan port
+
 >
 
 
 
 Om du vill visa exempel på delad resurs, se stegen nedan:
 
-1. Öppna CRXDE Lite på AEM-servern.
+1. Öppna CRXDE Lite på AEM.
 1. Bläddra till den här sökvägen *[/etc/contentsync/templates/dps-we-unlimited-app/dps-HTMLResources](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-HTMLResources)*för att visa delade exempelresurser.
 
    Du kan visa alla egenskaper som krävs för att skapa dina delade resurser enligt bilden nedan:
@@ -59,5 +63,5 @@ Om du vill visa exempel på delad resurs, se stegen nedan:
 
 >[!NOTE]
 >
->Delade resurser bör laddas upp eller exporteras till AEM Mobile On-Demand Services när någon av de delade resurserna ändras.
+>Delade resurser bör laddas upp eller exporteras till AEM Mobile On-demand Services när någon av de delade resurserna ändras.
 
