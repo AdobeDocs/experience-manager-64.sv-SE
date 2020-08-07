@@ -1,8 +1,8 @@
 ---
-title: Konfigurera din Adobe Mobile Services Cloud-tjänst
-seo-title: Konfigurera din Adobe Mobile Services Cloud-tjänst
-description: Följ den här sidan för att konfigurera din Adobe Mobile Services Cloud-tjänst.
-seo-description: Följ den här sidan för att konfigurera din Adobe Mobile Services Cloud-tjänst.
+title: Konfigurera Cloud Servicen för Adobe Mobile Services
+seo-title: Konfigurera Cloud Servicen för Adobe Mobile Services
+description: Följ den här sidan om du vill konfigurera Cloud Servicen för Adobe Mobile Services.
+seo-description: Följ den här sidan om du vill konfigurera Cloud Servicen för Adobe Mobile Services.
 uuid: 21fe5b24-dc4d-4ee4-9e7f-ed4783baf276
 contentOwner: User
 content-type: reference
@@ -12,11 +12,14 @@ discoiquuid: 962e9e98-a303-435b-a938-31319282e022
 legacypath: /content/docs/en/aem/6-1/develop/mobile-apps/apps/managing-aem-mobile-apps/configure-your-adobe-phonegap-build-cloud-service1
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '468'
+ht-degree: 1%
 
 ---
 
 
-# Konfigurera din Adobe Mobile Services Cloud-tjänst {#configure-your-adobe-mobile-services-cloud-service}
+# Konfigurera Cloud Servicen för Adobe Mobile Services {#configure-your-adobe-mobile-services-cloud-service}
 
 >[!NOTE]
 >
@@ -24,7 +27,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 Mobile Metrics Tile **** på kommandocentralen ger realtidsanalyser för ert mobilprogram.
 
-SDK:t för [Adobe Mobile Analytics](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) är tillgängligt via en PhoneGap-plugin. Mätvärden samlas in och cachelagras på enheten tills enheten är ansluten. Då skickas data till Adobe Mobile Services Cloud för rapportering och analys.
+SDK:t för [Adobe Mobile Analytics](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) är tillgängligt via en PhoneGap-plugin. Mätvärden samlas in och cachelagras på enheten tills enheten är ansluten, då data överförs till Adobe Mobile Services Cloud för rapportering och analys.
 
 Adobe Mobile Analytics SDK innehåller följande:
 
@@ -43,15 +46,15 @@ Adobe Mobile Analytics SDK innehåller följande:
 
 AEM Command Center Metrics Tile
 
-## Konfigurera molntjänsten {#configuring-the-cloud-service}
+## Konfigurera Cloud Servicen {#configuring-the-cloud-service}
 
-För att kunna dra nytta av Adobe Mobile Services Analytics måste du konfigurera AEM Mobile Analytics Cloud-tjänsten med din kontoinformation för Adobe Analytics.
+För att kunna utnyttja Adobe Mobile Services Analytics måste du konfigurera AEM Mobile Analytics Cloud-tjänsten med din Adobe Analytics-kontoinformation.
 
-1. Klicka på den övre högra ikonen för att lägga till eller redigera molntjänster från panelen **Hantera molntjänster** på appkontrollpanelen.
+1. Klicka på den övre högra ikonen för att lägga till eller redigera Cloud Services från panelen **Hantera Cloud Services** på appkontrollpanelen.
 
    ![chlimage_1-23](assets/chlimage_1-23.png)
 
-1. Skärmen **Lägg till eller redigera molntjänster** visas. Välj **Adobes mobiltjänster** och klicka på **Nästa**.
+1. Skärmen **Lägg till eller redigera Cloud Services** visas. Markera **Adobe Mobile Services** och klicka på **Next**.
 
    ![chlimage_1-24](assets/chlimage_1-24.png)
 
@@ -73,7 +76,7 @@ För att kunna dra nytta av Adobe Mobile Services Analytics måste du konfigurer
 
    >[!NOTE]
    >
-   >När du väl har konfigurerat molnet kan du visa **Analyze Metrics** Tile i appkontrollpanelen.
+   >När du väl har konfigurerat molnet kan du visa **Analyze Metrics** Tile (Analysera metrisk panel) på din appinstrumentpanel.
 
    ![chlimage_1-28](assets/chlimage_1-28.png)
 
