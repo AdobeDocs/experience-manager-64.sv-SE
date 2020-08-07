@@ -11,6 +11,9 @@ noindex: true
 redirecttarget: /content/help/en/experience-manager/6-4/mobile/using/administer-mobile-apps
 translation-type: tm+mt
 source-git-commit: 5fe3d533e51a0536064b22e9549578bb5ba754a4
+workflow-type: tm+mt
+source-wordcount: '1332'
+ht-degree: 0%
 
 ---
 
@@ -111,7 +114,7 @@ När modellens ställningar finns kommer modellredigeraren att återge det som f
 
 >[!NOTE]
 >
->Alla modeller är mallar, så de följer alla AEM-mallregler. Detta gör att du kan använda egenskaper som ** allowedParentes och *allowedChildren* . Dessa gäller när nya entiteter skapas baserat på en modell. Mallreglerna säkerställer att enheter bara kan baseras på vissa modeller beroende på deras hierarki.
+>Alla modeller är mallar, så de följer alla AEM regler. Detta gör att du kan använda egenskaper som ** allowedParentes och *allowedChildren* . Dessa gäller när nya entiteter skapas baserat på en modell. Mallreglerna säkerställer att enheter bara kan baseras på vissa modeller beroende på deras hierarki.
 >
 >Mer information om hur du redigerar en modell från kontrollpanelen finns i [Skapa en modell](/help/mobile/administer-mobile-apps.md) under redigeringsavsnittet för mobilappar.
 
@@ -127,7 +130,7 @@ Sökväg: Sökväg till en webbplatssida. Innehåll från den här sökvägen (o
 
 **Resursmodell** Med Assets-modellen kan du snabbt återanvända befintligt innehåll från Assets för leverans via innehållstjänster.
 
-resourceType för entiteter som baseras på sidmodellen är: mobileapps/ *caas/components/data/assets.*
+resourceType för entiteter som baseras på sidmodellen är: *mobileapps/caas/components/data/assets.*
 
 Resurslista: Lista med sökvägar från Assets. Varje resurs läggs till som en underordnad entitetsnod med en resourceType som är *wcm/foundation/components/image*.
 
