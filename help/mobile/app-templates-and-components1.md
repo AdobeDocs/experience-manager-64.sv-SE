@@ -11,6 +11,9 @@ topic-tags: developing-on-demand-services-app
 discoiquuid: 7f31c6a7-92d5-4a87-a9f0-68a82b834d5a
 translation-type: tm+mt
 source-git-commit: 6c453c9497575a4be0172b86295186c74d0e50f5
+workflow-type: tm+mt
+source-wordcount: '428'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +33,7 @@ Varje mall visar ett urval av komponenter som är tillgängliga för användning
 
 >[!NOTE]
 >
->Mer information om hur du utvecklar AEM-program med CRXDE Lite finns i [Utveckla med CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+>Mer information om hur du utvecklar AEM med CRXDE Lite finns i [Utveckla med CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 En mall är grunden för en sida.
 
@@ -56,10 +59,11 @@ Den här noden innehåller *en jcr:content-nod (cq:PageContent)* som används so
 
 >[!NOTE]
 >
->Om du vill lära dig grunderna för mallar och komponenter i AEM kan du läsa resurserna nedan:
+>Mer information om grunderna för mallar och komponenter i AEM finns i resurserna nedan:
 >
 >* [Mallar](/help/sites-developing/templates.md)
 >* [Komponenter](/help/sites-developing/components.md)
+
 >
 
 
@@ -71,7 +75,7 @@ När du har grundläggande kunskaper om mallar och komponenter kan du läsa föl
 * [Bästa praxis](/help/mobile/best-practices-aem-mobile.md)
 * [Utveckla AEM Mobile Content Services](/help/mobile/developing-content-services.md)
 
-### Additional Resources {#additional-resources}
+### Ytterligare resurser {#additional-resources}
 
 Länkarna nedan innehåller mer information om mobilappar:
 
