@@ -3,7 +3,7 @@ title: Använda sidspåraren och bädda in kod på webbsidor
 description: Lär dig hur du inkluderar sidspåraren och bäddar in JavaScript-koder i webbplatskoden så att Adobe Analytics kan samla in användningsdata runt resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
+source-git-commit: 5964edfadf597652f754ca3c64343b0b90e40796
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 0%
@@ -33,9 +33,9 @@ I följande exempelkod visas hur en webbsida som innehåller både sidspårnings
                 assetAnalytics.charsLimitForGET = 2000; // bytes
                 assetAnalytics.dispatcher.init("assetstesting","xxxx","xxx","list1","eVar3","event8","event7");
             </script>
-                    
+
     </head>
-                
+
     <body>
 
                                 <img
@@ -46,7 +46,7 @@ I följande exempelkod visas hur en webbsida som innehåller både sidspårnings
 
         <a
             href="https://www.adobe.com"
-        
+
             onclick="assetAnalytics.core.assetClicked(this);return false">
                 <img
                     src="http://localhost/xxxx/content/dam/test/xyz.jpg"
@@ -75,7 +75,6 @@ Du lägger till sidspårningskoden i sidhuvudsavsnittet i webbplatskoden. I föl
                 assetAnalytics.charsLimitForGET = 2000; // bytes
                 assetAnalytics.dispatcher.init("assetstesting","abc.net","bee","list1","eVar3","event8","event7");
             </script>
-                                                
  </head>
 ```
 
@@ -94,7 +93,7 @@ Du lägger till inbäddningskoden i webbplatskoden. I följande kodfragment visa
 
         <a
             href="https://www.adobe.com"
-        
+
             onclick="assetAnalytics.core.assetClicked(this);return false">
            <img
                     src="http://localhost:4502/xxxx/content/dam/test/xyz.jpg"
