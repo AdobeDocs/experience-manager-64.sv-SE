@@ -10,9 +10,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 translation-type: tm+mt
-source-git-commit: a3a160a0281c1ea2ca050c2c747d6a5ec1d952b3
+source-git-commit: 5964edfadf597652f754ca3c64343b0b90e40796
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '1063'
 ht-degree: 2%
 
 ---
@@ -110,11 +110,11 @@ Snabbvyer stöds av följande visningsprogram i Dynamic Media:
    * Interaktivt bildvisningsprogram: [setHandlers](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html)
    * Interaktivt visningsprogram för video: [setHandlers](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
 
-1. Du måste nu konfigurera hanteraren quickViewActivate.
+1. Nu måste du konfigurera `quickViewActivate` hanteraren.
 
    Hanteraren quickViewActivate styr snabbvyerna i visningsprogrammet. Hanteraren innehåller variabellistan och funktionsanrop som kan användas med snabbvyn. Inbäddningskoden innehåller mappning för SKU-variabeluppsättningen i snabbvyn samt ett exempel på loadQuickView-funktionsanrop.
 
-   **Variabelmappning** Kartvariabler som ska användas på webbsidan till SKU-värdet och generiska variabler som finns i snabbvyn:
+   **Variabelmappning** Kartvariabler som ska användas på webbsidan till SKU-värdet och generiska variabler som finns i QuickView:
 
    `var *variable1*= inData.*quickviewVariable*`
 
