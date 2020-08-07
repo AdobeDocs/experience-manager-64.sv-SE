@@ -12,11 +12,14 @@ discoiquuid: 7c723773-7c23-43d7-85dc-53e54556b648
 legacypath: /content/docs/en/aem/6-1/develop/the-basics/templates
 translation-type: tm+mt
 source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
+workflow-type: tm+mt
+source-wordcount: '982'
+ht-degree: 0%
 
 ---
 
 
-# Templates{#templates}
+# Mallar{#templates}
 
 Mallar används vid olika tillfällen i AEM:
 
@@ -33,7 +36,7 @@ Följande mallar beskrivs i detalj:
 
 ## Mallar - Sidor {#templates-pages}
 
-AEM erbjuder nu två grundläggande typer av mallar för att skapa sidor:
+AEM har nu två grundläggande typer av mallar för att skapa sidor:
 
 >[!NOTE]
 >
@@ -60,14 +63,14 @@ Fördelarna med redigerbara mallar:
 
 >[!NOTE]
 >
->Det finns en artikel i AEM Community som förklarar hur du utvecklar en Experience Manager-webbplats med redigerbara mallar, se [Skapa en Adobe Experience Manager 6.4-webbplats med redigerbara mallar](https://helpx.adobe.com/experience-manager/using/first_aem64_website.html).
+>Det finns en artikel i AEM Community som förklarar hur du utvecklar en Experience Manager-webbplats med redigerbara mallar. Se [Skapa en Adobe Experience Manager 6.4-webbplats med redigerbara mallar](https://helpx.adobe.com/experience-manager/using/first_aem64_website.html).
 
 ### Statiska mallar {#static-templates}
 
 Statiska mallar:
 
 * Måste definieras och konfigureras av utvecklarna.
-* Detta var det ursprungliga mallsystemet i AEM och har funnits i många versioner.
+* Detta var det ursprungliga mallsystemet för AEM och har funnits i många versioner.
 * En statisk mall är en hierarki med noder som har samma struktur som den sida som ska skapas, men utan något faktiskt innehåll.
 * Kopieras för att skapa den nya sidan. Därefter finns ingen dynamisk anslutning.
 * Använder [designläge](/help/sites-authoring/default-components-designmode.md) för att behålla designegenskaper.
@@ -78,7 +81,7 @@ Statiska mallar:
 >
 >Från och med AEM 6.4 anses användningen av statiska mallar inte vara en god praxis. Använd redigerbara mallar i stället.
 >
->[Med AEM-moderniseringsverktygen](modernization-tools.md) kan du migrera från statiska till redigerbara mallar.
+>[Med verktygen AEM modernisering](modernization-tools.md) kan du gå över från statiska till redigerbara mallar.
 
 ### Malltillgänglighet {#template-availability}
 
