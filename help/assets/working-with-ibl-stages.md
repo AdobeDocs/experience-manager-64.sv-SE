@@ -10,7 +10,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 658ff671-16b9-41bd-ba24-b77a32b3346b
 translation-type: tm+mt
-source-git-commit: 5acb16b1734331767554261bbcf9640947f2e23f
+source-git-commit: 5964edfadf597652f754ca3c64343b0b90e40796
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 0%
@@ -37,7 +37,7 @@ En enda HDR-bild räcker ofta för IBL-steg, men AEM 3D ger ytterligare kontroll
 
 * **Diffus ljusmiljöbild** - Den här typen av bild ska vara en HDR-bild, men den kan vara ganska liten eftersom bilden filtreras kraftigt innan den används för diffus belysning.
 * **Reflektionsmiljöbild** - Den här typen av bild används för att skapa speglingar i objektytor. Det kan vara en 8-bitars RGB-standardbild med en storlek och upplösning som ger önskad kvalitet och skärpa för speglingar. Om en HDR-bild anges konverteras den AEM 3D till 8-bitars RGB innan en egen algoritm används.
-* **Bakgrundsmiljöbild** - Den här typen av bild används som bakgrund. Det kan vara en 8-bitars RGB-standardbild och bör ha önskad storlek/upplösning/detaljnivå för scenens bakgrund. Om en HDR-bild anges konverterar AEM 3D den till 8-bitars RGB med en egen algoritm. &quot;
+* **Bakgrundsmiljöbild** - Den här typen av bild används som bakgrund. Det kan vara en 8-bitars RGB-standardbild och bör ha önskad storlek/upplösning/detaljnivå för scenens bakgrund. Om en HDR-bild anges konverterar AEM 3D den till 8-bitars RGB med en egen algoritm.
 
 >[!NOTE]
 >
