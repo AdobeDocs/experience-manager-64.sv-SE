@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 discoiquuid: ef568577-c74e-4fc2-b66e-eedac2948310
 translation-type: tm+mt
 source-git-commit: 55b6a113bcb4d39b7eb100f21a05b9b44e3fe1c3
+workflow-type: tm+mt
+source-wordcount: '1209'
+ht-degree: 2%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 55b6a113bcb4d39b7eb100f21a05b9b44e3fe1c3
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Ett space är en praktisk plats där du kan lagra enheter som exponeras via Content Services REST API. Detta är särskilt användbart eftersom ett program (eller en kanal) kan associeras med många enheter. Tvinga entiteter att vara inom ett space att gruppera en apps krav på bästa sätt. Du kan även associera en app i AEM med ett litet antal mellanslag.
+Ett space är en praktisk plats där du kan lagra enheter som exponeras via Content Services REST API. Detta är särskilt användbart eftersom ett program (eller en kanal) kan associeras med många enheter. Tvinga entiteter att vara inom ett space att gruppera en apps krav på bästa sätt. Du kan även associera ett program i AEM med ett litet antal mellanslag.
 
 >[!NOTE]
 >
@@ -28,15 +31,15 @@ Ett space är en praktisk plats där du kan lagra enheter som exponeras via Cont
 
 ## Skapa ett blanksteg {#creating-a-space}
 
-Om användaren vill visa en massa innehåll och resurser för en mobilapp skapar användaren utrymmet med AEM Mobile-kontrollpanelen.
+Om användaren vill visa en massa innehåll och resurser för en mobilapp skapar användaren utrymmet med AEM Mobile Dashboard.
 
-För första gången, som inte har konfigurerat innehållstjänster för att arbeta med blanksteg, visas endast appar på AEM Mobile-kontrollpanelen när du har valt **Innehållstjänster**.
+För första gången som användare som inte har konfigurerat innehållstjänster för att arbeta med mellanslag visas bara appar på AEM Mobile kontrollpanel när **innehållstjänster** har valts.
 
 >[!CAUTION]
 >
 >**Krav för att lägga till ett blanksteg**
 >
->Markera **Aktivera AEM Content Services** för att arbeta med Spaces och aktivera det på din AEM Mobile-kontrollpanel.
+>Markera **Aktivera AEM Content Services** för att arbeta med Spaces och aktivera det i AEM Mobile kontrollpanel.
 >
 >Mer information finns i [Administrera innehållstjänster](/help/mobile/developing-content-services.md) .
 
@@ -56,7 +59,7 @@ När du har konfigurerat Spaces på kontrollpanelen gör du så här för att sk
 
 När du har skapat ett blanksteg klickar du till vänster för att hantera det i listan.
 
-Du kan visa egenskaper för utrymmet, ta bort utrymmet eller publicera utrymmet och innehållet i det till en AEM-publiceringsinstans.
+Du kan visa egenskaper för utrymmet, ta bort det eller publicera utrymmet och dess innehåll till en AEM publiceringsinstans.
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
@@ -101,7 +104,7 @@ Blanksteg kan innehålla mappar för att ytterligare ordna utrymmets innehåll o
 >
 >Språkkopian fungerar inte fullt ut i den här versionen. Den ställer bara in strukturen.
 
-Med funktionen **Språkkopia** kan författare kopiera sin huvudspråkkopia och sedan skapa ett projekt och ett arbetsflöde för att automatiskt översätta innehållet. Med Language Copy skapas rätt struktur. När du har lagt till en mapp på ett space kan du lägga till språkkopia på ditt space.
+Med funktionen **Språkkopia** kan författare kopiera sin överordnad språkkopia och sedan skapa ett projekt och ett arbetsflöde för att automatiskt översätta innehållet. Med Language Copy skapas rätt struktur. När du har lagt till en mapp på ett space kan du lägga till språkkopia på ditt space.
 
 >[!NOTE]
 >
@@ -119,7 +122,7 @@ Med funktionen **Språkkopia** kan författare kopiera sin huvudspråkkopia och 
    >
    >Språkkopieringsnoder kan bara finnas som direkt underordnad till Space.
 
-1. **** Välj **innehållspaketets språk&amp;stämpel;senast; och ange** titel&amp;stämpel;ast; i dialogrutan **Skapa språkkopia** .
+1. Välj **innehållspaketets språk&amp;stämpel;senast;** och ange **titel&amp;stämpel;ast;** i dialogrutan **Skapa språkkopia** .
 
    Klicka på **Skapa**.
 
@@ -136,15 +139,15 @@ Med funktionen **Språkkopia** kan författare kopiera sin huvudspråkkopia och 
 ### Ta bort en mapp från utrymmet {#removing-a-folder-from-the-space}
 
 1. Markera mappen i listan med utrymmesinnehåll
-1. Klicka på **Ta bort** i verktygsfältet
+1. Click **Delete** from the toolbar
 
    >[!NOTE]
    >
-   >Om du vill navigera till en mapp och visa dess innehåll eller lägga till en undermapp eller enhet klickar du på mappens namn i utrymmets innehållslista.
+   >Om du vill navigera till en mapp och visa dess innehåll eller lägga till en undermapp eller enhet, klickar du på mappens namn i utrymmets innehållslista.
 
 ## Arbeta med entiteter i ett blanksteg {#working-with-entities-in-a-space}
 
-Enheter representerar innehåll som visas via webbtjänstens slutpunkt. Enheterna lagras i utrymmen så att de enkelt kan hittas och lagras oberoende av AEM-databasstrukturen som innehåller deras relaterade innehåll.
+Enheter representerar innehåll som visas via webbtjänstens slutpunkt. Enheterna lagras i utrymmen så att de enkelt kan hittas och lagras oberoende av den AEM databasstruktur som innehåller deras relaterade innehåll.
 
 Du kanske vill gruppera enheter tillsammans i en logisk samling. Det gör du genom att skapa valfritt antal mappar.
 
