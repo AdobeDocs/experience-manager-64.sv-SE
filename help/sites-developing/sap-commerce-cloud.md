@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 96dc0c1a-b21d-480a-addf-c3d0348bd3ad
 translation-type: tm+mt
-source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
+source-git-commit: ffa45c8fa98e1ebadd656ea58e4657b669ddd830
 workflow-type: tm+mt
 source-wordcount: '2331'
 ht-degree: 0%
@@ -158,59 +158,57 @@ Produktdata som bevaras i hybris måste finnas tillgängliga i AEM. Följande me
 * En initial belastning av ID:n tillhandahålls av hybris som foder. Denna feed kan uppdateras.
 * hybris kommer att tillhandahålla uppdateringsinformation via ett foder (som AEM undersökningar).
 * När AEM använder produktdata skickar den begäranden tillbaka till hybris om aktuella data (villkorlig begäran om hämtning med det senaste ändringsdatumet).
-* On hybris it is possible to specify feed contents in a declarative way.
+* På hybris är det möjligt att ange foderinnehållet på ett deklarativt sätt.
 * Matningsstrukturen mappas till AEM innehållsmodell i matningsadaptern på AEM.
 
 ![chlimage_1-12](assets/chlimage_1-12.png)
 
-* The importer (b) is used for the initial setup of the page tree structure in AEM for catalogs.
-* Catalog changes in hybris are indicated to AEM via a feed, these then propagate to AEM (b)
+* Importören (b) används för den första konfigurationen av sidträdstrukturen i AEM för kataloger.
+* Katalogförändringar i hybris anges som AEM via en feed och sedan sprida dessa till AEM b.
 
-   * Product added/deleted/changed with respect to catalog version.
-   * Product approved.
+   * Produkt som lagts till/tagits bort/ändrats i förhållande till katalogversionen.
+   * Produkten är godkänd.
 
-* The hybris extension provides a polling importer (&quot;hybris&quot; scheme&quot;), which can be configured to import changes into AEM at a specified interval (for example, every 24 hours where the interval is specified in seconds):
+* Tillägget hybris erbjuder en pollingimportör (&quot;hybris&quot;-schema&quot;) som kan konfigureras för att importera ändringar till AEM med ett angivet intervall (t.ex. var 24:e timme där intervallet anges i sekunder):
 
-   * 
+   ```
+     http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
+      {
+      * "jcr:mixinTypes": ["cq:PollConfig"],
+      * "enabled": true,
+      * "source": "hybris:outdoors",
+      * "jcr:primaryType": "cq:PageContent",
+      * "interval": 86400
+      }
+   ```
 
-      ```
-      http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
-       {
-       * "jcr:mixinTypes": ["cq:PollConfig"],
-       * "enabled": true,
-       * "source": "hybris:outdoors",
-       * "jcr:primaryType": "cq:PageContent",
-       * "interval": 86400
-       }
-      ```
+* Katalogkonfigurationen i AEM känner igen katalogversionerna **Staged** och **Online** .
 
-* The catalog configuration in AEM recognizes **Staged** and **Online** catalog versions.
+* För att kunna synkronisera produkter mellan katalogversioner måste man (ta bort) aktivera motsvarande AEM (a, c)
 
-* Syncing products between catalog versions will require a (de-)activation of the corresponding AEM page (a, c)
+   * Om du vill lägga till en produkt i en **katalogversion online** måste du aktivera produktens sida.
+   * Borttagning av en produkt kräver inaktivering.
 
-   * Adding a product to an **Online** catalog version requires activation of the product&#39;s page.
-   * Removing a product requires deactivation.
+* Aktivering av en sida i AEM c kräver en kontroll b och är endast möjlig om
 
-* Activating a page in AEM (c) requires a check (b) and is only possible if
-
-   * The product is in an **Online** catalog version for product pages.
-   * The referenced products are available in an **Online** catalog version for other pages (e.g. campaign pages).
+   * Produkten finns i en **katalogversion online** för produktsidor.
+   * De produkter som det hänvisas till finns i en **katalogversion online** för andra sidor (t.ex. kampanjsidor).
 
 * Aktiverade produktsidor måste ha tillgång till produktdatans **onlineversion** (d).
 
-* The AEM publish instance requires access to hybris for the retrieval of product and personalized data (d).
+* Den AEM publiceringsinstansen kräver tillgång till hybris för hämtning av produktdata och personaliserade data (d).
 
 ### Arkitektur {#architecture}
 
-#### Architecture of Product and Variants {#architecture-of-product-and-variants}
+#### Arkitektur för produkt och varianter {#architecture-of-product-and-variants}
 
-A single product can have multiple variations; for instance, it might vary by color and/or size. A product must define which properties drive variation; we term these *variant axes*.
+En och samma produkt kan ha flera variationer. den kan till exempel variera beroende på färg och/eller storlek. En produkt måste definiera vilka egenskaper som driver variationen. vi kallar dessa *variantaxlar*.
 
-However, not all properties are variant axes. Variations can also affect other properties; for example, the price might be dependant on size. These properties cannot be selected by the shopper and therefore are not considered variant axes.
+Alla egenskaper är dock inte olika axlar. Variationer kan också påverka andra egenskaper. Priset kan till exempel vara beroende av storleken. Dessa egenskaper kan inte väljas av kunden och betraktas därför inte som olika axlar.
 
-Each product and/or variant is represented by a resource, and therefore maps 1:1 to a repository node. It is a corollary that a specific product and/or variant can be uniquely identified by its path.
+Varje produkt och/eller variant representeras av en resurs och mappar därför 1:1 till en databasnod. Det är en extra konsekvens att en specifik produkt och/eller variant kan identifieras unikt genom sin sökväg.
 
-The product/variant resource does not always hold the actual product dataIt might be a representation of data actually held on another system (such as hybris). Produktbeskrivningar, priser osv. lagras inte i AEM utan hämtas i realtid från eCommerce-motorn.
+Produkt-/variantresursen innehåller inte alltid den faktiska produktinformationen. Det kan vara en representation av data som faktiskt finns i ett annat system (t.ex. hybris). Produktbeskrivningar, priser osv. lagras inte i AEM utan hämtas i realtid från eCommerce-motorn.
 
 Alla produktresurser kan representeras av en `Product API`. De flesta anrop i produkt-API:t är variationsspecifika (även om variationer kan ärva delade värden från ett överordnat element), men det finns också anrop som listar variantuppsättningen ( `getVariantAxes()`, `getVariants()`osv.).
 
@@ -233,7 +231,7 @@ Den här ytterligare varianten väljs via egenskapen `variationAxis` för produk
 
 #### Produktreferenser och produktdata {#product-references-and-product-data}
 
-In general:
+I allmänhet:
 
 * produktdata finns under `/etc`
 
@@ -664,4 +662,3 @@ public class MyImportHandler extends DefaultImportHandler {
     ...
 }
 ```
-
