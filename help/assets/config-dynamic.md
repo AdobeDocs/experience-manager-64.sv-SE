@@ -8,7 +8,7 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 821eb27e-67c9-4589-9196-30dacb84fa59
 translation-type: tm+mt
-source-git-commit: dea673f8999656a5c5364f74f45eba41dd17b947
+source-git-commit: 5964edfadf597652f754ca3c64343b0b90e40796
 workflow-type: tm+mt
 source-wordcount: '7458'
 ht-degree: 1%
@@ -156,7 +156,7 @@ Om du vill aktivera dynamiska medier måste du aktivera körningsläget för dyn
 
    Om du publicerar till s7delivery måste du även inkludera följande trustStore-argument:
 
-   ```
+   ```shell
    -Djavax.net.ssl.trustStore=<absoluteFilePath>/customerTrustStoreFileName>
    
     -Djavax.net.ssl.trustStorePassword=<passwordForTrustStoreFile>
@@ -187,7 +187,7 @@ I AEM:
 * Den **egna** domänen i [externalizer](/help/sites-developing/externalizer.md) används för att hämta både portnumret och kontextsökvägen.
 * Om ingen **egen** domän har konfigurerats hämtas portnumret och kontextsökvägen från HTTP-tjänsten Jetty.
 
-I en AEM QuickStart WAR-distribution går det inte att härleda portnumret och kontextsökvägen. Du måste därför konfigurera en **egen** domän. Mer information finns i [dokumentationen](/help/sites-developing/externalizer.md) för externalisering om hur du konfigurerar den **egna** domänen.
+I en AEM QuickStart WAR-distribution går det inte att härleda portnumret och kontextsökvägen. Du måste därför konfigurera en **egen** domän. Se [dokumentationen](/help/sites-developing/externalizer.md) för externalisering om hur du konfigurerar **självdomänen** .
 
 >[!NOTE]
 I en [AEM QuickStart-fristående distribution](/help/sites-deploying/deploy.md)behöver en **självdomän** vanligtvis inte konfigureras eftersom portnumret och kontextsökvägen kan konfigureras automatiskt. Om alla nätverksgränssnitt är inaktiverade måste du konfigurera **egen** domän.
