@@ -1,8 +1,8 @@
 ---
 title: Mobile On-Demand
 seo-title: Mobile On-Demand
-description: Följ den här sidan för att lära dig mer om roller och ansvarsområden för författaren av AEM-baserade mobiltjänster.
-seo-description: Följ den här sidan för att lära dig mer om roller och ansvarsområden för författaren av AEM-baserade mobiltjänster.
+description: Följ den här sidan för att lära dig mer om roller och ansvarsområden för AEM som arbetar med mobila on-demand-tjänster.
+seo-description: Följ den här sidan för att lära dig mer om roller och ansvarsområden för AEM som arbetar med mobila on-demand-tjänster.
 uuid: dd0184d8-1220-4f6a-96b2-acdb31caae17
 contentOwner: msm-service
 content-type: reference
@@ -11,6 +11,9 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: 2ae7ea8d-fc58-4647-bc83-915d9f4b7dd8
 translation-type: tm+mt
 source-git-commit: 55b6a113bcb4d39b7eb100f21a05b9b44e3fe1c3
+workflow-type: tm+mt
+source-wordcount: '289'
+ht-degree: 1%
 
 ---
 
@@ -23,21 +26,21 @@ source-git-commit: 55b6a113bcb4d39b7eb100f21a05b9b44e3fe1c3
 
 >[!NOTE]
 >
->Om du inte använder Adobe Experience Manager (AEM) som innehållshanteringskälla kan du läsa [AEM Mobile On-Demand Services Help](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>Om du inte använder Adobe Experience Manager (AEM) som innehållshanteringskälla kan du läsa [AEM Mobile On-demand Services-hjälpen](https://helpx.adobe.com/digital-publishing-solution/topics.html).
 
 >[!NOTE]
 >
 >**Krav:**
 >
->Innan du arbetar med AEM Mobile On-Demand Services och följer stegen i den här guiden bör du känna till [AEM](/help/sites-deploying/deploy.md).
+>Innan du börjar arbeta med AEM Mobile On-demand Services och följer stegen i den här guiden bör du känna till [AEM](/help/sites-deploying/deploy.md).
 
 ## AEM Mobile Author {#aem-mobile-author}
 
-En ***AEM-författare *(eller*Marketer *)**använder skräddarsydda eller färdiga mallar och komponenter för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment). AEM:s inbyggda innehållsredigerare används sedan av*AEM Authors *för att skapa innehållsrika och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Marketing Cloud.
+En ***AEM-författare *(eller*Marketer *)**använder skräddarsydda eller färdiga mallar och komponenter för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment). AEM inbyggda innehållsredigeraren används sedan av*AEM Authors *för att skapa engagerande och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Marketing Cloud.
 
-En AEM-författare ansvarar för följande när de skapar en app med AEM Mobile On Demand Services.
+En AEM är ansvarig för följande när du skapar ett program med AEM Mobile On Demand Services.
 
-**Att skapa AEM-innehåll för AEM Mobile On Demand Services-appen** inbegriper följande åtgärder:
+**När du skriver AEM innehåll för AEM Mobile On-demand Services App** utför du följande åtgärder:
 
 * [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md)
 * [Skapa och konfigurera program](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md)
@@ -52,14 +55,15 @@ Mer information om **innehållstjänster** finns i Översikt över [innehållstj
 >
 >* [Mallar](/help/sites-developing/templates.md)
 >* [Komponenter](/help/sites-developing/components.md)
+
 >
 
 
 
-## Additional Resources {#additional-resources}
+## Ytterligare resurser {#additional-resources}
 
-Mer information om de två andra rollerna och ansvarsområdena för att skapa en AEM Mobile On-Demand Services-app finns i följande resurser:
+Mer information om de två andra rollerna och ansvarsområdena för att skapa en AEM Mobile On-demand Services-app finns i följande resurser:
 
-* [Utveckla AEM-innehåll för AEM Mobile On Demand-tjänster](/help/mobile/aem-mobile-on-demand.md)
-* [Administrera innehåll för att använda AEM Mobile On Demand Services](/help/mobile/aem-mobile.md)
+* [Utveckla AEM för AEM Mobile On-demand Services](/help/mobile/aem-mobile-on-demand.md)
+* [Administrera innehåll för användning av AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)
 
