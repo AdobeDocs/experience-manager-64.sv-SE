@@ -11,6 +11,9 @@ topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 4a034e15-3394-4be3-9e8e-bc894668946a
 translation-type: tm+mt
 source-git-commit: 8078976ab79ccc0fefac5bfe6b000a008a917489
+workflow-type: tm+mt
+source-wordcount: '712'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +44,7 @@ För Android: Om du vill utveckla för iPhone och iPad behöver du Googles Andro
 
 ## Hämta källan {#download-the-source}
 
-När du har startat om utvecklingsmiljön kan du hämta källan från AEM App Build Tile:
+När du har startat om utvecklingsmiljön hämtar du källan från AEM App Build Tile:
 
 * Klicka på den nedrullningsbara menyn PhoneGap Build.
 
@@ -91,6 +94,7 @@ phonegap run ios
 >1. Navigera till helloWorld (cd helloWorld)
 >1. Kör &#39;phonegap run android (eller ersätt android med ios som ovan).
 >1. Emulatorn kommer att öppna och köra din nya PhoneGap-app och säga &#39;Device Ready&#39; om JavaScript-bryggan till native fungerar.
+
 >
 >
 Detta verifierar att PhoneGap CLI-utvecklingsmiljön fungerar som den ska.
