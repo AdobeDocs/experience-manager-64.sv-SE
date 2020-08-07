@@ -3,7 +3,7 @@ title: Utöka resursredigeraren
 description: Lär dig hur du utökar funktionerna i Resursredigeraren med hjälp av anpassade komponenter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
+source-git-commit: 5964edfadf597652f754ca3c64343b0b90e40796
 workflow-type: tm+mt
 source-wordcount: '701'
 ht-degree: 13%
@@ -47,7 +47,7 @@ Vissa av AEM Assets-komponenterna kräver JS-funktioner som definieras i `compon
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
 ```
 
-Exemplet läser in den här javascript-källan i `head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`).
+Exemplet läser in den här JavaScript-källan i `head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`).
 
 ### Ytterligare formatmallar {#additional-style-sheets}
 
