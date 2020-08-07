@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 discoiquuid: 672d5b1e-6b2f-4afe-ab04-c398e5ef45d5
 translation-type: tm+mt
 source-git-commit: 9d03a3988b2c8e34b9009d80a53d8b8508b5f0aa
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 4%
 
 ---
 
@@ -20,11 +23,11 @@ source-git-commit: 9d03a3988b2c8e34b9009d80a53d8b8508b5f0aa
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-AEM-innehåll kan enkelt återges via [Sling-standardservrar](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) för att återge [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) och andra format.
+AEM kan enkelt återges med [Sling Default Servlets](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) för att återge [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) och andra format.
 
 Dessa färdiga återgivningar tar vanligtvis plats i databasen och returnerar innehållet som det är.
 
-AEM, via Sling, har också stöd för utveckling och driftsättning av skräddarsydda försäljningsrenderare för att få full kontroll över det renderade schemat och innehållet.
+AEM, via Sling, har också stöd för utveckling och driftsättning av skräddarsydda snedsättningsrenderare för att få full kontroll över det renderade schemat och innehållet.
 
 Standardrenderare för innehållstjänster fyller luckan mellan färdiga Sling-standardinställningar och Anpassad utveckling som gör det möjligt att anpassa och styra många aspekter av det återgivna innehållet utan att behöva utveckla.
 
@@ -222,7 +225,7 @@ Den här konfigurationen utökar standardinställningen så att underordnade gru
 
 &lt;SITE_PAGE>.caas.page[.&lt;DEPTH-INT>].json
 
-### Additional Resources {#additional-resources}
+### Ytterligare resurser {#additional-resources}
 
 Läs resurserna nedan om du vill veta mer om andra ämnen i Content Services:
 
