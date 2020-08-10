@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: AEM 6.4 Forms Användarhandbok
 user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+source-git-commit: 35a52f72b30731879679ace06d6ffa4fd0342c1c
 workflow-type: tm+mt
-source-wordcount: '3702'
+source-wordcount: '3715'
 ht-degree: 0%
 
 ---
@@ -174,7 +174,7 @@ ht-degree: 0%
    + [XFA-stöd i XDP-baserade adaptiva formulär](using/xfa-api-supported-in-adaptive-form.md)
    + [Ändra sidans nollinnehåll i Designer](using/changing-page-zero-content-designer.md)
    + [Bevilja regelredigeraråtkomst för valda användargrupper](using/rule-editor-access-user-groups.md)
-   + [Använda arbetsflöde för AEM översättning för att lokalisera anpassningsbara formulär och urkunder](using/using-aem-translation-workflow-to-localize-adaptive-forms.md)
+   + [Använda arbetsflöde AEM översättning för att lokalisera anpassningsbara formulär och urkunder](using/using-aem-translation-workflow-to-localize-adaptive-forms.md)
    + [Automatisera testning av anpassningsbara formulär](using/calvin.md)
    + [Formateringskonstruktioner för adaptiva formulär](using/styling-constructs-adaptive-forms.md)
    + [Synkronisera adaptiv Forms med XFA-formulärmallar](using/synchronizing-adaptive-forms-xfa.md)
@@ -577,6 +577,7 @@ ht-degree: 0%
    + [AEM Forms Java API Reference](https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/index.html)
    + [AEM Forms on JEE Java API Reference](https://helpx.adobe.com/experience-manager/6-4/forms/ProgramLC/javadoc/index.html)
    + [API:er för Form Bridge för HTML5-formulär](using/form-bridge-apis.md)
+   + [API-referens för JavaScript-bibliotek för Adaptiv Forms](https://helpx.adobe.com/experience-manager/6-4/forms/javascript-api/index.html)
    + [Assembler Service och DDX Reference](http://www.adobe.com/go/learn_aemforms_ddxRef_64)
    + [Workbench Hjälp](http://www.adobe.com/go/learn_aemforms_workbench_64)
    + Programmera med AEM Forms i JEE {#programming-aem-forms-jee}
