@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 7d494c2e-d457-4d52-89be-a77ffa07eb88
 translation-type: tm+mt
-source-git-commit: abdcde27b33f290a4288b09c39bffb0d4f1918a1
+source-git-commit: 35a52f72b30731879679ace06d6ffa4fd0342c1c
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '843'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
    * widget_write
    * workflow_read
 
-   Stegvis information om hur du konfigurerar OAuth-inställningar för ett Adobe Sign-program och hämtar nycklarna finns i [Konfigurera autentiseringsinställningar för programutvecklardokumentationen](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobeio/adobeio-documentation/master/sign/gstarted/configure_oauth.md) .
+   Stegvis information om hur du konfigurerar OAuth-inställningar för ett Adobe Sign-program och hämtar nycklarna finns i [Konfigurera autentiseringsinställningar för programutvecklardokumentationen](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md) .
 
    ![OAuth-konfiguration](assets/oauth_config.png)
 
