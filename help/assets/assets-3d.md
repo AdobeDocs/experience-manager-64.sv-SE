@@ -1,5 +1,5 @@
 ---
-title: Arbeta med 3D-resurser
+title: Arbeta med AEM 3D-resurser
 seo-title: Arbeta med 3D-resurser
 description: Lär dig hur du arbetar med 3D-resurser i AEM 3D
 seo-description: Lär dig hur du arbetar med 3D-resurser i AEM 3D
@@ -10,15 +10,19 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 32143da1-09c8-45ce-b50d-32adf6efe383
 translation-type: tm+mt
-source-git-commit: 7c850ed0d20dd2ba2626242c67ba190e371f049f
+source-git-commit: 11b65cf2d180f04168d4c5d0929957c95a372e3c
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1182'
 ht-degree: 0%
 
 ---
 
 
-# Arbeta med 3D-resurser {#working-with-d-assets}
+# Arbeta med AEM 3D-resurser {#working-with-d-assets}
+
+>[!IMPORTANT]
+>
+>AEM 3D i AEM 6.4 stöds inte längre. Adobe rekommenderar att du använder funktionen 3D-resurser i [AEM som Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html) eller [AEM 6.5.3 eller senare.](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html)
 
 Med AEM 3D (Adobe Experience Manager 3D) kan du överföra, hantera, visa och återge 3D-innehåll. Stöd för visning och återgivning är optimerat för enskilda objekt.
 
