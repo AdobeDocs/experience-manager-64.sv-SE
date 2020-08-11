@@ -10,15 +10,19 @@ content-type: reference
 topic-tags: 3D
 discoiquuid: 9789d031-fb7e-415a-a9c3-8b8fde978238
 translation-type: tm+mt
-source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
+source-git-commit: 11b65cf2d180f04168d4c5d0929957c95a372e3c
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1983'
 ht-degree: 0%
 
 ---
 
 
 # AEM 3D versionsinformation {#aem-d-release-notes}
+
+>[!IMPORTANT]
+>
+>Det AEM 3D-funktionspaketet i AEM 6.4 stöds inte längre. Adobe rekommenderar att du använder funktionen 3D-resurser i [AEM som Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html) eller [AEM 6.5.3 eller senare.](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html)
 
 AEM-6.4-DynamicMedia-3D version 3.1.0 (10 oktober 2018)
 
@@ -106,7 +110,7 @@ Version 3.1
 
 * Den här versionen av AEM3D har begränsat stöd för .dn-filer som skapas med Adobe Dimension.
 * Under överföringsprocessen använder AEM en molnbaserad konverteringstjänst på Adobe för att skapa en glTF-rendering från den ursprungliga .dn-filen. Du måste ha tillgång till konverteringstjänsten och välja Amazon AWS-slutpunkter.
-* Det finns ett nytt glTF-visningsprogram som har stöd för visning av Dn-resurser i AEM Assets och på platser/skärmar. Stöd för scener i visningsprogrammet är inte tillgängligt än.
+* Det finns ett nytt glTF-visningsprogram som har stöd för visning av Dn-resurser i AEM Assets och i Sites/Screens. Stöd för scener i visningsprogrammet är inte tillgängligt än.
 * Dn-modeller kan bädda in IBL-ljus och bakgrunder som visas, om sådana finns. Visningsprogrammet kan också använda standardljus, eller en standardbakgrundsfärg, eller båda.
 * Det finns ännu ingen högkvalitativ återgivning för Dn-resurser.
 * Beroenden som texturscheman är inbäddade i Dn-resurser och kan inte hanteras explicit i AEM.
@@ -114,7 +118,7 @@ Version 3.1
 ### Kompatibilitet {#compatibility}
 
 * **Körning som Windows-tjänst stöds inte (endast Windows)** . Detta kan fungera men har inte testats.
-* **Dynamic Media** ( `dynamicmedia-scene7` läge) - Kompatibiliteten för AEM3D med den nya Dynamic Media-lösningen som släpptes med AEM 6.4 har ännu inte verifierats fullständigt. Om Dynamic Media och AEM3D distribueras tillsammans rekommenderar vi att du bara placerar 3D-resurser och deras beroenden i ett område i AEM Assets databas som inte är tilldelat Dynamic Media. Den här rekommendationen är särskilt viktig för 32-bitars TIFF-filer som krävs för 3D-scener men som inte stöds av Dynamic Media.
+* **Dynamic Media** ( `dynamicmedia-scene7` läge) - Kompatibiliteten för AEM3D med den nya Dynamic Media-lösningen som släpptes med AEM 6.4 är ännu inte helt verifierad. Om Dynamic Media och AEM3D distribueras tillsammans rekommenderar vi att du bara placerar 3D-resurser och deras beroenden i ett område i AEM Assets-databasen som inte är tilldelat till Dynamic Media. Den här rekommendationen är särskilt viktig för 32-bitars TIFF-filer som krävs för 3D-scener men som inte stöds av Dynamic Media.
 
 ### Allmänt {#general}
 
