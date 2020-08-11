@@ -10,15 +10,19 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 65040923-a8a8-4e27-82c0-67a04348e238
 translation-type: tm+mt
-source-git-commit: 5acb16b1734331767554261bbcf9640947f2e23f
+source-git-commit: 11b65cf2d180f04168d4c5d0929957c95a372e3c
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1745'
 ht-degree: 0%
 
 ---
 
 
 # Visa 3D-resurser {#viewing-d-assets}
+
+>[!IMPORTANT]
+>
+>AEM 3D i AEM 6.4 stöds inte längre. Adobe rekommenderar att du använder funktionen 3D-resurser i [AEM som Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html) eller [AEM 6.5.3 eller senare.](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html) för att visa 3D-resurser.
 
 I det här dokumentet beskrivs både hur du visar 3D-resurser i resursinformation och hur du visar resurser som finns i 3D-komponenten på platser.
 
