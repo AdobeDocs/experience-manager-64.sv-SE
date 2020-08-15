@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: c01e42ff-e338-46e6-a961-131ef943ea91
 translation-type: tm+mt
-source-git-commit: ffa45c8fa98e1ebadd656ea58e4657b669ddd830
+source-git-commit: c4e18cad7bc08638af9dce6ab396554052043e16
 workflow-type: tm+mt
-source-wordcount: '2293'
+source-wordcount: '2267'
 ht-degree: 0%
 
 ---
@@ -98,20 +98,20 @@ När indexregeln cq:tags lagts till
 
 * **cq:taggindexregel**
 
-       &quot;
- /oak:index/cqPageLucene/indexRules/cq:Page/properties/cqTags     
- @name=jcr:content/cq:tags     
- @propertyIndex=true     
-     &quot;
-   
+   ```
+   /oak:index/cqPageLucene/indexRules/cq:Page/properties/cqTags
+    @name=jcr:content/cq:tags
+    @propertyIndex=true
+   ```
+
 * **Fråga i Frågebyggaren**
 
-       &quot;
-    type=cq:Page
-     property=jcr:content/cq:tags
-     property.value=myTagNamespace:myTag
-     &quot;
-   
+   ```
+   type=cq:Page
+    property=jcr:content/cq:tags
+    property.value=myTagNamespace:myTag
+   ```
+
 * **Frågeplan**
 
    * `[cq:Page] as [a] /* lucene:cqPageLucene(/oak:index/cqPageLucene) jcr:content/cq:tags:my:tag where [a].[jcr:content/cq:tags] = 'my:tag' */`
@@ -146,7 +146,7 @@ Detta hjälper till att undvika resurskrävande frågor (t.ex. som inte backas u
 
 #### Efter distribution {#post-deployment-2}
 
-* Övervaka loggarna för frågor som utlöser genomgång av stora noder eller stor minnesförbrukning i stackar: &quot;
+* Övervaka loggarna för frågor som utlöser genomgång av stora noder eller stor minnesförbrukning i stackar:
 
    * `*WARN* ... java.lang.UnsupportedOperationException: The query read or traversed more than 100000 nodes. To avoid affecting other tasks, processing was stopped.`
    * Optimera frågan för att minska antalet genomgående noder
