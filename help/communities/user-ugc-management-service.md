@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 discoiquuid: f564759f-fb56-4f70-a7b1-286a223755c6
 translation-type: tm+mt
-source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+source-git-commit: 77cca35f74db2ced556b71c3192058b7c352ab4d
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Mer information finns på [GDPR-sidan på Adobe Privacy Center](https://www.adob
 >
 >Om du har konfigurerat [Adobe Analytics på AEM Communities](analytics.md) -platsen skickas inhämtade användardata till Adobe Analytics-servern. Adobe Analytics tillhandahåller API:er som gör att du kan komma åt, exportera och ta bort användardata och följa GDPR. Mer information finns i [Skicka begäran](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-submit-access-delete.html)om åtkomst och borttagning.
 
-Om du vill använda dessa API:er måste du aktivera slutpunkten genom att aktivera tjänsten UserUgcManagement. `/services/social/ugcmanagement` Om du vill aktivera den här tjänsten installerar du [exempelservern](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-ugc-management-servlet) som finns på [GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-ugc-management-servlet). Tryck sedan på slutpunkten för publiceringsinstansen av communitywebbplatsen med lämpliga parametrar med en http-begäran, som liknar följande:
+Om du vill använda dessa API:er måste du aktivera slutpunkten genom att aktivera tjänsten UserUgcManagement. `/services/social/ugcmanagement` Om du vill aktivera den här tjänsten installerar du [exempelservern](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) som finns på [GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet). Tryck sedan på slutpunkten för publiceringsinstansen av communitywebbplatsen med lämpliga parametrar med en http-begäran, som liknar följande:
 
 `http://localhost:port/services/social/ugcmanagement?user=<authorizable ID>&operation<getUgc>`
 
