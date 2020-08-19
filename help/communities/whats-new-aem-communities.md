@@ -7,7 +7,7 @@ uuid: e4bf343c-59cd-48ac-bee4-85db109e4c65
 contentOwner: mgulati
 discoiquuid: 3e3c867f-afb0-4402-94f4-16e1a556ddee
 translation-type: tm+mt
-source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+source-git-commit: 4a1be7a5a233557dff0e7cd3796380532f23d5eb
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Med AEM Communities kan communityadministratörer skapa grupper och undergrupper
 
 ### Skapa flerspråkiga grupper i ett enda steg {#create-multi-locale-groups-in-single-step}
 
-Som en del av en communityplats kan flerspråkiga grupper skapas i en enda åtgärd. **[!UICONTROL Additional Available Community Group Language(s)]** -fält på **[!UICONTROL Community Group Template]** sidan, som är tillgängligt när du skapar en [ny community-grupp](groups.md) inom en community-webbplats, gör detta möjligt.
+Som en del av en communitywebbplats kan flerspråkiga grupper skapas i en enda åtgärd. **[!UICONTROL Additional Available Community Group Language(s)]** -fält på **[!UICONTROL Community Group Template]** sidan, som är tillgängligt när du skapar en [ny community-grupp](groups.md) inom en community-webbplats, gör detta möjligt.
 
 ![flerspråkig grupp-1](assets/multilingualgroup-1.png)
 
@@ -95,7 +95,7 @@ AEM 6.4 Communities innehåller ikonen Ta bort plats på befintliga communitypla
 
 ## Hantera användargenererat innehåll och användarprofiler {#managing-ugc-and-user-profiles}
 
-AEM Communities ger användardataskydd i centrum för communityupplevelsen och visar [API:er som är färdiga](user-ugc-management-service.md) och [exempelservrar](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-ugc-management-servlet). Dessa API:er hjälper till att hantera (massborttagning och bulkexport) användargenererat innehåll och ta bort användarprofiler, och är avgörande för att hantera EU GDPR-kompatibilitetsbegäranden.
+AEM Communities ger användardataskydd i centrum för communityupplevelsen och visar [API:er som är färdiga](user-ugc-management-service.md) och [exempelservrar](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet). Dessa API:er hjälper till att hantera (massborttagning och bulkexport) användargenererat innehåll och ta bort användarprofiler, och är avgörande för att hantera EU GDPR-kompatibilitetsbegäranden.
 
 ## Vad som har ändrats {#what-s-changed}
 
