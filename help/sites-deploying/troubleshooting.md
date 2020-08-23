@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 5542de4e-6262-4300-9cf8-0eac79ba4f9a
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 7cb0f63f0cd83e6e40ed51b2fd300f010278aa56
 workflow-type: tm+mt
 source-wordcount: '1126'
 ht-degree: 0%
@@ -86,7 +86,7 @@ java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
 
 Detta genererar en heap dump-fil (**java_...hprof**) när minnet tar slut. Processen kan fortsätta att köras efter att stackdumpen har skapats. Vanligtvis räcker det med en stackdumpfil för att analysera problemet.
 
-### **AEM välkomstskärm visas inte i webbläsaren när du dubbelklickat AEM QuickStart{#the-aem-welcome-screen-does-not-display-in-the-browser-after-double-clicking-aem-quickstart}**
+### AEM välkomstskärm visas inte i webbläsaren när du dubbelklickat AEM QuickStart {#the-aem-welcome-screen-does-not-display-in-the-browser-after-double-clicking-aem-quickstart}
 
 I vissa situationer visas inte AEM WCM-välkomstskärmar automatiskt även om själva databasen körs. Detta kan bero på operativsystemets konfiguration, webbläsarkonfigurationen eller liknande faktorer.
 
