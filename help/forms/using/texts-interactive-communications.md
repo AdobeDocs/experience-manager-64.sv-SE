@@ -8,9 +8,9 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 7677327a-cc56-413b-b2e3-7b10d0d0319d
 translation-type: tm+mt
-source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '2205'
+source-wordcount: '2199'
 ht-degree: 0%
 
 ---
@@ -194,11 +194,10 @@ Med hjälp av regelredigeraren i en text kan du skapa regler som visar eller dö
 ## Formatera text {#formatting}
 
 När du skapar eller redigerar text ändras verktygsfältet beroende på vilken typ av redigeringar du väljer att göra: Stycke, Justering eller Lista:
-[ ![Välj typ av verktygsfält](do-not-localize/toolbarselection.png)
 
 Välj typ av verktygsfält: Stycke, Justering eller Lista
 
-](assets/toolbarselection.png) Verktygsfältet ![Teckensnittsredigering](do-not-localize/paragraphtoolbar-1.png)
+![Verktygsfältet Teckensnittsredigering](do-not-localize/paragraphtoolbar-1.png)
 
 Verktygsfältet Teckensnittsredigering
 
