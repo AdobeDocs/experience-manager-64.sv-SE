@@ -10,9 +10,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 3d063268-17d7-4db6-8028-682537645377
 translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '821'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Se även [Integrera AEM 3D med AutoDesk 3ds Max](integrating-aem-3d-with-autodes
 
 1. Lägg till sökvägen till den körbara mappen Maya i systemvariabeln Windows PATH.
 
-   I Windows Server 2012 trycker du till exempel på **[!UICONTROL Start > Kontrollpanelen > System och säkerhet > System > Avancerade systeminställningar > Miljövariabler**. Lägg till den fullständiga sökvägen till `Maya2016\bin` mappen i `Path`systemvariabeln.
+   I Windows Server 2012 trycker du till exempel på **[!UICONTROL Start]>[!UICONTROL Control Panel]>[!UICONTROL System and Security]>[!UICONTROL System]>[!UICONTROL Advanced System Settings]>[!UICONTROL Environment Variables]**. Lägg till den fullständiga sökvägen till `Maya2016\bin` mappen i `Path`systemvariabeln.
 
    ![chlimage_1-53](assets/chlimage_1-53.png)
 
@@ -79,7 +79,7 @@ Se även [Integrera AEM 3D med AutoDesk 3ds Max](integrating-aem-3d-with-autodes
 
    Observera att du `sample-3D-content.zip` laddat ned tidigare för att validera de grundläggande 3D-funktionerna.
 
-1. Gå tillbaka till vyn **[!UICONTROL-kort** och observera de meddelandebanners som visas på de överförda resurserna.
+1. Återgå till **[!UICONTROL Card]** vyn och observera de meddelandebanners som visas på de överförda resurserna.
 
    Banderollen för konverteringsformat visas medan Maya konverterar det ursprungliga `.MA` formatet till `.FBX`.
 
@@ -102,7 +102,7 @@ Se även [Integrera AEM 3D med AutoDesk 3ds Max](integrating-aem-3d-with-autodes
 
 1. Öppna den återgivna bildresursen när återgivningen är klar.
 
-   Kontrollera att den återgivna bilden på ett rimligt sätt matchar den bild du visade när du klickade **[!UICONTROL Render Now]**.
+   Kontrollera att den återgivna bilden på ett rimligt sätt matchar den bild som du tittade på när du klickade **[!UICONTROL Render Now]**.
 
 ## Aktivera ytterligare format som stöds av Maya {#enabling-additional-formats-supported-by-maya}
 
