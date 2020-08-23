@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: introduction
 discoiquuid: 0c1b6ad7-9d25-41dc-b1fe-a4cb9366c259
 translation-type: tm+mt
-source-git-commit: ffa45c8fa98e1ebadd656ea58e4657b669ddd830
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '9161'
+source-wordcount: '9150'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,7 @@ Om Sarah använder kreditkortsprogrammet från sin mobila enhet öppnas det resp
 
 ### Så här fungerar det {#a-how-it-works}
 
-Knappen **[!UICONTROL Apply Now]** dirigerar Sarah till kreditkortsprogrammet. Programmet är ett anpassat formulär som du kan granska i redigeringsinstanserna på `https://[host]:[Port]/editor.html/content/forms/af/we-finance/cc-app.html`.
+Knappen **[!UICONTROL Apply Now]** dirigerar Sarah till kreditkortsprogrammet. Programmet är ett anpassat formulär som du kan granska i redigeringsinstanserna `https://[host]:[Port]/editor.html/content/forms/af/we-finance/cc-app.html`.
 
 Några av de funktioner du kan granska i den anpassade formen är:
 
@@ -349,7 +349,7 @@ Sarah Rose planerar att köpa ett hus och leta efter en bostadsplan. Hon är kun
 
 #### Så här fungerar det {#how-it-works-6}
 
-Hemmalåneskalkylatorn på sidan Lån är ett inbäddat anpassat formulär på AEM Sites sida. Du kan granska sidan Lån i redigeringsläge på `https://[authorHost]:[authorPort]/editor.html/content/we-finance/global/en/loan-landing-page.html`.
+Hemmalåneskalkylatorn på sidan Lån är en inbäddad anpassningsbar form på AEM Sites sida. Du kan granska sidan Lån i redigeringsläge på `https://[authorHost]:[authorPort]/editor.html/content/we-finance/global/en/loan-landing-page.html`.
 
 Den inbäddade låneberäkningsenheten, som är en adaptiv form, använder regler för att beräkna EMI-beloppet baserat på låneinformationen i beräkningsfälten. Du kan granska det adaptiva formuläret på `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/hm-calc.html`.
 
@@ -379,7 +379,7 @@ Den inskickade ansökan går till We.Finance för godkännande.
 
 #### Så här fungerar det {#how-it-works-7}
 
-Knappen **Använd nu** dirigerar Sarah till bostadslådan. Programmet är ett anpassat formulär som du kan granska i redigeringsinstanserna på `https://[host]:[Port]/editor.html/content/forms/af/we-finance/hm-app.html`.
+Knappen **Använd nu** dirigerar Sarah till bostadslådan. Programmet är ett anpassat formulär som du kan granska i redigeringsinstanserna `https://[host]:[Port]/editor.html/content/forms/af/we-finance/hm-app.html`.
 
 Några av de funktioner du kan granska i den anpassade formen är:
 
@@ -626,7 +626,7 @@ Den inskickade ansökan går till We.Finance för godkännande.
 
 #### Så här fungerar det {#how-it-works-13}
 
-Knappen **Använd nu** dirigerar Sarah till bostadslådan. Programmet är ett anpassat formulär som du kan granska i redigeringsinstanserna på `https://[host]:[Port]/editor.html/content/forms/af/we-finance/ms-dynamics/application-for-home-mortgage.html`.
+Knappen **Använd nu** dirigerar Sarah till bostadslådan. Programmet är ett anpassat formulär som du kan granska i redigeringsinstanserna `https://[host]:[Port]/editor.html/content/forms/af/we-finance/ms-dynamics/application-for-home-mortgage.html`.
 
 Några av de funktioner du kan granska i den anpassade formen är:
 
@@ -720,7 +720,7 @@ Se även följande dokumentation för mer information om funktioner som används
 
 #### Se det själv {#see-it-yourself-12}
 
-Klicka på knappen **Använd nu** i nyhetsbrevet som du skulle ha fått i ditt e-postmeddelande. Du kan också gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/all-forms.html` och klicka **[!UICONTROL Apply]** på försäkringsansökan. Ange `123456789` i fältet socialförsäkringsnummer. Logga in med `srose/srose` användarnamn/lösenord när du uppmanas till detta.
+Klicka på knappen **Använd nu** i det nyhetsbrev som du skulle ha fått i ditt e-postmeddelande. Du kan också gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/all-forms.html` och klicka **[!UICONTROL Apply]** på försäkringsansökan. Ange `123456789` i fältet socialförsäkringsnummer. Logga in med `srose/srose` användarnamn/lösenord när du uppmanas till detta.
 
 Fyll i detaljer, utforska olika adaptiva formulärkomponenter och skicka in programmet. Du kan granska det adaptiva formuläret på `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/insurance/application-for-insurance.html`.
 
@@ -871,7 +871,7 @@ Genomgången av bilförsäkringen innehåller även en annan kund, Alison Jones.
 * Standardpolicyn kostar mindre än premiepolicyn.
 * Premiumpolicyn har antistölderbelöning och standardpolicyn har smart rightbelöning
 
-Båda profilerna använder samma interaktiva kommunikation. Avsnitten i profilen ändras eller döljs baserat på villkoret av principtyp. Du kan öppna och granska den interaktiva kommunikationen om förnyelse av autoförsäkring direkt från https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-Finance/autoInsurance/auto-Insurance-re
+Båda profilerna använder samma interaktiva kommunikation. Avsnitten i profilen ändras eller döljs baserat på villkoret av principtyp. Du kan öppna och granska den interaktiva kommunikationen om förnyelse av autoförsäkring direkt från `https://[authorHost]: [authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal`
 
 **Använda Microsoft Dynamics som datakälla**
 
