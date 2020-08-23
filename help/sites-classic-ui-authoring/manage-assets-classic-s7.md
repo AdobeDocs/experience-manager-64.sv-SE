@@ -10,9 +10,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 9ba95dce-a801-4a36-8798-45d295371b1b
 translation-type: tm+mt
-source-git-commit: a3a160a0281c1ea2ca050c2c747d6a5ec1d952b3
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '3243'
+source-wordcount: '3234'
 ht-degree: 1%
 
 ---
@@ -109,7 +109,7 @@ Det gör du genom att konfigurera molnkonfigurationen för sidan där resursen s
 
 1. Klicka på **[!UICONTROL Page]** ikonen i sidosparken och klicka sedan på **[!UICONTROL Page Properties]**.
 
-1. Klicka på **[!UICONTROL-Cloud Services > Lägg till tjänster > Dynamic Media Classic (Scene7)**.
+1. Klicka på **[!UICONTROL Cloud Services]>[!UICONTROL Add services]>[!UICONTROL Dynamic Media Classic (Scene7)]**.
 1. Markera önskad konfiguration i listrutan Adobe Dynamic Media Classic och klicka sedan på **[!UICONTROL OK]**.
 
    ![chlimage_1-77](assets/chlimage_1-77.png)
@@ -163,7 +163,7 @@ Att lägga till en Dynamic Media Classic-komponent på en sida är detsamma som 
 
 1. Gå tillbaka till **[!UICONTROL Edit]** läget genom att klicka på pennan i sidsparken.
 
-1. Dra en komponent från **[!UICONTROL Dynamic Media Classic]** gruppen i sidsparken till sidan på önskad plats.
+1. Dra en komponent från **[!UICONTROL Dynamic Media Classic]** gruppen i sidosparken till sidan på önskad plats.
 
 1. Klicka **[!UICONTROL Edit]** för att öppna komponenten.
 
@@ -240,7 +240,7 @@ Med komponenten Dynamic Media Classic Image kan du lägga till Dynamic Media Cla
 
 **[!UICONTROL Output Format]** - Välj bildens utdataformat, till exempel jpeg. Beroende på vilket utdataformat du väljer kan det finnas ytterligare konfigurationsalternativ. Se [Hantera bildförinställningar](/help/assets/managing-image-presets.md).
 
-**[!UICONTROL Sharpening]** - Välj hur du vill öka skärpan i bilden. Skärpeinställningen förklaras i detalj i [*Adobe Dynamic Media Classic Image Quality and Sharpening Best Practices *](/help/assets/assets/s7_sharpening_images.pdf).
+**[!UICONTROL Sharpening]** - Välj hur du vill öka skärpan i bilden. Skärpeinställningen förklaras i detalj i [*Adobe Dynamic Media Classic Image Quality and Sharpening Best Practices*](/help/assets/assets/s7_sharpening_images.pdf).
 
 **[!UICONTROL URL Modifiers]** - Du kan ändra bildeffekter genom att ange ytterligare Dynamic Media Classic-bildkommandon. Dessa beskrivs i [Hantera bildförinställningar](/help/assets/managing-image-presets.md) och i [Kommandoreferensen](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html).
 
@@ -248,7 +248,7 @@ Med komponenten Dynamic Media Classic Image kan du lägga till Dynamic Media Cla
 
 ### Bildmall {#image-template}
 
-[Dynamic Media Classic Image Templates](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) är Photoshop-innehåll i lager som importerats till Dynamic Media Classic, där innehåll och egenskaper parametriserades för variabilitet. Med **[!UICONTROL Image template]** komponenten kan du importera bilder och ändra texten dynamiskt i AEM. Dessutom kan du konfigurera **[!UICONTROL Image template]** komponenten så att värden från klientkontexten används, så att varje användare upplever bilden på ett personligt sätt.
+[Dynamic Media Classic Image Templates](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) är Photoshop-innehåll i lager som har importerats till Dynamic Media Classic, där innehåll och egenskaper har parametriserats för variabilitet. Med **[!UICONTROL Image template]** komponenten kan du importera bilder och ändra texten dynamiskt i AEM. Dessutom kan du konfigurera **[!UICONTROL Image template]** komponenten så att värden från klientkontexten används, så att varje användare upplever bilden på ett personligt sätt.
 
 Klicka **[!UICONTROL Edit]** för att konfigurera komponenten. Du kan konfigurera [inställningar som är gemensamma för alla komponenter](/help/sites-administering/scene7.md#settingscommontoalldynamicmediaclassicscomponents) i Dynamic Media Classic samt andra inställningar som beskrivs i det här avsnittet.
 
