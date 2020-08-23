@@ -10,9 +10,9 @@ topic-tags: publish
 content-strategy: max-2018
 discoiquuid: 7dd08e81-5df6-4522-9f8c-48b4bba8927b
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1407'
 ht-degree: 0%
 
 ---
@@ -145,7 +145,7 @@ Följ de här stegen för att schemalägga datum och tid för publicering och av
    1. Flytta pekaren över en resurs och tryck på **[!UICONTROL Unpublish]**![ Avpublicera](assets/unpublish.png).
    1. Gör något av följande och tryck sedan på Avpublicera:
 
-      * Om du är i kortvyn trycker du på **[!UICONTROL Enter Selection** ![aem6forms_check-circle](assets/aem6forms_check-circle.png)och trycker på resursen. Resursen har valts.
+      * Om du är i kortvyn trycker du på **[!UICONTROL Enter Selection]** aem6forms_check-circle ![](assets/aem6forms_check-circle.png)och sedan på resursen. Resursen har valts.
       * Om du är i listvyn håller du pekaren över en resurs och trycker på ![markeringen](assets/selectassetcheckmark.png) selectAsset. Resursen har valts.
       * Tryck på en resurs för att visa dess information.
       * Visa egenskaperna för en resurs genom att trycka på Visa ![visningsegenskaper](assets/viewproperties.png).
