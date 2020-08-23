@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 7d494c2e-d457-4d52-89be-a77ffa07eb88
 translation-type: tm+mt
-source-git-commit: 35a52f72b30731879679ace06d6ffa4fd0342c1c
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 0%
@@ -70,7 +70,7 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
 
    ![OAuth-konfiguration](assets/oauth_config.png)
 
-1. Gå tillbaka till **[!UICONTROL Create Adobe Sign Configuration]** sidan. På **[!UICONTROL Settings]** fliken anges följande standard-URL i **!UICONTROL OAuth URL]** fältet:
+1. Gå tillbaka till **[!UICONTROL Create Adobe Sign Configuration]** sidan. På **[!UICONTROL Settings]** fliken anges följande standard-URL i **[!UICONTROL OAuth URL]** fältet:
 
    `https://secure.na1.echosign.com/public/oauth`
 
