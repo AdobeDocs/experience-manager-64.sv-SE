@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: author
 discoiquuid: b99c7b93-ba05-42ee-9ca8-0079e15d8602
 translation-type: tm+mt
-source-git-commit: a3e7cd30ba6933e6f36734d3b431db41365b6e20
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1054'
 ht-degree: 0%
 
 ---
@@ -38,66 +38,63 @@ Du kan bädda in ett anpassat formulär genom att infoga några rader med JavaSc
 
 1. Bädda in följande kod på en webbsida på webbplatsen:
 
-   ```
-   
-   
-<!doctype html>
-<html>
-  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Det här är webbsidans titel!</title>
+   ```html
+   <!doctype html>
+   <html>
+   <head>
+    <title>This is the title of the webpage!</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  </head>
-  <body>
-  <div class="customafsection"/>
-    <p>Detta avsnitt ersätts med den anpassningsbara formen.</p>
-
-
-    &lt;script>
-    var options = {path:&quot;/content/forms/af/locbasic.html&quot;, dataRef:&quot;&quot;, themepath:&quot;&quot;, CSS_Selector:&quot;.customafsection&quot;};
+   </head>
+   <body>
+   <div class="customafsection"/>
+   <p>This section is replaced with the adaptive form.</p>
+   
+    <script>
+    var options = {path:"/content/forms/af/locbasic.html", dataRef:"", themepath:"", CSS_Selector:".customafsection"};
     alert(options.path);
     var loadAdaptiveForm = function(options){
     //alert(options.path);
     if(options.path) {
-    // options.path hänvisar till publicerings-URL:en adaptiv form
-    // Exempel: http:myserver:4503/content/forms/af/ABC, där ABC är den adaptiva formen
-    / Anm: Om AEM körs på en kontextsökväg måste URL:en för adaptiva formulär innehålla
-    kontextsökvägen = options.path;
-    path += &quot;/jcr:content/guideContainer.html&quot;;
-    $.ajax({
-    url : sökväg,
-    typ: &quot;GET&quot;,
-    data: {
-    // Ange att wcmmode ska vara
-    disabledwcmmode: &quot;disabled&quot;
-    // Ange eventuell
-    datareferens// &quot;dataRef&quot;: options.dataRef
-    // Ange ett annat tema för formulärobjektet
-    // &quot;themeOverride&quot;: options.themepath
-    },
-    async: false,
-    success: function (data) {
-    // Om jquery läses in, anger du den inre HTML-koden för behållaren
-    // Om jquery inte läses in, använder du API:er från dokumentet för att ställa in den inre HTML-koden, men dessa API:er utvärderar inte script-taggen i HTML5 enligt specifikationen
-    /// Exempel: document.getElementById().
-    innerHTMLif(window.$ &amp;&amp; options.CSS_Selector){
-    // HTML API of jquery extraherar taggarna, uppdaterar DOM och utvärderar koden som är inbäddad i script-taggen.
-    $(options.CSS_Selector).html(data);
-    }
-    },
-    fel: function (data) {
-    // any error handler
-    }
-    });
+        // options.path refers to the publish URL of the adaptive form
+        // For Example: http:myserver:4503/content/forms/af/ABC, where ABC is the adaptive form
+        // Note: If AEM server is running on a context path, the adaptive form URL must contain the context path 
+        var path = options.path;
+        path += "/jcr:content/guideContainer.html";
+        $.ajax({
+            url  : path ,
+            type : "GET",
+            data : {
+                // Set the wcmmode to be disabled
+                wcmmode : "disabled"
+                // Set the data reference, if any
+               // "dataRef": options.dataRef
+                // Specify a different theme for the form object
+              //  "themeOverride" : options.themepath
+            },
+            async: false,
+            success: function (data) {
+                // If jquery is loaded, set the inner html of the container
+                // If jquery is not loaded, use APIs provided by document to set the inner HTML but these APIs would not evaluate the script tag in HTML as per the HTML5 spec
+                // For example: document.getElementById().innerHTML
+                if(window.$ && options.CSS_Selector){
+                    // HTML API of jquery extracts the tags, updates the DOM, and evaluates the code embedded in the script tag.
+                    $(options.CSS_Selector).html(data);
+                }
+            },
+            error: function (data) {
+                // any error handler
+            }
+        });
     } else {
-    if (typeof(console) !== &quot;undefined&quot;) {
-    console.log(&quot;Path of Adaptive Form not specified to loadAdaptiveForm&quot;);
-    }
+        if (typeof(console) !== "undefined") {
+            console.log("Path of Adaptive Form not specified to loadAdaptiveForm");
+        }
     }
     }(options);
-    
-    &lt;/script>
-</body>
-</html>
+   
+    </script>
+   </body>
+   </html>
    ```
 
 1. I den inbäddade koden:
@@ -120,7 +117,7 @@ Det anpassningsbara formuläret är inbäddat på webbsidan. Observera följande
 
 Den externa webbsidan som bäddar in det adaptiva formuläret skickar begäranden till AEM server, som vanligtvis ligger bakom brandväggen i ett privat nätverk. För att säkerställa att förfrågningarna dirigeras säkert till AEM bör du konfigurera en omvänd proxyserver.
 
-Låt oss titta på ett exempel på hur du kan konfigurera en omvänd Apache 2.4-proxyserver utan dispatcher. I det här exemplet är AEM värd med `/forms` kontextsökväg och mappning `/forms` för den omvända proxyn. Den ser till att alla begäranden om Apache- `/forms` servern dirigeras till AEM. Den här topologin hjälper till att minska antalet regler i dispatcherlagret som alla begäranden som föregås av dirigering `/forms` till AEM server.
+Låt oss titta på ett exempel på hur du kan konfigurera en omvänd Apache 2.4-proxyserver utan dispatcher. I det här exemplet är AEM värd med `/forms` kontextsökväg och mappning `/forms` för den omvända proxyn. Den ser till att alla begäranden om Apache- `/forms` servern dirigeras till AEM. Den här topologin hjälper till att minska antalet regler i dispatcherlagret som alla förfrågningar som föregås av dirigering `/forms` till AEM server.
 
 1. Öppna `httpd.conf` konfigurationsfilen och avkommentera följande kodrader. Du kan också lägga till de här kodraderna i filen.
 
@@ -136,7 +133,7 @@ Låt oss titta på ett exempel på hur du kan konfigurera en omvänd Apache 2.4-
     ProxyPassReverse /forms https://[AEM_Instance]/forms
    ```
 
-   Ersätt `[AEM_Instance`] med den AEM serverns publicerings-URL i reglerna.
+   Ersätt `[AEM_Instance]` med den AEM serverns publicerings-URL i reglerna.
 
 Om du inte monterar AEM server på en kontextbana är proxyreglerna i Apache-lagret som följer:
 
@@ -155,7 +152,7 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 
 >[!NOTE]
 >
->Om du konfigurerar någon annan topologi måste du lägga till webbadresserna för Skicka, Förifyll och andra URL:er till tillåtelselista i dispatcherlagret.
+>Om du konfigurerar någon annan topologi måste du lägga till överförings-, förifyllnings- och andra URL-adresser till tillåtelselista i dispatcherlagret.
 
 ## Best practices {#best-practices}
 
