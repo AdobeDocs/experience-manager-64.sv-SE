@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8d14017d-d311-45e9-8aea-4a5ca46f1a07
 translation-type: tm+mt
-source-git-commit: 263a1e514fa48f7aa7b696c801718ceff1e43ed7
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '4533'
+source-wordcount: '4528'
 ht-degree: 3%
 
 ---
@@ -61,7 +61,7 @@ Webbplatsinnehållspaket
 
 ## Installera Adobe Experience Manager {#installing-adobe-experience-manager}
 
-Om du vill installera en AEM för att utveckla din webbplats följer du instruktionerna för att konfigurera en [distributionsmiljö med författare- och publiceringsinstanser](/help/sites-deploying/deploy.md#author-and-publish-installs)eller utför en [allmän installation](/help/sites-deploying/deploy.md#default-local-install). Den generiska installationen innefattar att hämta den AEM QuickStart JAR-filen, placera filen license.properties i samma katalog som JAR-filen och dubbelklicka på JAR-filen.
+Om du vill installera en AEM instans för att utveckla webbplatsen följer du instruktionerna för att konfigurera en [distributionsmiljö med författare- och publiceringsinstanser](/help/sites-deploying/deploy.md#author-and-publish-installs)eller utför en [allmän installation](/help/sites-deploying/deploy.md#default-local-install). Den generiska installationen innefattar att hämta den AEM QuickStart JAR-filen, placera filen license.properties i samma katalog som JAR-filen och dubbelklicka på JAR-filen.
 
 När du har installerat AEM kommer du åt utvecklingsmiljön i CRXDE Lite genom att klicka på länken CRXDE Lite på välkomstsidan:
 
@@ -75,7 +75,7 @@ När du har installerat AEM kommer du åt utvecklingsmiljön i CRXDE Lite genom 
 
 Använd CRXDE Lite för att skapa programstrukturen för mywebsite i databasen:
 
-1. Högerklicka på **`/apps`** mappen i trädet till vänster om CRXDE Lite och klicka på **[!UICONTROL Create > Create Folder]**. I dialogrutan **Skapa mapp** skriver du `mywebsite` mappnamnet och klickar på **[!UICONTROL OK**.
+1. Högerklicka på **`/apps`** mappen i trädet till vänster om CRXDE Lite och klicka på **[!UICONTROL Create > Create Folder]**. I dialogrutan **Skapa mapp** skriver du `mywebsite` mappnamnet och klickar på **OK**.
 1. Högerklicka på `/apps/mywebsite` mappen och klicka på **[!UICONTROL Create > Create Folder]**. I **[!UICONTROL Create Folder]** dialogrutan skriver du mappnamnet `components` och klickar på **[!UICONTROL OK]**.
 1. Högerklicka på `/apps/mywebsite` mappen och klicka på **[!UICONTROL Create > Create Folder]**. I **[!UICONTROL Create Folder]** dialogrutan skriver du mappnamnet `templates` och klickar på **[!UICONTROL OK]**.
 
@@ -284,7 +284,7 @@ Sidan ser ut så här **[!UICONTROL Products]** :
 
 I den här övningen konfigurerar du sidinnehållskomponenten så att dess överordnade typ är AEM sidkomponent. Eftersom komponenter ärver funktionerna i sin supertyp ärver sidinnehållet skripten och egenskaperna för sidkomponenten.
 
-I en komponent-JSP-kod kan du till exempel referera till de skript som supertypkomponenten tillhandahåller som om de är inkluderade i komponenten.
+I en komponent-JSP-kod kan du till exempel referera till de skript som supertypskomponenten tillhandahåller som om de är inkluderade i komponenten.
 
 1. I CRXDE Lite lägger du till en egenskap i `/apps/mywebsite/components/contentpage` noden.
 
@@ -1082,7 +1082,7 @@ I det här avsnittet inkluderar du titelkomponenten, som är en av grundkomponen
 
    ![chlimage_1-126](assets/chlimage_1-126.png)
 
->[!Note]
+>[!NOTE]
 >Du kan ange en annan rubrik och typ/storlek i **[!UICONTROL Edit]** läget.
 
 ### Inkludera styckesystemkomponenten {#including-the-paragraph-system-component}
@@ -1275,7 +1275,7 @@ Din sökruta ser ut så här på **[!UICONTROL English]** sidan:
       * **[!UICONTROL Description]**: Det här är min sökkomponent
       * **[!UICONTROL Group]**: MinWebbplats
    1. Klicka **[!UICONTROL Next]** och sedan på **[!UICONTROL Next]** igen.
-   1. Klicka på knappen **[!UICONTROL Allowed Parents** (Tillåt överordnade **[!UICONTROL +]** ) och skriv `*/parsys`.
+   1. Klicka på **[!UICONTROL Allowed Parents]** knappen på **[!UICONTROL +]** panelen och skriv `*/parsys`.
    1. Click **[!UICONTROL Next]** and then click **[!UICONTROL OK]**.
 
 
@@ -1510,7 +1510,7 @@ I det här avsnittet inkluderar du komponenten Inheritance Paragraph System (ipa
 
 För den här komponenten kan du ange flera parametrar i både redigeringsläge och designläge.
 
-1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`, öppnar filen `right.jsp` och ersätter:
+1. I CRXDE Lite navigerar du till `/apps/mywebsite/components/contentpage`filen `right.jsp` och ersätter:
 
    ```java
    <div>iparsys</div>
