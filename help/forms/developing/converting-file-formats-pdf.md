@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
 source-wordcount: '7876'
 ht-degree: 0%
@@ -142,7 +142,7 @@ När filen har konverterats till ett PDF-dokument kan du hämta resultatet. När
 
 ### Konvertera Word-dokument till PDF-dokument med Java API {#convert-word-documents-to-pdf-documents-using-the-java-api}
 
-Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Generera PDF API (Java):
+Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Generate PDF API (Java):
 
 1. Inkludera projektfiler.
 
@@ -176,7 +176,7 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Gener
 
    Så här hämtar du PDF-dokumentet:
 
-   * Anropa `CreatePDFResult` objektets `getCreatedDocument` metod, som returnerar ett `com.adobe.idp.Document` objekt.
+   * Anropa `CreatePDFResult` objektets `getCreatedDocument` metod som returnerar ett `com.adobe.idp.Document` objekt.
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera PDF-dokumentet från objektet som skapades i föregående steg.
 
    Utför följande åtgärder om du använde metoden för att hämta loggdokumentet (gäller inte för HTML-konverteringar): `createPDF2`
@@ -618,7 +618,7 @@ I den här tabellen visas vilken typ av information som används vid utskrift av
   <tr> 
    <td><p>Skript </p></td> 
    <td><p>Anger interaktioner mellan tjänsten Generera PDF och ett systemspecifikt program. Sådana interaktioner dirigerar vanligtvis programmet till Adobe PDF-drivrutinen för att skriva ut en fil. </p><p>Skriptet innehåller instruktioner som instruerar det ursprungliga programmet att öppna specifika dialogrutor och som ger specifika svar på fält och knappar i dessa dialogrutor. </p></td> 
-   <td><p>Tjänsten Generate PDF innehåller skriptfiler för alla originalprogram som stöds. Du kan ändra dessa filer med ett XML-redigeringsprogram.</p><p>Om du vill lägga till stöd för ett nytt systemspecifikt program måste du skapa en ny skriptfil. (Se <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">Skapa eller ändra ytterligare en dialogrute-XML-fil för ett internt program</a>.) </p></td> 
+   <td><p>Tjänsten Generate PDF innehåller skriptfiler för alla originalprogram som stöds. Du kan ändra dessa filer med ett XML-redigeringsprogram.</p><p>Om du vill lägga till stöd för ett nytt inbyggt program måste du skapa en ny skriptfil. (Se <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">Skapa eller ändra ytterligare en dialogrute-XML-fil för ett internt program</a>.) </p></td> 
   </tr> 
   <tr> 
    <td><p>Allmänna instruktioner i dialogrutan </p></td> 
@@ -650,7 +650,7 @@ I det här avsnittet och i nästa avsnitt används olika terminologi för dialog
 
 När det här avsnittet och nästa avsnitt beskriver dialogrutor och deras komponenter ur användarens perspektiv, används termer som *dialogruta*, *knapp*, *fält* och *kombinationsruta* .
 
-När det här avsnittet och nästa avsnitt beskriver dialogrutor och deras komponenter utifrån deras interna representation används termen *fönsterelement* . Den interna representationen av fönsterelement är en hierarki, där varje fönsterelementinstans identifieras med etiketter. Fönsterelementinstansen beskriver också dess fysiska egenskaper och beteende.
+När det här avsnittet och nästa avsnitt beskriver dialogrutor och deras komponenter utifrån deras interna representation används termen *fönsterelement* . Den interna representationen av fönsterelement är en hierarki där varje fönsterelementinstans identifieras med etiketter. Fönsterelementinstansen beskriver också dess fysiska egenskaper och beteende.
 
 Från användarens perspektiv visar dialogrutorna och deras komponenter olika beteenden, där vissa dialogruteelement är dolda tills de aktiveras. Från ett internt representationsperspektiv finns det ingen sådan beteendefråga. Den interna representationen av en dialogruta liknar till exempel komponenterna i den, med undantag för att komponenterna är kapslade i dialogrutan.
 
@@ -715,7 +715,7 @@ Om attributen inte kan identifiera en bildtext kan du i stället identifiera ett
 Tänk på följande:
 
 * I Microsoft Spy++ visas bildtexter med ett et-tecken (&amp;) som identifierar bildtextens snabbtangent. Spy++ visar till exempel bildtexten för en utskriftsdialogruta som `Pri&nt`, vilket anger att snabbtangenten är *n*. Bildtexter i skript- och dialogrute-XML-filer måste utelämna et-tecken.
-* Vissa bildtexter innehåller radbrytningar. tjänsten Generate PDF kan inte identifiera radbrytningar. Om en bildtext innehåller en radbrytning tar du med tillräckligt mycket av bildtexten för att skilja den från andra menyalternativ och använder sedan reguljära uttryck för den utelämnade delen. Ett exempel är ( `^Long caption title$`).]. (Se [Använda reguljära uttryck i bildtextattribut](converting-file-formats-pdf.md#using-regular-expressions-in-caption-attributes).)
+* Vissa bildtexter innehåller radbrytningar. tjänsten Generate PDF kan inte identifiera radbrytningar. Om en bildtext innehåller en radbrytning tar du med tillräckligt mycket av bildtexten för att skilja den från andra menyalternativ och använder sedan reguljära uttryck för den utelämnade delen. Ett exempel är ( `^Long caption title$`). (Se [Använda reguljära uttryck i bildtextattribut](converting-file-formats-pdf.md#using-regular-expressions-in-caption-attributes).)
 * Använd teckenentiteter (kallas även escape-sekvenser) för reserverade XML-tecken. Du kan till exempel använda `&` för et-tecken `<` och `>` för mindre än och större än-symboler, `&apos;` för apostrofer och `&quot;` för citattecken.
 
 Om du tänker arbeta med dialogruta- eller skript-XML-filer bör du installera programmet Microsoft Spy++.
