@@ -1,12 +1,12 @@
 ---
 title: AEM 6.4 Cumulative Fix Pack Release Notes
-description: Versionsinformation som är specifik för Adobe Experience Manager 6.4 Cumulative Fix Packs.
+description: Versionsinformation om Adobe Experience Manager 6.4 Cumulative Fix Packs.
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 87843465e8e0b372dc457630b84bcb5e50628dea
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '2148'
+source-wordcount: '2147'
 ht-degree: 0%
 
 ---
@@ -48,13 +48,13 @@ Adobe Experience Manager 6.4.8.1 innehåller korrigeringar av följande problem.
 * När alternativet Coral.Select anger emptyOption=true eller innehåller ett standardobjekt med värdet = &quot;&quot;, kommer filen dropdownshowhide.js att stöta på ett fel: Uncaught TypeError: component.getValue är inte en funktion (NPR-33163).
 * När en komponent innehåller en annan komponent som en dataunderordnad resurs ersätts platshållaren för den överordnade behållarkomponenten med platshållaren för de inre komponenterna (NPR-33119).
 * När du baserar ett innehållsfragment på ett schema och det innehåller ett obligatoriskt textområde eller ett sökvägsfält, kan innehållsfragmentet inte sparas (NPR-33007)
-* När du skapar en anpassad komponent med hjälp av fragmentkomponenten för körklar upplevelse och använder den på AEM Sites-sidor, visar AEM inte referenser (användning) för den anpassade komponenten (NPR-32852).
+* När du skapar en anpassad komponent med hjälp av körningsfragmentkomponenten och använder den på AEM Sites-sidor, visas inga referenser (användning) för den anpassade komponenten (NPR-32852) i AEM.
 * När en AEM Sites-sida är en del av en stor innehållsuppsättning med flera live-kopior går det inte att läsa in förhandsgranskningen av sidversionshistoriken (NPR-32772).
 * När du befordrar en programstart läggs&quot;cq:LiveRelationship&quot;-blandningen till i alla komponenter som läggs till vid programstarten. Det påverkar alla starter oavsett om en start skapas med eller utan att alternativet - Inherit source page live data - (NPR-32664) väljs.
 * När sidnumreringen startar läses inte Experience Fragments Picker in alla objekt (NPR-32605).
-* Det går inte att skapa en start för en AEM Sites-sida. Startskapande resulterar i ett fel (NPR-32544).
+* Det går inte att skapa en startsida för en AEM Sites-sida. Startskapande resulterar i ett fel (NPR-32544).
 * Hantera publikation innehåller inte refererade resurser i begäran om aktiveringsarbetsflöde (NPR-32463).
-* I Dispatcher hälsokontroll visas `Invalid cookie header` ett varningsmeddelande i loggfilerna (NPR-33630).
+* Hälsokontrollen för utskickaren visar `Invalid cookie header` varningsmeddelandet i loggfilerna (NPR-33630).
 * Salesforce-integrering är sårbar för SSRF (NPR-32671).
 * Speglad XSS i PreferencesServlet (NPR-33439).
 
@@ -121,9 +121,9 @@ Adobe Experience Manager 6.4.8.1 innehåller korrigeringar av följande problem.
 * Adaptiv Forms: En ny rad i en sträng i en ordlista med adaptiva formulär lägger till `&#xa;` tecken i ordlistan (NPR-33265).
 * Adaptiv Forms: Användaren kan inte spara ett anpassat formulär med mer än en bifogad fil (NPR-33214).
 * Adaptiv Forms: `AddInstance` och `RemoveInstance` metoder för klassen Instance Manager lägger inte till dynamiskt antal instanser för lazy load-fragment på [!DNL Internet Explorer 11] (NPR-33201).
-* Adaptiv Forms: Analytics som är aktiverat på ett adaptivt formulär inbäddat på en [!DNL Sites] sida registrerar inte data för händelserna Submit och Abandon (NPR-31359).
+* Adaptiv Forms: Analyser som är aktiverade på ett adaptivt formulär som är inbäddat på en [!DNL Sites] sida registrerar inte data för händelserna Submit och Abandon (NPR-31359).
 * Adaptiv Forms: När en användare klistrar in innehållet från ett [!DNL Word] dokument i ett adaptivt formulär och skickar det innehåller det skickade adaptiva formuläret unicode-tecken. Dessutom misslyckas konverteringen av PDF till PDF/A på grund av Unicode-tecken (NPR-33348).
-* BackendIntegration: Begäranden från formulärdatamodellen misslyckas eftersom uppdateringstoken förfaller på grund av ett inaktivt tillstånd (NPR-33168).
+* BackendIntegration: Förfrågningar om formulärdatamodell misslyckas eftersom uppdateringstoken förfaller på grund av ett inaktivt tillstånd (NPR-33168).
 * Dokumenttjänster: Konvertering av PDF-tjänst kan inte konvertera PDF-dokument till PostScript på grund av att Gibson-jars saknas [!DNL WebLogic] på [!DNL Linux] servern (NPR-33515, CQ-4292239).
 * Dokumenttjänster: När en användare konverterar en textfil till en PDF-fil återges inte japanska tecken korrekt (NPR-33239).
 * Lagrade XSS med GuideSOMProviderServlet (NPR-32701).
@@ -145,7 +145,7 @@ Adobe Experience Manager 6.4.8.1 innehåller korrigeringar av följande problem.
 
 >[!CAUTION]
 >
->För kunder med funktionspaket installerade på AEM 6.4. De tillvalsfunktioner som tillhandahålls av Adobe är beroende av releaseversionen och servicepaketet. Om du har något funktionspaket installerat kontaktar du AEM kundtjänst för att kontrollera om dessa funktionspaket är kompatibla med detta kumulativa korrigeringspaket för AEM 6.4.
+>För kunder med funktionspaket installerade på AEM 6.4. De tillvalsfunktioner som tillhandahålls av Adobe är beroende av releaseversion och servicepaket. Om du har något funktionspaket installerat kontaktar du AEM kundtjänst för att kontrollera om dessa funktionspaket är kompatibla med detta kumulativa korrigeringspaket för AEM 6.4.
 
 * AEM 6.4.8.1 kräver AEM 6.4.8.0. Mer information finns i [uppgraderingsdokumentationen](../sites-deploying/upgrade.md) .
 * Installera AEM 6.4.8.1 på en Author-instans med hjälp av Package Manager på en distribution med MongoDB och flera instanser.
@@ -186,18 +186,18 @@ B. Använd [HTTP-API:t från Package Manager](https://docs.adobe.com/content/doc
 
 ### Validera installation {#validate-install}
 
-1. Produktinformationssidan (*/system/console/productinfo*) ska nu visa den uppdaterade versionssträngen &quot;Adobe Experience Manager, version 6.4.8.1&quot; under Installerade produkter.
+1. Produktinformationssidan (*/system/console/production*) ska nu visa den uppdaterade versionssträngen&quot;Adobe Experience Manager, Version 6.4.8.1&quot; under Installerade produkter.
 1. Alla OSGI-paket är antingen AKTIVA eller FRAGMENT i OSGI-konsolen (Använd webbkonsolen: /system/console/bundles).
 1. OSGI-paketet org.apache.jackrabbit.oak-core finns i version 1.8.17 eller senare (Använd webbkonsol: /system/console/bundles).
 
-Information om den certifierade plattformen för att köra den här versionen av AEM Sites och resurser finns i [Tekniska krav](../sites-deploying/technical-requirements.md).
+Information om den certifierade plattformen för körning med den här versionen av AEM Sites och Assets finns i [Tekniska krav](../sites-deploying/technical-requirements.md).
 
->[!Note]
+>[!NOTE]
 >När paketet har installerats visas ett informationsmeddelande som anger att innehållspaketet har installerats korrekt, t.ex. **&quot;Content Package AEM-6.4-Service-Pack-7 har installerats korrekt.&quot;**
 
-### Uppdatera Dynamic Media-visningsprogram (5.10.1) {#update-dynamic-media-viewers}
+### Uppdatera dynamiska medievyer (5.10.1) {#update-dynamic-media-viewers}
 
-AEM 6.4.8.1 innehåller en ny version av visningsprogram för Dynamic Media (5.10.1) som gör det möjligt att söka efter dubblettnamn på sidan Bildförinställning. Dynamic Media-användare uppmanas att köra följande kommando för att få ut förinställningarna för användargränssnittet till ett uppdaterat läge.
+AEM 6.4.8.1 innehåller en ny version av Dynamic Media-visningsprogram (5.10.1) som gör det möjligt att kontrollera dubblettnamn på sidan Bildförinställning. Dynamic Media-kunder rekommenderas att köra följande kommando för att få fram aktuella visningsinställningar från kartongen.
 
 `curl -u admin:admin http://localhost:4502/libs/settings/dam/dm/presets/viewer.pushviewerpresets`
 
@@ -213,13 +213,13 @@ som kopierar nya visningsförinställningar till /conf-platsen.
 1. Ladda ned motsvarande tilläggspaket för formulär i [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) för ditt operativsystem.
 1. Installera tilläggspaketet för formulär så som beskrivs i [Installera AEM tilläggspaket](https://docs.adobe.com/content/help/en/experience-manager-64/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html#install-aem-forms-add-on-package)för formulär.
 
-### Installera AEM Forms JEE-installationsprogram {#install-aem-forms-jee-installer}
+### Installera AEM Forms JEE-installationsprogrammet {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
 >Hoppa över om du inte använder AEM Forms på JEE. Korrigeringar i AEM Forms JEE levereras via ett separat installationsprogram.
 
-Information om hur du installerar det kumulativa installationsprogrammet för AEM Forms JEE och konfigurationen efter distribution finns i [AEM Forms JEE Patch Installer 0016](https://helpx.adobe.com/aem-forms/quick-fixes/6-4/jee-patch-0016.html).
+Information om hur du installerar det kumulativa installationsprogrammet för AEM Forms JEE och om konfiguration efter distribution finns i [AEM Forms JEE Patch Installer 0016](https://helpx.adobe.com/aem-forms/quick-fixes/6-4/jee-patch-0016.html).
 
 ### Uber Jar {#uber-jar}
 
