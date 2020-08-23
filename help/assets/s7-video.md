@@ -10,10 +10,10 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '1621'
-ht-degree: 0%
+source-wordcount: '1617'
+ht-degree: 1%
 
 ---
 
@@ -102,7 +102,7 @@ Om du behöver uppdatera visningsprogrammet och kodningsförinställningarna fö
 ## Överföra din överordnad video till Scene7 från Adobe DAM {#uploading-your-master-video}
 
 1. Navigera till målmappen för CQ DAM där du har konfigurerat molnkonfigurationen med Scene7-kodningsprofiler.
-1. Klicka **[!UICONTROL Upload]** för att överföra överordnad video. Överföring och kodning av video är klar när arbetsflödet för DAM Update Asset har slutförts och **[!UICONTROL Publish to Scene7]** har en bock.
+1. Klicka **[!UICONTROL Upload]** för att överföra överordnad video. Videoöverföring och -kodning är klar när arbetsflödet för DAM Update Asset är klart och **[!UICONTROL Publish to Scene7]** har en bock.
 
    >[!NOTE]
    >
@@ -150,7 +150,7 @@ De olika videokodningarna skapas enligt de kodningsförinställningar för S7 so
 >
 >Nya videoprofiler och ändringar av dem måste aktiveras för publicering.
 
-1. I AEM trycker du på **[!UICONTROL Tools > Configuration Console**.
+1. I AEM trycker du på **[!UICONTROL Tools]>[!UICONTROL Configuration Console]**.
 1. Navigera **[!UICONTROL Configuration Console]** till **[!UICONTROL Tools > DAM > Video Profiles]** i navigeringsträdet.
 1. Skapa en ny S7-videoprofil. På **[!UICONTROL New...]** menyn väljer du **[!UICONTROL Create Page]** och sedan Scene7 videoprofilmall. Ge den nya videoprofilsidan ett namn och klicka på **[!UICONTROL Create]**.
 
