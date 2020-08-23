@@ -10,9 +10,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 translation-type: tm+mt
-source-git-commit: 5dba0e6c4ce4dbdf3254f511476a035c60a81810
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1225'
 ht-degree: 8%
 
 ---
@@ -139,7 +139,7 @@ Dynamic Media har stöd för leverans av statiska resurser, som är ytterligare 
 
    Om registrerings-ID:t till exempel är `87654321|MyCompany`det blir kundens namn `MyCompany`.
 
-1. I det övre vänstra hörnet av sidan trycker du på **[!UICONTROL-Cloud Services**, sedan på AEM-ikonen och går till **[!UICONTROL General > CRXDE Lite]**.
+1. I det övre vänstra hörnet av sidan trycker du på **[!UICONTROL Cloud Service]s**, sedan på AEM och går till **[!UICONTROL General > CRXDE Lite]**.
 1. Kopiera ned hela videouppdateringssökvägen från JCR-filen (Java Content Repository).
 
    Videons återgivningssökväg kan till exempel se ut ungefär så här:
