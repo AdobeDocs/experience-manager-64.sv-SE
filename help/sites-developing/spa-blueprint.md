@@ -9,9 +9,9 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 6d4188f4-ad98-49df-9bb4-7936b7bea9c8
 translation-type: tm+mt
-source-git-commit: 940faa5a783eacf5505f001cf3696200babc6231
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '2128'
+source-wordcount: '2124'
 ht-degree: 0%
 
 ---
@@ -278,7 +278,7 @@ Följande fragment illustrerar den typiska HTML-representationen av en sidinneh�
 
 Appen äger routningen. Utvecklaren måste först implementera en Navigation-komponent (mappas till en AEM navigeringskomponent). Den här komponenten återger URL-länkar som ska användas tillsammans med en serie vägar som visar eller döljer innehållsfragment.
 
-Det underliggande [`PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) biblioteket och dess `[`ModelRouter`](/help/sites-developing/spa-routing.md)-modul (aktiverad som standard) är ansvariga för förhämtning och ger åtkomst till modellen som är associerad med en given resurssökväg.
+Det underliggande [`PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) biblioteket och dess [`ModelRouter`](/help/sites-developing/spa-routing.md) modul (aktiverad som standard) ansvarar för förhämtning och ger åtkomst till modellen som är kopplad till en given resurssökväg.
 
 De två entiteterna är relaterade till begreppet routning, men de [`ModelRouter`](/help/sites-developing/spa-routing.md) ansvarar bara för att [`PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager) har lästs in med en datamodell som är synkroniserad med det aktuella programtillståndet.
 
