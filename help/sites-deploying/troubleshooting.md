@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 5542de4e-6262-4300-9cf8-0eac79ba4f9a
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
 source-wordcount: '1126'
 ht-degree: 0%
@@ -24,7 +24,7 @@ I det här avsnittet finns detaljerad information om loggar som kan hjälpa dig 
 
 ## Felsöka författarprestanda {#troubleshoot-author-performance}
 
-Det kan bli ganska komplicerat att analysera långsamma prestanda i redigeringsinstansen. Som ett första steg måste du ta reda på vilken nivå av teknikhögen som prestandan minskar på.
+Det kan bli ganska komplicerat att analysera långsamma prestanda i redigeringsinstansen. Som ett första steg måste du ta reda på vilken nivå av teknikhögen som prestandan minskar.
 
 Följande beslutsträd ger vägledning för att minska flaskhalsen.
 
@@ -48,7 +48,7 @@ I det utförliga alternativet visas några av QuickStart-loggutdata på konsolen
 
 I följande avsnitt beskrivs några installationsproblem och deras lösningar.
 
-### **Att dubbelklicka på Quickstart-behållaren har ingen effekt eller öppnar burken-filen med ett annat program (t.ex. arkivhanteraren){#double-clicking-the-quickstart-jar-does-not-have-any-effect-or-opens-the-jar-file-with-another-program-for-example-archive-manager}**
+### Att dubbelklicka på Quickstart-behållaren har ingen effekt eller öppnar burken-filen med ett annat program (t.ex. arkivhanteraren) {#double-clicking-the-quickstart-jar-does-not-have-any-effect-or-opens-the-jar-file-with-another-program-for-example-archive-manager}
 
 Detta tyder vanligtvis på ett problem med hur operativsystemets skrivbordsmiljö är konfigurerad att öppna filer med filnamnstillägget .jar. Det kan också tyda på att du inte har Java installerat eller att du använder en version av Java som inte stöds.
 
@@ -65,7 +65,7 @@ Så här felsöker du:
 * Ibland kan det vara bra att återställa den korrekta associationen genom att installera om den Java-version som stöds.
 * Du kan alltid köra CRX med kommandoraden eller starta/stoppa skript enligt beskrivningen tidigare i det här dokumentet.
 
-### **Mitt program som körs på CRX orsakar fel av typen slut på minne{#my-application-running-on-crx-throws-out-of-memory-errors}**
+### Mitt program som körs på CRX orsakar fel av typen slut på minne {#my-application-running-on-crx-throws-out-of-memory-errors}
 
 >[!NOTE]
 >
@@ -100,7 +100,7 @@ Om allt annat misslyckas, kontrollera loggarna för att ta reda på vad som har 
 
 ## Felsöka installationer med en programserver {#troubleshooting-installations-with-an-application-server}
 
-### **Sidan hittades inte returnerades när en geometrixx-outdoor-sida begärdes{#page-not-found-returned-when-requesting-a-geometrixx-outdoor-page}**
+### Sidan hittades inte returnerades när en geometrixx-outdoor-sida begärdes {#page-not-found-returned-when-requesting-a-geometrixx-outdoor-page}
 
 **Gäller WebLogic 10.3.5 och JBoss 5.1**
 
@@ -108,7 +108,7 @@ När en begäran om geometrixx-outdoor/en page returnerar 404 (Page Not Foun), k
 
 Mer information finns i *Distribuera AEM* .
 
-### **Svarshuvudets storlek kan vara större än 4 kB{#response-header-size-can-be-greater-than-kb}**
+### Svarshuvudets storlek kan vara större än 4 kB {#response-header-size-can-be-greater-than-kb}
 
 502 fel kan indikera att webbservern inte kan hantera storleken på AEM HTTP-svarshuvud. AEM kan generera HTTP-svarshuvuden som innehåller cookies som är större än 4 kB. Kontrollera att serverbehållaren är konfigurerad så att den maximala svarshuvudets storlek kan överskrida 4 kB.
 
@@ -126,7 +126,7 @@ Om beständig lagring är inbäddad i installationskatalogen, till exempel i sta
 
 Om din installation av AEM använder extern lagring, till exempel en databasserver, tas inte data bort automatiskt när du tar bort mappen, men lagringskonfigurationen tas bort, vilket gör det svårt att återställa JCR-innehållet.
 
-### **JSP-filer kompileras inte på JBoss{#jsp-files-are-not-compiled-on-jboss}**
+### JSP-filer kompileras inte på JBoss {#jsp-files-are-not-compiled-on-jboss}
 
 Om du installerar eller uppdaterar JSP-filer till Experience Manager på JBoss och motsvarande servrar inte kompileras kontrollerar du att JBoss JSP-kompilatorn är korrekt konfigurerad. Mer information finns i\
 [JSP Compilation Issues in JBoss](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html) article.
