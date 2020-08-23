@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 content-type: reference
 discoiquuid: ab19b248-8931-4cf6-b6a5-fb7b067c4a49
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
 source-wordcount: '5857'
 ht-degree: 1%
@@ -301,7 +301,11 @@ Välj **Genomskinlighet** om du vill konfigurera genomskinlighetsinställningarn
 
 **Konvertera alla linjer till konturer** Konverterar alla linjer till enkla fyllda banor på sidor som innehåller genomskinlighet. Med det här alternativet ser du till att linjebredden förblir konsekvent vid förenkling. Observera att om du aktiverar det här alternativet ser tunna linjer lite tjockare ut och förenklingsprestanda kan försämras.
 
-**Beskär komplexa områden** Ser till att gränserna mellan vektorbilder och rastrerade bilder hamnar längs objektbanor. Med det här alternativet minskas sammanfogningsartefakter som uppstår när en del av en logg] &quot;>
+**Beskär komplexa områden** Ser till att gränserna mellan vektorbilder och rastrerade bilder hamnar längs objektbanor. Med det här alternativet minskas sammanfogningsartefakter som uppstår när en del av en logg
+
+<!--
+NOTE to WRITER - The above sentence is incomplete.
+-->
 
 >[!NOTE]
 >
@@ -311,7 +315,7 @@ Bevara övertryck: Blandar färgen i genomskinliga teckningar med bakgrundsfärg
 
 I följande tabell visas vanliga typer av skrivare och deras upplösning mätt i dpi, deras standardrastertäthet mätt i linjer per tum (lpi) och en omsamplingsupplösning för bilder mätt i pixlar per tum (ppi). Om du till exempel skriver ut på en laserskrivare med 600 dpi anger du 170 som upplösning för omsampling av bilder.
 
-**Bilder** Välj Bilder om du vill ange komprimerings- och omsamplingsalternativ för färgbilder, gråskalebilder och monokroma bilder. Du kan experimentera med dessa alternativ för att hitta en lämplig balans mellan filstorlek och bildkvalitet. Upplösningen för färg- och gråskalebilder bör vara 1,5 till 2 gånger rastertätheten som filen skrivs ut med. Upplösningen för monokroma bilder bör vara densamma som för utdataenheten, men tänk på att om du sparar en monokrom bild med en upplösning på över 1 500 dpi ökar filstorleken utan att bildkvaliteten förbättras nämnvärt. Bilder som ska förstoras, t.ex. kartor, kan kräva högre upplösningar.
+**Bilder** Välj Bilder om du vill ange komprimerings- och omsamplingsalternativ för färgbilder, gråskalebilder och monokroma bilder. Du kan experimentera med dessa alternativ för att hitta en lämplig balans mellan filstorlek och bildkvalitet. Upplösningen för färg- och gråskalebilder bör vara 1,5 till 2 gånger rastertätheten som filen skrivs ut med. Upplösningen för monokroma bilder bör vara densamma som för utdataenheten, men tänk på att om du sparar en monokrom bild med en upplösning på över 1 500 dpi ökar filstorleken utan att bildkvaliteten förbättras märkbart. Bilder som ska förstoras, t.ex. kartor, kan kräva högre upplösningar.
 
 >[!NOTE]
 >
@@ -591,7 +595,7 @@ De här alternativen avgör hur OpenOffice-filer konverteras. Instruktioner om h
 
 **Bilder**: Konfigurera hur bilder konverteras. EPS-bilder med inbäddade förhandsvisningar exporteras endast som förhandsvisningar. EPS-bilder utan inbäddade förhandsvisningar exporteras som tomma platshållare. Med förlustfri komprimering av bilder bevaras alla pixlar. Med JPEG-komprimering av bilder och en hög kvalitetsnivå bevaras nästan alla pixlar. Med en låg kvalitetsnivå försvinner vissa pixlar och artefakter uppstår, men filstorleken minskar.
 
-**Allmänt**: Aktivera alternativen för att konvertera en taggad PDF-fil eller för att exportera anteckningar från Writer- och FormCalc-dokument, Impress-bildövergångseffekter eller tomma sidor till PDF-filen. När du exporterar märkord kan filstorleken öka med mycket. Vissa märkord som exporteras är innehållsförteckningar, hyperlänkar och kontroller.
+**Allmänt**: Aktivera alternativen för att konvertera en taggad PDF-fil eller för att exportera anteckningar i Writer- och FormCalc-dokument, Impress-bildövergångseffekter eller tomma sidor till PDF-filen. När du exporterar märkord kan filstorleken öka med mycket. Vissa märkord som exporteras är innehållsförteckningar, hyperlänkar och kontroller.
 
 Du kan också ange hur formulär ska skickas. Alternativen är XML, FDF, PDF eller HTML. Den här inställningen åsidosätter kontrollens URL-egenskap som du anger i dokumentet. Endast en gemensam inställning kan väljas för PDF-dokumentet:
 
