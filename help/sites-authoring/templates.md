@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 5a96c306-790a-4721-a146-86fbceb376db
 translation-type: tm+mt
-source-git-commit: e2fbd2bb97264265ab45b436d6ac32fbf6fef2a7
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
 source-wordcount: '4811'
 ht-degree: 9%
@@ -128,7 +128,7 @@ När du skapar en ny redigerbar mall:
 
    * Eller direkt på: [http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
 
-* Kan [skapa en mapp för mallarna](#creating-a-template-folder-admin) vid behov
+* Kan [skapa en mapp för mallarna](#creating-a-template-folder-admin) om det behövs
 * [Skapa en ny mall](#creating-a-new-template-template-author)som till att börja med är tom
 
 * [Definiera ytterligare egenskaper](#defining-template-properties-template-author) för mallen om det behövs
@@ -316,7 +316,7 @@ Följande aspekter av en mall kan redigeras:
 
 * [Layout](#editing-a-template-layout-template-author)
 
-   Här kan du fördefiniera mallayouten för de önskade enhetsformaten. **Layoutläget** för mallutveckling har samma funktioner som **[layoutläget](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)** för sidredigering].
+   Här kan du fördefiniera mallayouten för de önskade enhetsformaten. **Layoutläget** för mallutveckling har samma funktioner som **[layoutläget](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)** för sidredigering.
 
 * [Sidprofiler](#editing-a-template-structure-template-author)
 
@@ -445,7 +445,7 @@ I **strukturläget** i mallredigeraren:
 
    >[!NOTE]
    >
-   >Om flera komponenter av samma typ läggs till som ursprungligt innehåll gäller samma princip för alla komponenter. Detta speglar samma begränsningar i **[designläge](/help/sites-authoring/default-components-designmode.md)**för statiska mallar.
+   >Om flera komponenter av samma typ läggs till som ursprungligt innehåll gäller samma princip för alla komponenter. Detta speglar samma begränsningar i **[designläge](/help/sites-authoring/default-components-designmode.md)** för statiska mallar.
 
    ***Egenskaper***
 
@@ -575,9 +575,9 @@ I **strukturläget** i mallredigeraren:
 
 >[!NOTE]
 >
->**Du kan använda det inledande innehållsläget** för redigeringsläge för sidor som skapas med den mallen. Därför definieras profiler inte i **läget Inledande innehåll** utan i **[strukturläge](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)**.
+>**Du kan använda det inledande innehållsläget** för redigeringsläge för sidor som skapas med den mallen. Därför definieras profiler inte i **läget Inledande innehåll** utan i **[strukturläge](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)** .
 
-* Olåsta komponenter som är tillgängliga för redigering markeras. När de är markerade har de en blå kantlinje:
+* Olåsta komponenter som är tillgängliga för redigering markeras. När de är markerade har de en blå kant:
 
    ![chlimage_1-380](assets/chlimage_1-380.png)
 
@@ -672,7 +672,7 @@ Med hjälp av sidegenskaper kan du definiera nödvändiga klientbibliotek genom 
 
 >[!NOTE]
 >
->Mallförfattaren kan ange sidprincipen för mallen, men han eller hon måste få information om lämpliga klientbibliotek från utvecklaren.
+>Även om mallskaparen kan ange sidprincipen för mallen måste han eller hon hämta information om lämpliga klientbibliotek från utvecklaren.
 
 ### Redigera en mall - Inledande sidegenskaper - Författare {#editing-a-template-initial-page-properties-author}
 
