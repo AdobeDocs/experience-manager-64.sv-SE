@@ -10,9 +10,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: cd3adbac-9868-4838-9d8a-37dde8973df4
 translation-type: tm+mt
-source-git-commit: 92017a4c2c9ab9f139440e40f368958bcc3bb2ef
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '5139'
+source-wordcount: '5136'
 ht-degree: 3%
 
 ---
@@ -38,7 +38,7 @@ Med den nya arkitekturen ansvarar AEM för överordnad material och synkning med
 
 [Dynamiska media](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) är inaktiverat som standard. Om du vill utnyttja funktionerna för dynamiska medier måste du aktivera dem.
 
->[ANMÄRKNING]
+>[!NOTE]
 >
 >Dynamic Media - Scene7-läget är endast till för AEM Author-instansen. Därför måste du konfigurera `runmode=dynamicmedia_scene7`på AEM Author-instansen, inte AEM Publish-instansen.
 
@@ -52,7 +52,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 Om du uppgraderar AEM Dynamic Media från 6.3 till 6.4 (som nu innehåller möjligheten till noll driftsättningar vid driftstopp), måste du köra följande kommando för att migrera alla dina förinställningar och konfigurationer från `/etc` till `/conf` i CRXDE Lite.
 
->[ANMÄRKNING]
+>[!NOTE]
 >
 >Om du kör AEM i kompatibilitetsläge, d.v.s. har kompatibilitetspaketet installerat, behöver du inte köra dessa kommandon.
 
@@ -220,7 +220,7 @@ Du kan definiera vilka resurstyper som ska bearbetas av Dynamic Media och anpass
 * Konvertera ett Adobe Photoshop-dokument (.PSD) till en bannermallsresurs för personalisering.
 * Rastrera en Adobe Illustrator-fil (.AI) eller en Adobe Photoshop Encapsulated Postscript-fil (.EPS).
 
->[ANMÄRKNING]
+>[!NOTE]
 >
 >Videoprofiler och bildprofiler kan användas för att definiera bearbetning av videoklipp och bilder.
 
