@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 25f0e0f7-9570-4748-81cb-ccec6492c0b4
 translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '2603'
+source-wordcount: '2597'
 ht-degree: 0%
 
 ---
@@ -108,7 +108,7 @@ Sedan **[!UICONTROL AND Split]** skapas en delning i arbetsflödet, varefter bå
 
 Ett **[!UICONTROL Container]** steg startar en annan arbetsflödesmodell som körs som ett underordnat arbetsflöde.
 
-På så sätt **[!UICONTROL Container]]**kan du återanvända arbetsflödesmodeller för att implementera vanliga stegsekvenser. En arbetsflödesmodell för översättning kan till exempel användas i flera redigeringsarbetsflöden.
+På så **[!UICONTROL Container]** sätt kan du återanvända arbetsflödesmodeller för att implementera vanliga stegsekvenser. En arbetsflödesmodell för översättning kan till exempel användas i flera redigeringsarbetsflöden.
 
 ![wf-28](assets/wf-28.png)
 
@@ -138,7 +138,7 @@ Om du vill konfigurera steget redigerar du och använder följande flikar:
 * [**[!UICONTROL Common]**](#step-properties-common-tab)
 * **[!UICONTROL Process]**
 
-   * **[!UICONTROL The step to go to]]**: Välj det steg som ska köras.
+   * **[!UICONTROL The step to go to]**: Välj det steg som ska köras.
    * **[!UICONTROL Script Path]**: Sökvägen till ECMAScript som avgör om körningen ska utföras **[!UICONTROL Goto Step]**.
    * **[!UICONTROL Script]**: Det ECMAScript som avgör om körningen ska utföras **[!UICONTROL Goto Step]**.
 
@@ -268,7 +268,7 @@ Om du vill konfigurera steget redigerar du och använder följande flikar:
 * [**[!UICONTROL User/Group]**](#step-properties-user-group-tab)
 * **[!UICONTROL Dialog]**
 
-   * **[!UICONTROL-dialogsökväg**: Sökvägen till dialognoden i den [dialogruta som du skapar](#dialog-participant-step-creating-a-dialog).
+   * **[!UICONTROL Dialog Path**]: Sökvägen till dialognoden i den [dialogruta som du skapar](#dialog-participant-step-creating-a-dialog).
 
 #### Steg för dialogdeltagare - Skapa en dialogruta{#dialog-participant-step-creating-a-dialog}
 
@@ -396,7 +396,7 @@ Om du vill konfigurera steget redigerar du och använder följande flikar:
 
 #### Dynamiskt deltagarsteg - Utveckla deltagarväljaren {#dynamic-participant-step-developing-the-participant-chooser}
 
-Du skapar deltagarväljaren. Därför kan du använda valfri urvalslogik eller valfria villkor. Din deltagarväljare kan t.ex. välja den användare (i en grupp) som har minst arbetsobjekt. Du kan skapa valfritt antal deltagaralternativ som du kan använda med olika instanser av **komponenten Dynamic Deltagare Step *]*i dina arbetsflödesmodeller.
+Du skapar deltagarväljaren. Därför kan du använda valfri urvalslogik eller valfria villkor. Din deltagarväljare kan t.ex. välja den användare (i en grupp) som har minst arbetsobjekt. Du kan skapa valfritt antal deltagaralternativ som du kan använda med olika instanser av komponenten **Dynamic Deltagare Step** i dina arbetsflödesmodeller.
 
 Skapa en OSGi-tjänst eller ett ECMAScript-skript som väljer en användare att tilldela arbetsposten till.
 
@@ -514,7 +514,7 @@ Om du vill konfigurera steget redigerar du och använder följande flikar:
 * [**[!UICONTROL User/Group]**](#step-properties-user-group-tab)
 * **[!UICONTROL Form]**
 
-   * **[!UICONTROL-formulärsökväg**: Sökvägen till det [formulär du skapar](#form-participant-step-creating-the-form).
+   * **[!UICONTROL Form Path]**: Sökvägen till det [formulär du skapar](#form-participant-step-creating-the-form).
 
 #### Steg för formulärdeltagare - Skapa formuläret {#form-participant-step-creating-the-form}
 
