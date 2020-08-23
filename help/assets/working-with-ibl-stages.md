@@ -10,9 +10,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 658ff671-16b9-41bd-ba24-b77a32b3346b
 translation-type: tm+mt
-source-git-commit: 5964edfadf597652f754ca3c64343b0b90e40796
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '838'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ För närvarande stöder AEM 3D endast 32-bitars TIFF-filer. Använd vid behov A
 * **[!UICONTROL Bit depth]** - 32 bitar (flyttal)
 * **[!UICONTROL Pixel Order]** - Varvad (RGBRGB)
 * **[!UICONTROL Image Compression]** - LZW
-* **[!UICONTROL-byteordning** - IBM PC
+* **[!UICONTROL Byte Order]** - IBM PC
 
 En enda HDR-bild räcker ofta för IBL-steg, men AEM 3D ger ytterligare kontroll över IBL-effekter genom att upp till tre separata bilder tillåts:
 
