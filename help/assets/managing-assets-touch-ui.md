@@ -4,9 +4,9 @@ description: Lär dig mer om olika resurshanterings- och redigeringsuppgifter so
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '9499'
+source-wordcount: '9497'
 ht-degree: 2%
 
 ---
@@ -70,7 +70,7 @@ Innan du överför en resurs måste du kontrollera att den har ett format som [s
 
    Den storlek över vilken en tillgång betraktas som en stor tillgång kan konfigureras. Du kan till exempel konfigurera systemet så att resurser över 1 000 MB (i stället för 500 MB) betraktas som stora resurser. I det här fallet visas knappen i förloppsindikatorn när resurser som är större än 1 000 MB överförs. **[!UICONTROL Pause]**
 
-   Knappen **[!UICONTROL Pause]]**visas inte om en fil som är större än 1 000 MB överförs med en fil som är mindre än 1 000 MB. Men om du avbryter filöverföringen på mindre än 1 000 MB visas **[!UICONTROL Pause]**knappen.
+   Knappen **[!UICONTROL Pause]** visas inte om en fil som är större än 1 000 MB överförs med en fil som är mindre än 1 000 MB. Men om du avbryter filöverföringen på mindre än 1 000 MB visas **[!UICONTROL Pause]** knappen.
 
    Om du vill ändra storleksgränsen konfigurerar du `chunkUploadMinFileSize` egenskapen för `fileupload`noden i CRX-databasen.
 
@@ -216,7 +216,7 @@ När du överför bildfiler, inklusive AI-, EPS- och PSD-filer, kan du utföra f
 
 #### Ange överföringsalternativ för PostScript och Illustrator {#setting-postscript-and-illustrator-upload-options}
 
-När du överför bildfiler i PostScript (EPS) eller Illustrator (AI) kan du formatera dem på olika sätt. Du kan rastrera filerna, behålla den genomskinliga bakgrunden, välja en upplösning och välja en färgrymd. Alternativ för formatering av PostScript- och Illustrator-filer finns i dialogrutan Alternativ för överföringsjobb under PostScript-alternativ och Illustrator-alternativ.
+När du överför bildfiler från PostScript (EPS) eller Illustrator (AI) kan du formatera dem på olika sätt. Du kan rastrera filerna, behålla den genomskinliga bakgrunden, välja en upplösning och välja en färgrymd. Alternativ för formatering av PostScript- och Illustrator-filer finns i dialogrutan Alternativ för överföringsjobb under PostScript-alternativ och Illustrator-alternativ.
 
 | Alternativ | Delalternativ | Beskrivning |
 |---|---|---|
@@ -290,7 +290,7 @@ Du kan omkoda en videofil genom att välja bland en mängd olika förinställnin
 
 #### Ange förinställningar för gruppuppsättning vid överföring {#setting-batch-set-presets-at-upload}
 
-Om du automatiskt vill skapa en bilduppsättning eller en snurra uppsättning från överförda bilder klickar du på kolumnen **[!UICONTROL Aktiv** för den förinställning du vill använda. Du kan markera flera förinställningar.
+Om du automatiskt vill skapa en bilduppsättning eller en snurra uppsättning från överförda bilder klickar du i kolumnen för den förinställning som du vill använda. **[!UICONTROL Active]** Du kan markera flera förinställningar.
 
 Mer information om hur du skapar förinställningar för gruppuppsättningar finns i [Konfigurera förinställningar för gruppuppsättningar för att automatiskt generera bilduppsättningar och](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) snurruppsättningar.
 
@@ -716,7 +716,7 @@ På konsolen [](managing-collections-touch-ui.md#navigating-the-collections-cons
 **Så här använder du tidslinjen**:
 
 1. Öppna resurssidan för en resurs eller markera den i resursgränssnittet.
-1. Tryck på **[!UICONTROL Global Navigation]** ikonen och välj **Tidslinje]** i listan.
+1. Tryck på **[!UICONTROL Global Navigation]** ikonen och välj **[Tidslinje]** i listan.
 
    ![tidslinje](assets/timeline.png)
 
