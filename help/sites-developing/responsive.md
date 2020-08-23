@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 532544b0-1932-419a-b6bd-ecf57a926fef
 legacypath: /content/docs/en/aem/6-0/develop/mobile/responsive
 translation-type: tm+mt
-source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
 source-wordcount: '5329'
 ht-degree: 0%
@@ -50,7 +50,7 @@ Mer information om hur du implementerar responsiva designbeteenden finns i följ
 * [Flytande stödraster](/help/sites-developing/responsive.md#developing-a-fluid-grid)
 * [Adaptiva bilder](/help/sites-developing/responsive.md#using-adaptive-images)
 
-När du designar kan du använda **!UICONTROL Sidekick]** för att förhandsgranska sidorna för olika skärmstorlekar.
+När du designar kan du använda **[!UICONTROL Sidekick]** för att förhandsgranska sidorna för olika skärmstorlekar.
 
 ## Innan du börjar utveckla {#before-you-develop}
 
@@ -305,7 +305,7 @@ Hämta följande javascript-bibliotek och inkludera dem i en klientbiblioteksmap
 
 **HTML**
 
-Skapa en komponent som genererar de div-element som förväntas av koden picturefill.js. På en AEM sida är värdet för data-src-attributet sökvägen till en resurs i databasen. En sidkomponent kan till exempel hårdkoda mediefrågor och tillhörande sökvägar för bildåtergivningar i DAM. Du kan också skapa en anpassad bildkomponent som gör att författare kan välja bildåtergivningar eller ange alternativ för körningsåtergivning.
+Skapa en komponent som genererar de div-element som förväntas av koden picturefill.js. På en AEM sida är värdet för data-src-attributet sökvägen till en resurs i databasen. En sidkomponent kan till exempel hårdkoda mediefrågor och tillhörande sökvägar för bildåtergivningar i DAM. Du kan också skapa en anpassad bildkomponent som gör det möjligt för författare att välja bildåtergivningar eller ange alternativ för runtime-återgivning.
 
 I följande exempel väljer HTML två DAM-renderingar av samma bild.
 
@@ -433,7 +433,7 @@ Om du anpassar den adaptiva bildkomponenten och ändrar breddväljarna måste du
 
 ### Förstå komponentservern för adaptiv bild {#understanding-the-adaptive-image-component-servlet}
 
-Servleten Adaptiv bildkomponent ändrar storlek på en JPEG-bild enligt en angiven bredd och ställer in JPEG-kvalitet.
+Servern för adaptiv bildkomponent ändrar storlek på en JPEG-bild enligt en angiven bredd och ställer in JPEG-kvalitet.
 
 #### Gränssnittet för den adaptiva bildkomponentservern {#the-interface-of-the-adaptive-image-component-servlet}
 
@@ -447,7 +447,7 @@ Sling löser därför URL:er för HTTP-begäran i följande format till den här
 
 `*path-to-node*.img.*extension*`
 
-Till exempel Sling forwards HTTP-begäranden med URL:en `http://localhost:4502/content/geometrixx/adaptiveImage.img.jpg` till Adaptive Image Component Server.
+Exempel: Sling forwards HTTP requests with the URL `http://localhost:4502/content/geometrixx/adaptiveImage.img.jpg` to Adaptive Image Component Server.
 
 Två ytterligare väljare anger begärd bildbredd och JPEG-kvalitet. I följande exempel efterfrågas en bild med bredden 480 pixlar och medelkvaliteten:
 
@@ -778,7 +778,7 @@ Skapa en huvudsideskomponent som innehåller skript för generering av olika del
 
 Skapa andra sidkomponenter som använder huvudsideskomponenten som `cq:resourceSuperType`. Dessa komponenter innehåller skript som åsidosätter skripten på huvudsidan efter behov.
 
-Till exempel innehåller goemetrixx-media-programmet sidkomponenten ( `sling:resourceSuperType` är bassidans komponent). Flera underordnade komponenter (som artikel, kategori och media-home) använder den här sidkomponenten som `sling:resourceSuperType`. Varje underordnad komponent innehåller en content.jsp-fil som åsidosätter content.jsp-filen för sidkomponenten.
+Till exempel innehåller goemetrixx-media-programmet sidkomponenten ( `sling:resourceSuperType` är bassidkomponenten). Flera underordnade komponenter (som artikel, kategori och media-home) använder den här sidkomponenten som `sling:resourceSuperType`. Varje underordnad komponent innehåller en content.jsp-fil som åsidosätter content.jsp-filen för sidkomponenten.
 
 **Återanvända skript**
 
@@ -949,7 +949,7 @@ Använd följande algoritm som utgångspunkt när du utvecklar elementklasser oc
 
 #### Placera innehållsblock i rader {#positioning-content-blocks-in-rows}
 
-Använd klassens flyttalsformat för att styra om innehållsblocken i en rad ska ordnas vågrätt eller lodrätt. `.row-fluid`
+Använd klassens flyttalsformat för att ange om innehållsblocken i en rad ska ordnas vågrätt eller lodrätt. `.row-fluid`
 
 * Stilen `float:left` eller `float:right` orsakar den vågräta fördelningen av underordnade element (innehållsblock).
 
