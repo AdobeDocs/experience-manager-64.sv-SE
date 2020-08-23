@@ -10,9 +10,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 752e521f-198f-425a-abfa-051993f9c694
 translation-type: tm+mt
-source-git-commit: 5964edfadf597652f754ca3c64343b0b90e40796
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,8 @@ ht-degree: 0%
 1. Ställ in bildbaserad ljussättning.
 
    1. I **[!UICONTROL Render Settings]** markerar du **[!UICONTROL Render Render Using: mental ray]** och öppnar fliken Scen.
-   1. Öppna dragspelsfliken och klicka på **[!UICONTROL Render Environment]** [!UICONTROL Rendera Skapa bildbaserad belysning ****.
-   1. Klicka på ruteikonen som har en högerpil till vänster om rutan för att markera IBL-noden `mentalRayIblShape1`och avsluta **[!UICONTROL Render Settings]**.
+   1. Öppna dragspelet **[!UICONTROL Render Environment]** och klicka **[!UICONTROL Render Create Image Based Lighting]**.
+   1. Klicka på ruteikonen som har en högerpil till vänster om rutan för att markera IBL-noden `mentalRayIblShape1`och avsluta sedan **[!UICONTROL Render Settings]**.
    1. I **[!UICONTROL Attribute Editor]** markerar du omformningsnoden `mentalRayIbl1`och byter sedan namn på omformningsnoden till `AdobeIbl`.
    1. Ange skalan för noden så att systemsfären blir betydligt större än det största 3D-objektet som ska visas med den här scenen (till exempel `10000,10000,10000`).
    1. Markera `AdobeIblShape` noden och konfigurera den enligt följande:
