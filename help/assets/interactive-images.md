@@ -10,9 +10,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d630499d-740d-4979-8a34-9e3fcc3b5a23
 translation-type: tm+mt
-source-git-commit: a3a160a0281c1ea2ca050c2c747d6a5ec1d952b3
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '4204'
+source-wordcount: '4198'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ Självstudiekursen visar hur du integrerar interaktiva bilder på din egen webbp
 
    Se [e-handelskoncept i AEM Assets](/help/sites-administering/concepts.md).
 
-1. **(Valfritt) Skapa en förinställning** för Interactive Image Viewer - Anpassa den grafiska bild som används för att representera aktiveringspunkter. Du behöver inte skapa en egen förinställning för Interactive Image Viewer om du tänker använda den färdiga Interactive Image Viewer-förinställningen med namnet `Shoppable_Banner` .
+1. **(Valfritt) Skapa en förinställning** för Interactive Image viewer - Anpassa den grafiska bild som används för att representera aktiveringspunkter. Du behöver inte skapa en egen förinställning för Interactive Image Viewer om du tänker använda den färdiga Interactive Image Viewer-förinställningen med namnet `Shoppable_Banner` .
 
    Se [(Valfritt) Skapa en förinställning](managing-viewer-presets.md#creating-a-new-viewer-preset)för visningsprogrammet för interaktiva bilder.
 
@@ -260,9 +260,9 @@ Se [(Valfritt) Förhandsvisa interaktiva bilder](#optional-previewing-interactiv
 1. I resursvyn navigerar du till den bildbanderoll som du vill göra interaktiv.
 1. Gör något av följande:
 
-   * Hover on the image, then tap **[!UICONTROL Select** (checkmark icon). Tryck på **[!UICONTROL-redigering** i verktygsfältet.
+   * Hover on the image, then tap **[!UICONTROL Select]** (checkmark icon). Tryck på i verktygsfältet **[!UICONTROL Edit]**.
    * Håll pekaren över bilden och tryck sedan på **[!UICONTROL More actions]** (ikonen med tre punkter) > **[!UICONTROL Edit]**.
-   * Tryck på bilden för att öppna den på **[!UICONTROL Detail View]** sidan. Tryck på **[!UICONTROL-redigering** i verktygsfältet.
+   * Tryck på bilden för att öppna den på **[!UICONTROL Detail View]** sidan. Tryck på i verktygsfältet **[!UICONTROL Edit]**.
 
 1. Near the upper-left corner of the page, tap **[!UICONTROL Add Hotspot]** (finger tap icon) to open the **[!UICONTROL Hotspot Management]** page.
 1. Near the upper-left corner of the page, tap **[!UICONTROL Hotspot]**.
@@ -329,7 +329,7 @@ See [Adding Dynamic Media Assets to Pages.](adding-dynamic-media-assets-to-pages
 
 1. Navigera till en befintlig interaktiv bild som du har skapat i resursvyn och öppna den i förhandsvisningen genom att trycka.
 1. Near the upper-left corner of the Preview page, in the **[!UICONTROL Content]** drop-down list, tap **[!UICONTROL Viewers]**.
-1. Tryck på **[!UICONTROL Viewers]** eller ange namnet på den förinställning för visningsprogrammet för den interaktiva bilden som du har skapat i **[!UICONTROL Shoppable_Banner]** listan.
+1. Tryck på **[!UICONTROL Viewers]** eller ange namnet på den förinställning för visningsprogrammet för interaktiva bilder som du har skapat i **[!UICONTROL Shoppable_Banner]** listan.
 1. Tryck på hotspot-områden på bilden för att testa deras associerade åtgärder.
 
 ## Publicera interaktiva bildresurser {#publishing-interactive-image-assets}
