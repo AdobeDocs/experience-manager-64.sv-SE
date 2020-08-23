@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '4726'
+source-wordcount: '4725'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ Därför ska vi ta upp grunderna för båda och hur de ska kännas igen på den 
 
 >[!NOTE]
 >
->Adobe rekommenderar att du utnyttjar det pekaktiverade användargränssnittet för att dra nytta av den senaste tekniken. [AEM modereringsverktyg&amp;(modernization-tools.md) kan göra migreringen enklare.
+>Adobe rekommenderar att du utnyttjar det pekaktiverade användargränssnittet för att dra nytta av den senaste tekniken. [AEM modernischverktyg](modernization-tools.md) kan göra migreringen enklare.
 
 ### Innehållslogik och återgivningsmarkeringar  {#content-logic-and-rendering-markup}
 
@@ -836,7 +836,7 @@ Noden av typen `cq:DropTargetConfig` måste ha följande egenskaper:
   </tr> 
   <tr> 
    <td><code>accept</code></td> 
-   <td>Regex används på resursens MIME-typ för att validera om släppning är tillåten.</td> 
+   <td>Regex används på resursens Mime-typ för att validera om släppning är tillåten.</td> 
   </tr> 
   <tr> 
    <td><code>groups</code></td> 
@@ -863,7 +863,7 @@ Följande konfiguration hämtas från komponenten Download. Det gör att alla re
 
 ### cq:actionConfigs (endast Classic UI) {#cq-actionconfigs-classic-ui-only}
 
-Noden ( `cq:actionConfigs` nodtyp `nt:unstructured`) definierar en lista med nya åtgärder som läggs till i listan som definieras av `cq:actions` egenskapen. Varje underordnad nod till `cq:actionConfigs` definierar en ny åtgärd genom att definiera en widget.
+Noden ( `cq:actionConfigs` nodtyp `nt:unstructured`) definierar en lista med nya åtgärder som läggs till i listan som definieras av `cq:actions` egenskapen. Varje underordnad nod i `cq:actionConfigs` definierar en ny åtgärd genom att definiera en widget.
 
 I följande exempelkonfiguration definieras en ny knapp (med en avgränsare för det klassiska användargränssnittet):
 
