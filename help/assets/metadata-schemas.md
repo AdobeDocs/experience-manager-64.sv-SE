@@ -3,9 +3,9 @@ title: Metadata-scheman
 description: 'Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.  '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 33541e9d1fa8bc24ae637141c0260f5595f38a4f
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '2398'
+source-wordcount: '2397'
 ht-degree: 9%
 
 ---
@@ -292,6 +292,6 @@ Den här konfigurationen lägger till en egenskap `hasValidMetadata` i jcr:conte
 >
 >Om en resurs läggs till efter den schemalagda kontrollen flaggas inte resursen med `hasValidMetadata` förrän vid nästa schemalagda kontroll. Resurserna visas inte i mellanliggande sökresultat.
 
->[!Cauktion]
+>[!CAUTION]
 >
 >Valideringskontrollerna av metadata är resurskrävande och kan påverka systemets prestanda. Schemalägg kontrollerna därefter. Om AEM har prestandaproblem kan du inaktivera det här jobbet.
