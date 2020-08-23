@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 155aaf96-1e9c-4e73-8e43-d96878d69b16
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '1948'
+source-wordcount: '1938'
 ht-degree: 0%
 
 ---
@@ -107,13 +107,13 @@ Du kan till exempel lägga till rubrikkomponenten i mallen. När du markerar kom
 
 När alternativet Ursprungligt innehåll är markerat öppnas mallens adaptiva formulärbehållare som ett adaptivt formulär för redigering. Precis som när du skapar ett anpassat formulär kan du ange inledande inställningar, som att välja ett tema och skicka åtgärder.
 
-Formulärförfattare använder det som bas för att skapa ett formulär. Innehållsflödesstrukturen anges i lagret Ursprungligt innehåll i mallen. Om du vill växla till att redigera det ursprungliga innehållet i formulärmallen trycker du på listrutan ![Canvas innan du förhandsgranskar i sidverktygsfältet](assets/canvas-drop-down.png)**[!UICONTROL > Initial Content]**.
+Formulärförfattare använder det som bas för att skapa ett formulär. Innehållsflödesstrukturen anges i lagret Ursprungligt innehåll i mallen. Om du vill växla till att redigera det ursprungliga innehållet i formulärmallen trycker du på listrutan ![Canvas innan du förhandsgranskar i sidverktygsfältet ](assets/canvas-drop-down.png)**[!UICONTROL > Initial Content]**.
 
-    [ ![Inledande innehållslager i mallredigeraren](assets/initial-content-layer.png)
+![Ursprungligt innehållslager i mallredigeraren](assets/initial-content-layer.png)
 
 Ursprungligt innehållslager i mallredigeraren med adaptiv formulärbehållare markerad för att ange egenskaper.
 
-](assets/initial-content-layer-1.png) I lagret Ursprungligt innehåll skapar du den adaptiva formulärmallen som författarna använder som bas. Om du redigerar en mall på samma sätt som när du redigerar ett formulär, använder du de alternativ som finns i sidofältet. Sidofältet innehåller webbläsare för innehåll, egenskaper, resurser och komponenter.
+I lagret Ursprungligt innehåll skapar du den anpassningsbara formulärmallen som författarna använder som bas. Om du redigerar en mall på samma sätt som när du redigerar ett formulär, använder du de alternativ som finns i sidofältet. Sidofältet innehåller webbläsare för innehåll, egenskaper, resurser och komponenter.
 
 Se [Sidpanelen](/help/forms/using/introduction-forms-authoring.md#sidebar).
 
@@ -141,11 +141,11 @@ Om du vill skapa flikarna Allmän information och Professionell information läg
 
 #### Lägga till innehåll på flikar {#adding-content-in-tabs}
 
-    [ ![Lägga till fält i den adaptiva formulärmallen](assets/template-edit-initial-content.png)
+![Lägga till fält i den adaptiva formulärmallen](assets/template-edit-initial-content.png)
 
 Lägga till fält i mallen
 
-](assets/template-edit-initial-content-1.png) När du har lagt till paneler och strukturerat dem som flikar kan du lägga till fält inuti flikarna. När du väljer en flik i redigeraren visas **[!UICONTROL Drag components here]** alternativet. Du kan dra och släppa komponenter som textrutor, listobjekt och knappar. Du kan dra och släppa komponenter från komponentwebbläsaren i sidofältet.
+När du har lagt till paneler och strukturerat dem som flikar kan du lägga till fält inuti flikarna. När du väljer en flik i redigeraren visas **[!UICONTROL Drag components here]** alternativet. Du kan dra och släppa komponenter som textrutor, listobjekt och knappar. Du kan dra och släppa komponenter från komponentwebbläsaren i sidofältet.
 
 Varje komponent har egenskaper som förbättrar datainhämtning och -hantering. Du kan till exempel aktivera egenskapen **[!UICONTROL Required field]** för en komponent. Författarna kan ange ett meddelande som kunderna ser när de inte fyller i ett obligatoriskt fält. Ange meddelandet i **[!UICONTROL Required Field Message]** egenskapen.
 
