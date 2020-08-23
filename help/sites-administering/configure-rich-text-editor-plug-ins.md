@@ -3,9 +3,9 @@ title: Konfigurera plugin-programmen för RTF-redigeraren
 description: Lär dig att konfigurera plugin-program för AEM RTF-redigering för att aktivera enskilda funktioner.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c86d1ac76d97fa716cf70bdebe91d2b6dec46b0b
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '4207'
+source-wordcount: '4193'
 ht-degree: 0%
 
 ---
@@ -303,11 +303,10 @@ Ange sedan platsen/platserna för de formatmallar som du vill referera till:
 >[!NOTE]
 När du använder textredigering i en dialogruta (Classic UI) kanske du vill ange formatmallar som är optimerade för textredigering. På grund av tekniska begränsningar förloras CSS-kontexten i redigeraren, så du kanske vill emulera den här kontexten för att förbättra WYSIWYG-upplevelsen.
 I Rich Text Editor används ett behållar-DOM-element med ett ID `CQrte` som kan användas för att tillhandahålla olika format för visning och redigering:
-# CQ td {
-// definierar formatet för visning }
-# CQrte td {
-// definierar formatet för redigering }
-
+`#CQ td {`
+` // defines the style for viewing }`
+`#CQrte td {`
+` // defines the style for editing }`
 
 ### Ange tillgängliga format i popup-listan {#stylesindropdown}
 
