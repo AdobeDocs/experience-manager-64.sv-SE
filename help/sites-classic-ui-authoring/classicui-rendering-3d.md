@@ -10,9 +10,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: bf155d8c-c012-4cb4-89a6-ceead715630e
 translation-type: tm+mt
-source-git-commit: 284339ee1ce0ffae97f732b569f73c732f063273
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Se [Redigera sidinnehåll](/help/sites-authoring/qg-page-authoring.md#editing-yo
 
    Även om den här faktorn har mindre betydelse för standardåtergivningen av Rapid Refine, går det betydligt långsammare att återge tredjepartsrenderare som Mental Ray med IBL-stadier än med traditionella punkt- eller spotlights.
 
-Renderingen Snabb förfining tar normalt några minuter att återge större bilder. Återgivare från tredje part tar ofta många minuter, till och med timmar, när de konfigureras för maximal kvalitet.
+Renderingen Snabb förfining tar normalt några minuter att återge större bilder. Återgivare från tredje part tar ofta många minuter, till och med timmar, när de är konfigurerade för maximal kvalitet.
 
 Konverterings-, bearbetnings- och renderingsjobb köas på servern efter behov för att förhindra serveröverbelastning. Meddelandet&quot;Väntar på återgivning..&quot; visas på nyligen överförda resurser i [!UICONTROL Card View]. Den här statusen anger att andra behandlings- eller återgivningsjobb måste slutföras innan det aktuella återgivningsjobbet kan startas.
 
@@ -50,8 +50,8 @@ Konverterings-, bearbetnings- och renderingsjobb köas på servern efter behov f
 
    Se [Visa 3D-resurser](/help/sites-classic-ui-authoring/classicui-view-3d-assets.md).
 
-1. Tryck på **[!UICONTROL Assets** från **[!UICONTROL Navigation]** Adobe Experience Manager **på** sidan.
-1. I närheten av sidans övre högra hörn trycker du på **[!UICONTROL-vy** i listrutan **[!UICONTROL Card View]**.
+1. Tryck på **Adobe Experience Manager** på **[!UICONTROL Navigation]** sidan **[!UICONTROL Assets]**.
+1. Near the upper-right corner of the page, from the **[!UICONTROL View]** drop-down list, tap **[!UICONTROL Card View]**.
 1. Navigera till ett 3D-objekt som du vill återge.
 
 1. Tryck på 3D-objektets kort för att öppna det på sidan med resursinformation.
