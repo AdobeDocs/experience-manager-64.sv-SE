@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
 discoiquuid: fc285b25-2bce-493c-87bc-5f1a8a26eb42
 translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 2%
@@ -60,7 +60,7 @@ För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AE
    >
    >Endast bilder som ligger inom den största tillåtna bildstorleken stöds. Begäran om bilder som är större än storleksgränsen resulterar i ett 403-svar.
 
-1. Gör följande under **Request Attributes]** :
+1. Gör följande under rubriken **[Attribut]** för begäran:
 
    * Ange **[!UICONTROL Request Obfuscation Mode]** till **[!UICONTROL Disabled]**.
    * Ange **[!UICONTROL Request Locking Mode]** till **[!UICONTROL Disabled]**.
