@@ -10,9 +10,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 599c316e-b6a7-4a28-bc4b-75d48409bde0
 translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '1397'
+source-wordcount: '1395'
 ht-degree: 18%
 
 ---
@@ -153,7 +153,7 @@ Du kan utföra en mängd redigeringsåtgärder för resurser i blandade medieupp
    >* You can edit the assets in a Mixed Media Set by navigating to the set, tapping **[!UICONTROL Set Members]** in the left rail, and then tapping the **[!UICONTROL Pencil]** icon on an individual asset to open the editing window.
 
 
-1. Tryck på **[!UICONTROL Save** när du är klar med redigeringen.
+1. Tryck **[!UICONTROL Save]** när du är klar med redigeringen.
 
    >[!NOTE]
    >
