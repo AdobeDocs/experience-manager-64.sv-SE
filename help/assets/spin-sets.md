@@ -10,9 +10,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: afacb3ad-e4ad-4d06-a898-f3f2da8bbb64
 translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+source-git-commit: 7cb0f63f0cd83e6e40ed51b2fd300f010278aa56
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1755'
 ht-degree: 7%
 
 ---
@@ -42,7 +42,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
 1. [Skapa snurruppsättningar.](#creating-spin-sets)
 
-   Om du vill skapa en snurruppsättning markerar du **[!UICONTROL Create > Spin Set]** och ger uppsättningen ett namn, väljer resurser och sorterar bilderna i den ordning som de ska visas.
+   Om du vill skapa en snurruppsättning markerar du **[!UICONTROL Create > Spin Set]** och ger uppsättningen ett namn, väljer resurser och sorterar sedan bilderna i den ordning som de ska visas.
 
    See [Working with Selectors](working-with-selectors.md).
 
@@ -110,7 +110,7 @@ Batchuppsättningar skapas av IPS (Image Production System) som en del av tillg�
 
 **Så här skapar du snurruppsättningar:**
 
-1. In Assets, navigate to where you want to create a spin set, tap **[!UICONTROL Create]**, and select **[!UICONTROL Spin Set**. Du kan också skapa uppsättningen inifrån en mapp som innehåller resurserna.
+1. In Assets, navigate to where you want to create a spin set, tap **[!UICONTROL Create]**, and select **[!UICONTROL Spin Set]**. Du kan också skapa uppsättningen inifrån en mapp som innehåller resurserna.
 
    ![chlimage_1-381](assets/chlimage_1-381.png)
 
