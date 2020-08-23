@@ -10,9 +10,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: cd3adbac-9868-4838-9d8a-37dde8973df4
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 7cb0f63f0cd83e6e40ed51b2fd300f010278aa56
 workflow-type: tm+mt
-source-wordcount: '5136'
+source-wordcount: '5132'
 ht-degree: 3%
 
 ---
@@ -420,7 +420,7 @@ When the Spin Set is uploaded and published, you activate the name of the 2D Spi
    Observera att [!UICONTROL View Form]standardvyn är inställd i det övre högra hörnet på [!UICONTROL Details] sidan.
 
 1. Tryck på för **[!UICONTROL Preset List]** att aktivera definitionsfälten på panelen till höger om skärmen på **[!UICONTROL Add]** **[!UICONTROL Details]** panelen.
-1. Skriv ett namn på förinställningen i fältet [!UICONTROL-förinställning[!UICONTROL-namn på panelen. **[!UICONTROL Details]**
+1. Skriv ett namn på förinställningen i **[!UICONTROL Details]** fältet på [!UICONTROL Preset Name] panelen.
 1. In the **[!UICONTROL Batch Set Type]** drop-down menu, select **[!UICONTROL Asset Set]**.
 1. I listrutan **[!UICONTROL Sub Type]** väljer du **[!UICONTROL Multi-Axis Spin Set]**.
 1. Expandera **[!UICONTROL Asset Naming Conventions]** och tryck sedan på i **[!UICONTROL File Naming]** listrutan **[!UICONTROL Custom]**.
