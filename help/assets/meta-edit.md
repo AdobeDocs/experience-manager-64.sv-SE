@@ -3,9 +3,9 @@ title: Redigera eller lägga till metadata
 description: Läs om metadata för resurser i AEM Assets och olika sätt att redigera metadata för resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: e9f50a1ddb6a162737e6e83b976f96911b3246d6
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '472'
 ht-degree: 8%
 
 ---
@@ -54,3 +54,11 @@ Du kan lägga till egna namnutrymmen i AEM. Precis som det finns fördefinierade
 
 1. Om du vill lägga till ett namnutrymme klickar eller trycker du **[!UICONTROL New]** längst ned.
 1. Ange ett anpassat namnutrymme i XML-namnutrymmeskonventionen (ange id:t i form av en URI och ett associerat prefix för id:t) och klicka eller tryck **[!UICONTROL Save]**.
+
+## Tips och begränsningar {#best-practices-limitations}
+
+* Metadatauppdateringarna via Touch-UI ändrar metadataegenskaperna i `dc` namnutrymmet. Alla uppdateringar som görs via HTTP API ändrar metadataegenskaperna i `jcr` namnutrymmet. Se [hur du uppdaterar metadata med HTTP API](/help/assets/mac-api-assets.md#update-asset-metadata).
+
+>[!MORELIKETHIS]
+>
+>* [Om metadata och dess behov i Assets](metadata.md)
