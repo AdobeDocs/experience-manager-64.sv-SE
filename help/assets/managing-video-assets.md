@@ -6,9 +6,9 @@ contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: f341fae1-dda3-4917-b6db-ad02fec63702
 translation-type: tm+mt
-source-git-commit: 38d3a204e3ef038ef4f848e12b9fc73f127ec488
+source-git-commit: 2a24d7b9232f39d47d79d995251a14beb0c0f666
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '700'
 ht-degree: 6%
 
 ---
@@ -58,10 +58,8 @@ Utför följande steg i `/apps` katalogen för att konfigurera en större filsto
 
    ![chlimage_1-203](assets/chlimage_1-203.png)
 
-1. Uppdatera webbläsaren. Överläggsnoden `/jcr_root/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload` är markerad.
-1. Ange ett värde i byte på fliken **[!UICONTROL Properties]** för att öka storleksgränsen till önskad storlek. Ange till exempel följande värde för att öka storleksgränsen till 30 GB:
-
-   `{sizeLimit : "32212254720"}`
+1. Uppdatera webbläsaren. Överläggsnoden `/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload` är markerad.
+1. Ange ett värde i byte på fliken **[!UICONTROL Properties]** för att öka storleksgränsen till önskad storlek. Ange t.ex. ett `32212254720` värde för att öka storleksgränsen till 30 GB.
 
 1. From the toolbar, tap **[!UICONTROL Save All]**.
 1. I AEM trycker du på **[!UICONTROL Tools > Operations > Web Console]**.
