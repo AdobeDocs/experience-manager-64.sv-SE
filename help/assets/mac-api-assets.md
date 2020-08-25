@@ -3,9 +3,9 @@ title: Resurser för HTTP API i [!DNL Adobe Experience Manager].
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5125cf56a71f72f1391262627b888499e0ac67b4
+source-git-commit: e9f50a1ddb6a162737e6e83b976f96911b3246d6
 workflow-type: tm+mt
-source-wordcount: '1446'
+source-wordcount: '1540'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,9 @@ API-svaret är en JSON-fil för vissa MIME-typer och en svarskod för alla MIME-
 
 Efter [!UICONTROL Off Time]detta är en resurs och dess återgivningar inte tillgängliga via [!DNL Assets] webbgränssnittet och via HTTP API. API:t returnerar 404-felmeddelande om det [!UICONTROL On Time] finns i framtiden eller om det finns [!UICONTROL Off Time] i det förflutna.
 
+>[!CAUTION]
+>
+>[HTTP API uppdaterar metadataegenskaperna](#update-asset-metadata) i `jcr` namnutrymmet. Experience Manager uppdaterar emellertid metadataegenskaperna i `dc` namnutrymmet.
 
 ## Datamodell {#data-model}
 
@@ -66,17 +69,17 @@ I [!DNL Experience Manager] en mapp finns följande komponenter:
 
 Resursens HTTP-API innehåller följande funktioner:
 
-* Hämta en mapplista.
-* Skapa en mapp.
-* Skapa en resurs.
-* Uppdatera resursens binärfil.
-* Uppdatera metadata för resurser.
-* Skapa en resursåtergivning.
-* Uppdatera en resursåtergivning.
-* Skapa en resurskommentar.
-* Kopiera en mapp eller resurs.
-* Flytta en mapp eller resurs.
-* Ta bort en mapp, resurs eller återgivning.
+* [Hämta en mapplista](#retrieve-a-folder-listing).
+* [Skapa en mapp](#create-a-folder).
+* [Skapa en resurs](#create-an-asset).
+* [Uppdatera resursens binärfil](#update-asset-binary).
+* [Uppdatera metadata](#update-asset-metadata)för resurser.
+* [Skapa en resursåtergivning](#create-an-asset-rendition).
+* [Uppdatera en resursåtergivning](#update-an-asset-rendition).
+* [Skapa en resurskommentar](#create-an-asset-comment).
+* [Kopiera en mapp eller resurs](#copy-a-folder-or-asset).
+* [Flytta en mapp eller resurs](#move-a-folder-or-asset).
+* [Ta bort en mapp, resurs eller återgivning](#delete-a-folder-asset-or-rendition).
 
 >[!NOTE]
 >
@@ -157,7 +160,7 @@ Uppdaterar en resurs binärfil (återgivning med namnet original). En uppdaterin
 
 Uppdaterar egenskaperna för resursmetadata. Om du uppdaterar någon egenskap i `dc:` namnutrymmet uppdaterar API:t samma egenskap i `jcr` namnutrymmet. API:t synkroniserar inte egenskaperna under de två namnutrymmena.
 
-**Begäran**: `PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"class":"asset", "properties":{"dc:title":"My Asset"}}'`
+**Begäran**: `PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"class":"asset", "properties":{"jcr:title":"My Asset"}}'`
 
 **Svarskoder**: Svarskoderna är:
 
@@ -165,6 +168,27 @@ Uppdaterar egenskaperna för resursmetadata. Om du uppdaterar någon egenskap i 
 * 404 - HITTADES INTE - Om det inte gick att hitta eller få åtkomst till resursen på angiven URI.
 * 412 - PRECONDITION MISSLYCKADES - om rotsamlingen inte kan hittas eller nås.
 * 500 - INTERNT SERVERFEL - Om något annat går fel.
+
+### Synkronisera metadatauppdatering mellan `dc` och `jcr` namnområde {#sync-metadata-between-namespaces}
+
+API-metoden uppdaterar metadataegenskaperna i `jcr` namnutrymmet. Uppdateringarna som görs med Touch-UI ändrar metadataegenskaperna i `dc` namnutrymmet. Om du vill synkronisera metadatavärdena mellan `dc` och `jcr` namnutrymmet kan du skapa ett arbetsflöde och konfigurera Experience Manager så att arbetsflödet körs när resursen redigeras. Använd ett ECMA-skript för att synkronisera de metadataegenskaper som krävs. Följande exempelskript synkroniserar titelsträngen mellan `dc:title` och `jcr:title`.
+
+```javascript
+var workflowData = workItem.getWorkflowData();
+if (workflowData.getPayloadType() == "JCR_PATH")
+{
+ var path = workflowData.getPayload().toString();
+ var node = workflowSession.getSession().getItem(path);
+ var metadataNode = node.getNode("jcr:content/metadata");
+ var jcrcontentNode = node.getNode("jcr:content");
+if (jcrcontentNode.hasProperty("jcr:title"))
+{
+ var jcrTitle = jcrcontentNode.getProperty("jcr:title");
+ metadataNode.setProperty("dc:title", jcrTitle.toString());
+ metadataNode.save();
+}
+}
+```
 
 ## Skapa en resursåtergivning {#create-an-asset-rendition}
 
@@ -214,7 +238,7 @@ Skapar en ny resurskommentar.
 
 ## Kopiera en mapp eller en resurs {#copy-a-folder-or-asset}
 
-Kopierar en mapp eller resurs som är tillgänglig på den angivna sökvägen till ett nytt mål.
+Kopierar en mapp eller en resurs som är tillgänglig på den angivna sökvägen till ett nytt mål.
 
 **Begäranrubriker**: Parametrarna är:
 
