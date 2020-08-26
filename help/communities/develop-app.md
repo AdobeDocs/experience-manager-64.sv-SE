@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+source-git-commit: babfbd7e864eb15c0b06b114fea4cef6db2a6a07
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '595'
 ht-degree: 2%
 
 ---
@@ -33,9 +33,10 @@ Det första steget är att lägga till en supertypsegenskap för resursen till `
 Använda CRXDE Lite:
 
 <!--Resolve steps below-->
-    * Namn: `sling:resourceSuperType`
-    * Typ: `
-    * Värde: &quot;foundation/components/page&quot;
+
+* Namn: `sling:resourceSuperType`
+* Typ: `String`
+* Värde: `foundation/components/page`
 
 1. Klicka på den gröna **[!UICONTROL[+]Add]**
 1. Klicka på **[!UICONTROL Save All]**
