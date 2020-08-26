@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 9ba95dce-a801-4a36-8798-45d295371b1b
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 191c365e924fd3974308c075369a3f9d8810e6b7
 workflow-type: tm+mt
 source-wordcount: '3234'
 ht-degree: 1%
@@ -59,7 +59,7 @@ Så här publicerar du till Dynamic Media Classic från Resurskonsolen om resurs
 
 1. I det AEM klassiska användargränssnittet klickar du **[!UICONTROL Digital Assets]** för att öppna den digitala resurshanteraren.
 
-1. Markera resursen (eller resurserna) eller mappen i målmappen som du vill publicera till Dynamic Media Classic, högerklicka och välj **[!UICONTROL Publish to Dynamic Media Classic]**. Du kan också välja **[!UICONTROL Publish to Dynamic Media Classic]** på menyn **[!UICONTROL Tools] .
+1. Markera resursen (eller resurserna) eller mappen i målmappen som du vill publicera till Dynamic Media Classic, högerklicka och välj **[!UICONTROL Publish to Dynamic Media Classic]**. Du kan också välja **[!UICONTROL Publish to Dynamic Media Classic]** på **[!UICONTROL Tools]** menyn.
 
    ![chlimage_1-76](assets/chlimage_1-76.png)
 
