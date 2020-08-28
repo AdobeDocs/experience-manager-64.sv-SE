@@ -10,7 +10,7 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 1fe58af0-3005-46fc-8717-5d32557947ed
 translation-type: tm+mt
-source-git-commit: 6f6952686446359485f180050219a12db9d3969a
+source-git-commit: 5ba23738118d7944026f405110e25b6a7f90866b
 workflow-type: tm+mt
 source-wordcount: '1246'
 ht-degree: 3%
@@ -66,7 +66,7 @@ Experience Fragments ska användas:
 
 * När ni använder Omnichannel Commerce.
 
-   * Dela e-handelsrelaterat innehåll i sociala medier i stor skala
+   * Dela handelsrelaterat innehåll i sociala medier i stor skala
    * Göra kontaktytor transaktionella
 
 ## Organisera dina upplevelsefragment {#organizing-your-experience-fragments}
@@ -189,14 +189,14 @@ Följande exempelprocedur visar hur du skapar ett teaser för en produkt:
 
    ![xf-authoring-04](assets/xf-authoring-04.png)
 
-1. Välj **[!UICONTROL Configure](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)** i komponentverktygsfältet.
+1. Välj **[[!UICONTROL Configure]](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)** i komponentverktygsfältet.
 1. Add the **[!UICONTROL Asset]** and define the **[!UICONTROL Properties]** as required.
 1. Bekräfta definitionerna med **[!UICONTROL Done]** (skalningsikon).
 1. Lägg till fler komponenter efter behov.
 
 ## Skapa en upplevelsefragmentvariant {#creating-an-experience-fragment-variation}
 
-Ni kan skapa olika upplevelsefragment beroende på era behov:
+Ni kan skapa variationer av ert Experience Fragment, beroende på era behov:
 
 1. Öppna fragmentet för [redigering](/help/sites-authoring/experience-fragments.md#editing-your-experience-fragment).
 1. Öppna **[!UICONTROL Variations]** fliken.
