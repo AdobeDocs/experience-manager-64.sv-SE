@@ -10,7 +10,7 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: da8f968b-91cc-45a8-ae4b-757b4f840b8e
 translation-type: tm+mt
-source-git-commit: 2411f1aa2853a161603d15917102d5cf1a8139b6
+source-git-commit: 5ba23738118d7944026f405110e25b6a7f90866b
 workflow-type: tm+mt
 source-wordcount: '1421'
 ht-degree: 3%
@@ -42,7 +42,7 @@ Innehållsfragment lagras som **[!UICONTROL Assets]** och hanteras i första han
 
 ### Skapa ett innehållsfragment {#creating-a-content-fragment}
 
-Metoden för att skapa ett innehållsfragment är (i princip) densamma för både enkla och strukturerade fragment:
+Metoden för att skapa ett innehållsfragment är (i stort) densamma för både enkla och strukturerade fragment:
 
 1. Navigate to the **[!UICONTROL Assets]** folder where you want to create the fragment.
 1. Välj **[!UICONTROL Create]** och **[!UICONTROL Content Fragment]** öppna sedan guiden.
@@ -228,7 +228,7 @@ Du kan också [koppla innehåll](content-fragments-assoc-content.md) till ett fr
 
 ## Visa och redigera metadata (egenskaper) för fragmentet {#viewing-and-editing-the-metadata-properties-of-your-fragment}
 
-Du kan visa och redigera egenskaperna för ett fragment på [!UICONTROL Metadata](content-fragments-metadata.md) fliken.
+Du kan visa och redigera egenskaperna för ett fragment på [[!UICONTROL Metadata]](content-fragments-metadata.md) fliken.
 
 ## Tidslinje för innehållsfragment {#timeline-for-content-fragments}
 
@@ -237,8 +237,8 @@ Förutom standardalternativen innehåller [tidslinjen](managing-assets-touch-ui.
 * Visa information om versioner, kommentarer och anteckningar
 * Åtgärder för versioner
 
-   * **[!UICONTROL Revert to this Version](#reverting-to-a-version)** (välj ett befintligt fragment och sedan en specifik version)
-   * **[!UICONTROL Compare to Current](#comparing-fragment-versions)** (välj ett befintligt fragment och sedan en specifik version)
+   * **[[!UICONTROL Revert to this Version]](#reverting-to-a-version)** (välj ett befintligt fragment och sedan en specifik version)
+   * **[[!UICONTROL Compare to Current]](#comparing-fragment-versions)** (välj ett befintligt fragment och sedan en specifik version)
    * Lägg till ett **[!UICONTROL Label]** och/eller **[!UICONTROL Comment]** (välj ett befintligt fragment, sedan en specifik version)
    * **[!UICONTROL Save as Version]** (markera ett befintligt fragment och sedan uppilen längst ned på tidslinjen)
 
@@ -268,9 +268,9 @@ Till exempel:
 
 ## Jämföra fragmentversioner {#comparing-fragment-versions}
 
-Funktionsmakrot är tillgängligt från **[!UICONTROL Compare to Current]** [!UICONTROL Timeline](https://helpx.adobe.com/experience-manager/6-3/assets/using/content-fragments-managing.html#timeline-for-content-fragments) när du har valt en viss version.
+Funktionsmakrot är tillgängligt från **[!UICONTROL Compare to Current]** [[!UICONTROL Timeline]](https://helpx.adobe.com/experience-manager/6-3/assets/using/content-fragments-managing.html#timeline-for-content-fragments) när du har valt en viss version.
 
-Den här öppnas:
+Detta öppnas:
 
 * den **[!UICONTROL Current]** (senaste) versionen (vänster)
 
@@ -298,7 +298,7 @@ De visas sida vid sida, där:
 
 Du kan återgå till en viss version av fragmentet:
 
-* Direkt från [!UICONTROL Timeline](content-fragments-managing.md#timeline-for-content-fragments).
+* Direkt från [[!UICONTROL Timeline]](content-fragments-managing.md#timeline-for-content-fragments).
 
    Välj önskad version och sedan **[!UICONTROL Revert to this Version]** åtgärden.
 
