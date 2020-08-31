@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: Användarhandbok för redigering av AEM 6.4
 user-guide-description: Learn key concepts for creating content and authoring in AEM.
 translation-type: tm+mt
-source-git-commit: e0b25517821971098978db078b2f205a8a380459
+source-git-commit: 747847b725d1b07109ff0f834976c2905c1edbe9
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '266'
 ht-degree: 42%
 
 ---
@@ -55,7 +55,6 @@ ht-degree: 42%
    + [Ställning](scaffolding.md)
    + [Konfigurera komponenter i designläge](default-components-designmode.md)
    + [Foundation Components](default-components-foundation.md)
-   + [Ställning](scaffolding.md)
 + Projekt {#projects}
    + [Projekt](projects.md)
    + [Hantera projekt](touch-ui-managing-projects.md)
