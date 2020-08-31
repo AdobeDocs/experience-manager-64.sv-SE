@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: AEM 6.4 Forms Användarhandbok
 user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: 35a52f72b30731879679ace06d6ffa4fd0342c1c
+source-git-commit: 747847b725d1b07109ff0f834976c2905c1edbe9
 workflow-type: tm+mt
-source-wordcount: '3715'
+source-wordcount: '3711'
 ht-degree: 0%
 
 ---
@@ -174,7 +174,7 @@ ht-degree: 0%
    + [XFA-stöd i XDP-baserade adaptiva formulär](using/xfa-api-supported-in-adaptive-form.md)
    + [Ändra sidans nollinnehåll i Designer](using/changing-page-zero-content-designer.md)
    + [Bevilja regelredigeraråtkomst för valda användargrupper](using/rule-editor-access-user-groups.md)
-   + [Använda arbetsflöde AEM översättning för att lokalisera anpassningsbara formulär och urkunder](using/using-aem-translation-workflow-to-localize-adaptive-forms.md)
+   + [Använda arbetsflöde för AEM översättning för att lokalisera anpassningsbara formulär och urkunder](using/using-aem-translation-workflow-to-localize-adaptive-forms.md)
    + [Automatisera testning av anpassningsbara formulär](using/calvin.md)
    + [Formateringskonstruktioner för adaptiva formulär](using/styling-constructs-adaptive-forms.md)
    + [Synkronisera adaptiv Forms med XFA-formulärmallar](using/synchronizing-adaptive-forms-xfa.md)
@@ -205,7 +205,7 @@ ht-degree: 0%
    + [Interaktion med ryggraden](using/backbone-interaction.md)
    + [Beskrivning av återanvändbara komponenter](using/description-reusable-components.md)
    + [Dokumentinformation för återgivning](using/document-details-renderer.md)
-   + [Integrera AEM Forms arbetsytekomponenter i webbprogram](using/integrating-html-ws-components-web.md)
+   + [Integrera AEM Forms-arbetsytekomponenter i webbprogram](using/integrating-html-ws-components-web.md)
    + [Ny renderings- och skicka-tjänst](using/new-render-submit-service.md)
    + [Mappstrukturen](using/folder-structure.md)
    + [Integrera tredjepartsprogram i AEM Forms arbetsyta](using/integrating-correspondence-management-html-workspace.md)
@@ -504,7 +504,6 @@ ht-degree: 0%
       + [Göra teckensnitt tillgängliga](/help/forms/using/admin-help/make-fonts-available.md)
       + [Ange teckensnitt som ska bäddas in](/help/forms/using/admin-help/specify-fonts-embed.md)
       + [Ange säkerhetsinställningar](/help/forms/using/admin-help/specify-security-settings.md)
-      + [Ändra teckenuppsättningen](/help/forms/using/admin-help/change-character-set.md)
    + Konfigurera arbetsflöde för formulär{#configure-forms-workflow}
       + [Om administration och processterminologi](/help/forms/using/admin-help/administration-process-terminology.md)
       + [Hantera processer](/help/forms/using/admin-help/processes.md)
