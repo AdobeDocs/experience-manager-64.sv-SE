@@ -5,9 +5,9 @@ audience: admin-user
 user-guide-title: AEM 6.4 Handbok för administrationsanvändare
 user-guide-description: Learn about administering AEM.
 translation-type: tm+mt
-source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+source-git-commit: 747847b725d1b07109ff0f834976c2905c1edbe9
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '614'
 ht-degree: 6%
 
 ---
@@ -150,7 +150,6 @@ ht-degree: 6%
    + [Integrera med Adobe Search &amp; Promote](search-and-promote.md)
    + [Lösningsintegrering](integration.md)
    + [Målintegrering med upplevelsefragment](experience-fragments-target.md)
-   + [Metodtips för e-postmallar](best-practices-for-email-templates.md)
 + Bästa praxis {#bestpractices}
    + [Bästa praxis](administer-best-practices.md)
    + [Bästa praxis för översättning](tc-bp.md)
