@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: Användarhandbok för redigering av AEM 6.4 Classic UI
 user-guide-description: This guide covers the concepts of authoring in AEM in the classic user interface.
 translation-type: tm+mt
-source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+source-git-commit: 747847b725d1b07109ff0f834976c2905c1edbe9
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '298'
 ht-degree: 18%
 
 ---
@@ -67,10 +67,8 @@ ht-degree: 18%
    + [Arbeta med Marketing Campaign Manager](classic-personalization-campaigns-mktg-manager.md)
    + [E-postmarknadsföring](classic-personalization-campaigns-email.md)
    + [Spåra studsade e-postmeddelanden](classic-personalization-campaigns-email-tracking-bounces.md)
-   + [Lärare och strategier](classic-personalization-campaigns-teasers-strategy.md)
    + [Konfigurera kampanjen](classic-personalization-campaigns-setting-up-your.md)
    + [Publicera ett e-postmeddelande till e-postleverantörer](classic-personalization-campaigns-email-newsletters.md)
-   + [Arbeta med Marketing Campaign Manager](classic-personalization-campaigns-mktg-manager.md)
    + [Skapa en startsida för ett effektivt nyhetsbrev](classic-personalization-campaigns-email-landingpage.md)
    + [Hantera prenumerationer](classic-personalization-campaigns-email-subscriptions.md)
 + Adobe Campaign {#campaign}
