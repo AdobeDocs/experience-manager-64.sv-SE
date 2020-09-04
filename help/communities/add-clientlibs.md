@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: c84040b0-7850-4960-b676-ffa0a74c8cb2
 translation-type: tm+mt
-source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+source-git-commit: 805e4411930749ff4b6b05ea4a8b87b4f96d72fd
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 5%
@@ -124,7 +124,7 @@ När clientlibs för apps.an-scf-sandbox ingår formateras SCF-kommentarskompone
 
 ![chlimage_1-225](assets/chlimage_1-225.png)
 
-Programsatsen include tillhör <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> i <html> script. Standardvärdet **`foundation head.jsp`** innehåller ett skript som kan överlappas: **`headlibs.jsp`**.
+Programsatsen include tillhör i `<head>` avsnittet i `<html>` skriptet. Standardvärdet **`foundation head.jsp`** innehåller ett skript som kan överlappas: **`headlibs.jsp`**.
 
 **Copy headlibs.jsp and include clientlibs:**
 
