@@ -4,9 +4,9 @@ description: Versionsinformation om Adobe Experience Manager 6.4 Cumulative Fix 
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5fefc81e68e64bcaa8df1d9648c4266367a92129
+source-git-commit: d3721590e3c2dfd2b048f1b5964915a343f95f6d
 workflow-type: tm+mt
-source-wordcount: '3275'
+source-wordcount: '3308'
 ht-degree: 0%
 
 ---
@@ -171,6 +171,7 @@ AEM Kumulativt korrigeringspaket 6.4.8.1 är beroende av AEM 6.4 Service Pack 8.
 
 Några viktiga högdagrar i AEM 6.4.8.1 är:
 
+* Anonym åtkomst till CRXDE Lite är inte tillåten för att öka säkerheten. I stället dirigeras användarna till inloggningsskärmen. Se [utveckla med CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 * Borttagen Paketdelningsintegrering med Adobe Experience Manager.
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.8.21.
 
@@ -180,6 +181,7 @@ Adobe Experience Manager 6.4.8.1 innehåller korrigeringar av följande problem.
 
 #### Sites {#sites-6481}
 
+* Anonyma användare har tillgång till CRX DE Lite-funktioner (NPR-33522).
 * När namnet på en lokal komponent i en LiveCopy är identiskt med namnet på en komponent i utkastet och komponenten rullas ut från utkast, läggs termen _msm_move inte till i namnet på den lokala komponenten (NPR-33207).
 * Parametrarna som läggs till i den ursprungliga begäran ingår inte i omdirigerings-URL:en (NPR-33174).
 * När alternativet Coral.Select anger emptyOption=true eller innehåller ett standardobjekt med värdet = &quot;&quot;, kommer filen dropdownshowhide.js att stöta på ett fel: Uncaught TypeError: component.getValue är inte en funktion (NPR-33163).
