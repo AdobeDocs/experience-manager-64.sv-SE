@@ -3,9 +3,9 @@ title: Överlappande metadata
 description: I den här artikeln beskrivs hur du definierar överlappande metadata för resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
+source-git-commit: 452c90bc72c8d71af4b6c4ca2243024b459f53d9
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '933'
 ht-degree: 11%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 11%
 # Cascading Metadata {#cascading-metadata}
 
 I den här artikeln beskrivs hur du definierar överlappande metadata för resurser.
+
+>[!CAUTION]
+>
+>Överlappande metadata stöds inte för innehållsfragment.
 
 När användare hämtar metadatainformation för en resurs anger de information som finns i de olika tillgängliga fälten. Du kan visa specifika metadatafält eller fältvärden som är beroende av vilka alternativ som är markerade i de andra fälten. En sådan villkorlig visning av metadata kallas överlappande metadata. Du kan med andra ord skapa ett beroende mellan ett visst metadatafält/värde och ett eller flera fält och/eller deras värden.
 
