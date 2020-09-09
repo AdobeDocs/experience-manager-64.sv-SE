@@ -2,9 +2,9 @@
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation om borttagna funktioner i Adobe Experience Manager 6.4.
 translation-type: tm+mt
-source-git-commit: 543f66c760d7b25681a79d5df3d8ab6e8c0b2f47
+source-git-commit: 8e82c691affe3b2c4108beec394cc0ba2d607b61
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1281'
 ht-degree: 3%
 
 ---
@@ -40,6 +40,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 | Forms | Användning av JSONObject i Query och OperationOptions har tagits bort. Följande API:er är inaktuella: <ul><li>`setArguments(JSONObject arguments)`</li><li> `JSONObject getArguments()`</li><li>`OperationOptions(String operationId, JSONObject arguments)`</li><li>`JSONObject getArguments()`</li><li> `void setArguments(JSONObject arguments)`</li></ul> | Använda `IValueMap` API |
 | Forms | Tjänsten Central Migration Bridge är inaktuell. | Ingen ersättning erbjuds. |
 | Assets | Avlastning av resurser har tagits bort från och med AEM 6.4. |  |
+| Utvecklare | Klientbibliotek med Lodash/underscore. Adobe planerar inte att ytterligare underhålla och uppdatera Lodash-/understreckklientbiblioteket som levereras som en del av distributionen (QuickStart) | Adobe rekommenderar att kunder som fortfarande behöver Lodash/underscore för sin kod lägger till den i sin projektkodbas. |
 
 <!-- Original HTML table that came from helpx during migration.
 
@@ -162,10 +163,10 @@ Tabellen nedan visar funktioner som har tagits bort från AEM 6.4. Tidigare vers
 | Forms | Stöd för bilder i dokumentfragment har tagits bort. | Interaktiv kommunikation gör det möjligt att använda bilder i tryck- och webbkanaler direkt. |
 | Forms | Uppgradering utanför kontoret | Det finns inget stöd för att utföra uppgraderingen utanför platsen |
 | Forms | Sidegrade för TjärMK till DocumentMK-migreringar | Du kan exportera data från ett äldre system och sedan importera dem i ett uppdateringssystem. Mer information finns i AEM Forms om JEE-uppgraderingsdokumentation |
-| Forms | AEM Forms på JEE 32-bitars installationsprogram är inte tillgängligt. | Adobe har slutat leverera AEM Forms på JEE 32-bitars installationsprogram. Du kan fortsätta använda 64-bitars installationsprogram för att installera AEM Forms på JEE. |
+| Forms | AEM Forms på 32-bitars JEE-installationsprogrammet är inte tillgängligt. | Adobe har slutat leverera AEM Forms på JEE 32-bitars installationsprogram. Du kan fortsätta använda 64-bitars installationsprogram för att installera AEM Forms på JEE. |
 | Forms | Tog bort stöd för att använda DAM-bilder i Document Fragment Component. | Du kan använda komponenterna Bild och Diagram i den interaktiva kommunikationens tryckkanal. Om du använder adaptiv dokuments dokumentfragmentkomponent i adaptiva formulär slutar den att fungera efter uppgradering till AEM 6.4 Forms. |
 | Forms | Funktionen Adaptiva dokument har tagits bort | Du kan använda funktionen för interaktiv kommunikation för att skapa tryckt och webbaserad kommunikation. Om du använder adaptiva dokument måste du installera kompatibilitetspaketet för att kunna fortsätta använda befintliga adaptiva dokument |
-| Forms | AEM Forms på JEE-specifik landningssida togs bort. | AEM Forms på JEE-landningssidan ska ersättas med AEM landningssida (/aem/start.html) |
+| Forms | Borttagen AEM Forms på JEE-specifik landningssida. | AEM Forms på JEE-landningssida ersätts med AEM landningssida (/aem/start.html) |
 | Forms | Stöd för standard-Captcha har tagits bort | Använd tjänsten reCAPTCHA från Google. |
 | Forms | Stöd för flash-fält i AEM Designer har tagits bort. AEM Designer tillåter inte redigering av Flash-fält som används i ett formulär. | Du kan använda AEM Designer som släppts för en tidigare version för att redigera sådana formulär. |
 | Communities | Stöd för Captcha-verifiering har tagits bort. | Använd anpassad Captcha-integrering (till exempel reCAPTCHA från Google) för verifiering. |
