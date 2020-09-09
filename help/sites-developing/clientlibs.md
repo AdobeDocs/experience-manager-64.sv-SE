@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 619de2e4-d7bd-4ca6-9763-1efa8b2dec05
 translation-type: tm+mt
-source-git-commit: 50d57997496e6809361277f7025f3858857e14af
+source-git-commit: 8e82c691affe3b2c4108beec394cc0ba2d607b61
 workflow-type: tm+mt
 source-wordcount: '2889'
 ht-degree: 0%
@@ -181,8 +181,8 @@ Sedan ställer du in egenskapen `allowProxy` på `foo` true.
 1. Markera klientbiblioteksmappen och klicka på **Skapa > Skapa fil**.
 1. Skriv något av följande filnamn i rutan Filnamn och klicka på OK:
 
-   * **`js.txt`:**Använd det här filnamnet för att generera en JavaScript-fil.
-   * **`css.txt`:**Använd det här filnamnet för att generera en CSS (Cascading Style Sheet).
+   * **`js.txt`:** Använd det här filnamnet för att generera en JavaScript-fil.
+   * **`css.txt`:** Använd det här filnamnet för att generera en CSS (Cascading Style Sheet).
 
 1. Öppna filen och skriv följande text för att identifiera källfilernas rot:
 
@@ -242,7 +242,6 @@ I vissa fall kan du upptäcka att den slutliga HTML-koden som genereras för den
 <script type="text/javascript" src="/etc/clientlibs/granite/jquery/granite.js"></script>
 <script type="text/javascript" src="/etc/clientlibs/foundation/jquery.js"></script>
 <script type="text/javascript" src="/etc/clientlibs/foundation/shared.js"></script>
-<script type="text/javascript" src="/etc/clientlibs/granite/underscore.js"></script>
 <script type="text/javascript" src="/etc/clientlibs/foundation/personalization/kernel.js"></script>
 ```
 
@@ -286,7 +285,7 @@ body {
 }
 ```
 
-CSS-filen som `publicmain` noden genererar innehåller följande format med den ursprungliga bildens URL:
+CSS-filen som `publicmain` noden genererar innehåller följande format, med den ursprungliga bildens URL:
 
 ```xml
 body {
@@ -315,7 +314,7 @@ I följande tabell visas värdet för egenskapen `channels` för varje klientbib
 | `/libs/cq/analytics/widgets/themes/default` | `!touch` |
 | `/libs/cq/cloudserviceconfigs/widgets` | `!touch` |
 | `/libs/cq/searchpromote/widgets` | `!touch` |
-| `/libs/cq/searchpromote/widgets/themes/default` | `[`*inget värde *`]` |
+| `/libs/cq/searchpromote/widgets/themes/default` | `[`*inget värde*`]` |
 | `/libs/cq/touch/widgets` | `touch` |
 | `/libs/cq/touch/widgets/themes/default` | `touch` |
 | `/libs/cq/ui/widgets` | `!touch` |
