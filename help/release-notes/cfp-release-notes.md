@@ -4,9 +4,9 @@ description: Versionsinformation om Adobe Experience Manager 6.4 Cumulative Fix 
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d3721590e3c2dfd2b048f1b5964915a343f95f6d
+source-git-commit: 5989421ee1207880462fd1eaefc1a9714061307e
 workflow-type: tm+mt
-source-wordcount: '3308'
+source-wordcount: '3306'
 ht-degree: 0%
 
 ---
@@ -361,7 +361,7 @@ Information om hur du installerar det kumulativa installationsprogrammet för AE
 
 ### Uber Jar {#uber-jar}
 
-Uber Jar för AEM 6.4.8.2 finns i [Adobe Public Maven-databasen](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.4.8.2/uber-jar-6.4.8.2.jar).
+Uber Jar för AEM 6.4.8.2 finns i [Adobe Public Maven-databasen](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.4.8.2-1.0/).
 
 Om du vill använda Uber Jar i ett Maven-projekt kan du läsa artikeln [Så här använder du Uber jar](../sites-developing/ht-projects-maven.md) och inkludera följande beroende i projektstrukturen:
 
@@ -369,7 +369,7 @@ Om du vill använda Uber Jar i ett Maven-projekt kan du läsa artikeln [Så här
 <dependency>
       <groupId>com.adobe.aem</groupId>
       <artifactId>uber-jar</artifactId>
-      <version>6.4.8.2</version>  
+      <version>6.4.8.2-1.0</version>  
       <scope>provided</scope>
 </dependency>
 ```
