@@ -9,7 +9,7 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 6d4188f4-ad98-49df-9bb4-7936b7bea9c8
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 8daa8943ccbca46c54f9dd7f1a25259a22a4b42f
 workflow-type: tm+mt
 source-wordcount: '2124'
 ht-degree: 0%
@@ -49,7 +49,7 @@ Biblioteket `PageModelManager` tillhandahålls som ett NPM-paket som ska använd
 
 För SPA:s räkning tar det bort och hanterar JSON-strukturen som representerar den faktiska innehållsstrukturen. Den ansvarar också för synkroniseringen med SPA för att meddela när komponenterna ska återges på nytt.
 
-Se NPM-paketet [@adobe/cq-spa-page-model-manager](https://www.npmjs.com/package/@adobe/cq-spa-page-model-manager)
+Se NPM-paketet [@adobe/aem-spa-page-model-manager](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
 
 När biblioteket initieras `PageModelManager`läser biblioteket först in den angivna rotmodellen för appen (via parameter, metaegenskap eller aktuell URL). Om biblioteket identifierar att den aktuella sidans modell inte är en del av den rotmodell som hämtas, och tar med den som modell för en underordnad sida.
 
@@ -99,14 +99,14 @@ Separata hänsyn underlättar projektgenomförandet. Därför bör ett npm-speci
 
 För att underlätta bibliotekens driftskompatibilitet rekommenderar Adobe den ramverksspecifika modulen att paketera följande bibliotek. Om det behövs kan lagret kapsla in och anpassa de underliggande API:erna innan de exponeras för projektet.
 
-* [@adobe/cq-spa-page-model-manager](https://www.npmjs.com/package/@adobe/cq-spa-page-model-manager)
-* [@adobe/cq-spa-component-mapping](https://www.npmjs.com/package/@adobe/cq-spa-component-mapping)
+* [@adobe/aem-spa-page-model-manager](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
+* [@adobe/aem-spa-component-mapping](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 
 #### Implementeringar {#implementations}
 
 #### Reagera {#react}
 
-npm-modul: [@adobe/cq-rea-editable-components](https://www.npmjs.com/package/@adobe/cq-react-editable-components)
+npm-modul: [@adobe/aem-rea-editable-components](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
 
 #### Vinkel {#angular}
 
@@ -169,7 +169,7 @@ Komponenten för responsivt stödraster bör mappas i förväg till den AEM mots
 * `gridClassNames:` Angivna klassnamn för det responsiva rutnätet
 * `columnClassNames:` Angivna klassnamn för den responsiva kolumnen
 
-Se även npm-resursen [@adobe/cq-response-editable-components#srccomponentssresponsivegridjsx](https://www.npmjs.com/package/@adobe/cq-react-editable-components#srccomponentsresponsivegridjsx)
+Se även npm-resursen [@adobe/aem-rea-editable-components#srccomponentssresponsivegridjsx](https://www.npmjs.com/package/@adobe/aem-react-editable-components#srccomponentsresponsivegridjsx)
 
 #### Platshållare för det motstående stödrastret {#placeholder-of-the-reponsive-grid}
 
