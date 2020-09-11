@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: babfbd7e864eb15c0b06b114fea4cef6db2a6a07
+source-git-commit: f824b449b85ad7900aaf73fd79614f5e6140f873
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 2%
@@ -38,7 +38,7 @@ Använda CRXDE Lite:
 * Typ: `String`
 * Värde: `foundation/components/page`
 
-1. Klicka på den gröna **[!UICONTROL [+]Add]**
+1. Klicka på den gröna **[!UICONTROL[+]Add]**
 1. Klicka på **[!UICONTROL Save All]**
 
 ![chlimage_1-231](assets/chlimage_1-231.png)
