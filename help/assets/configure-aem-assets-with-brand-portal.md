@@ -3,7 +3,7 @@ title: Konfigurera AEM Assets med varumärkesportalen
 description: 'Lär dig hur du konfigurerar AEM Assets med varumärkesportalen för publicering av resurser och samlingar på varumärkesportalen. '
 contentOwner: VG
 translation-type: tm+mt
-source-git-commit: 1510b3a1b40e2e08579fc833f563fa77d6cc65cd
+source-git-commit: f9993c7a1a7be95cf4f2652f32e71f370ff3c727
 workflow-type: tm+mt
 source-wordcount: '1586'
 ht-degree: 44%
@@ -269,6 +269,7 @@ Gör så här för att skapa molntjänstkonfigurationen för varumärkesportalen
    >[!NOTE]
    >
    >Undvik att inaktivera någon av replikeringsagenterna eftersom det kan göra att replikeringen av vissa resurser misslyckas.
+   >
    >Se till att alla fyra replikeringsagenterna är konfigurerade för att undvika timeout-fel. Se [felsöka problem vid parallell publicering till varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout).
 
 Varumärkesportalen har konfigurerats med din AEM Assets-författarinstans. Du kan nu:
