@@ -11,7 +11,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 discoiquuid: 39d1cb2e-18f5-4d08-b983-a06b1f470c51
 translation-type: tm+mt
-source-git-commit: 507559ee6cc6b201a11bbf84da515b675534f675
+source-git-commit: 8daa8943ccbca46c54f9dd7f1a25259a22a4b42f
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 0%
@@ -39,10 +39,10 @@ AEM innehåller flera API:er för utveckling av program. Följande lista innehå
 
 AEM SDK-ramverket för JavaScript API-referenser för SPA-redigerare (Single-Page Application):
 
-* [Komponentmappning](https://www.npmjs.com/package/@adobe/cq-spa-component-mapping)
-* [Sidmodellshanteraren](https://www.npmjs.com/package/@adobe/cq-spa-page-model-manager)
-* [Reagera på redigerbara komponenter](https://www.npmjs.com/package/@adobe/cq-react-editable-components)
-* [Vinkelredigerbara komponenter](https://www.npmjs.com/package/@adobe/cq-angular-editable-components)
+* [Komponentmappning](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
+* [Sidmodellshanteraren](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
+* [Reagera på redigerbara komponenter](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
+* [Vinkelredigerbara komponenter](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
 AEM Delivery and Content Management APIs:
 
