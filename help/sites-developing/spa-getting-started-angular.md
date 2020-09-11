@@ -9,7 +9,7 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 50e24c2b-ad7e-4422-a850-9a0bf6bd9423
 translation-type: tm+mt
-source-git-commit: 0e7f4a78f63808bea2aa7a5abbb31e7e5b9d21b3
+source-git-commit: 8daa8943ccbca46c54f9dd7f1a25259a22a4b42f
 workflow-type: tm+mt
 source-wordcount: '1065'
 ht-degree: 0%
@@ -62,9 +62,9 @@ Filen definierar kraven för det övergripande SPA-paketet `package.json` . Här
 
 ```
 "dependencies": {
-  "@adobe/cq-angular-editable-components": "~1.0.3",
-  "@adobe/cq-spa-component-mapping": "~1.0.3",
-  "@adobe/cq-spa-page-model-manager": "~1.0.4"
+  "@adobe/aem-angular-editable-components": "~1.0.3",
+  "@adobe/aem-spa-component-mapping": "~1.0.5",
+  "@adobe/aem-spa-page-model-manager": "~1.0.3"
 }
 ```
 
@@ -131,12 +131,12 @@ En förenklad bildkomponent används som exempel, men alla komponenter i program
 
 Startpunkten i SPA är den fil som visas här förenklad för att fokusera på det viktiga innehållet. `app.module.ts`
 
-```
+```javascript
 // app.module.ts
 import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { SpaAngularEditableComponentsModule } from '@adobe/cq-angular-editable-components';
+import { SpaAngularEditableComponentsModule } from '@adobe/aem-angular-editable-components';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
@@ -162,11 +162,11 @@ När komponenten instansieras statiskt med komponentmallen måste värdet skicka
 
 När `app.module.ts` programmet har startats `AppComponent`kan det initiera appen, som visas här i en förenklad version för att fokusera på det viktiga innehållet.
 
-```
+```javascript
 // app.component.ts
 import { Component } from '@angular/core';
-import { ModelManager } from '@adobe/cq-spa-page-model-manager';
-import { Constants } from "@adobe/cq-angular-editable-components";
+import { ModelManager } from '@adobe/aem-spa-page-model-manager';
+import { Constants } from "@adobe/aem-angular-editable-components";
 
 @Component({
   selector: 'app-root',
@@ -196,11 +196,11 @@ export class AppComponent {
 
 Genom att bearbeta sidan kan du ringa samtal `app.component.ts` `main-content.component.ts` som visas här i en förenklad version.
 
-```
+```javascript
 import { Component } from '@angular/core';
 import { ModelManagerService }     from '../model-manager.service';
 import { ActivatedRoute } from '@angular/router';
-import { Constants } from "@adobe/cq-angular-editable-components";
+import { Constants } from "@adobe/aem-angular-editable-components";
 
 @Component({
   selector: 'app-main',
