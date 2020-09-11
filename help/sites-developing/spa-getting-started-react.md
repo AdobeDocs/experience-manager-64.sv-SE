@@ -10,7 +10,7 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 0843ceff-2607-4733-8383-681820e513d1
 translation-type: tm+mt
-source-git-commit: 0e7f4a78f63808bea2aa7a5abbb31e7e5b9d21b3
+source-git-commit: 8daa8943ccbca46c54f9dd7f1a25259a22a4b42f
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 0%
@@ -63,9 +63,9 @@ Filen definierar kraven för det övergripande SPA-paketet `package.json` . Här
 
 ```
   "dependencies": {
-    "@adobe/cq-react-editable-components": "~1.0.3",
-    "@adobe/cq-spa-component-mapping": "~1.0.3",
-    "@adobe/cq-spa-page-model-manager": "~1.0.4"
+    "@adobe/aem-react-editable-components": "~1.0.4",
+    "@adobe/aem-spa-component-mapping": "~1.0.5",
+    "@adobe/aem-spa-page-model-manager": "~1.0.3"
   }
 ```
 
@@ -139,10 +139,10 @@ En förenklad bildkomponent används som exempel, men alla komponenter i program
 
 Ingångspunkten i produktresumén är förstås den fil som visas här förenklad för att fokusera på det viktiga innehållet. `index.js`
 
-```
+```javascript
 import ReactDOM from 'react-dom';
 import App from './App';
-import { ModelManager, Constants } from "@adobe/cq-spa-page-model-manager";
+import { ModelManager, Constants } from "@adobe/aem-spa-page-model-manager";
 
 ...
 
@@ -167,7 +167,7 @@ När komponenten instansieras statiskt med komponentmallen (t.ex. JSX), måste v
 Genom att återge programmet anropar `index.js` du `App.js`som visas här i en förenklad version för att fokusera på det viktiga innehållet.
 
 ```
-import {Page, withModel } from '@adobe/cq-react-editable-components';
+import {Page, withModel } from '@adobe/aem-react-editable-components';
 
 ...
 
@@ -182,10 +182,10 @@ export default withModel(App);
 
 ### Page.js {#page-js}
 
-Genom att återge sidan anropas `App.js` anrop `Page.js` som listas här i en förenklad version.
+Genom att återge sidan ringer du `App.js` upp `Page.js` här i en förenklad version.
 
 ```
-import {Page, MapTo, withComponentMappingContext } from "@adobe/cq-react-editable-components";
+import {Page, MapTo, withComponentMappingContext } from "@adobe/aem-react-editable-components";
 
 ...
 
@@ -206,7 +206,7 @@ När sidan återges kan komponenterna som `Image.js` visas här återges.
 
 ```
 import React, {Component} from 'react';
-import {MapTo} from '@adobe/cq-react-editable-components';
+import {MapTo} from '@adobe/aem-react-editable-components';
 
 require('./Image.css');
 
@@ -249,7 +249,7 @@ Du kan exportera en komponent och göra den redigerbar.
 
 ```
 import React, { Component } from 'react';
-import { MapTo } from '@cq/cq-react-editable-components';
+import { MapTo } from '@adobe/aem-react-editable-components';
 
 ...
 
