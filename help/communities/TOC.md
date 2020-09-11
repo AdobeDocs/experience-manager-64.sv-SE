@@ -3,9 +3,10 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: Användarhandbok för AEM 6.4 Communities
+breadcrumb-title: Communities Guide
 user-guide-description: Create online experiences such as forums, user groups, learning resources, and other social features.
 translation-type: tm+mt
-source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+source-git-commit: a83c39939afe85586aa32460f141fa18bfc80a3f
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 0%
@@ -61,7 +62,7 @@ ht-degree: 0%
    + [Community-funktioner](functions.md)
    + [Lagringskonfiguration](srp-config.md)
    + [Badges Console](badges.md)
-   + [Resurskonsol för aktivering](resources.md)
+   + [Konsolen Aktivera resurser](resources.md)
    + [Rapportkonsol](reports.md)
    + [MySQL-konfiguration för aktiveringsfunktioner](mysql.md)
    + [FFmpeg for Communities](ffmpeg.md)
@@ -150,7 +151,7 @@ ht-degree: 0%
    + [Katalogfunktion](catalog.md)
    + [Använda kommentarer](comments.md)
    + [Innehållsfunktion](featured.md)
-   + [Filbiblioteksfunktion](file-library.md)
+   + [Klientbiblioteksfunktion](file-library.md)
    + [Forumfunktion](forum.md)
    + [Community-grupper](creating-groups.md)
    + [Idéfunktion](ideation-feature.md)
