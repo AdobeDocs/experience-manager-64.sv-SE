@@ -10,7 +10,7 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 897ff73f-15a5-484f-a3a2-616de8ac59dc
 translation-type: tm+mt
-source-git-commit: c842bd832a63ed9e96801c56ff35489ee6df630b
+source-git-commit: 8daa8943ccbca46c54f9dd7f1a25259a22a4b42f
 workflow-type: tm+mt
 source-wordcount: '1703'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Stöd för SPA i AEM introducerar ett tunt JS-lager som interagerar med SPA JS-k
 Mer information om SPA i AEM finns i följande dokument:
 
 * [SPA Blueprint](/help/sites-developing/spa-blueprint.md) för de tekniska kraven för ett SPA
-* [Komma igång med SPA i AEM](/help/sites-developing/spa-getting-started-react.md) för en snabb genomgång av ett enkelt SPA
+* [Komma igång med SPA i AEM](/help/sites-developing/spa-getting-started-react.md) för en snabb genomgång av en enkel SPA
 
 ## Design {#design}
 
@@ -49,7 +49,7 @@ Sidkomponenten för en SPA tillhandahåller inte HTML-elementen för dess undero
 
 ### Sidmodellshantering {#page-model-management}
 
-Upplösningen och hanteringen av sidmodellen delegeras till ett angivet `PageModel` bibliotek. SPA måste använda sidmodellbiblioteket för att kunna initieras och redigeras av SPA-redigeraren. Sidmodellbiblioteket som indirekt tillhandahålls AEM sidkomponenten via `cq-react-editable-components` npm. Sidmodellen är en tolk mellan AEM och SPA och måste därför alltid finnas. När sidan har skapats `cq.authoring.pagemodel.messaging` måste ytterligare ett bibliotek läggas till för att kommunikationen med sidredigeraren ska kunna aktiveras.
+Upplösningen och hanteringen av sidmodellen delegeras till ett angivet `PageModel` bibliotek. SPA måste använda sidmodellbiblioteket för att kunna initieras och redigeras av SPA-redigeraren. Sidmodellbiblioteket som indirekt tillhandahålls AEM sidkomponenten via `aem-react-editable-components` npm. Sidmodellen är en tolk mellan AEM och SPA och måste därför alltid finnas. När sidan har skapats `cq.authoring.pagemodel.messaging` måste ytterligare ett bibliotek läggas till för att kommunikationen med sidredigeraren ska kunna aktiveras.
 
 Om SPA-sidkomponenten ärver från sidhuvudkomponenten finns det två alternativ för att göra klientbibliotekskategorin tillgänglig: `cq.authoring.pagemodel.messaging`
 
