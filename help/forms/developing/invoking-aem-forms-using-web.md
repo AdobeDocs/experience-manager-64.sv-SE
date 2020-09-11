@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 translation-type: tm+mt
-source-git-commit: d731d290738403f41e601da8e9bdb9bd3b94bcd4
+source-git-commit: f824b449b85ad7900aaf73fd79614f5e6140f873
 workflow-type: tm+mt
 source-wordcount: '9984'
 ht-degree: 0%
@@ -27,7 +27,7 @@ De flesta AEM Forms-tjänster i tjänstbehållaren är konfigurerade för att vi
 
 Med hjälp av webbtjänster kan du utföra samma AEM Forms-tjänståtgärder som du kan med Java API. En fördel med att använda webbtjänster för att anropa AEM Forms-tjänster är att du kan skapa ett klientprogram i en utvecklingsmiljö som stöder SOAP. Ett klientprogram är inte bundet till en specifik utvecklingsmiljö eller programmeringsspråk. Du kan till exempel skapa ett klientprogram med Microsoft Visual Studio .NET och C# som programmeringsspråk.
 
-AEM Forms-tjänster exponeras över SOAP-protokollet och är WSI Basic Profile 1.1-kompatibla. WSI (Web Services Interoperability) är en öppen standardorganisation som främjar interoperabilitet mellan olika plattformar för webbtjänster. Mer information finns i [https://www.ws-i.org/](https://www.ws-i.org).
+AEM Forms-tjänster exponeras över SOAP-protokollet och är WSI Basic Profile 1.1-kompatibla. Web Services Interoperability (WSI) är en öppen standardorganisation som främjar interoperabilitet mellan olika plattformar. Mer information finns i [https://www.ws-i.org/](https://www.ws-i.org).
 
 AEM Forms stöder följande webbtjänststandarder:
 
@@ -224,7 +224,7 @@ Tilldela värden till fält som tillhör `BLOB` instansen enligt följande:
 
 Överföringsprotokollet för returnerade `BLOB` objekt beror på flera faktorer, som beaktas i följande ordning och som avbryts när huvudvillkoret är uppfyllt:
 
-1. **Mål-URL anger överföringsprotokoll**. Om mål-URL:en som anges vid SOAP-anropet innehåller parametern `blob="`*BLOB_TYPE *avgör* BLOB_TYPE *överföringsprotokollet.* BLOB_TYPE *är en platshållare för base64, dime, mime, http, mtom och swaref.
+1. **Mål-URL anger överföringsprotokoll**. Om mål-URL:en som anges vid SOAP-anropet innehåller parametern `blob="`*BLOB_TYPE* avgör *BLOB_TYPE* överföringsprotokollet. *BLOB_TYPE* är en platshållare för base64, dime, mime, http, mtom eller swaref.
 1. **Tjänstens SOAP-slutpunkt är smart**. Om följande villkor är uppfyllda returneras utdatadokumenten med samma överföringsprotokoll som indatadokumenten:
 
    * Tjänstens SOAP-slutpunktsparameter Standardprotokoll för utdatablobjekt anges till Smart.
@@ -682,7 +682,7 @@ Du kan anropa en AEM Forms-tjänst med hjälp av Java-proxyklasser och Base64. S
    >
    >Ersätt `hiro-xp`* med IP-adressen för J2EE-programtjänstleverantören som är värd för AEM Forms. *
 
-1. Paketera Java-proxyklasserna som skapats med JAX-WS i en JAR-fil.
+1. Paketera Java-proxyklasserna som skapats med JAX-WS till en JAR-fil.
 1. Inkludera JAR-proxyfilen för Java och JAR-filerna som finns i följande sökväg:
 
    &lt;Install Directory>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
@@ -878,7 +878,7 @@ Så här anropar du `MyApplication/EncryptDocument` processen med Java-proxyfile
    >
    >Ersätt `hiro-xp`* med IP-adressen för J2EE-programservern som är värd för AEM Forms. *
 
-1. Paketera Java-proxyklasserna som skapats med JAX-WS i en JAR-fil.
+1. Paketera Java-proxyklasserna som skapats med JAX-WS till en JAR-fil.
 1. Inkludera JAR-proxyfilen för Java och JAR-filerna som finns i följande sökväg:
 
    &lt;Install Directory>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
@@ -1001,7 +1001,7 @@ Du kan anropa en AEM Forms-tjänst med hjälp av Java-proxyklasser och BLOB-data
    >
    >Ersätt `hiro-xp`* med IP-adressen för J2EE-programservern som är värd för AEM Forms. *
 
-1. Paketera Java-proxyklasserna som skapats med JAX-WS i en JAR-fil.
+1. Paketera Java-proxyklasserna som skapats med JAX-WS till en JAR-fil.
 1. Inkludera JAR-proxyfilen för Java och JAR-filerna som finns i följande sökväg:
 
    &lt;Install Directory>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
