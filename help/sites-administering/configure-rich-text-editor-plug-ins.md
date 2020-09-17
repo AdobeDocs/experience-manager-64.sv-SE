@@ -3,9 +3,9 @@ title: Konfigurera plugin-programmen för RTF-redigeraren
 description: Lär dig att konfigurera plugin-program för AEM RTF-redigering för att aktivera enskilda funktioner.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 2236d029dc463930e6bbdc1e1aed89e761f0cd89
 workflow-type: tm+mt
-source-wordcount: '4193'
+source-wordcount: '4191'
 ht-degree: 0%
 
 ---
@@ -706,7 +706,7 @@ Om du vill konfigurera hur länkar läggs till i AEM från ett annat program def
       * **Namn** `cssExternal`
       * **Typ** `String`
       * **Ange ett värde** för CSS-klassens namn (utan föregående &#39;.&#39;); for example, `cssClass` instead of `.cssClass`)
-   * Array med giltiga **protokoll** (inklusive https://, https:// file://, mailto:, bland annat)
+   * Matris med giltiga **protokoll**. De protokoll som stöds är `http://`, `https://`, `file://`och `mailto:`.
 
       * **Namn** `protocols`
       * **Typ** `String[]`
