@@ -3,10 +3,10 @@ title: Konfigurera AEM Assets med varumärkesportalen
 description: 'Lär dig hur du konfigurerar AEM Assets med varumärkesportalen för publicering av resurser och samlingar på varumärkesportalen. '
 contentOwner: VG
 translation-type: tm+mt
-source-git-commit: f9993c7a1a7be95cf4f2652f32e71f370ff3c727
+source-git-commit: 656a06ae70293a3f1ec6768fc9eea15f1329c42c
 workflow-type: tm+mt
-source-wordcount: '1586'
-ht-degree: 44%
+source-wordcount: '1600'
+ht-degree: 43%
 
 ---
 
@@ -78,6 +78,11 @@ Utför följande steg i den listade sekvensen om du konfigurerar AEM Assets med 
 1. [Skapa en konfiguration för IMS-kontot](#create-ims-account-configuration)
 1. [Konfigurera molntjänsten](#configure-the-cloud-service)
 1. [Testa konfigurationen](#test-integration)
+
+>[!NOTE]
+>
+>En instans av en AEM Assets-författare får endast konfigureras med en Brand Portal-klient.
+
 
 ### Skapa IMS-konfigurationen {#create-ims-configuration}
 
