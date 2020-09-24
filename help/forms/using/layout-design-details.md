@@ -6,10 +6,10 @@ seo-description: Layoutdesigndetaljer förklarar hur du kan skapa layouter som s
 uuid: b21af474-07f5-4bfe-af7d-0c322e2452ae
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
-topic-tags: interactive-communications
+topic-tags: correspondence-management, interactive-communications
 discoiquuid: 046b1bf9-1ac7-4e2e-ab37-6fe5422dfa20
 translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '1301'
 ht-degree: 0%
@@ -34,9 +34,9 @@ En layout definierar den grafiska layouten för en brev-/tryckkanal i ett intera
 
 ![Designer: skapa en layout](assets/claimsubrogationlayout.png)
 
-Följ de här stegen för att skapa layouter för brev/tryckkanaler i interaktiv kommunikation:
+Följ de här stegen för att skapa layouter för brev/tryckkanaler i Interactive Communications:
 
-1. Analysera layouten och avgöra vilket innehåll som upprepas på alla sidor. oftast anpassas sidhuvud och sidfot till den här kategorin. Innehållet placeras på överordnad layoutsidor. Det återstående innehållet går till layoutens innehållssidor. I en policyjacka kan logotypen och företagsadressen läggas till i det överordnad sidhuvudet och sidfoten. Anmärkning om annullering använder till exempel samma layout.
+1. Analysera layouten och avgöra vilket innehåll som upprepas på alla sidor. vanligtvis sidhuvud och sidfot får plats i den här kategorin. Innehållet placeras på överordnad layoutsidor. Det återstående innehållet går till layoutens innehållssidor. I en policyjacka kan logotypen och företagsadressen läggas till i det överordnad sidhuvudet och sidfoten. Anmärkning om annullering använder till exempel samma layout.
 1. När du utformar innehållssidor delar du upp sidinnehållet i avsnitt. Varje avsnitt är utformat som ett delformulär inbäddat i själva layouten eller som en fragmentlayout. Om avsnittet innehåller tabeller, modellerar du avsnittet som ett layoutfragment.
 1. En layout kan utformas så här:
 
