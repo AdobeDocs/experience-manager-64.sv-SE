@@ -6,10 +6,10 @@ seo-description: AEM Forms har ett lättanvänt men ändå kraftfullt gränssnit
 uuid: 07ff8e79-daf7-4608-9171-91854619cc0b
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
-topic-tags: introduction
+topic-tags: introduction, author
 discoiquuid: c7a1d13e-cb61-4082-8ae7-7f5eee9e0a51
 translation-type: tm+mt
-source-git-commit: 7c65752a969d9089ad61c29b0581327d32e022d1
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '3008'
 ht-degree: 0%
@@ -273,7 +273,7 @@ Sidlisten innehåller följande webbläsare:
 
 #### Bästa tillvägagångssätt vid arbete med komponenter {#best-practices}
 
-Här följer några tips och viktiga saker du bör komma ihåg när du arbetar med adaptiva formulärkomponenter:
+Här följer några tips och viktiga saker att komma ihåg när du arbetar med adaptiva formulärkomponenter:
 
 * Varje komponent har tillhörande egenskaper som styr dess utseende och funktion. Om du vill konfigurera egenskaperna för en komponent trycker du på komponenten och trycker på ![cmpr](assets/cmppr.png) för att öppna komponentegenskaperna i egenskapsläsaren.
 * En komponent identifieras med sitt elementnamn. När du trycker på ![cmpr](assets/cmppr.png)kan du ändra komponentens namn genom att ändra **[!UICONTROL Element Name]** fältvärdet i egenskapsläsaren. Endast bokstäver, siffror, bindestreck (-) och understreck (_) godkänns i fältet Elementnamn. Andra specialtecken tillåts inte och elementnamnet måste börja med en bokstav.
@@ -293,7 +293,7 @@ Här följer några tips och viktiga saker du bör komma ihåg när du arbetar m
 * Du kan aktivera komponenterna Textruta, E-post och Telefon för att autofylla värden för fält som namn, adress, kreditkort, telefon och e-post från informationen som lagras i webbläsarens autofyllningsinställningar. Om du vill aktivera den här funktionen markerar du **[!UICONTROL Enable Autofill]** komponentegenskaperna och väljer en **[!UICONTROL Autofill Attribute]**. När en användare fyller i ett anpassat formulär föreslås värdena från profilen för automatisk ifyllning i webbläsaren eller baserat på de värden som användaren tidigare fyllt i. Observera att Autofyll fungerar om autofyllningsinställningarna i användarens webbläsare är aktiverade.
 
 * Ange värden för alternativknappar och kryssruteobjekt i `{value}={text}` format i komponentegenskaper.
-* Komponenten för bifogad fil tillåter som standard endast användare att bifoga en fil. Du kan dock konfigurera komponentegenskaperna så att de stöder flera bifogade filer. Om en användare dessutom bifogar flera filer med samma filnamn kan de bifogade filerna orsaka problem. Därför rekommenderar vi att du kopplar en unik identifierare till varje bifogad fil när formuläret skickas. Så här gör du:
+* Komponenten för bifogad fil tillåter som standard att användaren bara kan bifoga en fil. Du kan dock konfigurera komponentegenskaperna så att de stöder flera bifogade filer. Om en användare dessutom bifogar flera filer med samma filnamn kan de bifogade filerna orsaka problem. Därför rekommenderar vi att du kopplar en unik identifierare till varje bifogad fil när formuläret skickas. Så här gör du:
 
    1. Gå till AEM Forms-servern **[!UICONTROL Adobe Experience Manager > Tools > Operations > Web Console]**.
    1. Sök och tryck **[!UICONTROL Adaptive Forms Configuration Service]**.
@@ -305,7 +305,7 @@ Mer information om adaptiva formulär finns i [Bästa tillvägagångssätt för 
 
 >[!NOTE]
 >
->Adaptiva formulärkomponenter har inte stöd för RTL-språk. Till exempel hebreiska.
+>Anpassade formulärkomponenter har inte stöd för höger till vänster-språk. Till exempel hebreiska.
 
 ### Verktygsfältet Sida {#page-toolbar}
 
@@ -315,7 +315,7 @@ Verktygsfältet längst upp på sidan innehåller alternativ som gör att du kan
 
 * **[!UICONTROL Page information]** ![temaalternativ](assets/theme-options.png): Gör att du kan visa sidegenskaper, publicera/avpublicera ett formulär, starta ett formulärarbetsflöde och öppna formuläret i klassiskt gränssnitt.
 
-* **[!UICONTROL Emulator]** ![linjal](assets/ruler.png): Gör att du kan emulera formulärutseendet för olika visningsstorlekar, till exempel surfplattor och telefoner.
+* **[!UICONTROL Emulator]** ![linjal](assets/ruler.png): Gör att du kan emulera formulärutseendet för olika visningsstorlekar, till exempel för surfplattor och telefoner.
 
 * **[!UICONTROL Edit]**: Här kan du välja andra lägen, till exempel: **Redigera, Formatera, Utvecklare** och **Design**.
 
@@ -371,7 +371,7 @@ J. **Övrigt**: Innehåller fler alternativ för att arbeta med den markerade ko
 
 ### Adaptiv formulärsida {#af-page}
 
-Den anpassningsbara formulärsidan är det faktiska formuläret. Den är som alla andra WCM-sidor som modelleras som WCM- `cq:Page` komponent. Följande bild visar innehållsstrukturen i ett typiskt anpassat formulär.
+Den anpassningsbara formulärsidan är det faktiska formuläret. Det är som alla andra WCM-sidor som modelleras som WCM- `cq:Page` komponent. Följande bild visar innehållsstrukturen i ett typiskt anpassat formulär.
 
 ![Innehållsstruktur för en WCM-sida med anpassat formulär](assets/afstructure.png)
 
