@@ -5,11 +5,11 @@ description: Du kan använda teman för att anpassa och ge en visuell identitet 
 seo-description: Du kan använda teman för att anpassa och ge en visuell identitet till ett adaptivt formulär eller interaktiv kommunikation. Du kan dela ett tema i ett valfritt antal adaptiva formulär eller interaktiv kommunikation.
 uuid: 7fa8afd9-8454-44a5-939b-b213b9a800cc
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
-topic-tags: interactive-communications
+topic-tags: develop, interactive-communications
 content-strategy: max-2018
 discoiquuid: c5933e2a-fb8d-4d1b-a301-c8a2bc7ee226
 translation-type: tm+mt
-source-git-commit: b9d2a5b65f7ae48a9bde5580b5ddd3e55fc68d61
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '5897'
 ht-degree: 0%
@@ -197,11 +197,11 @@ Lista med metaegenskaper för ett tema (finns på egenskapssidan för ett tema).
 
 AEM Forms levereras med Theme Editor. Det är ett användarvänligt och webbdesignervänligt gränssnitt för utvecklare som tillhandahåller funktioner som krävs för att enkelt specificera hur olika adaptiva formulär och interaktiva kommunikationselement ska formateras. När du skapar ett tema lagras det som en separat enhet, som formulär, interaktiv kommunikation, brev, dokumentfragment och dataordlistor.
 
-Med Theme Editor kan du anpassa stilar för de komponenter som är formaterade i ett tema. Du kan anpassa hur ett formulär eller en interaktiv kommunikation ser ut på en enhet.
+Med Theme Editor kan du anpassa stilar för komponenter som är formaterade i ett tema. Du kan anpassa hur ett formulär eller en interaktiv kommunikation ser ut på en enhet.
 
 Temaredigeraren är uppdelad i två paneler:
 
-* **Arbetsyta** - visas till höger. Här visas ett exempel på en adaptiv form eller interaktiv kommunikation där alla formatändringar återspeglas direkt. Du kan också markera objekt direkt på arbetsytan för att leta upp format som är kopplade till dem och redigera formaten. En enhetsupplösningslinjal längst upp styr arbetsytan. Om du väljer en brytpunkt för upplösning från linjalen visas förhandsvisningen av exempelformuläret eller den interaktiva kommunikationen för respektive upplösning. Arbetsytan beskrivs i detalj [nedan](/help/forms/using/themes.md#using-canvas).
+* **Arbetsyta** - visas till höger. Här visas ett exempel på en adaptiv form eller interaktiv kommunikation där alla formatändringar återspeglas direkt. Du kan också markera objekt direkt från arbetsytan för att leta upp format som är kopplade till dem och redigera formaten. Linjalen för enhetsupplösning längst upp styr arbetsytan. Om du väljer en brytpunkt för upplösning från linjalen visas förhandsvisningen av exempelformuläret eller den interaktiva kommunikationen för respektive upplösning. Arbetsytan beskrivs i detalj [nedan](/help/forms/using/themes.md#using-canvas).
 
 * **Sidofält**- visas på vänster sida. Den har följande objekt:
 
@@ -240,7 +240,7 @@ Alternativ i sidofältet som gör att du kan markera och formatera olika kompone
 
 Om du klickar på redigeringsknappen mot en komponent i sidlisten markeras komponenten på arbetsytan. Du kan också formatera komponenten med alternativen i sidlisten.
 
-Vissa komponenter som textruta, numerisk ruta, alternativknapp och kryssruta är kategoriserade under generiska komponenter som Fält. Du kan till exempel anpassa stilen på alternativknappar. Välj alternativknappar för formatering genom att välja **Fält > Widget > Alternativknapp**.
+Vissa komponenter som textruta, numerisk ruta, alternativknapp och kryssruta kategoriseras under generiska komponenter som Fält. Du kan till exempel anpassa stilen på alternativknappar. Välj alternativknappar för formatering genom att välja **Fält > Widget > Alternativknapp**.
 
 Klicka på **UTÖKA ALLA** i sidofältet om du vill visa, markera och formatera komponenter som inte är synliga framför.
 
@@ -505,7 +505,7 @@ Du kan nu använda teckensnitt som finns i en webbtjänst i ett adaptivt formul�
 
 Så här konfigurerar du Typekit i AEM:
 
-1. I författarinstansen klickar du på ![adobeexperienceManager](assets/adobeexperiencemanager.png)**[!UICONTROL Adobe Experience Manager > Tools]** ![hammer](assets/hammer.png) **[!UICONTROL > Deployment > Cloud Services]**.
+1. I författarinstansen klickar du på ![adobeexperienceManager ](assets/adobeexperiencemanager.png)**[!UICONTROL Adobe Experience Manager > Tools]**![hammer](assets/hammer.png)**[!UICONTROL > Deployment > Cloud Services]**.
 1. På **[!UICONTROL Cloud Services]** sidan går du till **[!UICONTROL Third Party Services]** > **[!UICONTROL Typekit]** och klickar **[!UICONTROL Configure Now]** under Typekit. Om det redan finns en konfiguration klickar du på **+** -knappen för att skapa en ny instans.
 1. I **[!UICONTROL Create Configuration]** dialogrutan anger du en rubrik för konfigurationen och klickar på **[!UICONTROL Create]**.
 
