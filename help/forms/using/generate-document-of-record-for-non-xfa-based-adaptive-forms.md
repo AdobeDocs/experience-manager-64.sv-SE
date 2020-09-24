@@ -5,12 +5,12 @@ description: Beskriver hur du kan generera en mall för ett postdokument (DoR) f
 seo-description: Beskriver hur du kan generera en mall för ett postdokument (DoR) för adaptiva formulär.
 uuid: 6c0664a4-a2eb-4ec5-bad0-cf4e2f4fe83d
 content-type: reference
-topic-tags: develop
+topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 1e533a8c-f200-40ca-b170-0e9abee8513e
 noindex: true
 translation-type: tm+mt
-source-git-commit: 1e46cdf8f52426ec3bb1c0712355b7bedf270b13
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '2723'
 ht-degree: 1%
@@ -260,7 +260,7 @@ Du kan nu använda det sparade formuläret som en basmall för postdokument.\
 
 ## Konfiguration av dokumentmall {#document-of-record-template-configuration}
 
-Konfigurera dokumentets postmall för formuläret så att kunderna kan hämta en utskriftsvänlig kopia av det skickade formuläret. En XDP-fil fungerar som ett dokument i postmallen. Dokumentet med nedladdade postkunder formateras enligt layouten som anges i XDP-filen.
+Konfigurera dokumentets postmall för formuläret så att kunderna kan hämta en utskriftsvänlig kopia av det skickade formuläret. En XDP-fil fungerar som dokument i postmallen. Dokumentet med nedladdade postkunder formateras enligt layouten som anges i XDP-filen.
 
 Utför följande steg för att konfigurera ett postdokument för adaptiva formulär:
 
@@ -381,7 +381,7 @@ Dokumentet med postinställningar för en komponent är tillgängligt under dess
 
 ## Viktiga saker att tänka på när du arbetar med postdokument {#key-considerations-when-working-with-document-of-record}
 
-Tänk på följande när du arbetar med urkunder för anpassade formulär:
+Tänk på följande när du arbetar med urkunder för anpassade formulär.
 
 * Postmallar för dokument stöder inte RTF-text. Därför visas all formaterad text i det statiska adaptiva formuläret eller i den information som fylls i av slutanvändaren som oformaterad text i postdokumentet.
 * Dokumentfragment i ett anpassat formulär visas inte i postdokumentet. Däremot stöds adaptiva formulärfragment.
