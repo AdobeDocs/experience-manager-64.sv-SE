@@ -6,11 +6,11 @@ seo-description: Här hittar du de bästa arbetssätten som skapats av Adobe tek
 uuid: 3bac1d73-9696-4c9b-8bdd-6f00fac40cf7
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/SITES
+topic-tags: site-features, best-practices
 content-type: reference
-topic-tags: best-practices
 discoiquuid: 1554010e-a1d1-4edf-b28f-9eead8f83b4a
 translation-type: tm+mt
-source-git-commit: c1cf6fa92c923cce18000c8dd82b2c17d6783ee5
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '859'
 ht-degree: 0%
@@ -35,16 +35,16 @@ Att skapa eller utöka en global webbnärvaro kan vara en komplex process, men m
 
 ## Webbplatsstruktur {#site-structure}
 
-* När du utformar webbplatsstrukturen börjar du med att undersöka ditt innehåll och avgör var och på vilket språk innehållet skrivs. Platsen bör vara den översta nivån på din plats.
+* När du utformar din webbplatsstruktur börjar du med att undersöka ditt innehåll och avgör var och på vilket språk innehållet skrivs. Platsen bör vara den översta nivån på din plats.
 * Det bästa sättet är en **språkbaserad struktur** som inte har mer än tre nivåer mellan den översta nivån och landsplatser.
 * Använd en namngivningskonvention för språk/land som följer **W3C-standarder**.
 * Bestäm hur innehållet ska distribueras mellan regioner och länder. Tänk på vilka länder som delar språk. Vi rekommenderar att du skapar språkmallsidor, ett lager med oaktiverade sidor, där översatt innehåll kan granskas och ändras och sedan pushas eller dras till en landsplats där det språket delas.
 * Det finns två sätt att skapa språkmallar: använda språkkopior och använda MSM/live-kopior.
 
    * Språkkopieringsmetoden är den som används i AEM körklara ramverk för översättningsintegrering, och därför är det enklaste sättet att komma igång. Ramverket har ett användargränssnitt som gör det till att börja med enkelt att sprida och översätta innehållsändringar från huvudspråket (t.ex. engelska) till mallsidor på överordnad språk. I takt med att projektet växer blir det dock allt viktigare att automatisera arbetsflödet för att hantera översättningen av det ökade antalet sidor och/eller språk.
-   * Metoden med MSM/live-kopia kan vara ett alternativ för avancerad användning, där webbplatser är större och mer komplexa. Stabil styrning och automatisering av arbetsflöden krävs från början för att hantera komplexa arvsrelationer mellan engelska och språkmallsidor och för att minska risken för att skriva över befintliga översättningar. Den här hanteringen kan utföras med hjälp av vissa översättningskontakter. Mer information finns i [MSM och flerspråkiga webbplatser](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites) .
+   * Metoden med MSM/live-kopia kan vara ett alternativ för avancerade användningsområden, där webbplatser är större och mer komplexa. Stabil styrning och automatisering av arbetsflöden krävs från början för att hantera komplexa arvsrelationer mellan engelska och språkmallsidor och för att minska risken för att skriva över befintliga översättningar. Den här hanteringen kan utföras med hjälp av vissa översättningskontakter. Mer information finns i [MSM och flerspråkiga webbplatser](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites) .
 
-* Om ditt överordnad språk har globala variationer är det möjligt att använda MSM för att skapa en live-kopia från den globala överordnad som ska användas för översättning. Om global redigering till exempel utförs på en amerikansk engelska-överordnad, skapar du en internationell engelska-överordnad som en live-kopia och bas för översättning till andra språk.
+* Om ditt överordnad språk har globala variationer är det möjligt att använda MSM för att skapa en live-kopia från den globala överordnad som ska användas för översättning. Om global redigering till exempel utförs på en amerikansk engelska-överordnad skapar du en internationell engelska-överordnad som en live-kopia och bas för översättning till andra språk.
 * Använd MSM för att skapa landsplatser från översatta språkmallar och för att lansera innehåll på webbplatser som delar samma språk. Till exempel kan den franska överordnad användas på webbplatser i Frankrike, Belgien och Schweiz.
 * Planera, skapa prototyper och testa först, innan implementeringen startas.
 
