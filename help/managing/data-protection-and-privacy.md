@@ -7,10 +7,10 @@ uuid: c443aa47-0766-4280-b0f2-b5b06534ffba
 contentOwner: aheimoz
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MANAGING
-topic-tags: grdp
+topic-tags: grdp, introduction
 discoiquuid: 93e71efe-c1c6-4d83-9b57-6c70f7bc0b80
 translation-type: tm+mt
-source-git-commit: 0db56cb77628b3e81b69382a314c30b43887bde6
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 0%
@@ -68,7 +68,7 @@ För Adobe Experience Manager:
 
    * Detta innebär att kunden i praktiken hanterar de reglerande rollerna, bland annat affärsenheter och tjänsteleverantör, datakontroller och dataprocessor.
 
-   * Integritetstjänsten för Adobe Experience Platform kommer inte att ingå i arbetsflödet för AEM, vilket framgår av bilden nedan.
+   * Adobe Experience Platform Privacy Service kommer inte att ingå i arbetsflödet för AEM, vilket visas i diagrammet nedan.
 
 * AEM innehåller dokumentation och förfaranden för att kundens integritetsadministratör och/eller AEM ska kunna genomföra förfrågningar om integritetsreglering. antingen manuellt eller via API:er, om sådana finns.
 
@@ -104,7 +104,7 @@ Se [AEM Sites - Dataskydd och integritet](/help/sites-administering/gdpr-complia
 
 ## AEM {#aem-commerce}
 
-Se [AEM - Dataskydd och integritet](/help/sites-administering/gdpr-compliance-commerce.md).
+Se [AEM Commerce - Data Protection and Privacy Readiness](/help/sites-administering/gdpr-compliance-commerce.md).
 
 ## AEM Mobile {#aem-mobile}
 
