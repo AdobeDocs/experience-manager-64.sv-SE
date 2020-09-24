@@ -7,10 +7,10 @@ uuid: cbb598bb-ec8f-4985-97af-7c87f5891c66
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
-topic-tags: best-practices
+topic-tags: null
 discoiquuid: 04344537-7485-40a9-ad14-804ba448f1e2
 translation-type: tm+mt
-source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '1530'
 ht-degree: 0%
@@ -135,7 +135,7 @@ Mer information finns i [Översätta innehåll för flerspråkiga platser](/help
 
 * **Om du tar bort** sidor i en plan kommer motsvarande sidor att tas bort från live-kopior efter utrullning med standardkonfigurationen.
 
-* **Om du flyttar** sidor i en plan kommer motsvarande sidor **inte** att flyttas i live-kopior efter utrullning med standardkonfiguration:
+* **Om du flyttar** sidor i en plan kommer motsvarande sidor **inte** att flyttas i live-kopior efter utrullning med standardkonfigurationen:
 
    * Orsaken till detta är att en sidflyttning implicit inkluderar en sidborttagning. Detta kan eventuellt leda till oväntat beteende vid publicering, eftersom om du tar bort sidor på författaren inaktiveras motsvarande innehåll automatiskt vid publicering. Detta kan också få en &quot;spara på&quot;-effekt på relaterade objekt som länkar, bokmärken och andra.
    * Innehållsarv i respektive live-kopia uppdateras för att återspegla den nya platsen för deras källor i planen.
