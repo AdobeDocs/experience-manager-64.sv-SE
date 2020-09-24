@@ -5,11 +5,11 @@ description: Anpassningsbara formulär kan använda XML-schema som formulärmode
 seo-description: Anpassningsbara formulär kan använda XML-schema som formulärmodell, vilket gör att du kan använda befintliga XSD-mallar för att skapa anpassningsbara formulär. Du kan dra och släppa schemaelement från XSD till ditt anpassningsbara formulär.
 uuid: a5f5d423-9b83-47e8-b0fa-88210d0d18d9
 content-type: reference
-topic-tags: develop
+topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: a1070d9e-fb7c-4134-b6d5-ffa2d3e9718d
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '1081'
 ht-degree: 1%
