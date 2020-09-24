@@ -5,11 +5,11 @@ description: Använd AEM Forms Workflow för att automatisera och snabbt bygga u
 seo-description: Använd AEM Forms Workflow för att automatisera och snabbt bygga upp granskning och godkännanden, starta dokumenttjänster (t.ex. för att konvertera ett PDF-dokument till ett annat format), integrera med Adobe Sign signaturarbetsflöde med mera.
 uuid: 46be7ec6-d5cc-498a-9484-e66a29527064
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
-topic-tags: document_services
+topic-tags: document_services, publish
 discoiquuid: f8df5fa3-3843-4110-a46d-9a524d2657cd
 noindex: true
 translation-type: tm+mt
-source-git-commit: 5e764edb3d8ed98542c50b80cac40776c886ccf5
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '2842'
 ht-degree: 0%
@@ -98,7 +98,7 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
 1. Dra och släpp OR-komponenten från stegwebbläsaren till arbetsflödesmodellen. Med ELLER-delning skapas en delning i arbetsflödet, varefter endast en gren är aktiv. I det här steget kan du lägga in sökvägar för villkorlig bearbetning i arbetsflödet. Du kan lägga till arbetsflödessteg i varje gren efter behov.
 
-   Öppna egenskaper för OR-delningen och lägg till följande kodfragment i grenen1 och grenen2. Med dessa kodfragment kan du välja en gren baserat på användaråtgärden i AEM Inkorg.
+   Öppna egenskaperna för OR-delningen och lägg till följande kodfragment i grenen 1 och grenen 2. Med dessa kodfragment kan du välja en gren baserat på användaråtgärden i AEM Inkorg.
 
    **Kodfragment för gren 1**
 
@@ -126,7 +126,7 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
 1. Lägg till andra arbetsflödessteg för att skapa affärslogiken.
 
-   I hypoteksexemplet lägger du till ett genererat postdokument, två tilldelningar av uppgiftssteg och ett signeringsdokumentsteg i förgrening 1 av modellen, enligt bilden nedan. Ett tilldelningssteg är att visa och skicka **signerade lånedokument till sökanden** och en annan tilldelningsåtgärd är **att visa signerade dokument**. Lägg också till en tilldelad uppgiftskomponent i gren 2. Den aktiveras när en användare trycker på Avvisa i AEM.
+   I hypoteksexemplet lägger du till ett genererat postdokument, två tilldelningar av uppgiftssteg och ett signeringsdokumentsteg i förgrening 1 av modellen, vilket visas i bilden nedan. Ett tilldelningssteg är att visa och skicka **signerade lånedokument till sökanden** och en annan tilldelningsåtgärd är **att visa signerade dokument**. Lägg också till en tilldelad uppgiftskomponent i gren 2. Den aktiveras när en användare trycker på Avvisa i AEM.
 
    Om du vill visa en komplett uppsättning värden för alla fält i tilldelningsstegen, dokumentsteget och signeringsdokumentsteget som konfigurerats för exempelvis låneprogram importerar du exempelpaketet som är tillgängligt för hämtning i början av det här avsnittet.
 
