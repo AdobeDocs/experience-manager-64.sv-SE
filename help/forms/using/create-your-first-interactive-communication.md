@@ -6,10 +6,10 @@ seo-description: Lär dig skapa din första interaktiva kommunikation.
 uuid: ed5003c6-ba3a-4fcb-8645-c7b607b22fb5
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
-topic-tags: interactive-communications
+topic-tags: interactive-communications, introduction
 discoiquuid: 954da8da-a30b-477d-bde7-3edd86a5be11
 translation-type: tm+mt
-source-git-commit: 7c65752a969d9089ad61c29b0581327d32e022d1
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Lär dig skapa din första interaktiva kommunikation.
 
 Interactive Communications centraliserar och hanterar framtagning, sammanställning och leverans av säkra, personaliserade och interaktiva korrespondenser som affärskorrespondens, dokument, kontoutdrag, marknadsföringsmejl, räkningar och välkomstpaket. Interaktiv kommunikation kan levereras via två kanaler: Tryck och webb. Print-kanalen används för att skapa PDF:er och pappersdokument, medan webbkanalen används för att leverera onlineupplevelser.
 
-Den här självstudiekursen är ett komplett ramverk för interaktiv kommunikation. Självstudiekursen är ordnad i ett användningsfall och i flera guider. Varje guide hjälper dig att skapa funktioner som används som byggstenar för att skapa en interaktiv kommunikation.
+Den här självstudiekursen är ett komplett ramverk för interaktiv kommunikation. Självstudiekursen är indelad i ett användningsfall och i flera guider. Varje guide hjälper dig att skapa funktioner som används som byggstenar för att skapa en interaktiv kommunikation.
 
 Följande bild visar de byggstenar som krävs för att skapa ett interaktivt meddelande.
 
