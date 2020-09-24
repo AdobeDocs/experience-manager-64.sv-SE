@@ -6,11 +6,11 @@ seo-description: 'Planering och förståelse krävs för att hantera ett projekt
 uuid: 61b45b1b-af0b-4b1b-9a52-6767611fc1ab
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/MANAGING
+topic-tags: managing-checklist, introduction
 content-type: reference
-topic-tags: introduction
 discoiquuid: b891009b-d3b1-402a-920a-014366f342f0
 translation-type: tm+mt
-source-git-commit: f5c0d5032073b91c0b3199bb42709b8e679fa6a0
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '3313'
 ht-degree: 0%
@@ -57,13 +57,13 @@ Kalkylbladet **Projektpulsslag** ger en grafisk översikt över kritiska mätvä
 
 ## Status efter roll {#status-by-role}
 
-Kalkylbladet **Status efter roll** visar en detaljerad beskrivning av **[hälsa, kvalitet och fullständighet](#project-heartbeat-dashboard)**efter**[ fas](#phases-and-milestones)** och **[persona](#persona)**.
+Kalkylbladet **Status efter roll** visar en detaljerad beskrivning av **[hälsa, kvalitet och fullständighet](#project-heartbeat-dashboard)** efter **[fas](#phases-and-milestones)** och **[persona](#persona)**.
 
 ## Faser och milstolpar {#phases-and-milestones}
 
 Projektplanen är uppdelad i olika faser (på hög nivå).
 
-Varje fas innehåller sina egna milstolpar. För varje [person](#persona) (eller roll) listas de relevanta milstolparna tillsammans med de dokument som krävs för att producera de definierade slutprodukterna.
+Varje fas innehåller sina egna milstolpar. För varje [person](#persona) (eller roll) listas de relevanta delmålen tillsammans med de dokument som krävs för att producera de definierade slutprodukterna.
 
 >[!NOTE]
 >
@@ -203,7 +203,7 @@ Att planera utvecklingsarbetet är avgörande för att säkerställa att projekt
    * Grundläggande kodstruktur för projektet
    * Kodartefakter (paket, paket osv.)
    * Uppdelning av mallar/komponenter och deras relationer
-   * Detaljerad information om nödvändiga anpassningar (specifika överlägg kommer senare)
+   * Detaljerad information om nödvändiga anpassningar (specifika övertäckningar kommer senare)
    * Utformning av de arbetsflöden som lösningen kräver (t.ex. skapande av innehåll, godkännande, publicering, omvandlingar, import, export osv.)
    * Särskild hänsyn till komplexa moduler som MSM, Commerce och integrering med tredje part
 
@@ -273,7 +273,7 @@ På liknande sätt måste åtgärderna planeras på rätt sätt för att säkers
 
 * **Återställningsplan**
 
-   Kontrollera att du har en återställningsplan. I en krissituation måste detta finnas tillgängligt för att säkerställa produktionsanvändningen av AEM. Detta bör omfatta situationer som säkerhetskopiering, återställning, reserv och andra.
+   Kontrollera att du har en återställningsplan. I en krissituation måste detta finnas tillgängligt för att säkerställa produktionsanvändningen av AEM. Detta bör omfatta situationer som säkerhetskopiering, återställning, återställning och reservlösningar.
 
 ### Utveckling {#development}
 
@@ -504,7 +504,7 @@ Affärsanalytiker:
 Utvecklingsledd:
 
 * Ansvarar för det tekniska genomförandet av projektet.
-* Ansvarar för att välja en utvecklingsmetod som uppfyller kundens krav.
+* Ansvarar för att välja en utvecklingsmetod som är kompatibel med kundens krav.
 * Utarbeta en utvecklingsstrategi:
    * säkerställa att den är anpassad efter nyckeltal för verksamhet och prestanda
    * med beaktande av kriterier för framgång och definition,
