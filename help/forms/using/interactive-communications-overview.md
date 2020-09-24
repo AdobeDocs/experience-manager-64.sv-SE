@@ -5,11 +5,11 @@ description: Den här artikeln innehåller översikt, exempel på användningsom
 seo-description: Nyckelfunktioner för interaktiv kommunikation, exempel på användning, arbetsflöde för att skapa och skillnader mellan interaktiv kommunikation och korrespondenshantering
 uuid: a06b4ac7-ca20-4d6d-b2b7-87b21e2f5cf9
 contentOwner: gtalwar
+topic-tags: interactive-communications, introduction
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
-topic-tags: introduction
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 translation-type: tm+mt
-source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 2%
@@ -111,7 +111,7 @@ Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa ku
   <tr>
    <td>Redigering</td> 
    <td>Dra-och-släpp-gränssnitt för att skapa utskrift och webbkanal</td> 
-   <td>Ingen dra och släpp-mekanism </td> 
+   <td>Ingen dra och släpp-funktion </td> 
   </tr>
   <tr>
    <td>Diagram</td> 
