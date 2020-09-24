@@ -5,13 +5,14 @@ solution-hub-url: https://helpx.adobe.com/support/experience-manager/6-4.html
 solution-icon: assets/experience-cloud-logo-24.png
 getting-started-title: Komma igång
 getting-started-url: https://helpx.adobe.com/experience-manager/tutorials.html
-tutorials-title: Självstudiekurser
+tutorials-title: Tutorials
 tutorials-url: https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html
 mini-toc-levels: 2
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-64.sv-SE
+solution: Experience Manager
 index: y
 translation-type: tm+mt
-source-git-commit: a58558fe18743e1aee0d65da7a2140561bc97e98
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 8%
