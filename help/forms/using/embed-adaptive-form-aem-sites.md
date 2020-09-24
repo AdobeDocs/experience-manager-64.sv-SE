@@ -6,10 +6,10 @@ seo-description: Du kan bädda in anpassningsbara formulär AEM webbplatssidor. 
 uuid: 59b49e2f-6d95-42e5-b31e-fc40936c42d2
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
-topic-tags: interactive-communications
+topic-tags: interactive-communications, author
 discoiquuid: 43362643-69cd-4006-a613-f998c79eeddc
 translation-type: tm+mt
-source-git-commit: d6595efef33b3c296d427dcfac39c377bd42fc9f
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '1105'
 ht-degree: 0%
@@ -27,9 +27,9 @@ Mer information om hur du bäddar in adaptiva formulär på en extern webbsida f
 
 På AEM Sites-sidan kan du lägga till ett anpassningsbart formulär eller interaktiv kommunikation med:
 
-* **[AEM Forms Container-komponenten](/help/forms/using/embed-adaptive-form-aem-sites.md#af-component)**AEM Forms innehåller en komponent som du kan lägga till på dina webbplatssidor. Med AEM Forms Container-komponenten kan du bädda in ett adaptivt formulär och interaktiv kommunikation.
+* **[AEM Forms Container-komponenten](/help/forms/using/embed-adaptive-form-aem-sites.md#af-component)** AEM Forms innehåller en komponent som du kan lägga till på dina webbplatssidor. Med AEM Forms Container-komponenten kan du bädda in ett adaptivt formulär och interaktiv kommunikation.
 
-* **[Resursläsaren](/help/forms/using/embed-adaptive-form-aem-sites.md#asset-browser)**Alla formulär och interaktiv kommunikation du skapar finns under Assets. Du kan dra och släppa formuläret som en resurs på sidan.
+* **[Resursläsaren](/help/forms/using/embed-adaptive-form-aem-sites.md#asset-browser)** Alla formulär och interaktiv kommunikation du skapar finns under Assets. Du kan dra och släppa formuläret som en resurs på sidan.
 
 ## Förutsättningar {#prerequisites}
 
