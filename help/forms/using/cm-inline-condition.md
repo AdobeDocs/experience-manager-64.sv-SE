@@ -6,10 +6,10 @@ seo-description: 'Med hjälp av textbundna villkor och upprepningar i Interactiv
 uuid: 16e38929-f81b-4582-9daf-6c756a4390e9
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4
-topic-tags: interactive-communications
+topic-tags: interactive-communications, correspondence-management
 discoiquuid: f376b8c1-e176-4fe6-b298-f3d493c59319
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '1715'
 ht-degree: 0%
@@ -100,7 +100,7 @@ Du kan dessutom ange regel/villkor i den upprepade konstruktionen för att villk
 
 I följande exempel visas hur du använder upprepning för att strukturera och återge kreditkortstransaktionerna i en interaktiv kommunikation.
 
-1. I ett formulärdatamodellbaserat textdokumentfragment infogar du relevanta formulärdatamodellsobjekt (och inbäddad text som krävs för etiketterna, som i det här exemplet):
+1. I ett formulärdatamodellbaserat textdokumentfragment infogar du relevanta datamodellsobjekt (och inbäddad text som krävs för etiketterna, som i det här exemplet):
 
    ![1_elementstext](assets/1_elementstext.png)
 
@@ -153,7 +153,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
    Dessa DD-element återger en lista över de transaktioner som gjorts på kreditkortet med följande information:
 
-   Transaktionsdatum, Transaktionsbelopp och Transaktionstyp (debet eller kredit)
+   Transaktionsdatum, Transaktionsbelopp och Transaktionstyp (Debit eller Credit)
 
 1. Bädda in texten i DD-elementen för att göra satsen mer läsbar, till exempel:
 
@@ -237,4 +237,4 @@ Du kan behöva infoga tomma textbundna villkor och bädda in text och DD-element
 
 ![emptycondition](assets/emptycondition.png)
 
-Vi rekommenderar dock att du, om det är möjligt, infogar text- och DD-elementen först i textmodulen med avsedd formatering, t.ex. punkter, och därefter infogar ett textbundet villkor.
+Vi rekommenderar dock att du, om det är möjligt, infogar text- och DD-elementen först i textmodulen med avsedd formatering, t.ex. punkter, och sedan tillämpar ett textbundet villkor.
