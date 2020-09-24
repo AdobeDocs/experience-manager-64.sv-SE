@@ -3,10 +3,10 @@ description: 'Dynamic Media Newsletter från Experience League är ett månatlig
 keywords: dynamic media;newsletter;product updates;tips and tricks;events;customer success;blog;blogs;images;videos;features;capabilities
 seo-description: Det här enda nyhetsbrevet innehåller resurser för att bygga upp kunskapen, bland annat videor, översikter över lösningar och introduktioner av några av de viktigaste funktionerna som förinställningar för bilder, visningsinställningar, videoprofiler med mera.
 seo-title: 'Adobe Dynamic Media Newsletter '
-solution: Dynamic Media
+solution: Dynamic Media Classic
 title: Dynamic Media Newsletter
 translation-type: tm+mt
-source-git-commit: 787fcf312eabcb44cfe114b5b3b80341fa295637
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 0%
