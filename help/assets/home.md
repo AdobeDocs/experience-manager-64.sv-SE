@@ -1,16 +1,17 @@
 ---
-title: Användarhandbok för AEM 6.4 Assets
+title: Resurshandbok
 description: Den här guiden täcker alla AEM Assets-uppgifter, t.ex. hur man skapar, hanterar, levererar och optimerar digitala resurser.
+user-guide-title: Resurshandbok
 translation-type: tm+mt
-source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+source-git-commit: 405733b2084621773c2992121be8d540eeba39a9
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 18%
+source-wordcount: '336'
+ht-degree: 19%
 
 ---
 
 
-# Användarhandbok för AEM 6.4 Assets
+# Resurshandbok
 
 Den här guiden täcker alla AEM Assets-uppgifter, t.ex. hur man skapar, hanterar, levererar och optimerar digitala resurser.
 
