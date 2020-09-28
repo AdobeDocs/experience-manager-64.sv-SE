@@ -3,9 +3,9 @@ title: Aktivera tillgångsinsikter via DTM
 description: Lär dig hur du använder DTM (Adobe Dynamic Tag Management) för att aktivera tillgångsinsikter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
+source-git-commit: 994dd56ce13b2d1f959e392e181d752e994bf198
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '625'
 ht-degree: 4%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 4%
 
 # Aktivera tillgångsinsikter via DTM {#enabling-asset-insights-through-dtm}
 
-Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknadsföringsverktyg. Det tillhandahålls kostnadsfritt till Adobe Analytics-kunder.
+Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknadsföringsverktyg. Det tillhandahålls kostnadsfritt till Adobe Analytics-kunder. Du kan antingen anpassa din spårningskod för att aktivera CMS-lösningar från tredje part för att använda resursinsikter eller så kan du använda DTM för att infoga resursinsikter-taggar. Insikter stöds endast och tillhandahålls för bilder.
 
-Även om du kan anpassa din spårningskod för att aktivera CMS-lösningar från tredje part för att använda resursinsikter, rekommenderar Adobe att du använder DTM för att infoga resursinsikter-taggar.
+>[!CAUTION]
+>
+>Adobe DTM är ersatt med Adobe Experience Platform Launch och kommer snart att nå [slutet](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f). Adobe rekommenderar att du [använder Launch för att få tillgångsinsikter](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html).
 
 Gör så här för att aktivera tillgångsinsikter via DTM:
 
@@ -49,7 +51,6 @@ Gör så här för att aktivera tillgångsinsikter via DTM:
    >* Anropet till `assetAnalytics.dispatcher.init()` tas bort. Funktionen förväntas anropas när inläsningen av DTM:s Adobe Analytics-verktyg är klar.
    >* Beroende på var sidspåraren för tillgångsinsikter finns (till exempel AEM, CDN och så vidare) kan skriptkällans ursprung kräva ändringar.
    >* För AEM sidspåraren ska källan peka på en publiceringsinstans med hjälp av värdnamnet för dispatcher-instansen.
-
 
 
 1. Öppna [https://dtm.adobe.com](https://dtm.adobe.com). Klicka på Översikt i webbegenskapen och klicka på Lägg till verktyg eller öppna ett befintligt Adobe Analytics-verktyg. När du skapar verktyget kan du ställa in konfigurationsmetoden till Automatisk.
