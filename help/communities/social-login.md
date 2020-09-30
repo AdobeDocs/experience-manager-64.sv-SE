@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
 translation-type: tm+mt
-source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+source-git-commit: 5542ec45e64595a8e7159d925fdcbfff468ae7ec
 workflow-type: tm+mt
-source-wordcount: '2682'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ De steg som krävs är:
       * Skapa och publicera en [Twitter Connect-molntjänst](#create-a-twitter-connect-cloud-service).
 
 
-1. [**Aktivera **social inloggning](#enable-social-login)för en communitywebbplats.
+1. [**Aktivera** social inloggning](#enable-social-login) för en communitywebbplats.
 
 Det finns två grundläggande begrepp:
 
@@ -98,7 +98,7 @@ När programmet har skapats letar du reda på **[!UICONTROL App ID]** - och **[!
 
 ### Skapa en Facebook Connect-Cloud Service {#create-a-facebook-connect-cloud-service}
 
-Instansen [Adobe Granite OAuth Application och Provider](https://chl-author.corp.adobe.com/content/help/en/experience-manager/6-4/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) , som initieras genom att en molntjänstkonfiguration skapas, identifierar Facebook-programmet och medlemsgrupperna som de nya användarna läggs till i.
+Instansen [Adobe Granite OAuth Application och Provider](#adobe-granite-oauth-application-and-provider) , som initieras genom att en molntjänstkonfiguration skapas, identifierar Facebook-programmet och medlemsgrupperna som de nya användarna läggs till i.
 
 1. Logga in med administratörsbehörighet på AEM författarinstans.
 1. Välj **[!UICONTROL Tools > Cloud Services > Facebook Social login configuration]**.
@@ -285,7 +285,7 @@ Resultatet är en [Adobe Granite OAuth-programinstans och Provider](https://help
 
 ### AEM Communities Twitter OAuth Provider {#aem-communities-twitter-oauth-provider}
 
-AEM Communities-konfigurationen utökar instansen av OAuth-programmet och providern för [Adobe Granite](#adobe-granite-oauth-application-and-provider) . Leverantören måste redigeras för att tillåta användaruppdateringar.
+AEM Communities-konfigurationen utökar instansen av [Adobe Granite OAuth-programmet och providern](#adobe-granite-oauth-application-and-provider) . Leverantören måste redigeras för att tillåta användaruppdateringar.
 
 Om redigering är nödvändig, för varje AEM publiceringsinstans:
 
