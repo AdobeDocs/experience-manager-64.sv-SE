@@ -10,9 +10,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: aee5f5a7-8462-4d42-8d96-8a7eb317770e
 translation-type: tm+mt
-source-git-commit: b46164c81890a41e3811a65534c264884e8562fc
+source-git-commit: 821cbc7fc1f92f1ac2a4044798c7e008c6248b92
 workflow-type: tm+mt
-source-wordcount: '2247'
+source-wordcount: '2297'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,10 @@ Om du använder Apache Maven som ett byggsystem (vilket är fallet för de flest
 
 Om ditt företag redan använder en Maven Repository Manager, t.ex. Sonatype Nexus, Apache Archiva eller JFrog Artifactory, lägger du till rätt konfiguration i ditt projekt som referens till den här databashanteraren och lägger till Adobe Maven-databasen ([https://repo.adobe.com/nexus/content/groups/public/](https://repo.adobe.com/nexus/content/groups/public/)) i din databashanterare.
 
+>[!NOTE]
+>
+>Från och med AEM 6.4.8.2 finns UberJar och andra tillhörande artefakter i [Maven Central-databasen](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/) i stället för i Adobe Public Maven-databasen (repo.adobe.com). Huvudfilen för UberJar har bytt namn till `uber-jar-<version>.jar`. Därför finns det inget värde `classifier`för `apis` -taggen `dependency` som värde.
+
 Om du inte använder en databashanterare måste du lägga till ett *databaselement* i din *pom.xml* -fil:
 
 ```xml
@@ -67,7 +71,7 @@ Om du inte använder en databashanterare måste du lägga till ett *databaseleme
     <repository>
         <id>adobe-public-releases</id>
         <name>Adobe Public Repository</name>
-        <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+        <url>https://repo.maven.apache.org/maven2/</url>
         <layout>default</layout>
     </repository>
 </repositories>
@@ -75,7 +79,7 @@ Om du inte använder en databashanterare måste du lägga till ett *databaseleme
     <pluginRepository>
         <id>adobe-public-releases</id>
         <name>Adobe Public Repository</name>
-        <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+        <url>https://repo.maven.apache.org/maven2/</url>
         <layout>default</layout>
     </pluginRepository>
 </pluginRepositories>
@@ -447,7 +451,7 @@ Nedanstående beroenden måste läggas till i modulens POM `content` .
 
 >[!NOTE]
 >
->Om du inte importerar produktberoenden enligt beskrivningen ovan måste de också läggas till i den överordnade POM tillsammans med den version som matchar din AEM enligt beskrivningen ovan. Kommentarerna i varje post nedan visar det paket som du vill söka efter i Beroendesökaren.
+>Om du inte importerar produktberoenden enligt beskrivningen ovan måste de också läggas till i den överordnade POM tillsammans med den version som matchar din AEM enligt beskrivningen ovan. Kommentarerna i varje post nedan visar paketet som du vill söka efter i Beroendesökaren.
 
 >[!NOTE]
 >
