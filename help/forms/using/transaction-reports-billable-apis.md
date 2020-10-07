@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager
 discoiquuid: 82e72ffb-2faa-45fe-8bb2-f485d8fa043e
 translation-type: tm+mt
-source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+source-git-commit: ecaeabfdd31ed35229fe7e41b5472e8582fa28db
 workflow-type: tm+mt
-source-wordcount: '1881'
+source-wordcount: '1877'
 ht-degree: 1%
 
 ---
@@ -350,7 +350,7 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
 
 ## Fakturerbara API:er för datainhämtning {#billable-data-capture-apis}
 
-Alla överföringshändelser för adaptiva formulär, HTML5 Forms och formuläruppsättningar räknas som transaktioner. Som standard räknas inte inlämning av ett PDF-formulär som en transaktion. Använd det angivna API:t för [transaktionsrapporter](https://www.bdnsw.gov.bn/PublishingImages/page-under-construction.jpg) för att spela in PDF forms som transaktioner.
+Alla överföringshändelser för adaptiva formulär, HTML5 Forms och formuläruppsättningar räknas som transaktioner. Som standard räknas inte inlämning av ett PDF-formulär som en transaktion. Använd det angivna API:t för [transaktionsrapporter](record-transaction-custom-implementation.md) för att spela in PDF forms som transaktioner.
 
 ### Adaptiv Forms {#adaptive-forms}
 
@@ -364,7 +364,7 @@ Alla överföringshändelser för adaptiva formulär, HTML5 Forms och formuläru
   </tr>
   <tr>
    <td>Skicka ett anpassat formulär</td> 
-   <td>Skickar ett adaptivt formulär till en konfigurerad sändningsåtgärd. </td> 
+   <td>Skickar ett anpassat formulär till den konfigurerade skicka-åtgärden. </td> 
    <td>Forms har skickats</td> 
    <td>
     <ul> 
