@@ -4,9 +4,9 @@ description: Versionsinformation om Adobe Experience Manager 6.4 Cumulative Fix 
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 3b96c351b3deb72e1381e101433f4246fd26af1b
+source-git-commit: e7da0bb7906c3ad3d04531db0abfbc658646f6e4
 workflow-type: tm+mt
-source-wordcount: '3346'
+source-wordcount: '3364'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ AEM 6.4.8.2 är ett Cumulative Fix Pack (CFP) som är beroende av AEM 6.4 Servic
 
 I AEM 6.4.8.2 uppdateras den inbyggda databasen (Apache Jackrabbit Oak) till version 1.8.22.
 
-Mer information om bestruket finpapper och andra typer av releaser finns i [AEM Uppdatera definitioner för frisläppande av fordon](../sites-deploying/update-release-vehicle-definitions.md)
+Mer information om bestruket finpapper och andra typer av releaser finns i [AEM Uppdatera definitioner för frisläppande av fordon](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/update-release-vehicle-definitions.html)
 
 Adobe Experience Manager 6.4.8.2 innehåller korrigeringar för följande problem.
 
@@ -175,7 +175,7 @@ Några viktiga högdagrar i AEM 6.4.8.1 är:
 * Borttagen Paketdelningsintegrering med Adobe Experience Manager.
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.8.21.
 
-Mer information om bestruket finpapper och andra typer av releaser finns i [AEM Uppdatera definitioner för frisläppande av fordon](../sites-deploying/update-release-vehicle-definitions.md)
+Mer information om bestruket finpapper och andra typer av releaser finns i [AEM Uppdatera definitioner för frisläppande av fordon](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/update-release-vehicle-definitions.html)
 
 Adobe Experience Manager 6.4.8.1 innehåller korrigeringar av följande problem.
 
