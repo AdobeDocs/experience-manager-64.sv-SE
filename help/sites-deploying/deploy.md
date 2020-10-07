@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 6696c325-d188-41c8-a39f-c8ae7f339fe8
 translation-type: tm+mt
-source-git-commit: b7be355f788f07eea2d1333abb4220dd645ef53f
+source-git-commit: e7da0bb7906c3ad3d04531db0abfbc658646f6e4
 workflow-type: tm+mt
-source-wordcount: '1843'
+source-wordcount: '1835'
 ht-degree: 1%
 
 ---
@@ -58,7 +58,6 @@ När du har lärt dig grunderna hittar du mer avancerad och detaljerad informati
 * [Introduktion till AEM](/help/sites-deploying/platform.md)
 * [Riktlinjer för prestanda](/help/sites-deploying/performance-guidelines.md)
 * [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md)
-* [Uppdatera definitioner för frisläppningsfordon](/help/sites-deploying/update-release-vehicle-definitions.md)
 * [Vad är AEM Screens?](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
 ## Grundläggande begrepp {#basic-concepts}
@@ -128,13 +127,13 @@ Med AEM Managed Services kan man dra nytta av följande fördelar:
 
 **Cloud Manager**: Cloud Manager, som ingår i Adobe Experience Manager Managed Services-erbjudandet, är en självbetjäningsportal som ytterligare gör det möjligt för organisationer att självhantera Adobe Experience Manager i molnet. Den innehåller en modern pipeline för kontinuerlig integrering och kontinuerlig leverans (CI/CD) som gör att IT-team och implementeringspartners kan snabba upp leveransen av anpassningar eller uppdateringar utan att kompromissa med prestanda eller säkerhet. Cloud Manager är bara tillgängligt för Adobe-kunder med hanterade tjänster.
 
-Mer information om Cloud Manager och dess resurser finns i användarhandboken för [**Cloud Manager **](https://helpx.adobe.com/experience-manager/cloud-manager/user-guide.html).
+Mer information om Cloud Manager och dess resurser finns i användarhandboken för [**Cloud Manager**](https://helpx.adobe.com/experience-manager/cloud-manager/user-guide.html).
 
 ## Komma igång {#getting-started}
 
 ### Förutsättningar {#prerequisites}
 
-Medan produktionsinstanser vanligtvis körs på dedikerade datorer som kör ett operativsystem som stöds officiellt (se [Tekniska krav](/help/sites-deploying/technical-requirements.md)) kommer Experience Manager-servern att köras på alla system som stöder [**Java Standard Edition 8 **](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+Medan produktionsinstanser vanligtvis körs på dedikerade datorer som kör ett operativsystem som stöds officiellt (se [Tekniska krav](/help/sites-deploying/technical-requirements.md)) kommer Experience Manager-servern att köras på alla system som stöder [**Java Standard Edition 8**](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 För att bli bekant och för att kunna utveckla AEM är det mycket vanligt att använda en instans som är installerad på din lokala dator och som kör Apple OS X eller skrivbordsversioner av Microsoft Windows eller Linux.
 
@@ -142,7 +141,7 @@ På klientsidan fungerar AEM med alla moderna webbläsare (**Microsoft Edge**, *
 
 ### Hämta programvaran {#getting-the-software}
 
-Kunder med giltigt underhålls- och supportavtal bör ha fått ett e-postmeddelande med en kod och kunna hämta AEM från [**Adobe licenswebbplats **](https://licensing.adobe.com/). Affärspartners kan begära nedladdningsåtkomst från[**spphelp@adobe.com **](mailto:spphelp@adobe.com).
+Kunder med giltigt underhålls- och supportavtal bör ha fått ett e-postmeddelande med en kod och kunna hämta AEM från [**Adobe licenswebbplats**](https://licensing.adobe.com/). Affärspartners kan begära nedladdningsåtkomst från [**spphelp@adobe.com**](mailto:spphelp@adobe.com).
 
 Programpaketet AEM finns i två former:
 
@@ -267,7 +266,7 @@ Om instansen installerades från det grafiska användargränssnittet öppnas ett
 
 ### Starta och stoppa {#starting-and-stopping}
 
-När AEM har packat upp sig och startat för första gången startar du bara instansen genom att dubbelklicka på burkfilen i installationskatalogen, utan att installera om den.
+När AEM har packat upp sig och startat för första gången startar du bara instansen genom att dubbelklicka på burkfilen i installationskatalogen. Den installeras inte igen.
 
 Om du vill stoppa instansen från det grafiska användargränssnittet klickar du bara på **på/av** i datorprogrammets fönster.
 
@@ -275,7 +274,7 @@ Du kan också stoppa och starta AEM från kommandoraden. Om du redan har install
 
 **`<aem-install>/crx-quickstart/bin/`**
 
-Den här mappen innehåller följande Unix-baserade gränssnittsskript:
+Den här mappen innehåller följande Unix-basskalskript:
 
 * **`start`**: Startar instansen
 * `stop`: Stoppar instansen
@@ -320,6 +319,5 @@ Ovanstående avsnitt bör ge dig en god förståelse för grunderna i AEM instal
 * [Introduktion till AEM](/help/sites-deploying/platform.md)
 * [Riktlinjer för prestanda](/help/sites-deploying/performance-guidelines.md)
 * [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md)
-* [Uppdatera definitioner för frisläppningsfordon](/help/sites-deploying/update-release-vehicle-definitions.md)
 * [Vad är AEM Screens?](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
