@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
 workflow-type: tm+mt
 source-wordcount: '1842'
 ht-degree: 0%
@@ -119,7 +119,7 @@ Information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksf
 
 >[!NOTE]
 >
->Mer information om hur du skapar HTML-sidan som anropar `RenderFormFragment` Java-servern finns[i Skapa webbsidan](/help/forms/developing/rendering-forms.md#creating-the-web-page).
+>Mer information om hur du skapar HTML-sidan som anropar `RenderFormFragment` Java-servern finns i [Skapa webbsidan](/help/forms/developing/rendering-forms.md#creating-the-web-page).
 
 ### Skapa Java-programlogik för serverleten {#creating-java-application-logic-for-the-servlet}
 
@@ -379,7 +379,7 @@ Om du vill distribuera den Java-server som anropar Forms-tjänsten paketerar du 
 
 1. I **projektutforskaren** högerklickar du på `FragmentsWebApplication` projektet och väljer **Exportera** > **WAR-fil**.
 1. I textrutan **Webbmodul** skriver du namnet `FragmentsWebApplication` på Java-projektet.
-1. I textrutan **Mål** skriver du `FragmentsWebApplication.war`**filnamnet,**anger platsen för WAR-filen och klickar sedan på Slutför.
+1. I textrutan **Mål** skriver du `FragmentsWebApplication.war`**filnamnet,** anger platsen för WAR-filen och klickar sedan på Slutför.
 
 ### Distribuera WAR-filen till J2EE-programservern {#deploying-the-war-file-to-the-j2ee-application-server}
 
