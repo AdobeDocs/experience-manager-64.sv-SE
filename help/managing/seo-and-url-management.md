@@ -10,7 +10,7 @@ topic-tags: managing
 content-type: reference
 discoiquuid: 150b43e3-9fb3-4c1c-b1cd-ccfd162974ad
 translation-type: tm+mt
-source-git-commit: 5ea8fac7eb0d474aa27a0203ab324d6931ce5571
+source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
 workflow-type: tm+mt
 source-wordcount: '3115'
 ht-degree: 95%
@@ -254,7 +254,7 @@ Här är ett exempel på hur problemet uppstår:
 
 1. Dispatchern cachelagrar svaret på `/my-page.html` och returnerar svaret till användaren.
 1. En innehållsförfattare gör en ändring på sidan och aktiverar den.
-1. Dispatcherns rensningsagent skickar en begäran om ogiltigförklaring för `/content/my-brand/my-page`**.**Det gamla innehållet förblir cachelagrat och kommer att vara inaktivt eftersom dispatchern inte har någon sida cachelagrad på den här sökvägen.
+1. Dispatcherns rensningsagent skickar en begäran om ogiltigförklaring för `/content/my-brand/my-page`**.** Det gamla innehållet förblir cachelagrat och kommer att vara inaktivt eftersom dispatchern inte har någon sida cachelagrad på den här sökvägen.
 
 Det finns sätt att konfigurera anpassade rensningsregler för dispatcher som mappar den kortare URL:en till den längre URL:en för cachelagring av ogiltighetsposter.
 
