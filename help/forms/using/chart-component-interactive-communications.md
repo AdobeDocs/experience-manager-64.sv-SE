@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: interactive-communications
 discoiquuid: 16c7e698-258d-4e63-9828-f538dc7d3294
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
 workflow-type: tm+mt
-source-wordcount: '2394'
+source-wordcount: '2391'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,7 @@ För att uppnå detta måste du ange:
 * **[!UICONTROL Title]** för X- och Y-axeln (endast för kolumndiagram i utskriftskanalen i det här exemplet) - Mängd ($) för X-axeln och Utgift för Y-axeln.
 * **[!UICONTROL Label Direction]** (för stapeldiagram i utskriftskanalen endast i det här exemplet) - i det här exemplet `Tilt Left`
 
-* **[!UICONTROL Tooltip]** om du vill visa en utgift med musen (endast webbkanal) - i det här exemplet `${x}: $ ${y}`som visas som [utgiftsetikett: $ Belopp] (exempel: Theme Park Visit: $ 315)
+* **[!UICONTROL Tooltip]** för att visa en utgift med musen (endast webbkanal) - i det här exemplet `${x}: $ ${y}`som visas som `[Expense Label: $ Amount]` (Exempel: Theme Park Visit: $ 315)
 
 ![Kolumndiagram i tryckt utskrift av en interaktiv kommunikation](assets/chartprintchannel.png)**:** *Kolumndiagram i utskrift av interaktiv kommunikation*
 
