@@ -1,18 +1,18 @@
 ---
-title: AEM 6.4 Forms Användarhandbok
+title: Adobe Experience Manager 6.4 Forms Guide
 seo-title: AEM 6.4 Forms Användarhandbok
 description: Den här guiden täcker alla uppgifter som AEM Forms utför, inklusive hur man skapar, hanterar, publicerar och uppdaterar digitala formulär.
 seo-description: Omfattar alla AEM Forms-uppgifter, inklusive hur man skapar, hanterar, publicerar och uppdaterar digitala formulär.
 translation-type: tm+mt
-source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+source-git-commit: 2872b6ebbd5763e486857359b3bdee965f6c9d48
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '370'
 ht-degree: 18%
 
 ---
 
 
-# AEM 6.4 Forms Användarhandbok
+# Adobe Experience Manager 6.4 Forms Guide
 
 Den här guiden täcker alla uppgifter som AEM Forms utför, inklusive hur man skapar, hanterar, publicerar och uppdaterar digitala formulär.
 
