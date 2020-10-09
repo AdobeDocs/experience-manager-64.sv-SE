@@ -1,48 +1,48 @@
 ---
-title: Versionsinformation om AEM 6.4
-seo-title: Versionsinformation om AEM 6.4
-description: AEM Release Notes innehåller viktig information om den senaste utgåvan av AEM, inklusive vad som är nytt, vilka plattformar som stöds, borttagna och borttagna funktioner samt kända problem.
-seo-description: AEM Release Notes innehåller viktig information om den senaste utgåvan av AEM, inklusive vad som är nytt, vilka plattformar som stöds, borttagna och borttagna funktioner samt kända problem.
+title: Versionsinformation om Adobe Experience Manager 6.4
+seo-title: AEM 6.4 Versionsinformation
+description: AEM versionsinformation innehåller viktig information om den senaste versionen av AEM, inklusive vad som är nytt, vilka plattformar som stöds, borttagna och borttagna funktioner samt kända fel.
+seo-description: AEM versionsinformation innehåller viktig information om den senaste versionen av AEM, inklusive vad som är nytt, vilka plattformar som stöds, borttagna och borttagna funktioner samt kända fel.
 translation-type: tm+mt
-source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+source-git-commit: 2872b6ebbd5763e486857359b3bdee965f6c9d48
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 15%
+source-wordcount: '401'
+ht-degree: 16%
 
 ---
 
 
-# Versionsinformation om AEM 6.4
+# Versionsinformation om Adobe Experience Manager 6.4
 
-AEM Release Notes innehåller viktig information om den senaste utgåvan av AEM, inklusive vad som är nytt, vilka plattformar som stöds, borttagna och borttagna funktioner samt kända problem.
+AEM versionsinformation innehåller viktig information om den senaste versionen av AEM, inklusive vad som är nytt, vilka plattformar som stöds, borttagna och borttagna funktioner samt kända fel.
 
-## Viktiga AEM-artiklar
+## Viktiga AEM
 
 * [Kom igång med AEM](https://helpx.adobe.com/experience-manager/get-started.html)
-* [Senaste dokumentationsuppdateringar](https://helpx.adobe.com/experience-manager/documentation-updates.html)
-* [AEM Security Checklist](/help/sites-administering/security-checklist.md)
+* [Senaste dokumentationsuppdateringarna](https://helpx.adobe.com/experience-manager/documentation-updates.html)
+* [AEM](/help/sites-administering/security-checklist.md)
 
-## Användarhandböcker för AEM 6.4
+## AEM 6.4 användarhandböcker
 
 | Användarhandbok | Beskrivning |
 |--- |---|
 | [Användarhandbok för Assets](/help/assets/home.md) | Skapa, hantera, leverera och optimera digitala resurser. |
-| [Användarhandbok för formulär](/help/forms/home.md) | Den här guiden beskriver hur du skapar, hanterar, publicerar och uppdaterar digitala formulär. |
+| [Forms Användarhandbok](/help/forms/home.md) | Den här guiden beskriver hur du skapar, hanterar, publicerar och uppdaterar digitala formulär. |
 | [Användarhandbok för Communities](/help/communities/home.md) | Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner. |
-| [Administratörshandbok](/help/sites-administering/home.md) | Förstå hur man administrerar AEM |
-| [Redigeringshandbok](/help/sites-authoring/home.md) | I den här guiden förklaras begreppen för redigering i AEM. |
+| [Administratörshandbok](/help/sites-administering/home.md) | Förstå hur du administrerar AEM |
+| [Redigeringshandbok](/help/sites-authoring/home.md) | I den här handboken förklaras begreppen för redigering i AEM. |
 | [Användargränssnittets skrivguide](/help/sites-classic-ui-authoring/home.md) | I den här handboken förklaras begreppen för redigering i AEM i det klassiska användargränssnittet. |
 | [Användarhandbok för skärmar](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html) | Lär dig mer om den digitala signeringslösningen för att publicera dynamiska och interaktiva digitala upplevelser. |
 | [Distribuera användarhandbok](/help/sites-deploying/home.md) | Den här guiden visar grunderna i AEM. |
-| [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger upp din AEM-instans. |
-| [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM-projekt. |
+| [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger ut AEM. |
+| [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
-## Viktiga AEM-resurser
+## Viktiga AEM
 
-* [AEM-självstudiekurser](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [Dispatcher Användarhandbok](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
+* [AEM självstudiekurser](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
+* [Användarhandbok för Dispatcher](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
 * [Användarhandbok för HTML](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 * [Användarhandbok för kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
