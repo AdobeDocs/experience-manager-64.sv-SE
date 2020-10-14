@@ -4,9 +4,9 @@ description: Lär dig mer om olika resurshanterings- och redigeringsuppgifter so
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
+source-git-commit: c86c84efeb25673490373273a9f4720381e46454
 workflow-type: tm+mt
-source-wordcount: '9697'
+source-wordcount: '9713'
 ht-degree: 2%
 
 ---
@@ -424,7 +424,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
    >
    >Ikonen är tillgänglig i verktygsfältet tills inklistringen är klar. **[!UICONTROL Paste]**
 
-### Flytta eller byta namn på resurser {#moving-or-renaming-assets}
+## Flytta och byta namn på resurser {#moving-or-renaming-assets}
 
 När du flyttar resurser (eller mappar) till en annan plats dupliceras inte resurserna (eller mapparna) till skillnad från när du kopierar resursen. Resurserna (eller mapparna) placeras på målplatsen och tas bort från källplatsen. Du kan också byta namn på resursen när du flyttar den till den nya platsen. Om du flyttar en publicerad resurs till en annan plats kan du välja att publicera om resursen. Som standard avpubliceras en flyttningsåtgärd för en publicerad resurs automatiskt. Flyttad resurs publiceras på nytt om författaren väljer alternativet [!UICONTROL Republish] när resursen flyttas.
 
@@ -434,39 +434,42 @@ Så här flyttar du resurser eller mappar:
 
 1. Navigera till platsen för resursen som du vill flytta.
 
-1. Select the asset, and tap the **[!UICONTROL Move]** icon from the toolbar.
+![Du kan publicera om en redan publicerad resurs när du flyttar den](assets/republish-on-move.png)
 
-   ![move_icon](assets/move_icon.png)
+Så här flyttar du resurser eller mappar:
 
-1. Gör något av följande i **[!UICONTROL Move Assets]** guiden:
+1. Navigera till platsen för resursen som du vill flytta.
 
-   * Ange namnet på resursen när den har flyttats. Tryck sedan på **[!UICONTROL Next]** för att fortsätta.
-   * Tryck för **[!UICONTROL Cancel]** att stoppa processen.
+1. Select the asset, and click **[!UICONTROL Move]** option from the toolbar.
+   ![Alternativet Flytta i verktygsfältet Resurser](assets/do-not-localize/move_icon.png)
 
+1. Gör något av följande i [!UICONTROL Move Assets] guiden:
+
+   * Ange namnet på resursen när den har flyttats. Klicka sedan på **[!UICONTROL Next]** för att fortsätta.
+
+   * Klicka **[!UICONTROL Cancel]** för att stoppa processen.
    >[!NOTE]
    >
-   >Du kan ange samma namn för resursen om det inte finns någon resurs med det namnet på den nya platsen. Du bör emellertid använda ett annat namn om du flyttar resursen till en plats där det finns en resurs med samma namn. Om du använder samma namn genereras automatiskt en variant av namnet. Om resursen till exempel har namnet Fyrkant, genereras namnet Fyrkant1 för kopian.
-
-   >[!NOTE]
-   >
-   >Följande (blankstegsavgränsad lista med) tecken stöds inte:
-   >* resursens filnamn får inte innehålla  `* / : [ \ \ ] | # % { } ? &`
-   >* resursmappens namn får inte innehålla  `* / : [ \ \ ] | # % { } ? \" . ^ ; + & \t`
+   >* Du kan ange samma namn för resursen om det inte finns någon resurs med det namnet på den nya platsen. Du bör emellertid använda ett annat namn om du flyttar resursen till en plats där det finns en resurs med samma namn. Om du använder samma namn genereras automatiskt en variant av namnet. Om resursen till exempel har namnet Fyrkant, genereras namnet Fyrkant1 för kopian.
+   >* När namnet ändras tillåts inte tomt utrymme i filnamnet.
 
 
-1. Gör något av följande på **[!UICONTROL Select Destination]** sidan:
+1. Gör något av följande i **[!UICONTROL Select Destination]** dialogrutan:
 
-   * Navigera till resursernas nya plats och tryck sedan på **[!UICONTROL Next]** för att fortsätta.
-   * Tryck för **[!UICONTROL Back]** att gå tillbaka till **[!UICONTROL Rename]** sidan.
+   * Navigera till den nya platsen för resurserna och klicka sedan på **[!UICONTROL Next]** för att fortsätta.
+
+   * Klicka **[!UICONTROL Back]** för att gå tillbaka till **[!UICONTROL Rename]** skärmen.
 
 1. Om de resurser som flyttas har referenssidor, resurser eller samlingar visas fliken **[!UICONTROL Adjust References]** bredvid **[!UICONTROL Select Destination]** fliken.
 
-   Gör något av följande på **[!UICONTROL Adjust References]** sidan:
+   Gör något av följande på **[!UICONTROL Adjust References]** skärmen:
 
-   * Ange vilka referenser som ska justeras baserat på de nya detaljerna och tryck sedan på **[!UICONTROL Move]** för att fortsätta.
-   * Markera eller avmarkera referenser till resurserna i **[!UICONTROL Adjust]** kolumnen.
-   * Tryck för **[!UICONTROL Back]** att gå tillbaka till **[!UICONTROL Select Destination]** sidan.
-   * Tryck för **[!UICONTROL Cancel]** att stoppa flyttåtgärden.
+   * Ange vilka referenser som ska justeras baserat på den nya informationen och klicka sedan på **[!UICONTROL Move]** för att fortsätta.
+
+   * Markera/avmarkera referenser till resurserna i **[!UICONTROL Adjust]** kolumnen.
+   * Klicka **[!UICONTROL Back]** för att gå tillbaka till **[!UICONTROL Select Destination]** skärmen.
+
+   * Klicka **[!UICONTROL Cancel]** för att avbryta flyttningen.
 
    Om du inte uppdaterar referenser fortsätter de att peka på resursens tidigare sökväg. Om du justerar referenserna uppdateras de till den nya resurssökvägen.
 
