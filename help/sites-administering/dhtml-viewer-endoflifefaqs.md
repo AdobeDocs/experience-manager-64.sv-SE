@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: d94244ac-a5f6-4c95-ab8c-26b41d25863f
 translation-type: tm+mt
-source-git-commit: f1a5e4c5c8411e10887efab517115fee0fd1890a
+source-git-commit: 31ddda9f74541dcf58fe70971535ee4180f70d6e
 workflow-type: tm+mt
-source-wordcount: '1652'
-ht-degree: 1%
+source-wordcount: '1665'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +24,7 @@ Från och med den 31 januari 2014 upphör Scene7 DHTML-visningsprogramplattform 
 
 **Vad är förändringen?**
 
-Från och med den 31 januari 2014 kommer Scene7 officiellt att ha stöd för DHTML-visningsprogramplattformen.
+Från och med den 31 januari 2014 kommer Scene7 officiellt att ha stöd för DHTML-visningsprogrammets plattform.
 
 **Vad betyder&quot;slutet på livscykeln&quot;?**
 
@@ -131,4 +131,4 @@ Om du ser den inzoomade bilden genom att hålla musen över huvudbilden eller dr
 
 **Vem kontaktar jag för mer information?**
 
-Om dessa frågor och svar inte besvarar alla dina frågor kan du kontakta supporten ([s7support@adobe.com](mailto:s7support@adobe.com)) eller er kontoansvarige hos Adobe.
+Om dessa frågor och svar inte besvarar alla dina frågor, [använd Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) eller kontakta din kontoansvarige på Adobe.
