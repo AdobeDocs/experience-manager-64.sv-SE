@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: afbe9f80-c2a3-4a46-b9d6-4c9406667d7f
 translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+source-git-commit: 31ddda9f74541dcf58fe70971535ee4180f70d6e
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '736'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ Adobe testning gav följande resultat:
 * För bilder har svarstiden förbättrats med 7 %-28 % beroende på enhet och webbläsare. De mest betydande prestandavinster gjordes på iOS-enheter.
 * För tittarna har lästiden förbättrats med 15 %.
 
-The following demonstration illustrates the difference between HTTP/1 versus HTTP/2 loading:
+I följande exempel visas skillnaden mellan HTTP/1 och HTTP/2-inläsning:
 
 [https://http2.akamai.com/demo](https://http2.akamai.com/demo)
 
@@ -57,9 +57,8 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 
 ## Hur aktiverar jag HTTP/2 för mitt Dynamic Media Classic-konto? {#what-is-the-process-for-enabling-http-for-my-scene-account}
 
-Du måste initiera en begäran från Adobe Technical Support (`s7support@adobe.com`) för att växla till HTTP/2; det görs inte automatiskt åt dig.
-
-1. Ange följande information i din supportförfrågan:
+1. Du måste [använda Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) och begära att gå över till HTTP/2; det görs inte automatiskt åt dig.
+1. Ange följande information i ditt supportärende:
 
    * Primärt kontaktnamn, e-postadress och telefonnummer.
    * Alla domäner som ska överföras till HTTP2. Det vill säga, `images.company.com` eller `mycompany.scene7.com`.
@@ -78,7 +77,7 @@ Du måste initiera en begäran från Adobe Technical Support (`s7support@adobe.c
 
    1. Teknisk support lägger till dig i HTTP/2-väntelistan baserat på i vilken ordning förfrågningarna skickades.
    1. När Adobe är redo att hantera din begäran kontaktar supporten dig för att koordinera övergången och ange ett måldatum.
-   1. You will be notified after completion and can verify a successful transition over to HTTP2.
+   1. Du får ett meddelande när du är klar och du kan verifiera en lyckad övergång till HTTP2.
 
 
 
@@ -92,10 +91,10 @@ Förfrågningar behandlas i den ordning som de tas emot av teknisk support.
 
 ## Vilka är riskerna med att gå över till HTTP/2? {#what-are-the-risks-with-moving-to-http}
 
-The transition to HTTP/2 clears out your cache at the CDN because it involves moving to a new CDN configuration.
+Övergången till HTTP/2 tar bort ditt cacheminne vid CDN eftersom det handlar om att gå över till en ny CDN-konfiguration.
 
 Det icke-cachelagrade innehållet träffar direkt på Adobe-servrar tills cachen återskapas. På grund av detta planerar Adobe att hantera ett fåtal kundövergångar i taget så att godtagbara prestanda upprätthålls när vi drar in förfrågningar från vårt ursprung.
 
-## How can you verify whether a URL or website is activated with HTTP/2? {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
+## Hur kan du verifiera om en URL eller webbplats är aktiverad med HTTP/2? {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 
-You need to download an externsion to use with your Web browser. For Firefox and Chrome there is an extension called **[!UICONTROL HTTP/2 and SPDY Indicator]**. Browsers only support HTTP/2 securely, so it is necessary to call a URL with HTTPS to verify. Om HTTP/2 stöds anges detta av tillägget i form av en blå Flash-symbol och rubriken&quot;X-Firefox-Spdy&quot;: &quot;h2&quot;.
+Du måste ladda ned en extern version för att kunna använda den i webbläsaren. För Firefox och Chrome finns ett tillägg som kallas **[!UICONTROL HTTP/2 and SPDY Indicator]**. Webbläsare stöder bara säkert HTTP/2, så det är nödvändigt att anropa en URL med HTTPS för att verifiera. Om HTTP/2 stöds anges detta av tillägget i form av en blå Flash-symbol och rubriken&quot;X-Firefox-Spdy&quot;: &quot;h2&quot;.
