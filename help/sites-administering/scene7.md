@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: f55e68c3-3309-4400-bef9-fd3afa6e2b5f
 translation-type: tm+mt
-source-git-commit: a3a160a0281c1ea2ca050c2c747d6a5ec1d952b3
+source-git-commit: 31ddda9f74541dcf58fe70971535ee4180f70d6e
 workflow-type: tm+mt
-source-wordcount: '5296'
+source-wordcount: '5310'
 ht-degree: 1%
 
 ---
@@ -166,7 +166,7 @@ Så här använder du Dynamic Media och Dynamic Media Classic samtidigt:
    1. Konfigurera automatisk överföring till Dynamic Media Classic.
    1. Lägg till steget **Dynamic Media Classic-överföring** efter alla arbetsflödesstegen för dynamiska media *i slutet av* arbetsflödet för **Dam Update Asset** ( `https://<server>:<host>/cf#/etc/workflow/models/dam/update_asset.html)`
    1. (Valfritt) Begränsa uppladdning av dynamiska media Classic-resurser efter MIME-typ i [https://&lt;server>:&lt;port>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7AssetMimeTypeServiceImpl](http://localhost:4502/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7AssetMimeTypeServiceImpl). MIME-typer för resurser som inte finns i den här listan kommer inte att överföras till Dynamic Media Classic-servern.
-   1. (Valfritt) Konfigurera video i Dynamic Media Classic-konfigurationen. Du kan aktivera videokodning för antingen eller både Dynamic Media och Dynamic Media Classic samtidigt. Dynamiska återgivningar används för att förhandsgranska och spela upp lokalt AEM instansen, medan Dynamic Media Classic-videoåtergivningar genereras och lagras på Dynamic Media Classic-servrar. När du konfigurerar videokodningstjänster för både Dynamic Media och Dynamic Media Classic använder du en [videobearbetningsprofil](/help/assets/video-profiles.md) för resursmappen Dynamic Media Classic.
+   1. (Valfritt) Konfigurera video i Dynamic Media Classic-konfigurationen. Du kan aktivera videokodning för antingen eller både Dynamic Media och Dynamic Media Classic samtidigt. Dynamiska återgivningar används för att förhandsgranska och spela upp lokalt AEM instansen, medan videoåtergivningar i Dynamic Media Classic genereras och lagras på Dynamic Media Classic-servrar. När du konfigurerar videokodningstjänster för både Dynamic Media och Dynamic Media Classic använder du en [videobearbetningsprofil](/help/assets/video-profiles.md) för resursmappen Dynamic Media Classic.
    1. (Valfritt) [Konfigurera säker förhandsvisning i Dynamic Media Classic](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene).
 
 #### Begränsningar {#limitations}
@@ -217,7 +217,7 @@ Du kan konfigurera AEM att överföra resurser till Dynamic Media Classic. Resur
 Om du vill konfigurera Dynamic Media Classic för integrering med AEM måste du utföra följande steg:
 
 1. [Definiera en molnkonfiguration](#creating-a-cloud-configuration-for-scene) - Definierar mappningen mellan en Dynamic Media Classic-mapp och en Assets-mapp. Du måste slutföra det här steget även om du bara vill synkronisera ett steg (AEM Assets till Dynamic Media Classic).
-1. [Aktivera **Adobe CQ s7dam Dam Listener **](#enabling-the-adobe-cq-scene-dam-listener)- klar i[!UICONTROL OSGi]konsolen.
+1. [Aktivera **Adobe CQ s7dam Dam Listener**](#enabling-the-adobe-cq-scene-dam-listener) - klar i [!UICONTROL OSGi] konsolen.
 1. Om du vill AEM resurser automatiskt ska överföras till Dynamic Media Classic måste du aktivera det alternativet och lägga till Dynamic Media Classic i arbetsflödet för DAM-uppdateringsresurser. Du kan också överföra resurser manuellt.
 1. Lägger till Dynamic Media Classic-komponenter i sidosparken. Detta gör att användarna kan använda komponenter i Dynamic Media Classic på sina AEM sidor.
 1. [Mappa konfigurationen till sidan i AEM](#enabling-scene-for-wcm) - Det här steget krävs för att visa alla förinställningar för video som du har skapat i Dynamic Media Classic. Det krävs också om du behöver publicera en resurs utanför CQ-målmappen till Dynamic Media Classic.
@@ -425,7 +425,7 @@ Om du inte vill att resurser som skickas till Dynamic Media Classic ska publicer
 
 Innan du kan överföra resurser till Dynamic Media Classic utan att publicera dem måste du konfigurera följande:
 
-1. Kontakta Dynamic Media Classic Customer Care (s7support@adobe.com) om du vill aktivera säker förhandsvisning för ditt Dynamic Media Classic-konto.
+1. [Använd Admin Console för att skapa ett supportärende.](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) I ditt supportfall begär du att säker förhandsvisning ska aktiveras för ditt Dynamic Media Classic-konto.
 1. Följ anvisningarna för att [konfigurera en säker förhandsvisning för ditt Dynamic Media Classic-konto.](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html)
 
 Detta är samma steg som du följer för att skapa säkra testkonfigurationer i Dynamic Media Classic.
@@ -583,7 +583,7 @@ Du konfigurerar det godkända filformatet efter MIME-typ i OSGi-området (Open S
 
 1. Tryck på i det övre vänstra hörnet på CRXDE Lite-sidan **[!UICONTROL Save All]**.
 
-## Felsökning av Dynamic Media Classic och AEM {#troubleshooting-scene-and-aem-integration}
+## Felsökning av integrering med Dynamic Media Classic och AEM {#troubleshooting-scene-and-aem-integration}
 
 Om du har problem med att integrera AEM med Dynamic Media Classic hittar du lösningar i följande scenarier.
 
