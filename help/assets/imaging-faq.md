@@ -10,9 +10,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 83f8fc7773941a429bdf47425add64d2363e7851
+source-git-commit: 31ddda9f74541dcf58fe70971535ee4180f70d6e
 workflow-type: tm+mt
-source-wordcount: '1699'
+source-wordcount: '1707'
 ht-degree: 1%
 
 ---
@@ -120,8 +120,8 @@ Din första anpassade domän kostar inget extra med en Dynamic Media-licens.
 
 Du måste initiera begäran om att använda smart bildåtergivning; den inte aktiveras automatiskt.
 
-1. Initiera en begäran om teknisk support (e-post: s7support@adobe.com).
-1. Ange följande information i din supportförfrågan:
+1. [Använd Admin Console för att skapa ett supportärende.](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)
+1. Ange följande information i ditt supportärende:
 
    1. Primärt kontaktnamn, e-postadress, telefon.
    1. Alla domäner som ska aktiveras för smart bildbehandling (det vill säga images.company.com eller mycompany.scene7.com).
