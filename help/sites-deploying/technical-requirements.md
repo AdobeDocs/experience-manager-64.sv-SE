@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 4d3c4650-3e2a-43b1-ad2d-8d0ae2254ca9
 translation-type: tm+mt
-source-git-commit: 65346b3de98ec53e97c66fdac3be43b9c71e292a
+source-git-commit: d09956e5e7fb42e9c4b145e027778f209876239a
 workflow-type: tm+mt
-source-wordcount: '3143'
+source-wordcount: '3142'
 ht-degree: 0%
 
 ---
@@ -319,7 +319,7 @@ Adobe Experience Manager fungerar med följande serverplattformar:
  </tbody> 
 </table>
 
-1. Linux Kernel 2.6, 3.x och 4.x innehåller derivat från Red Hat-distributionen, inklusive Red Hat Enterprise Linux, CentOS, Oracle Linux och Amazon Linux. AEM funktioner för formulärtillägg stöds bara i CentOS 7 och Red Hat Enterprise Linux 6.5 och 7.
+1. Linux Kernel 2.6, 3.x och 4.x innehåller derivat från Red Hat-distributionen, inklusive Red Hat Enterprise Linux, CentOS, Oracle Linux och Amazon Linux. AEM Forms tilläggsfunktioner stöds endast i CentOS 7 och Red Hat Enterprise Linux 7.
 1. AEM Assets: Mer information finns i [Stöd för XMP av metadata](#requirements-for-aem-assets-xmp-metadata-write-back)
 1. AEM Assets: Inget stöd för Dynamic Media Imaging. Dynamic Media Video stöds.
 1. AEM Forms stöds bara på Ubuntu 16.04 LTS.
@@ -336,7 +336,7 @@ Adobe rekommenderar att du använder Adobes hanterade tjänster för att distrib
 
 I alla andra fall där AEM distribueras på Azure eller AWS, eller i någon annan molndatormiljö, kommer stöd från Adobe att finnas i den virtuella datormiljön i enlighet med de tekniska specifikationer som anges på den här sidan. Alla rapporterade problem som rör AEM som körs i någon av dessa molnmiljöer måste kunna reproduceras oberoende av alla molntjänster som är specifika för molndatormiljön, såvida inte molntjänsten specifikt stöds som en del av de tekniska krav som anges på den här sidan, till exempel Azure Blob Storage eller AWS S3.
 
-För rekommendationer om hur du distribuerar AEM på Azure eller AWS, utanför Adobes hanterade tjänster, rekommenderar vi att du arbetar direkt med molnleverantören eller Adobe partners som stöder distributionen av AEM i den molnmiljö du väljer. Den valda molnleverantören eller partnern ansvarar för storleksspecifikationerna, designen och implementeringen av arkitekturen, för att uppfylla dina specifika krav på prestanda, belastning, skalbarhet och säkerhet.
+För rekommendationer om hur du distribuerar AEM på Azure eller AWS, utanför Adobes hanterade tjänster, rekommenderar vi starkt att du arbetar direkt med molnleverantören eller Adobe partners som stöder distributionen av AEM i den molnmiljö du väljer. Den valda molnleverantören eller partnern ansvarar för storleksspecifikationerna, designen och implementeringen av arkitekturen, för att uppfylla dina specifika krav på prestanda, belastning, skalbarhet och säkerhet.
 
 ### Dispatcher Platforms (webbservrar) {#dispatcher-platforms-web-servers}
 
@@ -453,7 +453,7 @@ Om du vill ansluta med Microsoft Windows 7+ till en AEM som inte är säker med 
 
    * HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters
 
-1. Lägg till registerposten BasicAuthLevel i den här undernyckeln med värdet 2 eller mer.
+1. Lägg till registerposten BasicAuthLevel till den här undernyckeln med värdet 2 eller mer.
 
 Se [Microsoft Support KB 841215](https://support.microsoft.com/default.aspx/kb/841215).
 
