@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: introduction
 discoiquuid: 436aa424-d05e-4f3d-90ac-5ff3b05ddba8
 translation-type: tm+mt
-source-git-commit: 715cff841252d79504d702817f91db92df919bfc
+source-git-commit: f2b0d37a0666f2a0be9e7034da12dddf0c56fb25
 workflow-type: tm+mt
-source-wordcount: '2012'
+source-wordcount: '2011'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Sammanfattning av nya funktioner och förbättringar i AEM 6.4 Forms.
 
 AEM Forms innehåller flera nya funktioner och förbättringar som ytterligare effektiviserar skapande, hantering och användarupplevelser med anpassningsbara formulär och interaktiv kommunikation.
 
-Läs vidare för att få en snabb introduktion till nya funktioner och förbättringar. Mer information finns i dokumentationen. Se även AEM 6.4 [Versionsinformation](/help/release-notes/forms.md)för Forms. Fullständig dokumentation AEM 6.4 för Forms finns i [AEM 6.4 Forms User Guide](/help/forms/home.md).
+Läs vidare för att få en snabb introduktion till nya funktioner och förbättringar. Mer information finns i dokumentationen. Se även AEM 6.4 [Versionsinformation](/help/release-notes/forms.md)för Forms. Fullständig dokumentation AEM 6.4 för Forms finns i [AEM 6.4 Forms Guide](/help/forms/home.md).
 
 ## Interaktiv kommunikation {#interactive-communications}
 
@@ -136,7 +136,7 @@ En beräknad egenskap finns lokalt i en formulärdatamodell och finns inte i en 
 
 Mer information finns i [Arbeta med formulärdatamodell](/help/forms/using/work-with-form-data-model.md).
 
-### Förhandsgranska formulär och dokument med exempeldata {#preview-forms-and-documents-with-sample-data}
+### Förgranska formulär och dokument med exempeldata {#preview-forms-and-documents-with-sample-data}
 
 Med formulärdatamodellen kan du generera exempeldata för egenskaper för alla enheter i en formulärdatamodell. De genererade data motsvarar de datatyper som har konfigurerats för egenskaperna. När du förhandsgranskar ett anpassat formulär eller dokument som är kopplat till formulärdatamodellen återges det med förfyllda exempeldata.
 
@@ -176,7 +176,7 @@ Följande är förbättringar i Forms-centrerade AEM arbetsflöden: ・
 
 * Arbetsflödesmodellredigeraren är tillgänglig i Touch-användargränssnittet. Det hjälper dig att minska den tid som krävs för att skapa formulärbaserade AEM.
 * Arbetsflödessteg för att skicka e-post. Du kan till exempel använda e-poststeget för att skicka ett postdokument när ett arbetsflöde har slutförts.
-* Arbetsflödessteg för att använda formulärdatamodelltjänster i en arbetsflödesmodell. I det här steget kan du anropa dataintegreringstjänster utan att skriva någon anpassad kod. Du kan till exempel anropa en GET-tjänst för att få information om anställda från databasarkiv utan att behöva skriva någon anpassad kod.
+* Arbetsflödessteg för att använda formulärdatamodelltjänster i en arbetsflödesmodell. I det här steget kan du anropa dataintegreringstjänster utan att skriva någon anpassad kod. Du kan till exempel anropa en GET-tjänst för att få information om anställda från databasarkiv utan att behöva skriva någon egen kod.
 
 ## AEM Forms App {#aem-forms-app}
 
