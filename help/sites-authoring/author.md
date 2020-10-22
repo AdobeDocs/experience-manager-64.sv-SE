@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 72ee013a-7a60-41ee-9421-2846e4c6bc68
 translation-type: tm+mt
-source-git-commit: 8b75cf8fd862302446fbb3d8823eec2bd708febe
+source-git-commit: b009abd8b3d55bd7dd030d7b4828aec72d9fa9ff
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '555'
 ht-degree: 0%
 
 ---
@@ -35,10 +35,6 @@ I redigeringsmiljön finns mekanismer för att skapa, uppdatera och granska inne
 ![chlimage_1-289](assets/chlimage_1-289.png)
 
 I redigeringsmiljön är funktionaliteten för AEM tillgänglig via två användargränssnitt. För publiceringsmiljön utformar du hela det gränssnitt som är tillgängligt för användarna.
-
->[!NOTE]
->
->AEM och Dispatcher används för att publicera AEM.
 
 ## Författarmiljö {#author-environment}
 
@@ -96,4 +92,4 @@ När den AEM webbplatsen är en [communitywebbplats](/help/communities/overview.
 
 ## Dispatcher {#dispatcher}
 
-För att optimera prestanda för besökare på webbplatsen **[implementerar dispatchern](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)**belastningsfördelning och cachning.
+För att optimera prestanda för besökare på webbplatsen **[implementerar dispatchern](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)** belastningsfördelning och cachning.
