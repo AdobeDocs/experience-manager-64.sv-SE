@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author, adaptive_forms
 discoiquuid: 32369b0b-5abf-487d-ae6b-972c254eb7e2
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '644'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,7 @@ Så här implementerar du tjänsten reCAPTCHA i AEM Forms:
 1. Skapa konfigurationsbehållare för molntjänster.
 
    1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**.
+      * Mer information finns i dokumentationen [till](/help/sites-administering/configurations.md) Configuration Browser.
    1. Gör följande för att aktivera den globala mappen för molnkonfigurationer eller hoppa över det här steget för att skapa och konfigurera en annan mapp för molntjänstkonfigurationer.
 
       1. Markera mappen i Configuration Browser och tryck på **[!UICONTROL global]** den **[!UICONTROL Properties]**.
