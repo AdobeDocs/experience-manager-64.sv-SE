@@ -9,9 +9,9 @@ topic-tags: content-fragments
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 45e67357-4524-4d25-b5f1-21182b8e803c
 translation-type: tm+mt
-source-git-commit: 8b83be510a67fadaa666f2ba96fbb3fc82b9cb3d
+source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '650'
 ht-degree: 4%
 
 ---
@@ -41,6 +41,7 @@ Om du vill aktivera innehållsfragmentmodeller måste du:
 Om du vill [skapa en ny modell](#creating-a-content-fragment-model) för innehållsfragment **måste** du först aktivera dem med Configuration Manager:
 
 1. Navigera till **[!UICONTROL Tools]**, **[!UICONTROL General]** och öppna sedan **[!UICONTROL Configuration Browser]**.
+   * Mer information finns i dokumentationen [till](/help/sites-administering/configurations.md) Configuration Browser.
 1. Välj lämplig plats för webbplatsen.
 1. Använd **[!UICONTROL Create]** för att öppna dialogrutan där du:
 
