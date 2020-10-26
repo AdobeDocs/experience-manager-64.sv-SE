@@ -8,9 +8,9 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 40c0a17b-6894-44cc-b1f7-490913061532
 translation-type: tm+mt
-source-git-commit: 8922b6cfecfbb592e4f073254be68b24add6c5c7
+source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
 workflow-type: tm+mt
-source-wordcount: '1821'
+source-wordcount: '1829'
 ht-degree: 0%
 
 ---
@@ -178,6 +178,7 @@ Om du vill skapa en webbkanalmall definierar du en mapp där du kan spara de ska
 Så här skapar du en mapp för de redigerbara mallarna:
 
 1. Tryck på **Verktyg** ![Verktyg](assets/tools-icon.svg) > **Konfigurationsläsaren**.
+   * Mer information finns i dokumentationen [till](/help/sites-administering/configurations.md) Configuration Browser.
 1. Tryck på **Skapa** på sidan Configuration Browser.
 1. I dialogrutan **Skapa konfiguration** anger du **Create_First_IC_templates** som mappens titel, markerar **Redigerbara mallar** och trycker sedan på **Skapa**.
 
