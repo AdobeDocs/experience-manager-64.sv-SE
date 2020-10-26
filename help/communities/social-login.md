@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
 translation-type: tm+mt
-source-git-commit: 5542ec45e64595a8e7159d925fdcbfff468ae7ec
+source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2688'
 ht-degree: 0%
 
 ---
@@ -110,6 +110,7 @@ Instansen [Adobe Granite OAuth Application och Provider](#adobe-granite-oauth-ap
 1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**. Välj kontext och redigera egenskaper. Aktivera molnkonfigurationer om de inte har aktiverats ännu.
 
    ![config-propertiespng](assets/config-propertiespng.png)
+   * Mer information finns i dokumentationen [till](/help/sites-administering/configurations.md) Configuration Browser.
 
 1. Skapa/redigera konfigurationen av molntjänsten för Facebook.
 
@@ -259,6 +260,7 @@ Instansen [Adobe Granite OAuth Application och Provider](#adobe-granite-oauth-ap
 1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**. Välj kontext och redigera egenskaper. Aktivera molnkonfigurationer om de inte har aktiverats ännu.
 
    ![twitterkonfigproppning](assets/twitterconfigproppng.png)
+   * Mer information finns i dokumentationen [till](/help/sites-administering/configurations.md) Configuration Browser.
 
 1. Skapa/redigera konfiguration av Twitter-molntjänster.
 
@@ -444,7 +446,7 @@ Om traversal-varningar visas i loggarna bör du lägga till det här indexet.
 
 Inloggad med administratörsbehörighet för en författarinstans:
 
-1. Från global navigering: välj **Verktyg,[CRX/DE Lite](../../help/sites-developing/developing-with-crxde-lite.md).**
+1. Från global navigering: välj **Verktyg, [CRX/DE Lite](../../help/sites-developing/developing-with-crxde-lite.md).**
 1. Skapa ett index med namnet ntBaseLucene-oauth från en kopia av ntBaseLucene:
 
    * Under nod /oak:index
