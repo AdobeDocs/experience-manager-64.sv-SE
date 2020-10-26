@@ -8,9 +8,9 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 71bba66a-3cac-445b-9941-aa4bcf9b2160
 translation-type: tm+mt
-source-git-commit: 73d0dea62c294bea435364fb9c6892d80751d90d
+source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '685'
 ht-degree: 0%
 
 ---
@@ -53,6 +53,7 @@ Så här skapar du en webbkanalsmall:
 1. Skapa en mallmapp om du vill behålla dina webbmallar för interaktiv kommunikation, om du inte redan har en. Mer information finns i Mallmappar i [Sidmallar - redigerbar](/help/sites-developing/page-templates-editable.md).
 
    1. Tryck på **[!UICONTROL Tools]** tools-1 ![>](assets/tools-1.png) **[!UICONTROL Configuration Browser]**.
+      * Mer information finns i dokumentationen [till](/help/sites-administering/configurations.md) Configuration Browser.
    1. Tryck på **[!UICONTROL Create]** i Configuration Browser.
    1. I dialogrutan Skapa konfiguration anger du en rubrik för mappen, kontrollerar **[!UICONTROL Editable Templates]** och trycker **[!UICONTROL Create]**.
 
