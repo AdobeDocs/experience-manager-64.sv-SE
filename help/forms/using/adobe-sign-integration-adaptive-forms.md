@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 7d494c2e-d457-4d52-89be-a77ffa07eb88
 translation-type: tm+mt
-source-git-commit: 1c90faf2490dcf6ecfe67708633aee45e207aba0
+source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '900'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,7 @@ Du behöver följande för att kunna integrera Adobe Sign med AEM Forms:
 När förutsättningarna är uppfyllda utför du följande steg för att konfigurera Adobe Sign med AEM Forms på Author-instansen:
 
 1. I AEM Forms-författarinstansen går du till **Tools** ![hammer](assets/hammer.png) > **General** > **Configuration Browser**.
+   * Mer information finns i dokumentationen [till](/help/sites-administering/configurations.md) Configuration Browser.
 1. On the **[!UICONTROL Configuration Browser]** page, tap **[!UICONTROL Create]**.
 1. I **[!UICONTROL Create Configuration]** dialogrutan anger du en **[!UICONTROL Title]** för konfigurationen, aktiverar **[!UICONTROL Cloud Configurations]** och trycker på **[!UICONTROL Create]**. Den skapar en konfigurationsbehållare för molntjänster.
 1. Navigera till **Verktyg** ![hammare](assets/hammer.png) > **Cloud Services** > **Adobe Sign** och markera den konfigurationsbehållare som du skapade i steget ovan.
