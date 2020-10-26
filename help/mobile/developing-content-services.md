@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 discoiquuid: 6a7e5472-cb57-4c78-b183-7c6dcac11a4e
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '303'
 ht-degree: 1%
 
 ---
@@ -43,11 +43,13 @@ Content Services kan leverera innehållet som resurser, paketerad HTML (HTML/CSS
 >
 >Innan du börjar använda Content Services måste du aktivera flaggan Content Services. Om du vill kunna skapa och hantera modeller i din app måste du aktivera datamodeller i Configuration Browser.
 >
->Mer information finns i **[Administrera innehållstjänster](/help/mobile/developing-content-services.md)**.
+>Mer information finns i **[Administrera innehållstjänster](/help/mobile/developing-content-services.md)** .
+>
+>Mer information finns i dokumentationen [till](/help/sites-administering/configurations.md) Configuration Browser.
 
 ![chlimage_1-143](assets/chlimage_1-143.png)
 
-När du har angett flaggan Content Services och aktiverat datamodeller i Configuration Browser ska du läsa resurserna nedan för att komma igång med AEM Mobile Content Services. Bekanta dig med Content Services-koncept som modellhantering, enhetshantering följt av innehållsleverans/rendering för AEM Mobile Content Services.
+När du har angett flagga för innehållstjänster och aktiverat datamodeller i Configuration Browser ska du läsa resurserna nedan för att komma igång med AEM Mobile Content Services, lära dig mer om innehållstjänstkoncept som modellhantering, enhetshantering följt av innehållsleverans/rendering för AEM Mobile Content Services.
 
 * Modeller i databas
 * Återgivning och leverans
