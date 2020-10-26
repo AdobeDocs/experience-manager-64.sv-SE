@@ -10,7 +10,7 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: de6ed870-0e69-4d16-99e4-037dd5acf413
 translation-type: tm+mt
-source-git-commit: a3a160a0281c1ea2ca050c2c747d6a5ec1d952b3
+source-git-commit: 4b56b05117e52f38a6f7da0ab0d3b314769f2965
 workflow-type: tm+mt
 source-wordcount: '5893'
 ht-degree: 0%
@@ -33,7 +33,7 @@ En nyckelfaktor här är att för att identifiera potentiella problem måste du 
 | [Loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) övervakas. |  |  |
 | Systemövervakning körs kontinuerligt i bakgrunden. | Inklusive processor-, minnes-, disk- och nätverksanvändning. Med exempelvis iostat / vmstat / permon. | Loggade data visas och kan användas för att spåra prestandaproblem. Rådata är också tillgängliga. |
 | [AEM prestanda övervakas](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance). | Inklusive [begäranderäknare](/help/sites-deploying/monitoring-and-maintaining.md#request-counters) för övervakning av trafiknivåer. | Om en betydande eller långsiktig förlust av resultat konstateras bör en detaljerad undersökning göras. |
-| Du övervakar dina [replikeringsagenter](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-your-replication-agents). &quot; |  |  |
+| Du övervakar dina [replikeringsagenter](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-your-replication-agents). |  |  |
 | Rensa arbetsflödesinstanser regelbundet. | Databasstorlek och arbetsflödets prestanda. | Se [Vanlig tömning av arbetsflödesinstanser](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances). |
 
 ## Säkerhetskopior {#backups}
@@ -99,7 +99,7 @@ I det här avsnittet behandlas underhållsåtgärder som rör versionsfunktionen
 
 ### Översikt {#overview}
 
-Verktyget **Rensa versioner** finns i **[verktygskonsolen](/help/sites-administering/tools-consoles.md)under **Versionshantering****eller direkt på: &quot;
+Verktyget **Rensa versioner** finns i **[verktygskonsolen](/help/sites-administering/tools-consoles.md) under** Versionshantering **** eller direkt på:
 
 `https://<server>:<port>/etc/versioning/purge.html`
 
@@ -121,7 +121,7 @@ Verktyget **Rensa versioner** finns i **[verktygskonsolen](/help/sites-administe
 
 Så här rensar du versioner av en webbplats:
 
-1. Gå till **[verktygskonsolen](/help/sites-administering/tools-consoles.md), välj **Versionshantering**och dubbelklicka på&#x200B;**Rensa versioner****.
+1. Gå till **[verktygskonsolen](/help/sites-administering/tools-consoles.md) , välj** Versionshantering **och dubbelklicka på** Rensa versioner ****.
 1. Ange startsökvägen för innehållet som ska rensas (t.ex. `/content/geometrixx-outdoors`).
 
    * Om du bara vill rensa den nod som definieras av sökvägen avmarkerar du **Rekursiv**.
@@ -143,7 +143,7 @@ Så här rensar du versioner av en webbplats:
 Processerna **Torr körning** och **Töm** listar alla noder som har bearbetats. Under processen kan en nod ha någon av följande status:
 
 * `ignore (not versionnable)`: noden stöder inte versionshantering och ignoreras under processen.
-* `ignore (no version)`: noden har ingen version och ignoreras under processen. &quot;
+* `ignore (no version)`: noden har ingen version och ignoreras under processen.
 * `retained`: noden rensas inte.
 * `purged`: noden rensas.
 
@@ -317,10 +317,15 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
    >`org.apache.sling.commons.log.pattern` stöder upp till sex argument.
    >
    >{0} Tidsstämpeln av typen `java.util.Date`
+   >
    >{1} loggmarkören
-   >{2} namnet på den aktuella tråden\
-   >{3} namnet på loggen\
-   >{4} loggnivån\
+   >
+   >{2} namnet på den aktuella tråden
+   >
+   >{3} namnet på loggen
+   >
+   >{4} loggnivån
+   >
    >{5} loggmeddelandet
    >
    >Om logganropet innehåller en `Throwable` stackspårning läggs den till i meddelandet.
@@ -405,21 +410,20 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
    >* Ett tids-/datumschema kan anges som ett `java.util.SimpleDateFormat` mönster. Detta anger den tidsperiod efter vilken filen ska roteras. det suffix som läggs till i den roterade filen (för identifiering).
 
    >
-   >  Standardvärdet är &#39;.&#39;yyyy-MM-dd (för daglig loggrotation)
+   >Standardvärdet är &#39;.&#39;yyyy-MM-dd (för daglig loggrotation)
    >
-   >  Så vid midnatt den 20 januari 2010 (eller när det första loggmeddelandet efter detta blir exakt) kommer ../logs/error.log att byta namn till ../logs/error.log.2010-01-20. Loggning för den 21 januari kommer att skickas till (en ny och tom) ../logs/error.log tills den överförs vid nästa ändring av dagen.
+   >Så vid midnatt den 20 januari 2010 (eller när det första loggmeddelandet efter detta blir exakt) kommer ../logs/error.log att byta namn till ../logs/error.log.2010-01-20. Loggning för den 21 januari kommer att skickas till (en ny och tom) ../logs/error.log tills den överförs vid nästa ändring av dagen.
    >
-   >  | `'.'yyyy-MM` | Rotation i början av varje månad |
-   >  |---|---|
-   >  | `'.'yyyy-ww` | Rotation på den första dagen i varje vecka (beror på språkområdet). |
-   >  | `'.'yyyy-MM-dd` | Rotation vid midnatt varje dag. |
-   >  | `'.'yyyy-MM-dd-a` | Rotation vid midnatt och middag varje dag. |
-   >  | `'.'yyyy-MM-dd-HH` | Rotation överst varje timme. |
-   >  | `'.'yyyy-MM-dd-HH-mm` | Rotation i början av varje minut. |
+   >| `'.'yyyy-MM` | Rotation i början av varje månad |
+   >|---|---|
+   >| `'.'yyyy-ww` | Rotation på den första dagen i varje vecka (beror på språkområdet). |
+   >| `'.'yyyy-MM-dd` | Rotation vid midnatt varje dag. |
+   >| `'.'yyyy-MM-dd-a` | Rotation vid midnatt och middag varje dag. |
+   >| `'.'yyyy-MM-dd-HH` | Rotation överst varje timme. |
+   >| `'.'yyyy-MM-dd-HH-mm` | Rotation i början av varje minut. |
    >
-   >  Obs! När du anger tid/datum:
-   >
-   >  1. Du bör&quot;escape&quot;-text inom ett par enkla citattecken (&#39; &#39;);
+   >Obs! När du anger tid/datum:
+   > 1. Du bör&quot;escape&quot;-text inom ett par enkla citattecken (&#39; &#39;);
       >
       >     
       om du vill undvika att vissa tecken tolkas som mönsterbokstäver.
@@ -456,7 +460,7 @@ Dessa poster innehåller samma information som den som visas när du redigerar e
 
 #### OSGi Granskningsposter från webbkonsolen {#osgi-audit-records-from-the-web-console}
 
-OSGi-händelser genererar också granskningsposter som kan visas på fliken **Konfigurationsstatus** -> **Loggfiler **fliken i AEM webbkonsol:
+OSGi-händelser genererar också granskningsposter som kan visas på fliken **Konfigurationsstatus** -> **Loggfiler** på AEM webbkonsol:
 
 ![screen_shot_2012-02-13at50346pm](assets/screen_shot_2012-02-13at50346pm.png)
 
