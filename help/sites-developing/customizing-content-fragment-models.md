@@ -9,7 +9,7 @@ contentOwner: aheimoz
 discoiquuid: 208225ee-9052-4a45-9cfd-f8d27d4d70ed
 noindex: true
 translation-type: tm+mt
-source-git-commit: 3bdff366a0d455b405c1f9de371ced98d25ae2e2
+source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Komponenten har de verktyg som krävs för att återge gränssnittet för dra oc
 
 ## Platser {#locations}
 
-Modeller sparas och skapas under `/conf`, under en mapp som har egenskapen [](/help/assets/content-fragments-models.md#enable-content-fragment-models) Content Fragment Models aktiverad. Den här inställningen finns även i **Konfigurationsegenskaper** som du når via **Konfigurationsläsaren**.
+Modeller sparas och skapas under `/conf`, under en mapp som har egenskapen [](/help/assets/content-fragments-models.md#enable-content-fragment-models) Content Fragment Models aktiverad. Den här inställningen finns även i **Konfigurationsegenskaper** som du når via **[Konfigurationsläsaren](/help/sites-administering/configurations.md)**.
 
 1. Navigera till webbläsaren via **Verktyg**, **Allmänt**, **Konfigurationsläsaren**, till exempel 
 `http://localhost:4502/libs/granite/configurations/content/view.html/conf`
