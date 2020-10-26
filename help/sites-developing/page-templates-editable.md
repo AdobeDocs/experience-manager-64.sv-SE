@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: cf181663-8a4a-4efc-9f02-be1cf71c9299
 translation-type: tm+mt
-source-git-commit: 4c0c4ee86840cec0aa368b48e7f512cb86abeb02
+source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
 workflow-type: tm+mt
-source-wordcount: '3223'
+source-wordcount: '3231'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Med redigerbara mallar isoleras de delar som utgör en sida inuti komponenterna.
 
 >[!NOTE]
 >
->AEM 6.4.5.0 eller senare krävs för att använda redigerbara mallar med [SPA-redigeraren](/help/sites-developing/spa-overview.md).
+>AEM 6.4.5.0 eller senare krävs för att använda redigerbara mallar med [SPA Editor](/help/sites-developing/spa-overview.md).
 
 >[!NOTE]
 >
@@ -230,6 +230,8 @@ Om du vill skapa en ny mapp kan du göra det här:
 >[!NOTE]
 >
 >I konfigurationsläsaren kan du redigera den globala mappen och aktivera alternativet **Redigerbara mallar** om du vill skapa mallar i den här mappen, men detta är inte den bästa metoden.
+>
+>Mer information finns i dokumentationen [till](/help/sites-administering/configurations.md) Configuration Browser.
 
 ### Behörighetslistor och grupper {#acls-and-groups}
 
@@ -585,7 +587,7 @@ Med sidprofiler kan du definiera sidans [innehållsprincip](#content-policies) (
 
 1. **Tillåtna mallar**
 
-   * [Ange tillåtna mallsökvägar på **Sidegenskaperna **](/help/sites-authoring/templates.md#allowing-a-template-author)för respektive sida eller rotsida i en underavdelning.
+   * [Ange tillåtna mallsökvägar på **Sidegenskaperna**](/help/sites-authoring/templates.md#allowing-a-template-author) för respektive sida eller rotsida i en underavdelning.
    * Ange egenskapen:
 
       `cq:allowedTemplates`
