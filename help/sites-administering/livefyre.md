@@ -10,9 +10,9 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 discoiquuid: bb3fcb53-b8c3-4b1d-9125-4715f34ceb0b
 translation-type: tm+mt
-source-git-commit: 1b6254e98b65b64071ab4634706bd1ad3d2fd8df
+source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1668'
 ht-degree: 3%
 
 ---
@@ -52,6 +52,7 @@ AEM 6.4 innehåller funktionspaketet Livefyre 1.2.6 förinstallerat. Det här pa
 ### Konfigurera AEM att använda Livefyre: Skapa en konfigurationsmapp {#configure-aem-to-use-livefyre-create-a-configuration-folder}
 
 1. På AEM hemsida klickar du på ikonen **Verktyg** i den vänstra listen och går sedan till **Allmänt > Konfigurationsläsaren**.
+   * Mer information finns i dokumentationen [till](/help/sites-administering/configurations.md) Configuration Browser.
 1. Klicka på **Skapa** för att öppna dialogrutan Skapa konfiguration.
 1. Namnge konfigurationen och markera kryssrutan **Cloud Configurations** .
 
@@ -73,6 +74,8 @@ Konfigurera AEM så att du kan använda din organisations Livefyre-licensreferen
    >Mapparna måste ha molnkonfigurationer aktiverade i sina egenskaper innan Livefyre-konfigurationer kan läggas till i dem. Konfigurationsmappar skapas och hanteras i Configuration Browser.
    >
    >Du kan inte skapa ett namn för en konfiguration. Sökvägen till mappen som konfigurationen finns i refererar till det. Du kan bara ha en konfiguration per mapp.
+   >
+   >Mer information finns i dokumentationen [till](/help/sites-administering/configurations.md) Configuration Browser.
 
 1. Markera det nya Livefyre-konfigurationskortet och klicka sedan på **Egenskaper**.
 
@@ -141,7 +144,7 @@ Du kan importera användargenererat Twitter- och Instagram-innehåll (UGC) från
 
 >[!NOTE]
 >
->Innan du använder Assets för att importera UGC måste du konfigurera konton för konton för sociala konton och rättighetsbegäranden i Livefyre Studio. Se [Inställning: Rättighetsförfrågningar](https://docs.adobe.com/content/help/en/livefyre/using/rights-requests/c-how-requesting-rights-works.html) för mer information.
+>Innan du kan använda Assets för att importera UGC måste du konfigurera konton för konton för sociala konton och rättighetsbegäranden i Livefyre Studio. Se [Inställning: Rättighetsförfrågningar](https://docs.adobe.com/content/help/en/livefyre/using/rights-requests/c-how-requesting-rights-works.html) för mer information.
 
 Så här importerar du UGC till AEM Assets:
 
