@@ -10,9 +10,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: cd3adbac-9868-4838-9d8a-37dde8973df4
 translation-type: tm+mt
-source-git-commit: 7cb0f63f0cd83e6e40ed51b2fd300f010278aa56
+source-git-commit: df92346ca23161b8eaff293a6b9f2c8b7c72e2ec
 workflow-type: tm+mt
-source-wordcount: '5132'
+source-wordcount: '5156'
 ht-degree: 3%
 
 ---
@@ -140,8 +140,8 @@ Installations- och konfigureringsuppgifter är:
 * [Publiceringskonfiguration för Image Server](#publishing-setup-for-image-server)
 * [Konfigurera allmänna inställningar för programmet](#configuring-application-general-settings)
 * [Konfigurera färghantering](#configuring-color-management)
-* [Konfigurera bearbetning av resurser](#configuring-asset-processing)
-* [Lägga till anpassade MIME-typer för format som inte stöds](#adding-custom-mime-types-for-unsupported-formats)
+* [Redigera MIME-typer för format som stöds](#editing-mime-types-for-supported-formats)
+* [Lägga till MIME-typer för format som inte stöds](#adding-mime-types-for-unsupported-formats)
 * [Skapa gruppuppsättningsförinställningar för automatisk generering av bilduppsättningar och snurpuppsättningar](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
 
 #### Publiceringskonfiguration för Image Server {#publishing-setup-for-image-server}
@@ -212,21 +212,18 @@ Om du gör det gör du så här:
 * Dynamiska återgivningar som returnerar RGB-utdata returnerar det i `sRGB` färgrymden.
 * Dynamiska återgivningar som returnerar CMYK-utdata returnerar det i `WebCoated` färgrymden.
 
-#### Konfigurera bearbetning av resurser {#configuring-asset-processing}
+#### Redigera MIME-typer för format som stöds {#editing-mime-types-for-supported-formats}
 
 Du kan definiera vilka resurstyper som ska bearbetas av Dynamic Media och anpassa avancerade parametrar för resurshantering. Du kan till exempel ange att parametrar för bearbetning av resurser ska göra följande:
 
 * Konvertera en Adobe PDF till en eCatalog-resurs.
 * Konvertera ett Adobe Photoshop-dokument (.PSD) till en bannermallsresurs för personalisering.
 * Rastrera en Adobe Illustrator-fil (.AI) eller en Adobe Photoshop Encapsulated Postscript-fil (.EPS).
-
->[!NOTE]
->
->Videoprofiler och bildprofiler kan användas för att definiera bearbetning av videoklipp och bilder.
+* [Videoprofiler](/help/assets/video-profiles.md) och [bildprofiler](/help/assets/image-profiles.md) kan användas för att definiera bearbetning av videoklipp och bilder.
 
 Se [Överföra resurser](managing-assets-touch-ui.md#uploading-assets).
 
-**Så här konfigurerar du bearbetning** av resurser:
+**Redigera MIME-typer för format som stöds**
 
 1. I AEM trycker du på den AEM logotypen för att komma åt den globala navigeringskonsolen, sedan trycker du på ikonen **[!UICONTROL Tools]** (hammer) och navigerar till **[!UICONTROL General > CRXDE Lite]**.
 1. Navigera till följande i den vänstra listen:
@@ -252,7 +249,7 @@ Se [Överföra resurser](managing-assets-touch-ui.md#uploading-assets).
 
 Du kan lägga till anpassade MIME-typer för format som inte stöds i AEM Assets. För att säkerställa att nya noder som du lägger till i CRXDE Lite inte tas bort av AEM måste du se till att du placerar MIME-typen före **[!UICONTROL image_]** och att dess aktiverade värde är inställt på **[!UICONTROL false]**.
 
-**Så här lägger du till anpassade MIME-typer för format** som inte stöds:
+**Lägga till anpassade MIME-typer för format som inte stöds**
 
 1. Klicka på AEM **[!UICONTROL Tools > Operations > Web Console]**.
 
@@ -498,7 +495,7 @@ Om du vill uppdatera någon av de här parametrarna följer du stegen i [Aktiver
 
 Kön för Bevilja överföring av arbetsflöde används för **[!UICONTROL DAM Update Asset]** arbetsflödet. I Dynamic Media används den för bildinläsning och bearbetning.
 
-**Så här uppdaterar du kön** för Granska tillfälligt arbetsflöde:
+**Så här uppdaterar du kön för Granska tillfälligt arbetsflöde**
 
 1. Gå till [https://&lt;server>/system/console/configMgr](http://localhost:4502/system/console/configMgr) och sök efter **[!UICONTROL Queue: Granite Transient Workflow Queue]**.
 
@@ -508,11 +505,13 @@ Kön för Bevilja överföring av arbetsflöde används för **[!UICONTROL DAM U
 
 1. I **[!UICONTROL Maximum Parallel Jobs]** fältet ändrar du talet till önskat värde.
 
-   Som standard beror det maximala antalet parallella jobb på antalet tillgängliga processorkärnor. På en server med fyra kärnor tilldelas till exempel två arbetstrådar. (Ett värde mellan 0,0 och 1,0 är baserat på förhållandet, eller alla tal som är större än 1 tilldelar antalet arbetstrådar.)
+   Du kan öka **[!UICONTROL Maximum Parallel Jobs]** för att få tillräckligt stöd för överföring av stora mängder filer till Dynamic Media. Det exakta värdet beror på maskinvarukapaciteten. I vissa scenarier - det vill säga en inledande migrering eller en engångsöverföring av en grupp - kan du använda ett stort värde. Tänk dock på att användning av ett stort värde (till exempel två gånger antalet kärnor) kan ha negativa effekter på andra samtidiga aktiviteter. Därför bör du testa och justera värdet baserat på ditt specifika användningsfall.
 
-   Adobe rekommenderar att 32 **[!UICONTROL Maximum Parallel Jobs]** är konfigurerat för att ge tillräckligt stöd för stor överföring av filer till Dynamic Media Classic.
+<!--    By default, the maximum number of parallel jobs depends on the number of available CPU cores. For example, on a 4-core server, it assigns 2 worker threads. (A value between 0.0 and 1.0 is ratio based, or any numbers greater than 1 will assign the number of worker threads.)
 
-   ![chlimage_1](assets/chlimage_1.jpeg)
+   Adobe recommends that 32 **[!UICONTROL Maximum Parallel Jobs]** be configured to adequately support heavy upload of files to Dynamic Media Classic. -->
+
+![chlimage_1](assets/chlimage_1.jpeg)
 
 1. Tryck på **[!UICONTROL Save]**.
 
