@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 7d494c2e-d457-4d52-89be-a77ffa07eb88
 translation-type: tm+mt
-source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
+source-git-commit: 7ea83f879d5c3f5699d2a783686c53c5292fcf8a
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '957'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,10 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
 
    >[!NOTE]
    >
-   >Kontrollera att URL:en för konfigurationssidan för molntjänster börjar med **HTTPS**. Om inte, [aktivera SSL](/help/sites-administering/ssl-by-default.md) för AEM Forms-servern.
+   >Du kan antingen utföra steg 1-4 för att skapa en ny konfigurationsbehållare och skapa en Adobe Sign-konfiguration i behållaren eller använda den befintliga `global` mappen i **Verktyg** ![hammare](assets/hammer.png) > **Cloud Services** > **Adobe Sign**. Om du skapar konfigurationen i den nya konfigurationsbehållaren måste du ange behållarnamnet i **[!UICONTROL Configuration Container]** fältet när du skapar ett anpassat formulär.
+
+   >[!NOTE]
+   Kontrollera att URL:en för konfigurationssidan för molntjänster börjar med **HTTPS**. Om inte, [aktivera SSL](/help/sites-administering/ssl-by-default.md) för AEM Forms-servern.
 
 1. På konfigurationssidan trycker du på **[!UICONTROL Create]** för att skapa en Adobe Sign-konfiguration i AEM Forms.
 1. Ange ett **[!UICONTROL General]** namn **[!UICONTROL Create Adobe Sign Configuration]** för konfigurationen på **fliken** och tryck sedan på **Nästa**. Du kan också ange en titel och bläddra för att välja en miniatyrbild för konfigurationen.
