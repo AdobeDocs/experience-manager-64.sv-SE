@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: 29fc297e-0a95-4d2a-bfe6-5676d53624db
 noindex: true
 translation-type: tm+mt
-source-git-commit: f6b6d8559bb0b899a78afd6410eb316626ecaa18
+source-git-commit: 7ea83f879d5c3f5699d2a783686c53c5292fcf8a
 workflow-type: tm+mt
-source-wordcount: '3409'
+source-wordcount: '3486'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Så här konfigurerar du Adobe Sign för ett anpassat formulär:
 
 Konfigurera anpassningsbara formuläregenskaper för Adobe Sign för ett befintligt eller nytt anpassbart formulär.
 
-[Skapa ett adaptivt formulär för Adobe Sign](/help/forms/using/working-with-adobe-sign.md#create-an-adaptive-form-for-adobe-sign) som beskriver stegen för att skapa ett enkelt adaptivt formulär. Se [Skapa ett adaptivt formulär](/help/forms/using/creating-adaptive-form.md) för andra alternativ som är tillgängliga när du skapar ett adaptivt formulär.
+[Skapa ett adaptivt formulär för Adobe Sign](/help/forms/using/working-with-adobe-sign.md#create-an-adaptive-form-for-adobe-sign) beskriver stegen för att skapa ett enkelt adaptivt formulär. Se [Skapa ett adaptivt formulär](/help/forms/using/creating-adaptive-form.md) för andra alternativ som är tillgängliga när du skapar ett adaptivt formulär.
 
 #### Skapa ett anpassningsbart formulär för Adobe Sign {#create-an-adaptive-form-for-adobe-sign}
 
@@ -77,6 +77,10 @@ Så här skapar du ett anpassat formulär för Adobe Sign:
 
    1. Ange **namn** och **titel** för det anpassade formuläret.
    1. Välj den [konfigurationsbehållare](/help/forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) som skapades när Adobe Sign konfigurerades med AEM Forms.
+
+      >[!NOTE]
+      >
+      >I **[!UICONTROL Adobe Sign Cloud Service]** listrutan visas de molntjänster som är konfigurerade i den konfigurationsbehållare som du väljer i det här fältet. Listrutan **[!UICONTROL Adobe Sign Cloud Service]** är tillgänglig i avsnittet med **[!UICONTROL Electronic Signature]** anpassade formuläregenskaper när du väljer **[!UICONTROL Enable Adobe Sign]** alternativet.
 
 1. In the **[!UICONTROL Form Model]** tab, select one of the following options:
 
@@ -153,6 +157,8 @@ Gör så här för att välja en molntjänst och signeringsordning:
 1. Välj en molntjänst i den redan konfigurerade listan över Adobe Sign-Cloud Services.
 
    Om listan med **Adobe Sign-Cloud Service** är tom följer du artikeln [Konfigurera Adobe Sign med AEM Forms](/help/forms/using/adobe-sign-integration-adaptive-forms.md) för att konfigurera tjänsten.
+
+   I listrutan visas de molntjänster som finns i `global` mappen under Verktyg > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Sign]**. Dessutom listas de molntjänster som finns i den mapp du väljer i **[!UICONTROL Configuration Container]** fältet när du skapar ett anpassat formulär.
 
 1. Välj signeringsordning i dialogrutan **Signerare kan signera** . Adobe Sign-signerare kan signera ett adaptivt formulär **sekventiellt** - en efter en annan signerare eller **samtidigt** - i valfri ordning.
 
@@ -242,7 +248,7 @@ När du har [redigerat anpassningsbara formuläregenskaper för Adobe-signering]
 
 ## Skapa signeringsupplevelser i form av formulär {#create-in-form-signing-experience}
 
-Användaren kan också signera ett anpassat formulär medan han/hon fyller i formuläret. Den här upplevelsen kallas även signering i form av formulär. Signeringsfunktionen i form är bara tillgänglig för den första signeraren i en miljö med flera signerare. Utför följande steg för att skapa en signeringsupplevelse i ett anpassat formulär:
+Användaren kan också signera ett anpassat formulär medan han/hon fyller i formuläret. Den här upplevelsen kallas även signering i formulär. Signeringsfunktionen i form är bara tillgänglig för den första signeraren i en miljö med flera signerare. Utför följande steg för att skapa en signeringsupplevelse i ett anpassat formulär:
 
 1. [Lägg till och konfigurera signaturstegskomponenten](#add-and-configure-the-signature-step-component).
 1. [Lägg till komponenten](#configure-the-thank-you-page-or-summary-step-component)Sammanfattningssteg.
