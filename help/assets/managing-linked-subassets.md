@@ -3,9 +3,9 @@ title: Hantera sammansatta resurser och generera delresurser.
 description: Lär dig hur du skapar referenser till AEM resurser från filer i InDesign, Adobe Illustrator och Photoshop. Lär dig även hur du använder funktionen för sidvisning för att visa enskilda sidor med flersidiga filer, inklusive PDF-, INDD-, PPT-, PPTX- och AI-filer.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1532ea0f4203b269f8414d150a07bed0c42a23bc
+source-git-commit: ddfcb74451f41cea911700a64abceaaf47e7af49
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1327'
 ht-degree: 0%
 
 ---
@@ -117,7 +117,7 @@ För InDesign kan du extrahera sidor med hjälp av InDesign-servern. Om förhand
 
 Följande alternativ är tillgängliga i verktygsfältet, i den vänstra listen och i kontrollerna i sidvisningsprogrammet:
 
-* **[!UICONTROL Desktop Actions]** för att öppna eller visa en viss underresurs med AEM skrivbordsapp. Se hur du [konfigurerar skrivbordsåtgärder](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2) om du använder AEM datorprogram.
+* **[!UICONTROL Desktop Actions]** för att öppna eller visa en viss underresurs med AEM skrivbordsapp. Se hur du [konfigurerar skrivbordsåtgärder](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#desktopactions-v2) om du använder AEM datorprogram.
 
 * **[!UICONTROL Properties]** öppnar sidan [!UICONTROL Properties] för den specifika underresursen.
 
@@ -125,7 +125,7 @@ Följande alternativ är tillgängliga i verktygsfältet, i den vänstra listen 
 
 * **[!UICONTROL Page Overview]** visar alla delresurser samtidigt.
 
-* **[!UICONTROL Timeline]** alternativet från vänster när du klickat på ikonen ![för](assets/do-not-localize/aem_leftrail_contentonly.png) vänster räl visas filens aktivitetsström.
+* **[!UICONTROL Timeline]** alternativet från vänster rand när du klickat på ikonen ![för](assets/do-not-localize/aem_leftrail_contentonly.png) vänster ratt visas filens aktivitetsström.
 
 ## God praxis och begränsning {#best-practice-limitation-tips}
 
@@ -133,4 +133,5 @@ Följande alternativ är tillgängliga i verktygsfältet, i den vänstra listen 
 
 >[!MORELIKETHIS]
 >
->* [Använd Adobe Experience Manager datorprogram](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)
+>* [Använd Adobe Experience Manager datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)
+
