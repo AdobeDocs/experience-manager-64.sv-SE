@@ -3,9 +3,9 @@ title: Bästa praxis för integrering av AEM och Creative Cloud
 description: Bästa tillvägagångssätt för att integrera en AEM driftsättning med Adobe Creative Cloud för att effektivisera arbetsflöden för överföring av resurser och uppnå maximal effektivitet
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1f44950e3e0653df61289e1bd435d13829051365
+source-git-commit: ddfcb74451f41cea911700a64abceaaf47e7af49
 workflow-type: tm+mt
-source-wordcount: '3578'
+source-wordcount: '3566'
 ht-degree: 15%
 
 ---
@@ -24,7 +24,7 @@ Läs vidare för att ta reda på vilka integreringar som du ska välja mellan st
 
 >[!NOTE]
 >
->Delning av AEM till Creative Cloud-mappar är föråldrat och beskrivs inte längre i den här guiden. Adobe rekommenderar att du använder nyare funktioner som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [AEM datorprogram](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/introduction.html) för att ge kreativa användare tillgång till resurser som hanteras i AEM.
+>Delning av AEM till Creative Cloud-mappar är föråldrat och beskrivs inte längre i den här guiden. Adobe rekommenderar att du använder nyare funktioner som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [AEM datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html) för att ge kreativa användare tillgång till resurser som hanteras i AEM.
 
 ## Samarbete mellan kreatörer, marknadsförare och DAM-användare {#collaboration-needs-of-creatives-marketers-and-dam-users}
 
@@ -39,7 +39,7 @@ Läs vidare för att ta reda på vilka integreringar som du ska välja mellan st
 | Värdeförslag för berörda personer | Adobe | Involverade ytor |
 |---|---|---|
 | Creative users upptäcker resurser från AEM, öppnar och använder dem, redigerar och överför ändringar till AEM samt överför nya filer till AEM, utan att lämna Creative Cloud-programmen. | [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | Photoshop, Illustrator och InDesign |
-| Affärsanvändare förenklar öppning och användning av resurser, redigering och överföring av ändringar i AEM samt överföring av nya filer till AEM från skrivbordsmiljön. De använder en allmän integrering för att öppna alla resurstyper i det inbyggda skrivbordsprogrammet, inklusive andra typer än Adobe. | [AEM](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) | AEM datorprogram på Win och Mac |
+| Affärsanvändare förenklar öppning och användning av resurser, redigering och överföring av ändringar i AEM samt överföring av nya filer till AEM från skrivbordsmiljön. De använder en allmän integrering för att öppna alla resurstyper i det inbyggda skrivbordsprogrammet, inklusive andra typer än Adobe. | [AEM](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) | AEM datorprogram på Win och Mac |
 | Marknadsförare och affärsanvändare upptäcker, förhandsgranskar, licensierar och sparar samt hanterar Adobe Stock-resurser inifrån AEM. Licensierade och sparade mediefiler innehåller utvalda Adobe Stock-metadata för bättre styrning. | [Integrering med Experience Manager och Adobe Stock](aem-assets-adobe-stock.md) | AEM webbgränssnitt |
 
 Den här artikeln fokuserar främst på de två första aspekterna av samarbetsbehovet. Distribution och anskaffning av resurser i stor skala omnämns kortfattat som ett användningsexempel. Överväg Adobes varumärkesportal eller Assets Share Commons för sådana behov. Alternate solutions such as [Brand Portal](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html), solutions that can be built based on [Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/) components, [Link Share](/help/assets/link-sharing.md), using [Experience Manager Assets](/help/assets/managing-assets-touch-ui.md) should be reviewed based on specific requirement.
@@ -67,11 +67,11 @@ The terms used in this document may have a different meaning in other contexts. 
 | Använd skiftläge | AEM | Mappdelning | Andra lösningar |
 |---|---|---|---|
 | Dela ett mindre antal (1) DAM-resurser med den kreativa användaren | ✔✔ | ✔ |  |
-| Dela fler (2) DAM-resurser med den kreativa användaren | ✔✔ | ✘ | [Varumärkesportal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/home.html) <br> [Resursresurs](assets-finder-editor.md) |
+| Dela fler (2) DAM-resurser med den kreativa användaren | ✔✔ | ✘ | [Varumärkesportal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html) <br> [Resursresurs](assets-finder-editor.md) |
 | Dela DAM-resurser med användare som har åtkomst till DAM | ✔✔ | ✔ | [Länkdelning](link-sharing.md) |
-| Dela DAM-resurser med användare som inte har åtkomst till DAM | ✘ | ✔✔ | [Varumärkesportal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/home.html) <br> [Resursresurs](assets-finder-editor.md) |
+| Dela DAM-resurser med användare som inte har åtkomst till DAM | ✘ | ✔✔ | [Varumärkesportal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html) <br> [Resursresurs](assets-finder-editor.md) |
 | Spara mindre antal/volym resurser till DAM | ✔✔ | ✔ | [Överföring av webbgränssnitt](managing-assets-touch-ui.md) |
-| Spara fler resurser på DAM (3) | ✔✔ | ✘ | [Anpassat skript/verktyg för](managing-assets-touch-ui.md) <br> webbgränssnittsuppladdning |
+| Spara fler resurser på DAM (3) | ✔✔ | ✘ | [Anpassat skript/verktyg för](managing-assets-touch-ui.md) <br> överföring av webbgränssnitt |
 | Migrera ett stort antal resurser till DAM | ✘ | ✘ | [Migreringshandbok](assets-migration-guide.md) |
 | Öppna en resurs på skrivbordet snabbt | ✔✔ | ✘ |  |
 | Öppna och ändra resurser snabbt på datorn | ✔✔ | ✘ |  |
@@ -111,7 +111,7 @@ För att stödja användningsexemplen på resursfördelning bör andra lösninga
 
 ### Att tänka på när du använder AEM och Creative Cloud {#considerations-when-using-aem-and-creative-cloud-integration}
 
-* Se [de effektivaste strategierna för skrivbordsappar](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/troubleshoot.html#best-practices-to-prevent-troubles)
+* Se [de effektivaste strategierna för skrivbordsappar](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html?lang=en#best-practices-to-prevent-troubles)
 * Se integrering med [Adobe Stock](aem-assets-adobe-stock.md)
 * Se [Adobe-resurslänk](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
 
@@ -198,7 +198,7 @@ Externa byråer och frilansare som inte har direkt åtkomst till DAM-instansen k
 
 I så fall kan du utnyttja integrationen mellan AEM och Creative Cloud för att förbättra arbetsflödet. Förutsättningen är att de kreativa användarna har ett Adobe ID-konto och ett Creative Cloud-konto med lagringstjänst.
 
-Använd följande strategier för att ge åtkomst till slutliga/godkända mediefiler:
+Använd följande strategier för att ge tillgång till slutliga/godkända mediefiler:
 
 * Så här ger du åtkomst till ett stort antal resurser: Använd [AEM Assets Brand Portal](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html)eller kundens implementering av [Assets Share](assets-finder-editor.md) i AEM publiceringsinfrastruktur
 
@@ -286,7 +286,7 @@ Du kan utnyttja följande funktioner om du vill överföra resurser i grupp:
 
 #### Hantera digitala resurser direkt från skrivbordet {#managing-digital-assets-directly-from-desktop}
 
-Om du använder Network File Shares för att hantera digitala resurser kan du se att bara den nätverksresurs som mappas av AEM datorprogram används som ett praktiskt alternativ. När du övergår från filresurser i nätverk bör du komma ihåg att AEM Web UI innehåller en mängd funktioner för hantering av digitala resurser som går mycket längre än vad som är möjligt på en nätverksresurs (sökning, samlingar, metadata, samarbete, förhandsvisningar osv.) och AEM datorprogrammet erbjuder en praktisk länk för att ansluta DAM-databasen på serversidan med datorarbetet.
+Om du använder Network File Shares för att hantera digitala resurser kan du se att bara den nätverksresurs som mappas av AEM datorprogram används som ett praktiskt alternativ. När du övergår från filresurser i nätverk bör du komma ihåg att AEM Web UI innehåller en mängd funktioner för hantering av digitala resurser som går mycket längre än vad som är möjligt på en nätverksresurs (sökning, samlingar, metadata, samarbete, förhandsvisningar osv.), och AEM skrivbordsappen är en praktisk länk för att ansluta DAM-databasen på serversidan med datorarbetet.
 
 Undvik att använda AEM datorprogram för att hantera resurser direkt i AEM Assets nätverksresurs. Undvik till exempel att använda AEM datorprogram för att flytta/kopiera flera filer. Använd i stället AEM Assets webbgränssnitt för att dra mappar från Finder/Utforskaren till nätverksresursen eller använd funktionen AEM Assets mappöverföring.
 
@@ -297,7 +297,7 @@ Information om hur du planerar och kör resursmigreringar från ett befintligt s
 >[!MORELIKETHIS]
 >
 >* [Adobe Asset Link](https://helpx.adobe.com/in/enterprise/using/adobe-asset-link.html)
->* [Bästa praxis för AEM](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/archive/best-practices-for-v1.html)
->* [AEM varumärkesportal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/brand-portal.html)
+>* [Bästa praxis för AEM](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/archive/best-practices-for-v1.html)
+>* [AEM varumärkesportal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html)
 >* [Integrering med AEM och Adobe Stock](aem-assets-adobe-stock.md)
 
