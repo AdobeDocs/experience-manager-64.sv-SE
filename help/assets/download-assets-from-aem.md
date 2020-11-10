@@ -3,7 +3,7 @@ title: Hämta digitala resurser från [!DNL Adobe Experience Manager].
 description: Lär dig hur du hämtar resurser [!DNL Adobe Experience Manager] från och aktiverar eller inaktiverar hämtningsfunktionen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 05ecc940180ead13676cc5bb8e2e230b1d55162b
+source-git-commit: ddfcb74451f41cea911700a64abceaaf47e7af49
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 0%
@@ -66,7 +66,7 @@ Om du vill tillåta hämtning av resurser från DAM, till exempel när du använ
 
 Du `Asset Download Servlet` kan inaktivera funktionen på en [!DNL Experience Manager] publiceringsinstans genom att uppdatera dispatcherns konfiguration för att blockera eventuella hämtningsbegäranden. Servern kan även inaktiveras manuellt via OSGi-konsolen direkt.
 
-1. Om du vill blockera resurshämtningsbegäranden via en dispatcherkonfiguration redigerar du `dispatcher.any` konfigurationen och lägger till en regel i [filteravsnittet](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter). `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
+1. Om du vill blockera resurshämtningsbegäranden via en dispatcherkonfiguration redigerar du `dispatcher.any` konfigurationen och lägger till en regel i [filteravsnittet](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-access-to-content-filter). `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
 
 1. Om du vill inaktivera OSGi-komponenten på en Publish-instans öppnar du OSGi-konsolen på `http://[aem_server]:[port]/system/console/components`. Leta reda på `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet` och klicka **[!UICONTROL Disable]**.
 
