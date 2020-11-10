@@ -3,9 +3,9 @@ title: Aktivera tillgångsinsikter via DTM
 description: Lär dig hur du använder DTM (Adobe Dynamic Tag Management) för att aktivera tillgångsinsikter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 994dd56ce13b2d1f959e392e181d752e994bf198
+source-git-commit: ddfcb74451f41cea911700a64abceaaf47e7af49
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '623'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknads
 
 >[!CAUTION]
 >
->Adobe DTM är ersatt med Adobe Experience Platform Launch och kommer snart att nå [slutet](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f). Adobe rekommenderar att du [använder Launch för att få tillgångsinsikter](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html).
+>Adobe DTM är ersatt med Adobe Experience Platform Launch och kommer snart att nå [slutet](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f). Adobe rekommenderar att du [använder Launch för att få tillgångsinsikter](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html).
 
 Gör så här för att aktivera tillgångsinsikter via DTM:
 
