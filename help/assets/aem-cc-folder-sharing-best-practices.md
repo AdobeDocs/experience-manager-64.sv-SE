@@ -3,9 +3,9 @@ title: Dela AEM Assets-mappar med Creative Cloud
 description: Konfiguration och bästa praxis som gör att användare av Adobe Experience Manager Assets kan utbyta resursmappar med Adobe Creative Cloud-användare.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+source-git-commit: ddfcb74451f41cea911700a64abceaaf47e7af49
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1058'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->Mappdelningsfunktionen AEM till Creative Cloud är föråldrad. Adobe rekommenderar starkt att du använder nyare funktioner som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [AEM datorprogram](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html). Läs mer om [AEM och Creative Cloud](/help/assets/aem-cc-integration-best-practices.md).
+>Mappdelningsfunktionen AEM till Creative Cloud är föråldrad. Adobe rekommenderar starkt att du använder nyare funktioner som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [AEM](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html). Läs mer om [AEM och Creative Cloud](/help/assets/aem-cc-integration-best-practices.md).
 
 Adobe Experience Manager (AEM) kan konfigureras så att användare i AEM Assets kan dela mappar med Creative Cloud-användare, så att de är tillgängliga som delade mappar i Creative Cloud Assets-tjänsten. Funktionen kan användas för utbyte av filer mellan kreativa team och AEM Assets-användare, särskilt när de kreativa användarna inte har tillgång till AEM Assets-instansen (de finns inte i företagsnätverket).
 
@@ -39,7 +39,7 @@ I följande diagram visas en översikt över integreringen.
 Integreringen innehåller följande element:
 
 * **AEM Assets-server** som används i företagsnätverket (hanterade tjänster eller lokalt): Mappdelning initieras här.
-* **Adobe Marketing Cloud Assets core service**: Fungerar som mellanhand mellan AEM och Creative Cloud. Administratören för det företag som använder integreringen måste upprätta en förtroenderelation mellan Marketing Cloud-organisationen och AEM Assets-instansen. De [definierar också en lista över godkända medarbetare](https://docs.adobe.com/content/help/en/core-services/interface/assets/t-admin-add-cc-user.html)i Creative Cloud som AEM Assets-användare kan dela mappar med för ytterligare säkerhet.
+* **Adobe Marketing Cloud Assets core service**: Fungerar som mellanhand mellan AEM och Creative Cloud. Administratören för det företag som använder integreringen måste upprätta en förtroenderelation mellan Marketing Cloud-organisationen och AEM Assets-instansen. De [definierar också en lista över godkända medarbetare](https://experienceleague.adobe.com/docs/core-services/interface/assets/t-admin-add-cc-user.html?lang=en#assets)i Creative Cloud som AEM Assets-användare kan dela mappar med för ytterligare säkerhet.
 * **Creative Cloud Assets web services** (storage and Creative Cloud Files web UI): Det är här specifika Creative Cloud-användare, som har en AEM Assets-mapp delad, kan acceptera inbjudan och se mappen i sitt Creative Cloud-kontoarkiv.
 * **Creative Cloud-datorprogram**: (Valfritt) Möjliggör direkt åtkomst till delade mappar/filer från den kreativa användarens skrivbord via synkronisering med Creative Cloud Assets-lagring.
 
