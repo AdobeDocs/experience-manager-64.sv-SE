@@ -3,10 +3,10 @@ title: Konfigurera resurstaggning med Smart Content Service.
 description: Lär dig hur du konfigurerar smart taggning och förbättrad smart taggning [!DNL Adobe Experience Manager]med hjälp av Smart Content Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 3d0a173b1c95141c91b7d0495e994eab07f2655e
+source-git-commit: ddfcb74451f41cea911700a64abceaaf47e7af49
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 45%
+source-wordcount: '989'
+ht-degree: 46%
 
 ---
 
@@ -83,7 +83,7 @@ När ett certifikat har upphört att gälla är det inte längre tillförlitligt
 
    ![Ta bort den befintliga posten för likhetssökning i nyckelbehållaren om du vill lägga till ett nytt säkerhetscertifikat](assets/smarttags_delete_similaritysearch_keystore.png)
 
-   *Bild: Ta bort den befintliga`similaritysearch`-posten i nyckelbehållaren om du vill lägga till ett nytt säkerhetscertifikat.*
+   *Bild: Ta bort den befintliga `similaritysearch`-posten i nyckelbehållaren om du vill lägga till ett nytt säkerhetscertifikat.*
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Legacy Cloud Services]**. Klicka på **[!UICONTROL Asset Smart Tags]** > **[!UICONTROL Show Configuration]** > **[!UICONTROL Available Configurations]**. Klicka på önskad konfiguration.
 
@@ -160,7 +160,7 @@ När du har slutfört konfigurationen använder du en JMX MBean för att valider
 
    ![Lägg till resurssteget för smarta taggar efter steget med processminiatyrer i arbetsflödet för DAM-uppdatering av resurser](assets/smart-tag-in-dam-update-asset-workflow.png)
 
-   *Bild: Lägg till resurssteget för smarta taggar efter steget med processminiatyrer i[!UICONTROL DAM Update Asset]arbetsflödet.*
+   *Bild: Lägg till resurssteget för smarta taggar efter steget med processminiatyrer i [!UICONTROL DAM Update Asset] arbetsflödet.*
 
 1. Öppna steget i redigeringsläge. Under **[!UICONTROL Advanced Settings]** kontrollerar du att alternativet **[!UICONTROL Handler Advance]** är markerat.
 
@@ -190,5 +190,4 @@ När du har slutfört konfigurationen använder du en JMX MBean för att valider
 >* [Hantera smarta taggar](managing-smart-tags.md)
 >* [Översikt och utbildning av smarta taggar](enhanced-smart-tags.md)
 >* [Riktlinjer och regler för utbildning av Smart Content Service](smart-tags-training-guidelines.md)
->* [Videosjälvstudiekurs om hur du konfigurerar smarta taggar](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-technical-video-setup.html)
 
