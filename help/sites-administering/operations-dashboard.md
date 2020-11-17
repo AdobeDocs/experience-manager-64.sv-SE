@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 7599fa42-3a47-49c9-8a7f-e0b6be302ff0
 translation-type: tm+mt
-source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
+source-git-commit: d72f86b167e3e9003ad2cd2e7628f95502cf9a33
 workflow-type: tm+mt
-source-wordcount: '6231'
+source-wordcount: '6200'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Det finns två typer av hälsokontroller i AEM 6:
 1. Individuella hälsokontroller
 1. Sammansatta hälsokontroller
 
-En **enskild hälsokontroll** är en enda hälsokontroll som motsvarar ett statuskort. Enskilda hälsokontroller kan konfigureras med regler eller tröskelvärden och de kan ge ett eller flera tips och länkar för att lösa identifierade hälsoproblem. Låt oss ta kontrollen &quot;Loggfel&quot; som ett exempel: Om det finns FEL-poster i instansloggarna finns de på informationssidan i hälsokontrollen. Längst upp på sidan finns en länk till &quot;Loggmeddelandeanalyseraren&quot; i avsnittet Diagnosverktyg, där du kan analysera felen mer detaljerat och konfigurera om loggarna.
+En **enskild hälsokontroll** är en enda hälsokontroll som motsvarar ett statuskort. Enskilda hälsokontroller kan konfigureras med regler eller tröskelvärden och de kan ge ett eller flera tips och länkar för att lösa identifierade hälsoproblem. Låt oss ta kontrollen &quot;Loggfel&quot; som ett exempel: Om det finns FEL-poster i instansloggarna finns de på informationssidan i hälsokontrollen. Längst upp på sidan finns en länk till &quot;Loggmeddelandeanalyseraren&quot; i avsnittet Diagnosverktyg, där du kan analysera felen mer ingående och konfigurera om loggarna.
 
 En **sammansatt hälsokontroll** är en kontroll som samlar in information från flera enskilda kontroller.
 
@@ -80,7 +80,7 @@ Du skapar en enskild hälsokontroll i två steg: implementera en kontroll av ski
 
 1. För att kunna skapa en Sling Health Check måste du skapa en OSGI-komponent som implementerar Sling HealthCheck-gränssnittet. Du lägger till den här komponenten i ett paket. Komponentens egenskaper identifierar hälsokontrollen fullständigt. När komponenten har installerats skapas en JMX MBean automatiskt för hälsokontrollen. Mer information finns i dokumentationen om [hälsokontroll](https://sling.apache.org/documentation/bundles/sling-health-check-tool.html) vid sjösling.
 
-   Exempel på en Sling Health Check-komponent, skriven med OSGI-tjänstkomponentsanteckningar:
+   Exempel på en Sling Health Check-komponent, skriven med OSGI-tjänstkomponentanteckningar:
 
    ```java
    @Component(service = HealthCheck.class,         
@@ -125,7 +125,7 @@ Du skapar en enskild hälsokontroll i två steg: implementera en kontroll av ski
 
    >[!NOTE]
    >
-   >Kontrollera att följande egenskaper är angivna till true för `/apps/settings/granite/operations/hc` banan:
+   >Kontrollera att följande egenskaper har angetts till true för `/apps/settings/granite/operations/hc` sökvägen:
    >
    >
    >`sling:configCollectionInherit`
@@ -296,7 +296,7 @@ En sammansatt hälsokontroll har till uppgift att sammanställa ett antal enskil
   </tr> 
   <tr> 
    <td>Säkerhetskontroller</td> 
-   <td><p>Säkerhetskontrollen är en sammansatt kontroll som sammanställer resultaten av flera säkerhetsrelaterade kontroller. Dessa individuella hälsokontroller tar upp andra problem än checklistan för säkerhet som finns på dokumentationssidan för <a href="/help/sites-administering/security-checklist.md">checklistan.</a> Kontrollen är användbar som säkerhetsröktest när instansen startas. </p> <p>MBean för den här hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthCheck:name=</a><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank"></a><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank"></a><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank">securityChecks,type=HealthCheck</a></p> </td> 
+   <td><p>Säkerhetskontrollen är en sammansatt kontroll som sammanställer resultaten av flera säkerhetsrelaterade kontroller. Dessa individuella hälsokontroller tar upp andra problem än checklistan för säkerhet som finns på dokumentationssidan för <a href="/help/sites-administering/security-checklist.md">checklistan.</a> Kontrollen är användbar som säkerhetsröktest när instansen startas. </p> <p>MBean för den här hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthCheck:name=securityCheck,type=HealthCheck</a></p> </td> 
   </tr> 
   <tr> 
    <td>Aktiva paket</td> 
@@ -777,7 +777,7 @@ Du kan också hämta en `JSON` fil som sammanfattar instrumentpanelsinformatione
    <td>Instans</td> 
    <td> 
     <ul> 
-     <li>AEM</li> 
+     <li>aem</li> 
      <li>lista över körningslägen</li> 
      <li>det datum då instansen startades</li> 
     </ul> </td> 
@@ -865,7 +865,7 @@ Du kan också hämta en `JSON` fil som sammanfattar instrumentpanelsinformatione
   </tr> 
   <tr> 
    <td>Försäljningsjobb</td> 
-   <td><p>Antal jobb vid körning - antal jobb i en given status (om sådana finns):</p> 
+   <td><p>Antal jobb vid körning - antal jobb med en given status (om sådana finns):</p> 
     <ul> 
      <li>misslyckades</li> 
      <li>köad</li> 
