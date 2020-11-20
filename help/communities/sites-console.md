@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 5ac2fcef-05b8-46f7-9a15-997cdd79a3db
 translation-type: tm+mt
-source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
+source-git-commit: f4cdd3d5020b917676fe8715d4e21e98f3a096b4
 workflow-type: tm+mt
 source-wordcount: '3127'
 ht-degree: 0%
@@ -137,7 +137,7 @@ Tänk på följande när du skapar eller markerar en bild:
 * Det finns ingen storleksändring av bilden, så att när bildbredden är...
 
    * Bilden upprepas vågrätt under webbläsarens bredd
-   * Bilden kommer att beskäras mer än webbläsarens bredd
+   * Bilden blir större än webbläsarens bredd och ser ut att vara beskuren
 
 Välj **[!UICONTROL Next]**.
 
@@ -216,10 +216,11 @@ Panelen Inställningar innehåller flera underpaneler med funktioner som ska kon
    Låt vara omarkerat för en *privat* communitywebbplats. Standard är avmarkerat.
 
 >[!NOTE]
-
-**[!UICONTROL Allowing Social Logins]**
->Det kan finnas exempelkonfigurationer för Facebook och Twitter och de kan vara valbara, men för en [produktionsmiljö](../../help/sites-administering/production-ready.md)måste du skapa anpassade Facebook- och Twitter-program. Se [Social Login med Facebook och Twitter](social-login.md).
 >
+>**[!UICONTROL Allowing Social Logins]**
+>
+>Det kan finnas exempelkonfigurationer för Facebook och Twitter och de kan vara valbara, men för en [produktionsmiljö](../../help/sites-administering/production-ready.md)måste du skapa anpassade Facebook- och Twitter-program. Se [Social Login med Facebook och Twitter](social-login.md).
+
 #### TAGGING {#tagging}
 
 ![chlimage_1-450](assets/chlimage_1-450.png)
@@ -348,7 +349,7 @@ Välj en av
 
 ![chlimage_1-457](assets/chlimage_1-457.png)
 
-Inställningarna `ENABLEMENT`gäller när den valda communityplatsmallen innehåller [tilldelningsfunktionen](functions.md#assignments-function), som är tillgänglig när aktiveringsfunktionerna är licensierade och [konfigurerade](enablement.md). Referensplatsmallen som innehåller tilldelningsfunktionen är `Reference Structured Learning Site Template.`
+Inställningarna `ENABLEMENT`gäller när den valda communityplatsmallen innehåller [tilldelningsfunktionen](functions.md#assignments-function), som är tillgänglig när aktiveringsfunktionerna är licensierade och [konfigurerade](enablement.md). Referenswebbplatsmallen som innehåller tilldelningsfunktionen är `Reference Structured Learning Site Template.`
 
 * **[!UICONTROL Enablement Managers]**
 
@@ -394,7 +395,8 @@ Innehållet i en webbplats kan redigeras med samma verktyg som andra AEM. Om du 
 ![chlimage_1-461](assets/chlimage_1-461.png)
 
 >[!NOTE]
-Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till hur du skapar sidor](../../help/sites-authoring/qg-page-authoring.md).
+>
+>Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till hur du skapar sidor](../../help/sites-authoring/qg-page-authoring.md).
 
 ## Ändra webbplatsegenskaper {#modifying-site-properties}
 
@@ -441,15 +443,20 @@ STRUKTURpanelen gör att du kan ändra den struktur som ursprungligen skapades f
       ändra ordningen på funktioner som visas i navigeringsfältet på den översta nivån
 
 >[!NOTE]
-Du kan ändra ordningen på alla funktioner i platsstrukturen förutom funktionen längst upp. Det innebär att det inte går att ändra startsidan för communitywebbplatsen.
+>
+>Du kan ändra ordningen på alla funktioner i platsstrukturen förutom funktionen längst upp. Det innebär att det inte går att ändra startsidan för communitywebbplatsen.
 
 >[!CAUTION]
-Visningsrubriken kan ändras utan biverkningar, men du bör inte redigera URL-namnet för en community-funktion som tillhör en community-webbplats.
-Om du t.ex. byter namn på URL:en flyttas inte den befintliga UGC:n, vilket resulterar i&quot;UGC-förlust&quot;.
+>
+>Visningsrubriken kan ändras utan biverkningar, men du bör inte redigera URL-namnet för en community-funktion som tillhör en community-webbplats.
+>
+>Om du t.ex. byter namn på URL:en flyttas inte den befintliga UGC:n, vilket resulterar i&quot;UGC-förlust&quot;.
 
 >[!CAUTION]
-Gruppfunktionen får *inte* vara den *första eller enda* funktionen i platsstrukturen.
-Alla andra funktioner, till exempel [sidfunktionen](functions.md#page-function), måste inkluderas och listas först.
+>
+>Gruppfunktionen får *inte* vara den *första eller enda* funktionen i platsstrukturen.
+>
+>Alla andra funktioner, till exempel [sidfunktionen](functions.md#page-function), måste inkluderas och listas först.
 
 #### Exempel: Lägga till en katalogfunktion i en community-platsstruktur {#example-adding-a-catalog-function-to-a-community-site-structure}
 
@@ -527,8 +534,10 @@ Observera att alla medlemmar som tilldelats roller som moderatorer eller gruppad
 Mer information finns i [Hantera användare och användargrupper](users.md).
 
 >[!NOTE]
-Om [Tillåt social inloggning: Facebook](#user-management) aktiveras när användargruppen har aktiverats
-* community-*&lt;site-name>*-*&lt;uid>*-members
+>
+>Om [Tillåt social inloggning: Facebook](#user-management) aktiveras när användargruppen har aktiverats
+>
+>* community-*&lt;site-name>*-*&lt;uid>*-members
 
 när den används, bör den använda [Facebook-molntjänsten](social-login.md#createafacebookcloudservice) konfigureras för att lägga till användare i den här gruppen.
 
