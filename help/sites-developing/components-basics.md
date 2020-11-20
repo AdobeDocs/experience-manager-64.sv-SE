@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: f4cdd3d5020b917676fe8715d4e21e98f3a096b4
 workflow-type: tm+mt
 source-wordcount: '4725'
 ht-degree: 0%
@@ -1030,10 +1030,12 @@ Noden ( `cq:listeners` nodtyp `cq:EditListenersConfig`) definierar vad som händ
 >[!NOTE]
 >
 >För kapslade komponenter finns det vissa begränsningar för åtgärder som definierats som egenskaper på `cq:listeners` noden:
-
->* För kapslade komponenter *måste* värdena för följande egenskaper vara `REFRESH_PAGE`: >
->* `aftermove`
-* `aftercopy`
+>
+>* För kapslade komponenter *måste* värdena för följande egenskaper vara `REFRESH_PAGE`:
+   >
+   >  
+* `aftermove`
+>  * `aftercopy`
 
 
 Händelsehanteraren kan implementeras med en anpassad implementering. (där `project.customerAction` är en statisk metod):
@@ -1045,7 +1047,8 @@ Följande exempel motsvarar `REFRESH_INSERTED` konfigurationen:
 `afterinsert="function(path, definition) { this.refreshCreated(path, definition); }"`
 
 >[!NOTE]
-Det klassiska användargränssnittet visar vilka parametrar som kan användas i hanterarna i avsnittet `before<action>` och `after<action>` händelser i dokumentationen för [ `CQ.wcm.EditBar`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBar) och [`CQ.wcm.EditRollover`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditRollover) widgeten.
+>
+>Det klassiska användargränssnittet visar vilka parametrar som kan användas i hanterarna i avsnittet `before<action>` och `after<action>` händelser i dokumentationen för [ `CQ.wcm.EditBar`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBar) och [`CQ.wcm.EditRollover`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditRollover) widgeten.
 
 Med följande konfiguration uppdateras sidan när komponenten har tagits bort, redigerats, infogats eller flyttats:
 
