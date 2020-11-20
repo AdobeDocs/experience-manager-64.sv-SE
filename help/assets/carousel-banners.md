@@ -10,7 +10,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4b532cd3-1561-4b5c-8b4b-420c278926f0
 translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+source-git-commit: f4cdd3d5020b917676fe8715d4e21e98f3a096b4
 workflow-type: tm+mt
 source-wordcount: '4680'
 ht-degree: 4%
@@ -22,7 +22,7 @@ ht-degree: 4%
 
 Carousel-banners gör det möjligt för marknadsförare att öka konverteringsgraden genom att enkelt skapa interaktivt roterande marknadsföringsmaterial och leverera det till alla skärmar.
 
-Det kan vara tidskrävande att skapa och ändra innehåll i reklambanners, vilket begränsar möjligheten att snabbt publicera nytt innehåll eller göra det mer riktat. Med Carousel Banners kan du snabbt skapa eller ändra roterande banners, lägga till interaktivitet som till exempel klickbara områden som länkar till produktdetaljer eller relaterade resurser, och leverera dem till alla skärmar, så att du kan få ut nytt marknadsföringsmaterial snabbare.
+Det kan vara tidskrävande att skapa och ändra innehåll i reklambanners, vilket begränsar möjligheten att snabbt publicera nytt innehåll eller göra det mer riktat. Med Carousel Banners kan du snabbt skapa eller ändra roterande banners, lägga till interaktivitet som till exempel klickbara områden som länkar till produktdetaljer eller relaterade resurser, och leverera dem till alla skärmar så att du kan få ut nytt marknadsföringsmaterial snabbare.
 
 Carousel Banners utses av en banderoll med ordet **CAROUSELSET**:
 
@@ -34,7 +34,7 @@ På din webbplats kan en karusellbanderoll se ut så här:
 
 Här kan du navigera bland bilderna (genom att klicka på siffrorna). Dessutom roteras bildrutorna automatiskt baserat på ett tidsintervall som du kan anpassa. Bilder som du lägger till i karusellbanderollen har stöd för både hotspot-områden och bildscheman, där användarna kan trycka eller gå till en hyperlänk eller komma åt ett snabbfönster.
 
-I det här exemplet har en användare tryckt på eller klickat på ett bildschema och öppnat snabbvyfönstret för handskar:
+I det här exemplet har användaren tryckt på eller klickat på ett bildschema och öppnat snabbvyfönstret för handskar:
 
 ![chlimage_1-440](assets/chlimage_1-440.png)
 
@@ -251,7 +251,7 @@ Se [(valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-
 >[!NOTE]
 >
 >När du lägger till aktiveringspunkter i en bild i en [interaktiv bild](interactive-images.md) eller en Carousel-banderoll lagras hotspot-informationen på samma plats - i förhållande till bildens plats - oavsett om det är en interaktiv bild eller en Carousel-banderoll. Den här funktionen innebär att du enkelt kan återanvända samma bild - tillsammans med dess definierade hotspot-data - i båda visningsprogrammen.
-
+>
 >Observera dock att Carousel Banners stöder bildscheman på bilder som även kan innehålla hotspot-områden. en interaktiv bild gör det inte. Tänk på detta om du tänker skapa en interaktiv bild eller en Carousel-banderoll som använder samma bild. Du kanske vill skapa interaktiva bilder och Carousel Banners med separata kopior av samma bild istället.
 
 >[!NOTE]
@@ -444,7 +444,7 @@ Processen med att skapa snabbvyns URL är i princip motsatt den process som anv�
 
 Se [Identifiera hotspot- och bildschemavariabler](#identifying-hotspot-and-image-map-variables).
 
-Det sista steget för att utlösa snabbvyns URL och aktivera snabbvypanelen kräver troligen hjälp av en IT-handläggare på IT-avdelningen. De har kunskap att lära sig hur man på bästa sätt aktiverar snabbvyimplementeringen från rätt steg med en klar snabbvywebbadress.
+Det sista steget för att utlösa snabbvyns URL och aktivera snabbvypanelen kräver troligen hjälp av en IT-handläggare på IT-avdelningen. De har kunskap att lära sig hur man på bästa sätt aktiverar snabbvyimplementeringen från rätt steg med en färdig snabbvywebbadress.
 
 ## Använda snabbvyer för att skapa anpassade popup-fönster {#using-quickviews-to-create-custom-pop-ups}
 
