@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 2c1be479-9f44-4348-b074-a08af8df51fa
 translation-type: tm+mt
-source-git-commit: 5e764edb3d8ed98542c50b80cac40776c886ccf5
+source-git-commit: f4cdd3d5020b917676fe8715d4e21e98f3a096b4
 workflow-type: tm+mt
 source-wordcount: '3705'
 ht-degree: 0%
@@ -50,14 +50,14 @@ Markera den bokstav du vill förhandsgranska genom att följa följande steg:
 
    ![Förhandsgranska brev](assets/8_previewcustomdatafile.png)
 
-1. Bokstaven HTML-förhandsgranskning (förhandsgranskning av mobilformulär) öppnas som standard med fliken Data i fokus.
+1. HTML-bokstaven (förhandsgranskning av mobilformulär) öppnas som standard med fliken Data i fokus.
 
    Mer information om mobilformulär och vilka funktioner de har stöd för finns i [Funktionsdifferentiering mellan Mobile Forms och PDF forms](https://helpx.adobe.com/livecycle/help/mobile-forms/feature-differentiation-mobile-forms-pdf.html).
 
    Det finns tre flikar: data, innehåll och bilagor. Om det inte finns några dataelement (platshållarvariabler och layoutfält) öppnas bokstaven direkt i med fliken Innehåll. Fliken Bifogade filer är bara tillgänglig när det finns bifogade filer eller när biblioteksåtkomst är aktiverat.
 
    >[!NOTE]
-
+   >
    >Mer information om hur du växlar mellan HTML- och PDF-återgivningsläget för förhandsgranskning av brev finns i [Ändra återgivningsläget för bokstaven](#changerenditionmode). Mer information om PDF-stöd i Correspondence Management och AEM finns i [Avbryta webbläsarplugin-program för NPAPI och dess effekt](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html) och [PDF forms till HTML5 Forms](https://helpx.adobe.com/aem-forms/kb/pdf-forms-to-html5-forms.html).
 
 ### Ange data {#enterdata}
