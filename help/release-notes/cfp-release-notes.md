@@ -4,9 +4,9 @@ description: Versionsinformation om Adobe Experience Manager 6.4 Cumulative Fix 
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 9b339e7a9ac3f43fd0ef2e672d6fbd640993368b
+source-git-commit: e29f203fc6754056d613bd47bdb8decff9e6b5c3
 workflow-type: tm+mt
-source-wordcount: '3961'
+source-wordcount: '3958'
 ht-degree: 0%
 
 ---
@@ -457,7 +457,7 @@ Om du vill använda Uber Jar i ett Maven-projekt kan du läsa artikeln [Så här
 
 >[!NOTE]
 >
->Från och med den här versionen finns UberJar och andra relaterade artefakter tillgängliga i Maven Central Repository i stället för i Adobe Public Maven-databasen (repo.adobe.com). Huvudfilen för UberJar har bytt namn till `uber-jar-<version>.jar`. Därför finns det inget värde `classifier`för `apis` -taggen `dependency` som värde.
+>UberJar och andra relaterade artefakter finns tillgängliga i Maven Central Repository i stället för i Adobe Public Maven-databasen (repo.adobe.com). Huvudfilen för UberJar har bytt namn till `uber-jar-<version>.jar`. Därför finns det inget värde `classifier`för `apis` -taggen `dependency` som värde.
 
 ## Borttagna/inaktuella funktioner {#removed-deprecated-features}
 
