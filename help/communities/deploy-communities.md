@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: d0249609-2a9c-4d3b-92ee-dbc5fbdeaac6
 translation-type: tm+mt
-source-git-commit: 09f8adac1d5fc4edeca03d6955faddf5ea045405
+source-git-commit: 1375282df15b1a1a1ab5ed760190af8d6288970e
 workflow-type: tm+mt
-source-wordcount: '2115'
+source-wordcount: '2114'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 1%
 
 ## Checklista för installation {#installation-checklist}
 
-**För[AEM](../../help/sites-deploying/deploy.md#what-is-aem)**
+**För [AEM](../../help/sites-deploying/deploy.md#what-is-aem)**
 
 * Installera de senaste [AEM 6.4 uppdateringarna](#aem-updates)
 
@@ -44,7 +44,7 @@ ht-degree: 1%
 
    (exempelinställningar tillhandahålls för utveckling)
 
-**För[communityfunktionen](overview.md)**
+**För [communityfunktionen](overview.md)**
 
 * Om du distribuerar en [publiceringsgrupp](../../help/sites-deploying/recommended-deploys.md#tarmk-farm)[identifierar du den primära utgivaren](#primary-publisher)
 
@@ -91,7 +91,7 @@ ht-degree: 1%
 
 ## Latest Releases {#latest-releases}
 
-AEM 6.4 Communities GA levereras med Communities-paketet. Om du vill veta mer om uppdateringar av AEM 6.4 [Communities](/help/release-notes/release-notes.md#experience-manager-communities)kan du läsa [AEM 6.4 Release Notes](/help/release-notes/release-notes.md#release-information).
+AEM 6.4 Communities GA innehåller Communities-paketet. Om du vill veta mer om uppdateringar av AEM 6.4 [Communities](/help/release-notes/release-notes.md#experience-manager-communities)kan du läsa [AEM 6.4 Release Notes](/help/release-notes/release-notes.md#release-information).
 
 ### AEM 6.4 - uppdateringar {#aem-updates}
 
@@ -150,7 +150,7 @@ AEM Communities SCORM-motorn krävs för [aktiveringsfunktionen](overview.md#ena
 
 * **[cq -social- scorm -package, version 1.2.11](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-pkg)**. Det här SCORM-paketet stöds av alla versioner av AEM 6.4 Communities.
 
-* **[cq -social- scorm -package, version 2.2.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg)**includes[SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)engine. SCORM-paketet stöds AEM 6.4.2.x Communities och senare.
+* **[cq -social- scorm -package, version 2.2.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg)** includes [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) engine. SCORM-paketet stöds AEM 6.4.2.x Communities och senare.
 
 För en ny installation av SCORM-motorn bör paketet som innehåller [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) (som är [ cq -social- scorm -package, version 2.2.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg)) användas. så att du kan spela upp utbildningsresurser som stöds av SCORM 2017.
 
@@ -162,7 +162,7 @@ För en ny installation av SCORM-motorn bör paketet som innehåller [SCORM 2017
 1. Hämta **`/libs/social/config/scorm/database_scormengine_data.sql`** från cq-instansen och kör den på mysql-servern för att skapa ett uppgraderat scormEngineDB-schema.
 1. Lägg till `/content/communities/scorm/RecordResults` i egenskapen Undantagna sökvägar i CSRF-filter från `https://<hostname>;:<port>/system/console/configMgr` utgivare.
 
-Befintliga SCORM-installationer kan uppgraderas till [**cq-social-scorm-package, version 2.2.2 **](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg)(som använder[SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)) om det redigerade kursinnehållet kräver SCORM 2017.1.
+Befintliga SCORM-installationer kan uppgraderas till [**cq-social-scorm-package, version 2.2.2**](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg) (som använder [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)) om det redigerade kursinnehållet kräver SCORM 2017.1.
 
 >[!NOTE]
 >
@@ -181,7 +181,7 @@ Befintliga SCORM-installationer kan uppgraderas till [**cq-social-scorm-package,
 
    `java -Dlogback.configurationFile=logback.xml -cp "lib/*" RusticiSoftware.ScormContentPlayer.Logic.Upgrade.ConsoleApp EngineInstall.xml`
 1. Övervaka `engine_upgrade.log` filen för alla typer av fel och schemauppgraderingsstatus.
-1. Lägg till `/content/communities/scorm/RecordResults` en egenskap i CSRF-filter från **[!UICONTROL Excluded Paths]** `https://<hostname>:<port>/system/console/configMgr` utgivare.
+1. Lägg till `/content/communities/scorm/RecordResults` egenskapen i CSRF-filter från **[!UICONTROL Excluded Paths]** `https://<hostname>:<port>/system/console/configMgr` utgivare.
 
 ### SCORM-loggning {#scorm-logging}
 
@@ -358,7 +358,7 @@ Om du vill kopiera nyckelmaterialet från författaren till alla andra instanser
 
       * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
    * Klistra in de två tidigare kopierade filerna
-   * Det är nödvändigt att [uppdatera Granite Crypto-paketet](#refresh-the-granite-crypto-bundle) om mål-AEM-instansen körs
+   * Det är nödvändigt att [uppdatera Granite-krypteringspaketet](#refresh-the-granite-crypto-bundle) om mål-AEM-instansen körs
 
 
 >[!CAUTION]
