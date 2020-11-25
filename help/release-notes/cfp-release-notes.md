@@ -4,7 +4,7 @@ description: Versionsinformation om Adobe Experience Manager 6.4 Cumulative Fix 
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: e29f203fc6754056d613bd47bdb8decff9e6b5c3
+source-git-commit: c9d5556f2358489ae011add1243785f52c0c4135
 workflow-type: tm+mt
 source-wordcount: '3958'
 ht-degree: 0%
@@ -451,7 +451,8 @@ Om du vill använda Uber Jar i ett Maven-projekt kan du läsa artikeln [Så här
 <dependency>
       <groupId>com.adobe.aem</groupId>
       <artifactId>uber-jar</artifactId>
-      <version>6.4.8.3</version>  
+      <version>6.4.8.3</version>
+      <scope>provided</scope>  
 </dependency>
 ```
 
