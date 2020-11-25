@@ -4,9 +4,9 @@ description: Versionsinformation om Adobe Experience Manager 6.4 Cumulative Fix 
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c9d5556f2358489ae011add1243785f52c0c4135
+source-git-commit: a969fb6ca6962766b7a69a4f35a9960269dabc86
 workflow-type: tm+mt
-source-wordcount: '3958'
+source-wordcount: '3957'
 ht-degree: 0%
 
 ---
