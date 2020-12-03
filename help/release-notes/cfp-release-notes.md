@@ -4,9 +4,9 @@ description: Versionsinformation om Adobe Experience Manager 6.4 Cumulative Fix 
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f74e20c5264dc38dcbe20c8fc6b9beaaee7cc6da
+source-git-commit: e10d53a3912fb21962f1015550bd3a4a118d8834
 workflow-type: tm+mt
-source-wordcount: '4031'
+source-wordcount: '4075'
 ht-degree: 0%
 
 ---
@@ -99,6 +99,10 @@ Adobe Experience Manager 6.4.8.3 innehåller korrigeringar för följande proble
 >[!NOTE]
 >
 >[!DNL Experience Manager Forms] släpper tilläggspaketen en vecka efter det schemalagda  [!DNL Experience Manager] Cumulative Fix Pack-frisläppningsdatumet.
+
+>[!NOTE]
+>
+>[!DNL Experience Manager] Kumulativt korrigeringspaket innehåller inte korrigeringar för  [!DNL Experience Manager Forms]. De levereras med ett separat [!DNL Forms]-tilläggspaket. Dessutom släpps ett kumulativt installationsprogram som innehåller korrigeringar för [!DNL Experience Manager Forms] på JEE. Mer information finns i [Installera AEM Forms-tilläggspaket](#install-aem-forms-add-on-package) och [Installera AEM Forms JEE-installationsprogrammet](#install-aem-forms-jee-installer).
 
 **Adaptiv Forms**
 
