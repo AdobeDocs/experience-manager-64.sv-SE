@@ -17,7 +17,7 @@ Adobe Experience Manager (AEM) Assets konfigureras med varumärkesportalen via A
 
 >[!NOTE]
 >
->Det finns stöd för att konfigurera AEM Assets med varumärkesportalen via Adobe i/O i AEM 6.4.8.0 och senare.
+>Konfigurering av AEM Assets med varumärkesportalen via Adobe I/O stöds i AEM 6.4.8.0 och senare.
 >
 >Tidigare konfigurerades varumärkesportalen i Classic UI via äldre OAuth Gateway, som använder JWT-tokenutbyte för att erhålla en IMS Access-token för auktorisering.
 
@@ -54,11 +54,11 @@ Du behöver följande för att konfigurera AEM Assets med varumärkesportalen:
 
 Vi rekommenderar att du AEM 6.4 för att konfigurera en AEM författarinstans. Om du inte har AEM igång kan du hämta det från följande platser:
 
-* Om du redan är AEM kan du ladda ned AEM 6.4 från webbplatsen [](http://licensing.adobe.com)Adobe Licensing.
+* Om du redan är AEM kan du hämta AEM 6.4 från [Adobe Licensing website](http://licensing.adobe.com).
 
-* Om du är Adobe-partner ska du använda [Adobe Partner Training Program](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) för att beställa AEM 6.4.
+* Om du är Adobe-partner använder du [Adobe Partner Training Program](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) för att begära AEM 6.4.
 
-När du har laddat ned AEM finns instruktioner om hur du konfigurerar en AEM författarinstans i [Distribuera och underhålla](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/deploy.html#defaultlocalinstall).
+När du har laddat ned AEM finns instruktioner om hur du konfigurerar en AEM författarinstans i [distribuera och underhålla](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/deploy.html#defaultlocalinstall).
 
 ### Hämta och installera AEM senaste Service Pack {#servicepack}
 
@@ -66,7 +66,7 @@ Detaljerade instruktioner finns i
 
 * [AEM 6.4 Service Pack versionsinformation](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)
 
-**Kontakta kundtjänst** om du inte kan hitta det senaste AEM eller Service Pack.
+**Kontakta Customer** Careiom du inte kan hitta det senaste AEM eller Service Pack.
 
 ## Skapa en konfiguration {#configure-new-integration-64}
 
@@ -95,7 +95,8 @@ IMS-konfigurationen har två steg:
 
 Med ett offentligt certifikat kan du autentisera din profil på Adobe I/O.
 
-1. Logga in på din AEM Assets-författarinstansStandard-URL: http:// localhost:4502/aem/start.html
+1. Logga in på din AEM Assets-författarinstans
+Standard-URL: http:// localhost:4502/aem/start.html
 1. Gå till **[!UICONTROL Security]** >> **[!UICONTROL Adobe IMS Configurations]** från panelen **Tools** ![Tools](assets/tools.png).
 
    ![Användargränssnittet för konfiguration av Adobe IMS-kontot](assets/ims-config1.png)
@@ -124,7 +125,7 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe I/O.
 
    Du skapar Adobe IMS-kontot på fliken **Konto**, men för det behöver du integreringsinformationen. Håll den här sidan öppen tills vidare.
 
-   Open a new tab and [Create Adobe I/O integration](#createnewintegration) to get the integration details for IMS Account configurations.
+   Öppna en ny flik och [Skapa Adobe I/O-integrering](#createnewintegration) för att få integreringsinformation för IMS-kontokonfigurationer.
 
 ### Skapa en Adobe I/O-integrering{#createnewintegration}
 
@@ -255,7 +256,7 @@ Gör så här för att skapa molntjänstkonfigurationen för varumärkesportalen
    >
    >Replikeringsagenterna arbetar parallellt och delar jobbdistributionen jämnt, vilket ökar publiceringshastigheten fyra gånger den ursprungliga hastigheten. När molntjänsten har konfigurerats krävs ingen ytterligare konfiguration för att aktivera de replikeringsagenter som aktiveras som standard för att aktivera parallell publicering av flera resurser.
 
-1. To verify the connection between AEM Assets author and Brand Portal, click **[!UICONTROL Test Connection]**.
+1. Klicka på **[!UICONTROL Test Connection]** om du vill verifiera anslutningen mellan AEM Assets författare och varumärksportal.
 
    ![](assets/test-integration4.png)
 
@@ -277,7 +278,7 @@ Varumärkesportalen har konfigurerats med din AEM Assets-författarinstans. Du k
 * [Publicera resurser från AEM Assets till varumärkesportalen](../assets/brand-portal-publish-assets.md)
 * [Publicera mappar från AEM Assets till varumärkesportalen](../assets/brand-portal-publish-folder.md)
 * [Publicera samlingar från AEM Assets till varumärkesportalen](../assets/brand-portal-publish-collection.md)
-* [Konfigurera Resurshantering](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) så att användarna på varumärkesportalen kan bidra och publicera resurser på AEM Assets.
+* [Konfigurera ](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) resurskälla, vilket gör det möjligt för användare på varumärkesportalen att bidra och publicera resurser på AEM Assets.
 
 ## Uppgraderingskonfiguration {#upgrade-integration-64}
 
@@ -304,7 +305,7 @@ Kontrollera att inget publiceringsjobb körs på din AEM Assets-författarinstan
 
 1. Leta reda på replikeringsagenterna för din varumärksportal-klient.
 
-   Kontrollera att **kön är inaktiv** för alla replikeringsagenter. Inget publiceringsjobb är aktivt.
+   Kontrollera att **kön är i viloläge** för alla replikeringsagenter. Inget publiceringsjobb är aktivt.
 
    ![](assets/test-integration3.png)
 
@@ -329,12 +330,12 @@ Så här tar du bort den befintliga konfigurationen:
 
    ![](assets/delete-cloud-service.png)
 
-1. Navigera till `/home/users/mac` och ta bort **MAC-användaren** för din varumärksportal.
+1. Navigera till `/home/users/mac` och ta bort **MAC-användaren** för din varumärksportal-klient.
 
    ![](assets/delete-mac-user.png)
 
 
-Nu kan du [skapa en konfiguration](#configure-new-integration-64) på AEM 6.4-författarinstansen i Adobe I/O.
+Nu kan du [skapa konfiguration](#configure-new-integration-64) på din AEM 6.4-författarinstans på Adobe I/O.
 
 
 
