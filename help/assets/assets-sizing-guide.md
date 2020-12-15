@@ -60,7 +60,7 @@ De exempeldata som finns i verktyget visar hur viktigt det är att utföra de an
 
 För stora datalager kan du implementera ett delat datalager antingen via ett delat fildatalager på en nätverksansluten enhet eller via ett S3-datalager. I det här fallet behöver enskilda instanser inte ha en kopia av binärfilerna. Dessutom underlättar ett delat datalager binär replikering utan extra intervall och minskar bandbredden som används för att replikera resurser till publiceringsmiljöer eller för att avlasta instanser.
 
-#### Användningsexempel {#use-cases}
+#### Använd fall {#use-cases}
 
 Datalagret kan delas mellan en primär författarinstans och en väntande författarinstans för att minimera den tid det tar att uppdatera standby-instansen med ändringar som görs i den primära instansen. Adobe rekommenderar att du delar datalagret mellan en primär författarinstans och avlastar författarinstanser för att minska overheadkostnaderna vid avlastning av arbetsflöden. Du kan också dela datalagret mellan författaren och publiceringsinstanserna för att minimera trafiken under replikeringen.
 
@@ -84,11 +84,11 @@ För AWS-åtgärder kan en implementering av en central plats (via S3) i ställe
 
 Ett delat datalager kräver att binärfilerna lagras på en nätverksansluten enhet som delas mellan alla instanser. Eftersom dessa binärfiler nås via ett nätverk påverkas systemprestandan negativt. Du kan delvis minska effekten genom att använda en snabb nätverksanslutning till ett snabbt disksystem. Detta är dock ett dyrt förslag. När det gäller AWS-åtgärder är alla diskar fjärranslutna och kräver nätverksanslutning. Tidigare volymer förlorar data när instansen startas eller stoppas.
 
-#### Latens {#latency}
+#### Svarstid {#latency}
 
 Latens i S3-implementeringar introduceras av skrivtrådar i bakgrunden. Säkerhetskopieringsprocedurer måste ta hänsyn till denna fördröjning och eventuella avlastningsprocedurer. S3-resursen kanske inte finns i S3 när ett avlastningsjobb startar. Dessutom kan Lucene-index vara ofullständiga vid säkerhetskopiering. Det gäller för alla tidskänsliga filer som skrivs till S3-datalagret och som öppnas från en annan instans.
 
-### Node Store/Document Store {#node-store-document-store}
+### Nodarkiv/dokumentarkiv {#node-store-document-store}
 
 Det är svårt att få fram exakta siffror för storleken för en NodeStore eller DocumentStore på grund av de resurser som används av följande:
 
@@ -105,7 +105,7 @@ Använd SSD-diskar eller diskar med en IOPS-nivå som är högre än 3 000 för 
 
 ## Nätverk {#network}
 
-AEM Assets har ett antal användningsområden som gör nätverksprestanda viktigare än många av våra AEM projekt. En kund kan ha en snabb server, men om nätverksanslutningen inte är tillräckligt stor för att stödja belastningen på de användare som överför och hämtar resurser från systemet verkar den ändå vara långsam. Det finns en bra metod för att fastställa krympningspunkten i en användares nätverksanslutning till AEM vid [AEM av resursaspekter för användarupplevelser, till exempel storlek, arbetsflödesutvärdering och nätverkstopologi](assets-network-considerations.md).
+AEM Assets har ett antal användningsområden som gör nätverksprestanda viktigare än många av våra AEM projekt. En kund kan ha en snabb server, men om nätverksanslutningen inte är tillräckligt stor för att stödja belastningen på de användare som överför och hämtar resurser från systemet verkar den ändå vara långsam. Det finns en bra metod för att fastställa krympningspunkten i en användares nätverksanslutning till AEM på [AEM tillgångshänsyn för användarupplevelser, instansstorlek, utvärdering av arbetsflöde och nätverkstopologi](assets-network-considerations.md).
 
 ## WebDAV {#webdav}
 
@@ -129,7 +129,7 @@ När du ändrar storlek på en implementering är det viktigt att tänka på sys
 
 Filstorleken är inte den enda faktor som bidrar till problem med ostrukturerat minne. Det beror också på bildens dimensioner. Du kan undvika OOM-problem genom att ange en högre stackstorlek när du börjar AEM.
 
-Dessutom kan du redigera egenskapen för tröskelstorlek för komponenten i Configuration Manager så att den mellanliggande temporära filen som är större än noll används. `com.day.cq.dam.commons.handler.StandardImageHandler`
+Du kan dessutom redigera egenskapen för tröskelstorlek för komponenten `com.day.cq.dam.commons.handler.StandardImageHandler` i Configuration Manager om du vill använda en mellanliggande tillfällig fil som är större än noll.
 
 ## Maximalt antal resurser {#maximum-number-of-assets}
 
@@ -143,6 +143,6 @@ Använd det Camera Raw biblioteket om återgivningarna genereras på fel sätt. 
 
 Det är svårt att exakt uppskatta storleken på TIFF-filen som stöds utan att vara ifylld (OTB) med en särskild hake för AEM eftersom ytterligare faktorer, som pixelstorlek, påverkar bearbetningen. Det är möjligt att AEM kan bearbeta en fil med storleken 255 MB OTB, men inte kan bearbeta en filstorlek på 18 MB eftersom den senare innehåller ett ovanligt högre antal pixlar jämfört med den förra.
 
-## Storlek på tillgångar {#size-of-assets}
+## Resursens storlek {#size-of-assets}
 
 Som standard kan du överföra resurser med en filstorlek på upp till 2 GB AEM. Information om hur du överför mycket stora resurser i AEM finns i [Konfiguration för att överföra mycket stora resurser](managing-video-assets.md#configuration-to-upload-video-assets-that-are-larger-than-gb).
