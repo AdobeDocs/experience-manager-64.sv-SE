@@ -11,7 +11,7 @@ ht-degree: 2%
 ---
 
 
-# Metadata Schema Reference {#metadata-schemata-reference}
+# Metadata Schemata Reference {#metadata-schemata-reference}
 
 Följande referens innehåller information om en viss metadataram (i alfabetisk ordning) samt en lista över egenskaper och deras definitioner.
 
@@ -21,7 +21,7 @@ Dublin Core-metadata innehåller en standardiserad uppsättning konventioner fö
 
 Den enkla DCMES-uppsättningen (Dublin Core Metadata Element Set) innehåller 15 metadataelement som listas i följande tabell. Varje Dublin Core-element är valfritt och kan upprepas. Du kan lägga till eller ta bort metadata för Dublin Core på samma sätt som du gör för medietypsspecifika metadata.
 
-Förutom DCMES finns det andra metadataelement som skapats av Dublin Core Initiative. Mer information finns i [Dublin Core Initiative](http://dublincore.org/) .
+Förutom DCMES finns det andra metadataelement som skapats av Dublin Core Initiative. Mer information finns i [Dublin Core Initiative](http://dublincore.org/).
 
 | Egenskap | Beskrivning |
 |---|---|
