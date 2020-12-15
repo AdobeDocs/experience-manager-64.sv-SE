@@ -22,23 +22,23 @@ ht-degree: 8%
 
 >[!CAUTION]
 >
->Vissa funktioner för innehållsfragment kräver att [AEM 6.4 Service Pack 2 (6.4.2.0) eller senare](/help/release-notes/sp-release-notes.md)används.
+>Vissa funktioner för innehållsfragment kräver [AEM 6.4 Service Pack 2 (6.4.2.0) eller senare](/help/release-notes/sp-release-notes.md).
 
-## Redigera egenskaper/metadata {#editing-properties-meta-data}
+## Redigera egenskaper/Metadata {#editing-properties-meta-data}
 
 Du kan visa och redigera metadata (egenskaper) för innehållsfragment:
 
-1. Gå till innehållsfragmentets plats i **[!UICONTROL Assets]** konsolen.
+1. I **[!UICONTROL Assets]**-konsolen navigerar du till platsen för innehållsfragmentet.
 1. Antingen:
 
    * Välj [Visa egenskaper för att öppna dialogrutorna](managing-assets-touch-ui.md#editing-properties). När du har öppnat för visning kan du även redigera.
-   * Öppna [innehållsfragmentet för redigering](content-fragments-managing.md#opening-the-fragment-editor)och välj sedan **[!UICONTROL Metadata]** från sidopanelen.
+   * Öppna [innehållsfragmentet för Edit](content-fragments-managing.md#opening-the-fragment-editor) och välj sedan **[!UICONTROL Metadata]** på sidopanelen.
 
    ![cfm-6420-06](assets/cfm-6420-06.png)
 
-1. På fliken **[!UICONTROL Basic]** finns alternativ som du kan visa eller redigera:
+1. Fliken **[!UICONTROL Basic]** innehåller alternativ som du kan visa eller redigera:
 
-   * Miniatyrbild som du kan **överföra bild till**
+   * Miniatyrbild som du kan **överföra bild** för
    * **Titel**
    * **Beskrivning**
    * **Taggar**
