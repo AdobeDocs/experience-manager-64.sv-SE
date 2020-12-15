@@ -25,7 +25,7 @@ När replikeringen är klar kan du publicera resurser, mappar och samlingar på 
 >
 >Adobe rekommenderar stegvis publicering, helst vid tidpunkter med låg belastning, för att AEM-författaren inte ska uppta för mycket resurser.
 
-1. I resurskonsolen håller du muspekaren över de önskade resurserna och väljer **[!UICONTROL Publish]** ett alternativ bland snabbåtgärderna.
+1. I resurskonsolen håller du muspekaren över de önskade resurserna och väljer **[!UICONTROL Publish]**-alternativ bland snabbåtgärderna.
 
    Du kan också välja de resurser du vill publicera på varumärkesportalen.
 
@@ -39,13 +39,13 @@ När replikeringen är klar kan du publicera resurser, mappar och samlingar på 
 
 Gör något av följande för att publicera de markerade resurserna på varumärkesportalen:
 
-* Välj **[!UICONTROL Quick Publish]** i verktygsfältet. Then from the menu, select **[!UICONTROL Publish to Brand Portal]**.
+* Välj **[!UICONTROL Quick Publish]** i verktygsfältet. Välj sedan **[!UICONTROL Publish to Brand Portal]** på menyn.
 
 * Välj **[!UICONTROL Manage Publication]** i verktygsfältet.
 
-   1. Från **[!UICONTROL Action]** markeringen **[!UICONTROL Publish to Brand Portal]** och från **[!UICONTROL Scheduling]** markeringen **[!UICONTROL Now]**. Tryck/klicka på **[!UICONTROL Next].**
+   1. Välj sedan **[!UICONTROL Publish to Brand Portal]** från **[!UICONTROL Action]** och välj **[!UICONTROL Now]** från **[!UICONTROL Scheduling]**. Tryck/klicka på **[!UICONTROL Next].**
 
-   2. Bekräfta ditt val **[!UICONTROL Scope]** i och tryck/klicka på **[!UICONTROL Publish to Brand Portal]**.
+   2. Bekräfta ditt val i **[!UICONTROL Scope]** och tryck/klicka på **[!UICONTROL Publish to Brand Portal]**.
 
 Ett meddelande visas som anger att resurserna har placerats i kö för publicering på varumärkesportalen. Logga in i gränssnittet för varumärkesportalen för att se de publicerade resurserna.
 
@@ -54,7 +54,7 @@ Ett meddelande visas som anger att resurserna har placerats i kö för publiceri
 Gör så här för att schemalägga publicering av resurser på varumärkesportalen till ett senare datum eller en senare tid:
 
 1. När du har valt resurser/mappar att publicera väljer du **[!UICONTROL Manage Publication]** i verktygsfältet högst upp.
-2. På **[!UICONTROL Manage Publication]** sidan väljer du **[!UICONTROL Publish to Brand Portal]** från **[!UICONTROL Action]** och väljer **[!UICONTROL Later]** från **[!UICONTROL Scheduling]**.
+2. På sidan **[!UICONTROL Manage Publication]** väljer du **[!UICONTROL Publish to Brand Portal]** från **[!UICONTROL Action]** och väljer **[!UICONTROL Later]** från **[!UICONTROL Scheduling]**.
 
    ![publishlaterbp-1](assets/publishlaterbp-1.png)
 
