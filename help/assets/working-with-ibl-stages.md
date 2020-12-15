@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Arbeta med IBL-steg {#about-working-with-ibl-stages}
+# Arbeta med IBL-stadier {#about-working-with-ibl-stages}
 
 AEM 3D har stöd för bildbaserad belysning (IBL) för både interaktiv visning och återgivning med den inbyggda renderaren Adobe Rapid Refine™ och tredjepartsrenderare. Du kan skapa IBL-stadier med vanliga redigeringsverktyg som Autodesk® Maya® eller Autodesk® 3ds Max®.
 
@@ -35,9 +35,9 @@ För närvarande stöder AEM 3D endast 32-bitars TIFF-filer. Använd vid behov A
 
 En enda HDR-bild räcker ofta för IBL-steg, men AEM 3D ger ytterligare kontroll över IBL-effekter genom att upp till tre separata bilder tillåts:
 
-* **Diffus ljusmiljöbild** - Den här typen av bild ska vara en HDR-bild, men den kan vara ganska liten eftersom bilden filtreras kraftigt innan den används för diffus belysning.
-* **Reflektionsmiljöbild** - Den här typen av bild används för att skapa speglingar i objektytor. Det kan vara en 8-bitars RGB-standardbild med en storlek och upplösning som ger önskad kvalitet och skärpa för speglingar. Om en HDR-bild anges konverteras den AEM 3D till 8-bitars RGB innan en egen algoritm används.
-* **Bakgrundsmiljöbild** - Den här typen av bild används som bakgrund. Det kan vara en 8-bitars RGB-standardbild och bör ha önskad storlek/upplösning/detaljnivå för scenens bakgrund. Om en HDR-bild anges konverterar AEM 3D den till 8-bitars RGB med en egen algoritm.
+* **Diffus ljusmiljöbild**  - Den här typen av bild ska vara en HDR-bild, men den kan vara ganska liten eftersom bilden filtreras kraftigt innan den används för diffus belysning.
+* **Reflektionsmiljöbild**  - Den här typen av bild används för att skapa speglingar i objektytor. Det kan vara en 8-bitars RGB-standardbild med en storlek och upplösning som ger önskad kvalitet och skärpa för speglingar. Om en HDR-bild anges konverteras den AEM 3D till 8-bitars RGB innan en egen algoritm används.
+* **Background Environment Image**  - Den här typen av bild används som bakgrund. Det kan vara en 8-bitars RGB-standardbild och bör ha önskad storlek/upplösning/detaljnivå för scenens bakgrund. Om en HDR-bild anges konverterar AEM 3D den till 8-bitars RGB med en egen algoritm.
 
 >[!NOTE]
 >
@@ -55,11 +55,11 @@ Du kan finjustera utseendet på IBL-scenen med följande scenegenskaper:
   </tr> 
   <tr> 
    <td>Information om IBL Sun</td> 
-   <td><p>Gör att du kan justera riktning och styrka för den extra ljuskälla som simulerar solen. <span class="diff-html-added">Ljuskällan ökar ljusstyrkan och gör att objektet kastar en skugga på markplanet. Skuggskiftning stöds vid återgivning med Rapid Refine och vid förhandsgranskning med Google Chrome. men stöds för närvarande inte av andra webbläsare.</span></p> 
+   <td><p>Gör att du kan justera riktning och styrka för den extra ljuskälla som simulerar solen. <span class="diff-html-added">Ljuskällan ökar ljusstyrkan och gör att objektet kastar en skugga på markplanet. Skuggskiftning stöds vid återgivning med Rapid Refine och vid förhandsgranskning med Google Chrome. stöds för närvarande inte av andra webbläsare.</span></p> 
     <ul> 
-     <li><strong>lat</strong> - Solljuskällans lodräta position (<code>0.0</code>-<code>1.0</code>).<br /> Inställningen är <code>0.0</code> vid horisonten (vertikal mittpunkt av bilden med diffus ljusmiljö). <code>1.0</code> finns i den övre kanten av bilden för diffus ljusmiljö.</li> 
+     <li><strong>lat</strong> - Solljuskällans lodräta läge (<code>0.0</code>-<code>1.0</code>).<br /> Inställningen  <code>0.0</code> är vid horisonten (lodrät mittpunkt av bilden med diffus ljusmiljö).  <code>1.0</code> finns i den övre kanten av bilden för diffus ljusmiljö.</li> 
      <li><strong>long</strong> - Solljuskällans vågräta position (<code>0.0</code>-<code>1.0</code>).<br /> Inställningen 0,0 motsvarar vänster. 1.0 motsvarar högerkanten av bilden för diffus ljusmiljö.<br /> </li> 
-     <li><strong>stark</strong> - Solljuskällans ljusstyrka. Öka detta värde för att göra solljuset ljusare. minska värdet för att göra det mörkare. <br /> En inställning som <code>0</code> inaktiverar extra ljus och inaktiverar skuggor. Parametern påverkar inte miljöreflektioner.<br /> </li> 
+     <li><strong>stark</strong>  - Solljuskällans ljusstyrka. Öka detta värde för att göra solljuset ljusare. minska värdet för att göra det mörkare. <br /> En inställning som  <code>0</code> inaktiverar extra ljus och inaktiverar skuggor. Parametern påverkar inte miljöreflektioner.<br /> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -71,13 +71,13 @@ Du kan finjustera utseendet på IBL-scenen med följande scenegenskaper:
    <td><p><span class="diff-html-added">Du kan styra diffus belysning. Du kan behöva justera den här egenskapen manuellt för att korrigera ljusstyrkan om bilden för diffus ljusmiljö är ovanligt ljus eller mörk (till exempel nattscener).</span></p> 
     <ul> 
      <li><strong>r, g, b</strong> - Används för närvarande inte.</li> 
-     <li><strong>bright</strong> - Multiplikator för <span class="diff-html-added">intensitet. Om du ökar eller minskar det här värdet ökar eller minskar den totala ljusstyrkan (både den grundläggande IBL-belysningen och ljuskällans ljusstyrka).</span></li> 
+     <li><strong>bright</strong>  - Multiplikator för  <span class="diff-html-added">intensitet. Om du ökar eller minskar det här värdet ökar eller minskar den totala ljusstyrkan (både den grundläggande IBL-belysningen och solljuskällans ljusstyrka).</span></li> 
     </ul> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Ökning av den sfäriska bakgrundsdiametern i ett IBL-stadium {#increasing-the-spherical-background-diameter-of-an-ibl-stage}
+## Öka den sfäriska bakgrundsdiametern för ett IBL-steg {#increasing-the-spherical-background-diameter-of-an-ibl-stage}
 
 I IBL-faser används sfäriska bakgrundsbilder som har en diameter på 20 meter som standard. Sådana stadier fungerar bra för objekt på upp till 10 meter. Om du visar större objekt kan du öka den sfäriska bakgrundsdiametern för en IBL-scen.
 
@@ -88,11 +88,11 @@ I IBL-faser används sfäriska bakgrundsbilder som har en diameter på 20 meter 
    `/content/dam/test3d/stage-helipad.fbx`
 
 1. Expandera scennoden till `jcr:content/metadata`.
-1. Ange egenskapen `dam:gPlaneRadius` till önskat millimetervärde.
+1. Ställ in egenskapen `dam:gPlaneRadius` på önskat millimetervärde.
 
    Adobe rekommenderar att du begränsar det här värdet till ungefär den största dimensionen på det största objekt som du vill visa på scenen, så att återgivningen blir effektiv.
 
-   Exempelvis visas en flygplansmodell som är 20 meter lång bra om `dam:gPlaneRadius=20000`.
+   En flygplansmodell som är 20 meter lång visas till exempel bra om `dam:gPlaneRadius=20000`.
 
-1. Tryck på i det övre vänstra hörnet av CRXDE Lite-sidan **[!UICONTROL Save All]**.
+1. I närheten av det övre vänstra hörnet på CRXDE Lite-sidan trycker du på **[!UICONTROL Save All]**.
 
