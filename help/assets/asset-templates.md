@@ -50,16 +50,16 @@ Du kan även hämta utdata i dessa format till ditt lokala system.
 
 Tänk dig ett scenario där du vill skapa digital tryckbar information som broschyrer, flygblad och annonser för en kommande kampanj och dela med butiker globalt. Genom att skapa material som bygger på en mall kan ni leverera en enhetlig kundupplevelse över alla kanaler. Designers kan skapa kampanjmallar (en eller flera sidor) med hjälp av en kreativ lösning som InDesign och överföra mallarna till AEM Assets åt dig. Innan du skapar en säkerhet måste du ha en eller flera INDD-mallar överförda till och tillgängliga i Experience Manager i förväg.
 
-1. Klicka på eller tryck på AEM logotyp och sedan på/på **[!UICONTROL Assets]** navigeringssidan.
-1. Välj bland alternativen **[!UICONTROL Templates]**.
+1. Klicka på eller tryck på AEM logotyp och sedan på/på **[!UICONTROL Assets]** på navigeringssidan.
+1. Välj **[!UICONTROL Templates]** bland alternativen.
 
    ![chlimage_1-306](assets/chlimage_1-306.png)
 
-1. Klicka på/tryck **[!UICONTROL Create]** och välj sedan den information du vill skapa på menyn. Välj till exempel **[!UICONTROL Brochure]**.
+1. Klicka/tryck på **[!UICONTROL Create]** och välj sedan den information du vill skapa på menyn. Välj till exempel **[!UICONTROL Brochure]**.
 
    ![chlimage_1-307](assets/chlimage_1-307.png)
 
-1. ha en eller flera INDD-mallar överförda till och tillgängliga i Experience Manager i förväg. Välj en mall för din broschyr och klicka/tryck **[!UICONTROL Next]**.
+1. ha en eller flera INDD-mallar överförda till och tillgängliga i Experience Manager i förväg. Välj en mall för din broschyr och klicka/tryck på **[!UICONTROL Next]**.
 
    ![chlimage_1-308](assets/chlimage_1-308.png)
 
@@ -67,11 +67,11 @@ Tänk dig ett scenario där du vill skapa digital tryckbar information som brosc
 
    ![chlimage_1-309](assets/chlimage_1-309.png)
 
-1. (Valfritt) Klicka/tryck på **[!UICONTROL Tags]** ikonen bredvid **[!UICONTROL Tags]** fältet och välj en eller flera taggar för broschyren. Bekräfta ditt val genom **[!UICONTROL Confirm]** att klicka/trycka.
+1. (Valfritt) Klicka/tryck på ikonen **[!UICONTROL Tags]** bredvid fältet **[!UICONTROL Tags]** och välj en eller flera taggar för broschyren. Klicka/tryck på **[!UICONTROL Confirm]** för att bekräfta ditt val.
 
    ![chlimage_1-310](assets/chlimage_1-310.png)
 
-1. Klicka på **[!UICONTROL Create]**. En dialogruta bekräftar att en ny broschyr har skapats. Klicka/tryck **[!UICONTROL Open]** för att öppna broschyren i redigeringsläge.
+1. Klicka på **[!UICONTROL Create]**. En dialogruta bekräftar att en ny broschyr har skapats. Klicka/tryck på **[!UICONTROL Open]** för att öppna broschyren i redigeringsläge.
 
    ![chlimage_1-311](assets/chlimage_1-311.png)
 
@@ -85,7 +85,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
 
 1. Gör något av följande om du vill öppna materialet för redigering:
 
-   * Öppna den säkerhet (broschyr i det här fallet) som du skapade i steg 7 i [Skapa en säkerhet](asset-templates.md#creating-a-collateral).
+   * Öppna den säkerhet (broschyr i det här fallet) som du skapade i steg 7 av [Skapa en säkerhet](asset-templates.md#creating-a-collateral).
    * Navigera från sidan Mallar till en mapp där du har skapat materialet och klicka/tryck på snabbåtgärden Redigera på miniatyrbilden av ett material.
    * Klicka på/tryck på ikonen Redigera i verktygsfältet på resurssidan för den aktuella resursen.
    * Markera den önskade delen och klicka/tryck på ikonen Redigera i verktygsfältet.
@@ -114,11 +114,11 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
 
    Du kan redigera textegenskaperna, till exempel teckensnittsstil, färg och storlek, med de alternativ som finns.
 
-1. Klicka på/tryck på **[!UICONTROL Preview]** ikonen för att förhandsgranska textändringarna.
+1. Klicka/tryck på ikonen **[!UICONTROL Preview]** för att förhandsgranska textändringarna.
 
    ![chlimage_1-317](assets/chlimage_1-317.png)
 
-1. Klicka/tryck på **[!UICONTROL Asset Finder]** ikonen om du vill byta ut en bild.
+1. Klicka/tryck på ikonen **[!UICONTROL Asset Finder]** om du vill byta ut en bild.
 
    ![chlimage_1-318](assets/chlimage_1-318.png)
 
@@ -130,7 +130,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
 
    ![chlimage_1-320](assets/chlimage_1-320.png)
 
-1. Klicka på/tryck på **[!UICONTROL Preview]** ikonen för att förhandsgranska bilden.
+1. Klicka/tryck på ikonen **[!UICONTROL Preview]** för att förhandsgranska bilden.
 
    ![chlimage_1-321](assets/chlimage_1-321.png)
 
@@ -138,7 +138,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
 
    ![chlimage_1-322](assets/chlimage_1-322.png)
 
-1. Klicka på/tryck på **[!UICONTROL Preview]** ikonen i verktygsfältet för att förhandsgranska alla ändringar. Klicka/tryck **[!UICONTROL Done]** för att spara redigeringsändringarna i materialet.
+1. Klicka/tryck på ikonen **[!UICONTROL Preview]** i verktygsfältet för att förhandsgranska alla ändringar. Klicka/tryck på **[!UICONTROL Done]** om du vill spara redigeringsändringarna för den aktuella informationen.
 
    >[!NOTE]
    >
@@ -150,7 +150,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
    >
    >Så här aktiverar du AEM att lösa bilder:
    >
-   >* Bädda in bilder när du skapar InDesign-mallar (se [Länkar och inbäddade bilder](https://helpx.adobe.com/indesign/using/graphics-links.html)).
+   >* Bädda in bilder när du skapar InDesign-mallar (se [Om länkar och inbäddade bilder](https://helpx.adobe.com/indesign/using/graphics-links.html)).
    >* Montera AEM i det lokala filsystemet och mappa sedan saknade ikoner med befintliga AEM.
 
    >
@@ -168,9 +168,9 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
 ## Lägg samman säkerhet {#merge-collateral}
 
 
-1. Klicka eller tryck **[!UICONTROL Tools > Assets]**.
-1. Välj bland alternativen **[!UICONTROL Templates]**.
-1. Klicka/tryck **[!UICONTROL Create]** och välj **[!UICONTROL Merge]** på menyn.
+1. Klicka eller tryck på **[!UICONTROL Tools > Assets]**.
+1. Välj **[!UICONTROL Templates]** bland alternativen.
+1. Klicka/tryck på **[!UICONTROL Create]** och välj **[!UICONTROL Merge]** på menyn.
 
    ![chlimage_1-325](assets/chlimage_1-325.png)
 
@@ -194,16 +194,16 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
 
    ![chlimage_1-330](assets/chlimage_1-330.png)
 
-1. Click/tap **[!UICONTROL Next]** from the toolbar.
-1. Ordna om mallarna om det behövs på **[!UICONTROL Preview & Reorder]** skärmen och förhandsgranska valet av mallar som ska sammanfogas. Klicka/tryck sedan **[!UICONTROL Next]** på verktygsfältet.
+1. Klicka/tryck på **[!UICONTROL Next]** i verktygsfältet.
+1. På skärmen **[!UICONTROL Preview & Reorder]** ordnar du om mallarna om det behövs och förhandsgranskar valet av mallar som ska sammanfogas. Klicka/tryck sedan på **[!UICONTROL Next]** från verktygsfältet.
 
    ![chlimage_1-331](assets/chlimage_1-331.png)
 
-1. Ange ett namn för säkerheten på skärmen Konfigurera mall. Du kan också ange de taggar som du anser lämpliga. Om du vill exportera utdata i PDF-format markerar du **[!UICONTROL Acrobat (.PDF)]** alternativet. Som standard exporteras säkerheten i JPG- och InDesign-format. Klicka/tryck om du vill ändra miniatyrbilden för flersidig information **[!UICONTROL Change Thumbnail]**.
+1. Ange ett namn för säkerheten på skärmen Konfigurera mall. Du kan också ange de taggar som du anser lämpliga. Om du vill exportera utdata i PDF-format väljer du alternativet **[!UICONTROL Acrobat (.PDF)]**. Som standard exporteras säkerheten i JPG- och InDesign-format. Klicka/tryck på **[!UICONTROL Change Thumbnail]** om du vill ändra visningsminiatyrbilden för flersidessäkerheten.
 
    ![chlimage_1-332](assets/chlimage_1-332.png)
 
-1. Klicka/tryck **[!UICONTROL Save]** och sedan på/tryck **[!UICONTROL OK]** i dialogrutan för att stänga dialogrutan. Den flersidiga säkerheten skapas i den mapp du började med.
+1. Klicka/tryck på **[!UICONTROL Save]** och sedan på/på **[!UICONTROL OK]** i dialogrutan för att stänga dialogrutan. Den flersidiga säkerheten skapas i den mapp du började med.
 
    >[!NOTE]
    >
