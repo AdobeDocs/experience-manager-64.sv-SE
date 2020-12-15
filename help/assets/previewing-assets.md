@@ -20,7 +20,7 @@ ht-degree: 2%
 
 # Förhandsgranska Dynamic Media-resurser {#previewing-assets}
 
-Du kan använda **[!UICONTROL Preview]** för att se hur en digital medieresurs ser ut när den visas av en kund i en egen webbläsare. Standardvisningsprogrammet för inbäddade enheter som är tilldelade resursen används för **[!UICONTROL Preview]**.
+Du kan använda **[!UICONTROL Preview]** för att se hur en digital Dynamic Media-resurs ser ut när den visas av en kund i en egen webbläsare. Standardvisningsprogrammet för inbäddade enheter som är tilldelade resursen används för **[!UICONTROL Preview]**.
 
 Ett visningsprogram är en samling med olika inställningar eller&quot;förinställningar&quot;, t.ex. visningsprogrammets visningsstorlek, zoombeteende, färgscheman, kanter, teckensnitt osv., som avgör hur användare visar mediefiler på datorskärmar och mobila enheter.
 
@@ -31,14 +31,14 @@ Förutom att använda den dedikerade förhandsvisningsfunktionen för video, snu
 
 >[!NOTE]
 >
->When you are on a webpage (Sites) in AEM, you cannot preview assets in **[!UICONTROL Edit]** mode. You need to go to **[!UICONTROL Preview]** mode by clicking **Preview** in the upper right-hand corner.
+>När du är på en webbsida (Webbplatser) i AEM kan du inte förhandsgranska resurser i **[!UICONTROL Edit]**-läge. Du måste gå till **[!UICONTROL Preview]**-läget genom att klicka på **Förhandsgranska** i det övre högra hörnet.
 
 **Så här förhandsgranskar du resurser**:
 
-1. From **Adobe Experience Manager**, on the **[!UICONTROL Navigation]** page, tap **[!UICONTROL Asset]s **, then **[!UICONTROL Files]**to access assets.
-1. Near the upper-right corner of the page, from the **[!UICONTROL View]** drop-down list, tap **[!UICONTROL List View]**.
-1. (Valfritt) Använd **[!UICONTROL Type]** kolumnen för att sortera resurserna efter den typ som du vill förhandsgranska.
-1. Under **[!UICONTROL Title]** kolumnen klickar du på titelnamnet (inte miniatyrbilden) för resursen som du vill förhandsgranska.
+1. Från **Adobe Experience Manager** på **[!UICONTROL Navigation]**-sidan trycker du på **[!UICONTROL Asset]s** och sedan **[!UICONTROL Files]** för att komma åt resurser.
+1. Tryck på **[!UICONTROL List View]** i den nedrullningsbara listan **[!UICONTROL View]** i sidans övre högra hörn.
+1. (Valfritt) Använd kolumnen **[!UICONTROL Type]** för att sortera resurserna efter den typ som du vill förhandsgranska.
+1. Klicka på titelnamnet (inte miniatyrbilden) för resursen som du vill förhandsgranska i kolumnen **[!UICONTROL Title]**.
 1. Beroende på vilken resurstyp du klickade på gör du något av följande:
 
 <table> 
@@ -57,8 +57,8 @@ Förutom att använda den dedikerade förhandsvisningsfunktionen för video, snu
      <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Klicka på <strong>Återgivningar </strong>i listan och välj sedan en viss återgivning som du vill förhandsgranska.</li> 
     </ul> <p><strong>Förhandsgranska resurs i ett visst visningsprogram</strong></p> 
     <ul> 
-     <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Klicka på <strong>Visare</strong> i listan och välj sedan ett visningsprogram som du vill använda på resursen.</li> 
-    </ul> <p>Använd ikonerna <strong>+</strong> och <strong>- </strong>om du vill öka respektive minska zoomningen i den markerade bilden. Klicka på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en mobil enhet dubbeltrycker du på bilden för att zooma in steg. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> <p>Information om hur du aktiverar eller inaktiverar visningsförinställningar i användargränssnittet finns i <a href="/help/assets/managing-viewer-presets.md">Hantera visningsförinställningar</a>.<br /> </p> </td> 
+     <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Klicka på <strong>Tittare</strong> i listan och välj sedan ett visningsprogram som du vill använda för resursen.</li> 
+    </ul> <p>Använd ikonerna <strong>+</strong> och <strong>- </strong>för att öka respektive minska zoomningen för den markerade bilden. Klicka på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en mobil enhet dubbeltrycker du på bilden för att zooma in steg. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> <p>Information om hur du aktiverar eller inaktiverar visningsförinställningar i användargränssnittet finns i <a href="/help/assets/managing-viewer-presets.md">Hantera visningsförinställningar</a>.<br /> </p> </td> 
   </tr>
   <tr>
    <td>Multimedia</td> 
@@ -67,9 +67,9 @@ Förutom att använda den dedikerade förhandsvisningsfunktionen för video, snu
    <td><p><strong>Så här förhandsgranskar du en resurs i en viss återgivning</strong></p> 
     <ul> 
      <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Klicka på <strong>Återgivningar </strong>i listan och välj sedan en viss återgivning som du vill förhandsgranska.</li> 
-    </ul> <p>Om du väljer en videoåtergivning med högre upplösning för förhandsgranskning kan videon bli trunkerad. Det beror på att återgivningsförhandsvisningen visar exakt den upplösning som kunderna kommer att se, allt i kontexten för det inbäddade visningsprogrammet som används för förhandsgranskningen.</p> <p>När du förhandsgranskar en adaptiv videouppsättning på resursnivå grupperas återgivningarna i en uppspelningsupplevelse. Det innebär att den anpassningsbara videon storleksanpassas för visning och uppspelning med den bästa upplösningen för visningsenheten och anslutningshastigheten.<br /> </p> <p><strong>Förhandsgranska en resurs i ett visst visningsprogram</strong></p> 
+    </ul> <p>Om du väljer en videoåtergivning med högre upplösning för förhandsgranskning kan videon bli trunkerad. Det beror på att återgivningsförhandsvisningen visar exakt den upplösning som kunderna kommer att se, allt i kontexten för det inbäddade visningsprogrammet som används för förhandsgranskningen.</p> <p>När du förhandsgranskar en adaptiv videouppsättning på resursnivå grupperas återgivningarna i en uppspelningsupplevelse. Det innebär att den adaptiva videon har rätt storlek för visning och uppspelning med den bästa upplösningen i visningsenhetens kontext och anslutningshastigheten.<br /> </p> <p><strong>Förhandsgranska en resurs i ett visst visningsprogram</strong></p> 
     <ul> 
-     <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Klicka på <strong>Visare</strong> i listan och välj sedan ett visningsprogram som du vill använda på resursen.</li> 
+     <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Klicka på <strong>Tittare</strong> i listan och välj sedan ett visningsprogram som du vill använda för resursen.</li> 
     </ul> <p>Information om hur du aktiverar eller inaktiverar visningsförinställningar i användargränssnittet finns i <a href="/help/assets/managing-viewer-presets.md">Hantera visningsförinställningar</a>.</p> </td> 
   </tr>
   <tr>
@@ -78,8 +78,8 @@ Förutom att använda den dedikerade förhandsvisningsfunktionen för video, snu
    <td>Ja</td> 
    <td><p><strong>Förhandsgranska en resurs i ett visst visningsprogram</strong></p> 
     <ul> 
-     <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Klicka på <strong>Visare</strong> i listan och välj sedan ett visningsprogram som du vill använda på resursen.</li> 
-    </ul> <p>Använd ikonerna <strong>+</strong> och <strong>- </strong>om du vill öka respektive minska zoomningen i den markerade bilden. Klicka på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en mobil enhet dubbeltrycker du på bilden för att zooma in steg. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> <p>Information om hur du aktiverar eller inaktiverar visningsförinställningar i användargränssnittet finns i <a href="/help/assets/managing-viewer-presets.md">Hantera visningsförinställningar</a>.</p> </td> 
+     <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Klicka på <strong>Tittare</strong> i listan och välj sedan ett visningsprogram som du vill använda för resursen.</li> 
+    </ul> <p>Använd ikonerna <strong>+</strong> och <strong>- </strong>för att öka respektive minska zoomningen för den markerade bilden. Klicka på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en mobil enhet dubbeltrycker du på bilden för att zooma in steg. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> <p>Information om hur du aktiverar eller inaktiverar visningsförinställningar i användargränssnittet finns i <a href="/help/assets/managing-viewer-presets.md">Hantera visningsförinställningar</a>.</p> </td> 
   </tr>
   <tr>
    <td>Rotation</td> 
@@ -87,8 +87,8 @@ Förutom att använda den dedikerade förhandsvisningsfunktionen för video, snu
    <td>Ja</td> 
    <td><p><strong>Förhandsgranska en resurs i ett visst visningsprogram</strong></p> 
     <ul> 
-     <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Klicka på <strong>Visare</strong> i listan och välj sedan ett visningsprogram som du vill använda på resursen.</li> 
-    </ul> <p>Använd ikonerna <strong>+</strong> och <strong>- </strong>om du vill öka respektive minska zoomningen i den markerade bilden. Klicka på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en mobil enhet dubbeltrycker du på bilden för att zooma in steg. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> <p>Information om hur du aktiverar eller inaktiverar visningsförinställningar i användargränssnittet finns i <a href="/help/assets/managing-viewer-presets.md">Hantera visningsförinställningar</a>.</p> </td> 
+     <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Klicka på <strong>Tittare</strong> i listan och välj sedan ett visningsprogram som du vill använda för resursen.</li> 
+    </ul> <p>Använd ikonerna <strong>+</strong> och <strong>- </strong>för att öka respektive minska zoomningen för den markerade bilden. Klicka på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en mobil enhet dubbeltrycker du på bilden för att zooma in steg. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> <p>Information om hur du aktiverar eller inaktiverar visningsförinställningar i användargränssnittet finns i <a href="/help/assets/managing-viewer-presets.md">Hantera visningsförinställningar</a>.</p> </td> 
   </tr>
   <tr>
    <td>Blandad medieuppsättning</td> 
@@ -96,8 +96,8 @@ Förutom att använda den dedikerade förhandsvisningsfunktionen för video, snu
    <td>Ja</td> 
    <td><p><strong>Förhandsgranska en resurs i ett visst visningsprogram</strong></p> 
     <ul> 
-     <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Klicka på <strong>Visare</strong> i listan och välj sedan ett visningsprogram som du vill använda på resursen.</li> 
-    </ul> <p>Använd ikonerna <strong>+</strong> och <strong>- </strong>om du vill öka respektive minska zoomningen i den markerade bilden. Klicka på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en mobil enhet dubbeltrycker du på bilden för att zooma in steg. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> <p>Information om hur du aktiverar eller inaktiverar visningsförinställningar i användargränssnittet finns i <a href="/help/assets/managing-viewer-presets.md">Hantera visningsförinställningar</a>.</p> </td> 
+     <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Klicka på <strong>Tittare</strong> i listan och välj sedan ett visningsprogram som du vill använda för resursen.</li> 
+    </ul> <p>Använd ikonerna <strong>+</strong> och <strong>- </strong>för att öka respektive minska zoomningen för den markerade bilden. Klicka på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en mobil enhet dubbeltrycker du på bilden för att zooma in steg. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> <p>Information om hur du aktiverar eller inaktiverar visningsförinställningar i användargränssnittet finns i <a href="/help/assets/managing-viewer-presets.md">Hantera visningsförinställningar</a>.</p> </td> 
   </tr>
   <tr>
    <td>Carousel set</td> 
