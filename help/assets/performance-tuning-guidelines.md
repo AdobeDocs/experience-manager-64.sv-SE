@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Prestandajusteringsguide för resurser {#assets-performance-tuning-guide}
+# Justeringsguide för resursprestanda {#assets-performance-tuning-guide}
 
 En Adobe Experience Manager (AEM) Assets-konfiguration innehåller ett antal maskinvaru-, programvaru- och nätverkskomponenter. Beroende på ditt driftsättningsscenario kan du behöva specifika konfigurationsändringar för maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar i prestandan.
 
@@ -23,13 +23,13 @@ Prestandaoptimering är en grundläggande uppgift som du utför innan du fastst�
 
 Här är några viktiga fokusområden där du kan identifiera och åtgärda prestandaproblem innan de påverkar användarna.
 
-## Platform {#platform}
+## Plattform {#platform}
 
 AEM stöds på ett antal plattformar, men Adobe har funnit det bästa stödet för inbyggda verktyg i Linux och Windows, vilket ger optimala prestanda och förenklad implementering. Det bästa är om du driftsätter ett 64-bitars operativsystem för att uppfylla de höga minneskraven som en AEM Assets-driftsättning medför. Precis som med andra AEM bör du implementera tarMK där det är möjligt. Även om TonaMK inte kan skalas bortom en enda författarinstans, fungerar det bättre än MongoMK. Du kan lägga till instanser för TjärMK-avlastning för att öka arbetsflödets bearbetningsstyrka för din AEM Assets-distribution.
 
-### Tillfällig mapp {#temp-folder}
+### Temporär mapp {#temp-folder}
 
-Om du vill förbättra överföringstiden för resurser använder du lagring med höga prestanda för den tillfälliga Java-katalogen. I Linux och Windows kan en RAM-enhet eller SSD användas. I molnbaserade miljöer kan en motsvarande typ av höghastighetslagring användas. I Amazon EC2 kan du till exempel använda en [kortdisk](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) för den tillfälliga mappen.
+Om du vill förbättra överföringstiden för resurser använder du lagring med höga prestanda för den tillfälliga Java-katalogen. I Linux och Windows kan en RAM-enhet eller SSD användas. I molnbaserade miljöer kan en motsvarande typ av höghastighetslagring användas. I Amazon EC2 kan till exempel en [tillfällig enhet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) användas för den tillfälliga mappen.
 
 Om servern har tillräckligt med minne konfigurerar du en RAM-enhet. Kör följande kommandon i Linux för att skapa en 8 GB RAM-enhet:
 
@@ -50,7 +50,7 @@ När den tillfälliga volymen med höga prestanda är klar anger du JVM-paramete
 
 ### Java-version {#java-version}
 
-Eftersom Oracle har slutat släppa uppdateringar för Java 7 från och med april 2015 rekommenderar Adobe att AEM Assets distribueras på Java 8. I vissa fall har den visat bättre prestanda.
+Eftersom Oracle har slutat släppa uppdateringar för Java 7 från och med april 2015 rekommenderar Adobe att du distribuerar AEM Assets på Java 8. I vissa fall har den visat bättre prestanda.
 
 ### JVM-parametrar {#jvm-parameters}
 
@@ -62,27 +62,27 @@ Du bör ange följande JVM-parametrar:
 * `-Dupdate.limit`=250000
 * `-Doak.fastQuerySize`=true
 
-## Datalagring och minneskonfiguration {#data-store-and-memory-configuration}
+## Dataarkiv och minneskonfiguration {#data-store-and-memory-configuration}
 
-### Konfiguration av fillagring {#file-data-store-configuration}
+### Konfiguration för fillagring {#file-data-store-configuration}
 
-Du bör separera datalagret från segmentlagret för alla AEM Assets-användare. Dessutom kan konfigurering av parametrarna `maxCachedBinarySize` och `cacheSizeInMB` hjälpa till att maximera prestandan. Ange `maxCachedBinarySize` den minsta filstorlek som kan sparas i cachen. Ange storleken på den minnescache som ska användas för datalagret i `cacheSizeInMB`. Adobe rekommenderar att du anger det här värdet mellan 2 och 10 procent av den totala stackstorleken. Inläsnings-/prestandatestning kan dock hjälpa till att fastställa den idealiska inställningen.
+Du bör separera datalagret från segmentlagret för alla AEM Assets-användare. Dessutom kan du maximera prestanda genom att konfigurera parametrarna `maxCachedBinarySize` och `cacheSizeInMB`. Ange `maxCachedBinarySize` som den minsta filstorleken som kan sparas i cachen. Ange storleken på den minnescache som ska användas för datalagret i `cacheSizeInMB`. Adobe rekommenderar att du anger det här värdet mellan 2 och 10 procent av den totala stackstorleken. Inläsnings-/prestandatestning kan dock hjälpa till att fastställa den idealiska inställningen.
 
-### Konfigurera maximal storlek för buffrad bildcache {#configure-the-maximum-size-of-the-buffered-image-cache}
+### Konfigurera maxstorleken för buffrad bildcache {#configure-the-maximum-size-of-the-buffered-image-cache}
 
 När du överför stora mängder resurser till Adobe Experience Manager kan du minska den konfigurerade maxstorleken för buffrat bildcacheminne för att undvika oväntade ökningar i minnesanvändningen och för att förhindra att JVM misslyckas med OutOfMemoryErrors. Tänk dig ett exempel på att du har ett system med en högsta heap (- `Xmx`param) på 5 GB, en Oak BlobCache inställd på 1 GB och dokumentcache inställd på 2 GB. I det här fallet tar den buffrade cachen upp till 1,25 GB och minne, vilket innebär att endast 0,75 GB minne återstår för oväntade toppar.
 
-Konfigurera den buffrade cachestorleken i OSGi-webbkonsolen. Vid `https://host:port/system/console/configMgr/com.day.cq.dam.core.impl.cache.CQBufferedImageCache`anger du egenskapen `cq.dam.image.cache.max.memory` i byte. 1073741824 är till exempel 1 GB (1 024 x 1 024 x 1 024 = 1 GB).
+Konfigurera den buffrade cachestorleken i OSGi-webbkonsolen. Vid `https://host:port/system/console/configMgr/com.day.cq.dam.core.impl.cache.CQBufferedImageCache` anger du egenskapen `cq.dam.image.cache.max.memory` i byte. 1073741824 är till exempel 1 GB (1 024 x 1 024 x 1 024 = 1 GB).
 
-Om du använder en nod för att konfigurera den här egenskapen i AEM 6.1 SP1 måste du ange datatypen till Long. Detta gäller endast om du använder en `sling:osgiConfig` nod. Mer information finns i [CQBufferedImageCache förbrukar heap under överföring](https://helpx.adobe.com/experience-manager/kb/cqbufferedimagecache-consumes-heap-during-asset-uploads.html)av resurser.
+Om du använder en `sling:osgiConfig`-nod från AEM 6.1 SP1 för att konfigurera den här egenskapen måste du ange datatypen till Long. Mer information finns i [CQBufferedImageCache använder heap under överföring av tillgångar](https://helpx.adobe.com/experience-manager/kb/cqbufferedimagecache-consumes-heap-during-asset-uploads.html).
 
-### Gemensamma datalager {#shared-data-stores}
+### Delade datalager {#shared-data-stores}
 
-Implementering av ett S3- eller delat fildatalager kan bidra till att spara diskutrymme och öka nätverkets genomströmning i storskaliga implementeringar. Mer information om fördelar och nackdelar med att använda ett delat datalager finns i [Handbok](assets-sizing-guide.md)för resursstorlek.
+Implementering av ett S3- eller delat fildatalager kan bidra till att spara diskutrymme och öka nätverkets genomströmning i storskaliga implementeringar. Mer information om fördelar och nackdelar med att använda ett delat datalager finns i [Handbok för resursstorlek](assets-sizing-guide.md).
 
 ### S3-datalager {#s-data-store}
 
-Följande konfiguration ( `org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.cfg`) för S3-datalagret hjälpte Adobe att extrahera 12,8 TB binära stora objekt (BLOB) från ett befintligt arkiv av fildata till ett S3-datalager på en kundplats:
+Följande konfiguration för S3-datalagret ( `org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.cfg`) hjälpte Adobe att extrahera 12,8 TB binära stora objekt (BLOB) från ett befintligt fillagringsutrymme till ett S3-datalager på en kundplats:
 
 ```conf
 accessKey=<snip>
@@ -107,9 +107,9 @@ accessKey=<snip>
 
 ## Nätverksoptimering {#network-optimization}
 
-Adobe rekommenderar att du aktiverar HTTPS eftersom många företag har brandväggar som fångar upp HTTP-trafik, vilket påverkar överföringar negativt och skadar filer. För stora filöverföringar måste användarna ha kabelanslutna anslutningar till nätverket eftersom ett WiFi-nätverk snabbt blir mättat. Riktlinjer för hur du identifierar flaskhalsar i nätverk finns i [Handbok](assets-sizing-guide.md)för resursstorlek. Information om hur du utvärderar nätverksprestanda genom att analysera nätverkstopologi finns i [Resurser för nätverksaspekter](assets-network-considerations.md).
+Adobe rekommenderar att du aktiverar HTTPS eftersom många företag har brandväggar som fångar upp HTTP-trafik, vilket påverkar överföringar negativt och skadar filer. För stora filöverföringar måste användarna ha kabelanslutna anslutningar till nätverket eftersom ett WiFi-nätverk snabbt blir mättat. Riktlinjer för identifiering av nätverksflaskhalsar finns i [Handbok för resursstorlek](assets-sizing-guide.md). Information om hur du utvärderar nätverksprestanda genom att analysera nätverkstopologi finns i [Resurser, nätverksöverväganden](assets-network-considerations.md).
 
-Din nätverksoptimeringsstrategi är i första hand beroende av hur mycket bandbredd som är tillgänglig och hur stor belastning din AEM har. Gemensamma konfigurationsalternativ, inklusive brandväggar och proxies, kan förbättra nätverkets prestanda. Här följer några viktiga punkter att tänka på:
+Din nätverksoptimeringsstrategi är i första hand beroende av hur mycket bandbredd som är tillgänglig och hur stor belastning din AEM har. Gemensamma konfigurationsalternativ, inklusive brandväggar och proxies, kan förbättra nätverkets prestanda. Här följer några viktiga saker att tänka på:
 
 * Beroende på vilken instanstyp du har (liten, måttlig, stor) kontrollerar du att du har tillräcklig nätverksbandbredd för AEM. Lämplig bandbreddsallokering är särskilt viktig om AEM ligger på AWS.
 * Om din AEM ligger på AWS kan du dra nytta av en mångsidig skalningspolicy. Överför instansen om användarna förväntar sig hög belastning. Minska storleken för måttlig/låg belastning.
@@ -126,12 +126,12 @@ Ställ in arbetsflödet DAM Update Asset på Transient när det är möjligt. In
 >
 >Som standard är arbetsflödet för DAM-uppdatering av tillgångar inställt på Transient i AEM 6.3. I så fall kan du hoppa över följande procedur.
 
-1. Öppna `http://localhost:4502/miscadmin` den AEM instansen som du vill konfigurera.
+1. Öppna `http://localhost:4502/miscadmin` på den AEM instansen som du vill konfigurera.
 
-1. I navigeringsträdet expanderar du **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]** > **[!UICONTROL dam]**.
-1. Dubbelklicka **[!UICONTROL DAM Update Asset]**.
-1. I den flytande verktygspanelen växlar du till **[!UICONTROL Page]** fliken och klickar sedan på **[!UICONTROL Page Properties]**.
-1. Välj **[!UICONTROL Transient Workflow]** Klicka **[!UICONTROL OK]**.
+1. Expandera **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]** > **[!UICONTROL dam]** från navigeringsträdet.
+1. Dubbelklicka på **[!UICONTROL DAM Update Asset]**.
+1. Gå till fliken **[!UICONTROL Page]** på den flytande verktygspanelen och klicka sedan på **[!UICONTROL Page Properties]**.
+1. Välj **[!UICONTROL Transient Workflow]** Klicka på **[!UICONTROL OK]**.
 
    >[!NOTE]
    >
@@ -145,7 +145,7 @@ Ställ in arbetsflödet DAM Update Asset på Transient när det är möjligt. In
 
    Om tömningen är för lång så tar det för lång tid. Därför bör du se till att rensningsjobben är fullständiga för att undvika situationer där rensningsarbetsflödena misslyckas på grund av det stora antalet arbetsflöden.
 
-   När du har kört flera icke-tillfälliga arbetsflöden (som skapar arbetsflödesinstansnoder) kan du köra [ACS AEM Commons Workflow Remover](https://adobe-consulting-services.github.io/acs-aem-commons/features/workflow-remover.html) på ad hoc-basis. Det tar bort överflödiga, slutförda arbetsflödesinstanser direkt i stället för att vänta på att schemaläggaren för rensning av arbetsflöde i Adobe ska köras.
+   Om du till exempel har kört flera icke-tillfälliga arbetsflöden (som skapar arbetsflödesinstansnoder) kan du köra [ACS AEM Commons Workflow Remover](https://adobe-consulting-services.github.io/acs-aem-commons/features/workflow-remover.html) på ad hoc-basis. Det tar bort överflödiga, slutförda arbetsflödesinstanser direkt i stället för att vänta på att schemaläggaren för rensning av arbetsflöde i Adobe ska köras.
 
 ### Maximalt antal parallella jobb {#maximum-parallel-jobs}
 
@@ -157,13 +157,13 @@ Som standard kör AEM ett maximalt antal parallella jobb som är lika med antale
 
 Att ställa in en kö på hälften av de tillgängliga processorerna är en användbar lösning att börja med. Du kan dock behöva öka eller minska det här antalet för att få maximal genomströmning och justera det efter miljö. Det finns separata köer för tillfälliga och icke-tillfälliga arbetsflöden samt andra processer, till exempel externa arbetsflöden. Om flera köer är inställda på 50 % av processorerna aktiva samtidigt kan systemet snabbt bli överbelastat. De köer som används ofta varierar mycket mellan olika implementeringar. Därför kan du behöva konfigurera dem noggrant för maximal effektivitet utan att ge avkall på serverstabiliteten.
 
-### Avlastning {#offloading}
+### Avlastar {#offloading}
 
 För stora arbetsflöden eller arbetsflöden som är resurskrävande, till exempel videotranskodning, kan du avlasta arbetsflöden för DAM Update Asset till en andra författarinstans. Problemet med avlastning är ofta att eventuell inläsning som sparas genom avlastning av arbetsflödesbearbetningen motverkas av kostnaden för att replikera innehållet fram och tillbaka mellan instanser.
 
 Från och med AEM 6.2 och med ett funktionspaket för AEM 6.1 kan du utföra avlastning med binär replikering utan. I den här modellen delar författarinstanserna ett vanligt datalager och skickar bara metadata fram och tillbaka genom framåtreplikering. Detta fungerar bra med ett delat fildatalager, men det kan uppstå problem med ett S3-datalager. Eftersom bakgrundstrådar kan orsaka fördröjning är det möjligt att en resurs inte har skrivits till datalagret innan avlastningsjobbet startar.
 
-### DAM-uppdateringskonfiguration {#dam-update-asset-configuration}
+### DAM Update Asset configuration {#dam-update-asset-configuration}
 
 Arbetsflödet för DAM-uppdatering av tillgångar innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel Scene7 PTIFF-generering och integrering med InDesign Server. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen för DAM-uppdatering och tar bort alla onödiga steg. I det här fallet ska du uppdatera startarna för DAM Update Asset så att de pekar på den nya modellen.
 
@@ -187,7 +187,7 @@ Ett annat sätt är att använda Scene7-teknik för att helt och hållet överge
 
 #### ImageMagick {#imagemagick}
 
-Om du anpassar arbetsflödet DAM Update Asset för att generera återgivningar med ImageMagick rekommenderar Adobe att du ändrar filen policy.xml på */etc/ImageMagick/*. Som standard använder ImageMagick hela det tillgängliga diskutrymmet på operativsystemsvolymen och det tillgängliga minnet. Gör följande konfigurationsändringar i avsnittet `policymap` policy.xml för att begränsa dessa resurser.
+Om du anpassar arbetsflödet DAM Update Asset för att generera återgivningar med ImageMagick rekommenderar Adobe att du ändrar filen policy.xml på */etc/ImageMagick/*. Som standard använder ImageMagick hela det tillgängliga diskutrymmet på operativsystemsvolymen och det tillgängliga minnet. Gör följande konfigurationsändringar i `policymap`-avsnittet i policy.xml för att begränsa de här resurserna.
 
 ```xml
 <policymap>
@@ -204,15 +204,15 @@ Om du anpassar arbetsflödet DAM Update Asset för att generera återgivningar m
 </policymap>
 ```
 
-Dessutom anger du sökvägen till ImageMagick:s temporära mapp i filen *configure.xml* (eller genom att ange systemvariabeln `MAGIC_TEMPORARY_PATH`) till en diskpartition som har tillräckligt med utrymme och IOPS.
+Dessutom anger du sökvägen till ImageMagick:s temporära mapp i filen *configure.xml* (eller genom att ange miljövariabeln `MAGIC_TEMPORARY_PATH`) till en diskpartition som har tillräckligt med utrymme och IOPS.
 
 >[!CAUTION]
 >
->En felaktig konfiguration kan göra servern instabil om ImageMagick använder allt tillgängligt diskutrymme. De principändringar som krävs för att bearbeta stora filer med ImageMagick kan påverka AEM prestanda. Mer information finns i [Installera och konfigurera ImageMagick](best-practices-for-imagemagick.md).
+>En felaktig konfiguration kan göra servern instabil om ImageMagick använder allt tillgängligt diskutrymme. De principändringar som krävs för att bearbeta stora filer med ImageMagick kan påverka AEM prestanda. Mer information finns i [installera och konfigurera ImageMagick](best-practices-for-imagemagick.md).
 
 >[!NOTE]
 >
->ImageMagick `policy.xml` - och `configure.xml` -filerna finns under `/usr/lib64/ImageMagick-*/config/` i stället för `/etc/ImageMagick/`. Mer information om [konfigurationsfilernas placering finns i dokumentationen](https://www.imagemagick.org/script/resources.php) till ImageMagick.
+>ImageMagick `policy.xml`- och `configure.xml`-filerna finns under `/usr/lib64/ImageMagick-*/config/` i stället för `/etc/ImageMagick/`. Se [ImageMagick-dokumentation](https://www.imagemagick.org/script/resources.php) för mer information om var konfigurationsfilen finns.
 
 Om du använder AEM på Adobes hanterade tjänster (AMS) kan du kontakta Adobe kundtjänst om du tänker bearbeta många stora PSD- eller PSB-filer. Det går inte att bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar i Experience Manager.
 
@@ -272,7 +272,7 @@ To disable Page Extraction:
 1. Repeat steps 3-6 for other launcher items that use **DAM Parse Word Documents** workflow model.
 -->
 
-### XMP {#xmp-writeback}
+### XMP tillbakaskrivning {#xmp-writeback}
 
 XMP återföring uppdaterar originalresursen när metadata ändras i AEM, vilket ger följande resultat:
 
@@ -280,7 +280,7 @@ XMP återföring uppdaterar originalresursen när metadata ändras i AEM, vilket
 * En version av resursen skapas
 * DAM Update Asset körs mot resursen
 
-De listade resultaten kräver stora resurser. Adobe rekommenderar därför att du [inaktiverar XMP](https://helpx.adobe.com/experience-manager/kb/disable-xmp-writeback.html)återskrivning, om det inte behövs.
+De listade resultaten kräver stora resurser. Därför rekommenderar Adobe att [inaktivera XMP Writeback](https://helpx.adobe.com/experience-manager/kb/disable-xmp-writeback.html), om det inte är nödvändigt.
 
 Om du importerar en stor mängd metadata kan det leda till resurskrävande XMP återskrivningsaktivitet om körningsarbetsflödesflaggan är markerad. Planera en sådan import under begränsad serveranvändning så att prestanda för andra användare inte påverkas.
 
@@ -292,7 +292,7 @@ När du replikerar resurser till ett stort antal publiceringsinstanser, till exe
 
 1. Välj vilken publiceringsinstans du vill använda för att länka replikeringarna till
 1. På den publiceringsinstansen lägger du till replikeringsagenter som pekar på andra publiceringsinstanser
-1. På var och en av dessa replikeringsagenter aktiverar du **[!UICONTROL On Receive]** på **[!UICONTROL Triggers]** fliken
+1. Aktivera **[!UICONTROL On Receive]** på fliken **[!UICONTROL Triggers]** för var och en av dessa replikeringsagenter
 
 >[!NOTE]
 >
@@ -300,9 +300,9 @@ När du replikerar resurser till ett stort antal publiceringsinstanser, till exe
 
 ## Sökindex {#search-indexes}
 
-Se till att du implementerar de senaste Service Pack-uppdateringarna och prestandarelaterade snabbkorrigeringar eftersom de ofta innehåller uppdateringar av systemindex. Se tips [för prestandajustering | 6.x](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) för vissa indexoptimeringar som kan tillämpas, beroende på vilken version av AEM du har.
+Se till att du implementerar de senaste Service Pack-uppdateringarna och prestandarelaterade snabbkorrigeringar eftersom de ofta innehåller uppdateringar av systemindex. Se [Tips för prestandajustering | 6.x](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) för vissa indexoptimeringar som kan tillämpas, beroende på vilken version av AEM du har.
 
-Skapa anpassade index för frågor som du kör ofta. Mer information finns i [metod för att analysera långsamma frågor](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html) och [skapa anpassade index](/help/sites-deploying/queries-and-indexing.md). Mer information om de effektivaste strategierna för frågor och index finns i [Bästa metoder för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
+Skapa anpassade index för frågor som du kör ofta. Mer information finns i [metod för att analysera långsamma frågor](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html) och [skapa anpassade index](/help/sites-deploying/queries-and-indexing.md). Mer information om bästa praxis för frågor och index finns i [Bästa metoder för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 
 ### Lucene-indexkonfigurationer {#lucene-index-configurations}
 
@@ -311,22 +311,22 @@ Vissa optimeringar kan göras för Oak-indexkonfigurationer som kan förbättra 
 Uppdatera LuceneIndexProvider-konfigurationen:
 
 1. Gå till /system/console/configMgrorg.apache.jackrabbit.oak.plugins.index.lucene.LuceneIndexProviderService
-1. Aktivera **[!UICONTROL CopyOnRead , CopyOnWrite , and Prefetch Index Files]** i tidigare versioner än AEM 6.2. Dessa värden är aktiverade som standard i AEM 6.2 och senare.
+1. Aktivera **[!UICONTROL CopyOnRead , CopyOnWrite , and Prefetch Index Files]** i versioner före AEM 6.2. Dessa värden är aktiverade som standard i AEM 6.2 och senare.
 
 Uppdatera indexkonfigurationer för att förbättra omindexeringstiden:
 
 1. Öppna CRXDe /crx/de/index.jsp och logga in som administrativ användare
 1. Bläddra till /oak:index/lucene
-1. Lägg till en String[] -egenskap med namnet **[!UICONTROL excludedPaths]** med värdena &quot;/var&quot;, &quot;/etc/workflow/instances&quot; och &quot;/etc/replication&quot;
+1. Lägg till en String-egenskap med namnet [] med värdena &quot;/var&quot;, &quot;/etc/workflow/instances&quot; och &quot;/etc/replication&quot;**[!UICONTROL excludedPaths]**
 1. Bläddra till /oak:index/damAssetLucene
-1. Lägg till en String[] -egenskap med namnet **[!UICONTROL includedPaths]** med värdet /content/dam
+1. Lägg till en String-egenskap med namnet [] och värdet /content/dam **[!UICONTROL includedPaths]**
 1. Spara
 
 (Endast AEM6.1 och 6.2) Uppdatera indexet ntBaseLucene för att förbättra prestanda vid borttagning och flyttning av resurser:
 
-1. Bläddra till */läs:index/ntBaseLucene/indexRules/nt:base/properties*
+1. Bläddra till */ek:index/ntBaseLucene/indexRules/nt:base/properties*
 1. Lägg till två nt:ostrukturerade noder **[!UICONTROL slingResource]** och **[!UICONTROL damResolvedPath]** under */oak:index/ntBaseLucene/indexRules/nt:base/properties*
-1. Ange egenskaperna nedan på noderna (där ordnade egenskaper och propertyIndex-egenskaper är av typen *Boolean*:
+1. Ange egenskaperna nedan för noderna (där ordnade egenskaper och propertyIndex-egenskaper är av typen *Boolean*:
 
    slingResource
 
@@ -352,10 +352,10 @@ Uppdatera indexkonfigurationer för att förbättra omindexeringstiden:
 1. Klicka på **[!UICONTROL Save All]**
 1. Övervaka error.log för att se när indexeringen är klar:
 
-   Omindexering har slutförts för index: [/oak:index/ntBaseLucene]
+   Omindexering har slutförts för index: [/ek:index/ntBaseLucene]
 
 1. Du kan också se att indexeringen har slutförts genom att uppdatera noden /oak:index/ntBaseLucene i CRXDe eftersom egenskapen reindex skulle återgå till false
-1. När indexeringen är klar går du tillbaka till CRXDe och anger att egenskapen **[!UICONTROL type]** ska inaktiveras för dessa två index
+1. När indexeringen är klar går du tillbaka till CRXDe och anger egenskapen **[!UICONTROL type]** som inaktiverad för dessa två index
 
    * */oak:index/slingResource*
    * */oak:index/damResolvedPath*
@@ -373,13 +373,13 @@ Om användarna inte behöver kunna söka i innehållet i resurser, till exempel 
 
 ### Gissa totalt {#guess-total}
 
-När du skapar frågor som genererar stora resultatuppsättningar bör du använda parametern för att undvika att använda mycket minne när du kör dem. `guessTotal`
+När du skapar frågor som genererar stora resultatuppsättningar ska du använda parametern `guessTotal` för att undvika att använda mycket minne när du kör dem.
 
-## Known issues {#known-issues}
+## Kända fel {#known-issues}
 
 ### Stora filer {#large-files}
 
-Det finns två stora kända fel som rör stora filer i AEM. När filer når större storlekar än 2 GB kan synkronisering med vänteläge i kallt läge hamna i en situation där minnet är slut. I vissa fall förhindras att standby-synkronisering körs. I andra fall kraschar den primära instansen. Detta scenario gäller för alla filer i AEM som är större än 2 GB, inklusive innehållspaket.
+Det finns två stora kända fel som rör stora filer i AEM. När filer når större storlekar än 2 GB kan synkronisering med kalla väntelägen hamna i en situation där minnet är slut. I vissa fall förhindras att standby-synkronisering körs. I andra fall kraschar den primära instansen. Detta scenario gäller för alla filer i AEM som är större än 2 GB, inklusive innehållspaket.
 
 På samma sätt kan det ta lite tid innan filen är helt beständig från cachen till filsystemet om filstorleken når 2 GB när ett delat S3-datalager används. Detta innebär att om du använder en binär replikering utan binärfiler kan det hända att binära data inte har befunnits beständiga innan replikeringen slutförs. Denna situation kan leda till problem, särskilt om det är viktigt att data är tillgängliga, till exempel i avlastningsscenarier.
 
@@ -397,7 +397,7 @@ Utför följande uppgifter för alla problem med nätverkets prestanda från kun
 * Genom att använda ett prestandatest för nätverk
 * Testa mot dispatchern
 
-### Testning av AEM {#aem-instance-testing}
+### AEM instanstestning {#aem-instance-testing}
 
 För att minimera latens och uppnå hög genomströmning genom effektiv CPU-användning och lastdelning ska du regelbundet övervaka prestanda i din AEM. Särskilt gäller följande:
 
@@ -414,9 +414,9 @@ För att minimera latens och uppnå hög genomströmning genom effektiv CPU-anv�
 * Möjliggör tillfälliga arbetsflöden.
 * Justera Granite-arbetsflödesköerna för att begränsa antalet samtidiga jobb.
 * Konfigurera ImageMagick för att begränsa resursförbrukningen.
-* Ta bort onödiga steg från arbetsflödet för DAM Update Asset.
+* Ta bort onödiga steg från DAM Update Asset-arbetsflödet.
 * Konfigurera arbetsflöde och versionsrensning.
 * Optimera Lucene-indexkonfigurationen.
-* Optimera index med de senaste servicepaketen och snabbkorrigeringarna. Kontakta Adobe kundtjänst för eventuella ytterligare indexoptimeringar.
-* Används `guessTotal` för att optimera frågeprestanda.
-* If you configure AEM to detect file types from the content of the files (by configuring [!UICONTROL Day CQ DAM Mime Type Service] in the [!UICONTROL AEM Web Console]), upload many files in bulk during non-peak hours as the operation is resource-intensive.
+* Optimera index med de senaste servicepaketen och snabbkorrigeringarna. Kontakta Adobe kundtjänst om du har ytterligare indexoptimeringar som kan vara tillgängliga.
+* Använd `guessTotal` för att optimera frågeprestanda.
+* Om du konfigurerar AEM att identifiera filtyper från filernas innehåll (genom att konfigurera [!UICONTROL Day CQ DAM Mime Type Service] i [!UICONTROL AEM Web Console]) överför du många filer samtidigt under icke-toppvärdesdagar eftersom åtgärden är resursintensiv.
