@@ -31,27 +31,27 @@ För att överföra filer till AEM Assets som du har skapat med Adobe InDesign a
    >
    >
 * [InDesign Server](https://www.adobe.com/products/indesignserver.html)\
-   >  Med den här motorn kan du programmatiskt skapa automatiserade dokument baserat på vad du har skapat med InDesign. Den fungerar som en tjänst som erbjuder ett gränssnitt till sin [ExtendScript](https://www.adobe.com/devnet/scripting.html) -motor.\
-   >  Skripten skrivs i ExtendScript, som liknar javascript. Mer information om InDesign-skript finns på [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
+   >  Med den här motorn kan du programmatiskt skapa automatiserade dokument baserat på vad du har skapat med InDesign. Den fungerar som en tjänst som erbjuder ett gränssnitt till sin [ExtendScript](https://www.adobe.com/devnet/scripting.html)-motor.\
+   >  Skripten skrivs i ExtendScript, som liknar javascript. Mer information om InDesign-skript finns i [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
 
 >
 
 
 
-## Hur extraheringen fungerar {#how-the-extraction-works}
+## Så här fungerar extraheringen {#how-the-extraction-works}
 
-InDesign Server kan integreras med AEM Assets så att filer som skapats med InDesign ( `.indd`) kan överföras, återgivningar genereras, *alla* media kan extraheras (till exempel video) och lagras som resurser:
+InDesign Server kan integreras med AEM Assets så att filer som skapats med InDesign ( `.indd`) kan överföras, återgivningar genereras, *alla*-media kan extraheras (till exempel video) och lagras som resurser:
 
 >[!NOTE]
 >
 >Tidigare versioner av AEM kunde extrahera XMP och miniatyrbilden, nu kan alla media extraheras.
 
-1. Överför din `.indd` fil till AEM Assets.
+1. Överför din `.indd`-fil till AEM Assets.
 1. Ett ramverk skickar kommandoskript till InDesign Server via SOAP (Simple Object Access Protocol).
 
    Detta kommandoskript kommer att:
 
-   * Hämta `.indd` filen.
+   * Hämta filen `.indd`.
    * Kör InDesign Server-kommandon:
 
       * Strukturen, texten och eventuella mediefiler extraheras.
@@ -61,13 +61,13 @@ InDesign Server kan integreras med AEM Assets så att filer som skapats med InDe
 
    >[!NOTE]
    >
-   >IDML är ett XML-baserat format som återger *allt* i InDesign-filen. Den lagras som ett komprimerat paket med [Zip](https://www.techterms.com/definition/zip) -komprimering.
+   >IDML är ett XML-baserat format som återger *allt* i filen InDesign. Den lagras som ett komprimerat paket med [Zip](https://www.techterms.com/definition/zip)-komprimering.
    >
-   >Mer information finns i [Adobe InDesign Interchange Formats INX och IDML](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8) .
+   >Mer information finns i [Adobe InDesign Interchange Formats INX och IDML](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8).
 
    >[!CAUTION]
    >
-   >Om InDesign Server inte är installerat eller inte konfigurerat kan du ändå överföra en `.indd` fil till AEM. De återgivningar som skapas begränsas dock till `png` och `jpeg`du kan inte generera `html`eller återgivningarna `idml` av sidorna.
+   >Om InDesign Server inte är installerat eller inte konfigurerat kan du ändå överföra en `.indd`-fil till AEM. De återgivningar som skapas begränsas dock till `png` och `jpeg`, du kommer inte att kunna generera `html`, `idml` eller sidåtergivningarna.
 
 1. Efter extraheringen och renderingen:
 
@@ -80,7 +80,7 @@ InDesign Server kan integreras med AEM Assets så att filer som skapats med InDe
 Om du vill integrera InDesign Server för användning med AEM Assets och efter att du har konfigurerat din proxy måste du:
 
 1. [Installera InDesign Server](#installing-the-indesign-server).
-1. Om det behövs [konfigurerar du AEM Assets Workflow](#configuring-the-aem-assets-workflow).
+1. [Konfigurera AEM Assets Workflow](#configuring-the-aem-assets-workflow) om det behövs.
 
    Detta är bara nödvändigt om standardvärdena inte passar för din instans.
 
@@ -112,20 +112,20 @@ Så här installerar och startar du InDesign Server för användning med AEM:
 
 ### Konfigurera AEM Assets Workflow {#configuring-the-aem-assets-workflow}
 
-AEM Assets has a pre-configured workflow **DAM Update Asset**, that has several process steps specifically for InDesign:
+AEM Assets har ett förkonfigurerat arbetsflöde **DAM Update Asset**, som har flera processsteg speciellt för InDesign:
 
 * [Medieextrahering](#media-extraction)
 * [Sidextrahering](#page-extraction)
 
-Det här arbetsflödet är konfigurerat med standardvärden som kan anpassas för dina inställningar för de olika författarinstanserna (det här är ett standardarbetsflöde, så mer information finns under [Redigera ett arbetsflöde](/help/sites-developing/workflows-models.md#configuring-a-workflow-step)). Om du använder standardvärdena (inklusive SOAP-porten) behövs ingen konfiguration.
+Det här arbetsflödet är konfigurerat med standardvärden som kan anpassas för konfigurationen för de olika författarinstanserna (det här är ett standardarbetsflöde, så mer information finns under [Redigera ett arbetsflöde](/help/sites-developing/workflows-models.md#configuring-a-workflow-step)). Om du använder standardvärdena (inklusive SOAP-porten) behövs ingen konfiguration.
 
-Efter installationen utlöses det arbetsflöde som krävs för att bearbeta resursen och de olika återgivningarna när du överför InDesign-filer till AEM Assets (på något av de vanliga sätten). Testa konfigurationen genom att överföra en `.indd` fil till AEM Assets för att bekräfta att du ser de olika renderingar som har skapats av IDS under `<*your_asset*>.indd/Renditions`
+Efter installationen utlöses det arbetsflöde som krävs för att bearbeta resursen och de olika återgivningarna när du överför InDesign-filer till AEM Assets (på något av de vanliga sätten). Testa konfigurationen genom att överföra en `.indd`-fil till AEM Assets för att bekräfta att du ser de olika återgivningar som skapas av IDS under `<*your_asset*>.indd/Renditions`
 
 #### Medieextrahering {#media-extraction}
 
-Det här steget styr extraheringen av media från `.indd` filen.
+Det här steget styr extraheringen av media från `.indd`-filen.
 
-Om du vill anpassa kan du redigera **[!UICONTROL Arguments]** fliken i **[!UICONTROL Media Extraction]** steget.
+Om du vill anpassa kan du redigera fliken **[!UICONTROL Arguments]** i **[!UICONTROL Media Extraction]**-steget.
 
 ![Medieextraheringsargument och skriptsökvägar](assets/media_extraction_arguments_scripts.png)
 
@@ -135,13 +135,13 @@ Medieextraheringsargument och skriptsökvägar
 
 * **Utöka skript**: Här kan du ange olika skriptkombinationer. Om du vill att dina egna skript ska köras på InDesign Server sparar du skripten på `/apps/settings/dam/indesign/scripts`.
 
-   Mer information om InDesign-skript finns på [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
+   Mer information om InDesign-skript finns i [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
 
 >[!CAUTION]
 >
 >Ändra inte ExtendScript-biblioteket. Biblioteket innehåller de HTTP-funktioner som krävs för att kommunicera med Sling. Den här inställningen anger vilket bibliotek som ska skickas till Adobe InDesign Server för användning där.
 
-Skriptet som körs av arbetsflödessteget för medieextrahering genererar en miniatyrrendering i .jpg-format. `ThumbnailExport.jsx` Den här återgivningen används i arbetsflödet Bearbeta miniatyrbilder för att generera de statiska återgivningar som AEM kräver.
+Skriptet `ThumbnailExport.jsx` som körs i arbetsflödessteget Medieextrahering genererar en miniatyrrendering i .jpg-format. Den här återgivningen används i arbetsflödet Bearbeta miniatyrbilder för att generera de statiska återgivningar som AEM kräver.
 
 Du kan konfigurera arbetsflödessteget Bearbeta miniatyrbilder för att generera statiska återgivningar i olika storlekar. Se till att du inte tar bort standardinställningarna eftersom de krävs av AEM Assets-gränssnittet. Arbetsflödessteget Ta bort återgivning av bildförhandsvisning tar bort återgivningen av .jpg-miniatyrer eftersom den inte längre behövs.
 
@@ -149,12 +149,12 @@ Du kan konfigurera arbetsflödessteget Bearbeta miniatyrbilder för att generera
 
 Då skapas en AEM sida av de extraherade elementen. En extraheringshanterare används för att extrahera data från en återgivning (för närvarande HTML eller IDML). Dessa data används sedan för att skapa en sida med PageBuilder.
 
-To customize, you can edit the **[!UICONTROL Arguments]** tab of the **Page Extraction** step.
+Om du vill anpassa kan du redigera fliken **[!UICONTROL Arguments]** i steget **Sidextrahering**.
 
 ![chlimage_1-289](assets/chlimage_1-289.png)
 
 * **Extraheringshanterare** för sida: Välj den hanterare som du vill använda i listrutan. En extraheringshanterare fungerar på en viss återgivning, som väljs av en relaterad `RenditionPicker` (se API:t för `ExtractionHandler`).
-Som standard är Extraction Handler för IDML-export tillgänglig. Det fungerar på den `IDML` återgivning som genereras i MediaExtract-steget.
+Som standard är Extraction Handler för IDML-export tillgänglig. Det fungerar på den `IDML`-rendering som genereras i MediaExtract-steget.
 
 * **Sidnamn**: Ange det namn som du vill tilldela den resulterande sidan. Om det lämnas tomt är namnet&quot;page&quot; (eller ett derivat om&quot;page&quot; redan finns).
 
@@ -174,22 +174,22 @@ Som standard är Extraction Handler för IDML-export tillgänglig. Det fungerar 
 
 1. Expandera **[!UICONTROL Cloud Services Configurations]** i den vänstra rutan i verktygskonsolen. Expandera sedan **[!UICONTROL Cloud Proxy Configuration]**.
 
-1. Dubbelklicka på **[!UICONTROL IDS worker]** för att öppna för konfiguration.
+1. Dubbelklicka på **[!UICONTROL IDS worker]** för att öppna konfigurationen.
 
-1. Klicka **[!UICONTROL Edit]** för att öppna konfigurationsdialogrutan och definiera de nödvändiga inställningarna:
+1. Klicka på **[!UICONTROL Edit]** för att öppna konfigurationsdialogrutan och definiera de nödvändiga inställningarna:
 
    ![proxy_idsworkerconfig](assets/proxy_idsworkerconfig.png)
 
    * **IDS-pool**: SOAP-slutpunkterna som ska användas för kommunikation med InDesign Server. Du kan lägga till, ta bort och beställa objekt.
 
-1. Klicka **[!UICONTROL OK]** för att spara.
+1. Klicka på **[!UICONTROL OK]** för att spara.
 
-### Configuring Day CQ Link Externalizer  {#configuring-day-cq-link-externalizer}
+### Configuring Day CQ Link Externalizer {#configuring-day-cq-link-externalizer}
 
-Om InDesign-servern och AEM körs på olika värdar eller något av eller båda programmen inte körs på standardportar konfigurerar du **Day CQ Link Externalizer** för att ange värdnamn, port och innehållssökväg för InDesign-servern.
+Om InDesign-servern och AEM körs på olika värdar eller något eller båda programmen inte körs på standardportar konfigurerar du **Day CQ Link Externalizer** för att ange värdnamn, port och innehållssökväg för InDesign-servern.
 
 1. Öppna Configuration Manager på URL:en `https://[AEM_server]:[port]/system/console/configMgr`.
-1. Locate the configuration **[!UICONTROL Day CQ Link Externalizer]**, and click the **[!UICONTROL Edit]** icon to open it.
+1. Leta reda på konfigurationen **[!UICONTROL Day CQ Link Externalizer]** och klicka på ikonen **[!UICONTROL Edit]** för att öppna den.
 1. Ange värdnamnet och kontextsökvägen för InDesign-servern och klicka på **[!UICONTROL Save]**.
 
    ![chlimage_1-290](assets/chlimage_1-290.png)
@@ -198,7 +198,7 @@ Om InDesign-servern och AEM körs på olika värdar eller något av eller båda 
 
 Nu kan du aktivera parallell jobbbearbetning för IDS.
 
-Först måste du bestämma hur många parallella jobb ( `x`) som InDesign Server kan bearbeta:
+Först måste du fastställa det maximala antalet parallella jobb ( `x`) som InDesign Server kan bearbeta:
 
 * På en enda multiprocessordator är det maximala antalet parallella jobb (x) som en InDesign Server kan bearbeta ett mindre än antalet processorer som kör IDS.
 * När du kör IDS på flera datorer måste du räkna antalet tillgängliga processorer (t.ex. på alla datorer) och sedan subtrahera det totala antalet datorer.
@@ -216,11 +216,11 @@ Så här konfigurerar du antalet parallella IDS-jobb:
 1. Uppsättning:
 
    * **[!UICONTROL Type]** - `Parallel`
-   * **[!UICONTROL Maximum Parallel Jobs]** - `<*x*>` (enligt beräkning ovan)
+   * **[!UICONTROL Maximum Parallel Jobs]** -  `<*x*>` (enligt beräkning ovan)
 
 1. Spara dessa ändringar.
-1. Om du vill aktivera stöd för flera sessioner för Adobe CS6 och senare markerar du kryssrutan under `enable.multisession.name` `com.day.cq.dam.ids.impl.IDSJobProcessor.name configuration`.
-1. Skapa en [pool med &lt; `*x*>` IDS-arbetare genom att lägga till SOAP-slutpunkter i IDS Worker-konfigurationen](#configuring-the-proxy-worker-for-indesign-server).
+1. Om du vill aktivera stöd för flera sessioner för Adobe CS6 och senare markerar du kryssrutan `enable.multisession.name` under `com.day.cq.dam.ids.impl.IDSJobProcessor.name configuration`.
+1. Skapa en [pool med &lt;`*x*>` IDS-arbetare genom att lägga till SOAP-slutpunkter i IDS Worker-konfigurationen](#configuring-the-proxy-worker-for-indesign-server).
 
    Om det finns flera datorer som kör InDesign Server lägger du till SOAP-slutpunkter (antal processorer per dator -1) för varje dator.
 
@@ -228,11 +228,11 @@ Så här konfigurerar du antalet parallella IDS-jobb:
    >
    >När du arbetar med en grupp arbetare kan du aktivera blockeringslista för IDS-arbetare.
    >
-   >Om du vill göra det aktiverar du kryssrutan&quot;enable.retry.name&quot; under `com.day.cq.dam.ids.impl.IDSJobProcessor.name` konfigurationen, som aktiverar omprövningar av IDS-jobb.
+   >Om du vill göra det aktiverar du kryssrutan&quot;enable.retry.name&quot;, under `com.day.cq.dam.ids.impl.IDSJobProcessor.name`-konfigurationen, som aktiverar omprövningar av IDS-jobb.
    >
-   >Under `com.day.cq.dam.ids.impl.IDSPoolImpl.name` konfigurationen anger du också ett positivt värde för `max.errors.to.blacklist` parametern som avgör antalet jobbomprövningar innan du tar bort ett ID från jobbhanterarlistan
+   >Under konfigurationen `com.day.cq.dam.ids.impl.IDSPoolImpl.name` anger du dessutom ett positivt värde för parametern `max.errors.to.blacklist` som bestämmer antalet jobbomprövningar innan du tar bort ett ID från jobbarbetslistan
    >
-   >Som standard valideras IDS-arbetaren efter den konfigurerbara (`retry.interval.to.whitelist.name`) tiden i minuter. Om arbetaren hittas online tas den bort från blockeringslista.
+   >Som standard valideras IDS-arbetaren efter den konfigurerbara tiden (`retry.interval.to.whitelist.name`) i minuter. Om arbetaren hittas online tas den bort från blockeringslista.
 
 <!-- TBD: Make updates to configurations for allow and block list after product updates are done. See CQ-4298427.
 -->
@@ -241,13 +241,13 @@ Så här konfigurerar du antalet parallella IDS-jobb:
 
 För InDesign server 10.0 eller senare utför du följande steg för att aktivera stöd för flera sessioner.
 
-1. Öppna Configuration Manager från din [!DNL Assets] instans `https://[aem_server]:[port]/system/console/configMgr`.
+1. Öppna Configuration Manager från din [!DNL Assets]-instans `https://[aem_server]:[port]/system/console/configMgr`.
 1. Redigera konfigurationen `com.day.cq.dam.ids.impl.IDSJobProcessor.name`.
-1. Select **[!UICONTROL ids.cc.enable]** option, and click **[!UICONTROL Save]**.
+1. Välj alternativet **[!UICONTROL ids.cc.enable]** och klicka på **[!UICONTROL Save]**.
 
 >[!NOTE]
 >
->För [!DNL InDesign Server] integrering med [!DNL Assets]måste du använda en flerkärnig processor eftersom den sessionsstödfunktion som krävs för integreringen inte stöds av enskilda kärnsystem.
+>För [!DNL InDesign Server]-integrering med [!DNL Assets] använder du en flerkärnig processor eftersom den sessionsstödfunktion som krävs för integreringen inte stöds på enkärniga system.
 
 ## Konfigurera autentiseringsuppgifter för Experience Manager {#configure-aem-credentials}
 
