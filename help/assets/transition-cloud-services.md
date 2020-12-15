@@ -17,7 +17,7 @@ Med Adobe Experience Manager (AEM) kan du använda molnbaserade översättningst
 
 Du kan använda översättningsmolntjänsten direkt i resursmappen så att den kan användas under översättningsarbetsflöden.
 
-## Använda översättningstjänster {#applying-the-translation-services}
+## Tillämpar översättningstjänsterna {#applying-the-translation-services}
 
 Genom att använda översättningsmolntjänster direkt i resursmappen behöver du inte konfigurera översättningstjänster när du skapar eller uppdaterar översättningsarbetsflöden.
 
@@ -37,17 +37,17 @@ Genom att använda översättningsmolntjänster direkt i resursmappen behöver d
 
 1. Klicka/tryck på **[!UICONTROL Save]** i verktygsfältet och klicka sedan på **[!UICONTROL OK]** för att stänga dialogrutan. Översättningstjänsten används i mappen.
 
-## Använder anpassad översättningskoppling  {#applying-custom-translation-connector}
+## Använder anpassad översättningskoppling {#applying-custom-translation-connector}
 
 Du kan använda en anpassad koppling för de översättningstjänster som du vill använda i översättningsarbetsflöden. Om du vill använda en anpassad koppling måste du först installera kopplingen från pakethanteraren. Konfigurera sedan kopplingen från Cloud Services-konsolen. När du har konfigurerat kopplingen är den tillgänglig i listan över kopplingar på fliken Cloud Services som beskrivs i [Använda översättningstjänsterna](transition-cloud-services.md#applying-the-translation-services). När du har använt den anpassade kopplingen och kört översättningsarbetsflödena visas kopplingsinformationen under rubrikerna **[!UICONTROL Provider]** och **[!UICONTROL Method]** i rutan **[!UICONTROL Translation Summary]** för översättningsprojektet.
 
 1. Installera kopplingen från Package Manager.
-1. Click/tap the AEM logo, and navigate to **[!UICONTROL Tools > Deployment > Cloud Services]**.
+1. Klicka/tryck på AEM logotyp och navigera till **[!UICONTROL Tools > Deployment > Cloud Services]**.
 1. Leta upp den koppling du installerade under **[!UICONTROL Third Party Services]** på sidan **[!UICONTROL Cloud Services]**.
 
    ![chlimage_1-218](assets/chlimage_1-218.png)
 
-1. Klicka på/tryck på **[!UICONTROL Configure now]** länken för att öppna **[!UICONTROL Create Configuration]** dialogrutan.
+1. Klicka/tryck på länken **[!UICONTROL Configure now]** för att öppna dialogrutan **[!UICONTROL Create Configuration]**.
 
    ![chlimage_1-219](assets/chlimage_1-219.png)
 
