@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Med hjälp av demopaketet kan du göra det möjligt för Adobe Asset Insights att samla in data från och generera insikter för en exempelwebbsida.
 
-## Använda AEM Assets Insights med exempelwebbsidor  {#using-aem-assets-insights-with-sample-web-page}
+## Använda AEM Assets Insights med exempelwebbsida {#using-aem-assets-insights-with-sample-web-page}
 
 1. Konfigurera tillgångsinsikter med hjälp av instruktionerna i [Konfigurera tillgångsinsikter](touch-ui-configuring-asset-insights.md).
 1. Hämta exempelpaketet för AEM Assets nedan och installera paketet från pakethanteraren för CRXDE.
