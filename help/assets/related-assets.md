@@ -11,7 +11,7 @@ ht-degree: 3%
 ---
 
 
-# Relaterade tillgångar {#related-assets}
+# Relaterade resurser {#related-assets}
 
 Med Adobe Experience Manager (AEM) Assets kan du manuellt relatera resurser baserat på organisationens behov med hjälp av funktionen Relaterade resurser. Du kan till exempel relatera en licensfil till en resurs eller en bild/video på ett liknande ämne. Du kan relatera resurser som delar vissa gemensamma attribut. Du kan också använda funktionen för att skapa käll-/härledda relationer mellan resurser. Om du till exempel har en PDF-fil som genereras från en INDD-fil kan du koppla PDF-filen till dess INDD-källfil.
 
@@ -31,7 +31,7 @@ På så sätt kan du dela en lågupplöst fil (t.ex. PDF/JPG) till leverantörer
 
    ![chlimage_1-274](assets/chlimage_1-274.png)
 
-1. Om du vill koppla en annan resurs till den valda resursen klickar/trycker du på **[!UICONTROL Relate]** -ikonen i verktygsfältet.
+1. Om du vill koppla en annan resurs till den valda resursen klickar/trycker du på ikonen **[!UICONTROL Relate]** i verktygsfältet.
 
    ![chlimage_1-275](assets/chlimage_1-275.png)
 
@@ -39,28 +39,28 @@ På så sätt kan du dela en lågupplöst fil (t.ex. PDF/JPG) till leverantörer
 
    * Om du vill relatera källfilen för resursen väljer du **[!UICONTROL Source]** i listan.
    * Om du vill relatera en härledd fil väljer du **[!UICONTROL Derived]** i listan.
-   * Om du vill skapa en dubbelriktad relation mellan resurserna väljer du **[!UICONTROL Others]** i listan.
+   * Om du vill skapa en tvåvägsrelation mellan resurserna väljer du **[!UICONTROL Others]** i listan.
 
    ![chlimage_1-276](assets/chlimage_1-276.png)
 
-1. Navigera från **[!UICONTROL Select Asset]** skärmen till platsen för resursen som du vill relatera och markera den.
+1. På skärmen **[!UICONTROL Select Asset]** navigerar du till platsen för resursen som du vill relatera och markerar den.
 
    ![chlimage_1-277](assets/chlimage_1-277.png)
 
-1. Klicka på/tryck på **[!UICONTROL Confirm]** ikonen.
-1. Klicka/tryck **[!UICONTROL OK]** för att stänga dialogrutan. Beroende på ditt val av relation i steg 3 listas den relaterade resursen under en lämplig kategori i **[!UICONTROL Related]** avsnittet. Om den resurs du har relaterat är källfilen för den aktuella resursen visas den under **[!UICONTROL Source]**.
+1. Klicka/tryck på ikonen **[!UICONTROL Confirm]**.
+1. Klicka/tryck på **[!UICONTROL OK]** för att stänga dialogrutan. Beroende på vad du väljer för relation i steg 3 listas den relaterade resursen under en lämplig kategori i avsnittet **[!UICONTROL Related]**. Om den resurs du har relaterat är källfilen för den aktuella resursen visas den under **[!UICONTROL Source]**.
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
 
-1. Om du vill ta bort kopplingen för en resurs klickar/trycker du på **[!UICONTROL Unrelate]** -ikonen i verktygsfältet.
+1. Om du vill ta bort kopplingen för en resurs klickar/trycker du på ikonen **[!UICONTROL Unrelate]** i verktygsfältet.
 
    ![chlimage_1-279](assets/chlimage_1-279.png)
 
-1. Markera de resurser som du vill ta bort kopplingen för i **[!UICONTROL Remove Relations]** dialogrutan och klicka/tryck på **[!UICONTROL Unrelate]**.
+1. Markera de resurser som du vill ta bort kopplingen för i dialogrutan **[!UICONTROL Remove Relations]** och klicka/tryck på **[!UICONTROL Unrelate]**.
 
    ![chlimage_1-280](assets/chlimage_1-280.png)
 
-1. Klicka/tryck **[!UICONTROL OK]** för att stänga dialogrutan. Resurserna som du har tagit bort relationer för tas bort från listan över relaterade resurser under **[!UICONTROL Related]** avsnittet.
+1. Klicka/tryck på **[!UICONTROL OK]** för att stänga dialogrutan. Resurserna som du har tagit bort relationer för tas bort från listan över relaterade resurser under avsnittet **[!UICONTROL Related]**.
 
 ## Översätter relaterade resurser {#translating-related-assets}
 
@@ -85,7 +85,7 @@ Om källfilen är relaterad till en annan resurs hämtar AEM Assets den referera
 
    ![chlimage_1-285](assets/chlimage_1-285.png)
 
-1. Markera resursen och klicka/tryck sedan på **[!UICONTROL Reveal in Assets]** verktygsfältet för att visa översättningsstatusen för resursen.
+1. Markera resursen och klicka/tryck sedan på **[!UICONTROL Reveal in Assets]** i verktygsfältet för att visa översättningsstatusen för resursen.
 
    ![chlimage_1-286](assets/chlimage_1-286.png)
 
@@ -93,6 +93,6 @@ Om källfilen är relaterad till en annan resurs hämtar AEM Assets den referera
 
    ![chlimage_1-287](assets/chlimage_1-287.png)
 
-1. Välj den resurs som är relaterad till källan och klicka/tryck sedan **[!UICONTROL Reveal in Assets]**. Den översatta relaterade resursen visas.
+1. Välj den resurs som är relaterad till källan och klicka/tryck sedan på **[!UICONTROL Reveal in Assets]**. Den översatta relaterade resursen visas.
 
    ![chlimage_1-288](assets/chlimage_1-288.png)
