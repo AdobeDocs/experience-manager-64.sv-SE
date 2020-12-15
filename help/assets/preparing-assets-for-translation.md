@@ -17,7 +17,7 @@ Flerspråkiga resurser innebär resurser med binärfiler, metadata och taggar p�
 
 I Adobe Experience Manager (AEM) Assets inkluderas flerspråkiga resurser i mappar, där varje mapp innehåller resurserna på ett annat språk.
 
-Varje språkmapp kallas för en språkkopia. Rotmappen för en språkkopia, som kallas språkrot, identifierar språket för innehållet i språkkopian. Till exempel är */content/dam/it* den italienska språkroten för den italienska språkkopian. För språkkopior måste en [korrekt konfigurerad språkrot](preparing-assets-for-translation.md#creating-a-language-root) användas, så att rätt språk används när översättningar av källresurser utförs.
+Varje språkmapp kallas för en språkkopia. Rotmappen för en språkkopia, som kallas språkrot, identifierar språket för innehållet i språkkopian. Till exempel är */content/dam/it* den italienska språkroten för den italienska språkkopian. Språkkopior måste använda en [korrekt konfigurerad språkrot](preparing-assets-for-translation.md#creating-a-language-root) så att rätt språk används när översättningar av källresurser utförs.
 
 Språkkopian som du ursprungligen lade till resurser för är det primära språket. Språkets primära språk är källan som översätts till andra språk.
 
@@ -42,11 +42,11 @@ Utför följande steg för att förbereda dina resurser för översättning:
 1. Lägg till resurser i ditt primära språk.
 1. Skapa språkroten för varje målspråk som du behöver en språkkopia för.
 
-## Skapa en språkrot {#creating-a-language-root}
+## Skapar en språkrot {#creating-a-language-root}
 
 Om du vill skapa språkroten skapar du en mapp och använder en ISO-språkkod som värde för egenskapen Namn. När du har skapat språkroten kan du skapa en språkkopia på valfri nivå i språkroten.
 
-Rotsidan för den italienska språkkopian av exempelhierarkin har till exempel `it` egenskapen Namn. Egenskapen Namn används som namn på objektnoden i databasen och avgör därför sökvägen till resurserna. (`https://[AEM_server]:[port]/assets.html/content/dam/it/*`)
+Rotsidan för den italienska språkkopian av exempelhierarkin har till exempel `it` som egenskapen Name. Egenskapen Namn används som namn på objektnoden i databasen och avgör därför sökvägen till resurserna. (`https://[AEM_server]:[port]/assets.html/content/dam/it/*`)
 
 1. På Assets-konsolen klickar/trycker du på **[!UICONTROL Create]** och väljer **[!UICONTROL Folder]** på menyn.
 
@@ -56,18 +56,18 @@ Rotsidan för den italienska språkkopian av exempelhierarkin har till exempel `
 
    ![chlimage_1-121](assets/chlimage_1-121.png)
 
-1. Klicka eller tryck **[!UICONTROL Create]**. Språkroten skapas i resurskonsolen.
+1. Klicka eller tryck på **[!UICONTROL Create]**. Språkroten skapas i resurskonsolen.
 
-## Visa språkrot {#viewing-language-roots}
+## Språkrötter för visning {#viewing-language-roots}
 
 Det pekoptimerade användargränssnittet innehåller en referenspanel som visar en lista över språkrötter som har skapats i AEM Assets.
 
 1. I resurskonsolen väljer du det språk som är primärt för vilket du vill skapa språkkopior.
-1. Klicka på eller tryck på ikonen GlobalNav och välj **[!UICONTROL References]** att öppna referensrutan.
+1. Klicka på eller tryck på ikonen GlobalNav och välj **[!UICONTROL References]** för att öppna referensrutan.
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
 
-1. Klicka eller tryck på **[!UICONTROL Language Copies]** referensrutan. På panelen Språkkopior visas språkkopiorna för resurserna.
+1. Klicka eller tryck på **[!UICONTROL Language Copies]** i rutan Referenser. På panelen Språkkopior visas språkkopiorna för resurserna.
 
    ![chlimage_1-123](assets/chlimage_1-123.png)
 
