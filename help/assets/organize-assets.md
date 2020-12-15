@@ -22,20 +22,20 @@ AEM Assets har stöd för flera sätt att ordna innehåll. Du kan ordna dem hier
 Det mest grundläggande sättet att ordna resurser är att spara dessa i mappar. Det motsvarar att ordna filer i mappar i vårt lokala filsystem. Mer information om hur du skapar och hanterar mappar finns i [Hantera resurser](managing-assets-touch-ui.md). Hur du namnger filer och mappar, hur du ordnar undermappar och hur du hanterar filerna i dessa mappar kan påverka hur dessa resurser bearbetas. Genom att använda enhetliga och lämpliga namngivningsstrategier för filer och mappar tillsammans med god metadatapraxis kan ni få ut det mesta av era digitala resurslager.
 
 * I de flesta fall växer din databas för digitala resurser. Därför är det viktigt att formalisera metadataanvändning, mappstruktur och filnamngivning tidigt när du skapar innehåll.
-* Använd endast mappar för att få en enhetlig lagringsstruktur för dina digitala resurser. Denna konsekvens hjälper er att hantera era resurser bättre. Resurser som placeras i följande typer av mappar kan till exempel hjälpa dig att använda rätt [profiler för att bearbeta](processing-profiles.md)resurser:
+* Använd endast mappar för att få en enhetlig lagringsstruktur för dina digitala resurser. Denna konsekvens hjälper er att hantera era resurser bättre. Resurser som placerats i följande typer av mappar kan till exempel hjälpa dig att använda lämpliga [profiler för resursbearbetning](processing-profiles.md):
 
-   * **Utvecklingsmappar** - innehåller digitala resurser som du för närvarande arbetar med.
-   * **Klientmappar** - innehåller digitala resurser baserade på klienter eller projektnamn.
-   * **Primära mappar** - innehåller digitala källresurser.
-   * **Återgivningsmappar** - innehåller återgivningar och kopior av det ursprungliga digitala källmaterialet.
-   * **Filstorleksmappar** - innehåller digitala resurser baserade på små, medelstora eller stora filstorlekar.
-   * **Mellanlagringsmappar** - innehåller digitala resurser som är klara att publiceras live på din webbplats.
-   * **MIME-typmappar** - innehåller digitala resurser som är specifika för MIME-typer som bilder, dokument och multimedia.
-   * **Arkivmappar** - innehåller kasserade digitala resurser.
-   * **Datumbaserade mappar** - innehåller digitala resurser baserat på skapandedatum eller senaste ändringsdatum.
+   * **Utvecklingsmappar**  - innehåller digitala resurser som du arbetar med just nu.
+   * **Klientmappar**  - innehåller digitala resurser baserade på klienter eller projektnamn.
+   * **Primära mappar**  - innehåller digitala källresurser.
+   * **Återgivningsmappar**  - innehåller återgivningar och kopior av det ursprungliga digitala källmaterialet.
+   * **Filstorleksmappar**  - innehåller digitala resurser baserade på små, medelstora eller stora filstorlekar.
+   * **Mellanlagringsmappar**  - innehåller digitala resurser som är klara att publiceras live på din webbplats.
+   * **MIME-typmappar**  - innehåller digitala resurser som är specifika för MIME-typer som bilder, dokument och multimedia.
+   * **Arkivmappar**  - innehåller kasserade digitala resurser.
+   * **Datumbaserade mappar**  - innehåller digitala resurser baserat på skapandedatum eller senaste ändringsdatum.
 
 * Skapa en katalog med mappar som troligtvis inte ändras så att anpassningar och automatisering fortsätter att fungera. De tilldelade bearbetningsprofilerna fortsätter till exempel att fungera.
-* Om en resurs redan är publicerad använder du AEM för att flytta resursen till en annan mapp och publicera på nytt från den nya platsen, men den ursprungliga publicerade resursplatsen är fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen *förloras* för AEM och kan inte avpubliceras. Därför bör du först avpublicera en resurs och sedan flytta den till en annan mapp.
+* Om en resurs redan är publicerad använder du AEM för att flytta resursen till en annan mapp och publicera på nytt från den nya platsen, men den ursprungliga publicerade resursplatsen är fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är *borttappad* till AEM och kan inte avpubliceras. Därför bör du först avpublicera en resurs och sedan flytta den till en annan mapp.
 
 ## Ordna resurser med taggar {#use-tags-to-organize-assets}
 
@@ -53,7 +53,7 @@ Mer information finns i följande artiklar:
 
 Med resurssamlingar i Experience Manager Assets kan du effektivisera möjligheten att skapa, redigera och dela resurser mellan användare. Skapa flera typer av samlingar baserat på hur du använder dem, inklusive samlingar som innehåller en statisk referenslista över resurser, mappar och samlingar, samt samlingar som hämtar resurser baserat på sökvillkor.  Du kan också skapa samlingar med resurser från olika platser och dela dem med flera användare med olika åtkomstnivåer, behörighet att visa och redigera.
 
-Mer information finns i [Hantera samlingar](managing-collections-touch-ui.md)
+Mer information finns i [hantera samlingar](managing-collections-touch-ui.md)
 
 <!-- TBD items: add screenshots where applicable
 Any hints/recommendations of when to use what method of organizing? Some examples of how organizing helps towards a better taxonomy and improved content velocity.
@@ -71,4 +71,4 @@ Mer information om olika profiler som du kan skapa och hantera för att bearbeta
 * [Profiler för att bearbeta metadata, bilder och videoklipp](processing-profiles.md)
 * [Metadataprofiler](metadata-profiles.md)
 * [Videoprofiler](video-profiles.md)
-* [Dynamiska mediebildprofiler](image-profiles.md)
+* [Dynamic Media bildprofiler](image-profiles.md)
