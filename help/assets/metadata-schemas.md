@@ -13,41 +13,41 @@ ht-degree: 9%
 
 # Metadatascheman {#metadata-schemas}
 
-I [!DNL Experience Manager Assets]ett metadataram definieras layouten för egenskapssidan och de metadataegenskaper som visas för resurser som använder det aktuella schemat. Metadataegenskaperna innehåller titel, beskrivning, MIME-typer, taggar och så vidare. Du kan använda Forms-redigeraren för metadatamodeller för att ändra befintliga scheman eller lägga till anpassade metadatamatcheman.
+I [!DNL Experience Manager Assets] definierar ett metadataschema layouten för egenskapssidan och de metadataegenskaper som visas för resurser som använder det aktuella schemat. Metadataegenskaperna innehåller titel, beskrivning, MIME-typer, taggar och så vidare. Du kan använda Forms-redigeraren för metadatamodeller för att ändra befintliga scheman eller lägga till anpassade metadatamatcheman.
 
 Så här visar och redigerar du egenskapssidan för en resurs:
 
-1. Klicka på eller tryck på **[!UICONTROL View Properties]** snabbåtgärderna i resurspanelen i kortvyn.
+1. Klicka eller tryck på **[!UICONTROL View Properties]** från snabbåtgärder på resurspanelen i kortvyn.
 
    ![chlimage_1-170](assets/chlimage_1-170.png)
 
-   Du kan också markera en resurs och sedan klicka på eller trycka på **[!UICONTROL Properties]** ikonen i verktygsfältet.
+   Du kan också markera en resurs och sedan klicka eller trycka på ikonen **[!UICONTROL Properties]** i verktygsfältet.
 
    ![chlimage_1-171](assets/chlimage_1-171.png)
 
-1. Du kan redigera de olika redigerbara metadataegenskaperna under de tillgängliga flikarna. Du kan dock inte ändra resursen [!UICONTROL Type] på egenskapsfliken [!UICONTROL Basic] .
+1. Du kan redigera de olika redigerbara metadataegenskaperna under de tillgängliga flikarna. Du kan dock inte ändra resursen [!UICONTROL Type] på egenskapssidan på fliken [!UICONTROL Basic].
 
    ![chlimage_1-172](assets/chlimage_1-172.png)
 
-   Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatamatchschema eller ändrar ett befintligt formulär. Mer information finns i [Redigera Forms](metadata-schemas.md#editing-metadata-schema-forms) för metadatamatchning. Om du ändrar metadataschemat för en viss MIME-typ ändras egenskapssidlayouten för resurser med den aktuella MIME-typen och alla resursundertyper. Om du till exempel ändrar ett `jpeg` schema under `default/image` ändras metadatalayouten (resursegenskaper) för resurser med MIME-typ `IMAGE/JPEG`. Om du redigerar standardschemat ändrar du metadatalayouten för alla typer av resurser.
+   Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatamatchschema eller ändrar ett befintligt formulär. Mer information finns i [Redigera metadataschema Forms](metadata-schemas.md#editing-metadata-schema-forms). Om du ändrar metadataschemat för en viss MIME-typ ändras egenskapssidlayouten för resurser med den aktuella MIME-typen och alla resursundertyper. Om du till exempel ändrar ett `jpeg`-schema under `default/image` ändras bara metadatalayouten (resursegenskaper) för resurser med MIME-typen `IMAGE/JPEG`. Om du redigerar standardschemat ändrar du metadatalayouten för alla typer av resurser.
 
-## Forms för metadatamatchning {#default-metadata-schema-forms}
+## Metadata Schema Forms {#default-metadata-schema-forms}
 
-Om du vill visa en lista med formulär/mallar går du till [!DNL Experience Manager] > **[!UICONTROL Tools]** > **[!UICONTROL Assets]** i **[!UICONTROL Metadata Schemas]** gränssnittet.
+Om du vill visa en lista med formulär/mallar går du till [!DNL Experience Manager] > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]** i &lt;a0/>-gränssnittet.**[!UICONTROL Tools]**
 
 [!DNL Experience Manager] innehåller följande formulärmallar för metadataschema:
 
 | Mallar |  | Beskrivning |
 |---|---|---|
 | [!UICONTROL default] |  | Basmetadataschemaformuläret för resurser. |
-|  | Följande underordnade formulär ärver egenskaperna för [!UICONTROL default] formuläret: |  |
-|  | <ul><li> [!UICONTROL dm_video]</li></ul> | Schemaformulär för Dynamic Media-videor. |
-|  | <ul><li> [!UICONTROL image]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;image&quot;, till exempel image/jpeg, image/png o.s.v. <br> Formuläret har [!UICONTROL image] följande underordnade formulärmallar: <ul><li> [!UICONTROL jpeg]: Schemaformulär för resurser med undertyp [!UICONTROL jpeg].</li> <li>[!UICONTROL tiff]: Schemaformulär för resurser med undertyp [!UICONTROL tiff].</li></ul> |
+|  | Följande underordnade formulär ärver egenskaperna för [!UICONTROL default]-formuläret: |  |
+|  | <ul><li> [!UICONTROL dm_video]</li></ul> | Schemaformulär för Dynamic Media-videofilmer. |
+|  | <ul><li> [!UICONTROL image]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;image&quot;, till exempel image/jpeg, image/png o.s.v. <br> Formuläret  [!UICONTROL image] har följande underordnade formulärmallar: <ul><li> [!UICONTROL jpeg]: Schemaformulär för resurser med undertyp  [!UICONTROL jpeg].</li> <li>[!UICONTROL tiff]: Schemaformulär för resurser med undertyp  [!UICONTROL tiff].</li></ul> |
 |  | <ul><li> [!UICONTROL application]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;application&quot;, till exempel application/pdf, application/zip och så vidare. <br>[!UICONTROL pdf]: Schemaformulär för resurser med undertyp pdf. |
 |  | <ul><li>[!UICONTROL video]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;video&quot;, till exempel video/avi, video/mp4 och så vidare. |
 | [!UICONTROL collection] |  | Schemaformulär för samlingar. |
 | [!UICONTROL contentfragment] |  | Schemaformulär för innehållsfragment. |
-| [!UICONTROL forms] |  | Det här schemaformuläret gäller [Adobe Experience Manager Forms](/help/forms/home.md). |
+| [!UICONTROL forms] |  | Det här schemaformuläret är relaterat till [Adobe Experience Manager Forms](/help/forms/home.md). |
 
 >[!NOTE]
 >
@@ -61,7 +61,7 @@ Om du vill visa en lista med formulär/mallar går du till [!DNL Experience Mana
    >
    >Oredigerade mallar har en låsikon framför sig. Om du anpassar någon av mallarna visas låsikonen innan mallen försvinner.
 
-1. Ange schemaformulärets rubrik i dialogrutan och klicka **[!UICONTROL Create]** för att slutföra formulärskapandet.
+1. Ange schemaformulärets rubrik i dialogrutan och klicka på **[!UICONTROL Create]** för att slutföra formulärskapandet.
 
    ![chlimage_1-174](assets/chlimage_1-174.png)
 
@@ -76,7 +76,7 @@ Du kan mappa/konfigurera dessa formulärobjekt till ett fält i en metadatanod i
 
 Du kan lägga till nya flikar eller formulärobjekt i metadatchemaformuläret. Flikarna och formulärobjekten som härleds från det överordnade objektet är låsta. Du kan inte ändra dem på underordnad nivå.
 
-1. In the **[!UICONTROL Schema Forms]** page, select the check box before a form and then click **[!UICONTROL Edit]** on the toolbar.
+1. Markera kryssrutan före ett formulär på sidan **[!UICONTROL Schema Forms]** och klicka sedan på **[!UICONTROL Edit]** i verktygsfältet.
 
    ![chlimage_1-175](assets/chlimage_1-175.png)
 
@@ -84,11 +84,11 @@ Du kan lägga till nya flikar eller formulärobjekt i metadatchemaformuläret. F
 
    ![chlimage_1-176](assets/chlimage_1-176.png)
 
-1. Om du vill konfigurera en komponent markerar du den och ändrar dess egenskaper på **[!UICONTROL Settings]** fliken.
+1. Om du vill konfigurera en komponent markerar du den och ändrar dess egenskaper på fliken **[!UICONTROL Settings]**.
 
 ### Komponenter på fliken Skapa formulär {#components-within-the-build-form-tab}
 
-På **[!UICONTROL Build Form]** fliken visas formulärobjekt som du använder i schemaformuläret. På fliken **[!UICONTROL Settings]** finns attributen för varje objekt som du markerar på **[!UICONTROL Build Form]** fliken. I följande tabell visas de formulärobjekt som är tillgängliga på **[!UICONTROL Build Form]** fliken:
+Fliken **[!UICONTROL Build Form]** visar de formulärobjekt som du använder i schemaformuläret. Fliken **[!UICONTROL Settings]** innehåller attributen för varje objekt som du väljer på fliken **[!UICONTROL Build Form]**. Följande tabell visar vilka formulärobjekt som är tillgängliga på fliken **[!UICONTROL Build Form]**:
 
 | Komponentnamn | Beskrivning |
 |---|---|
@@ -109,17 +109,17 @@ På **[!UICONTROL Build Form]** fliken visas formulärobjekt som du använder i 
 
 ### Redigera metadatakomponenten {#editing-the-metadata-component}
 
-Om du vill redigera egenskaperna för en metadatakomponent i formuläret klickar du på komponenten och redigerar alla eller en delmängd av följande egenskaper på **[!UICONTROL Settings]** fliken.
+Om du vill redigera egenskaperna för en metadatakomponent i formuläret klickar du på komponenten och redigerar alla eller en delmängd av följande egenskaper på fliken **[!UICONTROL Settings]**.
 
 **Fältetikett**: Namnet på metadataegenskapen som visas på egenskapssidan för resursen.
 
-**Mappa till egenskap**: This property specifies the relative path/name to the asset node where it is saved in the CRX database. Det börjar med `./` att ange att sökvägen finns under objektets nod.
+**Mappa till egenskap**: This property specifies the relative path/name to the asset node where it is saved in the CRX database. Den börjar med `./` eftersom den anger att sökvägen finns under objektets nod.
 
 Följande är giltiga värden för den här egenskapen:
 
 * `./jcr:content/metadata/dc:title`: Lagrar värdet vid resursens metadatanod som egenskapen `dc:title`.
 
-* `./jcr:created`: Visar JCR-egenskapen vid objektets nod. Om du konfigurerar de här egenskaperna för visning bör du markera dem som Inaktivera redigering, eftersom de är skyddade. Annars [!UICONTROL Asset(s) failed to modify] uppstår felet när du sparar resursens egenskaper.
+* `./jcr:created`: Visar JCR-egenskapen vid objektets nod. Om du konfigurerar de här egenskaperna för visning bör du markera dem som Inaktivera redigering, eftersom de är skyddade. Annars uppstår felet [!UICONTROL Asset(s) failed to modify] när du sparar resursens egenskaper.
 
 För att komponenten ska visas korrekt i metadataschemaformuläret bör egenskapssökvägen inte innehålla några blanksteg.
 
@@ -139,7 +139,7 @@ För att komponenten ska visas korrekt i metadataschemaformuläret bör egenskap
 
 **Klass**: Den objektklass som egenskapen är associerad med.
 
-**Ta bort ikon** Klicka på den här ikonen om du vill ta bort en komponent från schemaformuläret.
+**Ta bort** ikonKlicka på den här ikonen för att ta bort en komponent från schemaformuläret.
 
 >[!NOTE]
 >
@@ -161,13 +161,13 @@ Om du vill ta med en flik på egenskapssidan förutom fliken där komponenten Sa
 
 I stället för att ange egenskaper för alternativen på fliken **[!UICONTROL Settings]** kan du definiera alternativen i en JSON-fil genom att ange motsvarande nyckelvärdespar. Ange sökvägen till JSON-filen i fältet **[!UICONTROL JSON Path]**.
 
-### Lägga till eller ta bort en flik i schemaformuläret {#adding-deleting-a-tab-in-the-schema-form}
+### Lägg till eller ta bort en flik i schemaformuläret {#adding-deleting-a-tab-in-the-schema-form}
 
 Med schemaredigeraren kan du lägga till eller ta bort en flik. Standardschemaformuläret innehåller som standard flikarna **[!UICONTROL Basic]**, **[!UICONTROL Advanced]**, **[!UICONTROL IPTC]** och **[!UICONTROL IPTC Extension]**.
 
 ![chlimage_1-181](assets/chlimage_1-181.png)
 
-Klicka `+` för att lägga till en ny flik i ett schemaformulär. Som standard har den nya fliken namnet `Unnamed-1`. Du kan ändra namnet på **[!UICONTROL Settings]** fliken. Klicka `X` för att ta bort en flik.
+Klicka på `+` för att lägga till en ny flik i ett schemaformulär. Som standard har den nya fliken namnet `Unnamed-1`. Du kan ändra namnet på fliken **[!UICONTROL Settings]**. Klicka på `X` för att ta bort en flik.
 
 ![chlimage_1-182](assets/chlimage_1-182.png)
 
@@ -175,7 +175,7 @@ Klicka `+` för att lägga till en ny flik i ett schemaformulär. Som standard h
 
 AEM låter dig endast ta bort anpassade schemaformulär. Du kan inte ta bort standardschemaformulär/-mallar. Du kan dock ta bort anpassade ändringar i dessa formulär.
 
-Om du vill ta bort ett formulär markerar du det och klickar på **[!UICONTROL Delete]** ikonen.
+Om du vill ta bort ett formulär markerar du det och klickar på ikonen **[!UICONTROL Delete]**.
 
 >[!NOTE]
 >
@@ -191,18 +191,18 @@ AEM Assets innehåller standardformulär för olika MIME-typer. Du kan dock läg
 
 ### Lägg till nya formulär för MIME-typer {#adding-new-forms-for-mime-types}
 
-Skapa ett nytt formulär med lämplig formulärtyp. For example, to add a new template for the `image/png` subtype, create the form under the `image` forms. Schemaformulärets titel är undertypsnamnet. In this case, the title is `png`.
+Skapa ett nytt formulär med lämplig formulärtyp. Om du till exempel vill lägga till en ny mall för undertypen `image/png` skapar du formuläret under formulären `image`. Schemaformulärets titel är undertypsnamnet. I det här fallet är rubriken `png`.
 
 ### Använd en befintlig schemamall för olika MIME-typer {#using-an-existing-schema-template-for-various-mime-types}
 
-Du kan använda en befintlig mall för en annan MIME-typ. Använd till exempel `image/jpeg` formuläret för resurser av MIME-typ `image/png`.
+Du kan använda en befintlig mall för en annan MIME-typ. Använd till exempel formuläret `image/jpeg` för resurser av MIME-typ `image/png`.
 
-I det här fallet skapar du en ny nod på `/etc/dam/metadataeditor/mimetypemappings` CRX-databasen. Ange ett namn för noden och definiera följande egenskaper:
+I det här fallet skapar du en ny nod på `/etc/dam/metadataeditor/mimetypemappings` i CRX-databasen. Ange ett namn för noden och definiera följande egenskaper:
 
 | Namn | Beskrivning | Typ | Värde |
 |---|---|---|---|
 | `exposedmimetype` | Namnet på det befintliga formulär som ska mappas | `String` | `image/jpeg` |
-| `mimetypes` | Lista över MIME-typer som använder formuläret som definierats i `exposedmimetype` attributet | `String` | `image/png` |
+| `mimetypes` | Lista över MIME-typer som använder formuläret som definierats i attributet `exposedmimetype` | `String` | `image/png` |
 
 AEM Assets mappar följande MIME-typer och schemaformulär:
 
@@ -220,9 +220,9 @@ AEM Assets mappar följande MIME-typer och schemaformulär:
 | video/wmv | video/x-ms-wmv |
 | video/flv | video/x-flv |
 
-## Bevilja åtkomst till metadatamappningar {#granting-access-to-metadata-schemas}
+## Bevilja åtkomst till metadatamatcheman {#granting-access-to-metadata-schemas}
 
-Metadatchemafunktionen är bara tillgänglig för administratörer. Administratörer kan dock ge icke-administratörsanvändare åtkomst genom att ange **[!UICONTROL Create]** och **[!UICONTROL Modify]** behörigheter för **[!UICONTROL Delete]** `/conf` mappen.
+Metadatchemafunktionen är bara tillgänglig för administratörer. Administratörer kan dock ge åtkomst till icke-administratörsanvändare genom att ange **[!UICONTROL Create]**-, **[!UICONTROL Modify]**- och **[!UICONTROL Delete]**-behörigheter i mappen `/conf`.
 
 ## Använd mappspecifika metadata {#applying-folder-specific-metadata}
 
@@ -239,27 +239,27 @@ Metadataarv av resurser baseras på det schema som tillämpas på mappen på fö
 Om mappen har en undermapp ärver resurserna i undermappen metadata från det schema som används på undermappsnivå om ett annat schema används på undermappsnivå. Om inget schema eller samma schema används på undermappsnivå ärver undermappsresurserna metadata från det schema som används på den överordnade mappnivån.
 
 1. Klicka på AEM-logotypen och navigera sedan till **[!UICONTROL Tools > Assets > Metadata Schemas]**. Sidan **[!UICONTROL Metadata Schema Forms]** visas.
-1. Markera kryssrutan före ett formulär, till exempel standardformuläret för metadata, och klicka eller tryck på **[!UICONTROL Copy]** -ikonen och spara den som ett anpassat formulär. Ange ett eget namn för formuläret, till exempel `my_default`. Du kan också skapa ett eget formulär.
+1. Markera kryssrutan före ett formulär, till exempel standardformuläret för metadata, och klicka eller tryck på ikonen **[!UICONTROL Copy]** och spara det som ett anpassat formulär. Ange ett anpassat namn för formuläret, till exempel `my_default`. Du kan också skapa ett eget formulär.
 
    ![chlimage_1-184](assets/chlimage_1-184.png)
 
-1. Markera **[!UICONTROL Metadata Schema Forms]** formuläret på `my_default` sidan och klicka sedan på **[!UICONTROL Edit]**.
+1. På sidan **[!UICONTROL Metadata Schema Forms]** väljer du formuläret `my_default` och klickar sedan på **[!UICONTROL Edit]**.
 
-1. Lägg till ett textfält i schemaformuläret på **[!UICONTROL Metadata Schema Editor]** sidan. Lägg till exempel till ett fält med etiketten **[!UICONTROL Category]**.
+1. Lägg till ett textfält i schemaformuläret på sidan **[!UICONTROL Metadata Schema Editor]**. Lägg till exempel till ett fält med etiketten **[!UICONTROL Category]**.
 
    ![chlimage_1-186](assets/chlimage_1-186.png)
 
-1. Klicka på **[!UICONTROL Save]**. Det ändrade formuläret visas på **[!UICONTROL Metadata Schema Forms]** sidan.
-1. Klicka/tryck **[!UICONTROL Apply to Folder(s)]** i verktygsfältet för att använda anpassade metadata i en mapp.
+1. Klicka på **[!UICONTROL Save]**. Det ändrade formuläret visas på sidan **[!UICONTROL Metadata Schema Forms]**.
+1. Klicka/tryck på **[!UICONTROL Apply to Folder(s)]** i verktygsfältet för att använda anpassade metadata i en mapp.
 
    ![chlimage_1-187](assets/chlimage_1-187.png)
 
-1. Välj den mapp som det ändrade schemat ska tillämpas på och klicka/tryck sedan på **[!UICONTROL Apply]**.
+1. Välj den mapp som det ändrade schemat ska användas på och klicka/tryck sedan på **[!UICONTROL Apply]**.
 
    ![chlimage_1-188](assets/chlimage_1-188.png)
 
 1. Om det andra metadataschemat används i mappen visas ett varningsmeddelande om att du håller på att skriva över det befintliga metadataschemat. Klicka på **[!UICONTROL Overwrite]**.
-1. Klicka **[!UICONTROL OK]** för att stänga meddelandet.
+1. Klicka på **[!UICONTROL OK]** för att stänga meddelandet.
 1. Navigera till mappen som du tillämpade det ändrade metadataschemat på.
 
 ## Definiera obligatoriska metadata {#defining-mandatory-metadata}
@@ -271,26 +271,26 @@ Du kan definiera obligatoriska fält på mappnivå, vilket tillämpas på resurs
 >Ett metadatafält kan definieras som obligatoriskt baserat på värdet i ett annat fält. I vyn Kort visar AEM inte varningsmeddelandet om att metadata saknas för sådana obligatoriska metadatafält.
 
 1. Klicka på AEM-logotypen och navigera sedan till **[!UICONTROL Tools > Assets > Metadata Schemas]**. Sidan **[!UICONTROL Metadata Schema Forms]** visas.
-1. Spara standardformuläret för metadata som ett anpassat formulär. Du kan till exempel spara den som `my_default`.
+1. Spara standardformuläret för metadata som ett anpassat formulär. Spara den till exempel som `my_default`.
 
    ![chlimage_1-189](assets/chlimage_1-189.png)
 
-1. Redigera det anpassade formuläret. Lägg till ett obligatoriskt fält. Lägg till exempel till ett **kategorifält** och gör fältet obligatoriskt.
+1. Redigera det anpassade formuläret. Lägg till ett obligatoriskt fält. Lägg till exempel till ett **Kategori**-fält och gör fältet obligatoriskt.
 
    ![chlimage_1-190](assets/chlimage_1-190.png)
 
-1. Klicka på **[!UICONTROL Save]**. Det ändrade formuläret visas på **[!UICONTROL Metadata Schema Forms]** sidan. Om du vill använda anpassade metadata för en mapp markerar du formuläret och klickar/trycker på **[!UICONTROL Apply to Folder(s)]** i verktygsfältet.
+1. Klicka på **[!UICONTROL Save]**. Det ändrade formuläret visas på sidan **[!UICONTROL Metadata Schema Forms]**. Om du vill använda anpassade metadata för en mapp markerar du formuläret och klickar/trycker på **[!UICONTROL Apply to Folder(s)]** i verktygsfältet.
 
 1. Navigera till mappen och överför vissa resurser med saknade metadata för det obligatoriska fältet som du lade till i det anpassade formuläret. Kortvyn för resurserna visar ett meddelande om saknade metadata för det obligatoriska fältet.
 
    ![chlimage_1-192](assets/chlimage_1-192.png)
 
-1. (Valfritt) Åtkomst `http://[server]:[port]/system/console/components/`. Konfigurera och aktivera `com.day.cq.dam.core.impl.MissingMetadataNotificationJob` komponenter som är inaktiverade som standard. Ange en frekvens med vilken AEM kontrollerar om metadata för resurserna är giltiga.
-Den här konfigurationen lägger till en egenskap `hasValidMetadata` i jcr:content of assets. Med den här egenskapen kan AEM filtrera resultatet i en sökning.
+1. (Valfritt) Åtkomst `http://[server]:[port]/system/console/components/`. Konfigurera och aktivera `com.day.cq.dam.core.impl.MissingMetadataNotificationJob`-komponenten som är inaktiverad som standard. Ange en frekvens med vilken AEM kontrollerar om metadata för resurserna är giltiga.
+Den här konfigurationen lägger till en egenskap `hasValidMetadata` i jcr:innehåll för resurser. Med den här egenskapen kan AEM filtrera resultatet i en sökning.
 
 >[!NOTE]
 >
->Om en resurs läggs till efter den schemalagda kontrollen flaggas inte resursen med `hasValidMetadata` förrän vid nästa schemalagda kontroll. Resurserna visas inte i mellanliggande sökresultat.
+>Om en resurs läggs till efter den schemalagda kontrollen flaggas resursen inte med `hasValidMetadata` förrän vid nästa schemalagda kontroll. Resurserna visas inte i mellanliggande sökresultat.
 
 >[!CAUTION]
 >
