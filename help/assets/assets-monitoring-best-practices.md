@@ -40,8 +40,8 @@ Du bör utföra direktövervakning under prestandatestningsfasen av din utveckli
 
 * [Iftop](http://www.ex-parrot.com/pdw/iftop/): Iftop visar detaljerad information om Ethernet-/nätverksanvändning. Om Iftop visar statistik per kommunikationskanal för de enheter som använder Ethernet och den bandbredd de använder. Iftop kan installeras på de flesta Linux-system med `yum install iftop` eller `apt-get install iftop`.
 
-* Java Flight Recorder (JFR): Ett kommersiellt verktyg från Oracle som du kan använda fritt i icke-produktionsmiljöer. Mer information finns i [Använda Java Flight Recorder för att diagnostisera CQ-körningsproblem](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq).
-* AEM error.log-fil: Du kan undersöka filen AEM error.log om du vill ha mer information om fel som har loggats i systemet. Använd kommandot för `tail -F quickstart/logs/error.log` att identifiera fel som du bör undersöka.
+* Java Flight Recorder (JFR): Ett kommersiellt verktyg från Oracle som du kan använda fritt i icke-produktionsmiljöer. Mer information finns i [Så här använder du Java Flight Recorder för att diagnostisera CQ-körningsproblem](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq).
+* AEM error.log-fil: Du kan undersöka filen AEM error.log om du vill ha mer information om fel som har loggats i systemet. Använd kommandot `tail -F quickstart/logs/error.log` för att identifiera fel som du bör undersöka.
 * [Arbetsflödeskonsol](../sites-administering/workflows.md): Utnyttja arbetsflödeskonsolen för att övervaka arbetsflöden som släpar efter eller fastnar.
 
 Vanligtvis använder du de här verktygen tillsammans för att få en heltäckande bild av hur AEM fungerar.
@@ -116,11 +116,11 @@ Replikeringsagenter
 * MBean: `com.adobe.granite.replication:type=agent,id=”<AGENT_NAME>”`
 * URL: */system/console/jmx/com.adobe.granite.replication:type=agent,id=&quot;&lt;AGENT_NAME>&quot;*
 * Instanser: En författare och alla publiceringsinstanser (för rensningsagenter)
-* Larm threshold: Om värdet för `QueueBlocked` är true eller om värdet för `QueueNumEntries` är större än 150 % av baslinjen.
+* Larm threshold: När värdet för `QueueBlocked` är true eller när värdet för `QueueNumEntries` är större än 150 % av baslinjen.
 
 * Larm-definition: Det finns en blockerad kö i systemet som anger att replikeringsmålet är nere eller inte kan nås. Nätverks- eller infrastrukturproblem leder ofta till att för många poster köas, vilket kan påverka systemets prestanda negativt.
 
-**Obs**: För parametrarna MBean och URL ersätter du `<AGENT_NAME>` med namnet på den replikeringsagent som du vill övervaka.
+**Obs**: För parametrarna MBean och URL ersätter du  `<AGENT_NAME>` med namnet på den replikeringsagent som du vill övervaka.
 
 Sessionsräknare
 
@@ -132,7 +132,7 @@ Sessionsräknare
 
 Hälsokontroller
 
-Hälsokontroller som är tillgängliga i [kontrollpanelen](/help/sites-administering/operations-dashboard.md#health-reports) för åtgärder har motsvarande JMX MBeans för övervakning. Du kan dock skriva anpassade hälsokontroller för att visa ytterligare systemstatistik.
+Hälsokontroller som är tillgängliga i [åtgärdspanelen](/help/sites-administering/operations-dashboard.md#health-reports) har motsvarande JMX MBeans för övervakning. Du kan dock skriva anpassade hälsokontroller för att visa ytterligare systemstatistik.
 
 Här följer några färdiga hälsokontroller som är bra att övervaka:
 
@@ -184,15 +184,15 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
    * Larm threshold: När statusen inte är OK
    * Larm-definition: Det finns fel i loggfilerna. Mer information om orsaken till problemet finns i loggattributet.
 
-## Vanliga problem och lösningar  {#common-issues-and-resolutions}
+## Vanliga problem och lösningar {#common-issues-and-resolutions}
 
 Om du råkar ut för problem i samband med övervakningen finns det några felsökningsuppgifter som du kan utföra för att lösa vanliga problem med AEM instanser:
 
 * Om du använder tarMK ska du köra Tjärkomprimering ofta. Mer information finns i [Underhålla databasen](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
-* Kontrollera `OutOfMemoryError` loggar. Mer information finns i [Analysera minnesproblem](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html).
+* Kontrollera `OutOfMemoryError`-loggar. Mer information finns i [Analysera minnesproblem](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html).
 * Kontrollera loggarna om det finns referenser till oindexerade frågor, trädgenomgångar eller indexgenomgångar. Dessa indikerar oindexerade frågor eller otillräckligt indexerade frågor. Mer information om hur du optimerar fråga- och indexeringsprestanda finns i [Bästa metoder för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 * Använd arbetsflödeskonsolen för att verifiera att arbetsflödena fungerar som förväntat. Om det är möjligt kan du komprimera flera arbetsflöden till ett enda arbetsflöde.
 * Läs om live-övervakning och leta efter fler flaskhalsar eller konsumenter av specifika resurser.
 * Undersök ingångspunkterna från klientnätverket och ingångspunkterna till AEM instansnätverk, inklusive dispatchern. Det är ofta flaskhalsar. Mer information finns i [Resursnätverkshänsyn](assets-network-considerations.md).
 * Ändra storlek på AEM. Du kan ha en otillräckligt stor AEM. Adobe kundtjänst kan hjälpa dig att identifiera om din server är för liten.
-* Undersök `access.log` och `error.log` filer för att se om det finns poster runt tiden när något gick fel. Leta efter mönster som kan indikera anpassade kodavvikelser. Lägg till dem i listan med händelser som du övervakar.
+* Undersök `access.log`- och `error.log`-filerna för att se om det finns poster runt tiden när något gick fel. Leta efter mönster som kan indikera anpassade kodavvikelser. Lägg till dem i listan med händelser som du övervakar.
