@@ -32,13 +32,13 @@ Det är till exempel ingen bra idé att tagga alla dessa bilder som *min grupp* 
 
 **Täckning**: Det ska finnas tillräckligt med variation i bilderna i utbildningen. Tanken är att ge några men relativt olika exempel så att AEM lär sig att fokusera på rätt saker. Om du använder samma tagg på bilder som ser olika ut bör du ta med minst fem exempel av varje typ.
 
-För taggen *model-down* kan du t.ex. inkludera fler utbildningsbilder som liknar den markerade bilden nedan för tjänsten för att identifiera liknande bilder mer exakt under taggningen.
+För taggen *model-down-pose* kan du t.ex. inkludera fler utbildningsbilder som liknar den markerade bilden nedan för att tjänsten ska kunna identifiera liknande bilder mer exakt under taggningen.
 
 ![Illustrativa bilder som exempel på riktlinjer för utbildning](assets/do-not-localize/coverage_1.png)
 
 **Distraktion/obstruktion**: Tjänsten tränar bättre på bilder som inte är så distraherande (framträdande bakgrunder, icke-relaterade komponenter, t.ex. objekt/personer med huvudmotivet).
 
-För taggen *casual-shoe*&#x200B;är den andra bilden till exempel inte en bra träningskandidat.
+För taggen *casual-shoe* är den andra bilden till exempel inte en bra träningskandidat.
 
 ![Illustrativa bilder som exempel på riktlinjer för utbildning](assets/do-not-localize/distraction.png)
 
@@ -52,7 +52,7 @@ Förbättrade smarta taggar bygger på utbildningsmodeller för varumärkesbilde
 
 * Oförmåga att identifiera små skillnader i bilder. Till exempel tunna eller jämna skjortor.
 * Oförmåga att identifiera taggar baserat på små mönster/delar av en bild. Till exempel logotyper på T-shirts.
-* Taggning stöds i de språkområden som AEM stöds i. En lista med språk finns i Versionsinformation för [Smart Content Services](/help/release-notes/smart-content-service-release-notes.md).
+* Taggning stöds i de språkområden som AEM stöds i. En lista över språk finns i [Versionsinformation för Smart Content Services](/help/release-notes/smart-content-service-release-notes.md).
 
 Om du vill söka efter resurser med smarta taggar (vanliga eller förbättrade) använder du Omni-search för resurser (fulltextsökning). Det finns inget separat sökpredikat för smarta taggar.
 
