@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Resurser för nätverksaspekter {#assets-network-considerations}
+# Resursens nätverksöverväganden {#assets-network-considerations}
 
 Att förstå ert nätverk är lika viktigt som att förstå Adobe Experience Manager (AEM) Assets. Nätverket kan påverka uppladdning, nedladdning och användarupplevelser. Genom att diagram över din nätverkstopologi kan du identifiera kodpunkter och underoptimerade områden i nätverket som du måste åtgärda för att förbättra nätverkets prestanda och användarupplevelsen.
 
@@ -40,13 +40,13 @@ Bilden längst ned till vänster visar två enheter som är anslutna till föret
 
 Den dator som visas till höger har en begränsad uppström till företagsnätverket via ett VPN med en hastighet på 1 Mbit/s. Användarupplevelsen för 1 Mbit/s-anslutningen skiljer sig avsevärt från användarupplevelsen via 1 Gbit/s-anslutningen. Beroende på storleken på de resurser som användarna interagerar med kan deras VPN-anslutning vara otillräcklig för uppgiften.
 
-## Företagets topologi {#topology-of-the-corporate-network}
+## Företagsnätets topologi {#topology-of-the-corporate-network}
 
 ![chlimage_1-354](assets/chlimage_1-354.png)
 
 Diagrammet visar högre hastigheter för överordnad länk inom företagsnätverket än vad som vanligtvis används. Dessa rör är delade resurser. Om den delade växeln förväntas hantera 50 klienter kan det vara en kontrollpunkt. I det inledande diagrammet delar bara två datorer den aktuella anslutningen.
 
-## Länka till Internet från företagets nätverk och AEM {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
+## Länka till Internet från företagsnätverket och AEM {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
 
 ![chlimage_1-355](assets/chlimage_1-355.png)
 
@@ -62,7 +62,7 @@ Det här är den minsta klientorienterade kontrollpunkten. Du kan dock utvärder
 
 I exempeldiagrammen kan du dra slutsatsen att sex enheter delar en konceptuell kanal på 10 Mbit/s. Beroende på storleken på de tillgångar som används kan detta vara otillräckligt för att uppfylla användarnas förväntningar.
 
-## Topologi i AEM {#topology-of-the-aem-environment}
+## Topologi för AEM {#topology-of-the-aem-environment}
 
 ![chlimage_1-356](assets/chlimage_1-356.png)
 
@@ -74,9 +74,9 @@ Dispatchern delar med sig av sin 100 Mbit/s-anslutning med två enheter, utsidan
 
 Den AEM instansen delar sin 1 Gbit/s-anslutning med flera tjänster. Från ett nätverkstopologiperspektiv motsvarar det att dela en kanal med olika tjänster.
 
-Om du granskar nätverket från klientenheten till den AEM instansen verkar den minsta kontrollpunkten vara 10 Mbit brandväggsbegränsningen för företag. Du kan använda de här värdena i storlekskalkylatorn i [storleksändringshandboken](assets-sizing-guide.md) för resurser för att avgöra användarupplevelsen.
+Om du granskar nätverket från klientenheten till den AEM instansen verkar den minsta kontrollpunkten vara 10 Mbit brandväggsbegränsningen för företag. Du kan använda de här värdena i storlekskalkylatorn i [Resursstorlekshandboken](assets-sizing-guide.md) för att avgöra användarupplevelsen.
 
-## Definierade arbetsflöden för AEM instans {#defined-workflows-of-the-aem-instance}
+## Definierade arbetsflöden för AEM {#defined-workflows-of-the-aem-instance}
 
 När du tar hänsyn till nätverksprestanda kan det vara viktigt att tänka på arbetsflödena och publiceringen som kommer att ske i systemet. Dessutom använder S3 eller annan nätverksansluten lagring som du använder och I/O-begäranden nätverksbandbredd. Det innebär att även i ett helt optimerat nätverk kan prestanda begränsas av disk-I/O.
 
