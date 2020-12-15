@@ -17,7 +17,7 @@ När du migrerar resurser till AEM finns det flera steg att tänka på. Extraher
 
 ## Förutsättningar {#prerequisites}
 
-Innan du utför något av stegen som beskrivs nedan ska du granska och implementera vägledningen i prestandajusteringstipsen för [Assets](performance-tuning-guidelines.md). Många steg, till exempel konfigurera maximalt antal samtidiga jobb, förbättrar serverns stabilitet och prestanda vid inläsning. Andra steg, som konfiguration av fillagring, är svåra att utföra efter att systemet har lästs in med resurser.
+Innan du utför något av stegen som beskrivs nedan bör du granska och implementera vägledningen i [Tips för prestandajustering av resurser](performance-tuning-guidelines.md). Många steg, till exempel konfigurera maximalt antal samtidiga jobb, förbättrar serverns stabilitet och prestanda vid inläsning. Andra steg, som konfiguration av fillagring, är svåra att utföra efter att systemet har lästs in med resurser.
 
 >[!NOTE]
 >
@@ -48,13 +48,13 @@ Att migrera resurser till AEM kräver flera steg och bör betraktas som en proce
 
 ### Inaktivera arbetsflöden {#disable-workflows}
 
-Inaktivera startfunktionerna för `DAM Update Asset` arbetsflödet innan du startar en migrering. Det är bäst att importera alla resurser till systemet och sedan köra arbetsflödena gruppvis. Om du redan är aktiv under migreringen kan du schemalägga dessa aktiviteter att köras utanför kontorstid.
+Innan du startar en migrering inaktiverar du startarna för `DAM Update Asset`-arbetsflödet. Det är bäst att importera alla resurser till systemet och sedan köra arbetsflödena gruppvis. Om du redan är aktiv under migreringen kan du schemalägga dessa aktiviteter att köras utanför kontorstid.
 
 ### Läs in taggar {#load-tags}
 
-Du kanske redan har en tagg-taxonomi på plats som du tillämpar på dina bilder. Verktyg som CSV-resursimporteraren och metadataprofilfunktionerna kan hjälpa dig att automatisera användningen av taggar i resurser. Lägg till taggarna i Experience Manager före detta. Med [ACS AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) kan du fylla i taggar med hjälp av ett Microsoft Excel-kalkylblad som är inläst i systemet.
+Du kanske redan har en tagg-taxonomi på plats som du tillämpar på dina bilder. Verktyg som CSV-resursimporteraren och metadataprofilfunktionerna kan hjälpa dig att automatisera användningen av taggar i resurser. Lägg till taggarna i Experience Manager före detta. Med funktionen [ACS AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) kan du fylla i taggar med hjälp av ett Microsoft Excel-kalkylblad som är inläst i systemet.
 
-### Ingående resurser {#ingest-assets}
+### Inkommande resurser {#ingest-assets}
 
 Prestanda och stabilitet är viktiga frågor när du ska hämta in resurser i systemet. När du läser in mycket data i Experience Manager måste du se till att systemet fungerar bra. Detta minimerade den tid som krävs för att lägga till data och hjälper till att undvika att överbelasta systemet. Detta förhindrar att systemet kraschar, särskilt i system som redan är i produktion.
 
@@ -73,11 +73,11 @@ Det andra sättet att importera resurser är att hämta resurser från det lokal
 
 #### Dra från det lokala filsystemet {#pull-from-the-local-file-system}
 
-CSV-importeraren [för](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) ACS AEM hämtar resurser från filsystemet och metadata för resurser från en CSV-fil för resursimporten. AEM Asset Manager API används för att importera resurserna till systemet och använda de konfigurerade metadataegenskaperna. Resurser monteras helst på servern via en nätverksfilmontering eller via en extern enhet.
+[ACS AEM Tools CSV Asset Importer](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) hämtar resurser från filsystemet och metadata för resurser från en CSV-fil för resursimporten. AEM Asset Manager API används för att importera resurserna till systemet och använda de konfigurerade metadataegenskaperna. Resurser monteras helst på servern via en nätverksfilmontering eller via en extern enhet.
 
 När resurser inte överförs via ett nätverk förbättras prestandan avsevärt. Den här metoden är vanligtvis den mest effektiva metoden för att läsa in resurser i databasen. Dessutom kan du importera alla resurser och metadata i ett enda steg eftersom verktyget har stöd för metadatahämtning. Du behöver inte utföra något annat steg för att använda metadata, till exempel använda ett separat verktyg.
 
-### Bearbeta återgivningar {#process-renditions}
+### Bearbeta renderingar {#process-renditions}
 
 När du har läst in resurserna i systemet måste du bearbeta dem via arbetsflödet DAM Update Asset för att extrahera metadata och generera renderingar. Innan du utför det här steget måste du duplicera och ändra arbetsflödet för DAM-uppdatering av resurser efter dina behov. Vissa steg i standardarbetsflödet är kanske inte nödvändiga för dig, till exempel Scene7 PTIFF-generering eller serverintegrering med InDesign.
 
@@ -90,7 +90,7 @@ När du har konfigurerat arbetsflödet efter dina behov kan du utföra det på t
 
 För distributioner som har en publiceringsnivå måste du aktivera resurserna i publiceringsgruppen. Adobe rekommenderar att du kör mer än en publiceringsinstans, men det är mest effektivt att replikera alla resurser till en publiceringsinstans och sedan klona den instansen. När du aktiverar ett stort antal resurser kan du behöva ingripa efter att ha aktiverat ett träd. Därför: När aktiveringar utlöses läggs objekt till i kön för delningsuppgifter/händelser. När storleken på den här kön börjar bli över cirka 40 000 objekt tar det dramatiskt lång tid att bearbeta. När storleken på den här kön överstiger 100 000 objekt börjar systemstabiliteten försämras.
 
-Du kan lösa det här problemet genom att använda [Snabb Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) för att hantera resursreplikering. Detta fungerar utan att använda Sling-köerna, vilket sänker overheadkostnaderna samtidigt som arbetsbelastningen begränsas för att förhindra att servern blir överbelastad. Ett exempel på hur du använder FAM för att hantera replikering visas på funktionens dokumentationssida.
+Du kan lösa det här problemet genom att använda [Snabba åtgärdshanteraren](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) för att hantera resursreplikering. Detta fungerar utan att använda Sling-köerna, vilket sänker overheadkostnaderna samtidigt som arbetsbelastningen begränsas för att förhindra att servern blir överbelastad. Ett exempel på hur du använder FAM för att hantera replikering visas på funktionens dokumentationssida.
 
 Andra alternativ för att hämta resurser till publiceringsgruppen är bland annat att använda [vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) eller [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run), som ingår i Jackrabbit. Ett annat alternativ är att använda ett verktyg med öppen källkod för AEM-infrastrukturen, som kallas [Grabbit](https://github.com/TWCable/grabbit), och som sägs vara snabbare än vlt.
 
@@ -106,9 +106,9 @@ När resurserna har aktiverats kan du klona publiceringsinstansen och skapa så 
 
 1. Säkerhetskopiera källinstansen och datalagret.
 1. Återställ säkerhetskopian av instansen och datalagret till målplatsen. Följande steg hänvisar alla till den nya instansen.
-1. Gör en filsystemsökning under `crx-quickstart/launchpad/felix` efter `sling.id`. Ta bort den här filen.
-1. Leta reda på och ta bort eventuella `repository-XXX` filer under rotsökvägen för datalagret.
-1. Redigera `crx-quickstart/install/org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config` och `crx-quickstart/launchpad/config/org/apache/jackrabbit/oak/plugins/blob/datastore/FileDataStore.config` peka på platsen för datalagret i den nya miljön.
+1. Utför en filsystemsökning under `crx-quickstart/launchpad/felix` för `sling.id`. Ta bort den här filen.
+1. Leta reda på och ta bort alla `repository-XXX`-filer under rotsökvägen för datalagret.
+1. Redigera `crx-quickstart/install/org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config` och `crx-quickstart/launchpad/config/org/apache/jackrabbit/oak/plugins/blob/datastore/FileDataStore.config` för att peka på platsen för datalagret i den nya miljön.
 1. Starta miljön.
 1. Uppdatera konfigurationen för alla replikeringsagenter på författaren/författarna så att de pekar på rätt publiceringsinstanser eller push-agenter för dispatcher på den nya instansen för att peka på rätt dispatchers för den nya miljön.
 
@@ -116,9 +116,9 @@ När resurserna har aktiverats kan du klona publiceringsinstansen och skapa så 
 
 När migreringen är klar bör startarna för DAM Update Asset-arbetsflödena återaktiveras för att stödja generering av återgivningar och metadataextrahering för den dagliga systemanvändningen.
 
-## Migrera resurser över AEM {#migrate-between-aem-instances}
+## Migrera resurser över AEM distributioner {#migrate-between-aem-instances}
 
-Även om det inte är nästan lika vanligt behöver du ibland migrera stora mängder data från en AEM till en annan instans. När du till exempel utför en AEM uppgradering uppgraderar du maskinvaran eller migrerar till ett nytt datacenter, till exempel med en AMS-migrering.
+Även om det inte är nästan lika vanligt behöver du ibland migrera stora mängder data från en AEM till en annan. När du till exempel utför en AEM uppgradering uppgraderar du maskinvaran eller migrerar till ett nytt datacenter, till exempel med en AMS-migrering.
 
 I det här fallet är dina resurser redan ifyllda med metadata och återgivningar har redan genererats. Du kan helt enkelt fokusera på att flytta resurser från en instans till en annan. När du migrerar mellan AEM instanser utför du följande steg:
 
@@ -128,10 +128,10 @@ I det här fallet är dina resurser redan ifyllda med metadata och återgivninga
 
 1. Migrera resurser: Det finns två verktyg som rekommenderas för att flytta resurser från en AEM till en annan:
 
-   * **Med Vault Remote Copy**, eller `vlt rcp`, kan du använda VLT i ett nätverk. Du kan ange en käll- och målkatalog och hämta alla databasdata från en instans och läsa in dem i en annan. Vlt rcp finns på [https://jackrabbit.apache.org/filevault/rcp.html](https://jackrabbit.apache.org/filevault/rcp.html)
-   * **Grabbit** är ett verktyg för innehållssynkronisering med öppen källkod som utvecklats av Time Warner Cable för AEM implementering. Eftersom den använder kontinuerliga dataströmmar har den en lägre fördröjning jämfört med vlt rcp och kräver en hastighetsförbättring på två till tio gånger snabbare än vlt rcp. Grabbit har även stöd för synkronisering av deltainnehåll, vilket gör att det kan synkronisera ändringar efter att en första migreringspass har slutförts.
+   * **Med Vault Remote Copy**, eller  `vlt rcp`, kan du använda VLT i ett nätverk. Du kan ange en käll- och målkatalog och hämta alla databasdata från en instans och läsa in dem i en annan. Vlt rcp finns på [https://jackrabbit.apache.org/filevault/rcp.html](https://jackrabbit.apache.org/filevault/rcp.html)
+   * **Grabbitis är ett** verktyg för innehållssynkronisering med öppen källkod som utvecklats av Time Warner Cable för deras AEM implementering. Eftersom den använder kontinuerliga dataströmmar har den en lägre fördröjning jämfört med vlt rcp och kräver en hastighetsförbättring på två till tio gånger snabbare än vlt rcp. Grabbit har även stöd för synkronisering av deltainnehåll, vilket gör att det kan synkronisera ändringar efter att en första migreringspass har slutförts.
 
-1. Aktivera resurser: Följ instruktionerna för [aktivering av resurser](#activate-assets) som dokumenterats för den första migreringen till AEM.
+1. Aktivera resurser: Följ instruktionerna för [aktivering av resurser](#activate-assets) som dokumenterats för den inledande migreringen till AEM.
 
 1. Klonpublicering: Precis som med en ny migrering är det effektivare att läsa in en publiceringsinstans och klona den än att aktivera innehållet på båda noderna. Se [Klona publicering.](#clone-publish)
 
