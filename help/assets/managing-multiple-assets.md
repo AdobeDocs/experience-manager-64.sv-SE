@@ -32,7 +32,7 @@ Om du vill anpassa sidan med metadataegenskaper, inklusive lägga till, ändra e
 
 1. Navigera till platsen för de resurser som du vill redigera i användargränssnittet Resurser.
 1. Markera de resurser som du vill redigera gemensamma egenskaper för.
-1. I verktygsfältet: tryck/klicka på **[!UICONTROL Properties]** -ikonen för att öppna egenskapssidan för de valda resurserna.
+1. Tryck/klicka på ikonen **[!UICONTROL Properties]** i verktygsfältet för att öppna egenskapssidan för de valda resurserna.
 
    >[!NOTE]
    >
@@ -47,7 +47,7 @@ Om du vill anpassa sidan med metadataegenskaper, inklusive lägga till, ändra e
    >* Överst i resurslistan markerar du kryssrutan nära **Titel** för att växla mellan att markera resurserna och rensa listan.
 
 
-1. Om du vill välja ett annat metadataram för resurserna trycker/klickar du på **[!UICONTROL Settings]** -ikonen i verktygsfältet och väljer önskat schema.
+1. Om du vill välja ett annat metadataram för resurserna trycker/klickar du på ikonen **[!UICONTROL Settings]** i verktygsfältet och väljer önskat schema.
 1. Spara ändringarna.
 1. Om du vill lägga till nya metadata till befintliga metadata i fält som innehåller flera värden väljer du **[!UICONTROL Append mode]**. Om du inte markerar det här alternativet ersätter de nya metadata de data som finns i fälten. Tryck/klicka på **[!UICONTROL Submit]**.
 
@@ -61,7 +61,7 @@ För att förhindra DOS-liknande situationer begränsar AEM antalet parametrar s
 
 `org.apache.sling.engine.impl.parameters.Util Too many name/value pairs, stopped processing after 10000 entries`
 
-To change the limit, access **[!UICONTROL Tools > Operations > Web Console]** and change the value of [!UICONTROL Maximum POST Parameters] in [!UICONTROL Apache Sling Request Parameter Handling] OSGi configuration.
+Om du vill ändra gränsen öppnar du **[!UICONTROL Tools > Operations > Web Console]** och ändrar värdet för [!UICONTROL Maximum POST Parameters] i OSGi-konfigurationen.[!UICONTROL Apache Sling Request Parameter Handling]
 
 >[!MORELIKETHIS]
 >
