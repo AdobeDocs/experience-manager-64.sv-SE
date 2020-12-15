@@ -22,7 +22,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->AEM 3D i AEM 6.4 stöds inte längre. Adobe rekommenderar att du använder funktionen 3D-resurser i [AEM som Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html) eller [AEM 6.5.3 eller senare.](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html)
+>AEM 3D i AEM 6.4 stöds inte längre. Adobe rekommenderar att du använder funktionen 3D-resurser i [AEM som en Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html) eller [AEM 6.5.3 eller senare.](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html)
 
 Installation och konfigurering av AEM 3D (version 3.0) innefattar följande:
 
@@ -33,13 +33,13 @@ Installation och konfigurering av AEM 3D (version 3.0) innefattar följande:
 
 Se även [Arbeta med 3D-resurser](assets-3d.md).
 
-Se även [AEM Versionsinformation](/help/release-notes/aem3d-release-notes.md) om 3D-resurser för information om krav, webbläsare som stöds och annan viktig versionsinformation.
+Se även [AEM Versionsinformation för 3D-resurser](/help/release-notes/aem3d-release-notes.md) för information om krav, webbläsare som stöds och annan viktig versionsinformation.
 
 Se även [Arbeta med 3D-platskomponenten](using-the-3d-sites-component.md).
 
 >[!NOTE]
 >
->Innan du hämtar och installerar 3D-paketet kontrollerar du att du har installerat alla AEM som krävs. Se versionsinformationen för [AEM 3D.](install-config-3d.md)
+>Innan du hämtar och installerar 3D-paketet kontrollerar du att du har installerat alla AEM som krävs. Se [AEM 3D Release Notes.](install-config-3d.md)
 
 ## Installera Autodesk FBX SDK-biblioteket {#installing-the-autodesk-fbx-sdk-library}
 
@@ -70,13 +70,13 @@ Se även [Avancerade konfigurationsinställningar](advanced-config-3d.md).
 
    * Windows. Installera på den enhet där AEM finns.
    * Mac. Installera på samma partition där AEM finns.
-   * Linux. Extrahera det hämtade paketet och följ instruktionerna i `<yourFBXSDKpath>/Install_FbxFileSdk.txt`. Installera SDK i `/usr`.
+   * Linux. Extrahera det hämtade paketet och följ instruktionerna i `<yourFBXSDKpath>/Install_FbxFileSdk.txt`. Installera SDK till `/usr`.
 
 ## Hämta och installera det inbyggda 3D-kodpaketet {#downloading-and-installing-the-native-d-code-package}
 
 >[!NOTE]
 >
->Innan du fortsätter med installationen och konfigurationen av AEM 3D rekommenderar Adobe att du distribuerar alla tillämpliga servicepaket och andra relaterade funktionspaket. Se [AEM 3D versionsinformation](/help/release-notes/aem3d-release-notes.md).
+>Innan du fortsätter med installationen och konfigurationen av AEM 3D rekommenderar Adobe att du distribuerar alla tillämpliga servicepaket och andra relaterade funktionspaket. Se [AEM 3D-versionsinformation](/help/release-notes/aem3d-release-notes.md).
 
 Se även [Avancerade konfigurationsinställningar](advanced-config-3d.md).
 
@@ -91,63 +91,63 @@ Se även [Avancerade konfigurationsinställningar](advanced-config-3d.md).
 
    Se [Systemkrav](/help/release-notes/aem3d-release-notes.md#system-requirements).
 
-1. Gå till [Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Gå till version 3.0.1 av `AEM-6.4-DynamicMedia-3D` funktionspaketet och ladda ned det.
+1. Få åtkomst till [portalen för programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Leta rätt på version 3.0.1 av `AEM-6.4-DynamicMedia-3D`-funktionspaketet och ladda ned det.
 
-1. Klicka på AEM **[!UICONTROL Tools > Administration > Deployment > Package Manager]**.
+1. Klicka på **[!UICONTROL Tools > Administration > Deployment > Package Manager]** i AEM.
 
-1. Överför det hämtade funktionspaketet till AEM. Leta reda på den och klicka **[!UICONTROL Install]**.
+1. Överför det hämtade funktionspaketet till AEM. Leta reda på den och klicka på **[!UICONTROL Install]**.
 
-1. Expandera **[!UICONTROL Install Package]** Avancerade inställningar **i** dialogrutan och ange **[!UICONTROL Access Control Handling]** till **Sammanfoga**.
-1. Klicka **[!UICONTROL Install]** för att påbörja installationen av paketet.
+1. Expandera **Avancerade inställningar** i dialogrutan **[!UICONTROL Install Package]** och ange **[!UICONTROL Access Control Handling]** till **Sammanfoga**.
+1. Klicka på **[!UICONTROL Install]** för att påbörja installationen av paketet.
 
-   Filen `sample-3D-content.zip` placeras i **[!UICONTROL Assets]** rotmappen. Mer information finns i [Validera inställningarna för AEM 3D](#validating-the-setup-of-aem-d) .
+   Filen `sample-3D-content.zip` placeras i rotmappen **[!UICONTROL Assets]**. Mer information finns i [Validera inställningen av AEM 3D](#validating-the-setup-of-aem-d).
 
-## Konfigurera arbetsflödet för inhämtning av 3D-resurser och starta om AEM {#configuring-the-d-asset-ingestion-workflow-and-restarting-aem}
+## Konfigurera arbetsflödet för att lägga till 3D-resurser och starta om AEM {#configuring-the-d-asset-ingestion-workflow-and-restarting-aem}
 
 **Så här konfigurerar du arbetsflödet** för 3D-tillgångsinmatning:
 
-1. I AEM klickar du på den AEM logotypen för att komma åt den globala navigeringskonsolen, klickar sedan på **[!UICONTROL Tools]** ikonen och navigerar till **[!UICONTROL Workflow > Models]**.
-1. Håll markören över arbetsflödet på **[!UICONTROL Workflow Models]** **[!UICONTROL DAM Update Asset]** sidan och markera det när markeringen visas.
+1. I AEM klickar du på den AEM logotypen för att komma åt den globala navigeringskonsolen, klickar sedan på ikonen **[!UICONTROL Tools]** och navigerar till **[!UICONTROL Workflow > Models]**.
+1. På sidan **[!UICONTROL Workflow Models]** för du muspekaren över arbetsflödet för **[!UICONTROL DAM Update Asset]** och när markeringen visas markerar du den.
 
-1. On the toolbar, click **[!UICONTROL Edit]**.
-1. Klicka på ikonen till höger om arbetsflödet på den flytande AEM **[!UICONTROL DAM Update Asset]** **[!UICONTROL Plus]** skärmen för att utöka listan. Markera **[!UICONTROL Process Step]** i listan.
-1. Dra **[!UICONTROL Process Step]** och släpp det i arbetsflödet precis före **[!UICONTROL DAM Update Asset Workflow Completed]** komponenten i slutet av arbetsflödet.
+1. Klicka på **[!UICONTROL Edit]** i verktygsfältet.
+1. På skärmen **[!UICONTROL DAM Update Asset]** klickar du på ikonen **[!UICONTROL Plus]** till höger om arbetsflödet på den AEM flytande panelen för att utöka listan. Välj **[!UICONTROL Process Step]** i listan.
+1. Dra **[!UICONTROL Process Step]** och släpp den i arbetsflödet precis före **[!UICONTROL DAM Update Asset Workflow Completed]**-komponenten i slutet av arbetsflödet.
 
    ![3d_process_step_underaem6-4](assets/3d_process_step_underaem6-4.png)
 
 1. Dubbelklicka på det nya processsteget.
-1. Ange en lämplig beskrivning av processen, t.ex. i fältet, under **[!UICONTROL Step Properties]** fliken i **[!UICONTROL Common]** dialogrutan, i **[!UICONTROL Title]** fältet `Process 3D content`.
-1. Click the **[!UICONTROL Process]** tab.
+1. I dialogrutan **[!UICONTROL Step Properties]**, under fliken **[!UICONTROL Common]** i fältet **[!UICONTROL Title]**, anger du en lämplig beskrivning för processen, till exempel `Process 3D content`.
+1. Klicka på fliken **[!UICONTROL Process]**.
 
-1. Välj i listrutan **[!UICONTROL Process]** och markera **[!UICONTROL Geometric 3D Object Service]** sedan **[!UICONTROL Handler Advance]** kryssrutan.
+1. Välj **[!UICONTROL Geometric 3D Object Service]** i listrutan **[!UICONTROL Process]** och markera sedan kryssrutan **[!UICONTROL Handler Advance]**.
 
    ![3d_install-process-steppropertiesdlg](assets/3d_install-process-steppropertiesdlg.png)
 
 1. Klicka på bockmarkeringsikonen i dialogrutans övre högra hörn för att gå tillbaka till sidan DAM-uppdatering.
-1. I närheten av det övre högra hörnet på **[!UICONTROL DAM Update Asset]** sidan klickar du på **[!UICONTROL Sync]** för att spara den redigerade arbetsflödesmodellen.
+1. Klicka på **[!UICONTROL Sync]** längst upp till höger på sidan **[!UICONTROL DAM Update Asset]** för att spara den redigerade arbetsflödesmodellen.
 1. Starta om AEM.
 
    Efter omstart är du redo att överföra 3D-innehåll och måste AEM bearbeta det.
 
-   Fortsätt med [valideringen av AEM 3D](#validating-the-setup-of-aem-d).
+   Fortsätt med [Verifiera installationen av AEM 3D](#validating-the-setup-of-aem-d).
 
-## Validera inställningen av AEM 3D {#validating-the-setup-of-aem-d}
+## Verifierar inställningen av AEM 3D {#validating-the-setup-of-aem-d}
 
-1. I AEM klickar du på **[!UICONTROL Tools > Assets]**, hämtar `sample-3D-content.zip`och expanderar den hämtade filen. (Du kan nu ta bort `sample-3D-content.zip` i AEM.)
+1. I AEM klickar du på **[!UICONTROL Tools > Assets]**, hämtar `sample-3D-content.zip` och expanderar den hämtade filen. (Du kan nu ta bort `sample-3D-content.zip` i AEM.)
 
-   Se till **[!UICONTROL Card View]** att du är inne för att visa överföring och bearbetning av feedback i de återstående stegen.
+   Se till att du är i **[!UICONTROL Card View]** för att visa överföring och bearbetning av feedback i de återstående stegen.
 
 1. Skapa en mapp med namnet `test3d` för att ta emot testinnehåll.
-1. Överför alla filer från `sample-3D-content/images` till `test3d` mappen.
+1. Överför alla filer från `sample-3D-content/images` till mappen `test3d`.
 1. Vänta tills överföringen och bearbetningen är klar. Du kan behöva uppdatera webbläsaren.
 
-   Överför de tre `.fbx` filerna från `sample-3D-content/` till `test3d` mappen.
+   Överför de tre `.fbx`-filerna från `sample-3D-content/` till mappen `test3d`.
 
    Överför inte .ma-modellfilerna ännu.
 
 1. I kortvyn kan du titta på de meddelandebanderoller som visas på 3D-resurskortet.
 
-   Varje resurs går igenom flera bearbetningssteg. När **[!UICONTROL Creating Preview...]** bearbetningen är klar uppdateras kortet med en miniatyrbild. När den slutliga bearbetningen är klar ersätts banderollen med **[!UICONTROL NEW]** indikatorn.
+   Varje resurs går igenom flera bearbetningssteg. När **[!UICONTROL Creating Preview...]**-bearbetningssteget har slutförts uppdateras kortet med en miniatyrbild. När den slutliga bearbetningen är klar ersätts banderollen med indikatorn **[!UICONTROL NEW]**.
 
    >[!NOTE]
    >
@@ -157,20 +157,20 @@ Se även [Avancerade konfigurationsinställningar](advanced-config-3d.md).
 
 1. Nu får du lära dig att lösa filberoenden.
 
-   Klicka på **[!UICONTROL Unresolved Dependencies]** ikonen på `stage-helipad.fbx` kortets banderoll för att navigera till resursens egenskaper och öppna fliken **[!UICONTROL Exclamation Point]** Beroenden **** .
+   På **[!UICONTROL Unresolved Dependencies]**-banderollen för `stage-helipad.fbx`-kortet klickar du på ikonen **[!UICONTROL Exclamation Point]** för att navigera till resursens egenskaper och öppna fliken **Beroenden**.
 
    ![chlimage_1-372](assets/chlimage_1-372.png)
 
-1. Klicka på **[!UICONTROL Folder/Magnifying Glass]** ikonen till höger om filnamnet för att öppna resursläsaren och lösa beroendena enligt följande:
+1. Klicka på ikonen **[!UICONTROL Folder/Magnifying Glass]** till höger om filnamnet för att öppna resursläsaren och lösa beroendena enligt följande:
 
    ![chlimage_1-373](assets/chlimage_1-373.png)
 
-1. Klicka **[!UICONTROL Save]** och **[!UICONTROL Close]** för att slutföra bearbetningen av resursen och återgå till **[!UICONTROL Card View]** respektive resurs.
+1. Klicka på **[!UICONTROL Save]** och **[!UICONTROL Close]** för att slutföra bearbetningen av resursen och återgå till **[!UICONTROL Card View]**.
 1. När bearbetningen är klar visas följande i **[!UICONTROL Card View]**:
 
    ![chlimage_1-374](assets/chlimage_1-374.png)
 
-1. På test3d-sidan klickar du på `logo-sphere.fbx` kortet för att öppna modellen i **[!UICONTROL Detail View]**.
+1. På test3d-sidan klickar du på `logo-sphere.fbx`-kortet för att öppna modellen i **[!UICONTROL Detail View]**.
 
    I närheten av det övre högra hörnet av sidan logo-sphere.fbx klickar du på ikonen Stage Spotlight för att expandera listrutan och väljer sedan `stage-spotlights.fbx`.
 
@@ -190,15 +190,15 @@ Se även [Avancerade konfigurationsinställningar](advanced-config-3d.md).
 
 Du kan också konfigurera stöd i AEM 3D för Adobe Dimension-resurser.
 
-Du måste konfigurera en extern konverteringstjänst så att den tillåter inhämtning, förhandsgranskning och publicering av Adobe Dimension 3D-resurser i AEM. Tjänsten konverterar från det egna Adobe Dimension-formatet (`.dn`) till en variant av glTF (formaterad som en `.glb` fil) som sparas med resursen Dn som en rendering. Renderingen används för webbaserad visning av 3D-resursen i AEM Assets, Sites och Screens och kan även hämtas för användning med tredjepartsprogram. `.glb`
+Du måste konfigurera en extern konverteringstjänst så att den tillåter inhämtning, förhandsgranskning och publicering av Adobe Dimension 3D-resurser i AEM. Tjänsten konverterar från det egna Adobe Dimension-formatet (`.dn`) till en variant av glTF (formaterad som en `.glb`-fil) som sparas med Dn-resursen som en återgivning. `.glb`-renderingen används för webbaserad visning av 3D-resursen i AEM Assets, Sites och Screens och kan även hämtas för användning med tredjepartsprogram.
 
 >[!NOTE]
 >
->Adobe är värd för konverteringstjänsten i Amazon AWS. När tjänsten har konfigurerats på rätt sätt kopieras `.dn` filer som överförts till AEM på ett säkert sätt till konverteringstjänsten via tillfällig lagring i Amazon S3. Konverteringsresultatet överförs tillbaka till AEM via temporär S3-lagring. Alla överföringar och lagring är skyddade. Innehållet finns också kvar i S3 och konverteringstjänsten är bara kort (vanligtvis inte längre än några minuter).
+>Adobe är värd för konverteringstjänsten i Amazon AWS. Efter att tjänsten konfigurerats korrekt kopieras `.dn` filer som överförts till AEM på ett säkert sätt till konverteringstjänsten via tillfällig lagring i Amazon S3. Konverteringsresultatet överförs tillbaka till AEM via temporär S3-lagring. Alla överföringar och lagring är skyddade. Innehållet finns också kvar i S3 och konverteringstjänsten är bara kort (vanligtvis inte längre än några minuter).
 
 **Så här konfigurerar du stöd för Adobe Dimension-resurser**:
 
-1. Kontakta kontohanteraren, provisioneringsexperten eller supportrepresentanten för Adobe AEM om du vill ha inloggningsuppgifter för **AEM3D-tjänster**.
+1. Kontakta kontohanteraren, provisioneringsexperten eller supportrepresentanten för Adobe för att begära inloggningsuppgifter för **AEM3D-tjänster**.
 
    >[!NOTE]
    >
@@ -216,37 +216,37 @@ Du måste konfigurera en extern konverteringstjänst så att den tillåter inhä
 1. Som administratör loggar du in på den AEM författarinstansen där du vill ha inloggningsuppgifterna installerade och öppnar sedan **[!UICONTROL CRXDE Lite]**.
 1. Konfigurera den nya inloggningsinformationen genom att göra följande i CRXDE Lite:
 
-   1. Navigera till `/libs/settings/dam/v3D/services/dncr` och ställ in `clientId` egenskapen på det nya värdet.
-   1. Navigera till `/libs/settings/dam/v3D/services/aws` och ange egenskaperna `accountId`, `customerId`, `identityPoolId`och `userPoolId` till de nya värdena.
-   1. Läs in det nya lösenordsvärdet i `encryptedPassword` egenskapen. Det här värdet krypteras automatiskt när du trycker **[!UICONTROL Save All]**.
-   1. Tryck **[!UICONTROL Save All]** och läs in sidan igen. Kontrollera sedan att `encryptedPassword` egenskapen visar en annan sträng omsluten av klammerparenteser. Det här utseendet visar att lösenordet är korrekt krypterat och säkert.
+   1. Navigera till `/libs/settings/dam/v3D/services/dncr` och ställ in egenskapen `clientId` på det nya värdet.
+   1. Navigera till `/libs/settings/dam/v3D/services/aws` och ställ in egenskaperna `accountId`, `customerId`, `identityPoolId` och `userPoolId` på de nya värdena.
+   1. Läs in det nya lösenordsvärdet i egenskapen `encryptedPassword`. Det här värdet krypteras automatiskt när du trycker på **[!UICONTROL Save All]**.
+   1. Tryck på **[!UICONTROL Save All]**, läs in sidan igen och kontrollera sedan att egenskapen `encryptedPassword` visar en annan sträng omsluten av klammerparenteser. Det här utseendet visar att lösenordet är korrekt krypterat och säkert.
 
-1. Ange formatet för `.glb` konverteringsrenderingen genom att göra följande i **[!UICONTROL CRXDE Lite]**:
+1. Ange formatet för konverteringsrenderingen `.glb` genom att göra följande i **[!UICONTROL CRXDE Lite]**:
 
    1. Navigera till `/libs/settings/dam/v3D/services/dncr` i **[!UICONTROL CRXDE Lite]**.
-   1. Ange `outputFormat` egenskapen till antingen `Dn` eller `generic`.
+   1. Ange egenskapen `outputFormat` till antingen `Dn` eller `generic`.
 
-      När det är inställt på `Dn`omfattar `.glb` konverteringen tillägg som är specifika för Adobe, till exempel IBL-ljus, för bästa kvalitet när du visar Dn-resurser i AEM. Den konverterade .glb-renderingen kanske inte återges bra i tredjepartsprogram.
+      När `Dn` är inställt på `.glb` innehåller konverteringen Adobe-specifika tillägg, som IBL-ljus, för bästa kvalitet när du visar Dn-resurser i AEM. Den konverterade .glb-renderingen kanske inte återges bra i tredjepartsprogram.
 
-      När den anges till `generic`är `.glb` återgivningen generisk utan Adobe-specifika tillägg. Med den här inställningen kan den användas i tredjepartsprogram, medan visning med AEM 3D-visningsprogram blir visuellt suboptimalt.
+      Om `generic` anges är `.glb`-återgivningen generisk utan Adobe-specifika tillägg. Med den här inställningen kan den användas i tredjepartsprogram, medan visning med AEM 3D-visningsprogram blir visuellt suboptimalt.
 
 1. Aktivera Dn-filformatet genom att göra följande i **[!UICONTROL CRXDE Lite]**:
 
    1. Navigera till `/libs/settings/dam/v3D/assetTypes/Dn`.
-   1. Ställ in egenskapen på true `Enabled` .
+   1. Ställ in egenskapen `Enabled` på true.
 
 1. Validera konfigurationen genom att göra följande:
 
    1. Öppna AEM Assets.
-   1. Överför `logo_sphere.dn` till `test3d` mappen. Filen finns i `sample-3D-content/models`.
+   1. Överför `logo_sphere.dn` till mappen `test3d`. Filen finns i `sample-3D-content/models`.
 
-      Observera att du `sample-3D-content.zip` laddat ned tidigare för att validera de grundläggande 3D-funktionerna.
-   1. Gå tillbaka till **[!UICONTROL Card View]** och observera den meddelandebanderoll som visas på den överförda resursen. Banderollen visas **[!UICONTROL Converting Format...]** medan konverteringen pågår.
-   1. När all bearbetning är klar öppnar du resursen i för **[!UICONTROL Detail View]** att verifiera att den konverterade resursen visas korrekt och att visningsprogrammets navigeringskontroller är användbara.
+      Observera att `sample-3D-content.zip` tidigare hämtades för validering av de grundläggande 3D-funktionerna.
+   1. Gå tillbaka till **[!UICONTROL Card View]** och observera den meddelandebanderoll som visas på den överförda resursen. Banderollen **[!UICONTROL Converting Format...]** visas medan konverteringsprocessen pågår.
+   1. När all bearbetning är klar öppnar du resursen i **[!UICONTROL Detail View]** för att verifiera att den konverterade resursen visas korrekt och att visningsprogrammets navigeringskontroller är användbara.
 
    ![image2018-11-2_15-51-19](assets/image2018-11-2_15-51-19.png)
 
-   Om ett &quot;bearbetningsfel&quot; visas på Dn-resursen under **[!UICONTROL Card View]** 10-15 minuter misslyckades konverteringen.
+   Om ett &quot;Bearbetningsfel&quot; visas på Dn-resursen i **[!UICONTROL Card View]** efter 10-15 minuter misslyckades konverteringen.
 
    Om så är fallet kan du felsöka konverteringen genom att göra följande:
 
