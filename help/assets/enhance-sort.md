@@ -1,6 +1,6 @@
 ---
 title: Förbättrad sortering av material i AEM
-description: Lär dig hur AEM Assets använder sortering på serversidan för att sortera mappresurser eller en sökfråga samtidigt i stället för att sortera dem gruppvis på klientsidan.
+description: Läs om hur AEM Assets använder sortering på serversidan för att sortera mappresurser eller en sökfråga samtidigt i stället för att sortera dem gruppvis på klientsidan.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
@@ -11,9 +11,9 @@ ht-degree: 3%
 ---
 
 
-# Förbättrad sortering av material i AEM {#enhanced-sorting-of-assets-in-aem}
+# Förbättrad sortering av resurser i AEM {#enhanced-sorting-of-assets-in-aem}
 
-Lär dig hur AEM Assets använder sortering på serversidan för att sortera mappresurser eller en sökfråga samtidigt i stället för att sortera dem gruppvis på klientsidan.
+Läs om hur AEM Assets använder sortering på serversidan för att sortera mappresurser eller en sökfråga samtidigt i stället för att sortera dem gruppvis på klientsidan.
 
 Sökfunktionen i Adobe Experience Manager (AEM) Assets har förbättrats så att du effektivt kan sortera ett stort antal resurser i mapplistvyn och söka efter resultatsidor. Du kan också sortera tidslinjeposter.
 
@@ -50,7 +50,7 @@ I AEM Assets kan du sortera mappresurser baserat på följande fält:
 
 >[!NOTE]
 >
->Om du vill sortera värdena i `Name` eller i `Title`kolumnerna ska du täcka över `/libs/dam/gui/content/commons/availablecolumns` och ändra värdet för `sortable` till `True`.
+>Om du vill sortera värdena i `Name` eller `Title`kolumnerna ska du täcka över `/libs/dam/gui/content/commons/availablecolumns` och ändra värdet för `sortable` till `True`.
 
 ## Sortera resurser i sökresultat {#sorting-assets-in-search-results}
 
@@ -72,7 +72,7 @@ Du kan sortera sökresultaten baserat på följande fält:
 
    ![chlimage_1-398](assets/chlimage_1-398.png)
 
-## Sortera resurser på tidslinjen {#sorting-assets-in-timeline}
+## Sortera resurser i tidslinjen {#sorting-assets-in-timeline}
 
 Med AEM Assets kan du sortera tidslinjeposter kronologiskt, till exempel anteckningar, versioner, arbetsflöden och aktiviteter.
 
@@ -81,11 +81,11 @@ Med AEM Assets kan du sortera tidslinjeposter kronologiskt, till exempel anteckn
 
    ![chlimage_1-399](assets/chlimage_1-399.png)
 
-1. Välj en post i listan på tidslinjen. Välj **[!UICONTROL Comments]** till exempel om du vill visa en lista med anteckningar som är associerade med resursen.
+1. Välj en post i listan på tidslinjen. Välj till exempel **[!UICONTROL Comments]** om du vill visa listan över anteckningar som är associerade med resursen.
 
    ![chlimage_1-400](assets/chlimage_1-400.png)
 
-1. Klicka på/tryck på **[!UICONTROL Sort]** ikonen bredvid **[!UICONTROL Date]** etiketten. Beroende på vad du väljer listas anteckningarna i den kronologiska/omvända kronologiska ordning som de lades till i resursen.
+1. Klicka/tryck på ikonen **[!UICONTROL Sort]** bredvid etiketten **[!UICONTROL Date]**. Beroende på vad du väljer listas anteckningarna i den kronologiska/omvända kronologiska ordning som de lades till i resursen.
 
    ![chlimage_1-401](assets/chlimage_1-401.png)
 
