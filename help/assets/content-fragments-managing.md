@@ -22,43 +22,43 @@ ht-degree: 3%
 
 >[!CAUTION]
 >
->Vissa funktioner för innehållsfragment kräver att [AEM 6.4 Service Pack 2 (6.4.2.0) eller senare](/help/release-notes/sp-release-notes.md)används.
+>Vissa funktioner för innehållsfragment kräver [AEM 6.4 Service Pack 2 (6.4.2.0) eller senare](/help/release-notes/sp-release-notes.md).
 
-Innehållsfragment lagras som **[!UICONTROL Assets]** och hanteras i första hand från **[!UICONTROL Assets]** konsolen.
+Innehållsfragment lagras som **[!UICONTROL Assets]**, så hanteras främst från **[!UICONTROL Assets]**-konsolen.
 
 >[!NOTE]
 >
->Innehållsfragment används sedan med redigeringssidor; Se [Sidredigering med innehållsfragment](/help/sites-authoring/content-fragments.md).
+>Innehållsfragment används sedan med redigeringssidor; se [Sidredigering med innehållsfragment](/help/sites-authoring/content-fragments.md).
 
 ## Skapa innehållsfragment {#creating-content-fragments}
 
 ### Skapa en innehållsmodell {#creating-a-content-model}
 
-[Modeller](content-fragments-models.md) för innehållsfragment kan aktiveras och skapas innan du skapar innehållsfragment med strukturerat innehåll.
+[Modellskanning ](content-fragments-models.md) av innehållsfragment kan aktiveras och skapas innan innehållsfragment med strukturerat innehåll skapas.
 
 >[!NOTE]
 >
->Mer information om mallar finns i [Utveckla innehållsfragment](/help/sites-developing/customizing-content-fragments.md) . används för enkla innehållsfragment.
+>Mer information om mallar finns i [Utveckla innehållsfragment](/help/sites-developing/customizing-content-fragments.md). används för enkla innehållsfragment.
 
 ### Skapa ett innehållsfragment {#creating-a-content-fragment}
 
-Metoden för att skapa ett innehållsfragment är (i stort) densamma för både enkla och strukturerade fragment:
+Metoden för att skapa ett innehållsfragment är (i princip) densamma för både enkla och strukturerade fragment:
 
-1. Navigate to the **[!UICONTROL Assets]** folder where you want to create the fragment.
-1. Välj **[!UICONTROL Create]** och **[!UICONTROL Content Fragment]** öppna sedan guiden.
+1. Navigera till mappen **[!UICONTROL Assets]** där du vill skapa fragmentet.
+1. Välj **[!UICONTROL Create]** och sedan **[!UICONTROL Content Fragment]** för att öppna guiden.
 1. I det första steget i guiden måste du ange grunden för det nya fragmentet.
 
    * Detta kan vara en:
 
-      * [Mall](/help/sites-developing/content-fragment-templates.md) - till exempel **[!UICONTROL Simple Fragment]**
-      * [Modell](content-fragments-models.md) - används för att skapa ett fragment som kräver strukturerat innehåll. till exempel **flygplatsmodellen**
+      * [Mall](/help/sites-developing/content-fragment-templates.md)  - till exempel  **[!UICONTROL Simple Fragment]**
+      * [Modell](content-fragments-models.md)  - använd för att skapa ett fragment som kräver strukturerat innehåll. till exempel  **** flygplatsmodellen
    * Alla tillgängliga mallar och modeller visas.
 
    Efter markeringen använder du **[!UICONTROL Next]** för att fortsätta.
 
    ![cfm-6420-15](assets/cfm-6420-15.png)
 
-1. In the **[!UICONTROL Properties]** step specify:
+1. I steget **[!UICONTROL Properties]** anger du:
 
    * **[!UICONTROL Basic]**
 
@@ -79,14 +79,14 @@ Metoden för att skapa ett innehållsfragment är (i stort) densamma för både 
          Obligatoriskt. hämtas automatiskt från titeln, men kan uppdateras.
 
 
-1. Select **[!UICONTROL Create]** to complete the action, then either **[!UICONTROL Open]** the fragment for editing or return to the console with **[!UICONTROL Done]**.
+1. Välj **[!UICONTROL Create]** om du vill slutföra åtgärden och sedan antingen **[!UICONTROL Open]** fragmentet för redigering eller återgå till konsolen med **[!UICONTROL Done]**.
 
 ## Åtgärder för ett innehållsfragment {#actions-for-a-content-fragment}
 
-I **[!UICONTROL Assets]** konsolen finns ett antal åtgärder tillgängliga för dina innehållsfragment, antingen:
+I **[!UICONTROL Assets]**-konsolen finns en rad åtgärder tillgängliga för dina innehållsfragment, antingen:
 
 * Från verktygsfältet; när du har valt fragmentet är alla lämpliga åtgärder tillgängliga.
-* som [snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions), en delmängd av åtgärder som är tillgängliga för de enskilda fragmentkorten.
+* Som [snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions); en delmängd av åtgärder som är tillgängliga för de enskilda fragmentkorten.
 
 ![cfm-6420-17](assets/cfm-6420-17.png)
 
@@ -110,7 +110,7 @@ Markera fragmentet för att visa verktygsfältet med tillämpliga åtgärder:
 * **[!UICONTROL To Collection]**
 
    * Lägg till fragmentet i en samling.
-   * Detta kan även göras när en samling [kopplas till fragmentet](content-fragments-assoc-content.md#adding-associated-content).
+   * Detta kan också göras när [en samling kopplas till fragmentet](content-fragments-assoc-content.md#adding-associated-content).
 
 * **[!UICONTROL Copy/Paste]**
 * **[!UICONTROL Move]**
@@ -120,7 +120,7 @@ Markera fragmentet för att visa verktygsfältet med tillämpliga åtgärder:
 
 >[!NOTE]
 >
->Många av dessa åtgärder är [standardåtgärder för Assets](managing-assets-touch-ui.md) och/eller [datorprogrammet](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html).
+>Många av dessa är [standardåtgärder för Assets](managing-assets-touch-ui.md) och/eller [datorprogrammet](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html).
 
 ## Öppna fragmentredigeraren {#opening-the-fragment-editor}
 
@@ -128,13 +128,13 @@ Så här öppnar du fragmentet för redigering:
 
 >[!CAUTION]
 >
->Om du vill redigera ett innehållsfragment behöver du [rätt behörigheter](/help/sites-developing/customizing-content-fragments.md#asset-permissions). Kontakta systemadministratören om du har problem.
+>Om du vill redigera ett innehållsfragment behöver du [de behörigheter som krävs](/help/sites-developing/customizing-content-fragments.md#asset-permissions). Kontakta systemadministratören om du har problem.
 
-1. Använd **[!UICONTROL Assets]** konsolen för att navigera till platsen för ditt innehållsfragment.
+1. Använd **[!UICONTROL Assets]**-konsolen för att navigera till platsen för ditt innehållsfragment.
 1. Öppna fragmentet för redigering, antingen genom att:
 
    * Klicka/tryck på fragment- eller fragment-länken (detta beror på konsolvyn).
-   * Markera fragmentet och sedan **[!UICONTROL Edit]** från verktygsfältet.
+   * Markera fragmentet och **[!UICONTROL Edit]** i verktygsfältet.
 
    Fragmentredigeraren öppnas:
 
@@ -145,23 +145,23 @@ Så här öppnar du fragmentet för redigering:
    >1. Ett meddelande visas när fragmentet redan refereras på en innehållssida.
       >
       >
-   2. Sidpanelen kan döljas/visas med hjälp av **[!UICONTROL Toggle Side Panel]** ikonen .
+   2. Sidpanelen kan döljas/visas med ikonen **[!UICONTROL Toggle Side Panel]**.
 
 
 1. Navigera genom de tre lägena med ikonerna på sidopanelen:
 
-   * Variationer: [Redigera innehåll](#editing-the-content-of-your-fragment) och [hantera variationer](#creating-and-managing-variations-within-your-fragment)
+   * Variationer: [Redigera innehållet](#editing-the-content-of-your-fragment) och [Hantera dina variationer](#creating-and-managing-variations-within-your-fragment)
    * [Anteckningar](content-fragments-variations.md#annotating-a-content-fragment)
    * [Associerat innehåll](#associating-content-with-your-fragment)
    * [Metadata](#viewing-and-editing-the-metadata-properties-of-your-fragment)
 
    ![cfm-10](assets/cfm-10.png)
 
-1. När du har gjort ändringarna ska du använda **[!UICONTROL Save]** eller **[!UICONTROL Cancel]** så.
+1. När du har gjort ändringarna använder du **[!UICONTROL Save]** eller **[!UICONTROL Cancel]** efter behov.
 
    >[!NOTE]
    >
-   >Both **[!UICONTROL Save]** and **[!UICONTROL Cancel]** will exit the editor - see [Save, Cancel and Versions](#save-cancel-and-versions) for full information on how both options operate for content fragments.
+   >Både **[!UICONTROL Save]** och **[!UICONTROL Cancel]** avslutar redigeraren - se [Spara, Avbryt och Versioner](#save-cancel-and-versions) för fullständig information om hur båda alternativen fungerar för innehållsfragment.
 
 ## Spara, Avbryt och Versioner {#save-cancel-and-versions}
 
@@ -177,7 +177,7 @@ Redigeraren har två alternativ:
 
    >[!CAUTION]
    >
-   >Om du vill redigera ett innehållsfragment behöver du [rätt behörigheter](/help/sites-developing/customizing-content-fragments.md#asset-permissions). Kontakta systemadministratören om du har problem.
+   >Om du vill redigera ett innehållsfragment behöver du [de behörigheter som krävs](/help/sites-developing/customizing-content-fragments.md#asset-permissions). Kontakta systemadministratören om du har problem.
 
    >[!NOTE]
    >
@@ -185,7 +185,7 @@ Redigeraren har två alternativ:
 
    >[!CAUTION]
    >
-   >Förutom att bara spara ändringarna uppdaterar **[!UICONTROL Save]** även alla referenser och ser till att dispatchern rensas efter behov. Dessa ändringar kan ta tid att bearbeta. På grund av detta kan prestandan påverkas på ett stort/komplext/tungt belastat system.
+   >Förutom att bara spara dina ändringar uppdaterar **[!UICONTROL Save]** alla referenser och ser till att dispatchern rensas efter behov. Dessa ändringar kan ta tid att bearbeta. På grund av detta kan prestandan påverkas på ett stort/komplext/tungt belastat system.
    >
    >
    >Tänk på detta när du använder **[!UICONTROL Save]** och ange sedan snabbt fragmentredigeraren igen för att göra och spara ytterligare ändringar.
@@ -194,25 +194,25 @@ Redigeraren har två alternativ:
 
    Redigeraren avslutas utan att de senaste ändringarna sparas.
 
-När du redigerar ditt innehållsfragment skapar AEM automatiskt versioner för att säkerställa att tidigare innehåll kan återställas om du gör **[!UICONTROL Cancel]** dina ändringar:
+När du redigerar ditt innehållsfragment skapar AEM automatiskt versioner för att säkerställa att tidigare innehåll kan återställas om du **[!UICONTROL Cancel]** dina ändringar:
 
-1. När ett innehållsfragment öppnas för redigering AEM söker efter den cookie-baserade token som anger om det finns en *redigeringssession* :
+1. När ett innehållsfragment öppnas för redigering AEM söker efter den cookie-baserade token som anger om det finns en *redigeringssession*:
 
    1. Om token hittas betraktas fragmentet som en del av den befintliga redigeringssessionen.
-   1. Om token *inte* är tillgänglig och användaren börjar redigera innehåll, skapas en version och en token för den nya redigeringssessionen skickas till klienten, där den sparas i en cookie.
+   1. Om token är *inte* tillgänglig och användaren börjar redigera innehåll, skapas en version och en token för den nya redigeringssessionen skickas till klienten, där den sparas i en cookie.
 
 1. När det finns en *aktiv* redigeringssession sparas innehållet som redigeras automatiskt var 600:e sekund (standard).
 
    >[!NOTE]
    >
-   >Intervallet för att spara automatiskt kan konfigureras med hjälp av `/conf` mekanismen.
+   >Intervallet för att spara automatiskt kan konfigureras med hjälp av mekanismen `/conf`.
    >
    >Standardvärde, se:
    >
    >`/libs/settings/dam/cfm/jcr:content/autoSaveInterval`
 
-1. Om användaren väljer att redigera **[!UICONTROL Cancel]** återställs den version som skapades i början av redigeringssessionen och token tas bort för att avsluta redigeringssessionen.
-1. Om användaren väljer att redigera **[!UICONTROL Save]** kommer de uppdaterade elementen/varianterna att finnas kvar och token tas bort för att avsluta redigeringssessionen.
+1. Om användaren väljer att **[!UICONTROL Cancel]** redigera, återställs den version som skapades i början av redigeringssessionen och token tas bort för att avsluta redigeringssessionen.
+1. Om användaren väljer att **[!UICONTROL Save]** redigera, behålls de uppdaterade elementen/varianterna och token tas bort för att avsluta redigeringssessionen.
 
 ## Redigera innehållet i fragmentet {#editing-the-content-of-your-fragment}
 
@@ -220,26 +220,26 @@ När du har öppnat fragmentet kan du använda fliken [Variationer](content-frag
 
 ## Skapa och hantera variationer i fragment {#creating-and-managing-variations-within-your-fragment}
 
-När du har skapat det Överordnad innehållet kan du skapa och hantera [varianter](content-fragments-variations.md) av det innehållet.
+När du har skapat det Överordnad innehållet kan du skapa och hantera [Variationer](content-fragments-variations.md) av det innehållet.
 
 ## Koppla innehåll till fragment {#associating-content-with-your-fragment}
 
-Du kan också [koppla innehåll](content-fragments-assoc-content.md) till ett fragment. Detta ger en anslutning så att resurser (t.ex. bilder) kan användas (valfritt) med fragmentet när det läggs till på en innehållssida.
+Du kan även [associera innehåll](content-fragments-assoc-content.md) med ett fragment. Detta ger en anslutning så att resurser (t.ex. bilder) kan användas (valfritt) med fragmentet när det läggs till på en innehållssida.
 
 ## Visa och redigera metadata (egenskaper) för fragmentet {#viewing-and-editing-the-metadata-properties-of-your-fragment}
 
-Du kan visa och redigera egenskaperna för ett fragment på [[!UICONTROL Metadata]](content-fragments-metadata.md) fliken.
+Du kan visa och redigera egenskaperna för ett fragment på fliken [[!UICONTROL Metadata]](content-fragments-metadata.md).
 
 ## Tidslinje för innehållsfragment {#timeline-for-content-fragments}
 
-Förutom standardalternativen innehåller [tidslinjen](managing-assets-touch-ui.md#timeline) både information och åtgärder som är specifika för innehållsfragment:
+Förutom standardalternativen ger [Tidslinjen](managing-assets-touch-ui.md#timeline) både information och åtgärder som är specifika för innehållsfragment:
 
 * Visa information om versioner, kommentarer och anteckningar
 * Åtgärder för versioner
 
    * **[[!UICONTROL Revert to this Version]](#reverting-to-a-version)** (välj ett befintligt fragment och sedan en specifik version)
    * **[[!UICONTROL Compare to Current]](#comparing-fragment-versions)** (välj ett befintligt fragment och sedan en specifik version)
-   * Lägg till ett **[!UICONTROL Label]** och/eller **[!UICONTROL Comment]** (välj ett befintligt fragment, sedan en specifik version)
+   * Lägg till ett **[!UICONTROL Label]** och/eller **[!UICONTROL Comment]** (välj ett befintligt fragment och sedan en specifik version)
    * **[!UICONTROL Save as Version]** (markera ett befintligt fragment och sedan uppilen längst ned på tidslinjen)
 
 * Åtgärder för anteckningar
@@ -268,11 +268,11 @@ Till exempel:
 
 ## Jämföra fragmentversioner {#comparing-fragment-versions}
 
-Funktionsmakrot är tillgängligt från **[!UICONTROL Compare to Current]** [[!UICONTROL Timeline]](https://helpx.adobe.com/experience-manager/6-3/assets/using/content-fragments-managing.html#timeline-for-content-fragments) när du har valt en viss version.
+Åtgärden **[!UICONTROL Compare to Current]** är tillgänglig från [[!UICONTROL Timeline]](https://helpx.adobe.com/experience-manager/6-3/assets/using/content-fragments-managing.html#timeline-for-content-fragments) när du har valt en specifik version.
 
 Detta öppnas:
 
-* den **[!UICONTROL Current]** (senaste) versionen (vänster)
+* den (senaste) versionen av **[!UICONTROL Current]** (vänster)
 
 * den valda versionen **v&lt;*x.y*>** (höger)
 
@@ -294,27 +294,27 @@ De visas sida vid sida, där:
 
 ![cfm-6420-20](assets/cfm-6420-20.png)
 
-## Återställa till en version  {#reverting-to-a-version}
+## Återställer till version {#reverting-to-a-version}
 
 Du kan återgå till en viss version av fragmentet:
 
 * Direkt från [[!UICONTROL Timeline]](content-fragments-managing.md#timeline-for-content-fragments).
 
-   Välj önskad version och sedan **[!UICONTROL Revert to this Version]** åtgärden.
+   Välj önskad version och sedan åtgärden **[!UICONTROL Revert to this Version]**.
 
-* När du [jämför en version med den aktuella versionen](content-fragments-managing.md#comparing-fragment-versions) kan du **[!UICONTROL Revert]** med den valda versionen.
+* När du jämför en version med den aktuella versionen[ kan du ](content-fragments-managing.md#comparing-fragment-versions) med den valda versionen.**[!UICONTROL Revert]**
 
 ## Publicera och referera till ett fragment {#publishing-and-referencing-a-fragment}
 
 >[!CAUTION]
 >
->Om fragmentet är baserat på en modell bör du se till att [modellen har publicerats](content-fragments-models.md#publishing-a-content-fragment-model).
+>Om fragmentet är baserat på en modell bör du kontrollera att [modellen har publicerats](content-fragments-models.md#publishing-a-content-fragment-model).
 >
 >Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
 
 Innehållsfragment måste publiceras för användning i publiceringsmiljön. De kan publiceras:
 
-* Efter skapande; från **[!UICONTROL Assets]** konsolen.
+* Efter skapande; från **[!UICONTROL Assets]**-konsolen.
 * När du [publicerar en sida som använder fragmentet](/help/sites-authoring/content-fragments.md#publishing); fragmentet kommer att listas i sidreferenserna.
 
 >[!CAUTION]
@@ -325,17 +325,17 @@ Innehållsfragment måste publiceras för användning i publiceringsmiljön. De 
 
 Så här tar du bort ett fragment:
 
-1. Gå till innehållsfragmentets plats i **[!UICONTROL Assets]** konsolen.
+1. I **[!UICONTROL Assets]**-konsolen navigerar du till platsen för innehållsfragmentet.
 1. Markera fragmentet.
 
    >[!NOTE]
    >
-   >Åtgärden är inte tillgänglig som **[!UICONTROL Delete]** en snabbåtgärd.
+   >Åtgärden **[!UICONTROL Delete]** är inte tillgänglig som en snabbåtgärd.
 
-1. Select **[!UICONTROL Delete]** from the toolbar.
-1. Bekräfta **[!UICONTROL Delete]** åtgärden.
+1. Välj **[!UICONTROL Delete]** i verktygsfältet.
+1. Bekräfta åtgärden **[!UICONTROL Delete]**.
 
    >[!CAUTION]
    >
-   >If the fragment is already referenced in a page you will then see a warning message and be required to confirm that you want to proceed with a **[!UICONTROL Force Delete]**. Fragmentet, tillsammans med dess innehållskomponentfragment, tas bort från alla innehållssidor.
+   >Om fragmentet redan finns på en sida visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta med ett **[!UICONTROL Force Delete]**. Fragmentet, tillsammans med dess innehållskomponentfragment, tas bort från alla innehållssidor.
 
