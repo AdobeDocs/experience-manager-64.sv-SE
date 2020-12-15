@@ -24,7 +24,7 @@ ht-degree: 0%
 
 Följande avancerade konfigurationsinställningar gäller för integrering av AEM 3D för både Maya- och icke-Maya-distributioner.
 
-Alla inställningar öppnas med **CRXDE Lite** i AEM (**[!UICONTROL Tools > General > CRXDE Lite]**).
+Alla inställningar används med **CRXDE Lite** i AEM (**[!UICONTROL Tools > General > CRXDE Lite]**).
 
 >[!NOTE]
 >
@@ -34,21 +34,21 @@ Alla inställningar öppnas med **CRXDE Lite** i AEM (**[!UICONTROL Tools > Gene
 >
 >Om du redigerar inställningar som inte finns med i tabellen nedan kan det leda till oväntade eller oönskade programbeteenden.
 
-## Konfiguration av tillgångstyper {#asset-types-configuration}
+## Konfiguration av resurstyper {#asset-types-configuration}
 
-I **CRXDE Lite** i AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), gå till följande konfigurationer:
+Gå till följande konfigurationer i **CRXDE Lite** i AEM (**[!UICONTROL Tools > General > CRXDE Lite]**):
 
 | Bana | Beskrivning |
 |---|---|
 | `/libs/settings/dam/v3D/assetTypes/*/Conversion` | Anger filtypen för det mellanliggande 3D-formatet som skapas vid importen. Måste vara tomt för filformaten fbx och obj eller fbx för format som aktiveras av Maya. |
-| `/libs/settings/dam/v3D/assetTypes/*/Enabled` | Ange som true eller false om du vill aktivera eller inaktivera den här posten i **[!UICONTROL assetTypes]** listan. |
+| `/libs/settings/dam/v3D/assetTypes/*/Enabled` | Ange som true eller false om du vill aktivera eller inaktivera den här posten i **[!UICONTROL assetTypes]**-listan. |
 | `/libs/settings/dam/v3D/assetTypes/*/Extension` | Ange ett eller flera kommaavgränsade filsuffix eller filtillägg som ska associeras med den här resurstypen. |
 | `/libs/settings/dam/v3D/assetTypes/*/IngestRegime` | Måste vara `native` för filformaten FBX och OBJ och `maya` för format som aktiveras av Maya. |
-| `/libs/settings/dam/v3D/assetTypes/*/MimeType` | Anger MIME-typen för den här resurstypen. För format som aktiveras av Maya rekommenderas du att använda `application/x-ext`, där `ext` är strängen som anges som `Extension` värde. |
+| `/libs/settings/dam/v3D/assetTypes/*/MimeType` | Anger MIME-typen för den här resurstypen. För format som aktiveras av Maya rekommenderar vi att du använder `application/x-ext`, där `ext` är den sträng som anges som `Extension`-värde. |
 
 ## Inmatningskonfiguration {#ingestion-configuration}
 
-I **CRXDE Lite** i AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), gå till följande konfigurationer:
+Gå till följande konfigurationer i **CRXDE Lite** i AEM (**[!UICONTROL Tools > General > CRXDE Lite]**):
 
 <table> 
  <tbody> 
@@ -58,11 +58,11 @@ I **CRXDE Lite** i AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), gå till
   </tr> 
   <tr> 
    <td>/libs/settings/dam/v3D/settings/addGroundPlaneImageOnIngest</td> 
-   <td>Möjliggör generering av en skugga för omgivande ocklusion vid visning eller återgivning med en IBL-fas. Gäller för förhandsgranskning och återgivning med RapidRefine</td> 
+   <td>Möjliggör generering av en omgivningsskugga för ocklusion vid visning eller återgivning med en IBL-fas. Gäller för förhandsgranskning och återgivning med RapidRefine</td> 
   </tr> 
   <tr> 
    <td><p>/libs/settings/dam/v3D/settings/cleanupRenderWorkDir</p> </td> 
-   <td>Ange som <strong>false</strong> om du vill behålla tillfälliga filer i mappen MayaWork efter konvertering och återgivning. Kan vara användbart vid felsökning av Maya-konvertering och -återgivning.</td> 
+   <td>Ange <strong>false</strong> om du vill behålla tillfälliga filer i mappen MayaWork efter konvertering och återgivning. Kan vara användbart vid felsökning av Maya-konvertering och -återgivning.</td> 
   </tr> 
   <tr> 
    <td>/libs/settings/dam/v3D/settings/invokeAnimationOnIngest</td> 
@@ -70,11 +70,11 @@ I **CRXDE Lite** i AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), gå till
   </tr> 
   <tr> 
    <td>/libs/settings/dam/v3D/settings/invokeLightMapsOnIngest</td> 
-   <td>Gör det möjligt att automatiskt skapa ljusscheman vid intag. Inställd på <strong>false</strong> för att inaktivera automatisk generering av ljusscheman. Detta kan avsevärt minska CPU-förbrukningen till en kostnad som reducerar kvaliteten för förhandsgranskning och återgivning med Rapid Refine. Påverkar inte återgivning med Maya.</td> 
+   <td>Gör det möjligt att automatiskt skapa ljusscheman vid intag. Ange <strong>false</strong> om du vill inaktivera automatisk generering av ljusscheman; Detta kan avsevärt minska CPU-förbrukningen till en kostnad som reducerar kvaliteten för förhandsgranskning och återgivning med Rapid Refine. Påverkar inte återgivning med Maya.</td> 
   </tr> 
   <tr> 
    <td>/libs/settings/dam/v3D/settings/gPlaneZero</td> 
-   <td><p>Om värdet är <strong>true</strong> (standard) flyttas objekt lodrätt, om det behövs, för att säkerställa att alla delar av objektet är ovanför markplanet (y=0).</p> <p>När värdet är <strong>false</strong> (standard) flyttas inte objekten och kan vara delvis dolda av scenens markplan. (Gäller endast förhandsgranskning och återgivning med Snabb förfining.) Det påverkar dock inte återgivningen med Maya. Om värdet är <strong>true</strong>kan objektens lodräta position i Maya vara en annan än i förhandsvisningen eller vid återgivning med Snabb förfining.</p> </td> 
+   <td><p>När det är inställt på <strong>true</strong> (standard) flyttas objekt lodrätt, om det behövs, för att säkerställa att alla delar av objektet är ovanför markplanet (y=0).</p> <p>När det är inställt på <strong>false</strong> (standard) flyttas inte objekten och kan vara delvis dolda av scenens markplan. (Gäller endast förhandsgranskning och återgivning med Snabb förfining.) Det påverkar dock inte återgivningen med Maya. Om <strong>true</strong> anges kan objektens lodräta position i Maya vara en annan än i förhandsgranskningen eller vid återgivning med Snabb förfining.</p> </td> 
   </tr> 
   <tr> 
    <td>/libs/settings/dam/v3D/Paths/magickPath</td> 
@@ -103,50 +103,50 @@ Värden för följande inställningar tillhandahålls av din kontoansvarige, pro
 
 ## Vanliga bearbetningsinställningar {#common-processing-settings}
 
-I **CRXDE Lite** i AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), gå till följande konfigurationer:
+Gå till följande konfigurationer i **CRXDE Lite** i AEM (**[!UICONTROL Tools > General > CRXDE Lite]**):
 
 | **Bana** | **Beskrivning** |
 |---|---|
 | `/libs/settings/dam/v3D/Paths/mayaWorkPath` | Namnet på och platsen för arbetsmappen för Maya-konvertering och -återgivning. Mappen skapas automatiskt om den inte finns. |
 | `/libs/settings/dam/v3D/Paths/maxWorkPath` | Namn och plats för arbetsmappen för maximal 3ds-konvertering. Mappen skapas automatiskt om den inte finns. |
-| `/libs/settings/dam/v3D/settings/debugNative` | Använd det här alternativet **[!UICONTROL true]** om du vill att felsökningsinformation ska kunna skapas vid formatkonvertering och återgivning med RapidRefine-renderaren. |
+| `/libs/settings/dam/v3D/settings/debugNative` | Ange **[!UICONTROL true]** om du vill att felsökningsinformation ska kunna skapas vid formatkonvertering och återgivning med RapidRefine-renderaren. |
 
-## Renderingskonfiguration {#renderer-configuration}
+## Återgivningskonfiguration {#renderer-configuration}
 
-I **CRXDE Lite** i AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), gå till följande konfigurationer:
+Gå till följande konfigurationer i **CRXDE Lite** i AEM (**[!UICONTROL Tools > General > CRXDE Lite]**):
 
 | **Bana** | **Beskrivning** |
 |---|---|
-| `/libs/settings/dam/v3D/settings/dynamicIBL` | När det är inställt på **[!UICONTROL true]** och förgenererade ljusscheman inte är tillgängliga (det vill säga invokeLightMapsOnIngest=false) skapar Rapid Refine-renderaren ljusscheman under återgivningen för att förbättra återgivningskvaliteten. Den här inställningen kan avsevärt öka återgivningstiden. Om du anger det så att processoranvändningen i sådana situationer **[!UICONTROL false]** minimeras, men det kan leda till en lägre återgivningskvalitet. |
-| `/libs/settings/dam/v3D/renderers/*/Enabled` | Ange till **[!UICONTROL true]** eller **[!UICONTROL false]** för att aktivera eller inaktivera en renderare. |
+| `/libs/settings/dam/v3D/settings/dynamicIBL` | När den är inställd på **[!UICONTROL true]** och förgenererade ljusscheman inte är tillgängliga (det vill säga invokeLightMapsOnIngest=false) skapar Rapid Refine-renderaren ljusscheman under återgivningen för att förbättra återgivningskvaliteten. Den här inställningen kan avsevärt öka återgivningstiden. Om du anger **[!UICONTROL false]** minimeras processoranvändningen i sådana situationer, men det kan leda till en lägre återgivningskvalitet. |
+| `/libs/settings/dam/v3D/renderers/*/Enabled` | Ange **[!UICONTROL true]** eller **[!UICONTROL false]** om du vill aktivera eller inaktivera en renderare. |
 | `/libs/settings/dam/v3D/renderers/*/Display` | Gör att du kan ändra strängen som visas för en aktiverad återgivning i återgivningsväljaren på panelen Återgivning. |
 | `/libs/settings/dam/v3D/renderers/*/MaxCpuPercentage` | Anger hur många CPU:er som används som mest för återgivning av 3D-scener. Högre värden snabbar upp återgivningen men kan leda till att AEM blir mindre responsiv totalt sett. Den här inställningen är ungefärlig. Noggrannheten ökar alltså med antalet tillgängliga processorkärnor. |
 
 ## Inställningar för förhandsgranskning av 3D-resurs {#d-asset-preview-settings}
 
-I **CRXDE Lite** i AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), gå till följande konfigurationer:
+Gå till följande konfigurationer i **CRXDE Lite** i AEM (**[!UICONTROL Tools > General > CRXDE Lite]**):
 
 | Bana | Beskrivning |
 |---|---|
-| `/libs/settings/dam/v3D/WebGLSites/autoSpin` | Ställ in på **[!UICONTROL true]** eller **[!UICONTROL false]** för att aktivera eller inaktivera automatisk rotation (automatisk kamera eller bitmapp) vid sidinläsning. |
-| `/libs/settings/dam/v3D/WebGLSites/autoSpinAfterReset` | Ange till **[!UICONTROL true]** att starta om automatisk rotation när **[!UICONTROL Reset]** du har tryckt ned. Ignoreras när automatisk rotation är inaktiverad. |
+| `/libs/settings/dam/v3D/WebGLSites/autoSpin` | Ange **[!UICONTROL true]** eller **[!UICONTROL false]** om du vill aktivera eller inaktivera automatisk rotation (automatisk kamera eller omloppsbana) vid sidinläsning. |
+| `/libs/settings/dam/v3D/WebGLSites/autoSpinAfterReset` | Ange **[!UICONTROL true]** om du vill starta om automatisk rotation när **[!UICONTROL Reset]** trycks ned. Ignoreras när automatisk rotation är inaktiverad. |
 | `/libs/settings/dam/v3D/WebGLSites/autoSpinSpeed` | Anger hastigheten (varv per minut) och riktningen för automatisk rotation, med negativa värden för höger-till-vänster och positiva värden för vänster-till-höger-rotation. |
-| `/libs/settings/dam/v3D/WebGL/continueRotate` | Inställd på **[!UICONTROL false]** att inaktivera fortsättning med gradvis uttoning av visningsprogramsvar för pek- och musgester. |
+| `/libs/settings/dam/v3D/WebGL/continueRotate` | Ange **[!UICONTROL false]** om du vill inaktivera fortsättning med gradvis uttoning av visningsprogramsvar för berörings- och musgester. |
 | `/libs/settings/dam/v3D/WebGL/curtainColor` | Anger färgen på inläsningskurvan som kan täcka visningsrutan för förhandsvisningen av 3D-resursen under inläsning och initiering. R,G,B-värde, med varje färgkomponent i intervallet 0 till 255. |
-| `/libs/settings/dam/v3D/WebGL/fadeCurtains` | När det är inställt **[!UICONTROL true]** tonas lastgardinen ut gradvis under de senare delarna av visningsprograminitieringen. När den är inställd på **[!UICONTROL false]**&#x200B;är draperiet ogenomskinligt tills inläsning och initiering har slutförts. |
-| `/libs/settings/dam/v3D/WebGL/showCurtains` | Ange till **[!UICONTROL true]** eller **[!UICONTROL false]** för att aktivera eller inaktivera inläsningskurvan för förhandsvisning av 3D-resurser. |
+| `/libs/settings/dam/v3D/WebGL/fadeCurtains` | När det är inställt på **[!UICONTROL true]** tonas inläsningskurvan ut gradvis under de senare delarna av visningsprograminitieringen. När värdet är **[!UICONTROL false]** förblir draperiet ogenomskinligt tills inläsning och initiering har slutförts. |
+| `/libs/settings/dam/v3D/WebGL/showCurtains` | Ange **[!UICONTROL true]** eller **[!UICONTROL false]** om du vill aktivera eller inaktivera inläsningskurvan för förhandsvisning av 3D-resurser. |
 | `/libs/settings/dam/v3D/WebGL/spinHeight` | När automatisk rotation är aktiverad och aktiv justeras kamerans lodräta position automatiskt i förhållande till 3D-objektets höjd. Om värdet är 0,5 kommer kameran att placeras lodrätt vid 1/2 av objektets höjd, vilket gör att horisonten centreras lodrätt i visningsrutan. Ju större värde, desto mer tittar kameran ned på objektet och höjer höjden på den renderade horisonten, desto mindre värden tittar kameran upp på objektet och sänker horisonten. |
 
 ## Inställningar för 3D-platskomponenten {#d-sites-component-settings}
 
-I **CRXDE Lite** i AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), gå till följande konfigurationer:
+Gå till följande konfigurationer i **CRXDE Lite** i AEM (**[!UICONTROL Tools > General > CRXDE Lite]**):
 
 | Bana | Beskrivning |
 |---|---|
-| `/libs/settings/dam/v3D/WebGLSites/autoSpinAfterReset` | Ställ in på **[!UICONTROL true]** att återaktivera automatisk rotation (automatisk kamera eller bitmapp) när hemmet trycks ned. Ignoreras när automatisk rotation är inaktiverad. |
-| `/libs/settings/dam/v3D/WebGLSites/continueRotate` | Inställd på **[!UICONTROL false]** att inaktivera fortsättning med gradvis uttoning av visningsprogramsvar för pek- och musgester. |
+| `/libs/settings/dam/v3D/WebGLSites/autoSpinAfterReset` | Ange **[!UICONTROL true]** för att återaktivera automatisk rotation (automatisk kamera eller bit) när hemmet trycks ned. Ignoreras när automatisk rotation är inaktiverad. |
+| `/libs/settings/dam/v3D/WebGLSites/continueRotate` | Ange **[!UICONTROL false]** om du vill inaktivera fortsättning med gradvis uttoning av visningsprogramsvar för berörings- och musgester. |
 | `/libs/settings/dam/v3D/WebGLSites/curtainColor` | Anger färgen på inläsningskurvan som kan omfatta visningsrutan för 3D-platskomponenten under inläsningen. R,G,B-värde, med varje färgkomponent i intervallet 0 till 255. |
-| `/libs/settings/dam/v3D/WebGLSites/fadeCurtains` | När det är inställt **[!UICONTROL true]** tonas lastgardinen ut gradvis under de senare delarna av inläsning och initiering. När den är inställd på **[!UICONTROL false]**&#x200B;är draperiet ogenomskinligt tills inläsning och initiering har slutförts. |
-| `/libs/settings/dam/v3D/WebGLSites/showCurtains` | Ange till **[!UICONTROL true]** eller **[!UICONTROL false]** för att aktivera eller inaktivera inläsningskurvan för 3D-platskomponenten. |
+| `/libs/settings/dam/v3D/WebGLSites/fadeCurtains` | När det är inställt på **[!UICONTROL true]** tonas inläsningskurvan ut gradvis under de senare delarna av inläsning och initiering. När värdet är **[!UICONTROL false]** förblir draperiet ogenomskinligt tills inläsning och initiering har slutförts. |
+| `/libs/settings/dam/v3D/WebGLSites/showCurtains` | Ange **[!UICONTROL true]** eller **[!UICONTROL false]** om du vill aktivera eller inaktivera inläsningskurvan för 3D-platskomponenten. |
 | `/libs/settings/dam/v3D/WebGLSites/spinHeight` | När automatisk rotation är aktiverad och aktiv justeras kamerans lodräta position automatiskt i förhållande till 3D-objektets höjd. Om värdet är 0,5 kommer kameran att placeras lodrätt vid 1/2 av objektets höjd, vilket gör att horisonten centreras lodrätt i visningsrutan. Ju större värde, desto mer tittar kameran ned på objektet och höjer höjden på den renderade horisonten, desto mindre värden tittar kameran upp på objektet och sänker horisonten. |
 
