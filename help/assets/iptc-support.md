@@ -17,13 +17,13 @@ Läs om hur Adobe Experience Manager (AEM) Assets stöder IPTC-metadata, kreativ
 
 Adobe Experience Manager (AEM) Assets har stöd för IPTC-metadatastandarden som används ofta för att beskriva resurser. På så sätt blir AEM Assets bättre på att acceptera bilderna hos olika parter, bland annat fotografer, reklambyråer, bibliotek, museer osv.
 
-Standardschemat för metadata för mediefiler innehåller nu metadatamatchningar för IPTC Core och IPTC Extension för att definiera omfattande metadataegenskaper som gör att användare kan lägga till exakta och tillförlitliga data om personer, platser och produkter som visas i en bild. Det har även stöd för datum, namn och identifierare för att skapa bilden samt ett flexibelt sätt att uttrycka rättighetsinformation.
+Standardschemat för metadata för mediefiler innehåller nu metadatamodeller för IPTC Core och IPTC Extension för att definiera omfattande metadataegenskaper som gör att användare kan lägga till exakta och tillförlitliga data om personer, platser och produkter som visas i en bild. Det har även stöd för datum, namn och identifierare för att skapa bilden samt ett flexibelt sätt att uttrycka rättighetsinformation.
 
 Egenskapssidan för resurser innehåller nu separata flikar för att visa IPTC-kärnan och IPTC-tilläggsmetadata i redigerbara fält.
 
 1. Välj en bild i användargränssnittet Resurser.
-1. Klicka på eller tryck på **[!UICONTROL Properties]** ikonen i verktygsfältet.
-1. Klicka/tryck på fliken på sidan Egenskaper för att visa IPTC-metadata för resursen **[!UICONTROL IPTC]** .
+1. Klicka på eller tryck på ikonen **[!UICONTROL Properties]** i verktygsfältet.
+1. Klicka/tryck på fliken **[!UICONTROL IPTC]** på sidan Egenskaper för att visa IPTC-metadata för resursen.
 1. Redigera IPTC-metadataegenskaperna efter behov.
 
    ![iptc_tab](assets/iptc_tab.png)
@@ -32,7 +32,7 @@ Egenskapssidan för resurser innehåller nu separata flikar för att visa IPTC-k
 1. Redigera metadataegenskaperna för ITPC-tillägget efter behov.
 1. Tryck/klicka på **[!UICONTROL Save & Close]** för att spara ändringarna.
 
-## Creative Rating Support {#creative-rating-support}
+## Kreativ klassificeringssupport {#creative-rating-support}
 
 Förutom att visa enskilda användarklassificeringar och aggregerade klassificeringar, visar egenskapssidan nu de klassificeringar som tilldelats resurser via Adobe Bridge och andra Creative-program
 
@@ -44,7 +44,7 @@ Den här egenskapen är dock för närvarande inte indexerad för att undvika ko
 
 ## Stöd för nyckelord {#keyword-support}
 
-På **[!UICONTROL IPTC]** fliken Egenskaper visas även nyckelord som har lagts till i resurser via Adobe Bridge och andra Creative-program. Du kan också redigera dessa nyckelord och lägga till fler nyckelord från **[!UICONTROL IPTC]** fliken.
+På fliken **[!UICONTROL IPTC]** på sidan Egenskaper visas även nyckelord som har lagts till i resurser via Adobe Bridge och andra Creative-program. Du kan också redigera dessa nyckelord och lägga till fler nyckelord från fliken **[!UICONTROL IPTC]**.
 
 ![keywords](assets/keywords.png)
 
