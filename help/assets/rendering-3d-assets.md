@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Återge 3D-resurser {#rendering-d-assets}
+# Återger 3D-resurser {#rendering-d-assets}
 
 Du kan återge 3D-resurser som du har manipulerat och sparat i AEM för att skapa 2D-bilder som ska användas på webbinnehållssidorna.
 
@@ -36,7 +36,7 @@ Se [Redigera sidinnehåll](/help/sites-authoring/qg-page-authoring.md#editing-yo
 
    Även om den här faktorn har mindre betydelse för standardåtergivningen av Rapid Refine, går det betydligt långsammare att återge tredjepartsrenderare som Mental Ray med IBL-stadier än med traditionella punkt- eller spotlights.
 
-Renderingen Snabb förfining tar normalt några minuter att återge större bilder. Återgivare från tredje part tar ofta många minuter, till och med timmar, när de konfigureras för maximal kvalitet.
+Renderingen Snabb förfining tar normalt några minuter att återge större bilder. Återgivare från tredje part tar ofta många minuter, till och med timmar, när de är konfigurerade för maximal kvalitet.
 
 Konverterings-, bearbetnings- och renderingsjobb köas på servern efter behov för att förhindra serveröverbelastning. Meddelandet&quot;Väntar på återgivning..&quot; visas på nyligen överförda resurser i kortvyn. Den här statusen anger att andra behandlings- eller återgivningsjobb måste slutföras innan det aktuella återgivningsjobbet kan startas.
 
@@ -50,36 +50,36 @@ Konverterings-, bearbetnings- och renderingsjobb köas på servern efter behov f
 
    Se [Visa 3D-resurser](viewing-3d-assets.md).
 
-1. Tryck på Adobe Experience Manager på **[!UICONTROL Navigation]** sidan **[!UICONTROL Assets]**.
-1. Near the upper-right corner of the page, from the **[!UICONTROL View]** drop-down list, tap **[!UICONTROL Card View]**.
+1. Tryck på **[!UICONTROL Assets]** på sidan **[!UICONTROL Navigation]** från Adobe Experience Manager.
+1. Tryck på **[!UICONTROL Card View]** i den nedrullningsbara listan **[!UICONTROL View]** i sidans övre högra hörn.
 1. Navigera till ett 3D-objekt som du vill återge.
 1. Tryck på 3D-objektets kort för att öppna det på sidan med resursinformation.
-1. Near the upper-left corner of the page, tap the drop-down list, then select **[!UICONTROL Render]**.
+1. I närheten av sidans övre vänstra hörn trycker du på listrutan och väljer **[!UICONTROL Render]**.
 
    ![chlimage_1-369](assets/chlimage_1-369.png)
 
-1. I närheten av det övre högra hörnet på sidan med resursinformation trycker du på **[!UICONTROL Stage Selector]** -ikonen (spotlight) och väljer sedan ett scennamn med bakgrunden och ljuset som du vill använda på 3D-objektet.
+1. I närheten av det övre högra hörnet av sidan med resursinformation trycker du på ikonen **[!UICONTROL Stage Selector]** (spotlight) och väljer sedan ett scennamn med bakgrunden och ljuset som du vill använda på 3D-objektet.
 
-   Se [Använda scener i AEM 3D](about-the-use-of-stages-in-aem-3d.md).
+   Se [Använda faser i AEM 3D](about-the-use-of-stages-in-aem-3d.md).
 
    ![chlimage_1-370](assets/chlimage_1-370.png)
 
    **[!UICONTROL Stage Selector]** icon
 
-1. Välj en återgivare i listrutan till vänster på sidan med resursinformation. **[!UICONTROL Render]**
+1. Välj en renderare i listrutan **[!UICONTROL Render]** till vänster på sidan med resursinformation.
 
-   Standardrenderaren för **Snabb förfining** är alltid tillgänglig. Om den scen du har valt är i ett ursprungligt format, blir motsvarande tredjepartsrenderare även tillgänglig i listan så att du kan välja den.
+   Standardåtergivaren **Rapid Refine** är alltid tillgänglig. Om den scen du har valt är i ett ursprungligt format, blir motsvarande tredjepartsrenderare även tillgänglig i listan så att du kan välja den.
 
-   Se [Använda scener i AEM 3D](about-the-use-of-stages-in-aem-3d.md).
+   Se [Använda faser i AEM 3D](about-the-use-of-stages-in-aem-3d.md).
 
 1. Gör följande:
 
-   * I fälten **[!UICONTROL Width]** och **[!UICONTROL Height]** anger du den pixelbredd och -höjd som du vill att bilden ska återges.
-   * Ange namnet på den återgivna bilden i **[!UICONTROL Image Name]** fältet.
-   * I **[!UICONTROL Export Path]** fältet anger du sökvägen där du vill att den återgivna bilden ska lagras. Du kan också trycka på **[!UICONTROL Browse]** ikonen och navigera till en plats.
-   * (Valfritt) Markera eller avmarkera **[!UICONTROL Overwrite existing imag]kryssrutan e **.
+   * I fälten **[!UICONTROL Width]** och **[!UICONTROL Height]** anger du pixelbredden och -höjden som du vill att bilden ska återges.
+   * I fältet **[!UICONTROL Image Name]** anger du namnet på den återgivna bilden.
+   * I fältet **[!UICONTROL Export Path]** anger du sökvägen där du vill att den återgivna bilden ska lagras. Du kan också trycka på ikonen **[!UICONTROL Browse]** och navigera till en plats.
+   * (Valfritt) Markera eller avmarkera kryssrutan **[!UICONTROL Overwrite existing imag]e**.
 
-1. I det övre högra hörnet av sidan med resursinformation trycker du på **[!UICONTROL Camera Selector]** -ikonen. Välj en kameravy som du vill använda på den återgivna bilden.
+1. I det övre högra hörnet av sidan med resursinformation trycker du på ikonen **[!UICONTROL Camera Selector]**. Välj en kameravy som du vill använda på den återgivna bilden.
 
    Vänster- och högerstaplar eller övre och nedre staplar är en visuell indikator på vilka delar av vyn som ska återges. När kameran finns på den valda scenen kan du välja en fördefinierad kamera.
 
@@ -87,7 +87,7 @@ Konverterings-, bearbetnings- och renderingsjobb köas på servern efter behov f
 
    **[!UICONTROL Camera Selector]** icon
 
-1. Tryck **[!UICONTROL Start Render]** för att påbörja återgivningen.
+1. Tryck på **[!UICONTROL Start Render]** för att starta återgivningsprocessen.
 
    Ett meddelande visas tillfälligt som anger att återgivningen har startat. För enkelhetens skull innehåller det här meddelandet även en länk till den valda utdatamappen så att du kan navigera direkt till den.
 
