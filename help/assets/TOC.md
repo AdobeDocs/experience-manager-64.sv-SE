@@ -15,7 +15,7 @@ ht-degree: 31%
 ---
 
 
-# Resurshandbok {#assets}
+# Resursguide {#assets}
 
 + [Användarhandbok för resurser](home.md)
 + [AEM 6.4 Versionsinformation om tillgångar](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/assets.html)
@@ -38,8 +38,8 @@ ht-degree: 31%
    + [Installera Dynamic Media](administering-dynamic-media.md)
    + [Arbeta med Dynamic Media](dynamic-media.md)
    + [Konfigurera Dynamic Media - Scene7-läge](config-dms7.md)
-   + [Konfigurera dynamiska media - hybridläge](config-dynamic.md)
-   + [Felsökning av dynamiska media - Scene7-läge](troubleshoot-dms7.md)
+   + [Konfigurera Dynamic Media - hybrid-läge](config-dynamic.md)
+   + [Felsökning av Dynamic Media - Scene7-läge](troubleshoot-dms7.md)
    + [Hantera Dynamic Media-resurser](managing-assets.md)
    + [Bästa tillvägagångssätt för att optimera bildkvalitet](best-practices-for-optimizing-the-quality-of-your-images.md)
    + [Hantera förinställningar för Dynamic Media Viewer](managing-viewer-presets.md)
