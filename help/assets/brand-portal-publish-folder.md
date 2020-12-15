@@ -21,7 +21,7 @@ Om du gör senare ändringar i den ursprungliga resursen eller mappen i AEM Asse
 
 ## Publicera mappar på varumärkesportalen {#publish-folders-to-brand-portal-1}
 
-1. I AEM Assets-gränssnittet håller du pekaren över den önskade mappen och väljer **[!UICONTROL Publish]** ett alternativ bland snabbåtgärderna.
+1. I AEM Assets-gränssnittet för du pekaren över den önskade mappen och väljer **[!UICONTROL Publish]**-alternativ bland snabbåtgärderna.
 
    Du kan också markera önskad mapp och följa stegen nedan.
 
@@ -31,11 +31,11 @@ Om du gör senare ändringar i den ursprungliga resursen eller mappen i AEM Asse
 
    Gör något av följande för att publicera de markerade mapparna på varumärkesportalen:
 
-   * Välj **[!UICONTROL Quick Publish]** i verktygsfältet. Then from the menu, select **[!UICONTROL Publish to Brand Portal]**.
+   * Välj **[!UICONTROL Quick Publish]** i verktygsfältet. Välj sedan **[!UICONTROL Publish to Brand Portal]** på menyn.
    * Välj **[!UICONTROL Manage Publication]** i verktygsfältet.
 
-3. Från **[!UICONTROL Action]** markeringen **[!UICONTROL Publish to Brand Portal]** och från **[!UICONTROL Scheduling]** markeringen **[!UICONTROL Now]**. Tryck på **[!UICONTROL Next].**
-4. Bekräfta ditt val **[!UICONTROL Scope]** i och tryck **[!UICONTROL Publish to Brand Portal]**.
+3. Välj sedan **[!UICONTROL Publish to Brand Portal]** från **[!UICONTROL Action]** och välj **[!UICONTROL Now]** från **[!UICONTROL Scheduling]**. Tryck på **[!UICONTROL Next].**
+4. Bekräfta ditt val i **[!UICONTROL Scope]** och tryck på **[!UICONTROL Publish to Brand Portal]**.
 
    Ett meddelande visas som anger att mappen har placerats i kö för publicering på varumärkesportalen. Logga in i gränssnittet för varumärkesportalen för att se den publicerade mappen.
 
@@ -44,7 +44,7 @@ Om du gör senare ändringar i den ursprungliga resursen eller mappen i AEM Asse
    Så här schemalägger du arbetsflödet för publicering till varumärkesportalen för resursmappar till ett senare datum eller en senare tidpunkt:
 
    1. När du har valt resurser/mappar att publicera väljer du **[!UICONTROL Manage Publication]** i verktygsfältet högst upp.
-   2. På **[!UICONTROL Manage Publication]** sidan väljer du **[!UICONTROL Publish to Brand Portal]** från **[!UICONTROL Action]** och väljer **[!UICONTROL Later]** från **[!UICONTROL Scheduling]**.
+   2. På sidan **[!UICONTROL Manage Publication]** väljer du **[!UICONTROL Publish to Brand Portal]** från **[!UICONTROL Action]** och väljer **[!UICONTROL Later]** från **[!UICONTROL Scheduling]**.
 
       ![publishlaterbp](assets/publishlaterbp.png)
 
@@ -64,15 +64,15 @@ Du kan avpublicera mappar från varumärkesportalen snabbt eller schemalägga de
 
    ![publish2bp-1](assets/publish2bp-1.png)
 
-2. From the toolbar, tap/click **[!UICONTROL Manage Publication]**.
+2. Tryck/klicka på **[!UICONTROL Manage Publication]** i verktygsfältet.
 
 3. **Avpublicera från varumärkesportalen nu**
 
    Så här avpublicerar du snabbt den önskade mappen från varumärkesportalen:
 
-   1. På **[!UICONTROL Manage Publication]** sidan väljer du **[!UICONTROL Action]** och väljer **[!UICONTROL Unpublish from Brand Portal]** från **[!UICONTROL Scheduling]** markering **[!UICONTROL Now]**.
+   1. På sidan **[!UICONTROL Manage Publication]** väljer du **[!UICONTROL Action]** från **[!UICONTROL Unpublish from Brand Portal]** och från **[!UICONTROL Scheduling]** **[!UICONTROL Now]**.
    2. Tryck/klicka på **[!UICONTROL Next].**
-   3. Bekräfta ditt val **[!UICONTROL Scope]** i och tryck **[!UICONTROL Unpublish from Brand Portal]**.
+   3. Bekräfta ditt val i **[!UICONTROL Scope]** och tryck på **[!UICONTROL Unpublish from Brand Portal]**.
 
    ![confirm-unpublish](assets/confirm-unpublish.png)
 
@@ -80,10 +80,10 @@ Du kan avpublicera mappar från varumärkesportalen snabbt eller schemalägga de
 
    Så här schemalägger du publiceringen av en mapp från varumärkesportalen till ett senare datum och en senare tidpunkt:
 
-   1. På **[!UICONTROL Manage Publication]** sidan väljer du **[!UICONTROL Action]** och väljer **[!UICONTROL Unpublish from Brand Portal]** från **[!UICONTROL Scheduling]** markering **[!UICONTROL Later].**
+   1. På **[!UICONTROL Manage Publication]**-sidan väljer du **[!UICONTROL Action]** från **[!UICONTROL Unpublish from Brand Portal]** och från **[!UICONTROL Scheduling]** välj **[!UICONTROL Later].**
    2. Markera ett **[!UICONTROL Activation date]** och ange tiden. Tryck på **[!UICONTROL Next]**.
-   3. Bekräfta ditt val **[!UICONTROL Scope]** i och tryck **[!UICONTROL Next]**.
-   4. Ange ett **[!UICONTROL Workflow title]** under **[!UICONTROL Workflows]**. Tryck på **[!UICONTROL Unpublish Later].**
+   3. Bekräfta ditt val i **[!UICONTROL Scope]** och tryck på **[!UICONTROL Next]**.
+   4. Ange **[!UICONTROL Workflow title]** under **[!UICONTROL Workflows]**. Tryck på **[!UICONTROL Unpublish Later].**
 
       ![unpublishworkflows](assets/unpublishworkflows.png)
 
