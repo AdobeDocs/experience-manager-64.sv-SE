@@ -19,9 +19,9 @@ Adobe Experience Manager (AEM) Assets Home page (startsidan för resurser) inneh
 
 Hemsidan för Resurser är inaktiverad som standard. Så här aktiverar du den:
 
-1. Om du vill öppna AEM Configuration Manager klickar du på **[!UICONTROL Tools > Operation > Web Console]**.
-1. Öppna tjänsten **Day CQ DAM Event Recorder** .
-1. Markera alternativet **[!UICONTROL Enable this service]** för att aktivera aktivitetsinspelning.
+1. Klicka på **[!UICONTROL Tools > Operation > Web Console]** för att komma åt AEM Configuration Manager.
+1. Öppna tjänsten **Day CQ DAM Event Recorder**.
+1. Välj **[!UICONTROL Enable this service]** för att aktivera aktivitetsinspelning.
 
    ![chlimage_1-250](assets/chlimage_1-250.png)
 
@@ -31,12 +31,12 @@ Hemsidan för Resurser är inaktiverad som standard. Så här aktiverar du den:
    >
    >Om du aktiverar alternativen Visa, Visa projekt och Samlingar, ökar antalet inspelade händelser avsevärt.
 
-1. Öppna **[!UICONTROL DAM Asset Home Page Feature Flag]** tjänsten från Configuration Manager `https://[AEM_server]:[port]/system/console/configMgr`.
+1. Öppna tjänsten **[!UICONTROL DAM Asset Home Page Feature Flag]** från Configuration Manager `https://[AEM_server]:[port]/system/console/configMgr`.
 1. Välj alternativet **[!UICONTROL isEnabled.name]** för att aktivera funktionen Assets Home page. Spara ändringarna.
 
    ![chlimage_1-251](assets/chlimage_1-251.png)
 
-1. Öppna **[!UICONTROL User Preferences]** dialogrutan och välj **[!UICONTROL Enable Assets Home Page]**. Spara ändringarna.
+1. Öppna dialogrutan **[!UICONTROL User Preferences]** och välj **[!UICONTROL Enable Assets Home Page]**. Spara ändringarna.
 
    ![user_preferences](assets/user_preferences.png)
 
@@ -65,13 +65,13 @@ Det här avsnittet visas under välkomstavsnittet och visar widgetar som inte fi
 * Senaste
 * Upptäck
 
-**Aktivitet**: I det här avsnittet visas widgeten **Min aktivitet** nyligen utförda aktiviteter som utförts av den inloggade användaren med resurser (inklusive resurser utan återgivningar), till exempel överföringar av resurser, hämtningar, skapande av resurser, redigeringar, kommentarer, anteckningar och delningar.
+**Aktivitet**: I det här avsnittet visar  **widgeten** Min aktivitet de senaste aktiviteterna som utförts av den inloggade användaren med resurser (inklusive resurser utan återgivningar), till exempel överföringar, hämtningar, skapande av resurser, redigeringar, kommentarer, anteckningar och delningar.
 
-**Senaste**: Widgeten **Senast visade** under det här avsnittet visar nyligen använda enheter som den inloggade användaren har använt, inklusive mappar, samlingar och projekt.
+**Senaste**: Widgeten  **Senast** visad i det här avsnittet visar nyligen använda enheter som den inloggade användaren har använt, inklusive mappar, samlingar och projekt.
 
-**Upptäck**: Widgeten **Nytt** under det här avsnittet visar resurser och återgivningar som nyligen har överförts till AEM Assets-instansen.
+**Upptäck**: I  **** Newwidgeten under det här avsnittet visas de resurser och återgivningar som nyligen har överförts till AEM Assets-instansen.
 
-Om du vill aktivera rensning av användaraktivitetsdata aktiverar du tjänsten **** DAM Event Rensa från Configuration Manager. När du har aktiverat den här tjänsten tas aktiviteter av den inloggade användaren som överskrider ett angivet nummer bort av systemet.
+Aktivera tjänsten **DAM Event Renge** från Configuration Manager om du vill aktivera rensning av användaraktivitetsdata. När du har aktiverat den här tjänsten tas aktiviteter av den inloggade användaren som överskrider ett angivet nummer bort av systemet.
 
 Välkomstskärmen innehåller enkla navigeringshjälpmedel, t.ex. ikoner i verktygsfältet för att komma åt mappar, samlingar och kataloger.
 
@@ -83,6 +83,6 @@ Välkomstskärmen innehåller enkla navigeringshjälpmedel, t.ex. ikoner i verkt
 >
 >Att hämta in, filtrera och rensa användaraktiviteter som krävs för Assets hemsida medför höga prestanda. Därför bör administratörer konfigurera hemsidan effektivt för målanvändare.
 >
->Adobe rekommenderar att administratörer och användare som utför gruppåtgärder undviker att använda funktionen Startsida för resurser för att förhindra att användaraktiviteter ökar. Dessutom kan administratörer exkludera inspelningsaktiviteter för specifika användare genom att konfigurera **Dag CQ DAM Event Recorder** från Configuration Manager.
+>Adobe rekommenderar att administratörer och användare som utför gruppåtgärder undviker att använda funktionen Startsida för resurser för att förhindra att användaraktiviteter ökar. Dessutom kan administratörer exkludera inspelningsaktiviteter för specifika användare genom att konfigurera **Day CQ DAM Event Recorder** från Configuration Manager.
 >
 >Om du använder funktionen rekommenderar Adobe att du schemalägger tömningsfrekvensen baserat på serverinläsningen.
