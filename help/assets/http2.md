@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# HTTP2 Delivery of Content {#http-delivery-of-content}
+# HTTP2-leverans av innehåll {#http-delivery-of-content}
 
 Adobe är glada över att kunna meddela att det finns HTTP/2-leverans av innehåll, vilket i sin helhet ger bättre prestanda.
 
@@ -59,7 +59,7 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 
 Du måste initiera begäran om att växla över till HTTP/2; det görs inte automatiskt åt dig.
 
-1. Initiera en begäran om teknisk support för att växla till HTTP2. Se [Åtkomst till AEM supportportal](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html).
+1. Initiera en begäran om teknisk support för att växla till HTTP2. Se [Gå till AEM supportportal](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html).
 
    1. Ange följande information i din supportförfrågan:
 
