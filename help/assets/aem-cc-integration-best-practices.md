@@ -11,7 +11,7 @@ ht-degree: 15%
 ---
 
 
-# Bästa praxis för integrering av AEM och Creative Cloud {#aem-and-creative-cloud-integration-best-practices}
+# Bästa praxis för integrering av AEM och Creative Cloud{#aem-and-creative-cloud-integration-best-practices}
 
 <!-- TBD: Reconcile with 6.5 article that's ahead of this article now in terms of content streamlining and structuring.
 -->
@@ -24,7 +24,7 @@ Läs vidare för att ta reda på vilka integreringar som du ska välja mellan st
 
 >[!NOTE]
 >
->Delning av AEM till Creative Cloud-mappar är föråldrat och beskrivs inte längre i den här guiden. Adobe rekommenderar att du använder nyare funktioner som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [AEM datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html) för att ge kreativa användare tillgång till resurser som hanteras i AEM.
+>Delning av AEM till Creative Cloud-mappar är föråldrat och beskrivs inte längre i den här guiden. Adobe rekommenderar att du använder nyare funktioner som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [AEM datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html) för att ge kreativa användare åtkomst till resurser som hanteras i AEM.
 
 ## Samarbete mellan kreatörer, marknadsförare och DAM-användare {#collaboration-needs-of-creatives-marketers-and-dam-users}
 
@@ -34,7 +34,7 @@ Läs vidare för att ta reda på vilka integreringar som du ska välja mellan st
 | Tillhandahåll högklassiga färdiga resurser från Adobe Stock | Marknadsförarna hjälper till att snabba upp processen för att skapa innehåll genom att hjälpa till med materialanskaffning och identifiering. Kreatörer använder det godkända materialet direkt inifrån sina kreativa verktyg. | AEM Assets Adobe Stock Marketplace metadatafält |
 | Distribuera och dela resurser efter organisationer | Interna avdelningar/lokala kontor och externa partners, distributörer och byråer använder det godkända material som delas av huvudorganisationen. Organisationen vill säkert och smidigt dela de skapade resurserna för vidare återanvändning. | Varumärkesportal, Resursdelningskommentarer |
 
-## Adobe för samarbete {#adobe-offerings-to-support-the-collaboration-need}
+## Adobe för att stödja samarbetsbehovet {#adobe-offerings-to-support-the-collaboration-need}
 
 | Värdeförslag för berörda personer | Adobe | Involverade ytor |
 |---|---|---|
@@ -42,7 +42,7 @@ Läs vidare för att ta reda på vilka integreringar som du ska välja mellan st
 | Affärsanvändare förenklar öppning och användning av resurser, redigering och överföring av ändringar i AEM samt överföring av nya filer till AEM från skrivbordsmiljön. De använder en allmän integrering för att öppna alla resurstyper i det inbyggda skrivbordsprogrammet, inklusive andra typer än Adobe. | [AEM](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) | AEM datorprogram på Win och Mac |
 | Marknadsförare och affärsanvändare upptäcker, förhandsgranskar, licensierar och sparar samt hanterar Adobe Stock-resurser inifrån AEM. Licensierade och sparade mediefiler innehåller utvalda Adobe Stock-metadata för bättre styrning. | [Integrering med Experience Manager och Adobe Stock](aem-assets-adobe-stock.md) | AEM webbgränssnitt |
 
-Den här artikeln fokuserar främst på de två första aspekterna av samarbetsbehovet. Distribution och anskaffning av resurser i stor skala omnämns kortfattat som ett användningsexempel. Överväg Adobes varumärkesportal eller Assets Share Commons för sådana behov. Alternate solutions such as [Brand Portal](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html), solutions that can be built based on [Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/) components, [Link Share](/help/assets/link-sharing.md), using [Experience Manager Assets](/help/assets/managing-assets-touch-ui.md) should be reviewed based on specific requirement.
+Den här artikeln fokuserar främst på de två första aspekterna av samarbetsbehovet. Distribution och anskaffning av resurser i stor skala omnämns kortfattat som ett användningsexempel. Överväg Adobes varumärkesportal eller Assets Share Commons för sådana behov. Alternativa lösningar som [Varumärkesportalen](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html), lösningar som kan byggas baserat på [Kommandon för resursdelning](https://adobe-marketing-cloud.github.io/asset-share-commons/)-komponenter, [Länkdelning](/help/assets/link-sharing.md) med [Experience Manager Assets](/help/assets/managing-assets-touch-ui.md) bör granskas utifrån specifika krav.
 
 ![Creative Cloud-anslutningar för AEM: Bestäm vilka funktioner som ska användas](assets/creative-connections-aem.png)
 
@@ -66,15 +66,15 @@ The terms used in this document may have a different meaning in other contexts. 
 
 | Använd skiftläge | AEM | Mappdelning | Andra lösningar |
 |---|---|---|---|
-| Dela ett mindre antal (1) DAM-resurser med den kreativa användaren | ✔✔ | ✔ |  |
-| Dela fler (2) DAM-resurser med den kreativa användaren | ✔✔ | ✘ | [Varumärkesportal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html) <br> [Resursresurs](assets-finder-editor.md) |
-| Dela DAM-resurser med användare som har åtkomst till DAM | ✔✔ | ✔ | [Länkdelning](link-sharing.md) |
-| Dela DAM-resurser med användare som inte har åtkomst till DAM | ✘ | ✔✔ | [Varumärkesportal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html) <br> [Resursresurs](assets-finder-editor.md) |
-| Spara mindre antal/volym resurser till DAM | ✔✔ | ✔ | [Överföring av webbgränssnitt](managing-assets-touch-ui.md) |
-| Spara fler resurser på DAM (3) | ✔✔ | ✘ | [Anpassat skript/verktyg för](managing-assets-touch-ui.md) <br> överföring av webbgränssnitt |
+| Dela ett mindre antal (1) DAM-resurser med den kreativa användaren | ✔ ✔ | ✔ |  |
+| Dela fler (2) DAM-resurser med den kreativa användaren | ✔ ✔ | ✘ | [Varumärkesportal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html) <br> [Resursresurs](assets-finder-editor.md) |
+| Dela DAM-resurser med användare som har åtkomst till DAM | ✔ ✔ | ✔ | [Länkdelning](link-sharing.md) |
+| Dela DAM-resurser med användare som inte har åtkomst till DAM | ✘ | ✔ ✔ | [Varumärkesportal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html) <br> [Resursresurs](assets-finder-editor.md) |
+| Spara mindre antal/volym resurser till DAM | ✔ ✔ | ✔ | [Överföring av webbgränssnitt](managing-assets-touch-ui.md) |
+| Spara fler resurser på DAM (3) | ✔ ✔ | ✘ | [Webbgränssnitt, ](managing-assets-touch-ui.md) <br> UploadAnpassat skript/verktyg |
 | Migrera ett stort antal resurser till DAM | ✘ | ✘ | [Migreringshandbok](assets-migration-guide.md) |
-| Öppna en resurs på skrivbordet snabbt | ✔✔ | ✘ |  |
-| Öppna och ändra resurser snabbt på datorn | ✔✔ | ✘ |  |
+| Öppna en resurs på skrivbordet snabbt | ✔ ✔ | ✘ |  |
+| Öppna och ändra resurser snabbt på datorn | ✔ ✔ | ✘ |  |
 
 Förklaring till symbolerna:
 
@@ -90,14 +90,14 @@ Ytterligare kommentarer:
 
 För att stödja användningsexemplen på resursfördelning bör andra lösningar beaktas:
 
-* [Varumärkesportalen](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html) för ett konfigurerbart SaaS-tillägg i AEM Assets för publicering av resurser.
-* Anpassade lösningar skapas baserat på kodbasen [Resursdelningskommentarer](https://adobe-marketing-cloud.github.io/asset-share-commons/) .
-* AEM [länkdelning](/help/assets/link-sharing.md) för att dela resurser för särskilda ändamål med hjälp av länkar.
-* [AEM Assets webbgränssnitt](/help/assets/managing-assets-touch-ui.md) med områden för externa parter som skyddas av AEM Access Control Setup och med nödvändiga IT-/nätverkskonfigurationsjusteringar, vilket ger dessa externa användare tillgång till AEM.
+* [Varumärkesportaler ](https://helpx.adobe.com/experience-manager/brand-portal/user-guide.html) för ett konfigurerbart SaaS-tillägg i AEM Assets för publicering av resurser.
+* Anpassade lösningar skapas baserat på kodbasen [Resursdelningskommandon](https://adobe-marketing-cloud.github.io/asset-share-commons/).
+* AEM [länkresurs](/help/assets/link-sharing.md) för att dela resurser ad hoc med hjälp av länkar.
+* [AEM Assets webbgränssnitt ](/help/assets/managing-assets-touch-ui.md) med områden för externa parter som skyddas av AEM Access Control-inställningar och nödvändiga IT-/nätverkskonfigurationsjusteringar, vilket ger dessa externa användare tillgång till AEM.
 
-## Viktiga begrepp och användningsområden {#key-concepts-and-use-cases}
+## Viktiga begrepp och användningsexempel {#key-concepts-and-use-cases}
 
-### Ordlista med vanliga termer {#glossary-of-common-terms}
+### Ordlista för vanliga termer {#glossary-of-common-terms}
 
 * **Pågående arbeten eller pågående designarbeten (WIP):** En fas i en resurs livscykel där den genomgår flera ändringar och oftast inte är redo att delas med större team.
 * **Designresurser:** Resurser som är klara att delas med ett större team eller som har valts ut/godkänts av designteamet för att delas med marknadsförings- eller affärsområdesteam.
@@ -109,11 +109,11 @@ För att stödja användningsexemplen på resursfördelning bör andra lösninga
 * **Designanvändare:** En kreatör som skapar digitalt material med Creative Cloud-program och -tjänster. I vissa fall är designanvändaren medlem i ett designteam och kan använda Creative Cloud, men skapar inte digitala resurser (som en designchef eller designteamschef).
 * **DAM-användare:** En typisk användare av ett DAM-system. Beroende på organisationen kan en DAM-användare vara en marknadsföringsanvändare eller en icke-marknadsföringsanvändare, till exempel en affärsområdesanvändare, bibliotekarie eller säljare.
 
-### Att tänka på när du använder AEM och Creative Cloud {#considerations-when-using-aem-and-creative-cloud-integration}
+### Att tänka på när du använder integrering med AEM och Creative Cloud {#considerations-when-using-aem-and-creative-cloud-integration}
 
-* Se [de effektivaste strategierna för skrivbordsappar](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html?lang=en#best-practices-to-prevent-troubles)
-* Se integrering med [Adobe Stock](aem-assets-adobe-stock.md)
-* Se [Adobe-resurslänk](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
+* Se [god praxis för skrivbordsprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html?lang=en#best-practices-to-prevent-troubles)
+* Se [Adobe Stock-integrering](aem-assets-adobe-stock.md)
+* Se [Länk till Adobe-resurs](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
 
 Detta är en kort sammanfattning av bästa praxis för integrering mellan Experience Manager och Creative Cloud. Läs resten av det här dokumentet för att få en mer detaljerad förståelse för dessa.
 
@@ -124,9 +124,9 @@ Detta är en kort sammanfattning av bästa praxis för integrering mellan Experi
 * **Förstå resursers livscykel:** Ta reda på hur resurser hanteras i organisationen av olika team
 * **Var försiktig med ofta sparade resurser:** Adobe Asset Link tar hand om det med PS, AI och ID. För andra program bör du inte utföra pågående arbete i mappade/delade mappar om du behöver alla ändringar i DAM
 
-### Tillgång till Adobe Stock-material från AEM Assets {#access-to-adobe-stock-assets-from-aem-assets}
+### Åtkomst till Adobe Stock-resurser från AEM Assets {#access-to-adobe-stock-assets-from-aem-assets}
 
-[Integreringen](/help/assets/aem-assets-adobe-stock.md) med AEM och Adobe Stock ger AEM möjlighet att söka, förhandsgranska, licensiera och spara resurser från Adobe Stock i AEM. Licensierade och sparade Adobe Stock-resurser har valt Stock-metadata som kan användas för att söka efter dem med extra filter.
+[AEM och Adobe Stock ](/help/assets/aem-assets-adobe-stock.md) integration ger AEM möjlighet att söka, förhandsgranska, licensiera och spara resurser från Adobe Stock i AEM. Licensierade och sparade Adobe Stock-resurser har valt Stock-metadata som kan användas för att söka efter dem med extra filter.
 
 Några viktiga punkter om den här integreringen:
 
@@ -141,11 +141,11 @@ Resurser från Adobe Stock som licensierats och sparats i AEM blir tillgängliga
 TBD: A condensed version of the below content is better placed in the Adobe DAM article.
 -->
 
-## Lagra resurser i ett resurshanteringssystem {#about-storing-assets-in-a-dam}
+## Lagra resurser i ett DAM {#about-storing-assets-in-a-dam}
 
 För att skapa ett effektivt arbetsflöde mellan kreatörer och marknadsförare/branschspecifika team (LOB) och välja de bästa supportfunktionerna är det viktigt att förstå när och varför resurser lagras i DAM.
 
-### Varför resurser lagras i DAM {#why-assets-are-stored-in-dam}
+### Varför resurser sparas i DAM {#why-assets-are-stored-in-dam}
 
 Genom att lagra resurser i DAM blir de enkelt tillgängliga och sökbara. Det ser till att resurserna kan utnyttjas av många användare i organisationen eller ekosystemet, bland annat partners, kunder och så vidare.
 
@@ -169,7 +169,7 @@ Vanligtvis lagras följande klassresurser i DAM:
 * Resurser som har valts ut i förväg av det kreativa teamet
 * Specifika resursformat som kan användas eller begäras av marknadsföring, beroende på ett specifikt kontrakt eller avtal (t.ex. JPG-filer som konverterats från RAW-filer, TIFF-filer/bilder från PSD-original)
 
-### När uppdateringar av resurser lagras i DAM {#when-updates-to-assets-are-stored-in-dam}
+### När resursuppdateringar lagras i DAM {#when-updates-to-assets-are-stored-in-dam}
 
 I regel ska endast uppdateringar av resurser som är relevanta för den bredare uppsättningen DAM-användare lagras i DAM. Det ser till att användare (marknadsföringsfunktioner och liknande funktioner) bara ser relevanta versioner på tidslinjen för DAM-resurser.
 
@@ -200,15 +200,15 @@ I så fall kan du utnyttja integrationen mellan AEM och Creative Cloud för att 
 
 Använd följande strategier för att ge tillgång till slutliga/godkända mediefiler:
 
-* Så här ger du åtkomst till ett stort antal resurser: Använd [AEM Assets Brand Portal](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html)eller kundens implementering av [Assets Share](assets-finder-editor.md) i AEM publiceringsinfrastruktur
+* Så här ger du åtkomst till ett stort antal resurser: Använd [AEM Assets varumärkesportal](https://helpx.adobe.com/experience-manager/brand-portal/user-guide.html), eller kundens implementering av [resursresurs](assets-finder-editor.md) i AEM publiceringsinfrastruktur
 
 * Så här ger du åtkomst till några resurser: AEM kan användas tillsammans med AEM Assets varumärkesportal eller Resursresurs. Observera att det finns vissa begränsningar för den här integreringen som beskrivs mer ingående i den här artikeln.
 
-### Användningsexempel {#use-cases}
+### Använd fall {#use-cases}
 
 Följande exempel beskriver olika typer av arbetsflöden mellan DAM och designerns skrivbord.
 
-#### Skapa ny design med resurser från DAM {#creating-new-designs-using-assets-from-dam}
+#### Skapa nya designer med resurser från DAM {#creating-new-designs-using-assets-from-dam}
 
 I följande diagram visas livscykeln för digitala resurser. Det visar hur kreativa användare och DAM-användare (marknadsförare, LOB-användare) utnyttjar befintliga resurser och använder dem för att skapa fler resurser och skicka dem för godkännande.
 
@@ -249,16 +249,16 @@ And 6.5 content will be ported after updating it for AEM desktop app 2.0 best pr
 And it will be updated for DA2.0 best practices after 6.5 repo is available for writers to edit content in.
 -->
 
-* **1:** Dela resursen från DAM till skrivbordet eller öppna den direkt på skrivbordet i det program du väljer (till exempel Adobe Photoshop). Du bör checka ut om du vill låsa filen.
+* **1:** Dela resursen från DAM till skrivbordet eller öppna den direkt på skrivbordet i det program du föredrar (t.ex. Adobe Photoshop). Du bör checka ut om du vill låsa filen.
 * **2:** Mindre uppdatering: Redigera filen och spara ändringarna.
 * Alternativt flöde till steg 2
 
-   * **S:** Huvuduppdatering: Om filen kräver en omfattande uppsättning ändringar bör den sparas regelbundet och kopieras till en Pågående arbete-mapp/ett Pågående arbete-område.
-   * **B:** Arbetet med filen i Pågående arbete-mapparna fortsätter. De sparade ändringarna synkroniseras inte till versionen i DAM
+   * **A:** Huvuduppdatering: Om filen kräver en omfattande uppsättning ändringar bör den sparas regelbundet och kopieras till en Pågående arbete-mapp/ett Pågående arbete-område.
+   * **B:** Arbetet med filen fortsätter i Pågående arbete-mapparna. De sparade ändringarna synkroniseras inte till versionen i DAM
    * **C:** När uppdateringarna är klara kopieras filen tillbaka eller sparas i den mappade mappen
 
 * **3:** Resursuppdateringar återspeglas i DAM. Checka in resursen för att låsa upp den.
-* **4:** Resursen ställs i produktion.
+* **4:** Resursen används i produktionen.
 
 Här följer några allmänna rekommendationer om hur du hanterar resurser under den här processen:
 
@@ -277,7 +277,7 @@ Observera att den här beskrivningen avser att överföra filer operativt (t.ex.
 
 Du kan utnyttja följande funktioner om du vill överföra resurser i grupp:
 
-* Om du vill överföra stora/hierarkiska mappar använder du AEM datorprogram, som har en funktion för [mappöverföring](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html#bulkupload) . Du kan också överföra hierarkiska mappstrukturer. Resurserna överförs i bakgrunden och är därför inte knutna till en webbläsarsession
+* Om du vill överföra stora/hierarkiska mappar använder du AEM skrivbordsapp, som innehåller funktionen [Mappöverföring](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html#bulkupload). Du kan också överföra hierarkiska mappstrukturer. Resurserna överförs i bakgrunden och är därför inte knutna till en webbläsarsession
 * Om du vill överföra några filer från en enda mapp drar du dem direkt från skrivbordet till webbgränssnittet eller använder alternativet Skapa i AEM Assets webbgränssnitt.
 
 >[!NOTE]
