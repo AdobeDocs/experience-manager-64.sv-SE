@@ -1,6 +1,6 @@
 ---
 title: Resursproxyutveckling
-description: 'En proxy är en AEM som använder proxyarbetare för att bearbeta jobb. Lär dig hur du konfigurerar en AEM proxy, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare. '
+description: 'En proxy är en AEM som använder proxyarbetare för att bearbeta jobb. Lär dig hur du konfigurerar en AEM, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare. '
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobe Experience Manager (AEM) Assets använder en proxy för att distribuera bearbetning för vissa åtgärder.
 
-En proxy är en specifik (och ibland separat) AEM instans som använder proxyarbetare som processorer som hanterar ett jobb och skapar ett resultat. En proxyarbetare kan användas för en mängd olika uppgifter. Om det är en AEM Assets-proxy kan detta användas för att läsa in resurser för återgivning inom AEM Assets. IDS- [proxyarbetaren](indesign.md) använder till exempel InDesign Server för att bearbeta filer som ska användas i AEM Assets.
+En proxy är en specifik (och ibland separat) AEM instans som använder proxyarbetare som processorer som hanterar ett jobb och skapar ett resultat. En proxyarbetare kan användas för en mängd olika uppgifter. Om det är en AEM Assets-proxy kan detta användas för att läsa in resurser för återgivning inom AEM Assets. Exempelvis använder IDS-proxyarbetaren [ett InDesign Server för att bearbeta filer som ska användas i AEM Assets.](indesign.md)
 
 När proxyn är en separat AEM blir inläsningen av AEM. Som standard kör AEM Assets resurshanteringsuppgifterna i samma JVM (externaliserat via Proxy) för att minska belastningen på AEM.
 
@@ -27,7 +27,7 @@ En proxy är tillgänglig via HTTP-servern när den är konfigurerad att accepte
 
 * `job`
 
-   **Krav**: parametern `jobevent` måste anges som en serialiserad värdekarta. Detta används för att skapa en `Event` för en jobbprocessor.
+   **Krav**: parametern  `jobevent` måste anges som en serialiserad värdekarta. Detta används för att skapa en `Event` för en jobbprocessor.
 
    **Resultat**: Lägger till ett nytt jobb. Om det lyckas returneras ett unikt jobb-ID.
 
@@ -38,7 +38,7 @@ curl -u admin:admin -F":operation=job" -F"someproperty=xxxxxxxxxxxx"
 
 * `result`
 
-   **Krav**: parametern `jobid` måste anges.
+   **Krav**: parametern  `jobid` måste anges.
 
    **Resultat**: Returnerar en JSON-representation av den resulterande noden som skapats av jobbprocessorn.
 
@@ -71,11 +71,11 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 
 ### Proxyarbetare {#proxy-worker}
 
-En proxyarbetare är en processor som hanterar ett jobb och skapar ett resultat. Arbetare finns i proxyinstansen och måste implementera [snedställande JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) för att identifieras som en proxyarbetare.
+En proxyarbetare är en processor som hanterar ett jobb och skapar ett resultat. Arbetare finns på proxyinstansen och måste implementera [Sing JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) för att identifieras som en proxyarbetare.
 
 >[!NOTE]
 >
->Arbetaren måste implementera [snedställningsjobbbearbetaren](https://sling.apache.org/site/eventing-and-jobs.html) för att kunna identifieras som en proxyarbetare.
+>Arbetaren måste implementera [sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) för att identifieras som en proxyarbetare.
 
 ### Klient-API {#client-api}
 
@@ -103,17 +103,17 @@ Här följer ett exempel på API-användning:
  proxyJobService.removeJob(jobId);
 ```
 
-### Cloud Service Configurations {#cloud-service-configurations}
+### Konfigurationer för Cloud Service {#cloud-service-configurations}
 
 >[!NOTE]
 >
 >Referensdokumentation för proxy-API:t finns under [`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html).
 
-Både proxy- och proxyarbetskonfigurationer är tillgängliga via molntjänster som är tillgängliga via AEM Assets **Tools** Console eller under `/etc/cloudservices/proxy`. Varje proxyarbetare förväntas lägga till en nod under `/etc/cloudservices/proxy` för arbetarspecifik konfigurationsinformation (till exempel `/etc/cloudservices/proxy/workername`).
+Både proxy- och proxyarbetarkonfigurationer är tillgängliga via molntjänster som tillgängliga från AEM Assets **Tools**-konsolen eller under `/etc/cloudservices/proxy`. Varje proxyarbetare förväntas lägga till en nod under `/etc/cloudservices/proxy` för arbetarspecifik konfigurationsinformation (till exempel `/etc/cloudservices/proxy/workername`).
 
 >[!NOTE]
 >
->Mer information finns i [konfiguration](indesign.md#configuring-the-proxy-worker-for-indesign-server) och konfiguration [av](../sites-developing/extending-cloud-config.md) Cloud Services för InDesign Server Proxy Worker.
+>Mer information finns i [Konfiguration av InDesign Server Proxy Worker](indesign.md#configuring-the-proxy-worker-for-indesign-server) och [Konfiguration av Cloud Services](../sites-developing/extending-cloud-config.md).
 
 Här följer ett exempel på API-användning:
 
@@ -132,7 +132,7 @@ Här följer ett exempel på API-användning:
 
 ### Utveckla en anpassad proxyarbetare {#developing-a-customized-proxy-worker}
 
-IDS- [proxyarbetaren](indesign.md) är ett exempel på en AEM Assets-proxyarbetare som redan finns tillgänglig för att lägga ut bearbetning av InDesign-resurser på entreprenad.
+[IDS-proxyarbetaren](indesign.md) är ett exempel på en AEM Assets-proxyarbetare som redan medföljer för att lägga ut bearbetning av InDesign-resurser på entreprenad.
 
 Du kan också utveckla och konfigurera din egen AEM Assets-proxyarbetare så att du kan skapa en specialarbetare som skickar ut och lägger ut dina AEM Assets-bearbetningsuppgifter på entreprenad.
 
@@ -160,7 +160,7 @@ Följande diagram och steg visar hur du fortsätter:
 
 1. Ett [delningsjobb](https://sling.apache.org/site/eventing-and-jobs.html) används, så du måste definiera ett jobbämne för ditt användningsfall.
 
-   Ett exempel finns `IDSJob.IDS_EXTENDSCRIPT_JOB` i IDS-proxyarbetaren.
+   Se till exempel `IDSJob.IDS_EXTENDSCRIPT_JOB` för IDS-proxyarbetaren.
 
 1. Det externa steget används för att utlösa händelsen och sedan vänta tills det är klart. detta görs genom att avfråga ID:t. Du måste utveckla ett eget steg för att implementera nya funktioner.
 
@@ -170,13 +170,13 @@ Följande diagram och steg visar hur du fortsätter:
 
 1. Implementera en jobbhanterare för ditt ämne. Hanteraren kräver utveckling så att den utför din specifika åtgärd och anses vara implementeringen av arbetaren.
 
-   Ett exempel finns `IDSJobProcessor.java` i IDS-proxyarbetaren.
+   Se till exempel `IDSJobProcessor.java` för IDS-proxyarbetaren.
 
-1. Använda `ProxyUtil.java` i dammråttor. På så sätt kan du skicka jobb till arbetare med dammproxyn.
+1. Använd `ProxyUtil.java` i dammkompositioner. På så sätt kan du skicka jobb till arbetare med dammproxyn.
 
 >[!NOTE]
 >
->Det som inte finns i AEM Assets proxyramverk är poolmekanismen.
+>Det som inte finns med i AEM Assets proxyramverk är poolmekanismen.
 >
 >Integreringen med InDesign ger åtkomst till en pool med indesign-servrar (IDSPool). Den här poolen är specifik för InDesign-integrering och ingår inte i AEM Assets proxyramverk.
 
