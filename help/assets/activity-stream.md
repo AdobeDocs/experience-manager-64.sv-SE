@@ -44,4 +44,4 @@ Tidslinjen visar aktivitetsströmmen för de åtgärder du utför på resurserna
 
 >[!NOTE]
 >
->The default log storage location for **Publish** and **Unpublish** tasks is `/var/audit/com.day.cq.replication/content`. For **Move** tasks, the default location is `/var/audit/com.day.cq.wcm.core.page`.
+>Standardplatsen för logglagring för **Publicera** och **Avpublicera**-åtgärder är `/var/audit/com.day.cq.replication/content`. För **Flytta**-åtgärder är standardplatsen `/var/audit/com.day.cq.wcm.core.page`.
