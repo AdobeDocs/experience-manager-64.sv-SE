@@ -1,6 +1,6 @@
 ---
 title: Markdown
-seo-title: Markdown
+seo-title: Markering
 description: När du redigerar innehållsfragmentet använder redigeraren markeringssyntax så att du enkelt kan skriva innehåll.
 seo-description: När du redigerar innehållsfragmentet använder redigeraren markeringssyntax så att du enkelt kan skriva innehåll.
 uuid: 12b185a5-3d87-4d7c-8d09-8cc2726009a8
@@ -22,9 +22,9 @@ ht-degree: 4%
 
 >[!CAUTION]
 >
->Vissa funktioner för innehållsfragment kräver att [AEM 6.4 Service Pack 2 (6.4.2.0) eller senare](/help/release-notes/sp-release-notes.md)används.
+>Vissa funktioner för innehållsfragment kräver [AEM 6.4 Service Pack 2 (6.4.2.0) eller senare](/help/release-notes/sp-release-notes.md).
 
-När du [redigerar](content-fragments-variations.md#authoring-your-content)innehållsfragment använder redigeraren *markeringssyntax* så att du enkelt kan skriva innehåll:
+När du [redigerar](content-fragments-variations.md#authoring-your-content) använder innehållsfragmentredigeraren syntaxen *markdown* så att du enkelt kan skriva innehåll:
 
 ![markeringsredigerare](/help/assets/assets/cfm-6420-08.png)
 
@@ -190,7 +190,7 @@ Kodblock används vanligtvis för att illustrera källkod. Du kan skapa kodblock
 
         `This is a code block.`
 
-## Omvända snedstreck {#backslash-escapes}
+## Omvänt snedstreck hoppar över {#backslash-escapes}
 
 Du kan använda omvänt snedstreck för att generera litterala tecken som har en speciell betydelse för formateringssyntaxen. Om du till exempel vill omsluta ett ord med literala asterisker (i stället för en HTML &lt;em>-tagg) kan du använda omvända snedstreck före asteriskerna, enligt följande:
 
