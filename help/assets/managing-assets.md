@@ -1,8 +1,8 @@
 ---
 title: Hantera Dynamic Media-resurser
 seo-title: Hantera Dynamic Media-resurser
-description: Lär dig hur du arbetar med dynamiska medieresurser
-seo-description: Lär dig hur du arbetar med dynamiska medieresurser
+description: Lär dig hur du arbetar med Dynamic Media resurser
+seo-description: Lär dig hur du arbetar med Dynamic Media resurser
 uuid: 9c7f9d4e-caab-434f-a1ae-eca16c883461
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -18,18 +18,18 @@ ht-degree: 12%
 ---
 
 
-# About managing Dynamic Media assets {#managing-assets}
+# Hantera Dynamic Media-resurser {#managing-assets}
 
-Hantera Dynamic Media-resurser - bilder, video och interaktiva resurser - efter att de har överförts - innefattar många uppgifter som att förhandsgranska, ladda ned eller publicera dem.
+Hantera Dynamic Media-resurser - bilder, video och interaktiva resurser - när de har överförts - innefattar många uppgifter som att förhandsgranska, ladda ned eller publicera dem.
 
 När du förhandsgranskar kan du även använda bildförinställningar (endast för bilder) eller visningsförinställningar (för video och bilder). Du kan inte använda båda för en resurs. Se [Använda visningsförinställningar](viewer-presets.md) och [Använda bildförinställningar](image-presets.md).
 
 Allmän information om hur du hanterar resurser finns i [Hantera resurser med Touch-gränssnittet](managing-assets-touch-ui.md).
 
-I följande avsnitt beskrivs vad du behöver göra för att hantera dynamiska medieresurser:
+Följande avsnitt beskriver vad du behöver göra för att hantera Dynamic Media-resurser:
 
 * [Bästa tillvägagångssätt för att optimera bildkvalitet](best-practices-for-optimizing-the-quality-of-your-images.md)
 * [Förhandsgranska Dynamic Media-resurser](previewing-assets.md)
-* [Publicera dynamiska medieresurser](publishing-dynamicmedia-assets.md)
+* [Publicera Dynamic Media Assets](publishing-dynamicmedia-assets.md)
 * [Arbeta med väljare](working-with-selectors.md)
 
