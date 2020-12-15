@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Fulltextsökning i GQL {#gql-full-text-search}
+# GQL fulltextsökning {#gql-full-text-search}
 
 Utforska fulltextsökningsfunktionen i GQL i AEM Assets. Använd det för att söka efter resurser baserat på specifika metadata, som titel, beskrivning och författarnamn.
 
@@ -21,14 +21,14 @@ Om du vill söka efter en resurs baserat på dess metadata, till exempel titel, 
 
 Om du till exempel vill söka efter resurser som har titeln &quot;Mål&quot; utför du följande steg:
 
-## Söka efter resurser {#searching-assets}
+## Söker resurser {#searching-assets}
 
-1. I verktygsfältet i användargränssnittet för Resurser klickar eller trycker du på **[!UICONTROL Search]** -ikonen för att visa rutan Sök.
+1. Klicka eller tryck på ikonen **[!UICONTROL Search]** i verktygsfältet i användargränssnittet för Resurser för att visa Omnissökrutan.
 
    ![](assets/do-not-localize/chlimage_1.png)
 
 1. Tryck på Retur med markören i rutan Sök.
-1. Klicka på eller tryck på ikonen GlobalNav för att visa **[!UICONTROL Filters]** panelen.
+1. Klicka på eller tryck på ikonen GlobalNav för att visa panelen **[!UICONTROL Filters]**.
 1. Ange värdet &quot;Target&quot; i rutan Omni Search. Om du vill begränsa sökningen till en viss mapp klickar eller trycker du på ikonen Bläddra i panelen Filter och väljer mappen. I det här fallet söks matchningen endast efter i mappen och i undermapparna under den.
 
    >[!NOTE]
@@ -37,7 +37,7 @@ Om du till exempel vill söka efter resurser som har titeln &quot;Mål&quot; utf
 
    ![gql_search](assets/gql_search.png)
 
-1. Tryck **[!UICONTROL Enter]**. AEM Assets användargränssnitt visar endast de resurser vars namn exakt matchar&quot;Target&quot;.
+1. Tryck på **[!UICONTROL Enter]**. AEM Assets användargränssnitt visar endast de resurser vars namn exakt matchar&quot;Target&quot;.
 
 Med fulltextsökningsfunktionen i GQL kan du söka efter resurser baserat på följande:
 
@@ -119,16 +119,16 @@ title:&quot;Meeting&quot;;
 
 Fulltextsökning stöder även operatorer som -, ^ och så vidare. Om du vill söka efter de här bokstäverna som stränglitteraler omger du sökuttrycket med citattecken. Använd till exempel &quot;Anteckningsbok - Skönhet&quot; i stället för Anteckningsbok - Skönhet.
 
-## Boosting Search {#boosting-search}
+## Startar sökning {#boosting-search}
 
 Du kan förbättra nyckelordens relevans för vissa resurser för att öka sökningen baserat på nyckelorden. Det innebär att de bilder som du befordrar särskilda nyckelord för visas högst upp i sökresultatet när du söker baserat på dessa nyckelord.
 
 1. Öppna egenskapssidan för resursen som du vill befordra ett nyckelord för i resursgränssnittet.
-1. Växla till **[!UICONTROL Advanced]** fliken och klicka/tryck **[!UICONTROL Add]** under **[!UICONTROL Elevate for search keywords]**.
+1. Växla till fliken **[!UICONTROL Advanced]** och klicka/tryck på **[!UICONTROL Add]** under **[!UICONTROL Elevate for search keywords]**.
 
    ![elevate_for_search](assets/elevate_for_search.png)
 
-1. I **[!UICONTROL Search Promote]** rutan anger du ett nyckelord som du vill öka sökningen efter bilden för och klickar/trycker sedan på **[!UICONTROL Add]**. Ange vid behov flera nyckelord på samma sätt.
+1. I rutan **[!UICONTROL Search Promote]** anger du ett nyckelord för vilket du vill öka sökningen efter bilden och klickar/trycker sedan på **[!UICONTROL Add]**. Ange vid behov flera nyckelord på samma sätt.
 
    ![add_search_word](assets/add_search_word.png)
 
