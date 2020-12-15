@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobe Experience Manager (AEM) Assets stöder flerspråkiga arbetsflöden för att översätta binära filer, metadata och taggar för digitala resurser till flera språkområden och för att hantera översatta resurser. Mer information finns i [Flerspråkiga resurser](multilingual-assets.md).
 
-För effektiv hantering av resurser, för att säkerställa att olika översatta versioner förblir synkroniserade, skapar du [språkkopior](preparing-assets-for-translation.md) av resurser innan du kör översättningsarbetsflöden.
+För effektiv hantering av resurser, för att säkerställa att olika översatta versioner förblir synkroniserade, skapar du [språkkopior](preparing-assets-for-translation.md) av resurserna innan du kör översättningsarbetsflöden.
 
 En språkkopia av en resurs eller en grupp av resurser är ett språkjämlikt (eller en version av resursen/resurserna på ett modersmål) med en liknande innehållshierarki.
 
@@ -32,18 +32,18 @@ Du kan också göra några konfigurationsändringar i ett par arbetsflöden och 
    * [Konfigurera arkiv för fildata](/help/sites-deploying/data-store-config.md)
    * [Konfigurera Amazon S3-datalagret](/help/sites-deploying/data-store-config.md)
 
-1. Inaktivera arbetsflödet för [DAM MetaData Writeback](/help/sites-administering/workflow-offloader.md#disable-offloading)
+1. Inaktivera arbetsflödet [DAM MetaData Writeback](/help/sites-administering/workflow-offloader.md#disable-offloading)
 
-   Som namnet antyder skriver arbetsflödet för *DAM-metadataåterställning* om metadata till den binära filen. Eftersom metadata ändras efter översättning, genereras en annan binär fil för en språkkopia när du skriver tillbaka den till den binära filen.
+   Som namnet antyder skriver arbetsflödet *DAM Metadata Writeback* om metadata till den binära filen. Eftersom metadata ändras efter översättning, genereras en annan binär fil för en språkkopia när du skriver tillbaka den till den binära filen.
 
    >[!NOTE]
    >
-   >Om du inaktiverar arbetsflödet *DAM MetaData Writeback* inaktiveras XMP metadata write-back för objektbinärfiler. Därför sparas inte längre framtida metadataändringar i resurserna. Utvärdera konsekvenserna innan du inaktiverar arbetsflödet.
+   >Om du inaktiverar arbetsflödet *DAM MetaData Writeback* inaktiveras skrivningen XMP metadata för objektbinärfiler. Därför sparas inte längre framtida metadataändringar i resurserna. Utvärdera konsekvenserna innan du inaktiverar arbetsflödet.
 
-1. Aktivera arbetsflödet *Ange senaste ändringsdatum* .
+1. Aktivera arbetsflödet *Ange senaste ändringsdatum*.
 
-   Arbetsflödet *DAM MetaData Writeback* konfigurerar det senast ändrade datumet för en resurs. Eftersom du inaktiverar det här arbetsflödet i steg 2 kan AEM Assets inte längre hålla det senaste ändrade datumet för mediefiler uppdaterat. Aktivera därför arbetsflödet *Ange senaste ändringsdatum* för att se till att senaste ändrade datum för resurser är uppdaterade. Resurser med inaktuella senast ändrade datum kan orsaka fel.
+   Arbetsflödet *DAM MetaData Writeback* konfigurerar det senaste ändringsdatumet för en resurs. Eftersom du inaktiverar det här arbetsflödet i steg 2 kan AEM Assets inte längre hålla det senaste ändrade datumet för mediefiler uppdaterat. Aktivera därför arbetsflödet *Ange senaste ändringsdatum* för att säkerställa att de senaste ändrade datumen för resurser är uppdaterade. Resurser med inaktuella senast ändrade datum kan orsaka fel.
 
-1. [Konfigurera översättningsintegreringsramverket](/help/sites-administering/tc-tic.md) så att översättningen av resursbinärfiler avbryts. Avmarkera alternativet &quot;Översätt resurser&quot; på fliken Resurser för att stoppa översättningen av resurbinärfiler.
-1. Översätt metadata/taggar för resurser med hjälp av [flerspråkiga resursarbetsflöden](multilingual-assets.md).
+1. [Konfigurera ](/help/sites-administering/tc-tic.md) ramverket för översättningsintegrering så att översättningen av resursbinärfiler avbryts. Avmarkera alternativet &quot;Översätt resurser&quot; på fliken Resurser för att stoppa översättningen av resurbinärfiler.
+1. Översätt metadata/taggar för resurser med [arbetsflöden för flerspråkiga resurser](multilingual-assets.md).
 
