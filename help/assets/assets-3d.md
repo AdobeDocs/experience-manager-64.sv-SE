@@ -22,19 +22,19 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->AEM 3D i AEM 6.4 stöds inte längre. Adobe rekommenderar att du använder funktionen 3D-resurser i [AEM som Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html) eller [AEM 6.5.3 eller senare.](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html)
+>AEM 3D i AEM 6.4 stöds inte längre. Adobe rekommenderar att du använder funktionen 3D-resurser i [AEM som en Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html) eller [AEM 6.5.3 eller senare.](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html)
 
 Med AEM 3D (Adobe Experience Manager 3D) kan du överföra, hantera, visa och återge 3D-innehåll. Stöd för visning och återgivning är optimerat för enskilda objekt.
 
-Se även [AEM 3D versionsinformation](/help/release-notes/aem3d-release-notes.md).
+Se även [AEM 3D-versionsinformation](/help/release-notes/aem3d-release-notes.md).
 
 Se även [Installera och konfigurera AEM 3D](install-config-3d.md).
 
-## Om modeller och scener i AEM 3D {#about-models-and-stages-in-aem-d}
+## Om modeller och faser i AEM 3D {#about-models-and-stages-in-aem-d}
 
 Med AEM 3D kan du visa och återge statiska, fristående 3D-modeller av hög kvalitet i fördefinierade miljöer som kallas för scener. Scenen innehåller i princip&quot;ljus&quot; för 3D-scenen och inställningarna för återgivning i ett program som Autodesk® Maya® eller Autodesk 3ds Max®. Dessutom kan scenen även innehålla fördefinierade kameror, bakgrunder och geometri för markplan.
 
-Överförda 3D-filer som innehåller ljus antas vara en scen. Du kan återställa sådana resurser till enkla 3D-objekt genom att öppna resursen på sidan med resursinformation. Tryck **[!UICONTROL View Properties]** och sedan på **[!UICONTROL Basic]** fliken. Välj **[!UICONTROL 3D object]** i listrutan Resursklass under rubriken Metadata.
+Överförda 3D-filer som innehåller ljus antas vara en scen. Du kan återställa sådana resurser till enkla 3D-objekt genom att öppna resursen på sidan med resursinformation. Tryck på **[!UICONTROL View Properties]** och sedan på fliken **[!UICONTROL Basic]**. Välj **[!UICONTROL 3D object]** i listrutan Resursklass under rubriken Metadata.
 
 Tänk på följande när du skapar 3D-modeller för användning i AEM 3D:
 
@@ -49,21 +49,21 @@ Tänk på följande när du skapar 3D-modeller för användning i AEM 3D:
 
 ## Filer som stöds i AEM 3D {#supported-files-in-aem-d}
 
-En vanlig 3D-resurs har en primär modellfil och inga eller fler refererade filer. Refererade filer innehåller till exempel texturscheman eller **IBL-bilder (bildbaserad ljussättning)** .
+En vanlig 3D-resurs har en primär modellfil och inga eller fler refererade filer. Refererade filer innehåller till exempel texturscheman eller **IBL-bilder (bildbaserad ljussättning)**-bilder.
 
 ### Om den primära 3D-modellfilen {#about-the-primary-d-model-file}
 
 Den primära 3D-modellfilen innehåller den faktiska 3D-modellgeometrin och definitioner för (standard) material som används på modellytorna. AEM 3D har stöd för följande primära 3D-modellfilformat:
 
-* Wavefront OBJ, filformat (`.obj`)
+* Wavefront OBJ-filformat (`.obj`)
 
    OBJ-formatet kräver en eller flera separata, externa MTL-filer (materialmallsbibliotek) (`.mtl`).
 
-* Autodesk FBX (Filmbox), filformat (`.fbx`)
+* Autodesk FBX-filformat (Filmbox) (`.fbx`)
 
    Autodesk 3D-filutbytesformat; både binära format och ASCII-format.
 
-   När du skapar FBX-filer i tredjepartsprogram rekommenderar Adobe följande konfigurationsinställningar (se tabellen nedan). Dessa inställningar kan hjälpa dig att uppnå bästa resultat för 3D-filer som du tänker använda i AEM. Alternativnamnen hämtas från **[!UICONTROL Autodesk Maya FBX Export Options]** dialogrutan.
+   När du skapar FBX-filer i tredjepartsprogram rekommenderar Adobe följande konfigurationsinställningar (se tabellen nedan). Dessa inställningar kan hjälpa dig att uppnå bästa resultat för 3D-filer som du tänker använda i AEM. Alternativnamnen hämtas från dialogrutan **[!UICONTROL Autodesk Maya FBX Export Options]**.
 
 <table> 
  <tbody> 
@@ -76,7 +76,7 @@ Den primära 3D-modellfilen innehåller den faktiska 3D-modellgeometrin och defi
    <td><p>Avmarkera.</p> <p>AEM 3D stöder för närvarande inte externa referenser.</p> </td> 
   </tr> 
   <tr> 
-   <td>Jämna nät<br /> </td> 
+   <td>Utjämnat nät<br /> </td> 
    <td>Välj.</td> 
   </tr> 
   <tr> 
@@ -89,11 +89,11 @@ Den primära 3D-modellfilen innehåller den faktiska 3D-modellgeometrin och defi
   </tr> 
   <tr> 
    <td>Kameror</td> 
-   <td><p>Välj för <strong>3D-stadier</strong>.</p> <p>Avmarkera för 3D-modeller.</p> </td> 
+   <td><p>Välj för <strong>3D-faser</strong>.</p> <p>Avmarkera för 3D-modeller.</p> </td> 
   </tr> 
   <tr> 
    <td>Ljus</td> 
-   <td><p>Välj för <strong>3D-stadier</strong>.</p> <p>Avmarkera för <strong>3D-modeller</strong>.</p> </td> 
+   <td><p>Välj för <strong>3D-faser</strong>.</p> <p>Avmarkera för <strong>3D-modeller</strong>.</p> </td> 
   </tr> 
   <tr> 
    <td>Enheter - automatiska</td> 
@@ -105,11 +105,11 @@ Den primära 3D-modellfilen innehåller den faktiska 3D-modellgeometrin och defi
   </tr> 
   <tr> 
    <td>Bädda in media</td> 
-   <td>Båda alternativen stöds. Om du markerar Inbäddad extraheras AEM 3D-inbäddade medier till en intilliggande mapp som har samma namn som modellfilen som har <code>.fbm</code> lagts till i den.</td> 
+   <td>Båda alternativen stöds. Om du markerar Inbäddad extraheras AEM 3D-inbäddade media till en intilliggande mapp som har samma namn som modellfilen med <code>.fbm</code> tillagt.</td> 
   </tr> 
   <tr> 
    <td>FBX-filformat - Typ</td> 
-   <td>Både <strong>Binary </strong>och <strong>ASCII </strong>stöds.</td> 
+   <td>Både <strong>Binär </strong>eller <strong>ASCII </strong>stöds.</td> 
   </tr> 
   <tr> 
    <td>FBX-filformat - version</td> 
@@ -122,7 +122,7 @@ Följande ytterligare filformat stöds om Autodesk Maya är installerad och konf
 
 * Autodesk Maya
 
-   Både ASCII- `.ma` och binära `.mb` format.
+   Både ASCII `.ma`- och binära `.mb`-format.
 
 * `Jupiter Tesselation (ISO 14306-1).jt`.
 
@@ -142,7 +142,7 @@ Materialdefinitioner i 3D-modellfiler kan innehålla referenser till externa bil
 
 Material i den primära 3D-modellfilen kan referera till andra typer av kartor som ignoreras av AEM 3D.
 
-### IBL-bilder (bildbaserad belysning) {#ibl-image-based-lighting-images}
+### IBL-bilder (bildbaserad ljussättning) {#ibl-image-based-lighting-images}
 
 En 3D-modellfil som definierar en scen kan referera till en enda IBL-miljöbild. För närvarande stöder AEM 3D endast 32-bitars TIFF-bilder i latitud-/longitudformat för diffus IBL och för speglingar. För sfärisk scenbakgrund stöds även 8-bitars RGB-bilder.
 
@@ -165,5 +165,5 @@ Se [Återge 3D-resurser](rendering-3d-assets.md).
 
 ## Namnge material i en primär 3D-modellfil {#naming-materials-in-a-primary-d-model-file}
 
-En *yta* definieras som ytan i en 3D-modell som täcks av samma material. Det här materialet innehåller också ytans namn. Därför rekommenderar Adobe att du ger materialet i den primära 3D-modellfilen ett namn som passar dig. Om du t.ex. använder särskilda namn som &quot;Kropp&quot;, &quot;Fönster&quot;, &quot;Däck&quot; eller &quot;Rims&quot; bör du använda vaga namn som &quot;Rött&quot;, &quot;Glas&quot;, &quot;Gummi&quot; eller &quot;Aluminium&quot;.
+En *yta* definieras som ytan på en 3D-modell som täcks av samma material. Det här materialet innehåller också ytans namn. Därför rekommenderar Adobe att du ger materialet i den primära 3D-modellfilen ett namn som passar dig. Om du t.ex. använder särskilda namn som &quot;Kropp&quot;, &quot;Fönster&quot;, &quot;Däck&quot; eller &quot;Rims&quot; bör du använda vaga namn som &quot;Rött&quot;, &quot;Glas&quot;, &quot;Gummi&quot; eller &quot;Aluminium&quot;.
 
