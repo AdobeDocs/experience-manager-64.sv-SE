@@ -22,9 +22,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Det AEM 3D-funktionspaketet i AEM 6.4 stöds inte längre. Adobe rekommenderar att du använder funktionen 3D-resurser i [AEM som Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html) eller [AEM 6.5.3 eller senare.](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html) när du arbetar med Adobe Dimension-resurser.
+>Det AEM 3D-funktionspaketet i AEM 6.4 stöds inte längre. Adobe rekommenderar att du använder funktionen 3D-resurser i [AEM som en Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html) eller [AEM 6.5.3 eller senare.](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html) när du arbetar med Adobe Dimension-resurser.
 
-Det AEM 3D-funktionspaketet har stöd för Adobe Dimension-resurser (filer`.dn` ) i AEM Assets, AEM Sites och AEM Screens.
+Det AEM 3D-funktionspaketet har stöd för Adobe Dimension-resurser (`.dn`-filer) i AEM Assets, AEM Sites och AEM Screens.
 
 Ett nytt 3D-visningsprogram som baseras på den öppna glTF-standarden har funktioner för förhandsgranskning och visning av webbplatser och skärmar för Adobe Dimension-resurser.
 
@@ -32,10 +32,10 @@ Ett nytt 3D-visningsprogram som baseras på den öppna glTF-standarden har funkt
 
 När en Dimension överförs till AEM vidarebefordras en kopia av filen till en molnbaserad tjänst som är Adobe-hanterad och värd i Amazon AWS. Den här tjänsten konverterar från det Adobe-ägda filformatet för Dimension till det öppna standardformatet glTF. Den konverterade 3D-modellen paketeras som en binär glTF (`.glb`). AEM lagrar den konverterade modellen med den primära Dimensionen som en återgivning.
 
-Du kan konfigurera konverteringsformatet på något av två sätt (mer information finns i `.glb` Installera och konfigurera AEM 3D [](install-config-3d.md) ):
+Du kan konfigurera konverteringsformatet `.glb` på något av två sätt (se [Installera och konfigurera AEM 3D](install-config-3d.md) för instruktioner):
 
-* Inkludera Adobe-specifika tillägg för att maximera den visuella kvaliteten när du använder visningsprogrammet Adobe glTF för att visa Dimension i AEM Assets, AEM Sites eller AEM Screens. Detta gör att `.glb` återgivningarna inte är kompatibla med de flesta tredjepartsprogram.
-* Uteslut tillägg som är specifika för Adobe för att få renderingen att bli kompatibel med program från tredje part `.glb` . Detta begränsar den visuella kvaliteten vid visning i AEM Assets, AEM Sites eller AEM Screens (t.ex. ingen IBL-belysning) för att simulera kvaliteten i vanliga tredjepartsprogram.
+* Inkludera Adobe-specifika tillägg för att maximera den visuella kvaliteten när du använder visningsprogrammet Adobe glTF för att visa Dimension i AEM Assets, AEM Sites eller AEM Screens. Detta gör att `.glb`-återgivningarna inte är kompatibla med de flesta tredjepartsprogram.
+* Exkludera Adobe-specifika tillägg för att uppnå kompatibilitet mellan `.glb`-renderingen och tredjepartsprogram. Detta begränsar den visuella kvaliteten vid visning i AEM Assets, AEM Sites eller AEM Screens (t.ex. ingen IBL-belysning) för att simulera kvaliteten i vanliga tredjepartsprogram.
 
 Överföringen av Dimension-/glTF-filer till eller från Amazon AWS och deras tillfälliga lagring i AWS är helt skyddad. Dessa filer finns kvar i Amazon AWS så länge som möjligt. vanligtvis inte mer än några minuter under normala operationer.
 
@@ -53,7 +53,7 @@ Observera att glTF-visningsprogrammets användargränssnitt skiljer sig något f
 
 #### Se även följande: {#see-also-the-following}
 
-* [AEM 3D-versionsinformation](/help/release-notes/aem3d-release-notes.md) för begränsningar och begränsningar som gäller för Dn-resurser och glTF-visningsprogrammet.
-* [Arbeta med 3D-platskomponenten](using-the-3d-sites-component.md) för komponentegenskaper som är specifika för Adobe Dimension-resurser.
-* [Installera och konfigurera AEM 3D](install-config-3d.md) för att konfigurera den molnbaserade konverteringstjänsten.
+* [AEM 3D-](/help/release-notes/aem3d-release-notes.md) versionsinformation om begränsningar och begränsningar som gäller för Dn-resurser och glTF-visningsprogrammet.
+* [Arbeta med 3D-platskomponenten ](using-the-3d-sites-component.md) för komponentegenskaper som är specifika för Adobe Dimension-resurser.
+* [Installera och konfigurera AEM 3](install-config-3d.md) Dför att konfigurera den molnbaserade konverteringstjänsten.
 
