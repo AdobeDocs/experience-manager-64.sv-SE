@@ -59,7 +59,7 @@ I följande exempelkod visas hur en webbsida som innehåller både sidspårnings
 </html>
 ```
 
-## Lägga till sidspårningskod {#adding-page-tracker-code}
+## Lägger till sidspårningskod {#adding-page-tracker-code}
 
 Du lägger till sidspårningskoden i sidhuvudsavsnittet i webbplatskoden. I följande kodutdrag visas den sidspårningskod som finns på en exempelwebbsida:
 
@@ -78,7 +78,7 @@ Du lägger till sidspårningskoden i sidhuvudsavsnittet i webbplatskoden. I föl
  </head>
 ```
 
-## Lägga till inbäddningskod {#adding-embed-code}
+## Lägger till inbäddad kod {#adding-embed-code}
 
 Du lägger till inbäddningskoden i webbplatskoden. I följande kodfragment visas den inbäddade koden som finns på en exempelwebbsida:
 
