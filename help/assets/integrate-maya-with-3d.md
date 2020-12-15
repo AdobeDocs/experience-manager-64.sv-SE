@@ -24,7 +24,7 @@ ht-degree: 0%
 >
 >Den här aktiviteten är valfri och gäller endast Windows.
 
-Du kan även integrera AEM 3D med Autodesk® Maya® för att aktivera stöd för egna Maya-filer (`.MA` och `.MB`) och för att du ska kunna rendera 3D-resurser i AEM med alla tillgängliga Maya-renderare.
+Du kan även integrera AEM 3D med Autodesk® Maya® för att aktivera stöd för egna Maya-filer (`.MA` och `.MB`) och för att du ska kunna återge 3D-resurser i AEM med alla tillgängliga Maya-renderare.
 
 *Den här integreringen gäller endast* Windows.
 
@@ -42,7 +42,7 @@ Se även [Integrera AEM 3D med AutoDesk 3ds Max](integrating-aem-3d-with-autodes
 
    >[!NOTE]
    >
-   >AEM använder bara kommandoradsåtergivningsverktyget Maya (`render.exe`). En enda Maya-nätverkslicens tillåter upp till fem servrar att bearbeta eller återge Maya-innehåll samtidigt.
+   >AEM använder bara kommandoradsåtergivning för Maya (`render.exe`). En enda Maya-nätverkslicens tillåter upp till fem servrar att bearbeta eller återge Maya-innehåll samtidigt.
 
 1. Aktivera Autodesk FBX® Plug-In på Maya.
 1. Installera plugin-programmet för MentalRay-rendering eller någon annan renderare.
@@ -51,50 +51,50 @@ Se även [Integrera AEM 3D med AutoDesk 3ds Max](integrating-aem-3d-with-autodes
 
 1. Lägg till sökvägen till den körbara mappen Maya i systemvariabeln Windows PATH.
 
-   I Windows Server 2012 trycker du till exempel på **[!UICONTROL Start]>[!UICONTROL Control Panel]>[!UICONTROL System and Security]>[!UICONTROL System]>[!UICONTROL Advanced System Settings]>[!UICONTROL Environment Variables]**. Lägg till den fullständiga sökvägen till `Maya2016\bin` mappen i `Path`systemvariabeln.
+   I Windows Server 2012 trycker du till exempel på **[!UICONTROL Start]> [!UICONTROL Control Panel] > [!UICONTROL System and Security] > [!UICONTROL System] > [!UICONTROL Advanced System Settings] >[!UICONTROL Environment Variables]**. Lägg till den fullständiga sökvägen till mappen `Maya2016\bin` i systemvariabeln `Path`.
 
    ![chlimage_1-53](assets/chlimage_1-53.png)
 
-1. Om du vill aktivera Maya för förtäring och återgivning öppnar du **[!UICONTROL CRXDE Lite]** och navigerar till `/libs/settings/dam/v3D/assetTypes/maya` och anger **[!UICONTROL Enabled]** egenskapen till `true`.
+1. Om du vill aktivera Maya för förtäring och återgivning öppnar du **[!UICONTROL CRXDE Lite]** och navigerar till `/libs/settings/dam/v3D/assetTypes/maya` och ställer in egenskapen **[!UICONTROL Enabled]** på `true`.
 
    ![image2018-6-22_12-42-7](assets/image2018-6-22_12-42-7.png)
 
-1. Om du vill aktivera filformatet JT (Siemens PLM Open CAD) går du till `/libs/settings/dam/v3D/assetTypes/jt` och anger **[!UICONTROL Enabled]** egenskapen till `true`.
+1. Om du vill aktivera filformatet JT (Siemens PLM Open CAD) går du till `/libs/settings/dam/v3D/assetTypes/jt` och anger egenskapen **[!UICONTROL Enabled]** till `true`.
 1. I AEM aktiverar du Maya som renderare. Börja med att navigera till **[!UICONTROL Tools > General > CRXDE Lite]**.
-1. Gå till följande på **[!UICONTROL CRXDE Lite]** sidan i den vänstra panelen:
+1. Gå till följande på sidan **[!UICONTROL CRXDE Lite]** i den vänstra panelen:
 
    `/libs/settings/dam/v3D/renderers/maya`
 
    ![image2018-6-22_12-46-18](assets/image2018-6-22_12-46-18.png)
 
-1. Ställ in **[!UICONTROL Enabled]** egenskapen på `true`.
+1. Ställ in egenskapen **[!UICONTROL Enabled]** på `true`.
 
-1. Near the upper-left corner of the **[!UICONTROL CRXDE Lite]** page, tap **[!UICONTROL Save All]**.
+1. I det övre vänstra hörnet av sidan **[!UICONTROL CRXDE Lite]** trycker du på **[!UICONTROL Save All]**.
 
    Maya är nu aktiverat som renderare.
 
 ## Testa integrationen av AEM 3D med Autodesk Maya {#testing-the-integration-of-aem-d-with-autodesk-maya}
 
-1. Öppna AEM Assets och överför sedan `.MA` filerna som finns i `sample-3D-content/models` till `test3d` mappen.
+1. Öppna AEM Assets och överför sedan `.MA`-filerna som finns i `sample-3D-content/models` till mappen `test3d`.
 
-   Observera att du `sample-3D-content.zip` laddat ned tidigare för att validera de grundläggande 3D-funktionerna.
+   Observera att `sample-3D-content.zip` tidigare hämtades för validering av de grundläggande 3D-funktionerna.
 
-1. Återgå till **[!UICONTROL Card]** vyn och observera de meddelandebanners som visas på de överförda resurserna.
+1. Gå tillbaka till vyn **[!UICONTROL Card]** och observera de meddelandebanners som visas på de överförda resurserna.
 
-   Banderollen för konverteringsformat visas medan Maya konverterar det ursprungliga `.MA` formatet till `.FBX`.
+   Banderollen för konverteringsformat visas när Maya konverterar det ursprungliga `.MA`-formatet till `.FBX`.
 
-1. När all bearbetning är klar öppnar du `logo-sphere.ma` resursen och väljer `stage-helipad.ma` scenen.
+1. När all bearbetning är klar öppnar du `logo-sphere.ma`-resursen och väljer scenen `stage-helipad.ma`.
 
    Förhandsgranskningen fungerar på samma sätt som med `logo_sphere.fbx` och `stage-helipad.fbx`.
 
-1. I närheten av sidans övre vänstra hörn trycker eller klickar du på listrutan och väljer sedan **[!UICONTROL CRender]**.
+1. I närheten av sidans övre vänstra hörn trycker eller klickar du på listrutan och väljer **[!UICONTROL CRender]**.
 
    ![chlimage_1-54](assets/chlimage_1-54.png)
 
-1. I listrutan väljer du **[!UICONTROL Renderer]** och trycker sedan på **[!UICONTROL Autodesk Maya]****[!UICONTROL Start Render]**.
-1. I närheten av sidans övre högra hörn: tryck eller klicka för **[!UICONTROL Close]** att gå tillbaka till **[!UICONTROL Card]** vyn.
+1. Välj **[!UICONTROL Autodesk Maya]** i listrutan **[!UICONTROL Renderer]** och tryck sedan på **[!UICONTROL Start Render]**.
+1. I närheten av sidans övre högra hörn trycker eller klickar du på **[!UICONTROL Close]** för att gå tillbaka till vyn **[!UICONTROL Card]**.
 
-   Lägg märke till meddelandebanderollen på den bildresurs som återges (`logo-sphere`om inte ett annat bildnamn har angetts). En förloppsindikator på banderollen visar återgivningsförloppet.
+   Lägg märke till meddelandebanderollen på den bildresurs som återges (`logo-sphere`, om inte ett annat bildnamn angavs). En förloppsindikator på banderollen visar återgivningsförloppet.
 
    >[!NOTE]
    >
@@ -102,7 +102,7 @@ Se även [Integrera AEM 3D med AutoDesk 3ds Max](integrating-aem-3d-with-autodes
 
 1. Öppna den återgivna bildresursen när återgivningen är klar.
 
-   Kontrollera att den återgivna bilden på ett rimligt sätt matchar den bild som du tittade på när du klickade **[!UICONTROL Render Now]**.
+   Kontrollera att den återgivna bilden stämmer överens med den bild du visade när du klickade på **[!UICONTROL Render Now]**.
 
 ## Aktivera ytterligare format som stöds av Maya {#enabling-additional-formats-supported-by-maya}
 
@@ -114,16 +114,16 @@ Se [Dataimportformat som stöds | Maya](https://knowledge.autodesk.com/support/m
 
 **Om du vill aktivera ytterligare format som stöds av AEM**:
 
-1. Navigera **[!UICONTROL CRXDE Lite]** till `/libs/settings/dam/v3D/assetTypes`.
-1. Gör en kopia av **[!UICONTROL jt]** noden. Högerklicka på **[!UICONTROL jt]** noden och välj **[!UICONTROL Copy]**. Högerklicka sedan på **[!UICONTROL assetTypes]** mappen och välj **[!UICONTROL Paste]**. Detta bör skapa en ny nod `/apps/cq-scene7-v3D/config/assetTypes/Copy of jt`.
+1. Navigera till `/libs/settings/dam/v3D/assetTypes` med **[!UICONTROL CRXDE Lite]**.
+1. Skapa en kopia av noden **[!UICONTROL jt]**. Högerklicka på noden **[!UICONTROL jt]** och välj **[!UICONTROL Copy]**. Högerklicka sedan på mappen **[!UICONTROL assetTypes]** och välj **[!UICONTROL Paste]**. Detta bör skapa en ny nod `/apps/cq-scene7-v3D/config/assetTypes/Copy of jt`.
 1. Byt namn på den nya noden så att den får ett unikt namn som representerar den filtyp som ska läggas till. Filsuffixet kan användas eller någon annan unik identifierare.
 
-1. Ställ in den nya nodens **[!UICONTROL Enabled]** egenskap på `true`.
+1. Ange den nya nodens **[!UICONTROL Enabled]**-egenskap till `true`.
 
-1. Ställ in den nya anteckningens **[!UICONTROL Extension]** egenskap på filsuffixet/filtillägget för det format som läggs till.
-1. Ange ett lämpligt värde för **[!UICONTROL MimeType]** egenskapen. `application/x-` följt av värdet för **[!UICONTROL Extension]** egenskapen bör fungera för de flesta filtyper.
-1. Kontrollera att **[!UICONTROL Conversion]** egenskapen är inställd på `fbx` och **[!UICONTROL IngestRegime]** på `Maya`.
-1. Klicka **[!UICONTROL Save All]** nära sidans övre vänstra hörn.
+1. Ange egenskapen **[!UICONTROL Extension]** för den nya anteckningen till filsuffixet/filtillägget för det format som läggs till.
+1. Ange ett lämpligt värde för egenskapen **[!UICONTROL MimeType]**. `application/x-` följt av värdet för  **[!UICONTROL Extension]** egenskapen bör fungera för de flesta filtyper.
+1. Kontrollera att egenskapen **[!UICONTROL Conversion]** är inställd på `fbx` och **[!UICONTROL IngestRegime]** på `Maya`.
+1. Klicka på **[!UICONTROL Save All]** uppe till vänster på sidan.
 
 Följande skärmbild visar ett tillagt filformat med COLLADA DAE som exempel:
 
