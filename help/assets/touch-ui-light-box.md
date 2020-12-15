@@ -22,22 +22,22 @@ Om du är en Adobe Experience Manager-användare (AEM) skapas ljuslådan automat
 ## Lägga till resurser i ljuslådan {#adding-assets-to-lightbox}
 
 1. I Assets-användargränssnittet väljer du de resurser som du vill lägga till i ljuslådan.
-1. Dra resurserna till **[!UICONTROL Drop in Lightbox]** zonen. Släpp när Dropzone blir aktivt och etiketten ändras till **[!UICONTROL Drop to Add]**.
+1. Dra resurserna till zonen **[!UICONTROL Drop in Lightbox]**. Släpp när Dropzone blir aktivt och etiketten ändras till **[!UICONTROL Drop to Add]**.
 
    ![add_to_lightbox](assets/add_to_lightbox.png)
 
-1. Tryck/klicka på dialogrutan **[!UICONTROL Add]** och stäng den sedan för att slutföra processen. De valda resurserna läggs till i ljuslådan.
+1. Tryck/klicka på **[!UICONTROL Add]** i dialogrutan och stäng den sedan för att slutföra processen. De valda resurserna läggs till i ljuslådan.
 1. Om du vill visa ljuslådan går du till konsolen Samlingar.
-1. Tryck/klicka **[!UICONTROL Lightbox]** för att visa resurserna i den.
+1. Tryck/klicka på **[!UICONTROL Lightbox]** för att visa resurserna i den.
 
    >[!NOTE]
    >
    >Även om ljuslådan liknar en samling kan du inte utföra alla åtgärder som du normalt utför i samlingar. Du kan till exempel inte ta bort, dela eller visa inställningar för en ljuslåda. Dessutom kan du inte lägga till den i andra samlingar. Du kan dock redigera resurserna i en ljuslåda.
 
-## Ta bort resurser från ljuslådan {#removing-assets-from-lightbox}
+## Tar bort resurser från ljuslådan {#removing-assets-from-lightbox}
 
 1. Gå till konsolen Samlingar, tryck/klicka på Ljus för att visa dess resurser.
 1. Markera de resurser som du vill ta bort.
-1. From the toolbar, tap/click **[!UICONTROL Remove]**.
-1. Tryck/klicka i dialogrutan för **[!UICONTROL Remove]** att bekräfta borttagningsåtgärden. Resurserna tas bort från ljuslådan.
+1. Tryck/klicka på **[!UICONTROL Remove]** i verktygsfältet.
+1. Tryck/klicka på **[!UICONTROL Remove]** i dialogrutan för att bekräfta borttagningsåtgärden. Resurserna tas bort från ljuslådan.
 
