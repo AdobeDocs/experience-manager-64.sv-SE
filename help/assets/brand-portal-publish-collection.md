@@ -19,22 +19,22 @@ Om du gör senare ändringar i den ursprungliga samlingen i AEM Assets återspeg
 
 >[!NOTE]
 >
->Det går inte att publicera innehållsfragment på varumärkesportalen. Om du väljer innehållsfragment på AEM Author är åtgärden **[Publicera på varumärkesportalen]** därför inte tillgänglig.
+>Det går inte att publicera innehållsfragment på varumärkesportalen. Om du väljer innehållsfragment på AEM Author är därför inte åtgärden **[Publicera på varumärkesportalen]** tillgänglig.
 >
 >Om samlingar som innehåller innehållsfragment publiceras från AEM Author till Brand Portal replikeras allt innehåll i mappen, förutom innehållsfragment, till gränssnittet Brand Portal.
 
 ## Publicera en samling på varumärkesportalen {#publish-a-collection-to-brand-portal}
 
-1. I AEM Assets-gränssnittet: tryck/klicka på AEM logotyp. Gå sedan till **[!UICONTROL Assets > Collections]** från **[!UICONTROL Navigation]** sidan.
+1. I AEM Assets-gränssnittet: tryck/klicka på AEM logotyp. Gå sedan till **[!UICONTROL Assets > Collections]** från sidan **[!UICONTROL Navigation]**.
 2. På Samlingar-konsolen väljer du den samling du vill publicera på varumärkesportalen.
 
    ![select_collection](assets/select_collection.png)
 
-3. From the toolbar, tap/click **[!UICONTROL Publish to Brand Portal]**.
+3. Tryck/klicka på **[!UICONTROL Publish to Brand Portal]** i verktygsfältet.
 
    ![publish_to_bp_icon](assets/publish_to_bp_icon.png)
 
-4. In the confirmation dialog, tap/click **[!UICONTROL Publish]**.
+4. Tryck/klicka på **[!UICONTROL Publish]** i bekräftelsedialogrutan.
 5. Stäng bekräftelsemeddelandet.
 6. Logga in på varumärkesportalen som administratör. Den publicerade samlingen är tillgänglig i samlingskonsolen.
 
@@ -48,9 +48,9 @@ Du kan avpublicera samlingar som du publicerar från AEM Assets till varumärkes
 
    ![select_collection-1](assets/select_collection-1.png)
 
-2. Tryck/klicka på **[!UICONTROL Remove from Brand Portal]** ikonen i verktygsfältet.
+2. Tryck/klicka på ikonen **[!UICONTROL Remove from Brand Portal]** i verktygsfältet.
 
    ![remove_from_bp_icon](assets/remove_from_bp_icon.png)
 
-3. In the dialog, tap/click **[!UICONTROL Unpublish]**.
+3. Tryck/klicka på **[!UICONTROL Unpublish]** i dialogrutan.
 4. Stäng bekräftelsemeddelandet. Samlingen tas bort från varumärkesportalens gränssnitt.
