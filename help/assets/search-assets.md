@@ -32,9 +32,9 @@ Du kan söka baserat på följande alternativ (prediktiv):
 
 <!-- TBD keystroke 65 article and port applicable changes here. This content goes. -->
 
-Du kan anpassa panelen Filter och lägga till/ta bort sökpredikatorer med [sökfaktorer](search-facets.md). Så här visar du panelen Filter:
+Du kan anpassa panelen Filter och lägga till/ta bort sökpredikatorn med [sökfaktorer](search-facets.md). Så här visar du panelen Filter:
 
-1. I Assets-användargränssnittet: tryck/klicka på ![search_icon](assets/search_icon.png) i verktygsfältet för att visa rutan Omnissearch.
+1. Tryck/klicka på ![search_icon](assets/search_icon.png) i verktygsfältet i Assets-användargränssnittet för att visa rutan Omnissearch.
 1. Ange söktermen och tryck på Retur. Du kan också trycka på Retur utan att ange något sökord. Ange inga inledande blanksteg, annars fungerar inte sökningen.
 
 1. Tryck/klicka på ikonen GlobalNav. Panelen Filter visas.
@@ -49,7 +49,7 @@ Du kan anpassa panelen Filter och lägga till/ta bort sökpredikatorer med [sök
 
 Med panelen Filter kan du göra sökningen mer detaljerad och sökfunktionen mer flexibel. Du kan enkelt gå ned till önskad detaljnivå.
 
-Om du till exempel söker efter en bild använder du predikatet för att välja om du vill ha en bitmappsbild eller en vektorbild. **[!UICONTROL File Type]**
+Om du till exempel söker efter en bild använder du predikatet **[!UICONTROL File Type]** för att välja om du vill ha en bitmappsbild eller en vektorbild.
 
 ![image_type](assets/image_type.png)
 
@@ -93,7 +93,7 @@ När du övervakar granskningsstatusen för resurser ska du använda lämpligt a
 
 ## Sök baserat på Insights-data {#search-based-on-insights-data}
 
-Använd **Insights** -predikatet för att söka efter resurser baserat på användningsstatistik från olika Creative-program. Användningsdata grupperas under följande kategorier:
+Använd **Insights**-predikatet för att söka efter resurser baserat på användningsstatistik från olika Creative-program. Användningsdata grupperas under följande kategorier:
 
 * Användningspoäng
 * Impressions
