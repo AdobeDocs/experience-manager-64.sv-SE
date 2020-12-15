@@ -21,45 +21,45 @@ Du kan också lägga till fler flikar på AEM Assets administratörspanel.
 
 >[!CAUTION]
 >
->Från och med AEM 6.4 används inte det klassiska användargränssnittet. Information finns i [Föråldrade och Borttagna funktioner](../release-notes/deprecated-removed-features.md). Du rekommenderas att använda användargränssnittet med pekskärmsfunktioner. Anpassa finns i [Sök efter ansikten](search-facets.md).
+>Från och med AEM 6.4 används inte det klassiska användargränssnittet. Information finns i [Borttagna och borttagna funktioner](../release-notes/deprecated-removed-features.md). Du rekommenderas att använda användargränssnittet med pekskärmsfunktioner. Anpassningar finns i [Sök efter ansikten](search-facets.md).
 
-## Överläggning {#overlaying}
+## Täcka över {#overlaying}
 
-Om du vill täcka över de förkonfigurerade predikaten kopierar du `facets` noden från `/libs/dam/content/search/searchpanel` till `/apps/dam/content/search/searchpanel/` eller anger en annan `facetURL` egenskap i sökpanelens konfiguration (standardvärdet är `/libs/dam/content/search/searchpanel/facets.overlay.infinity.json`).
+Om du vill täcka över de förkonfigurerade predikaten kopierar du `facets`-noden från `/libs/dam/content/search/searchpanel` till `/apps/dam/content/search/searchpanel/` eller anger en annan `facetURL`-egenskap i sökpanelens konfiguration (standardvärdet är `/libs/dam/content/search/searchpanel/facets.overlay.infinity.json`).
 
 ![screen_shot_2012-06-05at113619am](assets/screen_shot_2012-06-05at113619am.png)
 
 >[!NOTE]
 >
->Som standard finns inte katalogstrukturen under/ `apps` och måste skapas. Kontrollera att nodtyperna matchar dem under / `libs`.
+>Som standard finns inte katalogstrukturen under / `apps` och måste skapas. Kontrollera att nodtyperna matchar dem under / `libs`.
 
 
 ## Lägga till tabbar {#adding-tabs}
 
 Du kan lägga till fler sökflikar genom att konfigurera dem i AEM Assets Admin. Så här skapar du ytterligare flikar:
 
-1. Skapa mappstrukturen `/apps/wcm/core/content/damadmin/tabs,`om den inte redan finns, och kopiera `tabs` noden från `/libs/wcm/core/content/damadmin` och klistra in den.
+1. Skapa mappstrukturen `/apps/wcm/core/content/damadmin/tabs,`om den inte redan finns, och kopiera noden `tabs` från `/libs/wcm/core/content/damadmin` och klistra in den.
 1. Skapa och konfigurera den andra fliken efter behov.
 
    >[!NOTE]
    >
-   >När du skapar en andra platshållarsökpanel måste du ange en `id` egenskap för att förhindra formulärkonflikter.
+   >När du skapar en andra platadminsearchpanel måste du ange en `id`-egenskap för att förhindra formulärkonflikter.
 
-## Skapa anpassade predikat {#creating-custom-predicates}
+## Skapar anpassade predikat {#creating-custom-predicates}
 
 AEM Assets innehåller en uppsättning fördefinierade prediktiv som kan användas för att anpassa en resursdelssida. Att anpassa en resurs på det här sättet beskrivs i [Skapa och konfigurera en resursdelssida](assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
 
-Förutom att använda befintliga predikat kan AEM också skapa egna predikat med [Query Builder API](/help/sites-developing/querybuilder-api.md).
+Förutom att använda befintliga predikat kan AEM också skapa egna predikat med [API:t för frågebyggaren](/help/sites-developing/querybuilder-api.md).
 
-Det krävs grundläggande kunskaper om [widgetramverket](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html)för att kunna skapa anpassade predikat.
+Det krävs grundläggande kunskaper om [widgetramverket](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html) för att kunna skapa anpassade predikat.
 
-Det bästa sättet är att kopiera ett befintligt predikat och justera det. Exempelpredikat finns i `/libs/cq/search/components/predicates`.
+Det bästa sättet är att kopiera ett befintligt predikat och justera det. Exempelpredikaten finns i `/libs/cq/search/components/predicates`.
 
 ### Exempel: Skapa ett enkelt egenskapspredikat {#example-build-a-simple-property-predicate}
 
 Så här skapar du ett egenskapspredikat:
 
-1. Skapa till exempel en komponentmapp i projektkatalogen `/apps/geometrixx/components/titlepredicate`.
+1. Skapa en komponentmapp i projektkatalogen, till exempel `/apps/geometrixx/components/titlepredicate`.
 1. Lägg till `content.xml`:
 
    ```xml
@@ -142,10 +142,10 @@ Så här skapar du ett egenskapspredikat:
    </script>
    ```
 
-1. Om du vill göra komponenten tillgänglig måste du kunna redigera den. To make a component editable, in CRXDE, add a node `cq:editConfig` of primary type `cq:EditConfig`. Du kan ta bort stycken genom att lägga till en egenskap med flera värden `cq:actions` med ett enda värde på **DELETE**.
-1. Navigera till webbläsaren och på exempelsidan (till exempel `press.html`) växla till designläge och aktivera den nya komponenten för prediate paragraph system (till exempel **vänster**).
+1. Om du vill göra komponenten tillgänglig måste du kunna redigera den. Om du vill göra en komponent redigerbar lägger du i CRXDE till en nod `cq:editConfig` av den primära typen `cq:EditConfig`. Du kan ta bort stycken genom att lägga till en egenskap med flera värden `cq:actions` med ett enda värde på **DELETE**.
+1. Navigera till webbläsaren och på exempelsidan (till exempel `press.html`) växla till designläge och aktivera den nya komponenten för prediate paragraph system (till exempel **left**).
 
-1. I **redigeringsläget** är den nya komponenten nu tillgänglig i sidosparken (finns i **sökgruppen** ). Infoga komponenten i kolumnen **Predikatorer** och skriv ett sökord, till exempel **Diamant** , och klicka på förstoringsglaset för att starta sökningen.
+1. I **redigeringsläget** är den nya komponenten nu tillgänglig i sidesparläget (finns i gruppen **Sök**). Infoga komponenten i kolumnen **Predicates** och skriv ett sökord, till exempel **Diamant**, och klicka på förstoringsglaset för att starta sökningen.
 
    >[!NOTE]
    >
@@ -155,7 +155,7 @@ Så här skapar du ett egenskapspredikat:
 
 Så här skapar du ett grupppredikat:
 
-1. Skapa till exempel en komponentmapp i projektkatalogen `/apps/geometrixx/components/picspredicate`.
+1. Skapa en komponentmapp i projektkatalogen, till exempel `/apps/geometrixx/components/picspredicate`.
 1. Lägg till `content.xml`:
 
    ```xml
@@ -249,9 +249,9 @@ Så här skapar du ett grupppredikat:
        });
    ```
 
-1. Om du vill göra komponenten tillgänglig måste du kunna redigera den. To make a component editable, in CRXDE, add a node `cq:editConfig` of primary type `cq:EditConfig`. Du kan ta bort stycken genom att lägga till en egenskap med flera värden `cq:actions` med ett enda värde på `DELETE`.
-1. Navigera till webbläsaren och på exempelsidan (till exempel `press.html`) växla till designläge och aktivera den nya komponenten för prediate paragraph system (till exempel **vänster**).
-1. I **redigeringsläget** är den nya komponenten nu tillgänglig i sidosparken (finns i **sökgruppen** ). Infoga komponenten i kolumnen **Predicates** .
+1. Om du vill göra komponenten tillgänglig måste du kunna redigera den. Om du vill göra en komponent redigerbar lägger du i CRXDE till en nod `cq:editConfig` av den primära typen `cq:EditConfig`. Du kan ta bort stycken genom att lägga till en egenskap med flera värden `cq:actions` med ett enda värde på `DELETE`.
+1. Navigera till webbläsaren och på exempelsidan (till exempel `press.html`) växla till designläge och aktivera den nya komponenten för prediate paragraph system (till exempel **left**).
+1. I **redigeringsläget** är den nya komponenten nu tillgänglig i sidesparläget (finns i gruppen **Sök**). Infoga komponenten i kolumnen **Predicates**.
 
 ### Installerade prediktiva widgetar {#installed-predicate-widgets}
 
@@ -261,32 +261,32 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
-| predikateName | Sträng | Predikatets namn. Defaults to `fulltext` |
-| searchCallback |  -funktion | Återanrop för att utlösa sökning vid händelse `keyup`. Defaults to `CQ.wcm.SiteAdmin.doSearch` |
+| predikateName | Sträng | Predikatets namn. Standardvärdet är `fulltext` |
+| searchCallback |  -funktion | Återanrop för att utlösa sökning vid händelse `keyup`. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
-| predikateName | Sträng | Predikatets namn. Defaults to `property` |
-| propertyName | Sträng | Namn på JCR-egenskapen. Defaults to `jcr:title` |
+| predikateName | Sträng | Predikatets namn. Standardvärdet är `property` |
+| propertyName | Sträng | Namn på JCR-egenskapen. Standardvärdet är `jcr:title` |
 | defaultValue | Sträng | Förfyllt standardvärde. |
 
 ### PathPredicate {#pathpredicate}
 
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
-| predikateName | Sträng | Predikatets namn. Defaults to `path` |
-| rootPath | Sträng | Predikatets rotsökväg. Defaults to `/content/dam` |
-| pathFieldPredicateName | Sträng | Defaults to `folder` |
+| predikateName | Sträng | Predikatets namn. Standardvärdet är `path` |
+| rootPath | Sträng | Predikatets rotsökväg. Standardvärdet är `/content/dam` |
+| pathFieldPredicateName | Sträng | Standardvärdet är `folder` |
 | showFlatOption | Boolesk | Flagga som visar kryssrutan `search in subfolders`. Standardvärdet är true. |
 
 ### DatePredicate {#datepredicate}
 
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
-| predikateName | Sträng | Predikatets namn. Defaults to `daterange` |
-| egenskapsnamn | Sträng | Namn på JCR-egenskapen. Defaults to `jcr:content/jcr:lastModified` |
+| predikateName | Sträng | Predikatets namn. Standardvärdet är `daterange` |
+| egenskapsnamn | Sträng | Namn på JCR-egenskapen. Standardvärdet är `jcr:content/jcr:lastModified` |
 | defaultValue | Sträng | Förfyllt standardvärde |
 
 ### OptionsPredicate {#optionspredicate}
@@ -294,11 +294,11 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
 | title | Sträng | Lägger till ytterligare en rubrik |
-| predikateName | Sträng | Predikatets namn. Defaults to `daterange` |
-| egenskapsnamn | Sträng | Namn på JCR-egenskapen. Defaults to `jcr:content/metadata/cq:tags` |
-| komprimera | Sträng | Komprimera nivå. Defaults to `level1` |
+| predikateName | Sträng | Predikatets namn. Standardvärdet är `daterange` |
+| egenskapsnamn | Sträng | Namn på JCR-egenskapen. Standardvärdet är `jcr:content/metadata/cq:tags` |
+| komprimera | Sträng | Komprimera nivå. Standardvärdet är `level1` |
 | triggerSearch | Boolesk | Flagga för att utlösa sökning vid kontroll. Standardvärdet är false |
-| searchCallback |  -funktion | Återanrop för att utlösa sökning. Defaults to `CQ.wcm.SiteAdmin.doSearch` |
+| searchCallback |  -funktion | Återanrop för att utlösa sökning. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
 | searchTimeoutTime | Siffra | Timeout innan searchCallback aktiveras. Standardvärdet är 800 ms |
 
 ## Anpassa sökresultat {#customizing-search-results}
