@@ -30,15 +30,15 @@ AEM Media Library är en del av AEM WCM-innehållslagringsplatsen där bilder oc
 Unika funktioner som endast är tillgängliga för AEM Assets kunder är:
 
 1. möjlighet att extrahera och redigera andra metadata än titel, taggar och beskrivning.
-1. AEM Assets Admin, som du kommer åt från välkomstskärmen genom att klicka på den andra knappen bredvid `siteadmin`.
+1. aem assets Admin, som du kommer åt från välkomstskärmen genom att klicka på den andra knappen bredvid `siteadmin`.
 1. Alla arbetsflödessteg som rör Digital Asset Management, som AEM av resurser, borttagning av AEM Assets, hantering av underresurser i AEM Assets, extrahering av AEM Assets-metadata.
-1. bibliotek inklusive `dam` IME-paketutrymme.
+1. bibliotek som innehåller `dam` IM-paketutrymme.
 
 För att använda dessa funktioner krävs en giltig licens för AEM Assets.
 
 ### Finns AEM Assets som separat paket? {#is-aem-assets-available-as-a-separate-package}
 
-Nej. För att underlätta installation och driftsättning levereras alla AEM program och tillägg i ett och samma paket med alla funktioner inkluderade. Detta innebär inte att du har behörighet att använda alla funktioner i paketet.
+Nej. För att underlätta installation och driftsättning levereras alla AEM program och tillägg i ett och samma paket med alla funktioner inkluderade. Det innebär inte att du har behörighet att använda alla funktioner i paketet.
 
 #### Jag vill redigera metadata för digitala resurser. Behöver jag AEM Assets? {#i-want-to-edit-metadata-of-digital-assets-do-i-need-aem-assets}
 
