@@ -23,15 +23,15 @@ DM-kodade återgivningar lagras på proxyservern och hanteras vid körning.
 
 AEM resurser har uppspelningsstöd för dessa återgivningar på klientsidan.
 
-Om du vill visa återgivningarna för en viss videoresurs öppnar du resurssidan och trycker på ikonen Global navigering. Välj sedan **[!UICONTROL Renditions]** från listan.
+Om du vill visa återgivningarna för en viss videoresurs öppnar du resurssidan och trycker på ikonen Global navigering. Välj sedan **[!UICONTROL Renditions]** i listan.
 
 ![chlimage_1-478](assets/chlimage_1-478.png)
 
-Listan med videoåtergivningar visas på **[!UICONTROL Renditions]** panelen.
+Listan med videoåtergivningar visas på panelen **[!UICONTROL Renditions]**.
 
 ![chlimage_1-479](assets/chlimage_1-479.png)
 
-Om du vill konfigurera proxyservern för DM-kodade återgivningar [konfigurerar du tjänsterna i Dynamic Media Cloud.](config-dynamic.md)
+[Konfigurera Dynamic Media Cloud-tjänster om du vill konfigurera proxyservern för DM-kodade återgivningar.](config-dynamic.md)
 
 Om du vill generera videoåtergivningar med önskade parametrar [skapar du en motsvarande videoprofil](video-profiles.md).
 
