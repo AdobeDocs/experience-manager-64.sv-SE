@@ -11,7 +11,7 @@ ht-degree: 3%
 ---
 
 
-# Använd Apache Tika för att identifiera MIME-typ av digitalt material {#detecting-mime-type-of-assets-using-apache-tika}
+# Använd Apache Tika för att identifiera MIME-typ för digitala resurser {#detecting-mime-type-of-assets-using-apache-tika}
 
 Vanligtvis identifierar Adobe Experience Manager (AEM) Assets MIME-typen för resurser som du överför från filtillägget. Om du använder Apache Tika för att överföra resurser, identifierar AEM Assets deras MIME-typ från innehållsströmmen under överföringen i stället för filtillägget.
 
@@ -21,10 +21,10 @@ Den här funktionen är inaktiverad som standard. Om du vill aktivera funktionen
 >
 >MIME-typidentifiering med Apache Tika-biblioteket är en resurskrävande åtgärd.
 
-1. Gå `https://[AEM_server]:[port]/system/console/configMgr` till webbkonsolen för Configuration Manager.
-1. I listan med tjänster letar du upp **[!UICONTROL Day CQ DAM Mime Type Service]** och trycker/klickar på **[!UICONTROL Edit]** ikonen bredvid den för att öppna den i redigeringsläget.
+1. Gå till `https://[AEM_server]:[port]/system/console/configMgr` och öppna Configuration Manager-webbkonsolen.
+1. Leta reda på **[!UICONTROL Day CQ DAM Mime Type Service]** i listan över tjänster och tryck/klicka på ikonen **[!UICONTROL Edit]** bredvid den för att öppna den i redigeringsläget.
 
-1. Välj **[!UICONTROL Detect MIME from content]** alternativet för att aktivera parsning av överförda resurser för att bestämma deras MIME-typ samtidigt som filtillägg ignoreras. Som standard är det här alternativet avmarkerat.
+1. Välj alternativet **[!UICONTROL Detect MIME from content]** om du vill aktivera parsning av överförda resurser för att bestämma deras MIME-typ samtidigt som filtillägg ignoreras. Som standard är det här alternativet avmarkerat.
 
    ![chlimage_1-333](assets/chlimage_1-333.png)
 
