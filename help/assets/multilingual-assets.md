@@ -29,6 +29,6 @@ Maskinöversättning: Maskinöversättningstjänsten översätter omedelbart met
 1. [Tillämpar översättningsmolntjänster på mappar](transition-cloud-services.md)
 1. [Skapa översättningsprojekt](translation-projects.md)
 
-Om din översättningstjänstleverantör inte tillhandahåller någon koppling för integrering med AEM kan du använda en [alternativ process](/help/sites-administering/tc-manage.md#exporting-a-translation-job).
+Om översättningstjänstleverantören inte tillhandahåller någon koppling för integrering med AEM använder du en [alternativ process](/help/sites-administering/tc-manage.md#exporting-a-translation-job).
 
 Se även [Skapa översättningsprojekt för innehållsfragment](creating-translation-projects-for-content-fragments.md).
