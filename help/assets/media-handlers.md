@@ -11,17 +11,17 @@ ht-degree: 3%
 ---
 
 
-# Bearbeta resurser med mediehanterare och arbetsflöden {#processing-assets-using-media-handlers-and-workflows}
+# Bearbeta resurser Använda mediehanterare och arbetsflöden {#processing-assets-using-media-handlers-and-workflows}
 
 Adobe Experience Manager Assets innehåller en uppsättning standardarbetsflöden och mediehanterare för att bearbeta resurser. Ett arbetsflöde definierar en typisk resurshanterings- och bearbetningsuppgift och delegerar sedan de specifika åtgärderna till mediehanterarna, till exempel generering av miniatyrer eller metadataextrahering.
 
-Ett arbetsflöde kan definieras som körs automatiskt när en resurs av en viss typ eller ett visst format överförs till servern. Bearbetningsstegen definieras som en serie AEM Assets mediehanterare. AEM innehåller vissa [inbyggda hanterare,](#default-media-handlers) och ytterligare kan antingen [anpassas](#creating-a-new-media-handler) eller definieras genom att delegera processen till ett [kommandoradsverktyg](#command-line-based-media-handler).
+Ett arbetsflöde kan definieras som körs automatiskt när en resurs av en viss typ eller ett visst format överförs till servern. Bearbetningsstegen definieras som en serie AEM Assets mediehanterare. AEM innehåller några [inbyggda hanterare,](#default-media-handlers) och ytterligare kan antingen vara [anpassade, utvecklade](#creating-a-new-media-handler) eller definierade genom att delegera processen till ett [kommandoradsverktyg](#command-line-based-media-handler).
 
 Mediehanterare är tjänster i AEM Assets som utför specifika åtgärder för resurser. När till exempel en MP3-ljudfil överförs till AEM utlöses en MP3-hanterare som extraherar metadata och skapar en miniatyrbild. Mediehanterare används vanligtvis i kombination med arbetsflöden. De flesta vanliga MIME-typer stöds i AEM. Specifika uppgifter kan utföras på resurser genom att antingen utöka/skapa arbetsflöden, utöka/skapa mediehanterare eller inaktivera/aktivera mediehanterare.
 
 >[!NOTE]
 >
->På sidan Format [som stöds av](assets-formats.md) Assets finns en beskrivning av alla format som stöds av AEM Assets samt funktioner som stöds för varje format.
+>På sidan [Format](assets-formats.md) Resurser som stöds&lt;a1/> finns en beskrivning av alla format som stöds av AEM Assets samt funktioner som stöds för varje format.
 
 ## Standardmediehanterare {#default-media-handlers}
 
@@ -49,17 +49,17 @@ Alla hanterare utför följande uppgifter:
 
 Det går att visa de aktiva mediehanterarna:
 
-1. Navigera till i webbläsaren `http://localhost:4502/system/console/components`.
+1. Navigera till `http://localhost:4502/system/console/components` i webbläsaren.
 1. Klicka på länken `com.day.cq.dam.core.impl.store.AssetStoreImpl`.
 1. En lista med alla aktiva mediehanterare visas. Till exempel:
 
 ![chlimage_1-437](assets/chlimage_1-437.png)
 
-## Använda mediehanterare i arbetsflöden för att utföra åtgärder på resurser {#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
+## Använd mediehanterare i arbetsflöden för att utföra åtgärder på resurser {#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
 
 Mediehanterare är tjänster som vanligtvis används i kombination med arbetsflöden.
 
-AEM har vissa standardarbetsflöden för att bearbeta resurser. Om du vill visa dem öppnar du arbetsflödeskonsolen och klickar på **[!UICONTROL Models]** fliken: de arbetsflödesrubriker som börjar med AEM Assets är resursspecifika.
+AEM har vissa standardarbetsflöden för att bearbeta resurser. Om du vill visa dem öppnar du arbetsflödeskonsolen och klickar på fliken **[!UICONTROL Models]**: de arbetsflödesrubriker som börjar med AEM Assets är resursspecifika.
 
 Befintliga arbetsflöden kan utökas och nya kan skapas för att bearbeta resurser enligt specifika krav.
 
@@ -71,20 +71,20 @@ Mediehanterarna kan inaktiveras eller aktiveras via webbhanteringskonsolen för 
 
 Så här aktiverar/inaktiverar du en mediehanterare:
 
-1. Navigera till i webbläsaren `https://<host>:<port>/system/console/components`.
-1. Klicka **[!UICONTROL Disable]** bredvid namnet på mediehanteraren. Till exempel: `com.day.cq.dam.handler.standard.mp3.Mp3Handler`.
+1. Navigera till `https://<host>:<port>/system/console/components` i webbläsaren.
+1. Klicka på **[!UICONTROL Disable]** bredvid namnet på mediehanteraren. Till exempel: `com.day.cq.dam.handler.standard.mp3.Mp3Handler`.
 1. Uppdatera sidan: en ikon visas bredvid mediehanteraren som anger att den är inaktiverad.
-1. Om du vill aktivera mediehanteraren klickar du **[!UICONTROL Enable]** bredvid namnet på mediehanteraren.
+1. Om du vill aktivera mediehanteraren klickar du på **[!UICONTROL Enable]** bredvid namnet på mediehanteraren.
 
-### Skapa en ny mediehanterare {#creating-a-new-media-handler}
+### Skapar en ny mediehanterare {#creating-a-new-media-handler}
 
 Om du vill ha stöd för en ny medietyp eller utföra specifika åtgärder på en resurs måste du skapa en ny mediehanterare. I det här avsnittet beskrivs hur du fortsätter.
 
 #### Viktiga klasser och gränssnitt {#important-classes-and-interfaces}
 
-Det bästa sättet att starta en implementering är att ärva från en tillhandahållen abstrakt implementering som tar hand om de flesta saker och tillhandahåller ett rimligt standardbeteende: klassen `com.day.cq.dam.core.AbstractAssetHandler` .
+Det bästa sättet att starta en implementering är att ärva från en tillhandahållen abstrakt implementering som tar hand om de flesta saker och tillhandahåller ett rimligt standardbeteende: klassen `com.day.cq.dam.core.AbstractAssetHandler`.
 
-Den här klassen tillhandahåller redan en abstrakt tjänstbeskrivning. Om du ärver från den här klassen och använder plugin-programmet maven-sling ska du se till att du anger ärvningsflaggan som `true`.
+Den här klassen tillhandahåller redan en abstrakt tjänstbeskrivning. Om du ärver från den här klassen och använder maven-sling-plugin-programmet måste du ställa in den ärvda flaggan på `true`.
 
 Implementera följande metoder:
 
@@ -133,8 +133,8 @@ När du har utfört följande procedur och överför en textfil till AEM, extrah
 
 1. Skapa `myBundle` Maven-projekt i Eclipse:
 
-   1. Klicka på i menyraden **[!UICONTROL File > New > Other]**.
-   1. I dialogrutan expanderar du mappen Maven, väljer Maven Project och klickar på **[!UICONTROL Next]**.
+   1. Klicka på **[!UICONTROL File > New > Other]** i menyfältet.
+   1. Expandera mappen Maven i dialogrutan, markera Maven Project och klicka på **[!UICONTROL Next]**.
    1. Markera kryssrutan Skapa ett enkelt projekt och rutan Använd standardplatser för arbetsyta och klicka sedan på **[!UICONTROL Next]**.
    1. Definiera projektet Maven:
 
@@ -147,7 +147,7 @@ När du har utfört följande procedur och överför en textfil till AEM, extrah
 
 1. Ställ in Java Compiler på version 1.5:
 
-   1. Högerklicka på `myBundle` projektet och välj Egenskaper.
+   1. Högerklicka på `myBundle`-projektet och välj Egenskaper.
    1. Välj Java Compiler och ange följande egenskaper till 1.5:
 
       * Kompilatorefterlevnadsnivå
@@ -275,14 +275,14 @@ När du har utfört följande procedur och överför en textfil till AEM, extrah
 
 1. Skapa paketet `com.day.cq5.myhandler` som innehåller Java-klasserna under `myBundle/src/main/java`:
 
-   1. Under myBundle högerklickar du `src/main/java`, väljer Ny och sedan Packa.
-   1. Ge den ett namn `com.day.cq5.myhandler` och klicka på Slutför.
+   1. Under myBundle högerklickar du på `src/main/java`, väljer Ny och sedan Packa.
+   1. Ge den namnet `com.day.cq5.myhandler` och klicka på Slutför.
 
-1. Skapa klassen Java `MyHandler`:
+1. Skapa Java-klassen `MyHandler`:
 
-   1. I Eclipse, under `myBundle/src/main/java`högerklickar du på `com.day.cq5.myhandler` paketet, väljer Ny och sedan Klass.
+   1. I Eclipse, under `myBundle/src/main/java`, högerklickar du på `com.day.cq5.myhandler`-paketet, väljer Ny och sedan Klass.
    1. Ge Java-klassen namnet MyHandler i dialogrutan och klicka på Slutför. Eclipse skapar och öppnar filen MyHandler.java.
-   1. I `MyHandler.java` Ersätt den befintliga koden med följande och spara sedan ändringarna:
+   1. I `MyHandler.java` ersätter du den befintliga koden med följande och sparar sedan ändringarna:
 
    ```java
    package com.day.cq5.myhandler; 
@@ -426,10 +426,10 @@ När du har utfört följande procedur och överför en textfil till AEM, extrah
 
 1. Kompilera Java-klassen och skapa paketet:
 
-   1. Högerklicka på projektet myBundle, välj **[!UICONTROL Run As]** och sedan **[!UICONTROL Maven Install]**.
+   1. Högerklicka på projektet myBundle, välj **[!UICONTROL Run As]** och **[!UICONTROL Maven Install]**.
    1. Paketet `myBundle-0.0.1-SNAPSHOT.jar` (som innehåller den kompilerade klassen) skapas under `myBundle/target`.
 
-1. Skapa en ny nod under i CRX Explorer `/apps/myApp`. Namn = `install`, Typ = `nt:folder`.
+1. Skapa en ny nod under `/apps/myApp` i CRX Explorer. Namn = `install`, typ = `nt:folder`.
 1. Kopiera paketet `myBundle-0.0.1-SNAPSHOT.jar` och lagra det under `/apps/myApp/install` (till exempel med WebDAV). Den nya texthanteraren är nu aktiv i AEM.
 1. Öppna Apache Felix Web Management Console i webbläsaren. Välj fliken Komponenter och inaktivera standardtexthanteraren `com.day.cq.dam.core.impl.handler.TextHandler`.
 
@@ -464,7 +464,7 @@ I följande exempel visas hur du ställer in kommandoradsprocesssteget så att v
 
 Använd ImageMagick för att göra detta. Installera ImageMagick på den disk där AEM finns:
 
-1. Installera ImageMagick. Mer information finns i dokumentationen [till](https://www.imagemagick.org/script/download.php) ImageMagick.
+1. Installera ImageMagick. Mer information finns i [ImageMagick-dokumentationen](https://www.imagemagick.org/script/download.php).
 1. Konfigurera verktyget så att du kan köra konverteringen på kommandoraden.
 1. Om du vill se om verktyget är korrekt installerat kör du följande kommando `convert -h` på kommandoraden.
 
@@ -480,9 +480,9 @@ Använd ImageMagick för att göra detta. Installera ImageMagick på den disk d�
 
 Lägg sedan till kommandoradsprocessteget i arbetsflödet **[!UICONTROL DAM Update Asset]**:
 
-1. Gå till **[!UICONTROL Workflow]** konsolen.
-1. Redigera **[!UICONTROL Models]** modellen på **[!UICONTROL DAM Update Asset]** fliken.
-1. Ändra inställningarna för **[!UICONTROL Web enabled rendition]** steget enligt följande:
+1. Gå till **[!UICONTROL Workflow]**-konsolen.
+1. Redigera **[!UICONTROL DAM Update Asset]**-modellen på fliken **[!UICONTROL Models]**.
+1. Ändra inställningarna för **[!UICONTROL Web enabled rendition]**-steget enligt följande:
 
    `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
@@ -490,19 +490,19 @@ Lägg sedan till kommandoradsprocessteget i arbetsflödet **[!UICONTROL DAM Upda
 
 Om du vill testa det ändrade arbetsflödet lägger du till en resurs i `/content/dam`.
 
-1. Hämta en TIFF-bild i filsystemet. Byt namn på filen till `myImage.tiff` och kopiera den till, `/content/dam`till exempel med hjälp av WebDAV.
-1. Gå till **[!UICONTROL CQ5 DAM]** konsolen, till exempel `http://localhost:4502/libs/wcm/core/content/damadmin.html`.
+1. Hämta en TIFF-bild i filsystemet. Byt namn på den till `myImage.tiff` och kopiera den till `/content/dam`, t.ex. med WebDAV.
+1. Gå till **[!UICONTROL CQ5 DAM]**-konsolen, till exempel `http://localhost:4502/libs/wcm/core/content/damadmin.html`.
 1. Öppna resursen `myImage.tiff` och kontrollera att den vända bilden och de tre miniatyrbilderna har skapats.
 
 #### Konfigurera processteget CommandLineProcess {#configuring-the-commandlineprocess-process-step}
 
-This section describes how to set the **[!UICONTROL Process Arguments]** of the `CommandLineProcess`. Avgränsa värdena för [!UICONTROL Process Arguments] att använda kommatecken och starta inte ett värde med ett blanksteg.
+I det här avsnittet beskrivs hur du anger **[!UICONTROL Process Arguments]** för `CommandLineProcess`. Avgränsa värdena för [!UICONTROL Process Arguments] med kommatecken och starta inte ett värde med ett blanksteg.
 
 | Argument-Format | Beskrivning |
 |---|---|
 | mime:&lt;mime-type> | Valfritt argument. Processen används om tillgången har samma MIME-typ som argumentet. <br>Flera MIME-typer kan definieras. |
 | tn:&lt;width>:&lt;height> | Valfritt argument. Processen skapar en miniatyrbild med de dimensioner som definieras i argumentet. <br>Flera miniatyrbilder kan definieras. |
-| cmd: &lt;kommando> | Definierar det kommando som ska köras. Syntaxen beror på kommandoradsverktyget. Endast ett kommando kan definieras. <br>Följande variabler kan användas för att skapa kommandot:<br>`${filename}`: indatafilens namn, till exempel original.jpg <br> `${file}`: den fullständiga sökvägen till indatafilen, till exempel /tmp/cqdam0816.tmp/original.jpg <br> `${directory}`: indatafilens katalog, till exempel /tmp/cqdam0816.tmp <br>`${basename}`: namnet på indatafilen utan filnamnstillägg, till exempel original <br>`${extension}`: tillägg för indatafilen, till exempel jpg |
+| cmd: &lt;kommando> | Definierar det kommando som ska köras. Syntaxen beror på kommandoradsverktyget. Endast ett kommando kan definieras. <br>Följande variabler kan användas för att skapa kommandot:<br>`${filename}`: indatafilens namn, till exempel original.jpg  <br> `${file}`: den fullständiga sökvägen till indatafilen, till exempel /tmp/cqdam0816.tmp/original.jpg  <br> `${directory}`: indatafilens katalog, till exempel /tmp/cqdam0816.tmp  <br>`${basename}`: namnet på indatafilen utan filnamnstillägg, till exempel original  <br>`${extension}`: tillägg för indatafilen, till exempel jpg |
 
 Om till exempel ImageMagick är installerat på den disk som är värd för AEM och du skapar ett processsteg med **CommandLineProcess** som implementering och följande värden som **Processargument**:
 
@@ -520,4 +520,4 @@ Använd följande [!UICONTROL Process Arguments] för att skapa den webbaktivera
 
 >[!NOTE]
 >
->Stegen gäller bara för resurser (noder av typen `CommandLineProcess` `dam:Asset`) eller underordnade objekt till en resurs.
+>Steget `CommandLineProcess` gäller endast för Resurser (noder av typen `dam:Asset`) eller underordnade för en resurs.
