@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Ställa in ett standardstadium med Autodesk Maya och Mental Ray {#setting-up-a-standard-stage-with-autodesk-maya-and-mental-ray}
+# Konfigurera en standardscen med Autodesk Maya och Mental Ray {#setting-up-a-standard-stage-with-autodesk-maya-and-mental-ray}
 
 1. I Maya skapar du en ny, tom scen.
 1. Skapa en (tillfällig) referens till en representativ modell. Detta underlättar utvärdering av ljus, inställning av kameror och konfiguration av renderaren.
@@ -45,7 +45,7 @@ ht-degree: 0%
 
    * **[!UICONTROL Common]** tab
 
-      Avmarkera **[!UICONTROL Alpha channel (mask)]** kryssrutan för alla återgivningsbara kameror.
+      Avmarkera kryssrutan **[!UICONTROL Alpha channel (mask)]** för alla återgivningsbara kameror.
 
    * **[!UICONTROL Quality]** tab
 
@@ -62,10 +62,10 @@ ht-degree: 0%
 1. Spara scenen och avsluta Autodesk Maya.
 1. Överför scenen till AEM och vänta tills överföringen är klar.
 
-   Se [Överföra resurser](managing-assets-touch-ui.md#uploading-assets).
+   Se [Överför resurser](managing-assets-touch-ui.md#uploading-assets).
 
    Om Autodesk® Maya® inte är konfigurerad på AEM server exporterar du en FBX från Maya och överför den till AEM.
 
-1. Öppna Resursegenskaper i AEM. Ange **[!UICONTROL Title]** en lämplig sträng som ska visas i **[!UICONTROL Stage Selector]** listrutan. Kontrollera att **[!UICONTROL Class]** är inställt på **[!UICONTROL 3D Stage]**. Spara och avsluta.
+1. Öppna Resursegenskaper i AEM. Ange **[!UICONTROL Title]** till en lämplig sträng som ska visas i listrutan **[!UICONTROL Stage Selector]**. Kontrollera att **[!UICONTROL Class]** är **[!UICONTROL 3D Stage]**. Spara och avsluta.
 1. Öppna en 3D-resurs, markera den nya scenen och verifiera att den förhandsvisar och återger som förväntat.
 
