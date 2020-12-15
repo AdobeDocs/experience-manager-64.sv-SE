@@ -15,9 +15,9 @@ ht-degree: 19%
 
 XMP (Extensible Metadata Platform) är den metadatastandard som används av AEM Assets för all metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för en mängd olika program.
 
-Förutom universell metadatakodning som kan bäddas in i alla filformat, har XMP en innehållsmodell [som](xmp.md#xmp-core-concepts) stöds av Adobe [](xmp.md#advantages-of-xmp) och andra företag, så att användare av XMP i kombination med AEM Assets har en kraftfull plattform att bygga vidare på.
+Förutom universell metadatakodning som kan bäddas in i alla filformat, innehåller XMP en omfattande [innehållsmodell](xmp.md#xmp-core-concepts) och [stöds av Adobe](xmp.md#advantages-of-xmp) och andra företag, så att användare av XMP i kombination med AEM Assets har en kraftfull plattform att bygga vidare på.
 
-Specifikationen [för](https://www.adobe.com/devnet/xmp.html) XMP är tillgänglig från Adobe.
+[XMP-specifikationen](https://www.adobe.com/devnet/xmp.html) är tillgänglig från Adobe.
 
 ## Vad är XMP? {#what-is-xmp}
 
@@ -51,7 +51,7 @@ XMP har följande fördelar jämfört med andra kodningsstandarder och -scheman:
 * XMP har standardiserad kodning, vilket gör det enkelt att utbyta metadata.
 * XMP kan utökas. Du kan lägga till ytterligare information i dina resurser.
 
-### Utbyggbart {#extensible}
+### Utbyggbar {#extensible}
 
 XMP är utformad för att vara utökningsbar, så att du kan lägga till anpassade typer av metadata i XMP. EXIF har däremot inte det, utan en fast lista över egenskaper som inte kan utökas.
 
@@ -59,7 +59,7 @@ XMP är utformad för att vara utökningsbar, så att du kan lägga till anpassa
 >
 >XMP tillåter vanligtvis inte att binära datatyper bäddas in. Om du vill ha binära data i XMP, till exempel miniatyrbilder, måste de kodas i ett XML-anpassat format som Base64.
 
-## XMP kärnbegrepp {#xmp-core-concepts}
+## XMP Core Concepts {#xmp-core-concepts}
 
 I följande avsnitt beskrivs de centrala begreppen för XMP, inklusive namnutrymmen och scheman, egenskaper och värden samt språkalternativ.
 
@@ -68,7 +68,7 @@ I följande avsnitt beskrivs de centrala begreppen för XMP, inklusive namnutrym
 Ett XMP är en uppsättning egenskapsnamn i ett vanligt XML-namnutrymme som innehåller\
 datatypen och beskrivande information. Ett XMP-schema identifieras av dess XML-namnområdes-URI. Om du använder namnutrymmen förhindras konflikter mellan egenskaper i olika scheman som har samma namn men en annan betydelse.
 
-Egenskapen **Creator** i två självständigt utformade scheman kan till exempel avse den person som skapade resursen eller det program som skapade resursen (till exempel Adobe Photoshop).
+Egenskapen **Creator** i två oberoende utformade scheman kan till exempel betyda den person som skapade resursen eller det program som skapade resursen (till exempel Adobe Photoshop).
 
 ### Egenskaper och värden {#properties-and-values}
 
@@ -83,4 +83,4 @@ En vanlig delmängd som används av många Adobe-program kan till exempel vara f
 
 ### Språkalternativ {#language-alternatives}
 
-XMP ger dig möjlighet att lägga till en **xml:lang** -egenskap i textegenskaperna för att ange textens språk.
+XMP ger dig möjlighet att lägga till en **xml:lang**-egenskap i textegenskaper för att ange textens språk.
