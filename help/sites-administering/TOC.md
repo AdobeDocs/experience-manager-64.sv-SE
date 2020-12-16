@@ -7,15 +7,15 @@ user-guide-title: AEM 6.4 Handbok för administrationsanvändare
 breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
 translation-type: tm+mt
-source-git-commit: b0457d967a8d366caef45e2917ae73e7550ba69e
+source-git-commit: 47c0e92e7f68641209e5d2e5aefeb9dfcce64854
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '624'
 ht-degree: 6%
 
 ---
 
 
-# AEM 6.4 Handbok för administrationsanvändare {#administering}
+# AEM 6.4 Administering User Guide {#administering}
 
 + [Administrera användarhandboken - översikt](home.md)
 + Webbplatsfunktioner {#introduction}
@@ -50,7 +50,7 @@ ht-degree: 6%
    + [Massredigeraren](bulk-editor.md)
    + [Konfigurerar e-postmeddelande](notification.md)
    + [Konfigurera RTE för produktion av tillgängliga platser](rte-accessible-content.md)
-   + [Kontrollen Extern länk](external-link-checker.md)
+   + [Länkkontrollen](external-link-checker.md)
    + [AEM](troubleshoot.md)
    + [Granskningslogghantering i AEM 6](operations-audit-log.md)
    + [Redigerare](enable-classic-ui-editor.md)
@@ -103,7 +103,7 @@ ht-degree: 6%
    + [Konfigurera segmentering](campaign-segmentation.md)
    + [Utöka och konfigurera designimporteraren för landningssidor](extending-the-design-importer-for-landingpages.md)
    + [Integrera landningssidor med Adobe Analytics](integrating-landing-pages-with-adobe-analytics.md)
-+ eCommerce {#ecommerce}
++ e-handel {#ecommerce}
    + [eCommerce](ecommerce.md)
    + [Concepts](concepts.md)
    + [Administrera allmän e-handel](generic.md)
