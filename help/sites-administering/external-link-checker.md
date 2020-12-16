@@ -1,52 +1,124 @@
 ---
-title: Kontrollen Extern länk
-seo-title: Kontrollen Extern länk
-description: Läs mer om Extern länkkontroll i AEM.
-seo-description: Läs mer om Extern länkkontroll i AEM.
-uuid: fd0c6ff6-52d2-4096-af40-54786e9d9ab8
-contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.4/SITES
-topic-tags: operations
-content-type: reference
-discoiquuid: 49b195b2-78c4-49f9-b07a-a87b73624c2c
+title: Länkkontrollen
+description: Länkkontrollen hjälper till att validera både interna och externa länkar och tillåter att länkar skrivs om.
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 47c0e92e7f68641209e5d2e5aefeb9dfcce64854
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 1%
+source-wordcount: '970'
+ht-degree: 0%
 
 ---
 
 
-# The External Link Checker{#the-external-link-checker}
+# Länkkontrollen {#the-link-checker}
 
-En extern länkkontroll tillhandahålls i AEM. Länkkontrollen:
+Innehållsförfattare behöver inte bekymra sig om att validera alla länkar som de inkluderar på sina innehållssidor.
 
-* söker igenom alla innehållssidor
-* genererar en lista med alla giltiga och ogiltiga länkar
-* markerar ogiltiga länkar som brutna på plats på de enskilda innehållssidorna
+Länkkontrollen körs automatiskt så att skribenterna får hjälp med sina länkar:
 
-## Validera externa länkar {#how-to-validate-external-links}
+* Validera länkar när de läggs till i innehållet
+* Visar en lista över alla externa länkar i innehållet
+* Utföra länktomformningar
+
+Länkkontrollen har ett antal [konfigurationsalternativ](#configuring) som att definiera den interna valideringen, tillåta att vissa länkar eller länkmönster utelämnas från verifieringen och skriva om regler för länkrementering.
+
+Länkkontrollen verifierar både [interna länkar](#internal) och [externa länkar.](#external)
+
+>[!NOTE]
+>
+>Eftersom länkkontrollen används för att kontrollera länkarna på alla innehållssidor kan länkkontrollen påverka prestanda för stora databaser. I sådana fall kan du behöva [konfigurera hur ofta Länkkontrollen körs](#configuring) eller [inaktivera den.](#disabling)
+
+## Intern länkkontroll {#internal}
+
+Interna länkar är länkar till annat innehåll i AEM. Du kan lägga till interna länkar med sökvägsväljaren i textredigeraren eller med en anpassad komponent. Till exempel:
+
+* Sidan `/content/wknd/us/en/adventures/ski-touring.html`
+* Innehåller en länk till `/content/wknd/us/en/adventures/extreme-ironing.html` i en [textkomponent.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)
+
+Interna länkar valideras så snart innehållsförfattaren lägger till en intern länk på en sida. Om länken blir ogiltig:
+
+* Den tas bort från utgivaren. Länktexten finns kvar, men själva länken tas bort.
+* Den visas som en bruten länk i redigeringsgränssnittet.
+
+![Bruten intern länk vid redigering av en sida](assets/link-checker-invalid-link-internal.png)
+
+## Kontroll av extern länk {#external}
+
+Externa länkar är länkar till innehåll utanför AEM. Externa länkar kan läggas till med RTE eller med en anpassad komponent. Till exempel:
+
+* Sidan `/content/wknd/us/en/adventures/ski-touring.html`
+* Innehåller en länk till `https://bunwarmerthermalunderwear.com` i en [textkomponent.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)
+
+Externa länkar valideras för syntax och genom att deras tillgänglighet kontrolleras. Den här kontrollen utförs asynkront på en konfigurerbar intern. Om länkkontrollen hittar en ogiltig extern länk:
+
+* Den tas bort från utgivaren. Länktexten finns kvar, men själva länken tas bort.
+* Den visas som en bruten länk i redigeringsgränssnittet.
+
+![Bruten intern länk vid redigering av en sida](assets/link-checker-invalid-link-external.png)
+
+Dessutom ger gränssnittet [External Link Checker](#external-link-checker) en översikt över alla externa länkar på innehållssidorna.
+
+### Använda extern länkkontroll {#external-link-checker}
 
 Så här använder du den externa länkkontrollen:
 
-1. Öppna **verktygskonsolen** .
-1. Dubbelklicka på **Extern länkkontroll** (antingen den högra eller den vänstra rutan). En lista över alla externa länkar genereras.
-1. Validera en specifik länk genom att markera den i listan och sedan klicka på **Kontrollera**:
+1. Använd **Navigering**, välj **Verktyg** och sedan **Platser**.
+1. Välj **Extern länkkontroll** och en lista över alla externa länkar visas.
 
-   ![chlimage_1-109](assets/chlimage_1-109.png)
+![](assets/external-link-checker.png)
 
-   Information som:
+Följande information visas:
 
-   * länkens status
-   * Webbadress
-   * tid sedan länken senast validerades
-   * tid sedan länken senast var tillgänglig
-   * tid sedan länken senast användes
+* **Status**  - länkens verifieringsstatus
+   * **Giltig**  - Den externa länken kan nås av länkkontrollen
+   * **Väntande**  - Den externa länken lades till i webbplatsinnehållet, men har ännu inte validerats av Länkkontrollen
+   * **Ogiltig**  - Den externa länken kan inte nås av länkkontrollen.
+* **URL**  - den externa länken
+* **Referent**  - Innehållssidan som innehåller den externa länken
+   * Detta är bara ifyllt [om det är konfigurerat.](#configuring)
+* **Senast markerad**  - Senaste gången länkkontrollen verifierade den externa länken
+   * Hur ofta länkar kontrolleras [kan konfigureras.](#configuring)
+* **Senaste status**  - Den senaste HTML-statuskoden som returnerades när länken senast kontrollerades
+* **Senast tillgänglig**  - Tid sedan länken senast var tillgänglig för länkkontrollen
+* **Senast använd**  - tid sedan länken senast användes av länkkontrollen
 
-   visas.
+Du kan ändra innehållet i fönstret genom att använda de två knapparna högst upp i länklistan:
 
-1. På de enskilda innehållssidorna visas ogiltiga länkar som brutna:
+* **Uppdatera**  - Uppdatera innehållet i listan
+* **Markera**  - Om du vill kontrollera en enskild extern länk som är markerad i listan
 
-   ![chlimage_1-110](assets/chlimage_1-110.png)
+### Så här fungerar den externa länkkontrollen {#how-it-works}
 
+Extern länkkontroll är lätt att använda men är beroende av ett antal tjänster och du kan lättare förstå hur den fungerar om du vill [konfigurera länkkontrollen](#configuring) efter dina behov.
+
+1. När en innehållsförfattare sparar en länk till en sida aktiveras en händelsehanterare.
+1. Händelsehanteraren går igenom allt innehåll under `/content` och söker efter nya eller uppdaterade länkar och lägger till dem i ett cacheminne för Länkkontrollen.
+1. Tjänsten **Day CQ Link Checker** körs sedan regelbundet för att kontrollera om posterna i cachen har giltig syntax.
+1. Syntaxvaliderade länkar visas sedan i fönstret [External Link Checker](#external-link-checker). De kommer dock att vara i ett **väntande**-läge.
+1. **CQ Link Checker Task** körs sedan regelbundet för att validera länkarna genom att ringa ett GET-anrop.
+1. **CQ Link Checker Task** uppdaterar sedan posterna i fönstret External Link Checker med resultatet av GET-anropen.
+
+## Konfigurera länkkontrollen {#configuring}
+
+Länkkontrollen är automatiskt tillgänglig i AEM. Det finns dock ett antal OSGi-konfigurationer som kan ändras för att ändra dess beteende:
+
+* **Dag CQ Link Checker Info Storage Service**  - Den här tjänsten definierar storleken på cache-minnet för Länkkontroll i databasen.
+* **Dag CQ Link Checker Service**  - Den här tjänsten utför asynkron kontroll av syntaxen för externa länkar. Du kan bland annat definiera kontrollperioden och vilka typer av länkar som ignoreras av kontrollfunktionen.
+* **CQ Link Checker-aktivitet**  för Dag - Den här tjänsten utför GET-validering av externa länkar. Det gör att olika definitioner av intervall kan kontrollera dåliga och bra länkar bland andra alternativ.
+* **Dag CQ Link Checker Transformer**  - Gör det möjligt att konvertera länkar baserat på en användardefinierad regeluppsättning.
+
+Mer information om hur du ändrar OSGi-inställningar finns i dokumentet [OSGi Configuration Settings](/help/sites-deploying/osgi-configuration-settings.md).
+
+## Inaktiverar länkkontrollen {#disabling}
+
+Du kan välja att inaktivera länkkontrollen helt. Så här gör du:
+
+1. Öppna OSGi-konsolen.
+1. Redigera **Dag CQ Link Checker Transformer**
+1. Markera de alternativ du vill inaktivera:
+   * **Inaktivera kontroll**  för att inaktivera validering av länkar
+   * **Inaktivera omskrivning**  för att inaktivera länktomformningar
+
+>[!NOTE]
+>
+>Om du inaktiverar länkkontroll efter att du har börjat skapa ditt innehåll kan du fortfarande se poster i fönstret [External Link Checker](#external-link-checker), men de kommer inte längre att uppdateras.
