@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Arbeta med komponenten 3D-platser {#working-with-the-d-sites-component}
+# Arbeta med 3D-platskomponenten {#working-with-the-d-sites-component}
 
 AEM 3D innehåller en AEM Sites-komponent som du kan använda för att implementera interaktiv visning av 3D-modeller på webbsidor.
 
@@ -26,7 +26,7 @@ När du har lagt till 3D-komponenten kan du [visa 3D-resursen i den komponenten.
 
 ## Lägga till 3D-komponenten i sidmallen {#adding-the-d-component-to-the-page-template}
 
-Du måste aktivera 3D-komponenten på sidan innan du kan placera den på en sida. Mer information om hur du aktiverar komponenter i mallar finns i [Redigera mallar](/help/sites-authoring/templates.md#editing-a-template-layout-template-author) .
+Du måste aktivera 3D-komponenten på sidan innan du kan placera den på en sida. Mer information om hur du aktiverar komponenter i mallar finns i [Redigera mallar](/help/sites-authoring/templates.md#editing-a-template-layout-template-author).
 
 **Lägga till 3D-komponenten i sidmallen**:
 
@@ -34,15 +34,15 @@ Du måste aktivera 3D-komponenten på sidan innan du kan placera den på en sida
 
 1. Navigera till den sidmall som du vill aktivera 3D-komponenten i och markera mallen.
 
-1. Tryck **[!UICONTROL Edit]** för att öppna mallen.
-1. I den nedrullningsbara menyn uppe till höger på sidan väljer du **[!UICONTROL Structure]** läge, om det inte redan är aktivt.
+1. Tryck på **[!UICONTROL Edit]** för att öppna mallen.
+1. I den nedrullningsbara menyn i sidans övre högra hörn väljer du läget **[!UICONTROL Structure]**, om det inte redan är aktivt.
 
    ![image2017-11-14_15-33-57](assets/image2017-11-14_15-33-57.png)
 
-1. Tryck på **[!UICONTROL Layout Container]** området för att markera det.
+1. Tryck på **[!UICONTROL Layout Container]**-regionen för att markera den.
 
-1. Tryck på **[!UICONTROL Policy]** knappen för att öppna **[!UICONTROL Policy Editor]**.
-1. Markera **[!UICONTROL Properties]** bockmarkeringen i **[!UICONTROL 3D]** avsnittet och tryck sedan på **[!UICONTROL Done]** för att spara ändringarna och stänga **[!UICONTROL Policy Editor]**.
+1. Tryck på knappen **[!UICONTROL Policy]** för att öppna **[!UICONTROL Policy Editor]**.
+1. Markera **[!UICONTROL 3D]**-bockmarkeringen i **[!UICONTROL Properties]**-avsnittet och tryck sedan på **[!UICONTROL Done]** för att spara ändringarna och stänga **[!UICONTROL Policy Editor]**.
 
    Nu kan du placera 3D-platskomponenten på alla sidor som använder den här mallen.
 
@@ -56,21 +56,21 @@ Du måste aktivera 3D-komponenten på sidan innan du kan placera den på en sida
 
 1. Öppna AEM Sites och markera den webbsida där du vill lägga till 3D-komponenten.
 
-1. Tryck på **[!UICONTROL Edit]** pennikonen för att öppna sidan i sidredigeraren. Kontrollera att **[!UICONTROL Edit]** läget nära sidans övre högra hörn är markerat.
+1. Tryck på ikonen **[!UICONTROL Edit]** (penna) för att öppna sidan i sidredigeraren. Kontrollera att **[!UICONTROL Edit]**-läget nära sidans övre högra hörn är markerat.
 
    ![image2017-11-14_15-44-40](assets/image2017-11-14_15-44-40.png)
 
 1. Tryck på rälsväljaren för att öppna sidopanelen.
 
-1. Tryck på plustecknet för att öppna **[!UICONTROL Components]** listan.
+1. Tryck på plustecknet för att öppna listan **[!UICONTROL Components]**.
 
-1. Dra **[!UICONTROL 3D Viewer]** komponenten från **[!UICONTROL Components]** listan till den plats på sidan där du vill att 3D-visningsprogrammet ska visas.
+1. Dra **[!UICONTROL 3D Viewer]**-komponenten från **[!UICONTROL Components]**-listan till den plats på sidan där du vill att 3D-visningsprogrammet ska visas.
 
 ## Konfigurera 3D-komponenten {#configuring-the-d-component}
 
-1. I sidredigeraren i AEM Sites väljer du den **[!UICONTROL 3D Viewer]** komponent som du tidigare har lagt till på sidan.
+1. I sidredigeraren i AEM Sites väljer du den **[!UICONTROL 3D Viewer]**-komponent som du tidigare har lagt till på sidan.
 
-1. Tryck på **[!UICONTROL Configuration]** ikonen (skiftnyckel) för att öppna dialogrutan för komponentkonfiguration.
+1. Tryck på ikonen **[!UICONTROL Configuration]** (skiftnyckel) för att öppna dialogrutan för komponentkonfiguration.
 
    Du kan ange följande komponentegenskaper:
 
@@ -88,7 +88,7 @@ Du måste aktivera 3D-komponenten på sidan innan du kan placera den på en sida
     </tr> 
     <tr> 
     <td>Scennamn</td> 
-    <td><p>Välj en 3D-scen i listan över tillgängliga faser. Scenen innehåller bakgrund och ljus.</p> <p>Se <a href="/help/assets/about-the-use-of-stages-in-aem-3d.md" target="_blank">Använda scener AEM 3D-platser</a>.</p> </td> 
+    <td><p>Välj en 3D-scen i listan över tillgängliga faser. Scenen innehåller bakgrund och ljus.</p> <p>Se <a href="/help/assets/about-the-use-of-stages-in-aem-3d.md" target="_blank">Använda scener i AEM 3D-platser</a>.</p> </td> 
     <td>Ignorerad för Adobe Dimension-resurser.</td> 
     </tr> 
     <tr> 
@@ -132,44 +132,44 @@ Du måste aktivera 3D-komponenten på sidan innan du kan placera den på en sida
 1. Tryck på bockmarkeringen för att spara ändringarna.
 
    Förutom de inställningar som är tillgängliga i dialogrutan för komponentkonfiguration finns det ett antal globala konfigurationsinställningar som kan ändras via CRXDE Lite.
-Mer information om de här globala inställningarna finns i [Avancerade konfigurationsinställningar](advanced-config-3d.md) .
+Mer information om de här globala inställningarna finns i [Avancerade konfigurationsinställningar](advanced-config-3d.md).
 
 ## Tilldela en 3D-modell till komponenten {#assigning-a-d-model-to-the-component}
 
-1. I sidredigeraren i AEM Sites klickar du på **[!UICONTROL Assets]** ikonen för att öppna resurslistan på sidpanelen.
+1. Klicka på ikonen **[!UICONTROL Assets]** i sidredigeraren för AEM Sites för att öppna resurslistan i sidpanelen.
 
-1. Markera filtret om du vill dölja oönskade resurstyper. **[!UICONTROL 3D Models]**
+1. Välj filtret **[!UICONTROL 3D Models]** om du vill dölja oönskade resurstyper.
 
    ![screen_shot_2017-12-11at124258](assets/screen_shot_2017-12-11at124258.png)
 
 1. Sök efter eller bläddra till den 3D-resurs som du vill visa på sidan som redigeras.
 
-1. Dra 3D-resursen från **[!UICONTROL Assets]** listan till den **[!UICONTROL 3D Viewer]** komponent som tidigare placerats på sidan.
+1. Dra 3D-resursen från listan **[!UICONTROL Assets]** till den **[!UICONTROL 3D Viewer]**-komponent som tidigare placerats på sidan.
 
    Adobe Dimension-resurser återges med den nya visningsprogramtekniken som bygger på den öppna glTF-standarden, medan alla andra 3D-resurstyper är beroende av det klassiska AEM 3D webGL-visningsprogrammet. Komponenten väljer automatiskt lämpligt visningsprogram baserat på 3D-modellens typ.
 
 ## Förhandsgranska en webbsida som har en 3D-komponent {#previewing-a-web-page-that-has-a-d-component}
 
-När webbsidan är i **[!UICONTROL Edit]** läge visar 3D-komponenten 3D-modellen, men det går inte att interagera med modellen.
+När webbsidan är i **[!UICONTROL Edit]**-läge visar 3D-komponenten 3D-modellen, men ingen interaktion med modellen är möjlig.
 
 Du kan förhandsgranska webbsidan i sidredigeraren med fullständig åtkomst till 3D-komponentens funktioner.
 
-Se även [Visa 3D-resurser i 3D-komponenten](viewing-3d-assets.md#viewing-d-assets-in-the-sites-d-component)Platser.
+Se även [Visa 3D-resurser i 3D-komponenten för platser](viewing-3d-assets.md#viewing-d-assets-in-the-sites-d-component).
 
 **Så här förhandsgranskar du en webbsida som har en 3D-komponent**:
 
 1. Gör något av följande:
 
-   * Klicka i det övre högra hörnet på sidan för **[!UICONTROL Preview]** att öppna förhandsvisningsläget.
+   * Klicka på **[!UICONTROL Preview]** uppe till höger på sidan för att öppna förhandsvisningsläget.
    * Ta bort `/edit.html` från sidans URL i webbläsaren.
 
-## Publicera sidan och materialet {#publishing-the-page-and-assets}
+## Publicera sidan och resurserna {#publishing-the-page-and-assets}
 
-Mer information om hur du publicerar resurser finns i [Publicera resurser](managing-assets-touch-ui.md) . Mer information om hur du publicerar sidor finns i [Publicera sidor](/help/sites-authoring/publishing-pages.md) .
+Mer information om hur du publicerar resurser finns i [Publicera resurser](managing-assets-touch-ui.md). Mer information om hur du publicerar sidor finns i [Publicera sidor](/help/sites-authoring/publishing-pages.md).
 
 >[!NOTE]
 >
->Om du använder **[!UICONTROL Publish Page]** menyalternativet på **[!UICONTROL Page Information]** menyn publiceras sidan och alla primära sidberoenden. Sekundära beroenden som kan refereras av 3D-modellen och/eller 3D-scenen, som texturscheman och IBL-bilder, publiceras inte när du publicerar sidan på det här sättet.
+>Om du använder menyalternativet **[!UICONTROL Publish Page]** på **[!UICONTROL Page Information]**-menyn kommer sidan och alla primära sidberoenden att publiceras. Sekundära beroenden som kan refereras av 3D-modellen och/eller 3D-scenen, som texturscheman och IBL-bilder, publiceras inte när du publicerar sidan på det här sättet.
 >
 >Adobe rekommenderar att du publicerar alla 3D-resurser och deras beroenden direkt från AEM Assets innan du publicerar webbsidan som refererar till dessa resurser.
 
