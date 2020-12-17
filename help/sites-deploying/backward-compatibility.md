@@ -10,10 +10,10 @@ topic-tags: upgrading
 content-type: reference
 discoiquuid: 5e76fe09-4d37-4c8c-8baf-97e75689bd26
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 6fc1a2502187be0fbbfbea516788e705f1a2697c
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 1%
+source-wordcount: '501'
+ht-degree: 0%
 
 ---
 
@@ -28,9 +28,9 @@ ht-degree: 1%
 
 I AEM 6.4 har alla funktioner utvecklats med bakåtkompatibilitet i åtanke.
 
-I de flesta fall behöver inte kunder som kör AEM 6.3 ändra koden eller anpassningarna när de gör uppgraderingen. För AEM 6.1- och 6.2-kunder finns det inga ytterligare brytningsförändringar än vad man skulle få vid en uppgradering till 6.3.
+I de flesta fall behöver inte kunder som kör AEM 6.3 ändra koden eller anpassningarna när de gör uppgraderingen. För AEM 6.1- och 6.2-kunder finns det inga ytterligare brytningsförändringar än vad som skulle ha skett vid en uppgradering till 6.3.
 
-Undantag där funktioner inte kan hållas bakåtkompatibla kan göras genom att man installerar ett kompatibilitetspaket för 6.3 (se hur du installerar nedan för mer information om var du ska hämta). Kompileringspaketet återställer kompatibilitet för program som är kompatibla med AEM 6.3.
+Undantag där funktioner inte kan hållas bakåtkompatibla kan göras genom att man installerar ett kompatibilitetspaket för 6.3 (se hur du installerar nedan för mer information om var du ska hämta). Kompatibilitetspaketet återställer kompatibilitet för program som är kompatibla med AEM 6.3.
 
 Med Kompatibilitetspaketet kan du köra AEM i kompatibilitetsläge och skjuta upp anpassad utveckling mot nya AEM funktioner:
 
@@ -40,7 +40,7 @@ Med Kompatibilitetspaketet kan du köra AEM i kompatibilitetsläge och skjuta up
 
 ![screen_shot_2018-04-05at43339pm](assets/screen_shot_2018-04-05at43339pm.png)
 
-Kompatibilitetspaketet har två lägen: **Routning aktiverad** och **routning inaktiverad**.
+Kompatibilitetspaketet har två lägen: **Routning aktiverad** och **Routning inaktiverad**.
 
 Detta gör att AEM 6.4 kan köras i tre lägen:
 
@@ -62,7 +62,7 @@ Kompatibilitetsläget är avsett för kunder som har anpassat gränssnitt som in
 
 ## Konfigurera {#how-to-set-up}
 
-Kompatibilitetspaketet AEM 6.3 kan installeras som ett paket med hjälp av pakethanteraren på den här [länken](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63).
+Kompatibilitetspaketet AEM 6.3 kan installeras som ett paket med hjälp av pakethanteraren. Du kan hämta [AEM 6.3-kompatibilitetspaketet från platsen Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63).
 
 När Kompatibilitetspaketet har installerats kan routningen aktiveras eller inaktiveras med en växel i OSGI-konfigurationen enligt nedan:
 
