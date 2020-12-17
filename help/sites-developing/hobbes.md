@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: components, testing
 discoiquuid: bc0130c3-826e-47dd-b18b-85e1a7bb9936
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 088961dd5457f2136a5eea6f6811455105a8dd1f
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '717'
 ht-degree: 2%
 
 ---
@@ -20,13 +20,13 @@ ht-degree: 2%
 
 # Testa användargränssnittet{#testing-your-ui}
 
-AEM tillhandahåller ett ramverk för automatisering av tester för ditt AEM användargränssnitt. Med hjälp av ramverket kan du skriva och köra gränssnittstester direkt i en webbläsare. Ramverket innehåller ajavascript-API för att skapa tester.
+AEM tillhandahåller ett ramverk för automatisering av tester för ditt AEM användargränssnitt. Med hjälp av ramverket kan du skriva och köra gränssnittstester direkt i en webbläsare. Ramverket innehåller ett javascript-API för att skapa tester.
 
 I AEM testramverk används Hobbes.js, ett testbibliotek skrivet i Javascript. Hobbes.js-ramverket utvecklades för testning av AEM som en del av utvecklingsprocessen. Ramverket är nu tillgängligt för allmän användning för testning av dina AEM program.
 
 >[!NOTE]
 >
->Mer information om API:t finns i Hobbes.js- [dokumentationen](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/test-api/index.html) .
+>Mer information om API:t finns i dokumentationen till Hobbes.js [.](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/test-api/index.html)
 
 ## Testernas struktur {#structure-of-tests}
 
@@ -34,11 +34,11 @@ När du använder automatiska tester i AEM är följande termer viktiga att för
 
 |  |  |
 |---|---|
-| Åtgärd | Ett **funktionsmakro** är en specifik aktivitet på en webbsida, som att klicka på en länk eller en knapp. |
+| Åtgärd | En **åtgärd** är en specifik aktivitet på en webbsida, som att klicka på en länk eller en knapp. |
 | Testfall | Ett **testfall** är en specifik situation som kan bestå av en eller flera **åtgärder**. |
-| Test Suite | En **testsvit** är en grupp av relaterade **testfall** som tillsammans testar ett visst användningsfall. |
+| Test Suite | En **testsvit** är en grupp med relaterade **testfall** som tillsammans testar ett visst användningsfall. |
 
-## Kör tester {#executing-tests}
+## Kör test {#executing-tests}
 
 ### Visa testsviter {#viewing-test-suites}
 
@@ -70,7 +70,7 @@ Så här kör du en testsvit:
 
    ![chlimage_1-28](assets/chlimage_1-28.png)
 
-1. Klicka eller tryck på knappen **Kör test** .
+1. Klicka eller tryck på **Kör test**.
 
    ![](do-not-localize/chlimage_1-7.png)
 
@@ -78,17 +78,17 @@ Så här kör du en testsvit:
 
    ![chlimage_1-29](assets/chlimage_1-29.png)
 
-1. Granska resultatet av testfallet genom att trycka på eller klicka på beskrivningen för att öppna panelen **Resultat** . Om du trycker eller klickar på namnet på testfallet på panelen **Resultat** visas all information.
+1. Granska resultatet av testfallet genom att trycka på eller klicka på beskrivningen för att öppna panelen **Resultat**. Om du trycker eller klickar på namnet på testfallet på panelen **Resultat** visas all information.
 
    ![chlimage_1-30](assets/chlimage_1-30.png)
 
-### Köra flera tester {#running-multiple-tests}
+### Kör flera tester {#running-multiple-tests}
 
 Testsviter körs sekventiellt i den ordning som de visas i konsolen. Du kan fördjupa dig i ett test för att se de detaljerade resultaten.
 
 ![chlimage_1-31](assets/chlimage_1-31.png)
 
-1. På testpanelen trycker eller klickar du på knappen **Kör alla tester** eller på knappen **Kör tester** under titeln på testsviten som du vill köra.
+1. På testpanelen trycker eller klickar du på knappen **Kör alla tester** eller **Kör test** under titeln på testsviten som du vill köra.
 
    ![](do-not-localize/chlimage_1-8.png)
 
@@ -98,13 +98,13 @@ Testsviter körs sekventiellt i den ordning som de visas i konsolen. Du kan för
 
 ## Skapa och använda en enkel testsvit {#creating-and-using-a-simple-test-suite}
 
-I proceduren nedan steg du igenom när du skapar och kör en Test Suite med [We.Retail-innehåll](/help/sites-developing/we-retail.md), men du kan enkelt ändra testet så att det använder en annan webbsida.
+I följande procedur steg du igenom när du skapar och kör en Test Suite med [We.Retail content](/help/sites-developing/we-retail.md), men du kan enkelt ändra testet så att det använder en annan webbsida.
 
 Mer information om hur du skapar egna testsviter finns i [Hobbes.js API-dokumentationen](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/test-api/index.html).
 
 1. Öppna CRXDE Lite. ([http://localhost:4502/crx/de](http://localhost:4502/crx/de))
-1. Högerklicka på `/etc/clientlibs` mappen och klicka på **Skapa > Skapa mapp**. Skriv namnet `myTests` och klicka på **OK**.
-1. Högerklicka på `/etc/clientlibs/myTests` mappen och klicka på **Skapa > Skapa nod**. Använd följande egenskapsvärden och klicka sedan på **OK**:
+1. Högerklicka på mappen `/etc/clientlibs` och klicka på **Skapa > Skapa mapp**. Skriv `myTests` som namn och klicka på **OK**.
+1. Högerklicka på mappen `/etc/clientlibs/myTests` och klicka på **Skapa > Skapa nod**. Använd följande egenskapsvärden och klicka sedan på **OK**:
 
    * Namn: `myFirstTest`
    * Typ: `cq:ClientLibraryFolder`
@@ -122,22 +122,22 @@ Mer information om hur du skapar egna testsviter finns i [Hobbes.js API-dokument
    >
    >Om du vill testa adaptiva formulär lägger du till följande värden i kategorierna och beroenden. Till exempel:
    >
-   >**kategorier**: `granite.testing.hobbes.tests, granite.testing.hobbes.af.commons`
+   >**kategorier**:  `granite.testing.hobbes.tests, granite.testing.hobbes.af.commons`
    >
-   >**beroenden**: `granite.testing.hobbes.testrunner, granite.testing.hobbes.af`
+   >**beroenden**:  `granite.testing.hobbes.testrunner, granite.testing.hobbes.af`
 
 1. Klicka på **Spara alla**.
-1. Högerklicka på `myFirstTest` noden och klicka på **Skapa > Skapa fil**. Name the file `js.txt` and click **OK**.
-1. Ange följande text i `js.txt` filen:
+1. Högerklicka på noden `myFirstTest` och klicka på **Skapa > Skapa fil**. Ge filen namnet `js.txt` och klicka på **OK**.
+1. Ange följande text i `js.txt`-filen:
 
    ```
    #base=.
    myTestSuite.js
    ```
 
-1. Klicka på **Spara alla** och stäng sedan `js.txt` filen.
-1. Högerklicka på `myFirstTest` noden och klicka på **Skapa > Skapa fil**. Name the file `myTestSuite.js` and click **OK**.
-1. Kopiera följande kod till `myTestSuite.js` filen och spara sedan filen:
+1. Klicka på **Spara alla** och stäng sedan filen `js.txt`.
+1. Högerklicka på noden `myFirstTest` och klicka på **Skapa > Skapa fil**. Ge filen namnet `myTestSuite.js` och klicka på **OK**.
+1. Kopiera följande kod till `myTestSuite.js`-filen och spara sedan filen:
 
    ```
    new hobs.TestSuite("Experience Content Test Suite", {path:"/etc/clientlibs/myTests/myFirstTest/myTestSuite.js"})
@@ -152,5 +152,5 @@ Mer information om hur du skapar egna testsviter finns i [Hobbes.js API-dokument
    );
    ```
 
-1. Gå till **testkonsolen** för att testa testsviten.
+1. Gå till **Testing**-konsolen för att testa testsviten.
 
