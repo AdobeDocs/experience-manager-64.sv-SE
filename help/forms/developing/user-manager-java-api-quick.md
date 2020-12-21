@@ -905,7 +905,7 @@ I följande kodexempel skapas en grupp med namnet AdobeGroup till AEM Forms. (Se
 
 ## Snabbstart (SOAP-läge) Hantera inställningsnoder {#quick-start-soap-mode-managing-preferences-nodes}
 
-Följande Java-kodmodeller hanterar Preferences Nodes med API:erna för användarhantering. (Se [Programmatisk hantering av inställningsnoder](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
+Följande Java-kodmodeller hanterar Preferences Nodes med API:erna för användarhantering. ( Se [Programmatisk hantering av inställningsnoder](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
 
 ```as3
 /* 
@@ -1008,7 +1008,7 @@ public class ManagePreferences {
 
 ## Snabbstart (SOAP-läge): Hantera inställningsnoderna programmatiskt med Java API {#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api}
 
-Följande Java-kodmodeller hanterar inställningsnoder med API:er för användarhantering (se [Programmatisk hantering av inställningsnoder](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes)):
+Följande Java-kodmodeller hanterar inställningsnoder med API:erna för användarhantering ( Se [Programmatisk hantering av inställningsnoderna](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
 
 ```as3
 /* 
