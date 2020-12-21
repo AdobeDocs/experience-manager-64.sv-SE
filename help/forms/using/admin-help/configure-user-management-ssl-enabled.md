@@ -26,10 +26,10 @@ För att synkroniseringen ska fungera korrekt i stället för LDAPS måste LDAP-
 1. Exportera ett klientcertifikat från katalogservern.
 1. Använd nyckelverktygsprogrammet för att importera klientcertifikatfilen till standardcertifikatarkivet för JVM™ (Java Virtual Machine) i AEM formulärprogramserver. Proceduren för den här aktiviteten varierar beroende på dina JVM- och klientinstallationssökvägar. Om du till exempel använder BEA WebLogic Server med JDK 1.5 från en kommandotolk skriver du den här texten:
 
-   `keytool -import -alias`*alias *`-file certificatename -keystore C:\bea\jdk15_04\jre\lib\security\cacerts`
+   `keytool -import -alias`*alias* `-file certificatename -keystore C:\bea\jdk15_04\jre\lib\security\cacerts`
 
-1. Skriv lösenordet när du uppmanas till det. (I Java är standardlösenordet `changeit`.) Ett meddelande om att certifikatet har importerats visas.
-1. Ange att certifikatet är pålitligt när du uppmanas `Yes` att göra det.
+1. Skriv lösenordet när du uppmanas till det. (För Java är standardlösenordet `changeit`.) Ett meddelande om att certifikatet har importerats visas.
+1. Ange `Yes` som betrodd för certifikatet när du uppmanas att göra det.
 1. Aktivera SSL i Användarhantering och, när du konfigurerar kataloginställningarna, välj Ja för SSL-alternativet och ändra portinställningarna därefter. Standardportnumret är 636.
 
 >[!NOTE]
