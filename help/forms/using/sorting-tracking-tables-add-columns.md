@@ -116,7 +116,7 @@ De återstående attributen i aktivitetsmodellen som är tillgängliga för visn
  </tbody> 
 </table>
 
-För följande anpassningar i uppgiftstabellen måste du göra semantiska ändringar i källkoden. Se [Introduktion till att anpassa AEM Forms-arbetsytan](/help/forms/using/introduction-customizing-html-workspace.md) för hur du kan göra semantiska ändringar med hjälp av SDK för arbetsytan och skapa ett minipaket från den ändrade källan.
+För följande anpassningar i uppgiftstabellen måste du göra semantiska ändringar i källkoden. Se [Introduktion till anpassning av AEM Forms-arbetsytan](/help/forms/using/introduction-customizing-html-workspace.md) för hur du kan göra semantiska ändringar med hjälp av arbetsytans SDK och skapa ett minierat paket från den ändrade källan.
 
 ## Ändra tabellkolumner och deras ordning {#changing-table-columns-and-their-order}
 
@@ -168,7 +168,7 @@ Så här sorterar du uppgiftslisttabellen när du klickar på kolumnrubriken:
    }
    ```
 
-   Anropa funktionen för i hanteraren `onTaskTableHeaderClick` `js/runtime/util/history.js`.
+   Anropa funktionen `onTaskTableHeaderClick` i `js/runtime/util/history.js` i hanteraren.
 
    ```as3
    onTaskTableHeaderClick: function (event) {
