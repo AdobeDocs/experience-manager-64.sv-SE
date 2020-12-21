@@ -25,11 +25,11 @@ En administratör kan konfigurera en nätverksmapp, en s.k. bevakad mapp, så at
 
 Du kan använda någon av följande metoder för att skapa en bevakad mapp i filsystemet:
 
-* När du konfigurerar egenskaperna för en speciell nod i konfigurationen för bevakad mapp anger du den fullständiga sökvägen till den överordnade katalogen i egenskapen folderPath och lägger till namnet på den bevakade mapp som ska skapas, vilket visas i följande exempel: `C:/MyPDFs/MyWatchedFolder`
+* När du konfigurerar egenskaperna för en nod för konfiguration av bevakad mapp anger du den fullständiga sökvägen till den överordnade katalogen i egenskapen folderPath och lägger till namnet på den bevakade mapp som ska skapas, vilket visas i följande exempel: `C:/MyPDFs/MyWatchedFolder`
 
    Mappen `MyWatchedFolder`finns inte. AEM Forms försöker skapa mappen med den angivna sökvägen.
 
-* Skapa en mapp på filsystemet innan du konfigurerar en bevakad mappslutpunkt och ange sedan den fullständiga sökvägen i egenskapen folderPath. Mer information om egenskapen folderPath finns i Egenskaper [för](#watchedfolderproperties)bevakad mapp.
+* Skapa en mapp på filsystemet innan du konfigurerar en bevakad mappslutpunkt och ange sedan den fullständiga sökvägen i egenskapen folderPath. Mer information om egenskapen folderPath finns i [Egenskaper för bevakad mapp](#watchedfolderproperties).
 
 >[!NOTE]
 >
@@ -54,13 +54,13 @@ Om du vill konfigurera en bevakad mapp skapar du en konfigurationsnod för bevak
    * `inputProcessorId`
    * `outputFilePattern`
 
-   En fullständig lista över egenskaper som stöds finns i Egenskaper [för](#watchedfolderproperties)bevakad mapp.
+   En fullständig lista över egenskaper som stöds finns i [Egenskaper för bevakad mapp](#watchedfolderproperties).
 
-1. Klicka på **Spara alla**. När noden har skapats och egenskaperna har sparats. Mapparna `input`, `result`, `failure`, `preserve`och `stage`skapas på den sökväg som anges i `folderPath` egenskapen.
+1. Klicka på **Spara alla**. När noden har skapats och egenskaperna har sparats. Mapparna `input`, `result`, `failure`, `preserve` och `stage` skapas med den sökväg som anges i egenskapen `folderPath`.
 
    Sökningsjobbet startar skanningen av den bevakade mappen med ett angivet tidsintervall.
 
-## Egenskaper för bevakad mapp {#watchedfolderproperties}
+## Bevakade mappegenskaper {#watchedfolderproperties}
 
 Du kan konfigurera följande egenskaper för en bevakad mapp.
 
@@ -85,17 +85,17 @@ Du kan konfigurera följande egenskaper för en bevakad mapp.
    >
    >Om servern som är värd för den bevakade mappen inte har något av det angivna körningsläget aktiveras alltid den bevakade mappen oavsett serverns körningslägen.
 
-* **outputFilePattern (String)**: Utdatafilens mönster. Du kan ange en mapp eller ett filmönster. Om ett mappmönster anges har utdatafilerna namn enligt arbetsflödena. Om ett filmönster anges har utdatafilerna namn som beskrivs i filmönstret. [Fil- och mappmönstret](/help/forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p) kan även ange en katalogstruktur för utdatafilerna. Det är en obligatorisk egenskap.
+* **outputFilePattern (String)**: Utdatafilens mönster. Du kan ange en mapp eller ett filmönster. Om ett mappmönster anges har utdatafilerna namn enligt arbetsflödena. Om ett filmönster anges har utdatafilerna namn som beskrivs i filmönstret. [Fil- och ](/help/forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p) mappmönster kan också ange en katalogstruktur för utdatafilerna. Det är en obligatorisk egenskap.
 
 * **stageFileExpirationDuration (Long, default -1)**: Antalet sekunder som väntar innan en indatafil/indatamapp som redan har hämtats för bearbetning kan behandlas som om tidsgränsen har överskridits och markerats som ett fel. Den här förfallomekanismen aktiveras bara när värdet för den här egenskapen är ett positivt tal.
 
-   **Obs!** *Även om en inmatning har markerats som att den har nått tidsgränsen med den här mekanismen kan den fortfarande bearbetas i bakgrunden, men bara ta längre tid än förväntat. Om indatainnehållet förbrukades innan timeoutmekanismen startades kan bearbetningen till och med slutföras senare och utdata dumpas i resultatmappen. Om innehållet inte förbrukades innan tidsgränsen uppnåddes är det troligtvis så att bearbetningen misslyckas senare när innehållet används, och det här felet loggas även i felmappen för samma indata. Om bearbetningen av indata inte aktiveras på grund av ett tillfälligt fel i jobb/arbetsflöde (vilket är det scenario som utgångsmekanismen avser), kommer ingen av dessa två situationer att inträffa. För alla poster i felmappen som markerats som misslyckade på grund av en timeout (sök efter meddelanden i formatet &quot;Fil som inte bearbetats efter lång tid, markerat som misslyckad!&quot; i felloggen) är det tillrådligt att söka igenom resultatmappen (och även själva felmappen för en annan post för samma indata) för att kontrollera om någon av de händelser som beskrivs ovan faktiskt inträffade.*
+   **Obs!** *Även om en inmatning har markerats som att den har nått tidsgränsen med den här mekanismen kan den fortfarande bearbetas i bakgrunden, men bara ta längre tid än förväntat. Om indatainnehållet förbrukades innan timeoutmekanismen startades kan bearbetningen till och med slutföras senare och utdata dumpas i resultatmappen. Om innehållet inte förbrukades innan tidsgränsen uppnåddes är det troligtvis så att bearbetningen misslyckas senare när innehållet används, och det här felet loggas även i felmappen för samma indata. Om bearbetningen av indata inte aktiveras på grund av ett tillfälligt fel i jobb/arbetsflöde (vilket är det scenario som utgångsmekanismen avser), kommer ingen av dessa två situationer att inträffa. För alla poster i felmappen som markerats som misslyckade på grund av en timeout (sök efter meddelanden i formatet &quot;Fil som inte bearbetats efter lång tid, markerat som misslyckad!&quot; i felloggen är det tillrådligt att söka igenom resultatmappen (och även själva felmappen för en annan post för samma indata) för att kontrollera om någon av de händelser som beskrivits tidigare faktiskt inträffade.*
 
 * 
-* **deleteExpiredStageFileOnlyWhenThrottled (Boolean, standard true):** Anger om förfallomekanismen endast ska aktiveras när bevakade mappar stryps. Mekanismen är mer relevant för begränsade bevakade mappar eftersom ett litet antal filer som ligger kvar i ett obearbetat tillstånd (på grund av tillfälliga fel i jobb/arbetsflöde) kan kväva bearbetningen för hela gruppen när strypning är aktiverat. Om den här egenskapen behålls som true (standard) aktiveras inte förfallomekanismen för bevakade mappar som inte är begränsade. Om egenskapen behålls som false aktiveras mekanismen alltid så länge egenskapen stageFileExpirationDuration är ett positivt tal.
+* **deleteExpiredStageFileOnlyWhenThrottled (Boolean, standard true):** Anger om förfallomekanismen endast ska aktiveras när bevakad mapp stryps. Mekanismen är mer relevant för begränsade bevakade mappar eftersom ett litet antal filer som ligger kvar i ett obearbetat tillstånd (på grund av tillfälliga fel i jobb/arbetsflöde) kan kväva bearbetningen för hela gruppen när strypning är aktiverat. Om den här egenskapen behålls som true (standard) aktiveras inte förfallomekanismen för bevakade mappar som inte är begränsade. Om egenskapen behålls som false aktiveras mekanismen alltid så länge egenskapen stageFileExpirationDuration är ett positivt tal.
 
 * **pollInterval (lång)**: Intervallet i sekunder för skanning av den bevakade mappen för indata. Om inte inställningen Gräns är aktiverad ska avsökningsintervallet vara längre än tiden för att bearbeta ett genomsnittligt jobb. annars kan systemet bli överbelastat. Standardvärdet är 5. Mer information finns i beskrivningen för Batchstorlek. Värdet för pollinterval måste vara större än eller lika med ett.
-* **excludeFilePattern (String)**: ett semikolon **;** avgränsad lista över mönster som används av en bevakad mapp för att avgöra vilka filer och mappar som ska sökas igenom och hämtas. Alla filer och mappar med det här mönstret skannas inte för bearbetning. Den här inställningen är användbar när indata är en mapp med flera filer. Innehållet i mappen kan kopieras till en mapp med ett namn som hämtas av den bevakade mappen. Detta förhindrar att den bevakade mappen hämtar en mapp för bearbetning innan mappen kopieras helt till indatamappen. Standardvärdet är null.
+* **excludeFilePattern (String)**: En semikolon  **;** avgränsad lista över mönster som används av en bevakad mapp för att avgöra vilka filer och mappar som ska sökas igenom och plockas upp. Alla filer och mappar med det här mönstret skannas inte för bearbetning. Den här inställningen är användbar när indata är en mapp med flera filer. Innehållet i mappen kan kopieras till en mapp med ett namn som hämtas av den bevakade mappen. Detta förhindrar att den bevakade mappen hämtar en mapp för bearbetning innan mappen kopieras helt till indatamappen. Standardvärdet är null.
 
    Du kan använda [filmönster](/help/forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p) för att exkludera:
 
@@ -109,7 +109,7 @@ Du kan konfigurera följande egenskaper för en bevakad mapp.
 
 Mer information om filmönster finns i [Om filmönster](/help/forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p).
 
-* **includeFilePattern (String)**: ett semikolon **;** avgränsad lista med mönster som den bevakade mappen använder för att avgöra vilka mappar och filer som ska sökas igenom och hämtas. Om till exempel IncludeFilePattern är input&amp;ast;, alla filer och mappar som matchar input&amp;ast; plockas upp. Detta inkluderar filer och mappar med namnen input1, input2 och så vidare. Standardvärdet är &amp;ast; och anger alla filer och mappar. Du kan använda filmönster för att inkludera:
+* **includeFilePattern (String)**: En semikolon  **;** avgränsad lista över mönster som den bevakade mappen använder för att avgöra vilka mappar och filer som ska sökas igenom och hämtas. Om till exempel IncludeFilePattern är input&amp;ast;, alla filer och mappar som matchar input&amp;ast; plockas upp. Detta inkluderar filer och mappar med namnen input1, input2 och så vidare. Standardvärdet är &amp;ast; och anger alla filer och mappar. Du kan använda filmönster för att inkludera:
 
    * Filer med specifika filnamnstillägg; t.ex. &amp;ast;.dat, &amp;ast;.xml, .pdf, &amp;ast;.&amp;ast;
    * Filer med särskilda namn; till exempel data.&amp;ast; innehåller filer och mappar med namnen data1, data2 och så vidare.
@@ -156,11 +156,11 @@ Mer information om filmönster finns i [Om filmönster](/help/forms/using/watche
 
    Inställningarna för avsökningsintervall och Gruppstorlek avgör hur många filer i Bevakade mappar som ska tas upp vid varje avsökning. Bevakad mapp använder en Quartz-trådpool för att skanna indatamappen. Trådpoolen delas med andra tjänster. Om skanningsintervallet är litet genomsöks indatamappen ofta av trådarna. Om filer ofta placeras i den bevakade mappen bör du hålla sökintervallet litet. Om filerna tas bort sällan bör du använda ett större inläsningsintervall så att de andra tjänsterna kan använda trådarna.
 
-   Om det finns en stor mängd filer som tas bort gör du gruppstorleken stor. Om till exempel tjänsten som startas av slutpunkten Bevakade mappar kan bearbeta 700 filer per minut, och användare släpper filer i indatamappen i samma takt, och sedan ställer du in batchstorleken på 350 och avsökningsintervallet på 30 sekunder, kan du förbättra prestandan för Bevakade mappar utan att det kostar för mycket att skanna den bevakade mappen.
+   Om det finns en stor mängd filer som tas bort gör du gruppstorleken stor. Om till exempel tjänsten som startas av slutpunkten Bevakade mappar kan bearbeta 700 filer per minut, och användarna släpper filer i indatamappen i samma takt, och du sedan anger värdet 350 för Gruppstorlek och 30 sekunder för att få prestandan Bevakade mappar utan att kostnaden för att skanna den Bevakade mappen för ofta påverkas.
 
    När filer släpps i den bevakade mappen listas filerna i indata, vilket kan försämra prestanda om skanningen sker varje sekund. Om du ökar skanningsintervallet kan prestandan förbättras. Om filvolymen som tas bort är liten justerar du batchstorleken och avsökningsintervallet. Om till exempel 10 filer tas bort varje sekund, kan du prova att ange pollInterval till 1 sekund och Batch Size till 10
 
-* **throttleOn (Boolean)**: När det här alternativet är markerat begränsas antalet övervakade mappjobb som AEM Forms bearbetar vid en given tidpunkt. Det maximala antalet jobb bestäms av värdet för Batchstorlek. Standardvärdet är true. (Se [Begränsning](/help/forms/using/watched-folder-in-aem-forms.md#p-about-throttling-p).)
+* **throttleOn (Boolean)**: När det här alternativet är markerat begränsas antalet övervakade mappjobb som AEM Forms bearbetar vid en given tidpunkt. Det maximala antalet jobb bestäms av värdet för Batchstorlek. Standardvärdet är true. (Se [Om strypning](/help/forms/using/watched-folder-in-aem-forms.md#p-about-throttling-p).)
 
 * **overwriteDuplicateFilename (Boolean)**: När värdet är True skrivs filerna i resultatmappen och i den bevarade mappen över. Om värdet är Falskt används filer och mappar med ett numeriskt indexsuffix för namnet. Standardvärdet är Falskt.
 * **preserveOnFailure (Boolean)**: Bevara indatafiler om det inte går att utföra åtgärden på en tjänst. Standardvärdet är true.
@@ -172,9 +172,9 @@ Mer information om filmönster finns i [Om filmönster](/help/forms/using/watche
 >Arbetsflödena är asynkrona. Även om du anger värdet som false startas arbetsflödena i asynkront läge.
 
 * **enabled (Boolean)**: Inaktiverar och aktiverar skanning för en bevakad mapp. Ange true om du vill att skanningen av den bevakade mappen ska börja. Standardvärdet är true.
-* **payloadMapperFilter**: När en mapp konfigureras som bevakad mapp skapas en mappstruktur i den bevakade mappen. Strukturen har mappar för att tillhandahålla indata, ta emot utdata (resultat), spara data för fel, bevara data för långvariga processer och spara data för olika faser. Mappstrukturen för en bevakad mapp kan fungera som en nyttolast för Forms-centrerade arbetsflöden. Med en nyttolastmappare kan du definiera strukturen för en nyttolast som använder en bevakad mapp för indata, utdata och bearbetning. Om du till exempel använder standardmapparen mappas innehållet i den bevakade mappen med [nyttolast]\input och [nyttload]\output. Det finns två körklara implementeringar av nyttolastmappare. Om du inte har [någon anpassad implementering](/help/forms/using/watched-folder-in-aem-forms.md#creating-a-custom-payload-mapper-filter)kan du använda en körklar implementering:
+* **payloadMapperFilter**: När en mapp konfigureras som bevakad mapp skapas en mappstruktur i den bevakade mappen. Strukturen har mappar för att tillhandahålla indata, ta emot utdata (resultat), spara data för fel, bevara data för långvariga processer och spara data för olika faser. Mappstrukturen för en bevakad mapp kan fungera som en nyttolast för Forms-centrerade arbetsflöden. Med en nyttolastmappare kan du definiera strukturen för en nyttolast som använder en bevakad mapp för indata, utdata och bearbetning. Om du till exempel använder standardmapparen mappas innehållet i bevakad mapp med [nyttolast]\input och [nyttolast]\output-mappen. Det finns två körklara implementeringar av nyttolastmappare. Om du inte har [en anpassad implementering](/help/forms/using/watched-folder-in-aem-forms.md#creating-a-custom-payload-mapper-filter) använder du en körklar implementering:
 
-   * **Standardmappare:** Använd standardnyttolastmapparen för att behålla in- och utdatamaterialet för de bevakade mapparna i separata in- och utdatamappar i nyttolasten. I arbetsflödets nyttolastsökväg använder du [nyttolast]/indata/och sökvägar för [nyttolast]/utdata för att hämta och spara innehåll.
+   * **Standardmappare:** Använd standardmappningen för nyttolast för att behålla indata- och utdatamaterialet för de bevakade mapparna i separata in- och utdatamappar i nyttolasten. I nyttolastsökvägen för ett arbetsflöde använder du [nyttolast]/input/ och [nyttolast]/utdatavägen för att hämta och spara innehåll.
    * **Enkel filbaserad nyttolastmappare:** Använd den enkla filbaserade nyttolastmapparen för att behålla in- och utdatamaterialet direkt i nyttolastmappen. Ingen extra hierarki skapas, som standardmappare.
 
 ### Anpassade konfigurationsparametrar {#custom-configuration-parameters}
@@ -184,7 +184,7 @@ Tillsammans med ovanstående konfigurationsegenskaper för bevakad mapp kan du �
 1. Logga in på CRXDE-Lite och navigera till konfigurationsnoden Bevakade mappar.
 1. Lägg till en egenskapsparam.&lt;property_name> till konfigurationsnoden Bevakade mappar. Egenskapstypen kan bara vara Boolean, Date, Decimal, Double, Long och String. Du kan ange egenskaper för ett och flera värden.
 
-**Obs!** *Om egenskapens datatyp är Double anger du ett decimaltecken i värdet för dessa egenskaper. För alla egenskaper, där datatypen är Dubbel och inget decimaltecken anges i värdet, konverteras typen till Lång. *
+**Obs!** *Om egenskapens datatyp är Dubbel anger du ett decimaltecken i värdet för dessa egenskaper. För alla egenskaper, där datatypen är Dubbel och inget decimaltecken anges i värdet, konverteras typen till Lång. *
 
 Dessa egenskaper skickas som en oföränderlig mappning av typen Map&lt;String, Object> till bearbetningskoden. Bearbetningskoden kan vara ECMAScript, Workflow eller Service. Värdena som anges för egenskaperna är tillgängliga som nyckelvärdepar i kartan. Key är namnet på egenskapen och value är egenskapens värde. Mer information om anpassade konfigurationsparametrar finns i följande bild:
 
@@ -218,11 +218,12 @@ Du kan starta ett arbetsflöde, en tjänst eller ett skript för att bearbeta do
 
 ### Använda en tjänst för att bearbeta filer i en bevakad mapp   {#using-a-service-to-process-files-of-a-watched-folder-nbsp}
 
-En tjänst är en anpassad implementering av `com.adobe.aemfd.watchfolder.service.api.ContentProcessor` gränssnittet. Den registreras med OSGi tillsammans med några anpassade egenskaper. Implementeringens anpassade egenskaper gör den unik och hjälper till att identifiera implementeringen.
+En tjänst är en anpassad implementering av gränssnittet `com.adobe.aemfd.watchfolder.service.api.ContentProcessor`. Den registreras med OSGi tillsammans med några anpassade egenskaper. Implementeringens anpassade egenskaper gör den unik och hjälper till att identifiera implementeringen.
 
 #### Anpassad implementering av ContentProcessor-gränssnittet {#custom-implementation-of-the-contentprocessor-interface}
 
-Den anpassade implementeringen accepterar en bearbetningskontext (ett objekt av typen com.adobe.aemfd.watchfolder.service.api.ProcessorContext), läser indatadokument och konfigurationsparametrar från kontexten, bearbetar indata och lägger tillbaka utdata i kontexten. ProcessorContext har följande API:er:
+Den anpassade implementeringen accepterar en bearbetningskontext (ett objekt av typen com.adobe.aemfd.watchfolder.service.api.ProcessorContext), läser indatadokument och konfigurationsparametrar från kontexten, bearbetar indata och lägger tillbaka utdata i
+kontext. ProcessorContext har följande API:er:
 
 * **getWatchFolderId**: Returnerar ID:t för den bevakade mappen.
 * **getInputMap**: Returnerar en karta av typen Karta. Kartans nycklar är indatafilens filnamn och ett dokumentobjekt som innehåller filens innehåll. Använd API:t getinputMap för att läsa indatafilerna.
@@ -238,9 +239,9 @@ Följande kod är till exempel en anpassad implementering av ContentProcessor-gr
 public class OutputWriter implements ContentProcessor {
 ```
 
-Om du anger egenskapen inputProcessorId som (foo=bar) och egenskapen inputProcessorType som Service när du [konfigurerar en bevakad mapp](/help/forms/using/watched-folder-in-aem-forms.md#p-create-watched-folder-configuration-node-p)används den ovannämnda tjänsten (anpassad implementering) för att bearbeta indatafilerna för den bevakade mappen.
+När [en bevakad mapp](/help/forms/using/watched-folder-in-aem-forms.md#p-create-watched-folder-configuration-node-p) konfigureras och du anger egenskapen inputProcessorId som (foo=bar) och egenskapen inputProcessorType som Service, används den ovannämnda tjänsten (anpassad implementering) för att bearbeta indatafilerna för den bevakade mappen.
 
-Följande exempel är också en anpassad implementering av ContentProcessor-gränssnittet. I exemplet godkänner tjänsten indatafiler, kopierar filerna till en temporär plats och returnerar ett dokumentobjekt med innehållet i filen. Innehållet i dokumentobjektet sparas i resultatmappen. Den fysiska sökvägen till resultatmappen är konfigurerad i konfigurationsnoden [](/help/forms/using/watched-folder-in-aem-forms.md#p-create-watched-folder-configuration-node-p)Bevakade mappar.
+Följande exempel är också en anpassad implementering av ContentProcessor-gränssnittet. I exemplet godkänner tjänsten indatafiler, kopierar filerna till en temporär plats och returnerar ett dokumentobjekt med innehållet i filen. Innehållet i dokumentobjektet sparas i resultatmappen. Den fysiska sökvägen till resultatmappen har konfigurerats i [konfigurationsnoden Bevakade mappar](/help/forms/using/watched-folder-in-aem-forms.md#p-create-watched-folder-configuration-node-p).
 
 ```java
 @Component(immediate = true)
@@ -267,7 +268,7 @@ Skript är den anpassade ECMAScript-kod som skrivs till för att bearbeta dokume
 * **getConfigParameters**: Returnerar en oföränderlig karta av typen Map. Kartan innehåller konfigurationsparametrarna för en bevakad mapp.
 * **setResult**: I ContentProcessor-implementeringen används API:t för att skriva utdatadokumentet till resultatmappen. Du kan ange ett namn för utdatafilen till API:t setResult. API:t kan välja att använda eller ignorera den angivna filen beroende på vilket utdatamapp/filmönster som har angetts. Om ett mappmönster anges har utdatafilerna namn enligt arbetsflödena. Om ett filmönster anges har utdatafilerna namn som beskrivs i filmönstret.
 
-Följande kod är ett exempel på ECMAScript. Den godkänner indatafiler, kopierar filerna till en temporär plats och returnerar ett dokumentobjekt med innehållet i filen. Innehållet i dokumentobjektet sparas i resultatmappen. Den fysiska sökvägen till resultatmappen är konfigurerad i konfigurationsnoden [](/help/forms/using/watched-folder-in-aem-forms.md#p-create-watched-folder-configuration-node-p)Bevakade mappar.
+Följande kod är ett exempel på ECMAScript. Den godkänner indatafiler, kopierar filerna till en temporär plats och returnerar ett dokumentobjekt med innehållet i filen. Innehållet i dokumentobjektet sparas i resultatmappen. Den fysiska sökvägen till resultatmappen har konfigurerats i [konfigurationsnoden Bevakade mappar](/help/forms/using/watched-folder-in-aem-forms.md#p-create-watched-folder-configuration-node-p).
 
 >[!NOTE]
 >
@@ -286,7 +287,7 @@ processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docm
 
 Som standard finns en behållarmapp (/etc/fd/watchfolder/scripts) där kunderna kan placera sina skript, och standardtjänstanvändaren som används av ramverket för bevakade mappar har de behörigheter som krävs för att läsa skript från den här platsen.
 
-Om du tänker placera dina skript på en anpassad plats är det troligt att standardtjänstanvändaren inte har läsbehörighet över den anpassade platsen. Så här anger du nödvändig behörighet till den anpassade platsen:
+Om du tänker placera dina skript på en anpassad plats, är det troligt att standardtjänstanvändaren inte har läsbehörighet över den anpassade platsen. Så här anger du nödvändig behörighet till den anpassade platsen:
 
 1. Skapa en systemanvändare programmatiskt eller via konsolen `https://[server]:[port]/crx/explorer`. Du kan också använda en befintlig systemanvändare. Det är viktigt att du arbetar med systemanvändare här i stället för med vanliga användare.
 1. Ge läsbehörighet till den nyskapade eller befintliga systemanvändaren på den anpassade plats där skripten lagras. Du kan ha flera anpassade platser. Ange minst läsbehörighet för alla anpassade platser.
@@ -308,7 +309,7 @@ Med arbetsflöden kan du automatisera aktiviteter i Experience Manager. Arbetsfl
 
 Utför följande steg för att bearbeta filer med hjälp av arbetsflöden:
 
-1. Skapa en implementering av `com.adobe.aemfd.watchfolder.workflow.api.WorkflowContextProcessor` gränssnittet. Det liknar implementeringen som skapats för en tjänst.
+1. Skapa en implementering av gränssnittet `com.adobe.aemfd.watchfolder.workflow.api.WorkflowContextProcessor`. Det liknar implementeringen som skapats för en tjänst.
 
    >[!NOTE]
    >
@@ -332,7 +333,7 @@ Argumentet för processWorkflowContext() är ett objekt av typen com.adobe.aemfd
 * getMetadata: Returnerar värdet för metadatavariabeln. Variablerna skickas till metoden WorkflowContextService.execute().
 * getCommitedVariables: Returnerar en skrivskyddad objektmappning som representerar variabler som angetts i föregående steg. Om en variabel inte ändras i något av föregående steg returneras standardvärdet som angavs när den bevakade mappen konfigurerades.
 * getCommitedResults: Returnerar en skrivskyddad dokumentmappning. Kartan representerar de utdatafiler som genereras av föregående steg.
-* setVariable: WorkflowContextProcessor-implementeringen använder variabeln för att ändra variablerna som representerar anpassade dynamiska data som flödar mellan stegen. Variablernas namn och typ är identiska med namnet på de variabler som angavs när den bevakade mappen [konfigurerades](/help/forms/using/watched-folder-in-aem-forms.md#p-configure-the-watched-folder-p). Om du vill ändra värdet för en variabel anropar du API:t setVariable med ett värde som inte är null. Om du vill ta bort en variabel anropar du setVariable() med ett null-värde.
+* setVariable: WorkflowContextProcessor-implementeringen använder variabeln för att ändra variablerna som representerar anpassade dynamiska data som flödar mellan stegen. Variablernas namn och typ är identiska med namnet på de variabler som angavs när [den bevakade mappen](/help/forms/using/watched-folder-in-aem-forms.md#p-configure-the-watched-folder-p) konfigurerades. Om du vill ändra värdet för en variabel anropar du API:t setVariable med ett värde som inte är null. Om du vill ta bort en variabel anropar du setVariable() med ett null-värde.
 
 Följande ProcessorContext API:er är också tillgängliga:
 
@@ -398,11 +399,11 @@ Om nyttolastens struktur skiljer sig från den bevakade mappens struktur kan du 
 
 #### Skapa ett anpassat nyttolastmappningsfilter {#creating-a-custom-payload-mapper-filter}
 
-1. Ladda ned [Adobe Client SDK](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aemfd/aemfd-client-sdk/6.3.0/aemfd-client-sdk-6.3.0.jar).
+1. Hämta [Adobe Client SDK](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aemfd/aemfd-client-sdk/6.3.0/aemfd-client-sdk-6.3.0.jar).
 1. Konfigurera klient-SDK i byggsökvägen för det maven-baserade projektet. För att komma igång kan du ladda ned och öppna följande maven-baserade projekt i den utvecklingsmiljö du vill.
 1. Redigera filterkoden för nyttolastsmappare som finns i exempelpaketet efter dina behov.
 1. Använd maven för att skapa ett paket med det anpassade nyttolastmappningsfiltret.
-1. Använd [AEM bundle-konsol](http://localhost:4502/system/console/bundles) för att installera paketet.
+1. Använd [AEM bundles console](http://localhost:4502/system/console/bundles) för att installera paketet.
 
    Nu visas det anpassade filtret för nyttolastmappning i AEM bevakade mappanvändargränssnittet. Du kan använda den i ditt arbetsflöde.
 
@@ -504,17 +505,17 @@ När du har aktiverat begränsning för en bevakad mappslutpunkt begränsas anta
 >
 >Begränsningen skalas inte med ett kluster. När du har aktiverat begränsning kommer klustret som helhet inte att bearbeta mer än det antal jobb som har angetts i gruppstorleken vid en given tidpunkt. Den här gränsen är klusterbred och gäller inte för alla noder i klustret. Om du till exempel har en gruppstorlek på 2 kan begränsningen nås med en enda nod som bearbetar två jobb, och inga andra noder kommer att anropa indatakatalogen tills ett av jobben är klart.
 
-#### Så här fungerar strypning {#how-throttling-works}
+#### Så här fungerar begränsningen {#how-throttling-works}
 
 Bevakad mapp skannar indatamappen vid varje pollInterval, hämtar antalet filer som anges i gruppstorleken och anropar måltjänsten för var och en av dessa filer. Om till exempel gruppstorleken är fyra hämtar Bevakad mapp fyra filer vid varje skanning, skapar fyra anropsbegäranden och anropar måltjänsten. Om Bevakade mappar anropas startas fyra jobb igen innan dessa begäranden har slutförts, oavsett om de föregående fyra jobben har slutförts eller inte.
 
 Begränsning förhindrar att bevakad mapp anropar nya jobb när tidigare jobb inte har slutförts. Bevakade mappar identifierar pågående jobb och bearbetar nya jobb baserat på batchstorleken minus pågående jobb. I det andra anropet anropas bara tre jobb till om antalet slutförda jobb är tre och ett jobb fortfarande pågår.
 
-* Bevakad mapp är beroende av antalet filer som finns i scenmappen för att ta reda på hur många jobb som pågår. Om filerna inte bearbetas i scenmappen anropas inga fler jobb av den bevakade mappen. Om batchstorleken till exempel är fyra och tre jobb stoppas, kommer Bevakade mappar endast att anropa ett jobb i efterföljande anrop. Det finns flera scenarier som kan göra att filer förblir obearbetade i scenmappen. När jobb har stoppats kan administratören avsluta processen på sidan Processhantering, så att Bevakad mapp flyttar filerna från scenmappen.
+* Bevakad mapp är beroende av antalet filer som finns i scenmappen för att ta reda på hur många jobb som pågår. Om filerna inte bearbetas i scenmappen anropas inga fler jobb av den bevakade mappen. Om batchstorleken till exempel är fyra och tre jobb stoppas, kommer Bevakad mapp endast att anropa ett jobb i efterföljande anrop. Det finns flera scenarier som kan göra att filer förblir obearbetade i scenmappen. När jobb har stoppats kan administratören avsluta processen på sidan Processhantering, så att Bevakad mapp flyttar filerna från scenmappen.
 * Om AEM Forms-servern kraschar innan Bevakade mappar anropar jobben kan administratören flytta filerna från scenmappen. Mer information finns i [Felpunkter och återställning](/help/forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p).
 * Om AEM Forms-servern körs men Bevakade mappar inte körs när tjänsten Job Manager anropas tillbaka, vilket inträffar när tjänster inte startar i den ordnade sekvensen, kan administratören flytta filerna från scenmappen. Mer information finns i [Felpunkter och återställning](/help/forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p).
 
-### Felpunkter och återställningFelpunkter och återställning {#failure-points-and-recoveryfailure-points-and-recovery}
+### Felpunkter och återställningspunkterFelpunkter och återställning {#failure-points-and-recoveryfailure-points-and-recovery}
 
 Vid varje omröstning låses indatamappen av Bevakad mapp, filerna som matchar inkluderingsfilmönstret flyttas till scenmappen och indatamappen låses upp. Låsning krävs så att två trådar inte kan hämta samma uppsättning filer och bearbeta dem två gånger. Chansen att detta händer ökar med ett litet pollInterval och en stor batchstorlek. När filer har flyttats till scenmappen låses indatamappen upp så att andra trådar kan skanna in mappen. Det här steget ger hög genomströmning eftersom andra trådar kan skanna medan en tråd bearbetar filerna.
 
@@ -544,13 +545,13 @@ Om den bevakade mappen inte kan bearbeta källfilerna i scenmappen kan du åters
 
    >[!NOTE]
    >
-   >Du kan titta på datum- och tidsstämpeln för filerna i scenkatalogen. Beroende på antalet filer och den normala bearbetningstiden kan du avgöra vilka filer som är tillräckligt gamla för att betraktas som fasta.
+   >Du kan titta på datum- och tidsstämpeln för filerna i scenkatalogen. Beroende på antalet filer och den normala bearbetningstiden kan du avgöra vilka filer som är tillräckligt gamla för att anses ha fastnat.
 
 1. Kopiera de obearbetade filerna från scenkatalogen till indatakatalogen.
 
 1. Om du förhindrade att Bevakad mapp bearbetar nya indatafiler i steg 2, ändrar du Inkludera filmönster till dess tidigare värde eller återaktiverar den process som du inaktiverade.
 
-### Kedja bevakade mappar tillsammans {#chain-watched-folders-together}
+### Bevakade mappar i kedjan {#chain-watched-folders-together}
 
 Bevakade mappar kan sammanfogas så att ett resultatdokument för en bevakad mapp är indatadokumentet för nästa bevakade mapp. Varje bevakad mapp kan anropa en annan tjänst. Genom att konfigurera bevakade mappar på det här sättet kan flera tjänster anropas. En bevakad mapp kan till exempel konvertera PDF-filer till Adobe PostScript® och en andra bevakad mapp kan konvertera PostScript-filerna till PDF/A-format. Det gör du genom att ställa in resultatmappen för den bevakade mappen som definieras av din första slutpunkt så att den pekar på indatamappen för den bevakade mappen som definieras av din andra slutpunkt.
 
@@ -587,7 +588,7 @@ Mappningar av utdataparametrar kan även ange ytterligare mönster, som:
 * %F = Källfilens namn
 * %E = Filnamnstillägg för källa
 
-Om mappningsmönstret för utdataparametrar slutar med &quot;File.separator&quot; (som är sökvägsavgränsaren) skapas en mapp och innehållet kopieras till den mappen. Om mönstret inte avslutas med &quot;File.separator&quot; skapas innehållet (resultatfilen eller mappen) med det namnet.
+Om mappningsmönstret för utdataparametrar avslutas med &quot;File.separator&quot; (som är sökvägsavgränsaren) skapas en mapp och innehållet kopieras till den mappen. Om mönstret inte avslutas med &quot;File.separator&quot; skapas innehållet (resultatfilen eller mappen) med det namnet.
 
 ## Använda PDF Generator med en bevakad mapp {#using-pdf-generator-with-a-watched-folder}
 
@@ -640,7 +641,7 @@ ECMAScript använder PDF Generators createPDF-API för att konvertera Microsoft 
 
    https://[servernamn]:[port]/arbetsflöde
 
-1. Klicka på **Nytt** i modellvyn. Ange **titel** i dialogrutan Nytt arbetsflöde och klicka på **OK**.
+1. Klicka på **Nytt** i modellvyn. I dialogrutan Nytt arbetsflöde anger du **Titel** och klickar på **OK**.
 
    ![create-a-workflow-pdf](assets/create-a-workflow-pdf.png)
 
@@ -650,9 +651,9 @@ ECMAScript använder PDF Generators createPDF-API för att konvertera Microsoft 
 
    ![create-a-workflow-pdf2](assets/create-a-workflow-pdf2.png)
 
-1. Högerklicka på Processsteg och välj **Redigera**. Fönstret Stegegenskaper visas.
+1. Högerklicka på Processsteget och välj **Redigera**. Fönstret Stegegenskaper visas.
 
-1. Välj ECMAScript på fliken Process. Skriptet pdfg-openOffice-sample.ecma som skapas i [Skapa ett ECMAScript](#p-create-an-ecmascript-p). Aktivera alternativet **Avancerat** för hanterare och klicka på **OK**.
+1. Välj ECMAScript på fliken Process. Skriptet pdfg-openOffice-sample.ecma som skapas i [Skapa ett ECMAScript](#p-create-an-ecmascript-p). Aktivera alternativet **Handler Advance** och klicka på **OK**.
 
    ![create-a-workflow3-pdf](assets/create-a-workflow3-pdf.png)
 
@@ -673,9 +674,9 @@ ECMAScript använder PDF Generators createPDF-API för att konvertera Microsoft 
    * inputProcessorId (String): Beteendet för egenskapen inputProcessorId baseras på det värde som anges för egenskapen inputProcessorType. I det här exemplet är värdet för egenskapen inputProcessorType arbetsflöde. Ange därför följande sökväg för PDFG-arbetsflödet för egenskapen inputProcessorId: /etc/workflow/models/pdfg/jcr:content/model
 
    * outputFilePattern (String): Utdatafilens mönster. Du kan ange en mapp eller ett filmönster. Om ett mappmönster anges har utdatafilerna namn enligt arbetsflödena. Om ett filmönster anges har utdatafilerna namn som beskrivs i filmönstret.
-   Förutom de obligatoriska egenskaper som nämns ovan, har Bevakade mappar även stöd för några valfria egenskaper. En fullständig lista och en beskrivning av valfria egenskaper finns i Egenskaper för [bevakad mapp](#watchedfolderproperties).
+   Förutom de obligatoriska egenskaper som nämns ovan, har Bevakade mappar även stöd för några valfria egenskaper. En fullständig lista och en beskrivning av valfria egenskaper finns i [Egenskaper för bevakad mapp](#watchedfolderproperties).
 
-## Använda Central migreringsbrygga (borttagen) med en bevakad mapp {#using-central-migration-bridge-deprecated-with-a-watched-folder}
+## Använda Central Migration Bridge (utgått) med en bevakad mapp {#using-central-migration-bridge-deprecated-with-a-watched-folder}
 
 Du kan konfigurera en bevakad mapp för att initiera ett arbetsflöde, en tjänst eller ett skript för att bearbeta indatafilerna. I följande avsnitt konfigurerar vi en bevakad mapp att initiera ett ECMAScript. ECMAScript använder funktionerna OutputCentralService och sendToPrinter i SendToPrinterService.
 
@@ -729,14 +730,14 @@ ECMAScript använder PDF Generators createPDF-API för att konvertera Microsoft 
 
 1. Öppna AEM gränssnitt i ett webbläsarfönster. `https://[server]:[port]/workflow`
 
-1. Klicka på **Nytt** i modellvyn. Ange **titel** i dialogrutan Nytt arbetsflöde och klicka på **OK**.
+1. Klicka på **Nytt** i modellvyn. I dialogrutan Nytt arbetsflöde anger du **Titel** och klickar på **OK**.
 1. Markera det nya arbetsflödet och klicka på **Redigera**. Arbetsflödet öppnas i ett nytt fönster.
 1. Ta bort standardarbetsflödessteget. Dra och släpp Processsteget från sparken till arbetsflödet.
 
    ![create-a-workflow-cmb](assets/create-a-workflow-cmb.png)
 
-1. Högerklicka på Processsteg och välj **Redigera**. Fönstret Stegegenskaper visas.
-1. Välj ECMAScript på fliken Process. Exempel: cmb-mergeandprint-sample.ecma ECMAScript som skapas i avsnittet [Skapa ett arbetsflöde](/help/forms/using/watched-folder-in-aem-forms.md#p-create-a-workflow-p) . Aktivera alternativet **Avancerat** för hanterare och klicka på **OK**.
+1. Högerklicka på Processsteget och välj **Redigera**. Fönstret Stegegenskaper visas.
+1. Välj ECMAScript på fliken Process. Exempel: cmb-mergeandprint-sample.ecma ECMAScript som skapas i [Skapa ett arbetsflöde](/help/forms/using/watched-folder-in-aem-forms.md#p-create-a-workflow-p)-avsnitt. Aktivera alternativet **Handler Advance** och klicka på **OK**.
 
 ### Konfigurera den bevakade mappen {#configure-the-watched-folder-1}
 
@@ -754,4 +755,4 @@ ECMAScript använder PDF Generators createPDF-API för att konvertera Microsoft 
 
    * **outputFilePattern (String)**: Utdatafilens mönster. Du kan ange en mapp eller ett filmönster. Om ett mappmönster anges har utdatafilerna namn enligt arbetsflödena. Om ett filmönster anges har utdatafilerna namn som beskrivs i filmönstret.
 
-Förutom de obligatoriska egenskaper som nämns ovan, har Bevakade mappar även stöd för några valfria egenskaper. En fullständig lista och beskrivning av valfria egenskaper finns i Egenskaper för [bevakad mapp](#watchedfolderproperties).
+Förutom de obligatoriska egenskaper som nämns ovan, har Bevakade mappar även stöd för några valfria egenskaper. En fullständig lista och en beskrivning av valfria egenskaper finns i [Egenskaper för bevakad mapp](#watchedfolderproperties).
