@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# Konfigurera Connector för IBM Content Manager{#configuring-connector-for-ibm-content-manager}
+# Konfigurerar koppling för IBM Content Manager{#configuring-connector-for-ibm-content-manager}
 
-Koppling för IBM Content Manager möjliggör kommunikation mellan AEM och IBM Content Manager. Mer bakgrundsinformation finns i&quot;Connectors for ECM&quot; i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
+Koppling för IBM Content Manager möjliggör kommunikation mellan AEM och IBM Content Manager. Mer bakgrundsinformation finns i &quot;Connectors for ECM&quot; i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Konfigurera IBM Content Manager-anslutningen {#configure-the-ibm-content-manager-connection}
 
@@ -31,7 +31,7 @@ Koppling för IBM Content Manager möjliggör kommunikation mellan AEM och IBM C
 1. (Valfritt) I rutan Aliasanslutningssträng anger du ytterligare anslutningsargument. I de flesta fall ska den här rutan vara tom. Mer information finns i dokumentationen för IBM.
 1. Klicka på Spara.
 
-## Validering av tjänstinställningar {#validation-of-service-settings}
+## Verifiering av tjänstinställningar {#validation-of-service-settings}
 
 Om du anger fel alias, användarnamn eller lösenord för dataStore får du följande resultat beroende på om tjänsten Content Repository Connector för IBM Content Manager körs för närvarande:
 
