@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Komponent för överläggskommentarer {#overlay-comments-component}
+# Komponenten för överläggskommentarer {#overlay-comments-component}
 
 Avsikten med att [täcka över](client-customize.md#overlays) en standardkomponent är att ändra utseendet eller beteendet för en komponent globalt, för alla relativa referenser till komponenten. Det är beroende av vilken typ av sling som du kan lösa till mappen /apps innan du söker i mappen /libs. Sökvägen till komponenten är alltså identisk med sökvägen till standardkomponenten, förutom att den finns i mappen /apps och inte i mappen /libs.
 
