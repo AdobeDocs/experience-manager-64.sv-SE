@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Working with tasks {#working-with-tasks}
+# Arbeta med uppgifter {#working-with-tasks}
 
 Använd sidan Uppgiftssökning om du vill söka efter uppgifter efter användarnamn eller uppgifts-ID. Sökresultaten visas på sidan Uppgiftslista där du kan komma åt en uppgifts historik. Du kan också tilldela om en uppgift som en användare har för många uppgifter eller om en användare har fått en aktivitetstilldelning av fel.
 
@@ -26,7 +26,7 @@ Använd sidan Uppgiftssökning om du vill söka efter uppgifter efter användarn
 >
 >Vid uppgiftssökningar returneras inga resultat för användarnamn som börjar med ett nummertecken (#). Undvik om möjligt att skapa användarnamn som börjar med ett nummertecken.
 
-## Sök efter uppgifter som är kopplade till en användare {#search-for-tasks-associated-with-a-user}
+## Sök efter uppgifter som är associerade med en användare {#search-for-tasks-associated-with-a-user}
 
 1. Klicka på Tjänster > Formulärarbetsflöde > Uppgiftssökning i administrationskonsolen.
 1. Välj Användarnamn i Sök efter. Om du känner till en del av användarnamnet som du söker efter skriver du det i rutan. Klicka på Sök efter användare.
@@ -46,21 +46,21 @@ Resultatet av en uppgiftssökning visas på sidan Uppgiftslista. Du kan välja e
 
 Uppgifterna visas med följande information:
 
-**Aktivitets-ID:** Det positiva heltal som formulärarbetsflödet tilldelar när uppgiften instansieras (initieras av en användare). Du kan använda den här identifieraren för att spåra uppgiften genom dess livscykel. Klicka på ett aktivitets-ID om du vill visa information om aktivitetshistoriken eller om du vill tilldela om uppgiften till en annan användare.
+**Aktivitets-ID:** Det positiva heltal som formulärarbetsflödet tilldelar när uppgiften initieras (initieras av en användare). Du kan använda den här identifieraren för att spåra uppgiften genom dess livscykel. Klicka på ett aktivitets-ID om du vill visa information om aktivitetshistoriken eller om du vill tilldela om uppgiften till en annan användare.
 
-**Status:** Tilldelad innebär att uppgiften för närvarande är tilldelad användaren. Ej tilldelad innebär att uppgiften tidigare har tilldelats användaren. Status kan också vara Slutförd.
+**Status:** Tilldelad innebär att uppgiften är tilldelad användaren. Ej tilldelad innebär att uppgiften tidigare har tilldelats användaren. Status kan också vara Slutförd.
 
-**Aktivitet:** Visar formuläret och namnet på en inledande åtgärd eller processåtgärden som genererade uppgiften.
+**Aktivitet:** Visar formuläret och namnet för en inledande åtgärd eller den processåtgärd som genererade uppgiften.
 
 **Process-ID:** Detta positiva heltal som tilldelas av formulärarbetsflödet när processen initieras (det vill säga när en användare eller ett automatiskt steg initierar en process). Du kan använda den här identifieraren för att spåra processinstansen genom dess livscykel.
 
 **Processnamn - version:** Processens namn, enligt definition i Workbench.
 
-**Program:** Namnet på programmet som processen tillhör, enligt definitionen i Workbench.
+**Program:** Namnet på programmet som processen tillhör, enligt definition i Workbench.
 
 **Skapad:** Datum och tid då uppgiften skapades.
 
-## Visa aktivitetshistorik och tilldela om uppgifter {#viewing-task-history-and-reassigning-tasks}
+## Visa aktivitetshistorik och tilldela om aktiviteter {#viewing-task-history-and-reassigning-tasks}
 
 På sidan Uppgiftshistorik visas en lista över de användare och grupper som har tilldelats en viss uppgift.
 
@@ -76,17 +76,17 @@ För varje uppgiftstilldelning visas följande information i listan:
 
 **Inledande:** Användaren tilldelades ursprungligen uppgiften.
 
-**Framåt:** Den ursprungliga aktivitetsägaren tilldelade uppgiften till en annan användare.
+**Vidarebefordra:** Den ursprungliga aktivitetsägaren tilldelade uppgiften till en annan användare.
 
-**Avvisa:** En vidarebefordrad uppgift avvisades eller så returnerades en uppgift till en arbetslista utan att ha slutförts.
+**Avvisa:** En vidarebefordrad uppgift avvisades eller en uppgift returnerades till en arbetslista utan att ha slutförts.
 
 **Anspråk:** Användaren gjorde anspråk på uppgiften i en delad arbetslista.
 
-**Eskalering:** En förbestämd tid förflutit (enligt inställningen i åtgärden Användare i Workbench) utan användarinteraktion och en annan användare tilldelades uppgiften.
+**Eskalering:** En förbestämd tid förflutit (som anges i användaråtgärden i Workbench) utan användarinteraktion och en annan användare tilldelades uppgiften.
 
-**Konsult:** Aktivitetsägaren har vidarebefordrat denna uppgift till en annan användare för konsultation som kan öppna formuläret, spara data, ändra bilagor och anteckningar, men inte slutföra steget. Användaren måste returnera uppgiften till aktivitetsägaren som har rådfrågat användaren.
+**Konsult:Aktivitetsägaren har vidarebefordrat** den här uppgiften till en annan användare för konsultation som kan öppna formuläret, spara data, ändra bilagor och anteckningar, men inte slutföra steget. Användaren måste returnera uppgiften till aktivitetsägaren som har rådfrågat användaren.
 
-**Administratörsomtilldelning:** Uppgiften har tilldelats om av en administratör.
+**Administratörsomtilldelning:** Uppgiften har omtilldelats av en administratör.
 
 **Tilldelningsdatum:** Det datum och den tidpunkt då uppgiften tilldelades användaren.
 
