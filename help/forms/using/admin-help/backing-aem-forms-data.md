@@ -48,21 +48,21 @@ Du måste placera AEM formulär antingen i säkert säkerhetskopieringsläge (ö
 Förutom detta bör du följa följande riktlinjer för säkerhetskopiering/återställning.
 
 * Säkerhetskopiera GDS-katalogen med hjälp av ett tillgängligt operativsystem eller ett verktyg för säkerhetskopiering från tredje part. (Se [GDS-plats](/help/forms/using/admin-help/files-back-recover.md#gds-location).)
-* (Valfritt) Säkerhetskopiera rotkatalogen för innehållslagring med hjälp av ett tillgängligt operativsystem eller ett säkerhetskopierings- och verktyg från tredje part. (Se [Rotplats för innehållslagring (fristående miljö)](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-location-stand-alone-environment) eller Rotplats för [innehållslagring (klustrad miljö)](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-location-clustered-environment).)
-* Säkerhetskopiera författare och publiceringsinstanser (crx -database backup).
+* (Valfritt) Säkerhetskopiera rotkatalogen för innehållslagring med hjälp av ett tillgängligt operativsystem eller ett säkerhetskopierings- och verktyg från tredje part. (Se [Rotplats för innehållslagring (fristående miljö)](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-location-stand-alone-environment) eller [Rotplats för innehållslagring (klustrad miljö)](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-location-clustered-environment).)
+* Säkerhetskopiera   skapa och publicera instanser (crx -database backup).
 
    Om du vill säkerhetskopiera Correspondence Management Solution-miljön utför du stegen på författaren och publicerar instanser enligt beskrivningen i [Säkerhetskopiera och återställ](/help/sites-administering/backup-and-restore.md).
 
    Tänk på följande när du säkerhetskopierar författare och publiceringsinstanser:
 
-   * Se till att säkerhetskopieringen för författare och publiceringsinstanser är synkroniserad så att den startar samtidigt. Även om du kan fortsätta använda författare- och publiceringsinstanser medan säkerhetskopieringen utförs, bör du inte publicera några resurser under säkerhetskopieringen för att undvika ohämtade ändringar. Vänta tills säkerhetskopieringen av både författare och publiceringsinstanser har avslutats innan du publicerar nya resurser.
+   * Se till att säkerhetskopieringen för författare och publiceringsinstanser är synkroniserad så att den startar samtidigt. Även om du kan fortsätta använda författare- och publiceringsinstanser medan säkerhetskopieringen utförs, bör du inte publicera någon resurs under säkerhetskopieringen för att undvika ohämtade ändringar. Vänta tills säkerhetskopieringen av både författare och publiceringsinstanser har avslutats innan du publicerar nya resurser.
    * Den fullständiga säkerhetskopieringen av Författarnoden omfattar säkerhetskopiering av data för Forms Manager och AEM Forms Workspace.
    * Workbench-utvecklare kan fortsätta att arbeta med sina processer lokalt. De bör inte driftsätta några nya processer under säkerhetskopieringsfasen.
    * Beslutet om längden på varje säkerhetskopieringssession (för rullande säkerhetskopieringsläge) bör baseras på den totala tid det tar att säkerhetskopiera alla data i AEM (DB, GDS, AEM databas och andra anpassade data).
 
 Du bör säkerhetskopiera AEM formulärdatabas, inklusive transaktionsloggar. (Se [AEM formulärdatabas](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).) Mer information finns i lämplig kunskapsbasartikel för din databas:
 
-* [Oracle Backup and Recovery for AEM forms](https://www.adobe.com/go/kb403624)
+* [Oracle Säkerhetskopiering och återställning för AEM formulär](https://www.adobe.com/go/kb403624)
 * [MySQL Backup and Recovery for AEM forms](https://www.adobe.com/go/kb403625)
 * [Säkerhetskopiering och återställning av Microsoft SQL Server för AEM formulär](https://www.adobe.com/go/kb403623)
 * [DB2 Säkerhetskopiering och återställning av AEM formulär](https://www.adobe.com/go/kb403626)
@@ -73,7 +73,7 @@ Dessa artiklar ger vägledning om grundläggande databasfunktioner för säkerhe
 >
 >Säkerhetskopieringen av databasen måste vara slutförd innan du börjar säkerhetskopiera GDS. Om säkerhetskopieringen av databasen inte är slutförd är dina data inte synkroniserade.
 
-### Ange lägen för säkerhetskopiering {#entering-the-backup-modes}
+### Ange säkerhetskopieringslägena {#entering-the-backup-modes}
 
 Du kan antingen använda administrationskonsolen, kommandot LCBackupMode eller det API som är tillgängligt med installationen av AEM formulär för att gå in i och lämna säkerhetskopieringslägena. Observera att alternativet administrationskonsol inte är tillgängligt för rullande säkerhetskopiering (kontinuerlig täckning). använder du antingen kommandoradsalternativet eller API:t. <!-- Fix broken link For information about using the API to enter and leave backup modes, see AEM forms API Reference on Help and Tutorials page. -->
 
@@ -91,15 +91,15 @@ Du kan antingen använda administrationskonsolen, kommandot LCBackupMode eller d
 
 **Använda kommandoradsalternativet för att växla till säkert säkerhetskopieringsläge**
 
-Du kan använda gränssnittsskript på kommandoraden `LCBackupMode` för att placera AEM formulär i säkert säkerhetskopieringsläge.
+Du kan använda kommandoradsgränssnittet `LCBackupMode` för att placera AEM formulär i säkert säkerhetskopieringsläge.
 
 1. Ange ADOBE_LIVECYCLE och starta programservern.
-1. Gå till `*[aem-forms root]*/sdk/misc/Foundation/BackupRestoreCommandline` mappen.
-1. Beroende på vilket operativsystem du använder kan du redigera `LCBackupMode.cmd` - eller `LCBackupMode.sh` skriptet och ange standardvärden som passar ditt system.
+1. Gå till mappen `*[aem-forms root]*/sdk/misc/Foundation/BackupRestoreCommandline`.
+1. Beroende på vilket operativsystem du använder kan du redigera skriptet `LCBackupMode.cmd` eller `LCBackupMode.sh` och ange standardvärden som passar ditt system.
 1. Kör följande kommando på en rad i kommandotolken:
 
-   * (Windows) `LCBackupMode.cmd enter [-Host=`*värdnamn *`] [-port=`*portnummer* `] [-user=`*användarnamn *`] [-password=`*lösenord* `] [-label=`*etikett *`] [-timeout=`*¥seconds* `]`
-   * (Linux, UNIX) `LCBackupMode.sh enter [-host=`*värdnamn *`] [-port=`*portnumber* `] [-user=`*användarnamn *`] [-password=`*password* `] [-label=`*etikett *`]`
+   * (Windows) `LCBackupMode.cmd enter [-Host=`*värdnamn* `] [-port=`*portnummer* `] [-user=`*användarnamn* `] [-password=`*lösenord* `] [-label=`*etikett* `] [-timeout=`*sekunder* `]`
+   * (Linux, UNIX) `LCBackupMode.sh enter [-host=`*värdnamn* `] [-port=`*portnummer* `] [-user=`*användarnamn* `] [-password=`*lösenord* `] [-label=`*etikettnamn* `]`
 
    I de föregående kommandona definieras platshållarna enligt följande:
 
@@ -133,17 +133,17 @@ Utför följande åtgärder om du vill använda administrationskonsolen för att
 
 Du kan använda kommandoradsgränssnittet för att ta AEM formulär från säkert säkerhetskopieringsläge (ögonblicksbildsläge) eller för att avsluta den aktuella säkerhetskopieringsläget (rullande läge). Observera att du inte kan använda administrationskonsolen för att lämna det rullande säkerhetskopieringsläget. I läget för rullande säkerhetskopiering är kontrollerna för Backup Utilities på administrationskonsolen inaktiverade. Du måste använda antingen API-anrop eller kommandot LCBackupMode.
 
-1. Gå till `*[aem-forms root]*/sdk/misc/Foundation/BackupRestoreCommandline` mappen.
-1. Beroende på vilket operativsystem du använder kan du redigera `LCBackupMode.cmd` - eller `LCBackupMode.sh` skriptet och ange standardvärden som passar ditt system.
+1. Gå till mappen `*[aem-forms root]*/sdk/misc/Foundation/BackupRestoreCommandline`.
+1. Beroende på vilket operativsystem du använder kan du redigera skriptet `LCBackupMode.cmd` eller `LCBackupMode.sh` och ange standardvärden som passar ditt system.
 
    >[!NOTE]
    >
-   >Du måste ange katalogen JAVA_HOME enligt beskrivningen i det kapitel som gäller för programservern när du [förbereder installation av AEM formulär](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63)*.*
+   >Du måste ställa in katalogen JAVA_HOME enligt beskrivningen i det relevanta kapitlet för programservern i [Installera AEM formulär](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63)*.*
 
 1. Kör följande kommando på en rad:
 
-   * (Windows) `LCBackupMode.cmd leaveContinuousCoverage [-Host=`*värdnamn *`] [-port=`*portnummer* , `] [-user=`*användarnamn *,`] [-password=`*lösenord* `]`
-   * (Linux, UNIX) `LCBackupMode.sh leaveContinuousCoverage [-Host=`*värdnamn *`] [-port=`*portnummer* `] [-user=`*användarnamn *`] [-password=`*lösenord* `]`
+   * (Windows) `LCBackupMode.cmd leaveContinuousCoverage [-Host=`*värdnamn* `] [-port=`*portnummer* `] [-user=`*användarnamn* `] [-password=`*lösenord* `]`
+   * (Linux, UNIX) `LCBackupMode.sh leaveContinuousCoverage [-Host=`*värdnamn* `] [-port=`*portnummer* `] [-user=`*användarnamn* `] [-password=`*lösenord* `]`
 
       I de föregående kommandona definieras platshållarna enligt följande:
 
