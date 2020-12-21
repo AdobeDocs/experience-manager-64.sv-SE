@@ -26,5 +26,5 @@ Systeminformationstjänsten tillhandahåller REST API:er för att hämta informa
 1. Navigera till Tjänster > Program och tjänster > Tjänsthantering.
 1. Klicka på tjänsten **SystemInfo** på sidan Tjänsthantering.
 1. Välj REST i listan på fliken Slutpunkter och klicka på **Lägg till**.
-1. Klicka på **Lägg till** på skärmen Lägg till REST-slutpunkt.
+1. På skärmen Lägg till REST-slutpunkt klickar du på **Lägg till**.
 
