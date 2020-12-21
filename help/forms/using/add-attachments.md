@@ -17,11 +17,11 @@ ht-degree: 0%
 ---
 
 
-# Lägga till bilagor {#adding-attachments}
+# Lägger till bifogade filer {#adding-attachments}
 
-## Lägga till bilagor i formulär som har synkroniserats med AEM Forms Workflow Server (AEM Forms on JEE) {#adding-annotations}
+## Lägga till bilagor i formulär som synkroniserats med AEM Forms Workflow Server (AEM Forms på JEE) {#adding-annotations}
 
-Med AEM Forms-appen kan du bifoga bilder, anteckningar och textanteckningar i ditt formulär som synkroniseras med AEM Forms JEE-servern. Om formuläret läses in från en AEM Forms Workflow-server läggs dina bilagor till i formuläret. Du kan trycka på knappen Bifogade ![bilagor-app](assets/attachments-app.png) om du vill visa alla bifogade filer i ett formulär tillsammans. Det röda meddelandet anger antalet bilagor i formuläret. Om det inte finns några bifogade filer i formuläret kan du inte se knappen med röda meddelanden. Om det inte finns några bifogade filer i formuläret får du alternativ för att bifoga foton eller ![klotter när du trycker på knappen Bifogade](assets/attch.png).
+Med AEM Forms-appen kan du bifoga bilder, anteckningar och textanteckningar i ditt formulär som synkroniseras med AEM Forms JEE-servern. Om formuläret läses in från en AEM Forms Workflow-server läggs dina bilagor till i formuläret. Du kan trycka på knappen ![attachments-app](assets/attachments-app.png) för att visa alla bilagor i ett formulär tillsammans. Det röda meddelandet anger antalet bilagor i formuläret. Om det inte finns några bifogade filer i formuläret kan du inte se knappen med röda meddelanden. Om det inte finns några bifogade filer i formuläret får du alternativ för att bifoga foton eller klotter när du trycker på knappen ![bifoga](assets/attch.png).
 
 Dina alternativ är:
 
@@ -29,34 +29,34 @@ Dina alternativ är:
 
 * **[!UICONTROL Camera]**: Gör att du kan ta en bild och lägga till den i formuläret.
 
-* **[!UICONTROL Notes]**: Gör att du kan lägga till en klottra eller en textanteckning. Använd ![klottra](assets/scribble.png) för att lägga till ett klottrigt och ![tangentbord](assets/keyboard.png) för att lägga till en textanteckning.
+* **[!UICONTROL Notes]**: Gör att du kan lägga till en klottra eller en textanteckning. Använd ![scribble](assets/scribble.png) för att lägga till en klottra och ![tangentbord](assets/keyboard.png) för att lägga till en textanteckning.
 
 >[!NOTE]
 >
 >Bifogade filer som läggs till av en användare visas för andra AEM Forms-appanvändare. Andra användare kan inte ta bort bilagor som lagts till av en användare.
 
 
-### Skärmen Bifogade filer {#the-attachments-screen}
+### Skärmen för bifogade filer {#the-attachments-screen}
 
-Om du vill se alla bilagor på en plats trycker du på ![appen](assets/attachments-app.png)för bilagor. Du kan lägga till, byta namn på och ta bort bifogade filer här.
+Om du vill visa alla bilagor på en plats trycker du på ![attachments-app](assets/attachments-app.png). Du kan lägga till, byta namn på och ta bort bifogade filer här.
 
 ![Alla bilagor på en plats](assets/attachments-screen.png)
 
-Du kan använda **+** -knappen på skärmen Bifogade filer för att bifoga ytterligare en bild, klottra eller text.
+Du kan använda knappen **+** på skärmen Bifogade filer för att bifoga en annan bild, klottra eller text.
 
 ### Lägga till ett foto {#adding-a-photograph}
 
 Du kan använda kameran på din mobila enhet eller sparade bilder på enheten för att bifoga en bild i formuläret.
 
-1. Tryck på knappen Bifogad fil ![längst ned](assets/attch.png) i fönstret.
+1. Tryck på knappen ![bifoga](assets/attch.png) längst ned i fönstret.
 1. Tryck på **[!UICONTROL Gallery]** eller **[!UICONTROL Camera]** i popup-fönstret som visas.
 1. Utför följande beroende på vilket alternativ du väljer:
 
    1. Om du väljer **[!UICONTROL Camera]**.
 
-      Ta ett foto. Tryck sedan på knappen **[!UICONTROL Use]** use-pic ![](assets/use-pic.png) .
+      Ta ett foto. Tryck sedan på **[!UICONTROL Use]** ![use-pic](assets/use-pic.png).
 
-      Eller tryck på **[!UICONTROL Retake]** knappen ![Ta](assets/retake.png) om för att ta fotot igen.
+      Du kan också trycka på **[!UICONTROL Retake]** ![Ta om](assets/retake.png) om du vill ta fotot igen.
 
    1. Om du väljer **[!UICONTROL Gallery]**.
 
@@ -64,14 +64,14 @@ Du kan använda kameran på din mobila enhet eller sparade bilder på enheten f�
 
 ### Lägga till en anteckning {#adding-a-note}
 
-Med alternativet **Anteckningar** kan du lägga till frihandsskript och textbilagor i formuläret.
+Med alternativet **Anteckningar** kan du lägga till frihandsskriftar och textbilagor i formuläret.
 
-1. Tryck på knappen Bifogad fil ![längst ned](assets/attch.png) i fönstret.
-1. Tryck **[!UICONTROL Notes]** på popup-fönstret som visas.
-1. Hämta ett frihandsskript i anteckningsgränssnittet som startas.
+1. Tryck på knappen ![bifoga](assets/attch.png) längst ned i fönstret.
+1. Tryck på **[!UICONTROL Notes]** i popup-fönstret som visas.
+1. Hämta ett frihandsskript i det användargränssnitt som startas.
 
    ![Klottra](assets/scribble-ui.png)
-   **Bild:** *Klottra*
+   **Figur:** *Klottra*
 
    Du kan använda följande alternativ i gränssnittet Klottra:
 
@@ -88,4 +88,4 @@ Bifogade filer för mobilformulär som synkroniseras med AEM Forms OSGi-servrar 
 
 Bilagor på formulärnivå stöds inte för adaptiva formulär som läses in i appen från en AEM Forms OSGi-server. Om du vill bifoga bilder eller textanteckningar aktiverar du bilagor på fältnivå i formuläret när du redigerar det. Dra och släpp den bifogade filkomponenten från komponentwebbläsaren i fältet.
 
-När det gäller anpassningsbara formulär kan du visa de bifogade filerna i postdokumentet (DoR). Se [Generera arkivdokument för icke-XFA adaptiva formulär](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
+När det gäller anpassningsbara formulär kan du visa de bifogade filerna i postdokumentet (DoR). Se [Generera postdokument för icke-XFA adaptiva formulär](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
