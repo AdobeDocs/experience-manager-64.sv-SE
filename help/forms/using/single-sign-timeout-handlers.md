@@ -26,11 +26,11 @@ AEM Forms arbetsyta är enkel inloggning aktiverad. Om en användare har loggat 
 
 Sessionstimeout för en användare kan konfigureras i administrationskonsolen.
 
-Om du vill ange tidsgränsen loggar du in `https://[server]:[port]/adminui`på, går till **Inställningar > Användarhantering > Konfiguration > Konfigurera avancerade systemattribut** och gör önskade inställningar.
+Om du vill ange tidsgränsen loggar du in på `https://[server]:[port]/adminui`, navigerar till **Inställningar > Användarhantering > Konfiguration > Konfigurera avancerade systemattribut** och gör önskade inställningar.
 
 I AEM Forms-arbetsytan hanteras timeout:
 
-* Sessionstiden för en användare är tillgänglig som svar på ett anrop som initierar en användarsession. `initialize`
+* Sessionstiden för en användare är tillgänglig som svar på `initialize`-anrop som initierar användarsession.
 * En popup-dialogruta meddelar användaren om att sessionen kommer att upphöra 15 sekunder innan sessionen går ut.
 
 I den här popup-dialogrutan:
