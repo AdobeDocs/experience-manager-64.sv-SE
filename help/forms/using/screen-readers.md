@@ -25,7 +25,7 @@ HTML5-formulär använder HTML-standardkonstruktioner som tillåter vanliga hjä
 
 ## Tillgänglighetsstandarder {#accessibility-standards}
 
-HTML5-formulär uppfyller kraven i avsnitt 508 för tillgänglighet med kända undantag. Mer information finns i [VPAT för HTML5-formulär](https://www.adobe.com/mena_en/accessibility/compliance/livecycle-mobile-forms-es4-section-508-vpat.html) .
+HTML5-formulär uppfyller kraven i avsnitt 508 för tillgänglighet med kända undantag. Mer information finns i [VPAT för HTML5-formulär](https://www.adobe.com/mena_en/accessibility/compliance/livecycle-mobile-forms-es4-section-508-vpat.html).
 
 ## Certifierade skärmläsare för HTML5-formulär {#certified-screen-readers-for-html-forms}
 
@@ -40,9 +40,9 @@ Alla standardtangenttryckningar och kortkommandon fungerar för HTML5-formulär.
 
 HTML5-formulär har stöd för alla standardtangenttryckningar och -gester för Voice over. Mer information om hur du konfigurerar och använder VoiceOver finns i [https://www.apple.com/accessibility/voiceover/](https://www.apple.com/accessibility/voiceover/).
 
-## Known issues {#known-issues}
+## Kända fel {#known-issues}
 
 * **(Endast i Utforskaren 9)** I HTML5-formulär läses sidorna in vid behov (dynamiskt). Sidinläsning on demand orsakar problem med skärmläsarnas funktion. När skärmläsarens fokus är på det sista fältet på sidan och användaren trycker på fliken, återgår skärmläsaren fokus till det första fältet på formulärets första sida i stället för att fokusera på det första fältet på nästa sida.
-* **(Endast Internet Explorer 9)** Datumväljarkontrollen i HTML5-formulär är inte helt tillgänglig med tangentbordet. Om du trycker på upp-/nedtangenterna flera gånger i datumväljaren stängs datumväljaren och fokus flyttas till nästa/sista fält.
+* **(Endast internt Explorer 9)** Datumväljarkontrollen i HTML5-formulär är inte helt tillgänglig med tangentbordet. Om du trycker på upp-/nedtangenterna flera gånger i datumväljaren stängs datumväljaren och fokus flyttas till nästa/sista fält.
 
 * VoiceOver kan inte identifiera piltangenter på datumwidgeten på iPad safari.
