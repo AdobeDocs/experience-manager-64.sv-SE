@@ -15,7 +15,7 @@ ht-degree: 0%
 ---
 
 
-# Använda anpassade e-postmallar i steget Tilldela uppgift {#use-custom-email-templates-in-an-assign-task-step}
+# Använd anpassade e-postmallar i steget Tilldela uppgift {#use-custom-email-templates-in-an-assign-task-step}
 
 Anpassade e-postmallar för e-postmeddelanden i formulärarbetsflödet
 
@@ -43,7 +43,7 @@ När allt är klart tillhandahåller AEM Forms en mall för e-postmeddelanden. M
 
 1. Ersätt innehållet i filen htmlEmailTemplate.txt med anpassat innehåll.
 
-   En mall för e-postmeddelanden är ett [HTML-e-postmeddelande](https://en.wikipedia.org/wiki/HTML_email). Du kan ersätta den befintliga html-koden med din anpassade kod om du vill ändra mallens utseende.
+   En e-postmeddelandemall är en [HTML-e-postadress](https://en.wikipedia.org/wiki/HTML_email). Du kan ersätta den befintliga html-koden med din anpassade kod om du vill ändra mallens utseende.
 
 1. Spara filen. Nu är den anpassade mallen klar att användas.
 
@@ -59,15 +59,15 @@ När allt är klart tillhandahåller AEM Forms en mall för e-postmeddelanden. M
 
 1. Lägg till anpassad HTML-kod i filen.
 
-   En mall för e-postmeddelanden är ett [HTML-e-postmeddelande](https://en.wikipedia.org/wiki/HTML_email). Du kan lägga till anpassad HTML-kod i filen för att skapa en ny mall.
+   En e-postmeddelandemall är en [HTML-e-postadress](https://en.wikipedia.org/wiki/HTML_email). Du kan lägga till anpassad HTML-kod i filen för att skapa en ny mall.
 
 1. Spara filen. Mallen är klar att användas i steget Tilldela uppgift.
 
-## Använda en e-postmall i steget Tilldela uppgift {#use-an-email-template-in-an-assign-task-step}
+## Använd en e-postmall i steget Tilldela uppgift {#use-an-email-template-in-an-assign-task-step}
 
 Utför åtgärden Tilldela är konfigurerad att använda standardmallen htmlEmailTemplate.txt. Du kan välja att använda en anpassad mall. Så här ändrar du mallen:
 
-1. Öppna **[!UICONTROL Assign Task]** steget.
+1. Öppna steget **[!UICONTROL Assign Task]**.
 
 1. Navigera till **[!UICONTROL Assignee > HTML Email Template]**.
 
@@ -75,4 +75,4 @@ Utför åtgärden Tilldela är konfigurerad att använda standardmallen htmlEmai
 
 1. Klicka på **[!UICONTROL OK]**. Mallen ändras.
 
-Ett e-postmeddelande använder också [metadata](/help/forms/using/use-metadata-in-email-notifications.md). Exempel: förfallodatum, prioritet, arbetsflödets namn med mera. Du kan också konfigurera mallen så att den använder [anpassade metadata](/help/forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification).
+I ett e-postmeddelande används även [metadata](/help/forms/using/use-metadata-in-email-notifications.md). Exempel: förfallodatum, prioritet, arbetsflödets namn med mera. Du kan också konfigurera mallen så att den använder [anpassade metadata](/help/forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification).
