@@ -1,8 +1,8 @@
 ---
 title: ConvertPDF Service
 seo-title: ConvertPDF Service
-description: 'Använd tjänsten AEM Forms ConvertPDF för att konvertera PDF-dokument till PostScript eller bildfiler. '
-seo-description: 'Använd tjänsten AEM Forms ConvertPDF för att konvertera PDF-dokument till PostScript eller bildfiler. '
+description: 'Använd tjänsten AEM Forms ConvertPDF för att konvertera PDF-dokument till PostScript- eller bildfiler. '
+seo-description: 'Använd tjänsten AEM Forms ConvertPDF för att konvertera PDF-dokument till PostScript- eller bildfiler. '
 uuid: 7fa94c8c-485b-4a77-bcd3-ed716e3cf316
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -30,7 +30,7 @@ Du kan göra följande med tjänsten Konvertera PDF:
 
 ## Konfigurera egenskaper för tjänsten   {#properties}
 
-Du kan använda **AEMFD ConvertPDF-tjänsten** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen för AEM är `https://[host]:[port]/system/console/configMgr`.
+Du kan använda tjänsten **AEMFD ConvertPDF** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen för AEM är `https://[host]:[port]/system/console/configMgr`.
 
 ## Använda tjänsten {#using-the-service}
 
@@ -40,7 +40,7 @@ ConvertPDF-tjänsten tillhandahåller följande två API:er:
 
 * **[toImage](https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**: Konverterar ett PDF-dokument till en bildfil. Bildformat som stöds är JPEG, JPEG2000, PNG och TIFF.
 
-### Använda toPS API med en JSP eller Servlets {#using-tops-api-with-a-jsp-or-servlets}
+### Använda toPS API med JSP eller Servlets {#using-tops-api-with-a-jsp-or-servlets}
 
 ```java
 <%@ page import="java.util.List, java.io.File,
