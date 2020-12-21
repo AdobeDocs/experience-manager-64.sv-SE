@@ -21,13 +21,13 @@ ht-degree: 0%
 
 Med de allmänna inställningarna för AEM Forms-appen kan du ange inställningar som hämtningsbilagor, offlineläge, landningsskärm, standardkategori och frekvens för autosparande.
 
-## Uppdatera de allmänna inställningarna i din app {#working-with-the-form}
+## Uppdaterar de allmänna inställningarna i din app {#working-with-the-form}
 
 När du synkroniserar din app med AEM Forms-servern hämtas alla formulär och definierade uppgifter till din mobila enhet.
 
 Den färdiga AEM Forms-applösningen hämtar inte de bilagor som är kopplade till varje formulär när appen synkroniseras.
 
-Ändra inställningar för hämtning, offlineläge, landningsskärm, automatiskt sparande och synkronisering på fliken Allmänt. Du kan ändra appens [startskärm](/help/forms/using/home-screen.md) .
+Ändra inställningar för hämtning, offlineläge, landningsskärm, automatiskt sparande och synkronisering på fliken Allmänt. Du kan ändra [startskärmen](/help/forms/using/home-screen.md) för din app.
 
 **Navigera till fliken Allmänt på inställningsskärmen**
 
@@ -46,7 +46,7 @@ Du kan göra följande ändringar i inställningarna för ditt program.
 
 * **Hämta uppgiftsbilagor**: Anger om de associerade bilagorna ska hämtas eller inte när varje uppgift hämtas till din app.
 
-* **Offlineläge**: Om du vill aktivera eller inaktivera offlinetjänsten för AEM Forms-programmet. Mer information finns i [Arbeta i offlineläge](/help/forms/using/work-offline-mode.md) .
+* **Offlineläge**: Om du vill aktivera eller inaktivera offlinetjänsten för AEM Forms-programmet. Mer information finns i [Arbeta i offlineläge](/help/forms/using/work-offline-mode.md).
 
 * **Landningsskärm**: Ange programmets startplats ([hemskärmen](/help/forms/using/home-screen.md)).
 
@@ -58,9 +58,9 @@ Du kan göra följande ändringar i inställningarna för ditt program.
 
 * **Standardkategori**: Här kan du välja vilken formulärkategori som ska visas på hemskärmen. När du väljer Alla kan du se alla formulär på hemskärmen. Kategorierna fylls i baserat på de formulär som läses in i appen. Forms är tillgängligt i appen baserat på de formulärinställningar som har angetts på AEM Forms-servern.
 
-* **Spara automatiskt**: För att ange hur ofta [mobilappen sparar formulärdata](/help/forms/using/autosave-data-app.md) lokalt.
+* **Spara automatiskt**: Anger hur ofta  [mobilappen sparar formuläret ](/help/forms/using/autosave-data-app.md) digitalt.
 
-* **Synkroniseringsfrekvens**: Anger hur ofta din [mobilapp synkroniseras](/help/forms/using/sync-app.md) med AEM Forms-servern i online-läge.
+* **Synkroniseringsfrekvens**: Anger hur ofta din  [mobilapp ska ](/help/forms/using/sync-app.md) synkroniseras med AEM Forms-servern i online-läge.
 
 **Rensa lokala data**: Rensa databasen, inklusive inställningar och lokala data för alla användare och fillagring från enheten.
 
