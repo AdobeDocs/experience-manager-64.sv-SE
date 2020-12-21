@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Mät och förbättra effektiviteten och konverteringen av blanketter {#measure-and-improve-effectiveness-and-conversion-of-forms}
+# Mät och förbättra effektiviteten och konverteringen av formulär {#measure-and-improve-effectiveness-and-conversion-of-forms}
 
 ## Utmaningen {#the-challenge-br}
 
@@ -33,18 +33,18 @@ För att maximera avkastningen måste organisationer övervaka hur kunderna inte
 
 ## Lösningen {#the-solution}
 
-AEM Forms kan integreras med [Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html) -lösningar - [Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html) och [Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html) - som hjälper er att övervaka och analysera hur era formulär fungerar och som gör det möjligt att experimentera och identifiera den upplevelse som leder till bättre konverteringsgrad.
+AEM Forms kan integreras med [Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)-lösningar - [Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html) och [Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html) - som hjälper dig att övervaka och analysera hur formulären fungerar och som gör det möjligt att experimentera och identifiera upplevelsen som leder till bättre konverteringsgrad.
 
 ## Arbetsflödet {#the-workflow}
 
 Låt oss titta närmare på hur du kan mäta prestanda och förbättra konverteringsgraden för formulär.
 
-### Målgrupper {#target-audience}
+### Målgrupp {#target-audience}
 
 * Affärsanvändare och analytiker som ansvarar för marknadsföringsstrategier och framgång
 * IT-personal som vill ha infrastruktur och lösningar för installation och underhåll
 
-### AEM Forms komponenter och funktioner {#aem-forms-components-and-features-involved}
+### AEM Forms komponenter och funktioner som ingår i {#aem-forms-components-and-features-involved}
 
 * Anpassningsbara formulär
 * Integrering med Adobe Analytics för att samla in, ordna och rapportera kundinteraktioner med era adaptiva formulär
@@ -127,7 +127,7 @@ I det här steget ska du analysera datapunkter i analysrapporten och sluta dig t
 
 När du har analyserat dessa datapunkter och kommit fram till en hypotes kan du göra de ändringar som krävs i formuläret.
 
-#### Steg 4: Validera analyser och korrigeringar {#step-validate-your-analysis-and-fixes}
+#### Steg 4: Validera din analys och dina korrigeringar {#step-validate-your-analysis-and-fixes}
 
 I det här steget validerar du de ändringar du har gjort i formuläret och kontrollerar om det påverkar konverteringsgraden.
 
@@ -139,7 +139,7 @@ Mer information om hur du skapar ett A/B-test för ett adaptivt formulär finns 
 
 ![Ett exempel på en sammanfattningsrapport av A/B-test för ett adaptivt formulär](assets/ab-test-report-2.png)
 
-## Best practices {#best-practices}
+## God praxis {#best-practices}
 
 De bästa sätten är de som du identifierar dig själv när du utför det här arbetsflödet. De är unika för din miljö och dina krav. Samla era kunskaper i arbetsflödet och dokumentera dem som bästa praxis.
 
