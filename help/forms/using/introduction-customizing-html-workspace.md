@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Introduktion till Anpassa AEM formulärarbetsyta {#introduction-to-customizing-aem-form-workspace}
+# Introduktion till anpassning AEM formulärarbetsytan {#introduction-to-customizing-aem-form-workspace}
 
 AEM kan ändra presentationssemantik och funktionalitet i gränssnittet. Typerna av anpassningar för att ändra format, layout, formatering, varumärke och grundfunktioner beskrivs nedan.
 
@@ -36,13 +36,13 @@ AEM Forms arbetsyta har stöd för en mängd anpassningar för att uppdatera anv
 
 Du kan ändra utseende, layout och andra presentationssemantik för AEM Forms-arbetsytan. Ändra arbetsyta genom att anpassa CSS-, HTML-mallar och JavaScript™-filer. Alla standardfiler finns i standardinstallationen.
 
-De vanligaste stegen beskrivs i [Allmänna steg för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md)av arbetsytan i AEM Forms. Specifika exempel på sådana anpassningar, inklusive detaljerade steg, finns i de relaterade artiklarna i slutet av den här artikeln.
+De vanligaste stegen beskrivs i [Allmänna steg för anpassning av AEM Forms-arbetsytan](/help/forms/using/generic-steps-html-workspace-customization.md). Specifika exempel på sådana anpassningar, inklusive detaljerade steg, finns i de relaterade artiklarna i slutet av den här artikeln.
 
-#### Förstå formatmallen {#understanding-the-style-sheet}
+#### Om formatmallen {#understanding-the-style-sheet}
 
 Innan du anpassar arbetsytan bör du bekanta dig med den standardformatmall som finns i AEM Forms på /libs/ws/css/style.css.
 
-Om du vill anpassa arbetsytan bör du bekanta dig med den befintliga formatmallen, style.css, som finns i mappen /libs/ws/css. Några viktiga komponenter beskrivs nedan.
+Om du vill anpassa arbetsytan bör du bekanta dig med den befintliga formatmallen, style.css, som finns i mappen /libs/ws/css. Nedan beskrivs några viktiga komponenter.
 
 <table> 
  <tbody> 
@@ -127,20 +127,20 @@ De översta stegen för CSS-anpassning är:
 * Lägg till formatobjekt i denna CSS. Mer information finns i Förstå CSS-format.
 * Uppdatera referenserna i `html.jsp`.
 
-Exakt hur du gör dessa anpassningar finns i [Allmänna steg för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md)av arbetsytan i AEM Forms. CSS-filen som levereras med arbetsytan i AEM Forms finns på /libs/ws/css/. Använd [leveranspaketet](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)för CSS-relaterade anpassningar. Specifika exempel på CSS-relaterade anpassningar finns i de relaterade hjälpavsnitten i slutet av den här artikeln.
+Exakt hur du gör dessa anpassningar finns i [Allmänna steg för anpassning av AEM Forms arbetsyta](/help/forms/using/generic-steps-html-workspace-customization.md). CSS-filen som levereras med arbetsytan i AEM Forms finns på /libs/ws/css/. Använd [Ship Package](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p) för CSS-relaterade anpassningar. Specifika exempel på CSS-relaterade anpassningar finns i de relaterade hjälpavsnitten i slutet av den här artikeln.
 
 #### Bild {#image}
 
-Du kan anpassa AEM Forms-arbetsytan för att lägga till olika användare eller lägga till din organisations logotyp. Använd [Ship Package](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)för dessa anpassningar.
+Du kan anpassa AEM Forms-arbetsytan för att lägga till olika användare eller lägga till din organisations logotyp. Använd [Leveranspaket](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p) för dessa anpassningar.
 
 De översta stegen för anpassning av bilderna är:
 
 * Installera och konfigurera WebDAV.
 * Lägg till nya bilder.
 * Lägg till nya format som motsvarar de tillagda bilderna.
-* Länka till den nya CSS-filen i `html.jsp` filen.
+* Länka till den nya CSS-filen i `html.jsp`-filen.
 
-Om du vill komma igång med att anpassa bilderna i AEM Forms arbetsyta följer du de [allmänna stegen för AEM Forms arbetsyteanpassning](/help/forms/using/generic-steps-html-workspace-customization.md). Specifika exempel på bildrelaterade anpassningar finns i de relaterade hjälpavsnitten i slutet av den här artikeln.
+Om du vill komma igång med att anpassa bilderna i AEM Forms-arbetsytan följer du de allmänna [stegen för anpassning av AEM Forms arbetsyta](/help/forms/using/generic-steps-html-workspace-customization.md). Specifika exempel på bildrelaterade anpassningar finns i de relaterade hjälpavsnitten i slutet av den här artikeln.
 
 #### HTML-mall {#html-template}
 
@@ -152,7 +152,7 @@ De översta stegen för anpassning av HTML-mallen är:
 * Lägg till nya mallar i en användardefinierad mapp.
 * Gör relevanta uppdateringar av de kopierade filerna, som sökvägen till den nya mallen.
 
-Specifika exempel på sådana anpassningar finns i hjälpavsnitten i slutet av den här artikeln. Välj mellan [Ship Package](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p) eller [Dev Package](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p), beroende på vilken mall som ska anpassas.
+Specifika exempel på sådana anpassningar finns i hjälpavsnitten i slutet av den här artikeln. Välj mellan [Leveranspaket](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p) eller [Dev Package](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p), beroende på vilken mall som ska anpassas.
 
 ### Semantiska ändringar {#semantic-changes}
 
@@ -165,7 +165,7 @@ De översta stegen för att göra semantiska ändringar för att ändra funktion
 * Gör relevanta uppdateringar, som att uppdatera sökvägar för nytillagda modeller och vyer i JavaScript-standardfilerna.
 * Minimera paketet för att optimera prestanda.
 
-Mer konceptuell information om komponenterna som är en del av källkoden finns i [Beskrivningen av återanvändbara komponenter](/help/forms/using/description-reusable-components.md). Använd Dev Package för dessa anpassningar.
+Mer konceptuell information om komponenterna som är en del av källkoden finns i [Beskrivning av återanvändbara komponenter](/help/forms/using/description-reusable-components.md). Använd Dev Package för dessa anpassningar.
 
 ### Återanvändbara komponenter {#reusable-components}
 
@@ -173,7 +173,7 @@ Eftersom AEM Forms arbetsyta är ett komponentbaserat program kan det enkelt anp
 
 Mer konceptuell information finns i [Beskrivning av återanvändbara komponenter](/help/forms/using/description-reusable-components.md) och instruktioner om hur du använder komponenterna finns i [Integrera AEM Forms-arbetsytekomponenter i webbprogram](/help/forms/using/description-reusable-components.md).
 
-## Skapar AEM Forms arbetsytekod {#building-html-workspace-code}
+## Skapar AEM Forms-arbetsytekod {#building-html-workspace-code}
 
 ### SDK-paket {#sdk-package}
 
@@ -244,7 +244,7 @@ Paketet kan byggas med de tre profiler som beskrivs nedan.
 
 #### Leveransprofil {#ship-profile}
 
-#### Command {#command}
+#### Kommando {#command}
 
 * mvn clean -P Ship install on client-pkg folder of Source package shipping to client.
 * Kommandokörning av Ship-profil fungerar bara på en 64-bitars JVM.
@@ -271,7 +271,7 @@ Paketet kan byggas med de tre profiler som beskrivs nedan.
 
    * ws - Innehåller pluginPing.pdf, pdf.html och WSNextAdapter.swf.
 
-* Språk - innehåller .content.xml.
+* Locale - innehåller .content.xml.
 * nationella inställningar:
 
    * de-DE - Innehåller translation.json för tyska.
@@ -289,7 +289,7 @@ Paketet kan byggas med de tre profiler som beskrivs nedan.
 
 #### Felsökningsprofil {#debug-profile}
 
-#### Command {#command-1}
+#### Kommando {#command-1}
 
 * mvn ren -P Felsökningsinstallation på klient-pkg
 * Kommandokörning av felsökningsprofiler fungerar bara på 64-bitars JVM.
@@ -316,7 +316,7 @@ Paketet kan byggas med de tre profiler som beskrivs nedan.
 
    * ws - Innehåller pluginPing.pdf, pdf.html och WSNextAdapter.swf.
 
-* Språk - innehåller .content.xml.
+* Locale - innehåller .content.xml.
 * nationella inställningar:
 
    * de-DE - Innehåller translation.json för tyska.
@@ -334,7 +334,7 @@ Paketet kan byggas med de tre profiler som beskrivs nedan.
 
 #### Dev-profil {#dev-profile}
 
-#### Command {#command-2}
+#### Kommando {#command-2}
 
 mvn clean -P Dev install on client-pkg
 
@@ -365,7 +365,7 @@ mvn clean -P Dev install on client-pkg
 
    * ws - Innehåller pluginPing.pdf, pdf.html och WSNextAdapter.swf.
 
-* Språk - innehåller .content.xml.
+* Locale - innehåller .content.xml.
 * nationella inställningar:
 
    * de-DE - Innehåller translation.json för tyska.
