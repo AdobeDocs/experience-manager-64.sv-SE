@@ -21,9 +21,11 @@ ht-degree: 0%
 
 **- Krav**
 
-**Nödvändig kunskap** Innan du kan lägga till AEM Forms Workspace på SharePoint Server måste du ha tillgång till SharePoint Server med rätt behörighet och du måste känna till URL:en för att få tillgång till Workspace. Stegen nedan förutsätter att du har kunskap om SharePoint Server. Mer information om webbdelar i SharePoint Server finns i Webbdelar i Windows SharePoint Services.
+**Nödvändig**
+kunskapInnan du kan lägga till AEM Forms Workspace på SharePoint Server måste du ha tillgång till SharePoint Server med rätt behörighet och du måste känna till URL:en för att få tillgång till Workspace. Stegen nedan förutsätter att du har kunskap om SharePoint Server. Mer information om webbdelar i SharePoint Server finns i Webbdelar i Windows SharePoint Services.
 
-**Användarnivå**- början
+**Användarnivå**
+början
 
 Du kan använda AEM Forms Workspace som en webbdel i Microsoft Office SharePoint Server( t.ex. Microsoft Office SharePoint Server 2007). Användare har åtkomst till AEM Forms Workspace genom att ansluta till SharePoint Server via en webbläsare för att ge en enhetlig upplevelse. I den här artikeln får du lära dig de grundläggande stegen för att visa AEM Forms Workspace som en webbdel i Microsoft Office SharePoint Server. Du kan utföra stegen som beskrivs i den här artikeln för att ge en enhetlig upplevelse så att användare som ansluter till din SharePoint-server kan komma åt AEM Forms Workspace från samma port.
 
@@ -42,9 +44,9 @@ Så här integrerar du AEM Forms Workspace i en webbdel:
    >44299 är standardportnumret för SharePoint-servern. Portnumret beror på din installation av SharePoint Server.
 
 1. Klicka på **Webbplatsåtgärder** längst upp till höger på webbsidan och välj **Redigera sida**.
-1. Klicka på knappen **Lägg till en webbdel** .
-1. I dialogrutan Lägg till webbdelar - webbsida, under Övrigt, väljer du **Webbdel** för sidvisning och klickar sedan på **Lägg till**.
-1. Klicka på **redigera** i rutan Webbdel i sidvisningsprogrammet och välj **Ändra delad webbdel**.
+1. Klicka på knappen **Lägg till en webbdel**.
+1. I dialogrutan Lägg till webbdelar - webbsida väljer du **Webbdel** under Övrigt och klickar sedan på **Lägg till**.
+1. Klicka på **redigera** i rutan Webbdel för sidvisning och välj **Ändra delad webbdel**.
 
    >[!NOTE]
    >
@@ -57,14 +59,14 @@ Så här integrerar du AEM Forms Workspace i en webbdel:
 1. Utför följande åtgärder på sidan för sidvisningsprogrammet:
 
    1. I rutan Länk anger du URL:en för AEM Forms Workspace, till exempel https://*[AEM_forms_Server]:*8080/lc/ws där *[AEM_forms_Server]* representerar IP-adressen eller namnet på AEM formulärserver.
-   1. Klicka på **Utseende** och ändra höjd, bredd och titel så att du kan se hela gränssnittet i arbetsytan. Du kan till exempel ange höjd och bredd till 6 tum respektive 11 tum.
-   1. Klicka på **Testa länk**. Ett nytt webbläsarfönster visas med arbetsytan.
+   1. Klicka på **Utseende** och ändra höjd, bredd och titel så att du kan se hela användargränssnittet för arbetsytan. Du kan till exempel ange höjd och bredd till 6 tum respektive 11 tum.
+   1. Klicka på **Testa länken**. Ett nytt webbläsarfönster visas med arbetsytan.
    1. (Valfritt) Klicka på **Layout** och ändra layouten för arbetsytan i webbdelen.
    1. (Valfritt) Klicka på **Avancerat** och ändra andra inställningar, till exempel beskrivningen och om arbetsytan kan minimeras eller stängas i webbdelen.
 
       Klicka på **Använd**.
 
-1. Klicka på **Avsluta redigeringsläge** och kontrollera att du har åtkomst till arbetsytan.
+1. Klicka på **Avsluta redigeringsläget** och kontrollera att du har åtkomst till arbetsytan.
 
 När du har utfört stegen ovan ser SharePoint-webbplatsen ut ungefär som på följande bild (bild 2):
 
