@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Fördefinierade rapporter i processrapportering {#pre-defined-reports-in-process-reporting}
 
-AEM Forms Process Reporting levereras med följande *färdiga* rapporter:
+AEM Forms Process Reporting levereras med följande *körklara*-rapporter:
 
 * **[Långa processer](/help/forms/using/process-reporting/pre-defined-reports-in-process-reporting.md#p-long-running-processes-p)**: En rapport över alla AEM Forms-processer som tog mer än en angiven tid att slutföra
 
@@ -31,10 +31,10 @@ AEM Forms Process Reporting levereras med följande *färdiga* rapporter:
 
 Rapporten Långa processer visar de AEM Forms-processer som tagit mer än en angiven tid att slutföra.
 
-### Så här kör du en rapport över en process som körs länge {#to-execute-a-long-running-process-report-br}
+### Så här kör du en rapport för en process som körs länge {#to-execute-a-long-running-process-report-br}
 
-1. Om du vill visa listan med fördefinierade rapporter i Processrapportering klickar du på noden **Rapporter** i trädvyn **Processrapportering** .
-1. Klicka på rapportnoden **Långa processer** .
+1. Om du vill visa listan med fördefinierade rapporter i processrapportering klickar du på noden **Rapporter** i trädvyn **Processrapportering**.
+1. Klicka på rapportnoden **Långa processer**.
 
    ![long_running_node](assets/long_running_node.png)
 
@@ -44,17 +44,17 @@ Rapporten Långa processer visar de AEM Forms-processer som tagit mer än en ang
 
    Parametrar:
 
-   * **Varaktighet**(*obligatoriskt*): Ange varaktighet och tidsenhet. Visa alla AEM Forms-processer som har körts under mer än den angivna varaktigheten.
-   * **Startat efter** (*valfritt*): Välj ett datum. Filtrera rapporten så att processinstanser som har startats efter det angivna datumet visas.
-   * **Startades före** (*valfritt*): Välj ett datum. Filtrera rapporten så att processinstanser som startats före det angivna datumet visas.
+   * **Varaktighet** (*obligatoriskt*): Ange varaktighet och tidsenhet. Visa alla AEM Forms-processer som har körts under mer än den angivna varaktigheten.
+   * **Startat efter**  (*valfritt*): Välj ett datum. Filtrera rapporten så att processinstanser som har startats efter det angivna datumet visas.
+   * **Startades före**  (*valfritt*): Välj ett datum. Filtrera rapporten så att processinstanser som startats före det angivna datumet visas.
 
 1. Klicka på **Gå** för att köra rapporten.
 
-   Rapporten visas på panelen **Rapport** till höger om fönstret **Processrapportering** .
+   Rapporten visas i panelen **Rapport** till höger om fönstret **Processrapportering**.
 
    ![long_running_processes](assets/long_running_processes.png)
 
-   Använd alternativen i det övre högra hörnet av **rapportpanelen** för att utföra följande åtgärder för rapporten.
+   Använd alternativen i det övre högra hörnet av panelen **Rapport** för att utföra följande åtgärder på rapporten.
 
    * **Uppdatera**: Uppdaterar rapporten med de senaste data som finns i lagringen
    * **Ändra förklaringsfärg**: Markera och ändra färgen på rapportförklaringen
@@ -64,10 +64,10 @@ Rapporten Långa processer visar de AEM Forms-processer som tagit mer än en ang
 
 Processvaraktighetsrapporten visar antalet instanser av en Forms-process i antal dagar som varje instans har körts.
 
-### Så här kör du en rapport för processvaraktighet {#to-execute-a-process-duration-report-br}
+### Så här kör du en processvaraktighetsrapport {#to-execute-a-process-duration-report-br}
 
-1. Om du vill visa de fördefinierade rapporterna i Processrapportering klickar du på noden **Rapporter** i trädvyn **Processrapportering** .
-1. Klicka på rapportnoden **Processvaraktighet** .
+1. Om du vill visa de fördefinierade rapporterna i processrapportering klickar du på noden **Rapporter** i trädvyn **Processrapportering**.
+1. Klicka på rapportnoden **Processvaraktighet**.
 
    ![process_duration_node](assets/process_duration_node.png)
 
@@ -77,7 +77,7 @@ Processvaraktighetsrapporten visar antalet instanser av en Forms-process i antal
 
    Parametrar:
 
-   * **Välj process** (*obligatoriskt*): Välj en AEM Forms-process.
+   * **Välj process**  (*obligatoriskt*): Välj en AEM Forms-process.
 
 1. Klicka på **Gå** för att köra rapporten.
 
@@ -85,20 +85,20 @@ Processvaraktighetsrapporten visar antalet instanser av en Forms-process i antal
 
    ![process_duration_report](assets/process_duration_report.png)
 
-   Använd alternativen i det övre högra hörnet av **rapportpanelen** för att utföra följande åtgärder för rapporten.
+   Använd alternativen i det övre högra hörnet av panelen **Rapport** för att utföra följande åtgärder på rapporten.
 
    * **Uppdatera**: Uppdaterar rapporten med de senaste data som finns i lagringen
    * **Ändra förklaringsfärg**: Markera och ändra färgen på rapportförklaringen
    * **Exportera till CSV**: Exportera och hämta data från rapporten till en kommaavgränsad fil
 
-## Rapport över arbetsflödesvolym {#workflow-volume-report}
+## Volymrapport för arbetsflöde {#workflow-volume-report}
 
 Volymrapporten Arbetsflöde visar antalet pågående och slutförda instanser av en AEM Forms-process per kalenderdag.
 
 ### Så här kör du en arbetsflödesvolymrapport {#to-execute-a-workflow-volume-report-br}
 
-1. Om du vill visa de fördefinierade rapporterna i Processrapportering klickar du på noden **Rapporter** i trädvyn **Processrapportering** .
-1. Klicka på rapportnoden **Arbetsflödesvolym** .
+1. Om du vill visa de fördefinierade rapporterna i processrapportering klickar du på noden **Rapporter** i trädvyn **Processrapportering**.
+1. Klicka på rapportnoden **Arbetsflödesvolym**.
 
    ![workflow_volume_node](assets/workflow_volume_node.png)
 
@@ -108,17 +108,17 @@ Volymrapporten Arbetsflöde visar antalet pågående och slutförda instanser av
 
    Parametrar:
 
-   * **Välj process**(*obligatoriskt*): Välj en AEM Forms-process.
-   * **Startat efter** (*valfritt*): Välj ett datum. Filtrerar rapporten så att processinstanser som startats efter det angivna datumet visas.
-   * **Startades före** (*valfritt*): Välj ett datum. Filtrerar rapporten så att processinstanser som påbörjats före det angivna datumet visas.
+   * **Välj process** (*obligatoriskt*): Välj en AEM Forms-process.
+   * **Startat efter**  (*valfritt*): Välj ett datum. Filtrerar rapporten så att processinstanser som startats efter det angivna datumet visas.
+   * **Startades före**  (*valfritt*): Välj ett datum. Filtrerar rapporten så att processinstanser som påbörjats före det angivna datumet visas.
 
 1. Klicka på **Gå** för att köra rapporten.
 
-   Rapporten visas på panelen **Rapport** till höger om fönstret **Processrapportering** .
+   Rapporten visas i panelen **Rapport** till höger om fönstret **Processrapportering**.
 
    ![workflow_volume_report](assets/workflow_volume_report.png)
 
-   Använd alternativen i det övre högra hörnet av **rapportpanelen** för att utföra följande åtgärder för rapporten.
+   Använd alternativen i det övre högra hörnet av panelen **Rapport** för att utföra följande åtgärder på rapporten.
 
    * **Uppdatera**: Uppdaterar rapporten med de senaste data som finns i lagringen
    * **Ändra förklaringsfärg**: Markera och ändra färgen på rapportförklaringen
