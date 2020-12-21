@@ -22,13 +22,13 @@ ht-degree: 0%
 
 ## Om SRP {#about-srp}
 
-Alla AEM Communities-komponenter och -funktioner bygger på ramverket för [sociala komponenter (SCF)](scf.md), som anropar API:t SocialResourceProvider för att få åtkomst till allt användargenererat innehåll (UGC).
+Alla AEM Communities-komponenter och -funktioner bygger på [ramverket för sociala komponenter (SCF)](scf.md), som anropar SocialResourceProvider API för att få åtkomst till allt användargenererat innehåll (UGC).
 
-Innan en communityplats skapas måste [lagringsresursprovidern (SRP)](working-with-srp.md) konfigureras för att välja en implementering som överensstämmer med den underliggande [topologin](topologies.md). SRP-implementeringarna baseras på tre lagringsalternativ:
+Innan en community-plats skapas måste [lagringsresursprovidern (SRP)](working-with-srp.md) konfigureras att välja en implementering som överensstämmer med den underliggande [topologin](topologies.md). SRP-implementeringarna baseras på tre lagringsalternativ:
 
-1. [ASRP](asrp.md) - on demand-lagring i Adobe
+1. [ASRP](asrp.md)  - on demand-lagring i Adobe
 2. [MSRP](msrp.md) - MongoDB
-3. [JSRP](jsrp.md) - JCR
+3. [JSRP](jsrp.md)  - JCR
 
 ## Om UGC-lagring {#about-ugc-storage}
 
@@ -36,7 +36,7 @@ Det som är viktigt att veta om lagring av UGC är att när en plats har konfigu
 
 Även om det kan finnas noder i JCR som skuggar UGC för att ge användbara metadata, ska dessa noder inte blandas ihop med själva UGC.
 
-Se Översikt över [lagringsresursprovidern.](srp.md)
+Se [Översikt över lagringsresursprovidern.](srp.md)
 
 ## Bästa praxis {#best-practice}
 
@@ -65,14 +65,14 @@ Metoder som ska undvikas:
 
 ### Använd söksamlingar {#use-search-collections}
 
-Olika SRP kan ha olika inbyggda frågespråk. Vi rekommenderar att du använder metoder från [com.adobe.cq.social.ugc.api](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) -paketet för att anropa rätt frågespråk.
+Olika SRP kan ha olika inbyggda frågespråk. Vi rekommenderar att du använder metoder från [com.adobe.cq.social.ugc.api](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html)-paketet för att anropa rätt frågespråk.
 
 Mer information finns i [Söka i Grundläggande](search-implementation.md).
 
 ## Resurser {#resources}
 
-* [Community Content Storage](working-with-srp.md) - diskuterar tillgängliga SRP-alternativ för en gemensam lagringsplats för användargenererat innehåll
-* [Översikt över](srp.md) lagringsresursprovidern - introduktion och databasanvändning - översikt
+* [Community Content Storage](working-with-srp.md)  - diskuterar tillgängliga SRP-alternativ för en gemensam lagringsplats för användargenererat innehåll
+* [Översikt över](srp.md)  lagringsresursprovidern - introduktion och databasanvändning - översikt
 * [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
 * [Search Essentials](search-implementation.md) - Essentials information for searching UGC
 * [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utgått verktygsmetoder till aktuella SRP-verktygsmetoder
