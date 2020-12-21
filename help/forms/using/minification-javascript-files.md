@@ -18,17 +18,17 @@ ht-degree: 0%
 ---
 
 
-# Miniatyrbilder av JavaScript-filer {#minification-of-the-javascript-files}
+# Miniatyr av JavaScript-filerna {#minification-of-the-javascript-files}
 
 Med miniatyr tas de redundanta tecknen bort från källkoden, till exempel blanksteg, ny rad och kommentarer. Detta förbättrar prestandan genom att minska storleken på koden. Miniatyrfunktionen påverkar inte funktionen, men den minskar kodens läsbarhet.
 
 Följ de här stegen för att generera miniatyrkod för semantiska ändringar.
 
-1. Kopiera `client-html/src/main/webapp/js` från src-paket i filsystemet.
+1. Kopiera `client-html/src/main/webapp/js` från src-package i filsystemet.
 
    >[!NOTE]
    >
-   >Mer information om paketen finns i [Introduktion till anpassning av arbetsytan](/help/forms/using/introduction-customizing-html-workspace.md) i AEM Forms.
+   >Mer information om paketen finns i [Introduktion till anpassning av AEM Forms-arbetsytan](/help/forms/using/introduction-customizing-html-workspace.md).
 
 1. Uppdatera sökvägar i `main.js` som finns under client-html/src/main/webapp/js, för tillagda/uppdaterade modeller/vyer.
 
