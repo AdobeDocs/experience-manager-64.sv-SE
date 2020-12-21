@@ -18,7 +18,7 @@ ht-degree: 2%
 ---
 
 
-# Hjälpmedel för SCF-handtag {#scf-handlebars-helpers}
+# SCF Handlebars Helper {#scf-handlebars-helpers}
 
 | **[⇐ - funktioner](essentials.md)** | **[Anpassning på serversidan](server-customize.md)** |
 |---|---|
@@ -28,13 +28,13 @@ Handlister Hjälpprogram är metoder som kan anropas från Handlebars-skript fö
 
 Implementeringen innehåller en definition på klientsidan och en serversida. Det är också möjligt för utvecklare att skapa anpassade hjälpprogram.
 
-De anpassade SCF-hjälpen som levereras med AEM Communities definieras i [klientbiblioteket](../../help/sites-developing/clientlibs.md):
+Anpassade SCF-hjälpredor som levereras med AEM Communities definieras i [klientbiblioteket](../../help/sites-developing/clientlibs.md):
 
 * /etc/clientlibs/social/commons/scf/helpers.js
 
 >[!NOTE]
 >
->Installera det [senaste funktionspaketet](deploy-communities.md#latestfeaturepack)för communityn.
+>Installera [det senaste funktionspaketet för communityn](deploy-communities.md#latestfeaturepack).
 
 ## Förkortning {#abbreviate}
 
@@ -106,7 +106,7 @@ Ett hjälpmedel för att lägga till två intervall under en div, ett för den f
 
 * **moreText**: Sträng
 
-   (valfritt) Texten som ska visas anger att det finns mer text att visa. Standardvärdet är &quot;more&quot;.
+   (valfritt) Den text som ska visas anger att det finns mer text att visa. Standardvärdet är &quot;more&quot;.
 
 * **ellipsesText**: Sträng
 
@@ -184,7 +184,7 @@ En hjälpfunktion som returnerar innehåll beroende på ett likhetsvillkor.
 
 ## If-wcm-mode {#if-wcm-mode}
 
-En blockhjälp som testar det aktuella värdet för [WCM-läget](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) mot en strängavgränsad lista med lägen.
+En blockhjälp som testar det aktuella värdet för [WCM-läge](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) mot en strängavgränsad lista med lägen.
 
 ### Parametrar {#parameters-4}
 
@@ -194,7 +194,7 @@ En blockhjälp som testar det aktuella värdet för [WCM-läget](https://helpx.a
 
 * **läge**: Sträng
 
-   (valfritt) En kommaseparerad lista med [WCM-lägen](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) som ska testas om de anges.
+   (valfritt) En kommaavgränsad lista med [WCM-lägen](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) som ska testas om de anges.
 
 ### Exempel {#example-2}
 
@@ -237,9 +237,9 @@ Se även [Internationalisering av strängar i JavaScript-kod](../../help/sites-d
 
 En hjälp som du kan använda för att inkludera en komponent som en icke-befintlig resurs i en mall.
 
-Detta gör att resursen kan anpassas programmatiskt enklare än vad som är möjligt för en resurs som lagts till som en JCR-nod. Se [Lägga till eller inkludera en webbgruppskomponent](scf.md#add-or-include-a-communities-component).
+Detta gör att resursen kan anpassas programmatiskt enklare än vad som är möjligt för en resurs som lagts till som en JCR-nod. Se [Lägg till eller inkludera en webbgruppskomponent](scf.md#add-or-include-a-communities-component).
 
-Endast ett urval av webbgruppskomponenter kan inkluderas. I AEM 6.1 ingår [kommentarer](essentials-comments.md), [omdömen](rating-basics.md), [granskningar](reviews-basics.md)och [omröstningar](essentials-voting.md).
+Endast ett urval av webbgruppskomponenter kan inkluderas. För AEM 6.1 är de som är inkluderbara [kommentarer](essentials-comments.md), [omdöme](rating-basics.md), [recensioner](reviews-basics.md) och [röstning](essentials-voting.md).
 
 Den här hjälpen, som bara är lämplig på serversidan, innehåller funktioner som liknar [cq:include](../../help/sites-developing/taglib.md) för JSP-skript.
 
@@ -251,7 +251,7 @@ Den här hjälpen, som bara är lämplig på serversidan, innehåller funktioner
 
    använd `this`för att skicka den aktuella kontexten
 
-   använd `this.id` för att hämta resursen vid `id` återgivning av begärd resourceType
+   använd `this.id` för att hämta resursen på `id` för återgivning av begärd resourceType
 
 * **resourceType**: Sträng
 
@@ -275,7 +275,7 @@ Den här hjälpen, som bara är lämplig på serversidan, innehåller funktioner
 {{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}
 ```
 
-Det här kommer att innehålla en ny kommentarkomponent på `this.id` + /comments
+Detta inkluderar en ny kommentarkomponent på `this.id` + /comments
 
 ## IncludeClientLib {#includeclientlib}
 
@@ -341,7 +341,7 @@ Den här hjälpen, som bara är lämplig på serversidan, innehåller funktioner
     <link href="/etc/clientlibs/social/hbs/comments.css" rel="stylesheet" type="text/css">
 ```
 
-## Vackert {#pretty-time}
+## Vacker tid {#pretty-time}
 
 En hjälpfunktion som visar hur mycket tid som har gått upp till en brytpunkt, efter vilken ett vanligt datumformat visas.
 
@@ -396,7 +396,7 @@ OBS! det här är inte en validerare och ska inte användas för att skriva attr
 
 ## Xss-htmlAttr {#xss-htmlattr}
 
-En handledare som kodar en källsträng för att skriva till ett HTML-attributvärde för att skydda mot XSS.
+En handledare som kodar en källsträng för skrivning till ett HTML-attributvärde för att skydda mot XSS.
 
 OBS! det här är inte en validerare och ska inte användas för att skriva åtgärdbara attribut (href, src, händelsehanterare).
 
@@ -450,15 +450,15 @@ OBS! detta kan returnera en tom sträng
 
 ## Handlebars.js Basic Overview {#handlebars-js-basic-overview}
 
-En snabb översikt över hjälpfunktioner i [Handlebars.js-dokumentationen](https://handlebarsjs.com/expressions.html):
+En snabb översikt över hjälpfunktioner från [Handlebars.js-dokumentation](https://handlebarsjs.com/expressions.html):
 
 * Ett Handlebars-anrop är en enkel identifierare (hjälpens *namn *) följt av noll eller flera blankstegsavgränsade parametrar.
 * Parametrar kan vara ett enkelt String-, number-, boolean- eller JSON-objekt, samt en valfri sekvens av nyckelvärdepar (hash-argument) som den sista parametern/de sista.
 * Nycklarna i hash-argumenten måste vara enkla identifierare.
 * Värdena i hash-argument är Handlebars-uttryck: enkla identifierare, sökvägar eller strängar.
-* Den aktuella kontexten, `this`, är alltid tillgänglig för HandleBar-hjälpredor.
+* Den aktuella kontexten `this` är alltid tillgänglig för HandleBar-hjälpredor.
 * Kontexten kan vara ett String-, number-, boolean- eller JSON-dataobjekt.
-* Det går att skicka ett objekt som är kapslat i det aktuella sammanhanget som kontext, till exempel `this.url` eller `this.id` (se exempel på enkla och blockerade hjälpprogram).
+* Det går att skicka ett objekt som är kapslat i den aktuella kontexten som kontext, till exempel `this.url` eller `this.id` (se följande exempel på enkla och blockerade hjälpprogram).
 
 * Blockhjälpredor är funktioner som kan anropas var som helst i mallen. De kan anropa ett mallblock noll eller flera gånger med olika kontext varje gång. De innehåller en kontext mellan {{#*name*}} och {{/*name*}}.
 
@@ -494,7 +494,7 @@ template(context);
 Återger:
 
 &lt;ul>\
-&lt;li>&lt;a href=&quot;/post/hello-world&quot;>Post!&lt;/a>&lt;/li>\
+&lt;li>&lt;a href=&quot;/posts/hello-world&quot;>Posta!&lt;/a>&lt;/li>\
 &lt;/ul>
 
 ### Ett exempel på en blockhjälp från Handlebars.js-dokumentationen: {#an-example-of-a-block-helper-from-handlebars-js-documentation}
@@ -527,9 +527,9 @@ template(data);
 
 Anpassade hjälpprogram måste implementeras både på serversidan och på klientsidan, särskilt när data skickas. För SCF kompileras och återges de flesta mallar på serversidan när servern genererar HTML-koden för en viss komponent när sidan begärs.
 
-### Anpassade hjälpmedel på serversidan {#server-side-custom-helpers}
+### Anpassade stödprocesser på serversidan {#server-side-custom-helpers}
 
-För att implementera och registrera en anpassad SCF-hjälp på serversidan behöver du bara implementera Java-gränssnittet [TemplateHelper](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html), göra det till en [OSGi-tjänst](../../help/sites-developing/the-basics.md#osgi) och installera den som en del av ett OSGi-paket.
+Om du vill implementera och registrera en anpassad SCF-hjälp på servern implementerar du bara Java-gränssnittet [TemplateHelper](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html), gör det till en [OSGi-tjänst](../../help/sites-developing/the-basics.md#osgi) och installerar det som en del av ett OSGi-paket.
 
 Till exempel:
 
@@ -575,9 +575,9 @@ public class FooTextHelper implements TemplateHelper<String>{
 >
 >Komponenten återges på nytt på klientsidan för den inloggade användaren, och om hjälpen på klientsidan inte hittas försvinner komponenten.
 
-### Anpassade hjälpmedel på klientsidan {#client-side-custom-helpers}
+### Anpassade hjälp på klientsidan {#client-side-custom-helpers}
 
-Hjälpprogram på klientsidan är Handlebars-skript som registreras genom anrop `Handlebars.registerHelper()`.\
+Hjälpprogram på klientsidan är Handlebars-skript som registreras genom att anropa `Handlebars.registerHelper()`.\
 Till exempel:
 
 ### custom-helpers.js {#custom-helpers-js}
@@ -598,11 +598,11 @@ function(Handlebars, SCF, $CQ) {
 De anpassade hjälpfilerna på klientsidan måste läggas till i ett anpassat klientbibliotek.\
 Klientlib måste:
 
-* Inkludera ett beroende på `cq.social.scf`
+* Inkludera ett beroende för `cq.social.scf`
 * Läs in efter att handtag har lästs in
-* Bli [inkluderad](clientlibs.md)
+* Var [inkluderad](clientlibs.md)
 
-Obs! SCF-hjälprarna definieras i `/etc/clientlibs/social/commons/scf/helpers.js`.
+Obs! Hjälpprogrammen för SCF definieras i `/etc/clientlibs/social/commons/scf/helpers.js`.
 
 | **[⇐ - funktioner](essentials.md)** | **[Anpassning på serversidan](server-customize.md)** |
 |---|---|
