@@ -28,25 +28,25 @@ Dessa instruktioner beskriver hur du ansluter till MySQL-servern, skapar aktiver
 
 Innan du konfigurerar aktiveringsfunktionen i MySQL för Communities måste du se till att
 
-* Installera [MySQL server](https://dev.mysql.com/downloads/mysql/) Community Server version 5.6
+* Installera [MySQL-server](https://dev.mysql.com/downloads/mysql/) Community Server version 5.6
    * Version 5.7 stöds inte för SCORM
    * Kan vara samma server som AEM författarinstans
-* Installera den officiella [JDBC-drivrutinen för MySQL på alla AEM instanser](deploy-communities.md#jdbc-driver-for-mysql)
-* Installera [MySQL Workbench](https://dev.mysql.com/downloads/tools/workbench/)
-* Installera [SCORM-paketet på alla AEM instanser](enablement.md#scorm)
+* Installera den officiella [JDBC-drivrutinen för MySQL](deploy-communities.md#jdbc-driver-for-mysql) på alla AEM instanser
+* Installera [MySQL workbench](https://dev.mysql.com/downloads/tools/workbench/)
+* Installera [SCORM-paketet](enablement.md#scorm) på alla AEM instanser
 
 ## Installerar MySQL {#installing-mysql}
 
 MySQL ska laddas ned och installeras enligt instruktionerna för måloperativsystemet.
 
-### Tabellnamn med gemener {#lower-case-table-names}
+### Gemener i tabellnamn {#lower-case-table-names}
 
 Eftersom SQL inte är skiftlägeskänsligt måste du, för skiftlägeskänsliga operativsystem, inkludera en inställning som anger alla tabellnamn med gemener.
 
 Om du till exempel vill ange alla tabellnamn med gemener i ett Linux-operativsystem:
 
-* Redigera fil `/etc/my.cnf`
-* Lägg till följande rad i `[mysqld]` avsnittet:
+* Redigera filen `/etc/my.cnf`
+* Lägg till följande rad i avsnittet `[mysqld]`:
    `lower_case_table_names = 1`
 
 ### UTF8-teckenuppsättning {#utf-character-set}
@@ -57,10 +57,10 @@ För att få bättre stöd för flera språk måste du använda teckenuppsättni
 * mysql> SET NAMES &#39;utf8&#39;;
 
 Ändra MySQL-databasen till standard till UTF8:
-* Redigera fil `/etc/my.cnf`
-* Lägg till följande rad i `[client]` avsnittet:
+* Redigera filen `/etc/my.cnf`
+* Lägg till följande rad i avsnittet `[client]`:
    `default-character-set=utf8`
-* Lägg till följande rad i `[mysqld]` avsnittet:
+* Lägg till följande rad i avsnittet `[mysqld]`:
    `character-set-server=utf8`
 
 ## Installerar MySQL Workbench {#installing-mysql-workbench}
@@ -78,7 +78,7 @@ När MySQL Workbench startas första gången visas inga anslutningar, såvida de
 ### Nya anslutningsinställningar {#new-connection-settings}
 
 1. Markera +-ikonen till höger om `MySQL Connections`.
-1. I dialogrutan `Setup New Connection`anger du värden som är lämpliga för din plattform i demonstrationssyfte, med författarinstansen AEM och MySQL på samma server:
+1. I dialogrutan `Setup New Connection` anger du värden som är lämpliga för din plattform i demonstrationssyfte, med författarinstansen AEM och MySQL på samma server:
    * Anslutningsnamn: `Enablement`
    * Anslutningsmetod: `Standard (TCP/IP)`
    * Värdnamn: `127.0.0.1`
@@ -90,9 +90,9 @@ När MySQL Workbench startas första gången visas inga anslutningar, såvida de
 **Anteckningar**:
 
 * Standardporten är `3306`
-* Det `Connection Name` valda namnet anges som `datasource` namn i [JDBC OSGi-konfiguration](#configure-jdbc-connections)
+* Det `Connection Name` som valts anges som `datasource`-namn i [JDBC OSGi-konfiguration](#configure-jdbc-connections)
 
-#### Anslutningen lyckades {#successful-connection}
+#### Anslutningen {#successful-connection} lyckades
 
 ![chlimage_1-328](assets/chlimage_1-328.png)
 
@@ -108,11 +108,11 @@ Observera att det finns ett testschema och standardanvändarkonton när du öppn
 
 ### Hämta SQL-skript {#obtain-sql-scripts}
 
-SQL-skripten hämtas med CRXDE Lite på författarinstansen. SCORM- [paketet](deploy-communities.md#scorm) måste vara installerat:
+SQL-skripten hämtas med CRXDE Lite på författarinstansen. [SCORM-paketet](deploy-communities.md#scorm) måste vara installerat:
 
 1. Bläddra till CRXDE Lite
    * Till exempel [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
-1. Expandera `/libs/social/config/scorm/` mappen
+1. Expandera mappen `/libs/social/config/scorm/`
 1. Hämta `database_scormengine.sql`
 1. Hämta `database_scorm_integration.sql`
 
@@ -120,8 +120,8 @@ SQL-skripten hämtas med CRXDE Lite på författarinstansen. SCORM- [paketet](de
 
 En metod för att hämta schemat är att
 
-* Markera `jcr:content`noden för SQL-filen
-* Observera att värdet för `jcr:data`egenskapen är en visningslänk
+* Välj `jcr:content`noden för sql-filen
+* Observera att värdet för egenskapen `jcr:data`är en visningslänk
 * Markera vylänken om du vill spara data i en lokal fil
 
 ### Skapa SCORM-databas {#create-scorm-database}
@@ -132,8 +132,8 @@ Den Aktivera SCORM-databas som ska skapas är:
 * som skapats från skript:
    * schema: `database_scormengine.sql`
    * data: `database_scorm_integration.sql`
-Follow the steps below (
-[öppna](#step-open-sql-file), [kör](#step-execute-sql-script)) för att installera varje [SQL-skript](#obtain-sql-scripts) . [Uppdatera](#refresh) vid behov för att se resultatet av skriptkörningen.
+Följ stegen nedan (
+[öppna](#step-open-sql-file),  [kör](#step-execute-sql-script)) för att installera varje  [SQL-skript](#obtain-sql-scripts) . [Uppdatera ](#refresh) vid behov för att se resultatet av skriptkörningen.
 
 Installera schemat innan du installerar data.
 
@@ -160,11 +160,11 @@ I MySQL Workbench
 
 ![chlimage_1-332](assets/chlimage_1-332.png)
 
-#### Steg 2: köra SQL-skript {#step-execute-sql-script}
+#### Steg 2: kör SQL-skript {#step-execute-sql-script}
 
-I Workbench-fönstret för den fil som öppnas i steg 1 väljer du det `lightening (flash) icon` som ska köra skriptet.
+I Workbench-fönstret för filen som öppnas i steg 1 väljer du `lightening (flash) icon` för att köra skriptet.
 
-Observera att körningen av skriptet för att skapa SCORM-databasen kan ta en minut att slutföra. `database_scormengine.sql`
+Observera att körningen av `database_scormengine.sql`-skriptet för att skapa SCORM-databasen kan ta en minut att slutföra.
 
 ![chlimage_1-333](assets/chlimage_1-333.png)
 
@@ -176,46 +176,46 @@ När skripten har körts måste du uppdatera `SCHEMAS`avsnittet i `Navigator` f�
 
 #### Resultat: scormenginedb {#result-scormenginedb}
 
-När du har installerat och uppdaterat SCHEMAS **`scormenginedb`** visas den.
+När du har installerat och uppdaterat SCHEMAS visas **`scormenginedb`**.
 
 ![chlimage_1-335](assets/chlimage_1-335.png)
 
 ## Konfigurera JDBC-anslutningar {#configure-jdbc-connections}
 
-OSGi-konfigurationen för **Day Commons JDBC Connections Pool** konfigurerar MySQL JDBC-drivrutinen.
+OSGi-konfigurationen för **Day Commons JDBC Connections Pool** konfigurerar MySQL JDBC Driver.
 
 Alla publicerings- och författarinstanser AEM peka på samma MySQL-server.
 
-När MySQL körs på en annan server än AEM måste servervärdnamnet anges i stället för localhost i JDBC-kopplingen (som fyller i [ScormEngine](#configurescormengineservice) -konfigurationen).
+När MySQL körs på en annan server än AEM måste servervärdnamnet anges i stället för localhost i JDBC-kopplingen (som fyller i [ScormEngine](#configurescormengineservice)-konfigurationen).
 
 * På varje författare och publicera AEM
 * Inloggad med administratörsbehörighet
 * Åtkomst till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md)
    * Till exempel [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
 * Leta reda på `Day Commons JDBC Connections Pool`
-* Skapa en ny konfiguration genom att klicka på `+` ikonen
+* Välj ikonen `+` för att skapa en ny konfiguration
 
 ![chlimage_1-336](assets/chlimage_1-336.png)
 
 * Ange följande värden:
    * **[!UICONTROL JDBC driver class]**: `com.mysql.jdbc.Driver`
-   * **URIJ **för DBC-anslutning:`jdbc:mysql://localhost:3306/aem63reporting`ange server i stället för localhost om MySQL-servern inte är samma som &#39;this&#39; AEM server
+   * **URIJ** för DBC-anslutning:  `jdbc:mysql://localhost:3306/aem63reporting` ange server i stället för localhost om MySQL-servern inte är samma som &#39;this&#39; AEM server
    * **[!UICONTROL Username]**: Rot eller ange det konfigurerade användarnamnet för MySQL-servern, om inte &#39;root&#39;
    * **[!UICONTROL Password]**: Rensa det här fältet om inget lösenord har angetts för MySQL, annars anger du det konfigurerade lösenordet för MySQL-användarnamnet
-   * **[!UICONTROL Datasource name]**: Namn som angetts för [MySQL-anslutningen](#new-connection-settings), till exempel &#39;enablement&#39;
+   * **[!UICONTROL Datasource name]**: Namn som angetts för  [MySQL-anslutningen](#new-connection-settings), till exempel &#39;enablement&#39;
 * Välj **[!UICONTROL Save]**
 
-## Konfigurera korm {#configure-scorm}
+## Konfigurera Scorm {#configure-scorm}
 
 ### Tjänsten AEM Communities ScormEngine {#aem-communities-scormengine-service}
 
-OSGi-konfigurationen för **AEM Communities ScormEngine-tjänsten** konfigurerar SCORM för en aktiveringscommunitys användning av MySQL-servern.
+OSGi-konfigurationen för **AEM Communities ScormEngine-tjänsten** konfigurerar SCORM för användning av MySQL-servern för en aktiveringscommunity.
 
-Den här konfigurationen finns när [SCORM-paketet](deploy-communities.md#scorm-package) installeras.
+Den här konfigurationen finns när [SCORM-paketet](deploy-communities.md#scorm-package) är installerat.
 
 Alla publicerings- och författarinstanser pekar på samma MySQL-server.
 
-När MySQL körs på en annan server än AEM måste servervärdnamnet anges i stället för localhost i ScormEngine-tjänsten, som vanligtvis fylls i från konfigurationen för [JDBC-anslutningen](#configure-jdbc-connections) .
+När MySQL körs på en annan server än AEM måste servervärdnamnet anges i stället för localhost i ScormEngine-tjänsten, som vanligtvis fylls i från konfigurationen [JDBC Connection](#configure-jdbc-connections).
 
 * På varje författare och publicera AEM
 * Inloggad med administratörsbehörighet
@@ -224,14 +224,14 @@ När MySQL körs på en annan server än AEM måste servervärdnamnet anges i st
 * Leta reda på `AEM Communities ScormEngine Service`
 * Markera redigeringsikonen
    ![chlimage_1-337](assets/chlimage_1-337.png)
-* Kontrollera att följande parametervärden är konsekventa med [JDBC Connection](#configurejdbcconnectionspool) -konfigurationen:
-   * **[!UICONTROL JDBC connection URI]**: `jdbc:mysql://localhost:3306/ScormEngineDB` *ScormEngineDB* är standarddatabasnamnet i SQL-skript
+* Kontrollera att följande parametervärden är konsekventa med konfigurationen [JDBC Connection](#configurejdbcconnectionspool):
+   * **[!UICONTROL JDBC connection URI]**:  `jdbc:mysql://localhost:3306/ScormEngineDB` ** ScormEngineDBär standarddatabasnamnet i SQL-skripten
    * **[!UICONTROL Username]**: Rot eller ange det konfigurerade användarnamnet för MySQL-servern, om inte &#39;root&#39;
    * **[!UICONTROL Password]**: Rensa det här fältet om inget lösenord har angetts för MySQL, annars anger du det konfigurerade lösenordet för MySQL-användarnamnet
 * Angående följande parameter:
    * **[!UICONTROL Scorm User Password]**: REDIGERA INTE
 
-      Endast för internt bruk. Den är avsedd för en särskild serviceanvändare som används av AEM Communities för att kommunicera med scorm-motorn.
+      Endast för internt bruk. Den är avsedd för en särskild serviceanvändare som används av AEM Communities för att kommunicera med skorm-motorn.
 * Välj **[!UICONTROL Save]**
 
 ### Adobe Granite CSRF-filter {#adobe-granite-csrf-filter}
@@ -242,10 +242,10 @@ För att se till att aktiveringskurser fungerar korrekt i alla webbläsare måst
 * Inloggad med administratörsbehörighet
 * Åtkomst till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md)
    * Till exempel [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
-* Sök `Adobe Granite CSRF Filter`
+* Sök efter `Adobe Granite CSRF Filter`
 * Markera redigeringsikonen
    ![chlimage_1-338](assets/chlimage_1-338.png)
-* Välj `[+]` ikonen för att lägga till en säker användaragent
-* Enter `Mozilla/*`
+* Välj ikonen `[+]` om du vill lägga till en säker användaragent
+* Ange `Mozilla/*`
 * Välj **[!UICONTROL Save]**
 
