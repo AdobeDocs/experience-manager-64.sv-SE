@@ -25,7 +25,7 @@ Correspondence Management centraliserar och hanterar framtagning, sammanställni
 
 ## Fördelar {#benefits}
 
-### Effektivt och produktivt {#efficient-and-productive}
+### Effektiv och produktiv {#efficient-and-productive}
 
 Det effektiviserar bearbetningen så att du kan:
 
