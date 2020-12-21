@@ -28,29 +28,29 @@ I det här avsnittet skapar du följande sidor som alla använder [sidmallen](in
 
       * SCF Play - Underordnad den huvudsida som ska spelas upp
 
-Även om den här självstudiekursen inte omfattar [språkkopior](../../help/sites-administering/tc-prep.md)är den utformad så att rotsidan kan implementera identifiering av det språk som användaren föredrar via HTML-rubriken och dirigera om till rätt huvudsida för språket. Konventionen är att använda landskoden med två bokstäver för sidans nodnamn, t.ex. &quot;en&quot; för engelska, &quot;fr&quot; för franska och så vidare.
+Även om den här självstudiekursen inte går vidare till [språkkopior](../../help/sites-administering/tc-prep.md) är den utformad så att rotsidan kan implementera identifiering av det språk som användaren föredrar via HTML-rubriken och dirigera om till rätt huvudsida för språket. Konventionen är att använda landskoden med två bokstäver för sidans nodnamn, t.ex. &quot;en&quot; för engelska, &quot;fr&quot; för franska och så vidare.
 
 ## Skapa första sidor {#create-first-pages}
 
-Nu när det finns en [sidmall](initial-app.md#createthepagetemplate)kan vi skapa webbplatsens rotsida i katalogen /content.
+Nu när det finns en [sidmall](initial-app.md#createthepagetemplate) kan vi skapa webbplatsens rotsida i katalogen /content.
 
 1. Standardgränssnittet innehåller för närvarande utkast för att skapa webbplatser. Det klassiska användargränssnittet är användbart eftersom den här självstudiekursen skapar en enkel webbplats.
 
-   Om du vill växla till det klassiska användargränssnittet väljer du global navigering och håller pekaren över den högra sidan av projektikonen. Välj ikonen *Växla till klassiskt gränssnitt* som visas:
+   Om du vill växla till det klassiska användargränssnittet väljer du global navigering och håller pekaren över den högra sidan av projektikonen. Välj ikonen *Byt till Classic UI* som visas:
 
    ![chlimage_1-36](assets/chlimage_1-36.png)
 
-   Möjligheten att växla till det klassiska användargränssnittet måste [aktiveras av en administratör](../../help/sites-administering/enable-classic-ui.md).
+   Möjligheten att växla till det klassiska användargränssnittet måste vara [aktiverat av en administratör](../../help/sites-administering/enable-classic-ui.md).
 
-1. På välkomstsidan [för det](http://localhost:4502/welcome.html)klassiska användargränssnittet väljer du **[!UICONTROL Websites]**.
+1. Välj **[!UICONTROL Websites]** på [välkomstsidan för det klassiska användargränssnittet](http://localhost:4502/welcome.html).
 
    ![chlimage_1-37](assets/chlimage_1-37.png)
 
-   Du kan även få tillgång till det klassiska användargränssnittet för webbplatser direkt genom att gå till [/siteAdmin.](http://localhost:4502/siteadmin)
+   Du kan även få tillgång till det klassiska användargränssnittet för webbplatser direkt genom att gå till [/siteadmin.](http://localhost:4502/siteadmin)
 
-1. I utforskarrutan markerar du **[!UICONTROL Websites]** och sedan väljer du **[!UICONTROL New > New Page]**.
+1. Välj **[!UICONTROL Websites]** i utforskarrutan och välj sedan **[!UICONTROL New > New Page]** i verktygsfältet.
 
-   Ange följande i **[!UICONTROL Create Page]** dialogrutan:
+   Ange följande i dialogrutan **[!UICONTROL Create Page]**:
 
    * Titel: `SCF Sandbox Site`
    * Namn: `an-scf-sandbox`
@@ -59,14 +59,14 @@ Nu när det finns en [sidmall](initial-app.md#createthepagetemplate)kan vi skapa
 
    ![chlimage_1-38](assets/chlimage_1-38.png)
 
-1. Markera den sida du just skapade i Utforskarfönstret `/Websites/SCF Sandbox Site`och klicka på **[!UICONTROL New > New Page]**:
+1. Markera den sida du just skapade i Utforskarfönstret, `/Websites/SCF Sandbox Site`, och klicka på **[!UICONTROL New > New Page]**:
 
    * Titel: `SCF Sandbox`
    * Namn: `en`
-   * Välj **en SCF-sandlådeuppspelningsmall **
-   * Klicka på **Skapa **
+   * Välj **En SCF-sandlåda spelar upp mall**
+   * Klicka på **Skapa**
 
-1. Markera den sida du just skapade i Utforskaren `/Websites/SCF Sandbox Site/SCF Sandbox`och klicka på **[!UICONTROL New > New Page]**
+1. Markera den sida du just skapade i Utforskarfönstret, `/Websites/SCF Sandbox Site/SCF Sandbox`, och klicka på **[!UICONTROL New > New Page]**
 
    * Titel: `SCF Play`
    * Namn: `play`
@@ -81,15 +81,15 @@ Nu när det finns en [sidmall](initial-app.md#createthepagetemplate)kan vi skapa
 
    ![chlimage_1-40](assets/chlimage_1-40.png)
 
-## Lägg till designbanan {#add-the-design-path}
+## Lägg till designsökvägen {#add-the-design-path}
 
-Egenskapen &quot; ` [/etc/designs/an-scf-sandbox](setup-website.md#setupthedesigntreeetcdesigns)`
+När ` [/etc/designs/an-scf-sandbox](setup-website.md#setupthedesigntreeetcdesigns)` skapades med designavsnittet i verktygskonsolen är egenskapen &quot;
 
 * `cq:template="/libs/wcm/core/templates/designpage"`
 
 har definierats, vilket ger möjlighet att referera till designresurser i ett skript med `currentDesign.getPath()`. Till exempel
 
-* &lt;% String favIcon = currentDesign.getPath() + &quot;/favicon.ico&quot;; %>
+* &lt;>
 
 
    * Namn: `cq:designPath`
@@ -108,5 +108,5 @@ Databasen ska vara som följer:
 
 >[!NOTE]
 >
->Det är valfritt att använda cq:designPath och det har inget samband med [användningen av clientlibs](develop-app.md#includeclientlibsintemplate), som i huvudsak krävs eftersom SCF-komponenterna använder [klientlibs](client-customize.md#clientlibs-for-scf) för att hantera sina JS- och CSS-filer.
+>Det är valfritt att använda cq:designPath och är inte relaterat till [användningen av clientlibs](develop-app.md#includeclientlibsintemplate), vilket i huvudsak krävs eftersom SCF-komponenterna använder [klientlibs](client-customize.md#clientlibs-for-scf) för att hantera sina JS- och CSS-filer.
 
