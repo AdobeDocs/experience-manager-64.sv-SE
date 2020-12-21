@@ -27,11 +27,13 @@ Så här lägger du till en aktiveringsresurs på den nya communitywebbplatsen:
 * På författarinstansen
    * Till exempel [http://localhost:4502/](http://localhost:4503/)
 * Logga in som systemadministratör
-* Välj **Communities >[Resources i global navigering](resources.md)**   ![chlimage_1-199](assets/chlimage_1-199.png)
+* Välj **Communities > [Resources](resources.md)** från global navigering
+
+   ![chlimage_1-199](assets/chlimage_1-199.png)
    ![chlimage_1-200](assets/chlimage_1-200.png)
 * Välj den community där aktiveringsresurser läggs till
    * Välj `Enablement Tutorial`
-* From the menu, select ` Create`
+* Välj ` Create` på menyn
 * Välj **[!UICONTROL Resource]**
 
 ![chlimage_1-201](assets/chlimage_1-201.png)
@@ -40,8 +42,7 @@ Så här lägger du till en aktiveringsresurs på den nya communitywebbplatsen:
 
 Fyll i grundläggande information för resursen:
 
-* **[!UICONTROL Site Name]**:
-ange namnet på den valda communitywebbplatsen: Självstudiekurs om aktivering
+* **[!UICONTROL Site Name]**: ange namnet på den valda communitywebbplatsen: Självstudiekurs om aktivering
 * **[!UICONTROL Resource Name&ast;]**: Ski Lesson 1
 * **[!UICONTROL Tags]**: Självstudiekurs: Idrott/skidåkning
 * **[!UICONTROL Show in Catalog]**: På
@@ -54,7 +55,7 @@ ange namnet på den valda communitywebbplatsen: Självstudiekurs om aktivering
 
 Det ser ut som om flera resurser kan väljas, men bara en är tillåten.
 
-Markera `'+' icon`i det övre högra hörnet när du vill börja välja resursen genom att identifiera källan.
+Välj `'+' icon` i det övre högra hörnet för att börja välja resursen genom att identifiera källan.
 
 ![chlimage_1-203](assets/chlimage_1-203.png) ![chlimage_1-204](assets/chlimage_1-204.png)
 
@@ -70,17 +71,17 @@ Markera `'+' icon`i det övre högra hörnet när du vill börja välja resursen
 Lämna standardinställningarna så att eleverna kan kommentera och betygsätta aktiveringsresurser.
 * **[!UICONTROL Due Date]**
 
-   *(Valfritt)* Ett datum då uppdraget ska vara slutfört kan väljas.
+   *(Valfritt)*  Ett datum då uppdraget ska vara slutfört kan väljas.
 * **[!UICONTROL Resource Author]**
 
    *(Valfritt)* Lämna tomt.
 * **[!UICONTROL Resource Contact&ast;]**
 
-   *(Obligatoriskt)* Använd listrutan för att välja medlem `Quinn Harper`.
+   *(Obligatoriskt)* Använd listrutan för att välja medlem  `Quinn Harper`.
 * **[!UICONTROL Resource Expert]**
 
    *(Valfritt)* Lämna tomt.
-   **Obs**: Om användare eller grupper inte visas kontrollerar du att de har lagts till i `Community Enable Members` gruppen och *sparats* i publiceringsinstansen.
+   **Obs**: Om användare eller grupper inte visas kontrollerar du att de har lagts till i  `Community Enable Members` gruppen och  ** sparats i publiceringsinstansen.
    ![chlimage_1-206](assets/chlimage_1-206.png)
 * Välj **[!UICONTROL Next]**
 
@@ -103,7 +104,7 @@ Om du vill överföra en ny version av aktiveringsresursen rekommenderar vi att 
 
 Innan registrerare kan se den tilldelade kursen måste den publiceras:
 
-* Välj `Publish`ikonen för världen
+* Markera världen `Publish`ikon
 
 Aktiveringen har bekräftats med ett meddelande:
 
@@ -127,7 +128,7 @@ Gå tillbaka till självstudiekursen om aktivering av dess resurser.
 
 En inlärningsväg är en logisk gruppering av aktiveringsresurser som utgör en kurs.
 
-* I resurskonsolen väljer du `+ Create`
+* Välj `+ Create` från resurskonsolen
 * Välj **[!UICONTROL Learning Path]**
 
 ![chlimage_1-212](assets/chlimage_1-212.png)
@@ -149,7 +150,7 @@ Hoppa över nästa panel eftersom det inte finns några nödvändiga inlärnings
 
 På panelen Lägg till resurser
 
-* Välj `+ Add Resources` att välja de två skidlektionsresurserna som ska läggas till i inlärningsbanan
+* Välj `+ Add Resources` för att välja de två skidlesionsresurserna som ska läggas till i inlärningsvägen
 
    Obs! Endast **publicerade** resurser kan markeras.
 
@@ -167,11 +168,11 @@ På panelen Lägg till resurser
 
 * **[!UICONTROL Add Assignees]**
 Använd listrutan för att välja 
-`Community Ski Class` en grupp som bör omfatta medlemmar `Riley Taylor` och `Sidney Croft.`
+`Community Ski Class` grupp, som bör omfatta medlemmar  `Riley Taylor` och  `Sidney Croft.`
 
 * **[!UICONTROL Learning Path Contact&ast;]**
 
-   *(Obligatoriskt)* Använd listrutan för att välja medlem `Quinn Harper`.
+   *(Obligatoriskt)* Använd listrutan för att välja medlem  `Quinn Harper`.
 
 * Välj **[!UICONTROL Create]**
 
