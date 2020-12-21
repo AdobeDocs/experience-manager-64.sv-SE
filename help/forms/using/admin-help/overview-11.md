@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Översikt över hälsoövervakning {#overview-of-health-monitor}
+# Översikt över hälsoövervakaren {#overview-of-health-monitor}
 
 Health Monitor ger viktig information om AEM som serverinformation, minnesanvändning och processoranvändning. Det finns också tillgänglig statistik för Work Manager, t.ex. antalet arbetsobjekt eller jobb i kön och deras status. Du kan utföra följande uppgifter med Hälsoövervakning:
 
@@ -33,7 +33,7 @@ Hälsoövervakarsidan i administrationskonsolen har tre flikar:
 * Fliken Arbetshanteraren visar data som är relaterade till Arbetshanteraren, t.ex. antalet arbetsobjekt i arbetshanterarkön. Du kan filtrera informationen genom att använda olika villkor eller hantera enskilda arbetsobjekt med åtgärdsverktygen. (Se [Visa statistik för Work Manager](/help/forms/using/admin-help/view-statistics-related-manager.md#view-statistics-related-to-work-manager).)
 * På fliken Schemaläggaren för jobbtömning kan du rensa bort inaktuella poster från jobbhanterardatabasen. (Se [Rensa poster från jobbhanterardatabasen](/help/forms/using/admin-help/purge-records-job-manager-database.md#purge-records-from-the-job-manager-database).)
 
-Webbsidan för Hälsoövervakaren innehåller statistik som samlats in via ett Gemfire-API. Denna API identifierar automatiskt alla noder i ett kluster. Det löser också säkerhetsproblem som uppstår vid insamling av statistik från proxyservrar eller belastningsutjämnare. Det finns Java-alternativ för att finjustera hälsoövervakaren och minska påverkan på prestanda i AEM formulärmiljö. (Se [Finjustera prestanda](/help/forms/using/admin-help/fine-tuning-health-monitor-performance.md#fine-tuning-health-monitor-performance)för hälsoövervakning.)
+Webbsidan för Hälsoövervakaren innehåller statistik som samlats in via ett Gemfire-API. Denna API identifierar automatiskt alla noder i ett kluster. Det löser också säkerhetsproblem som uppstår vid insamling av statistik från proxyservrar eller belastningsutjämnare. Det finns Java-alternativ för att finjustera hälsoövervakaren och minska påverkan på prestanda i AEM formulärmiljö. (Se [Finjustera prestanda för hälsoövervakaren](/help/forms/using/admin-help/fine-tuning-health-monitor-performance.md#fine-tuning-health-monitor-performance).)
 
 **Hälsoövervakning för åtkomst**
 
