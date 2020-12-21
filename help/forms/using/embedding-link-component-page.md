@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## Förutsättningar {#prerequisites}
 
-Länkkomponenten är medlem i kategorin Dokumenttjänster. Kontrollera att kategorin Dokumenttjänster är synlig i AEM. Om kategorin inte finns med i listan följer du stegen som beskrivs i [Aktivera komponenter](/help/forms/using/enabling-forms-portal-components.md)i formulärportalen.
+Länkkomponenten är medlem i kategorin Dokumenttjänster. Kontrollera att kategorin Dokumenttjänster är synlig i AEM. Om kategorin inte finns med i listan följer du stegen som listas i [Aktivera komponenter för formulärportalen](/help/forms/using/enabling-forms-portal-components.md).
 
 ## Länkkomponent {#link-component}
 
@@ -29,11 +29,11 @@ Med länkkomponenten kan formulärportalförfattare skapa en länk till ett anpa
 
 Utför följande steg för att lägga till en länkkomponent på sidan:
 
-1. Dra **länkkomponenten** på sidan. Markera komponenten och tryck på ![cmpr](assets/cmppr.png). Dialogrutan Redigera länkkomponent öppnas.
+1. Dra **Länk**-komponenten på sidan. Markera komponenten och tryck på ![cmpr](assets/cmppr.png). Dialogrutan Redigera länkkomponent öppnas.
 
    ![edit-link-component](assets/edit-link-component.png)
 
-1. Ange följande på fliken **Visa** :
+1. Ange följande på fliken **Visa**:
 
    * **Länkbeskrivning**: Länka text eller bildtext för länken.
    * **Länkverktygstips**: Verktygstips för länken.
@@ -47,7 +47,7 @@ Utför följande steg för att lägga till en länkkomponent på sidan:
    * **HTML-profil**: Profil för återgivning av formuläret som HTML.
    * **PDF-profil**: Profil för återgivning av formuläret som PDF-dokument.
 
-1. Öppna fliken **Avancerat** . Du kan ange ytterligare parametrar i nyckelvärdepar-formatet. När användaren klickar på länken skickas dessa ytterligare parametrar tillsammans med formuläret.
+1. Öppna fliken **Avancerat**. Du kan ange ytterligare parametrar i nyckelvärdepar-formatet. När användaren klickar på länken skickas dessa ytterligare parametrar tillsammans med formuläret.
 
    Tryck på **Klar** för att spara konfigurationen.
 
