@@ -27,8 +27,8 @@ Använd någon av följande uppgraderingsvägar, beroende på vad som passar din
 Gör så här för att uppgradera befintliga AEM 6.2 Forms på JEE eller AEM 6.3 Forms på JEE till AEM 6.4 Forms på JEE:
 
 1. Ladda ned installationsprogrammet för AEM 6.4 Forms på JEE från [Adobe Licensing Website (LWS)](https://licensing.adobe.com/). Du behöver ett giltigt Maintenance &amp; Support-avtal för att ladda ned installationsprogrammet.
-1. Se [Upgrade checklist and planning](https://www.adobe.com/go/learn_aemfroms_upgrade_checklist_63) (Uppgraderingschecklista och planering) för att få reda på vilka kontroller som krävs för att säkerställa en lyckad uppgradering.
-1. Se [Förbered för uppgradering till AEM Forms](https://www.adobe.com/go/learn_aemforms_prepareupgrade_63) för att lära dig mer och utföra de uppgifter som säkerställer att uppgraderingen körs korrekt med minimal serverdriftstopp.
+1. Läs [Upgrade checklist and planning](https://www.adobe.com/go/learn_aemfroms_upgrade_checklist_63) om du vill veta mer om vilka kontroller som utförs för att säkerställa en lyckad uppgradering.
+1. Se [Förbered dig på att uppgradera till AEM Forms](https://www.adobe.com/go/learn_aemforms_prepareupgrade_63) för att lära dig mer och utföra de uppgifter som säkerställer att uppgraderingen körs korrekt med minimal serverdriftstopp.
 1. Beroende på din befintliga miljö och programserver väljer du något av följande dokument och följer instruktionerna.
 
    * [Uppgradera från AEM 6.2 eller AEM 6.3 Forms till AEM 6.4 Forms for JBoss](assets/upgrade-jboss.pdf)
@@ -38,9 +38,9 @@ Gör så här för att uppgradera befintliga AEM 6.2 Forms på JEE eller AEM 6.3
 
 ## AEM 6.0 Forms on JEE > AEM 6.3 Forms on JEE {#aem-forms-jee-60-to-63}
 
-Direktuppgradering från LiveCycle ES2, LiveCycle ES3, AEM 6.0 Forms, AEM 6.1 Forms till AEM 6.4 Forms är inte tillgängligt. Du kan uppgradera till en eller flera versioner av LiveCycle eller AEM Forms och sedan uppgradera från AEM 6.4 Forms. En lista över mellanversioner och motsvarande uppgraderingsinstruktioner finns i [Välja en uppgraderingssökväg](upgrade.md).
+Direktuppgradering från LiveCycle ES2, LiveCycle ES3, AEM 6.0 Forms, AEM 6.1 Forms till AEM 6.4 Forms är inte tillgängligt. Du kan uppgradera till en eller flera versioner av LiveCycle eller AEM Forms och sedan uppgradera från AEM 6.4 Forms. En lista över mellanliggande versioner och motsvarande uppgraderingsinstruktioner finns i [Välj en uppgraderingssökväg](upgrade.md).
 
-## LiveCycle ES4 SP1 > AEM 6.4 Forms on JEE {#livecycle-es4sp1-forms-jee}
+## LiveCycle ES4 SP1 > AEM 6.4 Forms på JEE {#livecycle-es4sp1-forms-jee}
 
 Uppgradering av LiveCycle ES4 SP1 till AEM 6.4 Forms på JEE är en uppgradering som inte är på plats, eftersom det handlar om att migrera resurser och data från tidigare versioner till nya instanser (nya versioner) av programservrar, operativsystem och databaser som stöds.
 
@@ -61,7 +61,7 @@ Här följer en översikt över hur du uppgraderar en befintlig LiveCycle ES4 SP
 
       Skapa en säkerhetskopia av LiveCycle ES4 SP1-databasen, GDS (Global Data Storage) och crx-databasen (krävs inte för dokumentsäkerhet). Om du uppgraderar till MongoMK eller RDBMK persistence exporterar du LiveCycle ES4 SP1-resurser för korrespondenshantering i en .cmp-fil och skapar resurser som ett AEM.
 
-   1. Kontrollera att din befintliga plattform (dvs. programserver, databas, operativsystem, Adobe Acrobat, tredjepartsprogram och maskinvara) stöds för AEM 6.4 Forms på JEE. Mer information om maskinvara och programvara som stöds finns i [dokumentet med kombinationer](/help/forms/using/aem-forms-jee-supported-platforms.md) av plattformar som stöds.
+   1. Kontrollera att din befintliga plattform (dvs. programserver, databas, operativsystem, Adobe Acrobat, tredjepartsprogram och maskinvara) stöds för AEM 6.4 Forms på JEE. Mer information om vilken maskin- och programvara som stöds finns i [dokumentet om plattformskombinationer som stöds](/help/forms/using/aem-forms-jee-supported-platforms.md).
 
       Om du skapar en ny instans av databasen importerar du de data som säkerhetskopierades i steg 3 till databasen. Mer information om hur du importerar data till en databas finns i dokumentationen för motsvarande databasleverantör.
 
@@ -77,7 +77,7 @@ Här följer en översikt över hur du uppgraderar en befintlig LiveCycle ES4 SP
 
       >[!NOTE]
       >
-      >Välj **[!UICONTROL Upgrade from Adobe Experience Manager Forms 6.2.0]** alternativet på skärmen Uppgradera aktivitetsval. Med det här **[!UICONTROL Upgrade from Adobe Experience Manager Forms 6.2.0]** alternativet kan konfigurationshanteraren uppgradera från LiveCycle ES4 SP1 till AEM 6.4 Forms.
+      >Välj alternativet **[!UICONTROL Upgrade from Adobe Experience Manager Forms 6.2.0]** på skärmen Uppgradera aktivitetsval. Med alternativet **[!UICONTROL Upgrade from Adobe Experience Manager Forms 6.2.0]** kan konfigurationshanteraren uppgradera från LiveCycle ES4 SP1 till AEM 6.4 Forms.
 
    1. (Krävs inte för AEM Forms dokumentsäkerhetsmodul) Importera innehåll till innehållslagringsplatsen (CRX-Repository) till Forms 6.4-AEM.
 
@@ -93,7 +93,7 @@ Här följer en översikt över hur du uppgraderar en befintlig LiveCycle ES4 SP
 
    >[!NOTE]
    >
-   >I AEM 6.4 Forms har strukturen för crx-database ändrats. När du har uppgraderat till AEM 6.4-formulär kan du använda de ändrade sökvägarna för anpassning som du skapar på nytt. En fullständig lista över ändrade vägar finns i [Forms Repository-omstrukturering i AEM 6.4](/help/sites-deploying/forms-repository-restructuring-in-aem-6-4.md).
+   >I AEM 6.4 Forms har strukturen för crx-database ändrats. När du har uppgraderat till AEM 6.4-formulär kan du använda de ändrade sökvägarna för anpassning som du skapar på nytt. En fullständig lista över ändrade sökvägar finns i [Omstrukturering av Forms-databaser i AEM 6.4](/help/sites-deploying/forms-repository-restructuring-in-aem-6-4.md).
 
 **Beroende på din befintliga miljö och programserver väljer du ett av följande dokument och följer instruktionerna:**
 
@@ -121,7 +121,7 @@ Här följer en översikt över hur du uppgraderar en befintlig LiveCycle ES3-se
       Dessutom är databastypen för LiveCycle och AEM Forms olika. Tillgängliga databastyper och relaterad information finns i [Välja en beständig typ för en AEM Forms-installation](/help/forms/using/choosing-persistence-type-for-aem-forms.md).
 
    1. Skapa en säkerhetskopia av LiveCycle ES3-databasen, GDS (Global Data Storage) och Content Repository (krävs inte för dokumentsäkerhet). Om du uppgraderar till MongoMK eller RDBMK persistence exporterar du LiveCycle ES3-resurser för korrespondenshantering som arkiv.
-   1. Kontrollera att din befintliga plattform (dvs. programserver, databas, operativsystem, Adobe Acrobat, tredjepartsprogram och maskinvara) stöds för AEM 6.4 Forms på JEE. Mer information om maskinvara och programvara som stöds finns i [dokumentet med kombinationer](/help/forms/using/aem-forms-jee-supported-platforms.md) av plattformar som stöds.
+   1. Kontrollera att din befintliga plattform (dvs. programserver, databas, operativsystem, Adobe Acrobat, tredjepartsprogram och maskinvara) stöds för AEM 6.4 Forms på JEE. Mer information om vilken maskin- och programvara som stöds finns i [dokumentet om plattformskombinationer som stöds](/help/forms/using/aem-forms-jee-supported-platforms.md).
 
       Om du skapar en ny instans av databasen importerar du de data som säkerhetskopierades i steg 3 till databasen. Mer information om hur du importerar data till en databas finns i dokumentationen för motsvarande databasleverantör.
 
@@ -137,7 +137,7 @@ Här följer en översikt över hur du uppgraderar en befintlig LiveCycle ES3-se
 
       >[!NOTE]
       >
-      >Välj **[!UICONTROL Upgrade from Adobe Experience Manager Forms 6.2.0]** alternativet på skärmen Uppgradera aktivitetsval. Med det här **[!UICONTROL Upgrade from Adobe Experience Manager Forms 6.2.0]** alternativet kan konfigurationshanteraren uppgradera från LiveCycle ES3 till AEM 6.4 Forms.
+      >Välj alternativet **[!UICONTROL Upgrade from Adobe Experience Manager Forms 6.2.0]** på skärmen Uppgradera aktivitetsval. Med alternativet **[!UICONTROL Upgrade from Adobe Experience Manager Forms 6.2.0]** kan konfigurationshanteraren uppgradera från LiveCycle ES3 till AEM 6.4 Forms.
 
    1. (Krävs inte för AEM Forms dokumentsäkerhetsmodul) Uppgradera och importera CRX-databasen till Forms 6.4-AEM.
 
@@ -151,7 +151,7 @@ Här följer en översikt över hur du uppgraderar en befintlig LiveCycle ES3-se
 
    >[!NOTE]
    >
-   >I AEM 6.4 Forms har strukturen för crx-database ändrats. När du har uppgraderat till AEM 6.4-formulär kan du använda de ändrade sökvägarna för anpassning som du skapar på nytt. En fullständig lista över ändrade vägar finns i [Forms Repository-omstrukturering i AEM 6.4](/help/sites-deploying/forms-repository-restructuring-in-aem-6-4.md).
+   >I AEM 6.4 Forms har strukturen för crx-database ändrats. När du har uppgraderat till AEM 6.4-formulär kan du använda de ändrade sökvägarna för anpassning som du skapar på nytt. En fullständig lista över ändrade sökvägar finns i [Omstrukturering av Forms-databaser i AEM 6.4](/help/sites-deploying/forms-repository-restructuring-in-aem-6-4.md).
 
 **Beroende på din befintliga miljö och programserver väljer du ett av följande dokument och följer instruktionerna:**
 
