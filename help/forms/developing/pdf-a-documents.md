@@ -25,13 +25,13 @@ ht-degree: 0%
 Tjänsten DocConverter kan konvertera PDF-dokument till PDA/A-dokument. Du kan utföra följande uppgifter med den här tjänsten:
 
 * Konvertera PDF-dokument till PDF/A-dokument. (Se [Konvertera dokument till PDF/A-dokument](pdf-a-documents.md#converting-documents-to-pdf-a-documents).)
-* Kontrollera om PDF-dokument är PDF/A-dokument. (Se [Programmatisk identifiering av PDF/A-kompatibilitet](pdf-a-documents.md#programmatically-determining-pdf-a-compliancy).)
+* Kontrollera om PDF-dokument är PDF/A-dokument. (Se [Programmatisk bestämning av PDF/A-kompatibilitet](pdf-a-documents.md#programmatically-determining-pdf-a-compliancy).)
 
 >[!NOTE]
 >
 >Mer information om tjänsten DocConverter finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
-## Konvertera dokument till PDF/A-dokument {#converting-documents-to-pdf-a-documents}
+## Konverterar dokument till PDF/A-dokument {#converting-documents-to-pdf-a-documents}
 
 Du kan använda tjänsten DocConverter för att konvertera ett PDF-dokument till ett PDF/A-dokument. Eftersom PDF/A är ett arkiveringsformat för långvarig lagring av dokumentets innehåll, bäddas alla teckensnitt in och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett vanligt PDF-dokument. Ett PDF/A-dokument innehåller inte heller ljud- och videoinnehåll. Innan du konverterar ett PDF-dokument till ett PDF/A-dokument måste du kontrollera att PDF-dokumentet inte är ett PDF/A-dokument.
 
@@ -66,11 +66,11 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
 * jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
-Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+Information om platsen för dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa en DocConvert-klient**
 
-Innan du programmässigt kan utföra en DocConverter-åtgärd måste du skapa en DocConverter-klient. Om du använder Java API skapar du ett `DocConverterServiceClient` objekt. Om du använder webbtjänstens API:t DocConverter skapar du ett `DocConverterServiceService` objekt.
+Innan du programmässigt kan utföra en DocConverter-åtgärd måste du skapa en DocConverter-klient. Om du använder Java API skapar du ett `DocConverterServiceClient`-objekt. Skapa ett `DocConverterServiceService`-objekt om du använder DocConverter-webbtjänstens API.
 
 **Referera ett PDF-dokument som ska konverteras till ett PDF/A-dokument**
 
@@ -110,33 +110,33 @@ Konvertera ett PDF-dokument till ett PDF/A-dokument med Java API:
 
 1. Skapa en DocConvert-klient
 
-   * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `DocConverterServiceClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `DocConverterServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Referera ett PDF-dokument som ska konverteras till ett PDF/A-dokument
 
-   * Skapa ett `java.io.FileInputStream` objekt som representerar PDF-dokumentet som ska konverteras med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för PDF-filen.
-   * Skapa ett `com.adobe.idp.Document` objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream` objektet.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar PDF-dokumentet som ska konverteras med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för PDF-filen.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Ange spårningsinformation
 
-   * Skapa ett `PDFAConversionOptionSpec` objekt med hjälp av dess konstruktor.
-   * Ange informationsspårningsnivån genom att anropa `PDFAConversionOptionSpec` objektets `setLogLevel` metod och skicka ett strängvärde som anger spårningsnivån. For example, pass the value `FINE`. Mer information om de olika värdena finns i avsnittet om metoden `setLogLevel` i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * Skapa ett `PDFAConversionOptionSpec`-objekt med hjälp av dess konstruktor.
+   * Ange informationsspårningsnivån genom att anropa `PDFAConversionOptionSpec`-objektets `setLogLevel`-metod och skicka ett strängvärde som anger spårningsnivån. Skicka till exempel värdet `FINE`. Mer information om de olika värdena finns i avsnittet om metoden `setLogLevel` i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 1. Konvertera dokumentet
 
-   Konvertera PDF-dokumentet till ett PDF/A-dokument genom att anropa `DocConverterServiceClient` objektets `toPDFA` metod och skicka följande värden:
+   Konvertera PDF-dokumentet till ett PDF/A-dokument genom att anropa `DocConverterServiceClient`-objektets `toPDFA`-metod och skicka följande värden:
 
-   * Det `com.adobe.idp.Document` objekt som innehåller det PDF-dokument som ska konverteras
-   * Det `PDFAConversionOptionSpec` objekt som anger spårningsinformation
+   * Det `com.adobe.idp.Document`-objekt som innehåller det PDF-dokument som ska konverteras
+   * Objektet `PDFAConversionOptionSpec` som anger spårningsinformation
 
-   Metoden `toPDFA` returnerar ett `PDFAConversionResult` objekt som innehåller PDF/A-dokumentet.
+   Metoden `toPDFA` returnerar ett `PDFAConversionResult`-objekt som innehåller PDF/A-dokumentet.
 
 1. Spara PDF/A-dokumentet
 
-   * Hämta PDF/A-dokumentet genom att anropa `PDFAConversionResult` objektets `getPDFA` metod. Den här metoden returnerar ett `com.adobe.idp.Document` objekt som representerar PDF/A-dokumentet.
-   * Skapa ett `java.io.File` objekt som representerar PDF/A-filen. Kontrollera att filnamnstillägget är .pdf.
-   * Fyll filen med PDF/A-data genom att anropa `com.adobe.idp.Document` objektets `copyToFile` metod och skicka `java.io.File` objektet.
+   * Hämta PDF/A-dokumentet genom att anropa `PDFAConversionResult`-objektets `getPDFA`-metod. Den här metoden returnerar ett `com.adobe.idp.Document`-objekt som representerar PDF/A-dokumentet.
+   * Skapa ett `java.io.File`-objekt som representerar PDF/A-filen. Kontrollera att filnamnstillägget är .pdf.
+   * Fyll filen med PDF/A-data genom att anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod och skicka `java.io.File`-objektet.
 
 **Se även**
 
@@ -159,38 +159,38 @@ Konvertera ett PDF-dokument till ett PDF/A-dokument med hjälp av DocConverter A
 
 1. Skapa en DocConvert-klient
 
-   * Skapa ett objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor. `DocConverterServiceService`
-   * Ange `DocConverterServiceService` objektets `Credentials` datamedlem med ett `System.Net.NetworkCredential` värde som anger användarnamnet och lösenordsvärdet.
+   * Skapa ett `DocConverterServiceService`-objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor.
+   * Ange `DocConverterServiceService`-objektets `Credentials`-datamedlem med ett `System.Net.NetworkCredential`-värde som anger användarnamnet och lösenordet.
 
 1. Referera ett PDF-dokument som ska konverteras till ett PDF/A-dokument
 
-   * Skapa ett `BLOB` objekt med hjälp av dess konstruktor. Objektet används `BLOB` för att lagra PDF-dokumentet som konverteras till ett PDF/A-dokument.
-   * Skapa ett `System.IO.FileStream` objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` egenskap.
-   * Fyll bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` metod och skicka bytearrayen, startpositionen och den strömlängd som ska läsas.
-   * Fyll objektet `BLOB` genom att tilldela dess `binaryData` egenskap med innehållet i bytearrayen.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra PDF-dokumentet som konverteras till ett PDF/A-dokument.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream`-objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i `BLOB`-objektet genom att tilldela dess `binaryData`-egenskap med innehållet i bytearrayen.
 
 1. Ange spårningsinformation
 
-   * Skapa ett `PDFAConversionOptionSpec` objekt med hjälp av dess konstruktor.
-   * Ange informationsspårningsnivån genom att tilldela ett värde som anger spårningsnivån till `PDFAConversionOptionSpec` objektets `logLevel` datamedlem. Tilldela till exempel värdet `FINE` till den här datamedlemmen.
+   * Skapa ett `PDFAConversionOptionSpec`-objekt med hjälp av dess konstruktor.
+   * Ange informationsspårningsnivån genom att tilldela ett värde som anger spårningsnivån till `PDFAConversionOptionSpec`-objektets `logLevel`-datamedlem. Tilldela till exempel värdet `FINE` till den här datamedlemmen.
 
 1. Konvertera dokumentet
 
-   Konvertera PDF-dokumentet till ett PDF/A-dokument genom att anropa `DocConverterServiceService` objektets `toPDFA` metod och skicka följande värden:
+   Konvertera PDF-dokumentet till ett PDF/A-dokument genom att anropa `DocConverterServiceService`-objektets `toPDFA`-metod och skicka följande värden:
 
-   * Det `BLOB` objekt som innehåller det PDF-dokument som ska konverteras
-   * Det `PDFAConversionOptionSpec` objekt som anger spårningsinformation
+   * Det `BLOB`-objekt som innehåller det PDF-dokument som ska konverteras
+   * Objektet `PDFAConversionOptionSpec` som anger spårningsinformation
 
-   Metoden `toPDFA` returnerar ett `PDFAConversionResult` objekt som innehåller PDF/A-dokumentet.
+   Metoden `toPDFA` returnerar ett `PDFAConversionResult`-objekt som innehåller PDF/A-dokumentet.
 
 1. Spara PDF/A-dokumentet
 
-   * Skapa ett `BLOB` objekt som lagrar PDF/A-dokumentet genom att hämta värdet för `PDFAConversionResult` objektets `PDFADocument` datamedlem.
-   * Skapa en bytearray som lagrar innehållet i det `BLOB` objekt som returnerades med `PDFAConversionResult` objektet. Fyll i bytearrayen genom att hämta värdet för `BLOB` objektets `binaryData` datamedlem.
-   * Skapa ett `System.IO.FileStream` objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar PDF/A-dokumentets filplats.
-   * Skapa ett `System.IO.BinaryWriter` objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream` objektet.
-   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` metod och skicka bytearrayen.
+   * Skapa ett `BLOB`-objekt som lagrar PDF/A-dokumentet genom att hämta värdet för `PDFAConversionResult`-objektets `PDFADocument`-datamedlem.
+   * Skapa en bytearray som lagrar innehållet i `BLOB`-objektet som returnerades med `PDFAConversionResult`-objektet. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `binaryData`-datamedlem.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar PDF/A-dokumentets filplats.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
 **Se även**
 
@@ -200,7 +200,7 @@ Konvertera ett PDF-dokument till ett PDF/A-dokument med hjälp av DocConverter A
 
 [Skapa en .NET-klientsammansättning som använder Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
 
-## Programmerat fastställa PDF/A-kompatibilitet {#programmatically-determining-pdf-a-compliancy}
+## Programmisk bestämning av PDF/A-kompatibilitet {#programmatically-determining-pdf-a-compliancy}
 
 Du kan använda tjänsten DocConverter för att avgöra om ett PDF-dokument är PDF/A-kompatibelt. Mer information om ett PDF/A-dokument och hur du konverterar ett PDF-dokument till ett PDF/A-dokument finns i [Konvertera dokument till PDF/A-dokument](pdf-a-documents.md#converting-documents-to-pdf-a-documents).
 
@@ -230,11 +230,11 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
 * jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
-Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+Information om platsen för dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa en DocConvert-klient**
 
-Innan du programmässigt kan utföra en DocConverter-åtgärd måste du skapa en DocConverter-klient. Om du använder Java API skapar du ett `DocConverterServiceClient` objekt. Om du använder webbtjänstens API:t DocConverter skapar du ett `DocConverterServiceService` objekt.
+Innan du programmässigt kan utföra en DocConverter-åtgärd måste du skapa en DocConverter-klient. Om du använder Java API skapar du ett `DocConverterServiceClient`-objekt. Skapa ett `DocConverterServiceService`-objekt om du använder DocConverter-webbtjänstens API.
 
 **Referera till ett PDF-dokument som används för att fastställa PDF/A-kompatibilitet**
 
@@ -268,28 +268,28 @@ Kontrollera PDF/A-kompatibiliteten med Java API:
 
 1. Skapa en DocConvert-klient
 
-   * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `DocConverterServiceClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `DocConverterServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Referera till ett PDF-dokument som används för att fastställa PDF/A-kompatibilitet
 
-   * Skapa ett `java.io.FileInputStream` objekt som representerar PDF-dokumentet som ska konverteras med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för PDF-filen.
-   * Skapa ett `com.adobe.idp.Document` objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream` objektet.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar PDF-dokumentet som ska konverteras med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för PDF-filen.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Ange körningsalternativ
 
-   * Skapa ett `PDFAValidationOptionSpec` objekt med hjälp av dess konstruktor.
-   * Ange kompatibilitetsnivån genom att anropa `PDFAValidationOptionSpec` objektets `setCompliance` metod och skicka `PDFAValidationOptionSpec.Compliance.PDFA_1B`.
-   * Ange informationsspårningsnivån genom att anropa `PDFAValidationOptionSpec` objektets `setLogLevel` metod och skicka ett strängvärde som anger spårningsnivån. For example, pass the value `FINE`. Mer information om de olika värdena finns i avsnittet om metoden `setLogLevel` i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * Skapa ett `PDFAValidationOptionSpec`-objekt med hjälp av dess konstruktor.
+   * Ange kompatibilitetsnivån genom att anropa `PDFAValidationOptionSpec`-objektets `setCompliance`-metod och skicka `PDFAValidationOptionSpec.Compliance.PDFA_1B`.
+   * Ange informationsspårningsnivån genom att anropa `PDFAValidationOptionSpec`-objektets `setLogLevel`-metod och skicka ett strängvärde som anger spårningsnivån. Skicka till exempel värdet `FINE`. Mer information om de olika värdena finns i avsnittet om metoden `setLogLevel` i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 1. Hämta information om PDF-dokumentet
 
-   Bestäm PDF/A-kompatibiliteten genom att anropa `DocConverterServiceClient` objektets `isPDFA` metod och skicka följande värden:
+   Kontrollera PDF/A-kompatibiliteten genom att anropa `DocConverterServiceClient`-objektets `isPDFA`-metod och skicka följande värden:
 
-   * Det `com.adobe.idp.Document` objekt som innehåller PDF-dokumentet.
-   * Det objekt `PDFAValidationOptionSpec` som anger körningsalternativ.
+   * Det `com.adobe.idp.Document`-objekt som innehåller PDF-dokumentet.
+   * Det `PDFAValidationOptionSpec`-objekt som anger körningsalternativ.
 
-   Metoden returnerar `isPDFA` ett `PDFAValidationResult` objekt som innehåller resultatet av den här åtgärden.
+   Metoden `isPDFA` returnerar ett `PDFAValidationResult`-objekt som innehåller resultatet av den här åtgärden.
 
 **Se även**
 
@@ -312,31 +312,31 @@ Kontrollera PDF/A-kompatibiliteten med hjälp av webbtjänstens API:
 
 1. Skapa en DocConvert-klient
 
-   * Skapa ett objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor. `DocConverterServiceService`
-   * Ange `DocConverterServiceService` objektets `Credentials` datamedlem med ett `System.Net.NetworkCredential` värde som anger användarnamnet och lösenordsvärdet.
+   * Skapa ett `DocConverterServiceService`-objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor.
+   * Ange `DocConverterServiceService`-objektets `Credentials`-datamedlem med ett `System.Net.NetworkCredential`-värde som anger användarnamnet och lösenordet.
 
 1. Referera till ett PDF-dokument som används för att fastställa PDF/A-kompatibilitet
 
-   * Skapa ett `BLOB` objekt med hjälp av dess konstruktor. Objektet används `BLOB` för att lagra PDF-dokumentet som konverteras till ett PDF/A-dokument.
-   * Skapa ett `System.IO.FileStream` objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` egenskap.
-   * Fyll bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` metod och skicka bytearrayen, startpositionen och den strömlängd som ska läsas.
-   * Fyll objektet `BLOB` genom att tilldela dess `binaryData` egenskap med innehållet i bytearrayen.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra PDF-dokumentet som konverteras till ett PDF/A-dokument.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream`-objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i `BLOB`-objektet genom att tilldela dess `binaryData`-egenskap med innehållet i bytearrayen.
 
 1. Ange körningsalternativ
 
-   * Skapa ett `PDFAValidationOptionSpec` objekt med hjälp av dess konstruktor.
-   * Ange kompatibilitetsnivån genom att tilldela `PDFAValidationOptionSpec` objektets `compliance` datamedlem värdet `PDFAConversionOptionSpec_Compliance.PDFA_1B`.
-   * Ange informationsspårningsnivån genom att tilldela `PDFAValidationOptionSpec` objektets `resultLevel` datamedlem värdet `PDFAValidationOptionSpec_ResultLevel.DETAILED`.
+   * Skapa ett `PDFAValidationOptionSpec`-objekt med hjälp av dess konstruktor.
+   * Ange kompatibilitetsnivån genom att tilldela `PDFAValidationOptionSpec`-objektets `compliance`-datamedlem värdet `PDFAConversionOptionSpec_Compliance.PDFA_1B`.
+   * Ange informationsspårningsnivån genom att tilldela `PDFAValidationOptionSpec`-objektets `resultLevel`-datamedlem värdet `PDFAValidationOptionSpec_ResultLevel.DETAILED`.
 
 1. Hämta information om PDF-dokumentet
 
-   Bestäm PDF/A-kompatibiliteten genom att anropa `DocConverterServiceService` objektets `isPDFA` metod och skicka följande värden:
+   Kontrollera PDF/A-kompatibiliteten genom att anropa `DocConverterServiceService`-objektets `isPDFA`-metod och skicka följande värden:
 
-   * Det `BLOB` objekt som innehåller PDF-dokumentet.
-   * Det objekt `PDFAValidationOptionSpec` som innehåller körningsalternativ.
+   * Det `BLOB`-objekt som innehåller PDF-dokumentet.
+   * Det `PDFAValidationOptionSpec`-objekt som innehåller körningsalternativ.
 
-   Metoden returnerar `isPDFA` ett `PDFAValidationResult` objekt som innehåller resultatet av den här åtgärden.
+   Metoden `isPDFA` returnerar ett `PDFAValidationResult`-objekt som innehåller resultatet av den här åtgärden.
 
 **Se även**
 
