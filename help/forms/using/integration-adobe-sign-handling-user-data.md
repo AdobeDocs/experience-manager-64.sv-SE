@@ -22,7 +22,7 @@ AEM Forms kan integreras med Adobe Sign för att möjliggöra e-signaturarbetsfl
 
 När en eller flera signerare signerar och skickar ett anpassat formulär skapas ett Adobe Sign-avtal som innehåller information om signerarna.
 
-Mer information om AEM Forms-integrering med Adobe Sign finns i [Använda Adobe Sign i en adaptiv form](/help/forms/using/working-with-adobe-sign.md).
+Mer information om AEM Forms-integrering med Adobe Sign finns i [Använda Adobe Sign i adaptiv form](/help/forms/using/working-with-adobe-sign.md).
 
 ## Användardata och datalager {#data}
 
