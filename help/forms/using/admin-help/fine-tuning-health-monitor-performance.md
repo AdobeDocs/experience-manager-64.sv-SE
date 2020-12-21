@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Finjustera prestanda för hälsoövervakning{#fine-tuning-health-monitor-performance}
+# Finjustera hälsoövervakarens prestanda{#fine-tuning-health-monitor-performance}
 
 När du samlar in systemstatistik som fyller i hälsoövervakaren påverkas prestanda i AEM formulärmiljö. Den här effekten kan styras genom att du anger de Java-alternativ som anges nedan på programservern.
 
@@ -67,12 +67,12 @@ När du samlar in systemstatistik som fyller i hälsoövervakaren påverkas pres
 ## Lägg till Java-alternativ i JBoss {#add-java-options-to-jboss}
 
 1. Stoppa JBoss-programservern.
-1. Öppna *[appserver root]*/bin/run.bat (Windows) eller run.sh (Linux eller UNIX) i en redigerare och lägg till eventuella Java-alternativ.
+1. Öppna *[appserverroten]*/bin/run.bat (Windows) eller run.sh (Linux eller UNIX) i en redigerare och lägg till eventuella Java-alternativ.
 1. Starta om servern.
 
 ## Lägg till Java-alternativ i WebLogic {#add-java-options-to-weblogic}
 
-1. Starta administrationskonsolen för WebLogic genom att skriva https://[värdnamn]:[port]/konsol på URL-raden i en webbläsare.
+1. Starta administrationskonsolen för WebLogic genom att skriva https://[värdnamn]:[port]/console i URL-raden för en webbläsare.
 1. Skriv användarnamnet och lösenordet som du skapade för WebLogic Server-domänen och klicka på Logga under Change Center och klicka på Lock &amp; Edit.
 1. Klicka på Miljö > Servrar under Domänstruktur och klicka på namnet på den hanterade servern i den högra panelen.
 1. På nästa skärm klickar du på fliken Konfiguration > fliken Serverstart.
