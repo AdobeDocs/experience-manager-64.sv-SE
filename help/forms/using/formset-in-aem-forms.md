@@ -31,7 +31,7 @@ Dessutom kan du konfigurera gemensamma fält i olika formulär för att dela gem
 
 Formuläruppsättningar stöds också i AEM Forms-appen, vilket gör att fältarbetarna kan göra en formuläruppsättning offline, besöka kunder, lägga in data och synkronisera senare med AEM Forms-servern för att skicka formulärdata till affärsprocesser.
 
-## Skapa och hantera formuläruppsättning {#creating-and-managing-form-set}
+## Skapar och hanterar formuläruppsättning {#creating-and-managing-form-set}
 
 Du kan koppla flera XDP-filer eller formulärmallar, som skapats med Designer, till en formuläruppsättning. Formuläruppsättningar kan sedan användas för att selektivt återge XDP:er baserat på värden som användarna angett i de ursprungliga formulären och deras profiler.
 
@@ -66,14 +66,14 @@ Så här skapar du en formuläruppsättning:
 
    * Formulärordning: Dra och släpp formulären för att ordna om dem. Formulärordningen definierar den ordning i vilken formulären visas för slutanvändaren i AEM Forms-appen och i en fristående återgivning.
    * Formuläridentifierare: Anger en unik identitet för de formulär som ska användas i berättigandeuttryck.
-   * Datarot: För varje formulär i formuläruppsättningen kan författaren konfigurera XPATH där data i det aktuella formuläret placeras i skickad XML. Standardvärdet är /. Om alla formulär i formuläruppsättningen är schemabundna och har samma XML-schema kan du ändra det här värdet. Vi rekommenderar att alla fält i formuläret har rätt databindning angiven i XDP. Om två fält i två olika formulär har samma gemensamma databindning, visar fältet i det andra formuläret förfyllda värden från det första formuläret. Bind inte två delformulär med samma interna innehåll till samma XML-nod. Mer information om XML-strukturen för formuläruppsättningar finns i [Förifyll XML för formuläruppsättningar](/help/forms/using/formset-in-aem-forms.md#p-prefill-xml-for-form-set-p).
+   * Datarot: För varje formulär i formuläruppsättningen kan författaren konfigurera XPATH där data i det aktuella formuläret placeras i skickad XML. Standardvärdet är /. Om alla formulär i formuläruppsättningen är schemabundna och har samma XML-schema kan du ändra det här värdet. Vi rekommenderar att alla fält i formuläret har rätt databindning angiven i XDP. Om två fält i två olika formulär har samma gemensamma databindning, visar fältet i det andra formuläret förfyllda värden från det första formuläret. Bind inte två delformulär med samma interna innehåll till samma XML-nod. Mer information om XML-strukturen för formuläruppsättningar finns i [Förifyll XML för formuläruppsättning](/help/forms/using/formset-in-aem-forms.md#p-prefill-xml-for-form-set-p).
    * Kvalifikationsuttryck: Anger ett JavaScript-uttryck som utvärderar ett booleskt värde och anger om ett formulär i formuläruppsättningen kan fyllas i. Om värdet är false tillfrågas inte användaren och visas inte heller formuläret för att fyllas i. Uttrycket baseras vanligtvis på värdena i de fält som har hämtats före det här formuläret. Uttrycken innehåller även anrop till formuläruppsättningens API fs.valueOf för att extrahera de värden som användaren fyller i i ett fält i ett formulär i formuläruppsättningen:
 
-   *fs.valueOf(&lt;Form Identifier>, &lt;fieldAs expression>) > &lt;value>*
+   *fs.valueOf(&lt;form Identifier=&quot;&quot;>,  &lt;fieldsom expression=&quot;&quot;>) >  &lt;value>*
 
    Om du till exempel har två formulär i formuläruppsättningen: rörelsekostnader och resekostnader kan du lägga till ett JavaScript-utdrag i fältet Kvalifikationsuttryck för båda dessa formulär för att kontrollera användarens indata för typen av utgift i ett formulär. Om användaren väljer Affärskostnad återges formuläret Affärskostnad för slutanvändaren. Eller om användaren väljer en resekostnad, återges ett annat formulär för slutanvändaren. Mer information finns i Kvalificeringsuttryck.
 
-   Dessutom kan författaren välja att ta bort ett formulär från formuläruppsättningen med ikonen Ta bort i det högra hörnet av varje rad eller lägga till en annan uppsättning formulär med ikonen &quot;**+**&quot; i verktygsfältet. Med den här ikonen **+** dirigeras användaren tillbaka till föregående steg i guiden som användes för att välja formulär. De befintliga markeringarna behålls och eventuella ytterligare markeringar som görs måste läggas till i formuläruppsättningen med hjälp av ikonen Lägg till i formuläruppsättning på den sidan.
+   Dessutom kan författaren välja att ta bort ett formulär från formuläruppsättningen med ikonen Ta bort i det högra hörnet av varje rad eller lägga till en annan uppsättning formulär med ikonen **+** i verktygsfältet. Den här ikonen **+** dirigerar tillbaka användaren till föregående steg i guiden som användes för att välja formulär. De befintliga markeringarna behålls och eventuella ytterligare markeringar som görs måste läggas till i formuläruppsättningen med hjälp av ikonen Lägg till i formuläruppsättning på den sidan.
 
    ![Formuläruppsättning: Konfigurera formulär](assets/createformset2.png)
 
@@ -116,7 +116,7 @@ Så här redigerar du en formuläruppsättning:
 
 När du har skapat en formuläruppsättning med användargränssnittet i AEM Forms Management kan du använda formuläruppsättningen i en startpunkt- eller tilldelningsaktivitet med Workbench.
 
-### Använda formuläruppsättning i Aktivitet eller Startpunkt {#using-form-set-in-task-or-start-point}
+### Använda formuläruppsättningen i aktiviteten eller startpunkten {#using-form-set-in-task-or-start-point}
 
 1. När du utformar en process väljer du **Använd en CRX-resurs** under Presentation &amp; Data i Tilldela uppgift/startpunkt. Webbläsaren CRX Asset visas.
 
@@ -160,7 +160,7 @@ var formUid = "form1";
  var fieldSOM = “xfa.form.form1.subform1.field1"; fs.valueOf(formUid, fieldSOM);
 ```
 
-## Förifyll XML för formuläruppsättning {#prefill-xml-for-form-set}
+## Förifyll XML för formuläruppsättningen {#prefill-xml-for-form-set}
 
 Formuläruppsättningen är en samling med flera HTML5-formulär som har gemensamma eller olika scheman. Formuläruppsättningen har stöd för förifyllning av formulärfält med hjälp av en XML-fil. Du kan associera en XML-fil med en formuläruppsättning så att vissa fält i formuläret förpoleras när du öppnar ett formulär i formuläruppsättningen.
 
@@ -168,12 +168,12 @@ XML-filen för förifyllnad anges med parametern dataRef för formulärets URL. 
 
 Du har till exempel tre formulär (formulär1, formulär2 och formulär3) i formuläruppsättningen med följande struktur:
 
-form1
+formulär1
 
 fält\
 form1field
 
-form2
+formulär2
 
 fält\
 form2field
@@ -248,7 +248,7 @@ I en formuläruppsättning definierade XML-schemat med följande syntax:
 >
 >Om det finns två formulär med överlappande datarötter, eller om elementhierarkin i ett formulär överlappar datarothierarkin i ett annat formulär, sammanfogas de överlappande elementens värden i XML-förinställningen. Skicka-XML har en struktur som liknar förifyll-XML, men skicka-XML har fler omslutningstaggar och några kontexttaggar för formulärets uppsättning tillagda i slutet.
 
-### Beskrivning av förifyllda XML-element {#prefill-xml-elements-description}
+### Beskrivning av förifyll XML-element {#prefill-xml-elements-description}
 
 Syntaxregler för att skapa en XML-fil för förifyllning:
 
@@ -348,13 +348,13 @@ NAMN PÅ ROTELEMENTTAGGEN
 
 Om det finns ett rotelement i XML-förifyllningen används elementets namn även i XML-sändningsfilen. I de fall där det inte finns någon prefill xml är namnet på rootElement namnet på rotdelformuläret för det första formuläret i formuläruppsättningen som har egenskapen dataRoot inställd på /. Om det inte finns något sådant formulär är rootElement-namnet **fs_dummy_root**, som är ett reserverat nyckelord.
 
-## Formuläruppsättning i AEM Forms-appen {#formset-in-workspace-app}
+## Formuläruppsättning i AEM Forms-app {#formset-in-workspace-app}
 
 Med AEM Forms-appen kan fältarbetare synkronisera sina mobila enheter med en AEM Forms-server och arbeta med sina uppgifter. Programmet fungerar även när enheten är offline genom att spara data lokalt på enheten. Med annoteringsfunktioner som fotografier kan fältarbetare ge korrekt information som kan integreras i affärsprocesserna.
 
 Mer information om AEM Forms finns i [AEM Forms app](/help/forms/using/aem-forms-app.md).
 
-## Kända begränsningar - mönster som inte stöds fullt ut i formuläruppsättningen {#known-limitations-patterns-not-fully-supported-in-form-set}
+## Kända begränsningar - mönster stöds inte helt i formuläruppsättningen {#known-limitations-patterns-not-fully-supported-in-form-set}
 
 Följande datamönster stöds inte fullt ut i formuläruppsättningen:
 
