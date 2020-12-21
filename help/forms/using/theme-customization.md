@@ -36,11 +36,11 @@ Du kan anpassa HTML-koden och CSS-filen för att ge AEM Forms-appen ett distinkt
 
 1. Navigera till mappen Mallar.
 
-   * I Xcode navigerar du till mappen **Capture > www > wsmoble > js > runtime > templates** .
-   * I Eclipse navigerar du till mappen **assets > www > wsmoble > js > runtime > templates** .
-   * I Visual Studio går du till **MWSWindows > www > wsmoble > js > runtime > templates** folder.
+   * I Xcode navigerar du till mappen **Capture > www > wsmoble > js > runtime > templates**.
+   * I Eclipse navigerar du till mappen **assets > www > wsmoble > js > runtime > templates**.
+   * I Visual Studio går du till mappen **MWSWindows > www > wsmoble > js > runtime > templates**.
 
-1. Öppna `template.html` filen för redigering.
+1. Öppna `template.html`-filen för redigering.
 1. Leta reda på följande sträng:
 
    ```
@@ -53,7 +53,7 @@ Du kan anpassa HTML-koden och CSS-filen för att ge AEM Forms-appen ett distinkt
 
    Ersätt den med `<%`.
 
-1. Leta reda på följande kod i `template.html` filen:
+1. Leta reda på följande kod i `template.html`-filen:
 
    ```
    <ul id="task_menu_list">
@@ -76,12 +76,12 @@ Du kan anpassa HTML-koden och CSS-filen för att ge AEM Forms-appen ett distinkt
 1. Navigera till css-mappen.
 
    * I Xcode går du till **Capture > www > wsmoble > css**.
-   * I Eclipse navigerar du till **resurser > www > wsmoble > css**.
+   * I Eclipse går du till **assets > www > wsmoble > css**.
    * I Visual Studio går du till **MWSWindows > www > wsmoble > css**.
 
-1. Öppna `_style.css` filen för redigering.
-1. För Bakgrundsbild ändrar du `#323232` till `#fff`.
-1. Spara ändringarna och stäng `_style.css` filen.
+1. Öppna `_style.css`-filen för redigering.
+1. För bakgrundsbild ändrar du `#323232` till `#fff`.
+1. Spara ändringarna och stäng `_style.css`-filen.
 1. Öppna appen AEM Forms.
 
    Nu visas instruktioner i stället för beskrivningar i AEM Forms-appen.
