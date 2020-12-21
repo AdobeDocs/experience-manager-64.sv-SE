@@ -44,10 +44,10 @@ Gör så här med webbsidan Program och tjänster i administrationskonsolen:
 1. Klicka på **Tjänster > Program och tjänster > Inställningar**.
 1. Ställ in inställningarna så att upp till 200 tjänster och slutpunkter visas på samma sida.
 1. Klicka på **Tjänster** > **Program och tjänster** > **Endpoint Management**.
-1. Välj **EJB** i listan **Leverantör** och klicka sedan på **Filter**.
+1. Välj **EJB** i listan **Provider** och klicka sedan på **Filter**.
 1. Om du vill inaktivera alla EJB-slutpunkter markerar du kryssrutan bredvid var och en av dem i listan och klickar på **Inaktivera**.
 1. Klicka på **Nästa** och upprepa föregående steg för alla EJB-slutpunkter. Kontrollera att EJB finns med i leverantörskolumnen innan du inaktiverar slutpunkterna.
-1. Välj **SOAP** i listan **Leverantör** och klicka sedan på **Filter**.
+1. Välj **SOAP** i listan **Provider** och klicka sedan på **Filter**.
 1. Om du vill ta bort SOAP-slutpunkter markerar du kryssrutan bredvid var och en av dem i listan och klickar på **Ta bort**. Ta inte bort följande slutpunkter:
 
    * AuthenticationManagerService
@@ -78,7 +78,7 @@ Vissa formulärservertjänster tillåter oautentiserade (anonyma) anrop för vis
 
 1. Klicka på **Tjänster > Program och tjänster > Tjänsthantering**.
 1. Klicka på namnet på den tjänst som du vill inaktivera (till exempel AuthenticationManagerService).
-1. Klicka på fliken **** Säkerhet, avmarkera **Anonym åtkomst tillåten** och klicka på **Spara**.
+1. Klicka på fliken **Säkerhet**, avmarkera **Anonym åtkomst tillåten** och klicka på **Spara**.
 1. Slutför steg 3 och 4 för följande tjänster:
 
    * AuthenticationManagerService
@@ -107,7 +107,7 @@ Vissa formulärservertjänster tillåter oautentiserade (anonyma) anrop för vis
 
    Anonym åtkomst bör inaktiveras för alla tjänster som inte behövs. Många interna tjänster kräver att anonym autentisering är aktiverat eftersom de måste anropas av en potentiell användare i systemet utan att vara förauktoriserade.
 
-## Ändra standardtimeout för global {#changing-the-default-global-time-out}
+## Ändra standardvärdet för global timeout {#changing-the-default-global-time-out}
 
 Slutanvändare kan autentisera till AEM Forms via Workbench, AEM Forms webbprogram eller anpassade program som anropar AEM Forms servertjänster. En global timeout-inställning används för att ange hur lång tid dessa användare kan interagera med AEM Forms (med en SAML-baserad försäkran) innan de tvingas autentisera igen. Standardinställningen är två timmar. I en produktionsmiljö måste tiden minskas till det minsta antal minuter som tillåts.
 
@@ -120,7 +120,7 @@ Slutanvändare kan autentisera till AEM Forms via Workbench, AEM Forms webbprogr
    ```
 
 1. Klicka på **Inställningar > Användarhantering > Konfiguration > Importera och exportera konfigurationsfiler**.
-1. Klicka på **Exportera** för att skapa en config.xml-fil med de befintliga AEM Forms-inställningarna.
+1. Klicka på **Exportera** om du vill skapa en config.xml-fil med de befintliga AEM Forms-inställningarna.
 1. Öppna XML-filen i en redigerare och leta reda på följande post:
 
    `<entry key=”assertionValidityInMinutes” value=”120”/>`
@@ -128,5 +128,5 @@ Slutanvändare kan autentisera till AEM Forms via Workbench, AEM Forms webbprogr
 1. Ändra värdet till ett tal som är större än 5 (i minuter) och spara filen.
 1. Gå till sidan Importera och exportera konfigurationsfiler i administrationskonsolen.
 1. Ange sökvägen till den ändrade filen config.xml eller klicka på Bläddra för att navigera till den.
-1. Klicka på **Importera** för att överföra den ändrade filen config.xml och klicka sedan på **OK**.
+1. Klicka på **Importera** för att överföra den ändrade config.xml-filen och klicka sedan på **OK**.
 
