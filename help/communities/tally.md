@@ -18,21 +18,21 @@ ht-degree: 0%
 ---
 
 
-# Helt grundläggande {#tally-essentials}
+# Grundläggande om heltal {#tally-essentials}
 
 Tally är en abstrakt klass som tillhandahåller en standardmetod för att samla in feedback från medlemmar om hur de värdesätter specifika produkter och tjänster. Anonym feedback stöds inte. Besökaren måste registrera sig och logga in för att kunna delta och logga in för att kunna ändra sin feedback. Kravet på inloggning underlättar moderering och ökar värdet på feedback genom att förhindra flera inlägg.
 
 Du kan skapa en anpassad tally-komponent genom att utöka den abstrakta tally-klassen.
 
-[Att gilla](essentials-liking.md) är ett genomförande av tally som är en enkel form av att uttrycka en positiv åsikt.
+[Likingär ](essentials-liking.md) en tillämpning av tally som är en enkel form av uttryck för en positiv åsikt.
 
-[Omröstning](essentials-voting.md) är ett genomförande av tally som är en enkel form av uttryck för en positiv eller negativ åsikt.
+[Votinging är en ](essentials-voting.md) tillämpning av tally som är en enkel form av uttryck för en positiv eller negativ åsikt.
 
-[Klassificering](rating-basics.md) är en implementering av tally som använder ett stjärnsystem för att uttrycka en rad åsikter från positiva till negativa.
+[Ratinging ](rating-basics.md) är en implementering av tally som använder ett stjärnsystem för att uttrycka en rad åsikter, från positiv till negativ.
 
-Från och med AEM 6.1 är *avsökningskomponenten* inte längre tillgänglig.
+Från och med AEM 6.1 är komponenten *poll* inte längre tillgänglig.
 
-[Recensioner](reviews-basics.md) är en SCF-komponent som är en kombination av [kommentarer](essentials-comments.md) och [omdömen](rating-basics.md).
+[](reviews-basics.md) Granskning är en SCF-komponent som är en hybrid med  [](essentials-comments.md) kommentarer och  [gradering](rating-basics.md).
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
@@ -46,19 +46,19 @@ Från och med AEM 6.1 är *avsökningskomponenten* inte längre tillgänglig.
 
 * [Anpassningar på serversidan](server-customize.md)
 
-### Åtkomst till bokförda tallier (UGC) {#accessing-posted-tallies-ugc}
+### Åtkomst till bokförda tallies (UGC) {#accessing-posted-tallies-ugc}
 
 UGC bör modereras med någon av standardmetoderna för moderering.\
-Se [Moderera användargenererat innehåll](moderate-ugc.md).
+Se [Moderating User Generated Content](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (t.ex. ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
 Se:
 
-* [Översikt över](srp.md) lagringsresursprovidern - introduktion och databasanvändning - översikt
+* [Översikt över](srp.md)  lagringsresursprovidern - introduktion och databasanvändning - översikt
 * [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning
+* [Åtkomst till UGC med riktlinjer för SRP](accessing-ugc-with-srp.md) -kodning
 * [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utgått verktygsmetoder till aktuella SRP-verktygsmetoder
 
