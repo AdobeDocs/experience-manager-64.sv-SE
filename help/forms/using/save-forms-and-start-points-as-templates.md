@@ -25,14 +25,14 @@ När användaren fyller i ett formulär ändras ibland inmatningen i ett fåtal 
 Så här skapar du en mall:
 
 1. Öppna ett formulär och markera eller fyll i fält som har nästan identiska värden varje gång du använder det. Du kan inkludera en bifogad fil i mallen som du vanligtvis lägger till när du fyller i formuläret.
-1. Tryck på ikonen **Spara som mall** ![save_as_](assets/save_as_template.png)templateIcon. En dialogruta där du anger namnet på mallen visas.
+1. Tryck på ikonen **Spara som mall** ![save_as_template](assets/save_as_template.png). En dialogruta där du anger namnet på mallen visas.
 1. Ange namnet på mallen och tryck på **Spara**. Mallen visas i mallmappen.
 
    Om det finns en mall med samma namn visas en dialogruta som bekräftar att den befintliga mallen skrivs över. Om du vill ersätta den befintliga mallen med en ny mall trycker du på **Fortsätt** eller om du vill spara mallen med ett annat namn trycker du på **Avbryt**.
 
 Nu kan du öppna den sparade mallen. Varje gång en mall öppnas skapas ett nytt formulär eller en ny uppgift och formuläret visar sparade data och alternativ. Med mallar kan du redigera förfyllda data, lägga till en bifogad fil, spara som utkast, skicka uppgiften eller skapa en annan mall med hjälp av den. Mallar är specifika för mobila enheter och synkroniseras inte med Adobe Experience Manager Forms-servern.
 
-Du kan också ta bort en mall om den inte längre behövs. Om du vill ta bort en mall går du till mallmappen, trycker på ellipsen och sedan på **Ta bort mall**.
+Du kan också ta bort en mall om den inte längre behövs. Om du vill ta bort en mall går du till mallmappen, trycker på ellipsen och trycker sedan på **Ta bort mall**.
 
 >[!NOTE]
 >
