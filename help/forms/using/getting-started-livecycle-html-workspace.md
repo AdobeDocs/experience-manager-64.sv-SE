@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Komma igång med arbetsytan i AEM Forms {#getting-started-with-aem-forms-workspace}
+# Komma igång med AEM Forms arbetsyta {#getting-started-with-aem-forms-workspace}
 
 Du kan använda AEM Forms arbetsyta för att utföra följande uppgifter:
 
@@ -50,7 +50,7 @@ Om du vill använda AEM Forms-arbetsytan med en skärmläsare bör du tänka på
 * All navigering på arbetsytan i AEM Forms sker via ankartaggar, som du enkelt kommer åt via flikar.
 * Forms kan ta några sekunder att ladda. Skärmläsaren talar inte hörbart om att formuläret läses in och att du måste vänta.
 
-## Navigera på arbetsytan i AEM Forms med ett tangentbord {#navigating-html-workspace-using-a-keyboard}
+## Navigera på AEM Forms-arbetsytan med ett tangentbord {#navigating-html-workspace-using-a-keyboard}
 
 När du navigerar på AEM Forms arbetsyta med hjälp av ett tangentbord följer navigeringen HTML-tillgänglighetskonventionerna. I vissa situationer följer tabbordningen inte den vanliga vanliga ordningen. Följande tips hjälper dig att navigera i gränssnittet:
 
@@ -64,21 +64,21 @@ När du navigerar på AEM Forms arbetsyta med hjälp av ett tangentbord följer 
 
 Du kan ange olika inställningar för AEM Forms-arbetsytan i följande kategorier:
 
-**Frånvarande:** Ange inställningar för att styra hur uppgifter tilldelas andra personer när du inte är på kontoret. Se [Ange inställningar](/help/forms/using/todo-lists.md#setting-out-of-office-preferences)utanför kontoret.
+**Frånvarande:** Ange inställningar för hur uppgifter ska tilldelas andra personer när du inte är på kontoret. Se [Ange inställningar utanför kontoret](/help/forms/using/todo-lists.md#setting-out-of-office-preferences).
 
-**Köer:** Ange inställningar för att dela din Att göra-lista med andra användare eller för att begära åtkomst till en annan användares lista. Se [Arbeta med uppgifter från grupper och delade köer](/help/forms/using/todo-lists.md#working-with-tasks-from-group-and-shared-queues).
+**köer:** Ange inställningar för att dela din Att göra-lista med andra användare eller för att begära åtkomst till en annan användares lista. Se [Arbeta med uppgifter från grupper och delade köer](/help/forms/using/todo-lists.md#working-with-tasks-from-group-and-shared-queues).
 
-**Gränssnittsinställningar:** Ange inställningar för hur du interagerar med arbetsytan i AEM Forms. Se [Ange användargränssnittsinställningar](#set-user-interface-preferences).
+**gränssnittsinställningar:** Ange inställningar för hur du interagerar med AEM Forms arbetsyta. Se [Ange inställningar för användargränssnitt](#set-user-interface-preferences).
 
-### Ange inställningar för användargränssnitt {#set-user-interface-preferences}
+### Ange inställningar för användargränssnittet {#set-user-interface-preferences}
 
 Ange gränssnittsinställningarna på fliken Inställningar > Användargränssnittsinställningar. Följande inställningar är tillgängliga.
 
-* **Startplats:** Anger den sida som visas när du loggar in på arbetsytan i AEM Forms. De fyra tillgängliga alternativen är Starta process, Att göra, Spårning och Favoriter.
+* **Startplats:** Anger vilken sida som ska visas när du loggar in på arbetsytan i AEM Forms. De fyra tillgängliga alternativen är Starta process, Att göra, Spårning och Favoriter.
 * **Utloggningsfråga:** Anger om du uppmanas att bekräfta att du vill logga ut när du klickar på Logga ut.
-* **Datumformat:** Anger vilket datumvisningsformat som används på AEM Forms arbetsyta.
+* **Datumformat:** Anger vilket datumvisningsformat som ska användas på AEM Forms arbetsyta.
 * **Tidsformat**: Anger vilket tidsvisningsformat som används på AEM Forms arbetsyta.
 * **Meddela aktivitetshändelser via e-post:** Anger om du får e-postmeddelanden för aktivitetshändelser, inklusive aktivitetstilldelningar, påminnelser och deadlines för uppgifter i din Att göra-lista och i gruppAtt göra-listor som du tillhör.
-* **Bifoga Forms i e-post:** Anger om en kopia av formuläret bifogas e-postmeddelanden. Bifogade filer stöds bara för PDF- och XDP-formulär.
+* **Bifoga Forms i e-postmeddelande:** Anger om en kopia av formuläret bifogas till e-postmeddelanden. Bifogade filer stöds bara för PDF- och XDP-formulär.
 * **Spara utkast periodiskt:** Anger om dina formulärutkast sparas automatiskt regelbundet eller inte. Om du vill spara dina utkast regelbundet aktiverar du det här alternativet och anger hur länge du vill spara automatiskt från 1 till 30 minuter. När Spara automatiskt är aktiverat och en användare arbetar med ett utkast, sparas utkastet regelbundet efter det angivna antalet minuter. Utkastet sparas bara automatiskt när det finns en ändring i utkastet sedan det senast sparades eller sparades automatiskt. När utkastet sparas visas ett varningsmeddelande på skärmen.
 
