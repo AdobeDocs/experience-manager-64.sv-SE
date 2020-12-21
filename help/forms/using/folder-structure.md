@@ -28,15 +28,15 @@ AEM Forms arbetsytekomponenter är utformade för MVC-arkitektur med Backbone. V
 
 Resurserna för alla komponenter placeras i mappstrukturen som beskrivs nedan. Om du vill komma åt resurserna loggar du in på CRXDE Lite och bläddrar till `/libs/ws/js/runtime/`.
 
-**modeller** Innehåller modeller för stamnät.
+**** modelsInnehåller stammodeller.
 
-**vyer** Innehåller vyer med ryggrad.
+**** vyerInnehåller vyer med ryggrad.
 
-**-mallar** innehåller endast HTML-mallar för komponenterna.
+**** templatesInnehåller endast HTML-mallarna för komponenterna.
 
-**vägar** innehåller universella vägar. Mappen Mallar inuti vägar innehåller HTML-koden och referenserna till komponenterna.
+**route** Innehåller universella vägar. Mappen Mallar inuti vägar innehåller HTML-koden och referenserna till komponenterna.
 
-**tjänster** Innehåller tjänstgränssnittet som anropar Adobe Experience Manager server-API:er på REST-slutpunkten.
+**** servicesInnehåller tjänstgränssnittet för att anropa Adobe Experience Manager server-API:er på REST-slutpunkten.
 
-**util** Innehåller allmänna verktyg som kan användas av flera komponenter.
+**utilInnehåller allmänna** verktyg som kan användas av flera komponenter.
 
