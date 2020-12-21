@@ -21,13 +21,13 @@ ht-degree: 0%
 
 Adobe Experience Manager Forms kan integreras med Adobe Analytics så att ni kan samla in och spåra prestandamått för era publicerade formulär och dokument. Syftet med att analysera dessa värden är att fatta välgrundade beslut baserat på uppgifter om de ändringar som krävs för att göra formulär eller dokument mer användbara.
 
-## Ställa in analyser {#setting-up-analytics}
+## Konfigurera analys {#setting-up-analytics}
 
-Analysfunktionen i AEM Forms ingår i AEM Forms tilläggspaket. Mer information om hur du installerar tilläggspaketet finns i [Installera och konfigurera AEM Forms](/help/forms/using/installing-configuring-aem-forms-osgi.md).
+Analysfunktionen i AEM Forms ingår i AEM Forms tilläggspaket. Information om hur du installerar tilläggspaketet finns i [Installera och konfigurera AEM Forms](/help/forms/using/installing-configuring-aem-forms-osgi.md).
 
 Utöver tilläggspaketet behöver du ett Adobe Analytics-konto. Information om lösningen finns i [Adobe Analytics](https://www.adobe.com/solutions/digital-analytics.html).
 
-När du har AEM Forms-tilläggspaketet och ett Adobe Analytics-konto kan du integrera Adobe Analytics-kontot med AEM Forms och aktivera spårning av formulär och dokument enligt beskrivningen i [Konfigurera analyser och rapporter](/help/forms/using/configure-analytics-forms-documents.md).
+När du har AEM Forms-tilläggspaketet och ett Adobe Analytics-konto integrerar du Adobe Analytics-kontot med AEM Forms och aktiverar spårning i formulär eller dokument enligt beskrivningen i [Konfigurera analyser och rapporter](/help/forms/using/configure-analytics-forms-documents.md).
 
 ## Hur användarinteraktionsinformation registreras {#how-user-interaction-information-is-recorded}
 
@@ -51,7 +51,7 @@ När en användare interagerar med formuläret registreras interaktionerna och s
 
 Följ de här stegen för att visa analysrapporter:
 
-1. Logga in på AEM `https://[hostname]:[port]`
+1. Logga in på AEM portal på `https://[hostname]:[port]`
 1. Klicka på **Forms > Forms &amp; Documents**.
 
 1. Välj det formulär som du vill visa analysrapporterna för.
@@ -59,13 +59,13 @@ Följ de här stegen för att visa analysrapporter:
 
 ![analytikerrapport](assets/analyticsreport.png)
 
-**S.** Analysrapport, kommando
+**A. Kommandot** Analysrapport
 
 AEM Forms visar analysrapporter för formuläret och för varje panel i formuläret, enligt nedan.
 
 ![Sammanfattningsrapport för ett anpassat formulär](assets/analyticsdashboard_callout.png)
 
-**S.** Konvertering **B.** Sammanfattning på formulärnivå **C.** Sammanfattning på panelnivå **D.** Webbläsare för besökare - filter **E.** Operativsystem för besökare - filter **F.** Besökarnas språk - filter
+**A.** Konverteringar  **B. Sammanfattning på** formulärnivå  **C.** Sammanfattning på panelnivå  **D.** Besökare i webbläsare - filter  **E.** OS - filter  **** F.¥Språk - filter
 
 Som standard visas analysrapporten för de senaste sju dagarna. Du kan visa rapporter för de senaste 15 dagarna, den senaste månaden och så vidare, eller ange ett datumintervall.
 
@@ -119,7 +119,7 @@ Den detaljerade rapporten visar värden för alla fält i panelen.
 
 Panelrapporten har tre flikar:
 
-* **Tidsrapport** (standard): Visar hur många sekunder som har ägnats åt att fylla i fälten på panelen
+* **Tidsrapport**  (standard): Visar hur många sekunder som har ägnats åt att fylla i fälten på panelen
 * **Felrapport**: Visar antalet fel som användare har råkat ut för när de fyller i fälten
 * **Hjälprapport**: Antal gånger som hjälpen för ett visst fält användes
 
@@ -131,7 +131,7 @@ I tabellerna Webbläsardistribution, Operativsystemsdistribution och Språkdistr
 
 Om du vill filtrera analysdata ytterligare kan du klicka på en post i någon av tabellerna. Om du till exempel klickar på Google Chrome i tabellen Webbläsardistribution återges rapporten igen med data som är relevanta för webbläsaren Google Chrome enligt följande:
 
-![Filter tillämpat på analysrapport - Google Chrome ](assets/filter.png)
+![Filter tillämpat på analysrapport - Google Chrome  ](assets/filter.png)
 
 Om du visar panelrapporten när du har använt ett filter visas även panelrapportdata enligt det använda filtret.
 
@@ -147,4 +147,4 @@ När ett filter har använts:
 
 Om du har A/B-testning aktiverat och konfigurerat för formuläret har rapportsidan en listruta som du kan använda för att visa A/B-testrapporten. A/B-testrapporten visar den jämförande prestandan för två versioner av formuläret som du har konfigurerat.
 
-Mer information om A/B-testning finns i [Skapa och hantera A/B-tester för adaptiva formulär](/help/forms/using/ab-testing-adaptive-forms.md).
+Mer information om A/B-testning finns i [Skapa och hantera A/B-test för adaptiva formulär](/help/forms/using/ab-testing-adaptive-forms.md).
