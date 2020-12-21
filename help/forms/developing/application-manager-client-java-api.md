@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# JavaAPI-snabbstart för Application Manager-klient (SOAP) {#application-manager-client-javaapi-quick-start-soap}
+# JavaAPI-snabbstart (SOAP) för Application Manager-klienten {#application-manager-client-javaapi-quick-start-soap}
 
 Följande Java API Quick Start (SOAP) är tillgängliga för Application Manager-klienten.
 
@@ -444,7 +444,7 @@ public class GetApplication_SOAP {
 
 I följande Java-kodexempel hämtas programmen med Java API.
 
-***Obs**! När AEM Forms Application API hämtas, getApplications(), returneras endast distribuerade program. *
+***Obs!**: När AEM Forms Application API hämtas, getApplications(), returneras endast distribuerade program. *
 
 ```as3
 /* 
@@ -539,7 +539,7 @@ public class GetApplications_SOAP {
 }
 ```
 
-## Snabbstart (SOAP-läge): Hämta status för program med Java API {#quick-start-soap-mode-getting-status-of-applications-using-java-api}
+## Snabbstart (SOAP-läge): Hämtar status för program med Java API {#quick-start-soap-mode-getting-status-of-applications-using-java-api}
 
 ```as3
 /* 
@@ -723,7 +723,7 @@ public class PreviewLCA_SOAP {
 }
 ```
 
-## Snabbstart (SOAP-läge):ta bort programarkivet med Java API {#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api}
+## Snabbstart (SOAP-läge):Ta bort programarkivet med Java API {#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api}
 
 I följande Java-kodexempel tas ett programarkiv bort.
 
