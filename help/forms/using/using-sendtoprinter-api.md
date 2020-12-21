@@ -35,7 +35,7 @@ I AEM Forms kan du använda tjänsten SendToPrinter för att skicka ett dokument
    * **SharedPrinter** `: A printing protocol that enables a computer to use a printer that is configured for that computer.`
    * **CIFS**: Utdatatjänsten stöder CIFS-utskriftsprotokollet (Common Internet File System).
 
-## Använda tjänsten SendToPrinter {#using-sendtoprinter-service}
+## Använda SendToPrinter Service {#using-sendtoprinter-service}
 
 Tabellen nedan listar:
 
