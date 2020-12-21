@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# Grundläggande om uppdrag {#assignments-essentials}
+# Grundläggande om tilldelningar {#assignments-essentials}
 
-Den här sidan innehåller viktig information om hur du arbetar med tilldelningsfunktionen på webbplatser [för aktiveringscommunityn](overview.md#enablement-community) .
+Den här sidan innehåller viktig information om hur du arbetar med tilldelningsfunktionen i [aktiveringscommunityn](overview.md#enablement-community) webbplatser.
 
 Tilldelningsfunktionen är möjligheten att tilldela aktiveringsresurser och utbildningsvägar till medlemmar i aktiveringscommunityn.
 
@@ -85,7 +85,7 @@ De enda möjliga kombinationerna av slutförande och lyckad status är:
 
 ### Tilldelningsfunktion {#assignments-function}
 
-En community-platsstruktur som innehåller [uppdragsfunktionen](functions.md#assignments-function), innehåller en konfigurerad ` [assignments](assignments.md)` komponent.
+En community-platsstruktur som innehåller [uppdragsfunktionen](functions.md#assignments-function) innehåller en konfigurerad ` [assignments](assignments.md)`-komponent.
 
 ### Referens-API:er {#reference-apis}
 
