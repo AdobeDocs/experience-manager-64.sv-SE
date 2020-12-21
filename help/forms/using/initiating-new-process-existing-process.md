@@ -17,7 +17,7 @@ ht-degree: 2%
 ---
 
 
-# Initiera en ny process med befintliga processdata på arbetsytan i AEM Forms {#initiating-a-new-process-with-existing-process-data-in-aem-forms-workspace}
+# Initiera en ny process med befintliga processdata i AEM Forms arbetsyta {#initiating-a-new-process-with-existing-process-data-in-aem-forms-workspace}
 
 Du kan initiera en ny process med data från en befintlig processdata. Behovet av att initiera en ny process från befintliga processdata uppstår när vi måste använda samma formulär ofta med få innehållsändringar som t.ex. för formulär som inte har betalats. Den här funktionen sparar tid och arbete åt användarna, särskilt när processen har långa formulär att fylla i.
 
@@ -27,11 +27,11 @@ Så här startar du en ny process från befintliga processdata:-
 
    * Klicka på den processinstans vars data du vill använda i Spärra/knip. Klicka på den aktivitetsrad som motsvarar startpunkten i vyn Processhistorik i den högra rutan.
    * I Spärra/knip väljer du en sökmall som visar en lista med processinstanser. Markera instansen vars data du vill använda.
-   * Markera uppgiften på **[!UICONTROL To-Do]** fliken. Klicka på **[!UICONTROL History]** fliken och välj den åtgärd som initierade processinstansen.
+   * Markera uppgiften på fliken **[!UICONTROL To-Do]**. Klicka på fliken **[!UICONTROL History]** och välj den åtgärd som initierade processinstansen.
 
    ![start3](assets/start3.png) ![start1](assets/start1.png)
 
-1. Klicka på i åtgärdsverktygsfältet **[!UICONTROL Start]**. Ett adaptivt formulär för den nya processinstansen visas med förfyllda data.
+1. Klicka på **[!UICONTROL Start]** i åtgärdsverktygsfältet. Ett adaptivt formulär för den nya processinstansen visas med förfyllda data.
 
-1. Uppdatera data efter behov och klicka på antingen **[!UICONTROL Complete]** eller en lämplig knapp i formuläret.
+1. Uppdatera data efter behov och klicka antingen på **[!UICONTROL Complete]** eller på en lämplig knapp i formuläret.
 
