@@ -27,7 +27,7 @@ Om du skriver ut på den här skrivaren från ett program skickas dokumentet (i 
 Följande steg krävs för att konfigurera en PDFG-nätverksskrivare:
 
 1. Konfigurera e-postinställningar. (Se [Konfigurera e-postinställningar för PDFG-nätverksskrivare](setting-pdfg-network-printer-windows.md#configure-email-settings-for-pdfg-network-printer).)
-1. Konfigurera inställningarna för PDFG Network Printer i administrationskonsolen. (Se [Konfigurera inställningar](setting-pdfg-network-printer-windows.md#configure-the-pdfg-network-printer-settings)för PDFG-nätverksskrivare.)
+1. Konfigurera inställningarna för PDFG Network Printer i administrationskonsolen. (Se [Konfigurera inställningarna för PDFG-nätverksskrivaren](setting-pdfg-network-printer-windows.md#configure-the-pdfg-network-printer-settings).)
 1. Se till att dina användare är konfigurerade med en giltig e-postadress i AEM formulärdatabas och tilldela PDFGUserPermission till varje användare. <!-- Fix broken link See Setting up and organizing users -->
 1. Kontrollera att 32-bitars JRE6 är installerat på användarnas datorer.
 1. Installera skrivaren på användarnas datorer. (Se [Installera PDFG Network Printer på användarens dator](setting-pdfg-network-printer-windows.md#install-pdfg-network-printer-on-a-user-s-computer).)
@@ -57,7 +57,7 @@ Följande steg krävs för att konfigurera en PDFG-nätverksskrivare:
 
 Om du vill återgå till den ursprungliga standardtexten för e-post klickar du på Återställ e-postinnehåll.
 
-## Installera PDFG Network Printer på användarens dator {#install-pdfg-network-printer-on-a-user-s-computer}
+## Installera PDFG-nätverksskrivare på en användares dator {#install-pdfg-network-printer-on-a-user-s-computer}
 
 Användare som har rollen PDFG-administratör eller PDFG-användare kan installera en PDFG-nätverksskrivare. Du måste ha en 32-bitars JDK installerad på datorn.
 
