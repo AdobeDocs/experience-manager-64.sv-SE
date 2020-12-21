@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Snabbstart för databastjänst-API {#repository-service-api-quick-starts}
+# Snabbstart för databastjänstens API{#repository-service-api-quick-starts}
 
 Följande snabbstarter är tillgängliga för tjänsten AEM Forms Repository.
 
@@ -46,7 +46,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 **Program/FormsApplication**
 
-De flesta AEM Forms-databastjänster börjar fungera ihop med ett program med namnet `Applications/FormsApplication,` som visas på följande bild.
+De flesta AEM Forms-databastjänster startar interaktionen med ett program med namnet `Applications/FormsApplication,`, vilket visas på följande bild.
 
 Mappen FormsFolder är en plats i AEM Forms-databasen. Du kan till exempel lägga till den här mappen i `Applications/FormsApplication`. (Se [Snabbstart (SOAP-läge): Skapa en mapp med Java API](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api).)
 
@@ -56,7 +56,7 @@ Sökvägen till en resurs i AEM Forms-databasen är:
 
 >[!NOTE]
 >
->Du kan bläddra i AEM Forms-databasen med en webbläsare. Om du vill bläddra i databasen anger du följande URL i en webbläsare https://[servernamn]:[serverport]/databas. Du kan verifiera snabbstartsresultaten med en webbläsare. Om du till exempel lägger till innehåll i AEM Forms-databasen kan du se innehållet i en webbläsare.
+>Du kan bläddra i AEM Forms-databasen med en webbläsare. Om du vill bläddra i databasen anger du följande URL-adress i en webbläsare https://[servernamn]:[serverport]/databas. Du kan verifiera snabbstartsresultaten med en webbläsare. Om du till exempel lägger till innehåll i AEM Forms-databasen kan du se innehållet i en webbläsare.
 
 >[!NOTE]
 >
@@ -170,7 +170,7 @@ I följande Java-kodexempel skapas en mapp med namnet *FormsFolder* på följand
 
 ## Snabbstart (SOAP-läge): Skriva en resurs med Java API {#quick-start-soap-mode-writing-a-resource-using-the-java-api}
 
-I följande Java-kodexempel skrivs en resurs som kallas *lån.xdp* i databasen. Resursen läggs till på `/Applications/FormsApplication/1.0/FormsFolder` platsen. (Se [Skriva resurser](/help/forms/developing/aem-forms-repository.md#writing-resources).)
+I följande Java-kodexempel skrivs en resurs med namnet *lån.xdp* i databasen. Resursen läggs till på platsen `/Applications/FormsApplication/1.0/FormsFolder`. (Se [Skriva resurser](/help/forms/developing/aem-forms-repository.md#writing-resources).)
 
 ```as3
  /* 
@@ -296,9 +296,9 @@ I följande Java-kodexempel skrivs en resurs som kallas *lån.xdp* i databasen. 
  
 ```
 
-## Snabbstart (SOAP-läge): Visa resurser med Java API {#quick-start-soap-mode-listing-resources-using-the-java-api}
+## Snabbstart (SOAP-läge): Visar resurser med Java API {#quick-start-soap-mode-listing-resources-using-the-java-api}
 
-I följande Java-kodexempel visas resurser som finns i `Applications/FormsApplication/1.0/FormsFolder`. (Se [Lista resurser](/help/forms/developing/aem-forms-repository.md#listing-resources).)
+I följande Java-kodexempel visas resurser som finns i `Applications/FormsApplication/1.0/FormsFolder`. (Se [Visa resurser](/help/forms/developing/aem-forms-repository.md#listing-resources).)
 
 ```as3
  /* 
@@ -397,7 +397,7 @@ I följande Java-kodexempel visas resurser som finns i `Applications/FormsApplic
 
 ## Snabbstart (SOAP-läge): Läsa en resurs med Java API {#quick-start-soap-mode-reading-a-resource-using-the-java-api}
 
-I följande Java-kodexempel läses en resurs med namnet *Loan.xdp* från databasen. XDP-filen finns i `/Applications/FormsApplication/1.0/FormsFolder/`. (Se [Läsresurser](/help/forms/developing/aem-forms-repository.md#reading-resources).)
+Följande Java-kodexempel läser en resurs med namnet *Loan.xdp* från databasen. XDP-filen finns i `/Applications/FormsApplication/1.0/FormsFolder/`. (Se [Läser resurser](/help/forms/developing/aem-forms-repository.md#reading-resources).)
 
 ```as3
  /* 
@@ -498,7 +498,7 @@ I följande Java-kodexempel läses en resurs med namnet *Loan.xdp* från databas
 
 ## Snabbstart (SOAP-läge): Uppdatera en resurs med Java API {#quick-start-soap-mode-updating-a-resource-using-the-java-api}
 
-Följande Java-kodexempel uppdateras `/Applications/FormsApplication/1.0/FormsFolder` genom att dess beskrivning ändras. (Se [Uppdatera resurser](/help/forms/developing/aem-forms-repository.md#updating-resources).)
+Följande Java-kodexempel uppdaterar `/Applications/FormsApplication/1.0/FormsFolder` genom att ändra dess beskrivning. (Se [Uppdatera resurser](/help/forms/developing/aem-forms-repository.md#updating-resources).)
 
 ```as3
  /* 
