@@ -17,23 +17,24 @@ ht-degree: 1%
 ---
 
 
-# Skapa en formulärportalsida {#creating-a-forms-portal-page}
+# Skapar en formulärportalsida {#creating-a-forms-portal-page}
 
 Forms portalkomponenter förser webbutvecklare med komponenter för att skapa och anpassa en formulärportal på webbplatser som skapats med Adobe Experience Manager (AEM). En snabb översikt av formulärportalen finns i [Introduktion till att publicera formulär på en portal](/help/forms/using/introduction-publishing-forms.md).
 
 ## Förutsättningar {#prerequisites}
 
-Forms portalkomponenter är inte tillgängliga som standard. Kontrollera att följande komponentkategorier för formulärportalen är aktiverade enligt beskrivningen i [Aktivera komponenterna](/help/forms/using/enabling-forms-portal-components.md)i formulärportalen.
+Forms portalkomponenter är inte tillgängliga som standard. Kontrollera att följande komponentkategorier för formulärportalen är aktiverade enligt beskrivningen i [Aktivera komponenter för formulärportalen](/help/forms/using/enabling-forms-portal-components.md).
 
-**Dokumenttjänster** innehåller komponenterna Sök och Lister, Länk samt Utkast och Skicka.
+**Document** ServicesInnehåller komponenterna Sök och Lister, Länk samt Utkast och Skicka.
 
-**Document Services Predicates** innefattar komponenter för datumpredikat, Fullständig textpredikat, Egenskapspredikat och Taggpredikat. De här komponenterna används för att konfigurera sökningar i komponenten Sök efter och visa.
+**Document Services** PredicatesInnehåller komponenter för datumpredikat, Fullständig textpredikat, Egenskapspredikat och Kodpredikat. De här komponenterna används för att konfigurera sökningar i komponenten Sök efter och visa.
 
 När de har aktiverats på en AEM webbplatssida är de här komponentkategorierna tillgängliga för användning i komponentwebbläsaren.
 
-![AEM Forms portalkomponenter i komponentwebbläsaren](assets/component-categories.png)**:** *Komponentkategorier för Forms Portal*
+![AEM Forms portalkomponenter i ](assets/component-categories.png)
+**komponentwebbläsarenBild:** *Komponentkategorier för Forms-portalen*
 
-## Komponenten Search &amp; Lister {#search-amp-lister-component}
+## Search &amp; Lister Component {#search-amp-lister-component}
 
 Komponenten Search &amp; Lister, som finns under komponentkategorin Document Services, används för att lista formulär på en sida och för att implementera sökning i de listade formulären. Komponenten innehåller två rutor:
 
@@ -42,17 +43,19 @@ Komponenten Search &amp; Lister, som finns under komponentkategorin Document Ser
 
 Du kan dra och släppa komponenten Sök och Lister från komponentkategorin Document Services i komponentwebbläsaren till sidan. När komponenten läggs till ser den ut ungefär så här.
 
-![Search &amp; Lister Component in a page](assets/fp-grid-viw.png)**Figure:** *Sök efter och visa komponent på en sida med stödrasterlayout*
+![Search &amp; Lister Component in a ](assets/fp-grid-viw.png)
+**pageFigure:** *Search &amp; Lister Component in a page with Grid layout*
 
 ### Listruta {#list-pane}
 
 Listrutan är ett område där formulären listas. Komponenten Sök och lista innehåller olika konfigurationsalternativ som du kan använda för att styra visningen av formulär i rutan Lista.
 
-Om du vill konfigurera listrutan trycker du på komponenten Sök och Lister och sedan på ![settings_icon](assets/settings_icon.png). Dialogrutan **[!UICONTROL Edit Component]** öppnas.
+Konfigurera listfönstret genom att trycka på komponenten Sök och Lister och sedan på ![settings_icon](assets/settings_icon.png). Dialogrutan **[!UICONTROL Edit Component]** öppnas.
 
-![Listruta i redigeringsläge](assets/edit-list.png)**Bild:** *Listruta i redigeringsläge*
+![Listruta i redigeringsläge](assets/edit-list.png)
+**Bild:** *Listrutan i redigeringsläge*
 
-Dialogrutan innehåller flera flikar med konfigurationsalternativ som beskrivs i tabellen nedan. **[!UICONTROL Edit]** Tryck för **[!UICONTROL OK]** att spara konfigurationen när du är klar.
+Dialogrutan **[!UICONTROL Edit]** innehåller flera flikar med konfigurationsalternativ som beskrivs i tabellen nedan. Tryck på **[!UICONTROL OK]** för att spara konfigurationen när du är klar.
 
 <table> 
  <tbody> 
@@ -94,17 +97,17 @@ Dialogrutan innehåller flera flikar med konfigurationsalternativ som beskrivs i
   <tr> 
    <td> </td> 
    <td>Resultattext</td> 
-   <td><p>Konfigurerar resultattexten (till exempel 1-12 av 601 <strong>resultat</strong>). The default value is <strong>Results</strong>.</p> <p>Om du till exempel anger <strong>Forms </strong>i det här fältet och det finns totalt 601 formulär, ändras texten till 1-12 av 601 <strong>Forms.</strong></p> </td> 
+   <td><p>Konfigurerar resultattexten (till exempel 1-12 av 601 <strong>Resultat</strong>). Standardvärdet är <strong>Resultat</strong>.</p> <p>Om du t.ex. anger <strong>Forms </strong>i det här fältet och det finns totalt 601 formulär, ändras den resulterande texten till 1-12 av 601 <strong>Forms.</strong></p> </td> 
   </tr> 
   <tr> 
    <td> </td> 
    <td>Sidtext</td> 
-   <td><p>Konfigurerar sidtexten (t.ex. <strong>sidan </strong>1 av 51). The default value is <strong>Page</strong>.</p> <p>Om du till exempel anger <strong>ansökningsformulär </strong>i det här fältet och det finns 51 sidor, ändras sidtexten till <strong>ansökningsformulär </strong>1 av 51.</p> </td> 
+   <td><p>Konfigurerar sidtexten (till exempel <strong>Sida </strong>1 av 51). Standardvärdet är <strong>Sida</strong>.</p> <p>Om du till exempel anger <strong>Programformulär </strong>i det här fältet och det finns 51 sidor, ändras sidtexten till <strong>Programformulär </strong>1 av 51.</p> </td> 
   </tr> 
   <tr> 
    <td> </td> 
    <td>Av text</td> 
-   <td><p>Ersätter ordet <strong>för</strong> med den angivna texten (sidan 1 <strong>av </strong>51). The default value is <strong>of</strong>.</p> <p>Om du t.ex. anger <strong>utanför </strong>det här fältet ändras texten till Sidan 1 <strong>av </strong>51.</p> </td> 
+   <td><p>Ersätter ordet <strong>of</strong> med den angivna texten (sidan 1 <strong>av </strong>51). Standardvärdet är <strong>av</strong>.</p> <p>Om du till exempel anger <strong>av </strong>i det här fältet ändras texten till Sida 1 <strong>av </strong>51.</p> </td> 
   </tr> 
   <tr> 
    <td><span class="uicontrol"><strong>Formulärlänk</strong></span></td> 
@@ -119,7 +122,7 @@ Dialogrutan innehåller flera flikar med konfigurationsalternativ som beskrivs i
   <tr> 
    <td> </td> 
    <td>Skicka URL</td> 
-   <td><p>Konfigurerar en servett där formulärdata skickas.</p> <p><strong>Obs!</strong> <em>Skicka-URL för ett formulär kan anges på flera ställen och prioritetsordningen är följande:</em></p> 
+   <td><p>Konfigurerar en servett där formulärdata skickas.</p> <p><strong>Obs!</strong> <em>Skicka URL för ett formulär kan anges på flera ställen och prioritetsordningen är följande:</em></p> 
     <ol> 
      <li><em>Skicka-URL som är inbäddad i formuläret (med knappen Skicka) har högsta prioritet.</em></li> 
      <li><em>Överförings-URL:en i AEM Forms-gränssnittet har den högsta prioriteten.</em></li> 
@@ -139,7 +142,7 @@ Dialogrutan innehåller flera flikar med konfigurationsalternativ som beskrivs i
   <tr> 
    <td><span class="uicontrol"><strong>Format</strong></span></td> 
    <td>Formattyp</td> 
-   <td>Gör att du kan ange <strong>Inget format, Standardformat</strong>eller <strong>Eget format </strong>för att visa formulären.</td> 
+   <td>Gör att du kan ange <strong>Inget format, Standardformat</strong> eller <strong>Anpassat format </strong>för att lista formulären.</td> 
   </tr> 
   <tr> 
    <td> </td> 
@@ -149,13 +152,14 @@ Dialogrutan innehåller flera flikar med konfigurationsalternativ som beskrivs i
  </tbody> 
 </table>
 
-### Sökruta {#search-pane}
+### Sökfönstret {#search-pane}
 
 I sökrutan kan du lägga till komponenterna Date Predicate (Datumpredikat), Full Text Predicate (Fullständig textpredikat), Properties Predicate (Förutdikat för egenskaper) och Tags Predicate (Förutsägning för taggar) i kategorin Document Services Predicates AEM Sidekick. Dessa komponenter implementerar sökfunktionen så att användarna kan söka i de listade formulären.
 
-**Tips:** *Du kan styra listan med formulär som visas på formulärportalen baserat på ett förinställt villkor och dölja sökfunktionen för slutanvändare. Om du vill styra listan med formulär använder du komponenterna Predicate för att använda sökfilter. Du kan också ange standardfiltervärden och inaktivera sökningen på fliken Visning i dialogrutan Redigera komponent.*
+**Tips:** *Du kan styra listan över formulär som visas på din formulärportal baserat på ett förinställt villkor och dölja sökfunktionen för slutanvändare. Om du vill styra listan med formulär använder du komponenterna Predicate för att använda sökfilter. Du kan också ange standardfiltervärden och inaktivera sökningen från fliken Visning i dialogrutan Redigera komponent.*
 
-![Sökpanel med datum, fullständig text, egenskaper och taggar, predikat](assets/search-with-predicates.png)**Figure:** *Sökpanel med predikat för datum, fullständig text, egenskaper och taggar*
+![Sökpanel med datum, fullständig text, egenskaper och ](assets/search-with-predicates.png)
+**märkordsförutsägelseBild:** *sökpanel med datum, fullständig text, egenskaper och märkordsförutsägelse*
 
 #### Datumpredikat {#date-predicate}
 
@@ -166,7 +170,7 @@ Så här konfigurerar du komponenten Date Predicate:
 1. Tryck på komponenten och tryck sedan på ![settings_icon](assets/settings_icon.png). Dialogrutan Redigera öppnas.
 1. Ange följande:
 
-   * **[!UICONTROL Type:]** Det enda tillgängliga alternativet är **[!UICONTROL Last Modified Date]**.
+   * **[!UICONTROL Type:]** Det enda tillgängliga alternativet är  **[!UICONTROL Last Modified Date]**.
    * **[!UICONTROL Text:]** Etikett eller bildtext för komponenten Date Predicate. Standardvärdet är **[!UICONTROL Last Modified Date]**.
    * **[!UICONTROL Start Date Label:]** Etikett eller bildtext för startdatumfält.
    * **[!UICONTROL End Date Label:]** Etikett eller bildtext för slutdatumfält.
@@ -174,26 +178,26 @@ Så här konfigurerar du komponenten Date Predicate:
 
 1. Tryck på **[!UICONTROL OK]**.
 
-#### Fullständig textpredikat {#full-text-predicate}
+#### Fullständig textförutsägelse {#full-text-predicate}
 
 Komponenten Full Text Predicate implementerar fullständig textsökning i formulärdata, till exempel namn och beskrivning. Användarna kan söka i valfri textsträng för att returnera formulär som innehåller texten i sitt namn eller sin beskrivning.
 
 Så här konfigurerar du komponenten Full Text Predicate:
 
 1. Tryck på komponenten och tryck sedan på ![settings_icon](assets/settings_icon.png). Dialogrutan Redigera öppnas.
-1. Ange rubriken i **[!UICONTROL Main Title]** fältet.
+1. Ange rubriken i fältet **[!UICONTROL Main Title]**.
 1. Tryck på **[!UICONTROL Ok]**.
 
-#### Egenskapspredikat {#properties-predicate}
+#### Egenskaper - predikat {#properties-predicate}
 
 Komponenten Predicate för egenskaper implementerar sökning i formulär baserat på formuläregenskaper som titel, författare och beskrivning.
 
 Så här konfigurerar du komponenten Predicate för egenskaper:
 
-1. Tryck på komponenten och tryck sedan på ![settings_icon](assets/settings_icon.png). De **[!UICONTROL Edit dialog]** öppnas.
-1. Ange söketiketten på **[!UICONTROL General]** fliken. Standardvärdet är **[!UICONTROL Properties]**.
+1. Tryck på komponenten och tryck sedan på ![settings_icon](assets/settings_icon.png). **[!UICONTROL Edit dialog]** öppnas.
+1. På fliken **[!UICONTROL General]** anger du söketiketten. Standardvärdet är **[!UICONTROL Properties]**.
 
-1. In the **[!UICONTROL Options]** tab, tap **[!UICONTROL Add Item]**.
+1. Tryck på **[!UICONTROL Add Item]** på fliken **[!UICONTROL Options]**.
 1. Välj en egenskap i listrutan och ange en söketikett för den i fältet nedanför listrutan.
 1. Upprepa steg 4 om du vill lägga till fler egenskaper. Du kan också ange ett standardfiltervärde för att lista formulär baserat på de angivna villkoren och dölja egenskapen för sökning av slutanvändare. Markera kryssrutan Dölj för en egenskap och ange standardfiltervärdet.
 
@@ -207,7 +211,7 @@ Komponenten för taggprediktion implementerar sökning i formulär baserat på t
 
 Så här konfigurerar du komponenten Tagg Predicate:
 
-1. Tryck på komponenten och tryck sedan på ![settings_icon](assets/settings_icon.png). De **[!UICONTROL Edit dialog]** öppnas.
+1. Tryck på komponenten och tryck sedan på ![settings_icon](assets/settings_icon.png). **[!UICONTROL Edit dialog]** öppnas.
 1. Tryck på nedpilsknappen bredvid fältet Taggar.
 1. Välj lämpliga taggar.
 1. Tryck på **[!UICONTROL OK]**.
@@ -216,11 +220,11 @@ De markerade taggarna visas i sökrutan tillsammans med kryssrutorna för marker
 
 ## Visa formulär på en sida {#list-forms-on-a-page-br}
 
-Om du vill visa formulär på en sida lägger du till **[!UICONTROL Search & Lister]** Komponenten på sidan och konfigurerar **[!UICONTROL List Pane]**. Om du vill att slutanvändarna ska kunna söka efter formulär med datum, text och taggar lägger du till en **[!UICONTROL Search Pane]** komponent.
+Om du vill visa formulär på en sida lägger du till komponenten **[!UICONTROL Search & Lister]** på sidan och konfigurerar **[!UICONTROL List Pane]**. Om du vill att slutanvändarna ska kunna söka efter formulär med datum, text och taggar lägger du till en **[!UICONTROL Search Pane]**-komponent.
 
 Om du vill länka ett formulär var som helst på sidan använder du länkkomponenten. Mer information om länkkomponent finns i [Bädda in länkkomponent på en sida](/help/forms/using/embedding-link-component-page.md).
 
-Använd **[!UICONTROL Drafts and Submissions]** komponenten om du vill lista de formulär som är i ett utkastläge och de formulär som redan har skickats. Mer information finns i [Anpassa komponenten](/help/forms/using/draft-submission-component.md)Utkast och överföringar.
+Om du vill lista de formulär som är i ett utkastläge och de formulär som redan har skickats använder du **[!UICONTROL Drafts and Submissions]**-komponenten. Mer information finns i [Anpassa komponenten Utkast och överföringar](/help/forms/using/draft-submission-component.md).
 
 ## Mobil enhetsvänlighet {#mobile-device-friendliness}
 
@@ -228,12 +232,13 @@ Komponenten Forms Portal Search &amp; Lister är anpassad för mobila enheter oc
 
 I följande bild visas komponenten Sök och Lister när den öppnas på en mobil enhet:
 
-![Skärmbild av komponenten](assets/search_lister.png)Search and Lister **Bild:** *Komponenten Search &amp; Lister*
+![Skärmbild av ](assets/search_lister.png)
+**komponenten Sök och ListerBild:komponenten** *Sök och visa*
 
 ## Anpassa en formulärportalsida {#customizing-a-forms-portal-page-br}
 
 Du kan anpassa en formulärportalsida för att ge sidan ett distinkt utseende. Du kan också lägga till metadata för att förbättra sökupplevelsen, ändra sidans layout och lägga till anpassade CSS-format. Mer information finns i [Anpassa mallar för Forms Portal-komponenter](/help/forms/using/customizing-templates-forms-portal-components.md).
 
-Med AEM Forms UI kan du lägga till anpassade metadata i formulär. Anpassade metadata är användbara när du vill visa en lista och söka efter formulär för slutanvändarna. Mer information om anpassade metadata finns i [Anpassa mallar för Forms Portal-komponenter](/help/forms/using/customizing-templates-forms-portal-components.md).
+Med AEM Forms UI kan du lägga till anpassade metadata i formulär. Anpassade metadata är användbara när du vill visa en lista och söka efter formulär för slutanvändarna. Mer information om anpassade metadata finns i [Anpassa mallar för Forms Portal Components](/help/forms/using/customizing-templates-forms-portal-components.md).
 
-I själva verket innehåller formulärportalen återgivningsåtgärder. Du kan anpassa formulärportalen för att lägga till fler åtgärder. Mer information finns i [Lägga till anpassad åtgärd i formulärlisteobjekt.](/help/forms/using/add-custom-action-form-lister.md)
+I själva verket innehåller formulärportalen återgivningsåtgärder. Du kan anpassa formulärportalen för att lägga till fler åtgärder. Mer information finns i [Lägga till anpassad åtgärd för formulärlisteobjekt.](/help/forms/using/add-custom-action-form-lister.md)
