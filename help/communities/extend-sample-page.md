@@ -26,23 +26,23 @@ Nu när komponenterna för det anpassade kommentarsystemet finns på plats i pro
 
 Klientbiblioteken som är nödvändiga för att standardkommentarerna ska fungera är också nödvändiga för utökade kommentarer.
 
-I [Community Components Guide](components-guide.md) identifieras nödvändiga klientbibliotek. Bläddra till komponentguiden och visa komponenten Kommentarer, till exempel:
+[Community Components Guide](components-guide.md) identifierar nödvändiga klientbibliotek. Bläddra till komponentguiden och visa komponenten Kommentarer, till exempel:
 
 [http://localhost:4502/content/community-components/en/comments.html](http://localhost:4502/content/community-components/en/comments.html)
 
-Observera de tre klientbiblioteken som krävs för att kommentarerna ska kunna återges och fungera korrekt. Dessa måste inkluderas där de utökade kommentarerna refereras, liksom de [utökade kommentarernas klientbibliotek](extend-create-components.md#create-a-client-library-folder) ( `apps.custom.comments`).
+Observera de tre klientbiblioteken som krävs för att kommentarerna ska kunna återges och fungera korrekt. Dessa måste inkluderas där de utökade kommentarerna refereras, samt [de utökade kommentarernas klientbibliotek](extend-create-components.md#create-a-client-library-folder) ( `apps.custom.comments`).
 
 ![chlimage_1-47](assets/chlimage_1-47.png)
 
-## Lägga till anpassade kommentarer på en sida {#add-custom-comments-to-a-page}
+## Lägg till anpassade kommentarer på en sida {#add-custom-comments-to-a-page}
 
-Eftersom det bara kan finnas ett kommentarsystem per sida är det enklare att skapa en exempelsida enligt beskrivningen i den korta [självstudiekursen Skapa en exempelsida](create-sample-page.md) .
+Eftersom det bara kan finnas ett kommentarsystem per sida är det enklare att skapa en exempelsida enligt beskrivningen i den korta [Skapa en exempelsida](create-sample-page.md)-självstudiekursen.
 
-Öppna designläget och gör komponentgruppen Egen tillgänglig så att `Alt Comments` komponenten kan läggas till på sidan.
+Öppna designläget och gör den anpassade komponentgruppen tillgänglig så att `Alt Comments`-komponenten kan läggas till på sidan.
 
-För att kommentaren ska visas och fungera på rätt sätt måste klientbiblioteken för kommentarer läggas till i klientlistorlistan för sidan (se [Klientlibs for Communities Components](clientlibs.md)).
+För att kommentaren ska visas och fungera på rätt sätt måste klientbiblioteken för kommentarer läggas till i klientlistorlistan för sidan (se [Klientlibs för webbkomponenterna](clientlibs.md)).
 
-### Kommentarsklipp på exempelsida {#comments-clientlibs-on-sample-page}
+### Kommentarsklipp på exempelsidan {#comments-clientlibs-on-sample-page}
 
 ![Kommentarsklipp på exempelsida](assets/chlimage_1-48.png)
 
@@ -58,11 +58,11 @@ Du kan verifiera resourceType i CRXDE genom att visa egenskaperna för kommentar
 
 ### Publicera exempelsida {#publish-sample-page}
 
-När den anpassade komponenten har lagts till på sidan är det också nödvändigt att (återpublicera) [sidan](sites-console.md#publishing-the-site).
+När den anpassade komponenten har lagts till på sidan är det också nödvändigt att (re) [publicera sidan](sites-console.md#publishing-the-site).
 
 ### Publicera: Alt-kommentar på exempelsida {#publish-alt-comment-on-sample-page}
 
-När du har publicerat både det anpassade programmet och exempelsidan bör det vara möjligt att ange en kommentar. När du är inloggad, antingen med en [demoanvändare](tutorials.md#demo-users) eller administratör, bör du kunna publicera en kommentar.
+När du har publicerat både det anpassade programmet och exempelsidan bör det vara möjligt att ange en kommentar. När du är inloggad, antingen med en [demoanvändare](tutorials.md#demo-users) eller administratör, bör det vara möjligt att publicera en kommentar.
 
 Här är aaron.mcdonald@mailinator.com som publicerar en kommentar:
 
