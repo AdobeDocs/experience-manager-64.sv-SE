@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# Arbeta med streckkodade formulär {#working-with-barcoded-forms}
+# Arbeta med streckkodsformulär {#working-with-barcoded-forms}
 
-## Om tjänsten för streckkodade formulär {#about-the-barcoded-forms-service}
+## Om den streckkodade formulärtjänsten {#about-the-barcoded-forms-service}
 
 Den streckkodade blanketttjänsten automatiserar inhämtning av data från ifyllda och utskrivna blanketter och integrerar inhämtad information i företagets centrala IT-system.
 
@@ -28,7 +28,7 @@ Med den streckkodade formulärtjänsten kan du lägga till endimensionella och t
 
 Mer information om den streckkodade formulärtjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
-## Avkoda streckkodade formulärdata {#decoding-barcoded-form-data}
+## Avkodar streckkodade formulärdata {#decoding-barcoded-form-data}
 
 Du kan använda API:t för streckkodsbaserade formulärtjänster för att avkoda data från ett PDF-formulär eller en bild som innehåller en streckkod. Att avkoda formulärdata innebär att extrahera data som finns i streckkoden. Innan data kan avkodas från ett PDF-formulär (eller bild) måste användaren fylla i formuläret med data.
 
@@ -64,7 +64,7 @@ Om AEM Forms körs på en J2EE-programserver som inte är JBOSS måste du ersät
 
 **Skapa ett klient-API-objekt för streckkodade formulär**
 
-Innan du programmässigt kan utföra en streckkodsåtgärd måste du skapa en streckkodad Forms-tjänstklient. Om du använder Java API skapar du ett `BarcodedFormsServiceClient` objekt. Skapa ett `BarcodedFormsServiceService` objekt om du använder API:t för webbtjänsten för streckkodade formulär.
+Innan du programmässigt kan utföra en streckkodsåtgärd måste du skapa en streckkodad Forms-tjänstklient. Om du använder Java API skapar du ett `BarcodedFormsServiceClient`-objekt. Om du använder API:t för webbtjänsten för streckkodade formulär skapar du ett `BarcodedFormsServiceService`-objekt.
 
 **Hämta ett PDF-formulär som innehåller streckkodsdata**
 
@@ -107,7 +107,7 @@ Du kan bearbeta konverterade data så att de uppfyller dina affärskrav. När du
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Avkoda streckkodsdata med Java API {#decode-barcoded-form-data-using-the-java-api}
+### Avkoda streckkodade formulärdata med Java API {#decode-barcoded-form-data-using-the-java-api}
 
 Avkoda formulärdata med hjälp av API:t för streckkodade formulär (Java):
 
@@ -117,50 +117,50 @@ Avkoda formulärdata med hjälp av API:t för streckkodade formulär (Java):
 
 1. Skapa ett klient-API-objekt för streckkodade formulär
 
-   Skapa ett `BarcodedFormsServiceClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `BarcodedFormsServiceClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Hämta ett PDF-formulär som innehåller streckkodsdata
 
-   * Skapa ett `java.io.FileInputStream` objekt som representerar PDF-formuläret som innehåller streckkodade data genom att använda dess konstruktor och skicka ett strängvärde som anger PDF-dokumentets plats.
-   * Skapa ett `com.adobe.idp.Document` objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream` objektet.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar PDF-formuläret som innehåller streckkodade data med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för PDF-dokumentet.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Avkoda data från PDF-formuläret
 
-   Avkoda formulärdata genom att anropa `BarcodedFormsServiceClient` objektets `decode` metod och skicka följande värden:
+   Avkoda formulärdata genom att anropa `BarcodedFormsServiceClient`-objektets `decode`-metod och skicka följande värden:
 
-   * Det `com.adobe.idp.Document` objekt som innehåller PDF-formuläret.
-   * Ett `java.lang.Boolean` objekt som anger om en PDF417-streckkod ska avkodas.
-   * Ett `java.lang.Boolean` objekt som anger om en datamatrisstreckkod ska avkodas.
-   * Ett `java.lang.Boolean` objekt som anger om en QR-kodstreckkod ska avkodas.
-   * Ett `java.lang.Boolean` objekt som anger om en codabar-streckkod ska avkodas.
-   * Ett `java.lang.Boolean` objekt som anger om en kod 128-streckkod ska avkodas.
-   * Ett `java.lang.Boolean` objekt som anger om en kod med streckkoden 39 ska avkodas.
-   * Ett `java.lang.Boolean` objekt som anger om en EAN-13-streckkod ska avkodas.
-   * Ett `java.lang.Boolean` objekt som anger om en EAN-8-streckkod ska avkodas.
-   * Ett `com.adobe.livecycle.barcodedforms.CharSet` uppräkningsvärde som anger teckenuppsättningens kodningsvärde som används i streckkoden.
+   * Det `com.adobe.idp.Document`-objekt som innehåller PDF-formuläret.
+   * Ett `java.lang.Boolean`-objekt som anger om en PDF417-streckkod ska avkodas.
+   * Ett `java.lang.Boolean`-objekt som anger om en datamatrisstreckkod ska avkodas.
+   * Ett `java.lang.Boolean`-objekt som anger om en QR-kodstreckkod ska avkodas.
+   * Ett `java.lang.Boolean`-objekt som anger om en codabar-streckkod ska avkodas.
+   * Ett `java.lang.Boolean`-objekt som anger om en kod 128-streckkod ska avkodas.
+   * Ett `java.lang.Boolean`-objekt som anger om en kod 39-streckkod ska avkodas.
+   * Ett `java.lang.Boolean`-objekt som anger om en EAN-13-streckkod ska avkodas.
+   * Ett `java.lang.Boolean`-objekt som anger om en EAN-8-streckkod ska avkodas.
+   * Ett `com.adobe.livecycle.barcodedforms.CharSet`-uppräkningsvärde som anger teckenuppsättningens kodningsvärde som används i streckkoden.
 
-   Metoden `decode` returnerar ett `org.w3c.dom.Document` objekt som innehåller avkodade formulärdata.
+   Metoden `decode` returnerar ett `org.w3c.dom.Document`-objekt som innehåller avkodade formulärdata.
 
 1. Konvertera data till en XML-datakälla
 
-   Konvertera avkodade data till antingen XDP- eller XFDF-data genom att anropa `BarcodedFormsServiceClient` objektets `extractToXML` metod och skicka följande värden:
+   Konvertera avkodade data till antingen XDP- eller XFDF-data genom att anropa `BarcodedFormsServiceClient`-objektets `extractToXML`-metod och skicka följande värden:
 
-   * Det objekt `org.w3c.dom.Document` som innehåller avkodade data (se till att du använder `decode` metodens returvärde).
-   * Ett `com.adobe.livecycle.barcodedforms.Delimiter` uppräkningsvärde som anger radavgränsaren. Vi rekommenderar att du anger `Delimiter.Carriage_Return`.
-   * Ett `com.adobe.livecycle.barcodedforms.Delimiter` uppräkningsvärde som anger fältavgränsaren. Ange till exempel `Delimiter.Tab`.
-   * Ett `com.adobe.livecycle.barcodedforms.XMLFormat` uppräkningsvärde som anger om streckkodsdata ska konverteras till XDP- eller XFDF XML-data. Du kan till exempel ange `XMLFormat.XDP` att data ska konverteras till XDP-data.
+   * Det `org.w3c.dom.Document`-objekt som innehåller avkodade data (kontrollera att du använder metoden `decode`).
+   * Ett `com.adobe.livecycle.barcodedforms.Delimiter`-uppräkningsvärde som anger radavgränsaren. Du bör ange `Delimiter.Carriage_Return`.
+   * Ett `com.adobe.livecycle.barcodedforms.Delimiter`-uppräkningsvärde som anger fältavgränsaren. Ange till exempel `Delimiter.Tab`.
+   * Ett `com.adobe.livecycle.barcodedforms.XMLFormat`-uppräkningsvärde som anger om streckkodsdata ska konverteras till XDP- eller XFDF XML-data. Ange till exempel `XMLFormat.XDP` för att konvertera data till XDP-data.
 
    >[!NOTE]
    >
    >Ange inte samma värden för radavgränsaren och fältavgränsarparametrarna.
 
-   Metoden returnerar `extractToXML` ett `java.util.List` objekt där varje element är ett `org.w3c.dom.Document` objekt. Det finns ett separat element för varje streckkod som finns i formuläret. Det vill säga, om det finns fyra streckkoder i formuläret finns det fyra element i det returnerade `java.util.List` objektet.
+   Metoden `extractToXML` returnerar ett `java.util.List`-objekt där varje element är ett `org.w3c.dom.Document`-objekt. Det finns ett separat element för varje streckkod som finns i formuläret. Det vill säga, om det finns fyra streckkoder i formuläret finns det fyra element i det returnerade `java.util.List`-objektet.
 
 1. Bearbeta avkodade data
 
-   * Iterera genom objektet `java.util.List` för att hämta varje `org.w3c.dom.Document` objekt som finns i listan.
-   * För varje element i listan konverterar du `org.w3c.dom.Document` objektet till ett `com.adobe.idp.Document` objekt. (Den programlogik som konverterar ett `org.w3c.dom.Document` objekt till ett `com.adobe.idp.Document` objekt visas i avkodningsstreckkodade formulärdata med Java API-exemplet).
-   * Spara XML-data som en XML-fil genom att anropa `com.adobe.idp.Document` objektets `copyToFile`och skicka ett File-objekt som representerar XML-filen.
+   * Iterera genom `java.util.List`-objektet för att hämta varje `org.w3c.dom.Document`-objekt som finns i listan.
+   * För varje element i listan konverterar du `org.w3c.dom.Document`-objektet till ett `com.adobe.idp.Document`-objekt. (Den programlogik som konverterar ett `org.w3c.dom.Document`-objekt till ett `com.adobe.idp.Document`-objekt visas i streckkodsdata för avkodning med hjälp av Java API-exemplet).
+   * Spara XML-data som en XML-fil genom att anropa `com.adobe.idp.Document`-objektets `copyToFile` och skicka ett File-objekt som representerar XML-filen.
 
 **Se även**
 
@@ -181,54 +181,54 @@ Avkoda formulärdata med API:t för streckkodade formulär (webbtjänst):
 
 1. Skapa ett klient-API-objekt för streckkodade formulär
 
-   Skapa ett objekt genom att anropa dess standardkonstruktor med hjälp av den Microsoft .NET-klientsammansättning som använder den streckkodade formulärtjänsten WSDL. `BarcodedFormsServiceService`
+   Skapa ett `BarcodedFormsServiceService`-objekt genom att anropa dess standardkonstruktor med hjälp av den Microsoft .NET-klientsammansättning som använder den streckkodade formulärtjänsten WSDL.
 
 1. Hämta ett PDF-formulär som innehåller streckkodsdata
 
-   * Skapa ett `BLOB` objekt med hjälp av dess konstruktor. Objektet används `BLOB` för att lagra ett PDF-dokument som innehåller en streckkod.
-   * Skapa ett `System.IO.FileStream` objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` egenskap.
-   * Fyll bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` metod och skicka bytearrayen, startpositionen och den strömlängd som ska läsas.
-   * Fyll objektet `BLOB` genom att tilldela dess `binaryData` egenskap med innehållet i bytearrayen.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra ett PDF-dokument som innehåller en streckkod.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream`-objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i `BLOB`-objektet genom att tilldela dess `binaryData`-egenskap med innehållet i bytearrayen.
 
 1. Avkoda data från PDF-formuläret
 
-   Avkoda formulärdata genom att anropa `BarcodedFormsServiceService` objektets `decode` metod och skicka följande värden:
+   Avkoda formulärdata genom att anropa `BarcodedFormsServiceService`-objektets `decode`-metod och skicka följande värden:
 
-   * Det `BLOB` objekt som innehåller PDF-formuläret.
-   * Ett `Boolean` objekt som anger om en PDF417-streckkod ska avkodas.
-   * Ett `Boolean` objekt som anger om en datamatrisstreckkod ska avkodas.
-   * Ett `Boolean` objekt som anger om en QR-kodstreckkod ska avkodas.
-   * Ett `Boolean` objekt som anger om en codabar-streckkod ska avkodas.
-   * Ett `Boolean` objekt som anger om en kod 128-streckkod ska avkodas.
-   * Ett `Bolean` objekt som anger om en kod med streckkoden 39 ska avkodas.
-   * Ett `Boolean` objekt som anger om en EAN-13-streckkod ska avkodas.
-   * Ett `Boolean` objekt som anger om en EAN-8-streckkod ska avkodas.
-   * Ett `CharSet` uppräkningsvärde som anger teckenuppsättningens kodningsvärde som används i streckkoden.
+   * Det `BLOB`-objekt som innehåller PDF-formuläret.
+   * Ett `Boolean`-objekt som anger om en PDF417-streckkod ska avkodas.
+   * Ett `Boolean`-objekt som anger om en datamatrisstreckkod ska avkodas.
+   * Ett `Boolean`-objekt som anger om en QR-kodstreckkod ska avkodas.
+   * Ett `Boolean`-objekt som anger om en codabar-streckkod ska avkodas.
+   * Ett `Boolean`-objekt som anger om en kod 128-streckkod ska avkodas.
+   * Ett `Bolean`-objekt som anger om en kod 39-streckkod ska avkodas.
+   * Ett `Boolean`-objekt som anger om en EAN-13-streckkod ska avkodas.
+   * Ett `Boolean`-objekt som anger om en EAN-8-streckkod ska avkodas.
+   * Ett `CharSet`-uppräkningsvärde som anger teckenuppsättningens kodningsvärde som används i streckkoden.
 
-   Metoden returnerar `decode` ett strängvärde som innehåller avkodade formulärdata.
+   Metoden `decode` returnerar ett strängvärde som innehåller avkodade formulärdata.
 
 1. Konvertera data till en XML-datakälla
 
-   Konvertera avkodade data till antingen XDP- eller XFDF-data genom att anropa `BarcodedFormsServiceService` objektets `extractToXML` metod och skicka följande värden:
+   Konvertera avkodade data till antingen XDP- eller XFDF-data genom att anropa `BarcodedFormsServiceService`-objektets `extractToXML`-metod och skicka följande värden:
 
-   * Ett strängvärde som innehåller avkodade data (kontrollera att du använder `decode` metodens returvärde).
-   * Ett `Delimiter` uppräkningsvärde som anger radavgränsaren. Vi rekommenderar att du anger `Delimiter.Carriage_Return`.
-   * Ett `Delimiter` uppräkningsvärde som anger fältavgränsaren. Ange till exempel `Delimiter.Tab`.
-   * Ett `XMLFormat` uppräkningsvärde som anger om streckkodsdata ska konverteras till XDP- eller XFDF XML-data. Du kan till exempel ange `XMLFormat.XDP` att data ska konverteras till XDP-data.
+   * Ett strängvärde som innehåller avkodade data (kontrollera att du använder metoden `decode`).
+   * Ett `Delimiter`-uppräkningsvärde som anger radavgränsaren. Du bör ange `Delimiter.Carriage_Return`.
+   * Ett `Delimiter`-uppräkningsvärde som anger fältavgränsaren. Ange till exempel `Delimiter.Tab`.
+   * Ett `XMLFormat`-uppräkningsvärde som anger om streckkodsdata ska konverteras till XDP- eller XFDF XML-data. Ange till exempel `XMLFormat.XDP` för att konvertera data till XDP-data.
 
    >[!NOTE]
    >
    >Ange inte samma värden för radavgränsaren och fältavgränsarparametrarna.
 
-   Metoden returnerar `extractToXML` en `Object` array där varje element är en `BLOB` instans. Det finns ett separat element för varje streckkod som finns i formuläret. Det vill säga, om det finns fyra streckkoder i formuläret finns det fyra element i den returnerade `Object` arrayen.
+   Metoden `extractToXML` returnerar en `Object`-array där varje element är en `BLOB`-instans. Det finns ett separat element för varje streckkod som finns i formuläret. Det vill säga, om det finns fyra streckkoder i formuläret finns det fyra element i den returnerade `Object`-arrayen.
 
 1. Bearbeta avkodade data
 
-   * Skapa ett `System.IO.FileStream` objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar det skyddade PDF-dokumentets filplats.
-   * Skapa en bytearray som lagrar datainnehållet i det `BLOB` objekt som returnerades av `encryptPDFUsingPassword` metoden. Fyll i bytearrayen genom att hämta värdet för `BLOB` objektets `binaryData` datamedlem.
-   * Skapa ett `System.IO.BinaryWriter` objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream` objektet.
-   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` metod och skicka bytearrayen.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det skyddade PDF-dokumentet.
+   * Skapa en bytearray som lagrar datainnehållet i `BLOB`-objektet som returnerades av metoden `encryptPDFUsingPassword`. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `binaryData`-datamedlem.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
 **Se även**
 
