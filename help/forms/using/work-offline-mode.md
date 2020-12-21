@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Med offline-läget i AEM Forms-appen kan du arbeta smidigt även om appen är offline. Du kan öppna, uppdatera och skicka ett formulär utan att behöva ansluta till nätverket.
 
-Du börjar arbeta med AEM Forms-appen genom att synkronisera appen med AEM Forms-servern. Alla formulär som du har tilldelats hämtas i din app. För AEM Forms i JEE hämtas uppgifter på fliken Åtgärder och startpunkter som är kopplade till formulär och andra formulär på fliken Forms. För AEM Forms i OSGi läses endast Forms in på fliken Forms.
+Du börjar arbeta med AEM Forms-appen genom att synkronisera appen med AEM Forms-servern. Alla formulär som du har tilldelats hämtas i appen. För AEM Forms i JEE hämtas uppgifter på fliken Åtgärder och startpunkter som är kopplade till formulär och andra formulär på fliken Forms. För AEM Forms i OSGi läses endast Forms in på fliken Forms.
 
 Mer information om hur du synkroniserar appen finns i [Synkronisera appen](/help/forms/using/sync-app.md).
 
@@ -31,9 +31,9 @@ När du synkroniserar din app med AEM Forms-servern hämtas formulären till din
 
 Om du vill vara säker på att de associerade bilagorna hämtas med varje formulär anger du ON för Hämta bilagor. Mer information finns i [Uppdatera allmänna inställningar](/help/forms/using/update-general-settings.md).
 
-Eftersom nedladdning av data på den mobila enheten kan påverka enhetens prestanda är inställningen Hämta bilagor inställd på AV som standard. Bifogade filer hämtas till enheten för varje åtgärd som hämtas från servern efter att inställningen har uppdaterats till PÅ. I offlineläget kan en användare sedan arbeta med alla uppgifter som hämtas till en enhet efter att ha angett alternativet **Hämta bilagor** till PÅ.
+Eftersom nedladdning av data på den mobila enheten kan påverka enhetens prestanda är inställningen Hämta bilagor inställd på AV som standard. Bifogade filer hämtas till enheten för varje åtgärd som hämtas från servern efter att inställningen har uppdaterats till PÅ. I offlineläget kan en användare sedan arbeta med alla uppgifter som hämtas till enheten efter att ha angett alternativen **Hämta bilagor** till PÅ.
 
-## Konfigurera offlinetjänst för AEM Forms-program {#configuring-offline-service-for-aem-forms-app-br}
+## Konfigurerar offlinetjänsten för AEM Forms-programmet {#configuring-offline-service-for-aem-forms-app-br}
 
 AEM Forms app offline-tjänst identifierar de resurser som används i ett formulär. AEM Forms-appen använder den här tjänsten för att få information om formulärberoenden. Information om formulärberoenden krävs för att aktivera offlinefunktioner. Offlinetjänsten för AEM Forms-programmet cachelagrar sökvägarna eller URL:erna för resurserna som används i ett formulär. Cachen uppdateras baserat på ändringarna i formuläret och giltighetsperioden som konfigurerats för offlinetjänsten. Cachelagring av sökvägar eller URL:er för resurserna som används i ett formulär förbättrar prestandan på serversidan.
 
@@ -50,4 +50,4 @@ Så här konfigurerar du offlinekomponenten på serversidan i AEM Forms-programm
    * **Cachegiltighet**: Anger giltighetsperioden för offlinecachen på serversidan.
    * **Resursobjektssökvägar**: Anger sökvägar där offlinetjänsten övervakar resursändringar. Om några ändringar görs i de angivna sökvägarna uppdateras offlinecachen för alla beroende formulär. Till exempel, `/etc/clientlibs/fd,/content/dam/images`.
 
-1. På fliken **Manuell resurscache** anger du att det inte går att identifiera formulärberoenden i offlinetjänsten. Du kan ange resurser, till exempel bilder som läses in från JavaScript. AEM Forms laddar också ned dessa resurser för offlineläget.
+1. På fliken **Manuell resurscache** anger du att formulärberoenden inte kan identifieras av offlinetjänsten. Du kan ange resurser, till exempel bilder som läses in från JavaScript. AEM Forms laddar också ned dessa resurser för offlineläget.
