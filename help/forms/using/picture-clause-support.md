@@ -56,15 +56,15 @@ Uttryck som stöds för satsen Date Picture:
   </tr>
   <tr>
    <td>DD</td> 
-   <td>Zero-padded two digit (01-31) day of the month.<br /> </td> 
+   <td>Dag i månaden med två siffror (01-31) utfyllda med noll.<br /> </td> 
   </tr>
   <tr>
    <td>M</td> 
-   <td>1- or 2-digit (1-12) month of the year.<br /> </td> 
+   <td>Månad med en eller två siffror (1-12) på året.<br /> </td> 
   </tr>
   <tr>
    <td>MM</td> 
-   <td>Månad med två siffror (01-12) med inledande nolla vid behov.<br /> </td> 
+   <td>Månad med två siffror (01-12) med inledande nolla.<br /> </td> 
   </tr>
   <tr>
    <td>MMM</td> 
@@ -80,7 +80,7 @@ Uttryck som stöds för satsen Date Picture:
   </tr>
   <tr>
    <td>EEEE</td> 
-   <td>Fullständigt veckodagsnamn för det aktuella språkområdet<br /> </td> 
+   <td>Fullständigt veckodagsnamn för det aktuella språket<br /> </td> 
   </tr>
   <tr>
    <td>YY</td> 
@@ -88,26 +88,26 @@ Uttryck som stöds för satsen Date Picture:
   </tr>
   <tr>
    <td>YYYY</td> 
-   <td>Fyrsiffrigt årtal<br /> </td> 
+   <td>Fyrsiffrigt år<br /> </td> 
   </tr>
  </tbody>
 </table>
 
-## Numerisk bildsats {#numeric-picture-clause}
+## Numeriskt bildavsnitt {#numeric-picture-clause}
 
 HTML5-formulär har stöd för numeriska bildsymboler. Det finns dock en skillnad i stöd mellan PDF forms och HTML Forms.
 
-I **PDF forms** formateras ett tal oavsett antalet symboler i Picture-satsen har
+I **PDF forms** formateras ett tal oavsett hur många symboler i Picture-satsen som har
 
 I **HTML Forms** formateras ett tal bara om talet har siffror som är mindre än antalet symboler i Picture-satsen.
 
 **Exempel**: Överväg en Picture-sats: num{zzz,zzz,zz9}.
 
-Talet **10000** formateras som **10 000** i både HTML och PDF forms.
+Talet **10000** är formaterat som **10 000** i både HTML och PDF forms.
 
 Talet 1000000 formateras som 1 000 000 i PDF forms. I HTML Forms förblir dock talet oformaterat som 100000.
 
-Uttryck som stöds för Numeric Picture-satsen i **HTML Forms** är:
+Uttrycken som stöds för Numeric Picture-satsen i **HTML Forms** är:
 
 * num.integer{}
 * num.decimal{}
@@ -200,7 +200,7 @@ Uttryck som stöds för Numeric Picture-satsen i **HTML Forms** är:
  </tbody>
 </table>
 
-## Textbildsats {#text-picture-clause}
+## Textbildklausul {#text-picture-clause}
 
 HTML5-formulär har stöd för följande Text Picture-satsuttryck:
 
