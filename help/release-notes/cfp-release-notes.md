@@ -4,9 +4,9 @@ description: Versionsinformation om Adobe Experience Manager 6.4 Cumulative Fix 
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: e10d53a3912fb21962f1015550bd3a4a118d8834
+source-git-commit: 1d3476c3fdc8cf817e4784f36b4e0858fdc3b1ee
 workflow-type: tm+mt
-source-wordcount: '4075'
+source-wordcount: '4136'
 ht-degree: 0%
 
 ---
@@ -158,6 +158,9 @@ Adobe Experience Manager 6.4.8.2 innehåller korrigeringar för följande proble
 * Du kan göra uppehåll i [!DNL Live Copy] för en sida och arv bryts i enligt vad som visas i redigeringsläget. I sidegenskaperna indikerar ikonen som representerar arv felaktigt att arvet finns och inte är brutet (NPR-34096).
 * Problem med visning av tillåtna komponenter på mallsidan Redigera (CQ-4297295).
 * När du har uppgraderat Chrome och Firefox fungerar inte snabbmenyerna som förväntat. När du läser in sidegenskaperna visas inte panelen när det finns data i den (CQ-4292995).
+* Flera instanser av korsskriptning mellan webbplatser i [!DNL Experience Manager Sites]-komponenter (NPR-33926).
+* Användarindata är inte korrekt kodade för olika komponenter när information skickas till klienten (NPR-33696).
+* En URL som slutar med `childrenlist.html` visar en HTML-sida i stället för ett 404-svar. Sådana URL:er är sårbara för serveröverskridande skriptning (NPR-33441).
 
 #### Assets {#assets-6482}
 
@@ -234,6 +237,8 @@ Adobe Experience Manager 6.4.8.2 innehåller korrigeringar för följande proble
 * Överföringsåtgärden **[!UICONTROL Submit to REST endpoint]** fungerar inte för en adaptiv form (NPR-34513).
 
 * Tillgänglighet: När du försöker skicka ett anpassat formulär utan att överföra en bilaga för ett obligatoriskt fält flyttas fokus inte automatiskt till bilagefältet (NPR-34511).
+
+* Användarindata är inte korrekt kodade för [!DNL Forms]-komponenter när information skickas till klienten (NPR-33611).
 
 **Arbetsflöde**
 
@@ -431,9 +436,9 @@ Information om vilken certifierad plattform som används i den här versionen av
 >[!NOTE]
 >När paketet har installerats visas ett informationsmeddelande som anger att innehållspaketet har installerats, t.ex. **&quot;Innehållspaket AEM-6.4-Service-Pack-8 har installerats.&quot;**
 
-### Uppdatera dynamiska medievyer (5.10.1) {#update-dynamic-media-viewers}
+### Uppdatera Dynamic Media-visningsprogram (5.10.1) {#update-dynamic-media-viewers}
 
-AEM 6.4.8.3 innehåller en ny version av Dynamic Media-visningsprogram (5.10.1) som gör det möjligt att kontrollera dubblettnamn på sidan Bildförinställning. Dynamic Media-kunder rekommenderas att köra följande kommando för att få fram aktuella visningsinställningar från kartongen.
+AEM 6.4.8.3 innehåller en ny version av Dynamic Media-visningsprogram (5.10.1) som gör det möjligt att kontrollera om det finns dubblettnamn på sidan Bildförinställning. Dynamic Media-kunder uppmanas att köra följande kommando för att få fram aktuella visningsinställningar för boxen.
 
 `curl -u admin:admin http://localhost:4502/libs/settings/dam/dm/presets/viewer.pushviewerpresets`
 
