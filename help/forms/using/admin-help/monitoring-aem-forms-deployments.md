@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Övervaka AEM {#monitoring-aem-forms-deployments}
+# Övervaka AEM formulärdistributioner {#monitoring-aem-forms-deployments}
 
 Du kan övervaka AEM formulärdistributioner både på systemnivå och intern nivå. Du kan använda specialhanteringsverktyg som HP OpenView, IBM Tivoli och CA UniCenter samt en JMX-bildskärm från tredje part som kallas *JConsole* för att specifikt övervaka Java-aktivitet. Implementeringen av en övervakningsstrategi förbättrar tillgängligheten, tillförlitligheten och prestandan för era AEM formulär.
 
@@ -26,7 +26,7 @@ Mer information om övervakning AEM formulärdistributioner finns i [En teknisk 
 
 ## Övervaka med MBeans {#monitoring-using-mbeans}
 
-AEM tillhandahåller två registrerade MBeans som tillhandahåller navigerings- och statistikinformation. Det här är de enda MBeans som stöds för integrering och inspektion:
+AEM tillhandahåller två registrerade MBeans som tillhandahåller navigerings- och statistikinformation. Detta är de enda MBeans som stöds för integrering och inspektion:
 
 * **ServiceStatistic:** Denna MBean ger information om tjänstens namn och version.
 * **OperationStatistic:** Denna MBean ger statistik för alla formulärservertjänster. Här kan administratörer få information om en viss tjänst, t.ex. starttid, antal fel osv.
@@ -41,7 +41,7 @@ Dessa publika gränssnitt för ServiceStatistic MBean kan användas i testsyfte:
  public int getMinorVersion();
 ```
 
-### OperationStatisticMbean-offentliga gränssnitt {#operationstatisticmbean-public-interfaces}
+### OperationStatisticMbean publika gränssnitt {#operationstatisticmbean-public-interfaces}
 
 Dessa publika gränssnitt för OperationStatistic MBean kan användas i testsyfte:
 
@@ -75,17 +75,17 @@ Med en JMX-konsol (JConsole) finns statistik från OperationStatistic MBean till
 
 **MBean-träd**
 
-**Domännamn för Adobe:** Beroende på programserver. Om programservern inte definierar domänen är adobe.com som standard.
+**Adobe-domännamn:** Beroende på programserver. Om programservern inte definierar domänen är adobe.com som standard.
 
 **ServiceType:** AdobeService är det namn som används för att lista alla tjänster.
 
-**AdobeServiceName:** Tjänstnamn eller tjänst-ID.
+**AdobeServiceName:** Service Name eller Service ID.
 
 **Version:** Tjänstens version.
 
 **Åtgärdsstatistik**
 
-**Anropstid:** Tidsåtgång för körning av metoden. Detta inkluderar inte den tidpunkt då begäran serialiseras, överförs från klient till server och avserialiseras.
+**Tid för anrop:** Tid för körning av metoden. Detta inkluderar inte den tidpunkt då begäran serialiseras, överförs från klient till server och avserialiseras.
 
 **Antal anrop:** Antalet gånger som tjänsten anropas.
 
@@ -99,9 +99,9 @@ Med en JMX-konsol (JConsole) finns statistik från OperationStatistic MBean till
 
 **Undantagsmeddelande:** Felmeddelandet för det senaste undantaget som inträffade.
 
-**Datum och tid för senaste provtagning:** Datum för det senaste anropet.
+**Senaste tidpunkten för provtagning:** Datum för senaste anrop.
 
-**Tidsenhet:** Standardvärdet är millisekunder.
+**Tidsenhet:** Standard är millisekunder.
 
 För att JMX-övervakning ska kunna aktiveras behöver programservrarna vanligtvis någon konfiguration. Mer information finns i programserverdokumentationen.
 
