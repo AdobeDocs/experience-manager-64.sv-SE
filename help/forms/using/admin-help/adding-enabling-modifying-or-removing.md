@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Lägga till, aktivera, ändra eller ta bort slutpunkter {#adding-enabling-modifying-or-removing-endpoints}
 
-## Lägga till en slutpunkt i en tjänst {#add-an-endpoint-to-a-service}
+## Lägg till en slutpunkt i en tjänst {#add-an-endpoint-to-a-service}
 
 Slutpunkter kan bara läggas till i tjänster. En slutpunkt får inte finnas ensam. den måste vara associerad med en tjänst.
 
