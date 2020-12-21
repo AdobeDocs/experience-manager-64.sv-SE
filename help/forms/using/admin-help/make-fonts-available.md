@@ -18,16 +18,16 @@ ht-degree: 0%
 ---
 
 
-# Göra teckensnitt tillgängliga {#make-fonts-available}
+# Gör teckensnitt tillgängliga {#make-fonts-available}
 
 Kontrollera att teckensnitten som används i ett formulär är tillgängliga för användning på J2EE-programservern som är värd AEM formulär. Ta till exempel följande scenario. En formulärdesigner lägger till ett teckensnitt i teckensnittskatalogen som Designer använder och skapar ett formulär som använder teckensnittet på en separat dator. För att Output-tjänsten ska kunna använda teckensnittet placerar du det i kundens teckensnittskatalog. Om kundens teckensnittskatalog inte finns skapar du en katalog på J2EE-programservern som AEM formulär.
 
-Mer information om ytterligare teckensnittsinställningar finns i [Konfigurera allmänna AEM](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)formulärinställningar.
+Mer information om ytterligare teckensnittsinställningar finns i [Konfigurera allmänna inställningar AEM formulär](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings).
 
 **Ange platsen för kundens teckensnittskatalog**
 
 1. I administrationskonsolen klickar du på Inställningar > Core Systems Settings > Configurations.
-1. Ange sökvägen till kundens teckensnittskatalog i rutan Plats för systemteckensnittskatalogen. Flera kataloger kan läggas till, åtskilda med semikolon **;**
+1. Ange sökvägen till kundens teckensnittskatalog i rutan Plats för systemteckensnittskatalogen. Flera kataloger kan läggas till, avgränsade med semikolon **;**
 1. Klicka på OK.
 1. Starta om datorn där AEM har installerats.
 
