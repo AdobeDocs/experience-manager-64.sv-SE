@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Det här innehållet beskriver valfria inställningar som du kan konfigurera för att förbättra prestandan på AEM formulärprogramserver.
 
-## Konfigurera datakällor för programservrar {#configuring-application-server-data-sources}
+## Konfigurerar datakällor för programservern {#configuring-application-server-data-sources}
 
 AEM använder AEM som datakälla. I databasen AEM formulär lagras programresurser, och vid körning kan tjänster hämta resurser från databasen som en del av en automatiserad affärsprocess.
 
@@ -156,16 +156,16 @@ I det här avsnittet beskrivs inställningar som är specifika för en WebSphere
 
 ### Öka det maximala minne som tilldelas JVM {#increasing-the-maximum-memory-allocated-to-the-jvm}
 
-Om du kör Configuration Manager eller försöker generera Enterprise JavaBeans (EJB)-distributionskod genom att använda kommandoradsverktyget *ejbdeploy* och ett OutOfMemory-fel inträffar, ökar du mängden minne som tilldelas JVM.
+Om du kör Configuration Manager eller försöker generera Enterprise JavaBeans (EJB)-distributionskod med kommandoradsverktyget *ejbdeploy* och ett OutOfMemory-fel inträffar, ökar du mängden minne som tilldelats JVM.
 
 1. Redigera ejbdeploy-skriptet i katalogen *[appserver root]*/deploytool/itp/:
 
    * (Windows) `ejbdeploy.bat`
    * (Linux och UNIX) `ejbdeploy.sh`
 
-1. Leta reda på `-Xmx256M` parametern och ändra den till ett högre värde, till exempel `-Xmx1024M`.
+1. Hitta parametern `-Xmx256M` och ändra den till ett högre värde, till exempel `-Xmx1024M`.
 1. Spara filen.
-1. Kör `ejbdeploy` kommandot eller distribuera om med Configuration Manager.
+1. Kör kommandot `ejbdeploy` eller omdistribuera med Configuration Manager.
 
 ## Förbättra prestanda för Windows Server 2003 med LDAP {#improving-windows-server-2003-performance-with-ldap}
 
@@ -173,22 +173,22 @@ Det här innehållet beskriver inställningar som är specifika för en Microsof
 
 Om du använder anslutningspoolning på sökanslutningen kan antalet portar som behövs minska med så mycket som 50 %. Detta beror på att anslutningen alltid använder samma autentiseringsuppgifter för en viss domän, och kontexten och relaterade objekt stängs uttryckligen.
 
-### Konfigurera Windows Server för anslutningspoolning {#configure-your-windows-server-for-connection-pooling}
+### Konfigurera Windows Server för anslutningspooler {#configure-your-windows-server-for-connection-pooling}
 
-1. Klicka på Start > Kör för att starta Registereditorn, skriv `regedit` och klicka på OK i rutan Öppna.
+1. Klicka på Start > Kör för att starta Registereditorn, skriv `regedit` i rutan Öppna och klicka på OK.
 1. Gå till registernyckeln `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 1. Leta reda på TcpTimedWaitDelay-värdenamnet i den högra rutan i Registereditorn. Om namnet inte visas väljer du Redigera > Nytt > DWORD-värde på menyraden för att lägga till namnet.
-1. Skriv i rutan Namn `TcpTimedWaitDelay`
+1. I rutan Namn skriver du `TcpTimedWaitDelay`
 
    >[!NOTE]
    >
    >Om du inte ser någon blinkande markör och `New Value #` inuti rutan högerklickar du i den högra panelen, väljer Byt namn och skriver `TcpTimedWaitDelay`*i rutan Namn.*
 
 1. Upprepa steg 4 för värdenamnen MaxUserPort, MaxHashTableSize och MaxFreeTcbs.
-1. Dubbelklicka i den högra rutan för att ange TcpTimedWaitDelay-värdet. Välj Decimal under Basvärde och skriv `30`i rutan Värde.
-1. Dubbelklicka i den högra rutan för att ange värdet för MaxUserPort. Välj Decimal under Basvärde och skriv `65534`i rutan Värde.
-1. Dubbelklicka inuti den högra rutan för att ange värdet för MaxHashTableSize. Välj Decimal under Basvärde och skriv `65536`i rutan Värde.
-1. Dubbelklicka inuti den högra rutan för att ange värdet för MaxFreeTcbs. Välj Decimal under Basvärde och skriv `16000`i rutan Värde.
+1. Dubbelklicka i den högra rutan för att ange TcpTimedWaitDelay-värdet. Välj Decimal under Basvärde och skriv `30` i rutan Värde.
+1. Dubbelklicka i den högra rutan för att ange värdet för MaxUserPort. Välj Decimal under Basvärde och skriv `65534` i rutan Värde.
+1. Dubbelklicka inuti den högra rutan för att ange värdet för MaxHashTableSize. Välj Decimal under Basvärde och skriv `65536` i rutan Värde.
+1. Dubbelklicka inuti den högra rutan för att ange värdet för MaxFreeTcbs. Välj Decimal under Basvärde och skriv `16000` i rutan Värde.
 
 >[!NOTE]
 >
