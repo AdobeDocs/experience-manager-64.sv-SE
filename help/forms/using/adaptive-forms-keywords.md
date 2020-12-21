@@ -16,7 +16,7 @@ ht-degree: 13%
 ---
 
 
-# Nyckelord för adaptiva formulär {#adaptive-forms-keywords}
+# Anpassade formulärnyckelord {#adaptive-forms-keywords}
 
 Nyckelord för adaptiva formulär är fördefinierade, reserverade identifierare som har en speciell betydelse för adaptiva formulär. Du kan inte använda dessa nyckelord som identifierare i dina adaptiva formulär. I följande tabell visas alla nyckelord som är reserverade identifierare för adaptiva formulär.
 
@@ -240,4 +240,4 @@ Nyckelord för adaptiva formulär är fördefinierade, reserverade identifierare
  </tbody>
 </table>
 
-Förutom nyckelorden ovan bör du undvika att använda namn som liknar JavaScript-API:er för [adaptiva formulär](https://adobe.com/go/learn_aemforms_javascript_api_63).
+Förutom nyckelorden ovan bör du undvika att använda namn som liknar [JavaScript API:er för adaptiva formulär](https://adobe.com/go/learn_aemforms_javascript_api_63).
