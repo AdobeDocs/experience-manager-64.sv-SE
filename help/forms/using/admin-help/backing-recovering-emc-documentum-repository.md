@@ -47,7 +47,7 @@ Du behöver följande EMC NetWorker-moduler:
 * NetWorker-modul för den databastyp som används av Content Server
 * NetWorker-modul för Documentum
 
-## Förbereda EMC Document Content Server för säkerhetskopiering och återställning {#preparing-the-emc-document-content-server-for-backup-and-recovery}
+## Förbereder EMC Document Content Server för säkerhetskopiering och återställning {#preparing-the-emc-document-content-server-for-backup-and-recovery}
 
 I det här avsnittet beskrivs hur du installerar och konfigurerar EMC NetWorker-programmet på innehållsservern.
 
@@ -55,9 +55,9 @@ I det här avsnittet beskrivs hur du installerar och konfigurerar EMC NetWorker-
 
 1. Installera EMC NetWorker-modulerna på EMC Documentum Content Server och acceptera alla standardvärden.
 
-   Under installationsprocesserna uppmanas du att ange servernamnet för innehållsserverdatorn som *NetWorker-servernamn*. När du installerar EMC NetWorker-modulen för din databas väljer du en fullständig installation.
+   Under installationsprocesserna uppmanas du att ange servernamnet på innehållsserverdatorn som *NetWorker-servernamn*. När du installerar EMC NetWorker-modulen för din databas väljer du en fullständig installation.
 
-1. Med exempelinnehållet nedan skapar du en konfigurationsfil med namnet *nsrnmd_win.cfg* och sparar den på en tillgänglig plats på Content Server. Filen anropas av kommandona för säkerhetskopiering och återställning.
+1. Med exempelinnehållet nedan skapar du en konfigurationsfil med namnet *nsrnmd_win.cfg* och sparar den på en tillgänglig plats på innehållsservern. Filen anropas av kommandona för säkerhetskopiering och återställning.
 
    Följande text innehåller formateringstecken för radbrytningar. Om du kopierar den här texten till en plats utanför det här dokumentet kopierar du en del i taget och tar bort formateringstecknen när du klistrar in den på den nya platsen.
 
@@ -188,26 +188,26 @@ I det här avsnittet beskrivs hur du installerar och konfigurerar EMC NetWorker-
     NMDDE_DM_PASSWD=XAtup9pl
    ```
 
-   Låt lösenordsfältet för konfigurationsfilen vara `NMDDE_DM_PASSWD` tomt. Du anger lösenordet i nästa steg.
+   Behåll konfigurationsfilens lösenordsfält `NMDDE_DM_PASSWD` tomt. Du anger lösenordet i nästa steg.
 
 1. Ange lösenordet för konfigurationsfilen enligt följande:
 
    * Öppna en kommandotolk och ändra till *[NetWorker_root]*\Legato\nsr\bin.
-   * Kör följande kommando: `-nsrnmdsv.exe -f`*&lt;sökväg> -P &lt;lösenord>*
+   * Kör följande kommando: `-nsrnmdsv.exe -f`*&lt;sökväg_till_cfg_fil> -P &lt;lösenord>*
 
 1. Skapa de körbara batchfiler (.bat) som används för att säkerhetskopiera databasen. (Se dokumentationen för NetWorker.) Ange information i gruppfilerna enligt installationen.
 
    * Fullständig säkerhetskopiering av databasen (nsrnmddbf.bat):
 
-      *[NetWorker_database_module_root]* `-s`*&lt;NetWorker_Server_Name>*`-U`*[användarnamn ]*`-P`*[lösenord]*`-l full`*&lt;database_name>*
+      *[NetWorker_database_module_]* `-s`*&lt;networker_server_name>* `-U`*[]*`-P`*[rootusernamepassword]* `-l full`*&lt;database_name>*
 
    * Inkrementell säkerhetskopiering av databas (nsrnmddbi.bat):
 
-      *[NetWorker_database_module_root]* `-s`*&lt;NetWorker_Server_Name>*`-U`*[användarnamn ]*`-P`*[lösenord]*`-l 1 -R`*&lt;database_name>*
+      *[NetWorker_database_module_]* `-s`*&lt;networker_server_name>* `-U`*[]*`-P`*[rootusernamepassword]* `-l 1 -R`*&lt;database_name>*
 
    * Säkerhetskopiering av databaslogg (nsrnmddbl.bat):
 
-      *[NetWorker_database_module_root]* `-s`*&lt;NetWorker_Server_Name>*`-U`*[användarnamn ]*`-P`*[lösenord]*`-l incr -R`*&lt;database_name>*
+      *[NetWorker_database_module_]* `-s`*&lt;networker_server_name>* `-U`*[]*`-P`*[rootusernamepassword]* `-l incr -R`*&lt;database_name>*
 
       Var:
 
@@ -215,7 +215,7 @@ I det här avsnittet beskrivs hur du installerar och konfigurerar EMC NetWorker-
 
       `NetWorker_Server_Name` är den server där NetWorker är installerat.
 
-      `username` och `password` är användarnamn och lösenord för databasadministratörsanvändaren.
+      `username` och  `password` är användarnamn och lösenord för databasadministratörsanvändaren.
 
       `database_name` är namnet på den databas som ska säkerhetskopieras.
 
@@ -241,7 +241,7 @@ Utför följande uppgifter när du har slutfört en fullständig säkerhetskopie
 
 >[!NOTE]
 >
->Kommandoskripten kräver den fullständiga sökvägen till filen nsrnmd_win.cfg som du skapade när du [förberedde EMC Document Content Server för säkerhetskopiering och återställning](backing-recovering-emc-documentum-repository.md#preparing-the-emc-document-content-server-for-backup-and-recovery).
+>Kommandoskripten kräver den fullständiga sökvägen till filen nsrnmd_win.cfg som du skapade i [Förbereda EMC Document Content Server för säkerhetskopiering och återställning](backing-recovering-emc-documentum-repository.md#preparing-the-emc-document-content-server-for-backup-and-recovery).
 
 1. Öppna en kommandotolk och ändra till *[NetWorker_root]*\Legato\nsr\bin.
 1. Kör följande kommando:
@@ -256,7 +256,7 @@ Utför följande åtgärder innan du återställer AEM formulärdata. (Se [Åter
 
 >[!NOTE]
 >
->Kommandoskripten kräver den fullständiga sökvägen till filen nsrnmd_win.cfg som du skapade när du [förberedde EMC Document Content Server för säkerhetskopiering och återställning](backing-recovering-emc-documentum-repository.md#preparing-the-emc-document-content-server-for-backup-and-recovery).
+>Kommandoskripten kräver den fullständiga sökvägen till filen nsrnmd_win.cfg som du skapade i [Förbereda EMC Document Content Server för säkerhetskopiering och återställning](backing-recovering-emc-documentum-repository.md#preparing-the-emc-document-content-server-for-backup-and-recovery).
 
 1. Stoppa den Docbase-tjänst som du återställer.
 1. Starta NetWorker-användarverktyget för din databasmodul (till exempel *NetWorker-användare för SQL Server*).
