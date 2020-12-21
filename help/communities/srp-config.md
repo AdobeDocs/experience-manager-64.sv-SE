@@ -42,9 +42,9 @@ Så här väljer du ett annat lagringsalternativ än standard-JCR:
 * välj ett alternativ
 * Konfigurera korrekt
 
-   * Se information om hur du [väljer MSRP](msrp.md#select-msrp)
-   * Se information för [val av DSRP](dsrp.md#select-dsrp)
-   * Se information om hur du [väljer ASRP](asrp.md#select-asrp)
+   * Se information om [val av MSRP](msrp.md#select-msrp)
+   * Se information om [val av DSRP](dsrp.md#select-dsrp)
+   * Se information om [val av ASRP](asrp.md#select-asrp)
 
 * Välj **[!UICONTROL Submit]**
 
@@ -52,11 +52,11 @@ Så här väljer du ett annat lagringsalternativ än standard-JCR:
 
 Observera att om inget val görs är standarddatabasen AEM JCR.
 
-JCR är *inte* en vanlig butik som delas av författaren och publiceringsmiljöerna. Community-innehåll visas bara i den författar- eller publiceringsmiljö där det skapades.
+JCR är *inte* en gemensam lagringsplats som delas av författar- och publiceringsmiljöerna. Community-innehåll visas bara i den författar- eller publiceringsmiljö där det skapades.
 
-Mer information finns i [JCR Store](jsrp.md) .
+Mer information finns i [JCR Store](jsrp.md).
 
 >[!NOTE]
 >
->Om noden inte finns `srpc`under `/etc/socialconfig` visas standardlagret för [JCR](jsrp.md).
+>Om noden `srpc`saknas under `/etc/socialconfig` indikerar standardlagret för [JCR](jsrp.md).
 
