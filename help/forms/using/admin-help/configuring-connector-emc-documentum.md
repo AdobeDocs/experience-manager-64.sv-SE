@@ -18,9 +18,9 @@ ht-degree: 1%
 ---
 
 
-# Konfigurera Connector for EMC Documentum {#configuring-connector-for-emc-documentum}
+# Konfigurerar koppling för EMC Documentum {#configuring-connector-for-emc-documentum}
 
-Koppling för EMC Documentum möjliggör kommunikation mellan AEM och EMC Documentum. Mer bakgrundsinformation finns i&quot;Connectors for ECM&quot; i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
+Koppling för EMC Documentum möjliggör kommunikation mellan AEM och EMC Documentum. Mer bakgrundsinformation finns i &quot;Connectors for ECM&quot; i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
 
 När du konfigurerar Connector för EMC Documentum måste du konfigurera serveranslutningen och databasautentiseringsuppgifterna.
 
@@ -28,7 +28,7 @@ När du konfigurerar Connector för EMC Documentum måste du konfigurera servera
 >
 >I tidigare versioner kunde resurserna lagras i en ECM-databas. I den aktuella versionen lagras resurser i AEM för inbyggda formulär och databasleverantörstjänsterna har tagits bort. Överföring av resurser från en ECM-databas till databasen med AEM formulär sker när du uppgraderar till AEM formulär. Mer information finns i uppgraderingsguiden för AEM formulär för programservern.
 
-## Konfigurera serveranslutningen {#configuring-the-server-connection}
+## Konfigurerar serveranslutningen {#configuring-the-server-connection}
 
 I det här avsnittet beskrivs de uppgifter för Connector for EMC Documentum som du kan utföra på sidan Konfigurationsinställningar.
 
@@ -58,15 +58,15 @@ Om du anger fel användarnamn eller lösenord får du följande resultat, beroen
 1. Om inget explicit databasnamn anges vid inloggning anger du det databasnamn som autentiseringsuppgifterna är kopplade till.
 1. Klicka på Spara.
 
-### Ändra databasens tjänstleverantör {#change-the-repository-service-provider}
+### Ändra databastjänstprovidern {#change-the-repository-service-provider}
 
 Du kan konfigurera vilken databastjänstleverantör som ska användas med Documentum. Databastjänstanrop delegeras till providern som du konfigurerar. Följande alternativ är tillgängliga:
 
 **Aktuellt namn på databastjänstleverantör:** Namnet på den aktuella databastjänstprovidern
 
-**ECM Documentum-databasleverantör:** Gör Documentum-databasprovidern till databasprovidern. Det här alternativet har tagits bort
+**ECM Documentum-databasprovider:** gör Documentum-databasprovidern till databasprovidern. Det här alternativet har tagits bort
 
-**databasprovider:** Gör den inbyggda databasprovidern till databasprovidern
+**databasprovider:** gör den inbyggda databasprovidern till databasprovidern
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ Du kan konfigurera vilken databastjänstleverantör som ska användas med Docume
 1. Välj den alternativa databastjänstleverantören i informationsfältet för databastjänstleverantör.
 1. Klicka på Spara.
 
-## Konfigurerar databasreferenser {#configuring-repository-credentials}
+## Konfigurerar databasinloggningsuppgifter {#configuring-repository-credentials}
 
 Documentum-inloggningsinformationen används i systemkontexten för AEM formulär. Databasens autentiseringsuppgifter är specifika för vissa databaser i Documentum. Du kan ange autentiseringsuppgifter för valfritt antal databaser; Du kan dock bara ange en uppsättning uppgifter per databas.
 
