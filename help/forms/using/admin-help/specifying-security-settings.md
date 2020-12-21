@@ -24,7 +24,7 @@ Med Forms kan du styra om externa entiteter i XML-indata är lösta. Som standar
 
 **Förhindra bearbetning av XML-datafiler som innehåller referenser till externa entiteter**
 
-1. Klicka på i administrationskonsolen **[!UICONTROL Services > Forms]**.
+1. Klicka på **[!UICONTROL Services > Forms]** i administrationskonsolen.
 1. Avmarkera kryssrutan Lös externa entiteter.
 1. Klicka på **[!UICONTROL Save]**.
 
