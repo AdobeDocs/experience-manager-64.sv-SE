@@ -38,39 +38,39 @@ Du kan dra pekaren längs tidslinjen för att hämta värden för en viss tidpun
 
 I den vänstra rutan på fliken System visas följande information om servern eller noden:
 
-**Virtuell dator:** Java Virtual Machine-version (JVM) på servern.
+**Virtuell dator:JVM-version (** Java Virtual Machine) på servern.
 
 **Leverantör av virtuell dator:** Tillverkare av JVM.
 
 **Version för virtuell dator:** JVM-versionsnummer
 
-**Datornamn:** Värdnamn för den server där AEM har installerats.
+**Datornamn:** Värdnamn för servern där AEM är installerat.
 
 **Starttid:** Den tid, i timmar och minuter, som servern har körts.
 
-**Just-In-Time Compiler:** The name of the compiler being used.
+**Just-In-Time-kompilator:** Namnet på den kompilator som används.
 
-**Compile Time:** The amount of time spent in compile.
+**Kompileringstid:** Den tid som har ägnats åt kompileringen.
 
-**Number of Live Threads:** The total number of threads currently present in the AEM forms system.
+**Antal Live-trådar:** Det totala antalet trådar som för närvarande finns i AEM.
 
-**Number of Threads Peak:** Largest number of live threads ever recorded on the system.
+**Högsta antal trådar:** Största antal livetrådar som någonsin spelats in i systemet.
 
-**Number of Loaded Classes:** Number of classes Loaded into the JVM.
+**Antal inlästa klasser:** Antal klasser som har lästs in i JVM.
 
-**Number of Unloaded Classes:** Number of classes Unloaded from the JVM.
+**Antal ej inlästa klasser:** Antal klasser som inte har lästs in från JVM.
 
-**Minimum Heap:** The minimum amount of heap that was used.
+**Minsta heap:** Den minsta heap som användes.
 
-**Maximum Heap:** The maximum amount of heap that was used.
+**Maximal heap:** Den maximala heap som användes.
 
-**Operating System Name:** The name of the operating system running on the AEM forms server.
+**Operativsystemnamn:** Namnet på det operativsystem som körs på AEM formulärserver.
 
-**Operativsystemversion:** Versionsnummer för det operativsystem som körs på AEM formulärserver.
+**Operativsystemsversion:** Versionsnummer för det operativsystem som körs på AEM formulärserver.
 
-**Operativsystem:** Den operativsystemsarkitektur som JVM körs på.
+**Operativsystemsark:** Den operativsystemsarkitektur som JVM körs på.
 
-**Number of Processors:** The number of processors on the system.
+**Antal processorer:** Antalet processorer i systemet.
 
 **Argument för virtuell dator:** Argumentet som används av JVM.
 
@@ -78,19 +78,19 @@ I den vänstra rutan på fliken System visas följande information om servern el
 
 **Bibliotekssökväg:** Bibliotekssökvägen som används av JVM.
 
-**Startklasssökväg:** Den sökväg till startklassen som används av JVM.
+**Startklasssökväg:** Den startklasssökväg som används av JVM.
 
-**Application Server Type:** Type of application server used to run AEM forms.
+**Programservertyp:** Typ av programserver som används för att köra AEM formulär.
 
-**Application Server Version:** Version number of the application server used to run AEM forms.
+**Application Server-version:** Versionsnummer för den programserver som används för att köra AEM formulär.
 
-**Application Server Vendor:** Manufacturer of the application server used to run AEM forms.
+**Application Server-leverantör:** Tillverkare av den programserver som används för att köra AEM formulär.
 
-**Installation Date:** Date (in yyyy-mm-dd format) that AEM forms was installed.
+**Installationsdatum:** Datum (i formatet åååå-mm-dd) som AEM har installerats.
 
-**AEM forms Version:** Version of AEM forms that is installed.
+**AEM:** Version av AEM formulär som är installerade.
 
-**Lappningsversion:** AEM formulärkorrigeringsnummer.
+**Korrigeringsversion:** AEM formulärkorrigeringsnummer.
 
 **Databasnamn:** Typ av databas som används av AEM formulär.
 
