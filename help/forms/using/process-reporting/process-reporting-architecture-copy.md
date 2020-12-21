@@ -39,23 +39,23 @@ Processrapportering består av följande moduler:
 
 ## Processrapporteringsmoduler {#process-reporting-modules}
 
-### ProcessDataPublisher-tjänst {#processdatapublisher-service-br}
+### ProcessDataPublisher-tjänsten {#processdatapublisher-service-br}
 
 ProcessDataPublisher-servern körs regelbundet på AEM Forms-databasen och extraherar de data som har ändrats sedan den senaste körningen av tjänsten. Sedan publiceras data till datalagringstjänsten för processdata.
 
-Mer information om hur du konfigurerar tjänsten finns i [Konfigurera tjänsten](/help/forms/using/process-reporting/install-start-process-reporting.md#p-reportconfiguration-service-p)ProcessDataPublisher.
+Mer information om hur du konfigurerar tjänsten finns i [Konfigurera tjänsten ProcessDataPublisher](/help/forms/using/process-reporting/install-start-process-reporting.md#p-reportconfiguration-service-p).
 
-### Tjänsten ProcessDataStorageProvider {#processdatastorageprovider-service-br}
+### ProcessDataStorageProvider-tjänsten {#processdatastorageprovider-service-br}
 
 ProcessDataStorageProvider-tjänsten tar emot processdata från ProcessDataPublisher-tjänsten och sparar data i Process Reporting-databasen.
 
-Mer information om hur du konfigurerar tjänsten finns i [Konfigurera tjänsten](/help/forms/using/process-reporting/install-start-process-reporting.md#p-to-configure-the-process-reporting-repository-locations-p)ProcessDataStorageProvider.
+Mer information om hur du konfigurerar tjänsten finns i [Konfigurera tjänsten ProcessDataStorageProvider](/help/forms/using/process-reporting/install-start-process-reporting.md#p-to-configure-the-process-reporting-repository-locations-p).
 
 ### OSGi-tjänst {#osgi-service-br}
 
 QueryDataServlet använder den här tjänsten för att hämta rapportdata från Process Reporting-databasen.
 
-### Tjänsten QueryDataServlet {#querydataservlet-service-br}
+### QueryDataServlet-tjänsten {#querydataservlet-service-br}
 
 Tjänsten QueryDataServlet accepterar frågor från användargränssnittet för processrapportering.
 
@@ -65,7 +65,7 @@ Tjänsten använder sedan OSGi-tjänster för att hämta relevanta rapporterings
 
 Användargränssnittet Process Reporting är ett webbläsarbaserat gränssnitt. Du använder det här gränssnittet för att visa process- och uppgiftsinformation som publiceras från AEM Forms-databasen.
 
-### Tjänsten QueryDataServlet {#querydataservlet-service-br-1}
+### QueryDataServlet-tjänsten {#querydataservlet-service-br-1}
 
 Tjänsten QueryDataServlet accepterar frågor från användargränssnittet för processrapportering.
 
