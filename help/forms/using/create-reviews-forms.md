@@ -26,7 +26,7 @@ En granskning är en mekanism som gör att en eller flera granskare kan kommente
 ## Konfigurera en granskning {#setting-up-a-review}
 
 1. Navigera till fliken Forms och markera ett formulär.
-1. Om resursen inte har någon pågående granskning visas ikonen Starta granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) i åtgärdsfältet. Klicka på ikonen Starta granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) .
+1. Om resursen inte har någon pågående granskning visas ikonen Starta granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) i åtgärdsfältet. Klicka på ikonen Starta granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png).
 1. Ange följande information:
 
    * Granskningsnamn: Obligatoriskt, kan innehålla alfanumeriska tecken, bindestreck eller understreck.
@@ -44,7 +44,7 @@ I det här avsnittet beskrivs vad som händer när en granskning skapas eller ko
 1. Alla granskare tilldelas en granskningsuppgift. Uppgiften visas i meddelandeavsnittet. Granskaren kan klicka på ett meddelande eller gå till Inkorgen för att visa uppgiften. Granskaren kan klicka för att öppna granskningsprocessen, visa formuläret och börja lägga till kommentarer.
 
    ![Aviseringsvarning för granskare](assets/noti.png)
-   **Bild:** *Aviseringsvarning för granskare*
+   **Bild:** *Meddelandevarning för granskare*
 
 1. Kommentarsrutan är tillgänglig för initieraren och granskarna av resursen. Andra kan visa kommentarerna, men inte skriva kommentarer.
 
@@ -58,7 +58,7 @@ I det här avsnittet beskrivs vad som händer när en granskning skapas eller ko
 
 1. Om en granskning pågår för en resurs och du är initierare för granskningen, visas ikonerna Hantera granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) i åtgärdsfältet. Det är bara granskningsinitieraren som kan hantera (uppdatera/avsluta) granskningen.
 
-   Klicka på Hantera granskning ![aem6forms_review_chat_](assets/aem6forms_review_chat_comment.png)commenticon.
+   Klicka på ikonen Hantera granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png).
 
    För andra användare än initieraren är ikonen Hantera granskning inaktiverad.
 
@@ -72,7 +72,7 @@ I det här avsnittet beskrivs vad som händer när en granskning skapas eller ko
 1. Redigera de nödvändiga fälten och klicka sedan på Uppdatera.
 
    ![Granska uppdaterat läge i Aktivitetshanteraren](assets/tskmgr.png)
-   **Bild:** *Granska uppdaterat läge i Aktivitetshanteraren*
+   **Bild:** *Granskningsuppdaterad status i Aktivitetshanteraren*
 
 1. Klicka på Slutför för att avsluta granskningen.
 
