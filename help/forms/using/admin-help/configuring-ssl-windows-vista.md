@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Konfigurera SSL i Windows Vista {#configuring-ssl-on-windows-vista}
+# Konfigurerar SSL på Windows Vista {#configuring-ssl-on-windows-vista}
 
 Om du vill konfigurera SSL på Windows Vista™ behöver du ett SSL-certifikat med RSA-nycklar för autentisering. Du kan använda Java-nyckelverktyget för att skapa certifikatet.
 
@@ -32,11 +32,11 @@ Du kan köra nyckelverktyget med ett enda kommando som innehåller all informati
 
 1. I en kommandotolk går du till *[JAVA HOME]*/bin och skriver följande kommando för att skapa certifikatet och nyckelbehållaren:
 
-   `keytool -genkey -keyalg RSA -dname "CN=`*Värdnamn *`, OU=`*Gruppnamn* `, O=`*Företag *`,L=`*Ort*****Namn* `, S=`*Delstat *`, C=`** `" -alias`**`-keypass``*key*`**`-keystore`*Landskod¥&quot;LC Cert&quot;*_*passwordUnderNyckelnamn* `.keystore`
+   `keytool -genkey -keyalg RSA -dname "CN=`*Värdnamn* `, OU=`*Grupp* `, O=`*Namn Företag* `,L=`*Ort*****Namn*  `, S=`** `, C=`*Landskod* `" -alias`*LC Cert&quot;* `-keypass` `*key*`*_*** `-keystore`*lösenordNyckelnamn* `.keystore`
 
    >[!NOTE]
    >
-   >Ersätt *[JAVA_HOME]med katalogen där JDK är installerat och ersätt texten i kursiv stil med värden som motsvarar din miljö.*
+   >Ersätt *[JAVA_HOME] med den katalog där JDK är installerat och ersätt texten i kursiv stil med värden som motsvarar din miljö.*
 
 1. Ange `changeit` som lösenord. Det här lösenordet är standard för en Java-installation och systemadministratören kan ha ändrat det.
 
