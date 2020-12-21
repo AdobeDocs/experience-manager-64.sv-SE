@@ -51,7 +51,7 @@ I processinstanslistan visar AEM Forms-arbetsytan några egenskaper för den ins
   </tr> 
   <tr> 
    <td>processInstanceStatus</td> 
-   <td>0 = Start<br /> 1 = Körning<br /> 2 = Fullständigt<br /> 3 = Slutför<br /> 4 = Avbrutet<br /> 5 = Avslutande<br /> 6 = Upphävt<br /> 7 = Upphävande<br /> 8 = Upphävande</td> 
+   <td>0 = Initierad<br /> 1 = Körning<br /> 2 = Fullständig<br /> 3 = Slutför<br /> 4 = Avbruten<br /> 5 = Avsluta<br /> 6 = Upphävd<br /> 7 = Upphävande<br /> 8 = Upphävande</td> 
   </tr> 
   <tr> 
    <td>processName</td> 
@@ -63,16 +63,16 @@ I processinstanslistan visar AEM Forms-arbetsytan några egenskaper för den ins
   </tr> 
   <tr> 
    <td>processVariables</td> 
-   <td>Array med objekt av processvariabler. Varje processvariabelobjekt innehåller <strong>namn</strong> (namnet på processvariabeln), <strong>värde</strong> (värdet för processvariabeln) och<strong> typ</strong> (typen av processvariabel).</td> 
+   <td>Array med objekt av processvariabler. Varje processvariabelobjekt innehåller <strong>namn</strong> (namnet på processvariabeln), <strong>värde</strong> (värdet på processvariabeln) och<strong> typ</strong> (typen av processvariabel).</td> 
   </tr> 
  </tbody> 
 </table>
 
 **Exempel:**
 
-Utför följande steg för att visa `description` egenskapen för processinstansen på processinstanskortet.
+Utför följande steg för att visa egenskapen `description` för processinstansen i processinstanskortet.
 
-1. Följ de [allmänna stegen för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md)av arbetsytan i AEM Forms.
+1. Följ de allmänna [stegen för anpassning av arbetsytan i AEM Forms](/help/forms/using/generic-steps-html-workspace-customization.md).
 1. Gör följande:
 
    1. Kopiera /libs/ws/js/runtime/templates/processinstance.html till/apps/ws/js/runtime/templates/, om den inte finns. Klicka på **Spara alla**.
@@ -85,7 +85,7 @@ Utför följande steg för att visa `description` egenskapen för processinstans
 1. Gör följande:
 
    1. Öppna /apps/ws/js/registry.js för redigering.
-   1. Sök och ersätt `text!/lc/libs/ws/js/runtime/templates/processinstance.html`med `text!/lc/`**program **/ws/js/runtime/templates/processinstance.html.
+   1. Sök och ersätt `text!/lc/libs/ws/js/runtime/templates/processinstance.html`med `text!/lc/`**program**/ws/js/runtime/templates/processinstance.html.
 
 1. Ovanstående ändringar kan kräva en uppdatering av CSS-filen genom att lägga till en post i formatmallen /apps/ws/css/newStyle.css på följande sätt:
 
