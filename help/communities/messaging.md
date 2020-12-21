@@ -24,7 +24,7 @@ ht-degree: 1%
 
 Meddelandefunktionen för AEM Communities gör det möjligt för besökare på den inloggade webbplatsen (medlemmar) att skicka meddelanden till varandra som är tillgängliga när de loggar in på webbplatsen.
 
-Meddelanden aktiveras för en community-webbplats genom att en kryssruta markeras när en [community-webbplats skapas](sites-console.md).
+Meddelanden aktiveras för en community-webbplats genom att en kryssruta markeras när [communitywebbplatsen skapas](sites-console.md).
 
 På den här sidan finns information om standardkonfigurationen och eventuella justeringar.
 
@@ -32,29 +32,29 @@ Mer information för utvecklare finns i [Messaging Essentials](essentials-messag
 
 ## Tjänsten Meddelandeåtgärder {#messaging-operations-service}
 
-Tjänsten [](http://localhost:4502/system/console/configMgr/com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl) AEM Communities Messaging Operations identifierar slutpunkten som hanterar meddelanderelaterade begäranden, de mappar som tjänsten ska använda för att lagra meddelanden och, om meddelanden kan innehålla bifogade filer, vilka filtyper som tillåts.
+[Tjänsten AEM Communities Messaging Operations](http://localhost:4502/system/console/configMgr/com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl) identifierar slutpunkten som hanterar meddelanderelaterade begäranden, mapparna som tjänsten ska använda för att lagra meddelanden och, om meddelanden kan innehålla bifogade filer, vilka filtyper som tillåts.
 
-För communitysajter som skapats med konsolen [Webbplatser i](sites-console.md)Communities finns redan en instans av tjänsten med inkorgen inställd på `/mail/community/inbox`.
+För communityplatser som skapats med [Webbplatskonsolen](sites-console.md) finns det redan en instans av tjänsten med inkorgen inställd på `/mail/community/inbox`.
 
 ### Tjänsten Community Messaging Operations {#community-messaging-operations-service}
 
-Så som visas nedan finns det en konfiguration av tjänsten för webbplatser som skapats med guiden [Skapa](sites-console.md)plats. Du kan visa eller redigera konfigurationen genom att välja pennikonen bredvid konfigurationen:
+Som framgår nedan finns det en konfiguration av tjänsten för webbplatser som skapats med [guiden Skapa plats](sites-console.md). Du kan visa eller redigera konfigurationen genom att välja pennikonen bredvid konfigurationen:
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
 ### Ny konfiguration {#new-configuration}
 
-Om du vill lägga till en ny konfiguration väljer du plusikonen &quot;**+**&quot; bredvid tjänstens namn:
+Om du vill lägga till en ny konfiguration väljer du plusikonen **+** bredvid tjänstens namn:
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
 * **[!UICONTROL Message Fields Allowlist]**
 Anger egenskaperna för den Compose Message-komponent som användare kan redigera och behålla. Om nya formulärelement läggs till måste element-ID läggas till om det ska lagras i SRP. Standard är två poster: 
-*ämne* och *innehåll*.
+*innehåll* och  *innehåll*.
 
 * **[!UICONTROL Message box size limit]**
 Maximalt antal byte i varje användares meddelanderuta. Standard är 
-*1073741824* (1 GB).
+*1073741824*  (1 GB).
 
 * **[!UICONTROL Message count limit]**
 Det totala antalet meddelanden som tillåts per användare. Värdet -1 anger att ett obegränsat antal meddelanden tillåts, enligt storleksgränsen för meddelanderutan. Standard är 
@@ -85,11 +85,11 @@ Antal samtidiga trådar som används för att räkna uppdatering. Standard är
 
 * **[!UICONTROL inbox.path.name]**
 (
-*Obligatoriskt*) Sökvägen, i förhållande till användarens nod (/home/users/*username*), som ska användas för **`inbox`** mappen. Sökvägen får INTE avslutas med ett avslutande snedstreck (/). Standard är */e-post/inkorg* .
+*Obligatoriskt*) Sökvägen, i förhållande till användarens nod (/home/users/*username*), som ska användas för  **`inbox`** mappen. Sökvägen får INTE avslutas med ett avslutande snedstreck (/). Standardvärdet är */mail/inbox*.
 
 * **[!UICONTROL sentitems.path.name]**
 (
-*Obligatoriskt*) Sökvägen, i förhållande till användarens nod (/home/users/*username*), som ska användas för **`senditems`** mappen. Sökvägen får INTE avslutas med ett avslutande snedstreck (/). Standardvärdet är */mail/sentists* .
+*Obligatoriskt*) Sökvägen, i förhållande till användarens nod (/home/users/*username*), som ska användas för  **`senditems`** mappen. Sökvägen får INTE avslutas med ett avslutande snedstreck (/). Standardvärdet är */mail/sentitems*.
 
 * **[!UICONTROL supportAttachments.name]**
 Om det här alternativet är markerat kan användare lägga till bilagor i sina meddelanden. Standard är 
@@ -101,18 +101,18 @@ Antal meddelanden som ska grupperas tillsammans för en sändning när den skick
 
 * **[!UICONTROL maxTotalAttachmentSize.name]**
 Om supportAttachments är markerat anger det här värdet den största tillåtna totala storleken (i byte) för alla bilagor. Standard är 
-*104857600* (100 MB).
+*104857600*  (100 MB).
 
 * **[!UICONTROL attachmentTypeBlocklist.name]**
 Ett blockeringslista med filtillägg, med &#39;
-**.**&#39;, som kommer att refuseras av systemet. Om tillägget inte blocklist tillåts det. Tillägg kan läggas till eller tas bort med ikonerna **+** och **-**. Standard är *STANDARD*.
+**.**&#39;, som kommer att refuseras av systemet. Om tillägget inte blocklist tillåts det. Tillägg kan läggas till eller tas bort med ikonerna **+** och **-**. Standardvärdet är *DEFAULT*.
 
 * **[!UICONTROL allowedAttachmentTypes.name]**
 
-   **(*Åtgärd krävs*)** En tillåtelselista med filtillägg, motsatsen till blockeringslista. Om du vill tillåta alla filtillägg, förutom de som är blocklist, använder du ikonen &quot;**-**&quot; för att ta bort den tomma posten.
+   **(*Åtgärd krävs*)** En tillåtelselista med filtillägg, motsatsen till blockeringslista. Om du vill tillåta alla filtillägg, förutom de som blocklist, använder du ikonen **-** för att ta bort den tomma posten.
 
 * **[!UICONTROL serviceSelector.name]**
-(*Obligatoriskt*) En absolut sökväg (slutpunkt) genom vilken tjänsten anropas (en virtuell resurs). Roten för den valda sökvägen måste vara en som ingår i konfigurationsinställningen för *körningssökvägar* i OSGi-konfigurationen [ `Apache Sling Servlet/Script Resolver and Error Handler`](http://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver)som `/bin/`, `/apps/`och `/services/`. Om du vill välja den här konfigurationen för en webbplats meddelandefunktion anges den här slutpunkten som **`Service selector`** värde för `Message List and Compose Message components` (se [Meddelandefunktion](configure-messaging.md)). Standardvärdet är */bin/messaging* .
+(*Obligatoriskt*) En absolut sökväg (slutpunkt) genom vilken tjänsten anropas (en virtuell resurs). Roten för den valda sökvägen måste finnas med i konfigurationsinställningen *Körningssökvägar* för OSGi config [ `Apache Sling Servlet/Script Resolver and Error Handler`](http://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver), till exempel `/bin/`, `/apps/` och `/services/`. Om du vill välja den här konfigurationen för en webbplats meddelandefunktion anges den här slutpunkten som **`Service selector`**-värde för `Message List and Compose Message components` (se [Meddelandefunktion](configure-messaging.md)). Standardvärdet är */bin/messaging*.
 
 * **[!UICONTROL fieldAllowlist.name]**
 Använd 
@@ -120,9 +120,9 @@ Använd
 
 >[!CAUTION]
 >
->Varje gång en `Messaging Operations Service` konfiguration öppnas för redigering, om den `allowedAttachmentTypes.name` tagits bort, läggs en tom post till så att egenskapen kan konfigureras. En enda tom post inaktiverar effektivt bifogade filer.
+>Varje gång en `Messaging Operations Service`-konfiguration öppnas för redigering, om `allowedAttachmentTypes.name` har tagits bort, läggs en tom post till så att egenskapen kan konfigureras. En enda tom post inaktiverar effektivt bifogade filer.
 >
->Om du vill tillåta alla filtillägg, förutom de som är blocklist, använder du ikonen &quot;**-**&quot; för att (igen) ta bort den tomma posten innan du klickar **[!UICONTROL Save]**.
+>Om du vill tillåta alla filtillägg, förutom de som blocklist, använder du ikonen **-** för att (igen) ta bort den tomma posten innan du klickar på **[!UICONTROL Save]**.
 
 ## Felsökning {#troubleshooting}
 
