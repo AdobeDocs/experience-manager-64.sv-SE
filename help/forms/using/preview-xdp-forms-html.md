@@ -30,13 +30,13 @@ Utför följande konfigurationer om du vill att Designer ska kunna generera HTML
 
 ### Konfigurera autentiseringstjänsten för Apache Sling {#configure-apache-sling-authentication-service}
 
-1. Gå till `https://[server]:[port]/system/console/configMgr` AEM Forms som körs på OSGi eller
+1. Gå till `https://[server]:[port]/system/console/configMgr` på AEM Forms som körs på OSGi eller
 
    `https://[server]:[port]/lc/system/console/configMgr` på AEM Forms som körs på JEE.
 
-1. Leta reda på och klicka på konfigurationen för **Apache Sling Authentication Service** för att öppna den i redigeringsläge.
+1. Leta upp och klicka på **Konfiguration av Apache Sling Authentication Service** för att öppna den i redigeringsläge.
 
-1. Beroende på om du kör AEM Forms på OSGi eller JEE lägger du till följande i fältet **Autentiseringskrav** :
+1. Beroende på om du kör AEM Forms på OSGi eller JEE lägger du till följande i fältet **Autentiseringskrav**:
 
    * AEM Forms på JEE
 
@@ -51,12 +51,12 @@ Utför följande konfigurationer om du vill att Designer ska kunna generera HTML
    >
    >Kopiera inte och klistra in det angivna värdet i fältet Autentiseringskrav eftersom det kan skada specialtecknen i värdet. Skriv i stället det angivna värdet i fältet.
 
-1. Ange ett användarnamn och lösenord i **[!UICONTROL Anonymous User Name]** respektive **[!UICONTROL Anonymous User Password]** fält. De angivna autentiseringsuppgifterna används för att hantera anonym autentisering och ge åtkomst till anonyma användare.
+1. Ange ett användarnamn och lösenord i **[!UICONTROL Anonymous User Name]**- respektive **[!UICONTROL Anonymous User Password]**-fälten. De angivna autentiseringsuppgifterna används för att hantera anonym autentisering och ge åtkomst till anonyma användare.
 1. Klicka på **Spara** för att spara konfigurationen.
 
 ### Inaktivera skyddat läge {#disable-protected-mode}
 
-Som standard är [skyddat läge](/help/forms/using/get-xdp-pdf-documents-aem.md) aktiverat. Låt det vara aktiverat för produktionsmiljöerna. Du kan inaktivera det för en utvecklingsmiljö och förhandsgranska HTML5 Forms i Designer. Utför följande steg för att inaktivera den:
+Som standard är [skyddat läge](/help/forms/using/get-xdp-pdf-documents-aem.md) aktiverat. Låt det vara aktiverat för produktionsmiljöerna. Du kan inaktivera det för en utvecklingsmiljö och förhandsgranska HTML5 Forms i Designer. Gör så här för att inaktivera den:
 
 1. Logga in på AEM webbkonsol som administratör.
 
@@ -64,12 +64,12 @@ Som standard är [skyddat läge](/help/forms/using/get-xdp-pdf-documents-aem.md)
    * URL för AEM Forms på JEE är `https://[server]:[port]/lc/system/console/configMgr`
 
 1. Öppna **[!UICONTROL Mobile Forms Configurations]** för redigering.
-1. Avmarkera **[!UICONTROL Protected Mode]** alternativet och klicka på **[!UICONTROL Save]**.
+1. Avmarkera alternativet **[!UICONTROL Protected Mode]** och klicka på **[!UICONTROL Save]**.
 
-### Ange information om AEM Forms-server {#provide-details-of-aem-forms-server}
+### Ange information om AEM Forms-servern {#provide-details-of-aem-forms-server}
 
 1. Gå till **Verktyg** > **Alternativ** i Designer.
-1. I fönstret Alternativ väljer du sidan **Serveralternativ** , anger följande och klickar på **OK**.
+1. I fönstret Alternativ väljer du sidan **Serveralternativ**, anger följande information och klickar på **OK**.
 
    * **Server-URL**: AEM Forms server-URL.
    * **HTTP-portnummer**: AEM serverport. Standardvärdet är 4502.
@@ -77,18 +77,18 @@ Som standard är [skyddat läge](/help/forms/using/get-xdp-pdf-documents-aem.md)
 
       * `/content/xfaforms/profiles/default.html` (AEM Forms on OSGi)
       * `/lc/content/xfaforms/profiles/default.html` (AEM Forms on JEE)
-   * **Forms Manager Context:** Den kontextsökväg där användargränssnittet för Forms Manager distribueras. Standardvärdena är:
+   * **Forms Manager-kontext:** kontextsökväg där Forms Manager-gränssnittet distribueras. Standardvärdena är:
 
       * `/aem/forms` (AEM Forms on OSGi)
       * `/lc/forms` (AEM Forms on JEE)
 
-   **Obs!** *Kontrollera att AEM Forms-servern är igång. The HTML preview connects to the CRX server to* generate *a preview.*
+   **Obs!** *Kontrollera att AEM Forms-servern är igång och körs. HTML-förhandsvisningen ansluter till CRX-servern för att* generera *en förhandsgranskning.*
 
-   ![AEM Forms Designer-alternativ ](assets/server_options.png)
+   ![AEM Forms Designer-alternativ  ](assets/server_options.png)
 
    AEM Forms Designer-alternativ
 
-1. Om du vill förhandsgranska ett formulär i HTML klickar du på fliken **Förhandsgranska HTML** .
+1. Om du vill förhandsgranska ett formulär i HTML klickar du på fliken **Förhandsgranska HTML**.
 
    >[!NOTE]
    >
@@ -106,14 +106,14 @@ Om du inte har några exempeldata kan Designer skapa dem, eller så kan du skapa
 
 Om du testar formulären med exempeldata kan du kontrollera att data och fält mappas och att upprepade delformulär upprepas som det är tänkt. Du kan skapa en balanserad formulärlayout som ger rätt utrymme för varje objekt för att visa data.
 
-1. Select **File > Form Properties**.
+1. Välj **Arkiv > Formuläregenskaper**.
 
-1. Click the **Preview** tab and, in the Data File box, type the full path to your test data file. Du kan också använda knappen Bläddra för att navigera till filen.
+1. Klicka på fliken **Förhandsgranska** och skriv den fullständiga sökvägen till testdatafilen i rutan Datafil. Du kan också använda knappen Bläddra för att navigera till filen.
 
-1. Click **OK**. The next time you preview the form in the **Preview HTML** tab, the data values from the sample XML file will appear in the respective objects.
+1. Klicka på **OK**. Nästa gång du förhandsgranskar formuläret på fliken **Förhandsgranska HTML** visas datavärdena från XML-exempelfilen i respektive objekt.
 
 ## Förhandsgranska formulär som finns i en databas {#html-preview-of-forms-in-forms-manager}
 
 I AEM Forms kan du förhandsgranska formulär och dokument i en databas. Med Förhandsgranska vet du exakt hur formulären ser ut och fungerar som de kommer att användas av slutanvändarna.
 
-[**Kontakta supporten **](https://www.adobe.com/account/sign-in.supportportal.html)
+[**Kontakta supporten**](https://www.adobe.com/account/sign-in.supportportal.html)
