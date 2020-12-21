@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Uppgradera till AEM 6.4 Forms{#upgrade-to-aem-forms}
 
-AEM 6.4 Forms innehåller flera nya funktioner och förbättringar som effektiviserar framtagning, hantering och användarupplevelser med formulär och korrespondenser. Mer information om alla nya funktioner och förbättringar i AEM 6.4 Forms finns i [Sammanfattningsdokument](/help/forms/using/whats-new.md)om nya funktioner.
+AEM 6.4 Forms innehåller flera nya funktioner och förbättringar som effektiviserar framtagning, hantering och användarupplevelser med formulär och korrespondenser. Mer information om alla nya funktioner och förbättringar i AEM 6.4 Forms finns i [Sammanfattningsdokument om nya funktioner](/help/forms/using/whats-new.md).
 
 Du kan uppgradera din befintliga LiveCycle- eller AEM Forms-installation för att få tillgång till nya funktioner och förbättringar som finns i AEM 6.4 Forms samtidigt som befintliga data, processer och resurser bevaras intakta. Vid uppgradering bevaras också metadata och processernas status. Du kan välja ett uppgraderingsalternativ för att komma igång med uppgraderingen.
 
