@@ -26,18 +26,18 @@ AEM har stöd för RSA- och DSA-referenser på upp till 4 096 bitar i standardfo
 
 Du kan importera och exportera valfritt antal autentiseringsuppgifter. Om du vill ersätta en inloggningsinformation som har gått ut med samma alias tar du bort inloggningsinformationen och importerar sedan den nya inloggningsinformationen med samma alias.
 
-Mer information och instruktioner om Acrobat Reader DC-tillägg finns i [Konfigurera autentiseringsuppgifter för användning med Acrobat Reader DC-tillägg](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions).
+Information och instruktioner om Acrobat Reader DC-tillägg finns i [Konfigurera autentiseringsuppgifter för användning med Acrobat Reader DC-tillägg](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions).
 
 ## Importera en autentiseringsuppgift {#import-a-credential}
 
 1. I administrationskonsolen klickar du på Inställningar > Lita på arkivhantering > Lokala autentiseringsuppgifter.
 1. Klicka på Importera. Välj något av följande alternativ under Pålitlig lagringstyp:
 
-   * **Autentiseringsuppgifter för dokumentsignering:** En autentiseringsuppgift som används för att utfärda en digital signatur i ett dokument.
-   * **Autentiseringsuppgifter för Acrobat Reader DC-tillägg:** Ett digitalt certifikat som är specifikt för Acrobat Reader DC-tillägg och som gör det möjligt att aktivera Adobe Reader användningsrättigheter i de PDF-dokument som skapas.
-   * **Standard:** Anger att det här är standardautentiseringsuppgiften som används med Acrobat Reader DC-tillägg.
+   * **Dokumentsigneringsuppgifter:** En autentiseringsuppgift som används för att utfärda en digital signatur i ett dokument.
+   * **Acrobat Reader DC Extensions Credential:** Ett digitalt certifikat som är specifikt för Acrobat Reader DC-tillägg och som gör att Adobe Reader användarrättigheter kan aktiveras i de PDF-dokument som skapas.
+   * **Standard:** Anger att det här är standardautentiseringsuppgifter som ska användas med Acrobat Reader DC-tillägg.
 
-   Mer information om hur du hämtar autentiseringsuppgifter finns i [Förbereda för att installera AEM formulär](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63).
+   Mer information om hur du hämtar autentiseringsuppgifter finns i [Förbereda för att installera AEM](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63).
 
 1. Ange en identifierare för autentiseringsuppgifterna i rutan Alias. Den här identifieraren används som visningsnamn för autentiseringsuppgifterna i Acrobat Reader DC-tillägg och Signature-tjänsten. Det här aliaset används även för att få åtkomst till autentiseringsuppgifter via programmering med AEM formulär SDK.
 
