@@ -38,7 +38,7 @@ Du kan skapa en mapp i AEM Forms på något av följande sätt:
 1. Ange följande information:
 
    * **Titel:** Visningsnamn för mappen
-   * **Namn:** *(Obligatoriskt)* Det nodnamn under vilket du vill lagra mappen i databasen
+   * **Namn:** *(obligatoriskt)* Nodnamnet som du vill lagra mappen under i databasen
 
    >[!NOTE]
    >
@@ -48,7 +48,7 @@ Du kan skapa en mapp i AEM Forms på något av följande sätt:
 
    En ny mapp med den titel du har definierat visas på den aktuella platsen i resurslistan.
 
-   Om det finns en mapp med det angivna namnet misslyckas överföringen med ett fel. Du kan visa felmeddelandet genom att hovra över ![felikonen aem6forms_error_alert](assets/aem6forms_error_alert.png) som visas bredvid namnfältet.
+   Om det finns en mapp med det angivna namnet misslyckas överföringen med ett fel. Du kan visa felmeddelandet genom att hovra över ikonen ![aem6forms_error_alert](assets/aem6forms_error_alert.png) som visas bredvid namnfältet.
 
 ### Redigera mapptiteln {#edit-the-folder-title-br}
 
