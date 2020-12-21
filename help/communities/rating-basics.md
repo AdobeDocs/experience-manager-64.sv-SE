@@ -18,11 +18,11 @@ ht-degree: 0%
 ---
 
 
-# Grundläggande omdömen {#rating-essentials}
+# Värderingsgrunder {#rating-essentials}
 
-Betygskomponenten är en [tally](tally.md) subklass som gör att inloggade communitymedlemmar kan betygsätta en funktion på webbplatsen.
+Klassificeringskomponenten, en [tally](tally.md)-underklass, gör att inloggade communitymedlemmar kan betygsätta en funktion på webbplatsen.
 
-Det är tillåtet att placera flera instanser av en röstkomponent på samma sida. varje instans måste konfigureras med en unik `tally name` egenskap.
+Det är tillåtet att placera flera instanser av en röstkomponent på samma sida. Varje instans måste konfigureras med en unik `tally name`-egenskap.
 
 Anonym publicering av en klassificering stöds inte. Besökare på webbplatsen måste registrera sig och logga in för att kunna delta i en klassificering endast en gång. Den inloggade besökaren (medlemmen) kan när som helst ändra sin klassificering.
 
@@ -36,7 +36,7 @@ Anonym publicering av en klassificering stöds inte. Besökare på webbplatsen m
   </tr> 
   <tr> 
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>oklanderlig</strong></a></td> 
-   <td>Ja - egenskaper kan redigeras i <i></i>designläge</td> 
+   <td>Ja - egenskaper kan redigeras i <i>design </i>läge</td> 
   </tr> 
   <tr> 
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>klientlibs</strong></a></td> 
@@ -70,16 +70,16 @@ Anonym publicering av en klassificering stöds inte. Besökare på webbplatsen m
 ### Åtkomst till bokförda klassificeringar (UGC) {#accessing-posted-ratings-ugc}
 
 UGC bör modereras med någon av standardmetoderna för moderering.\
-Se [Moderera användargenererat innehåll](moderate-ugc.md).
+Se [Moderating User Generated Content](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (t.ex. ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
 Se:
 
-* [Översikt över](srp.md) lagringsresursprovidern - introduktion och databasanvändning - översikt
+* [Översikt över](srp.md)  lagringsresursprovidern - introduktion och databasanvändning - översikt
 * [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning
+* [Åtkomst till UGC med riktlinjer för SRP](accessing-ugc-with-srp.md) -kodning
 * [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utgått verktygsmetoder till aktuella SRP-verktygsmetoder
 
