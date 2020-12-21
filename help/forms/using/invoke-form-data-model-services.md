@@ -16,17 +16,17 @@ ht-degree: 1%
 ---
 
 
-# API för att anropa formulärdatamodelltjänst från anpassningsbara formulär {#api-to-invoke-form-data-model-service-from-adaptive-forms}
+# API för att anropa formulärdatamodelltjänst från adaptiva formulär {#api-to-invoke-form-data-model-service-from-adaptive-forms}
 
 ## Översikt {#overview}
 
-Med AEM Forms kan formulärförfattare ytterligare förenkla och förbättra ifyllandet av formulär genom att anropa tjänster som konfigurerats i en formulärdatamodell inifrån ett adaptivt formulärfält. Om du vill anropa en datamodelltjänst kan du antingen skapa en regel i den visuella redigeraren eller ange ett JavaScript med `guidelib.dataIntegrationUtils.executeOperation` -API:t i kodredigeraren för [regelredigeraren](/help/forms/using/rule-editor.md).
+Med AEM Forms kan formulärförfattare ytterligare förenkla och förbättra ifyllandet av formulär genom att anropa tjänster som konfigurerats i en formulärdatamodell inifrån ett adaptivt formulärfält. Om du vill anropa en datamodelltjänst kan du antingen skapa en regel i den visuella redigeraren eller ange ett JavaScript med hjälp av API:t `guidelib.dataIntegrationUtils.executeOperation` i kodredigeraren för [regelredigeraren](/help/forms/using/rule-editor.md).
 
-Det här dokumentet fokuserar på att skriva ett JavaScript-skript med API:t för att anropa en tjänst. `guidelib.dataIntegrationUtils.executeOperation`
+Det här dokumentet fokuserar på att skriva ett JavaScript med hjälp av `guidelib.dataIntegrationUtils.executeOperation`-API:t för att anropa en tjänst.
 
 ## Använda API {#using-the-api}
 
-API:t anropar `guidelib.dataIntegrationUtils.executeOperation` en tjänst inifrån ett adaptivt formulärfält. API-syntaxen är följande:
+API:t `guidelib.dataIntegrationUtils.executeOperation` anropar en tjänst från ett adaptivt formulärfält. API-syntaxen är följande:
 
 ```
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs)
@@ -40,7 +40,7 @@ API kräver följande parametrar.
 | `inputs` | Struktur för att ange formulärobjekt vars värden är indata till serviceåtgärden |
 | `outputs` | Struktur för att ange formulärobjekt som ska fyllas med värden som returneras av tjänståtgärden |
 
-API:ts struktur anger `guidelib.dataIntegrationUtils.executeOperation` information om tjänståtgärden. Strukturen har följande syntax.
+Strukturen för API:t `guidelib.dataIntegrationUtils.executeOperation` anger information om tjänståtgärden. Strukturen har följande syntax.
 
 ```
 var operationInfo = {
@@ -87,9 +87,9 @@ API-strukturen anger följande information om tjänståtgärden.
 
 ## Exempelskript för att anropa en tjänst {#sample-script-to-invoke-a-service}
 
-I följande exempelskript används API:t för att `guidelib.dataIntegrationUtils.executeOperation` anropa den `getAccountById` tjänståtgärd som konfigurerats i `employeeAccount` formulärdatamodellen.
+Följande exempelskript använder API:t `guidelib.dataIntegrationUtils.executeOperation` för att anropa den `getAccountById`-tjänståtgärd som konfigurerats i formulärdatamodellen `employeeAccount`.
 
-Åtgärden tar `getAccountById` värdet i `employeeID` formulärfältet som indata för `empId` argumentet och returnerar medarbetarens namn, kontonummer och kontosaldo för motsvarande medarbetare. Utdatavärdena fylls i i de angivna formulärfälten. Värdet i `name` argumentet fylls till exempel i `fullName` formulärelementet och värdet för `accountNumber` argument i `account` formulärelementet.
+Åtgärden `getAccountById` tar värdet i formulärfältet `employeeID` som indata för argumentet `empId` och returnerar medarbetarens namn, kontonummer och kontosaldo för motsvarande medarbetare. Utdatavärdena fylls i i de angivna formulärfälten. Värdet i argumentet `name` fylls till exempel i i formulärelementet `fullName` och värdet för argumentet `accountNumber` i formulärelementet `account`.
 
 ```
 var operationInfo = {
