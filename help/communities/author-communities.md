@@ -32,17 +32,17 @@ Mer information om hur du skapar en community-webbplats finns på:
 
 >[!NOTE]
 >
->Om du inte känner till redigeringsmiljön kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidorna](../../help/sites-authoring/qg-page-authoring.md).
+>Om du inte känner till redigeringsmiljön kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidor](../../help/sites-authoring/qg-page-authoring.md).
 
 ## Tillgängliga webbgruppskomponenter {#available-communities-components}
 
 I följande tabell visas de communitykomponenter som är synliga för författare när de är aktiverade i komponentwebbläsaren (sidespark).
 
-Se även handboken [för interaktiva](components-guide.md)communitykomponenter.
+Se även den interaktiva guiden [Community Components.](components-guide.md).
 
 >[!NOTE]
 >
->Läs Grunderna [för](basics.md) communitykomponenter eftersom den innehåller information som behövs för att skapa med Communities-komponenter.
+>Läs [Grunderna för communitykomponenter](basics.md) eftersom den innehåller information som behövs för att skapa med Communities-komponenter.
 
 | **Komponenttitel** | **Funktion** |
 |---|---|
@@ -85,7 +85,7 @@ Se även handboken [för interaktiva](components-guide.md)communitykomponenter.
 
 * Besök [Distribuera communityn](deploy-communities.md) om du vill veta mer om rekommenderade distributioner.
 
-* Besök [Administrera communitysajter](administer-landing.md) om du vill veta mer om hur du skapar en community-webbplats, konfigurerar mallar för communitysajter, modererar communityinnehåll, hanterar medlemmar och konfigurerar meddelanden.
+* Besök [Administrera communityplatser](administer-landing.md) om du vill veta mer om hur du skapar en community-webbplats, konfigurerar mallar för communitywebbplatser, modererar communityinnehåll, hanterar medlemmar och konfigurerar meddelanden.
 
-* Besök [Utvecklingsgrupper](communities.md) om du vill veta mer om ramverket för sociala komponenter (SCF) och hur du anpassar komponenter och funktioner i Communities.
+* Besök [Utveckla communityn](communities.md) om du vill veta mer om ramverket för sociala komponenter (SCF) och hur du anpassar communitykomponenter och -funktioner.
 
