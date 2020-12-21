@@ -26,7 +26,7 @@ Kommentarsfunktionen används för att låta besökare (medlemmar) på den inlog
 
 Detta avsnitt i dokumentationen beskriver
 
-* Lägga `Comments`till på en sida
+* Lägga till `Comments`på en sida
 * Konfigurationsinställningar för `Comments`komponenten
 
 >[!NOTE]
@@ -41,7 +41,7 @@ Om du vill lägga till en `Comments`komponent på en sida i redigeringsläge anv
 
 och dra den till rätt plats på en sida, t.ex. en position i förhållande till funktionen som användarna kan kommentera på, eller helt enkelt längst ned på sidan.
 
-Mer information finns i Grunderna för [communitykomponenter](basics.md).
+Mer information finns på [Grunderna för communitykomponenter](basics.md).
 
 När de [nödvändiga klientbiblioteken](essentials-comments.md#essentials-for-client-side) inkluderas visas `Comments`komponenten så här.
 
@@ -53,13 +53,13 @@ När de [nödvändiga klientbiblioteken](essentials-comments.md#essentials-for-c
 
 ## Konfigurera kommentarer {#configuring-comments}
 
-Markera den monterade `Comments` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
+Markera den monterade `Comments`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
-![konfigurera](assets/configure.png) ![kommentarinställningar](assets/commentssettings.png)
+![](assets/configure.png) ![configurecommentessettings](assets/commentssettings.png)
 
 ### Fliken Kommentarer {#comments-tab}
 
-Under **[!UICONTROL Comments]** fliken anger du hur kommentarer ska anges av besökare.
+Under fliken **[!UICONTROL Comments]** anger du hur besökare ska ange kommentarer.
 
 * **[!UICONTROL Allow replies]**
 
@@ -103,7 +103,7 @@ Under **[!UICONTROL Comments]** fliken anger du hur kommentarer ska anges av bes
 
 ### Fliken Användarmoderering {#user-moderation-tab}
 
-Ange hur de bokförda kommentarerna ska hanteras på fliken **[!UICONTROL User Moderation]** . Mer information finns i [Hantera användargenererat innehåll](moderate-ugc.md).
+Under fliken **[!UICONTROL User Moderation]** anger du hur de skickade kommentarerna ska hanteras. Mer information finns i [Moderating User Generated Content](moderate-ugc.md).
 
 * **[!UICONTROL Pre-Moderation]**
 
@@ -143,23 +143,23 @@ Ange hur de bokförda kommentarerna ska hanteras på fliken **[!UICONTROL User M
 
 ### Fliken Sorteringsinställningar {#sort-settings-tab}
 
-Under **[!UICONTROL Sort Settings]** fliken anger du hur de bokförda kommentarerna ska sorteras när de visas.
+Under fliken **[!UICONTROL Sort Settings]** anger du hur de bokförda kommentarerna ska sorteras när de visas.
 
 * **[!UICONTROL Sort Field]**
 
-   Dra nedåt för att välja ett av `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`eller `Most Liked`.
+   Dra ned för att välja en av `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed` eller `Most Liked`.
 
 * **[!UICONTROL Sort Order]**
 
-   Dra nedåt för att välja ett av `Ascending` eller `Descending`.
+   Dra ned för att välja en av `Ascending` eller `Descending`.
 
 ### Ändra till en anpassad kommentarstyp {#changing-to-a-custom-comment-type}
 
 Genom att ändra kommentarsresurstypen kommer kommentarsystemet inte längre att generera en instans av en kommentar med standardinställningen, utan en som har anpassats (utökats) av utvecklarna.
 
-När de anpassade resurstyperna är kända går du till [designläge](../../help/sites-authoring/default-components-designmode.md) och dubbelklickar på den monterade `Comments` komponenten för att öppna en dialogruta med en extra flik.
+När de anpassade resurstyperna är kända anger du [designläge](../../help/sites-authoring/default-components-designmode.md) och dubbelklickar på den monterade `Comments`-komponenten för att öppna en dialogruta med en extra flik.
 
-Under **[!UICONTROL Resource Types]** fliken anger du anpassad resourceType för nya instanser av `Comments or Voting`komponenterna:
+Under fliken **[!UICONTROL Resource Types]** anger du anpassad resourceType för nya instanser av `Comments or Voting`komponenterna:
 
 ![chlimage_1-429](assets/chlimage_1-429.png)
 
@@ -181,7 +181,7 @@ Under **[!UICONTROL Resource Types]** fliken anger du anpassad resourceType för
 
 ## Site Visitor Experience {#site-visitor-experience}
 
-### Styrelsemedlemmar och administratörer {#moderators-and-administrators}
+### Moderatorer och administratörer {#moderators-and-administrators}
 
 När den inloggade användaren har moderator- eller administratörsbehörighet kan de utföra de modereringsåtgärder som tillåts av komponentens konfiguration, oavsett vem som skapade kommentaren.
 
@@ -198,10 +198,10 @@ När besökaren är inloggad, beroende på konfigurationen, kan de
 
 Besökare som inte är inloggade kan endast läsa publicerade kommentarer, översätta dem om de stöds, men kan inte lägga till en kommentar eller flagga andras kommentarer.
 
-## Additional Information {#additional-information}
+## Ytterligare information {#additional-information}
 
 Mer information finns på sidan [Comments Essentials](essentials-comments.md) för utvecklare.
 
-Mer information om moderering av publicerade kommentarer finns i [Hantera användargenererat innehåll](moderate-ugc.md).
+moderering av publicerade kommentarer finns i [Moderating User Generated Content](moderate-ugc.md).
 
 Information om översättning av bokförda kommentarer finns i [Översätta användargenererat innehåll](translate-ugc.md).
