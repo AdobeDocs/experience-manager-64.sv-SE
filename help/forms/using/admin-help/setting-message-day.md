@@ -18,25 +18,25 @@ ht-degree: 0%
 ---
 
 
-# Ställa in dagens meddelande {#setting-the-message-of-the-day}
+# Anger dagens meddelande {#setting-the-message-of-the-day}
 
 Du kan ange att ett meddelande ska visas på välkomstsidan i användargränssnittet för arbetsytan.
 
 Om det behövs kan du använda HTML-taggarna som stöds av Adobe Flash® Player för att formatera textens utseende:
 
-* &lt;a> Ankartagg
-* &lt;b> Fet tagg
+* &lt;a> Ankarmärke&lt;/a>
+* &lt;b> Fet tagg&lt;/b>
 * &lt;br> Bryttagg
-* Teckensnittstaggen &lt;font>
-* Bild-taggen &lt;img>
-* Taggen &lt;i> Kursiv
-* &lt;li>-tagg för listobjekt
-* Taggen &lt;p> Stycke
-* &lt;span> Span-tagg
-* Tagg för textformat
-* &lt;u> Understrykningstagg
+* &lt;font> Teckensnittstagg&lt;/font>
+* &lt;img> Bildtagg
+* &lt;i> Kursiv tagg&lt;/i>
+* &lt;li> Tagg för listobjekt
+* &lt;p> Stycketagg
+* &lt;span> Spänn tagg&lt;/span>
+* &lt;textformat> Tagg för textformat
+* &lt;u> Understrykningstagg&lt;/u>
 
-Mer information om de taggar som stöds finns i definitionen av egenskapen `htmlText` för klassen TextField i [Flex språkreferens](https://www.adobe.com/support/documentation/en/flex/).
+Mer information om vilka taggar som stöds finns i definitionen av egenskapen `htmlText` för klassen TextField i [Flex Language Reference](https://www.adobe.com/support/documentation/en/flex/).
 
 ## Ange dagens meddelande {#set-the-message-of-the-day}
 
