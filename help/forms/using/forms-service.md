@@ -33,21 +33,21 @@ Använd tjänsten Forms för att göra följande:
 
 ## Skapar PDF forms  {#creating-pdf-forms-nbsp}
 
-Använd formulärtjänsten för att skapa PDF forms för datainhämtning. Vanligtvis börjar du med en AEM Forms Designer-mall. Använd `renderPDFForm` åtgärden (länk till Javadoc) för Forms-tjänsten för att konvertera den här mallen till ett PDF-formulär.
+Använd formulärtjänsten för att skapa PDF forms för datainhämtning. Vanligtvis börjar du med en AEM Forms Designer-mall. Använd åtgärden `renderPDFForm` (länk till Javadoc) i Forms-tjänsten för att konvertera den här mallen till ett PDF-formulär.
 
-Den första parametern i `renderPDFForm` åtgärden är namnet på mallfilen (till exempel `ExpenseClaim.xdp`). Du kan lagra mallfilen i ett lokalt filsystem, i en CRX-databas eller på en HTTP- eller FTP-plats. Du kan ange platsen för mallfilen genom att ange innehållsroten i `PDFFormRenderOptions` parametern för `renderPDFForm` åtgärden. Se Javadoc för mer information om andra alternativ som du kan ange för `PDFFormRenderOptions` parametern.
+Den första parametern i åtgärden `renderPDFForm` är namnet på mallfilen (till exempel `ExpenseClaim.xdp`). Du kan lagra mallfilen i ett lokalt filsystem, i en CRX-databas eller på en HTTP- eller FTP-plats. Du kan ange platsen för mallfilen genom att ange innehållsroten i parametern `PDFFormRenderOptions` för åtgärden `renderPDFForm`. I Javadoc finns mer information om andra alternativ som du kan ange för parametern `PDFFormRenderOptions`.
 
-XML-data kan också accepteras i `renderPDFForm` åtgärden. XML-data sammanfogas med mallen när du skapar ett PDF-formulär så att det genererade PDF-formuläret innehåller angivna data. Den andra parametern för `renderPDFForm` åtgärden kan acceptera ett Document-objekt (Javadoc) som innehåller XML-data.
+Åtgärden `renderPDFForm` kan även acceptera XML-data. XML-data sammanfogas med mallen när du skapar ett PDF-formulär så att det genererade PDF-formuläret innehåller angivna data. Den andra parametern för åtgärden `renderPDFForm` kan acceptera ett Document-objekt (Javadoc) som innehåller XML-data.
 
 ## Extrahera data från PDF forms  {#extracting-data-from-pdf-forms-nbsp}
 
-Använd `exportData` Javadoc-åtgärden för Forms-tjänsten för att extrahera data-XML från ett PDF-formulär. Den här åtgärden accepterar ett dokument som sin första parameter. Du kan exportera data antingen som ett XDP-dokument eller som en XML-fil. Om du exporterar data som en XML-fil tar exporterade data bort XDP-kuvertet och returnerar en vanlig XML-fil. Du kan ange den här ordningen med den andra parametern.
+Använd åtgärden `exportData` (Javadoc) i Forms-tjänsten för att extrahera data-XML från ett PDF-formulär. Den här åtgärden accepterar ett dokument som sin första parameter. Du kan exportera data antingen som ett XDP-dokument eller som en XML-fil. Om du exporterar data som en XML-fil tar exporterade data bort XDP-kuvertet och returnerar en vanlig XML-fil. Du kan ange den här ordningen med den andra parametern.
 
 ## Importera data till PDF forms {#importing-data-into-pdf-forms}
 
-Med Forms kan du också sammanfoga ett PDF-formulär som skapats med antingen AEM Forms Designer eller med XML-data. `renderPDFForm` Forms-tjänstens `importData` (Javadoc) åtgärd godkänner PDF-formuläret och XML-data och returnerar ett PDF-formulär med data-XML.
+Med tjänsten Forms kan du också sammanfoga ett PDF-formulär som skapats med antingen AEM Forms Designer eller `renderPDFForm` med XML-data. Åtgärden `importData` (Javadoc) i Forms-tjänsten godkänner PDF-formuläret och XML-data och returnerar ett PDF-formulär med data-XML.
 
-## Återge formulär som bygger på fragment {#rendering-forms-based-on-fragments}
+## Återge formulär baserat på fragment {#rendering-forms-based-on-fragments}
 
 Forms kan återge formulär baserat på fragment som du skapar med AEM Forms Designer. Ett fragment är en återanvändbar del av ett formulär. Den sparas som en separat XDP-fil som kan infogas i flera formulärdesigner. Ett fragment kan t.ex. innehålla ett adressblock eller juridisk text.
 
