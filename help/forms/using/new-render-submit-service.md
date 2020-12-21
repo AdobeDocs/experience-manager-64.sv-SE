@@ -17,11 +17,11 @@ ht-degree: 0%
 ---
 
 
-# Ny renderings- och skicka-tjänst {#new-render-and-submit-service}
+# Ny renderings- och sändningstjänst {#new-render-and-submit-service}
 
 ## Introduktion {#introduction}
 
-När du definierar en `AssignTask` åtgärd i Workbench anger du ett visst formulär (XDP- eller PDF-formulär). Ange även en uppsättning renderings- och Skicka-tjänster via en åtgärdsprofil.
+När du definierar en `AssignTask`-åtgärd i Workbench anger du ett visst formulär (XDP- eller PDF-formulär). Ange även en uppsättning renderings- och Skicka-tjänster via en åtgärdsprofil.
 
 En XDP kan återges som ett PDF-formulär eller ett HTML-formulär. Bland de nya funktionerna finns möjligheten att:
 
@@ -57,51 +57,51 @@ public Map<String, Object> renderHTMLForm (TaskContext taskContext, String profi
 
 Mer information om profiler för mobilformulär finns i [Skapa en anpassad profil](/help/forms/using/custom-profile.md).
 
-## Ny HTML-formulärrendering och nya inskickningsprocesser {#new-html-form-render-amp-submit-processes}
+## Ny HTML-formulärrendering och skickaprocesser {#new-html-form-render-amp-submit-processes}
 
-För varje AssignTask-åtgärd anger du en renderings- och en Submit-process med formuläret. Dessa processer anropas av TaskManager `renderForm`och API: `submitForm`er för att tillåta anpassad hantering. De här processernas semantik för Nytt HTML-formulär:
+För varje AssignTask-åtgärd anger du en renderings- och en Submit-process med formuläret. Dessa processer anropas av TaskManager `renderForm`och `submitForm`API:er för att tillåta anpassad hantering. De här processernas semantik för Nytt HTML-formulär:
 
 ### Återge ett nytt HTML-formulär {#render-a-new-html-form}
 
 Den nya processen att återge HTML, precis som vid alla återgivningsprocesser, har följande I/O-parametrar -
 
-Input - `taskContext`
+Indata - `taskContext`
 
-Output - `runtimeMap`
+Utdata - `runtimeMap`
 
-Output - `outFormDoc`
+Utdata - `outFormDoc`
 
-Den här metoden simulerar det exakta beteendet hos API:t för NewHTMLFormsService `renderHTMLForm` . Det anropar API:t för att hämta URL:en för HTML-återgivning av formuläret. `generateFormURL` Därefter fylls runtimeMap i med följande nyckel eller värden:
+Den här metoden simulerar det exakta beteendet för `renderHTMLForm` API:t för NewHTMLFormsService. Det anropar API:t `generateFormURL` för att hämta URL:en för HTML-återgivning av formuläret. Därefter fylls runtimeMap i med följande nyckel eller värden:
 
 new html form = true
 
-newHTMLFormURL = den URL som returneras efter anrop av `generateFormURL` API.
+newHTMLFormURL = den URL som returneras efter anrop av API:t `generateFormURL`.
 
 ### Skicka ett nytt HTML-formulär {#submit-a-new-html-form}
 
 Den här processen för att skicka ett nytt HTML-formulär fungerar med följande I/O-parametrar -
 
-Input - `taskContext`
+Indata - `taskContext`
 
-Output - `runtimeMap`
+Utdata - `runtimeMap`
 
-Output - `outputDocument`
+Utdata - `outputDocument`
 
-Processen ställer in värdet `outputDocument`till det som `inputDocument`hämtas från `taskContext`.
+Processen ställer in `outputDocument`till `inputDocument`som hämtats från `taskContext`.
 
-## Standardprocesser för återgivning och överföring samt åtgärdsprofiler {#default-render-or-submit-processes-and-action-profiles}
+## Standardprocesser för återgivning eller överföring och åtgärdsprofiler {#default-render-or-submit-processes-and-action-profiles}
 
 Med standardtjänsterna Återgivning och Skicka kan du återge PDF-filer på en dator och HTML på mobila enheter (iPad).
 
 ### Standardåtergivningsformulär {#default-render-form}
 
-Den här processen återger ett XDP-formulär på flera plattformar, sömlöst. Processen hämtar användaragenten från `taskContext`och använder data för att anropa processen för att återge antingen HTML eller PDF.
+Den här processen återger ett XDP-formulär på flera plattformar, sömlöst. Processen hämtar användaragenten från `taskContext` och använder data för att anropa processen för att återge antingen HTML eller PDF.
 
 ![default-render-form](assets/default-render-form.png)
 
 ### Standardformulär för att skicka {#default-submit-form}
 
-Den här processen skickar ett XDP-formulär sömlöst på flera plattformar. Den hämtar användaragenten från `taskContext`och använder data för att anropa processen för att skicka antingen HTML eller PDF.
+Den här processen skickar ett XDP-formulär sömlöst på flera plattformar. Det hämtar användaragenten från `taskContext`och använder data för att anropa processen för att skicka antingen HTML eller PDF.
 
 ![default-submit-form](assets/default-submit-form.png)
 
@@ -116,7 +116,7 @@ Webbläsare drar gradvis tillbaka stödet för NPAPI-baserade plugin-program, in
 
 1. Markera de program som du vill ändra återgivningen av mobilformulär för och klicka på **OK**.
 1. Öppna den process som du vill ändra återgivningen för.
-1. Öppna startpunkten/aktiviteten som du har som mål, navigera till avsnittet Presentation &amp; Data och klicka på **Hantera åtgärdsprofiler**.
+1. Öppna målstartpunkten/målaktiviteten, navigera till avsnittet Presentation &amp; Data och klicka på **Hantera åtgärdsprofiler**.
 
    Dialogrutan Hantera åtgärdsprofiler visas.
 1. Ändra standardåtergivningsprofilskonfigurationer från PDF till HTML och klicka på **OK**.
@@ -157,7 +157,7 @@ Användaren måste välja HTML-alternativknappen för standardprofilen.
 
 ![gen_question_b_20](assets/gen_question_b_20.png) **Kommer uppgraderingen att påverka hur standardåtgärdsprofilen fungerar?**
 
-Ja, eftersom de tidigare återgivnings- och skicketjänsterna som är kopplade till standardåtgärdsprofilen var olika, behandlas dessa som en anpassning av befintliga formulär. När du klickar **[!UICONTROL Restore Defaults]** anges i stället standardtjänsterna för återgivning och sändning.
+Ja, eftersom de tidigare återgivnings- och skicketjänsterna som är kopplade till standardåtgärdsprofilen var olika, behandlas dessa som en anpassning av befintliga formulär. När du klickar på **[!UICONTROL Restore Defaults]** ställs standardtjänsterna för återgivning och sändning in i stället.
 
 Om du har ändrat befintliga tjänster för återgivning eller skickning av PDF-formulär eller skapat anpassade tjänster (till exempel custom1) och nu vill använda samma funktioner för HTML-återgivning. Du måste replikera den nya renderings- eller skicka-tjänsten (till exempel custom2) och tillämpa liknande anpassningar på dessa. Nu kan du ändra åtgärdsprofilen för XDP-filen så att den börjar använda anpassade2-tjänster i stället för custom1 för rendering eller sändning.
 
