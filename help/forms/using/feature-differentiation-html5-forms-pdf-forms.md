@@ -36,7 +36,7 @@ Följande tabell anger vilka funktioner som stöds för HTML5-formulär och PDF 
   </tr>
   <tr>
    <td>Signaturfält<br /> </td> 
-   <td><strong>Digitala signaturer</strong> stöds inte, men ett nytt <strong>fält för Klottsignatur</strong> läggs till för papper som signaturer. Man kan klottra sin signatur i formuläret med hjälp av fältet <strong>Klottsignatur</strong> . Signaturen sparas i formuläret som en bild. Du kan spara geolokaliseringsinformation i fältet <strong>Klottsignatur</strong> .</td> 
+   <td><strong>Digitala </strong> signaturer stöds inte, men ett nytt  <strong>klottrigt </strong> signaturfält läggs till för papper som signaturer. Man kan klottra sin signatur i formuläret med fältet <strong>Klottsignatur</strong>. Signaturen sparas i formuläret som en bild. Du kan spara geopositioneringsinformation i fältet <strong>Klottsignatur</strong>.</td> 
    <td>Signaturfält är tillgängligt för <strong>digitala signaturer</strong>.</td> 
   </tr>
   <tr>
@@ -61,17 +61,17 @@ Följande tabell anger vilka funktioner som stöds för HTML5-formulär och PDF 
   </tr>
   <tr>
    <td>Anpassade widgetar</td> 
-   <td>Man kan anpassa widgetar för att förbättra användarupplevelsen på mobila enheter.<br /> </td> 
+   <td>Du kan anpassa widgetar för att förbättra användarupplevelsen på mobila enheter.<br /> </td> 
    <td>Alla widgetar är låsta och ingen anpassad widget kan kopplas.<br /> </td> 
   </tr>
   <tr>
    <td>XFA Script API</td> 
-   <td>Stöder de vanligaste XFA-skriptkonstruktionerna. Mer information om vilka konstruktioner som stöds finns i <a href="/help/forms/using/scripting-support.md">Skriptstöd</a>.</td> 
+   <td>Stöder de vanligaste XFA-skriptkonstruktionerna. Mer information finns i <a href="/help/forms/using/scripting-support.md">skriptstöd</a>.</td> 
    <td>Stöder alla XFA-skriptkonstruktioner.</td> 
   </tr>
   <tr>
    <td>Acrobat Script API:er </td> 
-   <td>HTML5-formulär har stöd för de vanligaste API:erna. Mer information finns i <a href="/help/forms/using/scripting-support.md">Skriptstöd</a>.</td> 
+   <td>HTML5-formulär har stöd för de vanligaste API:erna. Mer information finns i <a href="/help/forms/using/scripting-support.md">skriptstöd</a>.</td> 
    <td>Om PDF-filen öppnas i Acrobat eller Reader stöds även alla skript-API:er som finns i Acrobat.</td> 
   </tr>
   <tr>
@@ -82,5 +82,5 @@ Följande tabell anger vilka funktioner som stöds för HTML5-formulär och PDF 
  </tbody>
 </table>
 
-Följ de bästa sätten att aktivera en formulärmall för HTML5-återgivningar och se till att HTML5-formulär och XFA-baserade PDF-filer fungerar och ser likadana ut. En detaljerad lista över de effektivaste strategierna finns i [Bästa tillvägagångssätt för att utforma ett HTML5-formulär.](/help/forms/using/best-practices-for-html5-forms.md)
+Följ de bästa sätten att aktivera en formulärmall för HTML5-återgivningar och se till att HTML5-formulär och XFA-baserade PDF-filer fungerar och ser likadana ut. Detaljerad lista över bästa praxis finns i [Bästa tillvägagångssätt för att utforma ett HTML5-formulär.](/help/forms/using/best-practices-for-html5-forms.md)
 
