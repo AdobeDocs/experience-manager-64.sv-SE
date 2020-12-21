@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Snabbstart för Java API för signaturtjänst (SOAP) {#signature-service-java-api-quickstart-soap}
+# Snabbstart för Java API (SOAP) för signaturtjänst {#signature-service-java-api-quickstart-soap}
 
 Java API Quick Start (SOAP) är tillgängligt för signaturtjänsten:
 
@@ -48,7 +48,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 ## Snabbstart (SOAP-läge): Lägga till ett signaturfält i ett PDF-dokument med Java API {#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api}
 
-I följande Java-kodexempel läggs ett signaturfält med namnet *SignatureField1* till i ett PDF-dokument som är baserat på en PDF-fil *med namnetLoan.pdf*. PDF-dokumentet som innehåller det nya signaturfältet sparas som en PDF-fil med namnet *LoanSig.pdf*. (Se [Lägga till signaturfält](/help/forms/developing/digitally-signing-certifying-documents.md#adding-signature-fields).)
+I följande Java-kodexempel läggs ett signaturfält med namnet *SignatureField1* till i ett PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf*. PDF-dokumentet som innehåller det nya signaturfältet sparas som en PDF-fil med namnet *LoanSig.pdf*. (Se [Lägga till signaturfält](/help/forms/developing/digitally-signing-certifying-documents.md#adding-signature-fields).)
 
 ```as3
  /* 
@@ -162,9 +162,9 @@ I följande Java-kodexempel läggs ett signaturfält med namnet *SignatureField1
  
 ```
 
-## Snabbstart (SOAP-läge): Hämta namn på signaturfält med Java API {#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api}
+## Snabbstart (SOAP-läge): Hämta signaturfältnamn med Java API {#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api}
 
-I följande Java-kodexempel hämtas namnen på signaturfält som finns i ett PDF-dokument med namnet *LoanSig.pdf*. (Se [Hämta namn på](/help/forms/developing/digitally-signing-certifying-documents.md#retrieving-signature-field-names)signaturfält.)
+Följande Java-kodexempel hämtar namnen på signaturfälten i ett PDF-dokument med namnet *LoanSig.pdf*. (Se [Hämta namn på signaturfält](/help/forms/developing/digitally-signing-certifying-documents.md#retrieving-signature-field-names).)
 
 ```as3
  /* 
@@ -398,7 +398,7 @@ I följande Java-kodexempel ändras ett signaturfält med namnet SignatureField1
 
 ## Snabbstart (SOAP-läge): Signera ett PDF-dokument digitalt med Java API {#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api}
 
-I följande Java-kodexempel signeras ett PDF-dokument som är baserat på en PDF-fil med namnet *LoanSig.pdf* digitalt. Aliaset som har angetts för säkerhetsuppgifter är säkert och spärrkontroll utförs. Eftersom ingen information om CRL- eller OCSP-server har angetts hämtas serverinformationen från certifikatet som används för att digitalt signera PDF-dokumentet. Det signerade dokumentet sparas som en PDF-fil med namnet *LoanSigned.pdf*. (Se [Signera PDF-dokument](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)digitalt.)
+I följande Java-kodexempel signeras ett PDF-dokument som är baserat på en PDF-fil med namnet *LoanSig.pdf*. Aliaset som har angetts för säkerhetsuppgifter är säkert och spärrkontroll utförs. Eftersom ingen information om CRL- eller OCSP-server har angetts hämtas serverinformationen från certifikatet som används för att digitalt signera PDF-dokumentet. Det signerade dokumentet sparas som en PDF-fil med namnet *LoanSigned.pdf*. (Se [Signera PDF-dokument digitalt](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
 
 ```as3
  /* 
@@ -547,7 +547,7 @@ I följande Java-kodexempel signeras ett PDF-dokument som är baserat på en PDF
 
 ## Snabbstart (SOAP-läge): Signera ett XFA-baserat formulär digitalt med Java API {#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api}
 
-I följande Java-kodexempel signeras ett interaktivt formulär som återges av Forms-tjänsten. Den `com.adobe.idp.Document` instans som returneras av Forms-tjänsten skickas till signaturtjänsten. Det signerade interaktiva formuläret sparas som en PDF-fil med namnet *LoanXFASigned.pdf*.
+I följande Java-kodexempel signeras ett interaktivt formulär som återges av Forms-tjänsten. Den `com.adobe.idp.Document`-instans som returneras av Forms-tjänsten skickas till signaturtjänsten. Det signerade interaktiva formuläret sparas som en PDF-fil med namnet *LoanXFASigned.pdf*.
 
 ```as3
  /* 
@@ -759,7 +759,7 @@ I följande Java-kodexempel signeras ett interaktivt formulär som återges av F
 
 ## Snabbstart (SOAP-läge): Certifiera ett PDF-dokument med Java API {#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api}
 
-I följande Java-kodexempel certifieras ett PDF-dokument som är baserat på en PDF-fil med namnet *LoanSig.pdf*. Aliaset som har angetts för säkerhetsuppgifter är säkert och spärrkontroll utförs inte. Det certifierade dokumentet sparas som en PDF-fil med namnet *LoanCertified.pdf*. (Se [Certifiera PDF-dokument](/help/forms/developing/digitally-signing-certifying-documents.md#certifying-pdf-documents).)
+Följande Java-kodexempel certifierar ett PDF-dokument som är baserat på en PDF-fil med namnet *LoanSig.pdf*. Aliaset som har angetts för säkerhetsuppgifter är säkert och spärrkontroll utförs inte. Det certifierade dokumentet sparas som en PDF-fil med namnet *LoanCertified.pdf*. (Se [Certifiera PDF-dokument](/help/forms/developing/digitally-signing-certifying-documents.md#certifying-pdf-documents).)
 
 ```as3
  /* 
@@ -1234,7 +1234,7 @@ Följande Java-kodexempel verifierar flera digitala signaturer som finns i ett s
 
 ## Snabbstart (SOAP-läge): Ta bort en digital signatur med Java API {#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api}
 
-I följande Java-kodexempel tas en digital signatur bort från ett signaturfält med namnet *SignatureField1*. Namnet på PDF-filen som innehåller signaturfältet är *LoanSigned.pdf*. (Se [Ta bort digitala signaturer](/help/forms/developing/digitally-signing-certifying-documents.md#removing-digital-signatures).)
+I följande Java-kodexempel tas en digital signatur bort från ett signaturfält med namnet *SignatureField1*. Namnet på den PDF-fil som innehåller signaturfältet är *LoanSigned.pdf*. (Se [Ta bort digitala signaturer](/help/forms/developing/digitally-signing-certifying-documents.md#removing-digital-signatures).)
 
 ```as3
  /* 
