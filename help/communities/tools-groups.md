@@ -20,17 +20,17 @@ ht-degree: 0%
 
 # Gruppmallar {#group-templates}
 
-Konsolen Gruppmallar liknar konsolen [Platsmallar](sites.md) . Båda är skisser för en uppsättning färdiga sidor och funktioner som utgör en communitysajt. Skillnaden är att en webbplatsmall är för huvudcommunityn och en gruppmall är för en community-grupp, en undercommunity som är kapslad i huvudcommunityn.
+Konsolen Gruppmallar påminner mycket om konsolen [Platsmallar](sites.md). Båda är skisser för en uppsättning färdiga sidor och funktioner som utgör en communitysajt. Skillnaden är att en webbplatsmall är för huvudcommunityn och en gruppmall är för en community-grupp, en undercommunity som är kapslad i huvudcommunityn.
 
-En communitygrupp ingår i en webbplatsmall genom att inkludera funktionen [](functions.md#groups-function) Grupper (som kanske inte är den första eller enda funktionen i mallen).
+En community-grupp är inkorporerad i en webbplatsmall genom att inkludera funktionen [Grupper](functions.md#groups-function) (som inte är den första eller enda funktionen i mallen).
 
-Från och med [funktionspaket 1](deploy-communities.md#latestfeaturepack)för Communities är det möjligt att kapsla in grupper genom att inkludera funktionen Groups i en gruppmall.
+Från och med Communities [funktionspaket 1](deploy-communities.md#latestfeaturepack) är det möjligt att kapsla grupper genom att inkludera funktionen Grupper i en gruppmall.
 
 När åtgärden utförs för att skapa en ny community-grupp väljs gruppens mall (struktur). Valet beror på hur funktionen Grupper konfigurerades när den lades till i plats- eller gruppmallen.
 
 >[!NOTE]
 >
->Konsolerna för att skapa [communitysajter](sites-console.md), [communitymallar](sites.md), mallar [för](tools-groups.md) communitygrupper [och](functions.md) communityfunktionerär endast avsedda att användas i författarmiljön.
+>Konsolerna för att skapa [communitywebbplatser](sites-console.md), [mallar för communitywebbplatser](sites.md), [mallar för communitygrupper](tools-groups.md) och [communityfunktioner](functions.md) får endast användas i författarmiljön.
 
 ## Konsolen Gruppmallar {#group-templates-console}
 
@@ -38,9 +38,9 @@ I författarmiljön kan du nå gruppmallskonsolen
 
 * Från global navigering: **[!UICONTROL Tools > Communities > Group Templates]**
 
-Den här konsolen visar mallarna som en [communitywebbplats](sites-console.md) kan skapas från och tillåter att nya gruppmallar skapas.
+Den här konsolen visar de mallar från vilka en [community-plats](sites-console.md) kan skapas och tillåter att nya gruppmallar skapas.
 
-![gruppermall](assets/groupstemplate.png)
+![gruppmall](assets/groupstemplate.png)
 
 ## Skapa gruppmall {#create-goup-template}
 
@@ -83,7 +83,7 @@ En växlingsväxling som styr om mallen kan refereras
 
 Om du vill lägga till communityfunktioner drar du från höger sida till vänster i den ordning som länkarna på webbplatsmenyn ska visas. Format används på mallen när webbplatsen skapas.
 
-Om du till exempel vill ha ett forum drar du forumfunktionen från biblioteket och släpper under mallverktyget. Detta resulterar i att dialogrutan för forumkonfiguration öppnas. Mer information om konfigurationsdialogrutorna finns i [funktionskonsolen](functions.md) .
+Om du till exempel vill ha ett forum drar du forumfunktionen från biblioteket och släpper under mallverktyget. Detta resulterar i att dialogrutan för forumkonfiguration öppnas. Mer information om konfigurationsdialogrutorna finns i [funktionskonsolen](functions.md).
 
 Fortsätt att dra och släppa andra communityfunktioner som du vill använda för en undergruppswebbplats (grupp) som är baserad på den här mallen.
 
@@ -93,8 +93,8 @@ När alla önskade funktioner har släppts i mallbyggarområdet och konfigurerat
 
 ## Redigera gruppmall {#edit-group-template}
 
-När du visar communitygrupper i huvudkonsolen [](#group-templates-console)Gruppmallar kan du välja en befintlig gruppmall för redigering.
+När du visar communitygrupper i huvudkonsolen [Gruppmallar](#group-templates-console) går det att välja en befintlig gruppmall för redigering.
 
-Om du redigerar en gruppmall påverkas inte communitywebbplatser som redan skapats från mallen. Det går att [redigera strukturen för en community-webbplats](sites-console.md#modify-structure)direkt i stället.
+Om du redigerar en gruppmall påverkas inte communitywebbplatser som redan skapats från mallen. Du kan i stället redigera strukturen för en [community-plats](sites-console.md#modify-structure) direkt.
 
-I den här processen finns samma paneler som när du [skapar en gruppmall](#create-goup-template).
+I den här processen finns samma paneler som [när du skapar en gruppmall](#create-goup-template).
