@@ -38,14 +38,14 @@ På sidan Ändra licens visas information om din licens:
 ## Uppdatera licenstypen {#update-the-license-type}
 
 1. Klicka på Licensiering i administrationskonsolen.
-1. Läs licensavtalet för AEM formulär, välj Jag accepterar om du godkänner villkoren i avtalet och klicka sedan på Nästa.
+1. Läs licensavtalet för AEM, välj Jag accepterar om du godkänner villkoren i avtalet och klicka sedan på Nästa.
 1. Välj en licenstyp på sidan Ändra licens:
 
    * **EVAL:** 60-dagars utvärderingslicens
    * **DEV:** Permanent utvecklingslicens
-   * **NFR:** 2-årig utvärderingslicens
-   * **IDEV:** 1-årsprenumeration på Adobe Developer Program
-   * **Produktion:** Permanent licens
+   * **NFR:** Tvåårig utvärderingslicens
+   * **IDEV:** ettårsprenumeration på Adobe Developer Program
+   * **produktion:** permanent licens
 
 1. Välj Ja, licensändringen är giltig för alla distribuerade moduler.
 1. Klicka på Bekräfta licensändring. Ett meddelande om att licensen har uppdaterats visas.
