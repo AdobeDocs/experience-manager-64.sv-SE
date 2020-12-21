@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# Konfigurera platser för Forms {#configuring-locations-for-forms}
+# Konfigurerar platser för Forms {#configuring-locations-for-forms}
 
 Du kan ange URL, URI och filplatser för attribut som webbroten, platsen för de formulär som ska hämtas, den dirigerade PDF-fil som används i PDF-formulärsomformningar och cacheplatsen.
 
@@ -44,13 +44,13 @@ Följande exempel pekar på samma innehåll (med Content Root URI och Base URL):
 
 `(BaseURL)/subdir/image1.jpg`
 
-**URI för FS-webbrot:** URL:en för Forms webbprogram. Du kan lämna rutan tom om Forms webbprogram och klientprogrammet distribueras på samma programserver. URL:en för Forms API-webbroten kommer att användas.
+**FS-webbrot-URI:** URL:en för Forms webbprogram. Du kan lämna rutan tom om Forms webbprogram och klientprogrammet distribueras på samma programserver. URL:en för Forms API-webbroten kommer att användas.
 
 Om Forms webbprogram och klientprogram inte distribueras till samma programserver anger du URL:en för Forms webbprogram i den här rutan, som i det här exemplet:
 
 `https://<host name>:<port>/FormServer`
 
-Var `host name`och `port` är servernamnet och portnumret för den server som är värd för Forms webbprogram.
+Där `host name`och `port` är servernamnet och portnumret för den server som är värd för Forms webbprogram.
 
 Standardvärdet är en tom sträng.
 
@@ -58,11 +58,11 @@ Standardvärdet är en tom sträng.
 
 Standardvärdet är en tom sträng.
 
-**Innehållsrot-URI:** Den URI eller absoluta plats som formulär hämtas från. Detta värde kombineras med parametern sFormQuery, som anges via API:t, för att skapa den absoluta sökvägen till det formulär som hämtas. Det här värdet kan referera till en katalog eller en webbplats som är tillgänglig via HTTP.
+**Innehållsrots-URI:** URI:n eller den absoluta plats som formulär hämtas från. Detta värde kombineras med parametern sFormQuery, som anges via API:t, för att skapa den absoluta sökvägen till det formulär som hämtas. Det här värdet kan referera till en katalog eller en webbplats som är tillgänglig via HTTP.
 
 Standardvärdet är en tom sträng.
 
-**URI för XCI-konfiguration:** Den relativa eller absoluta plats där XCI-filen som används för återgivning finns. För ett relativt värde antas XCI-filen finnas i den distribuerbara AEM formen EAR-fil.
+**XCI Configuration URI:** Den relativa eller absoluta plats där XCI-filen som används för återgivning finns. För ett relativt värde antas XCI-filen finnas i den distribuerbara AEM formen EAR-fil.
 
 Standardvärdet är `com/adobe/formServer/PA/pa.xci`.
 
@@ -88,7 +88,7 @@ Standardvärdet är en tom sträng.
 * **WebLogic:** [WebLogic Home]\user_projects\domains\[aem-forms Domain Name]\adobe\[forms server name]\FormServer\Cache
 * **WebSphere:** [IBM Home]\WebSphere\AppServer\installedApps\adobe\server1\FormServer\Cache
 
-**Tillfällig katalog för LC:** Cachen skapas i en underkatalog till den AEM formulärkatalogen temporp, som anges i administrationskonsolen under Inställningar > Systeminställningar > Konfigurationer > Plats för tillfällig katalog. Underkatalogen heter adobeform_[servername].
+**Tillfällig LC-katalog:** Cachen skapas i en underkatalog till den tillfälliga AEM formulärkatalogen, som anges i administrationskonsolen under Inställningar > Systeminställningar > Konfigurationer > Plats för tillfällig katalog. Underkatalogen heter adobeform_[servernamn].
 
 >[!NOTE]
 >
