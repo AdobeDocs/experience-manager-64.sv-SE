@@ -20,12 +20,12 @@ ht-degree: 1%
 
 Du kan definiera det övergripande utseendet och formatet för ett anpassat formulär genom att ange format med [temaredigeraren](/help/forms/using/themes.md). Du kan också använda infogade CSS-format på enskilda adaptiva formulärkomponenter och förhandsgranska ändringarna direkt. Inline-format åsidosätter format som finns i temat.
 
-## Använda infogade CSS-egenskaper {#apply-inline-css-properties}
+## Använd infogade CSS-egenskaper {#apply-inline-css-properties}
 
 Så här lägger du till infogade format i en komponent:
 
-1. Öppna formuläret i formulärredigeraren och ändra läget till formateringsläge. Om du vill ändra läget till ett formateringsläge trycker du på ![arbetsytelistrutan](assets/canvas-drop-down.png) > **Format** i sidverktygsfältet.
-1. Markera en komponent på sidan och tryck på redigeringsknappens ![redigeringsknapp](assets/edit-button.png). Stilegenskaper öppnas i sidofältet.
+1. Öppna formuläret i formulärredigeraren och ändra läget till formateringsläge. Om du vill ändra läge till formateringsläge trycker du på ![arbetsytelistrutan](assets/canvas-drop-down.png) > **Format** i sidverktygsfältet.
+1. Markera en komponent på sidan och tryck på redigeringsknappen ![edit-button](assets/edit-button.png). Stilegenskaper öppnas i sidofältet.
 
    Du kan också välja komponenter från formulärhierarkiträdet i sidlisten. Formulärhierarkiträdet är tillgängligt som formulärobjekt i sidlisten.
 
@@ -96,7 +96,8 @@ Lägg märke till ändringen i textrutans format, så som visas i följande bild
  </tbody> 
 </table>
 
-![Textrutans format när den infogade formateringen har tillämpats](assets/applied-style.png)**Bild:** *Textrutekomponent efter användning av egenskaper för infogat format*
+![Textruteformat efter att en textbunden formatering har ](assets/applied-style.png)
+**använtsBild:** *Textrutekomponent efter att du har använt egenskaper för textbundna format*
 
 Följ stegen ovan för att markera och formatera andra komponenter, till exempel paneler, skicka-knappar och alternativknappar.
 
