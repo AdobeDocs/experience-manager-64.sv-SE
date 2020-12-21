@@ -20,9 +20,9 @@ ht-degree: 6%
 
 # Beskrivning av återanvändbara komponenter {#description-of-reusable-components}
 
-AEM Forms arbetsyta består av [återanvändbara](/help/forms/using/integrating-html-ws-components-web.md) komponenter som är ordnade i en viss [mappstruktur](/help/forms/using/folder-structure.md) i CRX™. Varje komponent har modell-, vy- och mallfil på den plats som anges i mappstrukturen, JavaScript™-beroenden på andra komponentfiler, händelser som avlyssnas av komponenten och JavaScript-objekt som utlöser dessa händelser på arbetsytan i AEM Forms. En fullständig lista över återanvändbara komponenter med komponentens filnamn och beroenden anges här.
+AEM Forms arbetsyta består av [återanvändbara](/help/forms/using/integrating-html-ws-components-web.md)-komponenter som är ordnade i en viss [mappstruktur](/help/forms/using/folder-structure.md) i CRX™. Varje komponent har modell-, vy- och mallfil på den plats som anges i mappstrukturen, JavaScript™-beroenden på andra komponentfiler, händelser som avlyssnas av komponenten och JavaScript-objekt som utlöser dessa händelser på arbetsytan i AEM Forms. En fullständig lista över återanvändbara komponenter med komponentens filnamn och beroenden anges här.
 
-## AktivitetLista {#tasklist}
+## Aktivitetslista {#tasklist}
 
 <table> 
  <tbody> 
@@ -61,7 +61,7 @@ AEM Forms arbetsyta består av [återanvändbara](/help/forms/using/integrating-
     <ul> 
      <li><p>filterSelected - aktivitetslistmodell</p></li> 
      <li><p>remove - aktivitetslistmodell</p></li> 
-     <li><p>updateQueue - aktivitetslistmodell</p></li> 
+     <li><p>updateQueue - aktivitetslista, modell</p></li> 
     </ul></td> 
   </tr> 
  </tbody> 
@@ -114,7 +114,7 @@ AEM Forms arbetsyta består av [återanvändbara](/help/forms/using/integrating-
 >
 >Arbetsytan anropar funktionen fetchTasks i TaskList-modellen för att skapa aktivitetsmodeller för den här komponenten.
 
-## FilterList {#filterlist}
+## Filterlista {#filterlist}
 
 <table> 
  <tbody> 
@@ -144,7 +144,7 @@ AEM Forms arbetsyta består av [återanvändbara](/help/forms/using/integrating-
     <ul> 
      <li><p>hämtad - aktivitetslistmodell </p></li> 
      <li><p>remove - aktivitetslistmodell </p></li> 
-     <li><p>updateQueue - aktivitetslistmodell </p></li> 
+     <li><p>updateQueue - aktivitetslista, modell </p></li> 
      <li><p>uppdateradKö - aktivitetslistmodell </p></li> 
      <li><p>filterSelected - aktivitetslistmodell</p></li> 
     </ul></td> 
@@ -216,7 +216,7 @@ AEM Forms arbetsyta består av [återanvändbara](/help/forms/using/integrating-
     <ul> 
      <li><p>hämtad - aktivitetslistmodell </p></li> 
      <li><p>remove - aktivitetslistmodell </p></li> 
-     <li><p>updateQueue - aktivitetslistmodell </p></li> 
+     <li><p>updateQueue - aktivitetslista, modell </p></li> 
      <li><p>teamQueuesFetched - tasklist model </p></li> 
     </ul></td> 
   </tr> 
@@ -266,7 +266,7 @@ AEM Forms arbetsyta består av [återanvändbara](/help/forms/using/integrating-
 >
 >TeamFilter hämtar händelsen som anger vilken aktivitet som har valts från TaskList-komponenten. Även om dessa komponenter delar modellklassen finns det inget annat beroende.
 
-## AktivitetDetaljer {#taskdetails}
+## Aktivitetsinformation {#taskdetails}
 
 <table> 
  <tbody> 
