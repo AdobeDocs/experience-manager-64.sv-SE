@@ -110,7 +110,7 @@ Följande API:er används i AEM Forms arbetsyta.
   <tr>
    <td>save</td> 
    <td>ProcessManagementTaskService</td> 
-   <td>save</td> 
+   <td>spara</td> 
    <td>Den sparar en aktivitet på servern.</td> 
   </tr>
   <tr>
@@ -237,7 +237,7 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>getAllQueues<br /> </td> 
    <td>ProcessManagementQueueService<br /> </td> 
    <td>getAllQueues<br /> </td> 
-   <td>Den får alla köer (egna, delade och gruppköer) tillgängliga för inloggad användare.<br /> </td> 
+   <td>Den får alla köer (egna, delade och gruppköer) tillgängliga för den inloggade användaren.<br /> </td> 
   </tr>
   <tr>
    <td>getOutOfOfficeSettings</td> 
