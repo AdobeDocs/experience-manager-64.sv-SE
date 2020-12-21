@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# Ändra utseendet (HBS) {#alter-the-appearance-hbs}
+# Ändra utseende (HBS) {#alter-the-appearance-hbs}
 
 Nu när komponenterna för det anpassade kommentarsystemet i programkatalogen (/apps) finns på plats, med en resourceSuperType som refererar till standardkommentarsystemet och den anpassade modellen/vyn registrerad, är det möjligt att ändra implementeringen.
 
@@ -28,7 +28,7 @@ För en enkel demonstration, en visuell funktion, tas den avatar som visas för 
 >
 >Om du vill använda tillägget måste instansen av kommentarsystemet på en webbplats som ska påverkas (/content) ange att dess resourceType ska vara det anpassade kommentarsystemet.
 
-## Ändra HBS-skript {#modify-the-hbs-scripts}
+## Ändra HBS-skripten {#modify-the-hbs-scripts}
 
 Använda [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md):
 
@@ -64,13 +64,13 @@ Ett sätt att göra detta är att
 
    * Välj **[!UICONTROL Tools > Operations > Replication]**
    * Välj `Activate Tree`
-   * Uppsättning `Start Path`: till `/apps/custom`
+   * Ange `Start Path`: till `/apps/custom`
    * Avmarkera `Only Modified`
-   * Markera `Activate` knapp
+   * Välj knappen `Activate`
 
 ## Visa ändrad kommentar på publicerad exempelsida {#view-modified-comment-on-published-sample-page}
 
-[Nu kan du uppdatera sidan i publiceringsmiljön och visa ändringen för att ta bort avataren genom att fortsätta med upplevelsen](extend-sample-page.md#publish-sample-page) på publiceringsinstansen, som fortfarande är inloggad som samma användare:
+[När ](extend-sample-page.md#publish-sample-page) upplevelsen av publiceringsinstansen fortsätter, som fortfarande är inloggad som samma användare, går det nu att uppdatera sidan i publiceringsmiljön för att visa ändringen för att ta bort avataren:
 
 ![chlimage_1-81](assets/chlimage_1-81.png)
 
