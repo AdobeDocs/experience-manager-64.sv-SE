@@ -32,7 +32,7 @@ Gå till Correspondence Management-mallen på dess URL för att kontrollera om C
 
 där `encodedLetterId` är det URL-kodade brev-ID:t. Ange samma bokstav-ID när du definierar återgivningsprocessen för arbetsyteaktiviteten i Workbench.
 
-## Skapa en uppgift för att återge och skicka ett brev AEM arbetsytan {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
+## Skapa en aktivitet som återger och skickar ett brev AEM arbetsytan {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
 
 Innan du utför dessa steg måste du kontrollera att du är medlem i följande grupper:
 
@@ -44,8 +44,8 @@ Mer information finns i [Lägga till och konfigurera användare](/help/forms/usi
 Följ de här stegen för att skapa en uppgift som återger och skickar ett brev AEM arbetsytan:
 
 1. Starta Workbench. Logga in på localhost som administratör.
-1. Klicka på Arkiv > Nytt > Program. I fältet Programnamn anger du `CMDemoSample` och klickar sedan på Slutför.
-1. Markera `CMDemoSample/1.0` och högerklicka `NewProcess`. Ange `CMRenderer` och klicka sedan på Slutför i namnfältet.
+1. Klicka på Arkiv > Nytt > Program. Ange `CMDemoSample` i fältet Programnamn och klicka sedan på Slutför.
+1. Välj `CMDemoSample/1.0` och högerklicka på `NewProcess`. Ange `CMRenderer` i namnfältet och klicka sedan på Slutför.
 1. Dra aktivitetsväljaren för startpunkten och konfigurera den:
 
    1. I Presentationsdata väljer du Använd en CRX-resurs.
@@ -101,12 +101,13 @@ Följ de här stegen för att skapa en uppgift som återger och skickar ett brev
    }
    ```
 
-   [Hämta DSC för](assets/dscsample.zip)filhämtning: Ett exempel på DSC finns i den `DSCSample.zip` fil som bifogas ovan. Ladda ned och zippa upp `DSCSample.zip` filen. Innan du använder DSC-tjänsten måste du konfigurera den. Mer information finns i [Konfigurera DSC-tjänsten](/help/forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
+   [Hämta ](assets/dscsample.zip)
+filHämta DSC: Ett exempel på DSC finns i den  `DSCSample.zip` fil som bifogas ovan. Hämta och zippa upp filen `DSCSample.zip`. Innan du använder DSC-tjänsten måste du konfigurera den. Mer information finns i [Konfigurera DSC-tjänsten](/help/forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
 
    I dialogrutan Definiera aktivitet väljer du lämplig aktivitet, till exempel getLetterInstanceInfo, och klickar på **OK**.
 
 1. Distribuera programmet. Om du uppmanas att checka in och spara resurserna.
-1. Logga in på arbetsytan AEM formulär på `https://[server]:[port]/lc/content/ws`.
+1. Logga in på arbetsytan för AEM formulär på `https://[server]:[port]/lc/content/ws`.
 1. Öppna den uppgift du lagt till, CMRenderer. Correspondence Management-brevet visas.
 
    ![cminarbetsyta](assets/cminworkspace.png)
