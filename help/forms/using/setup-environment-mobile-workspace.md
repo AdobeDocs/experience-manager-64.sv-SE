@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Konfigurera miljö för AEM Forms-program {#set-up-environment-for-aem-forms-app}
+# Konfigurera miljö för AEM Forms-app {#set-up-environment-for-aem-forms-app}
 
 Du behöver följande maskinvara, programvara och licenser för att skapa och distribuera AEM Forms-appen:
 
@@ -41,7 +41,7 @@ Du behöver följande maskinvara, programvara och licenser för att skapa och di
 
 * Android Development Toolkit (ADT bundle) som kan hämtas från [https://developer.android.com/sdk/index.html](https://developer.android.com/sdk/index.html)
 * Om miljön är konfigurerad på ett MAC-system bör ADT installeras i mappen Program.
-* Om ADT är installerat på någon annan plats på MAC, eller om miljön är konfigurerad på ett Windows-system, måste ADT SDK-sökvägen uppdateras i `local.properties` filen som är tillgänglig i `src\android` mappen i det extraherade källarkivet `mobileworkspace-src.zip`. I den här filen pekar du på `sdk.dir` variabeln på ADT SDK-platsen på skrivbordet.
+* Om ADT är installerat på någon annan plats på MAC, eller om miljön är konfigurerad på ett Windows-system, måste ADT SDK-sökvägen uppdateras i `local.properties`-filen som är tillgänglig i mappen `src\android` i det extraherade källarkivet `mobileworkspace-src.zip`. I den här filen pekar du på variabeln `sdk.dir` till ADT SDK-platsen på skrivbordet.
 
 >[!NOTE]
 >
