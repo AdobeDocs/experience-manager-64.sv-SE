@@ -31,27 +31,27 @@ I det här avsnittet av dokumentationen beskrivs:
 
 ## Lägga till en kalender på en sida {#adding-a-calendar-to-a-page}
 
-Om du vill lägga till en `Calendar` komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
+Om du vill lägga till en `Calendar`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
 
 * `Communities / Calendar`
 
 och dra den till rätt plats på en sida, t.ex. i förhållande till funktionen som användarna kan granska.
 
-Mer information finns i Grunderna för [communitykomponenter](basics.md).
+Mer information finns på [Grunderna för communitykomponenter](basics.md).
 
-När de [nödvändiga klientbiblioteken](calendar-basics-for-developers.md#essentials-for-client-side) inkluderas visas `Calendar` komponenten på det här sättet.
+När de [nödvändiga klientbiblioteken](calendar-basics-for-developers.md#essentials-for-client-side) inkluderas visas `Calendar`-komponenten så här.
 
 ![chlimage_1-112](assets/chlimage_1-112.png)
 
-### Konfigurerar kalender {#configuring-calendar}
+### Konfigurerar kalendern {#configuring-calendar}
 
-Markera den monterade `Calendar`komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
+Markera den monterade `Calendar`komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![chlimage_1-113](assets/chlimage_1-113.png) ![chlimage_1-114](assets/chlimage_1-114.png)
 
 #### Fliken Inställningar {#settings-tab}
 
-Under **[!UICONTROL Settings]** fliken anger du om du vill tillåta att taggar används på kalenderposter eller inte.
+Under fliken **[!UICONTROL Settings]** anger du om du vill tillåta att taggar tillämpas på kalenderposter eller inte.
 
 * **[!UICONTROL Events Per Page]**
 
@@ -71,7 +71,7 @@ Under **[!UICONTROL Settings]** fliken anger du om du vill tillåta att taggar a
 
 * **[!UICONTROL Allow Tagging]**
 
-   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i de händelser som de publicerar (se fliken **Tagg field** ). Standard är markerat.
+   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i de händelser som de postar (se **Tagg field** tab). Standard är markerat.
 
 * **[!UICONTROL Allow File Uploads]**
 
@@ -83,11 +83,11 @@ Under **[!UICONTROL Settings]** fliken anger du om du vill tillåta att taggar a
 
 * **[!UICONTROL Max File Size]**
 
-   Relevant endast om `Allow File Uploads` är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
+   Endast relevant om `Allow File Uploads` är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
 
 * **[!UICONTROL Allowed File Types]**
 
-   Relevant endast om `Allow File Uploads` är markerat. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
+   Endast relevant om `Allow File Uploads` är markerat. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
 
 * **[!UICONTROL Max Attach Image File Size]**
 
@@ -119,9 +119,9 @@ Under **[!UICONTROL Settings]** fliken anger du om du vill tillåta att taggar a
 
 * **[!UICONTROL Allow Featured Content]**
 
-   Om du markerar det här alternativet kan idén identifieras som [aktuellt innehåll](featured.md). Standard är avmarkerat.
+   Om det här alternativet är markerat kan idén identifieras som [aktuellt innehåll](featured.md). Standard är avmarkerat.
 
-På fliken **[!UICONTROL User Moderation]** anger du hur publicerade ämnen och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Hantera användargenererat innehåll](moderate-ugc.md).
+På fliken **[!UICONTROL User Moderation]** anger du hur publicerade ämnen och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Moderating User Generated Content](moderate-ugc.md).
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
@@ -153,13 +153,13 @@ På fliken **[!UICONTROL User Moderation]** anger du hur publicerade ämnen och 
 
    Ange hur många gånger en händelse eller kommentar måste flaggas innan den döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det flaggade ämnet eller kommentaren från den offentliga vyn. Annars måste talet vara större än eller lika med modereringströskeln. Standardvärdet är 5.
 
-#### Fliken Taggfält {#tag-field-tab}
+#### Tagg field tab {#tag-field-tab}
 
-Under **[!UICONTROL Tag field]** fliken är de taggar som kan användas, om de tillåts under **[!UICONTROL Settings]** fliken, begränsade enligt de namnutrymmen som har valts.
+Under fliken **[!UICONTROL Tag field]** är de taggar som kan användas, om de tillåts under fliken **[!UICONTROL Settings]**, begränsade enligt de namnutrymmen som valts.
 
 * **[!UICONTROL Allowed Namespaces]**
 
-   Relevant om `Allow Tagging` är markerat under **[!UICONTROL Settings]** fliken. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+   Relevant om `Allow Tagging` är markerat under fliken **[!UICONTROL Settings]**. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
 * **[!UICONTROL Suggestion Limit]**
 
@@ -167,11 +167,11 @@ Under **[!UICONTROL Tag field]** fliken är de taggar som kan användas, om de t
 
 >[!NOTE]
 >
->Gå till [Administrera taggar](../../help/sites-administering/tags.md) för att lära dig hur du lägger till ett nytt taggnamnutrymme (taxonomi).
+>Gå till [Administrera taggar](../../help/sites-administering/tags.md) om du vill veta hur du lägger till ett nytt taggnamnutrymme (taxonomi).
 
-#### Fliken Översättning {#translation-tab}
+#### Översättningsflik {#translation-tab}
 
-Om översättning är aktiverat för communitywebbplatsen under fliken **[!UICONTROL Translation]** kan översättning ställas in så att hela tråden (händelse och kommentarer) översätts i stället för specifika inlägg.
+Om översättning är aktiverat för communitywebbplatsen på fliken **[!UICONTROL Translation]** kan översättning ställas in så att hela tråden (händelse och kommentarer) översätts i stället för specifika inlägg.
 
 * **[!UICONTROL Translate All]**
 
@@ -185,15 +185,15 @@ När en kalenderhändelse är markerad visas kalenderhändelseinformation, beskr
 
 Andra funktioner beror på om besökaren är en moderator, administratör, community-medlem, privilegierad medlem eller anonym.
 
-### Styrelsemedlemmar och administratörer {#moderators-and-administrators}
+### Moderatorer och administratörer {#moderators-and-administrators}
 
-När den inloggade användaren har moderator- eller administratörsbehörighet kan han/hon utföra [modereringsåtgärder](moderate-ugc.md) (som tillåts av komponentens konfiguration) för alla kalenderhändelser och kommentarer som publiceras till en händelse.
+När den inloggade användaren har moderator- eller administratörsbehörighet kan han/hon utföra [modereringsåtgärder](moderate-ugc.md) (enligt komponentens konfiguration) för alla kalenderhändelser och kommentarer som publiceras till en händelse.
 
 ![chlimage_1-115](assets/chlimage_1-115.png)
 
 ### Medlemmar {#members}
 
-När den inloggade användaren är en community-medlem eller [behörig medlem](users.md#privileged-members-group) (beroende på konfiguration) kan användaren välja `New Event` att skapa och publicera en ny kalenderhändelse.
+När den inloggade användaren är en community-medlem eller [privilegierad medlem](users.md#privileged-members-group) (beroende på konfiguration) kan användaren välja `New Event` för att skapa och publicera en ny kalenderhändelse.
 
 De kan
 
@@ -211,12 +211,12 @@ Webbplatsbesökare som inte är inloggade kan bara läsa publicerade kalenderhä
 
 ![chlimage_1-118](assets/chlimage_1-118.png)
 
-## Additional Information {#additional-information}
+## Ytterligare information {#additional-information}
 
 Mer information finns på sidan [Calendar Essentials](calendar-basics-for-developers.md) för utvecklare.
 
-Mer information om moderering av kalenderhändelser och kommentarer finns i [Hantera användargenererat innehåll](moderate-ugc.md).
+moderering av kalenderhändelser och kommentarer finns i [Moderating User Generated Content](moderate-ugc.md).
 
-Mer information om hur du taggar kalenderhändelser och kommentarer finns i [Tagga användargenererat innehåll](tag-ugc.md).
+Information om hur du taggar kalenderhändelser och kommentarer finns i [Tagga användargenererat innehåll](tag-ugc.md).
 
 Översättning av kalenderhändelser och kommentarer finns i [Översätta användargenererat innehåll](translate-ugc.md).
