@@ -16,7 +16,7 @@ ht-degree: 0%
 ---
 
 
-# Anpassningsbara formulärfragment {#adaptive-form-fragments}
+# Anpassade formulärfragment {#adaptive-form-fragments}
 
 Alla formulär har utformats för ett specifikt ändamål, men det finns några vanliga segment i de flesta formulär, till exempel för att ge personliga uppgifter som namn och adress, familjeinformation, inkomstinformation och så vidare. Formulärutvecklare måste skapa dessa gemensamma segment varje gång ett nytt formulär skapas.
 
@@ -28,7 +28,7 @@ Du kan skapa ett anpassat formulärfragment från grunden eller spara en panel i
 
 ### Skapa fragment från grunden {#create-fragment-from-scratch}
 
-1. Logga in på AEM Forms författarinstans på https://[*hostname*]:[*port*]/aem/forms.html.
+1. Logga in på AEM Forms författarinstans på https://[*värdnamn*]:[*port*]/aem/forms.html.
 1. Klicka på **[!UICONTROL Create > Adaptive Form Fragment]**.
 1. Ange rubrik, namn, beskrivning och taggar för fragmentet.
 
@@ -36,7 +36,7 @@ Du kan skapa ett anpassat formulärfragment från grunden eller spara en panel i
    >
    >Se till att du anger ett unikt namn för fragmentet. Om det redan finns ett annat fragment med samma namn kan fragmentet inte skapas.
 
-1. Klicka för att öppna **[!UICONTROL Form Model]** fliken och välj en av följande modeller för fragmentet från den **[!UICONTROL Select From]** nedrullningsbara menyn:
+1. Klicka för att öppna fliken **[!UICONTROL Form Model]** och välj en av följande modeller för fragmentet i den nedrullningsbara menyn **[!UICONTROL Select From]**:
 
    * **[!UICONTROL None]**: Anger att fragmentet ska skapas från grunden utan att någon formulärmodell används.
    * **[!UICONTROL Form Template]**: Anger att fragmentet ska skapas med en XDP-mall som har överförts till AEM Forms. Välj lämplig XDP-mall som formulärmodell för fragmentet.
@@ -57,16 +57,16 @@ Du kan skapa ett anpassat formulärfragment från grunden eller spara en panel i
 
    ![Välj en komplex typ från den angivna XML-schemamodellen](assets/complex-type.png)
 
-1. Klicka **[!UICONTROL Create]** och sedan på **[!UICONTROL Open]** för att öppna fragmentet, med en standardmall, i redigeringsläge.
+1. Klicka på **[!UICONTROL Create]** och sedan på **[!UICONTROL Open]** för att öppna fragmentet, med en standardmall, i redigeringsläge.
 
-I redigeringsläge kan du dra och släppa alla adaptiva formulärkomponenter från AEM sidosparken till fragmentet. Mer information om adaptiva formulärkomponenter finns i Introduktion [till utveckling av adaptiva formulär](/help/forms/using/introduction-forms-authoring.md).
+I redigeringsläge kan du dra och släppa alla adaptiva formulärkomponenter från AEM sidosparken till fragmentet. Mer information om adaptiva formulärkomponenter finns i [Introduktion till utveckling av adaptiva formulär](/help/forms/using/introduction-forms-authoring.md).
 
 Om du dessutom har valt ett XML-schema eller en XDP-formulärmall som formulärmodell för fragmentet visas en ny flik som visar formulärmodellhierarkin i innehållssökaren. Du kan dra och släppa formulärmodellelement till fragmentet. De tillagda elementen för formulärmodell konverteras till formulärkomponenter samtidigt som de ursprungliga egenskaperna från den associerade XDP- eller XSD-filen behålls.
 
 ### Spara panelen som ett fragment {#save-panel-as-a-fragment}
 
 1. Öppna ett adaptivt formulär som innehåller den panel som du vill spara som ett adaptivt formulärfragment.
-1. Klicka på i panelens verktygsfält **[!UICONTROL Save as Fragment]**. Dialogrutan Spara som fragment öppnas.
+1. Klicka på **[!UICONTROL Save as Fragment]** i panelens verktygsfält. Dialogrutan Spara som fragment öppnas.
 
    >[!NOTE]
    >
@@ -84,7 +84,7 @@ Om du dessutom har valt ett XML-schema eller en XDP-formulärmall som formulärm
    * **[!UICONTROL Description]**: Beskrivning av fragmentet.
    * **[!UICONTROL Tags]**: Taggar metadata för fragmentet.
    * **[!UICONTROL Target Path]**: Databassökväg där fragmentet ska sparas. Om du inte anger en sökväg skapas en nod med samma namn som fragmentet bredvid noden som innehåller det adaptiva formuläret. Fragmentet sparas i den här noden.
-   * **[!UICONTROL Form Model]**: Beroende på formulärmodellen för det adaptiva formuläret visas fältet **[!UICONTROL XML Schema]**, **[!UICONTROL Form Template]** eller **[!UICONTROL None]**. Det är ett icke-redigerbart fält.
+   * **[!UICONTROL Form Model]**: Beroende på formulärmodellen för det adaptiva formuläret visas fältet  **[!UICONTROL XML Schema]**,  **[!UICONTROL Form Template]** eller  **[!UICONTROL None]**. Det är ett icke-redigerbart fält.
    * **[!UICONTROL Fragment Model Root]**: Visas endast i XSD-baserade adaptiva formulär. Den anger fragmentmodellens rot. Du kan välja **/** eller den komplexa XSD-typen i listrutan. Observera att du bara kan återanvända fragmentet i ett annat adaptivt formulär om du väljer den komplexa typen som fragmentmodellrot.
 
       Om du väljer **/** som fragmentmodellrot visas hela XSD-trädet från roten på fliken för adaptiv formulärdatamodell. För en fragmentmodellrot av en komplex typ visas bara de underordnade för den valda komplexa typen på fliken för adaptiv formulärdatamodell.
@@ -93,13 +93,13 @@ Om du dessutom har valt ett XML-schema eller en XDP-formulärmall som formulärm
    * **[!UICONTROL XDP Ref]**: Visas endast i XDP-baserade adaptiva formulär. Här visas platsen för XDP-formulärmallen.
 
    ![save-fragment](assets/save-fragment.png)
-   **Bild:** *Dialogrutan Spara som fragment*
+   **Figur:** *Spara som fragment, dialogruta*
 
 1. Klicka på **[!UICONTROL OK]**.
 
    Panelen sparas på den angivna platsen eller standardplatsen i databasen. I det adaptiva formuläret ersätts panelen av en ögonblicksbild av fragmentet. Som visas nedan sparas den allmänna informationspanelen och dess underordnade paneler, Personlig information och Adress, som ett fragment.
 
-   Om du vill redigera fragmentet klickar du **[!UICONTROL Edit Asset]** i panelens verktygsfält. Fragmentet öppnas i en ny flik eller i ett nytt fönster i redigeringsläge.
+   Om du vill redigera fragmentet klickar du på **[!UICONTROL Edit Asset]** i panelens verktygsfält. Fragmentet öppnas i en ny flik eller i ett nytt fönster i redigeringsläge.
 
    ![Redigera fragment](assets/edit-fragment.png)
 
@@ -111,16 +111,16 @@ Alla fragment som du infogar i anpassningsbara formulär visas som en platshåll
 
 Utför följande steg för att visa fullständiga fragment i formulär:
 
-1. Gå AEM webbkonsolens konfigurationssida på https:[*host*]:[*port*]/system/console/configMgr.
-1. Sök och klicka **[!UICONTROL Adaptive Form Configuration Service]** för att öppna den i redigeringsläge.
-1. Inaktivera **[!UICONTROL Enable Placeholder in place of Fragment]** kryssrutan för att visa hela fragment i stället för platshållarbilden.
+1. Gå till AEM webbkonsolkonfigurationssida på https:[*värd*]:[*port*]/system/console/configMgr.
+1. Sök och klicka på **[!UICONTROL Adaptive Form Configuration Service]** för att öppna den i redigeringsläge.
+1. Inaktivera kryssrutan **[!UICONTROL Enable Placeholder in place of Fragment]** om du vill visa hela fragment i stället för platshållarbilden.
 
 ### Infoga ett fragment i ett anpassat formulär {#insert-a-fragment-in-an-adaptive-form}
 
 De anpassade formulärfragmenten som du skapar visas på fliken Adaptiva formulärfragment i AEM innehållssökning. Så här infogar du ett adaptivt formulärfragment i en adaptiv form:
 
 1. Öppna det adaptiva formuläret, i redigeringsläge, där du vill infoga ett adaptivt formulärfragment.
-1. Klicka på **[!UICONTROL Assets]** assets-browser ![](assets/assets-browser.png) i sidofältet. Välj i **[!UICONTROL Adaptive Form Fragments]** listrutan i resursläsaren.
+1. Klicka på **[!UICONTROL Assets]** ![assets-browser](assets/assets-browser.png) i sidofältet. Välj **[!UICONTROL Adaptive Form Fragments]** i listrutan i resursläsaren.
 
    Du kan också välja att visa alla adaptiva formulärfragment eller filter baserat på formulärmodellen - Formulärmall, XML-schema eller Grundläggande.
 
@@ -132,9 +132,9 @@ De anpassade formulärfragmenten som du skapar visas på fliken Adaptiva formul�
 
 Det adaptiva formulärfragmentet infogas som referens i det adaptiva formuläret och synkroniseras med det fristående adaptiva formulärfragmentet. Det innebär att när du uppdaterar det adaptiva formulärfragmentet återspeglas ändringarna i alla adaptiva formulär där fragmentet används.
 
-### Bädda in ett fragment i anpassad form {#embed-a-fragment-in-adaptive-form}
+### Bädda in ett fragment i anpassningsbar form {#embed-a-fragment-in-adaptive-form}
 
-Du kan välja att bädda in ett adaptivt formulärfragment i ett adaptivt formulär genom att klicka på knappen **[!UICONTROL Embed Asset: *fragmentName *]**i panelverktygsfältet för det tillagda fragmentet, vilket visas i följande exempelbild.
+Du kan välja att bädda in ett adaptivt formulärfragment i ett adaptivt formulär genom att klicka på **[!UICONTROL Embed Asset: *fragmentName *]**i panelens verktygsfält för det tillagda fragmentet, vilket visas i följande exempelbild.
 
 ![Bädda in ett formulärfragment i anpassat format](assets/embed-fragment.png)
 
@@ -166,7 +166,7 @@ Du kan utföra flera åtgärder på anpassningsbara formulärfragment med hjälp
 
 1. Gå till `https://[hostname]:[port]/aem/forms.html`.
 
-1. Klicka **[!UICONTROL Select]** i verktygsfältet för användargränssnittet i AEM Forms och välj ett adaptivt formulärfragment. Verktygsfältet innehåller följande åtgärder som du kan utföra på det valda adaptiva formulärfragmentet.
+1. Klicka på **[!UICONTROL Select]** i verktygsfältet i AEM Forms och välj ett adaptivt formulärfragment. Verktygsfältet innehåller följande åtgärder som du kan utföra på det valda adaptiva formulärfragmentet.
 
 <table> 
  <tbody> 
@@ -200,7 +200,7 @@ Du kan utföra flera åtgärder på anpassningsbara formulärfragment med hjälp
   </tr> 
   <tr> 
    <td><p>Skapa ordlista</p> </td> 
-   <td><p>Skapar en ordlista för lokalisering av det valda fragmentet. Mer information finns i <a href="/help/forms/using/lazy-loading-adaptive-forms.md" target="_blank">Lokalisera anpassningsbara formulär</a>.<br /> <br /> </p> </td> 
+   <td><p>Skapar en ordlista för lokalisering av det valda fragmentet. Mer information finns i <a href="/help/forms/using/lazy-loading-adaptive-forms.md" target="_blank">Lokalisera adaptiva formulär</a>.<br /> <br /> </p> </td> 
   </tr> 
   <tr> 
    <td><p>Publicera/avpublicera</p> </td> 
@@ -213,7 +213,7 @@ Du kan utföra flera åtgärder på anpassningsbara formulärfragment med hjälp
  </tbody> 
 </table>
 
-## Lokalisera anpassningsbara formulär som innehåller fragment {#localizing-adaptive-form-containing-fragments}
+## Lokaliserar anpassat formulär som innehåller fragment {#localizing-adaptive-form-containing-fragments}
 
 Om du vill lokalisera ett adaptivt formulär som innehåller adaptiva formulärfragment måste du lokalisera fragmentet och formuläret separat. Tanken är att lokalisera ett fragment en gång och återanvända det i flera adaptiva former.
 
@@ -233,7 +233,7 @@ Om du vill lokalisera ett adaptivt formulär som innehåller adaptiva formulärf
 * När du publicerar ett adaptivt formulär måste du publicera de fristående adaptiva formulärfragmenten som infogats som referens i det adaptiva formuläret.
 * När du publicerar om ett uppdaterat adaptivt formulärfragment återspeglas ändringarna i de publicerade instanserna av det adaptiva formulär som fragmentet används i.
 * Adaptiv form som innehåller Verifiera-komponenten stöder inte anonyma användare. Du bör inte heller använda komponenten Verify i ett adaptivt formulärfragment.
-* (Endast **** Mac) Om du vill vara säker på att funktionen för formulärfragment fungerar perfekt i alla scenarier lägger du till följande post i filen /private/etc/hosts:
+* (**Endast Mac**) Om du vill vara säker på att funktionen för formulärfragment fungerar perfekt i alla scenarier lägger du till följande post i filen /private/etc/hosts:
 
    `127.0.0.1 <Host machine>`
 
@@ -241,4 +241,4 @@ Om du vill lokalisera ett adaptivt formulär som innehåller adaptiva formulärf
 
 ## Referensfragment {#reference-fragments}
 
-Referensadaptiva formulärfragment som du kan använda för att skapa formuläret finns tillgängliga. For more information, see [Reference Fragments](/help/forms/using/reference-adaptive-form-fragments.md).
+Referensadaptiva formulärfragment som du kan använda för att skapa formuläret finns tillgängliga. Mer information finns i [Referensfragment](/help/forms/using/reference-adaptive-form-fragments.md).
