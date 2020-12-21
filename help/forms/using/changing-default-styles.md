@@ -19,9 +19,9 @@ ht-degree: 0%
 
 # Ändra standardformat för HTML5-formulär {#changing-default-styles-of-html-forms}
 
-HTML5-formulär återges med HTML5-funktioner och formateringen av det återgivna formuläret görs med CSS. Standardutseendet för HTML5-formulär liknar PDF-återgivningen. Utvecklare kan använda anpassad CSS för att ändra standardutseendet på HTML5-formulär.
+HTML5-formulär återges med HTML5-funktioner och formateringen av det återgivna formuläret görs med CSS. Standardutseendet för HTML5-formulär liknar standardutseendet för PDF-återgivningen. Utvecklare kan använda anpassad CSS för att ändra standardutseendet på HTML5-formulär.
 
-Den här artikeln innehåller stegvis information om hur du ändrar format i ett HTML5-formulär och artikeln [Introduktion till format](/help/forms/using/css-styles.md) innehåller detaljerad information om olika formateringsaspekter för HTML5-formulär. Läs Introduktion till formatartiklar innan du utför de steg som nämns i den här artikeln.
+Den här artikeln innehåller stegvis information om hur du ändrar format i ett HTML5-formulär och [Introduktion till formatmallar](/help/forms/using/css-styles.md)-artikeln innehåller detaljerad information om olika formateringsaspekter för HTML5-formulär. Läs Introduktion till formatartiklar innan du utför de steg som nämns i den här artikeln.
 
 I följande två bilder visas skillnaden mellan standardformat och anpassade format.
 
@@ -37,7 +37,7 @@ I följande två bilder visas skillnaden mellan standardformat och anpassade for
 
    Navigera till mappen där du har skapat profilåtergivaren och skapa en CSS-formatmallsfil. De steg du ska följa är
 
-   1. Högerklicka på mappen och välj **Skapa** -> **Skapa fil** på menyn
+   1. Högerklicka på mappen och välj **create** -> **skapa fil** på menyn
    Om du vill veta vilka CSS-klasser som ska skapas för en viss komponent i dina HTML5-formulär läser du [Introduktion till format](/help/forms/using/css-styles.md).
 
 1. **Inkludera formatmallen i profilrenderaren**
@@ -46,11 +46,11 @@ I följande två bilder visas skillnaden mellan standardformat och anpassade for
 
    1. Sök på återgivningssidan efter följande rad:
 
-      &lt;cq:includeClientLib categories=&quot;xfaforms.profile&quot; />
+      &lt;cq:includeclientlib categories=&quot;xfaforms.profile&quot; />
 
    1. Infoga följande nedanför raden ovan för att inkludera formatmallen:
 
-      &lt;link href=&quot;/path/to/stylesheet&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/>
+      &lt;link href=&quot;/path/to/stylesheet&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; />
 
    1. Spara filen.
 
