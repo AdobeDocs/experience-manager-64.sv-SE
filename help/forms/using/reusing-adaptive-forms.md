@@ -38,7 +38,7 @@ Kopiera ett anpassat formulär på något av följande sätt:
 
 1. Markera det adaptiva formuläret. Markeringsprocessen är annorlunda för olika vyer.
 
-   Om du är i kortvyn går du till urvalsläget genom att klicka på ![ikonen aem6forms_check-circle](assets/aem6forms_check-circle.png) och klickar på alla adaptiva formulär som du vill kopiera.
+   Om du är i kortvyn går du till markeringsläget genom att klicka på ikonen ![aem6forms_check-circle](assets/aem6forms_check-circle.png) och klickar på alla adaptiva formulär som du vill kopiera.
 
    Om du är i listvyn markerar du kryssrutorna för alla adaptiva formulär.
 
@@ -46,15 +46,15 @@ Kopiera ett anpassat formulär på något av följande sätt:
    >
    >Alla markerade resurser måste vara adaptiva formulär eftersom funktionen kopiera och klistra in bara stöds för adaptiva formulär, och alla resurser som är markerade måste finnas i samma mapp.
 
-   När du har markerat resurserna klickar du på ikonen för kopiering av ![aem6forms_copy](assets/aem6forms_copy.png) i verktygsfältet för att kopiera det valda adaptiva formuläret.
+   När du har markerat resurserna klickar du på ikonen ![aem6forms_copy](assets/aem6forms_copy.png) i verktygsfältet för att kopiera det markerade adaptiva formuläret.
 
 ### Klistra in ett anpassat formulär {#paste-an-adaptive-form}
 
-När du klickar på kopieringsåtgärden avslutas markeringsläget automatiskt och ikonen för att klistra in ![aem6forms_paste](assets/aem6forms_paste.png) visas. Gå till önskad mappsökväg och klicka på ikonen Klistra in ![aem6forms_paste](assets/aem6forms_paste.png) för att klistra in det kopierade adaptiva formuläret.
+När du klickar på kopieringsåtgärden avslutas markeringsläget automatiskt och ikonen för att klistra in ![aem6forms_paste](assets/aem6forms_paste.png) visas. Gå nu till önskad mappsökväg och klicka på ikonen Klistra in ![aem6forms_paste](assets/aem6forms_paste.png) för att klistra in det kopierade adaptiva formuläret.
 
 Om du klistrar in i samma mapp eller en annan fil med samma nodnamn (som den lagras i CRX-databasen med) finns i den här målmappen läggs 1 till i suffixet (till exempel blir myaf1 och om myaf1 finns på samma plats blir myaf2. Alla andra egenskaper är desamma som det ursprungliga adaptiva formuläret.
 
-När du har klickat på ![ikonen Klistra in aem6forms_paste](assets/aem6forms_paste.png) döljs den igen. Du kan bara klistra in en gång. Om du vill skapa en kopia av samma resurs kopierar du den igen.
+När du har klickat på ikonen Klistra in ![aem6forms_paste](assets/aem6forms_paste.png) döljs den igen. Du kan bara klistra in en gång. Om du vill skapa en kopia av samma resurs kopierar du den igen.
 
 ### Ändra innehållet i det nya adaptiva formuläret {#change-contents-of-new-adaptive-form}
 
@@ -66,7 +66,7 @@ Innehållet i en inklistrad adaptiv form kan ändras på följande sätt så att
 
 1. **Ändra XFA/XSD för XFA/XSD-baserad Adaptive Forms:**
 
-   Du kan ändra den XFA/XSD som används i adaptiva formulär. Mer information om hur dessa anpassade formulär kan ändras finns i [Hantera formulärmetadata](/help/forms/using/manage-form-metadata.md)
+   Du kan ändra den XFA/XSD som används i adaptiva formulär. Mer information om hur dessa adaptiva formulär kan ändras finns i [Hantera formulärmetadata](/help/forms/using/manage-form-metadata.md)
 
 1. **Publicera igen:**
 
