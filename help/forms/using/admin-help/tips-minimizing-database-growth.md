@@ -32,8 +32,8 @@ Använd variabler sparsamt. När du använder långvariga processer tilldelas ut
 
 Använd enkla variabeltyper (till exempel sträng eller int) och undvik att använda komplexa variabeltyper när det är möjligt. Databasutrymme tilldelas för variabler även när de inte innehåller något värde. Komplexa variabler kräver vanligtvis mer utrymme än enkla.
 
-## Tips för produktadministration {#product-administration-tips}
+## Produktadministrationstips {#product-administration-tips}
 
 Använd global dokumentlagring (GDS) effektivt. GDS-katalogen på formulärservern används för att lagra bland annat filer som skickas till tjänster som är en del av AEM formulär i processer. För att förbättra prestandan lagras mindre dokument i stället i minnet och sparas i databasen.
 
-administrationskonsolen visar egenskapen Maximal intern dokumentstorlek för standarddokument för att konfigurera den maximala storleken på dokument som lagras i minnet och sparas i databasen. (Se [Konfigurera allmänna AEM formulärinställningar](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings).) Om du anger den här egenskapen till ett lågt värde sparas de flesta dokument i GDS-katalogen i stället för i databasen. Fördelen är att du enklare kan ta bort filerna när de inte längre behövs när de lagras i GDS-katalogen.
+administrationskonsolen visar egenskapen Maximal intern dokumentstorlek för standarddokument för att konfigurera den maximala storleken på dokument som lagras i minnet och som finns kvar i databasen. (Se [Konfigurera allmänna inställningar AEM formulär](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings).) Om du anger den här egenskapen till ett lågt värde sparas de flesta dokument i GDS-katalogen i stället för i databasen. Fördelen är att du enklare kan ta bort filerna när de inte längre behövs när de lagras i GDS-katalogen.
