@@ -18,13 +18,13 @@ ht-degree: 6%
 ---
 
 
-# Konfigurationsegenskaper för interaktiv kommunikation {#interactive-communications-configuration-properties}
+# Egenskaper för konfiguration av interaktiv kommunikation {#interactive-communications-configuration-properties}
 
 Redigera standardkonfigurationsegenskaper för interaktiv kommunikation
 
-Interactive Communications innehåller egenskaper som konfigureras automatiskt efter installation av [AEM Forms-tilläggspaketet](/help/forms/using/installing-configuring-aem-forms-osgi.md) . De som skapar interaktiv kommunikation kan redigera dessa standardkonfigurationsegenskaper på sidan Konfiguration **av** Adobe Experience Manager Web Console.
+Interactive Communications innehåller egenskaper som konfigureras automatiskt efter installation av [AEM Forms-tilläggspaketet](/help/forms/using/installing-configuring-aem-forms-osgi.md). Författare av interaktiv kommunikation kan redigera dessa standardkonfigurationsegenskaper på sidan **Adobe Experience Manager Web Console Configuration**.
 
-Öppna konfigurationssidan för **Adobe Experience Manager Web Console** med följande URL:
+Öppna sidan **Konfiguration av Adobe Experience Manager Web Console** med följande URL:
 
 https://&lt;server>:&lt;port>/&lt;contextPath>/system/console/configMgr
 
@@ -33,11 +33,11 @@ Konfigurationsegenskaperna omfattar:
 * [Konfiguration av dokumentfragment](#document-fragments-configuration)
 * [Skapa korrespondenskonfiguration](#create-correspondence-configuration)
 * [Konfiguration av webbkanal för adaptiv form och interaktiv kommunikation](#adaptive-form-and-interactive-communication-web-channel-configuration)
-* [Konfiguration av temat Adaptiv form och interaktiv kommunikation via webbkanal](#adaptive-form-and-interactive-communication-web-channel-theme-configuration)
+* [Konfiguration av tema för adaptiv form och interaktiv kommunikation - webbkanal](#adaptive-form-and-interactive-communication-web-channel-theme-configuration)
 
-## Konfiguration av dokumentfragment {#document-fragments-configuration}
+## Konfiguration för dokumentfragment {#document-fragments-configuration}
 
-Tryck på Konfiguration **av** dokumentfragment på **Adobe Experience Manager Web Console-konfigurationssidan** för att visa konfigurationsegenskaperna för dokumentfragment.
+Tryck på **Konfiguration av dokumentfragment** på sidan **Adobe Experience Manager Web Console Configuration** för att visa konfigurationsegenskaperna för dokumentfragment.
 
 <table> 
  <tbody> 
@@ -58,24 +58,24 @@ Tryck på Konfiguration **av** dokumentfragment på **Adobe Experience Manager W
      <li>numberGroupSeparator = ,</li> 
      <li>numberUseGroupSeparator = true</li> 
     </ul> </td> 
-   <td><p>--</p> </td> 
+   <td><p>—</p> </td> 
   </tr> 
   <tr> 
    <td>Indrag</td> 
    <td>Bredden på en enskild indragsenhet som används för text i listdokumentfragment.</td> 
-   <td>12.7mm</td> 
+   <td>12,7 mm</td> 
    <td>Siffra</td> 
   </tr> 
   <tr> 
    <td>Minsta bredd för romerska siffror</td> 
    <td>Minsta bredd som ska användas på punkt- eller nummerfältet när latinska nummer används i listdokumentfragment. </td> 
-   <td>12.7mm</td> 
+   <td>12,7 mm</td> 
    <td>Siffra</td> 
   </tr> 
   <tr> 
    <td>Minsta numerisk bredd</td> 
    <td>Minsta bredd som ska användas på punkt- eller nummerfältet när numrerade listor används, förutom latinska nummer i listdokumentfragment.</td> 
-   <td>8.0mm</td> 
+   <td>8,0 mm</td> 
    <td>Siffra</td> 
   </tr> 
  </tbody> 
@@ -83,16 +83,16 @@ Tryck på Konfiguration **av** dokumentfragment på **Adobe Experience Manager W
 
 ## Skapa korrespondenskonfiguration {#create-correspondence-configuration}
 
-Tryck på **Skapa korrespondenskonfiguration** på **Adobe Experience Manager Web Console-konfigurationssidan** för att visa konfigurationsegenskaperna för agentens användargränssnitt.
+Tryck på **Create Correspondence Configuration** på sidan **Adobe Experience Manager Web Console Configuration** för att visa konfigurationsegenskaperna för agentens användargränssnitt.
 
 | Egenskap | Beskrivning | Standard | Godtagbara värden |
 |---|---|---|---|
 | Visa löst innehåll för redigering | Markera kryssrutan om du vill visa löst innehåll (faktiska värden i stället för platshållare) när du redigerar textmodulen i agentgränssnittet. | Inte markerad | Ej relevant |
 | Använd vattenstämpel vid förhandsvisning | Markera kryssrutan om du vill använda vattenstämpel på kanalen Skriv ut i interaktiv kommunikation i förhandsgranskningsläget. | Inte markerad | Ej relevant |
 
-## Konfiguration av webbkanal för adaptiv form och interaktiv kommunikation {#adaptive-form-and-interactive-communication-web-channel-configuration}
+## Konfiguration av webbkanalen för adaptiv form och interaktiv kommunikation {#adaptive-form-and-interactive-communication-web-channel-configuration}
 
-Tryck på **Adaptive Form and Interactive Communication Web Channel Configuration** på **Adobe Experience Manager Web Console Configuration** -sidan för att visa konfigurationsegenskaperna för Adaptive Forms och Interactive Communications Web channel. I följande tabell beskrivs egenskaperna för interaktiv kommunikation:
+Tryck på **Adaptive Form and Interactive Communication Web Channel Configuration** på sidan **Adobe Experience Manager Web Console Configuration** för att visa konfigurationsegenskaperna för Adaptive Forms och Interactive Communications Web channel. I följande tabell beskrivs egenskaperna för interaktiv kommunikation:
 
 | Egenskap | Beskrivning | Standard | Godtagbara värden |
 |---|---|---|---|
@@ -100,9 +100,9 @@ Tryck på **Adaptive Form and Interactive Communication Web Channel Configuratio
 | Maximalt antal cacheposter | Ange det maximala antalet adaptiva formulär och interaktiv kommunikation som kan hämtas med cacheminnet. | 100 | Siffra |
 | Gör filnamnet unikt | Markera kryssrutan om du vill ha unika namn för filer inkluderade som bilagor i Adaptive Forms och Interactive Communications. | Inte markerad | Ej relevant |
 
-## Konfiguration av temat Adaptiv form och interaktiv kommunikation via webbkanal {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
+## Konfiguration av temat Adaptiv form och interaktiv kommunikation - webbkanal {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
 
-Tryck på **Adaptive Form and Interactive Communication Web Channel Theme Configuration** på **Adobe Experience Manager Web Console Configuration** -sidan för att visa konfigurationsegenskaperna för Adaptive Forms och Interactive Communications Web channel themes.
+Tryck på **Adaptiv form och Interactive Communication Web Channel Theme Configuration** på **Adobe Experience Manager Web Console Configuration**-sidan för att visa konfigurationsegenskaperna för Adaptiva Forms- och Interactive Communications-webbkanalteman.
 
 <table> 
  <tbody> 
