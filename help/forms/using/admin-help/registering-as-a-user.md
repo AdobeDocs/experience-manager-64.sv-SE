@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Registrera som användare {#registering-as-a-user}
+# Registrerar som en användare {#registering-as-a-user}
 
 Du kan använda policyskyddade dokument som du får från en dokumentsäkerhetsanvändare, även om du är extern i förhållande till användarens organisation. Om du vill använda ett profilskyddat dokument måste du registrera dig med dokumentskydd. Om du inte tidigare har bjudits in att registrera dig, initierar dokumentsäkerhet registreringsprocessen när dessa händelser inträffar:
 
