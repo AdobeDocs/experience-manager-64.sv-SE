@@ -81,7 +81,7 @@ Den här mappningen av XML-element med adaptiva formulärkomponenter är följan
  </tbody> 
 </table>
 
-## XML-schema - exempel {#sample-xml-schema}
+## Exempel på XML-schema {#sample-xml-schema}
 
 Här är ett exempel på ett XML-schema.
 
@@ -142,7 +142,7 @@ Du kan lägga till följande attribut i XML-schemaelement om du vill lägga till
   </tr> 
   <tr> 
    <td><code>use=required </code></td> 
-   <td>Markerar ett fält obligatoriskt<br /> </td> 
+   <td>Markerar ett fält som obligatoriskt<br /> </td> 
    <td>Attribut</td> 
   </tr> 
   <tr> 
@@ -173,7 +173,7 @@ Du kan lägga till följande attribut i XML-schemaelement om du vill lägga till
 
 >
 >
-Om du till exempel lägger till `userFirstName` schemaelementet, kommer den bildtext som genereras i det adaptiva formuläret att vara `User First Name`.
+Om du till exempel lägger till schemaelementet `userFirstName` är bildtexten som skapas i det adaptiva formuläret `User First Name`.
 
 ## Begränsa tillåtna värden för en adaptiv formulärkomponent {#limit-acceptable-values-for-an-adaptive-form-component}
 
@@ -204,7 +204,7 @@ Du kan lägga till följande begränsningar i XML-schemaelement för att begrän
    <td> 
     <ul> 
      <li>Numerisk ruta</li> 
-     <li>Numerisk stege<br /> </li> 
+     <li>Numerisk nummerlista<br /> </li> 
      <li>Datumväljaren</li> 
     </ul> </td> 
   </tr> 
@@ -293,15 +293,15 @@ Du kan lägga till följande begränsningar i XML-schemaelement för att begrän
 
 **Hur vet jag vilket element i trädet som är associerat med vilket XML-element?**
 
-När du dubbelklickar på ett element i Innehållssökning visas ett fältnamn och en egenskap med namnet `bindRef`. Den här egenskapen mappar trädelementet till elementet eller attributet i schemat.
+När du dubbelklickar på ett element i Innehållssökning visas ett fältnamn och en egenskap med namnet `bindRef` på en popup-meny. Den här egenskapen mappar trädelementet till elementet eller attributet i schemat.
 
 ![Ett bindref-fält för ett XML-schemaelement](assets/dblclick.png)
 
-I fältet bindRef</code> visas associationen mellan ett trädelement och ett element eller attribut i ett schema.
+Fältet bindRef</code> visar associationen mellan ett trädelement och ett element eller attribut i ett schema.
 
 >[!NOTE]
 >
->Attribut har en `@` symbol i `bindRef`värdet för att skilja dem från element. Till exempel, `/config/projectDetails/@duration`.
+>Attribut har en `@`-symbol i `bindRef`värdet för att skilja dem från element. Till exempel, `/config/projectDetails/@duration`.
 
 **Varför kan jag inte dra enskilda element i ett delformulär (struktur som genereras från en komplex typ) för repeterbara delformulär (värdena minOcCours och maxOccurs är större än 1)?**
 
@@ -316,4 +316,4 @@ Du har två alternativ:
 
 **Vad är en bindRef?**
 
-A `bindRef` är anslutningen mellan en adaptiv formulärkomponent och ett schemaelement eller attribut. Det anger `XPath` var värdet som hämtas från den här komponenten eller det här fältet är tillgängligt i XML-utdata. A `bindRef`används också när ett fältvärde fylls i i förväg från förfylld (förifylld) XML.
+En `bindRef` är anslutningen mellan en adaptiv formulärkomponent och ett schemaelement eller attribut. Det anger `XPath` där värdet som hämtas från den här komponenten eller det här fältet är tillgängligt i XML-utdata. Ett `bindRef`värde används också när ett fältvärde fylls i i förväg från förfylld (förifylld) XML.
