@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Funktioner i Flex arbetsyta som inte finns på AEM Forms arbetsyta {#features-of-flex-workspace-not-available-in-aem-forms-workspace}
+# Funktioner i Flex-arbetsytan är inte tillgängliga i AEM Forms {#features-of-flex-workspace-not-available-in-aem-forms-workspace}
 
 AEM Forms arbetsyta är den helt nya arbetsytan. Nedan följer några av de funktioner på den Flex-baserade arbetsytan som inte är tillgängliga på arbetsytan i AEM Forms.
 
