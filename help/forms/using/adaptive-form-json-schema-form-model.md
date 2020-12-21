@@ -16,7 +16,7 @@ ht-degree: 1%
 ---
 
 
-# Skapa anpassningsbara formulär med JSON-schema {#creating-adaptive-forms-using-json-schema}
+# Skapa adaptiva formulär med JSON Schema {#creating-adaptive-forms-using-json-schema}
 
 ## Förutsättningar {#prerequisites}
 
@@ -25,7 +25,7 @@ Om du skapar ett anpassat formulär med ett JSON-schema som formulärmodell mås
 * [Skapa ett anpassat formulär](/help/forms/using/creating-adaptive-form.md)
 * [JSON-schema](https://json-schema.org/)
 
-## Använda ett JSON-schema som formulärmodell  {#using-a-json-schema-as-form-model}
+## Använda ett JSON-schema som formulärmodell {#using-a-json-schema-as-form-model}
 
 AEM Forms har stöd för att skapa ett adaptivt formulär genom att använda ett befintligt JSON-schema som formulärmodell. Detta JSON-schema representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i din organisation. Det JSON-schema som du använder ska vara kompatibelt med [v4-specifikationerna](https://json-schema.org/draft-04/schema).
 
@@ -33,7 +33,7 @@ De viktigaste funktionerna i ett JSON-schema är:
 
 * Strukturen för JSON visas som ett träd på fliken Innehållssökning i redigeringsläget för ett anpassat formulär. Du kan dra och lägga till element från JSON-hierarkin i det adaptiva formuläret.
 * Du kan fylla i formuläret i förväg med JSON som är kompatibel med det associerade schemat.
-* När data skickas skickas skickas de som anges av användaren som JSON som är i linje med det associerade schemat.
+* När data skickas skickas skickas de som anges av användaren som JSON som är anpassad efter det associerade schemat.
 
 Ett JSON-schema består av enkla och komplexa elementtyper. Elementen har attribut som lägger till regler i elementet. När dessa element och attribut dras till ett adaptivt formulär mappas de automatiskt till motsvarande adaptiv formulärkomponent.
 
@@ -66,7 +66,7 @@ Den här mappningen av JSON-element med adaptiva formulärkomponenter är följa
    <td><br /> <br /> Textfält<br /> <br /> <br /> </td> 
   </tr> 
   <tr> 
-   <td>number, egenskap<br /> </td> 
+   <td>talegenskap<br /> </td> 
    <td>Numeriskt fält med undertyp inställd på flytande<br /> </td> 
   </tr> 
   <tr> 
@@ -75,10 +75,10 @@ Den här mappningen av JSON-element med adaptiva formulärkomponenter är följa
   </tr> 
   <tr> 
    <td>boolesk egenskap<br /> </td> 
-   <td>Switch<br /> </td> 
+   <td>Växla<br /> </td> 
   </tr> 
   <tr> 
-   <td>object, egenskap<br /> </td> 
+   <td>objektegenskap<br /> </td> 
    <td>Panel<br /> </td> 
   </tr> 
   <tr> 
@@ -317,7 +317,7 @@ Definitionsnycklar används för att identifiera återanvändbara scheman. Åter
 
 Exemplet ovan definierar en kundpost där varje kund har både en leveransadress och en faktureringsadress. Adressernas struktur är densamma - adresserna har en gatuadress, ort och delstat - så det är en bra idé att inte duplicera adresserna. Det gör det också enkelt att lägga till och ta bort fält för framtida ändringar.
 
-## Förkonfigurerar fält i JSON-schemadefinition {#pre-configuring-fields-in-json-schema-definition}
+## Förkonfigurerar fält i JSON-schemadefinitionen {#pre-configuring-fields-in-json-schema-definition}
 
 Du kan använda egenskapen **aem:afProperties** för att förkonfigurera JSON-schemafältet för att mappa till en anpassad adaptiv formulärkomponent. Ett exempel visas nedan:
 
@@ -358,7 +358,7 @@ Du kan lägga till följande begränsningar i JSON-schemaelement för att begrä
    <td> 
     <ul> 
      <li>Numerisk ruta</li> 
-     <li>Numerisk stege<br /> </li> 
+     <li>Numerisk nummerlista<br /> </li> 
      <li>Datumväljaren</li> 
     </ul> </td> 
   </tr> 
@@ -437,7 +437,7 @@ Du kan lägga till följande begränsningar i JSON-schemaelement för att begrä
  </tbody> 
 </table>
 
-## Konstruktioner som inte stöds  {#non-supported-constructs}
+## Konstruktioner som inte stöds {#non-supported-constructs}
 
 Adaptiva formulär stöder inte följande JSON-schemakonstruktioner:
 
