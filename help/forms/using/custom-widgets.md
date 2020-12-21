@@ -20,9 +20,10 @@ ht-degree: 0%
 
 # Skapa anpassade utseenden i HTML5-formulär {#create-custom-appearances-in-html-forms}
 
-Du kan koppla anpassade widgetar till en Mobile Forms. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar med hjälp av utseenderamverket. XFA-motorn använder olika widgetar. Mer information finns i Utseenderamverket för adaptiva formulär och HTML5-formulär [](/help/forms/using/introduction-widgets.md) .
+Du kan koppla anpassade widgetar till en Mobile Forms. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar med hjälp av utseenderamverket. XFA-motorn använder olika widgetar. Mer information finns i [Utseenderamverket för adaptiva formulär och HTML5-formulär](/help/forms/using/introduction-widgets.md).
 
-![Ett exempel på standardwidget och anpassad widget](assets/custom-widgets.jpg)**Bild:** *Ett exempel på standardwidget och anpassad widget*
+![Ett exempel på standardwidget och anpassad ](assets/custom-widgets.jpg)
+**widgetFigure:** *Ett exempel på standardwidget och anpassad widget*
 
 ## Integrera anpassade widgetar med HTML5-formulär {#integrating-custom-widgets-with-html-forms}
 
@@ -46,7 +47,7 @@ HTML5-formulär innehåller en implementering av widgetramverket som kan utökas
   </tr> 
   <tr> 
    <td>getEventMap</td> 
-   <td>Returnerar en karta som konverterar HTML-händelser till XFA-händelser. <br /> {<br /> oskärpa: XFA_EXIT_EVENT,<br /> }<br /> Det här exemplet visar att oskärpan är en HTML-händelse och att XFA_EXIT_EVENT motsvarar en XFA-händelse. </td> 
+   <td>Returnerar en karta som konverterar HTML-händelser till XFA-händelser. <br /> {<br /> oskärpa: XFA_EXIT_EVENT,<br /> }<br /> I det här exemplet visas att oskärpan är en HTML-händelse och att XFA_EXIT_EVENT motsvarar en XFA-händelse. </td> 
   </tr> 
   <tr> 
    <td>getOptionsMap</td> 
