@@ -17,9 +17,9 @@ ht-degree: 0%
 ---
 
 
-# Öppna en uppgift {#opening-a-task}
+# Öppna en aktivitet {#opening-a-task}
 
-Om AEM Forms-programmet synkroniseras med en AEM Forms-server kan du arbeta med uppgifter som du har tilldelats. Uppgifter är steg i arbetsflödet som definieras i workbench eller i AEM arbetsflödesredigerare. Se till exempel [Konard hämtar utvärderingsaktiviteten på Geometrixx Gov-referenswebbplats](/help/forms/using/gov-reference-site-walkthrough.md#conard-assessment-task). Du kan ändra alla uppgifter som är tilldelade dig. Alla uppgifter är tillgängliga på fliken Uppgift. Uppgifter som sparas som utkast finns kvar på fliken Åtgärder.
+Om AEM Forms-programmet synkroniseras med en AEM Forms-server kan du arbeta med uppgifter som du har tilldelats. Uppgifter är steg i arbetsflödet som definieras i workbench eller i AEM arbetsflödesredigerare. Se till exempel [Konard hämtar utvärderingsaktiviteten på Geometrixx Gov-referensplats](/help/forms/using/gov-reference-site-walkthrough.md#conard-assessment-task). Du kan ändra alla uppgifter som är tilldelade dig. Alla uppgifter är tillgängliga på fliken Uppgift. Uppgifter som sparas som utkast finns kvar på fliken Åtgärder.
 
 Andra formulär sparas som utkast på fliken Utkast. Se [Spara ett utkast](/help/forms/using/save-as-draft.md).
 
@@ -34,11 +34,11 @@ Andra formulär sparas som utkast på fliken Utkast. Se [Spara ett utkast](/help
 
 1. Tryck på uppgiften för att öppna den.
 
-   Om du vill visa ytterligare instruktioner som anges i Workbench-processen trycker du på **Visa sammanfattning** .
+   Du kan trycka på **Visa sammanfattning** om du vill visa ytterligare instruktioner som anges i Workbench-processen.
 
 **Öppna ett program**
 
-1. Tryck på **programmet** på fliken **Forms** .
+1. Tryck på **application** på fliken **Forms**.
 
    När du väljer ett program visas programbeskrivningen under programnamnet. Efter beskrivningen visas den användaråtgärd/de användaråtgärder som är kopplade till programmet.
 
