@@ -31,7 +31,7 @@ För varje objekt som inte är installerade visas följande information i listan
 
 **Åtgärdsnamn eller grennamn:** Namnet på åtgärden eller grenen.
 
-**Status:** STALLERAD för fasta objekt.
+**Status:** Alltid STALLED för installerade objekt.
 
 **Fel:** En kort beskrivning av problemet.
 
@@ -39,14 +39,14 @@ För varje objekt som inte är installerade visas följande information i listan
 
 **Processnamn - version:** Namnet på processen som tilldelats i Workbench.
 
-**Stängt den:** Datum och tid då åtgärden eller grenen stoppades.
+**Stängt datum:** Datum och tid då åtgärden eller grenen stoppades.
 
 Du kan göra följande på sidan Installerade åtgärder eller Stängda grenar:
 
 * Välj ett fel om du vill visa information om det. När du väljer ett fel visas sidan Felinformation.
 * Avsluta eller försök med fasta åtgärder eller försök med fasta grenar igen.
 
-## Avsluta eller göra om fasta operationer eller förgreningar {#terminating-or-retrying-stalled-operations-or-branches}
+## Avslutar eller försöker utföra fasta åtgärder eller grenar {#terminating-or-retrying-stalled-operations-or-branches}
 
 På sidan Installerade åtgärder kan du avsluta de processinstanser som visas.
 
@@ -74,7 +74,7 @@ Rutan längst ned på sidan innehåller felinformationen.
 
 Du kan också avsluta eller försöka utföra fasta åtgärder igen, och göra om fasta grenar, från sidan Felinformation.
 
-## Processen stoppas inte när eskaleringsanvändaren inte finns {#process-does-not-stall-when-escalation-user-does-not-exist}
+## Processen avstannar inte när eskaleringsanvändaren inte finns {#process-does-not-stall-when-escalation-user-does-not-exist}
 
 Fel uppstår när åtgärden Tilldela uppgift i AEM användartjänst är konfigurerad att eskalera uppgiften till en annan användare efter en viss tidsperiod, och eskaleringsanvändaren tas bort efter att åtgärden Tilldela uppgift körs men innan eskaleringen sker.
 
@@ -84,4 +84,4 @@ När den här situationen inträffar ändras inte processens och aktivitetens ti
 
 Om eskaleringsanvändaren tas bort innan aktiviteten genereras (innan Tilldela uppgift-åtgärden körs) avbryts processen eller InvalidPrincipal-undantagshändelsen.
 
-Om du vill förhindra det här problemet ska du söka efter uppgifter som tillhör användaren och hantera dem i enlighet med detta när du tar bort en användare. (See [Working with tasks](/help/forms/using/admin-help/tasks.md#working-with-tasks).)
+Om du vill förhindra det här problemet ska du söka efter uppgifter som tillhör användaren och hantera dem i enlighet med detta när du tar bort en användare. (Se [Arbeta med uppgifter](/help/forms/using/admin-help/tasks.md#working-with-tasks).)
