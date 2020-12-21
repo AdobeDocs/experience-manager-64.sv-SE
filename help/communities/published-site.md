@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # Upplev den publicerade webbplatsen {#experience-the-published-site}
 
-## Bläddra till Ny webbplats vid publicering {#browse-to-new-site-on-publish}
+## Bläddra till ny webbplats vid publicering {#browse-to-new-site-on-publish}
 
 Nu när den nyligen skapade communitywebbplatsen har publicerats bläddrar du till den URL som visas när du skapar webbplatsen, men på publiceringsservern, t.ex.
 
@@ -52,7 +52,7 @@ Om du markerar olika länkar är de skrivskyddade.
 
 ## Förhindra anonym åtkomst på JCR {#prevent-anonymous-access-on-jcr}
 
-En känd begränsning exponerar communityinnehållet för anonyma besökare via jcr-innehåll och json, även om anonym åtkomst **** är inaktiverat för webbplatsens innehåll. Det här beteendet kan dock styras med delningsbegränsningar som en tillfällig lösning.
+En känd begränsning exponerar communityinnehållet för anonyma besökare via jcr-innehåll och json , även om **Tillåt anonym åtkomst** är inaktiverat för webbplatsens innehåll. Det här beteendet kan dock styras med delningsbegränsningar som en tillfällig lösning.
 
 Följ de här stegen för att skydda communityplatsens innehåll från anonyma användare genom jcr-innehåll och json:
 
@@ -66,7 +66,7 @@ Följ de här stegen för att skydda communityplatsens innehåll från anonyma a
 
    ![webbplatsautentisering](assets/site-authentication.png)
 
-1. Gå till **[!UICONTROL Advanced]** fliken.
+1. Gå till fliken **[!UICONTROL Advanced]**.
 
    ![page-properties](assets/page-properties.png)
 
@@ -74,19 +74,19 @@ Följ de här stegen för att skydda communityplatsens innehåll från anonyma a
 1. Lägg till inloggningssidans sökväg. Till exempel, `/content/......./GetStarted`.
 1. Publicera sidan.
 
-## Betrodd medlem i användargruppen {#trusted-community-member}
+## Betrodd community-medlem {#trusted-community-member}
 
-Den här upplevelsen förutsätter att [Aaron McDonald](tutorials.md#demo-users) har tilldelats rollerna [community manager och moderator](create-site.md#roles). Om inte, gå tillbaka till utvecklingsmiljön för att [ändra webbplatsinställningarna](sites-console.md#modifying-site-properties) och välj Aaron McDonald som både community manager och moderator.
+Den här upplevelsen förutsätter att [Aaron McDonald](tutorials.md#demo-users) har tilldelats rollerna [community manager och moderator](create-site.md#roles). Om inte, går du tillbaka till författarmiljön för att [ändra webbplatsinställningarna](sites-console.md#modifying-site-properties) och väljer Aaron McDonald som både community manager och moderator.
 
-I det övre högra hörnet markerar du `Log in`och signerar med användarnamnet&quot;aaron.mcdonald@mailinator.com&quot; och lösenordet&quot;password&quot;. Lägg märke till möjligheten att logga in med Twitter- eller Facebook-inloggningsuppgifter.
+I det övre högra hörnet väljer du `Log in` och signerar med användarnamnet aaron.mcdonald@mailinator.com och lösenordet password. Lägg märke till möjligheten att logga in med Twitter- eller Facebook-inloggningsuppgifter.
 
 ![chlimage_1-312](assets/chlimage_1-312.png)
 
-När du har loggat in finns det ett nytt menyalternativ, `Administration`som visas eftersom medlemmen har tilldelats rollen Moderator. Nu är det intressantare att välja olika länkar.
+När du har loggat in finns det ett nytt menyalternativ, `Administration`, som visas eftersom medlemmen har tilldelats rollen Moderator. Nu är det intressantare att välja olika länkar.
 
 ![chlimage_1-313](assets/chlimage_1-313.png)
 
-Observera att kalendersidan är hemsidan eftersom den valda referensplatsmallen inkluderade kalenderfunktionen först, följt av aktivitetsströmfunktion, forumfunktion osv. Den här strukturen visas från konsolen [Platsmall](sites.md#edit-site-template) eller när du ändrar platsegenskaper i författarmiljön:
+Observera att kalendersidan är hemsidan eftersom den valda referensplatsmallen inkluderade kalenderfunktionen först, följt av aktivitetsströmfunktion, forumfunktion osv. Den här strukturen är synlig från konsolen [Platsmall](sites.md#edit-site-template) eller när du ändrar platsegenskaper i författarmiljön:
 
 ![chlimage_1-314](assets/chlimage_1-314.png)
 
@@ -94,8 +94,8 @@ Observera att kalendersidan är hemsidan eftersom den valda referensplatsmallen 
 >
 >Mer information om Communities-komponenter och -funktioner finns på
 >
->* [Communities-komponenter](author-communities.md) (för författare)
->* [Komponent-, funktions- och](essentials.md) funktionsfunktioner (för utvecklare)
+>* [Communities-komponenter](author-communities.md)  (för författare)
+>* [Komponent-, funktions- och](essentials.md)  funktionsfunktioner (för utvecklare)
 
 >
 
@@ -111,13 +111,13 @@ Besökarna kan visa inlägg och sortera dem på olika sätt.
 
 ![chlimage_1-315](assets/chlimage_1-315.png)
 
-## Länken Grupper {#groups-link}
+## Grupplänk {#groups-link}
 
 Eftersom Aaron är gruppadministratör kan Aron skapa en ny community-grupp genom att välja länken Grupper, välja en gruppmall, bild, om gruppen är öppen eller hemlig och bjuda in medlemmar.
 
 Detta är ett exempel där en grupp skapas i publiceringsmiljön.
 
-Grupper kan också skapas i författarmiljön och hanteras i communitywebbplatsen i författarmiljön ( [Community Groups Console](groups.md)). Upplevelsen av [att skapa grupper på författare](nested-groups.md) är nästa i den här självstudiekursen.
+Grupper kan också skapas i författarmiljön och hanteras i communitywebbplatsen i författarmiljön (konsolen [Community Groups](groups.md)). Upplevelsen av att [skapa grupper på författare](nested-groups.md) är nästa i den här självstudiekursen.
 
 ![chlimage_1-316](assets/chlimage_1-316.png)
 
@@ -128,25 +128,25 @@ Skapa en referensgrupp:
    * Gruppnamn: `Sports`
    * Beskrivning: `A parent group for various sporting groups`
    * Grupp-URL-namn: `sports`
-   * välj `Open Group` (tillåt alla community-medlemmar att delta genom att gå med)
+   * välj `Open Group` (tillåt alla community-medlemmar att delta genom att ansluta)
 1. **[!UICONTROL Template tab]**
-   * Markera `Reference Group` (innehåller en gruppfunktion i sin struktur för att tillåta kapslade grupper)
+   * Välj `Reference Group` (innehåller en gruppfunktion i strukturen för att tillåta kapslade grupper)
 1. Välj **[!UICONTROL Create Group]**
 
 ![chlimage_1-317](assets/chlimage_1-317.png)
 
-När en ny grupp har skapats **väljer du den nya sportgruppen** för att skapa två grupper (kapslade) i den. Eftersom en platsstruktur inte kan börja med gruppfunktionen måste du välja länken Grupper när du har öppnat gruppen Sport:
+När en ny grupp har skapats **markerar du den nya sportgruppen** för att skapa två grupper (kapslade) i den. Eftersom en platsstruktur inte kan börja med gruppfunktionen måste du välja länken Grupper när du har öppnat gruppen Sport:
 
 ![chlimage_1-318](assets/chlimage_1-318.png)
 
-Den andra uppsättningen länkar, med början `Blog`, tillhör den markerade gruppen, `Sports`gruppen. Genom att välja `Groups` länken Sport är det möjligt att kapsla två grupper i gruppen Sport.
+Den andra uppsättningen länkar, med början med `Blog`, tillhör den markerade gruppen, `Sports`gruppen. Genom att välja länken `Groups` för sport är det möjligt att kapsla två grupper inom gruppen Sport.
 
 Som ett exempel lägger du till två n `ew groups.`
 
-* En namngiven `Baseball`
-   * Ange det som ett `Open Group` (obligatoriskt medlemskap)
+* Ett namn med namnet `Baseball`
+   * Låt den vara inställd som `Open Group` (obligatoriskt medlemskap)
    * På fliken Mallar väljer du `Conversational Group`
-* En namngiven `Gymnastics`
+* Ett namn med namnet `Gymnastics`
    * Ändra inställningen till `Member Only Group` (begränsat medlemskap)
    * På fliken Mallar väljer du `Conversational Group`
 
@@ -154,39 +154,39 @@ Som ett exempel lägger du till två n `ew groups.`
 
 * En uppdatering av sidan kan behövas innan båda grupperna visas
 * Den här mallen innehåller inte *gruppfunktionen, så det går inte att kapsla in grupper ytterligare
-* På författaren har [gruppkonsolen](groups.md) ett tredje val - ett `Public Group` (valfritt medlemskap)
+* På författaren har [gruppkonsolen](groups.md) ett tredje alternativ - ett `Public Group` (valfritt medlemskap)
 
 När båda grupperna har skapats väljer du Baseball-gruppen, en öppen grupp, och lägger märke till dess länkar: `Discussions` `What's New` `Members`
 Gruppens länkar visas under huvudplatsens länkar och ger följande resultat:
 
 ![chlimage_1-319](assets/chlimage_1-319.png)
 
-Vid författare - med administratörsbehörighet går du till konsolen [](members.md) Communities Groups (Communities Groups) och lägger till Weston McCall i `Community Engage Gymnastics <uid> Members` gruppen.
+Vid författare - med administratörsbehörighet går du till konsolen [Communities Groups](members.md) och lägger till Weston McCall i gruppen `Community Engage Gymnastics <uid> Members`.
 
 Fortsätt publicera, logga ut som Aaron McDonald och visa grupperna i Sports Group som en anonym besökare:
 
 * Från startsidan
-* Markera `Groups`länk
-* Markera `Sports`länk
-* Välj `Groups`länken Sport
+* Välj `Groups`länk
+* Välj `Sports`länk
+* Välj länken `Groups`för sport
 
 Bara Baseball-gruppen syns.
 
-Logga in som Weston McCall (weston.mccall@dodgit.com / lösenord) och navigera till samma plats. Observera att Weston kan `Join` öppna `Baseball` gruppen och antingen `enter or Leave` den privata `Gymnastics`gruppen.
+Logga in som Weston McCall (weston.mccall@dodgit.com / lösenord) och navigera till samma plats. Observera att Weston kan `Join` den öppna `Baseball`-gruppen och antingen `enter or Leave` den privata `Gymnastics`gruppen.
 
 ![chlimage_1-320](assets/chlimage_1-320.png)
 
-## Länk till webbsida {#web-page-link}
+## Webbsideslänk {#web-page-link}
 
 Visa den grundläggande webbsidan som finns på webbplatsen genom att välja länken Webbsida. Standardverktygen AEM kan användas för att lägga till innehåll på den här sidan i författarmiljön.
 
-Gå till exempel till **författarinstansen** , öppna `engage` mappen i [webbgruppskonsolen](sites-console.md)och välj ikonen **Öppna webbplats** för att öppna redigeringsläget. Välj sedan förhandsvisningsläget för att markera `Web Page`länken och välj sedan redigeringsläget för att lägga till titel- och textkomponenter. Publicera sedan om antingen bara sidan eller hela webbplatsen.
+Till exempel går du till **author**-instansen, öppnar mappen `engage` i [Webbplatser-konsolen](sites-console.md), väljer **Öppna plats**-ikonen för att öppna redigeringsläget för författare. Välj sedan förhandsgranskningsläget för att markera länken `Web Page`och välj sedan redigeringsläget för att lägga till titel- och textkomponenter. Publicera sedan om antingen bara sidan eller hela webbplatsen.
 
 ![chlimage_1-321](assets/chlimage_1-321.png)
 
 ## Administrationslänk {#administration-link}
 
-När communitymedlemmen har modereringsbehörighet visas länken Administration och om du väljer den visas det communityinnehåll som publicerats och det kan [modereras](moderate-ugc.md) på ett sätt som liknar [modereringskonsolen](moderation.md) i författarmiljön.
+När communitymedlemmen har modereringsbehörighet visas länken Administration och om du väljer den visas det communityinnehåll som har publicerats och det kan vara [modererat](moderate-ugc.md) på ett sätt som liknar [moderationskonsolen](moderation.md) i författarmiljön.
 
 Använd webbläsarens bakåtknapp för att gå tillbaka till den publicerade webbplatsen. De flesta konsoler är inte tillgängliga via global navigering i publiceringsmiljön.
 
@@ -203,7 +203,7 @@ När du har loggat ut kan du skapa en ny användarregistrering.
 
 Som standard är e-postadressen inloggnings-ID. Om alternativet inte är markerat kan besökaren ange ett eget inloggnings-ID (användarnamn). Användarnamnet måste vara unikt i publiceringsmiljön.
 
-När du har angett användarens namn, e-postadress och lösenord `Sign Up`skapas användaren och kan signeras om du väljer det.
+När du har angett användarens namn, e-postadress och lösenord skapas användaren och kan signeras om du väljer `Sign Up`.
 
 När du är inloggad är den första sidan deras `Profile`sida, som de kan anpassa.
 
