@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Logga in på AEM Forms-appen {#logging-in-to-aem-forms-app}
+# Logga in på AEM Forms {#logging-in-to-aem-forms-app}
 
 När du startar ditt AEM Forms-program måste du först ange dina inloggningsuppgifter och en URL till en AEM Forms-server.
 
@@ -34,7 +34,7 @@ När du startar ditt AEM Forms-program måste du först ange dina inloggningsupp
    >* Du kan välja en AEM Forms-server-URL att logga in på via appen.
 
 
-När du loggar in på appen dirigeras du till [**startskärmen **](/help/forms/using/home-screen.md).
+När du loggar in på appen dirigeras du till skärmen [**Hem**](/help/forms/using/home-screen.md).
 
 >[!NOTE]
 >
