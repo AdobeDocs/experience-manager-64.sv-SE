@@ -22,7 +22,7 @@ Utnyttja, integrera och arbeta med online- och lokala Microsoft Dynamics-tjänst
 
 ![dataintegrering](assets/data-integeration.png)
 
-Microsoft Dynamics är en CRM- och ERP-programvara (Enterprise Resource Planning) som innehåller företagslösningar för att skapa och hantera kundkonton, kontakter, leads, möjligheter och ärenden. [AEM Forms Data Integration](/help/forms/using/data-integration.md) tillhandahåller en OData-molntjänstkonfiguration som integrerar Forms med både online- och lokal Microsoft Dynamics-server. Det gör att du kan skapa formulärdatamodell baserat på de enheter, attribut och tjänster som definierats i Microsoft Dynamics-tjänsten. Formulärdatamodellen kan användas för att skapa anpassade formulär som interagerar med Microsoft Dynamics-servern för att möjliggöra affärsarbetsflöden. Till exempel:
+Microsoft Dynamics är en CRM- och ERP-programvara (Enterprise Resource Planning) som innehåller företagslösningar för att skapa och hantera kundkonton, kontakter, leads, möjligheter och ärenden. [AEM Forms Data ](/help/forms/using/data-integration.md) Integrationger en OData-molntjänstkonfiguration som kan integrera Forms med både online- och lokal Microsoft Dynamics-server. Det gör att du kan skapa formulärdatamodell baserat på de enheter, attribut och tjänster som definierats i Microsoft Dynamics-tjänsten. Formulärdatamodellen kan användas för att skapa anpassade formulär som interagerar med Microsoft Dynamics-servern för att möjliggöra affärsarbetsflöden. Till exempel:
 
 * Fråga Microsoft Dynamics-servern efter data och förifylla adaptiva formulär
 * Skriv data i Microsoft Dynamics när formulär skickas med adaptiv form
@@ -35,21 +35,21 @@ När paketet är installerat är följande enheter och tjänster tillgängliga p
 * MS Dynamics OData-Cloud Service (OData-tjänst)
 * Formulärdatamodell med förkonfigurerade Microsoft Dynamics-enheter och -tjänster.
 
-OData-Cloud Servicen och formulärdatamodellen med förkonfigurerade Microsoft Dynamics-enheter och -tjänster är bara tillgängliga på din AEM Forms-instans om körningsläget för den AEM instansen är inställt som `samplecontent`(standard). Mer information om hur du konfigurerar körningslägen för en AEM finns i [Körningslägen](https://helpx.adobe.com/in/experience-manager/6-4/sites-deploying/configure-runmodes.html).
+OData-Cloud Servicen och formulärdatamodellen med förkonfigurerade Microsoft Dynamics-enheter och -tjänster är bara tillgängliga på din AEM Forms-instans om körningsläget för den AEM instansen är inställt på `samplecontent` (standard). Mer information om hur du konfigurerar körningslägen för en AEM finns i [Körningslägen](https://helpx.adobe.com/in/experience-manager/6-4/sites-deploying/configure-runmodes.html).
 
 ## Förutsättningar {#prerequisites}
 
 Innan du börjar konfigurera och konfigurera Microsoft Dynamics måste du se till att du har:
 
-* Forms-tilläggspaketet [AEM 6.4 har installerats](https://helpx.adobe.com//experience-manager/6-4/forms/using/installing-configuring-aem-forms-osgi.html)
+* [AEM 6.4 Forms-tilläggspaketet](https://helpx.adobe.com//experience-manager/6-4/forms/using/installing-configuring-aem-forms-osgi.html) har installerats
 * Konfigurerade Microsoft Dynamics 365 online eller installerade en instans av någon av följande Microsoft Dynamics-versioner:
 
    * Lokal Microsoft Dynamics 365
    * Lokal Microsoft Dynamics 2016
 
-* [Registrerade programmet för Microsoft Dynamics onlinetjänst med Microsoft Azure Active Directory](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory). Notera värdena för klient-ID (kallas även program-ID) och klienthemlighet för den registrerade tjänsten. De här värdena används när du [konfigurerar molntjänsten för din Microsoft Dynamics-tjänst](/help/forms/using/ms-dynamics-odata-configuration.md#configure-cloud-service-for-your-microsoft-dynamics-service).
+* [Registrerade programmet för Microsoft Dynamics onlinetjänst med Microsoft Azure Active Directory](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory). Notera värdena för klient-ID (kallas även program-ID) och klienthemlighet för den registrerade tjänsten. Dessa värden används när [molntjänsten konfigureras för din Microsoft Dynamics-tjänst](/help/forms/using/ms-dynamics-odata-configuration.md#configure-cloud-service-for-your-microsoft-dynamics-service).
 
-## Ange svars-URL för registrerat Microsoft Dynamics-program {#set-reply-url-for-registered-microsoft-dynamics-application}
+## Ange svar-URL för registrerat Microsoft Dynamics-program {#set-reply-url-for-registered-microsoft-dynamics-application}
 
 Gör följande för att ange svars-URL:en för det registrerade Microsoft Dynamics-programmet:
 
@@ -57,7 +57,7 @@ Gör följande för att ange svars-URL:en för det registrerade Microsoft Dynami
 >
 >Använd bara den här proceduren när du integrerar AEM Forms med Microsoft Dynamics onlineserver.
 
-1. Gå till Microsoft Azure Active Directory-kontot och lägg till följande URL för molntjänstkonfiguration i **[!UICONTROL Reply URLs]** inställningarna för ditt registrerade program:
+1. Gå till Microsoft Azure Active Directory-kontot och lägg till följande URL för molntjänstkonfiguration i **[!UICONTROL Reply URLs]**-inställningarna för det registrerade programmet:
 
    `https://[server]:[port]/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
 
@@ -83,7 +83,7 @@ Microsoft Dynamics använder anspråksbaserad autentisering för att ge åtkomst
     Set-CrmSetting -Setting $ClaimsSettings
    ```
 
-   Mer information finns i [Appregistrering för CRM lokalt (IFD)](https://msdn.microsoft.com/sl-si/library/dn531010(v=crm.7).aspx#bkmk_ifd) .
+   Mer information finns i [Appregistrering för lokal CRM-användning (IFD)](https://msdn.microsoft.com/sl-si/library/dn531010(v=crm.7).aspx#bkmk_ifd).
 
 ## Konfigurera OAuth-klient på AD FS-dator {#configure-oauth-client-on-ad-fs-machine}
 
@@ -114,20 +114,20 @@ Gör följande för att registrera en OAuth-klient på AD FS-datorn (Active Dire
 
    * `resource` är Microsoft Dynamics organisations-URL.
 
-1. Microsoft Dynamics använder HTTPS-protokoll. Om du vill anropa AD FS-slutpunkter från Forms-servern installerar du Microsoft Dynamics-platscertifikat till Java-certifikatarkivet med hjälp av kommandot `keytool` på den dator som kör AEM Forms.
+1. Microsoft Dynamics använder HTTPS-protokoll. Om du vill anropa AD FS-slutpunkter från Forms-servern installerar du Microsoft Dynamics-platscertifikat till Java-certifikatarkivet med kommandot `keytool` på den dator som kör AEM Forms.
 
 ## Konfigurera molntjänsten för din Microsoft Dynamics-tjänst {#configure-cloud-service-for-your-microsoft-dynamics-service}
 
-Konfigurationen för **MS Dynamics OData-Cloud Servicen (OData Service)** levereras med OData-standardkonfigurationen. Så här konfigurerar du den för att ansluta till din Microsoft Dynamics-tjänst.
+Konfigurationen **MS Dynamics OData Cloud Service (OData Service)** levereras med OData-standardkonfigurationen. Så här konfigurerar du den för att ansluta till din Microsoft Dynamics-tjänst.
 
-1. Navigera till **[!UICONTROL Tools > Cloud Services > Data Sources]** och tryck på `global` konfigurationsmappen.
-1. Välj **[!UICONTROL MS Dynamics OData Cloud Service (OData Service)]** konfiguration och tryck **[!UICONTROL Properties]**. Dialogrutan för konfigurationsegenskapen för molntjänster öppnas.
+1. Navigera till **[!UICONTROL Tools > Cloud Services > Data Sources]** och tryck på konfigurationsmappen `global`.
+1. Välj **[!UICONTROL MS Dynamics OData Cloud Service (OData Service)]**-konfiguration och tryck på **[!UICONTROL Properties]**. Dialogrutan för konfigurationsegenskapen för molntjänster öppnas.
 
-   På **[!UICONTROL Authentication Settings]** fliken:
+   På fliken **[!UICONTROL Authentication Settings]**:
 
-   1. Ange värdet för **[!UICONTROL Service Root]** fältet. Gå till Dynamics-instansen och navigera till **[!UICONTROL Developer Resources]** för att visa värdet för fältet Service Root. Till exempel https://&lt;tenant-name>/api/data/v9.1/
-   1. Ersätt standardvärdena i **[!UICONTROL Client Id]** fälten (kallas även **[!UICONTROL Application ID]**), **[!UICONTROL Client Secret]**, **[!UICONTROL OAuth URL]**, **[!UICONTROL Refresh Token URL]****[!UICONTROL Access Token URL]** och **[!UICONTROL Resource]** med värden från din Microsoft Dynamics-tjänstkonfiguration. Det är obligatoriskt att ange den dynamiska instansens URL i **[!UICONTROL Resource]** fältet för att konfigurera Microsoft Dynamics med en formulärdatamodell. Använd tjänstens rot-URL för att härleda den dynamiska instansens URL. Till exempel [https://org.crm.dynamics.com](https://org.crm.dynamics.com/).
-   1. Ange **[!UICONTROL openid]** i **[!UICONTROL Authorization Scope]** fältet för auktoriseringsprocess i Microsoft Dynamics.
+   1. Ange värdet för fältet **[!UICONTROL Service Root]**. Gå till Dynamics-instansen och navigera till **[!UICONTROL Developer Resources]** för att visa värdet för fältet Tjänstrot. Till exempel https://&lt;tenant-name>/api/data/v9.1/
+   1. Ersätt standardvärdena i fälten **[!UICONTROL Client Id]** (kallas även **[!UICONTROL Application ID]**), **[!UICONTROL Client Secret]**, **[!UICONTROL OAuth URL]**, **[!UICONTROL Refresh Token URL]**, **[!UICONTROL Access Token URL]** och **[!UICONTROL Resource]** med värden från Microsoft Dynamics-tjänstkonfigurationen. Det är obligatoriskt att ange den dynamiska instansens URL i fältet **[!UICONTROL Resource]** för att konfigurera Microsoft Dynamics med en formulärdatamodell. Använd tjänstens rot-URL för att härleda den dynamiska instansens URL. Exempel: [https://org.crm.dynamics.com](https://org.crm.dynamics.com/).
+   1. Ange **[!UICONTROL openid]** i fältet **[!UICONTROL Authorization Scope]** för auktoriseringsprocess i Microsoft Dynamics.
 
    ![dynamics_authentication_settings](assets/dynamics_authentication_settings.png)
 
@@ -140,11 +140,11 @@ Molntjänsten MS Dynamics OData Cloud Service (OData Service) är konfigurerad o
 
 ## Skapa formulärdatamodell {#create-form-data-model}
 
-När du installerar AEM Forms-paketet distribueras en formulärdatamodell,**Microsoft Dynamics FDM**, på din AEM. Som standard använder formulärdatamodellen Microsoft Dynamics-tjänsten som konfigurerats i MS Dynamics OData-Cloud Servicen (OData-tjänsten) som datakälla.
+När du installerar AEM Forms-paketet distribueras en formulärdatamodell,**Microsoft Dynamics FDM**, till din AEM. Som standard använder formulärdatamodellen Microsoft Dynamics-tjänsten som konfigurerats i MS Dynamics OData-Cloud Servicen (OData-tjänsten) som datakälla.
 
 När formulärdatamodellen öppnas för första gången ansluter den till den konfigurerade Microsoft Dynamics-tjänsten och hämtar enheter från din Microsoft Dynamics-instans. Enheterna &quot;contact&quot; och &quot;lead&quot; från Microsoft Dynamics har redan lagts till i formulärdatamodellen.
 
-Om du vill granska formulärdatamodellen går du till **[!UICONTROL Forms > Data Integrations]**. Markera **[!UICONTROL Microsoft Dynamics FDM]** och klicka **[!UICONTROL Edit]** för att öppna formulärdatamodellen i redigeringsläge. Du kan även öppna formulärdatamodellen direkt från följande URL:
+Om du vill granska formulärdatamodellen går du till **[!UICONTROL Forms > Data Integrations]**. Välj **[!UICONTROL Microsoft Dynamics FDM]** och klicka på **[!UICONTROL Edit]** för att öppna formulärdatamodellen i redigeringsläge. Du kan även öppna formulärdatamodellen direkt från följande URL:
 
 `https://[*server*]:[*port*]/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/ms-dynamics-fdm`
 
@@ -156,6 +156,6 @@ Därefter kan du skapa ett anpassat formulär baserat på formulärdatamodellen 
 * Anropa Microsoft Dynamics-serveråtgärder som definierats i en formulärdatamodell med hjälp av adaptiva formulärregler
 * Skriv skickade formulärdata till Microsoft Dynamics-enheter
 
-Vi rekommenderar att du skapar en kopia av den formulärdatamodell som medföljer AEM Forms-paketet och konfigurerar datamodeller och tjänster så att de passar dina behov. Det ser till att framtida uppdateringar av paketet inte åsidosätter formulärdatamodellen.
+Vi rekommenderar att du skapar en kopia av den formulärdatamodell som medföljer AEM Forms-paketet och konfigurerar datamodeller och tjänster så att de passar dina behov. Det ser till att eventuella framtida uppdateringar av paketet inte åsidosätter formulärdatamodellen.
 
 Mer information om hur du skapar och använder formulärdatamodell i arbetsflöden finns i [Dataintegrering](/help/forms/using/data-integration.md).
