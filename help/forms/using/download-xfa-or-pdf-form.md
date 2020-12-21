@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Hämta en XFA- eller PDF-formulärmall {#download-an-xfa-or-a-pdf-form-template}
+# Hämta en XFA eller en PDF-formulärmall {#download-an-xfa-or-a-pdf-form-template}
 
 Med nedladdningsåtgärden kan du, som namnet antyder, exportera formulär från databasen till det lokala systemet. I kombination med överföringsåtgärden hjälper den här åtgärden dig att migrera dina formulär från en databas till en annan.
 
@@ -37,23 +37,23 @@ Förutom dessa resurser kan du hämta resurstypen `Resource` om den finns i en m
 
 1. Navigera till platsen för resursen som du vill hämta.
 
-1. Markera resursen. Klicka på ikonen **[!UICONTROL Download]** aem6forms_download ![](assets/aem6forms_download.png) i verktygsfältet.
+1. Markera resursen. Klicka på ikonen **[!UICONTROL Download]** ![aem6forms_download](assets/aem6forms_download.png) i verktygsfältet.
 
    >[!NOTE]
    >
    >Du kan bara välja ett formulär för hämtning. Om du vill hämta flera formulär måste du hämta dem som en mapp.
 
-1. Klicka på i dialogrutan som visas **[!UICONTROL Download]**.
+1. Klicka på **[!UICONTROL Download]** i dialogrutan som visas.
 
    AEM Forms genererar en ZIP-fil som innehåller den valda filen eller den valda mappen.
 
    Om du hämtar en mapp hämtas de resurser i mappen som stöds i deras befintliga hierarki.
 
-   ZIP-filen sparas i `Downloads` systemmappen.
+   ZIP-filen sparas i mappen `Downloads` på datorn.
 
 ## Relaterade överväganden för överföringsåtgärden {#related-considerations-for-the-upload-operation}
 
 * Du kan överföra ZIP-filen till en annan plats i samma databas eller till en annan databas
 * Hierarkin för resurserna i en mapp behålls under överföringen
-* Alla metadataändringar som gjorts i de hämtade resurserna innan de hämtas återspeglas vid överföringen
+* Alla metadataändringar som gjorts i det hämtade materialet innan det har hämtats återspeglas vid överföringen
 
