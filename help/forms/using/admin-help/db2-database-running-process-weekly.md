@@ -26,7 +26,7 @@ Om AEM formulär DB2-databasen börjar köras långsamt kan prestanda förbättr
 
    (Windows) Välj Start > Program > IBM DB2 > Allmänna administrationsverktyg > Kontrollcenter.
 
-   (Linux och UNIX) Skriv `db2jcc` kommandot från en kommandotolk.
+   (Linux och UNIX) I en kommandotolk skriver du kommandot `db2jcc`.
 
 1. Klicka på Alla databaser i objektträdet i DB2 Control Center.
 1. Klicka på databasen som du skapade för AEM formulär och klicka på mappen Tabeller.
