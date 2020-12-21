@@ -18,13 +18,13 @@ ht-degree: 0%
 ---
 
 
-# Hantera de kategorier som visas i Arbetsyta {#managing-the-categories-displayed-in-workspace}
+# Hantera de kategorier som visas i arbetsytan {#managing-the-categories-displayed-in-workspace}
 
 I Workspace visas de processer som en användare kan starta i kategorier i den vänstra navigeringsrutan. Du kan konfigurera kategorierna i administrationskonsolen eller så kan processdesigners konfigurera dem i Workbench. När processdesigners skapar processer tilldelar de dem till kategorier.
 
 När du anger kategorinamn skapar du dem så att de visas korrekt i navigeringsrutan Arbetsyta. Som standard har den vänstra navigeringsrutan en fast bredd på 210 pixlar, vilket är ungefär 24 tecken. Om kategorinamnet som du anger är för långt för att få plats inom den fasta bredden i den vänstra navigeringsrutan, trunkeras det. Det fullständiga namnet visas bara när muspekaren är placerad över det. Undvik kategorinamn som kortas av. I följande exempel visas kategorinamn som passar och de som är trunkerade:
 
-**Kategorinamn som passar:** Närvaro och tjänstledighet
+**Kategorinamn som passar:** Närvaro och ledighet
 
 **Kategorinamn som trunkeras:** Närvaro och ledighet (USA)
 
