@@ -46,9 +46,9 @@ Om portalen har mallnamnet Letter kan URL:en vara\
 
 ## Inline databaserat anrop {#inline-data-based-invocation}
 
-Ett annat (och säkrare) sätt att anropa programmet Create Correspondence kan vara att bara trycka på URL:en `https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html`samtidigt som parametrarna och data skickas för att anropa programmet Create Correspondence som en POST (dölja dem för slutanvändaren). Det innebär också att du nu kan skicka XML-data för Create Correspondence-programmet (som en del av samma begäran, med parametern cmData), vilket inte var möjligt/idealiskt i den tidigare metoden.
+Ett annat (och säkrare) sätt att anropa programmet Create Correspondence kan vara att bara trycka på URL:en på `https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html` samtidigt som parametrarna och data skickas för att anropa programmet Create Correspondence som en POST (dölja dem för slutanvändaren). Det innebär också att du nu kan skicka XML-data för Create Correspondence-programmet (som en del av samma begäran, med parametern cmData), vilket inte var möjligt/idealiskt i den tidigare metoden.
 
-### Parametrar för att ange bokstav {#parameters-for-specifying-letter}
+### Parametrar för att ange bokstaven {#parameters-for-specifying-letter}
 
 <table> 
  <tbody>
