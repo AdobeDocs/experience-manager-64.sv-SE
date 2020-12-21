@@ -18,15 +18,15 @@ ht-degree: 0%
 ---
 
 
-# Felsökningsriktlinjer för arbetsytan i AEM Forms {#troubleshooting-guidelines-for-aem-forms-workspace}
+# Felsökningsriktlinjer för AEM Forms arbetsyta {#troubleshooting-guidelines-for-aem-forms-workspace}
 
-I den här artikeln beskrivs hur du felsöker arbetsytan i AEM Forms genom att aktivera loggning och använda felsökningsfunktionen i en webbläsare. Här förklaras också några vanliga problem som du kan stöta på när du använder AEM Forms arbetsyta och deras temporära lösningar.
+I den här artikeln beskrivs hur du felsöker AEM Forms-arbetsytan genom att aktivera loggning och använda felsökningsfunktionen i en webbläsare. Här förklaras också några vanliga problem som du kan stöta på när du använder AEM Forms arbetsyta och deras temporära lösningar.
 
 ## Det går inte att installera AEM Forms-arbetsytans paket {#unable-to-install-aem-forms-workspace-package}
 
-Öppna arbetsytan i AEM Forms när du har installerat korrigeringen. Om felet Ingen resurs hittades öppnar du CRX Package Manager och installerar om `adobe-lc-workspace-pkg-<version>.zip` paketet.
+Öppna arbetsytan i AEM Forms när du har installerat korrigeringen. Om felet Ingen resurs hittades öppnar du CRX Package Manager och installerar om `adobe-lc-workspace-pkg-<version>.zip`-paketet.
 
-Utför följande steg om du råkar ut för ett fel `javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`när du installerar paketet:
+Utför följande steg om du stöter på ett fel `javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed` när du installerar paketet:
 
 1. Logga in på CRX DE lite. Standardwebbadressen är `https://[localhost]:[port]/lc/crx/de/index.jsp`
 1. Ta bort följande nod:
@@ -34,16 +34,16 @@ Utför följande steg om du råkar ut för ett fel `javax.jcr.nodetype.Constrain
    `/home/groups/P/PERM_WORKSPACE_USER`
 
 1. Gå till Package Manager. Standardwebbadressen är `https://[localhost]:[port]/lc/crx/packmgr/index.jsp.`
-1. Sök efter och installera `adobe-lc-workspace-pkg-[version].zip` paketet.
+1. Sök efter och installera `adobe-lc-workspace-pkg-[version].zip`-paketet.
 1. Starta om programservern.
 
-## Logga på arbetsytan i AEM Forms {#aem-forms-workspace-nbsp-logging}
+## Loggning av arbetsytan i AEM Forms {#aem-forms-workspace-nbsp-logging}
 
 Du kan generera loggar på olika nivåer för att optimera felsökningen. I ett komplext program kan till exempel loggning på komponentnivå hjälpa till att felsöka och felsöka specifika komponenter.
 
 I AEM Forms:
 
-* Om du vill få loggningsinformation om en viss komponentfil lägger du till `/log/<ComponentFile>/<LogLevel>` i URL-adressen och trycker på `Enter`. All loggningsinformation för komponentfilen på den angivna loggnivån skrivs ut på konsolen.
+* Om du vill ha loggningsinformation om en viss komponentfil lägger du till `/log/<ComponentFile>/<LogLevel>` i URL:en och trycker på `Enter`. All loggningsinformation för komponentfilen på den angivna loggnivån skrivs ut på konsolen.
 
 * Om du vill ha loggningsinformation för alla komponentfiler lägger du till `/log/all/trace` i URL:en och trycker på `Enter`.
 
@@ -142,7 +142,7 @@ I AEM Forms:
  </tbody> 
 </table>
 
-### Loggnivåer som är tillgängliga på arbetsytan i AEM Forms {#log-levels-available-in-nbsp-aem-forms-workspace}
+### Loggnivåer som är tillgängliga på AEM Forms arbetsyta {#log-levels-available-in-nbsp-aem-forms-workspace}
 
 * FATAL
 * FEL
@@ -156,9 +156,9 @@ I AEM Forms:
 
 Skript och format kan felsökas i olika webbläsare.
 
-* **Felsökning i IE**: Information om hur du felsöker AEM Forms arbetsyta i IE finns i: [https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx).
+* **Felsökning i IE**: Information om hur du felsöker AEM Forms arbetsyta i IE finns i:  [https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx).
 
-* **Felsökning i Chrome**: Använd kortkommandot för att öppna felsökningsprogrammet i Chrome: Ctrl+Skift+I. Mer information finns i: [https://developer.chrome.com/extensions/tut_debugging.html](https://developer.chrome.com/extensions/tut_debugging.html).
+* **Felsökning i Chrome**: Använd kortkommandot för att öppna felsökningsprogrammet i Chrome: Ctrl+Skift+I. Mer information finns i:  [https://developer.chrome.com/extensions/tut_debugging.html](https://developer.chrome.com/extensions/tut_debugging.html).
 
 * **Felsökning i Firefox**: Det finns flera tillägg för att felsöka skript och format i Firefox. Firebug är till exempel ett sådant felsökningsverktyg ([https://getfirebug.com](https://getfirebug.com)).
 
