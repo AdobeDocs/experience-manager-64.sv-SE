@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Lägga till anpassad åtgärd för formulärlisteobjekt {#adding-custom-action-on-form-lister-items}
 
-I AEM Forms kan du skapa en portalsida med de tillgängliga formulären. Som standard kan du söka efter och visa formulär på en portalsida. Du kan öppna formulär för att fylla i och skicka in dina uppgifter. Endast återgivningsåtgärder anges i rutan för formulär som visas på en portalsida. Mer information om tillgängliga åtgärder på en portalsida finns i [Skapa en formulärportalsida](/help/forms/using/creating-form-portal-page.md).
+I AEM Forms kan du skapa en portalsida med de tillgängliga formulären. Som standard kan du söka efter och lista formulär på en portalsida. Du kan öppna formulär för att fylla i och skicka in dina uppgifter. Endast återgivningsåtgärder anges i rutan för formulär som visas på en portalsida. Mer information om tillgängliga åtgärder på en portalsida finns i [Skapa en formulärportalsida](/help/forms/using/creating-form-portal-page.md).
 
 Du kan lägga till andra alternativ på portalsidan. Dessa alternativ eller åtgärder kan anpassas genom att du anpassar mallen för formulärportalen.
 
@@ -46,7 +46,7 @@ Nedan finns den kod som krävs för att lägga till åtgärden i mallen. Attribu
 </div>
 ```
 
-Du kan lägga till liknande åtgärder i den anpassade mallen. Om du vill definiera en JavaScript-funktion lägger du till funktionen på ett skript på sidnivå och länkar den med det HTML-element som krävs. I exemplet ovan är `onclick` uttrycket den länkade funktionen.
+Du kan lägga till liknande åtgärder i den anpassade mallen. Om du vill definiera en JavaScript-funktion lägger du till funktionen på ett skript på sidnivå och länkar den med det HTML-element som krävs. I ovanstående exempel är uttrycket `onclick` den länkade funktionen.
 
 När du har redigerat mallen innehåller exempelportalsidan en knapp för att skicka länken till formuläret via e-post, vilket visas nedan.
 
