@@ -17,13 +17,13 @@ ht-degree: 0%
 ---
 
 
-# Söka efter formulär och resurser {#searching-for-forms-and-assets}
+# Söker efter formulär och resurser {#searching-for-forms-and-assets}
 
 Du kan söka efter formulär eller formulärresurser med hjälp av en textsträng eller textsträng tillsammans med jokertecken. Du kan även begränsa sökningen med hjälp av de villkor som finns i olika kategorier på sökpanelen.
 
 När du markerar ett eller flera villkor och även anger en textsträng, returneras skärningspunkten för texten och villkoren som sökresultat. Sökresultaten är lika bra som de metadata för formulär och resurser som finns.
 
-Klicka på ![aem6forms_search](assets/aem6forms_search.png)för att visa eller dölja sökpanelen.
+Klicka på ![aem6forms_search](assets/aem6forms_search.png) för att visa eller dölja sökpanelen.
 
 ## Grundläggande sökning {#basic-search}
 
@@ -37,10 +37,10 @@ Observera följande om grundsökningen:
 
 * Sökningen utförs med hjälp av egenskaperna för metadata för formulär och resurser.
 * Om du skriver mer än ett ord matchar sökningen hela texten.
-* Sökningen är inte skiftlägeskänslig. När du t.ex. skriver `geometrixx`visas resurser med rubriker `Geometrixx``GEOMETRIXX`och `GeoMetRixx` i sökresultaten.
+* Sökningen är inte skiftlägeskänslig. När du till exempel skriver `geometrixx` visas resurser med rubrikerna `Geometrixx`, `GEOMETRIXX` och `GeoMetRixx` i sökresultatet.
 
 * Partiella matchningar av ett ord stöds inte. Använd &amp;ast om du vill söka med partiella strängar; jokertecken. Om sökfrågan däremot matchar ett fullständigt ord visas motsvarande formulär eller resurs.
-* Extra blanksteg bevaras och trimmas inte under sökningen. Det `My form` är till exempel inte samma sökfråga som `My form`.
+* Extra blanksteg bevaras och trimmas inte under sökningen. `My form` är till exempel inte samma sökfråga som `My form`.
 
 * Om data- och visningsvärdena för fälten i metadataegenskaperna är olika kan du inte använda visningsvärden som sökparametrar. Du kan till exempel inte söka baserat på en status, till exempel Ändrad eller Publicerad, eftersom dessa egenskaper lagras i ett annat format.
 
@@ -54,9 +54,9 @@ Förutom frågan kan du i sökvillkoren ange vissa sökparametrar som gör den g
 
 Genom att använda filtret för resurssökväg kan du begränsa sökresultaten till den aktuella katalogen. Om alternativet Sök i aktuell katalog inte är markerat innehåller sökresultaten resurser från baskatalogen. Om den aktuella sidan inte är en katalog och alternativet Sök i den aktuella katalogen är markerat, returnerar sökningen de resurser som finns i den överordnade katalogen.
 
-### Ändrad tillgång {#asset-modification}
+### Resursändring {#asset-modification}
 
-Välj något av följande alternativ om du vill söka bland alla resurser som har ändrats inom en viss tidsperiod.
+Välj ett av följande alternativ om du vill söka bland alla resurser som har ändrats inom en viss tidsperiod.
 
 | **Alternativ** | **Beskrivning** |
 |---|---|
@@ -98,12 +98,12 @@ Du kan välja valfritt antal resurstyper. Sökningen returnerar en union av alla
    <td>Sök i alla dokument.</td> 
   </tr>
   <tr>
-   <td>Adaptiv form<br /> </td> 
+   <td>Anpassad form<br /> </td> 
    <td>Sök i alla anpassade formulär.</td> 
   </tr>
   <tr>
    <td>Resurs</td> 
-   <td>Sök bland alla resurser.<br /> </td> 
+   <td>Sök i alla resurser.<br /> </td> 
   </tr>
  </tbody>
 </table>
