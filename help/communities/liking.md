@@ -18,31 +18,31 @@ ht-degree: 1%
 ---
 
 
-# Använda Länk {#using-liking}
+# Använda länken {#using-liking}
 
-Den här `Liking`komponenten är ett användbart verktyg som gör att användare kan uttrycka sin åsikt om en viss del av innehållet, till exempel en kommentar i ett forum. Med `Liking`komponenten väljer medlemmarna hjärtikonen för att ange en positiv åsikt.
+Komponenten `Liking`är ett användbart verktyg som gör att användare kan uttrycka sin åsikt om en viss del av innehållet, till exempel en kommentar i ett forum. Med komponenten `Liking`väljer medlemmarna hjärtikonen för att ange en positiv åsikt.
 
-## Lägga till länkning på en sida {#adding-liking-to-a-page}
+## Lägger till länk på en sida {#adding-liking-to-a-page}
 
-Om du vill lägga till en `Liking` komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
+Om du vill lägga till en `Liking`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
 
 * `Communities / Liking`
 
 och dra den till rätt plats på en sida, t.ex. i förhållande till funktionen som användarna kan gilla.
 
-Mer information finns i Grunderna för [communitykomponenter](basics.md).
+Mer information finns på [Grunderna för communitykomponenter](basics.md).
 
-När de [nödvändiga klientbiblioteken](essentials-liking.md#essentials-for-client-side) inkluderas visas `Liking` komponenten på det här sättet.
+När de [nödvändiga klientbiblioteken](essentials-liking.md#essentials-for-client-side) inkluderas visas `Liking`-komponenten så här.
 
 ![chlimage_1-93](assets/chlimage_1-93.png)
 
-## Konfigurerar länk {#configuring-liking}
+## Konfigurerar länken {#configuring-liking}
 
-Markera den monterade `Liking` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
+Markera den monterade `Liking`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![chlimage_1-94](assets/chlimage_1-94.png)
 
-Ange de egenskaper som ska användas för att spela in gilla-markeringar på fliken **[!UICONTROL Texts & Labels]** .
+Under fliken **[!UICONTROL Texts & Labels]** anger du de egenskaper som ska användas för att spela in gilla-markeringar.
 
 ![chlimage_1-95](assets/chlimage_1-95.png)
 
@@ -68,6 +68,6 @@ Medlemmarna kan när som helst ändra sig.
 
 Anonym länkning stöds inte. Besökare på webbplatsen måste registrera sig (bli medlem) och logga in för att kunna vara med.
 
-## Additional Information {#additional-information}
+## Ytterligare information {#additional-information}
 
-Mer information finns på [sidan Liking Essentials](essentials-liking.md) för utvecklare.
+Mer information finns på sidan [Liking Essentials](essentials-liking.md) för utvecklare.
