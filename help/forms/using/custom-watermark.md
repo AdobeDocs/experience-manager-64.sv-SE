@@ -25,16 +25,16 @@ I användargränssnittet Skapa korrespondens förhandsgranskar agentanvändare k
 
 För att förhindra obehörig användning av dessa data kan organisationer lägga in en vattenstämpel i PDF-filen för förhandsgranskning. Standardvattenstämpeln är&quot;PREVIEW&quot;, som visas i hela PDF-filen.
 
-Om du vill aktivera vattenstämpeln i PDF-förhandsvisningsfilen väljer du alternativet **[!UICONTROL Apply Watermark]** Under förhandsvisning i **[!UICONTROL Correspondence Management Configurations]** `https://[server]:[port]/system/console/configMgr`.
+Om du vill aktivera vattenstämpeln i PDF-förhandsgranskning väljer du alternativet **[!UICONTROL Apply Watermark]** under förhandsgranskning i **[!UICONTROL Correspondence Management Configurations]** `https://[server]:[port]/system/console/configMgr`.
 
 ![default-watermark](assets/default-watermark.png)
 
 Följ de här stegen för att anpassa texten och utseendet på vattenstämpeln:
 
-## Anpassa vattenstämpeln i PDF-förhandsvisning i användargränssnittet Skapa korrespondens {#customizewatermark-}
+## Anpassa vattenstämpeln i PDF-förhandsvisningen i användargränssnittet för Skapa korrespondens {#customizewatermark-}
 
 1. Gå till `https://[server]:[port]/[ContextPath]/crx/de` och logga in som administratör.
-1. I mappen apps skapar du en mapp med namnet **[!UICONTROL previewwatermark]** med sökvägen/strukturen som liknar mappen med förhandsvisningsvattenstämpeln i mappen libs:
+1. I mappen apps skapar du en mapp med namnet **[!UICONTROL previewwatermark]** med en sökväg/struktur som liknar mappen för förhandsvisning av vattenstämpel i mappen libs:
 
    1. Högerklicka på mappen **previewwatermark **i följande sökväg och välj **Overlay Node**:
 
@@ -44,9 +44,9 @@ Följ de här stegen för att anpassa texten och utseendet på vattenstämpeln:
 
       **Sökväg:** /libs/fd/cm/configFiles/previewwatermark
 
-      **Plats för övertäckning:** /apps/
+      **Överläggsplats:** /appar/
 
-      **Matcha nodtyper:** Markerad
+      **Matcha nodtyper:** markerade
 
       >[!NOTE]
       >
@@ -77,7 +77,7 @@ Följ de här stegen för att anpassa texten och utseendet på vattenstämpeln:
    </DDX>
    ```
 
-   Mer information om hur du anpassar vattenstämpelns utseende, text och justering finns i Lägga till och ta bort vattenstämplar och bakgrunder i [Assembler Service och DX Reference](https://help.adobe.com/en_US/livecycle/11.0/ddxRef.pdf) -dokumentet.
+   Information om hur du anpassar vattenstämpelns utseende, text och justering finns i Lägga till och ta bort vattenstämplar och bakgrunder i [Assembler Service och DDX Reference](https://help.adobe.com/en_US/livecycle/11.0/ddxRef.pdf)-dokumentet.
 
    >[!NOTE]
    >
