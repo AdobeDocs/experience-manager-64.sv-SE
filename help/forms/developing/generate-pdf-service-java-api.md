@@ -256,7 +256,7 @@ I följande Java-kodexempel konverteras HTML-innehåll som finns på https://www
 
 ## Snabbstart (SOAP-läge): Konvertera ett PDF-dokument till en RTF-fil med Java API (SOAP-läge) {#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode}
 
-I följande kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till ett RTF-dokument med namnet *Loan.rtf*. (Se [Konvertera PDF-dokument till format](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats)som inte är bilder.)
+I följande kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till ett RTF-dokument med namnet *Loan.rtf*. (Se [Konvertera PDF-dokument till format som inte är bildformat](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats).)
 
 ```as3
  /* 
