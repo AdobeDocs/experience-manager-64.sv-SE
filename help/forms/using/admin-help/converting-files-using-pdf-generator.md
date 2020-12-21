@@ -43,9 +43,9 @@ Du kan använda webbsidorna för PDF Generator för att konvertera filer.
 1. Klicka på Skapa. När filen skapas visas en länk till den. Om ett fel inträffar under konverteringen visas en varning. Om du skapar en PostScript-fil innehåller varningen även en länk till loggfilen.
 1. Klicka på länken för PDF-filen. Filen öppnas i Acrobat.
 
-### XMP filer {#about-xmp-files}
+### Om XMP filer {#about-xmp-files}
 
-PDF-dokument som skapas i Acrobat 5.0 eller senare innehåller dokumentmetadata i XML-format. *Metadata* innehåller information om dokumentet och dess innehåll, t.ex. författarens namn, nyckelord och copyrightinformation som sökverktyg kan använda.
+PDF-dokument som skapas i Acrobat 5.0 eller senare innehåller dokumentmetadata i XML-format. *I* Metadata ingår information om dokumentet och dess innehåll, t.ex. författarens namn, nyckelord och copyrightinformation som sökverktyg kan använda.
 
 Dokumentets metadata innehåller (men är inte begränsade till) information som också visas på fliken Beskrivning i dialogrutan Dokumentegenskaper i Acrobat. Ändringar som görs på fliken Beskrivning återspeglas i dokumentets metadata. Dokumentets metadata kan utökas och ändras med tredjepartsprodukter.
 
@@ -96,7 +96,7 @@ Om ZIP-filen innehåller mer än en HTML-fil på den lägsta nivån i mapphierar
 
 ## Exportera en PDF-fil till ett annat filformat (endast Windows) {#export-a-pdf-file-to-another-file-format-windows-only}
 
-Du kan exportera PDF-filer till olika filformat enligt beskrivningen i kapitlet Generera PDF-tjänst i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
+Du kan exportera PDF-filer till olika filformat, vilket beskrivs i kapitlet Generera PDF-tjänst i [Tjänstreferens](https://www.adobe.com/go/learn_aemforms_services_63).
 
 1. I administrationskonsolen klickar du på Tjänster > PDF Generator > Export PDF.
 1. Klicka på Bläddra för att leta reda på PDF-filen som ska exporteras.
@@ -105,7 +105,7 @@ Du kan exportera PDF-filer till olika filformat enligt beskrivningen i kapitlet 
 
    Konverteringstiden som visas när filen konverteras kan vara större än det värde som du anger här. Konverteringstiden är den tid som har ägnats åt att vänta på tråden eller processen, den tid det tar att konvertera filen och den tid det tar för reservkonverteraren (om tillämpligt). time. Värdet Ange en timeout är bara den tid det tar att konvertera filen.
 
-1. (Valfritt) Klicka på Bläddra i alternativet **Ange anpassad preflight-profil** och välj en [anpassad preflight-profil](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html). Preflight-profiler används bara vid konvertering av dokument till PDF-arkivformat (PDF/A).
+1. (Valfritt) Klicka på Bläddra i alternativet **Ange en anpassad preflight-profil** och välj en [anpassad preflight-profil](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html). Preflight-profiler används bara vid konvertering av dokument till PDF-arkivformat (PDF/A).
 1. Klicka på Exportera. När konverteringen är klar visas en länk till den exporterade filen.
 1. Klicka på länken för att visa den konverterade filen.
 
