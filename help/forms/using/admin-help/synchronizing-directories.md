@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Synkroniserar kataloger {#synchronizing-directories}
 
-Om du vill synkronisera domäner kan du välja att göra en manuell eller schemalagd synkronisering. En *manuell synkronisering* synkroniserar alla valda domäner. En *schemalagd synkronisering* synkroniserar alla domäner.
+Om du vill synkronisera domäner kan du välja att göra en manuell eller schemalagd synkronisering. En *manuell synkronisering* synkroniserar alla markerade domäner. En *schemalagd synkronisering* synkroniserar alla domäner.
 
 Katalogsynkronisering används för att hämta information från katalogservrarna som du har angett i dina kataloginställningar till databasen för användarhantering. Senare kan du även göra en manuell synkronisering om det sker ändringar eller uppdateringar på katalogservrarna. Du kan till exempel göra en manuell synkronisering om användare och grupper läggs till eller om ändringar görs i en användares konto.
 
@@ -56,7 +56,7 @@ Användarhantering utför följande steg när deltakatalogsynkronisering är akt
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
 1. Markera kryssrutan under Deltasynkronisering och klicka på Spara.
-1. Redigera kataloginställningarna för var och en av de företagsdomäner som ska använda funktionen för deltakatalogsynkronisering. På sidorna Användarinställningar och Gruppinställningar letar du reda på inställningen Ändra tidsstämpel och anger `modify TimeStamp` värdet. Mer information om hur du redigerar företagsdomäner finns i [Redigera och konvertera befintliga domäner](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains).
+1. Redigera kataloginställningarna för var och en av de företagsdomäner som ska använda funktionen för deltakatalogsynkronisering. På sidorna Användarinställningar och Gruppinställningar letar du reda på inställningen Ändra tidsstämpel och anger `modify TimeStamp` som värde. Mer information om hur du redigerar företagsdomäner finns i [Redigera och konvertera befintliga domäner](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains).
 
 ## Aktivera eller inaktivera detaljerad loggning under synkronisering {#enable-or-disable-detailed-logging-during-synchronization}
 
@@ -65,7 +65,7 @@ Som standard loggar Hantering av användare detaljerad statistik under synkronis
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Konfigurera avancerade systemattribut.
 1. Avmarkera kryssrutan under Loggning av synkroniseringsstatistik för att inaktivera den detaljerade loggningen eller markera den för att aktivera loggning och klicka sedan på Spara.
 
-## Konfigurera alternativet för nytt försök med katalogsynkronisering {#configure-the-directory-synchronization-retry-option}
+## Konfigurera alternativet {#configure-the-directory-synchronization-retry-option} för att försöka synkronisera katalogen igen
 
 Du kan konfigurera användarhantering så att det regelbundet görs en sökning efter misslyckade katalogsynkroniseringsförsök. Användarhantering försöker sedan slutföra de misslyckade synkroniseringarna.
 
