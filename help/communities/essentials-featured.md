@@ -59,4 +59,4 @@ I motsats till att fästa ett inlägg överst i ett forum kan den här funktione
 
 ### Filbiblioteksfunktion {#file-library-function}
 
-En community-webbplatsstruktur som innehåller funktionen [](functions.md#featured-content-function)Aktuellt innehåll innehåller en konfigurerad `featured content` komponent.
+En community-webbplatsstruktur som innehåller [funktionen för aktuellt innehåll](functions.md#featured-content-function) innehåller en konfigurerad `featured content`-komponent.
