@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Importera och hantera program{#import-and-manage-applications}
 
-I AEM är ett *program* en behållare för att lagra resurser som krävs för att implementera en lösning med AEM formulär. Exempel på resurser är formulärdesigner, formulärfragment, bilder, processer, DDX-filer, formulärguider, HTML-sidor och SWF-filer. Under utvecklingsfasen av ett projekt kan Workbench-användare distribuera program direkt från programvyn i Workbench. När programmen har distribuerats visas de i administrationskonsolen på fliken Program på sidan Programhantering.
+I AEM är ett *program* en behållare för att lagra resurser som krävs för att implementera en lösning för AEM formulär. Exempel på resurser är formulärdesigner, formulärfragment, bilder, processer, DDX-filer, formulärguider, HTML-sidor och SWF-filer. Under utvecklingsfasen av ett projekt kan Workbench-användare distribuera program direkt från programvyn i Workbench. När programmen har distribuerats visas de i administrationskonsolen på fliken Program på sidan Programhantering.
 
 När ett program är klart att distribueras till en produktionsserver paketerar Workbench-användaren programmet i en *AEM formulärprogramfil* (.lca). Därefter använder en administratör administrationskonsolen för att importera och distribuera programfilen på fliken Program på sidan Programhantering.
 
@@ -100,7 +100,7 @@ Du kan exportera konfigurationsinformation vid körning för distribuerade progr
 1. Klicka på programmets namn.
 1. Klicka på Exportera runtime-konfiguration och spara konfigurationsfilen (XML) som skapas.
 
-## Skriptstyrd driftsättning AEM formulärapplikationer {#scripted-deployment-of-aem-forms-applications}
+## Skriptbaserad distribution AEM formulärprogram {#scripted-deployment-of-aem-forms-applications}
 
 Du kan också använda ett skriptbaserat distributionsverktyg för att distribuera programfiler, inklusive en settings.xml-fil som anger följande inställningar:
 
