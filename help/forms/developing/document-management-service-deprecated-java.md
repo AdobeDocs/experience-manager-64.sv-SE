@@ -246,7 +246,7 @@ I följande Java-kodexempel tas ett blanksteg med namnet /Company Home/Test Dire
 
 ## Snabbstart (SOAP-läge): Lägg till innehåll i innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated}
 
-I följande Java-kodexempel läggs en PDF-fil med namnet *MortgageForm.pdf* till i en mapp med namnet /Company Home/Test Directory. Attributen creator och description har angetts. Identifieringsvärdet för det nya innehållet skrivs till konsolen.
+I följande Java-kodexempel läggs en PDF-fil med namnet *MortgageForm.pdf* till i mappen /Company Home/Test Directory. Attributen creator och description har angetts. Identifieringsvärdet för det nya innehållet skrivs till konsolen.
 
 ```as3
  /* 
@@ -369,7 +369,7 @@ I följande Java-kodexempel läggs en PDF-fil med namnet *MortgageForm.pdf* till
 
 ## Snabbstart (SOAP-läge): Hämta innehåll från innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated}
 
-I följande Java-kodexempel hämtas en PDF-fil med namnet *MortgageForm.pdf* från /Company Home. PDF-filen sparas i det lokala filsystemet och heter *UpdatedMortgageForm.pdf*.
+I följande Java-kodexempel hämtas en PDF-fil med namnet *MortgageForm.pdf* från /Company Home. PDF-filen sparas i det lokala filsystemet och har namnet *UpdatedMortgageForm.pdf*.
 
 ```as3
  /* 
@@ -799,7 +799,7 @@ Följande Java-kod söker efter ett dokument som innehåller texten MortgageForm
 
 ## Snabbstart (SOAP-läge): Ange behörigheter för innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated}
 
-I följande Java-kodexempel anges en behörighet för en användare med namnet tony blue. Den angivna domänen är standarddomän. Konsumentbehörigheten anges och noden är `/Company Home/Test Directory`.
+I följande Java-kodexempel anges en behörighet för en användare med namnet tony blue. Den angivna domänen är standarddomän. Konsumentbehörigheten har angetts och noden är `/Company Home/Test Directory`.
 
 ```as3
  /* 
