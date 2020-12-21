@@ -42,9 +42,9 @@ Correspondence Management exponerar API:er för att hämta bokstavsinstanser via
 
 ### Använda getAllLetterInstances {#using-nbsp-getallletterinstances}
 
-Följande API hittar bokstavsinstanserna baserat på frågeobjektet (både Skickat och Utkast). Om frågeobjektet är null returneras alla bokstavsinstanser. Detta API returnerar en lista med [LetterInstanceVO](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/dbforms/obj/LetterInstanceVO.html) -objekt, som kan användas för att extrahera ytterligare information om bokstavsinstansen
+Följande API hittar bokstavsinstanserna baserat på frågeobjektet (både Skickat och Utkast). Om frågeobjektet är null returneras alla bokstavsinstanser. Detta API returnerar en lista med [LetterInstanceVO](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/dbforms/obj/LetterInstanceVO.html)-objekt, som kan användas för att extrahera ytterligare information om bokstavsinstansen
 
-**Syntax**: `List getAllLetterInstances(Query query) throws ICCException;`
+**Syntax**:  `List getAllLetterInstances(Query query) throws ICCException;`
 
 <table> 
  <tbody> 
@@ -54,7 +54,7 @@ Följande API hittar bokstavsinstanserna baserat på frågeobjektet (både Skick
   </tr> 
   <tr> 
    <td>query</td> 
-   <td>Frågeparametern används för att hitta/filtrera instansen av Letter. Här har frågan bara stöd för objektets attribut/egenskaper på den översta nivån. Frågan består av programsatser och"attributeName" som används i Statement-objektet ska vara namnet på egenskapen i Letter-instansobjektet.<br /> </td> 
+   <td>Frågeparametern används för att hitta/filtrera instansen av Letter. Här har frågan bara stöd för objektets attribut/egenskaper på den översta nivån. Frågan består av satser och "attributeName" som används i Statement-objektet ska vara namnet på egenskapen i Letter-instansobjektet.<br /> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -118,11 +118,11 @@ String letterInstanceId = "/content/apps/cm/letterInstances/1001/sampleLetterIns
 LetterInstanceVO letterInstance = letterInstanceService.getLetterInstance(letterInstanceId );
 ```
 
-### Verifierar om LetterInstance finns {#verifying-if-letterinstance-exist}
+### Verifierar om det finns en LetterInstance {#verifying-if-letterinstance-exist}
 
 Kontrollera om det finns en bokstavsinstans med det angivna namnet
 
-**Syntax**: `public Boolean letterInstanceExists(String letterInstanceName) throws ICCException;`
+**Syntax**:  `public Boolean letterInstanceExists(String letterInstanceName) throws ICCException;`
 
 | **Parameter** | **Beskrivning** |
 |---|---|
@@ -152,7 +152,7 @@ CCR-gränssnittet stöder parametern cmLetterInstanceId som kan användas för a
 >
 >Du behöver inte ange cmLetterId eller cmLetterName/State/Version när du läser in korrespondensen igen, eftersom skickade data redan innehåller all information om korrespondensen som läses in igen. RandomNo används för att undvika problem med webbläsarcache, du kan använda tidsstämpel som ett slumpmässigt tal.
 
-### Öppnar skickad bokstavsinstans {#opening-submitted-letter-instance}
+### Öppnar den skickade bokstavsinstansen {#opening-submitted-letter-instance}
 
 Skickad PDF kan öppnas direkt med ID för bokstavsinstans:
 
