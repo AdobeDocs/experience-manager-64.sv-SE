@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Vanliga frågor och svar om HTML5-formulär {#frequently-asked-questions-faq-for-html-forms}
+# Vanliga frågor och svar (FAQ) för HTML5-formulär {#frequently-asked-questions-faq-for-html-forms}
 
 Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för HTML5-formulär.
 
@@ -135,7 +135,7 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
    * Kapslade tabeller och delformulär i en tabell stöds inte.
    * Rubriker stöds bara för tabellens övre och vänstra kolumner. Huvuden stöds inte för element i mellantabeller. Du kan använda rubriker på flera rad- och kolumnrubriker, förutsatt att alla sådana rader och kolumner finns tillsammans med den översta raden eller kolumnen längst till vänster i tabellen.
-   * `Rowspan`och `colspan`från en slumpmässig plats i tabellen stöds inte.
+   * `Rowspan`och  `colspan`från en slumpmässig plats i tabellen stöds inte.
    * Du kan inte lägga till eller ta bort instanser av rader som innehåller element med ett radintervallvärde som är större än 1.
 
 1. Vilken läsordning har skärmläsare verktygstips och bildtexter?
@@ -178,8 +178,8 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
 1. Finns det någon rekommenderad namnkonvention och finns det några reserverade nyckelord att undvika?
 
-   * I AEM Forms Designer rekommenderar vi att du inte börjar namnet på ett objekt (till exempel ett delformulär eller ett textfält) med ett understreck (_). Om du vill använda understreck i början av namnet lägger du till ett prefix efter understrecket *_&lt;prefix>&lt;objektnamn>. *
-   * Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med API:erna för [HTML5-formulär för anpassade API:er](/help/forms/using/scripting-support.md).
+   * I AEM Forms Designer bör du inte börja namnet på ett objekt (till exempel ett delformulär eller ett textfält) med ett understreck (_). Om du vill använda understreck i början av namnet lägger du till ett prefix efter understrecket *_&lt;prefix>&lt;objektnamn>. *
+   * Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med [HTML5-formulär-API:er](/help/forms/using/scripting-support.md) för anpassade API:er/funktioner.
 
 1. Har HTML5-formulär stöd för flytande fält?
 
@@ -189,8 +189,8 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
    >
    >Som standard är fälten inte aktiverade för flytande. Du kan använda Forms Designer för att ange den flytande egenskapen för fälten.
 
-   1. Öppna CRXde lite och navigera till `/content/xfaforms/profiles/default` noden.
-   1. Lägg till en egenskap `mfDataDependentFloatingField` av typen String och ställ in värdet för egenskapen på `true`**.**
+   1. Öppna CRXde lite och navigera till noden `/content/xfaforms/profiles/default`.
+   1. Lägg till egenskapen `mfDataDependentFloatingField` av typen String och ställ in värdet för egenskapen på `true`**.**
    1. Klicka på **Spara alla**. Nu aktiveras de flytande fälten för HTML Forms med den uppdaterade återgivningsprofilen.
 
       >[!NOTE]
@@ -205,5 +205,5 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
 1. Finns det några reserverade nyckelord i HTML5-formulär?
 
-   Svar: Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med API:erna för [HTML5-formulär för anpassade API:er](/help/forms/using/scripting-support.md). Förutom reserverade nyckelord bör du lägga till ett unikt prefix efter understrecket om du använder objektnamn som börjar med ett understreck (_). Genom att lägga till ett prefix undviker du eventuella konflikter med interna API:er för HTML5-formulär. Till exempel, `_fpField1`
+   Svar: Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med [HTML5-formulär-API:er](/help/forms/using/scripting-support.md) för anpassade API:er/funktioner. Förutom reserverade nyckelord bör du lägga till ett unikt prefix efter understrecket om du använder objektnamn som börjar med ett understreck (_). Genom att lägga till ett prefix undviker du eventuella konflikter med interna API:er för HTML5-formulär. Till exempel, `_fpField1`
 
