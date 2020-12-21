@@ -18,11 +18,11 @@ ht-degree: 1%
 ---
 
 
-# Ändra teckensnitt i gränssnittet {#changing-the-font-on-the-interface}
+# Ändra teckensnittet i gränssnittet {#changing-the-font-on-the-interface}
 
 Du kan ändra vilket teckensnitt som visas på arbetsytan i AEM Forms. Teckensnitt som används i ett visst avsnitt i användargränssnittet definieras i motsvarande avsnitt i formatmallen. Du kan ändra teckensnitten i användargränssnittet selektivt.
 
-Följ de [allmänna stegen för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md) av arbetsytan i AEM Forms och följ stegen för anpassning av CSS, HTML eller båda, beroende på dina behov.
+Följ de allmänna [stegen för anpassning av AEM Forms-arbetsytan](/help/forms/using/generic-steps-html-workspace-customization.md) och, beroende på dina behov, följ stegen för att anpassa CSS, HTML eller båda.
 
 1. Ändra eller lägg till teckensnittsfamiljen i en befintlig stil.
 1. Ändra eller lägg till infogad teckensnittsfamilj för HTML-elementet.
@@ -30,7 +30,7 @@ Följ de [allmänna stegen för anpassning](/help/forms/using/generic-steps-html
 
 Om du till exempel vill ändra teckensnittet för den översta navigeringsfältets ankartext till Courier New följer du de här stegen:
 
-1. Logga in på CRXDE Lite med åtkomst `https://[server]:[port]/lc/crx/de/index.jsp`.
+1. Logga in på CRXDE Lite med `https://[server]:[port]/lc/crx/de/index.jsp`.
 1. Gör något av följande:
 
    1. Om du vill ändra font-family i en befintlig stil lägger du till följande i filen newStyle.css på /apps/ws/css.
@@ -41,7 +41,7 @@ Om du till exempel vill ändra teckensnittet för den översta navigeringsfälte
       }
       ```
 
-   1. Om du vill lägga till teckensnittsfamiljen för HTML-elementet kopierar du filen till `/libs/ws/js/runtime/templates/appnavigation.html` `/apps/ws/js/runtime/templates/appnavigation.html`.
+   1. Om du vill lägga till teckensnittsfamiljen för HTML-elementet kopierar du filen `/libs/ws/js/runtime/templates/appnavigation.html` till `/apps/ws/js/runtime/templates/appnavigation.html`.
 
       Uppdatera /apps/ws/js/runtime/templates/appnavigation.html så här:
 
@@ -52,7 +52,7 @@ Om du till exempel vill ändra teckensnittet för den översta navigeringsfälte
       <li class="preference"><a href="#/preferences" title="<%= $.t('index.header.topnav.preferences.detail')%>" style="font-family:Courier New;" ><%= $.t('index.header.topnav.preferences.name')%></a></li>
       ```
 
-      Öppna /apps/ws/js/registry.js för redigering och ersättning `text!/lc/libs/ws/js/runtime/templates/appnavigation.html` med `text!/lc/apps/ws/js/runtime/templates/appnavigation.html`.
+      Öppna /apps/ws/js/registry.js för redigering och ersätt `text!/lc/libs/ws/js/runtime/templates/appnavigation.html` med `text!/lc/apps/ws/js/runtime/templates/appnavigation.html`.
 
    1. Om du vill lägga till en stil som definierar teckensnittsfamiljen lägger du till följande i filen newStyle.css på /apps/ws/css.
 
@@ -77,6 +77,8 @@ Om du till exempel vill ändra teckensnittet för den översta navigeringsfälte
 
 1. Starta om arbetsytan och rensa webbläsarcachen så att ändringarna syns.
 
-![change_font_before](assets/change_font_before.png)**Figure:** *Övre navigeringsfält före teckensnittsanpassning*
+![change_font_](assets/change_font_before.png)
+**beforeFigure:** *Övre navigeringsfält före teckensnittsanpassning*
 
-![change_font_after](assets/change_font_after.png)**Figure:** *Det övre navigeringsfältet efter teckensnittsanpassning på den första fliken*
+![change_font_](assets/change_font_after.png)
+**afterFigure:** *Övre navigeringsfält efter teckensnittsanpassning på första fliken*
