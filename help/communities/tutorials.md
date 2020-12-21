@@ -20,11 +20,11 @@ ht-degree: 0%
 
 # Tutorials {#tutorials}
 
-Detta är exempel som kan vara till hjälp när det gäller att lära sig och arbeta med AEM 6.1 Community [social component framework (SCF)](scf.md).
+Det här är exempel som hjälper dig att lära dig och arbeta med AEM 6.1 Communities [ramverk för sociala komponenter (SCF)](scf.md).
 
 ## Anpassning på klientsidan {#client-side-customization}
 
-Se även [SCF-anpassning](client-customize.md)på klientsidan.
+Se även [SCF-anpassning på klientsidan](client-customize.md).
 
 * [Community Components Guide](components-guide.md)
 
@@ -34,9 +34,9 @@ Se även [SCF-anpassning](client-customize.md)på klientsidan.
 
 ## Anpassning på serversidan {#server-side-customization}
 
-Se även anpassning [av](server-customize.md)SCF på serversidan.
+Se även [SCF-anpassning på serversidan](server-customize.md).
 
-Exempelkod finns i [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) -databasen:
+Exempelkod finns i [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marketing-Cloud)-databasen:
 
 * [Anpassa SCF-komponentexempel](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-customize)
 
@@ -58,15 +58,15 @@ Exempelkod finns i [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marke
 
 * [Skapa en exempelsida](create-sample-page.md)
 
-## Demo-användare {#demo-users}
+## Demonstrationsanvändare {#demo-users}
 
-Paketet med exempel på Geometrixx innehåller demoanvändare. Det finns ofta en skillnad i upplevelse mellan att vara besökare (inte inloggad) eller medlem (inloggad) och, så länge som exempelpaketen är installerade, kan du använda dessa användare för att simulera ett inloggat läge när du undersöker med guiden [för](components-guide.md)communitykomponenter.
+Paketet med exempel på Geometrixx innehåller demoanvändare. Det är ofta en skillnad i upplevelse mellan att vara besökare (inte inloggad) eller medlem (inloggad) och, så länge som exempelpaketen är installerade, kan du använda dessa användare för att simulera ett inloggat läge när du undersöker med [Community Components guide](components-guide.md).
 
-Om du vill se en fullständig lista över demoanvändare går du till **[!UICONTROL Tools > Operations > Security > Users]**. Eller använd den klassiska [säkerhetskonsolen](http://localhost:4502/useradmin) för användargränssnittet för att hantera användare och grupper.
+Om du vill visa en fullständig lista över demoanvändare går du till **[!UICONTROL Tools > Operations > Security > Users]** med alternativet Rail. Eller använd det klassiska användargränssnittet [säkerhetskonsolen](http://localhost:4502/useradmin) för att hantera användare och grupper.
 
-Om en [community-plats har skapats](getting-started.md)kan du tilldela demoanvändare till [communityanvändargrupper](users.md).
+Om en [community-plats har skapats](getting-started.md) är det möjligt att tilldela demoanvändare till dess [community-användargrupper](users.md).
 
-***användar-ID */*lösenord:***
+***användar-ID* /  *lösenord:***
 
 * aaron.mcdonald@mailinator.com / lösenord
 * emily.andrews@mailinator.com / lösenord
