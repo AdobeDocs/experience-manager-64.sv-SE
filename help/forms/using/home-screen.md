@@ -17,27 +17,28 @@ ht-degree: 0%
 ---
 
 
-# Hemskärm {#home-screen}
+# Startskärmen {#home-screen}
 
 När du loggar in på AEM Forms omdirigeras du till hemskärmen.
 
-## Standardhemskärm {#default-home-screen}
+## Standardstartskärm {#default-home-screen}
 
 Som standard visas alla formulär, inklusive startpunkter och uppgifter, på startskärmen (om den anslutna servern är AEM Forms Workflow aktiverad) tillsammans med tillhörande miniatyrbilder. Du kan ange miniatyrbilder på AEM Forms-servern.
 
 Följande bild är kommenterad med utanrop till de viktigaste komponenterna på startskärmen.
-![Forms app home screen](assets/home-screen-1.png)[Click to enlarge](assets/home-screen-1-1.png)
+![Forms app home ](assets/home-screen-1.png)
+[screenKlicka för att förstora](assets/home-screen-1-1.png)
 
-1. **Menyknapp**: Tryck på knappen **Meny** för att navigera till Aktiviteter, Forms, Utkorgen och Inställningar. Om din AEM Forms-app är ansluten till en AEM Forms JEE-server kan du se alternativet Åtgärder. Alternativet Uppgifter lagrar även utkast som skapats från uppgifter i en process. För AEM Forms OSGi-servrar är aktivitetsalternativet dolt. I Outbox lagras de sparade formulären och utkasten innan de synkroniseras med servern. Alla sparade formulär och utkast i Utkorgen överförs till AEM Forms-servern när appen [synkroniseras med servern](/help/forms/using/sync-app.md). Mer information om inställningar finns i [Uppdatera allmänna inställningar](/help/forms/using/update-general-settings.md).
+1. **Menyknapp**: Tryck på knappen  **** Meny för att navigera till Åtgärder, Forms, Utkorgen och Inställningar. Om din AEM Forms-app är ansluten till en AEM Forms JEE-server kan du se alternativet Åtgärder. Alternativet Uppgifter lagrar även utkast som skapats från uppgifter i en process. För AEM Forms OSGi-servrar är aktivitetsalternativet dolt. I Outbox lagras de sparade formulären och utkasten innan de synkroniseras med servern. Alla sparade formulär och utkast i Utkorgen överförs till AEM Forms-servern när appen är [synkroniserad med servern](/help/forms/using/sync-app.md). Mer information om inställningar finns i [Uppdatera allmänna inställningar](/help/forms/using/update-general-settings.md).
 1. **Uppgift eller formulär**: Tryck på uppgiften eller formuläret som du vill arbeta med.
-1. **Vågrät ellips**: Anger att åtgärder är tillgängliga för formuläret. När du trycker på ellipsen visas de åtgärder och den som har skrivit beskrivningen. Alternativet **Ta bort utkast** och **fullständigt** visas när du trycker på ellipsen.
+1. **Vågrät ellips**: Anger att åtgärder är tillgängliga för formuläret. När du trycker på ellipsen visas de åtgärder och den som har skrivit beskrivningen. Alternativet **Ta bort utkast** och **Fullständigt** visas när du trycker på ellipsen.
 1. **Ikonen** Uppdatera: Tryck på uppdateringsikonen för att synkronisera appen med AEM Forms-servern.
 
-## Anpassa hemskärmen {#customizing-the-home-screen}
+## Anpassa startskärmen {#customizing-the-home-screen}
 
 ![Allmänna inställningar](assets/gen-settings.png)
 
-Du kan ändra programmets standardhemskärm antingen från programmets **[allmänna inställningar](/help/forms/using/update-general-settings.md)**eller från fliken **Inställningar**på HTML-arbetsytan.
+Du kan ändra standardhemskärmen för programmet antingen från **[Allmänna inställningar](/help/forms/using/update-general-settings.md)** för programmet eller från fliken **Inställningar** på HTML-arbetsytan.
 
 Ändringen av inställningen för startskärmen i appen påverkar startskärmen för den inloggade användaren eller användaren på den aktuella mobila enheten.
 
