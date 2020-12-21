@@ -29,7 +29,7 @@ I det här dokumentet visas vilka klient- och serverplattformar som stöds för 
 
 >[!NOTE]
 >
->* En fullständig lista över undantag för serverplattformar som stöds finns i [Undantag för serverplattformar](#exceptions-to-supported-server-platforms)som stöds.
+>* En fullständig lista över undantag för serverplattformar som stöds finns i [Undantag för serverplattformar som stöds](#exceptions-to-supported-server-platforms).
 >* AEM Forms på JEE har endast stöd för engelska, franska, tyska och japanska versioner av de operativsystem och program som stöds.
 
 >
@@ -103,7 +103,7 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
 
 ### Databaser och CRX-beständighet {#databases-and-crx-persistence}
 
-#### Stöd för AEM {#aem-persistence-support}
+#### Stöd för AEM beständighet {#aem-persistence-support}
 
 <table> 
  <tbody> 
@@ -140,10 +140,10 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
  </tbody> 
 </table>
 
-* MongoDB är en tredjepartsprogramvara och ingår inte i AEM licenspaket. Mer information finns på sidan [MongoDB-licenspolicy](https://www.mongodb.org/about/licensing/) .
+* MongoDB är en tredjepartsprogramvara och ingår inte i AEM licenspaket. Mer information finns på sidan [MongoDB-licenspolicy](https://www.mongodb.org/about/licensing/).
 
 * För att få ut så mycket som möjligt av er AEM rekommenderar Adobe licensiering av MongoDB Enterprise-versionen för att få tillgång till professionell support.
-* Adobe kundtjänst kommer att hjälpa dig med kvalificeringsproblem i samband med användningen av MongoDB med AEM. Mer information finns på sidan [](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager)MongoDB för Adobe Experience Manager.
+* Adobe kundtjänst kommer att hjälpa dig med kvalificeringsproblem i samband med användningen av MongoDB med AEM. Mer information finns på sidan [MongoDB för Adobe Experience Manager](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager).
 * &#39;Filsystem&#39; inkluderar blocklagring som är POSIX-kompatibel. Detta inkluderar nätverkslagringsteknik. Tänk på att filsystemets prestanda kan variera och påverka den övergripande prestandan. Vi rekommenderar att du läser in AEM i kombination med nätverks-/fjärrfilsystemet.
 * Endast WiredTiger stöds för lagringsmotorn MongoDB.
 * MongoDB-delning stöds inte i AEM.
@@ -209,13 +209,13 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
   </tr> 
   <tr> 
    <td>Oracle</td> 
-   <td><p>JDBC-drivrutin för Oracle Database 12.1.0.2.0</p> <p>jodbc7.jar (version 12.1.0.2.0)<br /> </p> </td> 
+   <td><p>JDBC-drivrutin för oracle Database 12.1.0.2.0</p> <p>jodbc7.jar (version 12.1.0.2.0)<br /> </p> </td> 
    <td><p>Tillhandahålls med AEM Forms för JEE-installation.</p> </td> 
   </tr> 
   <tr> 
    <td>IBM DB2</td> 
    <td><p>IBM® DB2 Universal JDBC-drivrutin 4.16.53 (db2jcc4.jar)</p> </td> 
-   <td><p>Ladda ned drivrutinen från <a href="https://www-01.ibm.com/support/docview.wss?uid=swg21363866" target="_blank">IBM:s webbplats</a></p> </td> 
+   <td><p>Hämta drivrutinen från <a href="https://www-01.ibm.com/support/docview.wss?uid=swg21363866" target="_blank">IBM:s webbplats</a></p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -278,7 +278,7 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
    <td><p>Uppdateringar och korrigeringar</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Red Hat Enterprise Linux 7 (Kernel 3.x)</br><b>Obs!</b> <a href="https://access.redhat.com/articles/4665701">Red Hat Enterprise Linux 6</a> når slutet av underhållsfasen och går över till Extended Life Cycle Support-fasen den 30 november 2020. Adobe rekommenderar Red Hat Enterprise Linux 7 för uppgraderingar och nya installationer. Befintliga installationer kan använda Red Hat Enterprise Linux 6 under supportfasen för utökad livscykel.</p> </td> 
+   <td><p>Red Hat Enterprise Linux 7 (Kernel 3.x)</br><b>Obs!</b> <a href="https://access.redhat.com/articles/4665701">Red Hat Enterprise Linux 6</a> når slutet av underhållsfasen och går över till supportfasen för utökad livscykel den 30 november 2020. Adobe rekommenderar Red Hat Enterprise Linux 7 för uppgraderingar och nya installationer. Befintliga installationer kan använda Red Hat Enterprise Linux 6 under supportfasen för utökad livscykel.</p> </td> 
    <td><p>S: Stöds</p> </td> 
    <td><p>Mindre releaser, kumulativa uppdateringar och viktiga uppdateringar</p> </td> 
   </tr> 
@@ -359,14 +359,14 @@ Tänk dessutom på följande när du väljer program för Adobe AEM Forms i JEE-
 
 * AEM Forms på JEE stöder uppdateringar, patchar och korrigeringspaket utöver den angivna större och mindre versionen av programvaran som stöds. Uppdatering till nästa större eller mindre version stöds dock inte om det inte anges.
 * Klusterbaserade installationer stöder inte TjärMK-beständighet. Mer information om stöd för beständighet finns i [Välja en beständig typ för en AEM Forms-installation](/help/forms/using/choosing-persistence-type-for-aem-forms.md).
-* AEM Forms på JEE har stöd för olika tredjepartsprogram enligt vår [tredjepartspolicy](#third-party-patch-support-policy)för programsupport.
+* AEM Forms på JEE stöder olika tredjepartsprogram enligt vår [policy för tredjepartsprogramsupport](#third-party-patch-support-policy).
 * AEM Forms på JEE stöder plattformar enligt stöd från tredjepartsleverantörer. Vissa kombinationer kanske inte tillåts av tredjepartsleverantörer. Många leverantörer har t.ex. inte certifierat sina programservrar med IBM® DB2. Därför stöder inte AEM Forms på JEE heller dessa kombinationer. Se även till att du väljer vilka programversioner som stöds i supportmatrisen för tredjepartsleverantörer.
 * AEM Forms på JEE stöder inte TjärMK Cold Standby.
 * AEM Forms på JEE stöder inte lodrät klustring.
 * AEM Forms på JEE stöder inte MySQL-databaser i en klustrad miljö.
 * RDBMK fungerar inte med DB2-, MYSQL-, MS SQL- och Oracle-databaser när paket-JDBC-modulerna är konfigurerade för Weblogic.
 
-### LDAP-servrar (tillval) {#ldap-servers-optional}
+### LDAP-servrar (valfritt) {#ldap-servers-optional}
 
 <table> 
  <tbody> 
@@ -411,7 +411,7 @@ Tänk dessutom på följande när du väljer program för Adobe AEM Forms i JEE-
 * Microsoft Exchange 2013
 * Microsoft Office 365
 
-### Innehållshanterare och motsvarande kopplingar {#content-managers-and-corresponding-connectors}
+### Innehållshanterare och motsvarande anslutningar {#content-managers-and-corresponding-connectors}
 
 <table> 
  <tbody> 
@@ -421,7 +421,7 @@ Tänk dessutom på följande när du väljer program för Adobe AEM Forms i JEE-
   </tr> 
   <tr> 
    <td>IBM Content Manager Server</td> 
-   <td>8.5 Fixpaket 2<br /> </td> 
+   <td>8.5 Åtgärda paket 2<br /> </td> 
   </tr> 
   <tr> 
    <td>IBM Content Manager-klient</td> 
@@ -437,7 +437,7 @@ Tänk dessutom på följande när du väljer program för Adobe AEM Forms i JEE-
   </tr> 
   <tr> 
    <td>Microsoft Sharepoint</td> 
-   <td>2013 and 2016<br /> </td> 
+   <td>2013 och 2016<br /> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -530,14 +530,14 @@ AEM Forms App har nu stöd för Apache Cordova. Följande plattformsspecifika ve
 
 ### Undantag från tillgänglighetsstöd {#exceptions-to-accessibility-support}
 
-Följande delsystem i AEM Forms är inte [kompatibla med 508](https://www.section508.gov/) :
+Följande delsystem i AEM Forms är inte [508](https://www.section508.gov/)-kompatibla:
 
 * Anpassat gränssnitt för Forms-redigering
 * Redigeringsgränssnittet för Forms Manager
 * Redigeringsgränssnitt för korrespondenshantering
 * Administratörsgränssnitt (administrationskonsolens användargränssnitt)
 
-## Systemkrav för AEM Forms i JEE {#system-requirements-for-aem-forms-on-jee}
+## Systemkrav för AEM Forms på JEE {#system-requirements-for-aem-forms-on-jee}
 
 ### Lägsta maskinvarukrav {#minimum-hardware-requirements}
 
@@ -549,15 +549,15 @@ Följande delsystem i AEM Forms är inte [kompatibla med 508](https://www.sectio
   </tr> 
   <tr> 
    <td>Microsoft Windows Server</td> 
-   <td>Intel® Xeon® E5-2680, 2,4 GHz eller motsvarande<br /> VMWare ESX 5.1 eller senare<br /> RAM: 6 GB (64-bitars operativsystem med 64-bitars JVM)<br /> ledigt diskutrymme: 15 GB temporärt utrymme plus 22 GB<br /> för AEM Forms på JEE</td> 
+   <td>Intel® Xeon® E5-2680, 2,4 GHz-processor eller motsvarande<br /> VMWare ESX 5.1 eller senare<br /> RAM: 6 GB (64-bitars operativsystem med 64-bitars JVM)<br /> ledigt diskutrymme: 15 GB temporärt utrymme plus 22 GB<br /> för AEM Forms i JEE</td> 
   </tr> 
   <tr> 
    <td>Sun Solaris</td> 
-   <td>UltraSPARC® IIIi, 1,5 GHz processor<br /> Solaris Containers (Zones) partitionering<br /> RAM: 6 GB (64-bitars operativsystem med 64-bitars JVM)<br /> ledigt diskutrymme: 6 GB temporärt utrymme plus 22 GB<br /> för AEM Forms i JEE</td> 
+   <td>UltraSPARC® IIIi, 1,5 GHz-processor<br /> Solaris Containers (Zones) partitionering<br /> RAM: 6 GB (64-bitars operativsystem med 64-bitars JVM)<br /> ledigt diskutrymme: 6 GB temporärt utrymme plus 22 GB<br /> för AEM Forms i JEE</td> 
   </tr> 
   <tr> 
    <td>IBM AIX</td> 
-   <td>P6 pSeries 520 (modell 52A) 9131-52A, 1,8 GHz<br /> LPAR<br /> Partitioning RAM: 6 GB (64-bitars operativsystem med 64-bitars JVM)<br /> ledigt diskutrymme: 6 GB temporärt utrymme plus 22 GB<br /> för AEM Forms i JEE</td> 
+   <td>P6 pSeries 520 (modell 52A) 9131-52A, 1,8 GHz-processor<br /> LPAR-partitionering<br /> RAM: 6 GB (64-bitars operativsystem med 64-bitars JVM)<br /> ledigt diskutrymme: 6 GB temporärt utrymme plus 22 GB<br /> för AEM Forms i JEE</td> 
   </tr> 
   <tr> 
    <td>SUSE Linux Enterprise Server</td> 
@@ -565,7 +565,7 @@ Följande delsystem i AEM Forms är inte [kompatibla med 508](https://www.sectio
   </tr> 
   <tr> 
    <td>Red Hat Enterprise Linux</td> 
-   <td>Intel Xeon E5-2670v2, 1 vCPU, 2,5 GHz processor<br /> AWS m3.medium (3 ecu)<br /> RAM: 6 GB (64-bitars operativsystem med 64-bitars JVM)<br /> ledigt diskutrymme: 6 GB temporärt utrymme plus 22 GB<br /> för AEM Forms i JEE<br /> </td> 
+   <td>Intel Xeon E5-2670v2, 1 vCPU, 2,5 GHz processor<br /> AWS m3.medium (3 ecu)<br /> RAM: 6 GB (64-bitars operativsystem med 64-bitars JVM)<br /> ledigt diskutrymme: 6 GB temporärt utrymme plus 22 GB<br /> för AEM Forms på JEE<br /> </td> 
   </tr> 
   <tr> 
    <td>Maskinvarukrav för en liten produktionsmiljö</td> 
@@ -574,7 +574,7 @@ Följande delsystem i AEM Forms är inte [kompatibla med 508](https://www.sectio
      <li><strong>Intel-baserad miljö</strong>: Intel® Xeon® E5-2680, 2,4 GHz eller högre. Om du använder en processor med dubbla kärnor förbättras prestandan ytterligare</li> 
      <li><strong>Sun SPARC-miljö:</strong> UltraSPARC V eller senare</li> 
      <li><strong>IBM AIX-baserad miljö:</strong> Power6 eller senare<br /> </li> 
-     <li><strong>Minne: </strong>4 GB <br /> </li> 
+     <li><strong>Minne:  </strong>4 GB  <br /> </li> 
     </ul> </td> 
   </tr> 
  </tbody> 
@@ -585,7 +585,7 @@ Ytterligare krav finns i:
 * [Systemkrav för en enda server-AEM Forms för JEE-distribution](https://www.adobe.com/go/learn_aemforms_sysreq_single_64)
 * [Systemkrav för klustrade AEM Forms vid JEE-driftsättning](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_64)
 
-## Klienter som stöds för AEM Forms i JEE {#supported-clients-for-aem-forms-on-jee}
+## Klienter som stöds för AEM Forms på JEE {#supported-clients-for-aem-forms-on-jee}
 
 ### Workbench {#workbench}
 
@@ -631,7 +631,7 @@ Ytterligare krav finns i:
 
 ### Designer {#designer}
 
-**Obs!** Om du vill installera Designer i Windows kör du installationsprogrammet med administratörsbehörighet.
+**Obs!** Kör installationsprogrammet med administratörsbehörighet om du vill installera Designer i Windows.
 
 * Microsoft® Windows® 2012 Server R2, Microsoft® Windows® 2016 Server, Microsoft Windows 10
 
@@ -664,7 +664,7 @@ Ytterligare krav finns i:
 
 >[!NOTE]
 >
->I Acrobat DC-produktfamiljen introduceras två spår för både Acrobat och Reader, vilka i huvudsak är olika produkter: &quot;Classic&quot; och &quot;Continuous.&quot; Mer information och en jämförelse av de två spåren finns på [https://www.adobe.com/go/acrobatdctracks.](https://www.adobe.com/go/acrobatdctracks)
+>I Acrobat DC-produktfamiljen introduceras två spår för både Acrobat och Reader, vilka i huvudsak är olika produkter: &quot;Classic&quot; och &quot;Continuous.&quot; Mer information och en jämförelse av de två spåren finns i [https://www.adobe.com/go/acrobatdctracks.](https://www.adobe.com/go/acrobatdctracks)
 
 ### Webbläsare {#browsers}
 
@@ -713,7 +713,7 @@ Ytterligare krav finns i:
 >* Safari stöds bara på Macintosh OS X.
 
 
-#### Mobila kunder {#mobile-clients}
+#### Mobilklienter {#mobile-clients}
 
 <table> 
  <tbody> 
@@ -752,7 +752,7 @@ Ytterligare krav finns i:
 
 
 
-### AEM Forms {#aem-forms-workspace-app}
+### AEM Forms app {#aem-forms-workspace-app}
 
 #### Stöd för mobila enheter {#mobile-device-support}
 
@@ -793,15 +793,15 @@ Microsoft® Windows® 2012 stöds inte för alla angivna klientprogram förutom 
 
 Dessutom har AEM Forms på JEE stöd för uppdateringar, patchar och korrigeringspaket utöver den angivna huvud- och delversionen av programvaran som stöds. Uppdatering till nästa större eller mindre version stöds dock inte om det inte anges.
 
-## Supportpolicy för korrigeringsstöd från tredje part {#third-party-patch-support-policy}
+## Supportpolicy {#third-party-patch-support-policy} för korrigeringsfiler från tredje part
 
-Tredjepartskraven för AEM Forms på JEE beskrivs i avsnittet Systemkrav i respektive produktdokument. All dokumentation finns på [https://adobe.com/go/learn_aemforms_documentation_64](https://adobe.com/go/learn_aemforms_documentation_64) .
+Tredjepartskraven för AEM Forms på JEE beskrivs i avsnittet Systemkrav i respektive produktdokument. Du kan komma åt all dokumentation från [https://adobe.com/go/learn_aemforms_documentation_64](https://adobe.com/go/learn_aemforms_documentation_64).
 
 AEM Forms på JEE:s referensplattformar från tredje part anger den specifika korrigeringsnivån för tredjepartsinfrastruktur som var aktuell under utvecklingen och lanseringen av AEM Forms på JEE, och den minsta korrigerings-/servicepaketnivån för den infrastruktur som stöds av den versionen av AEM Forms på JEE.
 
 Adobe stöder brådskande eller rekommenderade patchar som utfärdas av tredjepartsleverantörer när de släpps, förutsatt att tredjepartsleverantörer garanterar bakåtkompatibilitet med de versioner som AEM Forms på JEE stöder. Adobe stöder endast korrigeringsfiler som släppts efter den lägsta korrigeringsnivå som anges i AEM Forms för JEE-dokumentation.
 
-I vissa fall stöder inte Adobe tredjepartsuppdateringar som förändrar de viktigaste funktionerna och därför inte fullständig bakåtkompatibilitet. Mer information om vilka uppdateringar som stöds finns i [Korrigeringsdefinitioner](https://helpx.adobe.com/aem-forms/aem-forms-third-party-software-patch.html) som stöds för specifika leverantörsprodukter och korrigeringstyperna som Adobe stöder.
+I vissa fall stöder inte Adobe tredjepartsuppdateringar som förändrar de viktigaste funktionerna och därför inte fullständig bakåtkompatibilitet. Mer information om vilka uppdateringar som stöds finns i [Patchdefinitioner som stöds](https://helpx.adobe.com/aem-forms/aem-forms-third-party-software-patch.html) för specifika leverantörsprodukter och korrigeringstyperna som Adobe stöder.
 
 Under omständigheter som Adobe inte kan styra kan korrigeringsfiler från tredje part som gör anspråk på bakåtkompatibilitet ha negativ inverkan på Adobe-produkterna eller kundmiljön. I sådana fall rekommenderar Adobe att man utvärderar effekten av en brådskande korrigering från en tredje part innan man lägger in den i kritiska system. Adobe kommer att arbeta tillsammans med tredje part och göra rimliga affärsinsatser för att lösa sådana problem, antingen genom normala stödprogram för Adobe eller genom att tredje part åtgärdar problemet i sina lappar. Detta garanterar inte att en nyligen släppt korrigeringsfil från tredje part som kommer att stödjas av Adobe kommer att fungera enligt dokumentation från leverantören eller AEM Forms på JEE.
 
