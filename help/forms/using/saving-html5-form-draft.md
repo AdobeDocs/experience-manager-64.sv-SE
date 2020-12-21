@@ -23,9 +23,9 @@ Du kan spara ett HTML5-formulär som ett utkast och fortsätta fylla i formulär
 
 ## Anpassad profil som tillåter funktionen Spara som utkast {#custom-profile-to-allow-save-as-draft-feature}
 
-AEM Forms har en profil för att **spara som utkast** . Du kan återge ett formulär med profilen Spara som utkast för att aktivera utkastsfunktioner för ett HTML5-formulär. Du kan ange HTML-återgivningsprofil för ett formulär i [Forms Manager](/help/forms/using/introduction-managing-forms.md).
+AEM Forms har en **Spara som utkast**-profil. Du kan återge ett formulär med profilen Spara som utkast för att aktivera utkastsfunktioner för ett HTML5-formulär. Du kan ange HTML-återgivningsprofil för ett formulär i [Forms Manager](/help/forms/using/introduction-managing-forms.md).
 
-Om du vill aktivera funktionen Spara som utkast för din befintliga [anpassade profil](/help/forms/using/custom-profile.md)lägger du till följande egenskaper i din anpassade profilnod:
+Om du vill aktivera funktionen Spara som utkast för din befintliga [anpassade profil](/help/forms/using/custom-profile.md) lägger du till följande egenskaper i din anpassade profilnod:
 
 <table> 
  <tbody> 
@@ -52,7 +52,7 @@ Om du vill aktivera funktionen Spara som utkast för din befintliga [anpassade p
 
 ## Utkastlagring och lista {#drafts-storage-and-listing}
 
-När funktionen Spara som utkast har aktiverats för ett formulär. när formuläret sparas, visas det i [utkastkomponenten](/help/forms/using/draft-submission-component.md). Du kan hämta och börja fylla i det sparade formuläret från komponenten Utkast och Skicka.
+När funktionen Spara som utkast har aktiverats för ett formulär. när formuläret sparas visas det i [Komponenten Utkast och överföring](/help/forms/using/draft-submission-component.md). Du kan hämta och börja fylla i det sparade formuläret från komponenten Utkast och Skicka.
 
 Om du vill aktivera formulärlistor för komponenterna Utkast och Skicka lägger du till följande egenskap i profilnoden:
 
@@ -68,9 +68,9 @@ Om du vill aktivera formulärlistor för komponenterna Utkast och Skicka lägger
    <td>fp.enablePortalSubmit</td> 
    <td>Sträng</td> 
    <td>true</td> 
-   <td>Aktivera att utkast och formulär listas i<br /> Forms Portal-komponenten Utkast &amp; Submissions när de har skickats in</td> 
+   <td>Aktivera att utkast och formulär listas i <br /> Forms Portal-komponenten Utkast och inskickningar efter inskickning</td> 
   </tr> 
  </tbody> 
 </table>
 
-Som standard lagrar AEM Forms användardata som är kopplade till utkastet och överföringen av ett formulär i noden /content/forms/fp i publiceringsinstansen. Du kan lägga till din anpassade lagringsleverantör, se [Anpassad lagring för komponenten](/help/forms/using/adding-custom-storage-provider-forms.md)Utkast och överföringar.
+Som standard lagrar AEM Forms användardata som är kopplade till utkastet och överföringen av ett formulär i noden /content/forms/fp i publiceringsinstansen. Du kan lägga till din anpassade lagringsleverantör. Mer information finns i [Anpassad lagring för komponenten Utkast och överföringar](/help/forms/using/adding-custom-storage-provider-forms.md).
