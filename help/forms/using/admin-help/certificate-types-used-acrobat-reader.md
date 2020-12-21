@@ -35,13 +35,13 @@ Det &quot;egna&quot; namnet för ett Acrobat Reader DC-tilläggscertifikat är e
 
 Strängen innehåller följande element:
 
-**Certifikattyp:** Beskriver de AEM formulärmoduler som certifikatet aktiverar och aktiveringsnivån, till exempel ARE 2D-streckkod Full. En lista över tillgängliga certifikattyper finns i kolumnen Typ i tabellen i avsnittet Certifikatprofiler.
+**Certifikattyp:** Beskriver de AEM formulärmodulerna som certifikatet aktiverar och aktiveringsnivån, till exempel ARE 2D-streckkod Full. En lista över tillgängliga certifikattyper finns i kolumnen Typ i tabellen i avsnittet Certifikatprofiler.
 
-**Distributionstyp:** Anger certifikatets avsedda användning, t.ex. produktion. Värdet kan vara Evaluation eller Production. En lista över distributionstyper som är associerade med varje certifikattyp finns i kolumnen Distributionstyp i tabellen i avsnittet Certifikatprofiler.
+**Distributionstyp:** Anger certifikatets avsedda användning, till exempel Produktion. Värdet kan vara Evaluation eller Production. En lista över distributionstyper som är associerade med varje certifikattyp finns i kolumnen Distributionstyp i tabellen i avsnittet Certifikatprofiler.
 
-**Användarrättigheter:** Beskriver vilken version av användarrättighetsalgoritmen som certifikatet kan användas för, till exempel V6.1. Den här versionen betecknar inte Acrobat- eller Acrobat Reader DC-tilläggen.
+**Användarrättighetsversion:** Beskriver vilken version av användarrättighetsalgoritmen som certifikatet kan användas för, till exempel V6.1. Den här versionen betecknar inte Acrobat- eller Acrobat Reader DC-tilläggen.
 
-**Profilkod:** Profilkoden är en kort beskrivning av fullständiga certifikategenskaper, till exempel P8. En lista över profilkoder som är associerade med varje filtyp finns i kolumnen Profilkod i tabellen i avsnittet Certifikatprofiler.
+**Profilkod:** Profilkoden är en kortfattad beskrivning av fullständiga certifikategenskaper, till exempel P8. En lista över profilkoder som är associerade med varje filtyp finns i kolumnen Profilkod i tabellen i avsnittet Certifikatprofiler.
 
 **Serienummer:** Varje certifikat som utfärdas av Adobe tilldelas ett serienummer, till exempel 0002054. Adobe Enterprise Support eller en Adobe Enterprise-kontorepresentant kan använda det här serienumret för att spåra certifikatet till en viss produktorder eller till en OEM-relation.
 
@@ -154,9 +154,9 @@ Certifikat för partnerintegrering utfärdas till Adobe affärspartners för att
 
 Adobe certifikat för intern användning används i Adobe för att stödja programutveckling, integrering, prototyper och demonstration. Dessa certifikat gäller i två år från och med utfärdandedagen.
 
-Produktionscertifikat utfärdas till kunder som köpt Acrobat Reader DC-tillägg. Dessa certifikat är giltiga under den maximala period som tillåts av certifikatutfärdaren (CA), som visas som *Max* i tabellen Certifikatprofiler.
+Produktionscertifikat utfärdas till kunder som köpt Acrobat Reader DC-tillägg. Dessa certifikat är giltiga för den maximala period som tillåts av certifikatutfärdaren (CA), som visas som *Max* i tabellen Certifikatprofiler.
 
-## Användarrättigheter för Acrobat Reader DC-tillägg {#acrobat-reader-dc-extensions-usage-rights}
+## Användningsrättigheter för Acrobat Reader DC-tillägg {#acrobat-reader-dc-extensions-usage-rights}
 
 När du granskar Acrobat Reader DC-tilläggscertifikatet i Certifikatgranskaren kan du välja användningsrättighetsobjektet på fliken Information (om den är konfigurerad) för att se en detaljerad lista över de användningsrättigheter för Adobe Reader som certifikatet kan aktivera. De användarrättigheter som är aktiverade för ett visst dokument kan vara en delmängd av de som är aktiverade av certifikatet.
 
