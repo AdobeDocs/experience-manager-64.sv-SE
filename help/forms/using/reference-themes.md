@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Referensteman {#reference-themes}
 
-[Med teman](/help/forms/using/themes.md) kan du formatera formulär utan djupa kunskaper om CSS. Förutom standardtemat kan du hämta följande teman genom att installera paketet [AEM-FORMS-6.3-REFERENCE-THEMES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-THEMES) :
+[Med ](/help/forms/using/themes.md) teman kan du formatera formulär utan djupa kunskaper om CSS. Förutom standardtemat kan du hämta följande teman genom att installera paketet [AEM-FORMS-6.3-REFERENCE-THEMES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-THEMES):
 
 * Beryl
 * Kör
@@ -39,8 +39,9 @@ Mer information om hur du installerar paketet finns i [Arbeta med paket](/help/s
 
 ## Beryl {#beryl}
 
-Beryl-temat används av [We.Gov adaptive form](/help/forms/using/gov-reference-site-walkthrough.md)och betonar användningen av bakgrundsbilder, genomskinlighet och stora, platta ikoner. På skärmbilden nedan ser du hur Beryl-temat ser ut och hur det kan förbättra formateringen av ditt formulär.
-![Beryltema](assets/beryl.png)[Klicka för att förstora](assets/beryl-1.png)
+Beryltemat används av [We.Gov adaptive form](/help/forms/using/gov-reference-site-walkthrough.md) och betonar användningen av bakgrundsbild, genomskinlighet och stora, platta ikoner. På skärmbilden nedan ser du hur Beryl-temat ser ut och hur det kan förbättra formateringen av ditt formulär.
+![Beryl-](assets/beryl.png)
+[temaKlicka för att förstora](assets/beryl-1.png)
 
 ## Kör {#exec}
 
@@ -49,7 +50,7 @@ Exec-temat undviker heltäckande bakgrundsfyllningar för att framhäva formulä
 
 [Klicka för att förstora](assets/exec-1.png)
 
-## Exec Light {#exec-light}
+## Kör ljus {#exec-light}
 
 Exec Light-temat använder tomrum för att skapa en sömlös upplevelse. Knapparna Nästa och Skicka ger en heltäckande fyllning och 3D-skugga. De markerade flikarna till vänster får en pil i stället för dubbelbockmarkeringar.
 ![Exakt ljustema](assets/exec-light.png)
@@ -77,7 +78,7 @@ Ultramarintemat använder djupa blå skuggor för att framhäva komponenter som 
 
 ## Urbane {#urbane}
 
-Urbane-temat betonar ett minimalistiskt och funktionellt utseende på ditt formulär. När du använder Urbane-temat i ditt formulär ser du att komponenterna är platta. Panelerna får tunna konturer för att skapa ett modernt utseende.
+Urbane-temat framhäver ett minimalistiskt och funktionellt utseende på ditt formulär. När du använder Urbane-temat i ditt formulär ser du att komponenterna är platta. Panelerna får tunna konturer för att skapa ett modernt utseende.
 ![Urbantema](assets/urbane.png)
 
 [Klicka för att förstora](assets/urbane-1.png)
