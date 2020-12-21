@@ -25,9 +25,9 @@ Du kan skydda dokument med hjälp av profiler. De sekretessinställningar du ang
 
 Profilerna lagras på dokumentsäkerhetsservern. du tillämpar profilerna på dokument via ditt klientprogram. När du tillämpar en profil på ett dokument skyddar sekretessinställningarna som anges i profilen den information som dokumentet innehåller. Du kan distribuera det profilskyddade dokumentet till mottagare som har behörighet enligt profilen.
 
-Dokumentsäkerhet ger även klienter, tittare och indexerare möjlighet att skydda dokument, visa skyddade dokument och indexera skyddade dokument. Mer information om dokumentsäkerhet finns [i Dokumentsäkerhet](/help/forms/using/admin-help/document-security.md).
+Dokumentsäkerhet ger även klienter, tittare och indexerare möjlighet att skydda dokument, visa skyddade dokument och indexera skyddade dokument. Mer information om dokumentsäkerhet finns i [om dokumentsäkerhet](/help/forms/using/admin-help/document-security.md).
 
-## Distributionstopologi  {#deployment-topology}
+## Distributionstopologi {#deployment-topology}
 
 Dokumentsäkerhetsfunktionerna är bara tillgängliga i AEM Forms på JEE. Du behöver en instans av AEM Forms på JEE. Du kan också skapa ett kluster eller en grupp med AEM Forms-servrar om det behövs. Följande topologi är en indikativ topologi för att köra dokumentsäkerhetsfunktionen. Mer information om topologin finns i [Arkitektur och distributionstopologier för AEM Forms](aem-forms-architecture-deployment.md).
 
@@ -44,8 +44,8 @@ Bilden nedan visar den typiska arkitekturen för AEM Forms Document Security:
 Så här installerar och konfigurerar du AEM Forms på JEE:
 
 1. Ladda ned installationsprogrammet för AEM 6.4 Forms på JEE från [Adobe Licensing Website (LWS)](https://licensing.adobe.com/). Du behöver ett giltigt Maintenance &amp; Support-avtal för att ladda ned installationsprogrammet.
-1. Läs [AEM Forms om JEE-plattformar som stöds](/help/forms/using/aem-forms-jee-supported-platforms.md) och kontrollera att du har programvaran, maskinvaran, operativsystemen, programservern, databaser, JDK:er och annan infrastruktur redo att installera AEM Forms på JEE.
-1. (Endast icke-nyckelinstallationer) Läs [Förberedelsen för att installera AEM Forms single server](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64) eller [Förbereda för att installera AEM Forms serverkluster](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64) och förbereda miljön för att installera och konfigurera AEM Forms på JEE.
+1. Läs [AEM Forms på JEE-plattformar som stöds](/help/forms/using/aem-forms-jee-supported-platforms.md) och kontrollera att du har programvaran, maskinvaran, operativsystemen, programservern, databaserna, JDK:n och annan infrastruktur redo att installera AEM Forms på JEE.
+1. (Endast icke-nyckelinstallation) Läs [Förbereder installation av AEM Forms single server](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64) eller [Förbereder installation av AEM Forms serverkluster](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64) och klar för installation och konfigurering av AEM Forms på JEE.
 1. Beroende på din miljö och programserver väljer du något av följande dokument och följer instruktionerna för att slutföra installationen
 
    * [Installera och distribuera AEM Forms på JEE med nyckelkörning i JBoss](https://www.adobe.com/go/learn_aemforms_installTurnkey_64)
