@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Namnkonventioner {#naming-conventions}
+# Namngivningskonventioner {#naming-conventions}
 
 ## Bindestreck i Java-paketnamn {#hyphens-in-java-package-name}
 
@@ -26,8 +26,8 @@ När du skapar en plats för en Java-klass måste du vara medveten om att paketn
 
 När du använder bindestreck i namn på databasobjekt rekommenderas AEM utveckling, men bindestreck är ogiltiga i Java-paketnamn.
 
-Den underliggande CRX-plattformen måste kunna skilja mellan det faktiska understrecket &#39;_&#39; och ett bindestreck &#39;-&#39;. I JCR måste därför bindestrecket ersättas med sitt unicode-värde (u002d) och escape-konverteras med understrecket &#39;_&#39;.
+Den underliggande CRX-plattformen måste kunna skilja mellan det faktiska understrecket _och ett bindestreck (-). I JCR måste därför bindestrecket ersättas med dess unicode-värde (u002d) och escape-konverteras med understrecket_.
 
 Om databassökvägen till exempel är **/apps/my-example/component/info/Info.java** ska paketnamnet vara `java package apps.my_002dexample.component.info;`
 
-Observera att ett understreck på liknande sätt måste undantas, så att det `_` blir `_005f`.
+Observera att ett understreck måste föregås av ett undantag, så att `_` blir `_005f`.
