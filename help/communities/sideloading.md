@@ -34,7 +34,7 @@ Stegen för att lägga till SCF-komponenter dynamiskt är:
 
 1. [Lägg till komponenten i DOM](#dynamically-add-component-to-dom)
 
-1. [Läs in komponenten](#sideload-by-invoking-scf) separat med en av två metoder:
+1. [Läs in ](#sideload-by-invoking-scf) komponenten separat med en av två metoder:
 
 * [Dynamisk inkludering](#dynamic-inclusion)
    * Boostrap alla dynamiskt tillagda komponenter
@@ -53,9 +53,11 @@ När du lägger till SCF-komponenten är den vanligaste taggen DIV-taggen, men �
 
 Oavsett vilken tagg som används måste elementet åtminstone överensstämma med det vanliga SCF-rotelementmönstret genom att innehålla dessa två attribut:
 
-* **data-component-id** Den effektiva sökvägen till den tillagda komponenten
+* **data-component-**
+idDen effektiva sökvägen till den tillagda komponenten
 
-* **data-scf-component** Komponentens resourceType
+* **data-scf-**
+componentThe resourceType of the component
 
 Här följer ett exempel på en kommenteringskomponent:
 
@@ -68,7 +70,7 @@ Här följer ett exempel på en kommenteringskomponent:
 </div>
 ```
 
-## Inläsning via anrop av SCF {#sideload-by-invoking-scf}
+## Inläsning genom att anropa SCF {#sideload-by-invoking-scf}
 
 ### Dynamisk inkludering {#dynamic-inclusion}
 
@@ -86,4 +88,4 @@ I stället för att starta alla SCF-komponenter som finns i DOM kan du ange en s
 
 SCF.addComponent(document.getElementById(*someId*));
 
-Där *someId* är värdet för attributet **data-component-id** .
+Där *someId* är värdet för attributet **data-component-id**.
