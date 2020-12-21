@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Dokumentfragment {#document-fragments}
 
-Dokumentfragment är återanvändbara delar/komponenter i en korrespondens som du kan använda för att skapa interaktiv kommunikation/brev. Dokumentfragmenten är av följande typer:
+Dokumentfragment är återanvändbara delar/komponenter av en korrespondens som du kan använda för att skapa interaktiv kommunikation/brev. Dokumentfragmenten är av följande typer:
 
 * **Text**: En textresurs är en del av innehållet som består av ett eller flera textstycken. Ett stycke kan vara statiskt eller dynamiskt.
 
@@ -28,6 +28,6 @@ Dokumentfragment är återanvändbara delar/komponenter i en korrespondens som d
 
    * [Villkor i interaktiv kommunikation](/help/forms/using/conditions-interactive-communications.md)
 
-* **Lista:** List är en grupp dokumentfragment, inklusive text, listor, villkor och bilder. Ordningen på listelementen kan vara fast eller redigerbar. När du skapar en bokstav kan du använda några eller alla listelement för att återanvända ett mönster med element.
+* **List:** List är en grupp dokumentfragment, inklusive text, listor, villkor och bilder. Ordningen på listelementen kan vara fast eller redigerbar. När du skapar en bokstav kan du använda några eller alla listelement för att återanvända ett mönster med element.
 * **Layoutfragment**: Ett layoutfragment är en layout som kan användas i en eller flera bokstäver. Ett layoutfragment används för att skapa repeterbara mönster, särskilt dynamiska tabeller. Layouten kan innehålla typiska formulärfält som &quot;Adress&quot; och &quot;Referensnummer&quot;. Den innehåller också tomma delformulär som anger målområden. Layouterna (XDP) skapas i Designer och överförs sedan till AEM Forms.
 
