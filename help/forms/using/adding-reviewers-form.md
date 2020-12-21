@@ -16,7 +16,7 @@ ht-degree: 0%
 ---
 
 
-# Koppla granskare som skickar in svar till ett formulär  {#associating-submission-reviewers-with-a-form}
+# Koppla granskare som skickar in svar till ett formulär {#associating-submission-reviewers-with-a-form}
 
 När du skapar ett formulär kan du ange vilka användare som ska granska inskickade formulär via formulärportalen och ge feedback. Din organisation kan samla in feedback och omarbeta de inskickade formulären.
 
@@ -26,14 +26,14 @@ Granskningsgrupper som tilldelats ett formulär kan bara granska inskickade svar
 
 ## Förutsättning {#prerequisite}
 
-### Aktivera gruppegenskap för granskare som skickar in formulär med hjälp av schemaredigeraren för metadata {#enabling-submission-reviewer-groups-property-for-adaptive-forms-using-metadata-schema-editor}
+### Aktiverar gruppegenskap för inskickande granskare för adaptiva formulär med metadataschemats redigerare {#enabling-submission-reviewer-groups-property-for-adaptive-forms-using-metadata-schema-editor}
 
 Om du vill associera en granskargrupp med ett formulär redigerar du metadatarammet för anpassningsbara formulär. Som standard kan du inte lägga till en granskningsgrupp i ett skickat formulär.
 
 Så här redigerar du metadataschema:
 
-1. Klicka på under Experience Manager i författarläget **[!UICONTROL Tools > Assets > Metadata Schemas]**.
-1. Gå till Forms Schema **[!UICONTROL Forms > Forms Authored in AEM]**.
+1. Klicka på **[!UICONTROL Tools > Assets > Metadata Schemas]** under Experience Manager i redigeringsläget.
+1. Gå till **[!UICONTROL Forms > Forms Authored in AEM]** på Forms-sidan Schema.
 
    Sidans URL är:
 
@@ -43,12 +43,12 @@ Så här redigerar du metadataschema:
     aem-authored
    ```
 
-1. Select **[!UICONTROL Adaptive Form]** and click **[!UICONTROL Edit]**.
-1. Klicka på Redigera formulär på sidan Redigera formulär **[!UICONTROL Advanced]**.
-1. På fliken Avancerat drar och släpper du den **[!UICONTROL Single Line Text]** komponent som är tillgänglig under Skapa formulär.
+1. Välj **[!UICONTROL Adaptive Form]** och klicka på **[!UICONTROL Edit]**.
+1. Klicka på **[!UICONTROL Advanced]** på sidan Redigera formulär.
+1. Dra och släpp **[!UICONTROL Single Line Text]**-komponenten som finns under Skapa formulär på fliken Avancerat.
 1. Markera den tillagda textkomponenten för att se dess inställningar.
 
-   Under Inställningar anger du `./jcr:content/metadata/form-submission-reviewer-group` i fältet Koppla till egenskap.
+   Under Inställningar anger du `./jcr:content/metadata/form-submission-reviewer-group` i fältet Mappa till egenskap.
 
    Fältet för gruppen Skicka granskare i de avancerade egenskaperna för ditt adaptiva formulär aktiveras med det namn du anger under Fältetikett.
 
@@ -57,17 +57,17 @@ Så här redigerar du metadataschema:
 Om du vill associera granskare med ett anpassat formulär skapar du en granskargrupp och lägger till användare. Lägg till den skapade granskargruppen under fältet för att skicka in formulär i formulärets avancerade egenskaper.\
 Med användargrupper kan du associera olika uppsättningar av granskare med olika anpassningsbara formulär. Den här funktionen förhindrar att obehöriga skickar in granskningar.
 
-Innan du utför följande steg ska du läsa [Förutsättning](/help/forms/using/adding-reviewers-form.md#prerequisite).
+Innan du utför följande steg ska du läsa [Krav](/help/forms/using/adding-reviewers-form.md#prerequisite).
 
-Navigera till om du vill skapa en grupp och lägga till medlemmar i den **[!UICONTROL Tools > Operations > Security > Groups]**.\
+Om du vill skapa en grupp och lägga till medlemmar i den går du till **[!UICONTROL Tools > Operations > Security > Groups]**.\
 Mer information finns i [Användaradministration och -tjänster](/help/sites-administering/security.md).\
-Se till att du lägger till gruppen som du skapar som medlem i den körklara användargruppen: **formulärinlämning-granskare**. Den här användargruppen levereras med AEM Forms och ser till att användare läggs till som granskare.
+Se till att du lägger till gruppen som du skapar som medlem i den körklara användargruppen: **forms-submit-reviewers**. Den här användargruppen levereras med AEM Forms och ser till att användare läggs till som granskare.
 
 Så här associerar du användargrupper med ett anpassat formulär:
 
-1. Navigera till i redigeringsläget **[!UICONTROL Forms > Forms & Documents]**.
-1. Använd **[!UICONTROL Select]** alternativet för att välja ett anpassat formulär och klicka på **[!UICONTROL View Properties]**.
-1. Klicka på **[!UICONTROL Edit]** och klicka sedan på **[!UICONTROL ADVANCED]** i fönstret Egenskaper i formuläret.
+1. Navigera till **[!UICONTROL Forms > Forms & Documents]** i redigeringsläget.
+1. Använd alternativet **[!UICONTROL Select]** för att välja ett anpassat formulär och klicka på **[!UICONTROL View Properties]**.
+1. Klicka på **[!UICONTROL Edit]** i fönstret Egenskaper för formuläret och klicka sedan på **[!UICONTROL ADVANCED]**.
 1. Ange gruppen i gruppfältet för granskare som ska skicka in och klicka på **[!UICONTROL Done]**.
 
    Fältet för granskningsgruppen som ska skickas visas med det namn som du angav i det redigerade metadataschemat för anpassade formulär.
