@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Java API snabbstart (SOAP) för integreringstjänsten för formulärdata {#form-data-integration-service-javaapi-quick-start-soap}
+# Java API snabbstart (SOAP) {#form-data-integration-service-javaapi-quick-start-soap} för integreringstjänsten för formulärdata
 
 Följande snabbstarter är tillgängliga för integreringstjänsten för formulärdata.
 
