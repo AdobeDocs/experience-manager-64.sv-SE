@@ -22,7 +22,7 @@ ht-degree: 0%
 
 AEM (och tidigare versioner) använde JMS-köer för att köra åtgärder asynkront. I AEM har JMS-köer ersatts av Work Manager. Det här dokumentet innehåller bakgrundsinformation om Work Manager och anvisningar om hur du konfigurerar begränsningsalternativ för Work Manager.
 
-## Om långvariga (asynkrona) åtgärder {#about-long-lived-asynchronous-operations}
+## Om långlivade (asynkrona) åtgärder {#about-long-lived-asynchronous-operations}
 
 I AEM kan åtgärder som utförs av tjänster vara antingen kortlivade (synkrona) eller långlivade (asynkrona). Kortlivade åtgärder slutförs synkront på samma tråd som de anropades från. Dessa åtgärder väntar på ett svar innan de fortsätter.
 
@@ -40,7 +40,7 @@ Asynkrona åtgärder hanteras på följande sätt:
 
 AEM formuläradministratörer kan använda Health Monitor för att kontrollera Work Manager-statistik, t.ex. antalet arbetsobjekt i kön och deras status. Du kan också använda Hälsoövervakning för att pausa, återuppta, försöka igen eller ta bort arbetsobjekt. (Se [Visa statistik för Work Manager](/help/forms/using/admin-help/view-statistics-related-manager.md#view-statistics-related-to-work-manager).)
 
-## Konfigurera begränsningsalternativ för Work Manager {#configuring-work-manager-throttling-options}
+## Konfigurerar begränsningsalternativ för Work Manager {#configuring-work-manager-throttling-options}
 
 Du kan konfigurera begränsning för Work Manager så att arbetsobjekt schemaläggs endast när det finns tillräckligt med minnesresurser. Du konfigurerar begränsning genom att ange följande JVM-alternativ på programservern.
 
@@ -58,11 +58,11 @@ Du kan konfigurera begränsning för Work Manager så att arbetsobjekt schemalä
   </tr> 
   <tr> 
    <td><code> adobe.workmanager.debug-mode-enabled</code></td> 
-   <td><p>Ange det här alternativet om du vill <code>true</code> aktivera felsökningsläget eller till false om du vill inaktivera det. </p><p>I felsökningsläget loggas meddelanden om brott mot policyn i Work Manager och om att pausa/återuppta åtgärder i Work Manager. Ange att det här alternativet endast ska vara true vid felsökning.</p></td> 
+   <td><p>Ange det här alternativet till <code>true</code> om du vill aktivera felsökningsläget, eller till false om du vill inaktivera det. </p><p>I felsökningsläget loggas meddelanden om brott mot policyn i Work Manager och om att pausa/återuppta åtgärder i Work Manager. Ange att det här alternativet endast ska vara true vid felsökning.</p></td> 
   </tr> 
   <tr> 
    <td><code> adobe.workmanager.memory-control.enabled</code></td> 
-   <td><p>Ange det här alternativet om du vill <code>true</code> aktivera begränsning baserat på inställningarna för minneskontroll som beskrivs nedan, eller om du vill <code>false</code> inaktivera begränsning.</p></td> 
+   <td><p>Ange det här alternativet till <code>true</code> om du vill aktivera begränsning baserat på inställningarna för minneskontroll som beskrivs nedan, eller till <code>false</code> om du vill inaktivera begränsning.</p></td> 
   </tr> 
   <tr> 
    <td><code> adobe.workmanager.memory-control.high-limit</code></td> 
@@ -82,12 +82,12 @@ Du kan konfigurera begränsning för Work Manager så att arbetsobjekt schemalä
 **Lägg till Java-alternativ i JBoss**
 
 1. Stoppa JBoss-programservern.
-1. Öppna *[appserver root]*/bin/run.bat (Windows) eller run.sh (Linux eller UNIX) i en redigerare och lägg till eventuella Java-alternativ i formatet `-Dproperty=value`.
+1. Öppna *[appserverroten]*/bin/run.bat (Windows) eller run.sh (Linux eller UNIX) i en redigerare och lägg till eventuella Java-alternativ i formatet `-Dproperty=value`.
 1. Starta om servern.
 
 **Lägg till Java-alternativ i WebLogic**
 
-1. Starta WebLogic Administration Console genom att ange `https://`*[värdnamnsporten ]*`:`*[i en webbläsare]*`/console` .
+1. Starta WebLogic Administration Console genom att skriva `https://`*[värdnamn ]*`:`*[port]* `/console` i en webbläsare.
 1. Skriv användarnamnet och lösenordet som du skapade för WebLogic Server-domänen och klicka på Logga under Change Center och klicka på Lock &amp; Edit.
 1. Klicka på Miljö > Servrar under Domänstruktur och klicka på namnet på den hanterade servern i den högra panelen.
 1. På nästa skärm klickar du på fliken Konfiguration > fliken Serverstart.
