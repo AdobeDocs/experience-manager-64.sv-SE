@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Konfigurera lagringstjänster för utkast och överföringar {#configuring-storage-services-for-drafts-and-submissions}
+# Konfigurera lagringstjänster för utkast och inskickade filer {#configuring-storage-services-for-drafts-and-submissions}
 
 ## Översikt {#overview}
 
@@ -35,17 +35,17 @@ Utöver det ovan nämnda standardtillvägagångssättet finns det även en alter
 
 >[!NOTE]
 >
->När du använder Forms Portal-åtgärden eller aktiverar alternativet Lagra data i formulärportalen i anpassat format, lagras formulärdata i AEM. I en produktionsmiljö bör du inte lagra utkast eller skickade formulärdata i AEM. Istället måste ni integrera utkasten och skicka-komponenten med en säker lagringsplats, t.ex. en företagsdatabas, för att lagra utkast och skickade formulärdata.
+>När du använder Forms Portal-åtgärden för att skicka eller aktiverar alternativet Lagra data i formulärportalen i anpassad form, lagras formulärdata i AEM. I en produktionsmiljö bör du inte lagra utkast eller skickade formulärdata i AEM. Istället måste ni integrera utkasten och skicka-komponenten med en säker lagringsplats, t.ex. en företagsdatabas, för att lagra utkast och skickade formulärdata.
 >
->Mer information finns i [Exempel på hur du integrerar utkast och inskickningskomponenter med databaser](/help/forms/using/integrate-draft-submission-database.md).
+>Mer information finns i [Exempel på hur du integrerar komponenter för utkast och överföringar med databas](/help/forms/using/integrate-draft-submission-database.md).
 
-## Konfigurera Forms Portal-utkast och inskickningstjänster {#configuring-forms-portal-drafts-and-submissions-services}
+## Konfigurera Forms Portal-utkast och skicka in-tjänster {#configuring-forms-portal-drafts-and-submissions-services}
 
-I AEM Web Console Configuration (Konfiguration av webbkonsol) `https://[*host*]:[*port*]/system/console/configMgr`klickar du för att öppna **Forms Portal Draft and Submission Configuration** i redigeringsläge.
+I AEM webbkonsolkonfiguration ( `https://[*host*]:[*port*]/system/console/configMgr`) klickar du för att öppna **Forms Portal Draft and Submission Configuration** i redigeringsläge.
 
 Ange värden för egenskaper baserat på dina krav enligt beskrivningen nedan:
 
-### Körklara tjänster för lagring av data i publiceringsinstansen {#out-of-the-box-services-to-store-data-on-publish-instance}
+### Utgångstjänster för lagring av data på publiceringsinstansen {#out-of-the-box-services-to-store-data-on-publish-instance}
 
 Data replikeras omvänt till den konfigurerade författarinstansen.
 
@@ -56,7 +56,7 @@ Data replikeras omvänt till den konfigurerade författarinstansen.
    <th>Värde</th> 
   </tr>
   <tr>
-   <td>Forms Portal Draft Data Service (identifierare för draft data service (<strong>draft.data.service</strong>))</td> 
+   <td>Forms Portal Draft Data Service (identifierare för datatjänst för utkast (<strong>draft.data.service</strong>))</td> 
    <td>com.adobe.fd.fp.service.impl.DraftDataServiceImpl<br /> </td> 
   </tr>
   <tr>
@@ -64,7 +64,7 @@ Data replikeras omvänt till den konfigurerade författarinstansen.
    <td>com.adobe.fd.fp.service.impl.DraftMetadataServiceImpl<br /> </td> 
   </tr>
   <tr>
-   <td>Forms Portal Submit Data Service (identifierare för Skicka data service (<strong>submit.data.service</strong>))</td> 
+   <td>Forms Portal Submit Data Service (identifierare för skicka data-tjänst (<strong>submit.data.service</strong>))</td> 
    <td>com.adobe.fd.fp.service.impl.SubmitDataServiceImpl<br /> </td> 
   </tr>
   <tr>
@@ -85,7 +85,7 @@ Data skickas direkt till den konfigurerade fjärrinstansen
    <th>Värde</th> 
   </tr>
   <tr>
-   <td>Forms Portal Draft Data Service (identifierare för draft data service (<strong>draft.data.service</strong>))</td> 
+   <td>Forms Portal Draft Data Service (identifierare för datatjänst för utkast (<strong>draft.data.service</strong>))</td> 
    <td>com.adobe.fd.fp.service.impl.DraftDataServiceRemoteImpl<br /> </td> 
   </tr>
   <tr>
@@ -93,7 +93,7 @@ Data skickas direkt till den konfigurerade fjärrinstansen
    <td>com.adobe.fd.fp.service.impl.DraftMetadataServiceRemoteImpl<br /> </td> 
   </tr>
   <tr>
-   <td>Forms Portal Submit Data Service (identifierare för Skicka data service (<strong>submit.data.service</strong>))</td> 
+   <td>Forms Portal Submit Data Service (identifierare för skicka data-tjänst (<strong>submit.data.service</strong>))</td> 
    <td>com.adobe.fd.fp.service.impl.SubmitDataServiceRemoteImpl<br /> </td> 
   </tr>
   <tr>
@@ -105,9 +105,9 @@ Data skickas direkt till den konfigurerade fjärrinstansen
 
 Förutom konfigurationen ovan anger du information om den konfigurerade fjärrbearbetningsinstansen.
 
-I AEM webbkonsolkonfiguration ( `https://[*host*]:[*port*]/system/console/configMgr`) klickar du för att öppna **AEM DS-inställningstjänsten** i redigeringsläge. I dialogrutan AEM DS-inställningstjänst anger du information om bearbetning av server-URL, användarnamn för bearbetning av server och lösenord.
+I AEM webbkonsolkonfiguration ( `https://[*host*]:[*port*]/system/console/configMgr`) klickar du för att öppna **AEM DS Settings Service** i redigeringsläge. I dialogrutan AEM DS-inställningstjänst anger du information om bearbetning av server-URL, användarnamn för bearbetning av server och lösenord.
 
 >[!NOTE]
 >
->Ett exempel på implementering finns också för lagring av användardata i en databas. Mer information om hur du konfigurerar data- och metadatatjänster för att lagra användardata i en extern databas finns i [Exempel för att integrera komponenten för utkast och överföringar med databasen](/help/forms/using/integrate-draft-submission-database.md).
+>Ett exempel på implementering finns också för lagring av användardata i en databas. Mer information om hur du konfigurerar data- och metadatatjänster för att lagra användardata i en extern databas finns i [Exempel för att integrera komponent för utkast och överföringar med databas](/help/forms/using/integrate-draft-submission-database.md).
 
