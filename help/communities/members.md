@@ -22,24 +22,24 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-AEM Communities funktioner kräver ofta att besökarna är registrerade och inloggade innan de deltar i en community i publiceringsmiljön. Användarregistreringen behöver bara finnas i publiceringsmiljön och kallas ofta *medlemmar* för att skilja dem från *användare* som är registrerade i författarmiljön.
+AEM Communities funktioner kräver ofta att besökarna är registrerade och inloggade innan de deltar i en community i publiceringsmiljön. Användarregistreringen behöver bara finnas i publiceringsmiljön och kallas ofta *medlemmar* för att skilja dem från *användare* registrerade i författarmiljön.
 
-### Medlemmar (användare) vid publicering {#members-users-on-publish}
+### Medlemmar (användare) på Publish {#members-users-on-publish}
 
-Med konsolerna Communities Members and Groups kan medlemmar och medlemsgrupper som är registrerade i *publiceringsmiljön* skapas och hanteras från *författarmiljön* . Detta är bara möjligt när [tunneltjänsten](deploy-communities.md#tunnel-service-on-author) är aktiverad.
+Med konsolerna Webbgruppsmedlemmar och Grupper kan medlemmar och medlemsgrupper som är registrerade i *publiceringsmiljön* skapas och hanteras från *författarmiljön*. Detta är bara möjligt när tunneln [service](deploy-communities.md#tunnel-service-on-author) är aktiverad.
 
 ### Användare på författare {#users-on-author}
 
 För att hantera användare och grupper som är registrerade i *författarmiljön* måste du använda plattformens säkerhetskonsol:
 
-* Välj `Tools, Security, Users`
-* Välj `Tools, Security, Groups`
+* Välj `Tools, Security, Users` från global navigering
+* Välj `Tools, Security, Groups` från global navigering
 
 >[!NOTE]
 >
->När exempelinnehåll är distribuerat och aktiverat finns det många exempelanvändare i både författar- och publiceringsmiljöer. De här användarna kommer inte att vara närvarande när de körs med [inget innehållskörningsläge](../../help/sites-administering/production-ready.md).
+>När exempelinnehåll är distribuerat och aktiverat finns det många exempelanvändare i både författar- och publiceringsmiljöer. De här användarna kommer inte att vara närvarande när de körs med [nosamplingsinnehållskörningsläge](../../help/sites-administering/production-ready.md).
 
-## Medlemskonsolen {#members-console}
+## Medlemskonsol {#members-console}
 
 I författarmiljön kan du nå Medlemskonsolen för att hantera medlemmar som är registrerade i publiceringsmiljön:
 
@@ -53,19 +53,19 @@ I författarmiljön kan du nå Medlemskonsolen för att hantera medlemmar som ä
 
 ### Sökning {#search-features}
 
-Markera sidopanelsikonen till vänster om sidhuvudet för att växla mellan att öppna panelen för söksidan `Members` .
+Markera sidopanelsikonen till vänster om `Members`-rubriken för att växla till att öppna söksidpanelen.
 
 ![chlimage_1-120](assets/chlimage_1-120.png) ![chlimage_1-121](assets/chlimage_1-121.png)
 
-Välj sökikonen till vänster om sidhuvudet för att växla mellan att `Members` växla panelen på söksidan till stängd.
+Välj sökikonen till vänster om `Members`-rubriken för att växla panelen på söksidan till stängd.
 
 ### Medlemsstatistik {#member-statistics}
 
-Kolumnerna som visas `Views`, `Posts`och `Follows`uppdateras när användaren är medlem i en eller flera communitywebbplatser med Adobe Analytics `Likes` aktiverat [](sites-console.md#analytics).
+Kolumnerna som visar `Views`, `Posts`, `Follows`och `Likes` uppdateras när användaren är medlem i en eller flera communityplatser där Adobe Analytics [är aktiverat](sites-console.md#analytics).
 
 ### Exportera CSV {#export-csv}
 
-Om du markerar `Export CSV` länken hämtas alla medlemmar som en lista med kommaavgränsade värden som är lämpliga för import till ett kalkylblad.
+Om du väljer länken `Export CSV` hämtas alla medlemmar som en lista med kommaavgränsade värden som är lämpliga för import till ett kalkylblad.
 
 Kolumnrubrikerna är
 
@@ -90,7 +90,8 @@ Som standard är ID inställt på värdet för den e-postadress som krävs.
 * **[!UICONTROL Email Address]**
 (
 *obligatoriskt*) Medlemmens e-postadress.
-Medlemmen kan ändra sin e-postadress när profilen uppdateras.Om ID:t som är standard för e-postadressen ändras *inte* ID:t när e-postadressen ändras.
+Medlemmen kan ändra sin e-postadress när profilen uppdateras.I
+Om ID:t som standard är e-postadressen, kommer ID:t att *inte* att ändras när e-postadressen ändras.
 
 * **[!UICONTROL Password]**
 (
@@ -118,14 +119,15 @@ Under Kontoinställningar kan en community-administratör
    * Banned\
       En medlem kan inte logga in, vilket förhindrar dem från att visa sidor eller delta i aktiviteter som kräver inloggning. De kan fortfarande anonymt besöka en öppen communitysajt.
 
-   * Inte BannedEn medlem har fullständig åtkomst till communitywebbplatsen.
+   * Ej bannlyst
+En medlem har fullständig åtkomst till communitywebbplatsen.
 
    Standardvärdet är `Not Banned`.
 
 * **[!UICONTROL Contribution Limits]**
 Om det här alternativet är markerat är medlemmens möjlighet att publicera innehåll begränsad.
 Standardvärdet beror på konfigurationen av bidragsgränser.
-Se Gränser för [medlemsbidrag](limits.md).
+Se [Gränser för medlemsbidrag](limits.md).
 
 * **[!UICONTROL Change Password]**
 En länk som finns när en befintlig medlem ändras. Ger en community-administratör möjlighet att återställa ett lösenord för en medlem.
@@ -144,19 +146,19 @@ Medlemmen kan läggas till i en eller flera medlemsgrupper. Börja med att ange 
 
 ### Fliken BADGES {#badges-tab}
 
-På `BADGES` panelen kan du tilldela och återkalla märken manuellt. Märken kan användas för tilldelade roller samt för märken som vanligtvis används.
+På panelen `BADGES` kan du tilldela och återkalla märken manuellt. Märken kan användas för tilldelade roller samt för märken som vanligtvis används.
 
 Se även [Betygsättning och badges](implementing-scoring.md).
 
 ![chlimage_1-123](assets/chlimage_1-123.png)
 
 * **[!UICONTROL Add badges]**
-   * Börja skriva för att välja bland [tillgängliga märken](badges.md). När du har valt ett märke väljer du varje webbplats, eller alla webbplatser, där märket ska visas tillsammans med medlemmens avatar.
+   * Börja skriva för att välja bland [tillgängliga emblem](badges.md). När du har valt ett märke väljer du varje webbplats, eller alla webbplatser, där märket ska visas tillsammans med medlemmens avatar.
    * Flera märken och sajter kan väljas.
 * **[!UICONTROL Remove badges]**
    * Markera papperskorgsikonen bredvid ett märke för att ta bort det
 
-## Konsolen Grupper {#groups-console}
+## Gruppkonsol {#groups-console}
 
 Gruppkonsolen, som är tillgänglig från författarmiljön, gör det möjligt att skapa och hantera medlemsgrupper som är registrerade i publiceringsmiljön. Det är särskilt användbart för
 * [Behöriga medlemsgrupper](users.md#privilegedmembersgroups)
@@ -200,8 +202,8 @@ Följande fält krävs för att skapa en ny medlemsgrupp på publiceringssidan:
 
 ## Auktoriserade administratörer {#authorized-administrators}
 
-När du arbetar med medlemmar i communitymedlemskonsolen måste du logga in som en användare med lämplig behörighet, och replikeringsagenten som används av [tunneltjänsten](deploy-communities.md#tunnel-service-on-author) måste vara korrekt konfigurerad.
+När du arbetar med medlemmar i Communities-medlemskonsolen måste du logga in som en användare med lämplig behörighet och replikeringsagenten som används av [tunneltjänsten](deploy-communities.md#tunnel-service-on-author) måste vara korrekt konfigurerad.
 
-Om användaren inte är inloggad som `admin`måste användaren vara medlem i `administrators` användargruppen.
+Om användaren inte är inloggad som `admin` måste den inloggade användaren vara medlem i `administrators`-användargruppen.
 
-Se även [Replikeringsagenter på författare](deploy-communities.md#replication-agents-on-author).
+Se även [Replikeringsagenter på Författare](deploy-communities.md#replication-agents-on-author).
