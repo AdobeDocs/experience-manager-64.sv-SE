@@ -34,19 +34,19 @@ Gör så här för att lägga till ett element i metadata:
 
    Om du vill öppna formuläret i redigeringsläge markerar du formuläret i formulärhanteraren och trycker på **Öppna**.
 
-1. Markera en komponent i redigeringsläget, tryck på ![fältnivå](assets/field-level.png) > **Adaptiv formulärbehållare** och sedan på ![cmpr](assets/cmppr.png).
+1. Markera en komponent i redigeringsläget, tryck på ![fältnivå](assets/field-level.png) > **Adaptiv formulärbehållare** och tryck sedan på ![cmpr](assets/cmppr.png).
 1. Klicka på **Metadata** i sidofältet.
 1. Klicka på **Lägg till** i avsnittet Metadata.
 1. Använd fältet Värde på fliken Metadata för att lägga till skript. De skript du lägger till samlar in data från element i formuläret och beräknar värden som matas in i metadata.
 
-   Till exempel loggas **true** i metadata om den angivna åldern är större än 21 och **false** loggas om den är mindre än 21. Du anger följande skript på fliken Metadata:
+   Till exempel är **true** loggad i metadata om den angivna åldern är större än 21, och **false** loggas om den är mindre än 21. Du anger följande skript på fliken Metadata:
 
    `(agebox.value >= 21) ? true : false`
 
    ![Metadatascript](assets/add-element-metadata.png)
-   **Bild:** *Skript som anges på fliken Metadata*
+   **Figur:** *Skript på fliken Metadata*
 
-1. Click **OK**.
+1. Klicka på **OK**.
 
 När en användare har angett data i elementet som har markerats som ett metadatafält loggas den beräknade informationen i metadata. Du kan se metadata i databasen som du konfigurerade för att lagra metadata.
 
@@ -60,7 +60,7 @@ Om du lägger till ett kryssruteelement i metadata lagras markerade värden som 
 
 ![Lagra flera värden från en kryssruta](assets/checkbox-metadata.png)
 
-Du väljer en adaptiv formulärbehållare och i formuläregenskaperna lägger du till en metadatanyckel `cb1` som lagrar `checkbox1.value`och publicerar formuläret. När kunden fyller i formuläret väljer kunden passnummer och personnummer i kryssrutefältet. Värdena 1 och 2 lagras som 1 och 2 i fältet cb1 i metadata för överföringen.
+Du väljer en adaptiv formulärbehållare och i formuläregenskaperna lägger du till en metadatanyckel `cb1` som lagrar `checkbox1.value` och publicerar formuläret. När kunden fyller i formuläret väljer kunden passnummer och personnummer i kryssrutefältet. Värdena 1 och 2 lagras som 1 och 2 i fältet cb1 i metadata för överföringen.
 
 ![Metadatapost för flera värden som är markerade i ett kryssrutefält](assets/metadata-entry-1.png)
 
