@@ -18,7 +18,7 @@ ht-degree: 2%
 ---
 
 
-# Ändra utseendet {#alter-the-appearance}
+# Ändra utseende {#alter-the-appearance}
 
 ## Ändra skriptet {#modify-the-script}
 
@@ -31,7 +31,7 @@ Så här visar du inte avataren bredvid varje publicerad kommentar:
    1. Välj **[!UICONTROL Copy]**
    1. Välj `/apps/social/commons/components/hbs/comments/comment`
    1. Välj **[!UICONTROL Paste]**
-1. Öppna överlägg `comment.hbs`
+1. Öppna det överliggande `comment.hbs`
    * Dubbelklicka på noden `comment.hbs`i `/apps/social/commons/components/hbs/comments/comment folder`
 1. Hitta följande rader och ta bort eller kommentera dem:
 
@@ -58,7 +58,7 @@ Radera linjerna eller omge dem med &quot;&lt;!—&#39; och &#39;—>&#39; för a
 
 I den globala navigeringen väljer du **[!UICONTROL Tools > Deployment > Replication]** och sedan **[!UICONTROL Activate Tree]**.
 
-Ange `/apps/social/commons` och välj Start Path **[!UICONTROL Activate]**.
+Ange `/apps/social/commons` som startsökväg och välj **[!UICONTROL Activate]**.
 
 ![chlimage_1-42](assets/chlimage_1-42.png)
 
