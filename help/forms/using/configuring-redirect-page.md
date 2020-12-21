@@ -22,20 +22,21 @@ Formulärförfattare kan konfigurera en sida för varje formulär som formulära
 
 1. Markera en komponent i redigeringsläget, klicka på ![fältnivå](assets/field-level.png) > **Adaptiv formulärbehållare** och klicka sedan på ![cmpr](assets/cmppr.png).
 
-1. Klicka på **Skicka** i sidlisten.
+1. Klicka på **Sändning** i sidlisten.
 
 1. Ange URL-adressen till omdirigeringssidan under Tack-sidan i avsnittet Skicka.
 1. Under Skicka-åtgärd kan du som alternativ konfigurera parametern som ska skickas till omdirigeringssidan för slutpunktsåtgärden Skicka till REST.
 
-![Konfiguration](assets/thank-you-setting-1.png)av omdirigeringssida **Bild:** *Omdirigeringssidkonfiguration*
+![Omdirigera ](assets/thank-you-setting-1.png)
+**sidkonfigurationBild:** *Omdirigeringssidkonfiguration*
 
-Formulärförfattare kan använda följande parametrar som skickas till sidan Tack. Alla tillgängliga skicka-åtgärder `status` och - `owner` parametrar skickas. Förutom dessa två parametrar skickas ytterligare några parametrar för följande skicka-åtgärder:
+Formulärförfattare kan använda följande parametrar som skickas till sidan Tack. För alla tillgängliga skicka-åtgärder skickas parametrarna `status` och `owner`. Förutom dessa två parametrar skickas ytterligare några parametrar för följande skicka-åtgärder:
 
-* **Åtgärden** Lagra innehåll (borttagen): `contentPath`- sökvägen till noden i databasen där skickade data lagras skickas.
+* **Åtgärden**  Lagra innehåll (borttagen):  `contentPath`- sökvägen till noden i databasen där skickade data lagras skickas.
 
-* **Åtgärden** Lagra PDF (borttagen): `contentPath`- av skickade data och sökvägen till noden som lagrar PDF-filen i databasen - skickas.
+* **Åtgärden**  Lagra PDF (borttagen):  `contentPath`- av skickade data och sökvägen till noden som lagrar PDF-filen i databasen - skickas.
 
 * **Skicka till Forms-arbetsflöde**: Utdataparametrar som returneras från formulärarbetsflöden skickas.
 
-* **Skicka till REST-slutpunkt**: Parametrar som lagts till för mappning mellan fältparametrar skickas. `status` och `owner` parametrar skickas inte i den här skicka-åtgärden. Mer information finns i [Konfigurera Skicka till REST-slutpunktsåtgärden](/help/forms/using/configuring-submit-actions.md).
+* **Skicka till REST-slutpunkt**: Parametrar som lagts till för mappning mellan fältparametrar skickas. `status` och  `owner` parametrar skickas inte i den här skicka-åtgärden. Mer information finns i [Konfigurera Skicka till REST-slutpunktsåtgärden](/help/forms/using/configuring-submit-actions.md).
 
