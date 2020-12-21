@@ -18,7 +18,7 @@ ht-degree: 2%
 ---
 
 
-# Konfigurera valideringsmeddelanden {#configuring-validation-messages}
+# Konfigurerar valideringsmeddelanden {#configuring-validation-messages}
 
 För formulär som återges som HTML visas formulärvalideringsfel som inträffar för användaren. Du kan anpassa hur valideringsmeddelanden visas. Beroende på var valideringsmeddelandena visas kan du även styra platsen för meddelandet i formuläret och storleken på ramkanten.
 
@@ -29,13 +29,13 @@ För formulär som återges som HTML visas formulärvalideringsfel som inträffa
 
    **Meddelanderuta:** Om du vill visa valideringsmeddelanden i en separat dialogruta.
 
-   **Ram:** Om du vill visa valideringsmeddelanden i en bildruta i samma fönster.
+   **Bildruta:** Om du vill visa valideringsmeddelanden i en bildruta i samma fönster.
 
    **Ingen bildruta:** Om du vill visa valideringsmeddelanden i samma fönster. Det här värdet är standardvärdet.
 
-   **Via API (med data):** Returnera valideringsmeddelandena via API (med data). Valideringsmeddelandena visas inte på skärmen.
+   **Via API (med data):** Returnera valideringsmeddelanden via API:t (med data). Valideringsmeddelandena visas inte på skärmen.
 
-   **Via API (med formulär):** Returnera valideringsmeddelandena via API (med formuläret). Valideringsmeddelandena visas inte på skärmen.
+   **Via API (med formulär):** Returnera valideringsmeddelanden via API:t (med formuläret). Valideringsmeddelandena visas inte på skärmen.
 
    **Ingen:** Visa inte valideringsmeddelanden.
 
