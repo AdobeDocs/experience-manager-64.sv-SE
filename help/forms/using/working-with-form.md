@@ -28,7 +28,7 @@ Så här synkroniserar du formuläret i AEM Forms-appen:
 1. Markera ett formulär i författarinstansen och klicka på **Visa egenskaper**.
 
 1. Klicka på **Avancerat på egenskapssidan.**
-1. Aktivera alternativet under Avancerat: **Synkronisera med AEM Forms App** och tryck på **Save**.
+1. Aktivera alternativet under Avancerat: **Synkronisera med AEM Forms App** och tryck på **Spara**.
 
 Om du vill synkronisera flera formulär i författarinstansen markerar du flera formulär i formulärhanteraren och trycker på **Synkronisera med AEM Forms App**. När formuläret publiceras kan AEM Forms-appen ansluta till publiceringsservern och hämta formulären.
 
