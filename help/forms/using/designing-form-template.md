@@ -31,8 +31,8 @@ Vanliga XFA-funktioner finns i följande metodtips och riktlinjer för att utfor
 
 Fliken Förhandsgranska HTML läggs till i designläget för formulärdesigners för att förhandsgranska formulär i HTML5-format under designprocessen. Mer information om hur du aktiverar och konfigurerar den här funktionen i AEM Forms Designer finns i [Förhandsgranska HTML](/help/forms/using/preview-xdp-forms-html.md).
 
-### Klottra signaturer {#scribble-signature}
+### Klottersignatur {#scribble-signature}
 
-Huvudmålet för HTML5-formulär är pekenheter. Därför har en ny kontroll för signering i klotter lagts till i AEM Forms Designer. Du kan klicka på eller dra och släppa kontrollen för signering av skript på formulärmallen och konfigurera den. Det återges som ett klottrigt fält i HTML5-rendering och kan användas för att klottra signaturer på enheter med pekskärm. På stationära datorer kan den användas som ett klotterfält med hjälp av muskontroll. Mer information om hur du använder den här funktionen finns i [XFA-skriptfält](/help/forms/using/scribble-signature.md).
+Huvudmålet för HTML5-formulär är pekenheter. Därför har en ny kontroll för signering i klotter lagts till i AEM Forms Designer. Du kan klicka på eller dra och släppa kontrollen för signering av skript på formulärmallen och konfigurera den. Det återges som ett klottrigt fält i HTML5-rendering och kan användas för att klottra signaturer på enheter med pekskärm. På stationära datorer kan den användas som ett klotterfält med hjälp av muskontroll. Mer information om hur du använder den här funktionen finns i [XFA Scribble Field](/help/forms/using/scribble-signature.md).
 
 ![4](assets/4.png)
