@@ -44,7 +44,7 @@ Om du har konfigurerat flera autentiseringsleverantörer kan du ändra i vilken 
     </node>
    ```
 
-   I `<entry key="order" value="3" />`redigerar du värdet för varje nod för att ange ordningen för autentiseringsutvärderingen.
+   I `<entry key="order" value="3" />` redigerar du värdet för varje nod för att ange ordningen för autentiseringsutvärderingen.
 
 1. Om du vill importera den uppdaterade filen klickar du i Användarhantering på Konfiguration > Importera och exportera konfigurationsfiler.
 1. Klicka på Bläddra för att hitta filen, klicka på Importera och sedan på OK.
