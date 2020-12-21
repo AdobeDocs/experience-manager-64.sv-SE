@@ -45,15 +45,15 @@ Gör så här för att lägga till ett diagram i en interaktiv kommunikation:
 
    Den släppta diagramkomponenten skapar en platshållare för ett diagram.
 
-1. Tryck på diagramkomponenten i redigeraren för interaktiv kommunikation och välj **[!UICONTROL Configure (]** configure_icon ![](assets/configure_icon.png)i verktygsfältet Komponent.
+1. Tryck på diagramkomponenten i redigeraren för interaktiv kommunikation och välj **[!UICONTROL Configure (]** ![configure_icon](assets/configure_icon.png) i verktygsfältet Komponent.
 
    Sidlisten Egenskaper visas med de grundläggande egenskaperna för diagrammet i fokus.
 
    ![Grundläggande egenskaper för ett linjediagram i en utskriftskanal](assets/chart_basicproperties.png)
-   **Bild:** *Grundläggande egenskaper för ett linjediagram i en utskriftskanal*
+   **Figur:** *Grundläggande egenskaper för ett linjediagram i en tryckt kanal*
 
    ![Grundläggande egenskaper för ett linjediagram i en webbkanal](assets/basicpropertieswebchannel.png)
-   **Bild:** *Grundläggande egenskaper för ett linjediagram i en webbkanal*
+   **Bild:** *Grundläggande egenskaper för ett linjediagram i webbkanalen*
 
 1. Konfigurera diagrammets grundläggande egenskaper för utskriftskanaler och webbkanaler. Förutom de gemensamma egenskaperna finns det egenskaper som är specifika för utskrift, webbkanal och diagramtyp.
 
@@ -64,7 +64,7 @@ Gör så här för att lägga till ett diagram i en interaktiv kommunikation:
 
       * **[!UICONTROL Title]**: Ange rubrikerna för X- och Y-axeln som ska visas i den interaktiva kommunikationen.
       * **[!UICONTROL Data Model Object *]**: Bläddra och markera datamodellsobjekt för X- och Y-axeln i diagrammet från den formulärdatamodell som angavs när den interaktiva kommunikationen skapades. Välj två samlings-/arraytypegenskaper för samma överordnade datamodellsobjekt som är meningsfulla i förhållande till varandra för att rita på X- och Y-axeln i ett diagram.
-      * **[!UICONTROL Function]**: Om du vill använda statistiska funktioner för att beräkna värdena på axeln väljer du funktionen för X-/Y-axeln. Mer information om funktioner finns i [Använda funktioner i diagram](#usefunction) och [exempel 2: Användning av summor- och medelfunktioner i ett linjediagram](#applicationsumfrequency).
+      * **[!UICONTROL Function]**: Om du vill använda statistiska funktioner för att beräkna värdena på axeln väljer du funktionen för X-/Y-axeln. Mer information om funktioner finns i [Använd funktioner i diagram](#usefunction) och [Exempel 2: Användning av summor- och medelfunktioner i ett linjediagram](#applicationsumfrequency).
 
    >[!NOTE]
    >
@@ -72,11 +72,11 @@ Gör så här för att lägga till ett diagram i en interaktiv kommunikation:
 
    Mer information om diagramegenskaper finns i [Grundläggande egenskaper i diagram](#basicpropertiescharts).
 
-1. (Endast skrivarkanal) Ange om agenten måste använda det här diagrammet i agentinställningarna. Om det här **[!UICONTROL t Is Mandatory For the Agent To Use This Chart]** alternativet inte är markerat kan agenten trycka på ögonikonen för diagrammet på fliken Innehåll i agentanvändargränssnittet för att visa/dölja diagrammet.
+1. (Endast skrivarkanal) Ange om agenten måste använda det här diagrammet i agentinställningarna. Om alternativet **[!UICONTROL t Is Mandatory For the Agent To Use This Chart]** inte är markerat kan agenten trycka på ögonikonen för diagrammet på fliken Innehåll i agentanvändargränssnittet för att visa/dölja diagrammet.
 
    ![chart_agentproperties](assets/chart_agentproperties.png)
 
-1. Tryck på ![made_icon](assets/done_icon.png)i sidofältet Egenskaper.
+1. Tryck på ![made_icon](assets/done_icon.png) i sidofältet Egenskaper.
 
    Förhandsgranska om du vill se diagrammets utseende och data. Återgå till att konfigurera om egenskaperna för diagrammet, om det behövs.
 
@@ -93,23 +93,26 @@ För att uppnå detta måste du ange:
 * **[!UICONTROL Chart Type]** - i det här exemplet, Column for the print channel and Donut for the web channel
 * **[!UICONTROL Data Model Objects]** som källa för diagrammets X- och Y-axel - i det här exemplet Transaktionsbelopp för X-axeln och utgiftsnamn för Y-axeln
 * **[!UICONTROL Title]** för X- och Y-axeln (endast för kolumndiagram i utskriftskanalen i det här exemplet) - Mängd ($) för X-axeln och Utgift för Y-axeln.
-* **[!UICONTROL Label Direction]** (för stapeldiagram i utskriftskanalen endast i det här exemplet) - i det här exemplet `Tilt Left`
+* **[!UICONTROL Label Direction]** (för stapeldiagram i utskriftskanalen endast i det här exemplet) - i det här exemplet  `Tilt Left`
 
-* **[!UICONTROL Tooltip]** för att visa en utgift med musen (endast webbkanal) - i det här exemplet `${x}: $ ${y}`som visas som `[Expense Label: $ Amount]` (Exempel: Theme Park Visit: $ 315)
+* **[!UICONTROL Tooltip]** för att visa en utgift med musen (endast webbkanalen) - i det här exemplet  `${x}: $ ${y}`som visas som  `[Expense Label: $ Amount]` (Exempel: Theme Park Visit: $ 315)
 
-![Kolumndiagram i tryckt utskrift av en interaktiv kommunikation](assets/chartprintchannel.png)**:** *Kolumndiagram i utskrift av interaktiv kommunikation*
+![Kolumndiagram i tryckt form av en interaktiv ](assets/chartprintchannel.png)
+**kommunikationBild:** *Kolumndiagram i tryckt form av en interaktiv kommunikation*
 
-**S.** Y-axel - Mängd hämtad från formulärdatamodellens egenskap och Title-egenskapen har värdet Amount ($) **B.** Etikettorientering för X-axel inställd på Lutning åt vänster **C.** X-axel - utgiftsbeskrivning hämtad från formulärdatamodellens egenskap och Title-egenskap inställd på Utgift
+**A.** Y-axel - Mängd hämtad från formulärdatamodellens egenskap och egenskapen Title inställd på Amount ($)  **B.** Label Direction of X-axis inställd på Lutning vänster  **C.** X-axel - utgiftsbeskrivning hämtad från formulärdatamodellens egenskap och egenskapen Title inställd på Expense
 
-![Visa diagram i webbutdata från en interaktiv kommunikation](assets/chartwebchannel.png)**:** *Visa diagram i webbutdata för interaktiv kommunikation*
+![Visa diagram i webbutdata för interaktiv ](assets/chartwebchannel.png)
+**kommunikationBild:** *Visa diagram i webbutdata för interaktiv kommunikation*
 
-**S.** Egenskapen Innerradie för munstycket anges till **B.** Egenskapen Visa förklaring är markerad och egenskapen Förklaringsposition är inställd på Höger **C.** Verktygstips visar detaljerna för objektet när muspekaren förs över - Funktionsbeskrivning är inställd på ${x}: $ ${y}
+**A. Egenskapen** Innerradie för donut är inställd på  **B.** Egenskapen Visa förklaring är markerad och egenskapen Förklaringsposition är inställd på Höger  **C.** Verktygstips visar detaljrikedomen för objektet när muspekaren förs över - Funktionsbeskrivningen är inställd på ${x}: $ ${y}
 
 ## Exempel 2: Användning av summerings- och frekvensfunktioner i ett linjediagram {#applicationsumfrequency}
 
 Genom att använda funktioner i ett diagram kan du rita data som inte tillhandahålls direkt av formulärdatamodellen. I det här exemplet använder vi ett kreditkortsexempel för att förstå hur summerings- och frekvensfunktioner kan användas i diagrammet.
 
-![Linjediagram utan funktion med tre&quot;Bed and Breakfast&quot;-transaktioner](assets/creditcarddatalinechartcopy.png)**: Bild:** *Linjediagram utan funktion med tre&quot;Bed and Breakfast&quot;-transaktioner*
+![Linjediagram utan funktion med tre &quot;Bed and Breakfast&quot;-](assets/creditcarddatalinechartcopy.png)
+**transaktionerBild:** *Raddiagram utan funktion med tre &quot;Bed and Breakfast&quot;-transaktioner*
 
 ### Summeringsfunktion {#sum-function}
 
@@ -129,51 +132,51 @@ Frekvensfunktionen returnerar antalet värden på X- eller Y-axeln för ett give
 
 På fliken Grundläggande kan du konfigurera följande egenskaper:
 
-**Namn** En identifierare för diagramelementet. Namnet är inte synligt i diagrammet, men det är användbart när du refererar till elementet från andra komponenter, skript och SOM-uttryck.
+**** NamnEn identifierare för diagramelementet. Namnet är inte synligt i diagrammet, men det är användbart när du refererar till elementet från andra komponenter, skript och SOM-uttryck.
 
 **Titel (endast utskriftskanalen)** Anger diagrammets rubrik.
 
 **Diagramtyp** Anger vilken typ av diagram du vill generera. De tillgängliga alternativen är Cirkel, Kolumn, Ring upp, Stapel (endast webbkanal), Linje, Linje och Punkt, Punkt och Yta. Mer information finns i exempel 1: Diagramutdata för tryck och webb.
 
-**X-axel > Titel** Anger x-axelns rubrik.
+**X-axel >** Titel Anger x-axelns rubrik.
 
-**X-axel > Datamodellobjekt&amp;stämpel;ast;** Ange namnet på den formulärdatamodellsamling som ska ritas på x-axeln.
+**X-axel > datamodellsobjekt &amp;ast;** Ange namnet på den formulärdatamodellsamling som ska ritas på x-axeln.
 
-**X-axel > Funktion** Anger den statistiska/anpassade funktion som ska användas för att beräkna värdena på x-axeln. Mer information om funktioner finns i Använda funktioner i diagram och exempel 2: Användning av summor- och medelfunktioner i ett linjediagram.
+**X-axel >** FunktionAnger den statistiska/anpassade funktion som ska användas för att beräkna värdena på x-axeln. Mer information om funktioner finns i Använda funktioner i diagram och exempel 2: Användning av summor- och medelfunktioner i ett linjediagram.
 
-**X-axel > Etikettorientering** för etiketten i diagrammet i utskriftskanalen. Om du väljer riktning för etiketten som Anpassad rotation visas fältet Anpassad rotationsvinkel (grader). I fältet Anpassad rotationsvinkel (grader) kan du välja rotationsvinkel i steg om 15 grader.
+**X-axel > Etikettens** riktning i diagrammet i utskriftskanalen. Om du väljer riktning för etiketten som Anpassad rotation visas fältet Anpassad rotationsvinkel (grader). I fältet Anpassad rotationsvinkel (grader) kan du välja rotationsvinkel i steg om 15 grader.
 
-**Y-axel > Titel** Anger rubriken för y-axeln.
+**Y-axel >** Titel Anger rubriken för y-axeln.
 
-**Y-axel > datamodellobjekt&amp;stämpel;ast;** Anger det objekt i formulärdatamodellens samling som ska ritas på y-axeln. I utskriftskanalen ska datamodellobjektet för Y-axeln vara av typen Number.
+**Y-axel > datamodellsobjekt &amp;ast;** Anger det datamodellsamlingsobjekt för formulär som ska ritas på y-axeln. I utskriftskanalen ska datamodellobjektet för Y-axeln vara av typen Number.
 
-**Y-axel > Funktion** Anger den statistiska/anpassade funktion som ska användas för att beräkna värdena på y-axeln. Mer information om funktioner finns i Använda funktioner i diagram och exempel 2: Användning av summor- och medelfunktioner i ett linjediagram.
+**Y-axel >** FunktionAnger den statistiska/anpassade funktion som ska användas för att beräkna värdena på y-axeln. Mer information om funktioner finns i Använda funktioner i diagram och exempel 2: Användning av summor- och medelfunktioner i ett linjediagram.
 
-**Visa förklaring** Visar en förklaring för cirkeldiagrammet eller mundiagrammet när det är aktiverat.
+**Visa** förklaringVisar en förklaring för cirkeldiagrammet eller mundiagrammet när det är aktiverat.
 
-**Förklaringens position** Anger förklaringens position i förhållande till diagrammet. De tillgängliga alternativen är Höger, Vänster, Upptill och Nedtill.
+**Förklaringens** positionAnger förklaringens position i förhållande till diagrammet. De tillgängliga alternativen är Höger, Vänster, Upptill och Nedtill.
 
 **Höjd (endast utskriftskanalen)** Diagrammets höjd i pixlar.
 
-**Diagrammets bredd i pixlar (endast utskriftskanalen)** .
+**Diagrammets** bredd i pixlar (endast utskriftskanalen).
 
 >[!NOTE]
 >
 >Du kan styra diagrammets bredd i webbkanalen med hjälp av stillagret eller genom att använda ett tema.
 
-**Verktygstips (endast webbkanal)** Anger i vilket format verktygstipset ska visas när användaren för musen över en datapunkt i diagrammet i webbkanalen. Standardvärdet är \${x}(\${y}). Beroende på diagramtyp ersätts variablerna \${x} och \${y} dynamiskt med motsvarande värden på x-axeln och y-axeln när du pekar med musen på en punkt, stapel eller segment i diagrammet, och visas i verktygstipset.
+**Verktygstips (endast webbkanal)** Anger i vilket format verktygstipset visas när användaren för musen över en datapunkt i diagrammet i webbkanalen. Standardvärdet är \${x}(\${y}). Beroende på diagramtyp ersätts variablerna \${x} och \${y} dynamiskt med motsvarande värden på x-axeln och y-axeln när du pekar med musen på en punkt, stapel eller segment i diagrammet, och visas i verktygstipset.
 
-Om du vill inaktivera verktygstipset lämnar du fältet Verktygstips tomt. Det här alternativet gäller inte för linjediagram och ytdiagram. Se [exempel 1: Diagramutdata för tryck och webb](#chartoutputprintweb).
+Om du vill inaktivera verktygstipset lämnar du fältet Verktygstips tomt. Det här alternativet gäller inte för linjediagram och ytdiagram. Se till exempel [Exempel 1: Diagramutdata i tryck och på webben](#chartoutputprintweb).
 
 **CSS-klass (endast webbkanal)** Ange namnet på en CSS-klass i CSS-klassfältet för att använda anpassad formatering i diagrammet.
 
-**Obligatorisk sidbrytning före (endast utskriftskanalen)** Välj att lägga till en obligatorisk sidbrytning före diagrammet och placera diagrammet ovanpå en ny sida.
+**Obligatorisk sidbrytning före (endast utskriftskanalen)** Välj det här alternativet om du vill lägga till en obligatorisk sidbrytning före diagrammet och placera diagrammet ovanpå en ny sida.
 
 **Obligatorisk sidbrytning efter (endast utskriftskanalen)** Välj att lägga till en obligatorisk sidbrytning efter diagrammet och placera innehållet efter diagrammet överst på en ny sida.
 
 **Indrag (endast tryckkanal)** Ange indrag för diagrammet från sidans vänstra kant.
 
-**Diagramspecifika konfigurationer** Förutom vanliga konfigurationer finns följande diagramspecifika konfigurationer:
+**Diagramspecifika** konfigurationerFörutom vanliga konfigurationer finns följande diagramspecifika konfigurationer:
 
 * **Innerradie**: finns för Donut-diagram för att ange radien (i pixlar) för den inre cirkeln i diagrammet.
 * **Linjefärg**: finns för linje-, linje- och punktdiagram samt ytdiagram för att ange det hexadecimala värdet för linjefärgen i diagrammet.
@@ -181,7 +184,7 @@ Om du vill inaktivera verktygstipset lämnar du fältet Verktygstips tomt. Det h
 
 * **Områdesfärg**: som är tillgängliga för ytdiagram för att ange det hexadecimala värdet för färgen för området under raden i diagrammet.
 
-## Använda funktioner i diagram {#usefunction}
+## Använd funktioner i diagram {#usefunction}
 
 Du kan konfigurera ett diagram så att statistiska funktioner används för att beräkna värden från källdata för plottning i diagrammet. Genom att använda funktioner i ett diagram kan du rita data som inte tillhandahålls direkt av formulärdatamodellen.
 
@@ -199,19 +202,19 @@ Följande funktioner är tillgängliga som standard med komponenten Chart:
 
 **Medel (medel)** Returnerar medelvärdet av värdena på X- eller Y-axeln för ett givet värde på den andra axeln.
 
-**Summa** Returnerar summan av alla värden på X- eller Y-axeln för ett givet värde på den andra axeln.
+**** SumReturnerar summan av alla värden på X- eller Y-axeln för ett givet värde på den andra axeln.
 
-**Maximum** Returnerar det maximala värdet på X- eller Y-axeln för ett givet värde på den andra axeln.
+**** MaximumReturnerar det maximala värdet på X- eller Y-axeln för ett givet värde på den andra axeln.
 
-**Frekvens** Returnerar antalet värden på X- eller Y-axeln för ett givet värde på den andra axeln.
+**** FrequencyReturnerar antalet värden på X- eller Y-axeln för ett givet värde på den andra axeln.
 
-**Intervall** Returnerar skillnaden mellan det högsta och det lägsta värdet på X- eller Y-axeln för ett givet värde på den andra axeln.
+**** IntervallReturnerar skillnaden mellan det maximala och det minsta värdet på X- eller Y-axeln för ett givet värde på den andra axeln.
 
-**Median** Returnerar det värde som skiljer högre och lägre värden i halva X- eller Y-axeln från varandra för ett givet värde på den andra axeln.
+**** MedianReturnerar värdet som skiljer högre och lägre värden i halva X- eller Y-axeln åt ett givet värde på den andra axeln.
 
-**Minimum** Returnerar det minsta värdet på X- eller Y-axeln för ett givet värde på den andra axeln.
+**** MinimumReturnerar det minsta värdet på X- eller Y-axeln för ett givet värde på den andra axeln.
 
-**Läge** Returnerar värdet med de flesta förekomster på X- eller Y-axeln för ett givet värde på den andra axeln
+**** ModeReturnerar värdet med de flesta förekomster på X- eller Y-axeln för ett givet värde på den andra axeln
 
 ### Anpassade funktioner i webbkanalen {#custom-functions-in-web-channel}
 
@@ -231,14 +234,14 @@ Multiply(valueArray, category) {
 
 När du har skrivit en anpassad funktion gör du följande för att göra den tillgänglig för användning i diagramkonfigurationen:
 
-1. Lägg till den anpassade funktionen i klientbiblioteket som är kopplad till den relevanta interaktiva kommunikationen. Mer information finns i [Konfigurera åtgärden](/help/forms/using/configuring-submit-actions.md) Skicka och [Använda bibliotek](/help/sites-developing/clientlibs.md)på klientsidan.
+1. Lägg till den anpassade funktionen i klientbiblioteket som är kopplad till den relevanta interaktiva kommunikationen. Mer information finns i [Konfigurera åtgärden Skicka](/help/forms/using/configuring-submit-actions.md) och [Använda bibliotek på klientsidan](/help/sites-developing/clientlibs.md).
 
-1. Om du vill visa den anpassade funktionen i listrutan Funktion skapar du i CRXDe Lite en `nt:unstructured` nod i mappen apps med följande egenskaper:
+1. Om du vill visa den anpassade funktionen i listrutan Funktion skapar du i CRXDe Lite en `nt:unstructured`-nod i mappen apps med följande egenskaper:
 
-   * Lägg till egenskap `guideComponentType` med värdet som `fd/af/reducer`. (mandatory)
-   * Lägg till en egenskap `value` till ett fullständigt kvalificerat namn för den anpassade JavaScript™-funktionen. (obligatoriskt) och ange dess värde till namnet på den anpassade funktionen, till exempel Multiplicera.
-   * Lägg till egenskap `jcr:description` med det värde som du vill visa som namnet på den anpassade funktionen som visas i listrutan Funktion. Till exempel **Multiplicera**.
-   * Lägg till en egenskap `qtip` med ett värde som är en kort beskrivning av den anpassade funktionen. Det visas som ett verktygstips när du håller pekaren över funktionsnamnet i listrutan **Funktion** .
+   * Lägg till egenskapen `guideComponentType` med värdet `fd/af/reducer`. (mandatory)
+   * Lägg till egenskapen `value` i ett fullständigt kvalificerat namn för den anpassade JavaScript™-funktionen. (obligatoriskt) och ange dess värde till namnet på den anpassade funktionen, till exempel Multiplicera.
+   * Lägg till egenskapen `jcr:description` med det värde som du vill visa som namnet på den anpassade funktionen som visas i listrutan Funktion. Till exempel **Multiplicera**.
+   * Lägg till egenskapen `qtip` med ett värde som är en kort beskrivning av den anpassade funktionen. Det visas som ett verktygstips när du håller pekaren över funktionsnamnet i listrutan **Funktion**.
 
 1. Klicka på **Spara alla** för att spara konfigurationen.
 
