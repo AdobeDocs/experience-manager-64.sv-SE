@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Idéfunktion {#ideation-feature}
+# Ideationsfunktion {#ideation-feature}
 
 ## Introduktion {#introduction}
 
@@ -34,25 +34,25 @@ Detta avsnitt i dokumentationen beskriver
 * Lägga till designfunktionen på en AEM
 * Konfigurationsinställningar för Ideation-komponenten
 
-## Lägga till en idé på en sida {#adding-a-ideation-to-a-page}
+## Lägga till en indelning på en sida {#adding-a-ideation-to-a-page}
 
-Om du vill lägga till en `Ideation` komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på `Communities / Ideation` och dra komponenten till en plats på en sida där idén ska visas.
+Om du vill lägga till en `Ideation`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på `Communities / Ideation` och dra den till rätt plats på en sida där idén ska visas.
 
-Mer information finns i Grunderna för [communitykomponenter](basics.md).
+Mer information finns på [Grunderna för communitykomponenter](basics.md).
 
 När de [nödvändiga klientbiblioteken](ideation.md#essentials-for-client-side) inkluderas visas `Ideation`komponenten så här:
 
 ![chlimage_1-29](assets/chlimage_1-29.png)
 
-## Konfigurera en idé {#configuring-an-ideation}
+## Konfigurera en ikon {#configuring-an-ideation}
 
-Markera den monterade `Ideation` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
+Markera den monterade `Ideation`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![chlimage_1-30](assets/chlimage_1-30.png) ![chlimage_1-31](assets/chlimage_1-31.png)
 
 ### Fliken Inställningar {#settings-tab}
 
-Ange inställningar för idéer och kommentarer under **[!UICONTROL Settings]** fliken:
+Under fliken **[!UICONTROL Settings]** anger du inställningar för idéer och kommentarer:
 
 * **[!UICONTROL Ideation Title]**
 Idéns visningsrubrik. Standard är 
@@ -74,7 +74,7 @@ Om det här alternativet är markerat är idéforumet stängt för nya idéer oc
 Om du markerar det här alternativet kan du lägga in kommentarer och idéer. Standard är avmarkerat.
 
 * **[!UICONTROL Allow Tagging]**
-Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se **[!UICONTROL Tag field]** flik). Standard är avmarkerat.
+Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se  **[!UICONTROL Tag field]** flik). Standard är avmarkerat.
 
 * **[!UICONTROL Allow File Uploads]**
 Om du markerar det här alternativet kan du tillåta att bifogade filer läggs till i idén eller kommentaren. Standard är avmarkerat.
@@ -97,23 +97,23 @@ Om det här alternativet är markerat tillåts svar på kommentarer som har lagt
 Om det här alternativet är markerat kan medlemmarna ta bort de kommentarer och idéer som de publicerat. Standard är avmarkerat.
 
 * **[!UICONTROL Allow Following]**
-Om du markerar det här alternativet inkluderas följande funktion för idéinlägg, som gör att medlemmar kan [meddelas](notifications.md) om nya inlägg. Standard är avmarkerat.
+Om du markerar det här alternativet inkluderas följande funktion för idéinlägg, som gör att medlemmar kan få  [](notifications.md) meddelanden om nya inlägg. Standard är avmarkerat.
 
 * **[!UICONTROL Allow Email Subscriptions]**
-Om det här alternativet är markerat kan medlemmar meddelas om nya inlägg via e-post ([prenumeration](subscriptions.md)). Kräver `Allow Following` att kontrolleras och att [e-post konfigureras](email.md). Standard är avmarkerat.
+Om det här alternativet är markerat kan medlemmar meddelas om nya inlägg via e-post ([prenumeration](subscriptions.md)). Kräver att `Allow Following` kontrolleras och [e-post konfigureras](email.md). Standard är avmarkerat.
 
 * **[!UICONTROL Allow Voting]**
 Om det här alternativet är markerat tillåts omröstning om en idés kommentarer. Standard är avmarkerat.
 
 * **[!UICONTROL Display Badges]**
-Om det här alternativet är markerat visar du färdiga och tilldelade [märken](implementing-scoring.md) med en medlems idé. Standard är avmarkerat.
+Om det här alternativet är markerat visas intjänade och tilldelade  [](implementing-scoring.md) märken med en medlems idé. Standard är avmarkerat.
 
 * **[!UICONTROL Allow Featured Content]**
-om du markerar det här alternativet kan idén identifieras som [aktuellt innehåll](featured.md). Standard är avmarkerat.
+om du markerar det här alternativet kan idén identifieras som  [aktuellt innehåll](featured.md). Standard är avmarkerat.
 
 ### Fliken Användarmoderering {#user-moderation-tab}
 
-Under **[!UICONTROL User Moderation]** fliken anger du hur publicerade idéer och kommentarer (användargenererat innehåll) ska hanteras. Mer information finns i [Hantera användargenererat innehåll](moderate-ugc.md).
+Under fliken **[!UICONTROL User Moderation]** anger du hur publicerade idéer och kommentarer (användargenererat innehåll) ska hanteras. Mer information finns i [Moderating User Generated Content](moderate-ugc.md).
 
 * **[!UICONTROL Deny Posts]**
 Om det här alternativet är markerat kan pålitliga medlemsmoderatorer neka inlägg och förhindra att posten visas på det offentliga forumet. Standard är avmarkerat.
@@ -136,13 +136,13 @@ Ange hur många gånger ett ämne eller en kommentar måste flaggas av medlemmar
 * **[!UICONTROL Flagging Limit]**
 Ange hur många gånger ett ämne eller en kommentar måste flaggas innan det döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det flaggade ämnet eller kommentaren från den offentliga vyn. Annars måste talet vara större än eller lika med modereringströskeln. Standardvärdet är 5.
 
-### Fliken Taggfält {#tag-field-tab}
+### Tagg field tab {#tag-field-tab}
 
-Under **[!UICONTROL Tag field]** fliken är de taggar som kan användas, om de tillåts under **[!UICONTROL Settings]** fliken, begränsade enligt de namnutrymmen som har valts.
+Under fliken **[!UICONTROL Tag field]** är de taggar som kan användas, om de tillåts under fliken **[!UICONTROL Settings]**, begränsade enligt de namnutrymmen som valts.
 
 * **[!UICONTROL Allowed Namespaces]**
 Relevant om 
-`Allow Tagging` är markerat under fliken **Inställningar** . De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+`Allow Tagging` kontrolleras under fliken  **** Inställningar. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
 * **[!UICONTROL Suggestion Limit]**
 Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Värdet för 
@@ -150,7 +150,7 @@ Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i for
 
 ### Fliken Sorteringsinställningar {#sort-settings-tab}
 
-Under **[!UICONTROL Sort Settings]** fliken anger du hur de bokförda kommentarerna ska sorteras när de visas.
+Under fliken **[!UICONTROL Sort Settings]** anger du hur de bokförda kommentarerna ska sorteras när de visas.
 
 * **[!UICONTROL Sort By]**
 Markera alla tillåtna sorteringsval: 
@@ -176,11 +176,11 @@ När medlemmen har loggat in kan han eller hon skapa en ny idé.
 
 Innan du skickar in en idé kan medlemmen spara ett utkast.
 
-Genom att markera `Save as Draft` knappen sparas ett utkast.
+Genom att markera knappen `Save as Draft` sparas ett utkast.
 
 ![chlimage_1-33](assets/chlimage_1-33.png)
 
-När du visar sparade utkast på `My Drafts` fliken väljer du `Read More` att återgå till redigeringsläget:
+När du visar sparade utkast på fliken `My Drafts` väljer du `Read More` för att återgå till redigeringsläget:
 
 ![chlimage_1-34](assets/chlimage_1-34.png)
 
@@ -190,10 +190,10 @@ När idén har publicerats kan andra medlemmar logga in, öppna idén ( `Read Mo
 
 ![chlimage_1-35](assets/chlimage_1-35.png)
 
-### Additional Information {#additional-information}
+### Ytterligare information {#additional-information}
 
 Mer information finns på sidan [Ideation Essentials](ideation.md) för utvecklare.
 
-Mer information om moderering av publicerade ämnen och kommentarer finns i [Hantera användargenererat innehåll](moderate-ugc.md).
+moderering av publicerade ämnen och kommentarer finns i [Moderating User Generated Content](moderate-ugc.md).
 
 Information om hur du taggar publicerade ämnen och kommentarer finns i [Tagga användargenererat innehåll](tag-ugc.md).
