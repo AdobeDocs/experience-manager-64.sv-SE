@@ -16,17 +16,17 @@ ht-degree: 4%
 ---
 
 
-# Formatera ditt anpassningsbara formulär {#do-not-publish-style-your-adaptive-form}
+# Formatera ditt adaptiva formulär {#do-not-publish-style-your-adaptive-form}
 
 Lär dig skapa ett anpassat tema, formatera enskilda komponenter och använda webbteckensnitt i ett tema
 
 ![](do-not-localize/08-style_your_adaptiveformmain.png)
 
-Den här självstudiekursen är ett steg i serien [Create Your First Adaptive Form](create-your-first-adaptive-form.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
+Den här självstudiekursen är ett steg i [Skapa ditt första adaptiva formulär](create-your-first-adaptive-form.md)-serien. Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
 
-## Om självstudiekursen  {#about-the-tutorial}
+## Om självstudiekursen {#about-the-tutorial}
 
-Du kan använda teman för att ge ett anpassat formulär ett unikt utseende och en unik stil. Du kan använda färdiga teman som medföljer redigeringsprogrammet för anpassade formulär eller skapa egna teman. AEM Forms har en [temaredigerare](themes.md) för att skapa egna teman. Ett och samma tema kan ge olika utseenden till samma adaptiva formulär som öppnas på mobilen, surfplattan eller datorn. Du behöver inte ha någon tidigare kunskap om CSS eller LESS för att kunna använda temaredigeraren, men du vill ha den.
+Du kan använda teman för att ge ett anpassat formulär ett unikt utseende och en unik stil. Du kan använda färdiga teman som medföljer redigeringsprogrammet för anpassade formulär eller skapa egna teman. AEM Forms tillhandahåller en [temaredigerare](themes.md) för att skapa anpassade teman. Ett och samma tema kan ge olika utseenden till samma adaptiva formulär som öppnas på mobilen, surfplattan eller datorn. Du behöver inte ha någon tidigare kunskap om CSS eller LESS för att kunna använda temaredigeraren, men du vill ha den.
 
 I slutet av självstudiekursen kommer du att lära dig att:
 
@@ -41,13 +41,13 @@ Formuläret ser ut ungefär så här när du är klar med självstudiekursen:
 
 ## Innan du startar {#before-you-start}
 
-Ladda ned rubrikbilderna och logotypbilderna nedan på din dator. Rubriken på det `shipping-address-add-update-form` adaptiva formuläret använder rubrikbilderna och logotypbilderna. Bilden i sidhuvudsstil visas till höger om sidhuvudet.
+Ladda ned rubrikbilderna och logotypbilderna nedan på din dator. Rubriken för det adaptiva formuläret `shipping-address-add-update-form` använder rubrikstilen och logotypbilderna. Bilden i sidhuvudsstil visas till höger om sidhuvudet.
 
 [Hämta fil](assets/header-style.png)
 
 [Hämta fil](assets/logo-1.png)
 
-## Steg 1: Använd ett tema i det anpassade formuläret {#step-apply-a-theme-to-your-adaptive-form}
+## Steg 1: Använd ett tema i ditt adaptiva formulär {#step-apply-a-theme-to-your-adaptive-form}
 
 Adaptiv formulärredigerare har flera färdiga teman. Om du inte tänker använda en anpassad stil för ditt adaptiva formulär kan du även publicera dina adaptiva formulär med ett användbart tema. Temana är oberoende av anpassningsbara formulär. Du kan använda samma tema för flera adaptiva formulär. Så här använder du ett tema i ett anpassat formulär:
 
@@ -55,18 +55,18 @@ Adaptiv formulärredigerare har flera färdiga teman. Om du inte tänker använd
 
    [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
-1. Öppna egenskaper för behållaren för **adaptivt formulär**. Navigera till **Grundläggande** > **Adaptivt formulärtema** i egenskapswebbläsaren. I fältet **Adaptivt** formulärtema visas alla färdiga och anpassade teman. Som standard används Canvas-temat.
-1. Välj ett tema i fältet **Adaptivt** formulärtema. Exempel: **Undersökningsämne**. Tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att använda det valda temat.
+1. Öppna egenskaper för **Adaptiv formulärbehållare**. Navigera till **Basic** > **Adaptivt formulärtema** i egenskapswebbläsaren. I fältet **Adaptivt formulärtema** visas alla färdiga och anpassade teman. Som standard används Canvas-temat.
+1. Välj ett tema i fältet **Adaptivt formulärtema**. Exempel: **Undersökningstema**. Tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att använda det valda temat.
 
 ![Adaptiv form med standardtemat](assets/default-adaptive-form.png)
 
-**Bild:** *Adaptiv form med standardtemat*
+**Figur:** *Adaptiv form med standardtemat*
 
 ![Adaptiv form med undersökningstemat](assets/adaptive-form-with-survey-theme.png)
 
-**Bild:** *Adaptiv form med undersökningstemat*
+**Figur:** *Adaptiv form med Undersökningstemat*
 
-## Steg 2: Uppdatera ditt anpassningsbara formulär {#step-update-your-adaptive-form}
+## Steg 2: Uppdatera ditt adaptiva formulär {#step-update-your-adaptive-form}
 
 Den design som visas ovan kräver ändringar i platshållartext och logotyp i ditt befintliga adaptiva formulär. Utför följande steg för att göra de ändringar som krävs:
 
@@ -76,22 +76,22 @@ Den design som visas ovan kräver ändringar i platshållartext och logotyp i di
 
       [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
-   1. Tryck på logotypbilden i rubrikkomponenten och tryck på ![cmpr](assets/cmppr.png) -egenskaper. Tryck på X i egenskapen image för att ta bort den befintliga logotypbilden.
-   1. Tryck på upload, välj logo.png och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att spara ändringarna. Bilden hämtades i avsnittet [Innan du började](/help/forms/using/style-your-adaptive-form.md#before-you-start) .
-   1. Tryck på rubriktext `We.Retail`och tryck på ![aem_6_3_edit](assets/aem_6_3_edit.png) **edit**. Ändra rubriktext till `we retail`. Använd endast fet stil `we`i `we retail`.
+   1. Tryck på logotypbilden i rubrikkomponenten och tryck på ![cmpr](assets/cmppr.png)-egenskaperna. Tryck på X i egenskapen image för att ta bort den befintliga logotypbilden.
+   1. Tryck på upload, välj logo.png och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att spara ändringarna. Bilden hämtades i [Innan du startar](/help/forms/using/style-your-adaptive-form.md#before-you-start)-avsnittet.
+   1. Tryck på rubriktext, `We.Retail`, och tryck på ![aem_6_3_edit](assets/aem_6_3_edit.png) **edit**. Ändra rubriktext till `we retail`. Använd endast fet stil på `we`i `we retail`.
 
    ![we-retail-logo-text](assets/we-retail-logo-text.png)
 
 1. Ta bort rubrik och lägg till platshållartext:
 
-   1. Tryck på fältet Kund-ID och tryck på ![cmpr](assets/cmppr.png) -egenskaper.
-   1. Kopiera innehållet i **titelfältet** till **platshållartextfältet** .
-   1. Ta bort innehållet i fältet **Titel** och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+   1. Tryck på fältet Kund-ID och tryck på ![cmpr](assets/cmppr.png)-egenskaper.
+   1. Kopiera innehållet i fältet **Rubrik** till fältet **Platshållartext**.
+   1. Ta bort innehållet i fältet **Title** och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
    1. Upprepa de tre föregående stegen för alla textrutor, numeriska rutor och e-postfält i formuläret.
 
    ![updated-adaptive-form](assets/updated-adaptive-form.png)
 
-## Steg 3: Skapa ett anpassat tema för ditt anpassade formulär {#step-create-a-custom-theme-for-your-adaptive-form}
+## Steg 3: Skapa ett anpassat tema för ditt adaptiva formulär {#step-create-a-custom-theme-for-your-adaptive-form}
 
 Du kan använda [temaredigeraren](/help/forms/using/themes.md) för att skapa anpassade teman. Temats redigerare är en kraftfull WYSIWYG-redigerare. Det är en visuell metod att använda CSS på olika komponenter i ett adaptivt formulär. Den ger finare kontroller för att formatera komponenter och paneler i ett adaptivt formulär.
 
@@ -101,31 +101,31 @@ I den här självstudiekursen kommer du att formatera sidhuvud och sidfot, text 
 
 ### Skapa ett tema {#create-a-theme}
 
-1. Logga in på AEM författarinstans och gå till **Adobe Experience Manager** > **Forms** > **Teman**. Standardwebbadressen är [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes).
-1. Tryck **[!UICONTROL Create]** och välj **[!UICONTROL Theme]**. Sidan Skapa tema med de fält som krävs för att skapa ett tema visas. Fälten Titel och Namn är obligatoriska:
+1. Logga in på AEM författarinstans och navigera till **Adobe Experience Manager** > **Forms** > **Teman**. Standardwebbadressen är [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes).
+1. Tryck på **[!UICONTROL Create]** och välj **[!UICONTROL Theme]**. Sidan Skapa tema med de fält som krävs för att skapa ett tema visas. Fälten Titel och Namn är obligatoriska:
 
-   * **Titel:** Ange en titel på temat. Exempel: **Globalt tema.** Titeln hjälper dig att identifiera temat från listan med teman.
-   * **Namn:** Ange namnet på temat. Exempel: **Global-Theme.** En nod med det angivna namnet skapas i databasen. När du börjar skriva en titel genereras värdet för namnfältet automatiskt. Du kan ändra det föreslagna värdet. Namnfältet får endast innehålla alfanumeriska tecken, bindestreck och understreck. Alla ogiltiga indata ersätts med ett bindestreck.
+   * **Titel:** Ange temats titel. Exempel: **Global Theme.** Titeln hjälper dig att identifiera temat från listan med teman.
+   * **Namn:** Ange temats namn. Exempel: **Global-Theme.** En nod med det angivna namnet skapas i databasen. När du börjar skriva en titel genereras värdet för namnfältet automatiskt. Du kan ändra det föreslagna värdet. Namnfältet får endast innehålla alfanumeriska tecken, bindestreck och understreck. Alla ogiltiga indata ersätts med ett bindestreck.
 
 1. Tryck på **Skapa**. Ett tema skapas och en dialogruta visas där du kan öppna formuläret för redigering. Tryck på **Öppna** för att öppna det nya temat på en ny flik. Temat öppnas i temaredigeraren. För formatering används ett anpassat formulär som levereras med AEM Forms.
 
-   Mer information om hur du använder temaredigeringsgränssnittet finns i [Om temaredigeraren](/help/forms/using/themes.md#aboutthethemeeditor).
+   Mer information om hur du använder gränssnittet för temaredigeraren finns i [Om temaredigeraren](/help/forms/using/themes.md#aboutthethemeeditor).
 
-1. Tryck på **Temaalternativ** för ![tema >](assets/theme-options.png) **Konfigurera**. I fältet **Förhandsgranska formulär** väljer du det adaptiva formuläret **shipping-address-add-update-form** , trycker på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)och trycker på **Save**. Nu är temaredigeraren konfigurerad att använda ditt eget adaptiva formulär i stället för det adaptiva standardformatet. Tryck på **Avbryt** för att återgå till temaredigeraren.
+1. Tryck på **Temaalternativ** ![temaalternativ](assets/theme-options.png) > **Konfigurera**. I fältet **Förhandsgranska formulär** väljer du det anpassade formuläret **shipping-address-add-update-form**, trycker på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) och trycker på **Spara**. Nu är temaredigeraren konfigurerad att använda ditt eget adaptiva formulär i stället för det adaptiva standardformatet. Tryck på **Avbryt** för att återgå till temaredigeraren.
 
    ![anpassat tema](assets/custom-theme.png)
 
-   **Bild:** *Theme editor with the shipping-address-add-update-form adaptive form*
+   **Bild:** *Theme editor med adaptiv blankett för leverans-address-add-update-form*
 
    ![create-a-theme](assets/create-a-theme.png)
 
-   **Bild:** *Anpassningsbart formulär med standardformuläret*
+   **Figur:** *Adaptiv form med standardformuläret*
 
 ### Formatera sidhuvud och sidfot {#style-header-and-footer}
 
 Sidhuvud och sidfot ger ett konsekvent och distinkt utseende i en adaptiv form. I allmänhet innehåller sidhuvudet organisationens logotyp och namn, sidfoten innehåller copyrightinformation och dessa är identiska i flera former av en organisation. Gör så här för att formatera sidhuvud och sidfot i anpassat formulär för leverans-address-add-update:
 
-1. Navigera till alternativet **Sidhuvud** > **Text** på panelen Väljare. Väljarpanelen är till vänster om temaredigeraren. Om panelen inte visas trycker du på ![Växla sidopanel](assets/toggle-side-panel.png) på/av.
+1. Navigera till alternativet **Rubrik** > **Text** på panelen Väljare. Väljarpanelen är till vänster om temaredigeraren. Om panelen inte visas trycker du på ![Växla sidopanel](assets/toggle-side-panel.png) Växla sidopanel.
 
 1. Ange följande egenskaper i dragspelet **Text** och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
@@ -135,18 +135,18 @@ Sidhuvud och sidfot ger ett konsekvent och distinkt utseende i en adaptiv form. 
    | Teckenfärg | FFFFFF |
    | Teckenstorlek | 54px |
 
-1. Tryck på sidhuvudswidgeten och tryck på **Sidhuvud**. Alternativen för att formatera sidhuvudswidgeten visas till vänster. Expandera dragspelsfliken **Dimensioner och position** , ställ in **Höjd** på `120px`och tryck sedan på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
-1. Expandera bakgrundsdragspelet i sidwidgeten och ange **bakgrundsfärgen** till `F6921E.`
+1. Tryck på sidhuvudswidgeten och tryck på **Header**. Alternativen för att formatera sidhuvudswidgeten visas till vänster. Expandera dragspelet **Dimensioner och position**, ställ in **höjd** till `120px` och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. Expandera bakgrundsdragspelspanelen för sidhuvudswidgeten och ange **bakgrundsfärg** till `F6921E.`
 
-   Håll muspekaren över **Bild och övertoning** > **+ Lägg** till och tryck på **Bild**. Ange följande egenskaper och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+   Håll pekaren över **Bild och övertoning** > **+ Lägg till**, tryck **Bild**. Ange följande egenskaper och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    | Egenskap | Värde |
    |---|---|
-   | bild | Överför header-style.png. Bilden hämtades i avsnittet [Innan du började](/help/forms/using/style-your-adaptive-form.md#before-you-start) . |
+   | bild | Överför header-style.png. Bilden hämtades i [Innan du startar](/help/forms/using/style-your-adaptive-form.md#before-you-start)-avsnittet. |
    | Position | Höger nerifrån |
    | Passram | Ingen upprepning |
 
-1. Tryck på logotypen i sidhuvudet i temaredigeraren och tryck på **rubriklogotypen**. Expandera dragspelsfliken Dimensioner och position, ange följande egenskaper och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. Tryck på logotypen i sidhuvudet i temaredigeraren och tryck på **Header Logo**. Expandera dragspelsfliken Dimensioner och position, ange följande egenskaper och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
 <table> 
  <tbody> 
@@ -160,23 +160,23 @@ Sidhuvud och sidfot ger ett konsekvent och distinkt utseende i en adaptiv form. 
     <ul> 
      <li>Överkant: 1,5 rem</li> 
      <li>Underkant: -35px</li> 
-     <li>Vänster: 1 rem<strong><br /> </strong></li> 
-    </ul> <p><strong>Tips:</strong> Tryck på <img src="assets/link.png"> länkikonen för att ange olika värden för varje fält.<br /> </p> </td> 
+     <li>Vänster: 1rem<strong><br /> </strong></li> 
+    </ul> <p><strong>Tips:</strong> Tryck på  <img src="assets/link.png"> länkikonen för att ange olika värden för varje fält.<br /> </p> </td> 
   </tr> 
   <tr> 
    <td>Höjd</td> 
-   <td>4.75rem</td> 
+   <td>4,75rem</td> 
   </tr> 
  </tbody> 
 </table>
 
-1. Tryck på sidfotswidgeten och tryck på **Sidfot**. Expandera **bakgrundsfärg** , ställ in **bakgrundsfärg** på `F6921E`och tryck sedan på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. Tryck på sidfotswidgeten och tryck på **Sidfot**. Expandera dragspelsfliken **Bakgrund**, ställ in **bakgrundsfärg** till `F6921E` och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
-### Formatera datainhämtningskomponenten och använd en bakgrund i det anpassade formuläret {#style-the-data-capture-component-and-apply-a-background-to-the-adaptive-form}
+### Formatera datainhämtningskomponenten och använd en bakgrund i det adaptiva formuläret {#style-the-data-capture-component-and-apply-a-background-to-the-adaptive-form}
 
 Du kan använda flera komponenter i ett adaptivt formulär för att hämta data. Till exempel textruta och numerisk ruta. Du kan ange identiska format för alla datainhämtningskomponenter eller separata format för varje komponent. I den här självstudiekursen används ett identiskt format för numeriska rutor (Kund-ID, Postnummer) och textrutor (Kund-ID, Namn, Leveransadress, Tillstånd, E-post). Så här formaterar du komponenter för datainhämtning:
 
-1. Tryck på fältet Kund-ID och tryck på alternativet **Fältwidget** . Ange följande egenskaper och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. Tryck på fältet Kund-ID och tryck på alternativet **Fältwidget**. Ange följande egenskaper och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
 <table> 
  <tbody> 
@@ -219,7 +219,7 @@ Du kan använda flera komponenter i ett adaptivt formulär för att hämta data.
   <tr> 
    <td>Dimensioner och position</td> 
    <td>Bredd</td> 
-   <td>60%</td> 
+   <td>60 %</td> 
   </tr> 
   <tr> 
    <td>Dimensioner och position</td> 
@@ -232,15 +232,15 @@ Du kan använda flera komponenter i ett adaptivt formulär för att hämta data.
  </tbody> 
 </table>
 
-1. Tryck på det tomma området ovanför fältet Kund-ID och tryck på **responsiv panelbehållare**. Ställ in F1F2F2 som **Bakgrund** > **Bakgrundsfärg** . Tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. Tryck på det tomma området ovanför fältet Kund-ID och tryck på **Behållare för responsiv panel**. Ange **Bakgrund** > **Bakgrundsfärg** till F1F2F2. Tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    ![](do-not-localize/responsive-panel-container.png)
 
 ### Formatera knapparna {#style-the-buttons}
 
-Du kan använda ett anpassat tema för att tillämpa ett identiskt format på alla knappar i det adaptiva formuläret och [textbundna format](/help/forms/using/inline-style-adaptive-forms.md) för att tillämpa ett format på en viss knapp. Så här formaterar du knapparna:
+Du kan använda ett anpassat tema för att tillämpa ett identiskt format på alla knappar i det adaptiva formuläret och [intern formatering](/help/forms/using/inline-style-adaptive-forms.md) för att tillämpa ett format på en viss knapp. Så här formaterar du knapparna:
 
-1. Tryck på knappen **Skicka** och tryck på **knappen** . Ange följande egenskaper och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. Tryck på knappen **Skicka** och tryck på **Knapp**. Ange följande egenskaper och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
 <table> 
  <tbody> 
@@ -255,7 +255,7 @@ Du kan använda ett anpassat tema för att tillämpa ett identiskt format på al
    <td>F6921E</td> 
   </tr> 
   <tr> 
-   <td>Border<br /> </td> 
+   <td>Kant<br /> </td> 
    <td>Kantlinjefärg</td> 
    <td>F6921E</td> 
   </tr> 
@@ -297,18 +297,18 @@ Du kan använda ett anpassat tema för att tillämpa ett identiskt format på al
 Vissa format gäller bara för en viss komponent. Sådana komponenter är formaterade i en adaptiv formulärredigerare.
 
 1. Öppna det adaptiva formuläret för redigering. [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/change-billing-shipping-address.html)
-1. Välj alternativet **Format** i det övre fältet.
+1. I det övre fältet väljer du alternativet **Format**.
 
    ![style-option](assets/style-option.png)
 
-1. Tryck på knappen **Bifoga** och tryck på ![aem_6_3_](assets/aem_6_3_edit.png)editicon. Ange följande egenskaper i dragspelet **Dimensioner och position** :
+1. Tryck på knappen **Bifoga** och tryck på ikonen ![aem_6_3_edit](assets/aem_6_3_edit.png). Ange följande egenskaper i dragspelet **Dimensioner och Position**:
 
    | Egenskap | Värde |
    |---|---|
    | Flyttal | Vänster |
    | Bredd | 10% |
 
-1. Tryck på alternativet **Government approved address proof** (Godkänt av myndigheter) och tryck på ![aem_6_3_](assets/aem_6_3_edit.png)editicon. Ange följande egenskaper:
+1. Tryck på alternativet **Government approved address proof** och tryck på ikonen ![aem_6_3_edit](assets/aem_6_3_edit.png). Ange följande egenskaper:
 
 <table> 
  <tbody> 
@@ -325,7 +325,7 @@ Vissa format gäller bara för en viss komponent. Sådana komponenter är format
   <tr> 
    <td>Dimensioner och position</td> 
    <td>Bredd</td> 
-   <td>73%</td> 
+   <td>73 %</td> 
   </tr> 
   <tr> 
    <td>Dimensioner och position</td> 
@@ -397,7 +397,7 @@ Vissa format gäller bara för en viss komponent. Sådana komponenter är format
  </tbody> 
 </table>
 
-1. Tryck på **Skicka** -knappen och tryck på ![aem_6_3_edit](assets/aem_6_3_edit.png) -ikonen. Ange följande egenskaper:
+1. Tryck på knappen **Skicka** och tryck på ikonen ![aem_6_3_edit](assets/aem_6_3_edit.png). Ange följande egenskaper:
 
 <table> 
  <tbody> 
@@ -445,14 +445,14 @@ Adobe Typekit är en webbteckensnittstjänst. Du kan konfigurera och använda tj
 
 >[!NOTE]
 >
->![Typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) heter nu Adobe Fonts och ingår i prenumerationer på Creative Cloud och andra. [Läs mer](https://fonts.adobe.com/).
+>![Typekit-to-adobe-](assets/typekit-to-adobe-fonts.png) fontsTypekit heter nu Adobe Fonts och ingår i prenumerationer på Creative Cloud och andra. [Läs mer](https://fonts.adobe.com/).
 
-1. Skapa ett [Adobe Typekit](https://typekit.com/) -konto, skapa ett kit, lägg till teckensnittet Myriad Pro i paketet, publicera paketet och få ett paket-ID. Du måste använda Adobe Typekit-teckensnitt (webbteckensnitt) i en anpassningsbar form.
-1. På AEM Forms-servern går du till ![adobeexperienceManager](assets/adobeexperiencemanager.png) **Adobe Experience Manager** > **Tools** ![hammer](assets/hammer.png) > **Deployment** ****>¥Cloud Services. På sidan Cloud Services går du till **Tredjepartstjänster** > **Typekit** och klickar på **Konfigurera** nu under Typekit. Om det redan finns en konfiguration klickar du på plusknappen (+) för att skapa en ny instans.
+1. Skapa ett [Adobe Typekit](https://typekit.com/)-konto, skapa ett kit, lägg till teckensnittet Myriad Pro i paketet, publicera paketet och få ett kit-ID. Du måste använda Adobe Typekit-teckensnitt (webbteckensnitt) i en anpassningsbar form.
+1. På AEM Forms-servern går du till ![adobeexperienceManager](assets/adobeexperiencemanager.png) **Adobe Experience Manager** > **Verktyg** ![hammer](assets/hammer.png) > **Distribution** > **Cloud Services**. På sidan Cloud Services går du till **Tredjepartstjänster** > **Typekit** och klickar på **Konfigurera** under Typekit. Om det redan finns en konfiguration klickar du på plusknappen (+) för att skapa en ny instans.
 
-   I dialogrutan Skapa konfiguration anger du en **rubrik** för konfigurationen och klickar på **Skapa**. Du omdirigeras till konfigurationssidan. Ange ditt **kit-ID** i dialogrutan Redigera komponent som visas och klicka på **OK**.
+   I dialogrutan Skapa konfiguration anger du en **titel** för konfigurationen och klickar på **Skapa**. Du omdirigeras till konfigurationssidan. Ange ditt **Kit-id** i dialogrutan Redigera komponent som visas och klicka på **OK**.
 
-1. Konfigurera temat så att det använder TypeKit-konfigurationen. Öppna **Global Theme** i temaredigeraren på författarinstansen. Gå till Temaalternativ ![för temaalternativ](assets/theme-options.png) > Konfigurera i temaredigeraren. Markera paketet i **fältet Typekit-konfiguration** och klicka på **Spara**.
+1. Konfigurera temat så att det använder TypeKit-konfigurationen. Öppna **Global Theme** i temaredigeraren på författarinstansen. Gå till Temaalternativ ![temaalternativ](assets/theme-options.png) > Konfigurera i temaredigeraren. I fältet **Typekit Configuration** väljer du paketet och klickar på **Spara**.
 
-   De teckensnitt som läggs till i Typekit kan väljas i **textdragspelsfönstret** för alla komponenter.
+   Teckensnitten som läggs till i Typekit kan väljas i dragspelet **Text** för alla komponenter.
 
