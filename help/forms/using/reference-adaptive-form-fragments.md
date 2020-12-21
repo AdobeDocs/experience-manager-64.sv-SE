@@ -16,11 +16,11 @@ ht-degree: 0%
 ---
 
 
-# Referera till adaptiva formulärfragment {#reference-adaptive-form-fragments}
+# Referensadaptiva formulärfragment {#reference-adaptive-form-fragments}
 
-[Anpassat formulärfragment](/help/forms/using/adaptive-form-fragments.md) är en grupp fält eller en panel som innehåller en grupp fält som du kan använda när du skapar ett formulär. Du kan skapa ett formulär snabbt och enkelt. Du kan dra och släppa ett anpassat formulärfragment i ett formulär med hjälp av resursläsaren i sidofältet, och du kan redigera det i formulärredigeraren.
+[Anpassat ](/help/forms/using/adaptive-form-fragments.md) formulärfragment är en grupp fält eller en panel som innehåller en grupp fält som du kan använda när du skapar ett formulär. Du kan skapa ett formulär snabbt och enkelt. Du kan dra och släppa ett anpassat formulärfragment i ett formulär med hjälp av resursläsaren i sidofältet, och du kan redigera det i formulärredigeraren.
 
-För formulärförfattare med adaptiv form finns referensfragment i AEM Forms-paketet [AEM-FORMS-6.3-REFERENCE-FRAGMENTS](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-FRAGMENTS). Den innehåller följande fragment:
+För formulärförfattare med adaptiv formatering finns referensfragment i AEM Forms-paketet [AEM-FORMS-6.3-REFERENCE-FRAGMENTS](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-FRAGMENTS). Den innehåller följande fragment:
 
 * Adress
 * Kontaktinformation
@@ -77,7 +77,7 @@ Inkluderar fält som fångar anställningshistorik. Det gör det möjligt att l�
 
 [Klicka för att förstora](assets/emp-history-1.png)
 
-## Inkomster och utgifter {#income-expenditure}
+## Inkomst och utgifter {#income-expenditure}
 
 Inkluderar fält för att samla in månatligt kassaflöde och utgifter. Forms som kräver att användare anger ekonomiska uppgifter kan använda detta fragment för att hämta in inkomster och utgifter.
 ![Inkomst- och utgiftsfragment](assets/income.png)
