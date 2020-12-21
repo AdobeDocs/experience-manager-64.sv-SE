@@ -29,7 +29,7 @@ Att använda fragment underlättar och påskyndar processen att skapa och underh
 
 Ett fragment kan innehålla flera delformulär som är kapslade i en urvalsuppsättning med delformulär. Alternativa delformulärsuppsättningar styr visningen av delformulär baserat på dataflödet från en dataanslutning. Du använder villkorsuttryck för att bestämma vilka delformulär i uppsättningen som ska visas i det levererade formuläret. Varje delformulär i en uppsättning kan t.ex. innehålla information för en viss geografisk plats och delformuläret som visas kan bestämmas utifrån användarens plats.
 
-A *script fragment* contains reusable JavaScript functions or values that are stored separately from any particular object, such as a date parser or a web service invocation. Dessa fragment innehåller enbart enskilda skriptobjekt som visas som underordnade variabler i paletten Hierarki. Fragment kan inte skapas av skript som är egenskaper för andra objekt, t.ex. händelseskript som validate, calculate och initialize.
+Ett *skriptfragment* innehåller återanvändbara JavaScript-funktioner eller -värden som lagras separat från ett visst objekt, till exempel en datumparser eller ett webbtjänstanrop. Dessa fragment innehåller enbart enskilda skriptobjekt som visas som underordnade variabler i paletten Hierarki. Fragment kan inte skapas av skript som är egenskaper för andra objekt, t.ex. händelseskript som validate, calculate och initialize.
 
 Här är några fördelar med att använda fragment:
 
@@ -75,13 +75,13 @@ Innan du programmässigt kan utföra en API-åtgärd för Forms-tjänstklienten 
 
 Om du vill återge ett formulär baserat på fragment måste du se till att Forms-tjänsten kan hitta både formuläret och de fragment (XDP-filer) som formulärdesignen refererar till. Anta till exempel att formuläret heter PO.xdp och att det här formuläret använder två fragment som heter FooterUS.xdp och FooterCanada.xdp. I så fall måste Forms-tjänsten kunna hitta alla tre XDP-filerna.
 
-Du kan ordna ett formulär och dess fragment genom att placera formuläret på en plats och fragmenten på en annan plats. Du kan också placera alla XDP-filer på samma plats. I det här avsnittet förutsätts att alla XDP-filer finns i AEM Forms-databasen. Mer information om hur du placerar XDP-filer i AEM Forms-databasen finns i [Skrivresurser](/help/forms/developing/aem-forms-repository.md#writing-resources).
+Du kan ordna ett formulär och dess fragment genom att placera formuläret på en plats och fragmenten på en annan plats. Du kan också placera alla XDP-filer på samma plats. I det här avsnittet förutsätts att alla XDP-filer finns i AEM Forms-databasen. Mer information om hur du placerar XDP-filer i AEM Forms-databasen finns i [Skriva resurser](/help/forms/developing/aem-forms-repository.md#writing-resources).
 
 När du återger ett formulär baserat på fragment måste du bara referera till själva formuläret och inte till fragmenten. Du måste till exempel referera till PO.xdp och inte FooterUS.xdp eller FooterCanada.xdp. Se till att du placerar fragmenten på en plats där Forms-tjänsten kan hitta dem.
 
 **Återge formuläret**
 
-Ett formulär som är baserat på fragment kan återges på samma sätt som icke-fragmenterade formulär. Det innebär att du kan återge formuläret som PDF-, HTML- eller formulärguider (borttaget). Exemplet i det här avsnittet återger ett formulär baserat på fragment som ett interaktivt PDF-formulär. (Se [Återge interaktiv PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md).)
+Ett formulär som är baserat på fragment kan återges på samma sätt som icke-fragmenterade formulär. Det innebär att du kan återge formuläret som PDF, HTML eller formulärguider (borttaget). Exemplet i det här avsnittet återger ett formulär baserat på fragment som ett interaktivt PDF-formulär. (Se [Återge interaktiv PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md).)
 
 **Skriv formulärdataströmmen till klientens webbläsare**
 
@@ -113,37 +113,37 @@ När Forms-tjänsten återger ett formulär returneras en formulärdataström so
 
 1. Skapa ett Forms Client API-objekt
 
-   * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `FormsServiceClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `FormsServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Ange URI-värden
 
-   * Skapa ett `URLSpec` objekt som lagrar URI-värden med hjälp av dess konstruktor.
-   * Anropa `URLSpec` objektets `setApplicationWebRoot` metod och skicka ett strängvärde som representerar programmets webbrot.
-   * Anropa `URLSpec` objektets `setContentRootURI` metod och skicka ett strängvärde som anger innehållets rot-URI-värde. Kontrollera att formulärdesignen och fragmenten finns i innehållets rot-URI. Annars genereras ett undantag. Om du vill referera till databasen anger du `repository://`.
-   * Anropa `URLSpec` objektets `setTargetURL` metod och skicka ett strängvärde som anger det mål-URL-värde som formulärdata ska skickas till. Om du definierar mål-URL:en i formulärdesignen kan du skicka en tom sträng. Du kan också ange den URL dit ett formulär skickas för att utföra beräkningar.
+   * Skapa ett `URLSpec`-objekt som lagrar URI-värden med hjälp av dess konstruktor.
+   * Anropa `URLSpec`-objektets `setApplicationWebRoot`-metod och skicka ett strängvärde som representerar programmets webbrot.
+   * Anropa `URLSpec`-objektets `setContentRootURI`-metod och skicka ett strängvärde som anger innehållets rot-URI-värde. Kontrollera att formulärdesignen och fragmenten finns i innehållets rot-URI. Annars genereras ett undantag. Om du vill referera till databasen anger du `repository://`.
+   * Anropa `URLSpec`-objektets `setTargetURL`-metod och skicka ett strängvärde som anger det mål-URL-värde som formulärdata skickas till. Om du definierar mål-URL:en i formulärdesignen kan du skicka en tom sträng. Du kan också ange den URL dit ett formulär skickas för att utföra beräkningar.
 
 1. Återge formuläret
 
-   Anropa `FormsServiceClient` objektets `renderPDFForm` metod och skicka följande värden:
+   Anropa `FormsServiceClient`-objektets `renderPDFForm`-metod och skicka följande värden:
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som ingår i ett Forms-program måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
-   * Ett `com.adobe.idp.Document` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du ett tomt `com.adobe.idp.Document` objekt.
-   * Ett `PDFFormRenderSpec` objekt som lagrar körningsalternativ.
-   * Ett `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten för att återge ett formulär baserat på fragment.
-   * Ett `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
+   * Ett `com.adobe.idp.Document`-objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du ett tomt `com.adobe.idp.Document`-objekt.
+   * Ett `PDFFormRenderSpec`-objekt som lagrar körningsalternativ.
+   * Ett `URLSpec`-objekt som innehåller URI-värden som krävs av Forms-tjänsten för att återge ett formulär baserat på fragment.
+   * Ett `java.util.HashMap`-objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
 
-   Metoden returnerar `renderPDFForm` ett `FormsResult` objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
+   Metoden `renderPDFForm` returnerar ett `FormsResult`-objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
 
-   * Skapa ett `com.adobe.idp.Document` objekt genom att anropa `FormsResult` objektets `getOutputContent` metod.
-   * Hämta innehållstypen för `com.adobe.idp.Document` objektet genom att anropa dess `getContentType` metod.
-   * Ange `javax.servlet.http.HttpServletResponse` objektets innehållstyp genom att anropa dess `setContentType` metod och skicka `com.adobe.idp.Document` objektets innehållstyp.
-   * Skapa ett `javax.servlet.ServletOutputStream` objekt som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse` objektets `getOutputStream` metod.
-   * Skapa ett `java.io.InputStream` objekt genom att anropa `com.adobe.idp.Document` objektets `getInputStream` metod.
-   * Skapa en bytearray som fyller i den med formulärdataströmmen genom att anropa `InputStream` objektets `read`metod och skicka bytearrayen som ett argument.
-   * Anropa `javax.servlet.ServletOutputStream` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` metoden.
+   * Skapa ett `com.adobe.idp.Document`-objekt genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
+   * Hämta innehållstypen för `com.adobe.idp.Document`-objektet genom att anropa dess `getContentType`-metod.
+   * Ange `javax.servlet.http.HttpServletResponse`-objektets innehållstyp genom att anropa dess `setContentType`-metod och skicka innehållstypen för `com.adobe.idp.Document`-objektet.
+   * Skapa ett `javax.servlet.ServletOutputStream`-objekt som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse`-objektets `getOutputStream`-metod.
+   * Skapa ett `java.io.InputStream`-objekt genom att anropa `com.adobe.idp.Document`-objektets `getInputStream`-metod.
+   * Skapa en bytearray som fyller i den med formulärdataströmmen genom att anropa `InputStream`-objektets `read`metod och skicka bytearrayen som ett argument.
+   * Anropa `javax.servlet.ServletOutputStream`-objektets `write`-metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till metoden `write`.
 
 **Se även**
 
@@ -155,7 +155,7 @@ När Forms-tjänsten återger ett formulär returneras en formulärdataström so
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Återge formulär baserade på fragment med hjälp av webbtjänstens API {#render-forms-based-on-fragments-using-the-web-service-api}
+### Återge formulär baserade på fragment med webbtjänstens API {#render-forms-based-on-fragments-using-the-web-service-api}
 
 Återge ett formulär baserat på fragment med Forms API (webbtjänst):
 
@@ -166,40 +166,40 @@ När Forms-tjänsten återger ett formulär returneras en formulärdataström so
 
 1. Skapa ett Forms Client API-objekt
 
-   Skapa ett `FormsService` objekt och ange autentiseringsvärden.
+   Skapa ett `FormsService`-objekt och ange autentiseringsvärden.
 
 1. Ange URI-värden
 
-   * Skapa ett `URLSpec` objekt som lagrar URI-värden med hjälp av dess konstruktor.
-   * Anropa `URLSpec` objektets `setApplicationWebRoot` metod och skicka ett strängvärde som representerar programmets webbrot.
-   * Anropa `URLSpec` objektets `setContentRootURI` metod och skicka ett strängvärde som anger innehållets rot-URI-värde. Kontrollera att formulärdesignen finns i innehållets rot-URI. Annars genereras ett undantag. Om du vill referera till databasen anger du `repository://`.
-   * Anropa `URLSpec` objektets `setTargetURL` metod och skicka ett strängvärde som anger det mål-URL-värde som formulärdata ska skickas till. Om du definierar mål-URL:en i formulärdesignen kan du skicka en tom sträng. Du kan också ange den URL dit ett formulär skickas för att utföra beräkningar.
+   * Skapa ett `URLSpec`-objekt som lagrar URI-värden med hjälp av dess konstruktor.
+   * Anropa `URLSpec`-objektets `setApplicationWebRoot`-metod och skicka ett strängvärde som representerar programmets webbrot.
+   * Anropa `URLSpec`-objektets `setContentRootURI`-metod och skicka ett strängvärde som anger innehållets rot-URI-värde. Kontrollera att formulärdesignen finns i innehållets rot-URI. Annars genereras ett undantag. Om du vill referera till databasen anger du `repository://`.
+   * Anropa `URLSpec`-objektets `setTargetURL`-metod och skicka ett strängvärde som anger det mål-URL-värde som formulärdata skickas till. Om du definierar mål-URL:en i formulärdesignen kan du skicka en tom sträng. Du kan också ange den URL dit ett formulär skickas för att utföra beräkningar.
 
 1. Återge formuläret
 
-   Anropa `FormsService` objektets `renderPDFForm` metod och skicka följande värden:
+   Anropa `FormsService`-objektets `renderPDFForm`-metod och skicka följande värden:
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som ingår i ett Forms-program måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
-   * Ett `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`.
-   * Ett `PDFFormRenderSpec` objekt som lagrar körningsalternativ. Observera att alternativet för taggad PDF inte kan anges om indatadokumentet är ett PDF-dokument. Om indatafilen är en XDP-fil kan alternativet taggad PDF anges.
-   * Ett `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
-   * Ett `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
-   * Ett tomt `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av metoden. Den här parametern används för att lagra det återgivna formuläret.
-   * Ett tomt `javax.xml.rpc.holders.LongHolder` objekt som fylls i av metoden. Det här argumentet lagrar antalet sidor i formuläret.
-   * Ett tomt `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden. Det här argumentet lagrar språkets värde.
-   * Ett tomt `com.adobe.idp.services.holders.FormsResultHolder` objekt som innehåller resultatet av den här åtgärden.
+   * Ett `BLOB`-objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`.
+   * Ett `PDFFormRenderSpec`-objekt som lagrar körningsalternativ. Observera att alternativet för taggad PDF inte kan anges om indatadokumentet är ett PDF-dokument. Om indatafilen är en XDP-fil kan alternativet taggad PDF anges.
+   * Ett `URLSpec`-objekt som innehåller URI-värden som krävs av Forms-tjänsten.
+   * Ett `java.util.HashMap`-objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
+   * Ett tomt `com.adobe.idp.services.holders.BLOBHolder`-objekt som fylls i av metoden. Den här parametern används för att lagra det återgivna formuläret.
+   * Ett tomt `javax.xml.rpc.holders.LongHolder`-objekt som fylls i av metoden. Det här argumentet lagrar antalet sidor i formuläret.
+   * Ett tomt `javax.xml.rpc.holders.StringHolder`-objekt som fylls i av metoden. Det här argumentet lagrar språkets värde.
+   * Ett tomt `com.adobe.idp.services.holders.FormsResultHolder`-objekt som kommer att innehålla resultatet av den här åtgärden.
 
-   Metoden `renderPDFForm` fyller i det `com.adobe.idp.services.holders.FormsResultHolder` objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
+   Metoden `renderPDFForm` fyller i det `com.adobe.idp.services.holders.FormsResultHolder`-objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
 
-   * Skapa ett `FormResult` objekt genom att hämta värdet för `com.adobe.idp.services.holders.FormsResultHolder` objektets `value` datamedlem.
-   * Skapa ett `BLOB` objekt som innehåller formulärdata genom att anropa `FormsResult` objektets `getOutputContent` metod.
-   * Hämta innehållstypen för `BLOB` objektet genom att anropa dess `getContentType` metod.
-   * Ange `javax.servlet.http.HttpServletResponse` objektets innehållstyp genom att anropa dess `setContentType` metod och skicka `BLOB` objektets innehållstyp.
-   * Skapa ett `javax.servlet.ServletOutputStream` objekt som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse` objektets `getOutputStream` metod.
-   * Skapa en bytearray och fyll i den genom att anropa `BLOB` objektets `getBinaryData` metod. Den här aktiviteten tilldelar innehållet i `FormsResult` objektet till bytearrayen.
-   * Anropa `javax.servlet.http.HttpServletResponse` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` metoden.
+   * Skapa ett `FormResult`-objekt genom att hämta värdet för `com.adobe.idp.services.holders.FormsResultHolder`-objektets `value`-datamedlem.
+   * Skapa ett `BLOB`-objekt som innehåller formulärdata genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
+   * Hämta innehållstypen för `BLOB`-objektet genom att anropa dess `getContentType`-metod.
+   * Ange `javax.servlet.http.HttpServletResponse`-objektets innehållstyp genom att anropa dess `setContentType`-metod och skicka innehållstypen för `BLOB`-objektet.
+   * Skapa ett `javax.servlet.ServletOutputStream`-objekt som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse`-objektets `getOutputStream`-metod.
+   * Skapa en bytearray och fyll i den genom att anropa `BLOB`-objektets `getBinaryData`-metod. Den här aktiviteten tilldelar innehållet i `FormsResult`-objektet till bytearrayen.
+   * Anropa `javax.servlet.http.HttpServletResponse`-objektets `write`-metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till metoden `write`.
 
 **Se även**
 
