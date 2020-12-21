@@ -21,15 +21,15 @@ ht-degree: 0%
 
 ## Anpassad inlämning av formulärdata {#adaptive-form-data-submission}
 
-Adaptiva formulär innehåller flera färdiga arbetsflöden för att [skicka formulärdata till olika slutpunkter](/help/forms/using/configuring-submit-actions.md) .
+Med adaptiva formulär kan du skicka formulärdata till olika slutpunkter med hjälp av flera färdiga [skicka-åtgärder](/help/forms/using/configuring-submit-actions.md)-arbetsflöden.
 
-Åtgärden Skicka **e-post** skickar till exempel ett e-postmeddelande när ett anpassat formulär har skickats. Den kan även konfigureras för att skicka formulärdata och PDF-filen i e-postmeddelandet.
+Till exempel skickar åtgärden **E-post** ett e-postmeddelande när ett anpassat formulär har skickats. Den kan även konfigureras för att skicka formulärdata och PDF-filen i e-postmeddelandet.
 
 I den här artikeln beskrivs stegen för att aktivera e-poståtgärden för ett anpassat formulär och olika konfigurationer som tillhandahålls.
 
 >[!NOTE]
 >
->Du kan också använda åtgärden **E-** post-PDF för att skicka det ifyllda formuläret via e-post som en bifogad PDF-fil. Konfigurationsalternativen som är tillgängliga för den här åtgärden är samma som alternativen som är tillgängliga för åtgärden E-post. Åtgärden E-post-PDF är bara tillgänglig för XFA-baserade adaptiva formulär
+>Du kan också använda åtgärden **E-posta PDF** för att skicka det ifyllda formuläret via e-post som en bifogad PDF-fil. Konfigurationsalternativen som är tillgängliga för den här åtgärden är samma som alternativen som är tillgängliga för åtgärden E-post. Åtgärden E-post-PDF är bara tillgänglig för XFA-baserade adaptiva formulär
 
 ## E-poståtgärd {#email-action}
 
@@ -43,7 +43,7 @@ Med åtgärden E-post kan en författare automatiskt skicka e-post till en eller
 
 1. Öppna ett anpassat formulär i redigeringsläge.
 
-1. Klicka på **Redigera** bredvid **Början av verktygsfältet Adaptivt formulär** .
+1. Klicka på **Redigera** bredvid verktygsfältet **Start för ett adaptivt formulär**.
 
    Dialogrutan Redigera komponent öppnas.
 
@@ -59,15 +59,15 @@ Med åtgärden E-post kan en författare automatiskt skicka e-post till en eller
 
    Ange ämne och e-postmeddelandets brödtext i fälten Ämne och E-postmall.
 
-   Du kan också ange variabelplatshållare i fälten. I så fall bearbetas fältvärdena när formuläret har skickats av en slutanvändare. Mer information finns i [Använda adaptiva formulärfältsnamn för att dynamiskt skapa e-postinnehåll](/help/forms/using/form-submission-receipt-via-email.md#p-using-adaptive-form-field-names-to-dynamically-create-email-content-p).
+   Du kan också ange variabelplatshållare i fälten. I så fall bearbetas fältvärdena när formuläret har skickats av en slutanvändare. Mer information finns i [Använda namn på adaptiva formulärfält för att dynamiskt skapa e-postinnehåll](/help/forms/using/form-submission-receipt-via-email.md#p-using-adaptive-form-field-names-to-dynamically-create-email-content-p).
 
    Markera Inkludera bifogade filer om formuläret innehåller bifogade filer och du vill bifoga dessa filer i e-postmeddelandet.
 
    >[!NOTE]
    >
-   >Om du väljer åtgärden **** E-post-PDF måste du markera alternativet Inkludera bifogade filer.
+   >Om du väljer åtgärden **E-post-PDF** måste du markera alternativet Inkludera bifogade filer.
 
-1. Click **OK** to save the changes.
+1. Klicka på **OK** för att spara ändringarna.
 
 ### Använda adaptiva formulärfältsnamn för att dynamiskt skapa e-postinnehåll {#using-adaptive-form-field-names-to-dynamically-create-email-content}
 
@@ -77,17 +77,17 @@ På fliken E-poståtgärd kan du använda platshållare som bearbetas när åtg�
 
 Om du vill definiera en platshållare anger du `${<field name>}` i ett fält på fliken Skicka-åtgärder.
 
-Om formuläret till exempel innehåller fältet **E-postadress** , med namnet `email_addr`, för att hämta användarens e-post-ID, kan du ange följande i fälten Mailto, CC eller BCC.
+Om formuläret till exempel innehåller fältet **E-postadress**, med namnet `email_addr`, för att hämta användarens e-post-ID, kan du ange följande i fälten Mailto, CC eller BCC.
 
 `${email_addr}`
 
-När en användare skickar formuläret skickas ett e-postmeddelande till det e-post-ID som har angetts i formulärfältet `email_addr` .
+När en användare skickar formuläret skickas ett e-postmeddelande till det e-post-ID som anges i fältet `email_addr` i formuläret.
 
 >[!NOTE]
 >
 >Du hittar namnet på ett fält i dialogrutan **Redigera** för fältet.
 
-Variabelplatshållare kan också användas i fälten **Ämne** och **E-postmall** .
+Variabelplatshållare kan också användas i fälten **Ämne** och **E-postmall**.
 
 Till exempel:
 
