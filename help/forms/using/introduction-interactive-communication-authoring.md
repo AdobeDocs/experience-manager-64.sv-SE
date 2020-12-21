@@ -26,7 +26,7 @@ Användargränssnittet för att skapa [interaktiv kommunikation](/help/forms/usi
 * WYSIWYG-dokumentredigerare med dra-och-släpp
 * Integrerad databas för resurser - de resurser som överförs till och skapas på servern finns i resursläsaren i redigeringsgränssnittet för interaktiv kommunikation
 
-När du [skapar en ny eller redigerar en befintlig interaktiv kommunikation](/help/forms/using/create-interactive-communication.md)använder du följande element i användargränssnittet:
+När du [skapar en ny eller redigerar en befintlig interaktiv kommunikation](/help/forms/using/create-interactive-communication.md) använder du följande element i användargränssnittet:
 
 * [Sidebar](#sidebar)
 * [Verktygsfältet Sida](#page-toolbar)
@@ -36,15 +36,15 @@ När du [skapar en ny eller redigerar en befintlig interaktiv kommunikation](/he
 
 ![gränssnitt för framtagning av interaktiv kommunikation](assets/form-editor.png)
 
-**S.** Sidofält **B.** Verktygsfältet Sida **C.** Innehållsområde
+**A.** Sidofält  **B.** Verktygsfältet Sida  **C.** Innehåll
 
-## Sidebar {#sidebar}
+## Sidofält {#sidebar}
 
 ![Sidebar](assets/sidebar-comps.png)
 
 [Klicka för att förstora](assets/sidebar-comps-1.png)
 
-**S.** Kanalwebbläsare **B.** Innehållsbläddraren **C.** Properties browser **D.** Resursläsaren **E.** Komponentbläddraren **F.** Webbläsaren Datakällor - Datamodell **G.** Webbläsaren Datakällor - Överordnad innehåll
+**A.** Kanalwebbläsare  **B.** Innehållsläsaren  **C.** Properties,  **D.** Resursläsaren  **E.** Components, webbläsare  ****   **** F.¥DatamodellG.¥Datakällor, webbläsare - Överordnad innehåll
 
 Sidlisten innehåller följande:
 
@@ -93,7 +93,7 @@ Sidlisten innehåller följande:
 De viktigaste punkterna när du arbetar med interaktiva kommunikationskomponenter är följande:
 
 * Varje komponent har tillhörande egenskaper som styr dess utseende och funktion. Om du vill konfigurera egenskaperna för en komponent trycker du på komponenten och trycker på ![cmpr](assets/cmppr.png) för att öppna komponentegenskaperna i egenskapsläsaren.
-* En komponent identifieras med sitt elementnamn. När du trycker på ![cmpr](assets/cmppr.png)kan du ändra komponentens namn genom att ändra fältvärdet för elementnamn i egenskapsläsaren. Endast bokstäver, siffror, bindestreck (-) och understreck (_) godkänns i fältet Elementnamn. Andra specialtecken tillåts inte och elementnamnet måste börja med en bokstav.
+* En komponent identifieras med sitt elementnamn. När du trycker på ![cmpr](assets/cmppr.png) kan du ändra komponentens namn genom att ändra elementnamnsfältets värde i egenskapsläsaren. Endast bokstäver, siffror, bindestreck (-) och understreck (_) godkänns i fältet Elementnamn. Andra specialtecken tillåts inte och elementnamnet måste börja med en bokstav.
 * Du kan ändra egenskapen Title för en interaktiv kommunikationskomponent infogad i redigeraren utan att öppna egenskapsläsaren så länge titeln visas i den interaktiva kommunikationen. Så här gör du:
 
    1. Tryck för att markera en komponent som har en Title-egenskap och vars Hide title-egenskap är inaktiverad.
@@ -110,9 +110,9 @@ S. **Konfigurera**: När du trycker på **Konfigurera** visas komponentegenskape
 
 B. **Redigera regler**: När du trycker på Redigera regler visas Regelredigeraren där du kan redigera och skapa regler för den valda komponenten. I Regelredigeraren kan du även markera andra formulärobjekt (komponenter) och redigera/skapa regler för dessa formulärobjekt.
 
-C. **Copy**: Du kan använda kopieringsalternativet för att kopiera en komponent och klistra in den på andra platser i den interaktiva kommunikationen.
+C. **Kopiera**: Du kan använda kopieringsalternativet för att kopiera en komponent och klistra in den på andra platser i den interaktiva kommunikationen.
 
-D. **Klipp** ut: Du kan använda alternativet Klipp ut för att flytta en komponent från en plats till en annan i den interaktiva kommunikationen.
+D. **Klipp ut**: Du kan använda alternativet Klipp ut för att flytta en komponent från en plats till en annan i den interaktiva kommunikationen.
 
 E. **Ta bort**: Gör att du kan ta bort komponenten från den interaktiva kommunikationen.
 
@@ -138,9 +138,9 @@ J. **Mer**: Innehåller fler alternativ för att arbeta med den markerade kompon
 
 Verktygsfältet Sida överst innehåller alternativ som gör att du kan förhandsgranska den interaktiva kommunikationen och ändra dess egenskaper. Du kan förhandsgranska den interaktiva kommunikationen när du redigerar den och göra ändringar i den. I verktygsfältet visas:
 
-* Växla ![sidopanel](assets/toggle-side-panel.png): Här kan du visa eller dölja sidofältet.
-* Sidinformation, ![sidinformation](assets/pageinformationad.png): Här kan du visa sidegenskaper.
-* Emulatorlinjal ![](assets/ruler.png): Gör att du kan emulera utseendet i din interaktiva kommunikation för olika visningsstorlekar, som surfplattor och telefoner.
+* Växla sidopanel ![växlingspanel](assets/toggle-side-panel.png): Här kan du visa eller dölja sidofältet.
+* Sidinformation ![sidinformationsad](assets/pageinformationad.png): Här kan du visa sidegenskaper.
+* Emulator ![linjal](assets/ruler.png): Gör att du kan emulera utseendet i din interaktiva kommunikation för olika visningsstorlekar, som surfplattor och telefoner.
 * Redigera: Här kan du välja andra lägen, till exempel: Redigera, Formatera, Utvecklare och Design.
 
    * Redigera: Här kan du redigera egenskaperna för den interaktiva kommunikationen och dess komponenter. Du kan till exempel lägga till en komponent, släppa en bild och ange obligatoriska fält.
