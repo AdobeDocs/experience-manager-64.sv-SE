@@ -35,11 +35,11 @@ Med AEMFD-kompatibilitetspaketet kan du använda följande resurser från AEM Fo
 
 Mer information finns i [Resurser som gjorts kompatibla med AEM Forms 6.4 genom att installera Kompatibilitetspaketet](/help/forms/using/compatibility-package.md#assetsmadecompatible).
 
-## Lägg till stöd för AEM Forms 6.3- och 6.2-material i AEM Forms 6.4 {#add-support-for-aem-forms-and-assets-in-aem-forms}
+## Lägg till stöd för AEM Forms 6.3- och 6.2-resurser i AEM Forms 6.4 {#add-support-for-aem-forms-and-assets-in-aem-forms}
 
 När du har utfört en uppgradering gör du följande för att installera AEMFD-kompatibilitetspaketet och göra dina resurser kompatibla med 6.4:
 
-Kontrollera att du har förinstallerat [AEM Kompatibilitetspaket](/help/sites-deploying/backward-compatibility.md) .
+Kontrollera att du har [AEM Kompatibilitetspaket](/help/sites-deploying/backward-compatibility.md) förinstallerat.
 
 1. Installera [Kompatibilitetspaketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT).
 
@@ -48,7 +48,7 @@ Kontrollera att du har förinstallerat [AEM Kompatibilitetspaket](/help/sites-de
 1. Starta om servern när loggarna har stabiliserats.
 1. Använd flyttningsverktyget för att göra dina resurser kompatibla med 6.4.
 
-   Mer information finns i [Migreringsverktyg](/help/forms/using/migration-utility.md).
+   Mer information finns i [migreringsverktyget](/help/forms/using/migration-utility.md).
 
 ## Resurser som gjorts kompatibla med AEM Forms 6.4 genom att installera kompatibilitetspaketet {#assetsmadecompatible}
 
