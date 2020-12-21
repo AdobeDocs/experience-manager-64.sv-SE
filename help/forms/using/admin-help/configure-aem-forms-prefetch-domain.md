@@ -18,11 +18,11 @@ ht-degree: 0%
 ---
 
 
-# Konfigurera AEM formulär för förhämtning av domäninformation {#configure-aem-forms-to-prefetchdomain-information}
+# Konfigurera AEM formulär till förhämtningsdomäninformation {#configure-aem-forms-to-prefetchdomain-information}
 
 Användare kan få en långsammare svarstid om de tillhör många grupper (till exempel 500 eller fler) eller om grupperna är djupt inkapslade (till exempel 30 nivåer). Om du får problem kan du konfigurera AEM formulär så att information från vissa domäner hämtas i förväg.
 
-1. Klicka på i administrationskonsolen **[!UICONTROL Settings > User Management > Configuration > Import And Export Configuration Files]**.
+1. Klicka på **[!UICONTROL Settings > User Management > Configuration > Import And Export Configuration Files]** i administrationskonsolen.
 1. Om du vill exportera den aktuella konfigurationsinställningen till en fil klickar du på **[!UICONTROL Export]** och sparar konfigurationsfilen på en annan plats.
 1. Lägg till följande nod (markerad med fet stil):
 
@@ -41,8 +41,8 @@ Användare kan få en långsammare svarstid om de tillhör många grupper (till 
     <node name="APSAuditService">
    ```
 
-   I det här exemplet har flera domäner konfigurerats för förhämtning. Domännamnen avgränsas med &quot;/&quot;. Detta visas i exemplet ovan med *Domain_Name1*, *Domain_Name2* och *Domain_Name3*.
+   I det här exemplet har flera domäner konfigurerats för förhämtning. Domännamnen avgränsas med &quot;/&quot;. Detta visas i exemplet ovan med *Domännamn1*, *Domännamn2* och *Domännamn3*.
 
-1. Om du vill importera den uppdaterade filen klickar du i Användarhantering **[!UICONTROL Configuration > Import And Export Configuration Files]**.
-1. Klicka **[!UICONTROL Browse]** för att hitta filen, klicka på Importera och sedan på **[!UICONTROL OK]**.
+1. Om du vill importera den uppdaterade filen klickar du på **[!UICONTROL Configuration > Import And Export Configuration Files]** i Användarhantering.
+1. Klicka på **[!UICONTROL Browse]** för att hitta filen, klicka på Importera och sedan på **[!UICONTROL OK]**.
 
