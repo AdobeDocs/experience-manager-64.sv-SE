@@ -20,14 +20,14 @@ ht-degree: 0%
 
 # Uppdragsfunktion {#assignments-feature}
 
-Komponenterna för aktiveringstilldelningar och [aktiveringskatalog](catalog.md) som finns i gruppen Communities i komponentwebbläsaren är komponenter i en [aktiveringscommunity](overview.md#enablement-community).
+Aktiveringstilldelningarna och [aktiveringskatalogkomponenterna](catalog.md) som finns i gruppen Communities i komponentwebbläsaren är komponenter i en [aktiveringscommunity](overview.md#enablement-community).
 
 Med komponenten Aktivera tilldelningar kan den inloggade communitymedlemmen (instruktören) få åtkomst till sina tilldelade [aktiveringsresurser](resources.md).
 
-I självstudiekursen [Komma igång med AEM Communities för aktivering](getting-started-enablement.md) kan du se en medlems vy över tilldelningar och kataloger i [Experience the Published Site](enablement-published-site.md) .
+I självstudiekursen [Getting Started with AEM Communities for Enablement](getting-started-enablement.md) kan du se en medlems vy över tilldelningar och kataloger i [Experience the Published Site](enablement-published-site.md)-avsnittet.
 
-## Additional Information {#additional-information}
+## Ytterligare information {#additional-information}
 
-Mer information finns på [uppdragssidan Essentials](essentials-assignments.md) för utvecklare.
+Mer information finns på sidan [Tilldelningar Essentials](essentials-assignments.md) för utvecklare.
 
-Funktionen [för](functions.md#assignments-function) tilldelningar är tillgänglig när du skapar en [communitywebbplats](sites-console.md).
+Tilldelningsfunktionen [](functions.md#assignments-function) är tillgänglig när du skapar en [community-plats](sites-console.md).
