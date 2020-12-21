@@ -32,23 +32,23 @@ I AEM Forms-appen öppnas en ny åtgärd med den vänstra svepningen eller start
    * För Android öppnar du Android-projektet i Eclipse.
    * För Windows öppnar du `MWSWindows.sln` i Visual Studio.
 
-1. Navigera till vymappen och öppna filen för redigering. `task.js`
+1. Navigera till vymappen och öppna `task.js`-filen för redigering.
 
-   * I Xcode navigerar du till mappen **Capture > www > wsmoble > js > runtime > views** .
-   * I Eclipse navigerar du till mappen **assets > www > wsmoble > js > runtime > views** .
-   * I Visual Studio går du till **MWSWindows > www > wsmoble > js > runtime > views** folder.
+   * I Xcode navigerar du till mappen **Capture > www > wsmoble > js > runtime > views**.
+   * I Eclipse navigerar du till mappen **assets > www > wsmoble > js > runtime > views**.
+   * I Visual Studio går du till mappen **MWSWindows > www > wsmoble > js > runtime > views**.
 
    >[!NOTE]
    >
    >Filen task.js innehåller den stamnätsvy som är associerad med varje uppgift eller startpunkt som listas i uppgifts- eller startpunktslistorna.
 
-1. I `task.js` filen söker du efter egenskapen events för vyn.
+1. I filen `task.js` söker du efter egenskapen events för vyn.
 
    Egenskapen events är en karta med varje post i formatet:
 
    `"EventName Selector": "Function"`
 
-   När du utlöser en Javascript-händelse med namnet `EventName`på ett HTML-element som anges av `Selector`anropas `Function`händelsen.
+   När du utlöser en Javascript-händelse med namnet `EventName`för ett HTML-element som anges av `Selector` anropas `Function`händelsen.
 
 1. Sök
 
@@ -70,7 +70,7 @@ I AEM Forms-appen öppnas en ny åtgärd med den vänstra svepningen eller start
       &quot;swipe .last_empty_div&quot; : &quot;onTaskClick&quot;,
 
 
-1. Spara och stäng `task.js` filen.
+1. Spara och stäng `task.js`-filen.
 1. Bygg och kör appen AEM Forms. Nu kan du öppna en med hjälp av vänstersvepning och högersvepning.
 
 På samma sätt kan du göra ändringar i andra vyer för olika kombinationer av gester, HTML-element och funktioner.
