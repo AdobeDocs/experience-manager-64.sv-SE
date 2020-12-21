@@ -29,14 +29,14 @@ I den här artikeln beskrivs stegen för hur du lägger till information för va
 
 Du kan lägga till den information som finns i `task.json` som skickas av servern. Informationen kan läggas till som oformaterad text eller formateras med hjälp av format.
 
-Mer information om JSON-objektbeskrivningen finns i [den här](/help/forms/using/html-workspace-json-object-description.md) artikeln.
+Mer information om JSON-objektbeskrivningen finns i [den här](/help/forms/using/html-workspace-json-object-description.md)-artikeln.
 
-## Visa information om en uppgift {#displaying-information-on-a-task}
+## Visa information om en aktivitet {#displaying-information-on-a-task}
 
-1. Följ de [allmänna stegen för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md)av arbetsytan i AEM Forms.
-1. Om du vill visa ytterligare information för en uppgift måste motsvarande nyckelvärdepar läggas till i åtgärdsblocket för `translation.json`.
+1. Följ de allmänna [stegen för anpassning av arbetsytan i AEM Forms](/help/forms/using/generic-steps-html-workspace-customization.md).
+1. Om du vill visa ytterligare information för en aktivitet måste motsvarande nyckelvärdepar läggas till i åtgärdsblocket `translation.json`.
 
-   Ändra t.ex. `/apps/ws/locales/en-US/translation.json` för engelska:
+   Ändra till exempel `/apps/ws/locales/en-US/translation.json` för engelska:
 
    ```
    "task" : {
@@ -123,7 +123,7 @@ Mer information om JSON-objektbeskrivningen finns i [den här](/help/forms/using
 
 ## Definiera CSS för den nya egenskapen {#defining-css-for-the-new-property}
 
-1. Du kan använda format på informationen (egenskapen) som läggs till i en uppgift. För att göra detta måste du lägga till formatinformation för den nya egenskapen som lagts till i `/apps/ws/css/newStyle.css`.
+1. Du kan använda format på informationen (egenskapen) som läggs till i en uppgift. För att göra detta måste du lägga till formatinformation för den nya egenskapen som har lagts till i `/apps/ws/css/newStyle.css`.
 
    Lägg till exempel till:
 
@@ -142,7 +142,7 @@ Slutligen måste du ta med en post i dev-paketet för varje egenskap som du vill
 1. Kopiera `task.html`:
 
    * från: `/libs/ws/js/runtime/templates/`
-   * to: `/apps/ws/js/runtime/templates/`
+   * till: `/apps/ws/js/runtime/templates/`
 
 1. Lägg till den nya informationen i `/apps/ws/js/runtime/templates/task.html`.
 
