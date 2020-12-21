@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# Communities-meddelanden {#communities-notifications}
+# Communities Notifications {#communities-notifications}
 
 ## Översikt {#overview}
 
@@ -33,15 +33,15 @@ Meddelanden liknar [aktiviteter](essentials-activities.md) och [prenumerationer]
 Det som skiljer meddelanden från aktiviteter och prenumerationer är
 
 * En länk till meddelandeavsnittet finns alltid i en communitysajts rubrik
-   * Aktiviteter kräver att [aktivitetsströmfunktionen](functions.md#activity-stream-function) inkluderas i communityplatsens struktur
+   * Aktiviteter kräver att funktionen [aktivitetsström](functions.md#activity-stream-function) inkluderas i communityplatsens struktur
    * Prenumerationer kräver [konfigurering av e-post](email.md)
 * Implementeringen av meddelanden sker via skalbara och anslutningsbara kanaler
    * Aktiviteter är bara tillgängliga på webben
    * Prenumerationer är bara tillgängliga via e-post
 
-Från och med Communities [FP1](deploy-communities.md#latestfeaturepack)är de tillgängliga meddelandekanalerna
+Från och med webbgrupper [FP1](deploy-communities.md#latestfeaturepack) är meddelandekanalerna tillgängliga
 
-* Webbkanalen som du kommer åt via `Notifications` länken
+* Webbkanalen som du kommer åt via länken `Notifications`
 * E-postkanalen, tillgänglig när e-postmeddelandet har konfigurerats korrekt
 
 Framtida kanaler är mobila och stationära.
@@ -56,11 +56,11 @@ Instruktioner om hur du konfigurerar e-post finns i [Konfigurera e-post](analyti
 
 **Aktivera Följ**
 
-Komponenter måste konfigureras för att aktivera följande. Funktioner som tillåter följande är [blogg](blog-feature.md), [forum](forum.md), [QnA](working-with-qna.md), [kalender](calendar.md), [filbibliotek](file-library.md)[](comments.md)och¥comments.
+Komponenter måste konfigureras för att aktivera följande. Följande funktioner tillåter [blogg](blog-feature.md), [forum](forum.md), [QnA](working-with-qna.md), [kalender](calendar.md), [filelibrary](file-library.md) och [kommentarer](comments.md).
 
 Observera att
 
-* Komponenter som används i [communitymallar](sites.md) och [gruppmallar](tools-groups.md) kan redan vara konfigurerade för att tillåta följande
+* Komponenter som används i community [webbplatsmallar](sites.md) och [gruppmallar](tools-groups.md) kan redan vara konfigurerade att tillåta följande
 
 * Medlemsprofiler har redan konfigurerats så att andra medlemmar kan följa
 
@@ -68,9 +68,9 @@ Observera att
 
 ![chlimage_1-254](assets/chlimage_1-254.png)
 
-Med knappen **Följ** kan du följa inmatningar som aktiviteter, prenumerationer och/eller meddelanden. Varje gång knappen **Följ** är markerad går det att aktivera eller inaktivera en markering. Markeringen visas bara när den är konfigurerad. `Email Subscriptions`
+Med knappen **Följ** kan du följa upp aktiviteter, prenumerationer och/eller meddelanden. Varje gång knappen **Följ** är markerad går det att aktivera eller inaktivera en markering. Markeringen `Email Subscriptions` finns bara när den är konfigurerad.
 
-Om någon av följande metoder är markerad ändras texten för knappen till **Följ**. Du kan välja `Unfollow All` att inaktivera alla metoder.
+Om någon av följande metoder är markerad ändras knappens text till **Följande**. Du kan av praktiska skäl välja `Unfollow All` för att inaktivera alla metoder.
 
 Knappen **Följ** visas
 
@@ -88,7 +88,7 @@ Webbkanalen är alltid aktiverad.
 
 ![chlimage_1-255](assets/chlimage_1-255.png)
 
-E-postkanalen, som bygger på rätt [konfiguration av e-post](email.md), ger samma inställningar som för webbkanalen.
+E-postkanalen, som är beroende av rätt [konfiguration av e-post](email.md), innehåller samma inställningar som för webbkanalen.
 
 E-postkanalen är inaktiverad som standard.
 
@@ -102,9 +102,9 @@ Den kan vara aktiverad av en medlem, men är ändå beroende av att e-post konfi
 
 ### Webbmeddelanden {#web-notifications}
 
-En [guide skapade en communitywebbplats](sites-console.md) innehåller nu en länk till `Notifications` funktionen i webbplatsens sidhuvud ovanför banderollen. Till skillnad från meddelanden skapas meddelanden för alla communitysajter, medan meddelanden måste aktiveras när webbplatsen skapas.
+En [guide skapade en communityplats](sites-console.md) innehåller nu en länk till funktionen `Notifications` i webbplatsens rubrikfält ovanför banderollen. Till skillnad från meddelanden skapas meddelanden för alla communitysajter, medan meddelanden måste aktiveras när webbplatsen skapas.
 
-När du besöker den publicerade webbplatsen visas alla meddelanden för medlemmen om du väljer `Notifications` länken.
+När du går till den publicerade webbplatsen och väljer länken `Notifications` visas alla meddelanden för medlemmen.
 
 ![chlimage_1-258](assets/chlimage_1-258.png)
 
