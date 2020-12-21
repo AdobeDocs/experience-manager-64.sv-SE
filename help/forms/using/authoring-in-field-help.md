@@ -16,7 +16,7 @@ ht-degree: 0%
 ---
 
 
-# Sammanhangsberoende hjälp för formulärfält {#authoring-in-context-help-for-form-fields}
+# Om du skriver sammanhangsberoende hjälp för formulärfält {#authoring-in-context-help-for-form-fields}
 
 ## Introduktion {#introduction}
 
@@ -45,7 +45,7 @@ Fältet Kort beskrivning ger snabba och korta tips om hur du fyller i ett formul
 
 >[!NOTE]
 >
->Markera **Visa alltid kort beskrivning** för att permanent visa hjälptexten under fältet.
+>Välj **Visa alltid kort beskrivning** om du vill visa hjälptexten under fältet permanent.
 
 ![Permanent kort sammanhangsberoende hjälp nedanför fältet](assets/short1.png)
 
@@ -65,7 +65,7 @@ Utöver sammanhangsberoende hjälp för formulärfält kan du ange hjälp på pa
 
 ![Lägga till sammanhangsberoende hjälp för en formulärpanel](assets/panel-level-help.png)
 
-Vill du lägga till hjälp för panelen visas en **?** -ikonen bredvid panelbeskrivningen. När du klickar på ikonen visas det innehåll som lagts till i hjälpdelen i dialogrutan Redigera i panelen.
+Om du lägger till hjälp för panelen visas en **?** -ikonen bredvid panelbeskrivningen. När du klickar på ikonen visas det innehåll som lagts till i hjälpdelen i dialogrutan Redigera i panelen.
 
 ![Exempel på sammanhangsberoende hjälp på formulärpanelsnivå](assets/photoshop-1.png)
 
