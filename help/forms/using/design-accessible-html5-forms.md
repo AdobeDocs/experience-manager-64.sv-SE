@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Utforma hjälpmedelsförberedda HTML5-formulär {#designing-accessible-html-forms}
 
-HTML5-formulär använder hjälpmedelsstandarden ARIA HTML5 för att generera hjälpmedelsförberedda HTML-formulär. De här formulären har stöd för tabbnavigering (utom Mozilla FireFox) och är certifierade som kompatibla med vanliga skärmläsare. Om du vill generera ett HTML5-formulär med bra hjälpmedelsfunktioner utformar du XFA-formulärmallen baserat på några [grundläggande riktlinjer](/help/forms/using/best-practices-for-html5-forms.md)för design. Riktlinjerna för designen omfattar konfiguration av rätt tabbordning och tillhandahållande av innehållet i Tala text för varje formulärkontroll. AEM Forms Designer stöder inställningen av dessa formulärkontrollsattribut för att generera ett tillgängligt PDF- och HTML5-formulär.
+HTML5-formulär använder hjälpmedelsstandarden ARIA HTML5 för att generera hjälpmedelsförberedda HTML-formulär. De här formulären har stöd för tabbnavigering (utom Mozilla FireFox) och är certifierade som kompatibla med vanliga skärmläsare. Om du vill generera ett HTML5-formulär med bra hjälpmedelsfunktioner utformar du XFA-formulärmallen baserat på några [grundläggande riktlinjer för design](/help/forms/using/best-practices-for-html5-forms.md). Riktlinjerna för designen omfattar konfiguration av rätt tabbordning och tillhandahållande av innehållet i Tala text för varje formulärkontroll. AEM Forms Designer stöder inställningen av dessa formulärkontrollsattribut för att generera ett tillgängligt PDF- och HTML5-formulär.
 
 *Obs!Fliknavigering omfattar inte skyddade fält, t.ex. beräkningsfält som visar summan av värden. För att skärmläsaren ska kunna läsa värdet för ett skyddat fält placerar du ett tomt skrivskyddat fält ovanpå eller bredvid det skyddade fältet. Tilldela det skyddade fältets värde till det nya skrivskyddade fältet. Skärmläsaren eller fliknavigeringen kan välja det här skrivskyddade fältet och tala ut det som värdet för det skyddade fältet.*
 
@@ -32,4 +32,4 @@ AEM Forms Designer innehåller ett antal alternativ för att tala text som kan s
 
 ![hjälpmedel](assets/accessibility.png)
 
-Om det finns flera alternativ som funktionsbeskrivning, Reader-text och bildtext på en formulärkontroll använder Reader på skärmen endast en av dessa egenskaper. Standardordningen är Reader, funktionsbeskrivning, bildtext och namn för anpassad skärm. You can override the default order using the Screen Reader **Precedence** option in the Accessibility palette.
+Om det finns flera alternativ som funktionsbeskrivning, Reader-text och bildtext på en formulärkontroll använder Reader på skärmen endast en av dessa egenskaper. Standardordningen är Reader, funktionsbeskrivning, bildtext och namn för anpassad skärm. Du kan åsidosätta standardordningen med alternativet Skärmprioritet **Reader** på paletten Tillgänglighet.
