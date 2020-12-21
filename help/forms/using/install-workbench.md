@@ -85,8 +85,8 @@ I det här avsnittet beskrivs maskinvaru- och programvarukraven samt vilka platt
 
 ### Lägsta maskin- och programvarukrav {#minimum-hardware-software-requirements}
 
-**Workbench**Följande krav rekommenderas som minimum:
-Diskutrymme för installation:
+****
+WorkbenchFöljande krav rekommenderas som minimum: Diskutrymme för installation:
 * 680 MB endast för Workbench.
 * 2,15 GB på en enda enhet för en fullständig installation av Workbench, Designer och exempelpaketet.
 * 400 MB för temporära installationskataloger - 200 MB i användarens \temp-katalog och 200 MB i Windows temporära katalog.
@@ -96,7 +96,7 @@ Diskutrymme för installation:
 >Om alla dessa platser finns på en enda enhet måste det finnas 1,5 GB ledigt utrymme under installationen. De filer som kopieras till de tillfälliga katalogerna tas bort när installationen är klar.
 
 * Maskinvarukrav: Intel® Pentium® 4 eller AMD-motsvarighet, 1 GHz-processor.
-* Hämta och installera den senaste versionen av Adobe AIR (från <a href="http://www.adobe.com/">www.adobe.com</a>) som krävs för Community Help Client, som är integrerad med Workbench.
+* Hämta och installera den senaste versionen av Adobe AIR (från <a href="http://www.adobe.com/">www.adobe.com</a>) som krävs för Community Help Client, integrerad med Workbench.
 * Java™ Runtime Environment (JRE) 6.0 update 22 or later updates to 6.0 *New for 10*.
 * Minst 1 024 × 768 pixlar eller högre bildskärmsupplösning med 16-bitars färg eller högre.
 * TCP/IPv4- eller TCP/IPv6-nätverksanslutning till AEM Forms-servern.
@@ -115,7 +115,7 @@ Diskutrymme för installation:
 
 Se den fullständiga listan över plattformar som stöds för Workbench på [AEM Forms Supported Platforms](http://adobe.com/go/learn_aemforms_supportedplatforms_65).
 
-## Installationsfrågor för Designer {#designer-installation-considerations}
+## Designerinstallationshänsyn {#designer-installation-considerations}
 
 Workbench-installationen innehåller som standard en motsvarande version av Designer som endast finns på engelska. Om Workbench-installationsprogrammet upptäcker en befintlig version av Designer på datorn kan installationen avslutas och du måste ta bort den aktuella versionen av Designer innan du kan fortsätta.
 Tabellen nedan innehåller en fullständig lista över möjliga installationsscenarier för Designer som du kan stöta på, samt alla åtgärder du måste vidta när du installerar Workbench.
@@ -134,7 +134,7 @@ Olika versioner av Designer kan finnas samtidigt i samma system, till exempel De
   </tr> 
   <tr> 
    <td><p>Designer (fristående)</p> </td> 
-   <td><p>Inget. Den version av Designer som ingår i Workbench är endast engelsk. Installationsprogrammet för Workbench kommer inte att installera om en ny version av Designer. Istället kommer en uppdaterad version, som medföljer installationsprogrammet för Workbench, att korrigeras. På så sätt kan du även använda din lokaliserade version av Designer i Workbench.<br /> <br /> </p> </td> 
+   <td><p>Inget. Den version av Designer som ingår i Workbench är endast engelsk. Installationsprogrammet för Workbench kommer inte att installera om en ny version av Designer. Istället kommer en uppdaterad version, som medföljer installationsprogrammet för Workbench, att korrigeras. Detta gör även att du kan använda din lokaliserade version av Designer i Workbench.<br /> <br /> </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -143,13 +143,13 @@ Olika versioner av Designer kan finnas samtidigt i samma system, till exempel De
 
 1. Gå till **Kontrollpanelen > Program > Program och funktioner**
 1. I listan Installerade program väljer du **Adobe Designer**.
-1. Klicka på **Avinstallera** och sedan på **Ja**.
+1. Klicka på **Avinstallera** och klicka sedan på **Ja**.
 
-### Så här avinstallerar du Designer (fristående) i Windows 10 {#uninstall-designer-standalone-windows10}
+### Så här avinstallerar du Designer (fristående) på Windows 10 {#uninstall-designer-standalone-windows10}
 
 1. Gå till **Kontrollpanelen > Program > Program och funktioner**
 1. I listan Installerade program väljer du **Adobe Designer**.
-1. Klicka på **Avinstallera** och sedan på **Ja**.
+1. Klicka på **Avinstallera** och klicka sedan på **Ja**.
 
 ### Avinstallera Designer som ingår i Acrobat Pro eller Acrobat Pro Extended {#uninstall-designer-included-with-acrobatpro-or-acrobatextended}
 
@@ -157,8 +157,8 @@ Olika versioner av Designer kan finnas samtidigt i samma system, till exempel De
 1. I listan Installerade program väljer du **Adobe Acrobat Pro** eller **Adobe Acrobat Pro Extended**.
 1. Klicka på **Ändra** och sedan på **Nästa**.
 1. Välj **Ändra** och klicka sedan på **Nästa**.
-1. Markera **Adobe Designer**, markera **Den här funktionen är inte tillgänglig** och klicka sedan på **Nästa**
-1. Click **Update** and then click **Finish**
+1. Välj **Adobe Designer**, välj **Den här funktionen är inte tillgänglig** och klicka sedan på **Nästa**
+1. Klicka på **Uppdatera** och klicka sedan på **Slutför**
 
 ### Avinstallera Designer som ingår i Acrobat Pro eller Acrobat Pro Extended i Windows 10 {#uninstall-designer-included-with-acrobatpro-or-acrobatextended-windows10}
 
@@ -166,8 +166,8 @@ Olika versioner av Designer kan finnas samtidigt i samma system, till exempel De
 1. I listan Installerade program väljer du **Adobe Acrobat Pro** eller **Adobe Acrobat Pro Extended**.
 1. Klicka på **Ändra** och sedan på **Nästa**.
 1. Välj **Ändra** och klicka sedan på **Nästa**.
-1. Markera **Adobe Designer**, markera **Den här funktionen är inte tillgänglig** och klicka sedan på **Nästa**
-1. Click **Update** and then click **Finish**
+1. Välj **Adobe Designer**, välj **Den här funktionen är inte tillgänglig** och klicka sedan på **Nästa**
+1. Klicka på **Uppdatera** och klicka sedan på **Slutför**
 
 ## Installerar Workbench {#installing-workbench}
 
@@ -199,7 +199,7 @@ Innan du installerar Workbench måste du kontrollera att miljön innehåller den
    >
    >Du kan fortsätta använda Designer som installerats med Acrobat 10 genom att lämna det här alternativet avmarkerat.
 
-1. Acceptera standardkatalogen enligt listan eller klicka på Välj och navigera till den katalog där du ska installera Workbench. Klicka sedan på Nästa.
+1. Acceptera standardkatalogen enligt listan eller   Klicka på Välj och navigera till den katalog där du ska installera Workbench och klicka sedan på Nästa.
 
    >[!NOTE]
    >
@@ -209,22 +209,23 @@ Innan du installerar Workbench måste du kontrollera att miljön innehåller den
 1. Granska installationssammanfattningen. Välj Starta AEM Forms Workbench för att starta Workbench och klicka på Nästa.
 1. Granska versionsinformationen och klicka på Klar.
 1. Följande objekt är nu installerade på datorn:
-   * **Workbench**: Om du vill köra Workbench från Start-menyn väljer du Alla program > AEM Forms > Workbench, om du väljer att spara genvägsmappen där. Mer information finns i Använda Workbench-dokumentationen.
+   * **Workbench**: Om du vill köra Workbench från Start-menyn väljer du Alla program > AEM Forms > Workbench, om du väljer att spara genvägsmappen där. För information   se Använda Workbench-dokumentationen.
    * **Designer**: Du kan öppna Designer inifrån Workbench. Mer information finns i avsnittet Komma igång i Designer-hjälpen.
    * **Workbench-plugin**: Följ instruktionerna i&quot;3.3 Installera Workbench Eclipse-funktionen&quot; på sidan 6.
-   * **AEM Forms SDK**: Mer information om hur du använder SDK finns i <a href="http://www.adobe.com/go/learn_lc_programming_10">Programmering med AEM Forms</a>.
+   * **AEM Forms SDK**: Mer information om hur du använder SDK finns i  <a href="http://www.adobe.com/go/learn_lc_programming_10">Programmering med AEM Forms</a>.
 
-## Uppgraderingsprocesser {#upgrading-processes}
+## Uppgraderar processer {#upgrading-processes}
 
 AEM Forms Update 1 och LiveCycle ES2 kan uppgraderas till AEM Forms-program med hjälp av uppgraderingsguiden. Mer information finns i Uppgradera dokumentation om artefakter i Workbench-hjälpen.
 
-### Installera Eclipse-funktionen i Workbench {#installing-workbench-eclipse-feature}
+### Installera Workbench Eclipse-funktionen {#installing-workbench-eclipse-feature}
 
 Du kan också lägga till Workbench-funktionen i Eclipse. Du kan lägga till Workbench när du har installerat Workbench. För JBoss innehåller följande plats filen:
 
-* Workbench_DVD/additional/eclipseHämta och installera Eclipse 3.6 från <a href="https://www.eclipse.org/downloads/">www.eclipse.org/downloads</a>.
+* Workbench_DVD/additional/eclipse
+Hämta och installera Eclipse 3.6 från <a href="https://www.eclipse.org/downloads/">www.eclipse.org/downloads</a>.
 
-### Konfigurera uppdateringsfunktionen Eclipse för Workbench {#configuring-eclipse-update-feature-for-workbench}
+### Konfigurera Eclipse-uppdateringsfunktionen för Workbench {#configuring-eclipse-update-feature-for-workbench}
 
 Workbench har stöd för uppdateringsfunktionen för att säkerställa att du använder den senaste Eclipse-versionen. Du måste dock se till att det finns ytterligare moduler för varje hämtning:
 
@@ -238,9 +239,9 @@ Workbench har stöd för uppdateringsfunktionen för att säkerställa att du an
    <td><p>Eclipse 3.6.x</p> </td> 
    <td><p>
 
-* GEF-ramverk för grafisk redigering [org.eclipse.gef.feature.group]: Detta ingår i [org.eclipse.gmf.sdk.feature.group i &#39;Graphical Modeling Framework SDK&#39;]
+* GEF för Graphical Editing [org.eclipse.gef.feature.group]: Detta ingår i &#39;SDK för grafikmodelleringsramverket&#39; [org.eclipse.gmf.sdk.feature.group]
 
-* WST XML Core [org.eclipse.wst.xml_core.feature.group]: Detta finns i Eclipse XML Editors and Tools [org.eclipse.wst.xml_ui.feature.group]
+* WST XML Core [org.eclipse.wst.xml_core.feature.group]: Detta ingår i Eclipse XML Editors and Tools [org.eclipse.wst.xml_ui.feature.group]
 
 * Plug-in &#39;org.apache.Commons.lang_2.3.0&#39; [n/a]: Detta finns i &quot;Mylyn Task List (Required)&quot; [org.eclipse.mylyn_feature.feature.group]
 
@@ -270,9 +271,9 @@ Om du vill använda Workbench måste du ha en instans av AEM Forms igång, vanli
 >
 >Om du har konfigurerat AEM Forms att använda databasprovidern EMC Documentum eller IBM FileNet och du vill logga in i en annan databas än den som är konfigurerad som standard i administrationskonsolen för formulär, anger du användarnamnet som username@Repository.
 
-### Konfigurera timeout-inställningar {#configuring-timeout-settings}
+### Konfigurerar timeout-inställningar {#configuring-timeout-settings}
 
-Workbench gör som standard en timeout efter två timmar, oavsett aktivitet eller inaktivitet. Information om hur du redigerar timeoutinställningen finns i&quot;Konfigurera användarhantering > Konfigurera avancerade systemattribut&quot; i hjälpen för administrationskonsolen.
+Workbench gör som standard en timeout efter två timmar, oavsett aktivitet eller inaktivitet. Information om hur du redigerar timeout-inställningen finns i&quot;Konfigurera användarhantering > Konfigurera avancerade systemattribut&quot; i hjälpen för administrationskonsolen.
 
 ### Konfigurera Workbench för anslutning via HTTPS {#configuring-workbench-to-connect-over-HTTPS}
 
@@ -280,7 +281,7 @@ Om du vill ansluta Workbench till en AEM Forms-server via HTTPS måste du se til
 
 >[!NOTE]
 >
->[Workbench_HOME] representerar katalogen där du installerade Workbench. Standardplatsen är C:\Program Files (x86)\Adobe Experience Manager forms Workbench.
+>[Workbench_] HOME representerar katalogen där du installerade Workbench. Standardplatsen är C:\Program Files (x86)\Adobe Experience Manager forms Workbench.
 
 Kontrollera att du ansluter till HTTPS med det namn som anges i certifikatet. Det här namnet är vanligtvis det fullständiga, kvalificerade värdnamnet.
 
@@ -300,7 +301,7 @@ Var:
    * certname är det certifikat du valde i steg 1.
    * är ett exempel på det alias som du väljer för certifikatet. Det här värdet kan ändras
 
-1. När du uppmanas att lita på certifikatet skriver du Ja och trycker på Retur. Nyckelverktyget fortsätter att importera kontofilen till katalogen [Workbench_HOME]/workbench/jre/lib/security.
+1. När du uppmanas att lita på certifikatet skriver du Ja och trycker på Retur. Nyckelverktyget fortsätter att importera cacerfilen till katalogen [Workbench_HOME]/workbench/jre/lib/security.
 
 1. Stäng och starta om Workbench för att tillämpa ändringarna.
 
