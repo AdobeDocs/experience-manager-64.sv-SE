@@ -18,11 +18,11 @@ ht-degree: 0%
 ---
 
 
-# Hantera inställningsnoderna programmatiskt {#programmatically-managing-the-preferencesnodes}
+# Hantera inställningsnoderna {#programmatically-managing-the-preferencesnodes} programmatiskt
 
 I det här avsnittet beskrivs hur du kan använda Preferences Manager Service API (Java) för att programmässigt hantera Preferences Nodes.
 
-Du kan ändra konfigurationsinställningarna manuellt från administratörsgränssnittet. Om du vill ändra alternativen går du till `Home>Settings>User Management> Configuration>Manual Configuration`. Importera `config.xml` när du har gjort ändringarna kommer du att märka att alla ändringar förutom de som har gjorts på noden `/Adobe/Adobe Experience Manager Forms/Config/UM persist` går förlorade. Förhandsgranskningen av Import och export av användarhantering stöder inte ändring av konfigurationsinställningar för andra komponenter. Nu kan dessa ändringar göras med API: `PreferencesManagerServiceClient` er.
+Du kan ändra konfigurationsinställningarna manuellt från administratörsgränssnittet. Navigera till `Home>Settings>User Management> Configuration>Manual Configuration` om du vill ändra alternativen. Om du importerar `config.xml` efter att du har gjort ändringarna kommer du att märka att alla ändringar förutom de som har gjorts i noden `/Adobe/Adobe Experience Manager Forms/Config/UM persist` går förlorade. Förhandsgranskningen av Import och export av användarhantering stöder inte ändring av konfigurationsinställningar för andra komponenter. Dessa ändringar kan nu göras med hjälp av `PreferencesManagerServiceClient` API:er.
 
 **Sammanfattning av** stegSå här hanterar du noderna i Inställningar programmatiskt:
 
