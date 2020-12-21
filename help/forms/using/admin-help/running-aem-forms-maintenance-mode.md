@@ -31,7 +31,7 @@ Undvik att anropa processer när servern är i underhållsläge. Detta är vad s
 
 1. I en webbläsare anger du:
 
-   `https://`*[värdnamnsport ]*`:`*[port]* `/dsc/servlet/DSCStartupServlet?maintenanceMode=pause&user=`*[administratörsanvändarnamn ]*`&password=`*[lösenord]*
+   `https://`*[]*`:`*[]* `/dsc/servlet/DSCStartupServlet?maintenanceMode=pause&user=`*[värdnamnportadministratör ]*`&password=`*[användarnamn lösenord]*
 
    Ett&quot;nu pausat&quot;-meddelande visas i webbläsarfönstret.
 
@@ -43,7 +43,7 @@ Undvik att anropa processer när servern är i underhållsläge. Detta är vad s
 
 1. I en webbläsare anger du:
 
-   `https://`*[värdnamn]:[portadministratörens ]*`/dsc/servlet/DSCStartupServlet?maintenanceMode=isPaused&user=`*[användarnamn]* `&password=`*[lösenord ]*
+   `https://`*[värdnamn]:[]*`/dsc/servlet/DSCStartupServlet?maintenanceMode=isPaused&user=`*[portadministratör]* `&password=`*[användarnamnLösenord ]*
 
    Statusen visas i webbläsarfönstret. Statusen &quot;true&quot; anger att servern körs i underhållsläge och &quot;false&quot; anger att servern inte är i underhållsläge.
 
@@ -51,7 +51,7 @@ Undvik att anropa processer när servern är i underhållsläge. Detta är vad s
 
 1. I en webbläsare anger du:
 
-   `https://`*[värdnamn]:[portadministratörens ]*`/dsc/servlet/DSCStartupServlet?maintenanceMode=resume&user=`*[användarnamn]* `&password=`*[lösenord ]*
+   `https://`*[värdnamn]:[]*`/dsc/servlet/DSCStartupServlet?maintenanceMode=resume&user=`*[portadministratör]* `&password=`*[användarnamnLösenord ]*
 
    Ett meddelande som&quot;nu körs&quot; visas i webbläsarfönstret.
 
