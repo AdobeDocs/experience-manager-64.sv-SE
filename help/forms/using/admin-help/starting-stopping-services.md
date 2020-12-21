@@ -36,10 +36,10 @@ AEM (t.ex. Forms, Rights Management, Output) fungerar som tjänster. Ibland kan 
 
 En fullständig implementering av AEM innehåller en programserver och databastjänster:
 
-* *`[application server]`* AEM formulär
-* *`[database]`* AEM formulär
+* *`[application server]`* aem formulär
+* *`[database]`* aem formulär
 
-I Windows är dessa tjänster tillgängliga via **Administrationsverktyg** > **Tjänster**. Om du t.ex. har installerat AEM formulär på JBoss med körningsmetoden är följande tjänster tillgängliga på datorn:
+I Windows är dessa tjänster tillgängliga via **Administrationsverktyg** > **Tjänstpanelen**. Om du t.ex. har installerat AEM formulär på JBoss med körningsmetoden är följande tjänster tillgängliga på datorn:
 
 * JBoss för Adobe Experience Manager-formulär
 * MySQL för Adobe Experience Manager-formulär
