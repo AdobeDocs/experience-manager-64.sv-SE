@@ -22,7 +22,7 @@ ht-degree: 0%
 
 **Om databastjänsten**
 
-Databastjänsten tillhandahåller lagringstjänster och hanteringstjänster för resurser till AEM Forms. När utvecklare skapar ett *AEM Forms* -program kan de distribuera resurserna i databasen i stället för i filsystemet. Resurserna kan innehålla alla typer av material, inklusive XML-formulär, PDF forms (inklusive Acrobat-formulär), formulärfragment, bilder, profiler, profiler, SWF-filer, DDX-filer, XML-scheman, WSDL-filer och testdata.
+Databastjänsten tillhandahåller lagringstjänster och hanteringstjänster för resurser till AEM Forms. När utvecklare skapar ett *AEM Forms*-program kan de distribuera resurserna i databasen i stället för i filsystemet. Resurserna kan innehålla alla typer av material, inklusive XML-formulär, PDF forms (inklusive Acrobat-formulär), formulärfragment, bilder, profiler, profiler, SWF-filer, DDX-filer, XML-scheman, WSDL-filer och testdata.
 
 Ta till exempel följande Forms-program med namnet *Applications/FormsApplication*:
 
@@ -46,7 +46,7 @@ Följande värden visar några exempel på URI-värden:
 
 >[!NOTE]
 >
->Du kan bläddra i AEM Forms-databasen med en webbläsare. Om du vill bläddra i databasen anger du följande URL i en webbläsare https://[servernamn]:[serverport]/databas. Du kan verifiera snabbstartsresultat som är kopplade till avsnittet Arbeta med AEM Forms-databas med en webbläsare. Om du till exempel lägger till innehåll i AEM Forms-databasen kan du se innehållet i en webbläsare. (Se [Snabbstart (SOAP-läge): Skriva en resurs med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api).)
+>Du kan bläddra i AEM Forms-databasen med en webbläsare. Om du vill bläddra i databasen anger du följande URL-adress i en webbläsare https://[servernamn]:[serverport]/databas. Du kan verifiera snabbstartsresultat som är kopplade till avsnittet Arbeta med AEM Forms-databas med en webbläsare. Om du till exempel lägger till innehåll i AEM Forms-databasen kan du se innehållet i en webbläsare. (Se [Snabbstart (SOAP-läge): Skriva en resurs med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api).)
 
 Databas-API:t innehåller ett antal åtgärder som du kan använda för att lagra och hämta information från databasen. Du kan till exempel få en lista med resurser eller hämta särskilda resurser som lagras i databasen när en resurs behövs som en del av bearbetningen av ett program.
 
@@ -58,8 +58,8 @@ Med hjälp av API:t för databastjänsten kan du utföra följande uppgifter:
 
 * Skapa mappar. Se [Skapa mappar](aem-forms-repository.md#creating-folders).
 * Skriv resurser och deras egenskaper. Se [Skriva resurser](aem-forms-repository.md#writing-resources).
-* Visa resurser i en viss samling eller som är relaterade till andra resurser. Se [Lista resurser](aem-forms-repository.md#listing-resources).
-* Läs resurser och deras egenskaper. Se [Läsresurser](aem-forms-repository.md#reading-resources).
+* Visa resurser i en viss samling eller som är relaterade till andra resurser. Se [Visa resurser](aem-forms-repository.md#listing-resources).
+* Läs resurser och deras egenskaper. Se [Läser resurser](aem-forms-repository.md#reading-resources).
 * Uppdatera resurser och deras egenskaper. Se [Uppdatera resurser](aem-forms-repository.md#updating-resources).
 * Sök efter resurser, inklusive historik, relaterade resurser och egenskaper. Se [Söka efter resurser](aem-forms-repository.md#searching-for-resources).
 * Ange relationer mellan resurser. Se [Skapa resursrelationer](aem-forms-repository.md#creating-resource-relationships).
@@ -135,30 +135,30 @@ Skapa en mapp med hjälp av Repository Service API (Java):
 
 1. Skapa tjänstklienten
 
-   Skapa ett `ResourceRepositoryClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `ResourceRepositoryClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Skapa mappen
 
-   Om du vill skapa en resurssamling måste du först skapa ett `com.adobe.repository.infomodel.bean.RepositoryInfomodelFactoryBean` objekt.
+   Om du vill skapa en resurssamling måste du först skapa ett `com.adobe.repository.infomodel.bean.RepositoryInfomodelFactoryBean`-objekt.
 
-   Anropa `repositoryInfomodelFactoryBean` objektets `newResourceCollection` metod och skicka följande parametrar:
+   Anropa `repositoryInfomodelFactoryBean`-objektets `newResourceCollection`-metod och skicka följande parametrar:
 
    * En `com.adobe.repository.infomodel.Id` UUID-identifierare som ska tilldelas resursen.
    * En `com.adobe.repository.infomodel.Lid` UUID-identifierare som ska tilldelas resursen.
-   * En `java.lang.String` som innehåller resurssamlingens namn. Till exempel, `FormsFolder`.
+   * En `java.lang.String` som innehåller namnet på resurssamlingen. Till exempel, `FormsFolder`.
 
-   Metoden returnerar ett `com.adobe.repository.infomodel.bean.ResourceCollection` objekt som representerar den nya mappen.
+   Metoden returnerar ett `com.adobe.repository.infomodel.bean.ResourceCollection`-objekt som representerar den nya mappen.
 
-   Ange mappens beskrivning med hjälp av metoden `setDescription` och skicka följande parameter:
+   Ange mappens beskrivning med metoden `setDescription` och skicka följande parameter:
 
-   * A `String` som beskriver resurssamlingen. I det här exemplet `"test Folder"` används `.`
+   * En `String` som beskriver resurssamlingen. I det här exemplet används `"test Folder"` `.`
 
 
 1. Skriv mappen till databasen
 
-   Anropa `ResourceRepositoryClient` objektets `writeResource` metod och skicka URI:n för mappen och `ResourceCollection` objektet. URI:n till mappen kan till exempel vara följande värde `/Applications/FormsApplication/1.0/`.
+   Anropa `ResourceRepositoryClient`-objektets `writeResource`-metod och skicka URI:n för mappen och `ResourceCollection`-objektet. URI:n till mappen kan till exempel vara följande värde `/Applications/FormsApplication/1.0/`.
 
-   Metoden returnerar en instans av det nyskapade `com.adobe.repository.infomodel.bean.Resource` objektet. Du kan till exempel hämta identifierarvärdet för den nya resursen genom att anropa `com.adobe.repository.infomodel.bean.Resource` objektets `getId` metod.
+   Metoden returnerar en instans av det nyskapade `com.adobe.repository.infomodel.bean.Resource`-objektet. Du kan till exempel hämta identifierarvärdet för den nya resursen genom att anropa `com.adobe.repository.infomodel.bean.Resource`-objektets `getId`-metod.
 
 **Se även**
 
@@ -181,24 +181,24 @@ Skapa en mapp med hjälp av Repository-tjänstens API (webbtjänst):
 
 1. Skapa tjänstklienten
 
-   Skapa ett objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor. `RepositoryServiceService` Ange dess `Credentials` egenskap med ett `System.Net.NetworkCredential` objekt som innehåller användarnamnet och lösenordet.
+   Skapa ett `RepositoryServiceService`-objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor. Ange egenskapen `Credentials` med ett `System.Net.NetworkCredential`-objekt som innehåller användarnamnet och lösenordet.
 
 1. Skapa mappen
 
-   Skapa mappen med standardkonstruktorn för `ResourceCollection` klassen och skicka följande parametrar:
+   Skapa mappen med standardkonstruktorn för klassen `ResourceCollection` och skicka följande parametrar:
 
-   * Ett `Id` objekt som skapas genom att standardkonstruktorn för `Id` klassen anropas och tilldelas till `Resource` objektets `id` fält.
-   * Ett `Lid` objekt som skapas genom att standardkonstruktorn för `Lid` klassen anropas och tilldelas till `Resource` objektets `lid` fält.
-   * En sträng som innehåller namnet på resurssamlingen, som tilldelas `Resource` objektets `name` fält. Namnet som används i det här exemplet är `"testfolder"`.
-   * En sträng som innehåller beskrivningen av resurssamlingen, som tilldelas `Resource` objektets `description` fält. Beskrivningen som används i det här exemplet är `"test folder"`.
+   * Ett `Id`-objekt, som skapas genom att standardkonstruktorn anropas för klassen `Id` och tilldelas till `Resource`-objektets `id`-fält.
+   * Ett `Lid`-objekt, som skapas genom att standardkonstruktorn anropas för klassen `Lid` och tilldelas till `Resource`-objektets `lid`-fält.
+   * En sträng som innehåller namnet på resurssamlingen, som tilldelas `Resource`-objektets `name`-fält. Namnet som används i det här exemplet är `"testfolder"`.
+   * En sträng som innehåller beskrivningen av resurssamlingen, som tilldelas `Resource`-objektets `description`-fält. Beskrivningen som används i det här exemplet är `"test folder"`.
 
 1. Skriv mappen till databasen
 
-   Anropa `RepositoryServiceService` objektets `writeResource` metod och skicka följande parametrar:
+   Anropa `RepositoryServiceService`-objektets `writeResource`-metod och skicka följande parametrar:
 
    * Sökvägen till den mapp som ska skapas.
-   * Det objekt som `ResourceCollection` representerar mappen.
-   * Skicka `null` de andra två parametrarna.
+   * Det `ResourceCollection`-objekt som representerar mappen.
+   * Skicka `null` för de andra två parametrarna.
 
 **Se även**
 
@@ -239,7 +239,7 @@ Innan du kan läsa en resurs programmatiskt måste du skapa en anslutning och an
 
 **Ange URI för målmappen för resursen**
 
-Skapa en sträng som innehåller URI:n för resursen som ska läsas. Syntaxen innehåller snedstreck, som i det här exemplet: &quot;/*path*/*folder*&quot;.
+Skapa en sträng som innehåller URI:n för resursen som ska läsas. Syntaxen innehåller snedstreck, som i det här exemplet: &quot;/*sökväg*/*mapp*&quot;.
 
 **Skapa resursen**
 
@@ -275,36 +275,36 @@ Skriv en resurs med hjälp av Repository Service API (Java):
 
 1. Skapa tjänstklienten
 
-   Skapa ett `ResourceRepositoryClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `ResourceRepositoryClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Ange URI för målmappen för resursen
 
-   Ange URI för målmappen för resursen. I det här fallet, eftersom resursen med namnet `testResource` lagras i mappen `testFolder`med namnet, är mappens URI `"/testFolder"`. URI:n lagras som ett `java.lang.String` objekt.
+   Ange URI för målmappen för resursen. I det här fallet, eftersom resursen `testResource` lagras i mappen `testFolder`, är mappens URI `"/testFolder"`. URI:n lagras som ett `java.lang.String`-objekt.
 
 1. Skapa resursen
 
-   Om du vill skapa en resurs måste du först skapa ett `com.adobe.repository.infomodel.bean.RepositoryInfomodelFactoryBean` objekt.
+   Om du vill skapa en resurs måste du först skapa ett `com.adobe.repository.infomodel.bean.RepositoryInfomodelFactoryBean`-objekt.
 
-   Anropa `RepositoryInfomodelFactoryBean` objektets `newResource` metod, som skapar ett `com.adobe.repository.infomodel.bean.Resource` objekt. I det här exemplet anges följande parametrar:
+   Anropa `RepositoryInfomodelFactoryBean`-objektets `newResource`-metod som skapar ett `com.adobe.repository.infomodel.bean.Resource`-objekt. I det här exemplet anges följande parametrar:
 
-   * Ett `com.adobe.repository.infomodel.Id` objekt som skapas genom att standardkonstruktorn för `Id` klassen anropas.
-   * Ett `com.adobe.repository.infomodel.Lid` objekt som skapas genom att standardkonstruktorn för `Lid` klassen anropas.
+   * Ett `com.adobe.repository.infomodel.Id`-objekt, som skapas genom att standardkonstruktorn för klassen `Id` anropas.
+   * Ett `com.adobe.repository.infomodel.Lid`-objekt, som skapas genom att standardkonstruktorn för klassen `Lid` anropas.
    * En `java.lang.String` som innehåller resursens filnamn.
 
-   Om du vill ange resursens beskrivning anropar du `Resource` objektets `setDescription` metod och skickar en sträng som innehåller beskrivningen. I det här exemplet är beskrivningen `"test resource"`.
+   Om du vill ange resursens beskrivning anropar du `Resource`-objektets `setDescription`-metod och skickar en sträng som innehåller beskrivningen. I det här exemplet är beskrivningen `"test resource"`.
 
 1. Ange resursinnehållet
 
-   Om du vill skapa innehåll för resursen anropar du `RepositoryInfomodelFactoryBean` objektets `newResourceContent` metod som returnerar ett `com.adobe.repository.infomodel.bean.ResourceContent` objekt. Lägg till innehåll i `ResourceContent` objektet. I det här exemplet genomförs detta genom följande åtgärder:
+   Om du vill skapa innehåll för resursen anropar du `RepositoryInfomodelFactoryBean`-objektets `newResourceContent`-metod, som returnerar ett `com.adobe.repository.infomodel.bean.ResourceContent`-objekt. Lägg till innehåll i `ResourceContent`-objektet. I det här exemplet genomförs detta genom följande åtgärder:
 
-   * Anropa `ResourceContent` objektets `setDataDocument` metod och skicka ett `com.adobe.idp.Document` objekt
-   * Anropa `ResourceContent` objektets `setSize` metod och ange storleken i byte för `Document` objektet
+   * Anropa `ResourceContent`-objektets `setDataDocument`-metod och skicka ett `com.adobe.idp.Document`-objekt
+   * Anropa `ResourceContent`-objektets `setSize`-metod och skicka storleken i byte för `Document`-objektet
 
-   Lägg till innehållet i resursen genom att anropa `Resource` objektets `setContent` metod och skicka in `ResourceContent` objektet. Mer information finns i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   Lägg till innehållet i resursen genom att anropa `Resource`-objektets `setContent`-metod och skicka i `ResourceContent`-objektet. Mer information finns i [API-referens för AEM Forms](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 1. Skriv resursen till målmappen
 
-   Anropa `ResourceRepositoryClient` objektets `writeResource` metod och skicka URI:n för mappen samt `Resource` objektet.
+   Anropa `ResourceRepositoryClient`-objektets `writeResource`-metod och skicka URI:n för mappen samt `Resource`-objektet.
 
 **Se även**
 
@@ -327,33 +327,33 @@ Skriv en resurs med hjälp av Repository-tjänstens API (webbtjänst):
 
 1. Skapa tjänstklienten
 
-   Skapa ett objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor. `RepositoryServiceService` Ange dess `Credentials` egenskap med ett `System.Net.NetworkCredential` objekt som innehåller användarnamnet och lösenordet.
+   Skapa ett `RepositoryServiceService`-objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor. Ange egenskapen `Credentials` med ett `System.Net.NetworkCredential`-objekt som innehåller användarnamnet och lösenordet.
 
 1. Ange URI för målmappen för resursen
 
-   Ange URI för målmappen för resursen. I det här fallet, eftersom resursen med namnet `testResource` lagras i mappen `testFolder`med namnet, är mappens URI `"/testFolder"`. När du använder ett språk som är kompatibelt med Microsoft .NET Framework (till exempel C#), ska du lagra URI:n i ett `System.String` objekt.
+   Ange URI för målmappen för resursen. I det här fallet, eftersom resursen `testResource` lagras i mappen `testFolder`, är mappens URI `"/testFolder"`. När du använder ett språk som är kompatibelt med Microsoft .NET Framework (till exempel C#), ska du lagra URI:n i ett `System.String`-objekt.
 
 1. Skapa resursen
 
-   Om du vill skapa en resurs anropar du standardkonstruktorn för `Resource` klassen. I det här exemplet lagras följande information i `Resource` objektet:
+   Om du vill skapa en resurs anropar du standardkonstruktorn för klassen `Resource`. I det här exemplet lagras följande information i objektet `Resource`:
 
-   * Ett `com.adobe.repository.infomodel.Id` objekt som skapas genom att standardkonstruktorn för `Id` klassen anropas och tilldelas till `Resource` objektets `id` fält.
-   * Ett `com.adobe.repository.infomodel.Lid` objekt som skapas genom att standardkonstruktorn för `Lid` klassen anropas och tilldelas till `Resource` objektets `lid` fält.
-   * En sträng som innehåller resursens filnamn, som tilldelas `Resource` objektets `name` fält. Namnet som används i det här exemplet är `"testResource"`.
-   * En sträng som innehåller beskrivningen av resursen, som tilldelas `Resource` objektets `description` fält. Beskrivningen som används i det här exemplet är `"test resource"`.
+   * Ett `com.adobe.repository.infomodel.Id`-objekt, som skapas genom att standardkonstruktorn anropas för klassen `Id` och tilldelas till `Resource`-objektets `id`-fält.
+   * Ett `com.adobe.repository.infomodel.Lid`-objekt, som skapas genom att standardkonstruktorn anropas för klassen `Lid` och tilldelas till `Resource`-objektets `lid`-fält.
+   * En sträng som innehåller resursens filnamn, som tilldelas `Resource`-objektets `name`-fält. Namnet som används i det här exemplet är `"testResource"`.
+   * En sträng som innehåller beskrivningen av resursen, som tilldelas `Resource`-objektets `description`-fält. Beskrivningen som används i det här exemplet är `"test resource"`.
 
 1. Ange resursinnehållet
 
-   Om du vill skapa innehåll för resursen anropar du `ResourceContent` klassens standardkonstruktor. Lägg sedan till innehåll i `ResourceContent` objektet. I det här exemplet genomförs detta genom följande åtgärder:
+   Om du vill skapa innehåll för resursen anropar du standardkonstruktorn för klassen `ResourceContent`. Lägg sedan till innehåll i `ResourceContent`-objektet. I det här exemplet genomförs detta genom följande åtgärder:
 
-   * Tilldela ett `BLOB` objekt som innehåller ett dokument till `ResourceContent` objektets `dataDocument` fält.
-   * Tilldela storleken i byte för `BLOB` objektet till `ResourceContent` objektets `size` fält.
+   * Tilldela ett `BLOB`-objekt som innehåller ett dokument till `ResourceContent`-objektets `dataDocument`-fält.
+   * Tilldela storleken i byte för `BLOB`-objektet till `ResourceContent`-objektets `size`-fält.
 
-   Lägg till innehållet i resursen genom att tilldela `ResourceContent` objektet till `Resource` objektets `content` fält.
+   Lägg till innehållet i resursen genom att tilldela `ResourceContent`-objektet till `Resource`-objektets `content`-fält.
 
 1. Skriv resursen till målmappen
 
-   Anropa `RepositoryServiceService` objektets `writeResource` metod och skicka URI:n för mappen samt `Resource` objektet. Skicka `null` de andra två parametrarna.
+   Anropa `RepositoryServiceService`-objektets `writeResource`-metod och skicka URI:n för mappen samt `Resource`-objektet. Skicka `null` för de andra två parametrarna.
 
 **Se även**
 
@@ -361,7 +361,7 @@ Skriv en resurs med hjälp av Repository-tjänstens API (webbtjänst):
 
 [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
-## Resurser listas {#listing-resources}
+## Visar resurser {#listing-resources}
 
 Du kan identifiera resurser genom att lista resurser. En fråga utförs mot databasen för att hitta alla resurser som är relaterade till en given resurssamling.
 
@@ -392,7 +392,7 @@ Innan du kan skapa en resurssamling programmatiskt måste du skapa en anslutning
 
 **Ange mappsökväg**
 
-Skapa en sträng som innehåller sökvägen till mappen som innehåller resurserna. Syntaxen innehåller snedstreck, som i det här exemplet: &quot;/*path*/*folder*&quot;.
+Skapa en sträng som innehåller sökvägen till mappen som innehåller resurserna. Syntaxen innehåller snedstreck, som i det här exemplet: &quot;/*sökväg*/*mapp*&quot;.
 
 **Hämta listan över resurser**
 
@@ -420,21 +420,21 @@ Visa resurser med hjälp av Repository Service API (Java):
 
 1. Skapa tjänstklienten
 
-   Skapa ett `ResourceRepositoryClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `ResourceRepositoryClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Ange mappsökväg
 
-   Ange URI:n för den resurssamling som ska efterfrågas. I det här fallet är dess URI `"/testFolder"`. URI:n lagras som ett `java.lang.String` objekt.
+   Ange URI:n för den resurssamling som ska efterfrågas. I det här fallet är dess URI `"/testFolder"`. URI:n lagras som ett `java.lang.String`-objekt.
 
 1. Hämta listan över resurser
 
-   Anropa `ResourceRepositoryClient` objektets `listMembers` metod och skicka mappens URI.
+   Anropa `ResourceRepositoryClient`-objektets `listMembers`-metod och skicka mappens URI.
 
-   Metoden returnerar ett `java.util.List` antal `com.adobe.repository.infomodel.bean.Resource` objekt som är källan till en `com.adobe.repository.infomodel.bean.Relation` typ `Relation.TYPE_MEMBER_OF` och som har resurssamlings-URI som mål. Du kan iterera genom detta `List` för att hämta varje resurs. I det här exemplet visas namn och beskrivning för varje resurs.
+   Metoden returnerar ett `java.util.List` av `com.adobe.repository.infomodel.bean.Resource`-objekt som är källan till en `com.adobe.repository.infomodel.bean.Relation` av typen `Relation.TYPE_MEMBER_OF` och som har resurssamlings-URI som mål. Du kan iterera genom den här `List` för att hämta varje resurs. I det här exemplet visas namn och beskrivning för varje resurs.
 
 **Se även**
 
-[Resurser](aem-forms-repository.md#listing-resources)listas.
+[Resurser](aem-forms-repository.md#listing-resources) listas.
 
 [Snabbstart (SOAP-läge): Visa resurser med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-listing-resources-using-the-java-api)
 
@@ -442,7 +442,7 @@ Visa resurser med hjälp av Repository Service API (Java):
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Visa resurser som använder webbtjänstens API {#list-resources-using-the-web-service-api}
+### Visa resurser med webbtjänstens API {#list-resources-using-the-web-service-api}
 
 Visa resurser med hjälp av Repository-tjänstens API (webbtjänst):
 
@@ -453,21 +453,21 @@ Visa resurser med hjälp av Repository-tjänstens API (webbtjänst):
 
 1. Skapa tjänstklienten
 
-   Skapa ett objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor. `RepositoryServiceService` Ange dess `Credentials` egenskap med ett `System.Net.NetworkCredential` objekt som innehåller användarnamnet och lösenordet.
+   Skapa ett `RepositoryServiceService`-objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor. Ange egenskapen `Credentials` med ett `System.Net.NetworkCredential`-objekt som innehåller användarnamnet och lösenordet.
 
 1. Ange mappsökväg
 
-   Ange en sträng som innehåller URI:n för mappen som ska efterfrågas. I det här fallet är dess URI `"/testFolder"`. När du använder ett språk som är kompatibelt med Microsoft .NET Framework (till exempel C#), ska du lagra URI:n i ett `System.String` objekt.
+   Ange en sträng som innehåller URI:n för mappen som ska efterfrågas. I det här fallet är dess URI `"/testFolder"`. När du använder ett språk som är kompatibelt med Microsoft .NET Framework (till exempel C#), ska du lagra URI:n i ett `System.String`-objekt.
 
 1. Hämta listan över resurser
 
-   Anropa `RepositoryServiceService` objektets `listMembers` metod och skicka URI:n för mappen som den första parametern. Skicka `null` de andra två parametrarna.
+   Anropa `RepositoryServiceService`-objektets `listMembers`-metod och skicka URI:n för mappen som den första parametern. Skicka `null` för de andra två parametrarna.
 
-   Metoden returnerar en array med objekt som kan bytas ut mot `Resource` objekt. Du kan iterera genom objektarrayen för att hämta de relaterade resurserna. I det här exemplet visas namn och beskrivning för varje resurs.
+   Metoden returnerar en array med objekt som kan bytas till `Resource`-objekt. Du kan iterera genom objektarrayen för att hämta de relaterade resurserna. I det här exemplet visas namn och beskrivning för varje resurs.
 
 **Se även**
 
-[Resurser](aem-forms-repository.md#listing-resources)listas.
+[Resurser](aem-forms-repository.md#listing-resources) listas.
 
 [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
@@ -509,7 +509,7 @@ Innan du kan läsa en resurs programmatiskt måste du skapa en anslutning och an
 
 **Ange URI för resursen som ska läsas**
 
-Skapa en sträng som innehåller URI:n för resursen som ska läsas. Syntaxen innehåller snedstreck, som i det här exemplet: &quot;/*path*/*resource*&quot;.
+Skapa en sträng som innehåller URI:n för resursen som ska läsas. Syntaxen innehåller snedstreck, som i det här exemplet: &quot;/*sökväg*/*resurs*&quot;.
 
 **Läs resursen**
 
@@ -537,7 +537,7 @@ Läs en resurs med hjälp av Repository Service API (Java):
 
 1. Skapa tjänstklienten
 
-   Skapa ett `ResourceRepositoryClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `ResourceRepositoryClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Ange URI för resursen som ska läsas
 
@@ -545,7 +545,7 @@ Läs en resurs med hjälp av Repository Service API (Java):
 
 1. Läs resursen
 
-   Anropa `ResourceRepositoryClient` objektets `readResource` metod och skicka URI:n för resursen som en parameter. Den här metoden returnerar en `Resource` instans som representerar resursen.
+   Anropa `ResourceRepositoryClient`-objektets `readResource`-metod och skicka URI:n för resursen som en parameter. Den här metoden returnerar en `Resource`-instans som representerar resursen.
 
 **Se även**
 
@@ -557,7 +557,7 @@ Läs en resurs med hjälp av Repository Service API (Java):
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Läsa resurser med hjälp av webbtjänstens API {#reading-resources-using-the-web-service-api}
+### Läsa resurser med webbtjänstens API {#reading-resources-using-the-web-service-api}
 
 Läs en resurs med hjälp av Repository Service API (webbtjänsten):
 
@@ -568,15 +568,15 @@ Läs en resurs med hjälp av Repository Service API (webbtjänsten):
 
 1. Skapa tjänstklienten
 
-   Skapa ett objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor. `RepositoryServiceService` Ange dess `Credentials` egenskap med ett `System.Net.NetworkCredential` objekt som innehåller användarnamnet och lösenordet.
+   Skapa ett `RepositoryServiceService`-objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor. Ange egenskapen `Credentials` med ett `System.Net.NetworkCredential`-objekt som innehåller användarnamnet och lösenordet.
 
 1. Ange URI för resursen som ska läsas
 
-   Ange en sträng som innehåller URI:n för resursen som ska hämtas. I det här fallet, eftersom resursen med namnet `testResource` finns i mappen med namnet `testFolder`, är dess URI `"/testFolder/testResource"`. När du använder ett språk som är kompatibelt med Microsoft .NET Framework (till exempel C#), ska du lagra URI:n i ett `System.String` objekt.
+   Ange en sträng som innehåller URI:n för resursen som ska hämtas. I det här fallet, eftersom resursen `testResource` finns i mappen `testFolder`, är dess URI `"/testFolder/testResource"`. När du använder ett språk som är kompatibelt med Microsoft .NET Framework (till exempel C#), ska du lagra URI:n i ett `System.String`-objekt.
 
 1. Läs resursen
 
-   Anropa `RepositoryServiceService` objektets `readResource` metod och skicka URI:n för resursen som den första parametern. Skicka `null` de andra två parametrarna.
+   Anropa `RepositoryServiceService`-objektets `readResource`-metod och skicka URI:n för resursen som den första parametern. Skicka `null` för de andra två parametrarna.
 
 **Se även**
 
@@ -647,7 +647,7 @@ Uppdatera en resurs med hjälp av Repository Service API (Java):
 
 1. Skapa tjänstklienten
 
-   Skapa ett `ResourceRepositoryClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `ResourceRepositoryClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Hämta resursen som ska uppdateras
 
@@ -655,13 +655,13 @@ Uppdatera en resurs med hjälp av Repository Service API (Java):
 
 1. Uppdatera resursen
 
-   Uppdatera `Resource` objektinformationen. I det här exemplet uppdaterar du beskrivningen genom att anropa `Resource` objektets `setDescription` metod och skicka den nya beskrivningssträngen som en parameter.
+   Uppdatera `Resource`-objektets information. I det här exemplet uppdaterar du beskrivningen genom att anropa `Resource`-objektets `setDescription`-metod och skicka den nya beskrivningssträngen som en parameter.
 
-   Anropa sedan `ServiceClientFactory` objektets `updateResource` metod och skicka följande parametrar:
+   Anropa sedan `ServiceClientFactory`-objektets `updateResource`-metod och skicka följande parametrar:
 
-   * Ett `java.lang.String` objekt som innehåller resursens URI.
-   * Objektet `Resource` som innehåller den uppdaterade resursinformationen.
-   * Ett `boolean` värde som anger om huvudversionen eller delversionen ska uppdateras. I det här exemplet skickas värdet `true` för att ange att huvudversionen ska ökas.
+   * Ett `java.lang.String`-objekt som innehåller resursens URI.
+   * Det `Resource`-objekt som innehåller den uppdaterade resursinformationen.
+   * Ett `boolean`-värde som anger om huvudversionen eller delversionen ska uppdateras. I det här exemplet skickas värdet `true` för att ange att huvudversionen ska ökas.
 
 **Se även**
 
@@ -684,7 +684,7 @@ Uppdatera en resurs med hjälp av Repository API (webbtjänsten):
 
 1. Skapa tjänstklienten
 
-   Skapa ett objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor. `RepositoryServiceService` Ange dess `Credentials` egenskap med ett `System.Net.NetworkCredential` objekt som innehåller användarnamnet och lösenordet.
+   Skapa ett `RepositoryServiceService`-objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor. Ange egenskapen `Credentials` med ett `System.Net.NetworkCredential`-objekt som innehåller användarnamnet och lösenordet.
 
 1. Hämta resursen som ska uppdateras
 
@@ -692,13 +692,13 @@ Uppdatera en resurs med hjälp av Repository API (webbtjänsten):
 
 1. Uppdatera resursen
 
-   Uppdatera `Resource` objektinformationen. I det här exemplet uppdaterar du beskrivningen genom att tilldela ett nytt värde till `Resource` objektets `description` fält.
+   Uppdatera `Resource`-objektets information. I det här exemplet uppdaterar du beskrivningen genom att tilldela ett nytt värde till `Resource`-objektets `description`-fält.
 
-1. Anropa `RepositoryServiceService` objektets `updateResource` metod och skicka följande parametrar:
+1. Anropa `RepositoryServiceService`-objektets `updateResource`-metod och skicka följande parametrar:
 
-   * Ett `System.String` objekt som innehåller resursens URI.
-   * Objektet `Resource` som innehåller den uppdaterade resursinformationen.
-   * Ett `boolean` värde som anger om huvudversionen eller delversionen ska uppdateras. I det här exemplet skickas värdet `true` för att ange att huvudversionen ska ökas.
+   * Ett `System.String`-objekt som innehåller resursens URI.
+   * Det `Resource`-objekt som innehåller den uppdaterade resursinformationen.
+   * Ett `boolean`-värde som anger om huvudversionen eller delversionen ska uppdateras. I det här exemplet skickas värdet `true` för att ange att huvudversionen ska ökas.
    * Skicka `null` för de återstående två parametrarna.
 
 **Se även**
@@ -715,15 +715,15 @@ Du kan hämta relaterade resurser för att fastställa beroenden mellan ett form
 
 **Frågesatser**
 
-En *fråga* innehåller en eller flera satser som är logiskt kopplade med villkor. En *programsats* består av en vänster operand, en operator och en höger operand. Dessutom kan du ange den sorteringsordning som ska användas för sökresultaten. Sorteringsordningen ** innehåller information som motsvarar en SQL- `ORDER BY` sats och består av element som innehåller de attribut som sökningen baserades på, samt ett värde som anger om stigande eller fallande ordning ska användas.
+En *fråga* innehåller en eller flera satser som är logiskt kopplade med villkor. En *programsats* består av en vänster operand, en operator och en höger operand. Dessutom kan du ange den sorteringsordning som ska användas för sökresultaten. *sorteringsordningen* innehåller information som motsvarar en SQL `ORDER BY`-sats och består av element som innehåller de attribut som sökningen baserades på samt ett värde som anger om stigande eller fallande ordning ska användas.
 
 Du kan programmässigt söka efter resurser med Java API:t för databastjänsten. För närvarande går det inte att använda webbtjänstens API för att söka efter resurser.
 
 **Sorteringsbeteende**
 
-Sorteringsordningen respekteras inte när `ResourceRepositoryClient` objektets `searchProperties` metod anropas och en sorteringsordning anges. Anta till exempel att du skapar en resurs med tre anpassade egenskaper, där attributnamnen är `name`, `secondName`och `asecondName`. Sedan skapar du ett sorteringsordselement i attributnamnet och anger `ascending` värdet till `true`.
+Sorteringsordningen respekteras inte när du anropar `ResourceRepositoryClient`-objektets `searchProperties`-metod och anger en sorteringsordning. Anta till exempel att du skapar en resurs med tre anpassade egenskaper, där attributnamnen är `name`, `secondName` och `asecondName`. Sedan skapar du ett sorteringsordningselement för attributnamnet och ställer in `ascending`-värdet på `true`.
 
-Sedan anropar du `ResourceRepositoryClient` objektets `searchProperties` metod och skickar i sorteringsordningen. Sökningen returnerar rätt resurs med de tre egenskaperna. Egenskaperna sorteras dock inte efter attributnamn. De returneras i den ordning de lades till: `name`, `secondName`och `asecondName`.
+Sedan anropar du `ResourceRepositoryClient`-objektets `searchProperties`-metod och skickar i sorteringsordningen. Sökningen returnerar rätt resurs med de tre egenskaperna. Egenskaperna sorteras dock inte efter attributnamn. De returneras i den ordning de lades till: `name`, `secondName` och `asecondName`.
 
 >[!NOTE]
 >
@@ -752,7 +752,7 @@ Innan du kan läsa en resurs programmatiskt måste du skapa en anslutning och an
 
 **Ange målmapp för sökningen**
 
-Skapa en sträng som innehåller den grundsökväg som sökningen ska utföras från. Syntaxen innehåller snedstreck, som i det här exemplet: &quot;/*path*/*folder*&quot;.
+Skapa en sträng som innehåller den grundsökväg som sökningen ska utföras från. Syntaxen innehåller snedstreck, som i det här exemplet: &quot;/*sökväg*/*mapp*&quot;.
 
 **Ange de attribut som används i sökningen**
 
@@ -794,7 +794,7 @@ Sök efter en resurs med hjälp av Repository Service API (Java):
 
 1. Skapa tjänstklienten
 
-   Skapa ett `ResourceRepositoryClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `ResourceRepositoryClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Ange målmapp för sökningen
 
@@ -802,46 +802,46 @@ Sök efter en resurs med hjälp av Repository Service API (Java):
 
 1. Ange de attribut som används i sökningen
 
-   Ange värdena för attributen som sökningen ska utföras på. Attributen finns i ett `com.adobe.repository.infomodel.bean.Resource` objekt. I detta exempel kommer sökningen att utföras på namnattributet. Därför används en `java.lang.String` som innehåller `Resource` objektets namn, vilket är `testResource` i det här fallet.
+   Ange värdena för attributen som sökningen ska utföras på. Attributen finns i ett `com.adobe.repository.infomodel.bean.Resource`-objekt. I detta exempel kommer sökningen att utföras på namnattributet. Därför används ett `java.lang.String`-objekt som innehåller `Resource`-objektets namn, som i det här fallet är `testResource`.
 
 1. Skapa frågan som används i sökningen
 
-   Om du vill skapa en fråga skapar du ett `com.adobe.repository.query.Query` objekt genom att anropa standardkonstruktorn för `Query` klassen och lägger till satser i frågan.
+   Om du vill skapa en fråga skapar du ett `com.adobe.repository.query.Query`-objekt genom att anropa standardkonstruktorn för klassen `Query` och lägger till satser i frågan.
 
-   Om du vill skapa en -programsats anropar du konstruktorn för `com.adobe.repository.query.Query.Statement` klassen och skickar följande parametrar:
+   Om du vill skapa en -sats anropar du konstruktorn för klassen `com.adobe.repository.query.Query.Statement` och skickar följande parametrar:
 
-   * En vänsteroperand som innehåller resursattributskonstanten. I det här exemplet `Resource.ATTRIBUTE_NAME` används det statiska värdet eftersom resursens namn används som grund för sökningen.
-   * En operator som innehåller villkoret som används i sökningen efter attributet. Operatorn måste vara en av de statiska konstanterna i `Query.Statement` klassen. I det här exemplet `Query.Statement.OPERATOR_BEGINS_WITH` används det statiska värdet.
-   * En högeroperand som innehåller attributvärdet som sökningen ska utföras på. I det här exemplet används name-attributet, som `String` innehåller värdet `"testResource"`.
+   * En vänsteroperand som innehåller resursattributskonstanten. I det här exemplet används det statiska värdet `Resource.ATTRIBUTE_NAME` eftersom resursens namn används som grund för sökningen.
+   * En operator som innehåller villkoret som används i sökningen efter attributet. Operatorn måste vara en av de statiska konstanterna i klassen `Query.Statement`. I det här exemplet används det statiska värdet `Query.Statement.OPERATOR_BEGINS_WITH`.
+   * En högeroperand som innehåller attributvärdet som sökningen ska utföras på. I det här exemplet används name-attributet, `String`, som innehåller värdet `"testResource"`.
 
-   Ange namnutrymmet för den vänstra operanden genom att anropa `Query.Statement` objektets `setNamespace` metod och ange ett av de statiska värdena i `com.adobe.repository.infomodel.bean.ResourceProperty` klassen. I det här exemplet `ResourceProperty.RESERVED_NAMESPACE_REPOSITORY` används .
+   Ange namnutrymmet för den vänstra operanden genom att anropa `Query.Statement`-objektets `setNamespace`-metod och skicka ett av de statiska värdena i klassen `com.adobe.repository.infomodel.bean.ResourceProperty`. I det här exemplet används `ResourceProperty.RESERVED_NAMESPACE_REPOSITORY`.
 
-   Lägg till varje sats i frågan genom att anropa `Query` objektets `addStatement` metod och skicka in `Query.Statement` objektet.
+   Lägg till varje sats i frågan genom att anropa `Query`-objektets `addStatement`-metod och skicka i `Query.Statement`-objektet.
 
 1. Skapa sorteringsordningen för sökresultaten
 
-   Om du vill ange den sorteringsordning som används i sökresultaten skapar du ett `com.adobe.repository.query.sort.SortOrder` objekt genom att anropa standardkonstruktorn för `SortOrder` klassen och lägger till element i sorteringsordningen.
+   Om du vill ange den sorteringsordning som används i sökresultaten skapar du ett `com.adobe.repository.query.sort.SortOrder`-objekt genom att anropa standardkonstruktorn för klassen `SortOrder` och lägger till element i sorteringsordningen.
 
-   Om du vill skapa ett element för sorteringsordningen anropar du en av konstruktorerna för `com.adobe.repository.query.sort.SortOrder.Element` klassen. I det här exemplet används det statiska värdet som första parameter eftersom resursens namn används som bas för sökningen, och stigande ordning ( `Resource.ATTRIBUTE_NAME` värdet `boolean` `true`) anges som den andra parametern.
+   Om du vill skapa ett element för sorteringsordningen anropar du en av konstruktorerna för klassen `com.adobe.repository.query.sort.SortOrder.Element`. I det här exemplet används det statiska värdet `Resource.ATTRIBUTE_NAME` som den första parametern eftersom resursens namn används som bas för sökningen, och stigande ordning (ett `boolean`-värde på `true`) anges som den andra parametern.
 
-   Lägg till varje element i sorteringsordningen genom att anropa `SortOrder` objektets `addSortElement` metod och skicka in `SortOrder.Element` objektet.
+   Lägg till varje element i sorteringsordningen genom att anropa `SortOrder`-objektets `addSortElement`-metod och skicka i `SortOrder.Element`-objektet.
 
 1. Sök efter resurser
 
-   Om du vill söka efter `resources` baserat på attributegenskaper anropar du `ResourceRepositoryClient` objektets `searchProperties` metod och skickar följande parametrar:
+   Om du vill söka efter `resources` baserat på attributegenskaper anropar du `ResourceRepositoryClient`-objektets `searchProperties`-metod och skickar följande parametrar:
 
-   * En `String` som innehåller den grundsökväg som sökningen ska utföras från. I det här fallet används `"/testFolder"` .
+   * En `String` som innehåller den bassökväg som sökningen ska utföras från. I det här fallet används `"/testFolder"`.
    * Frågan som används i sökningen.
    * Djupet på sökningen. I det här fallet används `com.adobe.repository.infomodel.bean.ResourceCollection.DEPTH_INFINITE` för att ange att bassökvägen och alla dess mappar ska användas.
-   * Ett `int` värde som anger den första raden från vilken den ej växlade resultatmängden ska väljas. I det här exemplet `0` anges.
-   * Ett `int` värde som anger det maximala antalet resultat som ska returneras. I det här exemplet `10` anges.
+   * Ett `int`-värde som anger den första raden från vilken den ej växlade resultatmängden ska väljas. I det här exemplet har `0` angetts.
+   * Ett `int`-värde som anger det maximala antalet resultat som ska returneras. I det här exemplet har `10` angetts.
    * Sorteringsordningen som används i sökningen.
 
-   Metoden returnerar ett `java.util.List` antal `Resource` objekt i den angivna sorteringsordningen.
+   Metoden returnerar ett `java.util.List` av `Resource`-objekt i den angivna sorteringsordningen.
 
 1. Hämta resurserna från sökresultatet
 
-   Om du vill hämta resurserna som finns i sökresultatet itererar du genom `List` och konverterar varje objekt till ett objekt `Resource` för att kunna extrahera informationen. I det här exemplet visas namnet på varje resurs.
+   Om du vill hämta resurserna i sökresultatet itererar du genom `List` och konverterar varje objekt till `Resource` för att extrahera informationen. I det här exemplet visas namnet på varje resurs.
 
 **Se även**
 
@@ -888,7 +888,7 @@ Innan du kan läsa en resurs programmatiskt måste du skapa en anslutning och an
 
 **Ange URI:erna för resurserna som ska relateras**
 
-Skapa strängar som innehåller URI:erna för resursen som ska relateras. Syntaxen innehåller snedstreck, som i det här exemplet: &quot;/*path*/*resource*&quot;.
+Skapa strängar som innehåller URI:erna för resursen som ska relateras. Syntaxen innehåller snedstreck, som i det här exemplet: &quot;/*sökväg*/*resurs*&quot;.
 
 **Skapa relationen**
 
@@ -916,28 +916,28 @@ Skapa relationsresurser genom att använda Java API för databastjänsten och ut
 
 1. Skapa tjänstklienten
 
-   Skapa ett `ResourceRepositoryClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `ResourceRepositoryClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Ange URI:erna för resurserna som ska relateras
 
-   Ange URI:erna för resurserna som ska relateras. I det här fallet är URI:erna `testResource1` och `testResource2` eftersom resurserna har namn `testFolder`och `"/testFolder/testResource1"` finns i mappen `"/testFolder/testResource2"`med namnet. URI:erna lagras som ett `java.lang.String` objekt. I det här exemplet skrivs resurserna först till databasen och deras URI:er hämtas. Mer information om hur du skriver en resurs finns i [Skriva resurser](aem-forms-repository.md#writing-resources).
+   Ange URI:erna för resurserna som ska relateras. I det här fallet, eftersom resurserna heter `testResource1` och `testResource2` och finns i mappen `testFolder`, är deras URI:er `"/testFolder/testResource1"` och `"/testFolder/testResource2"`. URI:erna lagras som ett `java.lang.String`-objekt. I det här exemplet skrivs resurserna först till databasen och deras URI:er hämtas. Mer information om hur du skriver en resurs finns i [Skriva resurser](aem-forms-repository.md#writing-resources).
 
 1. Skapa relationen
 
-   Anropa `ResourceRepositoryClient` objektets `createRelationship` metod och skicka följande parametrar:
+   Anropa `ResourceRepositoryClient`-objektets `createRelationship`-metod och skicka följande parametrar:
 
    * Källresursens URI.
    * Målresursens URI.
-   * Relationstypen, som är en av de statiska konstanterna i `com.adobe.repository.infomodel.bean.Relation` klassen. I det här exemplet skapas ett beroendeförhållande genom att ange värdet `Relation.TYPE_DEPENDANT_OF`.
-   * Ett `boolean` värde som anger om målresursen automatiskt uppdateras till den `com.adobe.repository.infomodel.Id`baserade identifieraren för den nya huvudresursen. I det här exemplet `true` anges värdet på grund av beroendeförhållandet.
+   * Relationstypen, som är en av de statiska konstanterna i klassen `com.adobe.repository.infomodel.bean.Relation`. I det här exemplet skapas en beroenderelation genom att värdet `Relation.TYPE_DEPENDANT_OF` anges.
+   * Ett `boolean`-värde som anger om målresursen automatiskt uppdateras till den `com.adobe.repository.infomodel.Id`-baserade identifieraren för den nya huvudresursen. I det här exemplet anges värdet `true` på grund av beroendeförhållandet.
 
-   Du kan också hämta en lista över relaterade resurser för en viss resurs genom att anropa `ResourceRepositoryClient` objektets `getRelated` metod och skicka följande parametrar:
+   Du kan också hämta en lista över relaterade resurser för en given resurs genom att anropa `ResourceRepositoryClient`-objektets `getRelated`-metod och skicka följande parametrar:
 
    * URI för resursen som relaterade resurser ska hämtas för. I det här exemplet anges källresursen ( `"/testFolder/testResource1"`).
-   * Ett `boolean` värde som anger om den angivna resursen är källresursen i relationen. I det här exemplet `true` anges värdet eftersom så är fallet.
-   * Relationstypen, som är en av de statiska konstanterna i `Relation` klassen. I det här exemplet anges en beroenderelation med samma värde som användes tidigare: `Relation.TYPE_DEPENDANT_OF`.
+   * Ett `boolean`-värde som anger om den angivna resursen är källresursen i relationen. I det här exemplet anges värdet `true` eftersom så är fallet.
+   * Relationstypen, som är en av de statiska konstanterna i klassen `Relation`. I det här exemplet anges en beroenderelation med samma värde som användes tidigare: `Relation.TYPE_DEPENDANT_OF`.
 
-   Metoden returnerar ett `getRelated` antal `java.util.List` objekt som du kan använda för att iterera från de relaterade resurserna och omvandla objekten i `Resource` till `List` `Resource` på samma sätt. I det här exemplet `testResource2` förväntas finnas i listan över returnerade resurser.
+   Metoden `getRelated` returnerar `java.util.List` av `Resource`-objekt genom vilka du kan iterera för att hämta de relaterade resurserna och omvandla objekten i `List` till `Resource` när du gör det. I det här exemplet förväntas `testResource2` finnas i listan över returnerade resurser.
 
 **Se även**
 
@@ -949,7 +949,7 @@ Skapa relationsresurser genom att använda Java API för databastjänsten och ut
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Skapa relationsresurser med hjälp av webbtjänstens API {#create-relationship-resources-using-the-web-service-api}
+### Skapa relationsresurser med webbtjänstens API {#create-relationship-resources-using-the-web-service-api}
 
 Skapa relationsresurser med hjälp av Repository API (webbtjänsten):
 
@@ -960,33 +960,33 @@ Skapa relationsresurser med hjälp av Repository API (webbtjänsten):
 
 1. Skapa tjänstklienten
 
-   Skapa ett objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor. `RepositoryServiceService` Ange dess `Credentials` egenskap med ett `System.Net.NetworkCredential` objekt som innehåller användarnamnet och lösenordet.
+   Skapa ett `RepositoryServiceService`-objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor. Ange egenskapen `Credentials` med ett `System.Net.NetworkCredential`-objekt som innehåller användarnamnet och lösenordet.
 
 1. Ange URI:erna för resurserna som ska relateras
 
-   Ange URI:erna för resurserna som ska relateras. I det här fallet är URI:erna `testResource1` och `testResource2` eftersom resurserna har namn `testFolder`och `"/testFolder/testResource1"` finns i mappen `"/testFolder/testResource2"`med namnet. När du använder ett språk som är kompatibelt med Microsoft .NET Framework (till exempel C#), lagras URI:erna som ett `System.String` objekt. I det här exemplet skrivs resurserna först till databasen och deras URI:er hämtas. Mer information om hur du skriver en resurs finns i [Skriva resurser](aem-forms-repository.md#writing-resources).
+   Ange URI:erna för resurserna som ska relateras. I det här fallet, eftersom resurserna heter `testResource1` och `testResource2` och finns i mappen `testFolder`, är deras URI:er `"/testFolder/testResource1"` och `"/testFolder/testResource2"`. När du använder ett språk som är kompatibelt med Microsoft .NET Framework (till exempel C#), lagras URI:erna som ett `System.String`-objekt. I det här exemplet skrivs resurserna först till databasen och deras URI:er hämtas. Mer information om hur du skriver en resurs finns i [Skriva resurser](aem-forms-repository.md#writing-resources).
 
 1. Skapa relationen
 
-   Anropa `RepositoryServiceService` objektets `createRelationship` metod och skicka följande parametrar:
+   Anropa `RepositoryServiceService`-objektets `createRelationship`-metod och skicka följande parametrar:
 
    * Källresursens URI.
    * Målresursens URI.
-   * Relationstypen. I det här exemplet skapas ett beroendeförhållande genom att ange värdet `3`.
-   * Ett `boolean` värde som anger om relationstypen har angetts. I det här exemplet `true` anges värdet.
-   * Ett `boolean` värde som anger om målresursen automatiskt uppdateras till den `Id`baserade identifieraren för den nya huvudresursen. I det här exemplet `true` anges värdet på grund av beroendeförhållandet.
-   * Ett `boolean` värde som anger om målhuvudet har angetts. I det här exemplet `true` anges värdet.
-   * Skicka `null` för den sista parametern.
+   * Relationstypen. I det här exemplet skapas en beroenderelation genom att värdet `3` anges.
+   * Ett `boolean`-värde som anger om relationstypen har angetts. I det här exemplet anges värdet `true`.
+   * Ett `boolean`-värde som anger om målresursen automatiskt uppdateras till den `Id`-baserade identifieraren för den nya huvudresursen. I det här exemplet anges värdet `true` på grund av beroendeförhållandet.
+   * Ett `boolean`-värde som anger om målhuvudet har angetts. I det här exemplet anges värdet `true`.
+   * Skicka `null` som sista parameter.
 
-   Du kan också hämta en lista över relaterade resurser för en viss resurs genom att anropa `RepositoryServiceService` objektets `getRelated` metod och skicka följande parametrar:
+   Du kan också hämta en lista över relaterade resurser för en given resurs genom att anropa `RepositoryServiceService`-objektets `getRelated`-metod och skicka följande parametrar:
 
    * URI för resursen som relaterade resurser ska hämtas för. I det här exemplet anges källresursen ( `"/testFolder/testResource1"`).
-   * Ett `boolean` värde som anger om den angivna resursen är källresursen i relationen. I det här exemplet `true` anges värdet eftersom så är fallet.
-   * Ett `boolean` värde som anger om källresursen har angetts. I det här exemplet `true` anges värdet.
+   * Ett `boolean`-värde som anger om den angivna resursen är källresursen i relationen. I det här exemplet anges värdet `true` eftersom så är fallet.
+   * Ett `boolean`-värde som anger om källresursen har angetts. I det här exemplet anges värdet `true`.
    * En array med heltal som innehåller relationstyperna. I det här exemplet anges en beroenderelation med samma värde i arrayen som tidigare: `3`.
    * Skicka `null` för de återstående två parametrarna.
 
-   Metoden returnerar en array med objekt som kan bytas ut mot `getRelated` `Resource` objekt, genom vilka du kan iterera för att hämta de relaterade resurserna. I det här exemplet `testResource2` förväntas finnas i listan över returnerade resurser.
+   Metoden `getRelated` returnerar en array med objekt som kan konverteras till `Resource`-objekt genom vilka du kan iterera för att hämta de relaterade resurserna. I det här exemplet förväntas `testResource2` finnas i listan över returnerade resurser.
 
 **Se även**
 
@@ -996,7 +996,7 @@ Skapa relationsresurser med hjälp av Repository API (webbtjänsten):
 
 ## Låser resurser {#locking-resources}
 
-Du kan låsa en resurs eller en uppsättning resurser för exklusiv användning av en viss användare eller delad användning bland flera användare. Ett delat lås är en indikation på att något kommer att hända med resursen, men det förhindrar inte någon annan från att vidta åtgärder med den resursen. Ett delat lås bör betraktas som en signaleringsmekanism. Ett exklusivt lås innebär att den användare som låste resursen kommer att ändra resursen och låset garanterar att ingen annan kan göra det förrän användaren inte längre behöver åtkomst till resursen och har släppt låset. Om en databasadministratör låser upp en resurs tas alla exklusiva och delade lås bort automatiskt för den resursen. Den här typen av åtgärd är avsedd för situationer där en användare inte längre är tillgänglig och inte har låst upp resursen.
+Du kan låsa en resurs eller en uppsättning resurser så att de bara kan användas av en viss användare eller för delad användning av flera användare. Ett delat lås är en indikation på att något kommer att hända med resursen, men det förhindrar inte någon annan från att vidta åtgärder med den resursen. Ett delat lås bör betraktas som en signaleringsmekanism. Ett exklusivt lås innebär att den användare som låste resursen kommer att ändra resursen och låset garanterar att ingen annan kan göra det förrän användaren inte längre behöver åtkomst till resursen och har släppt låset. Om en databasadministratör låser upp en resurs tas alla exklusiva och delade lås bort automatiskt för den resursen. Den här typen av åtgärd är avsedd för situationer där en användare inte längre är tillgänglig och inte har låst upp resursen.
 
 När en resurs är låst visas en låsikon när du visar fliken Resurser i Workbench, vilket visas på följande bild.
 
@@ -1029,7 +1029,7 @@ Innan du kan läsa en resurs programmatiskt måste du skapa en anslutning och an
 
 **Ange URI för resursen som ska låsas**
 
-Skapa en sträng som innehåller URI:n för resursen som ska låsas. Syntaxen innehåller snedstreck, som i det här exemplet: &quot;/*path*/*resource*&quot;.
+Skapa en sträng som innehåller URI:n för resursen som ska låsas. Syntaxen innehåller snedstreck, som i det här exemplet: &quot;/*sökväg*/*resurs*&quot;.
 
 **Lås resursen**
 
@@ -1065,31 +1065,31 @@ Lås resurser med hjälp av Repository Service API (Java):
 
 1. Skapa tjänstklienten
 
-   Skapa ett `ResourceRepositoryClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `ResourceRepositoryClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Ange URI för resursen som ska låsas
 
-   Ange URI för resursen som ska låsas. I det här fallet, eftersom resursen med namnet `testResource` finns i mappen med namnet `testFolder`, är dess URI `"/testFolder/testResource"`. URI:n lagras som ett `java.lang.String` objekt.
+   Ange URI för resursen som ska låsas. I det här fallet, eftersom resursen `testResource` finns i mappen `testFolder`, är dess URI `"/testFolder/testResource"`. URI:n lagras som ett `java.lang.String`-objekt.
 
 1. Lås resursen
 
-   Anropa `ResourceRepositoryClient` objektets `lockResource` metod och skicka följande parametrar:
+   Anropa `ResourceRepositoryClient`-objektets `lockResource`-metod och skicka följande parametrar:
 
    * Resursens URI.
-   * Låsomfånget. I det här exemplet anges låsomfånget som `com.adobe.repository.infomodel.bean.Lock.SCOPE_EXCLUSIVE`eftersom resursen kommer att låsas exklusivt.
-   * Låsdjupet. I det här exemplet anges låsningsdjupet som `Lock.DEPTH_ZERO`eftersom låsning endast gäller för den aktuella resursen och ingen av dess medlemmar eller underordnade.
+   * Låsomfånget. I det här exemplet anges låsomfånget som `com.adobe.repository.infomodel.bean.Lock.SCOPE_EXCLUSIVE` eftersom resursen kommer att låsas exklusivt.
+   * Låsdjupet. I det här exemplet anges låsningsdjupet som `Lock.DEPTH_ZERO` eftersom låsning endast gäller för den aktuella resursen och ingen av dess medlemmar eller underordnade.
 
    >[!NOTE]
    >
-   >Den överlagrade versionen av metoden som kräver fyra parametrar genererar ett undantag. `lockResource` Se till att du använder den `lockResource` metod som kräver tre parametrar som visas i genomgången.
+   >Den överlagrade versionen av metoden `lockResource` som kräver fyra parametrar genererar ett undantag. Se till att använda metoden `lockResource` som kräver tre parametrar som visas i genomgången.
 
 1. Hämta låsen för resursen
 
-   Anropa `ResourceRepositoryClient` objektets `getLocks` metod och skicka URI:n för resursen som en parameter. Metoden returnerar en List med Lock-objekt som du kan iterera igenom. I det här exemplet skrivs låsägaren, djupet och omfånget ut för varje objekt genom att varje Lock-objekts `getOwnerUserId`-, `getDepth`respektive `getType` -metoder anropas.
+   Anropa `ResourceRepositoryClient`-objektets `getLocks`-metod och skicka URI:n för resursen som en parameter. Metoden returnerar en List med Lock-objekt som du kan iterera igenom. I det här exemplet skrivs låsägaren, djupet och omfånget ut för varje objekt genom att anropa varje Lock-objekts `getOwnerUserId`-, `getDepth`- respektive `getType`-metoder.
 
 1. Lås upp resursen
 
-   Anropa `ResourceRepositoryClient` objektets `unlockResource` metod och skicka URI:n för resursen som en parameter. Mer information finns i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   Anropa `ResourceRepositoryClient`-objektets `unlockResource`-metod och skicka URI:n för resursen som en parameter. Mer information finns i [API-referens för AEM Forms](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **Se även**
 
@@ -1112,29 +1112,29 @@ Lås resurser med hjälp av Repository-tjänstens API (webbtjänst):
 
 1. Skapa tjänstklienten
 
-   Skapa ett objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor. `RepositoryServiceService` Ange dess `Credentials` egenskap med ett `System.Net.NetworkCredential` objekt som innehåller användarnamnet och lösenordet.
+   Skapa ett `RepositoryServiceService`-objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor. Ange egenskapen `Credentials` med ett `System.Net.NetworkCredential`-objekt som innehåller användarnamnet och lösenordet.
 
 1. Ange URI för resursen som ska låsas
 
-   Ange en sträng som innehåller URI:n för resursen som ska låsas. I det här fallet, eftersom resursen med namnet `testResource` finns i mappen, `testFolder`är dess URI `"/testFolder/testResource"`. När du använder ett språk som är kompatibelt med Microsoft .NET Framework (till exempel C#), ska du lagra URI:n i ett `System.String` objekt.
+   Ange en sträng som innehåller URI:n för resursen som ska låsas. I det här fallet, eftersom resursen `testResource` finns i mappen `testFolder`, är dess URI `"/testFolder/testResource"`. När du använder ett språk som är kompatibelt med Microsoft .NET Framework (till exempel C#), ska du lagra URI:n i ett `System.String`-objekt.
 
 1. Lås resursen
 
-   Anropa `RepositoryServiceService` objektets `lockResource` metod och skicka följande parametrar:
+   Anropa `RepositoryServiceService`-objektets `lockResource`-metod och skicka följande parametrar:
 
    * Resursens URI.
-   * Låsomfånget. I det här exemplet anges låsomfånget som `11`eftersom resursen kommer att låsas exklusivt.
-   * Låsdjupet. I det här exemplet anges låsningsdjupet som `2`eftersom låsning endast gäller för den aktuella resursen och ingen av dess medlemmar eller underordnade.
-   * Ett `int` värde som anger antalet sekunder innan låset förfaller. I det här exemplet används värdet för `1000` .
-   * Skicka `null` för den sista parametern.
+   * Låsomfånget. I det här exemplet anges låsomfånget som `11` eftersom resursen kommer att låsas exklusivt.
+   * Låsdjupet. I det här exemplet anges låsningsdjupet som `2` eftersom låsning endast gäller för den aktuella resursen och ingen av dess medlemmar eller underordnade.
+   * Ett `int`-värde som anger antalet sekunder tills låset upphör att gälla. I det här exemplet används värdet `1000`.
+   * Skicka `null` som sista parameter.
 
 1. Hämta låsen för resursen
 
-   Anropa `RepositoryServiceService` objektets `getLocks` -metod och skicka URI:n för resursen som den första parametern och `null` för den andra parametern. Metoden returnerar en `object` array som innehåller `Lock` objekt som du kan iterera igenom. I det här exemplet skrivs låsägaren, djupet och omfånget ut för varje objekt genom att gå till varje `Lock` objekts `ownerUserId`-, `depth`- respektive `type` -fält.
+   Anropa `RepositoryServiceService`-objektets `getLocks`-metod och skicka URI:n för resursen som den första parametern och `null` för den andra parametern. Metoden returnerar en `object`-array som innehåller `Lock`-objekt som du kan iterera igenom. I det här exemplet skrivs låsägaren, djupet och omfånget ut för varje objekt genom att varje `Lock`-objekts `ownerUserId`-, `depth`- respektive `type`-fält öppnas.
 
 1. Lås upp resursen
 
-   Anropa `RepositoryServiceService` objektets `unlockResource` -metod och skicka URI:n för resursen som den första parametern och `null` för den andra parametern.
+   Anropa `RepositoryServiceService`-objektets `unlockResource`-metod och skicka URI:n för resursen som den första parametern och `null` för den andra parametern.
 
 **Se även**
 
@@ -1142,19 +1142,19 @@ Lås resurser med hjälp av Repository-tjänstens API (webbtjänst):
 
 [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
-## Resurser tas bort {#deleting-resources}
+## Tar bort resurser {#deleting-resources}
 
 Du kan ta bort resurser från en viss plats i databasen med hjälp av Java API(SOAP) för databastjänsten.
 
 När du tar bort en resurs är borttagningen vanligtvis permanent, men i vissa fall kan ECM-databaser lagra resursens versioner enligt deras historikmekanismer. När du tar bort en resurs är det därför viktigt att du aldrig behöver den igen. De vanligaste skälen till att en resurs tas bort är behovet av att öka det tillgängliga utrymmet i databasen. Du kan ta bort en version av en resurs, men om du gör det måste du ange resursidentifieraren och inte dess logiska identifierare (LID) eller sökväg. Om du tar bort en mapp tas allt i den mappen, inklusive undermappar och resurser, bort automatiskt.
 
-Relaterade resurser tas inte bort. Om du till exempel har ett formulär som använder filen logo.gif och du tar bort logo.gif, lagras en relation i den väntande relationstabellen. Du kan också ange att objektstatusen för den senaste versionen är inaktuell för borttagning av version.
+Relaterade resurser tas inte bort. Om du till exempel har ett formulär som använder filen logo.gif och du tar bort logo.gif, lagras en relation i den väntande relationstabellen. Du kan också ange att objektstatusen för den senaste versionen ska vara inaktuell för borttagning av version.
 
 En raderingsåtgärd är inte transaktionssäker i ECM-system. Om du till exempel försöker ta bort 100 resurser och åtgärden misslyckas på den 50:e resursen, tas de första 49 instanserna bort, men inte resten. I annat fall är standardbeteendet återställning (ej åtagande).
 
 >[!NOTE]
 >
->När du använder metoden med ECM-databasen (EMC Documentum Content Server och IBM FileNet P8 Content Manager) återställs inte transaktionen om borttagningen misslyckas för en av de angivna resurserna, vilket innebär att de filer som har tagits bort inte kan återställas. `com.adobe.repository.bindings.dsc.client.ResourceRepositoryClient.deleteResources()`
+>När du använder metoden `com.adobe.repository.bindings.dsc.client.ResourceRepositoryClient.deleteResources()` med ECM-databasen (EMC Documentum Content Server och IBM FileNet P8 Content Manager) återställs inte transaktionen om borttagningen misslyckas för någon av de angivna resurserna, vilket innebär att de filer som har tagits bort inte kan återställas.
 
 >[!NOTE]
 >
@@ -1179,7 +1179,7 @@ Innan du kan läsa en resurs programmatiskt måste du skapa en anslutning och an
 
 **Ange URI för resursen som ska tas bort**
 
-Skapa en sträng som innehåller URI:n för resursen som ska tas bort. Syntaxen innehåller snedstreck, som i det här exemplet: &quot;/*path*/*resource*&quot;. Om resursen som ska tas bort är en mapp kommer borttagningen att vara rekursiv.
+Skapa en sträng som innehåller URI:n för resursen som ska tas bort. Syntaxen innehåller snedstreck, som i det här exemplet: &quot;/*sökväg*/*resurs*&quot;. Om resursen som ska tas bort är en mapp kommer borttagningen att vara rekursiv.
 
 **Ta bort resursen**
 
@@ -1207,15 +1207,15 @@ Ta bort en resurs med Repository API (Java):
 
 1. Skapa tjänstklienten
 
-   Skapa ett `ResourceRepositoryClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `ResourceRepositoryClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Ange URI för resursen som ska tas bort
 
-   Ange URI för resursen som ska hämtas. I det här fallet, eftersom resursen med namnet testResourceToBeDeleted finns i mappen testFolder, är resursens URI `/testFolder/testResourceToBeDeleted`. URI:n lagras som ett `java.lang.String` objekt. I det här exemplet skrivs resursen först till databasen och dess URI hämtas. Mer information om hur du skriver en resurs finns i [Skriva resurser](aem-forms-repository.md#writing-resources).
+   Ange URI för resursen som ska hämtas. I det här fallet, eftersom resursen med namnet testResourceToBeDeleted finns i mappen testFolder, är resursens URI `/testFolder/testResourceToBeDeleted`. URI:n lagras som ett `java.lang.String`-objekt. I det här exemplet skrivs resursen först till databasen och dess URI hämtas. Mer information om hur du skriver en resurs finns i [Skriva resurser](aem-forms-repository.md#writing-resources).
 
 1. Ta bort resursen
 
-   Anropa `ResourceRepositoryClient` objektets `deleteResource` metod och skicka URI:n för resursen som en parameter.
+   Anropa `ResourceRepositoryClient`-objektets `deleteResource`-metod och skicka URI:n för resursen som en parameter.
 
 **Se även**
 
@@ -1238,15 +1238,15 @@ Ta bort en resurs med Repository API (webbtjänsten):
 
 1. Skapa tjänstklienten
 
-   Skapa ett objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor. `RepositoryServiceService` Ange dess `Credentials` egenskap med ett `System.Net.NetworkCredential` objekt som innehåller användarnamnet och lösenordet.
+   Skapa ett `RepositoryServiceService`-objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor. Ange egenskapen `Credentials` med ett `System.Net.NetworkCredential`-objekt som innehåller användarnamnet och lösenordet.
 
 1. Ange URI för resursen som ska tas bort
 
-   Ange URI för resursen som ska hämtas. I det här fallet, eftersom resursen med namnet `testResourceToBeDeleted` finns i mappen med namnet `testFolder`, är dess URI `"/testFolder/testResourceToBeDeleted"`. I det här exemplet skrivs resursen först till databasen och dess URI hämtas. Mer information om hur du skriver en resurs finns i [Skriva resurser](aem-forms-repository.md#writing-resources).
+   Ange URI för resursen som ska hämtas. I det här fallet, eftersom resursen `testResourceToBeDeleted` finns i mappen `testFolder`, är dess URI `"/testFolder/testResourceToBeDeleted"`. I det här exemplet skrivs resursen först till databasen och dess URI hämtas. Mer information om hur du skriver en resurs finns i [Skriva resurser](aem-forms-repository.md#writing-resources).
 
 1. Ta bort resursen
 
-   Anropa `RepositoryServiceService` objektets `deleteResources` metod och skicka en `System.String` array som innehåller resursens URI som första parameter. Skicka `null` för den andra parametern.
+   Anropa `RepositoryServiceService`-objektets `deleteResources`-metod och skicka en `System.String`-array som innehåller URI:n för resursen som den första parametern. Skicka `null` för den andra parametern.
 
 **Se även**
 
