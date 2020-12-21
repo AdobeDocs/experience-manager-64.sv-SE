@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Den här funktionen består av två komponenter som fungerar tillsammans: recensioner och sammanfattning.
 
-Recensioner är en sammansatt komponent som baseras på ett [kommentarsystem](essentials-comments.md) som innehåller en eller flera [klassificeringskomponenter](rating-basics.md) (tally).
+Granskningar är en sammansatt komponent som baseras på ett [kommentarsystem](essentials-comments.md) som innehåller en eller flera [omdömen](rating-basics.md) (tally) komponenter.
 
 Anonym publicering av en granskning stöds inte. Besökare på webbplatsen måste registrera sig och logga in för att kunna lägga till en granskning. Den inloggade besökaren (medlemmen) kan uppdatera sin granskning när som helst.
 
@@ -38,7 +38,7 @@ Anonym publicering av en granskning stöds inte. Besökare på webbplatsen måst
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>oklanderlig</strong></a></td> 
-   <td>Ja - egenskaper kan redigeras i <i></i>designläge</td> 
+   <td>Ja - egenskaper kan redigeras i <i>design </i>läge</td> 
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>klientlibs</strong></a></td> 
@@ -63,9 +63,9 @@ Anonym publicering av en granskning stöds inte. Besökare på webbplatsen måst
 
 | **resourceType** | social/reviews/components/hbs/summary |
 |---|---|
-| [**oklanderlig **](scf.md#add-or-include-a-communities-component) | Ja - egenskaper kan redigeras i *design *läge |
-| [**klientlibs **](client-customize.md#clientlibs-for-scf) | cq.social.hbs.reviews |
-| **templates** | /libs/social/reviews/components/hbs/summary/summary.hbs |
+| [**oklanderlig**](scf.md#add-or-include-a-communities-component) | Ja - egenskaper kan redigeras i *design *läge |
+| [**klientlibs**](client-customize.md#clientlibs-for-scf) | cq.social.hbs.reviews |
+| **mallar** | /libs/social/reviews/components/hbs/summary/summary.hbs |
 | **css** | /libs/social/reviews/components/hbs/reviews/clientlibs/review.css |
 | **egenskaper** | Se [Använda granskningar](reviews.md) |
 
@@ -82,16 +82,16 @@ Anonym publicering av en granskning stöds inte. Besökare på webbplatsen måst
 ### Åtkomst till bokförda granskningar (UGC) {#accessing-posted-reviews-ugc}
 
 UGC bör modereras med någon av standardmetoderna för moderering.\
-Se [Moderera användargenererat innehåll](moderate-ugc.md).
+Se [Moderating User Generated Content](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (t.ex. ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
 Se:
 
-* [Översikt över](srp.md) lagringsresursprovidern - introduktion och databasanvändning - översikt
+* [Översikt över](srp.md)  lagringsresursprovidern - introduktion och databasanvändning - översikt
 * [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning
+* [Åtkomst till UGC med riktlinjer för SRP](accessing-ugc-with-srp.md) -kodning
 * [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utgått verktygsmetoder till aktuella SRP-verktygsmetoder
 
