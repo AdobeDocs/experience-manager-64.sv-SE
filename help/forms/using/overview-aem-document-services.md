@@ -91,7 +91,7 @@ Du kan använda en enkel indatamappning för att ange plats för källdokument o
 * FTP
 * HTTP/HTTPS
 
-## Doc Assurance-tjänst {#doc-assurance-service}
+## Doc Assurance Service {#doc-assurance-service}
 
 Med Doc Assurance-tjänsten kan du kryptera och dekryptera dokument, utöka Adobe Reader funktioner med ytterligare användarrättigheter och lägga till digitala signaturer i dina dokument. Användarna kan enkelt interagera med PDF forms och dokument, samtidigt som ni förbättrar säkerheten, arkiveringen och regelefterlevnaden.
 
@@ -128,7 +128,7 @@ När PDF-dokument har rätt användarbehörighet kan mottagarna göra följande 
 
 Dessa specialfunktioner aktiveras automatiskt när ett rättighetsaktiverat PDF-dokument öppnas i Adobe Reader. När användaren har arbetat klart med ett rättighetsaktiverat dokument inaktiveras dessa funktioner på nytt i Adobe Reader. De är inaktiverade tills användaren tar emot ett annat rättighetsaktiverat PDF-dokument.
 
-Tjänsten DocAssurance är inte tillgänglig för användning. Mer information om hur du konfigurerar tjänsten DocAssurance finns i [Konfigurera dokumenttjänster](/help/forms/using/install-configure-document-services.md).
+Tjänsten DocAssurance är inte tillgänglig för användning. Information om hur du konfigurerar tjänsten DocAssurance finns i [Konfigurera dokumenttjänster](/help/forms/using/install-configure-document-services.md).
 
 ## Skicka till skrivartjänst {#send-to-printer-service}
 
