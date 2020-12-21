@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Initiera API:er för dokumenttjänster från AEM  {#initiate-document-services-apis-from-aem-workflow}
+# Initiera API:er för dokumenttjänster från AEM arbetsflöde {#initiate-document-services-apis-from-aem-workflow}
 
 ## Assembler {#assembler}
 
@@ -28,11 +28,11 @@ AEM Forms tillhandahåller anpassade arbetsflöden för att anropa följande API
 
 ### Anropa DDX-arbetsflöde {#invoke-ddx-workflow}
 
-Arbetsflödet **Anropa DDX** anropar API:t för tjänsten `Invoke` Assembler, som du kan använda för att sätta ihop eller dela upp dokument, lägga till vattenstämpel i ett PDF-dokument och så vidare.
+Arbetsflödet **Anropa DDX** anropar API:t för tjänsten `Invoke` Assembler, som du kan använda för att sammanfoga eller demontera dokument, lägga till vattenstämpel i en PDF-fil och så vidare.
 
 1. Dra arbetsflödessteget **[!UICONTROL Invoke DDX]** under fliken Forms Workflow i Sidekick.
 1. Dubbelklicka på det tillagda arbetsflödessteget för att redigera komponenten.
-1. Konfigurera indatadokument, miljöalternativ och utdatadokument i dialogrutan Redigera komponent och klicka sedan på **[!UICONTROL OK]**.
+1. Konfigurera indatadokument, miljöalternativ och utdatadokument i dialogrutan Redigera komponent och klicka på **[!UICONTROL OK]**.
 
 #### Indatadokument {#input-documents}
 
@@ -44,7 +44,7 @@ Anropa DDX-arbetsflödet kräver följande indatadokument:
    * *Använd nyttolast*: Nyttolasten för arbetsflödesobjektet används som indata-DDX-dokument.
    * *Absolut sökväg*: Den absoluta sökvägen till DDX-dokumentet i CRX-databasen.
 
-* **Skapa karta från PayLoad**: När du väljer det här alternativet läggs alla dokument under nyttolastmappen till i Input Document Map för API:t i `invoke` Assembler. Nodnamnet för varje dokument används som en nyckel på kartan.
+* **Skapa karta från PayLoad**: När det här alternativet är markerat läggs alla dokument under nyttolastmappen till i Input Document Map för  `invoke` API:t i Assembler. Nodnamnet för varje dokument används som en nyckel på kartan.
 
 * **Indatadokumentets karta**: Anger indatadokumentets karta. Du kan lägga till valfritt antal poster, där varje post anger dokumentets nyckel på kartan och dokumentets källa.
 
@@ -68,12 +68,12 @@ Beroende på indata-DDX kan invoke-API:t generera flera utdatadokument. På flik
 
 ### Konvertera till PDF/A-arbetsflöde {#convert-to-pdf-a-workflow}
 
-Arbetsflödessteget Konvertera till PDF/A anropar `toPDFA` Assembler-tjänstens API. Det används för att konvertera PDF-dokument till PDF/A-kompatibla dokument.
+Arbetsflödessteget Konvertera till PDF/A anropar API:t för tjänsten `toPDFA` Assembler. Det används för att konvertera PDF-dokument till PDF/A-kompatibla dokument.
 
 1. Dra arbetsflödessteget **[!UICONTROL ConvertToPDFA]** under fliken Forms Workflow i Sidekick.
 
 1. Dubbelklicka på det tillagda arbetsflödessteget för att redigera komponenten.
-1. Konfigurera indatadokument, konverteringsalternativ och utdatadokument i dialogrutan Redigera komponent och klicka sedan på **[!UICONTROL OK]**.
+1. Konfigurera indatadokument, konverteringsalternativ och utdatadokument i dialogrutan Redigera komponent och klicka på **[!UICONTROL OK]**.
 
 #### Indatadokument {#input-documents-1}
 
@@ -91,7 +91,7 @@ Med konverteringsalternativen kan du ange alternativ som ändrar PDF/A-konverter
 * *Resultatnivå *: Anger loggnivån som ska användas för PDF/A-konverteringsloggar.
 * *Underskrifter* : Anger hur signaturer i indatadokument måste bearbetas under konverteringen.
 * *Färgmodell* : Anger den fördefinierade färgrymd som ska användas för PDF/A-utdata.
-* *Verifiera* konvertering: Anger om det konverterade PDF/A-dokumentet ska verifieras för PDF/A-kompatibilitet efter konvertering.
+* ** VerifyConversion: Anger om det konverterade PDF/A-dokumentet ska verifieras för PDF/A-kompatibilitet efter konvertering.
 * *Jobbloggnivå* : Anger loggnivån som ska användas för bearbetning av loggar.
 
 * *Metadatatilläggsschema* : Anger sökvägen till metadatatilläggsschemat som ska användas för XMP egenskaper i PDF-dokumentets metadata.
@@ -105,13 +105,13 @@ På fliken Utdatadokument kan du ange mål för utdatadokumenten
 
 ## Forms {#forms}
 
-Arbetsflödet för att återge PDF-formulär är en wrapper runt `renderPDFForm` Forms tjänst-API för att skapa ett PDF-formulär med en XDP-mall och data-xml.
+Arbetsflödet för att återge PDF-formulär är en wrapper runt Forms tjänst-API:t för att skapa ett PDF-formulär med en XDP-mall och data-xml.`renderPDFForm`
 
-### Arbetsflöde för PDF-formulär {#render-pdf-form-workflow}
+### Arbetsflöde för att återge PDF-formulär {#render-pdf-form-workflow}
 
 1. Dra arbetsflödessteget Återge PDF-formulär under fliken Forms Workflow i Sidekick.
 1. Dubbelklicka på det tillagda arbetsflödessteget för att redigera komponenten.
-1. Konfigurera indatadokument, utdatadokument och andra parametrar i dialogrutan Redigera komponent och klicka sedan på **[!UICONTROL OK]**.
+1. Konfigurera indatadokument, utdatadokument och ytterligare parametrar i dialogrutan Redigera komponent och klicka sedan på **[!UICONTROL OK]**.
 
 #### Indatadokument {#input-documents-2}
 
@@ -132,15 +132,15 @@ Arbetsflödet för att återge PDF-formulär är en wrapper runt `renderPDFForm`
 * *Taggad PDF*: Anger om den genererade PDF-filen ska vara tillgänglig eller inte.
 * *XCI-dokument*: Anger sökvägen till XCI-filen.
 
-## Output {#output}
+## Utdata {#output}
 
-Arbetsflödet Generera icke-interaktiv PDF är en wrapper runt API:t för `generatePDFOutput` utdatatjänster. Den används för att generera icke-interaktiva PDF-dokument från XDP-mallar och data-xml.
+Arbetsflödet Generera icke-interaktiv PDF är en wrapper runt `generatePDFOutput` API för utdatatjänst. Den används för att generera icke-interaktiva PDF-dokument från XDP-mallar och data-xml.
 
 ### Generera icke-interaktivt arbetsflöde för PDF-utdata   {#generate-non-interactive-pdf-output-workflow-nbsp}
 
 1. Dra arbetsflödet Generera icke-interaktiva PDF-utdata under fliken Forms Workflow i Sidekick.
 1. Dubbelklicka på det tillagda arbetsflödessteget för att redigera komponenten.
-1. Konfigurera indatadokument, utdatadokument och andra parametrar i dialogrutan Redigera komponent och klicka sedan på **[!UICONTROL OK]**.
+1. Konfigurera indatadokument, utdatadokument och ytterligare parametrar i dialogrutan Redigera komponent och klicka sedan på **[!UICONTROL OK]**.
 
 #### Indatadokument {#input-documents-3}
 
