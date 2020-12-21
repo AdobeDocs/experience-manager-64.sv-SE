@@ -27,7 +27,7 @@ Med tjänsten Forms kan du skapa interaktiva klientapplikationer för datainhäm
 
 När en slutanvändare begär ett formulär skickar ett klientprogram begäran till Forms-tjänsten, som returnerar formuläret i lämpligt format. Så snart Forms-tjänsten tar emot en begäran sammanfogar den data med en formulärdesign och skickar sedan formuläret i önskat format. Utdata från formulärtjänsten är ett interaktivt formulär, vanligtvis ett PDF-dokument. Med ett interaktivt formulär kan användarna fylla i fält som finns i formuläret.
 
-Beroende på vilken typ av klientprogram du använder kan du skriva formuläret till en webbläsare eller spara formuläret som en PDF-fil. Ett webbaserat program kan skriva formuläret till webbläsaren. Ett skrivbordsprogram kan spara formuläret som en PDF-fil. För att visa hur du skriver till en webbläsare och en PDF-fil ordnas snabbstarterna i *Återge Forms* på följande sätt:
+Beroende på vilken typ av klientprogram du använder kan du skriva formuläret till en webbläsare eller spara formuläret som en PDF-fil. Ett webbaserat program kan skriva formuläret till webbläsaren. Ett skrivbordsprogram kan spara formuläret som en PDF-fil. För att visa hur du skriver till en webbläsare och en PDF-fil ordnas snabbstarterna i *Rendering Forms* på följande sätt:
 
 * Exemplen med Java API med stark typ (SOAP-läge) är en Java-servlet.
 * Webbtjänstens (Java Base64) exempel är en Java-server.
@@ -39,8 +39,8 @@ Beroende på vilken typ av klientprogram du använder kan du skriva formuläret 
 
    Du kan skicka en formulärdesign (en XDP-fil) eller ett PDF-dokument till Forms-tjänsten på något av följande två sätt:
 
-* Du kan referera till formulärdesignen med ett URL-värde. Detta innebär att använda ett `URLSpec` objekt. Innehållsroten skickas till Forms-tjänsten med hjälp av `URLSpec` objektets `setContentRootURI` metod. Formulärdesignnamnet ( `formQuery`) skickas som en separat parameter. De två värdena sammanfogas för att få den absoluta referensen till formulärdesignen. (De flesta av snabbstarterna som finns i avsnittet *Återge Forms* använder den här metoden.)
-* Du kan skicka en `com.adobe.idp.Document` som innehåller formulärdesignen till Forms-tjänsten. Två nya metoder som heter `renderPDFForm2` och `renderHTMLForm2` godkänner ett `com.adobe.idp.Document` objekt som innehåller en formulärdesign. (Se [Skicka dokument till Forms-tjänsten](/help/forms/developing/passing-documents-forms-service.md)
+* Du kan referera till formulärdesignen med ett URL-värde. Detta innebär att du använder ett `URLSpec`-objekt. Innehållsroten skickas till Forms-tjänsten med `URLSpec`-objektets `setContentRootURI`-metod. Formulärdesignnamnet ( `formQuery`) skickas som en separat parameter. De två värdena sammanfogas för att få den absoluta referensen till formulärdesignen. (De flesta av snabbstarterna som finns i avsnittet *Återgivning av Forms* använder den här metoden.)
+* Du kan skicka en `com.adobe.idp.Document` som innehåller formulärdesignen till Forms-tjänsten. Två nya metoder med namnen `renderPDFForm2` och `renderHTMLForm2` accepterar ett `com.adobe.idp.Document`-objekt som innehåller en formulärdesign. (Se [Skicka dokument till Forms-tjänsten](/help/forms/developing/passing-documents-forms-service.md)
 
 Du kan utföra följande uppgifter med Forms-tjänsten:
 
@@ -49,13 +49,13 @@ Du kan utföra följande uppgifter med Forms-tjänsten:
 * Rendera formulär baserat på fragment. (Se [Återge Forms baserat på fragment](/help/forms/developing/rendering-forms-based-fragments.md).)
 * Återge rättighetsaktiverade formulär. (Se [Rendering Rights-Enabled Forms](/help/forms/developing/rendering-rights-enabled-forms.md).)
 * Återge formulär som HTML. (Se [Återge Forms som HTML](/help/forms/developing/rendering-forms-html.md).)
-* Rendering HTML Forms Using Custom CSS Files (Rendering HTML Forms Using Custom CSS Files[](/help/forms/developing/rendering-html-forms-using-custom.md).)
+* Rendering HTML Forms Using Custom CSS Files ([Rendering HTML Forms Using Custom CSS Files](/help/forms/developing/rendering-html-forms-using-custom.md).)
 * Hantera skickade formulär. (Se [Hantera skickade Forms](/help/forms/developing/handling-submitted-forms.md).)
 * Skapa PDF-dokument med skickade XML-data. (Se [Skapa PDF-dokument med skickade XML-data](/help/forms/developing/creating-pdf-documents-submitted-xml.md).)
-* Fyll i formulär i förväg. (Se [Fylla i Forms i förväg med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md).)
+* Fyll i formulär i förväg. (Se [Förifyll Forms med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md).)
 * Skicka dokument. (Se [Skicka dokument till Forms-tjänsten](/help/forms/developing/passing-documents-forms-service.md)
 * Beräkna formulärdata. (Se [Beräkna formulärdata](/help/forms/developing/calculating-form-data.md).)
 * Optimera ett program. (Se [Optimera prestanda för Forms-tjänsten](/help/forms/developing/optimizing-performance-forms-service.md).)
 
-   ***Tips **: På webbplatsen Adobe Developer finns följande artikel som handlar om hur du skapar ett ASP.NET-program som anropar tjänsten Forms och återger formulär. Se[Skapa ASP.NET-program](https://www.adobe.com/devnet/livecycle/articles/asp_net.html)för formuläråtergivning.*
+   ***Tips **: På webbplatsen Adobe Developer finns följande artikel som handlar om hur du skapar ett ASP.NET-program som anropar tjänsten Forms och återger formulär. Se [Skapa ASP.NET-program för formuläråtergivning](https://www.adobe.com/devnet/livecycle/articles/asp_net.html).*
 
