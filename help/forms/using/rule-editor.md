@@ -45,11 +45,11 @@ Regelredigeraren innehåller en uppsättning fördefinierade regeltyper, till ex
 
 En regel följer vanligtvis någon av följande konstruktioner:
 
-**Condition-Action** I den här konstruktionen definierar en regel först ett villkor följt av en åtgärd som ska utlösas. Konstruktionen är jämförbar med if-then-programsatsen i programmeringsspråk.
+**Condition-** ActionI den här konstruktionen definierar en regel först ett villkor följt av en åtgärd som ska utlösas. Konstruktionen är jämförbar med if-then-programsatsen i programmeringsspråk.
 
-I regelredigeraren använder **När** -regeltypen villkorsåtgärdskonstruktionen.
+Regeltypen **When** används i regelredigeraren för att framtvinga konstruktorn för villkorsåtgärd.
 
-**Åtgärdsvillkor** I den här konstruktionen definierar en regel först en åtgärd som ska utlösas följt av villkor för utvärdering. En annan variant av den här konstruktionen är action-condition-alternate action, som också definierar en alternativ åtgärd som ska utlösas om villkoret returnerar False.
+**Action-** ConditionI den här konstruktionen definierar en regel först en åtgärd som ska utlösas följt av villkor för utvärdering. En annan variant av den här konstruktionen är action-condition-alternate action, som också definierar en alternativ åtgärd som ska utlösas om villkoret returnerar False.
 
 Regeltyperna Visa, Dölj, Aktivera, Inaktivera, Ange värde för och Validera i regelredigeraren framtvingar regelkonstruktionen för åtgärdsvillkor. Som standard är den alternativa åtgärden för Visa Dölj och Aktivera inaktiveras, och vice versa. Du kan inte ändra den alternativa standardåtgärden.
 
@@ -57,7 +57,7 @@ Regeltyperna Visa, Dölj, Aktivera, Inaktivera, Ange värde för och Validera i 
 >
 >De tillgängliga regeltyperna, inklusive villkor och åtgärder som du definierar i regelredigeraren, beror också på vilken typ av formulärobjekt du skapar en regel på. Regelredigeraren visar endast giltiga regeltyper och alternativ för att skriva villkor och åtgärdssatser för en viss formulärobjekttyp. Du kan till exempel inte se regeltyperna Validera, Ange värde för, Aktivera och Inaktivera för ett panelobjekt.
 
-Mer information om vilka regeltyper som finns i regelredigeraren finns i [Tillgängliga regeltyper i regelredigeraren](/help/forms/using/rule-editor.md#p-available-rule-types-in-rule-editor-p).
+Mer information om tillgängliga regeltyper i regelredigeraren finns i [Tillgängliga regeltyper i regelredigeraren](/help/forms/using/rule-editor.md#p-available-rule-types-in-rule-editor-p).
 
 ### Riktlinjer för val av regelkonstruktion {#guidelines-for-choosing-a-rule-construct}
 
@@ -89,8 +89,8 @@ Regelredigeraren innehåller följande logiska operatorer och händelser som du 
 * **Är tom**
 * **Är inte tom**
 * **Har markerat:** Returnerar true när användaren väljer ett visst alternativ för en kryssruta, listruta eller alternativknapp.
-* **Har initierats (händelse):** Returnerar true när ett formulärobjekt återges i webbläsaren.
-* **Har ändrats (händelse):** Returnerar true när användaren ändrar det angivna värdet eller det valda alternativet för ett formulärobjekt.
+* **Är initierad (händelse):** Returnerar true när ett formulärobjekt återges i webbläsaren.
+* **Ändrad (händelse):** Returnerar true när användaren ändrar det angivna värdet eller det valda alternativet för ett formulärobjekt.
 
 ## Tillgängliga regeltyper i regelredigeraren {#available-rule-types-in-rule-editor}
 
@@ -98,7 +98,7 @@ Regelredigeraren innehåller en uppsättning fördefinierade regeltyper som du k
 
 ### När {#when}
 
-Regeltypen **När** följer **konstruktorn för villkorsstyrd åtgärd-alternativ åtgärd** , eller ibland bara **konstruktorn för villkorsstyrd åtgärd** . I den här regeltypen anger du först ett villkor för utvärdering följt av en åtgärd som ska utlösas om villkoret är uppfyllt ( `True`). När du använder regeltypen When kan du använda flera AND- och OR-operatorer för att skapa [kapslade uttryck](#nestedexpressions).
+Regeltypen **När** följer regelkonstruktionen **condition-action-alternate action**, eller ibland bara **condition-action**. I den här regeltypen anger du först ett villkor för utvärdering följt av en åtgärd som utlöser om villkoret är uppfyllt ( `True`). När du använder regeltypen When kan du använda flera AND- och OR-operatorer för att skapa [kapslade uttryck](#nestedexpressions).
 
 Med regeltypen När kan du utvärdera ett villkor i ett formulärobjekt och utföra åtgärder på ett eller flera objekt.
 
@@ -132,39 +132,39 @@ När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtg
 
 **Aktivera** Aktiverar det angivna objektet.
 
-**Inaktivera** Inaktiverar det angivna objektet.
+**** InaktiveraInaktiverar det angivna objektet.
 
-**Anropa tjänst** Anropar en tjänst som konfigurerats i en formulärdatamodell. När du väljer åtgärden Anropa tjänst visas ett fält. När användaren knackar på fältet visas alla tjänster som konfigurerats i alla formulärdatamodeller i AEM. När du väljer en datamodelltjänst för ett formulär visas ytterligare fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten. Se exempelregel för att anropa datamodelltjänster för formulär.
+**Anropa** tjänstAnropar en tjänst som konfigurerats i en formulärdatamodell. När du väljer åtgärden Anropa tjänst visas ett fält. När användaren knackar på fältet visas alla tjänster som konfigurerats i alla formulärdatamodeller i AEM. När du väljer en datamodelltjänst för ett formulär visas ytterligare fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten. Se exempelregel för att anropa datamodelltjänster för formulär.
 
 Utöver formulärdatamodelltjänsten kan du ange en direkt WSDL-URL för att anropa en webbtjänst. En datamodelltjänst för formulär har dock många fördelar och det rekommenderade sättet att anropa en tjänst.
 
 Mer information om hur du konfigurerar tjänster i formulärdatamodellen finns i [AEM Forms-dataintegrering](/help/forms/using/data-integration.md).
 
-**Ange värdet för** Computes och ställer in värdet för det angivna objektet. Du kan ställa in objektvärdet på en sträng, värdet för ett annat objekt, det beräknade värdet med hjälp av matematiska uttryck eller funktioner, värdet för ett objekts egenskap eller utdatavärdet från en konfigurerad datamodelltjänst för formulär. När du väljer webbtjänstalternativet visas alla tjänster som är konfigurerade i alla formulärdatamodeller på din AEM. När du väljer en datamodelltjänst för ett formulär visas ytterligare fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten.
+**Ange värdet** för Computes och ställer in värdet för det angivna objektet. Du kan ställa in objektvärdet på en sträng, värdet för ett annat objekt, det beräknade värdet med hjälp av matematiska uttryck eller funktioner, värdet för ett objekts egenskap eller utdatavärdet från en konfigurerad datamodelltjänst för formulär. När du väljer webbtjänstalternativet visas alla tjänster som är konfigurerade i alla formulärdatamodeller på AEM. När du väljer en datamodelltjänst för ett formulär visas ytterligare fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten.
 
 Mer information om hur du konfigurerar tjänster i formulärdatamodellen finns i [AEM Forms-dataintegrering](/help/forms/using/data-integration.md).
 
-**Ange egenskap** Anger värdet för en egenskap för det angivna objektet.
+**Ange** egenskapAnger värdet för en egenskap för det angivna objektet.
 
-**Rensa värdet för** rensar värdet för det angivna objektet.
+**Clear Value** OfRensar värdet för det angivna objektet.
 
-**Ange fokus** Anger fokus för det angivna objektet.
+**Ange** FocusSets-fokus på det angivna objektet.
 
-**Spara formulär** Sparar formuläret.
+**Spara** formulärSparar formuläret.
 
-**Skicka in Forms** Skicka in formuläret.
+**Skicka** formulärSkickar formuläret.
 
-**Återställ formulär** Återställer formuläret.
+**Återställ** formulärÅterställer formuläret.
 
-**Validera formulär** Validerar formuläret.
+**Validera** formulärValiderar formuläret.
 
-**Lägg till instans** Lägger till en instans av den angivna repeterbara panelen eller tabellraden.
+**Lägg till** instansLägger till en instans av den angivna repeterbara panelen eller tabellraden.
 
-**Ta bort instans** Tar bort en instans av den angivna repeterbara panelen eller tabellraden.
+**Remove** InstanceTar bort en instans av den angivna repeterbara panelen eller tabellraden.
 
 ### Ange värdet för {#set-value-of}
 
-Regeltypen gör att du kan ange ett formulärobjekts värde beroende på om det angivna villkoret är uppfyllt eller inte. **[!UICONTROL Set Value of]** Värdet kan anges till ett värde för ett annat objekt, en stränglitteral, ett värde som härleds från ett matematiskt uttryck eller en funktion, ett värde för en egenskap för ett annat objekt eller utdata från en datamodelltjänst för ett formulär. På samma sätt kan du söka efter ett villkor för en komponent, en sträng, en egenskap eller värden som härletts från en funktion eller ett matematiskt uttryck.
+Med regeltypen **[!UICONTROL Set Value of]** kan du ange värdet för ett formulärobjekt beroende på om det angivna villkoret är uppfyllt eller inte. Värdet kan anges till ett värde för ett annat objekt, en stränglitteral, ett värde som härleds från ett matematiskt uttryck eller en funktion, ett värde för en egenskap för ett annat objekt eller utdata från en datamodelltjänst för ett formulär. På samma sätt kan du söka efter ett villkor för en komponent, en sträng, en egenskap eller värden som härletts från en funktion eller ett matematiskt uttryck.
 
 Observera att regeltypen Ange värde för inte är tillgänglig för alla formulärobjekt, till exempel paneler och knappar i verktygsfält. En standarduppsättningsvärde för regel har följande struktur:
 
@@ -180,7 +180,7 @@ När (valfritt):
 
 (Villkor 1 OCH villkor 2 OCH villkor 3) är SANT.
 
-I följande exempel används värdet i `dependentid` fältet som indata och värdet i `Relation` fältet anges som utdata för `Relation` argumentet i `getDependent` formulärdatamodellstjänsten.
+I följande exempel används värdet i fältet `dependentid` som indata och värdet för fältet `Relation` ställs in på utdata för argumentet `Relation` för formulärdatamodelltjänsten `getDependent`.
 
 ![set-value-web-service](assets/set-value-web-service.png)
 
@@ -192,7 +192,7 @@ Exempel på Ange värderegel med datamodelltjänst för formulär
 
 ### Visa {#show}
 
-Med regeltypen **Visa** kan du skriva en regel som visar eller döljer ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Regeltypen Visa utlöser även åtgärden Dölj om villkoret inte uppfylls eller returneras `False`.
+Med regeltypen **Visa** kan du skriva en regel som visar eller döljer ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Regeltypen Visa utlöser även åtgärden Dölj om villkoret inte uppfylls eller returnerar `False`.
 
 En vanlig Visa-regel är strukturerad på följande sätt:
 
@@ -208,7 +208,7 @@ En vanlig Visa-regel är strukturerad på följande sätt:
 
 ### Dölj {#hide}
 
-På liknande sätt som för regeltypen Visa kan du använda **Dölj** -regeltypen för att visa eller dölja ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Dölj-regeltypen aktiverar även åtgärden Visa om villkoret inte uppfylls eller returneras `False`.
+På liknande sätt som med regeltypen Visa kan du använda regeltypen **Dölj** för att visa eller dölja ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Dölj-regeltypen aktiverar även åtgärden Visa om villkoret inte uppfylls eller returnerar `False`.
 
 En vanlig Dölj-regel är strukturerad på följande sätt:
 
@@ -224,7 +224,7 @@ En vanlig Dölj-regel är strukturerad på följande sätt:
 
 ### Aktivera {#enable}
 
-Med **regeltypen Aktivera** kan du aktivera eller inaktivera ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Regeltypen Aktivera utlöser även åtgärden Inaktivera om villkoret inte uppfylls eller returneras `False`.
+Med regeltypen **Aktivera** kan du aktivera eller inaktivera ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Regeltypen Aktivera utlöser även åtgärden Inaktivera om villkoret inte uppfylls eller returnerar `False`.
 
 En vanlig Aktivera-regel är strukturerad på följande sätt:
 
@@ -238,9 +238,9 @@ En vanlig Aktivera-regel är strukturerad på följande sätt:
 
 `Disable Object A;`
 
-### Disable {#disable}
+### Inaktivera {#disable}
 
-Ungefär som med regeltypen Aktivera kan du med **regeltypen Inaktivera** aktivera eller inaktivera ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Regeltypen Inaktivera utlöser också åtgärden Aktivera om villkoret inte uppfylls eller returneras `False`.
+Ungefär som med regeltypen Aktivera kan du med regeltypen **Inaktivera** aktivera eller inaktivera ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Regeltypen Inaktivera utlöser även åtgärden Aktivera om villkoret inte uppfylls eller returnerar `False`.
 
 En vanlig inaktiveringsregel är strukturerad på följande sätt:
 
@@ -254,7 +254,7 @@ En vanlig inaktiveringsregel är strukturerad på följande sätt:
 
 `Enable Object A;`
 
-### Validate {#validate}
+### Validera {#validate}
 
 Regeltypen **Validera** validerar värdet i ett fält med hjälp av ett uttryck. Du kan till exempel skriva ett uttryck för att kontrollera att textrutan för att ange namn inte innehåller specialtecken eller siffror.
 
@@ -268,7 +268,7 @@ En vanlig valideringsregel är strukturerad enligt följande:
 
 >[!NOTE]
 >
->Om det angivna värdet inte överensstämmer med regeln Validera kan du visa ett valideringsmeddelande för användaren. Du kan ange meddelandet i **[!UICONTROL Script validation message]** fältet i komponentegenskaperna i sidofältet.
+>Om det angivna värdet inte överensstämmer med regeln Validera kan du visa ett valideringsmeddelande för användaren. Du kan ange meddelandet i fältet **[!UICONTROL Script validation message]** i komponentegenskaperna i sidofältet.
 
 ![skriptvalidering](assets/script-validation.png)
 
@@ -279,16 +279,17 @@ Regelredigeraren har ett omfattande men ändå enkelt användargränssnitt för 
 Så här startar du användargränssnittet för regelredigeraren:
 
 1. Öppna ett anpassat formulär i redigeringsläge.
-1. Tryck på det formulärobjekt som du vill skriva en regel för och tryck på ![redigeringsregler](assets/edit-rules.png)i komponentverktygsfältet. Användargränssnittet för regelredigeraren visas.
+1. Tryck på det formulärobjekt som du vill skriva en regel för och tryck i komponentverktygsfältet på ![edit-rules](assets/edit-rules.png). Användargränssnittet för regelredigeraren visas.
 
    ![create-rules](assets/create-rules.png)
 
    Alla befintliga regler för de markerade formulärobjekten visas i den här vyn. Mer information om hur du hanterar befintliga regler finns i [Hantera regler](/help/forms/using/rule-editor.md#p-manage-rules-p).
 
-1. Tryck för **[!UICONTROL Create]** att skriva en ny regel. Den visuella redigeraren för regelredigerarens användargränssnitt öppnas som standard när du startar regelredigeraren första gången.
+1. Tryck på **[!UICONTROL Create]** för att skriva en ny regel. Den visuella redigeraren för regelredigerarens användargränssnitt öppnas som standard när du startar regelredigeraren första gången.
    ![Regelredigeringsgränssnitt](assets/rule-editor-ui.png)
 
-   [Klicka för att förstora](assets/rule-editor-ui-1.png)så tittar vi närmare på varje komponent i regelredigeringsgränssnittet.
+   [Klicka för att ](assets/rule-editor-ui-1.png)
+  förstora Låt oss titta närmare på varje komponent i regelredigeringsgränssnittet.
 
 ### S. Visning av komponentregel {#a-component-rule-display}
 
@@ -302,7 +303,7 @@ På fliken Formulärobjekt visas en hierarkisk vy över alla objekt som finns i 
 
 De formulärobjekt som har en eller flera giltiga regler markerade med en grön punkt. Om någon av reglerna som tillämpas på ett formulärobjekt är ogiltig markeras formulärobjektet med en gul punkt.
 
-Fliken Funktioner innehåller en uppsättning inbyggda funktioner, till exempel summan av, Min av, Max av, Medel av, Antal, och Validera formulär. Du kan använda de här funktionerna för att beräkna värden i repeterbara paneler och tabellrader och använda dem i action- och condition-satser när du skriver regler. Du kan dock även skapa [anpassade funktioner](/help/forms/using/rule-editor.md#custom-functions) .
+Fliken Funktioner innehåller en uppsättning inbyggda funktioner, till exempel summan av, Min av, Max av, Medel av, Antal, och Validera formulär. Du kan använda de här funktionerna för att beräkna värden i repeterbara paneler och tabellrader och använda dem i action- och condition-satser när du skriver regler. Du kan dock även skapa [anpassade funktioner](/help/forms/using/rule-editor.md#custom-functions).
 
 ![Fliken Funktioner](assets/functions.png)
 
@@ -328,13 +329,13 @@ Användare i gruppen för formuläranvändare har åtkomst till kodredigeraren. 
 
 AEM Forms spårar det regelredigeringsläge som du använde när du skrev en regel sist. När du startar regelredigeraren nästa gång öppnas den i det läget. Du kan dock konfigurera ett standardläge så att regelredigeraren öppnas i det angivna läget. Så här gör du:
 
-1. Gå till AEM webbkonsol på https://[host]:[port]/system/console/configMgr.
+1. Gå till AEM webbkonsol på https://[värd]:[port]/system/console/configMgr.
 1. Klicka för att redigera **[!UICONTROL Adaptive Form Configuration Service]**.
-1. välj **[!UICONTROL Visual Editor]** eller **[!UICONTROL Code Editor]** från **[!UICONTROL Default Mode for Rule Editor]** listrutan
+1. välj **[!UICONTROL Visual Editor]** eller **[!UICONTROL Code Editor]** i listrutan **[!UICONTROL Default Mode for Rule Editor]**
 
 1. Klicka på **[!UICONTROL Save]**.
 
-### F. Knapparna Klar och Avbryt {#f-done-and-cancel-buttons}
+### F. Klar och avbryter knappar {#f-done-and-cancel-buttons}
 
 Knappen **[!UICONTROL Done]** används för att spara en regel. Du kan spara en ofullständig regel. Ofullständiga är dock ogiltiga och kan inte köras. Sparade regler för ett formulärobjekt visas nästa gång du startar regelredigeraren från samma formulärobjekt. Du kan hantera befintliga regler i den vyn. Mer information finns i [Hantera regler](/help/forms/using/rule-editor.md#p-manage-rules-p).
 
@@ -361,7 +362,7 @@ Utför följande steg för att skriva regler:
 
 1. Först skriver du regeln för att styra synligheten för fältet för makslön baserat på det alternativ som användaren väljer för alternativknappen för civilstånd.
 
-   Öppna låneansökningsformuläret i redigeringsläge. Tryck på **Marital Status** -komponenten och tryck på ![edit-rules](assets/edit-rules.png). Starta sedan regelredigeraren genom **[!UICONTROL Create]** att trycka.
+   Öppna låneansökningsformuläret i redigeringsläge. Tryck på komponenten **Marital status** och tryck på ![edit-rules](assets/edit-rules.png). Tryck sedan på **[!UICONTROL Create]** för att starta regelredigeraren.
 
    ![write-rules-visual-editor-1](assets/write-rules-visual-editor-1.png)
 
@@ -369,11 +370,11 @@ Utför följande steg för att skriva regler:
 
    Du kan inte ändra eller ändra det markerade objektet, men du kan välja en annan regeltyp med hjälp av den nedrullningsbara menyn. Om du vill skapa en regel för ett annat objekt trycker du på Avbryt för att avsluta regelredigeraren och starta den igen från det önskade formulärobjektet.
 
-1. Tryck på **[!UICONTROL Select State]** listrutan och välj **[!UICONTROL is equal to]**. Fältet **[!UICONTROL Enter a String]** visas.
+1. Tryck på listrutan **[!UICONTROL Select State]** och välj **[!UICONTROL is equal to]**. Fältet **[!UICONTROL Enter a String]** visas.
 
    ![write-rules-visual-editor-2](assets/write-rules-visual-editor-2.png)
 
-   I alternativknappen Marital status tilldelas alternativen **Gift** och **Enskilt** värde **0** respektive **1** . Du kan verifiera tilldelade värden på fliken Titel i dialogrutan Redigera som visas nedan.
+   I alternativknappen Marital status tilldelas alternativen **Gift** och **Enstaka** **0** respektive **1** värden. Du kan verifiera tilldelade värden på fliken Titel i dialogrutan Redigera som visas nedan.
 
    ![Värden för alternativknappar från regelredigeraren](assets/radio-button-values.png)
 
@@ -383,11 +384,11 @@ Utför följande steg för att skriva regler:
 
    Du har definierat villkoret som `When Marital Status is equal to Married`. Definiera sedan åtgärden som ska utföras om villkoret är sant.
 
-1. Välj **[!UICONTROL Show]** från **[!UICONTROL Select Action]** listrutan i programsatsen Sedan.
+1. I satsen then väljer du **[!UICONTROL Show]** i listrutan **[!UICONTROL Select Action]**.
 
    ![write-rules-visual-editor-5](assets/write-rules-visual-editor-5.png)
 
-1. Dra och släpp fältet **Muslön** från fliken Formulärobjekt i objektet **Släpp eller markera här** . Du kan också trycka på objektet **Släpp eller markera här** och markera fältet **Musmatur** på snabbmenyn, som listar alla formulärobjekt i formuläret.
+1. Dra-och-släpp fältet **Muslön** från fliken Formulärobjekt på **Släpp objekt eller välj här** fält. Du kan också trycka på **Släpp eller markera här**-fältet och välja fältet **Muslön** på snabbmenyn som visar alla formulärobjekt i formuläret.
 
    ![write-rules-visual-editor-6](assets/write-rules-visual-editor-6.png)
 
@@ -407,23 +408,23 @@ Utför följande steg för att skriva regler:
 
    ![write-rules-visual-editor-9](assets/write-rules-visual-editor-9.png)
 
-1. Skriv sedan en regel för att beräkna lånebeloppet, som är 50 % av den totala lönen, och visa det i fältet Låneberättigande. För att uppnå detta skapar du **Ange värde för** regler i fältet Låneberättigande.
+1. Skriv sedan en regel för att beräkna lånebeloppet, som är 50 % av den totala lönen, och visa det i fältet Låneberättigande. För att uppnå detta skapar du **Ange värdet på**-reglerna i fältet Lånekvalificering.
 
-   I redigeringsläget trycker du på **[!UICONTROL Loan Eligibility]** fältet och trycker på ![redigeringsregler](assets/edit-rules.png). Starta sedan regelredigeraren genom **[!UICONTROL Create]** att trycka.
+   I redigeringsläget trycker du på fältet **[!UICONTROL Loan Eligibility]** och trycker på ![edit-rules](assets/edit-rules.png). Tryck sedan på **[!UICONTROL Create]** för att starta regelredigeraren.
 
-1. Välj **[!UICONTROL Set Value Of]** regel i listrutan Regel.
+1. Välj **[!UICONTROL Set Value Of]**-regel i listrutan Regel.
 
    ![write-rules-visual-editor-10](assets/write-rules-visual-editor-10.png)
 
-1. Tryck **[!UICONTROL Select Option]** och välj **[!UICONTROL Mathematical Expression]**. Ett fält som skriver matematiskt uttryck öppnas.
+1. Tryck på **[!UICONTROL Select Option]** och välj **[!UICONTROL Mathematical Expression]**. Ett fält som skriver matematiskt uttryck öppnas.
 
    ![write-rules-visual-editor-11](assets/write-rules-visual-editor-11.png)
 
 1. I uttrycksfältet:
 
-   * Markera eller dra-och-släpp från fliken Forms-objekt i fältet **Lön** i det första **Släpp-objektet eller välj här** .
-   * Välj **Plus** i fältet **Välj operator** .
-   * Markera eller dra och släpp från fliken Forms-objekt i fältet **Makuslön** i det andra **Drop-objektet eller markera här** .
+   * Markera eller dra-och-släpp i fältet **Lön** i det första **Släpp-objektet på fliken Forms-objekt, eller markera här**-fältet.
+   * Välj **Plus** i fältet **Välj operator**.
+   * Markera eller dra-och-släpp i fältet **Muslön** i det andra **Släpp-objektet på fliken Forms-objekt, eller markera här**-fältet.
 
    ![write-rules-visual-editor-12](assets/write-rules-visual-editor-12.png)
 
@@ -431,7 +432,7 @@ Utför följande steg för att skriva regler:
 
    ![write-rules-visual-editor-13](assets/write-rules-visual-editor-13.png)
 
-   I fältet för utökat uttryck väljer du **dividerat med** i fältet **Välj operator** och **Nummer** i fältet **Välj alternativ** . Ange sedan **2** i nummerfältet.
+   I fältet för utökat uttryck väljer du **dividerat med** i fältet **Välj operator** och **Nummer** i fältet **Välj alternativ**. Ange sedan **2** i nummerfältet.
 
    ![write-rules-visual-editor-14](assets/write-rules-visual-editor-14.png)
 
@@ -447,9 +448,9 @@ Utför följande steg för att skriva regler:
 
    I programsatsen When:
 
-   * Markera eller dra-och-släpp på fliken Forms-objekt i fältet **Marital status** i det första **Drop-objektet eller välj här** .
-   * Välj **är lika med** i fältet **Välj operator** .
-   * Välj String i det andra **Drop-objektet eller markera här** -fältet och ange **Gift** i fältet **Ange en sträng** .
+   * Markera eller dra-och-släpp i fältet **Marital status** i det första **Släpp-objektet på fliken Forms-objekt, eller välj här**-fältet.
+   * Välj i **s equal to** i fältet **Välj operator**.
+   * Välj String i det andra **Släpp-objektet eller markera här**-fältet och ange **Marrivad** i **Ange en sträng**-fältet.
 
    Regeln visas slutligen så här i regelredigeraren.  ![write-rules-visual-editor-16](assets/write-rules-visual-editor-16.png)
 
@@ -471,7 +472,7 @@ Utför följande steg för att skriva regler:
 
 Användare som läggs till i gruppen för formuläranvändare kan använda kodredigeraren. Regelredigeraren genererar automatiskt JavaScript-koden för alla regler som du skapar med den visuella redigeraren. Du kan växla från den visuella redigeraren till kodredigeraren för att visa den genererade koden. Men om du ändrar regelkoden i kodredigeraren kan du inte växla tillbaka till den visuella redigeraren. Om du föredrar att skriva regler i kodredigeraren i stället för i den visuella redigeraren kan du skriva reglerna på nytt i kodredigeraren. Med den visuella kodredigeraren kan du växla mellan de två lägena.
 
-Kodredigeraren JavaScript är uttrycksspråket i adaptiva formulär. Alla uttryck är giltiga JavaScript-uttryck och använder API:er för skriptmodell för adaptiva formulär. Dessa uttryck returnerar värden av vissa typer. En fullständig lista över adaptiva formulärklasser, händelser, objekt och offentliga API:er finns i API-referens för [JavaScript-bibliotek för adaptiva formulär](https://helpx.adobe.com/experience-manager/6-4/forms/javascript-api/index.html).
+Kodredigeraren JavaScript är uttrycksspråket i adaptiva formulär. Alla uttryck är giltiga JavaScript-uttryck och använder API:er för skriptmodell för adaptiva formulär. Dessa uttryck returnerar värden av vissa typer. En fullständig lista över adaptiva formulärklasser, händelser, objekt och offentliga API:er finns i [API-referens för JavaScript-bibliotek för adaptiva formulär](https://helpx.adobe.com/experience-manager/6-4/forms/javascript-api/index.html).
 
 Mer information om riktlinjer för att skriva regler i kodredigeraren finns i [Adaptiva formuläruttryck](/help/forms/using/adaptive-form-expressions.md).
 
@@ -486,16 +487,16 @@ När du skriver JavaScript-kod i regelredigeraren kan du använda följande visu
 
 #### Anpassade funktioner i regelredigeraren {#custom-functions}
 
-Förutom färdiga funktioner som *Summan av, *som listas under Funktioner Output, kan du skriva anpassade funktioner som du ofta behöver. Kontrollera att den funktion du skriver åtföljs av `jsdoc` ovanstående.
+Förutom färdiga funktioner som *Summan av, *som listas under Funktioner Output, kan du skriva anpassade funktioner som du ofta behöver. Kontrollera att den funktion du skriver åtföljs av `jsdoc` ovanför den.
 
 Följande `jsdoc` krävs:
 
 * Om du vill ha anpassad konfiguration och beskrivning.
 * Eftersom det finns flera sätt att deklarera en funktion i `JavaScript,` och kommentarer kan du hålla reda på funktionerna.
 
-For more information, see [usejsdoc.org](https://usejsdoc.org/).
+Mer information finns i [usejsdoc.org](https://usejsdoc.org/).
 
-Taggar `jsdoc` som stöds:
+`jsdoc`-taggar som stöds:
 
 * **Privat**
 
@@ -507,7 +508,7 @@ Taggar `jsdoc` som stöds:
 
    Syntax: `@name funcName <Function Name>`
 
-   Du kan även använda `,` följande: `@function funcName <Function Name>` **eller** `@func` `funcName <Function Name>`.
+   Alternativt `,` kan du använda: `@function funcName <Function Name>` **eller** `@func` `funcName <Function Name>`.
 
    `funcName` är namnet på funktionen (inga blanksteg tillåts).
 
@@ -547,7 +548,7 @@ Taggar `jsdoc` som stöds:
 
    1. string
    1. tal
-   1. boolean
+   1. boolesk
    1. date
    1. array
 
@@ -563,12 +564,12 @@ Du kan t.ex. lägga till en egen funktion som beräknar en kvadratyta. Sidlängd
 
 Utför följande steg för att skapa ett klientbibliotek och lägga till det i CRX-databasen.
 
-1. Skapa ett klientbibliotek. Mer information finns i [Använda bibliotek](/help/sites-developing/clientlibs.md)på klientsidan.
-1. I CRXDE lägger du till en egenskap `categories`med strängtypsvärde som `customfunction` i `clientlib` mappen.
+1. Skapa ett klientbibliotek. Mer information finns i [Använda bibliotek på klientsidan](/help/sites-developing/clientlibs.md).
+1. I CRXDE lägger du till egenskapen `categories`med strängtypsvärdet `customfunction` i mappen `clientlib`.
 
    >[!NOTE]
    >
-   >`customfunction`är en exempelkategori. Du kan välja vilket namn som helst för kategorin som du skapar i `clientlib`mappen.
+   >`customfunction`är en exempelkategori. Du kan välja vilket namn som helst för kategorin som du skapar i mappen `clientlib`.
 
 När du har lagt till ditt klientbibliotek i CRX-databasen kan du använda det i ditt adaptiva formulär. Du kan använda den anpassade funktionen som en regel i formuläret. Utför följande steg för att lägga till klientbiblioteket i ditt adaptiva formulär.
 
@@ -581,11 +582,11 @@ När du har lagt till ditt klientbibliotek i CRX-databasen kan du använda det i
 
    ![Lägga till klientbiblioteket för anpassade funktioner](assets/clientlib.png)
 
-1. Markera den numeriska rutan och tryck på ![redigeringsregler](assets/edit-rules.png) för att öppna regelredigeraren.
+1. Markera den numeriska rutan och tryck på ![edit-rules](assets/edit-rules.png) för att öppna regelredigeraren.
 1. Tryck på **Skapa regel**. Använd alternativen som visas nedan för att skapa en regel som sparar indatavärdet i fyrkantiga värden i formulärutdatafältet.
-   [ ![Använda anpassade funktioner för att skapa en](assets/add-custom-rule.png)](assets/add-custom-rule-1.png)ruleTap **Done**. Din anpassade funktion har lagts till.
+   [ ![Använda anpassade funktioner för att skapa en ](assets/add-custom-rule.png)](assets/add-custom-rule-1.png)ruleTap  **Done**. Din anpassade funktion har lagts till.
 
-#### Typer som stöds för funktionsdeklaration {#function-declaration-supported-types}
+#### Funktionsdeklaration som stöds av typerna {#function-declaration-supported-types}
 
 **Funktionssats**
 
@@ -595,7 +596,7 @@ function area(len) {
 }
 ```
 
-Den här funktionen inkluderas utan `jsdoc` kommentarer.
+Den här funktionen inkluderas utan `jsdoc`-kommentarer.
 
 **Funktionsuttryck**
 
@@ -646,7 +647,7 @@ var c = {
 
 >[!NOTE]
 >
->Se till att du använder `jsdoc` för alla anpassade funktioner. Även om `jsdoc`kommentarer uppmuntras bör du inkludera en tom `jsdoc`kommentar för att markera funktionen som anpassad funktion. Den aktiverar standardhantering av din anpassade funktion.
+>Se till att du använder `jsdoc` för alla anpassade funktioner. Även om `jsdoc`kommentarer uppmuntras bör du ta med en tom `jsdoc`kommentar för att markera funktionen som anpassad funktion. Den aktiverar standardhantering av din anpassade funktion.
 
 ## Hantera regler {#manage-rules}
 
@@ -656,15 +657,15 @@ Alla befintliga regler för ett formulärobjekt visas när du trycker på objekt
 
 Du kan utföra följande åtgärder på regler:
 
-* **Expandera/komprimera**: Kolumnen Innehåll i regellistan visar regelinnehållet. Om hela regelinnehållet inte visas i standardvyn expanderar du det genom att trycka på ![expand-rule-content](assets/expand-rule-content.png) .
+* **Expandera/komprimera**: Kolumnen Innehåll i regellistan visar regelinnehållet. Om hela regelinnehållet inte visas i standardvyn expanderar du det genom att trycka på ![expand-rule-content](assets/expand-rule-content.png).
 
 * **Ändra ordning**: Alla nya regler som du skapar staplas längst ned i regellistan. Reglerna körs uppifrån och ned. Regeln längst upp körs först följt av andra regler av samma typ. Om du till exempel har reglerna When, Show, Enable och When vid första, andra, tredje respektive fjärde positionen uppifrån, kommer regeln When överst att köras först följt av regeln When vid den fjärde positionen. Sedan körs reglerna Visa och Aktivera.
 
-   Du kan ändra ordningen på en regel genom att trycka på ![sorteringsreglerna](assets/sort-rules.png) mot den eller dra och släppa den i önskad ordning i listan.
+   Du kan ändra ordningen på en regel genom att trycka på ![sorteringsregler](assets/sort-rules.png) eller dra och släppa den i önskad ordning i listan.
 
 * **Redigera**: Om du vill redigera en regel markerar du kryssrutan bredvid regeltiteln. Ytterligare alternativ för att redigera och ta bort regeln visas. Tryck på **Redigera** för att öppna den valda regeln i regelredigeraren i visuellt läge eller kodredigeringsläge beroende på vilket läge som används för att skapa regeln.
 
-* **Ta bort**: Om du vill ta bort en regel markerar du den och trycker på **Delete**.
+* **Ta bort**: Om du vill ta bort en regel markerar du den och trycker på  **Delete**.
 
 * **Aktivera/inaktivera**: Du kan behöva göra uppehåll i användningen av en regel tillfälligt. Du kan välja en eller flera regler och inaktivera dem genom att trycka på Inaktivera i verktygsfältet Åtgärder. Om en regel är inaktiverad körs den inte vid körningen. Om du vill aktivera en inaktiverad regel kan du markera den och trycka på Aktivera i åtgärdsverktygsfältet. Statuskolumnen för regeln visar om regeln är aktiverad eller inaktiverad.
 
@@ -676,7 +677,7 @@ Du kan kopiera och klistra in en regel från ett fält till andra liknande fält
 
 Så här kopierar och klistrar du in regler:
 
-1. Tryck på det formulärobjekt du vill kopiera en regel från och tryck på ![redigeringsregeln](assets/editrule.png)i komponentverktygsfältet. Användargränssnittet för regelredigeraren visas med formulärobjektet markerat och de befintliga reglerna visas.
+1. Tryck på det formulärobjekt du vill kopiera en regel från och tryck i komponentverktygsfältet på ![redigeringsregel](assets/editrule.png). Användargränssnittet för regelredigeraren visas med formulärobjektet markerat och de befintliga reglerna visas.
 
    ![copyrule](assets/copyrule.png)
 
@@ -702,11 +703,11 @@ Nedan visas ett exempel på en kapslad regel som visar ett meddelande till anvä
 
 ![komplexuttryck](assets/complexexpression.png)
 
-Du kan också redigera genom att dra och släppa villkor i en regel. Tryck och hovra över handtaget ( ![handtaget](assets/handle.png)) före ett villkor. När pekaren ändras till en handsymbol enligt nedan drar och släpper du villkoret någonstans i linjen. Regelstrukturen ändras.
+Du kan också redigera genom att dra och släppa villkor i en regel. Tryck och hovra över handtaget ( ![handle](assets/handle.png)) före ett villkor. När pekaren ändras till en handsymbol enligt nedan drar och släpper du villkoret någonstans i linjen. Regelstrukturen ändras.
 
 ![dra-och-släpp](assets/drag-and-drop.png)
 
-## Villkor för datumuttryck {#dateexpression}
+## Datumuttrycksvillkor {#dateexpression}
 
 Regelredigeraren låter dig använda datumjämförelser för att skapa villkor.
 
@@ -720,7 +721,7 @@ När det ifyllda datumet infaller tidigare än det aktuella datumet visas textme
 
 ![dateexpressionCondition](assets/dateexpressionconditionmet.png)
 
-## Nummerjämförelsevillkor {#number-comparison-conditions}
+## Villkor för nummerjämförelse {#number-comparison-conditions}
 
 Med regelredigeraren kan du skapa villkor som jämför två tal.
 
@@ -742,19 +743,19 @@ Alla skript och uttryck som du måste ha skrivit på fliken Skript är tillgäng
 
 ### Anropa datamodelltjänst för formulär {#invoke}
 
-Betrakta en webbtjänst `GetInterestRates` som tar lånebelopp, löptid och sökandens kreditpoäng som indata och returnerar en låneplan som inkluderar EMI-belopp och ränta. Du skapar en formulärdatamodell med webbtjänsten som datakälla. Du lägger till datamodellsobjekt och en `get` tjänst i formulärmodellen. Tjänsten visas på fliken Tjänster i formulärdatamodellen. Skapa sedan en anpassningsbar blankett som innehåller fält från datamodellsobjekt för att hämta in användarens indata för lånebelopp, löptid och kreditpoäng. Lägg till en knapp som utlöser webbtjänsten för att hämta planinformation. Utdata fylls i i lämpliga fält.
+Betrakta en webbtjänst `GetInterestRates` som tar lånebelopp, löptid och sökandens kreditpoäng som indata och returnerar en låneplan som inkluderar EMI-belopp och ränta. Du skapar en formulärdatamodell med webbtjänsten som datakälla. Du lägger till datamodellsobjekt och en `get`-tjänst i formulärmodellen. Tjänsten visas på fliken Tjänster i formulärdatamodellen. Skapa sedan en anpassningsbar blankett som innehåller fält från datamodellsobjekt för att hämta in användarens indata för lånebelopp, löptid och kreditpoäng. Lägg till en knapp som utlöser webbtjänsten för att hämta planinformation. Utdata fylls i i lämpliga fält.
 
 I följande regel visas hur du konfigurerar åtgärden Anropa tjänst för att slutföra exempelscenariot.
 
 ![example-invoke-services](assets/example-invoke-services.png)
 
-### Utlösa flera åtgärder med hjälp av regeln När {#triggering-multiple-actions-using-the-when-rule}
+### Startar flera åtgärder med hjälp av When-regeln {#triggering-multiple-actions-using-the-when-rule}
 
 I en låneansökan vill du ta reda på om lånesökanden är en befintlig kund eller inte. Baserat på den information som användaren anger, bör fältet för kund-ID visas eller döljas. Du vill också fokusera på fältet för kund-ID om användaren är en befintlig kund. Formuläret för låneansökan innehåller följande komponenter:
 
-* En alternativknapp, **Är du en befintlig Geometrixx?**, som innehåller alternativen Ja och Nej. Värdet för Ja är **0** och Nej är **1**.
+* En alternativknapp, **Är du en befintlig Geometrixx?**, som innehåller alternativen Ja och Nej. Värdet för Yes är **0** och No är **1**.
 
-* Ett textfält, **Geometrixx kund-ID**, som anger kundens ID.
+* Ett textfält, **Kund-ID för Geometrixx**, som anger kund-ID.
 
 När du skriver en When-regel på alternativknappen för att implementera det här beteendet, visas regeln på följande sätt i den visuella regelredigeraren.  ![when-rule-example](assets/when-rule-example.png)
 
@@ -764,7 +765,7 @@ Regeln visas enligt följande i kodredigeraren.
 
 ![when-rule-example-code](assets/when-rule-example-code.png)
 
-### Använda ett funktionsutdata i en regel {#using-a-function-output-in-a-rule}
+### Använda funktionsutdata i en regel {#using-a-function-output-in-a-rule}
 
 I ett inköpsorderformulär har du följande tabell där användarna fyller i sina beställningar. I denna tabell:
 
@@ -774,7 +775,7 @@ I ett inköpsorderformulär har du följande tabell där användarna fyller i si
 
 ![example-function-table](assets/example-function-table.png)
 
-**S.** Rad1 **B.** Kvantitet **C.** Total kvantitet
+**A.** Rad1  **B.** Kvantitet  **C.** Total kvantitet
 
 Nu vill du lägga till angivna kvantiteter i kolumnen Produktkvantitet för alla produkter och visa summan i cellen Total kvantitet. Du kan uppnå detta genom att skriva en Set Value Of-regel i cellen Total Quantity enligt nedan.
 
@@ -782,7 +783,7 @@ Nu vill du lägga till angivna kvantiteter i kolumnen Produktkvantitet för alla
 
 ![example-function-output-code](assets/example-function-output-code.png)
 
-### Validera ett fältvärde med uttryck {#validating-a-field-value-using-expression}
+### Validera ett fältvärde med uttrycket {#validating-a-field-value-using-expression}
 
 I inköpsorderformuläret som förklaras i föregående exempel vill du hindra användare från att beställa mer än en kvantitet av en produkt till ett pris som överstiger 10000. Du kan skriva en valideringsregel enligt nedan.
 
