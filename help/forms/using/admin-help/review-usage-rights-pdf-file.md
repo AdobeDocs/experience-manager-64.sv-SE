@@ -22,7 +22,7 @@ ht-degree: 0%
 
 När du överför en PDF-fil till webbprogrammet Acrobat Reader DC Extensions kan du visa den här informationen: om den har utökats i Reader, om någon användarbehörighet har använts och förfallodatum för den.
 
-1. Logga in på webbprogrammet Acrobat Reader DC Extensions på http://localhost:*[port]*/ReaderExtensions (där *[port]* är programserverns portnummer).
+1. Logga in på webbprogrammet för Acrobat Reader DC-tillägg på http://localhost:*[port]*/ReaderExtensions (där *[port]* är programserverns portnummer).
 1. Klicka på Bläddra för att överföra PDF-filen och klicka sedan på Info. Informationen visas under filnamnet.
 
    Mer information om hur du ändrar filens användningsbehörighet finns i hjälpen för Acrobat Reader DC-tillägg.
