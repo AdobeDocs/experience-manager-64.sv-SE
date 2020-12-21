@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Använda ett anpassat formulär i HTML Workspace {#using-an-adaptive-form-in-html-workspace}
+# Använda ett anpassat formulär på HTML-arbetsytan {#using-an-adaptive-form-in-html-workspace}
 
 Med AEM Forms on JEE kan du använda ett adaptivt formulär i HTML Workspace.
 
@@ -31,25 +31,25 @@ Gör följande för att aktivera anpassade formulär som ska användas i process
 * I egenskapsbladet Tilldela uppgift/Startpunkt för Workbench kan du dölja det översta/globala verktygsfältet i ett anpassat formulär.
 * Du kan använda nya åtgärdsprofiler för att rendera och skicka åtgärder i anpassningsbara formulär.
 
-### Export och import av LiveCycle {#livecycle-application-export-and-import}
+### Export och import av {#livecycle-application-export-and-import}-program från LiveCycle
 
 Eftersom adaptiva formulär finns i AEM innehåller LiveCycle-programexporten endast referenser för adaptiva formulär som används. Export och import av LiveCycle är därför en tvåstegsprocess. Programmet LiveCycle innehåller processdefinitioner och så vidare. Ett separat paket som innehåller adaptiva formulär exporteras som en ZIP-fil från AEM. När du importerar importeras LiveCycle-programmet via Workbench och anpassningsbara formulär importeras via AEM.
 
-## Användarupplevelsen av anpassningsbara formulär i HTML Workspace {#user-experience-of-adaptive-form-in-html-workspace}
+## Användarupplevelse av anpassat formulär på HTML-arbetsytan {#user-experience-of-adaptive-form-in-html-workspace}
 
 HTML Workspace innehåller vissa adaptiva formulärspecifika kontroller utöver kontroller som är tillgängliga för mobilformulär. En användare kan lägga till bilagor, spara, signera, skicka och navigera i de anpassade formulären i HTML Workspace när användaren öppnar en uppgift eller startpunkt. Nedan beskrivs närmare:
 
 1. För **attach **files används uppgiftsbilagor, vilket var fallet i Mobile Forms. Alla knappar av typen bifogad fil i anpassat formulär är dolda.
 
-1. Om du vill spara ett anpassat formulär klickar du på **Spara**, vilket var fallet i Mobile Forms. Alla knappar av typen Spara i anpassat formulär är dolda.
+1. Om du vill spara ett anpassat formulär klickar du på **Spara**, som i Mobile Forms. Alla knappar av typen Spara i anpassat formulär är dolda.
 
-1. Om du vill skicka in ett anpassat formulär använder du **Skicka** -knappen eller de tillgängliga ruttåtgärderna, vilket var fallet i Mobile Forms. Alla knappar av typen Skicka i anpassat formulär är dolda.
+1. Om du vill skicka ett anpassat formulär använder du knappen **Skicka** eller de tillgängliga ruttåtgärderna, vilket var fallet i Mobile Forms. Alla knappar av typen Skicka i anpassat formulär är dolda.
 
 1. **Global verktygsfältsynlighet** för adaptiv form: Om processdesignern döljer det globala verktygsfältet/verktygsfältet på den översta nivån visas inte verktygsfältet och knapparna i anpassningsbara formulär.
 
 1. **Navigeringskontroller för arbetsytan för Adaptiv Forms**: Knapparna Nästa/Föregående är tillgängliga tillsammans med knapparna Spara, Skicka och Vidarebefordra åtgärd för ett anpassat formulär i HTML Workspace. Klicka på knapparna Nästa/Föregående för att navigera i paneler med adaptiva formulär i HTML Workspace. Knapparna Nästa/Föregående ger djup navigering, på liknande sätt som navigeringskontrollerna i mobilvyn för adaptiva formulär.
 
-1. **eSign-tjänster och komponenten i sammanfattning av det adaptiva formuläret**: Sammanfattningskomponenten fungerar inte i HTML Workspace. Det innebär att om ett adaptivt formulär har en Sammanfattningskomponent visas det inte på arbetsytan. I stället för att skicka automatiskt i eSign-komponenten klickar arbetsyteanvändaren på åtgärden Skicka eller en vägåtgärd i HTML-arbetsytan. När ett dokument har signerats visas det som ett platt signerat dokument. Klicka på **Skicka** eller en vägåtgärd för att stänga/slutföra uppgiften eller Startpunkten.
+1. **eSign-tjänster och komponenten i sammanfattning av det adaptiva formuläret**: Sammanfattningskomponenten fungerar inte i HTML Workspace. Det innebär att om ett adaptivt formulär har en Sammanfattningskomponent visas det inte på arbetsytan. I stället för att skicka automatiskt i eSign-komponenten klickar arbetsyteanvändaren på åtgärden Skicka eller en vägåtgärd i HTML-arbetsytan. När ett dokument har signerats visas det som ett platt signerat dokument. Klicka på **Skicka** eller en vägåtgärd för att stänga/slutföra aktiviteten eller startpunkten.
 
    Det signerade dokumentet samlas in från eSign-servern och XML-datafilen vidarebefordras till nästa steg i processen.
 
@@ -66,17 +66,17 @@ HTML Workspace innehåller vissa adaptiva formulärspecifika kontroller utöver 
    ![Skapa ny process](assets/create_new_process.png)
 
 1. Skapa en startpunkt eller Tilldela uppgift och dubbelklicka på den.
-1. Under **[!UICONTROL Presentation & Data]** avsnittet markerar du **[!UICONTROL use a CRX asset]** och klickar på ellipserna före resursen.
+1. Välj **[!UICONTROL use a CRX asset]** under **[!UICONTROL Presentation & Data]**-avsnittet och klicka på ellipserna före resursen.
 
    ![Använda en CRX-resurs](assets/use_crx_asset.png)
 
-1. Markera det adaptiva formulär som skapats med användargränssnittet Hantera resurser och klicka på **[!UICONTROL OK]**.
+1. Markera det adaptiva formulär som skapats med användargränssnittet för hantering av resurser och klicka på **[!UICONTROL OK]**.
 
    ![Välj ett anpassat formulär](assets/selecting_form.png)
 
    >[!NOTE]
    >
-   >Mer information om hur du skapar ett anpassat formulär finns i [Skapa ett anpassat formulär](/help/forms/using/creating-adaptive-form.md).
+   >Mer information om hur du skapar ett adaptivt formulär finns i [Skapa ett adaptivt formulär](/help/forms/using/creating-adaptive-form.md).
    >
    >Mer information om hur du skapar en process finns i [Skapa och hantera processer](https://help.adobe.com/en_US/AEMForms/6.1/WorkbenchHelp/WS92d06802c76abadb-1cc35bda128261a20dd-7ff7.2.html).
 
