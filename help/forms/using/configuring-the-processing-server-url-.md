@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Konfigurera AEM DS-inställningar {#configuring-aem-ds-settings}
+# Konfigurerar AEM DS-inställningar {#configuring-aem-ds-settings}
 
 I den här artikeln beskrivs hur du konfigurerar **AEM DS Settings Service**. Den här inställningen kan användas i flera scenarier, till exempel:
 
@@ -36,11 +36,11 @@ Så här konfigurerar du **[!UICONTROL AEM DS Settings]**:
 
    ![aem_web_configuration_console](assets/aem_web_configuration_console.png)
 
-1. Leta upp och klicka på **[!UICONTROL Adobe Experience Manager Web Console Configuration]** alternativet i **[!UICONTROL AEM DS Settings]** fönstret.
+1. I fönstret **[!UICONTROL Adobe Experience Manager Web Console Configuration]** letar du reda på och klickar på alternativet **[!UICONTROL AEM DS Settings]**.
 
    ![ds_settings](assets/ds_settings.png)
 
-1. I **[!UICONTROL AEM DS Settings Service]** fönstret visas de vanliga konfigurationsinställningarna för AEM DS-komponenter.
+1. Fönstret **[!UICONTROL AEM DS Settings Service]** visar de vanliga konfigurationsinställningarna för AEM DS-komponenter.
 
    ![ds_settings_1](assets/ds_settings_1.png)
 
@@ -48,7 +48,7 @@ Så här konfigurerar du **[!UICONTROL AEM DS Settings]**:
 
    **[!UICONTROL Processing Server URL]**: Bearbetningsservern är den server där Forms- eller AEM-arbetsflödet måste aktiveras. Detta kan vara samma som URL:en för den AEM författarinstansen eller den andra server-URL:en (d.v.s. http:// localhost:port/).
 
-   **[!UICONTROL Processing Server User Name]**: Användarnamn för arbetsflöde [baserat på den server-URL som används]
+   **[!UICONTROL Processing Server User Name]**: Användarnamn för arbetsflöde  [baserat på den server-URL som används]
 
    **[!UICONTROL Processing Server Password]**: Lösenord för arbetsflödesanvändare
 
