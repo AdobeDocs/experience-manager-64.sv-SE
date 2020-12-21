@@ -24,7 +24,7 @@ Kunskap om CSS och LESS-ramverket.
 
 ## Vad kan anpassas {#what-can-be-customized}
 
-I artikeln listas allmänt tillgängliga CSS-klasser för adaptiva formulär. Du kan använda dessa klasser för att formatera olika komponenter i ett anpassat formulär. Formateringen av redigeringskomponenter, t.ex. dialogrutor och statusfält som visar varningar, ligger utanför artikelns omfång. Använd bara dessa formateringskonstruktioner när du skapar format (med CSS eller Less) när du inte kan formatera komponenter med [temaredigeraren](themes.md).
+I artikeln listas allmänt tillgängliga CSS-klasser för adaptiva formulär. Du kan använda dessa klasser för att formatera olika komponenter i ett anpassat formulär. Formateringen av redigeringskomponenter, t.ex. dialogrutor och statusfält som visar varningar, ligger utanför artikelns omfång. Använd dessa formateringskonstruktioner om du bara vill skapa format (med CSS eller Less) när du inte kan formatera komponenter med [temaredigeraren](themes.md).
 
 ## Anpassa format i anpassningsbara formulär {#customizing-styles-in-adaptive-forms}
 
@@ -53,7 +53,7 @@ Baserat på Bootstrap definierar följande uppsättning CSS-egenskaper temat fö
 
 För närvarande definieras LESS-variabler bara för dessa egenskaper för de olika elementen i en adaptiv form.
 
-## Ändra komponentstil {#changing-component-style}
+## Ändra komponentformat {#changing-component-style}
 
 Du kan ändra elementens utseende, layout, placering och synlighet. För att utföra den här uppgiften skapar eller uppdaterar du dina anpassade css-filer så att de innehåller de formateringskonstruktioner som listas i den här artikeln.
 
@@ -139,7 +139,7 @@ Fälten innehåller etiketter, widgetar, hjälpbeskrivning (både lång och kort
 
 ## Etikettformat {#label-styling}
 
-HTML-elementets **etikett** som används för fältet innehåller klasserna **vänster** eller **överst** beroende på om etiketten finns överst eller till vänster.
+HTML-elementet **label** som används för fältet innehåller klasserna **left** eller **top** beroende på om etiketten finns högst upp eller till vänster.
 
 <table> 
  <tbody> 
@@ -179,11 +179,11 @@ HTML-elementets **etikett** som används för fältet innehåller klasserna **v�
  </tbody> 
 </table>
 
-CSS-reglerna för etiketten tillämpas med **etiketten guideFieldLabel** . Om du är författare åsidosätter du den här regeln för att göra dina anpassade ändringar synliga.
+CSS-reglerna för etiketten tillämpas med etiketten **guideFieldLabel**. Om du är författare åsidosätter du den här regeln för att göra dina anpassade ändringar synliga.
 
-## Widgets-format {#widgets-styling}
+## Widgetar formaterar {#widgets-styling}
 
-Beroende på vilken typ de har innehåller widgetar även klasser. Vanligtvis innehåller widgetar `guideFieldWidget` klassen. De widgetar som levereras med HTML använder normalt HTML-elementets standardindata och -val. Formateringen görs därefter. Du kan inte formatera en anpassad widget genom att ändra variablerna.
+Beroende på vilken typ de har innehåller widgetar även klasser. Vanligtvis innehåller widgetar klassen `guideFieldWidget`. De widgetar som levereras med HTML använder normalt HTML-elementets standardindata och -val. Formateringen görs därefter. Du kan inte formatera en anpassad widget genom att ändra variablerna.
 
 <table> 
  <tbody> 
@@ -289,7 +289,7 @@ Formateringen för fokuserade, obligatoriska och inaktiverade fält är begräns
 
 ## Hjälpbeskrivning {#help-description}
 
-En författare kan ange hjälpinnehåll i fälten med hjälp av komponenterna för kort och lång beskrivning. Båda komponenterna har en gemensam klass `.guideHelpDescription` och en annan klass `.long`/ `.short`beroende på typen av beskrivning. Hjälpinnehållet omsluts av ett styckeelement för att åsidosätta formateringen av beskrivningen. Hjälpbeskrivningen (både lång och kort) ändras med variabler som börjar med widgetshelp, vilket anges i följande tabell:
+En författare kan ange hjälpinnehåll i fälten med hjälp av komponenterna för kort och lång beskrivning. Båda komponenterna har en gemensam klass `.guideHelpDescription` och en annan klass `.long`/ `.short`, beroende på typen av beskrivning. Hjälpinnehållet omsluts av ett styckeelement för att åsidosätta formateringen av beskrivningen. Hjälpbeskrivningen (både lång och kort) ändras med variabler som börjar med widgetshelp, vilket anges i följande tabell:
 
 <table> 
  <tbody> 
@@ -353,7 +353,7 @@ Med widgeten Villkor (TnC `` ``) kan du ange villkor. Du kan anpassa widgeten me
 
 Knappar är också widgetar. Men deras format skiljer sig något från widgetarna. I anpassningsbara former utgör något av följande en knapp:
 
-* indatatyp[= text]
+* input[type = text]
 * button
 * element med klass .button
 
@@ -569,7 +569,7 @@ Med widgeten Bifogad fil i adaptiva formulär kan du överföra filer. Du kan oc
  </tbody> 
 </table>
 
-## Överblick {#navigator-styles}
+## Navigeringsformat {#navigator-styles}
 
 Det finns fyra typer av navigeringsflikar. Det finns flikar till vänster, högst upp i guiden och dragspelet. Varje navigator har en egen klass.
 
@@ -640,7 +640,7 @@ Här följer HTML-koden för tabbnavigeringselementet (liknar bootstrap-flikarna
 
 `</div>`
 
-Du kan ändra navigatorns format med CSS-regler som markerar elementen med hjälp av **underordnade** väljare. Så här lägger du till ett textdekorationsformat till ankartaggen:
+Du kan ändra navigatorns format med CSS-regler som markerar elementen med **underordnade**-väljare. Så här lägger du till ett textdekorationsformat till ankartaggen:
 
 Fliknavigator överst:
 
@@ -720,7 +720,7 @@ Klassen guideNavIcon innehåller en standardikon för tabbnavigering (både vän
 
 >[!NOTE]
 >
->Du kan ändra ikonen för en viss navigator genom att ange en CSS-klass på panelen vid redigeringen, till exempel &lt;CLASS_NAME>. Du lägger till en **&lt;CLASS_NAME>_nav** som ikon för navigatorn.
+>Du kan ändra ikonen för en viss navigator genom att ange en CSS-klass på panelen vid redigeringen, till exempel &lt;CLASS_NAME>. Du lägger till **&lt;CLASS_NAME>_nav** som ikon för navigatorn.
 
 <table> 
  <tbody> 
@@ -941,13 +941,13 @@ En panel innehåller ett valfritt verktygsfält och dess innehåll.
  </tbody> 
 </table>
 
-Panelnoden är uppdelad i navigatorer och innehåll. Det `` `` finns ingen separat formatkomponent för innehållet. Variablerna som beskrivs tillämpas både på navigatorn och på innehållet.
+Panelnoden är uppdelad i navigatorer och innehåll. Det finns `` `` ingen separat formatkomponent för innehållet. Variablerna som beskrivs tillämpas både på navigatorn och på innehållet.
 
 &amp;ast;Den översta panelen (RootPanel) har inte den här klassen.
 
 ## Mobilformat {#mobile-styling}
 
-## Sidhuvudsfält {#header-bar}
+## Huvudfält {#header-bar}
 
 Dessa variabler påverkar den rubrikrad som är synlig på en mobil enhet eller små skärmar som innehåller panelrubriker och navigeringsknappar för nästa och bakre.
 
