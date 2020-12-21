@@ -22,13 +22,13 @@ ht-degree: 0%
 XFA-formulärmallar eller XDP-mallar är mallar för:
 
 * [Bokstäver](/help/forms/using/create-letter.md)
-* [Tryckkanal](/help/forms/using/web-channel-print-channel.md#printchannel) för [interaktiv kommunikation](/help/forms/using/interactive-communications-overview.md)
+* [Print ](/help/forms/using/web-channel-print-channel.md#printchannel) channel of  [Interactive Communications](/help/forms/using/interactive-communications-overview.md)
 
 * Layoutfragment
 
 En XDP är utformad i Adobe Forms Designer. I den här artikeln finns information om hur du utformar XDP:er för att skapa effektiva korrespondenser/interaktiv kommunikation, till exempel var formulärfält eller målområden ska användas och när layoutfragment ska användas.
 
-## Skapa en layout för brev eller för tryckkanalen Interactive Communications {#creating-a-layout-for-letters-or-for-interactive-communications-print-channel}
+## Skapa en layout för bokstäver eller för Interactive Communications-utskriftskanalen {#creating-a-layout-for-letters-or-for-interactive-communications-print-channel}
 
 En layout definierar den grafiska layouten för en brev-/tryckkanal i ett interaktivt meddelande. Layouten kan innehålla typiska formulärfält som &quot;Adress&quot; och &quot;Referensnummer&quot;. Den innehåller också tomma delformulär som anger målområden. Skapa layouten i formulärdesignern och när den är klar skickar Application Specialist den till AEM server. Därifrån kan du välja layout när du skapar en brevbrevmall eller en tryckt kanal för en interaktiv kommunikation.
 
@@ -49,14 +49,14 @@ Följ de här stegen för att skapa layouter för brev/tryckkanaler i Interactiv
    1. Lägg till ett målområde som platshållare för området Primär bosättning. Den här platshållaren är bunden till fragmentets primära plats vid designen av brev/interaktiv kommunikation.
    1. Överför layouten (och eventuella fragment som använder layouten) till AEM Forms-servern.
 
-## Använda schema {#using-schema}
+## Använda schemat {#using-schema}
 
 Du kan använda ett schema i ett layout- eller layoutfragment, men det behövs inte. Om du använder ett schema bör du kontrollera följande:
 
 1. Layout och alla fragmentlayouter som används i en bokstav/interaktiv kommunikation använder samma schema som bokstaven/interaktiv kommunikation.
 1. Alla fält som måste fyllas i med data är bundna till schemat.
 
-## Skapa relaterade fält {#creating-relatable-fields}
+## Skapar relaterade fält {#creating-relatable-fields}
 
 Som standard anses alla fält vara relaterade till olika andra datakällor. Om layouten innehåller fält som inte är relaterade till en datakälla namnger du fältet med suffixet &quot;_int&quot; (internal); pageCount_int.
 
@@ -119,11 +119,11 @@ Använd ett fält om du vill hämta moduldata eller data från dataordlisteeleme
  </tbody> 
 </table>
 
-## Ställa in repetitiva element {#setting-up-repetitive-elements}
+## Konfigurera repetitiva element {#setting-up-repetitive-elements}
 
 När element som organisationens logotyp och adress visas på alla sidor i ett brev/interaktiv kommunikation skapar du formulärfält för dessa element och placerar dem på den överordnad sidan. Använd namnbindning (fältnamn) för dessa fält.
 
-## Ange serveråtergivningsformat {#specify-the-server-nbsp-render-format}
+## Ange serveråtergivningsformatet {#specify-the-server-nbsp-render-format}
 
 Använd layoutens serveråtergivningsformat till dynamiskt XML-formulär, annars kan inga bokstäver/interaktiv kommunikation som baseras på den här layouten återges korrekt. Som standard är serveråtergivningsformatet i Forms Designer inställt på dynamiskt XML-formulär. För att vara säker på att du använder rätt format:
 
