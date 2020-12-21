@@ -24,7 +24,7 @@ Detta avsnitt innehåller vanliga problem och kända problem.
 
 ## Kända fel {#known-issues}
 
-### Dispatcher - uppdatering misslyckades {#dispatcher-refetch-fails}
+### Dispatcher Refetch Fails {#dispatcher-refetch-fails}
 
 När du använder Dispatcher 4.1.5 med en nyare version av Jetty kan en uppdatering resultera i&quot;Det går inte att ta emot svar från fjärrservern&quot; efter att begäran har fått timeout.
 
@@ -50,22 +50,22 @@ Problemet är att formatsträngen för com.day.cq.commons.date.RelativeTimeForma
 
 All kod som använder API:t RelativeTimeFormat() måste därför ändras
 
-* From: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r a", resourceBundle);`
+* Från: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r a", resourceBundle);`
 * Till: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
 
 Felet skiljer sig åt när det gäller författare och publicering. Skribenten skriver att det inte går att skriva och att forumen helt enkelt inte visas. Vid publicering genereras ett fel på sidan.
 
-Mer information finns i [com.day.cq.commons.date.RelativeTimeFormat](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API.
+Mer information finns i [com.day.cq.commons.date.RelativeTimeFormat](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html)-API:t.
 
 ## Vanliga problem {#common-concerns}
 
-### Varning i loggar: Borttagna handtag {#warning-in-logs-handlebars-deprecated}
+### Varning i loggar: Hanteringsfält har tagits bort {#warning-in-logs-handlebars-deprecated}
 
 Under start (inte under den första - men efter den) kan följande varning visas i loggarna:
 
-* 11.04.2014 08:38:07.223 **WARN** []FelixStartLevelcom.github.jknack.handlebars.Handlebars Helper &#39;i18n&#39; har ersatts med &#39;com.adobe.cq.social.handlebars.I18nHelper@15bac645&#39;
+* 11.04.2014 08:38:07.223 **WARN** [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper &#39;i18n&#39; har ersatts av &#39;com.adobe.cq.social.handlebars.I18nHelper@15bac645&#39;
 
-Denna varning kan ignoreras eftersom jknack.handlebars.Handlebars, som används av [SCF](scf.md#handlebarsjavascripttemplatinglanguage), har ett eget i18n-hjälpverktyg. Från början ersätts den med en AEM specifik [i18n-hjälpreda](handlebars-helpers.md#i-n). Den här varningen genereras av tredjepartsbiblioteket för att bekräfta åsidosättningen av en befintlig hjälpreda.
+Den här varningen kan ignoreras eftersom jknack.handlebars.Handlebars, som används av [SCF](scf.md#handlebarsjavascripttemplatinglanguage), har ett eget i18n-hjälpverktyg. Vid start ersätts den med en AEM specifik [i18n-hjälp](handlebars-helpers.md#i-n). Den här varningen genereras av tredjepartsbiblioteket för att bekräfta åsidosättningen av en befintlig hjälpreda.
 
 ### Varning i loggar: OakResourceListener processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 
