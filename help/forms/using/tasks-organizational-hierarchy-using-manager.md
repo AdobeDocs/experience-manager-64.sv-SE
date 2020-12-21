@@ -24,15 +24,15 @@ På AEM Forms arbetsyta kan chefer nu komma åt uppgifter som tilldelats alla i 
 
 **Vidarebefordra** en uppgift från en direkt rapport till valfri användare.
 
-**Anspråk** Gör anspråk på en uppgift som är en direkt rapport.
+**** AnspråkAnspråk en uppgift i en direkt rapport.
 
-**Claim &amp; Open** Claim a task of a direct report and automatically open it in the To-do list of the manager.
+**Gör anspråk på &amp;** OpenClaim a task of a direct report and automatically open it in the To-do list of the manager.
 
-**Avvisa** en uppgift som vidarebefordrats till en direkt rapport av en annan användare. Det här alternativet är tillgängligt för uppgifter som vidarebefordras av andra användare till en direkt rapport.
+**Avvisa** Avvisa en uppgift som vidarebefordrats till en direkt rapport av en annan användare. Det här alternativet är tillgängligt för uppgifter som vidarebefordras av andra användare till en direkt rapport.
 
 AEM Forms begränsar en användares åtkomst till endast de uppgifter som användaren har åtkomstkontroll för. En sådan kontroll säkerställer att en användare bara kan hämta de uppgifter som användaren har åtkomstbehörighet för. Med hjälp av webbtjänster och implementeringar från tredje part för att definiera hierarkin kan en organisation anpassa definitionen av chef och dirigera rapporter efter deras behov.
 
-1. Skapa en DSC. Mer information finns i avsnittet&quot;Utveckla komponenter för AEM Forms&quot; i [Programmering med AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63) -guiden.
+1. Skapa en DSC. Mer information finns i avsnittet Developing Components for AEM Forms i [Programming with AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63) Guide.
 1. I DSC definierar du en ny SPI för hierarkihantering för att definiera direkta rapporter och hierarkier inom AEM Forms-användarna. Här följer ett exempel på Java™-kodfragment.
 
    ```as3
@@ -112,7 +112,7 @@ AEM Forms begränsar en användares åtkomst till endast de uppgifter som använ
    </component>
    ```
 
-1. Distribuera DSC via Workbench. Starta om `ProcessManagementTeamTasksService` tjänsten.
+1. Distribuera DSC via Workbench. Starta om tjänsten `ProcessManagementTeamTasksService`.
 1. Du kan behöva uppdatera webbläsaren eller logga ut/logga in med användaren igen.
 
 Följande skärm visar hur du får åtkomst till uppgifter i direkta rapporter och tillgängliga åtgärder.
