@@ -28,11 +28,11 @@ Med AEM Forms Feature Pack 1 version av Designer kan du ändra meddelandet som v
 
 1. Öppna formuläret som du vill ändra sidans nollinnehåll för.
 
-1. Click **File > Form Properties**.
+1. Klicka på **Arkiv > Formuläregenskaper**.
 
 1. I dialogrutan Formuläregenskaper klickar du på ![plus](assets/plus.png) (plusikonen) för att lägga till en anpassad egenskap.
 
-1. Ange **_pagezerocontent** som egenskapens namn.
+1. Ange **_pagezerocontent** som namn på egenskapen.
 1. Lägg till det nya sidans nollmeddelande i RTF-format som värde. Till exempel:
 
    `<body xmlns="https://www.w3.org/1999/xhtml" xmlns:xfa="https://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:'Times';font-size:12pt;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-family:'Times';font-size:12pt;letter-spacing:0in">You are seeing this message maybe because you are using a non Adobe PDF Viewer or an Old version of Adobe Reader. You can upgrade to the latest version of Adobe Reader for Windows, Mac, or Linux by visiting <span style="xfa-spacerun:yes"> </span>https://www.adobe.com/go/reader_download.</p><p style="font-family:'Times';font-size:12pt;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-family:'Times';font-size:12pt;letter-spacing:0in">For more assistance with Adobe Reader visit <span style="xfa-spacerun:yes"> </span>https://www.adobe.com/go/acrreader.</p></body>`
