@@ -19,6 +19,6 @@ ht-degree: 0%
 ---
 
 
-# Begränsningar för PDF Generator-säkerhetskopiering {#pdf-generator-backup-limitations}
+# Säkerhetskopieringsbegränsningar för PDF Generator {#pdf-generator-backup-limitations}
 
 Den tillfälliga katalog som används av PDF Generator för att konvertera filer kan inte säkerhetskopieras. Även om tjänsten återställs korrekt kan data gå förlorade eftersom PDF Generator granskar och rensar innehållet i den tillfälliga katalogen med angivna intervall.
