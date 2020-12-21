@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Översikt över konfigurering av SSL {#overview-of-configuring-ssl}
+# Översikt över konfiguration av SSL {#overview-of-configuring-ssl}
 
 Du kan skapa SSL-autentiseringsuppgifter (Secure Sockets Layer) och konfigurera SSL på programservern för att förbättra säkerheten vid kommunikation med programservern.
 
