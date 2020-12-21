@@ -48,9 +48,9 @@ För administratörer skapas ett superadministratörskonto som standard under in
 
 1. Skriv URL-adressen i webbläsaren:
 
-   Dokumentets säkerhets-URL: `https://`*[värddatorns ]*`:`*[port]* `/edc`
+   Dokumentets säkerhets-URL: `https://`*[värd ]*`:`*[port]* `/edc`
 
-   eller URL för administrationskonsolen: `https://`*[värddatorns ]*`:`*[port]* `/adminui`
+   eller URL för administrationskonsolen: `https://`*[värd ]*`:`*[port]* `/adminui`
 
 1. Skriv ditt användarnamn och lösenord i inloggningsfönstret och klicka på OK.
 1. I administrationskonsolen klickar du på Tjänster > Dokumentsäkerhet.
@@ -85,7 +85,7 @@ Använd de här länkarna för att komma åt de olika sidorna, där du skapar oc
 
 ## Konfigurera åtkomst till dokumentsäkerhet från klientprogram {#setting-up-access-to-document-security-from-client-applications}
 
-Klientprogram måste vara konfigurerade för att kunna ansluta till dokumentsäkerhet för att skydda dokument, öppna principskyddade dokument och ansluta till dokumentets säkerhetswebbsidor. Mer information om hur du konfigurerar anslutningen i klientprogrammet finns i *Acrobat-hjälpen* eller i lämplig *Rights ManagementExtension-hjälp* .
+Klientprogram måste vara konfigurerade för att kunna ansluta till dokumentsäkerhet för att skydda dokument, öppna principskyddade dokument och ansluta till dokumentets säkerhetswebbsidor. Mer information om hur du konfigurerar anslutningen i klientprogrammet finns i *Acrobat Hjälp* eller *Rights ManagementExtension Help*.
 
 Dokumentsäkerhet nås via SSL (Secure Sockets Layer). Du måste installera webbplatsens certifikat i certifikatarkivet så att du kan komma åt dokumentsäkerhet via klientprogrammen.
 
@@ -95,7 +95,7 @@ De här instruktionerna är specifika för Internet Explorer, men du kan install
 
 **Installera servercertifikatet med Internet Explorer**
 
-1. Öppna webbläsaren och skriv bas-URL:en för dokumentsäkerhet i rutan Adress. For example, type `https://[host]:[port]`. Dialogrutan Säkerhetsvarning visas.
+1. Öppna webbläsaren och skriv bas-URL:en för dokumentsäkerhet i rutan Adress. Skriv till exempel `https://[host]:[port]`. Dialogrutan Säkerhetsvarning visas.
 1. Klicka på Visa certifikat och sedan på Installera certifikat och välj standardinställningar för installationen. Certifikatet måste installeras i de betrodda rotcertifikatutfärdarna.
 1. Stäng webbläsarsessionen.
 1. Öppna ett annat webbläsarfönster och skriv samma URL i rutan Adress. En dialogruta för säkerhetsvarning ska inte visas. Det här testet bekräftar att certifikatet är korrekt installerat.
