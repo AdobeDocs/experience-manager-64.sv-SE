@@ -26,7 +26,7 @@ En av kundernas automatiska försäkringsavtal upphör att gälla och de skickar
 Portalen går på Adobe AEM. Webben och utskriften av välkomstkanaler skapas med de flerkanalsfunktioner som finns i det adaptiva dokumentet.
 
 Du kommer att ha ett adaptivt dokument som liknar följande i slutet av självstudiekursen:
-[ ![ad-1](assets/ad-1.png)](https://blogs.adobe.com/contentcorner/files/2017/07/PAF_Mobile.pdf) [ ad-2 ![](assets/ad-2.png)](https://blogs.adobe.com/contentcorner/files/2017/07/PAF_Desktop.pdf)Skapa din första adaptiva dokumentsjälvstudiekurs kategoriseras i steg. Varje steg är en komplett artikel i sig.
+[ ![ad-1](assets/ad-1.png)](https://blogs.adobe.com/contentcorner/files/2017/07/PAF_Mobile.pdf)    [ ![ad-2](assets/ad-2.png)](https://blogs.adobe.com/contentcorner/files/2017/07/PAF_Desktop.pdf)Skapa din första självstudiekurs om adaptiva dokument kategoriseras i steg. Varje steg är en komplett artikel i sig.
 
 <table> 
  <tbody>
@@ -46,7 +46,7 @@ Du kommer att ha ett adaptivt dokument som liknar följande i slutet av självst
     <ul> 
      <li>AEM författarinstans. </li> 
      <li>Installera AEM Forms-tillägg. Mer information finns i <a href="/help/forms/using/installing-configuring-aem-forms-osgi.md" target="_blank">Installera och konfigurera AEM Forms</a>.</li> 
-     <li>Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudien är baserade på MySQL-databasen och använder Oracles JDBC-databasdrivrutin MySQL. </li> 
+     <li>Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudien är baserade på MySQL-databasen och använder Oracle JDBC-databasdrivrutin MySQL. </li> 
      <li>Konfigurera en databas som innehåller kunddata. En databas är nödvändig för att skapa ett adaptivt dokument. I den här självstudien används en databas för att visa formulärdatamodell och beständighetsfunktioner i AEM Forms. </li> 
      <li>Skapa/importera och aktivera <a href="/help/forms/using/web-channel-print-channel.md">mallar för utskrift och webbkanal</a>.</li> 
      <li>Kontrollera att du har <a href="/help/forms/using/document-fragments.md">dokumentfragmenten baserade på FDM</a>.</li> 
@@ -57,7 +57,7 @@ Du kommer att ha ett adaptivt dokument som liknar följande i slutet av självst
 
 ## Steg 1: Skapa formulärdatamodell {#step-create-form-data-model}
 
-En formulärdatamodell gör det möjligt att koppla ett adaptivt dokument till olika datakällor. Till exempel AEM användarprofil, RESTful-webbtjänster, SOAP-baserade webbtjänster, OData-tjänster och relationsdatabaser. En formulärdatamodell är ett enhetligt datarepresentationsschema för affärsenheter och tjänster som är tillgängliga i anslutna datakällor. Du kan använda formulärdatamodellen med ett adaptivt dokument för att hämta data från anslutna datakällor. Mer information om formulärdatamodell finns i [AEM Forms-dataintegrering](/help/forms/using/data-integration.md).
+En formulärdatamodell gör det möjligt att koppla ett adaptivt dokument till olika datakällor. Till exempel AEM användarprofil, RESTful-webbtjänster, SOAP-baserade webbtjänster, OData-tjänster och relationsdatabaser. En formulärdatamodell är ett enhetligt datarepresentationsschema för affärsenheter och tjänster som är tillgängliga i anslutna datakällor. Du kan använda formulärdatamodellen med ett adaptivt dokument för att hämta data från anslutna datakällor. Mer information om formulärdatamodell finns i [AEM Forms Data Integration](/help/forms/using/data-integration.md).
 
 Mål:
 
@@ -83,9 +83,9 @@ Mål:
 
 <!--![see-the-guide-sm](assets/see-the-guide-sm.png)-->
 
-## Steg 3: Tillämpa regler på anpassningsbara dokumentfält (endast webbkanalen) {#step-apply-rules-to-adaptive-document-fields-web-channel-only}
+## Steg 3: Tillämpa regler på adaptiva dokumentfält (endast webbkanal) {#step-apply-rules-to-adaptive-document-fields-web-channel-only}
 
-Med adaptiva dokument kan du redigera regler för adaptiva dokumentobjekt. Dessa regler definierar åtgärder som ska utlösas för dokumentobjekt baserat på förinställda villkor och användaråtgärder för dokumentet. Det gör att det går snabbare och exaktare att använda i webbversionen av det adaptiva dokumentet. Mer information om redigering av adaptiva dokumentregler och regler finns i [regelredigeraren](/help/forms/using/rule-editor.md).
+Med adaptiva dokument kan du redigera regler för adaptiva dokumentobjekt. Dessa regler definierar åtgärder som ska utlösas för dokumentobjekt baserat på förinställda villkor och användaråtgärder för dokumentet. Det gör att det går snabbare och exaktare att använda i webbversionen av det adaptiva dokumentet. Mer information om redigering av adaptiva dokumentregler och regler finns i [regelredigerare](/help/forms/using/rule-editor.md).
 
 Mål:
 
@@ -94,7 +94,7 @@ Mål:
 
 ## Steg 4: Formatera det adaptiva dokumentet (endast webbkanalen) {#step-style-the-adaptive-document-web-channel-only}
 
-Med adaptiva dokument kan du skapa teman för adaptiva dokument och infogad formatering. Ett tema innehåller formatinformation för komponenter och paneler, och du kan återanvända ett tema i webbkanaler för olika dokument. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder temat i dokumentet återspeglas det angivna formatet i motsvarande komponenter i dokumentet. For more information, see [Themes](/help/forms/using/themes.md).
+Med adaptiva dokument kan du skapa teman för adaptiva dokument och infogad formatering. Ett tema innehåller formatinformation för komponenter och paneler, och du kan återanvända ett tema i webbkanaler för olika dokument. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder temat i dokumentet återspeglas det angivna formatet i motsvarande komponenter i dokumentet. Mer information finns i [Teman](/help/forms/using/themes.md).
 
 Mål:
 
