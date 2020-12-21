@@ -28,7 +28,7 @@ Du kan ange var utdata ska söka efter vissa typer av filer som krävs.
 
 ## Platsinställningar {#locations-settings}
 
-**Innehållsrot-URI:** URI eller absolut plats för databasen som formulär hämtas från. Detta värde kombineras med parametern sForm, som anges via API:t, för att skapa den absoluta sökvägen till det formulär som hämtas. Det här värdet kan referera till en katalog eller en webbplats som är tillgänglig via HTTP.
+**Innehållsrot-URI:** URI:n eller den absoluta platsen för databasen som formulär hämtas från. Detta värde kombineras med parametern sForm, som anges via API:t, för att skapa den absoluta sökvägen till det formulär som hämtas. Det här värdet kan referera till en katalog eller en webbplats som är tillgänglig via HTTP.
 
 Standardvärdet är en tom sträng.
 
@@ -44,7 +44,7 @@ Standardvärdet är `com/adobe/formServer/PA/pa_output.xci`.
 * **WebLogic:** `[WebLogic Home]\user_projects\domains\[aem-forms domain Name]\adobe\[forms server name]\Output\Cache`
 * **WebSphere:** `[IBM Home]\WebSphere\AppServer\installedApps\adobe\server1\Output\Cache`
 
-**Tillfällig katalog för LC:** Cachen skapas i en underkatalog till den AEM formulärkatalogen temporp, som anges i administrationskonsolen under Inställningar > Systeminställningar > Konfigurationer > Plats för tillfällig katalog. Underkatalogen heter `adobeoutput_[servername]`.
+**Tillfällig LC-katalog:** Cachen skapas i en underkatalog till den tillfälliga AEM formulärkatalogen, som anges i administrationskonsolen under Inställningar > Systeminställningar > Konfigurationer > Plats för tillfällig katalog. Underkatalogen heter `adobeoutput_[servername]`.
 
 >[!NOTE]
 >
