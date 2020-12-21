@@ -42,19 +42,19 @@ Med formulärportalkomponenterna kan du lägga till följande funktioner:
 * Skapa länkar till formulär.
 * Visar utkast och inskickat material som rör adaptiva formulär som skapats av slutanvändaren.
 
-## Tillgängliga AEM Forms portalkomponenter {#available-aem-forms-portal-components}
+## Tillgängliga AEM Forms-portalkomponenter {#available-aem-forms-portal-components}
 
-AEM Forms tillhandahåller följande portalkomponenter som grupperats under komponentgrupperna **Document Services** och **Document Services Predicates** :
+AEM Forms tillhandahåller följande portalkomponenter som grupperats under **Document Services** och **Document Services Predicates** komponentgrupper:
 
 ### Sök och visa {#search-amp-lister}
 
 Med komponenten Sök och lista kan du lista formulär från formulärdatabasen på din portalsida, och du får konfigurationsalternativ för att lista formulär baserat på angivna villkor. Du kan också ange sökvillkor så att portalanvändarna kan söka i formulärlistan.
 
-### Utkast och inskickat material {#drafts-amp-submissions}
+### Utkast och inskickade {#drafts-amp-submissions}
 
 Medan komponenten Sök och Lister visar formulär som har publicerats av Forms författare, visar komponenten Utkast och inskickningar formulär som har sparats som utkast för att fylla i senare och skickade formulär. Den här komponenten ger en personaliserad upplevelse till alla inloggade användare.
 
-### Link {#link}
+### Länk {#link}
 
 Med länkkomponenten kan du skapa en länk till ett formulär var som helst på sidan. Tänk dig ett scenario där du erbjuder ett utbildningsprogram och du vill att dina användare ska skicka in ett formulär för registrering för kursen. På webbplatsen har du lagt ut programinformationen. Under informationen vill du skapa en länk till registreringsformuläret. Med länkkomponenten kan du skapa länken.
 
@@ -62,20 +62,20 @@ Med länkkomponenten kan du skapa en länk till ett formulär var som helst på 
 
 På Forms Portal kan du lägga in blanketter från blankettdatabasen på portalsidan. Du kan också ange sökvillkor så att portalanvändarna kan söka i formulärlistan. Du kan också använda komponenten Utkast och inskickningar för att visa formulär som har sparats som ett utkast för att fylla i senare och skickade formulär. Du måste utföra en viss uppsättning åtgärder innan de här funktionerna blir tillgängliga på en webbplatssida. Utför stegen i den listade sekvensen för att göra komponenterna och respektive funktioner tillgängliga på en webbplatssida:
 
-1. **Aktivera Forms Portal-komponenter**: Komponenterna i formulärportalen är inte tillgängliga för användning. [Aktivera komponenterna från AEM sida](/help/forms/using/enabling-forms-portal-components.md) för en AEM Sites-sida.
-1. **Visa formulär på en sida (skapa formulärportalsida):** Du kan lista formulär både på AEM Sites-sidor och på andra AEM webbplatssidor. Listan innehåller formulär som är tillgängliga på publiceringsinstansen. Användaren kan öppna formulär och börja fylla i dem. När en användare öppnar ett formulär skapas en ny instans av formuläret:
+1. **Aktivera Forms Portal-komponenter**: Komponenterna i formulärportalen är inte tillgängliga för användning. [Aktivera komponenterna från AEM ](/help/forms/using/enabling-forms-portal-components.md) sidekickför en AEM Sites-sida.
+1. **Visa en lista över formulär på en sida (skapa formulärportalsida):** Du kan visa en lista över formulär både på AEM Sites-sidor och på sidor som inte är AEM. Listan innehåller formulär som är tillgängliga på publiceringsinstansen. Användaren kan öppna formulär och börja fylla i dem. När en användare öppnar ett formulär skapas en ny instans av formuläret:
 
-   1. **Lista formulär på en AEM Sites-sida**: Lägg till **[Search &amp; Lister](/help/forms/using/creating-form-portal-page.md)**-komponenten på sidan och konfigurera**[ listpanelen](/help/forms/using/creating-form-portal-page.md#p-list-pane-p)** i den för att lista formulär på en sida. Lägg till och konfigurera **[sökfönsterkomponenten](/help/forms/using/creating-form-portal-page.md#search-pane)**i **sök- och listkomponenten**för att lägga till sökfunktioner på sidan. Sidan med formulärportalkomponenten kallas för[formulärportalsidan](/help/forms/using/creating-form-portal-page.md).
-   1. **Visa formulär på en sida som inte är AEM Sites:** Använd API:erna [för](/help/forms/using/listing-forms-webpage-using-apis.md) formulärportalsökning för att fråga efter, hämta och lista formulär på sidor som inte är från AEM Sites.
+   1. **Lista formulär på en AEM Sites-sida**: Lägg till  **[Search &amp;](/help/forms/using/creating-form-portal-page.md)** Listercomponent på sidan och konfigurera  **[List-](/help/forms/using/creating-form-portal-page.md#p-list-pane-p)** panelen för att lista formulär på en sida. Lägg till och konfigurera **[sökrutan](/help/forms/using/creating-form-portal-page.md#search-pane)**-komponenten i **sök- och listkomponenten** för att lägga till sökfunktioner på sidan. Sidan med formulärportalkomponenten kallas [formulärportalsida](/help/forms/using/creating-form-portal-page.md).
+   1. **Visa formulär på en sida som inte är från AEM Sites:** Använd API:n för  [ ](/help/forms/using/listing-forms-webpage-using-apis.md) formulärportalsökning för att fråga, hämta och lista formulär på sidor som inte är från AEM Sites.
 
 1. **Visa utkast och skickade formulär på en formulärportalsida**: Lägg till och konfigurera komponenten Utkast och inskickat material på formulärportalsidan. Komponenten visar alla formulär som är i utkastläge och de formulär som redan har skickats.
 
-   Om du vill att ett skickat anpassat formulär ska visas på fliken Skicka anger du åtgärden **** Skicka till **[Forms Portal Submit Action](https://helpx.adobe.com/in/experience-manager/6-4/forms/using/configuring-submit-actions.html)(Skicka-åtgärd).**Du kan också aktivera alternativet Skicka i Forms Portal. När en användare skickar formuläret läggs formuläret till på fliken Skicka.
+   Om du vill att ett skickat anpassat formulär ska visas på fliken Skicka anger du **Skicka-åtgärden** till **[Forms Portal Submit Action](https://helpx.adobe.com/in/experience-manager/6-4/forms/using/configuring-submit-actions.html).** Du kan också aktivera alternativet Skicka i Forms Portal. När en användare skickar formuläret läggs formuläret till på fliken Skicka.
 
-1. **Konfigurera lagring för formulärdata som skickas och skickas:** Som standard lagras utkast- och inskickningsdata i AEM. I en produktionsmiljö bör du inte lagra utkast eller skickade formulärdata i AEM. [Konfigurera formulärportalkomponenten för att spara data på en säker plats](/help/forms/using/draft-submission-component.md#customizing-the-storage).
-1. **(Valfritt) Anpassa komponenterna i formulärportalen:**  [Anpassa mallarna](/help/forms/using/customizing-templates-forms-portal-components.md) för formulärportalsidor för att ge komponenterna ett distinkt utseende.
-1. **(Valfritt) Lägg till anpassade metadata i formulär:** [Lägg till anpassade metadata i formulär](/help/forms/using/customizing-templates-forms-portal-components.md) för att förbättra listningen och sökupplevelsen.
-1. **Publicera formulärportalsidan:** Din formulärportalsida är nu klar. Publicera sidan.
+1. **Konfigurera lagring av formulärdata för utkast och skickade formulär:** Som standard lagras data för utkast och skickade formulär i AEM. I en produktionsmiljö bör du inte lagra utkast eller skickade formulärdata i AEM. [Konfigurera formulärportalkomponenten för att spara data på en säker plats](/help/forms/using/draft-submission-component.md#customizing-the-storage).
+1. **(Valfritt) Anpassa komponenterna i formulärportalen:**  [Anpassa ](/help/forms/using/customizing-templates-forms-portal-components.md) mallarna för formulärportalsidor för att ge komponenterna ett distinkt utseende.
+1. **(Valfritt) Lägg till anpassade metadata i formulär:** [Lägg till anpassade metadata i ](/help/forms/using/customizing-templates-forms-portal-components.md) formulär för att förbättra listan och sökupplevelsen.
+1. **Publicera formulärportalsidan:** Nu är din formulärportalsida klar. Publicera sidan.
 
 ## Relaterade artiklar {#related-articles}
 
