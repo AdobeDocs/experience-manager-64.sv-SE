@@ -30,7 +30,7 @@ När du är online med AEM Forms-servern synkroniseras ditt program som standard
 
 **Synkronisera appen manuellt**
 
-Tryck på knappen Synkronisera ![synkroniseringsprogram](assets/sync-app.png) längst ned till höger på startskärmen.
+Tryck på knappen Synkronisera ![sync-app](assets/sync-app.png) längst ned till höger på startskärmen.
 
 **Ändra synkroniseringsfrekvensen**
 
@@ -45,7 +45,7 @@ Tryck på knappen Synkronisera ![synkroniseringsprogram](assets/sync-app.png) l�
 ### Tekniska specifikationer {#technical-specifications}
 
 * Den viktigaste logiken för att skicka offlineappdata till AEM Forms-servern finns i runtime/offline/util/offline.js.
-* I .js-filen skickar anropet till funktionen processOfflineSubmittedSavedTasks(...) de sparade/skickade uppgifterna till servern. Den hanterar även fel och konflikter i synkroniseringsprocessen. Om överföringen av en uppgift misslyckas markeras aktiviteten i programmet som misslyckad. Dessutom finns uppgiften kvar i Utkorgen.
+* I .js-filen skickar anropet till funktionen processOfflineSubmitSavedTasks(...) de sparade/skickade uppgifterna till servern. Den hanterar även fel och konflikter i synkroniseringsprocessen. Om överföringen av en uppgift misslyckas markeras aktiviteten i programmet som misslyckad. Dessutom finns uppgiften kvar i Utkorgen.
 * Funktionerna syncSubowedTask() och syncSavedTask() utför åtgärder på enskilda uppgifter.
 * Anropet till funktionen processOfflineSubmitSavedTasks() initieras av uppgiftslistkomponenten efter att en användare har valt att synkronisera offlineläget med servern eller en automatisk synkronisering av bakgrundstråden.
 
