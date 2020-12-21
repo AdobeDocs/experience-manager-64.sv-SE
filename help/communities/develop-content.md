@@ -22,6 +22,6 @@ ht-degree: 0%
 
 **[⇐ Lägg till klienter](add-clientlibs.md)**
 
-Nu är det möjligt att utforska communityfunktioner i sandlådan tillsammans med att använda [We-Retail Community](../../help/sites-developing/we-retail.md), [Community Components Guide](components-guide.md) och [feature essentials](essentials.md) som referens.
+Nu kan du utforska communityfunktioner i sandlådan tillsammans med [We-Retail Community](../../help/sites-developing/we-retail.md), [Community Components Guide](components-guide.md) och [feature essentials](essentials.md) som referens.
 
 **[⇐ Lägg till klienter](add-clientlibs.md)**
