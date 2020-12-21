@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Visa användarens avatar {#displaying-the-user-avatar}
+# Visar användarens avatar {#displaying-the-user-avatar}
 
 Avatar för den inloggade användaren visas i det övre högra hörnet av arbetsytan i AEM Forms. Variatarerna för direkta rapporter i organisationshierarkin visas också i hanterarvyn. Du kan konfigurera AEM Forms arbetsyta så att du kan välja användarbilder från din databas, till exempel LDAP-server.
 
@@ -26,7 +26,7 @@ Avatar för den inloggade användaren visas i det övre högra hörnet av arbets
 >
 >De proportioner som stöds för användarbilderna är 1:1.
 
-1. Skapa en DSC med hjälp av de uppgifter som anges i nästa steg. Mer information finns i avsnittet&quot;Utveckla komponenter för AEM Forms&quot; i [Programmering med AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63) -guiden.
+1. Skapa en DSC med hjälp av de uppgifter som anges i nästa steg. Mer information finns i avsnittet Developing Components for AEM Forms i [Programming with AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63) Guide.
 1. I DSC definierar du en ny SPI som visar metoderna getCurrentUserImageUrl och getUserImageUrl för att hämta en bild-URL för en AEM Forms-användare. Här följer ett exempel på ett Java™-kodfragment:
 
    ```as3
@@ -84,5 +84,5 @@ Avatar för den inloggade användaren visas i det övre högra hörnet av arbets
    </component>
    ```
 
-1. Distribuera DSC via Workbench. Starta om `ProcessManagementClientSessionService` tjänsten.
+1. Distribuera DSC via Workbench. Starta om tjänsten `ProcessManagementClientSessionService`.
 1. Du kan behöva uppdatera webbläsaren eller logga ut/logga in med användaren igen.
