@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Introduktion till formulärsekvenser i flera steg {#introduction-to-multi-step-form-sequence}
+# Introduktion till formulärsekvens i flera steg {#introduction-to-multi-step-form-sequence}
 
 Med adaptiva blanketter kan man enkelt skapa datainhämtning i flera steg. Den har inbyggt stöd för att skapa flera paneler och koppla ihop varje panel med olika navigeringsmönster. Formulärförfattare kan gruppera formulärfält i logiska avsnitt och representera en grupp som en panel. Den övergripande navigeringen mellan paneler styrs med hjälp av panellayouten. Författare kan välja att ordna paneler i olika layouter, t.ex. placera sekventiellt med guidelayouten eller på ett ad hoc-sätt med hjälp av fliklayouten. Mer information om panellayouter finns i [Layoutfunktioner i adaptiva formulär](/help/forms/using/layout-capabilities-adaptive-forms.md).
 
@@ -32,12 +32,12 @@ Låt oss ta ett exempel där du behöver skapa en sekvens för att fylla i, veri
    I det här exemplet kan vi lägga till följande paneler:
 
    * **Fyllning**: Den innehåller formulärfält för datainhämtning. Här kan du ta med kapslade underpaneler för att skapa avsnitt för olika typer av information, t.ex. personlig, familj, ekonomi osv.
-   * **Verifiera**: Den innehåller komponenten **Verify** som kan användas i en XFA-baserad adaptiv form. Den information som hämtas på panelen Fyllning visas i skrivskyddat läge för verifiering.
-   * **E-signatur**: Den innehåller **Sign** -komponenten som kan användas i ett XFA-baserat adaptivt formulär. den tillhandahåller följande signeringstjänster:
+   * **Verifiera**: Den innehåller  **** Verifycomponent som kan användas i en XFA-baserad adaptiv form. Den information som hämtas på panelen Fyllning visas i skrivskyddat läge för verifiering.
+   * **E-signatur**: Den innehåller  **** Signcomponent som kan användas i en XFA-baserad adaptiv form. den tillhandahåller följande signeringstjänster:
 
       * Adobe Document Cloud eSign-tjänster
       * Klottra signaturer
-   * **Bekräftelse**: Den innehåller komponenten **Sammanfattning** som visar ett meddelande som bekräftar att formuläret skickas när en användare har signerat formuläret och når steget Bekräfta (Sammanfattning) i sekvensen. Författare kan konfigurera texten i komponenten Sammanfattning, visa ett tackmeddelande, visa en länk till den genererade PDF-filen och så vidare.
+   * **Bekräftelse**: Den innehåller  **** Summarycomponent som visar ett meddelande som bekräftar att formuläret skickas när en användare har signerat formuläret och når steget Bekräfta (Sammanfattning) i sekvensen. Författare kan konfigurera texten i komponenten Sammanfattning, visa ett tackmeddelande, visa en länk till den genererade PDF-filen och så vidare.
 
 
 1. Välj layouten för rotpanelen som **[!UICONTROL Wizard]**.
