@@ -16,7 +16,7 @@ ht-degree: 0%
 ---
 
 
-# Genomgång av referenswebbplatser för självbetjäning för medarbetare {#employee-self-service-reference-site-walkthrough}
+# Genomgång av referenswebbplats för medarbetares självbetjäning {#employee-self-service-reference-site-walkthrough}
 
 ## Förutsättning {#prerequisite}
 
@@ -30,7 +30,7 @@ Självbetjäning för medarbetare visar hur man kan utnyttja AEM Forms för att 
 
 >[!NOTE]
 >
->Självbetjäningsexempel för anställda finns både på referenswebbplatserna We.Finance och We.Gov. De exempel, bilder och beskrivningar som används i genomgången använder referenswebbplatsen We.Finance. Du kan dock köra de här användningsexemplen och granska artefakter med hjälp av We.Gov också. För att göra det måste du ersätta **webbfinansiering** med **webbadressen** .
+>Självbetjäningsexempel för anställda finns både på referenswebbplatserna We.Finance och We.Gov. De exempel, bilder och beskrivningar som används i genomgången använder referenswebbplatsen We.Finance. Du kan dock köra de här användningsexemplen och granska artefakter med hjälp av We.Gov också. Om du vill göra det måste du ersätta **we-Finance** med **we-gov** i de angivna URL:erna.
 
 ## Genomgång av enkäter om intressekonflikter {#conflict-of-interest-questionnaire-walkthrough}
 
@@ -38,13 +38,15 @@ Organisationer ber då och då sina anställda att skicka in frågeformulär om 
 
 Övervakningsavdelningen på Sarah har bett medarbetarna att lämna in frågeformuläret Conflict of Interest.
 
-### Sarah lämnar in frågeformuläret om intressekonflikter {#sarah-submits-the-conflict-of-interest-questionnaire}
+### Sarah skickar frågeformuläret för intressekonflikter {#sarah-submits-the-conflict-of-interest-questionnaire}
 
-Sarah går till sin organisations portal, loggar in och klickar på Medarbetare för att komma åt personalens instrumentpanel. Hon hittar frågeformuläret Conflict of Interest på kontrollpanelen för medarbetare och klickar **[!UICONTROL Apply]**.
+Sarah går till sin organisations portal, loggar in och klickar på Medarbetare för att komma åt personalens instrumentpanel. Hon hittar ett frågeformulär om intressekonflikter på kontrollpanelen för medarbetare och klickar på **[!UICONTROL Apply]**.
 
-![we-Finance-home](assets/we-finance-home.png)**Figure:** *Organisationsportal*
+![we-Finance-](assets/we-finance-home.png)
+**homeFigure:** *Organisationsportal*
 
-![employee-dashboard](assets/employee-dashboard.png)**Bild:** *Instrumentpanel för medarbetare*
+![employee-](assets/employee-dashboard.png)
+**dashboardFigure:** *Personalkontrollpanel*
 
 Sarah navigerar i formuläret med knappen Nästa och läser igenom avsnitten Introduktion och Definition. Hon svarar på frågorna i avsnittet Frågor. Slutligen skriver hon under och skickar in frågeformuläret.
 
@@ -56,19 +58,21 @@ Organisationsportalen och enkäten är responsiva och mobilvänliga. Följande a
 
 Organisationsportalen och personalkontrollpanelen är AEM Sites-sidor. På kontrollpanelen visas flera alternativ för självbetjäning, till exempel frågeformuläret Konflikt. Knappen Använd är länkad till ett anpassat formulär.
 
-Det anpassningsbara formuläret använder regler för att visa/dölja information baserat på svaret som ges på fliken Frågor. Formuläret använder dessutom komponenten Klottra för signering på fliken Deklaration. Gå igenom det adaptiva formuläret på `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/employee/self-service/conflict-of-interest.html`.
+Det anpassningsbara formuläret använder regler för att visa/dölja information baserat på svaret som ges på fliken Frågor. Formuläret använder dessutom komponenten Klottra för signering på fliken Deklaration. Granska det adaptiva formuläret på `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/employee/self-service/conflict-of-interest.html`.
 
 **Se det själv**
 
-Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/self-service-forms.html` och logga in med `srose/srose` som användarnamn/lösenord för Sarah. Klicka **[!UICONTROL Employee]** för att öppna kontrollpanelen och klicka sedan **[!UICONTROL Apply]** på Frågor och svar. Granska och skicka in enkäten.
+Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/self-service-forms.html` och logga in med `srose/srose` som användarnamn/lösenord för Sarah. Klicka på **[!UICONTROL Employee]** för att öppna instrumentpanelen och klicka sedan på **[!UICONTROL Apply]** i frågeformuläret Konflikt. Granska och skicka in enkäten.
 
 ### Gloria granskar och godkänner enkäten om intressekonflikter {#gloria-reviews-and-approves-the-conflict-of-interest-questionnaire-submission}
 
 Det frågeformulär om intressekonflikter som Sarah har lämnat in tilldelas Gloria Rios för granskning. Gloria arbetar som efterlevnadsansvarig i organisationen. Gloria loggar in på sin AEM Inbox och granskar de uppgifter hon tilldelats. Hon godkänner frågeformuläret som lämnats in av Sarah och fullföljer uppgiften.
 
-![conflict-inbox](assets/conflict-inbox.png)**Figure:** *Gloria&#39;s inbox*
+![conflict-](assets/conflict-inbox.png)
+**inboxFigure:** *Glorias inkorg*
 
-![godkända](assets/conflict-approved.png)**illustrationer:** *Öppna uppgift*
+![conflict-](assets/conflict-approved.png)
+**approvedFigure:** *Öppna uppgift*
 
 **Så här fungerar det**
 
@@ -78,21 +82,23 @@ Skicka-åtgärden i frågan om intressekonflikter utlöser ett arbetsflöde som 
 
 **Se det själv**
 
-Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` och logga in med `grios/password` användarnamn/lösenord för Gloria Rios. Öppna uppgiften som har skapats för enkäten om intressekonflikter och godkänn den.
+Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` och logga in med `grios/password` som användarnamn/lösenord för Gloria Rios. Öppna uppgiften som har skapats för enkäten om intressekonflikter och godkänn den.
 
-## Genomgång av ansökningar med företagskort {#corporate-card-application-walkthrough}
+## Genomgång av applikationer med företagskort {#corporate-card-application-walkthrough}
 
 Sarah reser mycket i jobbet och kräver ett kreditkort för att kunna betala sina räkningar i farten. Hon ansöker om ett företagskort via sin organisations personalportal.
 
-### Sarah skickar ansökan om företagskort {#sarah-submits-the-corporate-card-application}
+### Sarah skickar in Corporate Card-applikationen {#sarah-submits-the-corporate-card-application}
 
-Sarah går till sin organisations portal, loggar in och klickar **[!UICONTROL Employee]** för att komma åt personalens kontrollpanel. Hon hittar ett Corporate Card-program på personalinstrumentpanelen och klickar **[!UICONTROL Apply]**.
+Sarah går till sin organisations portal, loggar in och klickar på **[!UICONTROL Employee]** för att komma åt medarbetarinstrumentpanelen. Hon hittar ett Corporate Card-program på personalinstrumentpanelen och klickar på **[!UICONTROL Apply]**.
 
-![we-Finance-home-1](assets/we-finance-home-1.png)**Figure:** *Organisationsportal*
+![we-Finance-home-1](assets/we-finance-home-1.png)
+**Figure:** *Organisationsportal*
 
-![employee-dashboard-1](assets/employee-dashboard-1.png)**Figure:** *Instrumentpanel för medarbetare*
+![employee-dashboard-1](assets/employee-dashboard-1.png)
+**Figure:** *Employee Dashboard*
 
-Hon klickar **[!UICONTROL Apply]** på Corporate Card. Ett enkelsidigt program öppnas. Hon fyller i alla detaljer och klickar **[!UICONTROL Apply]** för att skicka in ansökan.
+Hon klickar **[!UICONTROL Apply]** på Corporate Card. Ett enkelsidigt program öppnas. Hon fyller i alla uppgifter och klickar på **[!UICONTROL Apply]** för att skicka in ansökan.
 
 ![kort-formulär](assets/card-form.png)
 
@@ -105,15 +111,17 @@ Den adaptiva formen för företagstillämpningar är en enkel, ensidig, responsi
 
 **Se det själv**
 
-Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/self-service-forms.html` och logga in med `srose/srose` som användarnamn/lösenord för Sarah. Klicka **[!UICONTROL Employee]** för att öppna kontrollpanelen och klicka sedan **[!UICONTROL Apply]** på Corporate Card. Fyll i uppgifterna och skicka in ansökan.
+Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/self-service-forms.html` och logga in med `srose/srose` som användarnamn/lösenord för Sarah. Klicka på **[!UICONTROL Employee]** för att komma åt kontrollpanelen och klicka sedan på **[!UICONTROL Apply]** på Corporate Card-programmet. Fyll i uppgifterna och skicka in ansökan.
 
-### Gloria granskar och godkänner ansökan om företagskort {#gloria-reviews-and-approves-the-corporate-card-application}
+### Gloria granskar och godkänner ansökan {#gloria-reviews-and-approves-the-corporate-card-application}
 
 Den ansökan om företagskort som Sarah har skickat in tilldelas Gloria Rios för granskning. Gloria loggar in på sin AEM Inbox och granskar de uppgifter hon tilldelats. Hon godkänner Sarah ansökan och slutför uppgiften.
 
-![corporate-card-inbox](assets/corporate-card-inbox.png)**Bild:** *Gloria&#39;s inbox*
+![corporate-card-](assets/corporate-card-inbox.png)
+**inboxFigure:** *Glorias inkorg*
 
-![godkänd](assets/corporate-card-approved.png)**bild:** *Öppna uppgift*
+![corporate-card-](assets/corporate-card-approved.png)
+**approvedFigure:** *Open task*
 
 **Så här fungerar det**
 
@@ -123,21 +131,23 @@ Arbetsflödet för att skicka in med Corporate Card-programmet aktiverar ett For
 
 **Se det själv**
 
-Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` och logga in med `grios/password` användarnamn/lösenord för Gloria Rios. Öppna uppgiften som skapats för Corporate Card-programmet och godkänn den.
+Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` och logga in med `grios/password` som användarnamn/lösenord för Gloria Rios. Öppna uppgiften som skapats för Corporate Card-programmet och godkänn den.
 
-## Genomgång av utgiftsrapportinlämning {#expense-report-submission-walkthrough}
+## Genomgång av inskickning av utgiftsrapport {#expense-report-submission-walkthrough}
 
 När Sarah går på affärsresor måste hon skicka in utgiftsrapporter för godkännande. Med självbetjäningsalternativet i sin organisation kan hon skicka in utgiftsrapporten online.
 
-### Sarah skickar programmet för utgiftsrapport {#sarah-submits-the-expense-report-application}
+### Sarah skickar programmet för utgiftsrapporten {#sarah-submits-the-expense-report-application}
 
-Sarah går till sin organisations portal, loggar in och klickar **[!UICONTROL Employee]** för att komma åt personalens kontrollpanel. Hon hittar programmet för utgiftsrapport på kontrollpanelen för medarbetare och klickar **[!UICONTROL Apply]**.
+Sarah går till sin organisations portal, loggar in och klickar på **[!UICONTROL Employee]** för att komma åt medarbetarinstrumentpanelen. Hon hittar programmet för utgiftsrapport på kontrollpanelen för medarbetare och klickar på **[!UICONTROL Apply]**.
 
-![we-Finance-home-2](assets/we-finance-home-2.png)**Figure:** *Organisationsportal*
+![we-Finance-home-2](assets/we-finance-home-2.png)
+**Figure:** *Organisationsportal*
 
-![employee-dashboard-2](assets/employee-dashboard-2.png)**Figure:** *Instrumentpanel för medarbetare*
+![employee-dashboard-2](assets/employee-dashboard-2.png)
+**Figure:** *Employee Dashboard*
 
-Hon klickar **[!UICONTROL Apply]** på programmet Utgiftsrapport. Ett programformulär öppnas med två flikar - Rapportnamn och Rapportdetaljer. Med ikonen **+** på fliken Rapportdetaljer kan hon lägga till fler än utgifter i en rapport.
+Hon klickar på **[!UICONTROL Apply]** i programmet Utgiftsrapport. Ett programformulär öppnas med två flikar - Rapportnamn och Rapportdetaljer. Med ikonen **+** på fliken Rapportinformation kan hon lägga till fler än utgifter i en rapport.
 
 Organisationsportalen och tillämpningarna är responsiva och mobilvänliga. Följande arbetsflöde visar hur Sarah navigerar genom och skickar utgiftsrapporten på sin mobila enhet.
 
@@ -151,15 +161,17 @@ Flikarna Rapportnamn och Rapportdetaljer i det adaptiva formuläret är panelkom
 
 **Se det själv**
 
-Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/self-service-forms.html` och logga in med `srose/srose` som användarnamn/lösenord för Sarah. Klicka **[!UICONTROL Employee]** för att öppna kontrollpanelen och klicka sedan **[!UICONTROL Apply]** på programmet Utgiftsrapport. Fyll i uppgifterna och skicka in ansökan.
+Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/self-service-forms.html` och logga in med `srose/srose` som användarnamn/lösenord för Sarah. Klicka på **[!UICONTROL Employee]** för att öppna kontrollpanelen och klicka sedan på **[!UICONTROL Apply]** i programmet Utgiftsrapport. Fyll i uppgifterna och skicka in ansökan.
 
 ### Gloria granskar och godkänner utgiftsrapporten {#gloria-reviews-and-approves-the-expense-report}
 
 Utgiftsrapporten från Sarah har tilldelats Gloria Rios för granskning. Gloria loggar in på sin AEM Inbox och granskar de uppgifter hon tilldelats. Hon godkänner Sarah ansökan och slutför uppgiften.
 
-![cost-report-inbox](assets/expense-report-inbox.png)**Bild:** *Gloria&#39;s inbox*
+![utgiftsrapport-](assets/expense-report-inbox.png)
+**inboxBild:** *Glorias inkorg*
 
-![godkänd](assets/expense-report-approved.png)**bild:** *Öppna uppgift*
+![utgiftsrapport-](assets/expense-report-approved.png)
+**godkändBild:** *Öppna uppgift*
 
 **Så här fungerar det**
 
@@ -169,19 +181,21 @@ Arbetsflödet för att skicka in i programmet Utgiftsrapport utlöser ett Forms-
 
 **Se det själv**
 
-Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` och logga in med `grios/password` användarnamn/lösenord för Gloria Rios. Öppna uppgiften som skapats för programmet Utgiftsrapport och godkänn den.
+Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` och logga in med `grios/password` som användarnamn/lösenord för Gloria Rios. Öppna uppgiften som skapats för programmet Utgiftsrapport och godkänn den.
 
 ## Lämna programgenomgången {#leave-application-walkthrough}
 
 Sarah planerar en familjesemester nästa månad och vill ansöka om en veckas ledighet från jobbet.
 
-### Sarah lämnar in ledighetsansökan {#sarah-submits-the-leave-application}
+### Sarah skickar ledighetsansökan {#sarah-submits-the-leave-application}
 
-Sarah går till sin organisations portal, loggar in och klickar **[!UICONTROL Employee]** för att komma åt personalens kontrollpanel. Hon hittar programmet på dashboard för medarbetare och klickar **[!UICONTROL Apply]**.
+Sarah går till sin organisations portal, loggar in och klickar på **[!UICONTROL Employee]** för att komma åt medarbetarinstrumentpanelen. Hon hittar programmet på kontrollpanelen för medarbetare och klickar på **[!UICONTROL Apply]**.
 
-![we-Finance-home-3](assets/we-finance-home-3.png)**Figure:** *Organisationsportal*
+![we-Finance-home-3](assets/we-finance-home-3.png)
+**Figure:** *Organisationsportal*
 
-![employee-dashboard-3](assets/employee-dashboard-3.png)**Figure:** *Instrumentpanel för medarbetare*
+![employee-dashboard-3](assets/employee-dashboard-3.png)
+**Figure:** *Employee Dashboard*
 
 Lämna program öppnas med Sarah namn och anställnings-ID förifyllt i formuläret. Det visar också hennes ledighetsbalans och historia. Hon fyller i ledighetsinformationen och lämnar in ansökan om godkännande.
 
@@ -193,7 +207,7 @@ Organisationsportalen och tillämpningarna är responsiva och mobilvänliga. Fö
 
 Organisationsportalen och personalkontrollpanelen är AEM Sites-sidor. På kontrollpanelen visas flera självbetjäningsalternativ, till exempel programmet Lämna. Knappen Använd är länkad till ett anpassat formulär.
 
-Det anpassningsbara formuläret för ledighetsansökan baseras på datamodellen Employee Leaves. I avsnittet Lämna saldo fylls tabellen för återstående saldo i med hjälp av tjänsten för `getLeavesOf` formulärdatamodell. I start- och slutdatumfälten används regler för att validera att datumvärdena är lika med eller efter det aktuella datumet. Ledighetens varaktighet beräknas med hjälp av `calcBusinessDays` funktionen.
+Det anpassningsbara formuläret för ledighetsansökan baseras på datamodellen Employee Leaves. I avsnittet Lämna saldo fylls tabellen för återstående saldo i med tjänsten `getLeavesOf` Form Data Model. I start- och slutdatumfälten används regler för att validera att datumvärdena är lika med eller efter det aktuella datumet. Ledighetens varaktighet beräknas med funktionen `calcBusinessDays`.
 
 Du kan granska det adaptiva formuläret och formulärdatamodellen på följande platser:
 
@@ -203,15 +217,17 @@ Du kan granska det adaptiva formuläret och formulärdatamodellen på följande 
 
 **Se det själv**
 
-Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/self-service-forms.html` och logga in med `srose/srose` som användarnamn/lösenord för Sarah. Klicka **[!UICONTROL Employee]** för att öppna kontrollpanelen och klicka sedan **[!UICONTROL Apply]** på Lämna program. Fyll i uppgifterna och skicka in ansökan.
+Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/self-service-forms.html` och logga in med `srose/srose` som användarnamn/lösenord för Sarah. Klicka på **[!UICONTROL Employee]** för att öppna instrumentpanelen och klicka sedan på **[!UICONTROL Apply]** på Lämna program. Fyll i uppgifterna och skicka in ansökan.
 
 ### Gloria granskar och godkänner ledighetsansökan {#gloria-reviews-and-approves-the-leave-application}
 
-Den ledighetsansökan som Sarah lämnat in tilldelas Gloria Rios för granskning. Gloria loggar in på sin AEM Inbox och granskar de uppgifter hon tilldelats. Hon godkänner Sarah ansökan och slutför uppgiften.
+Den ledighetsansökan som Sarah har lämnat in tilldelas Gloria Rios för granskning. Gloria loggar in på sin AEM Inbox och granskar de uppgifter hon tilldelats. Hon godkänner Sarah ansökan och slutför uppgiften.
 
-![left-inbox](assets/leave-inbox.png)**Figure:** *Gloria&#39;s inbox*
+![left-](assets/leave-inbox.png)
+**inboxFigure:** *Glorias inkorg*
 
-![Godkänd](assets/leave-approved.png)**figur:** *Öppna uppgift*
+![lämna-](assets/leave-approved.png)
+**godkändBild:** *Öppna uppgift*
 
 **Så här fungerar det**
 
@@ -221,4 +237,4 @@ Arbetsflödet för att skicka iväg programmet utlöser ett Forms-arbetsflöde s
 
 **Se det själv**
 
-Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` och logga in med `grios/password` användarnamn/lösenord för Gloria Rios. Öppna uppgiften som skapats för att lämna programmet och godkänn den.
+Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` och logga in med `grios/password` som användarnamn/lösenord för Gloria Rios. Öppna uppgiften som skapats för att lämna programmet och godkänn den.
