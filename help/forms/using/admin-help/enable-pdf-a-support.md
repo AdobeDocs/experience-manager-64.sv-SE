@@ -25,5 +25,5 @@ PDF Generator stöder framtagning av PDF/A-kompatibla filer från Microsoft Exce
 1. I administrationskonsolen klickar du på Tjänster > PDF Generator > Filtypsinställningar.
 1. Klicka på Ny eller välj en befintlig filtypsinställning.
 1. Klicka på Microsoft Excel, Microsoft PowerPoint eller Microsoft Word och välj Skapa PDF/A-1a-kompatibel fil och spara ändringarna.
-1. Klicka på Adobe PDF > Ändra konverteringsinställningar i det program som skapats (t.ex. Microsoft Word) och välj sedan PDF/A-1b.
+1. Klicka på Adobe PDF > Ändra konverteringsinställningar i det program där filen skapats (t.ex. Microsoft Word) och välj sedan PDF/A-1b.
 
