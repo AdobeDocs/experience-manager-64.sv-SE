@@ -17,11 +17,11 @@ ht-degree: 0%
 ---
 
 
-# Mallar för referensbrev {#reference-letter-templates}
+# Referensbokstavsmallar {#reference-letter-templates}
 
 I Correspondence Management innehåller en brevmall typiska formulärfält, layoutfunktioner som sidhuvud och sidfot samt tomma målområden för innehållsplacering.
 
-Correspondence Management innehåller brevmallar i AEM Forms package [AEM-FORMS-REFERENCE-LAYOUT-TEMPLATES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES). Information om hur du installerar ett paket finns i [Arbeta med paket](/help/sites-administering/package-manager.md). Du kan anpassa mallarna i Designer efter företagets grafiska profil och behov. Paketet innehåller följande mallar:
+Correspondence Management tillhandahåller brevmallar i AEM Forms-paketet [AEM-FORMS-REFERENCE-LAYOUT-TEMPLATES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES). Information om hur du installerar ett paket finns i [Arbeta med paket](/help/sites-administering/package-manager.md). Du kan anpassa mallarna i Designer efter företagets grafiska profil och behov. Paketet innehåller följande mallar:
 
 * Klassisk
 * Klassisk enkel
@@ -48,7 +48,7 @@ När du har installerat paketet AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES visas m
 
 ## Klassisk {#classic}
 
-Klassisk mall med en logotyp överst passar för ett vanligt professionellt brev.
+Klassisk mall passar för ett enkelt professionellt brev med en logotyp överst.
 
 ![klassisk](assets/classic.png)
 
@@ -78,7 +78,7 @@ Mallen Balanced Right har företagslogotypen till vänster och ger utrymme för 
 
 PDF-förhandsgranskning av ett brev som skapats med mallen för balanserat höger
 
-## Visual Left {#visual-left}
+## Visuell vänster {#visual-left}
 
 Mallen Visual Left har ett sidohuvud till vänster på sidan med företagets logotyp placerad över sidhuvudet. Mallen Visual Left har ett ämnesfält men ingen sidfot.
 
