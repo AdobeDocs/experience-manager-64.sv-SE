@@ -28,7 +28,7 @@ Mer information om hur du förbättrar prestanda för databas- och katalogsynkro
 
 Om du har en SSL-aktiverad LDAP-server konfigurerar du användarhantering så att den fungerar med den. (Se [Konfigurera användarhantering för en SSL-aktiverad LDAP-server](/help/forms/using/admin-help/configure-user-management-ssl-enabled.md#configure-user-management-for-an-ssl-enabled-ldap-server).)
 
-## Ställa in användarbehörighet för dokumentsäkerhet {#setting-user-privileges-for-use-with-document-security}
+## Ange användarbehörighet för dokumentsäkerhet {#setting-user-privileges-for-use-with-document-security}
 
 Skapa en administratörsanvändare som har lämplig behörighet för att skapa användare och grupper. Om din AEM innehåller dokumentskydd ger du behörighet att hantera inbjudna och lokala användare till en användare som är administratör för dessa användare. Tilldela även administratörskonsolens användarroll för att ge användaren åtkomst till administrationskonsolen. (Se [Skapa och konfigurera roller](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).)
 
