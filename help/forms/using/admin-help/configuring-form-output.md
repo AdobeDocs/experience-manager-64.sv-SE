@@ -27,7 +27,7 @@ ht-degree: 1%
 
    **Fullständig HTML:** Återge formuläret med fullständiga HTML-taggar (en komplett HTML-sida). Det här värdet är standardvärdet.
 
-   **Formulärbrödtext:** Om du vill återge formuläret inom `<BODY>` -taggar (inte en fullständig HTML-sida).
+   **Formulärbrödtext:** Återge formuläret inom  `<BODY>` taggar (inte en fullständig HTML-sida).
 
 1. Klicka på Spara.
 
@@ -39,7 +39,7 @@ ht-degree: 1%
 
    **Server:** Återge PDF forms på programservern.
 
-   **Auto:** Om du vill återge PDF-formuläret på den plats som anges av XDP-filens `dynamicRender` konfigurationsvärde. Det här värdet är standardvärdet.
+   **Auto:** Återge PDF-formuläret på den plats som anges av XDP-filens  `dynamicRender` konfigurationsvärde. Det här värdet är standardvärdet.
 
 1. Klicka på Spara.
 
@@ -48,7 +48,7 @@ ht-degree: 1%
 Gör så här för att aktivera funktionen:
 
 1. Logga in på administrationskonsolen.
-1. Gå till **Tjänster** > **Formulär**.
+1. Gå till **Tjänster** > **formulär**.
 1. Ange utdatatypen som Formulärbrödtext.
 1. Spara inställningarna.
 1. Deklarera en JavaScript-variabel, __CUSTOM_SCRIPTS_VERSION, i HTML-kodens head-avsnitt och ställ in värdet på 1.
