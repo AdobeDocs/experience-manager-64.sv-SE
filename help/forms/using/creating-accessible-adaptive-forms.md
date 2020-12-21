@@ -40,21 +40,21 @@ Etiketten som upplevs av skärmläsare behöver inte nödvändigtvis vara samma 
 Så här använder du alternativet Hjälpmedel:
 
 1. Markera en komponent och tryck på ![cmpr](assets/cmppr.png).
-1. Klicka på **Tillgänglighet** i sidlisten för att välja det önskade hjälpmedelsalternativet.
+1. Klicka på **Tillgänglighet** i sidofältet för att välja önskat hjälpmedelsalternativ.
 
 ### Tillgänglighetsalternativ i formulärkomponenter {#accessibility-options-in-form-components}
 
 ![Tillgänglighetsalternativ i formulärkomponenter](assets/accessibility-options.png)
 
-**Författare av anpassade textformulär** tillhandahåller innehållet i hjälpmedelsalternativet Anpassad text. Den här anpassade texten används i hjälpmedelstekniken, till exempel skärmläsare. Att använda inställningen Titel är det bästa alternativet i de flesta scenarier. Du bör endast skapa Reader-text för anpassad skärm när du inte kan använda rubriken eller en kort beskrivning.
+**Anpassade** TextForm-författare tillhandahåller innehållet i hjälpmedelsalternativet Anpassat textfält. Den här anpassade texten används i hjälpmedelstekniken, till exempel skärmläsare. Att använda inställningen Titel är det bästa alternativet i de flesta scenarier. Du bör endast skapa Reader-text för anpassad skärm när du inte kan använda rubriken eller en kort beskrivning.
 
-**Kort beskrivning** För de flesta komponenter visas den korta beskrivningen vid körning när användaren placerar pekaren över komponenten. Du kan ange det här alternativet i fältet för kort beskrivning under alternativet för hjälpinnehåll.
+**Kort** beskrivningFör de flesta komponenter visas den korta beskrivningen vid körning när användaren placerar pekaren över komponenten. Du kan ange det här alternativet i fältet för kort beskrivning under alternativet för hjälpinnehåll.
 
-**Titel** Använd det här alternativet om du vill att den visuella etikett som är kopplad till formulärfältet ska kunna användas som skärmläsartext i AEM Forms.
+**** TitelAnvänd det här alternativet om du vill att den visuella etikett som är kopplad till formulärfältet ska kunna användas som skärmläsartext i AEM Forms.
 
-**Namn** Du kan ange ett värde i fältet Namn på fliken Bindning. Namnet får inte innehålla blanksteg.
+**** NamnDu kan ange ett värde i fältet Namn på fliken Bindning. Namnet får inte innehålla blanksteg.
 
-**Om du väljer Ingen** och inte väljer Ingen får formulärobjektet inget namn i det publicerade formuläret. Ingen rekommenderas inte för formulärkontroller.
+**IngenOm du väljer** Ingen får formulärobjektet inget namn i det publicerade formuläret. Ingen rekommenderas inte för formulärkontroller.
 
 >[!NOTE]
 >
