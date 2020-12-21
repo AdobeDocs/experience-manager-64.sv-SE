@@ -17,9 +17,9 @@ ht-degree: 0%
 ---
 
 
-# Åtkomst och ifyllande av publicerade formulär {#accessing-and-filling-published-forms}
+# Åtkomst till och ifyllnad av publicerade formulär {#accessing-and-filling-published-forms}
 
-I en formulärcentrerad portaldistribution är formulärutveckling och portalutveckling två skilda aktiviteter. När formulärdesigners designar och lagrar formulär i en databas skapar webbutvecklare ett webbprogram som följer den listan och hanterar inskickade formulär. Forms kopieras sedan till webbnivån eftersom det inte finns någon kommunikation mellan formulärdatabasen och webbprogrammet.
+I en formulärcentrerad portalinstallation är formulärutveckling och portalutveckling två skilda aktiviteter. När formulärdesigners designar och lagrar formulär i en databas skapar webbutvecklare ett webbprogram som följer den listan och hanterar inskickade formulär. Forms kopieras sedan till webbnivån eftersom det inte finns någon kommunikation mellan formulärdatabasen och webbprogrammet.
 
 Detta leder ofta till problem med att hantera installations- och produktionsförseningar. Om till exempel en nyare version av ett formulär är tillgänglig i databasen ersätter formulärdesignern formuläret på webbnivån, ändrar webbprogrammet och distribuerar om formuläret på den offentliga webbplatsen. Omdistribuering av webbprogrammet kan orsaka serverdriftavbrott. Eftersom serverns driftstopp är en planerad aktivitet kan ändringarna inte skickas direkt till den offentliga webbplatsen.
 
@@ -33,13 +33,14 @@ Navigera till den publicerade formulärportalen. Mer information om hur du skapa
 
 Komponenten Search och Lister i formulärportalen visar de formulär som är tillgängliga i publiceringsinstansen på AEM. Den här listan innehåller alla formulär eller de formulär som definieras i filtret när formulärportalsidan redigeras. En formulärportalsida ser ut ungefär som i följande bild:
 
-![Exempel på portalsida för formulär ](assets/forms-portal-page.png)**Bild:** *En exempelformulärportalsida*
+![En exempelformulärportalsida  ](assets/forms-portal-page.png)
+**Bild:** *En exempelformulärportalsida*
 
 ### Sök och visa {#search-and-lister}
 
 Med komponenten Sök och Lister kan du lägga till följande funktioner i formulärportalen:
 
-* Visa en lista över formulär som är tillgängliga direkt i panelen, kortet eller stödrastervyn. Det har även stöd för anpassade mallarVisa formulär från specifika mappar i Forms Manager.
+* Visa en lista över formulär som är tillgängliga direkt i panelen, kortet eller stödrastervyn. Det har även stöd för anpassade mallarLista formulär från specifika mappar i Forms Manager.
 * Ange hur formulär ska återges - HTML5, PDF eller båda.
 * Ange hur PDF- och XFA-formulär återges - HTML5, PDF eller båda. Icke-XFA-formulär som HTML5.
 * Möjliggör sökning av formulär baserat på kriterier som formuläregenskaper, metadata och taggar.
@@ -54,7 +55,8 @@ Du kan söka efter formulär på Forms Portal-sidan med följande alternativ:
 
 Med fulltextsökning kan du söka efter och lista formulär baserat på de angivna nyckelorden.
 
-![En avancerad sökdialog](assets/search-panel.png)**Bild:** *En avancerad sökdialog*
+![En avancerad ](assets/search-panel.png)
+**sökdialogrutaBild:** *En avancerad sökdialogruta*
 
 Med avancerad sökning kan du söka efter formulär baserat på angivna formuläregenskaper. Detta ger ett mer specifikt resultat än fulltextsökning. I avancerad sökning ingår sökning baserat på taggar, egenskaper (till exempel Författare, Beskrivning och Titel), ändringsdatum och fullständig text.
 
@@ -62,13 +64,14 @@ Lister visar formulär baserade på sökparametrar. Varje formulär i sökresult
 
 ### Fylla i ett formulär {#filling-a-form}
 
-![Ett exempel på adaptiv form](assets/filling_a_form.png)**:** *Ett adaptivt exempelformulär*
+![Ett adaptivt ](assets/filling_a_form.png)
+**exempelformulärFigur:** *Ett adaptivt exempelformulär*
 
 Formulären kan nås via länken som medföljer formuläret i sid- och listkomponenten.
 
 Varje formulär innehåller hjälpinformation som gör att användaren kan fylla i formuläret.
 
-#### Utkast och inlämning {#drafts-and-submission}
+#### Utkast och inskickning {#drafts-and-submission}
 
 En användare kan spara ett utkast av ett formulär genom att klicka på knappen Spara. Detta gör att användaren kan arbeta med ett formulär under en tidsperiod innan formuläret skickas.
 
@@ -80,13 +83,14 @@ När formuläret har fyllts i skickar användaren formulären genom att klicka p
 >
 >Skickade formulär visas bara på fliken Skickat Forms om skicka-åtgärden för det adaptiva formuläret har konfigurerats som Forms Portal Submit Action (Skicka-åtgärd). Mer information om Skicka-åtgärder finns i [Konfigurera Skicka-åtgärden](/help/forms/using/configuring-submit-actions.md).
 
-![Komponenten](assets/draft-submission.png)för utkast och inskickning **Figur:** *Komponenten Utkast och inskickat material*
+![Komponenten för utkast och inskickning:](assets/draft-submission.png)
+**Komponenten** *för utkast och inskickning*
 
 ## Starta ett nytt formulär med skickade formulärdata {#start-a-new-form-using-submitted-form-data}
 
 Det finns vissa formulär som du behöver fylla i och skicka in ganska ofta. Formuläret för att skicka in individuell skattedeklaration skickas till exempel varje år. I sådana fall ändras en del av informationen varje gång du fyller i formuläret, men de flesta av dem, som personuppgifter och familjeuppgifter, ändras inte. Du måste dock ändå fylla i hela formuläret från grunden.
 
-AEM Forms kan hjälpa till att optimera formulärifyllningen och avsevärt minska tiden för att fylla i och skicka in ett formulär igen. Slutanvändare kan påbörja ett nytt formulär med data från ett skickat formulär. Den här funktionen är inbyggd i komponenten [](/help/forms/using/draft-submission-component.md)Utkast och överföringar. När du lägger till utkast och skicka-komponent på din formulärportalsida och publicerar den hittar slutanvändarna ett alternativ på flikarna Skickat Forms och Utkast Forms för att starta ett nytt formulär med data från ett skickat formulär. Följande bild markerar det alternativet.
+AEM Forms kan hjälpa till att optimera formulärifyllningen och avsevärt minska tiden för att fylla i och skicka in ett formulär igen. Slutanvändare kan påbörja ett nytt formulär med data från ett skickat formulär. Den här funktionen är inbyggd i [komponenten Utkast och överföringar](/help/forms/using/draft-submission-component.md). När du lägger till utkast och skicka-komponent på din formulärportalsida och publicerar den hittar slutanvändarna ett alternativ på flikarna Skickat Forms och Utkast Forms för att starta ett nytt formulär med data från ett skickat formulär. Följande bild markerar det alternativet.
 
 ![start-a-new-form](assets/start-a-new-form.png)
 
