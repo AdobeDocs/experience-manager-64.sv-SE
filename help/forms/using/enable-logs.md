@@ -26,7 +26,7 @@ Du kan konfigurera loggningsverktyget så att loggar för HTML5-formulär skapas
 
 Utför följande steg för att konfigurera serversidesloggar:
 
-1. Gå till `https://[server]:[port]/system/console/configMgr`. Leta reda på och öppna *loggningskonfigurationsalternativet* för Appace Sling. En dialogruta visas:
+1. Gå till `https://[server]:[port]/system/console/configMgr`. Leta reda på och öppna alternativet *Loggningslogg för Appace Sling*. En dialogruta visas:
 
    ![ Dialogrutan Konfiguration av loggningslogg för Apace Sling](assets/logconfig.png)
 
@@ -49,7 +49,7 @@ Du kan använda följande metoder för att aktivera klientloggning i HTML5-formu
 * Använda parametern request med namnet `log`
 * Använda CQ Configuration Manager
 
-### Aktivera loggning med parametern request {#enabling-logging-using-request-parameter}
+### Aktivera loggning med parametern {#enabling-logging-using-request-parameter} för begäran
 
 Med den här metoden kan du generera loggar för en viss begäran. Namnet på parametern request är **log**. Loggens URL är följande:
 
@@ -67,11 +67,11 @@ Loggkonfigurationen består av loggnivån och loggkategorin.
   </tr> 
   <tr> 
    <td>1</td> 
-   <td>Loggar dirigeras till webbläsarkonsolen <strong></strong></td> 
+   <td>Loggar dirigeras till webbläsaren <strong>Konsol</strong></td> 
   </tr> 
   <tr> 
    <td>2</td> 
-   <td>Loggar samlas in i ett JavaScript-objekt på klientsidan och kan skickas till <strong>servern</strong> </td> 
+   <td>Loggar samlas in i ett JavaScript-objekt på klientsidan och kan skickas till <strong>Server</strong> </td> 
   </tr> 
   <tr> 
    <td>3</td> 
@@ -90,19 +90,19 @@ Loggkonfigurationen består av loggnivån och loggkategorin.
   </tr> 
   <tr> 
    <td>0</td> 
-   <td>OFF<br type="_moz" /> </td> 
+   <td>AV<br type="_moz" /> </td> 
   </tr> 
   <tr> 
-   <td>1</td> 
+   <td>3</td> 
    <td>FATAL<br type="_moz" /> </td> 
   </tr> 
   <tr> 
    <td>2</td> 
-   <td>ERROR<br type="_moz" /> </td> 
+   <td>FEL<br type="_moz" /> </td> 
   </tr> 
   <tr> 
    <td>3</td> 
-   <td>VARNING<br type="_moz" /> </td> 
+   <td>VARNA<br type="_moz" /> </td> 
   </tr> 
   <tr> 
    <td>4</td> 
@@ -162,7 +162,7 @@ Till exempel:
   </tr> 
   <tr> 
    <td>2-a4-b5-c6<br type="_moz" /> </td> 
-   <td>Mål: Server<br /> xfa-nivå: INFO<br /> xfaView-nivå: DEBUG<br /> xfaPerf-nivå: TRACE</td> 
+   <td>Mål: Server<br /> xfa-nivå: INFO<br /> xfaView level: DEBUG<br /> xfaPerf-nivå: TRACE</td> 
   </tr> 
  </tbody> 
 </table>
@@ -188,14 +188,14 @@ Om du använder Configuration Manager för att aktivera loggning genereras logga
 
 ## Överför loggar {#uploading-logs}
 
-Om målet är 1 dirigeras alla klientskriptloggmeddelanden till konsolen. Om en administratör kräver dessa loggar tillsammans med serverloggar anger du målnivån till 2. På den här nivån samlas alla loggar in i ett JS-objekt på klientsidan. Om formuläret återges med standardprofil visas knappen **Skicka loggar** till vänster om knappen **Markera befintliga fält** i verktygsfältet. När användaren klickar på länken registreras alla insamlade loggar på servern och loggas i den konfigurerade felloggfilen på servern.
+Om målet är 1 dirigeras alla klientskriptloggmeddelanden till konsolen. Om en administratör kräver dessa loggar tillsammans med serverloggar anger du målnivån till 2. På den här nivån samlas alla loggar in i ett JS-objekt på klientsidan. Om formuläret återges med standardprofil visas en **Skicka loggar**-knapp till vänster om **Markera befintliga fält**-knapp i verktygsfältet. När användaren klickar på länken registreras alla insamlade loggar på servern och loggas i den konfigurerade felloggfilen på servern.
 
 Som standard läggs all information till i filen error.log i katalogen /crx-database/logs/.
 
 Så här ändrar du plats och namn på loggfilen:
 
 1. Logga in på Configuration Manager som administratör. Konfigurationshanterarens standardwebbadress är `https://[*Server*]:[*Port*]/system/console/configMgr`.
-1. Klicka på **Konfiguration** av loggningsloggning för Apache Sling. En dialogruta visas.
+1. Klicka på **Konfiguration för Apache Sling Logging Logger.**. En dialogruta visas.
 
    ![logconfig-1](assets/logconfig-1.png)
 
@@ -207,5 +207,5 @@ Så här ändrar du plats och namn på loggfilen:
    >
    >Om du vill skapa loggar i samma katalog som andra loggfiler finns i anger du ../logs/&lt;filnamn> i egenskapen Loggfiler.
 
-1. Ändra **Logger** till **HTMLFormsPerfLogger** och klicka på **Spara**.
+1. Ändra **loggboken** till **HTMLFormsPerfLogger** och klicka på **Spara**.
 
