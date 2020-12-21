@@ -26,17 +26,17 @@ För AEM Communities finns det olika rapporter som du kan få åtkomst till på 
 
 De olika rapporterna är i allmänhet följande:
 
-* [Uppdragsrapport](#assignments-report) - för en community [för](overview.md#enablement-community)aktivering ger en översikt över elevens framsteg i sina uppdrag, inklusive ett associerat poängvärde om SCORM-standarden implementeras
-* [Vyrapport](#views-report) - ger en översikt över vad communitymedlemmar och besökare tycker om communitysajter
-* [Inläggsrapport](#posts-report) - innehåller en lista över olika typer av inlägg från communitymedlemmar på valfri communitywebbplats
+* [Uppdragsrapport](#assignments-report)  - för en community [ för ](overview.md#enablement-community)aktivering ger en översikt över elevens framsteg i sina uppdrag, inklusive ett associerat poängvärde om SCORM-standarden implementeras
+* [Vyrapport](#views-report)  - visar en lista över vad communitymedlemmar och webbplatsbesökare kan se på en community-webbplats
+* [Inläggsrapport](#posts-report)  - innehåller en lista över olika typer av inlägg från communitymedlemmar på valfri communitywebbplats
 
-När [Adobe Analytics är aktiverat](sites-console.md#analytics)innehåller rapporterna antalet visningar, uppspelningar, kommentarer och omdömen för varje aktiveringsresurs över tiden
+När [Adobe Analytics är aktiverat](sites-console.md#analytics) innehåller rapporterna antalet vyer, uppspelningar, kommentarer och omdömen för varje aktiveringsresurs över tiden
 
 Tabellrapporter kan exporteras i CSV-format för efterföljande bearbetning.
 
 ## Rapporteringskonsoler {#reporting-consoles}
 
-### Rapporter om communitysajter {#reports-for-community-sites}
+### Rapporter för communityplatser {#reports-for-community-sites}
 
 * Från global navigering: **[!UICONTROL Navigation > Communities > Reports]**
 * Välj från
@@ -48,13 +48,13 @@ Tabellrapporter kan exporteras i CSV-format för efterföljande bearbetning.
       * Generera en rapport för den valda communityplatsen, innehållstypen och tidsperioden
          ![chlimage_1-156](assets/chlimage_1-156.png)
 
-### Rapporter om aktiveringsresurser och utbildningsvägar {#reports-for-enablement-resources-and-learning-paths}
+### Rapporter om aktiveringsresurser och utbildningssökvägar {#reports-for-enablement-resources-and-learning-paths}
 
 * Från global navigering: **[!UICONTROL Navigation > Communities > Resources]**
 * Välj en befintlig webbplats för aktiveringscommunityn
-   * Välj **[!UICONTROL Report]** ikon om du vill generera rapporter som täcker alla aktiveringsresurser
+   * Välj ikonen **[!UICONTROL Report]** om du vill generera rapporter som täcker alla aktiveringsresurser
    * Välj en utbildningsväg för aktivering
-   * Välj **[!UICONTROL Report]** ikon om du vill generera rapporter för
+   * Välj ikonen **[!UICONTROL Report]** om du vill generera rapporter för
       * De medföljande aktiveringsresurserna
       * De studerande som är tilldelade inlärningsbanan
 * Rapporterna innehåller följande:
@@ -65,7 +65,7 @@ Tabellrapporter kan exporteras i CSV-format för efterföljande bearbetning.
       * Antal kommentarer
       * Stjärngradering
 
-Mer information finns i avsnittet [Rapporter](resources.md#report) i resurskonsolen.
+Mer information finns i [avsnittet Rapporter](resources.md#report) i Resurskonsolen.
 
 ## Uppdragsrapport {#assignments-report}
 
@@ -81,11 +81,12 @@ Välj villkor för rapporten:
 Välj en community-webbplats för aktivering
 * **[!UICONTROL User or Group]**
    * Välj Användare om du vill generera en rapport för en elev
-   * Välj Grupp om du vill generera en rapport för en grupp deltagareTunneltjänsten kommer åt medlemmar och medlemsgrupper från publiceringsmiljön
+   * Välj Grupp för att generera en rapport för en grupp av studerande
+Tunneltjänsten kommer att få åtkomst till medlemmar och medlemsgrupper från publiceringsmiljön
 * **[!UICONTROL Assignment]**
 Välj bland de aktiveringsresurser som tilldelats de valda eleverna
 
-Välj **[!UICONTROL Generate]** att skapa rapporten:
+Välj **[!UICONTROL Generate]** för att skapa rapporten:
 
 ![chlimage_1-158](assets/chlimage_1-158.png)
 
@@ -101,13 +102,14 @@ Välj villkor för rapporten:
 Välj en community-webbplats
 * **[!UICONTROL Content Type]**
 Välj allt innehåll eller någon av funktionerna på webbplatsen
-* TidsramVälj något av:
+* Tidsram
+Välj något av följande:
    * De senaste 7 dagarna
    * De senaste 30 dagarna
    * De senaste 90 dagarna
    * Förra året
 
-Välj **[!UICONTROL Generate]** att skapa rapporten:
+Välj **[!UICONTROL Generate]** för att skapa rapporten:
 
 ![chlimage_1-160](assets/chlimage_1-160.png)
 
@@ -123,18 +125,19 @@ Välj villkor för rapporten:
 Välj en community-webbplats
 * **[!UICONTROL Content Type]**
 Välj allt innehåll eller någon av funktionerna på webbplatsen
-* TidsramVälj något av:
+* Tidsram
+Välj något av följande:
    * De senaste 7 dagarna
    * De senaste 30 dagarna
    * De senaste 90 dagarna
    * Förra året
 
-Välj **[!UICONTROL Generate]** att skapa rapporten:
+Välj **[!UICONTROL Generate]** för att skapa rapporten:
 
 ![chlimage_1-162](assets/chlimage_1-162.png)
 
 ## Felsökning {#troubleshooting}
 
-### Inga communitywebbplatser har angetts {#no-community-sites-listed}
+### Inga communitywebbplatser har listats {#no-community-sites-listed}
 
 Om det inte finns några communitysajter i listan kontrollerar du att Adobe Analytics har aktiverats för en webbplats. Om du väljer rapporter om tilldelningar måste du se till att tilldelningsfunktionen finns i communityplatsens struktur.
