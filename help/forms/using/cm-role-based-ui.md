@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# PUBLICERA INTE rollbaserat användargränssnitt i korrespondenshanteringen {#do-not-publish-role-based-user-interface-in-correspondence-management}
+# PUBLICERA INTE rollbaserat användargränssnitt i Correspondence Management {#do-not-publish-role-based-user-interface-in-correspondence-management}
 
 I AEM kan administratören ge rollbaserad åtkomst till olika användargrupper för att utföra olika åtgärder på olika resurser. Funktionerna för att skapa eller redigera dataordlistor kan till exempel bara vara tillgängliga för användare i en viss användargrupp, medan andra användare bara kan visa och använda dataordlistorna.
 
@@ -37,7 +37,7 @@ Mer information om grupper, behörigheter, åtkomstkontrollistor och hur du hant
 
 1. Skapa de mappar som passar för de avsedda behörigheterna.
 
-   Om ett företag t.ex. har inteckningar i hemmet, kreditkort och försäkringsavdelningar kan de skapa mappar med namn `HomeMortgage`och `CreditCard,``Insurance` behålla relevanta tillgångar och ge agenterna tillgång till vissa tillgångar som endast är relevanta för deras avdelningar.
+   Om ett företag t.ex. har inteckningar i hemmet, kreditkort och försäkringsavdelningar kan de skapa mappar med namnen `HomeMortgage`, `CreditCard,`och `Insurance` för att behålla de relevanta tillgångarna och ge agenterna selektiv tillgång till resurser som bara är relevanta för deras avdelningar.
 
 1. Gör något av följande om du vill få åtkomst AEM WCM-säkerhet:
 
@@ -54,7 +54,7 @@ Mer information om grupper, behörigheter, åtkomstkontrollistor och hur du hant
 
    Om du vill hitta namnet på gruppen kan du skriva namnet på gruppen i det angivna utrymmet.
 
-1. Gå till den sökväg som du vill lägga till behörigheter i på fliken Behörigheter. Mapparna Correspondence Management finns under `content/apps/cm/` mappen.
+1. Gå till den sökväg som du vill lägga till behörigheter i på fliken Behörigheter. Mapparna Correspondence Management finns under mappen `content/apps/cm/`.
 
    Markera kryssrutan i kolumnen Medlem för de medlemmar som du vill ska ha behörighet till den sökvägen. Avmarkera kryssrutan för den medlem som du vill ta bort behörigheter för. En röd triangel visas i cellen som du har ändrat i.
 
