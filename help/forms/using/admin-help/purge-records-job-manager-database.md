@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Rensa poster från Job Manager-databasen {#purge-records-from-the-job-manager-database}
+# Rensa poster från jobbhanterardatabasen {#purge-records-from-the-job-manager-database}
 
 Processdata som genereras när en långvarig process anropas kan bli för stora, vilket kan ge sämre prestanda för AEM och kräver onödigt diskutrymme. Det är god praxis att rensa processdata när det inte längre behövs några poster.
 
@@ -55,7 +55,7 @@ Information om eventuella schemalagda rensningar visas i rutan Information om sc
 **Konfigurera ett automatiskt rensningsschema**
 
 1. Välj Återskapa varje och ange antalet dagar eller veckor mellan tömningar.
-1. I området Töm slutförda poster anger du antalet dagar eller veckor efter vilka en post anses föråldrad och klar för rensning. Du kan inte ange värdet till `0`.
+1. I området Töm slutförda poster anger du antalet dagar eller veckor efter vilka en post anses föråldrad och klar för rensning. Du kan inte ange värdet `0`.
 
    >[!NOTE]
    >
