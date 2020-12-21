@@ -24,7 +24,7 @@ Om du vill tillämpa användningsbehörighet för PDF-dokument konfigurerar du A
 
 Om du använder en utvärderingsreferens ersätter du den med en produktionsautentiseringsuppgift när du flyttar till produktionsmiljön. Om du vill uppdatera en inloggningsinformation som har gått ut eller utvärdera den tar du först bort den gamla Acrobat Reader DC-tilläggsinformationen.
 
-Mer information om hur du hämtar autentiseringsuppgifter finns i [Förbereda för att installera AEM (Single Server)](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63).
+Mer information om hur du hämtar autentiseringsuppgifter finns i [Förbereda för att installera AEM formulär (Single Server)](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63).
 
 Trust Store kan innehålla fler än en Acrobat Reader DC-tilläggsreferens. Du måste ange en av dessa autentiseringsuppgifter som standardautentiseringsuppgifter för Reader Extensions. Standardautentiseringsuppgifterna används när en Workbench-användare inte kan avgöra vilka autentiseringsuppgifter som ska användas när processen skapas. Dessa regler gäller för standardautentiseringsuppgifter:
 
@@ -57,7 +57,7 @@ Trust Store kan innehålla fler än en Acrobat Reader DC-tilläggsreferens. Du m
 1. I administrationskonsolen klickar du på Inställningar > Lita på arkivhantering > Lokala autentiseringsuppgifter.
 1. Markera autentiseringsuppgifterna och klicka på Ta bort.
 
-## Ersätta autentiseringsuppgifter för Acrobat Reader DC-tillägg {#replace-a-acrobat-reader-dc-extensions-credential}
+## Ersätta en autentiseringsuppgift för Acrobat Reader DC-tillägg {#replace-a-acrobat-reader-dc-extensions-credential}
 
 1. I administrationskonsolen klickar du på Inställningar > Lita på arkivhantering > Lokala autentiseringsuppgifter.
 1. Observera det befintliga autentiseringsuppgiftens alias, markera det och klicka på Ta bort.
