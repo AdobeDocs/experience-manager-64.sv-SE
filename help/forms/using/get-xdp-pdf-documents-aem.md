@@ -27,17 +27,17 @@ Du kan importera formulär från ditt lokala filsystem till CRX-databasen genom 
 * PDF forms
 * Dokument (platta PDF-dokument)
 
-Du kan överföra de resurstyper som stöds individuellt eller som ett ZIP-arkiv. Du kan bara överföra en resurs av den typen `Resource`tillsammans med ett XFA-formulär i ett ZIP-arkiv.
+Du kan överföra de resurstyper som stöds individuellt eller som ett ZIP-arkiv. Du kan överföra en resurs av typen `Resource`, endast tillsammans med ett XFA-formulär i ett ZIP-arkiv.
 
 >[!NOTE]
 >
->Kontrollera att du är medlem i gruppen för att kunna överföra XDP-filer `form-power-users` . Kontakta administratören om du vill bli medlem i gruppen.
+>Kontrollera att du är medlem i `form-power-users`-gruppen för att kunna överföra XDP-filer. Kontakta administratören om du vill bli medlem i gruppen.
 
-## Överföra formulär {#uploading-forms}
+## Överför formulär {#uploading-forms}
 
-1. Logga in i AEM Forms användargränssnitt med hjälp av `https://[server]:[port]/aem/forms.html`.
+1. Logga in på AEM Forms användargränssnitt med `https://[server]:[port]/aem/forms.html`.
 1. Navigera till mappen där du vill överföra formuläret eller mappen som innehåller formulär.
-1. Tryck på **Skapa > Filöverföring** i verktygsfältet för åtgärder.
+1. Tryck på **Skapa > Filöverföring** i verktygsfältet Åtgärder.
 
    ![Filer från lokal lagring, alternativ under Skapa](assets/step.png)
 
@@ -85,7 +85,7 @@ Om du tar bort en formulärmall skadas det beroende adaptiva formuläret eller f
 
 ![Varning för ett anpassat formulär som inte är synkroniserat efter att tillhörande XFA har uppdaterats](assets/dirtyaf.png)
 
-En flagga används för att ange om en adaptiv form är smutsig. Den här informationen är tillgänglig på sidan för formuläregenskaper, tillsammans med formulärets metadata. Endast för rena adaptiva formulär `Model Refresh` visar en metadataegenskap `Recommended` värdet.
+En flagga används för att ange om en adaptiv form är smutsig. Den här informationen är tillgänglig på sidan för formuläregenskaper, tillsammans med formulärets metadata. Endast för felaktiga adaptiva formulär visar en metadataegenskap `Model Refresh` `Recommended`-värdet.
 
 ![Indikation på att ett adaptivt formulär inte är synkroniserat med XFA-modellen](assets/model-refresh.png)
 
