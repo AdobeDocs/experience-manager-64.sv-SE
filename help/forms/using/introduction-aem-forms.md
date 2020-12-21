@@ -35,7 +35,7 @@ AEM Forms har verktyg för blanketthantering som inte bara gör det möjligt att
 
 ![](do-not-localize/4th-draft.gif)
 
-### Viktiga funktioner {#key-capabilities}
+### Nyckelfunktioner {#key-capabilities}
 
 Sammanfattningsvis har AEM Forms kraftfulla funktioner för blanketthantering, som följande, som minskar antalet manuella processer och ger nöjdare kunder.
 
@@ -47,7 +47,7 @@ Sammanfattningsvis har AEM Forms kraftfulla funktioner för blanketthantering, s
 * Integrering med Adobe Document Cloud eSign-tjänster eller Scribble för att elektroniskt signera dokument som innehåller konfidentiell information
 * Automatiserade funktioner för blankettpublicering och möjlighet att leverera skräddarsydd kommunikation i rätt tid via flera kanaler
 
-## AEM {#aem-form-types}
+## AEM formulärtyper {#aem-form-types}
 
 Med AEM Forms kan du utöka nya och befintliga formulär för att skapa:
 
@@ -101,7 +101,7 @@ Att samla in data offline och synkronisera dem nästa gång du returnerar online
 
 ## Personlig kommunikation {#personalized-communication}
 
-En viktig komponent i en effektiv självbetjäningsdigital upplevelse är att förmedla skräddarsydd information som användarna kommer åt var de än är och på vilken enhet som helst. Personlig kommunikation i rätt tid kan förbättra både konverteringsgraden och användarnöjdheten.
+En viktig komponent i en effektiv självbetjäningsdigital upplevelse är att förmedla skräddarsydd information som användarna kommer åt var de än är och på vilken enhet de vill. Personlig kommunikation i rätt tid kan förbättra både konverteringsgraden och användarnöjdheten.
 
 Med AEM Forms kan man skapa övertygande personaliserade användarupplevelser genom att anpassa dokumentmallar, lägga in information från affärsprocesserna och inkludera interaktiva komponenter. Ett intuitivt användargränssnitt hjälper icke-tekniska användare att ta fram affärsregler som bestämmer när ett meddelande ska skapas baserat på en fråga eller initiera ett användargenererat svar.
 
@@ -117,5 +117,5 @@ Personaliserade dokument som kvitton, kvitton, välkomstpaket och kontoutdrag ka
 * Dokumentsäkerhetstillägg för AEM Forms, inklusive kryptering, användarprofiler, spårning och granskning
 
 ![](do-not-localize/layout-02.png)
-**Bild:** *Effektivt arbetsflöde för skräddarsydd kommunikation*
+**Bild:** *Effektivt arbetsflöde för personaliserad kommunikation*
 
