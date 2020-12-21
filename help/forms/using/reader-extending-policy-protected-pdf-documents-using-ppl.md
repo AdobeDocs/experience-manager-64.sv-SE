@@ -18,17 +18,17 @@ ht-degree: 0%
 ---
 
 
-# Reader genom att utöka profilskyddade PDF-dokument med hjälp av Portable Protection Library {#reader-extending-policy-protected-pdf-documents-using-portable-protection-library}
+# Reader som utökar profilskyddade PDF-dokument med hjälp av Portable Protection Library {#reader-extending-policy-protected-pdf-documents-using-portable-protection-library}
 
 Du måste känna till begrepp som dokumentsäkerhet, lästillägg och Java Programming Language för att kunna utöka dokumentskyddet i PDF-dokument.
 
-Du kan använda dokumentskydd för att begränsa åtkomsten till specifika PDF-dokument till endast behöriga användare. Du kan också bestämma hur en mottagare ska kunna använda ett skyddat dokument. Du kan till exempel ange om mottagarna ska kunna skriva ut, kopiera eller redigera text i ett dokument som skyddas av dokumentsäkerhetsregler. Mer information om dokumentsäkerhet finns [i Dokumentsäkerhet](/help/forms/using/admin-help/document-security.md).
+Du kan använda dokumentskydd för att begränsa åtkomsten till specifika PDF-dokument till endast behöriga användare. Du kan också bestämma hur en mottagare ska kunna använda ett skyddat dokument. Du kan till exempel ange om mottagarna ska kunna skriva ut, kopiera eller redigera text i ett dokument som skyddas av dokumentsäkerhetsregler. Mer information om dokumentsäkerhet finns i [om dokumentsäkerhet](/help/forms/using/admin-help/document-security.md).
 
-Du kan använda läsartillägg för att aktivera interaktiva funktioner i Adobe PDF-dokument via Acrobat Reader. Dessa interaktiva funktioner som normalt bara är tillgängliga via Adobe Acrobat Professional och Standard. Mer information om de interaktiva funktioner som läsartillägg kan aktivera finns i [Adobe Experience Manager Forms DocAssurance-tjänsten](/help/forms/using/overview-aem-document-services.md)**.**
+Du kan använda läsartillägg för att aktivera interaktiva funktioner i Adobe PDF-dokument via Acrobat Reader. Dessa interaktiva funktioner som normalt bara är tillgängliga via Adobe Acrobat Professional och Standard. Mer information om de interaktiva funktioner som läsartillägget kan aktivera finns i [Adobe Experience Manager Forms DocAssurance-tjänsten ](/help/forms/using/overview-aem-document-services.md)**.**.
 
 Du kan använda det portabla skyddsbiblioteket för att tillämpa skyddsprofiler på dokumentet utan att behöva skicka dokumentet via nätverket. Det är bara säkerhetsreferenser och skyddsprofiler som rör sig över nätverket. Det faktiska dokumentet lämnar aldrig klienten och skyddsprofiler tillämpas lokalt på klienten.
 
-## Reader utöka dokumentskyddet för PDF-dokument {#reader-extending-document-security-policy-protected-pdf-documents}
+## Reader genom att utöka skyddspolicyskyddade PDF-dokument {#reader-extending-document-security-policy-protected-pdf-documents}
 
 Skyddade dokument är krypterade. Du kan inte använda standardAPI:er för läsartillägg för att tillämpa, ta bort och hämta användningsrättigheter för profilskyddade PDF-dokument. Endast Reader Extensions-tjänsten i Portable Protection Library tillhandahåller API:er för att lägga till, ta bort och hämta användningsrättigheter för dokumentsäkerhetsskyddade PDF-dokument.
 
@@ -46,7 +46,7 @@ Du kan utföra följande uppgifter med tjänsten Reader Extensions:
 
 ### Tillämpa användningsbehörighet på ett profilskyddat PDF-dokument {#apply-usage-rights-to-a-document-security-policy-protected-pdf-document}
 
-Du kan använda `applyUsageRights`Java-API:t för att tillämpa användningsrättigheter på profilskyddade PDF-dokument. Användningsrättigheterna gäller funktioner som är tillgängliga som standard i Acrobat men inte i Adobe Reader, t.ex. möjligheten att lägga till kommentarer i ett formulär eller att fylla i formulärfält och spara formuläret. PDF-dokument som har användarrättigheter är aktiverade. En användare som öppnar ett rättighetsaktiverat dokument i Adobe Reader kan utföra åtgärder som är aktiverade för det specifika dokumentet.
+Du kan använda Java-API:t `applyUsageRights`för att tillämpa användningsrättigheter på profilskyddade PDF-dokument. Användningsrättigheterna gäller funktioner som är tillgängliga som standard i Acrobat men inte i Adobe Reader, t.ex. möjligheten att lägga till kommentarer i ett formulär eller att fylla i formulärfält och spara formuläret. PDF-dokument som har användarrättigheter är aktiverade. En användare som öppnar ett rättighetsaktiverat dokument i Adobe Reader kan utföra åtgärder som är aktiverade för det specifika dokumentet.
 
 **Syntax:** `InputStream applyUsageRights(InputStream inputFile, File certFile, String credentialPassword, UsageRights usageRights)`
 
@@ -77,7 +77,7 @@ Du kan använda `applyUsageRights`Java-API:t för att tillämpa användningsrät
 
 ### Hämta användningsbehörighet för profilskyddade PDF-dokument.   {#retrieve-usage-rights-applied-to-a-policy-protected-pdf-document-nbsp}
 
-Du kan använda `getDocumentUsageRights`Java-API:t för att hämta läsartilläggets användningsrättigheter som tillämpas på ett profilskyddat PDF-dokument. Genom att hämta information om användningsrättigheter kan du lära dig mer om de funktioner som läsartillägget har aktiverat för det profilskyddade PDF-dokumentet.
+Du kan använda Java-API:t `getDocumentUsageRights`för att hämta läsartilläggets användningsrättigheter som tillämpas på ett profilskyddat PDF-dokument. Genom att hämta information om användningsrättigheter kan du lära dig mer om de funktioner som läsartillägget har aktiverat för det profilskyddade PDF-dokumentet.
 
 **Syntax:** `public GetUsageRightsResult getDocumentUsageRights(InputStream inDoc)`
 
@@ -142,7 +142,7 @@ System.out.println("RE rights for the file are :\n"+right1);
 
 ### Ta bort användningsbehörighet för ett profilskyddat PDF-dokument {#remove-usage-rights-of-a-policy-protected-pdf-document}
 
-Du kan använda `removeUsageRights`Java-API:t för att ta bort användningsrättigheter från ett policyskyddat dokument. Du måste ta bort användningsrättigheter från ett profilskyddat PDF-dokument för att kunna utföra andra AEM Forms-åtgärder i dokumentet. Du måste till exempel signera (eller certifiera) ett PDF-dokument digitalt innan du anger användningsbehörighet. Om du vill utföra åtgärder på ett policyskyddat dokument måste du därför ta bort användningsbehörighet från PDF-dokumentet, utföra andra åtgärder, t.ex. signera dokumentet digitalt och sedan återanvända användningsbehörighet för dokumentet.
+Du kan använda Java-API:t `removeUsageRights`för att ta bort användningsrättigheter från ett principskyddat dokument. Du måste ta bort användningsrättigheter från ett profilskyddat PDF-dokument för att kunna utföra andra AEM Forms-åtgärder i dokumentet. Du måste till exempel signera (eller certifiera) ett PDF-dokument digitalt innan du anger användningsbehörighet. Om du vill utföra åtgärder på ett policyskyddat dokument måste du därför ta bort användningsbehörighet från PDF-dokumentet, utföra andra åtgärder, t.ex. signera dokumentet digitalt och sedan återanvända användningsbehörighet för dokumentet.
 
 **Syntax:** `InputStream removeUsageRights(InputStream inputFile)`
 
@@ -154,7 +154,7 @@ Du kan använda `removeUsageRights`Java-API:t för att ta bort användningsrätt
   </tr> 
   <tr> 
    <td><p> </p> <p>inputFile</p> </td> 
-   <td>Ange InputStream som representerar det PDF-dokument som användningsrättigheterna<br /> ska tas bort från. Du kan använda LiveCycle Rights Management eller AEM Forms dokumentsäkerhetsskyddade dokument.</td> 
+   <td>Ange den InputStream som representerar det PDF-dokument från vilket användnings-<br />-rättigheter ska tas bort. Du kan använda LiveCycle Rights Management eller AEM Forms dokumentsäkerhetsskyddade dokument.</td> 
   </tr> 
  </tbody> 
 </table>
