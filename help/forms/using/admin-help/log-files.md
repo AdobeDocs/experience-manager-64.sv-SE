@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Händelser som körnings- eller startfel registreras i programserverns loggfiler. Om du har problem med att distribuera till programservern kan du använda loggfilerna för att hitta problemet. Du kan öppna loggfilerna med valfri textredigerare.
 
-(JBoss) Följande loggfiler finns i `*[appserver root]*/server/*[server]*/log` katalogen:
+(JBoss) Följande loggfiler finns i katalogen `*[appserver root]*/server/*[server]*/log`:
 
 * boot.log
 * server.log.*[yyyy-mm-dd]*
@@ -34,7 +34,7 @@ Händelser som körnings- eller startfel registreras i programserverns loggfiler
 * *[appserver name]*.log
 * *[appserver name]*.out.*[inkrementellt tal]*
 
-(WebSphere) Följande loggfiler finns i katalogen *[appserver root]*/profiles/default/logs/*[appserver name]* :
+(WebSphere) Följande loggfiler finns i katalogen *[appserver root]*/profiles/default/logs/*[appserver name]*:
 
 * SystemErr.log
 * SystemOut.log
