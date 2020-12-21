@@ -26,7 +26,7 @@ I den här artikeln beskrivs strategier och bästa metoder som du kan implemente
 Du kan konfigurera och styra cachningsstrategin för AEM Forms med komponenten **Mobile Forms Configurations** i AEM Web Configuration Console på:
 
 * (AEM Forms on OSGi) `https://[server]:[port]/system/console/configMgr`
-* (AEM Forms on JEE) `https://[server]:[port]/lc/system/console/configMgr`
+* (AEM Forms på JEE) `https://[server]:[port]/lc/system/console/configMgr`
 
 De tillgängliga alternativen för cachelagring är följande:
 
@@ -34,21 +34,21 @@ De tillgängliga alternativen för cachelagring är följande:
 * **Konservativ**: Dicates to cache only the intermediära artefacts that are generated before rendering the form, such as a template containing inline fragments and images.
 * **Aggressiv**: Framtvingar cache-lagring av nästan allt som kan cachas, inklusive återgivet HTML-innehåll förutom alla artefakter från den konservativa cachenivån. Det ger bästa prestanda men kräver också mer minne för att lagra cachelagrade artefakter. Aggressiv cachningsstrategi innebär att du får konstant tidsprestanda när du återger ett formulär när det återgivna innehållet cachas.
 
-Standardinställningarna för cacheminnet för AEM Forms kanske inte är tillräckligt bra för att uppnå optimala prestanda. Därför rekommenderar vi att du använder följande inställningar:
+Standardinställningarna för cacheminnet för AEM Forms kanske inte är tillräckliga för att uppnå optimala prestanda. Därför rekommenderar vi att du använder följande inställningar:
 
 * **Cachestrategi**: Aggressiv
-* **Cachestorlek** (i antal formulär): Som krävs
+* **Cachestorlek**  (i antal formulär): Som krävs
 * **Maximal objektstorlek**: Som krävs
 
 ![Mobile Forms Configurations](assets/snap.png)
 
 >[!NOTE]
 >
->Om du använder AEM Dispatcher för att cachelagra adaptiva formulär cache-lagras även anpassningsbara formulär som innehåller formulär med förfyllda data. Om sådana formulär hanteras från AEM Dispatcher-cachen kan det leda till att förfyllda eller inaktuella data skickas till användarna. Använd AEM Dispatcher för att cachelagra adaptiva formulär som inte använder förfyllda data. Dessutom gör inte en dispatchercache cachelagrade cachelagrade fragment automatiskt ogiltiga. Använd den alltså inte för att cachelagra formulärfragment. Använd cache för [adaptiva formulär för sådana formulär och fragment](/help/forms/using/configure-adaptive-forms-cache.md).
+>Om du använder AEM Dispatcher för att cachelagra adaptiva formulär cache-lagras även anpassningsbara formulär som innehåller formulär med förfyllda data. Om sådana formulär hanteras från AEM Dispatcher-cachen kan det leda till att förfyllda eller inaktuella data skickas till användarna. Använd AEM Dispatcher för att cachelagra adaptiva formulär som inte använder förfyllda data. Dessutom gör inte en dispatchercache cachelagrade cachelagrade fragment automatiskt ogiltiga. Använd den alltså inte för att cachelagra formulärfragment. Använd [cache för anpassade formulär](/help/forms/using/configure-adaptive-forms-cache.md) för sådana formulär och fragment.
 
 ## JVM-parametrar {#jvm-parameters}
 
-För optimala prestanda bör du använda följande JVM- `init` argument för att konfigurera `Java heap` och `PermGen`.
+För optimala prestanda bör du använda följande JVM `init`-argument för att konfigurera `Java heap` och `PermGen`.
 
 ```java
 set CQ_JVM_OPTS=%CQ_JVM_OPTS% -Xms8192m
@@ -59,7 +59,7 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 >[!NOTE]
 >
->De rekommenderade inställningarna är för Windows 2008 R2 8 Core och Oracle HotSpot 1.7 (64-bitars) JDK och bör skalas upp eller ned enligt din systemkonfiguration.
+>De rekommenderade inställningarna är för Windows 2008 R2 8 Core och Oracle HotSpot 1.7 (64 bitar) JDK och bör skalas upp eller ned enligt din systemkonfiguration.
 
 ## Använda en webbserver {#using-a-web-server}
 
@@ -81,7 +81,7 @@ I följande steg visas de ändringar som krävs för att aktivera komprimering m
 
 Apache kan kommunicera med CRX med HTTP-protokollet. Konfigurationerna är avsedda för optimering med HTTP.
 
-1. Avkommentera följande modulkonfigurationer i `APACHE_HOME/conf/httpd.conf` filen.
+1. Avkommentera följande modulkonfigurationer i `APACHE_HOME/conf/httpd.conf`-filen.
 
    ```java
    LoadModule proxy_balancer_module modules/mod_proxy.so
@@ -91,18 +91,18 @@ Apache kan kommunicera med CRX med HTTP-protokollet. Konfigurationerna är avsed
 
    >[!NOTE]
    >
-   >För Linux `APACHE_HOME` är standardvärdet `/etc/httpd/`.
+   >För Linux är standardvärdet `APACHE_HOME` `/etc/httpd/`.
 
 1. Konfigurera proxyn på port 4502 för crx.
 
-   Lägg till följande konfiguration i `APACHE_HOME/conf/httpd.conf` konfigurationsfilen.
+   Lägg till följande konfiguration i konfigurationsfilen `APACHE_HOME/conf/httpd.conf`.
 
    ```java
    ProxyPass / https://<server>:4502/
    ProxyPassReverse / https://<server>:4502/
    ```
 
-1. Aktivera komprimering. Lägg till följande konfiguration i `APACHE_HOME/conf/httpd.conf` konfigurationsfilen.
+1. Aktivera komprimering. Lägg till följande konfiguration i konfigurationsfilen `APACHE_HOME/conf/httpd.conf`.
 
    **För HTML5-formulär**
 
@@ -138,7 +138,7 @@ Apache kan kommunicera med CRX med HTTP-protokollet. Konfigurationerna är avsed
    </Location>
    ```
 
-   Om du vill få åtkomst till crx-servern använder du `https://[server]:80`, där `server` är namnet på den server där Apache-servern körs.
+   Använd `https://[server]:80`, där `server` är namnet på den server där Apache-servern körs, för att få åtkomst till crx-servern.
 
 ## Använda ett antivirus på en server som kör AEM Forms {#using-an-antivirus-on-server-running-aem-forms}
 
@@ -167,11 +167,11 @@ För att förbättra prestandan kan du instruera antivirusprogrammet att uteslut
 * **(Endast AEM Forms på JEE)** AEM Forms serverloggar och tillfällig katalog. Standardplatsen är:
 
    * Serverloggar - `[AEM Forms installation directory]\Adobe\AEM forms\[app-server]\server\all\logs`
-   * Temp-katalog - [AEM Forms installationskatalog]\temp
+   * Temporär katalog - [AEM Forms installationskatalog]\temp
 
 >[!NOTE]
 >
->* Om du använder en annan plats för GDS och en tillfällig katalog öppnar du AdminUI på `https://[server]:[port]/adminui)`och går till **Hem > Inställningar > Core System Settings > Core Configurations** för att bekräfta platsen som används.
+>* Om du använder en annan plats för GDS och en tillfällig katalog öppnar du AdminUI på `https://[server]:[port]/adminui)`, navigerar till **Hem > Inställningar > Core System Settings > Core Configurations** för att bekräfta platsen som används.
 
 * Om AEM Forms-servern fungerar långsamt även efter att de föreslagna katalogerna har utelämnats, ska du även utelämna den körbara Java-filen (java.exe).
 
