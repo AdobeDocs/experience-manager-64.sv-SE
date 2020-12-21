@@ -47,9 +47,10 @@ Innan du konfigurerar referensplatsen måste du ha följande:
 
 * **AEM grundläggande**
 
-   AEM QuickStart, AEM Forms tilläggspaket och referenspaket för webbplats. Mer information om paket med tillägg och referenswebbplatser finns i [AEM Forms-utgåvor](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
+   AEM QuickStart, AEM Forms tilläggspaket och referenspaket för webbplats. Se [AEM Forms-releaser](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) för information om paket med tillägg och referenswebbplatser.
 
-* **En SMTP-tjänst** Du kan använda vilken SMTP-tjänst som helst.
+* **En SMTP-**
+tjänstDu kan använda vilken SMTP-tjänst som helst.
 
 * **Adobe Sign utvecklarkonto och Adobe Sign API-program**
 
@@ -74,12 +75,12 @@ Utför följande steg i den rekommenderade sekvensen för att konfigurera och ko
   </tr> 
   <tr> 
    <td><a href="#ssl">Konfigurera SSL</a></td> 
-   <td>Author and Publish<br /> </td> 
+   <td>Skapa och publicera<br /> </td> 
    <td>Aktivera HTTP över SSL för säker kommunikation med Adobe Sign.</td> 
   </tr> 
   <tr> 
    <td><p><a href="#externalizer">Konfigurera konfiguration av Dag CQ Link Externalizer</a></p> </td> 
-   <td>Author and Publish<br /> </td> 
+   <td>Skapa och publicera<br /> </td> 
    <td><p>Referensfall för användning på webbplats levererar e-post för olika transaktioner. Den här inställningen krävs för nyhetsbrev som levereras via e-post. Det ser till att URL:er och bilder pekar på publiceringsinstansen. </p> </td> 
   </tr> 
   <tr> 
@@ -114,12 +115,12 @@ Utför följande steg i den rekommenderade sekvensen för att konfigurera och ko
   </tr> 
   <tr> 
    <td><a href="#scheduler">Konfigurera Adobe Sign Scheduler</a></td> 
-   <td>Author and Publish<br /> </td> 
+   <td>Skapa och publicera<br /> </td> 
    <td>Ändra schemaläggarens konfiguration för att kontrollera status varannan minut.</td> 
   </tr> 
   <tr> 
    <td><a href="#sign-service">Konfigurera Adobe Sign-Cloud Service för referenswebbplats</a></td> 
-   <td>Author and Publish<br /> </td> 
+   <td>Skapa och publicera<br /> </td> 
    <td>En konfiguration som levereras med referenspaket för webbplatser och behöver konfigureras om med giltiga autentiseringsuppgifter.</td> 
   </tr> 
   <tr> 
@@ -129,7 +130,7 @@ Utför följande steg i den rekommenderade sekvensen för att konfigurera och ko
   </tr> 
   <tr> 
    <td><a href="#fdm">Ändra Rest Service Swagger-fil för formulärdatamodell</a></td> 
-   <td>Author and Publish<br /> </td> 
+   <td>Skapa och publicera<br /> </td> 
    <td>Ändra tjänsten för din miljö.</td> 
   </tr> 
  </tbody> 
@@ -145,15 +146,15 @@ Installera och distribuera AEM Forms enligt beskrivningen i [Installera och konf
 
 ## Konfigurera SSL {#ssl}
 
-SSL-konfiguration krävs för att kommunicera med Adobe Sign-servrar. Detaljerade steg finns i [Aktivera HTTP över SSL](/help/sites-administering/ssl-by-default.md).
+SSL-konfiguration krävs för att kommunicera med Adobe Sign-servrar. Mer information finns i [Aktivera HTTP över SSL](/help/sites-administering/ssl-by-default.md).
 
 >[!CAUTION]
 >
->Konfigurera inte tvingad SSL för `/etc/map` mapp.
+>Konfigurera inte tvingad SSL på mappen `/etc/map`.
 
-## Konfigurera konfiguration av Dag CQ Link Externalizer {#externalizer}
+## Konfigurera Dag CQ Link Externalizer-konfiguration {#externalizer}
 
-I AEM är **Externalizer** en OSGI-tjänst som du kan använda för att programmässigt omvandla en resurssökväg (t.ex. /path/to/my/page) till en extern och absolut URL (t.ex. https://www.mycompany.com/path/to/my/page) genom att prefix the path with a preconfigure DNS. Se [Externalisera URL:er](/help/sites-developing/externalizer.md).
+I AEM är **Externalizer** en OSGI-tjänst som gör att du kan omforma en resurssökväg programmatiskt (t.ex. /path/to/my/page) till en extern och absolut URL (t.ex. https://www.mycompany.com/path/to/my/page) genom att prefix the path with a preconfigure DNS. Se [Externalisera URL:er](/help/sites-developing/externalizer.md).
 
 >[!CAUTION]
 >
@@ -163,8 +164,8 @@ I AEM är **Externalizer** en OSGI-tjänst som du kan använda för att programm
 
 Utför följande steg på både författare och publiceringsinstanser:
 
-1. Gå till OSGi Configuration på https://&lt;*värdnamn>*:&lt;*port>*/system/console/configMgr.
-1. Hitta och tryck på **[!UICONTROL Day CQ Link Externalizer]** konfigurationen.
+1. Gå till OSGi-konfiguration på https://&lt;*värdnamn>*:&lt;*port>*/system/console/configMgr.
+1. Sök efter och tryck på **[!UICONTROL Day CQ Link Externalizer]**-konfigurationen.
 
    Dialogrutan Day CQ Link Externalizer öppnas för redigering av konfigurationen.
 
@@ -176,14 +177,14 @@ Utför följande steg på både författare och publiceringsinstanser:
 1. Kontrollera att den lokala serverns URL anges i fältet Domäner på både författare- och publiceringsinstanser.
 1. Tryck på **[!UICONTROL Save]**. Vänta en stund tills alla tjänster har startats om.
 
-## Konfigurera daglig CQ Mail-tjänst {#cqmail}
+## Konfigurera daglig CQ-e-posttjänst {#cqmail}
 
 Implementering av referensplats kräver att e-post skickas till exempelanvändare när de fyller i och skickar formulär. Genom att konfigurera Day CQ Mail Service kan du tillhandahålla information om SMTP-tjänster för att skicka automatiska e-postmeddelanden till kunder. Se [Konfigurera e-postmeddelanden](/help/sites-administering/notification.md).
 
 Utför följande steg för att konfigurera e-posttjänsten på publiceringsinstansen:
 
-1. Gå till OSGi Configuration på https://&lt;*värdnamn>*:&lt;*port>*/system/console/configMgr.
-1. Sök och tryck **[!UICONTROL Day CQ Mail Service]** för att öppna den för konfiguration.
+1. Gå till OSGi-konfiguration på https://&lt;*värdnamn>*:&lt;*port>*/system/console/configMgr.
+1. Sök efter och tryck på **[!UICONTROL Day CQ Mail Service]** för att öppna den för konfiguration.
 1. Ange värdnamn och portvärden för SMTP-servern.
 1. Tryck på **[!UICONTROL Save]**.
 
@@ -191,13 +192,13 @@ Utför följande steg för att konfigurera e-posttjänsten på publiceringsinsta
 >
 >Du kan använda företagets SMTP-tjänst eller offentliga tjänster som Gmail. Information om hur du konfigurerar SMTP-tjänsten finns i dokumentationen för SMTP-tjänsten.
 
-## Åsidosätt standard-XSS-konfiguration {#xss}
+## Åsidosätt XSS-standardkonfiguration {#xss}
 
-E-postmallarna för referenswebbplatsen We.Finance innehåller anpassade länkar i e-postmeddelanden. Länkarna har platshållare som `${placeholder}`. Dessa platshållare ersätts med verkliga värden innan e-postmeddelanden skickas. Standardkonfigurationen för XSS-skydd för AEM tillåter inte klammerparenteser (**{ }**) i URL:en i HTML-innehåll. Du kan dock åsidosätta standardkonfigurationen genom att utföra följande steg på en publiceringsinstans:
+E-postmallarna för referenswebbplatsen We.Finance innehåller anpassade länkar i e-postmeddelanden. Dessa länkar har platshållare som `${placeholder}`. Dessa platshållare ersätts med verkliga värden innan e-postmeddelanden skickas. Standardkonfigurationen för XSS-skydd för AEM tillåter inte klammerparenteser (**{ }**) i URL:en i HTML-innehåll. Du kan dock åsidosätta standardkonfigurationen genom att utföra följande steg på en publiceringsinstans:
 
 1. Kopiera `/libs/cq/xssprotection/config.xml` till `/apps/cq/xssprotection/config.xml`.
 1. Öppna `/apps/cq/xssprotection/config.xml`.
-1. I `common-regexps` avsnittet ändrar du `onsiteURL` posten på följande sätt och sparar filen.
+1. I avsnittet `common-regexps` ändrar du `onsiteURL`-posten enligt följande och sparar filen.
 
    `<regexp name="onsiteURL" value="([\p{L}\p{N}\\\.\#@\$\{\}%\+&;\-_~,\?=/!\*\(\)]*|\#(\w)+)"/>`
 
@@ -205,17 +206,17 @@ E-postmallarna för referenswebbplatsen We.Finance innehåller anpassade länkar
 >
 >Klammerparenteser (**{ }**) inkluderas som accepterade tecken i URL:en i HTML-innehåll.
 
-När du har konfigurerat SMTP-servern kan du försöka fylla i ett formulär med Sarah Rose-persona och spara det som ett utkast. När du sparar som utkast får du ett alternativ för att ta emot utkastet via e-post. Om du får ett e-postmeddelande med en länk till programutkastet när du trycker på knappen **Skicka e-post** , lyckas e-postkonfigurationen. Se till att du loggar in med Sarah inloggningsuppgifter för att se utkastet.
+När du har konfigurerat SMTP-servern kan du försöka fylla i ett formulär med Sarah Rose-persona och spara det som ett utkast. När du sparar som utkast får du ett alternativ för att ta emot utkastet via e-post. Om du trycker på knappen **Skicka e-post** och får ett e-postmeddelande med en länk till programutkastet, lyckas e-postkonfigurationen. Se till att du loggar in med Sarah inloggningsuppgifter för att se utkastet.
 
 ## Konfigurera AEM DS-inställningar {#aemds}
 
-AEM inställningar för DS-tjänsten krävs på Publish-instansen för e-postkommunikation i referenswebbplatsens användningsfall. Detaljerade anvisningar om hur du konfigurerar AEM för katalogtjänsten på publiceringsinstansen finns i [Konfigurera AEM DS-inställningar](/help/forms/using/configuring-the-processing-server-url-.md).
+AEM inställningar för DS-tjänsten krävs på Publish-instansen för e-postkommunikation i referenswebbplatsens användningsfall. Detaljerade anvisningar om hur du konfigurerar AEM DS-tjänstinställningar för publiceringsinstansen finns i [Konfigurera AEM DS-inställningar](/help/forms/using/configuring-the-processing-server-url-.md).
 
 För AEM Forms referenswebbplatser anger du URL-adressen för publiceringsservern i stället för URL-adressen för den AEM DS-inställningstjänsten.
 
 >[!CAUTION]
 >
->Ange inte URL:en `/lc` för bearbetningsservern om du konfigurerar den för AEM Forms OSGi.
+>Lägg inte `/lc` i bearbetningsserverns URL om du konfigurerar den för AEM Forms OSGi.
 
 ## Distribuera referensplatspaket {#refsite}
 
@@ -239,18 +240,18 @@ Referenswebbplatserna för bostadslån och autoförsäkringsprogram är konfigur
 
 Så här importerar du den anpassade entiteten för programmet för automatisk försäkring:
 
-1. Ladda ned **lösningspaketet WeFinanceAutoInsurance_1_0.zip** från `https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/WeFinanceAutoInsurance_1_0.zip` din AEM författarinstans.
-1. I din Microsoft Dynamics-instans går du till **[!UICONTROL Solutions]** på **[!UICONTROL Settings]** menyn och klickar på **[!UICONTROL Import]**. Markera och importera paketet.
+1. Hämta lösningspaketet **WeFinanceAutoInsurance_1_0.zip** från `https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/WeFinanceAutoInsurance_1_0.zip` till AEM författarinstans.
+1. Gå till **[!UICONTROL Solutions]** på menyn **[!UICONTROL Settings]** i din Microsoft Dynamics-instans och klicka på **[!UICONTROL Import]**. Markera och importera paketet.
 
 Så här importerar du den anpassade entiteten för programmet för automatisk försäkring:
 
-1. Hämta paketet **AEMFormsFSIRefsite_1_0.zip** från https://[author]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip. Markera och importera paketet.
+1. Hämta **AEMFormsFSIRefsite_1_0.zip**-paketet från https://[author]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip. Markera och importera paketet.
 
-1. I din Microsoft Dynamics-instans går du till **[!UICONTROL Solutions]** på **[!UICONTROL Settings]** menyn och klickar på **[!UICONTROL Import]**. Markera och importera paketet.
+1. Gå till **[!UICONTROL Solutions]** på menyn **[!UICONTROL Settings]** i din Microsoft Dynamics-instans och klicka på **[!UICONTROL Import]**. Markera och importera paketet.
 
 Så här importerar du kund- och försäkringspolicyposter:
 
-1. Ladda ned datafilerna **We.Finance Customers.csv, We.Finance Auto Insurance Renewals.csv** och **home inteckning** från följande platser hos AEM författare:
+1. Ladda ned datafilerna **We.Finance Customers.csv, We.Finance Auto Insurance Renewals.csv** och **bostadslån** från följande platser hos AEM författare:
 
    * `https://[server]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Customers.csv`
    * `https://[server]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Auto Insurance Renewals.csv`
@@ -258,20 +259,20 @@ Så här importerar du kund- och försäkringspolicyposter:
 
 1. Gör följande i din Microsoft Dynamics-instans:
 
-   * Gå till **[!UICONTROL Sales > We.Finance Customers]** och klicka **[!UICONTROL Import]**.
-   * Gå till **[!UICONTROL Sales > We.Finance Auto Insurance]** och klicka **[!UICONTROL Import]**.
-   * Gå till **[!UICONTROL Sales > We.Finance Home Mortgage]** och klicka **[!UICONTROL Import]**.
+   * Gå till **[!UICONTROL Sales > We.Finance Customers]** och klicka på **[!UICONTROL Import]**.
+   * Gå till **[!UICONTROL Sales > We.Finance Auto Insurance]** och klicka på **[!UICONTROL Import]**.
+   * Gå till **[!UICONTROL Sales > We.Finance Home Mortgage]** och klicka på **[!UICONTROL Import]**.
 
 ## Konfigurera OAuth-molntjänsten för Microsoft Dynamics {#configure-oauth-cloud-service-for-microsoft-dynamics}
 
 Konfigurera OAuth-molntjänsten i AEM Forms för att aktivera kommunikation mellan AEM Forms och Microsoft Dynamics. Utför följande steg för att konfigurera OAuth-Cloud Servicen på AEM författare och publiceringsinstanser:
 
-1. AEM författarinstansen går du till **[!UICONTROL Tools > Cloud Services > Data Sources > global]**. Tryck på **[!UICONTROL Refsite Dynamics Integration]** ikonen och tryck på **[!UICONTROL Properties]**.
-1. Gå till Microsoft Azure Active Directory-kontot. Lägg till den kopierade webbadressen för molntjänstkonfigurationen i inställningen för det registrerade programmet **[!UICONTROL Reply URL]** . Spara konfigurationen.
-1. På fliken Autentiseringsinställningar anger du **[!UICONTROL Service Root]**, **[!UICONTROL Client Id]**, **[!UICONTROL Client Secret]** och **[!UICONTROL Resource URL]** för din Microsoft Dynamics-instans. Klicka **[!UICONTROL Connect to OAuth]** som dirigerar om till inloggningssidan för Microsoft Dynamics.
+1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources > global]** AEM författarinstansen. Tryck på ikonen **[!UICONTROL Refsite Dynamics Integration]** och tryck på **[!UICONTROL Properties]**.
+1. Gå till Microsoft Azure Active Directory-kontot. Lägg till URL:en för den kopierade molntjänstkonfigurationen i **[!UICONTROL Reply URL]**-inställningen för det registrerade programmet. Spara konfigurationen.
+1. På fliken Autentiseringsinställningar anger du **[!UICONTROL Service Root]**, **[!UICONTROL Client Id]**, **[!UICONTROL Client Secret]** och **[!UICONTROL Resource URL]** för din Microsoft Dynamics-instans. Klicka på **[!UICONTROL Connect to OAuth]** som dirigerar om till inloggningssidan för Microsoft Dynamics.
 1. Ange dina inloggningsuppgifter. När du har loggat in omdirigeras du till AEM Forms molntjänstkonfigurationssida. Klicka på **[!UICONTROL Save & Close]**. Molntjänstkonfigurationen sparas.
 1. Gå till **[!UICONTROL Forms > Data Integrations > We.Finance]**. Välj Automatisk försäkring (Dynamics) och klicka på Redigera. Microsoft Dynamics-enheter visas på fliken Datakällor. Vänta tills alla entiteter har hämtats från Microsoft Dynamics och listats under fliken Datakällor.
-1. Select the **[!UICONTROL AutoInsuranceRenewal entity]** and click **[!UICONTROL Test Model Object]**. I avsnittet för indatabegäran anger du värdet för kund-ID som&quot;900001&quot; och klickar på **[!UICONTROL Test]**. I avsnittet Utdata visas de poster som hämtats från Microsoft Dynamics för kund-ID 90001.
+1. Markera **[!UICONTROL AutoInsuranceRenewal entity]** och klicka på **[!UICONTROL Test Model Object]**. I avsnittet för indatabegäran anger du värdet för kund-ID som&quot;900001&quot; och klickar på **[!UICONTROL Test]**. I avsnittet Utdata visas de poster som hämtats från Microsoft Dynamics för kund-ID 90001.
 1. I avsnittet för indatabegäran anger du värdet för kund-ID som&quot;900001&quot; och klickar på **[!UICONTROL Test]**. I avsnittet Utdata visas de poster som hämtats från Microsoft Dynamics för kund-ID 90001.
 1. Upprepa steg 1-6 i publiceringsinstansen.
 
@@ -280,8 +281,8 @@ Konfigurera OAuth-molntjänsten i AEM Forms för att aktivera kommunikation mell
 Gör följande på både författare- och publiceringsinstanser:
 
 1. Gå till AEM webbkonfigurationskonsol på `https://[server]:[host]/system/console/configMgr`.
-1. Sök och tryck **[!UICONTROL Adobe Sign Configuration Service]** för att öppna den för konfiguration.
-1. Konfigurera **[!UICONTROL Status Update Scheduler Expression]** som **0 0/2 &amp;ast; &amp;ast; &amp;ast; ?**.
+1. Sök efter och tryck på **[!UICONTROL Adobe Sign Configuration Service]** för att öppna den för konfiguration.
+1. Konfigurera **[!UICONTROL Status Update Scheduler Expression]** som **0/2 &amp;ast; &amp;ast; &amp;ast; ?**.
 
    >[!NOTE]
    >
@@ -293,26 +294,26 @@ Gör följande på både författare- och publiceringsinstanser:
 
 Gör följande på både författare- och publiceringsinstanser:
 
-1. Gå till **[!UICONTROL Tools > Cloud Services > Adobe Sign > global]**. Markera **[!UICONTROL AEM Forms Reference Site Sign]** och tryck **[!UICONTROL Properties]**.
+1. Gå till **[!UICONTROL Tools > Cloud Services > Adobe Sign > global]**. Välj **[!UICONTROL AEM Forms Reference Site Sign]** och tryck på **[!UICONTROL Properties]**.
 
    >[!CAUTION]
    >
-   >Kontrollera att https://[host]:[ssl_port]/mnt/overlay/adobesign/cloudservices/adobesign/properties.html URL har lagts till i omdirigeringens URL-lista i OAuth-konfigurationen för Adobe Sign API-program.
+   >Kontrollera att https://[host]:[ssl_port]/mnt/overlay/adobesign/cloudservices/adobesign/properties.html URL har lagts till i OAuth-konfigurationens omdirigerings-URL för Adobe Sign API-program.
 
 1. Ange klient-ID och hemlighet för Adobe Sign-programmets OAuth-konfiguration.
-1. (Valfritt) Markera **[!UICONTROL Enable Adobe Sign for attachments also]** alternativet och tryck på **[!UICONTROL Connect to Adobe Sign]**. Den bifogar de filer som är bifogade till ett adaptivt formulär till motsvarande Adobe Sign-dokument som skickats för signering.
-1. Tryck **[!UICONTROL Connect to Adobe Sign]** och logga in med dina Adobe Sign-uppgifter.
+1. (Valfritt) Välj alternativet **[!UICONTROL Enable Adobe Sign for attachments also]** och tryck på **[!UICONTROL Connect to Adobe Sign]**. Den bifogar de filer som är bifogade till ett adaptivt formulär till motsvarande Adobe Sign-dokument som skickats för signering.
+1. Tryck på **[!UICONTROL Connect to Adobe Sign]** och logga in med dina Adobe Sign-inloggningsuppgifter.
 
 ## Konfigurera Forms Common Configuration Service {#anonymous}
 
 Gör följande på publiceringsinstansen för att tillåta åtkomst för anonyma användare:
 
 1. Gå till AEM webbkonfigurationskonsol på `https://[server]:[port]/system/console/configMgr`.
-1. Sök och tryck **[!UICONTROL Forms Common Configuration Service]** för att öppna den för konfiguration.
-1. Konfigurera **[!UICONTROL Allow]** fältet för **[!UICONTROL All Users]**.
+1. Sök efter och tryck på **[!UICONTROL Forms Common Configuration Service]** för att öppna den för konfiguration.
+1. Konfigurera fältet **[!UICONTROL Allow]** för **[!UICONTROL All Users]**.
 1. Tryck på **[!UICONTROL Save]**.
 
-## Ändra resttjänst för formulärdatamodell {#fdm}
+## Ändra resetjänst för formulärdatamodell {#fdm}
 
 Gör följande på både författare- och publiceringsinstanser:
 
@@ -320,7 +321,7 @@ Gör följande på både författare- och publiceringsinstanser:
 1. Navigera till **/conf/global/settings/cloudconfigs/fdm/roi-rest/jcr:content/swaggerFile** och öppna swagger-filen.
 1. Uppdatera värd- och portinställningarna enligt din miljö.
 1. Spara inställningarna.
-1. (Endast **författarinstans**) Gå till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Data Sources]** > **[!UICONTROL global]**. Markera **[!UICONTROL roi-rest]** och tryck **[!UICONTROL Properties]**. Tryck **[!UICONTROL Authentication Settings]** och ange **[!UICONTROL Authentication Type]** till **[!UICONTROL Basic Authentication]**. Ange `admin`/ `admin`som användarnamn/lösenord för att komma åt tjänsten. Tryck på **[!UICONTROL Save & Close]**.
+1. (**Endast författarinstans**) Gå till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Data Sources]** > **[!UICONTROL global]**. Välj **[!UICONTROL roi-rest]** och tryck på **[!UICONTROL Properties]**. Tryck på **[!UICONTROL Authentication Settings]** och ställ in **[!UICONTROL Authentication Type]** på **[!UICONTROL Basic Authentication]**. Ange `admin`/ `admin`som användarnamn/lösenord för att få åtkomst till tjänsten. Tryck på **[!UICONTROL Save & Close]**.
 
 ## Integrera med Marketing Cloud {#integrate-with-marketing-cloud}
 
@@ -332,27 +333,27 @@ Gör följande för att konfigurera Adobe Analytics och Adobe Target i AEM Forms
 
 Tack vare AEM Forms integrering med Adobe Analytics kan ni övervaka och analysera hur kunderna interagerar med era formulär och dokument. Det hjälper dig att identifiera och åtgärda problemområden och öka konverteringsgraden.
 
-Konfigurera Analytics-kontot enligt beskrivningen i [Konfigurera analyser och rapporter](/help/forms/using/configure-analytics-forms-documents.md)för att få uppleva den här funktionen på referenswebbplatsen.
+Konfigurera Analytics-kontot enligt beskrivningen i [Konfigurera analyser och rapporter](/help/forms/using/configure-analytics-forms-documents.md) om du vill använda den här funktionen på referensplatsen.
 
 För att generera en rapport paketeras startdata med referenswebbplatserna. Gör följande innan du använder startvärdesdata:
 
 1. Kontrollera att det finns analyskonfigurationer för We.Finance och We.Gov i AEM Cloud Services. Du kan hitta molntjänster på något av följande sätt:
 
-   * Navigera till **[!UICONTROL Tools>Cloud Services>Legacy Cloud Services]** eller bläddra till https://&lt;host>:&lt;port>/libs/cq/core/content/tools/cloudservices.html.
-   * Klicka på under **[!UICONTROL Cloud Services]** avsnitt på **[!UICONTROL Adobe Analytics]** sidan `Show Configurations`. Du kan se vilka konfigurationer för We.Finance och We.GOV som är tillgängliga. Klicka för att öppna konfigurationen. Klicka på på konfigurationssidan **[!UICONTROL Edit]**. Ange ett giltigt företag, användarnamn, delad hemlighet (lösenord) och datacenter och klicka på **[!UICONTROL Connect to Analytics]**. När du har öppnat dialogrutan Anslutningen klickar du **[!UICONTROL OK]** på konfigurationsdialogrutan. Konfigurera ramverket under Analytics-konfigurationen enligt beskrivningen i [Konfigurera analyser och rapporter](/help/forms/using/configure-analytics-forms-documents.md).
+   * Navigera till **[!UICONTROL Tools>Cloud Services>Legacy Cloud Services]** eller gå till https://&lt;host>:&lt;port>/libs/cq/core/content/tools/cloudservices.html.
+   * Klicka på `Show Configurations` under **[!UICONTROL Adobe Analytics]** på sidan **[!UICONTROL Cloud Services]**. Du kan se vilka konfigurationer för We.Finance och We.GOV som är tillgängliga. Klicka för att öppna konfigurationen. Klicka på **[!UICONTROL Edit]** på konfigurationssidan. Ange giltigt företag, användarnamn, delad hemlighet (lösenord) och datacenter och klicka på **[!UICONTROL Connect to Analytics]**. När du har öppnat dialogrutan Anslutning klickar du på **[!UICONTROL OK]** i konfigurationsdialogrutan. Konfigurera ramverket under Analytics-konfigurationen enligt beskrivningen i [Konfigurera analys och rapporter](/help/forms/using/configure-analytics-forms-documents.md).
 
 1. Gå till https://&lt;*host*>:&lt;*port*>/system/console/configMgr och gör följande:
 
-   * Leta upp och klicka på **[!UICONTROL Web Console Configuration]** sidan **[!UICONTROL AEM Forms Analytics Configuration]**.
-   * Välj we-Finance(we-Finance) eller we-gov(we-gov) på området **[!UICONTROL SiteCatalyst Framework]** i dialogrutan Konfiguration av AEM Forms Analytics.
-   * Klicka **[!UICONTROL Save]** och låt sidan uppdateras.
+   * På sidan **[!UICONTROL Web Console Configuration]** söker du efter och klickar på **[!UICONTROL AEM Forms Analytics Configuration]**.
+   * I fältet **[!UICONTROL SiteCatalyst Framework]** i dialogrutan Konfiguration av AEM Forms Analytics väljer du we-Finance(we-Finance) eller we-gov(we-gov).
+   * Klicka på **[!UICONTROL Save]** och låt sidan uppdateras.
 
 1. Navigera till formulärhanteraren på https://&lt;host>:&lt;port>/aem/forms och gör följande:
 
    * Öppna mappen We.Finance eller We.Gov och välj det formulär som du vill se rapporten för.
    * Klicka på Aktivera analys i verktygsfältet Åtgärder. När du har aktiverat analys för formuläret klickar du på Analysrapport. Du kan se en tom rapport genereras. När en tom rapport har skapats måste du tillhandahålla startdata som levereras med refsite-paket för att generera analysrapporten för demosyfte.
 
-   Referenswebbplatser tillhandahåller analysrapporter med startdata för kreditkort, bostadslån och ärenden som rör barnsupport. Mer information om konfiguration av dirigeringsdata finns i [Genomgång av referenswebbplatser för Web.Finance](/help/forms/using/finance-reference-site-walkthrough.md) och genomgång av [referenswebbplatser för](/help/forms/using/gov-reference-site-walkthrough.md)Web.Gov.
+   Referenswebbplatser tillhandahåller analysrapporter med startdata för kreditkort, bostadslån och ärenden som rör barnsupport. Mer information om konfigurationen av dirigerade data finns i [Genomgång av referenswebbplatsen Web.Finance](/help/forms/using/finance-reference-site-walkthrough.md) och [Genomgång av referenswebbplatsen Web.Gov](/help/forms/using/gov-reference-site-walkthrough.md).
 
 ### Konfigurera mål {#configure-target}
 
@@ -362,26 +363,26 @@ Gör så här för att konfigurera Target i AEM för att se integrationen på re
 
 1. Starta författarens snabbstart med jvm-argumentet `-Dabtesting.enabled=true` för att aktivera A/B-testning på servern.
 
-   **Obs**: Om AEM körs på JBoss, som startas som en tjänst från körkortsinstallationen, lägger du till parametern `-Dabtesting.enabled=true` i följande post i `jboss\bin\standalone.conf.bat` filen:
+   **Obs**: Om AEM körs på JBoss, som startas som en tjänst från körkortsinstallationen, lägger du till  `-Dabtesting.enabled=true` parametern i följande post i  `jboss\bin\standalone.conf.bat` filen:
 
    `set "JAVA_OPTS=%JAVA_OPTS% -Dadobeidp.serverName=server1 -Dfile.encoding=utf8 -Djava.net.preferIPv4Stack=true -Dabtesting.enabled=true"`
 
-1. Gå till https://&lt;*värdnamn*>:&lt;*port*>/libs/cq/core/content/tools/cloudservices.html.
+1. Gå till https://&lt;*värdnamn*:&lt;*port*>/libs/cq/core/content/tools/cloudservices.html.
 
-1. In the **[!UICONTROL Adobe Target]** section, click **[!UICONTROL Show Configurations]**. Vi.Finance Target Configuration finns tillgänglig. Klicka för att öppna konfigurationen. Klicka på på konfigurationssidan **[!UICONTROL Edit]**. Dialogrutan **[!UICONTROL Edit Component]** för konfigurationen öppnas.
+1. Klicka på **[!UICONTROL Show Configurations]** i **[!UICONTROL Adobe Target]**-avsnittet. Vi.Finance Target Configuration finns tillgänglig. Klicka för att öppna konfigurationen. Klicka på **[!UICONTROL Edit]** på konfigurationssidan. Dialogrutan **[!UICONTROL Edit Component]** för konfigurationen öppnas.
 
 1. Ange klientkod, e-postadress och lösenord som är kopplade till ditt målkonto. Välj API-typ som **[!UICONTROL REST]**.
 1. Klicka på **[!UICONTROL Connect to Adobe target]**. När målkontot har konfigurerats klickar du på **[!UICONTROL OK]**. Den paketerade konfigurationen har ett Target Framework.
 
-1. Gå till https://&lt;*värdnamn*>:&lt;*port*>/system/console/configMgr.
+1. Gå till https://&lt;*värdnamn*:&lt;*port*>/system/console/configMgr.
 
 1. Klicka på **[!UICONTROL AEM Forms Target Configuration]**.
 1. Välj ett målramverk.
-1. I **[!UICONTROL Target URLs]** fältet anger du URL:en till AEM Forms. Till exempel: https://&lt;*värdnamn*>:&lt;*port*>.
+1. I fältet **[!UICONTROL Target URLs]** anger du URL:en till AEM Forms. Till exempel: https://&lt;*värdnamn*>:&lt;*port*>.
 
 1. Klicka på **[!UICONTROL Save]**.
 
-Användningsexempel för kreditkortsansökningar och hemmasamlingsprogram visar hur man utför A/B-tester och visar en rapport i demonstrationssyfte. Mer information om genomgångar finns i [Genomgång](/help/forms/using/finance-reference-site-walkthrough.md)av referenswebbplatser för Web.Finance.
+Användningsexempel för kreditkortsansökningar och hemmasamlingsprogram visar hur man utför A/B-tester och visar en rapport för demonstrationssyfte. Gå igenom [Genomgång av referenswebbplatsen för Web.Finance](/help/forms/using/finance-reference-site-walkthrough.md) om du vill se genomgångar.
 
 ## Nästa steg {#next-step}
 
