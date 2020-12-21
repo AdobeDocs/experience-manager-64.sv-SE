@@ -26,7 +26,8 @@ När ett formulär är förifyllt eller skickat slussas inskickade data via AEM 
 
 Du kan konfigurera en skicka-åtgärd i avsnittet **[!UICONTROL Submission]** i egenskaperna för den adaptiva formulärbehållaren i sidofältet.
 
-![Configure Submit Action](assets/thank-you-setting.png)**Figure:** *Konfigurera Skicka-åtgärd*
+![Konfigurera ](assets/thank-you-setting.png)
+**åtgärden Skicka:** *Konfigurera åtgärden Skicka*
 
 Standardåtgärderna för att skicka in anpassningsbara formulär är:
 
@@ -48,17 +49,17 @@ Standardåtgärderna för att skicka in anpassningsbara formulär är:
 
 >[!CAUTION]
 >
->Om du [förifyller](/help/forms/using/prepopulate-adaptive-form-fields.md) en formulärmall, formulärdatamodell eller schemabaserad adaptiv blankett med XML- eller JSON-data i ett schema (XML-schema, JSON-schema, formulärmall eller formulärdatamodell) som är data innehåller inte &lt;afData>-, &lt;afBoundData>- och &lt;/afUnboundData>-taggar, är data för obegränsade fält (obegränsade fält) formulärfält utan [bindref](/help/forms/using/prepopulate-adaptive-form-fields.md) -egenskap) för det adaptiva formuläret förloras.
+>Om du [förifyller](/help/forms/using/prepopulate-adaptive-form-fields.md) en formulärmall, formulärdatamodell eller schemabaserad adaptiv form med XML- eller JSON-data, till ett schema (XML-schema, JSON-schema, formulärmall eller formulärdatamodell) som är data innehåller inte &lt;afData>-, &lt;afBoundData>- och &lt;/afUnboundData>-taggar, innehåller data för obundet obegränsade fältet (unbundet) Begränsade fält är adaptiva formulärfält utan [bindref](/help/forms/using/prepopulate-adaptive-form-fields.md)-egenskap) för det adaptiva formuläret går förlorade.
 
-Du kan skriva en anpassad skicka-åtgärd för anpassade formulär för att uppfylla ditt användningssätt. Mer information finns i [Skriva anpassad skickaåtgärd för anpassningsbara formulär](/help/forms/using/custom-submit-action-form.md).
+Du kan skriva en anpassad skicka-åtgärd för anpassade formulär för att uppfylla ditt användningssätt. Mer information finns i [Skriva anpassad Skicka-åtgärd för adaptiva formulär](/help/forms/using/custom-submit-action-form.md).
 
 ## Skicka till REST-slutpunkt {#submit-to-rest-endpoint}
 
-Alternativet Skicka skickar data som fylls i formuläret till en konfigurerad bekräftelsesida som en del av HTTP GET-begäran. **[!UICONTROL Submit to REST endpoint]** Du kan lägga till namnet på fälten som ska begäras. Begäran har följande format:
+Med alternativet **[!UICONTROL Submit to REST endpoint]** skickas data som fyllts i formuläret till en konfigurerad bekräftelsesida som en del av HTTP GET-begäran. Du kan lägga till namnet på fälten som ska begäras. Begäran har följande format:
 
 `{fieldName}={request parameter name}`
 
-Som visas i bilden nedan `param1` och `param2` skickas som parametrar med värden som kopierats från **[!UICONTROL textbox]** - och **[!UICONTROL numericbox]** -fälten för nästa åtgärd.
+Som visas i bilden nedan skickas `param1` och `param2` som parametrar med värden som kopierats från fälten **[!UICONTROL textbox]** och **[!UICONTROL numericbox]** för nästa åtgärd.
 
 Du kan också **[!UICONTROL Enable POST request]** och ange en URL för att skicka begäran. Om du vill skicka data till den AEM servern som är värd för formuläret använder du en relativ sökväg som motsvarar rotsökvägen för AEM. Exempel: /content/forms/af/SampleForm.html. Om du vill skicka data till en annan server använder du den absoluta sökvägen.
 
@@ -71,7 +72,7 @@ Om du vill skicka fälten som parametrar i en REST-URL måste alla fält ha olik
 
 ### Bokför skickade data till en resurs eller extern slutpunkt för vila  {#post-submitted-data-to-a-resource-or-external-rest-end-point-nbsp}
 
-Använd åtgärden för att **[!UICONTROL Submit to REST Endpoint]** skicka skickade data till en rest-URL. URL:en kan vara en intern (servern som formuläret återges på) eller en extern server.
+Använd åtgärden **[!UICONTROL Submit to REST Endpoint]** för att skicka skickade data till en rest-URL. URL:en kan vara en intern (servern som formuläret återges på) eller en extern server.
 
 Om du vill skicka data till en intern server anger du sökvägen till resursen. Data bokförs som resurssökväg. Till exempel /content/restEndPoint. För sådana efterfrågningar används autentiseringsinformationen i förfrågan.
 
@@ -79,59 +80,59 @@ Ange en URL om du vill skicka data till en extern server. URL-adressen har forma
 
 ![Mappning för fältvärden skickas som Tack-sidan-parametrar](assets/post-enabled-actionconfig.png)
 
-I exemplet ovan `textbox` hämtas användarinformationen i med parametern `param1`. Syntaxen för att bokföra data som samlats in med `param1` är:
+I exemplet ovan hämtas användarinformationen i `textbox` med parametern `param1`. Syntax för att bokföra data som har hämtats med `param1` är:
 
 `String data=request.getParameter("param1");`
 
-På samma sätt används parametrar som du använder för att skicka XML-data och bifogade filer `dataXml` och `attachments`.
+På samma sätt är de parametrar som du använder för att skicka XML-data och bifogade filer `dataXml` och `attachments`.
 
 Du kan till exempel använda de här två parametrarna i skriptet för att tolka data till en slutpunkt. Du använder följande syntax för att lagra och analysera data:
 
 `String data=request.getParameter("dataXml");`\
 `String att=request.getParameter("attachments");`
 
-I det här exemplet `data` lagrar XML-data och `att` lagrar data för bilagor.
+I det här exemplet lagrar `data` XML-data och `att` bilagedata.
 
 ## Skicka e-post {#send-email}
 
-Skicka-åtgärden skickar ett e-postmeddelande till en eller flera mottagare när formuläret har skickats. **[!UICONTROL Send Email]** E-postmeddelandet som genereras kan innehålla formulärdata i ett fördefinierat format.
+**[!UICONTROL Send Email]**-sändningsåtgärden skickar ett e-postmeddelande till en eller flera mottagare när formuläret har skickats. E-postmeddelandet som genereras kan innehålla formulärdata i ett fördefinierat format.
 
 >[!NOTE]
 Alla formulärfält måste ha olika elementnamn, även om de finns på olika paneler), för att kunna inkludera formulärdata i ett e-postmeddelande.
 
 ## Skicka PDF via e-post {#send-pdf-via-email}
 
-När formuläret har skickats skickas ett e-postmeddelande med en PDF-fil som innehåller formulärdata till en eller flera mottagare med åtgärden Skicka. **[!UICONTROL Send PDF via Email]**
+Med åtgärden **[!UICONTROL Send PDF via Email]** skickar du ett e-postmeddelande med en PDF-fil som innehåller formulärdata till en eller flera mottagare när formuläret har skickats.
 
 **Obs!** *Den här överföringsåtgärden är tillgänglig för XFA-baserade adaptiva formulär och XSD-baserade adaptionsformulär som har dokumentmallen.*
 
 ## Anropa ett formulärarbetsflöde {#invoke-a-forms-workflow}
 
-Alternativet Skicka **[!UICONTROL Submit to Forms workflow]** skickar en XML-datafil och eventuella bifogade filer till en befintlig JEE-process i Adobe eller AEM Forms.
+Alternativet **[!UICONTROL Submit to Forms workflow]** för att skicka data-xml och eventuella bifogade filer till en befintlig JEE-process i Adobe eller AEM Forms.
 
-Mer information om hur du konfigurerar Skicka till formulär-arbetsflödet finns i [Skicka och bearbeta formulärdata med hjälp av formulärarbetsflöden](/help/forms/using/submit-form-data-livecycle-process.md).
+Mer information om hur du konfigurerar Skicka till formulär-arbetsflödet finns i [Skicka och bearbeta formulärdata med formulärarbetsflöden](/help/forms/using/submit-form-data-livecycle-process.md).
 
 ## Skicka med formulärdatamodell {#submit-using-form-data-model}
 
-Åtgärden Skicka skriver skickade adaptiva formulärdata för det angivna datamodellsobjektet i en formulärdatamodell till datakällan. **[!UICONTROL Submit using Form Data Model]** När du konfigurerar skicka-åtgärden kan du välja ett datamodellsobjekt vars skickade data du vill skriva tillbaka till dess datakälla.
+Överföringsåtgärden **[!UICONTROL Submit using Form Data Model]** skriver skickade adaptiva formulärdata för det angivna datamodellsobjektet i en formulärdatamodell till sin datakälla. När du konfigurerar skicka-åtgärden kan du välja ett datamodellsobjekt vars skickade data du vill skriva tillbaka till dess datakälla.
 
 Dessutom kan du skicka en bifogad fil med hjälp av en formulärdatamodell och en DoR-fil (Document of Record) till datakällan.
 
-Mer information om formulärdatamodell finns i [AEM Forms-dataintegrering](/help/forms/using/data-integration.md).
+Mer information om formulärdatamodell finns i [AEM Forms Data Integration](/help/forms/using/data-integration.md).
 
 ## Forms Portal Submit Action {#forms-portal-submit-action}
 
-Med det här **[!UICONTROL Forms Portal Submit Action]** alternativet blir formulärdata tillgängliga via en AEM Forms-portal.
+Alternativet **[!UICONTROL Forms Portal Submit Action]** gör formulärdata tillgängliga via en AEM Forms-portal.
 
-Mer information om Forms Portal och skicka-åtgärden finns i Komponenten [](/help/forms/using/draft-submission-component.md)Utkast och inskickning.
+Mer information om Forms Portal och skicka-åtgärden finns i [Komponenten för utkast och inskickning](/help/forms/using/draft-submission-component.md).
 
 ## Anropa ett AEM arbetsflöde {#invoke-an-aem-workflow}
 
-Åtgärden Skicka associerar ett anpassat formulär med ett AEM arbetsflöde. **[!UICONTROL Invoke an AEM Workflow]** När ett formulär skickas startar det associerade arbetsflödet automatiskt på bearbetningsnoden. Dessutom placeras datafilen, bilagorna och, om tillämpligt, arkivdokumentet vid arbetsflödets nyttolastplats.
+Överföringsåtgärden **[!UICONTROL Invoke an AEM Workflow]** associerar ett anpassat formulär med ett AEM arbetsflöde. När ett formulär skickas startar det associerade arbetsflödet automatiskt på bearbetningsnoden. Dessutom placeras datafilen, bilagorna och, om tillämpligt, arkivdokumentet vid arbetsflödets nyttolastplats.
 
-Innan du använder åtgärden **[!UICONTROL Invoke an AEM Workflow]** Skicka måste du [konfigurera AEM DS-inställningar](/help/forms/using/configuring-the-processing-server-url-.md). Mer information om hur du skapar ett AEM arbetsflöde finns i [Formulärbaserade arbetsflöden i OSGi](/help/forms/using/aem-forms-workflow.md).
+Innan du använder åtgärden **[!UICONTROL Invoke an AEM Workflow]** ska du [konfigurera AEM DS-inställningar](/help/forms/using/configuring-the-processing-server-url-.md). Mer information om hur du skapar ett AEM arbetsflöde finns i [Formulärbaserade arbetsflöden i OSGi](/help/forms/using/aem-forms-workflow.md).
 
-## Förtroende på serversidan i adaptiv form {#server-side-revalidation-in-adaptive-form}
+## Serversidesåtervalidering i adaptiv form {#server-side-revalidation-in-adaptive-form}
 
 I alla onlinesystem för datainhämtning lägger utvecklare vanligtvis till JavaScript-valideringar på klientsidan för att tillämpa några få affärsregler. Men i moderna webbläsare kan slutanvändarna kringgå valideringarna och skicka in dokument manuellt med hjälp av olika tekniker, till exempel DevTools Console för webbläsare. Sådana tekniker gäller även för adaptiva former. En formulärutvecklare kan skapa olika valideringslogik, men tekniskt sett kan slutanvändarna kringgå dessa valideringslogik och skicka ogiltiga data till servern. Ogiltiga data skulle bryta mot de affärsregler som en formulärförfattare har infört.
 
@@ -147,21 +148,23 @@ Alla valideringar av ett anpassningsbart formulär som körs på servern är:
 
 ### Aktivera validering på serversidan {#enabling-server-side-validation-br}
 
-Använd alternativet **Verifiera på servern** under Adaptiv formulärbehållare i sidlisten för att aktivera eller inaktivera validering på serversidan för det aktuella formuläret.
+Använd **Verifiera på servern** under Adaptiv formulärbehållare i sidlisten för att aktivera eller inaktivera validering på serversidan för det aktuella formuläret.
 
-![Aktivera validering](assets/revalidate-on-server.png)på serversidan **Bild:** *Aktivera validering på serversidan*
+![Aktivera ](assets/revalidate-on-server.png)
+**validering på serversidan:** *aktivera validering på serversidan*
 
 Om slutanvändaren åsidosätter dessa valideringar och skickar formulären utför servern valideringen igen. Om valideringen misslyckas vid serverslutet stoppas skicka-transaktionen. Slutanvändaren får det ursprungliga formuläret igen. Insamlade data och skickade data visas för användaren som ett fel.
 
 ### Stöd för anpassade funktioner i valideringsuttryck {#supporting-custom-functions-in-validation-expressions-br}
 
-När det gäller **komplexa valideringsregler** finns ibland det exakta valideringsskriptet i anpassade funktioner och författaren anropar dessa anpassade funktioner från fältvalideringsuttryck. Om du vill att det här anpassade funktionsbiblioteket ska vara känt och tillgängligt vid validering på serversidan kan formulärförfattaren konfigurera namnet på AEM klientbibliotek på fliken **[!UICONTROL Basic]** i egenskaperna för adaptiv formulärbehållare enligt nedan.
+När det gäller **komplexa valideringsregler** finns ibland det exakta valideringsskriptet i anpassade funktioner och författaren anropar dessa anpassade funktioner från fältvalideringsuttryck. För att göra det här anpassade funktionsbiblioteket tillgängligt när du utför validering på serversidan kan formulärförfattaren konfigurera namnet på AEM klientbibliotek på fliken **[!UICONTROL Basic]** i egenskaper för adaptiv formulärbehållare enligt nedan.
 
-![Supporting Custom functions in Validation Expressions](assets/clientlib-cat.png)**Figure:** *Stöd för anpassade funktioner i valideringsuttryck*
+![Stöd för anpassade funktioner i ](assets/clientlib-cat.png)
+**valideringsuttryckBild:** *Stöd för anpassade funktioner i valideringsuttryck*
 
 Författaren kan konfigurera ett anpassat javascript-bibliotek per anpassat formulär. I biblioteket behåller du bara återanvändbara funktioner som är beroende av jQuery och underscore.js från tredje part.
 
-## Felhantering vid sändning {#error-handling-on-submit-action}
+## Felhantering vid sändning av åtgärd {#error-handling-on-submit-action}
 
 Som en del av AEM riktlinjer för säkerhet och skärpa konfigurerar du anpassade felsidor som 404.jsp och 500.jsp. Dessa hanterare anropas när ett formulär 404- eller 500-fel skickas. Hanterarna anropas också när dessa felkoder aktiveras på noden Publicera.
 
