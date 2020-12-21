@@ -23,14 +23,14 @@ ht-degree: 0%
 En *autentiseringsuppgift* innehåller den privata nyckelinformation som behövs för att signera eller identifiera dokument. Ett *certifikat* är information om offentlig nyckel som du konfigurerar för förtroende. AEM använder certifikat och autentiseringsuppgifter för flera syften:
 
 * Acrobat Reader DC-tillägg använder en autentiseringsuppgift för att aktivera Adobe Reader användarrättigheter i PDF-dokument. (Se [Konfigurera autentiseringsuppgifter för användning med Acrobat Reader DC-tillägg](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions).)
-* Du kan konfigurera Rights Management så att autentiseringsuppgifter endast visas för användning i Acrobat från betrodda utfärdare. (Se [Konfigurera visningsinställningar](/help/forms/using/admin-help/configuring-client-server-options.md#configure-document-security-display-settings)för Rights Management.) Det allmänna namnet (CN) måste finnas i certifikatet.
+* Du kan konfigurera Rights Management så att autentiseringsuppgifter endast visas för användning i Acrobat från betrodda utfärdare. (Se [Konfigurera visningsinställningar för Rights Management](/help/forms/using/admin-help/configuring-client-server-options.md#configure-document-security-display-settings).) Det allmänna namnet (CN) måste finnas i certifikatet.
 * Signaturtjänsten får åtkomst till certifikat och autentiseringsuppgifter. Mer information om signaturtjänsten finns i [Tjänstreferens](https://www.adobe.com/go/learn_aemforms_services_63).
 
 **Skapa en parnyckel**
 
 AEM använder sin Trust Store för att lagra och hantera certifikat, autentiseringsuppgifter och listor över återkallade certifikat (CRL). Dessutom kan du använda en oberoende HSM-enhet (Hardware Security Module) för att lagra privata nycklar.
 
-AEM har inget alternativ för att generera nyckelpar. Du kan dock generera den med verktyg som Java-nyckelverktyg och importera den i AEM formulär Trust Store. Mer information om Java-nyckelverktyget finns i:
+AEM har inget alternativ för att generera nyckelpar. Du kan dock generera det med verktyg som Java-nyckelverktyg och importera det i AEM formulär Trust Store. Mer information om Java-nyckelverktyget finns i:
 
 [https://docs.oracle.com/javase/tutorial/security/toolsign/step3.html](https://docs.oracle.com/javase/tutorial/security/toolsign/step3.html)
 
