@@ -40,7 +40,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 >[!NOTE]
 >
->Du kan inte söka efter uppgifter som tilldelats användare med hjälp av webbtjänstens API. Orsaken är att du inte kan anropa `taskList` metoden, som är ett nödvändigt metodanrop för att utföra den här åtgärden.
+>Du kan inte söka efter uppgifter som tilldelats användare med hjälp av webbtjänstens API. Orsaken är att du inte kan anropa metoden `taskList`, som är ett nödvändigt metodanrop för att utföra den här åtgärden.
 
 >[!NOTE]
 >
@@ -270,7 +270,7 @@ I följande Java-kodexempel låses en aktivitet som motsvarar aktivitetsidentifi
 
 ## Snabbstart (SOAP-läge): Hämta uppgifter som tilldelats användare med Java API {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}
 
-I följande Java-kodexempel hämtas alla uppgifter som tilldelats en användare med namnet *tony blue*. Observera att den här användaren anges i anslutningsegenskaperna. Information om returnerade uppgifter, som identifierarvärde och beskrivning, visas.
+I följande Java-kodexempel hämtas alla uppgifter som tilldelats en användare med namnet *tonblå*. Observera att den här användaren anges i anslutningsegenskaperna. Information om returnerade uppgifter, som identifierarvärde och beskrivning, visas.
 
 ```as3
  /* 
@@ -502,7 +502,7 @@ I följande Java-kodexempel hämtas formulärdata från en uppgift med identifie
 
 ## Snabbstart (SOAP-läge): Ändra formulärdata med Java API {#quick-start-soap-mode-modifying-form-data-using-the-java-api}
 
-I följande Java-kodexempel uppdateras ett formulär med data som finns i *filen FormData.xml* .
+I följande Java-kodexempel uppdateras ett formulär med data som finns i filen *FormData.xml*.
 
 ```as3
  /* 
