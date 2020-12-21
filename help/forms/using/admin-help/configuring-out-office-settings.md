@@ -43,10 +43,10 @@ När du skapar en process kan Workbench-användaren ange om en uppgift kan omdir
 
 1. Hitta användaren enligt beskrivningen i [Visa användarens frånvaroinformation](configuring-out-office-settings.md#view-a-user-s-out-of-office-information).
 1. Klicka på namnet på den användare som du vill ändra.
-1. I listan *Användarnamn* är för närvarande väljer du antingen In the Office eller Out of the Office.
+1. I listan *Användarnamn* är för närvarande väljer du antingen In the Office or Out of the Office.
 1. Klicka på Spara.
 
-## Lägga till ett datumintervall utanför kontoret för en användare {#add-an-out-of-office-date-range-for-a-user}
+## Lägg till ett datumintervall utanför kontoret för en användare {#add-an-out-of-office-date-range-for-a-user}
 
 1. Hitta användaren enligt beskrivningen i [Visa användarens frånvaroinformation](configuring-out-office-settings.md#view-a-user-s-out-of-office-information).
 1. Klicka på namnet på den användare som du vill ändra.
@@ -54,7 +54,7 @@ När du skapar en process kan Workbench-användaren ange om en uppgift kan omdir
 1. Ange en starttid och en sluttid. Du kan klicka på kalenderikonen för att välja ett datum. Om du inte anger någon sluttid anges användaren som ledig på obestämd tid.
 1. Klicka på Spara.
 
-## Tilldela en användare en frånvarouppgift {#assign-a-user-for-out-of-office-tasks}
+## Tilldela en användare för frånvarouppgifter {#assign-a-user-for-out-of-office-tasks}
 
 När en användare inte är på kontoret kan du tilldela en eller flera användare för att utföra nya uppgifter för användaren. Du kan konfigurera följande konfigurationer:
 
