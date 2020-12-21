@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# Ändra organisationslogotyp för varumärken {#changing-the-organization-logo-for-branding}
+# Ändra organisationslogotypen för varumärket {#changing-the-organization-logo-for-branding}
 
-Organisationslogotypen visas i det övre vänstra hörnet på arbetsytan i AEM Forms. Om du vill uppdatera logotypen följer du de [allmänna stegen för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md#generic-steps-for-html-workspace-customization) av arbetsytan i AEM Forms och följande steg.
+Organisationslogotypen visas i det övre vänstra hörnet på arbetsytan i AEM Forms. Om du vill uppdatera logotypen följer du de allmänna stegen i anpassning av arbetsytan i AEM Forms[ och följande steg.](/help/forms/using/generic-steps-html-workspace-customization.md#generic-steps-for-html-workspace-customization)
 
 1. Skapa en logotyp och ge filen namnet `NewWorkspace.png`. Placera bildfilen i mappen /apps/ws/images med en WebDAV-klient.
 
@@ -30,7 +30,7 @@ Organisationslogotypen visas i det övre vänstra hörnet på arbetsytan i AEM F
 
    >[!NOTE]
    >
-   >Mer information om WebDAV-åtkomst finns på [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
+   >Mer information om WebDAV-åtkomst finns i [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
 
 1. Referera till den nya logotypbilden i formatmallen på /apps/ws/css/newStyle.css genom att lägga till följande format.
 
