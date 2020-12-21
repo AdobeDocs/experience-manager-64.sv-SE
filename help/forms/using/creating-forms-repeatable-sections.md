@@ -20,13 +20,13 @@ ht-degree: 16%
 
 Upprepningsbara avsnitt är paneler som kan läggas till eller tas bort dynamiskt i ett formulär.
 
-När du t.ex. ansöker om ett jobb, ger den jobbsökande tidigare anställningsinformation som företagsnamn, roll, projekt och annan information. Information om alla arbetsgivare kräver olika men likartade sektioner. I ett sådant scenario tillhandahåller anställningsblanketten en arbetsgivaravdelning och ger också möjlighet att dynamiskt lägga till fler sådana avsnitt. Dessa avsnitt, som läggs till dynamiskt, kallas upprepningsbara avsnitt.
+När du t.ex. ansöker om ett jobb, ger den jobbsökande tidigare anställningsinformation som företagsnamn, roll, projekt och annan information. Information om alla arbetsgivare kräver olika men likartade sektioner. I ett sådant scenario tillhandahåller anställningsblanketten en arbetsgivaravdelning och ger även möjlighet att dynamiskt lägga till fler sådana avsnitt. Dessa avsnitt, som läggs till dynamiskt, kallas upprepningsbara avsnitt.
 
 Du kan använda någon av följande metoder för att skapa repeterbara paneler:
 
 ## Använda Instanshanteraren via skript  {#using-instance-manager-via-scripts-nbsp}
 
-1. Markera en panel i redigeringsläget och tryck sedan på ![cmpr](assets/cmppr.png). Aktivera **Gör panelen upprepningsbar** under Egenskaper i sidofältet. Ange värden för **[!UICONTROL Maximum]** - och **[!UICONTROL Minimum]** fälten.
+1. Markera en panel i redigeringsläget och tryck sedan på ![cmpr](assets/cmppr.png). Aktivera **Gör panelen upprepningsbar** under Egenskaper i sidofältet. Ange värden för fälten **[!UICONTROL Maximum]** och **[!UICONTROL Minimum]**.
 
    Fältet Maximum anger det maximala antalet gånger en panel kan visas på sidan. Du kan ange -1 i fältet Maximalt antal om du vill att panelen ska visas ett obegränsat antal gånger.
 
@@ -38,27 +38,27 @@ Du kan använda någon av följande metoder för att skapa repeterbara paneler:
 
 1. Panelens överordnade panel, som ska upprepas, bör innehålla knappar för att lägga till och ta bort för att hantera instanser av de repeterbara panelerna. Följ de här stegen för att infoga knappar i det överordnade objektet och aktivera skript på knapparna:
 
-   1. Dra och släpp en knappkomponent från sidofältet till panelens överordnade objekt. Markera komponenten och tryck på ![redigeringsregler](assets/edit-rules.png). Reglerna för knappen öppnas i regelredigeraren.
+   1. Dra och släpp en knappkomponent från sidofältet till panelens överordnade objekt. Markera komponenten och tryck på ![edit-rules](assets/edit-rules.png). Reglerna för knappen öppnas i regelredigeraren.
    1. Klicka på **Skapa** i regelredigeringsfönstret.
 
-      Välj **Visuell redigerare** på raden Formulärobjekt och funktioner.
+      Välj **Visual Editor** på raden Formulärobjekt och funktioner.
 
-      1. I regelområdet, under WHEN, **klickas** markeringsläget.
+      1. I regelområdet, under WHEN, klickar du på läget ****.
       1. Under THEN:
 
-         * Om du vill skapa en knapp för att lägga till en panel väljer du **Lägg till instans** och drar och släpper panelen med hjälp av en ![växlingspanel](assets/toggle-side-panel.png) eller markerar den med **Släpp-objektet eller väljer här.**
-         * Om du vill skapa en knapp för en borttagningspanel väljer du **Ta bort instans** och drar och släpper panelen med ![växlingspanelen](assets/toggle-side-panel.png) eller markerar den med **Släpp-objektet eller väljer här.**
+         * Om du vill skapa en knapp för att lägga till en panel väljer du **Lägg till instans** och drar och släpper panelen med ![växlingspanel](assets/toggle-side-panel.png) eller markerar den med **Släpp objekt eller välj här.**
+         * Om du vill skapa en knapp för en borttagningspanel väljer du **Ta bort instans** och drar och släpper panelen med ![växlingspanel](assets/toggle-side-panel.png) eller markerar den med **Släpp objekt eller välj här.**
 
       Välj **Kodredigeraren** på raden Formulärobjekt och funktioner. Klicka på **Redigera regler** och i kodområdet:
 
-      * Om du vill skapa en knapp för panelen Lägg till anger du `this.panel.instanceManager.addInstance()`
+      * Om du vill skapa en knapp för att lägga till panelen anger du `this.panel.instanceManager.addInstance()`
       * Om du vill skapa en knapp för borttagningspanelen anger du `this.panel.instanceManager.removeInstance(this.panel.instanceIndex)`
 
       Klicka på **Klar**.
 
       >[!NOTE]
       >
-      >Om ett fält tillhör en repeterbar panel kan du inte komma åt det direkt med dess namn i skripten. Om du vill komma åt fältet anger du den repeterbara instans som fältet tillhör med hjälp av API:t `instances` i `InstanceManager`. Syntaxen som ska användas för `instances` API `InstanceManager` är:
+      >Om ett fält tillhör en repeterbar panel kan du inte komma åt det direkt med dess namn i skripten. Om du vill komma åt fältet anger du den repeterbara instans som fältet tillhör med hjälp av API:t `instances` i `InstanceManager`. Syntaxen som ska användas för API:t `instances` i `InstanceManager` är:
       >
       >
       >`<panelName>.instanceManager.instances[<instanceNumber>].<fieldname>`
@@ -110,12 +110,12 @@ Du kan använda någon av följande metoder för att skapa repeterbara paneler:
 
 ## Använda dragspelslayouten för den överordnade panelen   {#using-the-accordion-layout-for-the-parent-panel-nbsp}
 
-En panel har olika layoutalternativ. Alternativet Layout för dragspelsdesign har stöd för upprepningsbara paneler. Utför följande steg på en repeterbar panel med alternativet Layout för dragspelsdesign:
+På en panel finns olika layoutalternativ. Alternativet Layout för dragspelsdesign har stöd för upprepningsbara paneler. Utför följande steg på en repeterbar panel med alternativet Layout för dragspelsdesign:
 
-1. Tryck på ![cmpr](assets/cmppr.png)på den överordnade panelen för att upprepa. Du kan se egenskaperna i sidlisten. I listrutan **Layout** väljer du **Dragspel**.
-1. Tryck på ![cmpr](assets/cmppr.png)på en panel som ska upprepas. Panelegenskaperna visas i sidofältet. Aktivera fliken **Gör panelen upprepningsbar** och ange ett värde för fälten **Maximum** och **Minimum** .
+1. Tryck på ![cmpr](assets/cmppr.png) på den överordnade panelen som ska upprepas. Du kan se egenskaperna i sidlisten. I listrutan **Layout** väljer du **Dragspel**.
+1. Tryck på ![cmpr](assets/cmppr.png) på en panel som ska upprepas. Panelegenskaperna visas i sidofältet. Aktivera fliken **Gör panelen repeterbar** och ange ett värde för fälten **Maximum** och **Minimum**.
 
-   Nu kan du använda plusknappen (+) och borttagningsknappen ( ![borttagningspanelen](assets/delete-panel.png)) för att lägga till och ta bort panelerna.
+   Nu kan du använda plusknappen (+) och ta bort ( ![delete-panel](assets/delete-panel.png)) för att lägga till och ta bort panelerna.
 
 ## Använda upprepade delformulär från formulärmallen (XDP/XSD) {#using-repeating-subforms-from-form-template-xdp-xsd}
 
@@ -129,7 +129,7 @@ Upprepningsbart delformulär liknar de repeterbara panelerna i Adaptiv Forms. G�
 1. Om du vill ange ett minsta antal upprepningar väljer du Minsta antal och skriver ett tal i tillhörande ruta. Om detta alternativ är 0, och inga data har angetts för objekten i delformuläret vid sammanslagningen, placeras delformuläret inte ut när formuläret återges.
 1. Om du vill ange ett maximalt antal upprepningar väljer du Max antal och skriver ett tal i tillhörande ruta. Om du inte anger något värde i rutan Max är antalet delformulärrepetitioner obegränsat.
 1. Om du vill ange ett visst antal upprepningar av delformuläret, oavsett datamängd, markerar du alternativet Startvärde och anger ett tal i rutan. Om detta alternativ valts och inga data eller färre data än det specificerade startvärdet finns, placeras ändå de tomma instanserna av delformuläret i formuläret.
-1. Lägg till två knappar i det överordnade delformuläret - en för att lägga till en instans och en för att ta bort en instans av det repeterbara delformuläret. Detaljerade steg finns i [Skapa en åtgärd](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c74572b5612a87ca2b56-8000.2.html#WS107c29ade9134a2c-1f74d86012a87d4fe55-8000.2).
+1. Lägg till två knappar i det överordnade delformuläret - en för att lägga till en instans och en för att ta bort en instans av det repeterbara delformuläret. Detaljerade steg finns i [Bygg en åtgärd](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c74572b5612a87ca2b56-8000.2.html#WS107c29ade9134a2c-1f74d86012a87d4fe55-8000.2).
 1. Länka formulärmallen till det anpassade formuläret. Mer information finns i [Skapa ett anpassat formulär baserat på en mall](/help/forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-a-template).
 1. Använd knapparna i steg 9 för att lägga till och ta bort delformulär.
 
@@ -141,7 +141,7 @@ Den bifogade ZIP-filen innehåller ett exempel på upprepningsbart delformulär.
 
 Du kan skapa upprepningsbara paneler från ett XML-schema och från egenskapen minOcCours &amp; maxOccurs för alla komplexa tytelement. Mer information om XML-schema finns i [Skapa adaptiva formulär med XML-schema som formulärmodell](/help/forms/using/adaptive-form-xml-schema-form-model.md).
 
-I följande kod använder `SampleType`panelen egenskapen minOcCours &amp; maxOccurs.
+I följande kod använder panelen `SampleType`egenskapen minOcCours &amp; maxOccurs.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?> 
