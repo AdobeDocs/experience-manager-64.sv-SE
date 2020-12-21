@@ -27,31 +27,31 @@ Filbiblioteksfunktionen är en plats där besökare på den inloggade webbplatse
 Detta avsnitt i dokumentationen beskriver
 
 * Lägga till filbiblioteksfunktionen på en AEM
-* Konfigurationsinställningar för `File Library` komponenten
+* Konfigurationsinställningar för komponenten `File Library`
 
 ## Lägga till ett filbibliotek på en sida {#adding-a-file-library-to-a-page}
 
-Om du vill lägga till en `File Library` komponent på en sida i redigeringsläge letar du reda på komponenten
+Om du vill lägga till en `File Library`-komponent på en sida i redigeringsläge letar du reda på komponenten
 
 * `Communities / File Library`
 
 och dra den till rätt plats på en sida.
 
-Mer information finns i Grunderna för [communitykomponenter](basics.md).
+Mer information finns på [Grunderna för communitykomponenter](basics.md).
 
-När de [nödvändiga klientbiblioteken](essentials-file-library.md#essentials-for-client-side) inkluderas visas `File Library` komponenten så här:
+När de [nödvändiga klientbiblioteken](essentials-file-library.md#essentials-for-client-side) inkluderas visas `File Library`-komponenten så här:
 
 ![chlimage_1-430](assets/chlimage_1-430.png)
 
 ## Konfigurerar filbibliotek {#configuring-file-library}
 
-Markera den monterade `File Library` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
+Markera den monterade `File Library`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![chlimage_1-431](assets/chlimage_1-431.png) ![chlimage_1-432](assets/chlimage_1-432.png)
 
 ### Fliken Kommentarer {#comments-tab}
 
-Under **[!UICONTROL Comments]** fliken anger du om och hur kommentarer för överförda filer ska visas:
+Under fliken **[!UICONTROL Comments]** anger du om och hur kommentarer för överförda filer ska visas:
 
 * **[!UICONTROL Allow Comments on Files]**
 Om det här alternativet är markerat tillåts kommentarer för överförda filer. Standard är avmarkerat.
@@ -88,14 +88,14 @@ Om Tillåt taggning är markerat begränsas det antal föreslagna taggar som ska
 Om det här alternativet är markerat aktiveras möjligheten att rösta efter en fil. Standard är avmarkerat.
 
 * **[!UICONTROL Allow Following]**
-Om det här alternativet är markerat kan du inkludera följande funktion för bloggartiklar, som gör att medlemmar kan [meddelas](notifications.md) om nya inlägg. Standard är avmarkerat.
+Om det här alternativet är markerat kan du inkludera följande funktion för bloggartiklar, som gör att medlemmar kan få  [](notifications.md) meddelanden om nya inlägg. Standard är avmarkerat.
 
 * **[!UICONTROL Allow Threaded Replies]**
 Om det här alternativet är markerat tillåts svar på publicerade kommentarer. Standard är avmarkerat.
 
 ### Fliken Användarmoderering {#user-moderation-tab}
 
-Konfigurera moderering av kommentarer under **[!UICONTROL User Moderation]** fliken, om kommentarer tillåts:
+Konfigurera moderering av kommentarer under fliken **[!UICONTROL User Moderation]**, om kommentarer tillåts:
 
 * **[!UICONTROL Pre-Moderation]**
 Om det här alternativet är markerat måste kommentarerna godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
@@ -126,10 +126,10 @@ Ange hur många gånger en kommentar måste flaggas av besökare innan moderator
 Ange hur många gånger en kommentar måste flaggas innan den döljs för den offentliga vyn. Talet måste vara större än eller lika med 
 **Modereringströskel**. Standardvärdet är 5.
 
-## Additional Information {#additional-information}
+## Ytterligare information {#additional-information}
 
 Mer information finns på sidan [File Library Essentials](essentials-file-library.md) för utvecklare.
 
-Mer information om moderering av publicerade ämnen och kommentarer finns i [Hantera användargenererat innehåll](moderate-ugc.md).
+moderering av publicerade ämnen och kommentarer finns i [Moderating User Generated Content](moderate-ugc.md).
 
 Information om hur du taggar publicerade ämnen och kommentarer finns i [Tagga användargenererat innehåll](tag-ugc.md).
