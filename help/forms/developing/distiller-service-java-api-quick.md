@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# Distiller Service Java API Quick Start (SOAP) {#distiller-service-java-api-quickstart-soap}
+# Snabbstart för Distiller Java API (SOAP) {#distiller-service-java-api-quickstart-soap}
 
 Java API Quick Start (SOAP) finns för tjänsten Distiller®:
 
