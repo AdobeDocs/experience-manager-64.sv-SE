@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Introduktion till AEM Forms dataintegrering {#aem-forms-data-integration}
+# Introduktion till AEM Forms-dataintegrering {#aem-forms-data-integration}
 
 Med dataintegrering kan ni integrera AEM Forms med olika datakällor och skapa formulärdatamodell för att skapa och arbeta med adaptiva formulär och interaktiv kommunikation.
 
@@ -43,7 +43,7 @@ AEM Forms dataintegrering gör det möjligt att konfigurera och ansluta olika da
 När du har skapat en formulärdatamodell kan du använda den i olika anpassningsbara formulär och interaktiva kommunikationsarbetsflöden, till exempel:
 
 * Skapa anpassningsbara formulär och interaktiv kommunikation baserat på formulärdatamodell
-* Förifyll anpassningsbara formulär och interaktiv kommunikation från konfigurerade datakällor
+* Förifyll adaptiva formulär och interaktiv kommunikation från konfigurerade datakällor
 * Anropa datakälltjänster/åtgärder med hjälp av anpassningsbara formulärregler
 * Skriv anpassade formulärdata till datakällor
 
