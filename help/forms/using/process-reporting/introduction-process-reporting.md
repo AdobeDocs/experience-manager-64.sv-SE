@@ -27,7 +27,7 @@ Processrapportering innehåller en uppsättning användningsklara rapporter som 
 
 Ytterligare processrapportering är ett gränssnitt för att köra ad hoc-frågor och integrera anpassade rapportvyer i användargränssnittet för processrapportering.
 
-En lista över webbläsare som stöds finns i [AEM Forms-plattformar](/help/forms/using/aem-forms-jee-supported-platforms.md)som stöds.
+En lista över webbläsare som stöds finns i [AEM Forms Supported Platforms](/help/forms/using/aem-forms-jee-supported-platforms.md).
 
 Processrapportering bygger på moduler som:
 
@@ -45,7 +45,7 @@ Visa en lista över processer som körs länge, tidsscheman för processer och k
 
 Med Process Reporting kan du också exportera rapport- och frågedata i CSV-format.
 
-### Ad hoc-rapporter {#adhoc-reports}
+### Adhoc-rapporter {#adhoc-reports}
 
 ![print-&amp;-color](assets/print-&-colour.png)
 
@@ -57,7 +57,7 @@ Du kan kombinera flera filter för att skapa specifika rapporter.
 
 Du kan sedan spara rapportfiltren så att de kan köras vid ett senare datum eller en senare tidpunkt.
 
-### Process-/uppgiftshistorik {#process-task-history}
+### Process-/aktivitetshistorik {#process-task-history}
 
 ![filhantering](assets/file-management.png)
 
