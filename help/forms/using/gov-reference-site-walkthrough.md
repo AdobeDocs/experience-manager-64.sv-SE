@@ -17,11 +17,11 @@ ht-degree: 0%
 ---
 
 
-# Genomgång av vår Gov-referenswebbplats {#we-gov-reference-site-walkthrough}
+# Genomgång av Gov-referenswebbplats {#we-gov-reference-site-walkthrough}
 
 ## Krav {#pre-requisite}
 
-Konfigurera referenswebbplatsen för Web.Gov enligt beskrivningen i [Konfigurera och konfigurera AEM Forms referenswebbplatser](/help/forms/using/setup-reference-sites.md).
+Konfigurera din webbplats för Web.Gov-referenser enligt beskrivningen i [Konfigurera och konfigurera AEM Forms referenswebbplatser](/help/forms/using/setup-reference-sites.md).
 
 ## Referensscenario för webbplats {#reference-site-scenario}
 
@@ -31,7 +31,7 @@ We.Gov är en statlig organisation som låter adoptivföräldrar registrera sig 
 * Sökandens personliga och yrkesmässiga uppgifter (om sökanden är berättigad till barnstöd)
 * Personliga uppgifter om det adopterade barnet
 
-   Sökande kan lämna information om mer än ett barn
+   Sökande kan ge information om mer än ett barn
 * Bankkontouppgifter för den sökande där den sökande kan få barnbidrag
 * Återbetalning av ansökningsavgift
 * Bedömning av ansökan
@@ -42,7 +42,7 @@ När ansökan har lämnats in och avgiften har betalats, får sökanden ett e-po
 
 Vi.Gov-organisationen tar emot programmet. Organisationen får programmet granskat och godkänner de program som är äkta.
 
-När ansökan har godkänts får den sökande ett e-postmeddelande från webbsidan We.Gov. Alternativet **Visa dokument** i e-postmeddelandet länkar till ett dokument med information om den sökandes registrering.
+När ansökan har godkänts får den sökande ett e-postmeddelande från webbsidan We.Gov. Alternativet **Visa dokument** i e-postlänkarna till ett dokument med den sökandes registreringsinformation.
 
 I bilden nedan visas ett steg-för-steg-arbetsflöde för referenswebbplatsscenariot för Web.Gov.
 
@@ -57,9 +57,9 @@ Scenariot omfattar följande personligheter:
 
 ## Sarah initierar sin behörighetskontroll {#sarah-initiates-her-eligibility-check}
 
-En sökande kan kontrollera om han eller hon är berättigad att ansöka om barnsupportförmåner. På webbplatsen kan användarna besvara frågor för att de ska kunna avgöra om deras program är berättigade till förmåner. Sarah, en adoptivförälder, är en potentiell sökande till det. Formuläret för behörighet ingår i Application for Child Support Services på webbplatsen We.Gov. Sarah klickar **[!UICONTROL Child Support]** på webbsidan We.Gov för att se om hon är berättigad. Sarah klickar på **[!UICONTROL Check Your Eligibility]** på barnsupportsidan.
+En sökande kan kontrollera om han eller hon är berättigad att ansöka om barnsupportförmåner. På webbplatsen kan användarna besvara frågor för att de ska kunna avgöra om deras program är berättigade till förmåner. Sarah, en adoptivförälder, är en potentiell sökande till det. Formuläret för behörighet ingår i Application for Child Support Services på webbplatsen We.Gov. För att kontrollera hennes behörighet klickar Sarah på **[!UICONTROL Child Support]** på webbsidan We.Gov. På sidan Underordnad support klickar Sarah på **[!UICONTROL Check Your Eligibility]**.
 
-Förutom ovanstående kan Sarah klicka **[!UICONTROL Get Started]** på hemsidan. Sarah navigeras till sidan Alla program, där hon kan klicka på Apply under **[!UICONTROL Application for Child Support Services]**. Sarah går sedan vidare till behörighetskontrollen.
+Förutom ovanstående kan Sarah klicka på **[!UICONTROL Get Started]** på hemsidan. Sarah navigeras till sidan Alla program, där hon kan klicka på Använd under **[!UICONTROL Application for Child Support Services]**. Sarah går sedan vidare till behörighetskontrollen.
 
 På sidan Check Eligibility For Child Support (Kontrollera berättigande för barnsupport) tillfrågas Sarah om en uppsättning frågor för att fastställa om hon är berättigad till barnsupport. Genom de olika frågorna får hon frågan:
 
@@ -84,20 +84,20 @@ Kvalificeringskontrollen är en del av det anpassningsbara formuläret för barn
 
 ### Se det själv {#see-it-yourself}
 
-Öppna i webbläsaren `https://<hostname>:<PublishPort>/content/we-gov/en.html`. Klicka på Underordnad support på webbsidan Web.Gov. Klicka på Kontrollera din behörighet på sidan Underordnad support.
+Öppna `https://<hostname>:<PublishPort>/content/we-gov/en.html` i webbläsaren. Klicka på Underordnad support på webbsidan Web.Gov. Klicka på Kontrollera din behörighet på sidan Underordnad support.
 
 Så här ser du reglerna:
 
 1. Öppna formuläret i redigeringsläge på författarinstansen. Webbadress: `https://<hostname>:<AuthorPort>/editor.html/content/forms/af/we-gov/child-support/css.html`.
-1. Markera en komponent och klicka på ![redigeringsregler](assets/edit-rules.png).
+1. Markera en komponent och klicka på ![edit-rules](assets/edit-rules.png).
 
    Regelredigeraren öppnas och alla regler som används i formuläret visas.
 
-1. Klicka på regler i den vänstra panelen `passMsg` och `failMsg` se hur behörighetskontrollen fungerar.
+1. På den vänstra panelen klickar du på reglerna `passMsg` och `failMsg` för att förstå hur behörighetskontrollen fungerar.
 
-## Sarah startar sin ansökan om barnsupport {#sarah-starts-her-application-for-child-support}
+## Sarah startar sin ansökan om stöd för barn {#sarah-starts-her-application-for-child-support}
 
-Sarah klickar **[!UICONTROL Start Application]** efter att ha informerats om sin rätt till barnsupport.\
+Sarah klickar **[!UICONTROL Start Application]** efter att ha informerats om sin behörighet till barnsupport.\
 På sidan Application For Child Support Services (Application for Child Support Services) ger Sarah information i följande avsnitt:
 
 * **[!UICONTROL About Applicant]**: Låter Sarah ge henne information i det här avsnittet.
@@ -108,13 +108,13 @@ På sidan Application For Child Support Services (Application for Child Support 
 
 * **[!UICONTROL Fee Payment]**: Låter Sarah ange sina kreditkortsuppgifter för att betala för ansökningsavgiften.
 
-Som standard tas Sarah till **[!UICONTROL About Applicant]** avsnittet.
+Som standard dirigeras Sarah till avsnittet **[!UICONTROL About Applicant]**.
 
 ![Underordnat supportprogram på skrivbordet](assets/desktop.png)
 
-Sarah kan när som helst klicka **[!UICONTROL Come back later]** och återuppta arbetet med sin ansökan. När hon klickar **[!UICONTROL Come back later]** sparas förloppet som ett utkast och hon får ett alternativ för att skicka utkastet via e-post.
+Sarah kan när som helst klicka på **[!UICONTROL Come back later]** och fortsätta med sin applikation. När hon klickar på **[!UICONTROL Come back later]** sparas hennes förlopp som ett utkast och hon får ett alternativ för att skicka utkastet via e-post.
 
-När hon klickar **[!UICONTROL Send Email]** får hon ett e-postmeddelande med en länk till utkastet till hennes formulär.
+När hon klickar på **[!UICONTROL Send Email]** får hon ett e-postmeddelande med en länk till utkastet av hennes formulär.
 
 Det underordnade supportformuläret på webbsidan We.Gov använder adaptiva formulär. Hon kan använda länken i sitt e-postmeddelande och fylla i formuläret på sin mobila enhet.
 
@@ -128,7 +128,7 @@ Sarah kan lämna information i vilket avsnitt som helst, men ansökningsavgiften
 
 ### <strong>Sarah ger henne information</strong> {#strong-sarah-provides-her-information-strong}
 
-När Sarah klickat **[!UICONTROL Start Application]** kommer hon till informationsdelen om sökande på sidan om ansökan om barnsupport. Under Information om sökande navigerar Sarah på flikarna och lämnar sina personuppgifter för ansökan. Hon klickar **[!UICONTROL Next]** för att navigera på flikarna.
+När Sarah har klickat på **[!UICONTROL Start Application]**, dirigeras hon till informationsdelen om sökande på sidan om ansökan om barnsupport. Under Information om sökande navigerar Sarah på flikarna och lämnar sina personuppgifter för ansökan. Hon klickar **[!UICONTROL Next]** för att navigera på flikarna.
 
 Under Information om sökande ombeds hon att lämna uppgifter på följande flikar:
 
@@ -144,9 +144,9 @@ Under Grundläggande information tillhandahåller Sarah sitt ID-bevis och hennes
 
    Under Ytterligare information anger Sarah ett ID-nummer, födelsedatum och aktuell adress och telefonnummer.
 
-### Sarah tillhandahåller information om barn {#sarah-provides-child-information}
+### Sarah tillhandahåller barninformation {#sarah-provides-child-information}
 
-När Sarah har lämnat sina personuppgifter och klickningar **[!UICONTROL Next]** kommer hon till barninformationssektionen.
+När Sarah har lämnat sina personuppgifter och klickat på **[!UICONTROL Next]** kommer hon till avsnittet med information om barn.
 
 I avsnittet Underordnad information ger hon följande information:
 
@@ -158,7 +158,7 @@ Sarah väljer sitt barn Joe och skriver sitt namn.
 
 ### Sarah tillhandahåller betalningsinformation {#sarah-provides-payment-information}
 
-När Sarah har lämnat information om det adopterade barnet (eller barnen) och klickningar **[!UICONTROL Next]** tas hon till **[!UICONTROL Payment Information]** sektionen.
+När Sarah har angett information om det adopterade barnet (eller underordnade) och klickat på **[!UICONTROL Next]**, dirigeras hon till avsnittet **[!UICONTROL Payment Information]**.
 
 I avsnittet Betalningsinformation anger hon i vilket bankkonto hon kan få barnsupportförmånerna.\
 Hon anger sitt 10-siffriga bankkontonummer.
@@ -166,7 +166,7 @@ Hon anger sitt 10-siffriga bankkontonummer.
 ## Sarah betalar ansökningsavgiften och signerar formuläret {#sarah-pays-the-application-fee-and-signs-the-form}
 
 När Sarah har godkänt villkoren för ansökan betalar hon ansökningsavgiften på 25 USD. Programavgift krävs för att behandla ansökan.\
-Sarah anger sin kreditkortsinformation och klickar **[!UICONTROL Pay Now]**. När avgifterna har betalats visas en PDF-version av programmet med ett signaturfält.
+Sarah anger sin kreditkortsinformation och klickar på **[!UICONTROL Pay Now]**. När avgifterna har betalats visas en PDF-version av programmet med ett signaturfält.
 
 ![sarah-sign-1](assets/sarah-sign-1.png)
 
@@ -197,7 +197,7 @@ Behörighetskontrollen använder regler som anges i formuläret. Den använder d
 
 ### Se det själv {#see-it-yourself-1}
 
-Öppna `https://<hostname>:<PublishPort>/content/forms/af/we-gov/child-support/css.html` och fyll i den information som behövs i webbläsaren. När du skickar in programmet efter att du har fyllt i den obligatoriska informationen, betalat avgifterna och signerat dokumentet får du bekräftelsemeddelandet via e-post.
+Öppna `https://<hostname>:<PublishPort>/content/forms/af/we-gov/child-support/css.html` i webbläsaren och fyll i informationen som krävs. När du skickar in programmet efter att du har fyllt i den obligatoriska informationen, betalat avgifterna och signerat dokumentet får du bekräftelsemeddelandet via e-post.
 
 Se den underordnade mallen för Web.Gov här: `https://<hostname>:<AuthorPort>/editor.html/conf/we-gov/settings/wcm/templates/we-gov-child-template/structure.html`
 
@@ -209,7 +209,7 @@ Så här ser du alla regler:
 
    Webbadress: `https://<hostname>:<AuthorPort>/editor.html/content/forms/af/we-gov/child-support/css.html`
 
-1. Markera en komponent och tryck på ![redigeringsregler](assets/edit-rules.png). Alla regler listas i regelredigeraren, inklusive reglerna som listas ovan.
+1. Markera en komponent och tryck på ![edit-rules](assets/edit-rules.png). Alla regler listas i regelredigeraren, inklusive reglerna som listas ovan.
 
 ## Gloria tar emot programmet {#gloria-receives-the-application}
 
@@ -221,7 +221,7 @@ När Sarah fyller i och skickar in det underordnade supportprogrammet skapas en 
 
 ### Se det själv {#see-it-yourself-2}
 
-Öppna sidan `https://<hostname***>:<PublishPort>/content/we-gov/en.html`. Tryck på **[!UICONTROL Sign In]** kryssrutan på sidan, markera **[!UICONTROL Login as representative]** kryssrutan och logga in i AEM med stödraster/lösenord som användarnamn/lösenord för Gloria Rios. Det underordnade supportprogrammet visas. Information om hur du använder AEM Inkorg för formulärbaserade arbetsflödesuppgifter finns i [Hantera Forms-program och -uppgifter i AEM Inkorg](/help/forms/using/manage-applications-inbox.md).
+Öppna sidan `https://<hostname***>:<PublishPort>/content/we-gov/en.html`. På sidan trycker du på **[!UICONTROL Sign In]**, markerar kryssrutan **[!UICONTROL Login as representative]** och loggar in i AEM inkorg med grios/password som användarnamn/lösenord för Gloria Rios. Det underordnade supportprogrammet visas. Information om hur du använder AEM Inkorg för formulärcentrerade arbetsflödesuppgifter finns i [Hantera Forms-program och -uppgifter i AEM Inkorg](/help/forms/using/manage-applications-inbox.md).
 
 ![Gloria&#39;s inbox in We.Gov refsite](assets/gloria-inbox.png)
 
@@ -232,7 +232,7 @@ Gloria kan visa, godkänna eller avvisa programmet från programkontrollpanelen.
 Gloria, ansvarig för godkännanden på We.Gov, öppnar sin AEM inkorg. Hon ser en granskningsuppgift i sin lista över uppgifter. Hon öppnar och ser granskningsuppgifterna.
 
 Hon ser en PDF-fil med de uppgifter Sarah angav tillsammans med de överförda dokumenten Sarah.\
-Gloria kan godkänna eller avvisa programmet. Gloria klickar dock **[!UICONTROL Assessment Required]** för att få programmet utvärderat.
+Gloria kan godkänna eller avvisa programmet. Gloria klickar dock på **[!UICONTROL Assessment Required]** för att utvärdera programmet.
 
 ![gloria-send-assessment](assets/gloria-sends-assessment.png)
 
@@ -242,16 +242,16 @@ Sarah program är en startpunkt i AEM. Det initierar det AEM arbetsflödet när 
 
 Om konfigurationen är klar startar AEM arbetsflöde omedelbart efter att formuläret har skickats. Logga in på Inkorgen med Glorias inloggningsuppgifter.
 
-Gå till inkorgen på https://&lt;***värdnamn***>:&lt;***PublishPort***>/content/we-gov/en.html. Tryck på **[!UICONTROL Sign In]****[!UICONTROL Login as representative]** kryssrutan för att markera kryssrutan med Glorias standardinloggningsuppgifter:
+Gå till inkorgen på https://&lt;***värdnamn***>:&lt;***PublishPort***>/content/we-gov/en.html. Tryck på **[!UICONTROL Sign In]** på sidan och markera kryssrutan **[!UICONTROL Login as representative]** med Glorias standardautentiseringsuppgifter:
 
 * Användarnamn: gris
 * Lösenord: lösenord
 
-I hennes AEM inkorg läggs Sarah program till som en granskningsuppgift. Välj uppgiften och klicka på **Utvärdering krävs** för att gå vidare till nästa steg.
+I hennes AEM inkorg läggs Sarah program till som en granskningsuppgift. Markera aktiviteten och klicka på **Bedömning krävs** för att fortsätta till nästa steg.
 
 ### Konsolen hämtar utvärderingsaktiviteten {#conard-assessment-task}
 
-När Gloria klickar **[!UICONTROL Assessment Required]** får Conard granskningsuppgifterna i sin AEM Inbox. Uppgiften är nästa steg i det AEM arbetsflödet som definieras i arbetsflödesmodellen. Han ser granskningsuppdraget och öppnar det.
+När Gloria klickar på **[!UICONTROL Assessment Required]** får Conard granskningsuppgifterna i sin AEM Inbox. Uppgiften är nästa steg i det AEM arbetsflödet som definieras i arbetsflödesmodellen. Han ser granskningsuppdraget och öppnar det.
 
 Conard hämtar den sökandes bedömningsuppgift enligt nedan.
 
@@ -263,7 +263,7 @@ Conard verifierar alla detaljer Sarah har lämnat och Sarah signerar utvärderin
 
 ![submit-for-re-assessment](assets/submit-for-re-evaluation.png)
 
-Håll ett klick **[!UICONTROL Submit For Reevaluation]** och det AEM arbetsflödet skickar utvärderingen till Web.GOV-organisationen.
+Konard klickar på **[!UICONTROL Submit For Reevaluation]** och det AEM arbetsflödet skickar utvärderingen till Web.Gov-organisationen.
 
 ### Så här fungerar det {#how-it-works-4}
 
@@ -282,7 +282,7 @@ Standardautentiseringsuppgifterna för kortet är:
 
 En ny utvärderingsbegärandeuppgift läggs till i inkorgen. Skicka den färdiga bedömningen och fortsätt till nästa steg.
 
-### Gloria granskar utvärderingen och godkänner ansökan {#gloria-reviews-the-assessment-and-approves-the-application}
+### Gloria granskar utvärderingen och godkänner programmet {#gloria-reviews-the-assessment-and-approves-the-application}
 
 Efter att Conard lämnat in utvärderingen ser Gloria en granskningsuppgift i sin inkorg. Hon väljer och öppnar **[!UICONTROL Review]**.
 
@@ -308,7 +308,7 @@ Gloria godkänner programmet.
 
 När Gloria har godkänt ansökan får Sarah ett e-postmeddelande från We.Gov om att hennes ansökan har godkänts.
 
-Knappen **[!UICONTROL View Document]** i e-postmeddelandet länkar till hennes registreringsinformation. Sarah klickade **[!UICONTROL View Document.]**
+Knappen **[!UICONTROL View Document]** i e-postmeddelandet länkar till hennes registreringsinformation. Sarah klickar **[!UICONTROL View Document.]**
 
 ![approval-enrolment-kit-email](assets/approval-enrolment-kit-email.png)
 
@@ -344,12 +344,12 @@ Prestandamätningar för programformuläret för barnsupport spåras med Adobe A
 
 ### Se det själv {#see-it-yourself-7}
 
-För att du ska kunna visa och utforska analysrapporten tillhandahåller vi startdata för programmet för barnsupport på referenswebbplatsen. Innan du använder dirigerade data, se [Konfigurera analys](/help/forms/using/setup-reference-sites.md#configureanalytics). Utför följande steg i författarinstansen för att visa rapporten med startdata:
+För att du ska kunna visa och utforska analysrapporten tillhandahåller vi startdata för programmet för barnsupport på referenswebbplatsen. Se [Konfigurera analys](/help/forms/using/setup-reference-sites.md#configureanalytics) innan du använder dirigerade data. Utför följande steg i författarinstansen för att visa rapporten med startdata:
 
-1. Gå till **[!UICONTROL Forms & Documents]** användargränssnittet på https://&lt;*värdnamn*>:&lt;*AuthorPort*>/aem/forms.html/content/dam/formSanddocuments.
+1. Gå till **[!UICONTROL Forms & Documents]**-gränssnittet på https://&lt;*värdnamn*>:&lt;*AuthorPort*>/aem/forms.html/content/dam/formsanddocuments.
 
-1. Klicka för att öppna mappen **We.Gov** .
-1. Välj **[!UICONTROL Application for Child Support Services]** anpassat formulär och klicka sedan **[!UICONTROL Enable Analytics]** i verktygsfältet.
+1. Klicka för att öppna mappen **We.Gov**.
+1. Välj **[!UICONTROL Application for Child Support Services]** adaptivt formulär och klicka sedan på **[!UICONTROL Enable Analytics]** i verktygsfältet.
 
 1. Markera formuläret igen och klicka på **[!UICONTROL Analytics Report]** i verktygsfältet för att generera rapporten. Inledningsvis visas en tom rapport.
 
