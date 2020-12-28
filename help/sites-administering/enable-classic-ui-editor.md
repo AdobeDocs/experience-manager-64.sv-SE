@@ -24,7 +24,7 @@ Som standard har möjligheten att växla till det klassiska användargränssnitt
 
 ![chlimage_1-9](assets/chlimage_1-9.png)
 
-Följ de här stegen för att aktivera alternativet **Öppna i Classic-gränssnitt** på menyn **Sidinformation** igen.
+Följ de här stegen om du vill aktivera alternativet **Öppna i Classic UI** på **menyn Sidinformation**.
 
 1. Använd CRXDE Lite för att hitta följande nod:
 
@@ -34,10 +34,10 @@ Följ de här stegen för att aktivera alternativet **Öppna i Classic-gränssni
 
    `http://localhost:4502/crx/de/index.jsp#/libs/wcm/core/content/editor/jcr%3Acontent/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui](http://localhost:4502/crx/de/index.jsp#/libs/wcm/core/content/editor/jcr%3Acontent/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui`
 
-1. Skapa en övertäckning med alternativet **Överläggsnod** ; till exempel:
+1. Skapa en övertäckning med alternativet **Överläggsnod**; till exempel:
 
-   * **Sökväg**: `/apps/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui`
-   * **Överläggsplats**: `/apps/`
+   * **Sökväg**:  `/apps/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui`
+   * **Överläggsplats**:  `/apps/`
    * **Matcha nodtyper**: aktiv (markera kryssrutan)
 
 1. Lägg till följande text-egenskap med flera värden i den åsidosatta noden:
