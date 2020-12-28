@@ -1,6 +1,6 @@
 ---
 title: Launches
-seo-title: Launches
+seo-title: Startar
 description: Skapa en startsida för att möjliggöra uppdatering av en ny version av befintliga webbsidor för framtida aktivering. När du skapar en Launch anger du en titel och källsidan.
 seo-description: Skapa en startsida för att möjliggöra uppdatering av en ny version av befintliga webbsidor för framtida aktivering. När du skapar en Launch anger du en titel och källsidan.
 uuid: b1952b6c-fc44-4e39-80ba-9380a6c66b8c
@@ -26,12 +26,12 @@ En startsida skapas så att du kan göra ändringar redo för framtida publiceri
 
 >[!NOTE]
 >
->Teorin bakom lanseringar beskrivs i detalj under [lanseringar](/help/sites-authoring/launches.md) i standarddokumentationen.
+>Teorin bakom lanseringar beskrivs i detalj under [Startar](/help/sites-authoring/launches.md) i standarddokumentationen för redigering.
 >
->Information som är specifik för användning av starter i det klassiska användargränssnittet finns i följande dokumentation tillsammans med [Skapa starter](/help/sites-classic-ui-authoring/classic-launches-creating.md), [Redigera starter](/help/sites-classic-ui-authoring/classic-launches-editing.md)och [Befordra starter](/help/sites-classic-ui-authoring/classic-launches-promoting.md).
+>Information om hur du använder starter i det klassiska användargränssnittet finns i följande dokumentation tillsammans med [Creating Launches](/help/sites-classic-ui-authoring/classic-launches-creating.md), [Editing Launches](/help/sites-classic-ui-authoring/classic-launches-editing.md) och [Promoting Launches](/help/sites-classic-ui-authoring/classic-launches-promoting.md).
 
 >[!CAUTION]
 >
 >Det går inte att använda flera källgrenar för en start i det klassiska användargränssnittet.
 
-Startkonsolen kan nås direkt via [http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html)
+Startkonsolen kan nås direkt med [http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html)
