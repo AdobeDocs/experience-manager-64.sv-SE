@@ -18,19 +18,19 @@ ht-degree: 10%
 ---
 
 
-# Felsöka AEM vid redigering{#troubleshooting-aem-when-authoring}
+# Felsökning AEM vid redigering{#troubleshooting-aem-when-authoring}
 
 I följande avsnitt beskrivs några problem som du kan stöta på när du använder AEM, tillsammans med förslag på hur du felsöker dem.
 
 >[!NOTE]
 >
->När du får problem är det också värt att kontrollera listan med [kända fel](/help/release-notes/known-issues.md) för din instans (release- och servicepaket).
+>När du får problem är det också värt att kontrollera listan [Kända fel](/help/release-notes/known-issues.md) för din instans (release- och service packs).
 
 >[!NOTE]
 >
->Användare som har administratörsbehörighet och som vill felsöka problem med AEM kan använda felsökningsmetoderna som beskrivs i AEM [Felsökning (för administratörer)](/help/sites-administering/troubleshoot.md). Om du inte har tillräcklig behörighet kontaktar du systemadministratören om felsökning AEM.
+>Användare som har administratörsbehörighet och som vill felsöka problem med AEM kan använda felsökningsmetoderna som beskrivs i [AEM (för administratörer)](/help/sites-administering/troubleshoot.md). Om du inte har tillräcklig behörighet kontaktar du systemadministratören om felsökning AEM.
 
-## Gammal sidversion finns fortfarande på publicerad webbplats {#old-page-version-still-on-published-site}
+## Den gamla sidversionen finns fortfarande på den publicerade webbplatsen {#old-page-version-still-on-published-site}
 
 * **Problem**:
 
