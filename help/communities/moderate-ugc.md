@@ -32,7 +32,7 @@ Community-innehåll, som också kallas användargenererat innehåll (UGC), skapa
 * [QnA](working-with-qna.md): medlemmar skapar en fråga eller besvarar en fråga
 * [Recensioner](reviews.md): medlemmar publicerar en kommentar när de klassificerar ett objekt
 
-Moderering av användargenererat innehåll är användbart för att redovisa positiva bidrag och begränsa negativa bidrag (t.ex. skräppost och missbruk). UGC kan modereras från flera miljöer:
+Moderering av användargenererat innehåll är användbart för erkännande av positiva bidrag samt för begränsning av negativa bidrag (t.ex. skräppost och missbruk). UGC kan modereras från flera miljöer:
 
 * [Konsol för massmoderering](moderation.md)
 
