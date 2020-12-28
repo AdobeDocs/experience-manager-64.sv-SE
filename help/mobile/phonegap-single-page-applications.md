@@ -24,13 +24,13 @@ ht-degree: 0%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-[Single-Page Applications](https://en.wikipedia.org/wiki/Single-page_application) (SPA) har nått en kritisk massa som allmänt anses vara det mest effektiva mönstret för att skapa sömlösa upplevelser med webbteknik. Genom att följa ett SPA-mönster kan du skapa ett program som fungerar likadant som ett skrivbordsprogram eller mobilprogram, men som når en mängd olika enhetsplattformar och formfaktorer på grund av sin grund i öppna webbstandarder.
+[Single-page Applications](https://en.wikipedia.org/wiki/Single-page_application) (SPA) har nått en kritisk massa, som allmänt anses vara det mest effektiva mönstret för att skapa sömlösa upplevelser med webbteknik. Genom att följa ett SPA mönster kan du skapa ett program som fungerar likadant som ett skrivbordsprogram eller mobilprogram, men som når en mängd olika enhetsplattformar och formfaktorer på grund av dess grund i öppna webbstandarder.
 
-I allmänhet verkar SPA-program mer avancerade än traditionella sidbaserade webbplatser eftersom de vanligtvis läser in en hel HTML-sida **endast en gång** (inklusive CSS, JS och teckensnittsinnehåll som stöds) och sedan bara läser in exakt det som är nödvändigt varje gång ett ändrat läge inträffar i programmet. Vad som är nödvändigt för den här tillståndsändringen kan variera beroende på vilken uppsättning tekniker som väljs, men innehåller vanligtvis ett enda HTML-fragment som ersätter den befintliga vyn, och körningen av ett JS-kodblock som gör att den nya vyn kan visas och utföra eventuell mallåtergivning på klientsidan som behövs. Den här lägesändringens hastighet kan förbättras ytterligare genom stöd för mekanismer för mallcachelagring, eller till och med offlineåtkomst till mallinnehåll om Adobe PhoneGap används.
+I allmänhet verkar SPA mer presterande än traditionella sidbaserade webbplatser eftersom de vanligtvis bara läser in en hel HTML-sida **en gång** (inklusive CSS, JS och teckensnittsinnehåll som stöds) och sedan bara läser in exakt det som är nödvändigt varje gång en lägesändring inträffar i programmet. Vad som är nödvändigt för den här tillståndsändringen kan variera beroende på vilken uppsättning tekniker som väljs, men innehåller vanligtvis ett enda HTML-fragment som ersätter den befintliga vyn, och körningen av ett JS-kodblock som gör att den nya vyn kan visas och utföra eventuell mallåtergivning på klientsidan som behövs. Den här lägesändringens hastighet kan förbättras ytterligare genom stöd för mekanismer för mallcachelagring, eller till och med offlineåtkomst till mallinnehåll om Adobe PhoneGap används.
 
-AEM 6.1 stöder uppbyggnad och hantering av SPA-program via AEM. I den här artikeln ges en introduktion till begreppen bakom SPA och hur de utnyttjar [AngularJS](https://angularjs.org/) för att föra ert varumärke till App Store och Google Play.
+AEM 6.1 stöder uppbyggnad och hantering av SPA via AEM. I den här artikeln ges en introduktion till begreppen bakom SPA och hur de utnyttjar [AngularJS](https://angularjs.org/) för att överföra ditt varumärke till App Store och Google Play.
 
-## SPA i AEM {#spa-in-aem-apps}
+## SPA i AEM appar {#spa-in-aem-apps}
 
 Single-Page Application Framework i AEM Apps möjliggör höga prestanda för en AngularJS-app, samtidigt som författare (eller annan icke-teknisk personal) kan skapa och hantera appens innehåll via den pekoptimerade dra och släpp-redigeringsmiljön som traditionellt har reserverats för hantering av webbplatser. Har du redan skapat en webbplats med AEM? Du kommer att märka att det är enkelt att återanvända innehåll, komponenter, arbetsflöden, resurser och behörigheter med AEM program.
 
@@ -58,7 +58,7 @@ Den mall som ska läsas in när den här vägen begärs anges av egenskapen temp
 
 ## Sidkontroller {#page-controllers}
 
-I vinkelns egna ord är&quot;en styrenhet är en JavaScript-konstruktorfunktion som används för att förstärka vinkelomfånget&quot;. ([källa](https://docs.angularjs.org/guide/controller)) Varje sida i en AEM-app ansluts automatiskt till en styrenhet som kan utökas av en styrenhet som anger en `frameworkType` av `angular`. Ta en titt på ng-text-komponenten som ett exempel (/libs/mobileapps/components/angular/ng-text), inklusive cq:template-noden som ser till att den här komponenten läggs till på en sida varje gång den läggs till innehåller den här viktiga egenskapen.
+I vinkelns egna ord är&quot;en styrenhet är en JavaScript-konstruktorfunktion som används för att förstärka vinkelomfånget&quot;. ([källa](https://docs.angularjs.org/guide/controller)) Varje sida i en AEM App ansluts automatiskt till en styrenhet som kan utökas av en styrenhet som anger `frameworkType` av `angular`. Ta en titt på ng-text-komponenten som ett exempel (/libs/mobileapps/components/angular/ng-text), inklusive cq:template-noden som ser till att den här komponenten läggs till på en sida varje gång den läggs till innehåller den här viktiga egenskapen.
 
 Om du vill ha ett mer komplext exempel på en kontrollenhet öppnar du skriptet ng-template-page controller.jsp (finns på /apps/geometrixx-outdoor-app/components/angular/ng-template-page). Särskilt intressant är den javascript-kod som genereras när den körs, som återges enligt följande:
 
@@ -83,9 +83,9 @@ Om du vill ha ett mer komplext exempel på en kontrollenhet öppnar du skriptet 
 ])
 ```
 
-I ovanstående exempel kommer du att märka att vi tar en parameter från `$routeParams` tjänsten och sedan masserar den i den katalogstruktur som våra JSON-data lagras i. Genom att hantera sku `id` på det här sättet kan vi leverera en enda produktmall som kan återge produktdata för potentiellt tusentals olika produkter. Det här är en mycket mer skalbar modell som kräver en individuell väg för varje objekt i en (potentiellt) enorm produktdatabas.
+I ovanstående exempel kommer du att märka att vi tar en parameter från `$routeParams`-tjänsten och sedan masserar den i den katalogstruktur som våra JSON-data lagras i. Genom att hantera sku `id` på det här sättet kan vi leverera en enda produktmall som kan återge produktdata för potentiellt tusentals olika produkter. Det här är en mycket mer skalbar modell som kräver en individuell väg för varje objekt i en (potentiellt) enorm produktdatabas.
 
-Det finns också två komponenter här: ng-product extensions the scope with the data it extract from the above `$http` call. Det finns också en ng-image på den här sidan som i sin tur ökar omfattningen med det värde som hämtas från svaret. Med hjälp av Angulles `$http` tjänst väntar varje komponent tålmodigt tills begäran är klar och det löfte den gav är uppfyllt.
+Det finns också två komponenter här: ng-product ökar omfattningen med de data som extraheras från `$http`-anropet. Det finns också en ng-image på den här sidan som i sin tur ökar omfattningen med det värde som hämtas från svaret. Med hjälp av Angular&#39; `$http`-tjänst väntar varje komponent tålmodigt tills begäran är klar och det löfte den har skapat uppfylls.
 
 ## Nästa steg {#the-next-steps}
 
