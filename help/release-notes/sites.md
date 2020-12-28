@@ -1,8 +1,8 @@
 ---
-title: Versionsinformation om AEM Sites
+title: Versionsinformation för AEM Sites
 seo-title: AEM Sites
-description: Versionsinformation för webbplatser som tillhör Adobe Experience Manager 6.4.
-seo-description: Versionsinformation för webbplatser som tillhör Adobe Experience Manager 6.4.
+description: Versionsinformation om webbplatser som tillhör Adobe Experience Manager 6.4.
+seo-description: Versionsinformation om webbplatser som tillhör Adobe Experience Manager 6.4.
 uuid: 593928ec-5d1a-4a88-bd73-897421c5984a
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4
@@ -18,13 +18,13 @@ ht-degree: 0%
 ---
 
 
-# Versionsinformation om AEM Sites {#aem-sites-release-notes}
+# Versionsinformation för AEM Sites {#aem-sites-release-notes}
 
 ## Sites {#sites}
 
 Se följande för AEM Sites 6.4-förbättringar i detalj:
 
-### Webbplatsadministration {#site-administration}
+### Platsadministration {#site-administration}
 
 * Ny innehållsträd för att snabbt navigera i en platshierarki. I kombination med listvyn återställs interaktionsmodellen för klassiskt användargränssnitt så att du kan bläddra på en plats.
 * Förbättrad bläddring i kort- och listvyn för stora mappar.
@@ -33,7 +33,7 @@ Se följande för AEM Sites 6.4-förbättringar i detalj:
 * Möjlighet att inaktivera kortkommandon (aktivera/inaktivera i Inställningar).
 * Sluta visa tidsstämplar i alla användargränssnittsrelativa efter 7 dagar (ange som standard i Inställningar).
 
-### Page Editor {#page-editor}
+### Sidredigeraren {#page-editor}
 
 * Uppdaterad enhetslista för responsiv förgranskning av webbplatser, nu med Apple iPhone 8, 8 Plus och X samt Samsung S7
 * Flyttade standardplats för malldesigninformation bort från /etc/design för att stödja webbplatsspecifika inställningar i /conf. Kunder som uppgraderar från tidigare AEM kan fortsätta använda /etc/design.
@@ -54,13 +54,13 @@ Se följande för AEM Sites 6.4-förbättringar i detalj:
    * Profiler har nu stöd för Style System-konfigurationer per komponent, per behållare och mall.
    * Förbättrat stöd för att definiera layout i mallar för redigerbara komponenter
 
-* Referenswebbplats Vi.Retail 3.0, se [Github för versionsinformation](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases).
+* Referenswebbplats We.Retail 3.0, se [Github för versionsinformation](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases).
 
 >[!CAUTION]
 >
 >AEM innehåller version 1.12.4 av jQuery-biblioteket för att ge maximal kompatibilitet med befintlig anpassad kod. Adobe har gjort ändringar för att åtgärda kända säkerhetsproblem.
 
-### Content Fragments &amp; Editor {#content-fragments-amp-editor}
+### Innehållsfragment och redigerare {#content-fragments-amp-editor}
 
 * Strukturerade innehållsmodeller som grund för innehållsfragment
 
@@ -104,7 +104,7 @@ Se följande för AEM Sites 6.4-förbättringar i detalj:
 * Uppdateringar av smart översättning känner nu igen nya sidor som lagts till i en överordnad språkgren
 * Introducerad översättningsstatusrapportering i listvyn Platsadministratörer
 
-### Hantering av flera webbplatser (MSM) {#multi-site-management-msm}
+### Hantering av flera platser (MSM) {#multi-site-management-msm}
 
 * Förbättrad MSM-skalbarhet genom att använda ett Oak-baserat index jämfört med i minnet (LiveCopyIndex)
 
@@ -123,18 +123,18 @@ Se följande för AEM Sites 6.4-förbättringar i detalj:
 
 * Integrerade AEM Experience Fragments med Adobe Target. Synkronisering av Experience Fragments till Target skapar erbjudanden i Adobe Target som kan användas med Target Visual Experience Composer för att bädda in dem i alla Target-aktiverade upplevelser.
 * Adobe Target mbox.js version 63 ingår nu. Adobe rekommenderar att implementeringen ändras till at.js.
-* at.js version 1.2.2 ingår nu. Adobe rekommenderar att du använder Dynamic Tag Management (DTM) eller [Adobe Experience Platform Launch](https://www.adobe.com/enterprise/cloud-platform/launch.html) för att distribuera at.js till webbplatsen.
+* at.js version 1.2.2 ingår nu. Adobe rekommenderar att du använder Dynamic Tag Management (DTM) eller [Adobe Experience Platform Launch](https://www.adobe.com/enterprise/cloud-platform/launch.html) för att etablera at.js på webbplatsen.
 
 ### AEM &amp; Adobe Analytics {#aem-amp-adobe-analytics}
 
 * s_code.js H.27.5 ingår nu. Adobe rekommenderar att implementeringen ändras till AppMeasurement.js
 * AppMeasurement.js 1.8.0 ingår nu. Adobe rekommenderar att du använder antingen Dynamic Tag Management (DTM) eller [Adobe Experience Platform Launch](https://www.adobe.com/enterprise/cloud-platform/launch.html) för att etablera AppMeasurement.js på webbplatsen.
 
-## Webbgrupper, tillägg {#communities-add-on}
+## Webbgruppstillägg {#communities-add-on}
 
-Se sidan [Versionsinformation för webbgrupper](/help/release-notes/communities-release-notes.md)
+Se [Versionsinformation för Communities](/help/release-notes/communities-release-notes.md)
 
-## Skärmar, tillägg {#screens-add-on}
+## Skärmtillägg {#screens-add-on}
 
 * Stöd har lagts till för att skärmuppspelare ska ansluta till AEM publiceringsservrar för kommando-, kontroll- och kanalnedladdning (i stället för direkt till AEM).
 * Lagt till möjlighet att gruppera kanaltilldelningar i scheman
@@ -142,4 +142,4 @@ Se sidan [Versionsinformation för webbgrupper](/help/release-notes/communities-
 * Device Dashboard visar nu spelarens skal och firmware-version
 * Enhetsinstrumentpanelens lista visar anslutningsstatus för spelaren
 * Google Chrome OS-stöd för AEM Screens Player har lagts till
-* Microsoft Windows 10 för AEM Screens Player har lagts till
+* Microsoft Windows 10 har lagts till för AEM Screens Player
