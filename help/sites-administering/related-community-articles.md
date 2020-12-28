@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Relaterade artiklar i communityn{#related-community-articles}
+# Relaterade communityartiklar{#related-community-articles}
 
 Den AEM gemenskapen har tagit fram ett antal artiklar om Marketing Cloud Integrations med AEM.
 
