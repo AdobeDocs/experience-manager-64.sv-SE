@@ -45,7 +45,7 @@ Fliken **Konfiguration** används för att konfigurera OSGi-paket och är därf�
 
 >[!NOTE]
 >
->Mer information finns i [OSGi Configuration with the Web Console](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) .
+>Mer information finns i [OSGi Configuration with the Web Console](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console).
 
 Fliken **Konfiguration** kan nås av antingen:
 
@@ -106,7 +106,7 @@ Du kan sedan uppdatera parametrarna efter behov och:
 
 ## Paket {#bundles}
 
-Fliken **Bundles** är mekanismen för att installera de OSGi-paket som krävs för AEM. Du kommer åt fliken på något av följande sätt:
+Fliken **Paket** är den mekanism som används för att installera OSGi-paket som krävs för AEM. Du kommer åt fliken på något av följande sätt:
 
 * Listrutan:
 
@@ -124,7 +124,7 @@ På den här fliken kan du:
 
 * **Installera eller uppdatera**
 
-   Du kan **bläddra** för att hitta filen som innehåller ditt paket och ange om det ska **starta** omedelbart och vid vilken **startnivå**.
+   Du kan **Bläddra** för att hitta filen som innehåller ditt paket och ange om den ska **starta** omedelbart och vid vilken **startnivå**.
 
 * **Läs in igen**
 
@@ -154,7 +154,7 @@ På den här fliken kan du:
 
 >[!NOTE]
 >
->Efter **uppdatering** rekommenderas att du utför **uppdateringspaket**.
+>Efter **Uppdatera** bör du utföra en **uppdatering av paket**.
 
 ## Komponenter {#components}
 
@@ -168,7 +168,7 @@ På fliken **Komponenter** kan du aktivera och/eller inaktivera de olika kompone
 
    `http://localhost:4502/system/console/components`
 
-En lista med komponenter visas. Det finns olika ikoner som du kan använda för att aktivera, inaktivera eller (där det är lämpligt) öppna konfigurationsinformation för en viss komponent.
+En lista över komponenter visas. Det finns olika ikoner som du kan använda för att aktivera, inaktivera eller (där det är lämpligt) öppna konfigurationsinformation för en viss komponent.
 
 ![screen_shot_2012-02-15at52144pm-1](assets/screen_shot_2012-02-15at52144pm-1.png)
 
