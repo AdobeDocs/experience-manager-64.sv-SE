@@ -32,16 +32,16 @@ Enheterna grupperas i kategorierna, funktion, smart och touchfunktion enligt enh
 
 Använd följande procedur för att skapa en mobilsida:
 
-1. Gå till **SiteAdmin** Console i webbläsaren.
-1. Öppna sidan **Produkter** nedan **Webbplatser** > **Geometrixx Mobile Demo Site** >> **English**.
+1. Gå till konsolen **SiteAdmin** i webbläsaren.
+1. Öppna sidan **Produkter** nedan **Webbplatser** >> **Geometrixx Mobile Demo Site** >> **Engelska**.
 
 1. Växla till en annan emulator. Om du vill göra det kan du antingen:
 
    * Klicka på enhetsikonen högst upp på sidan.
-   * Klicka på knappen **Redigera** i **sidosparken** och välj enheten i listrutan.
+   * Klicka på knappen **Redigera** i **Sidspark** och välj enheten i listrutan.
 
-1. Dra och släpp **text- och bildkomponenten** från fliken Mobil i sidsparken till sidan.
-1. Redigera komponenten och lägg till text. Click **OK** to save the changes.
+1. Dra och släpp komponenten **Text och bild** från fliken Mobil i sidsparken till sidan.
+1. Redigera komponenten och lägg till text. Klicka på **OK** för att spara ändringarna.
 
 Sidan ser ut på samma sätt som följande:
 
