@@ -18,11 +18,11 @@ ht-degree: 82%
 ---
 
 
-# Quick Guide to WCAG 2.0{#quick-guide-to-wcag}
+# Snabbguide till WCAG 2.0{#quick-guide-to-wcag}
 
 AEM har utvecklats för att maximera efterlevnaden av riktlinjerna för tillgänglighet för webbinnehåll:
 
-The [Web Content Accessibility Guidelines version 2.0 (WCAG2)](https://www.w3.org/TR/WCAG/) are a set of internationally recognized guidelines developed by the [World Wide Web Consortium (W3C)](https://www.w3.org/) under their [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/).
+[Riktlinjerna för tillgänglighet för webbinnehåll, version 2.0 (WCAG2)](https://www.w3.org/TR/WCAG/) är en uppsättning internationellt erkända riktlinjer som utvecklats av [World Wide Web Consortium (W3C)](https://www.w3.org/) under deras [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/).
 
 WCAG 2.0 består av en uppsättning teknikoberoende riktlinjer och framgångskriterier för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder. De ger råd till webbinnehållsförfattare, designers och utvecklare som ser till att de resurser de producerar är så tillgängliga som möjligt för så många människor som möjligt, oavsett vilka funktionshinder de har, t.ex. synnedsättning, hörselnedsättning, inlärningssvårigheter, åldersrelaterade begränsningar med mera.
 
@@ -36,11 +36,11 @@ Därför är det viktigt att förstå syftet med WCAG 2.0 och hur riktlinjerna �
 
 Syftet med WCAG 2.0 är att tillhandahålla riktlinjer som:
 
-* Är **teknikagnostiska:**
+* **Teknikagnostiker:**
 
    Riktlinjer som kan tillämpas på en rad olika webbinnehållsformat, inte bara HTML. WCAG 2.0 kan alltså omfatta innehåll som genereras som eller tillhandahålls i PDF, Flash, JavaScript och andra befintliga och framtida webbtekniker. Detta syftar till att åtgärda en svaghet i WCAG 1.0, eftersom det fokuserades på HTML på bekostnad av andra webbinnehållsformat.
 
-* Kan **testas:**
+* Är **testbara:**
 
    Varje riktlinje är skriven på ett sådant sätt att den kan testas objektivt för att säkerställa att en grupp experter på tillgänglighet i allmänhet håller med om att riktlinjen har följts. En av utmaningarna med riktlinjerna för tillgänglighet är att vissa kan testas tekniskt medan andra kräver en mänsklig bedömning för att avgöra om riktlinjerna har följts eller inte. WCAG 2.0 har skrivits i syfte att minska den subjektivitet som fanns i vissa av WCAG 1.0-riktlinjerna och kontrollpunkterna.
 
