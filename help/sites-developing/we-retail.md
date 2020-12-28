@@ -46,30 +46,30 @@ Som AEM standardimplementering av referenser visar vi nu några av de mest kraft
 
 ## Komma igång {#getting-started}
 
-Vi.Retail levereras som AEM exempelinnehåll. Om du vill använda det [startar du AEM som vanligt](/help/sites-deploying/deploy.md#getting-started)och ser till att exempelinnehållet inte är inaktiverat.
+Vi.Retail levereras som AEM exempelinnehåll. Om du vill använda programmet behöver du bara [starta AEM som vanligt](/help/sites-deploying/deploy.md#getting-started) och kontrollera att exempelinnehållet inte är inaktiverat.
 
 >[!CAUTION]
 >
->Vi.Retail ska inte installeras på produktionsinstanser. Produktionsinstanser ska startas i `nosamplecontent`[körläge](/help/sites-deploying/configure-runmodes.md).
+>Vi.Retail ska inte installeras på produktionsinstanser. Produktionsinstanser ska startas i `nosamplecontent` [runmode](/help/sites-deploying/configure-runmodes.md).
 
 >[!CAUTION]
 >
->Vi.Retail bygger på den senaste AEM tekniken och stöder därför inte [klassisk gränssnittsutveckling](/help/sites-classic-ui-authoring/home.md).
+>Vi.Retail baseras på den senaste AEM tekniken och stöder därför inte [utveckling av klassiskt användargränssnitt](/help/sites-classic-ui-authoring/home.md).
 
 ### Senaste version {#latest-version}
 
-Även om vi.Retail distribueras tillsammans med AEM kan uppdateringar av innehållet och dess funktioner göras efter releasen. Det är därför möjligt att [hämta den senaste versionen från GitHub](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases) och sedan [överföra](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system) och [installera](/help/sites-administering/package-manager.md#installing-packages) den som ett paket på AEM.
+Även om vi.Retail distribueras tillsammans med AEM kan uppdateringar av innehållet och dess funktioner göras efter releasen. Det är därför möjligt att [hämta den senaste versionen från GitHub](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases) och sedan [överföra](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system) och [installera](/help/sites-administering/package-manager.md#installing-packages) den som ett paket på din AEM.
 
-### Steg 1 {#first-steps}
+### Steg {#first-steps}
 
-1. När AEM har startats (och/eller vi.Retail har installerats) är platsen **We.Retail** tillgänglig i [webbplatskonsolen](/help/sites-authoring/basic-handling.md#global-navigation).
-1. Följande sida kan till exempel öppnas och ska se ut som i [bilagan](#appendix) nedan:
+1. När AEM har startats (och/eller vi.Retail har installerats) är platsen **We.Retail** tillgänglig i [platskonsolen](/help/sites-authoring/basic-handling.md#global-navigation).
+1. Följande sida kan till exempel öppnas och ska se ut som den visas i [bilagan](#appendix) nedan:
 
    `https://<server name>:<port number>/editor.html/content/we-retail/language-masters/en.html`
 
 ## Vi.Detaljhandel &amp; Geometrixx {#we-retail-geometrixx}
 
-Geometrixx och dess många inkvisitioner fungerade som exempelinnehåll i tidigare versioner av AEM. Sedan version 6.3 har We.Retail varit exempelinnehållet som levereras med AEM och fungerar som den nya standardimplementeringen av referenser.
+Geometrixx och dess många inkvisitioner fungerade som exempelinnehåll i tidigare versioner av AEM. Sedan version 6.3 har We.Retail varit det exempelinnehåll som levereras med AEM och fungerar som den nya standardimplementeringen av referenser.
 
 Vi.Detaljhandeln är tekniskt sett mer robust och utnyttjar den senaste AEM tekniken för att vara mer flexibel och skalbar, samtidigt som vi visar de senaste funktionerna i produkten.
 
@@ -77,8 +77,8 @@ Vi.Detaljhandeln är tekniskt sett mer robust och utnyttjar den senaste AEM tekn
 
 Tabellen nedan ger en översikt över de viktigaste funktionerna som är tillgängliga i We.Retail jämfört med Geometrixx.
 
-* **Tillgängliga** innebär att exempel på funktionen finns i exempelinnehållet.
-* **Inte tillgängligt** betyder att exempel på funktionen inte är tillgängliga i exempelinnehållet, men inte betyder att själva funktionen inte är det.
+* **Det** finns exempel på funktionen i exempelinnehållet.
+* **Inte** tillgängligt - exempel på funktionen är inte tillgängliga i exempelinnehållet, men betyder inte att själva funktionen inte är det.
 
 | **Funktion** | **Vi.butik** | **Geometrixx** |
 |---|---|---|
@@ -112,11 +112,11 @@ Koden för den här sidan finns på GitHub
 * [Öppna aem-sample-we-retail-projekt på GitHub](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail)
 * Hämta projektet som [en ZIP-fil](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/archive/master.zip)
 
-Den senaste versionen kan också [laddas ned direkt](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases/latest) som ett installerbart paket.
+Den senaste versionen kan också [hämtas direkt](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases/latest) som ett installerbart paket.
 
-Om du råkar ut för problem kan du rapportera [GitHub-problem](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues).
+Om du råkar ut för problem ska du registrera [GitHub-problem](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues).
 
-Du kan fritt göra gaffel eller bidra med [pull-förfrågningar](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/pulls).
+Du kan fritt göra gaffel eller bidra med [pull-begäranden](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/pulls).
 
 ## Förhandsgranska {#preview}
 
