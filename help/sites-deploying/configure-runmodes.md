@@ -30,9 +30,9 @@ Du kan:
 
 * [Definiera ytterligare paket som ska installeras för ett visst läge](#defining-additional-bundles-to-be-installed-for-a-run-mode).
 
-Alla inställningar och definitioner lagras i en databas och aktiveras genom att du anger **körningsläget**.
+Alla inställningar och definitioner lagras i en databas och aktiveras genom att du anger körningsläget **a1/>.**
 
-## Körningslägen för installation {#installation-run-modes}
+## Installationskörningslägen {#installation-run-modes}
 
 Installationslägen (eller fasta körningslägen) används vid installationen och korrigeras sedan för instansens hela livstid. De kan inte ändras.
 
@@ -51,9 +51,9 @@ Detta är två par av ömsesidigt uteslutande körlägen. Du kan till exempel:
 
 >[!CAUTION]
 >
->När du använder något av ovanstående körningslägen (författare, publicera, sampla innehåll, nosamplingsinnehåll), definierar det värde som används vid installationen körningsläget för *hela installationens livstid* .
+>När du använder något av ovanstående körningslägen (författare, publicera, sampla innehåll, nosamplingsinnehåll), definierar det värde som används vid installationen körningsläget för *hela livstiden* för den installationen.
 >
->För dessa körningslägen *kan* du inte ändra dem efter installationen.
+>För dessa körningslägen kan du *inte* ändra dem efter installationen.
 
 ## Anpassade körningslägen {#customized-run-modes}
 
@@ -61,11 +61,11 @@ Du kan också skapa egna, anpassade körningslägen. Dessa kan kombineras för a
 
 * `author` + `development`
 
-* `publish` + `test`
+* `publish` +  `test`
 
 * `publish` + `test` + `golive`
 
-* `publish` + `intranet`
+* `publish` +  `intranet`
 
 * efter behov. . .
 
@@ -75,9 +75,9 @@ Du kan också välja anpassade körningslägen vid varje start.
 
 Med dessa lägen kan du styra användningen av exempelinnehåll. Exempelinnehållet definieras innan snabbstarten byggs och kan innehålla paket, konfigurationer osv.:
 
-* I `samplecontent` körningsläget installeras det här innehållet (standardläget).
+* Körningsläget `samplecontent` installerar det här innehållet (standardläget).
 
-* Exempelinnehållet installeras inte i `nosamplecontent` läget.
+* Läget `nosamplecontent` installerar inte exempelinnehållet.
 
 Körningsläget nosampling-innehåll är utformat för produktionsinstallationer.
 
@@ -103,22 +103,22 @@ Körningsläget anges med ett suffix i mappnamnet. På så sätt kan du spara al
 
    Används för tillämpligt körläge. till exempel config
 
-Mer information om hur du definierar enskilda konfigurationsnoder i dessa mappar och hur du skapar konfigurationer för kombinationer av flera körningslägen finns i [OSGi-konfiguration i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) .
+Se [OSGi-konfiguration i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) för mer information om hur du definierar enskilda konfigurationsnoder i dessa mappar och för hur du skapar konfigurationer för kombinationer av flera körningslägen.
 
 >[!NOTE]
 >
->För [installationskörningslägen](#installation-run-modes) (t.ex. författare) kan körningsläget inte ändras efter installationen. Ändringar av de enskilda konfigurationsegenskaperna börjar dock gälla efter omstart.
+>För [Installationskörningslägen](#installation-run-modes) (t.ex. författare) kan inte körningsläget ändras efter installationen. Ändringar av de enskilda konfigurationsegenskaperna börjar dock gälla efter omstart.
 
 ## Definiera ytterligare paket som ska installeras för ett körningsläge {#defining-additional-bundles-to-be-installed-for-a-run-mode}
 
-Ytterligare paket som ska installeras för ett visst körningsläge kan också anges. För dessa definitioner används installationsmappar för att lagra paketen. Återigen anges körningsläget med ett prefix:
+Ytterligare paket som ska installeras för ett visst körläge kan också anges. För dessa definitioner används installationsmappar för att lagra paketen. Återigen anges körningsläget med ett prefix:
 
 * `install.author`
 * `install.publish`
 
 Dessa mappar är av typen `nt:folder` och ska innehålla rätt paket.
 
-## Starta CQ med ett specifikt körningsläge {#starting-cq-with-a-specific-run-mode}
+## CQ startas med ett specifikt körningsläge {#starting-cq-with-a-specific-run-mode}
 
 Om du har definierat konfigurationer för flera körningslägen måste du definiera vilka som ska användas vid start. Det finns flera metoder för att specificera vilket körningsläge som ska användas. Upplösningsordningen är
 
@@ -128,11 +128,11 @@ Om du har definierat konfigurationer för flera körningslägen måste du defini
 
 1. [Filnamnsidentifiering](#filename-detection-renaming-the-jar-file)
 
-När du använder en programserver kan du också [definiera körningsläget i web.xml](#defining-the-run-mode-in-web-xml-with-application-server).
+När du använder en programserver kan du även [definiera körningsläget i web.xml](#defining-the-run-mode-in-web-xml-with-application-server).
 
 ### Använda filen sling.properties {#using-the-sling-properties-file}
 
-Filen kan `sling.properties` användas för att definiera det körningsläge som krävs:
+Filen `sling.properties` kan användas för att definiera det körningsläge som krävs:
 
 1. Redigera konfigurationsfilen:
 
@@ -144,7 +144,7 @@ Filen kan `sling.properties` användas för att definiera det körningsläge som
 
 ### Använda alternativet -r {#using-the-r-option}
 
-Du kan aktivera ett anpassat körningsläge genom att använda `-r` alternativet när snabbstarten startas. Använd till exempel följande kommando för att starta en AEM med körningsläget inställt på dev. &quot;
+Du kan aktivera ett anpassat körningsläge genom att använda alternativet `-r` när du startar snabbstarten. Använd till exempel följande kommando för att starta en AEM med körningsläget inställt på dev. &quot;
 
 ```shell
 java -jar cq-56-p4545.jar -r dev
@@ -158,7 +158,7 @@ En systemegenskap i startskriptet kan användas för att ange körningsläget.
 
    `-Dsling.run.modes=publish,prod,us`
 
-### Filnamnsidentifiering - byta namn på filen jar {#filename-detection-renaming-the-jar-file}
+### Filnamnsidentifiering - ändra namn på filen jar {#filename-detection-renaming-the-jar-file}
 
 Följande två installationskörningslägen kan aktiveras genom att man byter namn på installationsfilen före installationen:
 
@@ -169,7 +169,7 @@ jar-filen måste ha samma namn:
 
 `cq5-<run-mode>-p<port-number>`
 
-Du kan till exempel ange `publish` körningsläget genom att ge filen jar ett namn:
+Ange till exempel körningsläget `publish` genom att ge filen jar ett namn:
 
 `cq5-publish-p4503`
 
@@ -183,6 +183,6 @@ i filen:
 
 `WEB-INF/web.xml`
 
-Detta finns i den AEM `war` filen och bör uppdateras före distributionen.
+Detta finns i AEM `war`-filen och bör uppdateras före distributionen.
 
-Mer information finns i [Installera AEM med en programserver](/help/sites-deploying/application-server-install.md) .
+Mer information finns i [Installera AEM med en programserver](/help/sites-deploying/application-server-install.md).
