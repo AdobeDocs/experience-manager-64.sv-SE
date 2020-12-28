@@ -60,7 +60,7 @@ Associera sidor med en BrightEdge-konfiguration för att skicka siddata till Bri
 
    ![chlimage_1-6](assets/chlimage_1-6.png)
 
-## Aktivera en BrightEdge-konfiguration {#activating-a-brightedge-configuration}
+## Aktivera en BrightStor-konfiguration {#activating-a-brightedge-configuration}
 
 Aktivera en BrightEdge-konfiguration för att replikera den på publiceringsinstansen och aktivera publicerade sidor för interaktion med BrightEdge-tjänsten.
 
