@@ -17,9 +17,9 @@ ht-degree: 2%
 ---
 
 
-# Omstrukturering av Forms-lager i AEM 6.4{#forms-repository-restructuring-in-aem}
+# Forms Repository-omstrukturering i AEM 6.4{#forms-repository-restructuring-in-aem}
 
-Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Forms-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
+Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Forms-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
 
 **Med 6.4-uppgradering**
 
@@ -90,7 +90,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
 | **Omstruktureringsvägledning** | Att ändra dessa klientlibs har aldrig rekommenderats eller fått stöd. Om du har gjort ändringar i dessa klientlibs bör de återställas till att använda den AEM koden. |
 | **Anteckningar** | Ej tillämpligt |
 
-## Före 6.5-uppgradering {#prior-to-upgrade}
+## Före 6.5 uppgradering {#prior-to-upgrade}
 
 ### Konfiguration av EchoSign-Cloud Service {#echosign-cloud-service-configuration}
 
@@ -127,6 +127,6 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
 | **Föregående plats** | `/etc/designs/fd/fp` |
 |---|---|
 | **Ny plats(er)** | `/libs/fd/fp` |
-| **Omstruktureringsvägledning** | Alla referenser till mallarna /etc ska så småningom uppdateras så att de pekar på sina `/libs` motsvarigheter. |
+| **Omstruktureringsvägledning** | Alla referenser till mallarna /etc ska så småningom uppdateras så att de pekar på sina `/libs`-motsvarigheter. |
 | **Anteckningar** | Ej tillämpligt |
 
