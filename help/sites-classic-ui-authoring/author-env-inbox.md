@@ -25,13 +25,13 @@ Du kan få meddelanden från olika AEM, till exempel meddelanden om arbetsobjekt
 Du får dessa meddelanden i två inkorgar, som avgränsas med typen av meddelanden:
 
 * En inkorg där du kan se de meddelanden du får som ett resultat av prenumerationer beskrivs i följande avsnitt.
-* En särskild inkorg för arbetsflödesobjekt beskrivs i dokumentet [Delta i arbetsflöden](/help/sites-classic-ui-authoring/classic-workflows-participating.md) .
+* En särskild inkorg för arbetsflödesobjekt beskrivs i dokumentet [Delta i arbetsflöden](/help/sites-classic-ui-authoring/classic-workflows-participating.md).
 
-## Visa meddelanden {#viewing-your-notifications}
+## Visa dina meddelanden {#viewing-your-notifications}
 
 Så här visar du dina meddelanden:
 
-1. Öppna meddelandeinkorgen: i **webbplatskonsolen** klickar du på användarknappen i det övre högra hörnet och väljer **Meddelandeinkorgen**.
+1. Öppna meddelandeinkorgen: i konsolen **Webbplatser** klickar du på användarknappen i det övre högra hörnet och väljer **Aviseringsinkorg**.
 
    ![screen_shot_2012-02-08at105226am](assets/screen_shot_2012-02-08at105226am.png)
 
@@ -52,7 +52,7 @@ Så här visar du dina meddelanden:
 
 Så här prenumererar du på meddelanden:
 
-1. Öppna meddelandeinkorgen: i **webbplatskonsolen** klickar du på användarknappen i det övre högra hörnet och väljer **Meddelandeinkorgen**.
+1. Öppna meddelandeinkorgen: i konsolen **Webbplatser** klickar du på användarknappen i det övre högra hörnet och väljer **Aviseringsinkorg**.
 
    ![screen_shot_2012-02-08at105226am-1](assets/screen_shot_2012-02-08at105226am-1.png)
 
@@ -62,7 +62,7 @@ Så här prenumererar du på meddelanden:
    >
    >`https://<host>:<port>/libs/wcm/core/content/inbox.html`
 
-1. Klicka på **Konfigurera...** i det övre vänstra hörnet för att öppna konfigurationsdialogrutan.
+1. Klicka på **Konfigurera..** i det övre vänstra hörnet för att öppna konfigurationsdialogrutan.
 
    ![screen_shot_2012-02-08at11056am](assets/screen_shot_2012-02-08at111056am.png)
 
@@ -73,7 +73,7 @@ Så här prenumererar du på meddelanden:
 
    >[!NOTE]
    >
-   >Ett par inställningar måste konfigureras för att kunna meddelas via e-post. Det går också att anpassa e-postmallen eller lägga till en e-postmall för ett nytt språk. Information om hur du konfigurerar e-postmeddelanden i AEM finns i [Konfigurera e-postmeddelanden](/help/sites-administering/notification.md#configuringemailnotification) .
+   >Ett par inställningar måste konfigureras för att kunna meddelas via e-post. Det går också att anpassa e-postmallen eller lägga till en e-postmall för ett nytt språk. Se [Konfigurera e-postmeddelanden](/help/sites-administering/notification.md#configuringemailnotification) för att konfigurera e-postmeddelanden i AEM.
 
 1. Välj de sidåtgärder som ska meddelas:
 
@@ -85,28 +85,28 @@ Så här prenumererar du på meddelanden:
 
    * Ändrad: när en sida har ändrats.
    * Skapad: när en sida har skapats.
-   * Borttagen: när en sida har tagits bort genom sidborttagningsåtgärden.
+   * Borttagen: när en sida har tagits bort via sidborttagningsåtgärden.
    * Utrullad: när en sida har rullats ut.
 
 1. Definiera sökvägarna för sidorna som du ska meddelas om:
 
    * Klicka på **Lägg till** för att lägga till en ny rad i tabellen.
-   * Klicka på tabellcellen **Bana** och ange sökvägen, t.ex. `/content/docs`.
-   * Vill du bli meddelad för alla sidor som tillhör underträdet, anger du **Exakt?** till **Nej**.
+   * Klicka på tabellcellen **Path** och ange sökvägen, t.ex. `/content/docs`.
+   * Vill du få ett meddelande för alla sidor som tillhör underträdet, anger du **Exakt?** till  **Nej**.
 
-      Vill du bara få meddelanden om åtgärder på sidan som definieras av sökvägen, anger du **Exakt?** till **Ja**.
+      Vill du bara få meddelanden om åtgärder på sidan som definieras av sökvägen anger du **Exakt?** till  **Ja**.
 
-   * Om du vill tillåta regeln anger du **Regel** till **Tillåt**. Om den är inställd på **Neka**, nekas regeln men tas inte bort och kan tillåtas senare.
+   * Om du vill tillåta regeln anger du **Regel** till **Tillåt**. Om **Neka** anges nekas regeln men tas inte bort och kan tillåtas senare.
 
    Om du vill ta bort en definition markerar du raden genom att klicka på en tabellcell och klickar på **Ta bort**.
 
-1. Spara konfigurationen genom att klicka på **OK** .
+1. Klicka på **OK** för att spara konfigurationen.
 
 ## Bearbetar dina meddelanden {#processing-your-notifications}
 
-Om du har valt att ta emot meddelanden i din AEM inkorg kommer din inkorg att fyllas i med meddelanden. Du kan [visa dina meddelanden](#viewing-your-notifications) och sedan välja obligatoriska meddelanden för att:
+Om du har valt att ta emot meddelanden i din AEM inkorg kommer din inkorg att fyllas i med meddelanden. Du kan [visa dina meddelanden](#viewing-your-notifications) och sedan välja de meddelanden som krävs för att:
 
-* Godkänn den genom att klicka på **Godkänn**: värdet i kolumnen **Läs** anges till **true**.
+* Godkänn den genom att klicka på **Godkänn**: värdet i kolumnen **Read** är **true**.
 
 * Ta bort den genom att klicka på **Ta bort**.
 
