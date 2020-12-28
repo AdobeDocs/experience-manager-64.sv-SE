@@ -28,7 +28,7 @@ Innehållshanteringsåtgärder är byggstenar som används för att skapa och ha
 
 ## Samlingar - översikt {#collections-overview}
 
-Samlingar är en väldefinierad *bucket* som fylls med innehåll som artiklar eller banderoller som passar omslagets tema.
+Samlingar representerar en väldefinierad *bucket* fylld med innehåll som artiklar eller banners som passar omslagets tema.
 
 >[!NOTE]
 >
@@ -43,16 +43,16 @@ Samlingar är en väldefinierad *bucket* som fylls med innehåll som artiklar el
 
 
 
-## Skapa en samling {#creating-a-collection}
+## Skapar en samling {#creating-a-collection}
 
 Det allmänna arbetsflödet för att skapa en samling är följande:
 
 1. Välj **Mobil** från sidospåret.
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Klicka på nedåtpilen i det övre högra hörnet av rutan **Hantera samlingar** .
+1. Klicka på nedpilen i det övre högra hörnet av rutan **Hantera samlingar**.
 1. Gå igenom varje steg i guiden för att fortsätta skapa din nya artikel.
 1. När du är klar klickar du på **Skapa**.
-1. Den nya artikeln visas på panelen **Hantera samlingar** .
+1. Den nya artikeln visas i **Hantera samlingar**-rutan.
 
 ![chlimage_1-1](assets/chlimage_1-1.gif)
 
@@ -67,9 +67,9 @@ Befintligt mobilt On-Demand-innehåll kan hämtas (importeras) från Mobile On-D
 Arbetsflödet för att importera en ny samling
 
 1. Välj mobilapp i katalogen i Mobile On-Demand-appen.
-1. Klicka på nedåtpilen i det övre högra hörnet av rutan **Hantera samlingar** och välj Importera samlingar.
+1. Klicka på nedpilen i det övre högra hörnet av rutan **Hantera samlingar** och välj Importera samlingar.
 1. Klicka på **Importera samlingar** i dialogrutan och sedan på Stäng.
-1. Dina Mobile On-Demand-samlingar visas nu på panelen **Hantera samlingar** .
+1. Dina Mobile On-Demand-samlingar visas nu i rutan **Hantera samlingar**.
 
 >[!CAUTION]
 >
@@ -82,7 +82,7 @@ Använd den inbyggda AEM dra och släpp-redigeraren för att lägga till eller �
 Arbetsflödet för att redigera en samling:
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Välj en AEM källartikel på panelen **Hantera samlingar** .
+1. Välj en AEM källartikel i **Hantera samlingar**-rutan.
 1. Klicka på den markerade samlingen i listvyn för att öppna den i innehållsredigeraren.
 1. Använd innehållsredigeraren för att dra innehåll i samlingen (manuskript, bilder, text osv.).
 
@@ -93,37 +93,37 @@ Samlingar har flera egenskaper som titlar, beskrivningar och bilder. Den här å
 Det allmänna arbetsflödet för att visa/redigera en samling:
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Välj en samling på panelen **Hantera samlingar** .
+1. Välj en samling i rutan **Hantera samlingar**.
 
 1. Välj **Egenskaper** i åtgärdsfältet.
 1. Visa alla tillgängliga metadata för artikeln.
-1. Redigera metadata om du vill och klicka på **Spara** när du är klar.
+1. Redigera metadata vid behov och klicka på **Spara** när du är klar.
 1. Du kan också ladda upp ändringarna direkt till Mobile On-Demand.
 
-## Överföra en samling {#uploading-a-collection}
+## Överför en samling {#uploading-a-collection}
 
 Överföringsåtgärden kopierar det markerade innehållet och lägger till det i ett Mobile On-Demand-projekt. Redan befintligt Mobile On-Demand-innehåll ersätts av den nya versionen.
 
 Det allmänna arbetsflödet för att överföra en samling:
 
-1. I **Mobile** väljer du appen Mobile On-Demand i katalogen.
+1. Från **Mobile** väljer du appen Mobile On-Demand i katalogen.
 1. I rutan **Hantera samlingar** väljer du en artikel för överföring till Mobile On-Demand.
 1. Lägg till fler samlingar om det behövs från listvyn.
-1. Välj **Överför** i åtgärdsfältet och klicka sedan på Överför i dialogrutan.
+1. Välj **Överför** från åtgärdsfältet och klicka sedan på Överför i dialogrutan.
 1. Dina samlingar överförs nu till Mobile On-Demand.
 
-## Ta bort en samling {#deleting-a-collection}
+## Tar bort en samling {#deleting-a-collection}
 
 Den här åtgärden tar bort den valda samlingen från Mobile On-Demand och eventuellt från den lokala AEM.
 
 Det allmänna arbetsflödet för att ta bort en samling:
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Markera den artikel som ska tas bort på panelen **Hantera samlingar** .
+1. Markera artikeln som ska tas bort i **Hantera samlingar**-rutan.
 1. Se till att det är markerat i listan (markera andra att ta bort efter behov).
-1. Klicka på **Ta bort** i åtgärdsfältet.
+1. Klicka på **Ta bort** från åtgärdsfältet.
 1. Kontrollera om du vill ta bort från AEM och Mobile On-Demand.
-1. Click **Delete**.
+1. Klicka på **Ta bort**.
 1. Din samling har nu tagits bort från listan.
 
 ## Lägga till innehåll i samlingar {#adding-content-to-collections}
