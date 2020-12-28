@@ -28,7 +28,7 @@ Genom att koppla en On-Demand-app till en molnkonfiguration kan Adobe Experience
 
 Därifrån blir det möjligt att publicera, förhandsgranska och hantera innehåll. Du kan också importera befintligt mobilt on demand-innehåll till AEM och redigera innehåll.
 
-## Konfigurera molnkonfiguration {#setting-up-cloud-configuration}
+## Konfigurerar molnkonfigurationen {#setting-up-cloud-configuration}
 
 >[!CAUTION]
 >
@@ -36,9 +36,9 @@ Därifrån blir det möjligt att publicera, förhandsgranska och hantera innehå
 >
 >Mer information finns i [Konfigurera AEM Mobile On-demand Services](/help/mobile/aem-mobile-setup.md) i avsnittet Administrera.
 
-Om du vill konfigurera Cloud Services för mobil på begäran klickar du på den övre kugghjulet i det övre högra hörnet av panelen **Hantera anslutning** på appinstrumentpanelen.
+Om du vill konfigurera Cloud Services för mobil på begäran klickar du på den övre kugghjulet i det övre högra hörnet av plattan **Hantera anslutning** från appinstrumentpanelen.
 
-Du bör känna till appkontrollpanelen och tillgängliga paneler. Mer information finns i [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md) .
+Du bör känna till appkontrollpanelen och tillgängliga paneler. Mer information finns i [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
 ### Konfigurera länk till molnkonfiguration {#setting-up-link-to-cloud-configuration}
 
@@ -50,8 +50,8 @@ Du bör känna till appkontrollpanelen och tillgängliga paneler. Mer informatio
 
 I följande steg beskrivs hur du konfigurerar länken till molnkonfigurationen:
 
-1. Från **Mobile** väljer du **Appar** och sedan appen Mobile On-Demand i katalogen.
-1. Klicka på kugghjulsikonen på panelen **Hantera anslutning** .
+1. Från **Mobile** väljer du **Appar** och sedan appen Mobile On-Demand från katalogen.
+1. Klicka på kugghjulsikonen på plattan **Hantera anslutning**.
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
@@ -59,7 +59,7 @@ I följande steg beskrivs hur du konfigurerar länken till molnkonfigurationen:
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
-1. När ditt **enhets-ID** och **enhetstoken** har verifierats väljer du ditt On-Demand-projekt i listan.
+1. När du har verifierat ditt **enhets-ID** och **enhetstoken** väljer du ditt On-Demand-projekt i listan.
 
    Klicka på **Skicka**.
 
