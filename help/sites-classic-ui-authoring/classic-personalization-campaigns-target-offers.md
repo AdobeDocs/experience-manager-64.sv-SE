@@ -27,8 +27,8 @@ ht-degree: 5%
 
    ![](do-not-localize/chlimage_1-11.png)
 
-1. Klicka på **Ny ...**
-1. Du kan ange **titel**, **namn** och typ av upplevelse som ska skapas. i det här fallet Test&amp;Target-erbjudande.
+1. Klicka på **Nytt ...**
+1. Du kan ange **titel**, **namn** och vilken typ av upplevelse som ska skapas; i det här fallet Test&amp;Target-erbjudande.
 
    ![chlimage_1-139](assets/chlimage_1-139.png)
 
@@ -36,8 +36,8 @@ ht-degree: 5%
 
    >[!NOTE]
    >
-   >Test&amp;Target-upplevelser är för närvarande inte listade i MCM. De kan nås via **webbplatskonsolen** under Campaigns.
+   >Test&amp;Target-upplevelser är för närvarande inte listade i MCM. De kan nås via konsolen **Webbplatser** under Campaigns.
 
 ## Integrera med Adobe Target {#integrating-with-adobe-target}
 
-Mer information finns i [Integrera med Adobe](/help/sites-administering/target.md) [Target](/help/sites-administering/target.md) .
+Mer information finns i [Integrera med Adobe](/help/sites-administering/target.md) [Mål](/help/sites-administering/target.md).
