@@ -36,7 +36,7 @@ Med flödesimporteraren kan du importera innehåll från externa källor till di
 
 Så här konfigurerar du feed-importeraren för att spåra utskickad e-post:
 
-1. Välj Feed Importer i **Verktyg**.
+1. I **Verktyg** väljer du Feed Importer.
 
 1. Klicka på **Lägg till** för att skapa en ny konfiguration.
 
@@ -68,7 +68,7 @@ Så här konfigurerar du feed-importeraren för att spåra utskickad e-post:
 
    `imap.flag.SEEN`:Ange false för nytt/osynligt meddelande, true för redan lästa meddelanden
 
-   En fullständig lista över flaggor finns [på https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html](https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html) .
+   Se [https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html](https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html) för en fullständig lista över flaggor.
 
    **IMAP-exempel:**
 
@@ -79,13 +79,13 @@ Så här konfigurerar du feed-importeraren för att spåra utskickad e-post:
 
 1. Spara konfigurationen.
 
-## Konfigurera tjänstkomponenten för nyhetsbrev {#configuring-the-newsletter-service-component}
+## Konfigurerar tjänstkomponenten för nyhetsbrev {#configuring-the-newsletter-service-component}
 
 När du har konfigurerat feed-importeraren måste du konfigurera From-adressen och studsräknaren.
 
 Så här konfigurerar du nyhetsbrevstjänsten:
 
-1. Gå till OSGi-konsolen på `<host>:<port>/system/console/configMgr` och navigera till **MCM Newsletter**.
+1. I OSGi-konsolen på `<host>:<port>/system/console/configMgr` och navigera till **MCM Newsletter**.
 
 1. Konfigurera tjänsten och spara ändringarna när du är klar.
 
