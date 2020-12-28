@@ -39,7 +39,7 @@ Följande sidor hjälper dig att konfigurera integreringen:
 * [Mappa komponentdata med Adobe Analytics-egenskaper](/help/sites-administering/adobeanalytics-mapping.md)
 * [Konfigurera videospårning för Adobe Analytics](/help/sites-administering/adobeanalytics-video.md)
 
-Du kan också använda guiden [](/help/sites-administering/opt-in.md) Anmäl dig för att enkelt utföra integreringen.
+Du kan också använda [Opt-in-guiden](/help/sites-administering/opt-in.md) för att enkelt utföra integreringen.
 
 >[!NOTE]
 >
@@ -49,8 +49,8 @@ Du kan också använda guiden [](/help/sites-administering/opt-in.md) Anmäl dig
 
 Se:
 
-* [Utvidga Adobe Analytics Integration](/help/sites-developing/extending-analytics.md) för information om utveckling av komponenter som samlar in användardata och anpassar Adobe Analytics-ramverket.
-* Kunskapsbasartikeln, [Adobe Analytics-integrering - felsökningsproblem](https://helpx.adobe.com/experience-manager/kb/sitecatalystintegrationtroubleshooting.html), innehåller information om hur du felsöker din Adobe Analytics-integrering.
+* [Utvidga Adobe Analytics ](/help/sites-developing/extending-analytics.md) Integrationför information om utveckling av komponenter som samlar in användardata och anpassar Adobe Analytics ramverk.
+* Kunskapsbasartikeln [Adobe Analytics-integration - felsökning av problem](https://helpx.adobe.com/experience-manager/kb/sitecatalystintegrationtroubleshooting.html) innehåller information om hur du felsöker din Adobe Analytics-integrering.
 
 >[!NOTE]
 >
