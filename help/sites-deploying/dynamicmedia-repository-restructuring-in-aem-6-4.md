@@ -1,8 +1,8 @@
 ---
-title: Omstrukturering av Dynamic Media-databasen i AEM 6.4
-seo-title: Omstrukturering av Dynamic Media-databasen i AEM 6.4
-description: Lär dig hur du gör nödvändiga ändringar för att migrera till den nya databasstrukturen i AEM 6.4 för Dynamic Media.
-seo-description: Lär dig hur du gör nödvändiga ändringar för att migrera till den nya databasstrukturen i AEM 6.4 för Dynamic Media.
+title: Omstrukturering av Dynamic Media-arkiv i AEM 6.4
+seo-title: Omstrukturering av Dynamic Media-arkiv i AEM 6.4
+description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 för Dynamic Media.
+seo-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 för Dynamic Media.
 uuid: e26d61a4-47b6-493a-9ba2-4c58b200ddd9
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
@@ -17,21 +17,21 @@ ht-degree: 1%
 ---
 
 
-# Omstrukturering av Dynamic Media-databasen i AEM 6.4{#dynamic-media-repository-restructuring-in-aem}
+# Omstrukturering av Dynamic Media-arkiv i AEM 6.4{#dynamic-media-repository-restructuring-in-aem}
 
-Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar Dynamic Media Solution. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
+Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar Dynamic Media-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
 
 **Före 6.5-uppgradering**
 
 * [Anpassade konfigurationer för adaptiv videokodning](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md#custom-adaptive-video-encoding-configurations)
-* [Konfiguration av Dynamic Media (DMS7) Cloud](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md#dynamic-media-dms-cloud-configuration)
-* [Konfiguration av DM-Cloud Service (Dynamic Media)](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md#cloudserviceconfiguration)
-* [Dynamic Media - konfiguration av YouTube-Cloud Service](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md#youtubecloudserviceconfiguration)
+* [Dynamic Media (DMS7) Cloud-konfiguration](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md#dynamic-media-dms-cloud-configuration)
+* [Konfiguration av Dynamic Media (DM Hybrid) Cloud Service](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md#cloudserviceconfiguration)
+* [Dynamic Media - YouTube Cloud Service Configuration](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md#youtubecloudserviceconfiguration)
 * [Diverse](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md#misc)
 
-## Före 6.5-uppgradering {#prior-to-upgrade}
+## Före 6.5 uppgradering {#prior-to-upgrade}
 
-### Anpassade adaptiva videokodningskonfigurationer  {#custom-adaptive-video-encoding-configurations}
+### Anpassade adaptiva videokodningskonfigurationer {#custom-adaptive-video-encoding-configurations}
 
 <table> 
  <tbody>
@@ -49,12 +49,12 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
-   <td>N/A<br /> </td> 
+   <td>Ej tillämpligt<br /> </td> 
   </tr>
  </tbody>
 </table>
 
-### Dynamic Media (DMS7) - molnkonfiguration {#dynamic-media-dms-cloud-configuration}
+### Dynamic Media (DMS7) Cloud-konfiguration {#dynamic-media-dms-cloud-configuration}
 
 <table> 
  <tbody>
@@ -71,7 +71,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
    <td><p>Kunden kan köra ett migreringsskript på följande plats:<br /> </p> 
     <ul> 
      <li><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></li> 
-     <li>Starta om paketet Dynamic Media OSGi.</li> 
+     <li>Starta om Dynamic Media OSGi-paketet.</li> 
     </ul> </td> 
   </tr>
   <tr>
@@ -81,7 +81,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
  </tbody>
 </table>
 
-### Konfiguration av Cloud Servicen Dynamic Media (DM Hybrid) {#cloudserviceconfiguration}
+### Dynamic Media (DM Hybrid) Cloud Service configuration {#cloudserviceconfiguration}
 
 <table> 
  <tbody>
@@ -99,12 +99,12 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
-   <td>N/A<br /> </td> 
+   <td>Ej tillämpligt<br /> </td> 
   </tr>
  </tbody>
 </table>
 
-### Dynamic Media - konfiguration av YouTube-Cloud Service  {#youtubecloudserviceconfiguration}
+### Dynamic Media - YouTube Cloud Service configuration {#youtubecloudserviceconfiguration}
 
 <table> 
  <tbody>
@@ -122,7 +122,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
-   <td>N/A<br /> </td> 
+   <td>Ej tillämpligt<br /> </td> 
   </tr>
  </tbody>
 </table>
