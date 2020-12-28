@@ -1,8 +1,8 @@
 ---
 title: SPA WKND - självstudiekurs
 seo-title: SPA WKND - självstudiekurs
-description: Utveckla SPA-material med denna självstudiekurs i flera delar som leder dig genom projektinställningar, komponentmappning, utvecklingsverktyg i gränssnittet och applikationsflöden för att implementera din egen SPA.
-seo-description: Utveckla SPA-material med denna självstudiekurs i flera delar som leder dig genom projektinställningar, komponentmappning, utvecklingsverktyg i gränssnittet och applikationsflöden för att implementera din egen SPA.
+description: Utveckla SPA med denna självstudiekurs i flera delar, som leder dig genom projektinställningar, komponentmappning, utvecklingsverktyg i gränssnittet och programdirigering för att implementera din egen SPA.
+seo-description: Utveckla SPA med denna självstudiekurs i flera delar, som leder dig genom projektinställningar, komponentmappning, utvecklingsverktyg i gränssnittet och programdirigering för att implementera din egen SPA.
 uuid: f57be84b-a037-4c76-856e-afb0275c1a0f
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -18,15 +18,15 @@ ht-degree: 0%
 ---
 
 
-# SPA WKND - självstudiekurs{#spa-wknd-tutorial}
+# SPA WKND-självstudiekurs{#spa-wknd-tutorial}
 
-Utveckla SPA-material med denna självstudiekurs i flera delar som leder dig genom projektinställningar, komponentmappning, utvecklingsverktyg i gränssnittet och applikationsflöden för att implementera din egen SPA.
+Utveckla SPA med denna självstudiekurs i flera delar, som leder dig genom projektinställningar, komponentmappning, utvecklingsverktyg i gränssnittet och programdirigering för att implementera din egen SPA.
 
 ## Tutorials {#tutorials}
 
-Ett heltäckande exempel på hur du skapar ett eget ensidigt program som är redigerbart när AEM börjar med projektkonfigurationen via programroutning finns i WKND SPA-Tutorials:
+Ett heltäckande exempel på hur du skapar ett eget ensidigt program som är redigerbart när AEM börjar med projektkonfigurationen via programroutning finns i WKND SPA Tutorials:
 
-* [Komma igång med AEM SPA-redigerare och vinkelrät](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+* [Komma igång med AEM SPA och vinkelrät](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
 * [Komma igång med AEM SPA Editor och React](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
 
-Innan du börjar ett eget SPA-projekt för AEM ska du dock även läsa igenom [Utveckla SPA för AEM](/help/sites-developing/spa-architecture.md) .
+Innan du börjar ett eget SPA för AEM ska du även granska [Utveckla SPA för AEM](/help/sites-developing/spa-architecture.md)-dokumentet.
