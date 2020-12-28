@@ -46,7 +46,7 @@ En emulator:
 * Dess utseende regleras via CSS.
 * Stöder plugin-program (t.ex. plugin-programmet för mobilenhetsrotation).
 * Är bara aktivt på författare.
-* Dess baskomponent är på `/libs/wcm/emulator/components/base`.
+* Dess baskomponent är vid `/libs/wcm/emulator/components/base`.
 
 ### Hur emulatorn omformar innehållet {#how-the-emulator-transforms-the-content}
 
@@ -90,9 +90,9 @@ omvandlas till följande html-kod efter emulatorns start:
 
 Två div-taggar har lagts till:
 
-* diven med id `cq-emulator` som innehåller emulatorn som helhet och
+* diven med id `cq-emulator` som håller emulatorn som helhet och
 
-* div-taggen med ett id `cq-emulator-content` som representerar den visningsruta/skärm/innehållsområde där sidinnehållet finns.
+* div med id `cq-emulator-content` som representerar den visningsruta/skärm/innehållsområde på enheten där sidinnehållet finns.
 
 Nya CSS-klasser tilldelas också till de nya emulatordiven: de representerar namnet på den aktuella emulatorn.
 
@@ -115,11 +115,11 @@ Befintliga mobilemulatorer:
 
 När sidkomponenten är beroende av den mobila sidkomponenten ( `/libs/wcm/mobile/components/page`), integreras emulatorfunktionen automatiskt på sidan med följande mekanism:
 
-* Komponenten för mobilsidan `head.jsp` innehåller enhetsgruppens associerade init-komponent för emulatorn (endast i redigeringsläge) och enhetsgruppens återgivnings-CSS via:
+* Den mobila sidkomponenten `head.jsp` innehåller enhetsgruppens associerade init-komponent för emulering (endast i redigeringsläge) och enhetsgruppens återgivnings-CSS via:
 
    `deviceGroup.drawHead(pageContext);`
 
-* Metoden `DeviceGroup.drawHead(pageContext)` innehåller emulatorns init-komponent, d.v.s. anropar emulatorkomponentens `init.html.jsp` init-komponent. Om emulatorkomponenten inte har en egen `init.html.jsp` och är beroende av mobilbasemulatorn ( `wcm/mobile/components/emulators/base)`anropas initieringsskriptet för mobilbasemulatorn ( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`).
+* Metoden `DeviceGroup.drawHead(pageContext)` innehåller emulatorns init-komponent, d.v.s. anropar `init.html.jsp` för emulatorkomponenten. Om emulatorkomponenten inte har en egen `init.html.jsp` och är beroende av mobilbasemulatorn ( `wcm/mobile/components/emulators/base)`) anropas initieringsskriptet för mobilbasemulatorn ( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`).
 
 * Initieringsskriptet för mobilbasemulatorn definierar via Javascript:
 
@@ -136,11 +136,11 @@ När sidkomponenten är beroende av den mobila sidkomponenten ( `/libs/wcm/mobil
 
 Så här skapar du en anpassad mobilemulator:
 
-1. Nedan `/apps/myapp/components/emulators` skapar du komponenten `myemulator` (nodtyp: `cq:Component`).
+1. Skapa komponenten `myemulator` nedan `/apps/myapp/components/emulators` (nodtyp: `cq:Component`).
 
-1. Ange `sling:resourceSuperType` egenskapen till `/libs/wcm/mobile/components/emulators/base`
+1. Ställ in egenskapen `sling:resourceSuperType` på `/libs/wcm/mobile/components/emulators/base`
 
-1. Definiera ett CSS-klientbibliotek med en kategori `cq.wcm.mobile.emulator` för emulatorns utseende: name = `css`, nodtyp = `cq:ClientLibrary`
+1. Definiera ett CSS-klientbibliotek med kategorin `cq.wcm.mobile.emulator` för emulatorns utseende: name = `css`, nodtyp = `cq:ClientLibrary`
 
    Du kan till exempel referera till noden `/libs/wcm/mobile/components/emulators/iPhone/css`
 
@@ -148,11 +148,11 @@ Så här skapar du en anpassad mobilemulator:
 
    Du kan till exempel referera till noden `/libs/wcm/mobile/components/emulators/base/js`
 
-1. Om emulatorn har stöd för vissa funktioner som definieras av plugin-program (som pekrullning) skapar du en konfigurationsnod under emulatorn: name = `cq:emulatorConfig`, node type = `nt:unstructured` och add the property that define the plugin:
+1. Om emulatorn har stöd för vissa funktioner som definieras av plugin-program (som pekrullning) skapar du en konfigurationsnod under emulatorn: name = `cq:emulatorConfig`, nodtyp = `nt:unstructured` och lägg till egenskapen som definierar plugin-programmet:
 
-   * Namn = `canRotate`, Typ = `Boolean`, Värde = `true`: för att inkludera rotationsfunktionen.
+   * Namn = `canRotate`, typ = `Boolean`, värde = `true`: för att inkludera rotationsfunktionen.
 
-   * Namn = `touchScrolling`, Typ = `Boolean`, Värde = `true`: för att inkludera pekskärmsfunktionen.
+   * Namn = `touchScrolling`, typ = `Boolean`, värde = `true`: för att inkludera pekskärmsfunktionen.
 
    Du kan lägga till fler funktioner genom att definiera egna plugin-program.
 
