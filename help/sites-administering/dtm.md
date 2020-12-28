@@ -18,11 +18,11 @@ ht-degree: 0%
 ---
 
 
-# Integrera med dynamisk tagghantering i Adobe {#integrating-with-adobe-dynamic-tag-management}
+# Integrera med dynamisk tagghantering för Adobe {#integrating-with-adobe-dynamic-tag-management}
 
-Integrera [Adobe Dynamic Tag Management](https://www.adobe.com/solutions/digital-marketing/dynamic-tag-management.html) med AEM så att du kan använda dina dynamiska tagghanteringsegenskaper för att spåra AEM webbplatser. Med Dynamic Tag Management kan marknadsförarna hantera taggar för datainsamling och distribuera data över digitala marknadsföringssystem. Använd till exempel Dynamic Tag Management för att samla in användningsdata för din AEM webbplats och distribuera data för analys i Adobe Analytics eller Adobe Target.
+Integrera [dynamisk tagghantering](https://www.adobe.com/solutions/digital-marketing/dynamic-tag-management.html) i Adobe med AEM så att du kan använda dina dynamiska tagghanteringsegenskaper för att spåra AEM webbplatser. Med Dynamic Tag Management kan marknadsförarna hantera taggar för datainsamling och distribuera data över digitala marknadsföringssystem. Använd till exempel Dynamic Tag Management för att samla in användningsdata för din AEM webbplats och distribuera data för analys i Adobe Analytics eller Adobe Target.
 
-Innan du kan integrera måste du skapa [webbegenskapen](https://microsite.omniture.com/t2/help/en_US/dtm/#Web_Properties) Dynamic Tag Management som spårar domänen för din AEM. Webbegenskapens [värdalternativ](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab) måste konfigureras så att du kan konfigurera AEM för åtkomst till bibliotek för dynamisk tagghantering.
+Innan du kan integrera måste du skapa den dynamiska tagghanteringen [webbegenskapen](https://microsite.omniture.com/t2/help/en_US/dtm/#Web_Properties) som spårar domänen för din AEM. Värdalternativen [för webbegenskapen](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab) måste konfigureras så att du kan konfigurera AEM för åtkomst till bibliotek för dynamisk tagghantering.
 
 När du har konfigurerat integreringen behöver du inte ändra den dynamiska tagghanteringskonfigurationen i AEM om du ändrar distributionsverktygen och reglerna för dynamisk tagghantering. Ändringarna är automatiskt tillgängliga för AEM.
 
@@ -30,8 +30,8 @@ När du har konfigurerat integreringen behöver du inte ändra den dynamiska tag
 >
 >Om du använder DTM med en anpassad proxykonfiguration måste du konfigurera både HTTP-klientproxykonfigurationer eftersom vissa funktioner i AEM använder 3.x-API:erna och andra 4.x-API:er:
 >
->* 3.x är konfigurerat med [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
->* 4.x är konfigurerat med [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
+>* 3.x har konfigurerats med [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
+>* 4.x har konfigurerats med [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
 
 >
 
@@ -48,7 +48,7 @@ AEM har stöd för dynamisk tagghantering som lagras i molnet eller AEM.
 * Molnbaserad: JavaScript-biblioteken för dynamisk tagghantering lagras i molnet, och dina AEM sidor refererar direkt till dem.
 * AEM: Dynamic Tag Management genererar javascript-bibliotek. AEM använder en arbetsflödesmodell för att hämta och installera biblioteken.
 
-Vilken typ av värdtjänst implementeringen använder avgör vilka konfigurations- och implementeringsuppgifter du utför. Mer information om värdalternativ finns i [Hosting - Embed Tab](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab) (Hosting - Bädda in flik) i hjälpen för dynamisk tagghantering.
+Vilken typ av värdtjänst implementeringen använder avgör vilka konfigurations- och implementeringsuppgifter du utför. Mer information om värdalternativ finns i [Värd - Bädda in flik](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab) i hjälpen för dynamisk tagghantering.
 
 ### Mellanlagrings- och produktionsbibliotek {#staging-and-production-library}
 
@@ -58,11 +58,11 @@ Vanligtvis använder din författarinstans mellanlagringsbiblioteken för dynami
 
 Om du vill kan du använda produktionsbiblioteken i din författarinstans. Webbläsarplugin-program är tillgängliga som gör att du kan växla mellan att använda mellanlagringsbibliotek i testsyfte när biblioteken är molnbaserade.
 
-### Använda driftsättningsfunktionen för dynamisk tagghantering {#using-the-dynamic-tag-management-deployment-hook}
+### Använda distributionsguiden för dynamisk tagghantering {#using-the-dynamic-tag-management-deployment-hook}
 
 När AEM är värd för bibliotek för dynamisk tagghantering kan du använda den dynamiska tagghanteringsfunktionen för att automatiskt skicka biblioteksuppdateringar till AEM. Biblioteksuppdateringar överförs när ändringar görs i biblioteken, till exempel när webbegenskaperna för dynamisk tagghantering redigeras.
 
-Om du vill använda distributionslösningen måste Dynamic Tag Management kunna ansluta till AEM som är värd för biblioteken. Du måste [aktivera åtkomst till AEM](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service) för de dynamiska tagghanteringsservrarna.
+Om du vill använda distributionslösningen måste Dynamic Tag Management kunna ansluta till AEM som är värd för biblioteken. Du måste [aktivera åtkomst till AEM](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service) för servrarna för dynamisk tagghantering.
 
 I vissa fall kan AEM vara oåtkomliga, till exempel när AEM ligger bakom en brandvägg. I dessa fall kan du använda alternativet AEM avsökningsimporteraren för att regelbundet hämta biblioteken. Ett cron-jobbuttryck bestämmer schemat för bibliotekshämtning.
 
@@ -73,10 +73,10 @@ Aktivera Dynamic Tag Management-distributionens kroktjänst för åtkomst AEM s�
 * Mellanlagring: `107.21.99.31`
 * Produktion: `23.23.225.112` och `204.236.240.48`
 
-Utför konfigurationen med [webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) eller en [`sling:OsgiConfig`](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) nod:
+Utför konfigurationen med antingen [webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) eller en [`sling:OsgiConfig`](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)-nod:
 
 * I webbkonsolen använder du Adobe DTM Deploy Hook Configuration-objektet på konfigurationssidan.
-* Tjänstens-PID är för en OSGi-konfiguration `com.adobe.cq.dtm.impl.servlets.DTMDeployHookServlet`.
+* Tjänstens-PID är `com.adobe.cq.dtm.impl.servlets.DTMDeployHookServlet` för en OSGi-konfiguration.
 
 I följande tabell beskrivs de egenskaper som ska konfigureras.
 
@@ -85,13 +85,13 @@ I följande tabell beskrivs de egenskaper som ska konfigureras.
 | Mellanlagring DTM IP - vit lista | `dtm.staging.ip.whitelist` | IP-adressen till den Dynamic Tag Management-server som uppdaterar mellanlagringsbiblioteken. |
 | Vit lista för produktionsDTM IP | `dtm.production.ip.whitelist` | IP-adressen till den Dynamic Tag Management-server som uppdaterar produktionsbiblioteken. |
 
-## Skapa konfigurationen för dynamisk tagghantering {#creating-the-dynamic-tag-management-configuration}
+## Skapar konfigurationen för dynamisk tagghantering {#creating-the-dynamic-tag-management-configuration}
 
 Skapa en molnkonfiguration så att den AEM instansen kan autentisera med dynamisk tagghantering och interagera med din webbegenskap.
 
 >[!NOTE]
 >
->Undvik att använda två spårningskoder från Adobe Analytics på dina sidor när din DTM-webbegenskap innehåller Adobe Analytics-verktyget och du även använder [Content Insight](/help/sites-authoring/content-insights.md). I [Adobe Analytics molnkonfiguration](/help/sites-administering/adobeanalytics-connect.md#configuring-the-connection-to-adobe-analytics)väljer du alternativet Inkludera inte spårningskod.
+>Undvik att inkludera två Adobe Analytics-spårningskoder på sidorna när din DTM-webbegenskap innehåller Adobe Analytics-verktyget och du också använder [Content Insight](/help/sites-authoring/content-insights.md). I din [Adobe Analytics molnkonfiguration](/help/sites-administering/adobeanalytics-connect.md#configuring-the-connection-to-adobe-analytics) väljer du alternativet Inkludera inte spårningskod.
 
 ### Allmänna inställningar {#general-settings}
 
@@ -120,7 +120,7 @@ Skapa en molnkonfiguration så att den AEM instansen kan autentisera med dynamis
  </tbody> 
 </table>
 
-### Egenskaper för värdtjänster - förproduktion och produktion {#self-hosting-properties-staging-and-production}
+### Egenskaper för självbetjäning - förproduktion och produktion {#self-hosting-properties-staging-and-production}
 
 Följande egenskaper i konfigurationen för dynamisk tagghantering gör att AEM kan vara värd för biblioteken för dynamisk tagghantering. Med egenskaperna kan AEM hämta och installera biblioteken. Om du vill kan du automatiskt uppdatera biblioteken så att de återspeglar ändringar som gjorts i hanteringsprogrammet för dynamiska taggar.
 
@@ -152,15 +152,15 @@ När bibliotek för dynamisk tagghantering finns AEM konfigureras vissa egenskap
   </tr> 
   <tr> 
    <td>Domäntips</td> 
-   <td><p>(Valfritt) Domänen för den AEM servern som är värd för biblioteket för dynamisk tagghantering. Ange ett värde som åsidosätter standarddomänen som är konfigurerad för tjänsten <a href="/help/sites-developing/externalizer.md">CQ Link Externalizer för</a>dagen.</p> <p>Vid anslutning till dynamisk tagghantering använder AEM det här värdet för att konfigurera mellanlagrings-HTTP-sökvägen eller Production HTTP-sökvägen för bibliotekets hämtningsegenskaper för den dynamiska tagghanteringsegenskapen.</p> </td> 
+   <td><p>(Valfritt) Domänen för den AEM servern som är värd för biblioteket för dynamisk tagghantering. Ange ett värde för att åsidosätta standarddomänen som är konfigurerad för tjänsten <a href="/help/sites-developing/externalizer.md">Day CQ Link Externalizer</a>.</p> <p>Vid anslutning till dynamisk tagghantering använder AEM det här värdet för att konfigurera mellanlagrings-HTTP-sökvägen eller Production HTTP-sökvägen för bibliotekets hämtningsegenskaper för den dynamiska tagghanteringsegenskapen.</p> </td> 
   </tr> 
   <tr> 
    <td>Tips för säker domän</td> 
-   <td><p>(Valfritt) Domänen för den AEM servern som är värd för biblioteket för dynamisk tagghantering via HTTPS. Ange ett värde som åsidosätter standarddomänen som är konfigurerad för tjänsten <a href="/help/sites-developing/externalizer.md">CQ Link Externalizer för</a>dagen.</p> <p>Vid anslutning till dynamisk tagghantering använder AEM det här värdet för att konfigurera HTTPS-sökvägen för mellanlagring eller HTTPS-sökvägen för hämtningsegenskaperna för bibliotek för webbegenskapen Dynamic Tag Management.</p> </td> 
+   <td><p>(Valfritt) Domänen för den AEM servern som är värd för biblioteket för dynamisk tagghantering via HTTPS. Ange ett värde för att åsidosätta standarddomänen som är konfigurerad för tjänsten <a href="/help/sites-developing/externalizer.md">Day CQ Link Externalizer</a>.</p> <p>Vid anslutning till dynamisk tagghantering använder AEM det här värdet för att konfigurera HTTPS-sökvägen för mellanlagring eller HTTPS-sökvägen för hämtningsegenskaperna för bibliotek för webbegenskapen Dynamic Tag Management.</p> </td> 
   </tr> 
   <tr> 
    <td>Delad hemlighet</td> 
-   <td><p>(Valfritt) Den delade hemlighet som ska användas för dekryptering av nedladdningen. Hämta det här värdet från fältet Delad hemlighet på sidan Bibliotekshämtning i Dynamic Tag Management.</p> <p><strong>Obs!</strong> Du måste ha <a href="https://www.openssl.org/docs/apps/openssl.html">OpenSSL</a> -biblioteken installerade på datorn där AEM är installerat så att AEM kan dekryptera de hämtade biblioteken.</p> </td> 
+   <td><p>(Valfritt) Den delade hemlighet som ska användas för dekryptering av nedladdningen. Hämta det här värdet från fältet Delad hemlighet på sidan Bibliotekshämtning i Dynamic Tag Management.</p> <p><strong>Obs!</strong> Du måste ha  <a href="https://www.openssl.org/docs/apps/openssl.html"></a> OpenSSLlibraries installerat på den dator där AEM är installerat, så att AEM kan dekryptera de hämtade biblioteken.</p> </td> 
   </tr> 
   <tr> 
    <td>Aktivera avsökningsimporteraren</td> 
@@ -175,7 +175,7 @@ När bibliotek för dynamisk tagghantering finns AEM konfigureras vissa egenskap
 
 ![chlimage_1-352](assets/chlimage_1-352.png)
 
-### Egenskaper för molntjänster - förproduktion och produktion {#cloud-hosting-properties-staging-and-production}
+### Egenskaper för molnvärdtjänster - förproduktion och produktion {#cloud-hosting-properties-staging-and-production}
 
 Du konfigurerar följande egenskaper för din konfiguration för dynamisk tagghantering när dynamisk tagkonfiguration är molnbaserad.
 
@@ -228,7 +228,7 @@ I följande procedur används det pekoptimerade användargränssnittet för att 
 1. Om du använder mellanlagringskod på författarinstansen avmarkerar du Inkludera produktionskod på författare.
 1. Ange värden för egenskaperna på fliken Mellanlagringsinställningar och på fliken Produktionsinställningar om det behövs. Klicka sedan på OK.
 
-## Hämta det dynamiska tagghanteringsbiblioteket manuellt {#manually-downloading-the-dynamic-tag-management-library}
+## Hämta det dynamiska tagghanteringsbiblioteket {#manually-downloading-the-dynamic-tag-management-library} manuellt
 
 Hämta bibliotek för dynamisk tagghantering manuellt för att uppdatera dem direkt AEM. Du kan till exempel hämta manuellt när du vill testa ett uppdaterat bibliotek innan avsökningsimporteraren är schemalagd att hämta biblioteket automatiskt.
 
@@ -253,7 +253,7 @@ Hämta bibliotek för dynamisk tagghantering manuellt för att uppdatera dem dir
 
 
 
-## Koppla en dynamisk tagghanteringskonfiguration till din plats {#associating-a-dynamic-tag-management-configuration-with-your-site}
+## Associera en dynamisk tagghanteringskonfiguration med din plats {#associating-a-dynamic-tag-management-configuration-with-your-site}
 
 Koppla din konfiguration för dynamisk tagghantering till sidorna på din webbplats så att AEM lägger till det nödvändiga skriptet på sidorna. Associera platsens rotsida med konfigurationen. Alla underordnade till den sidan ärver kopplingen. Om det behövs kan du åsidosätta associationen på en underordnad sida.
 
