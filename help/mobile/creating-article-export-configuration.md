@@ -28,7 +28,7 @@ ht-degree: 0%
 >
 >**Krav**:
 >
->Innan du får lära dig mer om hur du skapar och ändrar delade resurser läser du [Innehållssynkronisering](/help/mobile/mobile-ondemand-contentsync.md) för att förstå de grundläggande begreppen.
+>Innan du får veta mer om hur du skapar och ändrar delade resurser kan du läsa [Innehållssynkronisering](/help/mobile/mobile-ondemand-contentsync.md) för att förstå de grundläggande begreppen.
 
 AEM Mobile-användare använder Innehållssynkronisering för att exportera live-innehåll till statiskt innehåll för användning i mobilappar, och den här exporten sker när innehåll överförs till Mobile On-Demand Services från AEM Mobile.
 
@@ -38,9 +38,9 @@ I följande resurser beskrivs hur du exporterar innehåll från Adobe Experience
 
 Artiklar har innehåll som behöver exporteras och överföras. En del av det här innehållet kan delas mellan artiklar.
 
-Använd [ContentSync](/help/mobile/mobile-ondemand-contentsync.md) för att samla ihop innehållet och skapa ett ***paket med delade resurser*** .
+Använd [ContentSync](/help/mobile/mobile-ondemand-contentsync.md) för att samla ihop innehållet och skapa ett ***paket med delade resurser***.
 
-ContentSync-konfigurationen som finns i **&lt;dps-exportTemplate>/dps-article>** bör konfigureras att exportera allt innehåll som en artikel behöver för statisk återgivning av egenskaper på enheten.
+Den ContentSync-konfiguration som finns på **&lt;dps-exportTemplate>/dps-article>** bör konfigureras att exportera allt innehåll som en artikel kräver för statisk återgivning av egenskaper på enheten.
 
 >[!CAUTION]
 >
@@ -57,7 +57,7 @@ ContentSync-konfigurationen som finns i **&lt;dps-exportTemplate>/dps-article>**
 Om du vill visa exempel på delad resurs, se stegen nedan:
 
 1. Öppna CRXDE Lite på AEM.
-1. Bläddra till den här sökvägen [/etc/contentsync/templates/dps-we-unlimited-app/dps-article](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-article)för att visa delade exempelresurser.
+1. Bläddra till den här sökvägen [/etc/contentsync/templates/dps-we-unlimited-app/dps-article](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-article) för att visa delade exempelresurser.
 
    Du kan visa alla egenskaper som krävs för att skapa dina delade resurser enligt bilden nedan:
 
