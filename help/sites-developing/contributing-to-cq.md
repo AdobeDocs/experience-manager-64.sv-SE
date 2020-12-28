@@ -34,7 +34,7 @@ Eftersom siddynamik och interaktivt innehåll är avgörande för WM-upplevelsen
 
 På den högsta nivån bör du alltså ha en god förståelse för:
 
-* protokollet [HTTP/1.1](https://www.ietf.org/rfc/rfc2616.txt)
+* [HTTP/1.1-protokollet](https://www.ietf.org/rfc/rfc2616.txt)
 * HTML (helst [HTML5](https://dev.w3.org/html5/spec/Overview.html))
 * Cascading Style Sheets
 * XML (Extensible Markup Language)
@@ -46,7 +46,7 @@ På den högsta nivån bör du alltså ha en god förståelse för:
 * Webbläsarcookies
 * och andra moderna webbutvecklingskoncept
 
-Adobe Experience Manager teknikstack bygger på [Apache Felix](https://felix.apache.org/) OSGI-behållaren med [Apache Sling](https://sling.apache.org/site/index.html) -webbramverket och bäddar in en Java Content Repository ([JCR](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html)) baserad på [Apache Jackrabbit](https://jackrabbit.apache.org/jcr-api.html). Du bör bekanta dig med dessa enskilda projekt, liksom med andra komponenter med öppen källkod (t.ex. Apache Lucene) som används i området där du tänker bidra.
+Adobe Experience Manager teknikstack baseras på [Apache Felix](https://felix.apache.org/) OSGI-behållaren med webbramverket [Apache Sling](https://sling.apache.org/site/index.html) och bäddar in en Java-innehållsdatabas ([JCR](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html)) baserad på [Apache Jackrabbit](https://jackrabbit.apache.org/jcr-api.html). Du bör bekanta dig med dessa enskilda projekt, liksom med andra komponenter med öppen källkod (t.ex. Apache Lucene) som används i området där du tänker bidra.
 
 ## Tribal Knowledge {#tribal-knowledge}
 
@@ -58,7 +58,7 @@ Innehållet innehåller inte bara alla data som finns kvar i webbprogrammet. Pro
 
 ### David&#39;s Model {#david-s-model}
 
-Det sätt på vilket innehåll ska modelleras i en Java Content Repository kräver ett helt annat sätt att tänka än vad som är vanligt inom programvarubranschen för datamodellering i relationsvärlden. Grundläggande läsning för alla nykomlingar i content management är [Davids modell JCR-vägen: En guide för innehållsmodellering](https://wiki.apache.org/jackrabbit/DavidsModel).
+Det sätt på vilket innehåll ska modelleras i en Java Content Repository kräver ett helt annat sätt att tänka än vad som är vanligt inom programvarubranschen för datamodellering i relationsvärlden. Grundläggande läsning för alla nykomlingar i content management är JCR-vägen [David&#39;s Model: En guide för innehållsmodellering](https://wiki.apache.org/jackrabbit/DavidsModel).
 
 ### RESTfulness {#restfulness}
 
@@ -66,15 +66,15 @@ REST-strategin är djupt inrotad i det vi gör. Detta innebär bland annat att m
 
 REST (REpresentational State Transfer) avser den programarkitekturstil som World Wide Web bygger på. Den beskriver de viktigaste elementen som får webben att fungera och innehåller därför en uppsättning principer för hur webbaserade program ska utformas. När du utformar ett API som ska användas via webben är det därför klokt att följa dessa&quot;bästa praxis&quot;.
 
-Eftersom REST ger en vägledande filosofi bakom så mycket av det vi gör, bör ni se det som viktigt att bli väl insatt i de stora delarna av RESTful-design. Ett bra ställe att börja på är med [Roy Fielings avhandling](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm).
+Eftersom REST ger en vägledande filosofi bakom så mycket av det vi gör, bör ni se det som viktigt att bli väl insatt i de stora delarna av RESTful-design. En bra startpunkt är med Roy Fielding avhandling[.](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
 
 ### Sling Request Resolution {#sling-request-resolution}
 
-En viktig aspekt när det gäller AEM är hur inkommande begäranden relaterar till innehåll och programbeteende, hur innehåll struktureras i innehållsdatabasen och var AEM letar efter programlogiken som hanterar begäran. Läs mer om Apache [Sling URL-nedbrytning](https://sling.apache.org/site/url-decomposition.html) och hur den används för REST-arkitekturen och dess tillståndslösa, cacheable- och lageruppbyggda systembegränsningar.
+En viktig aspekt när det gäller AEM är hur inkommande begäranden relaterar till innehåll och programbeteende, hur innehåll struktureras i innehållsdatabasen och var AEM letar efter programlogiken som hanterar begäran. Lär dig mer om Apache [Sling URL-nedbrytning](https://sling.apache.org/site/url-decomposition.html) och hur den tillämpar REST-arkitekturformatet och dess tillståndslösa, cacheable- och lageruppbyggda systembegränsningar.
 
 Viktiga aspekter att förstå om Apache Sling:s begäranupplösning är hur begäranden primärt mappas till en viss resurs i innehållsdatabasen, hur ytterligare egenskaper i begäran tillsammans med egenskaper för dessa innehållsobjekt avgör vilken programkod som ska anropas för att återge innehållet och hur kod i /apps åsidosätter kod i /libs.
 
-### Quickstart {#quickstart}
+### Snabbstart {#quickstart}
 
 Inget steg tre: Om du vill installera och köra programmet hämtar och dubbelklickar du på JAR-filen Quickstart. Det finns inget steg tre. Ytterligare valfria funktioner behöver bara installera rätt paket från paketresursen.
 
@@ -82,7 +82,7 @@ Liten snabbstartsstorlek: Behåll storleken på JAR-filen för QuickStart med et
 
 Snabbare starttid: När du gör en ändring som kan påverka starttiden måste du se till att den blir kortare, inte längre.
 
-### Medel {#lean-and-mean}
+### Medel och medel {#lean-and-mean}
 
 Vi föredrar kod och projekt som är lätta, små, snabba och eleganta. &quot;Bra nog&quot; är inte tillräckligt bra.
 
@@ -110,7 +110,7 @@ Var alltid redo för elastisk klustring, anta alltid att det finns klustring. I 
 
 ### Design för bakåtkompatibilitet {#design-for-backward-compatibility}
 
-Ingenting ni gör ska bryta mot en kunds gamla kod. Överväg bara `/libs` att innehålla produktkod som kan uppdateras under en uppgradering. Avsnittet `/apps` i databasen är projektkod och avsnittet innehåller anpassade konfigurationer som måste bevaras `/etc` . I allmänhet ska du inte skriva över något i `/apps`, `/content` och `/home`. Efter en uppgradering bör den gamla projektkoden, konfigurationerna och innehållet fortsätta att fungera som tidigare.
+Ingenting ni gör ska bryta mot en kunds gamla kod. Överväg bara `/libs` att innehålla produktkod som kan uppdateras under en uppgradering. Avsnittet `/apps` i databasen är projektkod och avsnittet `/etc` innehåller anpassade konfigurationer som måste bevaras. I allmänhet ska du inte skriva över någonting i `/apps`, `/content` och `/home`. Efter en uppgradering bör den gamla projektkoden, konfigurationerna och innehållet fortsätta att fungera som tidigare.
 
 Att skapa bakåtkompatibelt material säkerställer också att uppgraderingsupplevelsen matchar enkelheten i den första installationen. Det räcker att bara stoppa AEM, ersätta JAR-filen för QuickStart och starta AEMagain. Med en snabbt växande installationsbas blir uppgraderingseffektiviteten en allt större fördel.
 
@@ -120,43 +120,43 @@ Bakåtkompatibiliteten bör också beaktas när det gäller den allmänna konsek
 
 ## Viktiga begrepp {#core-concepts}
 
-**Author instance** - Av säkerhetsskäl, styrningsskäl och andra skäl delas instanser av AEM in i Author- och Publish-instanser på en produktionsplats. Mer information om distributionsarkitekturen (inklusive författare/publiceringsinstanser) finns i dokumentationen om AEM instanser.
+**Exempel**  på författare - Av säkerhetsskäl, styrningsskäl och andra skäl delas instanser av AEM in i författare- och publiceringsinstanser på en produktionsplats. Mer information om distributionsarkitekturen (inklusive författare/publiceringsinstanser) finns i dokumentationen om AEM instanser.
 
-**Cachelagring, kopiering och bakning** - Traditionellt sett är koncepten bakning kontra kopiering en viktig skillnad mellan olika Web Content Management-system. I CMS-jargon avser&quot;baking&quot; begreppet implementering av data i statiska filer vid publicering, medan&quot;frying&quot; avser begreppet att bearbeta data för slutlig presentation vid begäran (dvs. precis i tid).
+**Cachelagring, kopiering och bakning**  - Traditionellt sett är koncepten bakning kontra kopiering en viktig skillnad mellan olika Web Content Management-system. I CMS-jargon avser&quot;baking&quot; begreppet implementering av data i statiska filer vid publicering, medan&quot;frying&quot; avser begreppet att bearbeta data för slutlig presentation vid begäran (dvs. precis i tid).
 
-**Klustring och lastbalansering** - För att öka tillgängligheten och förbättra prestandan i en produktionsmiljö är det vanligt att kombinera flera författare- och/eller publiceringsinstanser (i kluster), antingen genom att göra dem tillgängliga för olika användargrupper eller genom lastbalansering bakom en Dispatcher-konfiguration.
+**Klustring och lastbalansering**  - För att öka tillgängligheten och förbättra prestandan i en produktionsmiljö är det vanligt att kombinera flera författare- och/eller publiceringsinstanser (i kluster), antingen genom att göra dem tillgängliga för olika användargrupper eller genom lastbalansering bakom en Dispatcher-konfiguration.
 
-Det går också att kombinera flera instanser av innehållsdatabasen för att skapa en JCR-lösning med *hög tillgänglighet* , som sedan kan integreras med AEM för att maximera skyddet mot maskinvaru- och programvarufel. Mer information finns i [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md#oak-cluster-with-mongomk-failover-for-high-availability-in-a-single-datacenter) .
+Det går också att kombinera flera instanser av innehållsdatabasen för att skapa en *JCR-lösning med hög tillgänglighet*, som sedan kan integreras med AEM för att maximera skyddet mot maskinvaru- och programvarufel. Mer information finns i [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md#oak-cluster-with-mongomk-failover-for-high-availability-in-a-single-datacenter).
 
-**Komponent** - I AEM är en komponent en objekttyp, som i allmänhet kan skapas genom att du drar och släpper dem från exempelvis Sidspark. De färdiga komponenterna som levereras med AEM innehåller komponenterna Text, Title, Tag Cloud, Carousel, Image och List, som alla finns tillgängliga från Sidespark vid körning.
+**Komponent**  - I AEM är en komponent en objekttyp, som i allmänhet kan skapas genom att du drar och släpper dem från exempelvis Sidspark. De färdiga komponenterna som levereras med AEM innehåller komponenterna Text, Title, Tag Cloud, Carousel, Image och List, som alla finns tillgängliga från Sidespark vid körning.
 
-**Innehållssökning** - I redigeringsläget är panelen Innehållssökning en särskild panel (ram) till vänster på sidan som, beroende på vilken flik du väljer längst upp, visar listor med bilder, dokument, Flash-resurser, sidor, stycken eller databasresurser som du kan dra och släppa från Innehållssökning till den sida du arbetar med (till höger).
+**Innehållssökning**  - I redigeringsläget är panelen Innehållssökning en särskild panel (ram) till vänster på sidan som, beroende på vilken flik du väljer längst upp, visar listor med bilder, dokument, Flash-resurser, sidor, stycken eller databasresurser som du kan dra och släppa från Innehållssökning till den sida du arbetar med (till höger).
 
-**Digitala resurser** - I AEM är digitala resurser (vanligtvis) bilder och multimediefiler. Mer information finns i Arbeta med digitala resurser i DAM.
+**Digitala resurser**  - I AEM är digitala resurser (vanligtvis) bilder och multimediefiler. Mer information finns i Arbeta med digitala resurser i DAM.
 
-**Dispatcher** - Dispatcher är både ett cachnings- och belastningsutjämningsverktyg och tillhandahåller vissa säkerhetsfunktioner.
+**Dispatcher**  - Dispatcher är både ett cachnings- och belastningsutjämningsverktyg och tillhandahåller vissa säkerhetsfunktioner.
 
-**ExtJS-widgetar** - De flesta användargränssnittselement i AEM använder ExtJS, som är ett tredjepartswidgetbibliotek som är skrivet i JavaScript. ExtJS har anpassningsbara gränssnittswidgetar med höga prestanda och en väldesignad och utbyggbar komponentmodell.
+**ExtJS-widgetar**  - De flesta element i användargränssnittet i AEM använder ExtJS, som är ett tredjepartswidgetbibliotek skrivet i JavaScript. ExtJS har anpassningsbara gränssnittswidgetar med höga prestanda och en väldesignad och utbyggbar komponentmodell.
 
-**JCR, Java Content Repository** - Java Content Repository-specifikationen (JSR-283) tillhandahåller både en abstrakt datamodell och ett Application Programming-gränssnitt för att skapa ett enormt skalbart NoSQL-datalager som kombinerar funktioner i ett filsystem och en objektdatabas. Även om ni inte behöver förstå JSR-283 i detalj, bör ni ta er tid att bekanta er med de grundläggande funktionerna i JCR och den underliggande datamodellen, eftersom JCR är det som gör det möjligt att använda AEM&quot;allt är innehåll&quot;-filosofi.
+**JCR, Java Content Repository**  - Java Content Repository-specifikationen (JSR-283) tillhandahåller både en abstrakt datamodell och ett Application Programming-gränssnitt för att skapa en enormt skalbar NoSQL-datalager som kombinerar funktioner i ett filsystem och en objektdatabas. Även om ni inte behöver förstå JSR-283 i detalj, bör ni ta er tid att bekanta er med de grundläggande funktionerna i JCR och den underliggande datamodellen, eftersom JCR är det som gör det möjligt att använda AEM&quot;allt är innehåll&quot;-filosofi.
 
-JCR är alltså ett system med noder och egenskaper, där noder kan ärva från andra noder och allt innehåll lagras som *egenskapsvärden*. Observera, att JCR, förutom vanliga arv, även innehåller konceptet&quot;mixin&quot;-noder, som möjliggör modellering av flera arv.
+JCR är alltså ett system med noder och egenskaper, där noder kan ärva från andra noder och allt innehåll lagras som egenskapen *värden*. Observera, att JCR förutom vanliga arv även tillåter konceptet &quot;mixin&quot;-noder, som möjliggör modellering av flera arv.
 
 JCR har ett antal fördefinierade nodtyper och egenskapstyper, men i allmänhet är typningssystemet relativt flexibelt och (faktiskt) en av styrkorna hos JCR är att det gör det möjligt att lagra och hantera både strukturerat och ostrukturerat innehåll lika enkelt. JCR kan alltså rymma mycket strukturerade data, men kan även rymma godtyckliga dynamiska datastrukturer utan schemabegränsningar.
 
 JavaDoc för JCR:s Java API är [här](http://jackrabbit.apache.org/jcr/jcr-api.html).
 
-Innan du försöker läsa JavaDoc eller JCR-specifikationen själv kanske du vill titta på [den här förklaringen](/help/sites-developing/the-basics.md#java-content-repository) av JCR på hög nivå som implementerats av Adobe Experience Services.
+Innan du försöker läsa JavaDoc eller JCR-specifikationen i sig, kanske du vill läsa [den här förklaringen](/help/sites-developing/the-basics.md#java-content-repository) av JCR som implementerats av Adobe Experience Services.
 
-**Multi-Site Manager (MSM)** - Med MSM-funktionen i AEM kan kunderna hantera flerspråkigt och internationellt innehåll, vilket gör att de kan balansera centraliserad varumärkesprofilering med lokaliserat innehåll.
+**Multi-Site Manager (MSM)**  - Med MSM-funktionen i AEM kan man hantera flerspråkigt och internationellt innehåll och balansera centraliserad varumärkeshantering med lokaliserat innehåll.
 
 **OSGi** - OSGi är den tjänstebaserade runtime-tekniken som utgör grunden för modulär Java-utveckling i AEM. Det är ett ramverk som inte bara erbjuder en mycket dynamisk (och säker) miljö för klassinläsning och körning av kodresurser (så kallade paket), utan också fullständig kontroll över synligheten och livscykeln för de olika tjänster som paketeras med. Ett tjänsteregister tillhandahåller en samarbetsmodell för paket som tar hänsyn till livscykeldynamik (och versionskrav). OSGi löser många av de problem som programservrar var tänkta att lösa, men gör det på ett lätt och mycket dynamiskt sätt, vilket till exempel gör det möjligt att använda tjänster under drift (så att den nya koden blir omedelbart tillgänglig utan att servern startas om).
 
-**Parsys, Paragraph System** - Styckesystemet (parsys) är en sammansatt komponent som gör att författare kan lägga till komponenter av olika typer på en sida och som innehåller andra styckekomponenter. Varje stycketyp representeras som en komponent. Styckesystemet är också en komponent som innehåller de andra styckekomponenterna.
+**Parsys, Paragraph System**  - Styckesystemet (parsys) är en sammansatt komponent som gör att författare kan lägga till komponenter av olika typer på en sida och som innehåller andra styckekomponenter. Varje stycketyp representeras som en komponent. Styckesystemet är också en komponent som innehåller de andra styckekomponenterna.
 
-**Microkernel** - Alla arbetsytor i databasen kan konfigureras separat för att lagra data via en viss mikrokernel (en klass som hanterar läsning och skrivning av data). På samma sätt kan databasens hela versionsarkiv även konfigureras separat så att en viss mikrokärna används. Det finns ett antal olika mikrokärnor som kan lagra data i en mängd olika filformat eller relationsdatabaser. (Det finns till exempel beständiga hanterare för MongoDB, DB2 eller Oracle) Standardmikrokärnan för AEM är tarMK (se vidare nedan).
+**Microkernel**  - Alla arbetsytor i databasen kan konfigureras separat för att lagra data via en viss mikrokernel (en klass som hanterar läsning och skrivning av data). På samma sätt kan databasens hela versionsarkiv även konfigureras separat så att en viss mikrokärna används. Det finns ett antal olika mikrokärnor som kan lagra data i en mängd olika filformat eller relationsdatabaser. (Det finns till exempel beständiga hanterare för MongoDB, DB2 eller Oracle) Standardmikrokärnan för AEM är tarMK (se vidare nedan).
 
-**Publiceringsinstans** - Av säkerhetsskäl, av styrningsskäl och av andra anledningar delar en produktionsplats vanligtvis upp instanser av AEM i författare- och publiceringsinstanser. Mer information om distributionsarkitekturen (inklusive författare/publiceringsinstanser) finns i dokumentationen om AEM instanser.
+**Publiceringsinstans**  - Av säkerhetsskäl, av styrningsskäl och av andra skäl delar en produktionsplats vanligtvis upp instanser av AEM i författare- och publiceringsinstanser. Mer information om distributionsarkitekturen (inklusive författare/publiceringsinstanser) finns i dokumentationen om AEM instanser.
 
 **QuickStart** - Till skillnad från många andra program installerar du AEM genom att använda en och samma självextraherande JAR-fil. När du dubbelklickar på JAR-filen för första gången installeras allt du behöver automatiskt. Snabbstart-JAR innehåller alla filer som behövs för CRX-databasen (inklusive administrativa funktioner), virtuella databastjänster, index- och söktjänster, arbetsflödestjänster, säkerhet och en webbserver, plus CQ Servlet Engine (CQSE) och alla AEM. Det finns inga andra filer att installera: QuickStart är självständigt.
 
@@ -168,18 +168,18 @@ Många startalternativ (t.ex. det aktiva portnumret och om den aktuella AEM ska 
 java -jar <quickstartfilename>.jar -help
 ```
 
-**Replikeringsagenter** - Replikeringsagenter är centrala för AEM eftersom den mekanism som används för att publicera (aktivera) innehåll från en författare till en publiceringsmiljö. tömma innehåll från Dispatcher-cachen, returnerar användargenererat innehåll (till exempel formulärindata) från publiceringsmiljön till författarmiljön.
+**Replikeringsagenter**  - Replikeringsagenter är centrala för AEM eftersom den mekanism som används för att publicera (aktivera) innehåll från en författare till en publiceringsmiljö. tömma innehåll från Dispatcher-cachen, returnerar användargenererat innehåll (till exempel formulärindata) från publiceringsmiljön till författarmiljön.
 
-**Ställning** - Med hjälp av ställningar kan du skapa ett formulär (en struktur) med fält som återspeglar den struktur du vill ha för sidorna och sedan använda det här formuläret för att enkelt skapa sidor som baseras på den strukturen.
+**Ställning**  - Med hjälp av ställningar kan du skapa ett formulär (en struktur) med fält som återspeglar den struktur du vill ha för sidorna och sedan använda det här formuläret för att enkelt skapa sidor som baseras på den strukturen.
 
-**Segmentering** - Besökare har olika intressen och mål när de besöker en webbplats. Att förstå besökarnas mål och uppfylla deras förväntningar är en viktig förutsättning för onlinemarknadsföring. Segmentering hjälper till att uppnå detta genom att analysera och karakterisera en besökares detaljer.
+**Segmentering**  - Besökare har olika intressen och mål när de besöker en webbplats. Att förstå besökarnas mål och uppfylla deras förväntningar är en viktig förutsättning för onlinemarknadsföring. Segmentering hjälper till att uppnå detta genom att analysera och karakterisera en besökares detaljer.
 
-**Sidespark** - Sidsparken är ett palettliknande flytande fönster som visas på den redigerbara sidan, där nya komponenter kan dras och åtgärder som gäller för sidan kan utföras.
+**Sidespark**  - Sidsparken är ett palettliknande flytande fönster som visas på den redigerbara sidan, där nya komponenter kan dras och åtgärder som gäller för sidan kan utföras.
 
-**Site Catalyst** - SiteCatalyst förser marknadsförarna med ett och samma ställe för att mäta, analysera och optimera integrerade data från alla onlineinitiativ i flera marknadsföringskanaler. Du kan använda Adobe SiteCatalyst för att analysera data från AEM webbplatser.
+**Site Catalyst**  - SiteCatalyst förser marknadsförarna med ett och samma ställe för att mäta, analysera och optimera integrerade data från alla onlineinitiativ i flera olika marknadsföringskanaler. Du kan använda Adobe SiteCatalyst för att analysera data från AEM webbplatser.
 
 **Tjärlagring (tarMK)** - tarMK är standardbeständighetssystemet i AEM. Även om AEM kan konfigureras att använda ett annat beständigt system (till exempel MongoDB) har TarmMK vissa fördelar eftersom det är prestandaoptimerat för vanliga JCR-fall (vilket är mycket snabbt), använder ett standarddataformat och kan snabbt och enkelt säkerhetskopieras.
 
-**Mall** - I AEM anger en mall en viss typ av sida. Den definierar strukturen för en sida (och anger vanligtvis en miniatyrbild och olika egenskaper). Du kan till exempel ha separata mallar för produktsidor, platskartor och kontaktinformation.
+**Mall**  - I AEM anger en mall en viss typ av sida. Den definierar strukturen för en sida (och anger vanligtvis en miniatyrbild och olika egenskaper). Du kan till exempel ha separata mallar för produktsidor, platskartor och kontaktinformation.
 
-**Arbetsflöde** - AEM arbetsflödessystem gör det möjligt att skapa automatiserade processer som innefattar sidor eller resurser.
+**Arbetsflöde**  - AEM arbetsflödessystem gör det möjligt att skapa automatiserade processer som innefattar sidor eller resurser.
