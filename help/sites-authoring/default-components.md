@@ -32,7 +32,7 @@ Komponenterna är tillgängliga när du [redigerar en sida](/help/sites-authorin
 
 ## Allmän användning {#general-usage}
 
-Komponenterna finns på fliken **Komponenter** i sidpanelen i sidredigeraren när du [redigerar en sida](/help/sites-authoring/editing-content.md).
+Komponenterna finns på fliken **Komponenter** i sidpanelen i sidredigeraren när [du redigerar en sida](/help/sites-authoring/editing-content.md).
 
 Du kan markera en komponent och dra den till önskad plats på sidan. Du kan sedan redigera den med:
 
@@ -44,7 +44,7 @@ Du kan markera en komponent och dra den till önskad plats på sidan. Du kan sed
 Mer information om hur du lägger till komponenter på en sida finns i artikeln [Redigera sidinnehåll](/help/sites-authoring/editing-content.md).\
 Komponenterna sorteras efter olika kategorier som kallas komponentgrupper. Exempel på sådana komponentgrupper är:
 
-* **Vi.Detaljhandel**: Innehåller kärnkomponenterna som är proxiderade för användning med referensimplementeringen [av](/help/sites-developing/we-retail.md)We.Retail.
+* **Vi.Detaljhandel**: Innehåller kärnkomponenterna som är proxiderade för användning med referensimplementeringen [ av ](/help/sites-developing/we-retail.md)We.Retail.
 
 * **Vi.detaljhandel**: Omfattar handelskomponenter som varukorgar och produktrutnät
 
@@ -52,22 +52,22 @@ Komponenterna sorteras efter olika kategorier som kallas komponentgrupper. Exemp
 
 ## Översikt över alla komponenter {#overview-of-all-components}
 
-Med [komponentkonsolen](/help/sites-authoring/default-components-console.md) får du en översikt över komponentgrupperna, och komponenterna, som finns i AEM. Du kan visa viktig information om de enskilda komponenterna och deras användning.
+[Komponentkonsolen](/help/sites-authoring/default-components-console.md) ger en översikt över komponentgrupperna, och komponenterna, som finns i din AEM. Du kan visa viktig information om de enskilda komponenterna och deras användning.
 
 ## Komponenter - större områden {#components-major-areas}
 
 På följande sidor finns länkar till ytterligare viktig information om komponenter:
 
-* [Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) - Core Components ger flexibla och funktionsrika redigeringsfunktioner som tillhandahåller viktiga innehållstyper för att skapa sidor.
+* [Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)  - Core Components har flexibla och funktionsrika redigeringsfunktioner med vilka man kan skapa sidor med de innehållstyper man behöver.
 
-* [Communities](/help/communities/author-communities.md) - Components innehåller interaktiva funktioner för en webbplats, t.ex. forum och kommentarer. Många av dessa komponenter ingår när en [communitywebbplats](/help/communities/overview.md) skapas.
+* [Communities](/help/communities/author-communities.md) - Components innehåller interaktiva funktioner för en webbplats, t.ex. forum och kommentarer. Många av dessa komponenter inkluderas när en [community-plats](/help/communities/overview.md) skapas.
 
-* [e-handel](/help/sites-administering/ecommerce.md) - e-handelsfunktionen i AEM innehåller också en rad komponenter. Faktisk användning kan bero på vilken e-handelsmotor som används.
+* [e-handel](/help/sites-administering/ecommerce.md)  - e-handelsfunktionen i AEM innehåller också en rad komponenter. Faktisk användning kan bero på vilken e-handelsmotor som används.
 
-### Konfigurera komponenter {#configuring-components}
+### Konfigurerar komponenter {#configuring-components}
 
 Förutom de komponenter som författare kan komma åt i en standardinstallation finns det även andra komponenter.
 
-* Om sidan är baserad på den rekommenderade, moderna, redigerbara mallen kan du [redigera mallen](/help/sites-authoring/templates.md) för att aktivera/inaktivera dessa och redigera parametrar för specifika komponenter.
-* Om sidan är baserad på en statisk mall kan du använda [designläget](/help/sites-authoring/default-components-designmode.md#enable-disable-components) för att aktivera/inaktivera dessa och redigera parametrar för specifika komponenter.
+* Om sidan är baserad på den rekommenderade, moderna, redigerbara mallen kan du [redigera mallen](/help/sites-authoring/templates.md) aktivera/inaktivera dessa och redigera parametrar för specifika komponenter.
+* Om sidan är baserad på en statisk mall kan du använda [designläge](/help/sites-authoring/default-components-designmode.md#enable-disable-components) för att aktivera/inaktivera dessa och redigera parametrar för specifika komponenter.
 
