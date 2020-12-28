@@ -31,12 +31,12 @@ Adobe tillhandahåller två versioner av Commerce Integration Framework:
 |  | CIF lokal | CIF Cloud |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | AEM | AEM på plats eller AMS 6.x | AEM AMS 6.4 och 6.5 |
-| Back-end | - AEM, Java <br> - Monolitisk integrering, mappning före bygge (mall)<br> - JCR-databas | - Magento <br>- Java och Javascript <br>- Inga handelsdata lagras i JCR-databasen |
+| Back-end | - AEM, Java <br> - Monolitisk integration, mappning före bygge (mall)<br> - JCR-databas | - Magento <br>- Java och Javascript <br>- Inga handelsdata har lagrats i JCR-databasen |
 | Front-end | AEM återgivna sidor på serversidan | Blandat sidprogram (hybridåtergivning) |
 | Produktkatalog | - Produktimport, redigerare, cachelagring i AEM <br>- Vanliga kataloger med AEM- eller proxysidor | - Ingen produktimport <br>- generiska mallar <br>- on demand-data via anslutning |
-| Skalbarhet | - Kan hantera upp till ett fåtal miljoner produkter (beroende på användningsfall) <br> - Cachelagring av Dispatcher | - Ingen volymbegränsning <br>- Cachelagring av Dispatcher eller CDN |
+| Skalbarhet | - Kan hantera upp till ett fåtal miljoner produkter (beroende på användningsfall) <br> - Cachelagring på Dispatcher | - Ingen volymbegränsning <br>- Cachelagring av Dispatcher eller CDN |
 | Standardiserad datamodell | Nej | Ja, Magento GraphQL-schema |
-| Tillgänglighet | Ja:<br> - SAP Commerce Cloud (tillägget har uppdaterats för att stödja AEM 6.4 och Hybris 5 (standard) och bibehåller kompatibiliteten med Hybris 4 <br>- Salesforce Commerce Cloud (Connector open-sourced för att stödja AEM 6.4) | Ja via öppen källkod via GitHub. <br> Magento Commerce (Stöder Magento 2.3.2 (standard) och är kompatibelt med Magento 2.3.1). |
+| Tillgänglighet | Ja:<br> - SAP Commerce Cloud (tillägget har uppdaterats till stöd för AEM 6.4 och Hybris 5 (standard) och bibehåller kompatibiliteten med Hybris 4 <br>- Salesforce Commerce Cloud (anslutningen har öppen källkod som stöd AEM 6.4) | Ja via öppen källkod via GitHub. <br> Magento Commerce (Stöder Magento 2.3.2 (standard) och är kompatibelt med Magento 2.3.1). |
 | När ska användas | Begränsad användning: För scenarier där små, statiska kataloger kan behöva importeras | Rekommenderad lösning i de flesta fall |
 
 eCommerce hanterar tillsammans med Product Information Management (PIM) verksamheten på en webbplats som är inriktad på att sälja produkter via en webbutik:
@@ -71,7 +71,7 @@ Implementeringen ger åtkomst i realtid till produktinformation. Detta kan anvä
 
 AEM eCommerce tillhandahåller:
 
-* Ett antal färdiga **AEM komponenter** som visar vad du kan göra med ditt projekt:
+* Ett antal **färdiga AEM**-komponenter för att visa vad som kan göras i ditt projekt:
 
    * Produktvisning
    * Kundvagn
@@ -86,20 +86,20 @@ AEM eCommerce tillhandahåller:
    >
    >Integreringsramverket som AEM tillhandahåller gör det även möjligt att skapa ytterligare AEM komponenter för handelsfunktioner oberoende av din specifika e-handelsmotor.
 
-* **Sök** - med antingen:
+* **Sök**  med antingen:
 
-   * AEM
+   * aem
    * sökningen i e-handelssystemet
    * en sökning efter tredje part (till exempel Search &amp; Promote)
    * eller en kombination av dessa.
 
    ![chlimage_1-151](assets/chlimage_1-151.png)
 
-* Använder AEM möjlighet att **presentera innehåll i flera kanaler**, oavsett om det är hela webbläsarfönstret eller en mobil enhet. Detta levererar innehållet i det format som besökarna behöver.
+* Använder AEM möjlighet att **presentera ditt innehåll i flera kanaler**, oavsett om det är hela webbläsarfönstret eller den mobila enheten. Detta levererar innehållet i det format som besökarna behöver.
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 
-* Möjlighet att **utveckla er egen integreringsimplementering baserat på[AEM e-handelsramverk](#the-framework)**.
+* Möjligheten att **utveckla din egen integreringsimplementering baserat på [AEM eCommerce-ramverket](#the-framework)**.
 
    De två implementeringar som är tillgängliga för närvarande är båda byggda på samma grund - utöver det allmänna API:t (ramverket). Implementering av en ny integrering innebär bara implementering av de funktioner som din integrering behöver. Front end-komponenter kan användas av alla nya implementeringar när de använder gränssnitt (så är oberoende av implementeringen).
 
@@ -124,13 +124,13 @@ AEM eCommerce tillhandahåller:
 
 ## Ramverket {#the-framework}
 
-Avsnittet [Concepts](/help/sites-administering/concepts.md) behandlar ramverket mer ingående, men i det följande ges en översikt över ramverket på hög nivå och med hög hastighet:
+Avsnittet [Koncepts](/help/sites-administering/concepts.md) beskriver ramverket mer ingående, men följande ger en snabb vy av ramverket på hög nivå:
 
 ### Vad? {#what}
 
 * Integreringsramverket innehåller API:t, en rad komponenter som illustrerar funktioner och flera tillägg som ger exempel på anslutningsmetoder.
 * Ramverket innehåller den grundläggande struktur som krävs för en projektimplementering.
-* Ramverket kan utökas.
+* Ramverket är utökningsbart.
 * I ramverket finns ingen användbar och färdig webbplats. En viss del av utvecklingsarbetet behövs alltid för att anpassa ramverket till dina specifikationer.
 
 ### Varför? {#why}
