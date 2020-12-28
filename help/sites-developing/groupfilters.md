@@ -29,13 +29,13 @@ Skapa ett enhetsgruppsfilter för att definiera en uppsättning krav för enhets
 
 Utforma dina filter så att du kan använda kombinationer av dem för att definiera grupper av funktioner. Vanligtvis finns det överlappande funktioner för olika enhetsgrupper. Därför kan du använda vissa filter med flera enhetsgruppsdefinitioner.
 
-När du har skapat ett filter kan du använda det i [gruppkonfigurationen.](/help/sites-developing/mobile.md#creating-a-device-group)
+När du har skapat ett filter kan du använda det i gruppkonfigurationen [.](/help/sites-developing/mobile.md#creating-a-device-group)
 
 ## Klassen Filter Java {#the-filter-java-class}
 
-Ett enhetsgruppsfilter är en OSGi-komponent som implementerar [gränssnittet com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) . När implementeringsklassen distribueras tillhandahåller den en filtertjänst som är tillgänglig för enhetsgruppskonfigurationer.
+Ett enhetsgruppsfilter är en OSGi-komponent som implementerar gränssnittet [com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html). När implementeringsklassen distribueras tillhandahåller den en filtertjänst som är tillgänglig för enhetsgruppskonfigurationer.
 
-Den lösning som beskrivs i denna artikel använder Apache Felix Maven SCR Plugin för att underlätta utvecklingen av komponenten och tjänsten. Därför använder Java-klassen exemplet kommentarerna `@Component`och `@Service` . Klassen har följande struktur:
+Den lösning som beskrivs i denna artikel använder Apache Felix Maven SCR Plugin för att underlätta utvecklingen av komponenten och tjänsten. Därför använder Java-klassen i exemplet anteckningarna `@Component`och `@Service`. Klassen har följande struktur:
 
 ```java
 package com.adobe.example.myapp;
@@ -89,9 +89,9 @@ public String getTitle() {
 
 Det räcker att hårdkoda namn- och beskrivningstexten för en enspråkig redigeringsmiljö. Överväg att externalisera strängarna för flerspråkig användning, eller för att möjliggöra ändring av strängar utan att behöva kompilera om källkoden.
 
-### Utvärdera mot filtervillkor {#evaluating-against-filter-criteria}
+### Utvärderar mot filtervillkor {#evaluating-against-filter-criteria}
 
-Funktionen returneras `matches` `true` om enhetens funktioner uppfyller alla filtervillkor. Utvärdera informationen i metodargumenten för att avgöra om enheten tillhör gruppen. Följande värden anges som argument:
+Funktionen `matches` returnerar `true` om enhetsfunktionerna uppfyller alla filtervillkor. Utvärdera informationen i metodargumenten för att avgöra om enheten tillhör gruppen. Följande värden anges som argument:
 
 * Ett DeviceGroup-objekt
 * Namnet på användaragenten
@@ -106,7 +106,7 @@ boolean cssSupport = true;
 cssSupport = NumberUtils.toInt(capabilities.get(DeviceSpecsConstants.DSPEC_XHTML_SUPPORT_LEVEL)) > 1;
 ```
 
-Paketet `org.apache.commons.lang.math` innehåller `NumberUtils` klassen.
+Paketet `org.apache.commons.lang.math` innehåller klassen `NumberUtils`.
 
 >[!NOTE]
 >
@@ -191,7 +191,7 @@ Följande POM-kod är användbar om du använder Maven för att skapa program. P
 
 Gränssnitten DeviceGroup och DeviceGroupFilter ingår i Day Communique 5 WCM Mobile API bundle. Felix-anteckningarna ingår i paketet Apache Felix Declarative Services. Du kan hämta den här JAR-filen från den offentliga Adobe-databasen.
 
-Vid redigeringen är 5.5.2 den version av WCM Mobile API-paketet som finns i den senaste versionen av AEM. Använd Adobe Web Console ([http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)) för att säkerställa att det här är den paketversion som distribueras i din miljö.
+Vid redigeringen är 5.5.2 den version av WCM Mobile API-paketet som finns i den senaste versionen av AEM. Använd Adobe Web Console ([http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)) för att kontrollera att det här är den paketversion som distribueras i din miljö.
 
 **POM:** (Din POM använder ett annat groupId och en annan version.)
 
@@ -258,4 +258,4 @@ Vid redigeringen är 5.5.2 den version av WCM Mobile API-paketet som finns i den
 </project>
 ```
 
-Lägg till den profil som finns i avsnittet [Hämta plugin-programmet](/help/sites-developing/vlt-mavenplugin.md) för innehållspaket Maven i din maven-inställningsfil för att använda den publika Adobe-databasen.
+Lägg till den profil som finns i [hämtningen av innehållspaketet med plugin-programmet](/help/sites-developing/vlt-mavenplugin.md)-avsnittet för din maven-inställningsfil för användning av den offentliga Adobe-databasen.
