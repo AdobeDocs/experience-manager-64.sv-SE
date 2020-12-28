@@ -30,7 +30,7 @@ Egenskaperna fördelas på flera flikar:
 
 * **Titel**
 
-   Sidans rubrik visas på olika platser. Till exempel fliklistan **Webbplatser** och vyerna **Webbplatser** .
+   Sidans rubrik visas på olika platser. Till exempel fliklistan **Webbplatser** och vyn **Platser** kort/lista.
 
    Detta är ett obligatoriskt fält.
 
@@ -56,7 +56,7 @@ Egenskaperna fördelas på flera flikar:
 
 * **Navigeringsrubrik**
 
-   Du kan ange en separat rubrik som ska användas i navigeringen (om du till exempel vill ha något mer koncist). Om den är tom används **rubriken** .
+   Du kan ange en separat rubrik som ska användas i navigeringen (om du till exempel vill ha något mer koncist). Om den är tom används **titeln**.
 
 * **Underrubrik**
 
@@ -82,7 +82,7 @@ Egenskaperna fördelas på flera flikar:
 
    Gör att du kan ange en fågel-URL för den här sidan. Det gör att du kan ha en kortare och mer uttrycksfull URL.
 
-   Om Vanity-URL:en till exempel är inställd på w `elcome`till sidan som identifieras av sökvägen / `v1.0/startpage`för webbplatsen h `ttp://example.com,` så `ttp://example.com/welcome`blir han standardwebbadressen för h `ttp://example.com/content/v1.0/startpage`
+   Om Vanity-URL:en till exempel är inställd på w `elcome`till den sida som identifieras av sökvägen / `v1.0/startpage`för webbplatsen h `ttp://example.com,` är h `ttp://example.com/welcome`vanity-URL:en för h `ttp://example.com/content/v1.0/startpage`
 
    >[!CAUTION]
    >
@@ -108,7 +108,7 @@ Egenskaperna fördelas på flera flikar:
 
 * **Design**
 
-   Ange vilken [design](/help/sites-developing/designer.md) som ska användas för den här sidan.
+   Ange den [design](/help/sites-developing/designer.md) som ska användas för den här sidan.
 
 * **Alias**
 
@@ -158,29 +158,29 @@ Egenskaperna fördelas på flera flikar:
 
 * **Personanpassning**
 
-   Välj ett [varumärke om du vill ange ett omfång för målgruppsanpassning](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md).
+   Välj ett [varumärke för att ange ett omfång för målgruppsanpassning](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md).
 
 ### Behörigheter {#permissions}
 
-* **Behörigheter** (pekoptimerat användargränssnitt)
+* **Behörigheter**  (pekoptimerat gränssnitt)
 
-   Visa de [gällande behörigheterna och lägg till nya behörigheter](/help/sites-administering/user-group-ac-admin.md).
+   Visa [gällande behörigheter och lägg till nya behörigheter](/help/sites-administering/user-group-ac-admin.md).
 
 ### Blueprint {#blueprint}
 
 * **Blueprint**
 
-   Definiera egenskaper för en designsida inom hantering [av](/help/sites-administering/msm.md)flera webbplatser. Styr under vilka omständigheter ändringar ska spridas till Live Copy.
+   Definiera egenskaper för en designsida i [hantering av flera webbplatser](/help/sites-administering/msm.md). Styr under vilka omständigheter ändringar ska spridas till Live Copy.
 
-### Live Copy {#live-copy}
+### Live-kopia {#live-copy}
 
 * **Livecopy**
 
-   Definiera egenskaper för en Live Copy-sida inom hantering [av](/help/sites-administering/msm.md)flera webbplatser. Styr under vilka omständigheter ändringar ska spridas från utkast.
+   Definiera egenskaper för en Live Copy-sida i [hantering av flera webbplatser](/help/sites-administering/msm.md). Styr under vilka omständigheter ändringar ska spridas från utkast.
 
-### Webbplatsstruktur {#site-structure}
+### Platsstruktur {#site-structure}
 
-* Tillhandahåll länkar till sidor som innehåller funktioner för hela webbplatsen, till exempel **Registreringssida** och **Offlinesida**.
+* Tillhandahåll länkar till sidor som innehåller funktioner för hela webbplatsen, till exempel **Registreringssida**, **Offline Page**.
 
 ## Redigera sidegenskaper {#editing-page-properties-2}
 
@@ -190,7 +190,7 @@ Sidegenskaper definierar de olika egenskaperna för sidan, till exempel rubriker
 
 1. Öppna sidan som du vill redigera.
 
-1. Öppna fliken **Sida** och välj sedan **Sidegenskaper...**
+1. Öppna fliken **Sida** och välj sedan **Sidegenskaper i sidöppningen..**
 
    Då öppnas en dialogruta med flera flikar.
 
