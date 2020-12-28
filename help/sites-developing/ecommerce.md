@@ -32,13 +32,13 @@ Mer information finns i:
 
 >[!NOTE]
 >
->Eftersom e-handelsramverket kan användas med alla e-handelslösningar kan du läsa [Utveckla (allmänt)](/help/sites-developing/generic.md) för mer information om hur du utvecklar möjligheter med Intershop, Elastic Path eller IBM Websphere Commerce.
+>Eftersom e-handelsramverket kan användas med alla e-handelslösningar finns mer information om hur du utvecklar möjligheter med Intershop, Elastic Path eller IBM Websphere Commerce i [Utveckla (generiskt)](/help/sites-developing/generic.md).
 
 >[!NOTE]
 >
 >Om du vill använda integreringsramverket med externa e-handelsleverantörer måste du först installera de paket som krävs. Mer information finns i [Distribuera e-handel](/help/sites-deploying/ecommerce.md).
 >
->Mer information om koncept och hur du administrerar e-handelsimplementeringar finns i [Administrera e-handel](/help/sites-administering/ecommerce.md).
+>Mer information om koncept och administration av e-handelsimplementeringar finns i [Administrera e-handel](/help/sites-administering/ecommerce.md).
 
 ## API-dokumentation {#api-documentation}
 
@@ -46,7 +46,7 @@ eCommerce API tillhandahålls av paketen:
 
 `com.adobe.cq.commerce.*`
 
-Mer information finns i [API-dokumentationen](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html) .
+Mer information finns i [API-dokumentationen](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html).
 
 >[!NOTE]
 >
