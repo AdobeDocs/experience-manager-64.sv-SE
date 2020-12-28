@@ -18,27 +18,27 @@ ht-degree: 1%
 ---
 
 
-# Begär analysskript{#request-analysis-script}
+# Begärananalysskript{#request-analysis-script}
 
 ## Hämta {#download}
 
-Skriptet görs för att underlätta analysen av de filer som `access.log` producerar en läsbar rapport för senare bearbetning.
+Skriptet görs för att underlätta analysen av `access.log`-filerna som skapar en läsbar rapport för senare bearbetning.
 
 [Hämta fil](assets/analyse-access.sh)
 
 ## Beskrivning {#description}
 
-Skriptet görs för att underlätta analysen av de filer som `access.log` producerar en läsbar rapport för senare bearbetning.
+Skriptet görs för att underlätta analysen av `access.log`-filerna som skapar en läsbar rapport för senare bearbetning.
 
 Det genererar det totala antalet förfrågningar, GET kontra POST, Begär distribution över tid med mera.
 
-Utdata är i Markdown-syntax och därför blir det enklare att konvertera dem till PDF-filer med verktyg som pandoc eller att visa dem i en webbläsare med plugin-program som Markdown Viewer.
+Utdata är i Markdown-syntax och det blir därför enklare att konvertera dem till PDF-filer med verktyg som pandoc eller att visa dem i en webbläsare med plugin-program som Markdown Viewer.
 
 Den kan analysera en anpassad sökväg som finns på kommandoraden.
 
 Utgå från kommentaren i filen som talar om hur den ska köras:
 
-Analysera CQ `access.log` genom att extrapolera olika information och skapa ett Markdown-resultat på `stdout`.
+Analysera CQ `access.log` genom att extrapolera olika information och skapa ett Markdown-utdata på `stdout`.
 
 ## Användning {#usage}
 
