@@ -41,7 +41,7 @@ Att skapa en AEM Mobile On-demand Services-app skiljer sig från att skapa en ap
 
 * Mallar som använder plugin-funktioner bör skrivas på ett sådant sätt att de fortfarande är redigerbara i webbläsaren, utan att plugin-bron finns.
 
-   * Se till att du väntar på funktionen *deviceReady* innan du försöker få åtkomst till ett plugin-programs API.
+   * Se till att du väntar på funktionen *device* innan du försöker komma åt ett plugin-programs API.
 
 ## Riktlinjer för AEM utvecklare {#guidelines-for-aem-developers}
 
@@ -51,8 +51,8 @@ Följande riktlinjer är till hjälp för erfarna utvecklare AEM webbplatser som
 
 * Föredra flera komponentskriptfiler framför en enda monolitisk fil
 
-   * Det finns ett antal tomma tilläggspunkter, t.ex. *customheaderlibs.html* och *customfooterlibs.html*, som utvecklaren kan använda för att ändra sidmallen och samtidigt duplicera så lite kärnkod som möjligt
-   * Mallar kan sedan utökas och anpassas med Sling&#39;s *sling:resourceSuperType* -mekanismen
+   * Det finns ett antal tomma tilläggspunkter, t.ex. *customheaderlibs.html* och *customfooterlibs.html*, som gör att utvecklaren kan ändra sidmallen och duplicera så lite kärnkod som möjligt
+   * Mallar kan sedan utökas och anpassas via Sling-funktionen *sling:resourceSuperType*
 
 * Föredra Sightly/HTL framför JSP som mallspråk
 
@@ -66,7 +66,7 @@ Följande riktlinjer är till hjälp för erfarna utvecklare AEM webbplatser som
 
 >[!NOTE]
 >
->Du kan läsa mer i detalj om återgivningsblockerande externa skript [här](https://developers.google.com/speed/docs/insights/BlockingJS).
+>Mer information om återgivningsblockerande externa skript [finns här](https://developers.google.com/speed/docs/insights/BlockingJS).
 
 **Föredra programspecifika JS- och CSS-bibliotek i klientsidan framför webbspecifika**
 
@@ -80,13 +80,13 @@ Följande riktlinjer är till hjälp för erfarna utvecklare AEM webbplatser som
 **Föredra mikrobibliotek framför högar**
 
 * Den tid det tar att lägga in materialet i enhetens glas kommer att sänkas för varje bibliotek som artikeln/artiklarna är beroende av. Den här nedgången förvärras när en ny webbvy används för att återge varje artikel, så varje bibliotek måste initieras igen från början
-* Om artiklarna inte har skapats som SPA (single page apps) behöver du förmodligen inte inkludera ett fullständigt stackbibliotek som Angular
+* Om artiklarna inte har skapats som SPA (appar med en sida) behöver du förmodligen inte inkludera ett fullständigt stackbibliotek som vinkelrät
 * Använd mindre bibliotek med ett enda syfte för att lägga till den interaktivitet som sidan kräver, till exempel [Fastclick](https://github.com/ftlabs/fastclick) eller [Velocity.js](https://velocityjs.org)
 
 **Minimera artikelnyttolastens storlek**
 
 * Använd minsta möjliga resurser som effektivt kan täcka den största visningsruta ni stöder, med en rimlig upplösning
-* Använd ett verktyg som *ImageOptime* för att ta bort överflödiga metadata
+* Använd ett verktyg som *ImageOptime* på dina bilder för att ta bort överflödiga metadata
 
 ## Komma framåt {#getting-ahead}
 
