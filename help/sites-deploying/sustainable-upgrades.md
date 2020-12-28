@@ -22,51 +22,51 @@ ht-degree: 0%
 
 ## Anpassningsramverk {#customization-framework}
 
-### Arkitektur (funktion/infrastruktur/innehåll/program)  {#architecture-functional-infrastructure-content-application}
+### Arkitektur (Functional / Infrastructure / Content / Application) {#architecture-functional-infrastructure-content-application}
 
 Customization Framework-funktionen är utformad för att minska antalet fel i icke-utökningsbara områden av koden (som APIS) eller innehåll (som övertäckningar) som inte är uppgraderingsvänliga.
 
-Det finns två komponenter i anpassningsramverket: API- **gränssnittet** och **innehållsklassificeringen**.
+Det finns två komponenter i anpassningsramverket: **API-yta** och **innehållsklassificering**.
 
-#### API-gränssnitt {#api-surface}
+#### API-yta {#api-surface}
 
 I tidigare versioner av AEM exponerades många API:er via Uber Jar. Vissa av dessa API:er var inte avsedda att användas av kunder, men exponerades för AEM funktioner i olika paket. I framtiden kommer Java-API:erna att markeras som Public eller Private för att visa kunderna vilka API:er som är säkra att använda i samband med uppgraderingar. Andra detaljer är:
 
-* Java-API:er som markerats som `Public` kan användas och refereras av anpassade implementeringspaket.
+* Java-API:er som är markerade som `Public` kan användas och refereras av anpassade implementeringspaket.
 
 * Offentliga API:er är bakåtkompatibla med installationen av ett kompatibilitetspaket.
 * Kompatibilitetspaketet innehåller en Uber JAR-kompatibel för att säkerställa bakåtkompatibilitet
-* Java-API:er som markerats som `Private` är avsedda endast att användas av AEM interna paket och bör inte användas av anpassade paket.
+* Java-API:er som är markerade som `Private` är avsedda att endast användas av AEM interna paket och bör inte användas av anpassade paket.
 
 >[!NOTE]
 >
->Begreppet `Private` och `Public` i detta sammanhang bör inte blandas ihop med Java-föreläsningar av offentliga och privata klasser.
+>Begreppet `Private` och `Public` i det här sammanhanget bör inte blandas ihop med Java-tilläggen för offentliga och privata klasser.
 
 ![image2018-2-12_23-52-48](assets/image2018-2-12_23-52-48.png)
 
 #### Innehållsklassificeringar {#content-classifications}
 
-AEM har länge använt principen för övertäckningar och Sling Resource Merger för att ge kunderna möjlighet att utöka och anpassa AEM. Fördefinierade funktioner som driver AEM konsoler och användargränssnitt lagras i **/libs**. Kunderna får aldrig ändra något under **/libs** men kan lägga till ytterligare innehåll under **/appar** för att täcka över och utöka de funktioner som definieras i **/libs** (mer information finns i Utveckla med övertäckningar). Detta orsakade fortfarande många problem vid uppgradering av AEM eftersom innehållet i **/libs** kan ändras och göra att övertäckningsfunktionen bryts på oväntade sätt. Kunderna kan också utöka AEM genom arv via `sling:resourceSuperType`eller referera en komponent i **/libs** direkt via sling:resourceType. Liknande uppgraderingsproblem kan uppstå med referens- och åsidosättningsanvändningsfall.
+AEM har länge använt principen för övertäckningar och Sling Resource Merger för att ge kunderna möjlighet att utöka och anpassa AEM. Fördefinierade funktioner som driver AEM konsoler och användargränssnitt lagras i **/libs**. Kunder får aldrig ändra något under **/libs** men kan lägga till ytterligare innehåll under **/apps** för att täcka över och utöka de funktioner som definieras i **/libs** (Mer information finns i Utveckla med övertäckningar). Detta orsakade fortfarande många problem vid uppgradering av AEM eftersom innehållet i **/libs** kan ändras och göra att övertäckningsfunktionen bryts på oväntade sätt. Kunderna kan också utöka AEM genom arv via `sling:resourceSuperType`, eller referera en komponent i **/libs** direkt via sling:resourceType. Liknande uppgraderingsproblem kan uppstå med referens- och åsidosättningsanvändningsfall.
 
-För att göra det säkrare och enklare för kunderna att förstå vilka områden i **/ben** som är säkra att använda och täcka över innehållet i **/libs** har klassificerats med följande blandningar:
+För att göra det säkrare och enklare för kunderna att förstå vilka områden i **/libs** som är säkra att använda och täcka över innehållet i **/libs** har klassificerats med följande blandningar:
 
-* **Public (granite:PublicArea)** - Definierar en nod som public så att den kan överlappa, ärvs ( `sling:resourceSuperType`) eller användas direkt ( `sling:resourceType`). Noder under /libs markerade som Public (Offentliga) kan uppgraderas utan risk med ett kompatibilitetspaket. I allmänhet bör kunderna endast utnyttja noder som är markerade som offentliga.
+* **Public (granite:PublicArea)**  - Definierar en nod som public så att den kan överlappa, ärvs (  `sling:resourceSuperType`) eller användas direkt (  `sling:resourceType`). Noder under /libs markerade som Public (Offentliga) kan uppgraderas utan risk med ett kompatibilitetspaket. I allmänhet bör kunderna endast utnyttja noder som är markerade som offentliga.
 
-* **Abstrakt (granite:AbstractArea)** - Definierar en nod som abstrakt. Noder kan överlappas eller ärvas ( `sling:resourceSupertype`), men får inte användas direkt ( `sling:resourceType`).
+* **Abstrakt (granite:AbstractArea)**  - Definierar en nod som abstrakt. Noder kan överlappas eller ärvas ( `sling:resourceSupertype`), men får inte användas direkt ( `sling:resourceType`).
 
 * **Final (granite:FinalArea)** - Definierar en nod som final. Noder som klassificerats som final kan inte överlappas eller ärvas. Slutnoder kan användas direkt via `sling:resourceType`. Undernoder under den sista noden betraktas som interna som standard
 
-* **Internal (granite:InternalArea)** - Definierar en nod som internal. Noder som klassificeras som interna kan inte överlappas, ärvas eller användas direkt. De här noderna är endast avsedda för AEM interna funktioner
+* **Internal (granite:InternalArea)**  - Definierar en nod som internal. Noder som klassificeras som interna kan inte överlappas, ärvas eller användas direkt. De här noderna är endast avsedda för AEM interna funktioner
 
-* **Ingen anteckning** - Noderna ärver klassificering baserat på trädhierarkin. Roten / är som standard Public (Offentlig). **Noder med en överordnad som klassificerats som Internal eller Final ska också behandlas som Internal.**
+* **Ingen anteckning**  - Noderna ärver klassificering baserat på trädhierarkin. Roten / är som standard Public (Offentlig). **Noder med en överordnad som klassificerats som Internal eller Final ska också behandlas som Internal.**
 
 >[!NOTE]
 >
->Dessa profiler används endast mot Sling-sökvägsbaserade mekanismer. Andra områden av **/libs** som ett klientbibliotek kan markeras som `Internal`, men kan ändå användas med standardinkludering av klientlib. Det är viktigt att kunden i dessa fall fortsätter att respektera den interna klassificeringen.
+>Dessa profiler används endast mot Sling-sökvägsbaserade mekanismer. Andra områden i **/libs** som ett klientbibliotek kan markeras som `Internal`, men kan ändå användas med standardinkludering av klientlib. Det är viktigt att kunden i dessa fall fortsätter att respektera den interna klassificeringen.
 
 #### Indikatorer för CRXDE Lite-innehållstyp {#crxde-lite-content-type-indicators}
 
-Blandningar som används i CRXDE Lite visar innehållsnoder och träd som markerats som `INTERNAL` nedtonade. För `FINAL` endast ikonen är nedtonad. De underordnade noderna visas också i grått. Funktionen Overlay Node är inaktiverad i båda dessa fall.
+Blandningar som används i CRXDE Lite visar innehållsnoder och träd som är markerade som `INTERNAL` som nedtonade. För `FINAL` är det bara ikonen som är nedtonad. De underordnade noderna visas också i grått. Funktionen Overlay Node är inaktiverad i båda dessa fall.
 
 **Offentlig**
 
@@ -84,14 +84,14 @@ Blandningar som används i CRXDE Lite visar innehållsnoder och träd som marker
 
 AEM 6.4 kommer att levereras med en hälsokontroll som varnar kunderna om överlagrat eller refererat innehåll används på ett sätt som inte överensstämmer med innehållsklassificeringen.
 
-Kontrollen **** av Innehållsåtkomst vid användning/Bevilja innehåll är en ny hälsokontroll som övervakar databasen för att se om kundkoden inte har åtkomst till skyddade noder i AEM.
+**Kontroll av innehållsåtkomst för att dela/bevilja innehåll** är en ny hälsokontroll som övervakar databasen för att se om kundkoden inte har åtkomst till skyddade noder i AEM.
 
-Detta skannar **/appar** och tar vanligtvis flera sekunder att slutföra.
+Detta skannar **/program** och tar vanligtvis flera sekunder att slutföra.
 
 För att få tillgång till den nya hälsokontrollen måste du göra följande:
 
-1. Gå till **Verktyg > Åtgärder > Hälsorapporter på AEM startskärm**
-1. Klicka på kontrollen **** Sling/Granite Content Access enligt nedan:
+1. Navigera till **Verktyg > Åtgärder > Hälsorapporter** från AEM startskärm
+1. Klicka på kontrollen **Sling/Granite Content Access Check** så som visas nedan:
 
    ![screen_shot_2017-12-14at5648pm](assets/screen_shot_2017-12-14at55648pm.png)
 
