@@ -20,9 +20,9 @@ ht-degree: 0%
 
 # Analyserar sidprestanda{#analyzing-page-performance}
 
-Öppna [Content Insight](/help/sites-authoring/content-insights.md) -sidan för att analysera prestandan för den sida som du redigerar. Konfigurera rapporteringsperioden så att analysen fokuseras.
+Öppna sidan [Content Insight](/help/sites-authoring/content-insights.md) för att analysera prestandan för sidan som du redigerar. Konfigurera rapporteringsperioden så att analysen fokuseras.
 
-## Öppna Analytics och Recommendations för en sida {#opening-analytics-and-recommendations-for-a-page}
+## Öppnar Analytics och Recommendations för en sida {#opening-analytics-and-recommendations-for-a-page}
 
 Använd följande procedur för att visa Analytics och Recommendations för en sida:
 
@@ -31,7 +31,7 @@ Använd följande procedur för att visa Analytics och Recommendations för en s
 
    >[!NOTE]
    >
-   >Analyser och Recommendations för en sida visas bara om du har konfigurerat AEM att [integrera med Adobe Analytics](/help/sites-administering/adobeanalytics-connect.md).
+   >Analyser och Recommendations för en sida visas bara om du har konfigurerat AEM till [integrering med Adobe Analytics](/help/sites-administering/adobeanalytics-connect.md).
 
    ![screen_shot_2017-11-29at135651](assets/screen_shot_2017-11-29at135651.png)
 
@@ -62,7 +62,7 @@ Så här ändrar du rapporteringsperioden för en Content Insight-sida:
 
 1. Om du vill ändra slutdatumet för rapportperioden drar du cirkeln som visas till höger om det skuggade området till önskat slutdatum.
 
-### Ändra rapportperiodens kornighet {#changing-the-granularity-of-the-reporting-period}
+### Ändra granulariteten för rapporteringsperioden {#changing-the-granularity-of-the-reporting-period}
 
 Ändra den tid som varje datapunkt sträcker sig över i en rapport. Om du t.ex. markerar granulariteten för vecka, representerar varje datapunkt i rapporten Vyer antalet vyer under en vecka.
 
