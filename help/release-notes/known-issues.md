@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Kända fel {#known-issues}
 
-På den här sidan finns en lista över kända fel i Adobe Experience Manager 6.4 som släpptes i april 2018. Mer information om kända fel [får du av supporten](https://helpx.adobe.com/support/experience-manager.html).
+På den här sidan finns en lista över kända fel i Adobe Experience Manager 6.4 som släpptes i april 2018. [Kontakta support](https://helpx.adobe.com/support/experience-manager.html) om du vill ha mer information om kända fel.
 
 ## Hybridenheter {#hybrid-devices}
 
@@ -42,39 +42,39 @@ Om du använder Mozilla Firefox som webbläsare:
 Om du använder Microsoft Edge som webbläsare:
 
 * Skriv `about:flags` i adressfältet och tryck på Retur.
-* Bläddra sedan till Experimentella funktioner **[!UICONTROL Touch]**.
+* Bläddra till Experimentella funktioner och **[!UICONTROL Touch]**.
 * Klicka på **[!UICONTROL Enable touch events]**.
 * Välj **[!UICONTROL Always Off]**.
 * Starta om webbläsaren.
 
-## Platform {#platform}
+## Plattform {#platform}
 
-* **Kontrollpanel för åtgärder:** Förloppsindikatorn visas inte när säkerhetskopieringsfilen saknar ZIP-tillägg. (GRANITE-10713)
-* **HTML:** Java Use-objektet med efterföljande tomt utrymme i paketdeklarationen fryser SightlyJavaCompilerService (GRANITE-20836)
-* **Apache Felix/Sling:** Konfigurationsfilen finns fortfarande i databasen även efter configuration.delete() (GRANITE-20618)
-* **Molninställningar:** Konsolen bryts efter redigering av konfigurationsbehållaren (GRANITE-20726)
+* **Kontrollpanel för åtgärder:** Förloppsindikatorn visas inte när en säkerhetskopia saknar filnamnstillägget .zip. (GRANITE-10713)
+* **HTL:** Java Use-objektet med efterföljande tomt utrymme i paketdeklarationen fryser SightlyJavaCompilerService (GRANITE-20836)
+* **Apache Felix/Sling:** Config-filen finns fortfarande i databasen även efter configuration.delete() (GRANITE-20618)
+* **molninställningar:** Konsolen bryts efter redigering av konfigurationsbehållaren (GRANITE-20726)
 * **Säkerhet:** IMS-integrering misslyckas med anpassad kontextsökväg (GRANITE-20639)
 * **Säkerhet:** Förbättra JAAS-standardrankningen för SSO, externa och standardinloggningsmoduler (GRANITE-20590)
-* **Tooling - CRX DE Lite:** Vyn Egenskaper fortsätter att röra sig uppåt (GRANITE-12040)
+* **Verktyg - CRX DE Lite:** egenskapsvyn fortsätter att röra sig (GRANITE-12040)
 * **Tooling - CRX DE Lite:** Det går inte att spara ändringar i Long-värdetyper om du inte dubbelklickar på Property Name (GRANITE-12351)
 
-* **Tooling - CRX DE Lite:** Ctrl+F-sökning i öppna textfiler fastnar vid RegExp-sökning (GRANITE-5996)
+* **Verktyg - CRX DE Lite:** ctrl+F-sökning i öppna textfiler fastnar vid RegExp-sökning (GRANITE-5996)
 
-* **Tooling - CRX DE Lite:** Nodegenskapen visas inte efter namnbyte av noden (GRANITE-7160)
-* **Gränssnitt:** Pulldown &quot;more..&quot; visar inte alla element när de öppnas i ett pover-element i IE och Firefox (GRANITE-16326)
-* **Gränssnitt:** Verktygstipset Info döljs när du använder fast kolumnlayout med två spalter sida vid sida (GRANITE-16869)
-* **Gränssnitt:** Ohanterat fel vid personifiering som en användare som inte finns (GRANITE-23228). Tillfällig lösning genom att [implementera en felhanterare](/help/sites-developing/customizing-errorhandler-pages.md) för att anpassa felmeddelandet.
+* **Tooling - CRX DE Lite:** Node property not displayed after renaming the node (GRANITE-7160)
+* **UI:** Pulldown &quot;more..&quot; visar inte alla element när de öppnas i ett pover-element i IE och Firefox (GRANITE-16326)
+* **Gränssnitt:** Information-verktygstipset döljs när du använder fast kolumnlayout med två spalter sida vid sida (GRANITE-16869)
+* **UI:** Ohanterat fel vid personifiering som en användare som inte finns (GRANITE-23228). Tillfällig lösning genom att [implementera en felhanterare](/help/sites-developing/customizing-errorhandler-pages.md) för att anpassa felmeddelandet.
 
 * **Omnissearch:** Sökningar med omvänt snedstreck orsakar undantag (GRANITE-11769)
-* **Omnissearch:** Öppna Visa inställningar i listvyn så ändras sökfiltret (GRANITE-16524)
-* **Omnissearch:** Fel lista över kolumnkonfigurationer som visas vid resurssökning från platser (GRANITE-16527)
+* **Omnissearch:** Öppna Visa inställningar i listvyn gör att sökfiltret ändras (GRANITE-16524)
+* **Omnissearch:** Fel lista med kolumnkonfigurationer som visas när Assets-sökning görs från Sites (GRANITE-16527)
 
-* **Omnissearch:** Predikaten för vänster spår följer med Omnisearch-serverns begäran (GRANITE-20524)
-* **Omnissearch:** Omnisearch stöder inte kontextsökvägar (GRANITE-16044)
+* **Omnissearch:** Left rail-predikat följer med Omnisearch-serverbegäran (GRANITE-20524)
+* **Omnisearch:** Omnisearch stöder inte kontextsökvägar (GRANITE-16044)
 
 ## Assets {#assets}
 
-* **Sök**: Sökningen returnerar inga resultat om söksträngen börjar med ett blanktecken [OAK-4786](https://issues.apache.org/jira/browse/OAK-4786)
+* **Sök**: Sökningen returnerar inga resultat om söksträngen börjar med ett blanktecken  [OAK-4786](https://issues.apache.org/jira/browse/OAK-4786)
 
 * **Sök**: I klassiskt användargränssnitt och -taggar visas inte i sökningen (CQ-4235239)
 
@@ -94,21 +94,21 @@ Om du använder Microsoft Edge som webbläsare:
 
 ## Communities {#communities}
 
-* **Moderering** - Det går inte att ta bort överordnat inlägg som en enda borttagningsåtgärd från gränssnittet för massmoderering (CQ-4236797)
+* **Moderering**  - Det går inte att ta bort överordnat inlägg som en enda borttagningsåtgärd från gränssnittet för massmoderering (CQ-4236797)
 
-* **Konsol** - länken Glömt användarnamn eller lösenord dirigeras om till inloggningssidan i stället för till motsvarande formulär för hämtning av lösenord (CQ-4237682)
+* **Konsol**  - Länken Glömt användarnamn eller lösenord dirigeras om till inloggningssidan i stället för till motsvarande formulär för hämtning av lösenord (CQ-4237682)
 
 ## Forms {#forms}
 
 ### Installation och driftsättning
 
-* (Endast AEM Forms JEE) När JBoss-programservern startas om medan Configuration Manager körs returneras fel för EJB-anrop och startfel. Du kan dock ignorera dem. (Ref# CQ-4229793)
-* När AEM Forms startas visas en varning `SAX Security Manager could not be setup` . (CQ-4297403)
+* (Endast AEM Forms JEE) När JBoss-programservern startas om medan Configuration Manager körs returneras fel för EJB-anrop och Bootstrap-fel. Du kan dock ignorera dem. (Ref# CQ-4229793)
+* När AEM Forms startas visas `SAX Security Manager could not be setup`-varningen. (CQ-4297403)
 
 ### Interaktiv kommunikation
 
 * Agentgränssnittet tar en stund att läsa in interaktiv kommunikation som innehåller diagram eller bildelement. (CQ-4236630)
-* Visningsformatet för data i förhandsgranskning är dd-mm-åååå medan webbförhandsvisningen är `dd-mmm-yy` (CQ-4237045)
+* Visningsformatet för data i förhandsgranskning är dd-mm-åååå medan förhandsvisningen i webben är `dd-mmm-yy` (CQ-4237045)
 * Webbkanalen Interactive Communication har endast stöd för sorterade och osorterade listor. I listdokumentfragment stöds inte sammansatta listor och indrag för webbkanalen i den interaktiva kommunikationen. (CQ-4233672)
 * Följande problem uppstår när webbkanaler synkroniseras med utskriftskanalen:
 
@@ -136,7 +136,7 @@ Om du använder Microsoft Edge som webbläsare:
 
 ### Integrering med Adobe Sign
 
-* Adobe Sign-schemaläggaren slutar fungera regelbundet och därför flyttas inte väntande signaturer till överföring. Lös problemet genom att starta om **stödpaketet för schemaläggaren** för Apache Sling från AEM webbkonsol på https://[*server*]:[*port*]/system/konsol/bundles.
+* Adobe Sign-schemaläggaren slutar fungera regelbundet och därför flyttas inte väntande signaturer till överföring. Lös problemet genom att starta om **Stöd för Apache Sling Scheduler** från AEM webbkonsol på https://[*server*]:[*port*]/system/console/bundles.
 
 ### Skapa anpassningsbara Forms-program
 
