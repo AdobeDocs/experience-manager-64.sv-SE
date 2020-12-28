@@ -29,7 +29,7 @@ Du måste ha följande installerat:
 * Adobe Experience Manager
 * Adobe Campaign 6.1
 
-Mer information finns i [Integrera AEM med Adobe Campaign 6.1](/help/sites-administering/campaignonpremise.md) .
+Mer information finns i [Integrera AEM med Adobe Campaign 6.1](/help/sites-administering/campaignonpremise.md).
 
 ## Exempel 1: AEM till Adobe Campaign {#example-aem-to-adobe-campaign}
 
@@ -43,11 +43,11 @@ Standardintegrationen mellan AEM och Campaign baseras på JSON och JSSP (JavaScr
 
 I det här exemplet skapar vi en ny anpassad JSSP-fil och anropar den från AEM sida för att hämta resultatet. Detta kan till exempel användas för att hämta data från Adobe Campaign eller för att spara data i Adobe Campaign.
 
-1. Om du vill skapa en ny JSSP-fil i Adobe Campaign klickar du på ikonen **Nytt** .
+1. Om du vill skapa en ny JSSP-fil i Adobe Campaign klickar du på ikonen **Nytt**.
 
    ![](do-not-localize/chlimage_1-4.png)
 
-1. Ange namnet på den här JSSP-filen. I det här exemplet använder vi **cus:custom.jssp** (vilket betyder att det kommer att finnas i **cus** -namnutrymmet).
+1. Ange namnet på den här JSSP-filen. I det här exemplet använder vi **cus:custom.jssp** (vilket betyder att det kommer att finnas i namnutrymmet **cus**).
 
    ![chlimage_1-16](assets/chlimage_1-16.png)
 
@@ -181,7 +181,7 @@ API:t är:
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.1.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
-Slutet av URL:en **.1.json** kan ersättas med **.2.json**, **.3.json**, enligt antalet undernivåer som du vill ha För att få alla nyckelordens **oändlighet** kan användas:
+Slutet av URL:en **.1.json** kan ersättas med **.2.json**, **.3.json**, enligt antalet undernivåer som du vill hämta För att få alla nyckelordet **infinity** kan användas:
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.infinity.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
