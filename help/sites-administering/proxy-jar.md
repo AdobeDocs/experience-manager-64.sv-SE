@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Proxy Server Tool (proxy.jar){#proxy-server-tool-proxy-jar}
+# Proxyserververktyget (proxy.jar){#proxy-server-tool-proxy-jar}
 
 Proxyservern fungerar som en mellanliggande server som vidarebefordrar begäranden mellan en klient och en server. Proxyservern håller reda på alla klient-server-interaktioner och genererar en logg över hela TCP-kommunikationen. På så sätt kan du övervaka exakt vad som händer, utan att behöva komma åt huvudservern.
 
@@ -36,7 +36,7 @@ Du kan använda proxyservern för att övervaka all klient-server-interaktion, o
 
 Du kan till exempel placera proxyservern mellan två program som kommunicerar via ett TCP/IP-nätverk; t.ex. en webbläsare och AEM. På så sätt kan du övervaka exakt vad som händer när du begär en AEM.
 
-## Starta proxyserververktyget {#starting-the-proxy-server-tool}
+## Startar proxyserververktyget {#starting-the-proxy-server-tool}
 
 Verktyget finns i mappen /opt/help i AEM. Börja med att skriva:
 
@@ -47,10 +47,10 @@ java -jar proxy.jar <host> <remoteport> <localport> [options]
 ### Alternativ {#options}
 
 * **q (tyst läge)** Skriver inte begäranden till konsolfönstret. Använd det här alternativet om du inte vill göra anslutningen långsammare eller om du loggar utdata till en fil (se alternativet -logfile).
-* **b (binärt läge)** Aktivera binärt läge om du letar efter specifika bytekombinationer i trafiken. Utdata kommer då att innehålla hexadecimala utdata och teckenutdata.
+* **b (binärt läge)** Om du letar efter specifika bytekombinationer i trafiken ska du aktivera binärt läge. Utdata kommer då att innehålla hexadecimala utdata och teckenutdata.
 * **t (tidsstämpelloggposter)** Lägger till en tidsstämpel i varje loggutdata. Tidsstämpeln är i sekunder, så den kanske inte är lämplig för att kontrollera enstaka begäranden. Använd den för att hitta händelser som inträffar vid en viss tidpunkt om du använder proxyservern under en längre tidsperiod.
-* **logFile &lt;filnamn> (skriv till loggfil)** Skriver klient-server-konversationen till en loggfil. Den här parametern fungerar även i tyst läge.
-* **i &lt;numIndentions> (add indention)** Varje aktiv anslutning är indragen för bättre läsbarhet. Standardvärdet är 16 nivåer. (Nytt i proxy.jar version 1.16).
+* **loggfil  &lt;filename> (skriv till loggfil)** Skriver klient-server-konversationen till en loggfil. Den här parametern fungerar även i tyst läge.
+* **i  &lt;numindentions> (lägg till indrag)** Varje aktiv anslutning är indragen för bättre läsbarhet. Standardvärdet är 16 nivåer. (Nytt i proxy.jar version 1.16).
 
 ## Användning av proxyserververktyget {#uses-of-the-proxy-server-tool}
 
@@ -64,7 +64,7 @@ I följande loggpostexempel visas alla cookies och deras värden som skickats av
 C-6-#000635 -> [Cookie: cq3session=7e39bc51-ac72-3f48-88a9-ed80dbac0693; Show=ShowMode; JSESSIONID=68d78874-cabf-9444-84a4-538d43f5064d ]
 ```
 
-**Kontrollera rubriker och deras värden** I följande loggpostexempel visas att servern kan upprätta en keep-alive-anslutning och att innehållets längdhuvud är korrekt inställt:
+**Kontrollerar rubriker och deras** värdenI följande loggpostexempel visas att servern kan upprätta en keep-alive-anslutning och att innehållets längdhuvud är korrekt inställt:
 
 ```xml
 S-7-#000017 -> [Connection: Keep-Alive ]
@@ -74,7 +74,7 @@ S-7-#000107 -> [Content-Length: 124 ]
 
 **Kontrollera om Keep-Alive fungerar**
 
-**Keep-Alive** innebär att en klient återanvänder anslutningen till servern för att överföra flera filer (sidkod, bilder, formatmallar osv.). Utan att hålla kontakten vid liv måste klienten upprätta en ny anslutning för varje begäran.
+**Keep-** Alivemans innebär att en klient återanvänder anslutningen till servern för att överföra flera filer (sidkod, bilder, formatmallar osv.). Utan att hålla kontakten vid liv måste klienten upprätta en ny anslutning för varje begäran.
 
 Så här kontrollerar du om keep-alive-funktionen fungerar:
 
@@ -117,7 +117,7 @@ C-0-#000000 -> [GET /author/prox.html?CFC_cK=1102938422341 HTTP/1.1 ]
 * C anger att den här posten kommer från klienten (det är en begäran om en webbsida)
 * 0 är anslutningens nummer (anslutningsräknaren startar vid 0)
 * # 00000 förskjutningen i byteflödet. Detta är den första posten, så förskjutningen är 0.
-* [GET &lt;?>] är innehållet i begäran, i exemplet en av HTTP-rubrikerna (url).
+* [GET  &lt;?>] är innehållet i begäran, i exemplet en av HTTP-rubrikerna (url).
 
 När en anslutning stängs loggas följande information:
 
