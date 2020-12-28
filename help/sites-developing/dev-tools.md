@@ -22,9 +22,9 @@ ht-degree: 0%
 
 Följande verktygsuppsättningar är tillgängliga för att utveckla dina JCR-, Apache Sling- eller AEM-program:
 
-* one set consisting of [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) and WebDAV. CRXDE Lite är inbäddat i CRX/AEM och gör att du kan utföra standardutvecklingsuppgifter i webbläsaren. Med CRXDE Lite kan du skapa och redigera filer (som .jsp och .java), mappar, mallar, komponenter, dialogrutor, noder, egenskaper och paket när du loggar och integrerar med SVN.
+* en uppsättning bestående av [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) och WebDAV. CRXDE Lite är inbäddat i CRX/AEM och gör att du kan utföra standardutvecklingsuppgifter i webbläsaren. Med CRXDE Lite kan du skapa och redigera filer (som .jsp och .java), mappar, mallar, komponenter, dialogrutor, noder, egenskaper och paket när du loggar och integrerar med SVN.
 
-   CRXDE Lite is recommended when you do not have direct access to the CRX/AEM server, when you develop an application by extending or modifying the out-of-the-box components and Java bundles or when you do not need a dedicated debugger, code completion and syntax hightlighting.
+   CRXDE Lite rekommenderas när du inte har direktåtkomst till CRX-/AEM-servern, när du utvecklar ett program genom att utöka eller ändra körklara komponenter och Java-paket eller när du inte behöver en dedikerad felsökare, kodkomplettering och syntaxmarkering.
 
 * en uppsättning bestående av en integrerad utvecklingsmiljö (t.ex. [Eclipse](/help/sites-developing/howto-projects-eclipse.md) eller [IntelliJ](/help/sites-developing/ht-intellij.md)), ett byggverktyg (till exempel: [Apache Maven](/help/sites-developing/ht-projects-maven.md)), FileVault som har utvecklats av Adobe för att mappa en databas till ett filsystem, ett versionskontrollsystem (till exempel: Subversion), ett felsökningssystem (till exempel: Jira), ett centralt beroendehanteringssystem (till exempel: Apache Archiva) och ett system för automatisering av byggen (till exempel: Apache Continuum).
 
@@ -36,11 +36,11 @@ Adobe har släppt följande tillägg:
 
 * [AEM Eclipse-tillägg](/help/sites-developing/aem-eclipse.md)
 * [AEM Brackets Extension](/help/sites-developing/aem-brackets.md)
-* [AEM IntelliJ Extension](https://github.com/headwirecom/aem-ide-tooling-4-intellij/blob/master/documenation/AEM%20Tooling%20Plugin%20for%20IntelliJ%20IDEA.pdf) (från Headwire)
+* [AEM IntelliJ Extension](https://github.com/headwirecom/aem-ide-tooling-4-intellij/blob/master/documenation/AEM%20Tooling%20Plugin%20for%20IntelliJ%20IDEA.pdf)  (från Headwire)
 
 ### Andra verktyg {#other-tools}
 
-AEM ships with other tools that facilitate development:
+AEM levereras med andra verktyg som underlättar utvecklingen:
 
 * [Dialogruteredigeraren](/help/sites-developing/dialog-editor.md)
 * [Använda översättare för att hantera ordlistor](/help/sites-developing/i18n-translator.md)
