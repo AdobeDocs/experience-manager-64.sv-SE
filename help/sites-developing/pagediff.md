@@ -26,9 +26,9 @@ Att skapa innehåll är en repetitiv process. Effektiv redigering kräver att ma
 
 Med sidskillnader kan en användare jämföra den aktuella sidan med startsidor, tidigare versioner osv. Mer information om den här användarfunktionen finns i [Sidskillnad](/help/sites-authoring/page-diff.md).
 
-## Operationsinformation {#operation-details}
+## Åtgärdsinformation {#operation-details}
 
-När du jämför versioner av en sida skapas den tidigare versionen som användaren vill jämföra av AEM i bakgrunden för att underlätta skillnaderna. Detta behövs för att kunna återge innehållet [för jämförelse](/help/sites-authoring/page-diff.md#presentation-of-differences)sida vid sida.
+När du jämför versioner av en sida skapas den tidigare versionen som användaren vill jämföra av AEM i bakgrunden för att underlätta skillnaderna. Detta behövs för att kunna återge innehållet [för jämförelse sida vid sida](/help/sites-authoring/page-diff.md#presentation-of-differences).
 
 Denna rekreationsåtgärd görs internt av AEM och är transparent för användaren och kräver ingen åtgärd. En administratör som visar databasen, till exempel i CRX DE Lite, skulle dock se dessa återskapade versioner i innehållsstrukturen.
 
@@ -58,7 +58,7 @@ En rensningsåtgärd körs automatiskt för att rensa upp det tillfälliga inneh
 
 ## Begränsningar för utvecklare {#developer-limitations}
 
-I det klassiska användargränssnittet behövde man tidigare ta särskild hänsyn till utvecklingen för att underlätta AEM (t.ex. genom att använda `cq:text` tag lib eller integrera `DiffService` OSGi-tjänsten i komponenter). Det här behövs inte längre för den nya diff-funktionen, eftersom skillnaden inträffar på klientsidan via DOM-jämförelse.
+I det klassiska användargränssnittet tidigare var det nödvändigt att ta särskild hänsyn till utvecklingen för att underlätta AEM (t.ex. med `cq:text` tag lib eller för att integrera OSGi-tjänsten i komponenter). `DiffService` Det här behövs inte längre för den nya diff-funktionen, eftersom skillnaden inträffar på klientsidan via DOM-jämförelse.
 
 Det finns dock ett antal begränsningar som måste beaktas av utvecklaren.
 
