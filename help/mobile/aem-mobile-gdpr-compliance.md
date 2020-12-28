@@ -35,7 +35,7 @@ För att vara säker på att du inte blandar ihop AEM Mobile med den äldre Digi
 
 [https://digitalpublishing.acrobat.com/welcome.html](https://digitalpublishing.acrobat.com/welcome.html)
 
-### Initiera en GDPR-begäran {#initiating-a-gdpr-request}
+### Initierar en GDPR-begäran {#initiating-a-gdpr-request}
 
 Kontakta Adobe kundtjänst för att starta en GDPR-förfrågan om Digital Publishing Suite.
 
