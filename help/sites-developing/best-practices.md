@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # Bästa praxis{#best-practices}
 
-## Best Practices for Developers - Getting Started {#best-practices-for-developers-getting-started}
+## Bästa praxis för utvecklare - Komma igång {#best-practices-for-developers-getting-started}
 
 Adobe tekniker och konsultteam har utvecklat en omfattande uppsättning bästa metoder för AEM utvecklare. Utvecklaren av Adobe följer de bästa metoderna när de utvecklar AEM produktuppdateringar och kundkod för kundimplementeringar.
 
@@ -82,13 +82,13 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 
 ## Communities {#communities}
 
-[AEM Communities](/help/communities/overview.md) förenklar framtagning och hantering av lokala communityn.
+[AEM ](/help/communities/overview.md) förenklar framtagning och hantering av lokala communityn.
 
 Här beskrivs några tips för Communities:
 
 |  |  |  |
 |---|---|---|
-| Bästa tillvägagångssätt för att arbeta med användargenererat innehåll (UGC) | [Riktlinjer för kodning](/help/communities/code-guide.md) | Riktlinjer för utveckling av flexibel, portabel kod för ramverket [för](/help/communities/scf.md) sociala komponenter (SCF). |
+| Bästa tillvägagångssätt för att arbeta med användargenererat innehåll (UGC) | [Riktlinjer för kodning](/help/communities/code-guide.md) | Riktlinjer för utveckling av flexibel, portabel kod för [ramverket för sociala komponenter](/help/communities/scf.md) (SCF). |
 | Exempel på användning av webbgruppskomponenter | [Community Components Guide](/help/communities/components-guide.md) | Ett interaktivt utvecklingsverktyg. |
 
 ## Verktyg/HTML {#tooling-htl}
