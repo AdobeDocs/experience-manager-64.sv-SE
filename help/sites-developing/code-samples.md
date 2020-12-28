@@ -28,7 +28,7 @@ Adobe AEM Community-teamet skapar artiklar om hur man gör för utvecklare. Du h
 
 Det finns en Maven-mall som du kan använda för att skapa ett nytt AEM som utgångspunkt för att utveckla egna funktioner [här](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
-Exemplen med gränssnittskod som har pekfunktion finns som standard [här](/help/sites-developing/developing-components.md).
+Exemplen med gränssnittskod som har pekfunktion är tillgängliga [här](/help/sites-developing/developing-components.md).
 
 Ytterligare kodexempel finns:
 
