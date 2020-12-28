@@ -24,11 +24,11 @@ I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende 
 
 >[!NOTE]
 >
->Utanför redigeringsmiljön finns det även andra sökfunktioner, till exempel [Query Builder](/help/sites-developing/querybuilder-api.md) och [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+>Utanför författarmiljön finns det även andra sökfunktioner, till exempel [Query Builder](/help/sites-developing/querybuilder-api.md) och [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
-## Grunderna i sökning {#search-basics}
+## Sökgrunder {#search-basics}
 
-Du öppnar sökpanelen genom att klicka på fliken **Sök** överst i den vänstra rutan i lämplig konsol.
+Om du vill komma åt sökpanelen klickar du på fliken **Sök** längst upp i den vänstra rutan i rätt konsol.
 
 ![chlimage_1-140](assets/chlimage_1-140.png)
 
@@ -41,7 +41,7 @@ Med sökpanelen kan du söka på alla webbplatssidor. Den innehåller fält och 
 
 >[!NOTE]
 >
->När instansen har konfigurerats för [Lucene-sökning](/help/sites-deploying/queries-and-indexing.md) kan du använda följande i **Fulltext**:
+>När din instans har konfigurerats för [Lucene-sökning](/help/sites-deploying/queries-and-indexing.md) kan du använda följande i **Fulltext**:
 >
 >* [Jokertecken](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Wildcard_Searches)
 >* [Booleska operatorer](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boolean_operators)
@@ -56,7 +56,7 @@ Med sökpanelen kan du söka på alla webbplatssidor. Den innehåller fält och 
 
 
 
-Utför sökningen genom att klicka på **Sök** längst ned i rutan. Klicka på **Återställ** för att ta bort sökvillkoren.
+Utför sökningen genom att klicka på **Sök** längst ned i rutan. Klicka på **Återställ** för att rensa sökvillkoren.
 
 ## Filter {#filter}
 
@@ -66,14 +66,14 @@ På olika platser kan ett filter ställas in (och rensas) för att detaljgranska
 
 ## Sök och ersätt {#find-and-replace}
 
-I konsolen **Webbplatser** kan du med menyalternativet **Sök och ersätt** söka efter och ersätta flera förekomster av en sträng i ett avsnitt på webbplatsen.
+I konsolen **Webbplatser** med menyalternativet **Sök och ersätt** kan du söka efter och ersätta flera förekomster av en sträng i ett avsnitt på webbplatsen.
 
 1. Markera rotsidan, eller mappen, där du vill att åtgärden Sök och ersätt ska utföras.
-1. Välj **Verktyg** och sedan **Sök och ersätt**:
+1. Välj **Verktyg** och **Sök och ersätt**:
 
    ![screen_shot_2012-02-15at120346pm](assets/screen_shot_2012-02-15at120346pm.png)
 
-1. I dialogrutan **Sök och ersätt** gör du följande:
+1. Dialogrutan **Sök och ersätt** gör följande:
 
    * bekräftar rotsökvägen där sökåtgärden ska starta
    * definierar den term som ska hittas
@@ -85,7 +85,7 @@ I konsolen **Webbplatser** kan du med menyalternativet **Sök och ersätt** sök
 
    ![screen_shot_2012-02-15at120719pm](assets/screen_shot_2012-02-15at120719pm.png)
 
-1. Klicka på **Ersätt** för att ersätta alla förekomster. Du ombeds bekräfta åtgärden.
+1. Klicka på **Ersätt** om du vill ersätta alla instanser. Du ombeds bekräfta åtgärden.
 
 Standardomfånget för sök- och ersättningsservern omfattar följande egenskaper:
 
@@ -94,7 +94,7 @@ Standardomfånget för sök- och ersättningsservern omfattar följande egenskap
 * `jcr:text`
 * `text`
 
-Omfånget kan ändras med Apache Felix Web Management Console (till exempel på `http://localhost:4502/system/console/configMgr`). Välj `CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)` och konfigurera omfånget efter behov.
+Omfånget kan ändras med Apache Felix Web Management Console (till exempel `http://localhost:4502/system/console/configMgr`). Välj `CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)` och konfigurera scopet efter behov.
 
 >[!NOTE]
 >
