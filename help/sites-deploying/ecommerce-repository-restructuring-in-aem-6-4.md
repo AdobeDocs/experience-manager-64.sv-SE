@@ -17,13 +17,13 @@ ht-degree: 0%
 ---
 
 
-# Omstrukturering av e-handelslager i AEM 6.4{#e-commerce-repository-restructuring-in-aem}
+# Omstrukturering av databas för e-handel i AEM 6.4{#e-commerce-repository-restructuring-in-aem}
 
-Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM e-handelslösning. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
+Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM e-handelslösning. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
 
 ## Med 6.4-uppgradering {#with-upgrade}
 
-### Produkt, beställning, samlingar, klassificeringar, leveransmetoder och betalningsmetoder {#product-order-collections-classifications-shipping-methods-and-payment-methods-data}
+### Produkt-, order-, samlings-, klassificerings-, leveranssätt- och betalningsmetoder - data {#product-order-collections-classifications-shipping-methods-and-payment-methods-data}
 
 <table> 
  <tbody>
@@ -37,7 +37,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td> 
-   <td><p>Du kan använda en <a href="/help/sites-deploying/lazy-content-migration.md" target="_blank">Azure Migration</a> -uppgift för att migrera e-handelsdata.</p> <p>Följande steg utförs:</p> 
+   <td><p>Du kan använda en <a href="/help/sites-deploying/lazy-content-migration.md" target="_blank">Lazy Migration</a>-åtgärd för att migrera e-handelsdata.</p> <p>Följande steg utförs:</p> 
     <ul> 
      <li>justerar referenser till gammal plats så att de pekar på ny plats</li> 
      <li>flyttar innehåll från den gamla platsen till den nya</li> 
@@ -53,7 +53,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.4](/
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td> 
-   <td>N/A<br /> </td> 
+   <td>Ej tillämpligt<br /> </td> 
   </tr>
  </tbody>
 </table>
