@@ -18,7 +18,7 @@ ht-degree: 42%
 ---
 
 
-# AEM and the Web Accessibility Guidelines{#aem-and-the-web-accessibility-guidelines}
+# AEM och riktlinjerna för webbtillgänglighet{#aem-and-the-web-accessibility-guidelines}
 
 Det finns många sociala, ekonomiska och juridiska skäl för att se till att webbinnehåll är utformat för att vara så tillgängligt som möjligt för målgruppen, oavsett eventuella funktionshinder eller begränsningar som de har. Webbtillgänglighet är därför en allt viktigare aspekt av bra webbdesign.
 
@@ -53,19 +53,19 @@ Följande sidor och avsnitt innehåller information och riktlinjer:
 
 ## World Wide Web Consortium och WCAG 2.0 {#world-wide-web-consortium-and-wcag}
 
-[W3C (World Wide Web Consortium)](https://www.w3.org/) är en internationell organisation som arbetar med att utveckla webbstandarder. För att hjälpa webbdesigners och utvecklare att producera tillgängliga webbplatser publicerade [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) Web Content Accessibility Guidelines (WCAG) 2.0 [](https://www.w3.org/TR/WCAG20/) i december 2008 (en uppdatering av den ursprungliga versionen från 1999).
+[W3C (World Wide Web Consortium)](https://www.w3.org/) är en internationell organisation som arbetar med att utveckla webbstandarder. [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) publicerade [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/) i december 2008 (en uppdatering av originalversionen från 1999) för att hjälpa webbdesigners och utvecklare att producera tillgängliga webbplatser.
 
 >[!NOTE]
 >
->An [updated version of the guidelines](https://www.w3.org/TR/WCAG21/) is currently in development, but will not be considered for this version of AEM.
+>En [uppdaterad version av riktlinjerna](https://www.w3.org/TR/WCAG21/) håller på att utvecklas, men kommer inte att användas för den här versionen av AEM.
 
 Med Adobe Experience Manager kan skribenter och/eller webbplatsägare skapa webbinnehåll som uppfyller villkoren för att lyckas med WCAG 2.0 Level A och Level AA.
 
 Specifika aspekter av WCAG 2.0 tas upp i vår [snabbguide till WCAG 2.0](/help/managing/qg-wcag.md).
 
-### WCAG 2.0-tillgänglighetsnivåer {#wcag-accessibility-conformance-levels}
+### WCAG 2.0-hjälpmedelsnivåer {#wcag-accessibility-conformance-levels}
 
-WCAG 2.0 innehåller [riktlinjer (med relaterade kriterier) som beskriver tillgänglighetsnivåerna](https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html).
+WCAG 2.0 innehåller [riktlinjer (med relaterade kriterier) som omfattar hjälpmedelsnivåerna](https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html).
 
 Dessa, som de avser AEM, omfattas av [nivå A och A-överensstämmelse](/help/sites-authoring/creating-accessible-content.md). När du skapar din webbplats bör du bestämma den övergripande nivån som du vill att din plats ska anpassas efter.
 
