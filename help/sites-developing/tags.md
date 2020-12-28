@@ -22,11 +22,11 @@ ht-degree: 2%
 
 Taggning gör att innehållet kan kategoriseras och struktureras. Taggar kan klassificeras med ett namnutrymme och en taxonomi.
 
-* Se [Administrera taggar](/help/sites-administering/tags.md) för information om hur du skapar och hanterar taggar samt om vilka innehållstaggar som har tillämpats.
-* Mer information om hur du lägger till märkord i innehåll finns i [Använda märkord](/help/sites-authoring/tags.md) .
+* Se [Administrera taggar](/help/sites-administering/tags.md) om du vill ha information om hur du skapar och hanterar taggar, samt om vilka innehållstaggar som har tillämpats.
+* Mer information om hur du taggar innehåll finns i [Använda taggar](/help/sites-authoring/tags.md).
 
 Följande information är tillgänglig för utvecklare:
 
-* [AEM Tagging Framework](/help/sites-developing/framework.md) - En beskrivning av de noder och egenskaper som används för taggning
+* [AEM Tagging Framework](/help/sites-developing/framework.md)  - En beskrivning av de noder och egenskaper som används för taggning
 
-* [Bygga taggar i ett AEM-program](/help/sites-developing/building.md) - en beskrivning av de API:er som fungerar med taggningsramverket från klientsidan och serverkod
+* [Bygga taggar i ett AEM program](/help/sites-developing/building.md)  - En beskrivning av de API:er som fungerar med taggningsramverket från klient- och serversidkod
