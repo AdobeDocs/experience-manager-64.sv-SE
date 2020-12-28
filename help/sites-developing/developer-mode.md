@@ -20,11 +20,11 @@ ht-degree: 1%
 
 # Utvecklarläge{#developer-mode}
 
-När du redigerar sidor i AEM finns det flera [lägen](/help/sites-authoring/author-environment-tools.md#page-modes) tillgängliga, bland annat i utvecklarläget. Då öppnas en sidopanel med flera flikar som ger utvecklaren information om den aktuella sidan. De tre flikarna är:
+När du redigerar sidor i AEM finns flera [lägen](/help/sites-authoring/author-environment-tools.md#page-modes) tillgängliga, bland annat i utvecklarläget. Då öppnas en sidopanel med flera flikar som ger utvecklaren information om den aktuella sidan. De tre flikarna är:
 
-* **[Komponenter](#components)**för att visa struktur- och prestandainformation.
-* **[Test](#tests)**för att köra tester och analysera resultaten.
-* **[Fel](#errors)**som visar att det har uppstått problem.
+* **[](#components)** Komponenter för att visa struktur- och prestandainformation.
+* **[Testar](#tests)** för att köra tester och analysera resultaten.
+* **[Det](#errors)** gick inte att se några problem.
 
 Detta hjälper en utvecklare att:
 
@@ -36,10 +36,10 @@ Detta hjälper en utvecklare att:
 >
 >Utvecklarläge:
 >
->* Är bara tillgängligt i det beröringsaktiverade användargränssnittet (vid redigering av sidor).
+>* Är bara tillgängligt i det beröringskänsliga användargränssnittet (när du redigerar sidor).
 >* Är inte tillgängligt på mobila enheter eller små fönster på skrivbordet (på grund av utrymmesbegränsningar).
    >   * Detta inträffar när bredden är mindre än 1024px.
->* Är bara tillgängligt för användare som är medlemmar i `administrators` gruppen.
+>* Är bara tillgänglig för användare som är medlemmar i `administrators`-gruppen.
 
 
 >[!CAUTION]
@@ -59,21 +59,21 @@ Det bör inaktiveras igen efter användning.
 >
 >Se
 >
->* Kunskapsbasartikeln [Troubleshooting AEM TouchUI issues](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)innehåller ytterligare tips och verktyg.
+>* Kunskapsbasartikeln [Felsökning AEM TouchUI-problem](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html) innehåller ytterligare tips och verktyg.
 >* AEM Gems-session om [AEM 6.0 Developer Mode](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html).
 
 
 ## Öppnar utvecklarläge {#opening-developer-mode}
 
-Utvecklarläget implementeras som en sidopanel i sidredigeraren. Öppna panelen genom att välja **Utvecklare** i lägesväljaren i verktygsfältet i sidredigeraren:
+Utvecklarläget implementeras som en sidopanel i sidredigeraren. Om du vill öppna panelen väljer du **Utvecklare** i lägesväljaren i verktygsfältet i sidredigeraren:
 
 ![chlimage_1-229](assets/chlimage_1-229.png)
 
 Panelen är uppdelad i två flikar:
 
-* **[Komponenter](/help/sites-developing/developer-mode.md#components)**- Detta visar ett komponentträd, som liknar[innehållsträdet](/help/sites-authoring/author-environment-tools.md#content-tree)för författare
+* **[Komponenter](/help/sites-developing/developer-mode.md#components)**  - Detta visar ett komponentträd, som liknar  [innehållsträdet ](/help/sites-authoring/author-environment-tools.md#content-tree) för författare
 
-* **[Fel](/help/sites-developing/developer-mode.md#errors)**- När problem uppstår visas information för varje komponent.
+* **[Fel](/help/sites-developing/developer-mode.md#errors)**  - När problem uppstår visas information för varje komponent.
 
 ### Komponenter {#components}
 
@@ -120,24 +120,24 @@ Varje komponentpost kan visa (till exempel:
 
 >[!CAUTION]
 >
->Vissa länkar pekar på skript under `/libs`. De här är bara till för referens, du **får inte** redigera något under `/libs`eftersom ändringar du gör kan gå förlorade. Detta beror på att den här grenen kan ändras när du uppgraderar eller installerar en programfix/funktionspaket. Alla ändringar du behöver göra under `/apps`finns i [Övertäckningar och åsidosättningar](/help/sites-developing/overlays.md).
+>Vissa länkar pekar på skript under `/libs`. Dessa är endast för referens, du **får inte** redigera något under `/libs` eftersom ändringar du gör kan gå förlorade. Detta beror på att den här grenen kan ändras när du uppgraderar eller installerar en programfix/funktionspaket. Alla ändringar du behöver ska göras under `/apps`, se [Övertäckningar och åsidosättningar](/help/sites-developing/overlays.md).
 
 ### Fel {#errors}
 
 ![chlimage_1-234](assets/chlimage_1-234.png)
 
-Förhoppningsvis är fliken **Fel** alltid tom (som ovan), men när problem uppstår visas följande information för varje komponent:
+Förhoppningsvis kommer fliken **Fel** alltid att vara tom (som ovan), men när problem uppstår visas följande information för varje komponent:
 
 * En varning om komponenten skriver en post i felloggen, tillsammans med information om felet och direktlänkar till rätt kod i CRXDE Lite.
 * En varning om komponenten öppnar en administratörssession.
 
-Om till exempel en odefinierad metod anropas visas det resulterande felet på fliken **Fel** :
+Om till exempel en odefinierad metod anropas visas det resulterande felet på fliken **Fel**:
 
 ![chlimage_1-235](assets/chlimage_1-235.png)
 
 Komponentposten i trädet på fliken Komponenter markeras också med en indikator när ett fel inträffar.
 
-### Test {#tests}
+### Testa {#tests}
 
 >[!CAUTION]
 >
