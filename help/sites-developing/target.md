@@ -23,7 +23,7 @@ ht-degree: 0%
 I det här avsnittet beskrivs ämnen om utveckling av komponenter för användning med målinriktning mot innehåll.
 
 * Mer information om hur du ansluter till Adobe Target finns i [Integrera med Adobe Target](/help/sites-administering/target.md).
-* Mer information om att skapa riktat innehåll finns i [Skapa riktat innehåll med målläge](/help/sites-authoring/content-targeting-touch.md).
+* Mer information om att skapa riktat innehåll finns i [Redigera riktat innehåll med målläge](/help/sites-authoring/content-targeting-touch.md).
 
 >[!NOTE]
 >
@@ -31,9 +31,9 @@ I det här avsnittet beskrivs ämnen om utveckling av komponenter för användni
 
 ## Aktivera anpassning med Adobe Target på dina sidor {#enabling-targeting-with-adobe-target-on-your-pages}
 
-Om du vill använda målkomponenter på dina sidor som interagerar med Adobe Target, ska du inkludera specifik klientkod i `<head>` elementet.
+Om du vill använda målkomponenter på dina sidor som interagerar med Adobe Target, ska du inkludera specifik klientkod i `<head>`-elementet.
 
-### Huvudsektionen {#the-head-section}
+### Huvudavsnittet {#the-head-section}
 
 Lägg till båda följande kodblock i &lt;head>-avsnittet på sidan:
 
@@ -80,7 +80,7 @@ Den inlästa biblioteksuppsättningen beror på vilken typ av målklientbibliote
 
 >[!NOTE]
 >
->Det går endast att använda den version av produkten som `at.js` levereras tillsammans. Den version av produkten som `at.js` levererats med produkten kan hämtas genom att man tittar på `at.js` filen på platsen `/etc/clientlibs/foundation/testandtarget/atjs/source/at.js`.
+>Endast den version av `at.js` som levereras med produkten stöds. Versionen av `at.js` som levererades med produkten kan hämtas genom att titta i filen `at.js` på platsen `/etc/clientlibs/foundation/testandtarget/atjs/source/at.js`.
 
 **För anpassad at.js**
 
@@ -90,7 +90,7 @@ Den inlästa biblioteksuppsättningen beror på vilken typ av målklientbibliote
  <script type="text/javascript" src="/etc/clientlibs/foundation/testandtarget/atjs-integration.js"></script>
 ```
 
-Target-funktionen på klientsidan hanteras av `CQ_Analytics.TestTarget` objektet. Därför kommer sidan att innehålla init-kod som i följande exempel:
+Målfunktionen på klientsidan hanteras av objektet `CQ_Analytics.TestTarget`. Därför kommer sidan att innehålla init-kod som i följande exempel:
 
 ```
 <script type="text/javascript">
@@ -124,7 +124,7 @@ Target-funktionen på klientsidan hanteras av `CQ_Analytics.TestTarget` objektet
  </div>
 ```
 
-JSP lägger till de nödvändiga JavaScript-analysobjekten och referenserna i javascript-bibliotek på klientsidan. Filen `testandtarget.js` innehåller `mbox.js` funktionerna. HTML-koden som skriptet genererar liknar följande exempel:
+JSP lägger till de nödvändiga JavaScript-analysobjekten och referenserna i javascript-bibliotek på klientsidan. Filen `testandtarget.js` innehåller `mbox.js`-funktionerna. HTML-koden som skriptet genererar liknar följande exempel:
 
 ```xml
 <script type="text/javascript">
@@ -143,7 +143,7 @@ JSP lägger till de nödvändiga JavaScript-analysobjekten och referenserna i ja
 
 #### The body Section (start) {#the-body-section-start}
 
-Lägg till följande kod omedelbart efter `<body>` -taggen för att lägga till klientkontextfunktionerna på sidan:
+Lägg till följande kod omedelbart efter taggen `<body>` för att lägga till klientkontextfunktionerna på sidan:
 
 ```xml
 <cq:include path="clientcontext" resourceType="cq/personalization/components/clientcontext"/>
@@ -151,7 +151,7 @@ Lägg till följande kod omedelbart efter `<body>` -taggen för att lägga till 
 
 #### The body Section (end) {#the-body-section-end}
 
-Lägg till följande kod omedelbart före `</body>` sluttaggen:
+Lägg till följande kod omedelbart före sluttaggen `</body>`:
 
 ```xml
 <cq:include path="cloudservices" resourceType="cq/cloudserviceconfigs/components/servicecomponents"/>
@@ -195,21 +195,21 @@ JSP-skriptet för den här komponenten genererar anrop till Target javascript AP
 >
 >Som standard är rutor dolda - klassen mboxDefault bestämmer detta beteende. Genom att dölja kryssrutor kan besökarna inte se standardinnehållet innan det byts ut. Men om du döljer lådor påverkas upplevda prestanda.
 
-Standardfilen mbox.js som används för att skapa mboxes finns på `/etc/clientlibs/foundation/testandtarget/mbox/source/mbox.js`. Om du vill använda filen mbox.js för en kund lägger du till filen i molnkonfigurationen för Target. Om du vill lägga till filen måste den vara `mbox.js` tillgänglig i filsystemet.
+Standardfilen mbox.js som används för att skapa mboxes finns på `/etc/clientlibs/foundation/testandtarget/mbox/source/mbox.js`. Om du vill använda filen mbox.js för en kund lägger du till filen i molnkonfigurationen för Target. Om du vill lägga till filen måste `mbox.js`-filen vara tillgänglig i filsystemet.
 
-Om du till exempel vill använda [Marketing Cloud ID-tjänsten](https://docs.adobe.com/content/help/en/id-service/using/home.html) måste du hämta mbox.js så att den innehåller rätt värde för `imsOrgID` variabeln, som baseras på din klientorganisation. Den här variabeln krävs för integrering med Marketing Cloud ID-tjänsten. Mer information finns i [Adobe Analytics som rapportkälla för Adobe Target](https://docs.adobe.com/content/help/en/target/using/integrate/a4t/a4t.html) och [Innan du implementerar](https://docs.adobe.com/content/help/en/target/using/integrate/a4t/before-implement.html).
+Om du till exempel vill använda tjänsten [Marketing Cloud ID](https://docs.adobe.com/content/help/en/id-service/using/home.html) måste du hämta mbox.js så att den innehåller rätt värde för variabeln `imsOrgID`, som baseras på din klientorganisation. Den här variabeln krävs för integrering med Marketing Cloud ID-tjänsten. Mer information finns i [Adobe Analytics som rapportkälla för Adobe Target](https://docs.adobe.com/content/help/en/target/using/integrate/a4t/a4t.html) och [Innan du implementerar](https://docs.adobe.com/content/help/en/target/using/integrate/a4t/before-implement.html).
 
 >[!NOTE]
 >
->Om en anpassad mbox definieras i en Target-konfiguration måste alla ha läsåtkomst till **/etc/molntjänster** på publiceringsservrar. Utan den här åtkomsten uppstår ett 404-fel när mbox.js-filer läses in på publiceringswebbplatsen.
+>Om en anpassad mbox definieras i en Target-konfiguration måste alla ha läsåtkomst till **/etc/cloudservices** på publiceringsservrar. Utan den här åtkomsten uppstår ett 404-fel när mbox.js-filer läses in på publiceringswebbplatsen.
 
-1. Gå till CQ- **verktygssidan** och välj **Cloud Services**. ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
+1. Gå till CQ-sidan **Verktyg** och välj **Cloud Services**. ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
 1. Välj Adobe Target i trädet och dubbelklicka på målkonfigurationen i listan över konfigurationer.
 1. Klicka på Redigera på konfigurationssidan.
 1. För egenskapen Custom mbox.js klickar du på Browse och väljer filen.
 1. Om du vill använda ändringarna anger du lösenordet för ditt Adobe Target-konto, klickar på Anslut till mål igen och klickar på OK när anslutningen lyckas. Klicka sedan på OK i dialogrutan Redigera komponent.
 
-Målkonfigurationen innehåller en anpassad mbox.js-fil. Koden [som krävs i huvudsektionen](/help/sites-developing/target.md#the-head-section) på sidan lägger till filen i klientbibliotekets ramverk i stället för en referens till biblioteket testandtarget.js.
+Målkonfigurationen innehåller en anpassad mbox.js-fil, [den nödvändiga koden i huvudavsnittet](/help/sites-developing/target.md#the-head-section) på sidan lägger till filen i klientbibliotekets ramverk i stället för en referens till biblioteket testandtarget.js.
 
 ## Inaktivera målkommandot för komponenter {#disabling-the-target-command-for-components}
 
@@ -223,7 +223,7 @@ Om du vill ta bort kommandot Target från snabbmenyn lägger du till följande e
 * Typ: `Boolean`
 * Värde: `True`
 
-Om du till exempel vill inaktivera mål för titelkomponenterna på Geometrixx demowebbplatssidor lägger du till egenskapen i `/apps/geometrixx/components/title/cq:editConfig` noden.
+Om du till exempel vill inaktivera mål för titelkomponenterna på Geometrixx demowebbplatssidor lägger du till egenskapen i noden `/apps/geometrixx/components/title/cq:editConfig`.
 
 ![chlimage_1-174](assets/chlimage_1-174.png)
 
@@ -250,7 +250,7 @@ Koden på den återgivna HTML-sidan som skapar mbox liknar följande exempel:
 </script>
 ```
 
-Värdena för varje parameter är olika för varje ordning. Därför behöver du en komponent som genererar koden baserat på inköpets egenskaper. CQ [eCommerce Integration Framework](/help/sites-administering/ecommerce.md) gör att du kan integrera med din produktkatalog och implementera en kundvagn- och kassasida.
+Värdena för varje parameter är olika för varje ordning. Därför behöver du en komponent som genererar koden baserat på inköpets egenskaper. CQ [eCommerce Integration Framework](/help/sites-administering/ecommerce.md) gör att du kan integrera med din produktkatalog och implementera en kundvagn- och utcheckningssida.
 
 I exemplet på Geometrixx Outdoors visas följande bekräftelsesida när en besökare köper produkter:
 
@@ -317,16 +317,16 @@ När komponenten inkluderas på utcheckningssidan i föregående exempel innehå
 
 ## Förstå målkomponenten {#understanding-the-target-component}
 
-Med Target-komponenten kan författare skapa dynamiska rutor från CQ-innehållskomponenter. (Se [Målanpassning](/help/sites-authoring/content-targeting-touch.md)av innehåll.) Målkomponenten finns på /libs/cq/personalization/components/target.
+Med Target-komponenten kan författare skapa dynamiska rutor från CQ-innehållskomponenter. (Se [Innehållsmål](/help/sites-authoring/content-targeting-touch.md).) Målkomponenten finns på /libs/cq/personalization/components/target.
 
 Skriptet target.jsp får åtkomst till sidegenskaperna för att avgöra vilken målmotor som ska användas för komponenten och kör sedan rätt skript:
 
 * Adobe Target: `/libs/cq/personalization/components/target/engine_tnt.jsp`
-* [Adobe Target med AT.JS](/help/sites-administering/target.md): `/libs/cq/personalization/components/target/engine_atjs.jsp`
-* [Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md): `/libs/cq/personalization/components/target/engine_cq_campaign.jsp`
+* [Adobe Target med AT.JS](/help/sites-administering/target.md):  `/libs/cq/personalization/components/target/engine_atjs.jsp`
+* [Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md):  `/libs/cq/personalization/components/target/engine_cq_campaign.jsp`
 * Regler/ContextHub på klientsidan: `/libs/cq/personalization/components/target/engine_cq.jsp`
 
-### Skapa Mboxes {#the-creation-of-mboxes}
+### Skapande av rutor {#the-creation-of-mboxes}
 
 >[!NOTE]
 >
@@ -334,17 +334,17 @@ Skriptet target.jsp får åtkomst till sidegenskaperna för att avgöra vilken m
 
 När Adobe Target skapar innehåll för målinriktning skapar skriptet engine_tnt.jsp mbox som innehåller innehållet i målupplevelsen:
 
-* Lägger till ett `div` element med klassen för `mboxDefault`, vilket krävs av Adobe Target API.
+* Lägger till ett `div`-element med klassen `mboxDefault`, vilket krävs för Adobe Target API.
 
-* Lägger till innehållet i mbox (innehållet i målupplevelsen) inuti `div` elementet.
+* Lägger till innehållet i mbox (innehållet i målupplevelsen) inuti `div`-elementet.
 
-Efter `mboxDefault` div-elementet infogas det javascript som skapar mbox:
+Efter div-elementet `mboxDefault` infogas det javascript som skapar mbox:
 
 * Rutans namn, ID och plats baseras på komponentens databassökväg.
 * Skriptet hämtar parameternamn och värden för klientkontextparametrar.
 * Anrop görs till de funktioner som mbox.js och andra klientbibliotek definierar för att skapa mbox-filer.
 
-### Klientbibliotek för målanpassning av innehåll {#client-libraries-for-content-targeting}
+### Klientbibliotek för målinnehåll {#client-libraries-for-content-targeting}
 
 Följande är tillgängliga clientlib-kategorier:
 
