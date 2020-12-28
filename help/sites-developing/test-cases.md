@@ -55,13 +55,15 @@ När AEM testas är det av särskilt intresse med vissa detaljer:
 
 Skapa och publicera miljöer
 
-Även om det ingår i [miljöer](/help/sites-developing/the-basics.md#environments) är det värt att betona en avgörande faktor för AEM när det gäller testning.
+Även om det ingår i [miljöer](/help/sites-developing/the-basics.md#environments) är det värt att betona en avgörande faktor för AEM med avseende på testning.
 
 Du måste överväga AEM som två program:
 
-* i **redigeringsmiljönDen här instansen** tillåter författare att ange och publicera innehåll.
+* miljön **Författare**
+Den här instansen tillåter författare att ange och publicera innehåll.
 Detta har en liten(er), förutsägbar uppsättning användare, för vilka specifika funktioner och prestanda är avgörande.
-* i **publiceringsmiljön** Den här instansen presenterar webbplatsen i dess publicerade form så att besökarna kan komma åt den.
+* miljön **Publish**
+I den här instansen visas webbplatsen i dess publicerade form så att besökarna kan komma åt den.
 Detta har vanligtvis en större uppsättning användare, där trafikvolymen inte alltid är helt förutsägbar. Prestanda är fortfarande avgörande - vid svar på förfrågningar. Cachelagring och lastbalansering måste också beaktas.
 
 Även om de är samma programvara:
@@ -88,13 +90,15 @@ Testningen är svår (cachelagring sker på olika nivåer och på olika platser)
 
 * **Noggrannhet**. se till att webbplatsbesökaren kan se innehållsuppdateringar.
 * **Kontinuitet**. se till att webbplatsen fortfarande är tillgänglig när en server stängs av.
-* **Klusterkluster** används för att tillhandahålla:
-   * **Redundans** Om en server misslyckas tar andra servrar i klustret över bearbetningen.
-   * **Prestandabelastningsbalansering med fullständig failover ökar prestanda för ett kluster.**
+* **** ClustersClusters används för att tillhandahålla:
+   * ****
+RedundansOm en server inte fungerar tar andra servrar i klustret över bearbetningen.
+   * **PerformanceLoad-**
+balansering med fullständig failover ökar prestanda för ett kluster.
 
 När det används för ett kundprojekt måste klustret testas för att bekräfta att konfigurationen fungerar korrekt.
 
-## Testar program från tredje part {#testing-third-party-software}
+## Testar tredjepartsprogram {#testing-third-party-software}
 
 Alla tredjepartsprogram som AEM interagerar med kommer att anges i Detaljerade kravspecifikationer.
 
