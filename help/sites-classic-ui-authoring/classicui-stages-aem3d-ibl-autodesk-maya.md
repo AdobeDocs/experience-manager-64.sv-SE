@@ -18,31 +18,31 @@ ht-degree: 0%
 ---
 
 
-# Ställa in en IBL-scen med Autodesk Maya och Mental Ray{#setting-up-an-ibl-stage-with-autodesk-maya-and-mental-ray}
+# Konfigurera en IBL-scen med Autodesk Maya och Mental Ray{#setting-up-an-ibl-stage-with-autodesk-maya-and-mental-ray}
 
 1. I Maya skapar du en ny, tom scen.
 
 1. Skapa en (tillfällig) referens till en representativ modell. Detta underlättar utvärdering av ljus, inställning av kameror och konfiguration av renderaren.
 1. Ställ in bildbaserad ljussättning.
 
-   1. Markera **[!UICONTROL Render Using: mental ray]** och öppna **[!UICONTROL Scene]** fliken i Återgivningsinställningar.
-   1. Öppna dragspelsfönstret och **[!UICONTROL Environment]** klicka sedan på **[!UICONTROL Create Image Based Lighting]**.
-   1. Klicka på ruteikonen som har en högerpil till vänster om rutan för att markera IBL-noden `mentalRayIblShape1`och avsluta sedan [!UICONTROL Render Settings].
-   1. I **[!UICONTROL Attribute Editor]** markerar du omformningsnoden `mentalRayIbl1`och byter sedan namn på omformningsnoden till `AdobeIbl`.
+   1. Välj **[!UICONTROL Render Using: mental ray]** i Återgivningsinställningar och öppna fliken **[!UICONTROL Scene]**.
+   1. Öppna dragspelet **[!UICONTROL Environment]** och klicka sedan på **[!UICONTROL Create Image Based Lighting]**.
+   1. Klicka på ruteikonen som har en högerpil till vänster om rutan för att välja IBL-noden `mentalRayIblShape1` och avsluta sedan [!UICONTROL Render Settings].
+   1. I **[!UICONTROL Attribute Editor]** markerar du omformningsnoden `mentalRayIbl1` och byter sedan namn på omformningsnoden till `AdobeIbl`.
 
-   1. Ställ in nodens värde så att systemsfären blir betydligt större än det största 3D-objektet som ska visas med den här scenen (till exempel [!UICONTROL Scale] `10000,10000,10000`).
-   1. Markera `AdobeIblShape` noden och konfigurera den enligt följande:
+   1. Ange [!UICONTROL Scale] för noden för att göra systemsfären betydligt större än det största 3D-objektet som ska visas med den här scenen (till exempel `10000,10000,10000`).
+   1. Markera noden `AdobeIblShape` och konfigurera den enligt följande:
 
       * **[!UICONTROL Mapping]** - Sfärisk
       * **[!UICONTROL Type]** - Bildfil
       * **[!UICONTROL Emit Light]** - true
-   1. Koppla den önskade 32-bitars TIFF-bilden till `AdobeIbl` noden.
+   1. Koppla den önskade 32-bitars TIFF-bilden till `AdobeIbl`-noden.
 
 
 1. Ställ in markplanet.
 
    * Skapa ett lämpligt plan som ska användas som markplan och anpassa storleken så att den passar i IBL-sfären genom koordinatens ursprung.
-   * Koppla ett **[!UICONTROL Use Background]** material till jordplanet och ge det ett namn `AdobeUseBackground` och koppla det till objektet för markplanet.
+   * Koppla ett **[!UICONTROL Use Background]**-material till markplanet och ge det namnet `AdobeUseBackground` och koppla det till markplanobjektet.
 
 1. (Valfritt) Skapa och konfigurera kameror.
 
@@ -54,11 +54,11 @@ ht-degree: 0%
 
    * **[!UICONTROL Common]** tab
 
-      Avmarkera **[!UICONTROL Alpha channel (mask)]** kryssrutan för alla återgivningsbara kameror.
+      Avmarkera kryssrutan **[!UICONTROL Alpha channel (mask)]** för alla återgivningsbara kameror.
 
    * **[!UICONTROL Quality]** tab
 
-      * **[!UICONTROL Overall quality]** - `0.5` eller mindre
+      * **[!UICONTROL Overall quality]** -  `0.5` eller mindre
       * **[!UICONTROL Indirect Diffuse (GI) Mode]** - `Final Gather`
       * **[!UICONTROL Filter Size]** - `2.0`, `2.0`
    * Rendera scenen med de typiska bildstorlekar som du förväntar dig att använda. Om det behövs kan du förfina ljuskällorna, renderingsinställningarna eller båda för att få önskat resultat.
@@ -72,15 +72,15 @@ ht-degree: 0%
 
 1. Ladda upp scenen och IBL PTIFF till AEM och vänta tills överföringen är klar.
 
-   Se [Överföra resurser](/help/assets/managing-assets-touch-ui.md#uploading-assets).
+   Se [Överför resurser](/help/assets/managing-assets-touch-ui.md#uploading-assets).
 
 1. Lös eventuella filberoenden.
 
    Se [Lösa filberoenden](/help/sites-classic-ui-authoring/classicui-upload-proc-3d-resolve-dependencies.md).
 
-   AEM 3D kanske inte kan identifiera den IBL-bild som konfigurerats på scenen. I sådana fall måste du lösa de saknade beroendena manuellt. Du kan tilldela samma tidigare överförda IBL PTIFF-bild för var och en av de saknade beroendena. Du kan också tilldela olika bilder för att ytterligare styra IBL-effekterna. När du har löst beroendena ska du trycka på **Spara** för att starta ombearbetningen.
+   AEM 3D kanske inte kan identifiera den IBL-bild som konfigurerats på scenen. I sådana fall måste du lösa de saknade beroendena manuellt. Du kan tilldela samma tidigare överförda IBL PTIFF-bild för var och en av de saknade beroendena. Du kan också tilldela olika bilder för att ytterligare styra IBL-effekterna. När du har löst beroendena måste du trycka på **Spara** för att starta ombearbetningen.
 
-1. Öppna Resursegenskaper i AEM. Ange Titel till en lämplig sträng som ska visas i listrutan Scenväljare. Kontrollera att **[!UICONTROL Class]** är inställt på **[!UICONTROL 3D Stage]**. Spara och avsluta.
+1. Öppna Resursegenskaper i AEM. Ange Titel till en lämplig sträng som ska visas i listrutan Scenväljare. Kontrollera att **[!UICONTROL Class]** är **[!UICONTROL 3D Stage]**. Spara och avsluta.
 
 1. Öppna en 3D-resurs, markera den nya scenen och verifiera att den förhandsvisar och återger som förväntat.
 
