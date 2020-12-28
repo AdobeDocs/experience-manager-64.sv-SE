@@ -20,7 +20,7 @@ ht-degree: 3%
 
 # Arbeta med resurser{#working-with-assets}
 
-Avsnittet [Författarmiljö och Verktyg](/help/sites-authoring/author-environment-tools.md) innehåller information om hur du använder [!UICONTROL Content Finder] för att hitta och använda resurser när du redigerar sidor. AEM Assets innehåller andra metoder för att arbeta med resurser:
+Avsnittet [Författarmiljö och verktyg](/help/sites-authoring/author-environment-tools.md) innehåller information om hur du använder [!UICONTROL Content Finder] för att hitta och använda resurser när du redigerar sidor. AEM Assets innehåller andra metoder för att arbeta med resurser:
 
 * [Lägga till Dynamic Media Classic-funktioner på sidan](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md)
 * [Arbeta med Dynamic Media](/help/sites-classic-ui-authoring/dynamic-media-assets.md)
