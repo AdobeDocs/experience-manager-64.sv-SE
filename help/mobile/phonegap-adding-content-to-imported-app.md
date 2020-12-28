@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# Är din hybridapp redo för AEM Mobile?{#is-your-hybrid-app-ready-for-aem-mobile}
+# Är hybridappen klar för AEM Mobile?{#is-your-hybrid-app-ready-for-aem-mobile}
 
 >[!NOTE]
 >
