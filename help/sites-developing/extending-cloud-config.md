@@ -24,7 +24,7 @@ Konfigurationer är utformade för att tillhandahålla logik och struktur för l
 
 Du kan utöka de befintliga instanserna för att skapa egna konfigurationer.
 
-## Concepts {#concepts}
+## Koncept {#concepts}
 
 De principer som har använts vid utvecklingen av konfigurationerna har baserats på följande begrepp:
 
@@ -32,8 +32,8 @@ De principer som har använts vid utvecklingen av konfigurationerna har baserats
 * Konfigurationer (t.ex. egenskaper/stycken) ärvs från de överordnade.
 * Refererad från analysnod(er) efter sökväg.
 * Enkelt att bygga ut.
-* Har flexibiliteten att klara mer komplexa konfigurationer som [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics).
-* Stöd för beroenden ( [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) -plugin-program behöver en [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) -konfiguration).
+* Kan hantera mer komplexa konfigurationer, till exempel [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics).
+* Stöd för beroenden (t.ex. [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)-plugin-program behöver en [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)-konfiguration).
 
 ## Struktur {#structure}
 
@@ -124,7 +124,7 @@ Innehållsmodellen lagras som `cq:Page` under:
 
 Konfigurationerna lagras under undernoden `jcr:content`.
 
-* Fasta egenskaper, som definieras i en dialogruta, ska lagras direkt på `jcr:node` .
+* Fasta egenskaper som definieras i en dialogruta ska lagras direkt på `jcr:node`.
 * Dynamiska element (med `parsys` eller `iparsys`) använder en undernod för att lagra komponentdata.
 
 ```xml
@@ -140,7 +140,7 @@ propertyname
 
 Referensdokumentation om API finns i [com.day.cq.wcm.webservicesupport](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html).
 
-### AEM {#aem-integration}
+### AEM integrering {#aem-integration}
 
 Tillgängliga tjänster visas på fliken **Cloud Services** i dialogrutan **Sidegenskaper** (för alla sidor som ärver från `foundation/components/page` eller `wcm/mobile/components/page`).
 
@@ -153,19 +153,19 @@ Fliken innehåller även:
 
 När inloggningsuppgifter för tjänsten lagras bör alla lösenord krypteras.
 
-Du kan uppnå detta genom att lägga till ett dolt formulärfält. Det här fältet ska ha en anteckning `@Encrypted` i egenskapsnamnet. För `password` fältet skulle namnet skrivas som:
+Du kan uppnå detta genom att lägga till ett dolt formulärfält. Det här fältet ska ha anteckningen `@Encrypted` i egenskapsnamnet; För fältet `password` skulle namnet skrivas som:
 
 `password@Encrypted`
 
-Egenskapen krypteras sedan automatiskt (med hjälp av `CryptoSupport` tjänsten) av `EncryptionPostProcessor`.
+Egenskapen krypteras sedan automatiskt (med tjänsten `CryptoSupport`) av `EncryptionPostProcessor`.
 
 >[!NOTE]
 >
->Detta liknar standardanteckningarna ` [SlingPostServlet](https://sling.apache.org/site/manipulating-content-the-slingpostservlet-servletspost.html)` .
+>Detta liknar standarden ` [SlingPostServlet](https://sling.apache.org/site/manipulating-content-the-slingpostservlet-servletspost.html)`-anteckningar.
 
 >[!NOTE]
 >
->Som standard `EcryptionPostProcessor` krypteras endast `POST` begäranden som görs till `/etc/cloudservices`.
+>Som standard krypterar endast `EcryptionPostProcessor` `POST`-begäranden som görs till `/etc/cloudservices`.
 
 #### Ytterligare egenskaper för tjänstsidans jcr:innehållsnoder {#additional-properties-for-service-page-jcr-content-nodes}
 
@@ -177,7 +177,7 @@ Egenskapen krypteras sedan automatiskt (med hjälp av `CryptoSupport` tjänsten)
   </tr> 
   <tr> 
    <td>componentReference</td> 
-   <td>Referenssökväg till en komponent som ska inkluderas automatiskt på sidan.<br /> Detta används för ytterligare funktioner och JS-tillägg.<br /> Detta inkluderar komponenten på sidan där<br /> den ingår (vanligtvis före <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> <code>body</code> -taggen).<br /> När det gäller Analytics och Target använder vi detta för att inkludera ytterligare funktioner, som JavaScript-anrop för att spåra besökares beteende.</td> 
+   <td>Referenssökväg till en komponent som ska inkluderas automatiskt på sidan.<br /> Detta används för ytterligare funktioner och JS-tillägg.<br /> Detta inkluderar komponenten på sidan <br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> där den ingår (vanligtvis före  <code>body</code> taggen).<br /> När det gäller Analytics och Target använder vi detta för att inkludera ytterligare funktioner, som JavaScript-anrop för att spåra besökares beteende.</td> 
   </tr> 
   <tr> 
    <td>description</td> 
@@ -214,11 +214,11 @@ Egenskapen krypteras sedan automatiskt (med hjälp av `CryptoSupport` tjänsten)
  </tbody> 
 </table>
 
-### Användningsexempel {#use-cases}
+### Använd fall {#use-cases}
 
 Dessa tjänster tillhandahålls som standard:
 
-* [Spårarkodfragment](/help/sites-administering/external-providers.md) (Google, WebTrends etc.)
+* [Spårarfragment](/help/sites-administering/external-providers.md)  (Google, WebTrends etc.)
 * [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)
 * [Test&amp;Target](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-target)
 * [Search &amp; Promote](/help/sites-administering/marketing-cloud.md#integrating-with-search-promote)
