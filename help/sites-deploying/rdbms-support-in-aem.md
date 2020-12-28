@@ -26,21 +26,21 @@ Stöd för relationsdatabasbeständighet i AEM implementeras med Document Microk
 
 Det består av ett Java-API som baseras på Mongo Java API. En implementering av ett BlobStore API ingår också. Bloggar lagras som standard i databasen.
 
-Mer information om implementeringen finns i dokumentationen för [RDBDocumentStore](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/plugins/document/rdb/RDBDocumentStore.html) och [RDBBlobStore](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/plugins/document/rdb/RDBBlobStore.html) .
+Mer information om implementeringen finns i dokumentationen [RDBDocumentStore](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/plugins/document/rdb/RDBDocumentStore.html) och [RDBBlobStore](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/plugins/document/rdb/RDBBlobStore.html).
 
 >[!NOTE]
 >
->Stöd för **PostgreSQL 9.4** ges också, men endast för demoändamål. Den kommer inte att vara tillgänglig för produktionsmiljöer.
+>Stöd finns också för **PostgreSQL 9.4**, men endast för demoändamål. Den kommer inte att vara tillgänglig för produktionsmiljöer.
 
 ## Databaser som stöds {#supported-databases}
 
-Mer information om nivån på Relational Database-stöd i AEM finns på sidan [](/help/sites-deploying/technical-requirements.md)Tekniska krav.
+Mer information om nivån på Relational Database-stödet i AEM finns på [sidan Technical Requirements](/help/sites-deploying/technical-requirements.md).
 
 ## Konfigurationssteg {#configuration-steps}
 
-Databasen skapas genom att `DocumentNodeStoreService` OSGi-tjänsten konfigureras. Det har utökats med stöd för relationsdatabasbeständighet utöver MongoDB.
+Databasen skapas genom att OSGi-tjänsten konfigureras. `DocumentNodeStoreService` Det har utökats med stöd för relationsdatabasbeständighet utöver MongoDB.
 
-För att en datakälla ska fungera måste den konfigureras med AEM. Detta görs via `org.apache.sling.datasource.DataSourceFactory.config` filen. JDBC-drivrutinerna för respektive databas måste anges separat som OSGi-paket i den lokala konfigurationen.
+För att en datakälla ska fungera måste den konfigureras med AEM. Detta görs via filen `org.apache.sling.datasource.DataSourceFactory.config`. JDBC-drivrutinerna för respektive databas måste anges separat som OSGi-paket i den lokala konfigurationen.
 
 Anvisningar om hur du skapar OSGi-paket för JDBC-drivrutiner finns i den här [dokumentationen](https://wiki.eclipse.org/Create_and_Export_MySQL_JDBC_driver_bundle) på webbplatsen Apache Sling.
 
@@ -54,17 +54,17 @@ När paketen är på plats följer du stegen nedan för att konfigurera AEM med 
 
 1. Kontrollera att databasdaemon har startats och att du har en aktiv databas som kan användas med AEM.
 1. Kopiera AEM 6.3 burk till installationskatalogen.
-1. Skapa en mapp som anropas `crx-quickstart\install` i installationskatalogen.
-1. Konfigurera dokumentnodarkivet genom att skapa en konfigurationsfil med följande namn i `crx-quickstart\install` katalogen:
+1. Skapa en mapp med namnet `crx-quickstart\install` i installationskatalogen.
+1. Konfigurera dokumentnodarkivet genom att skapa en konfigurationsfil med följande namn i katalogen `crx-quickstart\install`:
 
    * `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`
 
-1. Konfigurera datakällan och JDBC-parametrarna genom att skapa en annan konfigurationsfil med följande namn i `crx-quickstart\install` mappen:
+1. Konfigurera datakällan och JDBC-parametrarna genom att skapa en annan konfigurationsfil med följande namn i mappen `crx-quickstart\install`:
 
    * `org.apache.sling.datasource.DataSourceFactory-oak.config`
    >[!NOTE]
    >
-   >Mer information om datakällkonfigurationen för varje databas som stöds finns i Konfigurationsalternativ för [datakälla](/help/sites-deploying/rdbms-support-in-aem.md#data-source-configuration-options).
+   >Mer information om datakällans konfiguration för varje databas som stöds finns i [Konfigurationsalternativ för datakälla](/help/sites-deploying/rdbms-support-in-aem.md#data-source-configuration-options).
 
 1. Förbered sedan JDBC OSGi-paketen som ska användas med AEM:
 
@@ -77,7 +77,7 @@ När paketen är på plats följer du stegen nedan för att konfigurera AEM med 
       * Bläddra till det valda paketet som extraherats från det hämtade ZIP-arkivet
       * Kontrollera att **Oracle Corporations JDBC-drivrutin för MySQLcom.mysql.jdbc** är aktiv och starta den.
 
-1. Börja slutligen AEM med `crx3` - och `crx3rdb` runmodes:
+1. Börja slutligen AEM med körningslägena `crx3` och `crx3rdb`:
 
    ```java
    java -jar quickstart.jar -r crx3,crx3rdb
@@ -85,11 +85,11 @@ När paketen är på plats följer du stegen nedan för att konfigurera AEM med 
 
 ## Konfigurationsalternativ för datakälla {#data-source-configuration-options}
 
-OSGi- `org.apache.sling.datasource.DataSourceFactory-oak.config` konfigurationen används för att konfigurera de parametrar som behövs för kommunikation mellan AEM och databasens beständighetslager.
+OSGi-konfigurationen `org.apache.sling.datasource.DataSourceFactory-oak.config` används för att konfigurera de parametrar som behövs för kommunikation mellan AEM och databasens beständighetslager.
 
 Följande konfigurationsalternativ är tillgängliga:
 
-* `datasource.name:` Datakällans namn. The default is `oak`.
+* `datasource.name:` Datakällans namn. Standardvärdet är `oak`.
 
 * `url:` URL-strängen för den databas som ska användas med JDBC. Varje databastyp har ett eget URL-strängformat. Mer information finns i [URL-strängformat](/help/sites-deploying/rdbms-support-in-aem.md#url-string-formats) nedan.
 
