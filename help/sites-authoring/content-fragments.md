@@ -22,7 +22,7 @@ ht-degree: 5%
 
 >[!CAUTION]
 >
->Vissa funktioner för innehållsfragment kräver att [AEM 6.4 Service Pack 2 (6.4.2.0) eller senare](/help/release-notes/sp-release-notes.md)används.
+>Vissa funktioner för innehållsfragment kräver [AEM 6.4 Service Pack 2 (6.4.2.0) eller senare](/help/release-notes/sp-release-notes.md).
 
 Innehållsfragment i Adobe Experience Manager (AEM) [skapas och hanteras som sidoberoende resurser](/help/assets/content-fragments.md).
 
@@ -32,10 +32,10 @@ Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfr
 
 >[!NOTE]
 >
->**Content Fragments** and **[Experience Fragments](/help/sites-authoring/experience-fragments.md)**are different features within AEM:
+>**Innehållsfragment** och  **[Upplevelsefragment](/help/sites-authoring/experience-fragments.md)** är olika funktioner i AEM:
 >
->* **Innehållsfragment** är redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
->* **Experience Fragments** är helt utformat för innehåll, ett fragment av en webbsida.
+>* **Innehållsfragmenterarär** redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
+>* **Upplevelsefragment** är helt utformat. ett fragment av en webbsida.
 
 >
 >
@@ -75,18 +75,18 @@ Innehållsfragmenten aktiverar:
 
 1. Öppna sidan för redigering.
 
-1. Lägg till **[!UICONTROL Content Fragment]** komponenten; antingen från **[!UICONTROL Components]** webbläsaren eller **[!UICONTROL Insert New Component]**.
+1. Lägg till **[!UICONTROL Content Fragment]**-komponenten; från antingen webbläsaren **[!UICONTROL Components]** eller **[!UICONTROL Insert New Component]**.
 
 1. Du kan antingen:
 
-   * Öppna **[!UICONTROL Assets]** webbläsaren och filtrera efter **[!UICONTROL Content Fragments]** (standardinställningen är Bilder). Dra sedan det önskade fragmentet till komponentinstansen.
-   * Markera innehållets fragmentkomponent och sedan **[!UICONTROL Configure]** från verktygsfältet. I dialogrutan kan du öppna urvalsdialogrutan för att bläddra och välja önskat alternativ **[!UICONTROL Content Fragment]**.
+   * Öppna webbläsaren **[!UICONTROL Assets]** och filtrera efter **[!UICONTROL Content Fragments]** (standardvärdet är Bilder). Dra sedan det önskade fragmentet till komponentinstansen.
+   * Markera innehållets fragmentkomponent och **[!UICONTROL Configure]** i verktygsfältet. I dialogrutan kan du öppna urvalsdialogrutan för att bläddra och välja önskad **[!UICONTROL Content Fragment]**.
 
    >[!NOTE]
    >
    >Ett annat sätt är att dra ett visst innehållsfragment direkt till sidan. Då skapas automatiskt den associerade komponenten (innehållsfragment).
 
-1. Inledningsvis visas innehållet från **[!UICONTROL Main]** elementet och **[!UICONTROL Master]** (variationen). Du kan [markera andra element och/eller variationer](#selecting-the-element-or-variation) efter behov.
+1. Inledningsvis visas innehållet från **[!UICONTROL Main]**-elementet och **[!UICONTROL Master]** (variation). Du kan [välja andra element och/eller variationer](#selecting-the-element-or-variation) efter behov.
 
    ![cfm-6420-01](assets/cfm-6420-01.png)
 
@@ -100,7 +100,7 @@ Innehållsfragmenten aktiverar:
 
 ## Markera elementet eller variationen {#selecting-the-element-or-variation}
 
-Öppna fragmentets **[!UICONTROL Configuration]** dialogruta för att konfigurera fragmentet för användning på den aktuella sidan. Dialogrutan kan vara beroende av vilken komponent som används.
+Öppna fragmentets **[!UICONTROL Configuration]**-dialogruta för att konfigurera fragmentet för användning på den aktuella sidan. Dialogrutan kan vara beroende av vilken komponent som används.
 
 I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland annat:
 
@@ -115,7 +115,7 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
 
 * **[!UICONTROL Element]**
 
-   * The default **[!UICONTROL Main]** will always be available.
+   * Standardvärdet **[!UICONTROL Main]** är alltid tillgängligt.
    * En markering blir tillgänglig om fragmentet skapades med en lämplig mall.
 
    >[!NOTE]
@@ -124,13 +124,13 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
 
 * **[!UICONTROL Variation]**
 
-   * The default **[!UICONTROL Master]** will always be available.
+   * Standardvärdet **[!UICONTROL Master]** är alltid tillgängligt.
    * En markering blir tillgänglig om variationer har skapats för fragmentet.
 
 * **[!UICONTROL Paragraphs]**: ange det eller de stycken som ska ingå:
 
    * **[!UICONTROL All]**
-   * **[!UICONTROL Range]**: t.ex. `1`, `3-5`, `9-*`
+   * **[!UICONTROL Range]**: t.ex.  `1`,  `3-5`,  `9-*`
 
       * **[!UICONTROL Handle headings as their own paragraphs]**
 
@@ -138,23 +138,23 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
 
 ## Snabb anslutning till Fragment Editor {#quick-connection-to-fragment-editor}
 
-Du kan öppna fragmentkällan för redigering (resursen) med hjälp av **[!UICONTROL Edit]** ikonen i komponentverktygsfältet. På så sätt kan du [redigera och hantera innehållsfragmentet](/help/assets/content-fragments.md).
+Du kan öppna fragmentkällan för redigering (resursen) med ikonen **[!UICONTROL Edit]** i komponentverktygsfältet. Detta gör att du kan [redigera och hantera innehållsfragmentet](/help/assets/content-fragments.md).
 
 >[!CAUTION]
 >
 >Som alltid kommer redigering av fragmentkällan att påverka alla sidor som refererar till det innehållsfragmentet.
 
-## Lägga till mellaninnehåll {#adding-in-between-content}
+## Lägger till mellaninnehåll {#adding-in-between-content}
 
-När ett visst innehållsfragment läggs till på sidan finns det en **[!UICONTROL Drag components here]** platshållare mellan varje HTML-stycke (och längst upp/längst ned) i fragmentet.
+När ett visst innehållsfragment läggs till på sidan finns det en **[!UICONTROL Drag components here]**-platshållare mellan varje HTML-stycke (och längst upp/längst ned) i fragmentet.
 
-På så sätt kan du lägga till extra innehåll [däremellan (dvs. mellanliggande innehåll)](/help/assets/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments) i fragmentinnehållet (vid någon av de tillgängliga punkterna) utan att behöva ändra rotfragmentet.
+Detta gör att du kan lägga till extra innehåll [mellan (dvs. mellanliggande innehåll)](/help/assets/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments) fragmentinnehållet (vid någon av de tillgängliga punkterna) utan att behöva ändra rotfragmentet.
 
 För mellanliggande innehåll kan du:
 
 * Lägg till komponenter från [komponentwebbläsaren](/help/sites-authoring/author-environment-tools.md#components-browser).
-* Lägg till resurser från [Resurser-webbläsaren](/help/sites-authoring/author-environment-tools.md#assets-browser).
-* Använd [associerat innehåll](#using-associated-content) som källa för mellanliggande innehåll.
+* Lägg till resurser från [Resursläsaren](/help/sites-authoring/author-environment-tools.md#assets-browser).
+* Använd [Associerat innehåll](#using-associated-content) som källa för mellanliggande innehåll.
 
 >[!CAUTION]
 >
@@ -164,13 +164,13 @@ För mellanliggande innehåll kan du:
 
 >[!NOTE]
 >
->Du kan också [infoga visuella resurser (bilder) i själva](/help/assets/content-fragments-variations.md#inserting-assets-into-your-fragment)fragmentet.
+>Du kan även [infoga visuella resurser (bilder) i själva fragmentet](/help/assets/content-fragments-variations.md#inserting-assets-into-your-fragment).
 >
 >Visuella resurser som infogats i själva fragmentet kopplas till föregående stycke i fragmentet. Det innebär att du inte kan placera innehåll mellan en visuell resurs och föregående stycke.
 
 >[!CAUTION]
 >
->När du har lagt till mellanliggande innehåll i ett innehållsfragment på sidan kan ändringar av strukturen för det underliggande innehållsfragmentet (dvs. i innehållsfragmentets redigerare) leda till felaktiga/oväntade resultat.
+>När du har lagt till mellanliggande innehåll i ett innehållsfragment på sidan kan ändringar av strukturen för det underliggande innehållsfragmentet (dvs. i innehållsfragmentredigeraren) leda till felaktiga/oväntade resultat.
 >
 >När detta inträffar behålls det mellanliggande innehållet som det är:
 >
@@ -188,7 +188,7 @@ Om du har [associerat innehåll](/help/assets/content-fragments-assoc-content.md
 
 >[!NOTE]
 >
->Det finns olika metoder för att lägga till [visuella resurser (t.ex. bilder)](/help/assets/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
+>Det finns olika metoder för att lägga till [visuella resurser (t.ex. bilder)](/help/assets/content-fragments.md#fragments-with-visual-assets) till avsnittet och/eller sidan.
 
 >[!NOTE]
 >
@@ -200,9 +200,9 @@ Här kan du dra resurserna till önskad plats (antingen till en befintlig kompon
 
 ![cfm-6420-03](assets/cfm-6420-03.png)
 
-## Resurser som infogats i fragmentet {#assets-inserted-into-the-fragment}
+## Resurser infogade i fragmentet {#assets-inserted-into-the-fragment}
 
-Om [resurser (t.ex. bilder) har infogats i själva](/help/assets/content-fragments-variations.md#inserting-assets-into-your-fragment)fragmentet är alternativen för att redigera dessa resurser i sidredigeraren begränsade.
+Om [resurser (t.ex. bilder) har infogats i själva avsnittet](/help/assets/content-fragments-variations.md#inserting-assets-into-your-fragment) är alternativen för att redigera dessa resurser i sidredigeraren begränsade.
 
 För en bild kan du till exempel
 
@@ -213,10 +213,10 @@ För en bild kan du till exempel
 
 Andra ändringar, till exempel move, copy, delete, måste göras i fragmentredigeraren.
 
-## Publicering {#publishing}
+## Publicerar {#publishing}
 
 Fragment måste publiceras så att de kan användas på dina publicerade webbsidor:
 
-* Ett fragment kan publiceras efter [att fragmentet har skapats i resurskonsolen](/help/assets/content-fragments-managing.md#publishing-and-referencing-a-fragment).
-* Om ett *opublicerat fragment* används på en sida som publiceras kan fragmentet också publiceras just nu.
+* Ett fragment kan publiceras när [fragmentet har skapats i resurskonsolen](/help/assets/content-fragments-managing.md#publishing-and-referencing-a-fragment).
+* Om ett *opublicerat fragment* används på en sida som publiceras, kan fragmentet även publiceras just nu.
 
