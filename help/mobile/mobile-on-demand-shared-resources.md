@@ -38,22 +38,22 @@ Innehållshanteringsåtgärder är byggstenar som används för att skapa och ha
 
 Vanligtvis krävs det att innehåll som artiklar har samma utseende och känsla för alla författare och till och med appar. Därför är det viktigt att kunna erbjuda skript, CSS och teckensnitt till alla. Den här åtgärden skickar sådana delade resurser till Mobile On-Demand som sedan kan användas efter behov.
 
-När du har konfigurerat och associerat din app till en molnkonfiguration kan du överföra dina delade resurser. Om du vill ha mer information om hur du kopplar din app till en molnkonfiguration klickar du [här](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md).
+När du har konfigurerat och associerat din app till en molnkonfiguration kan du överföra dina delade resurser. Klicka [här](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md) om du vill veta mer om hur du kopplar din app till en molnkonfiguration.
 
 >[!NOTE]
 >
->Delade resurser använder ContentSync för att samla in alla olika resurser. Mer information finns i [Mobile with ContentSync](/help/mobile/mobile-ondemand-contentsync.md) .
+>Delade resurser använder ContentSync för att samla in alla olika resurser. Mer information finns i [Mobile with ContentSync](/help/mobile/mobile-ondemand-contentsync.md).
 
 Så här överför du dina delade resurser för en artikel:
 
-1. Markera artikeln på panelen **Hantera artiklar** .
+1. Markera artikeln i rutan **Hantera artiklar**.
 1. Klicka på **Överför delade resurser** för att överföra dina delade HTML-resurser.
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
 ### Nästa steg {#the-next-step}
 
-När du har lärt dig skapa och publicera innehåll kan du läsa mer
+När du har lärt dig skapa och publicera innehåll, se
 
 * [Utveckla AEM för AEM Mobile On-demand Services](/help/mobile/aem-mobile-on-demand.md)
 * [Administrera innehåll för användning av AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)
