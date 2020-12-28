@@ -22,31 +22,31 @@ ht-degree: 0%
 
 Adobe Analytics använder egenskapen `s.pageName` för att unikt identifiera sidor och för att associera data som samlas in för sidorna. Vanligtvis utför du följande uppgifter i AEM för att tilldela ett värde till den här egenskapen som AEM skickar till Analytics:
 
-* Använd molntjänstramverket för Analytics för att mappa en CQ-variabel till `s.pageName` egenskapen Analytics. (Se [Mappa komponentdata med Adobe Analytics-egenskaper](/help/sites-administering/adobeanalytics-mapping.md).)
+* Använd molntjänstramverket för Analytics för att mappa en CQ-variabel till egenskapen `s.pageName` för Analytics. (Se [Mappa komponentdata med Adobe Analytics Properties](/help/sites-administering/adobeanalytics-mapping.md).)
 
-* Designa sidkomponenten så att den innehåller CQ-variabeln som du mappar till `s.pageName` egenskapen. (Se [Implementera Adobe Analytics Tracking för anpassade komponenter](/help/sites-developing/extending-analytics-components.md).)
+* Designa sidkomponenten så att den innehåller CQ-variabeln som du mappar till egenskapen `s.pageName`. (Se [Implementera Adobe Analytics-spårning för anpassade komponenter](/help/sites-developing/extending-analytics-components.md).)
 
-Om du vill visa analysrapportdata i Sites-konsolen och i Content Insight AEM värdet för egenskapen `s.pageName` för varje sida. Java API:t för AEM Analytics definierar det gränssnitt som du implementerar för att ge webbplatskonsolen och innehållsinsikter värdet för `AnalyticsPageNameProvider` `s.pageName` egenskapen. Tjänsten åtgärdar egenskapen pageName på servern för rapportering, eftersom den kan ställas in dynamiskt med Javascript på klienten för spårning. `AnaltyicsPageNameProvider`
+Om du vill visa analysrapportdata i Sites-konsolen och i Content Insight AEM värdet för egenskapen `s.pageName` för varje sida. Java-API:t för AEM Analytics definierar det `AnalyticsPageNameProvider`-gränssnitt som du implementerar för att ge webbplatskonsolen och Content Insights värdet för egenskapen `s.pageName`. Din `AnaltyicsPageNameProvider`-tjänst löser egenskapen pageName på servern i rapporteringssyfte, eftersom den kan ställas in dynamiskt med Javascript på klienten för spårningsändamål.
 
 ## Sidnamnsprovidertjänsten för standardanalys {#the-default-analytics-page-name-provider-service}
 
-Tjänsten är standardtjänsten som avgör `DefaultPageNameProvider` värdet på den `s.pageName` egenskap som används för att hämta analysdata för en sida. Tjänsten fungerar tillsammans med AEM på grundsidan ( `/libs/foundation/components/page`). Den här sidkomponenten definierar följande CQ-variabler som ska mappas till `s.pageName` egenskapen:
+Tjänsten `DefaultPageNameProvider` är standardtjänsten som avgör värdet på egenskapen `s.pageName` som ska användas för att hämta analysdata för en sida. Tjänsten fungerar tillsammans med komponenten AEM Foundation page ( `/libs/foundation/components/page`). Den här sidkomponenten definierar följande CQ-variabler som ska mappas till egenskapen `s.pageName`:
 
 * `pagedata.path`: Värdet ställs in på sidans sökväg.
 * `pagedata.title`: Värdet ställs in på sidrubriken.
 * `pagedata.navTitle`: Värdet ställs in på sidnavigeringsrubriken.
 
-Tjänsten avgör `DefaultPageNameProvider` vilken av dessa CQ-variabler som mappas till `s.pageName` egenskapen i molntjänstramverket för Analytics. Tjänsten avgör sedan vilken sidegenskap som ska användas för att hämta analysrapportdata:
+Tjänsten `DefaultPageNameProvider` avgör vilken av dessa CQ-variabler som mappas till egenskapen `s.pageName` i molntjänstramverket för Analytics. Tjänsten avgör sedan vilken sidegenskap som ska användas för att hämta analysrapportdata:
 
-* `pagedata.path`: Tjänsten använder `page.getPath()`
+* `pagedata.path`: Tjänsten använder  `page.getPath()`
 
-* `pagedata.title`: Tjänsten använder `page.getTitle()`
+* `pagedata.title`: Tjänsten använder  `page.getTitle()`
 
-* `pagedata.navTitle`: Tjänsten använder `page.getNavigationTitle()`
+* `pagedata.navTitle`: Tjänsten använder  `page.getNavigationTitle()`
 
-Objektet är `page` &quot;the&quot; är [`com.day.cq.wcm.api.Page`](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) Java-objektet för sidan.
+Objektet `page` är [ `com.day.cq.wcm.api.Page`](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) Java-objektet för sidan.
 
-Om du inte kopplar en CQ-variabel till `s.pageName` egenskapen i ramverket `s.pageName` genereras värdet för från sidsökvägen. Sidan med sökvägen `/content/geometrixx/en` använder till exempel värdet `content:geometrixx:en` för `s.pageName`.
+Om du inte mappar en CQ-variabel till egenskapen `s.pageName` i ramverket genereras värdet för `s.pageName` från sidsökvägen. Sidan med sökvägen `/content/geometrixx/en` använder till exempel värdet `content:geometrixx:en` för `s.pageName`.
 
 >[!NOTE]
 >
@@ -54,18 +54,18 @@ Om du inte kopplar en CQ-variabel till `s.pageName` egenskapen i ramverket `s.pa
 
 ## Bevara kontinuitet i analysrapporter {#maintaining-continuity-in-analytics-reporting}
 
-För att upprätthålla en komplett historik med analysdata för en sida måste värdet för egenskapen s.pageName som används för en sida aldrig ändras. Det är dock enkelt att ändra de analysegenskaper som definieras av bassidans komponent. Om du till exempel flyttar en sida ändras värdet på `pagedata.path` och kontinuiteten i rapporthistoriken bryts:
+För att upprätthålla en komplett historik med analysdata för en sida måste värdet för egenskapen s.pageName som används för en sida aldrig ändras. Det är dock enkelt att ändra de analysegenskaper som definieras av bassidans komponent. Om du till exempel flyttar en sida ändras värdet för `pagedata.path` och kontinuiteten i rapporthistoriken bryts:
 
 * Data som samlades in för föregående sökväg är inte längre kopplade till sidan.
 * Om en annan sida använder sökvägen som en annan sida använde, ärver den andra sidan informationen för den sökvägen.
 
-För att säkerställa kontinuitet i rapporteringen `s.pageName` bör värdet för ha följande egenskaper:
+För att säkerställa kontinuitet i rapporteringen bör värdet `s.pageName` ha följande egenskaper:
 
 * Unik.
 * Stabil.
 * Kan läsas av människor.
 
-En anpassad sidkomponent kan till exempel innehålla en sidegenskap som författare använder för att ange ett unikt ID för sidan som används som värde för `s.pageProperties` egenskapen:
+En anpassad sidkomponent kan till exempel innehålla en sidegenskap som författare använder för att ange ett unikt ID för sidan som används som värde för egenskapen `s.pageProperties`:
 
 * Sidan innehåller en analysvariabel som är inställd på värdet för det unika ID som lagras i sidegenskapen.
 * Analysvariabeln mappas till egenskapen `s.pageProperties` i Analytics-ramverket.
@@ -73,37 +73,37 @@ En anpassad sidkomponent kan till exempel innehålla en sidegenskap som författ
 
 >[!NOTE]
 >
->Be er Analytics-konsult om hjälp med att utveckla en effektiv strategi för ert `s.pageName` värde.
+>Be din Analytics-konsult om hjälp med att utveckla en effektiv strategi för ditt `s.pageName`-värde.
 
-### Implementera en leverantör av sidnamn för analyser {#implementing-an-analytics-page-name-provider-service}
+### Implementera en provider för sidnamn för analyser {#implementing-an-analytics-page-name-provider-service}
 
-Implementera gränssnittet som en OSGi-tjänst för att anpassa logiken som hämtar `com.day.cq.analytics.sitecatalyst.AnalyticsPageNameProvider` `s.pageName` egenskapsvärdet. Webbplatssidans analys och Content Insight använder tjänsten för att hämta rapportdata från Analytics.
+Implementera gränssnittet `com.day.cq.analytics.sitecatalyst.AnalyticsPageNameProvider` som en OSGi-tjänst för att anpassa logiken som hämtar egenskapsvärdet `s.pageName`. Webbplatssidans analys och Content Insight använder tjänsten för att hämta rapportdata från Analytics.
 
 Gränssnittet AnalyticsPageNameProvider definierar två metoder som du måste implementera:
 
-* `getPageName`: Returnerar ett `String` värde som representerar värdet som ska användas som `s.pageName` egenskap.
+* `getPageName`: Returnerar ett  `String` värde som representerar värdet som ska användas som  `s.pageName` egenskap.
 
-* `getResource`: Returnerar ett `org.apache.sling.api.resource.Resource` objekt som representerar sidan som är associerad med `s.pageName` egenskapen.
+* `getResource`: Returnerar ett  `org.apache.sling.api.resource.Resource` objekt som representerar sidan som är associerad med  `s.pageName` egenskapen.
 
-Båda metoderna tar ett `com.day.cq.analytics.sitecatalyst.AnalyticsPageNameContext` objekt som parameter. Klassen ger `AnalyticsPageNameContext` information om kontexten för analysanropen:
+Båda metoderna använder ett `com.day.cq.analytics.sitecatalyst.AnalyticsPageNameContext`-objekt som parameter. Klassen `AnalyticsPageNameContext` ger information om kontexten för analysanropen:
 
 * Sidresursens grundsökväg.
 * Objektet `Framework` för molntjänstkonfigurationen för Analytics.
-* Sidans `Resource` objekt.
-* Sidans `ResourceResolver` objekt.
+* Objektet `Resource` för sidan.
+* Objektet `ResourceResolver` för sidan.
 
 Klassen innehåller också en set för sidnamnet.
 
 ### Exempel på implementering av AnalyticsPageNameProvider {#example-analyticspagenameprovider-implementation}
 
-I följande exempel `AnalyticsPageNameProvider` stöds en anpassad sidkomponent:
+Följande exempel på `AnalyticsPageNameProvider`-implementering stöder en anpassad sidkomponent:
 
 * Komponenten utökar bassidans komponent.
-* Dialogrutan innehåller ett fält som författare använder för att ange `s.pageName` egenskapens värde.
-* Egenskapsvärdet lagras i egenskapen pageName för `jcr:content`noden för sidinstanserna.
-* Den analysegenskap som lagrar `s.pageName` egenskapen anropas `pagedata.pagename`. Den här egenskapen mappas till egenskapen `s.pageName` i Analytics-ramverket.
+* Dialogrutan innehåller ett fält som författare använder för att ange värdet för egenskapen `s.pageName`.
+* Egenskapsvärdet lagras i egenskapen pageName för noden `jcr:content`för sidinstanserna.
+* Den analysegenskap som lagrar egenskapen `s.pageName` kallas `pagedata.pagename`. Den här egenskapen mappas till egenskapen `s.pageName` i Analytics-ramverket.
 
-Följande implementering av `getPageName` metoden returnerar värdet för nodegenskapen pageName om ramverksmappningen är korrekt konfigurerad:
+Följande implementering av metoden `getPageName` returnerar värdet för nodegenskapen pageName om ramverksmappningen är korrekt konfigurerad:
 
 ```java
 public String getPageName(AnalyticsPageNameContext context) {
