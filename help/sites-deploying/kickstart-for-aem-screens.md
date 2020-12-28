@@ -17,5 +17,5 @@ ht-degree: 18%
 ---
 
 
-# (Omdirigering) Kickstart-guide{#redirect-kickstart-guide}
+# (Omdirigering)Kickstartguide{#redirect-kickstart-guide}
 
