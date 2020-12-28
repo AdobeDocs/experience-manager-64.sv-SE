@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # PUBLICERA INTE, MEN ANPASSA INTE DELETE-datatyper för modeller för innehållsfragment{#do-not-publish-but-do-not-delete-customizing-data-types-for-content-fragment-models}
 
-[Innehållsfragment](/help/assets/content-fragments.md) baseras på [innehållsfragmentmodeller](/help/assets/content-fragments-models.md). Dessa modeller är uppbyggda av [element](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) av olika datatyper.
+[Innehållsfragmentering ](/help/assets/content-fragments.md) baseras på  [innehållsfragmentmodeller](/help/assets/content-fragments-models.md). Dessa modeller är uppbyggda av [element](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) av olika datatyper.
 
 Det finns olika datatyper som är tillgängliga direkt, bland annat enkelradig text, multiradig text, numeriska fält, booleska väljare, alternativ på rullgardinsmenyn, datum och tid med mera. AEM kan välja datatyper baserat på redigeringsmetoden för motsvarande fragment. På så sätt kan du hantera enkla textmodeller till komplexa modeller med olika typer av innehåll och tillhörande fragmentredigeringsupplevelse.
 
@@ -37,22 +37,22 @@ Alla färdiga datatyper deklareras under:
 
 `/libs/settings`
 
-Du kan lägga till nya datatyper genom att täcka över nodstrukturen enligt följande `/apps`:
+Du kan lägga till nya datatyper genom att täcka över nodstrukturen enligt följande under `/apps`:
 
 `/apps/settings/dam/cfm/models/formbuilderconfig/datatypes/items`
 
 >[!CAUTION]
 >
->Du får inte ändra något i `/libs` banan.
+>Du får inte ändra något i `/libs`-sökvägen.
 >
->Allt som kan komma att ändras vid nästa uppgradering, eller vid installation av en tjänst eller ett korrigeringspaket.
+>Allt som kan ändras vid nästa uppgradering, eller vid installation av en tjänst eller ett korrigeringspaket.
 
 ## Egenskaper {#properties}
 
 Nodegenskaper används för att definiera datatyperna:
 
 * [Egenskaper för datatyper](#data-type-properties)
-* och i dessa [fältEgenskaper](#fieldproperties)
+* och i dessa [fieldProperties](#fieldproperties)
 
 ### Egenskaper för datatyp {#data-type-properties}
 
@@ -66,7 +66,7 @@ Alla följande egenskaper måste finnas för att datatypen ska finnas i modellre
 
 * `fieldIcon`
 
-   [CoralUI-ikonen](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableicons) som representerar datatypen i modellredigeringsgränssnittet.
+   [CoralUI-](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableicons) ikonen representerar datatypen i modellredigeringsgränssnittet.
 
 * ` [fieldProperties](#fieldproperties)`
 
@@ -74,7 +74,7 @@ Alla följande egenskaper måste finnas för att datatypen ska finnas i modellre
 
 * `fieldResourceType`
 
-   Den Sling-resurstyp som används för att återge datatypen i ett innehållsfragment. För datatyper som kan återges på olika sätt (t.ex. som enkel textinmatning och/eller flerradig textinmatning) måste den här egenskapen skapas som en array som innehåller alla resurstyper. Egenskapen läggs till automatiskt för att användaren ska kunna `renderasfield` `fieldProperties` välja den resurstyp som han/hon behöver lägga till i modellen.
+   Den Sling-resurstyp som används för att återge datatypen i ett innehållsfragment. För datatyper som kan återges på olika sätt (t.ex. som enkel textinmatning och/eller flerradig textinmatning) måste den här egenskapen skapas som en array som innehåller alla resurstyper. Egenskapen `renderasfield` läggs automatiskt till i `fieldProperties` så att användaren kan välja vilken resurstyp som ska läggas till i modellen.
 
 * `fieldPropResourceType`
 
@@ -82,16 +82,16 @@ Alla följande egenskaper måste finnas för att datatypen ska finnas i modellre
 
    För datatypen:
 
-   * Enkelradig text, `fieldPropResourceType` skulle vara en `textfield` komponent
-   * Boolean, `fieldPropResourceType` skulle vara en `checkbox` komponent
+   * Enkelradig text, skulle `fieldPropResourceType` vara en `textfield`-komponent
+   * Boolean: `fieldPropResourceType` skulle vara en `checkbox`-komponent
 
 * `fieldViewResourceType`
 
-   Den Sling-resurstyp som används för att återge datatypen i förhandsgranskningen, när modellen skapas. När användaren drar datatypen till vänster om modellredigeraren representerar egenskapen den komponent som återges där `fieldViewResourceType` . Detta används för fall där du inte vill återge den fullständiga komponenten, men bara vill återge en ersättning som minimerar overheadkostnaden för modellredigeraren.
+   Den Sling-resurstyp som används för att återge datatypen i förhandsgranskningen, när modellen skapas. När användaren drar datatypen till vänster om modellredigeraren representerar egenskapen `fieldViewResourceType` komponenten som återges där. Detta används för fall där du inte vill återge den fullständiga komponenten, men bara vill återge en ersättning som minimerar overheadkostnaden för modellredigeraren.
 
 * `fieldTitle`
 
-   Egenskap som definierar titeln för den här datatypen. Exempel: **Enkelradig text** för en `textfield` komponent, **Flerradig text** för en flerfältskomponent.
+   Egenskap som definierar titeln för den här datatypen. Exempel: **Enkelradig text** för en `textfield`-komponent, **Flerradig text** för en flerfältskomponent.
 
 * `valueType`
 
@@ -103,7 +103,7 @@ Alla följande egenskaper måste finnas för att datatypen ska finnas i modellre
 
 * `listOrder`
 
-   Varje datatyp behöver ett värde som representerar dess ordning i listan. Detta används för att säkerställa att de olika fälten ordnas korrekt (läggs till/flyttas genom att användaren drar och släpper) när modellredigeraren sparas. Värdet måste vara ett heltal och du bör tilldela talet i stigande ordning. När du skapar en ny datatyp är det bäst att tilldela värdet baserat på den sista datatypen i listan (det högsta värdet av `listOrder` värdet som finns i datatyperna).
+   Varje datatyp behöver ett värde som representerar dess ordning i listan. Detta används för att säkerställa att de olika fälten ordnas korrekt (läggs till/flyttas genom att användaren drar och släpper) när modellredigeraren sparas. Värdet måste vara ett heltal och du bör tilldela talet i stigande ordning. När du skapar en ny datatyp är det bäst att tilldela värdet baserat på den senaste datatypen i listan (det högsta värdet på `listOrder`-värdet som finns i datatyperna).
 
 #### Mappningar {#mappings}
 
@@ -125,7 +125,7 @@ Alla följande egenskaper måste finnas för att datatypen ska finnas i modellre
    <td>text-multi</td> 
   </tr> 
   <tr> 
-   <td>Number (heltal/lång)<br /> </td> 
+   <td>Tal (heltal/lång)<br /> </td> 
    <td>long</td> 
    <td>tal</td> 
   </tr> 
@@ -137,7 +137,7 @@ Alla följande egenskaper måste finnas för att datatypen ska finnas i modellre
   <tr> 
    <td>Boolesk</td> 
    <td>boolean</td> 
-   <td>boolean</td> 
+   <td>boolesk</td> 
   </tr> 
   <tr> 
    <td>Datum och tid</td> 
@@ -159,7 +159,7 @@ Alla följande egenskaper måste finnas för att datatypen ska finnas i modellre
 
 >[!NOTE]
 >
->Vissa typer (till exempel `string``long`bland annat) kan vara flervärdesvärden. I det här fallet kapslas komponenten som används för återgivning och redigering vanligtvis in av en flerfältskomponent ( `granite/ui/components/coral/foundation/form/multifield`). Undantaget är taggar, där redigeringskomponenten ansvarar för att återge den korrekt.
+>Vissa typer (till exempel `string`, `long`) kan vara flervärden. I det här fallet kapslas komponenten som används för återgivning och redigering vanligtvis in av en flerfältskomponent ( `granite/ui/components/coral/foundation/form/multifield`). Undantaget är taggar, där redigeringskomponenten ansvarar för att återge den korrekt.
 
 ### fieldProperties {#fieldproperties}
 
@@ -167,27 +167,27 @@ Konfigurationsegenskaperna för varje datatyp. Värden för `fieldProperties`:
 
 * `base`
 
-   Detta är grunden för alla `fieldProperties` komponenter. Definitionen ligger under `/libs/dam/cfm/models/editor/components/datatypeproperties/base`.
+   Detta är grunden för alla `fieldProperties`-komponenter. Definitionen finns under `/libs/dam/cfm/models/editor/components/datatypeproperties/base`.
 
-   Den innehåller variabeln `fieldRoot`, som sedan `fieldProperties` kan användas när indata skapas för att hämta rätt sökväg.
+   Den innehåller variabeln `fieldRoot`, som efterföljande `fieldProperties` kan använda när indata skapas för att hämta rätt sökväg.
 
-   Exempel: för att få rätt sökväg för en **fältetikett** behöver du nyckeln för att identifiera den komponent som det hör till, ska indata för det här fältet vara `fieldRoot` + `<*fieldLabel*>`
+   Exempel: för att få rätt sökväg för en **fältetikett** behöver du nyckeln för att identifiera den komponent som det här tillhör, ska indata för det här fältet vara `fieldRoot` + `<*fieldLabel*>`
 
 * `checkboxfields`
 
-   Den här komponenten lägger till standardkryssrutan för `Boolean` datatypen samt Sling-parametrarna `checked@Delete` och `checked@TypeHint`.
+   Den här komponenten lägger till standardkryssrutan för datatypen `Boolean` samt Sling-parametrarna `checked@Delete` och `checked@TypeHint`.
 
 * `datepickerfields`
 
-   Komponent som lägger till de dolda indata som behövs för att datumväljarkomponenten ska fungera. Innehåller att skapa egenskaperna `defaultDateField`, `displayedFormat`, `emptyText`, `valueFormat``minDate` och `maxDate`.
+   Komponent som lägger till de dolda indata som behövs för att datumväljarkomponenten ska fungera. Innehåller att skapa egenskaperna `defaultDateField`, `displayedFormat`, `emptyText`, `valueFormat`, `minDate` och `maxDate`.
 
 * `datetimepickerfields`
 
-   Detta lägger till ett urvalsfält för datatypen för att skilja mellan `Date&Time` och `Date` `Date&Time` alternativ.
+   Detta lägger till ett urvalsfält för datatypen `Date&Time` för att skilja mellan alternativen `Date` och `Date&Time`.
 
 * `datevaluefield`
 
-   Då läggs en datumväljare till i egenskaperna, så att användaren kan välja en standarddatatyp för `Date&Time` datatypen.
+   Detta lägger till en datumväljare i egenskaperna, så att en användare kan välja en standard för datatypen `Date&Time`.
 
 * `descriptionfield`
 
@@ -195,61 +195,61 @@ Konfigurationsegenskaperna för varje datatyp. Värden för `fieldProperties`:
 
 * `labelfield`
 
-   Komponent som lägger till en `textfield` inmatning som lägger till fältetiketten för en datatyp som kan ha fältetiketter.
+   Komponent som lägger till `textfield`-indata som lägger till fältetiketten för en datatyp som kan ha fältetiketter.
 
 * `maptopropertyfield`
 
-   Den här komponenten lägger till `Name` fältet i egenskaperna och ger en identifierare för den markerade komponenten i en datatyp. Den ska finnas i alla datatyper.
+   Den här komponenten lägger till fältet `Name` i egenskaperna och ger en identifierare till den markerade komponenten i en datatyp. Den ska finnas i alla datatyper.
 
 * `maxlengthfield`
 
-   Den används för att lägga till egenskapen som ska användas med datatyper som accepterar den här egenskapen. `maxLength` Exempel: med **enkelradstext**, **nummer** osv.
+   Den används för att lägga till egenskapen `maxLength` för användning med datatyper som accepterar den här egenskapen. Exempel: med **enkelradig text**, **Number** osv.
 
 * `multieditorfield`
 
-   Då läggs alla dolda fält till så att flerradsredigeraren kan användas, vilket representeras av datatypen **Flerradig text** .
+   Då läggs alla dolda fält till som behövs för att flerradsredigeraren ska fungera, vilket representeras av datatypen **Flerradig text**.
 
 * `mvfields`
 
-   Komponent som lägger till alla dolda fält som behövs för att en flerfältskomponent ska fungera. För det andra alternativet för datatypen **Enkelradig text** . Detta bör läggas till för alla komponenter som återges som ett multifält.
+   Komponent som lägger till alla dolda fält som behövs för att en flerfältskomponent ska fungera. För det andra alternativet för datatypen **Single Line Text**. Detta bör läggas till för alla komponenter som återges som ett multifält.
 
 * `numbertypefield`
 
-   Välj ett alternativ för datatypen **Number** som väljer mellan **heltal** eller **bråktal** för datatypen **Number** .
+   Välj ett alternativ för datatypen **Number** som väljer mellan **Integer** eller **Fraction** för datatypen **Number**.
 
 * `numbervaluefield`
 
-   En `numberfield` standardvärdesväljare för **Number** `type.options` Detta lägger till alternativindata för datatypen **Enumeration** , som används för att bestämma värdena för komponenten select box.
+   En `numberfield`-standardvärdesväljare för datatypen **Number** `type.options` Detta lägger till alternativindata för datatypen **Enumeration**, som används för att fastställa värdena för markeringsrutekomponenten.
 
 * `placeholderfield`
 
-   Detta är ett textfält som fungerar som indata för en komponents `emptyText` egenskap. Detta bör användas av alla datatyper som accepterar en platshållare (som inte är särskilt komplicerad). t.ex. **Enkelradig text**, **Nummer** osv.).
+   Detta är ett textfält som fungerar som indata för en komponents `emptyText`-egenskap. Detta bör användas av alla datatyper som accepterar en platshållare (som inte är särskilt komplicerad). t.ex. **Enkelradig text**, **Tal** osv.).
 
 * `renderasfield`
 
-   Detta är den komponent som återges automatiskt när flera `fieldResourceTypes` finns i datatypsnodens egenskap.
+   Det här är den komponent som återges automatiskt när flera `fieldResourceTypes` finns i datatypsnodens egenskap.
 
 * `requiredfield`
 
-   Det här är en kryssruta som representerar en komponents `required` egenskap. Eftersom de flesta komponenter accepterar `required` fältet kan det här fältet användas för de flesta datatyper.
+   Det här är en kryssruta som representerar egenskapen `required` för en komponent. Eftersom de flesta komponenter accepterar fältet `required` kan det här fältet användas för de flesta datatyper.
 
 * `tagsfields`
 
-   Komponenter som lägger till de indata som krävs för att en `tagfield` komponent ska återges, som används av datatypen **Tags** .
+   Komponenter som lägger till de indata som krävs för att en `tagfield`-komponent ska återges, används av datatypen **Taggar**.
 
 * `tagsroot`
 
-   En sökvägsväljare som används av **datatypen Tags** för att ange rotsökvägen för `tagsfield` komponenten.
+   En sökvägsväljare som används av datatypen **Taggar** för att ange rotsökvägen för `tagsfield`-komponenten.
 
 * `textfield`
 
-   Används av `Boolean` datatypen för att ange fältetiketten för kryssrutan som definieras av den här datatypen.
+   Används av datatypen `Boolean` för att ange fältetiketten för kryssrutan som definieras av den här datatypen.
 
 * `textvaluefield`
 
-   Standardvärdeegenskapen för datatypen **Single Line Text** .
+   Standardvärdeegenskapen för datatypen **Single Line Text**.
 
-## Skapa din datatyp {#creating-your-data-type}
+## Skapar din datatyp {#creating-your-data-type}
 
 Om du vill skapa en egen datatyp måste du:
 
@@ -258,11 +258,11 @@ Om du vill skapa en egen datatyp måste du:
 
 Du kan sedan [använda din datatyp](#using-your-data-type).
 
-Du kan också [skapa egna `fieldProperties`](#creating-your-own-fieldproperties-property).
+Du kan också [skapa en egen `fieldProperties`](#creating-your-own-fieldproperties-property).
 
 ### Skapa nodstrukturen {#creating-the-node-structure}
 
-Nodstrukturen måste skapas under `/apps` för att datatyperna ska överlappa varandra. Om den inte redan finns måste du skapa:
+Nodstrukturen måste skapas under `/apps` för att datatyperna ska kunna överlappas. Om den inte redan finns måste du skapa:
 
 1. Om den inte redan finns måste du skapa:
 
@@ -296,19 +296,19 @@ Nodstrukturen måste skapas under `/apps` för att datatyperna ska överlappa va
    * `fieldPropResourceType`
    * `fieldViewResourceType`
 
-   Dessa definierar hur komponenterna för din datatyp ska återges. De kan vara vilken komponent som helst. inklusive dina egna anpassade komponenter (behöver matchande uppsättning ` [fieldProperties](#fieldproperties)`).
+   Dessa definierar hur komponenterna för din datatyp ska återges. De kan vara vilken komponent som helst. inklusive dina egna anpassade komponenter (behöver en matchande uppsättning ` [fieldProperties](#fieldproperties)`).
 
    Definiera dessa egenskaper med rätt värden på noden för din datatyp.
 
-1. Fastställ vilka ` [fieldProperties](#fieldproperties)` som ska användas. Detta beror på vilka attribut eller egenskaper du `fieldResourceType` behöver.
+1. Fastställ ` [fieldProperties](#fieldproperties)` som ska användas. Detta beror på de attribut eller egenskaper som `fieldResourceType` behöver.
 
-   En `granite/ui/components/coral/foundation/form/textfield`ska t.ex. ha ett **etikettnamn**, en **maximal längd**, en **platshållartext** och en **standardvärde** .
+   En `granite/ui/components/coral/foundation/form/textfield`måste till exempel ha ett **etikettnamn**, en **maximal längd**, en **platshållartext** och en **standardvärde**-egenskap.
 
-   Du kan välja bland de färdiga [fältegenskaperna](#fieldproperties)eller [skapa egna egenskaper](#creating-your-own-fieldproperties-property).
+   Du kan välja bland de färdiga [fieldProperties](#fieldproperties) eller [skapa egna egenskaper](#creating-your-own-fieldproperties-property).
 
    Definiera dessa egenskaper med rätt värden på noden för din datatyp.
 
-1. Bestäm värden för följande [datatypsegenskaper](#data-type-properties):
+1. Fastställ värden för följande [datatypsegenskaper](#data-type-properties):
 
    * `fieldIcon`
    * `fieldTitle`
@@ -322,15 +322,15 @@ Nodstrukturen måste skapas under `/apps` för att datatyperna ska överlappa va
 
 När du har sparat den här nodstrukturen, med alla egenskaper tillämpade, kan du öppna en modell med modellredigeraren och se och använda den nya datatypen.
 
-## Skapa en egen fieldProperties-egenskap {#creating-your-own-fieldproperties-property}
+## Skapar en egen fieldProperties-egenskap {#creating-your-own-fieldproperties-property}
 
-Du kan välja bland färdiga [fältEgenskaper](#fieldproperties)eller skapa egna:
+Du kan välja bland de färdiga [fieldProperties](#fieldproperties) eller skapa en egen:
 
 1. Skapa en komponent under:
 
    `/apps/dam/cfm/models/editor/components/datatypeproperties/`
 
-   Om sökvägen inte finns kan du skapa den med `nt:folder` noder.
+   Om sökvägen inte finns kan du skapa den med `nt:folder`-noder.
 
    1. För att få åtkomst till variablerna bör den här komponenten utöka:
 
@@ -342,6 +342,6 @@ Du kan välja bland färdiga [fältEgenskaper](#fieldproperties)eller skapa egna
 
    1. Den här komponenten bör antingen återge ett fält (om en användare behöver lägga till data) eller en dold inmatning med de egenskaper som behövs för din datatyp. En multifältskomponent kräver till exempel en underordnad nod med den typ av fält som den ska duplicera, och därför bör det finnas en inmatning som kan skapa (med hjälp av sling POST-mekanik) en underordnad nod av en viss typ.
 
-1. Komponentens basnamn bör läggas till `fieldProperties`.
+1. Komponentens basnamn bör läggas till i `fieldProperties`.
 1. Upprepa för alla egenskaper du behöver.
 
