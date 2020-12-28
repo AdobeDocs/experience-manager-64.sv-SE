@@ -38,7 +38,7 @@ ExactTarget-konfigurationer kan läggas till via molntjänster eller verktyg. B�
 Så här skapar du en ExactTarget-konfiguration i Cloud Services:
 
 1. Klicka på **Cloud Services** på välkomstsidan. (Eller direkt åtkomst på `https://<hostname>:<port>/etc/cloudservices.html`.)
-1. Klicka på **ExactTarget** och sedan **Configure**. Konfigurationsfönstret ExactTarget öppnas.
+1. Klicka på **ExactTarget** och **Konfigurera**. Konfigurationsfönstret ExactTarget öppnas.
 
    ![chlimage_1-182](assets/chlimage_1-182.png)
 
@@ -47,17 +47,17 @@ Så här skapar du en ExactTarget-konfiguration i Cloud Services:
    ![chlimage_1-31](assets/chlimage_1-31.jpeg)
 
 1. Ange användarnamn, lösenord och välj en API-slutpunkt (till exempel **https://webservice.exacttarget.com/Service.asmx**).
-1. Klicka på **Anslut till ExactTarget.** När du har anslutit visas en dialogruta om att anslutningen lyckades. Klicka på **OK** för att stänga fönstret.
+1. Klicka på **Anslut till ExactTarget.** När du har anslutit visas en dialogruta om att anslutningen lyckades. Klicka på **OK** för att avsluta fönstret.
 
    ![chlimage_1-32](assets/chlimage_1-32.jpeg)
 
-1. Välj ett konto, om det är tillgängligt. Kontot är till för Enterprise 2.0-kunder. Click **OK**.
+1. Välj ett konto, om det är tillgängligt. Kontot är till för Enterprise 2.0-kunder. Klicka på **OK**.
 
    ExactTarget har konfigurerats. Du kan redigera konfigurationen genom att klicka på **Redigera**. Du kan gå till ExactTarget genom att klicka på **Gå till ExactTarget**.
 
 1. AEM har nu en datatilläggsfunktion. Du kan importera ExactTarget-datatilläggskolumner. Detta kan konfigureras genom att klicka på plustecknet (+) som visas förutom den EXactTarget-konfiguration som skapades. Alla befintliga datatillägg kan väljas i listrutan. Mer information om hur du konfigurerar datatillägg finns i [ExactTarget-dokumentationen](https://help.exacttarget.com/en/documentation/exacttarget/subscribers/data_extensions_and_data_relationships).
 
-   Importerade datatilläggskolumner kan senare användas via komponenten **Text och Personalization** .
+   Importerade datatilläggskolumner kan senare användas via komponenten **Text och personalisering**.
 
    ![chlimage_1-33](assets/chlimage_1-33.jpeg)
 
@@ -65,13 +65,13 @@ Så här skapar du en ExactTarget-konfiguration i Cloud Services:
 
 Så här skapar du en ExactTarget-konfiguration i verktygen:
 
-1. På välkomstsidan klickar du på **Verktyg**. Eller navigera dit direkt genom att gå till `https://<hostname>:<port>/misadmin#/etc`.
-1. Välj **Verktyg**, **Cloud Services, konfigurationer och** sedan **ExactTarget**.
-1. Klicka på **Ny** för att öppna fönstret **Skapa sida **.
+1. Klicka på **Verktyg** på välkomstsidan. Eller navigera dit direkt genom att gå till `https://<hostname>:<port>/misadmin#/etc`.
+1. Välj **Verktyg**, sedan **Cloud Services,** och sedan **ExactTarget**.
+1. Klicka på **Nytt** för att öppna fönstret **Skapa sida **.
 
    ![chlimage_1-34](assets/chlimage_1-34.jpeg)
 
-1. Ange **Titel** och eventuellt **Namn** och klicka på **Skapa**.
+1. Ange **titeln** och eventuellt **namnet** och klicka på **Skapa**.
 1. Ange konfigurationsinformationen enligt steg 4 i föregående procedur. Följ den proceduren för att slutföra konfigurationen av ExactTarget.
 
 ### Lägga till flera konfigurationer {#adding-multiple-configurations}
@@ -79,5 +79,5 @@ Så här skapar du en ExactTarget-konfiguration i verktygen:
 Så här lägger du till flera konfigurationer:
 
 1. Klicka på **Cloud Services** på välkomstsidan och klicka på **ExactTarget**. Klicka på knappen **Visa konfigurationer** som visas om en eller flera ExactTarget-konfigurationer är tillgängliga. Alla tillgängliga konfigurationer visas.
-1. Klicka på **+** -tecknet bredvid Tillgängliga konfigurationer. Då öppnas fönstret **Skapa konfigurationer** . Följ den tidigare konfigurationsproceduren för att skapa en ny konfiguration.
+1. Klicka på **+**-tecknet bredvid Tillgängliga konfigurationer. Fönstret **Skapa konfigurationer** öppnas. Följ den tidigare konfigurationsproceduren för att skapa en ny konfiguration.
 
