@@ -28,7 +28,7 @@ En mall används för att skapa en sida och definierar vilka komponenter som kan
 
 Varje mall visar ett urval av komponenter som är tillgängliga för användning.
 
-* Mallar består av [komponenter](/help/sites-developing/components.md).
+* Mallar består av [komponenter](/help/sites-developing/components.md);
 * Komponenterna använder och tillåter åtkomst till widgetar och dessa används för att återge innehållet.
 
 >[!NOTE]
@@ -37,11 +37,11 @@ Varje mall visar ett urval av komponenter som är tillgängliga för användning
 
 En mall är grunden för en sida.
 
-Om du vill skapa en sida måste mallen kopieras (node-tree **/apps/&lt;myapp>/templates/&lt;mytemplate>**) till motsvarande position i platsträdet: detta är vad som händer om en sida skapas med fliken **Webbplatser** .
+Om du vill skapa en sida måste mallen kopieras (node-tree **/apps/&lt;myapp>/templates/&lt;mytemplate>**) till motsvarande position i platsträdet: detta är vad som händer om en sida skapas med fliken **Webbplatser**.
 
 Den här kopieringsåtgärden ger även sidan dess ursprungliga innehåll (vanligtvis innehåll på översta nivån) och egenskapen sling:resourceType, sökvägen till sidkomponenten som används för att återge sidan (allt i den underordnade noden jcr:content).
 
-## Mallens struktur {#structure-of-a-template}
+## Struktur för en mall {#structure-of-a-template}
 
 Det finns två aspekter att tänka på:
 
@@ -52,10 +52,10 @@ En mall skapas under en nod av typen **cq:Template**.
 
 Du kan ange olika egenskaper, särskilt:
 
-* **jcr:title** - mallens titel; visas i dialogrutan när du skapar en sida.
-* **jcr:description** - beskrivning av mallen; visas i dialogrutan när du skapar en sida.
+* **jcr:title** - title for the template; visas i dialogrutan när du skapar en sida.
+* **jcr:description** - description for the template; visas i dialogrutan när du skapar en sida.
 
-Den här noden innehåller *en jcr:content-nod (cq:PageContent)* som används som bas för innehållsnoden på de resulterande sidorna. det här refererar, med *sling:resourceType*, komponenten som ska användas för att återge det faktiska innehållet på en ny sida.
+Den här noden innehåller *en jcr:content (cq:PageContent)*-nod som används som bas för innehållsnoden för resulterande sidor. den här referensen, med *sling:resourceType*, den komponent som ska användas för återgivning av det faktiska innehållet på en ny sida.
 
 >[!NOTE]
 >
