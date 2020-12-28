@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# Godkännande och godkännande{#acceptance-and-sign-off}
+# Acceptera och signera{#acceptance-and-sign-off}
 
-Som nämnts ovan är [acceptanstester](/help/sites-developing/planning.md) en särskild testkategori som används för att kontrollera att
+Som vi nämnt är [Godkännandetester](/help/sites-developing/planning.md) en särskild testkategori som används för att verifiera att:
 
 * Projektet uppfyller kundens krav.
 * Kunden godkänner projektet.
