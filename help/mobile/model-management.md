@@ -43,7 +43,7 @@ I följande diagram visas innehållsmodellen för AEM Mobile-appar och hur entit
 
 ![chlimage_1-82](assets/chlimage_1-82.png)
 
-### Modeller {#the-models}
+### Modellerna {#the-models}
 
 Modeller används för att avgöra hur enheter skapas. De definierar vad som är tillgängligt i en enhet och hur data genereras från AEM. Innan du börjar arbeta med Spaces, Folders och Entities bör du känna till hur du skapar och hanterar modeller.
 
@@ -52,21 +52,21 @@ Modeller används för att avgöra hur enheter skapas. De definierar vad som är
 >Det finns en modell utanför en app eftersom mer än en app kan använda den.
 
 
-Se **[Modeller](/help/mobile/administer-mobile-apps.md)**för att skapa och hantera modeller på kontrollpanelen och i databasen.
+Se **[Modeller](/help/mobile/administer-mobile-apps.md)** för att skapa och hantera modeller i kontrollpanelen och databasen.
 
-### Enheter i innehållsmodell {#entities-in-content-model}
+### Enheter i innehållsmodellen {#entities-in-content-model}
 
 En entitet är en instans av en innehållsmodell. En enhet exponeras via innehållstjänstens API för klientsidans bibliotek och ger ett sätt för en inbyggd app att komma åt innehåll på ett kanaloberoende sätt.
 
 När det gäller befintligt AEM genereras en entitet med hjälp av en modell och den AEM innehållskällan. En sidenhet är till exempel ett kanal- och layoutoberoende objekt som genereras från en AEM och sidmodellen.
 
-Ändringar av det refererade innehållet i en entitet resulterar i en ändring av entiteten. Om till exempel en *cq:page* uppdateras, uppdateras även alla entiteter som är baserade på den sidan.
+Ändringar av det refererade innehållet i en entitet resulterar i en ändring av entiteten. Om t.ex. en *cq:page* uppdateras, uppdateras även alla entiteter som är baserade på den sidan.
 
-Se **[Arbeta med entiteter](/help/mobile/spaces-and-entities.md)**för att skapa anpassade entiteter från modeller.
+Se **[Arbeta med entiteter](/help/mobile/spaces-and-entities.md)** för att skapa anpassade entiteter från modeller.
 
 >[!NOTE]
 >
->Om modellen inte motsvarar ett befintligt AEM, t.ex. kunden har skapat en ny modell, finns det ett användargränssnitt så att kunden kan skapa en ny enhet.
+>Om modellen inte motsvarar ett befintligt AEM, t.ex. om kunden har skapat en ny modell, finns det ett användargränssnitt så att kunden kan skapa en ny enhet.
 
 
 ### Blanksteg i innehållsmodellen {#spaces-in-content-model}
@@ -77,7 +77,7 @@ På AEM sida är ett space ett bekvämt sätt att hantera enheter som är relate
 
 *Till exempel*,
 
-En användare har tre allmänna klassificeringar av enheter. Den ena är enbart avsedd för internt bruk, den andra är godkänd för allmänt bruk och den andra är för vanliga enheter som används av många appar. För att göra det enkelt att hantera skapar användaren tre ytor: *internal*, *public* (med både engelskt och franskt innehåll) och *common* for managing the appropriate entities (som nämns nedan):
+En användare har tre allmänna klassificeringar av enheter. Den ena är enbart avsedd för internt bruk, den andra är godkänd för allmänt bruk och den andra är för vanliga enheter som används av många appar. För att göra det enkelt att hantera skapar användaren tre blanksteg: *internal*, *public* (med både engelskt och franskt innehåll) och *common* för att hantera de enheter som anges nedan:
 
 * /content/entities/internal
 * /content/entities/public/en
@@ -86,7 +86,7 @@ En användare har tre allmänna klassificeringar av enheter. Den ena är enbart 
 
 En tjänstslutpunkt kommer att anges för utrymmet så att det inbyggda klientbiblioteket kan begära en lista över innehållet i ett utrymme. Denna &quot;lista&quot; returneras som ett JSON-objekt.
 
-Se **[Blanksteg och enheter](/help/mobile/spaces-and-entities.md)**för att skapa och publicera blanksteg.
+Se **[Blanksteg och enheter](/help/mobile/spaces-and-entities.md)** för att skapa och publicera blanksteg.
 
 >[!NOTE]
 >
@@ -96,4 +96,4 @@ Se **[Blanksteg och enheter](/help/mobile/spaces-and-entities.md)**för att skap
 
 Med mappar kan användarna ordna enheter efter behov och underlätta finare ACL-kontroll. Blanksteg kan innehålla mappar för att ytterligare ordna utrymmets innehåll och resurser. En användare kan skapa sin egen hierarki under ett space.
 
-Se **[Arbeta med mappar i ett space](/help/mobile/spaces-and-entities.md)**för att skapa och hantera mappar i ett utrymme.
+Se **[Arbeta med mappar i ett space](/help/mobile/spaces-and-entities.md)** för att skapa och hantera mappar i ett space.
