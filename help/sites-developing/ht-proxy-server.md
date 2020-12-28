@@ -35,7 +35,7 @@ Du kan använda proxyservern för att övervaka all klient-server-interaktion, o
 
 Du kan till exempel placera proxyservern mellan två program som kommunicerar via ett TCP/IP-nätverk; t.ex. en webbläsare och AEM. På så sätt kan du övervaka exakt vad som händer när du begär en CQ-sida.
 
-## Starta proxyserververktyget {#starting-the-proxy-server-tool}
+## Startar proxyserververktyget {#starting-the-proxy-server-tool}
 
 Starta servern på kommandoraden:
 
@@ -49,7 +49,7 @@ Det här är värdadressen för den CRX-instans som du vill ansluta till. Om ins
 
 `<remoteport>`
 
-Det här är värdporten för mål-CRX-instansen. Standardinställningen för en nyinstallerad AEM är **`4502`** och standardinställningen för en nyinstallerad AEM författarinstans är `4502`.
+Det här är värdporten för mål-CRX-instansen. Standardvärdet för en nyligen installerad AEM är **`4502`** och standardvärdet för en nyligen installerad AEM författarinstans är `4502`.
 
 `<localport>`
 
@@ -129,11 +129,11 @@ Innehållet i `test.html` är:
 </html>
 ```
 
-Om AEM körs när `localhost:4502` proxyn startas:
+Om AEM körs på `localhost:4502` startar vi proxyn så här:
 
 `java -jar proxy.jar localhost 4502 4444 -logfile test.log`
 
-CQ/CRX-instansen kan nu nås via proxyn på `localhost:4444` och all kommunikation via den här porten loggas till `test.log`.
+CQ/CRX-instansen kan nu nås via proxyn på `localhost:4444` och all kommunikation via den här porten loggas på `test.log`.
 
 Om vi nu tittar på utdata från proxyn ser vi interaktionen mellan webbläsaren och AEM.
 
@@ -148,7 +148,7 @@ Sedan öppnar vi en webbläsare och öppnar testsidan:
 
 `http://localhost:4444/content/test.html`
 
-så ser vi att webbläsaren begär en `GET` sida:
+och vi ser att webbläsaren gör en `GET`-förfrågan för sidan:
 
 ```shell
 C-0-#000000 -> [GET /content/test.html HTTP/1.1 ]
@@ -165,7 +165,7 @@ C-0-#000684 -> [59-7913-4285-8857-832c087bafd5_c484727d3b3665ad%3acrx.default; y
 C-0-#000824 -> [ ]
 ```
 
-AEM svarar med filens innehåll `test.html`:
+Den AEM instansen svarar med innehållet i filen `test.html`:
 
 ```shell
 S-0-#000000 -> [HTTP/1.1 200 OK ]
@@ -187,7 +187,7 @@ S-0-#000311 -> [</body>]
 S-0-#000319 -> [</html>]
 ```
 
-### Proxyserverns användning {#uses-of-the-proxy-server}
+### Användning av proxyservern {#uses-of-the-proxy-server}
 
 Följande scenarier visar några av de syften som proxyservern kan användas för:
 
