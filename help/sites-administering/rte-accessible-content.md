@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Konfigurera RTE för produktion av tillgängliga platser {#configuring-rte-for-producing-accessible-sites}
+# Konfigurerar RTE för produktion av tillgängliga platser {#configuring-rte-for-producing-accessible-sites}
 
 AEM har stöd för båda:
 
@@ -33,17 +33,17 @@ AEM har stöd för båda:
 
 Innehållsförfattare kan använda funktionerna i RTE för att tillhandahålla hjälpmedelsinformation när de lägger till innehåll på en sida. Det kan vara att lägga till strukturinformation via rubriker och styckeelement.
 
-Du kan [konfigurera och anpassa dessa funktioner genom att konfigurera RTE-plugin](#configuring-the-plugin-features) för komponenten. Med `paraformat` plugin-programmet kan du till exempel lägga till ytterligare semantiska element på blocknivå, inklusive att utöka antalet rubriknivåer som stöds utanför det grundläggande `H1`och `H2` som `H3` tillhandahålls som standard.
+Du kan [konfigurera och anpassa dessa funktioner genom att konfigurera RTE-plugin-program](#configuring-the-plugin-features) för komponenten. Med plugin-programmet `paraformat` kan du till exempel lägga till ytterligare semantiska element på blocknivå, inklusive att utöka antalet rubriknivåer som stöds utöver de grundläggande `H1`, `H2` och `H3` som finns som standard.
 
-RTE finns i en mängd komponenter från både det beröringsaktiverade och det klassiska användargränssnittet. Den primära komponenten för att använda RTE är emellertid **Text** -komponenten.
+RTE finns i en mängd komponenter från både det beröringsaktiverade och det klassiska användargränssnittet. Den primära komponenten för att använda RTE är **Text**-komponenten.
 
-Komponenten **Text** i AEM är tillgänglig för både beröringsaktiverade och klassiska användargränssnitt. I följande bilder visas textredigeraren med ett antal plugin-program aktiverade, inklusive `paraformat`:
+Komponenten **Text** i AEM är tillgänglig för både det beröringsaktiverade och det klassiska användargränssnittet. I följande bilder visas textredigeraren med ett intervall av plugin-program aktiverade, inklusive `paraformat`:
 
 * Komponenten **Text** i det beröringsaktiverade användargränssnittet:
 
    ![Textkomponent (RTE) i helskärmsläge i det beröringsaktiverade användargränssnittet.](assets/chlimage_1-206.png)
 
-* Komponenten **Text** i det klassiska gränssnittet:
+* Komponenten **Text** i det klassiska användargränssnittet:
 
    ![Dialogrutan Redigera (RTE) för textkomponenten i det klassiska användargränssnittet.](assets/chlimage_1-207.png)
 
@@ -60,27 +60,27 @@ Komponenten **Text** i AEM är tillgänglig för både beröringsaktiverade och 
 
 ## Konfigurera plug-in-funktioner {#configuring-the-plugin-features}
 
-Fullständiga anvisningar om hur du konfigurerar textredigeraren finns på [sidan Konfigurera textredigeraren](/help/sites-administering/rich-text-editor.md) . Detta täcker alla frågor, inklusive de viktigaste stegen:
+Fullständiga anvisningar om hur du konfigurerar textredigeraren finns på sidan [Konfigurera textredigeraren](/help/sites-administering/rich-text-editor.md). Detta täcker alla frågor, inklusive de viktigaste stegen:
 
 * [Plugins och deras funktioner](/help/sites-administering/rich-text-editor.md#aboutplugins)
 * [Konfigurationsplatser](/help/sites-administering/rich-text-editor.md#understand-the-configuration-paths-and-locations)
 * [Aktivera ett plugin-program och konfigurera egenskapen features](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins)
 * [Konfigurera övriga funktioner i textredigeringsprojektet](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins)
 
-Genom att konfigurera ett plugin-program i rätt `rtePlugins` underavdelning i CRXDE Lite (se bilden nedan) kan du aktivera alla eller specifika funktioner för det plugin-programmet.
+Genom att konfigurera ett plugin-program i rätt `rtePlugins`-undergren i CRXDE Lite (se följande bild) kan du aktivera alla eller specifika funktioner för det plugin-programmet.
 
 ![CRXDE Lite med exempelplugin-programmet ratePlugin.](assets/chlimage_1-208.png)
 
-### Exempel - Ange vilka styckeformat som är tillgängliga i RTE-markeringsfältet {#example-specifying-paragraph-formats-available-in-rte-selection-field}
+### Exempel - Ange tillgängliga styckeformat i fältet RTE-markering {#example-specifying-paragraph-formats-available-in-rte-selection-field}
 
 Nya semantiska blockformat kan göras tillgängliga för markering genom att:
 
 1. Beroende på vilken RTE du använder kan du bestämma och navigera till [konfigurationsplatsen](/help/sites-administering/rich-text-editor.md#understand-the-configuration-paths-and-locations).
-1. [Aktivera fältet](/help/sites-administering/rich-text-editor.md)för val av stycken; genom [att aktivera plugin-programmet](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins).
-1. [Ange de format du vill ha i fältet](/help/sites-administering/rich-text-editor.md)Stycke.
+1. [Aktivera fältet](/help/sites-administering/rich-text-editor.md) för val av stycken; genom  [att aktivera plugin-programmet](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins).
+1. [Ange de format du vill ha i fältet](/help/sites-administering/rich-text-editor.md) Stycke.
 1. Styckeformaten är sedan tillgängliga för innehållsförfattaren från markeringsfälten i textredigeraren. De kan nås:
 
-   * Använda ikonen för stycke ([pilbåge](https://en.wikipedia.org/wiki/Pilcrow)) i det beröringsaktiverade användargränssnittet:
+   * Använda ikonen för stycke ([pilbåge](https://en.wikipedia.org/wiki/Pilcrow)) i det beröringsaktiverade gränssnittet:
 
    ![Styckeikon (pilbåge).](do-not-localize/chlimage_1-7.png)
 
@@ -91,23 +91,23 @@ Eftersom strukturella element är tillgängliga i textredigeraren via alternativ
 
 ## Användning av funktionen för källredigering {#use-of-the-source-edit-feature}
 
-I vissa fall måste innehållsförfattare granska och justera HTML-källkoden som skapats med RTE. En del innehåll som skapats i en textredigerare kan till exempel kräva ytterligare kod för att säkerställa överensstämmelse med WCAG 2.0. Detta kan du göra med [källredigeringsalternativet](/help/sites-administering/rich-text-editor.md#aboutplugins) i textredigeraren. Du kan ange [`sourceedit` funktionen på `misctools` plugin-programmet](/help/sites-administering/rich-text-editor.md#aboutplugins).
+I vissa fall måste innehållsförfattare granska och justera HTML-källkoden som skapats med RTE. En del innehåll som skapats i en textredigerare kan till exempel kräva ytterligare kod för att säkerställa överensstämmelse med WCAG 2.0. Detta kan du göra med alternativet [källredigering](/help/sites-administering/rich-text-editor.md#aboutplugins) i textredigeringsprogrammet. Du kan ange [ `sourceedit`-funktionen i `misctools`-plugin](/help/sites-administering/rich-text-editor.md#aboutplugins).
 
 >[!CAUTION]
 >
->Använd `sourceedit` funktionen noggrant. Skrivfel och/eller funktioner som inte stöds kan orsaka fler problem.
+>Använd funktionen `sourceedit` noggrant. Skrivfel och/eller funktioner som inte stöds kan orsaka fler problem.
 
-## Lägga till stöd för ytterligare HTML-element och attribut {#adding-support-for-additional-html-elements-and-attributes}
+## Lägger till stöd för ytterligare HTML-element och attribut {#adding-support-for-additional-html-elements-and-attributes}
 
-Om du vill utöka tillgänglighetsfunktionerna i AEM ytterligare kan du utöka de befintliga komponenterna baserat på RTE (till exempel **Text** - och **tabellkomponenterna** ) med ytterligare element och attribut.
+Om du vill utöka tillgänglighetsfunktionerna i AEM ytterligare kan du utöka de befintliga komponenterna baserat på RTE (till exempel **Text** och **Tabell**-komponenterna) med ytterligare element och attribut.
 
-Följande procedur visar hur du utökar **tabellkomponenten** med ett **bildtextselement** som ger information om en datatabell för hjälpmedelsanvändare:
+Följande procedur visar hur du utökar komponenten **Table** med elementet **Caption** som ger information om en datatabell till hjälpmedelstekniker:
 
 ### Exempel - Lägga till bildtexten i dialogrutan Tabellegenskaper {#example-adding-the-caption-to-the-table-properties-dialog}
 
-Lägg till ytterligare ett textinmatningsfält i konstruktorn för `TablePropertiesDialog`bildtexten som används för att redigera bildtexten. Observera att `itemId` måste anges till `caption` (dvs. DOM-attributets namn) för att innehållet ska hanteras automatiskt.
+I konstruktorn för `TablePropertiesDialog` lägger du till ytterligare ett textinmatningsfält som används för att redigera bildtexten. Observera att `itemId` måste anges till `caption` (d.v.s. DOM-attributets namn) för att innehållet ska hanteras automatiskt.
 
-I **Tabell** måste du uttryckligen ange eller ta bort attributet till/från DOM-elementet. Värdet skickas av dialogrutan i `config` objektet. Observera att DOM-attribut bör anges/tas bort med motsvarande `CQ.form.rte.Common` metoder ( `com` är en genväg för `CQ.form.rte.Common`) för att undvika vanliga fel i webbläsarimplementeringar.
+I **Tabell** måste du uttryckligen ange eller ta bort attributet till/från DOM-elementet. Värdet skickas av dialogrutan i `config`-objektet. Observera att DOM-attribut bör anges/tas bort med motsvarande `CQ.form.rte.Common`-metoder ( `com` är en genväg för `CQ.form.rte.Common`) för att undvika vanliga fel i webbläsarimplementeringar.
 
 >[!NOTE]
 >
@@ -140,7 +140,7 @@ I **Tabell** måste du uttryckligen ange eller ta bort attributet till/från DOM
 
    `/apps/cq/ui/widgets/source/widgets/form/rte/plugins/TablePropertiesDialog.js`
 
-1. I `constructor` metoden, före radavläsningen:
+1. I metoden `constructor`, före radläsningen:
 
    ```
    var dialogRef = this;
@@ -162,7 +162,7 @@ I **Tabell** måste du uttryckligen ange eller ta bort attributet till/från DOM
 
    `/apps/cq/ui/widgets/source/widgets/form/rte/commands/Table.js`.
 
-1. Lägg till följande kod i slutet av `transferConfigToTable` metoden:
+1. Lägg till följande kod i slutet av metoden `transferConfigToTable`:
 
    ```
    /**
@@ -201,10 +201,10 @@ I **Tabell** måste du uttryckligen ange eller ta bort attributet till/från DOM
 
 >[!NOTE]
 >
->Ett oformaterat textfält är inte den enda typen av indata som tillåts för bildtextelementets värde. Alla ExtJS-widgetar som innehåller bildtextens värde via dess `getValue()` metod kan användas.
+>Ett oformaterat textfält är inte den enda typen av indata som tillåts för bildtextelementets värde. Alla ExtJS-widgetar som innehåller bildtextens värde via metoden `getValue()` kan användas.
 >
 >Om du vill lägga till redigeringsfunktioner för ytterligare element och attribut måste du se till att båda:
 >
->* Egenskapen `itemId` för varje motsvarande fält ställs in på namnet på lämpligt DOM-attribut (`TablePropertiesDialog`).
+>* Egenskapen `itemId` för varje motsvarande fält anges till namnet på lämpligt DOM-attribut (`TablePropertiesDialog`).
 >* Attributet anges och/eller tas bort explicit i DOM-elementet (`Table`).
 
