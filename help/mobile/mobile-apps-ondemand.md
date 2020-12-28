@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# Mobile On-Demand{#mobile-on-demand}
+# Mobil on demand{#mobile-on-demand}
 
 >[!NOTE]
 >
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Om du inte använder Adobe Experience Manager (AEM) som innehållshanteringskälla kan du läsa [AEM Mobile On-demand Services-hjälpen](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>Om du inte använder Adobe Experience Manager (AEM) som innehållshanteringskälla kan du läsa [AEM Mobile On-demand Services Hjälp](https://helpx.adobe.com/digital-publishing-solution/topics.html).
 
 >[!NOTE]
 >
@@ -36,18 +36,18 @@ ht-degree: 1%
 
 ## AEM Mobile Author {#aem-mobile-author}
 
-En ***AEM-författare *(eller*Marketer *)**använder skräddarsydda eller färdiga mallar och komponenter för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment). AEM inbyggda innehållsredigeraren används sedan av*AEM Authors *för att skapa engagerande och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Marketing Cloud.
+En ***AEM Author* (eller *Marketer*)**använder anpassade eller färdiga mallar och komponenter för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment). AEM inbyggda innehållsredigeraren används sedan av *AEM Authors* för att skapa engagerande och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Marketing Cloud.
 
 En AEM är ansvarig för följande när du skapar ett program med AEM Mobile On Demand Services.
 
-**När du skriver AEM innehåll för AEM Mobile On-demand Services App** utför du följande åtgärder:
+**När du skriver AEM innehåll för AEM Mobile On-demand Services** Apple utförs följande åtgärder:
 
 * [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md)
 * [Skapa och konfigurera program](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md)
 * [Molnkonfiguration](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)
 * [Hantera innehåll](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
 
-Mer information om **innehållstjänster** finns i Översikt över [innehållstjänster](/help/mobile/develop-content-as-a-service.md) för att komma igång.
+Mer information om **Content Services** finns i [Content Services Overview](/help/mobile/develop-content-as-a-service.md) för att komma igång.
 
 >[!NOTE]
 >
