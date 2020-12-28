@@ -26,5 +26,5 @@ Med hjälp av ställningar kan du skapa ett formulär (en struktur) med fält so
 
 >[!NOTE]
 >
->Även om det finns ett [byggnadsställningar](/help/sites-authoring/author-environment-tools.md#page-modes) är det klassiska användargränssnittet som används för att underhålla och skapa ställningar samt för att skapa nya sidor från ställningar. Mer information finns i [Skolning](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md) i den klassiska dokumentationen för användargränssnittet.
+>Även om det finns ett läge [](/help/sites-authoring/author-environment-tools.md#page-modes) för att skapa och underhålla ställningar och skapa nya sidor från ställningar görs detta i det klassiska användargränssnittet. Mer information finns i [Skällningsinformation](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md) i den klassiska gränssnittsredigeringsdokumentationen.
 
