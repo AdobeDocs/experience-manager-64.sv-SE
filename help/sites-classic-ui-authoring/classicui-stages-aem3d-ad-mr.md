@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Ställa in ett standardstadium med Autodesk Maya och Mental Ray{#setting-up-a-standard-stage-with-autodesk-maya-and-mental-ray}
+# Konfigurera en standardscen med Autodesk Maya och Mental Ray{#setting-up-a-standard-stage-with-autodesk-maya-and-mental-ray}
 
 1. I Maya skapar du en ny, tom scen.
 1. Skapa en (tillfällig) referens till en representativ modell. Detta underlättar utvärdering av ljus, inställning av kameror och konfiguration av renderaren.
@@ -45,14 +45,14 @@ ht-degree: 0%
 
    * **[!UICONTROL Common]** tab
 
-      Avmarkera **[!UICONTROL Alpha channel (mask)]** kryssrutan för alla [!UICONTROL Renderable Cameras].
+      Avmarkera kryssrutan **[!UICONTROL Alpha channel (mask)]** för alla [!UICONTROL Renderable Cameras].
 
    * **[!UICONTROL Quality]** tab
 
       * **[!UICONTROL Overall quality]** `- 0.5` eller mindre
       * **[!UICONTROL Indirect Diffuse (GI) Mode]** - `Final Gather`
       * **[!UICONTROL Filter Size]** - `2.0`, `2.0`
-   * Rendera scenen med de typiska bildstorlekar som du förväntar dig att använda. Om det behövs kan du finjustera ljuskällorna, eller [!UICONTROL Render settings]eller båda för att uppnå det resultat du vill ha.
+   * Rendera scenen med de typiska bildstorlekar som du förväntar dig att använda. Om det behövs kan du förfina ljuskällorna, [!UICONTROL Render settings] eller båda för att uppnå önskat resultat.
 
       Tänk på att återgivning med Mental Ray, med bildbaserat ljus, är mycket långsamt och processorintensivt. Adobe rekommenderar att du konfigurerar de inställningar för lägsta kvalitet som fortfarande kan ge önskad återgivningskvalitet.
 
@@ -61,10 +61,10 @@ ht-degree: 0%
 1. Spara scenen och avsluta Autodesk Maya.
 1. Överför scenen till AEM och vänta tills överföringen är klar.
 
-   Se [Överföra resurser](/help/assets/managing-assets-touch-ui.md#uploading-assets).
+   Se [Överför resurser](/help/assets/managing-assets-touch-ui.md#uploading-assets).
 
    Om Autodesk® Maya® inte är konfigurerad på AEM server exporterar du en FBX från Maya och överför den till AEM.
 
-1. Öppna Resursegenskaper i AEM. Ange Titel till en lämplig sträng som ska visas i listrutan Scenväljare. Kontrollera att **[!UICONTROL Class]** är inställt på **[!UICONTROL 3D Stage]**. Spara och avsluta.
+1. Öppna Resursegenskaper i AEM. Ange Titel till en lämplig sträng som ska visas i listrutan Scenväljare. Kontrollera att **[!UICONTROL Class]** är **[!UICONTROL 3D Stage]**. Spara och avsluta.
 1. Öppna en 3D-resurs, markera den nya scenen och verifiera att den förhandsvisar och återger som förväntat.
 
