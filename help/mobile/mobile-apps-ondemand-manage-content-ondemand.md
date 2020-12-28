@@ -31,8 +31,8 @@ Innehållshanteringsåtgärder är byggstenar som används för att skapa och ha
 Om du tänker på en nättidskrift innehåller huvudinnehållet artiklar, annonser och omslag. Tre huvudtyper av mobilt on demand-innehåll kan skapas i AEM:
 
 * **Artiklar**: text som bygger på bilder för att förmedla information
-* **Banderoller:** vanligtvis grafiska marknadsföringslänkar
-* **Samlingar:** representerar en väldefinierad *bucket* som fylls med innehåll som artiklar eller banderoller som passar omslagstemat
+* **banners:** vanligtvis grafiska marknadsföringslänkar
+* **samlingar:** representerar en väldefinierad  ** bucketfylld med innehåll som artiklar eller banners som passar omslagets tema
 
 * **Delade resurser:** tillåter återanvändning eller delning av gemensamma delar mellan artiklar
 
@@ -52,7 +52,7 @@ I följande avsnitt beskrivs hur du skapar och hanterar innehåll: artiklar, ban
 
 >[!NOTE]
 >
->Vanligtvis bör du göra preflight innan du publicerar innehåll. Mer information finns i [Förhandsgranska med Preflight](/help/mobile/aem-mobile-manage-ondemand-services.md) .
+>Vanligtvis bör du göra preflight innan du publicerar innehåll. Mer information finns i [Förhandsgranska med Preflight](/help/mobile/aem-mobile-manage-ondemand-services.md).
 
 ### Ytterligare resurser {#additional-resources}
 
