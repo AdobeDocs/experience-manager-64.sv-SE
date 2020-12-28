@@ -28,7 +28,7 @@ CRX registrerar detaljerade loggar. När du har packat upp och startat Quickstar
 * crx-quickstart/server/logs
 * crx-quickstart/logs
 
-## Aktivera felsökningsloggnivån {#activating-the-debug-log-level}
+## Aktivera loggnivån för felsökning {#activating-the-debug-log-level}
 
 Standardloggnivån är INFO, d.v.s. DEBUG-meddelanden loggas inte.
 
