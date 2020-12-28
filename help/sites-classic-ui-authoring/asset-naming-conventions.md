@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Noderna i databasen omfattas av namnkonventioner i [Java Content Repository](/help/sites-developing/the-basics.md#java-content-repository). Adobe Experience Manager inför dock ytterligare konventioner för resursnodernas namn.
 
-## Klassiskt användargränssnitt {#classic-ui}
+## Klassiskt gränssnitt {#classic-ui}
 
 Det klassiska användargränssnittet har tätare begränsningar:
 
