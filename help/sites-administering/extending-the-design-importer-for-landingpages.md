@@ -40,7 +40,7 @@ Här följer de logiska stegen för att få designimporteraren att känna igen d
 
 1. Kontrollera att TagHandlerFactory har en bättre rankning om du vill åsidosätta standardinställningen.
 
-## Förbereda HTML för import {#preparing-the-html-for-import}
+## Förbereder HTML för import {#preparing-the-html-for-import}
 
 När du har skapat en importsida kan du importera den fullständiga HTML-landningssidan. Om du vill importera HTML-landningssidan måste du först zippa innehållet i den i ett designpaket. Designpaketet innehåller HTML-landningssidan tillsammans med de refererade resurserna (bilder, css, ikoner, skript och så vidare).
 
@@ -67,13 +67,13 @@ Layouten baseras på HTML5-mallens vedertagna praxis-layout. Läs mer på [https
 
 >[!NOTE]
 >
->Designpaketet **måste** minst innehålla en **index.html** -fil på rotnivån. Om landningssidan som ska importeras också har en mobilversion, måste zippen innehålla en **mobile.index.html** tillsammans med **index.html** på rotnivån.
+>Designpaketet **måste** innehålla en **index.html**-fil på rotnivån. Om landningssidan som ska importeras också har en mobilversion, måste zippen innehålla **mobile.index.html** tillsammans med **index.html** på rotnivån.
 
-### Förbereda HTML för landningssida {#preparing-the-landing-page-html}
+### Förbereder HTML för landningssida {#preparing-the-landing-page-html}
 
 Om du vill kunna importera HTML-koden måste du lägga till en arbetsytans div i HTML-koden för landningssidan.
 
-Arbetsytans div är en html- **div** med `id="cqcanvas"` som måste infogas i HTML- `<body>` taggen och måste kapsla in innehållet som ska konverteras.
+Arbetsytans div är en html **div** med `id="cqcanvas"` som måste infogas i HTML-taggen `<body>` och måste kapsla in innehållet som är avsett för konvertering.
 
 Ett exempel på HTML-koden för landningssidan efter att arbetsytans div lagts till är följande:
 
@@ -99,9 +99,9 @@ När du importerar en landningssida kan du välja att importera sidan i befintli
 
 Innan du importerar landningssidan kanske du vill konvertera vissa delar av landningssidan så att de är redigerbara AEM. På så sätt kan du snabbt redigera delar av landningssidan även efter det att landningssidans design har importerats.
 
-Det gör du genom att lägga `data-cq-component` till en lämplig komponent i den HTML-fil som du importerar.
+Det gör du genom att lägga till `data-cq-component` till lämplig komponent i HTML-filen som du importerar.
 
-I följande avsnitt beskrivs hur du redigerar HTML-filen så att du konverterar vissa delar av landningssidorna till olika redigerbara AEM. Komponenter beskrivs i detalj i Komponenter för [landningssidor](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md).
+I följande avsnitt beskrivs hur du redigerar HTML-filen så att du konverterar vissa delar av landningssidorna till olika redigerbara AEM. Komponenter beskrivs i detalj i [Landing Pages Components](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md).
 
 >[!NOTE]
 >
@@ -111,9 +111,9 @@ I följande avsnitt beskrivs hur du redigerar HTML-filen så att du konverterar 
 
 Observera följande begränsningar innan du importerar:
 
-### Attribut som klass eller id som används i &amp;lt;body>-taggen bevaras inte {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
+### Alla attribut, som klass eller id, som används i taggen &amp;lt;body> bevaras inte {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
 
-Om ett attribut som id eller class tillämpas på body-taggen, till exempel, bevaras `<body id="container">` det inte efter importen. Därför bör designen som importeras inte ha några beroenden av de attribut som används för `<body>` taggen.
+Om ett attribut som id eller class används i body-taggen, till exempel `<body id="container">`, bevaras det inte efter importen. Därför bör designen som importeras inte ha några beroenden av de attribut som används för taggen `<body>`.
 
 ### Dra och släpp zip {#drag-and-drop-zip}
 
@@ -125,17 +125,17 @@ De webbläsare som har stöd för&quot;dra och släpp&quot; i zip-designen är C
 
 `Modernizr.js` är ett javascript-baserat verktyg som identifierar webbläsares inbyggda funktioner och identifierar om de passar för HTML5-element eller inte. Designer som använder Modernizer för att förbättra stödet i äldre versioner av olika webbläsare kan orsaka importproblem i landningssidans lösning. `Modernizr.js` -skript stöds inte av designimporteraren.
 
-### Sidegenskaperna bevaras inte vid import av designpaket {#page-properties-are-not-preserved-at-the-time-of-importing-design-package}
+### Sidegenskaperna bevaras inte när designpaketet {#page-properties-are-not-preserved-at-the-time-of-importing-design-package} importeras
 
 Alla sidegenskaper (t.ex. Anpassad domän, Framtvinga HTTPS, osv.) anges för en sida (som använder mallen Tom landningssida) innan designpaketet importeras, tas bort efter att designen har importerats. Därför rekommenderar vi att du anger sidegenskaperna när du har importerat designpaketet.
 
-### HTML-kod antas bara {#html-only-markup-assumed}
+### HTML-kod antar {#html-only-markup-assumed}
 
 Vid import saneras koden av säkerhetsskäl och för att undvika import och publicering av ogiltig kod. Detta förutsätter att HTML-kod och alla andra typer av element, t.ex. inline SVG eller Web Components, filtreras bort.
 
 ### Text {#text}
 
-HTML-kod som infogar en textkomponent ( `foundation/components/text`) i HTML-designpaketet:
+HTML-kod som infogar en textkomponent ( `foundation/components/text`) i HTML-koden i designpaketet:
 
 ```xml
 <div data-cq-component="text"> <p>This is some editable text</p> </div>
@@ -143,7 +143,7 @@ HTML-kod som infogar en textkomponent ( `foundation/components/text`) i HTML-des
 
 Om du tar med ovanstående kod i HTML-koden gör du följande:
 
-* Skapar en redigerbar AEM textkomponent ( `sling:resourceType=foundation/components/text`) på landningssidan som skapas efter att designpaketet har importerats.
+* Skapar en redigerbar AEM-textkomponent ( `sling:resourceType=foundation/components/text`) på landningssidan som skapas efter att designpaketet har importerats.
 * Ställer in egenskapen `text` för den skapade textkomponenten på HTML-koden som finns i `div`.
 
 **Kortfattad deklaration** av komponenttagg:
@@ -156,8 +156,8 @@ Om du tar med ovanstående kod i HTML-koden gör du följande:
 
 Så här lägger du till en text med en lista:
 
-* 1st
-* 2nd
+* 1:a
+* 2:a
 
 som kan redigeras i RTE-redigeraren:
 
@@ -184,7 +184,7 @@ HTML-kod som infogar en titelkomponent ( `wcm/landingpage/components/title`) i H
 Om du tar med ovanstående kod i HTML-koden gör du följande:
 
 * Skapar en redigerbar AEM title-komponent ( `sling:resourceType=wcm/landingpage/components/title`) på landningssidan som skapas när designpaketet har importerats.
-* Ställer in egenskapen `jcr:title` för den skapade titelkomponenten på texten inom rubriktaggen som är omsluten av div.
+* Ställer in egenskapen `jcr:title` för den skapade titelkomponenten på texten inom rubriktaggen omsluten i div.
 * Anger egenskapen `type` till rubriktaggen, i det här fallet `h1`.
 
 Titelkomponenten stöder 7 typer - `h1, h2, h3, h4, h5, h6` och `default`.
@@ -207,12 +207,12 @@ HTML-kod som infogar en bildkomponent (grund/komponenter/bild) i HTML-koden i de
 
 Om du tar med ovanstående kod i HTML-koden gör du följande:
 
-* Skapar en redigerbar AEM bildkomponent ( `sling:resourceType=foundation/components/image`) på landningssidan som skapas när designpaketet har importerats.
-* Ställer in den skapade bildkomponentens `fileReference` egenskap på den sökväg till vilken bilden som anges i src-attributet importeras.
-* Ställer in egenskapen på värdet för alt-attributet i img-taggen. `alt`
-* Anger värdet för attributet title i img-taggen för egenskapen. `title`
-* Ställer in egenskapen på värdet för attributet width i img-taggen. `width`
-* Anger värdet för attributet height i img-taggen som `height` egenskapen.
+* Skapar en redigerbar AEM-bildkomponent ( `sling:resourceType=foundation/components/image`) på landningssidan som skapas efter att designpaketet har importerats.
+* Ställer in egenskapen `fileReference` för den skapade bildkomponenten på den sökväg till vilken bilden som anges i src-attributet importeras.
+* Ställer in egenskapen `alt` på värdet för alt-attributet i img-taggen.
+* Ställer in egenskapen `title` på värdet för title-attributet i img-taggen.
+* Ställer in egenskapen `width` på värdet för width-attributet i img-taggen.
+* Anger egenskapen `height` till värdet för height-attributet i img-taggen.
 
 **Kortfattad deklaration för komponenttagg:**
 
@@ -222,7 +222,7 @@ Om du tar med ovanstående kod i HTML-koden gör du följande:
 
 #### Absolut URL img src stöds inte i Image component Div {#absolute-url-img-src-not-supported-within-image-component-div}
 
-Om en `<img>` tagg med en absolut url-src försöker konvertera en komponent, genereras ett lämpligt **UnsupportedTagContentException** . Följande stöds till exempel inte:
+Om en `<img>`-tagg med en absolut url-src används för komponentkonvertering, genereras ett lämpligt **UnsupportedTagContentException**. Följande stöds till exempel inte:
 
 `<div data-cq-component="image">`
 
@@ -232,7 +232,7 @@ Om en `<img>` tagg med en absolut url-src försöker konvertera en komponent, ge
 
 I annat fall stöds absoluta URL-bilder för img-taggar som inte ingår i Image Component div.
 
-### Komponenter för uppmaning {#call-to-action-components}
+### Samtalskomponenter {#call-to-action-components}
 
 Du kan markera en del av landningssidan för import som en&quot;redigerbar Call to action-komponent&quot; - sådana importerade call-to-action-komponenter kan redigeras efter att landningssidan har importerats. AEM innehåller följande CTA-komponenter:
 
@@ -298,7 +298,7 @@ HTML-tagg om du vill ta med en grafisk länkkomponent i den importerade zippen. 
 
 >[!NOTE]
 >
->Om du vill skapa en klickbar grafisk länk måste du kapsla in en ankartagg och bildtaggen inuti en div med `data-cq-component="clickthroughgraphicallink"` attribut.
+>Om du vill skapa en klickbar grafisk länk måste du kapsla in en ankartagg och bildtaggen i en div med attributet `data-cq-component="clickthroughgraphicallink"`.
 >
 >t.ex. `<div data-cq-component="clickthroughlink"> <a href="https://myURLhere/"><img src="image source here"></a> </div>`
 >
@@ -326,9 +326,9 @@ Ett lead-formulär är ett formulär som används för att samla in profilinform
 * Användaren kan ange titeln med taggen&quot;label&quot; och formateringen med hjälp av formatattributet&quot;class&quot; (endast tillgängligt för CTA-formulärkomponenter).
 * Tack! Sidan och prenumerationslistan kan anges som en dold parameter i formuläret (finns i index.htm) eller kan läggas till/redigeras från redigeringsfältet i &quot;Början av lead-formuläret&quot;
 
-   &lt;input type=&quot;hidden&quot; name=&quot;redirectUrl&quot; value=&quot;/content/we-retail/en/user/register/thanks_you&quot;/>
+   &lt;input type=&quot;hidden&quot; name=&quot;redirectUrl&quot; value=&quot;/content/we-retail/en/user/register/thank_you&quot; />
 
-   &lt;input type=&quot;hidden&quot; name=&quot;groupName&quot; value=&quot;leadForm&quot;/>
+   &lt;input type=&quot;hidden&quot; name=&quot;groupName&quot; value=&quot;leadForm&quot; />
 
 * Begränsningar som - krävs kan anges i redigeringskonfigurationen för varje komponent.
 
@@ -406,7 +406,7 @@ html-koden som infogar en målkomponent och skapar också olika upplevelser i en
 </div>
 ```
 
-## Fler importalternativ {#additional-importing-options}
+## Ytterligare importalternativ {#additional-importing-options}
 
 Förutom att ange om de importerade komponenterna är redigerbara AEM kan du konfigurera följande innan du importerar designpaketet:
 
@@ -436,11 +436,11 @@ Designimporteraren läser kodningen som anges i den importerade HTML-koden. Kodn
 
 Om ingen kodning anges i den importerade HTML-koden är standardkodningen som ställs in av designimportverktyget UTF-8.
 
-### Överläggningsmall {#overlaying-template}
+### Ersättningsmall {#overlaying-template}
 
 Mallen Tom landningssida kan överlagras genom att en ny skapas på: `/apps/<appName>/designimporter/templates/<templateName>`
 
-Hur du skapar en ny mall i AEM beskrivs [här](/help/sites-developing/templates.md).
+Steg för att skapa en ny mall i AEM beskrivs [här](/help/sites-developing/templates.md).
 
 ### Referera en komponent från landningssidan {#referring-a-component-from-landing-page}
 
@@ -542,7 +542,7 @@ När du importerar designpaketet kan det uppstå flera fel, som beskrivs i det h
 
 Om designpaketet innehåller en parsys-komponentkod börjar sidosparken visa relevanta komponenter för landningssidan efter importen. Du kan dra och släppa nya komponenter på den parsytiska komponenten på landningssidan. Du kan också gå till designläget och lägga till nya komponenter i sidosparken.
 
-### Felmeddelanden som visas vid import {#error-messages-displayed-during-import}
+### Felmeddelanden som visas vid import av {#error-messages-displayed-during-import}
 
 Om fel uppstår (t.ex. om det importerade paketet inte är en giltig zip-fil), kommer designimporten inte att importera paketet och i stället visas ett felmeddelande ovanpå sidan precis ovanför dra-och-släpp-rutan. Här finns exempel på felscenarier. När du har åtgärdat felet kan du återimportera den uppdaterade zippen till samma tomma landningssida. Olika scenarier där fel uppstår är följande:
 
@@ -563,7 +563,7 @@ När landningssidan har importerats, filerna (bilder, css, js osv.) i designpake
 
 `/etc/designs/default/canvas/content/campaigns/<name of brand>/<name of campaign>/<name of landing page>`
 
-Anta att landningssidan skapas under kampanjen We.Retail och att namnet på landningssidan är **myBlankLandingPage** . Då är platsen där ZIP-filer lagras följande:
+Anta att landningssidan skapas under kampanjen We.Retail och att namnet på landningssidan är **myBlankLandingPage** så är platsen där ZIP-filer lagras följande:
 
 `/etc/designs/default/canvas/content/campaigns/geometrixx/myBlankLandingPage`
 
@@ -588,7 +588,7 @@ med en CSS tillämpad på klassen `box` enligt följande:
 { width: 450px; padding:10px; border: 1px #C5DBE7 solid; margin: 0px auto 0 auto; background-image:url(assets/box.gif); background-repeat:repeat-x,y; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#6D6D6D; }
 ```
 
-När sedan `box img` används i designimportverktyget verkar den resulterande landningssidan inte ha bevarat formateringen. För att undvika detta bör du vara medveten om att AEM lägger till div-taggar i CSS och skriver om koden därefter. Annars är vissa CSS-regler ogiltiga.
+`box img` används sedan i designimporteraren och den resulterande landningssidan verkar inte ha bevarat formateringen. För att undvika detta bör du vara medveten om att AEM lägger till div-taggar i CSS och skriver om koden därefter. Annars är vissa CSS-regler ogiltiga.
 
 ```xml
 .box img
@@ -598,5 +598,5 @@ När sedan `box img` används i designimportverktyget verkar den resulterande la
 
 >[!NOTE]
 >
->Designers bör också vara medvetna om att importören bara kan känna igen kod i **id=cqcanvas** -taggen, annars bevaras inte designen.
+>Designers bör också vara medvetna om att det endast är kod i taggen **id=cqcanvas** som identifieras av importören, annars bevaras inte designen.
 
