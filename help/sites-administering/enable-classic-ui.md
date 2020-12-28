@@ -27,5 +27,5 @@ Eftersom de beröringsaktiverade funktionerna i många AEM når samma nivå som 
 
 >[!NOTE]
 >
->Mer information om status för funktionsparitet med det klassiska användargränssnittet finns i dokumentet [Touch UI Feature Parity](/help/release-notes/touch-ui-features-status.md) .
+>Mer information om status för funktionsparitet med det klassiska användargränssnittet finns i dokumentet [Touch UI Feature Parity](/help/release-notes/touch-ui-features-status.md).
 
