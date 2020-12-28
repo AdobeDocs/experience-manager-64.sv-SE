@@ -22,11 +22,11 @@ ht-degree: 2%
 
 AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön.
 
-Using the [User](/help/sites-authoring/user-properties.md#user-settings) option in the [header](/help/sites-authoring/basic-handling.md#the-header) and the associated [My Preferences](#my-preferences) dialog, you can modify your user options.
+Med alternativet [Användare](/help/sites-authoring/user-properties.md#user-settings) i [huvudet](/help/sites-authoring/basic-handling.md#the-header) och den associerade dialogrutan [Mina inställningar](#my-preferences) kan du ändra dina användaralternativ.
 
 ## Användarinställningar {#user-settings}
 
-Dialogrutan **Användarinställningar** ger dig tillgång till:
+Dialogrutan **Användare**-inställningar ger dig tillgång till:
 
 * Personifiera som
 
@@ -44,7 +44,7 @@ Dialogrutan **Användarinställningar** ger dig tillgång till:
 
 ## Mina inställningar {#my-preferences}
 
-Dialogrutan **Mina inställningar** öppnas via alternativet [Användare](/help/sites-authoring/user-properties.md#user-settings) i sidhuvudet.
+Dialogrutan **Mina inställningar** är tillgänglig via alternativet [Användare](/help/sites-authoring/user-properties.md#user-settings) i sidhuvudet.
 
 Varje användare kan ange vissa egenskaper för sig själv.
 
@@ -60,7 +60,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
    Detta definierar beteendet för att öppna fönster. Välj något av följande:
 
-   * **Flera fönster** (standard)
+   * **Flera fönster**  (standard)
 
       * Sidorna öppnas i ett nytt fönster.
    * **Ett fönster**
@@ -103,7 +103,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Använd klassisk redigeringsmiljö**
 
-   Med det här alternativet kan du skapa [klassiska användargränssnittsbaserade](/help/sites-classic-ui-authoring/home.md)sidor. Standardgränssnittet används som standard.
+   Det här alternativet aktiverar [klassisk sidredigering i användargränssnittet](/help/sites-classic-ui-authoring/home.md). Standardgränssnittet används som standard.
 
 * **Aktivera startsidan för resurser**
 
