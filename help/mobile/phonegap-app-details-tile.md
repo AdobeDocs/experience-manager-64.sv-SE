@@ -24,17 +24,17 @@ ht-degree: 0%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Via **Hantera app** -panelen på appkontrollpanelen kan du ändra information om programmet. Om du vill öppna informationssidan klickar du på länken för information i panelen Hantera app. På sidan Hantera program kan du redigera inställningarna för PhoneGap Application Configuration (config.xml) och förbereda programmet för att skickas till olika programarkiv.
+På panelen **Hantera program** på appkontrollpanelen kan du ändra information om programmet. Om du vill öppna informationssidan klickar du på länken för information i panelen Hantera app. På sidan Hantera program kan du redigera inställningarna för PhoneGap Application Configuration (config.xml) och förbereda programmet för att skickas till olika programarkiv.
 
 ![chlimage_1-116](assets/chlimage_1-116.png)
 
 ## Om Hantera programpanel {#understanding-the-manage-app-tile}
 
-Om du vill visa eller redigera information klickar du på&quot;..&quot; ( **Hantera app** -panel) kan du gå in i varje ruta i rutan Hantera app. i det nedre högra hörnet.
+Du kan detaljgranska varje ruta i **Manage App**-rutan för att visa eller redigera detaljer genom att klicka på.. i det nedre högra hörnet.
 
 ### Fliken Grundläggande {#the-basic-tab}
 
-På den här fliken kan du redigera **appens namn**, **författare**, **kortbeskrivning** och **beskrivning** .
+Du kan redigera **Namn**, **Författare**, **Kort beskrivning** och **Beskrivning** för ditt program på den här fliken.
 
 ![chlimage_1-117](assets/chlimage_1-117.png)
 
@@ -57,7 +57,7 @@ Alla leverantörsapplikationsbutiker, t.ex. Apple App Store eller Google Play St
 >
 >Med appen AEM Verifiera kan du skicka skärmbilder direkt till din appinformation i AEM.
 >
->Mer information finns i [Mobile Quickstart AEM Verify](/help/mobile/phonegap-mobile-quickstart.md) .
+>Mer information finns i [Mobile Quickstart för AEM Verify](/help/mobile/phonegap-mobile-quickstart.md).
 
 ![chlimage_1-118](assets/chlimage_1-118.png)
 
@@ -65,7 +65,7 @@ Alla leverantörsapplikationsbutiker, t.ex. Apple App Store eller Google Play St
 
 >[!NOTE]
 >
->När du känner till **Hantera app** läser du [Redigera appmetadata](/help/mobile/phonegap-editmetadata.md) för att visa och redigera metadata.
+>När du är bekant med rutan **Hantera app** läser du [Redigera appmetadata](/help/mobile/phonegap-editmetadata.md) för att visa och redigera metadata.
 
 #### Vanliga metadata {#common-metadata}
 
@@ -75,11 +75,11 @@ Det finns en gemensam konfiguration och metadata för alla plattformar.
 
 I det här avsnittet definierar du URL:en för Content Update Server, landningssidan för ditt mobilprogram, PhoneGap-versionen för kompilering, programversion, namn, beskrivning och mer.
 
-**Programversionen** är den fungerande versionen av ditt program. Det bästa sättet är att använda en 3-decimalteckning och börja under 1.0.0 före den första versionen.
+**App** Versionär den fungerande versionen av ditt program. Det bästa sättet är att använda en 3-decimalteckning och börja under 1.0.0 före den första versionen.
 
-**PhoneGap-versionen** är den version i vilken du vill kompilera programmet med PhoneGap. Bästa sättet är att hålla jämna steg med den aktuella versionen för att vara säker på att du får de senaste och bästa funktionerna och felkorrigeringarna.
+**PhoneGap** Versionär den version i vilken du vill kompilera programmet med PhoneGap. Bästa sättet är att hålla jämna steg med den aktuella versionen för att vara säker på att du får de senaste och bästa funktionerna och felkorrigeringarna.
 
-**URL** för innehållsuppdateringsserver är den URL som programmet använder för att anropa ContentSync-uppdateringar. Den måste anges till din dispatcher-URL eller, om inte en dispatcher används, till en av dina publiceringsinstanser som ska användas för ContentSync-uppdateringar av programmet.
+**URL för Content Update Server** är den URL som programmet använder för att anropa ContentSync-uppdateringar. Den måste anges till din dispatcher-URL eller, om inte en dispatcher används, till en av dina publiceringsinstanser som ska användas för ContentSync-uppdateringar av programmet.
 
 ![chlimage_1-119](assets/chlimage_1-119.png)
 
@@ -121,7 +121,7 @@ Exportfunktionen används för att underlätta insamling av skärmbilder och met
 
 ![chlimage_1-121](assets/chlimage_1-121.png)
 
-### URL för Content Update Server {#content-update-server-url}
+### URL för innehållsuppdateringsserver {#content-update-server-url}
 
 En av de viktigaste funktionerna i AEM är möjligheten att låta ett mobilprogram begära nytt innehåll via ContentSync, där innehållet kan vara HTML-resurser, sidor, video, bilder, text och mycket mer. När en innehållsförfattare har uppdaterat innehållet och sedan publicerat det gör servern innehållsuppdateringen tillgänglig för det mobilprogram som ska laddas ned.
 
@@ -141,7 +141,7 @@ Fliken **Plugins** beskriver de plugin-program som är associerade med din app. 
 
 ### Fliken Skärmbilder {#the-screenshots-tab}
 
-På fliken **Skärmbilder** visas de skärmbildupplösningar som stöds på olika plattformar.
+På fliken **Skärmbilder** visas skärmbildupplösningar som stöds på olika plattformar.
 
 ![chlimage_1-123](assets/chlimage_1-123.png)
 
