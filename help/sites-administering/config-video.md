@@ -18,23 +18,23 @@ ht-degree: 0%
 ---
 
 
-# Konfigurera komponenten Video {#configure-the-video-component}
+# Konfigurera videokomponenten {#configure-the-video-component}
 
 Med [videokomponenten](/help/sites-authoring/default-components-foundation.md#video) kan du placera ett fördefinierat OTB-videoelement (körklar) på sidan.
 
-För att korrekt transkodning ska ske måste administratören [installera MPEG och konfigurera AEM](#install-ffmpeg) separat. De kan också [konfigurera videoprofilerna](#configure-video-profiles) för användning med HTML5-element.
+För att korrekt omkodning ska ske måste administratören [installera MPEG och konfigurera AEM](#install-ffmpeg) separat. De kan även [konfigurera dina videoprofiler](#configure-video-profiles) för användning med HTML5-element.
 
 ## Konfigurera videoprofiler {#configure-video-profiles}
 
-Du kanske vill definiera videoprofiler som ska användas för HTML5-element. De som väljs här används i ordning. Använd [designläget](/help/sites-authoring/default-components-designmode.md) (endast Classic UI) och välj **[!UICONTROL Profiles]** fliken:
+Du kanske vill definiera videoprofiler som ska användas för HTML5-element. De som väljs här används i ordning. Använd [Designläge](/help/sites-authoring/default-components-designmode.md) (endast Classic UI) och välj fliken **[!UICONTROL Profiles]** för att få åtkomst:
 
 ![chlimage_1-317](assets/chlimage_1-317.png)
 
-Du kan också konfigurera designen för videokomponenterna och -parametrarna för [!UICONTROL Playback], [!UICONTROL Flash]och [!UICONTROL Advanced].
+Du kan också konfigurera designen för videokomponenterna och -parametrarna för [!UICONTROL Playback], [!UICONTROL Flash] och [!UICONTROL Advanced].
 
-## Installera och konfigurera AEM {#install-ffmpeg}
+## Installera MPEG och konfigurera AEM {#install-ffmpeg}
 
-Video Component (videokomponenten) använder öppen källkod-produkten från tredje part för korrekt omkodning av videofilmer som kan hämtas från [https://ffmpeg.org/](https://ffmpeg.org/). När du har installerat mpeg måste du konfigurera AEM att använda en viss ljudkodek och specifika körningsalternativ.
+Video Component (videokomponenten) använder öppen källkod-produkten från tredje part för korrekt omkodning av videoklipp som kan hämtas från [https://ffmpeg.org/](https://ffmpeg.org/). När du har installerat mpeg måste du konfigurera AEM att använda en viss ljudkodek och specifika körningsalternativ.
 
 **Så här installerar du FFmpeg för din plattform**:
 
@@ -42,7 +42,7 @@ Video Component (videokomponenten) använder öppen källkod-produkten från tre
 
    1. Hämta den kompilerade binärfilen som `ffmpeg.zip`
    1. Zippa upp i en mapp.
-   1. Ställ in systemmiljövariabeln `PATH` på `<*your-ffmpeg-locatio*n>\bin`
+   1. Ange systemmiljövariabeln `PATH` till `<*your-ffmpeg-locatio*n>\bin`
    1. Starta om AEM.
 
 * **I Mac OS X:**
@@ -54,12 +54,12 @@ Video Component (videokomponenten) använder öppen källkod-produkten från tre
 
       `sudo port install ffmpeg`
 
-      `FFmpeg` måste vara i `PATH` så att AEM kan hämta det via kommandoraden.
+      `FFmpeg` måste vara i  `PATH` så att AEM kan hämta det via kommandoraden.
 
 * **Använda den förkompilerade versionen för OS X 10.6:**
 
    1. Ladda ned den förkompilerade versionen.
-   1. Extrahera den till `/usr/local` katalogen.
+   1. Extrahera den till katalogen `/usr/local`.
    1. Kör från terminal:
 
       `sudo ln -s /usr/local/Cellar/ffmpeg/0.6/bin/ffmpeg /usr/bin/ffmpeg`
@@ -67,7 +67,7 @@ Video Component (videokomponenten) använder öppen källkod-produkten från tre
 **Så här konfigurerar du AEM**:
 
 1. Öppna [!UICONTROL CRXDE Lite] i webbläsaren. ([http://localhost:4502/crx/de](http://localhost:4502/crx/de))
-1. Markera `/libs/settings/dam/video/format_aac/jcr:content` noden och kontrollera att nodegenskaperna är följande:
+1. Markera noden `/libs/settings/dam/video/format_aac/jcr:content` och kontrollera att nodegenskaperna är följande:
 
    * audioCodec:
 
@@ -81,7 +81,7 @@ Video Component (videokomponenten) använder öppen källkod-produkten från tre
        -flags +loop -me_method umh -g 250 -qcomp 0.6 -qmin 10 -qmax 51 -qdiff 4 -bf 16 -b_strategy 1 -i_qfactor 0.71 -cmp chroma -subq 8 -me_range 16 -coder 1 -sc_threshold 40 -b-pyramid normal -wpredp 2 -mixed-refs 1 -8x8dct 1 -fast-pskip 1 -keyint_min 25 -refs 4 -trellis 1 -direct-pred 3 -partitions i8x8,i4x4,p8x8,b8x8
       ```
 
-1. Om du vill anpassa konfigurationen skapar du en övertäckning i `/apps/settings/` noden och flyttar samma struktur under `/conf/global/settings/` noden. Den kan inte redigeras i `/libs` noden. Om du till exempel vill täcka över en bana `/libs/settings/dam/video/fullhd-bp`skapar du den på `/conf/global/settings/dam/video/fullhd-bp`.
+1. Om du vill anpassa konfigurationen skapar du en övertäckning i noden `/apps/settings/` och flyttar samma struktur under noden `/conf/global/settings/`. Det kan inte redigeras i noden `/libs`. Om du till exempel vill täcka över sökvägen `/libs/settings/dam/video/fullhd-bp` skapar du den på `/conf/global/settings/dam/video/fullhd-bp`.
 
    >[!NOTE]
    >
@@ -91,5 +91,5 @@ Video Component (videokomponenten) använder öppen källkod-produkten från tre
 
 >[!NOTE]
 >
->Arbetsflödesmodeller från OTB bevaras inte när du uppgraderar AEM. Adobe rekommenderar att du kopierar OOTB-arbetsflödesmodeller innan du redigerar dem. Kopiera till exempel OTB DAM Update Asset-modellen innan du redigerar omkodningssteget för MPEG i DAM Update Asset-modellen för att välja videoprofilnamn som fanns före uppgraderingen. Sedan kan du täcka över noden så att AEM kan hämta de anpassade ändringarna i OTB-modellen `/apps` .
+>Arbetsflödesmodeller från OTB bevaras inte när du uppgraderar AEM. Adobe rekommenderar att du kopierar OOTB-arbetsflödesmodeller innan du redigerar dem. Kopiera till exempel OTB DAM Update Asset-modellen innan du redigerar omkodningssteget för MPEG i DAM Update Asset-modellen för att välja videoprofilnamn som fanns före uppgraderingen. Sedan kan du täcka över noden `/apps` så att AEM kan hämta anpassade ändringar i OTB-modellen.
 
