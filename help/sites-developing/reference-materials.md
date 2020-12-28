@@ -37,7 +37,7 @@ AEM innehåller flera API:er för utveckling av program. Följande lista innehå
 
 * [Redigeraren Core Javascript API Reference](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)
 
-AEM SDK-ramverket för JavaScript API-referenser för SPA-redigerare (Single-Page Application):
+AEM Single-Page Application (SPA) Editor SDK Framework JavaScript API-referenser:
 
 * [Komponentmappning](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [Sidmodellshanteraren](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
@@ -50,7 +50,7 @@ AEM Delivery and Content Management APIs:
 
    * [JSON-exporterare](/help/sites-developing/json-exporter.md)
    * [Aktivera JSON-export för en komponent](/help/sites-developing/json-exporter-components.md)
-   * Mer information finns i avsnittet [Komponenter i användarhandboken](https://helpx.adobe.com/experience-manager/6-4/sites/developing/user-guide.html?topic=/experience-manager/6-4/sites/developing/morehelp/components.ug.js) för utveckling
+   * Mer information finns i avsnittet [Komponenter i användarhandboken för utveckling](https://helpx.adobe.com/experience-manager/6-4/sites/developing/user-guide.html?topic=/experience-manager/6-4/sites/developing/morehelp/components.ug.js)
 
 * [AEM Assets HTTP API](/help/assets/mac-api-assets.md)
 
