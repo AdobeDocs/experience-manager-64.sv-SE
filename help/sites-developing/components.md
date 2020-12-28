@@ -18,9 +18,9 @@ ht-degree: 4%
 ---
 
 
-# Komponenter - översikt{#components-overview}
+# Komponentöversikt{#components-overview}
 
-På den här sidan finns en översikt över Adobe Experience Manager-komponenter (AEM), t.ex. de som [används för att skapa](/help/sites-authoring/default-components-foundation.md)sidor.
+Den här sidan innehåller en översikt över Adobe Experience Manager-komponenter (AEM), t.ex. de [som används för sidredigering](/help/sites-authoring/default-components-foundation.md).
 
 ## Vad är komponenter? {#what-exactly-is-a-component}
 
@@ -47,11 +47,11 @@ Varje AEM:
 
 * Är en resurstyp.
 * Är en samling skript som helt och hållet realiserar en viss funktion.
-* Kan fungera *fristående*, vilket betyder antingen i AEM eller i en portal.
+* Kan fungera i *isolering*, vilket betyder antingen i AEM eller i en portal.
 
 ## Färdiga komponenter i AEM {#out-of-the-box-components-within-aem}
 
-AEM innehåller en mängd [färdiga komponenter](/help/sites-authoring/default-components.md) som ger omfattande funktionalitet:
+AEM innehåller en mängd [körklara komponenter](/help/sites-authoring/default-components.md) som ger omfattande funktionalitet som:
 
 * Styckesystem ( `parsys`)
 * Sida ( `responsivegrid` - endast användargränssnitt med pekfunktion)
@@ -59,7 +59,7 @@ AEM innehåller en mängd [färdiga komponenter](/help/sites-authoring/default-c
 * Bild, med medföljande text
 * Verktygsfält
 
-De komponenter som tillhandahålls och deras användning i [exemplet Webbplatser](/help/sites-developing/we-retail.md) för detaljhandel visar hur du implementerar och använder komponenter. Komponenterna levereras med all källkod och kan användas som de är eller som startpunkter för ändrade eller utökade komponenter.
+De komponenter som tillhandahålls och deras användning i [exemplet Web.Retail-webbplatser](/help/sites-developing/we-retail.md) visar hur du implementerar och använder komponenter. Komponenterna levereras med all källkod och kan användas som de är eller som startpunkter för ändrade eller utökade komponenter.
 
 ### Kärnkomponenter och grundkomponenter {#core-components-and-foundation-components}
 
@@ -68,31 +68,31 @@ Det finns två uppsättningar AEM komponenterna som tillhandahålls av Adobe:
 * [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [Foundation Components](/help/sites-authoring/default-components-foundation.md)
 
-**Core Components** introducerades med AEM 6.3 och erbjuder flexibla och funktionsrika redigeringsfunktioner. Referenswebbplatsen [](/help/sites-developing/we-retail.md) We.Retail visar hur kärnkomponenterna kan användas och representerar de bästa metoderna för komponentutveckling.
+**Core** Components introducerades med AEM 6.3 och erbjuder flexibla och funktionsrika redigeringsfunktioner. Referenswebbplatsen [We.Retail](/help/sites-developing/we-retail.md) visar hur kärnkomponenterna kan användas och representerar de bästa metoderna för komponentutveckling.
 
-**Foundation Components** har varit tillgängliga med AEM i många versioner och finns i en AEM standardinstallation. Även om de flesta fortfarande stöds har de tagits bort, förbättrats inte längre och baseras på äldre tekniker.
+**Foundation** Components har varit tillgängliga med AEM för många versioner och finns i en AEM standardinstallation. Även om de flesta fortfarande stöds har de tagits bort, förbättrats inte längre och baseras på äldre tekniker.
 
 >[!NOTE]
 >
->[Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) är de bästa metoderna för komponentdesign och -utveckling och fungerar som referensimplementationer.
+>[Core ](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) Components är de bästa metoderna för komponentdesign och -utveckling och fungerar som referensimplementationer.
 >
->[AEM moderniseringsverktyg](modernization-tools.md) kan hjälpa dig att migrera till kärnkomponenter.
+>[AEM Modernization ](modernization-tools.md) Toolscan hjälper till att migrera till Core Components.
 
 ### Visa tillgängliga komponenter {#viewing-available-components}
 
-Använd [komponentkonsolen](/help/sites-authoring/default-components-console.md)om du vill se en översikt över alla tillgängliga komponenter i AEM.
+Använd [komponentkonsolen](/help/sites-authoring/default-components-console.md) om du vill se en översikt över alla tillgängliga komponenter i AEM.
 
 Du kan också använda CRXDE Lite för att få en lista över alla komponenter som är tillgängliga i databasen.
 
-1. I **[!UICONTROL CRXDE Lite]** väljer du **[!UICONTROL Tools]** från verktygsfältet **[!UICONTROL Query]** så öppnas **[!UICONTROL Query]** fliken.
+1. I **[!UICONTROL CRXDE Lite]** väljer du **[!UICONTROL Tools]** i verktygsfältet och sedan **[!UICONTROL Query]**, som öppnar fliken **[!UICONTROL Query]**.
 
-1. Välj **[!UICONTROL Query]** som på `XPath` fliken **[!UICONTROL Type]**.
+1. Välj `XPath` som **[!UICONTROL Type]** på fliken **[!UICONTROL Query]**.
 
-1. Ange följande sträng i **[!UICONTROL Query]** indatafältet:
+1. I indatafältet **[!UICONTROL Query]** anger du följande sträng:
 
    `//element(*, cq:Component)`
 
-1. Klicka **[!UICONTROL Execute]** så visas komponenterna.
+1. Klicka på **[!UICONTROL Execute]** så visas komponenterna.
 
 ## Ytterligare resurser {#further-reading}
 
