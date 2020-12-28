@@ -1,6 +1,6 @@
 ---
-title: SPA-modellroutning
-seo-title: SPA-modellroutning
+title: SPA
+seo-title: SPA
 description: För enkelsidiga program i AEM ansvarar appen för routningen. I det här dokumentet beskrivs routningsmekanismen, kontraktet och tillgängliga alternativ.
 seo-description: För enkelsidiga program i AEM ansvarar appen för routningen. I det här dokumentet beskrivs routningsmekanismen, kontraktet och tillgängliga alternativ.
 uuid: 93b4f85a-a240-42d4-95e2-e8b790df7723
@@ -18,31 +18,31 @@ ht-degree: 0%
 ---
 
 
-# SPA-modellroutning{#spa-model-routing}
+# SPA Modellroutning{#spa-model-routing}
 
 För enkelsidiga program i AEM ansvarar appen för routningen. I det här dokumentet beskrivs routningsmekanismen, kontraktet och tillgängliga alternativ.
 
 >[!NOTE]
 >
->Funktionen SPA-redigerare (Single-Page Application) kräver AEM 6.4 Service Pack 2 eller senare.
+>Funktionen SPA (Single-Page Application Editor) kräver AEM 6.4 Service Pack 2 eller senare.
 >
->SPA-redigeraren är den rekommenderade lösningen för projekt som kräver SPA-ramverksbaserad rendering på klientsidan (t.ex. React eller Angular).
+>SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad återgivning på klientsidan (t.ex. Reaktion eller Vinkel).
 
-## Projektdirigering {#project-routing}
+## Projektroutning {#project-routing}
 
-Appen äger routningen och implementeras sedan av projektutvecklarna. Det här dokumentet beskriver routningen som är specifik för den modell som returneras av AEM. Sidmodellens datastruktur visar den underliggande resursens URL. Det främsta projektet kan använda vilket anpassat bibliotek eller tredjepartsbibliotek som helst som tillhandahåller routningsfunktioner. När en väg förväntar sig ett fragment av modellen kan ett anrop till `PageModelManager.getData()` funktionen göras. När en modellväg har ändrats måste en händelse aktiveras för att varna avlyssningsbibliotek som t.ex. Page Editor.
+Appen äger routningen och implementeras sedan av projektutvecklarna. Det här dokumentet beskriver routningen som är specifik för den modell som returneras av AEM. Sidmodellens datastruktur visar den underliggande resursens URL. Det främsta projektet kan använda vilket anpassat bibliotek eller tredjepartsbibliotek som helst som tillhandahåller routningsfunktioner. När en väg förväntar sig ett fragment av modellen kan ett anrop till funktionen `PageModelManager.getData()` göras. När en modellväg har ändrats måste en händelse aktiveras för att varna avlyssningsbibliotek som t.ex. Page Editor.
 
 ## Arkitektur {#architecture}
 
-En detaljerad beskrivning finns i avsnittet [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager) i SPA-designdokumentet.
+En detaljerad beskrivning finns i avsnittet [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager) i SPA.
 
 ## ModelRouter {#modelrouter}
 
-När `ModelRouter` det här alternativet är aktiverat kapslar det in API-funktioner för HTML5-historik `pushState` och `replaceState` för att garantera att ett visst modellfragment är förhämtat och tillgängligt. Därefter meddelas den registrerade frontkomponenten om att modellen har ändrats.
+`ModelRouter` - när den är aktiverad - kapslar in API-funktionerna för HTML5-historik `pushState` och `replaceState` för att garantera att ett visst modellfragment är förhämtat och tillgängligt. Därefter meddelas den registrerade frontkomponenten om att modellen har ändrats.
 
 ## Manuell kontra automatisk modellroutning {#manual-vs-automatic-model-routing}
 
-Funktionen `ModelRouter` automatiserar hämtning av fragment av modellen. Men som alla automatiserade verktyg har de begränsningar. Vid behov `ModelRouter` kan sökvägarna inaktiveras eller konfigureras så att de ignoreras med metaegenskaper (se avsnittet Metaegenskaper i [SPA Page Component](/help/sites-developing/spa-page-component.md) -dokumentet). Utvecklare kan sedan implementera sitt eget modellroutningslager genom att begära `PageModelManager` att ett visst fragment av modellen ska läsas in med `getData()` funktionen.
+`ModelRouter` automatiserar hämtning av fragment av modellen. Men som alla automatiserade verktyg har de begränsningar. Vid behov kan `ModelRouter` inaktiveras eller konfigureras att ignorera sökvägar med metaegenskaper (se avsnittet Metaegenskaper i [SPA Page Component](/help/sites-developing/spa-page-component.md)-dokumentet). Utvecklare på frontsidan kan sedan implementera sitt eget modellroutningslager genom att begära att `PageModelManager` läser in ett givet fragment av modellen med funktionen `getData()`.
 
 >[!NOTE]
 >
@@ -50,23 +50,23 @@ Funktionen `ModelRouter` automatiserar hämtning av fragment av modellen. Men so
 
 >[!CAUTION]
 >
->Den aktuella versionen av det `ModelRouter` enda stödet för användning av URL:er som pekar på den faktiska resurssökvägen för Sling Model-startpunkter. Det stöder inte användning av Vanity-URL:er eller alias.
+>Den aktuella versionen av `ModelRouter` stöder endast användning av URL:er som pekar mot den faktiska resurssökvägen för Sling Model-startpunkter. Det stöder inte användning av Vanity-URL:er eller alias.
 
 ## Routningskontrakt {#routing-contract}
 
-Den aktuella implementeringen baseras på antagandet att SPA-projektet använder API:t för HTML5-historik för routning till de olika programsidorna.
+Den aktuella implementeringen baseras på antagandet att det SPA projektet använder API:t för HTML5-historik för routning till de olika programsidorna.
 
 ### Konfiguration {#configuration}
 
-Den `ModelRouter` stöder begreppet modellroutning när den lyssnar efter `pushState` och `replaceState` anropar för att hämta modellfragment i förväg. Internt aktiveras en funktion för `PageModelManager` att läsa in den modell som motsvarar en viss URL och utlöser en `cq-pagemodel-route-changed` händelse som andra moduler kan lyssna på.
+`ModelRouter` stöder begreppet modellroutning när den lyssnar efter `pushState`- och `replaceState`-anrop för att hämta modellfragment i förväg. Internt aktiveras `PageModelManager` för att läsa in modellen som motsvarar en angiven URL och utlöser en `cq-pagemodel-route-changed`-händelse som andra moduler kan avlyssna.
 
-Som standard aktiveras det här beteendet automatiskt. Om du vill inaktivera den bör SPA återge följande metaegenskap:
+Som standard aktiveras det här beteendet automatiskt. SPA bör återge följande metaegenskap för att inaktivera den:
 
 ```
 <meta property="cq:pagemodel_router" content="disable"\>
 ```
 
-Observera att alla vägar i SPA bör motsvara en tillgänglig resurs i AEM (t.ex. &quot; `/content/mysite/mypage"`) eftersom `PageModelManager` automatiskt försöker läsa in motsvarande sidmodell när flödet har valts. Även om det vid behov kan SPA även definiera ett &quot;blockeringslista&quot; på rutter som ska ignoreras av `PageModelManager`följande:
+Observera att varje väg i SPA ska motsvara en tillgänglig resurs i AEM (t.ex. &quot; `/content/mysite/mypage"`) eftersom `PageModelManager` automatiskt försöker läsa in motsvarande sidmodell när flödet har valts. Vid behov kan SPA även definiera ett &quot;blockeringslista&quot; för vägar som ska ignoreras av `PageModelManager`:
 
 ```
 <meta property="cq:pagemodel_route_filters" content="route/not/found,^(.*)(?:exclude/path)(.*)"/>
