@@ -31,7 +31,7 @@ Detta skulle kunna fungera som en bedömning av den utvecklingsinsats som ingår
 
 ## Konfigurera {#how-to-set-up}
 
-Mönsteravkännaren släpps separat som ett [paket](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/compatpack/pd-all-aem65) som fungerar med alla AEM från 6.1 till 6.5 AEM 6.5. Den kan installeras med [pakethanteraren](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/package-manager.html).
+Mönsteravkännaren släpps separat som ett [paket](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/compatpack/pd-all-aem65) som fungerar med AEM källversioner från 6.1 till 6.5 AEM 6.5. Den kan installeras med [Package Manager](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/package-manager.html).
 
 ## Användning {#how-to-use}
 
@@ -41,15 +41,15 @@ Mönsteravkännaren släpps separat som ett [paket](https://www.adobeaemcloud.co
 >
 >* öka detekteringsgraden
 >* undvika flaskhalsar i affärskritiska instanser\
-   >båda samtidigt rekommenderas att köra programmet **i miljöer** som är så nära produktionsmiljöer som möjligt inom områden som användarprogram, innehåll och konfigurationer.
+   >båda samtidigt rekommenderas att köra den **på mellanlagringsmiljöer** som är så nära produktionsmiljöer som möjligt inom användarprogram, innehåll och konfigurationer.
 
 
-Du kan använda flera metoder för att kontrollera utdata för Mönsteravkännare:
+Du kan använda flera metoder för att kontrollera mönsteravkännarens utdata:
 
 * **Via Felix Inventory Console:**
 
 1. Gå till AEM webbkonsol genom att gå till: https://<i></i>serveradress:serverport/system/console/configMgr
-1. Välj **Status - Mönsteravkännare** enligt bilden nedan:
+1. Välj **Status - Mönsteravkännare** så som visas i bilden nedan:
 
    ![screenshot-2018-2-5pattern-Dettor](assets/screenshot-2018-2-5pattern-detector.png)
 
@@ -68,7 +68,7 @@ Utdata är för närvarande tillgängliga under två URL:er:
 1. Gränssnitt för oformaterad text
 1. JSON-gränssnitt
 
-## Hantera gränssnittet Oformaterad text {#handling-the-plain-text-interface}
+## Hantera gränssnittet för oformaterad text {#handling-the-plain-text-interface}
 
 Informationen i utdata formateras som en serie händelseposter. Det finns två kanaler - en för publiceringsöverträdelser och den andra för publicering av aktuella framsteg.
 
@@ -84,7 +84,7 @@ Utdata ser ut så här:
 2018-02-13T14:18:32.071+01:00 [SUSPICION] The pattern=ECU/extraneous.content.usage was found by detector=ContentAccessDetector with id=a07fd94318f12312c165e06d890cbd3c2c8b8dad0c030663db8b4c800dd7c33f message="Cross-boundary overlay of internal marked path /libs/granite/operations/components/commons/commons.jsp/jcr:content referenced at /apps/granite/operations/components/commons/commons.jsp/jcr:content with properties redefined: jcr:lastModifiedBy, jcr:mimeType, jcr:data, jcr:lastModified, jcr:uuid". More info at=https://www.adobe.com/go/aem6_EC
 ```
 
-Förloppet kan filtreras med `grep` kommandot:
+Förloppet kan filtreras med kommandot `grep`:
 
 ```shell
 curl -Nsu 'admin:admin' http://localhost:4502/system/console/status-pattern-detector.txt | tee patterns-report.log | grep PROGRESS
@@ -100,7 +100,7 @@ Detta ger följande utdata:
 
 ## Hantera JSON-gränssnittet {#handling-the-json-interface}
 
-På samma sätt kan JSON bearbetas med [jq-verktyget](https://stedolan.github.io/jq/) så snart det publiceras.
+På samma sätt kan JSON bearbetas med [jq-verktyget](https://stedolan.github.io/jq/) så fort det publiceras.
 
 ```shell
 curl -Nsu 'admin:admin' http://localhost:4502/system/console/status-pattern-detector.json | tee patterns-report.json | jq --unbuffered -C 'select(.suspicion == true)'
@@ -210,14 +210,14 @@ Med utdata:
 
 >[!NOTE]
 >
->Det rekommenderade sättet är att spara hela utdata från urklipp i filen och sedan bearbeta det via `jq` eller `grep` för att filtrera informationstypen.
+>Det rekommenderade sättet är att spara hela utdata från url i filen och sedan bearbeta det via `jq` eller `grep` för att filtrera informationstypen.
 
 ## Identifieringsomfång {#scope}
 
 Mönsteravkännaren kan för närvarande kontrollera:
 
 * OSGi-paket matchar inte export och import
-* Dela resurstyper och supertyper (med innehållsövertäckningar för sökvägar)
+* Dela resurstyper och supertyper (med innehållsövertäckningar för sökvägar) - överanvändning
 * definitioner av ekindex (kompatibilitet)
 * VLT-paket (överanvändning)
 * rep:kompatibilitet med användarnoder (i samband med OAuth-konfiguration)
