@@ -29,7 +29,7 @@ AEM innehåller flera verktyg som gör att du kan utveckla webbplatser för mobi
 
 Den här sidan ska läsas tillsammans med [mobilsidan för författare](/help/sites-authoring/mobile.md).
 
-## Utveckla webbplatser för mobiler {#developing-web-sites-for-mobile}
+## Utveckla webbplatser för mobilen {#developing-web-sites-for-mobile}
 
 Utveckla sidmallar och komponenter som är optimerade för visning med mobila enheter. Utveckla sidor som använder en responsiv layout som anpassar sig till flera skärmstorlekar, eller utveckla sidor som är optimerade för en viss skärmstorlek. Använd de enhetsemulatorer som AEM tillhandahåller eller skapar egna emulatorer för WSYWIG-redigering och -förhandsgranskning:
 
@@ -40,4 +40,4 @@ Utveckla sidmallar och komponenter som är optimerade för visning med mobila en
 
 ## Utveckla mobilappar {#developing-mobile-apps}
 
-Utveckla mobilappar som använder AEM sidor som programgränssnitt. AEM integreras med PhoneGap så att du enkelt kan skapa appar med AEM sidor. Med Innehållssynkronisering kan du skapa versionshanterade arkiv med sidor som kan paketeras med appar. Om du vill veta mer om innehållssynkronisering klickar du [här](/help/mobile/phonegap-contentsync.md).
+Utveckla mobilappar som använder AEM sidor som programgränssnitt. AEM integreras med PhoneGap så att du enkelt kan skapa appar med AEM sidor. Med Innehållssynkronisering kan du skapa versionshanterade arkiv med sidor som kan paketeras med appar. Klicka [här](/help/mobile/phonegap-contentsync.md) om du vill veta mer om Innehållssynkronisering.
