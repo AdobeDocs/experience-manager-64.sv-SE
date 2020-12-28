@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Integrera landningssidor med Adobe Analytics{#integrating-landing-pages-with-adobe-analytics}
 
-AEM har integrerat landningssidornas lösning med [Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst) genom att använda följande CTA-komponenter:
+AEM har integrerat landningssidornas lösning med [Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst) genom att använda följande CTA-komponenter (call-to-action):
 
 1. Klicka genom komponent
 1. Komponent för grafisk länk
@@ -29,11 +29,11 @@ Dessa komponenter visar vissa attribut som kan mappas via Adobe Analytics-variab
 
 ## Förutsättningar {#prerequisites}
 
-Adobe rekommenderar att du går igenom den [befintliga AEM-Adobe Analytics-integreringen](/help/sites-administering/adobeanalytics.md) för att förstå hur integreringen fungerar.
+Adobe rekommenderar att du går igenom [den befintliga AEM-Adobe Analytics-integreringen](/help/sites-administering/adobeanalytics.md) för att förstå hur den här integreringen fungerar.
 
 ## Komponenter tillgängliga för mappning {#components-available-for-mapping}
 
-I AEM kan **Call to Action** -komponenterna - **ClickThroughLink** och **GraphicalLink** - som visas här i sidosparken mappas till Adobe Analytics-variabler.
+I AEM kan **Call to Action**-komponenterna - **ClickThroughLink** och **GraphicalLink** - som visas här i sidosparken mappas till Adobe Analytics-variabler.
 
 ![chlimage_1-21](assets/chlimage_1-21.jpeg)
 
@@ -90,7 +90,7 @@ Så här mappar du landningssidans komponenter till Adobe Analytics:
 </table>
 
 1. Mappa dessa exponerade attribut med eventuella Adobe Analytics-variabler från innehållssökaren. Ramverket är nu klart att användas.
-1. Nu kan du skapa en ny landningssida eller öppna en befintlig landningssida med befintliga CTA-komponenter och klicka på fliken **Cloud Services** i **Sidegenskaper** från sidan (i det pekoptimerade användargränssnittet väljer du **Öppna egenskaper** och klickar på **Cloud Services**) och konfigurerar ramverket för landningssidan. Välj ramverket i listrutan.
+1. Nu kan du skapa en ny landningssida eller öppna en befintlig landningssida med befintliga CTA-komponenter och klicka på fliken **Cloud Services** i **Sidegenskaper** från sidosparken (i det pekoptimerade användargränssnittet väljer du **Öppna egenskaper** och klickar på **Cloud Services**) och konfigurera ramverket att använda med landningssidan . Välj ramverket i listrutan.
 
    ![chlimage_1-25](assets/chlimage_1-25.png)
 
