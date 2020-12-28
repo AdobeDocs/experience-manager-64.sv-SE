@@ -22,13 +22,13 @@ ht-degree: 22%
 
 Med komponentkonsolen kan du bläddra igenom alla komponenter som definierats för instansen och visa nyckelinformation för varje komponent.
 
-It can be accessed from **Tools** -> **General** -> **Components**. I konsolen finns kortvyn och listvyn. Eftersom det inte finns någon trädstruktur för komponenter är kolumnvyn inte tillgänglig.
+Den kan nås från **Verktyg** -> **Allmänt** -> **Komponenter**. I konsolen finns kortvyn och listvyn. Eftersom det inte finns någon trädstruktur för komponenter är kolumnvyn inte tillgänglig.
 
 ![chlimage_1-301](assets/chlimage_1-301.png)
 
 >[!NOTE]
 >
->Komponentkonsolen visar alla komponenter i systemet. I [komponentwebbläsaren](/help/sites-authoring/author-environment-tools.md#components-browser) visas komponenter som är tillgängliga för författare och alla komponentgrupper som börjar med en punkt ( `.`) döljs.
+>Komponentkonsolen visar alla komponenter i systemet. [Komponentbläddraren](/help/sites-authoring/author-environment-tools.md#components-browser) visar komponenter som är tillgängliga för författare och döljer komponentgrupper som börjar med en punkt ( `.`).
 
 ## Sökning {#search-features}
 
@@ -47,10 +47,10 @@ Om du vill visa information om en viss komponent trycker/klickar du på den nöd
    På fliken Egenskaper kan du:
 
    * Visa komponentens allmänna egenskaper.
-   * Visa hur [ikonen eller förkortningen har definierats](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) för komponenten.
+   * Visa hur ikonen eller förkortningen [har definierats](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) för komponenten.
 
       * Om du klickar på ikonens källa kommer du till den komponenten.
-   * Visa komponentens **resurstyp** och **resurssupertyp** (om den är definierad).
+   * Visa **Resurstyp** och **Resurssupertyp** (om den är definierad) för komponenten.
 
       * Om du klickar på Resurssupertypen kommer du till den komponenten.
    >[!NOTE]
@@ -71,7 +71,7 @@ Om du vill visa information om en viss komponent trycker/klickar du på den nöd
 
 * **Dokumentation**
 
-   Om utvecklaren har tillhandahållit [dokumentation för komponenten](/help/sites-developing/developing-components.md#documenting-your-component)visas den på fliken **Dokumentation** . Om det inte finns någon tillgänglig dokumentation visas inte fliken **Dokumentation** .
+   Om utvecklaren har tillhandahållit [dokumentation för komponenten](/help/sites-developing/developing-components.md#documenting-your-component) visas den på fliken **Dokumentation**. Om det inte finns någon tillgänglig dokumentation visas inte fliken **Dokumentation**.
 
    ![chlimage_1-305](assets/chlimage_1-305.png)
 
