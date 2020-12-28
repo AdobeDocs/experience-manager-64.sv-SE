@@ -22,11 +22,11 @@ ht-degree: 0%
 
 Med AEM 3D (Adobe Experience Manager 3D) kan du överföra, hantera, visa och återge 3D-innehåll. Stöd för visning och återgivning är optimerat för enskilda objekt.
 
-Se även [AEM 3D versionsinformation](/help/release-notes/aem3d-release-notes.md).
+Se även [AEM 3D-versionsinformation](/help/release-notes/aem3d-release-notes.md).
 
 Se även [Installera och konfigurera AEM 3D](/help/assets/install-config-3d.md).
 
 >[!NOTE]
 >
->AEM 3D är bara tillgängligt från användargränssnittet med AEM touch, inte det klassiska användargränssnittet. Mer information finns i [Arbeta med 3D-resurser](/help/assets/assets-3d.md) i standarddokumentationen för redigering.
+>AEM 3D är bara tillgängligt från användargränssnittet med AEM touch, inte det klassiska användargränssnittet. Mer information finns i [Arbeta med 3D-resurser](/help/assets/assets-3d.md) i standardredigeringsdokumentationen.
 
