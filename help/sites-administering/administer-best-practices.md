@@ -58,12 +58,12 @@ De effektivaste strategierna kring Assets, inklusive funktionen för dynamiska m
   </tr>
   <tr>
    <td>Alternativ för bildförinställningar</td> 
-   <td>De bästa sätten att använda <a href="/help/assets/managing-image-presets.md#understanding-image-presets">bildförinställningar</a> och <a href="/help/assets/managing-image-presets.md#image-preset-options">bildförinställningar</a></td> 
-   <td>I dokumentationen om <a href="/help/assets/managing-image-presets.md">hantering av bildförinställningar</a>beskrivs vilka bildförinställningar som är och de bästa sätten att välja bildförinställningar.</td> 
+   <td>Om <a href="/help/assets/managing-image-presets.md#understanding-image-presets">bildförinställningar</a> och <a href="/help/assets/managing-image-presets.md#image-preset-options">god praxis för bildförinställningar</a></td> 
+   <td>I dokumentationen om <a href="/help/assets/managing-image-presets.md">Hantera bildförinställningar</a> beskrivs vilka bildförinställningar som är och de bästa sätten att välja bildförinställningar.</td> 
   </tr>
   <tr>
    <td>Dynamic Media jämfört med direktintegrering med Scene7</td> 
-   <td><a href="/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media">Scene7/AEM-integrering jämfört med Dynamic Media</a></td> 
+   <td><a href="/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media">Integrering med Scene7/AEM jämfört med Dynamic Media</a></td> 
    <td>Beskriver när det är bäst att använda Dynamic Media-lösningen, när S7 ska integreras med AEM eller när båda ska användas.</td> 
   </tr>
  </tbody>
