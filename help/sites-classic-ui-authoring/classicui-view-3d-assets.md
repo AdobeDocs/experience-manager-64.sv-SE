@@ -26,7 +26,7 @@ Det interaktiva 3D-visningsprogrammet är tillgängligt från sidan med resursin
 
 Förutom att använda standardfaserna i AEM 3D kan du även använda faser som du har skapat i ett tredjepartsprogram och överfört till AEM.
 
-Se [Använda scener i AEM 3D](/help/sites-classic-ui-authoring/classicui-stages-aem3d.md).
+Se [Använda faser i AEM 3D](/help/sites-classic-ui-authoring/classicui-stages-aem3d.md).
 
 >[!NOTE]
 >
@@ -48,8 +48,8 @@ Dessutom är funktioner i klientdatorn, t.ex. en arbetsstation, bärbar dator el
 1. Se till att du har överfört 3D-resurser till AEM.
 
    Se [Om överföring och bearbetning av 3D-resurser i AEM](/help/sites-classic-ui-authoring/classicui-upload-proc-3d.md).
-1. Tryck på **[!UICONTROL Adobe Experience Manager]** på **[!UICONTROL Navigation]** sidan **[!UICONTROL Assets]**.
-1. Near the upper-right corner of the page, from the **[!UICONTROL View]** drop-down list, tap **[!UICONTROL Card View]**.
+1. Tryck på **[!UICONTROL Navigation]** på sidan **[!UICONTROL Adobe Experience Manager]**.**[!UICONTROL Assets]**
+1. Tryck på **[!UICONTROL Card View]** i den nedrullningsbara listan **[!UICONTROL View]** i sidans övre högra hörn.
 
 1. Navigera till en 3D-resurs som du vill visa.
 1. Tryck på 3D-resursens kort för att öppna den på sidan med resursinformation.
@@ -58,9 +58,9 @@ Dessutom är funktioner i klientdatorn, t.ex. en arbetsstation, bärbar dator el
 
    * Använd kamerakontrollpaletten i det nedre högra hörnet på sidan med resursinformation för att ändra olika vyer av resursen.
 
-      Om du använder en indataenhet utan pekfunktion utan rullhjul, till exempel en klassisk mus från Apple med en knapp, kan du fortfarande ändra zoomning eller perspektiv för en 3D-resurs, medan du arbetar i varje läge. Du slutför åtgärden genom att trycka på och hålla ned `SHIFT`tangenten samtidigt som du håller ned musknappen och drar uppåt eller nedåt.
+      Om du använder en indataenhet utan pekfunktion utan rullhjul, till exempel en klassisk mus från Apple med en knapp, kan du fortfarande ändra zoomning eller perspektiv för en 3D-resurs, medan du arbetar i varje läge. Du slutför åtgärden genom att trycka på och hålla ned `SHIFT`medan du trycker ned musknappen och drar uppåt eller nedåt.
 
-      När du använder en pekplatta på en vanlig bärbar dator är det ofta svårt att styra zoomnings- eller perspektivbeteendena med en gest med två fingrar. I så fall kan du trycka och hålla ned `SHIFT`under funktionsmakrot. Den här typen av åtgärd minskar hastigheten på nypningsgesten och gör det enklare att uppnå exakt zoomnivå eller perspektiv som du vill ha. Du kan också använda ett finger för att dra uppåt eller nedåt medan `SHIFT`tangenten trycks ned för att påverka zoomnings- eller perspektivbeteenden.
+      När du använder en pekplatta på en vanlig bärbar dator är det ofta svårt att styra zoomnings- eller perspektivbeteendena med en gest med två fingrar. I så fall kan du trycka och hålla ned `SHIFT`under åtgärden. Den här typen av åtgärd minskar hastigheten på nypningsgesten och gör det enklare att uppnå exakt zoomnivå eller perspektiv som du vill ha. Du kan också använda ett finger för att dra uppåt eller nedåt medan `SHIFT`tangenten trycks ned för att påverka zoomnings- eller perspektivbeteenden.
    <table> 
     <tbody> 
       <tr> 
@@ -69,57 +69,57 @@ Dessutom är funktioner i klientdatorn, t.ex. en arbetsstation, bärbar dator el
       </tr> 
       <tr> 
       <td><p>Zoomning</p> <p>eller</p> <p>Perp</p> </td> 
-      <td><p>Tryck eller klicka för att växla mellan zoomnings- och perspektivlägen.</p> <p>Du kan också trycka på och hålla ned <code>ALT/OPTION</code> tangenten under åtgärden för att tillfälligt växla till perspektivläge<br /> . Släpp tangenten för att återgå till zoomläget.</p> 
+      <td><p>Tryck eller klicka för att växla mellan zoomnings- och perspektivlägen.</p> <p>Du kan också trycka på och hålla ned <code>ALT/OPTION</code>-tangenten under åtgärden för att tillfälligt växla till perspektivläget<br />. Släpp tangenten för att återgå till zoomläget.</p> 
         <ul> 
-        <li><strong>Zooma</strong>-Dolly in och ut som flyttar kameran närmare eller längre bort från resursen<br /> som du tittar på. Zoom är standardbeteendet för rullningshjulet på en mus (om tillgängligt 0), för nypningsgester med två fingrar på mobila enheter eller när du håller ned Skift-tangenten medan du drar uppåt eller nedåt med vänster musknapp.</li> 
+        <li><strong>Zooma</strong>-Dolly in och ut vilket flyttar kameran närmare eller längre bort från <br /> materialet du tittar på. Zoom är standardbeteendet för rullningshjulet på en mus (om tillgängligt 0), för nypningsgester med två fingrar på mobila enheter eller när du håller ned Skift-tangenten medan du drar uppåt eller nedåt med vänster musknapp.</li> 
         <li><strong>Perspektiv</strong>-Ändrar kamerans brännvidd (kallas även för visningsfält) samtidigt som resursens relativa storlek behålls i vyn. Perspektiv är det alternativa beteendet för rullningshjulet (om det är tillgängligt), för nypningsgester med två fingrar på mobila enheter eller när du håller ned Skift-tangenten samtidigt som du drar uppåt eller nedåt med vänster musknapp.</li> 
         </ul> </td> 
       </tr> 
       <tr> 
       <td><p>Fågelperspektiv</p> <p>eller</p> <p>Panorera</p> </td> 
-      <td><p>Tryck eller klicka om du vill växla mellan lägena för omloppsbana och panorering.</p> <p>Du kan också trycka på och hålla ned <code>ALT/OPTION</code> under funktionsmakrot för att tillfälligt växla till panoreringsläge. Släpp tangenten för att återgå till moturs-läge.</p> 
+      <td><p>Tryck eller klicka om du vill växla mellan lägena för omloppsbana och panorering.</p> <p>Du kan också hålla ned <code>ALT/OPTION</code>-tangenten under åtgärden för att tillfälligt växla till panoreringsläge. Släpp tangenten för att återgå till moturs-läge.</p> 
         <ul> 
-        <li><strong>Omloppsbana</strong>- Flyttar betraktningskameran till en sfär centrerad på en målpunkt som är placerad nära 3D-resursens mitt som standard. Omloppsbana är standardbeteendet för en vänsterknappsdragning eller en pekdragning på mobila enheter.</li> 
-        <li><strong>Panorera</strong>- Flyttar kameran i visningsplanet. Målpunkten flyttas på motsvarande sätt, så efterföljande omloppsåtgärder flyttar kameran runt en ny målpunkt. Panorering är det alternativa beteendet för vänsterknappsdragning och enkel pekdragning.</li> 
+        <li><strong>Omloppsbana</strong> - Flyttar betraktningskameran till en sfär centrerad på en målpunkt som är placerad nära 3D-resursens mitt som standard. Omloppsbana är standardbeteendet för en vänsterknappsdragning eller en pekdragning på mobila enheter.</li> 
+        <li><strong>Panorera</strong> - Flyttar kameran i visningsplanet. Målpunkten flyttas på motsvarande sätt, så efterföljande omloppsåtgärder flyttar kameran runt en ny målpunkt. Panorering är det alternativa beteendet för vänsterknappsdragning och enkel pekdragning.</li> 
         </ul> </td> 
       </tr> 
       <tr> 
       <td><p>Undersök</p> <p>eller</p> <p>Mål</p> </td> 
       <td><p>Tryck eller klicka för att växla mellan gransknings- och mållägen.</p> 
         <ul> 
-        <li><strong>Gå till målläget genom att</strong>trycka på eller klicka.</li> 
-        <li><strong>Tryck</strong>på eller klicka någonstans på 3D-resursen för att centrera vyn på den delen av resursen.<br /> Omloppsåtgärder använder den nya målpunkten.</li> 
+        <li><strong>Gå till målläget genom att</strong> trycka på eller klicka.</li> 
+        <li><strong>Tryck</strong> på eller klicka någonstans på 3D-resursen för att centrera vyn på den delen av resursen.<br /> Omloppsåtgärder använder den nya målpunkten.</li> 
         </ul> </td> 
       </tr> 
       <tr> 
       <td>Återställ</td> 
-      <td>Tryck eller klicka för att återställa vymålpunkten till modellens mitt. Med Återställ flyttas kameran<br /> närmare eller längre bort för att visa resursen i sin helhet och med en rimlig visningsstorlek.</td> 
+      <td>Tryck eller klicka för att återställa vymålpunkten till modellens mitt. Återställ flyttar också kameran<br /> närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek.</td> 
       </tr> 
     </tbody> 
     </table>
 
-1. I det övre högra hörnet av sidan med resursinformation trycker du på **[!UICONTROL Stage Selector]** -ikonen. Välj ett scennamn med den bakgrund och det ljus som du vill använda på 3D-resursen.
+1. I det övre högra hörnet av sidan med resursinformation trycker du på ikonen **[!UICONTROL Stage Selector]**. Välj ett scennamn med den bakgrund och det ljus som du vill använda på 3D-resursen.
 
    ![](do-not-localize/chlimage_1-2.png)
 
    Stegen tillhandahåller den miljö-bakgrund, det markplan och det ljus-in som 3D-modellen visas i.
 
-   Se [Använda scener i AEM 3D](/help/sites-classic-ui-authoring/classicui-stages-aem3d.md).
+   Se [Använda faser i AEM 3D](/help/sites-classic-ui-authoring/classicui-stages-aem3d.md).
 
-1. I det övre högra hörnet av sidan med resursinformation trycker du på **[!UICONTROL Camera Selector]** -ikonen och väljer sedan en kameravy som du vill använda för 3D-resursen.
+1. I närheten av det övre högra hörnet av sidan med resursinformation trycker du på ikonen **[!UICONTROL Camera Selector]** och väljer sedan en kameravy som du vill använda för 3D-resursen.
 
    ![](do-not-localize/chlimage_1-3.png)
 
    Stegen innehåller ofta fördefinierade kameror. Du kan välja den aktuella kameran igen om du vill återställa den till de fördefinierade inställningarna.
 
-   Se [Använda scener i AEM 3D](/help/sites-classic-ui-authoring/classicui-stages-aem3d.md).
+   Se [Använda faser i AEM 3D](/help/sites-classic-ui-authoring/classicui-stages-aem3d.md).
 
-1. In the upper-right corner of the page, tap **[!UICONTROL Save]**.
+1. Tryck på **[!UICONTROL Save]** i det övre högra hörnet på sidan.
 1. Gör något av följande:
 
    * Återge 3D-resursen.
 
       Se [Återge 3D-resurser](/help/sites-classic-ui-authoring/classicui-rendering-3d.md).
 
-   * I det övre högra hörnet av sidan trycker du på **[!UICONTROL Close]** för att gå tillbaka till sidan Resurser.
+   * Tryck på **[!UICONTROL Close]** längst upp till höger på sidan för att gå tillbaka till sidan Resurser.
 
