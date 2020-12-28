@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# AEM{#troubleshooting-aem}
+# Felsökning AEM{#troubleshooting-aem}
 
 I följande avsnitt beskrivs några problem som du kan stöta på när du använder AEM, tillsammans med förslag på hur du felsöker dem.
 
@@ -28,7 +28,7 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
 
 >[!NOTE]
 >
->När du får problem är det också värt att kontrollera listan med [kända fel](/help/release-notes/known-issues.md) för din instans (release- och servicepaket).
+>När du får problem är det också värt att kontrollera listan [Kända fel](/help/release-notes/known-issues.md) för din instans (release- och service packs).
 
 ## Felsökningsscenarier för administratörer {#troubleshooting-scenarios-for-administrators}
 
@@ -65,7 +65,7 @@ Följande tabell innehåller en översikt över problem som administratörer kan
 
 ## Installationsproblem {#installation-issues}
 
-Mer information om följande felsökningsscenarier finns i [Vanliga installationsproblem](/help/sites-deploying/troubleshooting.md#common-installation-issues) :
+Mer information om följande felsökningsscenarier finns i [Vanliga installationsproblem](/help/sites-deploying/troubleshooting.md#common-installation-issues):
 
 * Att dubbelklicka på Quickstart-behållaren har ingen effekt och JAR-filen har ingen effekt med ett annat program (t.ex. arkivhanteraren).
 * Program som körs på CRX orsakar fel av typen slut på minne.
@@ -73,15 +73,15 @@ Mer information om följande felsökningsscenarier finns i [Vanliga installation
 
 ## Metoder för felsökningsanalys {#methods-for-troubleshooting-analysis}
 
-### Göra en tråddump {#making-a-thread-dump}
+### Skapa en tråddump {#making-a-thread-dump}
 
 Tråddumpen är en lista över alla Java-trådar som är aktiva. Om AEM inte reagerar som de ska kan tråddumpen hjälpa dig att identifiera lås eller andra problem.
 
 ### Använda Sling Thread Dumper {#using-sling-thread-dumper}
 
-1. Öppna **AEM webbkonsol**; till exempel på `http://localhost:4502/system/console/`.
+1. Öppna **AEM Web Console**; till exempel på `http://localhost:4502/system/console/`.
 
-1. Välj **Trådar** under **fliken Status** .
+1. Välj fliken **Trådar** under **Status**.
 
 ![screen_shot_2012-02-13at43925pm](assets/screen_shot_2012-02-13at43925pm.png)
 
@@ -99,11 +99,11 @@ Tråddumpen är en lista över alla Java-trådar som är aktiva. Om AEM inte rea
 
 >[!NOTE]
 >
->Du kan lägga till tråddumpar i en loggfil genom att använda `>>` utdataomdirigering:
+>Du kan lägga till tråddumpar i en loggfil genom att använda `>>`-utdataomdirigering:
 >
 >`jstack <pid> >> /path/to/logfile.log`
 
-Mer information finns i [Så här tar du trådmodeller från en JVM](https://helpx.adobe.com/cq/kb/TakeThreadDump.html) -dokumentation
+Mer information finns i [Så här tar du trådmodeller från en JVM](https://helpx.adobe.com/cq/kb/TakeThreadDump.html)-dokumentation
 
 ### Söker efter oavslutade JCR-sessioner {#checking-for-unclosed-jcr-sessions}
 
@@ -113,15 +113,15 @@ När funktionalitet utvecklas för AEM WCM kan JCR-sessioner öppnas (vilket kan
 * Du kan se många CacheManager: resizeAlla poster i loggfilen. följande nummer (size=&lt;x>) visar antalet cacheminnen. Varje session öppnar flera cacheminnen.
 * Från tid till annan har systemet slut på minne (efter några timmar, dagar eller veckor - beroende på allvarlighetsgraden).
 
-Om du vill analysera oavslutade sessioner och ta reda på vilken kod som inte stänger en session kan du läsa artikeln [Analysera oavslutade sessioner](https://helpx.adobe.com/crx/kb/AnalyzeUnclosedSessions.html)i kunskapsbasen.
+Om du vill analysera oavslutade sessioner och ta reda på vilken kod som inte stänger en session kan du läsa artikeln [Analysera oavslutade sessioner](https://helpx.adobe.com/crx/kb/AnalyzeUnclosedSessions.html) i kunskapsbasen.
 
 ### Använda Adobe Experience Manager Web Console {#using-the-adobe-experience-manager-web-console}
 
 OSGi-paketens status kan också ge en tidig indikation på eventuella problem.
 
-1. Öppna **AEM webbkonsol**; till exempel på `http://localhost:4502/system/console/`.
+1. Öppna **AEM Web Console**; till exempel på `http://localhost:4502/system/console/`.
 
-1. Välj **Paket** under fliken **OSGI** .
+1. Välj **Paket** under fliken **OSGI**.
 
 1. Kontroll:
 
