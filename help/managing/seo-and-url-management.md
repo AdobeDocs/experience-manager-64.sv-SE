@@ -22,7 +22,7 @@ ht-degree: 95%
 
 Sökmotoroptimering (SEO) har blivit en viktig fråga för många marknadsförare. Därför måste SEO:s problem hanteras i många AEM projekt.
 
-This document first describes some [SEO best practices](#seo-best-practices) and recommendations for achieving these on an AEM implementation. Sedan får du en närmare titt på några av de mer [komplexa implementeringsstegen](#aem-configurations) som togs upp i det första avsnittet.
+I det här dokumentet beskrivs först några [SEO-metodtips](#seo-best-practices) och rekommendationer för att uppnå dessa vid en AEM implementering. Sedan får du en närmare titt på några av de mer [komplexa implementeringsstegen](#aem-configurations) som togs upp i det första avsnittet.
 
 ## SEO-metodtips {#seo-best-practices}
 
@@ -182,7 +182,7 @@ I det här avsnittet beskrivs alternativen i AEM som används för att hantera U
 
 #### Alternativa URL:er {#vanity-urls}
 
-Om en författare vill att en sida ska vara tillgänglig från en andra plats i marknadsföringssyfte, kan det vara användbart att definiera alternativa URL:er, sida för sida, för AEM. To add a vanity URL for a page, navigate to it in the **[!UICONTROL Sites]** console and edit the page properties. At the bottom of the **[!UICONTROL Basic]** tab, you see a section where vanity URLs can be added. Tänk på att sidans SEO-värde fragmenteras om sidan är tillgänglig via mer än en URL. Du kan dock undvika det här problemet genom att lägga till en kanonisk URL-tagg på sidan.
+Om en författare vill att en sida ska vara tillgänglig från en andra plats i marknadsföringssyfte, kan det vara användbart att definiera alternativa URL:er, sida för sida, för AEM. Om du vill lägga till en huvud-URL för en sida går du till den i **[!UICONTROL Sites]**-konsolen och redigerar sidegenskaperna. Längst ned på fliken **[!UICONTROL Basic]** visas ett avsnitt där det går att lägga till mål-URL:er. Tänk på att sidans SEO-värde fragmenteras om sidan är tillgänglig via mer än en URL. Du kan dock undvika det här problemet genom att lägga till en kanonisk URL-tagg på sidan.
 
 #### Lokaliserade sidnamn {#localized-page-names}
 
