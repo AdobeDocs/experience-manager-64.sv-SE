@@ -19,7 +19,7 @@ ht-degree: 2%
 ---
 
 
-# Utveckla AEM - kodexempel{#developing-aem-components-code-samples}
+# Utveckla AEM - Kodexempel{#developing-aem-components-code-samples}
 
 I det här avsnittet finns några exempel på hur du skapar egna komponenter för AEM.
 
@@ -35,13 +35,13 @@ Mer information om det klassiska användargränssnittet finns i [AEM komponenter
 >För att hjälpa dig att analysera, testa och felsöka dina komponenter AEM:
 >
 >* [Utvecklarläge](/help/sites-developing/developer-mode.md)
->* a [framework for automating tests, based on the Hobbes.js library](/help/sites-developing/hobbes.md)
+>* ett [ramverk för automatisering av tester, baserat på biblioteket Hobbes.js](/help/sites-developing/hobbes.md)
 
 >
 
 
 
-## Code Sample - How to Customize Dialog Fields {#code-sample-how-to-customize-dialog-fields}
+## Kodexempel - Anpassa dialogrutefält {#code-sample-how-to-customize-dialog-fields}
 
 KOD PÅ GITHUB
 
@@ -52,7 +52,7 @@ Koden för den här sidan finns på GitHub
 
 >[!NOTE]
 >
->This code sample is related to the AEM Gems session on [Customizing Dialog Fields](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html).
+>Detta kodexempel är relaterat till AEM Gems-sessionen på [Anpassa dialogrutefält](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html).
 
 ## Relaterade resurser {#related-resources}
 
