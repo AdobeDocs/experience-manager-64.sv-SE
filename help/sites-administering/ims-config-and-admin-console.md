@@ -26,7 +26,7 @@ ht-degree: 16%
 
 ## Introduktion {#introduction}
 
-I AEM 6.4.3.0 introduceras stöd för Admin Console för AEM och Adobe IMS (Identity Management System)-baserad autentisering för **AEM Managed Services** -kunder.
+I AEM 6.4.3.0 introduceras stöd för Admin Console för AEM och Adobe IMS(Identity Management System)-baserad autentisering för **AEM Managed Services**-kunder.
 
 AEM på Admin Console kommer att göra det möjligt för AEM Managed Services-kunder att hantera alla Experience Cloud i en konsol. Användare och grupper kan tilldelas till produktprofiler som är kopplade till AEM instanser, så att de kan logga in på en viss instans.
 
@@ -48,7 +48,7 @@ Inloggningsflödet för användaren visas nedan. Användaren omdirigeras till IM
 
 ![image2018-9-23_23-55-8](assets/image2018-9-23_23-55-8.png)
 
-## How To Set Up {#how-to-set-up}
+## Konfigurera {#how-to-set-up}
 
 ### Integrera organisationer i Admin Console {#onboarding-organizations-to-admin-console}
 
@@ -72,11 +72,11 @@ När en kund finns som IMS-organisation och AMS har etablerat kunden för IMS ä
 
 >[!NOTE]
 >
->Mer information om grunderna i Adobe Identity Management, inklusive IDP-konfigurationen, finns i artikeln [här.](https://helpx.adobe.com/enterprise/using/set-up-identity.html)
+>Mer information om grunderna i Adobe Identity Management, inklusive IDP-konfigurationen, finns i artikeln [den här sidan.](https://helpx.adobe.com/enterprise/using/set-up-identity.html)
 >
->Mer information om Enterprise Administration och Admin Console finns i artikeln [här](https://helpx.adobe.com/enterprise/managing/user-guide.html).
+>Mer information om Enterprise Administration och Admin Console finns i artikeln [den här sidan](https://helpx.adobe.com/enterprise/managing/user-guide.html).
 
-### Användare som introduceras till Admin Console {#onboarding-users-to-the-admin-console}
+### Onboarding-användare till Admin Console {#onboarding-users-to-the-admin-console}
 
 Det finns tre sätt att introducera användare beroende på kundens storlek och deras önskemål:
 
@@ -92,7 +92,7 @@ Användare kan också skapas manuellt om kunden redan använder den här metoden
 
 ![image2018-9-23_20-39-9](assets/image2018-9-23_20-39-9.png)
 
-#### File Upload in the Admin Console UI {#file-upload-in-the-admin-console-ui}
+#### Filöverföring i användargränssnittet för Admin Console {#file-upload-in-the-admin-console-ui}
 
 En CSV-fil kan laddas upp för att användarna ska kunna lägga till flera användare samtidigt:
 
@@ -127,12 +127,12 @@ Mer information om de nya gruppfunktionerna finns här:
 >Mer information om verktyget för användarsynkronisering finns på [dokumentationssidan](https://adobe-apiplatform.github.io/user-sync.py/en/).
 >
 >
->The User Sync Tool needs to register as an Adobe I/O client UMAPI using the procedure described [here](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html).
+>Verktyget för användarsynkronisering måste registrera sig som Adobe I/O klient-UMAPI enligt proceduren [här](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html).
 >
->The Adobe I/O Console Documentation can be found [here](https://www.adobe.io/apis/cloudplatform/console.html).
+>Adobe I/O Console Documentation finns [här](https://www.adobe.io/apis/cloudplatform/console.html).
 >
 >
->The User Management API that is used by the User Sync Tool is covered at this [location](https://www.adobe.io/apis/cloudplatform/umapi-new.html).
+>API:t för användarhantering som används av verktyget för användarsynkronisering beskrivs på den här [platsen](https://www.adobe.io/apis/cloudplatform/umapi-new.html).
 
 >[!NOTE]
 >
@@ -146,7 +146,7 @@ När kundens produktadministratör loggar in på Admin Console visas flera insta
 
 ![screen_shot_2018-09-17at105804pm](assets/screen_shot_2018-09-17at105804pm.png)
 
-In this example, the org *AEM-MS-Onboard* has 32 instances spanning different topologies and environments like Stage, Prod, etc.
+I det här exemplet har organisationen *AEM-MS-Onboard* 32 instanser som sträcker sig över olika topologier och miljöer som Stage, Prod, osv.
 
 ![screen_shot_2018-09-17at105517pm](assets/screen_shot_2018-09-17at105517pm.png)
 
@@ -162,7 +162,7 @@ Alla användare och grupper som läggs till under den här produktprofilen kan l
 
 ![screen_shot_2018-09-17at105623pm](assets/screen_shot_2018-09-17at105623pm.png)
 
-### Loggar in AEM {#logging-into-aem}
+### Loggar in i AEM {#logging-into-aem}
 
 #### Inloggning för lokal administratör {#local-admin-login}
 
@@ -172,7 +172,7 @@ AEM kan fortfarande ha stöd för lokala inloggningar för administratörsanvän
 
 #### IMS-baserad inloggning {#ims-based-login}
 
-Andra användare kan använda IMS-baserad inloggning när IMS har konfigurerats för instansen. The user will first click on the **Sign in with Adobe** button as shown below:
+Andra användare kan använda IMS-baserad inloggning när IMS har konfigurerats för instansen. Användaren klickar först på knappen **Logga in med Adobe** enligt nedan:
 
 ![image2018-9-18_0-10-32](assets/image2018-9-18_0-10-32.png)
 
@@ -204,7 +204,7 @@ Detta verktyg kommer att köras av ditt AMS-team som en del av IMS-etableringen.
 
 I exemplet nedan lägger vi till synkroniserade grupper i den lokala gruppen *Dam_Users* som exempel.
 
-Här har en användare också tilldelats ett fåtal grupper i Admin Console. (Observera att användare och grupper kan synkroniseras från LDAP med användarsynkroniseringsverktyget eller skapas lokalt, se avsnittet **Onboarding Users (Påbörja användare) till Admin Console** ovan.)
+Här har en användare också tilldelats ett fåtal grupper i Admin Console. (Observera att användare och grupper kan synkroniseras från LDAP med användarsynkroniseringsverktyget eller skapas lokalt, se avsnittet **Onboarding Users to the Admin Console** above).
 
 &amp;ast;Observera att användargrupper endast synkroniseras när användarna loggar in på instansen. För kunder som har ett stort antal användare och grupper kan ett gruppsynkroniseringsverktyg köras av AMS för att hämta grupper i förväg för åtkomstkontroll och behörighetshantering som beskrivs ovan.
 
@@ -222,7 +222,7 @@ I AEM kan användargrupper som synkroniseras från IMS läggas till som medlemma
 
 ![screen_shot_2018-09-17at95804pm](assets/screen_shot_2018-09-17at95804pm.png)
 
-Som framgår nedan ärver gruppen *AEM-GRP_008* DAM-användarnas behörigheter och behörigheter. Detta är ett effektivt sätt att hantera behörigheter för synkroniserade grupper och används ofta även i LDAP-baserade autentiseringsmetoder.
+Som framgår nedan ärver gruppen *AEM-GRP_008* DAM-användares behörigheter. Detta är ett effektivt sätt att hantera behörigheter för synkroniserade grupper och används ofta även i LDAP-baserade autentiseringsmetoder.
 
 ![screen_shot_2018-09-17at110505pm](assets/screen_shot_2018-09-17at110505pm.png)
 
