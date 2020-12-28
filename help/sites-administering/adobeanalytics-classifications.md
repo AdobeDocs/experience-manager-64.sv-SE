@@ -24,8 +24,8 @@ Med Adobe Classifications exporteras klassificeringsdata till [Adobe Analytics](
 
 Så här konfigurerar du:
 
-1. Navigera via **Verktyg, CloudServices** till **Adobe Analytics** .
-1. Lägg till en ny konfiguration. Mallen **Adobe Analytics Classifications** Configuration visas under konfigurationen av **Adobe Analytics Framework** . Ange **titel** och **namn** :
+1. Navigera via **Verktyg, Cloudservices** till **Adobe Analytics**-avsnittet.
+1. Lägg till en ny konfiguration. Du kommer att se att konfigurationsmallen **Adobe Analytics Classifications** visas nedanför konfigurationen **Adobe Analytics Framework**. Ange en **titel** och **Namn** efter behov:
 
    ![aa-25](assets/aa-25.png)
 
@@ -37,9 +37,9 @@ Så här konfigurerar du:
 
    | **Fält** | **Beskrivning** |
    |---|---|
-   | Aktiverad | Markera **Ja** om du vill aktivera inställningarna för klassificering i Adobe. |
-   | Skriv över vid konflikt | Välj **Ja** om du vill skriva över datakollisioner. Som standard är inställningen **Nej**. |
-   | Ta bort bearbetade | Om du anger **Ja** tas bearbetade noder bort när de har exporterats. Standardvärdet är **False**. |
+   | Aktiverad | Välj **Ja** om du vill aktivera inställningarna för klassificering i Adobe. |
+   | Skriv över vid konflikt | Välj **Ja** om du vill skriva över datakollisioner. Som standard är detta **Nej**. |
+   | Ta bort bearbetade | Om **Yes** anges tar bort bearbetade noder när de har exporterats. Standardvärdet är **Falskt**. |
    | Exportera jobbbeskrivning | Ange en beskrivning för jobbet Adobe Classifications. |
    | E-postmeddelande | Ange en e-postadress för Adobe Classifications-meddelanden. |
    | Report Suite | Ange den rapportsvit som du vill köra importjobbet för. |
@@ -58,7 +58,7 @@ En sida kan vara högst 25000, per definition i Adobe Classifications och kan ä
 
 Så här ändrar du sidstorlek:
 
-1. Gå till OSGI-konsolen på **https://&lt;värd>:&lt;port>/system/console/configMgr** och välj **Adobe AEM Classifications Exporter**.
+1. Gå till OSGI-konsolen på **https://&lt;host>:&lt;port>/system/console/configMgr** och välj **Adobe AEM Classifications Exporter**.
 
    ![aa-26](assets/aa-26.png)
 
@@ -70,9 +70,9 @@ Så här ändrar du sidstorlek:
 >
 >Adobe-klassificeringar kallades tidigare för SAINT Exporter.
 
-En exportör kan använda en transformator för att omforma exportdata till ett visst format. För Adobe-klassificeringar har ett undergränssnitt `SAINTTransformer<String[]>` som implementerar Transformerargränssnittet angetts. Det här gränssnittet används för att begränsa den datatyp `String[]` som används av API:t för SAINT och för att ha ett markörgränssnitt för att hitta sådana tjänster för markering.
+En exportör kan använda en transformator för att omforma exportdata till ett visst format. För Adobe-klassificeringar har ett undergränssnitt `SAINTTransformer<String[]>` som implementerar Transformer-gränssnittet angetts. Det här gränssnittet används för att begränsa datatypen till `String[]`, som används av API:t för SAINT och som har ett markörgränssnitt för att hitta sådana tjänster för markering.
 
-I standardimplementeringen SAINTDefaultTransformer behandlas de underordnade resurserna för exportörkällan som poster med egenskapsnamn som nycklar och egenskapsvärden som värden. Kolumnen **Nyckel** läggs automatiskt till som första kolumn - dess värde blir nodnamnet. Namngivna egenskaper (som innehåller :) ignoreras.
+I standardimplementeringen SAINTDefaultTransformer behandlas de underordnade resurserna för exportörkällan som poster med egenskapsnamn som nycklar och egenskapsvärden som värden. Kolumnen **Nyckel** läggs till automatiskt som första kolumn - dess värde blir nodnamnet. Namngivna egenskaper (som innehåller :) ignoreras.
 
 *Nodstruktur:*
 
@@ -90,7 +90,7 @@ I standardimplementeringen SAINTDefaultTransformer behandlas de underordnade res
 
 | **Nyckel** | **Produkt** | **Pris** | **Storlek** | **Färg** | **Color^Code** |
 |---|---|---|---|---|---|
-| 1 | Mitt produktnamn | 120.90 | M | svart | 101 |
+| 1 | Mitt produktnamn | 120,90 | M | svart | 101 |
 
 Egenskaperna är följande:
 
@@ -137,4 +137,4 @@ Egenskaperna är följande:
 
 ## Automatisera export av Adobe-klassificeringar {#automating-adobe-classifications-export}
 
-Du kan skapa ett eget arbetsflöde, så att alla nya importer startar arbetsflödet för att skapa lämpliga, och korrekt strukturerade, data i **/var/export/** så att de kan exporteras till Adobe Classifications.
+Du kan skapa ett eget arbetsflöde, så att alla nya importer startar arbetsflödet för att skapa lämpliga, och korrekt strukturerade, data i **/var/export/** så att de kan exporteras till Adobe-klassificeringar.
