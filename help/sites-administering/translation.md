@@ -28,12 +28,12 @@ Automatisera översättning av sidinnehåll, resurser och användargenererat inn
 
 Översättning av innehåll omfattar följande steg:
 
-1. [Koppla AEM med översättningstjänsten](/help/sites-administering/tc-tic.md#connecting-to-a-translation-service-provider) och [skapa konfigurationer](/help/sites-administering/tc-tic.md)för översättningsintegrering.
+1. [Koppla AEM med översättningstjänsten ](/help/sites-administering/tc-tic.md#connecting-to-a-translation-service-provider) och  [skapa konfigurationer](/help/sites-administering/tc-tic.md) för översättningsintegrering.
 
-1. [Koppla sidorna på din språkinställning](/help/sites-administering/tc-tic.md#configuring-pages-for-translation) till översättningstjänsten och ramverkskonfigurationerna.
-1. [Identifiera vilken typ av innehåll](/help/sites-administering/tc-rules.md) som ska översättas.
-1. [Förbered innehållet för översättning](/help/sites-administering/tc-prep.md) genom att skapa överordnad för språket och skapa rotsidorna för språkkopior.
-1. [Skapa översättningsprojekt](/help/sites-administering/tc-manage.md) för att samla in innehållet som ska översättas och förbereda översättningsprocessen.
+1. [Koppla sidorna i ditt språk till ](/help/sites-administering/tc-tic.md#configuring-pages-for-translation) översättningstjänsten och ramverkskonfigurationerna.
+1. [Identifiera vilken typ av ](/help/sites-administering/tc-rules.md) innehåll som ska översättas.
+1. [Förbered innehållet för ](/help/sites-administering/tc-prep.md) översättning genom att skapa språket överordnad och skapa rotsidorna för språkkopior.
+1. [Skapa översättningsprojekt ](/help/sites-administering/tc-manage.md) för att samla in det innehåll som ska översättas och förbereda översättningsprocessen.
 1. Använd översättningsprojekten för att [hantera innehållsöversättningsprocessen](/help/sites-administering/tc-manage.md).
 
 Om översättningstjänsten inte har någon koppling till AEM stöder AEM manuell extrahering och återinfogning av översättningsinnehåll i XML-format.
@@ -44,4 +44,4 @@ Om översättningstjänsten inte har någon koppling till AEM stöder AEM manuel
 
 ## Bästa praxis {#best-practices}
 
-Sidan [Översättningsmetodtips](/help/sites-administering/tc-bp.md) innehåller viktig information om implementeringen.
+Sidan [Bästa praxis för översättning](/help/sites-administering/tc-bp.md) innehåller viktig information om implementeringen.
