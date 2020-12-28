@@ -20,12 +20,12 @@ ht-degree: 9%
 
 # Verktygskonsoler{#tools-consoles}
 
-Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som hjälper dig att administrera webbplatser, digitala resurser och andra aspekter av ditt innehållslager. Det finns för närvarande två varianter av **verktygskonsolen** beroende på vilket gränssnitt du använder:
+Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som hjälper dig att administrera webbplatser, digitala resurser och andra aspekter av ditt innehållslager. Det finns för närvarande två varianter av **Tools**-konsolen som är beroende av det användargränssnitt du använder:
 
 * [Verktyg - Klassiskt användargränssnitt](#tools-classic-ui)
 * [Verktyg - Touchoptimerat gränssnitt](#tools-touch-optimized-ui)
 
-## Verktyg - Klassiskt användargränssnitt {#tools-classic-ui}
+## Verktyg - Klassiskt gränssnitt {#tools-classic-ui}
 
 <table> 
  <tbody> 
@@ -40,14 +40,14 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
    <td>Centraliserad plats för hantering av flera webbplatser.</td> 
   </tr> 
   <tr> 
-   <td>Konfigurationer av klientkontext<br /> </td> 
+   <td>Klientkonfigurationer<br /> </td> 
    <td> </td> 
-   <td>Klientkontexten <a href="/help/sites-developing/client-context.md"></a> representerar en dynamiskt sammansatt samling med användardata. Standardkonfigurationerna och marknadsföringskonfigurationerna för molnet finns här.<br /> </td> 
+   <td><a href="/help/sites-developing/client-context.md">Klientkontexten</a> representerar en dynamiskt sammansatt samling med användardata. Standardkonfigurationerna och marknadsföringskonfigurationerna för molnet finns här.<br /> </td> 
   </tr> 
   <tr> 
    <td>Konfigurationer av Cloud Services<br /> </td> 
    <td> </td> 
-   <td>Innehåller konfigurationer som rör <a href="/help/sites-administering/marketing-cloud.md">integrering med Adobe Marketing Cloud</a>.</td> 
+   <td>Innehåller konfigurationer relaterade till <a href="/help/sites-administering/marketing-cloud.md">Integrering med Adobe Marketing Cloud</a>.</td> 
   </tr> 
   <tr> 
    <td><a href="/help/sites-administering/ecommerce.md">Handel</a></td> 
@@ -62,10 +62,10 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   <tr> 
    <td>DAM - hälsokontroll<br /> </td> 
    <td> </td> 
-   <td>Jämför <code>/var/dam</code> och <code>/content/dam</code> kontrollerar<br /> om det finns några inkonsekvenser. Alla filer/mappar i listan kan sedan synkroniseras eller tas bort. Nodtyper för mappjämförelse kan konfigureras i webbkonsolen.</td> 
+   <td>Jämför <code>/var/dam</code> och <code>/content/dam</code> och söker efter<br /> eventuella inkonsekvenser. Alla filer/mappar i listan kan sedan synkroniseras eller tas bort. Nodtyper för mappjämförelse kan konfigureras i webbkonsolen.</td> 
   </tr> 
   <tr> 
-   <td>DAM - Adobe InDesign<br /> </td> 
+   <td>DAM - Adobe Indesign<br /> </td> 
    <td> </td> 
    <td>Skript för användning tillsammans med Adobe InDesign.</td> 
   </tr> 
@@ -150,7 +150,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
    <td>Med hjälp av ställningar kan du skapa ett formulär (en struktur) med fält som motsvarar den struktur du vill ha för sidorna och sedan använda det här formuläret för att enkelt skapa sidor som baseras på den strukturen.</td> 
   </tr> 
   <tr> 
-   <td>Säkerhet - <a href="/help/sites-administering/notification.md">självbetjäningskonfiguration </a> </td> 
+   <td>Säkerhet - <a href="/help/sites-administering/notification.md">Självbetjäningskonfiguration </a> </td> 
    <td> </td> 
    <td>Här kan du konfigurera e-postmeddelanden som användare automatiskt får när de skapar ett konto eller återställer ett lösenord och bekräftar ett lösenord som har återställts.</td> 
   </tr> 
@@ -162,7 +162,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   <tr> 
    <td><a href="/help/communities/working-with-srp.md">socialconfig</a></td> 
    <td> </td> 
-   <td>Standardkonfiguration för SRP. Se Konsolen <a href="/help/communities/srp-config.md">för lagringskonfiguration</a> .</td> 
+   <td>Standardkonfiguration för SRP. Se <a href="/help/communities/srp-config.md">Lagringskonfiguration</a> konsol.</td> 
   </tr> 
   <tr> 
    <td>uppgifterhantering</td> 
@@ -175,14 +175,14 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
    <td>Det finns inga aktiva funktioner som är relaterade till den här posten.</td> 
   </tr> 
   <tr> 
-   <td>Versionshantering - <a href="/help/sites-deploying/version-purging.md">rensa versioner</a></td> 
+   <td>Versionshantering - <a href="/help/sites-deploying/version-purging.md">Rensa versioner</a></td> 
    <td> </td> 
    <td>Gör att du kan rensa sidversioner efter behov.</td> 
   </tr> 
   <tr> 
    <td>Virtuella databaser</td> 
    <td> </td> 
-   <td>Du kan konfigurera en virtuell databas med monteringsfunktionen för arbetsytan för att ge JCR-aktiverade innehållsprogram enklare åtkomst till JCR-innehållsinfrastruktur baserat på CRX och JCR-anslutningar.</td> 
+   <td>Du kan konfigurera en virtuell databas med monteringsfunktionen för arbetsytan för att ge JCR-aktiverade innehållsprogram förenklad åtkomst till JCR-innehållsinfrastruktur baserad på CRX och JCR-anslutningar.</td> 
   </tr> 
   <tr> 
    <td>watchwords</td> 
@@ -289,7 +289,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   <tr> 
    <td> </td> 
    <td><a href="/help/sites-administering/package-manager.md#package-share">Paketdelning</a></td> 
-   <td>Ladda ned program från Adobe och communityn.<br /> </td> 
+   <td>Hämta program från Adobe och communityn.<br /> </td> 
   </tr> 
   <tr> 
    <td> </td> 
@@ -334,7 +334,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   <tr> 
    <td> </td> 
    <td>Dokumentation</td> 
-   <td>Läs dokumentationen om Web Experience Management.<br /> </td> 
+   <td>Visa dokumentationen för Web Experience Management.<br /> </td> 
   </tr> 
   <tr> 
    <td> </td> 
