@@ -24,9 +24,9 @@ I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende 
 
 >[!NOTE]
 >
->Utanför redigeringsmiljön finns det även andra sökfunktioner, till exempel [Query Builder](/help/sites-developing/querybuilder-api.md) och [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+>Utanför författarmiljön finns det även andra sökfunktioner, till exempel [Query Builder](/help/sites-developing/querybuilder-api.md) och [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
-## Grunderna i sökning {#search-basics}
+## Sökgrunder {#search-basics}
 
 Sökfunktionen finns i det övre verktygsfältet:
 
@@ -40,7 +40,7 @@ Med sökfältet kan du:
 
 >[!NOTE]
 >
->Sökfunktionen kan också anropas med snabbtangenten `/` (snedstreck) när sökfältet visas.
+>Sökningen kan också anropas med snabbtangenten `/` (snedstreck) när sökfältet visas.
 
 ## Sök och filtrera {#search-and-filter}
 
@@ -61,7 +61,7 @@ Så här söker och filtrerar du resurser:
 
    ![screen_shot_2018-03-23at101523](assets/screen_shot_2018-03-23at101523.png)
 
-1. Om du vill gå vidare väljer du Rail-symbolen (längst upp till vänster) för att öppna sidopanelens **filter och alternativ**.
+1. Om du vill gå vidare väljer du Rail-symbolen (längst upp till vänster) för att öppna sidopanelen **Filter och alternativ**.
 
    ![](do-not-localize/screen_shot_2018-03-23at101542.png)
 
@@ -79,7 +79,7 @@ Så här söker och filtrerar du resurser:
    >Sökvillkoren kan variera:
    >
    >* Beroende på vilken resurstyp du har valt; Exempelvis är kriterierna Assets och Communities begripligt specialiserade.
-   >* Din instans som [Search Forms](/help/sites-administering/search-forms.md) kan anpassas (passar den plats i AEM).
+   >* Instansen som [sökningen i Forms](/help/sites-administering/search-forms.md) kan anpassas (lämplig för platsen i AEM).
 
 
    ![screen_shot_2018-03-23at101619](assets/screen_shot_2018-03-23at101619.png)
@@ -115,7 +115,7 @@ Förutom att söka efter en mängd olika aspekter kan du även spara en viss sö
 1. När du har sparat kan du:
 
    * Använd **x** (mot namnet på den sparade sökningen) för att starta en ny fråga (den sparade sökningen tas inte bort).
-   * **Redigera sparad sökning**, ändra sökvillkoren och **spara** igen.
+   * **Redigera sparad sökning**, ändra sökvillkoren och  **** spara igen.
 
 Du kan ändra sparade sökningar genom att markera den sparade sökningen och klicka på **Redigera sparad sökning** längst ned på sökpanelen.
 
