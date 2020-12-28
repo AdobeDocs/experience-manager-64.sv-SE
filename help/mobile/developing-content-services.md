@@ -43,9 +43,9 @@ Content Services kan leverera innehållet som resurser, paketerad HTML (HTML/CSS
 >
 >Innan du börjar använda Content Services måste du aktivera flaggan Content Services. Om du vill kunna skapa och hantera modeller i din app måste du aktivera datamodeller i Configuration Browser.
 >
->Mer information finns i **[Administrera innehållstjänster](/help/mobile/developing-content-services.md)** .
+>Mer information finns i **[Administrera innehållstjänster](/help/mobile/developing-content-services.md)**.
 >
->Mer information finns i dokumentationen [till](/help/sites-administering/configurations.md) Configuration Browser.
+>Mer information finns i [Configuration Browser-dokumentationen](/help/sites-administering/configurations.md).
 
 ![chlimage_1-143](assets/chlimage_1-143.png)
 
