@@ -22,20 +22,24 @@ ht-degree: 5%
 
 AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön.
 
-Med hjälp av [kontoinställningarna](#account-settings) och [användarinställningarna](#user-preferences) kan du definiera följande alternativ och inställningar:
+Med hjälp av [kontoinställningarna](#account-settings) och [användarinställningarna](#user-preferences) kan följande alternativ och inställningar definieras:
 
-* **Redigeringsverktygsfältet** Välj om du vill ha det globala redigeringsverktygsfältet. Det här verktygsfältet, som visas högst upp i webbläsarfönstret, ger dig 
-**Knapparna Kopiera**, **Klipp ut**, **Klistra in** och **Ta bort** för att använda med styckekomponenterna på sidan:
+* **Redigera**
+verktygsfältVälj om du vill ha det globala verktygsfältet för redigering. Det här verktygsfältet, som visas högst upp i webbläsarfönstret, ger dig 
+**Kopiera**,  **Klipp ut**,  **Klistra in**,  **** Ta bort-knappar för att använda med styckekomponenterna på den sidan:
 
    * Visa vid behov (standard)
    * Visa alltid
    * Behåll dolda
 
-* **Personifiera som** Med [personifieringsfunktionen som](/help/sites-administering/security.md#impersonating-another-user) en användare kan arbeta för en annan användares räkning.
+* **Personifiera**
+som Med  [personifiera ](/help/sites-administering/security.md#impersonating-another-user) asfunktionalitet kan en användare arbeta för en annan användares räkning.
 
-* **Språk** Det språk som ska användas för redigeringsmiljöns användargränssnitt. Välj önskat språk i listan.
+* **Språk**
+Det språk som ska användas för redigeringsmiljöns användargränssnitt. Välj önskat språk i listan.
 
-* **Fönsterhantering** Välj antingen:
+* **FönsterhanteringVälj**
+något av följande:
 
    * Flera fönster (standard): Sidorna öppnas i ett nytt fönster.
    * Enkelt fönster: Sidorna öppnas i det aktuella fönstret.
@@ -53,7 +57,7 @@ Med användarikonen får du tillgång till olika alternativ:
 
 ## Användarinställningar {#user-preferences}
 
-Varje användare kan ange vissa egenskaper för sig själv. Det här är tillgängligt i dialogrutan **Inställningar** i det övre högra hörnet av konsolerna.
+Varje användare kan ange vissa egenskaper för sig själv. Det här är tillgängligt från dialogrutan **Inställningar** i det övre högra hörnet av konsolerna.
 
 ![screen_shot_2012-02-08at105033am](assets/screen_shot_2012-02-08at105033am.png)
 
