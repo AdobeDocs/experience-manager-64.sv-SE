@@ -28,7 +28,7 @@ Målet med den här självstudiekursen är att lära en utvecklare som är ny at
 
 ## WKND Developer Tutorial {#wknd-developer-tutorial}
 
-Självstudiekursen finns [här](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) eller klicka på bilden nedan.
+Självstudiekursen är tillgänglig [här](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) eller klicka på bilden nedan.
 
 [![klicka på bilden](assets/screen_shot_2018-11-23at152453.png)](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 
@@ -46,4 +46,4 @@ Gå igenom självstudiekursen innan du går in på de ovanstående begreppen i d
 
 ## Nästa steg {#next-steps}
 
-När du är klar med [självstudiekursen](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)bör du överväga att läsa dokumentet [AEM Core Concepts](/help/sites-developing/the-basics.md) för att få en bättre förståelse för vissa underliggande tekniker och utvecklingsparadigmer i AEM.
+När du är klar med [självstudiekursen](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html) bör du överväga att läsa igenom dokumentet [AEM Core Concepts](/help/sites-developing/the-basics.md) för att få en bättre förståelse för vissa underliggande tekniker och utvecklingsparadigmer för AEM.
