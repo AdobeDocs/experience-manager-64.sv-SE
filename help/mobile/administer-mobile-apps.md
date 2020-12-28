@@ -33,4 +33,4 @@ AEM Mobile erbjuder flera metoder för att skapa appar. De olika sätt du kan an
 
 >[!NOTE]
 >
->Om du inte har använt Adobe Experience Manager tidigare kan det vara bra att gå igenom [Komma igång med AEM](/help/sites-deploying/deploy.md).
+>Om du inte har använt Adobe Experience Manager tidigare kan du gå igenom [Komma igång med AEM](/help/sites-deploying/deploy.md).
