@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Prestandahandbok för resurser{#assets-performance-guide}
+# Resursprestandahandbok{#assets-performance-guide}
 
 Digital resurshantering används ofta i de fall där prestanda är viktiga. Den vanliga DAM-installationen innehåller dock ett antal maskinvaru- och programvarukomponenter som kan påverka prestandan. Det här dokumentet innehåller följande:
 
@@ -33,7 +33,7 @@ Dåliga prestanda inom digital resurshantering kan påverka användarupplevelsen
 
 Interaktiva prestanda mäts i svarstid för sidor. Detta är den tid det tar från att ta emot HTTP-begäran till att stänga HTTP-svaret, som kan avgöras av loggfilerna för begäran. Vanliga målprestanda är en sidsvarstid på mindre än två sekunder.
 
-**2. Resursbearbetning** Ett problem med tillgångsbearbetning är när användare överför resurser och det tar några minuter tills resurser konverteras och hämtas till AEM DAM.
+**2. Resursbearbetning** Ett problem med tillgångsbearbetning är när användare överför resurser och det tar några minuter tills resurserna konverteras och hämtas till AEM DAM.
 
 Prestanda för tillgångsbearbetning mäts i genomsnittlig slutförandetid för arbetsflödet. Det här är den tid det tar från det att arbetsflödet för resursuppdatering anropas till det slutförs, vilket kan avgöras av användargränssnittet för arbetsflödesrapporter. Normala målprestanda beror på storleken och typen av resurser som bearbetas och antalet renderingar. Exempel på målprestanda kan vara följande:
 
@@ -41,7 +41,7 @@ Prestanda för tillgångsbearbetning mäts i genomsnittlig slutförandetid för 
 * under en minut för bilder som är mindre än 100 MB med standardrenderingar
 * under fem minuter för HD-videoklipp som är kortare än en minut
 
-**3. Hämtningshastighet** Ett genomströmningsproblem uppstår när det tar lång tid att hämta från AEM DAM och miniatyrerna visas inte direkt när du bläddrar i DAM-administratören eller DAM Finder.
+**3. Hämtningshastighet** Ett genomströmningsproblem uppstår när hämtningen från AEM DAM tar lång tid och miniatyrerna visas inte direkt när du bläddrar i DAM-administratören eller DAM Finder.
 
 Dataöverföringsprestanda mäts i antal kilobit per sekund. Det vanliga målet för prestanda är 300 kB per sekund för 100 samtidiga hämtningar.
 
@@ -63,7 +63,7 @@ DAM-processerna är väl lämpade att utföras parallellt för stora mängder. N
 
 Omfattande bearbetning av digitala resurser kräver optimerade maskinvaruresurser, de viktigaste faktorerna är bildstorlek och högsta genomströmning för bearbetade bilder.
 
-Tilldela minst 16 GB stackutrymme och konfigurera arbetsflödet för DAM-uppdatering av resurs så att det använder det [Camera Raw paketet](/help/assets/camera-raw.md) för att lägga in råbilder.
+Allokera minst 16 GB stackutrymme och konfigurera arbetsflödet för DAM Update Asset så att det använder [det Camera Raw paketet](/help/assets/camera-raw.md) för konsumtion av råbilder.
 
 ## Förstå systemet {#understanding-the-system}
 
@@ -71,25 +71,25 @@ En vanlig DAM-konfiguration består av slutanvändare som använder DAM via en b
 
 I följande förklaring beskrivs de möjliga prestandafallsområdena med vissa lösningar, beroende på vad som är lämpligt.
 
-**Nätverksanslutning till slutanvändare** En långsam nätverksanslutning kan orsaka dataflödesproblem, i vissa sällsynta fall även latensproblem. Ibland har användaren en långsam anslutning från Internet, särskilt i intranät. Detta är ett tecken på felaktig nätverkstopologi.
+**Nätverksanslutning till** slutanvändareEn långsam nätverksanslutning kan orsaka dataflödesproblem, i vissa sällsynta fall även latensproblem. Ibland har användaren en långsam anslutning från Internet, särskilt i intranät. Detta är ett tecken på felaktig nätverkstopologi.
 
-**Tillfälligt filsystem** Ett långsamt lokalt filsystem kan orsaka interaktiva prestandaproblem, särskilt när det gäller sökning, eftersom sökindexen lagras på den lokala disken. Det kan dessutom orsaka problem med resursbearbetningen om kommandoradsprocessen används.
+**Tillfälligt** filsystemEtt långsamt lokalt filsystem kan orsaka interaktiva prestandaproblem, särskilt när det gäller sökning, eftersom sökindexen lagras på den lokala disken. Det kan dessutom orsaka problem med resursbearbetningen om kommandoradsprocessen används.
 
-**AEM DAM Finder** Interaktiva prestandaproblem som ofta förekommer i sökningar orsakas av hög processoranvändning på grund av många samtidiga användare eller andra CPU-krävande processer i samma instans. Genom att gå från virtuella datorer till dedikerade datorer och se till att inga andra tjänster körs på datorn kan du förbättra prestandan. Om hög processorbelastning orsakas av resursbearbetning och många samtidiga användare rekommenderar dag att du lägger till ytterligare klusternoder.
+**AEM DAM** FinderInteraktiva prestandaproblem som ofta förekommer i sökningar orsakas av hög processoranvändning på grund av många samtidiga användare eller andra CPU-krävande processer i samma instans. Genom att gå från virtuella datorer till dedikerade datorer och se till att inga andra tjänster körs på datorn kan du förbättra prestandan. Om hög processorbelastning orsakas av resursbearbetning och många samtidiga användare rekommenderar dag att du lägger till ytterligare klusternoder.
 
-**AEM DAM-arbetsflöde** Långvariga arbetsflödesprocesser vid tillgångsinmatning orsakar prestandaproblem vid bearbetning av resurser. Beroende på vilken typ av resurser som bearbetas kan detta visa på överanvändning av processorn. Dag rekommenderar att du minskar antalet andra processer som körs i systemet och ökar antalet tillgängliga processorer genom att lägga till klusternoder.
+**AEM DAM-** arbetsflödeLångvariga arbetsflödesprocesser vid tillgångsinmatning orsakar prestandaproblem vid bearbetning av resurser. Beroende på vilken typ av resurser som bearbetas kan detta visa på överanvändning av processorn. Dag rekommenderar att du minskar antalet andra processer som körs i systemet och ökar antalet tillgängliga processorer genom att lägga till klusternoder.
 
-**NAS-anslutning** Dålig nätverksanslutning till NAS orsakar interaktiva prestandaproblem, eftersom åtkomst till nya noder under resurshanteringen blir långsammare på grund av nätverksfördröjning. Dessutom påverkar långsam nätverksgenomströmning negativt genomströmning, men även bearbetningsprestanda, eftersom inläsning och sparande av återgivningar blir långsammare.
+**NAS** ConnectivityDålig nätverksanslutning till NAS orsakar interaktiva prestandaproblem eftersom åtkomst av nya noder under resurshanteringen blir långsammare på grund av nätverksfördröjning. Dessutom påverkar långsam nätverksgenomströmning negativt genomströmning, men även bearbetningsprestanda, eftersom inläsning och sparande av återgivningar blir långsammare.
 
 Orsaker till dålig fördröjning och genomströmning i en NAS är vanligtvis nätverkstopologi eller överutnyttjande av NAS av andra tjänster.
 
-**Nätverksansluten lagring** Överutnyttjade nätverksanslutna lagringssystem kan orsaka en mängd problem:
+**Nätverksansluten** lagringÖveranvända nätverksanslutna lagringssystem kan orsaka en mängd problem:
 
 * Det har ofta uppstått problem med diskutrymmet som kan förebyggas genom korrekt storleksändring av ett DAM-projekt.
 * Hög diskfördröjning kan spridas till långsamma åtkomsttider för CRX och kan leda till interaktiva prestandaproblem.
 * Låg diskgenomströmning kan ge sämre prestanda för CQ5 DAM.
 
-## Prestandatestning {#testing-for-performance}
+## Testar prestanda {#testing-for-performance}
 
 För varje digitalt resurshanteringsprojekt måste du se till att det finns ett system för prestandatestning som snabbt kan identifiera och åtgärda flaskhalsar. Tänk på följande kontrollpunkter:
 
@@ -105,7 +105,7 @@ För varje digitalt resurshanteringsprojekt måste du se till att det finns ett 
 
 Följande prestandaförbättringar har hittills använts i projekt:
 
-* Selektiv renderingsgenerering: generera bara de återgivningar du behöver genom att lägga till villkor i arbetsflödet för resursbearbetning, så att mer kostsamma återgivningar bara genereras för utvalda resurser.
+* Selektiv renderingsgenerering: generera bara de återgivningar du behöver genom att lägga till villkor i arbetsflödet för resursbearbetning, så att mer kostsamma återgivningar bara genereras för vissa resurser.
 * Delat datalager bland instanser: när diskutrymmet börjar ta slut kan detta avsevärt minska det diskutrymme som behövs, till priset av högre konfigurationsinsatser och förlorad automatisk rensning av datalagret.
 
 ## Ytterligare läsning {#further-reading}
