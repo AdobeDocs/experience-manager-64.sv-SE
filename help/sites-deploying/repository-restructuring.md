@@ -31,9 +31,9 @@ Med början i AEM 6.4 och som kommer att fortsätta i framtida versioner struktu
 * AEM produktkod placeras alltid i /libs, som inte får skrivas över av anpassad kod
 * Anpassad kod ska placeras i /apps, /content och /conf
 
-## Inverkan på 6.4-uppgraderingar {#impact-on-upgrades}
+## Påverkan på 6.4 uppgraderingar {#impact-on-upgrades}
 
-När du uppgraderar till AEM 6.4 dupliceras en stor delmängd av innehållet under /etc i andra mappar i databasen. Dessa nya platser är de populäraste platser där innehållet refereras. Alla försök har dock gjorts att AEM 6.4-uppgraderingen ska vara bakåtkompatibel med de tidigare platserna i mappen /etc, och i de flesta fall kommer den gamla platsen att refereras av AEM tills ändringar görs aktivt - och i många fall manuellt - i kundens applikation. I tidslinjeperspektiv finns det två typer av ändringar:
+När du uppgraderar till AEM 6.4 dupliceras en stor delmängd av innehållet under /etc i andra mappar i databasen. Dessa nya platser är de populäraste platser där innehållet refereras. Alla försök har dock gjorts att AEM 6.4-uppgraderingen ska vara bakåtkompatibel med de tidigare platserna i mappen /etc, och i de flesta fall kommer den gamla platsen att refereras av AEM tills ändringar görs aktivt - och i många fall manuellt - i kundens applikation. Från tidslinjeperspektiv finns det två typer av ändringar:
 
 * Med uppgradering av version 6.4 är en handfull av de/etc-förändringar som gjorts inte bakåtkompatibla och därför bör ändringar planeras och genomföras som en del av uppgraderingen av AEM 6.4.
 * Före uppgradering till version 6.5 - de flesta av omstruktureringsförändringarna kan skjutas upp till en viss tid i framtiden. Som tidigare nämnts kommer AEM 6.4-kod att fortsätta referera till de gamla platserna tills ändringarna implementeras som en del av en kundrelease. Även om det inte finns någon tvingad tidslinje som ändringarna ska göras för rekommenderar vi att de görs före uppgraderingen till version 6.5 eftersom framtida funktioner kan vara beroende av att nya platser refereras. Dokumentationen för en viss funktion refererar till de nya platserna enligt vedertaget bruk och det kan därför vara förvirrande om de gamla platserna fortfarande används.
@@ -45,7 +45,7 @@ Vid planering av en uppgradering till AEM 6.4 ska följande sidor per lösning r
 * [Omstrukturering av lager som är gemensamma för alla AEM](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md)
 * [Omstrukturering av AEM Sites-arkiv](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md)
 * [Omstrukturering av AEM Assets-arkiv](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md)
-* [Omstrukturering av AEM Assets Dynamic Media-databasen](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md)
+* [Omstrukturering av AEM Assets Dynamic Media-arkiv](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md)
 * [Omstrukturering av AEM Forms-arkiv](/help/sites-deploying/forms-repository-restructuring-in-aem-6-4.md)
 * [Omstrukturering av AEM Communities-arkiv](/help/sites-deploying/communities-repository-restructuring-in-aem-6-4.md)
 * [Omstrukturering av AEM handelslager](/help/sites-deploying/ecommerce-repository-restructuring-in-aem-6-4.md)
