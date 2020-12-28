@@ -17,9 +17,9 @@ ht-degree: 0%
 ---
 
 
-# PUBLICERA INTE, MEN ANPASSA INTE DELETE-modeller FÖR innehållsfragment{#do-not-publish-but-do-not-delete-customizing-content-fragment-models}
+# PUBLICERA INTE, MEN ANPASSA INTE DELETE-modeller för innehållsfragment{#do-not-publish-but-do-not-delete-customizing-content-fragment-models}
 
-Redigeraren för innehållsfragmentmodellen är en guide som baseras på `Formbuilder`, ärvd från:
+Redigeraren för innehållsfragmentmodellen är en guide baserad på `Formbuilder`, ärvd från:
 
 `granite/ui/components/foundation/form/formbuilder`
 
@@ -27,22 +27,23 @@ Komponenten har de verktyg som krävs för att återge gränssnittet för dra oc
 
 ## Platser {#locations}
 
-Modeller sparas och skapas under `/conf`, under en mapp som har egenskapen [](/help/assets/content-fragments-models.md#enable-content-fragment-models) Content Fragment Models aktiverad. Den här inställningen finns även i **Konfigurationsegenskaper** som du når via **[Konfigurationsläsaren](/help/sites-administering/configurations.md)**.
+Modeller sparas och skapas under `/conf`, under en mapp som har egenskapen [Content Fragment Models](/help/assets/content-fragments-models.md#enable-content-fragment-models) aktiverad. Den här inställningen finns även i **konfigurationsegenskaperna** som du kommer åt via **[konfigurationsläsaren](/help/sites-administering/configurations.md)**.
 
-1. Navigera till webbläsaren via **Verktyg**, **Allmänt**, **Konfigurationsläsaren**, till exempel 
+1. Navigera till webbläsaren via **Verktyg**, **Allmänt**, **Konfigurationsläsaren**
+Till exempel: 
 `http://localhost:4502/libs/granite/configurations/content/view.html/conf`
 
 1. Välj lämplig konfiguration i webbläsaren och sedan **Egenskaper** i verktygsfältet.
 
    Egenskaperna för `global`: `http://localhost:4502/libs/granite/configurations/content/edit.html/conf/global`
 
-I modellkonsolen visas alla mappar med egenskapen **Content Fragment Models** . Navigera via **Verktyg**, **Resurser**, **Content Fragment Models**; till exempel `http://localhost:4502/libs/dam/cfm/models/console/content/models.html/conf`.
+I modellkonsolen visas alla mappar med egenskapen **Content Fragment Models**. Navigera via **Verktyg**, **Resurser**, **Modeller för innehållsfragment**; till exempel `http://localhost:4502/libs/dam/cfm/models/console/content/models.html/conf`.
 
 En användare kan [skapa en innehållsfragmentmodell](/help/assets/content-fragments-models.md#creating-a-content-fragment-model) med guiden **Skapa modell** (med **Skapa** från konsolen).
 
 >[!CAUTION]
 >
->Du ***får*** inte ändra något i `/libs` banan.
+>Du ***får*** inte ändra något i `/libs`-sökvägen.
 >
 >Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
 
@@ -58,34 +59,34 @@ Guiden skapar en post med den här strukturen:
 
 * `jcr:content`
 
-   Varje modell innehåller en `jcr:content` nod som:
+   Varje modell innehåller en `jcr:content`-nod som:
 
-   * innehåller informationsegenskaper om modellen, t.ex. `jcr:title`, `lastModified`, `lastModifiedBy`
-   * har vanligtvis `sling:ResourceType` formen av `dam/cfm/models/console/components/data/entity/default`,
+   * innehåller informationsegenskaper om modellen som `jcr:title`, `lastModified`, `lastModifiedBy`
+   * har vanligtvis `sling:ResourceType` av `dam/cfm/models/console/components/data/entity/default`,
 
-      med `sling:ResourceSuperType` `dam/cfm/models/console/components/data/entity`
+      med `sling:ResourceSuperType` av `dam/cfm/models/console/components/data/entity`
 
 * `model`
 
-   Noden innehåller `model` en egenskap `dataTypesConfig`som används för att avgöra vilka datatyper som används i modellredigeraren.
+   Noden `model` innehåller egenskapen `dataTypesConfig` som används för att avgöra vilka datatyper som används i modellredigeraren.
 
 * `items`
 
-   Under `items` noden sparas alla datatyper som läggs till i modellen (som om de dras och släpps i modellredigeraren). Varje objekt får ett slumpmässigt nodnamn, men för att innehållsfragmentredigeraren ska kunna arbeta med den här modellen måste varje objekt ha en `name` egenskap. På den här noden sparas dessutom alla konfigurationsegenskaper för en viss datatyp, inklusive de standardegenskaper som behövs för att återge komponenterna.
+   Under noden `items` sparas alla datatyper som läggs till i modellen (som om de dras och släpps i modellredigeraren). Varje objekt får ett slumpmässigt nodnamn, men för att innehållsfragmentredigeraren ska kunna arbeta med den här modellen måste varje objekt ha en `name`-egenskap. På den här noden sparas dessutom alla konfigurationsegenskaper för en viss datatyp, inklusive de standardegenskaper som behövs för att återge komponenterna.
 
 >[!CAUTION]
 >
->Alla datatyper som dras och släpps i en modellredigerare, och som sådana instansierade, **måste** ha användarens `name` egenskapsindata.
+>Alla datatyper som dras och släpps i en modellredigerare, och som sådana instansierade, måste **ha** egenskapen `name` angiven av användaren.
 >
->Det här betraktas som **egenskapsnamn&amp;stämpel;ast;** på fliken **Egenskaper** i modellredigeraren.
+>Detta visas som **Egenskapsnamn&amp;ast;** på fliken **Egenskaper** i modellredigeraren.
 
 ## Modellredigerarens struktur {#structure-of-the-model-editor}
 
-Modellredigeraren för **innehållsfragment** har två delar:
+**Modellredigeraren för innehållsfragment** har två delar:
 
 * Panelen Förhandsgranska, eller vyn, till vänster, där du kan släppa objekt. Det:
 
-   * Visar en förhandsgranskning av den **datatyp** som instansieras.
+   * Visar en förhandsgranskning av den **datatyp** som har instansierats.
    * Tillåter beställning i modellredigeraren.
 
 * Flikarna **Datatyper**/**Egenskaper** i panelen till höger. Det:
@@ -99,11 +100,11 @@ Modellredigeraren för **innehållsfragment** har två delar:
       This node contains all the data types currently supported in the model editor. For more information on how to configure the data types, see [Customizing Data Types for Content Fragment Models](/help/sites-developing/customizing-content-fragment-model-data-types.md).
       -->
 
-   * Alla återgivna datatyper har två skripttaggar som när de instansieras utgör vyn (komponenten som återges på den vänstra sidan) och fliken **Egenskaper** , som definierar de egenskaper som en användare kan definiera för en viss komponent.
+   * Alla återgivna datatyper har två skripttaggar som när de instansieras utgör vyn (komponenten som återges på vänster sida) och fliken **Egenskaper**, som definierar de egenskaper som en användare kan definiera för en viss komponent.
 
 >[!CAUTION]
 >
->Du ***får*** inte ändra något i `/libs` banan.
+>Du ***får*** inte ändra något i `/libs`-sökvägen.
 >
 >Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
 
@@ -113,11 +114,11 @@ The properties on the right side define a form that is submitted directly into J
 
 När en datatyp instansieras skapas HTML-indata för varje egenskap som komponenten behöver återges i ett innehållsfragment. De innehåller till exempel:
 
-* **Egenskapsnamn&amp;stämpel;ast;** ( `name`) - fungerar som en identifierare för komponenter
+* **Egenskapsnamn &amp;ast;** (  `name`) - fungerar som en identifierare för komponenter
 
-* **Återge som** ( `metaType`) - typ som komponenten ska återges som
+* **Återge som** (  `metaType`) - typ som komponenten ska återges som
 
-* **Beskrivning** ( `fieldDescription`) - beskrivning av komponenten i innehållsfragmentet
+* **Description** (  `fieldDescription`) - description of the component in the Content Fragment
 
 * och andra.
 
