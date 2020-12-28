@@ -32,11 +32,11 @@ Följande administrationsverktyg finns för att hantera webbplatser och sidor:
 
 * Dessa två funktioner kan kombineras för att passa för webbplatser som är både [flerspråkiga och flerspråkiga](#multinational-and-multilingual-sites).
 
-## Flerspråkiga och flerspråkiga webbplatser {#multinational-and-multilingual-sites}
+## Flerspråkiga och flerspråkiga platser {#multinational-and-multilingual-sites}
 
 Ni kan effektivt skapa innehåll för multinationella och flerspråkiga webbplatser genom att kombinera Multi Site Manager och arbetsflödet för översättning. Skapa en överordnad webbplats på ett språk, för ett visst land, och använd sedan innehållet som grund för de andra webbplatserna, med översättning där det behövs:
 
-* [Översätt](/help/sites-administering/translation.md) den överordnad webbplatsen till olika språk.
+* [Översätt ](/help/sites-administering/translation.md) den överordnad webbplatsen till olika språk.
 
 * Använd [Multi Site Manager](/help/sites-administering/msm.md) för att:
 
@@ -52,8 +52,8 @@ I följande diagram visas hur huvudbegreppen överlappar (men inte alla nivåer/
 >
 >I detta fall, och på liknande sätt, hanterar inte MSM de olika språkversionerna som sådana.
 >
->* [MSM](/help/sites-administering/msm.md) hanterar distributionen av översatt innehåll från en plan (t.ex. en global överordnad) till live-kopiorna (t.ex. de lokala webbplatserna) inom ett språks gränser.
->* Funktionerna för [översättningsintegrering](/help/sites-administering/translation.md) i AEM, tillsammans med översättningshanteringstjänster från tredje part, hanterar språken och översätter innehåll till dessa olika språk.
+>* [MSM ](/help/sites-administering/msm.md) hanterar distributionen av översatt innehåll från en plan (t.ex. en global överordnad) till live-kopiorna (t.ex. de lokala platserna) inom ett språks gränser.
+>* Integreringsfunktionerna i [translation](/help/sites-administering/translation.md) i AEM, tillsammans med översättningshanteringstjänster från tredje part, hanterar språken och översätter innehåll till dessa olika språk.
 
 >
 >
