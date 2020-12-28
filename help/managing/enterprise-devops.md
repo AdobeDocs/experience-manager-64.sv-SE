@@ -63,7 +63,7 @@ Beroende på hur omfattande ditt system är kan utvecklingsmiljön ha både för
 
 ### Kvalitetssäkring {#quality-assurance}
 
-This environment is used by the quality assurance team to comprehensively [test](/help/sites-developing/test-plan.md) your new system; both design and function. Den bör ha både författar- och publiceringsmiljöer med lämpligt innehåll och tillhandahålla alla tjänster som behövs för att möjliggöra en komplett serie tester.
+Den här miljön används av kvalitetssäkringsteamet för att på ett heltäckande sätt [testa](/help/sites-developing/test-plan.md) ditt nya system. både design och funktion. Den bör ha både författar- och publiceringsmiljöer med lämpligt innehåll och tillhandahålla alla tjänster som behövs för att möjliggöra en komplett serie tester.
 
 ### Mellanlagring {#staging}
 
@@ -141,6 +141,6 @@ Produktionsinnehållet bör flyttas från produktionsmiljön till mellanlagrings
 Innehåll kan överföras:
 
 * Mellan olika miljöer – genom exporter och importer av paket.
-* Between different instances - by directly replicating ([AEM replication](/help/sites-deploying/replication.md)) the content (using a HTTP, or HTTPS, connection).
+* Mellan olika instanser - genom direkt replikering ([AEM replikering](/help/sites-deploying/replication.md)) av innehållet (med HTTP-, eller HTTPS-anslutning).
 
 ![chlimage_1-1](assets/chlimage_1-1.png)
