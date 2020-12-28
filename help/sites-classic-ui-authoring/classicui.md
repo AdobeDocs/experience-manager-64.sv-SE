@@ -18,18 +18,18 @@ ht-degree: 0%
 ---
 
 
-# Om du skriver i det klassiska gränssnittet{#authoring-in-the-classic-ui}
+# Om du skriver i det klassiska användargränssnittet{#authoring-in-the-classic-ui}
 
-## Classic UI and Touch-Enabled UI {#classic-ui-and-touch-enabled-ui}
+## Klassiskt användargränssnitt och pekaktiverat användargränssnitt {#classic-ui-and-touch-enabled-ui}
 
 Det klassiska användargränssnittet är det skrivbordsorienterade användargränssnittet som har varit tillgängligt sedan CQ5 (det föregående AEM). Följande dokumentation om redigering är fokuserad på det här användargränssnittet.
 
-Det beröringskänsliga användargränssnittet är det nya standardgränssnittet för AEM, som är utformat för både pekskärmar och stationära enheter. Mer information finns i [standarddokumentationen](/help/sites-authoring/author.md) .
+Det beröringskänsliga användargränssnittet är det nya standardgränssnittet för AEM, som är utformat för både pekskärmar och stationära enheter. Mer information finns i [standarddokumentationen för redigering](/help/sites-authoring/author.md).
 
 >[!NOTE]
 >
 >Eftersom det pekbaserade användargränssnittet är standardgränssnittet för AEM bevaras inte längre det klassiska användargränssnittet. Det innebär att det finns vissa funktioner som inte är tillgängliga i det klassiska användargränssnittet.
 
-## Begreppet redigering (och publicering) {#concept-of-authoring-and-publishing}
+## Concept of Authoring (and Publishing) {#concept-of-authoring-and-publishing}
 
-Oavsett vilket gränssnitt du väljer finns det vissa gemensamma begrepp och idéer som beskrivs väl [här i standarddokumentationen](/help/sites-authoring/author.md#concept-of-authoring-and-publishing).
+Oberoende av vilket gränssnitt du väljer finns det vissa begrepp och idéer som är gemensamma för redigering. Dessa beskrivs välbeskrivna [här i standarddokumentationen för redigering](/help/sites-authoring/author.md#concept-of-authoring-and-publishing).
