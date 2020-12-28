@@ -29,7 +29,7 @@ Alternativ för att förbättra produktiviteten när du arbetar med översättni
 
    ![screen_shot_2018-04-19at22622](assets/screen_shot_2018-04-19at222622.jpg)
 
-1. Växla till fliken **Avancerat** . Längst ned kan du välja Befordra översättningsstarter **automatiskt**.
+1. Växla till fliken **Avancerat**. Längst ned kan du välja **Befordra översättningsstarter automatiskt**.
 
    ![screen_shot_2018-04-19at223430](assets/screen_shot_2018-04-19at223430.jpg)
 
@@ -49,7 +49,7 @@ Det går att konfigurera flera målspråk i ett översättningsprojekt, vilket m
 
    ![screen_shot_2018-04-19at22622](assets/screen_shot_2018-04-19at222622.jpg)
 
-1. Växla till fliken **Avancerat** . Du kan lägga till flera språk under **Målspråk**.
+1. Växla till fliken **Avancerat**. Du kan lägga till flera språk under **Målspråk**.
 
    ![screen_shot_2018-04-22at212601](assets/screen_shot_2018-04-22at212601.jpg)
 
@@ -65,7 +65,7 @@ Det går att konfigurera flera målspråk i ett översättningsprojekt, vilket m
 
 Manuella redigeringar av översatt innehåll kan synkroniseras tillbaka till översättningshanteringssystemet (TMS) för att utbilda översättningsminnet.
 
-1. När du har uppdaterat textinnehåll på en översatt sida i webbplatskonsolen väljer du **Uppdatera översättningsminne**.
+1. Välj **Uppdatera översättningsminne** i webbplatskonsolen när du har uppdaterat textinnehåll på en översatt sida.
 
    ![screen_shot_2018-04-22at234430](assets/screen_shot_2018-04-22at234430.jpg)
 
@@ -92,7 +92,7 @@ Språkrötter kan nu grupperas under noder, till exempel efter region, samtidigt
 
 >
 >
-Den här `es` språkkopian kommer inte att identifieras eftersom den ligger två nivåer (amerika/central-amerika) bort från `en` noden.
+Denna `es`-språkkopia kommer inte att identifieras eftersom den är 2 nivåer (amerika/central-amerika) från noden `en`.
 
 >[!NOTE]
 >
@@ -106,15 +106,15 @@ En egenskap kan nu väljas i platslistevyn som visar om en sida har översatts, 
 
    ![screen_shot_2018-04-23at130646](assets/screen_shot_2018-04-23at130646.jpg)
 
-1. Klicka på eller tryck på **Visa inställningar**.
+1. Klicka eller tryck på **Visa inställningar**.
 
    ![screen_shot_2018-04-23at130844](assets/screen_shot_2018-04-23at130844.jpg)
 
-1. Markera **kryssrutan Översatt** under **Översättning** och tryck/klicka på **Uppdatera**.
+1. Markera kryssrutan **Översatt** under **Översättning** och tryck/klicka på **Uppdatera**.
 
    ![screen_shot_2018-04-23at130955](assets/screen_shot_2018-04-23at130955.jpg)
 
-Du kan nu se en **översatt** kolumn som visar sidornas översättningsstatus.
+Du kan nu se en **översatt**-kolumn som visar sidornas översättningsstatus.
 
 ![screen_shot_2018-04-23at133821](assets/screen_shot_2018-04-23at133821.jpg)
 
