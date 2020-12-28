@@ -1,8 +1,8 @@
 ---
-title: Versionsinformation om AEM Assets
+title: Versionsinformation för AEM Assets
 seo-title: AEM Assets
-description: Versionsinformation om Adobe Experience Manager 6.4-resurser.
-seo-description: Versionsinformation om Adobe Experience Manager 6.4-resurser.
+description: Versionsinformation om Adobe Experience Manager 6.4 Assets.
+seo-description: Versionsinformation om Adobe Experience Manager 6.4 Assets.
 uuid: f5e7608d-f906-4a35-b442-899703de3587
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4
@@ -18,15 +18,15 @@ ht-degree: 0%
 ---
 
 
-# Versionsinformation om AEM Assets {#aem-assets-release-notes}
+# Versionsinformation för AEM Assets {#aem-assets-release-notes}
 
 Viktiga funktioner, högdagrar och förbättringar i AEM 6.4 Assets beskrivs i versionsinformationen. Följ länkarna för detaljerad information.
 
 ## Adobe Asset Link {#adobe-asset-link}
 
-Adobe Asset Link i Creative Cloud for enterprise effektiviserar samarbetet mellan kreatörer och marknadsförare vid framtagningen av innehåll. Det är en ny inbyggd funktion i Creative Cloud for enterprise som gör det möjligt att ansluta till AEM Assets direkt från Adobe Photoshop, Adobe Illustrator eller Adobe InDesign - utan att lämna dessa verktyg.
+Adobe Asset Link i Creative Cloud for enterprise effektiviserar samarbetet mellan kreatörer och marknadsförare vid framtagningen av innehåll. Det är en ny inbyggd funktion i Creative Cloud for enterprise som ger en anslutning till AEM Assets direkt från Adobe Photoshop, Adobe Illustrator eller Adobe InDesign - utan att lämna dessa verktyg.
 
-Om du vill veta mer om kapacitet, förutsättningar och hur du får tillgång till dem kan du läsa [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) .
+Mer information om kapacitet, förutsättningar och hur du får tillgång till den finns på sidan [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html).
 
 ## Förbättrade smarta taggar (från Adobe Sensei) {#enhanced-smart-tags-powered-by-adobe-sensei}
 
@@ -35,7 +35,7 @@ I AEM 6.4 introduceras artificiell intelligensbaserad Förbättrade smarta tagga
 * Smart Content Service lär sig kundens affärsklonomi och använder den för att automatiskt tagga digitala resurser med kundrelevanta taggar utöver generiska taggar. Det förbättrar upptäckten av tillgångar avsevärt och minskar time to market.
 * Adobe Sensei driver Smart Content Service, som gör det möjligt att utbilda bildigenkänningsalgoritmen i företagets taxonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på liknande resurser.
 
-Installera det [senaste Service Pack-paketet av AEM 6.4](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)om du vill använda smarta taggar i AEM Assets.
+Installera [den senaste Service Pack-versionen av AEM 6.4](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) om du vill använda AEM Assets Enhanced Smart Tags.
 
 ## Smart Translation Search (från Adobe Sensei) {#smart-translation-search-powered-by-adobe-sensei}
 
@@ -96,7 +96,7 @@ AEM 6.4 ger betydande förbättringar i tillgångsrapporteringen:
 ## Varumärkesportal {#brand-portal}
 
 * **6.3 Platform Upgrade**: Varumärkesportalen har uppgraderats från AEM 6.0 till AEM 6.3 med nya funktioner och prestandaförbättringar.
-* **Parallell publicering**: Upp till replikeringar kan göras mellan AEM Assets och Brand Portal (tidigare 1), vilket förbättrar publiceringsprestandan avsevärt
+* **Parallell publicering**: Upp till replikeringar kan ske mellan AEM Assets och Brand Portal (tidigare 1), vilket förbättrar publiceringsprestandan avsevärt
 * **Publicering** av schema- och sökfasett: Möjlighet att publicera metadatamatcheman och anpassade sökaspekter på varumärkesportalen, vilket eliminerar behovet av dubbelarbete.
 * **Publicera** flera taggar: Möjlighet att publicera taxonomi (tillsammans med hierarki) till varumärkesportalen, vilket eliminerar dubbelarbete.
 * **Självregistrering eller Begär åtkomst**: Arbetsflöde för oregistrerade användare på varumärkesportalen.
@@ -104,9 +104,9 @@ AEM 6.4 ger betydande förbättringar i tillgångsrapporteringen:
 * **Förbättrade** rapporter: Tre OOTB-rapporter finns: ladda ned, publicera och dela länkar.
 * **DRM-baserade begränsningar**: När en licensierad mediefil har gått ut är den inte längre tillgänglig för hämtning från varumärkesportalen.
 
-## AEM {#aem-desktop-app}
+## AEM datorprogram {#aem-desktop-app}
 
-AEM uppdateras till version 1.8, som är kompatibel med AEM 6.4. En fullständig lista över ändringar AEM datorprogrammet finns i ett dokument med dedikerade [AEM versionsinformation](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html) för skrivbordsappen.\
+AEM uppdateras till version 1.8, som är kompatibel med AEM 6.4. Den fullständiga listan över ändringar för AEM datorprogram finns i ett [AEM versionsinformation för skrivbordsprogram](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)-dokument.\
 Här är en lista AEM datorprogram har markerats sedan AEM 6.3 släpptes:
 
 * Möjlighet att överföra hierarkiska mappar i bakgrunden.
@@ -118,7 +118,7 @@ Här är en lista AEM datorprogram har markerats sedan AEM 6.3 släpptes:
 
 Följande dokumentation är tillgänglig för enklare åtkomst till dokumentation och bästa praxis:
 
-* [Användarhandbok](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)som riktar sig till slutanvändare som arbetar med programmet.
+* [Användarhandbok](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) som riktar sig till slutanvändare som arbetar med programmet.
 * [Installationsguide](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/install-upgrade.html), som riktar sig till administratörer som konfigurerar AEM och AEM för att fungera tillsammans
 
 ## Nivåindelad lagring {#tiered-storage}
@@ -128,7 +128,7 @@ AEM 6.4 innehåller en uppsättning funktioner som stöder olika nivåindelade l
 * Möjlighet för användare att välja och senare ändra lagringsklass när de vill och definiera regler för lagring av resurser från en klass till en annan eller hantera livscykeln för deras resurser.
 * Möjlighet för användare att sänka sina lagringskostnader genom att välja en annan AWS eller Azure.
 
-En översikt över vilka plattformar som stöds finns i dokumentationen om [tekniska krav](../sites-deploying/technical-requirements.md).
+En översikt över vilka plattformar som stöds finns i [Teknisk kravdokumentation](../sites-deploying/technical-requirements.md).
 
 ## Stängd användargrupp {#closed-user-group}
 
@@ -139,7 +139,7 @@ En översikt över vilka plattformar som stöds finns i dokumentationen om [tekn
 
 Dynamic Media i 6.4 har stöd för ett nytt läge - där överordnad resurser överförs och hanteras med AEM Assets webbgränssnitt, och dynamiska återgivningar och andra dynamiska mediefunktioner hanteras i bakgrunden av Dynamic Media molntjänst.
 
-I det här läget (som introducerades i [AEM 6.3 Feature Packs 14410 och 18912](https://helpx.adobe.com/experience-manager/6-3/release-notes/dynamic-media-featurepack-14410.html)) drar användarna nytta av komplett resurshantering och dynamiska mediefunktioner med det moderna webbgränssnittet i AEM Assets, och utnyttjar fortfarande leveranstjänster som är bakåtkompatibla med Dynamic Media Classic (Scene7), inklusive leverans-URL:er som inte ändras.
+I det här läget (som introducerades först i releasen av [AEM 6.3 Feature Pack 14410 och 18912](https://helpx.adobe.com/experience-manager/6-3/release-notes/dynamic-media-featurepack-14410.html)) drar användarna nytta av komplett resurshantering och dynamiska mediefunktioner med det moderna AEM Assets webbgränssnitt, och utnyttjar fortfarande leveranstjänsterna som är bakåtkompatibla med Dynamic Media Classic (Scene7), inklusive leverans-URL:er, som är oförändrade.
 
 Dessutom innehåller AEM 6.4 nya funktioner som drivs av Adobe Sensei, förbättringar för nya medier som VR och 3D, visningsprogram för Dynamic Media samt stöd för Experience Fragments i Interactive Images och Carousel Banners.
 
@@ -148,9 +148,9 @@ Dessutom innehåller AEM 6.4 nya funktioner som drivs av Adobe Sensei, förbätt
 * Smart Crop ger automatiskt icke-förstörande beskärning av bilder för att bevara intressepunkten för responsiv design. Du kan förhandsgranska beskurna förslag och manuellt justera dem om det behövs.
 * Den här funktionen möjliggör även automatisk generering av färgrutor för produktbilder. Automatiserad generering av färgrutor gör det enklare att automatiskt lägga till färgrutor, mönsterrutor eller båda i produktbilderna.
 
-Mer information finns i dokumentationen för [bildprofiler](../assets/image-profiles.md) .
+Mer information finns i [dokumentationen för bildprofiler](../assets/image-profiles.md).
 
-Läs även [Lägga till Dynamic Media-resurser på sidor](../assets/adding-dynamic-media-assets-to-pages.md) om du vill veta mer om hur du använder Smart beskärning med komponenten Dynamic Media.
+Läs även [Lägga till Dynamic Media-resurser på sidor](../assets/adding-dynamic-media-assets-to-pages.md)-dokumentationen om du vill veta mer om hur du använder Smart Crop med Dynamic Media-komponenten.
 
 ### Smart bildbehandling {#smart-imaging}
 
@@ -158,12 +158,12 @@ Läs även [Lägga till Dynamic Media-resurser på sidor](../assets/adding-dynam
 * Bilder konverteras automatiskt till olika format baserat på webbläsarfunktioner.
 * Bildkvalitetsinställningarna bestäms i webbläsaren och används. Den här intelligensen gör att bildinläsningsprestanda är acceptabla för begränsad bandbredd och långsamma anslutningshastigheter.
 
-Mer information finns i dokumentationen för [Smart](../assets/imaging-faq.md) Imaging.
+Mer information finns i [dokumentationen för smarta bilder](../assets/imaging-faq.md).
 
-### Förbättringar av nya medier och visningsprogram {#emerging-media-amp-viewer-enhancements}
+### Förbättringar av nya media och visningsprogram {#emerging-media-amp-viewer-enhancements}
 
 * Nya visningsprogram stöds, vilket ger användaren bättre och mer engagerande upplevelser.
-* Panoramavisningsprogrammet hjälper till att engagera användaren och ger möjlighet att bättre uppleva rumsscener, egenskaper, platser och landskap. Mer information finns i dokumentationen för [panoramabilder](../assets/panoramic-images.md) .
+* Panoramavisningsprogrammet hjälper till att engagera användaren och ger möjlighet att bättre uppleva rumsscener, egenskaper, platser och landskap. Mer information finns i [Dokumentation för panoramabilder](../assets/panoramic-images.md).
 
 * VR Viewer ger en engagerande upplevelse av egenskaper, platser och landskap.
 * Vertical Image Viewer optimerad för produktbilder.
@@ -171,4 +171,4 @@ Mer information finns i dokumentationen för [Smart](../assets/imaging-faq.md) I
 
 ### 3D och integrering med Dimension CC {#d-and-integration-with-dimension-cc}
 
-Integrering med [Adobe Dimension CC](https://www.adobe.com/products/dimension.html) för smidigare 3D-arbetsflöden har införts. Mer information finns i [Arbeta med 3D-resurser](../assets/assets-3d.md) .
+Integrering med [Adobe Dimension CC](https://www.adobe.com/products/dimension.html) för smidigare 3D-arbetsflöde har införts. Mer information finns i [Arbeta med 3D-resurser](../assets/assets-3d.md)-dokumentationen.
