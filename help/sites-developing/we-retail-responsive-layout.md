@@ -20,7 +20,7 @@ ht-degree: 2%
 
 # Provar Responsiv layout i We.Retail{#trying-out-responsive-layout-in-we-retail}
 
-Alla webbsidor använder komponenten Layoutbehållare för att implementera responsiv design. Layoutbehållaren har ett styckesystem som gör att du kan placera komponenter i ett responsivt rutnät. Rutnätet kan ändra layouten beroende på enhetens/fönstrets storlek och format. Komponenten används tillsammans med **layoutläget** i sidredigeraren, som gör att du kan skapa och redigera den responsiva layouten beroende på enhet.
+Alla webbsidor använder komponenten Layoutbehållare för att implementera responsiv design. Layoutbehållaren har ett styckesystem som gör att du kan placera komponenter i ett responsivt rutnät. Rutnätet kan ändra layouten beroende på enhetens/fönstrets storlek och format. Komponenten används tillsammans med läget **Layout** i sidredigeraren, som gör att du kan skapa och redigera den responsiva layouten beroende på enhet.
 
 ## Prova {#trying-it-out}
 
@@ -48,4 +48,4 @@ Alla webbsidor använder komponenten Layoutbehållare för att implementera resp
 
 ## Ytterligare information {#further-information}
 
-Mer information finns i redigeringsdokumentet [Responsiv layout](/help/sites-authoring/responsive-layout.md) eller administratörsdokumentet [Configuring Layout Container and Layout Mode](/help/sites-administering/configuring-responsive-layout.md) .
+Mer information finns i redigeringsdokumentet [Responsiv layout](/help/sites-authoring/responsive-layout.md) eller administratörsdokumentet [Configuring Layout Container and Layout Mode](/help/sites-administering/configuring-responsive-layout.md) för fullständig teknisk information.
