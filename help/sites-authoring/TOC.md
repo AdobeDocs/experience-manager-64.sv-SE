@@ -18,7 +18,7 @@ ht-degree: 40%
 # Användarhandbok för redigering av AEM 6.4 {#authoring}
 
 + [Översikt över användarhandboken för redigering](home.md)
-+ Viktiga uppgifter, verktyg och begrepp för AEM {#essentials}
++ Viktiga uppgifter, verktyg och koncept för redigering AEM {#essentials}
    + [Steg 1 för författare](first-steps.md)
    + [Snabbguide till framtagning av sidor](qg-page-authoring.md)
    + [Begreppet redigering](author.md)
