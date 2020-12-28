@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Publicera inte publicera innehåll{#publish-unpublish-content}
+# Publicera ej publicerat innehåll{#publish-unpublish-content}
 
 >[!NOTE]
 >
