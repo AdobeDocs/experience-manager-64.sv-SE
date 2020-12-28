@@ -26,7 +26,7 @@ När filtret har installerats blockeras åtkomsten till alla resurser. Du kan ti
 
 ## Konfigurera filtret för innehållsdisposition {#configure-content-disposition-filter}
 
-Du kan visa filtret för disposition av [Apache Sling-innehåll i GitHub](https://github.com/apache/sling-org-apache-sling-security/blob/master/src/main/java/org/apache/sling/security/impl/ContentDispositionFilterConfiguration.java).
+Du kan visa filtret [Apache Sling Content Disposition Filter i GitHub](https://github.com/apache/sling-org-apache-sling-security/blob/master/src/main/java/org/apache/sling/security/impl/ContentDispositionFilterConfiguration.java).
 
 Alternativen för Innehållsdispositionsfilter innehåller följande funktioner:
 
