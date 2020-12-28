@@ -20,11 +20,11 @@ ht-degree: 2%
 
 # Kortkommandon vid sidredigering{#keyboard-shortcuts-when-editing-pages}
 
-Olika kortkommandon finns i hela AEM. En del gäller när du redigerar sidor, andra när du [använder konsoler](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
+Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, andra för [användning av konsoler](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
 
 >[!NOTE]
 >
->För tangentkombinationerna i kolumnen **Kortkommando** i följande tabeller fungerar både Ctrl och Kommando i macOS.
+>För tangentkombinationerna i kolumnen **Kortkommando** i följande tabeller fungerar både Ctrl- och Kommando-tangenterna i macOS.
 
 >[!NOTE]
 >
@@ -147,14 +147,14 @@ Olika kortkommandon finns i hela AEM. En del gäller när du redigerar sidor, an
    <td>Stäng förslagslagret.</td> 
   </tr> 
   <tr> 
-   <td>Content Finder<br /> </td> 
+   <td>Innehållssökning<br /> </td> 
    <td><strong><code>Alt+drag</code></strong></td> 
    <td><p>Dra resurser, släpp på målet.</p> <p>Släppåtgärden skapar ett nytt stycke. i stället för att ersätta resursen i målet.</p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-Olika kortkommandon är också tillgängliga för skrivbordsanvändare när de använder [konsolerna](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
+Olika kortkommandon är också tillgängliga för skrivbordsanvändare när de använder [konsoler](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
 
 ## Kortkommandon för utveckling {#keyboard-shortcuts-for-development}
 
@@ -169,7 +169,7 @@ Det finns ytterligare kortkommandon för skrivbordsutvecklare när du använder 
   </tr> 
   <tr> 
    <td>Redigeringsläge</td> 
-   <td>Ange följande suffix i URL:en:<br /> <code>?debugClientLibs=true</code><br /> Använd sedan:<br /> <strong><code>Ctrl-Shift-U</code></strong></td> 
+   <td>Ange följande suffix i URL:<br /> <code>?debugClientLibs=true</code><br /> Använd sedan:<br /> <strong><code>Ctrl-Shift-U</code></strong></td> 
    <td>Om du vill se timingstatistik för sidinläsning.</td> 
   </tr> 
  </tbody> 
