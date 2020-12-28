@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: e5dd9d0d-6d67-4430-aeb3-2be91356f624
 translation-type: tm+mt
 source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
+workflow-type: tm+mt
+source-wordcount: '733'
+ht-degree: 0%
 
 ---
 
 
 # AEM Foundation &amp; Repository {#aem-foundation-repository}
 
-## Ändringslista {#list-of-changes}
+## Lista över ändringar {#list-of-changes}
 
 ### Databas {#repository}
 
@@ -37,7 +40,8 @@ source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
 
 >[!CAUTION]
 >
->* Den nya versionen av Oak Segment-taggen som finns sedan AEM 6.3 kräver en databasmigrering. Det här steget är obligatoriskt om du uppgraderar från en äldre version av tarMK eller vill växla den nya segmenttaggen från en annan typ av beständighet. Mer information om fördelarna med de nya segmenttjärna finns i Vanliga frågor och svar om [migrering till Oak Segment-tjära](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar).
+>* Den nya versionen av Oak Segment-taggen som finns sedan AEM 6.3 kräver en databasmigrering. Det här steget är obligatoriskt om du uppgraderar från en äldre version av tarMK eller vill växla den nya segmenttaggen från en annan typ av beständighet. Mer information om fördelarna med de nya segmenttjärna finns i [Vanliga frågor och svar om migrering till Oak Segment-tjära](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar).
+
 >
 
 
@@ -52,8 +56,8 @@ source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
    * Omindexering
 
 * Minskad Lucene-relaterad databastillväxt för bättre systemprestanda
-* Synkrona Lucene-egenskapsindex [(fler infos)](https://wiki.apache.org/jackrabbit/Synchronous%20Lucene%20Property%20Indexes)
-* Förklara frågan i Index Manager har nu stöd för AEM Query Builder-syntax
+* Synkrona Lucene-egenskapsindex [(Fler infos)](https://wiki.apache.org/jackrabbit/Synchronous%20Lucene%20Property%20Indexes)
+* Förklara frågan i indexhanteraren stöder nu AEM QueryBuilder-syntax
 * Indexhanteraren visar nu indexvärden: storlek, senaste uppdaterade och konsekvenskontroll
 
 ### Användargränssnitt {#user-interface}
@@ -68,7 +72,8 @@ source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
 
 >[!CAUTION]
 >
->* Adobe planerar inte att göra fler förbättringar av det klassiska användargränssnittet. AEM 6.4 har det klassiska användargränssnittet och kunder som uppgraderar från tidigare versioner kan fortsätta använda det som det är. Observera att Classic-användargränssnittet fortfarande stöds fullt ut när det är borttaget [Läs mer](/help/sites-deploying/ui-recommendations.md).
+>* Adobe planerar inte att göra fler förbättringar av det klassiska användargränssnittet. AEM 6.4 har det klassiska användargränssnittet och kunder som uppgraderar från tidigare versioner kan fortsätta använda det som det är. Observera att Classic UI fortfarande stöds fullt ut när [Läs mer](/help/sites-deploying/ui-recommendations.md) är föråldrat.
+
 >
 
 
@@ -109,12 +114,12 @@ source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
 * Utvärdering av komplexitet för uppgradering: Det nya mönsterdetektorverktyget som du kan använda för att bedöma hur komplexa dina uppgraderingar är.
 * Hållbara uppgraderingar: API-gränssnitt och innehållsklassificering introducerades för att hjälpa er att enkelt följa bästa praxis för en effektiv och sömlös uppgradering till nästa version under hela utvecklingscykeln.
 * Omstrukturering av lager: Betydande omstrukturering (främst /etc) för att underlätta enklare uppgraderingar och främja bästa praxis för implementering. [Läs mer.](/help/sites-deploying/repository-restructuring.md)
-* Mer information om dessa funktioner finns i [uppgraderingsdokumentationen](/help/sites-deploying/upgrade.md) .
+* Mer information om dessa funktioner finns i [Uppgraderingsdokumentationen](/help/sites-deploying/upgrade.md).
 
-### Molntjänster {#cloud-services}
+### Cloud Services {#cloud-services}
 
-* Många molntjänster kan nu konfigureras via Touch-gränssnittet; återstående kan konfigureras under det äldre molntjänstkortet.
-* Platser och resursmappar kan konfigureras med molntjänster som läses in på ett kontextmedvetet sätt.
+* Många Cloud Services kan nu konfigureras via Touch-gränssnittet. de återstående kan konfigureras under kortet för äldre Cloud Services.
+* Platser och resursmappar kan konfigureras med Cloud Services som läses in på ett kontextmedvetet sätt.
 
 ### Dokumentskydd {#security}
 
