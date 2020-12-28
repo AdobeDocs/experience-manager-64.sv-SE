@@ -18,23 +18,23 @@ ht-degree: 0%
 ---
 
 
-# Felsöka ekindex{#troubleshooting-oak-indexes}
+# Felsökning av aktivitetsindex{#troubleshooting-oak-indexes}
 
-## Långsam omindexering  {#slow-re-indexing}
+## Långsam omindexering {#slow-re-indexing}
 
 AEM interna omindexeringsprocess samlar in databasdata och lagrar dem i Oak-index för att ge stöd för prestandafrågor. I undantagsfall kan processen bli långsam eller till och med fastna. Den här sidan fungerar som en felsökningsguide som hjälper dig att identifiera om indexeringen är långsam, hitta orsaken och lösa problemet.
 
 Det är viktigt att skilja mellan omindexering som tar en otillräckligt lång tid och omindexering som tar lång tid eftersom det indexerar enorma mängder innehåll. Den tid det tar att indexera innehåll skalas till exempel med mängden innehåll, så stora produktionsdatabaser tar längre tid att indexera om än små utvecklingsdatabaser.
 
-Mer information om när och hur du indexerar om innehåll finns i [Bästa praxis för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md) .
+Mer information om när och hur du indexerar om innehåll finns i [Bästa praxis för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 
 ## Inledande identifiering {#initial-detection}
 
-Inledande identifiering av långsam indexering kräver granskning av `IndexStats` JMX MBeans. Gör följande på den påverkade AEM:
+Inledande identifiering av långsam indexering kräver granskning av JMX MBeans för `IndexStats`. Gör följande på den påverkade AEM:
 
-1. Öppna webbkonsolen och klicka på fliken JMX eller gå till https://&lt;host>:&lt;port>/system/console/jmx (t.ex. [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx)).
-1. Navigate to the `IndexStats` Mbeans.
-1. Öppna `IndexStats` MBeans för &quot; `async`&quot; och &quot; `fulltext-async`&quot;.
+1. Öppna webbkonsolen och klicka på fliken JMX eller gå till https://&lt;värd>:&lt;port>/system/console/jmx (t.ex. [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx)).
+1. Navigera till menyerna `IndexStats`.
+1. Öppna `IndexStats` MBeans för `async` och `fulltext-async`.
 
 1. För båda MBeans ska du kontrollera om tidsstämpeln **Done** och **LastIndexTime** är mindre än 45 minuter från den aktuella tiden.
 
@@ -42,20 +42,20 @@ Inledande identifiering av långsam indexering kräver granskning av `IndexStats
 
 ## Indexeringen pausas efter en tvingad avstängning {#indexing-is-paused-after-a-forced-shutdown}
 
-En framtvingad avstängning leder till att AEM avbryter asynkron indexering i upp till 30 minuter efter omstarten och kräver normalt ytterligare 15 minuter för att slutföra den första omindexeringsprocessen i totalt cirka 45 minuter (återkoppling till tidsramen för [ursprunglig identifiering](/help/sites-deploying/troubleshooting-oak-indexes.md#initial-detection) i 45 minuter). Om du misstänker att indexering har pausats efter en tvingad avstängning:
+En framtvingad avstängning resulterar i AEM att asynkron indexering avbryts i upp till 30 minuter efter omstarten och kräver normalt ytterligare 15 minuter för att slutföra den första omindexeringsprocessen, i totalt cirka 45 minuter (återkoppling till tidsramen [Inledande detektion](/help/sites-deploying/troubleshooting-oak-indexes.md#initial-detection) på 45 minuter). Om du misstänker att indexering har pausats efter en tvingad avstängning:
 
 1. För det första ska du avgöra om AEM stängdes av på ett tvingat sätt (den AEM processen tvångsdödades eller ett strömavbrott inträffade) och därefter starta om.
 
-   * [AEM loggning](/help/sites-deploying/configure-logging.md) kan granskas i detta syfte.
+   * [AEM ](/help/sites-deploying/configure-logging.md) loggning kan granskas för detta ändamål.
 
 1. Om den framtvingade avstängningen inträffar kommer AEM automatiskt att avbryta omindexering i upp till 30 minuter vid omstart.
 1. Vänta ca 45 minuter tills AEM återupptar vanliga asynkrona indexeringsåtgärder.
 
-## Trådpoolen har överlästs {#thread-pool-overloaded}
+## Trådpoolen överlästes {#thread-pool-overloaded}
 
 >[!NOTE]
 >
->För AEM 6.1 ska du se till att [AEM 6.1 CFP 11](https://helpx.adobe.com/experience-manager/release-notes-aem-6-1-cumulative-fix-pack.html) är installerad.
+>För AEM 6.1 kontrollerar du att [AEM 6.1 CFP 11](https://helpx.adobe.com/experience-manager/release-notes-aem-6-1-cumulative-fix-pack.html) är installerat.
 
 I undantagsfall kan den trådpool som används för att hantera asynkron indexering bli överbelastad. För att isolera indexeringsprocessen kan en trådpool konfigureras för att förhindra att andra AEM stör Oaks förmåga att indexera innehåll i tid. För att göra detta bör du:
 
@@ -82,17 +82,17 @@ I undantagsfall kan den trådpool som används för att hantera asynkron indexer
 Om för många ändringar och implementeringar görs i databasen på kort tid kan indexeringen fördröjas på grund av en fullständig observationskö. Börja med att fastställa om observationskön är full:
 
 1. Gå till webbkonsolen och klicka på fliken JMX eller gå till https://&lt;värd>:&lt;port>/system/console/jmx (t.ex. [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))
-1. Öppna MBean för Oak-databasstatistik och kontrollera om något `ObservationQueueMaxLength` värde är större än 10 000.
+1. Öppna MBean för Oak-databasstatistik och kontrollera om något `ObservationQueueMaxLength`-värde är större än 10 000.
 
-   * I normala operationer måste det här maxvärdet alltid minskas till noll (särskilt i `per second` avsnittet) så verifiera att `ObservationQueueMaxLength`dess sekundmått är 0.
+   * Vid normal användning måste det här maxvärdet alltid minskas till noll (särskilt i avsnittet `per second`) så verifiera att sekundmåtten för `ObservationQueueMaxLength` är 0.
    * Om värdena är 10 000 eller fler och ökar stadigt innebär det att minst en (eventuellt fler) kö inte kan bearbetas så fort nya ändringar (implementeringar) inträffar.
    * Varje observationskö har en gräns (10 000 som standard) och om kön når den gränsen försämras hanteringen.
-   * När du använder MongoMK försämras prestanda för intern ekacache när kölängden blir stor. Den här korrelationen kan ses i en ökning `missRate` för `DocChildren` cachen i MBean- `Consolidated Cache` statistiken.
+   * När du använder MongoMK försämras prestanda för intern ekacache när kölängden blir stor. Den här korrelationen kan ses i ett ökat `missRate` för cachen `DocChildren` i MBean för `Consolidated Cache`-statistik.
 
 1. För att undvika att överskrida tillåtna gränser för observationsköer bör du:
 
    * Minska den konstanta frekvensen för implementeringar. Korta toppar i implementeringar är godtagbara, men den konstanta hastigheten bör minskas.
-   * Öka storleken på filen `DiffCache` enligt beskrivningen i [Prestandajusteringstips > Justering av monolagring > Dokumentcachestorlek](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html#main-pars_text_3).
+   * Öka storleken på `DiffCache` enligt beskrivningen i [Prestandajusteringstips > Justering av monolagring > Dokumentcache-storlek](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html#main-pars_text_3).
 
 ## Identifiera och åtgärda en fast omindexeringsprocess {#identifying-and-remediating-a-stuck-re-indexing-process}
 
@@ -104,7 +104,7 @@ Omindexering kan betraktas som&quot;helt fast&quot; under två förhållanden:
 
 * Omindexering fastnar i en oändlig slinga om upprepade undantag förekommer i loggfilerna (till exempel `OutOfMemoryException`) i indexeringstråden. Upprepningen av samma undantag i loggen anger att Oak försöker indexera samma sak flera gånger, men misslyckas i samma problem.
 
-Så här identifierar och åtgärdar du en fast omindexeringsprocess:
+Så här identifierar och korrigerar du en fast omindexeringsprocess:
 
 1. För att identifiera orsaken till den fastande indexeringen måste följande information samlas in:
 
@@ -118,7 +118,7 @@ Så här identifierar och åtgärdar du en fast omindexeringsprocess:
       * Navigera till AEM OSGi Web Console>Main>JMX>IndexStat>async
 
          eller gå till [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats)
-   * Använd konsolläget [i](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run) oak-run.jar för att samla in information om vad som finns under noden * `/:async`*.
+   * Använd [oak-run.jar konsolläge](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run) för att samla in information om vad som finns under noden * `/:async`*.
    * Samla in en lista med databaskontrollpunkter med hjälp av `CheckpointManager` MBean:
 
       * AEM OSGi Web Console>Main>JMX>CheckpointManager>listCheckpoints()
@@ -130,11 +130,11 @@ Så här identifierar och åtgärdar du en fast omindexeringsprocess:
 1. När du har samlat in all information som beskrivs i steg 1 startar du om AEM.
 
    * Om du startar om AEM kan problemet åtgärdas vid hög samtidig belastning (spill i observationskön eller liknande).
-   * Om en omstart inte löser problemet kan du öppna ett problem med [Adobe kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) och lämna all information som samlats in i steg 1.
+   * Om en omstart inte löser problemet kan du öppna ett problem med [Adobe kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) och ange all information som samlats in i steg 1.
 
 ## Säkert avbryter asynkron omindexering {#safely-aborting-asynchronous-re-indexing}
 
-Omindexering kan avbrytas (avbrytas innan den är klar) via `async, async-reindex`och i `ulltext-async` indexeringslandar ( `IndexStats` Mbean). Mer information finns också i dokumentationen till Apache Oak om [hur du avbryter omindexering](https://jackrabbit.apache.org/oak/docs/query/indexing.html#abort-reindex). Ta dessutom hänsyn till att
+Omindexering kan avbrytas (stoppas innan den är klar) via indexeringsfälten `async, async-reindex`och f `ulltext-async` ( `IndexStats` Mbean). Mer information finns också i dokumentationen för Apache Oak om [Så här avbryter du omindexering](https://jackrabbit.apache.org/oak/docs/query/indexing.html#abort-reindex). Ta dessutom hänsyn till att
 
 * Omindexeringen av egenskapsindexen Lucene och Lucene kan avbrytas eftersom de är naturligt asynkrona.
 * Omindexeringen av Oak-egenskapsindex kan bara avbrytas om omindexering initierades via `PropertyIndexAsyncReindexMBean`.
@@ -144,20 +144,20 @@ Så här avbryter du omindexering:
 1. Identifiera det IndexStats MBean som styr det omindexeringsintervall som behöver stoppas.
 
    * Navigera till rätt IndexStats MBean via JMX-konsolen genom att antingen gå till AEM OSGi Web Console>Main>JMX eller https://&lt;host>:&lt;port>/system/console/jmx (t.ex. [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))
-   * Öppna IndexStats MBean baserat på det omindexeringsfält som du vill stoppa ( `async`, `async-reindex`eller `fulltext-async`)
+   * Öppna IndexStats MBean baserat på det omindexeringsfält som du vill stoppa ( `async`, `async-reindex` eller `fulltext-async`)
 
-      * Titta på egenskapen async för att identifiera lämpligt intervall och därmed instansen IndexStats MBean. Egenskapen &quot;async&quot; kommer att innehålla körfältets namn: `async`, `async-reindex`eller `fulltext-async`.
+      * Titta på egenskapen async för att identifiera lämpligt intervall och därmed instansen IndexStats MBean. Egenskapen &quot;async&quot; kommer att innehålla körfältets namn: `async`, `async-reindex` eller `fulltext-async`.
       * Fältet är också tillgängligt genom att du öppnar AEM Index Manager i kolumnen &quot;Async&quot;. Om du vill komma åt indexhanteraren går du till Åtgärder > Diagnostik > Indexhanteraren.
 
    ![chlimage_1-121](assets/chlimage_1-121.png)
 
-1. Anropa `abortAndPause()` kommandot på lämplig `IndexStats` MBean.
+1. Anropa kommandot `abortAndPause()` på lämpligt `IndexStats` MBean.
 1. Markera indexdefinitionen på ekv för att förhindra att indexeringen återupptas när indexeringsintervallet återupptas.
 
-   * När du indexerar om ett **befintligt** index ska du ställa in egenskapen reindex på false
+   * När du indexerar om ett **befintligt**-index ska du ange egenskapen reindex till false
 
       * `/oak:index/someExistingIndex@reindex=false`
-   * Eller, för ett **nytt** index, antingen:
+   * Eller, för ett **nytt**-index, antingen:
 
       * Ange att type-egenskapen ska vara inaktiverad
 
@@ -168,8 +168,8 @@ Så här avbryter du omindexering:
 
 1. Slutligen kan du återuppta asynkron indexering på det avbrutna indexeringsfältet.
 
-   * Anropa `IndexStats` kommandot i det MBean som skickade `abortAndPause()` `resume()`kommandot i steg 2.
+   * Anropa kommandot `resume()`i det `IndexStats` MBean som utfärdade kommandot `abortAndPause()` i steg 2.
 
-## Förhindra långsam omindexering {#preventing-slow-re-indexing}
+## Förhindrar långsam omindexering {#preventing-slow-re-indexing}
 
 Det är bäst att indexera om under tysta perioder (t.ex. inte under en stor innehållsimport) och helst under underhållsperioder när AEM är känd och kontrollerad. Se även till att omindexeringen inte sker under andra underhållsaktiviteter.
