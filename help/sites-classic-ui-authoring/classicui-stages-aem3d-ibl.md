@@ -55,11 +55,11 @@ Du kan finjustera utseendet på IBL-scenen med följande scenegenskaper:
   </tr> 
   <tr> 
    <td>Information om IBL Sun</td> 
-   <td><p>Gör att du kan justera riktning och styrka för den extra ljuskälla som simulerar solen. <span class="diff-html-added">Ljuskällan ökar ljusstyrkan och gör att objektet kastar en skugga på markplanet. Skuggskiftning stöds vid återgivning med Rapid Refine och vid förhandsgranskning med Google Chrome. men stöds för närvarande inte av andra webbläsare.</span></p> 
+   <td><p>Gör att du kan justera riktning och styrka för den extra ljuskälla som simulerar solen. <span class="diff-html-added">Ljuskällan ökar ljusstyrkan och gör att objektet kastar en skugga på markplanet. Skuggskiftning stöds vid återgivning med Rapid Refine och vid förhandsgranskning med Google Chrome. stöds för närvarande inte av andra webbläsare.</span></p> 
     <ul> 
-     <li><strong>lat</strong> - Solljuskällans lodräta position (<code>0.0</code>-<code>1.0</code>).<br /> Inställningen är <code>0.0</code> vid horisonten (vertikal mittpunkt av bilden med diffus ljusmiljö). <code>1.0</code> finns i den övre kanten av bilden för diffus ljusmiljö.</li> 
+     <li><strong>lat</strong> - Solljuskällans lodräta läge (<code>0.0</code>-<code>1.0</code>).<br /> Inställningen  <code>0.0</code> är vid horisonten (lodrät mittpunkt av bilden med diffus ljusmiljö).  <code>1.0</code> finns i den övre kanten av bilden för diffus ljusmiljö.</li> 
      <li><strong>long</strong> - Solljuskällans vågräta position (<code>0.0</code>-<code>1.0</code>).<br /> Inställningen 0,0 motsvarar vänster. 1.0 motsvarar högerkanten av bilden för diffus ljusmiljö.<br /> </li> 
-     <li><strong>stark</strong> - Solljuskällans ljusstyrka. Öka detta värde för att göra solljuset ljusare. minska värdet för att göra det mörkare. <br /> En inställning som <code>0</code> inaktiverar extra ljus och inaktiverar skuggor. Parametern påverkar inte miljöreflektioner.<br /> </li> 
+     <li><strong>stark</strong>  - Solljuskällans ljusstyrka. Öka detta värde för att göra solljuset ljusare. minska värdet för att göra det mörkare. <br /> En inställning som  <code>0</code> inaktiverar extra ljus och inaktiverar skuggor. Parametern påverkar inte miljöreflektioner.<br /> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -71,7 +71,7 @@ Du kan finjustera utseendet på IBL-scenen med följande scenegenskaper:
    <td><p><span class="diff-html-added">Du kan styra diffus belysning. Du kan behöva justera den här egenskapen manuellt för att korrigera ljusstyrkan om bilden för diffus ljusmiljö är ovanligt ljus eller mörk (till exempel nattscener).</span></p> 
     <ul> 
      <li><strong>r, g, b</strong> - Används för närvarande inte.</li> 
-     <li><strong>bright</strong> - Multiplikator för <span class="diff-html-added">intensitet. Om du ökar eller minskar det här värdet ökar eller minskar den totala ljusstyrkan (både den grundläggande IBL-belysningen och ljuskällans ljusstyrka).</span></li> 
+     <li><strong>bright</strong>  - Multiplikator för  <span class="diff-html-added">intensitet. Om du ökar eller minskar det här värdet ökar eller minskar den totala ljusstyrkan (både den grundläggande IBL-belysningen och solljuskällans ljusstyrka).</span></li> 
     </ul> </td> 
   </tr> 
  </tbody> 
