@@ -40,7 +40,7 @@ När JobManager skapar ett jobb väljer avlastningsramverket ett Experience Mana
 * Klustret måste innehålla en eller flera instanser som kör en JobConsumer som är registrerad för jobbämnet.
 * Ämnet måste aktiveras för minst en instans i klustret.
 
-Mer information om hur du finjusterar jobbdistributionen finns i [Konfigurera ämnesförbrukning](/help/sites-deploying/offloading.md#configuring-topic-consumption) .
+Mer information om hur du förfinar jobbdistributionen finns i [Konfigurera ämnesförbrukning](/help/sites-deploying/offloading.md#configuring-topic-consumption).
 
 ![chlimage_1-109](assets/chlimage_1-109.png)
 
@@ -104,11 +104,11 @@ Gör så här för att öppna sidan Topology Management i webbkonsolen:
 
    ![chlimage_1-112](assets/chlimage_1-112.png)
 
-### Konfigurera topologimedlemskap {#configuring-topology-membership}
+### Konfigurerar topologimedlemskap {#configuring-topology-membership}
 
 Resursbaserad sökningstjänst för Apache Sling körs på varje instans för att styra hur instanser från Experience Manager interagerar med en topologi.
 
-Identifieringstjänsten skickar periodiska POSTER (hjärtslag) till Topology Connector-tjänster för att upprätta och underhålla kopplingar till topologin. Topology Connector-tjänsten underhåller en tillåtelselista med IP-adresser eller värdnamn som kan ansluta till topologin:
+Identifieringstjänsten skickar periodiska POSTER (hjärtslag) till Topology Connector-tjänster för att upprätta och underhålla anslutningar till topologin. Topology Connector-tjänsten underhåller en tillåtelselista med IP-adresser eller värdnamn som kan ansluta till topologin:
 
 * Om du vill koppla en instans till en topologi anger du URL:en för Topology Connector-tjänsten för rotmedlemmen.
 * Om du vill göra det möjligt för en instans att ansluta till en topologi lägger du till instansen tillåtelselista i rotmedlemmens Topology Connector-tjänst.
@@ -157,7 +157,7 @@ Använd webbkonsolen eller en sling:OsgiConfig-nod för att konfigurera följand
    <td>Databasbeskrivningsnamn</td> 
    <td>leaderValectionRepositoryDescriptor</td> 
    <td> </td> 
-   <td>&lt;inget värde&gt;</td> 
+   <td>&lt;no value=""&gt;</td> 
   </tr> 
  </tbody> 
 </table>
@@ -176,9 +176,9 @@ Utför följande procedur på rotmedlemmen i topologin. Proceduren lägger till 
 1. Klicka på Konfigurera sökningstjänst.
 1. För varje medlem i topologin lägger du till ett objekt i tillåtelselista-egenskapen Topology Connector och anger värdnamnet eller IP-adressen för topologimedlemmen.
 
-## Konfigurera ämnesförbrukning {#configuring-topic-consumption}
+## Konfigurerar ämnesförbrukning {#configuring-topic-consumption}
 
-Använd Avlastningsläsaren för att konfigurera ämnesförbrukning för Experience Manager-instanserna i topologin. För varje förekomst kan du ange ämnen som den upptar. Om du till exempel vill konfigurera din topologi så att bara en instans förbrukar ämnen av en viss typ, inaktiverar du ämnet för alla instanser utom en.
+Använd Avlastningsläsaren för att konfigurera ämnesförbrukning för Experience Manager-instanserna i topologin. För varje förekomst kan du ange ämnen som den upptar. Om du till exempel vill konfigurera din topologi så att endast en instans förbrukar ämnen av en viss typ, inaktiverar du ämnet för alla instanser utom en.
 
 Jobb distribueras som summeringsinstanser där det associerade ämnet är aktiverat med hjälp av resurslogik.
 
@@ -201,7 +201,7 @@ Jobb distribueras som summeringsinstanser där det associerade ämnet är aktive
    * Inaktiverad: Den här instansen förbrukar inte jobb i det här avsnittet.
    * Exklusivt: Den här instansen förbrukar endast jobb i det här avsnittet.
 
-   **Obs!** När du väljer Exklusiv för ett ämne ställs alla andra ämnen automatiskt in på Inaktiverad.
+   **Obs!** När du väljer Exklusiv för ett ämne anges alla andra ämnen automatiskt till Inaktiverad.
 
 ### Installerade jobbkonsumenter {#installed-job-consumers}
 
@@ -219,22 +219,22 @@ Tjänsten Apache Sling Job Consumer Manager innehåller egenskaperna tillåtelse
 
 **Obs!** Om instansen tillhör en topologi kan du även använda Avlastningsläsaren på vilken dator som helst i topologin för att aktivera eller inaktivera ämnen.
 
-Den logik som skapar listan med aktiverade ämnen tillåter först alla ämnen som finns i tillåtelselista och tar sedan bort ämnen som finns i blockeringslista. Som standard aktiveras alla ämnen (värdet tillåtelselista är `*`) och inga ämnen inaktiveras (blockeringslista har inget värde).
+Den logik som skapar listan med aktiverade ämnen tillåter först alla ämnen som finns i tillåtelselista och tar sedan bort ämnen som finns i blockeringslista. Som standard aktiveras alla ämnen (tillåtelselista är `*`) och inga ämnen inaktiveras (blockeringslista har inget värde).
 
-Använd webbkonsolen eller en `sling:OsgiConfig` nod för att konfigurera följande egenskaper. För `sling:OsgiConfig` noder är PID för tjänsten Job Consumer Manager org.apache.sling.event.impl.job.JobConsumerManager.
+Använd webbkonsolen eller en `sling:OsgiConfig`-nod för att konfigurera följande egenskaper. För `sling:OsgiConfig`-noder är PID för tjänsten Job Consumer Manager org.apache.sling.event.impl.job.JobConsumerManager.
 
 | Egenskapsnamn i webbkonsolen | OSGi ID | Beskrivning |
 |---|---|---|
 | Ämnesvitlista | job.consumermanager.whitelist | En lista med ämnen som den lokala JobManager-tjänsten bearbetar. Standardvärdet för &amp;ast; skickar alla ämnen till den registrerade TopicConsumer-tjänsten. |
 | Ämnessvartlista | job.consumermanager.blacklist | En lista med ämnen som den lokala JobManager-tjänsten inte bearbetar. |
 
-## Skapar replikeringsagenter för avlastning {#creating-replication-agents-for-offloading}
+## Skapar replikeringsagenter för avlastning av {#creating-replication-agents-for-offloading}
 
 Avlastningsramverket använder replikering för att transportera resurser mellan författare och arbetare. Ramverket för avlastning skapar automatiskt replikeringsagenter när instanser ansluts till topologin. Agenterna skapas med standardvärden. Du måste ändra lösenordet som agenterna använder för autentisering manuellt.
 
 >[!CAUTION]
 >
->Ett känt problem med de automatiskt genererade replikeringsagenterna kräver att du skapar nya replikeringsagenter manuellt. Följ proceduren i [Problem med att använda automatiskt genererade replikeringsagenter](/help/sites-deploying/offloading.md#problems-using-the-automatically-generated-replication-agents) innan du skapar agenter för avlastning.
+>Ett känt problem med de automatiskt genererade replikeringsagenterna kräver att du skapar nya replikeringsagenter manuellt. Följ proceduren i [Problem med att använda automatiskt genererade replikeringsagenter](/help/sites-deploying/offloading.md#problems-using-the-automatically-generated-replication-agents) innan du skapar agenterna för avlastning.
 
 Skapa de replikeringsagenter som transporterar jobbnyttolaster mellan instanser för avlastning. Följande bild visar de agenter som krävs för att avlasta författaren till en arbetarinstans. Författaren har ett Sling-ID på 1 och arbetarinstansen har ett Sling-ID på 2:
 
@@ -254,17 +254,17 @@ Replikeringsschemat liknar det som används mellan författare och publiceringsi
 
 ### Namnge replikeringsagenter för avlastning {#naming-the-replication-agents-for-offloading}
 
-Använd ett specifikt format för egenskapen ***Name*** för replikeringsagenterna så att avlastningsramverket automatiskt använder rätt agent för specifika arbetarinstanser.
+Använd ett specifikt format för egenskapen ***Namn*** för replikeringsagenterna så att avlastningsramverket automatiskt använder rätt agent för specifika arbetarinstanser.
 
 **Namnge den utgående agenten på författarinstansen:**
 
-`offloading_<slingid>`, där `<slingid>` är Sling-ID för arbetarinstansen.
+`offloading_<slingid>`, där  `<slingid>` är Sling-ID:t för arbetarinstansen.
 
 Exempel: `offloading_f5c8494a-4220-49b8-b079-360a72f71559`
 
 **Namnge den omvända agenten på författarinstansen:**
 
-`offloading_reverse_<slingid>`, där `<slingid>` är Sling-ID för arbetarinstansen.
+`offloading_reverse_<slingid>`, där  `<slingid>` är Sling-ID:t för arbetarinstansen.
 
 Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
@@ -274,7 +274,7 @@ Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
 ### Skapar den utgående agenten {#creating-the-outgoing-agent}
 
-1. Skapa en **replikeringsagent** på författaren. (Se [dokumentet för replikeringsagenter](/help/sites-deploying/replication.md).) Ange en **titel**. Namnet **** måste följa namnkonventionen.
+1. Skapa en **replikeringsagent** på författaren. (Se [dokumentet för replikeringsagenter](/help/sites-deploying/replication.md)). Ange en **titel**. **Namnet** måste följa namnkonventionen.
 1. Skapa agenten med följande egenskaper:
 
    | Egenskap | Värde |
@@ -288,7 +288,7 @@ Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
 ### Skapar den omvända agenten {#creating-the-reverse-agent}
 
-1. Skapa en **omvänd replikeringsagent** på författaren. (Se [dokumentet för replikeringsagenter](/help/sites-deploying/replication.md).) Ange en **titel**. Namnet **** måste följa namnkonventionen.
+1. Skapa en **omvänd replikeringsagent** på författaren. (Se [dokumentet för replikeringsagenter](/help/sites-deploying/replication.md).) Ange en **titel**. **Namnet** måste följa namnkonventionen.
 1. Skapa agenten med följande egenskaper:
 
    | Egenskap | Värde |
@@ -299,9 +299,9 @@ Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
    | Transport >Transportlösenord | Lösenord för replikeringsanvändare för målinstans |
    | Extended > HTTP Method | GET |
 
-### Skapa en utkorgsagent {#creating-the-outbox-agent}
+### Skapar utkorgsagenten {#creating-the-outbox-agent}
 
-1. Skapa en **replikeringsagent** på arbetsinstansen. (Se [dokumentet för replikeringsagenter](/help/sites-deploying/replication.md).) Ange en **titel**. Namnet **** måste vara `offloading_outbox`.
+1. Skapa en **replikeringsagent** på arbetsinstansen. (Se [dokumentet för replikeringsagenter](/help/sites-deploying/replication.md).) Ange en **titel**. **Namnet** måste vara `offloading_outbox`.
 1. Skapa agenten med följande egenskaper.
 
    | Egenskap | Värde |
@@ -310,18 +310,18 @@ Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
    | Transport >Transport-URI | repo://var/replication/outbox |
    | Utlösare > Ignorera standard | True |
 
-### Sling ID hittas {#finding-the-sling-id}
+### Söker efter Sling ID {#finding-the-sling-id}
 
 Hämta Sling ID för en Experience Manager-instans med någon av följande metoder:
 
-* Öppna webbkonsolen och i Sling Settings hittar du värdet för egenskapen Sling ID ([http://localhost:4502/system/console/status-slingsettings](http://localhost:4502/system/console/status-slingsettings)). Den här metoden är användbar om instansen ännu inte ingår i topologin.
+* Öppna webbkonsolen och i Stilar-inställningarna hittar du värdet för egenskapen Sling ID ([http://localhost:4502/system/console/status-slingsettings](http://localhost:4502/system/console/status-slingsettings)). Den här metoden är användbar om instansen ännu inte ingår i topologin.
 * Använd Topology-webbläsaren om instansen redan är en del av topologin.
 
-## Avlasta bearbetning av DAM-resurser {#offloading-the-processing-of-dam-assets}
+## Avlastar bearbetningen av DAM-resurser {#offloading-the-processing-of-dam-assets}
 
 Konfigurera instanserna av en topologi så att specifika instanser utför bakgrundsbearbetningen av resurser som läggs till eller uppdateras i DAM.
 
-Som standard kör Experience Manager arbetsflödet DAM Update Asset när en DAM-resurs ändras eller en resurs läggs till i DAM. Ändra standardbeteendet så att Experience Manager i stället kör arbetsflödet DAM Update Asset Offloader. Det här arbetsflödet genererar ett JobManager-jobb som har ett ämne i `com/adobe/granite/workflow/offloading`. Konfigurera sedan topologin så att jobbet skickas till en dedikerad arbetare.
+Som standard kör Experience Manager arbetsflödet DAM Update Asset när en DAM-resurs ändras eller en resurs läggs till i DAM. Ändra standardbeteendet så att Experience Manager i stället kör arbetsflödet DAM Update Asset Offloader. Det här arbetsflödet genererar ett JobManager-jobb som har ämnet `com/adobe/granite/workflow/offloading`. Konfigurera sedan topologin så att jobbet skickas till en dedikerad arbetare.
 
 >[!CAUTION]
 >
@@ -334,7 +334,7 @@ Följande procedur utgår från följande egenskaper för avlastningstopologin:
 
 1. Konfigurera sökningstjänsten för varje Experience Manager-instans så att den pekar på rotkonnektorn för topografi. (Se [Konfigurera topologimedlemskap](#title4).)
 1. Konfigurera Topography Connector för roten så att anslutande instanser finns på tillåtelselista.
-1. Öppna Avlastningsläsaren och inaktivera `com/adobe/granite/workflow/offloading` avsnittet om de instanser som användarna interagerar med för att överföra eller ändra DAM-resurser.
+1. Öppna Avlastningsläsaren och inaktivera `com/adobe/granite/workflow/offloading`-avsnittet om de instanser som användarna interagerar med för att överföra eller ändra DAM-resurser.
 
    ![chlimage_1-116](assets/chlimage_1-116.png)
 
@@ -352,6 +352,6 @@ Följande procedur utgår från följande egenskaper för avlastningstopologin:
 Förutom informationen på den här sidan kan du läsa följande:
 
 * Mer information om hur du använder Java API:er för att skapa jobb och jobbkunder finns i [Skapa och använda jobb för avlastning](/help/sites-developing/dev-offloading.md).
-* Allmänna riktlinjer och bästa metoder för tillgångsavlastning finns i [Allmänna riktlinjer och bästa metoder för tillgångsavlastning](/help/assets/assets-offloading-best-practices.md#general-guidance-and-best-practices-for-asset-offloading).
+* Allmänna riktlinjer och bästa praxis för avlastning av resurser finns i [Allmänna riktlinjer och bästa praxis för avlastning av tillgångar](/help/assets/assets-offloading-best-practices.md#general-guidance-and-best-practices-for-asset-offloading).
 * Mer information om hur du inaktiverar det automatiska skapandet av avlastningsagenter finns i [Stänga av automatisk agenthantering](/help/assets/assets-offloading-best-practices.md#turning-off-automatic-agent-management).
 
