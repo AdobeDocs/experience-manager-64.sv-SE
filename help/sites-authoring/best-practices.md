@@ -55,7 +55,7 @@ De effektivaste strategierna kring Assets, inklusive funktionen för dynamiska m
   <tr>
    <td>Dynamic Imaging</td> 
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">Dynamic Imaging bästa praxis</a></td> 
-   <td><p>Beskriver hur du kan göra en bild skarpare för bästa resultat och det bästa sättet att optimera bildkvaliteten om du använder funktionen Dynamic Media eller integrerar med Scene7. </p> </td> 
+   <td><p>Beskriver hur du kan förbättra skärpan i en bild och det bästa sättet att optimera bildkvaliteten om du använder Dynamic Media eller integrerar med Scene7. </p> </td> 
   </tr>
   <tr>
    <td>Flerspråkiga resurser</td> 
