@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Designer och Designer{#designs-and-the-designer}
+# Designer och designern{#designs-and-the-designer}
 
 >[!CAUTION]
 >
@@ -32,13 +32,13 @@ Du måste skapa en design för webbplatsen och i AEM gör du det med hjälp av D
 
 ## Använda Designer {#using-the-designer}
 
-Din design kan definieras i **designavsnittet** på fliken **Verktyg** :
+Din design kan definieras i avsnittet **designs** på fliken **Verktyg**:
 
 ![screen_shot_2012-02-01at30237pm](assets/screen_shot_2012-02-01at30237pm.png)
 
 Här kan du skapa den struktur som krävs för att lagra designen och sedan överföra CSS och bilder som behövs.
 
-Designen lagras under `/etc/designs`. Sökvägen till designen som ska användas för en webbplats anges med `cq:designPath` egenskapen för `jcr:content` noden.
+Designer lagras under `/etc/designs`. Sökvägen till designen som ska användas för en webbplats anges med egenskapen `cq:designPath` för noden `jcr:content`.
 
 ![chlimage_1-74](assets/chlimage_1-74.png)
 
@@ -50,13 +50,13 @@ Designen lagras under `/etc/designs`. Sökvägen till designen som ska användas
 
 För att förverkliga din design behöver du:
 
-**CSS** - Cascading Style Sheets definierar formaten för specifika områden på sidorna.
+**CSS**  - Med CSS (Cascading Style Sheets) definieras formaten för specifika områden på sidorna.
 
-**Bilder** - Alla bilder som du använder för funktioner som bakgrunder och knappar.
+**Bilder**  - Alla bilder som du använder för funktioner som bakgrunder och knappar.
 
 ### Att tänka på när du utformar din webbplats {#considerations-when-designing-your-website}
 
-När du utvecklar en webbplats bör du lagra bilder och CSS-filer under `/etc/design/<project>` så att du kan referera till dina resurser baserat på den aktuella designen, som beskrivs i följande kodutdrag.
+När du utvecklar en webbplats bör du lagra bilder och CSS-filer under `/etc/design/<project>` så att du kan referera till dina resurser baserat på den aktuella designen, enligt följande kodutdrag.
 
 ```xml
 <%= currentDesign.getPath() + "/static/img/icon.gif %>
@@ -65,7 +65,7 @@ När du utvecklar en webbplats bör du lagra bilder och CSS-filer under `/etc/de
 Exemplet ovan ger flera fördelar:
 
 * Komponenter kan ha olika utseende/känsla baserat på varje plats med olika designsökvägar.
-* Du kan helt enkelt designa om webbplatsen genom att peka designsökvägen till en annan nod i roten av webbplatsen från `design/v1` till `design/v2.`
+* Det är enkelt att designa om webbplatsen genom att peka designsökvägen till en annan nod i webbplatsens rot från `design/v1` till `design/v2.`
 
-* `/etc/designs` och `/content` är de enda externa URL:er som webbläsaren ser för att skydda dig mot att en extern användare blir nyfiken på vad som finns under ditt `/apps` träd. Ovanstående URL-fördelar hjälper också systemadministratören att ställa in bättre säkerhet eftersom du begränsar exponeringen av resurserna till några få distinkta platser.
+* `/etc/designs` och  `/content` är de enda externa URL:er som webbläsaren ser för att skydda dig mot att en extern användare blir nyfiken på vad som finns under ditt  `/apps` träd. Ovanstående URL-fördelar hjälper också systemadministratören att ställa in bättre säkerhet eftersom du begränsar exponeringen av resurserna till några få distinkta platser.
 
