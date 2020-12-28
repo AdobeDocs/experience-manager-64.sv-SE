@@ -20,11 +20,11 @@ ht-degree: 2%
 
 # Konfigurera sökformulär{#configuring-search-forms}
 
-Använd **Sök i Forms** för att anpassa urvalet av sökpredikt som används i de sökpaneler som finns i olika AEM och/eller paneler i författarmiljön. När du anpassar panelerna blir sökfunktionen mångsidig efter dina specifika behov.
+Använd **Sök i Forms** för att anpassa urvalet av sökpredikt som används i sökpanelerna som finns i olika AEM och/eller paneler i författarmiljön. När du anpassar panelerna blir sökfunktionen mångsidig efter dina specifika behov.
 
-Det finns ett [antal](#predicates-and-their-settings)predikat att tillgå direkt. Du kan lägga till flera predikat, bland annat fulltextpredikatet för fulltextsökningar, egenskapspredikatet för att söka efter resurser som matchar en enskild egenskap som du har angett, eller alternativet för att söka efter resurser som matchar ett eller flera värden som du anger för en viss egenskap.
+Ett [intervall med predikat](#predicates-and-their-settings)s är tillgängligt direkt. Du kan lägga till flera predikat, bland annat fulltextpredikatet för fulltextsökningar, egenskapspredikatet för att söka efter resurser som matchar en enskild egenskap som du har angett, eller alternativet för att söka efter resurser som matchar ett eller flera värden som du anger för en viss egenskap.
 
-Du kan [konfigurera sökformulären](#configuring-your-search-forms) som används i olika konsoler och i resursläsaren (när du redigerar sidor). Du hittar [dialogrutorna för att konfigurera dessa formulär](#configuring-your-search-forms) via:
+Du kan [konfigurera de sökformulär](#configuring-your-search-forms) som används i olika konsoler och i resursläsaren (när du redigerar sidor). Du kommer åt [dialogrutorna för att konfigurera dessa formulär](#configuring-your-search-forms) via:
 
 * **Verktyg**
 
@@ -32,7 +32,7 @@ Du kan [konfigurera sökformulären](#configuring-your-search-forms) som använd
 
       * **Sökformulär**
 
-När du först öppnar den här konsolen ser du att alla konfigurationer har en hänglåssymbol. Det här anger att rätt konfiguration är standardkonfigurationen (färdig) och kan inte tas bort. När du har anpassat konfigurationen försvinner låset, såvida du inte [tar bort den anpassade konfigurationen](#deleting-a-configuration-to-reinstate-the-default), och då återställs standardinställningen (och hänglåsindikatorn).
+När du först öppnar den här konsolen ser du att alla konfigurationer har en hänglåssymbol. Det här anger att rätt konfiguration är standardkonfigurationen (färdig) och kan inte tas bort. När du har anpassat konfigurationen försvinner låset - såvida du inte [tar bort din anpassade konfiguration](#deleting-a-configuration-to-reinstate-the-default), och då återställs standardinställningen (och hänglåsindikatorn).
 
 ![chlimage_1-374](assets/chlimage_1-374.png)
 
@@ -100,9 +100,9 @@ Standardkonfigurationerna är:
 
    Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren vid sökning i projekt.
 
-## Förutsägelser och deras inställningar {#predicates-and-their-settings}
+## Förutsättningar och deras inställningar {#predicates-and-their-settings}
 
-### Predikat {#predicates}
+### Förutser {#predicates}
 
 Följande predikat är tillgängliga, beroende på konfigurationen:
 
@@ -206,7 +206,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
   </tr> 
   <tr> 
    <td>Alternativ </td> 
-   <td><p>Alternativen är innehållsnoder som skapas av användaren.</p> <p>Mer information finns i <a href="#addinganoptionspredicate">Lägga till en alternativpredikat</a> .</p> </td> 
+   <td><p>Alternativen är innehållsnoder som skapas av användaren.</p> <p>Mer information finns i <a href="#addinganoptionspredicate">Lägga till en alternativpredikat</a>.</p> </td> 
    <td> 
     <ul> 
      <li>Fältetikett</li> 
@@ -288,7 +288,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
   </tr> 
   <tr> 
    <td>Klassificering </td> 
-   <td>Sök efter resurser utifrån deras klassificering.<br /> </td> 
+   <td>Sök efter resurser efter deras klassificering.<br /> </td> 
    <td> 
     <ul> 
      <li>Fältetikett</li> 
@@ -299,7 +299,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
   </tr> 
   <tr> 
    <td>Relativt datum </td> 
-   <td>Sök efter resurser baserat på det relativa datumet då de skapades<br /> </td> 
+   <td>Sök efter resurser baserat på det relativa datumet när de skapades<br /> </td> 
    <td> 
     <ul> 
      <li>Fältetikett</li> 
@@ -356,7 +356,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
 
 > 
 >
-Informationen är endast avsedd som referens och du får inte ändra den `/libs`.
+Den här informationen är endast avsedd som referens och du får inte göra ändringar i `/libs`.
 
 ### Predikatinställningar {#predicate-settings}
 
@@ -376,9 +376,9 @@ Beroende på predikatet finns ett urval av inställningar tillgängliga för kon
 
 * **Egenskapsnamn**
 
-   Egenskapen som ska genomsökas. Den använder en relativ sökväg och jokertecknen `*/*/*` anger djupet för egenskapen i förhållande till `jcr:content` noden (varje asterisk representerar en nodnivå).
+   Egenskapen som ska genomsökas. Den använder en relativ sökväg och jokertecknen `*/*/*` anger djupet för egenskapen i förhållande till noden `jcr:content` (varje asterisk representerar en nodnivå).
 
-   Om du bara vill söka på en underordnad nod på första nivån för resursen som har egenskapen `x` på `jcr:content` noden använder du `*/jcr:content/x`
+   Om du bara vill söka på en underordnad nod på första nivån för resursen som har egenskapen `x` för noden `jcr:content` använder du `*/jcr:content/x`
 
 * **Egenskapsdjup**
 
@@ -386,28 +386,31 @@ Beroende på predikatet finns ett urval av inställningar tillgängliga för kon
 
 * **Egenskapsvärde**
 
-   Egenskapsvärdet som en absolut sträng eller som ett uttrycksspråk. till exempel, `cq:Page` eller
+   Egenskapsvärdet som en absolut sträng eller som ett uttrycksspråk. till exempel `cq:Page` eller
 
    `${empty requestPathInfo.suffix ? "/content" : requestPathInfo.suffix}`.
 
 * **Intervalltext**
 
-   Etiketten för intervallfältet i **datumintervallpredikatet** .
+   Etiketten för intervallfältet i **datumintervallet**-predikatet.
 
 * **Alternativbana**
 
-   Användaren kan markera sökvägen med hjälp av Bandläsaren på fliken för predikatinställningar. När du har markerat ikonen **+** läggs markeringen till i listan med giltiga alternativ (och ikonen **-** tas bort om det behövs).
+   Användaren kan markera sökvägen med hjälp av Bandläsaren på fliken för predikatinställningar. När du har valt ikonen **+** används markeringen för att lägga till den i listan över giltiga alternativ (och ikonen **-** för att ta bort den om det behövs).
 
    Alternativen är innehållsnoder som skapas av användaren och som har följande struktur:
 
    `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
 
-* **Alternativnodens sökväg**&#x200B;är i princip densamma som 
+* **Alternativnodens**
+sökvägÄr i princip densamma som 
 **Alternativsökväg**, bara detta är i det vanliga predikatfältet, den andra är specifik för resurser.
 
-* **Enkelval** Om det här alternativet är markerat återges alternativen som kryssrutor som endast tillåter en markering. Om du av misstag markerar kryssrutan kan den avmarkeras.
+* **Enskild**
+markering Om det här alternativet är markerat återges alternativen som kryssrutor som endast tillåter en markering. Om du av misstag markerar kryssrutan kan den avmarkeras.
 
-* **Egenskapsnamn för publicering och live-kopia** Etiketterna för kryssrutorna för publicering och live-kopia för det platsspecifika predikatet.
+* **Egenskapsnamn för publicering och live-kopia**
+Etiketterna för kryssrutorna för publicering och live-kopia för det platsspecifika predikatet.
 
 * &amp;Klona;ast; på fältetiketterna på fliken **Inställningar** betyder att fälten är obligatoriska och om de lämnas tomma visas ett felmeddelande
 
@@ -415,11 +418,11 @@ Beroende på predikatet finns ett urval av inställningar tillgängliga för kon
 
 ### Skapa/öppna en anpassad konfiguration {#creating-opening-a-customized-configuration}
 
-1. Navigera till **Verktyg**, **Åtgärder** och **Sök i Forms**.
+1. Navigera till **Verktyg**, **Åtgärder**, **Sök i Forms**.
 
 1. Välj den konfiguration som du vill anpassa.
 1. Använd ikonen **Redigera** för att öppna konfigurationen för uppdatering.
-1. Om du gör en ny anpassning vill du förmodligen [lägga till nya predikatfält och definiera inställningarna](#add-edit-a-predicate-field-and-define-field-settings) efter behov. Om det finns en befintlig anpassning kan du välja ett befintligt fält och [uppdatera inställningarna](#add-edit-a-predicate-field-and-define-field-settings).
+1. Om du gör en ny anpassning vill du förmodligen [lägga till nya predikatfält och definiera inställningarna](#add-edit-a-predicate-field-and-define-field-settings) efter behov. Om en befintlig anpassning finns kan du välja ett befintligt fält och [uppdatera inställningarna](#add-edit-a-predicate-field-and-define-field-settings).
 1. Välj **Klar** för att spara konfigurationen.
 
    >[!NOTE]
@@ -434,8 +437,8 @@ Beroende på predikatet finns ett urval av inställningar tillgängliga för kon
 
 Du kan lägga till eller redigera fält och definiera/uppdatera deras inställningar:
 
-1. [Öppna den anpassade konfigurationen](#creating-opening-a-customized-configuration) för uppdatering.
-1. Om du vill lägga till ett nytt fält öppnar du fliken **Välj predikat** och drar predikatet till önskad plats. Exempel: **Förutsägelse** av datumintervall:
+1. [Öppna den anpassade ](#creating-opening-a-customized-configuration) konfigurationen för uppdatering.
+1. Om du vill lägga till ett nytt fält öppnar du fliken **Välj predikat** och drar predikatet till önskad plats. Exempel: **Förutsägande av datumintervall**:
 
    ![chlimage_1-375](assets/chlimage_1-375.png)
 
@@ -443,12 +446,12 @@ Du kan lägga till eller redigera fält och definiera/uppdatera deras inställni
 
    * Du lägger till ett nytt fält:
 
-      När du har lagt till predikatet öppnas fliken **Inställningar** och egenskaperna som kan definieras visas.
+      När du har lagt till predikatet öppnas fliken **Inställningar** och de egenskaper som kan definieras visas.
 
    * Du vill uppdatera ett befintligt predikat:
 
-      Markera predikatfältet (till höger) och öppna sedan fliken **Inställningar** .
-   Till exempel inställningarna för **Förutsägelse** av datumintervall:
+      Markera predikatfältet (till höger) och öppna sedan fliken **Inställningar**.
+   Till exempel inställningarna för **predikatet för datumintervall**:
 
    ![chlimage_1-376](assets/chlimage_1-376.png)
 
@@ -464,11 +467,11 @@ Du kan lägga till eller redigera fält och definiera/uppdatera deras inställni
 
    ![chlimage_1-377](assets/chlimage_1-377.png)
 
-1. **Stäng** förhandsgranskningen för att gå tillbaka och slutföra konfigurationen.
+1. **Stäng** förhandsgranskningen för att returnera och slutföra konfigurationen.
 
 ### Ta bort ett predikatfält {#deleting-a-predicate-field}
 
-1. [Öppna den anpassade konfigurationen](#creating-opening-a-customized-configuration) för uppdatering.
+1. [Öppna den anpassade ](#creating-opening-a-customized-configuration) konfigurationen för uppdatering.
 1. Markera predikatfältet (till höger), öppna fliken **Inställningar** och välj sedan ikonen **Ta bort** (längst ned till vänster).
 
    ![](do-not-localize/chlimage_1-32.png)
@@ -477,7 +480,7 @@ Du kan lägga till eller redigera fält och definiera/uppdatera deras inställni
 
 1. Bekräfta detta och andra ändringar med **Klar**.
 
-### Ta bort en konfiguration (för att återställa standardkonfigurationen) {#deleting-a-configuration-to-reinstate-the-default}
+### Ta bort en konfiguration (för att återinstallera standardinställningen) {#deleting-a-configuration-to-reinstate-the-default}
 
 När du har anpassat en konfiguration åsidosätter detta standardinställningarna. Du kan återställa standardkonfigurationen genom att ta bort den anpassade konfigurationen.
 
@@ -487,13 +490,13 @@ När du har anpassat en konfiguration åsidosätter detta standardinställningar
 
 En anpassad konfiguration tas bort från konsolen:
 
-1. Markera önskad konfiguration (till exempel **sidredigeraren (sökning efter stycken)**) och sedan ikonen **Ta bort** i verktygsfältet:
+1. Välj önskad konfiguration (till exempel **Page Editor (Styckesökning)**) och sedan ikonen **Ta bort** i verktygsfältet:
 
    ![chlimage_1-378](assets/chlimage_1-378.png)
 
 1. Den anpassade konfigurationen tas bort och standardinställningen återställs (detta indikeras av att hänglåssymbolen visas igen i konsolen).
 
-### Förutsägelser för tillägg av alternativ {#adding-options-predicates}
+### Förutser {#adding-options-predicates} för tillägg av alternativ
 
 Alternativpredikat (Alternativ, Alternativ-egenskap) gör att du kan konfigurera ett objekt som du vill söka efter. De används vanligtvis för att söka efter något direkt under sidan. till exempel en egenskap på sidnoden.
 
@@ -512,22 +515,22 @@ I följande exempel (som används för att söka efter mallen som används för 
 
    >[!NOTE]
    >
-   >Du ***får*** inte ändra något i `/libs` banan.
+   >Du ***får*** inte ändra något i `/libs`-sökvägen.
    >
    >Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
    >
    >Den rekommenderade metoden för konfiguration och andra ändringar är:
    >
-   >1. Återskapa önskat objekt, som det finns i `/libs`, under `/apps`. I det här fallet från:
+   >1. Återskapa det önskade objektet, som det finns i `/libs`, under `/apps`. I det här fallet från:
    >1. `/libs/cq/gui/content/common/options/predicates`
    >1. Gör ändringar i `/apps.`
 
 
-1. Öppna Forms **-konsolen för** sökning och välj den konfiguration som du vill uppdatera. Exempel: **Sökväg** för webbplatsadministratörer.
+1. Öppna konsolen **Sök i Forms** och välj den konfiguration som du vill uppdatera. Till exempel **Sökväg för webbplatsadministratörer**.
 
-   Klicka/tryck sedan på ikonen **Redigera sökformulär** .
+   Klicka/tryck sedan på ikonen **Redigera sökformulär**.
 
-1. Beroende på konfigurationen lägger du till en **Alternativ** - eller **alternativegenskap** i konfigurationen.
+1. Beroende på konfigurationen lägger du till en **Alternativ** eller **Alternativ-egenskap** i konfigurationen.
 1. Uppdatera fälten, särskilt:
 
    * **Egenskapsnamn**
@@ -544,7 +547,7 @@ I följande exempel (som används för att söka efter mallen som används för 
    ![chlimage_1-380](assets/chlimage_1-380.png)
 
 1. Välj **Klar** för att spara konfigurationen.
-1. Navigera till rätt konsol (i det här exemplet **Webbplatser**) och öppna **sökfältet** . De nya sökformulären, tillsammans med de olika alternativen, visas. Välj önskat alternativ för att visa sökresultaten:
+1. Navigera till rätt konsol (i det här exemplet **Platser**) och öppna **sökfältet**. De nya sökformulären, tillsammans med de olika alternativen, visas. Välj önskat alternativ för att visa sökresultaten:
 
    ![chlimage_1-381](assets/chlimage_1-381.png)
 
@@ -560,15 +563,15 @@ I följande tabell visas de behörigheter som krävs för att utföra redigering
   </tr> 
   <tr> 
    <td>Redigera </td> 
-   <td>Läsa, skriva behörigheter på <code>/apps </code>noden.</td> 
+   <td>Läs, skriv behörigheter på <code>/apps </code>noden.</td> 
   </tr> 
   <tr> 
    <td>Ta bort</td> 
-   <td>Läsa, skriva, ta bort behörigheter på <code>/apps</code> noden</td> 
+   <td>Läsa, skriva, ta bort behörigheter på <code>/apps</code>-noden</td> 
   </tr> 
   <tr> 
    <td>Förhandsgranska</td> 
-   <td>Läsa, skriva, ta bort behörigheter på <code>/var/dam/content</code> noden.<br /> Läs- och skrivbehörigheter på <code>/apps</code> noden.</td> 
+   <td>Läsa, skriva, ta bort behörigheter på noden <code>/var/dam/content</code>.<br /> Läsa, skriva behörigheter på  <code>/apps</code> noden.</td> 
   </tr> 
  </tbody> 
 </table>
