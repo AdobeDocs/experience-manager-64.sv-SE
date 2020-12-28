@@ -22,10 +22,10 @@ ht-degree: 0%
 
 Med resurser kan du centralisera hanteringen av videoresurser så att du kan överföra videor direkt till Assets för automatisk kodning till Dynamic Media Classic och få tillgång till Dynamic Media Classic-videor direkt från Assets för sidredigering.
 
-Med videointegrationen i Dynamic Media Classic kan du nå optimerad video på alla skärmar (automatisk enhets- och bandbreddsidentifiering).
+Integrering med Dynamic Media Classic för video ger optimerad video även på alla skärmar (automatisk enhets- och bandbreddsidentifiering).
 
-* Videokomponenten Dynamic Media Classic (Scene7) utför automatiskt enhets- och bandbreddsidentifiering för att spela upp video i rätt format och med rätt kvalitet på både datorer, surfplattor och mobila enheter.
-* Resurser - Du kan inkludera adaptiva videouppsättningar i stället för bara enskilda videoresurser. En adaptiv videouppsättning är en behållare för alla videoåtergivningar som krävs för att spela upp video sömlöst på flera skärmar. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Du använder en adaptiv videouppsättning, tillsammans med S7-videokomponenten, för adaptiv videoströmning på flera skärmar, inklusive stationära datorer, iOS, Android, Blackberry och Windows mobila enheter. Mer information finns i [Scene7 dokumentation om adaptiva videouppsättningar](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html).
+* Videokomponenten Dynamic Media Classic (Scene7) utför automatiskt enhets- och bandbreddsidentifiering för att spela upp video i rätt format och med rätt kvalitet på datorer, surfplattor och mobila enheter.
+* Resurser - Du kan inkludera adaptiva videouppsättningar i stället för bara enskilda videoresurser. En adaptiv videouppsättning är en behållare för alla videoåtergivningar som krävs för att spela upp video sömlöst på flera skärmar. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Du använder en adaptiv videouppsättning, tillsammans med S7-videokomponenten, för adaptiv videoströmning på flera skärmar, inklusive stationära datorer, iOS, Android, Blackberry och Windows mobila enheter. Mer information finns i [Scene7-dokumentation om adaptiva videouppsättningar](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html).
 
 ## Om FFMPEG och Dynamic Media Classic {#about-ffmpeg-and-scene}
 
@@ -34,13 +34,13 @@ Standardprocessen för videokodning bygger på den FFMPEG-baserade integrationen
 * FFMPEG-miniatyrbilder
 * FFMPEG-kodning
 
-Tänk på att aktivering och konfigurering av den dynamiska Media Classic-integreringen inte automatiskt tar bort eller inaktiverar dessa två arbetsflödessteg från det körklara arbetsflödet för DAM Update Asset Input. Om du redan använder den FFMPEG-baserade videokodningen i AEM är det troligt att du har FFMPEG installerat i dina redigeringsmiljöer. I det här fallet kodas en ny video som hämtas med Assets två gånger: en gång från FFMPEG-kodaren och en gång från Dynamic Media Classic-integreringen.
+Tänk på att aktivering och konfigurering av Dynamic Media Classic-integreringen inte automatiskt tar bort eller inaktiverar dessa två arbetsflödessteg från det körklara arbetsflödet för DAM Update Asset Input. Om du redan använder den FFMPEG-baserade videokodningen i AEM är det troligt att du har FFMPEG installerat i dina redigeringsmiljöer. I det här fallet kodas en ny video som hämtas med Assets två gånger: en gång från FFMPEG-kodaren och en gång från Dynamic Media Classic-integreringen.
 
 Om du har konfigurerat och installerat den FFMPEG-baserade videokodningen i AEM rekommenderar Adobe att du tar bort de två FFMPEG-arbetsflödena från arbetsflödena för DAM Update Asset.
 
 ### Format som stöds {#supported-formats}
 
-Följande format stöds för komponenten Dynamic Media Classic Video:
+Följande format stöds för videokomponenten i Dynamic Media Classic:
 
 * F4V H.264
 * MP4 H.264
@@ -60,61 +60,61 @@ Om du behöver ett arbetsflöde eller en versionshantering för dina resurser b�
 
 1. Ladda upp videomaterialet till Adobe Assets och koda och publicera automatiskt till Dynamic Media Classic.
 1. I AEM kommer du åt videomaterial i WCM på fliken **[!UICONTROL Movies]** i Content Finder.
-1. Skapa med videokomponenten Dynamic Media Classic.
+1. Skapa med videokomponenten i Dynamic Media Classic.
 
-#### Om du överför videon till Dynamic Media Classic {#if-you-are-uploading-your-video-to-scene}
+#### Om du överför din video till Dynamic Media Classic {#if-you-are-uploading-your-video-to-scene}
 
 Om du inte behöver ett arbetsflöde eller en versionshantering för dina resurser bör du överföra dina resurser till Dynamic Media Classic. Här följer det rekommenderade arbetsflödet:
 
-1. I Dynamic Media Classic [ställer du in en schemalagd FTP-överföring och -kodning till Dynamic Media Classic (automatiskt system)](https://help.adobe.com/en_US/scene7/using/WS70B173EC-4CAD-4b4c-BF9C-43A11F3A5950.html).
+1. I Dynamic Media Classic [konfigurerar du en schemalagd FTP-överföring och -kodning till Dynamic Media Classic (automatiskt system)](https://help.adobe.com/en_US/scene7/using/WS70B173EC-4CAD-4b4c-BF9C-43A11F3A5950.html).
 1. I AEM kommer du åt videomaterial i WCM på fliken **[!UICONTROL Dynamic Media Classic]** i Content Finder.
-1. Skapa med videokomponenten Dynamic Media Classic.
+1. Skapa med videokomponenten i Dynamic Media Classic.
 
 ### Konfigurera integrering med Dynamic Media Classic Video {#configuring-integration-with-scene-video}
 
 **Så här konfigurerar du universella förinställningar**:
 
-1. Navigera **[!UICONTROL Cloud Services]** till din **[!UICONTROL Dynamic Media Classic]** konfiguration och klicka på **[!UICONTROL Edit]**.
-1. Klicka på **[!UICONTROL Video]** fliken.
+1. I **[!UICONTROL Cloud Services]** navigerar du till din **[!UICONTROL Dynamic Media Classic]**-konfiguration och klickar på **[!UICONTROL Edit]**.
+1. Välj fliken **[!UICONTROL Video]**.
 
    >[!NOTE]
    >
-   >Fliken visas inte **[!UICONTROL Video]** om sidan inte har någon molnkonfiguration. Se [Aktivera Dynamic Media Classic för WCM](#enablingscene7forwcm).
+   >Fliken **[!UICONTROL Video]** visas inte om sidan inte har någon molnkonfiguration. Se [Aktivera Dynamic Media Classic för WCM](#enablingscene7forwcm).
 
 1. Välj den adaptiva videokodningsprofilen, en färdig videokodningsprofil eller en anpassad videokodningsprofil.
 
    >[!NOTE]
    >
-   >Mer information om vad videoförinställningarna betyder finns i dokumentationen [för](https://help.adobe.com/en_US/scene7/using/WSE86ACF2B-BD50-4c48-A1D7-9CD4405B62D0.html)Dynamic Media Classic.
+   >Mer information om vad videoförinställningarna betyder finns i [Dynamic Media Classic-dokumentationen](https://help.adobe.com/en_US/scene7/using/WSE86ACF2B-BD50-4c48-A1D7-9CD4405B62D0.html).
    >
-   >Adobe rekommenderar att du antingen väljer båda adaptiva videouppsättningar när du konfigurerar de universella förinställningarna eller väljer **[!UICONTROL Adaptive Video Encoding]** alternativet.
+   >Adobe rekommenderar att du antingen markerar båda adaptiva videouppsättningar när du konfigurerar de universella förinställningarna eller väljer alternativet **[!UICONTROL Adaptive Video Encoding]**.
 
 1. De valda kodningsprofilerna tillämpas automatiskt på alla videoklipp som överförs till CQ DAM-målmappen som du konfigurerar för den här Dynamic Media Classic-molnkonfigurationen. Du kan konfigurera flera Dynamic Media Classic-molnkonfigurationer med olika målmappar för att tillämpa olika kodningsprofiler efter behov.
 
-### Uppdatera visningsprogram och kodningsförinställningar {#updating-viewer-and-encoding-presets}
+### Uppdaterar förinställningar för visningsprogram och kodning {#updating-viewer-and-encoding-presets}
 
 Om du behöver uppdatera visningsprogrammet och kodningsförinställningarna för video i AEM eftersom förinställningarna har uppdaterats i Dynamic Media Classic går du till Dynamic Media Classic-konfigurationen i molnkonfigurationen och klickar på **Uppdatera visningsprogrammet och kodningsförinställningarna**.
 
 ![chlimage_1-131](assets/chlimage_1-131.png)
 
-### Överföra din överordnad video {#uploading-your-master-video}
+### Överför din överordnad video {#uploading-your-master-video}
 
 Så här överför du din överordnad video till Dynamic Media Classic från Adobe DAM:
 
-1. Navigera till målmappen för CQ DAM där du har konfigurerat molnkonfigurationen med hjälp av kodningsprofiler för Dynamic Media Classic.
-1. Klicka **[!UICONTROL Upload]** för att överföra överordnad video. Överföringen och kodningen av video är klar när [!UICONTROL DAM Update Asset] arbetsflödet är klart och **[!UICONTROL Publish to Dynamic Media Classic]** har en bock.
+1. Navigera till målmappen för CQ DAM där du har konfigurerat molnkonfigurationen med kodningsprofiler för Dynamic Media Classic.
+1. Klicka på **[!UICONTROL Upload]** för att överföra överordnad video. Överföringen och kodningen av videon är klar när arbetsflödet [!UICONTROL DAM Update Asset] är klart och **[!UICONTROL Publish to Dynamic Media Classic]** är markerat.
 
    >[!NOTE]
    >
    >Det kan ta en stund innan videominiatyrbilderna genereras.
 
-   Om du drar den överordnad DAM-videon till videokomponenten får du tillgång till *alla* dynamiska Media Classic-kodade proxyåtergivningar för leverans.
+   Om du drar den överordnad DAM-videon till videokomponenten kommer du åt *alla* av de Dynamic Media Classic-kodade proxyåtergivningarna för leverans.
 
-### Foundation Video Component kontra Dynamic Media Classic Video Component {#foundation-video-component-versus-scene-video-component}
+### Foundation Video Component jämfört med Dynamic Media Classic Video Component {#foundation-video-component-versus-scene-video-component}
 
-När du använder AEM har du tillgång till både videokomponenten som finns på Sites och videokomponenten Dynamic Media Classic (Scene7). Dessa komponenter är inte utbytbara.
+När du använder AEM har du tillgång till både videokomponenten som finns i Sites och videokomponenten för Dynamic Media Classic (Scene7). Dessa komponenter är inte utbytbara.
 
-Videokomponenten Dynamic Media Classic fungerar bara för Dynamic Media Classic-videor. Grundkomponenten fungerar med videor som lagras från AEM (med ffmpeg) och Dynamic Media Classic-videor.
+Videokomponenten Dynamic Media Classic fungerar bara för Dynamic Media Classic-videofilmer. Grundkomponenten fungerar med videor som lagras från AEM (med ffmpeg) och Dynamic Media Classic-videor.
 
 I följande matris förklaras när du bör använda vilken komponent:
 
@@ -122,14 +122,14 @@ I följande matris förklaras när du bör använda vilken komponent:
 
 >[!NOTE]
 >
->Som standard använder videokomponenten Dynamic Media Classic den universella videoprofilen. Du kan dock hämta den HTML5-baserade videospelaren som kan användas av AEM. I Dynamic Media Classic kopierar du inbäddningskoden för den färdiga HTML5-videospelaren och placerar den på AEM.
+>Dynamic Media Classic-videokomponenten använder den universella videoprofilen. Du kan dock hämta den HTML5-baserade videospelaren som kan användas av AEM. I Dynamic Media Classic kopierar du inbäddningskoden för den färdiga HTML5-videospelaren och placerar den på AEM.
 
 
 ## AEM videokomponent {#aem-video-component}
 
-Även om du bör använda videokomponenten Dynamic Media Classic för att visa Dynamic Media Classic-videor beskrivs det här avsnittet av fullständighetsskäl hur du använder Dynamic Media Classic-videor med [!UICONTROL Foundation Video Component] i AEM.
+Även om du bör använda videokomponenten för Dynamic Media Classic för att visa Dynamic Media Classic-videofilmer beskrivs det här avsnittet hur du använder Dynamic Media Classic-videofilmer med [!UICONTROL Foundation Video Component] i AEM, för fullständighetens skull.
 
-### AEM Video och Dynamic Media Classic Video - jämförelse {#aem-video-and-scene-video-comparison}
+### AEM Video och Dynamic Media Classic Video-jämförelse {#aem-video-and-scene-video-comparison}
 
 I följande tabell visas en högnivåjämförelse av funktioner som stöds mellan AEM Foundation Video-komponenten och Scene7 Video-komponenten:
 
@@ -143,16 +143,16 @@ I följande tabell visas en högnivåjämförelse av funktioner som stöds mella
 
 ### Konfigurera {#setting-up}
 
-#### Skapa videoprofiler {#creating-video-profiles}
+#### Skapar videoprofiler {#creating-video-profiles}
 
-De olika videokoderna skapas enligt de förinställningar för dynamisk Media Classic-kodning som valts i molnkonfigurationen för Dynamic Media Classic. För att den grundläggande videokomponenten ska kunna använda dem måste en videoprofil skapas för varje vald dynamisk Media Classic-kodningsförinställning. Detta gör att videokomponenten kan välja DAM-återgivningar utifrån detta.
+De olika videokodningarna skapas enligt de kodningsförinställningar för Dynamic Media Classic som valts i molnkonfigurationen för Dynamic Media Classic. För att den grundläggande videokomponenten ska kunna använda dem måste en videoprofil skapas för varje vald kodningsförinställning för Dynamic Media Classic. Detta gör att videokomponenten kan välja DAM-återgivningar utifrån detta.
 
 >[!NOTE]
 >
 >Nya videoprofiler och ändringar av dem måste aktiveras för publicering.
 
 1. I AEM går du till **[!UICONTROL Tools]** och väljer **[!UICONTROL Configuration Console]**. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]** i navigeringsträdet i Configuration Console.
-1. Skapa en ny Dynamic Media Classic-videoprofil. Markera **[!UICONTROL New...]** och välj sedan mallen Dynamic Media Classic Video Profile på **[!UICONTROL Create Page]** menyn. Ge den nya videoprofilsidan ett namn och klicka på **[!UICONTROL Create]**.
+1. Skapa en ny Dynamic Media Classic-videoprofil. På menyn **[!UICONTROL New...]** väljer du **[!UICONTROL Create Page]** och sedan Dynamic Media Classic Video Profile-mallen. Ge den nya videoprofilsidan ett namn och klicka på **[!UICONTROL Create]**.
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
@@ -164,11 +164,11 @@ De olika videokoderna skapas enligt de förinställningar för dynamisk Media Cl
    |---|---|
    | Dynamic Media Classic (Scene7) - molnkonfiguration | Den molnkonfiguration som ska användas för kodningsförinställningarna. |
    | Dynamic Media Classic (Scene7) - kodningsförinställning | Den kodningsförinställning som den här videoprofilen ska kopplas till. |
-   | HTML5-videotyp | Med den här egenskapen kan du ange värdet för type-egenskapen i HTML5-videokällelementet. Den här informationen finns inte i de dynamiska Media Classic-kodningsförinställningarna, men krävs för att återge videoklippen med HTML5-videoelementet. En lista över vanliga format tillhandahålls, men kan skrivas över för andra format. |
+   | HTML5-videotyp | Med den här egenskapen kan du ange värdet för type-egenskapen i HTML5-videokällelementet. Den här informationen finns inte i kodningsförinställningarna för Dynamic Media Classic, men krävs för att återge videoklippen med HTML5-videoelementet. En lista över vanliga format tillhandahålls, men kan skrivas över för andra format. |
 
    Upprepa det här steget för alla kodningsförinställningar som är markerade i molnkonfigurationen och som du vill använda i videokomponenten.
 
-#### Konfigurera design {#configuring-design}
+#### Konfigurerar design {#configuring-design}
 
 Grundvideokomponenten måste känna till vilka videoprofiler som ska användas för att skapa listan över videokällor. Du måste öppna dialogrutan för videokomponentdesign och konfigurera komponentdesignen för de nya videoprofilerna.
 
@@ -180,13 +180,13 @@ Grundvideokomponenten måste känna till vilka videoprofiler som ska användas f
 >
 >Ändringar i designen kräver att designen aktiveras för att börja gälla vid publiceringen.
 
-1. Öppna den grundläggande videokomponentens designdialogruta och växla till **[!UICONTROL Profiles]** fliken. Ta sedan bort de färdiga profilerna och lägg till de nya videoprofilerna i Dynamic Media Classic. Ordningen på profillistan i designdialogrutan definierar också ordningen på videokällelementet vid återgivning.
-1. För webbläsare som inte stöder HTML5 kan videokomponenten konfigurera ett flash-reserv. Öppna dialogrutan för design av videokomponenter och gå till **[!UICONTROL Flash]** fliken. Konfigurera Flash Player-inställningarna och tilldela en reservprofil för Flash Player.
+1. Öppna bildvideokomponentens designdialogruta och växla till fliken **[!UICONTROL Profiles]**. Ta sedan bort färdiga profiler och lägg till de nya videoprofilerna i Dynamic Media Classic. Ordningen på profillistan i designdialogrutan definierar också ordningen på videokällelementet vid återgivning.
+1. För webbläsare som inte stöder HTML5 kan videokomponenten konfigurera ett flash-reserv. Öppna dialogrutan för design av videokomponenter och ändra till fliken **[!UICONTROL Flash]**. Konfigurera Flash Player-inställningarna och tilldela en reservprofil för Flash Player.
 
 #### Checklista {#checklist}
 
-1. Skapa en molnkonfiguration för Dynamic Media Classic (Scene7). Kontrollera att förinställningarna för videokodning är angivna och att importeraren körs.
-1. Skapa en dynamisk Media Classic-videoprofil för varje videokodningsförinställning som har valts i molnkonfigurationen.
+1. Skapa en Dynamic Media Classic-molnkonfiguration (Scene7). Kontrollera att förinställningarna för videokodning är angivna och att importeraren körs.
+1. Skapa en Dynamic Media Classic-videoprofil för varje videokodningsförinställning som har valts i molnkonfigurationen.
 1. Videoprofilerna måste aktiveras.
 1. Konfigurera utformningen av den grundläggande videokomponenten på sidan.
 1. Aktivera designen när du är klar med designändringarna.
