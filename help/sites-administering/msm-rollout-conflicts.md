@@ -40,7 +40,7 @@ Förutom standardfunktionerna kan anpassade konflikthanterare läggas till för 
 
 ### Exempelscenario {#example-scenario}
 
-I följande avsnitt använder vi exemplet med en ny sida `b`som har skapats både i grenen för utkast och live-kopia (skapas manuellt) för att illustrera olika metoder för konfliktlösning:
+I följande avsnitt använder vi exemplet med en ny sida `b`, som skapats både i grenen för utkast och live-kopia (skapas manuellt), för att illustrera de olika lösningmetoderna:
 
 * skiss: `/b`
 
@@ -69,7 +69,7 @@ I följande avsnitt använder vi exemplet med en ny sida `b`som har skapats båd
   <tr> 
    <td><code> /bp-level-1</code></td> 
    <td><code> /lc-level-1</code> <br /> (skapat manuellt i en förgrening för live-kopia)<br /> </td> 
-   <td><code> /lc-level-1</code> <br /> (innehåller innehållet på sidan<br /> med underordnad nivå-1 som skapades manuellt i den aktiva kopiegrenen)</td> 
+   <td><code> /lc-level-1</code> <br /> (innehåller innehållet på sidan<br /> underordnad nivå-1 som skapades manuellt i den aktiva kopiegrenen)</td> 
   </tr> 
  </tbody> 
 </table>
@@ -78,7 +78,7 @@ I följande avsnitt använder vi exemplet med en ny sida `b`som har skapats båd
 
 Med utrullningshanteraren kan du aktivera eller inaktivera konflikthantering.
 
-Detta görs med [OSGi-konfigurationen](/help/sites-deploying/configuring-osgi.md) av WCM-rullningshanteraren **för** Dag:
+Detta görs med [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md) av **Day CQ WCM Rollout Manager**:
 
 * **Hantera konflikt med manuellt skapade sidor**:
 
@@ -94,21 +94,21 @@ AEM använder konflikthanterare för att lösa eventuella sidkonflikter som upps
 
 AEM tillhandahåller:
 
-* Konflikthanteraren [som](#default-conflict-handler)standard:
+* [standardkonflikthanteraren](#default-conflict-handler):
 
    * `ResourceNameRolloutConflictHandler`
 
 * Möjligheten att implementera en [anpassad hanterare](#customized-handlers).
 * Den rangordningsmekanism som gör att du kan ange prioriteten för varje enskild hanterare. Tjänsten med högst rankning används.
 
-### Standardhanterare för konflikter {#default-conflict-handler}
+### Standardhanterare för konflikt {#default-conflict-handler}
 
 Standardkonflikthanteraren:
 
 * Anropas `ResourceNameRolloutConflictHandler`
 
 * Med den här hanteraren får plantryckssidan företräde.
-* Tjänstrankningen för hanteraren är låg (&quot;dvs. under standardvärdet för `service.ranking` egenskapen) eftersom antagandet är att anpassade hanterare behöver en högre rankning. Rankningen är dock inte den absolut minsta nivån för att garantera flexibilitet vid behov.
+* Tjänstrankningen för hanteraren är låg (&quot;dvs. under standardvärdet för egenskapen `service.ranking` eftersom antagandet är att anpassade hanterare behöver en högre rankning. Rankningen är dock inte den absolut minsta nivån för att garantera flexibilitet vid behov.
 
 Den här konflikthanteraren ger prioritet åt ritningen. Den aktiva kopieringssidan `/b` flyttas (inom den aktiva kopiegrenen) till `/b_msm_moved`.
 
@@ -120,9 +120,9 @@ Den här konflikthanteraren ger prioritet åt ritningen. Den aktiva kopieringssi
 
 * skiss: `/b`
 
-   Går ut på live-kopieringssidan `/b`.
+   Går ut till live-kopieringssidan `/b`.
 
-   * `bp-level-1` har rullats ut i livecopy.
+   * `bp-level-1` rullas ut i livecopy.
 
 **Efter utrullning**
 
@@ -158,9 +158,9 @@ Med anpassade konflikthanterare kan du implementera egna regler. Med servicerang
 
 Anpassade konflikthanterare kan:
 
-* Namnge efter behov. ``
+* Namnge efter behov. &quot;
 * utvecklas/konfigureras enligt dina krav, Du kan t.ex. utveckla en hanterare så att den aktiva kopieringssidan ges företräde.
-* Kan utformas för att konfigureras med [OSGi-konfigurationen](/help/sites-deploying/configuring-osgi.md). särskilt
+* Kan konfigureras med [OSGi-konfigurationen](/help/sites-deploying/configuring-osgi.md); särskilt
 
    * **Servicerangordning**:
 
@@ -168,9 +168,9 @@ Anpassade konflikthanterare kan:
 
       Standardvärdet är 0.
 
-### Beteende vid inaktiverad konflikthantering {#behavior-when-conflict-handling-deactivated}
+### Beteende vid konflikthantering inaktiverat {#behavior-when-conflict-handling-deactivated}
 
-Om du manuellt [inaktiverar konflikthantering](#rollout-manager-and-conflict-handling) utför AEM ingen åtgärd på sidor som är i konflikt (sidor som inte är i konflikt rullas ut som förväntat).
+Om du manuellt [inaktiverar konflikthantering](#rollout-manager-and-conflict-handling) utför AEM ingen åtgärd på sidor som står i konflikt (icke-motstridiga sidor rullas ut som förväntat).
 
 >[!CAUTION]
 >
@@ -209,6 +209,6 @@ I det här fallet har live-kopian företräde. Den blå sidan `/b` kopieras inte
  </tbody> 
 </table>
 
-### Servicerangordning {#service-rankings}
+### Tjänstrankningar {#service-rankings}
 
 Tjänstrankningen [OSGi](https://www.osgi.org/) kan användas för att definiera prioriteten för enskilda konflikthanterare.
