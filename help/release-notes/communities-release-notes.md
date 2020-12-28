@@ -1,8 +1,8 @@
 ---
-title: Versionsinformation om AEM Communities
+title: Versionsinformation för AEM Communities
 seo-title: AEM Communities
-description: Versionsinformation för Adobe Experience Manager 6.4 Communities.
-seo-description: Versionsinformation för Adobe Experience Manager 6.4 Communities.
+description: Versionsinformation om Adobe Experience Manager 6.4 Communities.
+seo-description: Versionsinformation om Adobe Experience Manager 6.4 Communities.
 uuid: 2de9f511-2a61-4003-9b2c-d6728bc9d57a
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4
@@ -18,11 +18,11 @@ ht-degree: 0%
 ---
 
 
-# Versionsinformation om AEM Communities {#aem-communities-release-notes}
+# Versionsinformation för AEM Communities {#aem-communities-release-notes}
 
 Det här avsnittet innehåller information om förbättringarna av AEM Communities sedan version 6.3. Mer information om de nya funktionerna finns i [Nyheter i AEM 6.4 Communities](/help/communities/whats-new-aem-communities.md).
 
-Den senaste versionen finns i avsnittet [Distribuera communityer](/help/communities/deploy-communities.md#latest-releases) i dokumentationen.
+För att få den senaste versionen, se avsnittet [Distribuera communityer](/help/communities/deploy-communities.md#latest-releases) i dokumentationen.
 
 ## Huvudförbättringar {#main-improvements}
 
@@ -61,17 +61,17 @@ Moderering:
 
 Övergripande kompatibilitet med grundläggande förändringar i AEM 6.4.
 
-Obs! alla dessa funktioner finns även för AEM 6.3. Se versionsinformationen för AEM Communities för [6.3](https://helpx.adobe.com/experience-manager/6-3/release-notes.html).
+Obs! alla dessa funktioner finns även för AEM 6.3. Läs AEM Communities versionsinformation för [6.3](https://helpx.adobe.com/experience-manager/6-3/release-notes.html).
 
 ## Kända fel {#known-issues}
 
-* **Moderering** - Det går inte att ta bort överordnat inlägg som en enda borttagningsåtgärd från gränssnittet för massmoderering (CQ-4236797)
-* **Konsol** - länken Glömt användarnamn eller lösenord dirigeras om till inloggningssidan i stället för till motsvarande formulär för hämtning av lösenord (CQ-4237682)
+* **Moderering**  - Det går inte att ta bort överordnat inlägg som en enda borttagningsåtgärd från gränssnittet för massmoderering (CQ-4236797)
+* **Konsol**  - Länken Glömt användarnamn eller lösenord dirigeras om till inloggningssidan i stället för till motsvarande formulär för hämtning av lösenord (CQ-4237682)
 
 ## Välj funktioner {#select-features}
 
-Expert Scoring (*Powered by Sensei*) - används för att möjliggöra spel, som är ett effektivt sätt att uppmuntra och belöna värdefullt communitybeteende. Det kan också användas för att identifiera experter för rekommendationer eller marknadsföring.
+Expert Scoring (*Powered by Sensei*) - används för att möjliggöra spel, vilket är ett effektivt sätt att uppmuntra och belöna värdefullt communitybeteende. Det kan också användas för att identifiera experter för rekommendationer eller marknadsföring.
 
 ## Demonstrationer {#demonstrations}
 
-Alla dessa funktioner kan demonstreras med [AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki) som är allmänt tillgänglig på GitHub.com när man använder AEM Communities demoscenario och även inom den nya referensimplementeringen av We.Retail.
+Alla dessa funktioner kan demonstreras med hjälp av [AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki) som är allmänt tillgänglig på GitHub.com när AEM Communities demoscenario används och även inom den nya referensimplementationen av We.Retail.
