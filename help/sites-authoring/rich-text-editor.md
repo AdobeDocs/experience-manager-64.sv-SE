@@ -26,9 +26,9 @@ RTE (Rich Text Editor) är en grundläggande byggsten för redigering av text p�
 >
 >Att kopiera kapslade listor till textredigeraren fungerar inte som förväntat. När du kopierar kapslade listor från Microsoft Word måste du manuellt rensa upp listorna efter att du har klistrat in texten i textredigeraren.
 
-## In-place-redigering {#in-place-editing}
+## Redigering på plats {#in-place-editing}
 
-Om du markerar en textbaserad komponent med ett enda tryck eller klick visas [komponentens verktygsfält](../sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste).
+Om du markerar en textbaserad komponent med en enda tryckning eller klickning visas [komponentverktygsfältet](../sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste).
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
@@ -52,13 +52,13 @@ Det här verktygsfältet innehåller följande alternativ:
 
 * **Spara**
 
-## Redigering i helskärm {#full-screen-editing}
+## Redigering i helskärmsläge {#full-screen-editing}
 
 Om du väljer helskärmsläget i verktygsfältet för textbaserade komponenter öppnas textredigeraren och resten av sidinnehållet döljs.
 
 ![](do-not-localize/screen_shot_2018-03-21at163236.png)
 
-I helskärmsläget visas alla alternativ i RTF-redigeraren som har konfigurerats av administratören. Dessa kan variera mellan olika AEM instanser [beroende på konfigurationen](../sites-administering/rich-text-editor.md) som tillhandahålls av administratörer eller AEM utvecklare. Om ett alternativ saknas ber du administratören att göra det tillgängligt.
+I helskärmsläget visas alla alternativ i RTF-redigeraren som har konfigurerats av administratören. Dessa kan variera mellan AEM [beroende på konfigurationen](../sites-administering/rich-text-editor.md) som tillhandahålls av administratörer eller AEM utvecklare. Om ett alternativ saknas ber du administratören att göra det tillgängligt.
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 
