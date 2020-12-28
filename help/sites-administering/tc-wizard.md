@@ -18,7 +18,7 @@ ht-degree: 2%
 ---
 
 
-# Guiden Kopiera språk{#language-copy-wizard}
+# Guiden Språkkopia{#language-copy-wizard}
 
 Guiden för språkkopiering är en guidad upplevelse när du skapar och instrumenterar struktur för flerspråkigt innehåll. Det är nu mycket enklare och snabbare att skapa en språkkopia.
 
@@ -36,11 +36,11 @@ Så här öppnar du guiden:
 
    ![chlimage_1-49](assets/chlimage_1-49.jpeg)
 
-1. I steget **Välj källa** i guiden kan du lägga till/ta bort sidor. Du kan också välja att ta med eller utesluta undersidor.
+1. Med steget **Välj källa** i guiden kan du lägga till/ta bort sidor. Du kan också välja att ta med eller utesluta undersidor.
 
    ![chlimage_1-50](assets/chlimage_1-50.jpeg)
 
-1. Med knappen **Nästa** kommer du till **konfigurationssteget** i guiden. Här kan du lägga till/ta bort språk och välja översättningsmetod.
+1. Med knappen **Nästa** kommer du till steget **Konfigurera** i guiden. Här kan du lägga till/ta bort språk och välja översättningsmetod.
 
    ![chlimage_1-51](assets/chlimage_1-51.jpeg)
 
@@ -48,7 +48,7 @@ Så här öppnar du guiden:
    >
    >Som standard finns det bara en översättningsinställning. Om du vill kunna välja andra inställningar måste du först konfigurera molnkonfigurationer. Se [Konfigurera översättningsintegreringsramverket](/help/sites-administering/tc-tic.md).
 
-1. Med knappen **Nästa** kommer du till **steget Översätt** i guiden. Här kan du välja mellan att skapa enbart strukturen, skapa ett nytt översättningsprojekt eller lägga till i ett befintligt översättningsprojekt.
+1. Med knappen **Nästa** kommer du till steget **Översätt** i guiden. Här kan du välja mellan att skapa enbart strukturen, skapa ett nytt översättningsprojekt eller lägga till i ett befintligt översättningsprojekt.
 
    >[!NOTE]
    >
