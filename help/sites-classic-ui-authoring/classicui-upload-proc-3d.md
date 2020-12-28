@@ -22,7 +22,7 @@ ht-degree: 1%
 
 Använd standardmekanismer för överföring eller synkronisering för att överföra 3D-resurser och tillhörande refererade filer till AEM Assets.
 
-Se [Överföra resurser](/help/assets/managing-assets-touch-ui.md#uploading-assets).
+Se [Överför resurser](/help/assets/managing-assets-touch-ui.md#uploading-assets).
 
 Adobe rekommenderar att du överför alla refererade filer före eller samtidigt - du överför den primära 3D-modellfilen. Detta är dock inget krav.
 
@@ -45,7 +45,7 @@ När överföringen är klar konverteras dina 3D-filer och ytterligare bearbetni
 
       Du kan modellera den här metoden för hur 3D-redigeringsprogram som Autodesk Maya föredrar att lagra innehåll.
 
-* Beroende resurser ska inte tas bort såvida inte de associerade 3D-resurserna eller resurserna som refererar till dem också tas bort. Du kan dock ta bort 3D-resurser utan att behöva ta bort deras beroende resurser. Om ett beroende går förlorat av misstag kan du enkelt lösa det för att återställa det.
+* Beroende resurser ska inte tas bort såvida inte den associerade 3D-resursen eller de associerade 3D-resurserna som refererar till dem också tas bort. Du kan dock ta bort 3D-resurser utan att behöva ta bort deras beroende resurser. Om ett beroende går förlorat av misstag kan du enkelt lösa det för att återställa det.
 
    Se [Lösa filberoenden](/help/assets/resolve-file-dependencies.md).
 
@@ -57,7 +57,7 @@ Konverterings-, bearbetnings- och renderingsjobb köas efter behov för att för
 
 ## Övervaka bearbetningsstatus för dina överförda 3D-filer {#monitoring-the-processing-status-of-your-uploaded-d-files}
 
-Bearbetningsstatus och förlopp visas **[!UICONTROL Card View]** endast som en förloppsbanderoll på resurskortet. Varje överförd 3D-modell genomgår vanligtvis följande 4-6 beställda bearbetningssteg:
+Endast i **[!UICONTROL Card View]** visas bearbetningsstatus och förlopp som en förloppsbanderoll på resurskortet. Varje överförd 3D-modell genomgår vanligtvis följande 4-6 beställda bearbetningssteg:
 
 <table> 
  <tbody> 
