@@ -46,7 +46,7 @@ Mer information om hur du integrerar din AEM och Salesforce finns i [Integrera m
 
 >[!NOTE]
 >
->Integrering med Silverpop Engage är inte tillgängligt direkt. Om du vill integrera AEM med Silverpop Engage [hämtar du paketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content) från paketresursen.
+>Integrering med Silverpop Engage är inte tillgängligt direkt. [Hämta paketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content) från paketresursen om du vill integrera AEM med Silverpop Engage.
 
 Silverpop Engage erbjuder automatiserad marknadsföring, e-post, mobilt och socialt.
 
@@ -62,8 +62,8 @@ Mer information om hur du integrerar AEM och ExactTarget finns i [Konfigurera Ex
 
 Facebook och Twitter är populära sociala nätverkstjänster. AEM integrering med Facebook och Twitter gör det möjligt för organisationer att tillhandahålla inloggningsalternativ för Facebook eller Twitter på ägda digitala resurser och sedan anpassa användarupplevelsen baserat på profilinformation. Marknadsförarna kan också kombinera profilinformation med data från andra källor, som ett kundrelationssystem eller en webbplatsprofil, för att skapa en enhetlig bild av kunden.
 
-Mer information finns i [Social Login](/help/communities/social-login.md) .
+Mer information finns i [Social Login](/help/communities/social-login.md).
 
-## Integrering med andra leverantörer {#integrating-with-other-providers}
+## Integrera med andra leverantörer {#integrating-with-other-providers}
 
-Med AEM kan du ansluta till andra externa leverantörer med ett [allmänt analysfragment.](/help/sites-administering/external-providers.md)
+Med AEM kan du ansluta till andra externa leverantörer med ett [generiskt analysfragment.](/help/sites-administering/external-providers.md)
