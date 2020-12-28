@@ -26,7 +26,7 @@ ht-degree: 0%
 | Version | 6.4.8.0 |
 | Typ | Service Pack-version |
 | Date | 5 mars 2020 |
-| Hämta URL | AEM 6.4.8.0 om [programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/servicepack/aem-service-pkg-6.4.8.zip) |
+| Hämta URL | AEM 6.4.8.0 i [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/servicepack/aem-service-pkg-6.4.8.zip) |
 
 ## Vad ingår i AEM 6.4.8.0 {#what-s-included-in-aem}
 
@@ -52,7 +52,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Uppdaterade jQuery-versionen som paketerats i ContextHub till 3.2.1.
 
-## Ändringslista {#list-of-changes}
+## Lista över ändringar {#list-of-changes}
 
 ### Sites {#sites}
 
@@ -73,7 +73,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * En mapp utan namn skapas i SPS (Scene7 Publishing System) när en resurs flyttas från en mapp till en annan i Experience Manager med Dynamic Media Scene7-konfiguration (NPR-32440).
 
-* Detaljsidan för resursinformation i PDF-filer visar inte åtgärdsknappar i Experience Manager som körs i Scene7-läget Dynamic Media (NPR-32316).
+* Detaljsidan för resursinformation i PDF-filer visar inte åtgärdsknappar i Experience Manager som körs i Dynamic Media Scene7-läge (NPR-32316).
 
 * Resurs- och videoåtergivningar kan inte tas bort (NPR-32213).
 
@@ -81,7 +81,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Relationen mellan tillgångar skrivs över när tillgångar är kopplade till mer än en tillgång med hjälp av Annan (NPR-32196).
 
-* Knappen Spara importerar inte fjärruppsättningen när användaren inte har gjort några ändringar i Set Editor i Dynamic Media Client (NPR-32178).
+* Knappen Spara importerar inte fjärruppsättningen när användaren inte har gjort några ändringar i uppsättningsredigeraren i Dynamic Media Client (NPR-32178).
 
 * Inmatning av PSD-resurser orsakar en CPU-topp och oresponsiv instans av Experience Manager Author (NPR-32165).
 
@@ -91,15 +91,15 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Avpublicering från varumärkesportalen på sidan Hantera publikation misslyckas för undermappar till en publicerad mapp (NPR-31835).
 
-* Dynamic Media-videokodningar kan inte överföras när Scene7 Cloud Configuration placeras i en privat mapp `/conf` i stället för `/conf/global` (NPR-31779).
+* Dynamic Media videokodningar kan inte överföras när Scene7 Cloud Configuration placeras i en privat mapp `/conf` i stället för `/conf/global` (NPR-31779).
 
-* Bild visas inte på tidslinjen när anteckningar har lagts till, på Experience Manager som körs i körläget Dynamic Media Scene7 (NPR-31754).
+* Bilden visas inte på tidslinjen när anteckningar har lagts till, på Experience Manager som körs i körläge för Dynamic Media Scene7 (NPR-31754).
 
 * ZIP-filen som hämtas från DAM kan inte öppnas med WinZip (NPR-31745).
 
 ### Integreringar {#integrations-6480}
 
-* De nedrullningsbara menyerna **Company** och **Reporting** Suite döljs när du väljer **Rapporteringskälla** när du konfigurerar Adobe Analytics i molntjänster för Experience Manager (NPR-31729).
+* Listrutorna **Företag** och **Rapportering** Suite är dolda när **Rapporteringskälla** har valts när Adobe Analytics konfigureras i Experience Manager molntjänster (NPR-31729).
 
 * Adobe Campaign-egenskaper rensas inte när en språkkopia av ett nyhetsbrev som är länkat till en Adobe Campaign skapas, medan rensning görs när ett nyhetsbrev som är länkat till en Adobe Campaign kopieras eller klistras in (NPR-32540).
 
@@ -123,11 +123,11 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Behörighetsproblem leder till att fel visas när sidor flyttas i en plan (NPR-32610).
 
-### WCM-sidredigerare {#wcm-page-editor-6480}
+### WCM-sidredigeraren {#wcm-page-editor-6480}
 
 * Webbläsaren slutar svara när en komponent läggs till på en sida med ett specifikt URL-format (NPR-32368, NPR-31917).
 
-### WCM-Admin-gränssnitt {#wcm-admin-ui-6480}
+### WCM-administratörsgränssnitt {#wcm-admin-ui-6480}
 
 * Det ingår inte några refererade resurser i begäran om aktiveringsarbetsflöde (NPR-32304).
 
@@ -139,7 +139,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Avpublicera metadataschemat i AEM Assets fyller i ett felmeddelande även om schemat tas bort vid backend (CQ-4286871).
 
-### Foundation UI {#foundations-ui-6480}
+### Foundation-gränssnitt {#foundations-ui-6480}
 
 * Ogiltiga tecken visas i den URL som har lagts till i en Button-komponent (NPR-32684).
 
@@ -165,11 +165,11 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Analyserna ger inga lämpliga resultat när det gäller att skicka in eller överge formulär på en webbplatssida (NPR-31359).
 
-### Programfixar och funktionspaket som ingår i tidigare servicepaket {#hotfixes-and-feature-packs-included-in-previous-service-packs}
+### Programfixar och funktionspaket som ingår i tidigare Service Packs {#hotfixes-and-feature-packs-included-in-previous-service-packs}
 
 #### AEM 6.4.7.0 {#experience-manager-6470}
 
-AEM 6.4.7.0 är en viktig uppdatering som omfattar prestanda, stabilitet, säkerhet samt viktiga kundkorrigeringar och förbättringar som släppts sedan den allmänna tillgängligheten av AEM 6.4 i **april 2018.**
+AEM 6.4.7.0 är en viktig uppdatering som omfattar prestanda, stabilitet, säkerhet och viktiga kundkorrigeringar och förbättringar som släppts sedan den allmänna tillgängligheten av AEM 6.4 i **april 2018.**
 
 Det är också kumulativt, vilket innebär att 6.4.7.0 innehåller alla AEM 6.4-Service Pack som släppts före det.
 
@@ -177,17 +177,17 @@ Några viktiga högdagrar i AEM 6.4.7.0 är:
 
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.8.17.
 * Stöd har lagts till för att ange en version av en Sites-sida när den togs bort.
-* Ny kolumn för skapat datum, som är sorterbar, har lagts till i **DAM-listvyn** och i resurssökningsresultat i **listvyn** (NPR-31311).
-* Resurssortering baserat på **namnkolumnen** är tillåtet i **listvyn** .
-* Tidsgränsen för batchstorlek och arbetsflödessteg för återbearbetning och batchöverföring kan nu konfigureras från gränssnittet i Dynamic Media.
-* Minnet `pdfBrochure` har angetts till false i molnkonfigurationen Scene 7 för att spara minne i IPS.
+* Ny kolumn för skapat datum, som är sorterbar, har lagts till i vyn **DAM-lista** och i resultaten av resurssökning i vyn **Lista** (NPR-31311).
+* Resurssortering baserad på kolumnen **Namn** har tillåtits i vyn **Lista**.
+* Tidsgränsen för batchstorlek och arbetsflödessteg för återbearbetning och batchöverföring kan nu konfigureras från användargränssnittet i Dynamic Media.
+* `pdfBrochure` har ställts in på false i Scene 7-molnkonfigurationen för att spara minne i IPS.
 
-##### Assets {#assets-6470}
+##### Resurser {#assets-6470}
 
 **Produktförbättringar**
 
-* Den exportversion av API-paket `package com.day.cq.dam.handler.standard.msoffice` som stöds av `dam-handler` bundle uppgraderas till 6.0.0 (CQ-4279059).
-Om du använder paketet `com.day.cq.dam.handler.standard.msoffice` i din anpassade implementering bör du kompilera ditt `dam-handler` paket med den senaste uber burken.
+* Exporten av API-paketet `package com.day.cq.dam.handler.standard.msoffice` som stöds av `dam-handler`-paketet uppgraderas till 6.0.0 (CQ-4279059).
+Om du använder paketet `com.day.cq.dam.handler.standard.msoffice` i din anpassade implementering bör du kompilera `dam-handler`-paketet med den senaste användarbehållaren.
 
 * Ny kolumn för skapat datum, som är sorterbar, har lagts till i DAM-listvyn och i resurssökningsresultat i listvyn (NPR-31311).
 
@@ -203,23 +203,23 @@ Om du använder paketet `com.day.cq.dam.handler.standard.msoffice` i din anpassa
 
 * Specialtecken i ämnesraden i e-postmallar visas inte korrekt (NPR-30547).
 
-* Resursnamn ändras till gemener när du flyttar resurser från en mapp till en annan i AEM som körs i körläget Dynamic Media Scene 7 (NPR-31631).
+* Resursnamn ändras till gemener när du flyttar resurser från en mapp till en annan i AEM som körs i Dynamic Media Scene 7 (NPR-31631).
 
 * Namn på bilduppsättningen ändras till gemener i Scen 7 när bilduppsättning (eller mediaset) skapas och namnges med lämplig namnkonvention i DAM (NPR-31576).
 
-* Arbetsflödet för Dynamic Media Encode Video misslyckas med att generera miniatyrbilder för videon som migreras från Scene 7 till Dynamic Media - körningsläget Scene 7 (NPR-31523).
+* Dynamic Media Encode Video-arbetsflödet kan inte generera miniatyrbilder för videon som migreras från Scene 7 till Dynamic Media - körningsläge Scene 7 (NPR-31523).
 
-* Ett internt serverfel påträffades när ett filter användes för att söka efter uppsättningar i AEM som körs på Dynamic Media - Scene 7-körningsläge (NPR-31388).
+* Ett internt serverfel påträffades när ett filter användes för att söka efter uppsättningar, i AEM som körs i Dynamic Media - Scene 7-miljön (NPR-31388).
 
 * Ett fel uppstod när en fjärrbilduppsättning redigerades för bilden som finns i mappen som heter same som namnet på Scene 7-företaget (NPR-31347).
 
 * Resurser som innehåller referenser publiceras inte (DM) (NPR-31179).
 
-* Det värde för förfallotid (klientcache-tid till live) som konfigurerats för Dynamic Media Hybrid-läge replikeras inte till Dynamic Media Delivery Environment (NPR-31126).
+* Det värde för förfallotid (klientens cachetid till live) som konfigurerats för Dynamic Media hybridläge replikeras inte till Dynamic Media leveransmiljö (NPR-31126).
 
 * Överföringar från AEM Dynamic Media - Scene 7 runmode till Scene 7 tar för lång tid att slutföra (NPR-30926).
 
-* När du har skapat en sida med komponenten Dynamic Media när du publicerar samma, från en författarinstans som körs på Dynamic Media - Scene 7, uppmanas användaren att publicera konfigurationen mscene7 (NPR-30880).
+* När du har skapat en sida med Dynamic Media-komponent och publicerat den, från en författarinstans som körs i Dynamic Media - Scene 7, uppmanas användaren att publicera mscene7-konfigurationen (NPR-30880).
 
 * Värdet för parametern &quot;asset&quot; i visningsprogrammets inbäddningskod ändras inte när du ändrar värdena i fälten &quot;Title after move&quot; och &quot;Name after move&quot; i Dynamic Media - Scene 7 (NPR-30745).
 
@@ -251,7 +251,7 @@ Om du använder paketet `com.day.cq.dam.handler.standard.msoffice` i din anpassa
 
 * PDF-filer är inte indexerade och innehållet i dem är inte sökbart (CQ-4278916).
 
-##### Sites {#sites-6470}
+##### Platser {#sites-6470}
 
 * När starter befordras med endast Befordra ändrade sidor och Befordra starter med ändrade sidor görs, visas endast de ändrade sidorna som befordrade. När listan som ska befordras är korrekt visas de icke-ändrade sidorna fortfarande längst ned i listan (NPR-31314).
 
@@ -283,7 +283,7 @@ Om du använder paketet `com.day.cq.dam.handler.standard.msoffice` i din anpassa
 
 * Uppdatera webbkonsolens säkerhetsprovider bundle-version till 1.2.4 för att ta bort beroendet av start-api från webbkonsolesecurityprovider (NPR-30885).
 
-##### Platform {#platform-6470}
+##### Plattform {#platform-6470}
 
 * Uppdateringar i buffertstorlekskonfigurationen för Jetty-baserad HTTP-tjänst sparas inte (NPR-30925).
 
@@ -291,7 +291,7 @@ Om du använder paketet `com.day.cq.dam.handler.standard.msoffice` i din anpassa
 
 * Uppdaterat Sling-distribuerad händelseadministratör till version 1.1.4 som förbättrar kvaliteten på loggar i en klustrad miljö (NPR-29256).
 
-##### Foundation UI {#foundation-6470}
+##### Foundation-gränssnitt {#foundation-6470}
 
 * Om du bläddrar till slutet av resultatsidan med ett stort antal sökresultat kraschar webbläsaren (NPR-31332).
 
@@ -361,7 +361,7 @@ Om du använder paketet `com.day.cq.dam.handler.standard.msoffice` i din anpassa
 
 #### AEM 6.4.6.0 {#experience-manager-6460}
 
-AEM 6.4.6.0 är en viktig uppdatering som omfattar prestanda, stabilitet, säkerhet samt viktiga kundkorrigeringar och förbättringar som släppts sedan den allmänna tillgängligheten av AEM 6.4 i **april 2018.**
+AEM 6.4.6.0 är en viktig uppdatering som omfattar prestanda, stabilitet, säkerhet och viktiga kundkorrigeringar och förbättringar som släppts sedan den allmänna tillgängligheten av AEM 6.4 i **april 2018.**
 
 Det är också kumulativt, vilket innebär att 6.4.6.0 innehåller alla AEM 6.4-Service Pack som släppts före det.
 
@@ -373,7 +373,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.6.0 är:
 
 **Assets**
 
-* Resursresurslänken i en mapp med blanksteg och tecken i namnet visar tomma grå kort för vissa resurser. `&` NPR-29934: Programfix för CQ-4270187
+* Resursresurslänken i en mapp med blanksteg och `&`-tecknet i namnet visar tomma grå kort för vissa resurser. NPR-29934: Programfix för CQ-4270187
 * DAM-arbetsflödet kraschar när MP4-resurser skapas för AEM. NPR-30031: Programfix för CQ-4271352
 * Anslutningsproblem med Adobe Smart Tag via DataPower. NPR-30026: Programfix för CQ-4269457
 * Det går inte att hitta PDF-filen med OmniSearch. NPR-30046: Programfix för GRANITE-26290
@@ -383,7 +383,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.6.0 är:
 * (Touch UI) Under guiden för att hantera publicering läggs resurser till i replikeringskön när sidorna har lagts till, vilket gör att en del av resurserna visas efter några sekunder. NPR-29985: Programfix för CQ-4270724
 * Om du sorterar sökfrågan efter relevans returneras InDesign-dokument tillsammans med InDesign-mallar. Programfix för CQ-4273864
 * Om användaren har ett e-post-ID med versaler kan användarna inte checka in de resurser som tidigare har checkats ut. Programfix för CQ-4276575
-* Om du konfigurerar Dynamic Media-Cloud Services i `DMHybrid` läge skapas flera tomma rapportsviter som skapats i Analytics utan något rapportsvits-ID som lagrats på AEM, vilket resulterar i duplicering av rapportsviten. Programfix för CQ-4276855
+* Om du konfigurerar Dynamic Media-Cloud Services i `DMHybrid`-läge skapas flera tomma rapportsviter som skapats i Analytics, utan något ID för rapportsviten som lagrats på AEM, vilket resulterar i duplicering av rapportsviten. Programfix för CQ-4276855
 * Varningsdialogrutan visas inte när du befordrar på sidan Hanterad tagg. Programfix för CQ-4252851
 * Navigeringsknappen fungerar inte när du använder karusellen för att hantera taggar. Programfix för CQ-4275499
 * Funktionen för att flytta resurser gruppvis bryts vilket resulterar i att resurser inte flyttas. Programfix för CQ-4272987
@@ -391,7 +391,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.6.0 är:
 **Sites**
 
 * `pageinfo.json` förfrågningar är extremt långsamma och tar för lång tid att ladda. NPR-29709: Programfix för CQ-4269560
-* `onTime` eller `offTime` metadataegenskaper som sparats på resurser återkallas inte om AEM startas om. NPR-30413: Programfix för CQ-4272784
+* `onTime` eller  `offTime` metadataegenskaper som sparats på resurser återkallas inte om AEM startas om. NPR-30413: Programfix för CQ-4272784
 * På grund av ett felaktigt beteende för klassen ConfigPostProcessor tas cq bort när den överordnade sidan avbryts: LiveRelationship-blandningstyp från den underordnade sidan. NPR-30536, NPR-30510: Programfix för CQ-4254113
 * XSS (Cross-site scripting) på sidan för redigering i Start-arbetsflödet på sidan för Campaign. NPR-29747: Programfix för CQ-4271067
 * (Klassiskt användargränssnitt) Workflow lock-scenen inaktiverar arbetsflödesfliken tills låset släpps. NPR-30356: Programfix för CQ-4237557
@@ -406,7 +406,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.6.0 är:
 * Publicera/avpublicera från ett sidalias stöds inte och bör tas bort. NPR-30062: Programfix för CQ-4271249
 * Varningen ResourceResolver som inte stängts i ExperienceFragmentsReplicationListener orsakar stabilitetsproblem över tid och tvingar AEM att starta om. NPR-30416: Programfix för CQ-4257521
 * Om du flyttar Experience Fragments som refereras på mer än 150 sidor ändras inte fragmentPath på de sidor där de refereras. NPR-30556: Programfix för CQ-4274900
-* Tolkningsfel vid öppning av ett innehållsfragment som innehåller tecknen USD (`$`) och inledande klammer (`{`) efter varandra. Programfix för CQ-4270266
+* Tolkningsfel vid öppning av ett innehållsfragment som har dollartecken (`$`) och inledande klammerparentes (`{`) efter varandra. Programfix för CQ-4270266
 * VersionPreviewServlet fungerar inte i NullPointerException vid försök att visa en version av ett Experience Fragment i tidslinjen. NPR-30074: Programfix för CQ-4271881
 * Det går inte att låsa innehållsfragment via incheckningsfunktionen. NPR-29923: Programfix för CQ-4258785
 * Signaturverifieringsfel i SAML-autentiseringshanteraren. NPR-30379: Begäran om backport för GRANITE-26567
@@ -513,7 +513,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.6.0 är:
 
 #### AEM 6.4.5.0 {#experience-manager-6450}
 
-AEM 6.4.5.0 är en viktig uppdatering som omfattar prestanda, stabilitet, säkerhet samt viktiga kundkorrigeringar och förbättringar som släppts sedan den allmänna tillgängligheten av AEM 6.4 i **april 2018.**
+AEM 6.4.5.0 är en viktig uppdatering som omfattar prestanda, stabilitet, säkerhet och viktiga kundkorrigeringar och förbättringar som släppts sedan den allmänna tillgängligheten av AEM 6.4 i **april 2018.**
 
 Det är också kumulativt, vilket innebär att 6.4.5.0 innehåller alla AEM 6.4-Service Pack som släppts före det.
 
@@ -522,12 +522,12 @@ Några av de viktigaste högdagrarna i AEM 6.4.5.0 är:
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.8.13.
 * Tillagd sockettimeout och timeout för anslutning i replikeringsagenter för varumärkesportalen.
 * Förbättrade sökfunktioner - Ökade sidnumreringsgränsen för sökresultatet till 100 sidor.
-* Inaktiverad `AssetDownloadServlet` OSGi-komponent som standard AEM publiceringsinstanser. Mer information finns i [Hämta resurser från AEM](/help/assets/download-assets-from-aem.md).
-* Aktiverat stöd för flera Platshanterare för resurser. Mer information finns i [Återanvända resurser med MSM för resurser](/help/assets/reuse-assets-using-msm.md).
+* Inaktiverade OSGi-komponenten `AssetDownloadServlet` som standard AEM publiceringsinstanser. Mer information finns i [Hämta resurser från AEM](/help/assets/download-assets-from-aem.md).
+* Aktiverat stöd för flera Platshanterare för resurser. Mer information finns i [Återanvända resurser med MSM för Resurser](/help/assets/reuse-assets-using-msm.md).
 
-**Assets**
+**Resurser**
 
-* Resurser med en apostrof i filnamnet synkroniseras inte till dynamiska media. NPR-29538: Programfix för CQ-4270592
+* Resurser med en apostrof i filnamnet synkroniseras inte till Dynamic Media. NPR-29538: Programfix för CQ-4270592
 * DAM DMGGateway-gränssnittet för S3-multipart-stöd har uppdaterats. NPR-29740: Programfix för CQ-4226303
 * Dialogrutan för hämtning av resurser visar en felaktig filstorlek när återgivningar hämtas för en video i Dynamic Media. NPR-29642: Programfix för CQ-4246202
 * Resurser blir oanvändbara efter Dag CQ DAM Mime Type Service använder text för m3u8. NPR-29276: Programfix för CQ-4264052
@@ -562,7 +562,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.5.0 är:
 * Frågebegränsningsrelaterade problem med tillgångsrapporter efter uppgradering till AEM 6.4.3. NPR-28588: Programfix för CQ-4262022, CQ-4260697
 * Hämtningsfunktionen utnyttjar AEM Assets via en resurshämtningsserver som gör det möjligt för anonyma användare att hämta alla resurser. NPR-27315, programfix för CQ-4254732
 
-**Sites**
+**Webbplatser**
 
 * JCR-adresstaggens namn ska fyllas i automatiskt baserat på taggens titel. NPR-28990: Programfix för CQ-4199411
 * Knappen Avbryt arv visas inte i vissa av de fält som har lagts till i sidegenskaperna. NPR-29079: Programfix för CQ-4265686
@@ -732,9 +732,9 @@ Viktiga högdagrar för AEM 6.4.5.0-formulär är:
 
 **Funktionspaket ingår**
 
-**Assets**
+**Resurser**
 
-* Aktiverat stöd för flera Platshanterare för resurser. Mer information finns i [Återanvända resurser med MSM för resurser](/help/assets/reuse-assets-using-msm.md). NPR-26450: Programfix för CQ-4259922
+* Aktiverat stöd för flera Platshanterare för resurser. Mer information finns i [Återanvända resurser med MSM för Resurser](/help/assets/reuse-assets-using-msm.md). NPR-26450: Programfix för CQ-4259922
 
 **OSGI-paket och innehållspaket som ingår**
 
@@ -750,7 +750,7 @@ Förteckning över innehållspaket som ingår i AEM 6.4.5.0
 
 #### AEM 6.4.4.0 {#experience-manager-6440}
 
-AEM 6.4.4.0 är en viktig uppdatering som omfattar prestanda, stabilitet, säkerhet samt viktiga kundkorrigeringar och förbättringar som släppts sedan den allmänna tillgängligheten av AEM 6.4 i **april 2018.**
+AEM 6.4.4.0 är en viktig uppdatering som omfattar prestanda, stabilitet, säkerhet och viktiga kundkorrigeringar och förbättringar som släppts sedan den allmänna tillgängligheten av AEM 6.4 i **april 2018.**
 
 Det är också kumulativt, vilket innebär att 6.4.4.0 innehåller alla AEM 6.4-Service Pack som släppts före det.
 
@@ -768,7 +768,7 @@ Några viktiga högdagrar i AEM 6.4.4.0 är:
 * En kontroll har lagts till för att ignorera tomma värden för talinmatningsmultifält i innehållets libs.
 * Aktiverat stöd för Microsoft Translator Text API v3.
 
-**Assets**
+**Resurser**
 
 * Migrera AVS- och Stock-integrering till AEM 6.4.4.0 NPR-27632
 * Om du publicerar en tom resursmapp med undermappar försvinner undermapparna. NPR-27558: Programfix för CQ-4254701
@@ -780,13 +780,13 @@ Några viktiga högdagrar i AEM 6.4.4.0 är:
 * När en CSV-fil har ett värde som avgränsas med kommatecken i en enda kolumn, kommer AEM CSV-redigerare inte att kringgå kommatecknet och behandla det som en separat kolumn. NPR-28801: Programfix för CQ-4261694
 * Problem med metadataschredigeraren när sökvägsläsaren används för att välja data. NPR-28674: Programfix för CQ-4263005
 * För många resurser bearbetas till tjänsten för smart innehåll vilket ger en enorm tid att slutföra den periodiska taggningsprocessen. NPR-28640: Programfix för CQ-4262661, CQ-4262644, CQ-4263234
-* Skrivbordsåtgärder fungerar inte för Omnissearch-resultat från `aem/start.html` sidan. NPR-27242: Programfix för CQ-4248176
+* Skrivbordsåtgärder fungerar inte för Omnissearch-resultat från `aem/start.html`-sidan. NPR-27242: Programfix för CQ-4248176
 * Resurs-API tillåter inte överföring av fil > 2 GB vilket orsakar överföringsfel. NPR-27629: Programfix för Granite-23590
 * Metadata sparas inte i den hämtade resursen i det första försöket om Dynamic Media är aktiverat för instansen. NPR-28233: Programfix för CQ-4260759
 * Tjänstlösaren är inte stängd i konfigurationen för SiteCatalyst. NPR-28015: Programfix för CQ-4259397
 * Att flytta resurser i DAM resulterar inte i en liknande förflyttning på Scene7 (p2p-konfig). NPR-28313: Programfix för CQ-4261091
 
-**Sites**
+**Webbplatser**
 
 * (Klassiskt användargränssnitt) En bråkdel av live-kopior visas i utrullningslistan. NPR-28598, NPR-28574: Programfix för CQ-4263410
 * LiveRelationshipManagerImpl genererar undantag när cq:överordnad är tom eller ogiltig. NPR-28590: Programfix för CQ-4263115
@@ -974,7 +974,8 @@ Viktiga högdagrar för AEM 6.4.4.0-formulär är:
 **Forms Management**
 
 Stöd har lagts till för att ersätta användningen av ett bibliotek med verktygsfält med understreck i Forms Managers guide för att starta granskning och flytta resursguiden. NPR-27643: Programfix för CQ-4246536.
-Ett paket förblir installerat efter installation av Forms Management-paketet på gren release/640. Programfix för CQ-4265410Forms som har skickats in med bilagor visas inte i arbetsflödet med åtgärden Anropa AEM Forms-arbetsflöde och aktivera portalsändning har markerats. Programfix för CQ-4263110
+Ett paket förblir installerat efter installation av Forms Management-paketet på gren release/640. Programfix för CQ-4265410
+Forms som har bifogats dem visas inte i arbetsflödet med Skicka-åtgärden Anropa AEM Forms-arbetsflöde och aktivera portalsändning markerad. Programfix för CQ-4263110
 
 **Forms - serverintegrering**
 
@@ -1004,11 +1005,11 @@ Ett paket förblir installerat efter installation av Forms Management-paketet p�
 
 **Funktionspaket ingår**
 
-**Sites**
+**Webbplatser**
 
 * Versionshantering för innehållsfragment jämför skillnader för AEM 6.4.  NPR-26760: FP för CQ-4248839
 * Förbättringar av variationsdifferensen för innehållsfragment för AEM 6.4.  NPR-27866: FP för CQ-4248839
-* Aktiverad funktion i OSGI-konfiguration **AEM flagga** för återkallade arbetsflöden. Återkallningsåtgärden bör avsluta arbetsflödesinstansen efter att flaggan har angetts. NPR-26451: Programfix för CQ-4259090
+* Aktiverad funktion i OSGI-konfiguration **AEM för återtagande av arbetsflöde**. Återkallningsåtgärden bör avsluta arbetsflödesinstansen efter att flaggan har angetts. NPR-26451: Programfix för CQ-4259090
 
 **Plattform**
 
@@ -1044,7 +1045,7 @@ Några viktiga högdagrar i AEM 6.4.3.0 är:
 * Förbättrad hantering av platshållarobjekt (kortvyn och listvyn) under markeringen.
 * Adobe IMS-autentisering och Admin Console-stöd för Managed Services har lagts till.
 
-**Assets**
+**Resurser**
 
 * Arbetsflödet för DAM-uppdatering av resurs extraherar inte referenser från INDD-filer om alternativet Dolda ID är aktiverat. NPR-26243; Programfix för CQ-4250933
 * Meddelandet om att åtgärden lyckades visas inte när resurser publiceras med Assets Bulk Editor. NPR-26252; Programfix för CQ-4251688.
@@ -1056,12 +1057,12 @@ Några viktiga högdagrar i AEM 6.4.3.0 är:
 * Om användare anger ett icke-standardvärde för Företagets rotmapp i DMS7-molnkonfigurationen fungerar inte visningsförinställningen som förväntat. NPR-26360; Programfix för CQ-4249505
 * Resursrapporteringen misslyckas för instanser med ett mycket stort antal resurser. NPR-27278; Programfix för CQ-4256748
 * Undermappar ärver inte den överordnade mappens SmartCrop-bildprofil. NPR-27197; Programfix för CQ-4256273
-* När integreringen av dynamiska media är aktiverad ändras vissa metadataegenskaper för Assets. Bredd, höjd och platsattribut visas inte. NPR-27203; Programfix för CQ-4256258
+* När Dynamic Media-integrering är aktiverad ändras vissa metadataegenskaper för Assets. Bredd, höjd och platsattribut visas inte. NPR-27203; Programfix för CQ-4256258
 * Dynamic Media använder inte den konfigurerade proxyn för vissa typer av resurser. NPR-25211; Programfix för CQ-4244871
 * Sidan för metadataredigeraren innehåller ett null-pekarundantag för ogiltig objektparameter. NPR-26169; Programfix för CQ-4241368.
 * Om en nedrullningsbar meny har en urvalsregel och en obligatorisk regel har tillämpats på den kan den obligatoriska regeln inte uppfyllas i metadataredigeraren. NPR-27479; Programfix från CQ-4251428
 
-**Sites**
+**Webbplatser**
 
 * Användaren kan styra textredigeringsfunktionerna i helskärmsläge i helskärmsläge i , men kan inte styra redigeringsfunktionerna i RTF-redigeringsprogrammet i Edit Dialog med innehållsprinciper. NPR-26750: Programfix för CQ-4241130
 * RTF-redigerare blir oanvändbara när de växlar från helskärm till flytande dialogruta. Den flytande vyn innehåller två RTF-redigerare. NPR-25589: Programfix för CQ-4206008
@@ -1073,7 +1074,8 @@ Några viktiga högdagrar i AEM 6.4.3.0 är:
 * När RTF-redigeraren kombineras med flera fält visas ett TypeError-undantag: fieldAPI.getName är inte en funktion vid foundation.js-fel inträffar. NPR-27146: Programfix för CQ-4253155
 * Salesforce-integrering kan inte använda proxykonfigurationen. NPR-27244: Programfix för CQ-4245300
 * När du schemalägger en sida för aktivering med alternativet Hantera publikation för ett senare datum och växlar till listvyn saknas kalenderikonen. NPR-26974: Programfix för CQ-4239206
-* Användare kan inte redigera behörigheter för slutna användargrupper i sidegenskaperna. NPR-27138: Programfix för CQ-4256089Det går inte att redigera taggar via taggning. NPR-26957: Programfix för CQ-4254858
+* Användare kan inte redigera behörigheter för slutna användargrupper i sidegenskaperna. NPR-27138: Programfix för CQ-4256089
+Det går inte att redigera taggar via taggning. NPR-26957: Programfix för CQ-4254858
 * När en tagg som refereras från en strukturerad innehållsfragmentmodell flyttas, uppdateras inte de befintliga referenserna till taggen i ett innehållsfragment. Detta händer i redigeringsskärmen för innehållsfragmentmodellen. NPR-26776: Programfix för CQ-4251805
 * När du skapar och befordrar en start med flera sidor skapas flera versioner för varje sida. NPR-26917: Programfix för CQ-4254663
 * AEM siteadmin hanterar inte sökvägar som anges i webbläsarens adressfält. NPR-26780: Programfix för CQ-4254097
@@ -1290,9 +1292,9 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.8.7.
 * Stöd för HTML Template Language (HTML) Specification 1.4 har lagts till
 * Stöd för MongoDB Enterprise 3.6 har lagts till.
-* Sidredigeraren Sites har stöd för kontextredigering och komposition med komponenter på klientsidan som byggs in React eller Angular i kombination med <a href="../sites-developing/spa-walkthrough.md">AEM SPA Editor JS SDK</a>.
+* Sidredigeraren Platser lägger till stöd för kontextredigering och komposition med komponenter på klientsidan som byggs i React eller Angular i kombination med <a href="../sites-developing/spa-walkthrough.md">AEM redigeraren JS SDK</a>.
 * Förbättringar av innehållsfragment: lade till möjligheten att kommentera i textfält och en jämförelse av versioner sida vid sida.
-* Ännu bättre [integrering med Adobe Stock](/help/assets/aem-assets-adobe-stock.md) så att användarna kan söka efter, förhandsgranska, spara och licensiera Adobe Stock-mediefiler direkt AEM användargränssnittet. Mer information finns i [Använda Adobe Stock-resurser med AEM Assets](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/creative-workflows/adobe-stock.html).
+* [integrering med Adobe Stock](/help/assets/aem-assets-adobe-stock.md) har lagts till så att användarna kan söka efter, förhandsgranska, spara och licensiera Adobe Stock-resurser direkt AEM användargränssnittet. Mer information finns i [Använda Adobe Stock-resurser med AEM Assets](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/creative-workflows/adobe-stock.html).
 * Resurser har fått stöd för dynamisk villkorsstyrd metaschema och möjlighet att ange ett metadataram för resursmappar.
 * Lagt till konfiguration i varje komponent för att aktivera/inaktivera funktionen för att skapa/uppdatera mappminiatyrer.
 * Förbättrad bildredigering vid sidredigering.
@@ -1308,7 +1310,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 * GCC har uppdaterats till den senaste versionen.
 * Flytta SAML till ny extern IDP-synkronisering.
 
-**Assets**
+**Resurser**
 
 * Generering av delresurser för pptx-filen innehåller inga bilder eller miniatyrbilder. NPR-24286: Programfix för CQ-4217986
 * migrateAllAssets - Lägg till stöd för gruppbearbetning och förbättra AEM som lägger till UUID till gamla resurser. NPR-24861: Programfix för CQ-4242863 och CQ-4247874
@@ -1326,11 +1328,11 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 * Publicera senare funktionalitet för replikering AEM varumärkesportalen. NPR-25911: Programfix för CQ-109139
 * Publicering och avpublicering av den privata samlingen av icke-adminanvändare resulterar i en NPE-fil. NPR-25906: Programfix för CQ-4250594
 * Inaktivera publicering av innehållsfragment och formulärscheman till varumärkesportalen. NPR-24176, NPR-26004: Programfix för CQ-4251592, CQ-4252026
-* (Dynamic Media) Uppdaterade DM-visningsprogram till version 5.10.1, som gör det möjligt att kontrollera dubblettnamn på sidan Bildförinställning. Mer information finns i Uppdatera dynamiska mediavisare (5.10.1). NPR-24403: Programfix för CQ-4247554
+* (Dynamic Media) DM-visningsprogrammen har uppdaterats till version 5.10.1 som gör det möjligt att kontrollera dubblettnamn på sidan Bildförinställning. Mer information finns i Uppdatera Dynamic Media-visningsprogram (5.10.1). NPR-24403: Programfix för CQ-4247554
 * Javascript-fel i webbläsarkonsolen i kolumnvyn när du väljer en resurs eller mapp. NPR-25939: Programfix för CQ-4250228
 * (Kolumnvy) Det går inte att identifiera uppgifter eftersom nyckelfilen visas som en tom vit post. NPR-25903: Programfix för CQ-4246307
 
-**Sites**
+**Webbplatser**
 
 * Frågan för datakälla.jsp i AEM 6.2 skiljer sig från AEM 6.4. NPR-24968: Programfix för CQ-4244235
 * (Klassiskt användargränssnitt) Det går inte att lägga till taggar på sidor. NPR-25255, NPR-25612: Programfix för CQ-4249615
@@ -1339,7 +1341,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 * ON/OFF-tid lagras i crx/de men hämtar inte samma i gränssnittskonsolen för sidegenskaper. NPR-25154: Programfix för CQ-4243431
 * Stilar Dialogrutans inledande egenskapsvärden bryts. NPR-25648: Programfix för CQ-4250073
 * När du definierar en cq:tagName-egenskap i en cq:htmlTag-nod beaktas inte taggnamnet om komponenten inkluderas via JSP. NPR-24154: Programfix för CQ-4244120
-* För kapslade parsyskomponenter tillämpas alltid den första (med den minst kapslade sökvägen) som uppfyller designen från flera tillgängliga komponenter. Mer information finns i [Utforma banupplösning](https://docs.adobe.com/content/help/en/experience-manager-64/developing/platform/templates/page-templates-static.html). NPR-24973: Programfix för CQ-4246276
+* För kapslade parsyskomponenter tillämpas alltid den första (med den minst kapslade sökvägen) som uppfyller designen från flera tillgängliga komponenter. Mer information finns i [Upplösning för designsökväg](https://docs.adobe.com/content/help/en/experience-manager-64/developing/platform/templates/page-templates-static.html). NPR-24973: Programfix för CQ-4246276
 * När du klistrar in text i en RTE-komponent visas en popup-dialogruta, men den återges inte korrekt. NPR-24895: Programfix för CQ-4245901
 * (RTE) Prestandaproblem med obligatorisk fältindikator. NPR-24894: Programfix för CQ-4241895
 * (Sidkomponent) Om du lägger till en komponent i Parsys klipps den av från höger och dras ut från enhetens bildrutebredd. NPR-25536: Programfix för CQ-4238224
@@ -1361,7 +1363,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 * Uppdatera EditableActions baserat på omplaceringen columnClassNames. Programfix för CQ-4250781
 * Visa resurs- och modellsökvägar med en enda egenskap och ett enda attribut. Programfix för CQ-4251255
 * Återställ ändringar av API:t export.json. Programfix för CQ-4251854
-* (Redigerbar SPA) Release-kandidat för 1.0.0. Programfix för CQ-4251991
+* (Redigerbar SPA) Frigör kandidat för 1.0.0. Programfix för CQ-4251991
 * Verktygsfältet för redigering inaktiveras för andra komponenter när du redigerar en komponent. Programfix för CQ-4253270
 
 **Integrering**
@@ -1411,7 +1413,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 * Ett undantag genereras när innehåll tas bort. NPR-25869: Programfix för CQ-4248908
 * Sidnumrerade länkar till trådar med många inlägg fungerar inte på meddelanden. NPR-25678: Programfix för CQ-4243038
 * Tidsvärden i sökresultat visar servertid i stället för klientens tidszon. NPR-25594: Programfix för CQ-4248986
-* (Forumkommentarer) Bakåtknappen i webbläsaren fungerar inte som förväntat. NPR-25203: Programfix för CQ-4248573
+* (Forumkommentarer) Bakåtknappen i webbläsaren fungerar inte som förväntat. NPR-25205: Programfix för CQ-4248573
 * (Sökresultat) Bakåtknappen i webbläsaren fungerar inte som förväntat. NPR-25214: Programfix för CQ-4248574
 * Null returneras när communitygroupmedlemlist-komponenten läggs över. NPR-25228: Programfix för CQ-4248523
 * (Communities Calendar) ClassCastException genereras när händelsen sparas med den nya omslagsbilden. NPR-25167: Programfix för CQ-4248662
@@ -1471,14 +1473,14 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 **UI - Foundation**
 
 * Proaktiv grundläggande gränssnittssupport. NPR-24344, NPR-24345, NPR-25176, NPR-25095, NPR-24332, NPR-25653, NPR-25932, NPR-259 35, NPR-25976
-* (Design Importer) Om du importerar en sida importeras inte js,css. NPR-25203: Programfix för Granite-2236
+* (Designimporterare) Om du importerar en sida importeras inte js,css. NPR-25203: Programfix för Granite-2236
 * Proactive Foundation UI Backports för att förbättra produktens stabilitet. NPR-24334
 
 **MAC - Test &amp; Target-integrering**
 
 * Den andra sidan av PersonalizationWizard (som startades med Start Targeting) är tom och ger konsolfel. Programfix för CQ-4253277
 
-**Experience Fragments**
+**Upplevelsefragment**
 
 * Sammanslagna upplevelsefragment/målintegrering till AEM 6.4.2.0. Programfix för CQ-4248653
 
@@ -1535,7 +1537,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 
 **DAM - DMServices**
 
-* Dynamic Media Renditions kunde inte genereras för EPS-filen. Programfix för CQ-4243688
+* Dynamic Media Renditions failed to generate for EPS file. Programfix för CQ-4243688
 
 **Granit**
 
@@ -1554,7 +1556,7 @@ Viktiga högdagrar för AEM 6.4.2.0-formulär är:
 * Funktioner som användaren kan använda samma WSDL-fil för flera tjänster har lagts till.
 * Tidsstämpelmönstret som inte stöds togs bort från listrutan för datumväljaren.
 * Stöd för underliggande xfaf och pdf i OSGI har lagts till.
-* Utökat stöd för att använda [transaktionsrapportfunktionen](https://docs.adobe.com/content/help/en/experience-manager-64/forms/transaction-reports/transaction-reports-overview.html) vid anläggningsdistributioner.
+* Stöd har lagts till för att använda funktionen [transaktionsrapporter](https://docs.adobe.com/content/help/en/experience-manager-64/forms/transaction-reports/transaction-reports-overview.html) vid lokala distributioner.
 * Tillagd kod som inte visar underordnade var i villkorsregelredigeraren.
 
 **Forms tilläggspaket**
@@ -1655,17 +1657,17 @@ Viktiga högdagrar för AEM 6.4.2.0-formulär är:
 
 **Funktionspaket ingår**
 
-**Assets**
+**Resurser**
 
-* Ännu bättre [integrering med Adobe Stock](/help/assets/aem-assets-adobe-stock.md) så att man kan söka, förhandsgranska, spara och licensiera Adobe Stock-material direkt AEM användargränssnittet. Mer information finns i [Använda Adobe Stock-resurser med AEM resurser](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/creative-workflows/adobe-stock.html). NPR-15779: Programfix för CQ-30857
-* Stöd för dynamisk villkorsstyrd metaschema har lagts till. Mer information finns i [Överlappande metadata](/help/assets/cascading-metadata.md). NPR-25189: Programfix för CQ-4237413
+* [integrering med Adobe Stock](/help/assets/aem-assets-adobe-stock.md) så att användare kan söka efter, förhandsgranska, spara och licensiera Adobe Stock-resurser direkt AEM användargränssnittet. Mer information finns i [Använda Adobe Stock-resurser med AEM](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/creative-workflows/adobe-stock.html). NPR-15779: Programfix för CQ-30857
+* Stöd för dynamisk villkorsstyrd metaschema har lagts till. Mer information finns i [Cascading Metadata](/help/assets/cascading-metadata.md). NPR-25189: Programfix för CQ-4237413
 * Alternativet &quot;Resurshämtning&quot; har aktiverats för innehållsfragment. Mer information finns i [Resursrapporter](/help/assets/asset-reports.md). NPR-25186: Programfix för CQ-4237410
-* Möjlighet att ange ett metadatamatchema för resursmappar. Mer information finns i Schema för [mappmetadata](/help/assets/folder-metadata-schema.md) och i [Konfigurationsinställningar](#configuration-settings-required-for-npr) efter installationen av AEM 6.4.2.0. NPR-21268: Programfix för CQ-4221574
+* Möjlighet att ange ett metadatamatchema för resursmappar. Mer information finns i [Mappmetadataschema](/help/assets/folder-metadata-schema.md) och i [Konfigurationsinställningar](#configuration-settings-required-for-npr) efter installationen av AEM 6.4.2.0. NPR-21268: Programfix för CQ-4221574
 
-**Sites**
+**Webbplatser**
 
 * Tillåt redigering av ett innehållsfragment utan borttagningsbehörigheter. Mer information finns i [Anpassa och utöka innehållsfragment](https://docs.adobe.com/content/help/en/experience-manager-64/assets/fragments/content-fragments-delete.html). NPR-25793: Programfix för CQ-4248750
-* Lagt till möjlighet att kommentera innehållsfragment. For more information, see [Variations-Authoring Fragments](https://docs.adobe.com/content/help/en/experience-manager-64/assets/fragments/content-fragments-variations.html#annotating-a-content-fragment). NPR-25188: Programfix för CQ-4235336
+* Lagt till möjlighet att kommentera innehållsfragment. Mer information finns i [Variations-Authoring Fragments](https://docs.adobe.com/content/help/en/experience-manager-64/assets/fragments/content-fragments-variations.html#annotating-a-content-fragment). NPR-25188: Programfix för CQ-4235336
 * Versionshantering: Jämför innehållsfragment sida vid sida. Mer information finns i [Hantera innehållsfragment](https://docs.adobe.com/content/help/en/experience-manager-64/assets/fragments/content-fragments-managing.html#comparing-fragment-versions). NPR-25187: Programfix för CQ-4237412
 * Förbättringar i bildredigeraren har stöd för AEM 6.4.2.0. Mer information finns i [Bildredigeraren](https://docs.adobe.com/content/help/en/experience-manager-64/developing/components/image-editor.html). NPR-24467
 
@@ -1703,7 +1705,7 @@ AEM 6.4.1.0 kan installeras på AEM 6.4 GA. Några av huvudpunkterna i Service P
 * Proaktiv backport för korrigeringar av platform.clientlibs.
 * Förebygga automatisk körning av skript när det inte finns några indata till explicit dataType (matchar CVE-2015-9251).
 
-**Assets**
+**Resurser**
 
 * Listrutan Cascading visar tomt när egenskapssidan för resursen öppnas igen. NPR-23042: Programfix för CQ-4238761
 * Delade länkar på mylinkshare page och länkar till sidan är inte tillgängliga för icke-admin-användare NPR-23044: Programfix för CQ-4239004
@@ -1714,7 +1716,7 @@ AEM 6.4.1.0 kan installeras på AEM 6.4 GA. Några av huvudpunkterna i Service P
 * Extrahering av XMP metadata av Scene7ListInfoProvider är resurskrävande. NPR-23754
 * (dam-delivery) HTTP-vidarebefordraren respekterar inte HTTP-proxyinställningarna. NPR-24002: Programfix för CQ-4244140
 
-**Sites**
+**Webbplatser**
 
 * När vi byter namn på sidan när vi flyttar den, går det bra att flytta sidan, men namnbytet fungerar inte. NPR-22923: Programfix för CQ-4235907
 * Fel vid publicering av en Live Copy-sida som pekar på en importsida i Adobe Campaigns. NPR-23053: Programfix för CQ-4237164
@@ -1745,7 +1747,7 @@ AEM 6.4.1.0 kan installeras på AEM 6.4 GA. Några av huvudpunkterna i Service P
 * Proaktiv backport för granite.ui.coralui-korrigeringar. NPR-23538
 * Det går inte att ta bort flera användare från gruppen samtidigt. NPR-23846
 * (OMEGA) Rapportera&quot;Funktion&quot; endast på engelska. NPR-23989: Programfix för Granite-21231
-* (Designimporterare) Om du importerar en sida importeras inte js, css. NPR-25205: Programfix för Granite-2236
+* (Designimporterare) Om du importerar en sida importeras inte js, css. NPR-25203: Programfix för Granite-2236
 
 **Integrering**
 
@@ -1856,11 +1858,11 @@ AEM 6.4.1.0 kan installeras på AEM 6.4 GA. Några av huvudpunkterna i Service P
 **DAM - DM-klient**
 
 * Om du uppgraderar till 6.4 tas tidigare skapade videokodningsprofiler bort. Programfix för CQ-4244067
-* Attributet Alt-text är brutet i komponenten Dynamic Media. Programfix för CQ-4244081
+* Attributet Alt Text är brutet i Dynamic Media-komponenten. Programfix för CQ-4244081
 * (DMS7) Redigering av fjärruppsättningar i AEM skrivs inte över i Scene7. Programfix för CQ-4243430
 * Verifiering av 6.4 SP1-versionen på DM Hybrid. Programfix för CQ-4244623
 * (DMS7-UA) När du klickar på knappen Bädda in för en publicerad videoresurs verkar ingenting hända. Dialogrutan Bädda in förväntas visas med HTML-kod. Programfix för CQ-4245237
-* (DM Hybrid) Kopiera URL för publicerade videomaterial eller blandade mediamängder får &quot;`[object Object]`&quot; i URL-dialogrutan. Programfix för CQ-4245236, CQ-4245451
+* (DM Hybrid) Kopiera URL för publicerade videomaterial eller blandade medieuppsättningar får `[object Object]` i URL-dialogrutan. Programfix för CQ-4245236, CQ-4245451
 * (DMHybrid) Videons detaljvysida innehåller inte förhandsgranskningen av videobasset och skickar ett felmeddelande till konsolen. Programfix för CQ-4244320
 * Automatisk S7-kodning av webbutiksinnehåll. Programfix för CQ-4242253
 * Förinställningarna för videobearbetning kan inte ha en ny förinställning för videokodning tillagd och inte heller redigera de befintliga kodningsförinställningarna. Programfix för CQ-4240407
@@ -1891,7 +1893,7 @@ AEM 6.4.1.0 kan installeras på AEM 6.4 GA. Några av huvudpunkterna i Service P
 * (DMS7) Ta bort MIME-typmappningen: image_x-eps. Programfix för CQ-4240394
 * (DMS7) Överföringsparametrar för blockerad bakgrund skickar inte ipsApiService.log och fungerar därför inte. Programfix för CQ-4240686
 * Om du uppgraderar bildbearbetningsprofiler som skapats i en instans av version 6.3 till 6.4 bryts egenskapen Crop-type. Programfix för CQ-4237739
-* (Dynamic Media) Det går inte att överföra reguljära resurser utanför mappen SmartCrop. Programfix för CQ-4237670
+* (Dynamic Media) Det går inte att överföra reguljära resurser utanför mappen smartcrop. Programfix för CQ-4237670
 * Justera profilens reservkod för profilnamnet Adaptive Video Encoding till Adaptive_Video_Encoding. Programfix för CQ-4237666
 * EmbedXMP-data anges alltid till&quot;active&quot; för Ptiff-genereringsprocessen. Programfix för CQ-4234498
 * CMYK-bildåtergivningen har felaktig mättnad. Programfix för CQ-4235470
@@ -1901,7 +1903,7 @@ AEM 6.4.1.0 kan installeras på AEM 6.4 GA. Några av huvudpunkterna i Service P
 
 **DAM - Smarta taggar**
 
-* Nya [förbättrade smarta taggar](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/enhanced-smart-tags.html). NPR-21951
+* [Förbättrade smarta taggar](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/enhanced-smart-tags.html) introducerades. NPR-21951
 
 **Forms**
 
@@ -1909,7 +1911,7 @@ AEM Forms-korrigeringar levereras via tilläggspaket och andra patch-installerar
 
 AEM Forms i korthet:
 
-* AEM Forms lägger in funktioner [](https://docs.adobe.com/content/help/en/experience-manager-64/forms/transaction-reports/transaction-reports-overview.html) för att följa upp och hålla reda på transaktioner som skickade formulär, bearbetade dokument och återgivna dokument i AEM Forms. Den ger insikter om produktanvändning och hjälper företagsanvändare att förstå digitala bearbetningsvolymer.
+* AEM Forms introducerar funktionen [transaktionsrapporter](https://docs.adobe.com/content/help/en/experience-manager-64/forms/transaction-reports/transaction-reports-overview.html) för att spåra och hålla reda på antalet transaktioner som skickade formulär, bearbetade dokument och återgivna dokument i din AEM Forms-distribution. Den ger insikter om produktanvändning och hjälper företagsanvändare att förstå digitala bearbetningsvolymer.
 * PDF/UA har stöd för XML-formulär.
 * Tillagd allowProxy = true för Clientlib **aemfd.ccm.channel.contentpage**
 * Uppdaterad kod som gör avancerad titelsökning som innehåller i stället för lika.
@@ -1943,7 +1945,7 @@ AEM Forms i korthet:
 * Värden saknas i verifieringsfasen på föruppgraderings- och uppgraderingsservern för det skickade formuläret. Programfix för CQ-4241896
 * Knappen Avsluta och spara längst ned på sidan fungerar inte. Programfix för CQ-4240112
 * Kontaktnummer saknas i den uppgraderade installationen. Programfix för CQ-4239870
-* Under `ACTION TAKEN` avsnittet Tvisttyp på fliken Ytterligare dokument som stöder mitt anspråk har ytterligare fältet Korrekturtyp sparats. Programfix för CQ-4239873
+* Under `ACTION TAKEN`-avsnittet på fliken Dispute Type (Dispute Type) har &quot;Additional documents to support my claim&quot; ett annat fält där Korrekturtyp har sparats. Programfix för CQ-4239873
 * Fel i getDataAPI påträffades vid verifyPdf-steget. Programfix för CQ-4239865
 * Fel i migreringsloggar för författare och publiceringsinstans. Programfix för CQ-4239365
 * Fel i migreringsloggar för författare och publiceringsinstans. Programfix för CQ-4239635
@@ -2065,12 +2067,12 @@ AEM Forms i korthet:
 
 **Funktionspaket ingår**
 
-**Assets**
+**Resurser**
 
 * Förbättrade funktioner för smarta taggar. Mer information finns i [Förbättrade smarta taggar](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/enhanced-smart-tags.html). NPR-21951: Programfix för CQ-4234883
 * Nu finns AEM Assets References i InDesign. Mer information finns i [AEM Assets-referenser i InDesign](/help/assets/managing-linked-subassets.md). NPR-23386
 
-**Sites**
+**Webbplatser**
 
 * (Sidredigering) Förbättringar i bildredigeraren. Mer information finns i [Bildredigeraren](https://docs.adobe.com/content/help/en/experience-manager-64/developing/components/image-editor.html). NPR-24267: Programfix för CQ-4245502
 
@@ -2104,8 +2106,8 @@ Förteckning över innehållspaket som ingår i AEM 6.4.1.0
 >
 >För kunder med funktionspaket installerade på AEM 6.4. Tillvalspaket med funktioner som tillhandahålls av Adobe är beroende av releaseversionen och Service Pack. Om du har något funktionspaket installerat kontaktar du AEM kundtjänst för att kontrollera om dessa funktionspaket är kompatibla med detta Service Pack för AEM 6.4.
 
-* AEM 6.4.8.0 kräver AEM 6.4. Mer information finns i [uppgraderingsdokumentationen](../sites-deploying/upgrade.md).
-* Nedladdningen av Service Pack finns på [Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) för nedladdning.
+* AEM 6.4.8.0 kräver AEM 6.4. Mer information finns i [uppgraderingsdokumentation](../sites-deploying/upgrade.md).
+* Nedladdningen av Service Pack finns på [Software Distribution portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) för nedladdning.
 * Installera AEM 6.4.8.0 på en av Author-instanserna med Package Manager på en distribution med MongoDB och flera instanser.
 * Innan du installerar Service Pack bör du se till att du har en ögonblicksbild eller en ny säkerhetskopia av AEM.
 * Starta om instansen innan du installerar den. Detta behövs bara när instansen fortfarande är i uppdateringsläge (och detta är fallet när instansen precis uppdaterades från en tidigare version), men rekommenderas vanligtvis om instansen kördes under en längre tidsperiod.
@@ -2132,7 +2134,7 @@ Så här installerar du Service Pack på en befintlig AEM 6.4-instans:
 
 Det finns två sätt att automatiskt installera AEM 6.4.8.0 i en instans som körs:
 
-S. Placera paketet i ..*/crx-quickstart/install* -mappen när servern körs. Paketet installeras automatiskt.
+S. Placera paketet i ..*/crx-quickstart/* installfolder när servern körs. Paketet installeras automatiskt.
 
 B. Använd [HTTP-API:t från Package Manager](https://docs.adobe.com/content/docs/en/crx/2-3/how_to/package_manager.html) - kontrollera att du använder `cmd=install&recursive=true` - så att det kapslade paketet installeras.
 
@@ -2140,20 +2142,20 @@ B. Använd [HTTP-API:t från Package Manager](https://docs.adobe.com/content/doc
 >
 >AEM 6.4.8.0 stöder inte installation av Bootstrap.
 
-### Validera installation {#validate-install}
+### Verifiera installation {#validate-install}
 
 1. Produktinformationssidan (*/system/console/ productinfo *) ska nu visa den uppdaterade versionssträngen &quot;Adobe Experience Manager, Version 6.4.8.0&quot; under Installerade produkter.
 1. Alla OSGI-paket är antingen AKTIVA eller FRAGMENT i OSGI-konsolen (Använd webbkonsolen: /system/console/bundles).
 1. OSGI-paketet org.apache.jackrabbit.oak-core finns i version 1.8.17 eller senare (Använd webbkonsol: /system/console/bundles).
 
-Information om den certifierade plattformen för körning med den här versionen av AEM Sites och Assets finns i [Tekniska krav](../sites-deploying/technical-requirements.md).
+Information om vilken certifierad plattform som används i den här versionen av AEM Sites och Assets finns i [Tekniska krav](../sites-deploying/technical-requirements.md).
 
 >[!NOTE]
->När paketet har installerats visas ett >informativt meddelande som anger att innehållet >package har installerats korrekt, t.ex. **&quot;Content Package AEM-6.4-Service-Pack-7 har installerats korrekt.&quot;**
+>När paketet har installerats visas ett >informationsmeddelande som anger att innehållet >paketet har installerats korrekt, t.ex. **&quot;Innehållspaket AEM-6.4-Service-Pack-7 har installerats.&quot;**
 
-### Uppdatera dynamiska medievyer (5.10.1) {#update-dynamic-media-viewers}
+### Uppdatera Dynamic Media-visningsprogram (5.10.1) {#update-dynamic-media-viewers}
 
-<p id="Dynamic">AEM 6.4.8.0 innehåller en ny version av Dynamic Media-visningsprogram (5.10.1) som gör det möjligt att kontrollera dubblettnamn på sidan Bildförinställning. Dynamic Media-kunder rekommenderas att köra följande kommando för att få fram aktuella visningsinställningar från kartongen.
+<p id="Dynamic">AEM 6.4.8.0 innehåller en ny version av Dynamic Media-visningsprogram (5.10.1) som gör det möjligt att söka efter dubblettnamn på sidan Bildförinställning. Dynamic Media-kunder uppmanas att köra följande kommando för att få fram aktuella visningsinställningar för boxen.
 
 `curl -u admin:admin http://localhost:4502/libs/settings/dam/dm/presets/viewer.pushviewerpresets`
 
@@ -2161,7 +2163,7 @@ som kopierar nya visningsförinställningar till /conf-platsen.
 
 ### Installera AEM för formulärtillägg {#install-aem-forms-add-on-package}
 
-#### Installera AEM formulär {#installaemformsaddon}
+#### Installera AEM {#installaemformsaddon}
 
 >[!NOTE]
 >
@@ -2169,21 +2171,21 @@ som kopierar nya visningsförinställningar till /conf-platsen.
 
 >[!NOTE]
 >
->AEM 6.4.8.0 innehåller en ny version av [AEM Forms-kompatibilitetspaketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/AEM-FORMS-6.4.7.0-COMPAT). Om du använder en äldre version av AEM Forms Compatibility Package och uppdaterar till AEM 6.4.8.0 installerar du den senaste versionen av AEM Forms-kompatibilitetspaketet efter installationen av Forms Add-On Package.
+>AEM 6.4.8.0 innehåller en ny version av [AEM Forms-kompatibilitetspaket](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/AEM-FORMS-6.4.7.0-COMPAT). Om du använder en äldre version av AEM Forms Compatibility Package och uppdaterar till AEM 6.4.8.0 installerar du den senaste versionen av AEM Forms-kompatibilitetspaketet efter installationen av Forms Add-On Package.
 
 1. Kontrollera att du har installerat AEM Service Pack.
-1. Ladda ned motsvarande tilläggspaket för formulär i [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) för ditt operativsystem.
-1. Installera tilläggspaketet för formulär så som beskrivs i [Installera AEM tilläggspaket](https://docs.adobe.com/content/help/en/experience-manager-64/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html#install-aem-forms-add-on-package)för formulär.
+1. Hämta motsvarande tilläggspaket för formulär i [AEM Forms-utgåvor](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) för ditt operativsystem.
+1. Installera tilläggspaketet för formulär enligt beskrivningen i [Installera tilläggspaket för AEM](https://docs.adobe.com/content/help/en/experience-manager-64/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html#install-aem-forms-add-on-package).
 
-### Installera AEM Forms JEE-installationsprogrammet {#install-aem-forms-jee-installer}
+### Installera installationsprogrammet för AEM Forms JEE {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
 >Hoppa över om du inte använder AEM Forms på JEE. Korrigeringar i AEM Forms JEE levereras via ett separat installationsprogram.
 
-Information om hur du installerar det kumulativa installationsprogrammet för AEM Forms JEE och om konfiguration efter distribution finns i [AEM Forms JEE Patch Installer 0015](https://helpx.adobe.com/aem-forms/quick-fixes/6-4/jee-patch-0015.html).
+Information om hur du installerar det kumulativa installationsprogrammet för AEM Forms JEE och konfigurationen efter distribution finns i [AEM Forms JEE Patch Installer 0015](https://helpx.adobe.com/aem-forms/quick-fixes/6-4/jee-patch-0015.html).
 
-#### Konfigurationsinställningar som krävs för NPR-21268 {#configuration-settings-required-for-npr}
+#### Konfigurationsinställningar krävs för NPR-21268 {#configuration-settings-required-for-npr}
 
 Om du använder klassiskt (gammalt) gränssnitt och har skapat metadatamallar med hjälp av det följer du stegen för att köra JMX-skriptet för att bevara dem -
 
@@ -2191,7 +2193,7 @@ Om du använder klassiskt (gammalt) gränssnitt och har skapat metadatamallar me
 1. Klicka på&quot;Migrera metadatamallar&quot;.
 1. Klicka på&quot;migrateMetadataTemplatesAtPath&quot; och ange den mappsökväg där du vill att metadatamallarna ska bevaras.
 
-#### Konfigurationsinställningar som krävs för NPR-24536 {#configuration-settings-required-for-npr-1}
+#### Konfigurationsinställningar krävs för NPR-24536 {#configuration-settings-required-for-npr-1}
 
 Antalet delade köer uppdateras inte som standard för andra användare när en användare gör anspråk på en uppgift. För detta har vi infört en ny fastighet. Följ stegen nedan för att konfigurera den här egenskapen på AEM:
 
@@ -2209,7 +2211,7 @@ Antalet delade köer uppdateras inte som standard för andra användare när en 
 
 Uber Jar för AEM 6.4.8.0 finns i [Adobe Public Maven-databasen](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.4.8/).
 
-Om du vill använda Uber Jar i ett Maven-projekt kan du läsa artikeln [Så här använder du Uber jar](../sites-developing/ht-projects-maven.md) och inkludera följande beroende i projektstrukturen:
+Om du vill använda Uber Jar i ett Maven-projekt kan du läsa artikeln [Använda Uber jar](../sites-developing/ht-projects-maven.md) och inkludera följande beroende i projektstrukturen:
 
 ```shell
 <dependency>
@@ -2228,7 +2230,7 @@ I det här avsnittet listas funktioner som har tagits bort eller tagits bort fr�
 | Yta | Funktion | Ersättning | Version |
 |---|---|---|---|
 | Assets | Hantera taggåtgärd för underresurser | Ingen ersättning | AEM 6.4.2.0 |
-| Resurser och integrering med Adobe Creative Cloud | [AEM till mappdelning](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/aem-cc-folder-sharing-best-practices.html) i Creative Cloud introducerades i AEM 6.2 som ett sätt att ge kreativa användare tillgång till resurser från AEM. En ny funktion i Creative Cloud, Adobe Asset Link, ger en mycket bättre användarupplevelse och kraftfullare åtkomst till AEM direkt inifrån Photoshop, InDesign och Illustrator. Adobe kommer inte att förbättra mappdelningsfunktionen ytterligare. Funktionen ingår i AEM, men kunderna rekommenderas att använda ersättaren. | Adobe Asset Link eller datorprogram. Mer information finns i [AEM Creative Cloud-integreringsartikeln](/help/assets/aem-cc-integration-best-practices.md) . | AEM 6.4.4.0 |
+| Resurser och integrering med Adobe Creative Cloud | [AEM till ](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/aem-cc-folder-sharing-best-practices.html) mappdelning mellan Creative Cloud introducerades i AEM 6.2 som ett sätt att ge kreativa användare tillgång till resurser från AEM. En ny funktion i Creative Cloud, Adobe Asset Link, ger en mycket bättre användarupplevelse och kraftfullare åtkomst till AEM direkt inifrån Photoshop, InDesign och Illustrator. Adobe kommer inte att förbättra mappdelningsfunktionen ytterligare. Funktionen ingår i AEM, men kunderna rekommenderas att använda ersättaren. | Adobe Asset Link eller datorprogram. Mer information finns i [AEM Creative Cloud-integrering](/help/assets/aem-cc-integration-best-practices.md)-artikeln. | AEM 6.4.4.0 |
 
 ### Kända fel {#known-issues}
 
@@ -2249,7 +2251,8 @@ Dessa fel kräver ingen åtgärd eftersom de inte påverkar AEM.
 **AEM 6.4.4.0**
 
 * Det finns inget fel för resursen när metadata importeras/exporteras. CQ-4253263
-* Det går inte att redigera bildkomponenter och sidegenskaper efter att du har använt 6.4.3.0 ovanpå 6.4.2.0. CQ-4260316 &amp; CQ-4260441För att lösa problemet:
+* Det går inte att redigera bildkomponenter och sidegenskaper efter att du har använt 6.4.3.0 ovanpå 6.4.2.0. CQ-4260316 &amp; CQ-4260441
+Så här löser du problemet:
    * Gå till Pakethanteraren
    * Installera om paketet &quot;cq-ui-wcm-admin-content-1.0.1004.zip&quot;
    * Kompilera om alla JSP:er `(http://<AEM HOST>:<AEM PORT/system/console/slingjsp)` ELLER Starta om instansen.
@@ -2271,12 +2274,12 @@ Förteckning över innehållspaket som ingår i AEM 6.4.8.0
 * [Versionsinformation för AEM 6.4](../release-notes/release-notes.md)
 * [AEM produktsida](https://www.adobe.com/solutions/web-experience-management.html)
 * [AEM 6.4-dokumentation](https://helpx.adobe.com/support/experience-manager/6-4.html)
-* Prenumerera på produktuppdateringar med [Adobe prioritet](https://www.adobe.com/subscription/priority-product-update.html)
+* Prenumerera på [produktuppdateringar med Adobe prioritet](https://www.adobe.com/subscription/priority-product-update.html)
 
 ### Begränsade platser {#restricted-sites-new}
 
 Dessa webbplatser är bara tillgängliga för kunder. Om du är kund och behöver åtkomst kontaktar du din kontoansvarige på Adobe.
 
 * [Nedladdning av produkt på licensing.adobe.com](https://licensing.adobe.com/).
-* Produktuppdateringar, patchar och paket för ytterligare funktionalitet vid [programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
-* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [nya Adobe Customer Support Experience](https://docs.adobe.com/content/help/en/customer-one/using/home.html).
+* Produktuppdateringar, patchar och paket för ytterligare funktionalitet i [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
+* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [New Adobe Customer Support Experience](https://docs.adobe.com/content/help/en/customer-one/using/home.html).
