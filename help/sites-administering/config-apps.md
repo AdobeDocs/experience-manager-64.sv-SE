@@ -26,13 +26,13 @@ Med Adobe Experience Manager Apps kan du uppdatera innehållet i programmet dire
 
 Så här konfigurerar du referenspunktsfiltertjänsten:
 
-* Öppna Apache Felix-konsolen (**konfigurationer**) på:
+* Öppna Apache Felix-konsolen (**Configurations**) på:
 * https://&lt;server>:&lt;portnummer>/system/console/configMgr
 * Logga in som administratör.
-* Välj: **** *Apache Sling Referer-filter*
+* Välj: **Referensfilter för Apache Sling****
 * Markera fältet Tillåt tomt om du vill tillåta tomma/saknade hänvisningsrubriker.
 * Klicka på **Spara** för att spara ändringarna.
 
 ![chlimage_1-58](assets/chlimage_1-58.png)
 
-Mer information finns i [OSGI-konfigurationsinställningarna](/help/sites-deploying/osgi-configuration-settings.md) och [säkerhetschecklistan - Problem med smidning](/help/sites-administering/security-checklist.md#protect-against-cross-site-request-forgery) av begäran mellan webbplatser.
+Mer information finns i [OSGI Configuration Settings](/help/sites-deploying/osgi-configuration-settings.md) och [Security Checklist - Issues with Cross-Site Request Forgery](/help/sites-administering/security-checklist.md#protect-against-cross-site-request-forgery).
