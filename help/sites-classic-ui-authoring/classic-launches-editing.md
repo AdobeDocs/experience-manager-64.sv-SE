@@ -26,16 +26,16 @@ ht-degree: 2%
 När en startsida har skapats för en sida (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna.
 
 1. Öppna sidan för redigering.
-1. I Sidekick väljer du fliken **Versionshantering** och expanderar sedan gruppen **Launches** . Titeln på den programstart som redigeras använder ett fet teckensnitt.
+1. Välj fliken **Versioning** i Sidekick och expandera sedan gruppen **Launches**. Titeln på den programstart som redigeras använder ett fet teckensnitt.
 
    ![chlimage_1-13](assets/chlimage_1-13.jpeg)
 
-1. Välj den start du vill arbeta med och klicka sedan på **Byt**.
+1. Välj den start du vill arbeta med och klicka sedan på **Växla**.
 1. Börja redigera.
 
    >[!NOTE]
    >
-   >Du kan använda fliken **Sida** i sidokicka för att utföra åtgärder som **Skapa underordnad sida**, bland annat.
+   >Du kan använda fliken **Sida** för sidostart för att utföra åtgärder som t.ex. **Skapa underordnad sida**.
 
 ## Redigera en startkonfiguration {#editing-a-launch-configuration}
 
@@ -51,21 +51,21 @@ När du har skapat en programstart kan du ändra startnamnet och startdatumet. D
       * **Live-datum**: detta motsvarar startdatumet
       * **Produktionsklar**
 
-      Se [Startar - Ordning för händelser](/help/sites-authoring/launches.md#launches-the-order-of-events) för information om syftet med och interaktionen med dessa fält.
+      Se [Startar - Evenemangsordningen](/help/sites-authoring/launches.md#launches-the-order-of-events) för information om syftet med och interaktionen med dessa fält.
 
    * På fliken **Bild** kan du överföra en bildfil.
 
 
-1. Click **Save**.
+1. Klicka på **Spara**.
 
 ## Identifiera startstatus för en sida {#discovering-the-launch-status-of-a-page}
 
-När du redigerar en start av en sida visas information om starten längst ned på fliken **Versionshantering** i Sidekick:
+När du redigerar en start av en sida visas information om starten längst ned på fliken **Versioning** i Sidspark:
 
 * Startnamnet.
 * Tiden sedan den senaste ändringen.
 * Den användare som utförde den senaste ändringen.
-* Status för flaggan **Production Ready** (orange=ej inställd); green=set).
+* Status för flaggan **Production Ready** (orange=ej inställd; green=set).
 
 ![chlimage_1-186](assets/chlimage_1-186.png)
 
