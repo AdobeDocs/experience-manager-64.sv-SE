@@ -36,10 +36,10 @@ Varje kolumn visar ett värde för den aktuella rapporteringsperioden och anger 
 
 >[!NOTE]
 >
->Om du vill ändra uppdateringsperioden [konfigurerar du importintervallet](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval).
+>[Konfigurera importintervallet](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval) om du vill ändra uppdateringsperioden.
 
-1. Öppna **Sites** Console; till exempel [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)
-1. Klicka på eller tryck på ikonen längst till höger i verktygsfältet (övre högra hörnet) för att välja **listvyn** (ikonen som visas beror på den [aktuella vyn](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)).
+1. Öppna konsolen **Platser**; till exempel [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)
+1. Klicka på eller tryck på ikonen längst till höger i verktygsfältet för att välja **listvy** (den ikon som visas beror på den [aktuella vyn](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)).
 
 1. Återigen, längst till höger i verktygsfältet (övre högra hörnet), klicka eller tryck på ikonen och välj sedan **Visa inställningar**. Dialogrutan **Konfigurera kolumner** öppnas. Gör nödvändiga ändringar och bekräfta med **Uppdatera**.
 
@@ -64,7 +64,7 @@ Medlemmar i användargruppen analytics-administrators kan konfigurera konsolen S
 >
 >När ett sidträd innehåller underordnade sidor som är kopplade till olika Adobe Analytics molnkonfigurationer, kan du inte konfigurera tillgängliga datakolumner för sidorna.
 
-1. I listvyn använder du vyväljarna (höger om verktygsfältet), väljer **Visa inställningar** och sedan **Lägg till anpassade analysdata**.
+1. I listvyn använder du vyväljarna (höger om verktygsfältet), väljer **Visa inställningar** och sedan A **Lägg till anpassade analysdata**.
 
    ![aa-15](assets/aa-15.png)
 
@@ -74,9 +74,9 @@ Medlemmar i användargruppen analytics-administrators kan konfigurera konsolen S
 
    ![aa-16](assets/aa-16.png)
 
-### Öppna innehållsinsikter från webbplatser {#opening-content-insights-from-sites}
+### Öppnar innehållsinsikter från webbplatser {#opening-content-insights-from-sites}
 
-Öppna [Content Insight](/help/sites-authoring/content-insights.md) från Sites-konsolen för att utforska hur sidan fungerar.
+Öppna [Content Insight](/help/sites-authoring/content-insights.md) från Sites-konsolen för att utforska sidans effektivitet ytterligare.
 
 1. I webbplatskonsolen väljer du den sida som du vill se innehållsinsikter för.
 1. Klicka på ikonen Analytics (Analyser) och Recommendations () i verktygsfältet.
