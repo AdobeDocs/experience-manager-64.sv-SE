@@ -55,7 +55,7 @@ De effektivaste strategierna kring Assets, inklusive funktionen för dynamiska m
   <tr>
    <td>Dynamic Imaging</td> 
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">Dynamic Imaging bästa praxis</a></td> 
-   <td><p>Beskriver hur du kan göra en bild skarpare för bästa resultat och det bästa sättet att optimera bildkvaliteten om du använder funktionen Dynamic Media eller integrerar med Scene7. </p> </td> 
+   <td><p>Beskriver hur du kan förbättra skärpan i en bild och det bästa sättet att optimera bildkvaliteten om du använder Dynamic Media eller integrerar med Scene7. </p> </td> 
   </tr>
   <tr>
    <td>Flerspråkiga resurser</td> 
@@ -69,10 +69,10 @@ De effektivaste strategierna kring Assets, inklusive funktionen för dynamiska m
 
 Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 
-Redigering: [Redigeringsmiljö och verktyg](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) - Innehåller en översikt över hur du skapar sidor.
+Redigering: [Författarmiljö och verktyg](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) - Ger en översikt över hur du skapar sidor.
 
 ## Forms {#forms}
 
-Adaptiva former: [De bästa sätten att arbeta med anpassningsbara formulär](/help/forms/using/adaptive-forms-best-practices.md) - Beskriver de bästa sätten att skapa, redigera och anpassa anpassade formulär.
+Adaptiva former: [Bästa tillvägagångssätt för att arbeta med adaptiva formulär](/help/forms/using/adaptive-forms-best-practices.md) - Beskriver de bästa sätten att skapa, redigera och anpassa adaptiva formulär.
 
 HTML5-formulär: [Bästa tillvägagångssätt för att utforma HTML5-formulär](/help/forms/using/best-practices-for-html5-forms.md) - Beskriver de bästa sätten att arbeta med layout och design av HTML5-formulär.
