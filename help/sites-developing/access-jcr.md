@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Så här programmässigt kommer du åt AEM JCR{#how-to-programmatically-access-the-aem-jcr}
 
-Du kan programmässigt ändra noder och egenskaper som finns i Adobe CQ-databasen, som är en del av Adobe Marketing Cloud. Om du vill komma åt CQ-databasen använder du JCR-API:t (Java Content Repository). Du kan använda Java JCR API för att skapa, ersätta, uppdatera och ta bort (CRUD) åtgärder för innehåll som finns i Adobe CQ-databasen. Mer information om Java JCR API finns på [https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html).
+Du kan programmässigt ändra noder och egenskaper som finns i Adobe CQ-databasen, som är en del av Adobe Marketing Cloud. Om du vill komma åt CQ-databasen använder du JCR-API:t (Java Content Repository). Du kan använda Java JCR API för att skapa, ersätta, uppdatera och ta bort (CRUD) åtgärder för innehåll som finns i Adobe CQ-databasen. Mer information om Java JCR API finns i [https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html).
 
 >[!NOTE]
 >
@@ -28,15 +28,15 @@ Du kan programmässigt ändra noder och egenskaper som finns i Adobe CQ-database
 
 >[!NOTE]
 >
->Om du vill använda JCR-API:t lägger du till `jackrabbit-standalone-2.4.0.jar` filen i Java-programmets klasssökväg. Du kan hämta JAR-filen från Java JCR API-webbsidan på [https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html).
+>Om du vill använda JCR-API:t lägger du till filen `jackrabbit-standalone-2.4.0.jar` i Java-programmets klasssökväg. Du kan hämta JAR-filen från Java JCR API-webbsidan på [https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html).
 
 >[!NOTE]
 >
->Mer information om hur du skickar frågor till Adobe CQ JCR med JCR-fråge-API:t finns i [Fråga Adobe Experience Manager-data med JCR-API:t](https://helpx.adobe.com/experience-manager/using/querying-experience-manager-data-using1.html).
+>Om du vill lära dig hur du skickar frågor till Adobe CQ JCR med JCR-fråge-API:t läser du i [Fråga Adobe Experience Manager-data med JCR-API:t](https://helpx.adobe.com/experience-manager/using/querying-experience-manager-data-using1.html).
 
 ## Skapa en databasinstans {#create-a-repository-instance}
 
-Även om det finns olika sätt att ansluta till en databas och upprätta en anslutning använder den här utvecklingsartikeln en statisk metod som tillhör `org.apache.jackrabbit.commons.JcrUtils` klassen. Metodens namn är `getRepository`. Den här metoden tar en strängparameter som representerar URL:en för Adobe CQ-servern. Till exempel `http://localhost:4503/crx/server`.
+Även om det finns olika sätt att ansluta till en databas och upprätta en anslutning använder den här utvecklingsartikeln en statisk metod som tillhör klassen `org.apache.jackrabbit.commons.JcrUtils`. Namnet på metoden är `getRepository`. Den här metoden tar en strängparameter som representerar URL:en för Adobe CQ-servern. Till exempel `http://localhost:4503/crx/server`.
 
 Metoden `getRepository`returnerar en `Repository`instans, vilket visas i följande kodexempel.
 
@@ -47,14 +47,14 @@ Repository repository = JcrUtils.getRepository("http://localhost:4503/crx/server
 
 ## Skapa en sessionsinstans {#create-a-session-instance}
 
-The `Repository`instance representing the CRX database. Du använder `Repository`instansen för att upprätta en session med databasen. Om du vill skapa en session anropar du `Repository`instansens `login`metod och skickar ett `javax.jcr.SimpleCredentials` objekt. Metoden `login`returnerar en `javax.jcr.Session` instans.
+`Repository`instansen representerar CRX-databasen. Du använder instansen `Repository`för att upprätta en session med databasen. Om du vill skapa en session anropar du `Repository`instansens `login`metod och skickar ett `javax.jcr.SimpleCredentials`-objekt. Metoden `login`returnerar en `javax.jcr.Session`-instans.
 
 Du skapar ett `SimpleCredentials`objekt med hjälp av dess konstruktor och skickar följande strängvärden:
 
 * Användarnamn;
 * Motsvarande lösenord
 
-När du skickar den andra parametern anropar du String-objektets `toCharArray`metod. Följande kod visar hur du anropar `login`metoden som returnerar en `javax.jcr.Sessioninstance`.
+När du skickar den andra parametern anropar du String-objektets `toCharArray`metod. I följande kod visas hur du anropar metoden `login`som returnerar en `javax.jcr.Sessioninstance`.
 
 ```java
 //Create a Session instance
@@ -63,14 +63,14 @@ javax.jcr.Session session = repository.login( new SimpleCredentials("admin", "ad
 
 ## Skapa en nodinstans {#create-a-node-instance}
 
-Använd en `Session`instans för att skapa en `javax.jcr.Node` instans. Med en `Node`instans kan du utföra nodåtgärder. Du kan till exempel skapa en ny nod. Om du vill skapa en nod som representerar rotnoden anropar du `Session`instansens `getRootNode` metod så som visas på följande kodrad.
+Använd en `Session`instans för att skapa en `javax.jcr.Node`-instans. Med en `Node`instans kan du utföra nodåtgärder. Du kan till exempel skapa en ny nod. Om du vill skapa en nod som representerar rotnoden anropar du `Session`instansens `getRootNode`-metod, vilket visas i följande kodrad.
 
 ```java
 //Create a Node
 Node root = session.getRootNode();
 ```
 
-När du har skapat en `Node`instans kan du utföra åtgärder som att skapa en annan nod och lägga till ett värde till den. I följande kod skapas två noder och ett värde läggs till i den andra noden.
+När du har skapat en `Node`instans kan du utföra åtgärder som att skapa en annan nod och lägga till ett värde i den. I följande kod skapas två noder och ett värde läggs till i den andra noden.
 
 ```java
 // Store content 
@@ -89,7 +89,7 @@ System.out.println(node.getPath());
 System.out.println(node.getProperty("message").getString());
 ```
 
-## Skapa noder i Adobe CQ Repository {#create-nodes-in-the-adobe-cq-repository}
+## Skapa noder i Adobe CQ-databasen {#create-nodes-in-the-adobe-cq-repository}
 
 Följande Java-kodexempel representerar en Java-klass som ansluter till Adobe CQ, skapar en `Session`instans och lägger till nya noder. En nod tilldelas ett datavärde och sedan skrivs nodens värde och sökväg ut till konsolen. När du är klar med sessionen måste du logga ut.
 
