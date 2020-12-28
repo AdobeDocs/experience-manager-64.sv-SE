@@ -1,21 +1,24 @@
 ---
-title: Användarhandbok för implementering av AEM 6.4
-seo-title: Användarhandbok för implementering av AEM 6.4
-description: En översikt över hur man implementerar AEM 6.4
-seo-description: En översikt över hur man implementerar AEM 6.4
+title: Implementeringshandbok för AEM 6.4
+seo-title: Implementeringshandbok för AEM 6.4
+description: En översikt över hur du implementerar AEM 6.4
+seo-description: En översikt över hur du implementerar AEM 6.4
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 translation-type: tm+mt
 source-git-commit: 7cb8fbc2577b9feafbcbddbd078ab06e1a341c73
+workflow-type: tm+mt
+source-wordcount: '119'
+ht-degree: 26%
 
 ---
 
 
 # Användarhandböcker för implementering av AEM 6.4 {#aem-64-implementation-user-guides}
 
-## Utveckling i AEM {#developing-on-aem}
+## Utvecklar på AEM {#developing-on-aem}
 
-Är du AEM-utvecklare? [Kom igång med utvecklingen på AEM.](/help/sites-developing/home.md)
+Är du AEM utvecklare? [Kom igång med AEM.](/help/sites-developing/home.md)
 
 ## Kärnkomponenter för AEM {#core-components-for-aem}
 
@@ -31,4 +34,4 @@ source-git-commit: 7cb8fbc2577b9feafbcbddbd078ab06e1a341c73
 
 ## Dispatcher-konfiguration {#dispatcher-configuration}
 
-[Konfigurera din dispatcher med AEM](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
+[Konfigurera dispatchern med AEM](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
