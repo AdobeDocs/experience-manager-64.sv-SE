@@ -37,7 +37,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 | Portal Director | Portal Director är en uppsättning funktioner som gör det möjligt att lägga AEM innehåll via Portlet i tredjepartsservrar. Adobe planerar inte att göra ytterligare förbättringar av portalfunktionen Director på den plats som anges nedan. AEM 6.4 har portalen Director och kunder som uppgraderar från tidigare versioner kan fortsätta använda den som den är. Observera att Portal Direct fortfarande stöds fullt ut när det är föråldrat. <ul><li>/libs/portal/director</li></ul> | Adobe planerar inte att tillhandahålla någon ersättning. |
 | Portlet-komponent | Portlet Components under /foundation/components/portlet gör att JSR Portlets i AEM kan användas som komponenter. Adobe planerar inte att göra fler förbättringar av funktionen Portlet Component. AEM 6.4 har Portlet Component inkluderat och kunder som uppgraderar från tidigare versioner kan fortsätta använda det som det är. Observera att Portlet Component fortfarande har fullt stöd medan det är föråldrat. | Adobe planerar inte att tillhandahålla någon ersättning. |
 | Forms | Stödet för tjänsten Adobe Central Migration Bridge har tagits bort eftersom Adobe Central inte längre stöds. | Ingen ersättning |
-| Forms | Användning av JSONObject i Query och OperationOptions har tagits bort. Följande API:er är inaktuella: <ul><li>`setArguments(JSONObject arguments)`</li><li> `JSONObject getArguments()`</li><li>`OperationOptions(String operationId, JSONObject arguments)`</li><li>`JSONObject getArguments()`</li><li> `void setArguments(JSONObject arguments)`</li></ul> | Använda `IValueMap` API |
+| Forms | Användning av JSONObject i Query och OperationOptions har tagits bort. Följande API:er är inaktuella: <ul><li>`setArguments(JSONObject arguments)`</li><li> `JSONObject getArguments()`</li><li>`OperationOptions(String operationId, JSONObject arguments)`</li><li>`JSONObject getArguments()`</li><li> `void setArguments(JSONObject arguments)`</li></ul> | Använd API:t `IValueMap` |
 | Forms | Tjänsten Central Migration Bridge är inaktuell. | Ingen ersättning erbjuds. |
 | Assets | Avlastning av resurser har tagits bort från och med AEM 6.4. |  |
 | Utvecklare | Klientbibliotek med Lodash/underscore. Adobe planerar inte att ytterligare underhålla och uppdatera Lodash-/understreckklientbiblioteket som levereras som en del av distributionen (QuickStart) | Adobe rekommenderar att kunder som fortfarande behöver Lodash/underscore för sin kod lägger till den i sin projektkodbas. |
@@ -147,11 +147,12 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 
 ## Borttagna funktioner {#removed-features}
 
-Tabellen nedan visar funktioner som har tagits bort från AEM 6.4. Tidigare versioner hade dessa funktioner markerats som föråldrade.
+Tabellen nedan visar funktioner som har tagits bort från AEM 6.4. Tidigare versioner hade dessa funktioner markerats som
+föråldrad.
 
 | Yta | Funktion | Ersättning |
 |---|---|---|
-| Analytics Activity Map | Den version av Activity Map som ingår i AEM. | På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM. Plugin-programmet [ActivityMap från Adobe Analytics](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) bör nu användas. |
+| Analytics Activity Map | Den version av Activity Map som ingår i AEM. | På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM. Plugin-programmet [ActivityMap som tillhandahålls av Adobe Analytics](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) bör nu användas. |
 | Components-Forms | Form Captcha (foundation/components/form/captcha) | Använd komponenten ReCaptcha från Google i stället |
 | Komponenter | Bildspel (grund/komponenter/bildspel) | Ingen ersättning |
 | Komponenter | Flash (grund/komponenter/flash) | Ingen ersättning |
@@ -171,7 +172,7 @@ Tabellen nedan visar funktioner som har tagits bort från AEM 6.4. Tidigare vers
 | Forms | Stöd för flash-fält i AEM Designer har tagits bort. AEM Designer tillåter inte redigering av Flash-fält som används i ett formulär. | Du kan använda AEM Designer som släppts för en tidigare version för att redigera sådana formulär. |
 | Communities | Stöd för Captcha-verifiering har tagits bort. | Använd anpassad Captcha-integrering (till exempel reCAPTCHA från Google) för verifiering. |
 
-## Förhandsmeddelande för nästa release {#pre-announcement-for-next-release}
+## Förhandsmeddelande för nästa version {#pre-announcement-for-next-release}
 
 Tabellen nedan innehåller en lista över ändringar för framtida releaser som inte är inaktuella, men som kan påverka kunderna. Dessa tillhandahålls för planeringsändamål.
 
