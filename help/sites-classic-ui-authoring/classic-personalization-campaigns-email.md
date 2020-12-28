@@ -33,7 +33,7 @@ Dessutom kan du AEM administrera nyhetsbrevets funktionalitet, inklusive att und
 
 >[!NOTE]
 >
->I Geometrixx öppnas e-postredigeraren automatiskt i nyhetsbrevmallen. Du kan använda e-postredigeraren i andra mallar som du vill skicka e-postmeddelanden med, till exempel, inbjudningar. E-postredigeraren visas när en sida ärvs från **mcm/components/newsletter/page**.
+>I Geometrixx öppnas e-postredigeraren automatiskt i nyhetsbrevmallen. Du kan använda e-postredigeraren i andra mallar som du vill skicka e-postmeddelanden med, till exempel, inbjudningar. E-postredigeraren visar när en sida ärvs från **mcm/components/newsletter/page**.
 
 I det här dokumentet beskrivs grunderna för hur du skapar nyhetsbrev i AEM. Mer detaljerad information om hur du arbetar med e-postmarknadsföring finns i följande dokument:
 
@@ -58,9 +58,9 @@ I det här dokumentet beskrivs grunderna för hur du skapar nyhetsbrev i AEM. Me
 
    ![](do-not-localize/mcm_icon_listview-1.png)
 
-1. Klicka på **Ny...**
+1. Klicka på **Nytt...**
 
-   Du kan ange **titel**, **namn** och typ av upplevelse som ska skapas. i det här fallet nyhetsbrevet.
+   Du kan ange **titel**, **namn** och vilken typ av upplevelse som ska skapas; i det här fallet nyhetsbrevet.
 
    ![mcm_createnewsletter](assets/mcm_createnewsletter.png)
 
@@ -68,7 +68,7 @@ I det här dokumentet beskrivs grunderna för hur du skapar nyhetsbrev i AEM. Me
 
 1. En ny dialogruta öppnas omedelbart. Här kan du ange egenskaper för nyhetsbrevet.
 
-   Standardmottagarlistan **är ett obligatoriskt** fält eftersom detta utgör kontaktytan för nyhetsbrevet (mer information om listor finns i [Arbeta med listor](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists) ).
+   **Standardmottagarlista** är ett obligatoriskt fält eftersom detta utgör kontaktytan för nyhetsbrevet (mer information om listor finns i [Arbeta med listor](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists)).
 
    ![mcm_newsletterdialog](assets/mcm_newnewsletterdialog.png)
 
@@ -99,15 +99,15 @@ I det här dokumentet beskrivs grunderna för hur du skapar nyhetsbrev i AEM. Me
    * **Standardmottagarlista**
 
       Standardlista som ska ta emot nyhetsbrevet.
-   Dessa kan uppdateras senare i **Egenskaper...** -dialogrutan.
+   Dessa kan uppdateras i ett senare skede från **Egenskaper...Dialogrutan**.
 
-1. Spara genom att klicka på **OK** .
+1. Klicka på **OK** för att spara.
 
 ## Lägga till innehåll i nyhetsbrev {#adding-content-to-newsletters}
 
 Du kan lägga till innehåll, inklusive dynamiskt innehåll, i nyhetsbrevet på samma sätt som i andra AEM. I Geometrixx finns det vissa komponenter i mallen Nyhetsbrev som du kan använda för att lägga till och ändra innehåll i nyhetsbrev.
 
-1. Klicka på fliken **Kampanjer** i MCM och dubbelklicka på det nyhetsbrev som du vill lägga till innehåll i eller redigera. Nyhetsbrevet öppnas.
+1. Klicka på fliken **Kampanjer** i MCM och dubbelklicka på det nyhetsbrev som du vill lägga till eller redigera innehåll i. Nyhetsbrevet öppnas.
 
 1. Om komponenterna inte visas går du till designvyn och aktiverar de nödvändiga komponenterna (till exempel komponenterna i nyhetsbrevet) innan du börjar redigera.
 1. Ange eventuell ny text, bilder eller andra komponenter. I Geometrixx finns fyra komponenter: Text, bild, rubrik och 2 kolumner. Nyhetsbrevet kan ha fler eller färre komponenter beroende på hur du konfigurerar det.
@@ -120,7 +120,7 @@ Du kan lägga till innehåll, inklusive dynamiskt innehåll, i nyhetsbrevet på 
 
 1. Om du vill infoga variabler markerar du variabeln i listan och klickar på **Infoga**. Variabler fylls i från profilen.
 
-## Anpassa nyhetsbrev {#personalizing-newsletters}
+## Personaliserar nyhetsbrev {#personalizing-newsletters}
 
 Du kan personalisera nyhetsbrev genom att infoga fördefinierade variabler i Text-komponenten i nyhetsbreven i Geometrixx. Värden för variablerna ärvs från informationen i användarprofilen.
 
@@ -136,7 +136,7 @@ Så här anpassar du ett nyhetsbrev och simulerar hur det kommer att se ut:
 
    ![mcm_newsletter_variables](assets/mcm_newsletter_variables.png)
 
-1. Om du vill simulera hur variabeln kommer att se ut när den skickas trycker du på CTRL+ALT+c för att öppna klientkontexten och välja **Läs in**. Markera användaren i listan vars profil du vill läsa in och klicka på **OK**.
+1. Om du vill simulera hur variabeln kommer att se ut när den skickas trycker du på CTRL+ALT+c för att öppna klientkontexten och väljer **Läs in**. Markera användaren i listan vars profil du vill läsa in och klicka på **OK**.
 
    Variablerna har fyllts i med informationen från profilen som du läste in.
 
@@ -186,16 +186,16 @@ Så här anpassar du inställningar för nyhetsbrev:
 
    ![mcm_newsletter_open](assets/mcm_newsletter_open.png)
 
-1. Klicka på **Inställningar** längst upp i nyhetsbrevet.
+1. Klicka på **Inställningar** överst i nyhetsbrevet.
 
    ![mcm_newsletter_settings](assets/mcm_newsletter_settings.png)
 
 1. 
 
-   1. Ange **Från** e-postadress
-   1. Ändra vid behov **e-postmeddelandets ämne** .
-   1. Välj en **standardmottagarlista** i listrutan.
-   1. Click **OK**.
+   1. Ange e-postadressen **Från**
+   1. Ändra **Ämne** för e-postmeddelandet om det behövs.
+   1. Välj en **Standardmottagarlista** i listrutan.
+   1. Klicka på **OK**.
 
    När du testar eller skickar nyhetsbrevet får mottagarna e-post med den angivna e-postadressen och det angivna ämnet.
 
@@ -205,7 +205,7 @@ Flygtestning är inte obligatoriskt, men innan du skickar ut ett nyhetsbrev kans
 
 Med flygtester kan du göra följande:
 
-* Titta på nyhetsbrevet i [alla kunder](#testing-newsletters-in-different-e-mail-clients).
+* Titta på nyhetsbrevet i [alla avsedda klienter](#testing-newsletters-in-different-e-mail-clients).
 * Verifiera att e-postservern är korrekt konfigurerad.
 * Avgör om ditt e-postmeddelande flaggas som skräppost. (Se till att du tar med dig själv i listan över mottagare.)
 
@@ -217,7 +217,7 @@ Så här gör du för att testa nyhetsbrev:
 
 1. Öppna det nyhetsbrev som du vill testa och skicka från MCM.
 
-1. Klicka på **Testa** längst upp i nyhetsbrevet för att testa innan du skickar iväg det.
+1. Klicka **Test** längst upp i nyhetsbrevet för att testa innan du skickar iväg det.
 
    ![mcm_newsletter_testsettings](assets/mcm_newsletter_testsettings.png)
 
@@ -245,13 +245,13 @@ Så här skickar du ut ett nyhetsbrev inifrån kampanjen:
 
    >[!NOTE]
    >
-   >Innan du skickar iväg nyhetsbrevet bör du kontrollera att du har anpassat ämnet och e-postadressen genom att [anpassa inställningarna](#customizing-newsletter-settings).
+   >Innan du skickar iväg nyhetsbrevet bör du kontrollera att du har anpassat ämnet och e-postadressen till nyhetsbrevet genom att [anpassa inställningarna](#customizing-newsletter-settings).
    >
-   >[Vi rekommenderar att du testar](#flight-testing-newsletters) nyhetsbrevet innan det skickas.
+   >[Vi rekommenderar att du ](#flight-testing-newsletters) testar nyhetsbrevet innan det skickas.
 
-1. Klicka på **Skicka**&#x200B;överst i nyhetsbrevet. Guiden Nyhetsbrev öppnas.
+1. Klicka **Skicka** högst upp i nyhetsbrevet. Guiden Nyhetsbrev öppnas.
 
-1. I mottagarens lista markerar du den lista som du vill få nyhetsbrevet och klickar på **Nästa**.
+1. I mottagarlistan markerar du den lista du vill få nyhetsbrevet och klickar på **Nästa**.
 
    ![mcm_newslettersend](assets/mcm_newslettersend.png)
 
@@ -267,23 +267,23 @@ Så här skickar du ut ett nyhetsbrev inifrån kampanjen:
 
 Så här skickar du ut ett nyhetsbrev från en lista:
 
-1. Klicka på **Listor** till vänster i MCM.
+1. Klicka på **Listor** i den vänstra rutan i MCM.
 
    >[!NOTE]
    >
-   >Innan du skickar iväg nyhetsbrevet bör du kontrollera att du har anpassat ämnet och e-postadressen genom att [anpassa inställningarna](#customizing-newsletter-settings). Du kan inte testa ett nyhetsbrev om du skickar det från listan; du kan [flygtesta](#flight-testing-newsletters) det om du skickar det från nyhetsbrevet.
+   >Innan du skickar iväg nyhetsbrevet bör du kontrollera att du har anpassat ämnet och e-postadressen till nyhetsbrevet genom att [anpassa inställningarna](#customizing-newsletter-settings). Du kan inte testa ett nyhetsbrev om du skickar det från listan; Du kan [testa flygningen](#flight-testing-newsletters) om du skickar den från nyhetsbrevet.
 
 1. Markera kryssrutan bredvid listan med leads som du vill skicka ett nyhetsbrev till.
 
-1. På **Verktyg** -menyn väljer du **Skicka nyhetsbrev**. Fönstret **Skicka nyhetsbrev** öppnas.
+1. Välj **Skicka nyhetsbrev** på menyn **Verktyg**. Fönstret **Skicka nyhetsbrev** öppnas.
 
    ![mcm_newslettersendfromlist](assets/mcm_newslettersendfromlist.png)
 
-1. I fältet **Nyhetsbrev** väljer du det nyhetsbrev du vill skicka och klickar på **Nästa**.
+1. I fältet **Nyhetsbrev** markerar du det nyhetsbrev som du vill skicka och klickar på **Nästa**.
 
    ![mcm_newslettersenddialog](assets/mcm_newslettersenddialog.png)
 
-1. Installationen har slutförts. Klicka på **Skicka** för att skicka det markerade nyhetsbrevet till den angivna listan med leads.
+1. Installationen har slutförts. Klicka på **Skicka** för att skicka det valda nyhetsbrevet till den angivna listan med leads.
 
    ![mcm_newslettersenddialog_confirmation](assets/mcm_newslettersenddialog_confirmation.png)
 
@@ -297,9 +297,9 @@ I det här avsnittet beskrivs hur du prenumererar på ett nyhetsbrev.
 
 Så här prenumererar du på ett nyhetsbrev (med Geometrixx webbplats som exempel):
 
-1. Klicka på **Webbplatser** , navigera till **verktygsfältet** Geometrixx och öppna det.
+1. Klicka på **Webbplatser** och navigera till Geometrixx **Verktygsfältet** och öppna det.
 
    ![chlimage_1-169](assets/chlimage_1-169.png)
 
-1. Ange din e-postadress i fältet **Registrera dig** i Geometrixx Newsletter och klicka på **Registrera**. Du prenumererar nu på nyhetsbrevet.
+1. I fältet Geometrixx Newsletter **Registrera dig** anger du din e-postadress och klickar på **Registrera dig**. Du prenumererar nu på nyhetsbrevet.
 
