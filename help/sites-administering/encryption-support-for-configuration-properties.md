@@ -43,7 +43,7 @@ De här stegen visar hur du krypterar SMTP-lösenordet för e-posttjänsten. Du 
 
    ![screen_shot_2018-08-01at113417am](assets/screen_shot_2018-08-01at113417am.png)
 
-1. I fältet **Oformaterad text** anger du texten i känsliga data som du vill skydda.
+1. I fältet **Oformaterad text** anger du texten för känsliga data som du vill skydda.
 1. Välj **Protect**. Den skyddade texten visas som krypterad text.
 
    ![screen_shot_2018-08-01at113844am](assets/screen_shot_2018-08-01at113844am.png)
