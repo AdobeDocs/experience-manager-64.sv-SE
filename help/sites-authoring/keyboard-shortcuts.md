@@ -20,11 +20,11 @@ ht-degree: 2%
 
 # Kortkommandon för konsoler{#keyboard-shortcuts-for-consoles}
 
-Olika kortkommandon finns i hela AEM. En del gäller användning av konsoler, andra för [sidredigering](/help/sites-authoring/page-authoring-keyboard-shortcuts.md).
+Olika kortkommandon finns i hela AEM. Vissa gäller för användning av konsoler, andra för [sidredigering](/help/sites-authoring/page-authoring-keyboard-shortcuts.md).
 
 >[!NOTE]
 >
->Vilka [modifieringstangenter](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys) som krävs för AEM kortkommandon varierar beroende på operativsystem.
+>[modifieringstangenterna](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys) som krävs för AEM kortkommandon varierar beroende på operativsystem.
 
 ## Kortkommandon {#keyboard-shortcuts}
 
@@ -41,7 +41,7 @@ Följande genvägar är tillgängliga för konsolerna Webbplatser, Handel, Skär
 |  | `Esc` | Flytta upp en lista med sidor på samma nivå |
 | Konsoler | `?` | Hjälp för kortkommandon |
 |  | `/` | Anropa [sökning](/help/sites-authoring/search.md) |
-|  | `Alt+`&lt;`Number`> | Växla vilket [alternativ för](/help/sites-authoring/basic-handling.md#rail-selector) järnvägsväljare som ska visas |
+|  | `Alt+`&lt;`Number`> | Växla vilken [järnvägsväljare](/help/sites-authoring/basic-handling.md#rail-selector) som ska visas |
 |  | ` | Göm rälsstöd |
 |  | `e` | Redigera |
 |  | `p` | Egenskaper |
@@ -51,7 +51,7 @@ Följande genvägar är tillgängliga för konsolerna Webbplatser, Handel, Skär
 |  | `Backspace` | Ta bort |
 | Egenskapssidor | `Ctrl+s` | Spara |
 
-Tangentkombinationerna visas med Windows- [modifieringstangenterna](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys).
+Tangentkombinationerna visas med Windows [modifieringstangenterna](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys).
 
 Du kan även använda olika kortkommandon för skrivbordsanvändare när du använder [sidredigeraren](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) för att skapa sidor.
 
@@ -80,7 +80,7 @@ Dessutom är kortkommandon samma för alla språk och tangentbordslayouter.
 >
 >AEM kortkommandon kan störa skärmläsare, vissa webbläsarfunktioner och andra tillgänglighetsverktyg.
 >
->Adobe rekommenderar att du [inaktiverar AEM kortkommandon](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts) när du använder en skärmläsare.
+>Adobe rekommenderar [att du inaktiverar AEM kortkommandon](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts) när du använder en skärmläsare.
 
 ## Inaktivera kortkommandon {#deactivating-keyboard-shortcuts}
 
@@ -91,7 +91,7 @@ För användare som inte använder kortkommandon eller har vissa tillgänglighet
 Du kan inaktivera kortkommandon på två platser:
 
 * [Mina inställningar](/help/sites-authoring/user-properties.md#my-preferences)
-* Menyn [Hjälp](/help/sites-authoring/basic-handling.md#accessing-help)
+* [hjälpmenyn](/help/sites-authoring/basic-handling.md#accessing-help)
 
 >[!NOTE]
 >
