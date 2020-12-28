@@ -28,7 +28,7 @@ Sling API fungerar på en högre och mer abstrakt nivå än JCR API. Detta gör 
 
 Det är alltid snabbare att navigera i databasen för att hämta data än att köra en fråga. Det finns tillfällen då frågor är nödvändiga, t.ex. en slutanvändarfråga eller behöver hitta strukturerat innehåll från hela databasen, men i alla andra fall är det bäst att navigera till de noder som behövs. Frågor bör alltid undvikas i återgivningslogik som navigeringskomponenter,&quot;lista över nyligen använda objekt&quot;, antal objekt och så vidare. I dessa fall är det bättre att gå igenom hierarkin eller cachelagra resultatet i förväg så att det kan användas direkt när det återges.
 
-## Begränsa omfattningen av JCR-observation {#restrict-the-scope-of-jcr-observation}
+## Begränsa omfattningen för JCR-observation {#restrict-the-scope-of-jcr-observation}
 
 När du lyssnar efter händelser i databasen är det viktigt att begränsa omfattningen så mycket som möjligt. Det är till exempel mycket bättre att lyssna efter en händelse på `/etc/mycompany` än att lyssna på `/etc`. Lyssna aldrig efter händelser i databasroten. Kontrollera dessutom att återkallningsmetoderna körs så snabbt som möjligt när det inte finns något att göra.
 
