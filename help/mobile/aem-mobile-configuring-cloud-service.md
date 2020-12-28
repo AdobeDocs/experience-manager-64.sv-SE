@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Konfigurera Adobe Target Cloud Service {#configuring-adobe-target-cloud-service}
+# Konfigurerar Adobe Target Cloud Service {#configuring-adobe-target-cloud-service}
 
 >[!NOTE]
 >
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Det här dokumentet är en del av guiden [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md) , en rekommenderad startpunkt för AEM Mobile.
+>Det här dokumentet ingår i [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md) Guide, en rekommenderad startpunkt för AEM Mobile referens.
 
 Det finns ett antal steg som måste sammanställas innan innehållsförfattare kan börja generera riktat innehåll för mobilappar: Vi får rätt behörighetsgrupp för användare och grupper, skapar molntjänster, konfigurerar programmet för aktiviteten och till slut skapar innehållet.
 
@@ -34,7 +34,7 @@ Det förutsätts att [AEM Mobile Hybrid Reference Application](https://github.co
 
 ## Behörigheter {#permissions}
 
-Användare som behöver åtkomst till personaliseringskonsolen måste ingå i `target-activity-authors` gruppen. Som en del av användar- och gruppinställningarna bör målaktivitetsgruppen läggas till i gruppen som administrerar program. Genom att lägga till gruppen target-activity-authors kan användarna se menyposten för personalisering.
+Användare som behöver åtkomst till personaliseringskonsolen måste vara en del av `target-activity-authors`-gruppen. Som en del av användar- och gruppinställningarna bör målaktivitetsgruppen läggas till i gruppen som administrerar program. Genom att lägga till gruppen target-activity-authors kan användarna se menyposten för personalisering.
 
 Om du glömmer att lägga till de användare eller grupper som du vill ska ha tillgång till Admin Console för personalisering i gruppen target-activity-authors kommer det att förhindra användare från att se personaliseringskonsolen.
 
@@ -66,7 +66,7 @@ Det är också nödvändigt att länka ett AMS-konto (Adobe Mobile Services) til
 
 ### Klientkod {#client-code}
 
-Om du vill logga in på AMS-tjänsterna går du till [https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/), väljer mobilprogrammet och klickar på inställningarna. Leta reda på fältet SDK-målalternativ, placera klientkoden i fältet och klicka på Spara.
+Om du vill logga in på AMS-tjänsterna går du till [https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/), markerar mobilprogrammet och klickar på inställningarna. Leta reda på fältet SDK-målalternativ, placera klientkoden i fältet och klicka på Spara.
 
 ![chlimage_1-11](assets/chlimage_1-11.png)
 
@@ -90,9 +90,9 @@ Om du går tillbaka till Mobile Dashboard innehåller rutan Hantera Cloud Servic
 
 ## Synkroniseringshanterare för målinnehåll {#target-content-sync-handlers}
 
-Att leverera innehåll till användarens enhetsinnehåll genereras genom att de erbjudanden som skapas AEM innehållsförfattare återges. Det finns en ny hanterare för innehållssynkronisering som hanterar återgivningen av målerbjudanden. Med Hybrid Reference Application som exempel innehåller det engelska innehållspaketet ContentSyncConfig med en [mobileappoffers](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/aem-package/content-author/src/main/content/jcr_root/content/mobileapps/hybrid-reference-app/en/_jcr_content/pge-app/app-config-dev/targetOffers/.content.xml) -hanterare. Nästa steg är avgörande för att återge erbjudanden till enheten. Hanteraren för mobileappoffers har en path-egenskap som identifierar sökvägen till den personaliseringsaktivitet som ska användas för programmet.
+Att leverera innehåll till användarens enhetsinnehåll genereras genom att de erbjudanden som skapas AEM innehållsförfattare återges. Det finns en ny hanterare för innehållssynkronisering som hanterar återgivningen av målerbjudanden. Med Hybrid Reference Application som exempel innehåller det engelska (engelska) innehållspaketet ContentSyncConfig med en [mobileappoffers](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/aem-package/content-author/src/main/content/jcr_root/content/mobileapps/hybrid-reference-app/en/_jcr_content/pge-app/app-config-dev/targetOffers/.content.xml)-hanterare. Nästa steg är avgörande för att återge erbjudanden till enheten. Hanteraren för mobileappoffers har en path-egenskap som identifierar sökvägen till den personaliseringsaktivitet som ska användas för programmet.
 
-Om det till exempel finns en aktivitet som finns på */content/campaign/hybridref* kopierar du den här sökvägen och klistrar in den som värde för egenskapen *path* för hanteraren mobileappoffers.
+Om det till exempel finns en aktivitet som finns på */content/campaign/hybridref* kopierar du den här sökvägen och klistrar in den som värdet för egenskapen *path* för hanteraren för mobileappoffers.
 
 För Hybrid Reference Application finns två mobileappoffers-hanterare en för dev och en för produktioner.
 
@@ -100,10 +100,10 @@ När aktivitetssökvägen har angetts i mobileappoffers-hanterarens path-egenska
 
 ### Återgivningsläge {#render-mode}
 
-Hanteraren för mobileappoffers är annorlunda konfigurerad för publicerings- och utvecklingsinställningar. För publiceringsinställningar finns egenskapen *renderMode* med värdet *publish* inställt på cq:ContentSyncConfig-noden. Hanteraren mobileappoffers refererar till renderMode och, om den anges för publicering, ändrar mbox-ID:t som skapas. Som standard har rutor som skapas av AEM ett —author-värde tillagt till mbox-ID:t. Detta identifierar att aktiviteten inte har publicerats och bör använda den opublicerade kampanjen för erbjudandelösningar.
+Hanteraren för mobileappoffers är annorlunda konfigurerad för publicerings- och utvecklingsinställningar. För publiceringsinställningar finns egenskapen *renderMode* med värdet *publish* inställd på cq:ContentSyncConfig-noden. Hanteraren mobileappoffers refererar till renderMode och, om den anges för publicering, ändrar mbox-ID:t som skapas. Som standard har rutor som skapas av AEM ett —author-värde tillagt till mbox-ID:t. Detta identifierar att aktiviteten inte har publicerats och bör använda den opublicerade kampanjen för erbjudandelösningar.
 
 När innehåll mellanlagras via Adobe Mobile Dashboard betraktas mellanlagrat innehåll som produktionsklart innehåll och återges via den icke-dev-konfiguration för innehållssynkronisering. Om du återger på det här sättet tas —author bort från alla mbox-ID:n och en publicerad aktivitet förväntas bli tillgänglig på målservern. Kontrollera att aktiviteten har publicerats innan du testar mellanlagrat innehåll.
 
-## Skapa innehåll {#creating-content}
+## Skapar innehåll {#creating-content}
 
 Nu när molntjänsterna har skapats och hanteraren för mobilappar har konfigurerats kan innehållsförfattare börja generera riktade upplevelser.
