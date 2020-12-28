@@ -20,9 +20,9 @@ ht-degree: 7%
 
 # Responsiv layout{#responsive-layout}
 
-AEM gör att du kan ha en responsiv layout för sidorna med komponenten **Layoutbehållare** .
+AEM gör att du kan ha en responsiv layout för dina sidor med komponenten **Layoutbehållare**.
 
-Detta tillhandahåller ett styckesystem som gör att du kan placera komponenter i ett responsivt rutnät. Rutnätet kan ändra layouten beroende på enhetens/fönstrets storlek och format. Komponenten används tillsammans med [**layoutläget **](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode), som gör att du kan skapa och redigera en responsiv layout beroende på enhet.
+Detta tillhandahåller ett styckesystem som gör att du kan placera komponenter i ett responsivt rutnät. Rutnätet kan ändra layouten beroende på enhetens/fönstrets storlek och format. Komponenten används tillsammans med [**layoutläget**](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode), som gör att du kan skapa och redigera din responsiva layout beroende på enhet.
 
 Layoutbehållaren:
 
@@ -41,20 +41,21 @@ Användaren kan sedan se hur innehållet återges för specifika enheter med emu
 
 AEM realiserar responsiv layout för dina sidor med en kombination av mekanismer:
 
-* [**Komponenten Layoutbehållare **](#adding-a-layout-container-and-its-content-edit-mode)
+* [**Layout**](#adding-a-layout-container-and-its-content-edit-mode) Container-komponent
 
-   Den här komponenten är tillgänglig i [komponentwebbläsaren](/help/sites-authoring/author-environment-tools.md#components-browser) och har ett rutnätsstyckesystem där du kan lägga till och placera komponenter i ett responsivt rutnät. Den kan också anges som standardstyckesystem på sidan.
+   Den här komponenten är tillgänglig i [komponentwebbläsaren](/help/sites-authoring/author-environment-tools.md#components-browser) och innehåller ett rutnätsstyckesystem där du kan lägga till och placera komponenter i ett responsivt rutnät. Den kan också anges som standardstyckesystem på sidan.
 
-* [**Layoutläge **](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)
+* [**Layoutläge**](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)
 
-   När layoutbehållaren är placerad på sidan kan du använda **layoutläget** för att placera innehåll i det responsiva rutnätet.
+   När layoutbehållaren har placerats på sidan kan du använda läget **Layout** för att placera innehåll i det responsiva rutnätet.
 
-* [**Emulator **](#selecting-a-device-to-emulate)Med den här funktionen kan du skapa och redigera responsiva webbplatser som ordnar om layouten enligt enhetens/fönstrets storlek genom att ändra storlek på komponenterna interaktivt. Användaren kan sedan se hur innehållet återges med emulatorn.
+* [****](#selecting-a-device-to-emulate)
+EmulatorMed den här funktionen kan du skapa och redigera responsiva webbplatser som ordnar om layouten enligt enhetens/fönstrets storlek genom att ändra storlek på komponenterna interaktivt. Användaren kan sedan se hur innehållet återges med emulatorn.
 
 Med dessa responsiva rutnätsmekanismer kan du:
 
 * Använd brytpunkter för att definiera olika innehållslayouter baserat på enhetens bredd (relaterat till enhetstyp och orientering).
-* Använd samma brytpunkter och innehållslayouter för att se till att innehållet är anpassat till storleken på webbläsarfönstret på skrivbordet.
+* Använd samma brytpunkter och innehållslayouter för att säkerställa att innehållet är anpassat till storleken på webbläsarfönstret på skrivbordet.
 * Använd vågrät fäst mot rutnät för att placera komponenter i rutnätet, ändra storlek efter behov och definiera när de ska komprimeras/omformas så att de ligger sida vid sida eller ovanför/nedanför.
 * Dölj komponenter för specifika enhetslayouter.
 * Uppnå kolumnkontroll.
@@ -63,11 +64,11 @@ Beroende på vilket projekt du arbetar med kan Layoutbehållaren användas som s
 
 >[!NOTE]
 >
->Adobe tillhandahåller [GitHub-dokumentation](https://adobe-marketing-cloud.github.io/aem-responsivegrid/) för den responsiva layouten som en referens som kan ges till gränssnittsutvecklare så att de kan använda det AEM rutnätet utanför AEM, till exempel när de skapar statiska HTML-modeller för en framtida AEM.
+>Adobe tillhandahåller [GitHub-dokumentation](https://adobe-marketing-cloud.github.io/aem-responsivegrid/) av den responsiva layouten som en referens som kan ges till gränssnittsutvecklare så att de kan använda det AEM rutnätet utanför AEM, till exempel när de skapar statiska HTML-modeller för en framtida AEM.
 
 >[!NOTE]
 >
->Användningen av ovanstående mekanismer aktiveras av mallens konfiguration. Mer information finns i [Konfigurera responsiv layout](/help/sites-administering/configuring-responsive-layout.md) .
+>Användningen av ovanstående mekanismer aktiveras av mallens konfiguration. Mer information finns i [Konfigurera responsiv layout](/help/sites-administering/configuring-responsive-layout.md).
 
 ## Layoutdefinitioner, enhetsemulering och brytpunkter {#layout-definitions-device-emulation-and-breakpoints}
 
@@ -75,7 +76,7 @@ När du skapar webbplatsinnehåll vill du se till att innehållet visas på rät
 
 AEM gör att du kan definiera layouter beroende på enhetens bredd:
 
-* Med emulatorn kan du emulera dessa layouter på en mängd olika enheter. Förutom enhetstypen kan orienteringen, som väljs med alternativet **Rotera enhet** , påverka brytpunkten som markeras när bredden ändras.
+* Med emulatorn kan du emulera dessa layouter på en mängd olika enheter. Förutom enhetstypen kan orienteringen, som väljs med alternativet **Rotera enhet**, påverka brytpunkten som markeras när bredden ändras.
 * Brytpunkter är de punkter som skiljer layoutdefinitionerna åt.
 
    * De definierar effektivt den maximala bredden (i pixlar) för alla enheter med en viss layout.
@@ -83,7 +84,7 @@ AEM gör att du kan definiera layouter beroende på enhetens bredd:
    * Intervallet för en brytpunkt sträcker sig åt vänster till nästa brytpunkt.
    * Du kan inte markera brytpunkten specifikt. Om du väljer en enhet och orientering väljs automatiskt rätt brytpunkt.
 
-Enhetens **skrivbord**, som inte har någon specifik bredd, relaterar till standardbrytpunkten (d.v.s. allt ovanför den senast konfigurerade brytpunkten).
+Enheten **Skrivbord**, som inte har någon specifik bredd, relaterar till standardbrytpunkten (d.v.s. allt ovanför den senast konfigurerade brytpunkten).
 
 >[!NOTE]
 >
@@ -91,7 +92,7 @@ Enhetens **skrivbord**, som inte har någon specifik bredd, relaterar till stand
 
 När du använder emulatorn väljer du en specifik enhet för emulerings- och layoutdefinition och den relaterade brytpunkten markeras också. Alla layoutändringar du gör gäller för andra enheter som brytpunkten gäller för, dvs. enheter som är placerade till vänster om den aktiva brytpunktsmarkören, men före nästa brytpunktsmarkör.
 
-När du t.ex. väljer enheten **iPhone 6 Plus** (definierad med en bredd på 540 pixlar) för emulering och layout aktiveras även brytpunkten **Phone** (definierad som 768 pixlar). Alla layoutändringar du gör för **iPhone 6** gäller för andra enheter under brytpunkten för **Telefoner** , till exempel **iPhone 5** (definierad som 320 pixlar).
+När du t.ex. väljer enheten **iPhone 6 Plus** (definierad med en bredd på 540 pixlar) för emulering och layout, aktiveras även brytpunkten **Telefon** (definierad som 768 pixlar). Alla layoutändringar du gör för **iPhone 6** gäller för andra enheter under brytpunkten **Telefoner**, till exempel **iPhone 5** (definieras som 320 pixlar).
 
 ![screen_shot_2018-03-23at084058](assets/screen_shot_2018-03-23at084058.png)
 
@@ -111,11 +112,11 @@ När du t.ex. väljer enheten **iPhone 6 Plus** (definierad med en bredd på 540
 
    Emulatorverktygsfältet innehåller ytterligare layoutalternativ:
 
-   * **Rotera enhet** - Gör att du kan rotera en enhet från lodrät (stående) orientering till vågrät (liggande) orientering och tvärtom.
+   * **Rotera enhet**  - Gör att du kan rotera en enhet från lodrät (stående) orientering till vågrät (liggande) orientering och tvärtom.
 
    ![](do-not-localize/screen_shot_2018-03-23at084612.png) ![](do-not-localize/screen_shot_2018-03-23at084637.png)
 
-   * **Välj Enhet** - Definiera en specifik enhet som ska emuleras från en lista (se nästa steg för mer information)
+   * **Välj Enhet**  - Definiera en specifik enhet som ska emuleras från en lista (se nästa steg för mer information)
 
    ![](do-not-localize/screen_shot_2018-03-23at084743.png)
 
@@ -129,7 +130,7 @@ När du t.ex. väljer enheten **iPhone 6 Plus** (definierad med en bredd på 540
 1. När en viss enhet har valts kan du:
 
    * Se den aktiva markören för den valda enheten, till exempel **iPad.**
-   * Se den aktiva markören för rätt [brytpunkt](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints) , t.ex. **Tablet.**
+   * Se den aktiva markören för rätt [brytpunkt](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints), t.ex. **surfplatta.**
 
    ![screen_shot_2018-03-23at084932](assets/screen_shot_2018-03-23at084932.png)
 
@@ -153,7 +154,7 @@ En **layoutbehållare** är ett styckesystem som:
 
 >[!NOTE]
 >
->Om den inte redan är tillgänglig måste **layoutbehållaren** vara explicit [aktiverad för ett styckesystem/en styckesida](/help/sites-administering/configuring-responsive-layout.md) (till exempel med [**designläge **](/help/sites-authoring/default-components-designmode.md)).
+>Om den inte redan är tillgänglig måste **layoutbehållaren** vara explicit [aktiverad för ett styckesystem/en sida](/help/sites-administering/configuring-responsive-layout.md) (till exempel med [**designläge**](/help/sites-authoring/default-components-designmode.md)).
 
 1. **Layoutbehållaren** är tillgänglig som en standardkomponent i [komponentläsaren](/help/sites-authoring/author-environment-tools.md#components-browser). Härifrån kan du dra den till önskad plats på sidan och sedan ser du platshållaren **Dra komponenter hit**.
 1. Du kan sedan lägga till komponenter i layoutbehållaren. De här komponenterna innehåller det faktiska innehållet:
@@ -162,7 +163,7 @@ En **layoutbehållare** är ett styckesystem som:
 
 ## Markera och vidta åtgärder på en layoutbehållare (redigeringsläge) {#selecting-and-taking-action-on-a-layout-container-edit-mode}
 
-Precis som med andra komponenter kan du markera och sedan vidta åtgärder för (klippa ut, kopiera, ta bort) en layoutbehållare (i **redigeringsläge** ):
+Precis som med andra komponenter kan du markera och sedan vidta åtgärder för (klippa ut, kopiera, ta bort) en layoutbehållare (i **redigeringsläget**):
 
 >[!CAUTION]
 >
@@ -172,11 +173,11 @@ Precis som med andra komponenter kan du markera och sedan vidta åtgärder för 
 
    ![screen_shot_2018-03-23at085357](assets/screen_shot_2018-03-23at085357.png)
 
-   Du måste välja alternativet **Överordnad** .
+   Du måste välja alternativet **Överordnad**.
 
    ![](do-not-localize/screen_shot_2018-03-23at085417.png)
 
-1. Om layoutkomponenten är kapslad visas en listruta när du väljer alternativet **Överordnad** . Du kan välja den kapslade layoutbehållaren eller dess överordnade.
+1. Om layoutkomponenten är kapslad och du väljer alternativet **Överordnad** visas en listruta där du kan välja den kapslade layoutbehållaren eller dess överordnade.
 
    När du för musen över behållarnamnen i listrutan visas deras konturer på sidan.
 
@@ -186,7 +187,7 @@ Precis som med andra komponenter kan du markera och sedan vidta åtgärder för 
 
    ![screen_shot_2018-03-23at085636](assets/screen_shot_2018-03-23at085636.png)
 
-1. Då markeras hela stödrastret med dess innehåll. Åtgärdsverktygsfältet visas där du kan välja en åtgärd som **Ta bort.**
+1. Då markeras hela stödrastret med dess innehåll. Åtgärdsverktygsfältet visas, där du kan välja en åtgärd som t.ex. **Ta bort.**
 
    ![screen_shot_2018-03-23at085724](assets/screen_shot_2018-03-23at085724.png)
 
@@ -196,29 +197,29 @@ Precis som med andra komponenter kan du markera och sedan vidta åtgärder för 
 >
 >Du kan definiera en separat layout för varje [brytpunkt](#layout-definitions-device-emulation-and-breakpoints) (utifrån emulerad enhetstyp och orientering).
 
-Om du vill konfigurera layouten för ett responsivt rutnät som implementeras med layoutbehållaren måste du använda **layoutläget** .
+Om du vill konfigurera layouten för ett responsivt rutnät som implementeras med layoutbehållaren måste du använda läget **Layout**.
 
-**Layoutläget** kan startas på två sätt.
+**Du kan starta** layoutläget på två sätt.
 
 * Genom att använda [lägesmenyn i verktygsfältet](/help/sites-authoring/author-environment-tools.md#page-modes) och välja **layoutläget**
 
    * Välj **layoutläget** på samma sätt som du växlar till **redigeringsläget** eller **målinriktningsläget**.
    * **Layoutläget** är beständigt och du lämnar inte **layoutläget** förrän du väljer ett annat läge med lägesväljaren.
 
-* När du [redigerar en enskild komponent.](/help/sites-authoring/editing-content.md#edit-component-layout)
+* När [redigerar en enskild komponent.](/help/sites-authoring/editing-content.md#edit-component-layout)
 
-   * Genom att använda alternativet **Layout** i komponentens snabbåtgärdsmeny kan du växla till **Layout** -läge.
-   * **Layoutläget** kvarstår när komponenten redigeras och återgår till **redigeringsläget** när fokus har ändrats till en annan komponent.
+   * Genom att använda alternativet **Layout** i komponentens snabbåtgärdsmeny kan du växla till läget **Layout**.
+   * **Layoutläget** kvarstår när komponenten redigeras och återgår till  **** redigeringsläget när fokus har ändrats till en annan komponent.
 
 I layoutläget kan du utföra olika åtgärder på ett rutnät:
 
-* Ändra storlek på innehållskomponenterna med de blå punkterna. Storleksändring fästs alltid mot rutnät. När du ändrar storlek på bakgrundsstödrastret visas det för att underlätta justeringen:
+* Ändra storlek på innehållskomponenterna med de blå punkterna. Storleksändring fästs alltid mot stödrastret. När du ändrar storlek på bakgrundsstödrastret visas det för att underlätta justeringen:
 
    ![screen_shot_2018-03-23at090140](assets/screen_shot_2018-03-23at090140.png)
 
    >[!NOTE]
    >
-   >Proportionerna och proportionerna bevaras när komponenterna, till exempel **Bilder** , storleksändras.
+   >Proportioner och proportioner bevaras när komponenterna som **Bilder** storleksändras.
 
 * Klicka/peka på en innehållskomponent så kan du göra följande i verktygsfältet:
 
@@ -235,23 +236,23 @@ I layoutläget kan du utföra olika åtgärder på ett rutnät:
       Komponenten blir osynlig (den kan återställas från verktygsfältet i layoutbehållaren).
    ![screen_shot_2018-03-23at090246](assets/screen_shot_2018-03-23at090246.png)
 
-* I **layoutläget** kan du trycka/klicka på **Drag-komponenterna här** för att markera hela komponenten. Då visas verktygsfältet för det här läget.
+* I **Layout**-läget kan du trycka/klicka på **Dra komponenter hit** för att markera hela komponenten. Då visas verktygsfältet för det här läget.
 
    Verktygsfältet har olika alternativ beroende på layoutkomponentens läge och vilka komponenter som tillhör det. Till exempel:
 
-   * **Överordnad** - Välj den överordnade komponenten.
+   * **Överordnad**  - Välj den överordnade komponenten.
 
    ![](do-not-localize/screen_shot_2018-03-23at090823.png)
 
-   * **Visa dolda komponenter** - Visa alla eller enskilda komponenter. Numret visar hur många dolda komponenter det finns för närvarande. Räknaren visar hur många komponenter som är dolda.
+   * **Visa dolda komponenter**  - Visa alla eller enskilda komponenter. Numret visar hur många dolda komponenter det finns för närvarande. Räknaren visar hur många komponenter som är dolda.
 
    ![](do-not-localize/screen_shot_2018-03-23at091007.png)
 
-   * **Återställ brytpunktslayout** - Återgå till standardlayout. Det innebär att ingen anpassad layout kommer att användas.
+   * **Återställ brytpunktslayout**  - Återgå till standardlayout. Det innebär att ingen anpassad layout kommer att användas.
 
    ![](do-not-localize/screen_shot_2018-03-23at091013.png)
 
-   * **Flyt till ny rad** - Flytta komponenten upp en position om mellanrum tillåter.
+   * **Flyt till ny rad**  - Flytta komponenten uppåt till en position om avstånd tillåter.
 
    ![screen_shot_2018-03-23at090829](assets/screen_shot_2018-03-23at090829.png)
 
@@ -263,8 +264,9 @@ I layoutläget kan du utföra olika åtgärder på ett rutnät:
    >
    >I exemplet ovan är åtgärderna float och hide tillgängliga eftersom den här layoutbehållaren är kapslad i en överordnad layoutbehållare.
 
-   * **Visa komponenter** Välj de överordnade komponenterna för att visa åtgärdsverktygsfältet med 
-**Visa alternativ för dolda komponenter** . I det här exemplet är två komponenter dolda.
+   * **Visa**
+komponenterMarkera de överordnade komponenterna för att visa åtgärdsverktygsfältet med 
+**Visa dolda** komponenter, alternativ. I det här exemplet är två komponenter dolda.
    ![screen_shot_2018-03-23at091200](assets/screen_shot_2018-03-23at091200.png)
 
    Om du väljer alternativet **Visa dolda komponenter** visas de dolda komponenterna i blått i sina ursprungliga positioner.
