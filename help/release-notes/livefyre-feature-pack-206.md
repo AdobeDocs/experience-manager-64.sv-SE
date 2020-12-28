@@ -63,7 +63,7 @@ På grund av uppdateringar som påverkar sammanställningen av innehåll från a
 #### Ny funktion eller förbättring {#new-feature-or-improvement}
 
 * Lagt till möjligheten att söka efter UGC innan du ställer in behörigheter för sociala konton i Livefyre. Du måste konfigurera sociala konton för att begära rättigheter, eller åsidosätta rättighetsbegäran om du äger innehållet.
-* Instagram och Twitter [UGC-rättighetsarbetsflödet](https://docs.adobe.com/content/help/en/experience-manager-64/administering/integration/livefyre.html) har uppdaterats för att uppfylla de senaste API:erna.
+* Instagram och Twitter [Arbetsflöde för UGC-rättighetsbegäran](https://docs.adobe.com/content/help/en/experience-manager-64/administering/integration/livefyre.html) har uppdaterats för att uppfylla de senaste API:erna.
 * Rättighetsstatus och lämpliga åtgärder visas nu på skärmen för rättighetsförfrågan.
 
 #### Felkorrigeringar {#bug-fixes}
@@ -72,7 +72,7 @@ På grund av uppdateringar som påverkar sammanställningen av innehåll från a
 * Ett problem har korrigerats där inventeringen av tillgångar i Livefyre studio inte matchade inventeringen i AEM UGC-bibliotek.
 * Korrigerade ett fel i UGC-biblioteket där filtrerade resultat som visades efter att filteralternativen återställdes.
 * Korrigerade ett problem med AEM Commerce där knappar för att ringa till åtgärd dirigerade om användare till fel URL.
-* Ett problem har korrigerats i AEM Sites där flera komponenter försvann när du drog och släppte dem i platshållaren.
+* Ett problem har korrigerats i AEM Sites där flera komponenter försvann när du drog och släpptes till den parsys-platshållaren.
 * Korrigerade ett problem där inaktiverade sociala konton var tillgängliga att välja från när en rättighetsbegäran skickades.
 * Ett problem har korrigerats där ett fel uppstod när UGC-innehåll från resurser till platser skulle dras och släppas.
 * Ett problem har korrigerats där appen inte skapades när du drog och släppte Chat- och LiveBlogg-komponenter till webbplatser.
