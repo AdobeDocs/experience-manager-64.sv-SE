@@ -30,18 +30,18 @@ Förbättringen möjliggör granskning av CRUD-åtgärder (Skapa, Läs, Uppdater
 * En användare läggs till i en grupp
 * Behörighetsändringar för en befintlig användare eller grupp
 
-Som standard skrivs posterna i `error.log` filen. För att underlätta övervakningen rekommenderar vi att de dirigeras om till en separat loggfil. Mer information om hur du gör detta i stycket nedan.
+Som standard skrivs posterna i `error.log`-filen. För att underlätta övervakningen rekommenderar vi att de dirigeras om till en separat loggfil. Mer information om hur du gör detta i stycket nedan.
 
 ## Omdirigera utdata till en separat loggfil {#redirecting-the-output-to-a-separate-log-file}
 
-Om du vill omdirigera loggningsutdata till en separat loggfil måste du skapa en ny konfiguration för loggningsloggning för **Apache Sling** . Vi använder `useraudit.log` som namn på den separata filen i exemplet nedan.
+Om du vill omdirigera loggningsutdata till en separat loggfil måste du skapa en ny **konfiguration för Apache Sling Logging Logger**. Vi använder `useraudit.log` som namn på den separata filen i exemplet nedan.
 
-1. Gå till webbkonsolen genom att bläddra till `https://<serveraddress>:<serverport>/system/console/configMgr`
-1. Sök efter **loggningskonfiguration** för Apache Sling-loggning. Tryck sedan på + till höger om posten för att skapa en ny fabrikskonfiguration.
+1. Gå till webbkonsolen genom att gå till `https://<serveraddress>:<serverport>/system/console/configMgr`
+1. Sök efter **Loggningskonfiguration för Apache Sling**. Tryck sedan på + till höger om posten för att skapa en ny fabrikskonfiguration.
 1. Skapa följande konfiguration:
 
-   * **Loggnivå:** Information
-   * **Loggfil:** logs/useraudit.log
+   * **loggnivå:** information
+   * **loggfil:** logs/useraudit.log
    * **Meddelandemönster:** standardnivå
    * **Logger:** com.adobe.granite.security.user.internal.audit, com.adobe.granite.security.user.internal.servlets.AuthorizableServlet
 
