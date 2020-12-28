@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Förhandsgranska med Preflight {#previewing-with-preflight}
+# Förhandsgranska med preflight {#previewing-with-preflight}
 
 Den här sidan förklarar Förhandsvisa med Preflight-appen.
 
@@ -34,21 +34,21 @@ Med preflight-appen Mobile On Demand kan du visa alla projekt som du har tillgå
 >
 >Preflight-appen liknar till sin natur PhoneGap Enterprise-visningsprogrammet.
 
-## Förhandsgranska med Preflight {#previewing-with-preflight-1}
+## Förhandsgranska med preflight {#previewing-with-preflight-1}
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Klicka på ellipsen (..) i rutan **Hantera artiklar** (eller Banners/Collections).
+1. Klicka på ellipsen (..) i **Hantera artiklar** (eller Banners/Collections).
 1. Välj **Preflight** i åtgärdsfältet.
-1. Klicka på **Aktivera preflight** i dialogrutan.
+1. Klicka på **Aktivera Preflight** i dialogrutan.
 1. Du kan nu förhandsgranska ditt program i preflight-appen Mobile On-Demand.
 
 ![chlimage_1-8](assets/chlimage_1-8.gif)
 
 >[!NOTE]
 >
->AEM Preflight-appen används för att förhandsgranska innehåll och bläddra bland sidor. Klicka [här](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html)om du vill veta mer om Preflight-appen.
+>AEM Preflight-appen används för att förhandsgranska innehåll och bläddra bland sidor. Klicka [här](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html) om du vill veta mer om Preflight-appen.
 >
->Den AEM Preflight-appen finns i [iTunes App Store](https://itunes.apple.com/us/app/adobe-experience-manager-mobile/id1042687518?mt=8), [Google Play Store](https://play.google.com/store/apps/details?id=com.adobe.dps.preflight&amp;hl=en)och [Windows Store](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-mobile-preflight/9nblggh5wmxq).
+>Den AEM Preflight-appen finns i [iTunes App Store](https://itunes.apple.com/us/app/adobe-experience-manager-mobile/id1042687518?mt=8), [Google Play Store](https://play.google.com/store/apps/details?id=com.adobe.dps.preflight&amp;hl=en) och [Windows Store](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-mobile-preflight/9nblggh5wmxq).
 
 ### Komma framåt {#getting-ahead}
 
