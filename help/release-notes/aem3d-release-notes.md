@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Det AEM 3D-funktionspaketet i AEM 6.4 stöds inte längre. Adobe rekommenderar att du använder funktionen 3D-resurser i [AEM som Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html) eller [AEM 6.5.3 eller senare.](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html)
+>Det AEM 3D-funktionspaketet i AEM 6.4 stöds inte längre. Adobe rekommenderar att du använder funktionen 3D-resurser i [AEM som en Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html) eller [AEM 6.5.3 eller senare.](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html)
 
 AEM-6.4-DynamicMedia-3D version 3.1.0 (10 oktober 2018)
 
@@ -76,7 +76,7 @@ Se [Installera och konfigurera AEM 3D](/help/assets/install-config-3d.md).
 
 Se även [Integrera AEM 3D med Autodesk Maya](/help/assets/integrate-maya-with-3d.md) och [Integrera AEM 3D med Autodesk 3ds Max](/help/assets/integrating-aem-3d-with-autodesk-3ds-max.md).
 
-## 3D-filformat som stöds {#supported-d-file-formats}
+## 3D-filformat {#supported-d-file-formats} som stöds
 
 | Format | Beskrivning | Plattformar | Anteckningar |
 |--- |--- |--- |--- |
@@ -96,7 +96,7 @@ Version 3.0
 
 * Stöd för Autodesk 3ds Max inbyggt filformat.
 * Olika ändringar och felkorrigeringar för att förbättra stabilitet, kvalitet och användarupplevelse.
-* Konfigurationsinställningar har flyttats till `/libs/settings/dam/v3d/`
+* Konfigurationsinställningarna har flyttats till `/libs/settings/dam/v3d/`
 
 Version 3.1
 
@@ -117,56 +117,56 @@ Version 3.1
 
 ### Kompatibilitet {#compatibility}
 
-* **Körning som Windows-tjänst stöds inte (endast Windows)** . Detta kan fungera men har inte testats.
-* **Dynamic Media** ( `dynamicmedia-scene7` läge) - Kompatibiliteten för AEM3D med den nya Dynamic Media-lösningen som släpptes med AEM 6.4 är ännu inte helt verifierad. Om Dynamic Media och AEM3D distribueras tillsammans rekommenderar vi att du bara placerar 3D-resurser och deras beroenden i ett område i AEM Assets-databasen som inte är tilldelat till Dynamic Media. Den här rekommendationen är särskilt viktig för 32-bitars TIFF-filer som krävs för 3D-scener men som inte stöds av Dynamic Media.
+* **Körning som Windows-tjänst stöds inte (endast Windows)**  - Detta kan fungera men har inte testats.
+* **Dynamic Media** (  `dynamicmedia-scene7` läge) - Kompatibiliteten för AEM3D med den nya Dynamic Media-lösningen som släpptes med AEM 6.4 har ännu inte verifierats fullständigt. Om Dynamic Media och AEM3D distribueras tillsammans rekommenderar vi att du bara placerar 3D-resurser och deras beroenden i ett område i AEM Assets-databasen som inte är tilldelat Dynamic Media. Den här rekommendationen är särskilt viktig för 32-bitars TIFF-filer som krävs för 3D-scener men som inte stöds av Dynamic Media.
 
 ### Allmänt {#general}
 
-* **Genvägen** Lös beroenden - Den här genvägen är tillgänglig i kortvyn för 3D-resurser. Resurskort i kortvyn visar bannern Olösta beroenden. Kortkommandot öppnar fliken **Grundläggande egenskaper** i stället för fliken **Beroenden** . Tillfällig lösning: navigera manuellt till fliken Beroenden.
+* **Genvägen**  Lös beroenden - Den här genvägen är tillgänglig i kortvyn för 3D-resurser. Resurskort i kortvyn visar bannern Olösta beroenden. Kortkommandot öppnar fliken **Grundläggande egenskaper** i stället för fliken **Beroenden**. Tillfällig lösning: navigera manuellt till fliken Beroenden.
 
-* **Scenväljaren är inte tillgänglig** - 3D-resurser som innehåller ljus taggas automatiskt av AEM som 3D-faser. Det finns ingen lägesväljare tillgänglig för faser i detaljvyn. Om du vill markera en 3D-resurs som ett 3D-objekt går du till **Grundläggande egenskaper**, ändrar **Resursklass** till **3D-objekt** och klickar sedan på **Spara**.
+* **Scenväljaren är inte tillgänglig**  - 3D-resurser som innehåller ljus taggas automatiskt av AEM som 3D-faser. Det finns ingen lägesväljare tillgänglig för faser i detaljvyn. Om du vill markera en 3D-resurs som ett 3D-objekt går du till **Grundläggande egenskaper**, ändrar **Resursklass** till **3D-objekt** och klickar sedan på **Spara**.
 
-* **Hämta 3D-resurser med beroenden och renderingar** - När du hämtar 3D-resurser från AEM med både **Beroenden** och **renderingar** markerade, innehåller hämtningen inte bara renderingar av den primära 3D-resursen, utan även renderingar av alla beroenden.
+* **Hämta 3D-resurser med beroenden och renderingar**  - När du hämtar 3D-resurser från AEM med både  **** Beroenden och  **renderingar**  markerade, innehåller hämtningen inte bara renderingar av den primära 3D-resursen, utan även renderingar av alla beroenden.
 
-* **Autodesk 3ds Max-integrering** - Rendering med 3ds Max stöds inte just nu.
+* **Autodesk 3ds Max-integrering**  - Rendering with 3ds Max is not supported just nu.
 
 ### Filtypsbegränsningar {#file-type-restrictions}
 
-* **Matematiska (.ma) filer** - Matematiska filer använder samma filsuffix som ursprungliga Maya-filer. När funktionspaketet är installerat och filformatet Maya.ma är aktiverat, misslyckas AEM3D:s försök att importera matematiska filer som Maya-filer. Sådana resurser visar en felbanderoll i kortvyn.
+* **Matematiska filer**  (.ma) - Matematiska filer använder samma filsuffix som ursprungliga Maya-filer. När funktionspaketet är installerat och filformatet Maya.ma är aktiverat, misslyckas AEM3D:s försök att importera matematiska filer som Maya-filer. Sådana resurser visar en felbanderoll i kortvyn.
 
-* **Targa-bildfiler** (.tga) - Äldre 3D-modellfiler kan innehålla referenser till TGA-filer. Det här formatet stöds inte av AEM. Adobe rekommenderar att du konverterar sådana filer till ett annat format innan du överför 3D-resurserna till AEM.
-* **HDR-bilder** - HDR-bilder används för faser med bildbaserat ljus (IBL). För närvarande stöds endast 32-bitars TIFF-bilder för detta ändamål.
-* **32-bitars TIFF-bilder** - 32-bitars TIFF-bilder används för faser med bildbaserad belysning. AEM har inte stöd för att skapa återgivningar för dessa resurser, vilket resulterar i tomma miniatyrbilder, och förhandsgranskning är inte möjlig. Tillgången fungerar fortfarande korrekt när den används i ett IBL-steg.
-* **Autodesk 3ds Max-filer** (.max) - Om Autodesk 3ds Max är installerat och konfigurerat på Author-noderna har AEM stöd för att hantera och konvertera .max-filer. Det går för närvarande inte att använda .max-filer som steg.
+* **Targa-bildfiler**  (.tga) - Äldre 3D-modellfiler kan innehålla referenser till TGA-filer. Det här formatet stöds inte av AEM. Adobe rekommenderar att du konverterar sådana filer till ett annat format innan du överför 3D-resurserna till AEM.
+* **HDR-bilder**  - HDR-bilder används för faser med bildbaserat ljus (IBL). För närvarande stöds endast 32-bitars TIFF-bilder för detta ändamål.
+* **32-bitars TIFF-bilder**  - 32-bitars TIFF-bilder används för faser med bildbaserad belysning. AEM har inte stöd för att skapa återgivningar för dessa resurser, vilket resulterar i tomma miniatyrbilder, och förhandsgranskning är inte möjlig. Tillgången fungerar fortfarande korrekt när den används i ett IBL-steg.
+* **Autodesk 3ds Max-filer**  (.max) - Om Autodesk 3ds Max är installerat och konfigurerat på Author-noderna har AEM stöd för import och konvertering av .max-filer. Det går för närvarande inte att använda .max-filer som steg.
 
 ### Automatisk beroendeupplösning {#automatic-dependency-resolution}
 
-* **Olösta filberoenden efter överföring** - När 3D-resurser och deras beroenden överförs med samma överföring är det möjligt att vissa beroenden inte löses automatiskt. Det här problemet uppstår troligare om de beroende filerna är stora. Åtgärda problemet genom att gå till sidan **Egenskaper/beroenden** för resursen som visar olösta beroenden efter överföringen. De tidigare ej lösta beroendena ska nu visas. Klicka på **Spara** för att slutföra resursen. Om du vill förhindra det här problemet i framtiden kan du överföra alla beroenden i en separat transaktion innan du överför 3D-objekten.
+* **Olösta filberoenden efter överföring**  - När 3D-resurser och deras beroenden överförs med samma överföring är det möjligt att vissa beroenden inte löses automatiskt. Det här problemet uppstår troligare om de beroende filerna är stora. Åtgärda problemet genom att gå till sidan **Egenskaper/Beroenden** för resursen som visar olösta beroenden efter överföringen. De tidigare ej lösta beroendena ska nu visas. Klicka på **Spara** för att slutföra resursen. Om du vill förhindra det här problemet i framtiden kan du överföra alla beroenden i en separat transaktion innan du överför 3D-objekten.
 
-* **Skiftlägeskänslighet** - Automatisk beroendeupplösning försöker matcha filnamn på ett skiftlägeskänsligt sätt. Om t.ex. det ursprungliga beroendet i 3D-resursen är `image.jpg`, tolkas beroendet som en resurs med namnet `Image.jpg`, `image.JPG`eller någon annan skiftlägesvariation.
+* **Skiftlägeskänslighet**  - Automatisk beroendeupplösning försöker matcha filnamn på ett skiftlägeskänsligt sätt. Om det ursprungliga beroendet i 3D-resursen till exempel är `image.jpg`, tolkas beroendet som en resurs med namnet `Image.jpg`, `image.JPG` eller någon annan skiftlägesvariation.
 
 ### 3D-faser {#d-stages}
 
-* **Miniatyrbilder för scener** - De automatiskt genererade miniatyrbilderna för scener kanske inte representerar scenen korrekt.
-* **Scengeometri för icke-IBL-stadier** - Renderingen för förfina snabbt återger inte geometri från faser med icke-IBL-ljus, inklusive bakgrunder och markplan. Den här geometrin visas fortfarande på ett rimligt sätt i resursvyn Detalj (3D-förhandsvisning).
+* **Miniatyrbilder för scener**  - De automatiskt genererade miniatyrbilderna för scener kanske inte representerar scenen korrekt.
+* **Scengeometri för icke-IBL-stadier**  - Renderingen för förfina snabbt återger inte geometri från faser med icke-IBL-ljus, inklusive bakgrunder och markplan. Den här geometrin visas fortfarande på ett rimligt sätt i resursvyn Detalj (3D-förhandsvisning).
 
-* **FBX-faser med IBL-ljus** - Du kan överföra FBX-faser med IBL-ljus. FBX-formatet har dock inga bestämmelser för överföring av IBL-bildnamnet. Filberoendeupplösningen misslyckas därför. IBL-bilden måste tilldelas manuellt till scenen efter överföringen. Du kan tilldela samma 32-bitars TIFF-bild till de tre beroenden som är **Diffusera foton** för ljusmiljö, **Reflexion Environment Image** och **Background Environment Image**, eller så kan olika bilder tilldelas.
+* **FBX-faser med IBL-ljus**  - Du kan överföra FBX-faser med IBL-ljus. FBX-formatet har dock inga bestämmelser för överföring av IBL-bildnamnet. Filberoendeupplösningen misslyckas därför. IBL-bilden måste tilldelas manuellt till scenen efter överföringen. Du kan tilldela samma 32-bitars TIFF-bild till de tre beroenden som är **Diffusera foton för ljusmiljö**, **Reflektionsmiljöbild** och **bakgrundsmiljöbild**, eller så kan olika bilder tilldelas.
 
-* **Bakgrundsbild av IBL-stadier** - För vissa IBL-scener kan bakgrundsbilden ha dålig kvalitet, till exempel för ljus eller för suddig. För att maximera den visuella kvaliteten på bildbakgrunden i IBL-stadier rekommenderar Adobe att du förbereder en separat 8-bitars JPEG-bild med hög upplösning och bifogar den till IBL-scenen som **bakgrundsmiljöbild**.
+* **Bakgrundsbild av IBL-stadier**  - För vissa IBL-scener kan bakgrundsbilden ha dålig kvalitet, till exempel för ljus eller för suddig. För att maximera den visuella kvaliteten på bildbakgrunden i IBL-stadier rekommenderar Adobe att du förbereder en separat 8-bitars JPEG-bild med hög upplösning och bifogar den till IBL-scenen som **bakgrundsmiljöbild**.
 
-* **Svart bild vid återgivning med Maya i ett IBL-stadium** - Detta problem beror troligen på att Maya inte hittar IBL-bildberoendet eftersom den ursprungliga IBL-bilden som scenen refererar till har ersatts med en bild med ett annat namn. För att undvika detta bör du se till att minst ett av de tre beroenden som Maya IBL-scenen refererar till har samma namn som den ursprungliga IBL-filreferensen i Maya-filen.
-* **Omvänd bakgrundsbild för IBL-scenen** - Bilderna för IBL-stadier har avsiktligt vridits vågrätt för att matcha beteendet hos den NVIDIA-renderare för mental ray som tillhandahålls av Autodesk Maya. Tillfällig lösning: Vänd bilderna som används för IBL-stadier i Photoshop innan du överför dem.
-* **Intensitet i IBL-stadier** - Den automatiska analysen av IBL-bilden kan resultera i att motivet är för mörkt eller för ljust. Om du vill justera ljusstyrkan för IBL-stadier går du till **Grundläggande egenskaper** och justerar det **ljusa** värdet för **Miljöbelysning** efter behov.
+* **Svart bild vid återgivning med Maya i IBL-stadiet**  - Detta beror troligen på att Maya inte hittar IBL-bildberoendet eftersom den ursprungliga IBL-bilden som scenen refererar till ersattes med en bild med ett annat namn. För att undvika detta bör du se till att minst ett av de tre beroenden som Maya IBL-scenen refererar till har samma namn som den ursprungliga IBL-filreferensen i Maya-filen.
+* **Omvänd bakgrundsbild för IBL-scenen**  - Bilderna för IBL-stadier har avsiktligt vridits vågrätt för att matcha beteendet hos den NVIDIA-renderare för mental ray som tillhandahålls av Autodesk Maya. Tillfällig lösning: Vänd bilderna som används för IBL-stadier i Photoshop innan du överför dem.
+* **Intensitet i IBL-stadier**  - Den automatiska analysen av IBL-bilden kan resultera i en scen som är för mörk eller för ljus. Om du vill justera ljusstyrkan för IBL-stadier går du till **Grundläggande egenskaper** och justerar **klarhetens**-värde för **Miljöbelysning** efter behov.
 
 ### AEM Sites 3D-komponent {#aem-sites-d-component}
 
-* **En 3D-komponent per sida** - För närvarande tillåts bara en instans av 3D-komponenten på varje webbsida. Om mer än en 3D-komponent läggs till på samma sida fungerar ingen av 3D-komponenterna korrekt.
-* **3D-vyn saknas när du förhandsgranskar i platser** - När du använder **Förhandsgranska** i platser måste sidan läsas in på nytt i webbläsaren för att 3D-visningsprogrammet ska kunna initieras fullständigt. Detta är inte något problem när du visar webbsidan direkt (d.v.s. när den `edit.html` tas bort från sökvägen) på antingen författarnoden eller publiceringsnoden.
+* **En 3D-komponent per sida**  - För närvarande tillåts bara en instans av 3D-komponenten på varje webbsida. Om mer än en 3D-komponent läggs till på samma sida fungerar ingen av 3D-komponenterna korrekt.
+* **3D-vyn saknas när du förhandsgranskar i platser**  - När du använder  **** Förhandsgranskningar i platser måste sidan läsas in på nytt i webbläsaren för att 3D-visningsprogrammet ska kunna initieras fullständigt. Detta är inte något problem när du visar webbsidan direkt (d.v.s. när `edit.html` tas bort från sökvägen), antingen på författarnoderna eller på publiceringsnoderna.
 
-* **Helskärmsläge är inte tillgängligt på iOS-enheter** - Helskärmsknappen är inte tillgänglig på iOS-enheter, oavsett vilken webbläsare som används.
+* **Helskärmsläge är inte tillgängligt på iOS-enheter**  - Helskärmsknappen är inte tillgänglig på iOS-enheter, oavsett vilken webbläsare som används.
 
 ### Publicera 3D-innehåll {#publishing-d-content}
 
-* **Konfiguration** av 3D-komponent - Du måste installera 3D-funktionspaketet på alla aktiva publiceringsnoder och varje nod måste konfigureras med **CRXDE Lite** till samma konfigurationsalternativ på `/libs/settings/dam/v3D/WebGLSites`.
+* **Konfiguration**  av 3D-komponent - Du måste installera 3D-funktionspaketet på alla aktiva publiceringsnoder och varje nod måste konfigureras med  **CRXDE-** begränsning till samma konfigurationsalternativ på  `/libs/settings/dam/v3D/WebGLSites`.
 
-* **Texturer, bakgrund eller ljus saknas efter publicering** - **Publiceringsfunktionen** i AEM Sites publicerar automatiskt sidans primära beroenden, inklusive 3D-modellen och 3D-scenen som 3D-komponenten refererar till. 3D-faser och 3D-modeller är vanligtvis beroende av sekundära resurser för IBL-bilder och texturkartor, som publiceras inte automatiskt av publiceringsfunktionen i Sites. Tillfällig lösning: publicera alla 3D-resurser från Assets innan du publicerar webbsidan från Sites. Detta garanterar att alla beroenden för 3D-resurser är tillgängliga på publiceringsnoderna.
+* **Texturer, bakgrund eller ljus saknas efter publicering**  -  **** Publiceringsfunktionen i AEM Sites publicerar automatiskt sidans primära beroenden, inklusive 3D-modellen och 3D-scenen som refereras av 3D-komponenten. 3D-faser och 3D-modeller är vanligtvis beroende av sekundära resurser för IBL-bilder och texturkartor, som publiceras inte automatiskt av publiceringsfunktionen i Sites. Tillfällig lösning: publicera alla 3D-resurser från Assets innan du publicerar webbsidan från Sites. Detta garanterar att alla beroenden för 3D-resurser är tillgängliga på publiceringsnoderna.
