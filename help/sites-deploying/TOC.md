@@ -15,15 +15,15 @@ ht-degree: 1%
 ---
 
 
-# Användarhandbok för distribution av AEM 6.4 {#deploying}
+# AEM 6.4 Distribuera användarhandbok {#deploying}
 
 + [Distribuera användarhandbok](home.md)
-+ Introduktion till AEM {#introduction}
++ Introduktion till AEM{#introduction}
    + [Introduktion till AEM](platform.md)
    + [Tekniska krav](technical-requirements.md)
    + [Lagringselement i AEM 6.4](storage-elements-in-aem-6.md)
    + [AEM med MongoDB](aem-with-mongodb.md)
-+ Distribuera AEM {#deploying}
++ Distribuerar AEM {#deploying}
    + [Driftsättning och underhåll](deploy.md)
    + [Rekommenderade distributioner](recommended-deploys.md)
    + [Installation av programserver](application-server-install.md)
@@ -39,7 +39,7 @@ ht-degree: 1%
    + [Felsöka ekindex](troubleshooting-oak-indexes.md)
    + [Insamling av aggregerad användningsstatistik](opt-in-aggregated-usage-statistics.md)
    + [Felsökning](troubleshooting.md)
-+ Konfigurera AEM {#configuring}
++ Konfigurerar AEM {#configuring}
    + [Grundläggande konfigurationskoncept](configuring.md)
    + [Loggning](configure-logging.md)
    + [Konfigurerar OSGi](configuring-osgi.md)
@@ -63,7 +63,7 @@ ht-degree: 1%
    + [Instruktionsartiklar för konfiguration](ht-deploy.md)
    + [Ta bort Geometrixx](removing-the-geometrixx-sites.md)
    + [Konfigurerar webbkonsolen](configuring-web-console.md)
-+ Uppgradera till AEM 6.4 {#upgrading}
++ Uppgraderar till AEM 6.4 {#upgrading}
    + [Uppgradera till AEM 6.4](upgrade.md)
    + [Planera din uppgradering](upgrade-planning.md)
    + [Utvärdera uppgraderingskomplexiteten med mönsteravkännaren](pattern-detector.md)
@@ -80,16 +80,16 @@ ht-degree: 1%
    + [Uppgradera kod och anpassningar](upgrading-code-and-customizations.md)
    + [Uppgradera steg för programserverinstallationer](app-server-upgrade.md)
    + [Lista över föråldrade paket som avinstallerats efter uppgraderingen](obsolete-bundles.md)
-+ Omstrukturering av lager {#restructuring}
++ Databasomstrukturering {#restructuring}
    + [Omstrukturering av lager i AEM 6.4](repository-restructuring.md)
    + [Omstrukturering av de gemensamma tillgångarna i AEM 6.4](all-repository-restructuring-in-aem-6-4.md)
    + [Omstrukturering av anläggningar Repository i AEM 6.4](sites-repository-restructuring-in-aem-6-4.md)
    + [Omstrukturering av tillgångar Repository i AEM 6.4](assets-repository-restructuring-in-aem-6-4.md)
-   + [Omstrukturering av Dynamic Media Repository i AEM 6.4](dynamicmedia-repository-restructuring-in-aem-6-4.md)
+   + [Omstrukturering av Dynamic Media-lager i AEM 6.4](dynamicmedia-repository-restructuring-in-aem-6-4.md)
    + [Omstrukturering av Forms-lager i AEM 6.4](forms-repository-restructuring-in-aem-6-4.md)
    + [Omstrukturering av e-handelslager i AEM 6.4](ecommerce-repository-restructuring-in-aem-6-4.md)
    + [Repositionsomstrukturering för AEM Communities i 6.4](communities-repository-restructuring-in-aem-6-4.md)
-+ eCommerce {#ecommerce}
++ e-handel {#ecommerce}
    + [e-handel - översikt](ecommerce.md)
    + [SAP Commerce Cloud](sap-commerce-cloud.md)
    + [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
