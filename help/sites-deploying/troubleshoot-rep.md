@@ -42,11 +42,11 @@ Kontrollera detta genom att gå till /etc/replication/agents.author.html och sed
 
 **Om en agentkö eller ett fåtal agentköer har fastnat:**
 
-1. Visar kön **blockerad** status? Om så är fallet, körs inte publiceringsinstansen eller svarar den inte alls? Kontrollera publiceringsinstansen för att se vad som är fel med den (d.v.s. kontrollera loggarna och se om det finns ett OutOfMemory-fel eller något annat problem. Om det sedan är långsamt tar du tråd och analyserar dem.
-1. Visar köstatusen att **kön är aktiv - # väntande**? Replikeringsjobbet kan i princip fastna i en socketläsning i väntan på att publiceringsinstansen eller dispatchern ska svara. Det kan innebära att publiceringsinstansen eller dispatchern är under hög belastning eller sitter fast i ett lås. Ta tråddumpar från författaren och publicera i det här fallet.
+1. Visar kön **statusen Blockerad**? Om så är fallet, körs inte publiceringsinstansen eller svarar den inte alls? Kontrollera publiceringsinstansen för att se vad som är fel med den (d.v.s. kontrollera loggarna och se om det finns ett OutOfMemory-fel eller något annat problem. Om det sedan är långsamt tar du tråd och analyserar dem.
+1. Visar köstatusen **Kön är aktiv - # väntande**? Replikeringsjobbet kan i princip fastna i en socketläsning i väntan på att publiceringsinstansen eller dispatchern ska svara. Det kan innebära att publiceringsinstansen eller dispatchern är under hög belastning eller sitter fast i ett lås. Ta tråddumpar från författaren och publicera i det här fallet.
 
    * Öppna trådsdumpar från författaren i en tråddumpsanalyserare, kontrollera om det visar att replikeringsagentens snedningsjobb har fastnat i en socketRead.
-   * Öppna trådsdumpar från publicering i en tråddumpsanalyserare, analysera vad som kan göra att publiceringsinstansen inte svarar. Du bör se en tråd med POSTEN /bin/receive i dess namn, det vill säga den tråd som tar emot replikeringen från författaren.
+   * Öppna trådsdumpar från publicering i en tråddumpsanalyserare och analysera vad som kan göra att publiceringsinstansen inte svarar. Du bör se en tråd med POSTEN /bin/receive i dess namn, det vill säga den tråd som tar emot replikeringen från författaren.
 
 **Om alla agentköer har fastnat**
 
@@ -63,7 +63,7 @@ Kontrollera detta genom att gå till /etc/replication/agents.author.html och sed
 1. Det kan vara något fel med att snedställa jobbköer i utvecklingsramverket. Prova att starta om paketet org.apache.sling.event i /system/console.
 1. Det kan bero på att jobbbearbetningen är helt avstängd. Det kan du kolla under Felix Console på fliken Sling Eventing. Kontrollera om den visas - Apache Sling Eventing (JOBBBEARBETNING ÄR INAKTIVERAD!)
 
-   * Om ja, kontrollera Apache Sling Job Event Handler på fliken Konfiguration i Felix Console. Det kan bero på att kryssrutan Jobbbearbetning är aktiverad inte är markerad. Om detta är markerat och fortfarande visar att jobbbearbetning är inaktiverad, kontrollerar du om det finns någon övertäckning under /apps/system/config som inaktiverar jobbbearbetningen. Försök att skapa en osgi:config-nod för jobmanager.enabled med ett booleskt värde till true och kontrollera om aktiveringen har startat och det inte finns några fler jobb i kö.
+   * Om ja, kontrollera Apache Sling Job Event Handler under fliken Konfiguration i Felix Console. Det kan bero på att kryssrutan Jobbbearbetning är aktiverad inte är markerad. Om detta är markerat och fortfarande visar att jobbbearbetning är inaktiverad, kontrollerar du om det finns någon övertäckning under /apps/system/config som inaktiverar jobbbearbetningen. Försök att skapa en osgi:config-nod för jobmanager.enabled med ett booleskt värde till true och kontrollera om aktiveringen har startat och det inte finns några fler jobb i kö.
 
 1. Det kan också vara så att DefaultJobManager-konfigurationen försätts i ett inkonsekvent tillstånd. Detta kan inträffa när någon manuellt ändrar konfigurationen av &quot;Apache Sling Job Event Handler&quot; via OSGiconsole (t.ex. inaktiverar och återaktiverar egenskapen &quot;Jobbbearbetning aktiverad&quot; och sparar konfigurationen).
 
@@ -75,7 +75,7 @@ Kontrollera detta genom att gå till /etc/replication/agents.author.html och sed
 Ibland kan det vara praktiskt att ange att all replikeringsloggning ska läggas till i en separat loggfil på DEBUG-nivå. Så här gör du:
 
 1. Gå till `https://host:port/system/console/configMgr` och logga in som administratör.
-1. Hitta fabriken Apache Sling Logging Logger och skapa en instans genom att klicka på **+** till höger om fabrikskonfigurationen. Detta skapar en ny loggningslogg.
+1. Hitta Apache Sling Logging Logger-fabriken och skapa en instans genom att klicka på knappen **+** till höger om fabrikskonfigurationen. Detta skapar en ny loggningslogg.
 1. Ställ in konfigurationen så här:
 
    * Loggnivå: FELSÖKNING
@@ -84,7 +84,7 @@ Ibland kan det vara praktiskt att ange att all replikeringsloggning ska läggas 
 
 1. Om du misstänker att problemet är relaterat till snedstreck/jobb på något sätt kan du även lägga till det här java-paketet under kategorier:org.apache.sling.event
 
-### Pausar kön för replikeringsagent  {#pausing-replication-agent-queue}
+### Pausar kön för replikeringsagent {#pausing-replication-agent-queue}
 
 Ibland kan det vara lämpligt att pausa replikeringskön för att minska belastningen på författarsystemet, utan att inaktivera den. För närvarande är detta endast möjligt om en port konfigureras tillfälligt. Från och med 5.4 kan du se pausknappen i replikeringsagentkön. Den har vissa begränsningar
 
@@ -97,19 +97,19 @@ Sidbehörigheter replikeras inte eftersom de lagras under noderna som åtkomst b
 
 I allmänhet bör inte sidbehörigheter replikeras från författaren till publiceringen och är inte standard. Detta beror på att åtkomsträttigheterna bör vara olika i dessa två miljöer. Därför rekommenderar vi att du konfigurerar åtkomstkontrollistor vid publicering separat från författaren.
 
-### Replikeringskön har blockerats vid replikering av namnområdesinformation från författare till publicering {#replication-queue-blocked-when-replicating-namespace-information-from-author-to-publish}
+### Replikeringskön har blockerats vid replikering av namnområdesinformation från författaren till publiceringen {#replication-queue-blocked-when-replicating-namespace-information-from-author-to-publish}
 
-I vissa fall blockeras replikeringskön när du försöker replikera namnområdesinformation från författarinstansen till publiceringsinstansen. Detta beror på att replikeringsanvändaren inte har `jcr:namespaceManagement` behörighet. Undvik problemet genom att se till att:
+I vissa fall blockeras replikeringskön när du försöker replikera namnområdesinformation från författarinstansen till publiceringsinstansen. Detta beror på att replikeringsanvändaren inte har `jcr:namespaceManagement`-behörighet. Undvik problemet genom att se till att:
 
-* Replikeringsanvändaren (som den har konfigurerats under fliken [Transport](/help/sites-deploying/replication.md#replication-agents-configuration-parameters) >User) finns också på Publish-instansen.
+* Replikeringsanvändaren (som konfigurerats under fliken [Transport](/help/sites-deploying/replication.md#replication-agents-configuration-parameters) User) finns också på Publish-instansen.
 * Användaren har läs- och skrivbehörighet på sökvägen där innehållet är installerat.
-* Användaren har `jcr:namespaceManagement` behörighet på databasnivå. Du kan bevilja privilegiet enligt följande:
+* Användaren har `jcr:namespaceManagement`-behörighet på databasnivå. Du kan bevilja privilegiet enligt följande:
 
 1. Logga in på CRX/DE ( `http://localhost:4502/crx/de/index.jsp`) som administratör.
-1. Klicka på fliken **Åtkomstkontroll** .
+1. Klicka på fliken **Åtkomstkontroll**.
 1. Välj **Databas**.
 1. Klicka på **Lägg till post** (plusikonen).
 1. Ange användarens namn.
-1. Select `jcr:namespaceManagement` from the privileges list.
+1. Välj `jcr:namespaceManagement` i behörighetslistan.
 1. Klicka på OK.
 
