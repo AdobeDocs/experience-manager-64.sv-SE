@@ -38,7 +38,7 @@ Medlemmar i gruppen app-author ansvarar för att skapa AEM innehåll för mobila
 
    Navigera till User Admin Console: [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
-   I användargruppskonsolen väljer du plusknappen (+) för att skapa en grupp.
+   I användargruppkonsolen väljer du plusknappen (+) för att skapa en grupp.
 
    Ange ID:t för den här gruppen som&quot;app-authors&quot; för att ange att det är en specifik typ av författaranvändargrupp som är specifik för utveckling av mobilprogram i AEM.
 
@@ -46,7 +46,7 @@ Medlemmar i gruppen app-author ansvarar för att skapa AEM innehåll för mobila
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
-1. Nu när du har skapat användargruppen för programförfattare kan du lägga till enskilda teammedlemmar i den nya gruppen via [användaradministratörskonsolen](http://localhost:4502/libs/granite/security/content/useradmin.md).
+1. Nu när du har skapat användargruppen app-authors kan du lägga till enskilda teammedlemmar i den nya gruppen via [användaradministratörskonsolen](http://localhost:4502/libs/granite/security/content/useradmin.md).
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
@@ -61,7 +61,7 @@ Medlemmar i gruppen app-author ansvarar för att skapa AEM innehåll för mobila
 
 ### AEM Mobile Application Administrators Group (app-admins group) {#aem-mobile-application-administrators-group-app-admins-group}
 
-Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörigheter som finns i appförfattarna **AND** ansvarar även för:
+Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörigheter som finns i appförfattarna **AND** och ansvarar även för:
 
 * Förproduktion, publicering och rensning av programuppdateringar för ContentSync OTA
 
@@ -71,7 +71,7 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
 >
 >Du kommer att märka att vissa alternativ inte är tillgängliga för appförfattare som är tillgängliga för appadministratörer.
 
-### Gruppkonfiguration - programadministratörer {#group-configuration-app-admins}
+### Gruppkonfiguration - app-admins {#group-configuration-app-admins}
 
 1. Skapa en ny grupp som kallas appadministratörer.
 1. Lägg till följande grupper i den nya gruppen för programadministratörer:
@@ -85,7 +85,7 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
    >
    >arbetsflödesanvändare krävs för fjärrbygge med PhoneGap Build-tjänsten
 
-1. Navigera till [behörighetskonsolen](http://localhost:4502/useradmin) och lägg till behörigheter för att administrera molntjänster
+1. Navigera till [Behörighetskonsolen](http://localhost:4502/useradmin) och lägg till behörigheter för att administrera molntjänster
 
    * (Läs, Ändra, Skapa, Ta bort, Replikera) på /etc/cloudServices/mobiltjänster
 
