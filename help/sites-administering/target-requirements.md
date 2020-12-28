@@ -20,9 +20,9 @@ ht-degree: 0%
 
 # Krav för integrering med Adobe Target{#prerequisites-for-integrating-with-adobe-target}
 
-Som en del av [integreringen av AEM och Adobe Target](/help/sites-administering/target.md)måste du registrera dig hos Adobe Target, konfigurera replikeringsagenten och säkra aktivitetsinställningar på publiceringsnoden.
+Som en del av [integreringen av AEM och Adobe Target](/help/sites-administering/target.md) måste du registrera dig hos Adobe Target, konfigurera replikeringsagenten och säkra aktivitetsinställningar på publiceringsnoden.
 
-## Registrering hos Adobe Target {#registering-with-adobe-target}
+## Registrerar med Adobe Target {#registering-with-adobe-target}
 
 För att kunna integrera AEM med Adobe Target måste du ha ett giltigt Adobe Target-konto. Det här kontot måste minst ha **godkännare **nivå-behörigheter. När du registrerar dig hos Adobe Target får du en klientkod. Du behöver klientkoden och inloggningsnamnet och lösenordet för Adobe Target för att kunna ansluta AEM till Adobe Target.
 
@@ -35,26 +35,26 @@ Klientkoden identifierar Adobe Target-kundkontot när Adobe Target-servern anrop
 >
 >Om så inte är fallet, kontakta [Adobe Target kundtjänst](https://docs.adobe.com/content/help/en/target/using/cmp-resources-and-contact-information.html).
 
-## Aktivera målreplikeringsagenten {#enabling-the-target-replication-agent}
+## Aktiverar målreplikeringsagenten {#enabling-the-target-replication-agent}
 
-Test- och Target- [replikeringsagenten](/help/sites-deploying/replication.md) måste vara aktiverad på författarinstansen. Observera att den här replikeringsagenten inte är aktiverad som standard om du använde körningsläget [nosamplsinnehåll](/help/sites-deploying/configure-runmodes.md#using-samplecontent-and-nosamplecontent) för att installera AEM. Mer information om hur du skyddar din produktionsmiljö finns i [Säkerhetschecklistan](/help/sites-administering/security-checklist.md).
+Test- och Target [replikeringsagenten](/help/sites-deploying/replication.md) måste aktiveras på författarinstansen. Observera att den här replikeringsagenten inte är aktiverad som standard om du använde körningsläget [nosamplsinnehåll](/help/sites-deploying/configure-runmodes.md#using-samplecontent-and-nosamplecontent) för att installera AEM. Mer information om hur du skyddar din produktionsmiljö finns i [checklistan för säkerhet](/help/sites-administering/security-checklist.md).
 
 1. På AEM startsida klickar eller trycker du på **Verktyg** > **Distribution** > **Replikering**.
-1. Klicka eller tryck på **Agents On Author**.
-1. Klicka på eller tryck på replikeringsagenten för **Test och Target (test och target)** och klicka eller tryck sedan på **Redigera**.
+1. Klicka eller tryck på **Agenter på författare**.
+1. Klicka eller tryck på **Test and Target (test and target)**-replikeringsagenten och klicka eller tryck sedan på **Edit**.
 1. Välj alternativet Aktiverad och klicka eller tryck sedan på **OK**.
 
    >[!NOTE]
    >
-   >När du konfigurerar replikeringsagenten Test och Target, på fliken **Transport** , anges URI som standard till **tnt:///**. Ersätt inte denna URI med **https://admin.testandtarget.omniture.com**.
+   >När du konfigurerar replikeringsagenten Test och Target, på fliken **Transport**, ställs URI:n in som standard till **tnt:///**. Ersätt inte denna URI med **https://admin.testandtarget.omniture.com**.
    >
-   >Observera att om du försöker testa anslutningen med **tnt:///** genereras ett fel. Detta är förväntat eftersom denna URI endast är avsedd för internt bruk och inte ska användas med **Test Connection**.
+   >Observera att om du försöker testa anslutningen med **tnt:///** genereras ett fel. Detta är förväntat eftersom denna URI endast är avsedd för internt bruk och inte ska användas med **Testa anslutning**.
 
 ## Skydda noden Aktivitetsinställningar {#securing-the-activity-settings-node}
 
-Du måste skydda aktivitetsinställningsnoden **cq:ActivitySettings** i publiceringsinstansen så att den inte är tillgänglig för vanliga användare. Noden för aktivitetsinställningar ska bara vara tillgänglig för tjänsten som hanterar aktivitetssynkroniseringen till Adobe Target.
+Du måste skydda aktivitetsinställningsnoden **cq:ActivitySettings** på publiceringsinstansen så att den inte är tillgänglig för vanliga användare. Noden för aktivitetsinställningar ska bara vara tillgänglig för tjänsten som hanterar aktivitetssynkroniseringen till Adobe Target.
 
-Noden **cq:ActivitySettings** finns i CRXDE-klassen under `/content/campaigns/*nameofbrand*`* *under aktivitetsnoden jcr:content;* *till exempel `/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`. Den här noden skapas bara efter att du har angett en komponent som mål.
+Noden **cq:ActivitySettings** är tillgänglig i CRXDE lite under `/content/campaigns/*nameofbrand*`* *under aktivitetsnoden jcr:content;* *till exempel `/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`. Den här noden skapas bara efter att du har angett en komponent som mål.
 
 Noden **cq:ActivitySettings** under aktivitetens jcr:content skyddas av följande åtkomstkontrollistor:
 
@@ -62,16 +62,16 @@ Noden **cq:ActivitySettings** under aktivitetens jcr:content skyddas av följand
 * Tillåt jcr:read,rep:write för&quot;target-activity-authors&quot; (författaren är medlem i den här gruppen utanför rutan)
 * Tillåt jcr:read,rep:write för &quot;target service&quot;
 
-Dessa inställningar ser till att normala användare inte har tillgång till nodegenskaperna. Använd samma åtkomstkontrollista vid författare och publicering. Mer information finns i [Användaradministration och -säkerhet](/help/sites-administering/security.md) .
+Dessa inställningar ser till att normala användare inte har tillgång till nodegenskaperna. Använd samma åtkomstkontrollista vid författare och publicering. Mer information finns i [Användaradministration och -säkerhet](/help/sites-administering/security.md).
 
-## Konfigurera AEM externaliserare {#configuring-the-aem-externalizer}
+## Konfigurera AEM externalizer {#configuring-the-aem-externalizer}
 
-När du redigerar en aktivitet i Adobe Target pekar URL:en mot **localhost** såvida du inte ändrar URL:en på AEM författarnod.
+När du redigerar en aktivitet i Adobe Target pekar URL:en på **localhost** såvida du inte ändrar URL:en på AEM författarnod.
 
 Så här konfigurerar du AEM externalizer:
 
 1. Gå till OSGi-webbkonsolen på **https://&lt;server>:&lt;port>/system/console/configMgr.**
-1. Hitta **Day CQ Link Externalizer** och ange författarnodens domän.
+1. Sök efter **Day CQ Link Externalizer** och ange domänen för författarnoden.
 
    ![chlimage_1-120](assets/chlimage_1-120.png)
 
