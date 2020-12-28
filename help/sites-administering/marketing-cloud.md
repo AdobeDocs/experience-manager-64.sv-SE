@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Integrera med Adobe Marketing Cloud{#integrating-with-the-adobe-marketing-cloud}
 
-I [Adobe Marketing Cloud](https://www.adobe.com/solutions/digital-marketing.html)ingår kraftfulla webbanalyser och webboptimeringsprodukter som levererar användbara realtidsdata och insikter för att driva framgångsrika onlineinitiativ. Det erbjuder en integrerad och öppen plattform för optimering av onlineverksamhet. Molnet består av integrerade program för att samla in och släppa loss kraften i kundinsikterna för att optimera kundvärvning, konvertering och lojalitet samt för att skapa och distribuera innehåll.
+[Adobe Marketing Cloud](https://www.adobe.com/solutions/digital-marketing.html) innehåller kraftfulla webbanalyser och webboptimeringsprodukter som levererar användbara realtidsdata och insikter för att driva framgångsrika onlineinitiativ. Det erbjuder en integrerad och öppen plattform för optimering av onlineverksamhet. Molnet består av integrerade program för att samla in och släppa loss kraften i kundinsikterna för att optimera kundvärvning, konvertering och lojalitet samt för att skapa och distribuera innehåll.
 
 Med Adobe Experience Manager (AEM) kan du smidigt integrera med följande Adobe Marketing Cloud-produkter:
 
@@ -31,11 +31,11 @@ Med Adobe Experience Manager (AEM) kan du smidigt integrera med följande Adobe 
 * Adobe Search &amp; Promote ger marknadsförarna möjlighet att styra och optimera sökresultaten på sina webbplatser.
 * Med Adobe Campaign kan ni hantera e-postleveransen direkt i Adobe Experience Manager.
 
-Dessutom kan ni integrera AEM med [Creative Cloud](/help/assets/aem-cc-integration-best-practices.md) och med [tredjepartstjänster](/help/sites-administering/third-party-services.md).
+Dessutom kan du integrera AEM med [Creative Cloud](/help/assets/aem-cc-integration-best-practices.md) och med [tredjepartstjänster](/help/sites-administering/third-party-services.md).
 
 ## Integrera med Adobe Analytics {#integrating-with-adobe-analytics}
 
-[Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst) är den branschledande lösningen som ger digitala marknadsförare en plats där de kan mäta, analysera och optimera integrerade data från alla onlineinitiativ över flera marknadsföringskanaler. Det ger marknadsförarna användbar webbanalysinformation i realtid om digitala strategier och marknadsföringsinitiativ. Adobe Analytics hjälper marknadsförarna att snabbt identifiera de mest lönsamma vägarna via en webbplats, segmentera trafiken för att hitta värdefulla webbbesökare, avgöra var besökarna navigerar bort från webbplatsen och identifiera viktiga framgångsmått för onlinemarknadsföringskampanjer.
+[Adobe ](https://www.omniture.com/en/products/analytics/sitecatalyst) Analytics är den branschledande lösningen som ger digitala marknadsförare en plats där de kan mäta, analysera och optimera integrerade data från alla onlineinitiativ i flera marknadsföringskanaler. Det ger marknadsförarna användbar webbanalysinformation i realtid om digitala strategier och marknadsföringsinitiativ. Adobe Analytics hjälper marknadsförarna att snabbt identifiera de mest lönsamma vägarna via en webbplats, segmentera trafiken för att hitta värdefulla webbbesökare, avgöra var besökarna navigerar bort från webbplatsen och identifiera viktiga framgångsmått för onlinemarknadsföringskampanjer.
 
 Du kan använda Adobe Analytics för att analysera data från dina webbplatser.
 
@@ -50,19 +50,19 @@ Genom att integrera med Adobe Analytics kan du göra följande:
 
 Mer information om hur du integrerar AEM med Analytics finns i [Integrera med Adobe Analytics](/help/sites-administering/adobeanalytics.md).
 
-Du kan också använda guiden [](/help/sites-administering/opt-in.md) Anmäl dig för att enkelt utföra integreringen.
+Du kan också använda [Opt-in-guiden](/help/sites-administering/opt-in.md) för att enkelt utföra integreringen.
 
 ## Integrera med Adobe Target {#integrating-with-adobe-target}
 
-[Adobe Target](https://www.omniture.com/en/products/conversion/test-and-target) används av marknadsförare för att utforma och genomföra onlinetester, skapa direktsända målgruppssegment (baserat på beteende) och automatisera målgruppsanpassningen av innehåll och onlineupplevelser.
+[Adobe ](https://www.omniture.com/en/products/conversion/test-and-target) Targetis används av marknadsförare för att utforma och genomföra onlinetester, skapa direktsända målgruppssegment (baserat på beteende) och automatisera målgruppsanpassningen av innehåll och onlineupplevelser.
 
 Dagens onlinekonsumenter har ständigt nya behov och förväntar sig relevant, till och med personaliserat innehåll från en mängd olika webbplatser och innehållskällor som de kan välja bland. För att engagera en webbpublik är det viktigt att marknadsförarna snabbt kan identifiera vilka erbjudanden och vilket innehåll som är relevanta och övertygande för deras målgrupper. Med denna kunskap i ryggen behöver marknadsförarna möjlighet att kontinuerligt utveckla sina webbplatser och rikta lämpligt innehåll till olika målgrupper.
 
-[Integreringen med Adobe Target](/help/sites-administering/target.md) förklarar hur du integrerar din webbplats med Target.
+[Integrering med Adobe ](/help/sites-administering/target.md) Targetes förklarar hur du kan integrera din webbplats med Target.
 
-Du kan också använda guiden [](/help/sites-administering/opt-in.md) Anmäl dig för att enkelt utföra integreringen.
+Du kan också använda [Opt-in-guiden](/help/sites-administering/opt-in.md) för att enkelt utföra integreringen.
 
-## Anmäl dig till Analytics och Target {#opting-in-to-analytics-and-target}
+## Logga in på Analytics och Target {#opting-in-to-analytics-and-target}
 
 AEM erbjuder en enkel anmälningsprocedur för integrering med Adobe Analytics och Adobe Target. När du loggar in som administratör och går till projektkonsolen visas en anmälningsguide.
 
@@ -70,11 +70,11 @@ AEM erbjuder en enkel anmälningsprocedur för integrering med Adobe Analytics o
 
 Anmäl dig till integreringen med Analytics och/eller Target för att göra det möjligt att använda deras funktioner för sidspårning och sidanalys samt personaliseringsfunktioner. När du väljer att vara med måste du ange din användarkontoinformation och ange vilka sidor som ska spåras.
 
-Mer information finns i [Opting Into Adobe Analytics and Adobe Target.](/help/sites-administering/opt-in.md)
+Mer information finns i [Gå till Adobe Analytics och Adobe Target.](/help/sites-administering/opt-in.md)
 
 ## Integrera med Scene7 {#integrating-with-scene}
 
-[Adobe Scene7](https://www.adobe.com/products/scene7.html) är en värdbaserad lösning för publicering, hantering, förbättring och leverans av dynamiskt marknadsföringsmaterial och visuell marknadsföring på webben, mobiler, e-post, sociala medier, internetanslutna displayer och tryck.
+[Adobe Scene7](https://www.adobe.com/products/scene7.html)  är en värdbaserad lösning för publicering, hantering, förbättring och leverans av dynamiskt marknadsföringsmaterial och visuell marknadsföring på webben, mobiler, e-post, sociala medier, internetanslutna displayer och tryck.
 
 I AEM kan du publicera digitala resurser direkt från AEM till Scene7 och publicera digitala resurser från Scene7 till AEM.
 
@@ -89,11 +89,11 @@ Dessutom kan du visa AEM resurser som publicerats i Scene7 i olika visningsprogr
 
 Mer information om hur AEM integreras med Scene7 finns i [Integrera med Scene7-dokumentationen](/help/sites-administering/scene7.md).
 
-## Integrera med dynamisk tagghantering i Adobe {#integrating-with-adobe-dynamic-tag-management}
+## Integrera med dynamisk tagghantering för Adobe {#integrating-with-adobe-dynamic-tag-management}
 
-[Adobe Dynamic Tag Management](https://www.adobe.com/solutions/digital-marketing/dynamic-tag-management.html) ger marknadsförarna intuitiva verktyg för att snabbt och enkelt hantera ett obegränsat antal taggar från Adobe och tredje part. Du får större kontroll och flexibilitet att optimera praktiskt taget allt online, samtidigt som du minskar beroendet av IT-resurser.
+[Adobe Dynamic Tag ](https://www.adobe.com/solutions/digital-marketing/dynamic-tag-management.html) Management ger marknadsförarna intuitiva verktyg för att snabbt och enkelt hantera ett obegränsat antal taggar från Adobe och tredje part. Du får större kontroll och flexibilitet att optimera praktiskt taget allt online, samtidigt som du minskar beroendet av IT-resurser.
 
-[Integrera Adobe Dynamic Tag Management](/help/sites-administering/dtm.md) med AEM så att du kan använda dina dynamiska tagghanteringsegenskaper för att spåra AEM webbplatser.
+[Integrera Adobe Dynamic Tag ](/help/sites-administering/dtm.md) Management med AEM så att du kan använda dina dynamiska tagghanteringsegenskaper för att spåra AEM webbplatser.
 
 ## Integrera med Adobe Audience Manager {#integrating-with-adobe-audience-manager}
 
@@ -101,7 +101,7 @@ Integreringen av Audience Manager har tagits bort i AEM 6.3.
 
 ## Integrera med Search &amp; Promote {#integrating-with-search-promote}
 
-[Med Adobe Search &amp; Promote](https://www.omniture.com/en/products/conversion/search-and-promote) kan marknadsförarna optimera besökarnas sätt att surfa, hitta, jämföra och välja relevanta produkter och relevant innehåll på webbplatser och mobilsajter. Företag kan enkelt marknadsföra prioriterade element baserat på affärsmål och besökaravsikter samt automatisera försäljnings- och kampanjaktiviteter via KPI-baserade utlösare eller mätvärden.
+[Med Adobe Search&amp;](https://www.omniture.com/en/products/conversion/search-and-promote) Promotekan marknadsförare optimera hur besökare bläddrar bland, söker efter, jämför och väljer ut relevanta produkter och innehåll på webbplatser och mobilsajter. Företag kan enkelt marknadsföra prioriterade element baserat på affärsmål och besökaravsikter samt automatisera försäljnings- och kampanjaktiviteter via KPI-baserade utlösare eller mätvärden.
 
 Adobe Search &amp; Promote är ett tillförlitligt och skalbart sökprogram på webben, som kan skalas till miljontals sidor eller produkter, för mycket besökta onlineföretag, från detaljhandel till nyhetssajter. Det ger oöverträffad marknadskontroll och mätningsbaserad relevans.
 
@@ -109,7 +109,7 @@ Mer information om hur du integrerar AEM och Search &amp; Promote finns i [Integ
 
 ## Integrera med Adobe Campaign {#integrating-with-adobe-campaign}
 
-[Med Adobe Campaign](https://www.adobe.com/solutions/campaign-management.html) kan du hantera e-postleveransen direkt i Adobe Experience Manager.
+[Med Adobe ](https://www.adobe.com/solutions/campaign-management.html) Campaign kan ni hantera e-postleveransinnehåll direkt i Adobe Experience Manager.
 
 Mer information om hur AEM integreras med Adobe Campaign finns i [Integrera med Adobe Campaign](/help/sites-administering/campaignstandard.md).
 
