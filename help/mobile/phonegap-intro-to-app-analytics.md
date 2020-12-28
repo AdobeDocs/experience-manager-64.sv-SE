@@ -34,20 +34,20 @@ Hur kan ni finjustera era mobilapplikationer för att ge era användare den bäs
 
 Med Adobe mobiltjänster kan ni få insikt i hur era användare använder era mobilappar genom att spåra användningen, appkrascher, enhetsinformation och så många andra viktiga mätvärden för era mobilappar.
 
-Adobe Experience Manager Mobile ger en glimt av detaljerna i mobilanalysen direkt från AEM Mobile Application Dashboard. Panelen **Mobile Metrics Tile** i kontrollpanelen ger realtidsanalyser för mobilappen, vilket gör att utvecklare, författare och administratörer kan få en snabb glimt av mobilappens hälsa. Under omslaget som ligger till grund för analysen finns SDK:t för [Adobe Mobile Analytics](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) . Adobe Mobile Analytics SDK kan kopplas in i dina program direkt eller via en PhoneGap bridge-plugin för webbvisningar. Mätvärden samlas in och cachelagras på enheten tills enheten är ansluten och data överförs till Adobe Mobile Services Cloud för rapportering och analys.
+Adobe Experience Manager Mobile ger en glimt av detaljerna i mobilanalysen direkt från AEM Mobile Application Dashboard. **Mobile Metrics Tile** på kontrollpanelen ger realtidsanalyser för mobilappen, vilket gör att utvecklare, författare och administratörer kan få en snabb glimt av mobilappens hälsa. Under omslaget som ligger till grund för analysen finns [Adobe Mobile Analytics](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) SDK. Adobe Mobile Analytics SDK kan kopplas in i dina program direkt eller via en PhoneGap bridge-plugin för webbvisningar. Mätvärden samlas in och cachelagras på enheten tills enheten är ansluten och data överförs till Adobe Mobile Services Cloud för rapportering och analys.
 
 Adobe Mobile Analytics SDK innehåller följande:
 
-1. **Datainsamling för mobila kanaler** - Samla in omfattande data för era mobilwebbplatser och appar i alla större operativsystem.
-1. **Analys** av mobilengagemang - Förstå användarengagemanget i mobilappen, på webbplatsen eller i videon, inklusive hur ofta konsumenterna öppnar kanalen, oavsett om de gör inköp från den eller inte, med mera.
-1. **Kontrollpaneler och rapporter** för mobilappar - Få användningsrapporter med livscykelstatistik för dina appar och appbutikstatistik - se trender för användare, starter, genomsnittlig sessionslängd, kvarhållningslängd och krascher.
-1. **Analys** av mobilkampanjer - kvantifiera effekten av mobilspecifika kampanjer som SMS, mobil sökannonsering, mobil displayannonsering och QR-koder.
-1. **Geolokaliseringsanalys** - Hitta var era appanvändare öppnar och interagerar med era mobilupplevelser via GPS-positionering eller intressepunkter.
-1. **Målningsanalys** - Se hur användarna navigerar i appen för att avgöra vilka skärmar och gränssnittselement som engagerar användarna och vilka som får användarna att sluta.
+1. **Datainsamling för mobila kanaler**  - Samla in omfattande data för era mobilwebbplatser och appar i alla större operativsystem.
+1. **Analys**  av mobilengagemang - Förstå användarengagemanget i mobilappen, på webbplatsen eller i videon, inklusive hur ofta konsumenterna öppnar kanalen, oavsett om de gör inköp från den eller inte, med mera.
+1. **Kontrollpaneler och rapporter**  för mobilappar - Få användningsrapporter med livscykelstatistik för dina appar och appbutikstatistik - se trender för användare, starter, genomsnittlig sessionslängd, kvarhållningslängd och krascher.
+1. **Analys**  av mobilkampanjer - kvantifiera effekten av mobilspecifika kampanjer som SMS, mobil sökannonsering, mobil displayannonsering och QR-koder.
+1. **Geolokaliseringsanalys**  - Hitta var era appanvändare öppnar och interagerar med era mobilupplevelser via GPS-positionering eller intressepunkter.
+1. **Målningsanalys**  - Se hur användarna navigerar i appen för att avgöra vilka skärmar och gränssnittselement som engagerar användarna och vilka som får användarna att dra sig ur.
 
-I det här avsnittet beskrivs hur [AEM utvecklare](#developers) sedan kan lära sig hur man kan mäta AEM Mobile-appar med analysspårning.
+I det här avsnittet beskrivs hur [AEM utvecklare](#developers) kan lära sig hur du instrumenterar AEM Mobile-program med analysspårning.
 
-Slutligen lär sig [AEM administratörer](#administrators) att:
+[AEM administratörer](#administrators) lär sig slutligen att:
 
 * skapa en molntjänst för Adobe Mobile Services
 * skapa en mobiltjänstkonfiguration och associera en rapportserie
@@ -55,15 +55,15 @@ Slutligen lär sig [AEM administratörer](#administrators) att:
 * visa mätvärden via AEM Apps Command Center
 * tilldela AMS SDK Config till din mobilapp
 
-## För utvecklare - Integrera Analytics i er app {#for-developers-integrate-analytics-into-your-app}
+## För utvecklare - Integrera Analytics i appen {#for-developers-integrate-analytics-into-your-app}
 
-**Krav:** AEM administratörer måste konfigurera molnkonfigurationen för Adobe Mobile Services, [enligt beskrivningen nedan](#amscloudserviceconfig).
+**Krav:** AEM administratörer måste konfigurera molnkonfigurationen för Adobe Mobile Services  [enligt beskrivningen nedan](#amscloudserviceconfig).
 
 Utvecklarna ansvarar för att [lägga till analyser till en AEM Mobile-app](/help/mobile/phonegap-add-analytics-to-apps.md) när det behövs för att spåra, rapportera och förstå hur användarna interagerar med mobilappsinnehållet och för att mäta nyckelvärden för livscykeln, som starter, apptid och kraschfrekvens.
 
 ## För administratörer - Konfigurera Cloud Servicen Adobe Mobile Services {#for-administrators-configure-the-adobe-mobile-services-cloud-service}
 
-För att kunna dra nytta av Adobe mobiltjänster måste du konfigurera Cloud Servicen AEM Adobe mobiltjänster med din Adobe Analytics-kontoinformation. Apps Command Center tillhandahåller en panel för **analysstatistik** där du kan skapa och associera molntjänsten med din mobilapp.
+För att kunna dra nytta av Adobe mobiltjänster måste du konfigurera Cloud Servicen AEM Adobe mobiltjänster med din Adobe Analytics-kontoinformation. Apps Command Center tillhandahåller en **Analyze Metrics**-panel där du kan skapa och associera molntjänsten med din mobilapp.
 
 Konfigurera molntjänsten för din mobilapp genom att klicka på kugghjulsikonen som finns i rutan Analysera mått.
 
@@ -77,7 +77,7 @@ Börja med att klicka på plusknappen (+) på panelen Hantera Cloud Services på
 
 ![chlimage_1-126](assets/chlimage_1-126.png)
 
-När du klickar på&#x200B;**+** visas guiden **Lägg till Cloud Service** .
+När du klickar på knappen **+** visas guiden **Lägg till Cloud Service**.
 
 ![chlimage_1-127](assets/chlimage_1-127.png)
 
@@ -93,7 +93,7 @@ Nu när du har kopplat mobiltjänstkonfigurationen till AEM Mobile-appen börjar
 
 ![chlimage_1-129](assets/chlimage_1-129.png)
 
-### Konfigurationsfil för Adobe Mobile Services SDK {#adobe-mobile-services-sdk-config-file}
+### Adobe Mobile Services SDK-konfigurationsfil {#adobe-mobile-services-sdk-config-file}
 
 I nuläget är mobilapplikationen kopplad till en molntjänst, men mobilappen vet ännu inte hur den insamlade mobilinformationen ska skickas tillbaka till Adobe Analytics. Om du vill koppla upp mobilappen till Adobe Analytics måste konfigurationsfilen för Adobe Mobile Services SDK läggas till i Adobe Experience Manager.
 
