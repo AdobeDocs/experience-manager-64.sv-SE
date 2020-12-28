@@ -29,7 +29,7 @@ Detta inkluderar användning av resurser, webbplatsinnehåll, CAAS-innehåll (ov
 
 >[!NOTE]
 >
->**Innehåll** som ligger över AIR kan komma från något av ovanstående via ContentSync-hanterare. Den kan användas för att batchpaketera och leverera via zip-enheter samt för att underhålla uppdateringar för dessa paket.
+>**Över-the-Air** Contentkan komma från någon av ovanstående hanterare via ContentSync. Den kan användas för att batchpaketera och leverera via zip-enheter samt för att underhålla uppdateringar för dessa paket.
 
 Det finns tre huvudtyper av material som Content Services levererar:
 
@@ -48,13 +48,13 @@ En resurssamling kan visas via innehållstjänster. När en resurssamling anropa
 * En sidenhet returnerar JSON (sidobjekt) som innehåller en bildreferens. Bildreferensen är en URL som används för att hämta resursens binärfil för bilden.
 * En begäran om en lista med resurser i en mapp returnerar JSON med information om alla enheter i den mappen. Listan är ett objekt. JSON har URL-referenser som används för att hämta resursens binärfil för varje resurs i den mappen.
 
-### Optimering av tillgångar {#asset-optimization}
+### Resursoptimering {#asset-optimization}
 
 Ett viktigt värde för Content Services är möjligheten att returnera resurser som är optimerade för enheten. Detta minskar behovet av lagring på lokala enheter och förbättrar appprestanda.
 
 Tillgångsoptimering är en funktion på serversidan som baseras på information som anges i API-begäran. Där det är möjligt bör resursåtergivningarna cachelagras så att liknande förfrågningar inte kräver en ny generering av resursåtergivningen.
 
-### Arbetsflöde för resurser {#assets-workflow}
+### Resurser, arbetsflöde {#assets-workflow}
 
 Resursarbetsflödet är följande:
 
@@ -73,7 +73,7 @@ I följande diagram visas **resursreferensarbetsflödet**:
 
 Content Services ger åtkomst till AEM hanterade resurser som inte kan refereras via annat AEM.
 
-#### Befintliga hanterade tillgångar {#existing-managed-assets}
+#### Befintliga hanterade resurser {#existing-managed-assets}
 
 En befintlig AEM Sites- och Assets-användare använder AEM Assets för att hantera allt digitalt material för alla kanaler. De utvecklar en intern mobilapp och behöver använda flera resurser som hanteras av AEM Assets. Till exempel logotyper, bakgrundsbilder, knappikoner osv.
 
@@ -95,7 +95,7 @@ Låt oss bortse från stegen i hur sidan görs tillgänglig via API:t för tillf
 * /content/entities/appImages/icons/cart
 * /content/entities/appImages/icons/home
 
-#### Hämta en lista med tillgängliga resursenheter {#getting-a-list-of-available-asset-entities}
+#### Hämtar en lista över tillgängliga resursenheter {#getting-a-list-of-available-asset-entities}
 
 En apputvecklare kan få en lista över vilka resurser som är tillgängliga genom att hämta resursenheter. Slutpunkten för Content Services space kan tillhandahålla den informationen via webbtjänstens API SDK.
 
@@ -117,8 +117,8 @@ AEM Content Services kommer att kunna tillhandahålla HTML-innehåll till mobila
 
 Följande alternativ beaktas:
 
-* **Zip-fil:** För att få den bästa möjligheten att visas korrekt på enheten har du tillgång till allt material som refereras till på sidan - css, JavaScript, resurser osv. - kommer att inkluderas i en enda komprimerad fil med svaret. Referenserna på HTML-sidan justeras till att använda en relativ sökväg till dessa filer.
-* **Direktuppspelning:** Hämtar ett manifest med nödvändiga filer från AEM. Använd sedan det manifestet för att begära alla filer (HTML, CSS, JS, osv.) med efterföljande förfrågningar.
+* **Zip-fil:** För att få bästa möjliga visning på enheten, är det allt som sidan refererar till - css, JavaScript, resurser osv. - kommer att inkluderas i en enda komprimerad fil med svaret. Referenserna på HTML-sidan justeras till att använda en relativ sökväg till dessa filer.
+* **Direktuppspelning:** Hämta ett manifest med de filer som krävs från AEM. Använd sedan det manifestet för att begära alla filer (HTML, CSS, JS, osv.) med efterföljande förfrågningar.
 
 ![chlimage_1-157](assets/chlimage_1-157.png)
 
