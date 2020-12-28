@@ -1,8 +1,8 @@
 ---
 title: CSRF Protection Framework
 seo-title: CSRF Protection Framework
-description: Ramverket använder variabler för att garantera att kundens begäran är berättigad
-seo-description: Ramverket använder variabler för att garantera att kundens begäran är berättigad
+description: Ramverket använder tokens för att garantera att kundens begäran är berättigad
+seo-description: Ramverket använder tokens för att garantera att kundens begäran är berättigad
 uuid: 7cb222ba-fc7a-46ee-8b49-a5f39a53580b
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Förutom referensfiltret för Apache Sling tillhandahåller Adobe även ett nytt CSRF-skyddsramverk som skyddar mot den här typen av attacker.
 
-Ramverket använder tokens för att garantera att kundens begäran är legitim. Token genereras när formuläret skickas till klienten och valideras när formuläret skickas tillbaka till servern.
+Ramverket använder tokens för att garantera att kundens begäran är berättigad. Token genereras när formuläret skickas till klienten och valideras när formuläret skickas tillbaka till servern.
 
 >[!NOTE]
 >
@@ -32,18 +32,18 @@ Ramverket använder tokens för att garantera att kundens begäran är legitim. 
 
 ### Beroenden {#dependencies}
 
-Alla komponenter som är beroende av `granite.jquery` beroendet drar automatiskt nytta av CSRF Protection Framework. Om detta inte är fallet för någon av dina komponenter, måste du deklarera ett beroende `granite.csrf.standalone` innan du kan använda ramverket.
+Alla komponenter som är beroende av `granite.jquery`-beroendet drar automatiskt nytta av CSRF Protection Framework. Om detta inte är fallet för någon av dina komponenter måste du deklarera ett beroende till `granite.csrf.standalone` innan du kan använda ramverket.
 
-### Replikerar krypteringsnyckeln {#replicating-crypto-keys}
+### Krypteringsnyckeln replikeras {#replicating-crypto-keys}
 
-Om du vill kunna använda token måste du replikera den `/etc/keys/hmac` binära filen till alla instanser i distributionen. Ett praktiskt sätt att kopiera HMAC-nyckeln till alla instanser är att skapa ett paket som innehåller nyckeln och installera den via Package Manager på alla instanser.
-
->[!NOTE]
->
->Se också till att du gör de nödvändiga konfigurationsändringarna [för](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) Dispatcher för att kunna använda CSRF Protection Framework.
+Om du vill använda token måste du replikera binärfilen `/etc/keys/hmac` till alla instanser i distributionen. Ett praktiskt sätt att kopiera HMAC-nyckeln till alla instanser är att skapa ett paket som innehåller nyckeln och installera den via Package Manager på alla instanser.
 
 >[!NOTE]
 >
->Om du använder manifestcachen med ditt webbprogram måste du lägga till &quot;**&amp;ast;**&quot; i manifestet för att vara säker på att token inte tar CSRF-tokengenereringsanropet offline. Mer information finns på den här [länken](https://www.w3.org/TR/offline-webapps/).
+>Se till att du också gör de [konfigurationsändringar för Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) som krävs för att använda CSRF Protection Framework.
+
+>[!NOTE]
 >
->Mer information om CSRF-attacker och hur du kan mildra dem finns på sidan [om OWASP för](https://owasp.org/www-community/attacks/csrf)korsdomänsbegäran.
+>Om du använder manifestcachen med ditt webbprogram måste du lägga till &quot;**&amp;ast;**&quot; i manifestet för att vara säker på att token inte tar genereringsanropet för CSRF-token offline. Mer information finns i den här [länken](https://www.w3.org/TR/offline-webapps/).
+>
+>Mer information om CSRF-attacker och hur du kan mildra dem finns på [sidan Cross-Site Request Forgery OWASP](https://owasp.org/www-community/attacks/csrf).
