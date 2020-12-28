@@ -18,22 +18,22 @@ ht-degree: 0%
 ---
 
 
-# Lägga till teckensnitt för grafikåtergivning{#adding-fonts-for-graphic-rendering}
+# Lägga till teckensnitt för grafisk återgivning{#adding-fonts-for-graphic-rendering}
 
 Med AEM kan du skapa grafik som innehåller text dynamiskt från ditt innehåll.
 
 Om du vill göra det kan du även läsa in och använda dina egna teckensnitt.
 
-För närvarande stöder alla implementeringar av Java Platform [TrueType](https://en.wikipedia.org/wiki/Truetype) -teckensnitt.
+För närvarande stöder alla implementeringar av Java-plattformen [TrueType](https://en.wikipedia.org/wiki/Truetype)-teckensnitt.
 
 1. Öppna CRXDE Lite och navigera till projektprogrammappen:
 
    `/apps/<your-project>/`
 
-1. Under `/apps/<your-project>/` Skapa en ny nod:
+1. Skapa en ny nod under `/apps/<your-project>/`:
 
-   * **Namn**: `fonts`
-   * **Typ**: `sling:Folder`
+   * **Namn**:  `fonts`
+   * **Typ**:  `sling:Folder`
 
    Spara alla ändringar.
 
@@ -43,9 +43,9 @@ För närvarande stöder alla implementeringar av Java Platform [TrueType](https
    >
    >Teckensnittsfiler i databasen måste ha suffixet `*.ttf` eller `*.TTF`.
 
-1. Uppdatera [OSGi-konfigurationen](/help/sites-deploying/configuring-osgi.md) för [Day Commons GFX Font Helper](/help/sites-deploying/osgi-configuration-settings.md). Lägg till sökvägen till teckensnittsmappen; dvs. `/apps/<your-project>/fonts`.
+1. Uppdatera [OSGi-konfigurationen](/help/sites-deploying/configuring-osgi.md) av [Day Commons GFX Font Helper](/help/sites-deploying/osgi-configuration-settings.md). Lägg till sökvägen till teckensnittsmappen; dvs. `/apps/<your-project>/fonts`.
 
-1. Återvänd till CRXDE Lite. Nu bör du se en `.fontlist` nod i mappen som innehåller namnet på de importerade teckensnitten.
+1. Återvänd till CRXDE Lite. Nu bör du se en `.fontlist`-nod i mappen som innehåller namnet på de importerade teckensnitten.
 
    Dessa teckensnitt kan nu användas i Java API.
 
