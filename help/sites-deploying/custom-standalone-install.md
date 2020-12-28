@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Anpassad fristående installation{#custom-standalone-install}
 
-I det här avsnittet beskrivs de alternativ som är tillgängliga när du installerar en fristående AEM. Du kan även läsa [Storage Elements](/help/sites-deploying/storage-elements-in-aem-6.md) för mer information om hur du väljer lagringstyp för serverdelen efter att du installerat AEM 6.
+I det här avsnittet beskrivs de alternativ som är tillgängliga när du installerar en fristående AEM. Du kan även läsa [Storage Elements](/help/sites-deploying/storage-elements-in-aem-6.md) om du vill ha mer information om hur du väljer lagringstyp för serverdelen när du har installerat AEM 6.
 
 ## Ändra portnumret genom att byta namn på filen {#changing-the-port-number-by-renaming-the-file}
 
@@ -32,7 +32,7 @@ Det finns olika regler som ska följas när man byter namn på filen quickstart 
 
 * När du byter namn på filen måste den börja med `cq;` som i `cq5-publish-p4503.jar`.
 
-* Vi rekommenderar att du *alltid* anger portnumret med -p; som i cq5-publish-p4503.jar eller cq5-author-p6754.jar.
+* Vi rekommenderar att du alltid *anger ett prefix för portnumret med -p; som i cq5-publish-p4503.jar eller cq5-author-p6754.jar.*
 
 >[!NOTE]
 >
@@ -49,17 +49,17 @@ Det finns olika regler som ska följas när man byter namn på filen quickstart 
 
 >[!NOTE]
 >
->Du kan också ändra portnumret med hjälp av alternativet `-port` i kommandot start.
+>Du kan också ändra portnumret genom att använda alternativet `-port` i kommandot start.
 
 ## Körningslägen {#run-modes}
 
-**Med körningslägen** kan du justera AEM för ett specifikt ändamål. till exempel författare eller publicera, testa, utveckla, intranät etc. Med dessa lägen kan du styra användningen av exempelinnehåll. Det här exempelinnehållet definieras innan snabbstarten byggs och kan innehålla paket, konfigurationer osv. Detta kan vara särskilt användbart för produktionsklara installationer när du vill hålla installationen ren och utan exempelinnehåll. Mer information finns i:
+**Med Run** Modesallow kan du trimma AEM för ett specifikt ändamål; till exempel författare eller publicera, testa, utveckla, intranät etc. Med dessa lägen kan du styra användningen av exempelinnehåll. Det här exempelinnehållet definieras innan snabbstarten byggs och kan innehålla paket, konfigurationer osv. Detta kan vara särskilt användbart för produktionsklara installationer när du vill hålla installationen ren och utan exempelinnehåll. Mer information finns i:
 
 * [Körningslägen](/help/sites-deploying/configure-runmodes.md)
 
-## Lägga till en filinstallationsprovider {#adding-a-file-install-provider}
+## Lägger till en filinstallationsprovider {#adding-a-file-install-provider}
 
-Som standard `crx-quickstart/install` bevakas mappen för filer.\
+Som standard bevakas mappen `crx-quickstart/install` för filer.\
 Den här mappen finns inte, men kan skapas under körning.
 
 Om ett paket, en konfiguration eller ett innehållspaket placeras i den här katalogen hämtas det automatiskt och installeras. Om den tas bort avinstalleras den.\
@@ -69,19 +69,19 @@ Detta är särskilt intressant för flera användningsområden:
 
 * Under utvecklingen kan det vara enklare att lägga in något i filsystemet.
 * Om något går fel går det inte att nå webbkonsolen och databasen. Med detta kan du lägga in ytterligare paket i den här katalogen och de bör installeras.
-* Du kan skapa `crx-quickstart/install` mappen innan snabbstarten startas och lägga till fler paket där.
+* Mappen `crx-quickstart/install` kan skapas innan snabbstart startas och ytterligare paket kan placeras där.
 
 >[!NOTE]
 >
->Se även [Så här installerar du CRX-paket automatiskt när servern startas](https://helpx.adobe.com/experience-manager/kb/HowToInstallPackagesUsingRepositoryInstall.html) .
+>Se även [Exempel på hur du installerar CRX-paket automatiskt när servern startar](https://helpx.adobe.com/experience-manager/kb/HowToInstallPackagesUsingRepositoryInstall.html).
 
 ## Installera och starta Adobe Experience Manager som en Windows-tjänst {#installing-and-starting-adobe-experience-manager-as-a-windows-service}
 
 >[!NOTE]
 >
->Var noga med att utföra följande procedur när du är inloggad som administratör eller starta/kör dessa steg med hjälp av **Kör som administratör** -snabbmenyvalet.
+>Se till att du utför följande procedur när du är inloggad som administratör eller starta/kör dessa steg med snabbmenyvalet **Kör som administratör**.
 >
->Att vara inloggad som en användare med administratörsbehörighet är **inte tillräckligt**. Om du inte är inloggad som administratör när du slutför de här stegen får du **fel om nekad** åtkomst.
+>Att vara inloggad som en användare med administratörsbehörighet är **otillräckligt**. Om du inte är inloggad som administratör när du slutför de här stegen får du **Åtkomst nekad**-fel.
 
 Så här installerar och startar du AEM som en Windows-tjänst:
 
@@ -93,7 +93,7 @@ Så här installerar och startar du AEM som en Windows-tjänst:
 
    Det här kommandot anropar rätt skript som startar Windows-tjänstdaemon i 64-bitars Java i stället för 32-bitars Java.
 
-1. Om du vill förhindra processen från att förfalska till mer än en process ökar du den maximala stackstorleken och JVM-parametrarna för PermGen. Leta reda på `set jvm_options` kommandot och ange värdet enligt följande:
+1. Om du vill förhindra processen från att förfalska till mer än en process ökar du den maximala stackstorleken och JVM-parametrarna för PermGen. Leta reda på kommandot `set jvm_options` och ange värdet enligt följande:
 
    `set jvm_options=-XX:MaxPermSize=256M;-Xmx1792m`
 
@@ -113,7 +113,7 @@ Så här installerar och startar du AEM som en Windows-tjänst:
 
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
-1. Windows anger att tjänsten körs. AEM startar och den körbara filen prunsrv visas i Task Manager. I webbläsaren navigerar du till AEM, till exempel `http://localhost:4502` för att börja använda AEM.
+1. Windows anger att tjänsten körs. AEM startar och den körbara filen prunsrv visas i Task Manager. Navigera till exempelvis `http://localhost:4502` AEM i webbläsaren för att börja använda AEM.
 
    ![chlimage_1-73](assets/chlimage_1-73.png)
 
@@ -123,13 +123,13 @@ Så här installerar och startar du AEM som en Windows-tjänst:
 
 >[!NOTE]
 >
->När du installerar AEM som tjänst måste du ange den absoluta sökvägen för loggkatalogen i `com.adobe.xmp.worker.files.ncomm.XMPFilesNComm` Configuration Manager.
+>När du installerar AEM som tjänst måste du ange den absoluta sökvägen för loggkatalogen i `com.adobe.xmp.worker.files.ncomm.XMPFilesNComm` från Configuration Manager.
 
-Om du vill avinstallera tjänsten klickar du antingen på **Stopp** på **tjänstens** kontrollpanel eller på kommandoraden, navigerar till mappen och skriver `instsrv.bat -uninstall cq5`. Tjänsten tas bort från listan på kontrollpanelen **Tjänster** eller från listan på kommandoraden när du skriver `net start`.
+Om du vill avinstallera tjänsten klickar du antingen på **Stoppa** på kontrollpanelen **Tjänster** eller på kommandoraden, navigerar till mappen och skriver `instsrv.bat -uninstall cq5`. Tjänsten tas bort från listan på kontrollpanelen **Tjänster** eller från listan på kommandoraden när du skriver `net start`.
 
 ## Definiera om platsen för den tillfälliga arbetskatalogen {#redefining-the-location-of-the-temporary-work-directory}
 
-Standardplatsen för den tillfälliga mappen för Java-datorn är `/tmp`. AEM använder den här mappen också, till exempel när paket skapas.
+Standardplatsen för den temporära mappen för Java-datorn är `/tmp`. AEM använder den här mappen också, till exempel när paket skapas.
 
 Om du vill ändra platsen för den tillfälliga mappen (till exempel om du behöver en katalog med mer ledigt utrymme) definierar du en `<new-tmp-path>` genom att lägga till JVM-parametern:
 
@@ -140,7 +140,7 @@ till antingen
 * serverstartkommandoraden
 * CQ_JVM_OPTS-miljöparametern i serverctl eller startskriptet
 
-## Fler alternativ är tillgängliga från QuickStart-filen {#further-options-available-from-the-quickstart-file}
+## Ytterligare alternativ är tillgängliga från QuickStart-filen {#further-options-available-from-the-quickstart-file}
 
 Ytterligare alternativ och namnbyteskonventioner beskrivs i hjälpfilen för QuickStart, som är tillgänglig via alternativet -help. Om du vill komma åt hjälpen skriver du:
 
@@ -233,7 +233,7 @@ Log files
 
 ## Installera AEM i Amazon EC2-miljön {#installing-aem-in-the-amazon-ec-environment}
 
-När du installerar AEM på en Amazon Elastic Compute Cloud-instans (EC2) installeras Author-instansen korrekt om du installerar både författaren och publicerar på EC2-instansen enligt proceduren för hur du [installerar en instans av AEM](/help/sites-deploying/custom-standalone-install.md). Publiceringsinstansen blir dock författare.
+När du installerar AEM på en Amazon Elastic Compute Cloud-instans (EC2) installeras Author-instansen korrekt om du installerar både författaren och publicerar på EC2-instansen enligt proceduren [installera en instans av AEM](/help/sites-deploying/custom-standalone-install.md). Publiceringsinstansen blir dock författare.
 
 Innan du installerar Publish-instansen i EC2-miljön gör du följande:
 
@@ -245,7 +245,7 @@ Innan du installerar Publish-instansen i EC2-miljön gör du följande:
 
    >[!NOTE]
    >
-   >Om du ändrar läget **efter** att du startat instansen första gången kan du inte ändra körningsläget.
+   >Om du ändrar läget **efter att** startat instansen första gången kan du inte ändra körningsläget.
 
 1. Starta instansen genom att köra:
 
@@ -257,7 +257,7 @@ Innan du installerar Publish-instansen i EC2-miljön gör du följande:
    >
    >Kontrollera att du först kör instansen när du har packat upp den genom att köra kommandot ovan. Annars genereras inte fyllningen quickstart.properties. Utan den här filen kommer eventuella framtida AEM inte att kunna uppgraderas.
 
-1. Öppna **startskriptet** i mappen **bin** och kontrollera följande avsnitt:
+1. I mappen **bin** öppnar du **start**-skriptet och kontrollerar följande avsnitt:
 
    ```xml
    # runmode(s)
@@ -266,7 +266,7 @@ Innan du installerar Publish-instansen i EC2-miljön gör du följande:
    fi
    ```
 
-1. Ändra runmode för att **publicera** och spara filen.
+1. Ändra körningsläget till **publicera** och spara filen.
 
    ```xml
    # runmode(s)
@@ -275,7 +275,7 @@ Innan du installerar Publish-instansen i EC2-miljön gör du följande:
    fi
    ```
 
-1. Stoppa instansen och starta om den genom att köra **startskriptet** .
+1. Stoppa instansen och starta om den genom att köra skriptet **start**.
 
 ## Verifierar installationen {#verifying-the-installation}
 
@@ -300,8 +300,8 @@ Följande länkar kan användas för att verifiera att installationen fungerar (
 
 När AEM WCM har startats kan du även få åtkomst till:
 
-* [CRXDE Lite](#accessing-crxde-lite) - används för att komma åt och hantera databasen
-* [Webbkonsol](#accessing-the-web-console) - används för att hantera eller konfigurera OSGi-paket (kallas även OSGi-konsolen)
+* [CRXDE Lite](#accessing-crxde-lite)  - används för att komma åt och hantera databasen
+* [Webbkonsol](#accessing-the-web-console)  - används för att hantera eller konfigurera OSGi-paket (kallas även OSGi-konsolen)
 
 ### Åtkomst till CRXDE Lite {#accessing-crxde-lite}
 
@@ -331,7 +331,7 @@ eller för sidan Bundles\
 
 ![chlimage_1-74](assets/chlimage_1-74.png)
 
-Mer information finns i [OSGi Configuration with the Web Console](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) .
+Mer information finns i [OSGi Configuration with the Web Console](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console).
 
 ## Felsökning {#troubleshooting}
 
