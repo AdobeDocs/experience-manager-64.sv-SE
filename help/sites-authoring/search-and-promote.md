@@ -31,5 +31,5 @@ Observera att du bara kan använda Search &amp; Promote om AEM har aktiverat dem
 
 >[!NOTE]
 >
->Information om hur du lägger till funktioner på Search &amp; Promote finns i den klassiska dokumentationen för användargränssnittet. Mer information finns i [Lägga till sök- och](/help/sites-classic-ui-authoring/classic-feature-search-promote.md) marknadsföringsfunktioner på sidan.
+>Information om hur du lägger till funktioner på Search &amp; Promote finns i den klassiska dokumentationen för användargränssnittet. Mer information finns i [Lägga till sök- och höjdfunktioner på sidan](/help/sites-classic-ui-authoring/classic-feature-search-promote.md).
 
