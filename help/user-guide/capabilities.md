@@ -1,6 +1,6 @@
 ---
-title: Användarhandbok för AEM 6.4 Capabilities
-seo-title: Användarhandbok för AEM 6.4 Capabilities
+title: AEM 6.4 Capabilities User Guide
+seo-title: AEM 6.4 Capabilities User Guide
 description: En översikt över de viktigaste funktionerna i AEM 6.4
 seo-description: En översikt över de viktigaste funktionerna i AEM 6.4
 contentOwner: bohnert
@@ -14,13 +14,13 @@ ht-degree: 2%
 ---
 
 
-# Användarhandbok för AEM 6.4-funktioner {#aem-64-capabilities-user-guides}
+# AEM 6.4 Capabilities User Guides {#aem-64-capabilities-user-guides}
 
 ## AEM Foundation {#aem-foundation}
 
-[Läs mer om installation, driftsättning och arkitekturen i Adobe Experience Manager 6.4](/help/sites-deploying/home.md), inklusive vår molndriftsättning av Adobe Managed Services.
+[Läs mer om installation, distribution och arkitekturen för Adobe Experience Manager 6.4](/help/sites-deploying/home.md), inklusive vår molndistribution av Adobe Managed Services.
 
-[Lär dig hantera ett AEM-projekt](/help/managing/home.md).
+[Lär dig hantera ett AEM projekt](/help/managing/home.md).
 
 ## AEM Sites {#aem-sites}
 
