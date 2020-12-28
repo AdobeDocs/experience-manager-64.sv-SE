@@ -27,19 +27,19 @@ När du använder AEM kan du hantera många olika typer av innehåll (t.ex. sido
 >AEM Dashboards skapas per användare så att en användare bara kan komma åt sin egen kontrollpanel.
 >
 >
->Du kan dock använda [kontrollpanelsmallar](#creating-a-dashboard-template) för att dela en gemensam konfiguration och en gemensam kontrollpanelslayout.
+>[Kontrollpanelsmallar](#creating-a-dashboard-template) kan dock användas för att dela gemensam konfiguration och Dashboard-layout.
 
 ![chlimage_1-22](assets/chlimage_1-22.jpeg)
 
 ## Administrera kontrollpaneler {#administering-dashboards}
 
-### Skapa en kontrollpanel {#creating-a-dashboard}
+### Skapar en instrumentpanel {#creating-a-dashboard}
 
 Så här skapar du en ny kontrollpanel:
 
-1. Klicka på **Konfigurationskonsol i** avsnittet Verktyg ****.
+1. I avsnittet **Verktyg** klickar du på **Configuration Console**.
 
-1. Dubbelklicka på **instrumentpanelen** i trädet.
+1. Dubbelklicka på **Kontrollpanelen** i trädet.
 
 1. Klicka på **Ny instrumentpanel**.
 
@@ -51,7 +51,7 @@ Så här skapar du en ny kontrollpanel:
 
 Du kanske vill ha flera kontrollpaneler för att snabbt se information om ditt innehåll från olika vyer. AEM innehåller en klonfunktion som du kan använda för att duplicera en befintlig Dashboard för att hjälpa dig att skapa en ny Dashboard. Så här klonar du en kontrollpanel:
 
-1. Klicka på **Konfigurationskonsol i** avsnittet Verktyg ****.
+1. I avsnittet **Verktyg** klickar du på **Configuration Console**.
 
 1. Klicka på **Kontrollpanel** i trädet.
 1. Klicka på den kontrollpanel som du vill klona.
@@ -60,26 +60,26 @@ Du kanske vill ha flera kontrollpaneler för att snabbt se information om ditt i
 
 1. Skriv **namnet** på den nya instrumentpanelen.
 
-### Ta bort en instrumentpanel {#removing-a-dashboard}
+### Tar bort en instrumentpanel {#removing-a-dashboard}
 
-1. Klicka på **Konfigurationskonsol i** avsnittet Verktyg ****.
+1. I avsnittet **Verktyg** klickar du på **Configuration Console**.
 
 1. Klicka på **Kontrollpanel** i trädet.
 1. Klicka på den kontrollpanel som du vill ta bort.
 
 1. Klicka på **Ta bort**.
 
-1. Bekräfta genom att klicka på **Ja** .
+1. Bekräfta genom att klicka på **Ja**.
 
 ## Kontrollpanelskomponenter {#dashboard-components}
 
 ### Översikt {#overview}
 
-Kontrollpanelskomponenter är inget annat än vanliga [AEM](/help/sites-developing/developing-components-samples.md). I det här avsnittet beskrivs rapportkomponenter som levereras med AEM.
+Kontrollpanelskomponenter är inget mer än vanliga [AEM komponenter](/help/sites-developing/developing-components-samples.md). I det här avsnittet beskrivs rapportkomponenter som levereras med AEM.
 
 ### Rapporteringskomponenter för Web Analytics {#web-analytics-reporting-components}
 
-AEM levereras med en uppsättning komponenter som återger flera mätvärden för dina [SiteCatalyst](/help/sites-administering/adobeanalytics.md) -data. De komponenterna listas i Sidekick under **Dashboard** .
+AEM levereras med en uppsättning komponenter som återger flera mätvärden för dina [SiteCatalyst](/help/sites-administering/adobeanalytics.md)-data. Dessa komponenter listas i Spark under **Kontrollpanelen**.
 
 Varje rapportkomponent har minst tre flikar:
 
@@ -92,27 +92,27 @@ Rapporteringskomponenterna initieras med en standardkonfiguration som hjälper d
 
 #### Grundkonfiguration {#basic-configuration}
 
-Fliken **Grundläggande** ger åtkomst till följande konfigurationsposter:
+Fliken **Basic** ger åtkomst till följande konfigurationsposter:
 
-**Titel** Titeln som visas på instrumentpanelen.
+**Titel** Den titel som visas på instrumentpanelen.
 
-**Typ** av begäran Det sätt på vilket data begärs.
+**Typ av** begäranDet sätt på vilket data begärs.
 
-**Konfiguration i SiteCatalyst (valfritt)** Den konfiguration som du vill använda för att ansluta till SiteCatalyst. Om den inte anges antas konfigurationen vara konfigurerad på kontrollpanelssidan (via sidegenskaper).
+**Konfiguration i SiteCatalyst (valfritt)** Den konfiguration du vill använda för att ansluta till SiteCatalyst. Om den inte anges antas konfigurationen vara konfigurerad på kontrollpanelssidan (via sidegenskaper).
 
-**Report Suite ID (valfritt)** Rapportsviten SiteCatalyst som du vill använda för att generera diagrammet.
+**Report Suite ID (valfritt)** Den SiteCatalyst-rapportsserie som du vill använda för att generera diagrammet.
 
 #### Rapportkonfiguration {#report-configuration}
 
-För att kunna visa webbstatistik måste du definiera datumintervallet för de data som du vill hämta. Fliken **Rapport** innehåller två fält som definierar det intervallet.
+För att kunna visa webbstatistik måste du definiera datumintervallet för de data som du vill hämta. Fliken **Rapport** innehåller två fält som definierar intervallet.
 
 >[!NOTE]
 >
 >Om du anger ett stort datumintervall kan kontrollpanelens svarstider försämras.
 
-**Datum från** absolut eller relativt datum från vilket data hämtas.
+**Datum** frånAbsolut eller relativt datum som data hämtas från.
 
-**Datum till** absolut eller relativt datum som data hämtas till.
+**Datum** till absolut eller relativt datum som data hämtas till.
 
 Varje komponent definierar också specifika inställningar.
 
@@ -120,29 +120,29 @@ Varje komponent definierar också specifika inställningar.
 
 ![chlimage_1-26](assets/chlimage_1-26.png)
 
-**Tidsenhet för datumgranularitet** för X-axeln (t.ex. dag, timme).
+**Date** GranulityTime-enhet för X-axeln (t.ex. dag, timme).
 
-**Mätvärden** Listan med händelser som du vill visa.
+**** MätvärdenListan med händelser som du vill visa.
 
-**Element** Listan med element som bryter ned måttdata i diagrammet.
+**Elements** En lista med element som delar upp måttdata i diagrammet.
 
-#### Rankad lista - rapport {#ranked-list-report}
+#### Rankad listrapport {#ranked-list-report}
 
 ![chlimage_1-27](assets/chlimage_1-27.png)
 
-**Element** Det element som bryter ned måttdata i diagrammet.
+**** ElementsElementet som delar upp måttdata i diagrammet.
 
-**Mätvärden** Den händelse du vill visa.
+**** MetriskHändelsen som du vill visa.
 
-**Nej. av de översta objekten** Antal objekt som visas i rapporten.
+**Nej. av de översta objekten** Antal objekt som visas av rapporten.
 
 #### Rankad rapport {#ranked-report}
 
 ![chlimage_1-28](assets/chlimage_1-28.png)
 
-**Mätvärden** Den händelse du vill visa.
+**** MetriskHändelsen som du vill visa.
 
-**Element** Det element som bryter ned måttdata i diagrammet.
+**** ElementsElementet som delar upp måttdata i diagrammet.
 
 #### Avsnittsrapport för översta webbplatsen {#top-site-section-report}
 
@@ -156,31 +156,31 @@ Den här komponenten visar ett diagram över det mer besökta avsnittet på en w
 
 ![chlimage_1-30](assets/chlimage_1-30.png)
 
-**Tidsenhet för datumgranularitet** för X-axeln (t.ex. dag, timme).
+**Date** GranulityTime-enhet för X-axeln (t.ex. dag, timme).
 
-**Mätvärden** Den händelse du vill visa.
+**** MetriskHändelsen som du vill visa.
 
-**Element** Det element som bryter ned måttdata i diagrammet.
+**** ElementsElementet som delar upp måttdata i diagrammet.
 
-## Utöka instrumentpanel {#extending-dashboard}
+## Utöka instrumentpanelen {#extending-dashboard}
 
 ### Översikt {#overview-1}
 
-Kontrollpaneler är normala sidor ( `cq:Page`), och därför kan alla komponenter användas för att sätta ihop kontrollpaneler.
+Kontrollpaneler är normala sidor ( `cq:Page`), och därför kan alla komponenter användas för att montera kontrollpaneler.
 
 Det finns en standardkomponentgrupp `Dashboard` som innehåller analysrapportkomponenter som är aktiverade i mallen som standard.
 
-### Creating A Dashboard Template {#creating-a-dashboard-template}
+### Skapar en instrumentpanelsmall {#creating-a-dashboard-template}
 
 En mall definierar standardinnehållet för en ny kontrollpanel. Du kan använda flera mallar för att skapa olika typer av kontrollpaneler.
 
-Instrumentpanelsmallar skapas som andra sidmallar, förutom att de lagras under `/libs/cq/dashboards/templates/`. Se [Skapa innehållsidesmall](/help/sites-developing/website.md#creating-the-contentpage-template) .
+Kontrollpanelsmallar skapas som andra sidmallar, förutom att de lagras under `/libs/cq/dashboards/templates/`. Se avsnittet [Skapa innehållsidesmall](/help/sites-developing/website.md#creating-the-contentpage-template).
 
 >[!NOTE]
 >
 >Instrumentpanelsmallar delas mellan användare.
 
-### Utveckla en kontrollpanelskomponent {#developing-a-dashboard-component}
+### Utveckla en Dashboard-komponent {#developing-a-dashboard-component}
 
 Utveckla en kontrollpanelskomponent genom att skapa en vanlig AEM. I det här avsnittet beskrivs ett exempel på en komponent som visar de 10 viktigaste deltagarna.
 
@@ -188,15 +188,15 @@ Utveckla en kontrollpanelskomponent genom att skapa en vanlig AEM. I det här av
 
 De översta författarkomponenterna lagras i databasen på `/apps/geometrixx-outdoors/components/reporting` och består av:
 
-1. en `jsp` fil som läser jcr-data och definierar `html` platshållaren.
+1. en `jsp`-fil som läser jcr-data och definierar platshållaren `html`.
 
-1. ett klientbibliotek som innehåller en `js` fil som hämtar och ordnar data och fyller sedan i `html` platshållaren.
+1. ett klientbibliotek som innehåller en `js`-fil som hämtar och beställer data och fyller sedan i platshållaren för `html`.
 
 ![chlimage_1-32](assets/chlimage_1-32.png)
 
-Följande JavaScript-fil definieras i `geout.reporting.topauthors` klientbiblioteket [](/help/sites-developing/clientlibs.md) som underordnad till själva komponenten.
+Följande JavaScript-fil definieras i `geout.reporting.topauthors` [klientbiblioteket](/help/sites-developing/clientlibs.md) som underordnad till själva komponenten.
 
-Query [Builder](/help/sites-developing/querybuilder-api.md) används för att fråga databasen om att läsa `cq:AuditEvent` noder. Frågeresultatet är ett JSON-objekt från vilket författarbidrag extraheras.
+[QueryBuilder](/help/sites-developing/querybuilder-api.md) används för att fråga databasen om att läsa `cq:AuditEvent`-noder. Frågeresultatet är ett JSON-objekt från vilket författarbidrag extraheras.
 
 #### top_authors.js {#top-authors-js}
 
@@ -243,7 +243,7 @@ $.ajax({
 });  
 ```
 
-Innehåller `JSP` både `global.jsp` och `clientlib`.
+`JSP` innehåller både `global.jsp` och `clientlib`.
 
 #### top_authors.jsp {#top-authors-jsp}
 
