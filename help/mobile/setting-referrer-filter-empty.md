@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Ange att referensfiltret ska vara tomt{#setting-your-referrer-filter-to-allow-empty}
+# Ange att referensfiltret ska tillåta tomt{#setting-your-referrer-filter-to-allow-empty}
 
 >[!NOTE]
 >
