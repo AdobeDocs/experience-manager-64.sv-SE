@@ -34,13 +34,13 @@ ht-degree: 5%
    + [Referensmaterial](reference-materials.md)
    + [Skapa en webbplats med alla funktioner (Classic UI)](website.md)
    + [Designer och Designer (Classic UI)](designer.md)
-+ Platform{#platform}
++ Plattform{#platform}
    + [Fusklapp för Sling](sling-cheatsheet.md)
    + [Använda Sling-adaptrar](sling-adapters.md)
    + [Taggbibliotek](taglib.md)
    + Mallar{#templates}
       + [Mallar](templates.md)
-      + [Sidmallar - redigerbara ](page-templates-editable.md)
+      + [Sidmallar - redigerbara  ](page-templates-editable.md)
       + [Sidmallar - statiska](page-templates-static.md)
       + [Mallar för innehållsfragment](content-fragment-templates.md)
       + [Adaptiv mallåtergivning](templates-adaptive-rendering.md)
@@ -48,7 +48,7 @@ ht-degree: 5%
    + [Övertäckningar](overlays.md)
    + [Namnkonventioner](naming-conventions.md)
    + [Skapa en ny GRE-fältkomponent](granite-ui-component.md)
-   + Query Builder{#query-builder}
+   + Frågebyggaren{#query-builder}
       + [Implementera en anpassad predikatutvärderare för Query Builder](implementing-custom-predicate-evaluator.md)
       + [Predikatreferens för Query Builder](querybuilder-predicate-reference.md)
       + [Query Builder API](querybuilder-api.md)
