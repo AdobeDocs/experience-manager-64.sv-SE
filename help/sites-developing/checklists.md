@@ -37,5 +37,5 @@ I följande checklista markeras några av de viktigaste problemen - läs de andr
 
 >[!NOTE]
 >
->Du kan även se checklistan för [hantering av projekt - bästa praxis](/help/managing/best-practices.md) för ytterligare checklistor som gäller hela projektet.
+>Du kan även se [Hantera projekt - checklistan för bästa praxis](/help/managing/best-practices.md) för ytterligare checklistor som gäller hela projektet.
 
