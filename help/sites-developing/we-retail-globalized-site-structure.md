@@ -18,7 +18,7 @@ ht-degree: 2%
 ---
 
 
-# Prova den globala webbplatsstrukturen i webb.butik{#trying-out-the-globalized-site-structure-in-we-retail}
+# Prova den globala platsstrukturen i We.Retail{#trying-out-the-globalized-site-structure-in-we-retail}
 
 Vi.Retail har byggts med en global webbplatsstruktur som erbjuder språkmallar som kan kopieras live till landsspecifika webbplatser. Allt är klart att användas för att experimentera med den här strukturen och de inbyggda översättningsfunktionerna.
 
@@ -43,11 +43,11 @@ Vi.Retail har byggts med en global webbplatsstruktur som erbjuder språkmallar s
 
    ![chlimage_1-90](assets/chlimage_1-90.png)
 
-1. När Överordnad för engelska är markerad öppnar du **referenslisten** i webbplatskonsolen och väljer **Språkkopior**.
+1. När Överordnad för engelska är markerad öppnar du **Referenser** i webbplatskonsolen och väljer **Språkkopior**.
 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
-1. Markera kryssrutan bredvid etiketten **Språkkopior** om du vill välja alla språkkopior. I avsnittet **Uppdatera språkkopior** på listen väljer du alternativet att **skapa ett nytt översättningsprojekt**. Ange ett namn för projektet och klicka på **Uppdatera**.
+1. Markera kryssrutan bredvid etiketten **Språkkopior** om du vill markera alla språkkopior. I avsnittet **Uppdatera språkkopior** på listen väljer du alternativet **Skapa ett nytt översättningsprojekt**. Ange ett namn för projektet och klicka på **Uppdatera**.
 
    ![chlimage_1-92](assets/chlimage_1-92.png)
 
@@ -59,18 +59,18 @@ Vi.Retail har byggts med en global webbplatsstruktur som erbjuder språkmallar s
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
-1. Översättningsprojektet startar. Klicka på ellipsen längst ned på kortet Översättningsjobb för att se mer information. Sidor med tillståndet **Ready for review** har redan översatts av översättningstjänsten.
+1. Översättningsprojektet startar. Klicka på ellipsen längst ned på kortet Översättningsjobb för att se mer information. Sidor med tillståndet **Klart för granskning** har redan översatts av översättningstjänsten.
 
    ![chlimage_1-95](assets/chlimage_1-95.png)
 
-1. Om du väljer en av sidorna i listan och sedan **Förhandsgranska på platser** i verktygsfältet öppnas den översatta sidan i sidredigeraren.
+1. Om du väljer en av sidorna i listan och sedan **Förhandsgranska i platser** i verktygsfältet öppnas den översatta sidan i sidredigeraren.
 
    ![chlimage_1-96](assets/chlimage_1-96.png)
 
 >[!NOTE]
 >
->Den här proceduren demonstrerade den inbyggda integrationen med Microsoft maskinöversättning. Med hjälp av [AEM TLF](/help/sites-administering/translation.md)(Translation Integration Framework) kan du integrera med många standardöversättningstjänster för att samordna översättning av AEM.
+>Den här proceduren demonstrerade den inbyggda integrationen med Microsoft maskinöversättning. Med [AEM Translation Integration Framework](/help/sites-administering/translation.md) kan du integrera med många standardöversättningstjänster för att samordna översättning av AEM.
 
 ## Ytterligare information {#further-information}
 
-Mer information finns i redigeringsdokumentet [Translating Content for Multilingual Sites](/help/sites-administering/translation.md) (Översätta innehåll för flerspråkiga platser).
+Mer information finns i redigeringsdokumentet [Translating Content for Multilingual Sites](/help/sites-administering/translation.md) för fullständig teknisk information.
