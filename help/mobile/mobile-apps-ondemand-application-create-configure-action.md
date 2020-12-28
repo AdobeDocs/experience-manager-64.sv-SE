@@ -34,15 +34,15 @@ Information om ditt program kan visas på kontrollpanelen eller i AEM Mobile Con
 >
 >Kontrollpanelen är en serie användbara paneler som ger en översikt över programmets innehåll, metadata och anslutningsstatus för AEM Mobile On-Demand.
 >
->Mer information finns i [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md) .
+>Mer information finns i [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
 **Så här skapar du en on demand-app:**
 
 1. Välj **Mobil** från sidospåret.
-1. Välj **Appar** i Navigering.
+1. Välj **Appar** i navigeringen.
 1. Klicka på **Skapa** och välj **App** i listrutan.
 1. Välj mallen för mobilappar och klicka på **Nästa**.
-1. Ange appegenskaper som **Title**, **Name** och **Description**.
+1. Ange appegenskaper som **Title**, **Name**, **Description**.
 1. Klicka på **Nästa**.
 1. Om du känner till detta anger du information om molnkonfigurationen. Klicka annars på **Skapa**.
 1. Klicka på **Klar** för att visa din nya AEM Mobile-app i katalogen.
@@ -66,11 +66,11 @@ Du måste ha en befintlig mobilappsmall (eller en app som har en appmall) för a
 
 När du har skapat en On-Demand-app från kontrollpanelen för program är nästa steg att koppla din app till molnkonfigurationen.
 
-Mer information finns i [Associera din app med molnkonfigurationen](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) .
+Mer information finns i [Associera din app med molnkonfigurationen](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md).
 
 ### Komma framåt {#getting-ahead}
 
-När du är bekant med att skapa ett on demand-program och därmed koppla det programmet till en molnkonfiguration, se [Åtgärder](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)för innehållshantering.
+När du är bekant med att skapa ett on demand-program och därmed koppla det programmet till en molnkonfiguration, se [Innehållshanteringsåtgärder](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 
 **Innehållshanteringsåtgärder** innefattar att skapa och hantera följande innehåll:
 
