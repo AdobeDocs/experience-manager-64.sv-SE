@@ -25,7 +25,7 @@ Skapa en konfiguration för molntjänsten Microsoft Translator så att du kan an
 | Egenskap | Beskrivning |
 |---|---|
 | Översättningsetikett | Översättningstjänstens visningsnamn. |
-| Översättningsattribut | (Valfritt) För användargenererat innehåll visas t.ex. den attribuering som visas bredvid översatt text `Translations by Microsoft`. |
+| Översättningsattribut | (Valfritt) För användargenererat innehåll visas attribueringen bredvid översatt text, till exempel `Translations by Microsoft`. |
 | ID för arbetsyta | (Valfritt) ID:t för den anpassade Microsoft Translator-motorn som ska användas. |
 | Prenumerationsnyckel | Din Microsoft-prenumerationsnyckel för Microsoft Translator. |
 
@@ -47,11 +47,11 @@ Följande procedur använder det pekoptimerade användargränssnittet för att s
 
 Följande molntjänstkonfigurationer för Microsoft Translator installeras tillsammans med Geometrixx. I vissa exempelkonfigurationer används ett Microsoft Translation-konto med en provversion som tillåter högst 2 000 000 kostnadsfria översatta tecken per månad.
 
-### Utvärderingslicens för Microsoft Translator {#microsoft-translator-trial-license}
+### Microsoft Translator Trial License {#microsoft-translator-trial-license}
 
 Microsoft Translator Trial License-konfigurationen är en exempelkonfiguration som installeras med exempelpaketet för Geometrixx Outdoors. Den här konfigurationen använder ett Microsoft Translator-konto med en kostnadsfri prenumeration som tillåter 2 000 000 översatta tecken per månad.
 
-### Utvärderingslicens för Microsoft Translator - Geometrixx-utomhusbruk {#microsoft-translator-trial-license-geometrixx-outdoors}
+### Utvärderingslicens för Microsoft Translator - Geometrixx-outdoor {#microsoft-translator-trial-license-geometrixx-outdoors}
 
 Microsoft Translator Trial License - konfiguration utomhus för Geometrixx är en exempelkonfiguration som installeras med Geometrixx Outdoors. Den här konfigurationen använder samma kostnadsfria Microsoft Translator-konto som Microsoft Translator Trial License-konfigurationen. Kontot har en kostnadsfri prenumeration som tillåter 2 000 000 översatta tecken per månad.
 
@@ -78,9 +78,9 @@ Konfigurationssidorna för Microsoft Translation är en praktisk länk till Micr
 1. Klicka eller tryck på Show Configurations (Visa konfigurationer) i området Microsoft Translator och klicka eller tryck sedan på den konfiguration som du vill anpassa.
 1. På konfigurationssidan klickar du på Anpassa översättare. Använd Microsofts webbsida som öppnas för att anpassa tjänsten.
 
-## Aktivera tjänstkonfigurationer för översättare {#activating-the-translator-service-configurations}
+## Aktivera översättartjänstens konfigurationer {#activating-the-translator-service-configurations}
 
-Du måste aktivera dina molntjänstkonfigurationer för att stödja översatt innehåll som replikeras till publiceringsinstansen. Använd metoden för att [aktivera ett komplett avsnitt (träd)](/help/sites-authoring/publishing-pages.md#publishing-and-unpublishing-a-tree) för att aktivera databasnoderna som lagrar Microsoft Translator-konfigurationer eller molntjänstkonfigurationer från tredje part. Noderna finns under följande överordnade noder:
+Du måste aktivera dina molntjänstkonfigurationer för att stödja översatt innehåll som replikeras till publiceringsinstansen. Använd metoden [för att aktivera ett fullständigt avsnitt (träd)](/help/sites-authoring/publishing-pages.md#publishing-and-unpublishing-a-tree) för att aktivera databasnoderna som lagrar Microsoft Translator-konfigurationer eller molntjänstkonfigurationer från tredje part. Noderna finns under följande överordnade noder:
 
 * Microsoft Translation Service: /libs/settings/cloudconfigs/translation/msft-translation
 * Översättning från tredje part: /etc/cloudservices/machine-translation
