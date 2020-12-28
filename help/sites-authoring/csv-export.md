@@ -20,9 +20,9 @@ ht-degree: 15%
 
 # Exportera till CSV{#export-to-csv}
 
-**Med Skapa CSV-export** kan du exportera information om dina sidor till en CSV-fil på ditt lokala system.
+**Med Skapa CSV-** exporterare kan du exportera information om sidorna till en CSV-fil på din lokala dator.
 
-* Den hämtade filen kallas `export.csv`
+* Den hämtade filen heter `export.csv`
 * Innehållet beror på de egenskaper du väljer.
 * Du kan definiera banan tillsammans med exportens djup.
 
@@ -52,18 +52,18 @@ I guiden Skapa CSV-export kan du välja:
    * Ytterligare nivåer av barn
    * Nivåer
 
-Den resulterande `export.csv` filen kan öppnas i Excel eller något annat kompatibelt program.
+Den resulterande `export.csv`-filen kan öppnas i Excel eller något annat kompatibelt program.
 
 ![chlimage_1-58](assets/chlimage_1-58.png)
 
-Alternativet Skapa **CSV-export** är tillgängligt när du bläddrar i **webbplatskonsolen** (i listvyn): det är ett alternativ i listrutan **Skapa** :
+Alternativet för att skapa **CSV-export** är tillgängligt när du bläddrar i konsolen **Platser** (i listvyn): det är ett alternativ i listrutan **Skapa**:
 
 ![screen_shot_2018-03-21at154719](assets/screen_shot_2018-03-21at154719.png)
 
 Så här skapar du en CSV-export:
 
 1. Öppna konsolen **Sites** och navigera till önskad plats om det behövs.
-1. From the toolbar, select **Create** then **CSV Export** to open the wizard:
+1. I verktygsfältet väljer du **Skapa** och sedan **CSV-export** för att öppna guiden:
 
    ![screen_shot_2018-03-21at154758](assets/screen_shot_2018-03-21at154758.png)
 
