@@ -27,7 +27,7 @@ AEM integreras med PhoneGap så att du enkelt kan skapa appar med AEM sidor. Med
 
 >[!NOTE]
 >
->Innan du börjar använda AEM Mobile med Adobe PhoneGap bör du kontrollera att du har konfigurerat din miljö och kommit igång med [AEM Mobile Application Dashboard](/help/mobile/phonegap-authoring-apps.md).
+>Innan du börjar använda AEM Mobile med Adobe PhoneGap bör du kontrollera att du har konfigurerat miljön och kommer igång med [AEM Mobile Application Dashboard](/help/mobile/phonegap-authoring-apps.md).
 
 Följande resurser hjälper dig att komma igång med AEM Mobile med Adobe PhoneGap:
 
@@ -43,7 +43,7 @@ Följande resurser hjälper dig att komma igång med AEM Mobile med Adobe PhoneG
 
 >[!NOTE]
 >
->Information om hur du kör AEM mobilprogram på iOS- eller Android-mobilenheter finns i [Mobile QuickStart med AEM Verifiera app](/help/mobile/phonegap-mobile-quickstart.md).
+>Information om hur du kör AEM mobilprogram på iOS- eller Android-mobilenheter finns i [Mobile Quickstart med AEM Verify App](/help/mobile/phonegap-mobile-quickstart.md).
 
 ## Komma framåt {#getting-ahead}
 
