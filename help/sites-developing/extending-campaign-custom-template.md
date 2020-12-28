@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # Skapa en anpassad AEM med Adobe Campaign Form Components{#creating-custom-aem-page-template-with-adobe-campaign-form-components}
 
-På den här sidan beskrivs hur du skapar en anpassad sidmall som använder [Adobe Campaign Form](/help/sites-authoring/adobe-campaign-components.md) -komponenter genom att undersöka hur mallen för utomhusbruk ( `/apps/geometrixx-outdoors/components/page_campaign_profile`) implementeras och pekar på viktig information som du kan behöva när du skapar en egen anpassad mall.
+På den här sidan beskrivs hur du skapar en anpassad sidmall som använder [Adobe Campaign-formulär](/help/sites-authoring/adobe-campaign-components.md)-komponenter genom att undersöka hur mallen för utomhusbruk ( `/apps/geometrixx-outdoors/components/page_campaign_profile`) implementeras, och den pekar på viktig information som du kan behöva när du skapar en egen anpassad mall.
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Om du vill skapa en anpassad AEM sidmall med hjälp av Adobe Campaign Form-kompo
    När du tittar på klientkontextinställningarna ( `/etc/designs/geometrixx-outdoors/jcr:content/page_campaign_profile`) ser du följande inställningar:
 
    * ClientContext pekar på `/etc/clientcontext/campaign`
-   * Det finns även en extra *config* -nod.
+   * Det finns också en extra *config*-nod.
 
    ![chlimage_1-202](assets/chlimage_1-202.png)
 
@@ -68,7 +68,7 @@ Om du vill skapa en anpassad AEM sidmall med hjälp av Adobe Campaign Form-kompo
 
 1. **Egenskaper för kampanjsida**
 
-   För att kunna välja en Adobe Campaign-mall utökas sidegenskaperna med fliken **Campaign** :
+   För att kunna välja en Adobe Campaign-mall utökas sidegenskaperna med fliken **Campaign**:
 
    `/apps/geometrixx-outdoors/components/page_campaign_profile/dialog/items/tabs/items/campaign`
 
