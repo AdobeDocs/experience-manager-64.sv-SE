@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# Extern URL{#externalizing-urls}
+# Externaliserar URL:er{#externalizing-urls}
 
-I AEM är **Externalizer** en OSGI-tjänst som du kan använda för att programmässigt omvandla en resurssökväg (t.ex. `/path/to/my/page`) till en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att prefix-sökvägen med en förkonfigurerad DNS.
+I AEM är **Externalizer** en OSGI-tjänst som gör att du kan omforma en resurssökväg programmatiskt (t.ex. `/path/to/my/page`) till en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att prefix-sökvägen med en förkonfigurerad DNS.
 
 Eftersom en instans inte känner till sin externt synliga URL-adress om den körs bakom ett webblager, och eftersom en länk ibland måste skapas utanför det begärda omfånget, utgör den här tjänsten en central plats för att konfigurera de externa URL-adresserna och skapa dem.
 
@@ -28,9 +28,9 @@ På den här sidan beskrivs hur du konfigurerar tjänsten **Externalizer** och h
 
 ## Konfigurera tjänsten Externalizer {#configuring-the-externalizer-service}
 
-Med **tjänsten Externalizer** kan du centralt definiera flera domäner som kan användas för att programmässigt prefix för resurssökvägar. Varje domän identifieras med ett unikt namn som används för att programmässigt referera till domänen.
+Med tjänsten **Externalizer** kan du centralt definiera flera domäner som kan användas för att programmässigt prefix för resurssökvägar. Varje domän identifieras med ett unikt namn som används för att programmässigt referera till domänen.
 
-Så här definierar du en domänmappning för tjänsten **Externalizer** :
+Så här definierar du en domänmappning för tjänsten **Externalizer**:
 
 1. Navigera till konfigurationshanteraren via **Verktyg**, **Webbkonsol** eller ange `https://<host>:<port>/system/console/configMgr.`
 1. Klicka på **Day CQ Link Externalizer** för att öppna konfigurationsdialogrutan.
@@ -45,18 +45,18 @@ Så här definierar du en domänmappning för tjänsten **Externalizer** :
 
    `<unique-name> [scheme://]server[:port][/contextpath]`, där:
 
-   * **Schemat** är vanligtvis http eller https, men kan också vara ftp o.s.v.; använda https för att framtvinga https-länkar om det behövs; den kommer att användas om klientkoden inte åsidosätter schemat när en URL-adress begärs externt.
-   * **server** är värdnamnet (kan vara ett domännamn eller en IP-adress).
-   * **port** (valfritt) är portnumret.
-   * **contextpath** (valfritt) anges bara om AEM har installerats som en webbapp under en annan kontextsökväg.
+   * **scheman är vanligtvis** http eller https, men kan också vara ftp o.s.v.; använda https för att framtvinga https-länkar om det behövs; den kommer att användas om klientkoden inte åsidosätter schemat när en URL-adress begärs externt.
+   * **** server är värdnamnet (kan vara ett domännamn eller en IP-adress).
+   * **port**  (valfritt) är portnumret.
+   * **contextpath**  (valfritt) anges bara om AEM har installerats som en webbapp under en annan kontextsökväg.
 
    Till exempel: `production https://my.production.instance`
 
    Följande mappningsnamn är fördefinierade och måste alltid anges som AEM är beroende av dem:
 
-   * **local** - den lokala instansen
-   * **författare** - redigeringssystemets DNS
-   * **publicera** - den offentliga webbplatsens DNS
+   * **lokal**  - den lokala instansen
+   * **författare**  - redigeringssystemets DNS
+   * **publicera**  - den offentliga webbplatsens DNS
 
    >[!NOTE]
    >
@@ -70,7 +70,7 @@ Så här definierar du en domänmappning för tjänsten **Externalizer** :
 
 ## Använda tjänsten Externalizer {#using-the-externalizer-service}
 
-I det här avsnittet visas några exempel på hur **tjänsten Externalizer** kan användas.
+I det här avsnittet visas några exempel på hur tjänsten **Externalizer** kan användas.
 
 **Så här hämtar du tjänsten Externalizer i en JSP:**
 
@@ -80,18 +80,18 @@ I det här avsnittet visas några exempel på hur **tjänsten Externalizer** kan
 
 `String myExternalizedUrl = externalizer.publishLink(resolver, "/my/page") + ".html";`
 
-Om domänmappningen &quot; `publish https://www.website.com`&quot; antas avslutas myExternalizedUrl med värdet &quot; `https://www.website.com/contextpath/my/page.html`&quot;.
+Om domänmappningen `publish https://www.website.com` antas avslutas myExternalizedUrl med värdet `https://www.website.com/contextpath/my/page.html`.
 
 **Så här gör du en extern sökväg med domänen &#39;författare&#39;:**
 
 `String myExternalizedUrl = externalizer.authorLink(resolver, "/my/page") + ".html";`
 
-Om domänmappningen &quot; `author https://author.website.com`&quot; antas avslutas myExternalizedUrl med värdet &quot; `https://author.website.com/contextpath/my/page.html`&quot;.
+Om domänmappningen `author https://author.website.com` antas avslutas myExternalizedUrl med värdet `https://author.website.com/contextpath/my/page.html`.
 
 **Så här externaliserar du en sökväg med domänen&quot;local&quot;:**
 
 `String myExternalizedUrl = externalizer.externalLink(resolver, Externalizer.LOCAL, "/my/page") + ".html";`
 
-Om domänmappningen &quot; `local https://publish-3.internal`&quot; antas avslutas myExternalizedUrl med värdet &quot; `https://publish-3.internal/contextpath/my/page.html`&quot;.
+Om domänmappningen `local https://publish-3.internal` antas avslutas myExternalizedUrl med värdet `https://publish-3.internal/contextpath/my/page.html`.
 
 Fler exempel finns i [Javadocs](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html).
