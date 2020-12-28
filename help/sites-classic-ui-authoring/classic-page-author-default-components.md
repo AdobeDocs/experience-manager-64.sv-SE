@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # Komponenter{#components}
 
-Adobe Experience Manager (AEM) innehåller en mängd färdiga komponenter som ger omfattande funktionalitet för webbplatsförfattare. De är tillgängliga när du [redigerar en sida](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) och grupperas efter huvudfunktionsområde (dvs. komponentgrupp) för att underlätta filtreringen.
+Adobe Experience Manager (AEM) innehåller en mängd färdiga komponenter som ger omfattande funktionalitet för webbplatsförfattare. De är tillgängliga när du [redigerar en sida](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) och grupperas efter huvudfunktionsområdet (d.v.s. komponentgruppen) för att underlätta filtreringen.
 
 >[!CAUTION]
 >
@@ -39,7 +39,7 @@ Följande sidor ger snabba länkar till några av de viktigaste områdena inom i
 
 * [eCommerce](/help/sites-administering/ecommerce.md)
 
-   e-handelsfunktionen i AEM innehåller också en rad komponenter som ingår i **Commerce** -gruppen. Faktisk användning kan bero på vilken e-handelsmotor som används.
+   e-handelsfunktionen i AEM innehåller också en rad komponenter som finns i gruppen **Commerce**. Faktisk användning kan bero på vilken e-handelsmotor som används.
 
 ## Använda designläge för att konfigurera komponenter {#using-design-mode-to-configure-components}
 
