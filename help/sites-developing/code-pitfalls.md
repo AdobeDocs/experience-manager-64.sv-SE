@@ -18,15 +18,15 @@ ht-degree: 0%
 ---
 
 
-# Kodfallare{#code-pitfalls}
+# Kodfallsavfall{#code-pitfalls}
 
 ## Undvik att skicka bindningar i Java-kod {#avoid-sling-bindings-in-java-code}
 
-Sling Bindings är ett olämpligt sätt att få tillgång till en tjänst i 90 % av fallen. Du bör i stället använda *@Reference* eller *@Inject* -anteckningar.
+Sling Bindings är ett olämpligt sätt att få tillgång till en tjänst i 90 % av fallen. Använd i stället anteckningarna *@Reference* eller *@Inject*.
 
 ## Undvik tråd.avbrott i Java-kod {#avoid-thread-interrupt-in-java-code}
 
-*Thread.Intert* är farligt eftersom det kan stänga filer, inklusive Lucene-filer och beständiga cachefiler, när de anropas vid fel tidpunkt.
+*Thread.* Cancel är farligt eftersom det kan stänga filer, inklusive Lucene-filer och beständiga cachefiler, när de anropas vid fel tidpunkt.
 
 ## Undvik att blanda Java-synkronisering med ReadWriteLocks {#avoid-mixing-java-synchronization-with-readwritelocks}
 
