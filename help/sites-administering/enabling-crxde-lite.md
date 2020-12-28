@@ -20,11 +20,11 @@ ht-degree: 0%
 
 # Aktivera CRXDE Lite i AEM{#enabling-crxde-lite-in-aem}
 
-För att säkerställa att AEM installationer är så säkra som möjligt rekommenderar checklistan att WebDAV [inaktiveras](/help/sites-administering/security-checklist.md#disable-webdav) i produktionsmiljöer.
+För att säkerställa att AEM installationer är så säkra som möjligt rekommenderar checklistan [att WebDAV](/help/sites-administering/security-checklist.md#disable-webdav) inaktiveras i produktionsmiljöer.
 
-CRXDE Lite är dock beroende av att paketet fungerar som det ska, så om du inaktiverar WebDAV inaktiveras även CRXDE Lite. `org.apache.sling.jcr.davex`
+CRXDE Lite är dock beroende av `org.apache.sling.jcr.davex`-paketet för att fungera korrekt, så inaktivering av WebDAV kan även inaktivera CRXDE Lite.
 
-När detta inträffar visas en tom rotnod när du bläddrar till `https://serveraddress:4502/crx/de/index.jsp` , och alla HTTP-begäranden till CRXDE Lite-resurser misslyckas:
+När detta inträffar visas en tom rotnod när du bläddrar till `https://serveraddress:4502/crx/de/index.jsp` och alla HTTP-begäranden till CRXDE Lite-resurser misslyckas:
 
 ```xml
 404 Resource at '/crx/server/crx.default/jcr:root/.1.json' not found: No resource found
