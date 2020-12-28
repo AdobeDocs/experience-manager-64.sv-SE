@@ -18,26 +18,26 @@ ht-degree: 0%
 ---
 
 
-# Målintegrering med upplevelsefragment{#target-integration-with-experience-fragments}
+# Målintegrering med Experience Fragments{#target-integration-with-experience-fragments}
 
 >[!NOTE]
 >
->Den här funktionen kräver att [AEM 6.4 Service Pack 2 (6.4.2.0)](/help/release-notes/sp-release-notes.md) eller senare tillämpas.
+>Den här funktionen kräver [AEM 6.4 Service Pack 2 (6.4.2.0)](/help/release-notes/sp-release-notes.md) eller senare.
 
-Du kan exportera [Experience Fragments](/help/sites-authoring/experience-fragments.md), som har skapats i Adobe Experience Manager (AEM), till Adobe Target. De kan sedan användas som erbjudanden i Target-aktiviteter för att testa och personalisera upplevelser i stor skala. Detta gör att du kan kombinera enkelheten och kraften i AEM med de kraftfulla funktionerna för automatiserad intelligens (AI) och maskininlärning (ML) i Target.
+Du kan exportera [Experience Fragments](/help/sites-authoring/experience-fragments.md), som skapats i Adobe Experience Manager (AEM), till Adobe Target. De kan sedan användas som erbjudanden i Target-aktiviteter för att testa och personalisera upplevelser i stor skala. Detta gör att du kan kombinera enkelheten och kraften i AEM med de kraftfulla funktionerna för automatiserad intelligens (AI) och maskininlärning (ML) i Target.
 
 ## Förutsättningar {#prerequisites}
 
 Du måste utföra olika åtgärder:
 
-1. Ni måste integrera AEM med Target. Mer information finns i [Integrera med Adobe Target](/help/sites-administering/target.md) .
-1. Experience Fragments exporteras från författarinstansen, så du måste [konfigurera länkfunktionen](/help/sites-developing/externalizer.md) i författarinstansen för att se till att eventuella länkar är externaliserade för publiceringsinstansen.
+1. Ni måste integrera AEM med Target. Mer information finns i [Integrera med Adobe Target](/help/sites-administering/target.md).
+1. Experience Fragments exporteras från författarinstansen, så du måste [konfigurera Link Externalizer](/help/sites-developing/externalizer.md) för författarinstansen för att se till att alla länkar är externaliserade för publiceringsinstansen.
 
 ## Lägg till molnkonfigurationen {#add-the-cloud-configuration}
 
 Innan du exporterar ett fragment måste du lägga till **molnkonfigurationen** för **Adobe Target** i fragmentet eller mappen:
 
-1. Gå till konsolen **Experience Fragments** .
+1. Navigera till konsolen **Experience Fragments**.
 1. Öppna **Sidegenskaper** för rätt mapp eller fragment.
 
    >[!NOTE]
@@ -46,14 +46,14 @@ Innan du exporterar ett fragment måste du lägga till **molnkonfigurationen** f
    >
    >Om du lägger till molnkonfigurationen i själva Experience Fragment ärvs konfigurationen av alla variationer.
 
-1. Klicka på fliken **Cloud Services** .
+1. Markera fliken **Cloud Services**.
 
-1. Under **Konfigurera** Cloud Service väljer du **Adobe Target** i listrutan.
+1. Under **Cloud Service Configuration** väljer du **Adobe Target** i listrutan.
 1. Välj lämplig konfiguration under **Adobe Target**.
 
 1. **Spara och stäng**.
 
-## Exportera ett Experience Fragment till Target {#exporting-an-experience-fragment-to-target}
+## Exportera ett Experience Fragment till mål {#exporting-an-experience-fragment-to-target}
 
 >[!NOTE]
 >
@@ -88,13 +88,13 @@ Så här exporterar du ett upplevelsefragment från AEM till mål (efter att du 
 
 >[!NOTE]
 >
->Du kan också exportera från sidredigeraren med hjälp av jämförbara kommandon på menyn [Sidinformation](/help/sites-authoring/author-environment-tools.md#page-information) .
+>Du kan också exportera från sidredigeraren med jämförbara kommandon på menyn [Sidinformation](/help/sites-authoring/author-environment-tools.md#page-information).
 
-## Använda era upplevelsefragment i Target {#using-your-experience-fragments-in-target}
+## Använda dina upplevelsefragment i mål {#using-your-experience-fragments-in-target}
 
-När du har utfört de föregående åtgärderna visas upplevelsefragmentet på sidan Erbjudanden i Target. Ta en titt på den [specifika Target-dokumentationen](https://experiencecloud.adobe.com/resources/help/en_US/target/target/aem-experience-fragments.html) och lär dig mer om vad du kan uppnå där.
+När du har utfört de föregående åtgärderna visas upplevelsefragmentet på sidan Erbjudanden i Target. Ta en titt på [den specifika måldokumentationen](https://experiencecloud.adobe.com/resources/help/en_US/target/target/aem-experience-fragments.html) för att lära dig mer om vad du kan uppnå där.
 
-## Ta bort ett Experience Fragment som redan har exporterats till Target {#deleting-an-experience-fragment-already-exported-to-target}
+## Ett Experience Fragment som redan har exporterats till målet {#deleting-an-experience-fragment-already-exported-to-target} tas bort
 
 Om du tar bort ett Experience Fragment som redan har exporterats till Target kan det orsaka problem om fragmentet redan används i ett erbjudande i Target. Om du tar bort fragmentet blir erbjudandet oanvändbart eftersom fragmentinnehållet levereras av AEM.
 
