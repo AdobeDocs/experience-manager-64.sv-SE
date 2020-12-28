@@ -32,25 +32,25 @@ Med XSS (Cross-site scripting) kan angripare lägga in kod på webbsidor som vis
 
 AEM tillämpar principen om att filtrera allt innehåll som användaren tillhandahåller vid utskrift. Förhindrande av XSS har högsta prioritet under både utveckling och testning.
 
-Den XSS-skyddsmekanism som AEM tillhandahåller baseras på [AntiSamy Java Library](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project) som tillhandahålls av [OWASP (Open Web Application Security Project)](https://www.owasp.org/). Standardkonfigurationen för AntiSamy finns på
+XSS-skyddsmekanismen som tillhandahålls av AEM baseras på [AntiSamy Java Library](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project) som tillhandahålls av [OWASP (Open Web Application Security Project)](https://www.owasp.org/). Standardkonfigurationen för AntiSamy finns på
 
 `/libs/cq/xssprotection/config.xml`
 
-Det är viktigt att du anpassar den här konfigurationen efter dina egna säkerhetsbehov genom att täcka över konfigurationsfilen. Den officiella [dokumentationen](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project) för AntiSamy ger dig all information du behöver för att kunna uppfylla dina säkerhetskrav.
+Det är viktigt att du anpassar den här konfigurationen efter dina egna säkerhetsbehov genom att täcka över konfigurationsfilen. Den officiella [dokumentationen för AntiSamy](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project) ger dig all information du behöver för att kunna genomföra säkerhetskraven.
 
 >[!NOTE]
 >
->Vi rekommenderar att du alltid har tillgång till XSS-skydds-API:t med hjälp av [XSSAPI:n som AEM](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/xss/XSSAPI.html)tillhandahåller.
+>Vi rekommenderar att du alltid har tillgång till XSS-skydds-API:t med [XSSAPI som tillhandahålls av AEM](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/xss/XSSAPI.html).
 
-Dessutom kan en brandvägg för ett webbprogram, till exempel [mod_security för Apache](https://www.modsecurity.org), ge tillförlitlig, central kontroll över säkerheten i distributionsmiljön och skydda mot tidigare oidentifierade serveröverskridande skriptattacker (cross-site scripting).
+Dessutom kan en brandvägg för ett webbprogram, till exempel [mod_security för Apache](https://www.modsecurity.org), ge tillförlitlig, central kontroll över distributionsmiljöns säkerhet och skydda mot tidigare oidentifierade serveröverskridande skriptattacker (cross-site scripting).
 
-## Tillgång till Cloud Service {#access-to-cloud-service-information}
+## Åtkomst till information om Cloud Service {#access-to-cloud-service-information}
 
 >[!NOTE]
 >
->ACL:er för Cloud Service Information och de OSGi-inställningar som krävs för att skydda instansen automatiseras som en del av [produktionsklart läge](/help/sites-administering/production-ready.md). Detta innebär att du inte behöver göra konfigurationsändringarna manuellt, men vi rekommenderar ändå att du granskar dem innan du publicerar distributionen.
+>ACL:er för Cloud Service Information och de OSGi-inställningar som krävs för att skydda instansen automatiseras som en del av [Production Ready Mode](/help/sites-administering/production-ready.md). Detta innebär att du inte behöver göra konfigurationsändringarna manuellt, men vi rekommenderar ändå att du granskar dem innan du publicerar distributionen.
 
-När du [integrerar AEM med Adobe Marketing Cloud](/help/sites-administering/marketing-cloud.md) använder du [Cloud Service-konfigurationer](/help/sites-developing/extending-cloud-config.md). Information om dessa konfigurationer, tillsammans med all statistik som samlas in, lagras i databasen. Vi rekommenderar att du, om du använder den här funktionen, granskar om standardsäkerheten för den här informationen matchar dina krav.
+När du [integrerar din AEM med Adobe Marketing Cloud](/help/sites-administering/marketing-cloud.md) använder du [Cloud Service configurations](/help/sites-developing/extending-cloud-config.md). Information om dessa konfigurationer, tillsammans med all statistik som samlas in, lagras i databasen. Vi rekommenderar att du, om du använder den här funktionen, granskar om standardsäkerheten för den här informationen matchar dina krav.
 
 Webbtjänsternas supportmodul skriver statistik och konfigurationsinformation under:
 
@@ -58,10 +58,10 @@ Webbtjänsternas supportmodul skriver statistik och konfigurationsinformation un
 
 Med standardbehörigheter:
 
-* Författarmiljö: `read` for `contributors`
+* Författarmiljö: `read` för `contributors`
 
-* Publiceringsmiljö: `read` for `everyone`
+* Publiceringsmiljö: `read` för `everyone`
 
-## Protect mot attacker från smidda förfrågningar på olika webbplatser {#protect-against-cross-site-request-forgery-attacks}
+## Protect mot attacker av typen Cross-Site Request Attacks {#protect-against-cross-site-request-forgery-attacks}
 
-Mer information om vilka säkerhetsmekanismer AEM använder för att mildra CSRF-attacker finns i avsnittet [Sling Referrer-filter](/help/sites-administering/security-checklist.md#protect-against-cross-site-request-forgery) i säkerhetschecklistan och i dokumentationen [för](/help/sites-developing/csrf-protection.md)CSRF-skyddsramverk.
+Mer information om vilka säkerhetsmekanismer AEM använder för att mildra CSRF-attacker finns i [filtret Sling Referrer](/help/sites-administering/security-checklist.md#protect-against-cross-site-request-forgery) i säkerhetschecklistan och [dokumentationen för CSRF-skyddsramverk](/help/sites-developing/csrf-protection.md).
