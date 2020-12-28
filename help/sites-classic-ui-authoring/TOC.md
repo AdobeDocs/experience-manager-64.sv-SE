@@ -15,10 +15,10 @@ ht-degree: 17%
 ---
 
 
-# Användarhandbok för redigering av AEM 6.4 Classic UI {#classic-ui}
+# AEM 6.4 Classic UI Authoring User Guide {#classic-ui}
 
 + [Översikt över redigeringshandboken för det klassiska användargränssnittet](home.md)
-+ Introduktion till klassisk gränssnittsredigering {#introduction}
++ Introduktion till redigering av klassiskt användargränssnitt {#introduction}
    + [Steg 1 för författare](classic-page-author-first-steps.md)
    + [Om du skriver i det klassiska gränssnittet](classicui.md)
    + [Arbeta med författarmiljön](author-env.md)
@@ -78,14 +78,14 @@ ht-degree: 17%
    + [Arbeta med Adobe Campaign](classic-personalization-ac.md)
    + [Adobe Campaign Components](classic-personalization-ac-components.md)
    + [Inrikta er på Adobe Campaign](classic-personalization-ac-target.md)
-+ Skapa resurser i det klassiska användargränssnittet {#assets}
++ Funktionsredigering i det klassiska användargränssnittet {#assets}
    + [Arbeta med resurser](classicui-assets.md)
    + [Arbeta med IBL-steg](classicui-stages-aem3d-ibl.md)
    + [Återge 3D-resurser](classicui-rendering-3d.md)
    + [Visa 3D-resurser](classicui-view-3d-assets.md)
-   + [Leverera dynamiska medieresurser](dynamic-media-assets-delivering.md)
+   + [Leverera Dynamic Media Assets](dynamic-media-assets-delivering.md)
    + [Ställa in ett standardstadium med Autodesk Maya och Mental Ray](classicui-stages-aem3d-ad-mr.md)
-   + [Lägga till dynamiska medieresurser på sidor](dynamic-media-assets-adding-to-page.md)
+   + [Lägga till Dynamic Media-resurser på sidor](dynamic-media-assets-adding-to-page.md)
    + [Lägga till Scene7-funktioner på din sida](manage-assets-classic-s7.md)
    + [Arbeta med Dynamic Media](dynamic-media-assets.md)
    + [Arbeta med 3D-resurser](classicui-3dassets.md)
