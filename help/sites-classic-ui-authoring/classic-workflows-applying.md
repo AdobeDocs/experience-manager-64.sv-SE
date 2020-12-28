@@ -54,9 +54,9 @@ Kolumnen **Status** i konsolen **Webbplatser** anger om ett arbetsflöde har til
 1. Öppna webbplatskonsolen.
 1. Öppna önskad sida.
 1. Välj fliken Arbetsflöde i Spark.
-1. Utöka dialogrutan **Arbetsflöde** så att du kan välja **Arbetsflöde** och eventuellt ange **arbetsflödets titel** och **kommentar**.
+1. Expandera dialogrutan **Arbetsflöde** så att du kan välja **Arbetsflöde** och eventuellt ange **arbetsflödestitel** och **Kommentar**.
 
    ![arbetsflödenstartsidespark](assets/workflowstartsidekick.png)
 
-1. Klicka på **Starta arbetsflöde** för att starta en ny arbetsflödesinstans med de egenskaper som du har konfigurerat och den aktuella sidan som nyttolast. Nu körs arbetsflödet.
+1. Klicka på **Starta arbetsflöde** om du vill starta en ny arbetsflödesinstans med de egenskaper som du har konfigurerat och den aktuella sidan som nyttolast. Nu körs arbetsflödet.
 
