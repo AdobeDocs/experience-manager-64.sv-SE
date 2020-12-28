@@ -37,7 +37,7 @@ På AEM Foundation-nivå är de personuppgifter som lagras användarprofilen. D�
 
    ![användarsökning](assets/usersearch.png)
 
-1. Öppna sedan användarprofilen genom att klicka på den och markera den på **[!UICONTROL Details]** fliken.
+1. Öppna sedan användarprofilen genom att klicka på den och kontrollera den under fliken **[!UICONTROL Details]**.
 
    ![userprofile_small](assets/userprofile_small.png)
 
@@ -72,7 +72,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYLBXvdTuN/profiles.-1.json'
 ```
 
-## Inaktivera en användare och ta bort associerade profiler {#disabling-a-user-and-deleting-the-associated-profiles}
+## Inaktivera en användare och ta bort de associerade profilerna {#disabling-a-user-and-deleting-the-associated-profiles}
 
 ### Inaktivera användare {#disable-user}
 
@@ -103,7 +103,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 1. Ta bort profilnoder och alla underordnade noder. Profilnoderna har två format beroende på AEM:
 
-   1. Standardprofilen under `[!UICONTROL /profile]`
+   1. Den privata standardprofilen under `[!UICONTROL /profile]`
    1. `[!UICONTROL /profiles]`, för nya profiler som skapats med AEM 6.4.
 
    ![image2018-2-6_2-0-4](assets/image2018-2-6_2-0-4.png)
