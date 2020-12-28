@@ -26,13 +26,13 @@ Oak-run har stöd för alla indexeringsanvändningsfall på kommandoraden utan a
 1. Det minskar resursförbrukningen vid omindexering av AEM vilket ger bättre systemprestanda för andra AEM aktiviteter
 1. Oak-run ger out-of-band-stöd: Om produktionsvillkoren inte tillåter omindexering på produktionsinstanser, kan en klonad miljö användas för omindexering för att undvika kritiska prestandapåverkan.
 
-Nedan finns en lista med användningsfall som kan användas när du utför indexeringsåtgärder via `oak-run` verktyget.
+Nedan finns en lista över användningsfall som kan utnyttjas när du utför indexeringsåtgärder via verktyget `oak-run`.
 
 ## Konsekvenskontroller för index {#indexconsistencychecks}
 
 >[!NOTE]
 >
->Mer detaljerad information om detta scenario finns i [Använd fall 1 - Kontroll](/help/sites-deploying/oak-run-indexing-usecases.md#usercase1indexconsistencycheck)av indexkonsekvens.
+>Mer detaljerad information om det här scenariot finns i [Use Case 1 - Index Consistency Check](/help/sites-deploying/oak-run-indexing-usecases.md#usercase1indexconsistencycheck).
 
 * `oak-run.jar`avgör snabbt om index för lucene-ekning är skadade.
 * Det är säkert att köra på en AEM som används för konsekvenskontrollnivå 1 och 2.
@@ -43,7 +43,7 @@ Nedan finns en lista med användningsfall som kan användas när du utför index
 
 >[!NOTE]
 >
->Mer information om detta scenario finns i [Använd fall 2 - Indexstatistik](/help/sites-deploying/oak-run-indexing-usecases.md#usecase2indexstatistics)
+>Mer detaljerad information om detta scenario finns i [Use Case 2 - Index Statistics](/help/sites-deploying/oak-run-indexing-usecases.md#usecase2indexstatistics)
 
 * `oak-run.jar` alla indexdefinitioner, viktiga indexvärden och indexinnehåll tas bort för offlineanalys.
 
@@ -51,13 +51,13 @@ Nedan finns en lista med användningsfall som kan användas när du utför index
 
 ![image2017-12-19_9-47-40](assets/image2017-12-19_9-47-40.png)
 
-## Beslutsträd för omindexering av metod {#reindexingapproachdecisiontree}
+## Beslutsträdet för omindexering av metod {#reindexingapproachdecisiontree}
 
 Bilden är ett beslutsträd för när olika omindexeringsmetoder ska användas.
 
 ![oak_-_reindexingwithoak-run](assets/oak_-_reindexingwithoak-run.png)
 
-## Indexerar om MongoMK/RDMBMK {#reindexingmongomk}
+## Indexerar om MongoMK / RDMBMK {#reindexingmongomk}
 
 >[!NOTE]
 >
@@ -65,9 +65,9 @@ Bilden är ett beslutsträd för när olika omindexeringsmetoder ska användas.
 
 ### Textförextrahering för SegmentNodeStore och DocumentNodeStore {#textpre-extraction}
 
-[Textförextrahering](/help/sites-deploying/best-practices-for-queries-and-indexing.md#how-to-perform-text-pre-extraction) (en funktion som fanns i AEM 6.3) kan användas för att minska tiden det tar att indexera om. Textförextrahering kan användas tillsammans med alla omindexeringsmetoder.
+[Textförextrahering](/help/sites-deploying/best-practices-for-queries-and-indexing.md#how-to-perform-text-pre-extraction)  (en funktion som fanns i AEM 6.3) kan användas för att minska tiden det tar att indexera om. Textförextrahering kan användas tillsammans med alla omindexeringsmetoder.
 
-Beroende på hur `oak-run.jar` du indexerar kommer olika steg att utföras på båda sidor av steget Utför omindexering i diagrammet nedan.
+Beroende på indexeringsmetoden `oak-run.jar` kommer det att finnas olika steg på båda sidor av steget Utför omindexering i diagrammet nedan.
 
 ![4](assets/4.png)
 
@@ -87,11 +87,11 @@ Den här processen behöver bara köras mot en enda AEM i klustret.
 
 ![5](assets/5.png)
 
-## Omindexering av tarMK {#re-indexingtarmk}
+## Indexerar om tarMK {#re-indexingtarmk}
 
 >[!NOTE]
 >
->Mer detaljerad information om det här scenariot finns i [Reindex - SegmentNodeStore](/help/sites-deploying/oak-run-indexing-usecases.md#reindexsegmentnodestore).
+>Mer detaljerad information om detta scenario finns i [Indexera om - SegmentNodeStore](/help/sites-deploying/oak-run-indexing-usecases.md#reindexsegmentnodestore).
 
 * **Väntetiderna i kallt läge (tarMK)**
 
@@ -105,7 +105,7 @@ Den här processen behöver bara köras mot en enda AEM i klustret.
 
 >[!NOTE]
 >
->Mer detaljerad information om det här scenariot finns i [Online Reindex - SegmentNodeStore](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestore).
+>Mer detaljerad information om detta scenario finns i [Online Reindex - SegmentNodeStore](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestore).
 
 Detta är den metod som användes innan de nya indexeringsfunktionerna i oak-run.jar introducerades. Det kan du göra genom att ställa in egenskapen `reindex=true` på ekindexet.
 
@@ -133,7 +133,7 @@ Omindexering online av tarMK är snabbare än omindexeringen av TarkMK online so
 >
 >Mer detaljerad information om det här scenariot finns i [Online Reindex - SegmentNodeStore - Den AEM instansen är avstängd](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestoreaeminstanceisdown).
 
-Omindexering offline av tarMK är den enklaste `oak-run.jar` baserade omindexeringsmetoden för tarMK eftersom den kräver en enda `oak-run.jar` kommentar. AEM måste dock stängas.
+Omindexering offline av tarMK är den enklaste `oak-run.jar`-baserade omindexeringsmetoden för tarMK eftersom den kräver en enda `oak-run.jar`-kommentar. AEM måste dock stängas.
 
 >[!NOTE]
 >
@@ -141,11 +141,11 @@ Omindexering offline av tarMK är den enklaste `oak-run.jar` baserade omindexeri
 
 ![8](assets/8.png)
 
-### Omindexerings-TarMK utanför band med oak-run.jar  {#out-of-bandre-indexingtarmkusingoak-run-jar}
+### Out-of-band Re-Indexing tarMK med oak-run.jar {#out-of-bandre-indexingtarmkusingoak-run-jar}
 
 >[!NOTE]
 >
->Mer detaljerad information om det här scenariot finns i [Omindexering utanför intervall - SegmentNodeStore](/help/sites-deploying/oak-run-indexing-usecases.md#outofbandreindexsegmentnodestore).
+>Mer detaljerad information om detta scenario finns i [Omindexering utanför intervall - SegmentNodeStore](/help/sites-deploying/oak-run-indexing-usecases.md#outofbandreindexsegmentnodestore).
 
 Omindexering utan band minimerar effekten av omindexering på AEM som används.
 
@@ -167,19 +167,19 @@ Omindexering utan band minimerar effekten av omindexering på AEM som används.
 >
 >ACS Kontrollera att Index är ett projekt som stöds av communityn och inte stöds av Adobe Support.
 
-Detta gör att indexdefinitioner för leverans kan definieras via innehållspaket, vilket senare resulterar i omindexering genom att flaggan reindex anges till `true`. Detta fungerar för mindre uppsättningar där omindexering inte tar lång tid.
+Detta gör att indexdefinitioner för leverans kan definieras via innehållspaket, vilket senare resulterar i omindexering genom att omindexeringsflaggan ställs in på `true`. Detta fungerar för mindre uppsättningar där omindexering inte tar lång tid.
 
-Mer information finns i dokumentationen [till att kontrollera](https://adobe-consulting-services.github.io/acs-aem-commons/features/ensure-oak-index/index.html) ACS-index.
+Mer information finns i dokumentationen [ACS Kontrollera index](https://adobe-consulting-services.github.io/acs-aem-commons/features/ensure-oak-index/index.html) för mer information.
 
 ### Skapa och uppdatera indexdefinitioner på tarMK med oak-run.jar {#creatingandupdatingindexdefinitionsontarmkusingoak-run-jar}
 
-Om tiden eller prestandaeffekten av omindexering med icke- `oak-run.jar` metoder är för hög kan följande `oak-run.jar` baserade metod användas för att importera och indexera om Lucene-indexdefinitioner i en TARMK-baserad AEM.
+Om tiden eller prestandaeffekten av omindexering med icke-`oak-run.jar`-metoder är för hög kan följande `oak-run.jar`-baserade metod användas för att importera och indexera om Lucene-indexdefinitioner i en TarmMK-baserad AEM.
 
 ![10](assets/10.png)
 
 ### Skapa och uppdatera indexdefinitioner på MonogMK med oak-run.jar {#creatingandupdatingindexdefinitionsonmonogmkusingoak-run-jar}
 
-Om tiden eller prestandaeffekten av omindexering med icke- `oak-run.jar` metoder är för hög kan följande `oak-run.jar` baserade metod användas för att importera och indexera om Lucene-indexdefinitioner i MongoMK-baserade AEM.
+Om tiden eller prestandaeffekten av omindexering med icke-`oak-run.jar`-metoder är för hög kan följande `oak-run.jar`-baserade metod användas för att importera och indexera om Lucene-indexdefinitioner i MongoMK-baserade AEM.
 
 ![11](assets/11.png)
 
