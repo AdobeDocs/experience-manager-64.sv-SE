@@ -36,7 +36,7 @@ Oak implementerar specifikationen [JSR-283](https://www.day.com/day/en/products/
 * Bättre prestanda
 * Stöd för många underordnade noder och åtkomstkontrollsnivåer
 
-## Arkitekturbegrepp {#architecture-concept}
+## Arkitekturskoncept {#architecture-concept}
 
 ![chlimage_1-84](assets/chlimage_1-84.png)
 
