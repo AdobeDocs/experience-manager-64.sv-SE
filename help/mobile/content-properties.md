@@ -38,7 +38,7 @@ I följande tabeller beskrivs innehållsegenskaperna och noderna.
 | dps-resourceType | Sträng | dps:artikel | dps:Banner | dps:Samling | entitetstyp, egenskap |
 | dps-version | Sträng |  | version av AEM Mobile-enhet (ingår också i det fullständiga aemm-id:t) |
 | dps-lastSynced | Date |  | datum för senaste synkronisering/import från AEM Mobile till AEM |
-| dps-lastUploaded | Date |  | datum för senaste överföring från AEM till AEM Mobile |
+| dps-lastUploaded | Datum |  | datum för senaste överföring från AEM till AEM Mobile |
 | dps-lastUploadedBy | String:userid |  | ID-användare som utförde den senaste överföringsbegäran från AEM till AEM Mobile |
 
 ## Egenskaper för kärnmetadata {#core-metadata-properties}
@@ -88,13 +88,13 @@ I följande tabeller beskrivs innehållsegenskaperna och noderna.
 
 ## Innehållsnoder {#content-nodes}
 
-### Vanliga noder {#common-nodes}
+### Gemensamma noder {#common-nodes}
 
 | Nodnamn | Typ | Standardvärden eller förväntade värden | Beskrivning |
 |--- |--- |--- |--- |
 | bild | jcr:primärType=nt:ostrukturerad <br> sling:resourceType=foundation/components/image |  |  |
 
-### Entities {#entities}
+### Enheter {#entities}
 
 #### Artiklar {#articles-1}
 
