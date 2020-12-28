@@ -20,16 +20,16 @@ ht-degree: 2%
 
 # Kortkommandon för konsoler{#keyboard-shortcuts-for-consoles}
 
-Olika kortkommandon finns i hela AEM. En del gäller användning av konsoler, andra för [sidredigering](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md).
+Olika kortkommandon finns i hela AEM. Vissa gäller för användning av konsoler, andra för [sidredigering](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md).
 
 >[!NOTE]
 >
 >Flera val på en stationär enhet:
 >
->* Windows: **Ctrl**+**klicka** på de nödvändiga komponenterna.
+>* Windows: **Ctrl**+**klicka** på nödvändiga komponenter.
    >
    >
-* Mac: **Cmd**+**klicka** på de nödvändiga komponenterna.
+* Mac: **Cmd**+**klicka** på nödvändiga komponenter.
 
 >
 
@@ -47,7 +47,7 @@ Olika kortkommandon finns i hela AEM. En del gäller användning av konsoler, an
   <tr> 
    <td>Konsol</td> 
    <td><strong><code>Shift-Double-Click</code></strong><br /> (på obligatorisk sida)</td> 
-   <td>Öppna sidan i nytt fönster.<br /> <strong>Obs!</strong> detta fungerar om <a href="/help/sites-classic-ui-authoring/author-env-user-props.md">användaregenskaperna</a> är inställda på ett fönster, om flera fönster är detta standardbeteende.</td> 
+   <td>Öppna sidan i nytt fönster.<br /> <strong>Obs!</strong> Detta fungerar om  <a href="/help/sites-classic-ui-authoring/author-env-user-props.md">användaregenskaperna </a> är inställda på ett fönster; om flera fönster är detta standardbeteende.</td> 
   </tr> 
  </tbody> 
 </table>
