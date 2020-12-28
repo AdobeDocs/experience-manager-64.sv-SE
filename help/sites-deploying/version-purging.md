@@ -26,13 +26,13 @@ I en standardinstallation AEM en ny version av en sida eller nod när du aktiver
 >
 >Om inga innehållsändringar görs visas ett meddelande om att sidan har aktiverats, men ingen ny version skapas
 
-Du kan skapa ytterligare versioner på begäran med hjälp av fliken **Versionshantering** i sidosparken. Dessa versioner lagras i databasen och kan återställas om det behövs.
+Du kan skapa ytterligare versioner på begäran med hjälp av fliken **Versioning** i sidosparken. Dessa versioner lagras i databasen och kan återställas om det behövs.
 
 Dessa versioner rensas aldrig, så databasstorleken kommer att öka med tiden och måste därför hanteras.
 
 AEM levereras med olika mekanismer som hjälper dig att hantera din databas:
 
-* i [versionshanteraren](#version-manager)
+* [Versionshanteraren](#version-manager)
 
    Detta kan konfigureras för att rensa gamla versioner när nya versioner skapas.
 
@@ -50,7 +50,7 @@ AEM levereras med olika mekanismer som hjälper dig att hantera din databas:
 
       När en versions ålder överskrider det här värdet rensas den från databasen.
 
-* underhållsuppgiften [Version Rensa](/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks). Du kan schemalägga underhållsaktiviteten Rensa version så att tidigare versioner tas bort automatiskt. Därför minimeras behovet av att manuellt använda verktygen för versionsrensning.
+* [underhållsaktiviteten Rensa version](/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks). Du kan schemalägga underhållsaktiviteten Rensa version så att tidigare versioner tas bort automatiskt. Därför minimeras behovet av att manuellt använda verktygen för versionsrensning.
 
 >[!CAUTION]
 >
@@ -96,7 +96,7 @@ Följande alternativ är tillgängliga:
 
 * `versionmanager.minNumberVersions` (int, standard 0)
 
-   Minsta antal versioner som ska behållas oavsett ålder. Om värdet är mindre än 1 behålls inget minsta antal versioner.
+   Det minsta antal versioner som ska behållas oavsett ålder. Om värdet är mindre än 1 behålls inget minsta antal versioner.
 
 >[!NOTE]
 >
@@ -140,4 +140,4 @@ Om du till exempel definierar det högsta OCH lägsta antalet versioner som ska 
 
 ## Rensa versioner {#purge-versions-tool}
 
-Verktyget [Rensa versioner](/help/sites-deploying/monitoring-and-maintaining.md#purgeversionstool) är avsett att rensa versioner av en nod eller en hierarki av noder i databasen. Dess främsta syfte är att hjälpa dig att minska storleken på databasen genom att ta bort tidigare versioner av dina noder.
+Verktyget [Rensa versioner](/help/sites-deploying/monitoring-and-maintaining.md#purgeversionstool) är avsett för att rensa versioner av en nod eller en hierarki av noder i databasen. Dess främsta syfte är att hjälpa dig att minska storleken på databasen genom att ta bort tidigare versioner av dina noder.
