@@ -40,7 +40,7 @@ Slutligen publicerar administratörer det uppdaterade programinnehållet strateg
 
 ## Hantera programpanel {#the-manage-app-tile}
 
-I **Manage App** Tile visas tillgänglig programinformation:
+På **panelen Hantera program** visas tillgänglig programinformation:
 
 * Titel
 * Beskrivning
@@ -52,7 +52,7 @@ I **Manage App** Tile visas tillgänglig programinformation:
 
 ## Hantera anslutningspanel {#the-manage-connection-tile}
 
-Under **Hantera anslutning** visas anslutningsinformationen för AEM Mobile On-demand Services:
+Platsen **Hantera anslutning** visar anslutningsinformation för AEM Mobile On-demand Services:
 
 * Namn på molnkonfiguration
 * Projektnamn och ID
@@ -62,7 +62,7 @@ Under **Hantera anslutning** visas anslutningsinformationen för AEM Mobile On-d
 >
 >Klicka på kugghjulet i det övre högra hörnet för att konfigurera en molnkonfiguration för mobil på begäran.
 >
->Mer information finns i [Konfigurera Mobile On-Demand Services](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) .
+>Mer information finns i [Konfigurera tjänster för mobil on demand](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md).
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
@@ -78,7 +78,7 @@ Du kan expandera varje ruta för att få en mer detaljerad listvy genom att klic
 
 ### Panelen Hantera banderoller {#the-manage-banners-tile}
 
-I rutan **Hantera banderoller** kan du hantera innehållet för en banderoll. Följande information visas för en banderoll:
+Med rutan **Hantera banderoller** kan du hantera innehållet för en banderoll. Följande information visas för en banderoll:
 
 * bild
 * **RUBRIK**: banderollens namn
@@ -93,11 +93,11 @@ Följande bild visar panelen **Hantera banners** i AEM Mobile Application Dashbo
 
 >[!NOTE]
 >
->Se **[Hantera banners](/help/mobile/mobile-on-demand-managing-banners.md)**för att skapa, ta bort eller uppdatera banners.
+>Se **[Hantera banners](/help/mobile/mobile-on-demand-managing-banners.md)** för att skapa, ta bort eller uppdatera banners.
 
-### Panelen Hantera artiklar {#the-manage-articles-tile}
+### Hantera artikelpanel {#the-manage-articles-tile}
 
-På **panelen Hantera artiklar** kan du hantera innehållet för en artikel. Följande information visas för en artikel:
+Med rutan **Hantera artiklar** kan du hantera innehållet för en artikel. Följande information visas för en artikel:
 
 * bild
 * **RUBRIK**: artikelns namn
@@ -106,17 +106,17 @@ På **panelen Hantera artiklar** kan du hantera innehållet för en artikel. Fö
 * **PUBLICERAT**: senaste publicerade AEM
 * **KÄLLA**: källa (AEM lokal eller fjärransluten från Mobile On-Demand)
 
-Följande bild visar **panelen Hantera artiklar** på AEM Mobile Application Dashboard:
+Följande bild visar panelen **Hantera artiklar** i AEM Mobile Application Dashboard:
 
 ![chlimage_1-58](assets/chlimage_1-58.png)
 
 >[!NOTE]
 >
->Se [**Hantera artiklar **](/help/mobile/mobile-on-demand-managing-articles.md)för att skapa, ta bort eller uppdatera artiklar.
+>Se [**Hantera artiklar**](/help/mobile/mobile-on-demand-managing-articles.md) för att skapa, ta bort eller uppdatera artiklar.
 
 ### Panelen Hantera samlingar {#the-manage-collections-tile}
 
-I **rutan Hantera samlingar** kan du hantera innehållet i en samling. Följande information visas för en samling:
+Med rutan **Hantera samlingar** kan du hantera innehållet för en samling. Följande information visas för en samling:
 
 * bild
 * **RUBRIK**: samlingens namn
@@ -131,7 +131,7 @@ Följande bild visar panelen **Hantera samlingar** i AEM Mobile Application Dash
 
 >[!NOTE]
 >
->Se **[Hantera samlingar](/help/mobile/mobile-on-demand-managing-collections.md)**för att skapa, ta bort eller uppdatera samlingar.
+>Se **[Hantera samlingar](/help/mobile/mobile-on-demand-managing-collections.md)** för att skapa, ta bort eller uppdatera samlingar.
 
 ### Nästa steg {#the-next-steps}
 
