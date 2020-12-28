@@ -27,7 +27,7 @@ Detta har följande effekt:
 * Avlastar begäranden från serverinfrastrukturen.
 * Förbättrar sidinläsningens prestanda när webbläsaren cachelagrar objekt i webbläsarens cache.
 
-Förfallotid anges av HTTP-standarden med avseende på &quot;förfallodatum&quot; för filer (se t.ex. kapitel 14.21 i [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt) &quot; Hypertext Transfer Protocol - HTTP 1.1&quot;). I den här standarden används rubriken för att tillåta klienter att cachelagra objekt tills de betraktas som inaktuella. sådana objekt cachelagras under den angivna tiden utan att någon statuskontroll görs på den ursprungliga servern.
+Förfallotider anges av HTTP-standarden för filers förfallodatum (se t.ex. kapitel 14.21 i [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt) &quot; Hypertext Transfer Protocol — HTTP 1.1&quot;). I den här standarden används rubriken för att tillåta klienter att cachelagra objekt tills de betraktas som inaktuella. sådana objekt cachelagras under den angivna tiden utan att någon statuskontroll görs på den ursprungliga servern.
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Alla filer som inte är dynamiska och som inte ändras över tid kan och bör ca
 
 >[!CAUTION]
 >
->Du måste vara försiktig när du definierar den tidsperiod under vilken ett objekt anses vara uppdaterat. Eftersom det *inte görs någon kontroll förrän den angivna tidsperioden har gått ut* kan klienten visa gammalt innehåll från cacheminnet.
+>Du måste vara försiktig när du definierar den tidsperiod under vilken ett objekt anses vara uppdaterat. Eftersom det inte finns någon *kontroll förrän den angivna tidsperioden har gått ut* kan klienten visa gammalt innehåll från cachen.
 
 1. **För en Author-instans:**
 
@@ -75,7 +75,7 @@ Alla filer som inte är dynamiska och som inte ändras över tid kan och bör ca
    </Location>
    ```
 
-   Detta gör att det mellanliggande cacheminnet (t.ex. webbläsarens cacheminne) kan lagra CSS-, Javascript-, PNG- och GIF-filer i upp till en dag i klientcachen. I det här exemplet visas globala inställningar för allt nedan `/content` och `/etc/designs`du bör göra det mer detaljerat.
+   Detta gör att det mellanliggande cacheminnet (t.ex. webbläsarens cacheminne) kan lagra CSS-, Javascript-, PNG- och GIF-filer i upp till en dag i klientcachen. Det här exemplet visar globala inställningar för allt under `/content` och `/etc/designs`, men du bör göra det mer detaljerat.
 
    Beroende på hur ofta webbplatsen uppdateras kan du även överväga att cachelagra HTML-sidor. En rimlig tidsperiod är 1 timme:
 
@@ -85,4 +85,4 @@ Alla filer som inte är dynamiska och som inte ändras över tid kan och bör ca
    </Location>
    ```
 
-När du har konfigurerat de statiska objekten kan du kontrollera att inga (onödiga) begäranden görs för statiska objekt genom att skanna `request.log`medan du markerar sidor som innehåller sådana objekt.
+När du har konfigurerat de statiska objekten kan du kontrollera att inga (onödiga) begäranden görs för statiska objekt genom att skanna `request.log` när du väljer sidor som innehåller sådana objekt.
