@@ -1,6 +1,6 @@
 ---
-title: Versionsinformation för tjänsten Smart Content
-seo-title: Versionsinformation för tjänsten Smart Content
+title: Versionsinformation för Smart Content Service
+seo-title: Versionsinformation för Smart Content Service
 description: Översikt över tjänsten Smart Content Service och kända problem med tjänsten.
 seo-description: Översikt över tjänsten Smart Content Service och kända problem med tjänsten.
 uuid: 5f474b36-3451-48ea-8669-b2d793638b06
@@ -16,13 +16,13 @@ ht-degree: 1%
 ---
 
 
-# Versionsinformation för tjänsten Smart Content {#smart-content-service-release-notes}
+# Versionsinformation för Smart Content Service {#smart-content-service-release-notes}
 
 Översikt över tjänsten Smart Content Service och kända problem med tjänsten.
 
 Organisationer kräver att deras digitala resurser taggas baserat på den taxonomi som anställda, partners och kunder använder för att referera till och söka efter digitala resurser. Jämfört med generiska taggar är det enklare att identifiera och hämta resurser som är taggade baserat på företagstaxonomi genom taggbaserade sökningar.
 
-Tjänsten Smart Content Service använder er företagsklonomi av AEM Assets för att automatiskt tagga digitala resurser, vilket ser till att de mest relevanta resurserna visas i sökningar.
+Tjänsten Smart Content Service använder er företagstaxonomi av AEM Assets för att automatiskt tagga digitala resurser, vilket ser till att de mest relevanta resurserna visas i sökningar.
 
 Du måste utbilda Smart Content Service i en välstrukturerad uppsättning AEM resurser och taggar för att känna igen din företagstaxonomi. När tjänsten har tränats kan den använda dessa taggar på en liknande uppsättning resurser.
 
@@ -94,5 +94,5 @@ Dessa webbplatser är bara tillgängliga för kunder. Om du är kund och behöve
 
 * [Produktåtkomst](https://login.marketing.adobe.com)
 * [Nedladdning av produkt på licensing.adobe.com](https://licensing.adobe.com/).
-* Produktuppdateringar, patchar och paket för ytterligare funktionalitet vid [programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
-* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [nya Adobe Customer Support Experience](https://docs.adobe.com/content/help/en/customer-one/using/home.html).
+* Produktuppdateringar, patchar och paket för ytterligare funktionalitet i [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
+* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [New Adobe Customer Support Experience](https://docs.adobe.com/content/help/en/customer-one/using/home.html).
