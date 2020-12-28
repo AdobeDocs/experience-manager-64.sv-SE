@@ -20,13 +20,13 @@ ht-degree: 4%
 
 # Arbeta med Dynamic Media{#working-with-dynamic-media}
 
-[Dynamic Media](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobilsajter och sociala medier. Med en uppsättning överordnad resurser genererar och levererar Dynamic Media flera varianter av multimediematerial i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
+[Dynamic ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) Media hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobilsajter och sociala medier. Med en uppsättning överordnad resurser genererar och levererar Dynamic Media flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
 
 Dynamiska medier ger interaktiva tittarupplevelser som zoomning, 360-graders rotation och video. Dynamic Media innehåller arbetsflödena från Adobe Experience Manager Digital Asset Management (Assets) för att förenkla och effektivisera hanteringen av digitala kampanjer.
 
-Det klassiska användargränssnittet gör att det inte går att arbeta med dynamiska media. Se [Arbeta med Dynamic Media,](/help/assets/dynamic-media.md) som omfattar användargränssnittet med pekskärm.
+Arbetet med Dynamic Media är inte tillgängligt i det klassiska användargränssnittet. Se [Arbeta med Dynamic Media,](/help/assets/dynamic-media.md) som beskriver det beröringsaktiverade användargränssnittet.
 
 >[!NOTE]
 >
->Om du använder Dynamic Media kan du inte använda automatiska överföringar som är tillgängliga samtidigt om Dynamic Media Classic [integreras i AEM](/help/sites-administering/scene7.md). Se [Aktivera Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media). Dynamiska media är inaktiverat som standard.
+>Om du använder Dynamic Media kan du inte använda automatiska överföringar samtidigt om [integrerar Dynamic Media Classic i AEM](/help/sites-administering/scene7.md). Se [aktivera Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media). Dynamic Media är inaktiverat som standard.
 
