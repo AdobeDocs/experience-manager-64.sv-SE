@@ -28,7 +28,7 @@ ht-degree: 0%
 >
 >**Krav**:
 >
->Innan du får lära dig mer om hur du skapar och ändrar delade resurser läser du [Innehållssynkronisering](/help/mobile/mobile-ondemand-contentsync.md) för att förstå de grundläggande begreppen.
+>Innan du får veta mer om hur du skapar och ändrar delade resurser kan du läsa [Innehållssynkronisering](/help/mobile/mobile-ondemand-contentsync.md) för att förstå de grundläggande begreppen.
 
 AEM Mobile-användare använder Innehållssynkronisering för att exportera live-innehåll till statiskt innehåll för användning i mobilappar, och den här exporten sker när innehåll överförs till Mobile On-Demand Services från AEM Mobile.
 
@@ -38,7 +38,7 @@ I följande resurser beskrivs hur du exporterar delade resurser från Adobe Expe
 
 Med delade HTML-resurser kan artiklar dela HTML-resurser som annars skulle behöva dupliceras för alla artiklar och som kan innehålla ikoner, teckensnitt, javascript och css.
 
-Konfigurationen för innehållssynkronisering som finns i **&lt;dps-exportTemplate>/dps-HTMLResources>** bör konfigureras för att exportera allt innehåll som en artikel behöver för statisk återgivning av egenskaper på enheten.
+Konfigurationen för innehållssynkronisering som finns på **&lt;dps-exportTemplate>/dps-HTMLResources>** bör konfigureras att exportera allt innehåll som en artikel behöver för statisk återgivning av egenskaper på enheten.
 
 >[!CAUTION]
 >
@@ -55,7 +55,7 @@ Konfigurationen för innehållssynkronisering som finns i **&lt;dps-exportTempla
 Om du vill visa exempel på delad resurs, se stegen nedan:
 
 1. Öppna CRXDE Lite på AEM.
-1. Bläddra till den här sökvägen *[/etc/contentsync/templates/dps-we-unlimited-app/dps-HTMLResources](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-HTMLResources)*för att visa delade exempelresurser.
+1. Bläddra till den här sökvägen *[/etc/contentsync/templates/dps-we-unlimited-app/dps-HTMLResources](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-HTMLResources)* för att visa delade exempelresurser.
 
    Du kan visa alla egenskaper som krävs för att skapa dina delade resurser enligt bilden nedan:
 
