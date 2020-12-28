@@ -100,7 +100,7 @@ Vid användning inom ett mönster anger tecknet / en underkatalog och &amp;ast; 
  </tbody> 
 </table>
 
-### Extrahera strängarna  {#extracting-the-strings}
+### Extraherar strängarna {#extracting-the-strings}
 
 ingen POM:
 
@@ -137,7 +137,7 @@ mvn xgettext:extract
 ### Utdatafiler {#output-files}
 
 * `raw.xliff`: extraherade strängar
-* `warn.log`: varningar (om sådana finns), om API:t inte används korrekt. `CQ.I18n.getMessage()` De behöver alltid en fix och sedan en omstart.
+* `warn.log`: varningar (om sådana finns), om  `CQ.I18n.getMessage()` API används felaktigt. De behöver alltid en fix och sedan en omstart.
 
 * `parserwarn.log`: parservarningar (om sådana finns), t.ex. problem med js-parsern
 * `potentials.xliff`: &quot;potentiella&quot; kandidater som inte extraheras, men som kan vara läsbara strängar som behöver översättas (kan ignoreras, men ändå skapa en enorm mängd falskt positiva resultat)
