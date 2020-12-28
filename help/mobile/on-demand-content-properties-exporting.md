@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# Exportera innehåll med hjälp av innehållsegenskaper{#using-content-properties-to-export-content}
+# Exportera innehåll{#using-content-properties-to-export-content} med innehållsegenskaper
 
 >[!NOTE]
 >
@@ -26,9 +26,9 @@ ht-degree: 1%
 
 Appar representeras som *cq:Pages* i AEM.
 
-De delar samma gemensamma egenskaper som finns i *cq:Page* , förutom de som visas nedan och som representerar egenskaper som stöder integrering.
+De delar samma gemensamma egenskaper som finns i alla *cq:Page* utöver de andra som visas nedan och som representerar integrationsegenskaper som stöds.
 
-## Appegenskaper {#app-properties}
+## Programegenskaper {#app-properties}
 
 I följande tabell visas **Programegenskaper och noder**.
 
