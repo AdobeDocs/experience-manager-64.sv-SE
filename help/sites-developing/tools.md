@@ -33,13 +33,13 @@ Här följer två testverktyg för öppen källkod:
 
 Selenium används för funktionstestning i en webbläsare med en användare per aktivitet. Den registrerar teststeg (klickningar) som antingen HTML-tabeller eller Java-klasser.
 
-Mer information finns på [https://www.seleniumhq.org/](https://www.seleniumhq.org/).
+Mer information finns i [https://www.seleniumhq.org/](https://www.seleniumhq.org/).
 
 **JMeter**
 
 JMeter används för att spåra förfrågningar och kan användas för funktions-, prestanda- och stresstester.
 
-Mer information finns på [http://jakarta.apache.org/jmeter/](http://jakarta.apache.org/jmeter/).
+Mer information finns i [http://jakarta.apache.org/jmeter/](http://jakarta.apache.org/jmeter/).
 
 Det finns också många egna verktyg för att automatisera tester och hantera testplaner.
 
