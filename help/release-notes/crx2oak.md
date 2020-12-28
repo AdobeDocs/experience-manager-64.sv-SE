@@ -1,8 +1,8 @@
 ---
 title: CRX2OAK-migreringsverktyg
 seo-title: CRX2OAK-migreringsverktyg
-description: Versionsinformation som är specifik för migreringsverktyget Adobe Experience Manager 6.4 CRX2OAK.
-seo-description: Versionsinformation som är specifik för migreringsverktyget Adobe Experience Manager 6.4 CRX2OAK.
+description: Versionsinformation om Adobe Experience Manager 6.4 CRX2OAK-migreringsverktyget.
+seo-description: Versionsinformation om Adobe Experience Manager 6.4 CRX2OAK-migreringsverktyget.
 uuid: 1b582faf-2dc6-41a2-9419-7e82347f9d6c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4
@@ -49,8 +49,8 @@ ht-degree: 0%
 
 * Uppgradera Oak-version till 1.4.1
 * OAK-3846 / GRANITE-10748 Byt namn på SNS-noder om de bryter mot nodtypsbegränsningar
-* OAK-3910 / GRANITE-10730 Migrera nod som ärver från `mix:versionable` utan versionshistorik
-* OAK-4128 / GRANITE-11757 kopierar `RepositorySidegrade` inte rotnodegenskaper
+* OAK-3910 / GRANITE-10730 Migrerande nod som ärver från `mix:versionable` utan versionshistorik
+* OAK-4128 / GRANITE-11757 `RepositorySidegrade` kopierar inte rotnodegenskaper
 
 ### Version 1.3.4 (januari 2016) {#version-january}
 
