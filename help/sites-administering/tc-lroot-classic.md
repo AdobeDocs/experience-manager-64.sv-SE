@@ -26,7 +26,7 @@ I följande procedur används det klassiska användargränssnittet för att skap
 1. Lägg till en ny underordnad sida som representerar webbplatsens språkversion:
 
    1. Klicka på Ny > Ny sida.
-   1. Ange titel och namn i dialogrutan. Namnet måste ha formatet `<language-code>` eller `<language-code>_<country-code>`t.ex. en_US, en_us, en_GB, en_gb.
+   1. Ange titel och namn i dialogrutan. Namnet måste ha formatet `<language-code>` eller `<language-code>_<country-code>`, till exempel en, en_US, en_us, en_GB, en_gb.
 
       * Den språkkod som stöds är en kod med två bokstäver och gemener som definieras av ISO-639-1
       * Den landskod som stöds är gemen eller versal, tvåbokstavskod enligt ISO 3166
