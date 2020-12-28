@@ -40,10 +40,10 @@ I det här exemplet återaktiverar vi det klassiska gränssnittet för webbplats
 
    `/libs/cq/core/content/nav/sites`
 
-1. Skapa en övertäckning med alternativet **Överläggsnod** ; till exempel:
+1. Skapa en övertäckning med alternativet **Överläggsnod**; till exempel:
 
-   * **Sökväg**: `/apps/cq/core/content/nav/sites`
-   * **Överläggsplats**: `/apps/`
+   * **Sökväg**:  `/apps/cq/core/content/nav/sites`
+   * **Överläggsplats**:  `/apps/`
    * **Matcha nodtyper**: aktiv (markera kryssrutan)
 
 1. Lägg till följande boolesk egenskap till den överlagrade noden:
