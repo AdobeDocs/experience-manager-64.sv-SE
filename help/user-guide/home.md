@@ -7,6 +7,9 @@ contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 translation-type: tm+mt
 source-git-commit: 7cb8fbc2577b9feafbcbddbd078ab06e1a341c73
+workflow-type: tm+mt
+source-wordcount: '233'
+ht-degree: 1%
 
 ---
 
@@ -21,35 +24,35 @@ source-git-commit: 7cb8fbc2577b9feafbcbddbd078ab06e1a341c73
 
 ## Användarhandböcker och resurser {#user-guides-and-resources}
 
-* [Användarhandböcker för AEM Capabilities](capabilities.md)
-* [Användarhandböcker för AEM-implementering](implementation.md)
-* [AEM-resurser](resources.md)
+* [AEM Capabilities User Guides](capabilities.md)
+* [Användarhandböcker för AEM](implementation.md)
+* [AEM](resources.md)
 
 ## Felsökning och hjälp {#troubleshooting-and-help}
 
 * [Ny på AEM](new.md)
-* [Läs mer om AEM-funktioner](learn.md)
-* [Best Practices, How To, and Training for AEM](best-practice.md)
-* [AEM Community](community.md)
+* [Läs om AEM](learn.md)
+* [Bästa metoder, Så här gör du och Utbildning för AEM](best-practice.md)
+* [AEM](community.md)
 * [Felsökning i AEM](troubleshooting.md)
 
 ## Kontaktalternativ {#contact-options}
 
 Supportrepresentant kan få assisterad support via:
 
-* Webb: Experience Manager Support Portal
+* Webb: Experience Manager supportportal
 * Telefon: [Hitta telefonnumret till din region.](https://helpx.adobe.com/contact/dma-external/DMACustomeCareRegionalPhoneNumbers.html)
 
 >[!NOTE]
 >
->Är du inte säker på om du är **supportrepresentant**? Ta reda på om den här [användartypen gäller dig](https://helpx.adobe.com/experience-cloud/supported-users.html) och läs mer om våra [företagssupportvillkor](https://helpx.adobe.com/support/programs/enterprise-support-terms.html).
+>Är du inte säker på om du är **supportrepresentant**? Ta reda på om denna [användartyp gäller dig](https://helpx.adobe.com/experience-cloud/supported-users.html) och läs mer om våra [företagssupportvillkor](https://helpx.adobe.com/support/programs/enterprise-support-terms.html).
 
 ## Community {#community}
 
 Delta i konversationen!
 
 * [AEM Sites Forum](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)
-* [AEM Communities-forum](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-communities.html)
+* [AEM Communities Forum](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-communities.html)
 * [AEM Forms Forum](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-forms.html)
 * [AEM Assets Forum](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-assets.html)
 * [AEM Mobile Forum](http://forums.adobe.com/community/experiencemanagermobile)
