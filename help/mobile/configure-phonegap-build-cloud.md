@@ -24,9 +24,9 @@ ht-degree: 1%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-På **PhoneGap Build Tile** på programkontrollpanelen kan du skapa och distribuera ditt PhoneGap-mobilprogram via Adobe PhoneGap Build-tjänsten.
+Med **PhoneGap Build Tile** på programkontrollpanelen kan du skapa och distribuera ditt PhoneGap-mobilprogram via Adobe PhoneGap Build-tjänsten.
 
-Alla plattformar som stöds som definieras i **Manage App** tile byggs med PhoneGap Build när du trycker på en fjärrversion med **PhoneGap Build** Tile.
+Alla plattformar som stöds som definieras i **Manage App**-plattan byggs med PhoneGap Build när du trycker på en fjärrbyggnad med plattan **PhoneGap Build**.
 
 Du kan överföra en fjärrversion till [https://build.phonegap.com](https://build.phonegap.com) eller hämta källan för att bygga lokalt med [PhoneGap CLI](https://docs.phonegap.com/references/phonegap-cli/).
 
@@ -38,21 +38,21 @@ För att kunna utnyttja PhoneGap Build måste du konfigurera den AEM PhoneGap Bu
 
 Om du inte har något konto går du till [https://build.phonegap.com](https://build.phonegap.com) och registrerar dig! Om du har ett Adobe Creative Cloud-medlemskap kan du ha stöd för upp till 25 privata appar (appar utan öppen källkod).
 
-När du har verifierat att ditt PhoneGap Build-konto är aktivt går du till AEM Cloud Management Console, särskilt [PhoneGap Build](http://localhost:4502/etc/cloudservices/phonegap-build.html) (http://localhost:4502/etc/cloudservices/phonegap-build.html).
+När du har verifierat att ditt PhoneGap Build-konto är aktivt går du till AEM Cloud Management Console, närmare bestämt [PhoneGap Build](http://localhost:4502/etc/cloudservices/phonegap-build.html) (http://localhost:4502/etc/cloudservices/phonegap-build.html).
 
 Använd panelen **Hantera Cloud Services** för att konfigurera en ny molntjänstkonfiguration.
 
 ### Använda rutan Hantera Cloud Services {#using-manage-cloud-services-tile}
 
-Innan du börjar bygga din app med **PhoneGap Build** tile måste du konfigurera dina molntjänster med panelen **Hantera Cloud Services** på AEM Mobile dashboard.
+Innan du börjar bygga din app med **PhoneGap Build**-panelen måste du konfigurera dina molntjänster med **Hantera Cloud Services**-panelen från AEM Mobile-kontrollpanelen.
 
 Följ stegen nedan för att konfigurera molntjänster för din app:
 
-1. Klicka på det övre högra hörnet i rutan **Hantera Cloud Services** .
+1. Klicka på det övre högra hörnet i rutan **Hantera Cloud Services**.
 
    ![chlimage_1-61](assets/chlimage_1-61.png)
 
-1. Välj **PhoneGap Build** på skärmen **Lägg till eller redigera Cloud Service** .
+1. Välj **PhoneGap Build** på skärmen **Lägg till eller redigera Cloud Service**.
 
    Klicka på **Nästa**.
 
@@ -60,17 +60,17 @@ Följ stegen nedan för att konfigurera molntjänster för din app:
 
 1. Ange dina autentiseringsuppgifter för att skapa en ny molnkonfiguration.
 
-   När den har verifierats klickar du på **Skicka**. Den här konfigurerade molnkonfigurationen visas nu på panelen **Hantera Cloud Services** .
+   När den har verifierats klickar du på **Skicka**. Den här konfigurerade molnkonfigurationen visas nu i **Hantera Cloud Services**-panelen.
 
    ![chlimage_1-63](assets/chlimage_1-63.png)
 
 ### Bygga ditt program med PhoneGap Build {#building-your-application-with-phonegap-build}
 
-När du har konfigurerat molntjänsterna kan du bygga ditt program med **PhoneGap Build** . Klicka på det övre högra hörnet för att välja bland alternativen **Skapa fjärrmapp** eller **Hämta källa** .
+När du har konfigurerat molntjänsterna kan du skapa programmet med **PhoneGap Build**-panelen. Klicka på det övre högra hörnet för att välja mellan alternativen **Skapa fjärr** eller **Hämta källa**.
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
-Klicka på **Skapa fjärranslutning** för att anropa en fjärrversion med Adobe PhoneGap Build.
+Klicka på **Bygg fjärr** om du vill starta ett fjärrbygge med Adobe PhoneGap Build.
 
 >[!NOTE]
 >
@@ -101,7 +101,7 @@ phonegap run ios (or android, ...)
 >
 >add - emulera i slutet av den här raden om du inte vill köra den på den anslutna enheten.
 
-När du har verifierat att ovanstående fungerar använder du **PhoneGap Build** Tile för att **hämta källa**. Spara och zippa upp filen på din dator. När det är klart:
+När du har verifierat att ovanstående fungerar använder du **PhoneGap Build** Sida vid **Hämta källa**. Spara och zippa upp filen på din dator. När det är klart:
 
 * navigera till den sparade filen (mapp)
 * run &#39;phonegap run ios&#39; (or android, etc.)
