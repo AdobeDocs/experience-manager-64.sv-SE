@@ -43,7 +43,7 @@ Om du vill konfigurera AEM att integrera med Salesforce måste du först konfigu
 >
 >Du kan skapa ett kostnadsfritt utvecklarkonto i Salesforce.
 
-Så här konfigurerar du AEM att integrera med Salesforce:
+Så här konfigurerar du AEM att integreras med Salesforce:
 
 1. I AEM navigerar du till **Cloud Services**. I tredjepartstjänster klickar du på **Konfigurera nu** i **Salesforce**.
 
@@ -56,18 +56,18 @@ Så här konfigurerar du AEM att integrera med Salesforce:
    >Den nya konfigurationen dirigeras om till en ny sida: **http://localhost:4502/etc/cloudservices/salesforce/developer.html**. Detta är exakt samma värde som du måste ange i återanrops-URL när du skapar fjärråtkomstprogrammet i Salesforce. Dessa värden måste matcha.
 
 1. Logga in på ditt Salesforce-konto (eller om du inte har något, skapa ett på [https://developer.force.com](https://developer.force.com).)
-1. I Salesforce går du till **Skapa** > **appar** för att komma till **anslutna appar** (i tidigare versioner av Salesforce var arbetsflödet **Distribuera** > **Fjärråtkomst**).
-1. Klicka på **Nytt** för att ansluta AEM med Salesforce.
+1. I Salesforce går du till **Create** > **Appar** för att komma till **anslutna appar** (i tidigare versioner av Salesforce var arbetsflödet **Distribuera** > **Fjärråtkomst**).
+1. Klicka på **Nytt** om du vill ansluta AEM med Salesforce.
 
    ![chlimage_1-85](assets/chlimage_1-85.png)
 
-1. Ange det **anslutna programnamnet**, **API-namnet** och e- **postadressen** till kontakten. Markera kryssrutan **Aktivera OAuth-inställningar** och ange **återanrops-URL** och lägg till ett OAuth-scope (till exempel fullständig åtkomst). Återanrops-URL:en ser ut ungefär så här: `http://localhost:4502/etc/cloudservices/salesforce/developer.html`
+1. Ange **namnet på det anslutna programmet**, **API-namnet** och **e-postadress**. Markera kryssrutan **Aktivera OAuth-inställningar** och ange **Återanrops-URL** och lägg till ett OAuth-scope (till exempel fullständig åtkomst). Återanrops-URL:en ser ut ungefär så här: `http://localhost:4502/etc/cloudservices/salesforce/developer.html`
 
    Ändra servernamnet/portnumret och sidnamnet så att de matchar konfigurationen.
 
    ![chlimage_1-86](assets/chlimage_1-86.png)
 
-1. Klicka på **Spara** för att spara Salesforce-konfigurationen. Salesforce skapar en **konsumentnyckel** och **konsumenthemlighet**, som du behöver för AEM konfiguration.
+1. Klicka på **Spara** för att spara Salesforce-konfigurationen. Salesforce skapar en **konsumentnyckel** och **konsumenthemlighet** som du behöver för AEM.
 
    ![chlimage_1-87](assets/chlimage_1-87.png)
 
@@ -75,7 +75,7 @@ Så här konfigurerar du AEM att integrera med Salesforce:
    >
    >Du kan behöva vänta flera minuter (upp till 15 minuter) på att fjärråtkomstprogrammet i Salesforce ska aktiveras.
 
-1. I AEM navigerar du till **Cloud Services** och navigerar till Salesforce-konfigurationen som du skapade tidigare (till exempel **utvecklare**). Klicka på **Redigera** och ange kundnyckeln och kundhemligheten från salesforce.com.
+1. I AEM går du till **Cloud Services** och navigerar till Salesforce-konfigurationen som du skapade tidigare (till exempel **utvecklare**). Klicka på **Redigera** och ange kundnyckeln och kundhemligheten från salesforce.com.
 
    ![chlimage_1-23](assets/chlimage_1-23.jpeg)
 
@@ -90,7 +90,7 @@ Så här konfigurerar du AEM att integrera med Salesforce:
 
    I AEM visas en bekräftelsedialogruta som talar om att du har anslutit.
 
-1. Navigera till webbplatsens rotsida och klicka på **Sidegenskaper**. Markera sedan **Cloud Services** , lägg till **Salesforce** och välj rätt konfiguration (till exempel **utvecklare**).
+1. Navigera till webbplatsens rotsida och klicka på **Sidegenskaper**. Välj sedan **Cloud Services** och lägg till **Salesforce** och välj rätt konfiguration (till exempel **utvecklare**).
 
    ![chlimage_1-89](assets/chlimage_1-89.png)
 
@@ -106,21 +106,21 @@ Så här exporterar du AEM användare som Salesforce-leads:
 
    ![chlimage_1-90](assets/chlimage_1-90.png)
 
-1. Välj den AEM användare som du vill skapa som lead som **nyttolast** för det här arbetsflödet (hem -> användare). Se till att du väljer profilnoden för användaren eftersom den innehåller information som **givenName**, **familyName** och så vidare, som mappas till fälten **FirstName** och **LastName** för Salesforce-leadet.
+1. Välj den AEM användare som du vill skapa som lead som **nyttolast** för det här arbetsflödet (home -> användare). Se till att du väljer profilnoden för användaren eftersom den innehåller information som **givenName**, **familyName** och så vidare, som mappas till fälten **FirstName** och **LastName** för Salesforce-leadet.
 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
    >[!NOTE]
    >
-   >Innan det här arbetsflödet startas finns det vissa obligatoriska fält som en huvudnod i AEM måste ha innan den publiceras i Salesforce. Dessa är **givenName**, **familyName**, **** company och **email**. En fullständig lista över mappning mellan AEM användare och Salesforce-lead finns i [Mappningskonfiguration mellan AEM användare och Salesforce-lead.](#mapping-configuration-between-aem-user-and-salesforce-lead)
+   >Innan det här arbetsflödet startas finns det vissa obligatoriska fält som en huvudnod i AEM måste ha innan den publiceras i Salesforce. Dessa är **givenName**, **familyName**, **company** och **e-post**. En fullständig lista över mappning mellan AEM användare och Salesforce-lead finns i [Mappningskonfiguration mellan AEM användare och Salesforce-lead.](#mapping-configuration-between-aem-user-and-salesforce-lead)
 
-1. Click **OK**. Användarinformationen exporteras till salesforce.com. Du kan verifiera den på salesforce.com.
+1. Klicka på **OK**. Användarinformationen exporteras till salesforce.com. Du kan verifiera den på salesforce.com.
 
    >[!NOTE]
    >
    >I felloggarna visas om ett lead har importerats. Mer information finns i felloggen.
 
-### Konfigurera arbetsflödet för Salesforce.com-export {#configuring-the-salesforce-com-export-workflow}
+### Konfigurera exportarbetsflödet för Salesforce.com {#configuring-the-salesforce-com-export-workflow}
 
 Du kan behöva konfigurera exportarbetsflödet för Salesforce.com så att det matchar rätt Salesforce.com-konfiguration eller göra andra ändringar.
 
@@ -130,7 +130,7 @@ Så här konfigurerar du exportarbetsflödet för Salesforce.com:
 
    ![chlimage_1-24](assets/chlimage_1-24.jpeg)
 
-1. Öppna exportsteget för Salesforce.com, välj fliken **Argument** och markera rätt konfiguration och klicka sedan på **OK**. Om du dessutom vill att arbetsflödet ska återskapa ett lead som har tagits bort i Salesforce markerar du kryssrutan.
+1. Öppna exportsteget för Salesforce.com, välj fliken **Argument** och välj att rätt konfiguration är markerad och klicka på **OK**. Om du dessutom vill att arbetsflödet ska återskapa ett lead som har tagits bort i Salesforce markerar du kryssrutan.
 
    ![chlimage_1-92](assets/chlimage_1-92.png)
 
@@ -140,7 +140,7 @@ Så här konfigurerar du exportarbetsflödet för Salesforce.com:
 
 ### Mappningskonfiguration mellan AEM och Salesforce Lead {#mapping-configuration-between-aem-user-and-salesforce-lead}
 
-Om du vill visa eller redigera den aktuella mappningskonfigurationen mellan en AEM användare och ett Salesforce-lead öppnar du Configuration Manager: `https://<hostname>:<port>/system/console/configMgr` och söka efter **Salesforce-konfiguration** för lead-mappning.
+Om du vill visa eller redigera den aktuella mappningskonfigurationen mellan en AEM användare och ett Salesforce-lead öppnar du Configuration Manager: `https://<hostname>:<port>/system/console/configMgr` och sök efter **Salesforce Lead Mapping Configuration**.
 
 1. Öppna Configuration Manager genom att klicka på **webbkonsolen** eller gå direkt till `https://<hostname>:<port>/system/console/configMgr.`
 1. Sök efter **Salesforce Lead Mapping Configuration**.
@@ -161,13 +161,13 @@ För att göra detta måste du konfigurera följande:
 
 ### Länka en AEM användare med ett Salesforce-ID {#linking-an-aem-user-with-a-salesforce-id}
 
-Du måste mappa en AEM användare med ett Salesforce ID för att kunna läsa in det i klientkontexten. I ett verkligt scenario skulle du länka baserat på kända användardata med validering. För demonstrationssyften använder du **Salesforce Connect** -komponenten i den här proceduren.
+Du måste mappa en AEM användare med ett Salesforce ID för att kunna läsa in det i klientkontexten. I ett verkligt scenario skulle du länka baserat på kända användardata med validering. För demonstrationssyften använder du i den här proceduren **Salesforce Connect**-komponenten.
 
-1. Navigera till en webbplats i AEM, logga in och dra och släpp **Salesforce Connect** -komponenten från sidan.
+1. Navigera till en webbplats i AEM, logga in och dra och släpp **Salesforce Connect**-komponenten från sidan.
 
    >[!NOTE]
    >
-   >Om **Salesforce Connect** -komponenten inte är tillgänglig går du till **designvyn** och markerar den för att göra den tillgänglig i **redigeringsvyn** .
+   >Om komponenten **Salesforce Connect** inte är tillgänglig går du till vyn **Design** och markerar den för att göra den tillgänglig i vyn **Redigera**.
 
    ![chlimage_1-25](assets/chlimage_1-25.jpeg)
 
@@ -187,7 +187,7 @@ Du måste mappa en AEM användare med ett Salesforce ID för att kunna läsa in 
 
    ![chlimage_1-97](assets/chlimage_1-97.png)
 
-### Lägga till Salesforce-data i klientkontext {#adding-salesforce-data-to-client-context}
+### Lägger till Salesforce-data i klientkontexten {#adding-salesforce-data-to-client-context}
 
 Du kan läsa in användardata från Salesforce i klientkontexten som ska användas för personalisering:
 
@@ -195,7 +195,7 @@ Du kan läsa in användardata från Salesforce i klientkontexten som ska använd
 
    ![chlimage_1-26](assets/chlimage_1-26.jpeg)
 
-1. Dra **Salesforce-komponenten Profildata** till klientkontexten.
+1. Dra komponenten **Salesforce-profildata** till klientkontexten.
 
    ![chlimage_1-27](assets/chlimage_1-27.jpeg)
 
@@ -207,12 +207,12 @@ Du kan läsa in användardata från Salesforce i klientkontexten som ska använd
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
-### Bygga ett segment med data från Salesforce Client Context Store {#building-a-segment-using-data-from-salesforce-client-context-store}
+### Skapa ett segment med data från Salesforce Client Context Store {#building-a-segment-using-data-from-salesforce-client-context-store}
 
 Du kan skapa ett segment som använder data från Salesforce Client Context Store. Så här gör du:
 
-1. Navigera till segmentering i AEM antingen genom att gå till **Verktyg** > **Segmentering** eller gå till [http://localhost:4502/miscadmin#/etc/segmentation](http://localhost:4502/miscadmin#/etc/segmentation).
-1. Skapa eller uppdatera ett segment för att inkludera data från Salesforce. For more information, see [Segmentation](/help/sites-administering/campaign-segmentation.md).
+1. Navigera till segmentering i AEM genom att antingen gå till **Verktyg** > **Segmentering** eller till [http://localhost:4502/miscadmin#/etc/segmentation](http://localhost:4502/miscadmin#/etc/segmentation).
+1. Skapa eller uppdatera ett segment för att inkludera data från Salesforce. Mer information finns i [Segmentering](/help/sites-administering/campaign-segmentation.md).
 
 ## Söker efter leads {#searching-leads}
 
@@ -224,7 +224,7 @@ AEM levereras med en exempelsökkomponent som söker efter leads i Salesforce en
 
 Så här använder du den här komponenten:
 
-1. Navigera till sidan där du vill använda den här konfigurationen. Öppna sidegenskaper och markera **Cloud Services.** Klicka på **Lägg till tjänster** och välj **Salesforce** och lämplig konfiguration. Klicka sedan på **OK**.
+1. Navigera till sidan där du vill använda den här konfigurationen. Öppna sidegenskaper och välj **Cloud Services.** Klicka på  **Lägg till** tjänster, välj  **** Salesforce och lämplig konfiguration och klicka på  **OK**.
 
    ![chlimage_1-28](assets/chlimage_1-28.jpeg)
 
@@ -232,7 +232,7 @@ Så här använder du den här komponenten:
 
    ![chlimage_1-29](assets/chlimage_1-29.jpeg)
 
-1. Öppna sökkomponenten, ange sökparametrarna och klicka på **OK.**
+1. Öppna sökkomponenten och ange sökparametrarna och klicka på **OK.**
 
    ![chlimage_1-100](assets/chlimage_1-100.png)
 
