@@ -22,5 +22,5 @@ ht-degree: 6%
 
 >[!CAUTION]
 >
->Även om behållarkomponenten Layout är tillgänglig i det klassiska användargränssnittet är dess fullständiga funktioner bara tillgängliga och stöds i det beröringsaktiverade användargränssnittet. Mer information finns i [Responsiv layout](/help/sites-authoring/responsive-layout.md) i standarddokumentationen.
+>Även om behållarkomponenten Layout är tillgänglig i det klassiska användargränssnittet är dess fullständiga funktioner bara tillgängliga och stöds i det beröringsaktiverade användargränssnittet. Mer information finns i [Responsiv layout](/help/sites-authoring/responsive-layout.md) i standardredigeringsdokumentationen.
 
