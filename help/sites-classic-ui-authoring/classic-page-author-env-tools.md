@@ -22,13 +22,13 @@ ht-degree: 2%
 
 I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll. Verktygen som tillhandahålls är tillgängliga från olika konsoler och sidredigerare.
 
-## Webbplatsadministration {#site-administration}
+## Platsadministration {#site-administration}
 
-Med **webbplatskonsolen** kan du hantera och navigera på webbplatsen. Med hjälp av de två rutorna kan webbplatsens struktur utökas och åtgärder vidtas för det element som krävs:
+Med konsolen **Webbplatser** kan du hantera och navigera på webbplatsen. Med hjälp av de två rutorna kan webbplatsens struktur utökas och åtgärder vidtas för det element som krävs:
 
 ![chlimage_1-153](assets/chlimage_1-153.png)
 
-## Redigera sidinnehåll {#editing-your-page-content}
+## Redigera sidinnehållet {#editing-your-page-content}
 
 Det finns en separat sidredigerare med det klassiska användargränssnittet som använder innehållssökaren och sidbrytaren:
 
@@ -38,13 +38,13 @@ Det finns en separat sidredigerare med det klassiska användargränssnittet som 
 
 ## Få hjälp {#accessing-help}
 
-Olika **hjälpresurser** kan nås direkt från AEM:
+Olika **hjälp**-resurser kan nås direkt från AEM:
 
-Förutom [hjälp från verktygsfälten](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)i konsolen kan du även komma åt hjälp från sidan (med ? ikon) när du redigerar en sida:
+Förutom att du kan få åtkomst till [hjälp från konsolens verktygsfält](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help), kan du även få åtkomst till hjälpen från sidosparken (med ? ikon) när du redigerar en sida:
 
 ![](do-not-localize/sidekick-collapsed-2.png)
 
-Eller genom att använda **hjälpknappen** i redigeringsdialogrutan för specifika komponenter, detta visar sammanhangsberoende hjälp.
+Eller genom att använda knappen **Hjälp** i redigeringsdialogrutan för specifika komponenter. detta visar sammanhangsberoende hjälp.
 
 ## Sidekick {#sidekick}
 
@@ -65,7 +65,7 @@ Du kan använda innehållssökaren för att hitta en rad olika resurser. Om det 
 * [Sidor](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#finding-pages)
 * [Stycken](#referencing-paragraphs-from-other-pages)
 * [Produkter](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#products)
-* Eller för att [bläddra på webbplatsen efter databasstruktur](#the-content-finder)
+* Eller [gå till webbplatsen via databasstruktur](#the-content-finder)
 
 Med alla alternativ kan du [söka efter specifika objekt](#the-content-finder).
 
@@ -77,7 +77,7 @@ När du har skapat ett bildstycke på sidan kan du dra ett objekt och släppa de
 
 ![chlimage_1-156](assets/chlimage_1-156.png)
 
-### Söka efter dokument {#finding-documents}
+### Söker efter dokument {#finding-documents}
 
 På den här fliken visas alla dokument i databasen.
 
@@ -85,7 +85,7 @@ När du har skapat ett nedladdningsstycke på sidan kan du dra ett objekt och sl
 
 ![chlimage_1-157](assets/chlimage_1-157.png)
 
-### Söka efter filmer {#finding-movies}
+### Söker efter filmer {#finding-movies}
 
 På den här fliken visas alla filmer (till exempel Flash) i databasen.
 
@@ -117,7 +117,7 @@ På den här fliken visas alla resurser i databasen.
 
 ![chlimage_1-162](assets/chlimage_1-162.png)
 
-### Använda Söka med Innehållsläsaren {#using-search-with-the-content-browser}
+### Använda Sök med innehållsläsaren {#using-search-with-the-content-browser}
 
 På alla alternativ kan du söka efter specifika objekt. Alla taggar och resurser som matchar sökmönstret visas:
 
@@ -140,12 +140,12 @@ Om det till exempel finns en bild som har namnet:
 följande sökmönster hittar den (och alla andra bilder som matchar mönstret):
 
 * `name:*nmv*`
-* `name:AD*` - teckenmatchningen är *inte* skiftlägeskänslig.
+* `name:AD*` - teckenmatchningen är  ** inte skiftlägeskänslig.
 * `name:ad?nm??is.*` - du kan använda valfritt antal jokertecken i en fråga.
 
 >[!NOTE]
 >
->Du kan också använda [SQL2](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html) -sökning.
+>Du kan också använda [SQL2](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html)-sökning.
 
 ## Visar referenser {#showing-references}
 
@@ -153,11 +153,11 @@ AEM låter dig se vilka sidor som är länkade till den sida du arbetar med just
 
 Så här visar du direkta sidreferenser:
 
-1. I sidosparken väljer du ikonen för **fliken** Sida.
+1. I sidosparken väljer du flikikonen **Sida**.
 
    ![screen_shot_2012-02-16at83127pm](assets/screen_shot_2012-02-16at83127pm.png)
 
-1. Välj **Visa referenser...** AEM öppnar fönstret Referenser och visar vilka sidor som refererar till den markerade sidan, inklusive deras sökvägar.
+1. Välj **Visa referenser...Med** AEM öppnas fönstret Referenser och visas vilka sidor som refererar till den markerade sidan, inklusive sökvägarna till dem.
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
@@ -172,13 +172,13 @@ Andra [relationer mellan sidor visas i webbplatskonsolen](/help/sites-classic-ui
 
 ## Granskningslogg {#audit-log}
 
-Du kommer åt **granskningsloggen** på fliken **Information** i sidosparken. Den innehåller en förteckning över de senaste åtgärder som vidtagits på den aktuella sidan. till exempel:
+Du kommer åt granskningsloggen **från fliken** Information **i sidosparken.** Den innehåller en förteckning över de senaste åtgärder som vidtagits på den aktuella sidan. till exempel:
 
 ![chlimage_1-163](assets/chlimage_1-163.png)
 
 ## Sidinformation {#page-information}
 
-Webbplatskonsolen [innehåller även information om sidans](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) aktuella status, t.ex. publikation, ändring, låst, livecopy.
+Webbplatskonsolen [innehåller även information om sidans aktuella status](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console), t.ex. publikation, ändring, låst, livecopy osv.
 
 ## Sidlägen {#page-modes}
 
@@ -212,4 +212,4 @@ Ikonerna längst ned i Spark används för att växla mellan olika lägen för a
 
 ## Kortkommandon {#keyboard-shortcuts}
 
-Det finns olika [kortkommandon](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) .
+Olika [kortkommandon](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) är tillgängliga.
