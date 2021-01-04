@@ -1,8 +1,8 @@
 ---
 title: Avgöra om dokument är PDF/A-kompatibla
 seo-title: Avgöra om dokument är PDF/A-kompatibla
-description: 'null'
-seo-description: 'null'
+description: Använd Assembler-tjänsten för att avgöra om ett PDF-dokument är PDF/A-kompatibelt med Java API och Web Service API.
+seo-description: Använd Assembler-tjänsten för att avgöra om ett PDF-dokument är PDF/A-kompatibelt med Java API och Web Service API.
 uuid: 4e9d8c8f-2153-411b-9c4b-2d14b3c8f4bb
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: c429d6e1-7847-43c8-bf75-cb0078dbb9d5
 translation-type: tm+mt
-source-git-commit: 529b8c6556a7179a9169ff8250af6b5dc1251ef3
+source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2109'
 ht-degree: 0%
 
 ---
