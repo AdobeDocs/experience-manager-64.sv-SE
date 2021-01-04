@@ -1,8 +1,8 @@
 ---
 title: Signaturtjänst Java API QuickStart(SOAP)
 seo-title: Signaturtjänst Java API QuickStart(SOAP)
-description: 'null'
-seo-description: 'null'
+description: Använd signaturtjänsten för att lägga till ett signaturfält i ett PDF-dokument, hämta namn på signaturfält, ändra ett signaturfält, signera ett PDF-dokument digitalt, signera ett XFA-baserat formulär digitalt, certifiera ett PDF-dokument, verifiera en digital signatur, verifiera flera digitala signaturer och ta bort en digital signatur.
+seo-description: Använd signaturtjänsten för att lägga till ett signaturfält i ett PDF-dokument, hämta namn på signaturfält, ändra ett signaturfält, signera ett PDF-dokument digitalt, signera ett XFA-baserat formulär digitalt, certifiera ett PDF-dokument, verifiera en digital signatur, verifiera flera digitala signaturer och ta bort en digital signatur.
 uuid: ae6adf23-b119-45f6-bd57-73d8d9ca8ecb
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 07fffbd5-5430-4abc-b532-0840ecc7b1b0
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
