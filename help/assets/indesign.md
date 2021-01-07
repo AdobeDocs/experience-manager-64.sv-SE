@@ -3,9 +3,9 @@ title: Integrera AEM Assets med Adobe InDesign Server
 description: Lär dig hur du integrerar AEM Assets med InDesign Server.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 31d652ee04fe75e96f96c9ddc5a6f2c3c64bd630
+source-git-commit: 13d33d0474d2a29226747aa77bf0bc0a51142209
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1674'
 ht-degree: 1%
 
 ---
@@ -141,7 +141,7 @@ Medieextraheringsargument och skriptsökvägar
 >
 >Ändra inte ExtendScript-biblioteket. Biblioteket innehåller de HTTP-funktioner som krävs för att kommunicera med Sling. Den här inställningen anger vilket bibliotek som ska skickas till Adobe InDesign Server för användning där.
 
-Skriptet `ThumbnailExport.jsx` som körs i arbetsflödessteget Medieextrahering genererar en miniatyrrendering i .jpg-format. Den här återgivningen används i arbetsflödet Bearbeta miniatyrbilder för att generera de statiska återgivningar som AEM kräver.
+Skriptet `ThumbnailExport.jsx` som körs i arbetsflödessteget Medieextrahering genererar en miniatyrrendering i JPG-format. Den här återgivningen används i arbetsflödet Bearbeta miniatyrbilder för att generera de statiska återgivningar som AEM kräver.
 
 Du kan konfigurera arbetsflödessteget Bearbeta miniatyrbilder för att generera statiska återgivningar i olika storlekar. Se till att du inte tar bort standardinställningarna eftersom de krävs av AEM Assets-gränssnittet. Arbetsflödessteget Ta bort återgivning av bildförhandsvisning tar bort återgivningen av .jpg-miniatyrer eftersom den inte längre behövs.
 
@@ -186,15 +186,15 @@ Som standard är Extraction Handler för IDML-export tillgänglig. Det fungerar 
 
 ### Configuring Day CQ Link Externalizer {#configuring-day-cq-link-externalizer}
 
-Om InDesign-servern och AEM körs på olika värdar eller något eller båda programmen inte körs på standardportar konfigurerar du **Day CQ Link Externalizer** för att ange värdnamn, port och innehållssökväg för InDesign-servern.
+Om InDesign Server och AEM finns på olika värdar eller om ett eller båda av dessa program inte fungerar på standardportar konfigurerar du **Day CQ Link Externalizer** för att ange värdnamn, port och innehållssökväg för InDesign Server.
 
 1. Öppna Configuration Manager på URL:en `https://[AEM_server]:[port]/system/console/configMgr`.
-1. Leta reda på konfigurationen **[!UICONTROL Day CQ Link Externalizer]** och klicka på ikonen **[!UICONTROL Edit]** för att öppna den.
-1. Ange värdnamnet och kontextsökvägen för InDesign-servern och klicka på **[!UICONTROL Save]**.
+1. Leta reda på konfigurationen **[!UICONTROL Day CQ Link Externalizer]**. Klicka på **[!UICONTROL Edit]** för att öppna.
+1. Med inställningarna för länkutjämnaren kan du skapa absoluta URL:er för [!DNL Experience Manager]-distributionen och för [!DNL InDesign Server]. Använd fältet **[!UICONTROL Domains]** för att ange värdnamnet och kontextsökvägen för [!DNL Adobe InDesign Server]. Följ instruktionerna på skärmen. Klicka på **[!UICONTROL Save]**.
 
-   ![chlimage_1-290](assets/chlimage_1-290.png)
+   ![Inställningar för extern länkning](assets/link-externalizer-config.png)
 
-### Aktivera parallell jobbbearbetning för InDesign Server {#enabling-parallel-job-processing-for-indesign-server-s}
+### Aktivera parallell jobbbearbetning för InDesign Server {#enabling-parallel-job-processing-for-indesign-server}
 
 Nu kan du aktivera parallell jobbbearbetning för IDS.
 
