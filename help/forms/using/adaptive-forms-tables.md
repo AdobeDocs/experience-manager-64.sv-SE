@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: e7d53127-3a0f-4c74-a656-25d9cf969f98
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: 6c5b0abd9f19ceddd84e8615f0aedf48b1ef5868
 workflow-type: tm+mt
-source-wordcount: '2044'
+source-wordcount: '2164'
 ht-degree: 0%
 
 ---
@@ -67,6 +67,14 @@ I den nedrullningsbara menyn för raden finns även redigeringsåtgärden för a
 >[!NOTE]
 >
 >Du kan lägga till valfritt antal rader i en tabell, men det maximala antalet kolumner du kan lägga till är sex. Du kan inte heller ta bort rubrikraden från tabellen.
+
+### Ange kolumnbredd för en tabell {#set-column-width}
+
+Gör så här för att ange kolumnbredd för en tabell:
+
+1. På fliken **[!UICONTROL Content]** trycker du på komponenten **[!UICONTROL Table]** och på ikonen Konfigurera (![Konfigurera](assets/configure-icon.svg)).
+
+1. Ange den kommaavgränsade listan med värden i fältet **[!UICONTROL Column Width]** för att ange den proportionella bredden för varje kolumn i tabellen. Om du till exempel anger 2,4,6 som värde i fältet **[!UICONTROL Column Width]** för en tabell som innehåller 3 kolumner, blir kolumnbredden 2/12 för den första kolumnen, 4/12 för den andra kolumnen och 6/12 för den tredje kolumnen. 2/12 som bredd för den första kolumnen avser en sjättedel av tabellbredden. På samma sätt anger 4/12 den andra kolumnbredden som en tredjedel av tabellbredden och 6/12 den tredje kolumnbredden som halva tabellbredden.
 
 ### Lägg till tabellbeskrivning {#add-table-description}
 
