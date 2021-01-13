@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: d2b4e6599a7b1c01dc220a03b2be9aa55e5d7458
+source-git-commit: 201ddb888e6f1797bf2b84c5719625ebf87ddc82
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,10 @@ ht-degree: 0%
 Med [videokomponenten](/help/sites-authoring/default-components-foundation.md#video) kan du placera ett fördefinierat OTB-videoelement (körklar) på sidan.
 
 För att korrekt omkodning ska ske måste administratören [installera MPEG och konfigurera AEM](#install-ffmpeg) separat. De kan även [konfigurera dina videoprofiler](#configure-video-profiles) för användning med HTML5-element.
+
+>[!CAUTION]
+>
+>Den här komponenten förväntas inte längre fungera utan omfattande anpassning på projektnivå.
 
 ## Konfigurera videoprofiler {#configure-video-profiles}
 
