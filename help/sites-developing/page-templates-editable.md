@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: cf181663-8a4a-4efc-9f02-be1cf71c9299
 translation-type: tm+mt
-source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
+source-git-commit: 4f820cd0bf3a18b18c95e75c0f291452871175a4
 workflow-type: tm+mt
-source-wordcount: '3231'
+source-wordcount: '3298'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ När du skapar en ny redigerbar mall:
 
    Mer information om hur en mallskapare definierar strukturen finns i [Skapa sidmallar](/help/sites-authoring/templates.md#editing-a-template-structure-template-author).
 
-   Information om strukturens tekniska detaljer finns i [Struktur](/help/sites-developing/page-templates-editable.md#structure) i det här dokumentet.
+   Mer teknisk information om strukturen finns i [Struktur](/help/sites-developing/page-templates-editable.md#structure) i det här dokumentet.
 
    **Profiler**
 
@@ -133,6 +133,16 @@ När du skapar en ny redigerbar mall:
 
    Teknisk information om hur du skapar sidor med redigerbara mallar finns i [Resulterande innehållssidor](/help/sites-developing/page-templates-editable.md#resultant-content-pages) i det här dokumentet.
 
+>[!TIP]
+>
+>Ange aldrig någon information som behöver internationaliseras i en mall. För internalisering rekommenderas [lokaliseringsfunktionerna för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html).
+
+>[!NOTE]
+>
+>Mallar är kraftfulla verktyg som effektiviserar arbetsflödet för att skapa sidor. Alltför många mallar kan överbelasta författarna och göra det förvirrande att skapa sidor. En bra tumregel är att hålla antalet mallar under 100.
+>
+>Adobe rekommenderar inte att ha fler än 1 000 mallar på grund av potentiella prestandaeffekter.
+
 >[!NOTE]
 >
 >Redigeringsklientbiblioteket förutsätter att namnutrymmet `cq.shared` finns på innehållssidorna, och om det saknas kommer JavaScript-felet `Uncaught TypeError: Cannot read property 'shared' of undefined` att uppstå.
@@ -141,10 +151,6 @@ När du skapar en ny redigerbar mall:
 >
 >Mer information finns i [Använda bibliotek på klientsidan](/help/sites-developing/clientlibs.md).
 
->[!CAUTION]
->
->Ange aldrig någon information som behöver vara [internationaliserad](/help/sites-developing/i18n.md) i en mall.
-
 ## Mallmappar {#template-folders}
 
 Du kan använda följande mappar för att ordna dina mallar:
@@ -152,7 +158,7 @@ Du kan använda följande mappar för att ordna dina mallar:
 * **globalt**
 * Webbplatsspecifik
 
-   De platsspecifika mappar som du skapar för att ordna dina mallar skapas med administratörsbehörighet för konton.
+   De platsspecifika mappar som du skapar för att ordna dina mallar skapas med kontoadministratörsbehörighet.
 
 >[!NOTE]
 >
@@ -217,7 +223,7 @@ Om du vill skapa en ny mapp kan du göra det här:
 
 1. Gå till **Global Navigation** -> **Verktyg** > **Konfigurationsläsaren**.
 
-   De befintliga mapparna visas till vänster inklusive mappen **globa** l.
+   De befintliga mapparna visas till vänster inklusive mappen **global**.
 
 1. Klicka på **Skapa**.
 1. I dialogrutan **Skapa konfiguration** måste följande fält konfigureras:
