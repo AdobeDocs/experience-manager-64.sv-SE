@@ -10,9 +10,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
 translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+source-git-commit: 0016825ced6706cda7447546af876d5a897c8ff5
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '316'
 ht-degree: 9%
 
 ---
@@ -55,5 +55,5 @@ Du kan använda en bildförinställning på en bild när du vill förhandsvisa d
    >
    >Om resursen *och* bildförinställningen ännu inte har publicerats är knappen **[!UICONTROL URL]** (eller knapparna **[!UICONTROL URL]** och **[!UICONTROL RESS]**, i förekommande fall) inte tillgängliga.
    >
-   >Observera också att bildförinställningar automatiskt publiceras på en Dynamic Media S7-server.
+   >Observera också att bildförinställningar automatiskt publiceras på en Dynamic Media-server.
 
