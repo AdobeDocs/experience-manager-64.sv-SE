@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: b9dffdda37992f3a9f34953b8dd391d6f6361ceb
 workflow-type: tm+mt
-source-wordcount: '21620'
+source-wordcount: '21617'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Integrering av formulärdatamodeller med SOAP-webbtjänsten har nu stöd för urvalsgrupper eller attribut för element.
 
-* AEM Assets har nu konfigurerats med varumärkesportalen via Adobe I/O.
+* AEM Assets har nu konfigurerats med varumärkesportalen via [!DNL Adobe I/O].
 
 * Uppdaterade jQuery-versionen som paketerats i ContextHub till 3.2.1.
 
@@ -1473,7 +1473,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 **UI - Foundation**
 
 * Proaktiv grundläggande gränssnittssupport. NPR-24344, NPR-24345, NPR-25176, NPR-25095, NPR-24332, NPR-25653, NPR-25932, NPR-259 35, NPR-25976
-* (Designimporterare) Om du importerar en sida importeras inte js,css. NPR-25203: Programfix för Granite-2236
+* (Design Importer) Om du importerar en sida importeras inte js,css. NPR-25205: Programfix för Granite-2236
 * Proactive Foundation UI Backports för att förbättra produktens stabilitet. NPR-24334
 
 **MAC - Test &amp; Target-integrering**
