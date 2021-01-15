@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: authoring
 discoiquuid: c1b52aac-1eaf-4cfa-801f-77aeca0d90ea
 translation-type: tm+mt
-source-git-commit: ce50cffa1a6a27c700b38d1d17c920f1bc31e3cc
+source-git-commit: b9dffdda37992f3a9f34953b8dd391d6f6361ceb
 workflow-type: tm+mt
-source-wordcount: '1514'
-ht-degree: 15%
+source-wordcount: '1504'
+ht-degree: 16%
 
 ---
 
@@ -31,7 +31,7 @@ När en tagg har tränats och är klar kan tjänsten nu använda dessa taggar p�
 
 I bakgrunden använder smarta innehållstjänster Adobe Sensei AI-ramverket för att utbilda sin bildigenkänningsalgoritm i din taggstruktur och i din affärsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser.
 
-Smart Content Service är en molntjänst som tillhandahålls av Adobe I/O. Om du vill använda den i Adobe Experience Manager (AEM) måste systemadministratören integrera din AEM med Adobe IO.
+Smart Content Service är en molntjänst som finns på [!DNL Adobe I/O]. Om du vill använda den i Adobe Experience Manager (AEM) måste systemadministratören integrera din AEM med [!DNL Adobe I/O].
 
 Här är sammanfattningsvis de viktigaste stegen för att använda tjänsten Smart Content:
 
@@ -44,14 +44,14 @@ Här är sammanfattningsvis de viktigaste stegen för att använda tjänsten Sma
 
 ## Förutsättningar {#prerequisites}
 
-Innan du kan använda Smart Content Service måste du ha/se till/göra följande för att kunna integrera med Adobe I/O:
+Innan du kan använda Smart Content Service måste du ha/se till/göra följande för att kunna integrera med [!DNL Adobe I/O]:
 
 * Ett Adobe ID-konto som har administratörsbehörighet för organisationen.
 * Att Smart Content Service är aktiverad för din organisation.
 
 ## Introduktion till {#onboarding}
 
-Tjänsten Smart Content Service kan köpas som tillägg till AEM. När du har köpt programmet skickas ett e-postmeddelande till administratören för organisationen med en länk till Adobe IO.
+Tjänsten Smart Content Service kan köpas som tillägg till AEM. När du har köpt funktionen skickas ett e-postmeddelande till administratören för organisationen med en länk till [!DNL Adobe I/O].
 
 Administratören kan följa länken för att integrera Smart Content Service med AEM. Information om hur du integrerar tjänsten med AEM Assets finns i [Konfigurera smarta taggar](config-smart-tagging.md).
 
