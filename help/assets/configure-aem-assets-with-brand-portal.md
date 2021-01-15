@@ -3,21 +3,21 @@ title: Konfigurera AEM Assets med varumärkesportalen
 description: 'Lär dig hur du konfigurerar AEM Assets med varumärkesportalen för publicering av resurser och samlingar på varumärkesportalen. '
 contentOwner: VG
 translation-type: tm+mt
-source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
+source-git-commit: b9dffdda37992f3a9f34953b8dd391d6f6361ceb
 workflow-type: tm+mt
-source-wordcount: '1600'
-ht-degree: 43%
+source-wordcount: '1555'
+ht-degree: 37%
 
 ---
 
 
 # Konfigurera AEM Assets med varumärkesportalen {#configure-integration-64}
 
-Adobe Experience Manager (AEM) Assets konfigureras med varumärkesportalen via Adobe I/O, som hämtar en IMS-token för auktorisering av varumärkesportalens klient.
+Adobe Experience Manager (AEM) Assets har konfigurerats med Brand Portal via [!DNL Adobe I/O], som anskaffar en IMS-token för auktorisering av din varumärksportal.
 
 >[!NOTE]
 >
->Konfigurering av AEM Assets med varumärkesportalen via Adobe I/O stöds i AEM 6.4.8.0 och senare.
+>Konfigurering av AEM Assets med varumärkesportalen via [!DNL Adobe I/O] stöds i AEM 6.4.8.0 och senare.
 >
 >Tidigare konfigurerades varumärkesportalen i Classic UI via äldre OAuth Gateway, som använder JWT-tokenutbyte för att erhålla en IMS Access-token för auktorisering.
 
@@ -25,12 +25,12 @@ Adobe Experience Manager (AEM) Assets konfigureras med varumärkesportalen via A
 >
 >***Endast för befintliga kunder***
 >
->Vi rekommenderar att du fortsätter använda den befintliga äldre OAuth Gateway-konfigurationen. Om du får problem med äldre OAuth Gateway-konfiguration tar du bort den befintliga konfigurationen och skapar en ny konfiguration via Adobe I/O.
+>Vi rekommenderar att du fortsätter använda den befintliga äldre OAuth Gateway-konfigurationen. Om du får problem med äldre OAuth Gateway-konfiguration tar du bort den befintliga konfigurationen och skapar en ny konfiguration via [!DNL Adobe I/O].
 
 I den här hjälpen beskrivs följande två användningsområden:
 
-* [Ny konfiguration](#configure-new-integration-64): Om du är en ny Brand Portal-användare och vill konfigurera din AEM Assets-författarinstans med Brand Portal kan du skapa en ny konfiguration i Adobe I/O.
-* [Uppgraderingskonfiguration](#upgrade-integration-64): Om du är en befintlig Brand Portal-användare med din AEM Assets-författarinstans konfigurerad med Brand Portal på äldre OAuth Gateway rekommenderar vi att du tar bort de befintliga konfigurationerna och skapar en ny konfiguration på Adobe I/O.
+* [Ny konfiguration](#configure-new-integration-64): Om du är en ny Brand Portal-användare och vill konfigurera din AEM Assets-författarinstans med Brand Portal kan du skapa en ny konfiguration på  [!DNL Adobe I/O].
+* [Uppgraderingskonfiguration](#upgrade-integration-64): Om du är en befintlig Brand Portal-användare med din AEM Assets-författarinstans konfigurerad med Brand Portal på äldre OAuth Gateway rekommenderar vi att du tar bort de befintliga konfigurationerna och skapar en ny konfiguration på  [!DNL Adobe I/O].
 
 Informationen baseras på antagandet att alla som läser den här hjälpen känner till följande tekniker:
 
@@ -73,7 +73,7 @@ Detaljerade instruktioner finns i
 Utför följande steg i den listade sekvensen om du konfigurerar AEM Assets med varumärkesportalen för första gången:
 
 1. [Hämta ett offentligt certifikat](#public-certificate)
-1. [Skapa en Adobe I/O-integrering](#createnewintegration)
+1. [ [!DNL Adobe I/O] CreateIntegration](#createnewintegration)
 1. [Skapa en konfiguration för IMS-kontot](#create-ims-account-configuration)
 1. [Konfigurera molntjänsten](#configure-the-cloud-service)
 1. [Testa konfigurationen](#test-integration)
@@ -93,7 +93,7 @@ IMS-konfigurationen har två steg:
 
 ### Hämta ett offentligt certifikat {#public-certificate}
 
-Med ett offentligt certifikat kan du autentisera din profil på Adobe I/O.
+Med ett offentligt certifikat kan du autentisera din profil på [!DNL Adobe I/O].
 
 1. Logga in på din AEM Assets-författarinstans
 Standard-URL: http:// localhost:4502/aem/start.html
@@ -117,7 +117,7 @@ Standard-URL: http:// localhost:4502/aem/start.html
 
    ![Skapa ett certifikat](assets/ims-config2.png)
 
-1. Klicka på **[!UICONTROL Download Public Key]** och spara certifikatfilen *AEM-Adobe-IMS.crt* på datorn. Certifikatfilen används för att [skapa Adobe I/O-integreringen](#createnewintegration).
+1. Klicka på **[!UICONTROL Download Public Key]** och spara certifikatfilen *AEM-Adobe-IMS.crt* på datorn. Certifikatfilen används för att [skapa [!DNL Adobe I/O] integration](#createnewintegration).
 
    ![Hämta certifikatet](assets/ims-config3.png)
 
@@ -125,13 +125,13 @@ Standard-URL: http:// localhost:4502/aem/start.html
 
    Du skapar Adobe IMS-kontot på fliken **Konto**, men för det behöver du integreringsinformationen. Håll den här sidan öppen tills vidare.
 
-   Öppna en ny flik och [Skapa Adobe I/O-integrering](#createnewintegration) för att få integreringsinformation för IMS-kontokonfigurationer.
+   Öppna en ny flik och [Skapa [!DNL Adobe I/O] integration](#createnewintegration) för att få integreringsinformation för IMS-kontokonfigurationer.
 
-### Skapa en Adobe I/O-integrering{#createnewintegration}
+### Skapa [!DNL Adobe I/O]-integrering {#createnewintegration}
 
-Adobe I/O-integreringen genererar en API-nyckel, en klienthemlighet och en nyttolast (JWT), som krävs för att konfigurera IMS-kontokonfigurationer.
+[!DNL Adobe I/O] integreringen genererar API-nyckel, klienthemlighet och nyttolast (JWT) som krävs för att konfigurera IMS-kontokonfigurationer.
 
-1. Logga in på konsolen Adobe I/O med systemadministratörsbehörighet på IMS-organisationen för varumärkesportalens klient.
+1. Logga in på [!DNL Adobe I/O] Console med systemadministratörsbehörighet för IMS-organisationen för innehavaren av varumärkesportalen.
 
    Standard-URL: [https://console.adobe.io/](https://console.adobe.io/)
 
@@ -174,7 +174,7 @@ Adobe I/O-integreringen genererar en API-nyckel, en klienthemlighet och en nytto
 Kontrollera att du har utfört följande steg:
 
 * [Hämta ett offentligt certifikat](#public-certificate)
-* [Skapa en Adobe I/O-integrering](#createnewintegration)
+* [ [!DNL Adobe I/O] CreateIntegration](#createnewintegration)
 
 **Så här skapar du en IMS-kontokonfiguration:**
 
@@ -184,7 +184,7 @@ Kontrollera att du har utfört följande steg:
 
    Ange URL:en [https://ims-na1.adobelogin.com/](https://ims-na1.adobelogin.com/) i **[!UICONTROL Authorization Server]**.
 
-   Klistra in API-nyckeln, klienthemligheten och JWT-nyttolasten som du kopierade i slutet av [Skapa en Adobe I/O-integrering](#createnewintegration).
+   Klistra in API-nyckeln, klienthemligheten och JWT-nyttolasten som du har kopierat i slutet av [Skapa [!DNL Adobe I/O] integrering](#createnewintegration).
 
    Klicka på **[!UICONTROL Create]**.
 
@@ -335,7 +335,7 @@ Så här tar du bort den befintliga konfigurationen:
    ![](assets/delete-mac-user.png)
 
 
-Nu kan du [skapa konfiguration](#configure-new-integration-64) på din AEM 6.4-författarinstans på Adobe I/O.
+Nu kan du [skapa konfiguration](#configure-new-integration-64) på din AEM 6.4-författarinstans på [!DNL Adobe I/O].
 
 
 
