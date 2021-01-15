@@ -10,9 +10,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 translation-type: tm+mt
-source-git-commit: fa8e2d0612e6c7aaddb821352534bd9f6fc31076
+source-git-commit: 0016825ced6706cda7447546af876d5a897c8ff5
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1479'
 ht-degree: 5%
 
 ---
@@ -48,7 +48,7 @@ Använd `&wid=<value>&hei=<value>&resMode=sharp2` eller `&hei=<value>&resMode=sh
 
 Bildskärpa är den mest komplicerade aspekten när det gäller att styra bilder på webbplatsen och var många misstag görs. Ta dig tid att lära dig mer om hur skärpa och oskarp maskning fungerar i AEM med hjälp av följande resurser:
 
-Rapporten [Skärpa bilder i Adobe Scene7 Publishing System och på Image Server](/help/assets/assets/s7_sharpening_images.pdf) gäller även för AEM.
+Rapporten [Skärpa bilder i Adobe Scene7 Publishing System och på Image Server](/help/assets/assets/sharpening_images.pdf) gäller även för AEM.
 
 Se även [Öka skärpan i en bild med oskarp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html).
 
@@ -64,19 +64,18 @@ Det finns två metoder för bildskärpa:
       * **[!UICONTROL amount]** (0-5, effektens styrka.)
       * **[!UICONTROL radius]** (0-250, bredden på de&quot;skärpelinjer&quot; som ritas runt objektet med skärpa, mätt i pixlar.)
 
-         Tänk på att parametrarnas radie och mängd fungerar mot varandra. Reducerad radie kan kompenseras genom ett ökat belopp. Med radie får du bättre kontroll eftersom ett lägre värde ökar skärpan endast för kantpixlarna, medan ett högre värde ökar skärpan för ett större antal pixlar.
+             Tänk på att parametrarnas radie och mängd fungerar mot varandra. Reducerad radie kan kompenseras genom ett ökat belopp. Med radie får du bättre kontroll eftersom ett lägre värde ökar skärpan endast för kantpixlarna, medan ett högre värde ökar skärpan för ett större antal pixlar.
+         * **[!UICONTROL threshold]** (0-255, effektkänslighet.)
 
-      * **[!UICONTROL threshold]** (0-255, effektkänslighet.)
+             Den här parametern avgör hur annorlunda de pixlar som ska göras skarpare måste vara jämfört med det omgivande området innan de betraktas som kantpixlar och filtret gör dem skarpare. Parametern **[!UICONTROL threshold]** hjälper dig att undvika att göra områden med liknande färger för mycket skarpare, som hudtoner. Ett tröskelvärde på 12 ignorerar till exempel små variationer i hudtonens ljusstyrka för att undvika att lägga till ”brus”, men lägger ändå till kantkontrast i områden med hög kontrast, till exempel där ögonfransarna möter huden.
+         
+         Mer information om hur du ställer in de här tre parametrarna, inklusive de bästa sätten att använda med filtret, finns i följande resurser:
 
-         Den här parametern avgör hur annorlunda de pixlar som ska göras skarpare måste vara jämfört med det omgivande området innan de betraktas som kantpixlar och filtret gör dem skarpare. Med parametern **[!UICONTROL threshold]** undviker du för mycket skärpa i områden med liknande färger, som hudtoner. Ett tröskelvärde på 12 ignorerar till exempel små variationer i hudtonens ljusstyrka för att undvika att lägga till ”brus”, men lägger ändå till kantkontrast i områden med hög kontrast, till exempel där ögonfransarna möter huden.
-      Mer information om hur du ställer in de här tre parametrarna, inklusive de bästa sätten att använda med filtret, finns i följande resurser:
+         AEM hjälpavsnittet Skärpa en bild.
 
-      AEM hjälpavsnittet Skärpa en bild.
+         Best practices white paper [Sharpening images in Adobe Scene7 Publishing System and on Image Server](/help/assets/assets/sharpening_images.pdf).
 
-      Best practices white paper [Sharpening images in Adobe Scene7 Publishing System and on Image Server](/help/assets/assets/s7_sharpening_images.pdf).
-
-   * AEM kan du även styra en fjärde parameter: monokrom (0,1). Den här parametern avgör om oskarp maskning används separat på varje färgkomponent med värdet 0 eller på bildens intensitet/intensitet med värdet 1.
-
+      * AEM kan du även styra en fjärde parameter: monokrom (0,1). Den här parametern avgör om oskarp maskning används separat på varje färgkomponent med värdet 0 eller på bildens intensitet/intensitet med värdet 1.
 
 Det bästa sättet är att börja med parametern oskarp maskradie. Radie-inställningar som du kan börja med är följande:
 
@@ -125,7 +124,6 @@ Om skärpeeffekten fortfarande inte är tillräcklig ökar du radien i decimalst
 
 När du experimenterar kan du också hitta följande allmänna förslag som kan hjälpa dig att optimera arbetsflödet:
 
-* Testa och testa olika parametrar i realtid, antingen direkt på en webbadress eller med Scene7 Publishing Companys bildjusteringsfunktion som ger förhandsgranskning i realtid för justeringsåtgärder.
+* Testa olika parametrar i realtid direkt på en URL.
 * Det är en god vana att gruppera Dynamic Media Image Serving-kommandon i en bildförinställning. En bildförinställning är i princip URL-kommandomakron med anpassade förinställningsnamn som `$thumb_low$` och `&product_high$`. Det anpassade förinställningsnamnet i en URL-sökväg gör att dessa förinställningar anropas. Den här funktionen hjälper dig att hantera kommandon och kvalitetsinställningar för olika användningsmönster för bilder på webbplatsen och förkortar den totala längden på URL-adresser.
 * AEM erbjuder också mer avancerade sätt att finjustera bildkvaliteten, t.ex. att använda skärpebilder vid inhämtning. För avancerade användningsområden där detta kan vara ett alternativ för att ytterligare finjustera och optimera återgivningsresultaten kan [Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html) hjälpa dig med anpassade insikter och bästa praxis.
-
