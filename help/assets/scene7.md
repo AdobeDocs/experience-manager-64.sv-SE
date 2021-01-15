@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 translation-type: tm+mt
-source-git-commit: 249f2dd2553bc436a432ef68eae5cf846794ff81
+source-git-commit: 0016825ced6706cda7447546af876d5a897c8ff5
 workflow-type: tm+mt
 source-wordcount: '2759'
 ht-degree: 1%
@@ -190,7 +190,7 @@ Välj en befintlig bildförinställning i listrutan. Om den bildförinställning
 Välj bildens utdataformat, till exempel jpeg. Beroende på vilket utdataformat du väljer kan det finnas ytterligare konfigurationsalternativ. Se [Bästa praxis för bildförinställningar](/help/assets/managing-image-presets.md#image-preset-options).
 
 * **[!UICONTROL Sharpening]**
-Välj hur du vill öka skärpan i bilden. Skärpeinställningen förklaras i detalj i [Bästa praxis för bildförinställningar](/help/assets/managing-image-presets.md#image-preset-options) och [Bästa tillvägagångssätt för skärpeökning](/help/assets/assets/s7_sharpening_images.pdf).
+Välj hur du vill öka skärpan i bilden. Skärpeinställningen förklaras i detalj i [Bästa praxis för bildförinställningar](/help/assets/managing-image-presets.md#image-preset-options) och [Bästa tillvägagångssätt för skärpeökning](/help/assets/assets/sharpening_images.pdf).
 
 * **[!UICONTROL URL Modifiers]**
 Du kan ändra bildeffekter genom att ange ytterligare bildkommandon för Dynamic Media Classic. Dessa beskrivs i [Bildförinställningar](/help/assets/managing-image-presets.md) och [Kommandoreferensen](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html).
