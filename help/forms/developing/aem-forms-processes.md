@@ -1,8 +1,8 @@
 ---
 title: Förstå AEM Forms-processer
 seo-title: Förstå AEM Forms-processer
-description: 'null'
-seo-description: 'null'
+description: Lär dig hur du använder AEM Forms affärsprocesser för att automatisera driften. Aktivera processerna för att skapa en tjänst så att du kan anropa den som andra tjänster. Processerna kan vara kortvariga eller långvariga.
+seo-description: Lär dig hur du använder AEM Forms affärsprocesser för att automatisera driften. Aktivera processerna för att skapa en tjänst så att du kan anropa den som andra tjänster. Processerna kan vara kortvariga eller långvariga.
 uuid: 7cbebe7d-f222-42fa-8eb6-d2443458a791
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: development-tools, coding
 discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: e077347bc202b6a411006032c68aa4a3152be7c5
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---
