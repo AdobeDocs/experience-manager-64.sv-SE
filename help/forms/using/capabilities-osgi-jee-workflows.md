@@ -1,17 +1,17 @@
 ---
 title: 'Åtgärder och funktioner i formulärcentrerade AEM arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden '
 seo-title: 'Åtgärder och funktioner i formulärcentrerade AEM arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden '
-description: 'null'
-seo-description: 'null'
+description: Läs mer om skillnaderna i åtgärder som stöds av AEM Inbox och HTML Workspace, skillnader i funktioner som stöds av formulärbaserade AEM Workflows i arbetsflöden för OSGi och AEM Forms JEE samt skillnader mellan funktionerna AEM Inbox och AEM Forms App.
+seo-description: Läs mer om skillnaderna i åtgärder som stöds av AEM Inbox och HTML Workspace, skillnader i funktioner som stöds av formulärbaserade AEM Workflows i arbetsflöden för OSGi och AEM Forms JEE samt skillnader mellan funktionerna AEM Inbox och AEM Forms App.
 uuid: ce2a05fe-ba45-42ed-880e-fb1d6efc1d26
 contentOwner: khsingh
 topic-tags: publish
 discoiquuid: 4c7ba430-25b2-4ba2-a5eb-4edaed0d599a
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: e077347bc202b6a411006032c68aa4a3152be7c5
 workflow-type: tm+mt
-source-wordcount: '855'
-ht-degree: 18%
+source-wordcount: '931'
+ht-degree: 16%
 
 ---
 
