@@ -1,8 +1,8 @@
 ---
 title: Introduktion till Java API QuickStart
 seo-title: Introduktion till Java API QuickStart
-description: 'null'
-seo-description: 'null'
+description: Snabbstartsprogram för Java API hjälper dig att snabba upp utvecklingen av program som interagerar med AEM Forms tjänster. Du kan använda snabbstartsprogrammen för Java API i ditt projekt som utgångspunkt och anpassa det.
+seo-description: Snabbstartsprogram för Java API hjälper dig att snabba upp utvecklingen av program som interagerar med AEM Forms tjänster. Du kan använda snabbstartsprogrammen för Java API i ditt projekt som utgångspunkt och anpassa det.
 uuid: 480e1809-f789-4ad8-b5d5-2d97aba8411a
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: development-tools, develop
 discoiquuid: 38fd51ec-347e-4ae3-86d4-9d2429f79bdd
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: e077347bc202b6a411006032c68aa4a3152be7c5
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ JAR-fillistan finns i ett kommentaravsnitt som finns i början av snabbstarten. 
 
 ## Snabbstart för flera tjänster {#multiple-services-quick-start}
 
-De flesta snabbstarter som finns i *Programmering med AEM Forms *anropar en specifik tjänst för att utföra en åtgärd. Vissa snabbstarter anropar dock flera AEM Forms-tjänster för att kunna utföra ett visst arbetsflöde. Följande lista innehåller Java-snabbstarter som anropar fler än en AEM Forms-tjänst:
+De flesta snabbstarter som finns i *Programmering med AEM Forms* anropar en specifik tjänst för att utföra en åtgärd. Vissa snabbstarter anropar dock flera AEM Forms-tjänster för att kunna utföra ett visst arbetsflöde. Följande lista innehåller Java-snabbstarter som anropar fler än en AEM Forms-tjänst:
 
 [Snabbstart (SOAP-läge): Skicka ett dokument som finns i AEM Forms-databasen till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)  (anropar tjänsten Repository och Output)
 
