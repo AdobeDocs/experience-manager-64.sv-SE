@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 translation-type: tm+mt
-source-git-commit: ee143a04dcdd6eb312f8c2a95eb11d53301e8e8f
+source-git-commit: 28e552f065d38225226d757c0af00d86d9ed8e07
 workflow-type: tm+mt
-source-wordcount: '2627'
+source-wordcount: '2633'
 ht-degree: 10%
 
 ---
@@ -105,7 +105,7 @@ I **Oskarp mask** har du följande filtreringsalternativ:
  </tbody> 
 </table>
 
-<!-- Sharpening is described in [Sharpening Images](/help/assets/assets/sharpening_images.pdf). -->
+Skärpa beskrivs i [Skärpa bilder](/help/assets/assets/sharpening_images.pdf).
 
 ## Skapar Dynamic Media-bildprofiler {#creating-image-profiles}
 
