@@ -1,17 +1,15 @@
 ---
 title: Hantera Dynamic Media bildförinställningar
 description: Förstå Dynamic Media bildförinställningar och lär dig hur du skapar, ändrar och hanterar bildförinställningar
-uuid: 087e6c32-82d5-4645-8dba-0a22c62f891f
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: e401816d-eba5-4833-a3bd-e2e45bc3b19e
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: 0016825ced6706cda7447546af876d5a897c8ff5
+source-git-commit: 35dea5c6f64f13ca4b64834f98037ef8bcde393e
 workflow-type: tm+mt
-source-wordcount: '3647'
+source-wordcount: '3638'
 ht-degree: 7%
 
 ---
@@ -106,31 +104,31 @@ Tryck på Adobe Experience Manager längst upp till vänster och navigera till *
 <table> 
  <tbody> 
   <tr> 
-   <td><strong>Processargument</strong></td> 
-   <td><strong>Standardinställning</strong></td> 
-   <td><strong>Beskrivning</strong></td> 
+   <td><strong>Processargument</strong></td>
+   <td><strong>Standardinställning</strong></td>
+   <td><strong>Beskrivning</strong></td>
   </tr> 
   <tr> 
-   <td>Mime-typer</td> 
-   <td><p>application/pdf</p> <p>application/postscript</p> <p>application/illustrator<br /> </p> </td> 
-   <td>Lista över dokumentMIME-typer som anses vara PDF- eller Illustrator-dokument.<br /> </td> 
+   <td>Mime-typer</td>
+   <td><p>application/pdf</p> <p>application/postscript</p> <p>application/illustrator<br/> </p> </td>
+   <td>Lista över dokumentMIME-typer som anses vara PDF- eller Illustrator-dokument.<br/> </td>
   </tr> 
   <tr> 
-   <td>Maxbredd</td> 
-   <td>2048</td> 
-   <td>Maximal bredd i pixlar för den genererade förhandsvisningsåtergivningen.<br /> </td> 
+   <td>Maxbredd</td>
+   <td>2048</td>
+   <td>Maximal bredd i pixlar för den genererade förhandsvisningsåtergivningen.<br/> </td>
   </tr> 
   <tr> 
-   <td>Maxhöjd</td> 
-   <td>2048</td> 
-   <td>Maximal höjd för den genererade förhandsvisningsåtergivningen, i pixlar.<br /> </td> 
+   <td>Maxhöjd</td>
+   <td>2048</td>
+   <td>Maximal höjd för den genererade förhandsvisningsåtergivningen, i pixlar.<br/> </td>
   </tr> 
   <tr> 
-   <td>Upplösning</td> 
-   <td>72</td> 
-   <td>Upplösning för att rastrera den första sidan, i ppi (pixlar per tum).</td> 
-  </tr> 
- </tbody> 
+   <td>Upplösning</td>
+   <td>72</td>
+   <td>Upplösning för att rastrera den första sidan, i ppi (pixlar per tum).</td>
+  </tr>
+ </tbody>
 </table>
 
 Med standardprocessargumenten rastreras den första sidan i ett PDF/AI-dokument med 72 ppi och den genererade förhandsvisningsbilden med storleken 2 048 x 2 048 pixlar. För en typisk driftsättning kanske du vill öka upplösningen till minst 150 ppi. Ett dokument med US-teckenstorlek på 300 ppi kräver t.ex. en maximal bredd och höjd på 2 550 x 3 300 pixlar.
@@ -158,24 +156,24 @@ Följande skript används av Dynamic Media-integrering:
 <table> 
  <tbody> 
   <tr> 
-   <td><strong>Utöka skriptnamn</strong></td> 
-   <td><strong>Standard</strong></td> 
-   <td><strong>Beskrivning</strong></td> 
+   <td><strong>Utöka skriptnamn</strong></td>
+   <td><strong>Standard</strong></td>
+   <td><strong>Beskrivning</strong></td>
   </tr> 
   <tr> 
-   <td>ThumbnailExport.jsx</td> 
-   <td>Ja</td> 
-   <td>Skapar en 300 ppi <code>thumbnail.jpg</code>-rendering som är optimerad och omvandlad till en PTIFF-rendering av processkomponenten <code>Dynamic Media Process Image Assets</code>.<br /> </td> 
+   <td>ThumbnailExport.jsx</td>
+   <td>Ja</td>
+   <td>Skapar en 300 ppi <code>thumbnail.jpg</code>-rendering som är optimerad och omvandlad till en PTIFF-rendering av processkomponenten <code>Dynamic Media Process Image Assets</code>.<br/> </td>
   </tr> 
   <tr> 
    <td>JPEGPagesExport.jsx</td> 
    <td>Ja</td> 
-   <td>Skapar en JPEG-underresurs på 300 ppi för varje sida. JPEG-underresursen är en verklig tillgång som lagras under InDesign-resursen. Den är också optimerad och omvandlad till en PTIFF-fil med <code>DAM Update Asset</code>-arbetsflödet.<br /> </td> 
+   <td>Skapar en JPEG-underresurs på 300 ppi för varje sida. JPEG-underresursen är en verklig tillgång som lagras under InDesign-resursen. Den är också optimerad och omvandlad till en PTIFF-fil med <code>DAM Update Asset</code>-arbetsflödet.<br/> </td>
   </tr> 
   <tr> 
-   <td>PDFPagesExport.jsx</td> 
-   <td>Nej</td> 
-   <td>Skapar en PDF-underresurs för varje sida. PDF-underresursen bearbetas enligt beskrivningen ovan. Eftersom PDF-filen endast innehåller en sida genereras inga underresurser.<br /> </td> 
+   <td>PDFPagesExport.jsx</td>
+   <td>Nej</td>
+   <td>Skapar en PDF-underresurs för varje sida. PDF-underresursen bearbetas enligt beskrivningen ovan. Eftersom PDF-filen endast innehåller en sida genereras inga underresurser.<br/> </td>
   </tr> 
  </tbody> 
 </table>
@@ -297,136 +295,135 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
 <table> 
  <tbody> 
   <tr> 
-   <td><strong>Fält</strong></td> 
-   <td><strong>Beskrivning</strong></td> 
+   <td><strong>Fält</strong></td>
+   <td><strong>Beskrivning</strong></td>
   </tr> 
   <tr> 
-   <td><strong>Namn</strong></td> 
-   <td>Ange ett beskrivande namn utan blanksteg. Inkludera bildstorleksspecifikationen i namnet så att användarna lättare kan identifiera den här bildförinställningen.</td> 
+   <td><strong>Namn</strong></td>
+   <td>Ange ett beskrivande namn utan blanksteg. Inkludera bildstorleksspecifikationen i namnet så att användarna lättare kan identifiera den här bildförinställningen.</td>
+  </tr>
+  <tr> 
+   <td><strong>Bredd och höjd</strong></td>
+   <td>Ange bildstorleken i pixlar. Bredd och höjd måste vara större än 0 pixlar. Om något av värdena är 0 skapas ingen förinställning. Om båda värdena är tomma skapas en responsiv bildförinställning.</td>
   </tr> 
   <tr> 
-   <td><strong>Bredd och höjd</strong></td> 
-   <td>Ange bildstorleken i pixlar. Bredd och höjd måste vara större än 0 pixlar. Om något av värdena är 0 skapas ingen förinställning. Om båda värdena är tomma skapas en responsiv bildförinställning.</td> 
-  </tr> 
-  <tr> 
-   <td><strong>Format</strong></td> 
-   <td><p>Välj ett format på menyn.</p> <p>Om du väljer <strong>JPEG</strong> finns följande alternativ:</p> 
+   <td><strong>Format</strong></td>
+   <td><p>Välj ett format på menyn.</p> <p>Om du väljer <strong>JPEG</strong> finns följande alternativ:</p>
     <ul> 
      <li><strong>Kvalitet</strong>  - Styr JPEG-komprimeringsnivån. Den här inställningen påverkar både filstorlek och bildkvalitet. JPEG-kvalitetsskalan är 1-100. Skalan visas när du drar i skjutreglaget.</li> 
-     <li><strong>Aktivera JPG-krominansnedsampling</strong>  - Eftersom ögat är mindre känsligt för högfrekvent färginformation än högfrekvent luminans delar JPEG-bilder in bildinformation i luminans och färgkomponenter. När en JPEG-bild komprimeras lämnas luminanskomponenten i full upplösning, medan färgkomponenterna nedsamplas genom att medelvärdet av grupper av pixlar ökas. Nedsampling minskar datavolymen med en halv eller en tredjedel utan att det påverkar den upplevda kvaliteten. Nedsampling kan inte användas för gråskalebilder. Den här tekniken minskar mängden komprimering som är användbar för bilder med hög kontrast (till exempel bilder med överlagrad text).</li> 
+     <li><strong>Aktivera JPG-krominansnedsampling</strong>  - Eftersom ögat är mindre känsligt för högfrekvent färginformation än högfrekvent luminans delar JPEG-bilder in bildinformation i luminans och färgkomponenter. När en JPEG-bild komprimeras lämnas luminanskomponenten i full upplösning, medan färgkomponenterna nedsamplas genom att medelvärdet av grupper av pixlar ökas. Nedsampling minskar datavolymen med en halv eller en tredjedel utan att det påverkar den upplevda kvaliteten. Nedsampling kan inte användas för gråskalebilder. Den här tekniken minskar mängden komprimering som är användbar för bilder med hög kontrast (till exempel bilder med överlagrad text).</li>
+    </ul>
+    <div>
+      Välja
+     <strong>GIF</strong> eller
+     <strong>GIF med alfa</strong> innehåller dessa ytterligare
+     <strong>Alternativ för GIF-färgkvantifiering</strong>:
+    </div>
+    <ul> 
+     <li><strong>Typ  </strong>- Välj  <strong>Adaptiv</strong>  (standard),  <strong>Webb</strong> eller  <strong>Macintosh</strong>. Om du väljer <strong>GIF med alfa</strong> är Macintosh-alternativet inte tillgängligt.</li>
+     <li><strong>Gitter</strong>  - Välj  <strong></strong> Diffusera eller  <strong>Av</strong>.</li>
+     <li><strong>Antal färger  </strong>- Ange ett tal mellan 2 och 256.</li>
+     <li><strong>Färglista</strong>  - Ange en kommaavgränsad lista. För vitt, grått och svart anger du 00000,888888,ffff.</li>
     </ul> 
     <div>
-      Välja 
-     <strong>GIF</strong> eller 
-     <strong>GIF med alfa</strong> innehåller dessa ytterligare 
-     <strong>Alternativ för GIF-färgkvantifiering</strong>: 
-    </div> 
-    <ul> 
-     <li><strong>Typ  </strong>- Välj  <strong>Adaptiv</strong>  (standard),  <strong>Webb</strong> eller  <strong>Macintosh</strong>. Om du väljer <strong>GIF med alfa</strong> är Macintosh-alternativet inte tillgängligt.</li> 
-     <li><strong>Gitter</strong>  - Välj  <strong></strong> Diffusera eller  <strong>Av</strong>.</li> 
-     <li><strong>Antal färger  </strong>- Ange ett tal mellan 2 och 256.</li> 
-     <li><strong>Färglista</strong>  - Ange en kommaavgränsad lista. För vitt, grått och svart anger du 00000,888888,ffff.</li> 
-    </ul> 
-    <div>
-      Välja 
-     <strong>PDF</strong>, 
-     <strong>TIFF</strong>, eller 
-     <strong>I TIFF med alfa</strong> finns ytterligare ett alternativ: 
-    </div> 
-    <ul> 
-     <li><strong>Komprimering</strong>  - Välj en komprimeringsalgoritm. Algoritmalternativen för PDF är <strong>Ingen</strong>, <strong>Zip</strong> och <strong>Jpeg</strong>; för TIFF är <strong>Ingen</strong>, <strong>LZW</strong>, <strong>Jpeg</strong> och <strong>Zip</strong>; och för TIFF med alfa är <strong>None</strong>, <strong>LZW</strong> och <strong>Zip</strong>.</li> 
-    </ul> <p>Om du väljer <strong>PNG</strong>, <strong>PNG med Alpha,</strong> eller <strong>EPS</strong> saknar du ytterligare alternativ.</p> </td> 
-  </tr> 
-  <tr> 
-   <td><strong>Skärpa</strong></td> 
-   <td>Välj alternativet <strong>Aktivera enkel skärpa</strong> om du vill använda ett grundläggande skärpefilter på bilden när all skalning har gjorts. Skärpa kan kompensera för oskärpa som kan uppstå när du visar en bild i en annan storlek. </td> 
-  </tr> 
- </tbody> 
+      Välja
+     <strong>PDF</strong>,
+     <strong>TIFF</strong>, eller
+     <strong>I TIFF med alfa</strong> finns ytterligare ett alternativ:
+    </div>
+    <ul>
+     <li><strong>Komprimering</strong>  - Välj en komprimeringsalgoritm. Algoritmalternativen för PDF är <strong>Ingen</strong>, <strong>Zip</strong> och <strong>Jpeg</strong>; för TIFF är <strong>Ingen</strong>, <strong>LZW</strong>, <strong>Jpeg</strong> och <strong>Zip</strong>; och för TIFF med alfa är <strong>None</strong>, <strong>LZW</strong> och <strong>Zip</strong>.</li>
+    </ul> <p>Om du väljer <strong>PNG</strong>, <strong>PNG med Alpha,</strong> eller <strong>EPS</strong> saknar du ytterligare alternativ.</p> </td>
+  </tr>
+  <tr>
+   <td><strong>Skärpa</strong></td>
+   <td>Välj alternativet <strong>Aktivera enkel skärpa</strong> om du vill använda ett grundläggande skärpefilter på bilden när all skalning har gjorts. Skärpa kan kompensera för oskärpa som kan uppstå när du visar en bild i en annan storlek. </td>
+  </tr>
+ </tbody>
 </table>
 
 #### Avancerade flikalternativ {#advanced-tab-options}
 
-<table> 
- <tbody> 
-  <tr> 
-   <td><strong>Fält</strong></td> 
-   <td><strong>Beskrivning</strong></td> 
-  </tr> 
-  <tr> 
-   <td><strong>Färgmodell</strong></td> 
-   <td>Välj <strong>RGB, CMYK,</strong> eller <strong>Gråskala</strong> för färgrymden.</td> 
-  </tr> 
-  <tr> 
-   <td><strong>Färgprofil</strong></td> 
-   <td>Välj den utdatafärgrymdsprofil som resursen ska konverteras till om den är en annan än arbetsprofilen.</td> 
-  </tr> 
-  <tr> 
-   <td><strong>Återgivningsmetod</strong></td> 
-   <td>Du kan åsidosätta standardåtergivningsmetoden. Återgivningsmetoden bestämmer vad som händer med färger som inte kan återges i målfärgprofilen (ej tryckbart). Återgivningsmetoden ignoreras om den inte är kompatibel med ICC-profilen. 
+<table>
+ <tbody>
+  <tr>
+   <td><strong>Fält</strong></td>
+   <td><strong>Beskrivning</strong></td>
+  </tr>
+  <tr>
+   <td><strong>Färgmodell</strong></td>
+   <td>Välj <strong>RGB, CMYK,</strong> eller <strong>Gråskala</strong> för färgrymden.</td>
+  </tr>
+  <tr>
+   <td><strong>Färgprofil</strong></td>
+   <td>Välj den utdatafärgrymdsprofil som resursen ska konverteras till om den är en annan än arbetsprofilen.</td>
+  </tr>
+  <tr>
+   <td><strong>Återgivningsmetod</strong></td>
+   <td>Du kan åsidosätta standardåtergivningsmetoden. Återgivningsmetoden bestämmer vad som händer med färger som inte kan återges i målfärgprofilen (ej tryckbart). Återgivningsmetoden ignoreras om den inte är kompatibel med ICC-profilen.
     <ul> 
-     <li>Välj <strong>Perceptuell</strong> om du vill komprimera det totala färgomfånget från en färgrymd till en annan när en eller flera färger i den ursprungliga bilden är utanför färgomfånget för målfärgrymden.</li> 
-     <li>Välj <strong>Relativa färgvärden</strong> när en färg i den aktuella färgrymden är utanför färgomfånget i målfärgrymden och du vill mappa den till den närmaste möjliga färgen inom färgomfånget för målfärgrymden utan att påverka några andra färger. </li> 
-     <li>Välj <strong>Mättnad</strong> om du vill återge bildens ursprungliga färgmättnad vid konvertering till målfärgrymden. </li> 
-     <li>Välj <strong>Absoluta färgvärden</strong> om du vill matcha färgerna exakt utan justering för vitpunkt eller svartpunkt som skulle ändra bildens intensitet.</li> 
-    </ul> </td> 
-  </tr> 
-  <tr> 
-   <td><strong>Svartpunktskompensation</strong></td> 
-   <td>Välj det här alternativet om utdataprofilen har stöd för den här funktionen. Svartpunktskompensation ignoreras om den inte är kompatibel med den angivna ICC-profilen.</td> 
-  </tr> 
-  <tr> 
-   <td><strong>Gitter</strong></td> 
-   <td>Välj det här alternativet om du vill undvika eller minska färgränder. </td> 
-  </tr> 
-  <tr> 
-   <td><strong>Skärpetyp</strong></td> 
-   <td><p>Välj <strong>Ingen</strong>, <strong>Skärpa</strong> eller <strong>Oskarp mask</strong>. </p> 
+     <li>Välj <strong>Perceptuell</strong> om du vill komprimera det totala färgomfånget från en färgrymd till en annan när en eller flera färger i den ursprungliga bilden är utanför färgomfånget för målfärgrymden.</li>
+     <li>Välj <strong>Relativa färgvärden</strong> när en färg i den aktuella färgrymden är utanför färgomfånget i målfärgrymden och du vill mappa den till den närmaste möjliga färgen inom färgomfånget för målfärgrymden utan att påverka några andra färger. </li>
+     <li>Välj <strong>Mättnad</strong> om du vill återge bildens ursprungliga färgmättnad vid konvertering till målfärgrymden. </li>
+     <li>Välj <strong>Absoluta färgvärden</strong> om du vill matcha färgerna exakt utan justering för vitpunkt eller svartpunkt som skulle ändra bildens intensitet.</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td><strong>Svartpunktskompensation</strong></td>
+   <td>Välj det här alternativet om utdataprofilen har stöd för den här funktionen. Svartpunktskompensation ignoreras om den inte är kompatibel med den angivna ICC-profilen.</td>
+  </tr>
+  <tr>
+   <td><strong>Gitter</strong></td>
+   <td>Välj det här alternativet om du vill undvika eller minska färgränder. </td>
+  </tr>
+  <tr>
+   <td><strong>Skärpetyp</strong></td>
+   <td><p>Välj <strong>Ingen</strong>, <strong>Skärpa</strong> eller <strong>Oskarp mask</strong>. </p>
+    <ul>
+     <li>Välj <strong>Ingen</strong> om du vill inaktivera skärpan.</li>
+     <li>Välj <strong>Öka skärpan </strong>om du vill använda ett grundläggande skärpefilter på bilden när all skalförändring har gjorts. Skärpa kan kompensera för oskärpa som kan uppstå när du visar en bild i en annan storlek. </li>
+     <li>Välj<strong> Oskarp mask</strong> för att finjustera en skärpefiltereffekt på den slutliga nedsamplade bilden. Du kan styra effektens intensitet, radie (mätt i pixlar) och ett kontrasttröskelvärde som ska ignoreras. Effekten har samma alternativ som filtret Oskarp mask i Photoshop.</li>
+    </ul> <p>I <strong>Oskarp mask</strong> har du följande alternativ:</p>
     <ul> 
-     <li>Välj <strong>Ingen</strong> om du vill inaktivera skärpan.</li> 
-     <li>Välj <strong>Öka skärpan </strong>om du vill använda ett grundläggande skärpefilter på bilden när all skalförändring har gjorts. Skärpa kan kompensera för oskärpa som kan uppstå när du visar en bild i en annan storlek. </li> 
-     <li>Välj<strong> Oskarp mask</strong> för att finjustera en skärpefiltereffekt på den slutliga nedsamplade bilden. Du kan styra effektens intensitet, radie (mätt i pixlar) och ett kontrasttröskelvärde som ska ignoreras. Effekten har samma alternativ som filtret Oskarp mask i Photoshop.</li> 
-    </ul> <p>I <strong>Oskarp mask</strong> har du följande alternativ:</p> 
-    <ul> 
-     <li><strong>Mängd</strong> - Anger mängden kontrast som används på kantpixlar. Standardvärdet för reella tal är 1,0. För högupplösta bilder kan du öka den till upp till 5.0. Tänk på Mängd som ett mått på filterintensiteten.</li> 
-     <li><strong>Radie</strong>  - Anger antalet pixlar runt kantpixlarna som påverkar skärpan. För högupplösta bilder anger du ett reellt tal mellan 1 och 2. Med ett lågt värde ökas endast kantpixlarna skärpan. ett högt värde ökar skärpan i ett större antal pixlar. Vilket värde som är korrekt beror på bildens storlek.</li> 
-     <li><strong>Tröskelvärde</strong>  - Anger vilket kontrastintervall som ska ignoreras när filtret för oskarp mask används. Med andra ord, det här alternativet avgör hur olika de pixlar som ska göras skarpare måste vara från det omgivande området innan de betraktas som kantpixlar och blir skarpare. Experimentera med heltalsvärden mellan 2 och 20 för att undvika brus. </li> 
-     <li><strong>Använd på</strong>  - Anger om den oskarpa inställningen gäller för varje färg eller intensitet.</li> 
-    </ul> 
+     <li><strong>Mängd</strong> - Anger mängden kontrast som används på kantpixlar. Standardvärdet för reella tal är 1,0. För högupplösta bilder kan du öka den till upp till 5.0. Tänk på Mängd som ett mått på filterintensiteten.</li>
+     <li><strong>Radie</strong>  - Anger antalet pixlar runt kantpixlarna som påverkar skärpan. För högupplösta bilder anger du ett reellt tal mellan 1 och 2. Med ett lågt värde ökas endast kantpixlarna skärpan. ett högt värde ökar skärpan i ett större antal pixlar. Vilket värde som är korrekt beror på bildens storlek.</li>
+     <li><strong>Tröskelvärde</strong>  - Anger vilket kontrastintervall som ska ignoreras när filtret för oskarp mask används. Med andra ord, det här alternativet avgör hur olika de pixlar som ska göras skarpare måste vara från det omgivande området innan de betraktas som kantpixlar och blir skarpare. Experimentera med heltalsvärden mellan 2 och 20 för att undvika brus. </li>
+     <li><strong>Använd på</strong>  - Anger om den oskarpa inställningen gäller för varje färg eller intensitet.</li>
+    </ul>
     <div>
-      Skärpa beskrivs i 
-     <a href="https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/assets/sharpening_images.pdf">Skärpa bilder</a>. 
-    </div> </td> 
-  </tr> 
-  <tr> 
-   <td><strong>Omsamplingsläge</strong></td> 
-   <td>Välj ett <strong>omsamplingsläge</strong>-alternativ. Dessa alternativ gör bilden skarpare när den nedsamplas: 
-    <ul> 
-     <li><strong>Dubbellinjär</strong>  - Den snabbaste omsamplingsmetoden. Vissa aliaseringsartefakter är märkbara.</li> 
-     <li><strong>Bikubisk</strong>  - Ökar CPU-användningen men ger skarpare bilder med mindre framträdande aliasartefakter.</li> 
-     <li><strong>Sharp2</strong> - Kan ge något tydligare resultat än bikubiska, men till en ännu högre processorkostnad.</li> 
-     <li><strong>Bi-Sharp</strong>  - Väljer Photoshop standardomsampling för att minska bildstorleken, som kallas  <strong>bikubisk </strong> skärpa i Adobe Photoshop.</li> 
-     <li><strong>Varje </strong> färg och  <strong>intensitet</strong>  - varje metod kan baseras på färg eller intensitet. Som standard är <strong>Varje färg</strong> markerad.</li> 
-    </ul> </td> 
-  </tr> 
-  <tr> 
-   <td><strong>Utskriftsupplösning</strong></td> 
-   <td>Välj en upplösning för utskrift av den här bilden; 72 pixlar är standard.</td> 
-  </tr> 
-  <tr> 
-   <td><strong>Bildmodifierare</strong></td> 
-   <td><p>Förutom de vanliga bildinställningarna i användargränssnittet stöder Dynamic Media många avancerade bildändringar som du kan ange i fältet <strong>Bildmodifierare</strong>. Dessa parametrar definieras i <a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html">Image Server Protocol-kommandoreferensen</a>.</p> <p>Viktigt: Följande funktioner i API:t stöds inte:</p> 
-    <ul> 
-     <li>Grundläggande kommandon för mallar och textåtergivning: <code>text= textAngle= textAttr= textFlowPath= textFlowXPath= textPath=</code> och <code>textPs=</code></li> 
-     <li>Lokaliseringskommandon: <code>locale=</code> och <code>req=xlate</code></li> 
-     <li><code>req=set</code> är inte tillgängligt för allmän användning.</li> 
-     <li><code>req=mbrset</code></li> 
-     <li><code>req=saveToFile</code></li> 
-     <li><code>req=targets</code></li> 
-     <li><code>template=</code></li> 
-     <li>Icke-kärntjänster från Dynamic Media: SVG, bildåtergivning och webb-till-tryck</li> 
-    </ul> </td> 
-  </tr> 
- </tbody> 
+      Skärpa beskrivs i * Adobe Dynamic Media Classic Image Quality and Sharpening Best Practices</a>.
+    </div> </td>
+  </tr>
+  <tr>
+   <td><strong>Omsamplingsläge</strong></td>
+   <td>Välj ett <strong>omsamplingsläge</strong>-alternativ. Dessa alternativ gör bilden skarpare när den nedsamplas:
+    <ul>
+     <li><strong>Dubbellinjär</strong>  - Den snabbaste omsamplingsmetoden. Vissa aliaseringsartefakter är märkbara.</li>
+     <li><strong>Bikubisk</strong>  - Ökar CPU-användningen men ger skarpare bilder med mindre framträdande aliasartefakter.</li>
+     <li><strong>Sharp2</strong> - Kan ge något tydligare resultat än bikubiska, men till en ännu högre processorkostnad.</li>
+     <li><strong>Bi-Sharp</strong>  - Väljer Photoshop standardomsampling för att minska bildstorleken, som kallas  <strong>bikubisk </strong> skärpa i Adobe Photoshop.</li>
+     <li><strong>Varje </strong> färg och  <strong>intensitet</strong>  - varje metod kan baseras på färg eller intensitet. Som standard är <strong>Varje färg</strong> markerad.</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td><strong>Utskriftsupplösning</strong></td>
+   <td>Välj en upplösning för utskrift av den här bilden; 72 pixlar är standard.</td>
+  </tr>
+  <tr>
+   <td><strong>Bildmodifierare</strong></td>
+   <td><p>Förutom de vanliga bildinställningarna i användargränssnittet stöder Dynamic Media många avancerade bildändringar som du kan ange i fältet <strong>Bildmodifierare</strong>. Dessa parametrar definieras i <a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html">Image Server Protocol-kommandoreferensen</a>.</p> <p>Viktigt: Följande funktioner i API:t stöds inte:</p>
+    <ul>
+     <li>Grundläggande kommandon för mallar och textåtergivning: <code>text= textAngle= textAttr= textFlowPath= textFlowXPath= textPath=</code> och <code>textPs=</code></li>
+     <li>Lokaliseringskommandon: <code>locale=</code> och <code>req=xlate</code></li>
+     <li><code>req=set</code> är inte tillgängligt för allmän användning.</li>
+     <li><code>req=mbrset</code></li>
+     <li><code>req=saveToFile</code></li>
+     <li><code>req=targets</code></li>
+     <li><code>template=</code></li>
+     <li>Icke-kärntjänster från Dynamic Media: SVG, bildåtergivning och webb-till-tryck</li>
+    </ul> </td>
+  </tr>
+ </tbody>
 </table>
 
 ## Definiera bildförinställningsalternativ med bildmodifierare {#defining-image-preset-options-with-image-modifiers}
@@ -508,9 +505,6 @@ Om du kör Dynamic Media - Scene7-läge publiceras bildförinställningar automa
 
 ## Tar bort Dynamic Media-bildförinställningar {#deleting-image-presets}
 
-**Så här tar du bort förinställningar** för Dynamic Media-bilder:
-
 1. I AEM trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen.
 1. Tryck på ikonen **[!UICONTROL Tools]** och navigera sedan till **[!UICONTROL Assets > Image Presets]**.
 1. Välj en förinställning och tryck sedan på **[!UICONTROL Delete]**. Dynamic Media bekräftar att du vill ta bort den. Tryck på **[!UICONTROL Delete]**.
-
