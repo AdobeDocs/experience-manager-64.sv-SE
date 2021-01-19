@@ -10,9 +10,9 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 43a6e866a99814e93290e00f3f15c0e456821c89
 workflow-type: tm+mt
-source-wordcount: '1617'
+source-wordcount: '1629'
 ht-degree: 1%
 
 ---
@@ -137,7 +137,7 @@ I följande tabell visas en högnivåjämförelse av funktioner som stöds mella
 | Metod | HTML5 first approach. Flash används endast för icke-HTML5-reservlösningar. | Flash på de flesta stationära datorer. HTML5 används för mobiler och surfplattor. |
 | Leverans | Progressiv | Adaptiv strömning |
 | Spårning | Ja | Ja |
-| Utbyggbarhet | Ja | Ja (med Scene7 Viewer SDK) |
+| Utbyggbarhet | Ja | Ja (med [HTML5 Viewer SDK API-dokumentation](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)) |
 | Mobilvideo | Ja | Ja |
 
 ### Konfigurera {#setting-up}
