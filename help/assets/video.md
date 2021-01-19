@@ -10,9 +10,9 @@ topic-tags: Dynamic-Media
 content-type: reference
 discoiquuid: b721dc7c-b056-47f5-9489-9f4db45b68a0
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 43a6e866a99814e93290e00f3f15c0e456821c89
 workflow-type: tm+mt
-source-wordcount: '10006'
+source-wordcount: '9960'
 ht-degree: 3%
 
 ---
@@ -487,7 +487,7 @@ För att kunna publicera på YouTube behöver du ett Google-konto. Om du har ett
    Observera att ditt projekt-ID baseras på ditt projektnamn. Välj projektnamnet noggrant. den kan inte ändras efter att den har skapats. Du måste även ange samma projekt-ID igen när du konfigurerar YouTube i Adobe Experience Manager senare. Du kanske vill skriva ned projektets ID.
 1. Tryck på **[!UICONTROL Create]**.
 
-1. Tryck på **[!UICONTROL Getting Started]** i **[!UICONTROL Dashboard]**-kortet i projektet.**[!UICONTROL Enable APIs and get credentials like keys]**
+1. Tryck på **[!UICONTROL Enable APIs and get credentials like keys]** i **[!UICONTROL Getting Started]**-kortet i projektet.**[!UICONTROL Dashboard]**
 1. I början av sidan **[!UICONTROL Dashboard]** trycker du på **[!UICONTROL Enable API]**.
 1. Tryck på **[!UICONTROL YouTube Data API]** under YouTube-API:er på sidan **[!UICONTROL Library]**.
 1. I närheten av överkanten av **[!UICONTROL YouTube Data API v3]**-sidan trycker du på **[!UICONTROL Enable]** för att aktivera den.
@@ -901,19 +901,13 @@ För att videorapporter ska fungera på rätt sätt skapas ett Report Suite-ID a
 
 1. I tabellen som visar de publicerade videoklippen trycker du på ett videonamn för att spela upp videon och ser även videons återgivningsrapport.
 
-### Visa videorapporter baserade på ett videovisningsprogram som du har skapat med Scene7 HTML5 Viewer SDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
+### Visa videorapporter baserade på ett videovisningsprogram som du har skapat med HTML5 Viewer SDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
-Om du använder ett användningsklart visningsprogram från Dynamic Media, eller om du har skapat en anpassad visningsförinställning baserad på ett skräddarsytt visningsprogram, krävs inga ytterligare steg för att visa videorapporter. Om du har skapat ett eget videovisningsprogram baserat på Scene7 HTML5 Viewer SDK ska du följa de här stegen för att se till att videovisningsprogrammet skickar spårningshändelser till Dynamic Media videorapporter.
+Om du använder ett användningsklart visningsprogram från Dynamic Media, eller om du har skapat en anpassad visningsförinställning baserad på ett skräddarsytt visningsprogram, krävs inga ytterligare steg för att visa videorapporter. Om du har skapat ett eget videovisningsprogram baserat på SDK-API:t för HTML5-visningsprogrammet ska du följa de här stegen för att se till att videovisningsprogrammet skickar spårningshändelser till Dynamic Media videorapporter.
 
-Använd Scene7 Viewer Reference och Scene7 HTML5 Viewer SDK för att skapa egna videovisningsprogram.
+Använd [Adobe Dynamic Media Viewer Reference Guide](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html) och [HTML5 Viewer SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) för att skapa egna videovisningsprogram.
 
-Se [Referenshandbok för Scene7-visningsprogram](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html).
-
-Hämta Scene7 HTML Viewer SDK från Adobe Developer Connection.
-
-Se [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html).
-
-Så här visar du videorapporter baserade på ett videovisningsprogram som du har skapat med Scene7 HTML5 Viewer SDK:
+Så här visar du videorapporter baserade på ett videovisningsprogram som du har skapat med HTML5 Viewer SDK API:
 
 1. Navigera till alla publicerade videoresurser.
 1. I listrutan i det övre vänstra hörnet på resursens sida väljer du **[!UICONTROL Viewers]**.
@@ -940,7 +934,7 @@ Så här visar du videorapporter baserade på ett videovisningsprogram som du ha
 
 1. Skapa komponenten TrackingManager genom att göra följande:
 
-   * När du har anropat `s7sdk.Utils.init();` skapar du en TrackingManager-instans för att spåra händelser genom att lägga till följande:
+   * När du har anropat `s7sdk.Util.init();` skapar du en TrackingManager-instans för att spåra händelser genom att lägga till följande:
 
       `var trackingManager = new s7sdk.TrackingManager();`
 
@@ -1037,7 +1031,7 @@ Du kan göra det enklare att titta på och navigera i videoklipp med långa form
 >
 >Den videospelare som används måste ha stöd för kapitelmarkörer. Dynamic Media videospelare har stöd för kapitelmarkörer, men det är inte säkert att de använder tredjepartsvideospelare.
 
-Om du vill kan du skapa och märka ut ett eget anpassat visningsprogram med kapitel i stället för att använda en förinställning för visningsprogrammet för video. Instruktioner om hur du skapar ett eget HTML5-visningsprogram med kapitelnavigering finns i handboken för Adobe Scene7 Viewer SDK för HTML5 i rubriken&quot;Anpassa beteende med modifierare&quot; under klasserna `s7sdk.video.VideoPlayer` och `s7sdk.video.VideoScrubber`. Adobe Scene7 Viewer SDK kan hämtas från [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html).
+Om du vill kan du skapa och märka ut ett eget anpassat visningsprogram med kapitel i stället för att använda en förinställning för visningsprogrammet för video. Instruktioner om hur du skapar ett eget HTML5-visningsprogram med kapitelnavigering finns i Adobe HTML5 Viewer SDK API:t i rubriken&quot;Anpassa beteende med modifierare&quot; under klasserna `s7sdk.video.VideoPlayer` och `s7sdk.video.VideoScrubber`. Se dokumentationen för [HTML5 Viewer SDK API]((https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)).
 
 Du skapar en kapitellista för videon på ungefär samma sätt som du skapar bildtexter. Det innebär att du skapar en WebVTT-fil. Observera dock att den här filen måste vara separat från alla WebVTT-beskrivningsfiler som du också använder. du kan inte kombinera bildtexter och kapitel i en WebVTT-fil.
 
