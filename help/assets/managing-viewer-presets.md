@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: e78bb08a-a923-4399-b3f7-13aa4b7994d5
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 translation-type: tm+mt
-source-git-commit: fb4e6aef84d733c578e0f2ee7407016715e77cf5
+source-git-commit: 43a6e866a99814e93290e00f3f15c0e456821c89
 workflow-type: tm+mt
-source-wordcount: '4105'
+source-wordcount: '4106'
 ht-degree: 9%
 
 ---
@@ -23,12 +23,12 @@ ht-degree: 9%
 
 En förinställning för Dynamic Media-visningsprogram är en samling inställningar som bestämmer hur användare visar mediefiler på datorskärmar och mobila enheter. Om du är administratör kan du skapa visningsförinställningar. Inställningarna är tillgängliga för en array med visningskonfigurationsalternativ. Du kan till exempel ändra visningsprogrammets visningsstorlek eller zoombeteende.
 
-Instruktioner om hur du skapar och anpassar dina egna HTML5-visningsförinställningar finns i *Adobe Scene7 HTML5 Viewer SDK*. SDK är tillgängligt på IS-publiceringsservern som är inbäddad i SDK:n. Varje biblioteksversion har en egen SDK-dokumentation.
+Instruktioner om hur du skapar och anpassar dina egna HTML5-visningsförinställningar finns i Adobe Dynamic Media *HTML5 Viewer SDK API-dokumentation*. SDK är tillgängligt på IS-publiceringsservern som är inbäddad i SDK:n. Varje biblioteksversion har en egen SDK-dokumentation.
 
 Sökväg: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.\
-Exempel: 3.5 SDK: [https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html)
+Exempel: 3.10 SDK: [https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)
 
-Se även [referenshandboken för visningsprogram för Adobe](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html).
+Se även [Referenshandbok för Dynamic Media-visningsprogram för Adobe](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html).
 
 I det här avsnittet beskrivs hur du skapar, redigerar och hanterar visningsprogramförinställningar. Du kan använda en visningsförinställning för en resurs när du vill förhandsgranska den. Se [Använda visningsförinställningar](viewer-presets.md).
 
@@ -40,7 +40,7 @@ I det här avsnittet beskrivs hur du skapar, redigerar och hanterar visningsprog
 
 Alla färdiga visningsprogram har stöd för tangentbordstillgänglighet.
 
-Se även [Tangentbordstillgänglighet och navigering](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/c-keyboard-accessibility.html).
+Se även [Tangentbordstillgänglighet och navigering](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html).
 
 ## Hantera förinställningar för Dynamic Media Viewer {#managing-presets}
 
