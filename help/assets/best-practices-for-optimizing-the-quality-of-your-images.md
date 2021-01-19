@@ -1,18 +1,14 @@
 ---
 title: Bästa tillvägagångssätt för att optimera bildkvalitet
-seo-title: Bästa tillvägagångssätt för att optimera bildkvalitet
 description: Lär dig de bästa sätten att optimera bildkvaliteten i dynamiska medier
-seo-description: Lär dig de bästa sätten att optimera bildkvaliteten i dynamiska medier
-uuid: b73f0918-c723-4a0d-a63f-4242223c2d47
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 translation-type: tm+mt
-source-git-commit: 0016825ced6706cda7447546af876d5a897c8ff5
+source-git-commit: ee143a04dcdd6eb312f8c2a95eb11d53301e8e8f
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1355'
 ht-degree: 5%
 
 ---
@@ -46,9 +42,7 @@ Använd `&wid=<value>&hei=<value>&resMode=sharp2` eller `&hei=<value>&resMode=sh
 
 ## Bästa tillvägagångssätt för bildskärpa {#best-practices-for-image-sharpening}
 
-Bildskärpa är den mest komplicerade aspekten när det gäller att styra bilder på webbplatsen och var många misstag görs. Ta dig tid att lära dig mer om hur skärpa och oskarp maskning fungerar i AEM med hjälp av följande resurser:
-
-Rapporten [Skärpa bilder i Adobe Scene7 Publishing System och på Image Server](/help/assets/assets/sharpening_images.pdf) gäller även för AEM.
+<!-- Image sharpening is the most complex aspect of controlling images on your website, and where many mistakes are made. Take the time to learn more about how sharpening and unsharp masking works in AEM by referring to the [Adobe Dynamic Media Classic Image Quality and Sharpening Best Practices](/help/assets/assets/sharpening_images.pdf) guide that applies to AEM as well. -->
 
 Se även [Öka skärpan i en bild med oskarp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html).
 
@@ -65,17 +59,14 @@ Det finns två metoder för bildskärpa:
       * **[!UICONTROL radius]** (0-250, bredden på de&quot;skärpelinjer&quot; som ritas runt objektet med skärpa, mätt i pixlar.)
 
              Tänk på att parametrarnas radie och mängd fungerar mot varandra. Reducerad radie kan kompenseras genom ett ökat belopp. Med radie får du bättre kontroll eftersom ett lägre värde ökar skärpan endast för kantpixlarna, medan ett högre värde ökar skärpan för ett större antal pixlar.
-         * **[!UICONTROL threshold]** (0-255, effektkänslighet.)
+         
+      * **[!UICONTROL threshold]** (0-255, effektkänslighet.)
 
              Den här parametern avgör hur annorlunda de pixlar som ska göras skarpare måste vara jämfört med det omgivande området innan de betraktas som kantpixlar och filtret gör dem skarpare. Parametern **[!UICONTROL threshold]** hjälper dig att undvika att göra områden med liknande färger för mycket skarpare, som hudtoner. Ett tröskelvärde på 12 ignorerar till exempel små variationer i hudtonens ljusstyrka för att undvika att lägga till ”brus”, men lägger ändå till kantkontrast i områden med hög kontrast, till exempel där ögonfransarna möter huden.
          
-         Mer information om hur du ställer in de här tre parametrarna, inklusive de bästa sätten att använda med filtret, finns i följande resurser:
+         <!-- For more information about how you set these three parameters, including best practices to use with the filter, see the [Adobe Dynamic Media Classic Image Quality and Sharpening Best Practices](/help/assets/assets/sharpening_images.pdf) guide (applies to Dynamic Media on AEM as well). -->
+   * AEM kan du även styra en fjärde parameter: monokrom (0,1). Den här parametern avgör om oskarp maskning används separat på varje färgkomponent med värdet 0 eller på bildens intensitet/intensitet med värdet 1.
 
-         AEM hjälpavsnittet Skärpa en bild.
-
-         Best practices white paper [Sharpening images in Adobe Scene7 Publishing System and on Image Server](/help/assets/assets/sharpening_images.pdf).
-
-      * AEM kan du även styra en fjärde parameter: monokrom (0,1). Den här parametern avgör om oskarp maskning används separat på varje färgkomponent med värdet 0 eller på bildens intensitet/intensitet med värdet 1.
 
 Det bästa sättet är att börja med parametern oskarp maskradie. Radie-inställningar som du kan börja med är följande:
 
