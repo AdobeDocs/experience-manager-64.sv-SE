@@ -1,18 +1,14 @@
 ---
 title: Blandade medieuppsättningar
-seo-title: Blandade medieuppsättningar
-description: Lär dig hur du arbetar med blandade medieuppsättningar i dynamiska medier
-seo-description: Lär dig hur du arbetar med blandade medieuppsättningar i dynamiska medier
-uuid: e37fa648-74e2-42e3-8611-8509c92ec00d
+description: Lär dig hur du arbetar med blandade medieuppsättningar (bilder, bilduppsättningar, snurreuppsättningar och videofilmer) i Dynamic Media.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 599c316e-b6a7-4a28-bc4b-75d48409bde0
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1388'
 ht-degree: 18%
 
 ---
