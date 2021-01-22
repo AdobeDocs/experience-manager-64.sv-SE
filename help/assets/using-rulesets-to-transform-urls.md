@@ -1,18 +1,14 @@
 ---
 title: Använda regeluppsättningar för att omforma URL:er
-seo-title: Använda regeluppsättningar för att omforma URL:er
 description: 'Du kan distribuera regeluppsättningar i Dynamic Media för att omvandla URL:er. Regeluppsättningar är instruktioner skrivna i ett skriptspråk (t.ex. JavaScript) som utvärderar XML-data och utför vissa åtgärder om dessa data uppfyller vissa villkor. '
-seo-description: 'Du kan distribuera regeluppsättningar i Dynamic Media för att omvandla URL:er. Regeluppsättningar är instruktioner skrivna i ett skriptspråk (t.ex. JavaScript) som utvärderar XML-data och utför vissa åtgärder om dessa data uppfyller vissa villkor. '
-uuid: 9fed0c83-67b7-4483-a9b4-322e6a483449
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: abcff903-204b-4ab6-87d8-6f0ce63d7b41
 translation-type: tm+mt
-source-git-commit: a3a160a0281c1ea2ca050c2c747d6a5ec1d952b3
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '724'
 ht-degree: 3%
 
 ---
@@ -25,11 +21,11 @@ Du kan distribuera regeluppsättningar i Dynamic Media för att omvandla URL:er.
 * Lägga till ett MIME-typsuffix. Många tjänster och webbplatser kräver bildsuffix, som att lägga till `.jpg` till en URL.
 * Skapa en mappsökväg till URL:en för sökmotoroptimering.
 
-   Se [Hur Adobe Scene7 Publishing System stöder SEO](/help/assets/assets/s7_seo.pdf).
+   Se [Hur Adobe Dynamic Media Classic stöder SEO](/help/assets/assets/s7_seo.pdf).
 
 * Lägga till metadata i URL:en för sökmotoroptimering.
 
-   Se [Hur Adobe Scene7 Publishing System stöder SEO](/help/assets/assets/s7_seo.pdf).
+   Se [Hur Adobe Dynamic Media Classic stöder SEO](/help/assets/assets/s7_seo.pdf).
 
 * Ställa in innehållets disposition för att utlösa en hämtning.
 * Förenkla bildhanteringen genom att ange URL:er för personalisering. Omvandla till exempel `rgb{XX,YY,ZZ}` till RTF-klar `\redXX\greenYY\blueZZ`
@@ -53,17 +49,17 @@ Se även [Troubleshooting rule sets](https://helpx.adobe.com/experience-manager/
 Kontrollera också först att du testar regeluppsättningen i en staging-miljö som inte påverkar produktionsmiljön.\
 Produktionsmiljöer och staging-miljöer kräver normalt olika inloggningar.
 
-* **NA staging** environment-login page:  [https://s7sps1-staging.scene7.com/IpsWeb/](https://s7sps1-staging.scene7.com/IpsWeb/)
-* **EMEA staging environment** login page:  [https://s7sps3-staging.scene7.com/IpsWeb/](https://s7sps3-staging.scene7.com/IpsWeb/)
-* **JAPAC-** mellanlagringsmiljöinloggningssida:  [https://s7sps5-staging.scene7.com/IpsWeb/](https://s7sps5-staging.scene7.com/IpsWeb/)
+Se [Adobe Dynamic Media Classic-datorprogrammet för inloggningsinformation](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app).
+
+<!-- * **NA staging environment** login page: [https://s7sps1-staging.scene7.com/IpsWeb/](https://s7sps1-staging.scene7.com/IpsWeb/)
+* **EMEA staging environment** login page: [https://s7sps3-staging.scene7.com/IpsWeb/](https://s7sps3-staging.scene7.com/IpsWeb/)
+* **JAPAC staging environment** login page: [https://s7sps5-staging.scene7.com/IpsWeb/](https://s7sps5-staging.scene7.com/IpsWeb/) -->
 
 Se även [Använda &quot;asset&quot; i stället för &quot;is&quot;-bilden i en regeluppsättning](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/ruleset-asset-instead-image.html).
 
 **Så här distribuerar du XML-regeluppsättningar:**
 
-1. Logga in på ditt Dynamic Media Classic-konto:
-
-   [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
+1. Logga in på ditt [Dynamic Media Classic-datorprogram](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app).
 
    Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
