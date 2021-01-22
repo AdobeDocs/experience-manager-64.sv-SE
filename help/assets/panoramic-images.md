@@ -1,18 +1,14 @@
 ---
 title: Panoramabilder
-seo-title: Panoramabilder
-description: Lär dig hur du arbetar med panoramabilder i Dynamic Media.
-seo-description: Lär dig hur du arbetar med panoramabilder i Dynamic Media.
-uuid: dfd7a55c-7bcc-4d62-8c3a-a73726881103
+Description: Learn how to work with panoramic images in Dynamic Media.
 contentOwner: Rick Brough
 topic-tags: dynamic-media
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
-discoiquuid: fc285b25-2bce-493c-87bc-5f1a8a26eb42
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '503'
 ht-degree: 2%
 
 ---
@@ -46,7 +42,7 @@ Information om hur du överför resurser som ska användas med visningsprogramme
 
 För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AEM måste du synkronisera förinställningarna för visningsprogrammet för panoramabilder med Dynamic Media Classic och Dynamic Media Classic-specifika metadata så att visningsförinställningarna uppdateras i JCR-filen. Konfigurera Dynamic Media Classic på följande sätt:
 
-1. [Logga in i din instans av Dynamic Media ](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Classic för respektive företagskonto.
+1. [Logga in på ditt Dynamic Media Classic-datorprogram ](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app) för varje företagskonto.
 
 1. Klicka på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]** i det övre högra hörnet på sidan.
 1. På sidan **[!UICONTROL Image Server Publish]** väljer du **[!UICONTROL Image Serving]** i listrutan **[!UICONTROL Publish Context]**.
@@ -75,7 +71,7 @@ För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AE
 
 Om du släppte en bild i **[!UICONTROL Panoramic Media]**-komponenten i WCM-filen och platshållaren för komponenten är komprimerad kan du felsöka följande:
 
-* Om du får ett otillåtet fel 403 kan det bero på att den begärda bildstorleken är för stor. Granska *Reply Image Size Limit*-inställningarna i [Configuring Dynamic Media Classic (Scene7)](#configuring-dynamic-media-classic-scene).
+* Om du får ett otillåtet fel 403 kan det bero på att den begärda bildstorleken är för stor. Granska *Reply Image Size Limit*-inställningarna i [Configuring Dynamic Media Classic](#configuring-dynamic-media-classic-scene).
 
 * Om du vill ha ett *ogiltigt lås* för resursen eller *tolkningsfel* som visas på sidan kontrollerar du att **[!UICONTROL Request Obfuscation Mode]** och **[!UICONTROL Request Locking Mode]** är inaktiverade.
 * Om det är ett fel på arbetsytan med färgton ska du ställa in en **[!UICONTROL Rule Set Definition File Path and Invalidate CTN]** för föregående begäranden för bildresursen.
