@@ -7,9 +7,9 @@ user-guide-title: AEM 6.4 Handbok för administrationsanvändare
 breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
 translation-type: tm+mt
-source-git-commit: 47c0e92e7f68641209e5d2e5aefeb9dfcce64854
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '623'
 ht-degree: 6%
 
 ---
@@ -135,7 +135,7 @@ ht-degree: 6%
    + [Integrera med dynamisk tagghantering i Adobe](dtm.md)
    + [Ingå i Adobe Analytics och Adobe Target](opt-in.md)
    + [AEM portaler och portlets](aem-as-portal.md)
-   + [Integrera med Dynamic Media Classic (Scene7)](scene7.md)
+   + [Integrera med Dynamic Media Classic](scene7.md)
    + [AEM Livefyre-recept](aem-livefyre-recipes.md)
    + [Felsöka integreringsproblem](troubleshooting-integration-issues.md)
    + [Integrera med BrightEdge Content Optimizer](brightedge.md)
