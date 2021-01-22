@@ -4,9 +4,9 @@ description: Lär dig mer om olika resurshanterings- och redigeringsuppgifter so
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: 59fed31d276510c3346a46ac38f2a79c6f91d848
 workflow-type: tm+mt
-source-wordcount: '9712'
+source-wordcount: '9721'
 ht-degree: 2%
 
 ---
@@ -151,8 +151,8 @@ Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du t�
 **Så här överför du resurser med FTP**
 
 1. Logga in på FTP-servern med det FTP-användarnamn och lösenord som du fick från e-postmeddelandet om etablering. Överför filer eller mappar till FTP-servern i FTP-klienten.
-1. [Logga in på Dynamic Media ](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Classic med hjälp av autentiseringsuppgifter som du fått från e-postmeddelandet om etablering. Tryck på **[!UICONTROL Upload]** i det globala navigeringsfältet.
-
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto med hjälp av autentiseringsuppgifter från e-postmeddelandet om etablering.
+1. Tryck på **[!UICONTROL Upload]** i det globala navigeringsfältet.
 1. På sidan **[!UICONTROL Upload]**, nära det övre vänstra hörnet, trycker du på fliken **[!UICONTROL Via FTP]**.
 1. Välj en FTP-mapp att överföra filer från till vänster på sidan. till höger på sidan väljer du en målmapp.
 1. I närheten av sidans nedre högra hörn trycker du på **[!UICONTROL Job Options]** och anger sedan önskade alternativ baserat på resurserna i den mapp du valde.
