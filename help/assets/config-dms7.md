@@ -1,18 +1,14 @@
 ---
 title: Konfigurera Dynamic Media - Scene7-läge
-seo-title: Konfigurera Dynamic Media - Scene7-läge
-description: Information om hur du konfigurerar läget Dynamic Media - Scene7.
-seo-description: Information om hur du konfigurerar läget Dynamic Media - Scene7.
-uuid: 81cc208b-e95d-4a01-9817-2b6d50cfe8b8
+description: Lär dig hur du konfigurerar läget Dynamic Media - Scene7.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: cd3adbac-9868-4838-9d8a-37dde8973df4
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: 59fed31d276510c3346a46ac38f2a79c6f91d848
 workflow-type: tm+mt
-source-wordcount: '5162'
+source-wordcount: '5181'
 ht-degree: 3%
 
 ---
@@ -88,7 +84,7 @@ Så här konfigurerar du Dynamic Media-Cloud Services:
 
    >[!NOTE]
    >
-   >När du har fått ditt e-postmeddelande om etablering med Dynamic Media-inloggningsuppgifter kan du [logga in på](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Dynamic Media Classic och ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media molntjänst är konfigurerad med rätt autentiseringsuppgifter.
+   >När du har fått ditt e-postmeddelande med Dynamic Media-inloggningsuppgifter öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt företagskonto för att ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media molntjänst är konfigurerad med rätt autentiseringsuppgifter.
 
 1. Om anslutningen lyckas kan du även ange följande:
 
@@ -109,7 +105,7 @@ Så här konfigurerar du Dynamic Media-Cloud Services:
 1. Tryck på **[!UICONTROL Save]**.
 1. Om du vill förhandsgranska Dynamic Media-innehåll på ett säkert sätt innan det publiceras måste du tillåtslista den AEM författarinstansen för att ansluta till Dynamic Media:
 
-   * Logga in på ditt Dynamic Media Classic-konto: [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html). Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
+   * Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto. Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
    * Tryck på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]** i navigeringsfältet uppe till höger på sidan.
    * Välj **[!UICONTROL Test Image Serving]** i listrutan Publiceringskontext på sidan Image Server Publish.
    * Tryck på **[!UICONTROL Add]** för klientadressfiltret.
@@ -133,7 +129,7 @@ Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media - Scene7
 
 När du är i körningsläge **dynamicmedia_scene7** använder du användargränssnittet i Dynamic Media Classic (Scene7) för att göra ändringar i Dynamic Media-inställningarna.
 
-Vissa av ovanstående uppgifter kräver att du loggar in på Dynamic Media Classic här: [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
+Vissa av ovanstående uppgifter kräver att du öppnar [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och sedan loggar in på ditt konto.
 
 Installations- och konfigureringsuppgifter är:
 
@@ -189,7 +185,7 @@ Med dynamisk mediefärghantering kan du färgkorrigera resurser. Med färgkorrig
 
 Så här konfigurerar du standardfärgegenskaperna så att färgkorrigering aktiveras när du begär bilder:
 
-1. [Logga in på Dynamic Media ](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Classic med de autentiseringsuppgifter som angavs under etableringen. Navigera till **[!UICONTROL Setup > Application Setup]**.
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto med de autentiseringsuppgifter som anges under etableringen. Navigera till **[!UICONTROL Setup > Application Setup]**.
 1. Expandera området **[!UICONTROL Publish Setup]** och markera **[!UICONTROL Image Server]**. Ange **[!UICONTROL Publish Context]** som **[!UICONTROL Image Serving]** när du anger standardvärden för publiceringsinstanser.
 1. Bläddra till den egenskap som du behöver ändra, till exempel en egenskap i **[!UICONTROL Color Management Attributes]**-området.
 
@@ -319,9 +315,9 @@ Det finns två element för definition, **[!UICONTROL Match]** och **[!UICONTROL
 
 **Så här konfigurerar du standardnamn:**
 
-1. Logga in på ditt Dynamic Media Classic-konto (Scene7): [www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto.
 
-   Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
+   Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
 1. Tryck på **[!UICONTROL Setup > Application Setup > Batch Set Presets > Default Naming]i navigeringsfältet uppe på sidan.**
 1. Välj **[!UICONTROL View Form]** eller **[!UICONTROL View Code]** för att ange hur du vill visa och ange information om varje element.
@@ -353,9 +349,9 @@ Du kan antingen använda formulärfältsmetoden för att definiera en gruppupps�
 
 **Så här skapar du en förinställning för gruppuppsättning:**
 
-1. Logga in på ditt Dynamic Media Classic-konto (Scene7): [www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto.
 
-   Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
+   Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
 1. Tryck på **[!UICONTROL Setup > Application Setup > Batch Set Presets > Batch Set Preset]i navigeringsfältet uppe på sidan.**
 
@@ -408,9 +404,9 @@ När rotationsuppsättningen överförs och publiceras, aktiverar du namnet på 
 
 **Så här skapar du en gruppuppsättningsförinställning för automatisk generering av en 2D-snurpuppsättning:**
 
-1. Logga in på ditt Dynamic Media Classic-konto (Scene7): [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto.
 
-   Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
+   Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
 1. Tryck på **[!UICONTROL Setup > Application Setup > Batch Set Presets > Batch Set Preset]** i navigeringsfältet uppe på sidan.
 
