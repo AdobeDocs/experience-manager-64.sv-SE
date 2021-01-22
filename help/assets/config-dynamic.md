@@ -8,9 +8,9 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 821eb27e-67c9-4589-9196-30dacb84fa59
 translation-type: tm+mt
-source-git-commit: 5964edfadf597652f754ca3c64343b0b90e40796
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '7458'
+source-wordcount: '7456'
 ht-degree: 1%
 
 ---
@@ -140,7 +140,7 @@ Du kan välja att implementera Dynamic Media endast för bildåtergivning, endas
 
 Genom att aktivera Dynamic Media blir de dynamiska mediefunktionerna tillgängliga i användargränssnittet och alla överförda bildresurser får en `cqdam.pyramid.tiff`-rendering som används för snabb leverans av dynamiska bildrenderingar. Dessa PTIFF-filer har avsevärda fördelar, bland annat (1) möjligheten att hantera endast en överordnad bild och generera oändliga återgivningar direkt utan ytterligare lagringsutrymme och (2) möjligheten att använda interaktiv visualisering som zoomning, panorering, rotation och så vidare.
 
-Om du vill använda Dynamic Media Classic (Scene7) i AEM ska du inte aktivera Dynamic Media såvida du inte använder ett [specifikt scenario](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media). Dynamic Media är inaktiverat om du inte aktiverar dynamiska medier i runmode.
+Om du vill använda Dynamic Media Classic i AEM ska du inte aktivera Dynamic Media såvida du inte använder ett [specifikt scenario](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media). Dynamic Media är inaktiverat om du inte aktiverar Dynamic Media i runmode.
 
 Om du vill aktivera dynamiska medier måste du aktivera körningsläget för dynamiska media antingen från kommandoraden eller från snabbstartfilens namn.
 
@@ -676,7 +676,7 @@ Om du använder Dynamic Media för 1) bildåtergivning i produktionen _eller_ 2)
     </ul> </td> 
   </tr> 
   <tr> 
-   <td>Integrering med Dynamic Media Classic (Scene7)</td> 
+   <td>Integrering med Dynamic Media Classic</td> 
    <td><p>filterbilder</p> <p>filteruppsättningar</p> <p>filter-video</p> </td> 
    <td><p>Börjar med <strong>image/</strong></p> <p>Innehåller <strong>program/</strong> och avslutas med <strong>uppsättning</strong>.</p> <p>Börjar med <strong>video/</strong></p> </td> 
    <td><p>Du konfigurerar transport-URI:n så att den pekar på AEM publiceringsserver i stället för Adobe Dynamic Media Cloud Replication Service URL:en. Om du konfigurerar det här filtret kan Dynamic Media Classic leverera resurser i stället för AEM publiceringsinstans.</p> <p>De färdiga filterbilderna, filteruppsättningarna och filtervideon kommer att:</p> 
