@@ -1,18 +1,14 @@
 ---
 title: Profiler för bearbetning av metadata, bilder och video
-seo-title: Profiler för bearbetning av metadata, bilder och video
 description: En profil med en uppsättning regler runt alternativen som ska tillämpas på resurser som överförs till en mapp. Ange vilken metadataprofil och videokodningsprofil som ska användas för de videoresurser som du överför. För bildresurser kan du även ange vilken bildprofil som ska användas för bildresurser så att de beskärs på rätt sätt.
-seo-description: En profil med en uppsättning regler runt alternativen som ska tillämpas på resurser som överförs till en mapp. Ange vilken metadataprofil och videokodningsprofil som ska användas för de videoresurser som du överför. För bildresurser kan du även ange vilken bildprofil som ska användas för bildresurser så att de beskärs på rätt sätt.
-uuid: d95978b9-ffa4-4895-854f-3f7bd396e019
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: administering
 content-type: reference
-discoiquuid: 347a90ae-a0c5-44f5-8e80-edc3edc1386f
 translation-type: tm+mt
-source-git-commit: 978c6e5cffb557f0d42f961bdde597fabf278ddd
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '1387'
+source-wordcount: '1326'
 ht-degree: 2%
 
 ---
@@ -106,7 +102,7 @@ Se [Justera batchstorleken för arbetsflödet för ombearbetning](#adjusting-loa
 
    ![Komponenten Scene7 Batch Upload](/help/assets/assets-dm/reprocess-assets8.png)
 
-1. Ange följande i dialogrutan **[!UICONTROL Batch Upload to Scene7—Step Properties]**:
+1. Ange följande i dialogrutan **[!UICONTROL Batch Upload to Scene7–Step Properties]**:
    * I textfälten **[!UICONTROL Title]** och **[!UICONTROL Description]** anger du en ny titel och beskrivning för jobbet, om du vill.
    * Välj **[!UICONTROL Handler Advance]** om hanteraren ska gå vidare till nästa steg.
    * I fältet **[!UICONTROL Timeout]** anger du timeout för extern process (sekunder).
@@ -116,7 +112,7 @@ Se [Justera batchstorleken för arbetsflödet för ombearbetning](#adjusting-loa
 
    ![Egenskaper, dialogruta](/help/assets/assets-dm/reprocess-assets3.png)
 
-1. Tryck på **[!UICONTROL Done]** i det övre högra hörnet av dialogrutan **[!UICONTROL Batch Upload to Scene7 – Step Properties]**.
+1. Tryck på **[!UICONTROL Done]** i det övre högra hörnet av dialogrutan **[!UICONTROL Batch Upload to Scene7–Step Properties]**.
 
 1. I det övre högra hörnet av Scene7: Återbearbeta arbetsflödesmodellsidan Resurser, tryck på **[!UICONTROL Sync]**. När du ser **[!UICONTROL Synced]** är arbetsflödets körningsmodell synkroniserad och klar att bearbeta resursen i en mapp.
 
