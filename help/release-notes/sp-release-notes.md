@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 translation-type: tm+mt
-source-git-commit: b9dffdda37992f3a9f34953b8dd391d6f6361ceb
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '21617'
+source-wordcount: '21616'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 ### Assets {#assets}
 
-* En mapp utan namn skapas i SPS (Scene7 Publishing System) när en resurs flyttas från en mapp till en annan i Experience Manager med Dynamic Media Scene7-konfiguration (NPR-32440).
+* En mapp utan namn skapas i Dynamic Media Classic när en resurs flyttas från en mapp till en annan i Experience Manager med Dynamic Media Classic-konfigurationen (NPR-32440).
 
 * Detaljsidan för resursinformation i PDF-filer visar inte åtgärdsknappar i Experience Manager som körs i Dynamic Media Scene7-läge (NPR-32316).
 
@@ -1747,7 +1747,7 @@ AEM 6.4.1.0 kan installeras på AEM 6.4 GA. Några av huvudpunkterna i Service P
 * Proaktiv backport för granite.ui.coralui-korrigeringar. NPR-23538
 * Det går inte att ta bort flera användare från gruppen samtidigt. NPR-23846
 * (OMEGA) Rapportera&quot;Funktion&quot; endast på engelska. NPR-23989: Programfix för Granite-21231
-* (Designimporterare) Om du importerar en sida importeras inte js, css. NPR-25203: Programfix för Granite-2236
+* (Designimporterare) Om du importerar en sida importeras inte js, css. NPR-25205: Programfix för Granite-2236
 
 **Integrering**
 
