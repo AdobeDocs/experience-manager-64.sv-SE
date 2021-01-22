@@ -1,18 +1,14 @@
 ---
 title: Metodtips för e-postmallar
-seo-title: Metodtips för e-postmallar
-description: Lär dig de bästa sätten att skapa e-postmallar i AEM.
-seo-description: Lär dig de bästa sätten att skapa e-postmallar i AEM.
-uuid: 714090bd-a742-4004-a968-aebd8fd03e04
+description: Hitta de bästa sätten att designa e-postmeddelanden som ger en välutvecklad mall för e-postkampanjer i Adobe Experience Manager.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: best-practices, integration
-discoiquuid: 6c019157-cc37-4826-8d3a-dbee59ec09e0
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1053'
 ht-degree: 0%
 
 ---
@@ -150,7 +146,7 @@ Det finns för närvarande [sju komponenter som kan användas i kampanjmallar](/
 | Text&amp;personalisering | /libs/mcm/campaign/components/personalization |
 | Textimage | /libs/mcm/campaign/components/textimage |
 | Länk | /libs/mcm/campaign/components/reference |
-| Scene7 Image Template | /libs/mcm/campaign/s7image |
+| Dynamic Media Classic-bildmall (tidigare Scene7) | /libs/mcm/campaign/s7image |
 | Riktad referens | /libs/mcm/campaign/components/reference |
 
 >[!NOTE]
