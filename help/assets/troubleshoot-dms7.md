@@ -1,18 +1,14 @@
 ---
 title: Felsökning av Dynamic Media - Scene7-läge
-seo-title: Felsökning av Dynamic Media - Scene7-läge
-description: Felsöka Dynamic Media i Scene7 runmode.
-seo-description: Felsöka Dynamic Media i Scene7 runmode.
-uuid: bd9653f7-e4c7-464f-84a8-dc1e8dc37ba2
+description: Felsökning av Dynamic Media - körningsläge för Scene7.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: eab920f4-b56e-4ed2-9ec1-03f348810ae5
 translation-type: tm+mt
-source-git-commit: 5acb16b1734331767554261bbcf9640947f2e23f
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1283'
 ht-degree: 0%
 
 ---
@@ -30,7 +26,7 @@ Kontrollera att Dynamic Media har konfigurerats korrekt genom att göra följand
 * Alla AEM 6.4 kumulativa korrigeringspaket (CFP) har installerats först *före* alla tillgängliga Dynamic Media-funktionspaket.
 * Tillvalspaket 18912 är installerat.
 
-   Det här tillvalspaketet är till för FTP-stöd eller om du migrerar resurser till Dynamic Media från Dynamic Media Classic (Scene7).
+   Det här tillvalspaketet är till för FTP-stöd eller om du migrerar resurser till Dynamic Media från Dynamic Media Classic.
 
 * Navigera till användargränssnittet för Cloud Services och bekräfta att det tilldelade kontot visas under **[!UICONTROL Available Configurations]**.
 * Kontrollera att replikeringsagenten **[!UICONTROL Dynamic Media Asset Activation (scene7)]** är aktiverad.
