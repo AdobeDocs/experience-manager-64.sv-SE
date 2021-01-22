@@ -1,18 +1,14 @@
 ---
 title: Dynamic Media videoprofiler
-seo-title: Dynamic Media videoprofiler
-description: 'Dynamic Media har redan en fördefinierad adaptiv videokodningsprofil. Inställningarna i den här färdiga profilen är optimerade för att ge kunderna bästa möjliga visningsupplevelse. '
-seo-description: 'Dynamic Media har redan en fördefinierad adaptiv videokodningsprofil. Inställningarna i den här färdiga profilen är optimerade för att ge kunderna bästa möjliga visningsupplevelse. '
-uuid: cfb498f8-44a0-4d94-99b0-fed7c27f575b
+description: 'Dynamic Media har en fördefinierad adaptiv videokodningsprofil. Inställningarna i den här färdiga profilen är optimerade för att ge dina kunder bästa möjliga videovisning. '
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: administering
 content-type: reference
-discoiquuid: b893f366-279a-4872-9413-77626d3387ea
 translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '2881'
+source-wordcount: '2849'
 ht-degree: 16%
 
 ---
