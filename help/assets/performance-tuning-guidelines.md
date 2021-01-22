@@ -3,9 +3,9 @@ title: Prestandajusteringsguide för resurser
 description: Viktiga fokusområden kring AEM, ändringar av maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar och optimera AEM Assets prestanda.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c407cecf4f4de9aa00ba987f96df3c75784e0171
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '3162'
+source-wordcount: '3166'
 ht-degree: 0%
 
 ---
@@ -165,7 +165,7 @@ Från och med AEM 6.2 och med ett funktionspaket för AEM 6.1 kan du utföra avl
 
 ### DAM Update Asset configuration {#dam-update-asset-configuration}
 
-Arbetsflödet för DAM-uppdatering av tillgångar innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel Scene7 PTIFF-generering och integrering med InDesign Server. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen för DAM-uppdatering och tar bort alla onödiga steg. I det här fallet ska du uppdatera startarna för DAM Update Asset så att de pekar på den nya modellen.
+Arbetsflödet för DAM-uppdatering av resurser innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel generering av Dynamic Media Classic PTIFF och integrering med InDesign Server. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen för DAM-uppdatering och tar bort alla onödiga steg. I det här fallet ska du uppdatera startarna för DAM Update Asset så att de pekar på den nya modellen.
 
 >[!NOTE]
 >
@@ -183,7 +183,7 @@ Kunderna använder bilder av olika storlek och format på sin webbplats eller f�
 
 Många webbplatskunder implementerar en bildservett som ändrar storlek på och beskär bilder när de begärs, vilket medför ytterligare belastning på publiceringsinstansen. Så länge dessa bilder kan cachas kan utmaningen dock mildras.
 
-Ett annat sätt är att använda Scene7-teknik för att helt och hållet överge bildbearbetning. Dessutom kan ni distribuera varumärkesportalen, som inte bara tar över ansvaret för att skapa renderingar från den AEM infrastrukturen, utan också hela publiceringsnivån.
+Ett annat sätt är att använda Dynamic Media Classic-teknik för att helt och hållet överlåta bildbearbetning. Dessutom kan ni distribuera varumärkesportalen, som inte bara tar över ansvaret för att skapa renderingar från den AEM infrastrukturen, utan också hela publiceringsnivån.
 
 #### ImageMagick {#imagemagick}
 
@@ -317,9 +317,9 @@ Uppdatera indexkonfigurationer för att förbättra omindexeringstiden:
 
 1. Öppna CRXDe /crx/de/index.jsp och logga in som administrativ användare
 1. Bläddra till /oak:index/lucene
-1. Lägg till en String-egenskap med namnet [] med värdena &quot;/var&quot;, &quot;/etc/workflow/instances&quot; och &quot;/etc/replication&quot;**[!UICONTROL excludedPaths]**
+1. Lägg till en String-egenskap med namnet **[!UICONTROL excludedPaths]** med värdena &quot;/var&quot;, &quot;/etc/workflow/instances&quot; och &quot;/etc/replication&quot;[]
 1. Bläddra till /oak:index/damAssetLucene
-1. Lägg till en String-egenskap med namnet [] och värdet /content/dam **[!UICONTROL includedPaths]**
+1. Lägg till en String-egenskap med namnet **[!UICONTROL includedPaths]** och värdet /content/dam[]
 1. Spara
 
 (Endast AEM6.1 och 6.2) Uppdatera indexet ntBaseLucene för att förbättra prestanda vid borttagning och flyttning av resurser:
