@@ -1,18 +1,14 @@
 ---
 title: Bästa praxis
-seo-title: Bästa praxis
-description: Här hittar du de bästa arbetssätten som skapats av Adobe tekniker och konsultteam för att hjälpa administratörerna att komma igång.
-seo-description: Här hittar du de bästa arbetssätten som skapats av Adobe tekniker och konsultteam för att hjälpa administratörerna att komma igång.
-uuid: 862d4fcf-ca61-4228-9344-b95a49b59b32
+description: Läs om Adobe Experience Manager bästa praxis som sammanställts av Adobe tekniker och konsultteam för att hjälpa administratörerna att komma igång.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 8f6468a0-7721-454f-9334-c449968b8fe7
 translation-type: tm+mt
-source-git-commit: 24ad9e522eeaf2653e80166946636b9fc78bc401
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '537'
 ht-degree: 2%
 
 ---
@@ -52,8 +48,8 @@ De effektivaste strategierna kring Assets, inklusive Dynamic Media-funktionen oc
    <td>En stor del av bearbetningsprofilerna är mappbaserade, till exempel video, metadata och bildbehandling används alltid i mappar. I det här dokumentet beskrivs hur du definierar och konfigurerar mapphierarkin eftersom hierarkin har en betydande inverkan på hur innehållet bearbetas. </td> 
   </tr>
   <tr>
-   <td>Integrera Scene7 och AEM</td> 
-   <td><a href="/help/sites-administering/scene7.md#best-practices-for-integrating-scene-with-aem">Bästa tillvägagångssätt för att integrera Scene7 med AEM</a></td> 
+   <td>Integrera Dynamic Media Classic och AEM</td> 
+   <td><a href="/help/sites-administering/scene7.md#best-practices-for-integrating-scene-with-aem">Bästa tillvägagångssätt för att integrera Dynamic Media Classic med AEM</a></td> 
    <td><p>Beskriver när avsökningsimporten ska aktiveras, hur integreringen ska testas och när innehållsläsaren ska användas jämfört med en direkt överföring till Assets.</p> </td> 
   </tr>
   <tr>
@@ -62,8 +58,8 @@ De effektivaste strategierna kring Assets, inklusive Dynamic Media-funktionen oc
    <td>I dokumentationen om <a href="/help/assets/managing-image-presets.md">Hantera bildförinställningar</a> beskrivs vilka bildförinställningar som är och de bästa sätten att välja bildförinställningar.</td> 
   </tr>
   <tr>
-   <td>Dynamic Media jämfört med direktintegrering med Scene7</td> 
-   <td><a href="/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media">Integrering med Scene7/AEM jämfört med Dynamic Media</a></td> 
+   <td>Dynamic Media jämfört med direktintegrering med Dynamic Media Classic</td> 
+   <td><a href="/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media">Integrering med Dynamic Media Classic/AEM jämfört med Dynamic Media</a></td> 
    <td>Beskriver när det är bäst att använda Dynamic Media-lösningen, när S7 ska integreras med AEM eller när båda ska användas.</td> 
   </tr>
  </tbody>
