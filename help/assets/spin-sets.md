@@ -1,18 +1,14 @@
 ---
 title: Snurrande uppsättningar
-seo-title: Snurrande uppsättningar
-description: Lär dig hur du arbetar med snurruppsättningar i dynamiska medier
-seo-description: Lär dig hur du arbetar med snurruppsättningar i dynamiska medier
-uuid: a80a0491-6500-463a-83c4-ff4b90a88182
+description: Lär dig hur du arbetar med snurruppsättningar i Dynamic Media. Med en snurra uppsättning kan du simulera hur det ser ut i verkligheten när du vrider ett objekt för att undersöka det ur en viss vinkel.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: afacb3ad-e4ad-4d06-a898-f3f2da8bbb64
 translation-type: tm+mt
-source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1760'
 ht-degree: 7%
 
 ---
@@ -62,7 +58,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
 1. [Visar snurruppsättningar](#viewing-spin-sets).
 
-   Du kan visa och komma åt uppsättningar som skapats med förinställningar för gruppuppsättningar på tre olika sätt. (Uppsättningar som skapats med gruppuppsättningsförinställningar, *visas inte* i användargränssnittet.)
+   Du kan visa och komma åt uppsättningar som skapats med hjälp av gruppuppsättningsförinställningar på tre olika sätt. (Uppsättningar som skapats med gruppuppsättningsförinställningar, *visas inte* i användargränssnittet.)
 
 1. [Förhandsgranska snurra uppsättningar.](previewing-assets.md)
 
