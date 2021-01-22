@@ -1,18 +1,14 @@
 ---
 title: Video
-seo-title: Video
-description: Lär dig arbeta med video i Dynamic Media
-seo-description: Lär dig arbeta med video i Dynamic Media
-uuid: 15e89f88-2787-472d-bbb6-d370bbab9228
+description: Lär dig hur du arbetar med video i Dynamic Media.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: Dynamic-Media
 content-type: reference
-discoiquuid: b721dc7c-b056-47f5-9489-9f4db45b68a0
 translation-type: tm+mt
-source-git-commit: 43a6e866a99814e93290e00f3f15c0e456821c89
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '9960'
+source-wordcount: '9900'
 ht-degree: 3%
 
 ---
@@ -162,9 +158,9 @@ Windows-enheter som stöder det här videoformatet finns på följande plats: [V
 * Konfigurera videospelare för att tillgodose era varumärkesbehov.
 * Integrera video på webbplatsen, mobilsajten eller mobilapplikationen med en enkel URL eller inbäddningskod.
 
-Se [Dynamisk videouppspelning](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&amp;config=GeoRetail/Universal_Video1&amp;stageSize=640,480).
+<!-- See [Dynamic video playback](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&config=GeoRetail/Universal_Video1&stageSize=640,480). -->
 
-Se även [Om HTML5-visningsprogram](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html) i referenshandboken för Adobe Scene7-visningsprogram.
+Se även [Om HTML5-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html?lang=en#viewers-for-aem-assets-only) i referenshandboken för Dynamic Media-visningsprogram för Adobe.
 
 ## Bästa praxis: Använda HTML5-videovisningsprogrammet {#best-practice-using-the-html-video-viewer}
 
@@ -193,76 +189,76 @@ HLS (HTTP Live Streaming) är en Apple-standard för adaptiv videoströmning som
 
 Progressiv video levereras genom att videon hämtas och lagras lokalt på en användares datorskärm eller mobila enhet.
 
-I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för videofilmer på stationära datorer och mobila enheter med Scene7 Video Viewer.
+I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för videofilmer på stationära datorer och mobila enheter med Dynamic Media Video Viewer.
 
 <table> 
  <tbody> 
   <tr> 
-   <td><strong>Enhet</strong></td> 
-   <td><strong>Webbläsare</strong></td> 
-   <td><strong>Videouppspelningsläge</strong></td> 
-  </tr> 
+   <td><strong>Enhet</strong></td>
+   <td><strong>Webbläsare</strong></td>
+   <td><strong>Videouppspelningsläge</strong></td>
+  </tr>
   <tr> 
-   <td>Skrivbord</td> 
-   <td>Internet Explorer 9 och 10</td> 
-   <td>Progressiv nedladdning.</td> 
-  </tr> 
+   <td>Skrivbord</td>
+   <td>Internet Explorer 9 och 10</td>
+   <td>Progressiv nedladdning.</td>
+  </tr>
   <tr> 
-   <td>Skrivbord</td> 
-   <td>Internet Explorer 11+</td> 
-   <td>I Windows 8 och Windows 10 - Tvinga användning av HTTPS när HLS begärs. Känd begränsning: HTTP på HLS fungerar inte i den här kombinationen av webbläsare/operativsystem<br /> <br /> I Windows 7 - progressiv nedladdning. Använder standardlogik för att välja HTTP- eller HTTPS-protokoll.</td> 
-  </tr> 
+   <td>Skrivbord</td>
+   <td>Internet Explorer 11+</td>
+   <td>I Windows 8 och Windows 10 - Tvinga användning av HTTPS när HLS begärs. Känd begränsning: HTTP på HLS fungerar inte i den här kombinationen av webbläsare/operativsystem<br /> <br /> I Windows 7 - progressiv nedladdning. Använder standardlogik för att välja HTTP- eller HTTPS-protokoll.</td>
+  </tr>
   <tr> 
-   <td>Skrivbord</td> 
-   <td>Firefox 23-44</td> 
-   <td>Progressiv nedladdning.</td> 
-  </tr> 
+   <td>Skrivbord</td>
+   <td>Firefox 23-44</td>
+   <td>Progressiv nedladdning.</td>
+  </tr>
   <tr> 
-   <td>Skrivbord</td> 
-   <td>Firefox 45 eller senare</td> 
-   <td>HLS-videoströmning.</td> 
-  </tr> 
+   <td>Skrivbord</td>
+   <td>Firefox 45 eller senare</td>
+   <td>HLS-videoströmning.</td>
+  </tr>
   <tr> 
-   <td>Skrivbord</td> 
-   <td>Krom</td> 
-   <td>HLS-videoströmning.</td> 
-  </tr> 
+   <td>Skrivbord</td>
+   <td>Krom</td>
+   <td>HLS-videoströmning.</td>
+  </tr>
   <tr> 
-   <td>Skrivbord</td> 
-   <td>Safari (Mac)</td> 
-   <td>HLS-videoströmning.</td> 
-  </tr> 
+   <td>Skrivbord</td>
+   <td>Safari (Mac)</td>
+   <td>HLS-videoströmning.</td>
+  </tr>
   <tr> 
-   <td>Mobil</td> 
-   <td>Chrome (Android 6 eller tidigare)</td> 
-   <td>Progressiv nedladdning.</td> 
-  </tr> 
+   <td>Mobil</td>
+   <td>Chrome (Android 6 eller tidigare)</td>
+   <td>Progressiv nedladdning.</td>
+  </tr>
   <tr> 
-   <td>Mobil</td> 
-   <td>Chrome (Android 7 eller senare)</td> 
-   <td>HLS-videoströmning.</td> 
-  </tr> 
+   <td>Mobil</td>
+   <td>Chrome (Android 7 eller senare)</td>
+   <td>HLS-videoströmning.</td>
+  </tr>
   <tr> 
-   <td>Mobil</td> 
-   <td>Android (standardwebbläsare)</td> 
-   <td>Progressiv nedladdning.</td> 
-  </tr> 
+   <td>Mobil</td>
+   <td>Android (standardwebbläsare)</td>
+   <td>Progressiv nedladdning.</td>
+  </tr>
   <tr> 
-   <td>Mobil</td> 
-   <td>Safari (iOS)</td> 
-   <td>HLS-videoströmning.</td> 
-  </tr> 
+   <td>Mobil</td>
+   <td>Safari (iOS)</td>
+   <td>HLS-videoströmning.</td>
+  </tr>
   <tr> 
-   <td>Mobil</td> 
-   <td>Chrome (iOS)</td> 
-   <td>HLS-videoströmning.</td> 
-  </tr> 
+   <td>Mobil</td>
+   <td>Chrome (iOS)</td>
+   <td>HLS-videoströmning.</td>
+  </tr>
   <tr> 
-   <td>Mobil</td> 
-   <td>Blackberry</td> 
-   <td>HLS-videoströmning.</td> 
-  </tr> 
- </tbody> 
+   <td>Mobil</td>
+   <td>Blackberry</td>
+   <td>HLS-videoströmning.</td>
+  </tr>
+ </tbody>
 </table>
 
 ## Arkitektur för Dynamic Media videolösning {#architecture-of-dynamic-media-video-solution}
@@ -414,7 +410,7 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
    <td><p>Källa</p> </td> 
    <td><p>1920 x 1080</p> </td> 
    <td><p>1</p> </td> 
-   <td><p>3</p> </td> 
+   <td><p>1</p> </td> 
   </tr> 
   <tr> 
    <td><p>Kodad</p> </td> 
@@ -901,7 +897,7 @@ För att videorapporter ska fungera på rätt sätt skapas ett Report Suite-ID a
 
 1. I tabellen som visar de publicerade videoklippen trycker du på ett videonamn för att spela upp videon och ser även videons återgivningsrapport.
 
-### Visa videorapporter baserade på ett videovisningsprogram som du har skapat med HTML5 Viewer SDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
+### Visa videorapporter baserade på ett videovisningsprogram som du har skapat med Dynamic Media HTML5 Viewer SDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
 Om du använder ett användningsklart visningsprogram från Dynamic Media, eller om du har skapat en anpassad visningsförinställning baserad på ett skräddarsytt visningsprogram, krävs inga ytterligare steg för att visa videorapporter. Om du har skapat ett eget videovisningsprogram baserat på SDK-API:t för HTML5-visningsprogrammet ska du följa de här stegen för att se till att videovisningsprogrammet skickar spårningshändelser till Dynamic Media videorapporter.
 
@@ -962,7 +958,7 @@ Så här visar du videorapporter baserade på ett videovisningsprogram som du ha
       ```
    AppMeasurementBridge-objektet har en inbyggd spårfunktion. Du kan dock ge dig ett eget stöd för flera spårningssystem eller andra funktioner.
 
-   Mer information finns i *Använda komponenten TrackingManager* i *användarhandboken för Scene7 HTML5 Viewer SDK* som är tillgänglig för hämtning från [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html).
+<!--    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
 ## Lägga till bildtexter i videon {#adding-captions-to-video}
 
@@ -976,7 +972,7 @@ Bildtext ger också bättre tillgänglighet genom att använda undertexter för 
 
 Dynamic Media kan konvertera bildtextfiler till JSON-format (JavaScript Object Notation). Den här konverteringen innebär att du kan bädda in JSON-texten på en webbsida som en dold men fullständig utskrift av videon. Sökmotorerna kan sedan crawla och indexera innehållet så att videoklippen blir lättare att hitta och ge kunderna ytterligare information om videoinnehållet.
 
-Mer information om hur du använder JSON-funktionen i en URL finns i [Serverar statiskt (icke-image) innehåll](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html) i *API-hjälpen för Scene7 Image Serving*.
+Mer information om hur du använder JSON-funktionen i en URL finns i [Serverar statiskt (icke-bildinnehåll)](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api) i hjälpen för Dynamic Media Image Serving and Rendering API *.*
 
 **Så här lägger du till bildtexter eller undertexter till video**:
 
@@ -1179,4 +1175,3 @@ Om du vill konfigurera det standardtidsintervall som videominiatyrbilder generer
 1. När bilden har överförts trycker du på **[!UICONTROL Change Thumbnail]** på **[!UICONTROL Save Changes]**.
 
    Den anpassade miniatyrbilden läggs till i videon.
-
