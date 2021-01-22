@@ -3,9 +3,9 @@ title: Migrera resurser till Adobe Experience Manager Assets i grupp
 description: Så här lägger du in resurser i AEM, använder metadata, genererar renderingar och aktiverar dem för att publicera instanser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 976d037d701eb7cc61a62e14e554675961d6179c
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '1791'
 ht-degree: 11%
 
 ---
@@ -79,7 +79,7 @@ När resurser inte överförs via ett nätverk förbättras prestandan avsevärt
 
 ### Bearbeta renderingar {#process-renditions}
 
-När du har läst in resurserna i systemet måste du bearbeta dem via arbetsflödet DAM Update Asset för att extrahera metadata och generera renderingar. Innan du utför det här steget måste du duplicera och ändra arbetsflödet för DAM-uppdatering av resurser efter dina behov. Vissa steg i standardarbetsflödet är kanske inte nödvändiga för dig, till exempel Scene7 PTIFF-generering eller serverintegrering med InDesign.
+När du har läst in resurserna i systemet måste du bearbeta dem via arbetsflödet DAM Update Asset för att extrahera metadata och generera renderingar. Innan du utför det här steget måste du duplicera och ändra arbetsflödet för DAM-uppdatering av resurser efter dina behov. Vissa steg i standardarbetsflödet är kanske inte nödvändiga för dig, till exempel Dynamic Media Classic PTIFF-generering eller serverintegrering med InDesign.
 
 När du har konfigurerat arbetsflödet efter dina behov kan du utföra det på två sätt:
 
