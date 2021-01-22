@@ -4,9 +4,9 @@ description: Versionsinformation om Adobe Experience Manager 6.4 Cumulative Fix 
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1d3476c3fdc8cf817e4784f36b4e0858fdc3b1ee
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '4136'
+source-wordcount: '4138'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Adobe Experience Manager 6.4.8.3 innehåller korrigeringar för följande proble
 
 * När alternativet [!UICONTROL Enable JPG Chrominance Downsampling] är avmarkerat i [!DNL Experience Manager] i inställningarna för Bildförinställning synkroniseras inte ändringen med [!DNL Dynamic Media] (NPR-34284).
 * I [!UICONTROL Viewer Presets Editor] är modifieringsetiketten `PANORAMICVIEW_AUTOROTATE` inte tillgänglig när du redigerar [!UICONTROL PanoramicImage/PanoramicImage_VR]-förinställningen i `PanoramicView`-komponenten (CQ-4302043).
-* Om du avpublicerar en video från [!DNL Experience Manager] avpubliceras inte den adaptiva videouppsättningen på den konfigurerade Scene7. (CQ-4304405).
+* Om du avpublicerar en video från [!DNL Experience Manager] avpubliceras inte den adaptiva videouppsättningen på den konfigurerade Dynamic Media Classic. (CQ-4304405).
 
 ### Plattform {#platform-6483}
 
@@ -187,7 +187,7 @@ Adobe Experience Manager 6.4.8.2 innehåller korrigeringar för följande proble
 
 * Funktionen för smart beskärning misslyckas med fel när en bildprofil läggs till i en mapp med flera (till exempel 11) proportioner (NPR-34083).
 
-* Ändringar av bildförinställningar i [!UICONTROL Adobe Experience Manager] synkroniseras inte med Scene7 Publishing System (NPR-34284, CQ-4299713).
+* Ändringar av bildförinställningar i [!UICONTROL Adobe Experience Manager] synkroniseras inte med Dynamic Media Classic (NPR-34284, CQ-4299713).
 
 * Modifieretiketten [!UICONTROL PANORAMICVIEW_AUTOROTATE] saknas på fliken [!UICONTROL Behavior] på sidan [!UICONTROL Viewer Preset Editor] (CQ-4302043).
 
