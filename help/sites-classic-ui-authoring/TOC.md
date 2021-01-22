@@ -7,9 +7,9 @@ user-guide-title: Användarhandbok för redigering av AEM 6.4 Classic UI
 breadcrumb-title: Användargränssnittets skrivguide
 user-guide-description: Den här handboken beskriver koncepten för redigering i AEM i det klassiska användargränssnittet.
 translation-type: tm+mt
-source-git-commit: b0457d967a8d366caef45e2917ae73e7550ba69e
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '319'
 ht-degree: 17%
 
 ---
@@ -86,7 +86,7 @@ ht-degree: 17%
    + [Leverera Dynamic Media Assets](dynamic-media-assets-delivering.md)
    + [Ställa in ett standardstadium med Autodesk Maya och Mental Ray](classicui-stages-aem3d-ad-mr.md)
    + [Lägga till Dynamic Media-resurser på sidor](dynamic-media-assets-adding-to-page.md)
-   + [Lägga till Scene7-funktioner på din sida](manage-assets-classic-s7.md)
+   + [Lägga till Dynamic Media Classic-funktioner (Scene7) på din sida](manage-assets-classic-s7.md)
    + [Arbeta med Dynamic Media](dynamic-media-assets.md)
    + [Arbeta med 3D-resurser](classicui-3dassets.md)
    + [Video](manage-assets-classic-s7-video.md)
