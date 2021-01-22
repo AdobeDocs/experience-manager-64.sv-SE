@@ -4,9 +4,9 @@ description: Lär dig mer om olika resurshanterings- och redigeringsuppgifter so
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c86c84efeb25673490373273a9f4720381e46454
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '9713'
+source-wordcount: '9712'
 ht-degree: 2%
 
 ---
@@ -161,7 +161,7 @@ Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du t�
 
    >[!NOTE]
    >
-   >När du överför resurser via FTP får de överföringsjobbalternativ som du anger i Dynamic Media Classic (Scene7) företräde framför de resurshanteringsparametrar som anges i AEM.
+   >När du överför resurser via FTP får de alternativ för överföringsjobb som du anger i Dynamic Media Classic företräde framför de parametrar för resursbearbetning som angetts i AEM.
 
 1. Tryck på **[!UICONTROL Save]** i det nedre högra hörnet av dialogrutan **[!UICONTROL Upload Job Options]**.
 1. Tryck på **[!UICONTROL Submit Upload]** i det nedre högra hörnet på sidan **[!UICONTROL Upload]**.
