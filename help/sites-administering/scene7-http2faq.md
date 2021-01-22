@@ -1,19 +1,15 @@
 ---
 title: Vanliga frågor om leverans av innehåll med HTTP2
-seo-title: Vanliga frågor om leverans av innehåll med HTTP2
 description: Läs mer om HTTP2-innehållsleverans.
-seo-description: Läs mer om HTTP2-innehållsleverans.
-uuid: e837c3e0-6e48-46f1-b510-847c9976807a
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: afbe9f80-c2a3-4a46-b9d6-4c9406667d7f
 translation-type: tm+mt
-source-git-commit: 31ddda9f74541dcf58fe70971535ee4180f70d6e
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 2%
+source-wordcount: '757'
+ht-degree: 1%
 
 ---
 
@@ -32,7 +28,7 @@ På följande webbplats beskrivs HTTP/2 och dess fördelar på ett kort och enke
 
 ## Vilka är de viktigaste fördelarna med att gå över till HTTP/2 för innehållsleverans? {#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
 
-Prestandaförbättringarna varierar mycket beroende på faktorer som webbplatsens kod, hur du använder Scene7, konsumentens enhet, skärm och plats och så vidare.
+Prestandaförbättringarna varierar mycket beroende på faktorer som webbplatsens kod, hur du använder Dynamic Media, konsumentens enhet, skärm och plats och så vidare.
 
 Adobe testning gav följande resultat:
 
@@ -51,9 +47,7 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 * Använd det Adobe-paketerade CDN (content delivery network) som en del av din Dynamic Media Classic-licens.
 * Använd en dedikerad domän (d.v.s. `images.company.com` eller `mycompany.scene7.com`), inte en generisk Dynamic Media Classic-domän (d.v.s. `s7d1.scene7.com`, `s7d2.scene7.com` eller `s7d13.scene7.com`).
 
-   [Logga in på din instans av Scene7 Publishing System](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) för varje företagskonto för att hitta dina domäner.
-
-   Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet **Publicerat servernamn**. Om du för närvarande använder en allmän Scene7-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
+   Om du vill hitta dina domäner loggar du in på ditt konto med [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app). Tryck sedan på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet **Publicerat servernamn**. Om du för närvarande använder en allmän Dynamic Media-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
 
 ## Hur aktiverar jag HTTP/2 för mitt Dynamic Media Classic-konto? {#what-is-the-process-for-enabling-http-for-my-scene-account}
 
@@ -63,18 +57,14 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
    * Primärt kontaktnamn, e-postadress och telefonnummer.
    * Alla domäner som ska överföras till HTTP2. Det vill säga `images.company.com` eller `mycompany.scene7.com`.
 
-   [Logga in på din instans av Scene7 Publishing System](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) för varje företagskonto för att hitta dina domäner.
-
+      Om du vill hitta dina domäner loggar du in på ditt konto med [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app). Tryck sedan på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name.]**
    Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name]**.
 
    * Verifiera att du använder säkra HTTPS för multimedieförfrågningar.
    * Kontrollera att du använder CDN via Adobe och inte hanteras med en direkt relation.
-   * Kontrollera att du använder en dedikerad domän. Det vill säga `images.company.com` eller `mycompany.scene7.com` är inte en allmän Scene7-domän som `s7d1.scene7.com`, `s7d2.scene7.com`, `s7d13.scene7.com`.
+   * Kontrollera att du använder en dedikerad domän. Det vill säga `images.company.com` eller `mycompany.scene7.com` är inte en allmän Dynamic Media-domän som `s7d1.scene7.com`, `s7d2.scene7.com`, `s7d13.scene7.com`.
 
-   [Logga in på din instans av Scene7 Publishing System](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) för varje företagskonto för att hitta dina domäner.
-
-   Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän Scene7-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
-
+      Om du vill hitta dina domäner loggar du in på ditt konto med [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app). Tryck sedan på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name.]** Om du använder en allmän Dynamic Media-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
    1. Teknisk support lägger till dig i HTTP/2-väntelistan baserat på i vilken ordning förfrågningarna skickades.
    1. När Adobe är redo att hantera din begäran kontaktar supporten dig för att koordinera övergången och ange ett måldatum.
    1. Du får ett meddelande när du är klar och du kan verifiera en lyckad övergång till HTTP2.
