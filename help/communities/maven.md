@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
 translation-type: tm+mt
-source-git-commit: 13d890d08a032fe4eef1dac793dcf2a3e682a52c
+source-git-commit: 5affffac6f953bcf1d436d8492ad6dd2a041b3b4
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '127'
 ht-degree: 0%
 
 ---
@@ -24,16 +24,52 @@ ht-degree: 0%
 
 Detta avsnitt i AEM Communities-dokumentationen innehåller även:
 
-* [Skapa AEM projekt med Apache Maven](../../help/sites-developing/ht-projects-maven.md)
+* [Skapa AEM projekt med Apache Maven](../../help/sites-developing/ht-projects-maven.md).
 
-Det finns nu två&quot;uber&quot;-artefakter som ersätter enskilda artefakter:
+Det finns bara en&quot;uber&quot;-artefakt som ersätter enskilda artefakter:
 
-* AEM [WebbCommunities API jar](#communities-api-jar-artifact)
 * AEM [Uber API jar](../../help/sites-developing/ht-projects-maven.md#what-is-the-uberjar)
 
-## Jar-artefakt för Communities-API {#communities-api-jar-artifact}
+>[!NOTE]
+>
+>Från och med AEM 6.4 släpps inte API:erna för Communities explicit. Alla API:er för användargrupper finns nu med i själva användarbehållaren.
+>
+>Vi rekommenderar att du håller dig uppdaterad med den senaste versionen av Communities.
+>
+>I avsnittet [Senaste releaser](deploy-communities.md#latest-releases) kan du identifiera den senaste versionen.
 
-Här följer ett exempel på en GAV för AEM Communities API jar:
+## Maven Dependency Example {#maven-dependency-example}
+
+```xml
+<dependency>
+    <groupId>com.adobe.aem</groupId>
+    <artifactId>uber-jar</artifactId>
+    <version>6.4.8.3</version>
+    <scope>provided</scope>
+</dependency>
+```
+
+>[!NOTE]
+>
+>Se [AEM Uber jar-databasen](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar) för att identifiera den senaste Uber jar-artefakten.
+
+<!--
+# Using Maven for Communities {#using-maven-for-communities}
+
+## Overview {#overview}
+
+This section of the AEM Communities documentation is in addition to:
+
+* [How to Build AEM Projects using Apache Maven](../../help/sites-developing/ht-projects-maven.md)
+
+There are now two "uber" artifacts that replace individual artifacts:
+
+* AEM [Communities API jar](#communities-api-jar-artifact)
+* AEM [Uber API jar](../../help/sites-developing/ht-projects-maven.md#what-is-the-uberjar)
+
+## Communities API Jar Artifact {#communities-api-jar-artifact}
+
+Following is an example of a GAV for the AEM Communities API jar:
 
 ```xml
 <dependency>
@@ -42,27 +78,28 @@ Här följer ett exempel på en GAV för AEM Communities API jar:
     <version>1.11.170</version>
     <scope>provided</scope>
 </dependency>
+
 ```
 
-Kontrollera att den angivna versionen motsvarar den version av webbcommunityn som är installerad för AEM Communities. Så här verifierar du det installerade versionsnumret:
+Ensure thet the version specified corresponds with the Communities package version installed for AEM Communities. To verify the installed version number:
 
-1. Logga in med administratörsbehörighet.
-2. Bläddra till [Pakethanteraren](../../help/sites-administering/package-manager.md). Till exempel [http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)
+1. Login with adminstrative privileges.
+2. Browse to [Package Manager](../../help/sites-administering/package-manager.md). For example, [http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)
 
-3. leta reda på paketet *cq-socialcommunities-pkg-1.x.xxx*
-4. extrahera versionen från paketnamnet
-   * första versionen för AEM 6.3 är version 1.11.170
-   * funktionspaket blir version 1.12.xxx
-
+3. locate the package *cq-socialcommunities-pkg-1.x.xxx*
+4. extract the version from the package name
+    * first version for AEM 6.3 is version 1.11.170
+    * feature packs will be versions 1.12.xxx
+    
 >[!NOTE]
 >
->Vi rekommenderar att du håller dig uppdaterad med den senaste versionen av Communities.
+>It is recommended to keep up-to-date with the most recent Communities release.
 >
->Besök [Senaste releaser](deploy-communities.md#latest-releases)-avsnittet för att identifiera den senaste versionen.
+>Visit the [Latest Releases](deploy-communities.md#latest-releases) section to identify the most recent version.
 
 ## Maven Dependency Example {#maven-dependency-example}
 
-Communities API jar måste anges före Uber API jar.
+The Communities API jar must be specified before the Uber API jar.
 
 ```xml
 <dependency>
@@ -79,3 +116,4 @@ Communities API jar måste anges före Uber API jar.
     <classifier>apis</classifier>
 </dependency>
 ```
+-->
