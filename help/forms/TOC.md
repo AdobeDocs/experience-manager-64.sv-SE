@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.4 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 translation-type: tm+mt
-source-git-commit: b0457d967a8d366caef45e2917ae73e7550ba69e
+source-git-commit: e7603d481720b368c6976674205bb523ac0df3d0
 workflow-type: tm+mt
-source-wordcount: '3721'
+source-wordcount: '3730'
 ht-degree: 0%
 
 ---
@@ -63,18 +63,18 @@ ht-degree: 0%
       + [Installera och konfigurera interaktiv kommunikation](using/installing-configuring-intreactive-communication-correspondence-management.md)
    + Installera AEM Forms på JEE {#jee-installation}
       + [Plattformar som stöds för AEM formulär på JEE](using/aem-forms-jee-supported-platforms.md)
-      + [Installera och distribuera AEM Forms på JEE med JBoss-körningsnyckel](http://www.adobe.com/go/learn_aemforms_installTurnkey_64)
-      + [Installera och konfigurera endast dokumentsäkerhetsservern](using/installing-and-configuring-the-document-security-server.md)
-      + [Förbered installation av AEM Forms single server](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64)
-      + [Installera och distribuera AEM Forms på JEE för JBoss](http://www.adobe.com/go/learn_aemforms_installJBoss_64)
+      + [Installera och distribuera AEM Forms på JEE med JBoss Turnkey](http://www.adobe.com/go/learn_aemforms_installTurnkey_64)
+      + [Installera och konfigurera AEM Forms Document Security-servern](using/installing-and-configuring-the-document-security-server.md)
+      + [Installation av AEM Forms (Single Server) förbereds](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64)
+      + [Installera och distribuera Adobe Experience Manager Forms på JEE för JBoss](http://www.adobe.com/go/learn_aemforms_installJBoss_64)
       + [Installera och distribuera AEM Forms på JEE för WebLogic](http://www.adobe.com/go/learn_aemforms_installWebLogic_64)
-      + [Installera och distribuera AEM Forms på JEE för WebSphere](http://www.adobe.com/go/learn_aemforms_installWebSphere_64)
+      + [Installera och distribuera Adobe Experience Manager Forms på JEE för WebSphere](http://www.adobe.com/go/learn_aemforms_installWebSphere_64)
       + [Installera AEM Forms Workbench](http://help.adobe.com/en_US/AEMForms/6.1/InstallWorkbench/index.html)
       + [Installera och konfigurera Designer](using/installing-configuring-designer.md)
-      + [Förbered installation av AEM Forms-serverkluster](http://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64)
-      + [Konfigurera AEM Forms på JEE i JBoss-kluster](http://www.adobe.com/go/learn_aemforms_clusterJBoss_64)
-      + [Konfigurera AEM Forms på JEE i WebLogic-kluster](http://www.adobe.com/go/learn_aemforms_clusterWebLogic_64)
-      + [Konfigurera AEM Forms på JEE i WebSphere-kluster](http://www.adobe.com/go/learn_aemforms_clusterWebSphere_64)
+      + [Installationen av AEM Forms (serverkluster) förbereds](http://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64)
+      + [Konfigurera Adobe Experience Manager Forms på JEE i JBoss-kluster](http://www.adobe.com/go/learn_aemforms_clusterJBoss_64)
+      + [Konfigurera Adobe Experience Manager Forms på JEE i WebLogic-kluster](http://www.adobe.com/go/learn_aemforms_clusterWebLogic_64)
+      + [Konfigurera Adobe Experience Manager Forms på JEE i WebSphere-kluster](http://www.adobe.com/go/learn_aemforms_clusterWebSphere_64)
    + Konfigurera AEM Forms {#configure-aem-forms}
       + [Prestandajustering av AEM Forms-server](using/performance-tuning-aem-forms.md)
       + [Konfigurera cacheminne för adaptiva formulär](using/configure-adaptive-forms-cache.md)
@@ -91,17 +91,17 @@ ht-degree: 0%
       + [Installera kompatibilitetspaket](using/compatibility-package.md)
       + [Migrera AEM Forms-resurser och -dokument](using/migration-utility.md)
    + Uppgradera AEM Forms på JEE {#aem-forms-jee-upgrade}
-      + [Förbered uppgradering av AEM Forms](http://www.adobe.com/go/learn_aemforms_prepareupgrade_64)
-      + [Upgrade checklist and planning](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_64)
+      + [Förbereder uppgradering av AEM Forms](http://www.adobe.com/go/learn_aemforms_prepareupgrade_64)
+      + [Adobe Experience Manager Forms i JEE-uppgraderingar - checklista och planering](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_64)
       + [Uppgradera till AEM 6.4-formulär på JEE](using/upgrade-forms-jee.md)
-      + [Uppgradera från en AEM Forms-version till AEM 6.4 Forms on JEE for JBoss](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_64)
+      + [Uppgradera till Adobe Experience Manager Forms på JEE för JBoss](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_64)
       + [Uppgradera från LiveCycle ES4 SP1 till Adobe Experience Manager Forms på JEE för JBoss](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-jboss-livecycle.pdf)
-      + [Uppgradera från en AEM Forms-version till AEM 6.4 Forms på JEE för JBoss - nyckelord](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_64)
-      + [Uppgradera från LiveCycle ES4 SP1 till AEM Forms på JEE för JBoss Turnkey](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-turnkey-livecycle.pdf)
-      + [Uppgradera från en AEM Forms-version till AEM 6.4 Forms on JEE for WebLogic](http://www.adobe.com/go/learn_aemforms_upgradeWebLogic_64)
-      + [Uppgradera från LiveCycle ES4 SP1 till AEM Forms på JEE för WebLogic](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-weblogic-livecycle.pdf)
-      + [Uppgradera från en AEM Forms-version till AEM 6.4 Forms on JEE for WebSphere](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_64)
-      + [Uppgradera från LiveCycle ES4 SP1 till AEM Forms på JEE för WebSphere](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-websphere-livecycle.pdf)
+      + [Uppgradera till AEM Forms on JEE for JBoss Turnkey](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_64)
+      + [Uppgradera från LiveCycle ES4 SP1 till Adobe Experience Manager Forms på JEE för JBoss Turnkey](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-turnkey-livecycle.pdf)
+      + [Uppgradera till Adobe Experience Manager Forms på JEE för WebLogic](http://www.adobe.com/go/learn_aemforms_upgradeWebLogic_64)
+      + [Uppgradera från LiveCycle ES4 SP1 till Adobe Experience Manager Forms på JEE för WebLogic](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-weblogic-livecycle.pdf)
+      + [Uppgradera till Adobe Experience Manager Forms i JEE för WebSphere](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_64)
+      + [Uppgradera från LiveCycle ES4 SP1 till Adobe Experience Manager Forms på JEE för WebSphere](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-websphere-livecycle.pdf)
 + Hantera AEM Forms {#manage-administer-aem-forms}
    + [AEM Forms on OSGi Groups and Privileges](using/forms-groups-privileges-tasks.md)
    + [Skapa nya mappar för att kategorisera formulär](using/creating-new-folders-categorize-forms.md)
@@ -368,11 +368,11 @@ ht-degree: 0%
    + [Protect ett dokument för en annan användares räkning](using/protect-document-on-behalf-of-another-user.md)
 + Forms Designer {#use-forms-designer}
    + [Använda Designer](http://www.adobe.com/go/learn_aemforms_designer_64)
-   + [Självstudiekurser för att komma igång med Designer](http://www.adobe.com/go/learn_aemforms_designer_quick_start_64)
-   + [Exempel från designern](http://www.adobe.com/go/learn_aemforms_designer_samples_64)
-   + [Grundläggande om skript i Designer](http://www.adobe.com/go/learn_aemforms_scriptingBasics_64)
-   + [Skriptreferens för Designer](http://www.adobe.com/go/learn_aemforms_scriptingReference_64)
-   + [FormCalc-referens för Designer](http://www.adobe.com/go/learn_aemforms_formCalc_64)
+   + [Självstudier för att komma igång med Designer ](http://www.adobe.com/go/learn_aemforms_designer_quick_start_64)
+   + [Exempel för Designer ](http://www.adobe.com/go/learn_aemforms_designer_samples_64)
+   + [Skriptgrunder för Designer ](http://www.adobe.com/go/learn_aemforms_scriptingBasics_64)
+   + [Skriptreferens för Designer ](http://www.adobe.com/go/learn_aemforms_scriptingReference_64)
+   + [FormCalc-referens för Designer ](http://www.adobe.com/go/learn_aemforms_formCalc_64)
    + [Använda klottersignaturer i HTML5-formulär](using/scribble-signature.md)
 + Anpassa AEM Forms {#customize-aem-forms}
    + [Utseenderamverk för adaptiva formulär och HTML5-formulär](using/introduction-widgets.md)
