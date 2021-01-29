@@ -7,9 +7,9 @@ user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, leverera och optimera digitala resurser.
 translation-type: tm+mt
-source-git-commit: 1c853b441845997fbb3086ca93d7020ed02d88c4
+source-git-commit: c3eeb3d4fc4b6ce7548c6385c21c6e4ed7b2f0e6
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '730'
 ht-degree: 30%
 
 ---
@@ -167,7 +167,7 @@ ht-degree: 30%
    + [Riktlinjer för utbildning i smarta innehållstjänster](smart-tags-training-guidelines.md)
    + [Videoåtergivningar](video-renditions.md)
 + 3D-resurser {#three-d}
-   + [Versionsinformation för AEM 3D](https://experienceleague.adobe.com/docs/experience-manager-64/assets/three-d/assets-3d.html)
+   + [Versionsinformation för AEM 3D](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/aem3d-release-notes.html)
    + [Arbeta med 3D-resurser](assets-3d.md)
    + [Installera och konfigurera AEM 3D](install-config-3d.md)
    + [Avancerade konfigurationsinställningar](advanced-config-3d.md)
