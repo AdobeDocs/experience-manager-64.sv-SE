@@ -1,17 +1,17 @@
 ---
 title: Korrespondenshantering | Hantera användardata
 seo-title: Korrespondenshantering | Hantera användardata
-description: 'null'
-seo-description: 'null'
+description: Med AEM Forms Correspondence Management kan ni skapa, hantera och effektivisera säkra och personaliserade kundkorrespondenser. Lär dig hur du konfigurerar lagring av data för utkast och skickade brev i AEM, får åtkomst till lagrade data och tar bort lagrade data.
+seo-description: Med AEM Forms Correspondence Management kan ni skapa, hantera och effektivisera säkra och personaliserade kundkorrespondenser. Lär dig hur du konfigurerar lagring av data för utkast och skickade brev i AEM, får åtkomst till lagrade data och tar bort lagrade data.
 uuid: d5bb190b-d668-4da3-95da-b7705ad302d9
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 764d8e0d-604d-4c7b-89cd-7686ce5f03ff
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: 7ec0cd95417c015565fa6e07c753c4ac6df35cdb
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 1%
+source-wordcount: '614'
+ht-degree: 0%
 
 ---
 
