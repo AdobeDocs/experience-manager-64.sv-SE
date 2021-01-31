@@ -1,18 +1,18 @@
 ---
 title: Konfigurera en Correspondence Management-lösning
 seo-title: Konfigurera en Correspondence Management-lösning
-description: 'null'
-seo-description: 'null'
+description: Lär dig hur du definierar en URL för en författarinstans för återställning av författarinstansversion och definierar publiceringsinstansens URL för aktiveringshanteraren för den offentliga instansen.
+seo-description: Lär dig hur du definierar en URL för en författarinstans för återställning av författarinstansversion och definierar publiceringsinstansens URL för aktiveringshanteraren för den offentliga instansen.
 uuid: 76b25004-fe47-44d7-9bed-7c0fd963306b
 topic-tags: correspondence-management
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 186ca75c-638b-4057-826e-cd5d56aa0397
 translation-type: tm+mt
-source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+source-git-commit: 7ec0cd95417c015565fa6e07c753c4ac6df35cdb
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 1%
+source-wordcount: '326'
+ht-degree: 0%
 
 ---
 
