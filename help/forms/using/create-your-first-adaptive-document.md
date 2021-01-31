@@ -1,15 +1,15 @@
 ---
 title: PUBLICERA INTE Skapa ditt första adaptiva dokument
 seo-title: PUBLICERA INTE Skapa ditt första adaptiva dokument
-description: 'null'
-seo-description: 'null'
+description: PUBLICERA INTE
+seo-description: PUBLICERA INTE
 page-status-flag: de-activated
 uuid: 2cb2bf82-130f-4d6b-a711-df0b97cb0504
 discoiquuid: f3ca177f-7c0d-4b8b-ab4b-bf04668d634c
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 7ec0cd95417c015565fa6e07c753c4ac6df35cdb
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
