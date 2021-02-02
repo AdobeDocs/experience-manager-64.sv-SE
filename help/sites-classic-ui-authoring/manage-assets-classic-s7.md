@@ -10,9 +10,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 9ba95dce-a801-4a36-8798-45d295371b1b
 translation-type: tm+mt
-source-git-commit: 28e552f065d38225226d757c0af00d86d9ed8e07
+source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
 workflow-type: tm+mt
-source-wordcount: '3234'
+source-wordcount: '3232'
 ht-degree: 1%
 
 ---
@@ -242,7 +242,7 @@ Med bildkomponenten i Dynamic Media Classic kan du lägga till Dynamic Media Cla
 
 **[!UICONTROL Sharpening]** - Välj hur du vill öka skärpan i bilden. Skärpeinställningen förklaras i detalj i [*Adobe Dynamic Media Classic Image Quality and Sharpening Best Practices*](/help/assets/assets/sharpening_images.pdf).
 
-**[!UICONTROL URL Modifiers]** - Du kan ändra bildeffekter genom att ange ytterligare bildkommandon för Dynamic Media Classic. Dessa beskrivs i [Hantera bildförinställningar](/help/assets/managing-image-presets.md) och [Kommandoreferens](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html).
+**[!UICONTROL URL Modifiers]** - Du kan ändra bildeffekter genom att ange ytterligare bildkommandon för Dynamic Media Classic. Dessa beskrivs i [Hantera bildförinställningar](/help/assets/managing-image-presets.md) och [Kommandoreferens](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html).
 
 **[!UICONTROL Breakpoints]** - Om webbplatsen är responsiv vill du justera brytpunkterna. Brytpunkter måste avgränsas med kommatecken `,`.
 
