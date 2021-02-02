@@ -7,9 +7,9 @@ user-guide-title: AEM 6.4 Developing User Guide
 breadcrumb-title: Utvecklingshandbok
 user-guide-description: Den här guiden beskriver hur du skapar AEM.
 translation-type: tm+mt
-source-git-commit: b0457d967a8d366caef45e2917ae73e7550ba69e
+source-git-commit: 7345a3c392dc6df495454a061a8a0624a4fb46d1
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '885'
 ht-degree: 5%
 
 ---
@@ -73,13 +73,13 @@ ht-degree: 5%
       + [Utveckla med SAP Commerce Cloud](sap-commerce-cloud.md)
 + Komponenter{#components}
    + [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
-   + [Formatsystem](/help/sites-authoring/style-system.md)
+   + [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/siteandpage/style-system.html)
    + [Komponenter - översikt](components.md)
    + [AEM - Grunderna](components-basics.md)
    + [Utveckla AEM](developing-components.md)
    + [Utveckla AEM - kodexempel](developing-components-samples.md)
    + [JSON-exporterare för innehållstjänster](json-exporter.md)
-   + [Aktivera JSON-export för en komponent](json-exporter-components.md)
+   + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-64/developing/components/json-exporter-components.html)
    + [Bildredigeraren](image-editor.md)
    + [Dekoration-tagg](decoration-tag.md)
    + [Använda Dölj villkor](hide-conditions.md)
@@ -117,9 +117,9 @@ ht-degree: 5%
       + [SPA och Adobe Experience Platform Launch Integration](spa-launch.md)
       + [SPA- och serveråtergivning](spa-ssr.md)
       + [SPA referensmaterial](spa-reference-materials.md)
-   + [HTTP-API](/help/assets/mac-api-assets.md)
-   + [Innehållsfragment](/help/assets/content-fragments.md)
-   + [Experience Fragments](/help/sites-authoring/experience-fragments.md)
+   + [HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-64/assets/extending/mac-api-assets.html)
+   + [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-64/assets/fragments/content-fragments.html)
+   + [Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/authoring/experience-fragments.html)
    + [Förstå innehållsfragment och innehållstjänster i AEM](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-content-services-feature-video-understand.html)
 + Utvecklingsverktyg{#devtools}
    + [Utvecklingsverktyg](dev-tools.md)
@@ -176,12 +176,12 @@ ht-degree: 5%
       + [Skapa anpassade formulärmappningar](extending-campaign-form-mapping.md)
       + [Skapa en anpassad AEM med Adobe Campaign Form Components](extending-campaign-custom-template.md)
       + [Begär analysskript](analyze-request.md)
-   + [Integrera tjänster med JMX-konsolen](jmx-integration.md)
-   + [Developing the Bulk Editor](dev-bulk-editor.md)
+   + [Integrera tjänster med JMX-konsolen](https://experienceleague.adobe.com/docs/experience-manager-64/developing/platform/jmx-integration.html)
+   + [Developing the Bulk Editor](https://experienceleague.adobe.com/docs/experience-manager-64/developing/platform/dev-bulk-editor.html)
    + Utöka Classic UI{#extending-classic-ui}
       + [Anpassa webbplatskonsolen (Classic UI)](customizing-siteadmin.md)
       + [Anpassa välkomstkonsolen (Classic UI)](customizing-the-welcome-console.md)
-      + [Utveckla rapporter](dev-reports.md)
+      + [Utveckla rapporter](https://experienceleague.adobe.com/docs/experience-manager-64/developing/platform/dev-reports.html)
 + Testning{#testing}
    + [Planering](planning.md)
    + [Vilka testmiljöer behövs?](test-environments.md)
@@ -194,10 +194,10 @@ ht-degree: 5%
    + [Nästa version...](the-next-release.md)
    + [Checklistor](checklists.md)
    + [Tålig dag](tough-day.md)
-   + [Testa användargränssnittet](hobbes.md)
+   + [Testa användargränssnittet](https://experienceleague.adobe.com/docs/experience-manager-64/developing/components/hobbes.html)
 + Bästa praxis{#bestpractices}
    + [Översikt över bästa praxis](best-practices.md)
-   + [AEM riktlinjer för utveckling och bästa metoder](dev-guidelines-bestpractices.md)
+   + [AEM riktlinjer för utveckling och bästa metoder](https://experienceleague.adobe.com/docs/experience-manager-64/developing/introduction/dev-guidelines-bestpractices.html)
    + [Bästa praxis för utveckling](development-practices.md)
    + [Innehållsarkitektur](content-architecture.md)
    + [Programvaruarkitektur](software-architecture.md)
