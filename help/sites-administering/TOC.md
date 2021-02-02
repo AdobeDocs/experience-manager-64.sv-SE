@@ -7,10 +7,10 @@ user-guide-title: AEM 6.4 Handbok för administrationsanvändare
 breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: 7345a3c392dc6df495454a061a8a0624a4fb46d1
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 6%
+source-wordcount: '658'
+ht-degree: 5%
 
 ---
 
@@ -81,7 +81,7 @@ ht-degree: 6%
    + [Åtgärda serialiseringsproblem i AEM](mitigating-serialization-issues.md)
    + [Användarsynkronisering](sync.md)
    + [Stöd för inkapslad token](encapsulated-token.md)
-   + [Enkel inloggning](/help/sites-deploying/single-sign-on.md)
+   + [Enkel inloggning](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/single-sign-on.html)
    + [Granska åtgärder för användarhantering i AEM](audit-user-management-operations.md)
    + [SSL som standard](ssl-by-default.md)
    + [SAML 2.0-autentiseringshanterare](saml-2-0-authenticationhandler.md)
@@ -155,11 +155,11 @@ ht-degree: 6%
    + [Målintegrering med upplevelsefragment](experience-fragments-target.md)
 + Bästa praxis {#bestpractices}
    + [Bästa praxis](administer-best-practices.md)
-   + [Bästa praxis för översättning](tc-bp.md)
-   + [MSM Best Practices](msm-best-practices.md)
+   + [Bästa praxis för översättning](https://experienceleague.adobe.com/docs/experience-manager-64/administering/introduction/tc-bp.html)
+   + [MSM Best Practices](https://experienceleague.adobe.com/docs/experience-manager-64/administering/introduction/msm-best-practices.html)
    + [AEM Sites - GDPR-beredskap](gdpr-compliance-sites.md)
-   + [Hantera GDPR-begäranden för AEM Foundation](handling-gdpr-requests-for-aem-platform.md)
-   + [AEM Commerce - GDPR-beredskap](gdpr-compliance-commerce.md)
+   + [Hantera GDPR-begäranden för AEM Foundation](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/handling-gdpr-requests-for-aem-platform.html)
+   + [AEM Commerce - GDPR-beredskap](https://experienceleague.adobe.com/docs/experience-manager-64/administering/ecommerce/gdpr-compliance-commerce.html)
 + Innehållshantering {#contentmanagement}
    + [Så här arbetar du med paket](package-manager.md)
    + [Resursavlastare för arbetsflöde](workflow-offloader.md)
