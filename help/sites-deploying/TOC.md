@@ -7,9 +7,9 @@ user-guide-title: AEM 6.4 Distributionshandbok
 breadcrumb-title: Distributionsguide
 user-guide-description: Läs mer om installation, distribution och arkitekturen för Adobe Experience Manager 6.4, inklusive vår molndistribution av Adobe Managed Services.
 translation-type: tm+mt
-source-git-commit: b0457d967a8d366caef45e2917ae73e7550ba69e
+source-git-commit: 7345a3c392dc6df495454a061a8a0624a4fb46d1
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '356'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 1%
    + [Avlastar jobb](offloading.md)
    + [Enkel inloggning](single-sign-on.md)
    + [Resursmappning](resource-mapping.md)
-   + [Aktivera HTTP över SSL](/help/sites-administering/ssl-by-default.md)
+   + [Aktivera HTTP över SSL](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/ssl-by-default.html)
    + [Konsekvenskontroll och genomgående kontroll](consistency-check.md)
    + [Riktlinjer för prestanda](performance-guidelines.md)
    + [Prestandaoptimering](configuring-performance.md)
