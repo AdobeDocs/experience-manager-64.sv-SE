@@ -10,9 +10,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d1f45751-1761-4d6b-b17d-110b2f1117ea
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
 workflow-type: tm+mt
-source-wordcount: '2712'
+source-wordcount: '2708'
 ht-degree: 4%
 
 ---
@@ -188,8 +188,8 @@ Visningsmodifierare har formen av namn=värde-par med en &amp;-avgränsare och d
 
    Med visningsmodifierare kan du till exempel göra följande:
 
-   * Associera en bildtextfil med en videobeskrivning [.](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
-   * Associera en navigeringsfil med en video [navigering.](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
+   * Associera en bildtextfil med en videobeskrivning [.](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
+   * Associera en navigeringsfil med en video [navigering.](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
 
 Du kan redigera följande [!UICONTROL Advanced Settings] genom att klicka på **[!UICONTROL Edit]** i komponenten.
 
