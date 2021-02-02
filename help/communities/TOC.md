@@ -6,9 +6,9 @@ user-guide-title: Användarhandbok för AEM 6.4 Communities
 breadcrumb-title: Communities Guide
 user-guide-description: Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
 translation-type: tm+mt
-source-git-commit: 5542ec45e64595a8e7159d925fdcbfff468ae7ec
+source-git-commit: 7345a3c392dc6df495454a061a8a0624a4fb46d1
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
    + [Communities Sites](administer-landing.md)
    + [AEM Communities - översikt](overview.md)
    + [Nyheter i AEM 6.4 Communities](whats-new-aem-communities.md)
-   + [Versionsinformation för AEM Communities](/help/release-notes/communities-release-notes.md)
+   + [Versionsinformation för AEM Communities](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/communities-release-notes.html)
    + [Komma igång med AEM Communities](getting-started.md)
    + [Komma igång med AEM Communities för aktivering](getting-started-enablement.md)
    + [Inledande konfiguration](setup.md)
@@ -39,7 +39,7 @@ ht-degree: 0%
    + [Konfigurera Dispatcher för Communities](dispatcher.md)
 + Administrera {#administer}
    + [Tjänsten för hantering av användare och användargenererat innehåll i AEM Communities](user-ugc-management-service.md)
-   + [Communities Sites](administer-landing.md)
+   + [Communities Sites](https://experienceleague.adobe.com/docs/experience-manager-64/communities/introduction/administer-landing.html)
    + [Communities-konsoler](consoles.md)
    + [Analyskonfiguration för communityfunktioner](analytics.md)
    + [Konfigurera aktiveringsfunktioner](enablement.md)
@@ -166,4 +166,5 @@ ht-degree: 0%
    + [Aktivitetstrender](trends.md)
    + [Använda molnet för sociala taggar](tagcloud.md)
    + [Använda röstning](voting.md)
-   + [Skapa en exempelsida](create-sample-page.md)
+   + [Skapa en exempelsida](https://experienceleague.adobe.com/docs/experience-manager-64/communities/develop/create-sample-page.html)
+
