@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '722'
 ht-degree: 3%
 
 ---
@@ -41,7 +41,7 @@ I Dynamic Media-sammanhang kan webbplatser som använder ett XML-baserat system 
 >Var försiktig när du använder linjaler. kan de förhindra att Dynamic Media-innehåll visas på din webbplats.
 
 Det finns exempellinjaler som kan hjälpa dig att skapa en egen linjaluppsättning.\
-Se [Referens för regeluppsättning](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference.html).
+Se [Referens för regeluppsättning](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference.html).
 
 Precis som när du skapar alla regeluppsättningar måste du se till att XML-filen är giltig innan du överför den med ett XML-valideringsprogram som xmlvalid.\
 Se även [Troubleshooting rule sets](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/scene7-ruleset-troubleshooting.html).
