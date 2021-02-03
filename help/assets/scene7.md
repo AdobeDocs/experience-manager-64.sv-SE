@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
 topic-tags: managing-assets
 translation-type: tm+mt
-source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
+source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
 workflow-type: tm+mt
-source-wordcount: '2736'
+source-wordcount: '2691'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # Lägga till Dynamic Media Classic-funktioner på din sida {#adding-scene-features-to-your-page}
 
-[Adobe Dynamic Media ](https://help.adobe.com/en_US/scene7/using/WS26AB0D9A-F51C-464e-88C8-580A5A82F810.html) Classic är en värdbaserad lösning för att hantera, förbättra, publicera och leverera multimediematerial för webben, mobiler, e-post och internetanslutna skärmar och för tryck.
+Adobe Dynamic Media Classic är en värdbaserad lösning för att hantera, förbättra, publicera och distribuera multimediematerial för webben, mobiler, e-post och internetanslutna skärmar och för tryck.
 
 Du kan visa AEM resurser som publicerats i Dynamic Media Classic i olika visningsprogram:
 
@@ -74,8 +74,6 @@ När de har gjorts tillgängliga i **[!UICONTROL Design]**-läge kan du lägga t
 ### Meddelande om att Flash Viewer har upphört {#flash-viewers-end-of-life-notice}
 
 Från och med den 31 januari 2017 upphörde Adobe Dynamic Media Classic med stödet för visningsprogramplattformen Flash.
-
-Mer information om den här viktiga ändringen finns i [Vanliga frågor om användarutgånget i Flash Viewer](https://docs.adobe.com/content/docs/en/aem/6-1/administer/integration/marketing-cloud/scene7/flash-eol.html).
 
 ### Lägga till en Dynamic Media Classic-komponent (Scene7) på en sida {#adding-a-scene-component-to-a-page}
 
@@ -196,7 +194,7 @@ Om webbplatsen är responsiv vill du justera brytpunkterna. Brytpunkter måste a
 
 ### Bildmall {#image-template}
 
-[Dynamic Media Classic Image-](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) mallar är Photoshop-innehåll i lager som har importerats till Dynamic Media Classic, där innehåll och egenskaper har parametriserats för variabilitet. Med **[!UICONTROL Image template]**-komponenten kan du importera bilder och ändra texten dynamiskt i AEM. Dessutom kan du konfigurera **[!UICONTROL Image template]**-komponenten så att värden från klientkontexten används, så att varje användare upplever bilden på ett personligt sätt.
+[Dynamic Media Classic Image-](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#creating-the-initial-template) mallar är Photoshop-innehåll i lager som har importerats till Dynamic Media Classic, där innehåll och egenskaper har parametriserats för variabilitet. Med **[!UICONTROL Image template]**-komponenten kan du importera bilder och ändra texten dynamiskt i AEM. Dessutom kan du konfigurera **[!UICONTROL Image template]**-komponenten så att värden från klientkontexten används, så att varje användare upplever bilden på ett personligt sätt.
 
 Tryck på **[!UICONTROL Edit]** för att konfigurera komponenten. Du kan konfigurera [inställningar som är gemensamma för alla Dynamic Media Classic-komponenter](#settings-common-to-all-scene-components) samt andra inställningar som beskrivs i det här avsnittet.
 
