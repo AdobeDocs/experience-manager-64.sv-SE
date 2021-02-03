@@ -1,18 +1,14 @@
 ---
 title: Visa 3D-resurser
-seo-title: Visa 3D-resurser
 description: Lär dig mer om det interaktiva 3D-visningsprogrammet som finns på sidan med resursinformation i AEM och hur du använder det för att visa 3D-resurser.
-seo-description: Lär dig mer om det interaktiva 3D-visningsprogrammet som finns på sidan med resursinformation i AEM och hur du använder det för att visa 3D-resurser.
-uuid: 7d8133ac-3110-4979-8e19-e65090e791be
 contentOwner: Rick Brough
 topic-tags: 3D
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
-discoiquuid: 65040923-a8a8-4e27-82c0-67a04348e238
 translation-type: tm+mt
-source-git-commit: 11b65cf2d180f04168d4c5d0929957c95a372e3c
+source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1717'
 ht-degree: 0%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->AEM 3D i AEM 6.4 stöds inte längre. Adobe rekommenderar att du använder funktionen 3D-resurser i [AEM som en Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html) eller [AEM 6.5.3 eller senare.](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html) för att visa 3D-resurser.
+>AEM 3D i AEM 6.4 stöds inte längre. Adobe rekommenderar att du använder funktionen 3D-resurser i [AEM som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html#dynamicmedia) eller [AEM 6.5.3 eller senare.](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/assets-3d.html#dynamic) för att visa 3D-resurser.
 
 I det här dokumentet beskrivs både hur du visar 3D-resurser i resursinformation och hur du visar resurser som finns i 3D-komponenten på platser.
 
