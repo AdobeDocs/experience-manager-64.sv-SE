@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
+source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
 workflow-type: tm+mt
-source-wordcount: '5273'
+source-wordcount: '5259'
 ht-degree: 1%
 
 ---
@@ -422,7 +422,7 @@ Om du inte vill att resurser som skickas till Dynamic Media Classic ska publicer
 Innan du kan överföra resurser till Dynamic Media Classic utan att publicera dem måste du konfigurera följande:
 
 1. [Använd Admin Console för att skapa ett supportärende.](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) I ditt supportärende begär du att säker förhandsvisning ska aktiveras för ditt Dynamic Media Classic-konto.
-1. Följ instruktionerna för att [konfigurera säker förhandsgranskning för ditt Dynamic Media Classic-konto.](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html)
+1. Följ instruktionerna för att [konfigurera säker förhandsgranskning för ditt Dynamic Media Classic-konto.](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html#upload-publish)
 
 Detta är samma steg som du gör för att skapa säkra testkonfigurationer i Dynamic Media Classic.
 
@@ -452,7 +452,7 @@ Så här anger du status för resurser som skickats till Dynamic Media Classic s
 1. Tryck på AEM och navigera till **[!UICONTROL Deployment > Cloud Services]**, tryck på **[!UICONTROL Dynamic Media Classic]** och välj konfigurationen i Dynamic Media Classic.
 1. Tryck på fliken **[!UICONTROL Advanced]**. I listrutan **[!UICONTROL Enable Secure View]** väljer du **[!UICONTROL Upon AEM Publish Activation]** om du vill skicka resurser till Dynamic Media Classic utan publicering. (Som standard är det här värdet **[!UICONTROL Immediately]**, där Dynamic Media Classic-resurser publiceras direkt.)
 
-   Mer information om hur du testar resurser innan du publicerar dem finns i [Dynamic Media Classic-dokumentationen](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html).
+   Mer information om hur du testar resurser innan du publicerar dem finns i [Dynamic Media Classic-dokumentationen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html#upload-publish).
 
    ![chlimage_1-302](assets/chlimage_1-302.png)
 
