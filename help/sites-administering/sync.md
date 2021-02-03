@@ -10,7 +10,7 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 707b150b-7759-437f-9150-9f4784856754
 translation-type: tm+mt
-source-git-commit: 39c9ca8fb7b73d74904a56d9e6a5418950a8c98b
+source-git-commit: 770e435f41102b2d795c88cbb361de510564d319
 workflow-type: tm+mt
 source-wordcount: '2502'
 ht-degree: 1%
@@ -127,7 +127,7 @@ behörigheterDen här behöriga användaren används i steg 3 för att konfigure
 >
 >En ny användare måste skapas.
 >
->* Standardanvändaren som tilldelas är **`admin`**.
+>* Standardanvändaren är **`admin`**.
 >* Använd inte `*communities-user-admin *user*.*`
 
 >
@@ -171,7 +171,7 @@ När en auktoriserad användare, som är medlem i användargruppen **`administra
    * åtkomst till [webbkonsolen](/help/sites-deploying/configuring-osgi.md)
 
       * till exempel [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
-   * lokalisera `Adobe Granite Distribution - Encrypted Password Transport Secret Provider`
+   * lokalisera `com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.name`
    * välj den befintliga konfiguration som ska öppnas för redigering (pennikon)
 
       Verifiera `property name`: **`socialpubsync-publishUser`**
