@@ -1,18 +1,14 @@
 ---
 title: Arbeta med Adobe Dimension-resurser
-seo-title: Arbeta med Adobe Dimension-resurser
 description: Arbeta med Adobe Dimension-resurser i AEM 3D.
-seo-description: Arbeta med Adobe Dimension-resurser i AEM 3D.
-uuid: 476e6758-b3a1-42ba-a18d-bfc407c6a72e
 contentOwner: Rick Brough
 topic-tags: 3D
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
-discoiquuid: 4a601c2a-4ea1-4308-8ae8-704155f63c21
 translation-type: tm+mt
-source-git-commit: 11b65cf2d180f04168d4c5d0929957c95a372e3c
+source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Det AEM 3D-funktionspaketet i AEM 6.4 stöds inte längre. Adobe rekommenderar att du använder funktionen 3D-resurser i [AEM som en Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html) eller [AEM 6.5.3 eller senare.](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html) när du arbetar med Adobe Dimension-resurser.
+>Det AEM 3D-funktionspaketet i AEM 6.4 stöds inte längre. Adobe rekommenderar att du använder funktionen 3D-resurser i [AEM som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html#dynamicmedia) eller [AEM 6.5.3 eller senare.](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/assets-3d.html#dynamic) när du arbetar med Adobe Dimension-resurser.
 
 Det AEM 3D-funktionspaketet har stöd för Adobe Dimension-resurser (`.dn`-filer) i AEM Assets, AEM Sites och AEM Screens.
 
