@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 59fed31d276510c3346a46ac38f2a79c6f91d848
+source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
 workflow-type: tm+mt
-source-wordcount: '5181'
+source-wordcount: '5172'
 ht-degree: 3%
 
 ---
@@ -154,7 +154,7 @@ Bildserverskärmen anger standardinställningar för att leverera bilder. En bes
 * **[!UICONTROL Defaults for Catalog Fields]** - De här inställningarna gäller bildernas upplösning och standardtyp av miniatyrbilder.
 * **[!UICONTROL Color Management Attributes]** - De här inställningarna avgör vilka ICC-färgprofiler som används.
 * **[!UICONTROL Compatibility Attributes]** - Den här inställningen gör att inledande och avslutande stycken i textlager kan hanteras som de var i version 3.6 för bakåtkompatibilitet.
-* **[!UICONTROL Localization Support]** - Med de här inställningarna kan du hantera flera språkattribut. Här kan du också ange en sträng för språkområdeskarta så att du kan definiera vilka språk du vill ha stöd för de olika verktygstipsen i visningsprogram. Mer information om hur du konfigurerar stöd för lokalisering finns i [Att tänka på när du konfigurerar lokalisering av resurser](https://help.adobe.com/en_US/scene7/using/WS997f1dc4cb0179f034e07dc31412799d19a-8000.html).
+* **[!UICONTROL Localization Support]** - Med de här inställningarna kan du hantera flera språkattribut. Här kan du också ange en sträng för språkområdeskarta så att du kan definiera vilka språk du vill ha stöd för de olika verktygstipsen i visningsprogram. Mer information om hur du konfigurerar stöd för lokalisering finns i [Viktigt att tänka på när du implementerar lokaliseringsstöd](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html#image-server).
 
 #### Konfigurerar allmänna inställningar för programmet {#configuring-application-general-settings}
 
