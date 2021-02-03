@@ -10,9 +10,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: a0319701-21eb-4b7f-8b2e-ac81a7a75875
 translation-type: tm+mt
-source-git-commit: 11b65cf2d180f04168d4c5d0929957c95a372e3c
+source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '860'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->AEM 3D i AEM 6.4 stöds inte längre. Adobe rekommenderar att du använder funktionen 3D-resurser i [AEM som en Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html) eller [AEM 6.5.3 eller senare.](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html).
+>AEM 3D i AEM 6.4 stöds inte längre. Adobe rekommenderar att du använder funktionen 3D-resurser i [AEM som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html#dynamicmedia) eller [AEM 6.5.3 eller senare.](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/assets-3d.html#dynamic).
 
 Använd standardmekanismer för överföring eller synkronisering för att överföra 3D-resurser och tillhörande refererade filer till AEM Assets.
 
