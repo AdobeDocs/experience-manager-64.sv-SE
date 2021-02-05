@@ -1,27 +1,30 @@
 ---
 title: Video
-description: Läs om den centraliserade hanteringen av videoresurser i AEM Assets där du kan överföra videor för automatisk kodning till Dynamic Media Classic och få tillgång till Dynamic Media Classic-videor direkt från AEM Assets. Dynamic Media Classic-videointegrering gör att optimerad video kan användas på alla skärmar med automatisk enhets- och automatisk bandbreddsdetektering.
+description: Läs om den centraliserade hanteringen av videoresurser där du kan överföra videor för Experience Manager Assets för automatisk kodning till Dynamic Media Classic. Du kan även komma åt Dynamic Media Classic-videor direkt från Experience Manager Assets. Dynamic Media Classic-videointegrering gör att optimerad video kan användas på alla skärmar med automatisk enhets- och automatisk bandbreddsdetektering.
 contentOwner: rbrough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: managing-assets
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
+source-git-commit: 53fab119fc178e5ac88257cab1e930d4472eaa14
 workflow-type: tm+mt
-source-wordcount: '1568'
-ht-degree: 1%
+source-wordcount: '1551'
+ht-degree: 0%
 
 ---
 
 
 # Video {#video}
 
-Med resurser kan du centralisera hanteringen av videoresurser så att du kan överföra videor direkt till Assets för automatisk kodning till Dynamic Media Classic och få tillgång till Dynamic Media Classic-videor direkt från Assets för sidredigering.
+Med resurser kan du centralisera hanteringen av videoresurser där du kan överföra videor direkt till Assets för automatisk kodning till Dynamic Media Classic. Du kan även komma åt Dynamic Media Classic-videor direkt från Assets för sidredigering.
 
 Integrering med Dynamic Media Classic för video ger optimerad video även på alla skärmar (automatisk enhets- och bandbreddsidentifiering).
 
-* Komponenten **[!UICONTROL Scene7 Video]** utför automatiskt enhets- och bandbreddsidentifiering för att spela upp video i rätt format och med rätt kvalitet på datorer, surfplattor och mobiler.
-* Resurser - Du kan inkludera adaptiva videouppsättningar i stället för bara enskilda videoresurser. En adaptiv videouppsättning är en behållare för alla videoåtergivningar som krävs för att spela upp video sömlöst på flera skärmar. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Du använder en adaptiv videouppsättning, tillsammans med S7-videokomponenten, för adaptiv videoströmning på flera skärmar, inklusive stationära datorer, iOS, Android, Blackberry och Windows mobila enheter. Mer information finns i [Dynamic Media Classic-dokumentationen om adaptiva videouppsättningar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/video-profiles.html#dynamicmedia).
+Komponenten **[!UICONTROL Scene7 Video]** utför automatiskt enhets- och bandbreddsidentifiering för att spela upp video i rätt format och med rätt kvalitet på datorer, surfplattor och mobiler.
+
+Du kan inkludera adaptiva videouppsättningar i stället för bara enskilda videoresurser. En adaptiv videouppsättning är en behållare för alla videoåtergivningar som krävs för att spela upp video sömlöst på flera skärmar. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format. Exempel: 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Du använder en adaptiv videouppsättning, tillsammans med S7-videokomponenten, för adaptiv videoströmning över flera skärmtyper. Till exempel mobila enheter för datorer, iOS, Android, BlackBerry och Windows.
+
+Mer information finns i [Dynamic Media Classic-dokumentationen om adaptiva videouppsättningar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/video-profiles.html#dynamicmedia).
 
 ## Om FFMPEG och Dynamic Media Classic {#about-ffmpeg-and-scene}
 
@@ -30,9 +33,9 @@ Standardprocessen för videokodning bygger på den FFMPEG-baserade integrationen
 * FFMPEG-miniatyrbilder
 * FFMPEG-kodning
 
-Tänk på att aktivering och konfigurering av Dynamic Media Classic-integreringen inte automatiskt tar bort eller inaktiverar dessa två arbetsflödessteg från det färdiga arbetsflödet för DAM-import. Om du redan använder den FFMPEG-baserade videokodningen i AEM är det troligt att du har FFMPEG installerat i dina redigeringsmiljöer. I det här fallet kodas en ny video som hämtas med DAM två gånger: en gång från FFMPEG-kodaren och en gång från Dynamic Media Classic-integreringen.
+Om du aktiverar och konfigurerar integreringen med Dynamic Media Classic tas inte dessa två arbetsflödessteg bort automatiskt från det körklara arbetsflödet för DAM-hämtning. Om du redan använder FFMPEG-baserad videokodning i Experience Manager är det troligt att du har FFMPEG installerat i dina redigeringsmiljöer. I det här fallet kodas en ny video som hämtas med DAM två gånger: en gång från FFMPEG-kodaren och en gång från Dynamic Media Classic-integreringen.
 
-Om du har konfigurerat och installerat den FFMPEG-baserade videokodningen i AEM rekommenderar Adobe att du tar bort de två FFMPEG-arbetsflödena från arbetsflödena för DAM-inhämtning.
+Om du har konfigurerat den FFMPEG-baserade videokodningen i AEM och FFMPEG kan du ta bort de två FFMPEG-arbetsflödena från arbetsflödena för DAM-inhämtning.
 
 ## Format som stöds {#supported-formats}
 
@@ -48,22 +51,22 @@ Hur du avgör var du ska överföra dina videoresurser beror på följande:
 * Behöver du ett arbetsflöde för videoresursen?
 * Behöver du versionskontroll för videoresursen?
 
-Om svaret är ja på någon av eller båda dessa frågor överför du videon direkt till Adobe DAM. Om svaret är nej på båda frågorna överför du videon direkt till Dynamic Media Classic. Arbetsflödet för varje scenario beskrivs i följande avsnitt.
+Om svaret är ja på någon av eller båda dessa frågor överför du videon direkt till Adobe DAM. Om svaret är nej på båda frågorna överför du videon direkt till Dynamic Media Classic. Arbetsflödet för varje scenario beskrivs i de följande avsnitten.
 
 ### Om du överför videon direkt till Adobe DAM {#if-you-are-uploading-your-video-directly-to-adobe-dam}
 
-Om du behöver ett arbetsflöde eller en versionshantering för dina resurser bör du först överföra dem till Adobe DAM. Här följer det rekommenderade arbetsflödet:
+Om du behöver ett arbetsflöde eller en versionshantering för dina resurser ska du först överföra till Adobe DAM. Här följer det rekommenderade arbetsflödet:
 
 1. Ladda upp videomaterialet till Adobe DAM och koda och publicera automatiskt till Dynamic Media Classic.
-1. I AEM kommer du åt videomaterial i WCM på fliken **[!UICONTROL Movies]** i Content Finder.
+1. I Experience Manager får du åtkomst till videomaterial i WCM på fliken **[!UICONTROL Movies]** i Content Finder.
 1. Skapa med en **[!UICONTROL Scene7 Video]**- eller **[!UICONTROL Foundation Video]**-komponent.
 
 ### Om du överför din video till Scene7 {#if-you-are-uploading-your-video-to-scene}
 
-Om du inte behöver ett arbetsflöde eller en versionshantering för dina resurser bör du överföra dina resurser till Scene7. Här följer det rekommenderade arbetsflödet:
+Om du inte behöver ett arbetsflöde eller en versionshantering för dina resurser överför du dina resurser till Scene7. Här följer det rekommenderade arbetsflödet:
 
 1. I Dynamic Media Classic [konfigurerar du en schemalagd FTP-överföring och -kodning till Scene7 (automatiskt system)](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#preparing-your-assets-and-folders-for-uploading).
-1. I AEM kommer du åt videomaterial i WCM på fliken **[!UICONTROL Scene7]** i Content Finder.
+1. I Experience Manager får du åtkomst till videomaterial i WCM på fliken **[!UICONTROL Scene7]** i Content Finder.
 1. Skapa med komponenten **[!UICONTROL Scene7 Video]**.
 
 ## Konfigurera integrering med Scene7 Video {#configuring-integration-with-scene-video}
@@ -91,7 +94,7 @@ Så här konfigurerar du universella förinställningar:
 
 ## Uppdaterar förinställningar för visningsprogram och kodning {#updating-viewer-and-encoding-presets}
 
-Om du behöver uppdatera visningsprogrammet och kodningsförinställningarna för video i AEM eftersom förinställningarna har uppdaterats i Scene7 går du till Scene7-konfigurationen i molnkonfigurationen och klickar på **[!UICONTROL Update the viewer and encoding presets]**.
+Det är nödvändigt att uppdatera visningsprogrammet och kodningsförinställningarna för video i Experience Manager om förinställningarna uppdaterades i Scene7. I så fall navigerar du till Scene7-konfigurationen i molnkonfigurationen och klickar på **[!UICONTROL Update the viewer and encoding presets]**.
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
@@ -102,33 +105,33 @@ Om du behöver uppdatera visningsprogrammet och kodningsförinställningarna fö
 
    >[!NOTE]
    >
-   >Det kan ta en stund innan videominiatyrbilderna genereras.
+   >Det tar en stund innan videominiatyrbilderna genereras.
 
-   Om du drar den överordnad DAM-videon till videokomponenten får du tillgång till *alla* av de Scene7-kodade proxyåtergivningarna för leverans.
+   Genom att dra den överordnad DAM-videon till videokomponenten kommer du åt *alla* Scene7-kodade proxyåtergivningar för leverans.
 
 ## Foundation Video Component jämfört med Scene7 Video Component {#foundation-video-component-versus-scene-video-component}
 
-När du använder AEM har du tillgång till både videokomponenten som är tillgänglig i Sites och videokomponenten i Scene7. Dessa komponenter är inte utbytbara.
+När du använder Experience Manager har du tillgång till både videokomponenten som finns på Sites och videokomponenten i Scene7. Dessa komponenter är inte utbytbara.
 
-Scene7 videokomponent fungerar bara för Scene7-videofilmer. Grundkomponenten fungerar med videor som lagras från AEM (med ffmpeg) och Scene7-videor.
+Scene7 videokomponent fungerar bara för Scene7-videofilmer. Grundkomponenten fungerar med videofilmer som lagras från Experience Manager (med ffmpeg) och Scene7-videofilmer.
 
-I följande matris förklaras när du bör använda vilken komponent:
+I följande matris förklaras när du ska använda vilken komponent:
 
 ![chlimage_1-365](assets/chlimage_1-365.png)
 
 >[!NOTE]
 >
->Som standard använder S7-videokomponenten den universella videoprofilen. Du kan dock hämta den HTML5-baserade videospelaren för användning genom AEM göra något av följande i Scene7: kopiera inbäddningskoden för den färdiga HTML5-videospelaren och placera den på din AEM.
+>S7-videokomponenten är körklar och använder den universella videoprofilen. Du kan dock hämta den HTML5-baserade videospelaren i Experience Manager. Kopiera enkelt inbäddningskoden för den färdiga HTML5-videospelaren och placera den på Experience Manager-sidan.
 
-## AEM videokomponent {#aem-video-component}
+## Experience Manager videokomponent {#aem-video-component}
 
-Även om du bör använda videokomponenten för Scene7 för att visa Scene7-videofilmer beskrivs det här avsnittet hur du använder Scene7-videofiler med komponenten Foundation Video i AEM för att få en fullständig beskrivning.
+Även om du bör använda videokomponenten för Scene7 för att visa Scene7-videofilmer bör du för fullständighetens skull använda Scene7-videofilmer med Foundation Video Component.
 
-### AEM Video- och Scene7 Video-jämförelse {#aem-video-and-scene-video-comparison}
+### Experience Manager Video and Scene7 Video comparison {#aem-video-and-scene-video-comparison}
 
-I följande tabell visas en högnivåjämförelse av funktioner som stöds mellan AEM Foundation Video-komponenten och Scene7 Video-komponenten:
+Följande tabell innehåller en högnivåjämförelse mellan videokomponenten i Experience Manager Foundation och Scene7 Video-komponenten som stöds:
 
-|  | AEM Foundation Video | Scene7 Video |
+|  | Experience Manager Foundation Video | Scene7 Video |
 |---|---|---|
 | Metod | HTML5 first approach. Flash används endast för icke-HTML5-reservlösningar. | Flash på de flesta stationära datorer. HTML5 används för mobiler och surfplattor. |
 | Leverans | Progressiv | Adaptiv strömning |
@@ -140,15 +143,15 @@ I följande tabell visas en högnivåjämförelse av funktioner som stöds mella
 
 #### Skapar videoprofiler {#creating-video-profiles}
 
-De olika videokodningarna skapas enligt de kodningsförinställningar för S7 som valts i molnkonfigurationen för S7. För att den grundläggande videokomponenten ska kunna använda dem måste en videoprofil skapas för varje vald S7-kodningsförinställning. Detta gör att videokomponenten kan välja DAM-återgivningar utifrån detta.
+De olika videokodningarna skapas enligt de kodningsförinställningar för Scene7 som du har valt i Scene7 molnkonfiguration. För att komponenten Foundation Video ska kunna använda dem måste en videoprofil skapas för varje vald kodningsförinställning för Scene7. Med den här metoden kan videokomponenten välja DAM-återgivningar utifrån detta.
 
 >[!NOTE]
 >
 >Nya videoprofiler och ändringar av dem måste aktiveras för publicering.
 
-1. I AEM trycker du på **[!UICONTROL Tools]>[!UICONTROL Configuration Console]**.
-1. I **[!UICONTROL Configuration Console]** navigerar du till **[!UICONTROL Tools > DAM > Video Profiles]** i navigeringsträdet.
-1. Skapa en ny S7-videoprofil. På menyn **[!UICONTROL New...]** väljer du **[!UICONTROL Create Page]** och sedan Scene7 videoprofilmall. Ge den nya videoprofilsidan ett namn och klicka på **[!UICONTROL Create]**.
+1. I Experience Manager trycker du på **[!UICONTROL Tools]>[!UICONTROL Configuration Console]**.
+1. Navigera från **[!UICONTROL Configuration Console]** till **[!UICONTROL Tools > DAM > Video Profiles]** i navigeringsträdet.
+1. Skapa en Scene7-videoprofil. I listrutan **[!UICONTROL New...]** väljer du **[!UICONTROL Create Page]** och sedan Scene7 videoprofilmall. Ge den nya videoprofilsidan ett namn och klicka på **[!UICONTROL Create]**.
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
@@ -166,24 +169,24 @@ De olika videokodningarna skapas enligt de kodningsförinställningar för S7 so
 
 #### Konfigurerar design {#configuring-design}
 
-Komponenten **[!UICONTROL Foundation Video]** måste känna till vilka videoprofiler som ska användas för att skapa listan över videokällor. Du måste öppna dialogrutan för videokomponentdesign och konfigurera komponentdesignen för de nya videoprofilerna.
+Komponenten **[!UICONTROL Foundation Video]** måste känna till vilka videoprofiler som ska användas för att skapa listan över videokällor. Öppna dialogrutan för videokomponentdesign och konfigurera komponentdesignen för användning av de nya videoprofilerna.
 
 >[!NOTE]
 >
->Om du använder komponenten **[!UICONTROL Foundation Video]** på en mobilsida kan du behöva upprepa de här stegen när du designar mobilsidan.
+>Om du använder komponenten **[!UICONTROL Foundation Video]** på en mobilsida upprepar du de här stegen i designen av mobilsidan.
 
 >[!NOTE]
 >
->Ändringar i designen kräver att designen aktiveras för att börja gälla vid publiceringen.
+>Ändringar som görs i designen kräver att designen aktiveras så att de kan börja gälla vid publiceringen.
 
 1. Öppna **[!UICONTROL Foundation Video]**-komponentens designdialogruta och ändra till fliken **[!UICONTROL Profiles]**. Ta sedan bort färdiga profiler och lägg till de nya videoprofilerna för S7. Ordningen på profillistan i designdialogrutan definierar ordningen på videokällelementet vid återgivning.
-1. För webbläsare som inte stöder HTML5 kan videokomponenten konfigurera ett Flash-reserv. Öppna dialogrutan för design av videokomponenter och ändra till fliken **[!UICONTROL Flash]**. Konfigurera inställningarna för Flash-spelaren och tilldela en reservprofil för Flash Player.
+1. För webbläsare som inte stöder HTML5 kan du konfigurera ett Flash-reservläge med videokomponenten. Öppna dialogrutan för design av videokomponenter och ändra till fliken **[!UICONTROL Flash]**. Konfigurera inställningarna för Flash Player och tilldela en reservprofil för Flash Player.
 
 #### Checklista {#checklist}
 
-1. Skapa en S7-molnkonfiguration. Kontrollera att förinställningarna för videokodning är angivna och att importeraren körs.
+1. Skapa en S7 Cloud-konfiguration. Kontrollera att förinställningarna för videokodning är angivna och att importeraren körs.
 1. Skapa en S7-videoprofil för varje videokodningsförinställning som har valts i molnkonfigurationen.
 1. Videoprofilerna måste aktiveras.
-1. Konfigurera designen för **[!UICONTROL oundation Video]**-komponenten på sidan.
+1. Konfigurera designen för **[!UICONTROL Foundation Video]**-komponenten på sidan.
 1. Aktivera designen när du är klar med designändringarna.
 
