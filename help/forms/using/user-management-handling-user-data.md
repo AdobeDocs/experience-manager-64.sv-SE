@@ -1,16 +1,16 @@
 ---
 title: Forms användarhantering | Hantera användardata
 seo-title: Forms användarhantering | Hantera användardata
-description: 'null'
-seo-description: 'null'
+description: Användarhantering är en AEM Forms JEE-komponent som gör det möjligt att skapa, hantera och ge AEM Forms-användare åtkomst till AEM Forms. Mer om användardata och datalager. Lär dig hur du får åtkomst till och tar bort användardata.
+seo-description: Användarhantering är en AEM Forms JEE-komponent som gör det möjligt att skapa, hantera och ge AEM Forms-användare åtkomst till AEM Forms. Mer om användardata och datalager. Lär dig hur du får åtkomst till och tar bort användardata.
 uuid: 2b76b69f-6f3a-4f1a-a2a4-d39f5e529f75
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: a88fc933-f1af-4798-b72f-10e7b0d2fd11
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: c2dcb61d65cfc5867525f5b39769da0450d92f39
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
