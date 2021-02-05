@@ -1,16 +1,16 @@
 ---
 title: Forms JEE-arbetsflöden | Hantera användardata
 seo-title: Forms JEE-arbetsflöden | Hantera användardata
-description: 'null'
-seo-description: 'null'
+description: AEM Forms JEE-arbetsflöden innehåller verktyg för att utforma, skapa och hantera affärsprocesser. Lär dig mer om hur du får åtkomst till och tar bort användardata, identifierar processinstans-ID när arbetsflödesinitieraren eller -deltagaren är känd, identifierar processinstans-ID när användardata lagras i primitiva variabler, tömmer användardata från arbetsflödesinstanser baserat på processinstans-ID:n och arbetar med ägarlösa uppgifter.
+seo-description: AEM Forms JEE-arbetsflöden innehåller verktyg för att utforma, skapa och hantera affärsprocesser. Lär dig mer om hur du får åtkomst till och tar bort användardata, identifierar processinstans-ID när arbetsflödesinitieraren eller -deltagaren är känd, identifierar processinstans-ID när användardata lagras i primitiva variabler, tömmer användardata från arbetsflödesinstanser baserat på processinstans-ID:n och arbetar med ägarlösa uppgifter.
 uuid: 3b06ef19-d3c4-411e-9530-2c5d2159b559
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 5632a8df-a827-4e38-beaa-18b61c2208a3
 translation-type: tm+mt
-source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+source-git-commit: c2dcb61d65cfc5867525f5b39769da0450d92f39
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1493'
 ht-degree: 0%
 
 ---
