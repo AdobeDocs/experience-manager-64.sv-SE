@@ -53,7 +53,7 @@ När du utformar innehållsstrukturen för en plats och metadatarammet för resu
 
 I redigeringsmiljön kan författare lägga till taggar genom att gå till sidegenskaperna och ange en eller flera taggar i fältet **Taggar/nyckelord**.
 
-Om du vill använda [fördefinierade taggar](/help/sites-administering/tags.md) använder du fältet **Sidegenskaper** och fönstret **Taggar** och fönstret **Välj taggar** i &lt;a4/>-fönstret. Fliken **Standardtaggar** är standardnamnutrymmet, vilket innebär att taxonomin inte har prefixet `namespace-string:`. 
+Om du vill använda [fördefinierade taggar](/help/sites-administering/tags.md) använder du fältet **Sidegenskaper** och fönstret **Taggar** och fönstret **Välj taggar** i -fönstret. Fliken **Standardtaggar** är standardnamnutrymmet, vilket innebär att taxonomin inte har prefixet `namespace-string:`. 
 
 ![chlimage_1-92](assets/chlimage_1-92.png)
 
