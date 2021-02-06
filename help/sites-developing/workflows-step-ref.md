@@ -274,7 +274,7 @@ Om du vill konfigurera steget redigerar du och använder följande flikar:
 
 Så här skapar du en dialogruta:
 
-* Bestäm var de resulterande data ska sparas i nyttolasten[.](#dialog-participant-step-storing-data-in-the-payload)
+* Bestäm var de resulterande data ska sparas i nyttolasten](#dialog-participant-step-storing-data-in-the-payload).[
 * [Definiera dialogrutan. Detta innefattar att definiera de fält som används för att samla in (och spara) data](#dialog-participant-step-dialog-definition).
 
 #### Steg för dialogdeltagare - lagra data i nyttolasten {#dialog-participant-step-storing-data-in-the-payload}
