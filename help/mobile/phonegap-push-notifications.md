@@ -175,7 +175,7 @@ Så här konfigurerar du Amazon SNS för push-meddelanden:
    <table> 
     <tbody> 
      <tr> 
-     <td><p> </p> <p>{</p> <p> "Version": "2012-10-17",</p> <p> "Programsats": [</p> <p> {</p> <p> "Åtgärd": [</p> <p> "mobileanalytics:PutEvents",</p> <p> "cognito-sync:*",</p> <p> "SNS:CreatePlatformEndpoint",</p> <p> "SNS:Subscribe"</p> <p> ],</p> <p> "Effekt": "Tillåt",</p> <p> "Resurs": [</p> <p> "*"</p> <p> _</p> <p> }</p> <p> ]</p> <p>}</p> <p> </p> </td> 
+     <td><p> </p> <p>{</p> <p> "Version": "2012-10-17",</p> <p> "Programsats": [</p> <p> {</p> <p> "Åtgärd": [</p> <p> "mobileanalytics:PutEvents",</p> <p> "cognito-sync:*",</p> <p> "SNS:CreatePlatformEndpoint",</p> <p> "SNS:Subscribe"</p> <p> ],</p> <p> "Effekt": "Tillåt",</p> <p> "Resurs": [</p> <p> "*"</p> <p> ]</p> <p> }</p> <p> ]</p> <p>}</p> <p> </p> </td> 
      </tr> 
     </tbody> 
     </table>
