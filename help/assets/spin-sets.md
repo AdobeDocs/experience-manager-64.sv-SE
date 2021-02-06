@@ -58,7 +58,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
 1. [Visar snurruppsättningar](#viewing-spin-sets).
 
-   Du kan visa och komma åt uppsättningar som skapats med hjälp av gruppuppsättningsförinställningar på tre olika sätt. (Uppsättningar som skapats med gruppuppsättningsförinställningar, *visas inte* i användargränssnittet.)
+   Du kan visa och komma åt uppsättningar som skapats med förinställningar för gruppuppsättningar på tre olika sätt. (Uppsättningar som skapats med gruppuppsättningsförinställningar, *visas inte* i användargränssnittet.)
 
 1. [Förhandsgranska snurra uppsättningar.](previewing-assets.md)
 
