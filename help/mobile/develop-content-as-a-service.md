@@ -23,7 +23,7 @@ ht-degree: 1%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Mobilappar bör kunna använda allt innehåll i AEM efter behov för att leverera en målinriktad appupplevelse.
+Mobilappar bör kunna använda allt innehåll i AEM efter behov för att leverera den riktade appupplevelsen.
 
 Detta inkluderar användning av resurser, webbplatsinnehåll, CAAS-innehåll (over-the-air) och anpassat innehåll som kan ha en egen struktur.
 
