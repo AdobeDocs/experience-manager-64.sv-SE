@@ -96,7 +96,7 @@ På grund av begränsningar i MongoDB-arbetsflödet rekommenderas starkt att dat
 
 ## Övervakning {#monitoring}
 
-Övervakning är nödvändigt för ett framgångsrikt genomförande av projektet. Även om det med tillräcklig kunskap går att köra AEM på MongoDB utan övervakning, finns vanligtvis den kunskapen hos tekniker som är specialiserade för varje avsnitt i distributionen.
+Övervakning är en nödvändig förutsättning för ett framgångsrikt genomförande av projektet. Även om det med tillräcklig kunskap går att köra AEM på MongoDB utan övervakning, finns vanligtvis den kunskapen hos tekniker som är specialiserade för varje avsnitt i distributionen.
 
 Detta innebär vanligtvis att en FoU-tekniker arbetar på Apache Oak Core och en MongoDB-specialist.
 
