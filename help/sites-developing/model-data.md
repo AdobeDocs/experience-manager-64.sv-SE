@@ -82,7 +82,7 @@ Personligen föredrar jag hierarkiska konventioner framför nodetypsystemet i m�
 
 #### Exempel {#example-2}
 
-Jag skulle vilja skapa ett enkelt bloggsystem enligt följande. Observera att jag från början inte ens bryr mig om vilka nodtyper jag använder just nu.
+Jag skulle modellera ett enkelt bloggsystem enligt följande. Observera att jag från början inte ens bryr mig om vilka nodtyper jag använder just nu.
 
 ```xml
 /content/myblog
