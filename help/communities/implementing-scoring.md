@@ -655,7 +655,7 @@ Kontrollera sedan att forumkomponenterna och kommentarkomponenterna tillåter at
 
 * Välj forum
 
-Detta bör göra att communitymedlemmen får ett bronze-märke synligt med sitt foruminlägg eftersom den första tröskeln för forumbadging är 1 poäng.
+Detta bör göra att communitymedlemmen får ett bronze-märke synligt med sitt foruminlägg eftersom den första tröskeln för forumbadging är ett poäng på 1.
 
 ![bronzebadge](assets/bronzebadge.png)
 
