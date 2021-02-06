@@ -38,7 +38,7 @@ Om du vill använda dessa API:er måste du aktivera slutpunkten `/services/socia
 
 Du kan även skapa ett användargränssnitt (användargränssnitt) för att hantera användarprofiler och användargenererat innehåll i systemet.
 
-Dessa API:er gör att du kan utföra följande funktioner.
+Dessa API:er gör det möjligt att utföra följande funktioner.
 
 ## Hämta användargränssnittskontrollen för en användare {#retrieve-the-ugc-of-a-user}
 
