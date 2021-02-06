@@ -222,7 +222,7 @@ Länkarna måste använda funktionen `ng-click="go('/path')"` för att stödja a
 
 När `$scope.wcmMode == true` hanterar vi varje navigeringshändelse på vanligt sätt, så att resultatet blir en ändring av sökvägen och/eller siddelen i URL:en.
 
-Om `$scope.wcmMode == false` är &lt;a0/> resulterar varje navigeringshändelse i en ändring i hash-delen av URL:en som löses internt av vinkelmodulen ngRoute.
+Om `$scope.wcmMode == false` är  resulterar varje navigeringshändelse i en ändring i hash-delen av URL:en som löses internt av vinkelmodulen ngRoute.
 
 ### Information om komponentskript {#component-script-details}
 
