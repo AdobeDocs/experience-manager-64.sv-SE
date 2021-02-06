@@ -128,7 +128,7 @@ Du kan lägga till resurser i en samling som innehåller en lista med refererade
 
 ## Redigera en smart samling {#editing-a-smart-collection}
 
-Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras innehåll genom att ändra sökparametrarna för den sparade sökningen [.](#editing-saved-searches)
+Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras innehåll genom att ändra sökparametrarna för den sparade sökningen ](#editing-saved-searches).[
 
 1. I resursanvändargränssnittet: tryck/klicka på sökikonen i verktygsfältet.
 
