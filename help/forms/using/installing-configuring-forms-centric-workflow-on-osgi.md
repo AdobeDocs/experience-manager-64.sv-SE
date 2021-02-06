@@ -35,7 +35,7 @@ AEM Forms är en kraftfull plattform för större företag. Forms-centrerat arbe
 
 ## Distributionstopologi {#deployment-topology}
 
-AEM Forms tilläggspaket är ett program som distribueras till AEM. Du behöver bara minst en AEM Author- eller Processing-instans (produktionsförfattare) för att köra det Forms-centrerade arbetsflödet på OSGi-funktionen. En bearbetningsinstans är en [härdad AEM Author](/help/forms/using/hardening-securing-aem-forms-environment.md)-instans. Gör inga riktiga skribenter, som att skapa arbetsflöden eller anpassningsbara formulär, åt produktionsförfattaren.
+AEM Forms tilläggspaket är ett program som distribueras till AEM. Du behöver bara minst en AEM Author- eller Processing-instans (produktionsförfattare) för att köra det Forms-centrerade arbetsflödet på OSGi-funktionen. En bearbetningsinstans är en [härdad AEM Author](/help/forms/using/hardening-securing-aem-forms-environment.md)-instans. Gör inga riktiga redigeringsfunktioner, som att skapa arbetsflöden eller anpassningsbara formulär, på produktionsförfattaren.
 
 Följande topologi är en indikativ topologi för att köra AEM Forms Interactive Communications, Correspondence Management, AEM Forms datainhämtning och Forms-Centric-arbetsflöden för OSGi-funktioner. Mer information om topologin finns i [Arkitektur och distributionstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
 
