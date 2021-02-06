@@ -19,7 +19,7 @@ ht-degree: 5%
 
 # API:er för att arbeta med skickade formulär på formulärportalen {#apis-to-work-with-submitted-forms-on-forms-portal}
 
-AEM Forms tillhandahåller API:er som du kan använda för att fråga efter formulärdata som skickas via formulärportalen. Dessutom kan du publicera kommentarer eller uppdatera egenskaperna för skickade formulär med de API:er som beskrivs i det här dokumentet.
+AEM Forms tillhandahåller API:er som du kan använda för att fråga efter formulärdata som skickas via formulärportalen. Dessutom kan du publicera kommentarer eller uppdatera egenskaper för skickade formulär med de API:er som beskrivs i det här dokumentet.
 
 >[!NOTE]
 >
