@@ -621,7 +621,7 @@ Om du vill skapa en ASP-sida som anropar processen `FirstAppSolution/PreLoanProc
 1. Skapa en `JobManagerClient` med hjälp av konstruktorn is. (Kontrollera att du har angett en tjänstreferens för tjänsten Job Manager.)
 1. Upprepa steg 1-5. Ange följande URL för steg 2: `https://hiro-xp:8080/soap/services/JobManager?blob=mtom`.
 1. Skapa ett `JobId`-objekt med hjälp av dess konstruktor.
-1. Ange `JobId`-objektets &lt;a1/>-datamedlem med returvärdet för `id`-objektets `FirstAppSolution_PreLoanProcessClient`-metod.`invoke_Async`
+1. Ange `id`-objektets `JobId`-datamedlem med returvärdet för `FirstAppSolution_PreLoanProcessClient`-objektets `invoke_Async`-metod.
 1. Tilldela `value` true till `JobId`-objektets `persistent`-datamedlem.
 1. Skapa ett `JobStatus`-objekt genom att anropa `JobManagerService`-objektets `getStatus`-metod och skicka `JobId`-objektet.
 1. Hämta statusvärdet genom att hämta värdet för `JobStatus`-objektets `statusCode`-datamedlem.
