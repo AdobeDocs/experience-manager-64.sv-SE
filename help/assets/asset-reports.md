@@ -59,7 +59,7 @@ Om du vill generera rapporter måste du se till att:
 
    >[!NOTE]
    >
-   >Som standard inkluderas innehållsfragment och länkdelningar i resursen [!UICONTROL Downloaded report]. Välj lämpligt alternativ för att skapa en rapport över länkdelningar eller för att exkludera innehållsfragment från hämtningsrapporten.
+   >Som standard inkluderas innehållsfragment och länkdelningar i resursen [!UICONTROL Downloaded report]. Välj lämpligt alternativ för att skapa en rapport över länkdelningar eller för att utesluta innehållsfragment från hämtningsrapporten.
 
    >[!NOTE]
    >
