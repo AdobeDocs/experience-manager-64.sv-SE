@@ -48,7 +48,7 @@ Dessutom är funktioner i klientdatorn, t.ex. en arbetsstation, bärbar dator el
 1. Se till att du har överfört 3D-resurser till AEM.
 
    Se [Om överföring och bearbetning av 3D-resurser i AEM](/help/sites-classic-ui-authoring/classicui-upload-proc-3d.md).
-1. Tryck på **[!UICONTROL Navigation]** på sidan **[!UICONTROL Adobe Experience Manager]**.**[!UICONTROL Assets]**
+1. Tryck på **[!UICONTROL Assets]** på sidan **[!UICONTROL Navigation]**.**[!UICONTROL Adobe Experience Manager]**
 1. Tryck på **[!UICONTROL Card View]** i den nedrullningsbara listan **[!UICONTROL View]** i sidans övre högra hörn.
 
 1. Navigera till en 3D-resurs som du vill visa.
