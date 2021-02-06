@@ -104,7 +104,7 @@ AEM verktygspanelen innehåller verktyg för olika komponenter. Om du vill navig
 
 * **Konfigurera PDF-generator:** En administratör kan konfigurera inställningar för AEM Forms PDF Generator, lägga till användarkonton och importera eller exportera konfiguration till PDF Generator.
 * **Publicera Correspondence Management-resurser:** Med AEM Forms kan du publicera alla bokstäver, dokumentfragment, datafält och relaterade beroenden från en författarinstans samtidigt. De publicerade resurserna innehåller alla Correspondence Management-resurser och relaterade beroenden. Mer information finns i [Publicera och avpublicera formulär och dokument](/help/forms/using/publishing-unpublishing-forms.md#publishallthecorrespondencemanagementassets).
-* **Exportera Correspondence Management-resurser:** Du kan hämta alla Correspondence Management-resurser och relaterade beroenden som ett paket från en instans av AEM formulär. Mer information finns i [Importera och exportera resurser till AEM Forms](/help/forms/using/import-export-forms-templates.md#importandexportassetsincorrespondencemanagement)
+* **Exportera Correspondence Management-resurser:** Du kan hämta alla Correspondence Management-resurser och relaterade beroenden som ett paket från en instans av AEM. Mer information finns i [Importera och exportera resurser till AEM Forms](/help/forms/using/import-export-forms-templates.md#importandexportassetsincorrespondencemanagement)
 
 ## Gemensamma element i användargränssnittet {#commonelements}
 
