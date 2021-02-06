@@ -24,7 +24,7 @@ Arbetsflödeskonsolen innehåller flera verktyg för att administrera arbetsflö
 
 >[!NOTE]
 >
->JMX-konsolen[ innehåller ytterligare underhållsåtgärder för arbetsflödet.](/help/sites-administering/jmx-console.md#workflow-maintenance)
+>JMX-konsolen](/help/sites-administering/jmx-console.md#workflow-maintenance) innehåller ytterligare underhållsåtgärder för arbetsflödet.[
 
 Det finns en rad konsoler som du kan använda för att administrera dina arbetsflöden. Använd [global navigering](/help/sites-authoring/basic-handling.md#global-navigation) för att öppna rutan **Verktyg** och välj sedan **Arbetsflöde**:
 
