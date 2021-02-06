@@ -84,7 +84,7 @@ Detaljerad information om kodsignering och hur du lägger till enheter till iOS 
    * Lämna fälten ospecificerade för att skapa en standardapp för mobil arbetsyta
    * Ange de fält som ska användas enligt beskrivningen i [Skapa en säker AEM Forms-app för iOS](/help/forms/using/building-secure-mobile-workspace-app.md) för att skapa en säker AEM Forms-app.
 
-1. Klicka på **Alla** på fliken **Bygginställningar** och sedan på &lt;a4/>Kombinerad **.**
+1. Klicka på **Alla** på fliken **Bygginställningar** och sedan på **Kombinerad**.
 1. Expandera **Kodsignering** i listan **Inställningar**.
 1. Välj lämplig signatur för **Kodsigneringsidentitet**. Mer information om hur du skapar nya signaturer finns i [Skapa och hämta provisioneringsprofiler för utveckling](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/CreatingYourTeamProvisioningProfile/CreatingYourTeamProvisioningProfile.html).
 1. Se till att samma signatur är markerad för **Felsök**, **Frigör** och **Valfri iOS SDK**.
