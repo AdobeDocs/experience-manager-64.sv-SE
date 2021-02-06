@@ -103,7 +103,7 @@ När FIPS är aktiverat används vanligtvis inte lösenordskryptering för någo
 
 **Aktivera** WSDLSälj det här alternativet om du vill aktivera generering av WSDL (Web Service Definition Language) för alla tjänster som är en del av AEM formulär.
 
-Aktivera det här alternativet i utvecklingsmiljöer, där utvecklare använder WSDL-generering för att bygga sina klientprogram. Du kan välja att inaktivera WSDL-generering i en produktionsmiljö för att undvika att visa tjänstens interna information.
+Aktivera det här alternativet i utvecklingsmiljöer, där utvecklare använder WSDL-generering för att skapa klientprogram. Du kan välja att inaktivera WSDL-generering i en produktionsmiljö för att undvika att visa tjänstens interna information.
 
 **Aktivera dokumentlagring i** databasenVälj det här alternativet om du vill lagra längre dokument i AEM formulärdatabas. Om du aktiverar det här alternativet tas inte behovet av en GDS-katalog bort. Om du väljer det här alternativet förenklas dock säkerhetskopiering AEM formulär. Om du bara använder GDS-systemet innebär en säkerhetskopia att AEM AEM-formulärsystemet försätts i säkerhetskopieringsläge och att säkerhetskopieringen av databasen och GDS slutförs. Om du väljer databasalternativet innebär säkerhetskopieringen att du slutför databassäkerhetskopieringen för en ny installation eller slutför databassäkerhetskopieringen och engångskopieringen av GDS för en uppgradering. Ytterligare hantering av databasen kan behövas för att rensa jobb och data jämfört med en GDS-konfiguration. (Se Alternativ för säkerhetskopiering när databasen används för dokumentlagring.)
 
