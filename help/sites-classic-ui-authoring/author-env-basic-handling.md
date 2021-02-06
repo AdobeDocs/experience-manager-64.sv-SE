@@ -115,7 +115,7 @@ På olika konsoler (t.ex. webbplatser) finns även **Hjälp**-knappen tillgängl
 
 ![chlimage_1-10](assets/chlimage_1-10.png)
 
-När du redigerar en sida har sidosparken också en knapp för att komma åt hjälp[.](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#accessing-help)
+När du redigerar en sida har sidosparken också en knapp för att komma åt hjälp](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#accessing-help).[
 
 ## Navigera med webbplatskonsolen {#navigating-with-the-websites-console}
 
