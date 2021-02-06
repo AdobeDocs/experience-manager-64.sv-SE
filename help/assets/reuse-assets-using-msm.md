@@ -215,7 +215,7 @@ En live-kopia är en kopia av den ursprungliga källan när den skapas. Metadata
 
 Du kan dock göra lokala ändringar i en live-kopia för att ändra vissa egenskaper. Om du vill göra lokala ändringar avbryter du arvet av den önskade egenskapen. När arvet efter ett eller flera metadatafält avbryts behålls resursens live-relation och arvet efter de andra metadatafälten. Synkronisering eller utrullning skriver inte över lokala ändringar. Det gör du genom att öppna sidan **[!UICONTROL Properties]** för en live-kopia och klicka på ikonen **[!UICONTROL cancel inheritance]** bredvid ett metadatafält.
 
-Du kan ångra alla lokala ändringar och återställa resursen till källans läge. Återställ åtgärd oåterkalleligt och omedelbart åsidosätter alla lokala ändringar och återupprättar arv på alla metadatafält. Om du vill återgå klickar du på **[!UICONTROL Properties]** på sidan &lt;a0/> för en direktkopia av resursen i verktygsfältet.**[!UICONTROL Reset]**
+Du kan ångra alla lokala ändringar och återställa resursen till källans läge. Återställ åtgärd oåterkalleligt och omedelbart åsidosätter alla lokala ändringar och återupprättar arv på alla metadatafält. Om du vill återgå klickar du på **[!UICONTROL Properties]** på sidan **[!UICONTROL Reset]** för en direktkopia av resursen i verktygsfältet.
 
 ![Återställ åtgärd skriver över lokala redigeringar och delar av den aktiva kopian med källan](assets/lc_reset.png)
 
