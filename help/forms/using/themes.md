@@ -197,7 +197,7 @@ Lista med metaegenskaper för ett tema (finns på egenskapssidan för ett tema).
 
 AEM Forms levereras med Theme Editor. Det är ett användarvänligt och webbdesignervänligt gränssnitt för utvecklare som tillhandahåller funktioner som krävs för att enkelt specificera hur olika adaptiva formulär och interaktiva kommunikationselement ska formateras. När du skapar ett tema lagras det som en separat enhet, som formulär, interaktiv kommunikation, brev, dokumentfragment och dataordlistor.
 
-Med Theme Editor kan du anpassa stilar för komponenter som är formaterade i ett tema. Du kan anpassa hur ett formulär eller en interaktiv kommunikation ser ut på en enhet.
+Med Theme Editor kan du anpassa stilar för de komponenter som är formaterade i ett tema. Du kan anpassa hur ett formulär eller en interaktiv kommunikation ser ut på en enhet.
 
 Temaredigeraren är uppdelad i två paneler:
 
