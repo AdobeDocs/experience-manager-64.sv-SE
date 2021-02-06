@@ -195,7 +195,7 @@ Som stöd för detta har konfigurationssökningen i AEM arv- och reservmekanism 
 
 ### Använda konfigurationer {#using-configurations}
 
-Konfigurationer i AEM baseras på Sling Context-Aware Configurations. Sling-paketen innehåller ett tjänst-API som kan användas för att få kontextmedvetna konfigurationer. Kontextmedvetna konfigurationer är konfigurationer som är relaterade till en innehållsresurs eller ett resursträd, vilket beskrivs i föregående exempel.[](#developer-example)
+Konfigurationer i AEM baseras på Sling Context-Aware Configurations. Sling-paketen innehåller ett tjänst-API som kan användas för att få kontextmedvetna konfigurationer. Kontextmedvetna konfigurationer är konfigurationer som är relaterade till en innehållsresurs eller ett resursträd, vilket beskrivs i föregående exempel.](#developer-example)[
 
 Mer information om kontextmedvetna konfigurationer, exempel och hur du använder dem finns i [Sling-dokumentationen.](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html)
 
