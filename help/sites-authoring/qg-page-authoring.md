@@ -286,7 +286,7 @@ Låsikonen ser till exempel ut så här:
 
    ![screen_shot_2018-03-21at161315](assets/screen_shot_2018-03-21at161315.png)
 
-1. Tryck/klicka på den typ av referens som krävs för att visa mer information och (vid behov) vidta ytterligare åtgärder.
+1. Tryck/klicka på den typ av referens som krävs för att visa mer information och (när det är lämpligt) vidta ytterligare åtgärder.
 
 ## Skapa en version av din sida {#creating-a-version-of-your-page}
 
