@@ -645,7 +645,7 @@ Följande inställningar finns under E-postkonfiguration för inbjudan på sidan
 
 ### E-postinställningar för aktivering {#activation-email-settings}
 
-Dokumentsäkerheten skickar ett aktiveringsmejl när inbjudna användare har registrerat sig. E-postmeddelandet om aktivering innehåller en länk till kontoaktiveringssidan där användarna kan aktivera sina konton. När kontona är aktiverade kan användare logga in på dokumentsäkerhet med sin e-postadress och det lösenord de skapade när de registrerade.
+Dokumentsäkerheten skickar ett aktiveringsmejl när inbjudna användare har registrerat sig. E-postmeddelandet om aktivering innehåller en länk till kontoaktiveringssidan där användarna kan aktivera sina konton. När kontona är aktiverade kan användare logga in på dokumentsäkerhet med hjälp av sin e-postadress och det lösenord de skapade när de registrerade.
 
 När mottagaren aktiverar användarkontot blir användaren en lokal användare.
 
@@ -1048,7 +1048,7 @@ Du kan öka skalbarheten för dokumentsäkerhetsservern genom att begränsa den 
 
    >[!NOTE]
    >
-   >Som standard är värdet för `DisableGlobalOfflineSynchronizationData`tangenten `false` inställt på &lt;a1/>.
+   >Som standard är värdet för `DisableGlobalOfflineSynchronizationData`tangenten `false` inställt på .
 
 1. Spara och importera konfigurationsfilen. (Se [Redigera konfigurationsfilen för dokumentsäkerhet manuellt](/help/forms/using/admin-help/configuring-client-server-options.md#manually-editing-the-document-security-configuration-file).)
 
