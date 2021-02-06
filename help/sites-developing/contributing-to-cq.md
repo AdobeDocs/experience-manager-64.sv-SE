@@ -66,7 +66,7 @@ REST-strategin är djupt inrotad i det vi gör. Detta innebär bland annat att m
 
 REST (REpresentational State Transfer) avser den programarkitekturstil som World Wide Web bygger på. Den beskriver de viktigaste elementen som får webben att fungera och innehåller därför en uppsättning principer för hur webbaserade program ska utformas. När du utformar ett API som ska användas via webben är det därför klokt att följa dessa&quot;bästa praxis&quot;.
 
-Eftersom REST ger en vägledande filosofi bakom så mycket av det vi gör, bör ni se det som viktigt att bli väl insatt i de stora delarna av RESTful-design. En bra startpunkt är med Roy Fielding avhandling[.](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
+Eftersom REST ger en vägledande filosofi bakom så mycket av det vi gör, bör ni se det som viktigt att bli väl insatt i de stora delarna av RESTful-design. En bra startpunkt är med Roy Fielding avhandling](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm).[
 
 ### Sling Request Resolution {#sling-request-resolution}
 
