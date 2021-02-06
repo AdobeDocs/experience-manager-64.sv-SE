@@ -37,7 +37,7 @@ I följande diagram visas återgivningen av innehållstjänster.
 
 ## Begär JSON {#requesting-json}
 
-Använd **&lt;RESOURCE.caas[.&lt;export-config>.][&lt;export-config>.] jsonto request JSON.**
+Använd **&lt;RESOURCE.caas[.&lt;export-config>.][&lt;export-config>.** jsonto request JSON.]
 
 <table>
  <tbody>
