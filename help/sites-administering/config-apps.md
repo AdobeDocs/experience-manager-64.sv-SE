@@ -29,7 +29,7 @@ Så här konfigurerar du referenspunktsfiltertjänsten:
 * Öppna Apache Felix-konsolen (**Configurations**) på:
 * https://&lt;server>:&lt;portnummer>/system/console/configMgr
 * Logga in som administratör.
-* Välj: **Referensfilter för Apache Sling****
+* Välj: *Referensfilter för Apache Sling*****
 * Markera fältet Tillåt tomt om du vill tillåta tomma/saknade hänvisningsrubriker.
 * Klicka på **Spara** för att spara ändringarna.
 
