@@ -127,7 +127,7 @@ behörigheterDen här behöriga användaren används i steg 3 för att konfigure
 >
 >En ny användare måste skapas.
 >
->* Standardanvändaren är **`admin`**.
+>* Standardanvändaren som tilldelas är **`admin`**.
 >* Använd inte `*communities-user-admin *user*.*`
 
 >
