@@ -68,7 +68,7 @@ När UGC sparas i delad lagring finns det en enda instans av medlemsinnehåll so
 >
 >Se [SRP och UGC Essentials](srp-and-ugc.md) för exempelkod och ytterligare information.
 >
->Mer information om hur du använder UGC med SRP](accessing-ugc-with-srp.md) finns i [Åtkomst till UGC med SRP&lt;a1/>.
+>Mer information om hur du använder UGC med SRP](accessing-ugc-with-srp.md) finns i [Åtkomst till UGC med SRP.
 
 ### ASRP {#asrp}
 
