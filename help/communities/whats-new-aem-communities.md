@@ -71,7 +71,7 @@ När du väljer status Besvarat visas alla besvarade frågor för moderatorn i i
 
 ### Modereringsfilter för bokmärke {#bookmark-moderation-filters}
 
-Med AEM Communities kan du [bokmärka de fördefinierade modereringsfiltren](moderation.md#filter-rail) på modereringskonsolen. Dessa sparade bokmärken kan granskas senare och delas med andra användare.
+AEM Communities ger möjlighet att [bokmärka de fördefinierade modereringsfiltren](moderation.md#filter-rail) på modereringskonsolen. Dessa sparade bokmärken kan granskas senare och delas med andra användare.
 
 Användarna behöver bara välja önskade filter från filterkanalen i modereringskonsolen för att visa den filtrerade UGC:n och bokmärka filtren i sina webbläsare. Dessa filter läggs till i slutet av URL-strängen och kan därför delas, återanvändas och granskas senare.
 
