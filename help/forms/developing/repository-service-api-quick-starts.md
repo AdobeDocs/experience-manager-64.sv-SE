@@ -498,7 +498,7 @@ Följande Java-kodexempel läser en resurs med namnet *Loan.xdp* från databasen
 
 ## Snabbstart (SOAP-läge): Uppdatera en resurs med Java API {#quick-start-soap-mode-updating-a-resource-using-the-java-api}
 
-Följande Java-kodexempel uppdaterar `/Applications/FormsApplication/1.0/FormsFolder` genom att ändra dess beskrivning. (Se [Uppdatera resurser](/help/forms/developing/aem-forms-repository.md#updating-resources).)
+I följande Java-kodexempel uppdateras `/Applications/FormsApplication/1.0/FormsFolder` genom att beskrivningen ändras. (Se [Uppdatera resurser](/help/forms/developing/aem-forms-repository.md#updating-resources).)
 
 ```as3
  /* 
