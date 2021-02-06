@@ -206,7 +206,7 @@ En sammansatt hälsokontroll har till uppgift att sammanställa ett antal enskil
   </tr> 
   <tr> 
    <td>Gränser för genomgång av frågor</td> 
-   <td><p>Gränser för genomgång av frågor kontrollerar MBean, närmare bestämt attributen <code>QueryEngineSettings</code> och <code>LimitInMemory</code>, och returnerar följande status:<code>LimitReads</code></p> 
+   <td><p>Gränser för genomgång av frågor kontrollerar MBean, närmare bestämt attributen <code>LimitInMemory</code> och <code>LimitReads</code>, och returnerar följande status:<code>QueryEngineSettings</code></p> 
     <ul> 
      <li>returnerar varningsstatus om en av gränserna är lika med eller högre än <code>Integer.MAX_VALUE</code></li> 
      <li>returnerar Warn-status om en av gränserna är lägre än 10000 (den rekommenderade inställningen från Oak)</li> 
@@ -468,7 +468,7 @@ Som standard hämtas de långsammaste 20 sidbegäranden, men gränsen kan ändra
 
 ### Frågeprestanda {#query-performance}
 
-På sidan Frågeprestanda kan du analysera de långsammaste frågorna som har utförts av systemet. Denna information tillhandahålls av databasen i en JMX Mbean. JMX Mbean ger denna information i Jackrabbit, medan den i Oak-databasen erbjuds av `com.adobe.granite.QueryStat``org.apache.jackrabbit.oak.QueryStats.`
+På sidan Frågeprestanda kan du analysera de långsammaste frågorna som har utförts av systemet. Denna information tillhandahålls av databasen i en JMX Mbean. JMX Mbean ger denna information i Jackrabbit, medan den i Oak-databasen erbjuds av `org.apache.jackrabbit.oak.QueryStats.``com.adobe.granite.QueryStat`
 
 Sidan visar:
 
@@ -702,7 +702,7 @@ På **systemöversiktspanelen** visas en översikt på hög nivå över konfigur
 
 >[!NOTE]
 >
->Du kan även [titta på den här videon](https://video.tv.adobe.com/v/21340?captions=swe) om du vill se en introduktion till kontrollpanelen för systemöversikt.
+>Du kan även [titta på den här videon](https://video.tv.adobe.com/v/21340) om du vill se en introduktion till kontrollpanelen för systemöversikt.
 
 ### Åtkomst till {#how-to-access}
 
