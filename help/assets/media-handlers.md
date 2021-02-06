@@ -21,7 +21,7 @@ Mediehanterare är tjänster i AEM Assets som utför specifika åtgärder för r
 
 >[!NOTE]
 >
->På sidan [Format](assets-formats.md) Resurser som stöds&lt;a1/> finns en beskrivning av alla format som stöds av AEM Assets samt funktioner som stöds för varje format.
+>På sidan [Format](assets-formats.md) Resurser som stöds finns en beskrivning av alla format som stöds av AEM Assets samt funktioner som stöds för varje format.
 
 ## Standardmediehanterare {#default-media-handlers}
 
