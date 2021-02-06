@@ -257,7 +257,7 @@ Använd CRXDE Lite för att ställa in egenskapen `debug` på **true** under:
 
 >[!NOTE]
 >
->För ContextHub-konfigurationer som fortfarande finns under de tidigare sökvägarna är platsen som ska anges `debug property` `/libs/settings/cloudsettings/legacy/contexthub` &lt;a1/>.
+>För ContextHub-konfigurationer som fortfarande finns under de tidigare sökvägarna är platsen som ska anges `debug property` `/libs/settings/cloudsettings/legacy/contexthub` .
 
 ### Tyst läge {#silent-mode}
 
