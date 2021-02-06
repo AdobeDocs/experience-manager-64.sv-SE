@@ -80,7 +80,7 @@ När konsolen [Användaradministration och Säkerhet](../../help/sites-administe
 
 ### Användaren publicerar innehåll vid publicering {#user-posts-content-on-publish}
 
-För användargenererat innehåll (UGC) nås data som anges i en publiceringsinstans via den konfigurerade SRP[.](srp-config.md)
+För användargenererat innehåll (UGC) nås data som anges i en publiceringsinstans via den konfigurerade SRP](srp-config.md).[
 
 ## God praxis {#bestpractices}
 
