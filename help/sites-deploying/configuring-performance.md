@@ -388,7 +388,7 @@ I båda fallen kan du definiera det förväntade antalet transaktioner per sekun
 | Komponent | Testtyp | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
 | Startsida - en användare | Medel | 1 | 3 |  |  |
-|  | Toppvärde | 3 | 3 |  |  |
+|  | Toppvärde | 1 | 3 |  |  |
 | Startsida 100 användare | Medel | 100 | 3 |  |  |
 |  | Toppvärde | 100 | 3 |  |
 
@@ -435,7 +435,7 @@ När man utformar dessa tester bör man komma ihåg att inte alla scenarier komm
 | Överlagring av sökkomponent | Sök på globalt jokertecken (asterisk) | 10 | 3 |  | Endast &amp;stämpel;ast;&amp;ast;&amp;ast; söks igenom. |
 |  | Stoppord | 20 | 2 |  | Söker efter ett stoppord. |
 |  | Tom sträng | 10 | 3 |  | Söker efter en tom sträng. |
-|  | Specialtecken | 10 | 3 |  | Söker efter specialtecken. |
+|  | Specialtecken | 10 | 1 |  | Söker efter specialtecken. |
 
 #### Bevarandetest {#endurance-tests}
 
@@ -444,9 +444,9 @@ Vissa problem kommer inte att uppstå förrän systemet har körts under en kont
 | Scenario | Testtyp | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
 | Varaktighetsprovning (72 timmar) | Hemsida | 10 | 3 |  |  |
-|  | Sökning | 10 | 3 |  |  |
+|  | Sökning | 10 | 1 |  |  |
 |  | Nyheter | 20 | 2 |  |  |
-|  | Händelser | 10 | 3 |  |  |
+|  | Händelser | 10 | 1 |  |  |
 |  | Aktiveringar | 3 | 3 |  | Simulering av författarbeteende. |
 
 ### Optimering {#optimization}
