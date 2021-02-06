@@ -33,7 +33,7 @@ Så här visar och redigerar du egenskapssidan för en resurs:
 
 ## Metadata Schema Forms {#default-metadata-schema-forms}
 
-Om du vill visa en lista med formulär/mallar går du till [!DNL Experience Manager] > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]** i &lt;a0/>-gränssnittet.**[!UICONTROL Tools]**
+Om du vill visa en lista med formulär/mallar går du till [!DNL Experience Manager] > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]** i **[!UICONTROL Tools]**-gränssnittet.
 
 [!DNL Experience Manager] innehåller följande formulärmallar för metadataschema:
 
