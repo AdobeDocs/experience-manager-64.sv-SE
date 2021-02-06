@@ -93,7 +93,7 @@ Loggkonfigurationen består av loggnivån och loggkategorin.
    <td>AV<br type="_moz" /> </td> 
   </tr> 
   <tr> 
-   <td>3</td> 
+   <td>1</td> 
    <td>FATAL<br type="_moz" /> </td> 
   </tr> 
   <tr> 
