@@ -42,7 +42,7 @@ Innehållsfragment lagras som **[!UICONTROL Assets]**, så hanteras främst frå
 
 ### Skapa ett innehållsfragment {#creating-a-content-fragment}
 
-Metoden för att skapa ett innehållsfragment är (i princip) densamma för både enkla och strukturerade fragment:
+Metoden för att skapa ett innehållsfragment är (i stort) densamma för både enkla och strukturerade fragment:
 
 1. Navigera till mappen **[!UICONTROL Assets]** där du vill skapa fragmentet.
 1. Välj **[!UICONTROL Create]** och sedan **[!UICONTROL Content Fragment]** för att öppna guiden.
@@ -302,7 +302,7 @@ Du kan återgå till en viss version av fragmentet:
 
    Välj önskad version och sedan åtgärden **[!UICONTROL Revert to this Version]**.
 
-* När du jämför en version med den aktuella versionen[ kan du ](content-fragments-managing.md#comparing-fragment-versions) med den valda versionen.**[!UICONTROL Revert]**
+* När du jämför en version med den aktuella versionen](content-fragments-managing.md#comparing-fragment-versions) kan du **[!UICONTROL Revert]** med den valda versionen.[
 
 ## Publicera och referera till ett fragment {#publishing-and-referencing-a-fragment}
 
