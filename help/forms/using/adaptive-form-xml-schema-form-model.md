@@ -28,7 +28,7 @@ Att skapa ett anpassat formulär med ett XML-schema som formulärmodell kräver 
 
 ## Använda ett XML-schema som formulärmodell {#using-an-xml-schema-as-form-model}
 
-AEM Forms har stöd för att skapa ett anpassat formulär genom att använda ett befintligt XML-schema som formulärmodell. Det här XML-schemat representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i organisationen.
+AEM Forms har stöd för att skapa ett anpassat formulär genom att använda ett befintligt XML-schema som formulärmodell. Det här XML-schemat representerar strukturen i vilken data produceras eller förbrukas av det bakomliggande systemet i organisationen.
 
 De viktigaste funktionerna i ett XML-schema är:
 
