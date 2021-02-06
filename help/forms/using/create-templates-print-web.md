@@ -237,9 +237,9 @@ Utför följande steg för att skapa en mall för webbkanalen i mappen **Create_
    | Namn | Titel | Antal kolumner |
    |---|---|---|
    | kundinformation | Kundinformation | 1 |
-   | faktureringssammanfattning | Fakturasammanfattning | 3 |
+   | faktureringssammanfattning | Fakturasammanfattning | 1 |
    | summeringskostnader | Sammanfattning av avgifter | 2 |
-   | objektanrop | Specificerade samtal | 3 |
+   | objektanrop | Specificerade samtal | 1 |
    | nyttja | Betala nu | 2 |
    | arbetsyta | Mervärdestjänster | 3 |
 
