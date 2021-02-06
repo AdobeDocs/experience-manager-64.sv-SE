@@ -305,7 +305,7 @@ Hämta följande javascript-bibliotek och inkludera dem i en klientbiblioteksmap
 
 **HTML**
 
-Skapa en komponent som genererar de div-element som förväntas av koden picturefill.js. På en AEM sida är värdet för data-src-attributet sökvägen till en resurs i databasen. En sidkomponent kan till exempel hårdkoda mediefrågor och tillhörande sökvägar för bildåtergivningar i DAM. Du kan också skapa en anpassad bildkomponent som gör det möjligt för författare att välja bildåtergivningar eller ange alternativ för runtime-återgivning.
+Skapa en komponent som genererar de div-element som förväntas av koden picturefill.js. På en AEM sida är värdet för data-src-attributet sökvägen till en resurs i databasen. En sidkomponent kan till exempel hårdkoda mediefrågor och tillhörande sökvägar för bildåtergivningar i DAM. Du kan också skapa en anpassad bildkomponent som gör att författare kan välja bildåtergivningar eller ange alternativ för körtidsåtergivning.
 
 I följande exempel väljer HTML två DAM-renderingar av samma bild.
 
