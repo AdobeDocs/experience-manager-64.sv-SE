@@ -273,7 +273,7 @@ Om du vill använda Workbench måste du ha en instans av AEM Forms igång, vanli
 
 ### Konfigurerar timeout-inställningar {#configuring-timeout-settings}
 
-Workbench gör som standard en timeout efter två timmar, oavsett aktivitet eller inaktivitet. Information om hur du redigerar timeout-inställningen finns i&quot;Konfigurera användarhantering > Konfigurera avancerade systemattribut&quot; i hjälpen för administrationskonsolen.
+Workbench gör som standard en timeout efter två timmar, oavsett aktivitet eller inaktivitet. Information om hur du redigerar timeoutinställningen finns i&quot;Konfigurera användarhantering > Konfigurera avancerade systemattribut&quot; i hjälpen för administrationskonsolen.
 
 ### Konfigurera Workbench för anslutning via HTTPS {#configuring-workbench-to-connect-over-HTTPS}
 
