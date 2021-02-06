@@ -134,7 +134,7 @@ Tänk på följande när du skapar eller markerar en bild:
 
 * Bildens höjd beskärs till 120 pixlar från bildens övre kant
 * Bilden är fäst vid webbläsarfönstrets vänstra kant
-* Det finns ingen storleksändring av bilden, så att när bildbredden är...
+* Det finns ingen storleksändring av bilden, så att när bildbredden är ...
 
    * Bilden upprepas vågrätt under webbläsarens bredd
    * Bilden blir större än webbläsarens bredd och ser ut att vara beskuren
