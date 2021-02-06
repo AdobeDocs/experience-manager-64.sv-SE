@@ -78,7 +78,7 @@ Det rekommenderade sättet att göra detta är att använda en tjänstanvändare
 >
 >I tidigare versioner skickades administratörssessionen till `WorkflowProcess`-implementeringarna och kunde sedan ha fullständig åtkomst till databasen utan att behöva definiera specifika åtkomstkontrollistor.
 >
->Behörigheterna definieras nu enligt ovan ([Behörigheter](#permissions)). Detta är den rekommenderade metoden för att uppdatera implementeringen.
+>Behörigheterna definieras nu enligt ovan ([Behörigheter](#permissions)). Som den metod som rekommenderas för att uppdatera implementeringen.
 >
 >En kortsiktig lösning finns också tillgänglig för bakåtkompatibla syften när kodändringar inte är möjliga:
 >
