@@ -382,7 +382,7 @@ Du kan ange en standardperson som alla dina uppgifter skickas till. Du kan ocks�
 1. Klicka på **Inställningar** och klicka på **Frånvarande**.
 1. Gör något av följande för att ange när du inte är på kontoret:
 
-   * Om du vill ange att du inte är på kontoret just nu under en obegränsad tidsperiod väljer du **Från Office** i listan &lt;a0/>Jag är **, men lägger inte till något datumintervall.**
+   * Om du vill ange att du inte är på kontoret just nu under en obegränsad tidsperiod väljer du **Från Office** i listan **Jag är**, men lägger inte till något datumintervall.
    * Om du vill ange ett startdatum och en starttid som du inte är på kontoret och klickar på + för **Frånvaroschema**. Använd kalendern och tidslistan för att ange startdatum och starttid. Om du inte anger något slutdatum eller någon sluttid räknas du som ledig från kontoret på obestämd tid från startdatumet och -tiden tills du ändrar dina inställningar.
 
 1. Om du vill ange hur dina uppgifter ska hanteras som standard väljer du något av följande alternativ i **När du är utanför kontoret: Standardanvändare för aktiviteter utanför kontoret**-lista:
