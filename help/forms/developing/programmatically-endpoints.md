@@ -463,7 +463,7 @@ Lägg till en bevakad mappslutpunkt med AEM Forms Java API:
 
 ### Bevakad mappkonfigurationsvärdeskonstantfil {#watched-folder-configuration-values-constant-file}
 
-Snabbstart: När du lägger till en bevakad mappslutpunkt med Java API[ används en konstant fil som måste ingå i Java-projektet för att snabbstarten ska kunna kompileras. ](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api) Den här konstanta filen representerar konfigurationsvärden som måste anges när du lägger till en bevakad mappslutpunkt. Följande Java-kod representerar den konstanta filen.
+Snabbstart: När du lägger till en bevakad mappslutpunkt med Java API](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api) används en konstant fil som måste ingå i Java-projektet för att snabbstarten ska kunna kompileras. [ Den här konstanta filen representerar konfigurationsvärden som måste anges när du lägger till en bevakad mappslutpunkt. Följande Java-kod representerar den konstanta filen.
 
 ```as3
  /** 
@@ -708,7 +708,7 @@ Lägg till en e-postslutpunkt med Java API:
 
 ### Konstantfilen {#email-configuration-values-constant-file} för e-postkonfigurationsvärden
 
-Snabbstart: När du lägger till en e-postslutpunkt med Java API[ används en konstant fil som måste ingå i Java-projektet för att snabbstarten ska kunna kompileras. ](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api) Den här konstanta filen representerar konfigurationsvärden som måste anges när du lägger till en e-postslutpunkt. Följande Java-kod representerar den konstanta filen.
+Snabbstart: När du lägger till en e-postslutpunkt med Java API](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api) används en konstant fil som måste ingå i Java-projektet för att snabbstarten ska kunna kompileras. [ Den här konstanta filen representerar konfigurationsvärden som måste anges när du lägger till en e-postslutpunkt. Följande Java-kod representerar den konstanta filen.
 
 ```as3
  /** 
