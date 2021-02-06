@@ -197,7 +197,7 @@ Affärsanalytikerna bör bekräfta att de till fullo förstår:
 
 * projektets omfattning
 * alla kundförväntningar
-* att detta är grunden för alla beslut som fattas per person, per fas i projektet
+* detta är grunden för alla beslut som fattas per person, per projektfas
 
 ## KPI:er för företag {#business-kpis}
 
@@ -1357,7 +1357,7 @@ Lämplig person bör bekräfta att de till fullo förstår
 
 * projektets omfattning
 * alla kundförväntningar
-* att detta är grunden för alla beslut som fattas per person, per fas i projektet
+* detta är grunden för alla beslut som fattas per person, per projektfas
 
 ## URL-hanteringskoncept {#url-handling-concept}
 
