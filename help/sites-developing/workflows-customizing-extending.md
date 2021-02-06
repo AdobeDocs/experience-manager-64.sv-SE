@@ -858,7 +858,7 @@ Ett enkelt sätt att börja skapa ett eget anpassat steg är att kopiera ett bef
 
 1. Nu kan du öppna en arbetsflödesmodell för redigering. I stegwebbläsaren kan du filtrera så att du ser **Mina anpassade steg**:
 
-   ![wf-34](assets/wf-36.png)
+   ![wf-36](assets/wf-36.png)
 
    Om du drar **Mitt anpassade steg** till modellen visas kortet:
 
