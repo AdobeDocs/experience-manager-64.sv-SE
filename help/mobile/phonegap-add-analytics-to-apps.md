@@ -105,7 +105,7 @@ När du har utfört dessa steg aktiveras appen för att rapportera alla livscyke
 
 ### Instrumentera koden för fullständig appspårning {#instrument-your-code-for-full-app-tracking}
 
-Det finns flera API:er för spårning i API:t för plugin-programmet för AMS PhoneGap.[](https://docs.adobe.com/content/help/en/mobile-services/ios/phonegap-ios/phonegap-methods.html)
+Det finns flera API:er för spårning i API:t för plugin-programmet för AMS PhoneGap.](https://docs.adobe.com/content/help/en/mobile-services/ios/phonegap-ios/phonegap-methods.html)[
 
 På så sätt kan du spåra lägen och åtgärder, t.ex. var sidor användarna navigerar till i appen, vilka kontroller som används mest. Det enklaste sättet att mäta vilket instrument ni använder för spårning är att använda de API:er för analys som tillhandahålls av plugin-programmet för AMS.
 
