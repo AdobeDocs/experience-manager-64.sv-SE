@@ -173,6 +173,6 @@ Tänk dig ett scenario där du vill fylla i listrutan **Läge** baserat på ett 
    .responseText);
    ```
 
-Innehållspaketet som innehåller ett exempel på en adaptiv form (demo/AFdemo) med koden ovan implementerad.
+Innehållspaketet som innehåller ett exempel på en adaptiv form (demo/AFdemo) med ovanstående kod implementerad.
 
 [Hämta fil](assets/dropdown-demo-content-1.0.1-snapshot.zip)
