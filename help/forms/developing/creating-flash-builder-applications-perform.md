@@ -84,7 +84,7 @@ Om autentiseringen fortfarande inte lyckas svarar säkerhetsservern med `authsta
 
 >[!NOTE]
 >
->När `authstate=CREDENTIAL_CHALLENGE` är &lt;a0/> bör klienten skicka de inhämtade autentiseringsuppgifterna till säkerhetsservern i en POST.
+>När `authstate=CREDENTIAL_CHALLENGE` är  bör klienten skicka de inhämtade autentiseringsuppgifterna till säkerhetsservern i en POST.
 
 **Utloggningsprocess**
 
