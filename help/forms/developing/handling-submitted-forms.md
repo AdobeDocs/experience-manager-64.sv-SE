@@ -88,7 +88,7 @@ I följande tabell beskrivs stegen i det här diagrammet.
  </thead>
  <tbody>
   <tr>
-   <td><p>3</p></td>
+   <td><p>1</p></td>
    <td><p>En webbsida innehåller en länk till en Java-server som anropar Forms-tjänsten.</p></td>
   </tr>
   <tr>
@@ -96,7 +96,7 @@ I följande tabell beskrivs stegen i det här diagrammet.
    <td><p>Forms-tjänsten återger ett interaktivt PDF-formulär till klientens webbläsare.</p></td>
   </tr>
   <tr>
-   <td><p>3</p></td>
+   <td><p>1</p></td>
    <td><p>Användaren fyller i ett interaktivt formulär och klickar på en skicka-knapp. Formuläret skickas tillbaka till Forms-tjänsten som PDF-data. Det här alternativet anges i Designer.</p></td>
   </tr>
   <tr>
