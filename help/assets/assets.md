@@ -3,9 +3,9 @@ title: Introduktion till [!DNL Adobe Experience Manager Assets]
 description: Lär dig vad som är digital resurshantering, användningsexempel och [!DNL Adobe Experience Manager Asset] erbjudande.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1958018f055b288db02baca55f5c2f503c377806
+source-git-commit: 02bf967a829be22ebec90d03ef1397cbe93e3d92
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '847'
 ht-degree: 0%
 
 ---
@@ -93,3 +93,8 @@ Du kan förstås även använda arbetsflöden manuellt. En lista över standarda
 ## [!DNL Experience Manager Assets] och  [!DNL Media Library] {#cq-dam-vs-cq-medialibrary}
 
 Mer information om skillnaderna finns i [Resurser och mediebibliotek](medialibrary.md).
+
+>[!MORELIKETHIS]
+>
+>* [Experience Manager Assets as a modern DAM](https://www.youtube.com/embed/PBwQqZgC-yo)
+
