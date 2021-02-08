@@ -1,25 +1,25 @@
 ---
-title: Om AEM Assets
-description: Läs mer om digital resurshantering, användningsexempel och Adobe AEM Asset-erbjudanden.
+title: Introduktion till [!DNL Adobe Experience Manager Assets]
+description: Lär dig vad som är digital resurshantering, användningsexempel och [!DNL Adobe Experience Manager Asset] erbjudande.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 077cc39c5ed47371a4e3fae1e991209c7bfe6b80
+source-git-commit: 1958018f055b288db02baca55f5c2f503c377806
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
 
 
-# Om AEM Assets {#about-assets}
+# Om [!DNL Adobe Experience Manager Assets] som en DAM-lösning {#about-assets}
 
-Resurser är ett DAM-verktyg (Digital Asset Management) som är helt integrerat med den AEM plattformen och som gör att ditt företag kan dela och distribuera digitala resurser. Användare i en hel organisation kan hantera, lagra och komma åt bilder, videor, dokument, ljudklipp och multimedia som Flash för användning på webben, i tryck och för digital distribution.
+[!DNL Assets] är ett DAM-verktyg (Digital Asset Management) som är en integrerad del av  [!DNL Experience Manager] plattformen och gör det möjligt för företaget att hantera och distribuera digitala resurser. Användare i en hel organisation kan hantera, lagra och få tillgång till många typer av digitalt material som bilder, videor, dokument, ljudklipp, 3D-filer och multimedia för användning på webben, i tryck och för digital distribution.
 
-## Vad är Digital Asset Management (DAM)? {#what-is-digital-asset-management}
+## Vad är Digital Asset Management? {#what-is-digital-asset-management}
 
-Resurser ger möjlighet till företagsövergripande delning och distribution av en organisations viktigaste digitala resurser. Användare i en hel organisation kan lagra, hantera och komma åt digitala resurser som bilder, grafik, ljud, video och dokument via ett webbgränssnitt (eller en CIFS- eller WebDAV-mapp).
+[!DNL Assets] erbjuder företagsövergripande delning och distribution av en organisations viktigaste digitala resurser. Användare i en hel organisation kan lagra, hantera och komma åt digitala resurser som bilder, grafik, ljud, video och dokument via ett webbgränssnitt (eller en CIFS- eller WebDAV-mapp).
 
-Helt integrerat i AEM kan du göra följande med AEM Assets:
+[!DNL Assets] kan du  [!DNL Experience Manager] göra följande:
 
 * Lägg in och dela bilder, dokument, ljudfiler och videofiler i en mängd olika filformat.
 * Hantera resurser genom att gruppera dem efter taggar, ljusbord eller stjärnor (dina favoriter). Lägg till anteckningar i resurser.
@@ -28,30 +28,24 @@ Helt integrerat i AEM kan du göra följande med AEM Assets:
 * Utför bildredigeringsfunktioner som skalning och lägga till bildfilter. Importera och exportera flera digitala resurser samtidigt med en WebDAV- eller CIFS-mapp.
 * Använd arbetsflöden och meddelanden för att möjliggöra gemensam bearbetning och hämtning av alla typer av resurser och hantera åtkomsträttigheter till resurser.
 
-### AEM Assets är helt integrerat med AEM WCM-funktioner {#aem-assets-fully-integrated-in-cq-wcm}
+### [!DNL Experience Manager Assets] är integrerat med  [!DNL Experience Manager Sites] {#aem-assets-fully-integrated-in-cq-wcm}
 
-AEM Assets är helt integrerat med CQ WCM och funktionaliteten finns tillgänglig via DAM-ikonen:
+[!DNL Assets] är helt integrerat med  [!DNL Sites] och fungerar smidigt för alla användningsområden. När du skapar webbsidor kan till exempel [!DNL Sites]-författarna hitta och använda de digitala resurserna via Innehållssökning. Användargränssnittet för [!DNL Assets] är detsamma som för [!DNL Sites]. Mer information finns i [översikt över platser](/help/sites-authoring/qg-page-authoring.md).
 
-<!-- TBD: Update image for branding -->
+<!-- TBD: Update image for branding 
 
-![screen_shot_2012-04-17at15946](assets/screen_shot_2012-04-17at15946pm.png) ![pmscreen_shot_2012-04-17at20100pm](assets/screen_shot_2012-04-17at20100pm.png)
+![screen_shot_2012-04-17at15946pm](assets/screen_shot_2012-04-17at15946pm.png) ![screen_shot_2012-04-17at20100pm](assets/screen_shot_2012-04-17at20100pm.png)
 
-Resurser som hanteras i CQ DAM kan sedan nås via innehållshanteraren i WCM:
+Assets managed within [!DNL Experience Manager] DAM can then be accessed via the content finder of WCM:
 
-<!-- TBD: Update image for branding -->
-
-![screen_shot_2012-04-17at20214pm](assets/screen_shot_2012-04-17at20214pm.png)
-
->[!NOTE]
->
->Den grundläggande navigeringen i användargränssnittet är densamma som i resten av AEM - se [Översikt över GUI-konsolen](/help/sites-authoring/qg-page-authoring.md) för fullständig information.
+![screen_shot_2012-04-17at20214pm](assets/screen_shot_2012-04-17at20214pm.png) -->
 
 ### Digital Asset Management jämfört med Image-komponenten {#digital-asset-management-versus-image-component}
 
-När du avgör om en bild ska placeras i AEM Assets eller om komponenten Image ska användas, bör du tänka på bildens livscykel:
+När du avgör om en bild ska placeras i DAM-databasen eller om bildkomponenten ska användas, bör du tänka på bildens livscykel:
 
 * Om bilden har samma livscykel som sidan använder du bildkomponenten.
-* Om bilden har en separat livscykel, till exempel om du använder bilden två gånger eller utanför WCM, använder du AEM Assets.
+* Om bilden har en separat livscykel, till exempel om du använder bilden två gånger eller utanför WCM, använder du [!DNL Assets].
 
 ## Vad är digitala resurser? {#what-are-digital-assets}
 
@@ -61,31 +55,31 @@ En resurs är i stort sett en binär resurs plus metadata plus återgivningar pl
 
 >[!CAUTION]
 >
->Överföring och/eller redigering av en stor mängd resurser (särskilt bilder) kan påverka CQ-instansens prestanda.
+>Överföring och/eller redigering av en stor mängd resurser (särskilt bilder) kan påverka prestandan för din [!DNL Experience Manager]-distribution.
 
-### AEM Assets-terminologi {#aem-assets-terminology}
+### [!DNL Experience Manager Assets] terminologi  {#aem-assets-terminology}
 
-När du arbetar med digitala resurser i AEM måste du förstå följande terminologi:
+När du arbetar med digitala resurser i [!DNL Experience Manager] måste du förstå följande terminologi:
 
-* **Samling:** En samling resurser som baseras på fysisk plats (mapp), gemensamma egenskaper (sparad sökmapp) eller användarval (lightbox-mappar).
+* **Samling**: En samling resurser, antingen baserat på fysisk plats (mapp), gemensamma egenskaper (sparad sökmapp) eller användarval (lightbox-mappar).
 
-* **Metadata:** Resurserna har metadata; till exempel författare, förfallodatum, DRM-information (Digital Rights Management) och så vidare. Metadata är under åtkomstkontroll. AEM Assets har stöd för följande vanliga metadatascheman:
+* **** [!DNL Assets] Metadata. till exempel författare, förfallodatum, DRM-information (Digital Rights Management) och så vidare. Metadata är under åtkomstkontroll. [!DNL Assets] har stöd för följande vanliga metadatascheman:
 
-   * **Dublin Core**: inklusive författare, beskrivning, datum, ämne och så vidare.
-   * **IPTC**: inklusive händelse, modell, plats och så vidare.
-   * **WCM**: inklusive sidegenskaper, tid och så vidare.
+   * Dublin Core: inklusive författare, beskrivning, datum, ämne och så vidare.
+   * IPTC: inklusive händelse, modell, plats och så vidare.
+   * WCM: inkluderar sidegenskaper, [!UICONTROL On Time] och [!UICONTROL Off Time], och så vidare.
 
-* **Tagga:** Resurser kan taggas och klassificeras. Se Använda taggar och Administrera taggar.
+* **Taggning**:  [!DNL Assets] kan taggas och klassificeras. Se [ordna resurser](/help/assets/organize-assets.md).
 
-* **Återgivning:** En återgivning är den binära återgivningen av en resurs. Resurser har alltid en primär representation - den som tillhör den överförda filen. De kan ha valfritt antal ytterligare representationer som skapas, till exempel genom anpassade arbetsflödessteg eller när en resurs överförs. Återgivningar kan ha en annan storlek, med en annan upplösning, med en vattenstämpel eller någon annan förändrad egenskap.
+* **Återgivningar**: En återgivning är den binära representationen av en resurs. [!DNL Assets] har alltid en primär representation - den överförda filen. De kan ha valfritt antal ytterligare representationer som skapas, till exempel genom anpassade arbetsflödessteg eller när en resurs överförs. Återgivningar kan ha en annan storlek, med en annan upplösning, med en vattenstämpel eller någon annan förändrad egenskap.
 
-* **versioner:** Versionshantering skapar en ögonblicksbild av digitala resurser vid en viss tidpunkt. Du kan återställa resurser till tidigare versioner. Se [versionshantering i AEM Assets](managing-assets-touch-ui.md#asset-versioning).
+* **Versioner**: Versionshantering skapar en ögonblicksbild av digitala resurser vid en viss tidpunkt. Du kan återställa resurser till tidigare versioner. Se [versionshantering i [!DNL Assets]](managing-assets-touch-ui.md#asset-versioning).
 
-* **Delresurser:** Delresurser är resurser som utgör en resurs, till exempel lager i en Adobe Photoshop-fil eller sidor i en PDF-fil. I AEM Assets kan du hantera underresurser på samma sätt som du hanterar resurser.
+* **Deltillgångar**: Delresurser är resurser som utgör en resurs, till exempel lager i en  [!DNL Adobe Photoshop] fil eller sidor i en PDF-fil. I [!DNL Assets] kan du hantera delresurser på samma sätt som du hanterar resurser.
 
-### Så här arbetar du med resurser {#how-to-work-with-assets}
+### Så här arbetar du med digitala resurser {#how-to-work-with-assets}
 
-Du utför en åtgärd på en resurs eller samling. Funktionsmakron kan skapa och ändra resurser, samlingar och återgivningar. Många av de grundläggande åtgärder du utför på resurser - överföra, ta bort, uppdatera, spara underresurser - utlöser förkonfigurerade arbetsflöden. Dessa aktiveras automatiskt i AEM Assets och beskrivs i detalj i AEM Assets mediehanterare.
+Du utför en åtgärd på en resurs eller samling. Funktionsmakron kan skapa och ändra resurser, samlingar och återgivningar. Många av de grundläggande åtgärder du utför på resurser - överföra, ta bort, uppdatera, spara underresurser - utlöser förkonfigurerade arbetsflöden. Dessa aktiveras automatiskt i [!DNL Assets] och beskrivs i detalj i [!DNL Assets]-mediehanterare.
 
 De uppgifter du kan utföra med dessa förkonfigurerade arbetsflöden:
 
@@ -94,8 +88,8 @@ De uppgifter du kan utföra med dessa förkonfigurerade arbetsflöden:
 * Generera återgivningar och miniatyrbilder för resursen. inklusive automatisk storleksändring och beskärning vid behov.
 * Omkoda tillgången där det behövs. Video för mobil- och webbanvändning omkodas till exempel med 24 bildrutor per sekund, och video hämtas med 30 bildrutor per sekund. Ljud för mobil- och webbanvändning omkodas med 128 kbit/s, ljud för nedladdning med 192 kbit/s.
 
-Du kan förstås även använda arbetsflöden manuellt. Se [AEM Assets Media Handlers](media-handlers.md)för en lista över standardarbetsflöden.
+Du kan förstås även använda arbetsflöden manuellt. En lista över standardarbetsflöden finns i [Resursmediehanterare](media-handlers.md).
 
-## AEM DAM och AEM MediaLibrary {#cq-dam-vs-cq-medialibrary}
+## [!DNL Experience Manager Assets] och  [!DNL Media Library] {#cq-dam-vs-cq-medialibrary}
 
-Mer information om skillnaderna finns i [AEM DAM och AEM MediaLibrary](medialibrary.md).
+Mer information om skillnaderna finns i [Resurser och mediebibliotek](medialibrary.md).
