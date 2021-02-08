@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 73e67103e6bd9784bcc671ed04dcd508fa5597a0
+source-git-commit: 42d5a1875d78fdec1be0bb22d8ec8de2e56256ec
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 5%
@@ -79,7 +79,7 @@ Det bästa sättet är att börja med parametern oskarp maskradie. Radie-instäl
 
 Låt den monokroma parameterinställningen vara 0.
 
-### Bästa tillvägagångssätt för JPEF-komprimering (&amp;qlt=) {#best-practices-for-jpef-compression-qlt}
+### Metodtips för JPEG-komprimering (&amp;qlt=) {#best-practices-for-compression-qlt}
 
 * Den här parametern styr JPG-kodningskvaliteten. Ett högre värde innebär en bild av högre kvalitet men en stor filstorlek. Ett lägre värde innebär en bild med lägre kvalitet men mindre filstorlek. Intervallet för den här parametern är 0-100.
 * Om du vill optimera kvaliteten ska du inte ställa in parametervärdet på 100. Skillnaden mellan en inställning på 90 eller 95 och 100 är nästan otydlig, men 100 ökar storleken på bildfilen i onödan. Om du vill optimera för kvalitet men undvika att bildfiler blir för stora anger du `qlt=<value>` till 90 eller 95.
