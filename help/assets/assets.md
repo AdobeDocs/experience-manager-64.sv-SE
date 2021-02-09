@@ -3,9 +3,9 @@ title: Introduktion till [!DNL Adobe Experience Manager Assets]
 description: Lär dig vad som är digital resurshantering, användningsexempel och [!DNL Adobe Experience Manager Asset] erbjudande.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 02bf967a829be22ebec90d03ef1397cbe93e3d92
+source-git-commit: 91fbe9d3368feb7ecae73c56b2484c305cfb94b8
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '850'
 ht-degree: 0%
 
 ---
@@ -96,5 +96,5 @@ Mer information om skillnaderna finns i [Resurser och mediebibliotek](medialibra
 
 >[!MORELIKETHIS]
 >
->* [Experience Manager Assets as a modern DAM](https://www.youtube.com/embed/PBwQqZgC-yo)
+>* [Videointroduktion - Experience Manager Assets as a modern DAM](https://www.youtube.com/watch?v=PBwQqZgC-yo)
 
