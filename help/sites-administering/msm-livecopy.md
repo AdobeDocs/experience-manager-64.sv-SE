@@ -10,9 +10,9 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 161b591b-5871-4b5f-9c63-823b6e67b1fd
 translation-type: tm+mt
-source-git-commit: 11710b19c373b014862f892640d1bd4e90c6f411
+source-git-commit: ebb750f00fb1d4d6f2b19e300e5a68b6b43650d7
 workflow-type: tm+mt
-source-wordcount: '3963'
+source-wordcount: '4019'
 ht-degree: 1%
 
 ---
@@ -142,7 +142,7 @@ Om du utelämnar vissa språkgrenar eller kapitel från live-kopian kan du lägg
 
 >[!CAUTION]
 >
->När ritningskällan innehåller länkar och referenser som avser ett stycke i en annan gren, uppdateras inte målen i live-kopieringssidorna, utan de är fortfarande kopplade till det ursprungliga målet.
+>När ritningskällan innehåller länkar och referenser som avser ett stycke i en annan gren, uppdateras inte målen på sidorna för den aktiva kopian, utan de är fortfarande kopplade till det ursprungliga målet.
 
 När du skapar platsen anger du värden för följande egenskaper:
 
@@ -337,6 +337,10 @@ Du kan göra uppehåll i arvet av live-kopior för en live-kopieringssida så at
 >
 >Du kan också [frigöra en live-kopia](#detaching-a-live-copy) från sin plan för att ta bort alla anslutningar. Frigör är permanent och icke-reversibel.
 
+>[!NOTE]
+>
+>Om komponenten är markerad som en behållare gäller inte åtgärderna för att avbryta och göra uppehåll för dess underordnade komponenter. Se även [MSM Best Practices](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization) om du vill ha mer information.
+
 #### Pausar arv från Sidegenskaper {#suspending-inheritance-from-page-properties}
 
 Så här gör du uppehåll i arv på en sida:
@@ -440,6 +444,10 @@ Så här anger eller ändrar du djup:
 ### Avbryter arv för en komponent {#cancelling-inheritance-for-a-component}
 
 Avbryt arvet av live-kopia för en komponent så att komponenten inte längre är synkroniserad med källkomponenten. Du kan aktivera arv vid ett senare tillfälle om det behövs.
+
+>[!NOTE]
+>
+>Om komponenten är markerad som en behållare gäller inte åtgärderna för att avbryta och göra uppehåll för dess underordnade komponenter. Se även [MSM Best Practices](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization) om du vill ha mer information.
 
 >[!NOTE]
 >
