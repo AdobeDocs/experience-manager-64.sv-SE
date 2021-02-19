@@ -7,7 +7,7 @@ user-guide-title: AEM 6.4 Developing User Guide
 breadcrumb-title: Utvecklingshandbok
 user-guide-description: Den här guiden beskriver hur du skapar AEM.
 translation-type: tm+mt
-source-git-commit: 7345a3c392dc6df495454a061a8a0624a4fb46d1
+source-git-commit: 5a9cdf29ca7331cdae5c0905b20a76f7124f3dd4
 workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 5%
@@ -79,7 +79,7 @@ ht-degree: 5%
    + [Utveckla AEM](developing-components.md)
    + [Utveckla AEM - kodexempel](developing-components-samples.md)
    + [JSON-exporterare för innehållstjänster](json-exporter.md)
-   + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-64/developing/components/json-exporter-components.html)
+   + [Aktivera JSON-export för en komponent](json-exporter-components.md)
    + [Bildredigeraren](image-editor.md)
    + [Dekoration-tagg](decoration-tag.md)
    + [Använda Dölj villkor](hide-conditions.md)
@@ -100,7 +100,7 @@ ht-degree: 5%
       + [Utveckla Forms (Classic UI)](developing-forms.md)
 + Headless Experience Management{#headless}
    + [Headless och Hybrid with AEM](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
-   + [Aktivera JSON-export för en komponent](json-exporter-components.md)
+   + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-64/developing/components/json-exporter-components.html)
    + Enkelsidiga program{#spas}
       + [SPA introduktion och genomgång](spa-walkthrough.md)
       + [SPA WKND - självstudiekurs](spa-wknd.md)
