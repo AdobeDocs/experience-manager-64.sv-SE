@@ -3,10 +3,10 @@ title: Aktivitetsström på tidslinjen
 description: 'I den här artikeln beskrivs hur du visar aktivitetsloggar för resurser på tidslinjen. '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ddfcb74451f41cea911700a64abceaaf47e7af49
+source-git-commit: e64f5b0e1333d511eaf450072756a95399e838d0
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 26%
+source-wordcount: '215'
+ht-degree: 24%
 
 ---
 
@@ -28,7 +28,7 @@ Följande åtgärder är loggade i aktivitetsströmmen:
 
 Aktivitetsloggarna som ska visas på tidslinjen hämtas från platsen `/var/audit/com.day.cq.dam/content/dam` i CRX, där loggfiler lagras.
 
-Dessutom loggas tidslinjeaktiviteten när nya resurser överförs eller befintliga resurser ändras och checkas in i AEM via [Adobe Asset Link](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) eller [datorversionen av AEM](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html).
+Dessutom loggas tidslinjeaktiviteten när nya resurser överförs eller befintliga resurser ändras och checkas in i AEM via [Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html) eller [datorversionen av AEM](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html).
 
 >[!NOTE]
 >
