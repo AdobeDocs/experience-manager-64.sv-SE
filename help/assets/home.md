@@ -3,10 +3,10 @@ title: Resurshandbok
 description: Den här guiden täcker alla AEM Assets-uppgifter, t.ex. hur man skapar, hanterar, levererar och optimerar digitala resurser.
 user-guide-title: Resurshandbok
 translation-type: tm+mt
-source-git-commit: ddfcb74451f41cea911700a64abceaaf47e7af49
+source-git-commit: e64f5b0e1333d511eaf450072756a95399e838d0
 workflow-type: tm+mt
-source-wordcount: '325'
-ht-degree: 5%
+source-wordcount: '317'
+ht-degree: 4%
 
 ---
 
@@ -17,9 +17,8 @@ Den här guiden täcker alla AEM Assets-uppgifter, t.ex. hur man skapar, hantera
 
 ## Viktiga AEM
 
-* [Komma igång med AEM](https://helpx.adobe.com/experience-manager/get-started.html)
-* [AEM 6.4 Versionsinformation](/help/release-notes/home.md)
-* [Senaste dokumentationsuppdateringarna](https://helpx.adobe.com/experience-manager/documentation-updates.html)
+* [Versionsinformation för AEM 6.4](/help/release-notes/home.md)
+* [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
 * [AEM](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.4 användarhandböcker
@@ -41,7 +40,7 @@ Den här guiden täcker alla AEM Assets-uppgifter, t.ex. hur man skapar, hantera
 
 ## Viktiga AEM
 
-* [AEM självstudiekurser](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
+* [AEM självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html)
 * [Användarhandbok för Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
 * [Användarhandbok för HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html)
 * [Användarhandbok för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
