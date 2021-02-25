@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: a2808c1861b6853b5e9505ad189f296f7ebd2572
 workflow-type: tm+mt
-source-wordcount: '21616'
+source-wordcount: '21578'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 | Version | 6.4.8.0 |
 | Typ | Service Pack-version |
 | Date | 5 mars 2020 |
-| Hämta URL | AEM 6.4.8.0 i [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/servicepack/aem-service-pkg-6.4.8.zip) |
+| Hämta URL | AEM 6.4.8.0 på [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/servicepack/aem-service-pkg-6.4.8.zip) |
 
 ## Vad ingår i AEM 6.4.8.0 {#what-s-included-in-aem}
 
@@ -93,7 +93,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Dynamic Media videokodningar kan inte överföras när Scene7 Cloud Configuration placeras i en privat mapp `/conf` i stället för `/conf/global` (NPR-31779).
 
-* Bilden visas inte på tidslinjen när anteckningar har lagts till, på Experience Manager som körs i körläge för Dynamic Media Scene7 (NPR-31754).
+* Bild visas inte på tidslinjen när anteckningar har lagts till, på Experience Manager som körs i körläge för Dynamic Media Scene7 (NPR-31754).
 
 * ZIP-filen som hämtas från DAM kan inte öppnas med WinZip (NPR-31745).
 
@@ -207,7 +207,7 @@ Om du använder paketet `com.day.cq.dam.handler.standard.msoffice` i din anpassa
 
 * Namn på bilduppsättningen ändras till gemener i Scen 7 när bilduppsättning (eller mediaset) skapas och namnges med lämplig namnkonvention i DAM (NPR-31576).
 
-* Dynamic Media Encode Video-arbetsflödet kan inte generera miniatyrbilder för videon som migreras från Scene 7 till Dynamic Media - körningsläge Scene 7 (NPR-31523).
+* Dynamic Media Encode Video-arbetsflödet kan inte generera miniatyrbilder för videon som migreras från Scene 7 till Dynamic Media - körningsläget Scene 7 (NPR-31523).
 
 * Ett internt serverfel påträffades när ett filter användes för att söka efter uppsättningar, i AEM som körs i Dynamic Media - Scene 7-miljön (NPR-31388).
 
@@ -553,12 +553,12 @@ Några av de viktigaste högdagrarna i AEM 6.4.5.0 är:
 * Replikeringen från AEM till varumärkesportalen har fastnat under lång tid. NPR-28914: Programfix för CQ-4254932
 * Att flytta resurser i DAM resulterar inte i en liknande förflyttning på Scene7. NPR-28957: Programfix för CQ-4264974
 * Metadatauppdateringar skickas inte till IPS om metadatafältet uppdateras i AEM. NPR-28961: Programfix för CQ-4255393
-* VersioningTimelineEventProvider ska innehålla rotversionen tillsammans med versionskommentaren. Programfix för GRANITE-26063
+* VersioningTimelineEventProvider ska tillhandahålla rotversionen tillsammans med versionskommentaren. Programfix för GRANITE-26063
 * Inmatning av data leder till exekvering av kod på serversidan. Programfix för CQ-4270246
 * Aktiverat stöd för flera Platshanterare för resurser. Programfix för CQ-4271453, CQ-4268621, CQ-4257491
 * AEM ska visa ytterligare en post för den aktuella versionen av resursen i tidslinjehistoriken och visa den senaste incheckningskommentaren från Adobe Asset Link. Programfix för CQ-4262864
 * Exempelvideon läses inte in när en MixedMediaSet skapas eller redigeras. Programfix för CQ-4244889
-* Om du inaktiverar behörigheterna att ta bort innehåll på AEM sidan förhindrar du användaren att publicera till varumärkesportalen. Programfix för CQ-4270426
+* Om du inaktiverar behörigheten att ta bort innehåll på AEM sidan förhindrar du användaren att publicera till varumärkesportalen. Programfix för CQ-4270426
 * Frågebegränsningsrelaterade problem med tillgångsrapporter efter uppgradering till AEM 6.4.3. NPR-28588: Programfix för CQ-4262022, CQ-4260697
 * Hämtningsfunktionen utnyttjar AEM Assets via en resurshämtningsserver som gör det möjligt för anonyma användare att hämta alla resurser. NPR-27315, programfix för CQ-4254732
 
@@ -579,7 +579,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.5.0 är:
 * Om du minimerar RTF-redigeraren från helskärmsläge i källredigeringsläge leder det till innehållsförlust. NPR-29574: Programfix för CQ-4260584
 * (Klassiskt användargränssnitt) Det går inte alltid att navigera till den sista fliken när det finns ett stort antal taggar. NPR-29544: Programfix för CQ-4264548
 * (Klassiskt användargränssnitt) Admin Console navigeringsmenyn försvinner och sidan läses inte in helt. NPR-29571: Programfix för CQ-4264585
-* Felvarning genereras när komponenter läggs till på WCM-sidan när miniatyrbilder är aktiverade på instansen. NPR-29396: Programfix för CQ-4266196
+* Felavisering genereras när komponenter läggs till på WCM-sidan när miniatyrbilder är aktiverade på instansen. NPR-29396: Programfix för CQ-4266196
 * Ett problem med arv av Style System-noder från den överordnade noden. NPR-29296: Programfix för CQ-4266041
 * Sidan som återställs med Timewarp ska referera till rätt bild vid versionshanteringen.  NPR-29431: Programfix för CQ-4262638
 * Tom sida med Javascript-fel i redigeraren efter installation av den senaste 6.4.5-versionen av ögonblicksbilden. NPR-29475: Programfix för CQ-4266196
@@ -866,7 +866,7 @@ Några viktiga högdagrar i AEM 6.4.4.0 är:
 
 **Granit**
 
-* Hälsokontrollen för Sling Content Access utför lång verifiering med mycket hög/libs för anpassad resursmatchningssökväg. NPR-28113: Programfix för GRANITE-23529
+* Hälsokontrollen för Sling Content Access utför lång validering av /libs för anpassad resurslösarsökväg. NPR-28113: Programfix för GRANITE-23529
 
 **Hantering av innehållsfragment**
 
@@ -1175,7 +1175,7 @@ Det går inte att redigera taggar via taggning. NPR-26957: Programfix för CQ-42
 
 * Ett NullPointerException returneras vid försök att hämta konfigurationer efter uppgradering till AEM 6.4. NPR-27310: Programfix för Granite-23573
 * Proaktiv backport för korrigeringar av granite.platform.login. NPR-26941
-* Proaktiv backport för granite.ui.content-korrigeringar. NPR-26294
+* Proaktiv backport för granite.ui.content fixes. NPR-26294
 * Nummerfältskomponenten validerar inte negativa tal i Internet Explorer 11. NPR-26701
 * Proaktiv backport för granite.ui.coralui3-korrigeringar. NPR-26662
 * Proaktiv backport för granite.ui.coralui3-eon-korrigeringar. NPR-26666
@@ -1473,7 +1473,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 **UI - Foundation**
 
 * Proaktiv grundläggande gränssnittssupport. NPR-24344, NPR-24345, NPR-25176, NPR-25095, NPR-24332, NPR-25653, NPR-25932, NPR-259 35, NPR-25976
-* (Design Importer) Om du importerar en sida importeras inte js,css. NPR-25205: Programfix för Granite-2236
+* (Design Importer) Om du importerar en sida importeras inte js,css. NPR-25203: Programfix för Granite-2236
 * Proactive Foundation UI Backports för att förbättra produktens stabilitet. NPR-24334
 
 **MAC - Test &amp; Target-integrering**
@@ -1743,7 +1743,7 @@ AEM 6.4.1.0 kan installeras på AEM 6.4 GA. Några av huvudpunkterna i Service P
 * (Coral3 Datepicker) Lägg till stöd för typeHint om du vill spara värden som &quot;String&quot;. NPR-23398: Programfix för Granite-21194
 * Internationalisering fungerar inte på språknivå. NPR-22967, NPR-23046: Programfix för Granite-2111
 * Proaktiv backport för granite.ui.commons-korrigeringar. NPR-23537
-* Proaktiv backport för granite.ui.content-korrigeringar. NPR-23535
+* Proaktiv backport för granite.ui.content fixes. NPR-23535
 * Proaktiv backport för granite.ui.coralui-korrigeringar. NPR-23538
 * Det går inte att ta bort flera användare från gruppen samtidigt. NPR-23846
 * (OMEGA) Rapportera&quot;Funktion&quot; endast på engelska. NPR-23989: Programfix för Granite-21231
@@ -2225,7 +2225,7 @@ Om du vill använda Uber Jar i ett Maven-projekt kan du läsa artikeln [Använda
 
 ### Borttagna/inaktuella funktioner {#removed-deprecated-features}
 
-I det här avsnittet listas funktioner som har tagits bort eller tagits bort från AEM 6.4.
+I det här avsnittet visas funktioner som har tagits bort eller tagits bort från AEM 6.4.
 
 | Yta | Funktion | Ersättning | Version |
 |---|---|---|---|
@@ -2236,15 +2236,10 @@ I det här avsnittet listas funktioner som har tagits bort eller tagits bort fr�
 
 * Följande fel och varningar kan visas under installationen:
 
-   * Fel vid skapande av komponentinstans och Service factory returnerade null på grund av databasomstart:
-
-      * com.day.cq.cq-personalization \[com.day.cq.pesonalization.impl.DefaultProfileProvider(938)\] Det går inte att skapa komponentinstansen eftersom det inte gick att binda referensprofileManager
-      * org.apache.sling.Commons.eduler FrameworkEvent ERROR (org.osgi.framework.ServiceException: Servicefabriken returnerade null. (Komponent: com.day.cq.tagging.impl.TagGarbageCollector (1687))
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` : Tidsgränsen överskreds i väntan på att reg.ändringen skulle slutföras utan registrering.
    * `com.adobe.granite.maintenance.impl.TaskScheduler` Inga underhållsfönster hittades vid granit/drift/underhåll
    * `com.adobe.cq.com.adobe.cq.ui.commons bundle com.adobe.cq.com.adobe.cq.ui.commons:1.2.28 (204)[com.adobe.cq.ui.wcm.commons.internal.servlets.rte.RTEFilterServletFactory(573)]`: Metoden unbindChange har utlöst ett undantag (java.lang.IllegalStateException: Tjänsten har redan avregistrerats.)
 Dessa fel kräver ingen åtgärd eftersom de inte påverkar AEM.
-
 
 ### Lösta problem {#resolved-issues}
 
