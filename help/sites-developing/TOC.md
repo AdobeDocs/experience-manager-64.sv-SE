@@ -105,7 +105,7 @@ ht-degree: 5%
       + [SPA introduktion och genomgång](spa-walkthrough.md)
       + [SPA WKND - självstudiekurs](spa-wknd.md)
       + [Getting Started with SPA in AEM - React](spa-getting-started-react.md)
-      + [Getting Started with SPA in AEM - Angular](spa-getting-started-angular.md)
+      + [Komma igång med SPA i AEM - Angular](spa-getting-started-angular.md)
       + [Implementera en React Component for SPA](spa-implementing-react-component.md)
       + [SPA djupdykning](spa-deep-dives.md)
       + [SPA](spa-overview.md)
