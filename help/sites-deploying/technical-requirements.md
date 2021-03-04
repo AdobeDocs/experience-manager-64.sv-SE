@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 4d3c4650-3e2a-43b1-ad2d-8d0ae2254ca9
 translation-type: tm+mt
-source-git-commit: 5e418ea537e00dc3b23174a7b1bb01dba0fc6b3a
+source-git-commit: 53154f9ada1062dae4bdccc5eac3d3113cd730a2
 workflow-type: tm+mt
-source-wordcount: '3181'
+source-wordcount: '3273'
 ht-degree: 0%
 
 ---
@@ -129,10 +129,10 @@ Adobe Experience Manager arbetar med följande versioner av Java Virtual Machine
  </tbody> 
 </table>
 
-1. Oracle har flyttat till en&quot;LTS-modell&quot; (Long Term Support) för Oracle Java SE-produkter. Java 9 och 10 är icke-LTS-versioner från Oracle (se [Oracle Java SE support roadmap](https://www.oracle.com/technetwork/java/eol-135779.html)). Adobe tillhandahåller endast stöd för LTS-versioner av Java för AEM i produktionen.
+1. Oraclet har flyttat till en LTS-modell (Long Term Support) för Oracle Java SE-produkter. Java 9 och 10 är icke-LTS-versioner som Oracle (se [Oracle Java SE support roadmap](https://www.oracle.com/technetwork/java/eol-135779.html)). Adobe tillhandahåller endast stöd för LTS-versioner av Java för AEM i produktionen.
 
 1. IBM JRE stöds endast i kombination med WebSphere Application Server.
-1. Stöd för och distribution av Oracle Java SE JDK, inklusive alla underhållsuppdateringar av LTS-releaser som ligger utanför de offentliga uppdateringarna, kommer att stödjas av Adobe direkt för alla AEM som använder Oracle Java SE-tekniken. Mer information finns i [Oracle Java support för Adobe Experience Manager Q&amp;A](assets/adobe-oracle-java-license-agreement.pdf).
+1. Stöd för och distribution av Oraclet Java SE JDK, inklusive alla underhållsuppdateringar av LTS-releaser efter slutet av de offentliga uppdateringarna, kommer att stödjas av Adobe direkt för alla AEM som använder Oraclet Java SE. Mer information finns i [Oraclets Java-stöd för Adobe Experience Manager Q&amp;A](assets/adobe-oracle-java-license-agreement.pdf).
 
 ### Lagring och beständighet {#storage-persistence}
 
@@ -454,7 +454,7 @@ Om du vill ansluta med Microsoft Windows 7+ till en AEM som inte är säker med 
 
    * HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters
 
-1. Lägg till registerposten BasicAuthLevel till den här undernyckeln med värdet 2 eller mer.
+1. Lägg till registerposten BasicAuthLevel i den här undernyckeln med värdet 2 eller mer.
 
 Se [Microsoft Support KB 841215](https://support.microsoft.com/default.aspx/kb/841215).
 
@@ -627,6 +627,20 @@ x86
 >
 
 
+
+### Krav för AEM Forms Designer {#requirements-for-aem-forms-designer}
+
+* Microsoft® Windows® 2012 Server R2, Microsoft® Windows® 2016 Server, Microsoft® Windows® 2019 Server, Microsoft® Windows® 10
+* 1 GHz eller snabbare processor med stöd för PAE, NX och SSE2.
+* 1 GB RAM för 32-bitars eller 2 GB RAM för 64-bitars operativsystem
+* 16 GB diskutrymme för 32-bitars eller 20 GB diskutrymme för 64-bitars operativsystem
+* Grafikminne - 128 MB GPU (256 MB rekommenderas)
+* 2,35 GB ledigt hårddiskutrymme
+* DVD-ROM-enhet
+* Bildskärmsupplösning på 1 024 x 768 pixlar eller högre
+* Maskinvaruacceleration för video (valfritt)
+* Acrobat Pro DC, Acrobat Standard DC eller Adobe Acrobat Reader DC
+* Administrativ behörighet för att installera Designer
 
 ### Krav för AEM Assets XMP metadata write-back {#requirements-for-aem-assets-xmp-metadata-write-back}
 
