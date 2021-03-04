@@ -9,9 +9,9 @@ topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 6bd58e37-085e-4057-8200-1404d54f41cc
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 5734bcd7231f7ba8779acd8e0325b875e252e104
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '317'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Med AEM Forms kan du begränsa regelredigeringsåtkomsten till användare basera
 
    ![1](assets/1.png)
 
-1. I webbkonsolfönstret letar du upp och klickar på **tjänsten Adaptiv formulärkonfiguration**. **Dialogrutan** för tjänsten Adaptiv formulärkonfiguration visas. Ändra inga värden och klicka på **Spara**.
+1. I webbkonsolfönstret letar du reda på och klickar på **[!UICONTROL Adaptive Form and Interactive Communication Web Channel Configuration]**. **[!UICONTROL Adaptive Form and Interactive Communication Web Channel Configuration]** visas. Ändra inga värden och klicka på **[!UICONTROL Save]**.
 
    Filen /apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config skapas i CRX-databasen.
 
@@ -55,7 +55,7 @@ Med AEM Forms kan du begränsa regelredigeringsåtkomsten till användare basera
 
    ![componentsstoolbarwithout](assets/componentstoolbarwithoutre.png)
 
-   Komponentverktygsfältet så synligt som det är för en användare utan regelredigeringsåtkomst
+   Komponentverktygsfältet så synligt som det är för en användare utan åtkomst till regelredigeraren
 
    Instruktioner om hur du lägger till användare i grupper finns i [Användaradministration och -säkerhet](/help/sites-administering/security.md).
 
