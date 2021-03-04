@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 1b9f8d98-e7e8-4b9b-a0df-52ccba324da3
 translation-type: tm+mt
-source-git-commit: 53154f9ada1062dae4bdccc5eac3d3113cd730a2
+source-git-commit: 95b5e70c1b474d4d207a5a33e8d1ab8ef39685b6
 workflow-type: tm+mt
-source-wordcount: '3318'
+source-wordcount: '3316'
 ht-degree: 0%
 
 ---
@@ -637,7 +637,6 @@ Ytterligare krav finns i:
 * 16 GB diskutrymme för 32-bitars eller 20 GB diskutrymme för 64-bitars operativsystem
 * Grafikminne - 128 MB GPU (256 MB rekommenderas)
 * 2,35 GB ledigt hårddiskutrymme
-* DVD-ROM-enhet
 * Bildskärmsupplösning på 1 024 x 768 pixlar eller högre
 * Maskinvaruacceleration för video (valfritt)
 * Acrobat Pro DC, Acrobat Standard DC eller Adobe Acrobat Reader DC
