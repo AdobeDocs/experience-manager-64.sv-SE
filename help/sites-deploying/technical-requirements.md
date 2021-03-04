@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 4d3c4650-3e2a-43b1-ad2d-8d0ae2254ca9
 translation-type: tm+mt
-source-git-commit: 53154f9ada1062dae4bdccc5eac3d3113cd730a2
+source-git-commit: 95b5e70c1b474d4d207a5a33e8d1ab8ef39685b6
 workflow-type: tm+mt
-source-wordcount: '3273'
+source-wordcount: '3271'
 ht-degree: 0%
 
 ---
@@ -636,7 +636,6 @@ x86
 * 16 GB diskutrymme för 32-bitars eller 20 GB diskutrymme för 64-bitars operativsystem
 * Grafikminne - 128 MB GPU (256 MB rekommenderas)
 * 2,35 GB ledigt hårddiskutrymme
-* DVD-ROM-enhet
 * Bildskärmsupplösning på 1 024 x 768 pixlar eller högre
 * Maskinvaruacceleration för video (valfritt)
 * Acrobat Pro DC, Acrobat Standard DC eller Adobe Acrobat Reader DC
