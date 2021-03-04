@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 4df5ee77-5a77-4efd-b7e1-c78e650673a9
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: 5734bcd7231f7ba8779acd8e0325b875e252e104
 workflow-type: tm+mt
 source-wordcount: '2029'
 ht-degree: 0%
@@ -112,7 +112,7 @@ Alla fragment som du infogar i anpassningsbara formulär visas som en platshåll
 Utför följande steg för att visa fullständiga fragment i formulär:
 
 1. Gå till AEM webbkonsolkonfigurationssida på https:[*värd*]:[*port*]/system/console/configMgr.
-1. Sök och klicka på **[!UICONTROL Adaptive Form Configuration Service]** för att öppna den i redigeringsläge.
+1. Sök och klicka på **[!UICONTROL Adaptive Form and Interactive Communication Web Channel Configuration]** för att öppna den i redigeringsläge.
 1. Inaktivera kryssrutan **[!UICONTROL Enable Placeholder in place of Fragment]** om du vill visa hela fragment i stället för platshållarbilden.
 
 ### Infoga ett fragment i ett anpassat formulär {#insert-a-fragment-in-an-adaptive-form}
