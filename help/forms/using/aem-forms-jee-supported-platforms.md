@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 1b9f8d98-e7e8-4b9b-a0df-52ccba324da3
 translation-type: tm+mt
-source-git-commit: ee38d0ebde12a70e3af04254b0c0b4995c45519b
+source-git-commit: 53154f9ada1062dae4bdccc5eac3d3113cd730a2
 workflow-type: tm+mt
-source-wordcount: '3327'
+source-wordcount: '3318'
 ht-degree: 0%
 
 ---
@@ -209,7 +209,7 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
   </tr> 
   <tr> 
    <td>Oracle</td> 
-   <td><p>JDBC-drivrutin för oracle Database 12.1.0.2.0</p> <p>jodbc7.jar (version 12.1.0.2.0)<br /> </p> </td> 
+   <td><p>JDBC-drivrutin för Oracle Database 12.1.0.2.0</p> <p>jodbc7.jar (version 12.1.0.2.0)<br /> </p> </td> 
    <td><p>Tillhandahålls med AEM Forms för JEE-installation.</p> </td> 
   </tr> 
   <tr> 
@@ -347,7 +347,7 @@ Tänk på följande undantag när du väljer en plattform för att konfigurera A
 1. AEM Forms på JEE stöder inte Oracle WebLogic och IBM® WebSphere® med MySQL.
 1. AEM Forms på JEE stöder inte Oracle Solaris™ med Intel®-arkitektur (endast SPARC® stöds).
 1. AEM Forms på JEE stöder inte Oracle WebLogic och JBoss på SUSE Linux Enterprise Server 12. Endast IBM WebSphere stöds i SUSE Linux Enterprise Server 12.
-1. AEM Forms på JEE stöder inte JDK med JBoss® annat än Oracle Java™ SE.
+1. AEM Forms på JEE stöder inte JDK med JBoss® annat än Oraclet Java™ SE.
 1. AEM Forms på JEE stöder inte JDK med andra IBM® WebSphere® än IBM® JDK.
 1. AEM Forms på JEE stöder inte IBM® DB2 med JBoss®.
 1. CRX-databasen har stöd för beständighet av typen tarMK, MongoDB och relationsdatabaser (RDBMK). Du kan inte ha två olika databassystem mellan programservern och CRX-databasen. I en AEM Forms-miljö för JEE kan du emellertid använda MongoMK med CRX-databas och en relationsdatabas som stöds med programserver.
@@ -364,7 +364,7 @@ Tänk dessutom på följande när du väljer program för Adobe AEM Forms i JEE-
 * AEM Forms på JEE stöder inte TjärMK Cold Standby.
 * AEM Forms på JEE stöder inte lodrät klustring.
 * AEM Forms på JEE stöder inte MySQL-databaser i en klustrad miljö.
-* RDBMK fungerar inte med DB2-, MYSQL-, MS SQL- och Oracle-databaser när paket-JDBC-modulerna är konfigurerade för Weblogic.
+* RDBMK fungerar inte med DB2-, MYSQL-, MS SQL- och Oracle-databaser när paket-JDBC-modulerna har konfigurerats på Weblogic.
 
 ### LDAP-servrar (valfritt) {#ldap-servers-optional}
 
@@ -375,7 +375,7 @@ Tänk dessutom på följande när du väljer program för Adobe AEM Forms i JEE-
    <th><p><strong>Patch-definitioner som stöds</strong></p> </th> 
   </tr> 
   <tr> 
-   <td>Oracle Unified Directory (OUD) 11g version 2</td> 
+   <td>Oracle - Unified Directory (OUD) 11g utgåva 2</td> 
    <td>Service Pack</td> 
   </tr> 
   <tr> 
@@ -631,21 +631,17 @@ Ytterligare krav finns i:
 
 ### Designer {#designer}
 
-**Obs!** Kör installationsprogrammet med administratörsbehörighet om du vill installera Designer i Windows.
-
-* Microsoft® Windows® 2012 Server R2, Microsoft® Windows® 2016 Server, Microsoft Windows 10
-
-   * 1 GHz eller snabbare processor med stöd för PAE, NX och SSE2.
-   * 1 GB RAM för 32-bitars eller 2 GB RAM för 64-bitars operativsystem
-   * 16 GB diskutrymme för 32-bitars eller 20 GB diskutrymme för 64-bitars operativsystem
-
+* Microsoft® Windows® 2012 Server R2, Microsoft® Windows® 2016 Server, Microsoft® Windows® 2019 Server, Microsoft® Windows® 10
+* 1 GHz eller snabbare processor med stöd för PAE, NX och SSE2.
+* 1 GB RAM för 32-bitars eller 2 GB RAM för 64-bitars operativsystem
+* 16 GB diskutrymme för 32-bitars eller 20 GB diskutrymme för 64-bitars operativsystem
 * Grafikminne - 128 MB GPU (256 MB rekommenderas)
 * 2,35 GB ledigt hårddiskutrymme
 * DVD-ROM-enhet
-* Internet Explorer 10 eller 11; Firefox 45.x
 * Bildskärmsupplösning på 1 024 x 768 pixlar eller högre
 * Maskinvaruacceleration för video (valfritt)
-* Acrobat Pro DC, Acrobat Standard DC eller Adobe Acrobat Reader DC.
+* Acrobat Pro DC, Acrobat Standard DC eller Adobe Acrobat Reader DC
+* Administrativ behörighet för att installera Designer
 
 ### Adobe Acrobat och Adobe Reader {#adobe-acrobat-and-adobe-reader}
 
