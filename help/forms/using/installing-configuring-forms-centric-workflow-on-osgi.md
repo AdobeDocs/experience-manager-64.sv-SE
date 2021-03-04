@@ -7,9 +7,9 @@ uuid: 847c3351-dc46-4e60-a023-0f4e9e057c7c
 topic-tags: installing
 discoiquuid: 7333641e-8c8c-4b52-a7da-a2976c88592c
 translation-type: tm+mt
-source-git-commit: 6a8fa45ec61014acebe09048066972ecb1284641
+source-git-commit: 5734bcd7231f7ba8779acd8e0325b875e252e104
 workflow-type: tm+mt
-source-wordcount: '1620'
+source-wordcount: '1616'
 ht-degree: 0%
 
 ---
@@ -182,7 +182,7 @@ Cachelagring är en mekanism som förkortar dataåtkomsttider, minskar fördröj
 Utför följande steg för att konfigurera cachen för adaptiva formulär:
 
 1. Gå till konfigurationshanteraren AEM webbkonsolen på `https://[server]:[port]/system/console/configMgr`.
-1. Klicka på **tjänsten Adaptiv formulärkonfiguration** om du vill redigera dess konfigurationsvärden. I dialogrutan Redigera konfigurationsvärden anger du det maximala antalet formulär eller dokument som en instans av AEM Forms-servern kan cachelagra i fältet **Antal adaptiva Forms**. Standardvärdet är 100. Klicka på **Spara**.
+1. Klicka på **[!UICONTROL Adaptive Form and Interactive Communication Web Channel Configuration]** om du vill redigera dess konfigurationsvärden. I dialogrutan Redigera konfigurationsvärden anger du det maximala antalet formulär eller dokument som en instans av AEM Forms-servern kan cachelagra i fältet **Antal adaptiva Forms**. Standardvärdet är 100. Klicka på **Spara**.
 
    >[!NOTE]
    >
