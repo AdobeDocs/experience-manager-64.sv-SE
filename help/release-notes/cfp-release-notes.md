@@ -4,9 +4,9 @@ description: Versionsinformation om Adobe Experience Manager 6.4 Cumulative Fix 
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 3a8fefc8a580d41d327cf7acbf8e4b0440fea604
+source-git-commit: 7c19ef4a56fbfaa2f43b71e4dc48c79f797f32a8
 workflow-type: tm+mt
-source-wordcount: '4347'
+source-wordcount: '4595'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,13 @@ AEM Cumulative Fix Pack 6.4.8.4 är en viktig uppdatering som innehåller flera 
 
 AEM 6.4.8.4 är ett Cumulative Fix Pack (CFP) som är beroende av AEM 6.4 Service Pack 8. Installera CFP när du har installerat AEM 6.4 Service Pack 8.
 
-I AEM 6.4.8.4 uppdateras den inbyggda databasen (Apache Jackrabbit Oak) till version 1.8.24.
+De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manager] 6.4.8.4 är:
+
+* Möjlighet att aktivera eller inaktivera registerändringarna [!DNL Experience Manager Forms] vid PDFG-konvertering.
+
+* X-509 certifikatbaserad autentisering för SOAP-baserade webbtjänster i formulärdatamodellen.
+
+* Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.8.24.
 
 Information om CFP och andra typer av releaser finns i [AEM Update Release Vehicle Definitions](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-release-vehicle-definitions.html?lang=en)
 
@@ -69,6 +75,20 @@ Adobe Experience Manager 6.4.8.4 innehåller korrigeringar för följande proble
 >[!NOTE]
 >
 >[!DNL Experience Manager Forms] släpper tilläggspaketen en vecka efter det schemalagda  [!DNL Experience Manager] Cumulative Fix Pack-frisläppningsdatumet.
+
+**Korrespondenshantering**
+
+* När du redigerar ett brev tar det längre tid att läsa in moduler med villkor (NPR-35326).
+
+* När du redigerar ett brev visas inte innehåll och databindningar i användargränssnittet (CQ-4312905).
+
+**Dokumenttjänster**
+
+* Det går inte att montera PDF-filer efter uppgradering av [!DNL JAVA] till [!DNL JDK1.8.0_261] (NPR-35761, NPR-35848).
+
+**Foundation JEE**
+
+* När du redigerar ett aktivitetsmeddelande i [!DNL Forms]-arbetsflödet kan du inte spara det (CQ-4315055).
 
 Mer information om säkerhetsuppdateringar finns på [Experience Manager-säkerhetsbulletinsidan](https://helpx.adobe.com/security/products/experience-manager.html).
 
@@ -493,6 +513,26 @@ som kopierar nya visningsförinställningar till /conf-platsen.
 >[!NOTE]
 >
 >[!DNL Experience Manager Forms] släpper tilläggspaketen en vecka efter det schemalagda  [!DNL Experience Manager] Cumulative Fix Pack-frisläppningsdatumet.
+
+>[!NOTE]
+>
+>Hoppa över om du inte använder AEM Forms. Korrigeringar i AEM Forms levereras via ett separat tilläggspaket.
+
+1. Kontrollera att du har installerat AEM Cumulative Fix Pack.
+1. Hämta motsvarande tilläggspaket för formulär i [AEM Forms-utgåvor](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#forms-updates) för ditt operativsystem.
+1. Installera tilläggspaketet för formulär enligt beskrivningen i [Installera tilläggspaket för AEM](https://docs.adobe.com/content/help/en/experience-manager-64/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html#install-aem-forms-add-on-package).
+
+### Installera installationsprogrammet för AEM Forms JEE {#install-aem-forms-jee-installer}
+
+>[!NOTE]
+>
+>Hoppa över om du inte använder AEM Forms på JEE. Korrigeringar i AEM Forms JEE levereras via ett separat installationsprogram.
+
+Information om hur du installerar det kumulativa installationsprogrammet för AEM Forms JEE och konfigurationen efter distributionen finns i [AEM Forms JEE Patch Installer](jee-patch-installer-64.md).
+
+>[!NOTE]
+>
+>När du har installerat det kumulativa installationsprogrammet för Experience Manager Forms på JEE installerar du det senaste Forms-tilläggspaketet, tar bort Forms-tilläggspaketet från mappen `crx-repository\install` och startar om servern.
 
 ### Uber Jar {#uber-jar}
 
