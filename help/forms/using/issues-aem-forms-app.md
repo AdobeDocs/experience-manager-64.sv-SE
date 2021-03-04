@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 2f45a965-590b-43b1-95c6-df4b74ad15b9
 translation-type: tm+mt
-source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
+source-git-commit: 5734bcd7231f7ba8779acd8e0325b875e252e104
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '681'
 ht-degree: 0%
 
 ---
@@ -35,8 +35,8 @@ Avsnitten i den här artikeln är:
 AEM Forms-app för iOS som är konfigurerad att synkroniseras med AEM Forms på OSGi stöder endast bilagor på fältnivå. Alla bilagor måste ha unika namn. Om flera bifogade filer har samma namn behålls bara en bifogad fil och alla andra med samma namn går förlorade. Utför följande steg för att förhindra att användare på iOS-enheter drabbas av dataförlust:
 
 1. Navigera till **Adobe Experience Manager > Verktyg > Åtgärder > Webbkonsol** på den anslutna servern.
-1. Sök och klicka på **tjänsten Adaptiv formulärkonfiguration**.
-1. Aktivera **Gör filnamn unika** i dialogrutan Adaptiv formulärkonfigurationstjänst.
+1. Sök och klicka på **[!UICONTROL Adaptive Form and Interactive Communication Web Channel Configuration]**.
+1. Aktivera **Gör filnamn unika** i dialogrutan [!UICONTROL Adaptive Form and Interactive Communication Web Channel Configuration].
 
    Om inställningen **Gör filnamn unika** är inaktiverad, förlorar användare data om de försöker skicka adaptiva formulär med flera bilagor.
 
