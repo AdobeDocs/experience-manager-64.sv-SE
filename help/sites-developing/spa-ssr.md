@@ -10,7 +10,7 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 30d25772-0df7-468e-bcbd-c6fb2e962662
 translation-type: tm+mt
-source-git-commit: 0e7f4a78f63808bea2aa7a5abbb31e7e5b9d21b3
+source-git-commit: 226cd6688a579409371cb17f6ba31548bee312b3
 workflow-type: tm+mt
 source-wordcount: '1711'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 >[!NOTE]
 >Funktionen SPA (Single-Page Application Editor) kräver [AEM 6.4 Service Pack 2](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html) eller senare.
 >
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad återgivning på klientsidan (t.ex. Reaktion eller Vinkel).
+>SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad återgivning på klientsidan (t.ex. Reaktion eller Angular).
 
 >[!NOTE]
 >
@@ -60,7 +60,7 @@ Mer information om Adobe I/O Runtime finns på
 I följande avsnitt beskrivs hur Adobe I/O Runtime kan användas för att implementera SSR för dina SPA i två olika modeller:
 
 * [AEM kommunikationsflöde](#aem-driven-communication-flow)
-* [Kommunikationsflöde via Adobe I/O Runtime](#adobe-io-driven-communication-flow)
+* [Kommunikationsflöde via Adobe I/O-miljön](#adobe-io-driven-communication-flow)
 
 >[!NOTE]
 >
@@ -95,7 +95,7 @@ Följande fält är tillgängliga för konfigurationen:
 
 ## AEM kommunikationsflöde {#aem-driven-communication-flow}
 
-När du använder SSR innehåller arbetsflödet [för komponentinteraktion](/help/sites-developing/spa-overview.md#workflow) för SPA i AEM en fas i vilken det inledande innehållet i programmet genereras av Adobe I/O Runtime.
+När du använder SSR innehåller arbetsflödet för [komponentinteraktion](/help/sites-developing/spa-overview.md#workflow) för SPA i AEM en fas i vilken det inledande innehållet i programmet genereras av Adobe I/O Runtime.
 
 1. Webbläsaren begär SSR-innehåll från AEM.
 1. AEM skickar modellen till Adobe I/O Runtime.
@@ -133,10 +133,10 @@ Om du vill använda SSR måste du distribuera koden i AEM och på Adobe I/O Runt
 
 SSR för SPA i AEM kräver Adobe I/O Runtime, vilket krävs för återgivning av programinnehållsserversidan. I programmets HTML anropas en resurs på Adobe I/O Runtime för att återge innehållet.
 
-Precis som AEM stöder ramverken Vinkel och React SPA direkt, stöds även serversidans återgivning för Angular- och React-appar. Mer information finns i NPM-dokumentationen för båda ramverken.
+Precis som AEM stöder ramverken Angular och React SPA direkt, stöds även serversidorendering för Angular- och React-appar. Mer information finns i NPM-dokumentationen för båda ramverken.
 
 * Reagera: [https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
-* Vinkel: [https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
+* Angular: [https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
 
 Ett enkelt exempel finns i [We.Retail Journal-appen](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal). Det återger hela programserversidan. Även om detta inte är ett verkligt exempel visar det vad som behövs för att implementera SSR.
 
