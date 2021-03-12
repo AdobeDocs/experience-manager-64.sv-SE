@@ -3,10 +3,10 @@ title: Bearbeta resurser med mediehanterare och arbetsflöden
 description: Lär dig mer om olika mediehanterare och hur du använder dem i arbetsflöden för att utföra åtgärder på resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
+source-git-commit: b6342b79e964daf1a05bb9ccfad06d8edaca4312
 workflow-type: tm+mt
-source-wordcount: '2142'
-ht-degree: 3%
+source-wordcount: '2169'
+ht-degree: 2%
 
 ---
 
@@ -15,24 +15,28 @@ ht-degree: 3%
 
 Adobe Experience Manager Assets innehåller en uppsättning standardarbetsflöden och mediehanterare för att bearbeta resurser. Ett arbetsflöde definierar en typisk resurshanterings- och bearbetningsuppgift och delegerar sedan de specifika åtgärderna till mediehanterarna, till exempel generering av miniatyrer eller metadataextrahering.
 
-Ett arbetsflöde kan definieras som körs automatiskt när en resurs av en viss typ eller ett visst format överförs till servern. Bearbetningsstegen definieras som en serie AEM Assets mediehanterare. AEM innehåller några [inbyggda hanterare,](#default-media-handlers) och ytterligare kan antingen vara [anpassade, utvecklade](#creating-a-new-media-handler) eller definierade genom att delegera processen till ett [kommandoradsverktyg](#command-line-based-media-handler).
+Ett arbetsflöde kan definieras som körs automatiskt när en resurs av en viss typ eller ett visst format överförs till servern. Bearbetningsstegen definieras som en serie Experience ManagerAssets-mediehanterare. Adobe Experience Manager innehåller några [inbyggda hanterare,](#default-media-handlers) och mer kan antingen vara [anpassade, utvecklade](#creating-a-new-media-handler) eller definierade genom att delegera processen till ett [kommandoradsverktyg](#command-line-based-media-handler).
 
-Mediehanterare är tjänster i AEM Assets som utför specifika åtgärder för resurser. När till exempel en MP3-ljudfil överförs till AEM utlöses en MP3-hanterare som extraherar metadata och skapar en miniatyrbild. Mediehanterare används vanligtvis i kombination med arbetsflöden. De flesta vanliga MIME-typer stöds i AEM. Specifika uppgifter kan utföras på resurser genom att antingen utöka/skapa arbetsflöden, utöka/skapa mediehanterare eller inaktivera/aktivera mediehanterare.
+Mediehanterare är tjänster i Experience Manager Assets som utför specifika åtgärder på resurser. När till exempel en MP3-ljudfil överförs till Experience Manager utlöses en MP3-hanterare som extraherar metadata och skapar en miniatyrbild. Mediehanterare används med arbetsflöden. De vanligaste MIME-typerna stöds i Experience Manager. Du kan utföra specifika åtgärder på resurser genom att göra något av följande
+
+* Utöka eller skapa arbetsflöden.
+* Utöka eller skapa mediehanterare.
+* Inaktivera eller aktivera mediehanterare.
 
 >[!NOTE]
 >
->På sidan [Format](assets-formats.md) Resurser som stöds finns en beskrivning av alla format som stöds av AEM Assets samt funktioner som stöds för varje format.
+>På sidan [Format som stöds](assets-formats.md) för resurser finns en beskrivning av alla format som stöds av Experience Manager Assets och funktioner som stöds för varje format.
 
 ## Standardmediehanterare {#default-media-handlers}
 
-Följande mediehanterare är tillgängliga i AEM Assets och hanterar de vanligaste MIME-typerna:
+Följande mediehanterare är tillgängliga i Experience Manager Assets och hanterar de vanligaste MIME-typerna:
 
 | Hanterarnamn | Tjänstnamn (i systemkonsolen) | MIME-typer som stöds |
 |---|---|---|
 | [!UICONTROL TextHandler] | com.day.cq.dam.core.impl.handler.TextHandler | text/plain |
 | [!UICONTROL PdfHandler] | com.day.cq.dam.handler.standard.pdf.PdfHandler | <ul><li>application/pdf</li><li>program/illustrator</li></ul> |
 | [!UICONTROL JpegHandler] | com.day.cq.dam.core.impl.handler.JpegHandler | image/jpeg |
-| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg |
+| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>Viktigt</b> - När du överför en MP3-fil behandlas den [med ett tredjepartsbibliotek](http://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html). Biblioteket beräknar en icke korrekt ungefärlig längd om MP3 har variabel bithastighet (VBR). |
 | [!UICONTROL ZipHandler] | com.day.cq.dam.handler.standard.zip.ZipHandler | <ul><li>application/java-archive </li><li> application/zip</li></ul> |
 | [!UICONTROL PictHandler] | com.day.cq.dam.handler.standard.pict.PictHandler | bild/pict |
 | [!UICONTROL StandardImageHandler] | com.day.cq.dam.core.impl.handler.StandardImageHandler | <ul><li>image/gif </li><li> bild/png </li> <li>application/photoshop </li> <li>image/jpeg </li><li> bild/tiff </li> <li>image/x-ms-bmp </li><li> image/bmp</li></ul> |
@@ -57,13 +61,13 @@ Det går att visa de aktiva mediehanterarna:
 
 ## Använd mediehanterare i arbetsflöden för att utföra åtgärder på resurser {#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
 
-Mediehanterare är tjänster som vanligtvis används i kombination med arbetsflöden.
+Mediehanterare är tjänster som används med arbetsflöden.
 
-AEM har vissa standardarbetsflöden för att bearbeta resurser. Om du vill visa dem öppnar du arbetsflödeskonsolen och klickar på fliken **[!UICONTROL Models]**: de arbetsflödesrubriker som börjar med AEM Assets är resursspecifika.
+Experience Manager har vissa standardarbetsflöden för att bearbeta resurser. Om du vill visa dem öppnar du arbetsflödeskonsolen och klickar på fliken **[!UICONTROL Models]**: de arbetsflödesrubriker som börjar med Experience Manager Assets är resursspecifika.
 
 Befintliga arbetsflöden kan utökas och nya kan skapas för att bearbeta resurser enligt specifika krav.
 
-I följande exempel visas hur du förbättrar arbetsflödet **[!UICONTROL AEM Assets Synchronization]** så att delresurser genereras för alla resurser utom PDF-dokument.
+I följande exempel visas hur du förbättrar arbetsflödet för **[!UICONTROL AEM Assets Synchronization]** så att delresurser genereras för alla resurser utom PDF-dokument.
 
 ### Inaktivera/aktivera en mediehanterare {#disabling-enabling-a-media-handler}
 
@@ -76,9 +80,9 @@ Så här aktiverar/inaktiverar du en mediehanterare:
 1. Uppdatera sidan: en ikon visas bredvid mediehanteraren som anger att den är inaktiverad.
 1. Om du vill aktivera mediehanteraren klickar du på **[!UICONTROL Enable]** bredvid namnet på mediehanteraren.
 
-### Skapar en ny mediehanterare {#creating-a-new-media-handler}
+### Skapar en mediehanterare {#creating-a-new-media-handler}
 
-Om du vill ha stöd för en ny medietyp eller utföra specifika åtgärder på en resurs måste du skapa en ny mediehanterare. I det här avsnittet beskrivs hur du fortsätter.
+Om du vill ha stöd för en ny medietyp eller utföra specifika åtgärder på en resurs måste du skapa en mediehanterare. I det här avsnittet beskrivs hur du fortsätter.
 
 #### Viktiga klasser och gränssnitt {#important-classes-and-interfaces}
 
@@ -98,7 +102,7 @@ Här är en exempelmall:
 
 Gränssnittet och klasserna omfattar:
 
-* `com.day.cq.dam.api.handler.AssetHandler` gränssnitt: Det här gränssnittet beskriver tjänsten som lägger till stöd för specifika MIME-typer. Om du lägger till en ny MIME-typ måste det här gränssnittet implementeras. Gränssnittet innehåller metoder för import och export av specifika dokument, för att skapa miniatyrbilder och extrahera metadata.
+* `com.day.cq.dam.api.handler.AssetHandler` gränssnitt: Det här gränssnittet beskriver tjänsten som lägger till stöd för specifika MIME-typer. Om du lägger till en MIME-typ måste det här gränssnittet implementeras. Gränssnittet innehåller metoder för import och export av specifika dokument, för att skapa miniatyrbilder och extrahera metadata.
 * `com.day.cq.dam.core.AbstractAssetHandler` klass: Den här klassen fungerar som bas för alla andra tillgångshanterarimplementeringar och tillhandahåller vanliga funktioner.
 * Klassen `com.day.cq.dam.core.AbstractSubAssetHandler`:
    * Den här klassen fungerar som bas för alla andra implementeringar av resurshanterare och tillhandahåller vanliga funktioner för extrahering av delresurser.
@@ -109,7 +113,7 @@ Följande metoder måste implementeras:
 
 * `extractMetadata()`: den här metoden extraherar alla tillgängliga metadata.
 * `getThumbnailImage()`: den här metoden skapar en miniatyrbild av den skickade resursen.
-* `getMimeTypes()`: den här metoden returnerar resursens MIME-typ(er).
+* `getMimeTypes()`: den här metoden returnerar resursens MIME-typer.
 
 Här är en exempelmall:
 
@@ -117,38 +121,38 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 
 Gränssnittet och klasserna omfattar:
 
-* `com.day.cq.dam.api.handler.AssetHandler` gränssnitt: Det här gränssnittet beskriver tjänsten som lägger till stöd för specifika MIME-typer. Om du lägger till en ny MIME-typ måste det här gränssnittet implementeras. Gränssnittet innehåller metoder för import och export av specifika dokument, för att skapa miniatyrbilder och extrahera metadata.
+* `com.day.cq.dam.api.handler.AssetHandler` gränssnitt: Det här gränssnittet beskriver tjänsten som lägger till stöd för specifika MIME-typer. Om du lägger till en MIME-typ måste det här gränssnittet implementeras. Gränssnittet innehåller metoder för import och export av specifika dokument, för att skapa miniatyrbilder och extrahera metadata.
 * `com.day.cq.dam.core.AbstractAssetHandler` klass: Den här klassen fungerar som bas för alla andra tillgångshanterarimplementeringar och tillhandahåller vanliga funktioner.
 * `com.day.cq.dam.core.AbstractSubAssetHandler` klass: Den här klassen fungerar som bas för alla andra implementeringar av tillgångshanterare och tillhandahåller vanliga funktioner plus vanliga funktioner för subresursextrahering.
 
 #### Exempel: skapa en specifik texthanterare {#example-create-a-specific-text-handler}
 
-I det här avsnittet skapar du en specifik texthanterare som genererar miniatyrbilder med en vattenstämpel.
+I det här avsnittet ska du skapa en specifik texthanterare som genererar miniatyrbilder med en vattenstämpel.
 
 Gör så här:
 
 Se [Utvecklingsverktyg](../sites-developing/dev-tools.md) för att installera och konfigurera Eclipse med en Maven-plugin och för att ställa in beroenden som behövs för Maven-projektet.
 
-När du har utfört följande procedur och överför en textfil till AEM, extraheras filens metadata och två miniatyrbilder med vattenstämpel genereras.
+När du har utfört följande procedur och överför en textfil till Experience Manager extraheras filens metadata och två miniatyrbilder med vattenstämpel genereras.
 
 1. Skapa `myBundle` Maven-projekt i Eclipse:
 
    1. Klicka på **[!UICONTROL File > New > Other]** i menyfältet.
-   1. Expandera mappen Maven i dialogrutan, markera Maven Project och klicka på **[!UICONTROL Next]**.
-   1. Markera kryssrutan Skapa ett enkelt projekt och rutan Använd standardplatser för arbetsyta och klicka sedan på **[!UICONTROL Next]**.
-   1. Definiera projektet Maven:
+   1. Expandera mappen Maven i dialogrutan, välj Projekt av typen Maven och klicka sedan på **[!UICONTROL Next]**.
+   1. Markera rutan **[!UICONTROL Create a simple project]** och rutan **[!UICONTROL Use default Workspace locations]** och klicka sedan på **[!UICONTROL Next]**.
+   1. Definiera projektet Maven med följande värden:
 
       * Grupp-ID: com.day.cq5.myhandler
       * Artefakt-ID: myBundle
-      * Namn: Mitt AEM
-      * Beskrivning: Det här är mitt AEM paket
+      * Namn: Mitt Experience Manager-paket
+      * Beskrivning: Det här är mitt Experience Manager-paket
    1. Klicka på **[!UICONTROL Finish]**.
 
 
-1. Ställ in Java Compiler på version 1.5:
+1. Ställ in Java™ Compiler på version 1.5:
 
    1. Högerklicka på `myBundle`-projektet och välj Egenskaper.
-   1. Välj Java Compiler och ange följande egenskaper till 1.5:
+   1. Välj Java™ Compiler och ange följande egenskaper till 1.5:
 
       * Kompilatorefterlevnadsnivå
       * Kompatibilitet med genererade .class-filer
@@ -273,15 +277,15 @@ När du har utfört följande procedur och överför en textfil till AEM, extrah
     </dependencies>
    ```
 
-1. Skapa paketet `com.day.cq5.myhandler` som innehåller Java-klasserna under `myBundle/src/main/java`:
+1. Skapa paketet `com.day.cq5.myhandler` som innehåller Java™-klasserna under `myBundle/src/main/java`:
 
    1. Under myBundle högerklickar du på `src/main/java`, väljer Ny och sedan Packa.
    1. Ge den namnet `com.day.cq5.myhandler` och klicka på Slutför.
 
-1. Skapa Java-klassen `MyHandler`:
+1. Skapa Java™-klassen `MyHandler`:
 
    1. I Eclipse, under `myBundle/src/main/java`, högerklickar du på `com.day.cq5.myhandler`-paketet, väljer Ny och sedan Klass.
-   1. Ge Java-klassen namnet MyHandler i dialogrutan och klicka på Slutför. Eclipse skapar och öppnar filen MyHandler.java.
+   1. Ge Java™-klassen namnet MyHandler i dialogrutan och klicka på Slutför. Eclipse skapar och öppnar filen MyHandler.java.
    1. I `MyHandler.java` ersätter du den befintliga koden med följande och sparar sedan ändringarna:
 
    ```java
@@ -424,20 +428,20 @@ När du har utfört följande procedur och överför en textfil till AEM, extrah
    }
    ```
 
-1. Kompilera Java-klassen och skapa paketet:
+1. Kompilera Java™-klassen och skapa paketet:
 
    1. Högerklicka på projektet myBundle, välj **[!UICONTROL Run As]** och **[!UICONTROL Maven Install]**.
    1. Paketet `myBundle-0.0.1-SNAPSHOT.jar` (som innehåller den kompilerade klassen) skapas under `myBundle/target`.
 
-1. Skapa en ny nod under `/apps/myApp` i CRX Explorer. Namn = `install`, typ = `nt:folder`.
-1. Kopiera paketet `myBundle-0.0.1-SNAPSHOT.jar` och lagra det under `/apps/myApp/install` (till exempel med WebDAV). Den nya texthanteraren är nu aktiv i AEM.
+1. Skapa en nod under `/apps/myApp` i CRX Explorer. Namn = `install`, typ = `nt:folder`.
+1. Kopiera paketet `myBundle-0.0.1-SNAPSHOT.jar` och lagra det under `/apps/myApp/install` (till exempel med WebDAV). Den nya texthanteraren är nu aktiv i Experience Manager.
 1. Öppna Apache Felix Web Management Console i webbläsaren. Välj fliken Komponenter och inaktivera standardtexthanteraren `com.day.cq.dam.core.impl.handler.TextHandler`.
 
 ## Kommandoradsbaserad mediehanterare {#command-line-based-media-handler}
 
-Med AEM kan du köra valfritt kommandoradsverktyg i ett arbetsflöde för att konvertera resurser (till exempel ImageMagick) och lägga till den nya återgivningen i resursen. Du behöver bara installera kommandoradsverktyget på den disk som är värd för AEM och lägga till och konfigurera ett processteg i arbetsflödet. Den anropade processen, som kallas `CommandLineProcess`, gör det även möjligt att filtrera efter specifika MIME-typer och skapa flera miniatyrbilder baserat på den nya återgivningen.
+Med Experience Manager kan du köra valfritt kommandoradsverktyg i ett arbetsflöde för att konvertera resurser (till exempel ImageMagick) och lägga till den nya återgivningen i resursen. Installera kommandoradsverktyget på den disk där Experience Manager-servern finns och lägg till och konfigurera ett processsteg i arbetsflödet. Den anropade processen, som kallas `CommandLineProcess`, filtrerar efter specifika MIME-typer och skapar flera miniatyrbilder baserat på den nya återgivningen.
 
-Följande konverteringar kan köras och lagras automatiskt i AEM Assets:
+Följande konverteringar kan automatiskt köras och lagras i Experience Manager Assets:
 
 * EPS- och AI-omvandling med [ImageMagick](https://www.imagemagick.org/script/index.php) och [Ghostscript](https://www.ghostscript.com/)
 * FLV-videotranskodning med [FFmpeg](https://ffmpeg.org/)
@@ -446,33 +450,33 @@ Följande konverteringar kan köras och lagras automatiskt i AEM Assets:
 
 >[!NOTE]
 >
->I andra system än Windows returnerar verktyget FFMpeg ett fel när återgivningar genereras för en videoresurs som har ett enkelt citattecken (&#39;) i filnamnet. Om namnet på videofilen innehåller ett enkelt citattecken tar du bort det innan du överför det till AEM.
+>I andra system än Windows returnerar verktyget FFMpeg ett fel när återgivningar genereras för en videoresurs som har ett enkelt citattecken (&#39;) i filnamnet. Om videofilens namn innehåller ett enkelt citattecken tar du bort det innan du överför det till Experience Manager.
 
 Processen `CommandLineProcess` utför följande åtgärder i den ordning de anges:
 
 * Filtrerar filen enligt specifika MIME-typer, om det anges.
-* Skapar en tillfällig katalog på den disk som är värd för AEM.
+* Skapar en tillfällig katalog på den disk som är värd för Experience Manager-servern.
 * Direktuppspelar originalfilen till den tillfälliga katalogen.
-* Kör det kommando som definieras av argumenten i steget. Kommandot körs i den tillfälliga katalogen med behörigheten för den användare som kör AEM.
-* Flyttar tillbaka resultatet till återgivningsmappen på AEM.
+* Kör det kommando som definieras av argumenten i steget. Kommandot körs i den tillfälliga katalogen med behörigheten för den användare som kör Experience Manager.
+* Flyttar tillbaka resultatet till återgivningsmappen på Experience Manager-servern.
 * Tar bort den tillfälliga katalogen.
 * Skapar miniatyrbilder baserade på dessa återgivningar, om de anges. Miniatyrbildernas antal och mått definieras av stegets argument.
 
 ### Ett exempel med ImageMagick {#an-example-using-imagemagick}
 
-I följande exempel visas hur du ställer in kommandoradsprocesssteget så att varje gång en resurs med mime-type gif eller tiff läggs till i /content/dam på AEM skapas en vänd bild av originalet tillsammans med tre ytterligare miniatyrbilder (140x100, 48x48 och 10x250).
+I följande exempel visas hur du ställer in kommandoradens processsteg. Varje gång en resurs med MIME-typen gif eller tiff läggs till i `/content/dam` på Experience Manager-servern skapas en vänd bild av originalbilden tillsammans med tre miniatyrbilder (140x100, 48x48 och 10x250).
 
-Använd ImageMagick för att göra detta. Installera ImageMagick på den disk där AEM finns:
+Använd ImageMagick om du vill utföra det här steget. Installera ImageMagick på disken som är värd för Experience Manager-servern:
 
 1. Installera ImageMagick. Mer information finns i [ImageMagick-dokumentationen](https://www.imagemagick.org/script/download.php).
-1. Konfigurera verktyget så att du kan köra konverteringen på kommandoraden.
+1. Konfigurera verktyget så att du kan köra `convert` på kommandoraden.
 1. Om du vill se om verktyget är korrekt installerat kör du följande kommando `convert -h` på kommandoraden.
 
    En hjälpskärm med alla möjliga alternativ för konverteringsverktyget visas.
 
    >[!NOTE]
    >
-   >I vissa versioner av Windows (till exempel Windows SE) kanske inte kommandot convert körs eftersom det står i konflikt med det inbyggda konverteringsverktyget som ingår i Windows-installationen. I det här fallet anger du den fullständiga sökvägen för verktyget ImageMagick som används för att konvertera bildfiler till miniatyrer. Till exempel, `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`.
+   >I vissa versioner av Windows® (till exempel Windows® SE) körs inte kommandot convert eftersom det står i konflikt med det inbyggda konverteringsverktyget som ingår i Windows®-installationen. I det här fallet anger du den fullständiga sökvägen för verktyget ImageMagick som används för att konvertera bildfiler till miniatyrer. Till exempel, `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`.
 
 1. Om du vill se om verktyget fungerar som det ska lägger du till en JPG-bild i arbetskatalogen och kör kommandot `convert <image-name>.jpg -flip <image-name>-flipped.jpg` på kommandoraden.
 
@@ -500,15 +504,15 @@ I det här avsnittet beskrivs hur du anger **[!UICONTROL Process Arguments]** f�
 
 | Argument-Format | Beskrivning |
 |---|---|
-| mime:&lt;mime-type> | Valfritt argument. Processen används om tillgången har samma MIME-typ som argumentet. <br>Flera MIME-typer kan definieras. |
+| mime:&lt;mime-type> | Valfritt argument. Processen används om resursen har samma MIME-typ som argumenten. <br>Flera MIME-typer kan definieras. |
 | tn:&lt;width>:&lt;height> | Valfritt argument. Processen skapar en miniatyrbild med de dimensioner som definieras i argumentet. <br>Flera miniatyrbilder kan definieras. |
-| cmd: &lt;kommando> | Definierar det kommando som ska köras. Syntaxen beror på kommandoradsverktyget. Endast ett kommando kan definieras. <br>Följande variabler kan användas för att skapa kommandot:<br>`${filename}`: indatafilens namn, till exempel original.jpg  <br> `${file}`: den fullständiga sökvägen till indatafilen, till exempel /tmp/cqdam0816.tmp/original.jpg  <br> `${directory}`: indatafilens katalog, till exempel /tmp/cqdam0816.tmp  <br>`${basename}`: namnet på indatafilen utan filnamnstillägg, till exempel original  <br>`${extension}`: tillägg för indatafilen, till exempel jpg |
+| cmd: &lt;kommando> | Definierar det kommando som körs. Syntaxen beror på kommandoradsverktyget. Endast ett kommando kan definieras. <br>Följande variabler kan användas för att skapa kommandot:<br>`${filename}`: indatafilens namn, till exempel original.jpg  <br> `${file}`: den fullständiga sökvägen till indatafilen, till exempel /tmp/cqdam0816.tmp/original.jpg  <br> `${directory}`: indatafilens katalog, till exempel /tmp/cqdam0816.tmp  <br>`${basename}`: namnet på indatafilen utan filnamnstillägg, till exempel original  <br>`${extension}`: tillägg för indatafilen, till exempel jpg |
 
-Om till exempel ImageMagick är installerat på den disk som är värd för AEM och du skapar ett processsteg med **CommandLineProcess** som implementering och följande värden som **Processargument**:
+Om till exempel ImageMagick är installerat på den disk som är värd för Experience Manager-servern och du skapar ett processsteg med **CommandLineProcess** som implementering och följande värden är **Processargument**:
 
 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
-När arbetsflödet körs gäller steget endast resurser som har bild/gif eller mime:image/tiff som mime-types, skapar det en vänd bild av originalet, konverterar den till .jpg och skapar tre miniatyrbilder med måtten: 140x100, 48x48 och 10x250.
+När arbetsflödet sedan körs gäller steget endast resurser som har `image/gif` eller `mime:image/tiff` som MIME-typer. Den skapar en vänd bild av originalet, konverterar den till .jpg och skapar tre miniatyrbilder med måtten: 140x100, 48x48 och 10x250.
 
 Använd följande [!UICONTROL Process Arguments] för att skapa de tre standardminiatyrbilderna med ImageMagick:
 
