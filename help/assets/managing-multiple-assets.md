@@ -3,10 +3,10 @@ title: Redigera metadata gruppvis för flera resurser och samlingar
 description: Lär dig hur du redigerar metadata för många resurser och samlingar samtidigt för att snabbt sprida vanliga metadataändringar.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 97bb17ce719f82449e28f9b32eb651b632b0f8b5
+source-git-commit: 184aa0a7fcd3f89510295ddaff28624b8306b7d2
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 11%
+source-wordcount: '414'
+ht-degree: 13%
 
 ---
 
@@ -32,28 +32,17 @@ Om du vill anpassa sidan med metadataegenskaper, inklusive lägga till, ändra e
 
 1. Navigera till platsen för de resurser som du vill redigera i användargränssnittet Resurser.
 1. Markera de resurser som du vill redigera gemensamma egenskaper för.
-1. Tryck/klicka på ikonen **[!UICONTROL Properties]** i verktygsfältet för att öppna egenskapssidan för de valda resurserna.
-
-   >[!NOTE]
-   >
-   >När du väljer flera resurser markeras det lägsta gemensamma överordnade formuläret för resurserna. Egenskapssidan visar alltså bara metadatafält som är gemensamma för egenskapssidorna för alla enskilda resurser.
-
+1. Klicka på **[!UICONTROL Properties]** i verktygsfältet för att öppna egenskapssidan för de valda resurserna.
 1. Ändra metadataegenskaperna för markerade resurser på de olika flikarna.
-1. Om du vill visa metadataredigeraren för en viss resurs avmarkerar du återstående resurser i listan. Metadataredigeringsfälten fylls i med metadata för den aktuella resursen.
+1. Om du vill visa metadata för en viss resurs avbryter du valet av återstående resurser i listan. Om du avbryter markeringen av ett fåtal resurser på sidan [!UICONTROL Properties] uppdateras inte metadata för sådana resurser.
+1. Klicka på **[!UICONTROL Settings]** i verktygsfältet och välj ett schema om du vill välja ett annat metadatamatchschema för resurserna. Klicka på **[!UICONTROL Save & Close]**.
+1. Om du vill lägga till nya metadata till befintliga metadata i fält som innehåller flera värden väljer du **[!UICONTROL Append mode]**. Om du inte markerar det här alternativet ersätter de nya metadata de data som finns i fälten. Klicka på **[!UICONTROL Submit]**.
 
-   >[!NOTE]
-   >
-   >* På egenskapssidan kan du ta bort resurser från resurslistan genom att avmarkera dem. Resurslistan har alla resurser markerade som standard. Metadata för resurser som du tar bort från listan uppdateras inte.
-   >* Överst i resurslistan markerar du kryssrutan nära **Titel** för att växla mellan att markera resurserna och rensa listan.
+![Massor av metadatamatcheman gäller för flera resurser](assets/metadata-schema-bulk-edit.gif)
 
-
-1. Om du vill välja ett annat metadataram för resurserna trycker/klickar du på ikonen **[!UICONTROL Settings]** i verktygsfältet och väljer önskat schema.
-1. Spara ändringarna.
-1. Om du vill lägga till nya metadata till befintliga metadata i fält som innehåller flera värden väljer du **[!UICONTROL Append mode]**. Om du inte markerar det här alternativet ersätter de nya metadata de data som finns i fälten. Tryck/klicka på **[!UICONTROL Submit]**.
-
-   >[!CAUTION]
-   >
-   >För fält med ett enda värde läggs de nya metadata inte till det befintliga värdet i fältet, även om du väljer **[!UICONTROL Append mode]**.
+>[!CAUTION]
+>
+>För fält med ett enda värde läggs de nya metadata inte till det befintliga värdet i fältet, även om du väljer **[!UICONTROL Append mode]**.
 
 ## Konfigurera gräns för uppdatering av massmetadata {#configure-limit-for-bulk-metadata-update}
 
