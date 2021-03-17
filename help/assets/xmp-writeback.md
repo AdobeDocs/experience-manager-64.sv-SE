@@ -3,9 +3,9 @@ title: XMP till återgivning
 description: Lär dig hur XMP återskrivningsfunktionen sprider metadataändringar för en resurs till alla eller vissa återgivningar av resursen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 31d652ee04fe75e96f96c9ddc5a6f2c3c64bd630
+source-git-commit: debf372e6a0b8f00bbfce16325908a5806c062d5
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '715'
 ht-degree: 3%
 
 ---
@@ -13,11 +13,9 @@ ht-degree: 3%
 
 # XMP tillbakaskrivning till återgivningar {#xmp-writeback-to-renditions}
 
-Den här XMP återskrivningsfunktionen i Adobe Experience Manager (AEM) Resurser replikerar ändringar i resursens återgivningar av metadata.
+Den här XMP återskrivningsfunktionen i [!DNL Adobe Experience Manager Assets] replikerar metadataändringarna till återgivningarna av den ursprungliga resursen. När du ändrar metadata för en resurs i Resurser eller när du överför resursen, lagras ändringarna först i metadatanoden i resurshierarkin.
 
-När du ändrar metadata för en resurs i AEM Assets eller när du överför resursen lagras ändringarna i resursnoden i Crx-De.
-
-XMP återskrivningsfunktion sprider metadataändringarna till alla eller specifika återgivningar av resursen.
+Med funktionen XMP kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Funktionen skriver bara tillbaka de metadataegenskaper som använder namnutrymmet `jcr`, d.v.s. egenskapen `dc:title` skrivs tillbaka, men egenskapen `mytitle` skrivs inte tillbaka.
 
 Tänk dig ett scenario där du ändrar egenskapen [!UICONTROL Title] för resursen `Classic Leather` till `Nylon`.
 
@@ -27,9 +25,7 @@ I det här fallet sparar AEM Assets ändringarna i egenskapen **[!UICONTROL Titl
 
 ![metadata_stored](assets/metadata_stored.png)
 
-AEM Assets sprider dock inte automatiskt några metadataändringar till återgivningar av en resurs.
-
-Med funktionen XMP kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Ändringarna lagras dock inte under metadatanoden i resurshierarkin. I stället bäddar den här funktionen in ändringarna i de binära filerna för återgivningarna.
+[!DNL Experience Manager Assets] sprider dock inte automatiskt några metadataändringar till återgivningarna av en resurs. Se [hur du aktiverar XMP-tillbakaskrivning](#enabling-xmp-writeback).
 
 ## Aktivera XMP-tillbakaskrivning {#enabling-xmp-writeback}
 
