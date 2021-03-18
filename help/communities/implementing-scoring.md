@@ -10,10 +10,11 @@ topic-tags: administering
 content-type: reference
 discoiquuid: b19b3c24-82a0-468c-a077-9f3edb96afc9
 tagskeywords: scoring, badging, badges, gamification
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 09f8adac1d5fc4edeca03d6955faddf5ea045405
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2877'
+source-wordcount: '2878'
 ht-degree: 1%
 
 ---
@@ -111,7 +112,7 @@ I releasen ingår tre belöningsbaserade märken:
 
 Anpassade emblem kan installeras med [Badges-konsolen](badges.md) och antingen tilldelas eller anges i badging-regler.
 
-Anpassade märken replikeras automatiskt till publiceringsmiljön när de installeras från badges-konsolen.
+Vid installation från badges-konsolen replikeras anpassade märken automatiskt till publiceringsmiljön.
 
 ## Aktivera poängsättning {#enable-scoring}
 
