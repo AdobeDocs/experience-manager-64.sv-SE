@@ -8,10 +8,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: f2955419-c680-44a7-9913-c594b4577551
+feature: Korrespondenshantering
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '879'
 ht-degree: 1%
 
 ---
@@ -39,7 +40,7 @@ Correspondence Management har följande konfigurationsegenskaper:
   </tr> 
   <tr> 
    <td>Minsta numerisk bredd</td> 
-   <td>Minsta bredd som ska användas i fältet punkt/nummer när numrerade listor används utom latinska nummer</td> 
+   <td>Minsta bredd som ska användas i punkt-/nummerfältet när numrerade listor används utom latinska nummer</td> 
    <td>8,0 mm</td> 
    <td>Valfritt tal</td> 
   </tr> 
@@ -291,7 +292,7 @@ Correspondence Management har följande konfigurationsegenskaper:
   </tr> 
   <tr> 
    <td><p>Felsökningskatalog </p> <p> </p> </td> 
-   <td>Sökväg till filsystemmappen för felsökning. Om katalogen inte <code>exists</code> genereras inga felsökningsdumpar.</td> 
+   <td>Sökväg till filsystemmappen för felsökning. Om katalogen inte <code>exists</code> skapas inga felsökningsdumpar.</td> 
    <td>acm.debugDirectory</td> 
    <td> </td> 
   </tr> 
