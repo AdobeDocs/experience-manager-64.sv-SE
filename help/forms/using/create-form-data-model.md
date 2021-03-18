@@ -8,10 +8,11 @@ uuid: 81d40278-4df9-4b61-93ad-eae2fce0a35c
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 31e97723-d637-4a18-999d-36e00fbd031a
+feature: Adaptiv Forms
 translation-type: tm+mt
-source-git-commit: 7ec0cd95417c015565fa6e07c753c4ac6df35cdb
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1546'
 ht-degree: 0%
 
 ---
@@ -62,7 +63,7 @@ Gör följande för att konfigurera MySQL-databasen:
 
    1. Tryck på **Installera/Uppdatera**. En **dialogruta för överföring/installation av programpaket** visas.
 
-   1. Tryck på **Välj Arkiv** om du vill bläddra och välja OSGi-paketet för MySQL JDBC-drivrutinen. Välj **Starta paketet** och **Uppdatera paket** och tryck på **Installera eller Uppdatera**. Kontrollera att Oracle Corporations JDBC Driver för MySQL är aktiverad. Drivrutinen är installerad.
+   1. Tryck på **Välj Arkiv** om du vill bläddra och välja OSGi-paketet för MySQL JDBC-drivrutinen. Välj **Starta paketet** och **Uppdatera paket** och tryck på **Installera eller Uppdatera**. Kontrollera att Oraclets JDBC-drivrutin för MySQL är aktiv. Drivrutinen är installerad.
 
 1. Konfigurera MySQL-databasen som en datakälla:
 
