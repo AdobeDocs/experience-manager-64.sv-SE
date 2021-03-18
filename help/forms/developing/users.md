@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 95804bff-9e6f-4807-aae4-790bd9e7cb57
+role: Developer
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '6243'
+source-wordcount: '6244'
 ht-degree: 0%
 
 ---
@@ -752,7 +753,7 @@ I följande tabell beskrivs stegen i det här diagrammet
    <td><p>Autentiseringsuppgifterna autentiseras med tjänsten Autentiseringshanteraren. Om inloggningsuppgifterna är giltiga fortsätter arbetsflödet till steg 3. Annars skickas ett meddelande till användaren om att användaren inte är en behörig användare.</p></td> 
   </tr> 
   <tr> 
-   <td><p>3</p></td> 
+   <td><p>1</p></td> 
    <td><p>Användarinformation och formulärdesign hämtas från en skyddad företagsdatabas. </p></td> 
   </tr> 
   <tr> 
