@@ -6,10 +6,13 @@ audience: admin-user
 user-guide-title: AEM 6.4 Handbok för administrationsanvändare
 breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
+feature-set: Experience Manager Sites
+feature: Administratör
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 7345a3c392dc6df495454a061a8a0624a4fb46d1
+source-git-commit: 5944eab0bf38551970685eaa98d90c4459720245
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '660'
 ht-degree: 5%
 
 ---
