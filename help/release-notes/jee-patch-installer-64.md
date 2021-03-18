@@ -1,13 +1,13 @@
 ---
 title: AEM Forms JEE Patch Installer
-description: 'null'
+description: AEM Forms JEE Patch Installer
 uuid: e709871b-c04c-43bb-a7d0-45e89fbd3d44
 content-type: reference
 discoiquuid: 83bace08-1d4f-4192-a634-c7c4879963d8
 translation-type: tm+mt
-source-git-commit: 610e9a54adad3abdfecb8b2c4da67d677f75175e
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## Om installationsprogrammet för korrigeringsfilen {#about-the-patch-installer}
 
-Installationsprogrammet för AEM 6.4 Forms JEE patch innehåller alla åtgärdade fel för alla komponenter i AEM 6.4 Forms JEE som är tillgängliga till dess att den här korrigeringen släppts. I den senaste [Versionsinformationen om Cumulative Fix Pack](cfp-release-notes.md) finns en fullständig lista över åtgärdade problem.
+Installationsprogrammet för AEM 6.4 Forms JEE patch innehåller alla åtgärdade problem för alla komponenter i AEM 6.4 Forms JEE som är tillgängliga till dess att den här korrigeringen släppts. I den senaste [Versionsinformationen om Cumulative Fix Pack](cfp-release-notes.md) finns en fullständig lista över åtgärdade problem.
 
 ## Krav för att installera korrigeringen {#prerequisites-to-installing-the-patch}
 
