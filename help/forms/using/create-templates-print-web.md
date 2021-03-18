@@ -7,10 +7,11 @@ uuid: d7b0d9a5-f5f0-4c21-a6f8-622bf94f4491
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 40c0a17b-6894-44cc-b1f7-490913061532
+feature: Interaktiv kommunikation
 translation-type: tm+mt
-source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1829'
+source-wordcount: '1831'
 ht-degree: 0%
 
 ---
@@ -98,7 +99,7 @@ Så här skapar du en XDP-mall för utskriftskanalen:
 
    För att spara tid kan du även kopiera och klistra in befintliga delformulär för att skapa nya delformulär.
 
-   Om du vill flytta delformuläret **Diagram** till höger om delformuläret Charges väljer du delformuläret **Diagram** i den vänstra rutan, väljer fliken **Layout** och anger ett värde för fältet **AnchorX**. Värdet måste vara större än värdet för fältet **Bredd** för delformuläret **Avgifter**. Markera delformuläret **Avgifter** och välj fliken **Layout** för att visa värdet för fältet **Bredd**.
+   Om du vill flytta delformuläret **Diagram** till höger om delformuläret Diagram väljer du delformuläret **Diagram** i den vänstra rutan, väljer fliken **Layout** och anger ett värde för fältet **AnchorX**. Värdet måste vara större än värdet för fältet **Bredd** för delformuläret **Avgifter**. Markera delformuläret **Avgifter** och välj fliken **Layout** för att visa värdet för fältet **Bredd**.
 
 1. Dra och släpp **Text**-objektet från **objektbiblioteket** till formuläret och ange **Dial XXXX för att prenumerera**-texten i rutan.
 1. Högerklicka på textobjektet i den vänstra rutan, välj **Byt namn på objekt** och ange namnet på textobjektet som **Prenumerera**.
@@ -241,7 +242,7 @@ Utför följande steg för att skapa en mall för webbkanalen i mappen **Create_
    | summeringskostnader | Sammanfattning av avgifter | 2 |
    | objektanrop | Specificerade samtal | 1 |
    | nyttja | Betala nu | 2 |
-   | arbetsyta | Mervärdestjänster | 3 |
+   | arbetsyta | Mervärdestjänster | 1 |
 
    Följande bild visar innehållsträdet när alla paneler har lagts till i mallen:
 
