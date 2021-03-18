@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: ccddb2cd-8e67-43aa-a495-8996ad349761
+feature: Konfigurerar
 translation-type: tm+mt
-source-git-commit: 6ac5f288de51e39bccd080123ba9e094406263f8
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '3805'
+source-wordcount: '3806'
 ht-degree: 0%
 
 ---
@@ -468,7 +469,7 @@ Se även [Aktivera HTTP över SSL](/help/sites-administering/ssl-by-default.md) 
 Styr HTML-tolken för CQ-omskrivaren.
 
 * **Ytterligare taggar att bearbeta**  - Du kan lägga till eller ta bort HTML-taggar som ska bearbetas av parsern. Som standard bearbetas följande taggar: A,IMG,AREA,FORM,BASE,LINK,SCRIPT,BODY,HEAD.
-* **Bevara kamerafodral** - Som standard konverterar HTML-tolken attribut i kamelfodral (t.ex. eBay) till gemener (t.ex. ebay). Du kan stänga av det här om du vill bevara attributen för kamerans skiftläge. Detta är användbart när du använder ramverk för frontlinjer som vinkelräta 2.
+* **Bevara kamerafodral** - Som standard konverterar HTML-tolken attribut i kamelfodral (t.ex. eBay) till gemener (t.ex. ebay). Du kan stänga av det här om du vill bevara attributen för kamerans skiftläge. Detta är användbart när du använder ramverk som Angular 2.
 
 **JDBC Connections-** poolen DagKonfigurera åtkomst till en extern databas som används som innehållskälla.
 
