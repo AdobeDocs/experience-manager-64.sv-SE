@@ -10,10 +10,11 @@ geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 023f0d9e-bfde-4879-a839-085fadffb48e
+role: Developer
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1851'
+source-wordcount: '1852'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 0%
 
 # Sammanställer PDF-Portfolio {#assembling-pdf-portfolios}
 
-Du kan sätta ihop en PDF-Portfolio med Assembler Java och webbtjänstens API. En portfölj kan kombinera flera dokument av olika typer, inklusive ordfiler, bildfiler (till exempel en jpeg-fil) och PDF-dokument. Layouten för portföljen kan anges till olika format, t.ex. *stödrastret med Preview*, *På en bild*-layout eller till och med *Rotera*.
+Du kan sätta ihop en PDF-Portfolio med Assembler Java och webbtjänstens API. En portfölj kan kombinera flera dokument av olika typer, inklusive ordfiler, bildfiler (till exempel en jpeg-fil) och PDF-dokument. Portföljens layout kan anges till olika format, t.ex. *stödrastret med Förhandsgranska*, *på en bild*-layout eller till och med *Rotera*.
 
 Följande bild är en skärmbild av en portfölj med *På en bildlayout*.
 
