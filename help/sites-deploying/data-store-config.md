@@ -10,10 +10,11 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: d4636434-98a6-4cf7-bb92-4338da17c893
 legacypath: /deploy/platform/data-store-config
+feature: Konfigurerar
 translation-type: tm+mt
-source-git-commit: 8a8e38bc9f34d6a81aa91ba83cf35caa4b03ee3f
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '3439'
+source-wordcount: '3440'
 ht-degree: 0%
 
 ---
