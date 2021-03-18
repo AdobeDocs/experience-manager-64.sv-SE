@@ -7,10 +7,11 @@ page-status-flag: de-activated
 uuid: 62f5222c-c787-46be-95fa-a701aa0e6115
 topic-tags: introduction
 discoiquuid: 4e247e70-c50a-4571-8ac1-fbbb07100262
+feature: Adaptiv Forms
 translation-type: tm+mt
-source-git-commit: fae6d621ad61a26db99994482c16c9d9a5f88ad9
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 0%
 
 Söker du en mobilvänlig **formulärupplevelse** som förenklar registrering, ökar engagemanget och minskar handläggningstiden, **adaptiva formulär** passar perfekt för dig. Adaptiva formulär ger en mobil, automatiserad och analysvänlig formulärupplevelse. Ni kan enkelt skapa formulär som är responsiva och interaktiva till sin natur, använda automatiserade processer för att minska administrativa och repetitiva uppgifter och använda dataanalys för att förbättra och personalisera den upplevelse kunderna har med era formulär.
 
-Den här självstudiekursen ger ett komplett ramverk för att skapa ett anpassningsbart formulär. Självstudiekursen är indelad i ett användningsfall och flera guider. Varje guide hjälper dig att lära dig och lägga till nya funktioner i det adaptiva formulär som skapas i den här kursen. Du har ett fungerande anpassningsbart formulär efter varje guide. Guiden för att skapa ett anpassat formulär är tillgänglig. Efterföljande guider kommer snart att vara tillgängliga. I slutet av den här självstudiekursen kan du:
+Den här självstudiekursen ger ett komplett ramverk för att skapa ett anpassningsbart formulär. Självstudiekursen är indelad i ett användningsfall och i flera guider. Varje guide hjälper dig att lära dig och lägga till nya funktioner i det adaptiva formulär som skapas i den här kursen. Du har ett fungerande anpassningsbart formulär efter varje guide. Guiden för att skapa ett anpassat formulär är tillgänglig. Efterföljande guider kommer snart att vara tillgängliga. I slutet av den här självstudiekursen kan du:
 
 * Skapa ett anpassningsbart formulär och en formulärdatamodell.
 * Formatera den anpassningsbara formen.
@@ -43,7 +44,7 @@ Webbplatsen körs på Adobe Experience Manager (AEM) och använder AEM Forms fö
 
 * Konfigurera en AEM författarinstans.
 * Installera [AEM Forms add-on](/help/forms/using/installing-configuring-aem-forms-osgi.md) på författarinstansen.
-* Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudien är baserade på MySQL-databasen och använder Oracle [MySQL JDBC-databasdrivrutin](https://dev.mysql.com/downloads/connector/j/5.1.html).
+* Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudien är baserade på MySQL-databasen och använder Oraclets [JDBC-databasdrivrutin för MySQL](https://dev.mysql.com/downloads/connector/j/5.1.html).
 
 * Konfigurera en databas som innehåller kunddata med fälten som visas nedan. En databas behövs inte för att skapa ett anpassningsbart formulär. I den här självstudien används en databas för att visa formulärdatamodell och beständighetsfunktioner i AEM Forms.
 
