@@ -1,7 +1,7 @@
 ---
 title: AEM Developer Tools for Eclipse
 seo-title: AEM Developer Tools for Eclipse
-description: 'null'
+description: AEM Developer Tools for Eclipse
 seo-description: 'null'
 uuid: 566e49f2-6f28-4aa7-bfe0-b5f9675310bf
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: a2ae76a8-50b0-4e43-b791-ad3be25b8582
 translation-type: tm+mt
-source-git-commit: 8e2bd579e4c5edaaf86be36bd9d81dfffa13a573
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '814'
 ht-degree: 1%
 
 ---
@@ -83,7 +83,7 @@ AEM utvecklingsverktyg för Eclipse levereras med ett perspektiv som ger dig ful
 
 ## Exempel på flermodulsprojekt {#sample-multi-module-project}
 
-I AEM Developer Tools for Eclipse finns ett exempel på ett flermodulsprojekt som hjälper dig att snabbt komma igång med projektkonfigurationen i Eclipse, och som en praktisk guide till flera AEM funktioner. [Läs mer om Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
+I AEM Developer Tools for Eclipse finns ett exempel på ett projekt med flera moduler som hjälper dig att snabbt komma igång med en projektkonfiguration i Eclipse, och som en praktisk guide till flera AEM funktioner. [Läs mer om Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
 Så här skapar du exempelprojektet:
 
