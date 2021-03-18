@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: coding
 discoiquuid: df7b60bb-4897-479e-a05e-1b1e9429ed87
+role: Developer
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2506'
+source-wordcount: '2507'
 ht-degree: 0%
 
 ---
@@ -107,7 +108,7 @@ Status för asynkront anrop kan hämtas med en anrops-URL med `services` som ers
 
 Den här URL:en returnerar ett heltalsvärde (i formatet &quot;text/plain&quot;) som kodar jobbstatusen enligt jobbuthanterarens specifikation (t.ex. 2 betyder att det körs, 3 betyder slutförd, 4 betyder misslyckad och så vidare).
 
-Om jobbet är klart returnerar URL-adressen samma resultat som om tjänsten anropades synkront.
+Om jobbet har slutförts returnerar URL-adressen samma resultat som om tjänsten anropades synkront.
 
 När jobbet är klart och resultatet har hämtats kan jobbet tas bort med en anrops-URL med `services` och ersätts med `async_dispose`. URL:en ska även innehålla en `job_id`-parameter som anger jobbets identifierarvärde. Till exempel:
 
@@ -285,7 +286,7 @@ I följande HTML-exempel anropas en AEM Forms-process med namnet `SOAPEchoServic
 
 **Anropa processen MyApplication/EncryptDocument med REST**
 
-Du kan anropa en kortlivad AEM Forms-process med namnet *MyApplication/EncryptDocument* genom att använda REST.
+Du kan anropa en kort AEM Forms-process med namnet *MyApplication/EncryptDocument* med REST.
 
 >[!NOTE]
 >
