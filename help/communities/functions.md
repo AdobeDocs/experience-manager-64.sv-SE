@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: cc993b71-e2f2-48e7-ad4e-469cb5ce2dc1
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 28948f1f8678512f8fc970a4289cb01cde86c5c2
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2431'
+source-wordcount: '2432'
 ht-degree: 0%
 
 ---
@@ -48,7 +49,7 @@ En mall för en community-webbplats innehåller strukturen för en community-web
 
 **Titlar** och  **** URL är egenskaper som är gemensamma för alla communityfunktioner.
 
-När en communityfunktion läggs till i en mall för en community-webbplats eller läggs till när [strukturen för en community-plats ändras, öppnas funktionens dialogruta så att titeln och URL:en kan konfigureras.](sites-console.md#modifying-site-properties)
+När en communityfunktion läggs till i en mall för en community-webbplats eller läggs till när [strukturen för en community-webbplats ändras, öppnas funktionens dialogruta så att titeln och URL:en kan konfigureras.](sites-console.md#modifying-site-properties)
 
 #### Information om konfigurationsfunktion {#configuration-function-details}
 
