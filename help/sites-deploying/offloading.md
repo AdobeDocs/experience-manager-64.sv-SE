@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
+feature: Konfigurerar
 translation-type: tm+mt
-source-git-commit: 97d60c4d18b7842f9fc7c81be33ac1acfca8b24d
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2803'
+source-wordcount: '2804'
 ht-degree: 1%
 
 ---
@@ -108,7 +109,7 @@ Gör så här för att öppna sidan Topology Management i webbkonsolen:
 
 Resursbaserad sökningstjänst för Apache Sling körs på varje instans för att styra hur instanser från Experience Manager interagerar med en topologi.
 
-Identifieringstjänsten skickar periodiska POSTER (hjärtslag) till Topology Connector-tjänster för att upprätta och underhålla anslutningar till topologin. Topology Connector-tjänsten underhåller en tillåtelselista med IP-adresser eller värdnamn som kan ansluta till topologin:
+Identifieringstjänsten skickar periodiska POSTER (hjärtslag) till Topology Connector-tjänster för att upprätta och underhålla kopplingar till topologin. Topology Connector-tjänsten underhåller en tillåtelselista med IP-adresser eller värdnamn som kan ansluta till topologin:
 
 * Om du vill koppla en instans till en topologi anger du URL:en för Topology Connector-tjänsten för rotmedlemmen.
 * Om du vill göra det möjligt för en instans att ansluta till en topologi lägger du till instansen tillåtelselista i rotmedlemmens Topology Connector-tjänst.
@@ -349,7 +350,7 @@ Följande procedur utgår från följande egenskaper för avlastningstopologin:
 
 ## Ytterligare läsning {#further-reading}
 
-Förutom informationen på den här sidan kan du läsa följande:
+Förutom den information som visas på den här sidan kan du även läsa följande:
 
 * Mer information om hur du använder Java API:er för att skapa jobb och jobbkunder finns i [Skapa och använda jobb för avlastning](/help/sites-developing/dev-offloading.md).
 * Allmänna riktlinjer och bästa praxis för avlastning av resurser finns i [Allmänna riktlinjer och bästa praxis för avlastning av tillgångar](/help/assets/assets-offloading-best-practices.md#general-guidance-and-best-practices-for-asset-offloading).
