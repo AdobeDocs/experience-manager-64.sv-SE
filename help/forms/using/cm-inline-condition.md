@@ -8,10 +8,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: interactive-communications, correspondence-management
 discoiquuid: f376b8c1-e176-4fe6-b298-f3d493c59319
+feature: Korrespondenshantering
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1717'
 ht-degree: 0%
 
 ---
@@ -100,7 +101,7 @@ Du kan dessutom ange regel/villkor i den upprepade konstruktionen för att villk
 
 I följande exempel visas hur du använder upprepning för att strukturera och återge kreditkortstransaktionerna i en interaktiv kommunikation.
 
-1. I ett formulärdatamodellbaserat textdokumentfragment infogar du relevanta datamodellsobjekt (och inbäddad text som krävs för etiketterna, som i det här exemplet):
+1. I ett formulärdatamodellbaserat textdokumentfragment infogar du relevanta formulärdatamodellsobjekt (och inbäddad text som krävs för etiketterna, som i det här exemplet):
 
    ![1_elementstext](assets/1_elementstext.png)
 
