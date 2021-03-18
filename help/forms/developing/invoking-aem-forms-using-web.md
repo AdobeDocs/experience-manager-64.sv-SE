@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
+role: Developer
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '10008'
+source-wordcount: '10009'
 ht-degree: 0%
 
 ---
@@ -682,7 +683,7 @@ Du kan anropa en AEM Forms-tjänst med hjälp av Java-proxyklasser och Base64. S
    >
    >Ersätt `hiro-xp`* med IP-adressen för J2EE-programtjänstleverantören som är värd för AEM Forms. *
 
-1. Paketera Java-proxyklasserna som skapats med JAX-WS till en JAR-fil.
+1. Paketera Java-proxyklasserna som skapats med JAX-WS i en JAR-fil.
 1. Inkludera JAR-proxyfilen för Java och JAR-filerna som finns i följande sökväg:
 
    &lt;install Directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
@@ -878,7 +879,7 @@ Så här anropar du processen `MyApplication/EncryptDocument` med Java-proxyfile
    >
    >Ersätt `hiro-xp`* med IP-adressen för J2EE-programservern som är värd för AEM Forms. *
 
-1. Paketera Java-proxyklasserna som skapats med JAX-WS till en JAR-fil.
+1. Paketera Java-proxyklasserna som skapats med JAX-WS i en JAR-fil.
 1. Inkludera JAR-proxyfilen för Java och JAR-filerna som finns i följande sökväg:
 
    &lt;install Directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
@@ -1001,7 +1002,7 @@ Du kan anropa en AEM Forms-tjänst med hjälp av Java-proxyklasser och BLOB-data
    >
    >Ersätt `hiro-xp`* med IP-adressen för J2EE-programservern som är värd för AEM Forms. *
 
-1. Paketera Java-proxyklasserna som skapats med JAX-WS till en JAR-fil.
+1. Paketera Java-proxyklasserna som skapats med JAX-WS i en JAR-fil.
 1. Inkludera JAR-proxyfilen för Java och JAR-filerna som finns i följande sökväg:
 
    &lt;install Directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
@@ -1458,7 +1459,7 @@ Följande C#-kodexempel anropar en Forms-tjänst med SAML-baserad autentisering.
 
 ## Relaterade överväganden när du använder webbtjänster {#related-considerations-when-using-web-services}
 
-Ibland uppstår problem när vissa AEM Forms-tjänster anropas med hjälp av webbtjänster. Syftet med denna diskussion är att identifiera dessa problem och tillhandahålla en lösning, om en sådan finns tillgänglig.
+Ibland uppstår problem när vissa AEM Forms-tjänster anropas med hjälp av webbtjänster. Syftet med denna diskussion är att identifiera dessa problem och ge en lösning, om en sådan finns tillgänglig.
 
 ### Anropar tjänståtgärder asynkront {#invoking-service-operations-asynchronously}
 
