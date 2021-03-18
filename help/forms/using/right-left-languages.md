@@ -1,17 +1,18 @@
 ---
 title: höger-till-vänster-språk i HTML5-formulär
 seo-title: höger-till-vänster-språk i HTML5-formulär
-description: HTML5-formulär kan visas eller fyllas i på höger-till-vänster-språk, t.ex. hebreiska.
-seo-description: HTML5-formulär kan visas eller fyllas i på höger-till-vänster-språk, t.ex. hebreiska.
+description: HTML5-formulär kan visas eller fyllas i på höger-till-vänster-språk, som hebreiska.
+seo-description: HTML5-formulär kan visas eller fyllas i på höger-till-vänster-språk, som hebreiska.
 uuid: 37639671-3207-49aa-b110-8e39fd648449
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: b8465471-0458-42d6-8209-8ba90f41154a
+feature: Mobile Forms
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
