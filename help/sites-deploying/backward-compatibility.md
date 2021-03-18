@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: upgrading
 content-type: reference
 discoiquuid: 5e76fe09-4d37-4c8c-8baf-97e75689bd26
+feature: Uppgraderar
 translation-type: tm+mt
-source-git-commit: 6fc1a2502187be0fbbfbea516788e705f1a2697c
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
@@ -28,7 +29,7 @@ ht-degree: 0%
 
 I AEM 6.4 har alla funktioner utvecklats med bakåtkompatibilitet i åtanke.
 
-I de flesta fall behöver inte kunder som kör AEM 6.3 ändra koden eller anpassningarna när de gör uppgraderingen. För AEM 6.1- och 6.2-kunder finns det inga ytterligare brytningsförändringar än vad som skulle ha skett vid en uppgradering till 6.3.
+I de flesta fall behöver inte kunder som kör AEM 6.3 ändra koden eller anpassningarna när de gör uppgraderingen. För AEM 6.1- och 6.2-kunder finns det inga ytterligare brytningsförändringar än vad man skulle få vid en uppgradering till 6.3.
 
 Undantag där funktioner inte kan hållas bakåtkompatibla kan göras genom att man installerar ett kompatibilitetspaket för 6.3 (se hur du installerar nedan för mer information om var du ska hämta). Kompatibilitetspaketet återställer kompatibilitet för program som är kompatibla med AEM 6.3.
 
