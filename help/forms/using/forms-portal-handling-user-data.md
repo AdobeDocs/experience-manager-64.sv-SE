@@ -8,10 +8,11 @@ contentOwner: vishgupt
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 48f841b7-0e7f-4216-9ee8-fb6e843acaf0
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 7ec0cd95417c015565fa6e07c753c4ac6df35cdb
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '976'
 ht-degree: 0%
 
 ---
