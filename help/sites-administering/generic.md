@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: e-commerce
 content-type: reference
 discoiquuid: ad80505f-116e-43f1-8d93-ffe6e8b1ac46
+feature: Commerce Integration Framework
 translation-type: tm+mt
-source-git-commit: fc2c7b62960a0a3cb45d595673b8dcfeb990d7c2
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '3004'
+source-wordcount: '3007'
 ht-degree: 1%
 
 ---
