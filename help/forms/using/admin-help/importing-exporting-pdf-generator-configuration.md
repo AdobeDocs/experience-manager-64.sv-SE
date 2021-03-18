@@ -9,16 +9,17 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e25c1b35-73eb-4353-8e39-a2d4cdccd101
+feature: PDF Generator
 translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '397'
 ht-degree: 0%
 
 ---
 
 
-# Importera och exportera konfigurationsfiler för PDF Generator {#importing-and-exporting-pdf-generator-configuration-files}
+# Importera och exportera PDF Generator-konfigurationsfiler {#importing-and-exporting-pdf-generator-configuration-files}
 
 Konfigurationsfilen innehåller PDF-generatorns konverteringsinformation, inklusive PDF-filen, filtypen och säkerhetsinställningarna.
 
