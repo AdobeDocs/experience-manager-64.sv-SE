@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: configuring
 discoiquuid: e862c8a9-b5b6-4857-a154-03d3ffac3e67
+feature: Konfigurerar
 translation-type: tm+mt
-source-git-commit: a8e0a48466c046bf1f96ff240995b499818ed0a2
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1283'
 ht-degree: 0%
 
 ---
@@ -63,7 +64,7 @@ Kontrollera detta genom att gå till /etc/replication/agents.author.html och sed
 1. Det kan vara något fel med att snedställa jobbköer i utvecklingsramverket. Prova att starta om paketet org.apache.sling.event i /system/console.
 1. Det kan bero på att jobbbearbetningen är helt avstängd. Det kan du kolla under Felix Console på fliken Sling Eventing. Kontrollera om den visas - Apache Sling Eventing (JOBBBEARBETNING ÄR INAKTIVERAD!)
 
-   * Om ja, kontrollera Apache Sling Job Event Handler under fliken Konfiguration i Felix Console. Det kan bero på att kryssrutan Jobbbearbetning är aktiverad inte är markerad. Om detta är markerat och fortfarande visar att jobbbearbetning är inaktiverad, kontrollerar du om det finns någon övertäckning under /apps/system/config som inaktiverar jobbbearbetningen. Försök att skapa en osgi:config-nod för jobmanager.enabled med ett booleskt värde till true och kontrollera om aktiveringen har startat och det inte finns några fler jobb i kö.
+   * Om ja, kontrollera Apache Sling Job Event Handler på fliken Konfiguration i Felix Console. Det kan bero på att kryssrutan Jobbbearbetning är aktiverad inte är markerad. Om detta är markerat och fortfarande visar att jobbbearbetning är inaktiverad, kontrollerar du om det finns någon övertäckning under /apps/system/config som inaktiverar jobbbearbetningen. Försök att skapa en osgi:config-nod för jobmanager.enabled med ett booleskt värde till true och kontrollera om aktiveringen har startat och det inte finns några fler jobb i kö.
 
 1. Det kan också vara så att DefaultJobManager-konfigurationen försätts i ett inkonsekvent tillstånd. Detta kan inträffa när någon manuellt ändrar konfigurationen av &quot;Apache Sling Job Event Handler&quot; via OSGiconsole (t.ex. inaktiverar och återaktiverar egenskapen &quot;Jobbbearbetning aktiverad&quot; och sparar konfigurationen).
 
