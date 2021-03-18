@@ -7,10 +7,11 @@ page-status-flag: de-activated
 uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
 topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
+feature: Adaptiv Forms
 translation-type: tm+mt
-source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2069'
 ht-degree: 4%
 
 ---
@@ -26,7 +27,7 @@ Den här självstudiekursen är ett steg i [Skapa ditt första adaptiva formulä
 
 ## Om självstudiekursen {#about-the-tutorial}
 
-Du kan använda teman för att ge ett anpassat formulär ett unikt utseende och en unik stil. Du kan använda färdiga teman som medföljer redigeringsprogrammet för anpassade formulär eller skapa egna teman. AEM Forms tillhandahåller en [temaredigerare](themes.md) för att skapa anpassade teman. Ett och samma tema kan ge olika utseenden till samma adaptiva formulär som öppnas på mobilen, surfplattan eller datorn. Du behöver inte ha någon tidigare kunskap om CSS eller LESS för att kunna använda temaredigeraren, men du vill ha den.
+Du kan använda teman för att ge ett anpassat formulär ett unikt utseende och en unik stil. Du kan använda färdiga teman som medföljer redigeringsprogrammet för anpassade formulär eller skapa egna teman. AEM Forms tillhandahåller en [temaredigerare](themes.md) för att skapa anpassade teman. Ett och samma tema kan ge olika utseenden till samma adaptiva formulär som öppnas på mobilen, surfplattan eller datorn. Det krävs ingen tidigare kunskap om CSS eller LESS för att kunna använda temaredigeraren, men det är önskvärt.
 
 I slutet av självstudiekursen kommer du att lära dig att:
 
