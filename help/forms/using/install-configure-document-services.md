@@ -6,10 +6,11 @@ seo-description: Installera AEM Forms dokumenttjänster för att skapa, sammanst
 uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
+role: Administratör
 translation-type: tm+mt
-source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '4122'
+source-wordcount: '4123'
 ht-degree: 0%
 
 ---
