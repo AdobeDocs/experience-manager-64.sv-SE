@@ -6,10 +6,13 @@ audience: end-user
 user-guide-title: Användarhandbok för redigering av AEM 6.4 Classic UI
 breadcrumb-title: Användargränssnittets skrivguide
 user-guide-description: Den här handboken beskriver koncepten för redigering i AEM i det klassiska användargränssnittet.
+feature-set: Experience Manager Sites
+feature: Redigering
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: 5944eab0bf38551970685eaa98d90c4459720245
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '322'
 ht-degree: 17%
 
 ---
