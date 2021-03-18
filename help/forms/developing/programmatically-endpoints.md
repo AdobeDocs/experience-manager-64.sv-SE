@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 076889a7-9c9f-4b6f-a45b-67a9b3923c36
+role: Developer
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '10849'
+source-wordcount: '10850'
 ht-degree: 0%
 
 ---
@@ -313,7 +314,7 @@ Om du vill skapa en bevakad mappslutpunkt för en tjänst anger du följande vä
 * **Beskrivning**: Anger beskrivningen av slutpunkten.
 * **Namn**: Anger slutpunktens namn.
 * **Tjänstidentifierare**: Anger den tjänst som slutpunkten tillhör. Om du till exempel vill lägga till en bevakad mappslutpunkt i processen som introduceras i det här avsnittet (en process blir en tjänst när den aktiveras med Workbench) anger du `EncryptDocument`.
-* **Åtgärdsnamn**: Anger namnet på åtgärden som anropas med slutpunkten. När du skapar en bevakad mappslutpunkt för en tjänst som kommer från en process som har skapats i Workbench är namnet på åtgärden vanligtvis `invoke`.
+* **Åtgärdsnamn**: Anger namnet på åtgärden som anropas med slutpunkten. När du skapar en bevakad mappslutpunkt för en tjänst som kommer från en process som skapats i Workbench, är namnet på åtgärden vanligtvis `invoke`.
 
 **Ange konfigurationsvärden**
 
@@ -620,7 +621,7 @@ Om du vill definiera ett utdataparametervärde som krävs för en e-postslutpunk
 
 **Skapa e-postslutpunkten**
 
-När du har angett attribut och konfigurationsvärden för e-postslutpunkten och angett in- och utdataparametervärden måste du skapa e-postslutpunkten.
+När du har angett slutpunktsattribut för e-post och konfigurationsvärden, och definierat in- och utdataparametervärden, måste du skapa e-postslutpunkten.
 
 **Aktivera slutpunkten**
 
@@ -1084,7 +1085,7 @@ Ange nya konfigurationsvärden när du ändrar en slutpunkt. Om du till exempel 
 
 ## Tar bort slutpunkter {#removing-endpoints}
 
-Du kan ta bort en slutpunkt från en tjänst programmatiskt med AEM Forms Java API. När du har tagit bort en slutpunkt kan tjänsten inte anropas med den anropsmetod som slutpunkten aktiverade. Om du till exempel tar bort en SOAP-slutpunkt från en tjänst kan du inte anropa tjänsten i SOAP-läge.
+Du kan ta bort en slutpunkt från en tjänst genom att använda AEM Forms Java API. När du har tagit bort en slutpunkt kan tjänsten inte anropas med den anropsmetod som slutpunkten aktiverade. Om du till exempel tar bort en SOAP-slutpunkt från en tjänst kan du inte anropa tjänsten i SOAP-läge.
 
 För att visa hur du tar bort en slutpunkt från en tjänst tar det här avsnittet bort en EJB-slutpunkt från en tjänst med namnet *EncryptDocument*.
 
