@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
+role: Developer
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '9150'
+source-wordcount: '9151'
 ht-degree: 0%
 
 ---
@@ -1148,9 +1149,9 @@ Du kan ta bort resurser från en viss plats i databasen med hjälp av Java API(S
 
 När du tar bort en resurs är borttagningen vanligtvis permanent, men i vissa fall kan ECM-databaser lagra resursens versioner enligt deras historikmekanismer. När du tar bort en resurs är det därför viktigt att du aldrig behöver den igen. De vanligaste skälen till att en resurs tas bort är behovet av att öka det tillgängliga utrymmet i databasen. Du kan ta bort en version av en resurs, men om du gör det måste du ange resursidentifieraren och inte dess logiska identifierare (LID) eller sökväg. Om du tar bort en mapp tas allt i den mappen, inklusive undermappar och resurser, bort automatiskt.
 
-Relaterade resurser tas inte bort. Om du till exempel har ett formulär som använder filen logo.gif och du tar bort logo.gif, lagras en relation i den väntande relationstabellen. Du kan också ange att objektstatusen för den senaste versionen ska vara inaktuell för borttagning av version.
+Relaterade resurser tas inte bort. Om du till exempel har ett formulär som använder filen logo.gif och du tar bort logo.gif, lagras en relation i den väntande relationstabellen. Du kan också ange att objektstatusen för den senaste versionen är inaktuell för borttagning av version.
 
-En raderingsåtgärd är inte transaktionssäker i ECM-system. Om du till exempel försöker ta bort 100 resurser och åtgärden misslyckas på den 50:e resursen, tas de första 49 instanserna bort, men inte resten. I annat fall är standardbeteendet återställning (ej åtagande).
+En raderingsåtgärd är inte transaktionssäker i ECM-system. Om du till exempel försöker ta bort 100 resurser och åtgärden misslyckas på den 50:e resursen, tas de första 49 instanserna bort, men resten tas inte bort. I annat fall är standardbeteendet återställning (ej åtagande).
 
 >[!NOTE]
 >
