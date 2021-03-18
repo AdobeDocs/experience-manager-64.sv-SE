@@ -7,10 +7,11 @@ uuid: d1a19b83-f630-4648-9ad2-a22374e31aa9
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
+feature: Interaktiv kommunikation
 translation-type: tm+mt
-source-git-commit: 835618e8e0d01905ad7b476b0172dfecec41cf9d
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1351'
 ht-degree: 0%
 
 ---
@@ -139,7 +140,7 @@ Agentgränssnittet har inbyggt stöd för 210 specialtecken. Administratören ka
 
 #### Leverans av bifogad fil {#attachmentdelivery}
 
-* När den interaktiva kommunikationen återges med serversidans API:er som en interaktiv eller icke-interaktiv PDF innehåller den återgivna PDF-filen bilagor som PDF-bilagor.
+* När den interaktiva kommunikationen återges med hjälp av API:er på serversidan som en interaktiv eller icke-interaktiv PDF, innehåller den återgivna PDF-filen bilagor som PDF-bilagor.
 * När en inläggsprocess som är kopplad till en interaktiv kommunikation läses in som en del av Skicka med agentgränssnittet, skickas bilagor som List&lt;com.adobe.idp.Document> inAttachmentDocs-parametern.
 * Arbetsflöden för leveransfunktion, som e-post och utskrift, ger även bilagor tillsammans med PDF-versionen av Interactive Communication.
 
