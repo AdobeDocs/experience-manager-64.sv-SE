@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: bfaf80c5-448b-47fb-9f22-57ee0eb169b2
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 1375282df15b1a1a1ab5ed760190af8d6288970e
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1091'
 ht-degree: 1%
 
 ---
@@ -26,7 +27,7 @@ ht-degree: 1%
 
 Anta till exempel att
 
-* En fransk ledamot publicerar ett franskt recept på en internationell matlagningswebbplats
+* En fransk ledamot publicerar ett recept på franska i communityforumet på en internationell matlagningswebbplats
 * En annan medlem från Japan använder översättningsfunktionen för att utlösa översättningen av recept från franska till japanska
 * Efter att ha läst receptet på japanska lägger medlemmen från Japan sedan in en kommentar på japanska
 * Medlemmen från Frankrike använder översättningsfunktionen för att översätta den japanska kommentaren till franska
