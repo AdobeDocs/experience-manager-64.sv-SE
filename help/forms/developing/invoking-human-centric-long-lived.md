@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: coding
 discoiquuid: 18a320b4-dce6-4c50-8864-644b0b2d6644
+role: Developer
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '3752'
+source-wordcount: '3753'
 ht-degree: 0%
 
 ---
@@ -157,7 +158,7 @@ Skapa Java-programlogik som anropar `FirstAppSolution/PreLoanProcess`-processen 
              }
 ```
 
-Normalt placerar du inte klientkod i en Java-servers `doGet`- eller `doPost`-metod. En bättre programmeringspraxis är att placera den här koden i en separat klass. Instansiera sedan klassen inifrån `doPost`-metoden (eller `doGet`-metoden) och anropa lämpliga metoder. För kodförkortning begränsas dock kodexemplen till ett minimum och placeras i metoden `doPost`.
+Normalt placerar du inte klientkod i en Java-serverds `doGet`- eller `doPost`-metod. En bättre programmeringspraxis är att placera den här koden i en separat klass. Instansiera sedan klassen inifrån `doPost`-metoden (eller `doGet`-metoden) och anropa lämpliga metoder. För kodförkortning begränsas dock kodexemplen till ett minimum och placeras i metoden `doPost`.
 
 Så här anropar du processen `FirstAppSolution/PreLoanProcess` med API:t för anrop:
 
@@ -503,7 +504,7 @@ Meddelande under Tjänstreferenser, det finns två objekt. Det första objektet 
 1. Skriv `JobManager` i fältet Namespace.
 1. Klicka på **Gå** och klicka sedan på&#x200B;**OK**.
 1. Välj **Lägg till tjänstreferens** på menyn **Projekt**.
-1. I dialogrutan **Adress** anger du WSDL för processen FirstAppSolution/PreLoanProcess.
+1. I dialogrutan **Adress** anger du WSDL till processen FirstAppSolution/PreLoanProcess.
 
    ```as3
     https://hiro-xp:8080/soap/services/FirstAppSolution/PreLoanProcess?WSDL&lc_version=9.0.1
