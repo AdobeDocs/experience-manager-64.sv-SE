@@ -10,10 +10,11 @@ topic-tags: e-commerce
 content-type: reference
 discoiquuid: 9474519d-14cc-49e0-a81d-9319966fd1f6
 pagetitle: Administering hybris
+feature: Commerce Integration Framework
 translation-type: tm+mt
-source-git-commit: caa6c521fd6975d0b693e069a61b7a53f2ba5cd0
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1729'
 ht-degree: 1%
 
 ---
@@ -328,7 +329,7 @@ När du arbetar med AEM finns det flera metoder för att hantera konfigurationsi
 
 ## Katalogimport {#catalog-import}
 
-hybris-paketet levereras med en katalogimportör för att skapa den inledande sidstrukturen.
+hybris-paketet levereras med en katalogimporterare för att skapa den inledande sidstrukturen.
 
 Det här är tillgängligt från:
 
