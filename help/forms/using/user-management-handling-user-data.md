@@ -7,10 +7,11 @@ uuid: 2b76b69f-6f3a-4f1a-a2a4-d39f5e529f75
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: a88fc933-f1af-4798-b72f-10e7b0d2fd11
+role: Administratör
 translation-type: tm+mt
-source-git-commit: c2dcb61d65cfc5867525f5b39769da0450d92f39
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '957'
 ht-degree: 0%
 
 ---
@@ -30,7 +31,7 @@ Användarhantering är en AEM Forms JEE-komponent som gör det möjligt att skap
 
 ## Användardata och datalager {#user-data-and-data-stores}
 
-Användarhantering lagrar användardata i en databas, t.ex. My Sql, Oracle, MS SQL Server och IBM DB2. Dessutom skapas en användare som har loggat in minst en gång i Forms-program på AEM författare på `https://[*server*]:[*host*]/lc` i AEM. Därför lagras användarhantering i följande datalager:
+Användarhantering lagrar användardata i en databas, t.ex. Min SQL, Oracle, MS SQL Server och IBM DB2. Dessutom skapas en användare som har loggat in minst en gång i Forms-program på AEM författare på `https://[*server*]:[*host*]/lc` i AEM. Därför lagras användarhantering i följande datalager:
 
 * Databas
 * AEM
@@ -113,7 +114,7 @@ Kör följande databaskommandon om du vill exportera användarhanteringsdata fö
 
 >[!NOTE]
 >
->Följande kommandon använder databastabellnamn i My SQL- och IBM DB2-databaser. När du kör dessa kommandon i Oracle- och MS SQL-databaser ersätter du följande tabellnamn i kommandona:
+>Följande kommandon använder databastabellnamn i My SQL- och IBM DB2-databaser. När du kör dessa kommandon på Oracle- och MS SQL-databaser ersätter du följande tabellnamn i kommandona:
 >
 >* Ersätt `EdcPrincipalLocalAccountEntity` med `EdcPrincipalLocalAccount`
    >
