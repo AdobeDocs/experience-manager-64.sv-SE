@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: e747147e-e96d-43c7-87b3-55947eef81f5
+role: Developer
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2540'
+source-wordcount: '2541'
 ht-degree: 0%
 
 ---
@@ -26,7 +27,7 @@ Med tjänsten Säkerhetskopiering och återställning kan du försätta AEM Form
 
 Säkerhetskopieringsläget är ett läge som servern försätts i så att filer i GDS inte rensas när en säkerhetskopieringsprocedur utförs. I stället skapas underkataloger under GDS-katalogen för att behålla en post med filer som ska rensas när säkerhetskopieringsläget har avslutats. En fil är avsedd att överleva systemomstarter och kan sträcka sig över flera dagar eller till och med år. Dessa filer utgör en viktig del av formulärserverns övergripande status och kan innehålla PDF-filer, profiler eller formulärmallar. Om någon av dessa filer förloras eller skadas kan processerna på formulärservern bli instabila och data gå förlorade.
 
-Du kan välja att utföra säkerhetskopiering av ögonblicksbilder, där du vanligtvis aktiverar säkerhetskopieringsläget under en period och sedan lämnar säkerhetskopieringsläget när du har slutfört säkerhetskopieringsaktiviteterna. Du måste lämna säkerhetskopieringsläget för att filer ska kunna rensas från GDS så att de inte växer i onödan. Du kan antingen lämna säkerhetskopieringsläget explicit eller vänta på att tiden ska gå ut i en session i säkerhetskopieringsläge.
+Du kan välja att utföra säkerhetskopiering av ögonblicksbilder, där du vanligtvis aktiverar säkerhetskopieringsläget under en period och sedan lämnar säkerhetskopieringsläget när du har slutfört säkerhetskopieringsaktiviteterna. Du måste lämna säkerhetskopieringsläget så att filer kan rensas från GDS för att se till att de inte växer i onödan. Du kan antingen lämna säkerhetskopieringsläget explicit eller vänta på att tiden ska gå ut i en session i säkerhetskopieringsläge.
 
 Du kan också lämna servern i permanent säkerhetskopieringsläge, vilket är typiskt för strategier för säkerhetskopiering vid rullande säkerhetskopiering eller kontinuerlig systemtäckning. Läget för rullande säkerhetskopiering anger att systemet alltid är i säkerhetskopieringsläge, med en ny session som påbörjas så snart som föregående session släpps. I läget för kontinuerlig säkerhetskopiering töms en fil efter två sessioner med säkerhetskopieringsläge och refereras inte längre till den.
 
@@ -51,7 +52,7 @@ Du kan utföra följande åtgärder med tjänsten Säkerhetskopiera och återst�
 
 ## Startar säkerhetskopieringsläge på formulärservern {#entering-backup-mode-on-the-forms-server}
 
-Du aktiverar säkerhetskopieringsläget för att tillåta säkerhetskopiering av en formulärserver. När du aktiverar säkerhetskopieringsläge anger du följande information baserat på din organisations procedurer för säkerhetskopiering:
+Du aktiverar säkerhetskopieringsläge för att tillåta säkerhetskopiering av en formulärserver. När du aktiverar säkerhetskopieringsläge anger du följande information baserat på din organisations procedurer för säkerhetskopiering:
 
 * En unik etikett som identifierar den session i säkerhetskopieringsläget som kan vara användbar för dina säkerhetskopieringsprocesser.
 * Den tid det tar för säkerhetskopieringen att slutföras.
@@ -172,7 +173,7 @@ Ange säkerhetskopieringsläge med webbtjänsten som tillhandahålls av API:t f�
 
 1. Hämta information om sessionen för säkerhetskopieringsläge på servern
 
-   Hämta information om säkerhetskopieringsläget när du har anropat metoden enterBackupMode från BackupModeEntryResult som returneras för att bekräfta att den lyckades. Den information du kan hämta när du har aktiverat säkerhetskopieringsläget kan vara användbar för integrering med dina säkerhetskopieringsprocedurer. Etiketten, säkerhetskopierings-ID:t och starttiden kan till exempel vara användbara som indata för filnamn för säkerhetskopieringsproceduren.
+   Hämta information om sessionen för säkerhetskopieringsläge efter att metoden enterBackupMode har anropats från BackupModeEntryResult som returneras för att bekräfta att den lyckades. Den information du kan hämta när du har aktiverat säkerhetskopieringsläget kan vara användbar för integrering med dina säkerhetskopieringsprocedurer. Etiketten, säkerhetskopierings-ID:t och starttiden kan till exempel vara användbara som indata för filnamn för säkerhetskopieringsproceduren.
 
 1. Säkerhetskopiera GDS och databasen
 
