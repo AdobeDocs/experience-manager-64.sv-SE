@@ -7,10 +7,11 @@ uuid: aa261e65-a1ec-402b-80de-0ba8a294e315
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: fea76f90-22d5-4836-9901-a35229401eb0
+feature: Adaptiv Forms
 translation-type: tm+mt
-source-git-commit: 35532245929f2e404a96425e4710e911e9ce5b40
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1503'
+source-wordcount: '1505'
 ht-degree: 0%
 
 ---
@@ -80,7 +81,7 @@ Ange en URL om du vill skicka data till en extern server. URL-adressen har forma
 
 ![Mappning för fältvärden skickas som Tack-sidan-parametrar](assets/post-enabled-actionconfig.png)
 
-I exemplet ovan hämtas användarinformationen i `textbox` med parametern `param1`. Syntax för att bokföra data som har hämtats med `param1` är:
+I exemplet ovan fångas användarinformationen i `textbox` med parametern `param1`. Syntax för att bokföra data som har hämtats med `param1` är:
 
 `String data=request.getParameter("param1");`
 
