@@ -7,10 +7,11 @@ uuid: cd123d42-f7cf-489d-8182-f3a01a2a4799
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: integration
 discoiquuid: 2ee45ac0-bc15-403a-93fc-c8592afb967d
+feature: Formulärdatamodell
 translation-type: tm+mt
-source-git-commit: 0fe74ef5483cf1f577be51c200ab2820d7ed64e5
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '3051'
+source-wordcount: '3054'
 ht-degree: 0%
 
 ---
@@ -76,7 +77,7 @@ Så här lägger du till datamodellsobjekt och -tjänster:
 
 ### Skapa datamodellsobjekt {#create-data-model-objects}
 
-Du kan lägga till datamodellsobjekt från konfigurerade datakällor, men du kan också skapa datamodellsobjekt eller -enheter utan datakällor. Det är särskilt användbart om du inte har konfigurerat datakällor i formulärdatamodellen.
+Du kan lägga till datamodellsobjekt från konfigurerade datakällor, men du kan även skapa datamodellsobjekt eller -enheter utan datakällor. Det är särskilt användbart om du inte har konfigurerat datakällor i formulärdatamodellen.
 
 Så här skapar du ett datamodellsobjekt utan datakällor:
 
