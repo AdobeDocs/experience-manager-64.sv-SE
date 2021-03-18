@@ -9,10 +9,11 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 65720eed-ab06-463f-9567-2fdc468b6219
+feature: Dokumentsäkerhet
 translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1222'
 ht-degree: 0%
 
 ---
@@ -35,7 +36,7 @@ Du kan även skicka registrerings-e-postmeddelanden manuellt till dina inbjudna 
 
 ## Lägg till en inbjuden användare {#add-an-invited-user}
 
-Du kan lägga till ett eller flera inbjudna användarkonton i dokumentskyddet samtidigt. Om du vill lägga till ett inbjudet användarkonto behöver du användarens e-postadress. När du lägger till en användare skickar dokumentsäkerheten ett registrerings-e-postmeddelande med en inbjudan till användaren att registrera sig.
+Du kan lägga till ett eller flera inbjudna användarkonton i dokumentskyddet samtidigt. Om du vill lägga till ett inbjudet användarkonto behöver du användarens e-postadress. När du lägger till en användare skickas ett registrerings-e-postmeddelande med en inbjudan till användaren att registrera sig.
 
 1. I administrationskonsolen klickar du på Tjänster > Dokumentsäkerhet > Inbjudna och lokala användare och sedan på Bjud in ny användare.
 1. Skriv e-postadresserna till de användare som du vill bjuda in. Ange flera adresser på en rad, avgränsade med kommatecken.
