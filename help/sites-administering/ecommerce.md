@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: e-commerce
 content-type: reference
 discoiquuid: 68799110-8183-40fe-be4f-2a7c7a7b3018
+feature: Commerce Integration Framework
 translation-type: tm+mt
-source-git-commit: eb1ae2b4910e7adef48865996db4837175f588d9
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '779'
 ht-degree: 0%
 
 ---
@@ -88,7 +89,7 @@ AEM eCommerce tillhandahåller:
 
 * **Sök**  med antingen:
 
-   * aem
+   * AEM
    * sökningen i e-handelssystemet
    * en sökning efter tredje part (till exempel Search &amp; Promote)
    * eller en kombination av dessa.
