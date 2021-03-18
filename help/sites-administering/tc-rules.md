@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: eedff940-4a46-4c24-894e-a5aa1080d23d
+feature: Språkkopia
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1163'
 ht-degree: 0%
 
 ---
@@ -77,7 +78,7 @@ Var och en av dessa `node`-element har följande egenskaper:
    * Attributet `resourceType` innehåller sökvägen som matchar komponenten som implementerar resurstypen.
    * Underordnade `property`-element identifierar nodegenskapen som ska översättas. Använd den här noden på samma sätt som de underordnade `property`-elementen för nodregler.
 
-Följande exempelregel gör att innehållet i alla `text`-egenskaper översätts för alla sidor under `/content`-noden. Regeln gäller för alla komponenter som lagrar innehåll i en `text`-egenskap, till exempel textkomponenten Foundation och bildkomponenten.
+Följande exempelregel gör att innehållet i alla `text`-egenskaper översätts för alla sidor under noden `/content`. Regeln gäller för alla komponenter som lagrar innehåll i en `text`-egenskap, till exempel textkomponenten Foundation och bildkomponenten.
 
 ```xml
 <node path="/content">
