@@ -10,10 +10,11 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 1293c01a-7308-494a-ab48-bd9938205b81
 pagetitle: Community Groups Console
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 28948f1f8678512f8fc970a4289cb01cde86c5c2
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1616'
 ht-degree: 0%
 
 ---
@@ -108,7 +109,7 @@ Du kan välja ett tema som skiljer sig från den överordnade webbplatsens tema.
 
 När communitywebbplatsen har publicerats går det att [redigera egenskaperna](#modifying-group-properties) och välja ett annat tema.
 
-#### GEMENSKAPSGRUPPENS VARUMÄRKE {#community-group-branding}
+#### VARUMÄRKE FÖR GEMENSKAPSGRUPP {#community-group-branding}
 
 ![chlimage_1-135](assets/chlimage_1-135.png)
 
@@ -123,7 +124,7 @@ Tänk på följande när du skapar eller markerar en bild:
 * Det finns ingen storleksändring av bilden, så att när bildbredden är...
 
    * Bilden upprepas vågrätt under webbläsarens bredd
-   * Bilden blir större än webbläsarens bredd och ser ut att vara beskuren
+   * Bilden kommer att beskäras mer än webbläsarens bredd
 
 ### Steg 3: Inställningar {#step-settings}
 
