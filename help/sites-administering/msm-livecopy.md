@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 161b591b-5871-4b5f-9c63-823b6e67b1fd
+feature: Multi Site Manager
 translation-type: tm+mt
-source-git-commit: ebb750f00fb1d4d6f2b19e300e5a68b6b43650d7
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '4019'
+source-wordcount: '4022'
 ht-degree: 1%
 
 ---
@@ -189,7 +190,7 @@ Egenskaperna för en live-kopia visar följande information om live-kopian:
 
    * Anger om sidan fortfarande omfattas av live-kopiarv.
    * Anger om konfigurationen ärvs från den överordnade sidan.
-   * Alla utrullningskonfigurationer som används för live-kopian.
+   * Alla utrullningskonfigurationer som används av live-kopian.
 
 Så här visar du egenskaperna:
 
