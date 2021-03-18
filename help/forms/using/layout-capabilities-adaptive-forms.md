@@ -7,10 +7,11 @@ uuid: 7df2d234-e2e3-432a-9720-e73296424302
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 10bf1d44-9660-44d9-b2c3-dd9a252efc3a
+feature: Adaptiv Forms
 translation-type: tm+mt
-source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1171'
 ht-degree: 0%
 
 ---
@@ -141,7 +142,7 @@ I den här layouten, som namnet föreslår, visas panelrubriker tillsammans med 
 
 Den här layouten, som namnet föreslår, visar bara navigeringsmenyn och navigeringsfältet utan panelrubriker. Den här layouten innehåller även ikoner för Nästa och Föregående för navigering.
 
-![Mobila layouter utan panelrubriker i formulärrubriker](assets/mobile_layout_without.png)
+![Mobila layouter utan panelrubriker i formulärrubrikerna](assets/mobile_layout_without.png)
 
 **Bild:** *Mobillayouter utan panelrubriker i formulärrubrikerna*
 
