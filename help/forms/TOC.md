@@ -7,13 +7,16 @@ audience: end-user
 user-guide-title: Adobe Experience Manager 6.4 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
+feature-set: Experience Manager Forms
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: e7603d481720b368c6976674205bb523ac0df3d0
+source-git-commit: 5944eab0bf38551970685eaa98d90c4459720245
 workflow-type: tm+mt
-source-wordcount: '3730'
+source-wordcount: '3732'
 ht-degree: 0%
 
 ---
+
 
 # Adobe Experience Manager 6.4 Forms Guide {#forms}
 
