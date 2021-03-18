@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: d701e4ba-417f-4b57-b103-27fd25290736
+feature: Konfigurerar
 translation-type: tm+mt
-source-git-commit: d97828afee7a65e7a4036912c1cc8726404088c9
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2014'
 ht-degree: 0%
 
 ---
@@ -297,7 +298,7 @@ Om en instans till exempel startades med körningslägena `author,dev,emea` komm
 
 Om flera konfigurationer för samma PID kan användas, används konfigurationen med det högsta antalet matchande körningslägen.
 
-Om en instans till exempel startades med körningslägena `author,dev,emea`, definierar både `/apps/*/config.author/` och `/apps/*/config.emea.author/` en konfiguration för\
+Om en instans till exempel startades med körningslägena `author,dev,emea`, och både `/apps/*/config.author/` och `/apps/*/config.emea.author/` definierar du en konfiguration för\
 `com.day.cq.wcm.core.impl.VersionManagerImpl`används konfigurationen i  `/apps/*/config.emea.author/` .
 
 Regelns granularitet är på PID-nivå.\
