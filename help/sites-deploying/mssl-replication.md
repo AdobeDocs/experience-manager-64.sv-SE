@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: configuring
 discoiquuid: 8bc307d9-fa5c-44c0-bff9-2d68d32a253b
+feature: Konfigurerar
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1457'
 ht-degree: 2%
 
 ---
@@ -42,7 +43,7 @@ Du måste avgöra vilket användarkonto som utför replikeringen. När du instal
 Du behöver en privat nyckel och ett offentligt certifikat för författaren och publiceringsinstanserna:
 
 * Privata nycklar måste finnas i pkcs#12- eller JKS-format.
-* Certifikat måste finnas i pkcs#12- eller JKS-format. Certifikatet i CER-format kan också läggas till i Granite Truststore.
+* Certifikat måste finnas i pkcs#12- eller JKS-format. Dessutom kan certifikat i CER-format läggas till i Granite Truststore.
 * Certifikat kan vara självsignerade eller signerade av en erkänd certifikatutfärdare.
 
 ### JKS-format {#jks-format}
