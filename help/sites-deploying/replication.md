@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: configuring
 discoiquuid: 6fe1c5c5-deb7-4405-82e4-23e0f90e2bd8
+feature: Konfigurerar
 translation-type: tm+mt
-source-git-commit: 19f6ea07e192294124d5251e31ead93deae57349
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '3579'
+source-wordcount: '3580'
 ht-degree: 0%
 
 ---
@@ -506,7 +507,7 @@ Replikeringsagenten **Dispatcher Flush** är inte aktiv för författaren. Du ka
 >
 >Om du anger sådana behörigheter påverkas inte användare som replikerar innehåll (t.ex. från webbplatskonsolen eller sidosparsalternativet). Replikeringsramverket använder inte den aktuella användarens användarsession för att komma åt replikeringsagenter när sidor replikeras.
 
-### Konfigurera replikeringsagenter från CRXDE Lite {#configuring-your-replication-agents-from-crxde-lite}
+### Konfigurera dina replikeringsagenter från CRXDE Lite {#configuring-your-replication-agents-from-crxde-lite}
 
 >[OBS!]
 >
