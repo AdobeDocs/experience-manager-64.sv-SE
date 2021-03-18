@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 1bbd917ef20c4a618e93af66ffe8a6cfc8448e78
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
@@ -45,7 +46,7 @@ FFmpeg ska vara installerat på de servrar som är värd för AEM *författare* 
 
 ## Konfigurera MPEG-omkodningstjänsten {#configure-ffmpeg-transcoding-service}
 
-När FFmpeg är installerat konfigureras som standard flera återgivningar (transkoding) enligt arbetsflödesdefinitionen för DAM-uppdatering.
+När FFmpeg är installerat konfigureras som standard flera renderingar (transkoding) enligt arbetsflödesdefinitionen för DAM-uppdatering.
 
 Eftersom omkodningarna är processorintensiva bör du ändra listan över målåtergivningar. I de flesta fall behövs inte omkodning.
 
