@@ -1,6 +1,6 @@
 ---
-title: Konfigurera AEM Forms för att skicka formulärdata till en JEE-process i AEM Forms
-seo-title: Konfigurera AEM Forms för att skicka formulärdata till en JEE-process i AEM Forms
+title: Konfigurera AEM Forms för att skicka formulärdata till en JEE-process från AEM Forms
+seo-title: Konfigurera AEM Forms för att skicka formulärdata till en JEE-process från AEM Forms
 description: Med AEM Forms kan ni integrera adaptiva formulär med AEM Forms i JEE-processer för bearbetning av formulärdata.
 seo-description: Med AEM Forms kan ni integrera adaptiva formulär med AEM Forms i JEE-processer för bearbetning av formulärdata.
 uuid: ee7ea442-d604-4520-9af5-ad40ec4927a1
@@ -8,10 +8,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: Configuration
 discoiquuid: 03619a67-d1ea-4b80-b1a6-0c65a9e9212f
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
