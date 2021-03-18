@@ -7,10 +7,11 @@ uuid: 91702f41-5c19-4840-a3b5-59d69003fd67
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 39262cb1-1447-469a-9c01-886f66eeec74
+feature: Interaktiv kommunikation
 translation-type: tm+mt
-source-git-commit: 7c65752a969d9089ad61c29b0581327d32e022d1
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2013'
 ht-degree: 0%
 
 ---
@@ -211,7 +212,7 @@ Utför följande steg för att härleda webbkanalsinnehållet med hjälp av Prin
 
    Utskriftskanalinnehållet infogas under webbkanalens mallinnehåll. Om du vill ändra webbkanalsinnehållet som har genererats automatiskt från utskriftskanalen kan du avbryta arvet för alla målområden.
 
-   Håll pekaren över det relevanta målområdet i webbkanalen och välj ![avbryt arv](assets/cancelinheritance.png) (avbryt arv) och tryck sedan på **Yes** i dialogrutan **Cancel Inheritance**.
+   Hovra över det relevanta målområdet i webbkanalen och välj ![cancelarance](assets/cancelinheritance.png) (Cancel Inheritance) och tryck sedan på **Yes** i dialogrutan **Cancel Inheritance**.
 
    ![cancel_arv_web_channel](assets/cancel_inheritance_web_channel.png)
 
