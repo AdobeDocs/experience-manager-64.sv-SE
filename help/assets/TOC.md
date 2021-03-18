@@ -6,8 +6,9 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, leverera och optimera digitala resurser.
+feature-set: Experience Manager Assets
 translation-type: tm+mt
-source-git-commit: c3eeb3d4fc4b6ce7548c6385c21c6e4ed7b2f0e6
+source-git-commit: 5944eab0bf38551970685eaa98d90c4459720245
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 30%
