@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop, interactive-communications
 content-strategy: max-2018
 discoiquuid: c5933e2a-fb8d-4d1b-a301-c8a2bc7ee226
+feature: Adaptiv Forms
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '5897'
+source-wordcount: '5899'
 ht-degree: 0%
 
 ---
@@ -569,7 +570,7 @@ Så här använder du ett tema i ett anpassat formulär:
 
    Du kan redigera egenskaperna för formuläret i sidlisten.
 
-1. Klicka på **[!UICONTROL Styling]** i sidofältet.
+1. Klicka på **[!UICONTROL Styling]** i sidlisten.
 1. Välj ditt tema i listrutan **[!UICONTROL Adaptive Form Theme]** och klicka på **[!UICONTROL Done]** ![bockknapp](assets/check-button.png).
 
 Så här använder du ett tema i en interaktiv kommunikation:
