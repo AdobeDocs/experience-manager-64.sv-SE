@@ -8,10 +8,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: introduction, author
 discoiquuid: c7a1d13e-cb61-4082-8ae7-7f5eee9e0a51
+feature: Adaptiv Forms
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '3008'
+source-wordcount: '3010'
 ht-degree: 0%
 
 ---
@@ -275,7 +276,7 @@ Sidlisten innehåller följande webbläsare:
 
 #### Bästa tillvägagångssätt för att arbeta med komponenter {#best-practices}
 
-Här följer några tips och viktiga saker att komma ihåg när du arbetar med adaptiva formulärkomponenter:
+Här följer några tips och viktiga saker du bör komma ihåg när du arbetar med adaptiva formulärkomponenter:
 
 * Varje komponent har tillhörande egenskaper som styr dess utseende och funktion. Om du vill konfigurera egenskaperna för en komponent trycker du på komponenten och trycker på ![cmpr](assets/cmppr.png) för att öppna komponentegenskaperna i egenskapsläsaren.
 * En komponent identifieras med sitt elementnamn. När du trycker på ![cmpr](assets/cmppr.png) kan du ändra komponentens namn genom att ändra fältvärdet **[!UICONTROL Element Name]** i egenskapsläsaren. Endast bokstäver, siffror, bindestreck (-) och understreck (_) godkänns i fältet Elementnamn. Andra specialtecken tillåts inte och elementnamnet måste börja med en bokstav.
