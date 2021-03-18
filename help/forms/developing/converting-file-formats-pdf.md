@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
+role: Developer
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '7932'
+source-wordcount: '7933'
 ht-degree: 0%
 
 ---
@@ -142,7 +143,7 @@ När filen har konverterats till ett PDF-dokument kan du hämta resultatet. När
 
 ### Konvertera Word-dokument till PDF-dokument med Java API {#convert-word-documents-to-pdf-documents-using-the-java-api}
 
-Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Generate PDF API (Java):
+Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Generera PDF API (Java):
 
 1. Inkludera projektfiler.
 
