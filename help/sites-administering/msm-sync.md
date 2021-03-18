@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: c491f0f3-375d-4203-bdf3-234987bbf685
+feature: Multi Site Manager
 translation-type: tm+mt
-source-git-commit: 38c713b2c5aa93805b10bbb60c0dbdfa24872eb1
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2705'
+source-wordcount: '2708'
 ht-degree: 0%
 
 ---
@@ -356,7 +357,7 @@ I följande tabell visas de synkroniseringsåtgärder som du kan ange referensup
 
 ## Ange vilka utrullningskonfigurationer som ska användas {#specifying-the-rollout-configurations-to-use}
 
-Med MSM kan du ange uppsättningar av utrullningskonfigurationer som används generellt, och när det behövs kan du åsidosätta dem för specifika live-kopior. MSM erbjuder flera platser för att ange vilka rollout-konfigurationer som ska användas. Platsen avgör om konfigurationen gäller för en specifik live-kopia.
+Med MSM kan du ange uppsättningar av utrullningskonfigurationer som används generellt, och när det behövs kan du åsidosätta dem för specifika live-kopior. MSM erbjuder flera platser för att ange vilka utrullningskonfigurationer som ska användas. Platsen avgör om konfigurationen gäller för en specifik live-kopia.
 
 I följande lista över platser där du kan ange vilka rollout-konfigurationer som ska användas beskrivs hur MSM avgör vilka rollout-konfigurationer som ska användas för en live-kopia:
 
