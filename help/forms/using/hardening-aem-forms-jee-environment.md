@@ -8,10 +8,11 @@ content-type: reference
 topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
+role: Administratör
 translation-type: tm+mt
-source-git-commit: a3e7cd30ba6933e6f36734d3b431db41365b6e20
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '7349'
+source-wordcount: '7350'
 ht-degree: 0%
 
 ---
@@ -383,7 +384,7 @@ På WebSphere kan du bara konfigurera integrerad säkerhet när du använder en 
 
 AEM Forms databasschema innehåller känslig information om systemkonfiguration och affärsprocesser och bör döljas bakom brandväggen. Databasen bör beaktas inom samma förtroendegräns som formulärservern. För att skydda mot informationsexponering och stöld av affärsdata måste databasen konfigureras av databasadministratören så att endast behöriga administratörer får åtkomst till databasen.
 
-Som en extra försiktighetsåtgärd bör du överväga att använda databasleverantörsspecifika verktyg för att kryptera kolumner i tabeller som innehåller följande data:
+Som en extra försiktighetsåtgärd bör du överväga att använda leverantörsspecifika verktyg för att kryptera kolumner i tabeller som innehåller följande data:
 
 * Rights Management-dokumentnycklar
 * HSM-PIN-krypteringsnyckel för Trust Store
@@ -690,7 +691,7 @@ AEM Forms på JEE innehåller API:er för att hantera listan över tillåtna ref
 * getAllowedURIsList
 * updateAllowedURIsList
 * deleteAllowedURIsList
-* addAllowedReferenceExceptions
+* addAllowedRefererExceptions
 * getAllowedRefererExceptions
 * updateAllowedReferenceExceptions
 * deleteAllowedRefererExceptions
