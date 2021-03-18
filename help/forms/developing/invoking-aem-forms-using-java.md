@@ -1,18 +1,19 @@
 ---
 title: Anropa AEM Forms med JavaAPI
 seo-title: Anropa AEM Forms med JavaAPI
-description: Använd AEM Forms Java API för RMI-transportprotokoll för fjärranrop, VM-transport för lokala anrop, SOAP för fjärranrop, annan autentisering, till exempel användarnamn och lösenord, samt synkrona och asynkrona anropsbegäranden.
-seo-description: Använd AEM Forms Java API för RMI-transportprotokoll för fjärranrop, VM-transport för lokala anrop, SOAP för fjärranrop, annan autentisering, till exempel användarnamn och lösenord, samt synkrona och asynkrona anropsbegäranden.
+description: Använd AEM Forms Java API för RMI-transportprotokoll för fjärranrop, VM-transport för lokalt anrop, SOAP för fjärranrop, annan autentisering, till exempel användarnamn och lösenord, samt synkrona och asynkrona anropsbegäranden.
+seo-description: Använd AEM Forms Java API för RMI-transportprotokoll för fjärranrop, VM-transport för lokalt anrop, SOAP för fjärranrop, annan autentisering, till exempel användarnamn och lösenord, samt synkrona och asynkrona anropsbegäranden.
 uuid: 5e2fef2a-05f3-4283-8fd3-2d7dca411000
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
+role: Developer
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '5479'
+source-wordcount: '5480'
 ht-degree: 0%
 
 ---
