@@ -8,10 +8,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: interactive-communications
 discoiquuid: 16c7e698-258d-4e63-9828-f538dc7d3294
+feature: Interaktiv kommunikation
 translation-type: tm+mt
-source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2391'
+source-wordcount: '2393'
 ht-degree: 0%
 
 ---
@@ -116,7 +117,7 @@ Genom att använda funktioner i ett diagram kan du rita data som inte tillhandah
 
 ### Summeringsfunktion {#sum-function}
 
-Du kan använda summafunktionen för att lägga till värden för flera instanser av samma dataegenskap och bara visa den en gång. I följande diagram används funktionen Sum på Y-axeln för att lägga till beloppet för de tre Bed- och Frukost-transaktionerna ($99,45, $78 och $12) och bara visa en transaktion ($189.45).
+Du kan använda summafunktionen för att lägga till värden för flera instanser av samma dataegenskap och bara visa den en gång. I följande diagram används funktionen Summa på Y-axeln för att lägga till beloppet för de tre Bed- och Frukost-transaktionerna ($99,45, $78 och $12) och bara visa en transaktion ($189.45).
 
 Summeringsfunktionen kan göra diagrammet mer användbart när du vill sortera och visa summan för många förekomster av samma dataegenskap.
 
@@ -154,7 +155,7 @@ På fliken Grundläggande kan du konfigurera följande egenskaper:
 
 **Visa** förklaringVisar en förklaring för cirkeldiagrammet eller mundiagrammet när det är aktiverat.
 
-**Förklaringens** positionAnger förklaringens position i förhållande till diagrammet. De tillgängliga alternativen är Höger, Vänster, Upptill och Nedtill.
+**Förklaringens** position Anger förklaringens position i förhållande till diagrammet. De tillgängliga alternativen är Höger, Vänster, Upptill och Nedtill.
 
 **Höjd (endast utskriftskanalen)** Diagrammets höjd i pixlar.
 
