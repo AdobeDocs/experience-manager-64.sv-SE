@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+source-git-commit: ce24fdb79fe7636951490ea01967787fa28d712e
 workflow-type: tm+mt
-source-wordcount: '3589'
+source-wordcount: '3586'
 ht-degree: 1%
 
 ---
@@ -858,7 +858,7 @@ Ett enkelt sätt att börja skapa ett eget anpassat steg är att kopiera ett bef
 
 1. Nu kan du öppna en arbetsflödesmodell för redigering. I stegwebbläsaren kan du filtrera så att du ser **Mina anpassade steg**:
 
-   ![wf-36](assets/wf-36.png)
+   ![wf-34](assets/wf-36.png)
 
    Om du drar **Mitt anpassade steg** till modellen visas kortet:
 
@@ -1039,7 +1039,7 @@ Markering för ett anpassat steg representeras i `.content.xml` för komponenten
 >
 >Klassiska dialogrutor för modellredigering i användargränssnittet fungerar fortfarande med den pekaktiverade standardredigeraren.
 >
->AEM har dock ett [dialogkonverteringsverktyg](/help/sites-developing/dialog-conversion.md) om du vill uppgradera dina klassiska dialogrutor för gränssnittssteg till standarddialogrutor. Efter konverteringen finns det fortfarande några manuella förbättringar som kan göras i dialogrutan för vissa fall.
+>AEM har [moderniseringsverktyg](/help/sites-developing/modernization-tools.md) om du vill uppgradera dina klassiska dialogrutor för gränssnittssteg till standarddialogrutor för användargränssnitt. Efter konverteringen finns det fortfarande några manuella förbättringar som kan göras i dialogrutan för vissa fall.
 >
 >* Om en uppgraderad dialogruta är tom kan du titta på dialogrutor i `/libs` som har liknande funktionalitet som exempel på hur du tillhandahåller en lösning. Till exempel:
    >
