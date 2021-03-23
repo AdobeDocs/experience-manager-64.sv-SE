@@ -10,7 +10,7 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: 76c570e5-46ed-46be-9864-4fe4a83f0caf
 translation-type: tm+mt
-source-git-commit: e9c5fcd8f939d88317c5184b6352b227918088e5
+source-git-commit: 5b00783e4471a6b142ab17a7bc4a647ab04aec5f
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -50,7 +50,7 @@ AEM levereras med andra verktyg som underlättar utvecklingen:
 * [Utveckla AEM projekt med IntelliJ IDEA](/help/sites-developing/ht-intellij.md)
 * [Så här använder du VLT-verktyget](/help/sites-developing/ht-vlttool.md)
 * [Så här använder du proxyserververktyget](/help/sites-developing/ht-proxy-server.md)
-* [Verktyget Dialogkonvertering](/help/sites-developing/dialog-conversion.md)
+* [AEM Modernization Tools](/help/sites-developing/modernization-tools.md)
 * [AEM](/help/sites-developing/aem-repo-tool.md)
 
 Verktyg som underlättar skapandet av nya projekt:
@@ -62,4 +62,3 @@ Verktyg som underlättar skapandet av nya projekt:
 >
 >Följande självstudiekurser kan vara intressanta när du startar ett nytt AEM:\
 >[Komma igång med AEM Sites del 1 - Projektinställningar](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part1.html)
-
