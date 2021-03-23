@@ -2,7 +2,7 @@
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation om borttagna funktioner i Adobe Experience Manager 6.4.
 translation-type: tm+mt
-source-git-commit: 8e82c691affe3b2c4108beec394cc0ba2d607b61
+source-git-commit: 5b00783e4471a6b142ab17a7bc4a647ab04aec5f
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 3%
@@ -179,4 +179,4 @@ Tabellen nedan innehåller en lista över ändringar för framtida releaser som 
 | Yta | Funktion | Meddelande |
 |---|---|---|
 | Webbläsarstöd | Microsoft Internet Explorer | AEM 6.4 är den senaste versionen som har stöd för Microsoft Internet Explorer 11. |
-| Foundation | UI Framework | Adobe tar bort Coral UI 2-komponenterna under 2019. AEM 6.4 baseras helt på Coral UI 3 (introducerades med AEM 6.2). Adobe rekommenderar sina kunder och partners som har byggt anpassade gränssnitt med Coral 2 att ändra dessa till Coral 3. Adobe har ett verktyg för att konvertera dialogrutor från Coral 2 till Coral 3 - [Läs mer](/help/sites-developing/dialog-conversion.md). |
+| Foundation | UI Framework | Adobe tar bort Coral UI 2-komponenterna under 2019. AEM 6.4 baseras helt på Coral UI 3 (introducerades med AEM 6.2). Adobe rekommenderar sina kunder och partners som har byggt anpassade gränssnitt med Coral 2 att ändra dessa till Coral 3. Adobe har ett verktyg för att konvertera dialogrutor från Coral 2 till Coral 3 - [Läs mer.](/help/sites-developing/modernization-tools.md) |
