@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 42bf42cb-0c6c-4390-8170-2c540c4d3ed3
 translation-type: tm+mt
-source-git-commit: b01e95110bffc1ee96e0814e782d716ed949c1b4
+source-git-commit: 5b00783e4471a6b142ab17a7bc4a647ab04aec5f
 workflow-type: tm+mt
 source-wordcount: '808'
 ht-degree: 0%
@@ -77,7 +77,7 @@ Nedan följer en lista med rekommendationer från Product Management för Adobe 
      <li>Konfigurera åtgärden Redigera sida för att öppna den klassiska sidredigeraren i användargränssnittet. Se <a href="#selecting-your-ui">Välja användargränssnitt</a>.</li> 
     </ol> <p>I en andra fas:</p> 
     <ol> 
-     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du använder <a href="/help/sites-developing/dialog-conversion.md">Dialog Conversion Tool</a> för att uppdatera komponenterna.</li> 
+     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du använder <a href="/help/sites-developing/modernization-tools.md">AEM Moderniseringsverktyg</a> för att uppdatera komponenterna.</li> 
     </ol> </td> 
   </tr> 
   <tr> 
@@ -89,7 +89,7 @@ Nedan följer en lista med rekommendationer från Product Management för Adobe 
      <li>Konfigurera åtgärden Redigera sida för att öppna den klassiska sidredigeraren i användargränssnittet. Se <a href="#selecting-your-ui">Välja användargränssnitt</a>.</li> 
     </ol> <p>I en andra fas:</p> 
     <ol> 
-     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du använder <a href="/help/sites-developing/dialog-conversion.md">Dialog Conversion Tool</a> för att uppdatera komponenterna.</li> 
+     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du använder <a href="/help/sites-developing/modernization-tools.md">AEM Moderniseringsverktyg</a> för att uppdatera komponenterna.</li> 
      <li>Konfigurera ContextHub (ersättning för ClientContext) och uppdatera sidmallarna så att ContextHub används. Observera att ContextHub har ett kompatibilitetsläge som tillåter inläsning av anpassade ClientContext-arkiv.</li> 
     </ol> </td> 
   </tr> 
@@ -124,7 +124,7 @@ För bakgrundsinformation om grundläggande hantering:
 Detaljerad utvecklingsinformation:
 
 * [Touchoptimerad gränssnittsarkitektur](/help/sites-developing/touch-ui-concepts.md).
-* Använd verktyget [Dialogkonvertering](/help/sites-developing/dialog-conversion.md) för att konvertera komponentredigeringsdialogrutor från det klassiska användargränssnittet till det pekoptimerade användargränssnittet.
+* Använd [AEM Moderniseringsverktyg](/help/sites-developing/modernization-tools.md) för att konvertera komponentredigeringsdialogrutor från det klassiska användargränssnittet till det pekoptimerade användargränssnittet.
 
 * [Struktur för det pekoptimerade användargränssnittet](/help/sites-developing/touch-ui-structure.md).
 
