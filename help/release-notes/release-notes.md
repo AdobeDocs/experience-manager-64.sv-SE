@@ -10,7 +10,7 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 2be468e7-2b4e-4e04-881b-b9bdd1f55e57
 translation-type: tm+mt
-source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
+source-git-commit: 5b00783e4471a6b142ab17a7bc4a647ab04aec5f
 workflow-type: tm+mt
 source-wordcount: '2844'
 ht-degree: 1%
@@ -307,7 +307,7 @@ Denna prioriteringsprocess har resulterat i över 500 kundfokuserade förändrin
    * [Italienska](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
    * [Franska](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
 
-* [Dialogrutekonverteringsverktyg ](/help/sites-developing/dialog-conversion.md) för att migrera klassiska användargränssnittskomponenter till Coral 3
+* [AEM Moderniseringsverktyg ](/help/sites-developing/modernization-tools.md) för att migrera klassiska användargränssnittskomponenter till Coral 3
 
 **Assets**
 
@@ -356,7 +356,7 @@ Den fullständiga matrisen med plattformar som stöds finns här. Supportnivå p
 
 >[!NOTE]
 >
->Oracle har flyttat till en&quot;LTS-modell&quot; (Long Term Support) för Oracle Java SE-produkter. Java 9 och 10 är icke-LTS-versioner från Oracle (se [Oracle Java SE support roadmap](https://www.oracle.com/technetwork/java/eol-135779.html)). Adobe tillhandahåller endast stöd för LTS-versioner av Java för AEM i produktionen. Därför är Java 8 den rekommenderade versionen som ska användas med AEM 6.4.
+>Oraclet har flyttat till en LTS-modell (Long Term Support) för Oracle Java SE-produkter. Java 9 och 10 är icke-LTS-versioner som Oracle (se [Oracle Java SE support roadmap](https://www.oracle.com/technetwork/java/eol-135779.html)). Adobe tillhandahåller endast stöd för LTS-versioner av Java för AEM i produktionen. Därför är Java 8 den rekommenderade versionen som ska användas med AEM 6.4.
 
 ## Föråldrade och borttagna funktioner {#deprecated-and-removed-features}
 
