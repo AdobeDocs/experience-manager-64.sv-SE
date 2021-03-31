@@ -2,10 +2,12 @@
 title: Söka efter fasetter
 description: I den här artikeln beskrivs hur du skapar, ändrar och använder sökfaktorer i AEM.
 contentOwner: AG
+feature: Sökning
+role: Administratör,Utvecklare
 translation-type: tm+mt
-source-git-commit: adf44677a0ac833a131aad8187529b094aaca9ef
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '2398'
+source-wordcount: '2401'
 ht-degree: 18%
 
 ---
