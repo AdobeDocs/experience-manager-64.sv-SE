@@ -2,10 +2,12 @@
 title: Lägg till vattenstämpel i dina digitala resurser
 description: Lär dig hur du använder funktionen Vattenstämpel för att lägga till en digital vattenstämpel till resurser.
 contentOwner: AG
+feature: Resurshantering
+role: Affärsledare,Administratör
 translation-type: tm+mt
-source-git-commit: dfd6d022ef7d21ab6fc4ed17483890eb5766af18
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
