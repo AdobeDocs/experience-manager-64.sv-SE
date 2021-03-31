@@ -2,10 +2,12 @@
 title: Resurser för HTTP API i [!DNL Adobe Experience Manager].
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
+feature: API:er,Resurser HTTP API,Utvecklarverktyg
+role: Developer
 translation-type: tm+mt
-source-git-commit: e9f50a1ddb6a162737e6e83b976f96911b3246d6
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1540'
+source-wordcount: '1547'
 ht-degree: 0%
 
 ---
