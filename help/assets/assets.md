@@ -2,10 +2,12 @@
 title: Introduktion till [!DNL Adobe Experience Manager Assets]
 description: Lär dig vad som är digital resurshantering, användningsexempel och [!DNL Adobe Experience Manager Asset] erbjudande.
 contentOwner: AG
+feature: Resurshantering
+role: Ledare,Arkitekt,Affärsledare
 translation-type: tm+mt
-source-git-commit: 91fbe9d3368feb7ecae73c56b2484c305cfb94b8
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '856'
 ht-degree: 0%
 
 ---
