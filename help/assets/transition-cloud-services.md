@@ -2,10 +2,12 @@
 title: Tillämpar översättningsmolntjänster på mappar
 description: Tillämpar översättningsmolntjänster på mappar
 contentOwner: AG
+feature: Översättning
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '367'
 ht-degree: 55%
 
 ---
