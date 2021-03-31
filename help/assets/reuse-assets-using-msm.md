@@ -3,10 +3,12 @@ title: Återanvända resurser med MSM
 description: Använd resurser på flera sidor/mappar som är härledda från och länkade till överordnade resurser. Resurserna är synkroniserade med en primär kopia och med några klick får du uppdateringar från överordnade resurser.
 contentOwner: AG
 mini-toc-levels: 1
+feature: Resurshantering,Multi Site Manager
+role: Affärsman, administratör, arkitekt
 translation-type: tm+mt
-source-git-commit: d2372ebabf92fd83cff31d4f0b37c020756f03c1
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '3069'
+source-wordcount: '3078'
 ht-degree: 9%
 
 ---
