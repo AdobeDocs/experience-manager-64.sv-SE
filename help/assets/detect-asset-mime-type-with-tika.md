@@ -2,10 +2,12 @@
 title: Använd Apache Tika för att identifiera MIME-typ av digitalt material
 description: Aktivera Apache Tika för att hjälpa AEM Assets att identifiera MIME-typen för resurser från innehållsströmmen under överföringen i stället för filtillägget.
 contentOwner: AG
+feature: Metadata,Utvecklarverktyg,Resurshantering
+role: Administratör,Arkitekt
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '192'
 ht-degree: 3%
 
 ---
