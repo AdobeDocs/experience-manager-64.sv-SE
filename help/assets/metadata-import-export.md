@@ -2,10 +2,12 @@
 title: Importera och exportera massmetadata
 description: I den här artikeln beskrivs hur du importerar och exporterar flera metadata samtidigt.
 contentOwner: AG
+feature: Metadata
+role: Affärsledare,Administratör
 translation-type: tm+mt
-source-git-commit: 254a9dec248255f8f76db3531c65b54fb4ebff0c
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '607'
 ht-degree: 8%
 
 ---
