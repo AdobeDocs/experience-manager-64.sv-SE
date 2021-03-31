@@ -2,11 +2,13 @@
 title: Aktivitetsström på tidslinjen
 description: 'I den här artikeln beskrivs hur du visar aktivitetsloggar för resurser på tidslinjen. '
 contentOwner: AG
+feature: Resurshantering
+role: Affärsledare,Administratör
 translation-type: tm+mt
-source-git-commit: e64f5b0e1333d511eaf450072756a95399e838d0
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 24%
+source-wordcount: '220'
+ht-degree: 23%
 
 ---
 
