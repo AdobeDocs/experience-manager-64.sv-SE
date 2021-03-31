@@ -2,10 +2,12 @@
 title: Prestandajusteringsguide för resurser
 description: Viktiga fokusområden kring AEM, ändringar av maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar och optimera AEM Assets prestanda.
 contentOwner: AG
+feature: Resurshantering
+role: Arkitekt,administratör
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '3166'
+source-wordcount: '3170'
 ht-degree: 0%
 
 ---
@@ -50,7 +52,7 @@ När den tillfälliga volymen med höga prestanda är klar anger du JVM-paramete
 
 ### Java-version {#java-version}
 
-Eftersom Oracle har slutat släppa uppdateringar för Java 7 från och med april 2015 rekommenderar Adobe att du distribuerar AEM Assets på Java 8. I vissa fall har den visat bättre prestanda.
+Eftersom Oraclet har slutat släppa uppdateringar för Java 7 från och med april 2015 rekommenderar Adobe att du distribuerar AEM Assets på Java 8. I vissa fall har den visat bättre prestanda.
 
 ### JVM-parametrar {#jvm-parameters}
 
@@ -109,7 +111,7 @@ accessKey=<snip>
 
 Adobe rekommenderar att du aktiverar HTTPS eftersom många företag har brandväggar som fångar upp HTTP-trafik, vilket påverkar överföringar negativt och skadar filer. För stora filöverföringar måste användarna ha kabelanslutna anslutningar till nätverket eftersom ett WiFi-nätverk snabbt blir mättat. Riktlinjer för identifiering av nätverksflaskhalsar finns i [Handbok för resursstorlek](assets-sizing-guide.md). Information om hur du utvärderar nätverksprestanda genom att analysera nätverkstopologi finns i [Resurser, nätverksöverväganden](assets-network-considerations.md).
 
-Din nätverksoptimeringsstrategi är i första hand beroende av hur mycket bandbredd som är tillgänglig och hur stor belastning din AEM har. Gemensamma konfigurationsalternativ, inklusive brandväggar och proxies, kan förbättra nätverkets prestanda. Här följer några viktiga saker att tänka på:
+Din nätverksoptimeringsstrategi är i första hand beroende av hur mycket bandbredd som är tillgänglig och hur stor belastning din AEM har. Gemensamma konfigurationsalternativ, inklusive brandväggar och proxies, kan förbättra nätverkets prestanda. Här följer några viktiga punkter att tänka på:
 
 * Beroende på vilken instanstyp du har (liten, måttlig, stor) kontrollerar du att du har tillräcklig nätverksbandbredd för AEM. Lämplig bandbreddsallokering är särskilt viktig om AEM ligger på AWS.
 * Om din AEM ligger på AWS kan du dra nytta av en mångsidig skalningspolicy. Överför instansen om användarna förväntar sig hög belastning. Minska storleken för måttlig/låg belastning.
@@ -311,7 +313,7 @@ Vissa optimeringar kan göras för Oak-indexkonfigurationer som kan förbättra 
 Uppdatera LuceneIndexProvider-konfigurationen:
 
 1. Gå till /system/console/configMgrorg.apache.jackrabbit.oak.plugins.index.lucene.LuceneIndexProviderService
-1. Aktivera **[!UICONTROL CopyOnRead , CopyOnWrite , and Prefetch Index Files]** i versioner före AEM 6.2. Dessa värden är aktiverade som standard i AEM 6.2 och senare.
+1. Aktivera **[!UICONTROL CopyOnRead , CopyOnWrite , and Prefetch Index Files]** i versioner före AEM 6.2. Dessa värden är aktiverade som standard i AEM 6.2 och senare versioner.
 
 Uppdatera indexkonfigurationer för att förbättra omindexeringstiden:
 
@@ -379,7 +381,7 @@ När du skapar frågor som genererar stora resultatuppsättningar ska du använd
 
 ### Stora filer {#large-files}
 
-Det finns två stora kända fel som rör stora filer i AEM. När filer når större storlekar än 2 GB kan synkronisering med kalla väntelägen hamna i en situation där minnet är slut. I vissa fall förhindras att standby-synkronisering körs. I andra fall kraschar den primära instansen. Detta scenario gäller för alla filer i AEM som är större än 2 GB, inklusive innehållspaket.
+Det finns två stora kända fel som rör stora filer i AEM. När filer når större storlekar än 2 GB kan synkronisering med vänteläge i kallt läge hamna i en situation där minnet är slut. I vissa fall förhindras att standby-synkronisering körs. I andra fall kraschar den primära instansen. Detta scenario gäller för alla filer i AEM som är större än 2 GB, inklusive innehållspaket.
 
 På samma sätt kan det ta lite tid innan filen är helt beständig från cachen till filsystemet om filstorleken når 2 GB när ett delat S3-datalager används. Detta innebär att om du använder en binär replikering utan binärfiler kan det hända att binära data inte har befunnits beständiga innan replikeringen slutförs. Denna situation kan leda till problem, särskilt om det är viktigt att data är tillgängliga, till exempel i avlastningsscenarier.
 
@@ -417,6 +419,6 @@ För att minimera latens och uppnå hög genomströmning genom effektiv CPU-anv�
 * Ta bort onödiga steg från DAM Update Asset-arbetsflödet.
 * Konfigurera arbetsflöde och versionsrensning.
 * Optimera Lucene-indexkonfigurationen.
-* Optimera index med de senaste servicepaketen och snabbkorrigeringarna. Kontakta Adobe kundtjänst om du har ytterligare indexoptimeringar som kan vara tillgängliga.
+* Optimera index med de senaste servicepaketen och snabbkorrigeringarna. Kontakta Adobe kundtjänst för eventuella ytterligare indexoptimeringar.
 * Använd `guessTotal` för att optimera frågeprestanda.
 * Om du konfigurerar AEM att identifiera filtyper från filernas innehåll (genom att konfigurera [!UICONTROL Day CQ DAM Mime Type Service] i [!UICONTROL AEM Web Console]) överför du många filer samtidigt under icke-toppvärdesdagar eftersom åtgärden är resursintensiv.
