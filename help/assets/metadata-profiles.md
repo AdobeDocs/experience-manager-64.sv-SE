@@ -2,10 +2,12 @@
 title: Använd metadataprofiler för att använda standardmetadata på alla resurser i en mapp
 description: Lär dig mer om metadataprofiler för resurser. Lär dig hur du skapar en metadataprofil och använder den på mappresurser.
 contentOwner: AG
+feature: Metadata
+role: Affärsledare,Administratör
 translation-type: tm+mt
-source-git-commit: af1955ab1fdcf16dd9a9d3ad36336e6c1aac9312
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1129'
+source-wordcount: '1133'
 ht-degree: 19%
 
 ---
