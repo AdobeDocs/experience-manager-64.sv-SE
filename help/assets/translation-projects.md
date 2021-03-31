@@ -2,10 +2,12 @@
 title: Skapa översättningsprojekt
 description: Lär dig hur du skapar översättningsprojekt i AEM.
 contentOwner: AG
+feature: Översättning
+role: Arkitekt,administratör
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1802'
+source-wordcount: '1805'
 ht-degree: 20%
 
 ---
