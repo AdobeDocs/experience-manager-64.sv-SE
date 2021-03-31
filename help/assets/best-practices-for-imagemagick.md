@@ -2,10 +2,12 @@
 title: Installera och konfigurera ImageMagick så att det fungerar med AEM Assets
 description: Läs om programmet ImageMagick, hur du installerar det, konfigurerar kommandoradsprocessen och använder det för att redigera, skapa och generera miniatyrbilder från bilder.
 contentOwner: AG
+feature: Återgivningar,Utvecklarverktyg
+role: Administratör
 translation-type: tm+mt
-source-git-commit: af5f8a24db589ecdbe28d603ab9583f11d29212c
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '745'
 ht-degree: 1%
 
 ---
@@ -82,7 +84,7 @@ Dessutom är olika bildbehandlingsplugins beroende av ImageMagick-biblioteket, i
 
 Om du använder ImageMagick eller ett drabbat bibliotek rekommenderar Adobe att du åtgärdar de kända säkerhetsluckorna genom att utföra minst en av följande åtgärder (men helst båda):
 
-1. Kontrollera att alla bildfiler börjar med de förväntade [&quot;magiska byten&quot;](https://en.wikipedia.org/wiki/List_of_file_signatures) som motsvarar de bildfilstyper som du stöder innan du skickar dem till ImageMagick för bearbetning.
+1. Kontrollera att alla bildfiler börjar med de förväntade [&quot;magiska byten&quot;](https://en.wikipedia.org/wiki/List_of_file_signatures) som motsvarar de bildfiltyper som du stöder innan du skickar dem till ImageMagick för bearbetning.
 1. Använd en principfil för att inaktivera sårbara ImageMagick-kodare. Den globala principen för ImageMagick finns på `/etc/ImageMagick`.
 
 >[!MORELIKETHIS]
