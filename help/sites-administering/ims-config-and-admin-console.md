@@ -10,10 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: f6112dea-a1eb-4fd6-84fb-f098476deab7
 translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+source-git-commit: e672f4edf87bd4d3af985e2ea598feb4e26d1553
 workflow-type: tm+mt
-source-wordcount: '1804'
-ht-degree: 16%
+source-wordcount: '1769'
+ht-degree: 17%
 
 ---
 
@@ -127,7 +127,7 @@ Mer information om de nya gruppfunktionerna finns här:
 >Mer information om verktyget för användarsynkronisering finns på [dokumentationssidan](https://adobe-apiplatform.github.io/user-sync.py/en/).
 >
 >
->Verktyget för användarsynkronisering måste registrera sig som Adobe I/O klient-UMAPI enligt proceduren [här](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html).
+>Verktyget för användarsynkronisering måste registrera som ett UMAPI för en Adobe I/O-klient enligt proceduren som beskrivs [här](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html).
 >
 >Adobe I/O Console Documentation finns [här](https://www.adobe.io/apis/cloudplatform/console.html).
 >
@@ -146,7 +146,7 @@ När kundens produktadministratör loggar in på Admin Console visas flera insta
 
 ![screen_shot_2018-09-17at105804pm](assets/screen_shot_2018-09-17at105804pm.png)
 
-I det här exemplet har organisationen *AEM-MS-Onboard* 32 instanser som sträcker sig över olika topologier och miljöer som Stage, Prod, osv.
+I det här exemplet har organisationen *AEM-MS-Onboard* 32 instanser som spänner över olika topologier och miljöer som Stage, Prod, osv.
 
 ![screen_shot_2018-09-17at105517pm](assets/screen_shot_2018-09-17at105517pm.png)
 
@@ -206,7 +206,9 @@ I exemplet nedan lägger vi till synkroniserade grupper i den lokala gruppen *Da
 
 Här har en användare också tilldelats ett fåtal grupper i Admin Console. (Observera att användare och grupper kan synkroniseras från LDAP med användarsynkroniseringsverktyget eller skapas lokalt, se avsnittet **Onboarding Users to the Admin Console** above).
 
-&amp;ast;Observera att användargrupper endast synkroniseras när användarna loggar in på instansen. För kunder som har ett stort antal användare och grupper kan ett gruppsynkroniseringsverktyg köras av AMS för att hämta grupper i förväg för åtkomstkontroll och behörighetshantering som beskrivs ovan.
+>[!NOTE]
+>
+>Användargrupper synkroniseras bara när användarna loggar in på instansen.
 
 ![screen_shot_2018-09-17at94207pm](assets/screen_shot_2018-09-17at94207pm.png)
 
