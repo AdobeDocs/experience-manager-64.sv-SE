@@ -2,10 +2,12 @@
 title: Söka efter videoresurser
 description: Använd nyckelord, filegenskaper som Mime-typ, storlek eller nyligen ändrad tidsstämpel för att snabbt hitta filen i AEM Assets.
 contentOwner: AG
+feature: Video,Sök
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '562'
 ht-degree: 0%
 
 ---
