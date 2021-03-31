@@ -2,10 +2,12 @@
 title: Aktivera dubblettidentifiering
 description: Lär dig hur du aktiverar identifiering av duplicerade resurser i AEM.
 contentOwner: AG
+feature: Resurshantering,Resursrapporter
+role: Affärsledare,Administratör
 translation-type: tm+mt
-source-git-commit: 26e860cd513d70d748f872e2ce445a042d075bc6
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '147'
 ht-degree: 0%
 
 ---
