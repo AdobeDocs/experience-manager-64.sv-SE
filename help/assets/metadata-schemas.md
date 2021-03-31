@@ -2,10 +2,12 @@
 title: Metadata-scheman
 description: 'Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.  '
 contentOwner: AG
+feature: Metadata
+role: Affärsledare,Administratör
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2401'
 ht-degree: 9%
 
 ---
