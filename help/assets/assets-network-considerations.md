@@ -2,10 +2,12 @@
 title: Resurser - nätverksaspekter
 description: Diskutera nätverksaspekter när du utformar en AEM Assets-distribution.
 contentOwner: AG
+feature: Utvecklarverktyg
+role: Arkitekt,administratör
 translation-type: tm+mt
-source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1019'
 ht-degree: 0%
 
 ---
@@ -74,7 +76,7 @@ Dispatchern delar med sig av sin 100 Mbit/s-anslutning med två enheter, utsidan
 
 Den AEM instansen delar sin 1 Gbit/s-anslutning med flera tjänster. Från ett nätverkstopologiperspektiv motsvarar det att dela en kanal med olika tjänster.
 
-Om du granskar nätverket från klientenheten till den AEM instansen verkar den minsta kontrollpunkten vara 10 Mbit brandväggsbegränsningen för företag. Du kan använda de här värdena i storlekskalkylatorn i [Resursstorlekshandboken](assets-sizing-guide.md) för att avgöra användarupplevelsen.
+Om du granskar nätverket från klientenheten till den AEM instansen verkar den minsta kontrollpunkten vara begränsningen för företagets brandvägg på 10 Mbit. Du kan använda de här värdena i storlekskalkylatorn i [Resursstorlekshandboken](assets-sizing-guide.md) för att avgöra användarupplevelsen.
 
 ## Definierade arbetsflöden för AEM {#defined-workflows-of-the-aem-instance}
 
