@@ -2,10 +2,12 @@
 title: Resursväljare
 description: Lär dig hur du använder resursväljaren för att söka efter, filtrera, bläddra bland och hämta metadata för resurser i Adobe Experience Manager (AEM) Resurser. Lär dig även hur du anpassar gränssnittet för resursväljaren.
 contentOwner: AG
+feature: Resurshantering,Metadata,Sök
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 1de8efce9cd5cf47163cba8f0c962a9e2fc5116c
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '496'
 ht-degree: 1%
 
 ---
