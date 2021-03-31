@@ -6,10 +6,12 @@ contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: authoring
 discoiquuid: c1b52aac-1eaf-4cfa-801f-77aeca0d90ea
+feature: Smarta taggar,Sök
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: b9dffdda37992f3a9f34953b8dd391d6f6361ceb
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1509'
 ht-degree: 16%
 
 ---
@@ -133,7 +135,7 @@ Om du vill kontrollera om Smart Content Service är utbildad i dina taggar i öv
 
 ## Tagga resurser automatiskt {#tagging-assets-automatically}
 
-När du har utbildat tjänsten för smart innehåll kan du utlösa taggningsarbetsflödet för att automatiskt tillämpa lämpliga taggar på en annan uppsättning med liknande resurser.
+När du har utbildat tjänsten Smart Content kan du utlösa taggningsarbetsflödet för att automatiskt tillämpa lämpliga taggar på en annan uppsättning med liknande resurser.
 
 Du kan köra taggningsarbetsflödet periodiskt eller när det behövs.
 
