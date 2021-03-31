@@ -2,10 +2,12 @@
 title: Migrera resurser till Adobe Experience Manager Assets i grupp
 description: Så här lägger du in resurser i AEM, använder metadata, genererar renderingar och aktiverar dem för att publicera instanser.
 contentOwner: AG
+feature: Migrering,Återgivningar,Resurshantering
+role: Arkitekt,administratör
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1791'
+source-wordcount: '1797'
 ht-degree: 11%
 
 ---
@@ -90,7 +92,7 @@ När du har konfigurerat arbetsflödet efter dina behov kan du utföra det på t
 
 För distributioner som har en publiceringsnivå måste du aktivera resurserna i publiceringsgruppen. Adobe rekommenderar att du kör mer än en publiceringsinstans, men det är mest effektivt att replikera alla resurser till en publiceringsinstans och sedan klona den instansen. När du aktiverar ett stort antal resurser kan du behöva ingripa efter att ha aktiverat ett träd. Därför: När aktiveringar utlöses läggs objekt till i kön för delningsuppgifter/händelser. När storleken på den här kön börjar bli över cirka 40 000 objekt tar det dramatiskt lång tid att bearbeta. När storleken på den här kön överstiger 100 000 objekt börjar systemstabiliteten försämras.
 
-Du kan lösa det här problemet genom att använda [Snabba åtgärdshanteraren](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) för att hantera resursreplikering. Detta fungerar utan att använda Sling-köerna, vilket sänker overheadkostnaderna samtidigt som arbetsbelastningen begränsas för att förhindra att servern blir överbelastad. Ett exempel på hur du använder FAM för att hantera replikering visas på funktionens dokumentationssida.
+Du kan lösa det här problemet genom att använda [Snabba Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) för att hantera resursreplikering. Detta fungerar utan att använda Sling-köerna, vilket sänker overheadkostnaderna samtidigt som arbetsbelastningen begränsas för att förhindra att servern blir överbelastad. Ett exempel på hur du använder FAM för att hantera replikering visas på funktionens dokumentationssida.
 
 Andra alternativ för att hämta resurser till publiceringsgruppen är bland annat att använda [vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) eller [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run), som ingår i Jackrabbit. Ett annat alternativ är att använda ett verktyg med öppen källkod för AEM-infrastrukturen, som kallas [Grabbit](https://github.com/TWCable/grabbit), och som sägs vara snabbare än vlt.
 
@@ -118,7 +120,7 @@ När migreringen är klar bör startarna för DAM Update Asset-arbetsflödena å
 
 ## Migrera resurser över AEM distributioner {#migrate-between-aem-instances}
 
-Även om det inte är nästan lika vanligt behöver du ibland migrera stora mängder data från en AEM till en annan. När du till exempel utför en AEM uppgradering uppgraderar du maskinvaran eller migrerar till ett nytt datacenter, till exempel med en AMS-migrering.
+Även om det inte är nästan lika vanligt behöver du ibland migrera stora mängder data från en AEM till en annan instans. När du till exempel utför en AEM uppgradering uppgraderar du maskinvaran eller migrerar till ett nytt datacenter, till exempel med en AMS-migrering.
 
 I det här fallet är dina resurser redan ifyllda med metadata och återgivningar har redan genererats. Du kan helt enkelt fokusera på att flytta resurser från en instans till en annan. När du migrerar mellan AEM instanser utför du följande steg:
 
