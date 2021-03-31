@@ -3,9 +3,9 @@ title: Hantera sammansatta resurser och generera delresurser.
 description: Lär dig hur du skapar referenser till AEM resurser från filer i InDesign, Adobe Illustrator och Photoshop. Lär dig även hur du använder funktionen för sidvisning för att visa enskilda sidor med flersidiga filer, inklusive PDF-, INDD-, PPT-, PPTX- och AI-filer.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ddfcb74451f41cea911700a64abceaaf47e7af49
+source-git-commit: dc9ba70161f81578899416064bd03fdabe0bed5a
 workflow-type: tm+mt
-source-wordcount: '1327'
+source-wordcount: '1351'
 ht-degree: 0%
 
 ---
@@ -21,14 +21,14 @@ AEM Assets stöder **dubbelriktad referens**. Du kan hitta refererade resurser p
 
 Referenser tolkas utifrån sökväg, dokument-ID och instans-ID för de refererade resurserna.
 
-## Lägg till AEM Assets som referenser i Adobe Illustrator {#refai}
+## Adobe Illustrator: Lägg till resurser som referenser {#refai}
 
 Du kan referera till befintliga AEM från en Adobe Illustrator-fil.
 
 1. Använd [AEM skrivbordsapp](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html) och montera AEM Assets-databasen som en enhet på den lokala datorn. Navigera till platsen för resursen som du vill referera till i den monterade enheten.
 1. Dra resursen från den monterade enheten till Illustrator-filen.
 1. Spara Illustrator-filen på den monterade enheten eller [överför](managing-assets-touch-ui.md#uploading-assets) till AEM.
-1. När arbetsflödet är klart går du till sidan med tillgångsinformation för resursen. Referenserna till befintliga AEM resurser visas under **[!UICONTROL Dependencies]** i kolumnen **[!UICONTROL References]**.
+1. När arbetsflödet är klart går du till sidan med resursinformation för resursen. Referenserna till befintliga AEM resurser visas under **[!UICONTROL Dependencies]** i kolumnen **[!UICONTROL References]**.
 
    ![chlimage_1-258](assets/chlimage_1-258.png)
 
@@ -40,7 +40,7 @@ Du kan referera till befintliga AEM från en Adobe Illustrator-fil.
 
    ![chlimage_1-260](assets/chlimage_1-260.png)
 
-## Lägg till AEM som referenser i Adobe InDesign {#add-aem-assets-as-references-in-adobe-indesign}
+## Adobe InDesign: Lägg till resurser som referenser {#add-aem-assets-as-references-in-adobe-indesign}
 
 Om du vill referera AEM resurser från en InDesign-fil drar du AEM resurser till InDesign-filen eller exporterar InDesign-filen som en ZIP-fil.
 
@@ -50,20 +50,21 @@ Referensresurser finns redan i AEM Assets. Du kan extrahera delresurser genom at
 >
 >Om InDesign-servern är proxibel bäddas förhandsvisningen in i InDesign-filernas XMP metadata. I det här fallet krävs inte extrahering av miniatyrer uttryckligen. Om InDesign-servern inte är proxyserver måste miniatyrbilder extraheras explicit för InDesign-filer.
 
-### Skapa referenser genom att dra AEM resurser {#create-references-by-dragging-aem-assets}
+När en INDD-fil överförs hämtas referenserna genom att resurser med egenskapen `xmpMM:InstanceID` och `xmpMM:DocumentID` hämtas i databasen.
 
-Den här proceduren liknar [Lägga till AEM resurser som referenser i Adobe Illustrator](#refai).
+### Skapa referenser genom att dra resurser {#create-references-by-dragging-aem-assets}
 
-### Skapa referenser till AEM resurser genom att exportera en ZIP-fil {#create-references-to-aem-assets-by-exporting-a-zip-file}
+Den här proceduren liknar [Lägg till resurser som referenser i Adobe Illustrator](#refai).
+
+### Skapa referenser till resurser genom att exportera en ZIP-fil {#create-references-to-aem-assets-by-exporting-a-zip-file}
 
 1. Utför stegen i [Skapa arbetsflödesmodeller](/help/sites-developing/workflows-models.md) för att skapa ett nytt arbetsflöde.
-1. Använd paketeringsfunktionen i Adobe InDesign för att exportera dokumentet.
-Adobe InDesign kan exportera ett dokument och de länkade resurserna som ett paket. I det här fallet innehåller den exporterade mappen en länkmapp som innehåller underresurser i InDesign-filen.
+1. Använd [paketeringsfunktionen i Adobe InDesign](https://helpx.adobe.com/indesign/how-to/indesign-package-files-for-handoff.html) för att exportera dokumentet. Adobe InDesign kan exportera ett dokument och de länkade resurserna som ett paket. I det här fallet innehåller den exporterade mappen en `Links`-mapp som innehåller underresurser i InDesign-filen. Mappen `Links` finns i samma mapp som INDD-filen.
 1. Skapa en ZIP-fil och överför den till AEM.
 1. Starta arbetsflödet för Unarchiver.
 1. När arbetsflödet är klart refereras referenserna i mappen Länkar automatiskt till underresurser. Om du vill visa en lista över refererade resurser går du till sidan med tillgångsinformation för resursen i InDesign och stänger [Rail](/help/sites-authoring/basic-handling.md#rail-selector).
 
-## Lägg till AEM som referenser i Adobe Photoshop {#refps}
+## Adobe Photoshop: Lägg till resurser som referenser {#refps}
 
 1. Montera AEM Assets som en enhet med en WebDav-klient.
 1. Om du vill skapa referenser till AEM resurser i en Photoshop-fil navigerar du till motsvarande resurser på den monterade enheten med hjälp av funktionen Montera länkad i Photoshop.
