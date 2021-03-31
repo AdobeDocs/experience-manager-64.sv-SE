@@ -5,10 +5,12 @@ uuid: f847c07d-2a38-427a-9c38-8cdca3a1210c
 contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 82c1725e-a092-42e2-a43b-72f2af3a8e04
+feature: Resurshantering
+role: Arkitekt,administratör
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1858'
+source-wordcount: '1862'
 ht-degree: 0%
 
 ---
@@ -62,7 +64,7 @@ För stora datalager kan du implementera ett delat datalager antingen via ett de
 
 #### Använd fall {#use-cases}
 
-Datalagret kan delas mellan en primär författarinstans och en väntande författarinstans för att minimera den tid det tar att uppdatera standby-instansen med ändringar som görs i den primära instansen. Adobe rekommenderar att du delar datalagret mellan en primär författarinstans och avlastar författarinstanser för att minska overheadkostnaderna vid avlastning av arbetsflöden. Du kan också dela datalagret mellan författaren och publiceringsinstanserna för att minimera trafiken under replikeringen.
+Datalagret kan delas mellan en primär författarinstans och en väntande författarinstans för att minimera den tid det tar att uppdatera standby-instansen med ändringar som görs i den primära instansen. Adobe rekommenderar att du delar datalagret mellan en primär författarinstans och avlastar författarinstanser för att minska overheadkostnaderna vid avlastning av arbetsflöden. Du kan också dela datalagret mellan författaren och publiceringsinstanser för att minimera trafiken under replikeringen.
 
 #### Nackdelar {#drawbacks}
 
