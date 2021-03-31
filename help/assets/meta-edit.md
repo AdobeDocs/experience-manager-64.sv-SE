@@ -2,11 +2,13 @@
 title: Redigera eller lägga till metadata
 description: Läs om metadata för resurser i AEM Assets och olika sätt att redigera metadata för resurser.
 contentOwner: AG
+feature: Metadata
+role: Affärsledare,Administratör
 translation-type: tm+mt
-source-git-commit: e9f50a1ddb6a162737e6e83b976f96911b3246d6
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 8%
+source-wordcount: '476'
+ht-degree: 7%
 
 ---
 
