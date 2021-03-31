@@ -2,10 +2,12 @@
 title: Metodtips för resursövervakning
 description: Bästa tillvägagångssätt för att övervaka miljön och prestanda för AEM efter att den har distribuerats.
 contentOwner: AG
+feature: Resurshantering
+role: Administratör,Arkitekt
 translation-type: tm+mt
-source-git-commit: c407cecf4f4de9aa00ba987f96df3c75784e0171
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '1769'
 ht-degree: 0%
 
 ---
