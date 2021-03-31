@@ -2,10 +2,12 @@
 title: Hantera sammansatta resurser och generera delresurser.
 description: Lär dig hur du skapar referenser till AEM resurser från filer i InDesign, Adobe Illustrator och Photoshop. Lär dig även hur du använder funktionen för sidvisning för att visa enskilda sidor med flersidiga filer, inklusive PDF-, INDD-, PPT-, PPTX- och AI-filer.
 contentOwner: AG
+feature: Resurshantering
+role: Affärsledare,Administratör
 translation-type: tm+mt
-source-git-commit: dc9ba70161f81578899416064bd03fdabe0bed5a
+source-git-commit: e46a27a1ba11b4a5973eb1ece02c8594b2ae0fc9
 workflow-type: tm+mt
-source-wordcount: '1351'
+source-wordcount: '1356'
 ht-degree: 0%
 
 ---
