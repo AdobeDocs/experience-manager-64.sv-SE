@@ -2,10 +2,12 @@
 title: Använd funktionen för resursinsikter för att spåra användningen av dina bilder
 description: Med funktionen för tillgångsinsikter kan ni spåra användarbetyg och användningsstatistik för bilder som används på tredjepartswebbplatser, marknadsföringskampanjer och kreativa lösningar från Adobe.
 contentOwner: AG
+feature: Resursinsikter,Resursrapporter
+role: Affärsledare,Administratör
 translation-type: tm+mt
-source-git-commit: 0e0e2aa693c30c8e1ef1033b936b82d83e5b348e
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '738'
 ht-degree: 2%
 
 ---
