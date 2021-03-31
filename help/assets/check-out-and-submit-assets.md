@@ -2,10 +2,12 @@
 title: Checka in och checka ut dina digitala resurser för redigering
 description: Lär dig hur du checkar ut resurser för redigering och checkar in dem igen när ändringarna är klara.
 contentOwner: AG
+feature: Resurshantering
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '395'
 ht-degree: 6%
 
 ---
