@@ -2,10 +2,12 @@
 title: Resursproxyutveckling
 description: 'En proxy är en AEM som använder proxyarbetare för att bearbeta jobb. Lär dig hur du konfigurerar en AEM, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare. '
 contentOwner: AG
+feature: Resursbearbetning
+role: Administratör, arkitekt
 translation-type: tm+mt
-source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '904'
 ht-degree: 0%
 
 ---
