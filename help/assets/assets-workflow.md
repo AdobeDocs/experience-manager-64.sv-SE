@@ -2,10 +2,12 @@
 title: Bearbeta material för att genomföra affärsprocesser, utföra revisioner, uppfylla regelkrav och upprätthålla en grundläggande smidighet
 description: Resursbearbetning för att konvertera format, skapa renderingar, hantera resurser, validera resurser och köra arbetsflöden.
 contentOwner: AG
+feature: arbetsflöde,återgivningar
+role: Affärsledare,Administratör
 translation-type: tm+mt
-source-git-commit: 73d440198028bfa6b47e9fde13f3a354a1b8445f
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1015'
 ht-degree: 3%
 
 ---
