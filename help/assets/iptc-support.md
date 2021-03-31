@@ -2,10 +2,12 @@
 title: Stöd för IPTC-metadata
 description: Läs om hur Adobe Experience Manager (AEM) Assets stöder IPTC-metadata, kreativa betyg och nyckelord som läggs till i resurser via Adobe Bridge och andra Creative-program.
 contentOwner: AG
+feature: Metadata
+role: Affärsledare,Administratör,Ledare
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '363'
 ht-degree: 7%
 
 ---
