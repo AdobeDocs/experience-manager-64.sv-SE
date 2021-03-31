@@ -2,10 +2,12 @@
 title: Camera Raw stöd
 description: Lär dig hur du aktiverar Camera Raw support i Adobe Experience Manager Assets.
 contentOwner: AG
+feature: Utvecklarverktyg
+role: Administratör
 translation-type: tm+mt
-source-git-commit: dea673f8999656a5c5364f74f45eba41dd17b947
+source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '364'
 ht-degree: 1%
 
 ---
@@ -38,7 +40,7 @@ Så här aktiverar du Camera Raw support i Adobe Experience Manager Assets:
 
    ![klibbig](assets/chlimage_1-335.png)
 
-1. Lägg till **[!UICONTROL Camera Raw/DNG Handler]**-steget under **[!UICONTROL Thumbnail creation]**-steget från sidopanelen.
+1. På sidopanelen lägger du till **[!UICONTROL Camera Raw/DNG Handler]**-steget under **[!UICONTROL Thumbnail creation]**-steget.
 
 1. I steget **[!UICONTROL Camera Raw/DNG Handler]** lägger du till följande konfiguration på fliken **[!UICONTROL Arguments]**:
 
