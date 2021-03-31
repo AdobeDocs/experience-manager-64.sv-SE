@@ -1,11 +1,13 @@
 ---
 title: AEM Assets Home Page Experience
-description: Anpassa AEM Assets hemsida för att få en bra välkomstskärm, inklusive en ögonblicksbild av de senaste aktiviteterna kring materialet.
+description: Anpassa AEM Assets hemsida för att få en bra välkomstskärm, inklusive en ögonblicksbild av nyligen gjorda aktiviteter kring resurser.
 contentOwner: AG
+feature: Utvecklarverktyg,Resurshantering
+role: Administratör,Affärsledare
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '554'
 ht-degree: 1%
 
 ---
@@ -13,7 +15,7 @@ ht-degree: 1%
 
 # AEM Assets Home Page Experience {#aem-assets-home-page-experience}
 
-Anpassa AEM Assets hemsida för att få en bra välkomstskärm, inklusive en ögonblicksbild av de senaste aktiviteterna kring materialet.
+Anpassa AEM Assets hemsida för att få en bra välkomstskärm, inklusive en ögonblicksbild av nyligen gjorda aktiviteter kring resurser.
 
 Adobe Experience Manager (AEM) Assets Home page (startsidan för resurser) innehåller en omfattande och personlig välkomstskärm, som innehåller en ögonblicksbild av nyligen gjorda aktiviteter, t.ex. resurser som nyligen har visats eller överförts.
 
