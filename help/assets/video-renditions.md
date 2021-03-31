@@ -2,10 +2,12 @@
 title: Videoåtergivningar
 description: Videoåtergivningar
 contentOwner: AG
+feature: Video,Återgivningar
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
