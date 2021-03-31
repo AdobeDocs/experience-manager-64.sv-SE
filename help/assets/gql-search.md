@@ -2,10 +2,12 @@
 title: Fulltextsökning i GQL
 description: Utforska fulltextsökningsfunktionen i GQL i AEM Assets. Använd det för att söka efter resurser baserat på specifika metadata, som titel, beskrivning och författarnamn.
 contentOwner: AG
+feature: Sök,Metadata
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: adf44677a0ac833a131aad8187529b094aaca9ef
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '840'
 ht-degree: 0%
 
 ---
