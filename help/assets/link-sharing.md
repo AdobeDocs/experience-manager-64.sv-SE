@@ -2,10 +2,12 @@
 title: Dela resurser via en länk
 description: Dela resurser, mappar och samlingar som en URL-adress.
 contentOwner: AG
+feature: Länkdelning,Resurshantering
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: f17d54315516fcf9d24c720f097db9de73517f21
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '970'
 ht-degree: 3%
 
 ---
@@ -55,7 +57,7 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 
    >[!NOTE]
    >
-   >Om du anger ett e-post-ID för en användare som inte är medlem i din organisation, kommer ordet [!UICONTROL External User] att föregås av användarens e-post-ID.
+   >Om du anger ett e-post-ID för en användare som inte är medlem i din organisation, kommer orden [!UICONTROL External User] att föregås av användarens e-post-ID.
 
 1. Ange ett ämne för resursen som du vill dela i rutan **[!UICONTROL Subject]**.
 1. Ange ett valfritt meddelande i rutan **[!UICONTROL Message]**.
@@ -105,7 +107,7 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 
 ## Konfigurera maximal datastorlek {#configure-maximum-data-size}
 
-När du hämtar resurser från den länk som delas med funktionen Länkdelning komprimerar [!DNL Experience Manager] resurshierarkin från databasen och returnerar sedan resursen i en ZIP-fil. I avsaknad av begränsningar för den mängd data som kan komprimeras i en ZIP-fil utsätts stora mängder data för komprimering, vilket leder till minnesfel i JVM. För att skydda systemet från en potentiell denial of service-attack på grund av den här situationen konfigurerar du den maximala storleken med parametern **[!UICONTROL Max Content Size (uncompressed)]** för **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet]** i Configuration Manager. Om resursens okomprimerade storlek överskrider det konfigurerade värdet, avvisas begäranden om hämtning av resurser. Standardvärdet är 100 MB.
+När du hämtar resurser från den länk som delas med funktionen Länkdelning komprimerar [!DNL Experience Manager] resurshierarkin från databasen och returnerar sedan resursen i en ZIP-fil. I avsaknad av begränsningar för den mängd data som kan komprimeras i en ZIP-fil utsätts stora mängder data för komprimering, vilket leder till minnesfel i JVM. Om du vill skydda systemet från en potentiell denial of service-attack på grund av den här situationen konfigurerar du maxstorleken med parametern **[!UICONTROL Max Content Size (uncompressed)]** för **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet]** i Configuration Manager. Om resursens okomprimerade storlek överskrider det konfigurerade värdet, avvisas begäranden om hämtning av resurser. Standardvärdet är 100 MB.
 
 1. Klicka på logotypen [!DNL Experience Manager] och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 1. Leta reda på konfigurationen **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet]** på webbkonsolen.
