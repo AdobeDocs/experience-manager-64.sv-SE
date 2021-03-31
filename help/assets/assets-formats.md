@@ -2,10 +2,12 @@
 title: Filformat som stöds i AEM Assets
 description: Lista över filformat och MIME-typer som stöds av AEM Assets och de funktioner som stöds för varje format.
 contentOwner: AG
+feature: Resurshantering,Återgivningar
+role: Affärsledare,Administratör
 translation-type: tm+mt
-source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1644'
 ht-degree: 2%
 
 ---
@@ -15,7 +17,7 @@ ht-degree: 2%
 
 AEM Assets har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika MIME-typer.
 
-Om du vill integrera AEM Assets med andra standardbaserade DAM-lösningar (Digital Asset Management) och datorprogram använder du Adobe Extensible Metadata Platform (XMP).
+Om du vill integrera AEM Assets med andra standardbaserade DAM-lösningar och datorprogram använder du Adobe Extensible Metadata Platform (XMP).
 
 Använd teckenförklaringen för att förstå supportnivån.
 
