@@ -3,10 +3,12 @@ title: Hantera era digitala resurser med AEM Assets
 description: Lär dig mer om olika resurshanterings- och redigeringsuppgifter som du kan utföra med det Touch-optimerade användargränssnittet i AEM Assets
 contentOwner: AG
 mini-toc-levels: 1
+feature: Resurshantering, sökning, renderingar, samarbete
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 59fed31d276510c3346a46ac38f2a79c6f91d848
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '9721'
+source-wordcount: '9728'
 ht-degree: 2%
 
 ---
@@ -297,7 +299,7 @@ Mer information om hur du skapar gruppuppsättningsförinställningar finns i [K
 
 ### Direktuppspelade överföringar {#streamed-uploads}
 
-Om du överför flera resurser ökar I/O-anropen till AEM drastiskt, vilket minskar överföringseffektiviteten och till och med kan göra att den tar slut. AEM Assets har stöd för direktuppspelad överföring av resurser. Direktuppspelad överföring minskar I/O-disken under överföringen genom att resurslagring undviks i en tillfällig mapp på servern innan den kopieras till databasen. I stället överförs data direkt till databasen. På så sätt minskas tiden det tar att överföra stora resurser och möjligheten till timeout. Direktuppspelning är aktiverat som standard i AEM Assets.
+Om du överför flera resurser ökar I/O-anropen till AEM drastiskt, vilket minskar överföringseffektiviteten och till och med kan göra att den tar slut. AEM Assets har stöd för direktuppspelad överföring av resurser. Direktuppspelad överföring minskar I/O-disken under överföringen genom att undvika att lagra resurser i en tillfällig mapp på servern innan den kopieras till databasen. I stället överförs data direkt till databasen. På så sätt minskas tiden det tar att överföra stora resurser och möjligheten till timeout. Direktuppspelning är aktiverat som standard i AEM Assets.
 
 Direktuppspelningsöverföring är inaktiverat för AEM som körs på JEE-server med en servlet-api-version som är lägre än 3.1.
 
@@ -819,7 +821,7 @@ Du kan också välja att bara skriva ut anteckningarna eller granskningsstatusen
 
 Långa anteckningar kanske inte återges korrekt i PDF-filen. För optimal återgivning rekommenderar Adobe att du begränsar kommentarerna till 50 ord.
 
-Om du vill skriva ut anteckningarna och granskningsstatusen trycker du på ikonen **[!UICONTROL Print]** och följer instruktionerna i guiden. Ikonen **[!UICONTROL Print]** visas bara i verktygsfältet när resursen har tilldelats minst en antecknings- eller granskningsstatus.
+Om du vill skriva ut anteckningarna och granskningsstatusen trycker du på ikonen **[!UICONTROL Print]** och följer instruktionerna i guiden. Ikonen **[!UICONTROL Print]** visas bara i verktygsfältet när resursen har minst en antecknings- eller granskningsstatus tilldelad.
 
 1. Öppna förhandsgranskningssidan för en resurs i resursgränssnittet.
 1. Gör något av följande:
