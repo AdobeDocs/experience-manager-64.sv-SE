@@ -1,5 +1,5 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: adobe experience manager
 sub-product: formulär
 solution: Experience Manager, Experience Manager Forms
@@ -10,7 +10,7 @@ user-guide-description: Skapa, hantera, publicera och uppdatera digitala formul�
 feature-set: Experience Manager Forms
 role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 5944eab0bf38551970685eaa98d90c4459720245
+source-git-commit: ca18aa3d207aa9506d22286eaaabdd0991d8e4e7
 workflow-type: tm+mt
 source-wordcount: '3732'
 ht-degree: 0%
@@ -85,7 +85,7 @@ ht-degree: 0%
       + [Konfigurera synkroniseringsplaneraren](using/configure-synchronization-scheduler.md)
       + [Konfigurera anslutningsprogrammet för Microsoft SharePoint](http://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)
       + [Ansluta AEM Forms till Adobe LiveCycle](using/aem-livecycle-connector.md)
-      + [Konfigurera AEM Forms för att skicka formulärdata till en JEE-process i AEM Forms](using/submit-form-data-livecycle-process.md)
+      + [Konfigurera AEM Forms för att skicka formulärdata till en JEE-process från AEM Forms](using/submit-form-data-livecycle-process.md)
       + [AEM datorprogram för AEM Forms](/help/forms/using/aem-desktop-app-for-aem-forms.md)
 + Uppgradera AEM Forms {#upgrade-aem-forms}
    + [Tillgängliga uppgraderingssökvägar](using/upgrade.md)
