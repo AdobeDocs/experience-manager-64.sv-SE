@@ -5,14 +5,16 @@ contentOwner: Rick Brough
 topic-tags: dynamic-media
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
+exl-id: 51150d51-865e-4b8e-9990-ca755e4c7778
+feature: Panoramabilder
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '505'
 ht-degree: 2%
 
 ---
-
 
 # Panoramabilder {#panoramic-images}
 
@@ -48,7 +50,7 @@ För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AE
 1. På sidan **[!UICONTROL Image Server Publish]** väljer du **[!UICONTROL Image Serving]** i listrutan **[!UICONTROL Publish Context]**.
 
 1. På samma **[!UICONTROL Image Server Publish]**-sida hittar du rubriken **[!UICONTROL Request Attributes]**.
-1. Gå till **[!UICONTROL Reply Image Size Limit]** under rubriken **[!UICONTROL Request Attributes]**. I de associerade fälten **[!UICONTROL Width]** och **[!UICONTROL Height]** ökar du den maximalt tillåtna bildstorleken för panoramabilder.
+1. Gå till **[!UICONTROL Reply Image Size Limit]** under rubriken **[!UICONTROL Request Attributes]**. I de associerade fälten **[!UICONTROL Width]** och **[!UICONTROL Height]** ökar du den största tillåtna bildstorleken för panoramabilder.
 
    Dynamic Media Classic har en begränsning på 25 000 000 pixlar. Den största tillåtna storleken för bilder med 2:1-proportioner är 7 000 x 3 500. För vanliga skärmar räcker det dock med 4 096 x 2 048 pixlar.
 
