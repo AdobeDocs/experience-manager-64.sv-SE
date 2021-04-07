@@ -2,6 +2,7 @@
 title: Tjänstanvändare i AEM
 seo-title: Tjänstanvändare i AEM
 description: Läs mer om tjänstanvändare i AEM.
+feature: Dokumentskydd
 seo-description: Läs mer om tjänstanvändare i AEM.
 uuid: 4efab5fb-ba11-4922-bd68-43ccde4eb355
 contentOwner: User
@@ -9,14 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: 9cfe5f11-8a0e-4a27-9681-a8d50835c864
+exl-id: b6e77f61-5c7b-4e40-881c-057177e7ea6d
 translation-type: tm+mt
-source-git-commit: dda8156729aa46dd6cfd779bca120b165ccc980b
+source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
 workflow-type: tm+mt
-source-wordcount: '1788'
+source-wordcount: '1789'
 ht-degree: 0%
 
 ---
-
 
 # Tjänstanvändare i AEM{#service-users-in-aem}
 
@@ -88,7 +89,7 @@ Om ovanstående misslyckas erbjuder Sling 7 en tjänst för Mappning av tjänsta
 * De tillåter att användare mappar tjänster
 * De gör det möjligt att definiera underleverantörer
 * Den centrala konfigurationspunkten är: `org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl`
-* `service-id` =  `service-name` [ &quot;:&quot; subservice-name  ] 
+* `service-id` =  `service-name` [ &quot;:&quot; subservice-name  ]
 
 * `service-id` mappas till en resurslösare och/eller JCR-databasens användar-ID för autentisering
 * `service-name` är det symboliska namnet på det paket som tillhandahåller tjänsten
