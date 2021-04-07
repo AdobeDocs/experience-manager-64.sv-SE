@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4b532cd3-1561-4b5c-8b4b-420c278926f0
+exl-id: d2fdad3f-513b-4147-a7c6-a3c1b64dd6e3
+feature: Karusellbanner
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: f4cdd3d5020b917676fe8715d4e21e98f3a096b4
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '4680'
+source-wordcount: '4682'
 ht-degree: 4%
 
 ---
-
 
 # Karusellbanner {#carousel-banners}
 
@@ -34,7 +36,7 @@ På din webbplats kan en karusellbanderoll se ut så här:
 
 Här kan du navigera bland bilderna (genom att klicka på siffrorna). Dessutom roteras bildrutorna automatiskt baserat på ett tidsintervall som du kan anpassa. Bilder som du lägger till i karusellbanderollen har stöd för både hotspot-områden och bildscheman, där användarna kan trycka eller gå till en hyperlänk eller komma åt ett snabbfönster.
 
-I det här exemplet har användaren tryckt på eller klickat på ett bildschema och öppnat snabbvyfönstret för handskar:
+I det här exemplet har en användare tryckt på eller klickat på ett bildschema och öppnat snabbvyfönstret för handskar:
 
 ![chlimage_1-440](assets/chlimage_1-440.png)
 
@@ -349,7 +351,7 @@ Tänk på att om du redigerar interaktiva bilder med aktiveringspunkter och besk
    * Om du vill ändra ordning på bildrutorna drar du en bildruta till en ny plats (markera sorteringsikonen för att flytta objekt).
    * Om du vill lägga till en hotspot eller ett bildschema trycker du på ikonerna för hotspot eller bildschema och läser [lägga till hotspot-områden och bildscheman](#adding-hotspots-or-image-maps-to-an-image-banner).
    * Om du vill redigera karuselluppsättningens utseende eller beteende trycker du på fliken **[!UICONTROL Appearance]** eller **[!UICONTROL Behavior]** och anger sedan önskade alternativ.
-   * Om du vill redigera aktiveringspunkter eller bildscheman markerar du en aktiveringspunkt eller ett bildschema på lämplig bildruta och gör de ändringar som behövs på fliken **[!UICONTROL Actions]**.
+   * Om du vill redigera aktiveringspunkter eller bildscheman markerar du en aktiveringspunkt eller ett bildschema på lämplig bildruta och gör de ändringar som behövs under fliken **[!UICONTROL Actions]**.
    * Om du vill ta bort en bildruta markerar du den och trycker sedan på **[!UICONTROL Delete Slide]** i verktygsfältet.
    * Om du vill använda en förinställning trycker du på den förinställda listrutan längst upp till höger på sidan och väljer sedan en visningsförinställning.
    * Om du vill ta bort en hel Carousel-uppsättning går du till Carousel-uppsättningen, markerar den och trycker sedan på **[!UICONTROL Delete]**.
