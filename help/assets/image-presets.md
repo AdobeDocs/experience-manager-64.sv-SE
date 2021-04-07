@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
+exl-id: 07a4f315-a60e-456b-b02d-035b3f6ad9ad
+feature: Bildförinställningar
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 0016825ced6706cda7447546af876d5a897c8ff5
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '318'
 ht-degree: 9%
 
 ---
-
 
 # Använda förinställningar för Dynamic Media-bilder {#applying-image-presets}
 
@@ -56,4 +58,3 @@ Du kan använda en bildförinställning på en bild när du vill förhandsvisa d
    >Om resursen *och* bildförinställningen ännu inte har publicerats är knappen **[!UICONTROL URL]** (eller knapparna **[!UICONTROL URL]** och **[!UICONTROL RESS]**, i förekommande fall) inte tillgängliga.
    >
    >Observera också att bildförinställningar automatiskt publiceras på en Dynamic Media-server.
-
