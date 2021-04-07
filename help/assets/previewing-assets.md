@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 77296bff-8429-4240-af93-26076ae431ec
+exl-id: ec05569a-6449-4430-9b9f-7ab051f44970
+feature: Resurshantering,Återgivningar
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 8c6fdcea0def7720062edfc564c536f8d47e8402
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1019'
 ht-degree: 2%
 
 ---
-
 
 # Förhandsgranska Dynamic Media-resurser {#previewing-assets}
 
@@ -110,4 +112,3 @@ Förutom att använda den dedikerade förhandsvisningsfunktionen för video, snu
   </tr>
  </tbody>
 </table>
-
