@@ -5,14 +5,16 @@ contentOwner: Rick Brough
 topic-tags: 3D
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
+exl-id: 71f89564-a413-49f6-8d6e-c5305bf92c75
+feature: 3D-resurser
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '1717'
+source-wordcount: '1719'
 ht-degree: 0%
 
 ---
-
 
 # Visa 3D-resurser {#viewing-d-assets}
 
@@ -96,7 +98,7 @@ Dessutom är funktioner i klientdatorn, t.ex. en arbetsstation, bärbar dator el
       </tr> 
       <tr> 
       <td>Återställ</td> 
-      <td>Tryck eller klicka för att återställa vymålpunkten till modellens mitt. Återställ flyttar också kameran<br /> närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek.</td> 
+      <td>Tryck eller klicka för att återställa vymålpunkten till modellens mitt. Återställ flyttar också kameran<br /> närmare eller längre bort för att visa resursen i sin helhet och med en rimlig visningsstorlek.</td> 
       </tr> 
     </tbody> 
     </table>
@@ -183,4 +185,3 @@ Så här arbetar du med 3D-komponenter med mus- och styrkuleenheter:
 1. Dra samtidigt som du håller ned **ALT/option**-tangenten och vänster musknapp för att panorera kameran. Då flyttas kameran i sidled så att du kan titta på olika delar av objektet när du zoomar in. Du kan också klicka på knappen **[!UICONTROL Orbit/Pan Toggle]** för att växla till läget **[!UICONTROL Pan]** och sedan dra medan du håller ned vänster musknapp för att panorera kameran. Klicka på **[!UICONTROL Orbit/Pan Toggle]** igen för att återgå till **[!UICONTROL Orbit]**-läget.
 1. Klicka på **[!UICONTROL Reset Viewer]** för att återställa kameran. Den här åtgärden återför objektet till den fullständiga vyn och, om den är aktiverad, återtar den automatiska rotationen.
 1. Klicka på **[!UICONTROL Full Screen]** för att aktivera helskärmsläget. Använd **[!UICONTROL Escape]**-tangenten på tangentbordet eller klicka på **[!UICONTROL Full Screen]** igen för att återställa 3D-visningsprogrammet till sidinbäddat läge.
-
