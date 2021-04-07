@@ -9,14 +9,16 @@ topic-tags: 3D
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
 discoiquuid: 9017ab55-6d4a-4306-922f-223ab1b2504b
+exl-id: bf87b470-08c8-44b4-95d9-1251586b0610
+feature: 3D-resurser
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
-
 
 # Arbeta med 3D-platskomponenten {#working-with-the-d-sites-component}
 
@@ -172,4 +174,3 @@ Mer information om hur du publicerar resurser finns i [Publicera resurser](manag
 >Om du använder menyalternativet **[!UICONTROL Publish Page]** på **[!UICONTROL Page Information]**-menyn kommer sidan och alla primära sidberoenden att publiceras. Sekundära beroenden som kan refereras av 3D-modellen och/eller 3D-scenen, som texturscheman och IBL-bilder, publiceras inte när du publicerar sidan på det här sättet.
 >
 >Adobe rekommenderar att du publicerar alla 3D-resurser och deras beroenden direkt från AEM Assets innan du publicerar webbsidan som refererar till dessa resurser.
-
