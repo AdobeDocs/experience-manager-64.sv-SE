@@ -5,14 +5,16 @@ contentOwner: rbrough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: managing-assets
 content-type: reference
+exl-id: 081e7db0-95cc-4260-8f08-318cd7d9d5b4
+feature: Video
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 53fab119fc178e5ac88257cab1e930d4472eaa14
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '1551'
+source-wordcount: '1552'
 ht-degree: 0%
 
 ---
-
 
 # Video {#video}
 
@@ -180,7 +182,7 @@ Komponenten **[!UICONTROL Foundation Video]** måste känna till vilka videoprof
 >Ändringar som görs i designen kräver att designen aktiveras så att de kan börja gälla vid publiceringen.
 
 1. Öppna **[!UICONTROL Foundation Video]**-komponentens designdialogruta och ändra till fliken **[!UICONTROL Profiles]**. Ta sedan bort färdiga profiler och lägg till de nya videoprofilerna för S7. Ordningen på profillistan i designdialogrutan definierar ordningen på videokällelementet vid återgivning.
-1. För webbläsare som inte stöder HTML5 kan du konfigurera ett Flash-reservläge med videokomponenten. Öppna dialogrutan för design av videokomponenter och ändra till fliken **[!UICONTROL Flash]**. Konfigurera inställningarna för Flash Player och tilldela en reservprofil för Flash Player.
+1. För webbläsare som inte stöder HTML5 kan du konfigurera ett Flash-reserv med videokomponenten. Öppna dialogrutan för design av videokomponenter och ändra till fliken **[!UICONTROL Flash]**. Konfigurera inställningarna för Flash Player och tilldela en reservprofil för Flash Player.
 
 #### Checklista {#checklist}
 
@@ -189,4 +191,3 @@ Komponenten **[!UICONTROL Foundation Video]** måste känna till vilka videoprof
 1. Videoprofilerna måste aktiveras.
 1. Konfigurera designen för **[!UICONTROL Foundation Video]**-komponenten på sidan.
 1. Aktivera designen när du är klar med designändringarna.
-
