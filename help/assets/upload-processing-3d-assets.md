@@ -9,14 +9,16 @@ topic-tags: 3D
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: a0319701-21eb-4b7f-8b2e-ac81a7a75875
+exl-id: 4b8b0247-0978-40b5-92e2-319cfa44b34e
+feature: 3D-resurser
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '862'
 ht-degree: 1%
 
 ---
-
 
 # Om överföring och bearbetning av 3D-resurser i AEM {#about-the-uploading-and-processing-of-d-assets-in-aem}
 
@@ -49,13 +51,13 @@ När överföringen är klar konverteras dina 3D-filer och ytterligare bearbetni
 
       Du kan modellera den här metoden för hur 3D-redigeringsprogram som Autodesk Maya föredrar att lagra innehåll.
 
-* Beroende resurser ska inte tas bort såvida inte den associerade 3D-resursen eller de associerade 3D-resurserna som refererar till dem också tas bort. Du kan dock ta bort 3D-resurser utan att behöva ta bort deras beroende resurser. Om ett beroende går förlorat av misstag kan du enkelt lösa det för att återställa det.
+* Beroende resurser ska inte tas bort såvida inte de associerade 3D-resurserna eller resurserna som refererar till dem också tas bort. Du kan dock ta bort 3D-resurser utan att behöva ta bort deras beroende resurser. Om ett beroende går förlorat av misstag kan du enkelt lösa det för att återställa det.
 
    Se Lösa filberoenden.
 
 ## Prestandaöverväganden vid överföring av 3D-filer {#performance-considerations-when-uploading-d-files}
 
-När du konverterar och bearbetar 3D-filer förbrukas vanligtvis mycket processorkraft och minne på en server. Det tar också lång tid. Bearbetningstiden varierar ofta mycket beroende på modellens storlek och serverns kapacitet. En vanlig liten modell med mindre än 100 kB-ansikten är till exempel vanligtvis klar att visas på mindre än en minut. Den behandlas fullständigt på 2-3 minuter. En stor modell med mer än en miljon ansikten kan ta tiotals minuter att behandla helt.
+När du konverterar och bearbetar 3D-filer förbrukas vanligtvis mycket processorkraft och minne på en server. Det tar också lång tid. Bearbetningstiden varierar ofta mycket beroende på modellens storlek och serverns funktioner. En vanlig liten modell med mindre än 100 kB-ansikten är till exempel vanligtvis klar att visas på mindre än en minut. Den behandlas fullständigt på 2-3 minuter. En stor modell med mer än en miljon ansikten kan ta tiotals minuter att behandla helt.
 
 Konverterings-, bearbetnings- och renderingsjobb köas efter behov för att förhindra att servern blir för långsam. Meddelandet&quot;Väntar på bearbetning..&quot; visas ibland i **[!UICONTROL Card View]** när du överförde resurser. Den här statusen anger att andra behandlings- eller återgivningsjobb måste avslutas innan den aktuella resursen bearbetas.
 
@@ -113,4 +115,3 @@ Endast i **[!UICONTROL Card View]** visas bearbetningsstatus och förlopp som en
 >[!NOTE]
 >
 >Du kan visa en 3D-resurs i **[!UICONTROL Detail View]** eller återge den när förhandsgranskningssteget Skapa är klart. Du behöver inte vänta på att alla bearbetningsfaser ska slutföras.
-
