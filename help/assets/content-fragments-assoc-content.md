@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: content-fragments
 content-type: reference
 discoiquuid: 09536869-3806-4b89-adfd-68f408298c55
+exl-id: af4f25d4-a784-47fe-bca4-75c8d373f7d2
+feature: Innehållsfragment
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 3fa80e73fb6e9400fbeba29d80aa57e080b6f333
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 0%
+source-wordcount: '250'
+ht-degree: 1%
 
 ---
-
 
 # Associerat innehåll {#associated-content}
 
@@ -57,4 +59,3 @@ När du har kopplat en samling kan du:
 * **Lägg till** resurser i samlingen.
 * Välj en resurs för ytterligare åtgärder.
 * Redigera resursen.
-
