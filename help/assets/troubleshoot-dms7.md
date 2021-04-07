@@ -5,14 +5,16 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
+exl-id: d8cc94b0-eacf-4e76-bd50-7934bbc28c92
+feature: Felsökning
+role: Administrator,Business Practitioner
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '1283'
+source-wordcount: '1284'
 ht-degree: 0%
 
 ---
-
 
 # Felsökning av Dynamic Media - Scene7-läge {#troubleshooting-dynamic-media-scene-mode}
 
@@ -57,7 +59,7 @@ Synkroniseringsfel och problem loggas i `error.log` (AEM serverkatalog `/crx-qui
 Gör följande innan du utför någon av åtgärderna Flytta, Kopiera eller Ta bort:
 
 * För bilder och videoklipp måste du bekräfta att det finns ett `<object_node>/jcr:content/metadata/dam:scene7ID`-värde innan du utför åtgärderna flytta, kopiera eller ta bort.
-* Kontrollera att det finns ett `https://<server>/crx/de/index.jsp#/etc/dam/presets/viewer/testpreset/jcr%3Acontent/metadata`-värde för bild- och visningsinställningar innan du utför åtgärderna flytta, kopiera eller ta bort.
+* Kontrollera att det finns ett `https://<server>/crx/de/index.jsp#/etc/dam/presets/viewer/testpreset/jcr%3Acontent/metadata`-värde för bild- och visningsförinställningar innan du utför åtgärderna flytta, kopiera eller ta bort.
 * Om ovanstående metadatavärde saknas måste du överföra resurser på nytt innan du flyttar, kopierar eller tar bort åtgärder.
 
 ### Versionskontroll {#version-control}
@@ -258,4 +260,3 @@ Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
   </tr> 
  </tbody> 
 </table>
-
