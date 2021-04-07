@@ -9,14 +9,16 @@ topic-tags: 3D
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: e43fd002-2954-4ef1-ac2b-e8d45afa75be
+exl-id: fdc82bca-e676-4052-b3e9-a198c685df96
+feature: 3D-resurser
+role: Administrator,Business Practitioner
 translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '1334'
+source-wordcount: '1336'
 ht-degree: 0%
 
 ---
-
 
 # Avancerade konfigurationsinställningar {#advanced-configuration-settings}
 
@@ -58,7 +60,7 @@ Gå till följande konfigurationer i **CRXDE Lite** i AEM (**[!UICONTROL Tools >
   </tr> 
   <tr> 
    <td>/libs/settings/dam/v3D/settings/addGroundPlaneImageOnIngest</td> 
-   <td>Möjliggör generering av en omgivningsskugga för ocklusion vid visning eller återgivning med en IBL-fas. Gäller för förhandsgranskning och återgivning med RapidRefine</td> 
+   <td>Möjliggör generering av en skugga för omgivande ocklusion vid visning eller återgivning med en IBL-fas. Gäller för förhandsgranskning och återgivning med RapidRefine</td> 
   </tr> 
   <tr> 
    <td><p>/libs/settings/dam/v3D/settings/cleanupRenderWorkDir</p> </td> 
@@ -149,4 +151,3 @@ Gå till följande konfigurationer i **CRXDE Lite** i AEM (**[!UICONTROL Tools >
 | `/libs/settings/dam/v3D/WebGLSites/fadeCurtains` | När det är inställt på **[!UICONTROL true]** tonas inläsningskurvan ut gradvis under de senare delarna av inläsning och initiering. När värdet är **[!UICONTROL false]** förblir draperiet ogenomskinligt tills inläsning och initiering har slutförts. |
 | `/libs/settings/dam/v3D/WebGLSites/showCurtains` | Ange **[!UICONTROL true]** eller **[!UICONTROL false]** om du vill aktivera eller inaktivera inläsningskurvan för 3D-platskomponenten. |
 | `/libs/settings/dam/v3D/WebGLSites/spinHeight` | När automatisk rotation är aktiverad och aktiv justeras kamerans lodräta position automatiskt i förhållande till 3D-objektets höjd. Om värdet är 0,5 kommer kameran att placeras lodrätt vid 1/2 av objektets höjd, vilket gör att horisonten centreras lodrätt i visningsrutan. Ju större värde, desto mer tittar kameran ned på objektet och höjer höjden på den renderade horisonten, desto mindre värden tittar kameran upp på objektet och sänker horisonten. |
-
