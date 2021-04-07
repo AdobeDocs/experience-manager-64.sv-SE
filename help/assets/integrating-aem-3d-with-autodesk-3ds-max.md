@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
 topic-tags: 3D
 discoiquuid: 0d7fefc0-6923-4ac3-9e90-335c08fa56f0
+exl-id: 2edecd53-0a2d-44bb-968a-d988c780e142
+feature: 3D-resurser
+role: Administrator,Business Practitioner
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '520'
 ht-degree: 0%
 
 ---
-
 
 # Integrera AEM 3D med Autodesk 3ds Max {#integrating-aem-d-with-autodesk-ds-max}
 
@@ -89,4 +91,3 @@ Se även [Integrera AEM 3D med AutoDesk Maya](integrate-maya-with-3d.md).
 1. När bearbetningen är klar öppnar du `logo-sphere.max` i vyn **[!UICONTROL Detail]**.
 
    Förhandsgranskningen fungerar på samma sätt som med `logo_sphere.fbx`.
-
