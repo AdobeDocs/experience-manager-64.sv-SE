@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: introduction
 content-type: reference
 discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
+exl-id: f8a3936e-82b5-46c7-9614-b97162e27d6a
+feature: Resurshantering,Återgivningar
+role: Administrator,Business Practitioner
 translation-type: tm+mt
-source-git-commit: 9b6c1efe1f6281892648c7b41820856d2e3fcac1
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '460'
 ht-degree: 8%
 
 ---
-
 
 # Arbeta med Dynamic Media {#working-with-dynamic-media}
 
