@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
+exl-id: e076349d-8b1a-487f-b982-9440d7de13b9
+feature: Konfiguration
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '1225'
-ht-degree: 8%
+source-wordcount: '1226'
+ht-degree: 9%
 
 ---
-
 
 # Länka URL:er till ditt webbprogram {#linking-urls-to-your-web-application}
 
