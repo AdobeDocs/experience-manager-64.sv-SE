@@ -9,14 +9,16 @@ topic-tags: 3D
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: da8fc33b-84ae-4ead-87bb-5a7870a38b1f
+exl-id: facd0411-8a3c-4b1a-af9d-0d59e0399b2c
+feature: 3D-resurser
+role: Administrator,Business Practitioner
 translation-type: tm+mt
-source-git-commit: 4b05b24a91ba9c31a19a5a96fb481d2ffc4c9bfc
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera en standardscen med Autodesk Maya och Mental Ray {#setting-up-a-standard-stage-with-autodesk-maya-and-mental-ray}
 
@@ -68,4 +70,3 @@ ht-degree: 0%
 
 1. Öppna Resursegenskaper i AEM. Ange **[!UICONTROL Title]** till en lämplig sträng som ska visas i listrutan **[!UICONTROL Stage Selector]**. Kontrollera att **[!UICONTROL Class]** är **[!UICONTROL 3D Stage]**. Spara och avsluta.
 1. Öppna en 3D-resurs, markera den nya scenen och verifiera att den förhandsvisar och återger som förväntat.
-
