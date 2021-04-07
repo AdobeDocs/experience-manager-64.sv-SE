@@ -5,14 +5,16 @@ contentOwner: Alva Ware-Bevacqui
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
 topic-tags: managing-assets
+exl-id: b11b19c1-712d-4698-aefc-930ff8cacbc1
+feature: Dynamic Media Classic
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '2691'
+source-wordcount: '2694'
 ht-degree: 1%
 
 ---
-
 
 # Lägga till Dynamic Media Classic-funktioner på din sida {#adding-scene-features-to-your-page}
 
@@ -320,7 +322,7 @@ Du kan använda det klassiska användargränssnittet eller det pekoptimerade anv
 När du söker i något av användargränssnitten kan du filtrera efter följande villkor (visas här i det pekoptimerade användargränssnittet):
 
 * **[!UICONTROL Enter keywords]**
-Du kan söka efter resurser efter namn. När du söker efter nyckelord som du anger är det filnamnet börjar med. Om du till exempel skriver ordet &quot;simning&quot; söker du efter alla resursfilnamn som börjar med de bokstäverna i den ordningen. Var noga med att trycka på Retur när du har skrivit in termen för att hitta resursen.
+Du kan söka efter resurser efter namn. När du söker efter nyckelord som du anger är det filnamnet börjar med. Om du t.ex. skriver ordet &quot;simning&quot; söker du efter alla resursfilnamn som börjar med de bokstäverna i den ordningen. Var noga med att trycka på Retur när du har skrivit in termen för att hitta resursen.
 
 ![chlimage_1-242](assets/chlimage_1-242.png)
 
@@ -364,4 +366,3 @@ I Dynamic Media Classic-webbläsaren kan du filtrera resultatet så att det inne
 Du kan filtrera efter resurser baserat på publiceringsstatus:  **[!UICONTROL Unpublished]** eller  **[!UICONTROL Published]**. Om du inte väljer **[!UICONTROL Publish Status]** söker AEM som standard igenom alla publiceringsstatusar.
 
 ![chlimage_1-247](assets/chlimage_1-247.png)
-
