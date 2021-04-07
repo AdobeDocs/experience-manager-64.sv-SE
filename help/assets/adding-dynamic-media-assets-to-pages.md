@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d1f45751-1761-4d6b-b17d-110b2f1117ea
+exl-id: bb97b649-a50d-49c8-97aa-18c32f18d527
+feature: Komponenter
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '2708'
+source-wordcount: '2709'
 ht-degree: 4%
 
 ---
-
 
 # Lägga till Dynamic Media-resurser på sidor {#adding-dynamic-media-assets-to-pages}
 
@@ -139,7 +141,7 @@ Välj en befintlig visningsförinställning i listrutan. Om den visningsförinst
 Det här är det enda tillgängliga alternativet om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar. De visningsförinställningar som visas är också smarta - endast relevanta visningsprogramförinställningar visas.
 
 * **[!UICONTROL Viewer modifiers]**
-Visningsmodifierare har formen av namn=värde-par med en &amp;-avgränsare och du kan ändra visningsprogram enligt riktlinjerna i referenshandboken för visningsprogram. Ett exempel på en visningsmodifierare är posterimage=img.jpg&amp;caption=text.vtt,1 som ställer in en annan bild för videominiatyrbilden och associerar en undertextfil med videon.
+Visningsmodifierare har formen av namn=värde-par med en &amp;-avgränsare och du kan ändra visningsprogram enligt riktlinjerna i referenshandboken för visningsprogram. Ett exempel på en visningsmodifierare är posterimage=img.jpg&amp;caption=text.vtt,1 som anger en annan bild för videominiatyrbilden och associerar en undertextfil med videon.
 
 * **[!UICONTROL Image preset]**
 Välj en befintlig bildförinställning i listrutan. Om den bildförinställning du söker inte syns kan du behöva göra den synlig. Se Hantera bildförinställningar. Du kan inte välja en visningsförinställning om du använder en bildförinställning och vice versa.
