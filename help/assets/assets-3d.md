@@ -5,14 +5,16 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: introduction
 content-type: reference
+exl-id: 3cee9b4f-c4be-4ffc-970c-5680c8ebba47
+feature: 3D-resurser
+role: Administrator,Business Practitioner
 translation-type: tm+mt
-source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
-
 
 # Arbeta med AEM 3D-resurser {#working-with-d-assets}
 
@@ -162,4 +164,3 @@ Se [Återge 3D-resurser](rendering-3d-assets.md).
 ## Namnge material i en primär 3D-modellfil {#naming-materials-in-a-primary-d-model-file}
 
 En *yta* definieras som ytan på en 3D-modell som täcks av samma material. Det här materialet innehåller också ytans namn. Därför rekommenderar Adobe att du ger materialet i den primära 3D-modellfilen ett namn som passar dig. Om du t.ex. använder särskilda namn som &quot;Kropp&quot;, &quot;Fönster&quot;, &quot;Däck&quot; eller &quot;Rims&quot; bör du använda vaga namn som &quot;Rött&quot;, &quot;Glas&quot;, &quot;Gummi&quot; eller &quot;Aluminium&quot;.
-
