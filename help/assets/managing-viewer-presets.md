@@ -10,14 +10,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: e78bb08a-a923-4399-b3f7-13aa4b7994d5
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
+exl-id: 53e53cb7-1854-44e9-9516-51bcc99378b4
+feature: Förinställningar för visningsprogram
+role: Administrator,Business Practitioner
 translation-type: tm+mt
-source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '4092'
+source-wordcount: '4094'
 ht-degree: 9%
 
 ---
-
 
 # Hantera förinställningar för Dynamic Media Viewer {#managing-viewer-presets}
 
@@ -287,7 +289,7 @@ Följande logik används för hur många miniatyrbilder som visas på panelen ba
 
    I exemplet i tabellen ovan används 9 miniatyrbilder/4 kortplatser = 2,25; visningsprogrammets logik omger den med upp till tre undersegment.
 
-* Antal miniatyrbilder = avrunda upp till nästa miniatyrbild (antal miniatyrbilder/antal undersegment till video).
+* Antal miniatyrbilder = avrunda till nästa miniatyrbild (antal miniatyrbilder/antal undersegment till video).
 
    Med hjälp av exemplet i tabellen ovan är det 9 miniatyrbilder/3 undersegment för video = 3 miniatyrbilder.
 
