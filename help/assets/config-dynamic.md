@@ -7,14 +7,16 @@ uuid: de88f68f-4697-4ff0-8008-3ae6a4684a84
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 821eb27e-67c9-4589-9196-30dacb84fa59
+exl-id: 1e122f97-ac37-44f5-a1cd-bf53ffda6f5b
+feature: Konfiguration,Hybrid-läge
+role: Administrator,Business Practitioner,Developer
 translation-type: tm+mt
-source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '7418'
+source-wordcount: '7421'
 ht-degree: 1%
 
 ---
-
 
 # Konfigurera Dynamic Media - hybrid-läge {#configuring-dynamic-media-hybrid-mode}
 
@@ -171,7 +173,7 @@ Om du vill aktivera dynamiska medier måste du aktivera körningsläget för dyn
    >* ImageServer-&lt;PortId>-&lt;ååå>&lt;mm>&lt;dd>.log - Loggen för ImageServer innehåller statistik och analytisk information som används för att analysera beteendet hos den interna ImageServer-processen.
 
       Exempel på ett loggfilsnamn för en Image Server: `ImageServer-57346-2019-07-25.log`
-   * s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - s7access-loggen registrerar alla begäranden som gjorts till Dynamic Media via `/is/image` och `/is/content`.
+   * s7access-&lt;åååå>&lt;mm>&lt;dd>.log - s7access-loggen registrerar alla begäranden som gjorts till Dynamic Media via `/is/image` och `/is/content`.
    Loggarna används bara när Dynamic Media är aktiverat. De ingår inte i **paketet Download Full** som genereras från **[!UICONTROL system/console/status-Bundlelist]**-sidan; när du ringer kundsupport om du har ett Dynamic Media-problem, bifoga båda loggarna till problemet.
 
 ### Om du har installerat AEM till en annan port eller kontextsökväg ... {#if-you-installed-aem-to-a-different-port-or-context-path}
@@ -922,7 +924,7 @@ Manifestinställningar och deras standardvärden:
   <tr> 
    <td>jpegquality</td> 
    <td>80</td> 
-   <td><p>Standardattribut för JPEG-kodning. Anger standardattributen för JPEG-svarsbilder.</p> <p>Heltal och flagga, avgränsade med kommatecken. Det första värdet ligger inom intervallet 1..100 och definierar kvaliteten. Det andra värdet kan vara 0 för normalt beteende, eller 1 för att inaktivera nedsampling av RGB-kromaticitet som vanligtvis används av JPEG-kodare.</p> <p>Se även <a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html">JpegQuality</a> i Image Serving API.</p> </td> 
+   <td><p>Standardattribut för JPEG-kodning. Anger standardattributen för JPEG-svarsbilder.</p> <p>Heltal och flagga, avgränsade med kommatecken. Det första värdet ligger inom intervallet 1..100 och definierar kvaliteten. Det andra värdet kan vara 0 för normalt beteende, eller 1 för att inaktivera nedsampling av RGB-kromaticitet, som vanligtvis används av JPEG-kodare.</p> <p>Se även <a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html">JpegQuality</a> i Image Serving API.</p> </td> 
   </tr> 
   <tr> 
    <td>maxpix</td> 
@@ -951,7 +953,7 @@ Manifestinställningar och deras standardvärden:
 
 Med dynamisk mediefärghantering kan du färgkorrigera resurser för förhandsgranskning.
 
-Med färgkorrigering behåller inkapslade resurser sin färgrymd (RGB, CMYK, Grå) och inbäddade färgprofil i den genererade TIFF-pyramidåtergivningen. När du begär en dynamisk återgivning korrigeras bildfärgen till målfärgrymden. Du konfigurerar utdatafärgprofilen i publiceringsinställningarna för dynamiska media i JCR-uttrycket.
+Med färgkorrigering behåller inkapslade resurser sin färgrymd (RGB, CMYK, Grå) och inbäddade färgprofil i den genererade TIFF-pyramidåtergivningen. När du begär en dynamisk återgivning korrigeras bildfärgen till målfärgrymden. Du konfigurerar utdatafärgprofilen i publiceringsinställningarna för dynamiska medier i JCR-uttrycket.
 
 Färghanteringen i Adobe använder ICC-profiler, ett format som definieras av ICC (International Color Consortium).
 
@@ -988,7 +990,7 @@ När du har installerat funktionspaketet måste du konfigurera rätt standardfä
 
    ![chlimage_1-514](assets/chlimage_1-514.png)
 
-1. Lägg till en färgkorrigeringsegenskap genom att bläddra längst ned på fliken **[!UICONTROL Properties]** och ange egenskapsnamnet, typen och värdet manuellt, vilket beskrivs i följande tabeller. När du har angett värdena trycker du på **[!UICONTROL Add]** och sedan **[!UICONTROL Save All]** för att spara värdena.
+1. Lägg till en färgkorrigeringsegenskap genom att bläddra längst ned på fliken **[!UICONTROL Properties]** och ange egenskapsnamnet, typen och värdet manuellt, vilket beskrivs i följande tabeller. När du har angett värdena trycker du på **[!UICONTROL Add]** och sedan på **[!UICONTROL Save All]** för att spara värdena.
 
    Färgkorrigeringsegenskaper beskrivs i tabellen **[!UICONTROL Color Corrections Properties]**. Värden som du kan tilldela till färgkorrigeringsegenskaper finns i tabellen **[!UICONTROL Color Profile]**.
 
