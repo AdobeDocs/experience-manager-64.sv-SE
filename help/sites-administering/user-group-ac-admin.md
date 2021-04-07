@@ -2,20 +2,21 @@
 title: Behörighetsadministration för användare, grupp och åtkomst
 seo-title: Behörighetsadministration för användare, grupp och åtkomst
 description: Läs mer om administration av användare, grupper och åtkomsträttigheter i AEM.
+feature: Dokumentskydd
 seo-description: Läs mer om administration av användare, grupper och åtkomsträttigheter i AEM.
 uuid: 30e0d4dc-261d-4dc2-aff7-29179eca1cc2
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: cc0637ef-4a9e-454f-899d-655c9caebe2b
+exl-id: 9c14e57b-019e-45ae-9e96-40424fa609c2
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
 workflow-type: tm+mt
-source-wordcount: '3137'
+source-wordcount: '3138'
 ht-degree: 0%
 
 ---
-
 
 # Administrering av användar-, grupp- och åtkomsträttigheter{#user-group-and-access-rights-administration}
 
@@ -646,4 +647,3 @@ Ordningen i listan anger i vilken ordning profilerna tillämpas.
 1. Klicka på **Testa** för att se resultatet av din markering:
 
    ![crx_accescontrol_test](assets/crx_accesscontrol_test.png)
-
