@@ -2,6 +2,7 @@
 title: Granitåtgärder - användar- och gruppadministration
 seo-title: Granitåtgärder - användar- och gruppadministration
 description: Läs mer om administration av Granite-användare och grupper.
+feature: Dokumentskydd
 seo-description: Läs mer om administration av Granite-användare och grupper.
 uuid: 7b6b7767-712c-4cc8-8d90-36f26280d6e3
 contentOwner: Guillaume Carlino
@@ -9,14 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
+exl-id: bd29e81d-eb4a-4764-96f2-84e091836a8a
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '937'
 ht-degree: 1%
 
 ---
-
 
 # Granitåtgärder - användar- och gruppadministration{#granite-operations-user-and-group-administration}
 
@@ -234,4 +235,3 @@ StatusDu kan flagga kontot som antingen
    ![](do-not-localize/chlimage_1-6.png)
 
 1. Du ombeds bekräfta borttagningen och sedan bekräftar ett meddelande att borttagningen har ägt rum.
-
