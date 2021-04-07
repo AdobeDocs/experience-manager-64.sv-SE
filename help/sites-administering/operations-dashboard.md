@@ -2,6 +2,7 @@
 title: Instrumentpanel för åtgärder
 seo-title: Instrumentpanel för åtgärder
 description: Lär dig hur du använder kontrollpanelen för åtgärder.
+feature: Användning
 seo-description: Lär dig hur du använder kontrollpanelen för åtgärder.
 uuid: f1a6dcdc-307b-45f4-ade5-cedc58f0c7cf
 contentOwner: Guillaume Carlino
@@ -9,14 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: 7599fa42-3a47-49c9-8a7f-e0b6be302ff0
+exl-id: a0cb6a30-fdd4-4806-a5fa-45c98ad15d11
 translation-type: tm+mt
-source-git-commit: d72f86b167e3e9003ad2cd2e7628f95502cf9a33
+source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
 workflow-type: tm+mt
-source-wordcount: '6200'
+source-wordcount: '6201'
 ht-degree: 0%
 
 ---
-
 
 # Kontrollpanelen för åtgärder {#operations-dashboard}
 
@@ -80,7 +81,7 @@ Du skapar en enskild hälsokontroll i två steg: implementera en kontroll av ski
 
 1. För att kunna skapa en Sling Health Check måste du skapa en OSGI-komponent som implementerar Sling HealthCheck-gränssnittet. Du lägger till den här komponenten i ett paket. Komponentens egenskaper identifierar hälsokontrollen fullständigt. När komponenten har installerats skapas en JMX MBean automatiskt för hälsokontrollen. Mer information finns i [Dokumentation för hälsokontroll vid segmentering](https://sling.apache.org/documentation/bundles/sling-health-check-tool.html).
 
-   Exempel på en Sling Health Check-komponent, skriven med OSGI-tjänstkomponentanteckningar:
+   Exempel på en Sling Health Check-komponent, skriven med OSGI-tjänstkomponentsanteckningar:
 
    ```java
    @Component(service = HealthCheck.class,         
@@ -778,7 +779,7 @@ Du kan även hämta en `JSON`-fil som sammanfattar instrumentpanelsinformationen
    <td>Instans</td> 
    <td> 
     <ul> 
-     <li>aem</li> 
+     <li>AEM</li> 
      <li>lista över körningslägen</li> 
      <li>det datum då instansen startades</li> 
     </ul> </td> 
@@ -910,4 +911,3 @@ Du kan även hämta en `JSON`-fil som sammanfattar instrumentpanelsinformationen
   </tr> 
  </tbody> 
 </table>
-
