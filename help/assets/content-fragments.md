@@ -9,14 +9,16 @@ topic-tags: content-fragments
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
 discoiquuid: 22ae0d3a-083f-40e4-bf4a-7a755ae9e312
+exl-id: e2804707-7b75-4fae-937e-9e258481878f
+feature: Innehållsfragment
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 2d25f3154ac4a2b43aec98cf63699cabf0d113cf
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '2002'
+source-wordcount: '2004'
 ht-degree: 3%
 
 ---
-
 
 # Arbeta med innehållsfragment {#working-with-content-fragments}
 
@@ -256,7 +258,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
    * Lagras i fragmentet för att undvika spridning av innehållskopior.
    * Variationer kan vara [synkroniserade](content-fragments-variations.md#synchronizing-with-master) med Överordnad om det Överordnad innehållet har uppdaterats.
    * Kan vara [Summerad](content-fragments-variations.md#summarizing-text) för att snabbt korta av texten till en fördefinierad längd.
-   * Finns under fliken [Variationer](content-fragments-variations.md) i fragmentredigeraren.
+   * Tillgängligt under fliken [Variationer](content-fragments-variations.md) i fragmentredigeraren.
 
 ### Mellan innehåll vid sidredigering med innehållsfragment {#in-between-content-when-page-authoring-with-content-fragments}
 
@@ -306,4 +308,3 @@ Ett fragment, med dess element och variationer, kan användas för att skapa sam
 Ett exempelfragment kan visas på:
 
 [http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten](http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten)
-
