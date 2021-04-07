@@ -5,14 +5,16 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
+exl-id: b0f0c6e4-77c8-40db-a9f4-699d1a633571
+feature: Konfiguration,Scene7-läge
+role: Administrator,Business Practitioner,Developer
 translation-type: tm+mt
-source-git-commit: 4027bf6905d2e1d07c7f6adb70cbd249f8ee06a4
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '5175'
+source-wordcount: '5178'
 ht-degree: 2%
 
 ---
-
 
 # Konfigurera Dynamic Media - Scene7-läge {#configuring-dynamic-media-scene-mode}
 
@@ -162,7 +164,7 @@ Om du vill öppna sidan [!UICONTROL Application General Settings] trycker du på
 
 **[!UICONTROL Servers]** - Vid kontoetablering tillhandahåller Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen om du inte uttryckligen har fått instruktioner om att göra det från Experience Manager.
 
-**[!UICONTROL Overwrite Images]** - Dynamic Media tillåter inte att två filer har samma namn. Varje objekts URL-ID (filnamnet minus filtillägget) måste vara unikt. De här alternativen anger hur ersättningsresurser överförs: om de ersätter originalet eller blir dubbletter. Dubblettresurser får ett nytt namn med namnet&quot;-1&quot; (till exempel heter stol.tif stol-1.tif). Dessa alternativ påverkar resurser som överförts till en annan mapp än den ursprungliga eller resurser med ett annat filnamnstillägg än den ursprungliga (till exempel JPG, TIF eller PNG).
+**[!UICONTROL Overwrite Images]** - Dynamic Media tillåter inte att två filer har samma namn. Varje objekts URL-ID (filnamnet minus filtillägget) måste vara unikt. De här alternativen anger hur ersättningsresurser överförs: om de ersätter originalet eller blir dubbletter. Duplicerade resurser får ett nytt namn med namnet&quot;-1&quot; (till exempel heter stol.tif stol-1.tif). Dessa alternativ påverkar resurser som överförts till en annan mapp än den ursprungliga eller resurser med ett annat filnamnstillägg än den ursprungliga (till exempel JPG, TIF eller PNG).
 
 * **[!UICONTROL Overwrite in current folder, same base image name/extension]** - Det här alternativet är den striktaste regeln för ersättning. Det kräver att du överför ersättningsbilden till samma mapp som originalbilden och att ersättningsbilden har samma filnamnstillägg som originalbilden. Om dessa krav inte uppfylls skapas en dubblett.
 
@@ -656,4 +658,3 @@ Om du använder Dynamic Media för bildbehandling, video eller båda, kan du anv
    ![chlimage_1-4](assets/chlimage_1-4.png)
 
    Om du bara vill replikera originalet skriver du `+original`.
-
