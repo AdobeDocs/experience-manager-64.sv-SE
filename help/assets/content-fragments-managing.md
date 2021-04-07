@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: content-fragments
 content-type: reference
 discoiquuid: da8f968b-91cc-45a8-ae4b-757b4f840b8e
+exl-id: b21ba7a1-6e6f-4b95-9336-b49f7e932af5
+feature: Innehållsfragment
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 5ba23738118d7944026f405110e25b6a7f90866b
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1423'
 ht-degree: 3%
 
 ---
-
 
 # Hantera innehållsfragment {#managing-content-fragments}
 
@@ -42,7 +44,7 @@ Innehållsfragment lagras som **[!UICONTROL Assets]**, så hanteras främst frå
 
 ### Skapa ett innehållsfragment {#creating-a-content-fragment}
 
-Metoden för att skapa ett innehållsfragment är (i stort) densamma för både enkla och strukturerade fragment:
+Metoden för att skapa ett innehållsfragment är (i princip) densamma för både enkla och strukturerade fragment:
 
 1. Navigera till mappen **[!UICONTROL Assets]** där du vill skapa fragmentet.
 1. Välj **[!UICONTROL Create]** och sedan **[!UICONTROL Content Fragment]** för att öppna guiden.
@@ -232,7 +234,7 @@ Du kan visa och redigera egenskaperna för ett fragment på fliken [[!UICONTROL 
 
 ## Tidslinje för innehållsfragment {#timeline-for-content-fragments}
 
-Förutom standardalternativen ger [Tidslinjen](managing-assets-touch-ui.md#timeline) både information och åtgärder som är specifika för innehållsfragment:
+Förutom standardalternativen innehåller [Tidslinjen](managing-assets-touch-ui.md#timeline) både information och åtgärder som är specifika för innehållsfragment:
 
 * Visa information om versioner, kommentarer och anteckningar
 * Åtgärder för versioner
@@ -338,4 +340,3 @@ Så här tar du bort ett fragment:
    >[!CAUTION]
    >
    >Om fragmentet redan finns på en sida visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta med ett **[!UICONTROL Force Delete]**. Fragmentet, tillsammans med dess innehållskomponentfragment, tas bort från alla innehållssidor.
-
