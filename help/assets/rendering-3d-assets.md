@@ -9,14 +9,16 @@ topic-tags: 3D
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 5b044519-d034-4f05-98c5-f1b299a3ea37
+exl-id: 3eecec53-0b39-4783-8730-f08705183941
+feature: 3D-resurser
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 8c6fdcea0def7720062edfc564c536f8d47e8402
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
-
 
 # Återger 3D-resurser {#rendering-d-assets}
 
@@ -36,7 +38,7 @@ Se [Redigera sidinnehåll](/help/sites-authoring/qg-page-authoring.md#editing-yo
 
    Även om den här faktorn har mindre betydelse för standardåtergivningen av Rapid Refine, går det betydligt långsammare att återge tredjepartsrenderare som Mental Ray med IBL-stadier än med traditionella punkt- eller spotlights.
 
-Renderingen Snabb förfining tar normalt några minuter att återge större bilder. Återgivare från tredje part tar ofta många minuter, till och med timmar, när de är konfigurerade för maximal kvalitet.
+Renderingen Snabb förfining tar normalt några minuter att återge större bilder. Återgivare från tredje part tar ofta många minuter, till och med timmar, när de konfigureras för maximal kvalitet.
 
 Konverterings-, bearbetnings- och renderingsjobb köas på servern efter behov för att förhindra serveröverbelastning. Meddelandet&quot;Väntar på återgivning..&quot; visas på nyligen överförda resurser i kortvyn. Den här statusen anger att andra behandlings- eller återgivningsjobb måste slutföras innan det aktuella återgivningsjobbet kan startas.
 
@@ -58,7 +60,7 @@ Konverterings-, bearbetnings- och renderingsjobb köas på servern efter behov f
 
    ![chlimage_1-369](assets/chlimage_1-369.png)
 
-1. I närheten av det övre högra hörnet av sidan med resursinformation trycker du på ikonen **[!UICONTROL Stage Selector]** (spotlight) och väljer sedan ett scennamn med bakgrunden och ljuset som du vill använda på 3D-objektet.
+1. I närheten av det övre högra hörnet på sidan med resursinformation trycker du på ikonen **[!UICONTROL Stage Selector]** (spotlight) och väljer sedan ett scennamn med bakgrunden och ljuset som du vill använda på 3D-objektet.
 
    Se [Använda faser i AEM 3D](about-the-use-of-stages-in-aem-3d.md).
 
@@ -90,4 +92,3 @@ Konverterings-, bearbetnings- och renderingsjobb köas på servern efter behov f
 1. Tryck på **[!UICONTROL Start Render]** för att starta återgivningsprocessen.
 
    Ett meddelande visas tillfälligt som anger att återgivningen har startat. För enkelhetens skull innehåller det här meddelandet även en länk till den valda utdatamappen så att du kan navigera direkt till den.
-
