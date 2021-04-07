@@ -5,14 +5,16 @@ contentOwner: Rick Brough
 topic-tags: 3D
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
+exl-id: be8f6361-607d-4529-aef0-e8978dfd04b4
+feature: 3D-resurser
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
-
 
 # Arbeta med Adobe Dimension-resurser {#working-with-adobe-dimension-assets}
 
@@ -52,4 +54,3 @@ Observera att glTF-visningsprogrammets användargränssnitt skiljer sig något f
 * [AEM 3D-](/help/release-notes/aem3d-release-notes.md) versionsinformation om begränsningar och begränsningar som gäller för Dn-resurser och glTF-visningsprogrammet.
 * [Arbeta med 3D-platskomponenten ](using-the-3d-sites-component.md) för komponentegenskaper som är specifika för Adobe Dimension-resurser.
 * [Installera och konfigurera AEM 3](install-config-3d.md) Dför att konfigurera den molnbaserade konverteringstjänsten.
-
