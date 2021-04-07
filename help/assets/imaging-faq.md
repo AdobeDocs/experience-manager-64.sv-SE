@@ -13,9 +13,9 @@ exl-id: 2f24c4bc-8071-4403-b959-00db0f08db34
 feature: Smarta tjänster
 role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+source-git-commit: 331aca21069a0325da499279de5480c3f8536335
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1864'
 ht-degree: 1%
 
 ---
@@ -24,9 +24,13 @@ ht-degree: 1%
 
 ## Vad är&quot;Smart Imaging&quot;? {#what-is-smart-imaging}
 
-Smart Imaging-tekniken utnyttjar Adobe Sensei AI-funktioner och fungerar med befintliga&quot;bildförinställningar&quot; för att förbättra bildleveransen genom att automatiskt optimera bildformat, storlek och kvalitet baserat på webbläsarens kapacitet.
+Smart Imaging-tekniken använder Adobe Sensei AI-funktioner och fungerar med befintliga&quot;bildförinställningar&quot; för att förbättra bildleveransen genom att automatiskt optimera bildformat, storlek och kvalitet baserat på webbläsarens kapacitet.
 
-Smart Imaging drar också nytta av den ökade prestandaförbättringen genom att vara helt integrerad med Adobe förstklassiga CDN-tjänst. Den här tjänsten hittar den optimala Internetvägen mellan servrar, nätverk och peering-punkter som har den lägsta latensen och/eller paketförlustfrekvensen än standardvägen på Internet.
+>[!NOTE]
+>
+>Den här funktionen kräver att du använder det färdiga CDN (Content Delivery Network) som medföljer Adobe Experience Manager Dynamic Media. Eventuellt annat anpassat CDN stöds inte med den här funktionen.
+
+Smart Imaging drar också nytta av den ökade prestandaförbättringen genom att vara helt integrerad med Adobe förstklassiga CDN-tjänst. Den här tjänsten hittar den optimala Internetvägen mellan servrar, nätverk och peering-punkter. Den hittar en väg som har lägst latens och lägst paketförlustfrekvens i stället för att använda standardvägen på Internet.
 
 I följande bildresursexempel visas den nya optimeringen av smarta bilder:
 
@@ -38,37 +42,51 @@ I följande bildresursexempel visas den nya optimeringen av smarta bilder:
 | [Bild 4](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_1?hei=500&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture4](assets-dm/picture4.png) | 315,80 kB | 178,19 kB | 44 % |
 |  |  |  |  | Genomsnitt = 51 % |
 
-På samma sätt som ovanstående testade Adobe också 7 009 URL:er från kundsajter och kunde i genomsnitt optimera filstorleken 38 % ytterligare för JPEG och optimera filstorleken 31 % ytterligare för PNG med WebP-format, tack vare Smart Imaging.
+På samma sätt som ovanstående testade Adobe också 7 009 URL:er från kundsajter. De kunde i genomsnitt optimera JPEG med 38 % ytterligare. För PNG med WebP-format kunde de i genomsnitt optimera filstorleken med 31 %. Den här typen av optimering är möjlig tack vare funktionen för smart bildbehandling.
 
 ## Vilka är de viktigaste fördelarna med den senaste Smart Imaging? {#what-are-the-key-benefits-of-smart-imaging}
 
-Eftersom bilder utgör större delen av en sidas inläsningstid kan prestandaförbättringarna få en genomgripande effekt på nyckeltal som högre konvertering, tid på webbplatsen och lägre avhoppsfrekvens.
+Eftersom bilder utgör det mesta av en sidas laddningstid kan prestandaförbättringarna få en genomgripande effekt på ett företag, till exempel högre konverteringsgrad, tidsåtgång på webbplatsen och lägre avhoppsfrekvens.
 
 Förbättringar i den senaste versionen av Smart Imaging:
 
+* Förbättrad Google SEO-rankning för webbsidor med hjälp av den senaste Smart Imaging-funktionen.
 * Serverar optimerat innehåll direkt (vid körning).
 * Använder Adobe Sensei-teknik för att konvertera enligt den kvalitet (qlt) som anges i bildbegäran.
 * Smart Imaging kan inaktiveras med URL-parametern &quot;bfc&quot;.
 * TTL-oberoende (Time To Live). Tidigare var en minsta TTL på 12 timmar obligatorisk för att Smart Imaging skulle fungera.
-* Tidigare cachelagrades både original- och härledda bilder, och det var en tvåstegsprocess för att göra cacheminnet ogiltigt. I den senaste versionen av Smart Imaging cachelagras bara derivat, vilket möjliggör en cacheogiltigförklaring i ett enda steg.
-* Kunder som använder anpassade rubriker i sina regeluppsättningar (till exempel&quot;Timing Allow Origin&quot;,&quot;X-Robot&quot; som föreslogs i [Lägga till ett anpassat rubrikvärde i bildsvar|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)) har nytta av den senaste smarta bildhanteringen eftersom dessa rubriker inte är blockerade, till skillnad från den tidigare versionen av Smart Imaging.
+* Tidigare cachelagrades både original- och härledda bilder, och det var en tvåstegsprocess att göra cacheminnet ogiltigt. I den senaste versionen av Smart Imaging cachelagras bara derivat, vilket möjliggör en cacheogiltigförklaring i ett enda steg.
+* Kunder som använder anpassade rubriker i sina regeluppsättningar kan dra nytta av den senaste smarta bildhanteringen eftersom dessa rubriker inte blockeras, till skillnad från den tidigare versionen av Smart Imaging. Exempel:&quot;Timing Allow Origin&quot;,&quot;X-Robot&quot; som föreslogs i [Lägga till ett anpassat rubrikvärde i bildsvar|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html).
 
 ## Kostar licensieringen för smart bildbehandling några? {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
-Nej. Smart Imaging ingår i din befintliga licens av antingen Dynamic Media Classic eller AEM Dynamic Media (On Prem, AMS och AEM som Cloud Service).
+Nej. Smart Imaging ingår i din befintliga licens av Dynamic Media Classic eller Adobe Experience Manager - Dynamic Media (On-prem, AMS och Experience Manager som Cloud Service).
 
 >[!NOTE]
 >
 >Smart Imaging är inte tillgängligt för Dynamic Media - Hybrid-kunder.
 
-
 ## Hur fungerar smart bildbehandling? {#how-does-smart-imaging-work}
 
-Smart Imaging använder Adobe Sensei för att automatiskt konvertera bilder till det optimala formatet, storleken och kvaliteten, baserat på webbläsarkapacitet:
+När en bild efterfrågas av en konsument kontrollerar Smart Imaging användarens egenskaper och konverterar till rätt bildformat baserat på vilken webbläsare som används. Dessa formatkonverteringar görs på ett sätt som inte försämrar den visuella återgivningen. Smart bildbehandling konverterar automatiskt bilder till olika format baserat på webbläsarkapacitet på följande sätt.
 
-* Konvertera automatiskt till WebP för webbläsare som Chrome, Firefox, Microsoft Edge, Android och Opera.
-* Konvertera automatiskt till JPEG2000 för webbläsare som Safari.
-* Konvertera automatiskt till JPEG för webbläsare som Internet Explorer 9+.
+<!--   * Safari 14.0 +
+    * Safari 14 only with iOS 14.0 and above and macOS BigSur and above -->
+
+* Konvertera automatiskt till WebP för följande webbläsare:
+   * Krom
+   * Firefox
+   * Microsoft® Edge
+   * Safari (i iOS, macOS, iPadOS), webbläsare och operativsystem stöder WebP
+   * Android™
+   * Opera
+* Stöd för äldre webbläsare för följande:
+
+   | Webbläsare | Webbläsare/OS-version | Format |
+   | --- | --- | --- |
+   | Safari | Tidigare än iOS/iPad 14.0 eller macOS BigSur | JPEG2000 |
+   | Edge | Tidigare än 18 | JPEGXR |
+   | Internet Explorer | 9+ | JPEGXR |
 * För webbläsare som inte stöder dessa format används det bildformat som ursprungligen begärdes.
 
 Om den ursprungliga bildstorleken är mindre än vad Smart Imaging skapar, behålls originalbilden.
@@ -76,6 +94,7 @@ Om den ursprungliga bildstorleken är mindre än vad Smart Imaging skapar, behå
 ## Vilka bildformat stöds? {#what-image-formats-are-supported}
 
 Följande bildformat stöds för Smart Imaging:
+
 * JPEG
 * PNG
 
@@ -89,25 +108,27 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 ## Hur fungerar Smart Imaging med befintliga bildförinställningar som redan används? {#how-does-smart-imaging-work-with-our-existing-image-presets-that-are-already-in-use}
 
-Smart Imaging fungerar med dina befintliga &quot;bildförinställningar&quot; och alla bildinställningar kontrolleras, med undantag för kvalitet (qlt) och format (fmt) om det begärda filformatet är JPEG eller PNG. För formatkonvertering behåller vi fullständig visuell återgivning enligt inställningarna i bildförinställningen, men med en mindre filstorlek. Om den ursprungliga bildstorleken är mindre än vad Smart Imaging skapar, behålls originalbilden.
+Smart Imaging fungerar med dina befintliga &quot;bildförinställningar&quot; och alla bildinställningar registreras förutom för kvalitet (`qlt`) och format (`fmt`) om det begärda filformatet är JPEG eller PNG. Vid formatkonvertering bevarar Adobe fullständig visuell återgivning enligt inställningarna i bildförinställningen, men med en mindre filstorlek. Om den ursprungliga bildstorleken är mindre än vad Smart Imaging skapar, behålls originalbilden.
 
 <!-- CQDOC-15846 In addition, if your image presets are used to return `fmt !=JPEG` or `fmt !=PNG`, be sure append `bfc=off` in the preset modifier field to return the requested file format. -->
 
-## Måste jag ändra URL:er, bildförinställningar eller driftsätta ny kod för Smart Imaging på min webbplats? {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
+## Måste jag ändra URL:er, bildförinställningar eller distribuera ny kod för Smart Imaging på min webbplats? {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
-Smart Imaging fungerar sömlöst med befintliga bild-URL:er och bildförinställningar. Dessutom kräver Smart Imaging inte att du lägger till kod på webbplatsen för att identifiera en användares webbläsare. Allt detta hanteras automatiskt.
+Smart Imaging fungerar sömlöst med dina befintliga bild-URL:er och bildförinställningar om du konfigurerar Smart Imaging på din befintliga anpassade domän. Dessutom kräver Smart Imaging inte att du lägger till kod på webbplatsen för att identifiera en användares webbläsare. Allt hanteras automatiskt.
+
+Om du måste konfigurera en ny anpassad domän att använda Smart Imaging måste URL:erna uppdateras för att återspegla den anpassade domänen.
 
 <!-- CQDOC-15846 As mentioned earlier, Smart Imaging supports only JPEG and PNG image formats. For other formats, you need to append the `bfc=off` modifier to the URL as described earlier. -->
 
-Se även [Är jag berättigad att använda Smart Imaging?](#am-i-eligible-to-use-smart-imaging) för att förstå vad som krävs för smart bildbehandling.
+Mer information om krav för smart bildbehandling finns i [Är jag berättigad att använda Smart bildbehandling?](#am-i-eligible-to-use-smart-imaging)
 
-## Fungerar Smart Mmaging med HTTPS? Vad sägs om HTTP/2? {#does-smart-imaging-working-with-https-how-about-http}
+## Fungerar Smart Imaging med HTTPS? Vad sägs om HTTP/2? {#does-smart-imaging-working-with-https-how-about-http}
 
 Smart Imaging fungerar med bilder som levereras via HTTP eller HTTPS. Dessutom fungerar det även över HTTP/2.
 
 ## Är jag berättigad att använda smart bildbehandling? {#am-i-eligible-to-use-smart-imaging}
 
-Om du vill använda Smart Imaging måste ditt företags Dynamic Media Classic- eller Dynamic Media-konto AEM uppfylla följande krav:
+Om du vill använda Smart Imaging måste ditt företags Dynamic Media Classic- eller Dynamic Media-konto på Experience Manager uppfylla följande krav:
 
 * Använd det Adobe-paketerade CDN (Content Delivery Network) som en del av licensen.
 * Använd en dedikerad domän (till exempel `images.company.com` eller `mycompany.scene7.com`), inte en allmän domän (till exempel `s7d1.scene7.com`, `s7d2.scene7.com` eller `s7d13.scene7.com`).
@@ -120,15 +141,15 @@ Din första anpassade domän kostar inget extra med en Dynamic Media-licens.
 
 ## Hur aktiverar jag Smart Imaging för mitt konto? {#what-is-the-process-for-enabling-smart-imaging-for-my-account}
 
-Du måste initiera begäran om att använda smart bildåtergivning; den inte aktiveras automatiskt.
+Du initierar begäran om att använda smart bildbehandling; den inte aktiveras automatiskt.
 
 1. [Använd Admin Console för att skapa ett supportärende.](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)
 1. Ange följande information i ditt supportärende:
 
    1. Primärt kontaktnamn, e-postadress, telefon.
-   1. Alla domäner som ska aktiveras för smart bildbehandling (det vill säga images.company.com eller mycompany.scene7.com).
+   1. Alla domäner som ska aktiveras för smart bildåtergivning (d.v.s. i`mages.company.com` eller `mycompany.scene7.com`).
 
-      Om du vill hitta dina domäner loggar du in på ditt företagskonto eller dina företagskonton.
+      Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt eller dina företagskonton.
 
       Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**.
 
@@ -136,16 +157,16 @@ Du måste initiera begäran om att använda smart bildåtergivning; den inte akt
    1. Kontrollera att du använder CDN via Adobe och inte hanteras med en direkt relation.
    1. Kontrollera att du använder en dedikerad domän som `images.company.com` eller `mycompany.scene7.com` och inte en allmän domän, som `s7d1.scene7.com`, `s7d2.scene7.com`, `s7d13.scene7.com`.
 
-      Om du vill hitta dina domäner loggar du in på ditt företagskonto eller dina företagskonton.
+      Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt eller dina företagskonton.
 
       Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**.
 
       Leta efter fältet **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän Dynamic Media Classic-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
-   1. Ange om du även vill att detta ska fungera över HTTP/2.
+   1. Ange om du även behöver Smart Imaging för att arbeta över HTTP/2.
 
-1. Den tekniska supporten lägger till dig i väntelistan för Smart Imaging-kunder baserat på i vilken ordning begäranden skickades.
+1. Adobe kundtjänst lägger till dig i väntelistan för Smart Imaging baserat på i vilken ordning begäranden skickades.
 1. När Adobe är redo att hantera din begäran kontaktar supporten dig för att koordinera och ange ett måldatum.
-1. **Valfritt**: Du kan testa smart bildåtergivning i mellanlagring innan Adobe överför den nya funktionen till produktion.
+1. **Valfritt**: Du kan också testa smart bildåtergivning i mellanlagring innan Adobe överför den nya funktionen till produktion.
 1. Du meddelas när du är klar via supporten.
 1. För att maximera prestandaförbättringarna av Smart Imaging rekommenderar Adobe att TTL (Time To Live) ställs in på 24 timmar eller längre. TTL-värdet definierar hur länge resurser cachas av CDN. Så här ändrar du den här inställningen:
 
@@ -157,13 +178,14 @@ Du måste initiera begäran om att använda smart bildåtergivning; den inte akt
 Förfrågningar behandlas i den ordning som de tas emot av teknisk support, enligt väntelistan.
 
 >[!NOTE]
-Det kan ta lång tid att skapa eftersom du måste rensa cacheminnet genom att aktivera Smart bildbehandling. Därför kan bara ett fåtal kundövergångar hanteras vid en viss tidpunkt.
+>
+>Det kan ta lång tid att skapa eftersom du måste rensa cacheminnet genom att aktivera Smart Imaging. Därför kan bara ett fåtal kundövergångar hanteras vid en viss tidpunkt.
 
 ## Vilka är riskerna med att byta till Smart Imaging? {#what-are-the-risks-with-switching-over-to-use-smart-imaging}
 
-Det finns ingen risk för kundens webbsida. Du bör dock vara medveten om att övergången till Smart Imaging rensar bort ditt cacheminne vid CDN eftersom det handlar om att byta till en ny konfiguration av Dynamic Media Classic eller Dynamic Media AEM.
+Det finns ingen risk för kundens webbsida. Övergången till Smart Imaging rensar emellertid bort cacheminnet vid CDN eftersom det handlar om att gå över till en ny konfiguration av Dynamic Media Classic eller Dynamic Media på Experience Manager.
 
-Under den inledande övergången kommer de icke-cachelagrade bilderna direkt till Adobe ursprungliga servrar tills cachen återskapas. På grund av detta planerar Adobe att hantera ett fåtal kundövergångar i taget så att godtagbara prestanda upprätthålls när vi drar in förfrågningar från vårt ursprung. För de flesta kunder är cacheminnet helt uppbyggt igen på CDN inom cirka 1 till 2 dagar.
+Under den inledande övergången kommer de icke-cachelagrade bilderna direkt till Adobe origin-servrarna tills cachen återskapas. Därför planerar Adobe att hantera ett fåtal kundövergångar i taget så att man behåller godtagbara prestanda när man drar in förfrågningar från Adobe origin. För de flesta kunder är cacheminnet helt uppbyggt igen på CDN inom cirka 1-2 dagar.
 
 ## Hur kan jag verifiera om smart bildbehandling fungerar som väntat?  {#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
 
@@ -172,14 +194,15 @@ Under den inledande övergången kommer de icke-cachelagrade bilderna direkt til
 
 1. Kontrollera att cache är inaktiverat när utvecklingsverktygen är öppna.
 
-   * I Windows navigerar du till inställningarna i rutan för utvecklarverktyget och markerar kryssrutan **[!UICONTROL Disable cache (while devtools is open)]**.
-   * På Mac - i utvecklarfönstret väljer du **[!UICONTROL Network]** under fliken **[!UICONTROL disable cache]**.
+   * I Windows® går du till inställningarna i rutan för utvecklarverktyget och markerar kryssrutan **[!UICONTROL Disable cache (while devtools is open)]**.
+   * I macOS väljer du **[!UICONTROL disable cache]** under fliken **[!UICONTROL Network]** i utvecklarfönstret.
 
 1. Observera att innehållstypen har omvandlats till lämpligt format. På följande skärmbild visas en PNG-bild som konverteras dynamiskt till WebP i Chrome.
 1. Upprepa testet i olika webbläsare och under olika användarförhållanden.
 
 >[!NOTE]
-Alla bilder konverteras inte. Smart Imaging avgör om konverteringen behövs för att förbättra prestandan. I vissa fall, där det inte finns någon förväntad prestandaökning eller där formatet inte är JPEG eller PNG, konverteras inte bilden.
+>
+>Alla bilder konverteras inte. Smart Imaging avgör om konverteringen förbättrar prestandan. Ibland konverteras bilden inte om det inte finns någon förväntad prestandaökning eller om formatet inte är JPEG eller PNG.
 
 ![image2017-11-14_15398](assets/image2017-11-14_15398.png)
 
@@ -191,10 +214,10 @@ Ja. Du kan inaktivera Smart Imaging genom att lägga till modifieraren `bfc=off`
 
 För närvarande kan du välja att aktivera eller inaktivera Smart bildbehandling. Ingen annan justering är tillgänglig.
 
-## Om Smart Imaging hanterar kvalitetsinställningarna, finns det några minimi- och maximumvärden vi kan ange? Kan du till exempel ange &quot;inte lägre än 60&quot; och &quot;inte större än 80&quot;? (#minimum-maximum)
+## Om Smart Imaging hanterar kvalitetsinställningarna, finns det några minimum och maximivärden att ange? Kan du till exempel ange &quot;inte lägre än 60&quot; och &quot;inte större än 80&quot;? (#minimum-maximum)
 
 Det finns ingen sådan provisioneringsmöjlighet i den aktuella funktionen för smart bildbehandling.
 
-## I vissa fall returneras en JPEG-bild till Chrome i stället för till en WebP-bild. Varför händer det där? (#jpeg-webp)
+## Ibland returneras en JPEG-bild till Chrome i stället för till en WebP-bild. Varför? (#jpeg-webp)
 
 Smart bildbehandling avgör om konverteringen är bra eller inte. Den nya bilden returneras bara om konverteringen resulterar i en mindre filstorlek med jämförbar kvalitet.
