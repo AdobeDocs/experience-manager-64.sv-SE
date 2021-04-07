@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d630499d-740d-4979-8a34-9e3fcc3b5a23
+exl-id: 4d3299e2-269b-4a41-a979-c884c707666d
+feature: Interaktiva bilder
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '4194'
+source-wordcount: '4196'
 ht-degree: 1%
 
 ---
-
 
 # Interaktiva bilder {#interactive-images}
 
