@@ -4,15 +4,15 @@ description: Lär dig mer om olika resurshanterings- och redigeringsuppgifter so
 contentOwner: AG
 mini-toc-levels: 1
 feature: Resurshantering, sökning, renderingar, samarbete
-role: Yrkesverksamma inom affärsverksamhet
+role: Business Practitioner
+exl-id: aa1a702b-18dd-496b-a6e0-aa593af6e57c
 translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+source-git-commit: fd79ac0694d5b7af0422c546cc4a94fdf2326d37
 workflow-type: tm+mt
-source-wordcount: '9728'
+source-wordcount: '9762'
 ht-degree: 2%
 
 ---
-
 
 # Hantera dina digitala resurser {#managing-assets-with-the-touch-optimized-ui}
 
@@ -571,48 +571,33 @@ Du måste ha behörighet att ta bort en resurs för att den ska kunna tas bort. 
 
 Se [Hämta resurser från AEM](download-assets-from-aem.md)
 
-## Publicera resurser {#publishing-assets}
+## Publicera och avpublicera resurser {#publish-assets}
 
-Om du publicerar ett material som bearbetas publiceras bara det ursprungliga innehållet. Återgivningarna saknas. Vänta tills bearbetningen är klar och publicera sedan resursen eller publicera den igen när bearbetningen är klar.
+När du har överfört, bearbetat eller redigerat dina resurser på [!DNL Experience Manager]-författaren publicerar du resursen till publiceringsservern. Publicering gör materialet tillgängligt för allmänheten. Funktionen för avpublicering tog bort resursen från publiceringsservern men inte från redigeringsservern.
 
-Om mappen som du vill publicera innehåller en tom mapp publiceras inte den tomma mappen.
+Mer information om [!DNL Dynamic Media] finns i [publicera [!DNL Dynamic Media] resurser](publishing-dynamicmedia-assets.md).
 
-Mer information om Dynamic Media finns i [Publicera Dynamic Media Assets](publishing-dynamicmedia-assets.md).
+1. Navigera till platsen för resursen eller resursmappen som du vill publicera eller som du vill ta bort från publiceringsmiljön (avpublicera).
 
-**Så här publicerar du resurser**:
+1. Markera resursen eller mappen som ska avpubliceras och klicka på **[!UICONTROL Manage Publication]** ![alternativet Hantera publikation](assets/do-not-localize/globe-publication.png) i verktygsfältet. Du kan även publicera snabbt genom att välja alternativet **[!UICONTROL Quick Publish]** i verktygsfältet. Om mappen som du vill publicera innehåller en tom mapp publiceras inte den tomma mappen.
 
-1. Navigera till platsen för resurserna/mappen som du vill publicera
+1. Välj **[!UICONTROL Publish]** eller **[!UICONTROL Unpublish]** efter behov.
 
-1. Välj snabbåtgärden **[!UICONTROL Publish]** från resurskortet eller markera resursen och tryck på ikonen **[!UICONTROL Quick Publish]** i verktygsfältet.
-1. Om resursen refererar till andra resurser visas dess referenser i guiden. Endast referenser som antingen är opublicerade eller ändrade sedan de senast publicerades eller inte publicerades visas. Välj de referenser som du vill publicera.
+   ![Avpubliceringsåtgärd](assets/unpublish_action.png)
+   *Bild: Alternativ för publicering och avpublicering samt schemaläggning.*
 
-   ![chlimage_1-21](assets/chlimage_1-21.png)
+1. Välj **[!UICONTROL Now]** om du vill agera på resursen direkt eller välj **[!UICONTROL Later]** om du vill schemalägga åtgärden. Välj ett datum och en tid om du väljer alternativet **[!UICONTROL Later]**. Klicka på **[!UICONTROL Next]**.
 
-1. Tryck på **[!UICONTROL Publish]** för att bekräfta aktiveringen för resurserna.
+1. Om en resurs refererar till andra resurser vid publicering visas dess referenser i guiden. Endast de referenser som inte har publicerats eller ändrats sedan den senaste publiceringen visas. Välj de referenser som du vill publicera.
 
-## Avpublicera resurser {#unpublishing-assets}
+1. Om en resurs refererar till andra resurser vid avpublicering väljer du de referenser som du vill avpublicera. Klicka på **[!UICONTROL Unpublish]**. Klicka på **[!UICONTROL Cancel]** i bekräftelsedialogrutan för att stoppa åtgärden eller klicka på **[!UICONTROL Unpublish]** för att bekräfta att resurserna ska avpubliceras vid det angivna datumet.
 
-När du avpublicerar en komplex resurs avpublicerar du bara resursen. Undvik att avpublicera referenserna eftersom andra publicerade resurser kan referera till dem.
+Förstå följande begränsningar och tips för publicering eller avpublicering av resurser och mappar:
 
-**Så här avpublicerar du resurser**:
-
-1. Navigera till platsen för resursen eller resursmappen som du vill ta bort från publiceringsmiljön (avpublicera).
-
-1. Markera resursen eller mappen som ska avpubliceras och tryck på ikonen **[!UICONTROL Manage Publication]** i verktygsfältet.
-
-   ![manage_publication](assets/manage_publication.png)
-
-1. Välj åtgärden **[!UICONTROL Unpublish]** i listan.
-
-   ![unpublish_action](assets/unpublish_action.png)
-
-1. Om du vill avpublicera resursen senare väljer du **[!UICONTROL Unpublish Later]** och väljer sedan ett datum för att avpublicera resursen.
-1. Schemalägg ett datum då resursen inte ska vara tillgänglig från publiceringsmiljön.
-1. Om resursen refererar till andra resurser väljer du de referenser du vill avpublicera. Tryck på **[!UICONTROL Unpublish]**.
-1. Gör något av följande i bekräftelsedialogrutan:
-
-   * Tryck på **[!UICONTROL Cancel]** för att stoppa åtgärden
-   * Tryck på **[!UICONTROL Unpublish]** för att bekräfta att resurserna är opublicerade (inte längre tillgängliga i publiceringsmiljön) vid det angivna datumet.
+* Alternativet [!UICONTROL Manage Publication] är bara tillgängligt för användarkonton som har replikeringsbehörigheter.
+* När du avpublicerar en komplex resurs avpublicerar du bara resursen. Undvik att avpublicera referenserna eftersom andra publicerade resurser kan referera till dem.
+* Tomma mappar publiceras inte.
+* Om du publicerar ett material som bearbetas publiceras bara det ursprungliga innehållet. Återgivningarna saknas. Antingen väntar du på att bearbetningen ska slutföras och publicerar eller publicerar om resursen när bearbetningen är klar.
 
 ## Skapa en stängd användargrupp {#closed-user-group}
 
@@ -821,7 +806,7 @@ Du kan också välja att bara skriva ut anteckningarna eller granskningsstatusen
 
 Långa anteckningar kanske inte återges korrekt i PDF-filen. För optimal återgivning rekommenderar Adobe att du begränsar kommentarerna till 50 ord.
 
-Om du vill skriva ut anteckningarna och granskningsstatusen trycker du på ikonen **[!UICONTROL Print]** och följer instruktionerna i guiden. Ikonen **[!UICONTROL Print]** visas bara i verktygsfältet när resursen har minst en antecknings- eller granskningsstatus tilldelad.
+Om du vill skriva ut anteckningarna och granskningsstatusen trycker du på ikonen **[!UICONTROL Print]** och följer instruktionerna i guiden. Ikonen **[!UICONTROL Print]** visas bara i verktygsfältet när resursen har tilldelats minst en antecknings- eller granskningsstatus.
 
 1. Öppna förhandsgranskningssidan för en resurs i resursgränssnittet.
 1. Gör något av följande:
