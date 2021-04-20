@@ -2,7 +2,7 @@
 title: Säkerhetschecklista
 seo-title: Säkerhetschecklista
 description: Läs om de olika säkerhetsaspekterna när du konfigurerar och distribuerar AEM.
-feature: Dokumentskydd
+feature: Security
 seo-description: Läs om de olika säkerhetsaspekterna när du konfigurerar och distribuerar AEM.
 uuid: 8ecd0c35-249e-4f72-b7e9-97e72698b5c1
 contentOwner: msm-service

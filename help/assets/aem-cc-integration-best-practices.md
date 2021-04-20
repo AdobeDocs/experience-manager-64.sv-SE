@@ -2,7 +2,7 @@
 title: Bästa praxis för integrering av AEM och Creative Cloud
 description: Bästa tillvägagångssätt för att integrera en AEM driftsättning med Adobe Creative Cloud för att effektivisera arbetsflöden för överföring av resurser och uppnå maximal effektivitet
 contentOwner: AG
-feature: Samarbete,Adobe Asset Link,Skrivbordsapp
+feature: Collaboration,Adobe Asset Link,Desktop App
 role: Business Practitioner,Administrator
 exl-id: cb9bea05-3359-4fb4-b935-59e522a5f387
 translation-type: tm+mt

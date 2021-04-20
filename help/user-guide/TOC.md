@@ -6,7 +6,7 @@ user-guide-title: AEM 6.4 Användarhandbok
 user-guide-description: Översikt över alla nödvändiga resurser för att förstå, installera, hantera och använda AEM 6.4.
 contentOwner: Chris Bohnert
 feature-set: Experience Manager
-feature: Versionsinformation
+feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Administrator, Business Practitioner
 translation-type: tm+mt
 source-git-commit: ca18aa3d207aa9506d22286eaaabdd0991d8e4e7

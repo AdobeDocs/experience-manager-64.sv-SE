@@ -2,7 +2,7 @@
 title: Konfigurera överföringsbegränsningar för resurser
 description: Lär dig hur du konfigurerar Adobe Experience Manager (AEM) Resurser för att begränsa vilken typ av resurser (filer) som användare kan överföra.
 contentOwner: AG
-feature: Överför,Resursintag,Resurshantering
+feature: Upload,Asset Ingestion,Asset Management
 role: Administrator,Architect
 exl-id: 0d817cfa-ae06-442a-ad89-5fe619bb2eff
 translation-type: tm+mt

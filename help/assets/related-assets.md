@@ -2,8 +2,8 @@
 title: Relaterade tillgångar
 description: Lär dig hur du relaterar resurser som delar vissa gemensamma attribut. Du kan också använda funktionen för att skapa käll-/härledda relationer mellan resurser.
 contentOwner: AG
-feature: Resurshantering,Samarbete
-role: Yrkesverksamma inom affärsverksamhet
+feature: Asset Management,Collaboration
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

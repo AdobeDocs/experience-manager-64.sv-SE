@@ -2,7 +2,7 @@
 title: Granitåtgärder - användar- och gruppadministration
 seo-title: Granitåtgärder - användar- och gruppadministration
 description: Läs mer om administration av Granite-användare och grupper.
-feature: Dokumentskydd
+feature: Security
 seo-description: Läs mer om administration av Granite-användare och grupper.
 uuid: 7b6b7767-712c-4cc8-8d90-36f26280d6e3
 contentOwner: Guillaume Carlino

@@ -2,8 +2,8 @@
 title: Installera och konfigurera ImageMagick så att det fungerar med AEM Assets
 description: Läs om programmet ImageMagick, hur du installerar det, konfigurerar kommandoradsprocessen och använder det för att redigera, skapa och generera miniatyrbilder från bilder.
 contentOwner: AG
-feature: Återgivningar,Utvecklarverktyg
-role: Administratör
+feature: Renditions,Developer Tools
+role: Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

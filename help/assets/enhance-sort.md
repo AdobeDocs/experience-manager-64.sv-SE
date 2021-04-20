@@ -2,8 +2,8 @@
 title: Förbättrad sortering av material i AEM
 description: Läs om hur AEM Assets använder sortering på serversidan för att sortera mappresurser eller en sökfråga samtidigt i stället för att sortera dem gruppvis på klientsidan.
 contentOwner: AG
-feature: Sökning
-role: Yrkesverksamma inom affärsverksamhet
+feature: Search
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
 workflow-type: tm+mt

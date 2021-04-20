@@ -2,7 +2,7 @@
 title: Granskningslogghantering i AEM 6
 seo-title: Granskningslogghantering i AEM 6
 description: Lär dig mer om underhåll av granskningslogg i AEM.
-feature: Användning
+feature: Operations
 seo-description: Lär dig mer om underhåll av granskningslogg i AEM.
 uuid: 212de4df-6bf4-434c-94e1-74186d21945a
 contentOwner: User

@@ -2,8 +2,8 @@
 title: Sök efter resurser i AEM
 description: Lär dig hur du söker efter nödvändiga resurser i AEM genom att använda panelen Filter och hur du använder de resurser som visas i sökningen.
 contentOwner: AG
-feature: Sök,Metadata
-role: Yrkesverksamma inom affärsverksamhet
+feature: Search,Metadata
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

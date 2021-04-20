@@ -2,7 +2,7 @@
 title: Granska åtgärder för användarhantering i AEM
 seo-title: Granska åtgärder för användarhantering i AEM
 description: Lär dig hur du granskar åtgärder för användarhantering i AEM.
-feature: Användning
+feature: Operations
 seo-description: Lär dig hur du granskar åtgärder för användarhantering i AEM.
 uuid: 4ea704b4-9150-4b5f-b9cb-cdac95cfd70c
 contentOwner: User

@@ -3,8 +3,8 @@ title: Hantera resurssamlingar
 description: Lär dig mer om hur du hanterar samlingar med resurser, som att skapa, visa, ta bort, redigera och hämta samlingar.
 contentOwner: AG
 mini-toc-levels: 1
-feature: Samlingar
-role: Yrkesverksamma inom affärsverksamhet
+feature: Collections
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
 workflow-type: tm+mt

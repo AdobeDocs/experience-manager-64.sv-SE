@@ -2,8 +2,8 @@
 title: Publicera mappar på varumärkesportalen
 description: Lär dig hur du publicerar och avpublicerar resurser på varumärkesportalen.
 contentOwner: VG
-feature: Varumärkesportal
-role: Yrkesverksamma inom affärsverksamhet
+feature: Brand Portal
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt

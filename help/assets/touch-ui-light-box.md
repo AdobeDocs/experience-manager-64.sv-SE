@@ -2,8 +2,8 @@
 title: Ljuslåda
 description: Läs mer om ljuslådan i AEM Assets.
 contentOwner: AG
-feature: Utvecklarverktyg,Återgivningar
-role: Affärsledare,Administratör
+feature: Developer Tools,Renditions
+role: Business Practitioner,Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

@@ -2,8 +2,8 @@
 title: Hämta digitala resurser från [!DNL Adobe Experience Manager].
 description: Lär dig hur du hämtar resurser från [!DNL Adobe Experience Manager] och aktiverar eller inaktiverar hämtningsfunktionen.
 contentOwner: AG
-feature: Resurshantering,Resursfördelning
-role: Yrkesverksamma inom affärsverksamhet
+feature: Asset Management,Asset Distribution
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

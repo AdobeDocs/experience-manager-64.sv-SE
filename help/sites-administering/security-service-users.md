@@ -2,7 +2,7 @@
 title: Tjänstanvändare i AEM
 seo-title: Tjänstanvändare i AEM
 description: Läs mer om tjänstanvändare i AEM.
-feature: Dokumentskydd
+feature: Security
 seo-description: Läs mer om tjänstanvändare i AEM.
 uuid: 4efab5fb-ba11-4922-bd68-43ccde4eb355
 contentOwner: User

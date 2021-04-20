@@ -7,7 +7,7 @@ user-guide-title: AEM 6.4 Developing User Guide
 breadcrumb-title: Utvecklingshandbok
 user-guide-description: Den här guiden beskriver hur du skapar AEM.
 feature-set: Experience Manager Sites
-feature: Utveckling
+feature: Developing
 role: Developer
 translation-type: tm+mt
 source-git-commit: ca18aa3d207aa9506d22286eaaabdd0991d8e4e7

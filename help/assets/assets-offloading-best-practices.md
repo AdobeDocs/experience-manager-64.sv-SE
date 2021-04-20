@@ -2,8 +2,8 @@
 title: Metodtips för att avlasta resurser
 description: Rekommenderade användningsexempel och bästa praxis för att avlasta arbetsflöden för tillgångsintag och replikering i AEM Assets.
 contentOwner: AG
-feature: Resurshantering
-role: Affärsledare,Administratör
+feature: Asset Management
+role: Business Practitioner,Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

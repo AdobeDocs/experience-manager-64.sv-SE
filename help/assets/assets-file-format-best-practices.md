@@ -2,8 +2,8 @@
 title: Bästa metoder för att använda filformat
 description: Bästa tillvägagångssätt för filstöd i AEM Assets.
 contentOwner: AG
-feature: Resurshantering,Utvecklarverktyg
-role: Administratör
+feature: Asset Management,Developer Tools
+role: Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

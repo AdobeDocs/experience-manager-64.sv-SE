@@ -2,8 +2,8 @@
 title: Bästa tillvägagångssätt för att hantera resurser med AEM
 description: Identifiera och följ de bästa metoderna som förbättrar systemets stabilitet och prestanda under belastningen, beroende på AEM Assets driftsättning och funktioner som används för att importera och bearbeta resurser.
 contentOwner: AG
-feature: Resurshantering
-role: Arkitekt,administratör
+feature: Asset Management
+role: Architect,Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

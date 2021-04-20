@@ -2,8 +2,8 @@
 title: Resurser - nätverksaspekter
 description: Diskutera nätverksaspekter när du utformar en AEM Assets-distribution.
 contentOwner: AG
-feature: Utvecklarverktyg
-role: Arkitekt,administratör
+feature: Developer Tools
+role: Architect,Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

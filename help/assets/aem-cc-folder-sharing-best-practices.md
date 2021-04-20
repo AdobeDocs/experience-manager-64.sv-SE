@@ -2,8 +2,8 @@
 title: Dela AEM Assets-mappar med Creative Cloud
 description: Konfiguration och bästa praxis som gör att användare av Adobe Experience Manager Assets kan utbyta resursmappar med Adobe Creative Cloud-användare.
 contentOwner: AG
-feature: Samarbete
-role: Affärsledare,Administratör
+feature: Collaboration
+role: Business Practitioner,Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

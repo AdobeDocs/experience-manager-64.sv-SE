@@ -2,7 +2,7 @@
 title: Användaradministration och -säkerhet
 seo-title: Användaradministration och -säkerhet
 description: Läs mer om användaradministration och säkerhet i AEM.
-feature: Dokumentskydd
+feature: Security
 seo-description: Läs mer om användaradministration och säkerhet i AEM.
 uuid: f14619a1-d21f-465c-b79b-c98da1f1c016
 contentOwner: msm-service

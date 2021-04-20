@@ -2,8 +2,8 @@
 title: Prestandajusteringsguide för resurser
 description: Viktiga fokusområden kring AEM, ändringar av maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar och optimera AEM Assets prestanda.
 contentOwner: AG
-feature: Resurshantering
-role: Arkitekt,administratör
+feature: Asset Management
+role: Architect,Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

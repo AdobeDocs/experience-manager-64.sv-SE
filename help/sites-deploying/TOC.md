@@ -7,8 +7,8 @@ user-guide-title: AEM 6.4 Distributionshandbok
 breadcrumb-title: Distributionsguide
 user-guide-description: Läs mer om installation, distribution och arkitekturen för Adobe Experience Manager 6.4, inklusive vår molndistribution av Adobe Managed Services.
 feature-set: Experience Manager Sites
-feature: Distribuerar
-role: Arkitekt
+feature: Deploying
+role: Architect
 translation-type: tm+mt
 source-git-commit: ca18aa3d207aa9506d22286eaaabdd0991d8e4e7
 workflow-type: tm+mt

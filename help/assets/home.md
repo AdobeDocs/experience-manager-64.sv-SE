@@ -2,8 +2,8 @@
 title: Resurshandbok
 description: Den här guiden täcker alla AEM Assets-uppgifter, t.ex. hur man skapar, hanterar, levererar och optimerar digitala resurser.
 user-guide-title: Resurshandbok
-feature: Resurshantering
-role: Affärsman, arkitekt, administratör
+feature: Asset Management
+role: Business Practitioner,Architect,Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

@@ -2,8 +2,8 @@
 title: Bästa metoder för effektiv översättning av resurser
 description: Bästa tillvägagångssätt för effektiv hantering av resurser för att synkronisera olika översatta versioner och effektivisera översättningsarbetsflöden.
 contentOwner: AG
-feature: Översättning
-role: Affärsledare,Administratör
+feature: Translation
+role: Business Practitioner,Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

@@ -2,7 +2,7 @@
 title: Utöka resurssökning
 description: Utöka sökfunktionerna i AEM Assets till att inte bara söka efter mediefiler med hjälp av strängar.
 contentOwner: AG
-feature: Sökning
+feature: Search
 role: Developer
 translation-type: tm+mt
 source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759

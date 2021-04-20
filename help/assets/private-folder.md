@@ -2,8 +2,8 @@
 title: Delning av privata mappar
 description: Lär dig hur du skapar en privat mapp i Adobe Experience Manager (AEM) Resurser och delar den med andra användare samt tilldelar olika behörigheter till dem.
 contentOwner: AG
-feature: Samarbete
-role: Yrkesverksamma inom affärsverksamhet
+feature: Collaboration
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
 workflow-type: tm+mt

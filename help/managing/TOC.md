@@ -6,8 +6,8 @@ user-guide-title: AEM 6.4 Handbok för användarhantering
 breadcrumb-title: Handbok
 user-guide-description: Lär dig hantera ett AEM projekt.
 feature-set: Experience Manager Sites
-feature: Distribuerar
-role: Yrkesverksamma inom affärsverksamhet
+feature: Deploying
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: ca18aa3d207aa9506d22286eaaabdd0991d8e4e7
 workflow-type: tm+mt

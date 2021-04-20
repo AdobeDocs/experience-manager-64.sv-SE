@@ -2,7 +2,7 @@
 title: Instrumentpanel för åtgärder
 seo-title: Instrumentpanel för åtgärder
 description: Lär dig hur du använder kontrollpanelen för åtgärder.
-feature: Användning
+feature: Operations
 seo-description: Lär dig hur du använder kontrollpanelen för åtgärder.
 uuid: f1a6dcdc-307b-45f4-ade5-cedc58f0c7cf
 contentOwner: Guillaume Carlino

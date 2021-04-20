@@ -3,7 +3,7 @@ title: Hantera era digitala resurser med AEM Assets
 description: Lär dig mer om olika resurshanterings- och redigeringsuppgifter som du kan utföra med det Touch-optimerade användargränssnittet i AEM Assets
 contentOwner: AG
 mini-toc-levels: 1
-feature: Resurshantering, sökning, renderingar, samarbete
+feature: Asset Management,Search,Renditions,Collaboration
 role: Business Practitioner
 exl-id: aa1a702b-18dd-496b-a6e0-aa593af6e57c
 translation-type: tm+mt

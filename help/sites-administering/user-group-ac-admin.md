@@ -2,7 +2,7 @@
 title: Behörighetsadministration för användare, grupp och åtkomst
 seo-title: Behörighetsadministration för användare, grupp och åtkomst
 description: Läs mer om administration av användare, grupper och åtkomsträttigheter i AEM.
-feature: Dokumentskydd
+feature: Security
 seo-description: Läs mer om administration av användare, grupper och åtkomsträttigheter i AEM.
 uuid: 30e0d4dc-261d-4dc2-aff7-29179eca1cc2
 products: SG_EXPERIENCEMANAGER/6.4/SITES

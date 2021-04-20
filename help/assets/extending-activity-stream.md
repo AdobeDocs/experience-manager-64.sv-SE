@@ -2,7 +2,7 @@
 title: Integrera resurser med aktivitetsström
 description: Beskriver inspelningsfunktionerna i AEM och hur du konfigurerar AEM för att spela in specifika händelser.
 contentOwner: AG
-feature: Resurshantering
+feature: Asset Management
 role: Developer
 translation-type: tm+mt
 source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759

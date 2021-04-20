@@ -2,8 +2,8 @@
 title: Flera innehavare för samlingar, kodavsnitt och kodfragment
 description: Segmentera innehållet i CRX-databasen baserat på kundorganisationen för att förhindra obehörig åtkomst.
 contentOwner: AG
-feature: Samlingar
-role: Arkitekt,administratör,ledare
+feature: Collections
+role: Architect,Administrator,Leader
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

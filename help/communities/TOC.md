@@ -7,7 +7,7 @@ breadcrumb-title: Communities Guide
 user-guide-description: Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
 feature-set: Experience Manager
 feature: Communities
-role: Yrkesverksamma inom affärsverksamhet
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: ca18aa3d207aa9506d22286eaaabdd0991d8e4e7
 workflow-type: tm+mt

@@ -2,7 +2,7 @@
 title: Anpassa och utöka resurser
 description: Lär dig hur du kan anpassa och utöka Resursresurs- och Resursredigeraren, som ger användarna ett särskilt skräddarsytt gränssnitt och en uppsättning funktioner.
 contentOwner: AG
-feature: Utvecklarverktyg
+feature: Developer Tools
 role: Developer
 translation-type: tm+mt
 source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
