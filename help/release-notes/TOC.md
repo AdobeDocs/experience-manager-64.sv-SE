@@ -5,14 +5,13 @@ audience: end-user
 user-guide-title: Versionsinformation om Adobe Experience Manager 6.4
 breadcrumb-title: Versionsinformation
 user-guide-description: Läs om de senaste nya funktionerna i AEM 6.4 i versionsinformationen.
-feature-set: Experience Manager
-feature: Release Information
+feature: Versionsinformation
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Administrator, Business Practitioner
 translation-type: tm+mt
-source-git-commit: ca18aa3d207aa9506d22286eaaabdd0991d8e4e7
+source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 3%
+source-wordcount: '93'
+ht-degree: 4%
 
 ---
 
