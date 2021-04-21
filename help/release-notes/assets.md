@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 content-type: reference
 discoiquuid: 397b3267-1437-4263-963c-9d68ccc928ab
+exl-id: 3f2cb2f9-2a4e-4c5d-b937-b693f27e11da
 translation-type: tm+mt
-source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
+source-git-commit: 55e904cb24bac68c0b1bbea59786cb4c0c711d61
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1657'
 ht-degree: 0%
 
 ---
-
 
 # Versionsinformation för AEM Assets {#aem-assets-release-notes}
 
@@ -168,7 +168,3 @@ Mer information finns i [dokumentationen för smarta bilder](../assets/imaging-f
 * VR Viewer ger en engagerande upplevelse av egenskaper, platser och landskap.
 * Vertical Image Viewer optimerad för produktbilder.
 * Förbättrade hjälpmedelsfunktioner för tangentbord.
-
-### 3D och integrering med Dimension CC {#d-and-integration-with-dimension-cc}
-
-Integrering med [Adobe Dimension CC](https://www.adobe.com/products/dimension.html) för smidigare 3D-arbetsflöde har införts. Mer information finns i [Arbeta med 3D-resurser](../assets/assets-3d.md)-dokumentationen.
