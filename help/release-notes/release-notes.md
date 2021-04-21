@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 content-type: reference
 discoiquuid: 2be468e7-2b4e-4e04-881b-b9bdd1f55e57
+exl-id: ee034595-2d2a-4887-86c4-6bf0770da6a2
 translation-type: tm+mt
-source-git-commit: 5b00783e4471a6b142ab17a7bc4a647ab04aec5f
+source-git-commit: eb55489da5e390578b2ae71be424930e9bf3efd3
 workflow-type: tm+mt
-source-wordcount: '2844'
+source-wordcount: '2813'
 ht-degree: 1%
 
 ---
-
 
 # Allmän versionsinformation för Adobe Experience Manager 6.4 {#general-release-notes-for-adobe-experience-manager}
 
@@ -122,7 +122,7 @@ Nyheter i 6.4 är en visuell [innehållsmodell](/help/assets/content-fragments-m
 
 **Experience Fragments**
 
-Tack vare funktionen Byggblock kan du nu skapa variationer i ett fragment med samma innehåll men med olika layout mer effektivt. Förutom att skicka Experience Fragments till Facebook och Pinterest är det nu möjligt att skicka dem till Adobe Target som ett erbjudande.
+Tack vare funktionen Byggblock kan du nu skapa variationer i ett fragment med samma innehåll men med olika layout mer effektivt. Förutom att skicka Experience Fragments till Facebook och Pinterest går det nu att skicka dem till Adobe Target som erbjudande.
 
 **Innehållstjänster**
 
@@ -247,14 +247,6 @@ Mer information finns i [dokumentationen för smarta bilder](/help/assets/imagin
 Med nya visningsprogram, bland annat panoraman och VR, kan du skapa mer engagerande upplevelser.
 
 Mer information finns i [dokumentationen för panoramabilder](/help/assets/panoramic-images.md).
-
-**3D-resurser**
-
-Ny integrering med [Adobe Dimension CC](https://www.adobe.com/products/dimension.html), ett Creative Cloud-program för att skapa 3D-upplevelser.
-
-Mer information finns i [Arbeta med 3D-resurser](/help/assets/assets-3d.md)-dokumentation.
-
-![do-not-localize/3d](assets/do-not-localize/3d.png)
 
 ### Experience Manager Forms {#experience-manager-forms}
 
