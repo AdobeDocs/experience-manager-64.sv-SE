@@ -8,9 +8,9 @@ user-guide-description: Läs om de senaste nya funktionerna i AEM 6.4 i versions
 feature: Versionsinformation
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Administrator, Business Practitioner
 translation-type: tm+mt
-source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
+source-git-commit: 29fe63a731d33afa0d6492e0e4ef94064097ae1a
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '89'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,6 @@ ht-degree: 4%
 + [Versionsinformation för AEM Forms](forms.md)
 + [AEM Forms JEE Patch Installer](jee-patch-installer-64.md)
 + [Versionsinformation för AEM Communities](communities-release-notes.md)
-+ [AEM 3D versionsinformation](aem3d-release-notes.md)
 + [Föråldrade och borttagna funktioner](deprecated-removed-features.md)
 + [Kända fel](known-issues.md)
 + [AEM Foundation and Repository](wcm-platform.md)
