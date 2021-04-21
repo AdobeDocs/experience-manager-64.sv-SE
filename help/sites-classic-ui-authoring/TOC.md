@@ -9,10 +9,10 @@ user-guide-description: Den här handboken beskriver koncepten för redigering i
 feature: Redigering
 role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
+source-git-commit: 55e904cb24bac68c0b1bbea59786cb4c0c711d61
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 17%
+source-wordcount: '273'
+ht-degree: 20%
 
 ---
 
@@ -82,17 +82,9 @@ ht-degree: 17%
    + [Inrikta er på Adobe Campaign](classic-personalization-ac-target.md)
 + Funktionsredigering i det klassiska användargränssnittet {#assets}
    + [Arbeta med resurser](classicui-assets.md)
-   + [Arbeta med IBL-steg](classicui-stages-aem3d-ibl.md)
-   + [Återge 3D-resurser](classicui-rendering-3d.md)
-   + [Visa 3D-resurser](classicui-view-3d-assets.md)
    + [Leverera Dynamic Media Assets](dynamic-media-assets-delivering.md)
-   + [Ställa in ett standardstadium med Autodesk Maya och Mental Ray](classicui-stages-aem3d-ad-mr.md)
    + [Lägga till Dynamic Media-resurser på sidor](dynamic-media-assets-adding-to-page.md)
    + [Lägga till Dynamic Media Classic-funktioner (Scene7) på din sida](manage-assets-classic-s7.md)
    + [Arbeta med Dynamic Media](dynamic-media-assets.md)
-   + [Arbeta med 3D-resurser](classicui-3dassets.md)
    + [Video](manage-assets-classic-s7-video.md)
    + [Namnkonventioner för tillgångstestning](asset-naming-conventions.md)
-   + [Om överföring och bearbetning av 3D-resurser i AEM](classicui-upload-proc-3d.md)
-   + [Om användning av faser i AEM 3D](classicui-stages-aem3d.md)
-   + [Lösa filberoenden](classicui-upload-proc-3d-resolve-dependencies.md)
