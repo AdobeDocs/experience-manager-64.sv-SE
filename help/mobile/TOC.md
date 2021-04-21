@@ -5,13 +5,12 @@ audience: end-user
 user-guide-title: AEM 6.4 Mobile User Guide
 breadcrumb-title: Mobilguide
 user-guide-description: Skapa och hantera innehåll för mobilappar.
-feature-set: Experience Manager Sites
-feature: Mobile
+feature: Mobil
 role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: ca18aa3d207aa9506d22286eaaabdd0991d8e4e7
+source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
