@@ -7,10 +7,10 @@ user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, leverera och optimera digitala resurser.
 translation-type: tm+mt
-source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
+source-git-commit: 55e904cb24bac68c0b1bbea59786cb4c0c711d61
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 30%
+source-wordcount: '627'
+ht-degree: 36%
 
 ---
 
@@ -166,20 +166,3 @@ ht-degree: 30%
    + [Delning av privata mappar](private-folder.md)
    + [Riktlinjer för utbildning i smarta innehållstjänster](smart-tags-training-guidelines.md)
    + [Videoåtergivningar](video-renditions.md)
-+ 3D-resurser {#three-d}
-   + [Versionsinformation för AEM 3D](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/aem3d-release-notes.html)
-   + [Arbeta med 3D-resurser](assets-3d.md)
-   + [Installera och konfigurera AEM 3D](install-config-3d.md)
-   + [Avancerade konfigurationsinställningar](advanced-config-3d.md)
-   + [Arbeta med Adobe Dimension-resurser](working-dimension-assets.md)
-   + [Om överföring och bearbetning av 3D-resurser i AEM](upload-processing-3d-assets.md)
-   + [Lösa filberoenden](resolve-file-dependencies.md)
-   + [Visa 3D-resurser](viewing-3d-assets.md)
-   + [Återge 3D-resurser](rendering-3d-assets.md)
-   + [Om användning av faser i AEM 3D](about-the-use-of-stages-in-aem-3d.md)
-   + [Ställa in ett standardstadium med Autodesk Maya och Mental Ray](setting-up-stage-with-ad-mr.md)
-   + [Arbeta med komponenten 3D-platser](using-the-3d-sites-component.md)
-   + [Integrera AEM 3D med Autodesk Maya](integrate-maya-with-3d.md)
-   + [Arbeta med IBL-steg](working-with-ibl-stages.md)
-   + [Integrera AEM 3D med Autodesk 3ds Max](integrating-aem-3d-with-autodesk-3ds-max.md)
-   + [Ställa in en IBL-scen med Autodesk Maya och Mental Ray](setting-up-an-ibl-stage-with-autodesk-maya-and-mental-ray.md)
