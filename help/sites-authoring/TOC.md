@@ -6,13 +6,12 @@ audience: end-user
 user-guide-title: Användarhandbok för redigering av AEM 6.4
 breadcrumb-title: Redigeringshandbok
 user-guide-description: Lär dig grunderna för att skapa innehåll och redigering i AEM.
-feature-set: Experience Manager Sites
-feature: Authoring
+feature: Redigering
 role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: ca18aa3d207aa9506d22286eaaabdd0991d8e4e7
+source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '293'
 ht-degree: 38%
 
 ---
