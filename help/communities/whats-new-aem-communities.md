@@ -1,19 +1,17 @@
 ---
 title: Nyheter i AEM 6.4 Communities
-seo-title: Nyheter i AEM 6.4 Communities
-description: 'null'
-seo-description: 'null'
+description: AEM Communities erbjuder ett ramverk för företag att samarbeta med partners, kunder och anställda.
 uuid: e4bf343c-59cd-48ac-bee4-85db109e4c65
 contentOwner: mgulati
 discoiquuid: 3e3c867f-afb0-4402-94f4-16e1a556ddee
+exl-id: fcdc65c9-929d-4a87-8ff7-5e3cf5711fd9
 translation-type: tm+mt
-source-git-commit: 4a1be7a5a233557dff0e7cd3796380532f23d5eb
+source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
-
 
 # Nyheter i AEM 6.4 Communities {#what-s-new-in-aem-communities}
 
@@ -71,7 +69,7 @@ När du väljer status Besvarat visas alla besvarade frågor för moderatorn i i
 
 ### Modereringsfilter för bokmärke {#bookmark-moderation-filters}
 
-AEM Communities ger möjlighet att [bokmärka de fördefinierade modereringsfiltren](moderation.md#filter-rail) på modereringskonsolen. Dessa sparade bokmärken kan granskas senare och delas med andra användare.
+Med AEM Communities kan du [bokmärka de fördefinierade modereringsfiltren](moderation.md#filter-rail) på modereringskonsolen. Dessa sparade bokmärken kan granskas senare och delas med andra användare.
 
 Användarna behöver bara välja önskade filter från filterkanalen i modereringskonsolen för att visa den filtrerade UGC:n och bokmärka filtren i sina webbläsare. Dessa filter läggs till i slutet av URL-strängen och kan därför delas, återanvändas och granskas senare.
 
