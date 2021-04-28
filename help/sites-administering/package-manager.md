@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: content
 content-type: reference
 discoiquuid: 8e568c59-5455-422f-94a6-baf6d2aae070
+exl-id: eebc10fa-1d49-4797-a9e6-b6615bfe0173
 translation-type: tm+mt
-source-git-commit: be46329cfe5c6fee28f616f2257e215df402e94d
+source-git-commit: 9b2cf8887f799aff316f720ab173087e14692120
 workflow-type: tm+mt
-source-wordcount: '5365'
+source-wordcount: '4037'
 ht-degree: 0%
 
 ---
-
 
 # Arbeta med paket{#how-to-work-with-packages}
 
@@ -694,206 +694,16 @@ Replikera innehållet i ett paket för att installera det på publiceringsinstan
 
 ## Paketdelning {#package-share}
 
-Paketresursen är en centraliserad server som är allmänt tillgänglig för delning av innehållspaket.
+Paketresursen var en centraliserad server som är allmänt tillgänglig för delning av innehållspaket.
 
-Med Paketdelning kan du hämta dessa paket, som kan innehålla officiella snabbkorrigeringar, funktionsuppsättningar, uppdateringar eller exempelinnehåll som genererats av andra användare.
+Den har ersatts av [Programdistribution.](#software-distribution)
 
-Du kan också överföra och dela paket inom företaget.
+## Programdistribution {#software-distribution}
 
-### Åtkomst till paketresurs {#access-to-package-share}
+[Software ](https://downloads.experiencecloud.adobe.com) Distribution är det nya användargränssnittet som förenklar sökning och hämtning av AEM.
 
-Det finns ingen anonym åtkomst till paketresursen. dvs. endast registrerade användare får visa, hämta och överföra paket.
-
-Våra partners och kunder har tillgång till paketresursen. Registreringsinformation måste skickas för att du ska kunna tilldela åtkomsträttigheter.
-
-Så här får du åtkomst till Paketresurs:
-
-* Använd [inloggningssidan](#signing-in-to-package-share)
-* Första gången du använder inloggningssidan måste du:
-
-   * [Registrera dig för ett Adobe ](#registering-for-package-share) ID och/eller  [validera din befintliga Adobe ID](#validating-your-adobe-id)
-   * så att ditt [Package Share Account](#package-share-account) kan skapas
-
->[!NOTE]
->
->Alla användare för paketdelning som inte har tilldelats någon kund måste gå med i en community för att se resurserna genom att klicka på **Gå med** bredvid inloggningen för paketresursen.
-
-#### Loggar in på paketresurs {#signing-in-to-package-share}
-
-1. På AEM välkomstskärm klickar du på **Verktyg** -> **Distribution**
-1. Välj sedan **Paketresurs**. Du måste antingen:
-
-   * logga in med din Adobe ID
-   * [Skapa en Adobe ID](#registering-for-package-share)
-
-   >[!NOTE]
-   >
-   >Första gången du loggar in med din Adobe ID måste du slutföra [valideringen av din e-postadress](#validating-your-adobe-id).
-
-   >[!NOTE]
-   >
-   >Om du har glömt ditt lösenord kan du använda **felsökningsfunktionen för inloggning?** i inloggningsdialogrutan.
-
-#### Verifierar din Adobe ID {#validating-your-adobe-id}
-
-Första gången du loggar in på Package Share med din Adobe ID valideras din e-postadress.
-
-1. Du får ett e-postmeddelande med en länk.
-1. Du måste klicka på den här länken.
-1. En webbsida öppnas.
-
-   Åtgärden att öppna den här webbsidan utförs som validering.
-
-1. Inloggningen fortsätter.
-
-1. Du får ett e-postmeddelande med en länk.
-1. Du måste klicka på den här länken.
-1. En webbsida öppnas. Åtgärden att öppna den här webbsidan utförs som validering.
-1. Inloggningen fortsätter.
-
-#### Registrerar för paketresursen {#registering-for-package-share}
-
-Om du behöver ha tillgång till Package Share måste du registrera dig för en Adobe ID:
-
-* På inloggningssidan [Package Share](#signing-in-to-package-share) finns en länk för att registrera en Adobe ID.
-* Du kan registrera dig för en Adobe ID från vissa datorprogram från Adobe.
-* Du kan även registrera dig online på [Adobe Sign In-sidan](https://www.adobe.com/cfusion/membership/index.cfm?nf=1&amp;nl=1).
-
-Man kan skapa en Adobe ID genom att tillhandahålla:
-
-* din e-postadress
-* ett valfritt lösenord
-* ytterligare information, t.ex. ditt namn och land där du bor
-
-#### Paketresurskonto {#package-share-account}
-
-Programmets giltighet kontrolleras före:
-
-* Ditt användarkonto har skapats med nödvändig/tillåten behörighet.
-* Ditt konto läggs till i din företagsgrupp.
-
->[!NOTE]
->
->En användare från ett av våra partnerföretag kan också vara medlem i sina kundgrupper.
-
-#### Nätverksöverväganden {#network-considerations}
-
-**IPv6**
-
-Det kan uppstå problem när du försöker få åtkomst till paketresursen från en ren IPv6-miljö.
-
-Detta beror på att paketresursen är en tjänst på en server, vilket innebär att anslutningen görs via olika nätverk på Internet. Det kan inte säkerställas att alla anslutande nätverk stöder IPv6. om inte anslutningen kan misslyckas.
-
-För att undvika det här problemet kan du få åtkomst till paketresursen från ett IPv4-nätverk, hämta paketet och sedan överföra det till IPv6-miljön.
-
-**HTTP-proxy**
-
-Paketresursen är för närvarande inte tillgänglig om ditt företag kör en http-proxy som kräver autentisering.
-
-Paketresursen är bara tillgänglig när AEM har åtkomst till Internet utan att någon autentisering krävs. Om du vill konfigurera proxyn för alla tjänster som använder http-klienten (inklusive paketresurs) använder du konfigurationen [OSGi för Day Commons HTTP Client 3.1 bundle](/help/sites-deploying/osgi-configuration-settings.md).
-
-### Inuti paketresurs {#inside-package-share}
-
-Paket i paketresurspaket är ordnade i trädunderträd:
-
-* Adobe paket från Adobe.
-* Delade paket som har tillhandahållits av andra företag och har offentliggjorts av Adobe.
-* Företagspaket som är privata.
-
-![chlimage_1-346](assets/chlimage_1-346.png)
-
-### Söka efter och filtrera paket {#searching-and-filtering-packages}
-
-Med Paketdelning kan du söka efter särskilda nyckelord eller/och taggar i ett sökfält. Både nyckelord och taggar har stöd för flera värden.
-
-* Om du vill söka efter flera nyckelord måste du separera varje nyckelord med ett mellanslag.
-* Om du vill söka efter flera taggar måste du markera var och en av dem i paketträden.
-
-Du kan också ändra villkorsoperatorn från OR till AND till höger om filtersammanfattningsfältet.
-
-### Hämta och installera paket från paketresurs {#downloading-and-installing-packages-from-package-share}
-
-Om du vill hämta paket från paketresursen och installera dem på den lokala instansen är det enklare att komma åt paketresursen från AEM. Paketet laddas ned och registreras omedelbart i pakethanteraren där det kan installeras.
-
-1. På välkomstskärmen klickar du på **Verktyg** och väljer sedan **Paketresurs** för att öppna sidan Paketdelning.
-1. Logga in på Paketresurs med din kontoinformation. Landningssidan visas med en lista över Adobe-mappen, den delade mappen och en som är specifik för ditt företag.
-
-   >[!NOTE]
-   >
-   >Innan du börjar hämta paket från paketresursen måste du kontrollera att du har [nödvändig åtkomst](#access-to-package-share).
-
-1. Navigera till paketet som du vill hämta och klicka på **Hämta**.
-
-1. Gå tillbaka eller navigera till **Package Manager** på din AEM. Navigera sedan till det paket du just laddat ned.
-
-   >[!NOTE]
-   >
-   >Om du vill hitta det paket du har laddat ned följer du samma sökväg som i Paketresurs. Om du till exempel hämtade ett paket från följande sökväg i paketresursen:
-   >
-   >**Paket**  >  **Offentliga**  >  **Programfixar**
-   I Package Manager på den lokala instansen visas paketet också under:
-   **Paket**  >  **Offentliga**  >  **Programfixar**
-
-1. Klicka på **Installera** om du vill installera paketet i den lokala AEM.
-
-   >[!NOTE]
-   Om paketet redan har installerats på din instans visas indikatorn **Installed** bredvid paketet i stället för knappen **Installera**.
-
-   >[!CAUTION]
-   Om du installerar ett paket kan befintligt innehåll i databasen skrivas över. Därför rekommenderar vi att du först utför en **testinstallation**. På så sätt kan du kontrollera om innehållet som paketet innehåller står i konflikt med ditt befintliga innehåll.
-
-### Hämtar paket till ditt filsystem från paketresursen {#downloading-packages-to-your-file-system-from-package-share}
-
-[Det är mycket bekvämt att hämta och ](#downloading-and-installing-packages-from-package-share) installera, men om det behövs kan du även hämta paketet och spara det i det lokala filsystemet:
-
-1. Klicka på paketets ikon eller namn i Paketdelning.
-1. Klicka på fliken **Resurser**.
-1. Klicka på **Hämta till disk**.
-
-### Överför ett paket {#uploading-a-package}
-
-Med Paketdelning kan du överföra paket till företagets interna del av paketresursen. Detta gör dem tillgängliga för delning inom företaget.
-
-Dessa paket är *inte* tillgängliga för AEM, men är tillgängliga för alla användare som är registrerade hos ditt företag.
-
-Så här överför du paket till företagets interna paketresurs:
+Mer information finns i [dokumentationen för programdistribution.](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)
 
 >[!CAUTION]
-Om du vill överföra ett paket till paketresursen måste du först skapa en gruppmapp som heter efter ditt företag i den lokala pakethanteraren. Till exempel geometrixx. Alla paket som ska överföras för delning måste placeras i den här gruppmappen.
-Paket i pakethanterarens hemlista eller i andra mappar kan inte delas.
-
-1. Öppna **Pakethanteraren** och navigera till paketet som du vill överföra.
-
-1. Klicka på paketikonen för att öppna den.
-1. Klicka på **Dela** för att öppna dialogrutan för att överföra paketet till paketresursen.
-1. Om du inte redan är inloggad på Package Share måste du ange dina inloggningsuppgifter.
-
-   När du är inloggad visar AEM information om det paket som ska överföras:
-
-   ![chlimage_1-347](assets/chlimage_1-347.png)
-
-1. Klicka på **Dela** för att överföra paketet till företagets interna paketresurs.
-
-   AEM visar status och anger när paketet har överförts. Efter detta kan du klicka på **x** (övre högra hörnet) för att avsluta fönstret **Dela paket**.
-
-1. När överföringen är klar kan du navigera till företagets interna mapp och se det paket du just delade.
-
->[!NOTE]
-Om du vill ändra ett paket som är tillgängligt på paketresursen måste du hämta det, återskapa det och sedan överföra det igen till paketresursen.
-
-### Tar bort ett paket {#deleting-a-package}
-
-Du kan bara ta bort paket som du har överfört genom att göra så här:
-
-1. Kontrollera den paketgrupp som innehåller paketet i företagsträdet.
-1. Klicka på paketet.
-1. Klicka på knappen Ta bort.
-
-   ![](do-not-localize/chlimage_1-30.png)
-
-1. Klicka på **Ta bort** för att bekräfta att du vill ta bort paketet.
-
-### Gör paket halvprivata {#making-packages-semi-private}
-
-Du kan dela paket utanför organisationen, men inte offentligt. Dessa paket betraktas som semiprivata. Om du vill dela dessa halvprivata paket behöver du hjälp från Adobe Support. Du kan göra detta genom att öppna en biljett där Adobe Support begär att ett paket ska vara tillgängligt utanför din organisation. De kommer att be dig om en lista över Adobe ID som du vill ge åtkomst till dina paket.
-
+>
+>AEM pakethanterare kan för närvarande inte användas med programvarudistribution. Du hämtar dina paket till den lokala hårddisken.
