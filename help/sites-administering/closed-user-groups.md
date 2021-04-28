@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: a2bd7045-970f-4245-ad5d-a272a654df0a
+exl-id: 71dfaea7-2fae-4feb-bb1d-ad0da573f910
 translation-type: tm+mt
-source-git-commit: 7dc90299b7a0e5166c30702323f1678353fe39b3
+source-git-commit: 3ee650d0810a03878b4b0a58708ea3600fa28ff2
 workflow-type: tm+mt
-source-wordcount: '6889'
+source-wordcount: '6884'
 ht-degree: 0%
 
 ---
-
 
 # Stängda användargrupper i AEM{#closed-user-groups-in-aem}
 
@@ -26,7 +26,7 @@ Sedan AEM 6.3 finns det en ny implementering av en sluten användargrupp som är
 
 >[!NOTE]
 >
->För enkelhetens skull kommer förkortningen av CUG att användas i denna dokumentation.
+>För enkelhetens skull kommer förkortningen CUG att användas i denna dokumentation.
 
 Målet med den nya implementeringen är att vid behov ta med befintliga funktioner samtidigt som man åtgärdar problem och designbegränsningar från äldre versioner. Resultatet blir en ny CUG-design med följande egenskaper:
 
@@ -152,7 +152,7 @@ När den här hanteraren anropar `AuthenticationHandler.requestCredentials` gör
    * från Inloggningssidmappningar, enligt definitionen med `LoginSelectorHandler`,
    * och slutligen, återgå till standardinloggningssidan, enligt definitionen med `LoginSelectorHandler`.
 
-* Så snart en giltig inloggningssökväg har erhållits via de samtal som listas ovan, kommer användarens begäran att omdirigeras till den sidan.
+* Så snart en giltig inloggningssökväg har erhållits via de samtal som listas ovan kommer användarens begäran att dirigeras om till den sidan.
 
 Målet för den här dokumentationen är utvärderingen av inloggningssökvägen som visas av det interna `LoginPathProvider`-gränssnittet. Implementeringen som skickats sedan AEM 6.3 fungerar på följande sätt:
 
@@ -164,7 +164,7 @@ Målet för den här dokumentationen är utvärderingen av inloggningssökvägen
    * från Inloggningssidmappningar som definierats med `LoginSelectorHandler`,
    * och slutligen återgå till standardinloggningssidan enligt definitionen med `LoginSelectorHandler`.
 
-* Så snart en giltig inloggningssökväg har erhållits via de samtal som listas ovan, kommer användarens begäran att omdirigeras till den sidan.
+* Så snart en giltig inloggningssökväg har erhållits via de samtal som listas ovan kommer användarens begäran att dirigeras om till den sidan.
 
 `LoginPathProvider` som implementerats av det nya stödet för autokrav i Granite visar inloggningssökvägar som definieras av `granite:loginPath`-egenskaperna, som i sin tur definieras av blandningstypen enligt beskrivningen ovan. Mappningen av resurssökvägen som innehåller inloggningssökvägen och egenskapsvärdet behålls i minnet och utvärderas för att hitta en lämplig inloggningssökväg för andra noder i hierarkin.
 
@@ -764,14 +764,14 @@ Detta har justerats så att referensen till `CugSupport` är valfri för att sä
 
 ### AEM LiveCopy {#aem-livecopy}
 
-Konfigurering av CUG:er i kombination med LiveCopy representeras i databasen av en extra nod och en extra egenskap enligt följande:
+Om du konfigurerar CUG:er i kombination med LiveCopy representeras de i databasen av en extra nod och en extra egenskap enligt följande:
 
 * `/content/we-retail/us/en/blueprint/rep:cugPolicy`
 * `/content/we-retail/us/en/LiveCopy@granite:loginPath`
 
 Båda dessa element skapas under `cq:Page`. Med den aktuella designen hanterar MSM bara noder och egenskaper som finns under `cq:PageContent` (`jcr:content`)-noden.
 
-Därför kan CUG-grupper inte återställas från en plan till en Live Copy. Se till att du har en plan för hur du ska göra när du skapar en Live-kopia.
+Därför kan CUG-grupper inte rullas ut till Live-kopior från utkast. Se till att du undviker detta när du konfigurerar Live Copy.
 
 ## Ändringar med den nya CUG-implementeringen {#changes-with-the-new-cug-implementation}
 
@@ -882,4 +882,3 @@ Adobe tillhandahåller ett verktyg för migrering till den nya CUG-implementerin
 >[!NOTE]
 >
 >Om du stöter på problem är det möjligt att ställa in en specifik logger på **DEBUG**-nivå på `com.day.cq.auth.impl.cug` för att få fram utdata från migreringsverktyget. Mer information om hur du gör detta finns i [Loggning](/help/sites-deploying/configure-logging.md).
-
