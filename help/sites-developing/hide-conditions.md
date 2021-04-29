@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: components
 content-type: reference
 discoiquuid: 104d1c64-b9b3-40f5-8f9b-fe92d9daaa1f
+exl-id: 646146b1-55bf-4d13-ba3d-2e9bdfd8d8af
 translation-type: tm+mt
-source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
+source-git-commit: c408d1072722fe4419e351b4f8bf257cf2e5a8a2
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '646'
 ht-degree: 2%
 
 ---
-
 
 # Använda Dölj villkor{#using-hide-conditions}
 
@@ -72,16 +72,15 @@ Om en mallskapare väljer att inaktivera alternativet för underordnade sidor, s
 
    ![chlimage_1-219](assets/chlimage_1-219.png)
 
-1. En principnod skapas under `/conf/we-retail/settings/wcm/policies/weretail/components/content/lis`t med egenskapen `disableChildren` inställd på `true`.
-1. Villkoret hide definieras som värdet på en `granite:hid`e-egenskap i egenskapsnoden `/conf/we-retail/settings/wcm/policies/weretail/components/content/list` i dialogrutan
+1. En principnod skapas under `/conf/we-retail/settings/wcm/policies/weretail/components/content/list` med egenskapen `disableChildren` inställd på `true`.
+1. Villkoret hide definieras som värdet för en `granite:hide`-egenskap i egenskapsnoden `/conf/we-retail/settings/wcm/policies/weretail/components/content/list`
 
    ![chlimage_1-220](assets/chlimage_1-220.png)
 
-1. Värdet `disableChildren` hämtas från designkonfigurationen och uttrycket `${cdDesign.disableChildren}` utvärderas till `false`, vilket innebär att alternativet inte återges som en del av komponenten.
+1. Värdet `disableChildren` hämtas från designkonfigurationen och uttrycket `${cqDesign.disableChildren}` utvärderas till `false`, vilket innebär att alternativet inte återges som en del av komponenten.
 
    Du kan visa det dolda uttrycket som värdet för egenskapen `granite:hide` [i GitHub här](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/list/v1/list/_cq_dialog/.content.xml#L40).
 
 1. Alternativet **Underordnade sidor** återges inte längre för sidförfattaren när listkomponenten används.
 
    ![chlimage_1-221](assets/chlimage_1-221.png)
-
