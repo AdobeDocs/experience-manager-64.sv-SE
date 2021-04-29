@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: e74ffe97-5de8-4e9c-94b4-d7d63939d40c
+exl-id: daff8e4e-40c7-4762-8e4f-d85d50b86e5d
 translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+source-git-commit: 361964df6c25cbcfadb45dbf8fc10d5ab1258e6d
 workflow-type: tm+mt
-source-wordcount: '2793'
+source-wordcount: '2815'
 ht-degree: 0%
 
 ---
-
 
 # Rapportering {#reporting}
 
@@ -30,6 +30,10 @@ För att hjälpa dig att övervaka och analysera instansens tillstånd finns AEM
 * [Användarrapport](#user-report)
 * [Instansrapport för arbetsflöde](#workflow-instance-report)
 * [Arbetsflödesrapport](#workflow-report)
+
+>[!NOTE]
+>
+>Rapporterna är bara tillgängliga i det klassiska användargränssnittet. Systemövervakning och rapportering i det moderna användargränssnittet finns i [Operations Dashboard.](/help/sites-administering/operations-dashboard.md)
 
 Alla rapporter kan nås från **Verktyg**-konsolen. Välj **Rapporter** i den vänstra rutan och dubbelklicka sedan på önskad rapport i den högra rutan för att öppna den för visning och/eller konfiguration.
 
