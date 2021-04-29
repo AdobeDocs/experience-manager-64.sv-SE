@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: f9bcb6eb-1df4-4709-bcec-bef0931f797a
+exl-id: 8a4fc7c7-03bc-44db-93f1-dbd76fc9dbd7
 translation-type: tm+mt
-source-git-commit: e9c5fcd8f939d88317c5184b6352b227918088e5
+source-git-commit: 9ae048ca2811a56c5d6f0b2415fcfcccc4384dbf
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '386'
 ht-degree: 0%
 
 ---
-
 
 # Designer och designern{#designs-and-the-designer}
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 >
 >I den här artikeln beskrivs hur du skapar en webbplats baserat på det klassiska användargränssnittet. Adobe rekommenderar att du utnyttjar den senaste AEM tekniken för dina webbplatser enligt beskrivningen i artikeln [Komma igång med att utveckla AEM Sites](/help/sites-developing/getting-started.md).
 
-Du måste skapa en design för webbplatsen och i AEM gör du det med hjälp av Designer.
+Designer används för att skapa en design för din webbplats med det klassiska användargränssnittet [i AEM.](/help/release-notes/touch-ui-features-status.md)
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ Din design kan definieras i avsnittet **designs** på fliken **Verktyg**:
 
 Här kan du skapa den struktur som krävs för att lagra designen och sedan överföra CSS och bilder som behövs.
 
-Designer lagras under `/etc/designs`. Sökvägen till designen som ska användas för en webbplats anges med egenskapen `cq:designPath` för noden `jcr:content`.
+Designer lagras under `/apps/<your-project>`. Sökvägen till designen som ska användas för en webbplats anges med egenskapen `cq:designPath` för noden `jcr:content`.
 
 ![chlimage_1-74](assets/chlimage_1-74.png)
 
@@ -56,7 +56,7 @@ För att förverkliga din design behöver du:
 
 ### Att tänka på när du utformar din webbplats {#considerations-when-designing-your-website}
 
-När du utvecklar en webbplats bör du lagra bilder och CSS-filer under `/etc/design/<project>` så att du kan referera till dina resurser baserat på den aktuella designen, enligt följande kodutdrag.
+När du utvecklar en webbplats bör du lagra bilder och CSS-filer under `/apps/<your-project>` så att du kan referera till dina resurser baserat på den aktuella designen, enligt följande kodutdrag.
 
 ```xml
 <%= currentDesign.getPath() + "/static/img/icon.gif %>
@@ -68,4 +68,3 @@ Exemplet ovan ger flera fördelar:
 * Det är enkelt att designa om webbplatsen genom att peka designsökvägen till en annan nod i webbplatsens rot från `design/v1` till `design/v2.`
 
 * `/etc/designs` och  `/content` är de enda externa URL:er som webbläsaren ser för att skydda dig mot att en extern användare blir nyfiken på vad som finns under ditt  `/apps` träd. Ovanstående URL-fördelar hjälper också systemadministratören att ställa in bättre säkerhet eftersom du begränsar exponeringen av resurserna till några få distinkta platser.
-
