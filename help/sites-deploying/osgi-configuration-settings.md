@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: ccddb2cd-8e67-43aa-a495-8996ad349761
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: Konfigurerar
+exl-id: 5c07c773-53a3-41fd-860a-da0cb14f8bc6
+source-git-commit: 1242b301d82402c28a9c070fad024b823f8cef45
 workflow-type: tm+mt
-source-wordcount: '3806'
+source-wordcount: '3561'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurationsinställningar för OSGi{#osgi-configuration-settings}
 
@@ -440,29 +439,6 @@ Anger i vilket format användar-ID:t anges. Användning:
 Mer information finns i [Rensning av version](/help/sites-deploying/version-purging.md).
 
 **Day CQ Workflow Email Notification** ServiceKonfigurera e-postinställningarna för meddelanden som skickas av ett arbetsflöde.
-
-**Day CQSE HTTP** ServiceKontrollera CQ-servermotorn:
-
-* **NIO för HTTP**, Om NIO ska användas för HTTP eller inte. Standardvärdet är true. Används endast om HTTP är aktiverat.
-* **Timeout** för anslutning, timeout för anslutning i millisekunder. Den här egenskapen gäller för både HTTP- och HTTPS-anslutningar. Standardvärdet är 60 sekunder.
-
-* **Aktivera HTTPS,** oavsett om HTTPS är aktiverat eller inte. Standardvärdet är false.
-* **Sessionstimeout**, standardlivstid för en HTTP-session angiven i minuter. Om tidsgränsen är 0 eller mindre kommer sessionerna aldrig att tidsgränsen överskrids. Standardvärdet är 10 minuter.
-* **Felsökningsloggning**, om meddelanden på DEBUG-nivå ska skrivas eller inte. Standardvärdet är false.
-* **Begär buffertstorlek**, buffertstorlek för begäranden i byte. Standardvärdet är 8 kB.
-* **Maximalt antal trådar**, maximalt antal trådar som kan användas för att hantera begäranden. Standardvärdet är 200.
-
-Följande egenskaper gäller bara om HTTPS är aktiverat.
-
-* **HTTPS-port**, port att lyssna på för HTTPS-begäran. Standardvärdet är 433.
-* **NIO för HTTPS**, om NIO ska användas för HTTP eller inte. Standardvärdet är värdet för egenskapen NIO för HTTP.
-* **Keystore**, Absolut sökväg till Keystore som ska användas för HTTPS. Krävs om HTTPS är aktiverat.
-* **Lösenord** för nyckelbehållare, lösenord för att komma åt nyckelbehållaren.
-* **Nyckelalias**, alias för den hemliga nyckeln i nyckelbehållaren.
-* **Nyckellösenord**, Lösenord för att låsa upp den hemliga nyckeln i nyckelbehållaren.
-* **Klientcertifikat**, krav på att klienten ska tillhandahålla ett giltigt certifikat. Standardvärdet är ingen.
-
-Se även [Aktivera HTTP över SSL](/help/sites-administering/ssl-by-default.md) för mer information om SSL-relaterade alternativ och en fullständig beskrivning av hur du aktiverar HTTPS för CQSE.
 
 **CQ Rewriter HTML Parser Factory**
 
