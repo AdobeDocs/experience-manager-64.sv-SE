@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: deploying
 discoiquuid: cb041407-ec30-47f8-a01e-314c4835a5d9
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: Konfigurerar
+exl-id: 73f5c1a4-3d2d-4594-877e-93bd09a94e91
+source-git-commit: e22d12ee2096548e8303521b4c7dac79e7385f49
 workflow-type: tm+mt
-source-wordcount: '2726'
+source-wordcount: '2713'
 ht-degree: 0%
 
 ---
-
 
 # Så här kör du AEM med TjärMK Cold Standby{#how-to-run-aem-with-tarmk-cold-standby}
 
@@ -276,7 +275,7 @@ Följande OSGi-inställningar är tillgängliga för tjänsten Cold Standby:
 
 * **Tillåtna IP-intervall (`primary.allowed-client-ip-ranges`):**  - IP-intervall som den primära servern tillåter anslutningar från.
 * **Säker (`secure`):** Aktivera SSL-kryptering. För att den här inställningen ska kunna användas måste den vara aktiverad i alla instanser.
-* **Timeout för vänteläsning (`standby.readtimeout`):** Timeout för begäranden som utfärdas från standby-instansen i millisekunder. **Den rekommenderade timeoutinställningen är 43200000. Du bör vanligtvis ange ett timeout-värde på minst 12 timmar.**
+* **Timeout för vänteläsning (`standby.readtimeout`):** Timeout för begäranden som utfärdas från standby-instansen i millisekunder. Standardvärdet är 60000 (en minut).
 * **Standby Automatic Cleanup (`standby.autoclean`):** Anropa rensningsmetoden om storleken på butiken ökar under en synkroniseringscykel.
 
 >[!NOTE]
@@ -400,4 +399,3 @@ Det är viktigt att du kör skräpinsamlingen på fildatalagrets instanser då o
    >[!NOTE]
    >
    >Om du inte använder ett delat datalager måste skräpinsamlingen först köras på primär plats och sedan i vänteläge.
-
