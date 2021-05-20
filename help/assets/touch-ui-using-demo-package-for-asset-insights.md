@@ -1,32 +1,31 @@
 ---
-title: Använda demopaket för tillgångsinsikter
-description: Använd demopaketet för att aktivera Adobe-tillgångsinsikter för att hämta data från och generera insikter för en webbsida.
+title: Använda demopaket för Assets Insights
+description: Använd demopaketet för att möjliggöra för Adobe Assets Insights att hämta in data från och generera insikter för en webbsida.
 contentOwner: AG
-feature: Asset Insights,Asset Reports
+feature: Resursinsikter,Resursrapporter
 role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: c6d321f5-4c48-47f2-bff1-c4da988c0e84
+source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
+# Använda demopaket för Assets Insights {#using-demo-package-for-asset-insights}
 
-# Använda demopaket för tillgångsinsikter {#using-demo-package-for-asset-insights}
-
-Med hjälp av demopaketet kan du göra det möjligt för Adobe Asset Insights att samla in data från och generera insikter för en exempelwebbsida.
+Med hjälp av demopaketet kan du göra det möjligt för Adobe Assets Insights att samla in data från och generera insikter för en exempelwebbsida.
 
 ## Använda AEM Assets Insights med exempelwebbsida {#using-aem-assets-insights-with-sample-web-page}
 
-1. Konfigurera tillgångsinsikter med hjälp av instruktionerna i [Konfigurera tillgångsinsikter](touch-ui-configuring-asset-insights.md).
+1. Konfigurera resursinsikter med hjälp av instruktionerna i [Konfigurera resursinsikter](touch-ui-configuring-asset-insights.md).
 1. Hämta exempelpaketet för AEM Assets nedan och installera paketet från pakethanteraren för CRXDE.
 
-   [Hämta fil](assets/insightsdemo.zip)
+[Hämta fil](assets/insightsdemo.zip)
 
 1. Hämta ZIP-filen som innehåller exempelwebbsidan nedan och extrahera den till ditt lokala filsystem.
 
-   [Hämta fil](assets/demosite.zip)
+[Hämta fil](assets/demosite.zip)
 
 1. Klicka på webbsidan för att öppna den i webbläsaren.
 
