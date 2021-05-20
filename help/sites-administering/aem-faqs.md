@@ -6,14 +6,13 @@ seo-description: Använd de här vanliga frågorna för att förstå, konfigurer
 uuid: af197bcc-2c61-4c64-b781-f24d83c27c82
 contentOwner: jsyal
 discoiquuid: c66b65af-443f-4fc2-b775-9f4e3c60285a
-translation-type: tm+mt
-source-git-commit: f5b45b2c8bfcf9d82ddc08b05b5fff22937fa9fd
+exl-id: 76110cf4-0fd8-4203-b256-c0818a1b64d2
+source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
 workflow-type: tm+mt
 source-wordcount: '1545'
 ht-degree: 0%
 
 ---
-
 
 # AEM frågor och svar{#aem-faqs}
 
@@ -101,7 +100,7 @@ Läs [Metodtips för frågor och indexering](/help/sites-deploying/best-practice
 
 ### Stöder vi minifierade JS-libs i Design Importer? {#do-we-support-minified-js-libs-in-design-importer}
 
-Du måste ändra JS-processorns standardkonfigurationsegenskap för HTML-bibliotekshanteraren för Adobe Granite till ***min:gcc***. För att kunna importera designpaketet rekommenderar vi att du inkluderar förminifierade bibliotek från tredje part i våra bibliotek på klientsidan.
+Du måste ändra standardkonfigurationsegenskapen för JS-processorn i HTML-bibliotekshanteraren för Adobe Granite till ***min:gcc***. För att kunna importera designpaketet rekommenderar vi att du inkluderar förminifierade bibliotek från tredje part i våra bibliotek på klientsidan.
 
 ## Assets {#assets}
 
@@ -132,9 +131,9 @@ Som en tillfällig lösning kan du även inaktivera komponenten manuellt antinge
 
 `curl -u admin:$(pass CQ_Admin) 'http://localhost:4502/system/console/components/com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporter' --data 'action=disable'`
 
-### Hur konfigurerar man tillgångsinsikter med AEM 6.4-instansen? {#how-to-configure-asset-insights-with-aem-instance}
+### Hur konfigurerar man Assets Insights med AEM 6.4-instansen? {#how-to-configure-asset-insights-with-aem-instance}
 
-Information om hur du konfigurerar och konfigurerar tillgångsinsikter för Experience Manager som distribueras via Adobe Activation (DTM) finns i [Set up Asset Insights with AEM Assets](https://helpx.adobe.com/experience-manager/kt/assets/using/asset-insights-tutorial-setup.html).
+Information om hur du konfigurerar och konfigurerar resursinsikter för Experience Manager som distribueras via Adobe Activation (DTM) finns i [Konfigurera resursinsikter med AEM Assets](https://helpx.adobe.com/experience-manager/kt/assets/using/asset-insights-tutorial-setup.html).
 
 ### Hur anpassar man administrationskonsoler? {#how-to-customize-admin-consoles}
 
