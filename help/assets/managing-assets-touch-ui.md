@@ -3,11 +3,10 @@ title: Hantera era digitala resurser med AEM Assets
 description: Lär dig mer om olika resurshanterings- och redigeringsuppgifter som du kan utföra med det Touch-optimerade användargränssnittet i AEM Assets
 contentOwner: AG
 mini-toc-levels: 1
-feature: Asset Management,Search,Renditions,Collaboration
+feature: Resurshantering, sökning, renderingar, samarbete
 role: Business Practitioner
 exl-id: aa1a702b-18dd-496b-a6e0-aa593af6e57c
-translation-type: tm+mt
-source-git-commit: fd79ac0694d5b7af0422c546cc4a94fdf2326d37
+source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
 workflow-type: tm+mt
 source-wordcount: '9762'
 ht-degree: 2%
@@ -368,7 +367,7 @@ Vissa begränsningar för funktionen är:
 
 1. Markera en eller flera taggar i fältet **[!UICONTROL Tags]**. Om du vill lägga till en egen tagg skriver du namnet på taggen i rutan och trycker på **[!UICONTROL Enter]**. Den nya taggen sparas i AEM.
 
-   YouTube kräver att taggar ska publiceras och har en länk till YouTube (om en lämplig länk finns).
+   YouTube kräver att taggar publiceras och har en länk till YouTube (om en lämplig länk finns).
 Om du vill skapa taggar måste du ha skrivbehörighet för `/content/cq:tags/default` i CRX-databasen.
 
 1. Om du vill ge resursen en gradering trycker du på fliken **[!UICONTROL Advanced]** och sedan på stjärnan vid rätt position för att tilldela den önskade graderingen.
@@ -710,7 +709,7 @@ Du kan också lägga till bildscheman med bildredigeraren. Mer information finns
 
    ![chlimage_1-28](assets/chlimage_1-28.png)
 
-## Använd tidslinjen {#timeline}
+## Använda tidslinjen {#timeline}
 
 Med **[!UICONTROL Timeline]** kan du visa olika händelser för ett markerat objekt, till exempel aktiva arbetsflöden för en resurs, kommentarer, anteckningar, aktivitetsloggar och versioner.
 
@@ -806,7 +805,7 @@ Du kan också välja att bara skriva ut anteckningarna eller granskningsstatusen
 
 Långa anteckningar kanske inte återges korrekt i PDF-filen. För optimal återgivning rekommenderar Adobe att du begränsar kommentarerna till 50 ord.
 
-Om du vill skriva ut anteckningarna och granskningsstatusen trycker du på ikonen **[!UICONTROL Print]** och följer instruktionerna i guiden. Ikonen **[!UICONTROL Print]** visas bara i verktygsfältet när resursen har tilldelats minst en antecknings- eller granskningsstatus.
+Om du vill skriva ut anteckningarna och granskningsstatusen trycker du på ikonen **[!UICONTROL Print]** och följer instruktionerna i guiden. Ikonen **[!UICONTROL Print]** visas bara i verktygsfältet när resursen har minst en antecknings- eller granskningsstatus tilldelad.
 
 1. Öppna förhandsgranskningssidan för en resurs i resursgränssnittet.
 1. Gör något av följande:
