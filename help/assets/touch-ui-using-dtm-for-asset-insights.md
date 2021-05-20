@@ -1,32 +1,31 @@
 ---
-title: Aktivera tillgångsinsikter via DTM
-description: Lär dig hur du använder DTM (Adobe Dynamic Tag Management) för att aktivera tillgångsinsikter.
+title: Aktivera resursinsikter via DTM
+description: Lär dig hur du använder DTM (Adobe Dynamic Tag Management) för att aktivera resursinsikter.
 contentOwner: AG
-feature: Asset Insights,Asset Reports
+feature: Resursinsikter,Resursrapporter
 role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: d19cea4d-5395-479d-b303-4529ae2c0bf2
+source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '627'
 ht-degree: 3%
 
 ---
 
+# Aktivera resursinsikter via DTM {#enabling-asset-insights-through-dtm}
 
-# Aktivera tillgångsinsikter via DTM {#enabling-asset-insights-through-dtm}
-
-Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknadsföringsverktyg. Det tillhandahålls kostnadsfritt till Adobe Analytics-kunder. Du kan antingen anpassa din spårningskod för att aktivera CMS-lösningar från tredje part för att använda resursinsikter eller så kan du använda DTM för att infoga resursinsikter-taggar. Insikter stöds endast och tillhandahålls för bilder.
+Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknadsföringsverktyg. Det tillhandahålls kostnadsfritt till Adobe Analytics-kunder. Du kan antingen anpassa din spårningskod för att aktivera CMS-lösningar från tredje part för att använda Assets Insights eller så kan du använda DTM för att infoga Assets Insights-taggar. Insikter stöds endast och tillhandahålls för bilder.
 
 >[!CAUTION]
 >
 >Adobe DTM är ersatt med Adobe Experience Platform Launch och kommer snart att vara [livets slut](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f). Adobe rekommenderar att du [använder Launch för resursinsikter](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html).
 
-Gör så här för att aktivera tillgångsinsikter via DTM:
+Utför dessa steg för att aktivera Assets Insights via DTM:
 
 1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Tools > Assets > Insights Configuration]**.
 1. [Konfigurera AEM med DTM-Cloud Service](../sites-administering/dtm.md)
 
-   API-token bör vara tillgänglig när du har loggat in på [https://dtm.adobe.com](https://dtm.adobe.com/) och går till **[!UICONTROL Account Settings]** från profilikonen. Detta steg är inte nödvändigt från tillgångsinsikter eftersom integrering av AEM Sites med tillgångsinsikter fortfarande är på gång.
+   API-token bör vara tillgänglig när du har loggat in på [https://dtm.adobe.com](https://dtm.adobe.com/) och går till **[!UICONTROL Account Settings]** från profilikonen. Detta steg är inte nödvändigt från Assets Insights-synpunkt eftersom integrationen av AEM Sites med Assets Insights fortfarande pågår.
 
 1. Logga in på [https://dtm.adobe.com](https://dtm.adobe.com/) och välj ett företag efter behov.
 1. Skapa/öppna en befintlig webbegenskap
@@ -51,7 +50,7 @@ Gör så här för att aktivera tillgångsinsikter via DTM:
    >
    >* `AppMeasurement.js` har tagits bort. Den förväntas bli tillgänglig via DTM:s Adobe Analytics-verktyg.
    >* Anropet till `assetAnalytics.dispatcher.init()` har tagits bort. Funktionen förväntas anropas när inläsningen av DTM:s Adobe Analytics-verktyg är klar.
-   >* Beroende på var sidspåraren för tillgångsinsikter finns (till exempel AEM, CDN och så vidare) kan skriptkällans ursprung kräva ändringar.
+   >* Beroende på var Assets Insights Page Tracker finns (till exempel AEM, CDN och så vidare) kan skriptkällans ursprung kräva ändringar.
    >* För AEM sidspåraren ska källan peka på en publiceringsinstans med hjälp av värdnamnet för dispatcher-instansen.
 
 
