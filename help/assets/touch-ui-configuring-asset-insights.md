@@ -1,21 +1,20 @@
 ---
 title: Konfigurera resursinsikter
-description: Lär dig hur du konfigurerar tillgångsinsikter i AEM Assets.
+description: Lär dig hur du konfigurerar Assets Insights i AEM Assets.
 contentOwner: AG
-feature: Asset Insights,Asset Reports
+feature: Resursinsikter,Resursrapporter
 role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: b0d62dd3-1868-4d73-95f7-3d6c3ff474d9
+source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '225'
 ht-degree: 2%
 
 ---
 
+# Konfigurera resursinsikter {#configuring-asset-insights}
 
-# Konfigurerar tillgångsinsikter {#configuring-asset-insights}
-
-Adobe Experience Manager (AEM) Assets hämtar användningsdata runt AEM resurser som används av tredjepartswebbplatser från Adobe Analytics. Om du vill att tillgångsinsikter ska kunna hämta dessa data och generera insikter måste du först konfigurera funktionen så att den integreras med Adobe Analytics.
+Adobe Experience Manager (AEM) Assets hämtar användningsdata runt AEM resurser som används av tredjepartswebbplatser från Adobe Analytics. Om du vill att Assets Insights ska kunna hämta data och generera insikter måste du först konfigurera funktionen så att den integreras med Adobe Analytics.
 
 >[!NOTE]
 >
@@ -31,7 +30,7 @@ Adobe Experience Manager (AEM) Assets hämtar användningsdata runt AEM resurser
    ![chlimage_1-211](assets/insights_config2.png)
 
 1. Klicka/tryck på **[!UICONTROL Authenticate]**.
-1. När AEM har autentiserat dina inloggningsuppgifter väljer du en Adobe Analytics-rapportsserie från **[!UICONTROL Report Suite]**-listan där du vill att resursinsikter ska hämta data. Klicka på **[!UICONTROL Add]**.
+1. När AEM har autentiserat dina inloggningsuppgifter väljer du en Adobe Analytics-rapportsserie från **[!UICONTROL Report Suite]**-listan där du vill att Assets Insights ska hämta data. Klicka på **[!UICONTROL Add]**.
 1. När AEM har konfigurerat rapportsviten klickar/trycker du på **[!UICONTROL Done]**.
 
 ## Sidspåraren {#page-tracker}
