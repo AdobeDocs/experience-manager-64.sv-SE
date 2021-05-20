@@ -6,16 +6,15 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, leverera och optimera digitala resurser.
-translation-type: tm+mt
-source-git-commit: 55e904cb24bac68c0b1bbea59786cb4c0c711d61
+source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 36%
+source-wordcount: '625'
+ht-degree: 35%
 
 ---
 
 
-# Resursguide {#assets}
+# Resurshandbok {#assets}
 
 + [Användarhandbok för resurser](home.md)
 + [AEM 6.4 Versionsinformation om tillgångar](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/assets.html)
@@ -52,7 +51,7 @@ ht-degree: 36%
    + [Video](s7-video.md)
    + [Lägga till Dynamic Media Classic-funktioner på sidan](scene7.md)
    + [Leverera innehåll med HTTP2](http2.md)
-   + [Leverera Dynamic Media-material](delivering-dynamic-media-assets.md)
+   + [Leverera Dynamic Media-resurser](delivering-dynamic-media-assets.md)
    + [Aktivera hotlink-skydd i Dynamic Media](hotlink-protection.md)
    + [Bilduppsättningar](image-sets.md)
    + [Blandade medieuppsättningar](mixed-media-sets.md)
@@ -108,7 +107,7 @@ ht-degree: 36%
    + [Integrera AEM Assets med InDesign-server](indesign.md)
    + [Metadataprofiler](metadata-profiles.md)
    + [Digital Rights Management in Assets](drm.md)
-   + [Använda demopaket för tillgångsinsikter](touch-ui-using-demo-package-for-asset-insights.md)
+   + [Använda demopaket för Assets Insights](touch-ui-using-demo-package-for-asset-insights.md)
    + [Metodtips för att avlasta resurser](assets-offloading-best-practices.md)
    + [Bästa metoder för att använda filformat](assets-file-format-best-practices.md)
    + [Metodtips för resursövervakning](assets-monitoring-best-practices.md)
@@ -124,7 +123,7 @@ ht-degree: 36%
    + [Metodtips för att dela AEM till Creative Cloud](aem-cc-folder-sharing-best-practices.md)
    + [Metadataschema för mapp](folder-metadata-schema.md)
    + [Hantera smarta taggar](managing-smart-tags.md)
-+ Varumärkesportal {#brandportal}
++ Brand Portal {#brandportal}
    + [Konfigurera AEM Assets med varumärkesportalen](configure-aem-assets-with-brand-portal.md)
    + [Publicera resurser på varumärkesportalen](brand-portal-publish-assets.md)
    + [Publicera samlingar på varumärkesportalen](brand-portal-publish-collection.md)
@@ -155,13 +154,13 @@ ht-degree: 36%
    + [Hämta resurser från AEM](download-assets-from-aem.md)
    + [Asynkrona åtgärder](asynchronous-jobs.md)
    + [Ljuslåda](touch-ui-light-box.md)
-   + [Aktivera tillgångsinsikter via DTM](touch-ui-using-dtm-for-asset-insights.md)
+   + [Aktivera resursinsikter via DTM](touch-ui-using-dtm-for-asset-insights.md)
    + [Konfigurera resursinsikter](touch-ui-configuring-asset-insights.md)
    + [Tillämpar översättningsmolntjänster på mappar](transition-cloud-services.md)
    + [Använda sidspåraren och bädda in kod på webbsidor](touch-ui-using-page-tracker.md)
    + [Hantera sammansatta resurser](managing-linked-subassets.md)
    + [Relaterade resurser](related-assets.md)
-   + [Asset Insights ](touch-ui-asset-insights.md)
+   + [Resursinsikter](touch-ui-asset-insights.md)
    + [Söka efter videoresurser](search-video-assets.md)
    + [Delning av privata mappar](private-folder.md)
    + [Riktlinjer för utbildning i smarta innehållstjänster](smart-tags-training-guidelines.md)
