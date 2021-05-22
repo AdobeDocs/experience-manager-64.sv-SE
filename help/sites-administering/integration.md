@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: b5ff918d-08ab-4307-a807-693468fc083b
-translation-type: tm+mt
-source-git-commit: 08e0b5c1cbb05a110bfbec72ce0f89986a0fcf74
+exl-id: 1ee7ccbd-8654-4d03-8a67-2c41863ae951
+source-git-commit: af7bced72b8043d4460b575dc62c64f188575452
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '121'
 ht-degree: 0%
 
 ---
-
 
 # Lösningsintegrering{#solutions-integration}
 
@@ -24,7 +23,6 @@ ht-degree: 0%
 * [Integrera med tredjepartstjänster](/help/sites-administering/third-party-services.md)
 * [Analyser med externa leverantörer](/help/sites-administering/external-providers.md)
 * [Katalogproducent](/help/sites-administering/catalog-producer.md)
-* [Konfigurera AEM Assets-integrering med Marketing Cloud och Creative Cloud](/help/sites-administering/configure-assets-cc-integration.md)
 * [SharePoint-anslutning](/help/sites-administering/sharepoint-connector.md)
 
 Följande information finns om hur du integrerar AEM med andra Adobe- eller tredjepartstjänster:
@@ -37,6 +35,5 @@ Följande information finns om hur du integrerar AEM med andra Adobe- eller tred
 >* 4.x har konfigurerats med [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
 
 >
-
 
 
