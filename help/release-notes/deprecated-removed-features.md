@@ -1,14 +1,13 @@
 ---
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation om borttagna funktioner i Adobe Experience Manager 6.4.
-translation-type: tm+mt
-source-git-commit: 5b00783e4471a6b142ab17a7bc4a647ab04aec5f
+exl-id: 2fe0dad7-fc78-4aac-afa3-79a278008453
+source-git-commit: af7bced72b8043d4460b575dc62c64f188575452
 workflow-type: tm+mt
-source-wordcount: '1281'
-ht-degree: 3%
+source-wordcount: '1310'
+ht-degree: 2%
 
 ---
-
 
 # Föråldrade och borttagna funktioner {#deprecated-and-removed-features}
 
@@ -152,6 +151,7 @@ föråldrad.
 
 | Yta | Funktion | Ersättning |
 |---|---|---|
+| Integrering med [!DNL Experience Cloud] | Du kan synkronisera dina resurser med [!DNL Experience Cloud] genom att konfigurera via [!DNL Adobe I/O]. [!DNL Adobe Experience Cloud] kallades tidigare  [!DNL Adobe Marketing Cloud]. | Om du har frågor kan du kontakta [Adobe kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support). |
 | Analytics Activity Map | Den version av Activity Map som ingår i AEM. | På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM. Plugin-programmet [ActivityMap som tillhandahålls av Adobe Analytics](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) bör nu användas. |
 | Components-Forms | Form Captcha (foundation/components/form/captcha) | Använd komponenten ReCaptcha från Google i stället |
 | Komponenter | Bildspel (grund/komponenter/bildspel) | Ingen ersättning |
