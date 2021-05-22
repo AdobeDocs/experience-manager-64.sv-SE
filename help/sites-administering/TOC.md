@@ -8,16 +8,15 @@ breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
 feature: Administratör
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
+source-git-commit: af7bced72b8043d4460b575dc62c64f188575452
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 5%
+source-wordcount: '649'
+ht-degree: 6%
 
 ---
 
 
-# AEM 6.4 Administering User Guide {#administering}
+# AEM 6.4 Handbok för administrationsanvändare {#administering}
 
 + [Administrera användarhandboken - översikt](home.md)
 + Webbplatsfunktioner {#introduction}
@@ -143,7 +142,6 @@ ht-degree: 5%
    + [Integrera med BrightEdge Content Optimizer](brightedge.md)
    + [Metodtips för e-postmallar](best-practices-for-email-templates.md)
    + [Katalogproducent](catalog-producer.md)
-   + [Konfigurera AEM Assets-integrering med Experience Cloud och Creative Cloud](configure-assets-cc-integration.md)
    + [Integrera med Silverpop Engage](silverpop.md)
    + [Integrera med Adobe Campaign](campaign.md)
    + [Integrera med ExactTarget](exacttarget.md)
