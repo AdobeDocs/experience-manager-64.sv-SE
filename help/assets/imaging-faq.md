@@ -1,21 +1,17 @@
 ---
 title: Smart bildbehandling
-seo-title: Smart bildbehandling
 description: Smart bildbehandling utnyttjar varje användares unika visningsegenskaper för att automatiskt leverera rätt bilder som är optimerade för sin upplevelse, vilket ger bättre prestanda och engagemang.
-seo-description: Smart bildbehandling utnyttjar varje användares unika visningsegenskaper för att automatiskt leverera rätt bilder som är optimerade för sin upplevelse, vilket ger bättre prestanda och engagemang.
-uuid: c11e52ba-8d64-4dc5-b30a-fc10c2b704e5
 contentOwner: Rick Brough
 topic-tags: dynamic-media
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 exl-id: 2f24c4bc-8071-4403-b959-00db0f08db34
-feature: Smart Services
+feature: Smarta tjänster
 role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 331aca21069a0325da499279de5480c3f8536335
+source-git-commit: 74d2613d9d0037ef13f05085d1ea44f0ea377f40
 workflow-type: tm+mt
-source-wordcount: '1864'
+source-wordcount: '2522'
 ht-degree: 1%
 
 ---
@@ -44,9 +40,54 @@ I följande bildresursexempel visas den nya optimeringen av smarta bilder:
 
 På samma sätt som ovanstående testade Adobe också 7 009 URL:er från kundsajter. De kunde i genomsnitt optimera JPEG med 38 % ytterligare. För PNG med WebP-format kunde de i genomsnitt optimera filstorleken med 31 %. Den här typen av optimering är möjlig tack vare funktionen för smart bildbehandling.
 
+På mobilnätet förvärras problemen av två faktorer:
+
+* Många olika enheter med olika formfaktorer och skärmar med hög upplösning.
+* Begränsad nätverksbandbredd.
+
+När det gäller bilder är målet att leverera bilder av högsta kvalitet så effektivt som möjligt.
+
+### Om optimering av enhetens pixelproportioner {#dpr}
+
+Enhetens pixelförhållande (DPR) - även kallat CSS-pixelförhållande - är relationen mellan en enhets fysiska pixlar och logiska pixlar. I synnerhet med nya retinaskärmar växer pixelupplösningen i moderna mobilenheter i snabb takt.
+
+Om du aktiverar optimering av enhetspixelproportioner återges bilden med skärmens ursprungliga upplösning, vilket gör att den ser skarp ut.
+
+Om du aktiverar DPR-konfigurationen för smart bildåtergivning justeras den begärda bilden automatiskt baserat på pixeldensiteten på den skärm som begäran hanteras från. För närvarande kommer pixeldensiteten för visningen från Akamai CDN-rubrikvärden.
+
+| Tillåtna värden i en bilds URL | Beskrivning |
+|---|---|
+| `dpr=off` | Inaktivera DPR-optimering på URL-nivå för en enskild bild. |
+| `dpr=on,dprValue` | Åsidosätt det DPR-värde som identifieras av Smart Imaging, med ett anpassat värde (som identifieras av någon klientlogik eller annan metod). Tillåtet värde för `dprValue` är ett tal som är större än 0. De angivna värdena 1,5, 2 eller 3 är typiska. |
+
+>[!NOTE]
+>
+>* Du kan använda `dpr=on,dprValue` även om inställningen för DPR på företagsnivå är inaktiverad.
+>* På grund av DPR-optimering identifieras alltid MaxPix-bredden när den resulterande bilden är större än Dynamic Media-inställningen MaxPix genom att bildens proportioner behålls.
+
+
+| Begärd bildstorlek | DPR-värde | Levererad bildstorlek |
+|---|---|---|
+| 816x500 | 1 | 816x500 |
+| 816x500 | 2 | 1632x1000 |
+
+### Om optimering av nätverksbandbredd {#network-bandwidth-optimization}
+
+Om du aktiverar nätverksbandbredd justeras den bildkvalitet som hanteras automatiskt baserat på den faktiska nätverksbandbredden. För dålig nätverksbandbredd inaktiveras DPR-optimering automatiskt, även om det redan är aktiverat.
+
+Om du vill kan ditt företag välja att inte optimera nätverksbandbredden på den enskilda bildnivån genom att lägga till `network=off` till bildens URL.
+
+| Tillåtet värde i URL:en för en bild | Beskrivning |
+|---|---|
+| `network=off` | Stänger av nätverksoptimering på URL-nivå för en enskild bild. |
+
+>[!NOTE]
+>
+>DPR- och nätverksbandbreddsvärdena baseras på de värden som identifierats på klientsidan för det paketerade CDN. Dessa värden är ibland felaktiga. I iPhone5 med DPR=2 och iPhone12 med DPR=3 visar båda DPR=2. För högupplösta enheter är det ändå bättre att skicka DPR=2 än att skicka DPR=1. Kommer snart: Adobe arbetar med kod på klientsidan för att exakt fastställa slutanvändarens DPR.
+
 ## Vilka är de viktigaste fördelarna med den senaste Smart Imaging? {#what-are-the-key-benefits-of-smart-imaging}
 
-Eftersom bilder utgör det mesta av en sidas laddningstid kan prestandaförbättringarna få en genomgripande effekt på ett företag, till exempel högre konverteringsgrad, tidsåtgång på webbplatsen och lägre avhoppsfrekvens.
+Bilderna utgör större delen av en sidas inläsningstid. Därför kan alla prestandaförbättringar ha en genomgripande effekt på högre konverteringsgrader, hur lång tid som läggs på en webbplats och få lägre avhoppsfrekvens.
 
 Förbättringar i den senaste versionen av Smart Imaging:
 
@@ -105,7 +146,6 @@ Följande bildformat stöds för Smart Imaging:
 
 Adobe is working on a permanent fix that does not require you to append `bfc=off` for `fmt !=JPEG` or `fmt !=PNG`. This topic will be updated after the fix is delivered. -->
 
-
 ## Hur fungerar Smart Imaging med befintliga bildförinställningar som redan används? {#how-does-smart-imaging-work-with-our-existing-image-presets-that-are-already-in-use}
 
 Smart Imaging fungerar med dina befintliga &quot;bildförinställningar&quot; och alla bildinställningar registreras förutom för kvalitet (`qlt`) och format (`fmt`) om det begärda filformatet är JPEG eller PNG. Vid formatkonvertering bevarar Adobe fullständig visuell återgivning enligt inställningarna i bildförinställningen, men med en mindre filstorlek. Om den ursprungliga bildstorleken är mindre än vad Smart Imaging skapar, behålls originalbilden.
@@ -135,13 +175,23 @@ Om du vill använda Smart Imaging måste ditt företags Dynamic Media Classic- e
 
 Om du vill hitta dina domäner loggar du in på ditt företagskonto eller dina företagskonton.
 
-Tryck på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången när du skickar in en teknisk supportanmälan.
+Tryck på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången när du skickar in en teknisk supportanmälan.
 
 Din första anpassade domän kostar inget extra med en Dynamic Media-licens.
 
 ## Hur aktiverar jag Smart Imaging för mitt konto? {#what-is-the-process-for-enabling-smart-imaging-for-my-account}
 
 Du initierar begäran om att använda smart bildbehandling; den inte aktiveras automatiskt.
+
+Som standard är DPR för Smart Imaging och nätverksoptimering inaktiverat (inaktiverat) för ett Dynamic Media-företagskonto. Om du vill aktivera (aktivera) en eller båda av dessa färdiga förbättringar skapar du ett supportärende enligt beskrivningen nedan.
+
+Versionsschemat för DPR för Smart Imaging och nätverksoptimering är följande:
+
+| Län | Måldatum |
+|---|---|
+| Nordamerika | 24 maj 2021 |
+| Europa, Mellanöstern, Afrika | 25 juni 2021 |
+| Asien-Stillahavsområdet | 19 juli 2021 |
 
 1. [Använd Admin Console för att skapa ett supportärende.](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)
 1. Ange följande information i ditt supportärende:
@@ -151,7 +201,7 @@ Du initierar begäran om att använda smart bildbehandling; den inte aktiveras a
 
       Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt eller dina företagskonton.
 
-      Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**.
+      Klicka på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**.
 
       Leta efter fältet **[!UICONTROL Published Server Name]**.
    1. Kontrollera att du använder CDN via Adobe och inte hanteras med en direkt relation.
@@ -159,7 +209,7 @@ Du initierar begäran om att använda smart bildbehandling; den inte aktiveras a
 
       Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt eller dina företagskonton.
 
-      Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**.
+      Klicka på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**.
 
       Leta efter fältet **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän Dynamic Media Classic-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
    1. Ange om du även behöver Smart Imaging för att arbeta över HTTP/2.
@@ -170,7 +220,7 @@ Du initierar begäran om att använda smart bildbehandling; den inte aktiveras a
 1. Du meddelas när du är klar via supporten.
 1. För att maximera prestandaförbättringarna av Smart Imaging rekommenderar Adobe att TTL (Time To Live) ställs in på 24 timmar eller längre. TTL-värdet definierar hur länge resurser cachas av CDN. Så här ändrar du den här inställningen:
 
-   1. Om du använder Dynamic Media Classic klickar du på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]**. Ange **[!UICONTROL Default Client Cache Time To Live]**-värdet till 24 eller längre.
+   1. Om du använder Dynamic Media Classic klickar du på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**. Ange **[!UICONTROL Default Client Cache Time To Live]**-värdet till 24 eller längre.
    1. Om du använder Dynamic Media följer du [dessa instruktioner](config-dynamic.md). Ange **[!UICONTROL Expiration]**-värdet 24 timmar eller längre.
 
 ## När kan jag förvänta mig att mitt konto ska aktiveras med Smart Imaging? {#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
@@ -190,7 +240,7 @@ Under den inledande övergången kommer de icke-cachelagrade bilderna direkt til
 ## Hur kan jag verifiera om smart bildbehandling fungerar som väntat?  {#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
 
 1. När ditt konto har konfigurerats med smart bildbehandling läser du in en Dynamic Media Classic/Dynamic Media-bild-URL i webbläsaren.
-1. Öppna Chrome-utvecklarfönstret genom att klicka på **[!UICONTROL View > Developer > Developer Tools]** i webbläsaren. Eller välj ett valfritt verktyg för webbläsare.
+1. Öppna Chrome-utvecklarfönstret genom att klicka på **[!UICONTROL View]** > **[!UICONTROL Developer]** > **[!UICONTROL Developer Tools]** i webbläsaren. Eller välj ett valfritt verktyg för webbläsare.
 
 1. Kontrollera att cache är inaktiverat när utvecklingsverktygen är öppna.
 
@@ -210,6 +260,10 @@ Under den inledande övergången kommer de icke-cachelagrade bilderna direkt til
 
 Ja. Du kan inaktivera Smart Imaging genom att lägga till modifieraren `bfc=off` i URL:en.
 
+## Kan jag begära att DPR och nätverksoptimering stängs av på företagsnivå? {#dpr-companylevel-turnoff}
+
+Ja. Om du vill inaktivera DPR och nätverksoptimering på ditt företag skapar du ett supportärende enligt beskrivningen ovan i det här avsnittet.
+
 ## Vilken &quot;justering&quot; är tillgänglig? Finns det några inställningar eller beteenden som kan definieras? (#tuning-settings)
 
 För närvarande kan du välja att aktivera eller inaktivera Smart bildbehandling. Ingen annan justering är tillgänglig.
@@ -221,3 +275,9 @@ Det finns ingen sådan provisioneringsmöjlighet i den aktuella funktionen för 
 ## Ibland returneras en JPEG-bild till Chrome i stället för till en WebP-bild. Varför? (#jpeg-webp)
 
 Smart bildbehandling avgör om konverteringen är bra eller inte. Den nya bilden returneras bara om konverteringen resulterar i en mindre filstorlek med jämförbar kvalitet.
+
+## Hur fungerar optimeringen av DPR för Smart Imaging med Adobe Experience Manager Sites-komponenter och Dynamic Media-visningsprogram?
+
+* Experience Manager Sites Core Components är konfigurerade som standard för DPR-optimering. För att undvika alltför stora bilder på grund av DPR-optimering på serversidan läggs `dpr=off` alltid till i Dynamic Media-bilder för grundkomponenterna för Experience Manager Sites.
+* Eftersom Dynamic Media Foundation-komponenten är konfigurerad som standard för DPR-optimering, kommer `dpr=off` alltid att läggas till i Dynamic Media Foundation-komponentbilder för att undvika överdimensionerade bilder på grund av DPR-optimering på serversidan. Även om kunden avmarkerar DPR-optimering i DM Foundation Component får inte serversidan DPR fart. Sammanfattningsvis gäller DM Foundation-komponenten DPR-optimering endast baserat på DM Foundation-komponentnivåinställning.
+* DPR-optimering på visningsprogramsidan fungerar tillsammans med DPR-optimering på serversidan, och leder inte till alltför stora bilder. DPR-värdena på serversidan aktiveras alltså inte, oavsett var DPR hanteras av visningsprogrammet, t.ex. huvudvyn i ett zoomaktiverat visningsprogram. På samma sätt aktiveras DPR-värdet på serversidan när visningsprogramelementen, t.ex. färgrutor och miniatyrbilder, inte har någon DPR-hantering.
