@@ -10,10 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: e74ffe97-5de8-4e9c-94b4-d7d63939d40c
 exl-id: daff8e4e-40c7-4762-8e4f-d85d50b86e5d
-translation-type: tm+mt
-source-git-commit: 361964df6c25cbcfadb45dbf8fc10d5ab1258e6d
+source-git-commit: 5dd282cc91721a3d53bdf29d5fbb978a52c3704e
 workflow-type: tm+mt
-source-wordcount: '2815'
+source-wordcount: '2871'
 ht-degree: 0%
 
 ---
@@ -328,6 +327,11 @@ Alla komponenter ingår, som är standard och projektspecifika. Med dialogrutan 
 ![](assets/reportcomponent.png) ![rapportkomponentrapportcompentall](assets/reportcompentall.png)
 
 ### Diskanvändning {#disk-usage}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_ctt_diskusage"
+>title="Diskanvändningsrapport"
+>abstract="Som indata till CTT Calculator kan användare beräkna storleken på AEM genom att köra rapporten Diskanvändning under http://HOST:PORT/etc/reports/diskusage.html&#39;. Användarna kan också beräkna storleken på specifika databassökvägar med hjälp av parametern path, som: http://HOST:PORT/etc/reports/diskusage.html?path=/content/dam&#39;."
 
 Diskanvändningsrapporten innehåller information om de data som lagras i databasen.
 
