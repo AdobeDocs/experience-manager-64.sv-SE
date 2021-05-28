@@ -8,8 +8,7 @@ content-type: reference
 exl-id: b0f0c6e4-77c8-40db-a9f4-699d1a633571
 feature: Konfiguration,Scene7-läge
 role: Administrator,Business Practitioner,Developer
-translation-type: tm+mt
-source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
+source-git-commit: a9ae157512127f27dd54063fe4e3c61b5f83b74e
 workflow-type: tm+mt
 source-wordcount: '5178'
 ht-degree: 2%
@@ -76,9 +75,9 @@ Mer information finns i [Installera funktionspaket 18912 för migrering av grupp
 >
 >Som standard är konfigurationssökvägen för Cloud Services `/content/dam`. Andra konfigurationssökvägar stöds inte i Dynamic Media - Scene7-läge.
 
-Så här konfigurerar du Dynamic Media-Cloud Services:
+**Så här konfigurerar du Dynamic Media-Cloud Services:**
 
-1. I Experience Manager trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen, trycker på verktygsikonen och sedan på **[!UICONTROL Cloud Services > Dynamic Media Configuration]**.
+1. I Experience Manager trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen och trycker sedan på verktygsikonen och sedan på **[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media Configuration]**.
 1. På sidan Dynamic Media Configuration Browser (Konfigurationsläsare) trycker du på **[!UICONTROL global]** i den vänstra rutan och trycker på **[!UICONTROL Create]**. Tryck inte på eller välj mappikonen till vänster om [!UICONTROL global].
 1. På sidan [!UICONTROL Create Dynamic Media Configuration] anger du en titel, e-postadress och lösenord för Dynamic Media-kontot. Välj region. Den här informationen tillhandahålls av Adobe i ditt e-postmeddelande om etablering. Kontakta Adobe kundtjänst om du inte har fått e-postmeddelandet.
 
@@ -108,7 +107,7 @@ Så här konfigurerar du Dynamic Media-Cloud Services:
 1. Om du vill förhandsgranska Dynamic Media-innehåll på ett säkert sätt innan det publiceras måste du&quot;tillåtslista&quot; Experience Manager Author-instansen för att ansluta till Dynamic Media:
 
    * Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto. Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
-   * Tryck på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]** i navigeringsfältet uppe till höger på sidan.
+   * I navigeringsfältet uppe till höger på sidan trycker du på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**.
    * Välj **[!UICONTROL Test Image Serving]** i listrutan Publiceringskontext på sidan Image Server Publish.
    * Tryck på **[!UICONTROL Add]** för klientadressfiltret.
    * Markera kryssrutan om du vill aktivera (aktivera) adressen. Ange IP-adressen för Experience Manager Author-instansen (inte Dispatcher IP).
@@ -146,7 +145,7 @@ Installations- och konfigureringsuppgifter är:
 
 Publiceringsinställningarna avgör hur resurser levereras som standard från Dynamic Media. Om ingen inställning anges levererar Dynamic Media en resurs enligt standardinställningarna som definierats i Publiceringsinställningar. En begäran om att leverera en bild som inte innehåller ett upplösningsattribut ger till exempel en bild med inställningen för standardobjektupplösning.
 
-Så här konfigurerar du publiceringsinställningar: i Dynamic Media Classic: tryck på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]**.
+Så här konfigurerar du publiceringsinställningar: i Dynamic Media Classic: tryck på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**.
 
 Bildserverskärmen anger standardinställningar för att leverera bilder. En beskrivning av varje inställning finns i användargränssnittet.
 
@@ -160,7 +159,7 @@ Bildserverskärmen anger standardinställningar för att leverera bilder. En bes
 
 #### Konfigurerar allmänna inställningar för programmet {#configuring-application-general-settings}
 
-Om du vill öppna sidan [!UICONTROL Application General Settings] trycker du på **[!UICONTROL Setup > Application Setup > General Settings]** i fältet Global navigering i Dynamic Media Classic.
+Öppna sidan [!UICONTROL Application General Settings] genom att trycka på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]** i Dynamic Media Classic Global Navigation bar.
 
 **[!UICONTROL Servers]** - Vid kontoetablering tillhandahåller Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen om du inte uttryckligen har fått instruktioner om att göra det från Experience Manager.
 
@@ -185,9 +184,9 @@ Om du vill öppna sidan [!UICONTROL Application General Settings] trycker du på
 
 Med dynamisk mediefärghantering kan du färgkorrigera resurser. Med färgkorrigering behåller inkapslade resurser sin färgmodell (RGB, CMYK, Grå) och inbäddad färgprofil. När du begär en dynamisk återgivning korrigeras bildfärgen till målfärgrymden med hjälp av CMYK-, RGB- eller grå utdata. Se [Konfigurera bildförinställningar](managing-image-presets.md).
 
-Så här konfigurerar du standardfärgegenskaperna så att färgkorrigering aktiveras när du begär bilder:
+**Så här konfigurerar du standardfärgegenskaperna så att färgkorrigering aktiveras när du begär bilder:**
 
-1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto med de autentiseringsuppgifter som anges under etableringen. Navigera till **[!UICONTROL Setup > Application Setup]**.
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto med de autentiseringsuppgifter som anges under etableringen. Navigera till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]**.
 1. Expandera området **[!UICONTROL Publish Setup]** och markera **[!UICONTROL Image Server]**. Ange **[!UICONTROL Publish Context]** som **[!UICONTROL Image Serving]** när du anger standardvärden för publiceringsinstanser.
 1. Bläddra till den egenskap som du måste ändra. En egenskap i området **[!UICONTROL Color Management Attributes]**.
 
@@ -221,9 +220,9 @@ Du kan definiera vilka resurstyper som bearbetas av Dynamic Media och anpassa av
 
 Se [Överför resurser](managing-assets-touch-ui.md#uploading-assets).
 
-**Redigera MIME-typer för format som stöds**
+**Så här redigerar du MIME-typer för de format som stöds:**
 
-1. Tryck på Experience Manager-logotypen i Experience Manager för att komma åt den globala navigeringskonsolen, tryck sedan på ikonen **[!UICONTROL Tools]** (hammer) och navigera till **[!UICONTROL General > CRXDE Lite]**.
+1. I Experience Manager trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen, sedan trycker du på ikonen **[!UICONTROL Tools]** (hammer) och navigerar till **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 1. Navigera till följande i den vänstra listen:
 
    `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`
@@ -247,9 +246,9 @@ Se [Överför resurser](managing-assets-touch-ui.md#uploading-assets).
 
 Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience Manager Assets. Om du vill vara säker på att ingen ny nod som du lägger till i CRXDE Lite tas bort av Experience Manager, flyttar du MIME-typen före **[!UICONTROL image_]** och dess aktiverade värde är **[!UICONTROL false]**.
 
-**Lägga till anpassade MIME-typer för format som inte stöds**
+**Så här lägger du till anpassade MIME-typer för format som inte stöds:**
 
-1. Klicka på **[!UICONTROL Tools > Operations > Web Console]** från Experience Manager.
+1. I Experience Manager klickar du på **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 
    ![Webbkonsol](assets/2019-08-02_16-13-14.png)
 
@@ -277,7 +276,7 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
 
 1. Gå tillbaka till webbläsarfliken som har din öppna Experience Manager-konsol.
 
-1. Klicka på **[!UICONTROL Tools > General > CRXDE Lite]** från Experience Manager.
+1. I Experience Manager klickar du på **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 
    ![CRXDE Lite page](assets/2019-08-02_16-55-41.png)
 
@@ -321,7 +320,7 @@ Det finns två element för definition, **[!UICONTROL Match]** och **[!UICONTROL
 
    Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
-1. Tryck på **[!UICONTROL Setup > Application Setup > Batch Set Presets > Default Naming]i navigeringsfältet uppe på sidan.**
+1. Tryck på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Batch Set Presets]** > **[!UICONTROL Default Naming]** på navigeringsfältet nära sidans överkant.
 1. Välj **[!UICONTROL View Form]** eller **[!UICONTROL View Code]** för att ange hur du vill visa och ange information om varje element.
 
    Du kan markera kryssrutan **[!UICONTROL View Code]** om du vill visa värdeuppbyggnaden för det reguljära uttrycket tillsammans med dina formulärval. Du kan ange eller ändra dessa värden för att underlätta definitionen av elementen i namnkonventionen, om formulärvyn begränsar dig av någon anledning. Om dina värden inte kan tolkas i formulärvyn blir formulärfälten inaktiva.
@@ -355,7 +354,7 @@ Du kan antingen använda formulärfältsmetoden för att definiera en gruppupps�
 
    Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
-1. Tryck på **[!UICONTROL Setup > Application Setup > Batch Set Presets > Batch Set Preset]i navigeringsfältet uppe på sidan.**
+1. Tryck på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Batch Set Presets]** > **[!UICONTROL Batch Set Preset]** på navigeringsfältet nära sidans överkant.
 
    [!UICONTROL View Form], som anges i det övre högra hörnet på  [!UICONTROL Details] sidan, är standardvyn.
 
@@ -364,7 +363,7 @@ Du kan antingen använda formulärfältsmetoden för att definiera en gruppupps�
 1. Välj en förinställningstyp i listrutan **[!UICONTROL Batch Set Type]**.
 1. Gör något av följande:
 
-   * Om du använder en standardnamnkonvention som du tidigare konfigurerat under **[!UICONTROL Application Setup > Batch Set Presets > Default Naming]** expanderar du **[!UICONTROL Asset Naming Conventions]** och trycker sedan på **[!UICONTROL Default]** i listrutan **[!UICONTROL File Naming]**.
+   * Om du använder en standardnamnkonvention som du tidigare konfigurerat under **[!UICONTROL Application Setup]** > **[!UICONTROL Batch Set Presets]** > **[!UICONTROL Default Naming]** expanderar du **[!UICONTROL Asset Naming Conventions]** och trycker sedan på **[!UICONTROL Default]** i listrutan **[!UICONTROL File Naming]**.
    * Om du vill definiera en ny namnkonvention när du konfigurerar förinställningen, **[!UICONTROL Asset Naming Conventions]**, och sedan trycker du på **[!UICONTROL Custom]** i listrutan **[!UICONTROL File Naming]**.
 
 1. För [!UICONTROL Sequence order] anger du i vilken ordning bilderna ska visas efter att uppsättningen har grupperats i Dynamic Media.
@@ -410,7 +409,7 @@ När rotationsuppsättningen överförs och publiceras, aktiverar du namnet på 
 
    Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
-1. Tryck på **[!UICONTROL Setup > Application Setup > Batch Set Presets > Batch Set Preset]** i navigeringsfältet uppe på sidan.
+1. Tryck på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Batch Set Presets]** > **[!UICONTROL Batch Set Preset]** på navigeringsfältet nära sidans överkant.
 
    [!UICONTROL View Form], som anges i det övre högra hörnet på  [!UICONTROL Details] sidan, är standardvyn.
 
@@ -499,7 +498,7 @@ Om du vill uppdatera någon av de här parametrarna följer du stegen i [Aktiver
 
 Kön för Bevilja överföring av arbetsflöde används för **[!UICONTROL DAM Update Asset]**-arbetsflödet. I Dynamic Media används den för bildhantering.
 
-**Så här uppdaterar du kön för Granska tillfälligt arbetsflöde**
+**Så här uppdaterar du kön för Granska tillfälligt arbetsflöde:**
 
 1. Gå till [https://&lt;server>/system/console/configMgr](http://localhost:4502/system/console/configMgr) och sök efter **[!UICONTROL Queue: Granite Transient Workflow Queue]**.
 
@@ -607,14 +606,14 @@ Om du använder Dynamic Media för bildbehandling, video eller båda, kan du anv
 
 #### Anpassa resursfilter för replikering {#customizing-asset-filters-for-replication}
 
-1. I Experience Manager trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen, trycker på ikonen **[!UICONTROL Tools]** och navigerar till **[!UICONTROL General > CRXDE Lite]**.
+1. I Experience Manager trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen och trycker på ikonen **[!UICONTROL Tools]** och navigerar till **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 1. Navigera till `/etc/replication/agents.author/publish/jcr:content/damRenditionFilters` i det vänstra mappträdet för att granska filtren.
 
    ![chlimage_1-2](assets/chlimage_1-2.png)
 
 1. Du definierar Mime-typen för filtret genom att leta reda på Mime-typen enligt följande:
 
-   I den vänstra listen expanderar du **[!UICONTROL content > dam > <`locate_your_asset`> jcr:content > metadata]** och letar sedan i tabellen efter **[!UICONTROL dc:format]**.
+   I den vänstra listen expanderar du **[!UICONTROL content]** > **[!UICONTROL dam]** > **[!UICONTROL <`locate_your_asset`>]** > **[!UICONTROL jcr:content]** > **[!UICONTROL metadata]** och letar sedan i tabellen till höger efter **[!UICONTROL dc:format]**.
 
    Följande bild är ett exempel på en resurs sökväg till dc:format.
 
