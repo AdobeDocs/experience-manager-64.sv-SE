@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Resursinsikter,Resursrapporter
 role: Business Practitioner,Administrator
 exl-id: a9604b09-1c83-4c1e-aff7-13107b898cb3
-source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
+source-git-commit: af2d14f92efb88143ccefe7fe29f83ae515e5981
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '756'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ Assets Insights samlar in användaraktivitetsinformation, t.ex. hur många gång
 
 För att Assets Insights ska kunna samla in användningsstatistik för resurser från en webbplats måste du inkludera inbäddningskoden för resursen i webbplatskoden.
 
-Om du vill att Assets Insights ska visa användningsstatistik för resurser måste du först konfigurera funktionen så att rapporteringsdata hämtas från [!DNL Adobe Analytics]. Mer information finns i [Konfigurera resursinsikter](touch-ui-configuring-asset-insights.md). Om du vill använda den här funktionen måste du köpa [!DNL Adobe Analytics] separat. Kunder på [!DNL Managed Services] får [!DNL Analytics] licens som paketerats med [!DNL Experience Manager]. Se [Managed Services produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html).
+Om du vill att Assets Insights ska visa användningsstatistik för resurser måste du först konfigurera funktionen så att rapporteringsdata hämtas från [!DNL Adobe Analytics]. Mer information finns i [Konfigurera resursinsikter](touch-ui-configuring-asset-insights.md). Om du vill använda den här funktionen i en lokal installation måste du köpa [!DNL Adobe Analytics]-licensen separat. Kunder på [!DNL Managed Services] får [!DNL Analytics] licens som paketerats med [!DNL Experience Manager]. Se [Managed Services produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html).
 
 >[!NOTE]
 >
