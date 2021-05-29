@@ -8,7 +8,7 @@ content-type: reference
 exl-id: b0f0c6e4-77c8-40db-a9f4-699d1a633571
 feature: Konfiguration,Scene7-läge
 role: Administrator,Business Practitioner,Developer
-source-git-commit: a9ae157512127f27dd54063fe4e3c61b5f83b74e
+source-git-commit: f4fe70a58ded345f06f0a65809612a55e7ddfb4e
 workflow-type: tm+mt
 source-wordcount: '5178'
 ht-degree: 2%
@@ -33,11 +33,11 @@ Med den nya arkitekturen ansvarar Experience Manager för överordnad resurser o
 
 ## Aktivera Dynamic Media i Scene7-läge {#enabling-dynamic-media-in-scene-mode}
 
-[Dynamic ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) Mediais är inaktiverat som standard. För att kunna utnyttja funktionerna för dynamiska medier måste du aktivera dem.
+[Dynamic ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) Mediais är inaktiverat som standard. Om du vill utnyttja Dynamic Media funktioner måste du aktivera dem.
 
->[!NOTE]
+>[!WARNING]
 >
->Dynamic Media - Scene7-läget är endast till för författarinstansen Experience Manager. Därför måste du konfigurera `runmode=dynamicmedia_scene7`på Experience Manager Author-instansen, inte Experience Manager Publish-instansen.
+>Dynamic Media - Scene7-läget är endast för *författarinstansen av Experience Manager*. Därför måste du konfigurera `runmode=dynamicmedia_scene7`på Experience Manager Author-instansen *inte* Experience Manager Publish-instansen.
 
 Om du vill aktivera Dynamic Media måste du starta Experience Manager med körningsläget `dynamicmedia_scene7` från kommandoraden genom att ange följande i ett terminalfönster (exempelporten som används är 4502):
 
@@ -77,7 +77,7 @@ Mer information finns i [Installera funktionspaket 18912 för migrering av grupp
 
 **Så här konfigurerar du Dynamic Media-Cloud Services:**
 
-1. I Experience Manager trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen och trycker sedan på verktygsikonen och sedan på **[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media Configuration]**.
+1. I Experience Manager Author-instansen trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen och sedan på verktygsikonen och sedan på **[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media Configuration]**.
 1. På sidan Dynamic Media Configuration Browser (Konfigurationsläsare) trycker du på **[!UICONTROL global]** i den vänstra rutan och trycker på **[!UICONTROL Create]**. Tryck inte på eller välj mappikonen till vänster om [!UICONTROL global].
 1. På sidan [!UICONTROL Create Dynamic Media Configuration] anger du en titel, e-postadress och lösenord för Dynamic Media-kontot. Välj region. Den här informationen tillhandahålls av Adobe i ditt e-postmeddelande om etablering. Kontakta Adobe kundtjänst om du inte har fått e-postmeddelandet.
 
@@ -266,7 +266,7 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
 
 1. Skriv `DWG=image/vnd.dwg` i det tomma textfältet som du just lade till.
 
-   Exemplet `DWG=image/vnd.dwg` är endast för illustrationsändamål. MIME-typen som du lägger till här kan vara ett annat format som inte stöds.
+   Exemplet `DWG=image/vnd.dwg` är endast avsett som exempel. MIME-typen som du lägger till här kan vara ett annat format som inte stöds.
 
    ![Exempel på MIME-typtillägg](assets/2019-08-02_16-36-36.png)
 
@@ -306,7 +306,7 @@ När du överför filer skapar Dynamic Media automatiskt en uppsättning med all
 
 **Konfigurerar standardnamngivning**
 
-Skapa en standardnamnkonvention som används i alla förinställda gruppuppsättningar. Den standardnamnkonvention som valts i definitionen av gruppuppsättningsförinställningen är sannolikt allt som ditt företag behöver för att gruppgenerera uppsättningar. En gruppuppsättningsförinställning skapas för att använda den standardnamnkonvention som du definierar. Du kan skapa så många gruppuppsättningsförinställningar med alternativa, anpassade namnkonventioner som behövs för en viss uppsättning innehåll om det finns ett undantag från den företagsdefinierade standardnamngivningen.
+Skapa en standardnamnkonvention som används i alla förinställda gruppuppsättningar. Den standardnamnkonvention som valts i definitionen av gruppuppsättningsförinställningen är sannolikt allt som ditt företag behöver för att generera gruppuppsättningar. En gruppuppsättningsförinställning skapas för att använda den standardnamnkonvention som du definierar. Du kan skapa så många gruppuppsättningsförinställningar med alternativa, anpassade namnkonventioner som behövs för en viss uppsättning innehåll om det finns ett undantag från den företagsdefinierade standardnamngivningen.
 
 När du behöver konfigurera en standardnamnkonvention behöver du inte använda funktionen för gruppuppsättningsförinställningar, men du kan använda den för att definiera så många element i namnkonventionen som du vill gruppera i en uppsättning. Det underlättar när du skapar gruppuppsättningar.
 
@@ -444,7 +444,7 @@ När rotationsuppsättningen överförs och publiceras, aktiverar du namnet på 
 
    `\w+-\w+-C(\d+)`
 
-   Kom ihåg att dessa uttryck bara är exempel för illustrationsändamål. Du kan skapa det reguljära uttrycket hur du vill.
+   Kom ihåg att dessa uttryck bara är exempel för demonstrationssyften. Du kan skapa det reguljära uttrycket hur du vill.
 
    >[!NOTE]
    >
