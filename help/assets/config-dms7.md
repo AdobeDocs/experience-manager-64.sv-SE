@@ -8,9 +8,9 @@ content-type: reference
 exl-id: b0f0c6e4-77c8-40db-a9f4-699d1a633571
 feature: Konfiguration,Scene7-läge
 role: Administrator,Business Practitioner,Developer
-source-git-commit: f4fe70a58ded345f06f0a65809612a55e7ddfb4e
+source-git-commit: 9e9108bbfcd1c71004e494e73891d3ab0afd4d74
 workflow-type: tm+mt
-source-wordcount: '5178'
+source-wordcount: '5176'
 ht-degree: 2%
 
 ---
@@ -37,7 +37,7 @@ Med den nya arkitekturen ansvarar Experience Manager för överordnad resurser o
 
 >[!WARNING]
 >
->Dynamic Media - Scene7-läget är endast för *författarinstansen av Experience Manager*. Därför måste du konfigurera `runmode=dynamicmedia_scene7`på Experience Manager Author-instansen *inte* Experience Manager Publish-instansen.
+>Dynamic Media - Scene7-läget är endast för *författarinstansen av Experience Manager*. Konfigurera därför `runmode=dynamicmedia_scene7`på Experience Manager Author-instansen *inte* Experience Manager Publish-instansen.
 
 Om du vill aktivera Dynamic Media måste du starta Experience Manager med körningsläget `dynamicmedia_scene7` från kommandoraden genom att ange följande i ett terminalfönster (exempelporten som används är 4502):
 
