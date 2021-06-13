@@ -1,5 +1,5 @@
 ---
-title: Använda snabbvyer för att skapa anpassade popup-fönster
+title: Skapa anpassade popup-fönster med snabbvyer
 seo-title: Använda snabbvyer för att skapa anpassade popup-fönster
 description: Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan aktivera anpassat innehåll som ska visas i popup-fönstren.
 seo-description: Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan aktivera anpassat innehåll som ska visas i popup-fönstren.
@@ -10,17 +10,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 exl-id: 56b070e4-b445-4488-acff-685b7ce5785f
-feature: Configuration
+feature: Konfiguration
 role: Administrator,Business Practitioner,Developer
-translation-type: tm+mt
-source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
+source-git-commit: a842c45f0a0597f4c7f143974a550874258e5382
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 2%
+source-wordcount: '1047'
+ht-degree: 1%
 
 ---
 
-# Använda snabbvyer för att skapa anpassade popup-fönster {#using-quickviews-to-create-custom-pop-ups}
+# Skapa anpassade popup-fönster med snabbvyer {#using-quickviews-to-create-custom-pop-ups}
 
 Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan emellertid utlösa anpassat innehåll som ska visas i popup-fönstren. Beroende på vilket visningsprogram du använder kan användarna med den här funktionen klicka på en hotspot, en miniatyrbild eller på ett bildschema för att se information eller relaterat innehåll.
 
@@ -32,7 +31,7 @@ Snabbvyer stöds av följande visningsprogram i Dynamic Media:
 
 Även om funktionerna i de olika visningsprogrammen skiljer sig åt är processen att skapa en snabbvy densamma för alla tre visningsprogram som stöds.
 
-**Om du vill använda snabbvyer för att skapa anpassade popup-fönster**
+**Så här skapar du anpassade popup-fönster med snabbvyer:**
 
 1. Skapa en snabbvy för en överförd resurs.
 
