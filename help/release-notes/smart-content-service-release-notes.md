@@ -7,14 +7,13 @@ uuid: 5f474b36-3451-48ea-8669-b2d793638b06
 content-type: reference
 products: SG_EXPERIENCEMANAGER
 discoiquuid: 9f88c773-ddeb-4c66-ac07-7d3aa196c51b
-translation-type: tm+mt
-source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
+exl-id: 6e7ac9d2-7181-48bb-82c4-61a90e594ff5
+source-git-commit: a842c45f0a0597f4c7f143974a550874258e5382
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '528'
 ht-degree: 1%
 
 ---
-
 
 # Versionsinformation för Smart Content Service {#smart-content-service-release-notes}
 
@@ -92,7 +91,7 @@ Tjänsten för smart innehåll är tillgänglig för följande språk:
 
 Dessa webbplatser är bara tillgängliga för kunder. Om du är kund och behöver åtkomst kontaktar du din kontoansvarige på Adobe.
 
-* [Produktåtkomst](https://login.marketing.adobe.com)
+* [Produktåtkomst](https://login.experiencecloud.adobe.com/exc-content/login.html)
 * [Nedladdning av produkt på licensing.adobe.com](https://licensing.adobe.com/).
 * Produktuppdateringar, patchar och paket för ytterligare funktionalitet i [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
 * [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [New Adobe Customer Support Experience](https://docs.adobe.com/content/help/en/customer-one/using/home.html).
