@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: introduction
 discoiquuid: 2feb4a9c-57ad-4c6b-a572-0047bc409bbb
-translation-type: tm+mt
-source-git-commit: 6a8fa45ec61014acebe09048066972ecb1284641
+exl-id: 9c5d956c-06bc-4428-afcd-02b4f81b802f
+source-git-commit: 933084f92d116111dbfea55d52b1ad60ae691505
 workflow-type: tm+mt
-source-wordcount: '2752'
+source-wordcount: '2766'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera AEM Forms referenswebbplatser {#set-up-and-configure-aem-forms-reference-sites}
 
@@ -152,7 +151,7 @@ SSL-konfiguration krävs för att kommunicera med Adobe Sign-servrar. Mer inform
 >
 >Konfigurera inte tvingad SSL på mappen `/etc/map`.
 
-## Konfigurera Dag CQ Link Externalizer-konfiguration {#externalizer}
+## Konfigurera konfiguration av Dag CQ Link Externalizer {#externalizer}
 
 I AEM är **Externalizer** en OSGI-tjänst som gör att du kan omforma en resurssökväg programmatiskt (t.ex. /path/to/my/page) till en extern och absolut URL (t.ex. https://www.mycompany.com/path/to/my/page) genom att prefix the path with a preconfigure DNS. Se [Externalisera URL:er](/help/sites-developing/externalizer.md).
 
@@ -177,7 +176,7 @@ Utför följande steg på både författare och publiceringsinstanser:
 1. Kontrollera att den lokala serverns URL anges i fältet Domäner på både författare- och publiceringsinstanser.
 1. Tryck på **[!UICONTROL Save]**. Vänta en stund tills alla tjänster har startats om.
 
-## Konfigurera daglig CQ-e-posttjänst {#cqmail}
+## Konfigurera daglig CQ Mail-tjänst {#cqmail}
 
 Implementering av referensplats kräver att e-post skickas till exempelanvändare när de fyller i och skickar formulär. Genom att konfigurera Day CQ Mail Service kan du tillhandahålla information om SMTP-tjänster för att skicka automatiska e-postmeddelanden till kunder. Se [Konfigurera e-postmeddelanden](/help/sites-administering/notification.md).
 
@@ -192,7 +191,7 @@ Utför följande steg för att konfigurera e-posttjänsten på publiceringsinsta
 >
 >Du kan använda företagets SMTP-tjänst eller offentliga tjänster som Gmail. Information om hur du konfigurerar SMTP-tjänsten finns i dokumentationen för SMTP-tjänsten.
 
-## Åsidosätt XSS-standardkonfiguration {#xss}
+## Åsidosätt standard-XSS-konfiguration {#xss}
 
 E-postmallarna för referenswebbplatsen We.Finance innehåller anpassade länkar i e-postmeddelanden. Dessa länkar har platshållare som `${placeholder}`. Dessa platshållare ersätts med verkliga värden innan e-postmeddelanden skickas. Standardkonfigurationen för XSS-skydd för AEM tillåter inte klammerparenteser (**{ }**) i URL:en i HTML-innehåll. Du kan dock åsidosätta standardkonfigurationen genom att utföra följande steg på en publiceringsinstans:
 
@@ -222,8 +221,8 @@ För AEM Forms referenswebbplatser anger du URL-adressen för publiceringsserver
 
 Installera följande referensplatspaket med hjälp av programvarudistribution.
 
-* [AEM-FORMS-6.4-FSI-REF-SITE](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-FSI-REF-SITE)
-* [AEM-FORMS-6.4-GOV-REF-SITE](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-GOV-REF-SITE)
+* [AEM-FORMS-6.4-FSI-REF-SITE](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-FSI-REF-SITE)
+* [AEM-FORMS-6.4-GOV-REF-SITE](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-GOV-REF-SITE)
 
 Mer information om hur du använder paket finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
 
@@ -313,7 +312,7 @@ Gör följande på publiceringsinstansen för att tillåta åtkomst för anonyma
 1. Konfigurera fältet **[!UICONTROL Allow]** för **[!UICONTROL All Users]**.
 1. Tryck på **[!UICONTROL Save]**.
 
-## Ändra resetjänst för formulärdatamodell {#fdm}
+## Ändra resttjänst för formulärdatamodell {#fdm}
 
 Gör följande på både författare- och publiceringsinstanser:
 
@@ -392,4 +391,3 @@ Nu är du redo att utforska referenswebbplatsen. Mer information om arbetsflöde
 * [Genomgång av vår Gov-referenswebbplats](/help/forms/using/gov-reference-site-walkthrough.md)
 
 * [Genomgång av referenswebbplatser för självbetjäning för medarbetare](/help/forms/using/employee-self-service-reference-site.md)
-
