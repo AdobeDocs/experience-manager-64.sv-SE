@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/system_information_service
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 79fccce2-d090-4b50-9c58-3f2a00e651b2
-translation-type: tm+mt
-source-git-commit: 73d0dea62c294bea435364fb9c6892d80751d90d
+exl-id: 7eee8103-8d6c-4397-acaf-dd662cc09a56
+source-git-commit: dd996d0bb856b9140d420d03dec446a382d10acd
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%
 
 ---
-
 
 # API:er för systeminformationstjänst {#system-information-service-apis}
 
@@ -33,7 +32,7 @@ Systeminformationstjänsten tillhandahåller en uppsättning REST API:er för at
  <tbody>
   <tr>
    <td><p>SystemInfo.properties</p></td> 
-   <td><p>https://[server]:[port]/rest/services/SystemInfo.properties`</p></td> 
+   <td><p>https://[server]:[port]/rest/services/SystemInfo.properties</p></td> 
    <td><p>Detta API är en wrapper för Java API:t <a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a>. Den hämtar konfigurationen för den aktuella arbetsmiljön. </p></td> 
   </tr> 
   <tr>
@@ -111,4 +110,3 @@ Systeminformationstjänsten tillhandahåller en uppsättning REST API:er för at
   </tr> 
  </tbody> 
 </table>
-
