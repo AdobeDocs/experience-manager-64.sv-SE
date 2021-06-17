@@ -8,14 +8,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: spa
 content-type: reference
 discoiquuid: 6d4188f4-ad98-49df-9bb4-7936b7bea9c8
-translation-type: tm+mt
-source-git-commit: 67712638f9e35b8a6b4b3b9cdd5c507a91222dfd
+exl-id: 73995327-d781-4501-ba14-3394dc8ea4fc
+source-git-commit: dd996d0bb856b9140d420d03dec446a382d10acd
 workflow-type: tm+mt
-source-wordcount: '2124'
+source-wordcount: '2123'
 ht-degree: 0%
 
 ---
-
 
 # SPA blå{#spa-blueprint}
 
@@ -25,7 +24,7 @@ Om du vill att författaren ska kunna använda AEM SPA Editor för att redigera 
 >
 >Funktionen SPA (Single-Page Application Editor) kräver AEM 6.4 Service Pack 2 eller senare.
 >
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad återgivning på klientsidan (t.ex. Reaktion eller Vinkel).
+>SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad återgivning på klientsidan (t.ex. Reaktion eller Angular).
 
 ## Introduktion {#introduction}
 
@@ -108,7 +107,7 @@ För att underlätta bibliotekens driftskompatibilitet rekommenderar Adobe den r
 
 npm-modul: [@adobe/aem-response-editable-components](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
 
-#### Vinkel {#angular}
+#### Angular {#angular}
 
 npm-modul: kommer snart
 
@@ -173,7 +172,7 @@ Se även npm-resursen [@adobe/aem-rea-editable-components#srccomponentssresponsi
 
 #### Platshållare för det motstående stödrastret {#placeholder-of-the-reponsive-grid}
 
-Komponenten SPA mappas till en grafisk behållare, t.ex. det responsiva stödrastret, och måste lägga till en virtuell underordnad platshållare när innehållet skapas. När innehållet i SPA redigeras av sidredigeraren bäddas innehållet in i redigeraren med en iframe och attributet `data-cq-editor` läggs till i dokumentnoden för det innehållet. När attributet `data-cq-editor` finns måste behållaren innehålla ett HTMLElement som representerar det område som författaren interagerar med när en ny komponent infogas på sidan.
+Komponenten SPA mappas till en grafisk behållare, t.ex. det responsiva stödrastret, och måste lägga till en virtuell underordnad platshållare när innehållet skapas. När innehållet i SPA redigeras av sidredigeraren bäddas innehållet in i redigeraren med en iframe och attributet `data-cq-editor` läggs till dokumentnoden för det innehållet. När attributet `data-cq-editor` finns måste behållaren innehålla ett HTMLElement som representerar det område som författaren interagerar med när en ny komponent infogas på sidan.
 
 Till exempel:
 
@@ -280,7 +279,7 @@ Appen äger routningen. Utvecklaren måste först implementera en Navigation-kom
 
 Det underliggande [`PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager)-biblioteket och dess [`ModelRouter`](/help/sites-developing/spa-routing.md)-modul (aktiverad som standard) är ansvariga för förhämtning och ger åtkomst till modellen som är associerad med en given resurssökväg.
 
-De två entiteterna är relaterade till begreppet routning, men [`ModelRouter`](/help/sites-developing/spa-routing.md) ansvarar bara för att [`PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager) har lästs in med en datamodell som är synkroniserad med det aktuella programtillståndet.
+De två entiteterna relaterar till begreppet routning, men [`ModelRouter`](/help/sites-developing/spa-routing.md) ansvarar bara för att [`PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) har lästs in med en datamodell som är synkroniserad med det aktuella programtillståndet.
 
 Mer information finns i artikeln [SPA Model Routing](/help/sites-developing/spa-routing.md).
 
