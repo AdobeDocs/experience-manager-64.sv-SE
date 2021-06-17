@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: platform
 content-type: reference
 discoiquuid: c081b242-67e4-4820-9bd3-7e4495df459e
-translation-type: tm+mt
-source-git-commit: 269facfb6351b0b7c73e963ac7c5dc0b57c78a3e
+exl-id: 7780d04d-418e-494c-85c3-76bef5f35690
+source-git-commit: dd996d0bb856b9140d420d03dec446a382d10acd
 workflow-type: tm+mt
 source-wordcount: '1747'
 ht-degree: 0%
 
 ---
-
 
 # Använda Sling-adaptrar{#using-sling-adapters}
 
@@ -57,7 +56,7 @@ Det finns olika orsaker till detta, bland annat:
 
 Det är viktigt att du hanterar skiftläget null på ett smidigt sätt. Vid jsp-återgivning kan det vara acceptabelt att jsp misslyckas om det resulterar i en tom del av innehållet.
 
-### Cachelagra {#caching}
+### Cachelagring {#caching}
 
 För att förbättra prestanda kan implementeringar cachelagra objektet som returneras från ett `obj.adaptTo()`-anrop. Om `obj` är samma är det returnerade objektet detsamma.
 
@@ -70,7 +69,7 @@ Det finns dock ingen allmän regel - objektet kan vara antingen en ny eller en b
 Det finns olika sätt att implementera `Adaptable.adaptTo()`:
 
 * själva objektet, implementera själva metoden och mappa till vissa objekt.
-* Med ett [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html)`, som kan mappa godtyckliga objekt.
+* Med ett [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html), som kan mappa godtyckliga objekt.
 
    Objekten måste fortfarande implementera gränssnittet `Adaptable` och måste utöka [`SlingAdaptable`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/adapter/SlingAdaptable.html) (som skickar anropet `adaptTo` till en central adapterhanterare).
 
