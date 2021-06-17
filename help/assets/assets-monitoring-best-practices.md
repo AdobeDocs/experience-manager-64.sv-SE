@@ -2,16 +2,15 @@
 title: Metodtips för resursövervakning
 description: Bästa tillvägagångssätt för att övervaka miljön och prestanda för AEM efter att den har distribuerats.
 contentOwner: AG
-feature: Asset Management
+feature: Resurshantering
 role: Administrator,Architect
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: edbb275a-5ead-4ed2-8708-29e766081d75
+source-git-commit: dd996d0bb856b9140d420d03dec446a382d10acd
 workflow-type: tm+mt
-source-wordcount: '1769'
+source-wordcount: '1766'
 ht-degree: 0%
 
 ---
-
 
 # Metodtips för resursövervakning {#assets-monitoring-best-practices}
 
@@ -140,7 +139,7 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
 
 * Systemkontroller
 
-   * MBean: `org.apache.sling.healthcheck:name=systemchecks,type=HealthChec`k 
+   * MBean: `org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck`
    * URL: */system/console/jmx/org.apache.sling.healthCheck:name=systemchecks,type=HealthCheck*
    * Instanser: En författare, alla publiceringsservrar
    * Larm threshold: När statusen inte är OK
@@ -148,7 +147,7 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
 
 * Replikeringskö
 
-   * MBean: `org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck `
+   * MBean: `org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
    * URL: */system/console/jmx/org.apache.sling.healthCheck:name=replicationQueue,type=HealthCheck*
    * Instanser: En författare, alla publiceringsservrar
    * Larm threshold: När statusen inte är OK
@@ -156,7 +155,7 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
 
 * Svarsprestanda
 
-   * MBean: `org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck `
+   * MBean: `org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck`
    * URL: */system/console/jmx/org.apache.sling.healthCheck:name=requestsStatus,type=HealthCheck*
    * Instanser: Alla servrar
    * Varaktighet för larm: När statusen inte är OK
@@ -164,7 +163,7 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
 
 * Frågeprestanda
 
-   * MBean: `org.apache.sling.healthcheck:name=queriesStatus,type=HealthCheck `
+   * MBean: `org.apache.sling.healthcheck:name=queriesStatus,type=HealthCheck`
    * URL: */system/console/jmx/org.apache.sling.healthCheck:name= queriesStatus,type=HealthCheck*
    * Instanser: En författare, alla publiceringsservrar
    * Larm threshold: När statusen inte är OK
@@ -172,7 +171,7 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
 
 * Aktiva paket
 
-   * MBean: org.apache.sling.hälsokontroll:name=inactiveBundles,type=HealthCheck 
+   * MBean: org.apache.sling.hälsokontroll:name=inactiveBundles,type=HealthCheck
    * URL: */system/console/jmx/org.apache.sling.healthCheck:name=inactiveBundles,type=HealthCheck*
    * Instanser: Alla servrar
    * Larm threshold: När statusen inte är OK
@@ -180,7 +179,7 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
 
 * Loggfel
 
-   * MBean: `org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck `
+   * MBean: `org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck`
    * URL: */system/console/jmx/org.apache.sling.healthCheck:name=logErrorHealthCheck,type=HealthCheck*
    * Instanser: Alla servrar
    * Larm threshold: När statusen inte är OK
