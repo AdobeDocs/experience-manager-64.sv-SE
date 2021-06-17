@@ -11,14 +11,13 @@ content-type: reference
 discoiquuid: 7965b7ef-dec4-441a-a012-daf1d60df0fb
 pagetitle: Query Builder API
 tagskeywords: querybuilder
-translation-type: tm+mt
-source-git-commit: dbb6156b375382a23b9a3faece2dcdf47fd7cd82
+exl-id: ff305c6d-c11e-4e1c-b262-4802b4f54592
+source-git-commit: dd996d0bb856b9140d420d03dec446a382d10acd
 workflow-type: tm+mt
-source-wordcount: '2350'
+source-wordcount: '2334'
 ht-degree: 0%
 
 ---
-
 
 # Query Builder API{#query-builder-api}
 
@@ -190,7 +189,7 @@ orderby.sort=desc
 
 ### Sök efter sidor som taggats med en viss tagg {#search-for-pages-tagged-with-a-certain-tag}
 
-`http://localhost:4502/bin/querybuilder.json?type=cq:Page&amp;tagid=marketing:interest/product&amp;tagid.property=jcr:content/cq:tags&quot;
+`http://localhost:4502/bin/querybuilder.json?type=cq:Page&tagid=marketing:interest/product&tagid.property=jcr:content/cq:tags`
 
 ```xml
 type=cq:Page
@@ -576,4 +575,3 @@ com.day.cq.search.impl.builder.QueryImpl query execution took 272 ms
 | [com.day.cq.search.eval](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/package-summary.html) | Förutse utvärderare |
 | [com.day.cq.search.facets.extractor](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/search/facets/extractors/package-summary.html) | Facet Extractor (för utvärderare) |
 | [com.day.cq.search.writer](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/search/writer/package-summary.html) | JSON Result Hit Writer för Querybuilder-servlet (/bin/querybuilder.json) |
-
