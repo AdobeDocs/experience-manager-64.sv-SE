@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: upgrading
 discoiquuid: 899ea120-c96d-4dbf-85da-e5d25959d10a
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: Uppgraderar
+exl-id: f146cb2f-ee77-4c99-8dff-446cdb3a7797
+source-git-commit: dd996d0bb856b9140d420d03dec446a382d10acd
 workflow-type: tm+mt
 source-wordcount: '2179'
 ht-degree: 0%
 
 ---
-
 
 # Underhållsaktiviteter före uppgradering{#pre-upgrade-maintenance-tasks}
 
@@ -326,8 +325,10 @@ Det finns exceptionella fall när tjänstanvändare kan få äldre AEM som felak
 
 Om detta inträffar kommer uppgraderingen att misslyckas med ett meddelande som detta:
 
-`ERROR [Apache Sling Repository Startup Thread] com.adobe.granite.repository.impl.SlingRepositoryManager Exception in a SlingRepositoryInitializer, SlingRepository service registration aborted
-java.lang.RuntimeException: Unable to create service user [communities-utility-reader]:java.lang.RuntimeException: Existing user communities-utility-reader is not a service user.`
+```
+ERROR [Apache Sling Repository Startup Thread] com.adobe.granite.repository.impl.SlingRepositoryManager Exception in a SlingRepositoryInitializer, SlingRepository service registration aborted
+java.lang.RuntimeException: Unable to create service user [communities-utility-reader]:java.lang.RuntimeException: Existing user communities-utility-reader is not a service user.
+```
 
 Se till att du gör följande för att lösa problemet:
 
