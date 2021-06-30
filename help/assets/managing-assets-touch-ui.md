@@ -6,14 +6,14 @@ mini-toc-levels: 1
 feature: Resurshantering, sökning, renderingar, samarbete
 role: Business Practitioner
 exl-id: aa1a702b-18dd-496b-a6e0-aa593af6e57c
-source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
+source-git-commit: 04f14a57fcdc5890fe78118536cc52988a2124c3
 workflow-type: tm+mt
-source-wordcount: '9762'
+source-wordcount: '9810'
 ht-degree: 2%
 
 ---
 
-# Hantera dina digitala resurser {#managing-assets-with-the-touch-optimized-ui}
+# Hantera era digitala resurser {#managing-assets-with-the-touch-optimized-ui}
 
 Lär dig mer om olika resurshanterings- och redigeringsuppgifter som du kan utföra med det pekoptimerade användargränssnittet i AEM Assets.
 
@@ -171,7 +171,7 @@ Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du t�
 
    Om du vill avbryta ett pågående överföringsjobb trycker du på **[!UICONTROL Cancel]** bredvid **[!UICONTROL Duration]**-tiden.
 
-#### Alternativ för överföring av jobb {#upload-job-options}
+#### Alternativ för överföringsjobb {#upload-job-options}
 
 | Överföringsalternativ | Delalternativ | Beskrivning |
 |---|---|---|
@@ -231,7 +231,7 @@ När du överför bildfiler från PostScript (EPS) eller Illustrator (AI) kan du
 |  | Tvinga som CMYK | Konverterar till CMYK-färgmodellen. |
 |  | Tvinga som gråskala | Konverterar till gråskalefärgrymden. |
 
-#### Ange uppladdningsalternativ för Photoshop {#setting-photoshop-upload-options}
+#### Ange överföringsalternativ för Photoshop {#setting-photoshop-upload-options}
 
 PSD-filer (Photoshop Document) används oftast för att skapa bildmallar. När du överför en PSD-fil kan du skapa en bildmall automatiskt från filen (välj alternativet Skapa mall på skärmen Överför).
 
@@ -255,7 +255,7 @@ Använd **[!UICONTROL Crop Options]** och **[!UICONTROL Color Profile Options]**
 |  | Photoshop- och lagernamn | Namnger bilderna efter PSD-filen följt av lagernamnet eller lagernumret. Lagernumret används om lagernamnen i PSD-filen är Photoshop standardlagernamn. Ett lager med namnet Price Tag i en PSD-fil med namnet SpringAd får till exempel namnet Spring Ad_Price Tag. Ett lager med standardnamnet Lager2 kallas Spring Ad_2. |
 | Fästpunkt |  | Ange hur bilder ska förankras i mallar som genereras från lagerkompositionen som skapas från PSD-filen. Som standard är ankarpunkten i mitten. Med en central ankarpunkt kan ersättningsbilder bäst fylla samma område, oavsett ersättningsbildens proportioner. Bilder med en annan aspekt som ersätter den här bilden upptar i själva verket samma utrymme när de refererar till mallen och använder parameterersättning. Ändra till en annan inställning om ditt program kräver att ersättningsbilderna fyller ut det tilldelade utrymmet i mallen. |
 
-#### Ange alternativ för PDF-överföring {#setting-pdf-upload-options}
+#### Ange överföringsalternativ för PDF {#setting-pdf-upload-options}
 
 När du överför en PDF-fil kan du formatera den på olika sätt. Du beskär sidorna, extraherar sökord, anger en pixel per tum-upplösning och väljer en färgrymd. PDF-filer innehåller ofta en ytmarginal, skärmärken, passmärken och andra skrivarmärken. Du kan beskära dessa märken från sidorna när du överför en PDF-fil.
 
@@ -278,7 +278,7 @@ Välj bland följande alternativ:
 |  | Tvinga som CMYK | Konverterar till CMYK-färgmodellen. |
 |  | Tvinga som gråskala | Konverterar till gråskalefärgrymden. |
 
-#### Ange eVideo-överföringsalternativ {#setting-evideo-upload-options}
+#### Ange överföringsalternativ för eVideo {#setting-evideo-upload-options}
 
 Du kan omkoda en videofil genom att välja bland en mängd olika förinställningar för video.
 
@@ -296,7 +296,7 @@ Om du automatiskt vill skapa en bilduppsättning eller en snurra uppsättning fr
 
 Mer information om hur du skapar gruppuppsättningsförinställningar finns i [Konfigurera gruppuppsättningsförinställningar för att automatiskt generera bilduppsättningar och snurpuppsättningar](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets).
 
-### Direktuppspelade överföringar {#streamed-uploads}
+### Strömmade överföringar {#streamed-uploads}
 
 Om du överför flera resurser ökar I/O-anropen till AEM drastiskt, vilket minskar överföringseffektiviteten och till och med kan göra att den tar slut. AEM Assets har stöd för direktuppspelad överföring av resurser. Direktuppspelad överföring minskar I/O-disken under överföringen genom att undvika att lagra resurser i en tillfällig mapp på servern innan den kopieras till databasen. I stället överförs data direkt till databasen. På så sätt minskas tiden det tar att överföra stora resurser och möjligheten till timeout. Direktuppspelning är aktiverat som standard i AEM Assets.
 
@@ -482,7 +482,7 @@ När du flyttar resurser genom att dra dem öppnas inte guiden [!UICONTROL Move 
 
 ![Flytta resurser till jämställda mappar genom att dra resurser](assets/move-by-drag.gif)
 
-## Hantera renderingar {#managing-renditions}
+## Hantera återgivningar {#managing-renditions}
 
 1. Du kan lägga till eller ta bort återgivningar för en resurs, förutom originalet. Navigera till platsen för resursen som du vill lägga till eller ta bort återgivningar för.
 
@@ -781,6 +781,14 @@ Du kan också lägga till anteckningar i en samling. Men om en samling innehåll
 
 ### Visa sparade anteckningar {#viewing-saved-annotations}
 
+Du kan bara visa en anteckning åt gången.
+
+>[!NOTE]
+>
+>Om du markerar flera anteckningar visas den senaste anteckningen i användargränssnittet.
+>
+>Flerval stöds endast för utskrift av kommenterade resurser som PDF.
+
 1. Om du vill visa sparade anteckningar för en resurs går du till resursens plats och öppnar resurssidan för resursen.
 
 1. Tryck på ikonen **[!UICONTROL Global Navigation]** och tryck på **[!UICONTROL Timeline]** i listan.
@@ -802,6 +810,10 @@ Du kan också lägga till anteckningar i en samling. Men om en samling innehåll
 Om en resurs har anteckningar eller har genomgått ett granskningsarbetsflöde kan du skriva ut resursen tillsammans med anteckningar och granskningsstatus som en PDF-fil för offlinegranskning.
 
 Du kan också välja att bara skriva ut anteckningarna eller granskningsstatusen.
+
+>[!NOTE]
+>
+>Du kan välja flera anteckningar när du skriver ut den kommenterade resursen som PDF.
 
 Långa anteckningar kanske inte återges korrekt i PDF-filen. För optimal återgivning rekommenderar Adobe att du begränsar kommentarerna till 50 ord.
 
