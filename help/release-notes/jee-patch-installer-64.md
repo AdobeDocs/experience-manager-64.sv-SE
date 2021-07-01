@@ -39,7 +39,7 @@ WindowsNavigera till rätt katalog på installationsmediet eller mappen på hår
 `aemforms64_cfp_install.exe` -fil.
 
       * (32-bitars Windows) `Windows\Disk1\InstData\VM`
-      * (64-bitars Windows) `Windows_64Bit`\`Disk1\InstData\VM`
+      * (64-bitars Windows) `Windows_64Bit`\ `Disk1\InstData\VM`
    * **Linux, Solaris,**
 AIXNavigate to the appropriate directory, and from a command prompt, type 
 `./aem64_cfp_install.bin`.
