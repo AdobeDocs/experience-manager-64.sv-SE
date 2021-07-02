@@ -2,16 +2,15 @@
 title: Introduktion till [!DNL Adobe Experience Manager Assets]
 description: Lär dig vad som är digital resurshantering, användningsexempel och [!DNL Adobe Experience Manager Asset] erbjudande.
 contentOwner: AG
-feature: Asset Management
+feature: Resurshantering
 role: Leader,Architect,Business Practitioner
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: 9292871d-3b10-49f8-ac1a-4770b4e44048
+source-git-commit: 8665f708a336134340a3f1abe2aa17622fa142f1
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '859'
 ht-degree: 0%
 
 ---
-
 
 # Om [!DNL Adobe Experience Manager Assets] som en DAM-lösning {#about-assets}
 
@@ -53,13 +52,13 @@ När du avgör om en bild ska placeras i DAM-databasen eller om bildkomponenten 
 
 En resurs är ett digitalt dokument, en bild, en video eller ett ljud (eller en del av ett) som kan ha flera återgivningar och kan ha underresurser (t.ex. lager i en Photoshop-fil, bilder i en PowerPoint-fil, sidor i en PDF-fil, filer i en ZIP-fil).
 
-En resurs är i stort sett en binär resurs plus metadata plus återgivningar plus underresurser. Mer information finns i [DAM Performance Guide](/help/sites-deploying/assets-performance-sizing.md).
+En resurs är i stort sett en binär resurs plus metadata plus återgivningar plus underresurser. Mer information finns i [DAM Performance Guide](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/assets-performance-sizing.html).
 
 >[!CAUTION]
 >
 >Överföring och/eller redigering av en stor mängd resurser (särskilt bilder) kan påverka prestandan för din [!DNL Experience Manager]-distribution.
 
-### [!DNL Experience Manager Assets] terminologi  {#aem-assets-terminology}
+### [!DNL Experience Manager Assets] terminologi {#aem-assets-terminology}
 
 När du arbetar med digitala resurser i [!DNL Experience Manager] måste du förstå följande terminologi:
 
@@ -92,9 +91,9 @@ De uppgifter du kan utföra med dessa förkonfigurerade arbetsflöden:
 
 Du kan förstås även använda arbetsflöden manuellt. En lista över standardarbetsflöden finns i [Resursmediehanterare](media-handlers.md).
 
-## [!DNL Experience Manager Assets] och  [!DNL Media Library] {#cq-dam-vs-cq-medialibrary}
+## [!DNL Experience Manager Assets] and [!DNL Media Library] {#cq-dam-vs-cq-medialibrary}
 
-Mer information om skillnaderna finns i [Resurser och mediebibliotek](medialibrary.md).
+Mer information om skillnaderna finns i [Resurser och Media Library](medialibrary.md).
 
 >[!MORELIKETHIS]
 >
