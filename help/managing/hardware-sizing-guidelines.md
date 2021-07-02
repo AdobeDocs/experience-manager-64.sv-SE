@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/MANAGING
 topic-tags: managing
 content-type: reference
 discoiquuid: 3f4feb38-eca0-4852-88f8-9b20625e18ad
-translation-type: tm+mt
-source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+exl-id: 34e4edd5-9e67-44ed-8c4c-bcdd3e161a35
+source-git-commit: 8665f708a336134340a3f1abe2aa17622fa142f1
 workflow-type: tm+mt
-source-wordcount: '2843'
+source-wordcount: '2850'
 ht-degree: 0%
 
 ---
-
 
 # Riktlinjer för maskinvarans storlek {#hardware-sizing-guidelines}
 
@@ -106,9 +105,9 @@ Diskutrymmet övervakas kontinuerligt under rensning online och offline. Om det 
 
 AEM fungerar bra i virtualiserade miljöer, men det kan finnas faktorer som CPU eller I/O som inte direkt kan jämföras med fysisk maskinvara. En rekommendation är att välja en högre I/O-hastighet (i allmänhet) eftersom detta är en viktig faktor i de flesta fall. Det är nödvändigt att testa miljön för att få en mer detaljerad förståelse för vilka resurser som kommer att behövas.
 
-### Parallalisering av AEM instanser {#parallelization-of-aem-instances}
+### Parallalisering av AEM {#parallelization-of-aem-instances}
 
-#### Säkerhetsfel {#fail-safeness}
+#### Säkert fel {#fail-safeness}
 
 En felsäker webbplats används i minst två separata system. Om ett system kraschar kan ett annat system ta över och därmed kompensera för systemfelet.
 
@@ -147,7 +146,7 @@ I syfte att göra jämförelser har Adobe utvecklat några test för fristående
 
 De två ovanstående testerna visar tydligt att flödet varierar beroende på typ av åtgärd. Använd aktiviteterna i din miljö som grund för att ändra systemstorlek. Du får bättre genomströmning med mindre krävande åtgärder som att ändra (vilket också är vanligare).
 
-### Cachelagra {#caching}
+### Cachelagring {#caching}
 
 I redigeringsmiljön är cachningseffektiviteten vanligtvis mycket lägre eftersom det är vanligare att ändra webbplatsen och innehållet är mycket interaktivt och personaliserat. Med hjälp av dispatchern kan du cachelagra AEM bibliotek, JavaScript-skript, CSS-filer och layoutbilder. Detta snabbar upp vissa delar av redigeringsprocessen. Om du konfigurerar webbservern för att ytterligare ange rubriker för webbläsarcachelagring på dessa resurser, kommer antalet HTTP-begäranden att minskas och på så sätt blir systemet mer responsivt som författarna upplever.
 
@@ -189,7 +188,7 @@ Den här formeln kan fungera som en allmän riktlinje för skalning av CPU:er n�
 
 Se även de ytterligare kommentarerna om [Parallellisering](/help/managing/hardware-sizing-guidelines.md#parallelization-of-aem-instances) och [Prestandaoptimering](/help/sites-deploying/configuring-performance.md).
 
-### Maskinvarubaserad Recommendations {#hardware-recommendations}
+### Maskinvara Recommendations {#hardware-recommendations}
 
 Vanligtvis kan du använda samma maskinvara för din författarmiljö som du rekommenderas för din publiceringsmiljö. Vanligtvis är webbplatstrafiken mycket lägre i redigeringssystemen, men cacheeffektiviteten är också lägre. Den grundläggande faktorn här är dock antalet författare som arbetar parallellt, tillsammans med den typ av åtgärder som görs i systemet. I allmänhet är AEM (i författarmiljön) mest effektivt vid skalning av läsåtgärder. Ett AEM kluster kan med andra ord skalas bra tillsammans med författare som utför grundläggande redigeringsåtgärder.
 
@@ -225,7 +224,7 @@ Cache-effektiviteten är avgörande för webbplatsens hastighet. I följande tab
 
 Cachekvoten är den procentandel sidor som dispatchern kan returnera utan att behöva komma åt AEM. 100 % anger att avsändaren besvarar alla förfrågningar, 0 % betyder att AEM beräknar varje sida.
 
-### Komplexitet för mallar och program {#complexity-of-templates-and-applications}
+### Komplexa mallar och tillämpningar {#complexity-of-templates-and-applications}
 
 Om du använder komplexa mallar behöver AEM mer tid för att återge en sida. Sidor som tas från cachen påverkas inte av detta, men sidstorleken är fortfarande relevant när den totala svarstiden ska beaktas. Det kan ta tio gånger längre tid att återge en komplex sida än att bara återge en enkel sida.
 
@@ -299,7 +298,7 @@ Förutom beräkningen för ett standardwebbprogram kan du behöva ta hänsyn til
 
 Omfattande bearbetning av digitala resurser kräver optimerade maskinvaruresurser, de viktigaste faktorerna är bildstorlek och högsta genomströmning för bearbetade bilder.
 
-Allokera minst 16 GB stackutrymme och konfigurera arbetsflödet för DAM Update Asset så att det använder [det Camera Raw paketet](/help/assets/camera-raw.md) för konsumtion av råbilder.
+Allokera minst 16 GB stackutrymme och konfigurera arbetsflödet för DAM Update Asset så att det använder [det Camera Raw paketet](/help/assets/camera-raw.md) för intag av råbilder.
 
 >[!NOTE]
 >
@@ -309,9 +308,9 @@ Allokera minst 16 GB stackutrymme och konfigurera arbetsflödet för DAM Update 
 
 >[!NOTE]
 >
->Se även [Resursprestandahandboken](/help/sites-deploying/assets-performance-sizing.md).
+>Se även [Resursprestandahandboken](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/assets-performance-sizing.html).
 
-### Hanteraren för flera platser {#multi-site-manager}
+### Hanterare för flera platser {#multi-site-manager}
 
 Resursanvändningen när du använder AEM MSM i en redigeringsmiljö beror till stor del på de specifika användningsfallen. De grundläggande faktorerna är:
 
@@ -324,7 +323,7 @@ Genom att testa det planerade användningsexemplet med ett representativt utdrag
 
 Tänk också på att skribenter som arbetar parallellt kommer att uppleva biverkningar om AEM används mer resurser än planerat.
 
-### Viktiga faktorer för AEM Communities {#aem-communities-sizing-considerations}
+### Viktigt om AEM Communities-storleksändring {#aem-communities-sizing-considerations}
 
 AEM webbplatser som innehåller AEM Communities-funktioner (communitysajter) upplever en hög nivå av interaktion från webbplatsbesökare (medlemmar) i publiceringsmiljön.
 
@@ -332,7 +331,7 @@ Att tänka på vid storleksändring av en community-webbplats beror på den för
 
 Användargenererat innehåll (UGC) som skickas till medlemmar lagras separat från sidinnehållet. Även om den AEM plattformen använder ett nodarkiv som replikerar webbplatsinnehåll från författaren till publiceringen, använder AEM Communities en gemensam lagringsplats för UGC som aldrig replikeras.
 
-För UGC-arkivet är det nödvändigt att välja en leverantör av lagringsresurser (SRP) som påverkar den valda distributionen.\
+För UGC-arkivet är det nödvändigt att välja en lagringsresursleverantör (SRP) som påverkar den valda distributionen.\
 Se
 
 * [Community-innehåll](/help/communities/working-with-srp.md)
