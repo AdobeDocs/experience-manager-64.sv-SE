@@ -8,15 +8,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 212930fc-3430-4a0a-842c-2fb613ef981f
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: Uppgraderar
+exl-id: 3d5bbf95-bd1e-453b-b487-517a56fe727f
+source-git-commit: 8665f708a336134340a3f1abe2aa17622fa142f1
 workflow-type: tm+mt
-source-wordcount: '1058'
-ht-degree: 1%
+source-wordcount: '1139'
+ht-degree: 0%
 
 ---
-
 
 # Omstrukturering av tillgångar Repository i AEM 6.4{#assets-repository-restructuring-in-aem}
 
@@ -24,19 +23,19 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
 
 **Med 6.4-uppgradering**
 
-* [Diverse](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md#misc)
+* [Diverse](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
 
 **Före 6.5-uppgradering**
 
-* [E-postmeddelandemall för tillgångs-/samlingshändelse](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md#asset-collection-event-e-mail-notification-template)
-* [Klassisk resursdelningsdesign](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md#classic-asset-share-designs)
-* [Ladda ned mall för e-postmeddelanden om tillgångar](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md#download-asset-e-mail-notification-template)
-* [Exempel på DRM-licenser](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md#example-drm-licenses)
+* [E-postmeddelandemall för tillgångs-/samlingshändelse](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
+* [Klassisk resursdelningsdesign](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
+* [Ladda ned mall för e-postmeddelanden om tillgångar](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
+* [Exempel på DRM-licenser](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
 
-* [E-postmeddelandemall för länkdelning](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md#link-share-e-mail-notification-template)
-* [InDesign Workflow Scripts](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md#indesign-workflow-scripts)
-* [Konfigurationer för videoomkodning](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md#video-transcoding-configurations)
-* [Diverse](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md#misc2)
+* [E-postmeddelandemall för länkdelning](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
+* [InDesign Workflow Scripts](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
+* [Konfigurationer för videoomkodning](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
+* [Diverse](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
 
 ## Med 6.4-uppgradering {#with-upgrade}
 
@@ -63,7 +62,7 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
  </tbody> 
 </table>
 
-## Före 6.5 uppgradering {#prior-to-upgrade}
+## Före 6.5-uppgradering {#prior-to-upgrade}
 
 ### E-postmeddelandemall för tillgångs-/samlingshändelse {#asset-collection-event-e-mail-notification-template}
 
@@ -263,7 +262,7 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
  </tbody> 
 </table>
 
-### Konfigurationer för visningsförinställningar {#viewer-preset-configurations}
+### Förinställningskonfigurationer för visningsprogram {#viewer-preset-configurations}
 
 <table> 
  <tbody> 
@@ -312,4 +311,3 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
   </tr> 
  </tbody> 
 </table>
-
