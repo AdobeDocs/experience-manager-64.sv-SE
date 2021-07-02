@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: fc879b0b-823b-4bdc-aaa6-36f53a33fb22
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: Uppgraderar
+exl-id: 6ff5a23a-c9b5-49ca-87b2-ba01eaf48a9f
+source-git-commit: 8665f708a336134340a3f1abe2aa17622fa142f1
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
-
 
 # Omstrukturering av lager i AEM 6.4{#repository-restructuring-in-aem}
 
@@ -32,7 +31,7 @@ Med början i AEM 6.4 och som kommer att fortsätta i framtida versioner struktu
 * AEM produktkod placeras alltid i /libs, som inte får skrivas över av anpassad kod
 * Anpassad kod ska placeras i /apps, /content och /conf
 
-## Påverkan på 6.4 uppgraderingar {#impact-on-upgrades}
+## Inverkan på 6.4-uppgraderingar {#impact-on-upgrades}
 
 När du uppgraderar till AEM 6.4 dupliceras en stor delmängd av innehållet under /etc i andra mappar i databasen. Dessa nya platser är de populäraste platser där innehållet refereras. Alla försök har dock gjorts att AEM 6.4-uppgraderingen ska vara bakåtkompatibel med de tidigare platserna i mappen /etc, och i de flesta fall kommer den gamla platsen att refereras av AEM tills ändringar görs aktivt - och i många fall manuellt - i kundens applikation. Från tidslinjeperspektiv finns det två typer av ändringar:
 
@@ -45,7 +44,7 @@ Vid planering av en uppgradering till AEM 6.4 ska följande sidor per lösning r
 
 * [Omstrukturering av lager som är gemensamma för alla AEM](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md)
 * [Omstrukturering av AEM Sites-arkiv](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md)
-* [Omstrukturering av AEM Assets-arkiv](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md)
+* [Omstrukturering av AEM Assets-arkiv](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
 * [Omstrukturering av AEM Assets Dynamic Media-arkiv](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md)
 * [Omstrukturering av AEM Forms-arkiv](/help/sites-deploying/forms-repository-restructuring-in-aem-6-4.md)
 * [Omstrukturering av AEM Communities-arkiv](/help/sites-deploying/communities-repository-restructuring-in-aem-6-4.md)
