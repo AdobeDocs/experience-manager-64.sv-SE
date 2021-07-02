@@ -8,9 +8,9 @@ breadcrumb-title: Distributionsguide
 user-guide-description: Läs mer om installation, distribution och arkitekturen för Adobe Experience Manager 6.4, inklusive vår molndistribution av Adobe Managed Services.
 feature: Distribuerar
 role: Architect
-source-git-commit: 1ecb63f849f9f6167dddd4053267ae89577659fc
+source-git-commit: 19c3ecc20d78f40a2fa49f804baf232db7483afc
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '373'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 1%
    + [Konsekvenskontroll och genomgående kontroll](consistency-check.md)
    + [Riktlinjer för prestanda](performance-guidelines.md)
    + [Prestandaoptimering](configuring-performance.md)
-   + [Prestandahandbok för resurser](assets-performance-sizing.md)
+   + [Prestandahandbok för resurser](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/assets-performance-sizing.html)
    + [Instruktionsartiklar för konfiguration](ht-deploy.md)
    + [Ta bort Geometrixx](removing-the-geometrixx-sites.md)
    + [Konfigurerar webbkonsolen](configuring-web-console.md)
@@ -85,7 +85,7 @@ ht-degree: 1%
    + [Omstrukturering av lager i AEM 6.4](repository-restructuring.md)
    + [Omstrukturering av de gemensamma tillgångarna i AEM 6.4](all-repository-restructuring-in-aem-6-4.md)
    + [Omstrukturering av anläggningar Repository i AEM 6.4](sites-repository-restructuring-in-aem-6-4.md)
-   + [Omstrukturering av tillgångar Repository i AEM 6.4](assets-repository-restructuring-in-aem-6-4.md)
+   + [Omstrukturering av tillgångar Repository i AEM 6.4](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
    + [Omstrukturering av Dynamic Media-lager i AEM 6.4](dynamicmedia-repository-restructuring-in-aem-6-4.md)
    + [Omstrukturering av Forms-lager i AEM 6.4](forms-repository-restructuring-in-aem-6-4.md)
    + [Omstrukturering av e-handelslager i AEM 6.4](ecommerce-repository-restructuring-in-aem-6-4.md)
