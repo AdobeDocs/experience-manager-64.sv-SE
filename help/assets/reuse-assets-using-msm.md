@@ -3,16 +3,15 @@ title: Återanvända resurser med MSM
 description: Använd resurser på flera sidor/mappar som är härledda från och länkade till överordnade resurser. Resurserna är synkroniserade med en primär kopia och med några klick får du uppdateringar från överordnade resurser.
 contentOwner: AG
 mini-toc-levels: 1
-feature: Asset Management,Multi Site Manager
-role: Business Practitioner,Administrator,Architect
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Resurshantering,Multi Site Manager
+role: User,Admin,Architect
+exl-id: a8e9f8de-ca84-4107-8f73-2fc75eeae1f1
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '3078'
+source-wordcount: '3074'
 ht-degree: 9%
 
 ---
-
 
 # Återanvänd resurser med MSM för [!DNL Assets] {#reuse-assets-using-msm-for-assets}
 
@@ -28,7 +27,7 @@ Installera minst [!DNL Experience Manager] 6.4 Service Pack 5 om du vill använd
 
 ## Förstå fördelarna och begreppen {#understand-benefits-concepts}
 
-### Så fungerar det och fördelarna med {#how-it-works-the-benefits}
+### Så fungerar det och fördelarna {#how-it-works-the-benefits}
 
 Mer information om användningsscenarierna för att återanvända samma innehåll (text och resurser) på flera webbplatser finns i [möjliga MSM-scenarier](/help/sites-administering/msm.md). [!DNL Experience Manager] behåller en länk mellan den ursprungliga resursen och dess länkade kopior, som kallas live-kopior. Tack vare den bevarade länken kan centraliserade ändringar skickas till många aktiva kopior. Detta ger snabbare uppdateringar och eliminerar samtidigt begränsningarna med att hantera duplicerade kopior. Spridningen av ändringar är felfri och centraliserad. Funktionen ger utrymme för uppdateringar som är begränsade till valda kopior. Användare kan koppla loss länken, d.v.s. bryta arv, och göra lokala redigeringar som inte skrivs över nästa gång den primära kopian uppdateras och ändringarna introduceras. Frånkopplingen kan göras för ett fåtal metadatafält eller för en hel resurs. Det ger flexibilitet att lokalt uppdatera resurser som ursprungligen ärvts från en primär kopia.
 
@@ -38,7 +37,7 @@ MSM upprätthåller en aktiv relation mellan källresursen och dess livekopior s
 
 * Du kan uppdatera live-kopiorna genom att avbryta direktrelationen eller ta bort arvet för några få begränsade fält. Ändringarna i källan tillämpas inte längre på den aktiva kopian.
 
-### Ordlista för MSM for Assets-termer {#glossary-msm-for-assets}
+### Ordlista för villkoren för MSM for Assets {#glossary-msm-for-assets}
 
 * **Källa:** De ursprungliga resurserna eller mapparna. Primär kopia som live-kopior härleds från.
 
@@ -161,7 +160,7 @@ Välj en resurs eller mapp med en live-kopia, öppna den vänstra rutan och klic
 
 När en källa har ändrats kan ändringarna spridas till live-kopiorna med antingen en synkroniseringsåtgärd eller en utrullningsåtgärd. Mer information om skillnaden mellan de båda åtgärderna finns i [ordlista](#glossary-msm-for-assets).
 
-### Utrullningsåtgärd {#rollout-action}
+### Åtgärd för utrullning {#rollout-action}
 
 Du kan initiera en utrullningsåtgärd från källresursen och uppdatera alla eller några utvalda live-kopior.
 
@@ -179,7 +178,7 @@ Du kan också initiera en utrullningsåtgärd från [!UICONTROL References]-list
 
 ![Rulla ut ändringarna av källan till den markerade live-kopian](assets/lc_rollout_dialog.png)
 
-### Om synkroniseringsåtgärden {#about-synchronize-action}
+### Om synkroniseringsåtgärd {#about-synchronize-action}
 
 Med en synkroniseringsåtgärd hämtas ändringarna från en källa endast till den markerade Live-kopian. Synkroniseringsåtgärden respekterar och underhåller lokala ändringar som gjorts efter att arv har annullerats. De lokala ändringarna skrivs inte över och arvet som avbryts återupprättas inte. Du kan initiera en synkroniseringsåtgärd på tre sätt.
 
@@ -201,7 +200,7 @@ Om du vill se status och information om en synkroniseringsåtgärd läser du [In
 >
 >Om relationen är inaktiverad är synkroniseringsåtgärden inte tillgänglig i verktygsfältet. Synkroniseringsåtgärden är tillgänglig i [!UICONTROL References]-listen, men ändringarna sprids inte ens när en utrullning lyckades.
 
-## Pausa och återuppta relationen {#suspend-and-resume-relationship}
+## Pausa och återuppta relation {#suspend-and-resume-relationship}
 
 Du kan tillfälligt inaktivera relationen för att förhindra att en live-kopia tar emot ändringar som gjorts i källresursen eller källmappen. Relationen kan även återupptas för live-kopiering för att börja ta emot ändringarna från källan.
 
@@ -219,7 +218,7 @@ Du kan ångra alla lokala ändringar och återställa resursen till källans lä
 
 ![Återställ åtgärd skriver över lokala redigeringar och delar av den aktiva kopian med källan](assets/lc_reset.png)
 
-## Ta bort aktiv relation {#remove-live-relationship}
+## Ta bort direktrelation {#remove-live-relationship}
 
 Du kan ta bort relationen mellan en källa och en live-kopia helt med åtgärden Koppla loss. Den aktiva kopian blir en fristående resurs eller mapp när den har kopplats loss. Den visas som en ny resurs i AEM, omedelbart efter att den kopplats loss. Följ de här stegen för att koppla loss en live-kopia från källan.
 
@@ -233,7 +232,7 @@ Du kan ta bort relationen mellan en källa och en live-kopia helt med åtgärden
 
 Du kan också snabbt frigöra flera resurser i en live-kopieringsmapp från **[!UICONTROL Live Copy Overview]**-konsolen. Se [Utföra åtgärder för många resurser i mappar med live-kopior](#take-actions-on-many-assets-in-lcfolder).
 
-## Vidta åtgärder för många resurser i en live-kopiamapp {#take-actions-on-many-assets-in-lcfolder}
+## Vidta åtgärder för många resurser i en mapp för live-kopior {#take-actions-on-many-assets-in-lcfolder}
 
 Om du har flera resurser i en live-kopieringsmapp kan initieringsåtgärder för varje resurs vara långsamma. Du kan snabbt initiera grundläggande åtgärder för många resurser från Live Copy Console. Ovanstående metoder fortsätter att fungera för enskilda resurser.
 
@@ -279,7 +278,7 @@ I fler scenarier matchar MSM for Assets beteendet hos MSM for Sites-funktionen. 
 * Det går inte att konfigurera MSM-lås för sidegenskaper (Touch-aktiverat gränssnitt) i MSM för Assets.
 * Använd bara standardkonfigurationen för utrullning för MSM for Assets. De andra rollout-konfigurationerna är inte tillgängliga för MSM för Assets.
 
-## Begränsningar för MSM för resurser {#limitations-of-msm-for-assets}
+## Begränsningar för MSM för Assets {#limitations-of-msm-for-assets}
 
 Följande begränsningar gäller för MSM för Assets.
 
