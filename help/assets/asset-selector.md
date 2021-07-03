@@ -2,16 +2,15 @@
 title: Resursväljare
 description: Lär dig hur du använder resursväljaren för att söka efter, filtrera, bläddra bland och hämta metadata för resurser i Adobe Experience Manager (AEM) Resurser. Lär dig även hur du anpassar gränssnittet för resursväljaren.
 contentOwner: AG
-feature: Asset Management,Metadata,Search
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Resurshantering,Metadata,Sök
+role: User
+exl-id: 4b518ac0-5b8b-4d61-ac31-269aa1f5abe4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '494'
 ht-degree: 1%
 
 ---
-
 
 # Resursväljare {#asset-selector}
 
@@ -43,7 +42,7 @@ Du kan skicka följande frågeparametrar i en URL för att starta resursväljare
 | assettype (S) | bilder, dokument, multimedia, arkiv | <ul><li>`http://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=images`</li> <li>`http://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=documents`</li> <li>`http://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=multimedia`</li> <li>`http://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=archives`</li> | Använd det här alternativet om du vill filtrera resurstyper baserat på det skickade värdet. |
 | mimeType | mimeType(er) (`/jcr:content/metadata/dc:format`) för en resurs (jokertecken stöds också) | <ul><li>`http://localhost:4502/aem/assetpicker.html?viewmode=search&mimetype=image/png`</li>  <li>`http://localhost:4502/aem/assetpicker.html?viewmode=search&?mimetype=*png`</li>  <li>`http://localhost:4502/aem/assetpicker.html?viewmode=search&mimetype=*presentation`</li>  <li>`http://localhost:4502/aem/assetpicker?viewmode=search&mimetype=*presentation&mimetype=*png`</li></ul> | Använd det för att filtrera resurser baserat på MIME-typ(er) |
 
-## Använd resursväljaren {#using-the-asset-selector}
+## Använda resursväljaren {#using-the-asset-selector}
 
 1. Gå till `https://[AEM_server]:[port]/aem/assetpicker` för att komma åt resursväljargränssnittet.
 1. Navigera till önskad mapp och markera en eller flera resurser.
