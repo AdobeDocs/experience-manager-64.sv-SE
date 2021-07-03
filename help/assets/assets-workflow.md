@@ -2,16 +2,15 @@
 title: Bearbeta material för att genomföra affärsprocesser, utföra revisioner, uppfylla regelkrav och upprätthålla en grundläggande smidighet
 description: Resursbearbetning för att konvertera format, skapa renderingar, hantera resurser, validera resurser och köra arbetsflöden.
 contentOwner: AG
-feature: Workflow,Renditions
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: arbetsflöde,återgivningar
+role: User,Admin
+exl-id: 4fb3d12c-feac-45b9-8d09-3b6995591b3d
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1012'
 ht-degree: 3%
 
 ---
-
 
 # Bearbeta digitala resurser {#process-assets}
 
@@ -21,7 +20,7 @@ ht-degree: 3%
 
 För resursbearbetning används arbetsflöden i [!DNL Experience Manager]. Arbetsflöden hjälper till att automatisera affärslogiken eller -aktiviteterna. Detaljerade steg för att utföra specifika uppgifter anges som standard och utvecklare kan skapa egna anpassade steg. Dessa steg kan kombineras i en logisk ordning för att skapa arbetsflöden. Ett arbetsflöde kan t.ex. automatiskt lägga till vattenstämpel i överförda bilder baserat på ett visst villkor, t.ex. metadata inbäddade i en bild, mapp som den överförs till, upplösning för bilden osv. Ett annat exempel är ett arbetsflöde som är konfigurerat för vattenstämpelbilder på ett sådant sätt och som samtidigt hanterar flera resurshanteringsbehov, som att lägga till metadata, skapa återgivningar, lägga till smarta taggar för tillgångsidentifiering, publicera i ett datalager, ange behörigheter för användaråtkomst och så vidare.
 
-## Standardarbetsflöden som är tillgängliga i Experience Manager {#default-workflows}
+## Standardarbetsflöden i Experience Manager {#default-workflows}
 
 Som standard bearbetas alla överförda resurser i [!UICONTROL DAM Update Asset]-arbetsflödet. Arbetsflödet körs för varje överförd resurs och utför grundläggande resurshanteringsåtgärder som återgivningsgenerering, tillbakaskrivning av metadata, sidextrahering, medieextrahering och omkodning.
 
@@ -95,7 +94,7 @@ Hur du tillämpar ett arbetsflöde på flera mappar liknar hur du tillämpar ett
 
 Mer information om hur du använder ett arbetsflöde i en samling finns i [Använda ett arbetsflöde i en samling](managing-collections-touch-ui.md#running-a-workflow-on-a-collection).
 
-## Starta ett arbetsflöde automatiskt för att bearbeta resurser med villkor {#auto-execute-workflow-on-some-assets}
+## Starta ett arbetsflöde automatiskt för att bearbeta resurser {#auto-execute-workflow-on-some-assets}
 
 Administratörer kan konfigurera arbetsflödet så att resurser automatiskt körs och bearbetas baserat på fördefinierade villkor. Funktionen är användbar för användare och marknadsförare inom olika branscher, till exempel för att skapa anpassade arbetsflöden för specifika mappar. Anta att alla resurser från en reklambyrås foton kan vara vattenstämplade eller att alla resurser som överförts av en frilansare kan bearbetas för att skapa specifika renderingar.
 
@@ -112,8 +111,8 @@ För en arbetsflödesmodell kan användare skapa en startfil för arbetsflödet 
 >[!MORELIKETHIS]
 >
 >* [Använda och delta i arbetsflöden](/help/sites-authoring/workflows.md)
->* [Skapa arbetsflödesmodeller och utöka arbetsflödesfunktioner](/help/sites-developing/workflows.md)
->* [Metoder som kör arbetsflöden](/help/sites-administering/workflows-starting.md)
->* [Bästa arbetsflöden](/help/sites-developing/workflows-best-practices.md)
->* [Community-artikel om att ändra resurs med hjälp av arbetsflöde](https://helpx.adobe.com/experience-manager/using/modify_asset_workflow.html)
+* [Skapa arbetsflödesmodeller och utöka arbetsflödesfunktioner](/help/sites-developing/workflows.md)
+* [Metoder som kör arbetsflöden](/help/sites-administering/workflows-starting.md)
+* [Bästa arbetsflöden](/help/sites-developing/workflows-best-practices.md)
+* [Community-artikel om att ändra resurs med hjälp av arbetsflöde](https://helpx.adobe.com/experience-manager/using/modify_asset_workflow.html)
 
