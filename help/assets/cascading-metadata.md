@@ -3,17 +3,16 @@ title: Överlappande metadata
 description: I den här artikeln beskrivs hur du definierar överlappande metadata för resurser.
 contentOwner: AG
 feature: Metadata
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+role: User,Admin
+exl-id: ea6187e8-075d-4666-afc5-01c97deccc11
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '934'
 ht-degree: 11%
 
 ---
 
-
-# Cascading Metadata {#cascading-metadata}
+# Överlappande metadata {#cascading-metadata}
 
 I den här artikeln beskrivs hur du definierar överlappande metadata för resurser.
 
