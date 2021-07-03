@@ -2,16 +2,15 @@
 title: Använda sidspåraren och bädda in kod på webbsidor
 description: Lär dig hur du inkluderar sidspåraren och bäddar in JavaScript-koder i webbplatskoden så att Adobe Analytics kan samla in användningsdata runt resurser.
 contentOwner: AG
-feature: Asset Reports
-role: Architect,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Resursrapporter
+role: Architect,Admin
+exl-id: b0154c9c-a671-43fb-8733-274a35307a34
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
-
 
 # Använda sidspåraren och bädda in kod på webbsidor {#using-page-tracker-and-embed-code-in-web-pages}
 
@@ -61,7 +60,7 @@ I följande exempelkod visas hur en webbsida som innehåller både sidspårnings
 </html>
 ```
 
-## Lägger till sidspårningskod {#adding-page-tracker-code}
+## Lägga till sidspårningskod {#adding-page-tracker-code}
 
 Du lägger till sidspårningskoden i sidhuvudsavsnittet i webbplatskoden. I följande kodutdrag visas den sidspårningskod som finns på en exempelwebbsida:
 
@@ -80,7 +79,7 @@ Du lägger till sidspårningskoden i sidhuvudsavsnittet i webbplatskoden. I föl
  </head>
 ```
 
-## Lägger till inbäddad kod {#adding-embed-code}
+## Lägga till inbäddningskod {#adding-embed-code}
 
 Du lägger till inbäddningskoden i webbplatskoden. I följande kodfragment visas den inbäddade koden som finns på en exempelwebbsida:
 
