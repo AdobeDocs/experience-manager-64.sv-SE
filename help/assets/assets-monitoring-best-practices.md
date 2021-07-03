@@ -3,9 +3,9 @@ title: Metodtips för resursövervakning
 description: Bästa tillvägagångssätt för att övervaka miljön och prestanda för AEM efter att den har distribuerats.
 contentOwner: AG
 feature: Resurshantering
-role: Administrator,Architect
+role: Admin,Architect
 exl-id: edbb275a-5ead-4ed2-8708-29e766081d75
-source-git-commit: dd996d0bb856b9140d420d03dec446a382d10acd
+source-git-commit: cdee53ea75faa2e6d1a1ec6ca7aa8bf8b8840e46
 workflow-type: tm+mt
 source-wordcount: '1766'
 ht-degree: 0%
@@ -185,7 +185,7 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
    * Larm threshold: När statusen inte är OK
    * Larm-definition: Det finns fel i loggfilerna. Mer information om orsaken till problemet finns i loggattributet.
 
-## Vanliga problem och lösningar {#common-issues-and-resolutions}
+## Vanliga problem och lösningar  {#common-issues-and-resolutions}
 
 Om du råkar ut för problem i samband med övervakningen finns det några felsökningsuppgifter som du kan utföra för att lösa vanliga problem med AEM instanser:
 
