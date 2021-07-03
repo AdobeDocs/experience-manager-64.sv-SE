@@ -2,18 +2,17 @@
 title: Delning av privata mappar
 description: Lär dig hur du skapar en privat mapp i Adobe Experience Manager (AEM) Resurser och delar den med andra användare samt tilldelar olika behörigheter till dem.
 contentOwner: AG
-feature: Collaboration
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
+feature: Samarbete
+role: User
+exl-id: b6aa3cba-4085-47ac-a249-7461baee2a00
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '438'
 ht-degree: 7%
 
 ---
 
-
-# Privat mappdelning {#private-folder-sharing}
+# Delning av privata mappar {#private-folder-sharing}
 
 Du kan skapa en privat mapp i användargränssnittet för Adobe Experience Manager (AEM) Resurser som är exklusivt tillgänglig för dig. Du kan dela den här privata mappen med andra användare och tilldela olika behörigheter till dem. Beroende på vilken behörighetsnivå du tilldelar kan användare utföra olika åtgärder i mappen, till exempel visa resurser i mappen eller redigera resurserna.
 
@@ -60,4 +59,3 @@ Du kan skapa en privat mapp i användargränssnittet för Adobe Experience Manag
 >[!NOTE]
 >
 >Om du vill kunna skapa en privat mapp måste du ha behörigheten Läs och Redigera åtkomstkontrollista för den överordnade mappen som du vill skapa en privat mapp i. Om du inte är administratör aktiveras dessa behörigheter inte som standard för */content/dam*. I så fall måste du först skaffa dessa behörigheter för ditt användar-ID/din grupp innan du försöker skapa privata mappar eller visa mappinställningar.
-
