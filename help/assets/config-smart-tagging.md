@@ -2,16 +2,15 @@
 title: Konfigurera resurstaggning med Smart Content Service.
 description: Lär dig hur du konfigurerar smart taggning och förbättrad smart taggning i [!DNL Adobe Experience Manager] med hjälp av Smart Content Service.
 contentOwner: AG
-feature: Smart Tags,Tagging
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Smarta taggar,Taggar
+role: Admin
+exl-id: 11c5dd92-f824-41d2-9ab2-b32bdeae01b6
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '992'
 ht-degree: 46%
 
 ---
-
 
 # Konfigurera resurstaggning med Smart Content Service {#configure-asset-tagging-using-the-smart-content-service}
 
@@ -39,7 +38,7 @@ Innan du använder tjänsten Smart Content måste du se till att följande skapa
 
 Om du vill aktivera utökade smarta taggar installerar du förutom ovanstående även det senaste [Experience Manager Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html).
 
-## Skapa konfigurationen för tjänsten Smart Content för att hämta det offentliga certifikatet {#obtain-public-certificate}
+## Skapa konfiguration för tjänsten Smart Content för att hämta offentligt certifikat {#obtain-public-certificate}
 
 Med ett offentligt certifikat kan du autentisera din profil på [!DNL Adobe Developer Console].
 
@@ -93,7 +92,7 @@ När ett certifikat har upphört att gälla är det inte längre tillförlitligt
 
 1. Gå till [https://console.adobe.io](https://console.adobe.io) och navigera till de befintliga Smart Content Services på sidan **[!UICONTROL Integrations]**. Överför det nya certifikatet. Mer information finns i instruktionerna i [Skapa integrering av Adobe Developer Console](#create-adobe-i-o-integration).
 
-## Skapa integrering med Adobe Developer Console {#create-adobe-i-o-integration}
+## Integrering med Adobe Developer Console {#create-adobe-i-o-integration}
 
 Om du vill använda API:er för tjänsten Smart Content Service skapar du en integrering i Adobe Developer Console för att få [!UICONTROL API Key] (genererat i fältet [!UICONTROL CLIENT ID] i Adobe Developer Console-integrering), [!UICONTROL TECHNICAL ACCOUNT ID], [!UICONTROL ORGANIZATION ID] och [!UICONTROL CLIENT SECRET] för [!UICONTROL Assets Smart Tagging Service Settings] i molnkonfigurationen i [!DNL Experience Manager].
 
@@ -150,7 +149,7 @@ När du har slutfört konfigurationen använder du en JMX MBean för att valider
 
    Valideringsresultaten visas i samma dialogruta.
 
-## Aktivera smart taggning i arbetsflödet DAM Update Asset (valfritt) {#enable-smart-tagging-in-the-update-asset-workflow-optional}
+## Aktivera smart taggning i arbetsflödet DAM-uppdatering (valfritt) {#enable-smart-tagging-in-the-update-asset-workflow-optional}
 
 1. I [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
 
@@ -190,6 +189,6 @@ När du har slutfört konfigurationen använder du en JMX MBean för att valider
 >[!MORELIKETHIS]
 >
 >* [Hantera smarta taggar](managing-smart-tags.md)
->* [Översikt och utbildning av smarta taggar](enhanced-smart-tags.md)
->* [Riktlinjer och regler för utbildning av Smart Content Service](smart-tags-training-guidelines.md)
+* [Översikt och utbildning av smarta taggar](enhanced-smart-tags.md)
+* [Riktlinjer och regler för utbildning av Smart Content Service](smart-tags-training-guidelines.md)
 
