@@ -2,18 +2,17 @@
 title: Skapa översättningsprojekt
 description: Lär dig hur du skapar översättningsprojekt i AEM.
 contentOwner: AG
-feature: Translation
-role: Architect,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Översättning
+role: Architect,Admin
+exl-id: 1b931fef-eed0-4758-993d-cdf8d478fb6f
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '1805'
+source-wordcount: '1803'
 ht-degree: 20%
 
 ---
 
-
-# Skapar översättningsprojekt {#creating-translation-projects}
+# Skapa översättningsprojekt {#creating-translation-projects}
 
 Om du vill skapa en språkkopia aktiverar du ett av följande språkkopieringsarbetsflöden som finns under referenspunkterna i resursgränssnittet:
 
@@ -281,7 +280,7 @@ Om du använder det här alternativet läggs resursuppsättningen till i ett bef
 1. Klicka/tryck på **[!UICONTROL Start]**.
 1. Se steg 9-14 i [Lägg till i befintligt översättningsprojekt](translation-projects.md#add-to-existing-translation-project) för att slutföra resten av proceduren.
 
-## Skapar temporära språkkopior {#creating-temporary-language-copies}
+## Skapa tillfälliga språkkopior {#creating-temporary-language-copies}
 
 När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia med redigerade versioner av originalresurser bevaras den befintliga språkkopian tills du godkänner översatta resurser. AEM Assets lagrar de nyligen översatta resurserna på en tillfällig plats och uppdaterar den befintliga språkkopian när du uttryckligen har godkänt resurserna. Om du avvisar resurserna ändras inte språkkopian.
 
