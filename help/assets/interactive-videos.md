@@ -9,8 +9,8 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 2f254541-6f9b-4f8a-9201-6c70f2d4f3b9
 exl-id: 3adae6da-e148-4670-86ae-27d83008ec66
 feature: Interaktiva videoklipp, video
-role: Business Practitioner
-source-git-commit: a842c45f0a0597f4c7f143974a550874258e5382
+role: User
+source-git-commit: cdee53ea75faa2e6d1a1ec6ca7aa8bf8b8840e46
 workflow-type: tm+mt
 source-wordcount: '5896'
 ht-degree: 4%
@@ -41,7 +41,7 @@ Om du vill se en interaktiv, köpbar video in action klickar du på [Live Demos]
 >
 >Om du skapar en interaktiv video som startar en webbsida när en användare klickar på en miniatyrbild kommer vissa enheter att blockera popup-webbsidan från att öppnas. I sådana fall måste du ändra inställningen för blockering av popup-fönster på enheten. På en Apple iPhone 6 trycker du till exempel på **[!UICONTROL Settings]** > **Safari** > **Blockera popup-fönster** och drar sedan kontrollen till **[!UICONTROL Off]**. När du spelar upp en interaktiv video och klickar på en miniatyrbild blir du nu tillfrågad om du vill öppna popup-fönstret. Om du accepterar öppnas webbsidan.
 
-## Se hur interaktiva videoklipp skapas {#watch-how-interactive-videos-are-created}
+## Se hur interaktiva videor skapas {#watch-how-interactive-videos-are-created}
 
 Titta på en sju och en halv minuts genomgång om [hur interaktiva videofilmer skapas](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveVideo) [](https://outv.omniture.com?v=s4NHQ2dzqd7hIqWjeG2sIdyNWsTWyupA).\
 (Även om videogenomgången är märkt med Assets on Demand gäller fortfarande principerna och stegen för interaktiv video i AEM Assets.)
@@ -101,7 +101,7 @@ Se [Skapa en ny visningsförinställning](managing-viewer-presets.md#creating-a-
 
    Om du använder en WCM-fil (Web Content Manager) från tredje part måste du integrera den nya interaktiva videon med den befintliga QuickView-implementeringen som används på webbplatsen. Se [Integrera en interaktiv video med en befintlig Quickview](#integrating-an-interactive-video-with-an-existing-quickview).
 
-## (Valfritt) Identifiera QuickView-variabler {#optional-identifying-quickview-variables}
+## (Valfritt) Identifiera Quickview-variabler {#optional-identifying-quickview-variables}
 
 >[!NOTE]
 Den här aktiviteten krävs bara om följande är sant:
@@ -246,7 +246,7 @@ När du har sparat visningsförinställningen ställs läget automatiskt in på 
 
 Se [Skapa en ny visningsförinställning](managing-viewer-presets.md#creating-a-new-viewer-preset) för att skapa en egen förinställning för Interactive Video Viewer.
 
-## Överföra en video och dess associerade miniatyrresurser {#uploading-a-video-and-its-associated-thumbnail-assets}
+## Överföra en video och dess tillhörande miniatyrbilder {#uploading-a-video-and-its-associated-thumbnail-assets}
 
 Om du redan har överfört videoklipp och miniatyrbilder går du vidare till [Lägga till interaktivitet i videon](#adding-interactivity-to-your-video).
 
@@ -494,7 +494,7 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
 1. Publicera den interaktiva videon. Publicering skapar den inbäddningskod eller URL som du så småningom kommer att kopiera och klistra in på webbplatsupplevelserna.
 
-   Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddningskoden; om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade URL:en. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
+   Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddningskoden; om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade webbadressen. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
 
    Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 
@@ -503,11 +503,11 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
    När du har lagt till tidslinjesegment och publicerat den interaktiva videon kan du lägga till den på din befintliga startsida för webbplatsen. Se [Integrera en interaktiv video med din webbplats.](#integrating-an-interactive-video-with-your-website)
 
-## Publicera interaktiva videoresurser {#publishing-interactive-video-assets}
+## Publicera interaktivt videomaterial {#publishing-interactive-video-assets}
 
 Mer information om hur du publicerar interaktiva videoresurser finns i [Publicera resurser](publishing-dynamicmedia-assets.md).
 
-## Integrera en interaktiv video med din webbplats {#integrating-an-interactive-video-with-your-website}
+## Integrera en interaktiv video med webbplatsen {#integrating-an-interactive-video-with-your-website}
 
 När du har överfört en video, lagt till tidslinjesegment i den och publicerat den interaktiva videon är du nu redo att lägga till den på din befintliga webbplats.
 
@@ -521,7 +521,7 @@ Om du är en fristående AEM Assets-kund kan du lägga till den interaktiva vide
 
    Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](embed-code.md).
 
-   Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddningskoden; om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade webbadressen. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
+   Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddningskoden; om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade URL:en. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
 
 1. Identifiera var den statiska videon finns i målets webbsideskod.
 1. Ta bort den statiska videon och ersätt koden med den inbäddade koden eller URL-adressen som du kopierade från AEM Assets, som den är.
