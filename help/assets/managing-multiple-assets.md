@@ -2,16 +2,15 @@
 title: Redigera metadata gruppvis för flera resurser och samlingar
 description: Lär dig hur du redigerar metadata för många resurser och samlingar samtidigt för att snabbt sprida vanliga metadataändringar.
 contentOwner: AG
-feature: Asset Management,Metadata,Collections
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Resurshantering,Metadata,Samlingar
+role: User
+exl-id: 3541b50a-f226-4a6a-9c2a-03a5f47f1c23
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '418'
 ht-degree: 13%
 
 ---
-
 
 # Hantera flera resurser och samlingar {#managing-multiple-assets-and-collections}
 
@@ -57,3 +56,4 @@ Om du vill ändra gränsen öppnar du **[!UICONTROL Tools > Operations > Web Con
 >[!MORELIKETHIS]
 >
 >* [Redigera metadata för flera samlingar samtidigt](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)
+
