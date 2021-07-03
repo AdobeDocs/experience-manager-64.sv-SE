@@ -5,22 +5,21 @@ uuid: 56a8c221-409f-4605-97b1-a054dd2abfab
 contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: f341fae1-dda3-4917-b6db-ad02fec63702
-feature: Asset Management,Video
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Resurshantering, video
+role: User
+exl-id: eb652414-5b10-45af-a8b6-f1de649994c5
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '703'
 ht-degree: 6%
 
 ---
-
 
 # Hantera videoresurser {#managing-video-assets}
 
 Lär dig hur du hanterar och redigerar videoresurser i Adobe Experience Manager (AEM) Assets. Om du har licens att använda Dynamic Media läser du [Dynamic Media Video documentation](video.md).
 
-## Överför och förhandsgranska videomaterial {#uploading-and-previewing-video-assets}
+## Överföra och förhandsgranska videomaterial {#uploading-and-previewing-video-assets}
 
 AEM Assets genererar förhandsgranskningar för videomaterial med filnamnstillägget MP4. Om resursens format inte är MP4 installerar du FFmpeg-paketet för att generera en förhandsvisning. FFmpeg skapar videoåtergivningar av typen OGG och MP4. Du kan förhandsgranska dessa återgivningar i AEM Assets användargränssnitt.
 
@@ -75,11 +74,11 @@ Utför följande steg i katalogen `/apps` om du vill konfigurera en större fils
 1. I fältet **[!UICONTROL Timeout]** anger du värdet `18000` och trycker sedan på **[!UICONTROL OK]** för att gå tillbaka till arbetsflödessidan **[!UICONTROL Dynamic Media Encode Video]**.
 1. Tryck **[!UICONTROL Save]** nära sidans överkant, under sidtiteln **[!UICONTROL Dynamic Media Encode Video]**.
 
-## Publicera videoresurser {#publishing-video-assets}
+## Publicera videomaterial {#publishing-video-assets}
 
 När videomaterialet har publicerats kan du inkludera det på en webbsida via en URL eller genom att bädda in det på en webbsida. Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 
-## Kommentera videoresurser {#annotating-video-assets}
+## Kommentera videomaterial {#annotating-video-assets}
 
 1. I resurskonsolen: tryck på ikonen **[!UICONTROL Edit]** på resurskortet för att visa sidan med resursinformation.
 1. Tryck på ikonen **[!UICONTROL Preview]** för att spela upp videon.
