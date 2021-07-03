@@ -2,16 +2,15 @@
 title: Hämta digitala resurser från [!DNL Adobe Experience Manager].
 description: Lär dig hur du hämtar resurser från [!DNL Adobe Experience Manager] och aktiverar eller inaktiverar hämtningsfunktionen.
 contentOwner: AG
-feature: Asset Management,Asset Distribution
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Resurshantering,Resursfördelning
+role: User
+exl-id: bfe4d597-1080-4de5-a100-73a5175863d7
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
-
 
 # Hämta resurser från [!DNL Adobe Experience Manager] {#download-assets-from-aem}
 
@@ -64,7 +63,7 @@ Om du vill tillåta hämtning av resurser från DAM, till exempel när du använ
    asset.download.prezip.maxcontentsize=I"102400"
    ```
 
-## Inaktivera resurshämtningsservlet {#disable-asset-download-servlet}
+## Inaktivera resurshämtningsserver {#disable-asset-download-servlet}
 
 `Asset Download Servlet` kan inaktiveras för en [!DNL Experience Manager]-publiceringsinstans genom att uppdatera dispatcherkonfigurationen för att blockera eventuella hämtningsbegäranden. Servern kan även inaktiveras manuellt via OSGi-konsolen direkt.
 
