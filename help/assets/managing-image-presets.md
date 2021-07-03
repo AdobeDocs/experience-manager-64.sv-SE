@@ -7,17 +7,16 @@ topic-tags: dynamic-media
 content-type: reference
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 exl-id: 3a666efe-1592-4425-82f5-c4d9343f65da
-feature: Image Presets
-role: Administrator,Business Practitioner
-translation-type: tm+mt
-source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
+feature: Bildförinställningar
+role: Admin,User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '3636'
+source-wordcount: '3635'
 ht-degree: 7%
 
 ---
 
-# Hantera förinställningar för Dynamic Media-bilder {#managing-image-presets}
+# Hantera Dynamic Media bildförinställningar {#managing-image-presets}
 
 Med bildförinställningar kan AEM Assets dynamiskt leverera bilder i olika storlekar, i olika format eller med andra bildegenskaper som genereras dynamiskt. Varje bildförinställning representerar en fördefinierad samling kommandon för storleksändring och formatering för visning av bilder. När du skapar en bildförinställning väljer du en storlek för bildleverans. Du kan också välja formateringskommandon så att bildens utseende optimeras när bilden levereras för visning.
 
@@ -41,7 +40,7 @@ Bilder som minskar i storlek när de levereras dynamiskt kan förlora i skärpa 
 
 Administratörer kan skapa bildförinställningar. Om du vill skapa en bildförinställning kan du börja från början eller så kan du börja från en befintlig förinställning och spara den under ett nytt namn.
 
-## Hantera förinställningar för Dynamic Media-bilder {#managing-image-presets-1}
+## Hantera Dynamic Media bildförinställningar {#managing-image-presets-1}
 
 Du hanterar dina bildförinställningar i AEM genom att trycka på AEM logotyp för att komma åt den globala navigeringskonsolen och sedan trycka på verktygsikonen och navigera till **[!UICONTROL Assets > Image Presets]**.
 
@@ -61,7 +60,7 @@ Du hanterar dina bildförinställningar i AEM genom att trycka på AEM logotyp f
 >
 >Systemet visar en mängd olika återgivningar när du väljer **[!UICONTROL Renditions]** i resursens **[!UICONTROL Detail]**-vy. Du kan öka eller minska antalet bildförinställningar som visas. Se [Öka antalet bildförinställningar som visas](#increasing-or-decreasing-the-number-of-image-presets-that-display).
 
-### Adobe Illustrator (AI), Postscript (EPS) och PDF-filformat {#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats}
+### Adobe Illustrator (AI), PostScript (EPS) och PDF {#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats}
 
 Om du tänker ge stöd för att lägga in AI-, EPS- och PDF-filer så att du kan generera dynamiska återgivningar av dessa filformat, bör du granska följande information innan du skapar bildförinställningar.
 
@@ -97,7 +96,7 @@ Du kommer åt alternativen för processkomponenter i **[!UICONTROL Rasterize PDF
 
 Tryck på Adobe Experience Manager längst upp till vänster och navigera till **[!UICONTROL Tools > Workflow > Models]**. Välj **[!UICONTROL DAM Update Asset]** på sidan **[!UICONTROL Workflow Models]** och tryck sedan på **[!UICONTROL Edit]** i verktygsfältet. På sidan **[!UICONTROL DAM Update Asset workflow]** dubbeltrycker du på processkomponenten **[!UICONTROL Rasterize PDF/AI Image Preview Rendition]** för att öppna dialogrutan **[!UICONTROL Step Properties]**.
 
-### Rastrera renderingsalternativen för PDF/AI-bildförhandsvisning {#rasterize-pdf-ai-image-preview-rendition-options}
+### Rastrera återgivningsalternativ för PDF/AI-bildförhandsvisning {#rasterize-pdf-ai-image-preview-rendition-options}
 
 ![Argument för att rastrera PDF- eller AI-arbetsflödet](assets/rasterize_pdf_ai_image_preview.png)
 
@@ -180,7 +179,7 @@ Följande skript används av Dynamic Media-integrering:
  </tbody> 
 </table>
 
-## Konfigurerar bildminiatyrstorlek {#configuring-image-thumbnail-size}
+## Konfigurerar bildens miniatyrstorlek {#configuring-image-thumbnail-size}
 
 Du kan konfigurera storleken på miniatyrbilder genom att konfigurera de inställningarna i **[!UICONTROL DAM Update Asset]**-arbetsflödet. I arbetsflödet finns två steg där du kan konfigurera miniatyrstorlek för bildresurser. Även om ett (**[!UICONTROL Dynamic Media Process Image Assets]**) används för dynamiska bildobjekt och det andra (**[!UICONTROL Process Thumbnails]**) för generering av statiska miniatyrbilder eller när alla andra processer inte kan generera miniatyrbilder, bör *båda* ha samma inställningar.
 
@@ -214,7 +213,7 @@ Storleksändring för miniatyrbilder definieras i följande format: **width:heig
 
 1. Tryck på **[!UICONTROL Save]** för att spara ändringarna i arbetsflödet.
 
-### Öka eller minska antalet förinställningar för Dynamic Media som visar {#increasing-or-decreasing-the-number-of-image-presets-that-display}
+### Öka eller minska antalet förinställningar för Dynamic Media-bilder som visas {#increasing-or-decreasing-the-number-of-image-presets-that-display}
 
 De bildförinställningar du skapar är tillgängliga som dynamiska återgivningar när du förhandsgranskar resurser. AEM visar en mängd olika dynamiska återgivningar när du visar resurser från **[!UICONTROL Detail View > Renditions]**. Du kan öka eller minska gränsen för de återgivningar som visas.
 
@@ -429,7 +428,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
  </tbody>
 </table>
 
-## Definiera bildförinställningsalternativ med bildmodifierare {#defining-image-preset-options-with-image-modifiers}
+## Definiera förinställningsalternativ för bilder med bildmodifierare {#defining-image-preset-options-with-image-modifiers}
 
 Förutom de alternativ som är tillgängliga på flikarna **[!UICONTROL Basic]** och **[!UICONTROL Advanced]** kan du definiera bildmodifierare för att få fler alternativ när du definierar bildförinställningar. Bildåtergivning bygger på Dynamic Media Image Rendering API. API:t definieras i detalj i [HTTP-protokollreferensen](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/c-http-protocol-reference.html).
 
@@ -506,7 +505,7 @@ Om du kör Dynamic Media - Scene7-läge publiceras bildförinställningar automa
 
    ![chlimage_1-505](assets/chlimage_1-505.png)
 
-## Tar bort Dynamic Media-bildförinställningar {#deleting-image-presets}
+## Ta bort Dynamic Media-bildförinställningar {#deleting-image-presets}
 
 1. I AEM trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen.
 1. Tryck på ikonen **[!UICONTROL Tools]** och navigera sedan till **[!UICONTROL Assets > Image Presets]**.
