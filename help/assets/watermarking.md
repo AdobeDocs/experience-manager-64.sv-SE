@@ -2,18 +2,17 @@
 title: Lägg till vattenstämpel i dina digitala resurser
 description: Lär dig hur du använder funktionen Vattenstämpel för att lägga till en digital vattenstämpel till resurser.
 contentOwner: AG
-feature: Asset Management
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Resurshantering
+role: User,Admin
+exl-id: ed01143c-b516-44f8-aceb-ad2e3f0106b2
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
 
-
-# Vattenstämpla dina digitala resurser {#watermarking}
+# Vattenstämpla era digitala resurser {#watermarking}
 
 [!DNL Adobe Experience Manager Assets] gör att du kan lägga till en digital vattenstämpel till resurser som hjälper användarna att verifiera autenticiteten och upphovsrätten till resurserna. [!DNL Experience Manager Assets] stöder text som ska användas som vattenstämpel i PNG- och JPEG-filer.
 
