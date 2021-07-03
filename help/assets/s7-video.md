@@ -7,9 +7,8 @@ topic-tags: managing-assets
 content-type: reference
 exl-id: 081e7db0-95cc-4260-8f08-318cd7d9d5b4
 feature: Video
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 0%
@@ -94,13 +93,13 @@ Så här konfigurerar du universella förinställningar:
 
 1. De valda kodningsprofilerna tillämpas automatiskt på alla videoklipp som överförs till CQ DAM-målmappen som du konfigurerar för den här Scene7-molnkonfigurationen. Du kan konfigurera flera Scene7 molnkonfigurationer med olika målmappar för att tillämpa olika kodningsprofiler efter behov.
 
-## Uppdaterar förinställningar för visningsprogram och kodning {#updating-viewer-and-encoding-presets}
+## Uppdatera visningsprogram och kodningsförinställningar {#updating-viewer-and-encoding-presets}
 
 Det är nödvändigt att uppdatera visningsprogrammet och kodningsförinställningarna för video i Experience Manager om förinställningarna uppdaterades i Scene7. I så fall navigerar du till Scene7-konfigurationen i molnkonfigurationen och klickar på **[!UICONTROL Update the viewer and encoding presets]**.
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
-## Överför din överordnad video till Scene7 från Adobe DAM {#uploading-your-master-video}
+## Överföra din överordnad video till Scene7 från Adobe DAM {#uploading-your-master-video}
 
 1. Navigera till målmappen för CQ DAM där du har konfigurerat molnkonfigurationen med Scene7-kodningsprofiler.
 1. Klicka på **[!UICONTROL Upload]** för att överföra överordnad video. Överföringen och kodningen av videon är klar när arbetsflödet för DAM Update Asset har slutförts och **[!UICONTROL Publish to Scene7]** har en bock.
@@ -125,7 +124,7 @@ I följande matris förklaras när du ska använda vilken komponent:
 >
 >S7-videokomponenten är körklar och använder den universella videoprofilen. Du kan dock hämta den HTML5-baserade videospelaren i Experience Manager. Kopiera enkelt inbäddningskoden för den färdiga HTML5-videospelaren och placera den på Experience Manager-sidan.
 
-## Experience Manager videokomponent {#aem-video-component}
+## Videokomponent för Experience Manager {#aem-video-component}
 
 Även om du bör använda videokomponenten för Scene7 för att visa Scene7-videofilmer bör du för fullständighetens skull använda Scene7-videofilmer med Foundation Video Component.
 
@@ -143,7 +142,7 @@ Följande tabell innehåller en högnivåjämförelse mellan videokomponenten i 
 
 ### Konfigurera {#setting-up}
 
-#### Skapar videoprofiler {#creating-video-profiles}
+#### Skapa videoprofiler {#creating-video-profiles}
 
 De olika videokodningarna skapas enligt de kodningsförinställningar för Scene7 som du har valt i Scene7 molnkonfiguration. För att komponenten Foundation Video ska kunna använda dem måste en videoprofil skapas för varje vald kodningsförinställning för Scene7. Med den här metoden kan videokomponenten välja DAM-återgivningar utifrån detta.
 
@@ -169,7 +168,7 @@ De olika videokodningarna skapas enligt de kodningsförinställningar för Scene
 
    Upprepa det här steget för alla kodningsförinställningar som är markerade i molnkonfigurationen och som du vill använda i videokomponenten.
 
-#### Konfigurerar design {#configuring-design}
+#### Konfigurera design {#configuring-design}
 
 Komponenten **[!UICONTROL Foundation Video]** måste känna till vilka videoprofiler som ska användas för att skapa listan över videokällor. Öppna dialogrutan för videokomponentdesign och konfigurera komponentdesignen för användning av de nya videoprofilerna.
 
