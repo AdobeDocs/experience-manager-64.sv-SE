@@ -2,16 +2,15 @@
 title: Lägg till bildscheman
 description: Lär dig hur du lägger till hyperlänkade bildscheman i bildresurser.
 contentOwner: AG
-feature: Asset Management
-role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Resurshantering
+role: User,Admin
+exl-id: d6b04891-12d3-4255-a156-2e9000474fd1
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '270'
 ht-degree: 2%
 
 ---
-
 
 # Lägg till bildscheman {#adding-image-maps}
 
