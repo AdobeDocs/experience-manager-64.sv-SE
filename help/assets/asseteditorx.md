@@ -2,16 +2,15 @@
 title: Utöka resursredigeraren
 description: Lär dig hur du utökar funktionerna i Resursredigeraren med hjälp av anpassade komponenter.
 contentOwner: AG
-feature: Developer Tools
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Utvecklarverktyg
+role: User,Admin
+exl-id: 1e02a2f6-8194-46b9-b418-87103c3f4a69
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '703'
 ht-degree: 13%
 
 ---
-
 
 # Utöka resursredigeraren {#extending-asset-editor}
 
@@ -21,7 +20,7 @@ Konfigurationen av redigeraren med de fördefinierade redigeringskomponenterna b
 
 Förutom att använda befintliga redigeringskomponenter kan Adobe Experience Manager (AEM)-utvecklare även skapa egna komponenter.
 
-## Skapar en resursredigeringsmall {#creating-an-asset-editor-template}
+## Skapa en resursredigeringsmall {#creating-an-asset-editor-template}
 
 Följande exempelsidor finns i geometrixx:
 
@@ -63,7 +62,7 @@ Vissa av AEM Assets-komponenterna använder AEM widgetbibliotek. För att kunna 
 
 Komponenterna för exempelsidan kräver att alla väljare börjar med `.asseteditor` av `static.css` (`/etc/designs/geometrixx/static.css`). Bästa praxis: Kopiera alla `.asseteditor`-väljare till formatmallen och justera reglerna efter behov.
 
-### FormChooser: Justeringar för resurser som eventuellt lästs in {#formchooser-adjustments-for-eventually-loaded-resources}
+### FormChooser: Justeringar för resurser som slutligen läses in {#formchooser-adjustments-for-eventually-loaded-resources}
 
 Resursredigeraren använder formulärväljaren, som gör att du kan redigera resurser - i det här fallet resurser - på samma formulärsida genom att lägga till en formulärväljare och formulärsökvägen till resursens URL.
 
