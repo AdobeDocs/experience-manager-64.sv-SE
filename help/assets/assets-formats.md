@@ -2,16 +2,15 @@
 title: Filformat som stöds i AEM Assets
 description: Lista över filformat och MIME-typer som stöds av AEM Assets och de funktioner som stöds för varje format.
 contentOwner: AG
-feature: Asset Management,Renditions
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Resurshantering,Återgivningar
+role: User,Admin
+exl-id: ee25fe8f-36fb-42b3-9f90-0ea77bc02e2f
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '1644'
+source-wordcount: '1641'
 ht-degree: 2%
 
 ---
-
 
 # Filformat som stöds i AEM Assets {#assets-supported-formats}
 
@@ -170,7 +169,7 @@ Utöver ovanstående funktioner bör du tänka på följande:
 
 * Information om hur du använder Dynamic Media för att generera dynamiska återgivningar för INDD-filer finns i [InDesign (INDD)-filformat](../assets/managing-image-presets.md#indesign-indd-file-format).
 
-## Multimedieformat {#supported-multimedia-formats}
+## Multimediaformat {#supported-multimedia-formats}
 
 | Format | Lagring | Metadatahantering | Extrahering av metadata | Generering av miniatyrbilder | FFMPEG-omkodning |
 |:---|:---:|:---:|:---:|:---:|:---:|
