@@ -2,16 +2,15 @@
 title: Söka efter fasetter
 description: I den här artikeln beskrivs hur du skapar, ändrar och använder sökfaktorer i AEM.
 contentOwner: AG
-feature: Search
-role: Administrator,Developer
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Sökning
+role: Admin,Developer
+exl-id: ef1c0b57-68cc-460e-ae45-e16b079194c2
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '2401'
+source-wordcount: '2399'
 ht-degree: 18%
 
 ---
-
 
 # Söka efter fasetter {#search-facets}
 
@@ -25,7 +24,7 @@ Med sökfaktorer kan du söka efter resurser på flera olika sätt i stället f�
 
 Om du till exempel söker efter en bild kan du välja om du vill ha en bitmapp eller en vektorbild. Du kan minska sökningen ytterligare genom att ange MIME-typen för bilden. På samma sätt kan du ange formatet när du söker efter dokument, till exempel PDF eller MS Word.
 
-## Lägga till ett predikat {#adding-a-predicate}
+## Lägga till en predikat {#adding-a-predicate}
 
 De sökfaktorer som visas på panelen Filter definieras i det underliggande sökformuläret med hjälp av predikat. Om du vill visa fler eller olika aspekter lägger du till predikat i standardformuläret eller använder ett anpassat formulär som innehåller de egenskaper du vill använda.
 
@@ -174,7 +173,7 @@ Med taggpredikatet kan du utföra taggbaserade sökningar efter resurser. Som st
 
 1. Välj **[!UICONTROL Match all]** om du vill söka efter matchningar som innehåller alla taggar som du anger.
 
-## Lägger till andra predikat {#adding-other-predicates}
+## Lägga till andra predikat {#adding-other-predicates}
 
 På samma sätt som du lägger till ett egenskapsprediat eller ett alternativpredikat kan du lägga till följande ytterligare predikat på sökpanelen:
 
@@ -195,7 +194,7 @@ På samma sätt som du lägger till ett egenskapsprediat eller ett alternativpre
 | [!UICONTROL Expiry Status] | Sök efter predikat för att söka efter resurser baserat på deras förfallostatus | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Beskrivning</li></ul> |
 | [!UICONTROL Hidden] | Sökpredikat som definierar en dold fältegenskap för att söka efter resurser | <ul><li>Egenskapsnamn</li><li>Egenskapsvärde</li><li>Beskrivning</li></ul> |
 
-## Återställer standardsökfaktorer {#restoring-default-search-facets}
+## Återställa standardsökfaktorer {#restoring-default-search-facets}
 
 Som standard visas en låsikon före **[!UICONTROL Assets Admin Search Rail]** på **[!UICONTROL Search Forms]**-sidan. Ikonen Lås försvinner om du lägger till sökfaktorer i formuläret, vilket anger att standardformuläret har ändrats.
 
@@ -224,6 +223,6 @@ Om du inte har tilldelats en administratörsroll finns det en lista med behörig
 >[!MORELIKETHIS]
 >
 >* [Utöka Assets-sökning](searchx.md)
->* [Söka efter resurser](search-assets.md)
->* [Söka efter videoresurser](search-video-assets.md)
+* [Söka efter resurser](search-assets.md)
+* [Söka efter videoresurser](search-video-assets.md)
 
