@@ -2,16 +2,15 @@
 title: Förbereder resurser för översättning
 description: Skapa rotmappar för språk som förberedelse för översättning av flerspråkiga resurser.
 contentOwner: AG
-feature: Projects,Translation
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Projekt,Översättning
+role: User,Admin
+exl-id: cc6c4f9e-8e22-4622-8b24-230ae258351c
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '446'
 ht-degree: 3%
 
 ---
-
 
 # Förbereder resurser för översättning {#preparing-assets-for-translation}
 
@@ -44,7 +43,7 @@ Utför följande steg för att förbereda dina resurser för översättning:
 1. Lägg till resurser i ditt primära språk.
 1. Skapa språkroten för varje målspråk som du behöver en språkkopia för.
 
-## Skapar en språkrot {#creating-a-language-root}
+## Skapa en språkrot {#creating-a-language-root}
 
 Om du vill skapa språkroten skapar du en mapp och använder en ISO-språkkod som värde för egenskapen Namn. När du har skapat språkroten kan du skapa en språkkopia på valfri nivå i språkroten.
 
@@ -60,7 +59,7 @@ Rotsidan för den italienska språkkopian av exempelhierarkin har till exempel `
 
 1. Klicka eller tryck på **[!UICONTROL Create]**. Språkroten skapas i resurskonsolen.
 
-## Språkrötter för visning {#viewing-language-roots}
+## Visa språkrot {#viewing-language-roots}
 
 Det pekoptimerade användargränssnittet innehåller en referenspanel som visar en lista över språkrötter som har skapats i AEM Assets.
 
@@ -72,4 +71,3 @@ Det pekoptimerade användargränssnittet innehåller en referenspanel som visar 
 1. Klicka eller tryck på **[!UICONTROL Language Copies]** i rutan Referenser. På panelen Språkkopior visas språkkopiorna för resurserna.
 
    ![chlimage_1-123](assets/chlimage_1-123.png)
-
