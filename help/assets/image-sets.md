@@ -10,10 +10,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: e00e7cc9-b777-4f9e-906d-824bcb2bbd41
 exl-id: af3f95aa-a162-4212-a20a-68b5a0e72d6d
-feature: Image Sets
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+feature: Bilduppsättningar
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1984'
 ht-degree: 11%
@@ -89,7 +88,7 @@ Mer information om hur du redigerar bilduppsättningar finns i [Redigera bildupp
 
 Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättningar i [Felsöka Dynamic Media - Scene7-läge](troubleshoot-dms7.md#images-and-sets).
 
-## Överför resurser i bilduppsättningar {#uploading-assets-in-image-sets}
+## Överföra resurser i bilduppsättningar {#uploading-assets-in-image-sets}
 
 Börja med att ladda upp bilderna för dina bilduppsättningar. Eftersom användare kan zooma in på bilder i bilduppsättningsvisningsprogrammet bör du ta hänsyn till zoomning när du väljer bilder. Se till att bilderna har minst 2 000 pixlar i den största dimensionen. Bilduppsättningar har stöd för många bildfilsformat, men förlustfria TIFF-, PNG- och EPS-bilder rekommenderas.
 
@@ -116,7 +115,7 @@ Eftersom användare kan zooma bilder i bilduppsättningar bör du se till att bi
 
 
 
-## Skapar bilduppsättningar {#creating-image-sets}
+## Skapa bilduppsättningar {#creating-image-sets}
 
 Du kan skapa bilduppsättningar via användargränssnittet eller via API:t. I det här avsnittet beskrivs hur du skapar bilduppsättningar i användargränssnittet.
 
@@ -242,6 +241,6 @@ Du kan utföra en mängd redigeringsåtgärder på bilduppsättningar, till exem
 
 Se [Förhandsgranska resurser](previewing-assets.md).
 
-## Publicerar bilduppsättningar {#publishing-image-sets}
+## Publicera bilduppsättningar {#publishing-image-sets}
 
 Se [Publicera resurser](publishing-dynamicmedia-assets.md).
