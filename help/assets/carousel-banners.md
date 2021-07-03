@@ -10,10 +10,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4b532cd3-1561-4b5c-8b4b-420c278926f0
 exl-id: d2fdad3f-513b-4147-a7c6-a3c1b64dd6e3
-feature: Carousel Banners
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+feature: Karusellbanner
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '4682'
 ht-degree: 4%
@@ -40,7 +39,7 @@ I det här exemplet har en användare tryckt på eller klickat på ett bildschem
 
 ![chlimage_1-440](assets/chlimage_1-440.png)
 
-## Se hur karusellbanderoller skapas {#watch-how-carousel-banners-are-created}
+## Se hur karusellbanners skapas {#watch-how-carousel-banners-are-created}
 
 Titta på en genomgång på 10 minuter och 33 sekunder om [hur karusellbanderoller skapas](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner). Du får också lära dig att förhandsgranska, redigera och leverera karusellbanderoller.
 
@@ -96,7 +95,7 @@ Så här kommer du igång snabbt:
 
 Om du behöver redigera Carousel-uppsättningar läser du [redigera Carousel-uppsättningar](#editing-carousel-sets). Dessutom kan du visa och redigera [Carousel Set-egenskaper](/help/assets/managing-assets-touch-ui.md#editing-properties).
 
-## Identifiera aktiveringspunkt- och bildschemavariabler {#identifying-hotspot-and-image-map-variables}
+## Identifiera variabler för aktiveringspunkt och bildschema {#identifying-hotspot-and-image-map-variables}
 
 Börja med att identifiera dynamiska variabler som används i den befintliga snabbvyimplementeringen så att du kan ange aktiveringspunkter eller data för bildscheman korrekt när du skapar karuselluppsättningar i AEM Assets.
 
@@ -184,7 +183,7 @@ Om du redan har överfört de bilder du vill använda går du vidare till nästa
 
 Information om hur du överför bildbanderoller finns i [Överföra resurser](managing-assets-touch-ui.md).
 
-## Skapar Carousel-uppsättningar {#creating-carousel-sets}
+## Skapa Carousel-uppsättningar {#creating-carousel-sets}
 
 >[!NOTE]
 >
@@ -412,7 +411,7 @@ Om du är en fristående AEM kan du dock manuellt lägga till karusellbanderolle
 
    Den kopierade inbäddningskoden är responsiv så den bör automatiskt passa inbäddningsområdet på sidan.
 
-## Integrera Carousel Banner med en befintlig Quickview {#integrating-the-carousel-banner-with-an-existing-quickview}
+## Integrera Carousel Banner med en befintlig QuickView {#integrating-the-carousel-banner-with-an-existing-quickview}
 
 Detta gäller endast om du är en fristående AEM Assets-kund.
 
