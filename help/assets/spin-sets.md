@@ -6,10 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 exl-id: 47cb6d40-a5c4-4f6a-9794-bd2eddfaa7d0
-feature: Spin Sets
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+feature: Snurrande uppsättningar
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1762'
 ht-degree: 7%
@@ -86,17 +85,17 @@ Du behöver minst 8-12 tagningar av ett objekt för en endimensionell snurra och
 
 Du kan överföra bilder för snurra uppsättningar på samma sätt som du [överför andra resurser i AEM Assets](managing-assets-touch-ui.md).
 
-### Riktlinjer för fotografering av snurruppsättningsbilder {#guidelines-for-shooting-spin-set-images}
+### Riktlinjer för fotografering av snurra uppsättningsbilder {#guidelines-for-shooting-spin-set-images}
 
 Nedan följer några tips om hur du använder snurra uppsättningsbilder. Ju fler bilder du har i en snurrfunktion, desto bättre blir effekten av att snurra. Om du inkluderar många bilder i uppsättningen ökar dock tiden det tar för bilderna att läsas in. AEM rekommenderar följande riktlinjer för att ta bilder för användning i snurra uppsättningar:
 
-* Använd minst 8-12 bilder i en endimensionell snurra och 16-24 bilder i en tvådimensionell snurra. Minst 8 bilder krävs för att kunna vridas 360 grader. Endimensionella snurruppsättningar är vanligare eftersom tvådimensionella snurvuppsättningar är arbetsintensiva.
+* Använd minst 8-12 bilder i en endimensionell snurra och 16-24 bilder i en tvådimensionell snurra. Minst 8 bilder krävs för att kunna vridas 360 grader. Endimensionella snurruppsättningar är vanligare eftersom tvådimensionella snurruppsättningar är arbetsintensiva.
 * Använd ett förlustfritt format, TIFF och PNG rekommenderas.
 * Maskera alla bilder så att objektet visas på en helt vit eller annan bakgrund med hög kontrast. Du kan också lägga till skuggor.
 * Se till att produktinformationen är väl belyst och i fokus.
 * Ta snurra bilder till modekläder med mannequin eller modell. Ofta är mannequin antingen helt maskerat (med hjälp av en glasmannequin) eller en stiliserad mannequin/form visas i bilden. Du kan skapa en omformningsrotation genom att definiera antalet vinklar. Markera varje vinkel med band på golvet för att vägleda modellen till steg och titta i riktningen för varje tagning.
 
-## Skapar snurruppsättningar {#creating-spin-sets}
+## Skapa snurruppsättningar {#creating-spin-sets}
 
 Den ordning i vilken bilderna visas i en snurrfunktion. Se till att ordna dem så att snurret blir en jämn 360-gradersvy.
 
@@ -200,10 +199,10 @@ Om du tar bort den bild som AEM använder som miniatyrbild genom att ersätta de
 
 1. Klicka på **[!UICONTROL Save]** när redigeringen är klar.
 
-## Förhandsgranska snuruppsättningar {#previewing-spin-sets}
+## Förhandsgranska snurra uppsättningar {#previewing-spin-sets}
 
 Se [Förhandsgranska resurser](previewing-assets.md).
 
-## Publicerar snurruppsättningar {#publishing-spin-sets}
+## Publicera snurruppsättningar {#publishing-spin-sets}
 
 Se [Publicera resurser](publishing-dynamicmedia-assets.md).
