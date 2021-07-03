@@ -2,18 +2,17 @@
 title: Aktivera dubblettidentifiering
 description: Lär dig hur du aktiverar identifiering av duplicerade resurser i AEM.
 contentOwner: AG
-feature: Asset Management,Asset Reports
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Resurshantering,Resursrapporter
+role: User,Admin
+exl-id: 138cf649-9e21-415e-9861-b07caacc85db
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '144'
 ht-degree: 0%
 
 ---
 
-
-# Aktiverar dubblettidentifiering {#enabling-duplicate-detection}
+# Aktivera dubblettidentifiering {#enabling-duplicate-detection}
 
 Om du försöker överföra en resurs som finns i Adobe Experience Manager (AEM) Resurser identifieras den som duplicerad av dubblettidentifieringsfunktionen. Dubblettidentifiering är inaktiverat som standard. Så här aktiverar du funktionen:
 
