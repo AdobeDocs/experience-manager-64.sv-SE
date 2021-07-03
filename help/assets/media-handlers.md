@@ -2,18 +2,17 @@
 title: Bearbeta resurser med mediehanterare och arbetsflöden
 description: Lär dig mer om olika mediehanterare och hur du använder dem i arbetsflöden för att utföra åtgärder på resurser.
 contentOwner: AG
-feature: Workflow,Renditions
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: arbetsflöde,återgivningar
+role: User
+exl-id: 7694c68d-0a17-4052-8fbe-9bf45b229e81
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '2173'
+source-wordcount: '2171'
 ht-degree: 2%
 
 ---
 
-
-# Bearbeta resurser Använda mediehanterare och arbetsflöden {#processing-assets-using-media-handlers-and-workflows}
+# Bearbeta resurser med mediehanterare och arbetsflöden {#processing-assets-using-media-handlers-and-workflows}
 
 Adobe Experience Manager Assets innehåller en uppsättning standardarbetsflöden och mediehanterare för att bearbeta resurser. Ett arbetsflöde definierar en typisk resurshanterings- och bearbetningsuppgift och delegerar sedan de specifika åtgärderna till mediehanterarna, till exempel generering av miniatyrer eller metadataextrahering.
 
@@ -61,7 +60,7 @@ Det går att visa de aktiva mediehanterarna:
 
 ![chlimage_1-437](assets/chlimage_1-437.png)
 
-## Använd mediehanterare i arbetsflöden för att utföra åtgärder på resurser {#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
+## Använda mediehanterare i arbetsflöden för att utföra åtgärder på resurser {#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
 
 Mediehanterare är tjänster som används med arbetsflöden.
 
@@ -82,7 +81,7 @@ Så här aktiverar/inaktiverar du en mediehanterare:
 1. Uppdatera sidan: en ikon visas bredvid mediehanteraren som anger att den är inaktiverad.
 1. Om du vill aktivera mediehanteraren klickar du på **[!UICONTROL Enable]** bredvid namnet på mediehanteraren.
 
-### Skapar en mediehanterare {#creating-a-new-media-handler}
+### Skapa en mediehanterare {#creating-a-new-media-handler}
 
 Om du vill ha stöd för en ny medietyp eller utföra specifika åtgärder på en resurs måste du skapa en mediehanterare. I det här avsnittet beskrivs hur du fortsätter.
 
