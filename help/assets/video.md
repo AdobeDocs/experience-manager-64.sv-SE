@@ -7,9 +7,8 @@ topic-tags: Dynamic-Media
 content-type: reference
 exl-id: acb95a2b-0171-449e-97fa-f9a533f990de
 feature: Video
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '9897'
 ht-degree: 3%
@@ -20,7 +19,7 @@ ht-degree: 3%
 
 I det här avsnittet beskrivs hur du arbetar med video i Dynamic Media.
 
-## Snabbstart: Videoklipp {#quick-start-videos}
+## Snabbstart: Videor {#quick-start-videos}
 
 Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma igång snabbt med anpassningsbara videouppsättningar i Dynamic Media. Efter varje steg finns korsreferenser till ämnesrubriker där du kan hitta mer information.
 
@@ -72,7 +71,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
          [Visa videoåtergivningar](video-renditions.md)
 
-         [Hantera videoåtergivningar](managing-assets-touch-ui.md#managing-renditions)
+[Hantera videoåtergivningar](managing-assets-touch-ui.md#managing-renditions)
 
       * [Hantera förinställningar för visningsprogram](managing-viewer-presets.md)
       * [Publicera resurser](publishing-dynamicmedia-assets.md)
@@ -84,7 +83,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
       * Redigera egenskaperna för video, till exempel titel, beskrivning och taggar, anpassade metadatafält:
 
-         [Redigera videoegenskaper](managing-assets-touch-ui.md#editing-properties)
+[Redigera videoegenskaper](managing-assets-touch-ui.md#editing-properties)
 
       * [Hantera metadata för digitala resurser](metadata.md)
       * [Metadata-scheman](metadata-schemas.md)
@@ -164,7 +163,7 @@ Windows-enheter som stöder det här videoformatet finns på följande plats: [V
 
 Se även [Om HTML5-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html?lang=en#viewers-for-aem-assets-only) i referenshandboken för Dynamic Media-visningsprogram för Adobe.
 
-## Bästa praxis: Använda HTML5-videovisningsprogrammet {#best-practice-using-the-html-video-viewer}
+## Bästa praxis: Använda videovisningsprogrammet för HTML5 {#best-practice-using-the-html-video-viewer}
 
 Förinställningarna för visningsprogrammet för Dynamic Media HTML5-video är robusta videospelare. Du kan använda dem för att undvika många vanliga problem som är kopplade till videouppspelning i HTML5 och problem som är kopplade till mobila enheter, som brist på adaptiv strömning och begränsad webbläsarräckvidd för stationära datorer.
 
@@ -273,7 +272,7 @@ Följande bild visar det övergripande arbetsflödet för redigering av videokli
 
 ![chlimage_1-428](assets/chlimage_1-428.png)
 
-## Metodtips för att koda videofilmer {#best-practices-for-encoding-videos}
+## Bästa tillvägagångssätt för att koda videofilmer {#best-practices-for-encoding-videos}
 
 Arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** kodar video om du har aktiverat dynamiska media och konfigurerat videolmolntjänster. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress). Om du har aktiverat Dynamic Media och konfigurerat Video Cloud-tjänster börjar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** automatiskt gälla när du överför en video. (Om du inte använder Dynamic Media börjar arbetsflödet **[!UICONTROL DAM Update Asset]** gälla.)
 
@@ -412,7 +411,7 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
    <td><p>Källa</p> </td> 
    <td><p>1920 x 1080</p> </td> 
    <td><p>1</p> </td> 
-   <td><p>3</p> </td> 
+   <td><p>1</p> </td> 
   </tr> 
   <tr> 
    <td><p>Kodad</p> </td> 
@@ -424,7 +423,7 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
    <td><p>Kodad</p> </td> 
    <td><p>640 x 360</p> </td> 
    <td><p>3</p> </td> 
-   <td><p>3</p> </td> 
+   <td><p>1</p> </td> 
   </tr> 
   <tr> 
    <td><p>Kodad</p> </td> 
@@ -443,9 +442,9 @@ Dynamic Media rekommenderar att du använder MP4 H.264-videokodningsförinställ
 
 Du kan publicera lokalt AEM videomaterial direkt till en YouTube-kanal som du tidigare har skapat.
 
-Om du vill publicera videomaterial på YouTube skapar du AEM Assets med taggar. Du kopplar dessa taggar till en YouTube-kanal. Om taggen för en videoresurs matchar taggen för en YouTube-kanal publiceras videon på YouTube. Om videoresursen inte har någon tagg publiceras den inte på YouTube.
+Om du vill publicera videomaterial till YouTube skapar du AEM Assets med taggar. Du kopplar dessa taggar till en YouTube-kanal. Om videoresursens tagg matchar taggen för en YouTube-kanal publiceras videon till YouTube. Om videoresursen inte har någon tagg publiceras den inte till YouTube.
 
-När du publicerar på YouTube kringgås bearbetningsprofilsystemet i AEM och därmed även videokodningsprofilen. Den här åsidosättningen inträffar eftersom YouTube har sin egen kodning, vilket innebär att en videobearbetningsprofil inte behövs. I de flesta fall förväntas du dock redan ha fått ditt videomaterial via en videobearbetningsprofil. När du åsidosätter videobearbetningsprofilen och publicerar direkt på YouTube innebär det helt enkelt att videomaterialet i AEM inte får någon miniatyrbild som kan visas. Det innebär också att om du kör i dynamiskt medieläge kommer videoklipp som inte är kodade inte att fungera med någon av Dynamic Media resurstyper.
+När du publicerar till YouTube kringgås även bearbetningsprofilsystemet i AEM och därmed även videokodningsprofilen. Den här åsidosättningen inträffar eftersom YouTube har en egen kodning, vilket innebär att en videobearbetningsprofil inte behövs. I de flesta fall förväntas du dock redan ha fått ditt videomaterial via en videobearbetningsprofil. När du åsidosätter videobearbetningsprofilen och publicerar direkt till YouTube betyder det bara att videomaterialet i AEM inte får någon miniatyrbild som kan visas. Det innebär också att om du kör i dynamiskt medieläge kommer videoklipp som inte är kodade inte att fungera med någon av Dynamic Media resurstyper.
 
 När du publicerar videomaterial till YouTube-servrar utför du följande uppgifter för att säkerställa säker server-till-server-autentisering med YouTube:
 
@@ -454,16 +453,16 @@ När du publicerar videomaterial till YouTube-servrar utför du följande uppgif
 1. [Lägga till taggar för publicering](#adding-tags-for-publishing)
 1. [Aktivera YouTube Publish Replication Agent](#enabling-the-youtube-publish-replication-agent)
 1. [Konfigurera YouTube i AEM](#setting-up-youtube-in-aem)
-1. [(Valfritt) Automatisera inställningen av YouTube-standardegenskaper för dina överförda videofilmer](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
+1. [(Valfritt) Automatisera inställningen av YouTube standardegenskaper för dina överförda videofilmer](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
 1. [Publicera videor i din YouTube-kanal](#publishing-videos-to-your-youtube-channel)
-1. [(Valfritt) Verifiera den publicerade videon på YouTube](video.md#optional-verifying-the-published-video-on-youtube)
+1. [(Valfritt) Verifiera publicerad video på YouTube](video.md#optional-verifying-the-published-video-on-youtube)
 1. [Länka YouTube-URL:er till ditt webbprogram](#linking-youtube-urls-to-your-web-application)
 
 Du kan även [avpublicera videoklipp för att ta bort dem från YouTube](#unpublishing-videos-to-remove-them-from-youtube).
 
 ### Konfigurera inställningar för Google Cloud {#configuring-google-cloud-settings}
 
-För att kunna publicera på YouTube behöver du ett Google-konto. Om du har ett GMAIL-konto har du redan ett Google-konto. Om du inte har något Google-konto kan du enkelt skapa ett. Du behöver kontot eftersom du behöver inloggningsuppgifter för att publicera videoresurser på YouTube. Om du redan har skapat ett konto hoppar du över den här uppgiften och fortsätter till [Skapa en YouTube-kanal](#creating-a-youtube-channel).
+Du behöver ett Google-konto för att publicera till YouTube. Om du har ett GMAIL-konto har du redan ett Google-konto. Om du inte har något Google-konto kan du enkelt skapa ett. Du behöver kontot eftersom du behöver inloggningsuppgifter för att publicera videoresurser på YouTube. Om du redan har skapat ett konto hoppar du över den här uppgiften och fortsätter till [Skapa en YouTube-kanal](#creating-a-youtube-channel).
 
 >[!NOTE]
 >
@@ -482,12 +481,12 @@ För att kunna publicera på YouTube behöver du ett Google-konto. Om du har ett
 1. Tryck på **[!UICONTROL Create Project]** på sidan **[!UICONTROL Dashboard]**.
 1. Ange ett projektnamn i dialogrutan **[!UICONTROL New Project]**.
 
-   Observera att ditt projekt-ID baseras på ditt projektnamn. Välj projektnamnet noggrant. den kan inte ändras efter att den har skapats. Du måste även ange samma projekt-ID igen när du konfigurerar YouTube i Adobe Experience Manager senare. Du kanske vill skriva ned projektets ID.
+   Observera att ditt projekt-ID baseras på ditt projektnamn. Välj projektnamnet noggrant. den kan inte ändras efter att den har skapats. Du måste också ange samma projekt-ID igen när du konfigurerar YouTube i Adobe Experience Manager senare. Du kanske vill skriva ned projektets ID.
 1. Tryck på **[!UICONTROL Create]**.
 
 1. Tryck på **[!UICONTROL Enable APIs and get credentials like keys]** i **[!UICONTROL Getting Started]**-kortet i projektet.**[!UICONTROL Dashboard]**
 1. I början av sidan **[!UICONTROL Dashboard]** trycker du på **[!UICONTROL Enable API]**.
-1. Tryck på **[!UICONTROL YouTube Data API]** under YouTube-API:er på sidan **[!UICONTROL Library]**.
+1. Tryck på **[!UICONTROL YouTube Data API]** under YouTube API:er på sidan **[!UICONTROL Library]**.
 1. I närheten av överkanten av **[!UICONTROL YouTube Data API v3]**-sidan trycker du på **[!UICONTROL Enable]** för att aktivera den.
 1. Om du vill använda API:t kan du behöva inloggningsuppgifter. Tryck på **[!UICONTROL Create Credentials]** om det behövs.
 1. I listrutan **[!UICONTROL Where will you be calling the API from?]** väljer du **[!UICONTROL Web Server (e.g. node.js, Tomcat)]**.
@@ -514,7 +513,7 @@ För att kunna publicera på YouTube behöver du ett Google-konto. Om du har ett
 1. På sidan Autentiseringsuppgifter, under rubriken **[!UICONTROL Set up the OAuth 2.0 consent screen]**, väljer du den Gmail-adress som du använder för närvarande.
 1. I textfältet under rubriken **[!UICONTROL Product name shown to users]** anger du det du vill visa på godkännandeskärmen.
 
-   Medgivandeskärmen visas för AEM när de autentiserar på YouTube. AEM kontaktar YouTube för tillstånd.
+   Godkännandeskärmen visas för AEM när de autentiserar sig för YouTube. AEM kontaktar YouTube för tillstånd.
 
 1. Tryck på **[!UICONTROL Continue]**.
 1. Tryck på **[!UICONTROL Download]** under rubriken **[!UICONTROL Download credentials]**.
@@ -528,21 +527,21 @@ För att kunna publicera på YouTube behöver du ett Google-konto. Om du har ett
 
 ### Skapa en YouTube-kanal {#creating-a-youtube-channel}
 
-Du måste ha en eller flera kanaler för att kunna publicera videofilmer på YouTube. Om du redan har skapat en YouTube-kanal kan du hoppa över den här uppgiften och gå till **Lägga till taggar för publicering**.
+Du måste ha en eller flera kanaler för att kunna publicera videofilmer på YouTube. Om du redan har skapat en YouTube-kanal kan du hoppa över den här uppgiften och gå till **Adding tags for publishing**.
 
 >[!CAUTION]
 >
->Kontrollera att du redan har konfigurerat en eller flera kanaler i YouTube &amp;ast;before&amp;ast; Du lägger till kanaler under YouTube-inställningar i AEM (se [Konfigurera YouTube i AEM](#setting-up-youtube-in-aem) nedan). Om du inte gör detta får du ingen varning om att det inte finns några befintliga kanaler. Google-autentisering sker dock fortfarande när du lägger till en kanal, men det finns inget alternativ för att välja vilken kanal videon skickas till.
+>Kontrollera att du redan har konfigurerat en eller flera kanaler i YouTube &amp;ast;before&amp;ast; du lägger till kanaler under YouTube-inställningar i AEM (se [Konfigurera YouTube i AEM](#setting-up-youtube-in-aem) nedan). Om du inte gör detta får du ingen varning om att det inte finns några befintliga kanaler. Google-autentisering sker dock fortfarande när du lägger till en kanal, men det finns inget alternativ för att välja vilken kanal videon skickas till.
 
 **Så här skapar du en YouTube-kanal**:
 
 1. Gå till [https://www.youtube.com](https://www.youtube.com/) och logga in med inloggningsuppgifterna för ditt Google-konto.
-1. I det övre högra hörnet av YouTube-sidan trycker du på din profilbild (kan också visas som en bokstav i en fylld färgad cirkel) och sedan på **[!UICONTROL YouTube settings]** (runda kugghjulsikonen).
+1. I det övre högra hörnet av YouTube-sidan trycker du på din profilbild (kan också visas som en bokstav i en enfärgad cirkel) och sedan på **[!UICONTROL YouTube settings]** (runda kugghjulsikonen).
 1. Tryck på **[!UICONTROL See all my channels or create a new channel]** under rubriken **[!UICONTROL Additional Features]** på sidan **[!UICONTROL Overview]**.
 1. Tryck på **[!UICONTROL Create a new channel]** på sidan **[!UICONTROL Channels]**.
 1. På sidan **[!UICONTROL Brand Account]** anger du ett företagsnamn eller något annat kanalnamn i fältet **[!UICONTROL Brand Account Name]** där du vill publicera videoresurserna och trycker sedan på **[!UICONTROL Create]**.
 
-   Kom ihåg namnet som du anger här eftersom du måste ange det igen när du konfigurerar YouTube i AEM.
+   Kom ihåg det namn du anger här eftersom du måste ange det igen när du konfigurerar YouTube i AEM.
 
 1. (Valfritt) Lägg till fler kanaler om det behövs.
 
@@ -550,9 +549,9 @@ Du måste ha en eller flera kanaler för att kunna publicera videofilmer på You
 
 ### Lägga till taggar för publicering {#adding-tags-for-publishing}
 
-Om du vill publicera till videoklipp på YouTube AEM associerar taggar till en eller flera YouTube-kanaler. Mer information om hur du lägger till taggar för publicering finns i [Administrera taggar](/help/sites-administering/tags.md).
+Om du vill publicera till videofilmer till YouTube AEM associerar taggar till en eller flera YouTube-kanaler. Mer information om hur du lägger till taggar för publicering finns i [Administrera taggar](/help/sites-administering/tags.md).
 
-Om du tänker använda standardtaggarna i AEM kan du hoppa över den här uppgiften och gå till [Aktivera YouTube Publish-replikeringsagenten](#enabling-the-youtube-publish-replication-agent).
+Om du tänker använda standardtaggarna i AEM kan du hoppa över den här uppgiften och gå till [Aktivera YouTube Publish Replication Agent](#enabling-the-youtube-publish-replication-agent).
 
 ### Aktivera YouTube Publish-replikeringsagenten {#enabling-the-youtube-publish-replication-agent}
 
@@ -567,7 +566,7 @@ Om du tänker använda standardtaggarna i AEM kan du hoppa över den här uppgif
 ### Konfigurera YouTube i AEM {#setting-up-youtube-in-aem}
 
 1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **[!UICONTROL Tools > Deployment > Cloud Services]** i den vänstra listen.
-1. Under rubriken **[!UICONTROL Third Party Services]**, under YouTube, trycker du på **[!UICONTROL Configure now]**.
+1. Under rubriken **[!UICONTROL Third Party Services]** trycker du på **[!UICONTROL Configure now]** under YouTube.
 1. I dialogrutan **[!UICONTROL Create Configuration]** anger du en rubrik (obligatorisk) och ett namn (valfritt) i respektive fält.
 1. Tryck på **[!UICONTROL Create]**.
 1. I dialogrutan **[!UICONTROL YouTube Account Settings]** anger du ditt projekt-ID för Google i fältet **[!UICONTROL Application Name]**.
@@ -609,13 +608,13 @@ Om du tänker använda standardtaggarna i AEM kan du hoppa över den här uppgif
 
    Nu kan du publicera videor i din YouTube-kanal.
 
-### (Valfritt) Automatisera inställningen av YouTube-standardegenskaper för dina överförda videofilmer {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
+### (Valfritt) Automatisera inställningen av YouTube standardegenskaper för dina överförda videofilmer {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
 
 Du kan automatisera inställningen av YouTube-egenskaper när du överför videoklipp. Du uppnår detta genom att skapa en metadatabearbetningsprofil i AEM.
 
 Om du vill skapa en profil för metadatabearbetning kopierar du först värden från fälten **[!UICONTROL Field Label]**, **[!UICONTROL Map to property]** och **[!UICONTROL Choices]**, som alla finns i metadatascheman för video. Sedan skapar du din YouTube-profil för videometadatabearbetning genom att lägga till dessa värden i den.
 
-**Om du vill kan du automatisera inställningen av YouTube-standardegenskaper för dina överförda videofilmer**:
+**Om du vill automatisera inställningen av YouTube standardegenskaper för dina överförda videofilmer**:
 
 1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **[!UICONTROL Tools > Assets > Metadata Schemas]** i den vänstra listen.
 1. Tryck på **[!UICONTROL default]**. (Lägg inte till en bockmarkering i markeringsrutan till vänster om &quot;standard&quot;.)
@@ -636,7 +635,7 @@ Om du vill skapa en profil för metadatabearbetning kopierar du först värden f
 
       Klistra in det kopierade värdet i den öppna textredigeraren. Du kommer att behöva det här värdet senare när du skapar din metadatabearbetningsprofil. Låt textredigeraren vara öppen.
 
-1. Tryck på **[!UICONTROL YouTube Privacy]** under rubriken YouTube Publishing. (Tryck inte på listrutan YouTube Privacy.)
+1. Tryck på **[!UICONTROL YouTube Privacy]** under rubriken YouTube Publishing. (Tryck inte på listrutan YouTube Integritet.)
 1. Till höger på sidan, under fliken **[!UICONTROL Settings]**, gör du följande:
 
    * Markera och kopiera värdet i textfältet **[!UICONTROL Field Label]**.
@@ -656,7 +655,7 @@ Om du vill skapa en profil för metadatabearbetning kopierar du först värden f
 
 1. Tryck på **[!UICONTROL Create]** längst upp till höger på sidan **[!UICONTROL Metadata Profiles]**. I dialogrutan **[!UICONTROL Add Metadata Profile]** anger du namnet `YouTube Video` i textfältet **[!UICONTROL Profile title]**.
 1. Tryck på fliken **[!UICONTROL Advance]** på sidan **[!UICONTROL Metadata Profile Editor]**.
-1. Lägg till de kopierade YouTube-publiceringsvärdena i profilen genom att göra följande:
+1. Lägg till de kopierade YouTube Publishing-värdena i profilen genom att göra följande:
 
    * Tryck på fliken **[!UICONTROL Build Form]** till höger på sidan.
    * Dra komponenten **[!UICONTROL Section Header]** till vänster och släpp den i formulärområdet.
@@ -677,18 +676,18 @@ Om du vill skapa en profil för metadatabearbetning kopierar du först värden f
    * Till höger på sidan, under fliken **[!UICONTROL Settings]**, klistrar du in **[!UICONTROL YouTube Publishing]**-värdena (**[!UICONTROL Field Label]**-värdet och **[!UICONTROL Map to property]**-värdet) som du kopierade tidigare i deras respektive fält i formuläret. Klistra in värdet **[!UICONTROL Choices]** i fältet **[!UICONTROL Default Value]**.
 
 1. Tryck på **[!UICONTROL Save]** i sidans övre högra hörn.
-1. Använd metadataprofilen YouTube Publishing på de mappar där du ska överföra videoklipp. Du måste ha både metadataprofilen och videoprofilen inställda.
+1. Använd metadataprofilen för YouTube Publishing på de mappar där du ska överföra videoklipp. Du måste ha både metadataprofilen och videoprofilen inställda.
 
    Se [Metadataprofiler](metadata-profiles.md) och [Videoprofiler](video-profiles.md).
 
-### Publicera videor på din YouTube-kanal {#publishing-videos-to-your-youtube-channel}
+### Publicera videor i din YouTube-kanal {#publishing-videos-to-your-youtube-channel}
 
-Nu kopplar du taggarna som du lade till tidigare till videoresurser. I den här processen får AEM veta vilka resurser som ska publiceras i YouTube-kanalen.
+Nu kopplar du taggarna som du lade till tidigare till videoresurser. I den här processen får AEM veta vilka resurser som ska publiceras i din YouTube-kanal.
 
 För att publicera innehåll från YouTube använder AEM arbetsflödet **[!UICONTROL Publish to YouTube]**, som gör att du kan övervaka förloppet och visa felinformation.
 Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
 
-**Så här publicerar du videor till din YouTube-kanal**:
+**Så här publicerar du videor i din YouTube-kanal**:
 
 1. I AEM navigerar du till en videoresurs som du vill publicera i din YouTube-kanal.
 1. Välj videoresurs.
@@ -704,7 +703,7 @@ Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-vid
 
    Du kan även verifiera den publicerade videon på din YouTube-kanal.
 
-### (Valfritt) Verifiera den publicerade videon på YouTube {#optional-verifying-the-published-video-on-youtube}
+### (Valfritt) Verifiera publicerad video på YouTube {#optional-verifying-the-published-video-on-youtube}
 
 Du kan övervaka förloppet för din YouTube-publicering (eller avpublicering).
 
@@ -716,29 +715,29 @@ Efter åtta timmar om du fortfarande ser ett statusmeddelande som säger **[!UIC
 
 ### Länka YouTube-URL:er till ditt webbprogram {#linking-youtube-urls-to-your-web-application}
 
-Du kan hämta en YouTube URL-sträng som genereras av Dynamic Media när du har publicerat videon. När du kopierar YouTube-URL:en markeras den i Urklipp så att du kan klistra in den på sidorna på webbplatsen eller i programmet.
+Du kan hämta en YouTube URL-sträng som genereras av Dynamic Media när du har publicerat videon. När du kopierar YouTube-URL:en markeras den i Urklipp så att du kan klistra in den på sidor på webbplatsen eller i programmet.
 
-YouTube-URL:en är inte tillgänglig för kopiering förrän du har publicerat videoresursen på YouTube.
+YouTube-URL:en kan inte kopieras förrän du har publicerat videoresursen till YouTube.
 
-**Så här länkar du YouTube-URL:er till ditt webbprogram**:
+**Så här länkar du YouTube URL:er till ditt webbprogram**:
 
 1. Navigera till den YouTube *publicerade* videoresurs vars URL du vill kopiera och markera den.
 
-   Kom ihåg att YouTube-URL:er endast är tillgängliga för kopiering *efter* att du först *har publicerat* videomaterialet till YouTube.
+   Kom ihåg att YouTube URL:er endast är tillgängliga för kopiering *efter* att du först *har publicerat* videomaterialet till YouTube.
 
 1. Tryck på **[!UICONTROL Properties]** i verktygsfältet.
 1. Tryck på fliken **[!UICONTROL Advanced]**. 
 1. Under rubriken **[!UICONTROL YouTube Publishing]** i **[!UICONTROL YouTube URL]**-listan markerar och kopierar du URL-texten till webbläsaren för att förhandsgranska resursen eller lägga till den på webbinnehållssidan.
 
-### Avpublicerar videoklipp för att ta bort dem från YouTube {#unpublishing-videos-to-remove-them-from-youtube}
+### Avpublicera videoklipp för att ta bort dem från YouTube {#unpublishing-videos-to-remove-them-from-youtube}
 
 När du avpublicerar en videoresurs i AEM tas videon bort från YouTube.
 
 >[!CAUTION]
 >
->Om du tar bort en video direkt från YouTube, AEM känner inte av och fortsätter att bete sig som om videon fortfarande publiceras på YouTube. Avpublicera alltid en videoresurs från YouTube som AEM.
+>Om du tar bort en video direkt från YouTube, AEM känner inte av och fortsätter bete sig som om videon fortfarande publiceras till YouTube. Avpublicera alltid en videoresurs från YouTube via AEM.
 
-AEM använder arbetsflödet **[!UICONTROL Unpublish from YouTube]** för att ta bort innehåll från YouTube, vilket gör att du kan övervaka förloppet och visa felinformation.
+För att ta bort innehåll från YouTube använder AEM arbetsflödet **[!UICONTROL Unpublish from YouTube]**, som gör att du kan övervaka förloppet och visa felinformation.
 Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
 
 **Så här avpublicerar du videoklipp för att ta bort dem från YouTube**:
@@ -748,9 +747,9 @@ Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-vid
 1. Välj en eller flera publicerade videoresurser i ett resursurvalsläge.
 1. Tryck på **[!UICONTROL Unpublish > Unpublish]** i verktygsfältet.
 
-## Övervaka videokodning och YouTubes publiceringsförlopp {#monitoring-video-encoding-and-youtube-publishing-progress}
+## Övervaka videokodning och YouTube publiceringsförlopp {#monitoring-video-encoding-and-youtube-publishing-progress}
 
-När du överför en ny video till en mapp där videokodning används eller publicerar videon till YouTube kan du övervaka hur videokodningen/YouTube-publiceringen fortskrider (eller misslyckas) på flera olika sätt. Det faktiska publiceringsförloppet för YouTube är endast tillgängligt via loggarna, men om det misslyckas eller lyckas visas på ytterligare sätt som beskrivs i följande procedur. Dessutom kan du få e-postmeddelanden när ett publiceringsarbetsflöde eller videokodning från YouTube har slutförts eller avbrutits.
+När du överför en ny video till en mapp där videokodning används eller publicerar videon till YouTube kan du övervaka hur videokodningen/YouTube-publiceringen fortskrider (eller misslyckas) på flera olika sätt. Det faktiska publiceringsförloppet för YouTube är endast tillgängligt via loggarna, men om det misslyckas eller lyckas visas på ytterligare sätt som beskrivs i följande procedur. Dessutom kan du få e-postmeddelanden när en YouTube-publiceringsarbetsgång eller videokodning har slutförts eller avbrutits.
 
 ### Övervaka förlopp {#monitoring-progress}
 
@@ -774,7 +773,7 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
 
    ![chlimage_1-432](assets/chlimage_1-432.png)
 
-   All arbetsflödesinformation, till exempel kodning, visas på tidslinjen. För YouTube-publicering innehåller tidslinjen **[!UICONTROL Workflow]** även namnet på YouTube-kanalen och YouTubes video-URL. Dessutom visas felmeddelanden på tidslinjen **[!UICONTROL Workflow]**.
+   All arbetsflödesinformation, till exempel kodning, visas på tidslinjen. För YouTube-publicering innehåller tidslinjen **[!UICONTROL Workflow]** även namnet på YouTube-kanalen och YouTube video-URL. Dessutom visas felmeddelanden på tidslinjen **[!UICONTROL Workflow]**.
 
    >[!NOTE]
    >
@@ -829,15 +828,15 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
 1. Du kan få e-postmeddelanden om avbrutna eller misslyckade arbetsflödesjobb. Dessa e-postmeddelanden kan konfigureras av en administratör.
 Se [Konfigurera e-postmeddelanden](#configuring-e-mail-notifications).
 
-#### Konfigurerar e-postmeddelanden {#configuring-e-mail-notifications}
+#### Konfigurera e-postmeddelanden {#configuring-e-mail-notifications}
 
 Du kan behöva administratörsbehörighet för att komma åt **[!UICONTROL Tools]**-menyn.
 
-Hur du konfigurerar meddelanden beror på om du vill ha meddelanden för kodningsjobb eller YouTube-publiceringsjobb:
+Hur du konfigurerar meddelanden beror på om du vill ha meddelanden för kodningsjobb eller YouTube publiceringsjobb:
 
 * För kodningsjobb kan du komma åt konfigurationssidan för alla e-postmeddelanden AEM arbetsflödet på **[!UICONTROL Tools > Operations > Web Console]** och genom att söka efter **[!UICONTROL Day CQ Workflow Email Notification Service]**. Se [Konfigurera e-postmeddelande i AEM](/help/sites-administering/notification.md). Du kan markera eller avmarkera kryssrutorna för **[!UICONTROL Notify on Abort]** eller **[!UICONTROL Notify on Complete]**.
 
-* Gör följande för YouTube-publiceringsjobb:
+* Gör följande för publiceringsjobb i YouTube:
 
 1. I AEM väljer du **[!UICONTROL Tools > Workflow > Models]**.
 1. Välj arbetsflödet **[!UICONTROL Publish to YouTube]** och tryck sedan på **[!UICONTROL Edit]**.
@@ -849,7 +848,7 @@ Hur du konfigurerar meddelanden beror på om du vill ha meddelanden för kodning
    * **[!UICONTROL Publish Failure]**
    * **[!UICONTROL Publish Completion]**, som innehåller information om kanaler och URL:er
 
-   Om du rensar en kryssruta innebär det att du inte får det angivna e-postmeddelandet från YouTubes publiceringsarbetsflöde.
+   Om du avmarkerar en kryssruta kommer du inte att få det angivna e-postmeddelandet från YouTube Publish-arbetsflödet.
 
    >[!NOTE]
    >
@@ -962,7 +961,7 @@ Så här visar du videorapporter baserade på ett videovisningsprogram som du ha
 
 <!--    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
-## Lägga till bildtexter i videon {#adding-captions-to-video}
+## Lägga till bildtexter i video {#adding-captions-to-video}
 
 Du kan utöka räckvidden för dina videor till globala marknader genom att lägga till bildtexter till enskilda videor eller till adaptiva videouppsättningar. Genom att lägga till bildtext undviker du behovet av att duplicera ljudet, eller behovet av att använda inbyggda högtalare för att spela in ljudet igen för varje språk. Videon spelas upp på det språk den spelades in på. Undertexter på främmande språk visas så att personer på olika språk fortfarande kan förstå ljuddelen.
 
@@ -1103,7 +1102,7 @@ Se [WebVTT: Textspårningsformatet för webbvideo](https://dev.w3.org/html5/webv
      </tbody> 
     </table>
 
-## Om videominiatyrbilder {#about-video-thumbnails}
+## Om videominiatyrer {#about-video-thumbnails}
 
 Du kan välja mellan en av tio miniatyrbilder som har genererats automatiskt av Dynamic Media och lägga till dem i videon. Videospelaren visar den valda miniatyrbilden när en videoresurs används med Dynamic Media-komponenten i redigeringsmiljön i AEM Sites, AEM Mobile eller AEM Screens. Miniatyrbilden fungerar som en statisk bild som bäst motsvarar innehållet i hela videon och uppmuntrar användarna att trycka på uppspelningsknappen.
 
