@@ -11,8 +11,8 @@ content-type: reference
 discoiquuid: d630499d-740d-4979-8a34-9e3fcc3b5a23
 exl-id: 4d3299e2-269b-4a41-a979-c884c707666d
 feature: Interaktiva bilder
-role: Business Practitioner
-source-git-commit: a842c45f0a0597f4c7f143974a550874258e5382
+role: User
+source-git-commit: cdee53ea75faa2e6d1a1ec6ca7aa8bf8b8840e46
 workflow-type: tm+mt
 source-wordcount: '4159'
 ht-degree: 1%
@@ -214,7 +214,7 @@ När du har sparat visningsförinställningen aktiveras den automatiskt (aktiver
 
    Du kan nu ladda upp en bildbanderoll.
 
-## Överför en bildbanderoll {#uploading-an-image-banner}
+## Överföra en bildbanderoll {#uploading-an-image-banner}
 
 Om du redan har överfört de bilder du vill använda går du vidare till nästa steg, [Lägga till aktiveringspunkter i en bildbanderoll](#adding-hotspots-to-an-image-banner).
 
