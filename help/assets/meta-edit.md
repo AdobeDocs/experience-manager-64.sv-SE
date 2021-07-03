@@ -3,15 +3,14 @@ title: Redigera eller lägga till metadata
 description: Läs om metadata för resurser i AEM Assets och olika sätt att redigera metadata för resurser.
 contentOwner: AG
 feature: Metadata
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+role: User,Admin
+exl-id: f0522343-f8a9-4d89-8ce8-b3357ae3fe70
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 7%
+source-wordcount: '473'
+ht-degree: 8%
 
 ---
-
 
 # Redigera eller lägga till metadata {#how-to-edit-or-add-metadata}
 
@@ -64,3 +63,4 @@ Du kan lägga till egna namnutrymmen i AEM. Precis som det finns fördefinierade
 >[!MORELIKETHIS]
 >
 >* [Om metadata och dess behov i Assets](metadata.md)
+
