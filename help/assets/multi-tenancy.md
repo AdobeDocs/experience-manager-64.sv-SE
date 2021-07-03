@@ -2,18 +2,17 @@
 title: Flera innehavare för samlingar, kodavsnitt och kodfragment
 description: Segmentera innehållet i CRX-databasen baserat på kundorganisationen för att förhindra obehörig åtkomst.
 contentOwner: AG
-feature: Collections
-role: Architect,Administrator,Leader
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Samlingar
+role: Architect,Admin,Leader
+exl-id: d00a671a-6707-4941-868d-fa13510b7b60
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '231'
 ht-degree: 1%
 
 ---
 
-
-# Multi-tenancy för samlingar, fragment och fragmentmallar {#multi-tenancy-for-collections-snippets-and-snippet-templates}
+# Flera innehavare för samlingar, kodavsnitt och kodfragment {#multi-tenancy-for-collections-snippets-and-snippet-templates}
 
 Med funktionen Multi-tenancy kan du dela upp innehåll i CRX baserat på organisationens prefix och organisations-ID för att skydda innehållet från obehörig åtkomst för användare i andra organisationer.
 
