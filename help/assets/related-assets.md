@@ -2,18 +2,17 @@
 title: Relaterade tillgångar
 description: Lär dig hur du relaterar resurser som delar vissa gemensamma attribut. Du kan också använda funktionen för att skapa käll-/härledda relationer mellan resurser.
 contentOwner: AG
-feature: Asset Management,Collaboration
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Resurshantering,Samarbete
+role: User
+exl-id: d19544c4-c8e7-4a39-9c86-15a46dca848e
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '594'
 ht-degree: 3%
 
 ---
 
-
-# Relaterade resurser {#related-assets}
+# Relaterade tillgångar {#related-assets}
 
 Med Adobe Experience Manager (AEM) Assets kan du manuellt relatera resurser baserat på organisationens behov med hjälp av funktionen Relaterade resurser. Du kan till exempel relatera en licensfil till en resurs eller en bild/video på ett liknande ämne. Du kan relatera resurser som delar vissa gemensamma attribut. Du kan också använda funktionen för att skapa käll-/härledda relationer mellan resurser. Om du till exempel har en PDF-fil som genereras från en INDD-fil kan du koppla PDF-filen till dess INDD-källfil.
 
