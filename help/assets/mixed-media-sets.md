@@ -6,10 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 exl-id: 252c1a50-17ac-4412-88d6-49bb6850658d
-feature: Mix Media Sets
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+feature: Blanda medieuppsättningar
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1391'
 ht-degree: 18%
@@ -78,7 +77,7 @@ Börja med att ladda upp bilder och videoklipp för uppsättningarna med blandad
 
 Om du dessutom vill lägga till snurrsuppsättningar eller bilduppsättningar i den blandade medieuppsättningen skapar du även dem.
 
-## Skapar blandade medieuppsättningar {#creating-mixed-media-sets}
+## Skapa blandade medieuppsättningar {#creating-mixed-media-sets}
 
 Du kan lägga till bilder, bilduppsättningar, snurruppsättningar och videoklipp i din uppsättning med blandade media. Se till att dina filer, bilduppsättningar och snurruppsättningar är klara att publiceras innan du lägger till dem i den blandade medieuppsättningen.
 
@@ -163,7 +162,7 @@ Du kan utföra en mängd redigeringsåtgärder för resurser i blandade medieupp
 
 Se [Förhandsgranska resurser](previewing-assets.md) för mer information om hur du förhandsvisar blandade medieuppsättningar.
 
-## Publicerar blandade medieuppsättningar {#publishing-mixed-media-sets}
+## Publicera blandade medieuppsättningar {#publishing-mixed-media-sets}
 
 Mer information om hur du publicerar blandade medieuppsättningar finns i [Publicera resurser](publishing-dynamicmedia-assets.md).
 
