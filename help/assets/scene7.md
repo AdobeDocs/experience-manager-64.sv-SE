@@ -7,9 +7,8 @@ content-type: reference
 topic-tags: managing-assets
 exl-id: b11b19c1-712d-4698-aefc-930ff8cacbc1
 feature: Dynamic Media Classic
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '2694'
 ht-degree: 1%
@@ -147,7 +146,7 @@ Resursen har zoomverktyg längst ned. Tryck på **[!UICONTROL +]** för att för
 
 ![chlimage_1-227](assets/chlimage_1-227.png)
 
-### Flyout {#flyout}
+### Utfällbar {#flyout}
 
 I HTML5 **[!UICONTROL Flyout]**-komponenten visas resursen som en delad skärm; lämnade tillgången i den angivna storleken, till höger visas zoomdelen. Tryck på **[!UICONTROL Edit]** för att konfigurera komponenten. Med den här komponenten kan du konfigurera [inställningar som är gemensamma för alla Dynamic Media Classic-komponenter](#settings-common-to-all-scene-components).
 
@@ -232,7 +231,7 @@ Texten i bilden ändras. Du kan återställa texten till det ursprungliga värde
 
 ![chlimage_1-235](assets/chlimage_1-235.png)
 
-#### Ändra text så att den återspeglar värdet för ett klientkontextvärde {#changing-text-to-reflect-the-value-of-a-client-context-value}
+#### Ändra text så att värdet för en klientkontext återspeglas {#changing-text-to-reflect-the-value-of-a-client-context-value}
 
 Om du vill länka ett fält till ett klientkontextvärde trycker du på **[!UICONTROL Select]** för att öppna klientsnabbmenyn, markerar klientkontexten och trycker på **[!UICONTROL OK]**. I det här exemplet ändras namnet baserat på att namnet länkas till det formaterade namnet i profilen.
 
@@ -270,7 +269,7 @@ Adobe DAM och WCM visar om en överordnad video har överförts. De visar inte f
 
 När du använder en adaptiv videouppsättning med videokomponenten i Dynamic Media Classic måste du ändra storlek på komponenten så att den passar videofilens mått.
 
-## Dynamic Media Classic content browser {#scene-content-browser}
+## Dynamic Media Classic Content Browser {#scene-content-browser}
 
 I Dynamic Media Classic kan du visa innehåll från Dynamic Media Classic direkt i AEM. I **[!UICONTROL Content Finder]** väljer du **[!UICONTROL Dynamic Media Classic]** i det pekoptimerade användargränssnittet eller **[!UICONTROL S7]**-ikonen i det klassiska användargränssnittet. Funktionen är identisk mellan båda användargränssnitten.
 
@@ -287,7 +286,7 @@ Om du har flera konfigurationer visar AEM som standard [standardkonfigurationen]
    >   * En F4V-video
 
 
-### Bläddra bland innehåll i det pekoptimerade användargränssnittet {#browsing-content-in-the-touch-optimized-ui}
+### Bläddra i det pekoptimerade användargränssnittet {#browsing-content-in-the-touch-optimized-ui}
 
 Du kan öppna innehållsläsaren i det pekoptimerade eller klassiska användargränssnittet. För närvarande har pekoptimeringen följande begränsning:
 
