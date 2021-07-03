@@ -11,17 +11,16 @@ content-type: reference
 discoiquuid: e78bb08a-a923-4399-b3f7-13aa4b7994d5
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 exl-id: 53e53cb7-1854-44e9-9516-51bcc99378b4
-feature: Viewer Presets
-role: Administrator,Business Practitioner
-translation-type: tm+mt
-source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
+feature: Förinställningar för visningsprogram
+role: Admin,User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '4094'
 ht-degree: 9%
 
 ---
 
-# Hantera förinställningar för Dynamic Media Viewer {#managing-viewer-presets}
+# Hantera förinställningar för Dynamic Media-visningsprogram {#managing-viewer-presets}
 
 En förinställning för Dynamic Media-visningsprogram är en samling inställningar som bestämmer hur användare visar mediefiler på datorskärmar och mobila enheter. Om du är administratör kan du skapa visningsförinställningar. Inställningarna är tillgängliga för en array med visningskonfigurationsalternativ. Du kan till exempel ändra visningsprogrammets visningsstorlek eller zoombeteende.
 
@@ -38,13 +37,13 @@ I det här avsnittet beskrivs hur du skapar, redigerar och hanterar visningsprog
 >
 >Tänk på att redigering av *fördefinierade, körklara visningsförinställningar* inte stöds. Om du försöker redigera en förinställning för visningsprogrammet som inte är klar visas en uppmaning om att spara visningsförinställningen med ett nytt namn.
 
-## Tangentbordstillgänglighet för visningsprogram {#keyboard-accessibility-for-viewers}
+## Tangentbordstillgänglighet för tittare {#keyboard-accessibility-for-viewers}
 
 Alla färdiga visningsprogram har stöd för tangentbordstillgänglighet.
 
 Se även [Tangentbordstillgänglighet och navigering](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html).
 
-## Hantera förinställningar för Dynamic Media Viewer {#managing-presets}
+## Hantera förinställningar för Dynamic Media-visningsprogram {#managing-presets}
 
 Du kan lägga till, redigera, ta bort, publicera, avpublicera och förhandsgranska visningsförinställningar i AEM genom att trycka på **[!UICONTROL Tools > Assets > Viewer Presets]**.
 
@@ -65,7 +64,7 @@ Mer information om hur du bäddar in responsiva visningsprogram på dina webbsid
 >Observera att du måste publicera alla användningsklara visningsprogram innan du använder dem första gången.\
 >Se [Förinställningar för publiceringsvisningsprogram.](#publishing-viewer-presets)
 
-## Systemkompatibilitet för visningsförinställningar {#viewer-preset-system-compatibility}
+## Systemkompatibilitet för visningsförinställningar  {#viewer-preset-system-compatibility}
 
 Alla färdiga visningsförinställningar som medföljer Dynamic Media är helt kompatibla med följande system:
 
@@ -146,7 +145,7 @@ Se *Versionsinformation för visningsprogram* i innehållsförteckningen i [refe
 | ZoomVertical_dark | Lodrät_zoom | html5_zoomverticalviewer_dark.css |
 | ZoomVertical_light | Lodrät_zoom | html5_zoomverticalviewer_light.css |
 
-### Mobil visning - gestmatris {#supported-mobile-viewers-gestures-matrix} som stöds
+### Rörelsematris för mobilvisningsprogram som stöds {#supported-mobile-viewers-gestures-matrix}
 
 Följande tabell visar vilka mobilvisningsgester som stöds på iOS-, Android 2.x- och Android 3.x-enheter.
 
@@ -160,7 +159,7 @@ Följande tabell visar vilka mobilvisningsgester som stöds på iOS-, Android 2.
 | **Svep** | Rullningslist | Rulla bilder | Spins |
 | **Snurra** | Rullningslist | Rulla bilder | Spins |
 
-## Öka antalet förinställningar för Dynamic Media-visningsprogram som visar {#increasing-the-number-of-viewer-presets-that-display}
+## Öka antalet förinställningar för Dynamic Media-visningsprogram som visas {#increasing-the-number-of-viewer-presets-that-display}
 
 AEM visar en mängd olika förinställningar för visningsprogram när du visar resurser från **[!UICONTROL Detail View > Viewers]**. Du kan öka eller minska antalet visningsprogram som visas.
 
@@ -251,7 +250,7 @@ Se [Specialöverväganden när du skapar en visningsförinställning för Carous
 
    Se [Förinställningar för publiceringsvisningsprogram](#publishing-viewer-presets).
 
-## Specialöverväganden när du skapar en förinställning för Interactive Viewer {#special-considerations-for-creating-an-interactive-viewer-preset}
+## Specialöverväganden när du skapar en interaktiv visningsförinställning {#special-considerations-for-creating-an-interactive-viewer-preset}
 
 **Visningslägen för miniatyrbilder på panelen**
 
@@ -316,7 +315,7 @@ Vilka visningsprogramförinställningar som är tillgängliga i användargränss
 
    De visningsprogramförinställningar som är aktiverade visas till höger, i en blå ruta. förinställningar för inaktiverat visningsprogram har växlingsknappen till vänster, i en ljusgrå ruta.
 
-## Publicera förinställningar för Dynamic Media Viewer {#publishing-viewer-presets}
+## Publicera förinställningar för Dynamic Media-visningsprogram {#publishing-viewer-presets}
 
 Om du aktiverar (eller aktiverar *På*) är läget för en visningsförinställning det som visas i Dynamic Media-komponenten, i Interactive Media-komponenten och när du visar en resurs.
 
@@ -332,14 +331,14 @@ Se även [Förhandsgranska resurser](previewing-assets.md).
 1. Välj en eller flera visningsförinställningar som du vill publicera.
 1. Tryck på ikonen **[!UICONTROL Publish]** i verktygsfältet.
 
-## Sortera förinställningar för Dynamic Media Viewer {#sorting-viewer-presets}
+## Sortera förinställningar för Dynamic Media-visningsprogram {#sorting-viewer-presets}
 
 **Så här sorterar du förinställningar** för Dynamic Media-visningsprogram:
 
 1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **Verktyg** (hammarikon) **[!UICONTROL > Assets > Viewer Presets]** i den vänstra listen.
 1. Klicka på **[!UICONTROL Preset Title]**, **[!UICONTROL Type]**, **[!UICONTROL Published]** eller **[!UICONTROL State]** för att sortera efter den kolumnrubriken. Du kan till exempel klicka på **[!UICONTROL Type]** för att sortera de olika typerna av visningsförinställningar i alfabetisk eller omvänd alfabetisk ordning.
 
-## Redigera förinställningar för Dynamic Media Viewer {#editing-viewer-presets}
+## Redigera förinställningar för Dynamic Media-visningsprogram {#editing-viewer-presets}
 
 Tänk på att redigering av *fördefinierade, körklara visningsförinställningar* inte stöds. Om du redigerar en förinställning för ett visningsprogram som inte är installerat uppmanas du att spara den med ett nytt namn.
 
@@ -354,7 +353,7 @@ Tänk på att redigering av *fördefinierade, körklara visningsförinställning
    * Tryck på **[!UICONTROL Save]** för att spara ändringarna och återgå till sidan **[!UICONTROL Viewer Preset]**.
    * Tryck på **[!UICONTROL Cancel]** för att ångra ändringar du gjort och återgå till sidan **[!UICONTROL Viewer Preset]**.
 
-## Ta bort anpassade förinställningar för Dynamic Media Viewer {#deleting-custom-viewer-presets}
+## Ta bort anpassade förinställningar för Dynamic Media-visningsprogram {#deleting-custom-viewer-presets}
 
 Du kan ta bort visningsförinställningar som du har skapat och lagt till i Dynamic Media.
 
@@ -364,7 +363,7 @@ Du kan ta bort visningsförinställningar som du har skapat och lagt till i Dyna
 1. På sidan **[!UICONTROL Viewer Presets]** markerar du en **[!UICONTROL Preset Title]** och trycker sedan på ikonen **[!UICONTROL Trash]**.
 1. Tryck på **[!UICONTROL Delete]**.
 
-## Använda en förinställning för Dynamic Media-visningsprogram på en resurs {#applying-a-viewer-preset-to-an-asset}
+## Använda en förinställning för Dynamic Media-visningsprogram på en mediefil {#applying-a-viewer-preset-to-an-asset}
 
 Om du redan har publicerat både resursen och det valda visningsprogrammet visas knapparna **[!UICONTROL URL]** och **[!UICONTROL Embed]** när du har valt en visningsförinställning.
 
@@ -380,7 +379,7 @@ Om du redan har publicerat både resursen och det valda visningsprogrammet visas
 
    Du kan [kopiera URL:en för att dela](linking-urls-to-yourwebapplication.md) med andra användare.
 
-## Leverera resurser med förinställningar för Dynamic Media Viewer {#delivering-assets-with-viewer-presets}
+## Leverera resurser med Dynamic Media förinställningar för visningsprogram {#delivering-assets-with-viewer-presets}
 
 Mer information om hur du hämtar URL:er för visningsförinställningar finns i [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplication.md). Se även [Bädda in Video Viewer på en webbsida](embed-code.md).
 
