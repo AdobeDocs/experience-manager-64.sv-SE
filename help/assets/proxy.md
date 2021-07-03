@@ -2,16 +2,15 @@
 title: Resursproxyutveckling
 description: 'En proxy är en AEM som använder proxyarbetare för att bearbeta jobb. Lär dig hur du konfigurerar en AEM, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare. '
 contentOwner: AG
-feature: Asset Processing
-role: Administrator, Architect
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Resursbearbetning
+role: Admin, Architect
+exl-id: c7511326-697e-4749-ab46-513cdbaa00d8
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
-
 
 # Resursproxyutveckling {#assets-proxy-development}
 
@@ -105,7 +104,7 @@ Här följer ett exempel på API-användning:
  proxyJobService.removeJob(jobId);
 ```
 
-### Konfigurationer för Cloud Service {#cloud-service-configurations}
+### Cloud Service Configurations {#cloud-service-configurations}
 
 >[!NOTE]
 >
