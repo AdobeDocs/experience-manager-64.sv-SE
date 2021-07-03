@@ -2,16 +2,15 @@
 title: Integrera AEM Assets med Adobe InDesign Server
 description: Lär dig hur du integrerar AEM Assets med InDesign Server.
 contentOwner: AG
-feature: Publishing
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
+feature: Publicering
+role: Admin
+exl-id: d80562f7-071c-460a-9c68-65f48d36fbd9
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '1676'
+source-wordcount: '1675'
 ht-degree: 1%
 
 ---
-
 
 # Integrera AEM Assets med Adobe InDesign Server {#integrating-aem-assets-with-indesign-server}
 
@@ -40,7 +39,7 @@ För att överföra filer till AEM Assets som du har skapat med Adobe InDesign a
 
 
 
-## Så här fungerar extraheringen {#how-the-extraction-works}
+## Hur extraheringen fungerar {#how-the-extraction-works}
 
 InDesign Server kan integreras med AEM Assets så att filer som skapats med InDesign ( `.indd`) kan överföras, återgivningar genereras, *alla*-media kan extraheras (till exempel video) och lagras som resurser:
 
