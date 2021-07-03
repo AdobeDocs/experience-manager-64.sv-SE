@@ -6,10 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 exl-id: d8cc94b0-eacf-4e76-bd50-7934bbc28c92
-feature: Troubleshooting
-role: Administrator,Business Practitioner
-translation-type: tm+mt
-source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
+feature: Felsökning
+role: Admin,User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1284'
 ht-degree: 0%
@@ -20,7 +19,7 @@ ht-degree: 0%
 
 I följande dokument beskrivs felsökning för Dynamic Media som kör körningsläget **dynamicmedia_scene7**.
 
-## Konfigurera {#setup-and-configuration}
+## Installation och konfiguration {#setup-and-configuration}
 
 Kontrollera att Dynamic Media har konfigurerats korrekt genom att göra följande:
 
@@ -35,7 +34,7 @@ Kontrollera att Dynamic Media har konfigurerats korrekt genom att göra följand
 
    Den här replikeringsagenten finns under **[!UICONTROL Agents]** på författaren.
 
-## Allmänt (alla resurser) {#general-all-assets}
+## Allmänt (alla tillgångar) {#general-all-assets}
 
 Här följer några allmänna tips och tricks för alla resurser.
 
@@ -203,7 +202,7 @@ Om du har problem med video kan du läsa följande felsökningsguide.
  </tbody> 
 </table>
 
-## Visare {#viewers}
+## Tittare {#viewers}
 
 Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
 
