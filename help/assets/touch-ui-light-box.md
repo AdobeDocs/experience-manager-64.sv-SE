@@ -2,16 +2,15 @@
 title: Ljuslåda
 description: Läs mer om ljuslådan i AEM Assets.
 contentOwner: AG
-feature: Developer Tools,Renditions
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Utvecklarverktyg,Återgivningar
+role: User,Admin
+exl-id: acb61924-9b71-474a-833d-e441c0b83cc7
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
-
 
 # Ljuslåda {#lightbox}
 
@@ -36,10 +35,9 @@ Om du är en Adobe Experience Manager-användare (AEM) skapas ljuslådan automat
    >
    >Även om ljuslådan liknar en samling kan du inte utföra alla åtgärder som du normalt utför i samlingar. Du kan till exempel inte ta bort, dela eller visa inställningar för en ljuslåda. Dessutom kan du inte lägga till den i andra samlingar. Du kan dock redigera resurserna i en ljuslåda.
 
-## Tar bort resurser från ljuslådan {#removing-assets-from-lightbox}
+## Ta bort resurser från ljuslådan {#removing-assets-from-lightbox}
 
 1. Gå till konsolen Samlingar, tryck/klicka på Ljus för att visa dess resurser.
 1. Markera de resurser som du vill ta bort.
 1. Tryck/klicka på **[!UICONTROL Remove]** i verktygsfältet.
 1. Tryck/klicka på **[!UICONTROL Remove]** i dialogrutan för att bekräfta borttagningsåtgärden. Resurserna tas bort från ljuslådan.
-
