@@ -2,18 +2,17 @@
 title: Fulltextsökning i GQL
 description: Utforska fulltextsökningsfunktionen i GQL i AEM Assets. Använd det för att söka efter resurser baserat på specifika metadata, som titel, beskrivning och författarnamn.
 contentOwner: AG
-feature: Search,Metadata
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Sök,Metadata
+role: User
+exl-id: e819501c-4ac3-447f-944c-67adc42e8c61
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '830'
 ht-degree: 0%
 
 ---
 
-
-# GQL fulltextsökning {#gql-full-text-search}
+# Fulltextsökning i GQL {#gql-full-text-search}
 
 Utforska fulltextsökningsfunktionen i GQL i AEM Assets. Använd det för att söka efter resurser baserat på specifika metadata, som titel, beskrivning och författarnamn.
 
@@ -23,7 +22,7 @@ Om du vill söka efter en resurs baserat på dess metadata, till exempel titel, 
 
 Om du till exempel vill söka efter resurser som har titeln &quot;Mål&quot; utför du följande steg:
 
-## Söker resurser {#searching-assets}
+## Söka efter resurser {#searching-assets}
 
 1. Klicka eller tryck på ikonen **[!UICONTROL Search]** i verktygsfältet i användargränssnittet för Resurser för att visa Omnissökrutan.
 
@@ -64,10 +63,10 @@ Med fulltextsökningsfunktionen i GQL kan du söka efter resurser baserat på f�
 | [!UICONTROL Copyright Owner] | copyrightowner:&quot;Adobe Systems&quot; |
 | [!UICONTROL Contributor] | medarbetare:John |
 | [!UICONTROL Usage Terms] | usageterms:&quot;CopyRights Reserved&quot; |
-| [!UICONTROL Created] | skapat:YYY-MM-DDTHH:MM:SS.000+05:30..YYY-MM-DDTHH:MM:SS.000+05:30 |
-| [!UICONTROL Expires Date] | förfaller:ÅÅÅ-MM-DDTHH:MM:SS.000+05:30..YYY-MM-DDTHH:MM:SS.000+05:30 |
-| [!UICONTROL On time] | ontime:YYY-MM-DDTHH:MM:SS.000+05:30.YYY-MM-DDTHH:MM:SS.000+05:30 |
-| [!UICONTROL Off time] | offtime:YYY-MM-DDTHH:MM:SS.000+05:30..YYY-MM-DDTHH:MM:SS.000+05:30 |
+| [!UICONTROL Created] | skapat:YYYY-MM-DDTHH:MM:SS.000+05:30..YYYY-MM-DDTHH:MM:SS.000+05:30 |
+| [!UICONTROL Expires Date] | förfaller:YYYY-MM-DDTHH:MM:SS.000+05:30.YYYY-MM-DDTHH:MM:SS.000+05:30 |
+| [!UICONTROL On time] | ontime:YYYY-MM-DDTHH:MM:SS.000+05:30..YYYY-MM-DDTHH:MM:SS.000+05:30 |
+| [!UICONTROL Off time] | offtime:YYYY-MM-DDTHH:MM:SS.000+05:30..YYYY-MM-DDTHH:MM:SS.000+05:30 |
 | [!UICONTROL Range of time] (förfaller dateontime, offtime) | faktafält: nedsänkt..upperbound |
 | [!UICONTROL Path] | /content/dam/&lt;mappnamn> |
 | [!UICONTROL PDF Title] | pdftitle:&quot;Adobe-dokument&quot; |
@@ -121,7 +120,7 @@ title:&quot;Meeting&quot;;
 
 Fulltextsökning stöder även operatorer som -, ^ och så vidare. Om du vill söka efter de här bokstäverna som stränglitteraler omger du sökuttrycket med citattecken. Använd till exempel &quot;Anteckningsbok - Skönhet&quot; i stället för Anteckningsbok - Skönhet.
 
-## Startar sökning {#boosting-search}
+## Boosting Search {#boosting-search}
 
 Du kan förbättra nyckelordens relevans för vissa resurser för att öka sökningen baserat på nyckelorden. Det innebär att de bilder som du befordrar särskilda nyckelord för visas högst upp i sökresultatet när du söker baserat på dessa nyckelord.
 
