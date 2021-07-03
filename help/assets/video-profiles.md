@@ -6,10 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: administering
 content-type: reference
 exl-id: 3602e1b9-624d-408f-a7f6-1598b62dbd22
-feature: Video Profiles,Video
-role: Administrator,Business Practitioner
-translation-type: tm+mt
-source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
+feature: Videoprofiler,Video
+role: Admin,User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '2852'
 ht-degree: 16%
@@ -155,7 +154,7 @@ En bearbetningsindikator (eller förloppsindikator) visas så att du visuellt ka
 
 Du kan också visa filen `error.log` för att övervaka förloppet för ett kodningsjobb, för att se om kodningen är klar eller för att se eventuella jobbfel. `error.log` finns i mappen `logs` där din AEM är installerad.
 
-## Skapa en Dynamic Media videokodningsprofil för progressiv direktuppspelning {#creating-a-video-encoding-profile-for-progressive-streaming}
+## Skapa en Dynamic Media videokodningsprofil för progressiv strömning {#creating-a-video-encoding-profile-for-progressive-streaming}
 
 Om du väljer att inte använda alternativet **[!UICONTROL Encode for adaptive streaming]** måste du tänka på att alla kodningsförinställningar som du lägger till i profilen behandlas som individuella videoåtergivningar för strömning med en bithastighet eller progressiv videoleverans. Dessutom går det inte att kontrollera att alla videoåtergivningar har samma proportioner.
 
@@ -330,7 +329,7 @@ Du kan använda en videoprofil på en mapp från menyn **[!UICONTROL Tools]** el
 
 För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
-#### Använda Dynamic Media videoprofiler på mappar från användargränssnittet för profiler {#applying-video-profiles-to-folders-from-profiles-user-interface}
+#### Använda Dynamic Media videoprofiler på mappar från användargränssnittet Profiles {#applying-video-profiles-to-folders-from-profiles-user-interface}
 
 1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools > Assets > Video Profiles]**.
 1. Välj den videoprofil som du vill använda för en eller flera mappar.
@@ -370,7 +369,7 @@ Du kan ta bort en videoprofil från en mapp från menyn **[!UICONTROL Tools]** e
 
    Du kan bekräfta att videoprofilen inte längre används för en mapp eftersom namnet inte längre visas under mappnamnet.
 
-### Ta bort Dynamic Media-videoprofiler från mappar med hjälp av egenskaperna {#removing-video-profiles-from-folders-via-properties}
+### Ta bort Dynamic Media videoprofiler från mappar med hjälp av Egenskaper {#removing-video-profiles-from-folders-via-properties}
 
 1. Tryck på AEM logotyp och navigera till **[!UICONTROL Assets]** och sedan till mappen som du vill ta bort en videoprofil från.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
