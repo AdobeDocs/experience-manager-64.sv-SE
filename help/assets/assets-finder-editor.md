@@ -2,16 +2,15 @@
 title: Skapa och konfigurera sidor för Resursredigeraren
 description: Lär dig hur du skapar anpassade sidor i Resursredigeraren och redigerar flera resurser samtidigt.
 contentOwner: AG
-feature: Developer Tools,Asset Management
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Utvecklarverktyg,Resurshantering
+role: User,Admin
+exl-id: 12899f61-9ceb-4bde-a501-6c50c93e3276
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '3203'
+source-wordcount: '3200'
 ht-degree: 0%
 
 ---
-
 
 # Skapa och konfigurera sidor för Resursredigeraren {#creating-and-configuring-asset-editor-pages}
 
@@ -83,7 +82,7 @@ Så här skapar du en ny resursdelningssida via den digitala resurshanteraren:
 
    När du skapar en resursdelningssida från **[!UICONTROL New]** skapas som standard ett resursvisningsprogram och en resursredigerare automatiskt.
 
-#### Anpassa åtgärder {#customizing-actions}
+#### Anpassa funktionsmakron {#customizing-actions}
 
 Du kan avgöra vilka åtgärder användare kan utföra på valda digitala resurser från ett urval av fördefinierade åtgärder.
 
@@ -126,7 +125,7 @@ Följande linser är tillgängliga:
 | **[!UICONTROL List Lens]** | Visar resurserna i en lista med detaljer. |
 | **[!UICONTROL Mosaic Lens]** | Presenterar resurser på ett mosaiskt sätt. |
 
-#### Mosaiklinser {#mosaic-lens}
+#### Mosaik {#mosaic-lens}
 
 ![chlimage_1-388](assets/chlimage_1-388.png)
 
@@ -134,7 +133,7 @@ Följande linser är tillgängliga:
 
 ![chlimage_1-389](assets/chlimage_1-389.png)
 
-#### Anpassa frågeverktyget {#customizing-the-query-builder}
+#### Anpassa Query Builder {#customizing-the-query-builder}
 
 Med frågebyggaren kan du ange söktermer och skapa innehåll för sidan Resursdelning. När du redigerar frågebyggaren kan du även bestämma hur många sökresultat som ska visas per sida, vilken resursredigerare som ska öppnas när du dubbelklickar på en resurs, vilken sökväg frågan söker i och anpassar nodtyper.
 
@@ -217,7 +216,7 @@ Om du vill anpassa resursredigeringssidan använder du element från sidosparken
 
 ![assetshare6](assets/assetshare6.bmp)
 
-#### Ange vilken resursredigerare som ska öppnas från sidan Resursresurs {#setting-which-asset-editor-opens-from-an-asset-share-page}
+#### Ange vilken resursredigerare som ska öppnas från en resursdelningssida {#setting-which-asset-editor-opens-from-an-asset-share-page}
 
 När du har skapat den anpassade resursredigeringssidan måste du se till att när du dubbelklickar på resurser som den anpassade resursresursen du skapade öppnar resurserna på den anpassade redigeringssidan.
 
@@ -233,7 +232,7 @@ Så här anger du sidan Resursredigeraren:
 
    ![screen_shot_2012-04-23at21653pm](assets/screen_shot_2012-04-23at21653pm.png)
 
-#### Lägg till resursredigeringskomponenter {#adding-asset-editor-components}
+#### Lägg till komponenterna i Resursredigeraren {#adding-asset-editor-components}
 
 Du bestämmer vilken funktionalitet en resursredigerare har genom att lägga till komponenter på sidan.
 
@@ -296,7 +295,7 @@ Metadataformuläret är ett formulär som innehåller en start- och slutåtgärd
 
 På sidan Resursredigeraren kan användare sedan ange värden i metadatafälten (om de är redigerbara) och utföra slutåtgärden (till exempel skicka ändringarna).
 
-#### Underresurser {#sub-assets}
+#### Deltillgångar {#sub-assets}
 
 I delresurskomponenten kan du visa och välja delresurser. Du kan bestämma vilka namn som ska visas under [huvudresursen](assets.md#what-are-digital-assets) och underresurserna.
 
