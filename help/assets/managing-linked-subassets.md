@@ -2,16 +2,15 @@
 title: Hantera sammansatta resurser och generera delresurser.
 description: Lär dig hur du skapar referenser till AEM resurser från filer i InDesign, Adobe Illustrator och Photoshop. Lär dig även hur du använder funktionen för sidvisning för att visa enskilda sidor med flersidiga filer, inklusive PDF-, INDD-, PPT-, PPTX- och AI-filer.
 contentOwner: AG
-feature: Asset Management
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: e46a27a1ba11b4a5973eb1ece02c8594b2ae0fc9
+feature: Resurshantering
+role: User,Admin
+exl-id: 9fa44b26-76f7-48e2-a9df-4fd1c0074158
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1353'
 ht-degree: 0%
 
 ---
-
 
 # Hantera sammansatta resurser med delresurser {#managing-compound-assets}
 
@@ -23,7 +22,7 @@ AEM Assets stöder **dubbelriktad referens**. Du kan hitta refererade resurser p
 
 Referenser tolkas utifrån sökväg, dokument-ID och instans-ID för de refererade resurserna.
 
-## Adobe Illustrator: Lägg till resurser som referenser {#refai}
+## Adobe Illustrator: Lägga till resurser som referenser {#refai}
 
 Du kan referera till befintliga AEM från en Adobe Illustrator-fil.
 
@@ -42,7 +41,7 @@ Du kan referera till befintliga AEM från en Adobe Illustrator-fil.
 
    ![chlimage_1-260](assets/chlimage_1-260.png)
 
-## Adobe InDesign: Lägg till resurser som referenser {#add-aem-assets-as-references-in-adobe-indesign}
+## Adobe InDesign: Lägga till resurser som referenser {#add-aem-assets-as-references-in-adobe-indesign}
 
 Om du vill referera AEM resurser från en InDesign-fil drar du AEM resurser till InDesign-filen eller exporterar InDesign-filen som en ZIP-fil.
 
@@ -66,7 +65,7 @@ Den här proceduren liknar [Lägg till resurser som referenser i Adobe Illustrat
 1. Starta arbetsflödet för Unarchiver.
 1. När arbetsflödet är klart refereras referenserna i mappen Länkar automatiskt till underresurser. Om du vill visa en lista över refererade resurser går du till sidan med tillgångsinformation för resursen i InDesign och stänger [Rail](/help/sites-authoring/basic-handling.md#rail-selector).
 
-## Adobe Photoshop: Lägg till resurser som referenser {#refps}
+## Adobe Photoshop: Lägga till resurser som referenser {#refps}
 
 1. Montera AEM Assets som en enhet med en WebDav-klient.
 1. Om du vill skapa referenser till AEM resurser i en Photoshop-fil navigerar du till motsvarande resurser på den monterade enheten med hjälp av funktionen Montera länkad i Photoshop.
@@ -84,7 +83,7 @@ Den här proceduren liknar [Lägg till resurser som referenser i Adobe Illustrat
 >
 >Resurserna i sammansatta resurser kan också refereras baserat på deras dokument-ID och instans-ID. Den här funktionaliteten finns endast i Adobe Illustrator- och Adobe Photoshop-versionerna. För andra görs en referens på grundval av den relativa sökvägen för länkade tillgångar i den huvudsakliga sammansatta tillgången, som i tidigare versioner av AEM.
 
-## Skapa underresurser {#generate-subassets}
+## Skapa delresurser {#generate-subassets}
 
 För resurser som stöds i flersidiga format - PDF-filer, AI-filer, Microsoft PowerPoint- och Apple Keynote-filer samt Adobe InDesign-filer - kan AEM generera delresurser som motsvarar varje enskild sida i den ursprungliga resursen. Dessa underresurser är länkade till *överordnad* resurs och underlättar flersidesvisning. I alla andra syften behandlas deltillgångarna som normala tillgångar i AEM.
 
