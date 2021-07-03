@@ -7,8 +7,8 @@ topic-tags: dynamic-media
 content-type: reference
 exl-id: b0f0c6e4-77c8-40db-a9f4-699d1a633571
 feature: Konfiguration,Scene7-läge
-role: Administrator,Business Practitioner,Developer
-source-git-commit: 9e9108bbfcd1c71004e494e73891d3ab0afd4d74
+role: Admin,User,Developer
+source-git-commit: cdee53ea75faa2e6d1a1ec6ca7aa8bf8b8840e46
 workflow-type: tm+mt
 source-wordcount: '5176'
 ht-degree: 2%
@@ -45,7 +45,7 @@ Om du vill aktivera Dynamic Media måste du starta Experience Manager med körni
 java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.4.0.jar -gui -r author,dynamicmedia_scene7 -p 4502
 ```
 
-## (Valfritt) Migrera förinställningar och konfigurationer för Dynamic Media från 6.3 till 6.4 Zero Downtime {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
+## (Valfritt) Migrera förinställningar och konfigurationer för Dynamic Media från 6.3 till 6.4 utan driftstopp {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
 Om du uppgraderar Experience Manager Dynamic Media från 6.3 till 6.4 (vilket inkluderar möjligheten till noll driftsättning under driftstopp) kör du följande kommando för att migrera alla dina förinställningar och konfigurationer från `/etc` till `/conf` i CRXDE Lite.
 
@@ -61,7 +61,7 @@ För alla uppgraderingar, antingen med eller utan kompatibilitetspaketet, kan du
 
 `curl -u admin:admin http://localhost:4502/libs/settings/dam/dm/presets/viewer.pushviewerpresets`
 
-## (Valfritt) Installerar funktionspaket 18912 för migrering av bulkresurser {#installing-feature-pack}
+## (Valfritt) Installera funktionspaket 18912 för migrering av bulkresurser {#installing-feature-pack}
 
 Med funktionspaketet 18912 kan du antingen importera resurser gruppvis via FTP eller migrera resurser från antingen Dynamic Media - hybrid- eller Dynamic Media Classic till Dynamic Media - Scene7-läge på Experience Manager. Den kan fås från Adobe Professional Services.
 
@@ -141,7 +141,7 @@ Installations- och konfigureringsuppgifter är:
 * [Lägga till MIME-typer för format som inte stöds](#adding-mime-types-for-unsupported-formats)
 * [Skapa gruppuppsättningsförinställningar för automatisk generering av bilduppsättningar och snurpuppsättningar](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
 
-#### Publiceringsinställningar för Image Server {#publishing-setup-for-image-server}
+#### Publiceringskonfiguration för Image Server {#publishing-setup-for-image-server}
 
 Publiceringsinställningarna avgör hur resurser levereras som standard från Dynamic Media. Om ingen inställning anges levererar Dynamic Media en resurs enligt standardinställningarna som definierats i Publiceringsinställningar. En begäran om att leverera en bild som inte innehåller ett upplösningsattribut ger till exempel en bild med inställningen för standardobjektupplösning.
 
@@ -157,7 +157,7 @@ Bildserverskärmen anger standardinställningar för att leverera bilder. En bes
 * **[!UICONTROL Compatibility Attributes]** - Den här inställningen gör att inledande och avslutande stycken i textlager kan hanteras som de var i version 3.6 för bakåtkompatibilitet.
 * **[!UICONTROL Localization Support]** - Med de här inställningarna kan du hantera flera språkattribut. Här kan du också ange en sträng för språkområdeskarta så att du kan definiera vilka språk du vill ha stöd för de olika verktygstipsen i visningsprogram. Mer information om hur du konfigurerar stöd för lokalisering finns i [Viktigt att tänka på när du implementerar lokaliseringsstöd](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html#image-server).
 
-#### Konfigurerar allmänna inställningar för programmet {#configuring-application-general-settings}
+#### Konfigurera allmänna inställningar för programmet {#configuring-application-general-settings}
 
 Öppna sidan [!UICONTROL Application General Settings] genom att trycka på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]** i Dynamic Media Classic Global Navigation bar.
 
@@ -180,7 +180,7 @@ Bildserverskärmen anger standardinställningar för att leverera bilder. En bes
 >
 >Som standard visas 15 återgivningar när du väljer **[!UICONTROL Renditions]** och 15 visningsförinställningar när du väljer **[!UICONTROL Viewers]** i resursens detaljvy. Du kan öka den här gränsen. Se [Öka antalet bildförinställningar som visas](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) eller [Öka antalet visningsförinställningar som visas](managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
-#### Konfigurerar färghantering {#configuring-color-management}
+#### Konfigurera färghantering {#configuring-color-management}
 
 Med dynamisk mediefärghantering kan du färgkorrigera resurser. Med färgkorrigering behåller inkapslade resurser sin färgmodell (RGB, CMYK, Grå) och inbäddad färgprofil. När du begär en dynamisk återgivning korrigeras bildfärgen till målfärgrymden med hjälp av CMYK-, RGB- eller grå utdata. Se [Konfigurera bildförinställningar](managing-image-presets.md).
 
@@ -518,7 +518,7 @@ Kön för Bevilja överföring av arbetsflöde används för **[!UICONTROL DAM U
 
 1. Tryck på **[!UICONTROL Save]**.
 
-#### Uppdaterar Granite-arbetsflödeskön {#updating-the-granite-workflow-queue}
+#### Uppdaterar kön för Granite-arbetsflöde {#updating-the-granite-workflow-queue}
 
 Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynamic Media bearbetades video med arbetsflödet **[!UICONTROL Dynamic Media Encode Video]**.
 
