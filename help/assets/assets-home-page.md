@@ -2,16 +2,15 @@
 title: AEM Assets Home Page Experience
 description: Anpassa AEM Assets hemsida för att få en bra välkomstskärm, inklusive en ögonblicksbild av nyligen gjorda aktiviteter kring resurser.
 contentOwner: AG
-feature: Developer Tools,Asset Management
-role: Administrator,Business Practitioner
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Utvecklarverktyg,Resurshantering
+role: Admin,User
+exl-id: f47c6da7-aa21-4f49-9c66-2a8091e19561
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '551'
 ht-degree: 1%
 
 ---
-
 
 # AEM Assets Home Page Experience {#aem-assets-home-page-experience}
 
