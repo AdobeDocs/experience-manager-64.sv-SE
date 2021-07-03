@@ -2,16 +2,15 @@
 title: Konfigurera asynkrona åtgärder i [!DNL Adobe Experience Manager].
 description: Slutför asynkront vissa resurskrävande uppgifter för att optimera prestanda i [!DNL Experience Manager Assets].
 contentOwner: AG
-feature: Asset Management
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
+feature: Resurshantering
+role: User
+exl-id: 0abdfe87-d932-41dd-b1e6-9f5fa5b924fe
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '561'
 ht-degree: 21%
 
 ---
-
 
 # Asynkrona åtgärder {#asynchronous-operations}
 
