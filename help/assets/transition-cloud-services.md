@@ -2,16 +2,15 @@
 title: Tillämpar översättningsmolntjänster på mappar
 description: Tillämpar översättningsmolntjänster på mappar
 contentOwner: AG
-feature: Translation
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
+feature: Översättning
+role: Admin
+exl-id: 87883a3f-db95-41f4-b0aa-cdaeb7e6f555
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '366'
 ht-degree: 55%
 
 ---
-
 
 # Tillämpar översättningsmolntjänster på mappar {#applying-translation-cloud-services-to-folders}
 
@@ -19,7 +18,7 @@ Med Adobe Experience Manager (AEM) kan du använda molnbaserade översättningst
 
 Du kan använda översättningsmolntjänsten direkt i resursmappen så att den kan användas under översättningsarbetsflöden.
 
-## Tillämpar översättningstjänsterna {#applying-the-translation-services}
+## Använda översättningstjänster {#applying-the-translation-services}
 
 Genom att använda översättningsmolntjänster direkt i resursmappen behöver du inte konfigurera översättningstjänster när du skapar eller uppdaterar översättningsarbetsflöden.
 
@@ -39,7 +38,7 @@ Genom att använda översättningsmolntjänster direkt i resursmappen behöver d
 
 1. Klicka/tryck på **[!UICONTROL Save]** i verktygsfältet och klicka sedan på **[!UICONTROL OK]** för att stänga dialogrutan. Översättningstjänsten används i mappen.
 
-## Använder anpassad översättningskoppling {#applying-custom-translation-connector}
+## Använder anpassad översättningskoppling  {#applying-custom-translation-connector}
 
 Du kan använda en anpassad koppling för de översättningstjänster som du vill använda i översättningsarbetsflöden. Om du vill använda en anpassad koppling måste du först installera kopplingen från pakethanteraren. Konfigurera sedan kopplingen från Cloud Services-konsolen. När du har konfigurerat kopplingen är den tillgänglig i listan över kopplingar på fliken Cloud Services som beskrivs i [Använda översättningstjänsterna](transition-cloud-services.md#applying-the-translation-services). När du har använt den anpassade kopplingen och kört översättningsarbetsflödena visas kopplingsinformationen under rubrikerna **[!UICONTROL Provider]** och **[!UICONTROL Method]** i rutan **[!UICONTROL Translation Summary]** för översättningsprojektet.
 
