@@ -6,16 +6,15 @@ contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: authoring
 discoiquuid: c1b52aac-1eaf-4cfa-801f-77aeca0d90ea
-feature: Smart Tags,Search
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Smarta taggar,Sök
+role: User
+exl-id: 21a9f130-ea91-45bf-adc8-8a73a2a00c77
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1507'
 ht-degree: 16%
 
 ---
-
 
 # Förbättrade smarta taggar {#enhanced-smart-tags}
 
@@ -51,7 +50,7 @@ Innan du kan använda Smart Content Service måste du ha/se till/göra följande
 * Ett Adobe ID-konto som har administratörsbehörighet för organisationen.
 * Att Smart Content Service är aktiverad för din organisation.
 
-## Introduktion till {#onboarding}
+## Onboarding {#onboarding}
 
 Tjänsten Smart Content Service kan köpas som tillägg till AEM. När du har köpt funktionen skickas ett e-postmeddelande till administratören för organisationen med en länk till [!DNL Adobe I/O].
 
@@ -81,7 +80,7 @@ Lägg till resurserna i en mapp och använd taggarna på varje resurs från egen
 
 
 
-## Utbilda tjänsten Smart Content {#training-the-smart-content-service}
+## Utbilda Smart Content Service {#training-the-smart-content-service}
 
 För att Smart Content Service ska känna igen din företagsklonomi kan du köra den på en uppsättning resurser som redan innehåller taggar som är relevanta för ditt företag. Efter utbildning kan tjänsten tillämpa samma taxonomi på liknande resurser.
 
@@ -149,7 +148,7 @@ Du kan aktivera tjänsten Smart Content Service för att regelbundet tagga resur
 
 När det här alternativet har valts för en mapp taggar tjänsten Smart Content Service automatiskt resurserna i mappen. Som standard körs taggningsarbetsflödet varje dag kl. 12.00.
 
-### On demand-taggning {#on-demand-tagging}
+### On-demand-taggning {#on-demand-tagging}
 
 Du kan aktivera taggningsarbetsflödet från följande för att tagga dina resurser direkt:
 
