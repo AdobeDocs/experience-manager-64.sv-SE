@@ -7,9 +7,8 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
 exl-id: 51150d51-865e-4b8e-9990-ca755e4c7778
 feature: Panoramabilder
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 489a4b42bdd5895186ba885b9a1dc33b49427e8d
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 2%
@@ -40,7 +39,7 @@ Både proportioner och nyckelordskriterier gäller för panoramaresurser för si
 
 Information om hur du överför resurser som ska användas med visningsprogrammet för panoramabilder finns i [Överföra resurser](managing-assets-touch-ui.md#uploading-assets).
 
-## Konfigurerar Dynamic Media Classic {#configuring-dynamic-media-classic-scene}
+## Konfigurera Dynamic Media Classic {#configuring-dynamic-media-classic-scene}
 
 För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AEM måste du synkronisera förinställningarna för visningsprogrammet för panoramabilder med Dynamic Media Classic och Dynamic Media Classic-specifika metadata så att visningsförinställningarna uppdateras i JCR-filen. Konfigurera Dynamic Media Classic på följande sätt:
 
@@ -69,7 +68,7 @@ För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AE
 
 1. Tryck på **[!UICONTROL Close]** i det nedre högra hörnet.
 
-### Felsökning av komponenten Panoramabildmedia {#troubleshooting-the-panoramic-media-wcm-component}
+### Felsöka komponenten Panoramabildmedia {#troubleshooting-the-panoramic-media-wcm-component}
 
 Om du släppte en bild i **[!UICONTROL Panoramic Media]**-komponenten i WCM-filen och platshållaren för komponenten är komprimerad kan du felsöka följande:
 
@@ -83,6 +82,6 @@ Om du släppte en bild i **[!UICONTROL Panoramic Media]**-komponenten i WCM-file
 
 Se [Förhandsgranska resurser](previewing-assets.md).
 
-## Publicerar panoramabilder {#publishing-panoramic-images}
+## Publicera panoramabilder {#publishing-panoramic-images}
 
 Se [Publicera resurser](publishing-dynamicmedia-assets.md).
