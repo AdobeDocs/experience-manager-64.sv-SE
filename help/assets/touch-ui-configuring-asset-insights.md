@@ -3,9 +3,9 @@ title: Konfigurera resursinsikter
 description: Lär dig hur du konfigurerar Assets Insights i AEM Assets.
 contentOwner: AG
 feature: Resursinsikter,Resursrapporter
-role: Business Practitioner,Administrator
+role: User,Admin
 exl-id: b0d62dd3-1868-4d73-95f7-3d6c3ff474d9
-source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 2%
@@ -33,7 +33,7 @@ Adobe Experience Manager (AEM) Assets hämtar användningsdata runt AEM resurser
 1. När AEM har autentiserat dina inloggningsuppgifter väljer du en Adobe Analytics-rapportsserie från **[!UICONTROL Report Suite]**-listan där du vill att Assets Insights ska hämta data. Klicka på **[!UICONTROL Add]**.
 1. När AEM har konfigurerat rapportsviten klickar/trycker du på **[!UICONTROL Done]**.
 
-## Sidspåraren {#page-tracker}
+## Sidspårare {#page-tracker}
 
 När du har konfigurerat ditt Analytics-konto genereras sidspårningskoden åt dig. Om du vill göra det möjligt för Assets Insights att spåra AEM resurser som används på tredjepartswebbplatser, inkluderar du sidspårningskoden i webbplatskoden. Använd verktyget Sidspårare i AEM Assets för att generera sidspårningskod. Mer information om hur du inkluderar Page Tracker-koden i tredjepartswebbsidor finns i [Använda Page Tracker och bädda in kod i webbsidor](touch-ui-using-page-tracker.md).
 
