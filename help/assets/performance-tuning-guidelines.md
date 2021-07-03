@@ -2,18 +2,17 @@
 title: Prestandajusteringsguide för resurser
 description: Viktiga fokusområden kring AEM, ändringar av maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar och optimera AEM Assets prestanda.
 contentOwner: AG
-feature: Asset Management
-role: Architect,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Resurshantering
+role: Architect,Admin
+exl-id: 6c1bff46-f9e0-4638-9374-a9e820d30534
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '3170'
+source-wordcount: '3168'
 ht-degree: 0%
 
 ---
 
-
-# Justeringsguide för resursprestanda {#assets-performance-tuning-guide}
+# Prestandajusteringsguide för resurser {#assets-performance-tuning-guide}
 
 En Adobe Experience Manager (AEM) Assets-konfiguration innehåller ett antal maskinvaru-, programvaru- och nätverkskomponenter. Beroende på ditt driftsättningsscenario kan du behöva specifika konfigurationsändringar för maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar i prestandan.
 
@@ -29,7 +28,7 @@ Här är några viktiga fokusområden där du kan identifiera och åtgärda pres
 
 AEM stöds på ett antal plattformar, men Adobe har funnit det bästa stödet för inbyggda verktyg i Linux och Windows, vilket ger optimala prestanda och förenklad implementering. Det bästa är om du driftsätter ett 64-bitars operativsystem för att uppfylla de höga minneskraven som en AEM Assets-driftsättning medför. Precis som med andra AEM bör du implementera tarMK där det är möjligt. Även om TonaMK inte kan skalas bortom en enda författarinstans, fungerar det bättre än MongoMK. Du kan lägga till instanser för TjärMK-avlastning för att öka arbetsflödets bearbetningsstyrka för din AEM Assets-distribution.
 
-### Temporär mapp {#temp-folder}
+### Tillfällig mapp {#temp-folder}
 
 Om du vill förbättra överföringstiden för resurser använder du lagring med höga prestanda för den tillfälliga Java-katalogen. I Linux och Windows kan en RAM-enhet eller SSD användas. I molnbaserade miljöer kan en motsvarande typ av höghastighetslagring användas. I Amazon EC2 kan till exempel en [tillfällig enhet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) användas för den tillfälliga mappen.
 
@@ -64,13 +63,13 @@ Du bör ange följande JVM-parametrar:
 * `-Dupdate.limit`=250000
 * `-Doak.fastQuerySize`=true
 
-## Dataarkiv och minneskonfiguration {#data-store-and-memory-configuration}
+## Datalagring och minneskonfiguration {#data-store-and-memory-configuration}
 
-### Konfiguration för fillagring {#file-data-store-configuration}
+### Konfiguration av fillagring {#file-data-store-configuration}
 
 Du bör separera datalagret från segmentlagret för alla AEM Assets-användare. Dessutom kan du maximera prestanda genom att konfigurera parametrarna `maxCachedBinarySize` och `cacheSizeInMB`. Ange `maxCachedBinarySize` som den minsta filstorleken som kan sparas i cachen. Ange storleken på den minnescache som ska användas för datalagret i `cacheSizeInMB`. Adobe rekommenderar att du anger det här värdet mellan 2 och 10 procent av den totala stackstorleken. Inläsnings-/prestandatestning kan dock hjälpa till att fastställa den idealiska inställningen.
 
-### Konfigurera maxstorleken för buffrad bildcache {#configure-the-maximum-size-of-the-buffered-image-cache}
+### Konfigurera maximal storlek för buffrad bildcache {#configure-the-maximum-size-of-the-buffered-image-cache}
 
 När du överför stora mängder resurser till Adobe Experience Manager kan du minska den konfigurerade maxstorleken för buffrat bildcacheminne för att undvika oväntade ökningar i minnesanvändningen och för att förhindra att JVM misslyckas med OutOfMemoryErrors. Tänk dig ett exempel på att du har ett system med en högsta heap (- `Xmx`param) på 5 GB, en Oak BlobCache inställd på 1 GB och dokumentcache inställd på 2 GB. I det här fallet tar den buffrade cachen upp till 1,25 GB och minne, vilket innebär att endast 0,75 GB minne återstår för oväntade toppar.
 
@@ -78,7 +77,7 @@ Konfigurera den buffrade cachestorleken i OSGi-webbkonsolen. Vid `https://host:p
 
 Om du använder en `sling:osgiConfig`-nod från AEM 6.1 SP1 för att konfigurera den här egenskapen måste du ange datatypen till Long. Mer information finns i [CQBufferedImageCache använder heap under överföring av tillgångar](https://helpx.adobe.com/experience-manager/kb/cqbufferedimagecache-consumes-heap-during-asset-uploads.html).
 
-### Delade datalager {#shared-data-stores}
+### Gemensamma datalager {#shared-data-stores}
 
 Implementering av ett S3- eller delat fildatalager kan bidra till att spara diskutrymme och öka nätverkets genomströmning i storskaliga implementeringar. Mer information om fördelar och nackdelar med att använda ett delat datalager finns i [Handbok för resursstorlek](assets-sizing-guide.md).
 
@@ -159,13 +158,13 @@ Som standard kör AEM ett maximalt antal parallella jobb som är lika med antale
 
 Att ställa in en kö på hälften av de tillgängliga processorerna är en användbar lösning att börja med. Du kan dock behöva öka eller minska det här antalet för att få maximal genomströmning och justera det efter miljö. Det finns separata köer för tillfälliga och icke-tillfälliga arbetsflöden samt andra processer, till exempel externa arbetsflöden. Om flera köer är inställda på 50 % av processorerna aktiva samtidigt kan systemet snabbt bli överbelastat. De köer som används ofta varierar mycket mellan olika implementeringar. Därför kan du behöva konfigurera dem noggrant för maximal effektivitet utan att ge avkall på serverstabiliteten.
 
-### Avlastar {#offloading}
+### Avlastning {#offloading}
 
 För stora arbetsflöden eller arbetsflöden som är resurskrävande, till exempel videotranskodning, kan du avlasta arbetsflöden för DAM Update Asset till en andra författarinstans. Problemet med avlastning är ofta att eventuell inläsning som sparas genom avlastning av arbetsflödesbearbetningen motverkas av kostnaden för att replikera innehållet fram och tillbaka mellan instanser.
 
 Från och med AEM 6.2 och med ett funktionspaket för AEM 6.1 kan du utföra avlastning med binär replikering utan. I den här modellen delar författarinstanserna ett vanligt datalager och skickar bara metadata fram och tillbaka genom framåtreplikering. Detta fungerar bra med ett delat fildatalager, men det kan uppstå problem med ett S3-datalager. Eftersom bakgrundstrådar kan orsaka fördröjning är det möjligt att en resurs inte har skrivits till datalagret innan avlastningsjobbet startar.
 
-### DAM Update Asset configuration {#dam-update-asset-configuration}
+### DAM-uppdateringskonfiguration {#dam-update-asset-configuration}
 
 Arbetsflödet för DAM-uppdatering av resurser innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel generering av Dynamic Media Classic PTIFF och integrering med InDesign Server. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen för DAM-uppdatering och tar bort alla onödiga steg. I det här fallet ska du uppdatera startarna för DAM Update Asset så att de pekar på den nya modellen.
 
@@ -185,7 +184,7 @@ Kunderna använder bilder av olika storlek och format på sin webbplats eller f�
 
 Många webbplatskunder implementerar en bildservett som ändrar storlek på och beskär bilder när de begärs, vilket medför ytterligare belastning på publiceringsinstansen. Så länge dessa bilder kan cachas kan utmaningen dock mildras.
 
-Ett annat sätt är att använda Dynamic Media Classic-teknik för att helt och hållet överlåta bildbearbetning. Dessutom kan ni distribuera varumärkesportalen, som inte bara tar över ansvaret för att skapa renderingar från den AEM infrastrukturen, utan också hela publiceringsnivån.
+Ett annat sätt är att använda Dynamic Media Classic-teknik för att helt och hållet överlåta bildbearbetning. Dessutom kan ni driftsätta Brand Portal, som inte bara tar över ansvaret för återgivningsgenerering från den AEM infrastrukturen, utan också hela publiceringsnivån.
 
 #### ImageMagick {#imagemagick}
 
@@ -274,7 +273,7 @@ To disable Page Extraction:
 1. Repeat steps 3-6 for other launcher items that use **DAM Parse Word Documents** workflow model.
 -->
 
-### XMP tillbakaskrivning {#xmp-writeback}
+### XMP {#xmp-writeback}
 
 XMP återföring uppdaterar originalresursen när metadata ändras i AEM, vilket ger följande resultat:
 
@@ -399,7 +398,7 @@ Utför följande uppgifter för alla problem med nätverkets prestanda från kun
 * Genom att använda ett prestandatest för nätverk
 * Testa mot dispatchern
 
-### AEM instanstestning {#aem-instance-testing}
+### Testning av AEM {#aem-instance-testing}
 
 För att minimera latens och uppnå hög genomströmning genom effektiv CPU-användning och lastdelning ska du regelbundet övervaka prestanda i din AEM. Särskilt gäller följande:
 
