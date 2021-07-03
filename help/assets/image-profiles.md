@@ -10,10 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 exl-id: 895103c8-df58-40f0-85d6-e29637edce53
-feature: Image Profiles
-role: Administrator,Business Practitioner
-translation-type: tm+mt
-source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
+feature: Bildprofiler
+role: Admin,User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '2635'
 ht-degree: 10%
@@ -109,7 +108,7 @@ I **Oskarp mask** har du följande filtreringsalternativ:
 
 Skärpa beskrivs i [Skärpa bilder](/help/assets/assets/sharpening_images.pdf).
 
-## Skapar Dynamic Media-bildprofiler {#creating-image-profiles}
+## Skapa Dynamic Media bildprofiler {#creating-image-profiles}
 
 Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera resursbearbetning](config-dms7.md#configuring-asset-processing).
 
@@ -127,7 +126,7 @@ Mer information om hur du definierar avancerade bearbetningsparametrar för andr
 
 1. Tryck på **[!UICONTROL Save]**. Den nya profilen visas i listan med tillgängliga profiler.
 
-## Redigera eller ta bort Dynamic Media-bildprofiler {#editing-or-deleting-image-profiles}
+## Redigera eller ta bort Dynamic Media bildprofiler {#editing-or-deleting-image-profiles}
 
 1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools > Assets > Image Profiles]**.
 1. Markera den bildprofil som du vill redigera eller ta bort. Om du vill redigera den väljer du **[!UICONTROL Edit Image Processing Profile]**. Om du vill ta bort den väljer du **[!UICONTROL Delete Image Processing Profile]**.
@@ -136,7 +135,7 @@ Mer information om hur du definierar avancerade bearbetningsparametrar för andr
 
 1. Spara ändringarna om du redigerar dem. Bekräfta att du vill ta bort profilen om du tar bort den.
 
-## Använda en Dynamic Media-bildprofil för mappar {#applying-an-image-profile-to-folders}
+## Använda en Dynamic Media-bildprofil på mappar {#applying-an-image-profile-to-folders}
 
 När du tilldelar en bildprofil till en mapp ärver alla undermappar automatiskt profilen från den överordnade mappen. Det innebär att du bara kan tilldela en bildprofil till en mapp. Fundera därför noga över mappstrukturen för var du överför, lagrar, använder och arkiverar resurser.
 
@@ -154,7 +153,7 @@ Du kan använda en bildprofil på en mapp från menyn **[!UICONTROL Tools]** ell
 
 För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
-#### Använda Dynamic Media-bildprofiler på mappar från användargränssnittet för profiler {#applying-image-profiles-to-folders-from-profiles-user-interface}
+#### Använda Dynamic Media-bildprofiler på mappar från användargränssnittet Profiles {#applying-image-profiles-to-folders-from-profiles-user-interface}
 
 1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools > Assets > Image Profiles]**.
 1. Välj den bildprofil som du vill använda för en eller flera mappar.
@@ -271,7 +270,7 @@ Om det behövs kan du köra smart beskärning igen för att generera ytterligare
 
 1. Tryck på **[!UICONTROL Save]** i sidans övre högra hörn. sedan trycka på **[!UICONTROL Close]** för att gå tillbaka till resursmappen.
 
-## Tar bort en bildprofil från mappar {#removing-an-image-profile-from-folders}
+## Ta bort en bildprofil från mappar {#removing-an-image-profile-from-folders}
 
 När du tar bort en bildprofil från en mapp ärver alla undermappar automatiskt borttagningen av profilen från den överordnade mappen. All bearbetning av filer som har inträffat i mapparna förblir dock oförändrad.
 
@@ -285,7 +284,7 @@ Du kan ta bort en bildprofil från en mapp från menyn **[!UICONTROL Tools]** el
 
    Du kan bekräfta att bildprofilen inte längre används för en mapp eftersom namnet inte längre visas under mappnamnet.
 
-### Ta bort Dynamic Media-bildprofiler från mappar med hjälp av egenskaperna {#removing-image-profiles-from-folders-via-properties}
+### Ta bort Dynamic Media-bildprofiler från mappar via Egenskaper {#removing-image-profiles-from-folders-via-properties}
 
 1. Tryck på AEM logotyp, navigera till **[!UICONTROL Assets]** och sedan till mappen som du vill ta bort en bildprofil från.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
