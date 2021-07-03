@@ -2,18 +2,17 @@
 title: Checka in och checka ut dina digitala resurser för redigering
 description: Lär dig hur du checkar ut resurser för redigering och checkar in dem igen när ändringarna är klara.
 contentOwner: AG
-feature: Asset Management
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
+feature: Resurshantering
+role: User
+exl-id: 0c79ed42-0acd-426e-8e14-412bb4117585
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '393'
 ht-degree: 6%
 
 ---
 
-
-# Checka in och checka ut filer i Assets {#check-in-and-check-out-files-in-assets}
+# Checka in och checka ut filer i Resurser {#check-in-and-check-out-files-in-assets}
 
 Med Adobe Experience Manager (AEM) Assets kan du checka ut resurser för redigering och checka in dem igen när du är klar med ändringarna. När du har checkat ut en resurs kan bara du redigera, kommentera, publicera, flytta eller ta bort resursen. När du checkar ut en resurs låses den. Andra användare kan inte utföra någon av dessa åtgärder på resursen förrän du checkar in resursen på AEM Assets igen. De kan dock fortfarande ändra metadata för den låsta resursen.
 
