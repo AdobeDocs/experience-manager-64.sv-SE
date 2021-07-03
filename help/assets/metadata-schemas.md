@@ -3,15 +3,14 @@ title: Metadata-scheman
 description: 'Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.  '
 contentOwner: AG
 feature: Metadata
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+role: User,Admin
+exl-id: 82f42bb3-2c01-407c-a41b-9abe7be4660e
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '2401'
+source-wordcount: '2398'
 ht-degree: 9%
 
 ---
-
 
 # Metadatascheman {#metadata-schemas}
 
@@ -33,7 +32,7 @@ Så här visar och redigerar du egenskapssidan för en resurs:
 
    Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatamatchschema eller ändrar ett befintligt formulär. Mer information finns i [Redigera metadataschema Forms](metadata-schemas.md#editing-metadata-schema-forms). Om du ändrar metadataschemat för en viss MIME-typ ändras egenskapssidlayouten för resurser med den aktuella MIME-typen och alla resursundertyper. Om du till exempel ändrar ett `jpeg`-schema under `default/image` ändras bara metadatalayouten (resursegenskaper) för resurser med MIME-typen `IMAGE/JPEG`. Om du redigerar standardschemat ändrar du metadatalayouten för alla typer av resurser.
 
-## Metadata Schema Forms {#default-metadata-schema-forms}
+## Forms för metadatamatchning {#default-metadata-schema-forms}
 
 Om du vill visa en lista med formulär/mallar går du till [!DNL Experience Manager] > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]** i **[!UICONTROL Tools]**-gränssnittet.
 
@@ -163,7 +162,7 @@ Om du vill ta med en flik på egenskapssidan förutom fliken där komponenten Sa
 
 I stället för att ange egenskaper för alternativen på fliken **[!UICONTROL Settings]** kan du definiera alternativen i en JSON-fil genom att ange motsvarande nyckelvärdespar. Ange sökvägen till JSON-filen i fältet **[!UICONTROL JSON Path]**.
 
-### Lägg till eller ta bort en flik i schemaformuläret {#adding-deleting-a-tab-in-the-schema-form}
+### Lägga till eller ta bort en flik i schemaformuläret {#adding-deleting-a-tab-in-the-schema-form}
 
 Med schemaredigeraren kan du lägga till eller ta bort en flik. Standardschemaformuläret innehåller som standard flikarna **[!UICONTROL Basic]**, **[!UICONTROL Advanced]**, **[!UICONTROL IPTC]** och **[!UICONTROL IPTC Extension]**.
 
@@ -222,7 +221,7 @@ AEM Assets mappar följande MIME-typer och schemaformulär:
 | video/wmv | video/x-ms-wmv |
 | video/flv | video/x-flv |
 
-## Bevilja åtkomst till metadatamatcheman {#granting-access-to-metadata-schemas}
+## Bevilja åtkomst till metadatamappningar {#granting-access-to-metadata-schemas}
 
 Metadatchemafunktionen är bara tillgänglig för administratörer. Administratörer kan dock ge åtkomst till icke-administratörsanvändare genom att ange **[!UICONTROL Create]**-, **[!UICONTROL Modify]**- och **[!UICONTROL Delete]**-behörigheter i mappen `/conf`.
 
