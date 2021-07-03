@@ -2,18 +2,17 @@
 title: Förbättringar av användarupplevelsen i Assets
 description: I den här artikeln beskrivs förbättringarna av användarupplevelsen i AEM 6.4 Assets.
 contentOwner: AG
-feature: Release Information
-role: Leader,Business Practitioner
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Versionsinformation
+role: Leader,User
+exl-id: 65029113-987e-46eb-86eb-8028233031f9
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
 
-
-# Förbättringar av användarupplevelsen i resurser {#user-experience-enhancements-in-assets}
+# Förbättringar av användarupplevelsen i Assets {#user-experience-enhancements-in-assets}
 
 AEM 6.4 Assets innehåller flera förbättringar av användbarheten som ger en smidig användarupplevelse och förbättrar produktiviteten. Den snabba hastigheten med vilken ni kan skapa/hantera ert marknadsmaterial ökar företagets innehållshastighet.
 
@@ -21,7 +20,7 @@ Gränssnittet är mer responsivt, vilket hjälper dig att hantera en stor portf�
 
 Du kan anpassa de olika vyerna - kort-, lista- och kolumnvyer. Du kan till exempel konfigurera storleken på miniatyrbilder som du vill visa i kortvyn. I listvyn kan du konfigurera den detaljnivå som du vill visa för resurser i listan. AEM 6.4 Assets innehåller en ny trädvy där du bekvämt kan navigera i resurskatalogen och hitta dina resurser.
 
-## Lazy läser in {#lazy-loading}
+## Lazy loading {#lazy-loading}
 
 När du söker efter resurser i AEM 6.4 visas upp till 200 resurser i taget. Du kan bläddra igenom resultaten snabbare, vilket är särskilt användbart när du bläddrar igenom en lång lista med resultat. Eftersom ett stort antal resurser läses in samtidigt blir webbläsarupplevelsen smidig.
 
@@ -49,7 +48,7 @@ Rutan i kortvyn visar nu ytterligare information, till exempel publiceringsstatu
 
 ![publish_status](assets/publish_status.png)
 
-## Förbättringar i listvyn {#list-view-improvements}
+## Förbättrade listvyer {#list-view-improvements}
 
 I listvyn visar den första kolumnen nu filnamnen på resurserna som standard. Ytterligare information, som publicerings- och bearbetningsstatus samt språkområde, visas också.
 
@@ -59,7 +58,7 @@ Du kan välja att konfigurera hur mycket information du vill visa. Tryck/klicka 
 
 ![view_settings_dialoglistview](assets/view_settings_dialoglistview.png)
 
-## Förbättringar i kolumnvyn {#column-view-improvements}
+## Förbättrad kolumnvy {#column-view-improvements}
 
 Förutom kort- och listvyer kan du nu navigera till informationssidan för en resurs från kolumnvyn. Välj en resurs i kolumnvyn och tryck/klicka sedan på **[!UICONTROL More Details]** under ögonblicksbilden av resursen.
 
