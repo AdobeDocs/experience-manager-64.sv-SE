@@ -3,15 +3,14 @@ title: XMP metadata
 description: Läs mer om metadatastandarden för XMP (Extensible Metadata Platform) som används av AEM Assets för metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för en mängd olika program.
 contentOwner: AG
 feature: Metadata
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+role: User,Admin
+exl-id: 32c4ca3d-2e9e-46a3-b4c7-70dcc50daaaa
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '816'
 ht-degree: 18%
 
 ---
-
 
 # XMP-metadata {#xmp-metadata}
 
@@ -53,7 +52,7 @@ XMP har följande fördelar jämfört med andra kodningsstandarder och -scheman:
 * XMP har standardiserad kodning, vilket gör det enkelt att utbyta metadata.
 * XMP kan utökas. Du kan lägga till ytterligare information i dina resurser.
 
-### Utbyggbar {#extensible}
+### Utbyggbart {#extensible}
 
 XMP är utformad för att vara utökningsbar, så att du kan lägga till anpassade typer av metadata i XMP. EXIF har däremot inte det, utan en fast lista över egenskaper som inte kan utökas.
 
@@ -61,7 +60,7 @@ XMP är utformad för att vara utökningsbar, så att du kan lägga till anpassa
 >
 >XMP tillåter vanligtvis inte att binära datatyper bäddas in. Om du vill ha binära data i XMP, till exempel miniatyrbilder, måste de kodas i ett XML-anpassat format som Base64.
 
-## XMP Core Concepts {#xmp-core-concepts}
+## XMP kärnbegrepp {#xmp-core-concepts}
 
 I följande avsnitt beskrivs de centrala begreppen för XMP, inklusive namnutrymmen och scheman, egenskaper och värden samt språkalternativ.
 
