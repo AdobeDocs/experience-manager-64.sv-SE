@@ -2,16 +2,15 @@
 title: Metodtips för att avlasta resurser
 description: Rekommenderade användningsexempel och bästa praxis för att avlasta arbetsflöden för tillgångsintag och replikering i AEM Assets.
 contentOwner: AG
-feature: Asset Management
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Resurshantering
+role: User,Admin
+exl-id: 3ecc8988-add1-47d5-80b4-984beb4d8dab
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '1823'
+source-wordcount: '1820'
 ht-degree: 0%
 
 ---
-
 
 # Metodtips för att avlasta resurser {#assets-offloading-best-practices}
 
@@ -37,15 +36,15 @@ I följande diagram visas huvudkomponenterna i resursavlastningsprocessen:
 
 Arbetsflödet för DAM Update Asset Offloading körs på den primära (författarservern) på vilken användaren överför resurserna. Det här arbetsflödet utlöses av ett vanligt startprogram för arbetsflöden. I stället för att bearbeta den överförda resursen skapar det här avlastande arbetsflödet ett nytt jobb med ämnet *com/adobe/granite/workflow/avlastning*. Arbetsflödet för avlastning lägger till namnet på målarbetsflödet - arbetsflödet för DAM-uppdatering av resurs i det här fallet, och resursens sökväg till jobbets nyttolast. När avlastningsjobbet har skapats väntar avlastningsarbetsflödet på den primära instansen tills avlastningsjobbet har körts.
 
-### Jobbhanteraren {#job-manager}
+### Jobbhanterare {#job-manager}
 
 Jobbhanteraren distribuerar nya jobb till arbetarinstanser. När du utformar distributionsmekanismen är det viktigt att ta hänsyn till ämnesaktivering. Jobb kan bara tilldelas till instanser där jobbets ämne är aktiverat. Inaktivera ämnet `com/adobe/granite/workflow/offloading` på den primära arbetsytan och aktivera det på arbetaren för att se till att jobbet är tilldelat arbetaren.
 
-### AEM avlastar {#aem-offloading}
+### AEM avlastning {#aem-offloading}
 
 Avlastningsramverket identifierar arbetsflödesavlastningsjobb som tilldelats arbetsinstanser och använder replikering för att fysiskt överföra dem, inklusive deras nyttolast (till exempel bilder som ska hämtas), till arbetare.
 
-### Avlastning av arbetsflöde för jobbkonsument {#workflow-offloading-job-consumer}
+### Avlastning av arbetsflöde, jobbkonsument {#workflow-offloading-job-consumer}
 
 När ett jobb har skrivits på arbetaren anropar jobbhanteraren den jobbkonsument som är ansvarig för *com/adobe/granite/workflow/offloading*-avsnittet. Jobbkonsumenten kör sedan arbetsflödet DAM Update Asset på resursen.
 
@@ -53,7 +52,7 @@ När ett jobb har skrivits på arbetaren anropar jobbhanteraren den jobbkonsumen
 
 Sling-topologigrupperna AEM instanser och gör det möjligt för dem att vara medvetna om varandra, oberoende av den underliggande persistensen. Denna egenskap hos Sling-topologin gör att du kan skapa topologier för icke-klustrade, grupperade och blandade scenarier. En instans kan visa egenskaper för hela topologin. Ramverket innehåller återanrop för avlyssning av ändringar i topologin (instanser och egenskaper). Sling-topologin utgör grunden för Sling-distribuerade jobb.
 
-### Sling distribuerade jobb {#sling-distributed-jobs}
+### Säljer distribuerade jobb {#sling-distributed-jobs}
 
 Genom att skicka distribuerade jobb underlättas fördelningen av jobb mellan en uppsättning instanser som är medlemmar i topologin. Sling-jobb bygger på tanken på funktioner. Ett jobb definieras av dess jobbämne. För att köra ett jobb måste en instans tillhandahålla en jobbkonsument för ett specifikt jobbämne. Jobbämnet är huvuddrivrutinen för distributionsmekanismen.
 
@@ -61,7 +60,7 @@ Jobb distribueras bara till instanser som tillhandahåller en jobbkonsument för
 
 I det här sammanhanget innebär termen distribution tilldelning av ett jobb till en viss instans som ger en jobbkonsument. Tilldelningen till en instans lagras i databasen. Med andra ord kan Sling-distribuerade jobb tilldelas alla instanser i topologin som standard. Andra jobb kan bara köras av instanser som delar samma databas. Detta innebär att dessa jobb bara kan köras av instanser som tillhör samma kluster. Jobb som tilldelats till instanser av ett annat kluster körs inte.
 
-### Ramverk för avlastning av Granite {#granite-offloading-framework}
+### Ramverk för avlastning av Granit {#granite-offloading-framework}
 
 Granite-avlastningsramverket kompletterar Sling-jobbdistributionen för att köra jobb som är tilldelade till icke-grupperade instanser. Den utför ingen distribution (instanstilldelning). Det identifierar emellertid Sling-jobb som distribuerats till icke-grupperade instanser och överför dem till målinstansen för körning. För närvarande används replikering för att utföra den här jobbtransporten vid avlastning. Om du vill köra ett jobb definierar avlastning indata och utdata, som sedan kombineras med jobbet för att skapa jobbnyttolasten.
 
@@ -117,18 +116,18 @@ Som standard används omvänd replikering för att hämta avlastade resurser fr�
 TBD: Update the property in the last step when GRANITE-30586 is fixed.
 -->
 
-### Använda delad datalagret och binär replikering utan att använda lager mellan författare och arbetare {#using-shared-datastore-and-binary-less-replication-between-author-and-workers}
+### Använda delad datalager och binär replikering mellan författare och arbetare  {#using-shared-datastore-and-binary-less-replication-between-author-and-workers}
 
 Du bör använda binär replikering utan att använda binärfiler för att minska transportkostnaderna vid avlastning av resurser. Mer information om hur du ställer in binär replikering för ett delat datalager finns i [Konfigurera nodlager och datalager i AEM](/help/sites-deploying/data-store-config.md). Proceduren skiljer sig inte åt när det gäller avlastning av resurser, förutom att den omfattar andra replikeringsagenter. Eftersom binärfri replikering endast fungerar med framåtriktade replikeringsagenter bör du även använda framåtreplikering för alla avlastningsagenter.
 
-### Inaktiverar transportpaket {#turning-off-transport-packages}
+### Inaktivera transportpaket {#turning-off-transport-packages}
 
 Som standard skapas ett innehållspaket som innehåller avlastningsjobbet och jobbnyttolasten (den ursprungliga resursen), och det här avlastningspaketet överförs med en enda replikeringsbegäran. Det är kontraproduktivt att skapa avlastningspaketen när binär replikering används, eftersom binärfiler serialiseras i paketet igen när paketet skapas. Användningen av dessa transportpaket kan stängas av, vilket gör att avlastningsjobbet och nyttolasten transporteras i flera replikeringsbegäranden, en för varje nyttolastpost. På så sätt kan fördelarna med binär replikering användas.
 
 1. Öppna komponentkonfigurationen för *OffloadingDefaultTransporter*-komponenten på [http://localhost:4502/system/console/configMgr/com.adobe.granite.offloading.impl.transporter.OffloadingDefaultTransporter](http://localhost:4502/system/console/configMgr/com.adobe.granite.offloading.impl.transporter.OffloadingDefaultTransporter)
 1. Inaktivera egenskapen *Replikeringspaket (default.transport.contentpackage)*.
 
-### Inaktiverar transport av arbetsflödesmodell {#disabling-the-transport-of-workflow-model}
+### Inaktivera transport av arbetsflödesmodell {#disabling-the-transport-of-workflow-model}
 
 Som standard läggs arbetsflödesmodellen *DAM Update Asset Offloading* som avlastning till för att anropa arbetaren till jobbnyttolasten. Eftersom det här arbetsflödet följer den körklara *DAM Update Asset*-modellen som standard, kan denna ytterligare nyttolast tas bort.
 
@@ -161,4 +160,3 @@ Det här dokumentet fokuserar på tillgångsavlastning. Här följer ytterligare
 
 * [Avlastar jobb](/help/sites-deploying/offloading.md)
 * [Resursarbetsflöde avlastare](/help/sites-administering/workflow-offloader.md)
-
