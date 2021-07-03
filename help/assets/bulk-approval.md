@@ -2,16 +2,15 @@
 title: Granska resurser i mappar och samlingar
 description: Ställ in granskningsarbetsflöden för material i en mapp eller en samling och dela dem med granskare eller kreativa partners för att få feedback.
 contentOwner: AG
-feature: Collaboration, Collections
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Samarbete, Samlingar
+role: User
+exl-id: 4c62e0cd-eaa5-456e-85f3-06f7a9f160f5
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 21%
+source-wordcount: '768'
+ht-degree: 22%
 
 ---
-
 
 # Granska resurser i mappar och samlingar {#review-folder-assets-and-collections}
 
@@ -25,7 +24,7 @@ När du har delat resurserna kan granskarna godkänna eller avvisa dem. Meddelan
 
 När granskaren har slutfört granskningen (godkänner eller avvisar resurser) får du ett meddelande om slutförd granskning.
 
-## Skapa en granskningsåtgärd för mappar {#creating-a-review-task-for-folders}
+## Skapa en granskningsuppgift för mappar {#creating-a-review-task-for-folders}
 
 1. I Assets-användargränssnittet väljer du den mapp som du vill skapa en granskningsuppgift för.
 1. I verktygsfältet trycker/klickar du på ikonen **[!UICONTROL Create Review Task]** för att öppna sidan **[!UICONTROL Review Task]**. Om du inte kan se ikonen i verktygsfältet trycker/klickar du på **[!UICONTROL More]** och väljer sedan ikonen.
@@ -73,7 +72,7 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 
    ![review_status_listview](assets/review_status_listview.png)
 
-## Skapa en granskningsaktivitet för samlingar {#creating-a-review-task-for-collections}
+## Skapa en granskningsuppgift för samlingar {#creating-a-review-task-for-collections}
 
 1. På sidan Samlingar väljer du den samling som du vill skapa en granskningsuppgift för.
 1. I verktygsfältet trycker/klickar du på ikonen **[!UICONTROL Create Review Task]** för att öppna sidan **[!UICONTROL Review Task]**. Om du inte kan se ikonen i verktygsfältet trycker/klickar du på **[!UICONTROL More]** och väljer sedan ikonen.
