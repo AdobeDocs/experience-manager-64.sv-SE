@@ -3,15 +3,14 @@ title: Använd metadataprofiler för att använda standardmetadata på alla resu
 description: Lär dig mer om metadataprofiler för resurser. Lär dig hur du skapar en metadataprofil och använder den på mappresurser.
 contentOwner: AG
 feature: Metadata
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+role: User,Admin
+exl-id: a7b0f1d6-7deb-4565-8c7f-27cad7cd6bf8
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1130'
 ht-degree: 19%
 
 ---
-
 
 # Metadataprofiler {#metadata-profiles}
 
@@ -83,7 +82,7 @@ Med en metadataprofil kan du använda standardmetadata för resurser i en mapp. 
 1. Klicka på **[!UICONTROL Delete Metadata Profiles]** i verktygsfältet.
 1. Klicka på **[!UICONTROL Delete]** i dialogrutan för att bekräfta borttagningsåtgärden. Metadataprofilen tas bort från listan.
 
-## Använd en metadataprofil för mappar {#applying-a-metadata-profile-to-folders}
+## Använda en metadataprofil för mappar {#applying-a-metadata-profile-to-folders}
 
 När du tilldelar en metadataprofil till en mapp ärver alla undermappar automatiskt profilen från den överordnade mappen. Det innebär att du bara kan tilldela en metadataprofil till en mapp. Fundera därför noga över mappstrukturen för var du överför, lagrar, använder och arkiverar resurser.
 
@@ -95,13 +94,13 @@ Mappar som har tilldelats en profil visas i användargränssnittet med namnet p�
 
 Du kan tillämpa metadataprofiler på specifika mappar eller globalt på alla resurser.
 
-### Använd metadataprofiler på specifika mappar {#applying-metadata-profiles-to-specific-folders}
+### Använda metadataprofiler på specifika mappar {#applying-metadata-profiles-to-specific-folders}
 
 Du kan använda en metadataprofil på en mapp från menyn **[!UICONTROL Tools]** eller, om du är i mappen, från **[!UICONTROL Properties]**. I det här avsnittet beskrivs hur du använder metadataprofiler på mappar på båda sätten.
 
 För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
-#### Använd metadataprofiler på mappar från profilens användargränssnitt {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
+#### Använda metadataprofiler på mappar från användargränssnittet för profiler {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
 
 1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools > Assets > Metadata Profiles]**.
 1. Välj den metadataprofil som du vill använda för en eller flera mappar.
@@ -110,7 +109,7 @@ För mappar som redan har tilldelats en profil visas profilens namn direkt under
 
 1. Tryck på **[!UICONTROL Apply Metadata Profile to Folder(s)]** och markera den eller de mappar som du vill ska ta emot de nyligen överförda resurserna och tryck sedan på **[!UICONTROL Done]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
-#### Använd metadataprofiler på mappar från egenskaperna {#applying-metadata-profiles-to-folders-from-properties}
+#### Använd metadataprofiler på mappar från Egenskaper {#applying-metadata-profiles-to-folders-from-properties}
 
 1. I den vänstra listen trycker du på **[!UICONTROL Assets]** och navigerar sedan till mappen som du vill använda en metadataprofil på.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
@@ -141,7 +140,7 @@ När du tar bort en metadataprofil från en mapp ärver alla undermappar automat
 
 Du kan ta bort en metadataprofil från en mapp från menyn **[!UICONTROL Tools]** eller från **[!UICONTROL Properties]** om du är i mappen. I det här avsnittet beskrivs hur du tar bort metadataprofiler från mappar på båda sätten.
 
-### Ta bort metadataprofiler från mappar via profilanvändargränssnittet {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
+### Ta bort metadataprofiler från mappar via användargränssnittet Profiler {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
 
 Så här tar du bort en metadataprofil från mappar via användargränssnittet för profiler:
 
@@ -151,7 +150,7 @@ Så här tar du bort en metadataprofil från mappar via användargränssnittet f
 
    Du kan bekräfta att metadataprofilen inte längre används för en mapp eftersom namnet inte längre visas under mappnamnet.
 
-### Ta bort metadataprofiler från mappar med hjälp av egenskaperna {#removing-metadata-profiles-from-folders-via-properties}
+### Ta bort metadataprofiler från mappar via Egenskaper {#removing-metadata-profiles-from-folders-via-properties}
 
 1. Tryck på AEM logotyp, navigera till **[!UICONTROL Assets]** och sedan till mappen som du vill ta bort en metadataprofil från.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
