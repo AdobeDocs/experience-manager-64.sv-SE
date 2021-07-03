@@ -10,10 +10,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 exl-id: e076349d-8b1a-487f-b982-9440d7de13b9
-feature: Configuration
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+feature: Konfiguration
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1226'
 ht-degree: 9%
@@ -34,7 +33,7 @@ Om du vill placera dessa URL-strängar på dina webbsidor och i dina program kop
 
 Se även [Bädda in video- eller bildvisningsprogrammet på en webbsida.](embed-code.md)
 
-Se även [Länka YouTube-URL:er till ditt webbprogram.](video.md)
+Se även [Länka YouTube URL:er till ditt webbprogram.](video.md)
 
 Se även [Leverera optimerade bilder för en responsiv webbplats.](responsive-site.md)
 
@@ -203,7 +202,7 @@ Dynamic Media stöder leverans av statiskt material, som är ytterligare materia
 
    `https://gateway-na.assetsadobe.com/DMGateway/public-ssl/demoCo/content/dam/marketing/MyVideo.mp4.m3u8`
 
-## Använda HTTP/2 för att leverera dina Dynamic Media-resurser {#using-http-to-deliver-your-dynamic-media-assets}
+## Använd HTTP/2 för att leverera Dynamic Media-material {#using-http-to-deliver-your-dynamic-media-assets}
 
 HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Dynamic Media-material kan nu levereras via HTTP/2 vilket ger bättre respons och laddningstider.
 
