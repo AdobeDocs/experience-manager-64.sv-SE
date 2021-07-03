@@ -3,9 +3,9 @@ title: Dela resurser via en länk
 description: Dela resurser, mappar och samlingar som en URL-adress.
 contentOwner: AG
 feature: Länkdelning,Resurshantering
-role: Business Practitioner
+role: User
 exl-id: bf4b0acf-4103-4da1-8666-c6d9fe80c41f
-source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 3%
@@ -97,7 +97,7 @@ När du hämtar resurser från den länk som delas med funktionen Länkdelning k
 
 1. Spara ändringarna.
 
-## Bästa tillvägagångssätt och felsökning {#best-practices-and-troubleshooting}
+## Bästa praxis och felsökning {#best-practices-and-troubleshooting}
 
 * Resursmappar eller samlingar som innehåller ett tomt utrymme i namnet kanske inte delas.
 * Om användarna inte kan hämta de delade resurserna bör du fråga din [!DNL Experience Manager]-administratör om vilka hämtningsgränser [som finns.](#configure-maximum-data-size)
