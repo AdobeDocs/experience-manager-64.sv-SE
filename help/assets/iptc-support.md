@@ -3,15 +3,14 @@ title: Stöd för IPTC-metadata
 description: Läs om hur Adobe Experience Manager (AEM) Assets stöder IPTC-metadata, kreativa betyg och nyckelord som läggs till i resurser via Adobe Bridge och andra Creative-program.
 contentOwner: AG
 feature: Metadata
-role: Business Practitioner,Administrator,Leader
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+role: User,Admin,Leader
+exl-id: 3e22e8e4-3675-4d6d-94f4-fc1a4d4801e8
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '359'
 ht-degree: 7%
 
 ---
-
 
 # Stöd för IPTC-metadata {#support-for-iptc-metadata}
 
@@ -34,7 +33,7 @@ Egenskapssidan för resurser innehåller nu separata flikar för att visa IPTC-k
 1. Redigera metadataegenskaperna för ITPC-tillägget efter behov.
 1. Tryck/klicka på **[!UICONTROL Save & Close]** för att spara ändringarna.
 
-## Kreativ klassificeringssupport {#creative-rating-support}
+## Creative Rating Support {#creative-rating-support}
 
 Förutom att visa enskilda användarklassificeringar och aggregerade klassificeringar, visar egenskapssidan nu de klassificeringar som tilldelats resurser via Adobe Bridge och andra Creative-program
 
@@ -49,4 +48,3 @@ Den här egenskapen är dock för närvarande inte indexerad för att undvika ko
 På fliken **[!UICONTROL IPTC]** på sidan Egenskaper visas även nyckelord som har lagts till i resurser via Adobe Bridge och andra Creative-program. Du kan också redigera dessa nyckelord och lägga till fler nyckelord från fliken **[!UICONTROL IPTC]**.
 
 ![keywords](assets/keywords.png)
-
