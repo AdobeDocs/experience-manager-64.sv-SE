@@ -2,16 +2,15 @@
 title: Ordna dina digitala resurser
 description: Organisera dina digitala resurser, bilder, filer, mappar och så vidare med Experience Manager.
 contentOwner: AG
-feature: Asset Management,Search
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Resurshantering, sökning
+role: User
+exl-id: 41e083b3-e956-4346-9a99-008de2c6a169
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '809'
 ht-degree: 0%
 
 ---
-
 
 # Ordna dina digitala resurser {#organize-digital-assets}
 
