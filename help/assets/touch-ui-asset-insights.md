@@ -3,9 +3,9 @@ title: Använd funktionen för resursinsikter för att spåra användningen av d
 description: Funktionen Assets Insights gör att du kan spåra användarbetyg och användningsstatistik för bilder som används på tredjepartswebbplatser, marknadsföringskampanjer och Adobe kreativa lösningar.
 contentOwner: AG
 feature: Resursinsikter,Resursrapporter
-role: Business Practitioner,Administrator
+role: User,Admin
 exl-id: a9604b09-1c83-4c1e-aff7-13107b898cb3
-source-git-commit: af2d14f92efb88143ccefe7fe29f83ae515e5981
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 2%
@@ -28,7 +28,7 @@ Om du vill att Assets Insights ska visa användningsstatistik för resurser mås
 >
 >Insikter stöds och tillhandahålls endast för bilder.
 
-## Visa statistik för en resurs {#viewing-statistics-for-an-asset}
+## Visa statistik för en tillgång {#viewing-statistics-for-an-asset}
 
 Du kan visa bakgrundsmusik för resursinsikter från metadatasidan.
 
@@ -65,7 +65,7 @@ Du kan visa bakgrundsmusik för resursinsikter från metadatasidan.
 
    ![chlimage_1-303](assets/chlimage_1-303.png)
 
-## Visa sammanställd statistik för resurser {#viewing-aggregate-statistics-for-assets}
+## Visa sammanställd statistik för tillgångar {#viewing-aggregate-statistics-for-assets}
 
 Du kan visa bakgrundsmusik för alla resurser i en mapp samtidigt med **[!UICONTROL Insights View]**.
 
