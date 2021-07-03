@@ -5,16 +5,15 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: administering
 content-type: reference
-feature: Workflow,Asset Management,Renditions
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Arbetsflöde,Resurshantering,Återgivningar
+role: User,Admin
+exl-id: 78d76b4f-a46c-4ffc-b772-ed925eb8e34c
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1330'
 ht-degree: 2%
 
 ---
-
 
 # Om profiler för att bearbeta metadata, bilder och videoklipp {#profiles-for-processing-metadata-images-and-videos}
 
@@ -38,7 +37,7 @@ Ett viktigt koncept när det gäller användningen av profiler i AEM Assets är 
 >
 >Detsamma gäller även när du flyttar resurser mellan två mappar som har samma profil tilldelad.
 
-## Bearbetar resurser i en mapp {#reprocessing-assets}
+## Bearbeta resurser i en mapp {#reprocessing-assets}
 
 >[!NOTE]
 >
