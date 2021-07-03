@@ -2,18 +2,17 @@
 title: Förbättrad sortering av material i AEM
 description: Läs om hur AEM Assets använder sortering på serversidan för att sortera mappresurser eller en sökfråga samtidigt i stället för att sortera dem gruppvis på klientsidan.
 contentOwner: AG
-feature: Search
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
+feature: Sökning
+role: User
+exl-id: aa24ca68-d94e-4bd4-a5cc-113906650a2e
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '438'
 ht-degree: 3%
 
 ---
 
-
-# Förbättrad sortering av resurser i AEM {#enhanced-sorting-of-assets-in-aem}
+# Förbättrad sortering av material i AEM {#enhanced-sorting-of-assets-in-aem}
 
 Läs om hur AEM Assets använder sortering på serversidan för att sortera mappresurser eller en sökfråga samtidigt i stället för att sortera dem gruppvis på klientsidan.
 
@@ -74,7 +73,7 @@ Du kan sortera sökresultaten baserat på följande fält:
 
    ![chlimage_1-398](assets/chlimage_1-398.png)
 
-## Sortera resurser i tidslinjen {#sorting-assets-in-timeline}
+## Sortera resurser på tidslinjen {#sorting-assets-in-timeline}
 
 Med AEM Assets kan du sortera tidslinjeposter kronologiskt, till exempel anteckningar, versioner, arbetsflöden och aktiviteter.
 
@@ -90,4 +89,3 @@ Med AEM Assets kan du sortera tidslinjeposter kronologiskt, till exempel anteckn
 1. Klicka/tryck på ikonen **[!UICONTROL Sort]** bredvid etiketten **[!UICONTROL Date]**. Beroende på vad du väljer listas anteckningarna i den kronologiska/omvända kronologiska ordning som de lades till i resursen.
 
    ![chlimage_1-401](assets/chlimage_1-401.png)
-
