@@ -2,16 +2,15 @@
 title: Migrera resurser till Adobe Experience Manager Assets i grupp
 description: Så här lägger du in resurser i AEM, använder metadata, genererar renderingar och aktiverar dem för att publicera instanser.
 contentOwner: AG
-feature: Migration,Renditions,Asset Management
-role: Architect,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Migrering,Återgivningar,Resurshantering
+role: Architect,Admin
+exl-id: 31da9f3d-460a-4b71-9ba0-7487f1b159cb
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1795'
 ht-degree: 11%
 
 ---
-
 
 # Guide för resursmigrering {#assets-migration-guide}
 
@@ -56,7 +55,7 @@ Innan du startar en migrering inaktiverar du startarna för `DAM Update Asset`-a
 
 Du kanske redan har en tagg-taxonomi på plats som du tillämpar på dina bilder. Verktyg som CSV-resursimporteraren och metadataprofilfunktionerna kan hjälpa dig att automatisera användningen av taggar i resurser. Lägg till taggarna i Experience Manager före detta. Med funktionen [ACS AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) kan du fylla i taggar med hjälp av ett Microsoft Excel-kalkylblad som är inläst i systemet.
 
-### Inkommande resurser {#ingest-assets}
+### Ingående resurser {#ingest-assets}
 
 Prestanda och stabilitet är viktiga frågor när du ska hämta in resurser i systemet. När du läser in mycket data i Experience Manager måste du se till att systemet fungerar bra. Detta minimerade den tid som krävs för att lägga till data och hjälper till att undvika att överbelasta systemet. Detta förhindrar att systemet kraschar, särskilt i system som redan är i produktion.
 
@@ -79,7 +78,7 @@ Det andra sättet att importera resurser är att hämta resurser från det lokal
 
 När resurser inte överförs via ett nätverk förbättras prestandan avsevärt. Den här metoden är vanligtvis den mest effektiva metoden för att läsa in resurser i databasen. Dessutom kan du importera alla resurser och metadata i ett enda steg eftersom verktyget har stöd för metadatahämtning. Du behöver inte utföra något annat steg för att använda metadata, till exempel använda ett separat verktyg.
 
-### Bearbeta renderingar {#process-renditions}
+### Bearbeta återgivningar {#process-renditions}
 
 När du har läst in resurserna i systemet måste du bearbeta dem via arbetsflödet DAM Update Asset för att extrahera metadata och generera renderingar. Innan du utför det här steget måste du duplicera och ändra arbetsflödet för DAM-uppdatering av resurser efter dina behov. Vissa steg i standardarbetsflödet är kanske inte nödvändiga för dig, till exempel Dynamic Media Classic PTIFF-generering eller serverintegrering med InDesign.
 
@@ -118,9 +117,9 @@ När resurserna har aktiverats kan du klona publiceringsinstansen och skapa så 
 
 När migreringen är klar bör startarna för DAM Update Asset-arbetsflödena återaktiveras för att stödja generering av återgivningar och metadataextrahering för den dagliga systemanvändningen.
 
-## Migrera resurser över AEM distributioner {#migrate-between-aem-instances}
+## Migrera resurser över AEM {#migrate-between-aem-instances}
 
-Även om det inte är nästan lika vanligt behöver du ibland migrera stora mängder data från en AEM till en annan instans. När du till exempel utför en AEM uppgradering uppgraderar du maskinvaran eller migrerar till ett nytt datacenter, till exempel med en AMS-migrering.
+Även om det inte är nästan lika vanligt behöver du ibland migrera stora mängder data från en AEM till en annan. När du till exempel utför en AEM uppgradering uppgraderar du maskinvaran eller migrerar till ett nytt datacenter, till exempel med en AMS-migrering.
 
 I det här fallet är dina resurser redan ifyllda med metadata och återgivningar har redan genererats. Du kan helt enkelt fokusera på att flytta resurser från en instans till en annan. När du migrerar mellan AEM instanser utför du följande steg:
 
