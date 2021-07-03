@@ -5,16 +5,15 @@ uuid: f847c07d-2a38-427a-9c38-8cdca3a1210c
 contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 82c1725e-a092-42e2-a43b-72f2af3a8e04
-feature: Asset Management
-role: Architect,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Resurshantering
+role: Architect,Admin
+exl-id: 6115e5e8-9cf5-417c-91b3-0c0c9c278b5b
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1860'
 ht-degree: 0%
 
 ---
-
 
 # Handbok för resursstorlek {#assets-sizing-guide}
 
@@ -62,7 +61,7 @@ De exempeldata som finns i verktyget visar hur viktigt det är att utföra de an
 
 För stora datalager kan du implementera ett delat datalager antingen via ett delat fildatalager på en nätverksansluten enhet eller via ett S3-datalager. I det här fallet behöver enskilda instanser inte ha en kopia av binärfilerna. Dessutom underlättar ett delat datalager binär replikering utan extra intervall och minskar bandbredden som används för att replikera resurser till publiceringsmiljöer eller för att avlasta instanser.
 
-#### Använd fall {#use-cases}
+#### Användningsexempel {#use-cases}
 
 Datalagret kan delas mellan en primär författarinstans och en väntande författarinstans för att minimera den tid det tar att uppdatera standby-instansen med ändringar som görs i den primära instansen. Adobe rekommenderar att du delar datalagret mellan en primär författarinstans och avlastar författarinstanser för att minska overheadkostnaderna vid avlastning av arbetsflöden. Du kan också dela datalagret mellan författaren och publiceringsinstanser för att minimera trafiken under replikeringen.
 
@@ -86,11 +85,11 @@ För AWS-åtgärder kan en implementering av en central plats (via S3) i ställe
 
 Ett delat datalager kräver att binärfilerna lagras på en nätverksansluten enhet som delas mellan alla instanser. Eftersom dessa binärfiler nås via ett nätverk påverkas systemprestandan negativt. Du kan delvis minska effekten genom att använda en snabb nätverksanslutning till ett snabbt disksystem. Detta är dock ett dyrt förslag. När det gäller AWS-åtgärder är alla diskar fjärranslutna och kräver nätverksanslutning. Tidigare volymer förlorar data när instansen startas eller stoppas.
 
-#### Svarstid {#latency}
+#### Latens {#latency}
 
 Latens i S3-implementeringar introduceras av skrivtrådar i bakgrunden. Säkerhetskopieringsprocedurer måste ta hänsyn till denna fördröjning och eventuella avlastningsprocedurer. S3-resursen kanske inte finns i S3 när ett avlastningsjobb startar. Dessutom kan Lucene-index vara ofullständiga vid säkerhetskopiering. Det gäller för alla tidskänsliga filer som skrivs till S3-datalagret och som öppnas från en annan instans.
 
-### Nodarkiv/dokumentarkiv {#node-store-document-store}
+### Node Store/Document Store {#node-store-document-store}
 
 Det är svårt att få fram exakta siffror för storleken för en NodeStore eller DocumentStore på grund av de resurser som används av följande:
 
@@ -145,6 +144,6 @@ Använd det Camera Raw biblioteket om återgivningarna genereras på fel sätt. 
 
 Det är svårt att exakt uppskatta storleken på TIFF-filen som stöds utan att vara ifylld (OTB) med en särskild hake för AEM eftersom ytterligare faktorer, som pixelstorlek, påverkar bearbetningen. Det är möjligt att AEM kan bearbeta en fil med storleken 255 MB OTB, men inte kan bearbeta en filstorlek på 18 MB eftersom den senare innehåller ett ovanligt högre antal pixlar jämfört med den förra.
 
-## Resursens storlek {#size-of-assets}
+## Storlek på tillgångar {#size-of-assets}
 
 Som standard kan du överföra resurser med en filstorlek på upp till 2 GB AEM. Information om hur du överför mycket stora resurser i AEM finns i [Konfiguration för att överföra mycket stora resurser](managing-video-assets.md#configuration-to-upload-video-assets-that-are-larger-than-gb).
