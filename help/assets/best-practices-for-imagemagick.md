@@ -2,16 +2,15 @@
 title: Installera och konfigurera ImageMagick så att det fungerar med AEM Assets
 description: Läs om programmet ImageMagick, hur du installerar det, konfigurerar kommandoradsprocessen och använder det för att redigera, skapa och generera miniatyrbilder från bilder.
 contentOwner: AG
-feature: Renditions,Developer Tools
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Återgivningar,Utvecklarverktyg
+role: Admin
+exl-id: 9aeda88a-fd66-4fad-b496-3352a6ecab81
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '744'
 ht-degree: 1%
 
 ---
-
 
 # Installera och konfigurera ImageMagick så att det fungerar med AEM Assets {#install-and-configure-imagemagick-to-work-with-aem-assets}
 
@@ -35,7 +34,7 @@ Det finns flera versioner av installationsfilerna för ImageMagic för olika ope
 1. Ange miljövariabeln path till installationskatalogen för ImageMagic.
 1. Om du vill kontrollera om installationen lyckades kör du kommandot `identify -version`.
 
-## Ställa in kommandoradsprocessteget {#set-up-the-command-line-process-step}
+## Ställa in kommandoradens processsteg {#set-up-the-command-line-process-step}
 
 Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfall. Följ de här stegen för att skapa en vänd bild och miniatyrbilder (140x100, 48x48, 319x319 och 1280x1280) varje gång du lägger till en JPEG-bildfil i `/content/dam` på den AEM servern:
 
@@ -90,9 +89,9 @@ Om du använder ImageMagick eller ett drabbat bibliotek rekommenderar Adobe att 
 >[!MORELIKETHIS]
 >
 >* [Bästa tillvägagångssätt för att bearbeta olika filformat med AEM Assets](assets-file-format-best-practices.md)
->* [Kommandoradsalternativ för ImageMagick](https://www.imagemagick.org/script/command-line-options.php)
->* [Grundläggande och avancerade exempel på användning av ImageMagick](https://www.imagemagick.org/Usage/)
->* [Prestandajustering för resurser för ImageMagick](performance-tuning-guidelines.md)
->* [Fullständig lista över filformat som stöds av AEM Assets](assets-formats.md)
->* [Förstå filformat och minneskostnad för bilder](https://www.scantips.com/basics1d.html)
+* [Kommandoradsalternativ för ImageMagick](https://www.imagemagick.org/script/command-line-options.php)
+* [Grundläggande och avancerade exempel på användning av ImageMagick](https://www.imagemagick.org/Usage/)
+* [Prestandajustering för resurser för ImageMagick](performance-tuning-guidelines.md)
+* [Fullständig lista över filformat som stöds av AEM Assets](assets-formats.md)
+* [Förstå filformat och minneskostnad för bilder](https://www.scantips.com/basics1d.html)
 
