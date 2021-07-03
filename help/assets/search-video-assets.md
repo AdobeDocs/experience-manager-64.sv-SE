@@ -2,18 +2,17 @@
 title: Söka efter videoresurser
 description: Använd nyckelord, filegenskaper som Mime-typ, storlek eller nyligen ändrad tidsstämpel för att snabbt hitta filen i AEM Assets.
 contentOwner: AG
-feature: Video,Search
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+feature: Video,Sök
+role: User
+exl-id: d5f0beb2-e59f-47cd-8e83-698d8a1dcec3
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
 
-
-# Söker efter videoresurser {#searching-video-assets}
+# Söka efter videoresurser {#searching-video-assets}
 
 Om du vill spara tid och arbete genom att behöva bläddra igenom potentiellt hundratals videoklipp kan du snabbt hitta filen med hjälp av nyckelord, filegenskaper som filtyp eller nyligen ändrad tidsstämpel.
 
