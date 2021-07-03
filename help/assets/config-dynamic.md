@@ -9,9 +9,8 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 821eb27e-67c9-4589-9196-30dacb84fa59
 exl-id: 1e122f97-ac37-44f5-a1cd-bf53ffda6f5b
 feature: Konfiguration,Hybrid-läge
-role: Administrator,Business Practitioner,Developer
-translation-type: tm+mt
-source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
+role: Admin,User,Developer
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '7421'
 ht-degree: 1%
@@ -194,7 +193,7 @@ I en AEM QuickStart WAR-distribution går det inte att härleda portnumret och k
 >[!NOTE]
 I en [AEM Quickstart fristående distribution](/help/sites-deploying/deploy.md) behöver en **självdomän** vanligtvis inte konfigureras eftersom portnumret och kontextsökvägen kan konfigureras automatiskt. Om alla nätverksgränssnitt är inaktiverade måste du konfigurera domänen **self**.
 
-## Inaktiverar Dynamic Media {#disabling-dynamic-media}
+## Inaktivera Dynamic Media  {#disabling-dynamic-media}
 
 Dynamiska medier är inte aktiverade som standard. Om du tidigare har aktiverat dynamiska medier kan du stänga av det vid ett senare tillfälle.
 
@@ -249,7 +248,7 @@ Minnesgränsen kan konfigureras och bör passa systemresursens tillgänglighet o
 En bild som kräver mer än den maximala minnesgränsen kommer att refuseras.
 Om du vill ändra minnesgränsen för att skapa PTIFF går du till **[!UICONTROL Tools > Operations > Web Console > Adobe CQ Scene7 PTiffManager]** och ändrar `maxMemory`-värdet.
 
-### Konfigurerar autentisering {#setting-up-authentication}
+### Konfigurera autentisering {#setting-up-authentication}
 
 Du måste konfigurera replikeringsautentisering för författaren för att kunna replikera bilder till tjänsten Dynamic Media Image Delivery. Detta gör du genom att hämta en KeyStore och sedan spara den under **[!UICONTROL dynamic-media-replication]**-användaren och konfigurera den. Din företagsadministratör bör ha fått ett välkomstmeddelande med KeyStore-filen och nödvändiga autentiseringsuppgifter under etableringsprocessen. Kontakta kundtjänst om du inte fått något sådant.
 
@@ -286,7 +285,7 @@ Du måste konfigurera replikeringsautentisering för författaren för att kunna
 
    Sedan måste du [konfigurera replikeringsagenten.](#configuring-the-replication-agent)
 
-### Konfigurerar replikeringsagenten {#configuring-the-replication-agent}
+### Konfigurera replikeringsagenten {#configuring-the-replication-agent}
 
 1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och sedan trycker du på **[!UICONTROL Tools > Deployment > Replication > Agents on author]**.
 1. Tryck på **[!UICONTROL Dynamic Media Hybrid Image Replication (s7delivery)]** på sidan Agents på författare.
@@ -335,7 +334,7 @@ Du kan även kontrollera genom att göra något av följande:
 
 När du konfigurerar autentisering kan det finnas problem som du kan stöta på när du skapar lösningar. Kontrollera att du har konfigurerat replikering innan du kontrollerar dessa.
 
-#### Problem: HTTP-statuskod 401 med Meddelande - Behörighet krävs {#problem-http-status-code-with-message-authorization-required}
+#### Problem: HTTP-statuskod 401 med meddelande - Behörighet krävs {#problem-http-status-code-with-message-authorization-required}
 
 Problemet kan bero på att det inte gick att konfigurera KeyStore för `dynamic-media-replication`-användaren.
 
@@ -459,7 +458,7 @@ Exempel på replikeringslogg:
 
 1. I närheten av det övre vänstra hörnet på sidan trycker du på **[!UICONTROL Save All]**.
 
-### Testar konfigurationen {#testing-your-configuration}
+### Testa konfigurationen {#testing-your-configuration}
 
 Adobe rekommenderar att du utför ett test från början till slut av konfigurationen.
 
@@ -519,7 +518,7 @@ Du kan konfigurera videorapportering för flera installationer av AEM med Dynami
 
 1. Verifiera och felsök paketinstallationen.
 
-### Skapa ett [!DNL Video Analytics]-förinställningspaket när den första författarnoden {#creating-a-video-analytics-preset-package-after-configuring-the-first-author-node} har konfigurerats
+### Skapa ett [!DNL Video Analytics]-förinställningspaket när den första författarnoden har konfigurerats {#creating-a-video-analytics-preset-package-after-configuring-the-first-author-node}
 
 När du är klar med den här uppgiften har du en paketfil som innehåller [!DNL Video Analytics]-förinställningarna. Dessa förinställningar innehåller en rapportserie, spårningsservern, spårningsnamnutrymmet och Marketing Cloud organisations-ID, om sådana finns.
 
@@ -533,7 +532,7 @@ När du är klar med den här uppgiften har du en paketfil som innehåller [!DNL
 1. Bygg paketet.
 1. Hämta eller dela förinställningspaketet [!DNL Video Analytics] så att det kan delas med efterföljande nya författarnoder.
 
-### Installera förinställningspaketet [!DNL Video Analytics] innan du konfigurerar ytterligare författarnoder {#installing-the-video-analytics-preset-package-before-you-configure-additional-author-nodes}
+### Installera förinställningspaketet [!DNL Video Analytics] innan du konfigurerar ytterligare redigeringsnoder {#installing-the-video-analytics-preset-package-before-you-configure-additional-author-nodes}
 
 Se till att du slutför den här aktiviteten _innan du konfigurerar **[!UICONTROL Dynamic Media Configuration (Pre 6.3)]**._ Om du inte gör det skapas en annan oanvänd rapportserie. Dessutom är datainsamlingen inte optimerad även om videorapporteringen fortfarande fungerar som den ska.
 
@@ -590,13 +589,13 @@ JCRT. Om du vill kontrollera  [!DNL Video Analytics] förinställningen med hjä
 
    Det här felet visas också om videorapporteringen körs innan du konfigurerar **[!UICONTROL Dynamic Media Configuration (Pre 6.3)]**-tjänster.
 
-### Felsökning av videorapporteringskonfigurationen {#troubleshooting-the-video-reporting-configuration}
+### Felsöka konfigurationen för videorapportering {#troubleshooting-the-video-reporting-configuration}
 
 * Under installationen kan anslutningar till API-servern för Analytics göra timeout. Installationen försöker ansluta igen 20 gånger, men den misslyckas fortfarande. När detta inträffar registreras flera fel i loggfilen. Sök efter `SiteCatalystReportService`.
 * Om du inte installerar [!DNL Video Analytics]-förinställningspaketet först kan det leda till att en ny rapportserie skapas.
 * Om du uppgraderar från AEM 6.3 till AEM 6.4 eller AEM 6.4.1 och sedan konfigurerar **[!UICONTROL Dynamic Media Configuration (Pre 6.3)]** skapas ändå en rapportserie. Detta problem är känt och behandlas som åtgärdat för AEM 6.4.2.
 
-### Om [!DNL Video Analytics]-förinställningen {#about-the-video-analytics-preset}
+### Om förinställningen [!DNL Video Analytics] {#about-the-video-analytics-preset}
 
 Förinställningen [!DNL Video Analytics], som ibland helt enkelt kallas analysförinställning, lagras bredvid visningsförinställningarna i Dynamic Media. Det är i princip detsamma som en visningsprogramförinställning, men med information som används för att konfigurera AppMeasurement- och Video Heartbeat-rapporter.
 
@@ -624,7 +623,7 @@ Du måste publicera dina egna standardkataloginställningar som en del av konfig
 1. Tryck på fliken **[!UICONTROL Replication]**. 
 1. Tryck på **[!UICONTROL Replicate]**.
 
-## Replikerar visningsförinställningar {#replicating-viewer-presets}
+## Replikera visningsförinställningar {#replicating-viewer-presets}
 
 Om du vill leverera en resurs med en visningsförinställning måste du replikera/publicera visningsförinställningen. (Alla visningsförinställningar måste vara aktiverade _och_ replikerade för att hämta URL:en eller inbäddningskoden för en resurs.) Mer information finns i [Förinställningar för publiceringsvisningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
 
@@ -710,7 +709,7 @@ Om du använder Dynamic Media för endast video följer du de här stegen för a
 
 Detta ställer in den AEM publiceringsinstansen för att leverera videobilden samt de videometadata som krävs för uppspelning, medan videon själv levereras av Dynamic Media molntjänst. Filtret exkluderar även den ursprungliga videon och statiska miniatyrrenderingar, som inte behövs i publiceringsinstansen, från replikeringen.
 
-### Konfigurera resursfilter för avbildningar i distributioner som inte är i produktion {#setting-up-asset-filters-for-imaging-in-non-production-deployments}
+### Ställa in resursfilter för bildåtergivning i distributioner som inte är i produktion {#setting-up-asset-filters-for-imaging-in-non-production-deployments}
 
 Om du använder Dynamic Media för bildåtergivning i icke-produktionsdistributioner följer du de här stegen för att ställa in resursfilter för replikering:
 
@@ -795,7 +794,7 @@ Om du bara vill replikera PTIFF (Pyramid TIFF) i exemplet ovan anger du `+cqdam,
 
 Om du bara vill replikera originalet skriver du `+original`.
 
-## Konfigurerar inställningar för Dynamic Media Image Server {#configuring-dynamic-media-image-server-settings}
+## Konfigurera inställningar för Dynamic Media Image Server {#configuring-dynamic-media-image-server-settings}
 
 När du konfigurerar Dynamic Media Image Server måste du redigera Adobe CQ Scene7 ImageServer-paketet och Adobe CQ Scene7 PlatformServer-paketet.
 
@@ -949,7 +948,7 @@ Manifestinställningar och deras standardvärden:
  </tbody> 
 </table>
 
-## Konfigurerar Dynamic Media färghantering {#configuring-dynamic-media-color-management}
+## Konfigurera Dynamic Media färghantering {#configuring-dynamic-media-color-management}
 
 Med dynamisk mediefärghantering kan du färgkorrigera resurser för förhandsgranskning.
 
@@ -980,7 +979,7 @@ Du måste installera funktionspaket 12445 för att kunna använda de dynamiska f
 
 1. Installera funktionspaketet.
 
-### Konfigurera standardfärgprofilerna {#configuring-the-default-color-profiles}
+### Konfigurera standardfärgprofiler {#configuring-the-default-color-profiles}
 
 När du har installerat funktionspaketet måste du konfigurera rätt standardfärgprofiler så att färgkorrigering aktiveras när du begär RGB- eller CMYK-bilddata.
 
