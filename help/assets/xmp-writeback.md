@@ -3,17 +3,16 @@ title: XMP till återgivning
 description: Lär dig hur XMP återskrivningsfunktionen sprider metadataändringar för en resurs till alla eller vissa återgivningar av resursen.
 contentOwner: AG
 feature: Metadata
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+role: User,Admin
+exl-id: 456f8c91-aacf-4db5-a329-2d1650ff0f2f
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '716'
 ht-degree: 3%
 
 ---
 
-
-# XMP tillbakaskrivning till återgivningar {#xmp-writeback-to-renditions}
+# XMP till återgivning {#xmp-writeback-to-renditions}
 
 Den här XMP återskrivningsfunktionen i [!DNL Adobe Experience Manager Assets] replikerar metadataändringarna till återgivningarna av den ursprungliga resursen. När du ändrar metadata för en resurs i Resurser eller när du överför resursen, lagras ändringarna först i metadatanoden i resurshierarkin.
 
@@ -29,7 +28,7 @@ I det här fallet sparar AEM Assets ändringarna i egenskapen **[!UICONTROL Titl
 
 [!DNL Experience Manager Assets] sprider dock inte automatiskt några metadataändringar till återgivningarna av en resurs. Se [hur du aktiverar XMP-tillbakaskrivning](#enabling-xmp-writeback).
 
-## Aktivera XMP-tillbakaskrivning {#enabling-xmp-writeback}
+## Aktivera XMP {#enabling-xmp-writeback}
 
 Om du vill att metadataändringarna ska kunna spridas till återgivningarna av resursen när du överför den ändrar du konfigurationen **Adobe CQ DAM Rendition Maker** i Configuration Manager.
 
