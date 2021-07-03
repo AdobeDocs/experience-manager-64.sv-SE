@@ -5,17 +5,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 uuid: 286a4f26-c0ad-4691-80d8-d17ba1a2dfe0
 discoiquuid: 92eacea5-7511-48ce-8a72-ff4552ebb07d
 feature: Metadata
-role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+role: User,Admin
+exl-id: 1bc72dac-41f7-4593-aaea-d48ebd94b43e
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1015'
 ht-degree: 6%
 
 ---
 
-
-# Mappmetadataschema {#folder-metadata-schema}
+# Metadataschema för mapp {#folder-metadata-schema}
 
 I den här artikeln beskrivs hur du skapar metadatamappar för resurser i AEM Assets.
 
@@ -25,7 +24,7 @@ Med Adobe Experience Manager (AEM) Assets kan du skapa metadatamappar för resur
 >
 >Den här funktionen kräver AEM 6.4 med minst Service Pack 2 distribuerat. Information om AEM 6.4 Service Pack finns i följande [versionsinformation](/help/release-notes/sp-release-notes.md).
 
-## Lägg till ett mappmetadatamatchschema {#add-a-folder-metadata-schema-form}
+## Lägga till ett schemaformulär för mappmetadata {#add-a-folder-metadata-schema-form}
 
 Använd schemaredigeraren för mappmetadata i Forms för att skapa och redigera metadatascheman för mappar.
 
@@ -110,13 +109,13 @@ Du kan ta bort schemaformulär för mappmetadata från Forms-sidan för mappmeta
 
 ![delete_form](assets/delete_form.png)
 
-## Tilldela ett mappmetadatamatchema {#assign-a-folder-metadata-schema}
+## Tilldela ett mappmetadatchema {#assign-a-folder-metadata-schema}
 
 Du kan tilldela ett mappmetadatchema till en mapp från Forms-sidan för mappmetadataschema eller när du skapar en mapp.
 
 Om du konfigurerar ett metadataschema för en mapp lagras sökvägen till schemaformuläret i egenskapen `folderMetadataSchema` för mappnoden under .*/jcr:content*.
 
-### Tilldela till ett schema från sidan för mappmetadataschema {#assign-to-a-schema-from-the-folder-metadata-schema-page}
+### Tilldela till ett schema från sidan Mappmetadatamatchema {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
 1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Folder Metadata Schemas]**.
 1. På Forms-sidan för mappmetadataschema väljer du det schemaformulär som du vill tillämpa på en mapp.
@@ -144,7 +143,7 @@ Du kan tilldela ett mappmetadatchema när du skapar en mapp. Om det finns minst 
 1. Öppna metadataegenskaperna för den mapp som du tillämpade metadataschemat på.
 1. Om du vill visa fälten för mappmetadata trycker/klickar du på fliken **[!UICONTROL Folder Metadata]**.
 
-## Använd mappmetadataschemat {#use-the-folder-metadata-schema}
+## Använd mappens metadatamatchema {#use-the-folder-metadata-schema}
 
 Öppna egenskaperna för en mapp som har konfigurerats med ett schema för mappmetadata. En flik för **[!UICONTROL Folder Metadata]** visas på sidan med mappegenskaper. Om du vill visa formuläret för schemat med mappmetadata väljer du den här fliken.
 
