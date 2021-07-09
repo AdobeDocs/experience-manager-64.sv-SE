@@ -8,9 +8,9 @@ breadcrumb-title: Distributionsguide
 user-guide-description: Läs mer om installation, distribution och arkitekturen för Adobe Experience Manager 6.4, inklusive vår molndistribution av Adobe Managed Services.
 feature: Distribuerar
 role: Architect
-source-git-commit: 19c3ecc20d78f40a2fa49f804baf232db7483afc
+source-git-commit: 5b0eef590f9a0c709fa21b8dbcf6a2f286a20237
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '375'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 1%
    + [Konsekvenskontroll och genomgående kontroll](consistency-check.md)
    + [Riktlinjer för prestanda](performance-guidelines.md)
    + [Prestandaoptimering](configuring-performance.md)
-   + [Prestandahandbok för resurser](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/assets-performance-sizing.html)
+   + [Prestandahandbok för resurser](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/performance-tuning-guidelines.html?lang=en)
    + [Instruktionsartiklar för konfiguration](ht-deploy.md)
    + [Ta bort Geometrixx](removing-the-geometrixx-sites.md)
    + [Konfigurerar webbkonsolen](configuring-web-console.md)
