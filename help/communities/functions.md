@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: cc993b71-e2f2-48e7-ad4e-469cb5ce2dc1
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 2007336d-d75c-4e01-af81-181751c04cfe
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '2432'
+source-wordcount: '2431'
 ht-degree: 0%
 
 ---
-
 
 # Community-funktioner {#community-functions}
 
@@ -162,7 +161,7 @@ När den läggs till i en mall tillåter konfigurationen att du anger taggnamnut
    * Om alternativet inte är markerat går det att välja ett eller flera namnutrymmen som är tillåtna för communitywebbplatsen.
    * Standard är markerat.
 
-### Funktionen Innehåll {#featured-content-function}
+### Funktion för aktuellt innehåll {#featured-content-function}
 
 Funktionen för aktuellt innehåll är en sida med en [innehållskomponent](featured.md) som är konfigurerad för att tillåta att kommentarer läggs till och tas bort.
 
@@ -176,7 +175,7 @@ Filbiblioteksfunktionen är en sida med en [filbibliotekskomponent](file-library
 
 När du lägger till en mall är den enda konfigurationen för [titel- och URL-inställningarna](#title-and-url-settings).
 
-### Forum Function {#forum-function}
+### Forum {#forum-function}
 
 Forumfunktionen är en sida med en [forumkomponent](forum.md) som är konfigurerad för taggning, filöverföringar, och efterföljande medlemmar som kan redigera, rösta och moderera själva.
 
@@ -202,7 +201,7 @@ Om det inte är markerat tillåter forumet kommentarer om ett ämne, men svar p�
 * **[!UICONTROL Allow Featured Content]**
 Om du markerar det här alternativet kan idén identifieras som  [aktuellt innehåll](featured.md). Standard är markerat.
 
-### Gruppfunktion {#groups-function}
+### Funktionen Grupper {#groups-function}
 
 >[!CAUTION]
 >
@@ -255,7 +254,7 @@ Om alternativet inte är markerat tillåts svar (kommentarer) på ett ämne, men
 * **[!UICONTROL Allow Featured Content]**
 Om du markerar det här alternativet kan idén identifieras som  [aktuellt innehåll](featured.md). Standard är markerat.
 
-### Ledarpanelsfunktion {#leaderboard-function}
+### Ledarbordsfunktion {#leaderboard-function}
 
 Ledpanelsfunktionen är en sida med en [Leaderboard-komponent](enabling-leaderboard.md).
 
@@ -311,7 +310,7 @@ Om det inte är markerat tillåter QnA-forumet att det finns kommentarer (svar) 
 * **[!UICONTROL Allow Featured Content]**
 Om du markerar det här alternativet kan idén identifieras som  [aktuellt innehåll](featured.md). Standard är markerat.
 
-## Skapa communityfunktion {#create-community-function}
+## Skapa community-funktion {#create-community-function}
 
 Du kan skapa en communityfunktion genom att välja ikonen `Create Community Function` längst upp i användarfunktionskonsolen. Flera funktioner som är baserade på samma AEM kan skapas och sedan anpassas unikt genom att du öppnar i redigeringsläget.
 
@@ -332,7 +331,7 @@ Funktionsbeskrivningen för visning
 * **[!UICONTROL Disabled/Enabled]**
 En växlingsväxling som styr om funktionen kan refereras
 
-### AEM blå {#aem-blueprint}
+### AEM Blueprint {#aem-blueprint}
 
 ![chlimage_1-392](assets/chlimage_1-392.png)
 
@@ -350,13 +349,13 @@ Se även [Multi Site Manager](../../help/sites-administering/msm.md).
 
 På miniatyrpanelen kan en bild överföras för visning i [Community Function-konsolen](#community-functions-console).
 
-## Öppna communityfunktion {#open-community-function}
+## Öppen communityfunktion {#open-community-function}
 
 ![chlimage_1-394](assets/chlimage_1-394.png)
 
 Välj ikonen `Open Community Function` för att öppna redigeringsläget för författare för redigering av sidinnehållet och ändring av konfigurationen av funktionskomponenterna.
 
-### Konfigurerar komponenter {#configuring-components}
+### Konfigurera komponenter {#configuring-components}
 
 En communityfunktion implementeras som en Live-kopia av en AEM, som beskrivs i [Multi Site Manager](../../help/sites-administering/msm.md).
 
