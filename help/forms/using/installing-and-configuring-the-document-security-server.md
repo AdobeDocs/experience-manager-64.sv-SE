@@ -6,15 +6,14 @@ seo-description: 'Använd dokumentskydd för att på ett säkert sätt distribue
 uuid: 04c67a84-01ad-45b7-a590-822b1c067d52
 contentOwner: khsingh
 discoiquuid: 600d13e7-6655-41c5-aab4-c8e9e2a8d14f
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 9ce5e89b-76c9-464d-9caf-26a387c698fa
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
-
 
 # Installera och konfigurera dokumentsäkerhetsservern {#installing-and-configuring-the-document-security-server}
 
@@ -28,7 +27,7 @@ Profilerna lagras på dokumentsäkerhetsservern. du tillämpar profilerna på do
 
 Dokumentsäkerhet ger även klienter, tittare och indexerare möjlighet att skydda dokument, visa skyddade dokument och indexera skyddade dokument. Mer information om dokumentsäkerhet finns i [om dokumentsäkerhet](/help/forms/using/admin-help/document-security.md).
 
-## Distributionstopologi {#deployment-topology}
+## Distributionstopologi  {#deployment-topology}
 
 Dokumentsäkerhetsfunktionerna är bara tillgängliga i AEM Forms på JEE. Du behöver en instans av AEM Forms på JEE. Du kan också skapa ett kluster eller en grupp med AEM Forms-servrar om det behövs. Följande topologi är en indikativ topologi för att köra dokumentsäkerhetsfunktionen. Mer information om topologin finns i [Arkitektur och distributionstopologier för AEM Forms](aem-forms-architecture-deployment.md).
 
