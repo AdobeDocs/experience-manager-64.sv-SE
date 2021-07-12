@@ -9,17 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: d11b8fc8-5e98-4a77-a536-d445ac88e1b3
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 9865b366-b9e5-40f3-8863-789ccfb792f5
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1510'
 ht-degree: 1%
 
 ---
 
-
-# Modererar communityinnehåll {#moderating-community-content}
+# Moderating Community Content {#moderating-community-content}
 
 ## Översikt {#overview}
 
@@ -155,7 +154,7 @@ På den andra platsen, när innehållet finns i Urklipp, visas knappen Klistra i
 
 En moderator kanske inte tillåter att UGC visas på den publicerade webbplatsen. För administratörer och community-moderatorer är inlägget fortfarande tillgängligt och kommenteras som skräppost.
 
-### Stäng/öppna om {#close-reopen}
+### Stäng/öppna igen {#close-reopen}
 
 Åtgärden Stäng utför hela konversationstråden (ett forumämne eller den inledande kommentaren) och omfattar alla efterföljande inlägg eller svar.
 
@@ -277,7 +276,7 @@ Nedan visas ett exempel på en anpassad post för standardbevakningsorden när `
 
 ![crxde](assets/crxde.png)
 
-### Moderatorbehörigheter {#moderator-permissions}
+### Tillstånd för moderatorn {#moderator-permissions}
 
 Följande behörigheter, som tilldelas till samma resurs, kallas tillsammans **`moderator permissions`**:
 
@@ -286,4 +285,3 @@ Följande behörigheter, som tilldelas till samma resurs, kallas tillsammans **`
 * `Create`
 * `Delete`
 * `Replicate`
-
