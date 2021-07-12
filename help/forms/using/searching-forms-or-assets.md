@@ -8,17 +8,16 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager
 discoiquuid: f7f19679-cfc2-4ac0-9a26-685fad09276f
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: c6e5c19a-9d93-470f-916e-7ef06c3de141
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '713'
 ht-degree: 0%
 
 ---
 
-
-# Söker efter formulär och resurser {#searching-for-forms-and-assets}
+# Söka efter formulär och resurser {#searching-for-forms-and-assets}
 
 Du kan söka efter formulär eller formulärresurser med hjälp av en textsträng eller textsträng tillsammans med jokertecken. Du kan även begränsa sökningen med hjälp av de villkor som finns i olika kategorier på sökpanelen.
 
@@ -55,7 +54,7 @@ Förutom frågan kan du i sökvillkoren ange vissa sökparametrar som gör den g
 
 Genom att använda filtret för resurssökväg kan du begränsa sökresultaten till den aktuella katalogen. Om alternativet Sök i aktuell katalog inte är markerat innehåller sökresultaten resurser från baskatalogen. Om den aktuella sidan inte är en katalog och alternativet Sök i den aktuella katalogen är markerat, returnerar sökningen de resurser som finns i den överordnade katalogen.
 
-### Resursändring {#asset-modification}
+### Ändrad tillgång {#asset-modification}
 
 Välj ett av följande alternativ om du vill söka bland alla resurser som har ändrats inom en viss tidsperiod.
 
