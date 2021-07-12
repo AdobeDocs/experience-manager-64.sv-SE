@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 1de1ffc6-63f8-4316-a2fa-5095d407c265
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '728'
 ht-degree: 1%
 
 ---
-
 
 # MySQL-konfiguration för DSRP {#mysql-configuration-for-dsrp}
 
@@ -41,7 +40,7 @@ Dessa instruktioner beskriver hur du ansluter till MySQL-servern och skapar UGC-
 
 [MySQL ](https://dev.mysql.com/downloads/mysql/) ska laddas ned och installeras enligt instruktionerna för måloperativsystemet.
 
-### Gemener i tabellnamn {#lower-case-table-names}
+### Tabellnamn med gemener {#lower-case-table-names}
 
 Eftersom SQL inte är skiftlägeskänsligt måste du, för skiftlägeskänsliga operativsystem, inkludera en inställning som anger alla tabellnamn med gemener.
 
@@ -77,7 +76,7 @@ MySQL Workbench tillhandahåller ett gränssnitt för körning av SQL-skript som
 
 MySQL Workbench ska laddas ned och installeras enligt instruktionerna för måloperativsystemet.
 
-## Communities-anslutning {#communities-connection}
+## Communities Connection {#communities-connection}
 
 När MySQL Workbench startas första gången visas inga anslutningar, såvida den inte redan används för andra syften:
 
@@ -149,7 +148,7 @@ I MySQL Workbench
 
 ![chlimage_1-108](assets/chlimage_1-108.png)
 
-#### Steg 2: kör SQL-skript {#step-execute-sql-script}
+#### Steg 2: köra SQL-skript {#step-execute-sql-script}
 
 I Workbench-fönstret för filen som öppnas i steg 1 väljer du `lightening (flash) icon` för att köra skriptet.
 
@@ -203,4 +202,3 @@ När MySQL körs på en annan server än AEM måste servervärdnamnet anges i st
    * **[!UICONTROL Datasource name]**: namn som angetts för  [MySQL-anslutningen](#new-connection-settings), till exempel &#39;communities&#39;
 
 * Välj **[!UICONTROL Save]**
-
