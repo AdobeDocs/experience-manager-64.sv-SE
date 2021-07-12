@@ -1,27 +1,26 @@
 ---
 title: Publicera mappar på varumärkesportalen
-description: Lär dig hur du publicerar och avpublicerar resurser på varumärkesportalen.
+description: Lär dig hur du publicerar och avpublicerar resurser på Brand Portal.
 contentOwner: VG
 feature: Brand Portal
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: User
+exl-id: 6b78124d-4022-452f-8d0f-b667de337bf4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '381'
 ht-degree: 39%
 
 ---
 
-
 # Publicera resurser på varumärkesportalen {#publish-assets-to-brand-portal}
 
-Som Adobe Experience Manager (AEM) Assets-administratör kan du publicera resurser på AEM Assets Brand Portal-instansen (eller schemalägga publiceringsarbetsflödet till ett senare datum/tid) för din organisation. Du måste dock först konfigurera AEM Assets med varumärkesportalen. Mer information finns i [Konfigurera AEM Assets med varumärkesportalen](configure-aem-assets-with-brand-portal.md).
+Som Adobe Experience Manager (AEM) Assets-administratör kan du publicera resurser på AEM Assets Brand Portal-instansen (eller schemalägga publiceringsarbetsflödet till ett senare datum/tid) för din organisation. Du måste dock först konfigurera AEM Assets med Brand Portal. Mer information finns i [Konfigurera AEM Assets med varumärkesportalen](configure-aem-assets-with-brand-portal.md).
 
-När du har publicerat en resurs är den tillgänglig för användare i varumärkesportalen.
+När du har publicerat en resurs är den tillgänglig för användare i Brand Portal.
 
-Om du gör senare ändringar av den ursprungliga resursen i AEM Assets återspeglas inte ändringarna i varumärkesportalen förrän du publicerar om resursen. Funktionen säkerställer att pågående ändringar inte finns i varumärkesportalen. Endast godkända ändringar som publiceras av en administratör finns i varumärkesportalen.
+Om du gör senare ändringar av den ursprungliga resursen i AEM Assets återspeglas inte ändringarna i Brand Portal förrän du publicerar resursen på nytt. Funktionen säkerställer att pågående ändringar inte finns i varumärkesportalen. Endast godkända ändringar som publiceras av en administratör finns i varumärkesportalen.
 
-När replikeringen är klar kan du publicera resurser, mappar och samlingar på varumärkesportalen. Så här publicerar du resurser på varumärkesportalen:
+När replikeringen är klar kan du publicera resurser, mappar och samlingar till Brand Portal. Så här publicerar du resurser på Brand Portal:
 
 >[!NOTE]
 >
@@ -29,11 +28,11 @@ När replikeringen är klar kan du publicera resurser, mappar och samlingar på 
 
 1. I resurskonsolen håller du muspekaren över de önskade resurserna och väljer **[!UICONTROL Publish]**-alternativ bland snabbåtgärderna.
 
-   Du kan också välja de resurser du vill publicera på varumärkesportalen.
+   Du kan också välja de mediefiler du vill publicera till Brand Portal.
 
    ![publish2bp-2](assets/publish2bp-2.png)
 
-2. Följande två alternativ är tillgängliga för att publicera resurserna på varumärkesportalen:
+2. Följande två alternativ är tillgängliga när du vill publicera mediefiler till Brand Portal:
    * [Publicera resurser direkt](#publish-now)
    * [Publicera resurser senare](#publish-later)
 
@@ -49,7 +48,7 @@ Gör något av följande för att publicera de markerade resurserna på varumär
 
    2. Bekräfta ditt val i **[!UICONTROL Scope]** och tryck/klicka på **[!UICONTROL Publish to Brand Portal]**.
 
-Ett meddelande visas som anger att resurserna har placerats i kö för publicering på varumärkesportalen. Logga in i gränssnittet för varumärkesportalen för att se de publicerade resurserna.
+Ett meddelande visas som anger att resurserna har placerats i kö för publicering på varumärkesportalen. Logga in i Brand Portal gränssnitt för att se de publicerade resurserna.
 
 ## Publicera resurser senare {#publish-later}
 
@@ -66,6 +65,6 @@ Gör så här för att schemalägga publicering av resurser på varumärkesporta
 
    ![publishworkflow](assets/publishworkflow.png)
 
-Logga nu in på Brand Portal för att se om de publicerade resurserna finns i gränssnittet Brand Portal.
+Logga sedan in på Brand Portal för att se om de publicerade resurserna är tillgängliga i Brand Portal gränssnitt.
 
 ![bp_631_landing_page](assets/bp_landing_page.png)
