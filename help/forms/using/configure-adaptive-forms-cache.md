@@ -8,17 +8,16 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: Configuration
 discoiquuid: dd18f7b5-882d-4e81-ab3d-85f1e5d74992
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 6a610e9d-beec-486d-b1d2-78b5fec44c52
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '311'
 ht-degree: 1%
 
 ---
 
-
-# Konfigurera cache för adaptiva formulär {#configure-adaptive-forms-cache}
+# Konfigurera cacheminne för adaptiva formulär {#configure-adaptive-forms-cache}
 
 Ett cacheminne är en mekanism som förkortar dataåtkomsttider, minskar latensen och förbättrar I/O-hastigheter (input/output). Cacheminnet för adaptiva formulär lagrar endast HTML-innehåll och JSON-strukturen i ett adaptivt formulär utan att några förfyllda data sparas. Det minskar tiden som krävs för att återge ett anpassat formulär eller dokument på klienten. Den är särskilt utformad för adaptiva formulär och stöder även adaptiva dokument.
 
@@ -45,4 +44,3 @@ Utför följande steg för att konfigurera cachen för adaptiva formulär:
    ![Konfigurationsdialogruta för HTML-cache för adaptiva formulär](assets/cache-configuration-edit.png)
 
 1. Klicka på **Spara** för att spara konfigurationen.
-
