@@ -10,15 +10,14 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 1293c01a-7308-494a-ab48-bd9938205b81
 pagetitle: Community Groups Console
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: f8f19ad6-d6cd-4abd-bc31-6baba3e0356e
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
-
 
 # Community Groups Console {#community-groups-console}
 
@@ -109,7 +108,7 @@ Du kan välja ett tema som skiljer sig från den överordnade webbplatsens tema.
 
 När communitywebbplatsen har publicerats går det att [redigera egenskaperna](#modifying-group-properties) och välja ett annat tema.
 
-#### VARUMÄRKE FÖR GEMENSKAPSGRUPP {#community-group-branding}
+#### GEMENSKAPSGRUPPENS VARUMÄRKE {#community-group-branding}
 
 ![chlimage_1-135](assets/chlimage_1-135.png)
 
@@ -183,7 +182,7 @@ När processen är klar visas kortet för den nya undercommunitywebbplatsen (gru
 >
 >Gruppen skapas på alla språk enligt [steg 1: Community Group Template](groups.md#step1communitygrouptemplate) in Additional Available Community Group Languages, in the Community Groups console of the respective community sites.
 
-## Redigeringsgruppinnehåll {#authoring-group-content}
+## Innehåll för redigeringsgrupp {#authoring-group-content}
 
 ![chlimage_1-141](assets/chlimage_1-141.png)
 
@@ -284,7 +283,7 @@ När gruppen har publicerats visas ett meddelande:
 >
 >Community-webbplatsen och kapslade grupper bör publiceras uppifrån och ned.
 
-## Tar bort gruppen {#deleting-the-group}
+## Ta bort gruppen {#deleting-the-group}
 
 ![deleteicon](assets/deleteicon.png)
 
