@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: e41eb0fa-ae88-44d5-9181-0d925b8b62c6
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '1679'
+source-wordcount: '1678'
 ht-degree: 0%
 
 ---
-
 
 # Uppgradera till AEM 6.4 Forms på JEE {#upgrade-to-aem-forms-jee}
 
@@ -41,7 +40,7 @@ Gör så här för att uppgradera befintliga AEM 6.2 Forms på JEE eller AEM 6.3
 
 Direktuppgradering från LiveCycle ES2, LiveCycle ES3, AEM 6.0 Forms, AEM 6.1 Forms till AEM 6.4 Forms är inte tillgängligt. Du kan uppgradera till en eller flera versioner av LiveCycle eller AEM Forms och sedan uppgradera från AEM 6.4 Forms. En lista över mellanliggande versioner och motsvarande uppgraderingsinstruktioner finns i [Välj en uppgraderingssökväg](upgrade.md).
 
-## LiveCycle ES4 SP1 > AEM 6.4 Forms på JEE {#livecycle-es4sp1-forms-jee}
+## LiveCycle ES4 SP1 > AEM 6.4 Forms on JEE {#livecycle-es4sp1-forms-jee}
 
 Uppgradering av LiveCycle ES4 SP1 till AEM 6.4 Forms på JEE är en uppgradering som inte är på plats, eftersom det handlar om att migrera resurser och data från tidigare versioner till nya instanser (nya versioner) av programservrar, operativsystem och databaser som stöds.
 
