@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 0042893e-3d2c-469e-8759-404be16e7436
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 766711ea-f3d3-49ab-8346-4e4477c261bd
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '530'
 ht-degree: 1%
 
 ---
-
 
 # Rapportkonsol {#reports-console}
 
@@ -37,7 +36,7 @@ Tabellrapporter kan exporteras i CSV-format för efterföljande bearbetning.
 
 ## Rapporteringskonsoler {#reporting-consoles}
 
-### Rapporter för communityplatser {#reports-for-community-sites}
+### Rapporter om communitysajter {#reports-for-community-sites}
 
 * Från global navigering: **[!UICONTROL Navigation > Communities > Reports]**
 * Välj från
@@ -49,7 +48,7 @@ Tabellrapporter kan exporteras i CSV-format för efterföljande bearbetning.
       * Generera en rapport för den valda communityplatsen, innehållstypen och tidsperioden
          ![chlimage_1-156](assets/chlimage_1-156.png)
 
-### Rapporter om aktiveringsresurser och utbildningssökvägar {#reports-for-enablement-resources-and-learning-paths}
+### Rapporter om aktiveringsresurser och utbildningsvägar {#reports-for-enablement-resources-and-learning-paths}
 
 * Från global navigering: **[!UICONTROL Navigation > Communities > Resources]**
 * Välj en befintlig webbplats för aktiveringscommunityn
@@ -139,6 +138,6 @@ Välj **[!UICONTROL Generate]** för att skapa rapporten:
 
 ## Felsökning {#troubleshooting}
 
-### Inga communitywebbplatser har listats {#no-community-sites-listed}
+### Inga communitywebbplatser har angetts {#no-community-sites-listed}
 
 Om det inte finns några communitysajter i listan kontrollerar du att Adobe Analytics har aktiverats för en webbplats. Om du väljer rapporter om tilldelningar måste du se till att tilldelningsfunktionen finns i communityplatsens struktur.
