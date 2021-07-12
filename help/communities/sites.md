@@ -9,17 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 202d7dba-2b34-431d-b10f-87775632807f
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 5049c5df-c874-4c34-a96b-7944cd0353d5
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '449'
 ht-degree: 1%
 
 ---
 
-
-# Platsmallar {#site-templates}
+# Webbplatsmallar {#site-templates}
 
 Konsolen Webbplatsmallar påminner mycket om konsolen [Gruppmallar](tools-groups.md), som är inriktad på funktioner som är av intresse för communitygrupper.
 
@@ -37,7 +36,7 @@ Den här konsolen visar de mallar från vilka en [community-plats](sites-console
 
 ![chlimage_1-18](assets/chlimage_1-18.png)
 
-## Skapa webbplatsmall {#create-site-template}
+## Skapa platsmall {#create-site-template}
 
 Om du vill börja skapa en ny platsmall väljer du `Create`.
 
@@ -84,7 +83,7 @@ Sidfunktionen ger en tom sida. Med gruppfunktionen kan du skapa en gruppwebbplat
 
 ![chlimage_1-22](assets/chlimage_1-22.png)
 
-### Gruppmallar för gruppfunktionen {#group-templates-for-groups-function}
+### Gruppmallar för gruppfunktion {#group-templates-for-groups-function}
 
 När du inkluderar en gruppfunktion i platsmallen, kräver konfigurationen att du anger vilka gruppmallsalternativ som tillåts när en ny grupp skapas i publiceringsmiljön.
 
