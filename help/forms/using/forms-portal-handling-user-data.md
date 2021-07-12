@@ -8,15 +8,14 @@ contentOwner: vishgupt
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 48f841b7-0e7f-4216-9ee8-fb6e843acaf0
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 05dbb6ee-09fd-44ee-bb8b-a3f3ebb32f5a
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
-
 
 # Forms Portal | Hantera användardata {#forms-portal-handling-user-data}
 
@@ -68,7 +67,7 @@ Beroende på den konfigurerade datalagringens beständighet lagras utkast och sk
 
 Du kan komma åt formulärdata för inloggade och anonyma användare i konfigurerade datalager och ta bort dem om det behövs.
 
-### AEM instanser {#aem-instances}
+### AEM {#aem-instances}
 
 Alla utkast och skickade formulärdata i AEM instanser (författare, publicering eller fjärranvändare) för inloggade och anonyma användare lagras i noden `/content/forms/fp/` i den tillämpliga AEM. Varje gång en inloggad eller anonym användare sparar ett utkast eller skickar ett formulär, genereras ett `draft ID` eller `submission ID`, ett `user data ID` och ett slumpmässigt `ID` för varje bifogad fil (om tillämpligt), som associeras med respektive utkast eller sändning.
 
@@ -123,4 +122,3 @@ Om du vill ta bort utkast och skicka data för en inloggad användare från data
 ```sql
 DELETE FROM metadata, data, additionalmetadatatable USING metadata INNER JOIN data ON metadata.userdataID = data.id INNER JOIN additionalmetadatatable ON metadata.id = additionalmetadatatable.id WHERE metadata.owner = 'logged-in user'
 ```
-
