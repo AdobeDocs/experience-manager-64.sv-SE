@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management, installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 38a80992-2eda-4535-89af-0de34b1a9686
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 0bfa0e65-c4cd-4c37-b42b-bff1b777a7be
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
-
 
 # Installera kompatibilitetspaket {#compatibility-package}
 
@@ -36,7 +35,7 @@ Med AEMFD-kompatibilitetspaketet kan du använda följande resurser från AEM Fo
 
 Mer information finns i [Resurser som gjorts kompatibla med AEM Forms 6.4 genom att installera Kompatibilitetspaketet](/help/forms/using/compatibility-package.md#assetsmadecompatible).
 
-## Lägg till stöd för AEM Forms 6.3- och 6.2-resurser i AEM Forms 6.4 {#add-support-for-aem-forms-and-assets-in-aem-forms}
+## Lägg till stöd för AEM Forms 6.3- och 6.2-material i AEM Forms 6.4 {#add-support-for-aem-forms-and-assets-in-aem-forms}
 
 När du har utfört en uppgradering gör du följande för att installera AEMFD-kompatibilitetspaketet och göra dina resurser kompatibla med 6.4:
 
@@ -78,4 +77,3 @@ Genom att installera Kompatibilitetspaketet kan du göra följande resurser och 
    * /libs/fd/af/components/page/survey
    * /libs/fd/af/components/page/tabbedenrollment
    * /libs/fd/afaddon/components/page/advancedRotering
-
