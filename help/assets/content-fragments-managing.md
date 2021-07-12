@@ -10,10 +10,9 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: da8f968b-91cc-45a8-ae4b-757b4f840b8e
 exl-id: b21ba7a1-6e6f-4b95-9336-b49f7e932af5
-feature: Content Fragments
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+feature: Innehållsfragment
+role: User
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1423'
 ht-degree: 3%
@@ -296,7 +295,7 @@ De visas sida vid sida, där:
 
 ![cfm-6420-20](assets/cfm-6420-20.png)
 
-## Återställer till version {#reverting-to-a-version}
+## Återställa till en version  {#reverting-to-a-version}
 
 Du kan återgå till en viss version av fragmentet:
 
