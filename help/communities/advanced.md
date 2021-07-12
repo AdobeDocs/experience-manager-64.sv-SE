@@ -9,17 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 42fb3c50-8728-4897-ade9-6b839294a10e
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: c9406aae-288e-4cdf-ac01-cb26b423639e
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '1129'
+source-wordcount: '1128'
 ht-degree: 1%
 
 ---
 
-
-# Avancerad poängsättning och märkning {#advanced-scoring-and-badges}
+# Advanced Scoring and Badges {#advanced-scoring-and-badges}
 
 ## Översikt {#overview}
 
@@ -89,7 +88,7 @@ För ett ämne anger du det verb som ska ha högst prioritet när du beräknar p
 
    Standardvärdet är 50.
 
-## Avancerade bedömningsregler {#advanced-scoring-rules}
+## Avancerade poängregler {#advanced-scoring-rules}
 
 Vid grundläggande poängsättning är den kvantitet som behövs för att få ett märke känd.
 
@@ -134,9 +133,9 @@ I stället för att associera punkter med en badge-bild är det bara nödvändig
 | badgingType | Sträng | (Obligatoriskt) Identifierar bedömningsmotorn som antingen &quot;grundläggande&quot; eller &quot;avancerad&quot;. Ange som &quot;avancerat&quot;, annars är standardvärdet &quot;grundläggande&quot;. |
 | scoringRules | Sträng[] | (Valfritt) En sträng med flera värden som begränsar badging-regeln till de poäng som identifieras av de listade poängsättningsreglerna.Exempelpost:/etc/community/scoring/rules/adv-comments-scoringDefault är ingen begränsning. |
 
-## Inkluderade regler och märke {#included-rules-and-badge}
+## Inkluderade regler och emblem {#included-rules-and-badge}
 
-### Inkluderad bricka {#included-badge}
+### Inkluderat märke {#included-badge}
 
 I den här betaversionen ingår ett belöningsbaserat expertmärke:
 
