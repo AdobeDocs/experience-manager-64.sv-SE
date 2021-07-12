@@ -7,9 +7,8 @@ user-guide-title: Användarhandbok för redigering av AEM 6.4 Classic UI
 breadcrumb-title: Användargränssnittets skrivguide
 user-guide-description: Den här handboken beskriver koncepten för redigering i AEM i det klassiska användargränssnittet.
 feature: Redigering
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 55e904cb24bac68c0b1bbea59786cb4c0c711d61
+role: User
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 20%
@@ -17,7 +16,7 @@ ht-degree: 20%
 ---
 
 
-# AEM 6.4 Classic UI Authoring User Guide {#classic-ui}
+# Användarhandbok för redigering av AEM 6.4 Classic UI {#classic-ui}
 
 + [Översikt över redigeringshandboken för det klassiska användargränssnittet](home.md)
 + Introduktion till redigering av klassiskt användargränssnitt {#introduction}
