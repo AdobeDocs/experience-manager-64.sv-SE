@@ -10,15 +10,14 @@ topic-tags: administering
 content-type: reference
 discoiquuid: b19b3c24-82a0-468c-a077-9f3edb96afc9
 tagskeywords: scoring, badging, badges, gamification
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 54a4a053-ca44-451a-9a31-f1c1e8cb7002
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '2878'
+source-wordcount: '2877'
 ht-degree: 1%
 
 ---
-
 
 # Communities Scoring and Badges {#communities-scoring-and-badges}
 
@@ -51,7 +50,7 @@ Om de lagras på en annan plats bör de vara tillgängliga för alla.
 
 UGC har olika märken för att avgöra om de har tilldelats eller förvärvats enligt reglerna. För närvarande visas tilldelade märken som text och färdiga märken som en bild.
 
-### Gränssnitt för hantering av emblem {#badge-management-ui}
+### Användargränssnitt för hantering av emblem {#badge-management-ui}
 
 Communities [Badges console](badges.md) ger möjlighet att lägga till egna emblem som kan visas för en medlem när den har tjänats in (tilldelats) eller när de har en specifik roll i communityn (tilldelats).
 
@@ -108,7 +107,7 @@ I releasen ingår tre belöningsbaserade märken:
 >
 >Tilldelade märken kan återkallas på samma sätt som tilldelade märken. Se avsnittet [Tilldela och återkalla emblem](#assign-and-revoke-badges). Framtida förbättringar kommer att omfatta ett användargränssnitt för att hantera medlemmarnas märken.
 
-### Egna emblem {#custom-badges}
+### Egna märken {#custom-badges}
 
 Anpassade emblem kan installeras med [Badges-konsolen](badges.md) och antingen tilldelas eller anges i badging-regler.
 
@@ -145,13 +144,13 @@ Om noden är av typen `cq:Page` (rekommenderas) lägger du med CRXDE|Lite till e
 >
 >Om en bedömningsregel inte verkar ha någon effekt på att dela ut taggar kontrollerar du att resultatregeln inte har blockerats av spårningsregelns egenskap scoringRules. Se avsnittet [Badging Rules](#badging-rules).
 
-### Aktivera emblem för komponenten {#enable-badges-for-component}
+### Aktivera emblem för komponent {#enable-badges-for-component}
 
 Poängreglerna och reglerna för radavstånd gäller endast för instanser av komponenter som har aktiverat badging genom att redigera komponentkonfigurationen i [redigeringsläget](author-communities.md).
 
 En boolesk egenskap, `allowBadges`, aktiverar/inaktiverar visning av emblem för en komponentinstans. Den kan konfigureras i dialogrutan [komponentredigering](author-communities.md) för forum-, QnA- och kommentarkomponenter via en kryssruta med namnet **Display Badges**.
 
-#### Exempel: allowBadges för forumkomponentinstansen {#example-allowbadges-for-forum-component-instance}
+#### Exempel: allowBadges för instans av forumkomponent {#example-allowbadges-for-forum-component-instance}
 
 ![chlimage_1-368](assets/chlimage_1-368.png)
 
@@ -190,7 +189,7 @@ Bakgrundsmusik lagras i SRP.
 >/etc/community/scoring/rules/site1/forums-scoring\
 >/etc/community/scoring/rules/site2/forums-scoring
 
-### Underregler för bedömning {#scoring-sub-rules}
+### Underregler för poängsättning {#scoring-sub-rules}
 
 Delreglerna för poängsättning innehåller egenskaper som detaljerar värdena för att delta i communityn.
 
@@ -313,7 +312,7 @@ I releasen finns två poängregler för [forumfunktionen](functions.md#forum-fun
 
    * Regelnamn måste vara unika oavsett plats
 
-### Aktiverar anpassade poängsättningsregler {#activating-custom-scoring-rules}
+### Aktivera anpassade poängsättningsregler {#activating-custom-scoring-rules}
 
 Alla ändringar eller tillägg som görs i resultatregler eller underregler i redigeringsmiljön måste installeras vid publicering.
 
@@ -395,11 +394,11 @@ I utgåvan finns två badging-regler som motsvarar [forumen och kommentarsbedöm
 
    * Regelnamn måste vara unika oavsett plats
 
-### Aktiverar anpassade badging-regler {#activating-custom-badging-rules}
+### Aktivera anpassade märkningsregler {#activating-custom-badging-rules}
 
 Alla ändringar eller tillägg som görs i märkningsregler eller bilder i redigeringsmiljön måste installeras vid publicering.
 
-## Tilldela och återkalla emblem {#assign-and-revoke-badges}
+## Tilldela och återkalla märken {#assign-and-revoke-badges}
 
 Medlemmar kan tilldelas emblem antingen med hjälp av [medlemskonsolen](members.md#badges-tab) eller via programmering med cURL-kommandon.
 
@@ -581,7 +580,7 @@ Om regler för klassificering och märkning har tillämpats på webbplatsens inn
 
 Se [Aktivera emblem för komponent](#enable-badges-for-component).
 
-### Bedömningsregeln har ingen effekt {#scoring-rule-has-no-effect}
+### Poängregeln har ingen effekt {#scoring-rule-has-no-effect}
 
 Om regler för poängsättning och märkning har tillämpats på webbplatsens innehåll, och emblem tilldelas för vissa åtgärder, men inte andra, kontrollerar du att badging-regeln inte har begränsat de poängregler som den gäller för.
 
