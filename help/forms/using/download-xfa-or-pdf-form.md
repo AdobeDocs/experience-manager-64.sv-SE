@@ -8,17 +8,16 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager
 discoiquuid: 6699e0e7-fd42-41ae-86a2-3b940d905111
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 68d881c6-7507-4018-b40e-205604221d0c
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
 
-
-# Hämta en XFA eller en PDF-formulärmall {#download-an-xfa-or-a-pdf-form-template}
+# Hämta en XFA- eller PDF-formulärmall {#download-an-xfa-or-a-pdf-form-template}
 
 Med nedladdningsåtgärden kan du, som namnet antyder, exportera formulär från databasen till det lokala systemet. I kombination med överföringsåtgärden hjälper den här åtgärden dig att migrera dina formulär från en databas till en annan.
 
@@ -57,4 +56,3 @@ Förutom dessa resurser kan du hämta resurstypen `Resource` om den finns i en m
 * Du kan överföra ZIP-filen till en annan plats i samma databas eller till en annan databas
 * Hierarkin för resurserna i en mapp behålls under överföringen
 * Alla metadataändringar som gjorts i det hämtade materialet innan det har hämtats återspeglas vid överföringen
-
