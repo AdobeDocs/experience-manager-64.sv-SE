@@ -10,17 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 410149d6-15bd-41e5-bdba-1d8e6eab7b87
 pagetitle: Communities Tools
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: de11be58-b576-4d06-b446-52b4013aae9a
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '108'
 ht-degree: 0%
 
 ---
 
-
-# Webbgruppsverktyg {#communities-tools}
+# Communities Tools {#communities-tools}
 
 Om du är författare kommer du åt verktygsgruppen Communities:
 
@@ -35,4 +34,3 @@ Om du är författare kommer du åt verktygsgruppen Communities:
 
 * [Komponenthandbok](components-guide.md)  - Öppnar en interaktiv webbplats som gör det möjligt att experimentera med hur SCF-komponenterna fungerar och hur de kan konfigureras eller anpassas.
 * [Badges](badges.md) - Konsol varifrån egna emblem kan läggas till för användning i regler för  [poäng och emblem](implementing-scoring.md)
-
