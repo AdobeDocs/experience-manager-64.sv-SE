@@ -9,17 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 9ed54ee3-3509-4a43-a710-90f4543ccaf3
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---
 
-
-# FFmpeg för Communities {#ffmpeg-for-communities}
+# FFmpeg for Communities {#ffmpeg-for-communities}
 
 ## Översikt {#overview}
 
@@ -71,4 +70,3 @@ Så här ändrar du arbetsflödet för DAM Update Asset, och i det här exemplet
 * Välj **[!UICONTROL Save]** om du vill spara arbetsflödet för `DAM Update Asset`
 
    (övre vänstra hörnet)
-
