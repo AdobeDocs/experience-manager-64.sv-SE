@@ -6,15 +6,14 @@ seo-description: 'Installera och konfigurera AEM Forms Interactive Communication
 uuid: c09b5743-3cbc-49ff-977a-b6b3eb81b160
 topic-tags: installing
 discoiquuid: 674c6b68-8a04-4cd3-a63e-9968ca686948
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: c7aaa81d-d140-44d9-9144-0cbf6ec5d650
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1405'
 ht-degree: 0%
 
 ---
-
 
 # Installera och konfigurera interaktiv kommunikation {#install-and-configure-interactive-communications}
 
@@ -103,13 +102,13 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
 1. När paketet har installerats uppmanas du att starta om AEM. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i filen  [AEM-Installation-Directory]/crx-quickstart/logs/error.log och loggen är stabil.
 1. Upprepa steg 1-7 för alla författare- och publiceringsinstanser.
 
-## Konfigurationer efter installation {#post-installation-configurations}
+## Konfiguration efter installation {#post-installation-configurations}
 
 AEM Forms har några obligatoriska och valfria konfigurationer. De obligatoriska konfigurationerna är bland annat att konfigurera BouncyCastle-bibliotek och serialiseringsagent. De valfria konfigurationerna inkluderar konfigurering av dispatcher och Adobe Target.
 
-### Obligatoriska konfigurationer efter installation {#mandatory-post-installation-configurations}
+### Obligatoriska efterinstallationskonfigurationer {#mandatory-post-installation-configurations}
 
-#### Konfigurera RSA- och BouncyCastle-bibliotek {#configure-rsa-and-bouncycastle-libraries}
+#### Konfigurera RSA- och BouncyCastle-bibliotek  {#configure-rsa-and-bouncycastle-libraries}
 
 Utför följande steg på alla författare- och publiceringsinstanser för att starta delegeringen av biblioteken:
 
@@ -143,7 +142,7 @@ Utför följande steg på alla Author- och Publish-instanser för att lägga til
 1. Lägg till **sun.util.calendar**-paketet i **tillåtelselista**-fältet. Klicka på Spara.
 1. Upprepa steg 1-3 för alla författare- och publiceringsinstanser.
 
-### Valfria konfigurationer efter installation {#optional-post-installation-configurations}
+### Ytterligare konfigurationer efter installation {#optional-post-installation-configurations}
 
 #### Installera kompatibilitetspaket {#install-compatibility-package}
 
@@ -178,7 +177,7 @@ Kunderna överger troligen interaktiv kommunikation om upplevelsen inte är enga
 
 AEM kan integreras med Adobe Target, en Adobe Marketing Cloud-lösning, för att leverera personaliserade och engagerande kundupplevelser i flera digitala kanaler. [Integrera Adobe Target med AEM Forms](/help/forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms) om du vill anpassa en interaktiv kommunikation med Adobe Target.
 
-#### Konfigurera SSL-kommunikation för formulärdatamodell {#configure-ssl-communcation-for-form-data-model}
+#### Konfigurera SSL-kommunikation för formulärdatamodell  {#configure-ssl-communcation-for-form-data-model}
 
 Du kan aktivera SSL-kommunikation för formulärdatamodellen. Om du vill aktivera SSL-kommunikation för formulärdatamodellen ska du lägga till certifikat i Java Trust Store för alla instanser innan du startar en AEM Forms-instans. Du kan köra följande kommando för att lägga till certifikaten:
 
@@ -193,4 +192,3 @@ Du har konfigurerat en miljö för interaktiv kommunikation och korrespondenshan
 * [Skapa interaktiv kommunikation](/help/forms/using/create-interactive-communication.md)
 
 * [Skapa ett brev för korrespondenshantering](/help/forms/using/create-letter.md)
-
