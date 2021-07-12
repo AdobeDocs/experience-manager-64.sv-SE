@@ -8,17 +8,16 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: Configuration
 discoiquuid: 2c8cea3c-8d8b-41d4-8ef9-a0ada8f86be6
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 7f1c4bac-accf-43e4-9439-89c5420d50f2
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
 
-
-# Konfigurerar synkroniseringsschemaläggaren {#configuring-the-synchronization-scheduler}
+# Konfigurera synkroniseringsplaneraren {#configuring-the-synchronization-scheduler}
 
 Som standard körs synkroniseringsschemaläggaren efter var tredje minut för att synkronisera alla resurser som ändrats och uppdaterats i databasen via LiveCycle Workbench 11. Program som innehåller formulär och resurser visas i AEM Forms användargränssnitt när synkroniseringsprocessen är klar.
 
@@ -34,7 +33,7 @@ Utför följande steg för att ändra intervallet för synkroniseringsplaneraren
 
    Frekvensenheten är minuter. Om du till exempel vill konfigurera schemaläggaren att köras efter var 60:e minut anger du 60.
 
-## Synkroniserar resurser {#synchronizing-assets}
+## Synkronisera resurser {#synchronizing-assets}
 
 Du kan använda alternativet **Synkronisera resurser från databas** om du vill synkronisera resurserna manuellt. Så här synkroniserar du resurserna manuellt:
 
@@ -61,4 +60,3 @@ Lös konflikten genom att byta namn på programmet och manuellt synkronisera res
 ![Konflikter i dialogrutan för resurssynkronisering](assets/sync-conflict.png)
 
 **Figur:** *Konflikter i dialogrutan för resurssynkronisering*
-
