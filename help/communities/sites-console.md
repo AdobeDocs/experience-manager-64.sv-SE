@@ -9,17 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 5ac2fcef-05b8-46f7-9a15-997cdd79a3db
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: f1408709-5402-4f55-bd37-9943fe828af0
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '3128'
+source-wordcount: '3127'
 ht-degree: 0%
 
 ---
 
-
-# Webbplatskonsol för webbgrupper {#communities-sites-console}
+# Konsolen Webbplatser {#communities-sites-console}
 
 Konsolen Communities Sites ger åtkomst till:
 
@@ -77,7 +76,7 @@ Processen startas genom att du väljer knappen `Create` längst upp i webbgrupps
 
 Skapandeprocessen är en serie steg som presenteras som paneler med en uppsättning funktioner som ska konfigureras (presenteras som underpaneler). Det går att gå vidare till **Nästa**-steget eller **Tillbaka** till föregående steg innan platsen implementeras i det sista steget.
 
-### Steg 1: Platsmall {#step-site-template}
+### Steg 1: Webbplatsmall {#step-site-template}
 
 ![newsitetemplate](assets/newsitetemplate.png)
 
@@ -113,7 +112,7 @@ Välj **[!UICONTROL Next]**
 
 Designpanelen innehåller två underpaneler för att välja tema och varumärkesbanderoll:
 
-#### TEMA FÖR GEMENSKAPENS WEBBPLATS {#community-site-theme}
+#### TEMA PÅ GEMENSKAPENS WEBBPLATS {#community-site-theme}
 
 ![sitetheme-1](assets/sitetheme-1.png)
 
@@ -123,7 +122,7 @@ När du väljer det här alternativet överlagras temat med en ogenomskinlig bl�
 
 När communitywebbplatsen har publicerats går det att [redigera egenskaperna](#modifying-site-properties) och välja ett annat tema.
 
-#### GEMENSKAPENS WEBBPLATSVARNING {#community-site-branding}
+#### GEMENSKAPENS WEBBPLATSHANTERING {#community-site-branding}
 
 ![chlimage_1-449](assets/chlimage_1-449.png)
 
@@ -204,15 +203,15 @@ Panelen Inställningar innehåller flera underpaneler med funktioner som ska kon
 
    Om det här alternativet är markerat kan webbplatsbesökare logga in med sina Facebook-kontouppgifter. Den valda [Facebook-molnkonfigurationen](social-login.md#create-a-facebook-connect-cloud-service) bör konfigureras att lägga till användare i medlemsgruppen för communitywebbplatsen när communitywebbplatsen har skapats.
 
-   Om alternativet inte är markerat visas ingen Facebook-inloggning.
+   Om du inte markerar det här alternativet visas ingen Facebook-inloggning.
 
    Låt vara omarkerat för en *privat*-communitywebbplats. Standard är avmarkerat.
 
 * **[!UICONTROL Allow Social Logins: Twitter]**
 
-   Om det här alternativet är markerat tillåter du webbplatsbesökare att logga in med sina Twitter-kontouppgifter. Den valda [Twitter-molnkonfigurationen](social-login.md#create-a-twitter-connect-cloud-service) bör konfigureras att lägga till användare i medlemsgruppen för communitywebbplatsen när communitywebbplatsen har skapats.
+   Om det här alternativet är markerat kan webbplatsbesökare logga in med sina Twitter-kontouppgifter. Den valda [Twitter-molnkonfigurationen](social-login.md#create-a-twitter-connect-cloud-service) bör konfigureras att lägga till användare i medlemsgruppen för communitywebbplatsen när communitywebbplatsen har skapats.
 
-   Om alternativet inte är markerat visas ingen Twitter-inloggning.
+   Om du inte markerar det här alternativet visas ingen Twitter-inloggning.
 
    Låt vara omarkerat för en *privat*-communitywebbplats. Standard är avmarkerat.
 
@@ -220,9 +219,9 @@ Panelen Inställningar innehåller flera underpaneler med funktioner som ska kon
 >
 >**[!UICONTROL Allowing Social Logins]**
 >
->Det kan finnas exempelkonfigurationer för Facebook och Twitter och de kan markeras, men för en [produktionsmiljö](../../help/sites-administering/production-ready.md) måste du skapa anpassade Facebook- och Twitter-program. Se [Social inloggning på Facebook och Twitter](social-login.md).
+>Det kan finnas exempelkonfigurationer för Facebook och Twitter och de kan väljas, men för en [produktionsmiljö](../../help/sites-administering/production-ready.md) måste du skapa anpassade Facebook- och Twitter-program. Se [Social inloggning med Facebook och Twitter](social-login.md).
 
-#### TAGGAR {#tagging}
+#### TAGGNING {#tagging}
 
 ![chlimage_1-450](assets/chlimage_1-450.png)
 
@@ -266,7 +265,7 @@ Den globala inställningen för moderering av användargenererat innehåll (UGC)
 
    Om värdet är större än 0 måste antalet gånger ett ämne eller ett inlägg flaggas innan det döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det markerade ämnet eller inlägget från den offentliga vyn. Standardvärdet är 5.
 
-#### ANALYTIK {#analytics}
+#### ANALYS {#analytics}
 
 ![chlimage_1-453](assets/chlimage_1-453.png)
 
@@ -284,7 +283,7 @@ Den globala inställningen för moderering av användargenererat innehåll (UGC)
 
    `Communities`är ramverksexemplet från  [Analytics Configuration for Communities ](analytics.md#aem-analytics-framework-configuration) Featuresdocumentation.
 
-#### TRANSLATION {#translation}
+#### ÖVERSÄTTNING {#translation}
 
 ![chlimage_1-455](assets/chlimage_1-455.png)
 
@@ -346,7 +345,7 @@ Välj en av
    * `Always show contributions in user preferred language`
    * `Show contributions in user preferred language for only logged-in users`
 
-#### AKTIVERA {#enablement}
+#### AKTIVERING {#enablement}
 
 ![chlimage_1-457](assets/chlimage_1-457.png)
 
@@ -387,7 +386,7 @@ Om du vill ändra en community-plats väljer du projektmappen för den:
 
 När du hovrar över en webbplats med en mus eller vidrör ett platskort visas ikoner som gör att du kan [redigera webbplatsen i redigeringsläge](#authoring-site-content), [öppna webbplatsegenskaperna för ändring](#modifying-site-properties), [publicera webbplatsen](#publishing-the-site), [exportera platsen](#exporting-the-site) och [ta bort platsen](#deleting-the-site).
 
-## Redigerar webbplatsinnehåll {#authoring-site-content}
+## Skapa webbplatsinnehåll {#authoring-site-content}
 
 ![chlimage_1-460](assets/chlimage_1-460.png)
 
@@ -492,7 +491,7 @@ ENABLEMENT-panelen ger åtkomst till inställningarna som anges när en communit
 
 Se beskrivningen av [ENABLEMENT](#enablement).
 
-## Publicera platsen {#publishing-the-site}
+## Publicera webbplatsen {#publishing-the-site}
 
 När en communitywebbplats har skapats eller ändrats kan du publicera (aktivera) webbplatsen genom att välja ikonen `Publish Site`, som visas när du håller muspekaren över webbplatsen.
 
@@ -506,7 +505,7 @@ En indikation visas när webbplatsen har publicerats.
 
 När du har publicerat en community-webbplats måste du publicera varje undergrupp (kapslad grupp) som skapats med [gruppkonsolen](groups.md) individuellt.
 
-## Exporterar platsen {#exporting-the-site}
+## Exportera platsen {#exporting-the-site}
 
 ![chlimage_1-467](assets/chlimage_1-467.png)
 
@@ -519,7 +518,7 @@ Observera att UGC inte ingår i platspaketet.
 
 Om du vill ta bort communitywebbplatsen väljer du ikonen Ta bort plats som visas när du håller muspekaren över webbplatsen i Webbplatskonsolen. Den här åtgärden tar bort alla objekt som är associerade med platsen, till exempel UGC, användargrupper, resurser och databasposter.
 
-## Skapade communityanvändargrupper {#created-community-user-groups}
+## Skapade användargrupper i communityn {#created-community-user-groups}
 
 När den nya communitywebbplatsen har publicerats skapas nya medlemsgrupper (användargrupper i publiceringsmiljön) som har rätt behörigheter för olika administrativa roller och medlemsroller.
 
@@ -536,11 +535,11 @@ Mer information finns i [Hantera användare och användargrupper](users.md).
 
 >[!NOTE]
 >
->Om [Tillåt social inloggning: Facebook](#user-management) är aktiverat när användargruppen har
+>Om [Tillåt social inloggning: Facebook](#user-management) aktiveras när användargruppen
 >
 >* community-*&lt;platsnamn>*-*&lt;uid>*-medlemmar
 
-skapas bör den använda [Facebook-molntjänsten](social-login.md#createafacebookcloudservice) konfigureras att lägga till användare i den här gruppen.
+skapas ska den använda [molntjänsten för Facebook](social-login.md#createafacebookcloudservice) konfigureras för att lägga till användare i den här gruppen.
 
 ## Konfigurera för autentiseringsfel {#configure-for-authentication-error}
 
@@ -588,4 +587,3 @@ På den globala navigeringskonsolen finns communityplatser i mappen `Community S
 Det går att komma åt en community-webbplats på det här sättet, men för administrativa uppgifter bör communitywebbplatsen nås från konsolen Webbplatser för communities.
 
 ![chlimage_1-470](assets/chlimage_1-470.png)
-
