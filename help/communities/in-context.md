@@ -9,17 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: a7678273-81f6-4089-ac73-2458d940e374
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
 
-
-# Kontextmoderering {#in-context-moderation}
+# Sammanhangsbaserad moderering {#in-context-moderation}
 
 För AEM Communities kan moderering utföras av administratörer och betrodda communitymedlemmar direkt på den publicerade sidan där communityinnehållet publicerades.
 
@@ -134,7 +133,7 @@ Logga ut.
 
 ![moderationconsole-publish](assets/moderationconsole-publish.png)
 
-### Community-moderator (#2) {#community-moderator}
+### Community Moderator (#2) {#community-moderator}
 
 Logga in som Aaron McDonald (aaron.mcdonal@mailinator.com), som är moderator i communityn, och gå till tråden genom att välja Forum och sedan Läs mer för den hummingbird-posten.
 
@@ -168,4 +167,3 @@ Meddelande
 * Rebekah har inte åtkomst till modereringskonsolen
 
 ![chlimage_1-3](assets/chlimage_1-3.png)
-
