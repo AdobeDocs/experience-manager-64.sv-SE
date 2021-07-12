@@ -9,15 +9,14 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 discoiquuid: f564759f-fb56-4f70-a7b1-286a223755c6
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: f4adc53d-6809-4d89-a3dd-5d783e938a63
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '607'
 ht-degree: 0%
 
 ---
-
 
 # Tjänsten för hantering av användare och användargenererat innehåll i AEM Communities {#user-and-ugc-management-service-in-aem-communities}
 
@@ -41,7 +40,7 @@ Du kan även skapa ett användargränssnitt (användargränssnitt) för att hant
 
 Dessa API:er gör det möjligt att utföra följande funktioner.
 
-## Hämta användargränssnittskontrollen för en användare {#retrieve-the-ugc-of-a-user}
+## Hämta användargenererat innehåll för en användare {#retrieve-the-ugc-of-a-user}
 
 `getUserUgc(ResourceResolver resourceResolver, String user, OutputStream outputStream)` hjälper till att exportera all användargenererat innehåll från systemet.
 
@@ -52,7 +51,7 @@ Om du till exempel vill exportera användargenererat innehåll för en användar
 
 `http://localhost:port/services/social/ugcmanagement?user=weston.mccall@dodgit.com&operation=getUgc`
 
-## Ta bort användargränssnittskontrollen för en användare {#delete-the-ugc-of-a-user}
+## Ta bort användargränssnittets innehållsförteckning {#delete-the-ugc-of-a-user}
 
 **deleteUserUgc(ResourceResolver resourceResolver, String user)** hjälper till att ta bort all UGC för en användare från systemet.
 
@@ -63,7 +62,7 @@ Om du till exempel vill ta bort användargränssnittskontrollen för en använda
 * user= weston.mccall@dodgit.com
 * operation= deleteUgc
 
-### Ta bort UGC från Adobe Analytics {#delete-ugc-from-analytics}
+### Ta bort användargenererat innehåll från Adobe Analytics {#delete-ugc-from-analytics}
 
 Följ arbetsflödet i GDPR-analysen för att ta bort användardata från Adobe Analytics. eftersom API inte tar bort användardata från Adobe Analytics.
 
