@@ -10,10 +10,9 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 96cf7c92-af98-417f-ab60-b368e3846ef8
 exl-id: 0123fb44-9f38-4d9e-9dce-7c9cfd4260e1
-feature: Content Fragments,Metadata
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
+feature: Innehållsfragment,Metadata
+role: User
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 8%
@@ -26,7 +25,7 @@ ht-degree: 8%
 >
 >Vissa funktioner för innehållsfragment kräver [AEM 6.4 Service Pack 2 (6.4.2.0) eller senare](/help/release-notes/sp-release-notes.md).
 
-## Redigera egenskaper/Metadata {#editing-properties-meta-data}
+## Redigera egenskaper/metadata {#editing-properties-meta-data}
 
 Du kan visa och redigera metadata (egenskaper) för innehållsfragment:
 
