@@ -7,15 +7,14 @@ uuid: 2b76b69f-6f3a-4f1a-a2a4-d39f5e529f75
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: a88fc933-f1af-4798-b72f-10e7b0d2fd11
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 5005d57c-2585-46d1-9785-939e249a0128
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
-
 
 # Forms användarhantering | Hantera användardata {#forms-user-management-handling-user-data}
 
@@ -88,7 +87,7 @@ Användarhantering lagrar användardata i följande databastabeller:
  </tbody> 
 </table>
 
-### AEM databas {#aem-repository}
+### AEM {#aem-repository}
 
 Användarhanteringsdata för användare som minst en gång har använt Forms-programmen i `https://[*server*]:[*host*]/lc` lagras också i AEM.
 
@@ -177,7 +176,7 @@ Så här tar du bort användarhanteringsdata för ett huvuds-ID från databastab
 
 1. Starta AEM Forms-servern.
 
-### AEM databas {#aem-repository-1}
+### AEM {#aem-repository-1}
 
 Forms JEE-användare har sina data AEM databasen om de har öppnat minst en av AEM Forms författarinstanser. Du kan komma åt och ta bort användardata från AEM.
 
@@ -193,4 +192,3 @@ Så här tar du bort en användare:
 1. Sök efter en användare och dubbelklicka på användarnamnet för att öppna användaregenskaperna. Kopiera egenskapen `Path`.
 1. Gå till AEM CRX DELite på `https://[*server*]:[*port*]/lc/crx/de/index.jsp` och navigera eller sök i användarsökvägen.
 1. Ta bort sökvägen och klicka på **[!UICONTROL Save All]** för att permanent ta bort användaren från AEM.
-
