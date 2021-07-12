@@ -9,17 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 86349e4d-29ff-4baa-9fcd-c0ab1f0753e9
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 136c0913-c8b8-451d-bb28-3c3285c172a1
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '798'
 ht-degree: 0%
 
 ---
 
-
-# ASRP - Adobe lagringsresursprovider {#asrp-adobe-storage-resource-provider}
+# ASRP - Adobe lagringsresursleverantör {#asrp-adobe-storage-resource-provider}
 
 ## Om ASRP {#about-asrp}
 
@@ -118,7 +117,7 @@ Så här gör du den identiska konfigurationen tillgänglig i publiceringsmiljö
    * Välj **[!UICONTROL Activate]**
 
 
-## Uppgraderar från AEM 6.0 {#upgrading-from-aem}
+## Uppgradera från AEM 6.0 {#upgrading-from-aem}
 
 >[!CAUTION]
 >
@@ -163,4 +162,3 @@ Gå till konsolen för lagringskonfiguration eller kontrollera den AEM databasen
 
    * Innehåller ingen [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc)-nod, vilket betyder att lagringsprovidern är JSRP
    * Om srpc-noden finns och innehåller noden [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration), ska standardkonfigurationens egenskaper definiera ASRP som standardprovider
-
