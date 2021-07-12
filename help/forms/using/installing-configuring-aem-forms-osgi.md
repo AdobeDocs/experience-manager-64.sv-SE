@@ -7,10 +7,9 @@ uuid: ce253b5a-eeb2-47d2-a6c9-e6f59384159a
 contentOwner: khsingh
 topic-tags: installing
 discoiquuid: 1bb8360c-5543-484e-9712-590822211298
-role: Administrator
+role: Admin
 exl-id: 45b0fb99-9f7f-47e6-a4de-4db321867f8f
-translation-type: tm+mt
-source-git-commit: 4598602f75c0cd477e4d898700735c6cd5be175a
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1796'
 ht-degree: 0%
@@ -106,13 +105,13 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
 1. När paketet har installerats uppmanas du att starta om AEM. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i filen  [AEM-Installation-Directory]/crx-quickstart/logs/error.log och loggen är stabil.
 1. Upprepa steg 1-7 för alla författare- och publiceringsinstanser.
 
-## Konfigurationer efter installation {#post-installation-configurations}
+## Konfiguration efter installation {#post-installation-configurations}
 
 AEM Forms har några obligatoriska och valfria konfigurationer. De obligatoriska konfigurationerna är bland annat att konfigurera BouncyCastle-bibliotek och serialiseringsagent. De valfria konfigurationerna är bland annat att konfigurera dispatcher, Forms-portalen, Adobe Sign, Adobe Analytics och Adobe Target.
 
-### Obligatoriska konfigurationer efter installation {#mandatory-post-installation-configurations}
+### Obligatoriska efterinstallationskonfigurationer {#mandatory-post-installation-configurations}
 
-#### Konfigurera RSA- och BouncyCastle-bibliotek {#configure-rsa-and-bouncycastle-libraries}
+#### Konfigurera RSA- och BouncyCastle-bibliotek  {#configure-rsa-and-bouncycastle-libraries}
 
 Utför följande steg på alla författare- och publiceringsinstanser för att starta delegeringen av biblioteken:
 
@@ -146,7 +145,7 @@ Utför följande steg på alla Author- och Publish-instanser för att lägga til
 1. Lägg till **[!UICONTROL sun.util.calendar]**-paketet i fältet **[!UICONTROL allowlist]**. Klicka på **[!UICONTROL Save]**.
 1. Upprepa steg 1-3 för alla författarinstanser och publiceringsinstanser.
 
-### Valfria konfigurationer efter installation {#optional-post-installation-configurations}
+### Ytterligare konfigurationer efter installation {#optional-post-installation-configurations}
 
 #### Konfigurera Dispatcher {#configure-dispatcher}
 
