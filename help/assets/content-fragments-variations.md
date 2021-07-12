@@ -10,10 +10,9 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 1cdb2dfc-623b-44cf-9a7b-98cfabbb1d0c
 exl-id: 15a5fdc9-2878-4f95-83ee-02a2899aeb43
-feature: Content Fragments
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+feature: Innehållsfragment
+role: User
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1734'
 ht-degree: 11%
@@ -74,7 +73,7 @@ Till exempel:
 
    ![cfm-6420-16](assets/cfm-6420-16.png)
 
-### Helskärmsredigeraren {#full-screen-editor}
+### Helskärmsredigerare {#full-screen-editor}
 
 När du redigerar ett textfält med flera rader kan du öppna fullskärmsredigeraren:
 
@@ -141,7 +140,7 @@ Med oformaterad text kan du snabbt lägga in innehåll utan formaterings- eller 
 >
 >Om du väljer **Oformaterad text** kan du förlora formatering, markdown-kod och/eller resurser som du har infogat i **RTF** eller **Markdown-kod**.
 
-### Markdown {#markdown}
+### Markering {#markdown}
 
 >[!NOTE]
 >
@@ -165,7 +164,7 @@ Du kan även öppna fullskärmsredigeraren för ytterligare [åtgärder](#action
 >
 >Om du växlar mellan **RTF** och **Markdown-kod** kan du få oväntade effekter med Blockcitattecken och Kodblock, eftersom dessa båda format kan hanteras på olika sätt.
 
-### Visar nyckelstatistik {#viewing-key-statistics}
+### Visa nyckelstatistik {#viewing-key-statistics}
 
 När helskärmsredigeraren är öppen visar åtgärden **Textstatistik** information om texten. Till exempel:
 
@@ -224,7 +223,7 @@ Att sammanfatta text är utformat för att hjälpa användare att minska längde
 
 1. Välj **[!UICONTROL Summarize]** för att bekräfta ändringarna.
 
-### Kommentera ett innehållsfragment {#annotating-a-content-fragment}
+### Anteckna ett innehållsfragment {#annotating-a-content-fragment}
 
 Så här kommenterar du ett fragment:
 
@@ -337,7 +336,7 @@ Så här byter du namn på en befintlig variant:
 >
 >Detta påverkar bara variationen **Titel**.
 
-### Tar bort en variant {#deleting-a-variation}
+### Ta bort en variant {#deleting-a-variation}
 
 Så här tar du bort en befintlig variant:
 
@@ -361,7 +360,7 @@ När du redigerar en variant har du tillgång till åtgärden för att synkronis
 >
 >Synkronisering är bara tillgängligt för att kopiera ändringar *från **mastern**till varianten*.
 >
->Endast det aktuella elementet i variationen synkroniseras.
+>Endast det aktuella elementet i variationen kommer att synkroniseras.
 >
 >Synkronisering fungerar bara på datatypen **Flerradig text**.
 >
