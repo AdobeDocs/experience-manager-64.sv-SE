@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 33c85af4-4c56-487a-ba60-55211cb9f72c
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 8a756328-0405-49b7-b94d-3dd5a87c782a
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '361'
 ht-degree: 1%
 
 ---
-
 
 # Communities-prenumerationer {#communities-subscriptions}
 
@@ -63,7 +62,7 @@ Knappen **Följ** kommer endast att innehålla alternativet `Email Subscriptions
 
    * Skickar ett e-postmeddelande när det finns aktivitet för det specifika inlägget
 
-## Svara med e-post {#reply-by-email}
+## Svara via e-post {#reply-by-email}
 
 När e-postmeddelandet är [konfigurerat för att svara via e-post](email.md#configure-polling-importer) får den medlem som prenumererade ett e-postmeddelande med det publicerade innehållet och en länk till onlineinnehållet.
 
@@ -74,4 +73,3 @@ Om de svarar på e-postmeddelandet visas det innehåll de anger i svaret som inn
 Hur lång tid det tar för ett svar att bokföras styrs av [avsökningimporterarens uppdateringsintervall](email.md#configure-polling-importer).
 
 ![chlimage_1-7](assets/chlimage_1-7.png)
-
