@@ -6,9 +6,8 @@ user-guide-title: AEM 6.4 Handbok för användarhantering
 breadcrumb-title: Handbok
 user-guide-description: Lär dig hantera ett AEM projekt.
 feature: Distribuerar
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
+role: User
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 17%
@@ -16,7 +15,7 @@ ht-degree: 17%
 ---
 
 
-# AEM 6.4 Hantera användarhandbok {#managing}
+# AEM 6.4 Handbok för användarhantering {#managing}
 
 + [Hantera användarhandbok](home.md)
 + Hantera - checklista för bästa praxis {#managing-best-practices-checklist}
