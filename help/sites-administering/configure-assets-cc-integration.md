@@ -1,16 +1,15 @@
 ---
 title: Konfigurera AEM Assets-integrering med Experience Cloud
 description: Lär dig hur du konfigurerar AEM Assets-integrering med Experience Cloud.
-feature: Asset Management
-role: Business Practitioner, Architect, Administrator
-translation-type: tm+mt
-source-git-commit: bf48918e9a549cb35dcbb32afa82ff1dd686402a
+feature: Resurshantering
+role: User, Architect, Admin
+exl-id: f8629c30-1901-4b6e-b5a6-e46ee3c72fba
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '935'
 ht-degree: 1%
 
 ---
-
 
 # Konfigurera AEM Assets-integrering med Experience Cloud {#configure-aem-assets-integration-with-experience-cloud-and-creative-cloud}
 
@@ -124,7 +123,7 @@ I backend autentiserar AEM din profil med gatewayen och synkroniserar sedan data
    >
    >Endast de användare som du lägger till i Experience Cloud kan dela resurser från AEM Assets till Creative Cloud.
 
-## Växla resurser mellan AEM Assets och Experience Cloud {#exchange-assets-between-aem-and-experience-cloud}
+## Utbyt resurser mellan AEM Assets och Experience Cloud {#exchange-assets-between-aem-and-experience-cloud}
 
 1. Logga in på AEM Assets.
 1. Skapa en mapp i resurskonsolen och överför några resurser till den. Skapa till exempel en mapp **mc-demo** och överför en resurs till den.
@@ -165,5 +164,5 @@ For example, if an asset is uploaded from an AEM Assets (on premises) instance, 
 >[!MORELIKETHIS]
 >
 >* [Bästa praxis för integrering av resurser och Creative Cloud](/help/assets/aem-cc-integration-best-practices.md)
->* [Resurser för att dela metodtips i Creative Cloud](/help/assets/aem-cc-folder-sharing-best-practices.md)
+* [Resurser för att dela metodtips i Creative Cloud](/help/assets/aem-cc-folder-sharing-best-practices.md)
 
