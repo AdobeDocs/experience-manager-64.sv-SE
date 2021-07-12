@@ -1,35 +1,34 @@
 ---
 title: Social inloggning med Facebook och Twitter
 seo-title: Social inloggning med Facebook och Twitter
-description: Med social inloggning kan besökare på webbplatsen logga in med sitt Facebook- eller Twitter-konto.
-seo-description: Med social inloggning kan besökare på webbplatsen logga in med sitt Facebook- eller Twitter-konto.
+description: Med social inloggning kan besökare logga in med sitt Facebook- eller Twitter-konto.
+seo-description: Med social inloggning kan besökare logga in med sitt Facebook- eller Twitter-konto.
 uuid: f70e346e-0d8c-41a0-a100-206a420088dc
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 85dcae2f-0773-4867-a24c-056bd2f5585e
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '2689'
+source-wordcount: '2688'
 ht-degree: 0%
 
 ---
 
-
 # Social inloggning med Facebook och Twitter {#social-login-with-facebook-and-twitter}
 
-Social inloggning är en funktion för att visa en besökare på webbplatsen möjligheten att logga in med sitt Facebook- eller Twitter-konto. Därför bör du inkludera tillåtna Facebook- eller Twitter-data i deras AEM medlemsprofil.
+Social inloggning är en funktion för att ge en besökare möjlighet att logga in med sitt Facebook- eller Twitter-konto. Det innebär att tillåtna Facebook- eller Twitter-data inkluderas i deras AEM medlemsprofil.
 
 ![sociallginweretail](assets/socialloginweretail.png)
 
 ## Översikt över social inloggning {#social-login-overview}
 
-För att inkludera social inloggning krävs *för att skapa anpassade Facebook- och Twitter-program.
+För att inkludera inloggning via sociala medier krävs *för att skapa anpassade Facebook- och Twitter-program.
 
-Vi-exemplet innehåller exempel på Facebook- och Twitter-appar samt molntjänster, men de är inte tillgängliga på en [produktionsplats](../../help/sites-administering/production-ready.md).
+Exemplet med webbförsäljning innehåller exempel på Facebook- och Twitter-appar samt molntjänster, men de är inte tillgängliga på en [produktionsplats](../../help/sites-administering/production-ready.md).
 
 De steg som krävs är:
 
@@ -39,7 +38,7 @@ De steg som krävs är:
 
 1. **Skapa** en social app och molntjänst.
 
-   * Så här stöder du inloggning med Facebook:
+   * Så här hanterar du inloggning med Facebook:
 
       * Skapa en [Facebook-app](#create-a-facebook-app).
       * Skapa och publicera en [Facebook Connect-molntjänst](#create-a-facebook-connect-cloud-service).
@@ -55,40 +54,40 @@ Det finns två grundläggande begrepp:
 
 1. **Scope** (permissions) anger vilka data programmet får begära.
 
-   * Facebook- och Twitter-instanserna [Adobe Granite OAuth Application och Provider](#adobe-granite-oauth-application-and-provider) innehåller som standard de grundläggande programbehörigheterna inom sitt omfång.
+   * Facebook och Twitter [Adobe Granite OAuth Application och Provider](#adobe-granite-oauth-application-and-provider) innehåller som standard grundläggande programbehörigheter i sitt omfång.
 
 1. **Fields** (params) anger de faktiska data som begärts med URL-parametrar.
 
    * Dessa fält anges i [AEM Communities Facebook OAuth Provider](#aem-communities-facebook-oauth-provider) och [AEM Communities Twitter OAuth Provider](#aem-communities-twitter-oauth-provider).
    * Standardfälten räcker för de flesta fall, men kan ändras.
 
-## Facebook-inloggning {#facebook-login}
+## Facebook Login {#facebook-login}
 
 ### Facebook API-version {#facebook-api-version}
 
-Social inloggning och Facebook-exemplet som vi detaljhandeln använder utvecklades när Facebook Graph API var version 1.0.\
-Från och med AEM 6.4 GA och AEM 6.3 SP1 uppdaterades social inloggning för att fungera med den nyare versionen av Facebook Graph API 2.5.
+Samtidig inloggning och Facebook-exemplet för webbförsäljning utvecklades när Facebook Graph API var version 1.0.\
+Från och med AEM 6.4 GA och AEM 6.3 SP1 uppdaterades den sociala inloggningen för att fungera med den nyare Facebook Graph API 2.5-versionen.
 
 >[!NOTE]
 >
 >För äldre AEM versioner, om du står inför ett undantag i loggar **Kan inte extrahera en token från denna**, uppgradera till den senaste bestrukna versionen för den AEM.
 
-Versionsinformation om Facebook Graph API finns i [Facebook API-ändringloggen](https://developers.facebook.com/docs/apps/changelog).
+Versionsinformation om Facebook Graph API finns i [Facebook API-ändringsloggen](https://developers.facebook.com/docs/apps/changelog).
 
 ### Skapa en Facebook-app {#create-a-facebook-app}
 
-Ett korrekt konfigurerat Facebook-program krävs för att aktivera sociala inloggningar på Facebook.
+Ett korrekt konfigurerat Facebook-program krävs för att aktivera Facebook inloggning för sociala medier.
 
-Om du vill skapa Facebook-program följer du Facebooks instruktioner på [https://developers.facebook.com/apps/](https://developers.facebook.com/apps/). Ändringar av instruktionerna återspeglas inte i följande information.
+Följ Facebook instruktioner på [https://developers.facebook.com/apps/](https://developers.facebook.com/apps/) för att skapa Facebook-program. Ändringar av instruktionerna återspeglas inte i följande information.
 
 Från och med Facebook API v2.7:
 
 * *Lägg till en ny Facebook-app:*
    * Välj Webbplats för *Plattform*
       * Ange `  https://<server>:<port>.` för *webbplatsens URL*
-   * I *Visningsnamn* anger du en titel som ska användas som titel för Facebook-anslutningstjänsten.
+   * I *Visningsnamn* anger du en titel som ska användas som titel för Facebook anslutningstjänst.
    * För *Kategori* rekommenderar vi att du väljer *Appar för sidor*, men kan vara vad som helst.
-   * *Lägg till produkt: Facebook-inloggning*
+   * *Lägg till produkt: Facebook Login*
       * För *Giltiga omdirigerings-URI:er för OAuth* anger du `  https://<server>:<port>.`
 
 >[!NOTE]
@@ -99,7 +98,7 @@ När programmet har skapats letar du reda på inställningarna för **[!UICONTRO
 
 ### Skapa en Facebook Connect-Cloud Service {#create-a-facebook-connect-cloud-service}
 
-Instansen [Adobe Granite OAuth Application och Provider](#adobe-granite-oauth-application-and-provider), instansierad genom att skapa en molntjänstkonfiguration, identifierar Facebook-programmet och medlemsgrupperna som de nya användarna läggs till i.
+Instansen [Adobe Granite OAuth Application och Provider](#adobe-granite-oauth-application-and-provider), instansierad genom att skapa en molntjänstkonfiguration, identifierar Facebook-programmet och medlemsgruppen/-grupperna som de nya användarna läggs till i.
 
 1. Logga in med administratörsbehörighet på AEM författarinstans.
 1. Välj **[!UICONTROL Tools > Cloud Services > Facebook Social login configuration]** från global navigering.
@@ -113,16 +112,16 @@ Instansen [Adobe Granite OAuth Application och Provider](#adobe-granite-oauth-ap
    ![config-propertiespng](assets/config-propertiespng.png)
    * Mer information finns i [Configuration Browser-dokumentationen](/help/sites-administering/configurations.md).
 
-1. Skapa/redigera konfigurationen av molntjänsten för Facebook.
+1. Skapa/redigera Facebook molntjänstkonfiguration.
 
    ![fbsocialloginconfigpng](assets/fbsocialloginconfigpng.png)
 
-   * **[!UICONTROL Title]** (*Obligatoriskt*) Ange en visningsrubrik som identifierar Facebook-appen. Du bör använda samma namn som *visningsnamnet* för Facebook-appen.
-   * **[!UICONTROL App ID/API Key]** (*Obligatoriskt*) Ange  ***app-ID*** för Facebook-appen. Detta identifierar instansen [Adobe Granite OAuth Application och Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) som skapats från dialogrutan.
-   * **[!UICONTROL App Secret]** (*Obligatoriskt*) Ange  ***appsekreteraren*** för Facebook-appen.
-   * **[!UICONTROL Create Users]** Om du markerar det här alternativet kommer inloggning med ett Facebook-konto att skapa en AEM användarpost och lägga till dem som en medlem i de valda användargrupperna.  Standard är markerat (rekommenderas starkt).
+   * **[!UICONTROL Title]** (*Obligatoriskt*) Ange en visningsrubrik som identifierar Facebook App. Du bör använda samma namn som *visningsnamnet* för Facebook-programmet.
+   * **[!UICONTROL App ID/API Key]** (*Obligatoriskt*) Ange  ***program-*** ID:t för Facebook App. Detta identifierar instansen [Adobe Granite OAuth Application och Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) som skapats från dialogrutan.
+   * **[!UICONTROL App Secret]** (*Obligatoriskt*) Ange  ***App*** Secret för Facebook App.
+   * **[!UICONTROL Create Users]** Om du markerar det här alternativet skapas en AEM användarpost och läggs till som medlem i de valda användargrupperna när du loggar in med ett Facebook-konto.  Standard är markerat (rekommenderas starkt).
    * **[!UICONTROL Mask User IDs]**: Låt vara avmarkerat.
-   * **[!UICONTROL Scope Email]**: användarens e-post-ID ska hämtas från Facebook.
+   * **[!UICONTROL Scope Email]**: användarens e-postadress ska hämtas från Facebook.
    * **[!UICONTROL Add to User Groups]** Välj Lägg till användargrupp om du vill välja en eller flera  [medlemsgrupper ](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html) för den community där användarna ska läggas till.
 
    >[!NOTE]
@@ -134,7 +133,7 @@ Instansen [Adobe Granite OAuth Application och Provider](#adobe-granite-oauth-ap
 
 
 
-Resultatet är en [Adobe Granite OAuth Application- och Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)-instans som inte behöver ändras ytterligare om inte ytterligare omfång (behörigheter) läggs till. Standardomfånget är standardbehörigheter för Facebook-inloggning. Om ytterligare omfattning önskas måste OSGI-konfigurationen redigeras direkt. Om ändringar görs direkt via system/konsol ska du undvika att redigera molntjänstkonfigurationerna från pekgränssnittet för att undvika att skriva över dem.
+Resultatet är en [Adobe Granite OAuth Application- och Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)-instans som inte behöver ändras ytterligare om inte ytterligare omfång (behörigheter) läggs till. Standardomfattningen är standardbehörigheterna för Facebook-inloggning. Om ytterligare omfattning önskas måste OSGI-konfigurationen redigeras direkt. Om ändringar görs direkt via system/konsol ska du undvika att redigera molntjänstkonfigurationerna från pekgränssnittet för att undvika att skriva över dem.
 
 ### AEM Communities Facebook OAuth Provider {#aem-communities-facebook-oauth-provider}
 
@@ -158,7 +157,7 @@ Om redigering är nödvändig, för varje AEM publiceringsinstans:
 
    * **[!UICONTROL OAuth Provider ID]**
 
-      (*Obligatoriskt*) Standardvärdet är *soco-facebook*. Redigera inte.
+      (*Obligatoriskt*) Standardvärdet är *soco -facebook*. Redigera inte.
 
    * **[!UICONTROL Cloud Service Config]**
 
@@ -178,11 +177,11 @@ Om redigering är nödvändig, för varje AEM publiceringsinstans:
 
    * **[!UICONTROL Enable fields]**
 
-      Om det här alternativet är markerat anges de fält som visas på begäran till Facebook för användarautentisering och användarinformation. Standardvärdet är avmarkerat.
+      Om du markerar det här alternativet anges fälten i listan på begäran till Facebook för användarautentisering och användarinformation. Standardvärdet är avmarkerat.
 
    * **[!UICONTROL Fields]**
 
-      När fält är aktiverade inkluderas följande fält när Facebook Graph API anropas. Fälten måste vara tillåtna inom det omfång som definieras i molntjänstkonfigurationen. Ytterligare fält kan kräva godkännande från Facebook. Se avsnittet Facebooks inloggningsbehörigheter i dokumentationen för Facebook. Standardfälten som läggs till som parametrar är:
+      När fält är aktiverade inkluderas följande fält när du anropar Facebook Graph API. Fälten måste vara tillåtna inom det omfång som definieras i molntjänstkonfigurationen. Ytterligare fält kan behöva godkännas av Facebook. Se avsnittet Facebook inloggningsbehörigheter i Facebook-dokumentationen. Standardfälten som läggs till som parametrar är:
 
       * id
       * name
@@ -209,11 +208,11 @@ Nästa steg är samma för både Facebook och Twitter:
 * [Publicera molntjänstkonfigurationer](#publishcloudservices)
 * [Aktivera för en community-webbplats](#enable-social-login)
 
-## Twitter-inloggning {#twitter-login}
+## Twitter Login {#twitter-login}
 
 ### Skapa en Twitter-app {#create-a-twitter-app}
 
-Det krävs ett konfigurerat Twitter-program för att aktivera social inloggning på Twitter.
+Ett konfigurerat Twitter-program krävs för att aktivera Twitter inloggning för sociala medier.
 
 Följ de senaste instruktionerna för att skapa ett nytt Twitter-program på [https://apps.twitter.com](https://apps.twitter.com/).
 
@@ -234,7 +233,7 @@ I allmänhet:
 
 #### Behörigheter {#permissions}
 
-I Twitter-programhanteringens behörighetsavsnittet:
+I behörighetssektionen i Twitter Application Management:
 
 * **[!UICONTROL Access]**: Välj `Read only`.
 
@@ -243,13 +242,13 @@ I Twitter-programhanteringens behörighetsavsnittet:
 * **[!UICONTROL Additional Permissions]**: Välj  `Request email addresses from users`.
 
    * Om du inte väljer det här alternativet inkluderas inte AEM e-postadress.
-   * Twitters instruktioner innehåller information om ytterligare steg att utföra.
+   * Twitter instruktioner innehåller information om ytterligare åtgärder.
 
 Den enda REST-begäran som har gjorts för social inloggning är *[GET-konto/verifiera inloggningsuppgifter](https://dev.twitter.com/rest/reference/get/account/verify_credentials)*.
 
 ### Skapa en Twitter Connect-Cloud Service {#create-a-twitter-connect-cloud-service}
 
-Instansen [Adobe Granite OAuth Application och Provider](#adobe-granite-oauth-application-and-provider), som initieras genom att en molntjänstkonfiguration skapas, identifierar Twitter-programmet och den eller de medlemsgrupper som de nya användarna läggs till i.
+Instansen [Adobe Granite OAuth Application och Provider](#adobe-granite-oauth-application-and-provider), instansierad genom att skapa en molntjänstkonfiguration, identifierar Twitter-programmet och medlemsgruppen/-grupperna som de nya användarna läggs till i.
 
 1. Logga in med administratörsbehörighet på författarinstansen.
 1. Välj **[!UICONTROL Tools > Cloud Services > Twitter Social login configuration]** från global navigering.
@@ -263,13 +262,13 @@ Instansen [Adobe Granite OAuth Application och Provider](#adobe-granite-oauth-ap
    ![twitterkonfigproppning](assets/twitterconfigproppng.png)
    * Mer information finns i [Configuration Browser-dokumentationen](/help/sites-administering/configurations.md).
 
-1. Skapa/redigera konfiguration av Twitter-molntjänster.
+1. Skapa/redigera Twitter molntjänstkonfiguration.
 
    ![twittersocialloginpng](assets/twittersocialloginpng.png)
 
-   * **[!UICONTROL Title]** (*Obligatoriskt*) Ange en visningsrubrik som identifierar Twitter-appen. Du bör använda samma namn som *visningsnamnet* för Twitter-appen.
+   * **[!UICONTROL Title]** (*Obligatoriskt*) Ange en visningsrubrik som identifierar Twitter App. Du bör använda samma namn som *visningsnamnet* för Twitter-programmet.
 
-   * **[!UICONTROL Consumer Key]** (*Obligatoriskt*) Ange  **konsumentnyckeln (API)** för Twitter-appen. Detta identifierar instansen [Adobe Granite OAuth Application och Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) som skapats från dialogrutan.
+   * **[!UICONTROL Consumer Key]** (*Obligatoriskt*) Ange API- **nyckeln (** Consumer) för Twitter-appen. Detta identifierar instansen [Adobe Granite OAuth Application och Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) som skapats från dialogrutan.
 
    * **[!UICONTROL Consumer Secret]** (*Obligatoriskt*) Ange  ***Consumer(API)*** Secretfor the Twitter App.
 
@@ -284,7 +283,7 @@ Instansen [Adobe Granite OAuth Application och Provider](#adobe-granite-oauth-ap
 
 1. Välj **[!UICONTROL SAVE]** och **[!UICONTROL Publish]**.
 
-Resultatet är en [Adobe Granite OAuth Application- och Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)-instans som inte behöver ändras ytterligare. Standardomfånget är standardbehörigheten för Twitter-inloggning.
+Resultatet är en [Adobe Granite OAuth Application- och Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)-instans som inte behöver ändras ytterligare. Standardomfattningen är standardbehörigheterna för Twitter-inloggning.
 
 ### AEM Communities Twitter OAuth Provider {#aem-communities-twitter-oauth-provider}
 
@@ -304,7 +303,7 @@ Om redigering är nödvändig, för varje AEM publiceringsinstans:
 
    * **[!UICONTROL OAuth Provider ID]** (*Krävs*)
 
-      Standardvärdet är *soco-twitter*. Redigera inte.
+      Standardvärdet är *soco -twitter*. Redigera inte.
 
    * **[!UICONTROL Cloud Service Config]**
 
@@ -359,9 +358,9 @@ Till exempel http://localhost:4503/content/sites/engage/en.html
 * Om du inte redan är inloggad på Facebook eller Twitter loggar du in med rätt autentiseringsuppgifter
 * Du kan behöva bevilja behörighet beroende på vilken dialogruta som visas i Facebook- eller Twitter-appen
 * Observera att verktygsfältet högst upp på sidan uppdateras för att återspegla den lyckade inloggningen
-* Välj **[!UICONTROL Profile]**: På profilsidan visas användarens avatarbild, förnamn och efternamn. Den visar även information från Facebook- eller Twitter-profilen enligt tillåtna fält/parametrar.
+* Välj **[!UICONTROL Profile]**: På profilsidan visas användarens avatarbild, förnamn och efternamn. Den visar även information från Facebook- eller Twitter-profilen enligt de fält/parametrar som tillåts.
 
-## OAuth-konfigurationer för AEM-plattform {#aem-platform-oauth-configurations}
+## OAuth-konfigurationer för AEM {#aem-platform-oauth-configurations}
 
 ### Adobe Granite OAuth-autentiseringshanterare {#adobe-granite-oauth-authentication-handler}
 
@@ -380,11 +379,11 @@ Till exempel http://localhost:4503/system/console/configMgr
 
 >[!CAUTION]
 >
->Förväxla inte autentiseringshanteraren med en Facebook- eller Twitter-instans av *Adobe Granite OAuth-program och provider*.
+>Förväxla inte autentiseringshanteraren med en Facebook- eller Twitter-instans av *Adobe Granite OAuth-programmet och providern*.
 
 ![chlimage_1-490](assets/chlimage_1-490.png)
 
-### Adobe Granite OAuth-program och -provider {#adobe-granite-oauth-application-and-provider}
+### Adobe Granite OAuth-program och -leverantör {#adobe-granite-oauth-application-and-provider}
 
 När en molntjänst för Facebook eller Twitter skapas skapas en instans av `Adobe Granite OAuth Authentication Handler`.
 
@@ -421,7 +420,7 @@ Så här söker du efter den skapade instansen för en Facebook- eller Twitter-a
 
    * **[!UICONTROL Provider ID]**
 
-      (*Obligatoriskt*) Provider-ID för AEM Communities anges när molntjänsten skapades. Redigera inte. För Facebook Connect är värdet *soco-facebook*. För Twitter Connect är värdet *soco-twitter*.
+      (*Obligatoriskt*) Provider-ID för AEM Communities anges när molntjänsten skapades. Redigera inte. För Facebook Connect är värdet *soco -facebook*. För Twitter Connect är värdet *soco -twitter*.
 
    * **[!UICONTROL Groups]**
 
@@ -441,9 +440,9 @@ För varje konfiguration av OAuth-autentiseringshanterare skapas ytterligare tv�
 
 Mer information finns i [Autentisering med den externa inloggningsmodulen Apache Oak](https://jackrabbit.apache.org/oak/docs/security/authentication/externalloginmodule.html).
 
-## Prestanda för OAuth-användargenomgång {#oauth-user-traversal-performance}
+## OAuth User Traversal Performance {#oauth-user-traversal-performance}
 
-För communitysajter där hundratusentals användare registrerar sig med sina Facebook- eller Twitter-inloggningar kan genomgången av den fråga som utfördes när en besökare använder sin inloggning via sociala medier förbättras genom att följande Oak-index läggs till.
+För communitysajter där hundratusentals användare registrerar sig med hjälp av sina inloggningar i Facebook eller Twitter kan genomgången av den fråga som utfördes när en besökare använder sin inloggning i sociala medier förbättras genom att följande Oak-index läggs till.
 
 Om traversal-varningar visas i loggarna bör du lägga till det här indexet.
 
@@ -476,7 +475,7 @@ Inloggad med administratörsbehörighet för en författarinstans:
    * Välj **[!UICONTROL Save All]**.
 
 
-**&amp;ast;** För  **** nameoauthid-*123* ersätter du  *123* med Facebook  ***App ID*** eller Twitter  ***Consumer (API)***   ****   [ ](social-login.md#adobe-granite-oauth-application-and-provider)Keyser, som är värdet för Client¥IDinAdobe Granite OAuth Application och¥Proviconfiguration.
+**&amp;ast;** För  **** nameoauthid-*123* ersätter du  *123* med Facebook  ***App*** IDor Twitter  ***Consumer (API)***   ****   [ ](social-login.md#adobe-granite-oauth-application-and-provider)Keya, som är värdet för¥Client¥IDin the¥Adobe Granite OAuth Application och¥Proviconfiguration.
 
 ![chlimage_1-492](assets/chlimage_1-492.png)
 
