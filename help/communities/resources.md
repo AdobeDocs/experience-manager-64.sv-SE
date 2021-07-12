@@ -9,17 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 1ef15e76-fe7c-4ced-a20d-c0a9385e3ee4
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 67d80ec9-64c9-43a5-8cb1-9da819471797
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '2862'
+source-wordcount: '2861'
 ht-degree: 1%
 
 ---
 
-
-# Aktivera resurskonsolen {#enablement-resources-console}
+# Konsolen Aktivera resurser {#enablement-resources-console}
 
 För AEM Communities är resurskonsolen där [Enablement Managers](users.md) skapar, hanterar och tilldelar resurser till medlemmar på en community-webbplats för aktivering.
 
@@ -56,7 +55,7 @@ En resurs egenskaper:
    * Quiz (SCORM)
 * Kan refereras från en eller flera utbildningsvägar
 
-### Utbildningssökväg {#learning-path}
+### Utbildningsväg {#learning-path}
 
 En inlärningsväg är en logisk uppsättning aktiveringsresurser som grupperats tillsammans för att det ska vara enkelt att tilldela medlemmar.
 
@@ -80,7 +79,7 @@ För att nå Resurskonsolen i redigeringsmiljön
 
 ![chlimage_1-163](assets/chlimage_1-163.png)
 
-### Välj en community-webbplats {#select-a-community-site}
+### Välj en communitywebbplats {#select-a-community-site}
 
 Webbkonsolen Communities Resources visar alla communitysajter.
 
@@ -123,7 +122,7 @@ Detta startar en stegvis process för
 
 När resursen är en del av en kurs, en inlärningsväg, ska medlemmar endast tilldelas inlärningsvägen. Tilldelningar kan läggas till efter att aktiveringsresursen har skapats.
 
-### 1 grundläggande information {#basic-info}
+### 1 Grundläggande information {#basic-info}
 
 ![chlimage_1-169](assets/chlimage_1-169.png)
 
@@ -225,7 +224,7 @@ Välj från Resursbibliotek. Markeringen begränsas till de som visas på commun
 
       Platsen för en fysisk plats, till exempel ett klassrum.
 
-#### Exempel på en tillagd videoresurs {#example-of-an-added-video-resource}
+#### Exempel på en videoresurs som lagts till {#example-of-an-added-video-resource}
 
 ![chlimage_1-172](assets/chlimage_1-172.png)
 
@@ -289,7 +288,7 @@ Använd listrutan för att välja bland  [medlemmar](#members-group)  - använda
 
 Aktiveringsresursen har skapats och återgår till resurskonsolen med den nyligen skapade resursen markerad. Från den här konsolen går det att [hantera resursen](#managing-a-resource).
 
-## Skapa en utbildningssökväg {#create-a-learning-path}
+## Skapa en utbildningsväg {#create-a-learning-path}
 
 ![chlimage_1-176](assets/chlimage_1-176.png)
 
@@ -494,7 +493,7 @@ Den vågräta axeln är kalendertid.
 
 [Adobe Analytics krävs](sites-console.md#analytics).
 
-#### Visningsprogramengagemang {#viewer-engagement}
+#### Engagemang för visningsprogram {#viewer-engagement}
 
 Analytics Viewer Engagement-rapporten visar, för videoresurser, antalet studerande som har tittat på resursen och, om de inte har spelats upp till slutet, vid vilken tidpunkt eleverna slutade spela upp den.
 
@@ -504,7 +503,7 @@ Den vågräta axeln är varaktigheten för den här resursen.
 
 [Marketing Cloud organisation-ID krävs](sites-console.md#enablement).
 
-#### Engagemang efter enhet {#engagement-by-device}
+#### Engagemang per enhet {#engagement-by-device}
 
 Analytics Engagement by Device-rapporten beskriver, för videoresurser, hur många visningar som spelats upp från både dator och mobil.
 
