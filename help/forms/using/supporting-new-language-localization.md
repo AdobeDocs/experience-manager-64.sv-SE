@@ -8,16 +8,15 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: Configuration
 discoiquuid: e78f539a-109c-444c-8e52-be2260c3509f
-feature: Adaptive Forms
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: Adaptiv Forms
+role: Admin
+exl-id: 9f0e7284-ac11-406d-8d8c-7682f1d66fff
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
-
 
 # Stöd för nya språk för lokalisering av adaptiva formulär {#supporting-new-locales-for-adaptive-forms-localization}
 
@@ -61,7 +60,7 @@ Så här lägger du till stöd för en ny språkinställning vid körning av ada
 1. [Lägg till språkstöd för ordlistan](/help/forms/using/supporting-new-language-localization.md#p-add-locale-support-for-the-dictionary-br-p)
 1. [Starta om servern](/help/forms/using/supporting-new-language-localization.md#p-restart-the-server-p)
 
-### Lägg till en språkinställning i tjänsten för guidelokalisering {#add-a-locale-to-the-guide-localization-service-br}
+### Lägga till en språkinställning i tjänsten för guidelokalisering {#add-a-locale-to-the-guide-localization-service-br}
 
 1. Gå till `https://[server]:[port]/system/console/configMgr`.
 1. Klicka om du vill redigera **guidelokaliseringstjänsten**-komponenten.
