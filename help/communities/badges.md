@@ -9,19 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 4194278f-5127-4105-b181-60961c7a1def
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: b6aa9d73-4e20-446a-a1fc-78f8968d6844
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '310'
 ht-degree: 0%
 
 ---
 
-
 # Badges Console {#badges-console}
 
-## Om emblem {#about-badges}
+## Om Badges {#about-badges}
 
 Konsolen Communities Badges innehåller funktioner för att lägga till egna emblem som kan visas för en medlem när den har tjänats in (tilldelats) eller när de har en specifik roll i communityn (tilldelats).
 
