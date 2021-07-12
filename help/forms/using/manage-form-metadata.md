@@ -8,15 +8,14 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager
 discoiquuid: 28549db2-e2f2-4a25-b0b1-785237d9d941
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: d10bc3e9-66a6-4cb2-b484-da338259f1c8
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '1981'
+source-wordcount: '1980'
 ht-degree: 0%
 
 ---
-
 
 # Hantera formulärmetadata {#manage-form-metadata}
 
@@ -204,7 +203,7 @@ Resurser har befintliga egenskapsvärden som kan visas i skrivskyddat läge. Des
    * Den högra panelen innehåller metadataegenskaper i skrivskyddat läge, som är fördelade på olika flikar.
 
 
-## Lägg till/uppdatera värden för metadata i formulär {#add-update-form-metadata-values-nbsp}
+## Lägg till/uppdatera värden för formulärmetadata {#add-update-form-metadata-values-nbsp}
 
 Du kan redigera värdet för befintliga metadataegenskaper eller lägga till nya värden i ett befintligt egenskapsfält för metadata (till exempel när ett metadatafält är tomt).
 
@@ -272,7 +271,7 @@ AEM Forms visar metadatamappningar för de formulärtyper som stöds i det här 
 
    ![Metadata schema editor för adaptiv formulärtyp](assets/metadata-schema-editor-for-adaptive-form-type.png)
 
-   [Klicka för att förstora](assets/metadata-schema-editor-for-adaptive-form-type.png)
+[Klicka för att förstora](assets/metadata-schema-editor-for-adaptive-form-type.png)
 
    1. Den vänstra panelen innehåller flikade avsnitt där fälten är placerade och den högra panelen visar alla tillgängliga gränssnittskomponenter och egenskaperna för fältet som är markerat från den vänstra panelen.
 
