@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 71fac7e9-814a-48b5-b816-9bdcb2a05190
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 905b6dc5-cf17-4f58-a687-27e2910a0729
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
-
 
 # Lagringskonfiguration {#storage-configuration}
 
@@ -60,4 +59,3 @@ Mer information finns i [JCR Store](jsrp.md).
 >[!NOTE]
 >
 >Om noden `srpc`saknas under `/etc/socialconfig` indikerar standardlagret för [JCR](jsrp.md).
-
