@@ -10,15 +10,14 @@ geptopics: SG_AEMFORMS/categories/jee
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 content-strategy: max-2018
 discoiquuid: a8b1f7df-e36f-4d02-883a-72120fea7046
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 72ead30c-648d-43ad-9826-9c8945a8860d
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '1873'
+source-wordcount: '1872'
 ht-degree: 0%
 
 ---
-
 
 # Migrera AEM Forms-resurser och -dokument {#migrate-aem-forms-assets-and-documents}
 
@@ -33,7 +32,7 @@ Migreringsverktyget konverterar [adaptiva Forms-resurser](/help/forms/using/intr
 >
 >Om du har en uppgradering som inte är på plats, för Correspondence Management-resurser, kan du köra migreringen varje gång du importerar resurserna. För migrering av Correspondence Management måste Forms-kompatibilitetspaketet vara installerat.
 
-## Metod för migrering {#approach-to-migration}
+## Migreringsmetod {#approach-to-migration}
 
 Du kan [uppgradera](/help/forms/using/upgrade.md) till den senaste versionen av AEM Forms 6.4 från AEM Forms 6.3 eller 6.2 eller utföra en ny installation. Beroende på om du har uppgraderat din tidigare installation eller utfört en ny installation måste du göra något av följande:
 
@@ -178,4 +177,3 @@ När du har kört migreringsverktyget ska du sköta följande uppgifter:
 
 1. Publicera alla resurser som publicerades i det tidigare systemet före migreringen. Flyttningsverktyget uppdaterar bara resurserna på författarinstansen och uppdaterar resurserna på den eller de publiceringsinstanser du behöver för att publicera resurserna.
 1. I AEM Forms 6.4 ändras vissa rättigheter för användargrupperna. Om du vill att någon av dina användare ska kunna överföra XDP-filer och adaptiva Forms-skript eller använda kodredigeraren måste du lägga till dem i en grupp för användare som har avancerade formulär. På samma sätt kan mallskapare inte längre använda kodredigeraren i regelredigeraren. För att användare ska kunna använda kodredigeraren lägger du till dem i gruppen af-template-script-writers. Instruktioner om hur du lägger till användare i grupper finns i [Hantera användare och användargrupper](/help/communities/users.md).
-
