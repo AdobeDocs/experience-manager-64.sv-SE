@@ -9,17 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: d855aac2-f34d-402f-9dc3-c7ad494b45f2
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: fc7ce4d0-2051-4a67-a0d6-baf615e09ca4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
 
-
-# Medlemmens bidragsgränser {#member-contribution-limits}
+# Gränser för medlemsbidrag {#member-contribution-limits}
 
 ## Översikt {#overview}
 
