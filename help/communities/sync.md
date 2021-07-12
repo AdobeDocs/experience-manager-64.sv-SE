@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 32b56b48-75cb-4cc9-a077-10e335f01a35
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+role: Admin
+exl-id: 3a8e8fef-9aef-4b9d-8b0b-e76aa2962b61
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '2411'
+source-wordcount: '2410'
 ht-degree: 0%
 
 ---
-
 
 # Användarsynkronisering för Communities {#communities-user-synchronization}
 
@@ -47,7 +46,7 @@ Detaljerade stegvisa instruktioner om hur du aktiverar synkronisering i en publi
 
 * [Användarsynkronisering](../../help/sites-administering/sync.md)
 
-## Användarsynkronisering i bakgrunden {#user-sync-in-the-background}
+## Användarsynkronisering i bakgrunden  {#user-sync-in-the-background}
 
 ![sling-dist-workflow](assets/sling-dist-workflow.png)
 
@@ -57,7 +56,7 @@ Detaljerade stegvisa instruktioner om hur du aktiverar synkronisering i en publi
 
 ## Vad händer när ... {#what-happens-when}
 
-### Publicera webbplatsen från webbgruppskonsolen {#publish-site-from-communities-sites-console}
+### Publicera webbplats från webbgruppskonsolen {#publish-site-from-communities-sites-console}
 
 När en communitywebbplats publiceras från [webbgruppskonsolen](sites-console.md) är effekten att [replikera](../../help/sites-deploying/configuring.md#replication-reverse-replication-and-replication-agents) de associerade sidorna och Sling distribuerar de dynamiskt skapade användargrupperna, inklusive deras medlemskap.
 
@@ -130,7 +129,7 @@ AEM författarinstans:
    * Välj **[!UICONTROL Use Multiple queues]**.
    * Ange **[!UICONTROL Exporter Endpoints]** och **[!UICONTROL Importer Endpoints]** (du kan lägga till fler slutpunkter för export och import).
 
-      Dessa slutpunkter definierar var du vill hämta innehållet från och var du vill skicka innehållet. Författaren hämtar innehållet från den angivna exporterarens slutpunkt och skickar innehållet till utgivaren (utom den utgivare som innehållet hämtades från).
+      Dessa slutpunkter definierar varifrån du vill hämta innehållet och var du vill överföra innehållet. Författaren hämtar innehållet från den angivna exporterarens slutpunkt och skickar innehållet till utgivaren (utom den utgivare som innehållet hämtades från).
    ![sync-agent-fact](assets/sync-agent-fact.png)
 
 ### Adobe Granite-distribution - krypterad lösenordsleverantör {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
@@ -161,7 +160,7 @@ AEM författarinstans:
 
    ![granite-password-trans](assets/granite-paswrd-trans.png)
 
-### Apache Sling Distribution Agent - köagentfabrik {#apache-sling-distribution-agent-queue-agents-factory}
+### Apache Sling Distribution Agent - Queue Agents Factory {#apache-sling-distribution-agent-queue-agents-factory}
 
 Den här konfigurationen används för att konfigurera data som du vill synkronisera mellan utgivare. När data skapas/uppdateras i sökvägar som anges i **[!UICONTROL Allowed Roots]** aktiveras &quot;var/community/distribution/diff&quot; och den skapade replikatorn hämtar data från en utgivare och installerar dem på andra utgivare.
 
@@ -209,7 +208,7 @@ I varje AEM publiceringsinstans:
 
    ![diff-obs](assets/diff-obs.png)
 
-### Utlösare för Apache Sling Distribution - Factory för schemalagda utlösare {#apache-sling-distribution-trigger-scheduled-triggers-factory}
+### Apache Sling Distribution Trigger - Factory för schemalagda utlösare {#apache-sling-distribution-trigger-scheduled-triggers-factory}
 
 Med den här konfigurationen kan du konfigurera avsökningsintervallet (efter vilket utgivare pingas och ändringar hämtas av författaren) så att ändringarna synkroniseras mellan utgivare.
 
@@ -231,7 +230,7 @@ AEM författarinstans:
 
    ![schemalagd utlösare](assets/scheduled-trigger.png)
 
-### AEM Communities-lyssnare för användarsynkronisering {#aem-communities-user-sync-listener}
+### AEM Communities Sync Listener {#aem-communities-user-sync-listener}
 
 För problem i Sling-distributionen där det finns en diskrepans i prenumerationer och följande kontrollerar du om följande egenskaper i **[!UICONTROL AEM Communities User Sync Listener]**-konfigurationer är inställda:
 
@@ -285,7 +284,7 @@ I varje AEM publiceringsinstans:
 
    ![user-sync-listner](assets/user-sync-listner.png)
 
-### Unikt ID för försäljning {#unique-sling-id}
+### Unikt försäljnings-ID {#unique-sling-id}
 
 AEM författarinstans använder Sling ID för att identifiera varifrån data kommer och till vilka utgivare de behöver (eller inte behöver) skicka tillbaka paketet till.
 
@@ -403,5 +402,3 @@ Om Sling-distributionen misslyckas provar du följande felsökningssteg:
    1. På utgivaren ändrar du export- eller importslutpunkterna i **[!UICONTROL Apache Sling Distribution Agent - Sync Agents Factory]**.
 
       Vi kan hämta och extrahera paketdata för att kontrollera vilka egenskaper som skickas till andra utgivare och vilka data som går förlorade.
-
-
