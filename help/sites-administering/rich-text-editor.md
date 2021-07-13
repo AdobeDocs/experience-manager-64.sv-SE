@@ -2,14 +2,13 @@
 title: Konfigurera RTF-redigeraren
 description: Lär dig att konfigurera AEM RTF-redigerare.
 contentOwner: AG
-translation-type: tm+mt
-source-git-commit: 7849a3e2d9d8241382652fb1c8e6e302ffd853e0
+exl-id: 2d5e9ada-1567-43dc-ab19-6891e20e1d0b
+source-git-commit: 160f403d2ec9bfbede75fac2c4315314f98ab27e
 workflow-type: tm+mt
 source-wordcount: '2661'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera RTF-redigeraren {#configure-the-rich-text-editor}
 
@@ -36,12 +35,12 @@ Det användargränssnitt som har stöd för pekskärm är standardgränssnittet 
 >[!MORELIKETHIS]
 >
 >* [Gränssnittsrekommendationer](/help/sites-deploying/ui-recommendations.md)
->* Information om hur du ersätter det klassiska användargränssnittet finns i [AEM 6.4 Versionsinformation](/help/release-notes/deprecated-removed-features.md)
->* Skillnaden mellan användargränssnitten finns i [Touchgränssnittet och det klassiska användargränssnittet](https://aemcq5pedia.wordpress.com/2018/01/05/touch-enabled-ui-aem6-3/)
->* Mer information om användargränssnittet som har stöd för pekskärm finns i [Concepts of AEM Touch UI](/help/sites-developing/touch-ui-concepts.md)
+* Information om hur du ersätter det klassiska användargränssnittet finns i [AEM 6.4 Versionsinformation](/help/release-notes/deprecated-removed-features.md)
+* Skillnaden mellan användargränssnitten finns i [Touchgränssnittet och det klassiska användargränssnittet](https://aemcq5pedia.wordpress.com/2018/01/05/touch-enabled-ui-aem6-3/)
+* Mer information om användargränssnittet som har stöd för pekskärm finns i [Concepts of AEM Touch UI](/help/sites-developing/touch-ui-concepts.md)
 
 
-## Olika redigeringslägen för {#editingmodes}
+## Olika redigeringslägen {#editingmodes}
 
 Författare kan skapa och redigera textinnehåll i AEM med de olika komponentlägena. Alternativen i verktygsfältet för att skapa och formatera innehåll och användarupplevelsen i komponenter med RTE-funktioner i olika redigeringslägen varierar beroende på RTE-konfigurationer.
 
@@ -53,8 +52,7 @@ Författare kan skapa och redigera textinnehåll i AEM med de olika komponentlä
 | Dialogruta i helskärmsläge | Samma som helskärmsläge. innehåller fält i dialogrutan vid sidan om textredigeringsprojektet | Alla RTE-funktioner som krävs | J | N |
 
 >[!NOTE]
->
->Funktionen för källredigering är inte tillgänglig i inline-redigeringsläge i det användargränssnitt som har stöd för pekfunktioner. Du kan inte dra bilder i helskärmsläge. Alla andra funktioner fungerar i alla lägen.
+Funktionen för källredigering är inte tillgänglig i inline-redigeringsläge i det användargränssnitt som har stöd för pekfunktioner. Du kan inte dra bilder i helskärmsläge. Alla andra funktioner fungerar i alla lägen.
 
 ### Inline-redigering {#inline-editing}
 
@@ -66,7 +64,7 @@ När innehållet öppnas (med en långsam dubbeltryckning/klick) kan det rediger
 
 I det klassiska användargränssnittet kan du med en långsam dubbelklickning på komponenten redigera textbundet och med en orange kontur markeras innehållet. Om Innehållssökning är öppet visas ett verktygsfält med tillgängliga alternativ för RTF-formatering högst upp i fönstret. Om Innehållssökning inte är öppet visas inte formateringsalternativen och du kan bara göra grundläggande textredigeringar.
 
-### Redigering i helskärmsläge {#full-screen-editing}
+### Helskärmsredigering {#full-screen-editing}
 
 AEM kan öppnas i helskärmsläge som döljer sidinnehållet och tar upp den tillgängliga skärmen. Överväg att redigera i helskärmsläge som en detaljerad version av den infogade redigeringen eftersom den erbjuder de flesta redigeringsalternativen. Du kan öppna den genom att klicka på ![rte_fullscreen](assets/rte_fullscreen.png) i det kompakta verktygsfältet när du använder det infogade redigeringsläget.
 
@@ -109,25 +107,24 @@ I följande tabell visas de aktuella plugin-programmen:
 
 | Plug-in-ID | funktioner | Beskrivning |
 |--- |--- |--- |
-| redigera | cut copy paste-default paste-plaintext paste-wordhtml | [Klipp ut, kopiera och, de tre inklistringslägena](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
+| redigera | cut copy paste-default paste-plaintext paste-wordhtml | [Klipp ut, kopiera och, de tre inklistringslägena](/help/sites-administering/configure-rich-text-editor-plug-ins.md#text-styles). |
 | [findreplace](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FindReplacePlugin) | sök och ersätt | Sök och ersätt. |
-| [format](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FormatPlugin) | fet kursiv understrykning | [Grundläggande textformatering](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
+| [format](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FormatPlugin) | fet kursiv understrykning | [Grundläggande textformatering](/help/sites-administering/configure-rich-text-editor-plug-ins.md#text-styles). |
 | [bild](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ImagePlugin) | bild | Grundläggande bildstöd (dra från innehåll eller Innehållssökning). Beroende på webbläsaren har stödet olika beteenden för författare |
-| [tangenter](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.KeyPlugin) |  | Mer information om hur du definierar det här värdet finns i [tabbstorlek](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tabsize). |
-| [justera](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.JustifyPlugin) | justera vänster justera mitten justera höger | Styckejustering. |
-| [länkar](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.LinkPlugin) | ändra länkavlänkningsankarpunkt | [Hyperlänkar och ankare](/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles). |
-| [listor](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ListPlugin) | sorterat indrag utan ordning | Denna plugin kontrollerar både [indrag och listor](/help/sites-administering/configure-rich-text-editor-plug-ins.md#indentmargin); inklusive kapslade listor. |
-| [felverktyg](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.MiscToolsPlugin) | specialteckenkälla redigera | Med andra verktyg kan författare ange [specialtecken](/help/sites-administering/configure-rich-text-editor-plug-ins.md#spchar) eller redigera HTML-källan. Du kan också lägga till ett helt [intervall med specialtecken](/help/sites-administering/configure-rich-text-editor-plug-ins.md#definerangechar) om du vill definiera en egen lista. |
-| Paraformat | paraformat | Standardstyckeformaten är Stycke, Rubrik 1, Rubrik 2 och Rubrik 3 (`<p>`, `<h1>`, `<h2>` och `<h3>`). Du kan [lägga till fler styckeformat](/help/sites-administering/configure-rich-text-editor-plug-ins.md#paraformats) eller utöka listan. |
-| stavningskontroll | checkText | [Språkmedveten stavningskontroll](/help/sites-administering/configure-rich-text-editor-plug-ins.md#adddict). |
-| stilar | stilar | Stöd för formatering med en CSS-klass. [Lägg till ett nytt ](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles) textformat om du vill lägga till (eller utöka) egna format för användning med text. |
+| [tangenter](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.KeyPlugin) |  | Mer information om hur du definierar det här värdet finns i [tabbstorlek](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tab-size). |
+| [justera](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.JustifyPlugin) | justera vänsterjustera centrera högerjustera | Styckejustering. |
+| [länkar](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.LinkPlugin) | ändra länkavlänkningsankarpunkt | [Hyperlänkar och ankare](/help/sites-administering/configure-rich-text-editor-plug-ins.md#link-styles). |
+| [listor](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ListPlugin) | sorterat indrag utan ordning | Denna plugin kontrollerar både [indrag och listor](/help/sites-administering/configure-rich-text-editor-plug-ins.md#indent-margin); inklusive kapslade listor. |
+| [felverktyg](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.MiscToolsPlugin) | specialteckenkälla redigera | Med andra verktyg kan författare ange [specialtecken](/help/sites-administering/configure-rich-text-editor-plug-ins.md#special-char) eller redigera HTML-källan. Du kan också lägga till ett helt [intervall med specialtecken](/help/sites-administering/configure-rich-text-editor-plug-ins.md#define-range-char) om du vill definiera en egen lista. |
+| Paraformat | paraformat | Standardstyckeformaten är Stycke, Rubrik 1, Rubrik 2 och Rubrik 3 (`<p>`, `<h1>`, `<h2>` och `<h3>`). Du kan [lägga till fler styckeformat](/help/sites-administering/configure-rich-text-editor-plug-ins.md#para-formats) eller utöka listan. |
+| stavningskontroll | checkText | [Språkmedveten stavningskontroll](/help/sites-administering/configure-rich-text-editor-plug-ins.md#add-dict). |
+| stilar | stilar | Stöd för formatering med en CSS-klass. [Lägg till ett nytt ](/help/sites-administering/configure-rich-text-editor-plug-ins.md#text-styles) textformat om du vill lägga till (eller utöka) egna format för användning med text. |
 | nedsänkt | nedsänkt upphöjd text | Tillägg till de grundläggande formaten, med både sub- och super-script. |
-| tabell | tabell borttagbar infogning ta bort infogkolumn borttagbar kolumn cellprops mergeceller splitcell markervalkolumner | Se [konfigurera tabellformat](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles) om du vill lägga till egna format för hela tabeller eller enskilda celler. |
-| ångra | ångra gör om | Historikstorlek för [ångra och gör om](/help/sites-administering/configure-rich-text-editor-plug-ins.md#undohistory)-åtgärder. |
+| tabell | tabell borttagbar infogning ta bort infogkolumn borttagbar kolumn cellprops mergeceller splitcell markervalkolumner | Se [konfigurera tabellformat](/help/sites-administering/configure-rich-text-editor-plug-ins.md#table-styles) om du vill lägga till egna format för hela tabeller eller enskilda celler. |
+| ångra | ångra gör om | Historikstorlek för [ångra och gör om](/help/sites-administering/configure-rich-text-editor-plug-ins.md#undo-history)-åtgärder. |
 
 >[!NOTE]
->
->Plugin-programmet för helskärm stöds inte i dialogruteläge. Använd inställningen `dialogFullScreen` för att konfigurera verktygsfältet för helskärmsläge.
+Plugin-programmet för helskärm stöds inte i dialogruteläge. Använd inställningen `dialogFullScreen` för att konfigurera verktygsfältet för helskärmsläge.
 
 ## Förstå konfigurationssökvägar och -platser {#understand-the-configuration-paths-and-locations}
 
@@ -141,15 +138,11 @@ I följande tabell visas de aktuella plugin-programmen:
 | Dialogrutan Helskärm | `cq:dialog` | Ej relevant |
 
 >[!NOTE]
->
->Ge inte noden namnet `cq:inplaceEditing` som `config`. Definiera följande egenskaper på `cq:inplaceEditing`-noden:
->
->* **Namn**:  `configPath`
->* **Typ**:  `String`
->* **Värde**: sökväg till noden som innehåller den faktiska konfigurationen
+Ge inte noden namnet `cq:inplaceEditing` som `config`. Definiera följande egenskaper på `cq:inplaceEditing`-noden:
+* **Namn**:  `configPath`
+* **Typ**:  `String`
+* **Värde**: sökväg till noden som innehåller den faktiska konfigurationen
 
->
->
 Ge inte RTE-konfigurationsnoden namnet `config`. Annars gäller RTE-konfigurationerna bara för administratörerna och inte för användarna i gruppen `content-author`.
 
 Konfigurera följande egenskaper som gäller i redigeringsläget för dialogrutor endast i Touch-gränssnittet:
@@ -186,21 +179,16 @@ Hämta den här exempelkonfigurationen för att förstå hur du konfigurerar RTE
 [Hämta fil](/help/assets/assets/rte-sample-all-features-enabled-10.zip)
 
 >[!NOTE]
->
->Med textkomponenten [Core Components](https://helpx.adobe.com/experience-manager/core-components/using/text.html) kan mallredigerare konfigurera många RTE-plugin-program i användargränssnittet som innehållsprinciper, vilket eliminerar behovet av teknisk konfiguration. Innehållsprinciper kan fungera med RTE-användargränssnittskonfigurationer enligt beskrivningen. Mer information finns i [RTE-inställningarna för användargränssnitt och innehållsprinciper](/help/sites-administering/rich-text-editor.md#rtecontentpolicies), [Skapa sidmallar](/help/sites-authoring/templates.md) och [dokumentationen till utvecklaren av kärnkomponenter](https://helpx.adobe.com/experience-manager/core-components/using/developing.html).
+Med textkomponenten [Core Components](https://helpx.adobe.com/experience-manager/core-components/using/text.html) kan mallredigerare konfigurera många RTE-plugin-program i användargränssnittet som innehållsprinciper, vilket eliminerar behovet av teknisk konfiguration. Innehållsprinciper kan fungera med RTE-användargränssnittskonfigurationer enligt beskrivningen. Mer information finns i [RTE-inställningarna för användargränssnitt och innehållsprinciper](/help/sites-administering/rich-text-editor.md#rtecontentpolicies), [Skapa sidmallar](/help/sites-authoring/templates.md) och [dokumentationen till utvecklaren av kärnkomponenter](https://helpx.adobe.com/experience-manager/core-components/using/developing.html).
 
 >[!NOTE]
->
->I referenssyfte finns textstandardkomponenterna (levereras som en del av en standardinstallation) på:
->
->* `/libs/wcm/foundation/components/text`
->* `/libs/foundation/components/text`
+I referenssyfte finns textstandardkomponenterna (levereras som en del av en standardinstallation) på:
+* `/libs/wcm/foundation/components/text`
+* `/libs/foundation/components/text`
 
->
->
 Om du vill skapa en egen textkomponent kopierar du ovanstående komponent i stället för att redigera de här komponenterna.
 
-## Konfigurera RTE-verktygsfältet {#dialogfullscreen}
+## Verktygsfältet Konfigurera RTE {#dialogfullscreen}
 
 I AEM kan du konfigurera gränssnittet för RichText Editor på olika sätt för de olika redigeringslägena. Standardinställningarna anges nedan. Du kan åsidosätta dessa standardinställningar baserat på dina behov.
 
@@ -252,7 +240,7 @@ Olika gränssnittsinställningar används för textbundet läge och helskärmsl�
 
 Popup-noden under infogat läge eller helskärmsläge innehåller en lista över de poseringar som används. Varje underordnad nod under noden `popovers` namnges efter plugin-programmet (till exempel `format`). Den har en egenskap `items` som innehåller en lista över funktioner i plugin-programmet (till exempel `format#bold`).
 
-## RTE-inställningar för användargränssnitt och innehållsprinciper {#rtecontentpolicies}
+## RTE-inställningar (User Interface Settings) och innehållsprinciper {#rtecontentpolicies}
 
 Administratörer kan styra textredigeringsalternativen med hjälp av innehållsprinciper, till exempel i stället för att göra konfigurationen enligt beskrivningen ovan. Innehållsprofiler definierar designegenskaperna för en komponent när de används som en del av en [redigerbar mall](../sites-authoring/templates.md). Om en textkomponent som använder textredigeraren till exempel används med en redigerbar mall kan innehållsprincipen definiera att det feta alternativet är tillgängligt och att några styckeformateringsalternativ är tillgängliga. Innehållsprofilerna kan återanvändas och kan tillämpas på flera mallar.
 
@@ -264,7 +252,7 @@ AEM 6.4 Service Pack 3 och senare flödar de tillgängliga alternativen i RTE ne
 
 Du kan till exempel se [dokumentationen för textkärnkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor).
 
-## Anpassa mappning mellan verktygsfältsikoner och kommandon {#iconstoolbar}
+## Anpassa mappningen mellan verktygsfältsikoner och kommandon {#iconstoolbar}
 
 Du kan anpassa mappningen mellan koralikonerna som visas i verktygsfältet för textredigering och de tillgängliga kommandona. Du kan inte använda några andra ikoner förutom kornikoner.
 
@@ -300,8 +288,7 @@ Nedan finns ett exempelfragment som mappar kommandot Fet till koralikonen `textI
 På en sida kan du antingen inkludera CoralUI 2 RTE clientlib eller CoralUI 3 RTE clientlib. Som standard innehåller textredigeraren klienten CoralUI 3 RTE. Så här byter du till CoralUI 2 RTE:
 
 >[!NOTE]
->
->Adobe rekommenderar inte att bytet är en bra metod. Växla till CoralUI 2 RTE som sista utväg. Anpassade plugin-program för CoralUI 2 RTE fungerar med CoralUI 3 RTE om plugin-programmen inte är beroende av interna RTE-komponenter, till exempel klasser. Om du använder anpassade plugin-program för CoralUI 3 RTE använder du biblioteket `rte.coralui3`.
+Adobe rekommenderar inte att bytet är en bra metod. Växla till CoralUI 2 RTE som sista utväg. Anpassade plugin-program för CoralUI 2 RTE fungerar med CoralUI 3 RTE om plugin-programmen inte är beroende av interna RTE-komponenter, till exempel klasser. Om du använder anpassade plugin-program för CoralUI 3 RTE använder du biblioteket `rte.coralui3`.
 
 1. Täck över noden `/libs/cq/gui/components/authoring/editors/clientlibs/core` under `/apps` och gör följande:
 
@@ -318,8 +305,7 @@ På en sida kan du antingen inkludera CoralUI 2 RTE clientlib eller CoralUI 3 RT
 1. Lägg över noden `cq/ui/widgets` under `/apps`. Ersätt beroendet `cq.rte` vid noden `/apps/cq/ui/widgets` med `cq.coralui2.rte`.
 
 >[!NOTE]
->
->CoralUI 2 RTE använder handspelsmallar för plugin-dialogrutor. Därför var CoralUI 2 RTE-klienten beroende av handlisten clientlib. CoralUI 3 RTE använder inte handspelsmallar och har inget associerat beroende. Om dina anpassade plugin-program använder mallar för verktygsfält, ska du ta med clientlib för verktygsfält på webbsidan.
+CoralUI 2 RTE använder handspelsmallar för plugin-dialogrutor. Därför var CoralUI 2 RTE-klienten beroende av handlisten clientlib. CoralUI 3 RTE använder inte handspelsmallar och har inget associerat beroende. Om dina anpassade plugin-program använder mallar för verktygsfält, ska du ta med clientlib för verktygsfält på webbsidan.
 
 ## Ytterligare information {#further-information}
 
@@ -350,10 +336,9 @@ AEM har följande begränsningar:
 * RTE stöder inte infogad bildruta eller iframe för att bädda in innehåll.
 
 >[!MORELIKETHIS]
->
->* [Konfigurera RTE-plugin-program](configure-rich-text-editor-plug-ins.md)
->* [Använd RTF-redigerare för att skapa](../sites-authoring/rich-text-editor.md)
->* [Konfigurera RTE för hjälpmedelsanpassade webbplatser](rte-accessible-content.md)
->* [Funktionsparitet för Touch UI och Classic UI](../release-notes/touch-ui-features-status.md)
->* [Självstudiekurs för att skapa en sammansatt flerfältskomponent](https://experience-aem.blogspot.com/2019/05/aem-65-touchui-composite-multifield-with-coral3-rte-rich-text.html)
+* [Konfigurera RTE-plugin-program](configure-rich-text-editor-plug-ins.md)
+* [Använd RTF-redigerare för att skapa](../sites-authoring/rich-text-editor.md)
+* [Konfigurera RTE för hjälpmedelsanpassade webbplatser](rte-accessible-content.md)
+* [Funktionsparitet för Touch UI och Classic UI](../release-notes/touch-ui-features-status.md)
+* [Självstudiekurs för att skapa en sammansatt flerfältskomponent](https://experience-aem.blogspot.com/2019/05/aem-65-touchui-composite-multifield-with-coral3-rte-rich-text.html)
 
