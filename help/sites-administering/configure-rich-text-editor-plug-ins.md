@@ -1,11 +1,11 @@
 ---
 title: Konfigurera plugin-programmen för RTF-redigeraren
-description: Lär dig att konfigurera plugin-program för AEM RTF-redigering för att aktivera enskilda funktioner.
+description: Lär dig konfigurera plugin-programmen för Adobe Experience Manager Rich Text Editor så att enskilda funktioner aktiveras.
 contentOwner: AG
-translation-type: tm+mt
-source-git-commit: 2236d029dc463930e6bbdc1e1aed89e761f0cd89
+exl-id: c9ab462d-b7d4-42c1-a4cf-80d16722910b
+source-git-commit: ec5154eb517740f5888dc44ad0e932d9ee469be6
 workflow-type: tm+mt
-source-wordcount: '4191'
+source-wordcount: '4201'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ Mer information om de andra RTE-konfigurationerna finns i [Konfigurera RTF-redig
 
 >[!NOTE]
 >
->När du arbetar med CRXDE Lite bör du spara ändringarna regelbundet med Spara alla.
+>När du arbetar med CRXDE Lite bör du spara ändringarna regelbundet med alternativet [!UICONTROL Save All].
 
-## Aktivera ett plugin-program och konfigurera egenskapen {#activateplugin} för funktioner
+## Aktivera ett plugin-program och konfigurera egenskapen features {#activateplugin}
 
 Följ de här stegen för att aktivera ett plugin-program. Vissa steg behövs bara när du konfigurerar ett plugin-program för första gången, eftersom motsvarande noder inte finns.
 
@@ -29,7 +29,7 @@ Som standard är plugin-programmen `format`, `link`, `list`, `justify` och `cont
 
 >[!NOTE]
 >
->Noden rtePlugins kallas &lt;*rtePlugins-node*> för att undvika duplicering i den här artikeln.
+>Motsvarande `rtePlugins`-nod kallas `<rtePlugins-node>` för att undvika dubbletter i den här artikeln.
 
 1. Leta reda på textkomponenten för ditt projekt med CRXDE Lite.
 1. Skapa den överordnade noden `<rtePlugins-node>` om den inte finns, innan du konfigurerar några RTE-plugin-program:
@@ -52,7 +52,7 @@ Som standard är plugin-programmen `format`, `link`, `list`, `justify` och `cont
    * **Namn** `rtePlugins`
    * **Typ** `nt:unstructured`
 
-1. Skapa en nod för varje plugin-program som du vill aktivera:
+1. Under detta skapar du en nod för varje plugin-program som du vill aktivera:
 
    * **Typ** `nt:unstructured`
    * **Ange** namnet på plug-in-programmets ID
@@ -96,17 +96,17 @@ När du använder funktionen Ersätt bör du ange den ersättningssträng som sk
 
 Dialogrutan Sök och ersätt blir genomskinlig när du klickar på Sök och blir ogenomskinlig när du klickar på Ersätt. Detta gör att författaren kan granska texten som författaren ska ersätta. Om användare klickar på Ersätt alla stängs dialogrutan och visar antalet ersättningar som gjorts.
 
-## Konfigurera inklistringslägena {#pastemodes}
+## Konfigurera inklistringslägen {#pastemodes}
 
 När du använder RTE kan författare klistra in innehåll i något av följande tre lägen:
 
 * **Webbläsarläge**: Klistra in text med webbläsarens standardimplementering för inklistring. Det är inte en rekommenderad metod eftersom den kan medföra oönskad markering.
 
-* **Läge** för oformaterad text: Klistra in urklippsinnehållet som oformaterad text. Alla formatelement från det kopierade innehållet tas bort innan de infogas i AEM.
+* **Läge** för oformaterad text: Klistra in urklippsinnehållet som oformaterad text. Alla formatelement och formateringselement i det kopierade innehållet tas bort innan de infogas i [!DNL Experience Manager]-komponenten.
 
 * **MS Word-läge**: Klistra in texten, inklusive tabeller, med formatering när du kopierar från MS Word. Det går inte att kopiera och klistra in text från en annan källa, t.ex. en webbsida eller MS Excel, utan endast partiell formatering.
 
-### Konfigurera de alternativ för Klistra in som finns i verktygsfältet RTE {#configure-paste-options-available-on-the-rte-toolbar}
+### Konfigurera de inklistringsalternativ som finns i verktygsfältet för textredigering  {#configure-paste-options-available-on-the-rte-toolbar}
 
 Du kan ange några, alla eller inga av dessa tre ikoner till författarna i verktygsfältet för textredigering:
 
@@ -118,10 +118,7 @@ Du kan ange några, alla eller inga av dessa tre ikoner till författarna i verk
 
 Följ de här stegen för att konfigurera RTE så att nödvändiga ikoner visas.
 
-1. Navigera till komponenten; till exempel:
-
-   `/apps/<myProject>/components/text`
-
+1. Navigera till komponenten, till exempel `/apps/<myProject>/components/text`.
 1. Navigera till noden `rtePlugins/edit`. Se [aktivera ett plugin-program](#activateplugin) om noden inte finns.
 1. Skapa egenskapen `features` på noden `edit` och lägg till en eller flera funktioner. Spara alla ändringar.
 
@@ -179,55 +176,21 @@ Så här konfigurerar du vilka format som tillåts när du klistrar in text i AE
    Alla egenskaper är av **typ** `Boolean`, så i lämpligt **värde** kan du antingen markera eller ta bort markeringen för att aktivera eller inaktivera funktionen.
 
    >[!NOTE]
-   Om det inte uttryckligen definieras används standardvärdet true och formatet accepteras.
+   >
+   >Om det inte uttryckligen definieras används standardvärdet true och formatet accepteras.
 
-1. Andra format kan också definieras med hjälp av ett intervall av andra egenskaper eller noder, som även kan användas på noden `htmlPasteRules`:
+1. Andra format kan också definieras med hjälp av ett intervall av andra egenskaper eller noder, som även kan användas på noden `htmlPasteRules`. Spara alla ändringar.
 
-<table> 
- <tbody> 
-  <tr> 
-   <td><strong>Egenskap</strong></td> 
-   <td><strong>Typ</strong></td> 
-   <td><strong>Beskrivning</strong></td> 
-  </tr> 
-  <tr> 
-   <td>allowBlockTags</td> 
-   <td>Sträng[]</td> 
-   <td><p>Definierar listan med blocktaggar som tillåts.</p> <p>Möjliga blocktaggar är bland annat:</p> 
-    <ul> 
-     <li>rubriker (h1, h2, h3)</li> 
-     <li>stycken (p)</li> 
-     <li>listor (ol, ul)</li> 
-     <li>tabeller (tabell)</li> 
-    </ul> </td> 
-  </tr> 
-  <tr> 
-   <td>fallbackBlockTag</td> 
-   <td>Sträng</td> 
-   <td><p>Definierar den blocktagg som används för block med en blocktagg som inte ingår i allowBlockTags.</p> <p> i de flesta fall är det tillräckligt.</p> </td> 
-  </tr> 
-  <tr> 
-   <td>tabell</td> 
-   <td>nt:ostrukturerad</td> 
-   <td><p>Definierar beteendet när tabeller klistras in.<br /> </p> <p>Den här noden måste ha egenskapen <code>allow</code> (typ <code>Boolean</code>) för att definiera om det är tillåtet att klistra in tabeller.</p> <p>Om <code>allow</code> är <code>false</code> måste du ange egenskapen <code>ignoreMode</code> (typ<code> String</code>) för att definiera hur inklistrat tabellinnehåll hanteras. Giltiga värden för <code>ignoreMode</code> är:</p> 
-    <ul> 
-     <li><code>remove</code>: Tar bort tabellinnehåll.</li> 
-     <li><code>paragraph</code>: Ändrar tabellceller till stycken.</li> 
-    </ul> </td> 
-  </tr> 
-  <tr> 
-   <td>list</td> 
-   <td>nt:ostrukturerad</td> 
-   <td><p>Definierar beteendet när listor klistras in.<br /> </p> <p>Måste ha egenskapen <code>allow</code> (typ <code>Boolean</code>) för att definiera om inklistring av listor är tillåten.</p> <p>Om <code>allow</code> är <code>false</code> måste du ange egenskapen <code>ignoreMode</code> (typ <code>String</code>) för att definiera hur allt listinnehåll som klistras in ska hanteras. Giltiga värden för <code>ignoreMode</code> är:</p> 
-    <ul> 
-     <li><code>remove</code>: Tar bort listinnehåll.</li> 
-     <li><code>paragraph</code>: Omvandlar listobjekt till stycken.</li> 
-    </ul> </td> 
-  </tr> 
- </tbody> 
-</table>
+Du kan använda följande egenskaper för `htmlPasteRules`.
 
-Exempel på en giltig `htmlPasteRules`-struktur:
+| Egenskap | Typ | Beskrivning |
+|---|---|---|
+| `allowBlockTags` | Sträng | Definierar listan med blocktaggar som tillåts. Några möjliga blocktaggar är: <ul> <li>rubriker (h1, h2, h3)</li> <li>stycken (p)</li> <li>listor (ol, ul)</li> <li>tabeller (tabell)</li> </ul> |
+| `fallbackBlockTag` | Sträng | Definierar den blocktagg som används för alla block med en blocktagg som inte ingår i `allowBlockTags`. `p` i de flesta fall. |
+| tabell | nt:ostrukturerad | Definierar beteendet när tabeller klistras in. Den här noden måste ha egenskapen `allow` (typ Boolean) för att definiera om det är tillåtet att klistra in tabeller. Om allow är `false` måste du ange egenskapen `ignoreMode` (type String) för att definiera hur inklistrat tabellinnehåll hanteras. Giltiga värden för `ignoreMode` är: <ul> <li>`remove`: Tar bort tabellinnehåll.</li> <li>`paragraph`: Ändrar tabellceller till stycken.</li> </ul> |
+| list | nt:ostrukturerad | Definierar beteendet när listor klistras in. Måste ha egenskapen `allow` (typ Boolean) för att definiera om inklistring av listor är tillåten. Om `allow` är `false` måste du ange egenskapen `ignoreMode` (type String) för att definiera hur allt listinnehåll som klistras in ska hanteras. Giltiga värden för `ignoreMode` är: <ul><li> `remove`: Tar bort listinnehåll.</li> <li>`paragraph`: Omvandlar listobjekt till stycken.</li> </ul> |
+
+Ett exempel på en giltig `htmlPasteRules`-struktur visas nedan.
 
 ```xml
 "htmlPasteRules": {
@@ -249,13 +212,9 @@ Exempel på en giltig `htmlPasteRules`-struktur:
 }
 ```
 
-1. Spara alla ändringar.
-
 ## Konfigurera textformat {#textstyles}
 
-Författare kan använda format för att ändra utseendet på en del av texten. Formaten baseras på CSS-klasser som du fördefinierar i din CSS-formatmall. Stiliserat innehåll omges av `span`-taggar som använder attributet `class` för att referera till CSS-klassen. Till exempel:
-
-`<span class=monospaced>Monospaced Text Here</span>`
+Författare kan använda format för att ändra utseendet på en del av texten. Formaten baseras på CSS-klasser som du fördefinierar i din CSS-formatmall. Stiliserat innehåll omges av `span`-taggar som använder attributet `class` för att referera till CSS-klassen. Till exempel, `<span class=monospaced>Monospaced Text Here</span>`.
 
 När plugin-programmet Styles är aktiverat för första gången finns det inga standardformat. Popup-listan är tom. Så här förser du författarna med formatmallar:
 
@@ -263,12 +222,13 @@ När plugin-programmet Styles är aktiverat för första gången finns det inga 
 * Ange platsen/platserna för formatmallarna.
 * Ange de enskilda format som du kan välja i listrutan Format.
 
-Om du vill lägga till fler format vid senare (re-)konfigurationer, t.ex. följer du bara instruktionerna för att referera till en ny formatmall och ange de ytterligare formaten.
+Om du vill lägga till fler format vid ett senare tillfälle följer du bara instruktionerna för att referera till en ny formatmall och ange de ytterligare formaten.
 
 >[!NOTE]
-Format kan också definieras för [tabeller eller tabellceller](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles). Dessa konfigurationer kräver separata procedurer.
+>
+>Du kan definiera format för [tabeller eller tabellceller](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles). Dessa konfigurationer kräver separata procedurer.
 
-### Aktivera listrutan Format {#styleselectorlist}
+### Aktivera listrutan Format för väljare {#styleselectorlist}
 
 Detta görs genom att plugin-programmet för format aktiveras.
 
@@ -282,7 +242,8 @@ Detta görs genom att plugin-programmet för format aktiveras.
 1. Spara alla ändringar.
 
 >[!NOTE]
-När plugin-programmet Format är aktiverat visas listrutan Format i redigeringsdialogrutan. Listan är dock tom eftersom inga format har konfigurerats.
+>
+>När plugin-programmet Format är aktiverat visas listrutan Format i redigeringsdialogrutan. Listan är dock tom eftersom inga format har konfigurerats.
 
 ### Ange formatmallens plats {#locationofstylesheet}
 
@@ -296,17 +257,22 @@ Ange sedan platsen/platserna för de formatmallar som du vill referera till:
    * **Värden**  Sökvägen och filnamnet för alla formatmallar som du vill ta med. Använd databassökvägar.
 
    >[!NOTE]
-   Du kan när som helst lägga till referenser till ytterligare formatmallar.
+   >
+   >Du kan när som helst lägga till referenser till ytterligare formatmallar.
 
 1. Spara alla ändringar.
 
 >[!NOTE]
-När du använder textredigering i en dialogruta (Classic UI) kanske du vill ange formatmallar som är optimerade för textredigering. På grund av tekniska begränsningar förloras CSS-kontexten i redigeraren, så du kanske vill emulera den här kontexten för att förbättra WYSIWYG-upplevelsen.
-I Rich Text Editor används ett behållar-DOM-element med ID `CQrte` som kan användas för att tillhandahålla olika format för visning och redigering:
-`#CQ td {`
-` // defines the style for viewing }`
-`#CQrte td {`
-` // defines the style for editing }`
+>
+>När du använder textredigering i en dialogruta (Classic UI) kanske du vill ange formatmallar som är optimerade för textredigering. På grund av tekniska begränsningar förloras CSS-kontexten i redigeraren, så du kanske vill emulera den här kontexten för att förbättra WYSIWYG-upplevelsen.
+>
+>I Rich Text Editor används ett behållar-DOM-element med ID `CQrte` som kan användas för att tillhandahålla olika format för visning och redigering:
+>
+>`#CQ td {`
+>` // defines the style for viewing }`
+>
+>`#CQrte td {`
+>` // defines the style for editing }`
 
 ### Ange tillgängliga format i popup-listan {#stylesindropdown}
 
@@ -337,15 +303,17 @@ I Rich Text Editor används ett behållar-DOM-element med ID `CQrte` som kan anv
 
    Upprepa stegen ovan för alla obligatoriska format.
 
-## Konfigurera styckeformaten {#paraformats}
+## Konfigurera styckeformat {#paraformats}
 
 All text som har skapats i RTE placeras i en blocktagg och standardvärdet är `<p>`. Genom att aktivera plugin-programmet `paraformat` anger du ytterligare blocktaggar som kan tilldelas stycken med hjälp av en nedrullningsbar markeringslista. Styckeformat bestämmer stycketypen genom att tilldela rätt blocktagg. Författaren kan markera och tilldela dem med formatväljaren. Exempelblocktaggarna innehåller bland annat standardstycket &lt;p> och rubrikerna &lt;h1>, &lt;h2> och så vidare.
 
 >[!CAUTION]
-Det här plugin-programmet passar inte för innehåll med komplex struktur, till exempel listor eller tabeller.
+>
+>Det här plugin-programmet passar inte för innehåll med komplex struktur, till exempel listor eller tabeller.
 
 >[!NOTE]
-Om en blocktagg, till exempel en &lt;hr>-tagg, inte kan tilldelas till ett stycke, är det inte ett giltigt användningsfall för ett plugin-program för paraformat.
+>
+>Om en blocktagg, till exempel en &lt;hr>-tagg, inte kan tilldelas till ett stycke, är det inte ett giltigt användningsfall för ett plugin-program för paraformat.
 
 När plugin-programmet Styckeformat är aktiverat för första gången är inga standardstyckeformat tillgängliga. Popup-listan är tom. Så här förser du författarna med styckeformat:
 
@@ -458,9 +426,9 @@ Om du lägger till egna specialtecken åsidosätts standardinställningen. Om de
 
 När egenskapen har sparats visas det representerade tecknet i CRXDE. Se exemplet med hälften nedan. Upprepa stegen ovan om du vill göra fler specialtecken tillgängliga för författarna.
 
-![I CRXDE lägger du till ett enda tecken som ska vara tillgängligt i verktygsfältet för textredigering](assets/chlimage_1-412.png)
+![I CRXDE lägger du till ett enda tecken som ska vara tillgängligt i verktygsfältet ](assets/chlimage_1-412.png "för textredigeringI CRXDE lägger du till ett enda tecken som ska vara tillgängligt i verktygsfältet textredigering")
 
-I CRXDE lägger du till ett enda tecken som ska vara tillgängligt i verktygsfältet för textredigering
+
 
 ### Definiera ett teckenintervall {#definerangechar}
 
@@ -602,7 +570,7 @@ I en standardinstallation AEM ordlistorna för amerikansk engelska (`en_us`) och
 Stavningskontrollen för textredigering är tillgänglig på begäran. Den körs inte automatiskt när du börjar skriva text. Om du vill köra stavningskontrollen klickar du på [!UICONTROL Spellchecker] i verktygsfältet. RTE kontrollerar stavningen av ord och markerar de felstavade orden.
 Om du infogar någon ändring som stavningskontrollen föreslår markeras inte längre textens status och felstavade ord. Om du vill köra stavningskontrollen trycker/klickar du på stavningskontrollknappen igen.
 
-## Konfigurera historikstorleken för ångra- och gör om-åtgärder {#undohistory}
+## Konfigurera historikstorlek för ångra- och gör om-åtgärder {#undohistory}
 
 Med RTE kan författare ångra eller göra om några sista redigeringar. Som standard lagras 50 redigeringar i historiken. Du kan konfigurera det här värdet efter behov.
 
