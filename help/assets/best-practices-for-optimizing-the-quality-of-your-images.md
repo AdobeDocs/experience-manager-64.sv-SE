@@ -8,9 +8,9 @@ content-type: reference
 exl-id: 2e90bea1-eaac-457b-8588-b18d3a6e8d91
 feature: Resurshantering,Återgivningar
 role: User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 2bbc7e2a6b3aa36a7c2803d12ba402a5739c9a5c
 workflow-type: tm+mt
-source-wordcount: '1452'
+source-wordcount: '1450'
 ht-degree: 5%
 
 ---
@@ -45,7 +45,7 @@ Använd `&wid=<value>&hei=<value>&resMode=sharp2` eller `&hei=<value>&resMode=sh
 
 Bildskärpa är den mest komplicerade aspekten när det gäller att styra bilder på webbplatsen och var många misstag görs. Ta dig tid att lära dig mer om hur skärpa och oskarp maskning fungerar i AEM genom att titta i guiden [Adobe Dynamic Media Classic Image Quality and Sharpening Best Practices](/help/assets/assets/sharpening_images.pdf) som även gäller för AEM.
 
-Se även [Öka skärpan i en bild med oskarp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html).
+Se även [Öka skärpan i en bild med oskarp mask](https://helpx.adobe.com/photoshop/using/adjusting-image-sharpness-blur.html).
 
 Med AEM kan du öka skärpan i bilder vid intag, vid leverans eller både och. I de flesta fall bör du emellertid skärpa upp bilder med endast en metod eller med en annan, men inte med båda metoderna. Att skärpa bilderna vid leverans, på en URL-adress, ger oftast bäst resultat.
 
