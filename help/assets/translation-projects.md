@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Översättning
 role: Architect,Admin
 exl-id: 1b931fef-eed0-4758-993d-cdf8d478fb6f
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
 workflow-type: tm+mt
-source-wordcount: '1803'
+source-wordcount: '1810'
 ht-degree: 20%
 
 ---
@@ -313,4 +313,4 @@ När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia m
 
 1. Navigera till resurskonsolen och öppna sidan Egenskaper för var och en av de översatta resurserna för att visa översatta metadata.
 
-Tips om hur du översätter metadata för resurser effektivt finns i [5 steg för effektiv översättning av metadata](https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/).
+Tips om hur du översätter metadata för resurser effektivt finns på den här arkiverade sidan om [5 steg för att översätta metadata](https://web.archive.org/web/20181217033517/https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/).
