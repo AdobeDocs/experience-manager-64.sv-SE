@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Resurshantering
 role: Admin,Architect
 exl-id: edbb275a-5ead-4ed2-8708-29e766081d75
-source-git-commit: cdee53ea75faa2e6d1a1ec6ca7aa8bf8b8840e46
+source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
 workflow-type: tm+mt
 source-wordcount: '1766'
 ht-degree: 0%
@@ -34,12 +34,12 @@ Vanligtvis kan AEM Assets övervakas på två sätt: live-övervakning och lång
 Du bör utföra direktövervakning under prestandatestningsfasen av din utveckling eller under situationer med hög belastning för att förstå prestandaegenskaperna i din miljö. Vanligtvis bör direktövervakning utföras med en uppsättning verktyg. Här är några rekommendationer:
 
 * [Visual VM](https://visualvm.github.io/): Med Visual VM kan du visa detaljerad Java VM-information, inklusive processoranvändning och Java-minnesanvändning. Dessutom kan du sampla och utvärdera kod som körs på en instans.
-* [Överkant](http://man7.org/linux/man-pages/man1/top.1.html): Det övre är ett Linux-kommando som öppnar en kontrollpanel som visar användningsstatistik, inklusive processor-, minnes- och IO-användning. Den ger en översikt på hög nivå över vad som händer i en instans.
+* [Överkant](https://man7.org/linux/man-pages/man1/top.1.html): Det övre är ett Linux-kommando som öppnar en kontrollpanel som visar användningsstatistik, inklusive processor-, minnes- och IO-användning. Den ger en översikt på hög nivå över vad som händer i en instans.
 * [Htop](https://hisham.hm/htop/): Htop är ett interaktivt processvisningsprogram. Den ger detaljerad processor- och minnesanvändning utöver vad Top kan tillhandahålla. Htop kan installeras på de flesta Linux-system med `yum install htop` eller `apt-get install htop`.
 
 * [Inotop](http://guichaz.free.fr/iotop/): IOtop är en detaljerad kontrollpanel för diskanvändning. Här visas staplar och mätare som avbildar de processer som använder disk-I/O och hur mycket de använder. Jotop kan installeras på de flesta Linux-system med `yum install iotop` eller `apt-get install iotop`.
 
-* [Iftop](http://www.ex-parrot.com/pdw/iftop/): Iftop visar detaljerad information om Ethernet-/nätverksanvändning. Om Iftop visar statistik per kommunikationskanal för de enheter som använder Ethernet och den bandbredd de använder. Iftop kan installeras på de flesta Linux-system med `yum install iftop` eller `apt-get install iftop`.
+* [Iftop](https://www.ex-parrot.com/pdw/iftop/): Iftop visar detaljerad information om Ethernet-/nätverksanvändning. Om Iftop visar statistik per kommunikationskanal för de enheter som använder Ethernet och den bandbredd de använder. Iftop kan installeras på de flesta Linux-system med `yum install iftop` eller `apt-get install iftop`.
 
 * Java Flight Recorder (JFR): Ett kommersiellt verktyg från Oracle som du kan använda fritt i icke-produktionsmiljöer. Mer information finns i [Så här använder du Java Flight Recorder för att diagnostisera CQ-körningsproblem](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq).
 * AEM error.log-fil: Du kan undersöka filen AEM error.log om du vill ha mer information om fel som har loggats i systemet. Använd kommandot `tail -F quickstart/logs/error.log` för att identifiera fel som du bör undersöka.
