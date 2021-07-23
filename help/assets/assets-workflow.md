@@ -5,9 +5,9 @@ contentOwner: AG
 feature: arbetsflöde,återgivningar
 role: User,Admin
 exl-id: 4fb3d12c-feac-45b9-8d09-3b6995591b3d
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '998'
 ht-degree: 3%
 
 ---
@@ -114,5 +114,4 @@ För en arbetsflödesmodell kan användare skapa en startfil för arbetsflödet 
 * [Skapa arbetsflödesmodeller och utöka arbetsflödesfunktioner](/help/sites-developing/workflows.md)
 * [Metoder som kör arbetsflöden](/help/sites-administering/workflows-starting.md)
 * [Bästa arbetsflöden](/help/sites-developing/workflows-best-practices.md)
-* [Community-artikel om att ändra resurs med hjälp av arbetsflöde](https://helpx.adobe.com/experience-manager/using/modify_asset_workflow.html)
 
