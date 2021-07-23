@@ -2,16 +2,15 @@
 title: Hantera metadata för dina digitala resurser i [!DNL Adobe Experience Manager].
 description: Lär dig mer om metadatatyperna och hur [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] gör det möjligt att automatiskt ordna och bearbeta resurser baserat på deras metadata.
 contentOwner: AG
-feature: Tagging, Metadata
+feature: Taggar, metadata
 role: Architect, Leader
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: 05bbf89a-4cf5-49bb-aea8-a585c641eda2
+source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
 workflow-type: tm+mt
-source-wordcount: '1399'
+source-wordcount: '1398'
 ht-degree: 0%
 
 ---
-
 
 # Hantera metadata för dina digitala resurser {#managing-metadata-for-digital-assets}
 
@@ -105,7 +104,7 @@ Metadatafält som definieras av Exif är vanligtvis av teknisk natur och har beg
 
 Andra metadata som kan bäddas in från filer är bland annat [!DNL Microsoft Word], [!DNL PowerPoint], [!DNL Excel] och så vidare.
 
-## Metadata schemata {#metadata-schemata}
+## Metadata-scheman {#metadata-schemata}
 
 Metadata-scheman är fördefinierade uppsättningar metadataegenskapsdefinitioner som kan användas i olika program. Egenskaper är alltid kopplade till en resurs, vilket innebär att egenskaperna är&quot;about&quot; för resursen.
 
@@ -138,7 +137,7 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 * PDF och PDF/X.
 * Photoshop och psAux - [!DNL Adobe Photoshop].
 
-### Digital Rights Management-metadata {#digital-rights-management-metadata}
+### Digital Rights Management metadata {#digital-rights-management-metadata}
 
 * CC - [!DNL Creative Commons].
 * [!DNL XMPRights].
@@ -158,16 +157,16 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 ### Utskriftsspecifika metadata {#print-specific-metadata}
 
 * PDF och PDF/X - Adobe PDF och tredjepartsprogram.
-* PRISM - [Publiceringskrav för branschstandardmetadata](https://www.prismstandard.org).
+* PRISM - [Publiceringskrav för branschstandardmetadata](http://www.prismstandard.org/specifications/).
 * XMP - [!DNL Extensible Metadata Platform].
 * `xmpPG` - XMP metadata för sidindelad text.
 
-### Multimediespecifika metadata {#multimedia-specific-metadata}
+### Multimediaspecifika metadata {#multimedia-specific-metadata}
 
 * `xmpDM` - [!DNL Dynamic Media].
 * `xmpMM` - Mediehantering.
 
-## Metadatadrivna arbetsflöden {#metadata-driven-workflows}
+## Metadatastyrda arbetsflöden {#metadata-driven-workflows}
 
 Genom att skapa metadatadrivna arbetsflöden kan du automatisera vissa processer, vilket ökar effektiviteten. I ett metadatadrivet arbetsflöde läser arbetsflödet och utför därför en fördefinierad åtgärd. Du kan till exempel använda metadatadrivna arbetsflöden på olika sätt:
 
