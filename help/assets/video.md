@@ -8,9 +8,9 @@ content-type: reference
 exl-id: acb95a2b-0171-449e-97fa-f9a533f990de
 feature: Video
 role: User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 2bbc7e2a6b3aa36a7c2803d12ba402a5739c9a5c
 workflow-type: tm+mt
-source-wordcount: '9897'
+source-wordcount: '9839'
 ht-degree: 3%
 
 ---
@@ -71,7 +71,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
          [Visa videoåtergivningar](video-renditions.md)
 
-         [Hantera videoåtergivningar](managing-assets-touch-ui.md#managing-renditions)
+[Hantera videoåtergivningar](managing-assets-touch-ui.md#managing-renditions)
 
       * [Hantera förinställningar för visningsprogram](managing-viewer-presets.md)
       * [Publicera resurser](publishing-dynamicmedia-assets.md)
@@ -83,7 +83,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
       * Redigera egenskaperna för video, till exempel titel, beskrivning och taggar, anpassade metadatafält:
 
-         [Redigera videoegenskaper](managing-assets-touch-ui.md#editing-properties)
+[Redigera videoegenskaper](managing-assets-touch-ui.md#editing-properties)
 
       * [Hantera metadata för digitala resurser](metadata.md)
       * [Metadata-scheman](metadata-schemas.md)
@@ -276,12 +276,12 @@ Följande bild visar det övergripande arbetsflödet för redigering av videokli
 
 Arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** kodar video om du har aktiverat dynamiska media och konfigurerat videolmolntjänster. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress). Om du har aktiverat Dynamic Media och konfigurerat Video Cloud-tjänster börjar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** automatiskt gälla när du överför en video. (Om du inte använder Dynamic Media börjar arbetsflödet **[!UICONTROL DAM Update Asset]** gälla.)
 
-Nedan följer några tips om hur du kodar källvideofiler.
+<!-- DEAD ARTICLE AND VIDEO LINK The following are best-practice tips for encoding source video files.
 
-Mer information om videokodning finns i:
+For advice about video encoding, see the following:
 
-* Artikel: *Direktuppspelning 101: Grunderna — Kodekar, bandbredd, datahastighet och upplösning:* [www.adobe.com/go/learn_s7_streaming101_en](https://www.adobe.com/go/learn_s7_streaming101_en).
-* Video: *Grunderna i videokodning:* [www.adobe.com/go/learn_s7_encoding_en](https://www.adobe.com/go/learn_s7_encoding_en).
+* Article: *Streaming 101: The Basics — Codecs, Bandwidth, Data Rate, and Resolution:* [www.adobe.com/go/learn_s7_streaming101_en](https://www.adobe.com/go/learn_s7_streaming101_en).
+* Video: *Video Encoding Basics:* [www.adobe.com/go/learn_s7_encoding_en](https://www.adobe.com/go/learn_s7_encoding_en). -->
 
 ### Källvideofiler {#source-video-files}
 
@@ -348,7 +348,7 @@ I den här tabellen beskrivs datahastigheten för typiska anslutningshastigheter
 | Hastighet (kbit/s) | Anslutningstyp |
 |--- |--- |
 | 256 | Uppringd anslutning. |
-| 800 | Vanlig mobilanslutning. För den här anslutningen anger du en datahastighet mellan 400 och maximalt 800 för 3G-upplevelser som mål. |
+| 600 | Vanlig mobilanslutning. För den här anslutningen anger du en datahastighet mellan 400 och maximalt 800 för 3G-upplevelser som mål. |
 | 2000 | Vanlig anslutning till stationär bredbandsuppkoppling. För den här anslutningen anger du en datahastighet i intervallet 800-2000 kbit/s med de flesta mål som är i genomsnitt 1200-1500 kbit/s. |
 | 5000 | Vanlig bredbandsanslutning. Kodning i det här övre intervallet rekommenderas inte eftersom videoleverans i den här hastigheten inte är tillgänglig för de flesta konsumenter. |
 
@@ -423,7 +423,7 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
    <td><p>Kodad</p> </td> 
    <td><p>640 x 360</p> </td> 
    <td><p>3</p> </td> 
-   <td><p>1</p> </td> 
+   <td><p>3</p> </td> 
   </tr> 
   <tr> 
    <td><p>Kodad</p> </td> 
