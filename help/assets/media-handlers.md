@@ -5,9 +5,9 @@ contentOwner: AG
 feature: arbetsflöde,återgivningar
 role: User
 exl-id: 7694c68d-0a17-4052-8fbe-9bf45b229e81
-source-git-commit: 2bbc7e2a6b3aa36a7c2803d12ba402a5739c9a5c
+source-git-commit: e7fdddadff41f8b03dc466da531f850d45bcee9d
 workflow-type: tm+mt
-source-wordcount: '2171'
+source-wordcount: '2168'
 ht-degree: 2%
 
 ---
@@ -442,7 +442,7 @@ När du har utfört följande procedur och överför en textfil till Experience 
 
 Med Experience Manager kan du köra valfritt kommandoradsverktyg i ett arbetsflöde för att konvertera resurser (till exempel ImageMagick) och lägga till den nya återgivningen i resursen. Installera kommandoradsverktyget på den disk där Experience Manager-servern finns och lägg till och konfigurera ett processsteg i arbetsflödet. Den anropade processen, som kallas `CommandLineProcess`, filtrerar efter specifika MIME-typer och skapar flera miniatyrbilder baserat på den nya återgivningen.
 
-Följande konverteringar kan automatiskt köras och lagras i Experience Manager Assets:
+Följande konverteringar kan köras och lagras automatiskt i [!DNL Experience Manager Assets]:
 
 * EPS- och AI-omvandling med [ImageMagick](https://www.imagemagick.org/script/index.php) och [Ghostscript](https://www.ghostscript.com/)
 * FLV-videotranskodning med [FFmpeg](https://ffmpeg.org/)
