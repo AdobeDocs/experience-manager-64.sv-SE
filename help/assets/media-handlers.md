@@ -5,7 +5,7 @@ contentOwner: AG
 feature: arbetsflöde,återgivningar
 role: User
 exl-id: 7694c68d-0a17-4052-8fbe-9bf45b229e81
-source-git-commit: e7fdddadff41f8b03dc466da531f850d45bcee9d
+source-git-commit: bc27dee618ee57dc188c7f35a1af4d1dba80cf1b
 workflow-type: tm+mt
 source-wordcount: '2168'
 ht-degree: 2%
@@ -446,8 +446,8 @@ Följande konverteringar kan köras och lagras automatiskt i [!DNL Experience Ma
 
 * EPS- och AI-omvandling med [ImageMagick](https://www.imagemagick.org/script/index.php) och [Ghostscript](https://www.ghostscript.com/)
 * FLV-videotranskodning med [FFmpeg](https://ffmpeg.org/)
-* MP3-kodning med [LAME](https://lame.sourceforge.net/)
-* Ljudbearbetning med [SOX](https://sox.sourceforge.net/)
+* MP3-kodning med [LAME](https://lame.sourceforge.io)
+* Ljudbearbetning med [SOX](https://sox.sourceforge.io)
 
 >[!NOTE]
 >
