@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Resurshantering
 role: Admin,Architect
 exl-id: edbb275a-5ead-4ed2-8708-29e766081d75
-source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
+source-git-commit: 4048c4c76a892e3bb32dbbeef140b5dc9ebffad3
 workflow-type: tm+mt
 source-wordcount: '1766'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Du bör utföra direktövervakning under prestandatestningsfasen av din utveckli
 * [Överkant](https://man7.org/linux/man-pages/man1/top.1.html): Det övre är ett Linux-kommando som öppnar en kontrollpanel som visar användningsstatistik, inklusive processor-, minnes- och IO-användning. Den ger en översikt på hög nivå över vad som händer i en instans.
 * [Htop](https://hisham.hm/htop/): Htop är ett interaktivt processvisningsprogram. Den ger detaljerad processor- och minnesanvändning utöver vad Top kan tillhandahålla. Htop kan installeras på de flesta Linux-system med `yum install htop` eller `apt-get install htop`.
 
-* [Inotop](http://guichaz.free.fr/iotop/): IOtop är en detaljerad kontrollpanel för diskanvändning. Här visas staplar och mätare som avbildar de processer som använder disk-I/O och hur mycket de använder. Jotop kan installeras på de flesta Linux-system med `yum install iotop` eller `apt-get install iotop`.
+* [Inotop](https://guichaz.free.fr/iotop/): IOtop är en detaljerad kontrollpanel för diskanvändning. Här visas staplar och mätare som avbildar de processer som använder disk-I/O och hur mycket de använder. Jotop kan installeras på de flesta Linux-system med `yum install iotop` eller `apt-get install iotop`.
 
 * [Iftop](https://www.ex-parrot.com/pdw/iftop/): Iftop visar detaljerad information om Ethernet-/nätverksanvändning. Om Iftop visar statistik per kommunikationskanal för de enheter som använder Ethernet och den bandbredd de använder. Iftop kan installeras på de flesta Linux-system med `yum install iftop` eller `apt-get install iftop`.
 
