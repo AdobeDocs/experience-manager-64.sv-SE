@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: 442cd4bb-21b8-4d9d-89a4-402ee22c79a7
-translation-type: tm+mt
-source-git-commit: a3e7cd30ba6933e6f36734d3b431db41365b6e20
+exl-id: b9d2c63c-1777-4c13-a39f-6891f0ff52b2
+source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
 workflow-type: tm+mt
 source-wordcount: '7662'
 ht-degree: 0%
 
 ---
-
 
 # Bevakad mapp i AEM Forms {#watched-folder-in-aem-forms}
 
@@ -60,7 +59,7 @@ Om du vill konfigurera en bevakad mapp skapar du en konfigurationsnod för bevak
 
    Sökningsjobbet startar skanningen av den bevakade mappen med ett angivet tidsintervall.
 
-## Bevakade mappegenskaper {#watchedfolderproperties}
+## Egenskaper för bevakad mapp {#watchedfolderproperties}
 
 Du kan konfigurera följande egenskaper för en bevakad mapp.
 
@@ -91,7 +90,6 @@ Du kan konfigurera följande egenskaper för en bevakad mapp.
 
    **Obs!** *Även om en inmatning har markerats som att den har nått tidsgränsen med den här mekanismen kan den fortfarande bearbetas i bakgrunden, men bara ta längre tid än förväntat. Om indatainnehållet förbrukades innan timeoutmekanismen startades kan bearbetningen till och med slutföras senare och utdata dumpas i resultatmappen. Om innehållet inte förbrukades innan tidsgränsen uppnåddes är det troligtvis så att bearbetningen misslyckas senare när innehållet används, och det här felet loggas även i felmappen för samma indata. Om bearbetningen av indata inte aktiveras på grund av ett tillfälligt fel i jobb/arbetsflöde (vilket är det scenario som utgångsmekanismen avser), kommer ingen av dessa två situationer att inträffa. För alla poster i felmappen som markerats som misslyckade på grund av en timeout (sök efter meddelanden i formatet &quot;Fil som inte bearbetats efter lång tid, markerat som misslyckad!&quot; i felloggen är det tillrådligt att söka igenom resultatmappen (och även själva felmappen för en annan post för samma indata) för att kontrollera om någon av de händelser som beskrivits tidigare faktiskt inträffade.*
 
-* 
 * **deleteExpiredStageFileOnlyWhenThrottled (Boolean, standard true):** Anger om förfallomekanismen endast ska aktiveras när bevakad mapp stryps. Mekanismen är mer relevant för begränsade bevakade mappar eftersom ett litet antal filer som ligger kvar i ett obearbetat tillstånd (på grund av tillfälliga fel i jobb/arbetsflöde) kan kväva bearbetningen för hela gruppen när strypning är aktiverat. Om den här egenskapen behålls som true (standard) aktiveras inte förfallomekanismen för bevakade mappar som inte är begränsade. Om egenskapen behålls som false aktiveras mekanismen alltid så länge egenskapen stageFileExpirationDuration är ett positivt tal.
 
 * **pollInterval (lång)**: Intervallet i sekunder för skanning av den bevakade mappen för indata. Om inte inställningen Gräns är aktiverad ska avsökningsintervallet vara längre än tiden för att bearbeta ett genomsnittligt jobb. annars kan systemet bli överbelastat. Standardvärdet är 5. Mer information finns i beskrivningen för Batchstorlek. Värdet för pollinterval måste vara större än eller lika med ett.
@@ -156,7 +154,7 @@ Mer information om filmönster finns i [Om filmönster](/help/forms/using/watche
 
    Inställningarna för avsökningsintervall och Gruppstorlek avgör hur många filer i Bevakade mappar som ska tas upp vid varje avsökning. Bevakad mapp använder en Quartz-trådpool för att skanna indatamappen. Trådpoolen delas med andra tjänster. Om skanningsintervallet är litet genomsöks indatamappen ofta av trådarna. Om filer ofta placeras i den bevakade mappen bör du hålla sökintervallet litet. Om filerna tas bort sällan bör du använda ett större inläsningsintervall så att de andra tjänsterna kan använda trådarna.
 
-   Om det finns en stor mängd filer som tas bort gör du gruppstorleken stor. Om till exempel tjänsten som startas av slutpunkten Bevakade mappar kan bearbeta 700 filer per minut, och användarna släpper filer i indatamappen i samma takt, och du sedan anger värdet 350 för Gruppstorlek och 30 sekunder för att få prestandan Bevakade mappar utan att kostnaden för att skanna den Bevakade mappen för ofta påverkas.
+   Om det finns en stor mängd filer som tas bort gör du gruppstorleken stor. Om till exempel tjänsten som startas av slutpunkten Bevakade mappar kan bearbeta 700 filer per minut, och användare släpper filer i indatamappen i samma takt, och sedan ställer du in batchstorleken på 350 och avsökningsintervallet på 30 sekunder, kan du förbättra prestandan för Bevakade mappar utan att det kostar för mycket att skanna den bevakade mappen.
 
    När filer släpps i den bevakade mappen listas filerna i indata, vilket kan försämra prestanda om skanningen sker varje sekund. Om du ökar skanningsintervallet kan prestandan förbättras. Om filvolymen som tas bort är liten justerar du batchstorleken och avsökningsintervallet. Om till exempel 10 filer tas bort varje sekund, kan du prova att ange pollInterval till 1 sekund och Batch Size till 10
 
@@ -505,17 +503,17 @@ När du har aktiverat begränsning för en bevakad mappslutpunkt begränsas anta
 >
 >Begränsningen skalas inte med ett kluster. När du har aktiverat begränsning kommer klustret som helhet inte att bearbeta mer än det antal jobb som har angetts i gruppstorleken vid en given tidpunkt. Den här gränsen är klusterbred och gäller inte för alla noder i klustret. Om du till exempel har en gruppstorlek på 2 kan begränsningen nås med en enda nod som bearbetar två jobb, och inga andra noder kommer att anropa indatakatalogen tills ett av jobben är klart.
 
-#### Så här fungerar begränsningen {#how-throttling-works}
+#### Så här fungerar strypning {#how-throttling-works}
 
 Bevakad mapp skannar indatamappen vid varje pollInterval, hämtar antalet filer som anges i gruppstorleken och anropar måltjänsten för var och en av dessa filer. Om till exempel gruppstorleken är fyra hämtar Bevakad mapp fyra filer vid varje skanning, skapar fyra anropsbegäranden och anropar måltjänsten. Om Bevakade mappar anropas startas fyra jobb igen innan dessa begäranden har slutförts, oavsett om de föregående fyra jobben har slutförts eller inte.
 
 Begränsning förhindrar att bevakad mapp anropar nya jobb när tidigare jobb inte har slutförts. Bevakade mappar identifierar pågående jobb och bearbetar nya jobb baserat på batchstorleken minus pågående jobb. I det andra anropet anropas bara tre jobb till om antalet slutförda jobb är tre och ett jobb fortfarande pågår.
 
-* Bevakad mapp är beroende av antalet filer som finns i scenmappen för att ta reda på hur många jobb som pågår. Om filerna inte bearbetas i scenmappen anropas inga fler jobb av den bevakade mappen. Om batchstorleken till exempel är fyra och tre jobb stoppas, kommer Bevakad mapp endast att anropa ett jobb i efterföljande anrop. Det finns flera scenarier som kan göra att filer förblir obearbetade i scenmappen. När jobb har stoppats kan administratören avsluta processen på sidan Processhantering, så att Bevakad mapp flyttar filerna från scenmappen.
+* Bevakad mapp är beroende av antalet filer som finns i scenmappen för att ta reda på hur många jobb som pågår. Om filerna inte bearbetas i scenmappen anropas inga fler jobb av den bevakade mappen. Om batchstorleken till exempel är fyra och tre jobb stoppas, kommer Bevakade mappar endast att anropa ett jobb i efterföljande anrop. Det finns flera scenarier som kan göra att filer förblir obearbetade i scenmappen. När jobb har stoppats kan administratören avsluta processen på sidan Processhantering, så att Bevakad mapp flyttar filerna från scenmappen.
 * Om AEM Forms-servern kraschar innan Bevakade mappar anropar jobben kan administratören flytta filerna från scenmappen. Mer information finns i [Felpunkter och återställning](/help/forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p).
 * Om AEM Forms-servern körs men Bevakade mappar inte körs när tjänsten Job Manager anropas tillbaka, vilket inträffar när tjänster inte startar i den ordnade sekvensen, kan administratören flytta filerna från scenmappen. Mer information finns i [Felpunkter och återställning](/help/forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p).
 
-### Felpunkter och återställningspunkterFelpunkter och återställning {#failure-points-and-recoveryfailure-points-and-recovery}
+### Felpunkter och återställningFelpunkter och återställning {#failure-points-and-recoveryfailure-points-and-recovery}
 
 Vid varje omröstning låses indatamappen av Bevakad mapp, filerna som matchar inkluderingsfilmönstret flyttas till scenmappen och indatamappen låses upp. Låsning krävs så att två trådar inte kan hämta samma uppsättning filer och bearbeta dem två gånger. Chansen att detta händer ökar med ett litet pollInterval och en stor batchstorlek. När filer har flyttats till scenmappen låses indatamappen upp så att andra trådar kan skanna in mappen. Det här steget ger hög genomströmning eftersom andra trådar kan skanna medan en tråd bearbetar filerna.
 
@@ -551,7 +549,7 @@ Om den bevakade mappen inte kan bearbeta källfilerna i scenmappen kan du åters
 
 1. Om du förhindrade att Bevakad mapp bearbetar nya indatafiler i steg 2, ändrar du Inkludera filmönster till dess tidigare värde eller återaktiverar den process som du inaktiverade.
 
-### Bevakade mappar i kedjan {#chain-watched-folders-together}
+### Kedja bevakade mappar tillsammans {#chain-watched-folders-together}
 
 Bevakade mappar kan sammanfogas så att ett resultatdokument för en bevakad mapp är indatadokumentet för nästa bevakade mapp. Varje bevakad mapp kan anropa en annan tjänst. Genom att konfigurera bevakade mappar på det här sättet kan flera tjänster anropas. En bevakad mapp kan till exempel konvertera PDF-filer till Adobe PostScript® och en andra bevakad mapp kan konvertera PostScript-filerna till PDF/A-format. Det gör du genom att ställa in resultatmappen för den bevakade mappen som definieras av din första slutpunkt så att den pekar på indatamappen för den bevakade mappen som definieras av din andra slutpunkt.
 
@@ -588,7 +586,7 @@ Mappningar av utdataparametrar kan även ange ytterligare mönster, som:
 * %F = Källfilens namn
 * %E = Filnamnstillägg för källa
 
-Om mappningsmönstret för utdataparametrar avslutas med &quot;File.separator&quot; (som är sökvägsavgränsaren) skapas en mapp och innehållet kopieras till den mappen. Om mönstret inte avslutas med &quot;File.separator&quot; skapas innehållet (resultatfilen eller mappen) med det namnet.
+Om mappningsmönstret för utdataparametrar slutar med &quot;File.separator&quot; (som är sökvägsavgränsaren) skapas en mapp och innehållet kopieras till den mappen. Om mönstret inte avslutas med &quot;File.separator&quot; skapas innehållet (resultatfilen eller mappen) med det namnet.
 
 ## Använda PDF Generator med en bevakad mapp {#using-pdf-generator-with-a-watched-folder}
 
@@ -676,7 +674,7 @@ ECMAScript använder PDF Generators createPDF-API för att konvertera Microsoft 
    * outputFilePattern (String): Utdatafilens mönster. Du kan ange en mapp eller ett filmönster. Om ett mappmönster anges har utdatafilerna namn enligt arbetsflödena. Om ett filmönster anges har utdatafilerna namn som beskrivs i filmönstret.
    Förutom de obligatoriska egenskaper som nämns ovan, har Bevakade mappar även stöd för några valfria egenskaper. En fullständig lista och en beskrivning av valfria egenskaper finns i [Egenskaper för bevakad mapp](#watchedfolderproperties).
 
-## Använda Central Migration Bridge (utgått) med en bevakad mapp {#using-central-migration-bridge-deprecated-with-a-watched-folder}
+## Använda Central migreringsbrygga (borttagen) med en bevakad mapp {#using-central-migration-bridge-deprecated-with-a-watched-folder}
 
 Du kan konfigurera en bevakad mapp för att initiera ett arbetsflöde, en tjänst eller ett skript för att bearbeta indatafilerna. I följande avsnitt konfigurerar vi en bevakad mapp att initiera ett ECMAScript. ECMAScript använder funktionerna OutputCentralService och sendToPrinter i SendToPrinterService.
 
