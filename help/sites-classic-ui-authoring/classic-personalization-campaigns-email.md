@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: eb72f934-4b0f-4a71-b2a2-3ddf78db8c3c
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 5e97f7bd-d668-423d-9f65-7dcc8fb1943a
+source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
 workflow-type: tm+mt
 source-wordcount: '1771'
 ht-degree: 0%
 
 ---
-
 
 # E-postmarknadsföring{#e-mail-marketing}
 
@@ -120,7 +119,7 @@ Du kan lägga till innehåll, inklusive dynamiskt innehåll, i nyhetsbrevet på 
 
 1. Om du vill infoga variabler markerar du variabeln i listan och klickar på **Infoga**. Variabler fylls i från profilen.
 
-## Personaliserar nyhetsbrev {#personalizing-newsletters}
+## Anpassa nyhetsbrev {#personalizing-newsletters}
 
 Du kan personalisera nyhetsbrev genom att infoga fördefinierade variabler i Text-komponenten i nyhetsbreven i Geometrixx. Värden för variablerna ärvs från informationen i användarprofilen.
 
@@ -189,8 +188,6 @@ Så här anpassar du inställningar för nyhetsbrev:
 1. Klicka på **Inställningar** överst i nyhetsbrevet.
 
    ![mcm_newsletter_settings](assets/mcm_newsletter_settings.png)
-
-1. 
 
    1. Ange e-postadressen **Från**
    1. Ändra **Ämne** för e-postmeddelandet om det behövs.
@@ -302,4 +299,3 @@ Så här prenumererar du på ett nyhetsbrev (med Geometrixx webbplats som exempe
    ![chlimage_1-169](assets/chlimage_1-169.png)
 
 1. I fältet Geometrixx Newsletter **Registrera dig** anger du din e-postadress och klickar på **Registrera dig**. Du prenumererar nu på nyhetsbrevet.
-
