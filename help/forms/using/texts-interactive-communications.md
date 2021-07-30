@@ -7,15 +7,14 @@ uuid: b2188d34-14f9-4c4e-bbe0-a2e763ed2958
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 7677327a-cc56-413b-b2e3-7b10d0d0319d
-feature: Interactive Communication
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: Interaktiv kommunikation
+exl-id: a689aead-7b39-4d66-8922-ae8910c5e9ef
+source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
 workflow-type: tm+mt
 source-wordcount: '2201'
 ht-degree: 0%
 
 ---
-
 
 # Texter i interaktiv kommunikation {#texts-in-interactive-communications}
 
@@ -77,7 +76,7 @@ Du kan redigera ett befintligt textdokumentfragment genom att följa stegen neda
 1. Gör de ändringar som krävs. Mer information om alternativ i text finns i [Skapa text](#createtext).
 1. Tryck på **[!UICONTROL Save]** och sedan på **[!UICONTROL Close]**.
 
-## Anpassa ett textdokumentfragment med hjälp av formulärdatamodellens egenskaper {#formdatamodel}
+## Anpassa ett textdokumentfragment med hjälp av egenskaper för formulärdatamodell {#formdatamodel}
 
 Du kan anpassa textdokumentfragment genom att infoga egenskaper för formulärdatamodellen. Genom att infoga egenskaper för formulärdatamodellen i text kan du hämta och fylla i mottagarspecifika data från den associerade datakällan samtidigt som du förhandsgranskar en interaktiv kommunikation. Mer information om formulärdatamodell finns i [AEM Forms Data Integration](/help/forms/using/data-integration.md).
 
@@ -88,8 +87,6 @@ Om du har angett en formulärdatamodell när du skapar en text visas egenskapern
 * Om du vill infoga en FDM-egenskap i text placerar du markören där du vill infoga egenskapen, markerar egenskapen **`[A]`** i den vänstra rutan genom att trycka på den och trycker sedan på **`[B]`** **[!UICONTROL Add Selected]**. Du kan också bara dubbeltrycka på egenskapen för att infoga den vid markörpositionen **`[C]`**. Egenskaper för formulärdatamodellen markeras med en bakgrundsfärg i webbläsaren.
 
 * Om du vill att agenterna ska kunna redigera en FDM-egenskaps värde i agentgränssnittet när [Förbered och skicka interaktiv kommunikation](/help/forms/using/prepare-send-interactive-communication.md) med agentgränssnittet trycker du på låsikonen **`[D]`** för den egenskapen och ser till att den är i olåst läge. Egenskapens standardläge är låst och en agent kan inte redigera egenskapen i agentens användargränssnitt.
-
-* 
 
 Du kan också använda egenskaper för formulärdatamodell för att konstruera regler för att visa eller dölja delar av innehåll. Mer information finns i [Skapa regler i text](#rules).
 
@@ -136,7 +133,7 @@ När du skapar eller redigerar ett textdokumentfragment kan du skapa och infoga 
 
 1. Tryck på **[!UICONTROL Save]**.
 
-## Skapa regler i texten {#rules}
+## Skapa regler i text {#rules}
 
 Med hjälp av regelredigeraren i en text kan du skapa regler för att visa eller dölja strängar med text eller innehållsdelar baserat på **förinställda villkor**. Dessa villkor kan utformas utifrån:
 
@@ -147,7 +144,7 @@ Med hjälp av regelredigeraren i en text kan du skapa regler för att visa eller
 * Egenskaper för associerad formulärdatamodell
 * Alla variabler som du kan ha skapat i texten
 
-### Skapa regler i texten {#create-rules-in-text}
+### Skapa regler i text {#create-rules-in-text}
 
 1. När du skapar eller redigerar en text markerar du den textsträng, det stycke eller det innehåll som du vill göra villkorsstyrd med hjälp av regeln.
 
@@ -238,7 +235,7 @@ Du kan kopiera och klistra in texten direkt från Microsoft® Word-dokumentet i 
 >
 >Formateringen av inklistrad text har dock vissa [begränsningar](https://helpx.adobe.com/aem-forms/kb/cm-copy-paste-text-limitations.html).
 
-## Infoga specialtecken i texten {#special}
+## Infoga specialtecken i text {#special}
 
 Infoga vid behov specialtecken i dokumentfragmentet. Du kan till exempel använda paletten Specialtecken för att infoga:
 
