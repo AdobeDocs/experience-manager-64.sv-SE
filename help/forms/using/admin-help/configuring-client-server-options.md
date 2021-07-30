@@ -9,15 +9,14 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 0f069fbc-10c2-403e-9419-5e9920035d75
-feature: Document Security
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: Dokumentsäkerhet
+exl-id: 571c1391-dc60-4bed-b4f9-482a508e4bd4
+source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
 workflow-type: tm+mt
 source-wordcount: '10283'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera dokumentsäkerhetsservern {#configure-the-document-security-server}
 
@@ -129,7 +128,7 @@ Med utökad autentisering aktiverat får användare som öppnar ett policyskydda
 
 1. Spara filen och importera sedan den uppdaterade filen från sidan Manuell konfiguration: I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Importera och exportera konfigurationsfiler.
 
-## Konfigurerar offlinesäkerhet {#configuring-offline-security}
+## Konfigurera offlinesäkerhet {#configuring-offline-security}
 
 dokumentsäkerhet gör det möjligt att använda principskyddade dokument offline utan Internet- eller nätverksanslutning. Den här funktionen kräver att principen tillåter offlineåtkomst, vilket beskrivs i [Ange dokumentbehörigheter för användare och grupper](/help/forms/using/admin-help/creating-policies.md#specify-the-document-permissions-for-users-and-groups). Innan ett dokument med en sådan profil kan användas offline måste mottagaren öppna dokumentet online och aktivera åtkomst offline genom att klicka på Ja när du uppmanas till det. Mottagaren kan också bli ombedd att autentisera sin identitet. Mottagaren kan sedan använda dokument offline under den offlinelåneperiod som anges i policyn.
 
@@ -137,7 +136,7 @@ När offlineleasingperioden är slut måste mottagaren synkronisera igen med dok
 
 Eftersom dokument som tillåter offlineåtkomst kräver cachelagring av viktigt material på den dator där filerna lagras offline, kan filen eventuellt komprometteras om en obehörig användare kan få tillgång till nyckelmaterialet. För att kompensera för den här möjligheten finns schemalagda och manuella nyckelrollover-alternativ som du kan konfigurera för att förhindra att obehöriga använder nyckeln för att få åtkomst till dokumentet.
 
-### Ange standardperiod för offlinelån {#set-a-default-offline-lease-period}
+### Ange standardperiod för offlineleasing {#set-a-default-offline-lease-period}
 
 Mottagare av principskyddade dokument kan ta dokumenten offline under det antal dagar som anges i profilen. När dokumentet har synkroniserats med dokumentsäkerheten kan mottagaren använda det offline tills offlineleasingperioden har löpt ut. När låneperioden är slut måste mottagaren ta dokumentet online och logga in för att synkronisera med dokumentsäkerheten för att kunna fortsätta använda dokumentet.
 
@@ -147,7 +146,7 @@ Du kan konfigurera en standardlåneperiod offline. Låneperioden kan ändras fr�
 1. I rutan Standardperiod för offlineleasing anger du antalet dagar för offlineleasingperioden.
 1. Klicka på OK.
 
-### Hantera nyckelöverrullningar {#manage-key-rollovers}
+### Hantera viktiga överrullningar {#manage-key-rollovers}
 
 Dokumentsäkerhet använder krypteringsalgoritmer och licenser för att skydda dokument. När dokumentskyddet krypterar ett dokument genereras och hanteras en dekrypteringsnyckel med namnet *DocKey* som skickas till klientprogrammet. Om profilen som skyddar ett dokument tillåter åtkomst offline, genereras även en offlinenyckel med namnet *huvudnyckel* för varje användare som har offlineåtkomst till dokumentet.
 
@@ -373,7 +372,7 @@ Du kan aktivera och inaktivera händelsegranskning och ange vilka typer av händ
 
 **Serverkonfigurationsändring:** Ändringar i serverkonfigurationen som görs antingen via webbsidorna eller manuellt genom att en config.xml-fil importeras. Detta inkluderar ändringar av bas-URL:en, timeout-problem för sessioner, inloggningslås, kataloginställningar, tangentöverrullningar, SMTP-serverinställningar för extern registrering, konfiguration av vattenstämplar, visningsalternativ osv.
 
-## Konfigurerar utökad användningsspårning {#configuring-extended-usage-tracking}
+## Konfigurera utökad användningsspårning {#configuring-extended-usage-tracking}
 
 Dokumentsäkerhet kan spåra olika anpassade händelser som kan utföras på ett skyddat dokument. Du kan aktivera spårning av händelser från dokumentsäkerhetsservern på global nivå eller på en principnivå. Du kan sedan ställa in ett JavaScript för att fånga specifika åtgärder som utförs i det skyddade PDF-dokumentet, som att klicka på en knapp eller spara dokumentet. Dessa användningsdata skickas som en XML-fil i nyckelvärdepar som du kan använda för ytterligare analys. Slutanvändare som har åtkomst till skyddade dokument kan tillåta eller neka sådan spårning från klientprogrammet.
 
@@ -473,7 +472,7 @@ Vissa klientprogram kanske inte stöder dynamiska vattenstämplar. Se lämplig h
 
 * Acrobat 9.0 och tidigare versioner: Acrobat 9.0 och tidigare stöder inte principnamn i dynamiska vattenstämplar. Om Acrobat 9.0 öppnar ett policyskyddat dokument med en dynamisk vattenstämpel som innehåller ett principnamn och andra dynamiska data, visas vattenstämpeln utan principnamnet. Om den dynamiska vattenstämpeln bara innehåller principnamnet visas ett felmeddelande i Acrobat
 
-### Lägg till en dynamisk vattenstämpelmall {#add-a-dynamic-watermark-template}
+### Lägga till en dynamisk vattenstämpelmall {#add-a-dynamic-watermark-template}
 
 Du kan skapa dynamiska vattenstämpelmallar. Mallarna är fortfarande tillgängliga som konfigurationsalternativ för profiler som administratörer eller användare skapar.
 
@@ -664,7 +663,7 @@ Följande inställningar finns under E-postkonfiguration för aktivering på sid
 
 **Meddelande:** Den text som visas i meddelandetexten i ett meddelande som anger att mottagarens användarkonto måste aktiveras. Du kan även inkludera information om hur du kontaktar en administratör för att få ett nytt lösenord.
 
-### Konfigurera en e-postadress för återställning av lösenord {#configure-a-password-reset-email}
+### Konfigurera e-post för återställning av lösenord {#configure-a-password-reset-email}
 
 Om du måste återställa en inbjuden användares lösenord skapas ett bekräftelsemeddelande som uppmanar användaren att välja ett nytt lösenord. Det går inte att fastställa användarens lösenord. om användaren glömmer det, måste du återställa det.
 
@@ -676,7 +675,7 @@ Följande inställningar finns i området Återställ e-post för lösenord på 
 
 **Meddelande:** Den text som visas i meddelandets brödtext i ett meddelande som anger att mottagarens externa användarlösenord har återställts.
 
-## Gör det möjligt för användare och grupper att skapa principer {#enable-users-and-groups-to-create-policies}
+## Ge användare och grupper möjlighet att skapa profiler {#enable-users-and-groups-to-create-policies}
 
 På konfigurationssidan finns en länk till sidan Mina principer, där du anger vilka användare som kan skapa mina principer och vilka användare och grupper som visas i sökresultaten. Sidan Mina principer har två flikar:
 
@@ -686,7 +685,7 @@ På konfigurationssidan finns en länk till sidan Mina principer, där du anger 
 
 Innan du ger användarna behörighet att skapa anpassade profiler bör du tänka på hur mycket åtkomst eller kontroll du vill att enskilda användare ska ha. Tänk också på hur exponerad du vill att användare och grupper ska vara när du gör dem synliga för sökningar.
 
-### Ange användare och grupper som kan skapa principer {#specify-users-and-groups-who-can-create-policies}
+### Ange användare och grupper som kan skapa profiler {#specify-users-and-groups-who-can-create-policies}
 
 Som administratör anger du vilka användare och grupper som kan skapa anpassade profiler. Den här behörigheten kan anges på användar- och gruppnivå. Sökfunktionen söker i databasen för användarhantering efter användare och grupper.
 
@@ -702,7 +701,7 @@ Som administratör anger du vilka användare och grupper som kan skapa anpassade
 
 Dina valda användare och grupper har nu behörighet att skapa anpassade profiler.
 
-### Ta bort behörigheten för att skapa anpassade profiler från en användare eller grupp {#remove-the-create-custom-policies-permission-from-a-user-or-group}
+### Ta bort behörigheten Skapa anpassade profiler från en användare eller grupp {#remove-the-create-custom-policies-permission-from-a-user-or-group}
 
 1. På dokumentsäkerhetssidan klickar du på Konfiguration > Mina principer.
 1. Klicka på fliken Skapa profiler på sidan Mina profiler. Användare och grupper med behörigheter för att skapa anpassade profiler visas.
@@ -717,7 +716,7 @@ När användare hanterar sina egna profiler kan de söka efter användare och gr
 1. Klicka på fliken Synliga användare och grupper på sidan Mina profiler.
 1. Om du vill göra användare och grupper i en domän synliga klickar du på Lägg till domäner, markerar domänerna och klickar på Lägg till. Om du vill ta bort en domän markerar du kryssrutan bredvid domännamnet och klickar på Ta bort.
 
-## Redigera dokumentets säkerhetskonfigurationsfil {#manually-editing-the-document-security-configuration-file} manuellt
+## Redigera dokumentets säkerhetskonfigurationsfil manuellt {#manually-editing-the-document-security-configuration-file}
 
 Du kan importera och exportera den konfigurationsinformation som lagras i dokumentsäkerhetsdatabasen. Du kan till exempel skapa en säkerhetskopia av konfigurationsinformationen när du går från en mellanlagring till en produktionsmiljö, eller redigera avancerade alternativ som bara kan konfigureras för att redigera den här filen.
 
@@ -750,12 +749,7 @@ Du kan göra följande ändringar med hjälp av konfigurationsfilen:
 1. Klicka på Bläddra för att gå till konfigurationsfilen och klicka sedan på Importera. Du kan inte skriva sökvägen direkt i rutan Filnamn.
 1. Klicka på OK.
 
-1. 
-1. 
-1. 
-1. 
-
-### Ange en tidsgräns för offlinesynkronisering {#specify-a-timeout-period-for-offline-synchronization}
+### Ange en timeout-period för offlinesynkronisering {#specify-a-timeout-period-for-offline-synchronization}
 
 Dokumentsäkerhet gör att användare kan öppna och använda skyddade dokument när de inte är anslutna till dokumentsäkerhetsservern. Användarens klientprogram måste regelbundet synkronisera med servern för att dokument ska kunna användas offline. Första gången användare öppnar ett skyddat dokument tillfrågas de om deras dator ska ha behörighet att utföra periodisk klientsynkronisering.
 
@@ -773,7 +767,7 @@ I dokumentets säkerhetskonfigurationsfil kan du ange standardfrekvensen för de
 
 1. Importera konfigurationsfilen. (Se [Redigera konfigurationsfilen för dokumentsäkerhet manuellt](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file).)
 
-### Dokumentsäkerhetstjänster nekas för specifika program {#denying-document-security-services-for-specific-applications}
+### Avvisa dokumentsäkerhetstjänster för specifika program {#denying-document-security-services-for-specific-applications}
 
 Du kan konfigurera dokumentsäkerhet för att neka tjänster till program som uppfyller specifika villkor. Kriterierna kan ange ett enskilt attribut, t.ex. ett plattformsnamn, eller ange flera uppsättningar attribut. Med den här funktionen kan du styra vilka krav som dokumentsäkerheten måste hantera. Här är några program med den här funktionen:
 
@@ -948,7 +942,7 @@ I det här exemplet nekas alla begäranden från en Microsoft PowerPoint 2007- e
  </node
 ```
 
-### Ändra konfigurationsparametrarna för vattenstämpeln {#change-the-watermark-configuration-parameters}
+### Ändra konfigurationsparametrar för vattenstämpel {#change-the-watermark-configuration-parameters}
 
 Som standard kan du ange högst fem element i en vattenstämpel. Den maximala filstorleken för PDF-dokumentet som du vill använda som vattenstämpel är dessutom begränsad till 100 kB. Du kan ändra de här parametrarna i filen config.xml.
 
@@ -969,7 +963,7 @@ Som standard kan du ange högst fem element i en vattenstämpel. Den maximala fi
 
 1. Importera konfigurationsfilen. (Se [Redigera konfigurationsfilen för dokumentsäkerhet manuellt](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file).)
 
-### Inaktiverar externa länkar {#disabling-external-links}
+### Inaktivera externa länkar {#disabling-external-links}
 
 Många dokumentsäkerhetsanvändare har inte åtkomst till externa länkar som **www.adobe.com** när de använder rätt användargränssnitt för hantering:
 
@@ -1052,4 +1046,3 @@ Du kan öka skalbarheten för dokumentsäkerhetsservern genom att begränsa den 
    >Som standard är värdet för `DisableGlobalOfflineSynchronizationData`tangenten `false` inställt på .
 
 1. Spara och importera konfigurationsfilen. (Se [Redigera konfigurationsfilen för dokumentsäkerhet manuellt](/help/forms/using/admin-help/configuring-client-server-options.md#manually-editing-the-document-security-configuration-file).)
-
