@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: content
 content-type: reference
 discoiquuid: 69253ee9-8c28-436b-9331-6fb875f64cba
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 5c78edf8-148f-41a3-8b11-c1dada34090e
+source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
 workflow-type: tm+mt
 source-wordcount: '1764'
 ht-degree: 1%
 
 ---
-
 
 # Administrera taggar{#administering-tags}
 
@@ -34,7 +33,7 @@ Förutom sidor och resurser används taggar för AEM Communities-funktioner
 
 * Aktivera resurser (se [Tagga aktiveringsresurser](/help/communities/functions.md#catalog-function))
 
-## Taggfunktioner {#tag-features}
+## Märkordsfunktioner {#tag-features}
 
 Några av funktionerna i taggarna i AEM är:
 
@@ -98,7 +97,7 @@ När den obligatoriska informationen har angetts
 
 * välj **Skapa**
 
-### Åtgärder på taggar {#operations-on-tags}
+### Åtgärder för taggar {#operations-on-tags}
 
 Om du väljer ett namnutrymme eller en annan tagg blir följande åtgärder tillgängliga:
 
@@ -150,7 +149,7 @@ Sökvägen till referensen visas som ett verktygstips när du håller pekaren ö
 
 ![chlimage_1-192](assets/chlimage_1-192.png)
 
-### Skapar taggar {#creating-tags}
+### Skapa taggar {#creating-tags}
 
 ![chlimage_1-193](assets/chlimage_1-193.png)
 
@@ -206,10 +205,9 @@ tillBläddra till den nya sökvägen under vilken du vill flytta taggen.
 tillVisar aktuell 
 `name`av -taggen. Du kan ange en ny `name`plats.
 
-* 
 * välj **Spara**
 
-### Sammanfogar taggar {#merging-tags}
+### Sammanfoga taggar {#merging-tags}
 
 ![chlimage_1-199](assets/chlimage_1-199.png)
 
@@ -232,7 +230,7 @@ iBläddra för att markera sökvägen till taggen som ska sammanfogas i.
 >
 >När en refererad tagg flyttas eller sammanfogas tas taggen inte bort fysiskt så att det går att behålla referenser.
 
-### Publicerar taggar {#publishing-tags}
+### Publiceringstaggar {#publishing-tags}
 
 ![chlimage_1-201](assets/chlimage_1-201.png)
 
@@ -246,7 +244,7 @@ Om du vill publicera en taxonomi (ett namnutrymme och undertaggar) är det bäst
 
 Om du markerar ett namnutrymme eller en annan tagg och väljer ikonen **`Unpublish`**inaktiveras taggen i redigeringsmiljön och tas bort från publiceringsmiljön. Om den markerade taggen är en behållartagg inaktiveras alla dess underordnade taggar i redigeringsmiljön och tas bort från publiceringsmiljön, precis som åtgärden `Delete`.
 
-### Tar bort taggar {#deleting-tags}
+### Ta bort taggar {#deleting-tags}
 
 ![chlimage_1-203](assets/chlimage_1-203.png)
 
@@ -318,4 +316,3 @@ Mer information om hur du lägger till ett nytt språk i dialogrutan finns i [L�
    Information om taggningsramverket samt hur du utökar och inkluderar taggar i anpassade program.
 
 * [Klassiskt gränssnitt, taggningskonsol](/help/sites-administering/classic-console.md)
-
