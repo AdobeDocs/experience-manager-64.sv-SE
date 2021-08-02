@@ -12,9 +12,9 @@ discoiquuid: 4b532cd3-1561-4b5c-8b4b-420c278926f0
 exl-id: d2fdad3f-513b-4147-a7c6-a3c1b64dd6e3
 feature: Karusellbanner
 role: User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 76592d2714106f96184196b9e8db012801bf7c28
 workflow-type: tm+mt
-source-wordcount: '4682'
+source-wordcount: '4642'
 ht-degree: 4%
 
 ---
@@ -33,9 +33,9 @@ På din webbplats kan en karusellbanderoll se ut så här:
 
 ![chlimage_1-439](assets/chlimage_1-439.png)
 
-Här kan du navigera bland bilderna (genom att klicka på siffrorna). Dessutom roteras bildrutorna automatiskt baserat på ett tidsintervall som du kan anpassa. Bilder som du lägger till i karusellbanderollen har stöd för både hotspot-områden och bildscheman, där användarna kan trycka eller gå till en hyperlänk eller komma åt ett snabbfönster.
+Här kan du navigera bland bilderna (genom att klicka på siffrorna). Dessutom roteras bildrutorna automatiskt baserat på ett tidsintervall som du kan anpassa. Bilder som du lägger till i karusellbanderollen har stöd för både hotspot-områden och bildscheman, där användarna kan trycka eller gå till en hyperlänk eller öppna ett Quickview-fönster.
 
-I det här exemplet har en användare tryckt på eller klickat på ett bildschema och öppnat snabbvyfönstret för handskar:
+I det här exemplet har en användare tryckt på eller klickat på ett bildschema och öppnat fönstret Quickview för handskar:
 
 ![chlimage_1-440](assets/chlimage_1-440.png)
 
@@ -53,7 +53,7 @@ Så här kommer du igång snabbt:
 
 1. [Identifiera hotspot- och bildschemavariabler](#identifying-hotspot-and-image-map-variables)  (endast för kunder som använder AEM Assets + Dynamic Media)
 
-   Börja med att identifiera dynamiska variabler som används i den befintliga snabbvyimplementeringen, så att du kan ange klickbara områden och data från bildscheman korrekt när du skapar en karusellbanderoll i AEM Assets.
+   Börja med att identifiera dynamiska variabler som används i den befintliga Quickview-implementeringen så att du kan ange klickbara områden och data från bildscheman korrekt när du skapar en karusellbanderoll i AEM Assets.
 
    >[!NOTE]
    >
@@ -97,9 +97,9 @@ Om du behöver redigera Carousel-uppsättningar läser du [redigera Carousel-upp
 
 ## Identifiera variabler för aktiveringspunkt och bildschema {#identifying-hotspot-and-image-map-variables}
 
-Börja med att identifiera dynamiska variabler som används i den befintliga snabbvyimplementeringen så att du kan ange aktiveringspunkter eller data för bildscheman korrekt när du skapar karuselluppsättningar i AEM Assets.
+Börja med att identifiera dynamiska variabler som används i den befintliga Quickview-implementeringen så att du kan ange klickbara områden eller data från bildscheman korrekt när du skapar karuselluppsättningar i AEM Assets.
 
-När du lägger till aktiveringspunkter eller bildscheman i en banderollbild i AEM Assets måste du tilldela varje hotspot eller bildschema en SKU och valfria ytterligare variabler. Sådana variabler används senare för att matcha aktiveringspunkter eller bildscheman med snabbvyinnehåll.
+När du lägger till aktiveringspunkter eller bildscheman i en banderollbild i AEM Assets måste du tilldela varje hotspot eller bildschema en SKU och valfria ytterligare variabler. Sådana variabler används senare för att matcha hotspot-områden eller bildscheman med QuickView-innehåll.
 
 >[!NOTE]
 >
@@ -111,16 +111,16 @@ Det är viktigt att kunna identifiera antalet och typen av variabler som ska kop
 
 Det finns olika sätt att identifiera en uppsättning variabler som ska användas för hotspot- eller bildschemaddata.
 
-Ibland kan det räcka att rådfråga IT-specialister som är ansvariga för den befintliga snabbvyimplementeringen, eftersom de troligen vet vilken minimiuppsättning data som behövs för att identifiera snabbvyn i systemet. I de flesta fall går det dock även att bara analysera den befintliga beteendet för koden.
+Ibland kan det räcka att rådfråga IT-specialister som är ansvariga för den befintliga QuickView-implementeringen, eftersom de troligen vet vilken minimiuppsättning data som behövs för att identifiera Quickview i systemet. I de flesta fall går det dock även att bara analysera den befintliga beteendet för koden.
 
-De flesta implementeringar av snabbvyn använder följande paradigm:
+De flesta QuickView-implementeringar använder följande paradigm:
 
 * Användaren aktiverar ett element i användargränssnittet på webbplatsen. Du kan till exempel klicka på en **[!UICONTROL Quick View]**-knapp.
-* Webbplatsen skickar en Ajax-begäran till backend-servern för att läsa in snabbvydata eller -innehåll vid behov.
-* Snabbvydata översätts till innehållet som förberedelse för återgivning på webbsidan.
+* Webbplatsen skickar en Ajax-begäran till serverdelen för att läsa in QuickView-data eller -innehåll vid behov.
+* Quickview-data översätts till innehållet som förberedelse för återgivning på webbsidan.
 * Slutligen återges sådant innehåll på skärmen visuellt i koden.
 
-Då besöker man olika delar av den befintliga webbplatsen där snabbvyfunktionen är implementerad, aktiverar snabbvyn och hämtar den Ajax-URL som webbsidan skickar för att läsa in snabbvydata eller -innehåll.
+Sedan besöker man olika delar av den befintliga webbplatsen där QuickView-funktionen används, startar QuickView och hämtar den Ajax-URL som skickats från webbsidan för att läsa in QuickView-data eller -innehåll.
 
 Normalt behöver du inte använda några specialverktyg för felsökning. Moderna webbläsare har webbinspektörer som klarar ett bra jobb. Nedan följer några exempel på webbläsare som innehåller webbinspektörer:
 
@@ -129,21 +129,21 @@ Normalt behöver du inte använda några specialverktyg för felsökning. Modern
 
 När nätverksövervakning är aktiverat i webbläsaren utlöser du snabbvyn på sidan.
 
-Nu hittar du snabbvyns Ajax-URL i nätverksloggen och kopierar den inspelade URL:en för framtida analys. I de flesta fall när du utlöser snabbvyn skickas flera begäranden till servern. Vanligtvis är snabbvyns Ajax-URL en en av de första i listan. Den har antingen en komplex frågesträngsdel eller sökväg och dess MIME-svarstyp är antingen `text/html`, `text/xml` eller `text/javascript`.
+Nu kan du hitta Quickview Ajax-URL:en i nätverksloggen och kopiera den inspelade URL:en för framtida analys. I de flesta fall när du utlöser snabbvyn skickas flera begäranden till servern. Vanligtvis är Quickview Ajax-URL en en av de första i listan. Den har antingen en komplex frågesträngsdel eller sökväg och dess MIME-svarstyp är antingen `text/html`, `text/xml` eller `text/javascript`.
 
 Under den här processen är det viktigt att du besöker olika delar av webbplatsen, med olika produktkategorier och typer. Anledningen är att URL:er för snabbvyn kan ha delar som är gemensamma för en viss webbplatskategori, men bara ändras om du besöker ett annat område på webbplatsen.
 
 I det enklaste fallet är den enda variabeldelen i snabbvyns URL produktens SKU. I det här fallet är SKU-värdet den enda datadel som du behöver för att lägga till aktiveringspunkter eller bildscheman i banderollbilden.
 
-I komplexa fall har dock snabbvyns URL-adress olika element utöver SKU:n, till exempel kategori-ID, färgkod, storlekskod osv. I sådana fall är varje element en separat variabel i hotspot- eller bildschemats datadefinition i karusellbanderollfunktionen.
+I komplexa fall har emellertid QuickView-webbadressen olika element utöver SKU:n, till exempel kategori-ID, färgkod, storlekskod osv. I sådana fall är varje element en separat variabel i hotspot- eller bildschemats datadefinition i karusellbanderollfunktionen.
 
-Titta på följande exempel på URL:er för snabbvyn och deras resulterande hotspot- eller bildschemavariabler:
+Titta på följande exempel på QuickView-URL:er och deras resulterande hotspot- eller bildschemavariabler:
 
 <table> 
  <tbody> 
   <tr> 
    <td>En SKU, hittades i frågesträngen.</td> 
-   <td><p>De inspelade URL:erna för snabbvyn innehåller följande:</p> 
+   <td><p>De inspelade URL:erna för snabbvyn är bland annat följande:</p> 
     <ul> 
      <li><p><code>https://server/json?productId=866558&amp;source=100</code></p> </li> 
      <li><p><code>https://server/json?productId=1196184&amp;source=100</code></p> </li> 
@@ -153,7 +153,7 @@ Titta på följande exempel på URL:er för snabbvyn och deras resulterande hots
   </tr> 
   <tr> 
    <td>En SKU, finns i URL-sökvägen.</td> 
-   <td><p>De inspelade URL:erna för snabbvyn innehåller följande:</p> 
+   <td><p>De inspelade URL:erna för snabbvyn är bland annat följande:</p> 
     <ul> 
      <li><p><code>https://server/product/6422350843</code></p> </li> 
      <li><p><code>https://server/product/1607745002</code></p> </li> 
@@ -162,7 +162,7 @@ Titta på följande exempel på URL:er för snabbvyn och deras resulterande hots
   </tr> 
   <tr> 
    <td>SKU och kategori-ID i frågesträngen.</td> 
-   <td><p>De inspelade URL:erna för snabbvyn innehåller följande:</p> 
+   <td><p>De inspelade URL:erna för snabbvyn är bland annat följande:</p> 
     <ul> 
      <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=305466</code></p> </li> 
      <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=310181</code></p> </li> 
@@ -283,7 +283,7 @@ Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-
       * Om du inte är AEM Sites- eller e-handelskund
 
          * Se [Identifiera hotspot-variabler](#identifying-hotspot-and-image-map-variables) eftersom du kanske vill definiera dessa variabler.
-         * Ange sedan SKU-värdet manuellt. I textfältet **[!UICONTROL SKU Value]** skriver du produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Det angivna SKU-värdet fyller automatiskt i variabeldelen av snabbvymallen så att systemet vet att den aktiveringspunkt som användaren går till associeras med en viss SKU-snabbvy.
+         * Ange sedan SKU-värdet manuellt. I textfältet **[!UICONTROL SKU Value]** skriver du produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Det angivna SKU-värdet fyller automatiskt i variabeldelen av QuickView-mallen så att systemet vet att den aktiveringspunkt som användaren går till associeras med en viss SKU:s snabbvy.
          * (Valfritt) Om det finns andra variabler i snabbvyn som du behöver för att identifiera en produkt ytterligare trycker du på **[!UICONTROL Add Generic Variable]**. Ange ytterligare en variabel i textfältet. `category=Mens` är till exempel en tillagd variabel.
          * Mer information finns i [Arbeta med väljare](working-with-selectors.md).
    * Tryck på **[!UICONTROL Hyperlink]**.
@@ -323,7 +323,7 @@ Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-
 
 >[!NOTE]
 >
->Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]**-gruppen för att kunna skapa eller redigera Carousel-banners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL dam-users]**-gruppen.
+>Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]**-gruppen för att kunna skapa eller redigera karusellbanners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL dam-users]**-gruppen.
 
 Du kan utföra en mängd redigeringsuppgifter på Carousel Sets, till exempel:
 
@@ -415,16 +415,16 @@ Om du är en fristående AEM kan du dock manuellt lägga till karusellbanderolle
 
 Detta gäller endast om du är en fristående AEM Assets-kund.
 
-Det sista steget i den här processen är att integrera karusellbanderollen med en befintlig snabbvyimplementering på din webbplats. Alla QuickView-implementeringar är unika och det behövs ett specifikt tillvägagångssätt som troligen inbegriper hjälp av en IT-handläggare på frontend.
+Det sista steget i den här processen är att integrera karusellbanderollen med en befintlig Quickview-implementering på din webbplats. Alla QuickView-implementeringar är unika och det behövs ett specifikt tillvägagångssätt som troligen inbegriper hjälp av en IT-handläggare på frontend.
 
-Den befintliga snabbvyimplementeringen representerar normalt en kedja av interrelaterade åtgärder som inträffar på webbsidan i följande ordning:
+Den befintliga Quickview-implementeringen representerar normalt en kedja av interrelaterade åtgärder som inträffar på webbsidan i följande ordning:
 
 1. En användare utlöser ett element i användargränssnittet för webbplatsen.
-1. Slutkoden hämtar en URL för snabbvyn baserat på användargränssnittselementet som utlöstes i steg 1.
+1. FrontEnd-koden hämtar en QuickView-URL som baseras på användargränssnittselementet som utlöstes i steg 1.
 1. Front-end-koden skickar en Ajax-begäran med den URL som fås i steg 2.
-1. Motstående logik returnerar motsvarande snabbvydata eller innehåll tillbaka till slutkoden.
-1. Slutkoden läser in snabbvydata eller -innehåll.
-1. Om du vill kan du konvertera den inlästa snabbvyinformationen till en HTML-representation med koden längst fram.
+1. Bakåtlogiken returnerar motsvarande QuickView-data eller -innehåll tillbaka till slutkoden.
+1. Slutkoden läser in QuickView-data eller -innehåll.
+1. Om du vill kan du konvertera den inlästa QuickView-informationen till en HTML-representation med hjälp av koden längst fram.
 1. I koden visas en modal dialogruta eller panel och HTML-innehållet återges på skärmen för slutanvändaren.
 
 Dessa anrop kanske inte representerar oberoende offentliga API-anrop som kan anropas av webbsidans logik från ett godtyckligt steg. I stället är det ett kedjat anrop där varje steg döljs i den sista fasen (återanrop) av föregående steg.
@@ -435,17 +435,17 @@ I en sådan händelsehanterare gör koden längst fram följande:
 
 * Lyssnar på en händelse som skickas av karusellbanderollen.
 * Skapar en URL för snabbvyn baserat på hotspot- eller bildschemats data.
-* Startar processen att läsa in snabbvyn från backend-objektet och återge den på skärmen för visning.
+* Startar processen att läsa in snabbvyn från serverdelen och återge den på skärmen för visning.
 
 Den inbäddningskod som returneras av AEM Assets har redan en färdig händelsehanterare på plats som kommenteras ut.
 
 Därför är det bara nödvändigt att avkommentera koden och ersätta dummy-hanterarens brödtext med koden som är specifik för den aktuella webbsidan.
 
-Processen med att skapa snabbvyns URL är i princip motsatt den process som används för att identifiera hotspot- och bildschemavariabler som beskrivs tidigare.
+Processen med att konstruera QuickView-URL:en är i stort sett annorlunda än den process som användes för att identifiera hotspot- och bildschemavariabler som beskrivs tidigare.
 
 Se [Identifiera hotspot- och bildschemavariabler](#identifying-hotspot-and-image-map-variables).
 
-Det sista steget för att utlösa snabbvyns URL och aktivera snabbvypanelen kräver troligen hjälp av en IT-handläggare på IT-avdelningen. De har kunskap att lära sig hur man på bästa sätt aktiverar snabbvyimplementeringen från rätt steg med en färdig snabbvywebbadress.
+Det sista steget för att utlösa snabbgransknings-URL:en och aktivera snabbvypanelen kräver troligen hjälp av en IT-handläggare på IT-avdelningen. De har kunskap om hur de bäst kan utlösa QuickView-implementeringen från rätt steg med en färdig QuickView-URL.
 
 ## Använda snabbvyer för att skapa anpassade popup-fönster {#using-quickviews-to-create-custom-pop-ups}
 
