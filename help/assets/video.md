@@ -1,5 +1,5 @@
 ---
-title: Video
+title: Video i Dynamic Media
 description: Lär dig hur du arbetar med video i Dynamic Media.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -8,9 +8,9 @@ content-type: reference
 exl-id: acb95a2b-0171-449e-97fa-f9a533f990de
 feature: Video
 role: User
-source-git-commit: 2bbc7e2a6b3aa36a7c2803d12ba402a5739c9a5c
+source-git-commit: d5b4f559b20c8671bd648d240b54cb65f73fd222
 workflow-type: tm+mt
-source-wordcount: '9839'
+source-wordcount: '9881'
 ht-degree: 3%
 
 ---
@@ -45,8 +45,10 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
       * [Tillämpa en videoprofil på mappar](video-profiles.md#applying-a-video-profile-to-folders).
       * Läs mer om [Bästa tillvägagångssätt för att ordna digitala resurser så att du kan använda bearbetningsprofiler](organize-assets.md#organize-using-folders).
       * Läs mer om [Organisera digitala resurser](organize-assets.md).
-   * Överför dina överordnad videor till mapparna. Du kan överföra videofiler som är upp till 15 GB vardera. När du lägger till videofilmer i mappen kodas de enligt den videobearbetningsprofil som du tilldelade mappen.
+   * Överför dina primära källvideor till mapparna. När du lägger till videofilmer i mappen kodas de enligt den videobearbetningsprofil som du tilldelade mappen.
 
+      * Dynamic Media har främst stöd för videoklipp i kort form med en maxlängd på 30 minuter.
+      * Du kan överföra videofiler som är upp till 15 GB vardera.
       * [Ladda upp videor](managing-video-assets.md#uploading-and-previewing-video-assets).
       * Läs mer om [Indatafilformat](assets-formats.md#supported-multimedia-formats) som stöds.
    * Övervaka hur [videokodningen fortskrider](#monitoring-video-encoding-and-youtube-publishing-progress) antingen från resursvyn eller arbetsflödesvyn.
@@ -71,7 +73,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
          [Visa videoåtergivningar](video-renditions.md)
 
-         [Hantera videoåtergivningar](managing-assets-touch-ui.md#managing-renditions)
+[Hantera videoåtergivningar](managing-assets-touch-ui.md#managing-renditions)
 
       * [Hantera förinställningar för visningsprogram](managing-viewer-presets.md)
       * [Publicera resurser](publishing-dynamicmedia-assets.md)
@@ -83,7 +85,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
       * Redigera egenskaperna för video, till exempel titel, beskrivning och taggar, anpassade metadatafält:
 
-         [Redigera videoegenskaper](managing-assets-touch-ui.md#editing-properties)
+[Redigera videoegenskaper](managing-assets-touch-ui.md#editing-properties)
 
       * [Hantera metadata för digitala resurser](metadata.md)
       * [Metadata-scheman](metadata-schemas.md)
@@ -283,9 +285,12 @@ For advice about video encoding, see the following:
 * Article: *Streaming 101: The Basics — Codecs, Bandwidth, Data Rate, and Resolution:* [www.adobe.com/go/learn_s7_streaming101_en](https://www.adobe.com/go/learn_s7_streaming101_en).
 * Video: *Video Encoding Basics:* [www.adobe.com/go/learn_s7_encoding_en](https://www.adobe.com/go/learn_s7_encoding_en). -->
 
-### Källvideofiler {#source-video-files}
+### Videofiler med primär källa {#source-video-files}
 
 När du kodar en videofil ska du använda en källvideofil med högsta möjliga kvalitet. Undvik att använda tidigare kodade videofiler eftersom dessa filer redan är komprimerade, och ytterligare kodning skapar en video med delkvalitet.
+
+* Dynamic Media har främst stöd för videoklipp i kort form med en maxlängd på 30 minuter.
+* Du kan överföra primära källvideofiler på upp till 15 GB vardera.
 
 I följande tabell beskrivs rekommenderad storlek, proportioner och lägsta bithastighet som källvideofilerna ska ha innan du kodar dem:
 
@@ -411,7 +416,7 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
    <td><p>Källa</p> </td> 
    <td><p>1920 x 1080</p> </td> 
    <td><p>1</p> </td> 
-   <td><p>1</p> </td> 
+   <td><p>3</p> </td> 
   </tr> 
   <tr> 
    <td><p>Kodad</p> </td> 
@@ -423,7 +428,7 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
    <td><p>Kodad</p> </td> 
    <td><p>640 x 360</p> </td> 
    <td><p>3</p> </td> 
-   <td><p>3</p> </td> 
+   <td><p>1</p> </td> 
   </tr> 
   <tr> 
    <td><p>Kodad</p> </td> 
@@ -453,10 +458,10 @@ När du publicerar videomaterial till YouTube-servrar utför du följande uppgif
 1. [Lägga till taggar för publicering](#adding-tags-for-publishing)
 1. [Aktivera YouTube Publish Replication Agent](#enabling-the-youtube-publish-replication-agent)
 1. [Konfigurera YouTube i AEM](#setting-up-youtube-in-aem)
-1. [(Valfritt) Automatisera inställningen av YouTube standardegenskaper för dina överförda videofilmer](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
+1. [(Valfritt) Automatisera inställningen av YouTube standardegenskaper för överförda videofilmer](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
 1. [Publicera videor i din YouTube-kanal](#publishing-videos-to-your-youtube-channel)
-1. [(Valfritt) Verifiera publicerad video på YouTube](video.md#optional-verifying-the-published-video-on-youtube)
-1. [Länka YouTube-URL:er till ditt webbprogram](#linking-youtube-urls-to-your-web-application)
+1. [(Valfritt) Verifiera den publicerade videon på YouTube](video.md#optional-verifying-the-published-video-on-youtube)
+1. [Länka YouTube URL:er till ditt webbprogram](#linking-youtube-urls-to-your-web-application)
 
 Du kan även [avpublicera videoklipp för att ta bort dem från YouTube](#unpublishing-videos-to-remove-them-from-youtube).
 
@@ -468,7 +473,7 @@ Du behöver ett Google-konto för att publicera till YouTube. Om du har ett GMAI
 >
 >Följande steg var korrekta när detta skrevs. Google uppdaterar dock regelbundet sina webbplatser utan föregående meddelande. De här stegen kan därför vara något annorlunda.
 
-**Så här konfigurerar du Google Cloud-inställningar**:
+**Så här konfigurerar du Google Cloud-inställningar:**
 
 1. Skapa ett nytt Google-konto.
 
@@ -533,7 +538,7 @@ Du måste ha en eller flera kanaler för att kunna publicera videofilmer på You
 >
 >Kontrollera att du redan har konfigurerat en eller flera kanaler i YouTube &amp;ast;before&amp;ast; du lägger till kanaler under YouTube-inställningar i AEM (se [Konfigurera YouTube i AEM](#setting-up-youtube-in-aem) nedan). Om du inte gör detta får du ingen varning om att det inte finns några befintliga kanaler. Google-autentisering sker dock fortfarande när du lägger till en kanal, men det finns inget alternativ för att välja vilken kanal videon skickas till.
 
-**Så här skapar du en YouTube-kanal**:
+**Så här skapar du en YouTube-kanal:**
 
 1. Gå till [https://www.youtube.com](https://www.youtube.com/) och logga in med inloggningsuppgifterna för ditt Google-konto.
 1. I det övre högra hörnet av YouTube-sidan trycker du på din profilbild (kan också visas som en bokstav i en enfärgad cirkel) och sedan på **[!UICONTROL YouTube settings]** (runda kugghjulsikonen).
@@ -608,13 +613,13 @@ Om du tänker använda standardtaggarna i AEM kan du hoppa över den här uppgif
 
    Nu kan du publicera videor i din YouTube-kanal.
 
-### (Valfritt) Automatisera inställningen av YouTube standardegenskaper för dina överförda videofilmer {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
+### (Valfritt) Automatisera inställningen av YouTube standardegenskaper för överförda videofilmer {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
 
 Du kan automatisera inställningen av YouTube-egenskaper när du överför videoklipp. Du uppnår detta genom att skapa en metadatabearbetningsprofil i AEM.
 
 Om du vill skapa en profil för metadatabearbetning kopierar du först värden från fälten **[!UICONTROL Field Label]**, **[!UICONTROL Map to property]** och **[!UICONTROL Choices]**, som alla finns i metadatascheman för video. Sedan skapar du din YouTube-profil för videometadatabearbetning genom att lägga till dessa värden i den.
 
-**Om du vill automatisera inställningen av YouTube standardegenskaper för dina överförda videofilmer**:
+**Om du vill automatisera inställningen av YouTube standardegenskaper för dina överförda videofilmer:**
 
 1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **[!UICONTROL Tools > Assets > Metadata Schemas]** i den vänstra listen.
 1. Tryck på **[!UICONTROL default]**. (Lägg inte till en bockmarkering i markeringsrutan till vänster om &quot;standard&quot;.)
@@ -687,7 +692,7 @@ Nu kopplar du taggarna som du lade till tidigare till videoresurser. I den här 
 För att publicera innehåll från YouTube använder AEM arbetsflödet **[!UICONTROL Publish to YouTube]**, som gör att du kan övervaka förloppet och visa felinformation.
 Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
 
-**Så här publicerar du videor i din YouTube-kanal**:
+**Så här publicerar du videor i din YouTube-kanal:**
 
 1. I AEM navigerar du till en videoresurs som du vill publicera i din YouTube-kanal.
 1. Välj videoresurs.
@@ -703,7 +708,7 @@ Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-vid
 
    Du kan även verifiera den publicerade videon på din YouTube-kanal.
 
-### (Valfritt) Verifiera publicerad video på YouTube {#optional-verifying-the-published-video-on-youtube}
+### (Valfritt) Verifiera den publicerade videon på YouTube {#optional-verifying-the-published-video-on-youtube}
 
 Du kan övervaka förloppet för din YouTube-publicering (eller avpublicering).
 
@@ -713,13 +718,13 @@ Publiceringstiderna kan variera avsevärt beroende på olika faktorer, bland ann
 
 Efter åtta timmar om du fortfarande ser ett statusmeddelande som säger **[!UICONTROL Uploaded (processing, please wait)]** kan du försöka ta bort videon från vår webbplats och överföra den igen.
 
-### Länka YouTube-URL:er till ditt webbprogram {#linking-youtube-urls-to-your-web-application}
+### Länka YouTube URL:er till ditt webbprogram {#linking-youtube-urls-to-your-web-application}
 
 Du kan hämta en YouTube URL-sträng som genereras av Dynamic Media när du har publicerat videon. När du kopierar YouTube-URL:en markeras den i Urklipp så att du kan klistra in den på sidor på webbplatsen eller i programmet.
 
 YouTube-URL:en kan inte kopieras förrän du har publicerat videoresursen till YouTube.
 
-**Så här länkar du YouTube URL:er till ditt webbprogram**:
+**Så här länkar du YouTube URL:er till ditt webbprogram:**
 
 1. Navigera till den YouTube *publicerade* videoresurs vars URL du vill kopiera och markera den.
 
@@ -740,12 +745,12 @@ När du avpublicerar en videoresurs i AEM tas videon bort från YouTube.
 För att ta bort innehåll från YouTube använder AEM arbetsflödet **[!UICONTROL Unpublish from YouTube]**, som gör att du kan övervaka förloppet och visa felinformation.
 Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
 
-**Så här avpublicerar du videoklipp för att ta bort dem från YouTube**:
+**Så här avpublicerar du videoklipp för att ta bort dem från YouTube:**
 
-1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **[!UICONTROL Tools > Assets]** i den vänstra listen.
+1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** i den vänstra listen.
 1. Navigera till de videoresurser som du vill avpublicera från din YouTube-kanal.
 1. Välj en eller flera publicerade videoresurser i ett resursurvalsläge.
-1. Tryck på **[!UICONTROL Unpublish > Unpublish]** i verktygsfältet.
+1. Tryck på **[!UICONTROL Unpublish]** > **[!UICONTROL Unpublish]** i verktygsfältet.
 
 ## Övervaka videokodning och YouTube publiceringsförlopp {#monitoring-video-encoding-and-youtube-publishing-progress}
 
@@ -838,7 +843,7 @@ Hur du konfigurerar meddelanden beror på om du vill ha meddelanden för kodning
 
 * Gör följande för publiceringsjobb i YouTube:
 
-1. I AEM väljer du **[!UICONTROL Tools > Workflow > Models]**.
+1. I AEM väljer du **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
 1. Välj arbetsflödet **[!UICONTROL Publish to YouTube]** och tryck sedan på **[!UICONTROL Edit]**.
 1. Högerklicka på arbetsflödessteget **[!UICONTROL YouTube Upload]** och tryck sedan på **[!UICONTROL Edit]**.
 1. Tryck på fliken **[!UICONTROL Argument]s**.
@@ -882,9 +887,9 @@ Första gången du anger Videorapporter visas som standard videodata från och m
 
 För att videorapporter ska fungera på rätt sätt skapas ett Report Suite-ID automatiskt när Dynamic Media-Cloud Services konfigureras. Samtidigt skickas Report Suite-ID:t till publiceringsservern så att det är tillgängligt för funktionen Kopiera URL när du förhandsgranskar resurser. Detta kräver dock att publiceringsservern redan har konfigurerats. Om publiceringsservern inte är konfigurerad kan du fortfarande publicera för att se videorapporten, men du måste gå tillbaka till Dynamic Media Cloud Configuration och trycka på **OK**.
 
-**Så här visar du videorapporter**:
+**Så här visar du videorapporter:**
 
-1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **[!UICONTROL Tools > Assets > Video Reports]** i den vänstra listen.
+1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Reports]** i det vänstra fältet.
 1. Gör något av följande på sidan Videorapporter:
 
    * I närheten av det övre högra hörnet trycker du på ikonen **[!UICONTROL Refresh Video Report]**.
@@ -975,7 +980,7 @@ Dynamic Media kan konvertera bildtextfiler till JSON-format (JavaScript Object N
 
 Mer information om hur du använder JSON-funktionen i en URL finns i [Serverar statiskt (icke-bildinnehåll)](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api) i hjälpen för Dynamic Media Image Serving and Rendering API *.*
 
-**Så här lägger du till bildtexter eller undertexter till video**:
+**Så här lägger du till bildtexter eller undertexter till video:**
 
 1. Använd ett program eller en tjänst från tredje part för att skapa en undertextningsfil för video.
 
@@ -1135,7 +1140,7 @@ Om du vill kan du välja att överföra en anpassad miniatyrbild för videon i s
 
    Se [Konfigurera standardtidsintervallet som videominiatyrbilder genereras](#configuring-the-default-time-interval-that-video-thumbnails-are-generated).
 
-#### Konfigurera standardtidsintervallet som videominiatyrbilder genereras {#configuring-the-default-time-interval-that-video-thumbnails-are-generated}
+#### Konfigurera det standardtidsintervall som videominiatyrbilder genereras {#configuring-the-default-time-interval-that-video-thumbnails-are-generated}
 
 När du konfigurerar och sparar det nya standardtidsintervallet gäller ändringen automatiskt endast videoklipp som du överför i framtiden. Den nya standardinställningen tillämpas inte automatiskt på videoklipp som du tidigare överfört. För befintliga videofilmer måste du återskapa miniatyrbilderna.
 
@@ -1143,7 +1148,7 @@ Se [Lägga till en videominiatyr](#adding-a-video-thumbnail).
 
 Om du vill konfigurera det standardtidsintervall som videominiatyrbilder genereras,
 
-1. I AEM trycker du på **[!UICONTROL Tools > General > CRXDE Lite]**.
+1. I AEM trycker du på **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 
 1. Gå till `o etc/dam/imageserver/configuration/jcr:content/settings.` på CRXDE Lite-sidan i katalogpanelen till vänster
 
