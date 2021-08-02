@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, leverera och optimera digitala resurser.
-source-git-commit: 0d660388cd0fbbf98076610d18c19f480c75ef11
+source-git-commit: d9649477328b3249dae396bbdca0f660c9c8faca
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 35%
+source-wordcount: '626'
+ht-degree: 34%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 35%
    + [Lägga till bildscheman](image-maps.md)
    + [Återanvända resurser med MSM](reuse-assets-using-msm.md)
 + Dynamic Media{#dynamic}
-   + [Dynamic Media-nyhetsbrev från Experience League](dynamic-media-newsletter.md)
+   + [Dynamic Media nyhetsbrevarkiv från Experience League](dynamic-media-newsletter.md)
    + [Installera Dynamic Media](administering-dynamic-media.md)
    + [Arbeta med Dynamic Media](dynamic-media.md)
    + [Konfigurera Dynamic Media - Scene7-läge](config-dms7.md)
