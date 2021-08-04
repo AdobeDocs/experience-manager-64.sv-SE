@@ -8,9 +8,9 @@ breadcrumb-title: Distributionsguide
 user-guide-description: Läs mer om installation, distribution och arkitekturen för Adobe Experience Manager 6.4, inklusive vår molndistribution av Adobe Managed Services.
 feature: Distribuerar
 role: Architect
-source-git-commit: 5b0eef590f9a0c709fa21b8dbcf6a2f286a20237
+source-git-commit: 17c9f8523992b5ba87125c77d3e4f70f86f89c58
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '373'
 ht-degree: 1%
 
 ---
@@ -56,11 +56,11 @@ ht-degree: 1%
    + [Avlastar jobb](offloading.md)
    + [Enkel inloggning](single-sign-on.md)
    + [Resursmappning](resource-mapping.md)
-   + [Aktivera HTTP över SSL](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/ssl-by-default.html)
+   + [Aktivera HTTP över SSL](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/ssl-by-default.html)
    + [Konsekvenskontroll och genomgående kontroll](consistency-check.md)
    + [Riktlinjer för prestanda](performance-guidelines.md)
    + [Prestandaoptimering](configuring-performance.md)
-   + [Prestandahandbok för resurser](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/performance-tuning-guidelines.html?lang=en)
+   + [Prestandahandbok för resurser](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/performance-tuning-guidelines.html)
    + [Instruktionsartiklar för konfiguration](ht-deploy.md)
    + [Ta bort Geometrixx](removing-the-geometrixx-sites.md)
    + [Konfigurerar webbkonsolen](configuring-web-console.md)
