@@ -1,12 +1,12 @@
 ---
+title: Dynamic Media nyhetsbrevarkiv
 description: 'Det arkiverade nyhetsbrevet från Experience League var ett månatligt nyhetsbrev. Den har utformats för att hjälpa dig att komma igång med Dynamic Media och Dynamic Media Classic så att du direkt kan få mer för pengarna. De arkiverade nyhetsbreven innehåller värdefulla kunskapsskapande resurser som var tillgängliga i det här enastående nyhetsbrevet som nu har upphört. Arkiverade nyhetsbrev innehåller instruktionsvideor och lösningsöversikter. Det finns även introduktioner till viktiga funktioner som bildförinställningar, visningsförinställningar och videoprofiler.  '
 keywords: dynamiska medier;nyhetsbrev;produktuppdateringar;tips och tricks;event;customer success;blog;blogs;images;videor;features;capabilities
 solution: Experience Manager, Dynamic Media Classic
-title: Dynamic Media nyhetsbrevarkiv
 exl-id: aa02c811-0296-4a02-b745-e70aeb9d1e97
 feature: Samarbete,Dynamic Media Classic
 role: Admin,User
-source-git-commit: d9649477328b3249dae396bbdca0f660c9c8faca
+source-git-commit: 77d312235854e85b2a486365092fbe8a802faccf
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 0%
@@ -54,10 +54,6 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * Se Dynamic Media sessioner från Online Adobe Summit 2020.
    * Läs mer om kostnadsfria granskningar i Dynamic Media Classic.
    * Möt John Monroe, Senior Program Manager för Customer Success Services.
-
-<!--     >[!IMPORTANT]
-    >
-    >We want to make sure we are only sending the Dynamic Media newsletter to those who want to receive it. To continue receiving the newsletter after this issue, please sign up for it [here](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&reserved=0). -->
 
 * **[Februari 2020, utgåva 2](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_02_2020_Feb.html)**
 
