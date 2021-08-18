@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d7b5b5e3-2d84-4a6b-bcc2-d490882ff3ed
 exl-id: 9264c888-a583-40eb-9178-273146f8a12b
-source-git-commit: 9178c3a01e7f450d3794f41605fb3788231c88c0
+source-git-commit: a70f874ad7fcae59ee4c6ec20e23ffb2e339590b
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1506'
 ht-degree: 0%
 
 ---
@@ -125,7 +125,7 @@ Besök [Anpassningar på serversidan](server-customize.md) om du vill ha informa
 
 ## Hanterarfält - språk för JS-mallar {#handlebars-js-templating-language}
 
-En av de mest märkbara förändringarna i det nya ramverket är användningen av mallspråket `Handlebars JS` (HBS), en populär öppen källkodsteknik för serverklientåtergivning.
+En av de mest märkbara förändringarna i det nya ramverket är användningen av [Handlebars JS](https://handlebarsjs.com/)-mallspråket (HBS), en populär öppen källkod-teknik för serverklientåtergivning.
 
 HBS-skript är enkla, logikfria, kompilerade på både server och klient, är enkla att överlagra och anpassa och binds naturligt med klientens användargränssnitt eftersom HBS stöder rendering på klientsidan.
 
