@@ -9,22 +9,21 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 content-type: reference
 topic-tags: deploying
 discoiquuid: 7aa28e36-6b31-4447-b800-cab2dc78c93c
-translation-type: tm+mt
-source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+exl-id: ef622ac3-d96d-48bf-bfb2-61516d9deb5c
+source-git-commit: 9178c3a01e7f450d3794f41605fb3788231c88c0
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
 
-
-# Uppgraderar till AEM 6.4 Communities {#upgrading-to-aem-communities}
+# Uppgradera till AEM 6.4 Communities {#upgrading-to-aem-communities}
 
 Beroende på de olika platsernas topologi och funktioner kan följande åtgärder vara nödvändiga när du uppgraderar till AEM Communities 6.4 eller installerar det senaste funktionspaketet.
 
 Detta avsnitt är specifikt för Communities och kompletterar informationen i [Uppgradera till AEM 6.4](../../help/sites-deploying/upgrade.md) (plattform).
 
-## Uppgraderar från AEM 6.1 eller senare {#upgrading-from-aem-or-later}
+## Uppgradera från AEM 6.1 eller senare {#upgrading-from-aem-or-later}
 
 ### Indexera om Solr {#reindex-solr}
 
@@ -42,7 +41,7 @@ Från och med AEM 6.3 lagras inte längre rapportinformation i MySQL i aktiverin
 
 Kontakta [kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) om du behöver hjälp med att migrera innehåll från Enablement 1.0.
 
-## Uppgraderar från AEM 6.0 {#upgrading-from-aem}
+## Uppgradera från AEM 6.0 {#upgrading-from-aem}
 
 Om befintlig UGC måste behållas beror det på om distributionen lagrades i UGC [lokalt](#on-premise-storage) eller i [Adobe-molnet](#adobe-cloud-storage).
 
@@ -83,7 +82,7 @@ Se även [Använda Maven för Communities](maven.md).
 
 ### Inga JSP-komponentmallar {#no-jsp-component-templates}
 
-I [ramverket för sociala komponenter](scf.md) (SCF) används [HandlebarsJS](https://www.handlebarsjs.com/) (HBS) mallspråk i stället för Java Server Pages (JSP) som användes före AEM 6.0.
+[Ramverket för sociala komponenter](scf.md) (SCF) använder mallspråket `HandlebarsJS` (HBS) i stället för Java Server Pages (JSP) som användes före AEM 6.0.
 
 I AEM 6.0 låg JSP-komponenterna kvar tillsammans med de nya HBS-ramverkskomponenterna på samma plats, där HBS-komponenterna vanligtvis finns i undermappar med namnet&quot;hbs&quot;.
 
@@ -95,7 +94,7 @@ Från och med AEM 6.1 togs JSP-komponenterna bort helt. För Communities rekomme
 
 Förutom att flytta UGC från tidigare versioner går det också att använda verktyget för att flytta UGC från en [SRP](working-with-srp.md) till en annan, till exempel från MSRP till DSRP.
 
-## Uppgraderar från AEM 5.6.1 eller tidigare {#upgrading-from-aem-or-earlier}
+## Uppgradera från AEM 5.6.1 eller tidigare {#upgrading-from-aem-or-earlier}
 
 Det finns tre generationer av communitykomponenter:
 
