@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: d0249609-2a9c-4d3b-92ee-dbc5fbdeaac6
 exl-id: 0b7496f0-0b3c-4d12-a659-d95744157f14
-source-git-commit: 9178c3a01e7f450d3794f41605fb3788231c88c0
+source-git-commit: a70f874ad7fcae59ee4c6ec20e23ffb2e339590b
 workflow-type: tm+mt
-source-wordcount: '2121'
+source-wordcount: '2163'
 ht-degree: 1%
 
 ---
@@ -147,21 +147,21 @@ SCORM (Shareable Content Object Reference Model) är en samling standarder och s
 
 AEM Communities SCORM-motorn krävs för funktionen [enablement](overview.md#enablement-community). SCORM-paket som stöds i AEM Communities 6.4 är:
 
-* **[cq -social- scorm -package, version 1.2.11](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-pkg)**. Det här SCORM-paketet stöds av alla versioner av AEM 6.4 Communities.
+* **[cq -social- scorm -package, version 1.2.11](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fsocial%2Fscorm%2Fcq-social-scorm-pkg)**. Det här SCORM-paketet stöds av alla versioner av AEM 6.4 Communities.
 
-* **[cq -social- scorm -package, version 2.2.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg)** includes  [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) engine. SCORM-paketet stöds AEM 6.4.2.x Communities och senare.
+* **[cq -social- scorm -package, version 2.2.2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fsocial%2Fscorm%2Fcq-social-scorm-2017-pkg)** includes  [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) engine. SCORM-paketet stöds AEM 6.4.2.x Communities och senare.
 
-För en ny installation av SCORM-motorn bör paketet som innehåller [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) (som är [ cq -social- scorm -package, version 2.2.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg)) användas. så att du kan spela upp utbildningsresurser som stöds av SCORM 2017.
+För en ny installation av SCORM-motorn bör paketet som innehåller [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) (som är [ cq -social- scorm -package, version 2.2.2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fsocial%2Fscorm%2Fcq-social-scorm-2017-pkg)) användas. så att du kan spela upp utbildningsresurser som stöds av SCORM 2017.
 
 <!--This section used to be an accordion until converted to straight Markdown. When accordions are enabled, revert-->
 
 ### Så här installerar du ett SCORM-paket för första gången
 
-1. Installera **[cq-social-scorm-package, version 2.2.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg).**
+1. Installera **[cq-social-scorm-package, version 2.2.2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fsocial%2Fscorm%2Fcq-social-scorm-2017-pkg).**
 1. Hämta **`/libs/social/config/scorm/database_scormengine_data.sql`** från cq-instansen och kör den på mysql-servern för att skapa ett uppgraderat scormEngineDB-schema.
 1. Lägg till `/content/communities/scorm/RecordResults` i egenskapen Undantagna sökvägar i CSRF-filter från `https://<hostname>;:<port>/system/console/configMgr` på utgivare.
 
-Befintliga SCORM-installationer kan uppgraderas till [**cq-social-scorm-package, version 2.2.2**](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg) (som använder [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)) om det redigerade kursinnehållet kräver SCORM 2017.1.
+Befintliga SCORM-installationer kan uppgraderas till [**cq-social-scorm-package, version 2.2.2**](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fsocial%2Fscorm%2Fcq-social-scorm-2017-pkg) (som använder [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)) om det redigerade kursinnehållet kräver SCORM 2017.1.
 
 >[!NOTE]
 >
@@ -172,7 +172,7 @@ Befintliga SCORM-installationer kan uppgraderas till [**cq-social-scorm-package,
 ### Så här uppgraderar du en version av din SCORM-motor
 
 1. Ta en säkerhetskopia av ScormEngineDB-schemat.
-1. Installera **[cq-social-scorm-package, version 2.2.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg).**
+1. Installera **[cq-social-scorm-package, version 2.2.2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fsocial%2Fscorm%2Fcq-social-scorm-2017-pkg).**
 1. Hämta paketet från `/libs/social/config/scorm/ScormEngine.zip` och extrahera det.
 1. Gå till mappen **Installer** i den extraherade katalogen.
 1. Uppdatera `SystemDatabaseConnectionString` med din `scorm db connection url` i filen **[!UICONTROL EngineInstall.xml]**.
@@ -197,7 +197,8 @@ För att SRP-samlingen (MSRP eller DSRP) ska ha stöd för avancerad flerspråki
 Den avancerade MLS-nedladdningen (kallas även &quot;phasetwo&quot;) är tillgänglig från Adobe-databasen:
 
 * AEM-SOLR-MLS-phasetwo
-Mer information om hur du får tillgång till det avancerade MLS-paketet finns i [AEM Advanced MLS](deploy-communities.md#aem-advanced-mls) i avsnittet om distribution i dokumentationen.
+
+   Mer information om hur du får tillgång till det avancerade MLS-paketet finns i [AEM Advanced MLS](deploy-communities.md#aem-advanced-mls) i avsnittet om distribution i dokumentationen.
 
    * Version 1.2.40, 6 april 2016
    * Ladda ned AEM-SOLR-MLS-phasetwo-1.2.40.zip
