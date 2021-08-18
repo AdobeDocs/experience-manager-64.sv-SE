@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 7d423dff-8710-4f43-ad55-8863169946e2
-translation-type: tm+mt
-source-git-commit: 59d40b5bddc42a4ac057ef600243f396aefc926b
+exl-id: 9b4ed16f-3c7c-478a-a897-9b4be086988b
+source-git-commit: 9178c3a01e7f450d3794f41605fb3788231c88c0
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '387'
 ht-degree: 1%
 
 ---
-
 
 # Clientlibs for Communities Components {#clientlibs-for-communities-components}
 
@@ -28,7 +27,6 @@ Grundläggande information finns på
 
 * [Använda ](../../help/sites-developing/clientlibs.md) bibliotek på klientsidan som innehåller användarinformation och felsökningsverktyg
 * [Clientlibs for ](client-customize.md#clientlibs) SCFsom ger användbar information när du anpassar SCF-komponenter
-* [Blogg: AEM Client Libraries förklaras av exempel](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/)
 
 ## Varför Clientlibs krävs {#why-clientlibs-are-required}
 
@@ -42,24 +40,24 @@ När de nödvändiga klientlibs saknas kan [det uppstå javascriptfel och ett ov
 
 ![chlimage_1-244](assets/chlimage_1-244.png)
 
-### Exempel: Placerade granskningar med Clientlibs {#example-placed-reviews-with-clientlibs}
+### Exempel: Monterade granskningar med Clientlibs {#example-placed-reviews-with-clientlibs}
 
 ![chlimage_1-245](assets/chlimage_1-245.png)
 
-## Identifierar nödvändiga klienter {#identifying-required-clientlibs}
+## Identifiera nödvändiga klienter {#identifying-required-clientlibs}
 
 Den viktigaste funktionsinformationen för utvecklare identifierar de nödvändiga klientlibs.
 
 Om du dessutom bläddrar till [Community Components Guide](components-guide.md) från en AEM får du tillgång till en lista över de clientlib-kategorier som krävs för en komponent.
 
-Till exempel, högst upp på sidan [Recensioner](http://localhost:4502/content/community-components/en/reviews.html), visas de nödvändiga listerna
+Till exempel, högst upp på sidan [Recensioner](http://localhost:4502/content/community-components/en/reviews.html), visas de nödvändiga libs som
 
 * cq.ckeditor
 * cq.social.hbs.reviews
 
 ![chlimage_1-246](assets/chlimage_1-246.png)
 
-## Lägger till nödvändiga klienter {#adding-required-clientlibs}
+## Lägga till nödvändiga klienter {#adding-required-clientlibs}
 
 När du vill lägga till en webbgruppskomponent på en sida måste du lägga till de nödvändiga klientlibs för komponenten om det inte redan finns.
 
@@ -93,4 +91,3 @@ Så här lägger du till en klientlib för en community-webbplats med [CRXDE Lit
 I exemplet [Komma igång med AEM Communities](getting-started.md), där `site-name` är *engage*, är det så här klientlistan skulle visas om du lägger till granskningskomponenten:
 
 ![chlimage_1-247](assets/chlimage_1-247.png)
-
