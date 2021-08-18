@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 7aa28e36-6b31-4447-b800-cab2dc78c93c
 exl-id: ef622ac3-d96d-48bf-bfb2-61516d9deb5c
-source-git-commit: 9178c3a01e7f450d3794f41605fb3788231c88c0
+source-git-commit: a70f874ad7fcae59ee4c6ec20e23ffb2e339590b
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '676'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Se även [Använda Maven för Communities](maven.md).
 
 ### Inga JSP-komponentmallar {#no-jsp-component-templates}
 
-[Ramverket för sociala komponenter](scf.md) (SCF) använder mallspråket `HandlebarsJS` (HBS) i stället för Java Server Pages (JSP) som användes före AEM 6.0.
+I [ramverket för sociala komponenter](scf.md) (SCF) används [HandlebarsJS](https://handlebarsjs.com/) (HBS) mallspråk i stället för Java Server Pages (JSP) som användes före AEM 6.0.
 
 I AEM 6.0 låg JSP-komponenterna kvar tillsammans med de nya HBS-ramverkskomponenterna på samma plats, där HBS-komponenterna vanligtvis finns i undermappar med namnet&quot;hbs&quot;.
 
