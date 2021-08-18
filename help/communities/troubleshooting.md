@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: cdb2d80a-2fbf-4ee6-b89b-b5d74e6d3bfc
-translation-type: tm+mt
-source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+exl-id: 1a1de20d-53f6-4787-92e3-e12f30d925d3
+source-git-commit: a70f874ad7fcae59ee4c6ec20e23ffb2e339590b
 workflow-type: tm+mt
 source-wordcount: '373'
 ht-degree: 1%
 
 ---
-
 
 # Felsökning {#troubleshooting}
 
@@ -24,7 +23,7 @@ Detta avsnitt innehåller vanliga problem och kända problem.
 
 ## Kända fel {#known-issues}
 
-### Dispatcher Refetch Fails {#dispatcher-refetch-fails}
+### Dispatcher - uppdatering misslyckades {#dispatcher-refetch-fails}
 
 När du använder Dispatcher 4.1.5 med en nyare version av Jetty kan en uppdatering resultera i&quot;Det går inte att ta emot svar från fjärrservern&quot; efter att begäran har fått timeout.
 
@@ -55,11 +54,11 @@ All kod som använder API:t RelativeTimeFormat() måste därför ändras
 
 Felet skiljer sig åt när det gäller författare och publicering. Skribenten skriver att det inte går att skriva och att forumen helt enkelt inte visas. Vid publicering genereras ett fel på sidan.
 
-Mer information finns i [com.day.cq.commons.date.RelativeTimeFormat](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html)-API:t.
+Mer information finns i [com.day.cq.commons.date.RelativeTimeFormat](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html)-API:t.
 
 ## Vanliga problem {#common-concerns}
 
-### Varning i loggar: Hanteringsfält har tagits bort {#warning-in-logs-handlebars-deprecated}
+### Varning i loggar: Borttagna handtag {#warning-in-logs-handlebars-deprecated}
 
 Under start (inte under den första - men efter den) kan följande varning visas i loggarna:
 
