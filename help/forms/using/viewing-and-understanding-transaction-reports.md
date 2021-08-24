@@ -8,22 +8,21 @@ contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager
 discoiquuid: bef38e7a-92db-4226-a4ea-8facce573456
-translation-type: tm+mt
-source-git-commit: 23607a6b2e74b50befe2fa19b868a0e4d561b0d8
+exl-id: b132216a-c9b4-4f8f-97e6-738a5a9632d1
+source-git-commit: db64b7d5ac9044c4b2fee6ae4adbe9aab1cf4c7d
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '908'
 ht-degree: 0%
 
 ---
-
 
 # Visa och förstå transaktionsrapporter {#viewing-and-understanding-transaction-reports}
 
 Använd transaktionsrapporter för att fatta ett välgrundat beslut om produktanvändningen och ombalansera investeringar i maskinvara och programvara.
 
-Med transaktionsrapporter kan du samla in och spåra antalet skickade formulär, bearbetade dokument och återgivna dokument. Målet med att spåra dessa transaktioner är att fatta ett välgrundat beslut om produktanvändningen och att balansera investeringar i maskinvara och programvara. Mer information finns i [Översikt över AEM Forms transaktionsrapporter](/help/forms/using/transaction-reports-overview.md).
+Med transaktionsrapporter kan du samla in och spåra antalet skickade formulär, bearbetade dokument och återgivna dokument. Målet med att spåra dessa transaktioner är att fatta ett välgrundat beslut om produktanvändningen och att balansera investeringar i maskinvara och programvara. Mer information finns i [AEM Forms Transaction Reports Overview](/help/forms/using/transaction-reports-overview.md).
 
-## Ställa in transaktionsrapporter {#setting-up-transaction-reports}
+## Ställa in transaktionsrapporter  {#setting-up-transaction-reports}
 
 Funktionen för transaktionsrapporter är tillgänglig som en del av AEM paket. Information om hur du installerar tilläggspaketet på alla författare- och publiceringsinstanser finns i [Installera och konfigurera AEM formulär](https://helpx.adobe.com/experience-manager/6-4/forms/using/installing-configuring-aem-forms-osgi.html). När du har AEM tilläggspaket för formulär installerat gör du följande:
 
@@ -56,13 +55,13 @@ Transaktionsrapporter är inaktiverade som standard. Du kan aktivera rapporter f
 
    Upprepa steg 1-3 för alla författare- och publiceringsinstanser.
 
-### Ge behörighet att visa en transaktionsrapport {#provide-rights-to-view-a-transaction-report}
+### Ange rättigheter för att visa en transaktionsrapport {#provide-rights-to-view-a-transaction-report}
 
 Det är bara medlemmar i gruppen som har administratörer som kan visa transaktionsrapporter. Om du vill att en användare ska kunna visa transaktionsrapporter måste användaren vara medlem i gruppen med dvd-administratörer. Instruktioner om hur du gör en användare till medlem i en AEM grupp finns i [Administrera användare, grupp och åtkomsträttigheter](/help/sites-administering/user-group-ac-admin.md).
 
 ### (Valfritt) Konfigurera tömningsperiod och utkorgar för transaktioner {#optional-configure-transaction-flush-period-and-outboxes}
 
-Transaktioner cachelagras i minnet innan de lagras i databasen. Som standard är cachelagringsperioden (perioden för tömning av transaktion) inställd på 60 sekunder. Utför följande steg för att ändra standardcachelagringsperioden:
+Transaktioner cachelagras i minnet innan de lagras i databasen. Processen utförs för att säkerställa att det inte ofta förekommer några skrivningar i databasen. Som standard är cachelagringsperioden (perioden för tömning av transaktion) inställd på 60 sekunder. Du kan ändra standardperioden så att den passar din miljö. Utför följande steg för att ändra standardcachelagringsperioden:
 
 1. Logga in för att skapa instanser som administratör. Gå till **Verktyg** > **Åtgärder** > **Webbkonsol**.
 1. Leta reda på och öppna tjänsten **Forms Transaction Repository Storage Provider**.
@@ -100,4 +99,3 @@ Transaktionsrapportering placerar all information som visas i rapporten och viss
 * [Översikt över transaktionsrapporter](/help/forms/using/transaction-reports-overview.md)
 * [Fakturerbara API:er för transaktionsrapporter](/help/forms/using/transaction-reports-billable-apis.md)
 * [Registrera en transaktion för anpassade implementeringar](/help/forms/using/record-transaction-custom-implementation.md)
-
