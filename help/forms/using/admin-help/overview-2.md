@@ -1,22 +1,21 @@
 ---
 title: Grunderna för hantering av certifikat och autentiseringsuppgifter
-seo-title: Grunderna för hantering av certifikat och autentiseringsuppgifter
+seo-title: Basics of managing certificates and credentials
 description: Lär dig mer om grunderna för hantering av certifikat och autentiseringsuppgifter.
-seo-description: Lär dig mer om grunderna för hantering av certifikat och autentiseringsuppgifter.
+seo-description: Learn about the basics of managing certificates and credentials.
 uuid: f421e206-e7b5-416c-b9fb-974094f10a66
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 986d16fc-4c81-4785-b1f3-fe8bd7ff669e
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 4817d150-9bfe-4cb9-8f06-6ff4eaaa6f55
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '339'
 ht-degree: 0%
 
 ---
-
 
 # Grunderna för hantering av certifikat och autentiseringsuppgifter {#basics-of-managing-certificates-and-credentials}
 
@@ -36,7 +35,7 @@ AEM har inget alternativ för att generera nyckelpar. Du kan dock generera det m
 
 [https://docs.oracle.com/cd/E19798-01/821-1841/gjrgy/index.html](https://docs.oracle.com/cd/E19798-01/821-1841/gjrgy/index.html)
 
-[https://blogs.adobe.com/livecycle/2010/01/creating_ssl_keys_and_certific.html](https://blogs.adobe.com/livecycle/2010/01/creating_ssl_keys_and_certific.html)
+[https://helpcenter.gsx.com/hc/en-us/articles/115015960428-How-to-Generate-a-Self-Signed-Certificate-and-Private-Key-using-OpenSSL](https://helpcenter.gsx.com/hc/en-us/articles/115015960428-How-to-Generate-a-Self-Signed-Certificate-and-Private-Key-using-OpenSSL)
 
 Följande signaturtyper stöds och kan importeras i AEM:
 
@@ -54,4 +53,3 @@ Om du misstänker att nyckeln har gått förlorad eller har komprometterats ska 
 1. Informera certifikatutfärdaren så att de lägger till den kompromissade nyckeln i listan över återkallade certifikat för att återkalla nyckeln.
 1. Hämta en ny nyckel och dess certifikat från den attesterande myndigheten.
 1. Signera dokument som signerats med den kompromissade nyckeln igen med den nya nyckeln.
-

@@ -1,8 +1,8 @@
 ---
 title: Anropa AEM Forms med JavaAPI
-seo-title: Anropa AEM Forms med JavaAPI
+seo-title: Invoking AEM Forms using the JavaAPI
 description: Använd AEM Forms Java API för RMI-transportprotokoll för fjärranrop, VM-transport för lokalt anrop, SOAP för fjärranrop, annan autentisering, till exempel användarnamn och lösenord, samt synkrona och asynkrona anropsbegäranden.
-seo-description: Använd AEM Forms Java API för RMI-transportprotokoll för fjärranrop, VM-transport för lokalt anrop, SOAP för fjärranrop, annan autentisering, till exempel användarnamn och lösenord, samt synkrona och asynkrona anropsbegäranden.
+seo-description: Use the AEM Forms Java API for RMI transport protocol for remote invocation, VM transport for local invocation, SOAP for remote invocation, different authentication, such as user name and password, and synchronous and asynchronous invocation requests.
 uuid: 5e2fef2a-05f3-4283-8fd3-2d7dca411000
 contentOwner: admin
 content-type: reference
@@ -10,14 +10,13 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 1c239c05-e221-442a-a748-0c28704ee032
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '5480'
+source-wordcount: '5385'
 ht-degree: 0%
 
 ---
-
 
 # Anropa AEM Forms med Java API {#invoking-aem-forms-using-the-javaapi}
 
@@ -35,13 +34,6 @@ Java API har stöd för följande funktioner:
 * Annan autentisering, till exempel användarnamn och lösenord
 * Synkrona och asynkrona anropsbegäranden
 
-**Adobe Developer website**
-
-På webbplatsen Adobe Developer finns följande artiklar om hur du anropar AEM Forms-tjänster med Java API:
-
-[Använda Java-servrar för att starta AEM Forms-processer](https://www.adobe.com/devnet/livecycle/articles/java_servlets.html)
-
-[Anropa AEM Forms Distiller API från Java](https://www.adobe.com/devnet/livecycle/articles/distiller_java_03.html)
 
 **Se även**
 
@@ -635,7 +627,7 @@ Följande scenarier beskrivs i det här avsnittet:
 * Ett klientprogram som körs i en egen Java Virtual Machine (JVM) anropar en fristående AEM Forms-instans.
 * Ett klientprogram som körs i en egen JVM anropar klustrade AEM Forms-instanser.
 
-### Klientprogrammet anropar en fristående AEM Forms-instans {#client-application-invoking-a-stand-alone-aem-forms-instance}
+### Klientprogram som anropar en fristående AEM Forms-instans {#client-application-invoking-a-stand-alone-aem-forms-instance}
 
 I följande diagram visas ett klientprogram som körs i en egen JVM och som anropar en fristående AEM Forms-instans.
 
@@ -761,7 +753,7 @@ Ett program kan innehålla datatyperna `com.adobe.idp.Document` och `org.w3c.dom
 
 [Ange anslutningsegenskaper](invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Skapar dokument {#creating-documents}
+### Skapa dokument {#creating-documents}
 
 Skapa ett `com.adobe.idp.Document`-objekt innan du anropar en tjänståtgärd som kräver ett PDF-dokument (eller andra dokumenttyper) som indatavärde. Klassen `com.adobe.idp.Document` innehåller konstruktorer som gör att du kan skapa ett dokument av följande innehållstyper:
 
@@ -1036,7 +1028,7 @@ När den här processen anropas utför den följande åtgärder:
 1. Hämtar det oskyddade PDF-dokumentet som skickas till processen. Den här åtgärden baseras på åtgärden `SetValue`. Indataparametern för den här processen är en `document`-processvariabel med namnet `inDoc`.
 1. Krypterar PDF-dokumentet med ett lösenord. Den här åtgärden baseras på åtgärden `PasswordEncryptPDF`. Lösenordskrypterade PDF-dokument returneras i en processvariabel med namnet `outDoc`.
 
-### Anropa den kortvariga processen MyApplication/EncryptDocument med Java-anrops-API {#invoke-the-myapplication-encryptdocument-short-lived-process-using-the-java-invocation-api}
+### Anropa den kortvariga processen MyApplication/EncryptDocument med hjälp av Java-anrops-API {#invoke-the-myapplication-encryptdocument-short-lived-process-using-the-java-invocation-api}
 
 Anropa den korta processen `MyApplication/EncryptDocument` med Java-anrops-API:
 

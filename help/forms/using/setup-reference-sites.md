@@ -1,17 +1,17 @@
 ---
 title: Konfigurera AEM Forms referenswebbplatser
-seo-title: Konfigurera AEM Forms referenswebbplatser
+seo-title: Set up and configure AEM Forms reference sites
 description: AEM Forms referenswebbplatser visar hur du kan använda AEM Forms för att implementera ett komplett arbetsflöde i en organisation.
-seo-description: AEM Forms referenswebbplatser visar hur du kan använda AEM Forms för att implementera ett komplett arbetsflöde i en organisation.
+seo-description: AEM Forms reference sites showcase how you can use AEM Forms to implement end-to-end workflow in an organization.
 uuid: 087d58a1-d84e-49ac-a82d-4e7fc708f00f
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: introduction
 discoiquuid: 2feb4a9c-57ad-4c6b-a572-0047bc409bbb
 exl-id: 9c5d956c-06bc-4428-afcd-02b4f81b802f
-source-git-commit: 933084f92d116111dbfea55d52b1ad60ae691505
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '2766'
+source-wordcount: '2741'
 ht-degree: 0%
 
 ---
@@ -153,7 +153,7 @@ SSL-konfiguration krävs för att kommunicera med Adobe Sign-servrar. Mer inform
 
 ## Konfigurera konfiguration av Dag CQ Link Externalizer {#externalizer}
 
-I AEM är **Externalizer** en OSGI-tjänst som gör att du kan omforma en resurssökväg programmatiskt (t.ex. /path/to/my/page) till en extern och absolut URL (t.ex. https://www.mycompany.com/path/to/my/page) genom att prefix the path with a preconfigure DNS. Se [Externalisera URL:er](/help/sites-developing/externalizer.md).
+I AEM är **Externalizer** en OSGI-tjänst som gör att du kan omvandla en resurssökväg (till exempel /path/to/my/page) till en extern och absolut URL (till exempel https://www.mycompany.com/path/to/my/page) genom att prefixera sökvägen med en förkonfigurerad DNS. Se [Externalisera URL:er](/help/sites-developing/externalizer.md).
 
 >[!CAUTION]
 >

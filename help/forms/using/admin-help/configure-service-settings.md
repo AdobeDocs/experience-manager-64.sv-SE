@@ -1,22 +1,21 @@
 ---
 title: Konfigurera tjänstinställningar
-seo-title: Konfigurera tjänstinställningar
+seo-title: Configure service settings
 description: Lär dig hur du konfigurerar tjänstinställningar.
-seo-description: Lär dig hur du konfigurerar tjänstinställningar.
+seo-description: Learn how to configure service settings.
 uuid: e95425a4-62f6-473e-b21b-d081c432e02d
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2fab4b0c-e5db-47cd-b85a-4ff5ad6eb178
-translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+exl-id: be1f8c59-b5d8-4d87-af7b-1034d73e7e83
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '10710'
+source-wordcount: '10683'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera tjänstinställningar {#configure-service-settings}
 
@@ -45,7 +44,7 @@ Workbench ger möjlighet att spela in processinstanser när de körs under körn
 
 **MaxNumberOfRecordingPosts:** Det maximala antalet dataposter som kan lagras för varje inspelning. Dataposter är information om åtgärder som utförs i processen. Flera poster lagras för varje körning av en åtgärd, till exempel om åtgärden har startats, om åtgärden har slutförts och om den väg som leder till åtgärden är slutförd. Den här egenskapen är användbar när processer kan innehålla många körningar av åtgärder, till exempel när en oändlig slinga påträffas. Standardvärdet är 50.
 
-## streckkodsformulärtjänstinställningar {#barcoded-forms-service-settings}
+## streckkodsinställningar för formulärtjänst {#barcoded-forms-service-settings}
 
 Streckkodad formulärtjänst `(BarcodedFormsService)` extraherar streckkodsdata från skannade bilder. Tjänsten accepterar ett streckkodsformulär (TIFF eller PDF) som indata och extraherar maskinvaruåtergivningen av data som är kodade med streckkoden.
 
@@ -81,7 +80,7 @@ Följande inställning är tillgänglig för tjänsten Central Migration Bridge.
 
 **Katalog för central installation:** Den katalog där Adobe Central 5.7 är installerat.
 
-## Content Repository Connector for EMC Documentum service settings {#content-repository-connector-for-emc-documentum-service-settings}
+## Content Repository Connector for EMC Documentum-tjänstinställningar {#content-repository-connector-for-emc-documentum-service-settings}
 
 Med tjänsten Content Repository Connector for EMC Documentum ( `EMCDocumentumContentRepositoryConnector`) kan du skapa processer som interagerar med innehåll som lagras i en Documentum-databas.
 
@@ -159,7 +158,7 @@ Nya inställningar kan skapas med användargränssnittet i PDF Generator.
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe produktlivscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html). Mer information om hur du konfigurerar innehållstjänster (borttaget) finns i [Administrera innehållstjänster](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf).
+>Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe produktlivscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).
 
 Tjänsten Document Management ( `DocumentManagementService`) möjliggör för processer att använda innehållshanteringsfunktionen som tillhandahålls av Content Services (Borttagen). Dokumenthanteringsåtgärder innehåller grundläggande uppgifter som krävs för att underhålla utrymme och innehåll i innehållshanteringssystemet. Exempel på sådana uppgifter är kopiera, ta bort, flytta, hämta och lagra innehåll, skapa blanksteg och associationer samt hämta och ange innehållsattribut.
 
@@ -209,7 +208,7 @@ Följande inställningar är tillgängliga för e-posttjänsten.
 * Välj SSL om Secure Sockets Layer-protokollet används.
 * Välj TLS om transportlagersäkerhet används.
 
-## Inställningar för krypteringstjänsten {#encryption-service-settings}
+## Inställningar för krypteringstjänst {#encryption-service-settings}
 
 Med krypteringstjänsten ( `EncryptionService`) kan du kryptera och dekryptera dokument. När ett dokument är krypterat blir innehållet oläsligt. En behörig användare kan dekryptera dokumentet för att få åtkomst till innehållet. Om ett PDF-dokument är krypterat med ett lösenord måste användaren ange det öppna lösenordet innan dokumentet kan visas i Adobe Reader eller Adobe Acrobat. Om ett PDF-dokument är krypterat med ett certifikat måste användaren dekryptera PDF-dokumentet med den offentliga nyckel som motsvarar det certifikat (privat nyckel) som användes för att kryptera PDF-dokumentet.
 
@@ -229,7 +228,7 @@ Följande inställningar är tillgängliga för krypteringstjänsten.
 
 **Kompatibilitetsläge:**
 
-## Inställningar för FTP-tjänst {#ftp-service-settings}
+## FTP-tjänstinställningar {#ftp-service-settings}
 
 Med FTP-tjänsten ( `FTP`) kan processer interagera med en FTP-server. FTP-tjänståtgärder kan hämta filer från FTP-servern, skicka filer på FTP-servern och ta bort filer från FTP-servern. Till exempel kan dokument som genereras från en process lagras på en FTP-server för distribution. Eller så kan ett externt system generera filer baserat på tidigare steg i en process. I ett efterföljande steg i processen kan filerna överföras till en fjärrplats.
 
@@ -445,7 +444,7 @@ Följande inställningar är tillgängliga för konfigurationstjänsten för Mic
 
 **Android Microsoft Exchange ActiveSync krävs:** Anger om Microsoft Exchange ActiveSync-principhanterare (EA) måste installeras och vara aktiv på Android-enheter. När det här alternativet är markerat måste EA tillämpas på Android-enheten. När det här alternativet inte är markerat utförs ingen kontroll, även om andra krav fortfarande gäller.
 
-**Minsta PIN-kodslängd för Android:** Android-enheter måste ha en global inställning som tvingar PIN-koden eller lösenordet att vara minst den här längden. Det räcker inte att bara ha en PIN-kod med den angivna längden. PIN-kodens längd måste framtvingas av systemet så att användarna inte kan ta bort eller korta ned PIN-koden senare. Standardvärdet är 4.
+**Minsta PIN-kodslängd för Android:** Android-enheter måste ha en global inställning som tvingar PIN-koden eller lösenordet att vara minst den här längden. Det räcker inte att bara ha en PIN-kod med den angivna längden. PIN-kodens längd måste framtvingas av systemet så att användare inte kan ta bort eller korta ned PIN-koden senare. Standardvärdet är 4.
 
 **Maximalt antal lösenord för Android-enheter återanvänds före rensning:** Android-enheter har en global inställning som rensar systemet efter ett angivet antal ogiltiga lösenordsförsök. Den här globala inställningen är aktiverad och lika med eller lägre än värdet som anges här. Standardvärdet är 5.
 
@@ -496,7 +495,7 @@ Följande inställningar är tillgängliga för tjänsten PDFG Config ( `PDFGCon
 
 **Sekunder för PDFG-rensningsgenomsökning:** Mer information finns i avsnittet Sekunder för jobbförfallodatum.
 
-**Förfallodatum i sekunder för jobb:** Tjänsten Generera PDF tar bort indatafiler så snart de konverteras. Utdatafilerna sparas tillfälligt under en tidsperiod som bestäms av inställningarna Sekunder för PDFG-rensning och Sekunder för jobbförfallodatum.
+**Förfallodatum i sekunder för jobb:** Tjänsten Generera PDF tar bort indatafiler så snart de konverteras. Utdatafilerna sparas tillfälligt under en tid som bestäms av inställningarna Sekunder för PDFG-rensning och Sekunder för jobbförfallodatum.
 
 Inställningen Sekunder för förfallodatum för jobb anger hur gammal en fil eller tom mapp måste vara innan den kan tas bort. Inställningen Sekunder för PDFG-rensningsgenomsökning anger hur ofta en rensningstråd söker igenom de tillfälliga mapparna efter filer som kan tas bort.
 
@@ -506,7 +505,7 @@ Standardvärdet för sekundära PDFG-rensningsgenomsökningar är `43200` (12 ti
 
 **Standardspråk:** Används för att åsidosätta standardspråket (land + språk) på servern där tjänsten Generera PDF distribueras. Om den här parametern inte är angiven bestäms standardspråket av det operativsystem som tjänsten distribueras till. Den här parametern styr vilket språk felmeddelandena returneras till API:erna.
 
-## formulärarbetsflöde Datatjänstinställningar {#forms-workflow-data-services-service-settings}
+## inställningar för datatjänsttjänst för formulärarbetsflöde {#forms-workflow-data-services-service-settings}
 
 Följande tjänster utökar Data Services och visar sammansättningar som Workspace använder för att kommunicera med servern. Ändra inte konfigurationsalternativen för de här tjänsterna om du inte har fått instruktioner om att göra det av Adobe Support. Dessa tjänster är inte avsedda för direkt åtkomst:
 
@@ -524,7 +523,7 @@ Följande inställningar är tillgängliga för tjänsten Remoting.
 
 **Tillåt serialisering av icke-serialiserbara klasser:** De flesta AEM formulärslutpunkter tillåter endast serialiserbara klasser att användas för anrop. I äldre versioner tillät slutpunkten Remoting icke-serialiserbara klasser att användas för anrop från Flex-baserade klienter. För att förhindra en säkerhetslucka som beskrivs i APS11-15 har detta ändrats. Markera den här kryssrutan om du vill fortsätta använda icke-serialiserbara klasser med slutpunkten för Flex Remoting.
 
-## Databastjänstinställningar {#repository-service-settings}
+## Inställningar för databastjänst {#repository-service-settings}
 
 Databastjänsten ( `RepositoryService`) tillhandahåller tjänster för lagring och hantering av resurser för att AEM formulär. När utvecklare skapar ett program kan de distribuera resurserna i databasen i stället för i ett filsystem. Resurserna kan innehålla alla typer av material, inklusive XML-formulär, PDF forms (inklusive Acrobat-formulär), formulärfragment, bilder, profiler, profiler, SWF-filer, DDX-filer, XML-scheman, WSDL-filer och testdata.
 
@@ -536,7 +535,7 @@ Följande inställning är tillgänglig för databastjänsten.
 
 **Providertjänst:** Namnet på den tjänst som används som lagringsprovider. Standardvärdet är RepositoryProviderService.
 
-## Signaturtjänstinställningar {#signature-service-settings}
+## Inställningar för signaturtjänst {#signature-service-settings}
 
 Med signaturtjänsten ( `SignatureService`) kan din organisation skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att dokumenten inte ändras. Om du ändrar ett dokument bryts signaturen. Eftersom säkerhetsfunktionerna tillämpas på själva dokumentet förblir dokumentet säkert och kontrollerat under hela sin livscykel. utanför brandväggen, när den laddas ned offline och när den skickas tillbaka till din organisation.
 
@@ -610,7 +609,7 @@ Följande inställningar är tillgängliga för signaturtjänsten.
 
 **Kräv giltig certifikatsignatur vid kedjeskapande:** Anger om kedjebyggaren kräver giltiga signaturer för certifikat som används för att skapa kedjor. När den här kryssrutan är markerad kommer kedjebyggaren inte att skapa kedjor med ogiltiga RSA-signaturer på certifikat. Överväg kedja CA > ICA > EE där certifikatutfärdarens signatur på ett ICA inte är giltig. Om den här inställningen är true stoppas kedjebyggnaden vid ICA och CA inkluderas inte i kedjan. Om den här inställningen är false skapas den fullständiga 3-certifikatskedjan. Den här inställningen påverkar inte DSA-signaturer. Standardvärdet är false.
 
-### Alternativ för tidsstämpelprovider {#timestamp-provider-options}
+### Alternativ för tidsstämpelleverantör {#timestamp-provider-options}
 
 **TSP-serverns URL:** URL:en för standardtidsstämpelprovidern. Används endast om ett giltigt värde anges. Inget standardvärde.
 
@@ -622,7 +621,7 @@ Följande inställningar är tillgängliga för signaturtjänsten.
 
 **Format för spärrkontroll:** Anger det format för spärrkontroll som används för att avgöra pålitlighetsstatus för tidsstämpelleverantörens certifikat från dess observerade spärrstatus. Standardvärdet är BestEffort.
 
-**Skicka en gång:** Anger om ett namn skickas tillsammans med tidsstämpelproviderbegäran. Ett omedelbart kan vara en tidsstämpel, en besöksräknare på en webbsida eller en speciell markör som är avsedd att begränsa eller förhindra otillåten kopiering eller reproduktion av en fil. Standardvärdet är true.
+**Skicka en gång:** Anger om ett namn skickas tillsammans med tidsstämpelproviderbegäran. Ett omedelbart kan vara en tidsstämpel, en besöksräknare på en webbsida eller en specialmarkör som är avsedd att begränsa eller förhindra otillåten kopiering eller reproduktion av en fil. Standardvärdet är true.
 
 **Använd utgångna tidsstämplar vid validering:** När det här alternativet är markerat kan utgångna tidsstämplar användas för att hämta valideringstider för signaturer. Standardvärdet är true.
 
@@ -646,7 +645,7 @@ Följande inställningar är tillgängliga för signaturtjänsten.
 
 **Kräv AKI-tillägg i CRL:** Anger om tillägget för identifieraren för utfärdarnyckel måste inkluderas i en CRL. Standardvärdet är false.
 
-### Alternativ för Online Certificate Status Protocol {#online-certificate-status-protocol-options}
+### Alternativ för statusprotokoll för onlinecertifikat {#online-certificate-status-protocol-options}
 
 **URL för OCSP-server:** URL för OCSP-standardservern. Om OCSP-servern som anges via den här URL:en används beror på inställningen för alternativet URL till rådgivning. Inget standardvärde.
 
@@ -843,7 +842,7 @@ Standardsäkerhetsprofiler installeras, som sedan kan konfigureras för att uppf
 1. Välj den tjänst som ska konfigureras på sidan Tjänsthantering.
 1. Klicka på fliken **Säkerhet**, markera säkerhetsprofilen som ska tas bort och klicka på **Ta bort**.
 
-## Konfigurerar poolning för en tjänst {#configuring-pooling-for-a-service}
+## Konfigurera poolning för en tjänst {#configuring-pooling-for-a-service}
 
 Varje tjänst kan utnyttja poolfunktionerna för att hantera inkommande anrop. Om du använder en tjänstpool försäkrar du dig om att tjänstinstanser anropas av en enda tråd i taget och återanvänds i alla anropsbegäranden, vilket kan leda till bättre prestanda. Du kan också använda poolning för att ange alternativet Maximalt antal asynkrona tjänstinstanser, som tillåter tjänster att begränsa antalet begäranden som hanteras parallellt.
 
@@ -859,7 +858,7 @@ Varje tjänst kan utnyttja poolfunktionerna för att hantera inkommande anrop. O
 1. I rutan Timeout för anropsväntetid anger du antalet millisekunder som ska vänta på att en tjänst ska bli tillgänglig för en anropsbegäran. Om du inte anger något värde för den här inställningen är standardvärdet 0, vilket ger ingen väntetid.
 1. Klicka på Spara.
 
-### Ta bort pooler {#remove-pooling}
+### Ta bort poolning {#remove-pooling}
 
 1. I administrationskonsolen klickar du på Tjänster > Program och tjänster > Tjänsthantering.
 1. Klicka på den tjänst du vill konfigurera på sidan Tjänsthantering.
@@ -871,4 +870,3 @@ Varje tjänst kan utnyttja poolfunktionerna för att hantera inkommande anrop. O
    **Ny instans för varje begäran:** En ny tjänstinstans skapas för varje mottaget anrop.
 
 1. Klicka på Spara.
-

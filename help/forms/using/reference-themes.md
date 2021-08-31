@@ -1,24 +1,23 @@
 ---
 title: Referensteman
-seo-title: Referensteman
+seo-title: Reference Themes
 description: 'AEM Forms tillhandahåller adaptiva formulärteman som du kan hämta från Software Distribution och använda för att utforma ett formulär. '
-seo-description: 'AEM Forms tillhandahåller adaptiva formulärteman som du kan hämta från Software Distribution och använda för att utforma ett formulär. '
+seo-description: AEM Forms provides adaptive forms themes that you can get from Software Distribution and use to style a form.
 uuid: a39bc3da-0bb8-4f11-b0d5-9403cfc6e384
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 78d7d4b6-95dd-429b-870b-30aba5a3fea3
-translation-type: tm+mt
-source-git-commit: 6a8fa45ec61014acebe09048066972ecb1284641
+exl-id: 6a298571-d6ff-473f-af58-a45a0c7e6175
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
 
-
 # Referensteman {#reference-themes}
 
-[Med ](/help/forms/using/themes.md) teman kan du formatera formulär utan djupa kunskaper om CSS. Förutom standardtemat kan du hämta följande teman genom att installera paketet [AEM-FORMS-6.3-REFERENCE-THEMES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-THEMES):
+[Med ](/help/forms/using/themes.md) teman kan du formatera formulär utan djupa kunskaper om CSS. Förutom standardtemat kan du hämta följande teman genom att installera [AEM Forms-tilläggspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html):
 
 * Beryl
 * Kör
@@ -50,7 +49,7 @@ Exec-temat undviker heltäckande bakgrundsfyllningar för att framhäva formulä
 
 [Klicka för att förstora](assets/exec-1.png)
 
-## Kör ljus {#exec-light}
+## Exec Light {#exec-light}
 
 Exec Light-temat använder tomrum för att skapa en sömlös upplevelse. Knapparna Nästa och Skicka ger en heltäckande fyllning och 3D-skugga. De markerade flikarna till vänster får en pil i stället för dubbelbockmarkeringar.
 ![Exakt ljustema](assets/exec-light.png)

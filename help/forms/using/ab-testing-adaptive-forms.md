@@ -1,21 +1,20 @@
 ---
 title: Skapa och hantera A/B-tester för adaptiva formulär
-seo-title: Skapa och hantera A/B-tester för adaptiva formulär
+seo-title: Create and manage A/B test for adaptive forms
 description: AEM Forms kan integreras med Adobe Target som gör det möjligt att köra A/B-tester för adaptiva formulär för att förbättra kundupplevelsen och öka konverteringsgraden.
-seo-description: AEM Forms kan integreras med Adobe Target som gör det möjligt att köra A/B-tester för adaptiva formulär för att förbättra kundupplevelsen och öka konverteringsgraden.
+seo-description: AEM Forms integrates with Adobe Target that allows running A/B tests for adaptive forms to enhance customer experience and improve conversion rates.
 uuid: c41aea04-f4d9-41b9-b1a8-df2bb710354c
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: integrations
 discoiquuid: a69ff832-7955-4b10-b47f-287ac385b786
-translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+exl-id: e330a8e8-4d55-4723-921b-812cb243f420
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1542'
 ht-degree: 0%
 
 ---
-
 
 # Skapa och hantera A/B-tester för adaptiva formulär {#create-and-manage-a-b-test-for-adaptive-forms}
 
@@ -35,9 +34,9 @@ Innan du börjar skapa och analysera A/B-tester för adaptiva formulär måste d
 
 Om du vill integrera AEM med Target måste du ha ett giltigt Adobe Target-konto. När du registrerar dig hos Adobe Target får du en klientkod. Du behöver klientkoden, e-postadressen som är kopplad till Target-kontot och lösenordet för att kunna ansluta AEM till Target.
 
-Klientkoden identifierar Adobe Target-kundkontot och används som en underdomän i URL:en när Adobe Target-servern anropas. Innan du fortsätter bör du kontrollera att du har behörighet att logga in på [https://testandtarget.omniture.com/](https://testandtarget.omniture.com/).
+Klientkoden identifierar Adobe Target-kundkontot och används som en underdomän i URL:en när Adobe Target-servern anropas. Logga in på [https://experience.adobe.com/](https://experience.adobe.com/) innan du fortsätter. Om du har åtkomst kan du visa alternativet [!DNL Adobe Target] i avsnittet [!UICONTROL Quick Access].
 
-### Integrera mål i AEM Forms {#integrate-target-in-aem-forms}
+### Integrera Target i AEM Forms {#integrate-target-in-aem-forms}
 
 Utför följande steg för att integrera en målserver som körs med AEM Forms:
 
@@ -77,7 +76,6 @@ Förutom jboss-servern kan du lägga till argumentet -Dabtesting.enabled=true jv
 >
 >Om du uppdaterar de konfigurerade mål-URL:erna senare måste du uppdatera alla A/B-tester som körs så att de pekar på de aktuella URL:erna. Mer information om hur du uppdaterar A/B-tester finns i [Uppdatera A/B-test](/help/forms/using/ab-testing-adaptive-forms.md#p-update-a-b-test-p).
 
-
 ## Skapa målgrupper i AEM {#create-audiences-within-aem}
 
 Med AEM kan du skapa en målgrupp och använda den för ett A/B-test. Den målgrupp du skapar i AEM är tillgänglig i AEM Forms. Utför följande steg för att skapa målgrupper i AEM:
@@ -105,7 +103,7 @@ Utför följande steg för att skapa ett A/B-test för ett anpassat formulär.
 1. Klicka på verktyget **Välj** i verktygsfältet och välj det adaptiva formuläret.
 1. Klicka på **Mer** i verktygsfältet och välj **Konfigurera A/B-testning**. Sidan Konfigurera A/B-testning öppnas.
 
-   [ ![A/B-testkonfigurationssida för adaptiva formulär](assets/ab-test-configure.png)](assets/ab-test-configure-1.png)
+[ ](assets/ab-test-configure-1.png)
 
 1. Ange ett **aktivitetsnamn** för A/B-testet.
 
@@ -145,10 +143,10 @@ När du har tillåtit A/B-testet att köras under den önskade perioden kan du g
 
 1. Markera det adaptiva formuläret, klicka på **Mer** och klicka sedan på **A/B-testrapport**. Rapporten visas.
 
-   [ ![A/B-testrapport](assets/ab-test-report.png)](assets/ab-test-report-1.png)
+[ ](assets/ab-test-report-1.png)
 
 1. Analysera rapporten och se om ni har tillräckligt många datapunkter för att kunna deklarera en av de mest framgångsrika upplevelserna som en vinnare. Du kan välja att fortsätta med samma A/B-test längre eller deklarera en vinnare och avsluta A/B-testet.
-1. Om du vill deklarera en vinnare och avsluta A/B-testet klickar du på **Slut på A/B-test** på kontrollpanelen för rapporter. En dialogruta uppmanar er att förklara en av de två upplevelserna som vinnare. Välj en vinnare och bekräfta att du vill avsluta A/B-testet.
+1. Om du vill deklarera en vinnare och avsluta A/B-testet klickar du på **Slut på A/B-test** på rapportkontrollpanelen. En dialogruta uppmanar er att förklara en av de två upplevelserna som vinnare. Välj en vinnare och bekräfta att du vill avsluta A/B-testet.
 
    Du kan också först deklarera en vinnare genom att klicka på knappen **Deklarera vinnare** för respektive upplevelse. Du uppmanas att bekräfta vinnaren. Klicka på **Ja** för att avsluta A/B-testet.
 

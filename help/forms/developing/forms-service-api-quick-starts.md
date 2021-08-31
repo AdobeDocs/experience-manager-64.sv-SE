@@ -1,8 +1,8 @@
 ---
 title: Snabbstart för Forms Service API
-seo-title: Snabbstart för Forms Service API
+seo-title: Forms Service API Quick Starts
 description: Använd snabbstarter för Forms Service API.
-seo-description: Använd snabbstarter för Forms Service API.
+seo-description: Use the Quick Starts for the Forms Service API.
 uuid: dfce259a-e392-4929-ad7e-6d902faceaeb
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,15 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 9fe48243-24c6-4e08-9886-148cd99dec87
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: abc2af58-3bf7-493e-917d-081022afb9a3
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1509'
 ht-degree: 0%
 
 ---
 
-
-# Forms Service API Quick Starts {#forms-service-api-quick-starts}
+# Snabbstart för Forms Service API {#forms-service-api-quick-starts}
 
 Följande snabbstarter är tillgängliga för tjänsten Forms:
 
@@ -59,7 +58,6 @@ Programlogik som använder Forms tjänst-API implementeras som Java-servrar. AEM
 >
 >Snabbstart i Programmering med v baseras på den formulärserver som du använder ett annat operativsystem, till exempel Unix, och ersätter Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-**Tips**: På webbplatsen Adobe Developer finns följande artikel som handlar om hur du skapar ett ASP.NET-program som anropar tjänsten Forms och återger formulär. Se [Skapa ASP.NET-program för formuläråtergivning](https://www.adobe.com/devnet/livecycle/articles/asp_net.html).
 
 ## Snabbstart (SOAP-läge): Återge ett interaktivt PDF-formulär med Java API {#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api}
 
@@ -336,7 +334,7 @@ I följande kodexempel återges formuläret *Loan.xdp *på klienten med hjälp a
  
 ```
 
-## Snabbstart (SOAP-läge): Återge en stödlinje (inaktuell) med Java API {#quick-start-soap-mode-rendering-a-guide-deprecated-using-the-java-api}
+## Snabbstart (SOAP-läge): Återge en stödlinje (föråldrad) med Java API {#quick-start-soap-mode-rendering-a-guide-deprecated-using-the-java-api}
 
 I följande kodexempel återges en guide (utgått) med namnet *TLALifeClaim.xdp* till en klientwebbläsare.
 
@@ -1693,7 +1691,7 @@ I följande kodexempel hanteras ett HTML-formulär som skickas som XML-data. Det
  
 ```
 
-## Snabbstart (SOAP-läge): Skapa PDF-dokument med skickade XML-data med Java API {#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api}
+## Snabbstart (SOAP-läge): Skapa PDF-dokument med inskickade XML-data med Java API {#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api}
 
 I följande Java-kodexempel hanteras formulärdata som skickas som XML. Formulärdata hämtas från formulärinlämningen med Forms API och skickas till utdatatjänsten. Formulärdata och en formulärdesign används för att skapa ett icke-interaktivt PDF-dokument. Det icke-interaktiva PDF-dokumentet lagras i en Content Services-nod (utgått) med namnet `/Company Home/Test Directory`. Formulärets namn skapas dynamiskt. Det innebär att användarens för- och efternamn används för att ge PDF-filen ett namn. Resurs-ID:t för det nya innehållet skrivs ut till klientens webbläsare. (Se [Skapa PDF-dokument med skickade XML-data](/help/forms/developing/rendering-forms.md#creating-pdf-documents-with-submitted-xml-data).)
 
@@ -2770,4 +2768,3 @@ Följande Java-snabbstart hämtar filen Loan.xdp från Content Services (utgått
  } 
  
 ```
-

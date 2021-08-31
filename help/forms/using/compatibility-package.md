@@ -1,8 +1,8 @@
 ---
 title: Kompatibilitetspaket
-seo-title: Kompatibilitetspaket
+seo-title: Compatibility Package
 description: 'Genom att installera kompatibilitetspaketet på AEM Forms 6.4 kan du använda Correspondence Management-resurser från AEM Forms 6.3 och inaktuella adaptiva formulärmallar och sidor. '
-seo-description: Genom att installera kompatibilitetspaketet på AEM Forms 6.4 kan du använda Correspondence Management-resurser från AEM Forms 6.3 och inaktuella adaptiva formulärmallar och sidor.
+seo-description: Installing the Compatibility package on AEM Forms 6.4 allows you to use the Correspondence Management assets from AEM Forms 6.3 and deprecated adaptive forms templates and pages
 uuid: e50b1ff9-c357-422a-8da8-a791ff805317
 contentOwner: gtalwar
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,9 +11,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 38a80992-2eda-4535-89af-0de34b1a9686
 role: Admin
 exl-id: 0bfa0e65-c4cd-4c37-b42b-bff1b777a7be
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '344'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Genom att installera kompatibilitetspaketet på AEM Forms 6.4 kan du använda Co
 
 ## Översikt {#overview}
 
-Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa kundkommunikation i AEM Forms 6.4. Om du vill fortsätta använda bokstäverna från AEM 6.3 Forms och AEM 6.2 Forms måste du installera [AEMFD-kompatibilitetspaketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT).
+Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa kundkommunikation i AEM Forms 6.4. Om du vill fortsätta använda bokstäverna från AEM 6.3 Forms och AEM 6.2 Forms måste du installera [AEMFD-kompatibilitetspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
 Med AEMFD-kompatibilitetspaketet kan du använda följande resurser från AEM Forms 6.3 och 6.2 i AEM Forms 6.4:
 
@@ -41,7 +41,7 @@ När du har utfört en uppgradering gör du följande för att installera AEMFD-
 
 Kontrollera att du har [AEM Kompatibilitetspaket](/help/sites-deploying/backward-compatibility.md) förinstallerat.
 
-1. Installera [Kompatibilitetspaketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT).
+1. Installera [Kompatibilitetspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
    Mer information om hur du överför och installerar paketet finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
 

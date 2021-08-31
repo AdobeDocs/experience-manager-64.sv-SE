@@ -1,16 +1,16 @@
 ---
 title: Installera och konfigurera interaktiv kommunikation
-seo-title: Installera och konfigurera interaktiv kommunikation
+seo-title: Install and configure Interactive Communications
 description: 'Installera och konfigurera AEM Forms Interactive Communications för att skapa affärskorrespondenser, dokument, kontoutdrag, förmånsmeddelanden, marknadsföringsmejl, fakturor och välkomstpaket. '
-seo-description: 'Installera och konfigurera AEM Forms Interactive Communications för att skapa affärskorrespondenser, dokument, kontoutdrag, förmånsmeddelanden, marknadsföringsmejl, fakturor och välkomstpaket. '
+seo-description: Install and configure AEM Forms Interactive Communications to create business correspondences, documents, statements, benefit notices, marketing mails, bills, and welcome kits.
 uuid: c09b5743-3cbc-49ff-977a-b6b3eb81b160
 topic-tags: installing
 discoiquuid: 674c6b68-8a04-4cd3-a63e-9968ca686948
 role: Admin
 exl-id: c7aaa81d-d140-44d9-9144-0cbf6ec5d650
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '1405'
+source-wordcount: '1371'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,7 @@ Utför följande steg på alla Author- och Publish-instanser för att lägga til
 
 #### Installera kompatibilitetspaket {#install-compatibility-package}
 
-Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa kundkommunikation i AEM 6.4 Forms. Om du har uppgraderat eller migrerat från en tidigare version och tänker fortsätta använda brev (Correspondence Management) installerar du paketet [AEMFD-kompatibilitet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT).
+Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa kundkommunikation i AEM 6.4 Forms. Om du har uppgraderat eller migrerat från en tidigare version och tänker fortsätta använda brev (Correspondence Management) installerar du paketet [AEMFD-kompatibilitet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
 Med AEMFD-kompatibilitetspaketet kan du använda följande resurser från AEM 6.3 Forms och AEM 6.2 Forms på AEM 6.4 Forms:
 

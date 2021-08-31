@@ -1,24 +1,23 @@
 ---
 title: Ställa in dagens meddelande
-seo-title: Ställa in dagens meddelande
+seo-title: Setting the message of the day
 description: Med dagens meddelande kan du ange att ett meddelande ska visas på välkomstsidan i gränssnittet för arbetsytan.
-seo-description: Med dagens meddelande kan du ange att ett meddelande ska visas på välkomstsidan i gränssnittet för arbetsytan.
+seo-description: The message of the day let you set a message to be displayed on the Welcome page in the Workspace user interface.
 uuid: 9c664438-6fc0-498e-bb3f-4c6bcb9414a7
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: c2b3a412-70c2-4257-bfb4-1430bb1f8891
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 7ddd5a4d-2b46-4408-b241-81e16cfead3c
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 0%
+source-wordcount: '174'
+ht-degree: 1%
 
 ---
 
-
-# Anger dagens meddelande {#setting-the-message-of-the-day}
+# Ställa in dagens meddelande {#setting-the-message-of-the-day}
 
 Du kan ange att ett meddelande ska visas på välkomstsidan i användargränssnittet för arbetsytan.
 
@@ -36,7 +35,7 @@ Om det behövs kan du använda HTML-taggarna som stöds av Adobe Flash® Player 
 * &lt;textformat> Tagg för textformat
 * &lt;u> Understrykningstagg&lt;/u>
 
-Mer information om vilka taggar som stöds finns i definitionen av egenskapen `htmlText` för klassen TextField i [Flex Language Reference](https://www.adobe.com/support/documentation/en/flex/).
+Mer information om vilka taggar som stöds finns i definitionen av egenskapen `htmlText` för klassen TextField i [Flex Language Reference](https://flex.apache.org/).
 
 ## Ange dagens meddelande {#set-the-message-of-the-day}
 
@@ -47,4 +46,3 @@ Mer information om vilka taggar som stöds finns i definitionen av egenskapen `h
 >[!NOTE]
 >
 >Flex Workspace är föråldrat för AEM formulärreleaser.
-

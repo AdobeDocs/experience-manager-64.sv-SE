@@ -1,21 +1,20 @@
 ---
 title: Microsoft Dynamics OData-konfiguration
-seo-title: Microsoft Dynamics ODtata-konfiguration
+seo-title: Microsoft Dynamics ODtata configuration
 description: Utnyttja, integrera och arbeta med online- och lokala Microsoft Dynamics-tjänster via formulärdatamodell.
-seo-description: Lär dig hur du kan utnyttja integreringen och arbetet med online- och lokala Microsoft Dynamics-tjänster via formulärdatamodellen.
+seo-description: Learn how to leverage integrate and work with online and on-premises Microsoft Dynamics services through form data model.
 uuid: c9b2764f-9127-4a99-a469-b6ebcdee8fdf
 topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 62f9d1de-c397-46b5-964e-19777ddd130c
 feature: Form Data Model
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 18df57b6-789a-4b61-9418-fa12294b226f
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
-
 
 # Microsoft Dynamics OData-konfiguration {#microsoft-dynamics-odata-configuration}
 
@@ -36,7 +35,7 @@ När paketet är installerat är följande enheter och tjänster tillgängliga p
 * MS Dynamics OData-Cloud Service (OData-tjänst)
 * Formulärdatamodell med förkonfigurerade Microsoft Dynamics-enheter och -tjänster.
 
-OData-Cloud Servicen och formulärdatamodellen med förkonfigurerade Microsoft Dynamics-enheter och -tjänster är bara tillgängliga på din AEM Forms-instans om körningsläget för den AEM instansen är inställt på `samplecontent` (standard). Mer information om hur du konfigurerar körningslägen för en AEM finns i [Körningslägen](https://helpx.adobe.com/in/experience-manager/6-4/sites-deploying/configure-runmodes.html).
+OData-Cloud Servicen och formulärdatamodellen med förkonfigurerade Microsoft Dynamics-enheter och -tjänster är bara tillgängliga på din AEM Forms-instans om körningsläget för den AEM instansen är inställt på `samplecontent` (standard). Mer information om hur du konfigurerar körningslägen för en AEM finns i [Körningslägen](/help/sites-deploying/configure-runmodes.md).
 
 ## Förutsättningar {#prerequisites}
 
@@ -50,7 +49,7 @@ Innan du börjar konfigurera och konfigurera Microsoft Dynamics måste du se til
 
 * [Registrerade programmet för Microsoft Dynamics onlinetjänst med Microsoft Azure Active Directory](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory). Notera värdena för klient-ID (kallas även program-ID) och klienthemlighet för den registrerade tjänsten. Dessa värden används när [molntjänsten konfigureras för din Microsoft Dynamics-tjänst](/help/forms/using/ms-dynamics-odata-configuration.md#configure-cloud-service-for-your-microsoft-dynamics-service).
 
-## Ange svar-URL för registrerat Microsoft Dynamics-program {#set-reply-url-for-registered-microsoft-dynamics-application}
+## Ange svars-URL för registrerat Microsoft Dynamics-program {#set-reply-url-for-registered-microsoft-dynamics-application}
 
 Gör följande för att ange svars-URL:en för det registrerade Microsoft Dynamics-programmet:
 

@@ -1,8 +1,8 @@
 ---
 title: Hantera slutpunkter programmatiskt
-seo-title: Hantera slutpunkter programmatiskt
+seo-title: Programmatically Managing Endpoints
 description: Använd tjänsten Endpoint Registry för att lägga till EJB-slutpunkter, lägga till SOAP-slutpunkter, lägga till övervakade mappslutpunkter, lägga till e-postslutpunkter, lägga till fjärrslutpunkter, lägga till Task Manager-slutpunkter, ändra slutpunkter, ta bort slutpunkter och hämta slutpunktsanslutningsinformation.
-seo-description: Använd tjänsten Endpoint Registry för att lägga till EJB-slutpunkter, lägga till SOAP-slutpunkter, lägga till övervakade mappslutpunkter, lägga till e-postslutpunkter, lägga till fjärrslutpunkter, lägga till Task Manager-slutpunkter, ändra slutpunkter, ta bort slutpunkter och hämta slutpunktsanslutningsinformation.
+seo-description: Use the Endpoint Registry service to add EJB endpoints, add SOAP endpoint, add Watched Folder endpoints, add Email endpoints, add  Remoting endpoints, add Task Manager endpoints, modify endpoints, remove endpoints, and retrieve endpoint connector information.
 uuid: 5dc50946-3323-4c5d-a43b-31c1c980bd04
 contentOwner: admin
 content-type: reference
@@ -10,14 +10,13 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 076889a7-9c9f-4b6f-a45b-67a9b3923c36
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 1dc43962-dffe-4062-838f-737b3100ad28
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '10850'
+source-wordcount: '10791'
 ht-degree: 0%
 
 ---
-
 
 # Hantera slutpunkter programmatiskt {#programmatically-managing-endpoints}
 
@@ -54,7 +53,7 @@ Tjänsten Endpoint Registry ger möjlighet att programmässigt hantera slutpunkt
 * Ta bort slutpunkter (Se [Ta bort slutpunkter](programmatically-endpoints.md#removing-endpoints).)
 * Hämta information om slutpunktsanslutning (Se [Hämta information om slutpunktsanslutning](programmatically-endpoints.md#retrieving-endpoint-connector-information).)
 
-## Lägger till EJB-slutpunkter {#adding-ejb-endpoints}
+## Lägga till EJB-slutpunkter {#adding-ejb-endpoints}
 
 Du kan programmässigt lägga till en EJB-slutpunkt till en tjänst med AEM Forms Java API. Genom att lägga till en EJB-slutpunkt till en tjänst aktiverar du ett klientprogram att anropa tjänsten i EJB-läge. Det innebär att du kan välja EJB-läge när du anger anslutningsegenskaper som krävs för att anropa AEM Forms. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
 
@@ -157,7 +156,7 @@ Lägg till en EJB-slutpunkt med Java API:
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## Lägger till SOAP-slutpunkter {#adding-soap-endpoints}
+## Lägga till SOAP-slutpunkter {#adding-soap-endpoints}
 
 Du kan programmässigt lägga till en SOAP-slutpunkt till en tjänst med hjälp av AEM Forms Java API. Genom att lägga till en SOAP-slutpunkt aktiverar du ett klientprogram att anropa tjänsten i SOAP-läge. När du anger de anslutningsegenskaper som krävs för att anropa AEM Forms kan du alltså välja SOAP-läge.
 
@@ -222,7 +221,7 @@ När du har skapat en ny slutpunkt måste du aktivera den. När slutpunkten är 
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Lägg till en SOAP-slutpunkt med Java API {#add-a-soap-endpoint-using-the-java-api}
+### Lägga till en SOAP-slutpunkt med Java API {#add-a-soap-endpoint-using-the-java-api}
 
 Lägg till en SOAP-slutpunkt till en tjänst med hjälp av Java API:
 
@@ -262,7 +261,7 @@ Lägg till en SOAP-slutpunkt till en tjänst med hjälp av Java API:
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## Lägger till övervakade mappslutpunkter {#adding-watched-folder-endpoints}
+## Lägga till bevakade mappslutpunkter {#adding-watched-folder-endpoints}
 
 Du kan programmässigt lägga till en bevakad mappslutpunkt till en tjänst med hjälp av AEM Forms Java API. Genom att lägga till en bevakad mappslutpunkt kan användarna placera en fil (t.ex. en PDF-fil) i en mapp. När filen placeras i mappen anropas den konfigurerade tjänsten och filen ändras. När tjänsten har utfört den angivna åtgärden sparas den ändrade filen i en angiven utdatamapp. En bevakad mapp är konfigurerad för att skannas med ett fast intervall eller med ett cron-schema, till exempel varje måndag, onsdag och fredag kl. 12.00.
 
@@ -324,7 +323,7 @@ Följande lista anger konfigurationsvärden som anges när en bevakad mappslutpu
 
 * **url**: Anger platsen för bevakad mapp. I en klustrad miljö måste det här värdet peka på en delad nätverksmapp som är tillgänglig från alla datorer i klustret.
 * **asynkron**: Identifierar anropstypen som asynkron eller synkron. Övergående och synkrona processer kan bara anropas synkront. Standardvärdet är true. Asynkron rekommenderas.
-* **cronExpression**: Används av kvarts för att schemalägga avsökningen av indatakatalogen. Mer information om hur du konfigurerar cron-uttrycket finns i [https://quartz.sourceforge.net/javadoc/org/quartz/CronTrigger.html](https://quartz.sourceforge.net/javadoc/org/quartz/CronTrigger.html).
+* **cronExpression**: Används av kvarts för att schemalägga avsökningen av indatakatalogen.
 * **purgeDuration**: Detta är ett obligatoriskt attribut. Filer och mappar i resultatmappen tas bort när de är äldre än det här värdet. Detta värde mäts i dagar. Det här attributet är användbart för att säkerställa att resultatmappen inte blir full. Värdet -1 dagar anger att resultatmappen aldrig ska tas bort. Standardvärdet är -1.
 * **repeatInterval**: Intervallet, i sekunder, för inläsning av den bevakade mappen. Om inte strypning är aktiverat ska det här värdet vara längre än tiden för att bearbeta ett genomsnittligt jobb. annars kan systemet bli överbelastat. Standardvärdet är 5.
 * **repeatCount**: Antalet gånger som en bevakad mapp genomsöker mappen eller katalogen. Värdet -1 anger obestämd skanning. Standardvärdet är -1.
@@ -390,7 +389,7 @@ När du har skapat en bevakad mappslutpunkt måste du aktivera den. När slutpun
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Lägg till en bevakad mappslutpunkt med Java API {#add-a-watched-folder-endpoint-using-the-java-api}
+### Lägga till en bevakad mappslutpunkt med Java API {#add-a-watched-folder-endpoint-using-the-java-api}
 
 Lägg till en bevakad mappslutpunkt med AEM Forms Java API:
 
@@ -462,7 +461,7 @@ Lägg till en bevakad mappslutpunkt med AEM Forms Java API:
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Bevakad mappkonfigurationsvärdeskonstantfil {#watched-folder-configuration-values-constant-file}
+### Konstanta filer för mappkonfigurationsvärden som bevakas {#watched-folder-configuration-values-constant-file}
 
 Snabbstart: När du lägger till en bevakad mappslutpunkt med Java API](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api) används en konstant fil som måste ingå i Java-projektet för att snabbstarten ska kunna kompileras. [ Den här konstanta filen representerar konfigurationsvärden som måste anges när du lägger till en bevakad mappslutpunkt. Följande Java-kod representerar den konstanta filen.
 
@@ -495,7 +494,7 @@ Snabbstart: När du lägger till en bevakad mappslutpunkt med Java API](/help/fo
         }
 ```
 
-## Lägger till e-postslutpunkter {#adding-email-endpoints}
+## Lägga till e-postslutpunkter {#adding-email-endpoints}
 
 Du kan programmässigt lägga till en e-postslutpunkt till en tjänst med AEM Forms Java API. Genom att lägga till en e-postslutpunkt kan du göra det möjligt för användare att skicka ett e-postmeddelande med en eller flera bifogade filer till ett angivet e-postkonto. Sedan anropas åtgärden för konfigurationstjänsten och filerna ändras. När tjänsten har utfört den angivna åtgärden skickas ett e-postmeddelande till avsändaren med de ändrade filerna som bifogade filer.
 
@@ -635,7 +634,7 @@ När du har skapat en e-postslutpunkt måste du aktivera den. När slutpunkten �
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Lägg till en e-postslutpunkt med Java API {#add-an-email-endpoint-using-the-java-api}
+### Lägga till en e-postslutpunkt med Java API {#add-an-email-endpoint-using-the-java-api}
 
 Lägg till en e-postslutpunkt med Java API:
 
@@ -707,7 +706,7 @@ Lägg till en e-postslutpunkt med Java API:
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Konstantfilen {#email-configuration-values-constant-file} för e-postkonfigurationsvärden
+### Konstantfil för e-postkonfigurationsvärden {#email-configuration-values-constant-file}
 
 Snabbstart: När du lägger till en e-postslutpunkt med Java API](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api) används en konstant fil som måste ingå i Java-projektet för att snabbstarten ska kunna kompileras. [ Den här konstanta filen representerar konfigurationsvärden som måste anges när du lägger till en e-postslutpunkt. Följande Java-kod representerar den konstanta filen.
 
@@ -747,7 +746,7 @@ Snabbstart: När du lägger till en e-postslutpunkt med Java API](/help/forms/de
  }
 ```
 
-## Lägger till fjärrslutpunkter {#adding-remoting-endpoints}
+## Lägga till fjärrslutpunkter {#adding-remoting-endpoints}
 
 >[!NOTE]
 >
@@ -820,7 +819,7 @@ När du har skapat en ny slutpunkt måste du aktivera den. När en fjärrslutpun
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Lägg till en fjärrslutpunkt med Java API {#add-a-remoting-endpoint-using-the-java-api}
+### Lägga till en fjärrslutpunkt med Java API {#add-a-remoting-endpoint-using-the-java-api}
 
 Lägg till en fjärrslutpunkt med Java API:
 
@@ -931,7 +930,7 @@ När du har skapat en ny slutpunkt måste du aktivera den. När slutpunkten är 
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Lägg till en TaskManager-slutpunkt med Java API {#add-a-taskmanager-endpoint-using-the-java-api}
+### Lägga till en TaskManager-slutpunkt med Java API {#add-a-taskmanager-endpoint-using-the-java-api}
 
 Lägg till en TaskManager-slutpunkt med Java API:
 

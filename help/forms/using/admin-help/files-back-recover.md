@@ -1,22 +1,21 @@
 ---
 title: Filer som ska säkerhetskopieras och återställas
-seo-title: Filer som ska säkerhetskopieras och återställas
+seo-title: Files to back up and recover
 description: Det här dokumentet beskriver programmet och de datafiler som måste säkerhetskopieras.
-seo-description: Det här dokumentet beskriver programmet och de datafiler som måste säkerhetskopieras.
+seo-description: This document describes the application and data files that must be backed up.
 uuid: ba04adb9-675a-48f2-ad52-39c1266e423b
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
-translation-type: tm+mt
-source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
+exl-id: 407db3cf-8add-486b-8cf5-daeecc18bf30
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '2203'
+source-wordcount: '2142'
 ht-degree: 0%
 
 ---
-
 
 # Filer som ska säkerhetskopieras och återställas {#files-to-back-up-and-recover}
 
@@ -28,7 +27,7 @@ Tänk på följande när det gäller säkerhetskopiering och återställning:
 * Om du behöver ta ned noderna i en klustrad klustermiljö för säkerhetskopiering måste du se till att de sekundära noderna stängs av före den primära noden. Annars kan det leda till inkonsekvens i klustret eller servern. Dessutom bör den primära noden göras live före en sekundär nod.
 * För återställningsåtgärden i ett kluster bör programservern stoppas för varje nod i klustret.
 
-## Global dokumentlagringskatalog {#global-document-storage-directory}
+## Katalog för global dokumentlagring {#global-document-storage-directory}
 
 GDS är en katalog som används för att lagra långlivade filer som används i en process. Långvariga filer är avsedda att spänna över en eller flera starter av ett AEM och kan sträcka sig över flera dagar och till och med år. Dessa långa filer kan innehålla PDF-filer, profiler och formulärmallar. Långvariga filer är en viktig del av det övergripande tillståndet för många AEM. Om vissa eller alla långlivade dokument förloras eller skadas kan formulärservern bli instabil.
 
@@ -53,13 +52,13 @@ I en klustrad miljö pekar GDS vanligtvis på en katalog som delas i nätverket 
 
 GDS-platserna kan ändras under en återställning om den ursprungliga platsen inte längre är tillgänglig. (Se [Ändra GDS-plats under återställning](/help/forms/using/admin-help/recovering-aem-forms-data.md#changing-the-gds-location-during-recovery).)
 
-### Säkerhetskopieringsalternativ när databasen används för dokumentlagring {#backup-options-when-database-is-used-for-document-storage}
+### Alternativ för säkerhetskopiering när databasen används för dokumentlagring {#backup-options-when-database-is-used-for-document-storage}
 
 Du kan aktivera AEM dokumentlagring för formulär i AEM formulärdatabas med administrationskonsolen. Även om det här alternativet behåller alla beständiga dokument i databasen, kräver AEM fortfarande den filsystembaserade GDS-katalogen eftersom den används för att lagra permanenta och tillfälliga filer och resurser som är relaterade till sessioner och anrop av AEM formulär.
 
 När du väljer alternativet &quot;Aktivera dokumentlagring i databasen&quot; i Core System Settings i administrationskonsolen eller med Configuration Manager, tillåter AEM inte läge för säkerhetskopiering av ögonblicksbilder och rullande säkerhetskopiering. Därför behöver du inte hantera säkerhetskopieringslägen med AEM formulär. Om du använder det här alternativet bör du endast säkerhetskopiera GDS en gång efter att du har aktiverat alternativet. När du återställer AEM från en säkerhetskopia behöver du inte byta namn på säkerhetskopieringskatalogen för GDS eller återställa GDS.
 
-## AEM databas {#aem-repository}
+## AEM {#aem-repository}
 
 AEM (crx-database) skapas om crx-databasen konfigureras när AEM installeras. Platsen för crx-database bestäms under installationen av AEM formulär. AEM säkerhetskopiering och återställning av databasen krävs tillsammans med databas och GDS för enhetliga AEM i AEM formulär. AEM innehåller data för Correspondence Management Solution, Forms Manager och AEM Forms Workspace.
 
@@ -83,7 +82,7 @@ AEM Forms Workspace matchar funktionerna i (Borttaget för AEM på JEE) Flex Wor
 
 Det möjliggör uppgiftshantering på klienter utan Flash Player och Adobe Reader. Det underlättar återgivning av HTML Forms, förutom PDF forms- och Flex-formulär.
 
-## AEM formulärdatabas {#aem-forms-database}
+## AEM {#aem-forms-database}
 
 AEM formulärdatabas lagrar innehåll som formulärartefakter, tjänstkonfigurationer, processtillstånd och databasreferenser till filer i GDS och Content Storage Root-katalogen (för Content Services). Säkerhetskopiering av databaser kan utföras i realtid utan avbrott i tjänsten, och återställning kan ske till en viss tidpunkt eller till en viss ändring. I det här avsnittet beskrivs hur du konfigurerar databasen så att den kan säkerhetskopieras i realtid.
 
@@ -93,7 +92,7 @@ Om du vill säkerhetskopiera databasen i realtid måste du antingen använda lä
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe produktlivscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html). Mer information om hur du konfigurerar innehållstjänster (borttaget) finns i [Administrera innehållstjänster](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf).
+>Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe produktlivscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).
 
 ### DB2 {#db2}
 
@@ -105,7 +104,7 @@ Konfigurera din DB2-databas så att den körs i arkivloggningsläge.
 
 IBM har en uppsättning verktyg och hjälpsystem som hjälper databasadministratörer att hantera säkerhetskopierings- och återställningsuppgifter:
 
-* IBM DB2 Archive Log Accelerator (Se [IBM DB2 Archive Log Accelerator för z/OS User&#39;s Guide](https://publib.boulder.ibm.com/infocenter/dzichelp/v2r2/topic/com.ibm.db2tools.alc.doc.ug/alcugb20.pdf?noframes=true).)
+* IBM DB2 Archive Log Accelerator
 * IBM DB2 Data Archive Expert (See [IBM DB2 Data Archive Expert User&#39;s Guide and Reference](https://publib.boulder.ibm.com/infocenter/mptoolic/v1r0/topic/com.ibm.db2tools.aeu.doc.ug/ahxugb13.pdf?noframes=true).)
 
 DB2 har inbyggda funktioner för att säkerhetskopiera en databas till Tivoli Storage Manager. Genom att använda Tivoli Storage Manager kan DB2-säkerhetskopior lagras på andra medier eller på den lokala hårddisken.
@@ -114,13 +113,13 @@ Mer information om säkerhetskopiering och återställning av DB2-databaser finn
 
 ### Oracle {#oracle}
 
-Använd säkerhetskopiering av ögonblicksbilder eller konfigurera din Oracle-databas så att den körs i arkivloggläge. (Se [Oracle Backup: En introduktion](https://www.databasedesign-resource.com/oracle-backup.md).) Mer information om hur du säkerhetskopierar och återställer din Oracle-databas finns på följande webbplatser:
+Använd säkerhetskopiering av ögonblicksbilder eller konfigurera Oraclets databas så att den körs i arkivloggläge. (Se [Säkerhetskopiering av Oracle: En introduktion](https://www.databasedesign-resource.com/oracle-backup.md).) Mer information om hur du säkerhetskopierar och återställer Oraclet finns på följande platser:
 
-[Oracle Säkerhetskopiering och återställning: ](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html) Beskriver koncept för säkerhetskopiering och återställning och de vanligaste teknikerna för att använda Recovery Manager (RMAN) för säkerhetskopiering, återställning och rapportering, samt ger mer information om hur du planerar en strategi för säkerhetskopiering och återställning.
+[Säkerhetskopiering och återställning av oracle: ](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html) Beskriver koncept för säkerhetskopiering och återställning och de vanligaste teknikerna för att använda Recovery Manager (RMAN) för säkerhetskopiering, återställning och rapportering mer i detalj, samt ger mer information om hur du planerar en strategi för säkerhetskopiering och återställning.
 
-[Användarhandbok för säkerhetskopiering och återställning av oracle-databas:](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10642.pdf) Innehåller detaljerad information om RMAN-arkitektur, koncept och mekanismer för säkerhetskopiering och återställning, avancerade återställningstekniker som återställning och flashback-funktioner vid tidpunkt samt prestandajustering för säkerhetskopiering och återställning. Det omfattar även användarhanterad säkerhetskopiering och återställning med användarens operativsystem istället för RMAN. Den här volymen är väsentlig för säkerhetskopiering och återställning av mer avancerade databasdistributioner och för avancerade återställningsscenarier.
+[Användarhandbok för säkerhetskopiering och återställning av Oracle-databas:](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10642.pdf) Innehåller detaljerad information om RMAN-arkitektur, koncept och mekanismer för säkerhetskopiering och återställning, avancerade återställningstekniker som återställning och flashback-funktioner vid tidpunkt samt prestandajustering för säkerhetskopiering och återställning. Det omfattar även användarhanterad säkerhetskopiering och återställning med användarens operativsystem istället för RMAN. Den här volymen är väsentlig för säkerhetskopiering och återställning av mer avancerade databasdistributioner och för avancerade återställningsscenarier.
 
-[Referens för säkerhetskopiering och återställning av oracle-databas:](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10643.pdf) Tillhandahåller fullständig information om syntax och semantik för alla RMAN-kommandon och beskriver de databasvyer som är tillgängliga för rapportering av säkerhetskopierings- och återställningsaktiviteter.
+[Oraclena referens för säkerhetskopiering och återställning av databas:](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10643.pdf) Innehåller fullständig information om syntax och semantik för alla RMAN-kommandon och beskriver de databasvyer som är tillgängliga för rapportering av säkerhetskopierings- och återställningsaktiviteter.
 
 ### SQL Server {#sql-server}
 

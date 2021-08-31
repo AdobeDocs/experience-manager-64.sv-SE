@@ -1,22 +1,21 @@
 ---
 title: Konfigurerar serverinställningar
-seo-title: Konfigurerar serverinställningar
+seo-title: Configuring Server Settings
 description: På sidan Serverinställningar får du tillgång till inställningar för e-post, aktivitetsmeddelanden och administratörsmeddelanden.
-seo-description: På sidan Serverinställningar får du tillgång till inställningar för e-post, aktivitetsmeddelanden och administratörsmeddelanden.
+seo-description: The Server Settings page provides access to email, task notification and administrator notification settings.
 uuid: 73b51ac0-56e5-4748-bb33-e3986c69eb2d
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
-translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+exl-id: 7933efeb-618a-4c38-8e5e-593be8ebb00c
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '2657'
+source-wordcount: '2625'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurerar serverinställningar {#configuring-server-settings}
 
@@ -26,7 +25,7 @@ Sidan Serverinställningar ger åtkomst till olika inställningar för formulär
 * **Inställningar** för uppgiftsmeddelanden som aktiverar, inaktiverar eller ändrar meddelanden som skickas i e-postmeddelanden till slutanvändare och grupper om deras uppgifter. (Se [Konfigurera meddelanden för användare och grupper](configuring-server-settings.md#configuring-notifications-for-users-and-groups).)
 * **Meddelandeinställningar** för administratörer som aktiverar, inaktiverar eller ändrar meddelanden som skickas i e-postmeddelanden för administrativa uppgifter. (Se [Konfigurera meddelanden för administratörer](configuring-server-settings.md#configuring-notifications-for-administrators).)
 
-## Konfigurerar e-postinställningar {#configuring-email-settings}
+## Konfigurera e-postinställningar {#configuring-email-settings}
 
 Du kan ange ett e-postkonto för formulärservern, som skickar e-postmeddelanden till användare och administratörer AEM formulär. Dessa e-postmeddelanden används för att meddela och påminna användare om uppgifter som de måste slutföra, meddela användaren om uppgifter som har nått en deadline och meddela administratören om eventuella processfel som inträffar.
 
@@ -129,9 +128,9 @@ Du kan skicka aviseringar om deadline till användare och grupper när deadline 
 
 ### Dölj taggen DO NOT DELETE för alla e-postmeddelanden {#hide-the-do-not-delete-tag-for-all-emails}
 
-Du kan konfigurera e-post så att den döljs för spårningstaggen DO NOT DELETE i alla e-postmeddelanden som skickas i en mänsklig centrerad process. Mer information finns i [Så här döljer du taggen DO-NOT-DELETE med CSS](https://blogs.adobe.com/LiveCycleHelp/2013/09/how-to-hide-the-do-not-delete-tag-with-css.html)
+Du kan konfigurera e-post så att den döljs för spårningstaggen DO NOT DELETE i alla e-postmeddelanden som skickas i en mänsklig centrerad process.
 
-## Konfigurerar meddelanden för administratörer {#configuring-notifications-for-administrators}
+## Konfigurera meddelanden för administratörer {#configuring-notifications-for-administrators}
 
 Du kan konfigurera mallar som används i arbetsflödet för formulär för att generera e-postmeddelanden som skickas till administratörer.
 
@@ -140,7 +139,7 @@ Du konfigurerar följande typer av meddelanden för administratörer:
 * fast gren
 * fast åtgärd
 
-### Konfigurera aviseringar om fasta grenar {#configure-stalled-branch-notifications}
+### Konfigurera meddelanden om fasta grenar {#configure-stalled-branch-notifications}
 
 Om en gren avbryts (avbryter processen antingen avsiktligt eller på grund av ett fel) kan du få ett e-postmeddelande skickat till en administratör eller en annan användare som sedan kan undersöka problemet.
 
@@ -200,7 +199,7 @@ Om din lösning distribueras i en klustrad miljö ersätter du `@@notification-h
 
 **JBoss:** 8080
 
-**Oracle WebLogic Server:** 7001
+**Oracle WebLogic-server:** 7001
 
 **IBM WebSphere:** 9080
 
@@ -236,7 +235,7 @@ Dessutom kan du använda följande för grupppåminnelser, grupptilldelningar oc
 
 >[!NOTE]
 >
->Om en variabel saknar värde returneras ingenting.
+>Om en variabel inte har något värde returneras ingenting.
 
 För fasta grenar kan du använda följande variabler i rutorna Ämne och Meddelandemall:
 
@@ -289,4 +288,3 @@ På sidan BAM-konfigurationsinställningar anger du anslutningarna till servern 
 1. Ange det portnummer som används av formulärservern i rutan Serverport.
 1. I rutorna Användarnamn och Lösenord anger du lämpligt användar-ID och lösenord för att komma åt BAM-servern. Standardanvändarnamnet är CognosNowAdmin och standardlösenordet är manager.
 1. Klicka på Spara.
-

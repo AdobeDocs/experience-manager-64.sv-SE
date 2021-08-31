@@ -1,21 +1,20 @@
 ---
 title: AEM 6.4 Service Pack versionsinformation
-seo-title: AEM 6.4 Service Pack versionsinformation
+seo-title: AEM 6.4 Service Pack Release Notes
 description: Versionsinformation om Adobe Experience Manager 6.4 Service Pack.
-seo-description: Versionsinformation om Adobe Experience Manager 6.4 Service Pack.
+seo-description: Release notes specific to Adobe Experience Manager 6.4 Service Packs.
 uuid: 49a710a8-7cd5-47de-9a96-7af7f3c00dfc
 contentOwner: dekalra
 products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
-translation-type: tm+mt
-source-git-commit: a2808c1861b6853b5e9505ad189f296f7ebd2572
+exl-id: d0da9390-2167-47ee-82fd-8c81d8d68a3e
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '21578'
+source-wordcount: '21556'
 ht-degree: 0%
 
 ---
-
 
 # AEM 6.4 Service Pack versionsinformation {#aem-service-pack-release-notes}
 
@@ -48,11 +47,11 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Integrering av formulärdatamodeller med SOAP-webbtjänsten har nu stöd för urvalsgrupper eller attribut för element.
 
-* AEM Assets har nu konfigurerats med varumärkesportalen via [!DNL Adobe I/O].
+* AEM Assets har nu konfigurerats med Brand Portal via [!DNL Adobe I/O].
 
 * Uppdaterade jQuery-versionen som paketerats i ContextHub till 3.2.1.
 
-## Lista över ändringar {#list-of-changes}
+## Ändringslista {#list-of-changes}
 
 ### Sites {#sites}
 
@@ -89,7 +88,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Versionshistorik-URL:er visas under fältet Refererat av på egenskapssidan för resurser (NPR-31889).
 
-* Avpublicering från varumärkesportalen på sidan Hantera publikation misslyckas för undermappar till en publicerad mapp (NPR-31835).
+* Avpublicering från Brand Portal på sidan Hantera publikation misslyckas för undermappar till en publicerad mapp (NPR-31835).
 
 * Dynamic Media videokodningar kan inte överföras när Scene7 Cloud Configuration placeras i en privat mapp `/conf` i stället för `/conf/global` (NPR-31779).
 
@@ -123,11 +122,11 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Behörighetsproblem leder till att fel visas när sidor flyttas i en plan (NPR-32610).
 
-### WCM-sidredigeraren {#wcm-page-editor-6480}
+### WCM-sidredigerare {#wcm-page-editor-6480}
 
 * Webbläsaren slutar svara när en komponent läggs till på en sida med ett specifikt URL-format (NPR-32368, NPR-31917).
 
-### WCM-administratörsgränssnitt {#wcm-admin-ui-6480}
+### WCM-Admin-gränssnitt {#wcm-admin-ui-6480}
 
 * Det ingår inte några refererade resurser i begäran om aktiveringsarbetsflöde (NPR-32304).
 
@@ -135,11 +134,11 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Det går inte att uppdatera gruppminiatyrbilden för grupper (NPR-32603).
 
-### Varumärkesportal {#brand-portal}
+### Brand Portal {#brand-portal}
 
 * Avpublicera metadataschemat i AEM Assets fyller i ett felmeddelande även om schemat tas bort vid backend (CQ-4286871).
 
-### Foundation-gränssnitt {#foundations-ui-6480}
+### Foundation UI {#foundations-ui-6480}
 
 * Ogiltiga tecken visas i den URL som har lagts till i en Button-komponent (NPR-32684).
 
@@ -165,7 +164,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Analyserna ger inga lämpliga resultat när det gäller att skicka in eller överge formulär på en webbplatssida (NPR-31359).
 
-### Programfixar och funktionspaket som ingår i tidigare Service Packs {#hotfixes-and-feature-packs-included-in-previous-service-packs}
+### Programfixar och funktionspaket som ingår i tidigare servicepaket {#hotfixes-and-feature-packs-included-in-previous-service-packs}
 
 #### AEM 6.4.7.0 {#experience-manager-6470}
 
@@ -251,7 +250,7 @@ Om du använder paketet `com.day.cq.dam.handler.standard.msoffice` i din anpassa
 
 * PDF-filer är inte indexerade och innehållet i dem är inte sökbart (CQ-4278916).
 
-##### Platser {#sites-6470}
+##### Webbplatser {#sites-6470}
 
 * När starter befordras med endast Befordra ändrade sidor och Befordra starter med ändrade sidor görs, visas endast de ändrade sidorna som befordrade. När listan som ska befordras är korrekt visas de icke-ändrade sidorna fortfarande längst ned i listan (NPR-31314).
 
@@ -291,7 +290,7 @@ Om du använder paketet `com.day.cq.dam.handler.standard.msoffice` i din anpassa
 
 * Uppdaterat Sling-distribuerad händelseadministratör till version 1.1.4 som förbättrar kvaliteten på loggar i en klustrad miljö (NPR-29256).
 
-##### Foundation-gränssnitt {#foundation-6470}
+##### Foundation UI {#foundation-6470}
 
 * Om du bläddrar till slutet av resultatsidan med ett stort antal sökresultat kraschar webbläsaren (NPR-31332).
 
@@ -520,7 +519,7 @@ Det är också kumulativt, vilket innebär att 6.4.5.0 innehåller alla AEM 6.4-
 Några av de viktigaste högdagrarna i AEM 6.4.5.0 är:
 
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.8.13.
-* Tillagd sockettimeout och timeout för anslutning i replikeringsagenter för varumärkesportalen.
+* Lagt till sockettimeout och timeout för anslutning i Brand Portal replikeringsagenter.
 * Förbättrade sökfunktioner - Ökade sidnumreringsgränsen för sökresultatet till 100 sidor.
 * Inaktiverade OSGi-komponenten `AssetDownloadServlet` som standard AEM publiceringsinstanser. Mer information finns i [Hämta resurser från AEM](/help/assets/download-assets-from-aem.md).
 * Aktiverat stöd för flera Platshanterare för resurser. Mer information finns i [Återanvända resurser med MSM för Resurser](/help/assets/reuse-assets-using-msm.md).
@@ -550,7 +549,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.5.0 är:
 * Om du skapar ett stort antal relationer för en resurs uppstår ett fel. NPR-28779: Programfix för CQ-4250708
 * Inmatningen av resurser är långsam i Scene7 Connect-körningsläget. NPR-28658: Programfix för CQ-4263007
 * Ett ohanterat TypeError-fel: Det går inte att läsa egenskapen split för undefined som visas när sökresultaten ska visas. NPR-28803: Programfix för CQ-4248371
-* Replikeringen från AEM till varumärkesportalen har fastnat under lång tid. NPR-28914: Programfix för CQ-4254932
+* Replikeringen från AEM till Brand Portal har fastnat under lång tid. NPR-28914: Programfix för CQ-4254932
 * Att flytta resurser i DAM resulterar inte i en liknande förflyttning på Scene7. NPR-28957: Programfix för CQ-4264974
 * Metadatauppdateringar skickas inte till IPS om metadatafältet uppdateras i AEM. NPR-28961: Programfix för CQ-4255393
 * VersioningTimelineEventProvider ska tillhandahålla rotversionen tillsammans med versionskommentaren. Programfix för GRANITE-26063
@@ -558,7 +557,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.5.0 är:
 * Aktiverat stöd för flera Platshanterare för resurser. Programfix för CQ-4271453, CQ-4268621, CQ-4257491
 * AEM ska visa ytterligare en post för den aktuella versionen av resursen i tidslinjehistoriken och visa den senaste incheckningskommentaren från Adobe Asset Link. Programfix för CQ-4262864
 * Exempelvideon läses inte in när en MixedMediaSet skapas eller redigeras. Programfix för CQ-4244889
-* Om du inaktiverar behörigheten att ta bort innehåll på AEM sidan förhindrar du användaren att publicera till varumärkesportalen. Programfix för CQ-4270426
+* Om du inaktiverar behörigheterna att ta bort innehåll på AEM sidan förhindrar du användaren att publicera till Brand Portal. Programfix för CQ-4270426
 * Frågebegränsningsrelaterade problem med tillgångsrapporter efter uppgradering till AEM 6.4.3. NPR-28588: Programfix för CQ-4262022, CQ-4260697
 * Hämtningsfunktionen utnyttjar AEM Assets via en resurshämtningsserver som gör det möjligt för anonyma användare att hämta alla resurser. NPR-27315, programfix för CQ-4254732
 
@@ -586,7 +585,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.5.0 är:
 * När du lägger till en komponent i en parsys respekteras inte designkomponentlisteegenskapen och den matchas mot ett annat mallnodnamn med en liknande parsystruktur. NPR-29509: Programfix för CQ-4269044
 * cq:dropTarget-zonen täcker hela komponenten i stället för bildens storlek, vilket försvårar målsättningen med inbäddade komponenter. NPR-29738: Programfix för CQ-4268912
 * Bildkomponenten anropar inte &quot;afteredit&quot;-avlyssnaren när bildens redigerare på plats används. Programfix NPR-29616 för CQ-4268065
-* Ett problem med att konfigurera social publicering på Facebook. NPR-29212: Programfix för CQ-4266630
+* Ett problem med att skapa social publicering till Facebook. NPR-29212: Programfix för CQ-4266630
 * När du befordrar starter för ändrade sidor beaktas ändringar i både käll- och startgrenarna. NPR-29308: Programfix för CQ-4266746
 * Den återgivna miniatyrbilden för innehållsfragment visar intern kalenderrepresentation för fältet Datum och Tid. NPR-29531: Programfix för CQ-4269362
 * Det går inte att lägga till en tagg i flera sidor med befintliga olika taggar. NPR-28729: Programfix för CQ-4262922
@@ -653,7 +652,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.5.0 är:
 
 * Användarna kan inte slutföra projektarbetsflödet. NPR-29621: Programfix för CQ-4258791
 * I projektarbetsflödeslistan visas tomma rader utöver 40 arbetsflöden. NPR-28739: Programfix för CQ-4264005
-* Om du väljer alternativet för dynamisk återgivning i varumärkesportalen hämtas en tom ZIP-fil. NPR-29420: Programfix för CQ-4268826
+* Om du väljer alternativet för dynamisk återgivning i Brand Portal hämtas en tom ZIP-fil. NPR-29420: Programfix för CQ-4268826
 * Publicera resurser från AEM Author /content/dam/mac-mappen till Brand Portal fungerar inte. NPR-29820: Programfix för CQ-4271118
 * Interpunktion i namnet orsakar problem med publiceringsknappen. NPR-29573: Programfix för CQ-4269317
 * Det går inte att skapa en kopia av resursspråket via referenspanelen. Programfix för CQ-4269535
@@ -1077,7 +1076,7 @@ Några viktiga högdagrar i AEM 6.4.3.0 är:
 * Användare kan inte redigera behörigheter för slutna användargrupper i sidegenskaperna. NPR-27138: Programfix för CQ-4256089
 Det går inte att redigera taggar via taggning. NPR-26957: Programfix för CQ-4254858
 * När en tagg som refereras från en strukturerad innehållsfragmentmodell flyttas, uppdateras inte de befintliga referenserna till taggen i ett innehållsfragment. Detta händer i redigeringsskärmen för innehållsfragmentmodellen. NPR-26776: Programfix för CQ-4251805
-* När du skapar och befordrar en start med flera sidor skapas flera versioner för varje sida. NPR-26917: Programfix för CQ-4254663
+* När du skapar och befordrar en start med flera sidor skapas flera versioner för varje sida. NPR-26919: Programfix för CQ-4254663
 * AEM siteadmin hanterar inte sökvägar som anges i webbläsarens adressfält. NPR-26780: Programfix för CQ-4254097
 * När en sida flyttas till en ny plats utan att namnet på den ändras, går sidans versionshistorik förlorad. NPR-26706: Programfix för CQ-4254025
 * URL:er i Experience Frment Admin Editor tillåter inte övertäckningar. NPR-26319: Programfix för CQ-4252156
@@ -1085,11 +1084,11 @@ Det går inte att redigera taggar via taggning. NPR-26957: Programfix för CQ-42
 * När data används i klasser med samma namn skapas kod som inte är kompatibel. NPR-27282: Programfix för Sling-7581
 * Efter installation av uppgradering av SP har webbplatserna en tom konfiguration för utrullning av utkast. NPR-27609: Programfix för CQ-4257078
 
-**DAM - varumärkesportal**
+**DAM - Brand Portal**
 
-* Taggpredikat publiceras inte när metadata-schemaformulär publiceras på varumärkesportalen. Programfix för CQ-4256218
-* När en mapp på tredje nivån publiceras från AEM till varumärkesportalen ändras mappnamnet utan att de överordnade mapparna publiceras. Programfix för CQ-4255423
-* Webbläsarpredikatet för sökvägen publiceras från AEM Assets till Brand Portal som förväntat. Den publicerade sökvägen på BP är dock fortfarande /content/dam, som måste uppdateras. Programfix för CQ-4256240
+* Taggpredikat publiceras inte när metadatamatchemaformulär publiceras till Brand Portal. Programfix för CQ-4256218
+* När en mapp på tredje nivån publiceras från AEM till Brand Portal, utan att de överordnade mapparna publiceras, ändras mappnamnet. Programfix för CQ-4255423
+* Webbläsarpredikatet för sökvägar publiceras från AEM Assets till Brand Portal som förväntat. Den publicerade sökvägen på BP är dock fortfarande /content/dam, som måste uppdateras. Programfix för CQ-4256240
 
 **DAM - Creative Cloud**
 
@@ -1098,7 +1097,7 @@ Det går inte att redigera taggar via taggning. NPR-26957: Programfix för CQ-42
 **DAM - DM-klient**
 
 * När videoklipp har importerats till en mapp som är associerad med AVS-videobearbetningsprofilen uppdateras webbläsarfönstret om och om igen. Programfix för CQ-4253563
-* YouTube Publish misslyckas när en Ad hoc-tagg som innehåller versaler används. Programfix för CQ-4252477
+* YouTube Publish misslyckas när en Ad Hoc-tagg som innehåller versaler används. Programfix för CQ-4252477
 * När en anteckning skapas i en resurs som PDF startar gränssnittet en oändlig siduppdateringsslinga. NPR-27052: Programfix för CQ-4255396
 
 **DAM - DM-tjänster**
@@ -1315,7 +1314,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 * Generering av delresurser för pptx-filen innehåller inga bilder eller miniatyrbilder. NPR-24286: Programfix för CQ-4217986
 * migrateAllAssets - Lägg till stöd för gruppbearbetning och förbättra AEM som lägger till UUID till gamla resurser. NPR-24861: Programfix för CQ-4242863 och CQ-4247874
 * Prestandaproblem med generering av miniatyrbilder. NPR-24693: Programfix för CQ-4246960
-* (Touch UI) Komponenten &quot;options predikate&quot; är tom när den läggs till på utgivarsidan för resursresurs. NPR-24643: Programfix för CQ-4245295
+* (Touch UI) Komponenten för optionspredikat förblir tom när den läggs till på utgivarsidan för resursresurs. NPR-24643: Programfix för CQ-4245295
 * (Arbetsflöde) Resurser för smarta taggar bearbetas inte via proxykonfigurationen. NPR-25840: Programfix för CQ-4248202
 * (Omnissearch) När du tar bort filtypen:image från sökvillkoren tas inte bildtypen bort. NPR-25232: Programfix för CQ-4248280
 * När du försöker flytta en fil till en annan mapp visas inte mappar med apostrof i namnet. NPR-25125: Programfix för CQ-4248660
@@ -1324,10 +1323,10 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 * Knappen Skapa är inte tillgänglig för val av resursmapp utan behörigheten Ta bort. NPR-25788: Programfix för CQ-4250140
 * (Backport) Förbättrad tillgänglighet: Duplicera-id: id-attributvärdet måste vara unikt, Label: Formulärelement måste ha etiketter och länknamn: Länkarna måste ha urskiljbar text. NPR-24252: Programfix för CQ-4250905, CQ-4250906, CQ-4250907
 * Det går inte att överföra en CSV-fil med fält avgränsade med&quot;,&quot; för europeiska länder. NPR-25549: Programfix för CQ-4249931
-* (Varumärksportal) Delresurser i en flersidig PDF-fil publiceras inte när en resurs publiceras. NPR-25991: Programfix för CQ-4245162
-* Publicera senare funktionalitet för replikering AEM varumärkesportalen. NPR-25911: Programfix för CQ-109139
+* (Brand Portal) Underresurser i en flersidig PDF-fil publiceras inte när en resurs publiceras. NPR-25991: Programfix för CQ-4245162
+* Publicera senare funktioner för AEM till Brand Portal-replikering. NPR-25911: Programfix för CQ-109139
 * Publicering och avpublicering av den privata samlingen av icke-adminanvändare resulterar i en NPE-fil. NPR-25906: Programfix för CQ-4250594
-* Inaktivera publicering av innehållsfragment och formulärscheman till varumärkesportalen. NPR-24176, NPR-26004: Programfix för CQ-4251592, CQ-4252026
+* Inaktivera publicering av innehållsfragment och formulärscheman till Brand Portal. NPR-24176, NPR-26004: Programfix för CQ-4251592, CQ-4252026
 * (Dynamic Media) DM-visningsprogrammen har uppdaterats till version 5.10.1 som gör det möjligt att kontrollera dubblettnamn på sidan Bildförinställning. Mer information finns i Uppdatera Dynamic Media-visningsprogram (5.10.1). NPR-24403: Programfix för CQ-4247554
 * Javascript-fel i webbläsarkonsolen i kolumnvyn när du väljer en resurs eller mapp. NPR-25939: Programfix för CQ-4250228
 * (Kolumnvy) Det går inte att identifiera uppgifter eftersom nyckelfilen visas som en tom vit post. NPR-25903: Programfix för CQ-4246307
@@ -1408,7 +1407,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 * (Communities Forum) Problem med sidnumreringsklickning och sidinläsningsbeteende. NPR-24880: Programfix för CQ-4246109
 * (Chrome) Tidszonskonverteringar misslyckas för communityhändelser. NPR-24881: Programfix för CQ-4247115
 * Det går inte att återge inbäddat objekt i e-postmeddelandet. NPR-24999: Programfix för CQ-4248022
-* Automatiseringssekvens ska köras vid UGC-uppdatering förutom när UGC skapas. NPR-25892: Programfix för CQ-4251399
+* Automatiseringssekvens ska köras vid UGC-uppdatering förutom när UGC skapas. NPR-25894: Programfix för CQ-4251399
 * Modal dialog responsitivity on Groups. NPR-25623: Programfix för CQ-4248805
 * Ett undantag genereras när innehåll tas bort. NPR-25869: Programfix för CQ-4248908
 * Sidnumrerade länkar till trådar med många inlägg fungerar inte på meddelanden. NPR-25678: Programfix för CQ-4243038
@@ -1503,20 +1502,20 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 
 * Intermittent fel vid inläsning av video med nya visningsprogram 5.10.1. Programfix för CQ-4250562
 
-**DAM-varumärkesportal**
+**DAM-Brand Portal**
 
-* Det går inte att avpublicera samlingen från varumärkesportalen. Programfix för CQ-4245990
-* Det går inte att avpublicera bildförinställningar från varumärkesportalen. Programfix för CQ-4246140
+* Det går inte att avpublicera samlingen från Brand Portal. Programfix för CQ-4245990
+* Det går inte att avpublicera bildförinställningar från Brand Portal. Programfix för CQ-4246140
 * Delresurser i en flersidig PDF-fil publiceras inte när en resurs publiceras. Programfix för CQ-4245162
 
 **DAM - DMClient**
 
-* När du publicerar en videoresurs på YouTube kommer taggarna som resulterar i YouTube att inkludera taggens fullständiga sökväg. Programfix för CQ-4245549
+* När du publicerar en videoresurs på YouTube, inkluderar de taggar som resulterar i YouTube taggens fullständiga sökväg. Programfix för CQ-4245549
 * (Uppgradering av avanmälan och deltagande) Problem med CSS-omdirigering för visningsprogram. Programfix för CQ-4247854
 * Det gick inte att skapa/redigera visningsförinställningen som icke-medlem i gruppen Administratörer. Programfix för CQ-4247618
 * (6.4.1.0) Om du lägger till flera videofilmer i flera parsys bryts videospelaren. Programfix för CQ-4248517
 * Om du byter namn på och flyttar en resurs i en bilduppsättning blir redigeringen omöjlig. Programfix för CQ-4248434
-* När du publicerar stora videoklipp på YouTube genereras timeout-meddelanden. Programfix för CQ-4237831
+* När du publicerar stora videofilmer till YouTube genereras timeout-meddelanden. Programfix för CQ-4237831
 * (Listvy) Resursväljarens/väljarens användargränssnitt ändras till grått och är inaktiverat för användaren. Programfix för CQ-4237817
 * (Lodrät zoomning) CSS läses inte in med ett 404-fel. Programfix för CQ-4236508
 * Om du försöker hämta en resurs med ett procenttecken (%) i resursnamnet skapas ett tomt arkiv. Programfix för CQ-4250558
@@ -1747,7 +1746,7 @@ AEM 6.4.1.0 kan installeras på AEM 6.4 GA. Några av huvudpunkterna i Service P
 * Proaktiv backport för granite.ui.coralui-korrigeringar. NPR-23538
 * Det går inte att ta bort flera användare från gruppen samtidigt. NPR-23846
 * (OMEGA) Rapportera&quot;Funktion&quot; endast på engelska. NPR-23989: Programfix för Granite-21231
-* (Designimporterare) Om du importerar en sida importeras inte js, css. NPR-25205: Programfix för Granite-2236
+* (Designimporterare) Om du importerar en sida importeras inte js, css. NPR-25203: Programfix för Granite-2236
 
 **Integrering**
 
@@ -1761,7 +1760,7 @@ AEM 6.4.1.0 kan installeras på AEM 6.4 GA. Några av huvudpunkterna i Service P
 * (Adobe IMS Console) Tjänstkonfigurationen AccessTokenProvider OSGi visas igen efter borttagningen. NPR-23520: Programfix för CQ-4208250
 * Konfigurationsreferensreplikeringen misslyckas med den mellanliggande mappstrukturen. NPR-23485: Programfix för CQ-4242751
 * (Personalisering) clientlib blockeras av proxyservern. NPR-23521: Programfix för CQ-4240995
-* (Adobe IMS Console) Registrerade molnlösningar hämtas inte i konfigurationsguiden. NPR-23977: Programfix för CQ-4244549
+* (Adobe IMS Console) Registrerade molnlösningar hämtas inte upp i konfigurationsguiden. NPR-23977: Programfix för CQ-4244549
 * Oändlig slinga när målinnehåll läses in på sidor utan HTML-tillägg. NPR-23522: Programfix för CQ-4223600
 * Aktiveringen misslyckas för en sida med ärvda konfigurationsreferenser för dynamisk tagghantering. NPR-23485: Programfix för CQ-4242751
 
@@ -1846,14 +1845,14 @@ AEM 6.4.1.0 kan installeras på AEM 6.4 GA. Några av huvudpunkterna i Service P
 * E-postleverans för länkdelning bruten för icke-admin-avsändare. Programfix för CQ-4240357
 * Åtgärda IT-fel. Programfix för CQ-4249891
 
-**DAM - varumärkesportal**
+**DAM - Brand Portal**
 
 * Resursegenskaperna listar endast tre egenskaper på den första fliken, medan alla flikar ser tomma ut. Programfix för CQ-4242503
 * Filtyps- och filstorlekspredikat är inte tillgängliga i publicerade sökformulär. Programfix för CQ-4242026
 * Sökningen i katalogpredikatet ska filtreras bort eller inte visas i sökfiltren. Programfix för CQ-4241386
 * Standardsökning från bör finnas efter avpublicering. Programfix för CQ-4241383, CQ-424113
 * Publicera till varumärkesportalgester fungerar inte för bildförinställningar. Programfix för CQ-4241074
-* Publicera på varumärkesportalen fungerar inte för samlingar. Programfix för CQ-4241122, CQ-4246558
+* Publicera till Brand Portal fungerar inte för samlingar. Programfix för CQ-4241122, CQ-4246558
 
 **DAM - DM-klient**
 
@@ -1927,7 +1926,7 @@ AEM Forms i korthet:
 * (FDM WSDL) Hämtar DermisException: java.lang.Exception: createSOAPParam: Ogiltiga parametrar. NPR-24264
 * (FDM Client SDK) Det går inte att utföra testning av förprocessor/efterprocessor och anpassad sändningsåtgärd. Programfix för CQ-4238469
 * Korrigeringar för Javadoc-problem i Dermis. Programfix för CQ-4244250
-* Förbättrade indata i WSDL (Web Services Description Language). Programfix för CQ-4244133
+* Förbättrade indata i WSDL (Web Services Description Language). Programfix för CQ-4234133
 * Testning av grundläggande autentisering för WSDL ger olika fel för samma konfiguration i AEM 6.3 och AEM 6.4. Programfix för CQ-4244132
 * Begäran om att ta med ValueUtil i klient-sdk och javadocs. Programfix för CQ-4242803
 * (FDM Cloud Config) Det går inte att konfigurera SOAP-baserad autentisering från molnkonfigurationen. Programfix för CQ-4238462
@@ -2142,7 +2141,7 @@ B. Använd [HTTP-API:t från Package Manager](https://docs.adobe.com/content/doc
 >
 >AEM 6.4.8.0 stöder inte installation av Bootstrap.
 
-### Verifiera installation {#validate-install}
+### Validera installation {#validate-install}
 
 1. Produktinformationssidan (*/system/console/ productinfo *) ska nu visa den uppdaterade versionssträngen &quot;Adobe Experience Manager, Version 6.4.8.0&quot; under Installerade produkter.
 1. Alla OSGI-paket är antingen AKTIVA eller FRAGMENT i OSGI-konsolen (Använd webbkonsolen: /system/console/bundles).
@@ -2163,7 +2162,7 @@ som kopierar nya visningsförinställningar till /conf-platsen.
 
 ### Installera AEM för formulärtillägg {#install-aem-forms-add-on-package}
 
-#### Installera AEM {#installaemformsaddon}
+#### Installera AEM formulär {#installaemformsaddon}
 
 >[!NOTE]
 >
@@ -2171,13 +2170,13 @@ som kopierar nya visningsförinställningar till /conf-platsen.
 
 >[!NOTE]
 >
->AEM 6.4.8.0 innehåller en ny version av [AEM Forms-kompatibilitetspaket](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/AEM-FORMS-6.4.7.0-COMPAT). Om du använder en äldre version av AEM Forms Compatibility Package och uppdaterar till AEM 6.4.8.0 installerar du den senaste versionen av AEM Forms-kompatibilitetspaketet efter installationen av Forms Add-On Package.
+>AEM 6.4.8.0 innehåller en ny version av [AEM Forms-kompatibilitetspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). Om du använder en äldre version av AEM Forms Compatibility Package och uppdaterar till AEM 6.4.8.0 installerar du den senaste versionen av AEM Forms-kompatibilitetspaketet efter installationen av Forms Add-On Package.
 
 1. Kontrollera att du har installerat AEM Service Pack.
 1. Hämta motsvarande tilläggspaket för formulär i [AEM Forms-utgåvor](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) för ditt operativsystem.
 1. Installera tilläggspaketet för formulär enligt beskrivningen i [Installera tilläggspaket för AEM](https://docs.adobe.com/content/help/en/experience-manager-64/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html#install-aem-forms-add-on-package).
 
-### Installera installationsprogrammet för AEM Forms JEE {#install-aem-forms-jee-installer}
+### Installera AEM Forms JEE-installationsprogrammet {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
@@ -2185,7 +2184,7 @@ som kopierar nya visningsförinställningar till /conf-platsen.
 
 Information om hur du installerar det kumulativa installationsprogrammet för AEM Forms JEE och konfigurationen efter distribution finns i [AEM Forms JEE Patch Installer 0015](https://helpx.adobe.com/aem-forms/quick-fixes/6-4/jee-patch-0015.html).
 
-#### Konfigurationsinställningar krävs för NPR-21268 {#configuration-settings-required-for-npr}
+#### Konfigurationsinställningar som krävs för NPR-21268 {#configuration-settings-required-for-npr}
 
 Om du använder klassiskt (gammalt) gränssnitt och har skapat metadatamallar med hjälp av det följer du stegen för att köra JMX-skriptet för att bevara dem -
 
@@ -2193,7 +2192,7 @@ Om du använder klassiskt (gammalt) gränssnitt och har skapat metadatamallar me
 1. Klicka på&quot;Migrera metadatamallar&quot;.
 1. Klicka på&quot;migrateMetadataTemplatesAtPath&quot; och ange den mappsökväg där du vill att metadatamallarna ska bevaras.
 
-#### Konfigurationsinställningar krävs för NPR-24536 {#configuration-settings-required-for-npr-1}
+#### Konfigurationsinställningar som krävs för NPR-24536 {#configuration-settings-required-for-npr-1}
 
 Antalet delade köer uppdateras inte som standard för andra användare när en användare gör anspråk på en uppgift. För detta har vi infört en ny fastighet. Följ stegen nedan för att konfigurera den här egenskapen på AEM:
 
@@ -2229,7 +2228,7 @@ I det här avsnittet visas funktioner som har tagits bort eller tagits bort frå
 
 | Yta | Funktion | Ersättning | Version |
 |---|---|---|---|
-| Assets | Hantera taggåtgärd för underresurser | Ingen ersättning | AEM 6.4.2.0 |
+| Resurser | Hantera taggåtgärd för underresurser | Ingen ersättning | AEM 6.4.2.0 |
 | Resurser och integrering med Adobe Creative Cloud | [AEM till ](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/aem-cc-folder-sharing-best-practices.html) mappdelning mellan Creative Cloud introducerades i AEM 6.2 som ett sätt att ge kreativa användare tillgång till resurser från AEM. En ny funktion i Creative Cloud, Adobe Asset Link, ger en mycket bättre användarupplevelse och kraftfullare åtkomst till AEM direkt inifrån Photoshop, InDesign och Illustrator. Adobe kommer inte att förbättra mappdelningsfunktionen ytterligare. Funktionen ingår i AEM, men kunderna rekommenderas att använda ersättaren. | Adobe Asset Link eller datorprogram. Mer information finns i [AEM Creative Cloud-integrering](/help/assets/aem-cc-integration-best-practices.md)-artikeln. | AEM 6.4.4.0 |
 
 ### Kända fel {#known-issues}

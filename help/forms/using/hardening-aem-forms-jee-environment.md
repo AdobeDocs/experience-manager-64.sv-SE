@@ -1,8 +1,8 @@
 ---
 title: Förbättra din AEM Forms på JEE-miljö
-seo-title: Förbättra din AEM Forms på JEE-miljö
+seo-title: Hardening Your AEM Forms on JEE Environment
 description: Lär dig en mängd olika säkerhetsinställningar som förbättrar säkerheten för AEM Forms på JEE som körs i ett intranät.
-seo-description: Lär dig en mängd olika säkerhetsinställningar som förbättrar säkerheten för AEM Forms på JEE som körs i ett intranät.
+seo-description: Learn a variety of security-hardening settings to enhance the security of AEM Forms on JEE running in a corporate intranet.
 uuid: f6c63690-6376-4fe1-9df2-a14fbfd62aff
 content-type: reference
 topic-tags: Security
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 5aa02fae-b9dd-45bf-9826-16e9e5686727
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '7347'
+source-wordcount: '7304'
 ht-degree: 0%
 
 ---
@@ -323,7 +323,7 @@ I följande tabell beskrivs några tekniker för att skydda programservern efter
   </tr> 
   <tr> 
    <td><p>Katalogbläddring</p> </td> 
-   <td><p>När någon begär en sida som inte finns eller begär namnet på en direktör (begärandesträngen avslutas med ett snedstreck (/)), ska programservern inte returnera innehållet i den katalogen. Du kan förhindra detta genom att inaktivera katalogbläddring på programservern. Du bör göra detta för administrationskonsolprogrammet och för andra program som körs på servern.</p> <p>För JBoss anger du värdet för listings initieringsparametern för egenskapen <code>DefaultServlet</code> till <code>false</code> i filen web.xml, vilket visas i följande exempel:</p> <p>&lt;servlet&gt;</p> <p>&lt;servlet-name&gt;standard&lt;/servlet-name&gt;</p> <p>&lt;servlet-class&gt;</p> <p>org.apache.catalina.servlets.DefaultServlet</p> <p>&lt;/servlet-class&gt;</p> <p>&lt;init-param&gt;</p> <p>&lt;param-name&gt;listor&lt;/param-name&gt;</p> <p>&lt;param-value&gt;false&lt;/param-value&gt;</p> <p>&lt;/init-param&gt;</p> <p>&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;</p> <p>&lt;/servlet&gt;</p> <p>För WebSphere anger du egenskapen <code>directoryBrowsingEnabled</code> i filen ibm-web-ext.xmi till <code>false</code>.</p> <p>För WebLogic anger du egenskaperna för indexkataloger i filen weblogic.xml till <code>false</code>, vilket visas i det här exemplet:</p> <p>&lt;container-descriptor&gt;</p> <p>&lt;index-directory-enabled&gt;false</p> <p>&lt;/index-directory-enabled&gt;</p> <p>&lt;/container-descriptor&gt;</p> </td> 
+   <td><p>När någon begär en sida som inte finns eller begär namnet på en direktör (begärandesträngen avslutas med ett snedstreck (/)), ska programservern inte returnera innehållet i den katalogen. Du kan förhindra detta genom att inaktivera katalogbläddring på programservern. Du bör göra detta för administrationskonsolprogrammet och för andra program som körs på servern.</p> <p>För JBoss anger du värdet för listings initieringsparametern för egenskapen <code>DefaultServlet</code> till <code>false</code> i filen web.xml, vilket visas i följande exempel:</p> <p>&lt;servlet&gt;</p> <p>&lt;servlet-name&gt;standard&lt;/servlet-name&gt;</p> <p>&lt;servlet-class&gt;</p> <p>org.apache.catalina.servlets.DefaultServlet</p> <p>&lt;/servlet-class&gt;</p> <p>&lt;init-param&gt;</p> <p>&lt;param-name&gt;listor&lt;/param-name&gt;</p> <p>&lt;param-value&gt;false&lt;/param-value&gt;</p> <p>&lt;/init-param&gt;</p> <p>&lt;load-on-startup&gt;3&lt;/load-on-startup&gt;</p> <p>&lt;/servlet&gt;</p> <p>För WebSphere anger du egenskapen <code>directoryBrowsingEnabled</code> i filen ibm-web-ext.xmi till <code>false</code>.</p> <p>För WebLogic anger du egenskaperna för indexkataloger i filen weblogic.xml till <code>false</code>, vilket visas i det här exemplet:</p> <p>&lt;container-descriptor&gt;</p> <p>&lt;index-directory-enabled&gt;false</p> <p>&lt;/index-directory-enabled&gt;</p> <p>&lt;/container-descriptor&gt;</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -632,7 +632,7 @@ Vissa URL:er markeras som användarvänliga webbprogram. Du bör undvika att exp
 
 En CSRF-attack (Cross-Site Request Forgery) utnyttjar det förtroende som en webbplats har för användaren för att överföra kommandon som är otillåtna och oavsedda av användaren. Anfallet konfigureras genom att en länk, ett skript eller en URL-adress läggs till i ett e-postmeddelande för att komma åt en annan webbplats som användaren redan har autentiserats på.
 
-Du kan till exempel vara inloggad på administrationskonsolen samtidigt som du bläddrar på en annan webbplats. En av webbsidorna kan innehålla en HTML-bildtagg med ett `src`-attribut som anger ett serverskript som mål på offrets webbplats. Genom att utnyttja den cookie-baserade sessionsautentiseringsmekanismen som tillhandahålls av webbläsare kan angripande webbplats skicka skadliga förfrågningar till detta skript på servern, som masquerading är den legitima användaren. Mer exempel finns i [https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)#Examples](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)#Examples).
+Du kan till exempel vara inloggad på administrationskonsolen samtidigt som du bläddrar på en annan webbplats. En av webbsidorna kan innehålla en HTML-bildtagg med ett `src`-attribut som anger ett serverskript som mål på offrets webbplats. Genom att utnyttja den cookie-baserade sessionsautentiseringsmekanismen som tillhandahålls av webbläsare kan angripande webbplats skicka skadliga förfrågningar till detta skript på servern, som masquerading är den legitima användaren.
 
 Följande egenskaper är gemensamma för CSRF:
 
@@ -674,7 +674,7 @@ Refererarfiltreringsprocessen kan beskrivas så här:
 
 ### Hantera referensfiltrering {#managing-referer-filtering}
 
-AEM Forms på JEE tillhandahåller ett referensfilter för att ange vilken referent som har behörighet till serverresurserna. Som standard filtrerar inte referensfiltret begäranden som använder en säker HTTP-metod, t.ex. GET, såvida inte *CSRF_CHECK_GETS* är inställt på true. Om portnumret för en post med tillåten referens är 0, tillåter AEM Forms på JEE alla förfrågningar från den värden oavsett portnummer. Om inget portnummer anges tillåts endast begäranden från standardporten 80 (HTTP) eller port 443 (HTTPS). Referensfiltrering är inaktiverat om alla poster i listan över tillåtna referenter tas bort.
+AEM Forms på JEE tillhandahåller ett referensfilter för att ange vilken referent som har behörighet till serverresurserna. Som standard filtrerar inte referensfiltret begäranden som använder en säker HTTP-metod, till exempel GET, såvida inte *CSRF_CHECK_GETS* är inställt på true. Om portnumret för en post med tillåten referens är 0, tillåter AEM Forms på JEE alla förfrågningar från den värden oavsett portnummer. Om inget portnummer anges tillåts endast begäranden från standardporten 80 (HTTP) eller port 443 (HTTPS). Referensfiltrering är inaktiverat om alla poster i listan över tillåtna referenter tas bort.
 
 När du först installerar Document Services uppdateras listan över tillåtna referenter med adressen till den server där Document Services är installerat. Posterna för servern omfattar servernamnet, IPv4-adressen, IPv6-adressen om IPv6 är aktiverat, loopback-adressen och en localhost-post. Namnen som läggs till i listan över tillåtna referenter returneras av värdoperativsystemet. En server med IP-adressen 10.40.54.187 kommer till exempel att innehålla följande poster: `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. Tillåtelselista uppdateras inte för alla okvalificerade namn som returneras av värdoperativsystemet (namn som inte har IPv4-adress, IPv6-adress eller kvalificerat domännamn). Ändra listan över tillåtna referenter så att den passar din affärsmiljö. Distribuera inte formulärservern i produktionsmiljön med standardlistan Tillåten referent. När du har ändrat någon av de tillåtna referenserna, referensundantagen eller URI:erna måste du starta om servern för att ändringarna ska börja gälla.
 
@@ -697,7 +697,7 @@ AEM Forms på JEE innehåller API:er för att hantera listan över tillåtna ref
 
 Mer information om API:erna finns i* AEM Forms on JEE API Reference*.
 
-Använd listan ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** för tillåtna referensundantag på global nivå, d.v.s. för att definiera undantag som gäller för alla program. Den här listan innehåller bara URI:er med antingen en absolut sökväg (t.ex. `/index.html`) eller en relativ sökväg (t.ex. `/sample/`). Du kan också lägga till ett reguljärt uttryck i slutet av en relativ URI, t.ex. `/sample/(.)*`.
+Använd listan ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** för tillåtna referensundantag på global nivå, d.v.s. för att definiera undantag som gäller för alla program. Den här listan innehåller bara URI:er med antingen en absolut sökväg (till exempel `/index.html`) eller en relativ sökväg (till exempel `/sample/`). Du kan också lägga till ett reguljärt uttryck i slutet av en relativ URI, till exempel `/sample/(.)*`.
 
 List-ID:t ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** definieras som en konstant i klassen `UMConstants` i namnutrymmet `com.adobe.idp.um.api` som finns i `adobe-usermanager-client.jar`. Du kan använda AEM Forms API:er för att skapa, ändra eller redigera den här listan. Om du till exempel vill skapa listan Global Allowed Referrer Exceptions använder du:
 

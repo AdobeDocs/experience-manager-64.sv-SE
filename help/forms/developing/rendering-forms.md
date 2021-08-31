@@ -1,8 +1,8 @@
 ---
 title: Återger Forms
-seo-title: Återger Forms
+seo-title: Rendering Forms
 description: Använd tjänsten Forms för att skapa interaktiva klientapplikationer för datainhämtning som validerar, bearbetar, omvandlar och levererar blanketter som vanligtvis skapas i Designer. Formulärförfattare kan utveckla en enda formulärdesign som Forms-tjänsten återger i PDF, SWF eller HTML i olika webbläsarmiljöer.
-seo-description: Använd tjänsten Forms för att skapa interaktiva klientapplikationer för datainhämtning som validerar, bearbetar, omvandlar och levererar blanketter som vanligtvis skapas i Designer. Formulärförfattare kan utveckla en enda formulärdesign som Forms-tjänsten återger i PDF, SWF eller HTML i olika webbläsarmiljöer.
+seo-description: Use the Forms service to create interactive data capture client applications that validate, process, transform, and deliver forms typically created in Designer. Form authors can develop a single form design that the Forms service renders in PDF, SWF, or HTML in various browser environments.
 uuid: 68d7b7bc-7730-4a83-b7b9-ebe2a29d6c51
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,13 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: f8749793-e53f-4812-a093-8278f480e6a8
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 61d63c89-26e8-4a50-b6a3-1bcf1a1b4c54
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
-
 
 # Återger Forms {#rendering-forms}
 
@@ -57,6 +56,4 @@ Du kan utföra följande uppgifter med Forms-tjänsten:
 * Skicka dokument. (Se [Skicka dokument till Forms-tjänsten](/help/forms/developing/passing-documents-forms-service.md)
 * Beräkna formulärdata. (Se [Beräkna formulärdata](/help/forms/developing/calculating-form-data.md).)
 * Optimera ett program. (Se [Optimera prestanda för Forms-tjänsten](/help/forms/developing/optimizing-performance-forms-service.md).)
-
-   ***Tips **: På webbplatsen Adobe Developer finns följande artikel som handlar om hur du skapar ett ASP.NET-program som anropar tjänsten Forms och återger formulär. Se [Skapa ASP.NET-program för formuläråtergivning](https://www.adobe.com/devnet/livecycle/articles/asp_net.html).*
 

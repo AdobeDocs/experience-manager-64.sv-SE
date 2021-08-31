@@ -1,24 +1,23 @@
 ---
 title: Lägg till anpassad åtgärd/knapp i användargränssnittet Skapa korrespondens
-seo-title: Lägg till anpassad åtgärd/knapp i användargränssnittet Skapa korrespondens
+seo-title: Add custom action/button in Create Correspondence UI
 description: Lär dig hur du lägger till en anpassad åtgärd/knapp i användargränssnittet för Skapa korrespondens
-seo-description: Lär dig hur du lägger till en anpassad åtgärd/knapp i användargränssnittet för Skapa korrespondens
+seo-description: Learn how to add custom action/button in Create Correspondence UI
 uuid: e3609371-caaa-4efe-8f63-4d982cd456ab
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 481856df-5db1-4ef5-80d3-3722b5bf8b67
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 5bcb26dc-aeb7-4a81-b905-23c8fb05d6d0
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '1784'
+source-wordcount: '1741'
 ht-degree: 1%
 
 ---
 
-
-# Lägg till anpassad åtgärd/knapp i användargränssnittet för Skapa korrespondens {#add-custom-action-button-in-create-correspondence-ui}
+# Lägg till anpassad åtgärd/knapp i användargränssnittet Skapa korrespondens {#add-custom-action-button-in-create-correspondence-ui}
 
 ## Översikt {#overview}
 
@@ -33,7 +32,7 @@ Du behöver följande för att slutföra det här scenariot:
 * Kunskap om CRX och JavaScript
 * LiveCycle Server
 
-## Scenario: Skapa knappen i användargränssnittet för Create Correspondence om du vill skicka ett brev för granskning {#scenario-create-the-button-in-the-create-correspondence-user-interface-to-send-a-letter-for-review}
+## Scenario: Skapa knappen i användargränssnittet Skapa korrespondens för att skicka ett brev för granskning {#scenario-create-the-button-in-the-create-correspondence-user-interface-to-send-a-letter-for-review}
 
 Om du lägger till en knapp med en åtgärd (här skickar du ett brev för granskning) i användargränssnittet Skapa korrespondens innehåller följande:
 
@@ -124,7 +123,7 @@ Om du lägger till en knapp med en åtgärd (här skickar du ett brev för grans
 
 1. Klicka på **[!UICONTROL Save All]**.
 
-#### Skapa en lokal mapp med egenskapsfilen i /apps-grenen {#create-a-locale-folder-with-properties-file-in-the-apps-branch}
+#### Skapa en lokal mapp med egenskapsfilen i grenen /apps {#create-a-locale-folder-with-properties-file-in-the-apps-branch}
 
 Filen ACMExtensionsMessages.properties innehåller etiketter och knappbeskrivningsmeddelanden för olika fält i användargränssnittet Create Correspondence. Gör en kopia av den här filen i grenen /apps för att de anpassade åtgärderna/knapparna ska fungera.
 
@@ -178,7 +177,7 @@ När du har gjort alla ändringar på serversidan startar du om paketet Adobe As
 
 När du har startat om paketet Adobe Asset Composer Building Block visas den anpassade knappen i användargränssnittet Create Correspondence. Du kan öppna ett brev i Skapa korrespondensanvändargränssnitt om du vill förhandsgranska den anpassade knappen.
 
-### Lägg till åtgärdshantering till knappen {#add-action-handling-to-the-button}
+### Lägga till åtgärdshantering till knappen {#add-action-handling-to-the-button}
 
 Användargränssnittet Create Correspondence har som standard implementering av ActionHandler i filen cm.domain.js på följande plats:
 
@@ -323,7 +322,7 @@ Hanteringen av åtgärd/knapp vid klickning innehåller logik för:
       '</div>';
       ```
 
-### Lägg till LiveCycle-processen för att aktivera åtgärden <span class="acrolinxCursorMarker"></span>hantering {#add-the-livecycle-process-to-enable-action-span-class-acrolinxcursormarker-span-handling}
+### Lägg till LiveCycle-processen för att aktivera åtgärd <span class="acrolinxCursorMarker"></span>hantering {#add-the-livecycle-process-to-enable-action-span-class-acrolinxcursormarker-span-handling}
 
 I det här scenariot aktiverar du följande komponenter, som är en del av den bifogade filen components.zip:
 
@@ -425,11 +424,11 @@ Mer information finns i [Ansluta AEM Forms till Adobe LiveCycle](/help/forms/usi
 
    >[!NOTE]
    >
-   >Starta om LiveCycle Server varje gång du gör några ändringar på serversidan. Mer information om hur du skapar en egen LiveCycle-komponent finns i [Utöka LiveCycle ES-programmet via anpassad DSC-utveckling](https://www.adobe.com/devnet/livecycle/articles/dsc_development.html).
+   >Varje gång du gör några ändringar på serversidan startar du om servern.
 
    Filen `DSCSample.jar` använder API:t `renderLetter`. Mer information om API:t renderLetter finns i [Interface LetterRenderService](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html).
 
-#### Importera DSC till LiveCyle {#import-dsc-to-livecyle}
+#### Importera DSC till AEM Forms på JEE {#import-dsc-to-livecyle}
 
 `DSCSample.jar` filen använder  `renderLetter` API:t för att återge bokstaven som PDF-byte från XML-data som C anger som indata. Mer information om renderLetter och andra API:er finns i [tjänsten Letter Render](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html).
 

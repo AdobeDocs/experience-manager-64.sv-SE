@@ -1,8 +1,8 @@
 ---
 title: Återger Forms efter värde
-seo-title: Återger Forms efter värde
+seo-title: Rendering Forms By Value
 description: Använd Forms API (Java) för att återge ett formulär utifrån värde med Java API och Web Service API.
-seo-description: Använd Forms API (Java) för att återge ett formulär utifrån värde med Java API och Web Service API.
+seo-description: Use the Forms API (Java) to render a form by value using the Java API and Web Service API.
 uuid: b932cc54-662f-40ae-94e0-20ac82845f3b
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,13 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: ddbb2b82-4c57-4845-a5be-2435902d312b
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 50c34781-45e3-4255-a997-44f694527c92
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '1849'
+source-wordcount: '1821'
 ht-degree: 0%
 
 ---
-
 
 # Återger Forms efter värde {#rendering-forms-by-value}
 
@@ -78,7 +77,7 @@ Om du vill återge ett formulär med hjälp av ett värde skickar du en `com.ado
 
 >[!NOTE]
 >
->Om du vill visa data i formuläret måste data anges i `xfa:datasets`-elementet. Mer information om XFA-arkitekturen finns på [https://partners.adobe.com/public/developer/xml/index_arch.html](https://partners.adobe.com/public/developer/xml/index_arch.html).
+>Om du vill visa data i formuläret måste data anges i `xfa:datasets`-elementet. Mer information om XFA-arkitekturen finns på [https://www.pdfa.org/norm-refs/XFA-3_3.pdf](https://www.pdfa.org/norm-refs/XFA-3_3.pdf).
 
 **Skriv formulärdataströmmen till klientens webbläsare**
 

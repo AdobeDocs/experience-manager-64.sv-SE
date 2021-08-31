@@ -1,8 +1,8 @@
 ---
 title: Komponenter och tjänster - Java APIQuick Start(SOAP)
-seo-title: Komponenter och tjänster - Java APIQuick Start(SOAP)
+seo-title: Components and Services Java APIQuick Start(SOAP)
 description: Använd snabbstart för Java API för komponenter och tjänster för att distribuera en komponent, ange körningskontext för en tjänst, inaktivera tjänstsäkerhet, starta en tjänst, ändra tjänstkonfigurationsvärden och ta bort komponenter.
-seo-description: Använd snabbstart för Java API för komponenter och tjänster för att distribuera en komponent, ange körningskontext för en tjänst, inaktivera tjänstsäkerhet, starta en tjänst, ändra tjänstkonfigurationsvärden och ta bort komponenter.
+seo-description: Use the Components and Services Java API Quick Start to deploy a component, set the execution context of a service, disable service security, start a service, modify service configuration values, and remove components.
 uuid: 7d9ade2d-f927-4558-9e80-df08bd572772
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,15 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 14f17126-e744-479b-a8e6-24c131615b46
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 85c77bd4-e424-491f-8db2-73240732a6e4
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '469'
 ht-degree: 0%
 
 ---
 
-
-# Java API-snabbstart för komponenter och tjänster (SOAP) {#components-and-services-java-apiquick-start-soap}
+# Komponenter och tjänster - Java API snabbstart (SOAP) {#components-and-services-java-apiquick-start-soap}
 
 Java API Quick Start (SOAP) är tillgängligt för komponenter och tjänster.
 
@@ -47,7 +46,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 >[!NOTE]
 >
->Om du har en anpassad komponent och använder SOAP- eller EJB-protokoll för att anropa DSC:er på samma lokala server, och dessa anrop slutar att fungera efter en uppgradering, använder du en startstrategi för DSC ([DSC_IN_VM_PASSTHROUGH_STRATEGY](https://help.adobe.com/en_US/AEMForms/6-3/ProgramLC/javadoc/com/adobe/idp/dsc/clientsdk/ServiceClientFactoryProperties.html#DSC_IN_VM_PASSTHROUGH_STRATEGY)). Använd DSC-anropsmetoden in-VM med ServiceClientFactory som standard och konstruera inte ServiceClientFactory med SOAP- eller EJB-protokoll.
+>Om du har en anpassad komponent och använder SOAP- eller EJB-protokoll för att anropa DSC:er på samma lokala server, och dessa anrop slutar att fungera efter en uppgradering, använder du en startstrategi för DSC ([DSC_IN_VM_PASSTHROUGH_STRATEGY](https://www.adobe.io/experience-manager/reference-materials/6-4/forms/programlc/javadoc/com/adobe/idp/dsc/clientsdk/ServiceClientFactoryProperties.html)). Använd DSC-anropsmetoden in-VM med ServiceClientFactory som standard och konstruera inte ServiceClientFactory med SOAP- eller EJB-protokoll.
 
 ## Snabbstart (SOAP-läge): Distribuera en komponent med Java API {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
 
@@ -414,7 +413,7 @@ I följande Java-kodexempel startas en tjänst med namnet *SendEmailService*.
  
 ```
 
-## Snabbstart (SOAP-läge): Ändra ett tjänstkonfigurationsvärde med Java API {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
+## Snabbstart (SOAP-läge): Ändra konfigurationsvärden för tjänster med Java API {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
 
 I följande Java-exempel ändras konfigurationsvärden som tillhör SendEmail Service.
 
@@ -622,4 +621,3 @@ I följande Java-kodexempel tas en komponent bort med Java API.
   
  
 ```
-

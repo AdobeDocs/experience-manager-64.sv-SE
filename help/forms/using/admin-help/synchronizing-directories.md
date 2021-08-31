@@ -1,22 +1,21 @@
 ---
 title: 'Synkroniserar kataloger '
-seo-title: 'Synkroniserar kataloger '
+seo-title: Synchronizing directories
 description: Lär dig hur du synkroniserar användarhanteringsdatabasen med ändringar i källkatalogservrarna med hjälp av manuell eller schemalagd synkronisering.
-seo-description: Lär dig hur du synkroniserar användarhanteringsdatabasen med ändringar i källkatalogservrarna med hjälp av manuell eller schemalagd synkronisering.
+seo-description: Learn how to synchronize the User Management database with changes to the source directory servers using manual or scheduled synchronization.
 uuid: 71cbc04d-6172-49b7-a490-ff3233c1b2bb
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 7ec0698a-9e6e-48d4-bba2-5a6eee313900
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: d6b2f389-bff4-481d-93bf-87f56114a91b
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '980'
 ht-degree: 0%
 
 ---
-
 
 # Synkroniserar kataloger {#synchronizing-directories}
 
@@ -25,8 +24,6 @@ Om du vill synkronisera domäner kan du välja att göra en manuell eller schema
 Katalogsynkronisering används för att hämta information från katalogservrarna som du har angett i dina kataloginställningar till databasen för användarhantering. Senare kan du även göra en manuell synkronisering om det sker ändringar eller uppdateringar på katalogservrarna. Du kan till exempel göra en manuell synkronisering om användare och grupper läggs till eller om ändringar görs i en användares konto.
 
 Du kan också ställa in ett dagligt synkroniseringsschema så att användarhanteringsdatabasen automatiskt synkroniseras med ändringar eller uppdateringar av källkatalogservrarna. Tänk dock på att nätverks- och serverresurser används i den här processen. Välj användningstider och undvik schemaläggning av onödiga synkroniseringar som knyter samman system- och nätverksresurser. Om du vill minimera onödiga synkroniseringar använder du alternativet för omedelbar synkronisering i stället.
-
-Du kan också ange om användar- och gruppinformation ska skickas till Adobe Content Services 9 (föråldrat) när du synkroniserar domäner.
 
 >[!NOTE]
 >
@@ -38,7 +35,7 @@ Du kan också ange om användar- och gruppinformation ska skickas till Adobe Con
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe produktlivscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html). Mer information om hur du konfigurerar innehållstjänster (borttaget) finns i [Administrera innehållstjänster](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf).
+>Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe produktlivscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).
 
 ## Aktivera deltakatalogsynkronisering {#enable-delta-directory-synchronization}
 
@@ -65,7 +62,7 @@ Som standard loggar Hantering av användare detaljerad statistik under synkronis
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Konfigurera avancerade systemattribut.
 1. Avmarkera kryssrutan under Loggning av synkroniseringsstatistik för att inaktivera den detaljerade loggningen eller markera den för att aktivera loggning och klicka sedan på Spara.
 
-## Konfigurera alternativet {#configure-the-directory-synchronization-retry-option} för att försöka synkronisera katalogen igen
+## Konfigurera alternativet för nytt försök med katalogsynkronisering {#configure-the-directory-synchronization-retry-option}
 
 Du kan konfigurera användarhantering så att det regelbundet görs en sökning efter misslyckade katalogsynkroniseringsförsök. Användarhantering försöker sedan slutföra de misslyckade synkroniseringarna.
 
@@ -100,4 +97,3 @@ Användningen av cron-uttryck baseras på Quartz-systemet för jobbschemaläggni
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
 1. Klicka på Avbryt. Den här knappen visas bara när en katalogsynkronisering pågår.
-

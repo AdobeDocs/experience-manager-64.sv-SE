@@ -1,8 +1,8 @@
 ---
 title: Anropa AEM Forms med Web Services
-seo-title: Anropa AEM Forms med Web Services
+seo-title: Invoking AEM Forms using Web Services
 description: Anropa AEM Forms-processer med web services med fullt stöd för WSDL-generering.
-seo-description: Anropa AEM Forms-processer med web services med fullt stöd för WSDL-generering.
+seo-description: Invoke AEM Forms processes using web services with full support for WSDL generation.
 uuid: 66bcd010-c476-4b66-831d-a48307d8d67a
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,15 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: cd4b5e40-afd5-422d-ae2e-cfde0f4d6b1a
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '10009'
+source-wordcount: '9928'
 ht-degree: 0%
 
 ---
 
-
-# Anropa AEM Forms med webbtjänster {#invoking-aem-forms-using-web-services}
+# Anropa AEM Forms med Web Services {#invoking-aem-forms-using-web-services}
 
 De flesta AEM Forms-tjänster i tjänstbehållaren är konfigurerade för att visa en webbtjänst, med fullständigt stöd för generering av WSDL (Web Service Definition Language). Det innebär att du kan skapa proxyobjekt som använder den inbyggda SOAP-stacken för en AEM Forms-tjänst. Därför kan AEM Forms tjänster utbyta och behandla följande SOAP-meddelanden:
 
@@ -36,7 +35,7 @@ AEM Forms stöder följande webbtjänststandarder:
 * **MTOM**: Representerar ett sätt att koda bilagor med SOAP-begäranden. (Se [Anropa AEM Forms med MTOM](#invoking-aem-forms-using-mtom).)
 * **SwaRef**: Representerar ett annat sätt att koda bilagor med SOAP-begäranden. (Se [Anropa AEM Forms med SwaRef](#invoking-aem-forms-using-swaref).)
 * **SOAP med bilagor**: Stöder både MIME och DIME (Direct Internet Message Encapsulation). Dessa protokoll är standardsätt att skicka bilagor via SOAP. Microsoft Visual Studio .NET-program använder DIME. (Se [Anropa AEM Forms med Base64-kodning](#invoking-aem-forms-using-base64-encoding).)
-* **WS-Security**: Stöder en tokenprofil för användarnamn och lösenord, som är ett standardsätt att skicka användarnamn och lösenord som en del av rubriken WS Security SOAP. AEM Forms stöder även grundläggande HTTP-autentisering. (Se [Skicka inloggningsuppgifter med WS-Security headers](https://www.adobe.com/devnet/livecycle/articles/passing_credentials.html).)
+* **WS-Security**: Stöder en tokenprofil för användarnamn och lösenord, som är ett standardsätt att skicka användarnamn och lösenord som en del av rubriken WS Security SOAP. AEM Forms stöder även grundläggande HTTP-autentisering.
 
 Om du vill anropa AEM Forms-tjänster med en webbtjänst skapar du vanligtvis ett proxybibliotek som använder tjänsten WSDL. Avsnittet *Anropa AEM Forms med Web Services* använder JAX-WS för att skapa Java-proxyklasser för att anropa tjänster. (Se [Skapa Java-proxyklasser med JAX-WS](#creating-java-proxy-classes-using-jax-ws).)
 
@@ -265,7 +264,7 @@ Utöver objektet `BLOB` stöder MTOM-protokollet alla byte-array-parametrar elle
 
 AEM Forms-tjänster som returnerar en stor mängd binära data använder typen Dokument/BLOB i stället för bytearraytypen. Dokumenttypen är mycket effektivare när du vill skicka stora mängder data.
 
-## Datatyper för webbtjänst {#web-service-data-types}
+## Datatyper för webbtjänster {#web-service-data-types}
 
 I följande tabell visas Java-datatyper och motsvarande webbtjänstdatatyp.
 
@@ -347,14 +346,6 @@ I följande tabell visas Java-datatyper och motsvarande webbtjänstdatatyp.
   </tr> 
  </tbody> 
 </table>
-
-**Adobe Developer website**
-
-På webbplatsen Adobe Developer finns följande artikel som handlar om hur du anropar AEM Forms tjänster med hjälp av webbtjänstens API:
-
-[Skapa ASP.NET-program för formuläråtergivning](https://www.adobe.com/devnet/livecycle/articles/asp_net.html)
-
-[Anropa webbtjänster med anpassade komponenter](https://www.adobe.com/devnet/livecycle/articles/extend_webservices.html)
 
 >[!NOTE]
 >
@@ -471,7 +462,7 @@ Du kan använda JAX-WS för att konvertera en Forms-tjänst-WSDL till Java-proxy
 
 [Anropa AEM Forms med SwaRef](#invoking-aem-forms-using-swaref)
 
-## Skapa Java-proxyklasser med Apache Axis {#creating-java-proxy-classes-using-apache-axis}
+## Skapa Java-proxyklasser med hjälp av Apache-axeln {#creating-java-proxy-classes-using-apache-axis}
 
 Med verktyget Apache Axis WSDL2Java kan du konvertera en Forms-tjänst till Java-proxyklasser. Med dessa klasser kan du anropa Forms serviceåtgärder. Med Apache Ant kan du generera axelbiblioteksfiler från en tjänst-WSDL. Du kan hämta Apache-axeln på URL:en [https://ws.apache.org/axis/](https://ws.apache.org/axis/).
 
@@ -486,7 +477,7 @@ Du kan generera Axis Java-biblioteksfiler genom att utföra följande steg:
    * Lägg till bin-katalogen i klassökvägen.
    * Ange miljövariabeln `ANT_HOME` till den katalog där du installerade Ant.
 
-1. Installera Apache Axel 1.4 på klientdatorn. Den finns på [https://ws.apache.org/axis/](https://ws.apache.org/axis/.md).
+1. Installera Apache Axel 1.4 på klientdatorn. Den finns på [https://ws.apache.org/axis/](https://ws.apache.org/axis/).
 1. Ange klassökvägen för att använda Axis JAR-filerna i webbtjänstklienten, enligt anvisningarna i installationsanvisningarna för Axis på [https://ws.apache.org/axis/java/install.html](https://ws.apache.org/axis/java/install.html).
 1. Använd verktyget Apache WSDL2Java i Axel för att generera Java-proxyklasser. Skapa ett Ant-byggskript för att utföra den här uppgiften. Följande skript är ett exempel på ett Ant-byggskript som heter build.xml:
 
@@ -575,7 +566,7 @@ Du kan generera Axis Java-biblioteksfiler genom att utföra följande steg:
 
 [Anropa AEM Forms med BLOB-data via HTTP](#invoking-aem-forms-using-blob-data-over-http)
 
-## Anropar AEM Forms med Base64-kodning {#invoking-aem-forms-using-base64-encoding}
+## Anropa AEM Forms med Base64-kodning {#invoking-aem-forms-using-base64-encoding}
 
 Du kan anropa en AEM Forms-tjänst med Base64-kodning. Base64-kodning kodar bilagor som skickas med en webbtjänstanrop. Det innebär att `BLOB`-data är Base64-kodade, inte hela SOAP-meddelandet.
 
@@ -986,7 +977,7 @@ Du kan anropa tjänsten `MyApplication/EncryptDocument` (som skapades i Workbenc
 1. Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
 1. Skriv bytearrayinnehållet till en PDF-fil genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
-### Anropa en tjänst med Java-proxyklasser och BLOB-data över HTTP {#invoking-a-service-using-java-proxy-classes-and-blob-data-over-http}
+### Anropa en tjänst med Java-proxyklasser och BLOB-data via HTTP {#invoking-a-service-using-java-proxy-classes-and-blob-data-over-http}
 
 Du kan anropa en AEM Forms-tjänst med hjälp av Java-proxyklasser och BLOB-data via HTTP. Så här anropar du tjänsten `MyApplication/EncryptDocument` med Java-proxyklasser:
 
@@ -1461,7 +1452,7 @@ Följande C#-kodexempel anropar en Forms-tjänst med SAML-baserad autentisering.
 
 Ibland uppstår problem när vissa AEM Forms-tjänster anropas med hjälp av webbtjänster. Syftet med denna diskussion är att identifiera dessa problem och ge en lösning, om en sådan finns tillgänglig.
 
-### Anropar tjänståtgärder asynkront {#invoking-service-operations-asynchronously}
+### Anropa tjänståtgärder asynkront {#invoking-service-operations-asynchronously}
 
 Om du försöker anropa en AEM Forms-tjänståtgärd asynkront, till exempel åtgärden Generera PDF `htmlToPDF`, inträffar en `SoapFaultException`. Du löser det här problemet genom att skapa en XML-fil med anpassad bindning som mappar `ExportPDF_Result`-elementet och andra element till olika klasser. Följande XML representerar en anpassad bindningsfil.
 
@@ -1515,13 +1506,13 @@ I följande lista anges andra tjänster som behöver en anpassad bindningsfil n�
 * Rights Management
 * Dokumenthantering
 
-### Skillnader i J2EE-programservrar {#differences-in-j2ee-application-servers}
+### Skillnader i J2EE-servrar {#differences-in-j2ee-application-servers}
 
 Ibland kan ett proxybibliotek som skapats med en viss J2EE-programserver inte anropa AEM Forms som finns på en annan J2EE-programserver. Överväg ett proxybibliotek som genereras med AEM Forms och som distribueras på WebSphere. Proxybiblioteket kan inte anropa AEM Forms-tjänster som är distribuerade på JBoss Application Server.
 
 Vissa AEM Forms komplexa datatyper, som `PrincipalReference`, definieras annorlunda när AEM Forms distribueras på WebSphere jämfört med JBoss Application Server. Skillnader i de JDK:er som används av de olika J2EE-programtjänsterna är orsaken till varför det finns skillnader i WSDL-definitioner. Använd därför proxybibliotek som genereras från samma J2EE-programserver.
 
-### Åtkomst till flera tjänster med hjälp av webbtjänster {#accessing-multiple-services-using-web-services}
+### Åtkomst av flera tjänster via webbtjänster {#accessing-multiple-services-using-web-services}
 
 På grund av namnområdeskonflikter kan dataobjekt inte delas mellan flera tjänst-WSDL:er. Olika tjänster kan dela datatyper och därför delar tjänsterna definitionen av dessa typer i WSDL:erna. Du kan till exempel inte lägga till två .NET-klientsammansättningar som innehåller datatypen `BLOB` i samma .NET-klientprojekt. Om du försöker göra det inträffar ett kompileringsfel.
 
@@ -1752,4 +1743,3 @@ Följande exempel på C#-kod signerar ett interaktivt formulär som återges av 
 ### Tjänster som börjar med bokstaven I skapar ogiltiga proxyfiler {#services-starting-with-the-letter-i-produce-invalid-proxy-files}
 
 Namnet på vissa AEM Forms-genererade proxyklasser är felaktigt när Microsoft .Net 3.5 och WCF används. Problemet inträffar när proxyklasser skapas för IBMFilenetContentRepositoryConnector, IDPSchedulerService eller någon annan tjänst vars namn börjar med bokstaven I. Namnet på den genererade klienten för IBMFileNetContentRepositoryConnector är till exempel `BMFileNetContentRepositoryConnectorClient`. Bokstaven I saknas i den genererade proxyklassen.
-

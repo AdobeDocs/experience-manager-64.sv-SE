@@ -1,21 +1,20 @@
 ---
 title: Skapa brev
-seo-title: Skapa brev
+seo-title: Create Letter
 description: 'I det här avsnittet beskrivs stegen för hur du skapar ett brev, lägger till datamoduler och bilagor till det och förhandsgranskar det i Korrespondenshantering. '
-seo-description: 'I det här avsnittet beskrivs stegen för hur du skapar ett brev, lägger till datamoduler och bilagor till det och förhandsgranskar det i Korrespondenshantering. '
+seo-description: This topic gives you the steps to create a letter, add data modules and attachments to it, and preview it in Correspondence Management.
 uuid: b5cdbf01-db85-4ff8-9fda-1489542bffef
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 6cef0bcf-e2f0-4a5a-85a1-6d8a5dd9bd01
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 8fa14b30-013c-4a23-bebf-2262e8212461
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '4012'
+source-wordcount: '3986'
 ht-degree: 1%
 
 ---
-
 
 # Skapa brev {#create-letter}
 
@@ -28,7 +27,7 @@ Arbetsflödet för korrespondenshantering består av fyra faser:
 1. Skapa brev
 1. Efterbehandling
 
-### Skapa mall {#template-creation}
+### Skapa mallar {#template-creation}
 
 I följande bild visas ett typiskt arbetsflöde när du skapar en brevbrevmall.
 
@@ -46,7 +45,7 @@ I det här arbetsflödet:
 
 1. Författaren förhandsgranskar brevet och skickar det för efterbearbetning. Mer information om [efterbearbetning](/help/forms/using/submit-letter-topostprocess.md).
 
-#### Använda brevmallar som tillhandahålls med Correspondence Management {#using-letter-templates-provided-with-correspondence-management}
+#### Använda brevmallar som tillhandahålls av Correspondence Management {#using-letter-templates-provided-with-correspondence-management}
 
 I stället för att skapa en layoutmall från grunden kan du välja att ändra och återanvända de mallar som Correspondence Management tillhandahåller. Du kan använda designern för att snabbt ändra profileringen och data- och innehållsfälten i mallarna så att de passar organisationens behov. Mer information om Correspondence Management-mallar finns i [Referensbrevmallar](/help/forms/using/reference-cm-layout-templates.md).
 
@@ -82,7 +81,7 @@ Kundcentrerade medarbetare som skadejusteringsföretag eller handläggare kan sk
 
 ![Användarstyrd, anpassad korrespondens](assets/02.png)
 
-#### Systemdriven {#system-driven}
+#### Systemstyrd {#system-driven}
 
 Korrespondensgenereringen automatiseras och styrs av händelseutlösare. Ett påminnelsemeddelande som skickas till en medborgare som ber henne om förhandsregistrering av skatt genereras genom att den fördefinierade mallen slås samman med uppgifter om medborgare. Det sista brevet kan skickas via e-post, skrivas ut, faxas eller arkiveras.
 
@@ -232,7 +231,7 @@ Du behöver följande innan du kan skapa en korrespondens:
 * [Kompatibilitetspaket](https://helpx.adobe.com/in/experience-manager/6-4/forms/using/compatibility-package.html). Installera Kompatibilitetspaketet för att visa alternativet **Letters** på sidan **Forms**.
 
 * Bokstaven XDP ([layout](/help/forms/using/document-fragments.md)).
-* Andra XDP-filer ([layoutfragment](/help/forms/using/document-fragments.md)) som utgör delar av bokstaven. XDP:er\Layouts skapas i [Designer](https://help.adobe.com/en-US/AEMForms/6.1/DesignerHelp/).
+* Andra XDP-filer ([layoutfragment](/help/forms/using/document-fragments.md)) som utgör delar av bokstaven. XDP:er\Layouts skapas i [Designer](http://www.adobe.com/go/learn_aemforms_designer_64).
 
 * Den relevanta [dataordlistan](/help/forms/using/data-dictionary.md) (valfritt).
 * De [datamoduler](/help/forms/using/document-fragments.md) som du vill använda i korrespondensen.
@@ -342,7 +341,7 @@ När du har skapat en korrespondens när du trycker på Öppna, visar Korrespond
 
 1. När du har angett länkningen trycker du på **Nästa**. Korrespondenshanteringen visar skärmen Bifogade filer.
 
-### Konfigurera bifogade filer {#set-up-the-attachments}
+### Konfigurera bilagor {#set-up-the-attachments}
 
 1. Välj **Lägg till resurs**.
 1. På skärmen Välj resurs trycker du på de resurser som ska bifogas med brevet och trycker på **Done**. Du måste först överföra resurserna till Assets. Vi rekommenderar att du bara bifogar PDF- och Microsoft Office-dokument, men du kan även bifoga bilder. Mer information om hur du överför resurser i DAM finns i [Överföra resurser](/help/assets/managing-assets-touch-ui.md).
@@ -471,7 +470,7 @@ Följande värden i tabellen
  </tbody> 
 </table>
 
-## Skapa kopia av en brevmall {#createcopylettertemplate}
+## Skapa en kopia av en brevmall {#createcopylettertemplate}
 
 Du kan använda en befintlig brevmall för att snabbt skapa en brevmall med liknande egenskaper, innehåll och ärvda resurser, som dokumentfragment och dataordlista. Det gör du genom att kopiera och klistra in en bokstav.
 
@@ -480,4 +479,3 @@ Du kan använda en befintlig brevmall för att snabbt skapa en brevmall med likn
 1. Tryck på Klistra in. Dialogrutan Klistra in visas. Om du kopierar och klistrar in bokstäverna på samma plats tilldelas namn och titlar automatiskt till de nya kopiorna av bokstäverna, men du kan redigera bokstävernas titlar och namn.
 1. Om det behövs redigerar du titeln och namnet som du vill spara kopian av brevet med.
 1. Tryck på Klistra in. En kopia av brevet skapas. Nu kan du göra nödvändiga ändringar i det nya brevet.
-

@@ -1,8 +1,8 @@
 ---
 title: Allmän versionsinformation för Adobe Experience Manager 6.4
-seo-title: Versionsinformation
+seo-title: Release Notes
 description: 'I Adobe Experience Manager 6.4 beskrivs versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor. '
-seo-description: 'I Adobe Experience Manager 6.4 beskrivs versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor. '
+seo-description: Adobe Experience Manager 6.4 notes outlining the release information, what's new, how to install and detailed change lists.
 uuid: 5a220301-2727-4078-ba19-4a2dbf9657f4
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4
@@ -10,10 +10,9 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 2be468e7-2b4e-4e04-881b-b9bdd1f55e57
 exl-id: ee034595-2d2a-4887-86c4-6bf0770da6a2
-translation-type: tm+mt
-source-git-commit: eb55489da5e390578b2ae71be424930e9bf3efd3
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '2813'
+source-wordcount: '2754'
 ht-degree: 1%
 
 ---
@@ -112,7 +111,7 @@ Mer information finns på [den här dokumentationssidan](/help/sites-deploying/i
 
 Fullständig lista över ändringar i [AEM Sites och tillägg](sites.md).
 
-#### Fluid Experiences {#fluid-experiences}
+#### Flytande upplevelser {#fluid-experiences}
 
 Införandet av flytande upplevelser i början av 2017, med stöd av innehållsfragment, upplevelsefragment och innehållstjänster som bas, var början till en innehållshantering som tar flera kanaler i första rummet. AEM 6.4 sträcker sig betydligt över vart och ett av områdena:
 
@@ -128,13 +127,13 @@ Tack vare funktionen Byggblock kan du nu skapa variationer i ett fragment med sa
 
 Olika förbättringar av Sling Model Exporter och Core Components ingår för att tillhandahålla stabila JSON-utdata för att bädda in innehåll i mobilappar och upplevelser som byggs med single page-appar.
 
-#### Snabbare hämtning av skapade webbplatser {#gettings-sites-built-quicker}
+#### Snabbare hämtning av webbplatser {#gettings-sites-built-quicker}
 
 AEM 6.4 slutför omvandlingen till nästa generations komponentmodell. Core Components-konceptet som introducerades i AEM 6.3, och nu förenas med Style System, är ett effektivt sätt att bygga nya och utöka befintliga webbplatser.
 
 Rekommenderad självstudiekurs för att lära dig hur du bäst utnyttjar den nya komponentmodellen: [Komma igång med AEM Sites - WKND självstudiekurs](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 
-#### Skärmtillägg {#screens-add-on}
+#### Tillägget Skärmar {#screens-add-on}
 
 AEM Screens står för att leverera ett enhetligt budskap i alla marknadsföringskanaler, inklusive digitala signaturer och kiosknätverk. AEM 6.4 lägger till stöd för att köra signeringsspelaren på maskinvaran för Microsoft Windows och Google Chrome OS. Dessutom finns det förbättringar av enhetshantering och scheman (grupper av kanaler) på fjärrbasis.
 
@@ -160,7 +159,7 @@ Nya filter, som heter Answered och Not Answered, har lagts till i masmodererings
 
 Det finns möjlighet att bokmärka de fördefinierade modereringsfiltren på modereringskonsolen. Dessa filter läggs till i slutet av URL-strängen och kan därför delas, återanvändas och granskas senare. Ta reda på hur du bokmärker filter i [masmodereringskonsolen](/help/communities/moderation.md#main-pars-note-429176623).
 
-#### Ta bort UGC och användarprofiler {#delete-ugc-and-user-profiles}
+#### Ta bort användarprofiler och användarprofiler {#delete-ugc-and-user-profiles}
 
 AEM 6.4 Communities visar [färdiga API:er](/help/communities/user-ugc-management-service.md) och exempel [servlet](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-ugc-management-servlet) för att ge slutanvändarna kontroll över sina data. Dessa API:er gör det även möjligt för databehandlings- och datakontrollorganisationer att hantera EU:s GDPR-kompatibilitetsbegäran.
 
@@ -218,7 +217,7 @@ Resursrapporteringen genomgick en stor översyn i AEM 6.4 med nya rapporteringsr
 
 Flera förbättringar som förbättrar surfning, sökning och administration för Assets-användare som bläddring, bakåtsökning, förbättrade sökfilter och mycket annat. Den fullständiga listan finns i [AEM Assets](assets.md).
 
-**Varumärkesportal**
+**Brand Portal**
 
 Olika förbättringar inom områden som metadata, rapportering, digitala rättigheter, inloggningsupplevelser och publiceringsprestanda för mediedistribution. Mer information om de nya förbättringarna och funktionerna finns i [Nyheter i AEM Assets Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/whats-new.html).
 
@@ -274,7 +273,7 @@ Adobe har de rutiner och processer som behövs för att kunna samla in, priorite
 
 Denna prioriteringsprocess har resulterat i över 500 kundfokuserade förändringar som fastslagits i AEM 6.4.
 
-## Lista över filer som ingår i versionen {#list-of-files-that-are-part-of-the-release}
+## Lista över filer som ingår i releasen {#list-of-files-that-are-part-of-the-release}
 
 **Foundation**
 
@@ -313,11 +312,11 @@ Denna prioriteringsprocess har resulterat i över 500 kundfokuserade förändrin
 
 * Paket för AEM Forms:
 
-   * [adobe-aemfd-aix-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-AIX)
-   * [adobe-aemfd-linux-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-LX)
-   * [adobe-aemfd-solaris-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-SOL)
-   * [adobe-aemfd-win-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-WIN)
-   * [adobe-aemfd-osx-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-OSX)
+   * [adobe-aemfd-aix-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
+   * [adobe-aemfd-linux-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
+   * [adobe-aemfd-solaris-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.htmlL)
+   * [adobe-aemfd-win-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
+   * [adobe-aemfd-osx-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 
 ## Språk {#languages}
 

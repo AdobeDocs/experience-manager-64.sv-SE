@@ -1,8 +1,8 @@
 ---
 title: Snabbstart för databastjänst-API
-seo-title: Snabbstart för databastjänst-API
+seo-title: Repository Service API Quick Starts
 description: Använd tjänsten AEM Forms Repository för att skapa en mapp, skriva en resurs, lista resurser, läsa en resurs, uppdatera en resurs, söka efter resurser, skapa relationer mellan resurser, låsa en resurs, hantera åtkomstkontrollistor och ta bort en resurs.
-seo-description: Använd tjänsten AEM Forms Repository för att skapa en mapp, skriva en resurs, lista resurser, läsa en resurs, uppdatera en resurs, söka efter resurser, skapa relationer mellan resurser, låsa en resurs, hantera åtkomstkontrollistor och ta bort en resurs.
+seo-description: Use the AEM Forms Repository service to create a folder, write  a resource, list resources, reading a resource, update a resource, search for resources, create relationships between resources, locking a resource, managing access control lists, and delete a resource.
 uuid: 9c307e6e-d9a4-4021-8493-9f28a745dedb
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,15 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 2fd1a21a-0f90-49d8-9f62-383b268d540d
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 859a2b57-df90-4030-9061-c454d07cb753
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '644'
 ht-degree: 0%
 
 ---
 
-
-# Snabbstart för databastjänstens API{#repository-service-api-quick-starts}
+# Snabbstart för databastjänst-API {#repository-service-api-quick-starts}
 
 Följande snabbstarter är tillgängliga för tjänsten AEM Forms Repository.
 
@@ -61,7 +60,7 @@ Sökvägen till en resurs i AEM Forms-databasen är:
 
 >[!NOTE]
 >
->Program/FormsApplication finns inte som standard. Om du vill följa med i snabbstarterna skapar du det här programmet med Workbench. Mer information om hur du skapar ett program med Workbench finns i [Komma igång med processdesign](https://help.adobe.com/en_US/livecycle/11.0/WorkbenchHelp/WS92d06802c76abadb-1cc35bda128261a20dd-7fc4.html).
+>Program/FormsApplication finns inte som standard. Om du vill följa med i snabbstarterna skapar du det här programmet med Workbench. Mer information om hur du skapar ett program med Workbench finns i [Komma igång med processdesign](http://www.adobe.com/go/learn_aemforms_workbench_64).
 
 ## Snabbstart (SOAP-läge): Skapa en mapp med Java API {#quick-start-soap-mode-creating-a-folder-using-the-java-api}
 
@@ -297,7 +296,7 @@ I följande Java-kodexempel skrivs en resurs med namnet *lån.xdp* i databasen. 
  
 ```
 
-## Snabbstart (SOAP-läge): Visar resurser med Java API {#quick-start-soap-mode-listing-resources-using-the-java-api}
+## Snabbstart (SOAP-läge): Visa resurser med Java API {#quick-start-soap-mode-listing-resources-using-the-java-api}
 
 I följande Java-kodexempel visas resurser som finns i `Applications/FormsApplication/1.0/FormsFolder`. (Se [Visa resurser](/help/forms/developing/aem-forms-repository.md#listing-resources).)
 
@@ -1214,4 +1213,3 @@ I följande Java-kodexempel tas Loan.xdp bort från `Applications/FormsApplicati
   
  
 ```
-

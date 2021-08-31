@@ -1,23 +1,22 @@
 ---
 title: Bästa tillvägagångssätt för arbete med anpassningsbara formulär
-seo-title: Bästa tillvägagångssätt för arbete med anpassningsbara formulär
+seo-title: Best practices for working with adaptive forms
 description: Beskriver de bästa sätten att skapa ett AEM Forms-projekt, utveckla adaptiva formulär och optimera prestanda för AEM Forms-system.
-seo-description: Beskriver de bästa sätten att skapa ett AEM Forms-projekt, utveckla adaptiva formulär och optimera prestanda för AEM Forms-system.
+seo-description: Explains best practices for setting up an AEM Forms project, developing adaptive forms, and optimizing the performance for AEM Forms system.
 uuid: ed95fc64-56b3-4ea1-a5ba-2e96953fca56
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 0c64940c-273d-4f23-afcb-38bf54cddd36
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '4148'
+source-wordcount: '4108'
 ht-degree: 0%
 
 ---
 
-
-# Bästa sättet att arbeta med adaptiva formulär {#best-practices-for-working-with-adaptive-forms}
+# Bästa tillvägagångssätt för arbete med anpassningsbara formulär {#best-practices-for-working-with-adaptive-forms}
 
 ## Översikt {#overview}
 
@@ -32,7 +31,7 @@ Här följer dessutom några rekommenderade artiklar för allmänna AEM bästa p
 * [God praxis: Administrera AEM](/help/sites-administering/administer-best-practices.md)
 * [God praxis: Utveckla lösningar](/help/sites-developing/best-practices.md)
 
-## Konfigurera AEM Forms {#set-up-and-configure-aem-forms}
+## Konfigurera och konfigurera AEM Forms {#set-up-and-configure-aem-forms}
 
 ### Konfigurera formulärutvecklingsprojekt {#setting-up-forms-development-project}
 
@@ -49,7 +48,7 @@ Mer information finns i [Skapa AEM med Apache Maven](/help/sites-developing/ht-p
 
 * Om du använder en Eclipse-integrerad utvecklingsmiljö kan du använda AEM utvecklingsverktyg för smidig integrering av Eclipse IDE med AEM instanser för att skapa AEM program. Mer information finns i [AEM utvecklarverktyg för Eclipse](/help/sites-developing/aem-eclipse.md).
 
-### Planering för redigeringsmiljön {#planning-for-authoring-environment}
+### Planering för redigeringsmiljö {#planning-for-authoring-environment}
 
 När du väl har skapat AEM projekt kan du definiera en strategi för att skapa och anpassa anpassningsbara blankettmallar och komponenter.
 
@@ -87,9 +86,9 @@ Mer information finns i [Skapa ett anpassningsbart formulär](/help/forms/using/
 
 * Se [Hantera personligt identifierbar information](/help/forms/using/adaptive-forms-best-practices.md#p-handling-personally-identifiable-information-p) för rekommendationer om hur PII-data ska hanteras.
 
-## Skapa adaptiva formulär {#author-adaptive-forms}
+## Skapa anpassningsbara formulär {#author-adaptive-forms}
 
-### Använda pekoptimerat gränssnitt för att skapa {#using-touch-optimized-ui-for-authoring}
+### Använda pekoptimerat gränssnitt för redigering {#using-touch-optimized-ui-for-authoring}
 
 * Använd objektwebbläsaren i sidlisten för att snabbt komma åt fält som är djupa i formulärhierarkin. Du kan använda sökrutan för att söka efter objekt i formulär- eller objektträdet och navigera mellan olika objekt.
 * Om du vill visa och redigera egenskaperna för en komponent i komponentwebbläsaren i sidofältet markerar du komponenten och klickar på ![cmpr-1](assets/cmppr-1.png). Du kan också dubbelklicka på en komponent om du vill visa dess egenskaper i egenskapsläsaren.
@@ -99,7 +98,7 @@ Mer information finns i [Skapa ett anpassningsbart formulär](/help/forms/using/
 
 Se även komponentbeskrivningar och metodtips i [Introduktion till utveckling av adaptiva formulär](/help/forms/using/introduction-forms-authoring.md).
 
-### Använda regler i adaptiva formulär {#using-rules-in-adaptive-forms}
+### Använda regler i anpassningsbara formulär {#using-rules-in-adaptive-forms}
 
 AEM Forms har en [regelredigerare](/help/forms/using/rule-editor.md) som gör att du kan skapa regler för att lägga till dynamiskt beteende i adaptiva formulärkomponenter. Med dessa regler kan du utvärdera villkor och utlösa åtgärder för komponenter, som att visa eller dölja fält, beräkna värden, ändra listrutan dynamiskt och så vidare.
 
@@ -164,7 +163,7 @@ Använd följande metodtips för att lösa prestandaproblem med stora formulär:
    * Markera ett värde i en lat inläst panel som Använd värdet globalt om det värdet används i någon annan del av formuläret, så att värdet är tillgängligt för användning när behållarpanelen tas bort.
    * Överväg att skriva synlighetsregler för fragment som ska visas eller döljas baserat på ett villkor.
 
-### Fylla i adaptiva formulär i förväg {#prefilling-adaptive-forms}
+### Förifyllning av anpassningsbara formulär {#prefilling-adaptive-forms}
 
 Du kan förifylla anpassningsbara formulärfält med data som hämtats från backend-sidan för att hjälpa användarna att snabbt fylla i formuläret och undvika skrivfel.
 
@@ -207,7 +206,7 @@ Ett urkunder är en förenklad PDF-version av ett adaptivt formulär som du kan 
 * Uteslut dolda fält från DoR.
 * Använd parametern `afAcceptLang` request för att visa DoR i en annan språkinställning.
 
-### Felsöka och testa adaptiva formulär {#debugging-and-testing-adaptive-forms}
+### Felsöka och testa anpassningsbara formulär {#debugging-and-testing-adaptive-forms}
 
 [AEM Chrome Plug-](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/) inis a browser extension for Google Chrome that provides tools for debugging adaptive forms. Formulärförfattare och utvecklare kan använda dessa verktyg för att:
 
@@ -237,7 +236,7 @@ Valideringar på serversidan krävs för att förhindra försök att kringgå va
 * Inkludera funktioner i ett klientbibliotek för att validera uttryck i adaptiva formulär och ange klientbiblioteket i dialogrutan för adaptiva formulärbehållare. Mer information finns i [Omvalidering på serversidan](/help/forms/using/configuring-submit-actions.md#p-server-side-revalidation-in-adaptive-form-p).
 * Validering på serversidan validerar formulärmodellen. Vi rekommenderar att du skapar ett separat klientbibliotek för validering och inte mixar det med andra saker som HTML-formatering och DOM-manipulering i samma klientbibliotek.
 
-### Lokaliserar anpassningsbara formulär {#localizing-adaptive-forms}
+### Lokalisera anpassningsbara formulär {#localizing-adaptive-forms}
 
 AEM tillhandahåller översättningsarbetsflöden som du kan använda för att lokalisera adaptiva formulär. Mer information finns i [Använda arbetsflöde AEM översättning för att lokalisera adaptiva formulär](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md).
 
@@ -253,7 +252,7 @@ Nedan beskrivs några tips om hur du översätter anpassningsbara formulär:
 
 ## Förbered formulärprojekt för produktion {#prepare-forms-project-for-production}
 
-### Lägger till formulärbearbetningsserver {#adding-forms-processing-server}
+### Lägger till server för bearbetning av formulär {#adding-forms-processing-server}
 
 Du kan konfigurera ytterligare en instans av AEM Forms-servern som finns bakom brandväggen i en skyddad zon. Du kan använda den här instansen för:
 
@@ -270,11 +269,11 @@ Du behöver ofta flytta dina AEM projekt från en miljö till en annan. Några a
 * (*AEM Forms endast på JEE*) Distribuera LCA och DSC manuellt på Forms Workflow-servern.
 * Använd funktionen [Export-Import](/help/forms/using/import-export-forms-templates.md) för att flytta resurser till den nya miljön. Du kan också konfigurera replikeringsagenten och publicera resurserna.
 
-### Konfigurerar AEM {#configuring-aem}
+### Konfigurera AEM {#configuring-aem}
 
 Nedan beskrivs några tips om hur du konfigurerar AEM för att förbättra prestanda generellt:
 
-* Aktivera HTML-klientbibliotekskomprimering för JavaScript och CSS från Felix Console. Se [Klientlibs förklarar av exempel](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/).
+* Aktivera HTML-klientbibliotekskomprimering för JavaScript och CSS från Felix Console.
 * Cachelagra alla klientbibliotek på `/etc.clientlibs/fd` och eventuella ytterligare anpassade klientbibliotek på AEM dispatcher för att öka svarstiderna och säkerheten för de publicerade formulären. Mer information finns i [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html).
 
 * Cachelagra inte sökvägarna `/content/forms/af/` och `/content/dam/formsanddocuments/*`. Mer information om hur du konfigurerar cachelagring av adaptiva formulär finns i [Cachelagra adaptiva formulär](/help/forms/using/configure-adaptive-forms-cache.md).
@@ -307,4 +306,3 @@ En av de största utmaningarna för organisationer är att hantera personligt id
 
 * Använd en säker, extern lagringsplats som databas för att lagra data från utkast och skickade formulär. Se [Konfigurera extern lagring för utkast och skickade formulärdata](/help/forms/using/adaptive-forms-best-practices.md#external-storage).
 * Använd formulärkomponenten Villkor om du vill få uttryckligt medgivande från användaren innan du aktiverar automatiskt sparande. I det här fallet aktiverar du bara Spara automatiskt när användaren godkänner villkoren i villkorskomponenten.
-

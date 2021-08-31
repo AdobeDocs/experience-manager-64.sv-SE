@@ -1,8 +1,8 @@
 ---
 title: Konvertera mellan filformat och PDF
-seo-title: Konvertera mellan filformat och PDF
+seo-title: Converting Between File Formatsand PDF
 description: Använd tjänsten Generera PDF för att konvertera originalfilformat till PDF. Generera PDF-tjänst konverterar också PDF till andra filformat och optimerar storleken på PDF-dokument.
-seo-description: Använd tjänsten Generera PDF för att konvertera originalfilformat till PDF. Generera PDF-tjänst konverterar också PDF till andra filformat och optimerar storleken på PDF-dokument.
+seo-description: Use the Generate PDF service to convert native file formats to PDF. Generate PDF service also converts PDF to other file formats and optimizes the size of PDF documents.
 uuid: f72ad603-c996-4d48-9bfc-bed7bf776af6
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,15 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 79091a75-2669-453f-9560-e58bfffa3487
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '7933'
+source-wordcount: '7872'
 ht-degree: 0%
 
 ---
 
-
-# Konverterar mellan filformat och PDF {#converting-between-file-formatsand-pdf}
+# Konvertera mellan filformat och PDF {#converting-between-file-formatsand-pdf}
 
 **Om tjänsten Generera PDF**
 
@@ -87,7 +86,7 @@ Du kan utföra följande uppgifter med tjänsten Generera PDF:
 >
 >Mer information om tjänsten Generera PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
-## Konverterar Word-dokument till PDF-dokument {#converting-word-documents-to-pdf-documents}
+## Konvertera Word-dokument till PDF-dokument {#converting-word-documents-to-pdf-documents}
 
 I det här avsnittet beskrivs hur du kan använda Generate PDF API för att programmässigt konvertera ett Microsoft Word-dokument till ett PDF-dokument.
 
@@ -258,7 +257,7 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Gener
 
 [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Konverterar HTML-dokument till PDF-dokument {#converting-html-documents-to-pdf-documents}
+## Konvertera HTML-dokument till PDF-dokument {#converting-html-documents-to-pdf-documents}
 
 I det här avsnittet beskrivs hur du kan använda Generate PDF API för att programmässigt konvertera HTML-dokument till PDF-dokument.
 
@@ -408,7 +407,7 @@ Konvertera HTML-innehåll till ett PDF-dokument med hjälp av Generate PDF API (
 
 [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Konverterar PDF-dokument till icke-bildformat {#converting-pdf-documents-to-non-image-formats}
+## Konvertera PDF-dokument till andra format än bildformat {#converting-pdf-documents-to-non-image-formats}
 
 I det här avsnittet beskrivs hur du kan använda Generate PDF Java API och webbtjänstens API för att programmässigt konvertera ett PDF-dokument till en RTF-fil, som är ett exempel på ett icke-bildformat. Andra format som inte är bildformat är HTML, text, DOC och EPS. När du konverterar ett PDF-dokument till RTF ska du kontrollera att PDF-dokumentet inte innehåller formulärelement, t.ex. en skicka-knapp. Formulärelement konverteras inte.
 
@@ -563,7 +562,7 @@ Konvertera ett PDF-dokument till en RTF-fil med hjälp av Generate PDF API (webb
 
 [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Stöd för ytterligare inbyggda filformat {#adding-support-for-additional-native-file-formats}
+## Stöd för fler inbyggda filformat {#adding-support-for-additional-native-file-formats}
 
 I det här avsnittet beskrivs hur du lägger till stöd för fler inbyggda filformat. Den ger en översikt över interaktionen mellan tjänsten Generate PDF och de program som tjänsten använder för att konvertera filformat till PDF.
 
@@ -645,7 +644,7 @@ Skript-XML-filer instruerar tjänsten Generera PDF att navigera i programdialogr
 
 XML-filer i dialogrutor svarar däremot bara på dialogrutor med samma typ av åtgärder som används i XML-filer i skript.
 
-#### Dialogruta och fönsterelementterminologi {#dialog-box-and-window-element-terminology}
+#### Dialogruta och terminologi för fönsterelement {#dialog-box-and-window-element-terminology}
 
 I det här avsnittet och i nästa avsnitt används olika terminologi för dialogrutor och de komponenter de innehåller, beroende på vilket perspektiv som beskrivs. Dialogrutekomponenter är objekt som knappar, fält och kombinationsrutor.
 
@@ -693,7 +692,7 @@ Om tjänsten Generera PDF hittar en matchning för dialogrutan stängs den av ge
 
 Om tjänsten Generera PDF påträffar en dialogruta som inte beskrivs i någon av de tidigare listade filerna, kommer tjänsten Generera PDF att inkludera dialogrutans beskrivning i loggfilsposten. Tidsgränsen för det jobb som körs för närvarande har uppnåtts. Du kan sedan använda informationen i loggfilen för att skapa nya instruktioner i XML-filen för ytterligare dialogrutor för det ursprungliga programmet.
 
-### Lägga till eller ändra stöd för ett inbyggt filformat {#adding-or-modifying-support-for-a-native-file-format}
+### Lägga till eller ändra stöd för ett ursprungligt filformat {#adding-or-modifying-support-for-a-native-file-format}
 
 I det här avsnittet beskrivs de åtgärder du måste utföra för att stödja andra filformat eller för att ändra stödet för ett filformat som redan stöds.
 
@@ -721,7 +720,7 @@ Tänk på följande:
 
 Om du tänker arbeta med dialogruta- eller skript-XML-filer bör du installera programmet Microsoft Spy++.
 
-#### Avpaketera dialogruta och skriptfiler {#unpackaging-the-dialog-and-script-files}
+#### Uppackning av dialogrute- och skriptfiler {#unpackaging-the-dialog-and-script-files}
 
 Dialogrutan och skriptfilerna finns i filen appmondata.jar. Innan du kan ändra någon av dessa filer eller lägga till nya skript- eller dialogfiler måste du packa upp den här JAR-filen. Anta till exempel att du vill lägga till stöd för programmet EditPlus. Du skapar två XML-filer med namnen appmon.editplus.script.en_US.xml och appmon.editplus.script.addition.en_US.xml. Dessa XML-skript måste läggas till i filen adobe-appmondata.jar på två platser, enligt vad som anges nedan:
 
@@ -750,7 +749,7 @@ När du har lagt till dessa XML-filer i filen adobe-appmondata.jar måste du dis
 1. Expandera Aktiva tjänster. En grön pil visas bredvid tjänstnamnet om det körs. Annars är tjänsten i stoppat läge.
 1. Om tjänsten är stoppad högerklickar du på tjänstnamnet och väljer Starta tjänst.
 
-### Skapa eller ändra en skript-XML-fil för ett internt program {#creating-or-modifying-a-script-xml-file-for-a-native-application}
+### Skapa eller ändra en skript-XML-fil för ett program {#creating-or-modifying-a-script-xml-file-for-a-native-application}
 
 Om du vill dirigera filer till ett nytt originalprogram måste du skapa en skript-XML-fil för det programmet. Om du vill ändra hur tjänsten Generera PDF interagerar med ett program som redan stöds måste du ändra skriptet för det programmet.
 
@@ -766,13 +765,13 @@ Använd det inbyggda programmet för att bestämma vilka fönsterelement du mås
 1. Ange de egenskaper som krävs för skrivaren.
 1. Välj Skriv ut och vänta tills dialogrutan Spara som visas. Dialogrutan Spara som krävs för att tjänsten Generera PDF ska kunna ange PDF-filens mål.
 
-#### Identifiera dialogrutorna som anges i bildtextattributen {#identifying-the-dialogs-specified-in-caption-attributes}
+#### Identifiera dialogrutorna som anges i bildtextattribut {#identifying-the-dialogs-specified-in-caption-attributes}
 
 Använd Microsoft Spy++ för att hämta identiteterna för fönsterelementegenskaper i det ursprungliga programmet. Du måste ha dessa identiteter för att kunna skriva skript.
 
 #### Använda reguljära uttryck i bildtextattribut {#using-regular-expressions-in-caption-attributes}
 
-Du kan använda reguljära uttryck i beskrivningsspecifikationer. Tjänsten Generate PDF använder klassen `java.util.regex.Matcher` som stöd för reguljära uttryck. Verktyget stöder de reguljära uttryck som beskrivs i `java.util.regex.Pattern`. (Gå till Java-webbplatsen på [https://java.sun.com/j2se/1.4.2/docs/api/java/util/regex/Pattern.html](https://java.sun.com/j2se/1.4.2/docs/api/java/util/regex/Pattern.html).)
+Du kan använda reguljära uttryck i beskrivningsspecifikationer. Tjänsten Generate PDF använder klassen `java.util.regex.Matcher` som stöd för reguljära uttryck. Verktyget stöder de reguljära uttryck som beskrivs i `java.util.regex.Pattern`.
 
 **Reguljärt uttryck som tar emot filnamnet som lagts till Anteckningar i banderollen Anteckningar**
 
@@ -866,7 +865,7 @@ Namnet på XML-filen för den extra dialogrutan måste ha formattillägget.*[app
 
 Du måste ordna `windowList`-element som visas som underordnade i ett `window`-element. (Se [Ordna elementen window och windowList](converting-file-formats-pdf.md#ordering-the-window-and-windowlist-elements).)
 
-### Ändra XML-filen för den allmänna dialogrutan {#modifying-the-general-dialog-xml-file}
+### Ändra den allmänna XML-filen i dialogrutan {#modifying-the-general-dialog-xml-file}
 
 Du kan ändra den allmänna XML-filen i dialogrutan för att svara på dialogrutor som genereras av systemet eller för att svara på dialogrutor som är gemensamma för flera program.
 
@@ -956,7 +955,7 @@ Det här exemplet innehåller ytterligare dialogrutor för programmet Anteckning
  </dialogs>
 ```
 
-#### Skript-XML-fil {#script-xml-file}
+#### Script XML-fil {#script-xml-file}
 
 I det här exemplet anges hur tjänsten Generate PDF ska samverka med Anteckningar för att skriva ut filer med hjälp av Adobe PDF-skrivaren.
 
@@ -1144,4 +1143,3 @@ I det här exemplet anges hur tjänsten Generate PDF ska samverka med Anteckning
     <abortMessage msg="15078"/> 
 </application>
 ```
-

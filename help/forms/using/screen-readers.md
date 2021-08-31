@@ -1,22 +1,21 @@
 ---
 title: Skärmläsare för HTML5-formulär
-seo-title: Skärmläsare för HTML5-formulär
+seo-title: Screen readers for HTML5 forms
 description: Visar de skärmläsare som stöds i HTML5-formulär.
-seo-description: Visar de skärmläsare som stöds i HTML5-formulär.
+seo-description: Lists the screen readers supported with HTML5 forms.
 uuid: 035354e2-957f-4eb6-bc16-4ca96ec7ac74
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 53c57180-7004-4534-9146-603f7770a6fe
 feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: c27eb771-d390-4534-8e67-f1277550e760
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '335'
 ht-degree: 0%
 
 ---
-
 
 # Skärmläsare för HTML5-formulär {#screen-readers-for-html-forms}
 
@@ -26,7 +25,7 @@ HTML5-formulär använder HTML-standardkonstruktioner som tillåter vanliga hjä
 
 ## Tillgänglighetsstandarder {#accessibility-standards}
 
-HTML5-formulär uppfyller kraven i avsnitt 508 för tillgänglighet med kända undantag. Mer information finns i [VPAT för HTML5-formulär](https://www.adobe.com/mena_en/accessibility/compliance/livecycle-mobile-forms-es4-section-508-vpat.html).
+HTML5-formulär uppfyller kraven i avsnitt 508 för tillgänglighet med kända undantag. Mer information finns i [VPAT för HTML5-formulär](http://wwwimages.adobe.com/content/dam/acom/en/accessibility/compliance/pdfs/livecycle-mobile-forms-es4-section-508-vpat.pdf).
 
 ## Certifierade skärmläsare för HTML5-formulär {#certified-screen-readers-for-html-forms}
 

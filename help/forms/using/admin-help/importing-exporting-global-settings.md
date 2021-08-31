@@ -1,22 +1,21 @@
 ---
 title: Importera och exportera globala inställningar
-seo-title: Importera och exportera globala inställningar
+seo-title: Importing and exporting global settings
 description: Du kan importera och exportera sökmallsdefinitioner och globala inställningar för arbetsytan.
-seo-description: Du kan importera och exportera sökmallsdefinitioner och globala inställningar för arbetsytan.
+seo-description: You can import and export search template definitions and global settings for Workspace.
 uuid: 8f1f210d-e850-4b2c-bb5a-942fa8299791
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 72fe5749-2fa2-442f-b679-7889faeafcac
-translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+exl-id: 9eabafbe-2193-4799-9bdd-c2be42ead0b9
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1193'
 ht-degree: 0%
 
 ---
-
 
 # Importera och exportera globala inställningar {#importing-and-exporting-global-settings}
 
@@ -61,7 +60,7 @@ När du har exporterat den globala inställningsfilen kan du ändra inställning
 1. Klicka på Exportera under Exportera globala inställningar på sidan Global administration.
 1. Spara filen på datorn.
 
-## Globala inställningar för arbetsytan {#workspace-global-settings}
+## Globala inställningar för arbetsyta {#workspace-global-settings}
 
 Du kan ändra den globala inställningsfilen; De enda inställningar du kan behöva redigera är JChannelConnectionProperties, formViewOnly och specialRoutes.
 
@@ -71,7 +70,7 @@ Du kan ändra den globala inställningsfilen; De enda inställningar du kan beh�
 
 Den globala inställningsfilen för arbetsytan innehåller följande inställningar:
 
-### specialRoutes settings {#specialroutes-settings}
+### specialRoutes, inställningar {#specialroutes-settings}
 
 Inställningarna *specialRoutes* anger egenskaperna för de särskilda vägarna, godkänn och neka, i Workspace. I vissa situationer visas knapparna för dessa vägar på aktivitetskortet i Workspace, och användaren kan markera dem utan att öppna formuläret. Du kan ändra inställningarna för specialRoutes i den globala inställningsfilen för att lägga till anpassade namn för godkännande och neka eller för att skapa ytterligare vägar.
 
@@ -105,8 +104,6 @@ De återstående egenskaperna i den här inställningen bör inte ändras.
 
 **server_remoteevents_JGroupName:** Namnet på den JGroup som används för fjärrhändelsekommunikation. Detta värde genereras slumpmässigt för att undvika konflikter i kluster. Det här värdet bör inte ändras.
 
-Mer information om JGroups och Workspace finns i [Arbetsytan för JGroups och AEM formulär - förklaras](https://blogs.adobe.com/livecycle/2011/03/jgroups-and-livecycle-workspace-explained.html).
-
 ### formView-inställningar {#formview-settings}
 
 **client_formView_openFormInFullScreen:** Om du vill visa alla formulär i helskärmsläge anger du det här alternativet till true. Som standard är det här alternativet inställt på false och formulär visas inte i helskärmsläge. Observera att användartjänsten innehåller ett alternativ för att öppna dokumentet som är kopplat till en uppgift i helskärmsläge. På så sätt kan du styra visningen på basis av de enskilda processerna.
@@ -127,7 +124,7 @@ Mer information om JGroups och Workspace finns i [Arbetsytan för JGroups och AE
 
 **client_pollingInterval:** Anger avsökningsintervallet (i sekunder) som används på (AEM formulär i JEE) Flex Workspace för att identifiera nya och ändrade uppgifter. Standardvärdet är 3 sekunder. Detta fungerar inte för AEM Forms Workspace.
 
-**client_systemContext_name:** Ange ett anpassat namn (t.ex. Medborgare) som ska visas i fältet Tillagd av (på fliken Bifogade filer) för bilagor för en uppgift i AEM Forms Workspace.
+**client_systemContext_name:** Ange ett anpassat namn (till exempel Medborgare) som ska visas i fältet Tillagd av (på fliken Bifogade filer) för bilagor för en uppgift i AEM Forms Workspace.
 
 Så här definierar du det anpassade namnet:
 

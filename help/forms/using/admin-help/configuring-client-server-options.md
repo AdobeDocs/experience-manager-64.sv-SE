@@ -1,19 +1,19 @@
 ---
 title: Konfigurera klient- och serveralternativ
-seo-title: Konfigurera klient- och serveralternativ
+seo-title: Configuring client and server optionsn
 description: Lär dig hur du kan konfigurera olika klient- och serveralternativ, som serverkonfigurationsinställningar, säkerhetsroller för dokument och händelsegranskning.
-seo-description: Lär dig hur du kan konfigurera olika klient- och serveralternativ, som serverkonfigurationsinställningar, säkerhetsroller för dokument och händelsegranskning.
+seo-description: Learn how you can configure the various client and server options, such as server configuration settings, document security roles, and event auditing.
 uuid: 1f9f9886-726e-4fad-9ff8-0ff11eef653e
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 0f069fbc-10c2-403e-9419-5e9920035d75
-feature: Dokumentsäkerhet
+feature: Document Security
 exl-id: 571c1391-dc60-4bed-b4f9-482a508e4bd4
-source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '10283'
+source-wordcount: '10250'
 ht-degree: 0%
 
 ---
@@ -172,7 +172,7 @@ Av sekretesskäl ger dokumentskyddet ett automatiskt nyckelrolloveralternativ me
 
 **Överför huvudnycklar manuellt**
 
-För att sekretessen för offlinedokument ska kunna bevaras kan du manuellt föra över huvudnycklar. Du kan behöva rulla över en nyckel manuellt (t.ex. om nyckeln komprometteras av någon som hämtar den från en dator där den cache-lagras för att kunna aktivera offlineåtkomst till ett dokument).
+Om du vill behålla sekretessen för offlinedokument kan du manuellt föra över huvudnycklar. Du kan behöva rulla över en nyckel manuellt (t.ex. om nyckeln komprometteras av någon som hämtar den från en dator där den cache-lagras för att kunna aktivera offlineåtkomst till ett dokument).
 
 >[!NOTE]
 >
@@ -554,7 +554,7 @@ Dokumentsäkerhet genererar automatiskt en registreringsinbjudan via e-post när
 
 E-postmeddelandet innehåller en länk till en registreringssida och information om hur du registrerar dig. När den inbjudna användaren har registrerat sig utfärdar dokumentsäkerheten ett aktiveringsmejl med en länk till en aktiveringssida. När det är aktiverat fortsätter kontot att gälla tills du inaktiverar eller tar bort det.
 
-Om du aktiverar inbyggd registrering anger du SMTP-servern, e-postinformation för registrering, åtkomstfunktioner och återställer e-postinformation för lösenord endast en gång. Innan du aktiverar den inbyggda registreringen bör du kontrollera att du har skapat en lokal domän i Användarhantering som har tilldelat rollen&quot;Bjud in användare för dokumentsäkerhet&quot; till lämpliga användare och grupper i organisationen. (Se [Lägg till en lokal domän](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain) och [Skapa och konfigurera roller](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).) Om du inte använder inbyggd registrering måste du ha ett eget användarregistreringssystem som skapats med AEM SDK. Mer information finns i hjälpen om utveckling av SPI för AEM formulär i [Programmering med AEM formulär](https://www.adobe.com/go/learn-aemforms-programming-63). Om du inte använder alternativet Inbyggd registrering rekommenderar vi att du konfigurerar ett meddelande i aktiveringsmeddelandet och på klientinloggningsskärmen för att informera användarna om hur de kontaktar administratören för ett nytt lösenord eller för annan information.
+Om du aktiverar inbyggd registrering anger du SMTP-servern, e-postinformation för registrering, åtkomstfunktioner och återställer e-postinformation för lösenord endast en gång. Innan du aktiverar den inbyggda registreringen bör du kontrollera att du har skapat en lokal domän i Användarhantering som har tilldelat rollen&quot;Bjud in användare för dokumentsäkerhet&quot; till lämpliga användare och grupper i organisationen. (Se [Lägg till en lokal domän](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain) och [Skapa och konfigurera roller](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).) Om du inte använder inbyggd registrering måste du ha ett eget användarregistreringssystem som skapats med AEM SDK. Mer information finns i hjälpen om utveckling av SPI för AEM formulär i [Programmering med AEM formulär](/help/forms/developing/introducing-java-api-soap-quick.md). Om du inte använder alternativet Inbyggd registrering rekommenderar vi att du konfigurerar ett meddelande i aktiveringsmeddelandet och på klientinloggningsskärmen för att informera användarna om hur de kontaktar administratören för ett nytt lösenord eller för annan information.
 
 **Aktivera och konfigurera registrering av inbjudna användare**
 

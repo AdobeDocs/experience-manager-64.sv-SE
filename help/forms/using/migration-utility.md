@@ -1,8 +1,8 @@
 ---
 title: Migrera AEM Forms-resurser och -dokument
-seo-title: Migrera AEM Forms-resurser och -dokument
+seo-title: Migrate AEM Forms assets and documents
 description: Med migreringsverktyget kan du migrera AEM Forms-resurser och -dokument från AEM 6.3 Forms eller tidigare versioner till AEM 6.4 Forms.
-seo-description: Med migreringsverktyget kan du migrera AEM Forms-resurser och -dokument från AEM 6.3 Forms eller tidigare versioner till AEM 6.4 Forms.
+seo-description: The Migration utility allows you to Migrate AEM Forms assets and documents from AEM 6.3 Forms or prior versions to AEM 6.4 Forms.
 uuid: 593fc421-b70e-4dbe-87bc-ea49ff025368
 content-type: reference
 topic-tags: correspondence-management, installing
@@ -12,9 +12,9 @@ content-strategy: max-2018
 discoiquuid: a8b1f7df-e36f-4d02-883a-72120fea7046
 role: Admin
 exl-id: 72ead30c-648d-43ad-9826-9c8945a8860d
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '1872'
+source-wordcount: '1829'
 ht-degree: 0%
 
 ---
@@ -38,13 +38,13 @@ Du kan [uppgradera](/help/forms/using/upgrade.md) till den senaste versionen av 
 
 **Vid uppgradering på plats**
 
-Om du har utfört en uppgradering på plats har den uppgraderade instansen redan resurserna och dokumenten. Innan du kan använda resurserna och dokumenten måste du dock installera [AEMFD-kompatibilitetspaketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT) (inkluderar kompatibilitetspaketet för hantering av korrespondence Management)
+Om du har utfört en uppgradering på plats har den uppgraderade instansen redan resurserna och dokumenten. Innan du kan använda resurserna och dokumenten måste du dock installera [AEMFD-kompatibilitetspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) (inkluderar kompatibilitetspaketet för hantering av korrespondence Management)
 
 Därefter måste du uppdatera resurserna och dokumenten genom att [köra migreringsverktyget](#runningmigrationutility).
 
 **Om installationen inte är på plats**
 
-Om installationen är på fel plats (ny) måste du installera [AEMFD-kompatibilitetspaketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT) innan du kan använda resurserna och dokumenten (innehåller Correspondence Management Compatibility-paketet).
+Om installationen är på fel plats (ny) måste du installera [AEMFD-kompatibilitetspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) innan du kan använda resurserna och dokumenten (innehåller Correspondence Management Compatibility-paketet).
 
 Därefter måste du importera resurspaketet (zip eller cmp) till den nya konfigurationen och sedan uppdatera resurserna och dokumenten genom att [köra migreringsverktyget](#runningmigrationutility). På grund av [bakåtkompatibilitetsrelaterade](/help/sites-deploying/backward-compatibility.md) ändringar ändras platserna för några mappar i crx-databasen. Exportera och importera beroenden manuellt (anpassade bibliotek och resurser) från tidigare inställningar till en ny miljö.
 
@@ -107,15 +107,12 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
    >Dessa komponenter kan migreras genom att de öppnas i regelredigeraren i den adaptiva Forms-redigeraren.
    >
    >* Om du vill migrera regler och skript (krävs inte om du uppgraderar från 6.3) i anpassade komponenter trycker du på Adaptive Forms Custom Components Migration (migrering av anpassade-komponenter) och trycker på Start Migration (Starta migrering) på nästa skärm. Följande migreras:
-      >
-      >  
-   * Regler och skript skapade med regelredigeraren (6.1 FP1 och senare)
+   >
+   >  * Regler och skript skapade med regelredigeraren (6.1 FP1 och senare)
    >  * Skript som skapats med fliken Skript i användargränssnittet i 6.1 och tidigare versioner
    >* Om du vill migrera mallar (krävs inte om du uppgraderar från 6.3) trycker du på Adaptiv migrering av Forms-mallar och trycker på Starta migrering på nästa skärm. Följande migreras:
-
-      >
-      >  
-   * Gamla mallar - de adaptiva formulärmallarna som skapats under /apps med AEM 6.1 Forms eller tidigare. Detta inkluderar de skript som definierades i mallkomponenterna.
+   >
+   >  * Gamla mallar - de adaptiva formulärmallarna som skapats under /apps med AEM 6.1 Forms eller tidigare. Detta inkluderar de skript som definierades i mallkomponenterna.
    >  * Nya mallar - Anpassningsbara formulärmallar som skapats med mallredigerare under /conf. Detta inkluderar migrering av regler och skript som skapats med regelredigeraren.
 
 
