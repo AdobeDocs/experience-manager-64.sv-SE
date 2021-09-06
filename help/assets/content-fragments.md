@@ -1,8 +1,8 @@
 ---
 title: Arbeta med innehållsfragment
-seo-title: Arbeta med innehållsfragment
+seo-title: Working with Content Fragments
 description: Lär dig hur innehållsfragment gör att du kan utforma, skapa, strukturera och använda sidoberoende innehåll.
-seo-description: Lär dig hur innehållsfragment gör att du kan utforma, skapa, strukturera och använda sidoberoende innehåll.
+seo-description: Learn how Content Fragments allow you to design, create, curate and use page-independent content.
 uuid: aa5acda2-4c20-4fe7-929d-6c065b252cf2
 contentOwner: Alison Heimoz
 topic-tags: content-fragments
@@ -10,11 +10,11 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
 discoiquuid: 22ae0d3a-083f-40e4-bf4a-7a755ae9e312
 exl-id: e2804707-7b75-4fae-937e-9e258481878f
-feature: Innehållsfragment
+feature: Content Fragments
 role: User
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: 5d523aa135e02b7d06241188c3b4a1d4502f4204
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '1984'
 ht-degree: 3%
 
 ---
@@ -91,8 +91,7 @@ Tillsammans med JSON-exportfunktionerna i AEM kärnkomponenter kan detta struktu
 >* **Upplevelsefragment** är helt utformat. ett fragment av en webbsida.
 
 >
->
-Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
+>Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
 >Mer information finns också i [Förstå innehållsfragment och upplevelsefragment i AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/content-fragments-experience-fragments-article-understand.html).
 
