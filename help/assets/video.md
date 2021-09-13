@@ -8,9 +8,9 @@ content-type: reference
 exl-id: acb95a2b-0171-449e-97fa-f9a533f990de
 feature: Video
 role: User
-source-git-commit: 1d5f9be7aa1e45ebaf689922396832e82c63321f
+source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
 workflow-type: tm+mt
-source-wordcount: '9891'
+source-wordcount: '9888'
 ht-degree: 3%
 
 ---
@@ -31,7 +31,6 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 >* Se [Konfigurera Dynamic Media - Scene7 mode](config-dms7.md) och [Felsökning av Dynamic Media - Scene7 mode](troubleshoot-dms7.md)
 
 >
-
 
 
 1. **Ladda upp dina Dynamic Media-** filmer genom att göra följande:
@@ -73,7 +72,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
          [Visa videoåtergivningar](video-renditions.md)
 
-         [Hantera videoåtergivningar](managing-assets-touch-ui.md#managing-renditions)
+[Hantera videoåtergivningar](managing-assets-touch-ui.md#managing-renditions)
 
       * [Hantera förinställningar för visningsprogram](managing-viewer-presets.md)
       * [Publicera resurser](publishing-dynamicmedia-assets.md)
@@ -85,7 +84,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
       * Redigera egenskaperna för video, till exempel titel, beskrivning och taggar, anpassade metadatafält:
 
-         [Redigera videoegenskaper](managing-assets-touch-ui.md#editing-properties)
+[Redigera videoegenskaper](managing-assets-touch-ui.md#editing-properties)
 
       * [Hantera metadata för digitala resurser](metadata.md)
       * [Metadata-scheman](metadata-schemas.md)
@@ -163,7 +162,7 @@ Windows-enheter som stöder det här videoformatet finns på följande plats: [V
 
 <!-- See [Dynamic video playback](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&config=GeoRetail/Universal_Video1&stageSize=640,480). -->
 
-Se även [Om HTML5-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html?lang=en#viewers-for-aem-assets-only) i referenshandboken för Dynamic Media-visningsprogram för Adobe.
+Se även [Om HTML5-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only) i referenshandboken för Dynamic Media-visningsprogram för Adobe.
 
 ## Bästa praxis: Använda videovisningsprogrammet för HTML5 {#best-practice-using-the-html-video-viewer}
 

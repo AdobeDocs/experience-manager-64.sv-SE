@@ -6,11 +6,11 @@ topic-tags: dynamic-media
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
 exl-id: 51150d51-865e-4b8e-9990-ca755e4c7778
-feature: Panoramabilder
+feature: Panoramic Images
 role: User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '511'
 ht-degree: 2%
 
 ---
@@ -43,7 +43,7 @@ Information om hur du överför resurser som ska användas med visningsprogramme
 
 För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AEM måste du synkronisera förinställningarna för visningsprogrammet för panoramabilder med Dynamic Media Classic och Dynamic Media Classic-specifika metadata så att visningsförinställningarna uppdateras i JCR-filen. Konfigurera Dynamic Media Classic på följande sätt:
 
-1. [Logga in på ditt Dynamic Media Classic-datorprogram ](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app) för varje företagskonto.
+1. [Logga in på ditt Dynamic Media Classic-datorprogram ](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app) för varje företagskonto.
 
 1. Klicka på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]** i det övre högra hörnet på sidan.
 1. På sidan **[!UICONTROL Image Server Publish]** väljer du **[!UICONTROL Image Serving]** i listrutan **[!UICONTROL Publish Context]**.

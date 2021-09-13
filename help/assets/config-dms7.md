@@ -6,11 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 exl-id: b0f0c6e4-77c8-40db-a9f4-699d1a633571
-feature: Konfiguration,Scene7-läge
+feature: Configuration,Scene7 Mode
 role: Admin,User,Developer
-source-git-commit: cdee53ea75faa2e6d1a1ec6ca7aa8bf8b8840e46
+source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
 workflow-type: tm+mt
-source-wordcount: '5176'
+source-wordcount: '5171'
 ht-degree: 2%
 
 ---
@@ -69,7 +69,7 @@ Mer information finns i [Installera funktionspaket 18912 för migrering av grupp
 
 ## Konfigurera Dynamic Media-Cloud Services {#configuring-dynamic-media-cloud-services}
 
-Ändra lösenordet innan du konfigurerar Dynamic Media-Cloud Services. När du har fått ditt e-postmeddelande med Dynamic Media-inloggningsuppgifter måste du [logga in](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app) på Dynamic Media Classic för att kunna ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
+Ändra lösenordet innan du konfigurerar Dynamic Media-Cloud Services. När du har fått ditt e-postmeddelande med Dynamic Media-inloggningsuppgifter måste du [logga in](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app) på Dynamic Media Classic för att kunna ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
 
 >[!NOTE]
 >

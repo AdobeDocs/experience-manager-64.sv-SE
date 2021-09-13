@@ -2,12 +2,12 @@
 title: Dela AEM Assets-mappar med Creative Cloud
 description: Konfiguration och bästa praxis som gör att användare av Adobe Experience Manager Assets kan utbyta resursmappar med Adobe Creative Cloud-användare.
 contentOwner: AG
-feature: Samarbete
+feature: Collaboration
 role: User,Admin
 exl-id: 7e2adfcc-410d-4574-8f7e-39aceecfdd4b
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1059'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ I följande diagram visas en översikt över integreringen.
 Integreringen innehåller följande element:
 
 * **AEM Assets-** servrar som används i företagsnätverket (hanterade tjänster eller lokalt): Mappdelning initieras här.
-* **Adobe Marketing Cloud Assets core service**: Fungerar som mellanhand mellan AEM och Creative Cloud. Administratören för det företag som använder integreringen måste upprätta en förtroenderelation mellan Marketing Cloud-organisationen och AEM Assets-instansen. De [definierar också en lista över medarbetare på Creative Cloud](https://experienceleague.adobe.com/docs/core-services/interface/assets/t-admin-add-cc-user.html?lang=en#assets) som AEM Assets-användare kan dela mappar för att öka säkerheten.
+* **Adobe Marketing Cloud Assets core service**: Fungerar som mellanhand mellan AEM och Creative Cloud. Administratören för det företag som använder integreringen måste upprätta en förtroenderelation mellan Marketing Cloud-organisationen och AEM Assets-instansen. De [definierar också en lista över medarbetare på Creative Cloud](https://experienceleague.adobe.com/docs/core-services/interface/assets/t-admin-add-cc-user.html#assets) som AEM Assets-användare kan dela mappar för att öka säkerheten.
 * **Creative Cloud Assets web services**  (storage and Creative Cloud Files web UI): Det är här specifika Creative Cloud-användare, som har en AEM Assets-mapp delad, kan acceptera inbjudan och se mappen i sitt Creative Cloud-kontoarkiv.
 * **Creative Cloud-datorprogram**: (Valfritt) Möjliggör direkt åtkomst till delade mappar/filer från den kreativa användarens skrivbord via synkronisering med Creative Cloud Assets-lagring.
 
@@ -65,7 +65,7 @@ De bästa sätten att utnyttja delning av AEM till Creative Cloud är:
 
 * **Volymeffekter:** Mappdelning mellan AEM och Creative Cloud bör användas för att dela ett mindre antal filer, t.ex. relevanta för en viss kampanj eller aktivitet. Om du vill dela större uppsättningar resurser, som alla godkända resurser i organisationen, använder du andra distributionsmetoder (till exempel AEM Assets Brand Portal) eller AEM datorprogram.
 * **Undvik delning av djupa hierarkier:** Delningen fungerar rekursivt och tillåter inte selektiv delning. Normalt bör endast mappar utan undermappar, eller med en mycket kort hierarki, som 1 undermappsnivå, användas för delning.
-* **Separata mappar för envägsdelning:** Separata mappar ska användas för att dela det slutliga materialet från AEM Assets till Creative Cloud-filer och för att dela det kreativa materialet tillbaka från Creative Cloud-filer till AEM Assets. Tillsammans med en bra namnkonvention för de här mapparna skapar det en lättbegriplig arbetsmiljö för användare av både AEM Assets och Creative Cloud.
+* **Separata mappar för envägsdelning:** Separata mappar bör användas för att dela det slutliga materialet från AEM Assets till Creative Cloud-filer och för att dela det kreativa materialet tillbaka från Creative Cloud-filer till AEM Assets. Tillsammans med en bra namnkonvention för de här mapparna skapar det en lättbegriplig arbetsmiljö för användare av både AEM Assets och Creative Cloud.
 * **Undvik PIA i den delade mappen:** Delad mapp ska inte användas för Pågående arbete - använd en separat mapp i Filer i Creative Cloud för att utföra arbete som kräver många ändringar av filen.
 * **Starta nytt arbete utanför den delade mappen:** Nya designer (kreativa filer) ska startas i den separata Pågående arbete-mappen i Creative Cloud-filer, och när de är klara att delas med AEM Assets-användare bör de flyttas eller sparas i den delade mappen.
 * **Förenkla delningsstrukturen:** För en mer hanterbar driftsättning kan du tänka på att förenkla delningsstrukturen. I stället för att dela med alla kreativa användare bör AEM Assets-mappar endast delas med grupprepresentanter, som en creative director eller teammanager. Chefen på den kreativa sidan skulle få det slutliga materialet, besluta om arbetstilldelning och sedan låta designers arbeta i sina egna Creative Cloud-konton på PIA-resurser. De kan använda samarbetsfunktionerna i Creative Cloud för att koordinera arbetet och slutligen välja och placera resurser som är redo att delas tillbaka till AEM Assets i deras kreativa färdiga delade mapp.

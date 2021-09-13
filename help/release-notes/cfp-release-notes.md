@@ -3,14 +3,13 @@ title: AEM 6.4 Cumulative Fix Pack Release Notes
 description: Versionsinformation om Adobe Experience Manager 6.4 Cumulative Fix Packs.
 contentOwner: AK
 mini-toc-levels: 1
-translation-type: tm+mt
-source-git-commit: 7c19ef4a56fbfaa2f43b71e4dc48c79f797f32a8
+exl-id: a63e77a3-da48-4072-bc75-c4c41a2f62a3
+source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
 workflow-type: tm+mt
-source-wordcount: '4595'
+source-wordcount: '4591'
 ht-degree: 0%
 
 ---
-
 
 # AEM 6.4 Cumulative Fix Pack Release Notes {#aem-cumulative-fix-pack-release-notes}
 
@@ -40,7 +39,7 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
 
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.8.24.
 
-Information om CFP och andra typer av releaser finns i [AEM Update Release Vehicle Definitions](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-release-vehicle-definitions.html?lang=en)
+Information om CFP och andra typer av releaser finns i [AEM Update Release Vehicle Definitions](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-release-vehicle-definitions.html)
 
 Adobe Experience Manager 6.4.8.4 innehåller korrigeringar för följande problem.
 
@@ -106,7 +105,7 @@ Information om CFP och andra typer av releaser finns i [AEM Update Release Vehic
 
 Adobe Experience Manager 6.4.8.3 innehåller korrigeringar för följande problem.
 
-#### Platser {#sites-6483}
+#### Webbplatser {#sites-6483}
 
 * När du uppdaterar texten för en variant av ett innehållsfragment uppdateras innehållet i det överordnad innehållsfragmentet i stället för variationen (NPR-35080).
 
@@ -160,7 +159,7 @@ Adobe Experience Manager 6.4.8.3 innehåller korrigeringar för följande proble
 
 #### Handel {#commerce-6483}
 
-* När det finns fler än 15 produkter i en samling visas endast de första 15 produkterna (NPR-34494).
+* När det finns fler än 15 produkter i en samling visar samlingen endast de första 15 produkterna (NPR-34494).
 
 #### Forms {#forms-6483}
 
@@ -200,7 +199,7 @@ Information om CFP och andra typer av releaser finns i [AEM Update Release Vehic
 
 Adobe Experience Manager 6.4.8.2 innehåller korrigeringar för följande problem.
 
-#### Platser {#sites-6482}
+#### Webbplatser {#sites-6482}
 
 * Om `RolloutConfigManagerFactoryImpl` inte kan läsa in en rollout-konfiguration försöker den inte läsa in de saknade konfigurationerna. Den returnerar de cachelagrade konfigurationerna (NPR-34091).
 * I huvudkomponenten för text tas klassen från taggen `em` bort (NPR-34080) när du har använt HTML-källredigeringsalternativet.
@@ -346,7 +345,7 @@ Information om CFP och andra typer av releaser finns i [AEM Update Release Vehic
 
 Adobe Experience Manager 6.4.8.1 innehåller korrigeringar av följande problem.
 
-#### Platser {#sites-6481}
+#### Webbplatser {#sites-6481}
 
 * Anonyma användare har tillgång till CRX DE Lite-funktioner (NPR-33522).
 * När namnet på en lokal komponent i en LiveCopy är identiskt med namnet på en komponent i utkastet och komponenten rullas ut från utkast, läggs termen _msm_move inte till i namnet på den lokala komponenten (NPR-33207).
@@ -461,7 +460,7 @@ Adobe Experience Manager 6.4.8.1 innehåller korrigeringar av följande problem.
 >
 >Adobe rekommenderar inte att AEM 6.4.8.4-paketet tas bort eller avinstalleras.
 
-### Installera det kumulativa korrigeringspaketet {#install-cumulative-fix-pack}
+### Installera det ackumulerade korrigeringspaketet {#install-cumulative-fix-pack}
 
 Så här installerar du Cumulative Fix Pack på en befintlig AEM 6.4.8.0-instans:
 
@@ -489,7 +488,7 @@ B. Använd [HTTP-API:t från Package Manager](https://docs.adobe.com/content/doc
 >
 >AEM 6.4.8.4 stöder inte installation av Bootstrap.
 
-### Verifiera installation {#validate-install}
+### Validera installation {#validate-install}
 
 1. Produktinformationssidan (*/system/console/productinfo*) ska nu visa den uppdaterade versionssträngen &quot;Adobe Experience Manager, Version 6.4.8.4&quot; under Installerade produkter.
 1. Alla OSGI-paket är antingen AKTIVA eller FRAGMENT i OSGI-konsolen (Använd webbkonsolen: /system/console/bundles).
@@ -519,10 +518,10 @@ som kopierar nya visningsförinställningar till /conf-platsen.
 >Hoppa över om du inte använder AEM Forms. Korrigeringar i AEM Forms levereras via ett separat tilläggspaket.
 
 1. Kontrollera att du har installerat AEM Cumulative Fix Pack.
-1. Hämta motsvarande tilläggspaket för formulär i [AEM Forms-utgåvor](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#forms-updates) för ditt operativsystem.
+1. Hämta motsvarande tilläggspaket för formulär i [AEM Forms-utgåvor](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates) för ditt operativsystem.
 1. Installera tilläggspaketet för formulär enligt beskrivningen i [Installera tilläggspaket för AEM](https://docs.adobe.com/content/help/en/experience-manager-64/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html#install-aem-forms-add-on-package).
 
-### Installera installationsprogrammet för AEM Forms JEE {#install-aem-forms-jee-installer}
+### Installera AEM Forms JEE-installationsprogrammet {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
@@ -559,7 +558,7 @@ I det här avsnittet visas funktioner som har tagits bort eller tagits bort frå
 
 | Yta | Funktion | Ersättning | Version |
 |---|---|---|---|
-| Assets | Hantera taggåtgärd för underresurser | Ingen ersättning | AEM 6.4.2.0 |
+| Resurser | Hantera taggåtgärd för underresurser | Ingen ersättning | AEM 6.4.2.0 |
 | Resurser och integrering med Adobe Creative Cloud | [AEM till ](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/aem-cc-folder-sharing-best-practices.html) mappdelning mellan Creative Cloud introducerades i AEM 6.2 som ett sätt att ge kreativa användare tillgång till resurser från AEM. En ny funktion i Creative Cloud, Adobe Asset Link, ger en mycket bättre användarupplevelse och kraftfullare åtkomst till AEM direkt inifrån Photoshop, InDesign och Illustrator. Adobe kommer inte att förbättra mappdelningsfunktionen ytterligare. Funktionen ingår i AEM, men kunderna rekommenderas att använda ersättaren. | Adobe Asset Link eller datorprogram. Mer information finns i [AEM Creative Cloud-integrering](/help/assets/aem-cc-integration-best-practices.md)-artikeln. | AEM 6.4.4.0 |
 
 ## Kända fel {#known-issues}

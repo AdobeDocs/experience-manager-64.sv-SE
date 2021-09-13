@@ -2,12 +2,12 @@
 title: Hantera sammansatta resurser och generera delresurser.
 description: Lär dig hur du skapar referenser till AEM resurser från filer i InDesign, Adobe Illustrator och Photoshop. Lär dig även hur du använder funktionen för sidvisning för att visa enskilda sidor med flersidiga filer, inklusive PDF-, INDD-, PPT-, PPTX- och AI-filer.
 contentOwner: AG
-feature: Resurshantering
+feature: Asset Management
 role: User,Admin
 exl-id: 9fa44b26-76f7-48e2-a9df-4fd1c0074158
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1349'
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ För InDesign kan du extrahera sidor med hjälp av InDesign-servern. Om förhand
 
 Följande alternativ är tillgängliga i verktygsfältet, i den vänstra listen och i kontrollerna i sidvisningsprogrammet:
 
-* **[!UICONTROL Desktop Actions]** för att öppna eller visa en viss underresurs med AEM skrivbordsapp. Se hur du [konfigurerar skrivbordsåtgärder](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#desktopactions-v2) om du använder AEM skrivbordsapp.
+* **[!UICONTROL Desktop Actions]** för att öppna eller visa en viss underresurs med AEM skrivbordsapp. Se hur du [konfigurerar skrivbordsåtgärder](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2) om du använder AEM skrivbordsapp.
 
 * **[!UICONTROL Properties]** öppnar  [!UICONTROL Properties] sidan för den specifika underresursen.
 
