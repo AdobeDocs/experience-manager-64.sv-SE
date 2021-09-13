@@ -72,7 +72,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
          [Visa videoåtergivningar](video-renditions.md)
 
-[Hantera videoåtergivningar](managing-assets-touch-ui.md#managing-renditions)
+         [Hantera videoåtergivningar](managing-assets-touch-ui.md#managing-renditions)
 
       * [Hantera förinställningar för visningsprogram](managing-viewer-presets.md)
       * [Publicera resurser](publishing-dynamicmedia-assets.md)
@@ -84,7 +84,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
       * Redigera egenskaperna för video, till exempel titel, beskrivning och taggar, anpassade metadatafält:
 
-[Redigera videoegenskaper](managing-assets-touch-ui.md#editing-properties)
+         [Redigera videoegenskaper](managing-assets-touch-ui.md#editing-properties)
 
       * [Hantera metadata för digitala resurser](metadata.md)
       * [Metadata-scheman](metadata-schemas.md)
