@@ -2,13 +2,13 @@
 title: Aktivera resursinsikter via DTM
 description: Lär dig hur du använder DTM (Adobe Dynamic Tag Management) för att aktivera resursinsikter.
 contentOwner: AG
-feature: Resursinsikter,Resursrapporter
+feature: Asset Insights,Asset Reports
 role: User,Admin
 exl-id: d19cea4d-5395-479d-b303-4529ae2c0bf2
-source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
+source-git-commit: 2b3a6972d703314d56d3dc711fb6a514cb1942d5
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 3%
+source-wordcount: '624'
+ht-degree: 4%
 
 ---
 
@@ -18,11 +18,11 @@ Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknads
 
 >[!CAUTION]
 >
->Adobe DTM är ersatt med Adobe Experience Platform Launch och kommer snart att vara [livets slut](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f). Adobe rekommenderar att du [använder Launch för resursinsikter](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html).
+>Adobe DTM är ersatt med [!DNL Adobe Experience Platform] och kommer snart att nå [slutet av livet](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f). Adobe rekommenderar att du [använder [!DNL Adobe Experience Platform] för resursinsikter](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html).
 
 Utför dessa steg för att aktivera Assets Insights via DTM:
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Tools > Assets > Insights Configuration]**.
+1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Insights Configuration]**.
 1. [Konfigurera AEM med DTM-Cloud Service](../sites-administering/dtm.md)
 
    API-token bör vara tillgänglig när du har loggat in på [https://dtm.adobe.com](https://dtm.adobe.com/) och går till **[!UICONTROL Account Settings]** från profilikonen. Detta steg är inte nödvändigt från Assets Insights-synpunkt eftersom integrationen av AEM Sites med Assets Insights fortfarande pågår.

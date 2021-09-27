@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: 956cdec4-2ba8-43c9-9122-564d764f4681
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 2b3a6972d703314d56d3dc711fb6a514cb1942d5
 workflow-type: tm+mt
-source-wordcount: '604'
+source-wordcount: '602'
 ht-degree: 8%
 
 ---
@@ -36,7 +36,7 @@ Så här importerar du flera metadata samtidigt:
    | [!UICONTROL Batch Size] | Antal resurser i en grupp som metadata ska importeras för. Standardvärdet är 50. Maxvärdet är 100. |
    | [!UICONTROL Field Separator] | Standardvärdet är `,` - ett komma. Du kan ange andra tecken. |
    | [!UICONTROL Multi Value Delimiter] | Avgränsare för metadatavärden. Standardvärdet är `|` - en pipe. |
-   | [!UICONTROL Launch Workflows] | Falskt som standard. När värdet är true används standardinställningarna för startprogrammet för `DAM Metadata WriteBack Workflow` (som skriver metadata till binära XMP). Om du aktiverar startarbetsflöden påverkas systemets prestanda. |
+   | [!UICONTROL Launch Workflows] | Falskt som standard. Om värdet är true används standardinställningarna för `DAM Metadata WriteBack Workflow` (som skriver metadata till binära XMP). Om du aktiverar arbetsflödena påverkas systemets prestanda. |
    | [!UICONTROL Asset Path Column Name] | Definierar kolumnnamnet för CSV-filen med resurser. |
 
 1. Tryck/klicka på **[!UICONTROL Import]** i verktygsfältet. När metadata har importerats skickas ett meddelande till din meddelandeinkorg. Navigera till egenskapssidan för resurser och kontrollera om metadatavärdena har importerats korrekt för resurser.
