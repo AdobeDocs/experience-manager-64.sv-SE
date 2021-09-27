@@ -1,22 +1,21 @@
 ---
 title: Utveckla och utöka arbetsflöden
-seo-title: Utveckla och utöka arbetsflöden
+seo-title: Developing and Extending Workflows
 description: AEM innehåller flera verktyg och resurser för att skapa arbetsflödesmodeller, utveckla arbetsflödessteg och för att interagera programmatiskt med arbetsflöden
-seo-description: AEM innehåller flera verktyg och resurser för att skapa arbetsflödesmodeller, utveckla arbetsflödessteg och för att interagera programmatiskt med arbetsflöden
+seo-description: AEM provides several tools and resources for creating workflow models, developing workflow steps, and for programmatically interacting with workflows
 uuid: 5a857589-3b13-4519-bda2-b1dab6005550
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: 8954e3df-3afa-4d53-a7e1-255f3b8f499f
-translation-type: tm+mt
-source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
+exl-id: 4f9bd75c-9d54-4cd6-9d73-5d580be5a9e8
+source-git-commit: 608c0fbd7eb0fc06fccf8cbcaebf874bff36d5e0
 workflow-type: tm+mt
-source-wordcount: '1535'
+source-wordcount: '1512'
 ht-degree: 0%
 
 ---
-
 
 # Utveckla och utöka arbetsflöden{#developing-and-extending-workflows}
 
@@ -47,7 +46,6 @@ Nedan beskrivs de viktigaste aspekterna, medan följande sidor innehåller mer i
 >* Ändringar av informationsplatserna finns i [Databasomstrukturering i AEM 6.4](/help/sites-deploying/repository-restructuring.md) och [Bästa praxis för arbetsflöde - Platser](/help/sites-developing/workflows-best-practices.md#locations).
 
 >
-
 
 
 ## Modell {#model}
@@ -115,7 +113,7 @@ Följande åtgärder är möjliga för en arbetsflödesinstans:
 
 Slutförda och avslutade instanser arkiveras.
 
-### Inkorgen {#inbox}
+### Inkorg {#inbox}
 
 Varje användarkonto har en egen arbetsflödesinkorg där det tilldelade `WorkItems` är tillgängligt.
 
@@ -163,7 +161,6 @@ Standardarbetsflöden sparar körningsinformation (historik) under körningen. D
 >* När det tillfälliga arbetsflödet går in i ett deltagarsteg ändras läget (vid körning) till icke-tillfälligt. när aktiviteten skickas till en person måste historiken bevaras
 
 >
-
 
 
 >[!CAUTION]
