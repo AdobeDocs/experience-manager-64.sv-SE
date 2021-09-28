@@ -1,9 +1,9 @@
 ---
 title: Säkerhetschecklista
-seo-title: Säkerhetschecklista
+seo-title: Security Checklist
 description: Läs om de olika säkerhetsaspekterna när du konfigurerar och distribuerar AEM.
 feature: Security
-seo-description: Läs om de olika säkerhetsaspekterna när du konfigurerar och distribuerar AEM.
+seo-description: Learn about the various security considerations when configuring and deploying AEM.
 uuid: 8ecd0c35-249e-4f72-b7e9-97e72698b5c1
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,10 +11,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: a91e1264-8441-42f8-aa83-1d9c983d214a
 exl-id: 0be6d031-f8b8-458b-a910-ff05d2b1a155
-translation-type: tm+mt
-source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
+source-git-commit: b921cf3a1739b031eea5c319953d20a024515544
 workflow-type: tm+mt
-source-wordcount: '2844'
+source-wordcount: '2830'
 ht-degree: 0%
 
 ---
@@ -33,7 +32,7 @@ I det här avsnittet beskrivs olika åtgärder som du bör vidta för att se til
 
 ## Viktiga säkerhetsåtgärder {#main-security-measures}
 
-### Kör AEM i produktionsklart läge {#run-aem-in-production-ready-mode}
+### Kör AEM i produktionsklar läge {#run-aem-in-production-ready-mode}
 
 Mer information finns i [Köra AEM i produktionsklart läge](/help/sites-administering/production-ready.md).
 
@@ -45,7 +44,7 @@ Det är obligatoriskt att aktivera HTTPS-transportlagret på både författare- 
 >
 >Mer information finns i avsnittet [Aktivera HTTP över SSL](/help/sites-administering/ssl-by-default.md).
 
-### Installera säkerhetsuppdateringar {#install-security-hotfixes}
+### Installera snabbkorrigeringar för säkerhet {#install-security-hotfixes}
 
 Kontrollera att du har installerat de senaste [säkerhetsuppdateringarna från Adobe](https://helpx.adobe.com/experience-manager/kb/aem63-available-hotfixes.html).
 
@@ -108,7 +107,7 @@ Adobe rekommenderar att du definierar anpassade felhanterarsidor, särskilt för
 >
 >Mer information finns i [Hur kan jag skapa anpassade skript eller felhanterare](https://helpx.adobe.com/experience-manager/kb/CustomErrorHandling.html) kunskapsbasartikel.
 
-### Slutför säkerhetschecklista för utskickning {#complete-dispatcher-security-checklist}
+### Slutför checklista för utskickssäkerhet {#complete-dispatcher-security-checklist}
 
 AEM Dispatcher är en viktig del av din infrastruktur. Adobe rekommenderar att du slutför [dispatchersäkerhetschecklistan](https://helpx.adobe.com/experience-manager/dispatcher/using/security-checklist.html).
 
@@ -158,7 +157,7 @@ Dessa OSGi-utvecklingspaket bör avinstalleras både på författaren och public
 
 Detta OSGi-paket bör avinstalleras både på författaren och publicera produktionssystem innan de blir tillgängliga.
 
-### Protect mot serveröverskridande begärandeförfalskning {#protect-against-cross-site-request-forgery}
+### Protect mot smidning av förfrågningar mellan webbplatser {#protect-against-cross-site-request-forgery}
 
 #### CSRF Protection Framework {#the-csrf-protection-framework}
 
@@ -302,7 +301,7 @@ För att förhindra missbruk kan du:
 
       **JSON Max results** (  `json.maximumresults`)
 
-      i konfigurationen för [Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md). När den här gränsen överskrids komprimeras återgivningen. Standardvärdet för Sling inom AEM är `200`.
+      i konfigurationen för [Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md). När den här gränsen överskrids komprimeras återgivningen. Standardvärdet för Sling inom AEM är `1000`.
 
    * Som en förebyggande åtgärd inaktiverar du de andra standardåtergivningarna (HTML, oformaterad text, XML). Återigen genom att konfigurera [Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md).
    >[!CAUTION]
@@ -364,7 +363,7 @@ WebDAV ska vara inaktiverat i både författar- och publiceringsmiljön. Detta k
    >
    >Du behöver inte starta om AEM.
 
-### Verifiera att du inte avslöjar personligt identifierbar information i hemsökvägen {#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path} för användare
+### Verifiera att du inte avslöjar personligt identifierbar information i användarens hemsökväg {#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path}
 
 Det är viktigt att du skyddar dina användare genom att se till att du inte visar någon personligt oidentifierbar information i databasanvändarens hemsökväg.
 
