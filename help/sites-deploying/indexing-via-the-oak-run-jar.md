@@ -1,21 +1,20 @@
 ---
 title: Indexering via Oak-run Jar
-seo-title: Indexering via Oak-run Jar
+seo-title: Indexing via the Oak-run Jar
 description: Lär dig hur du utför indexering via Oak-run Jar.
-seo-description: Lär dig hur du utför indexering via Oak-run Jar.
+seo-description: Learn how to perform indexing via the Oak-run Jar.
 uuid: 09a83ab9-92ec-4b55-8d24-2302f28fc2e4
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: deploying
 discoiquuid: c8a505ab-a075-47da-8007-43645a8c3ce5
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: b85fc608-9653-4491-8557-f66a0a7da5ea
+source-git-commit: 809a62eeca8b8e30e010beea7d594ced165e8faa
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '870'
 ht-degree: 0%
 
 ---
-
 
 # Indexering via Oak-run Jar{#indexing-via-the-oak-run-jar}
 
@@ -51,13 +50,13 @@ Nedan finns en lista över användningsfall som kan utnyttjas när du utför ind
 
 ![image2017-12-19_9-47-40](assets/image2017-12-19_9-47-40.png)
 
-## Beslutsträdet för omindexering av metod {#reindexingapproachdecisiontree}
+## Beslutsträd för omindexering av metod {#reindexingapproachdecisiontree}
 
 Bilden är ett beslutsträd för när olika omindexeringsmetoder ska användas.
 
 ![oak_-_reindexingwithoak-run](assets/oak_-_reindexingwithoak-run.png)
 
-## Indexerar om MongoMK / RDMBMK {#reindexingmongomk}
+## Indexerar om MongoMK/RDMBMK {#reindexingmongomk}
 
 >[!NOTE]
 >
@@ -87,7 +86,7 @@ Den här processen behöver bara köras mot en enda AEM i klustret.
 
 ![5](assets/5.png)
 
-## Indexerar om tarMK {#re-indexingtarmk}
+## Omindexering av tarMK {#re-indexingtarmk}
 
 >[!NOTE]
 >
@@ -119,7 +118,7 @@ Den här metoden kan användas om tids- och prestandaeffekterna som ska indexera
 >
 >Mer detaljerad information om det här scenariot finns i [Online Reindex - SegmentNodeStore - Den AEM instansen körs](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestoretheaeminstanceisrunning).
 
-Omindexering online av tarMK är snabbare än omindexeringen av TarkMK online som beskrivs ovan. Det kräver dock även körning under ett underhållsfönster, med metoden att fönstret blir kortare och fler steg krävs för att utföra omindexeringen.
+Omindexering online av tarMK med hjälp av oak-run.jar är snabbare än den omindexering online som beskrivs ovan. [](#onlinere-indexingfortarmk) Den kräver dock även exekvering under en underhållsperiod. med en hänvisning till att fönstret kommer att bli kortare och att fler steg krävs för att utföra omindexeringen.
 
 >[!NOTE]
 >
@@ -141,7 +140,7 @@ Omindexering offline av tarMK är den enklaste `oak-run.jar`-baserade omindexeri
 
 ![8](assets/8.png)
 
-### Out-of-band Re-Indexing tarMK med oak-run.jar {#out-of-bandre-indexingtarmkusingoak-run-jar}
+### Omindexerings-TarMK utanför band med oak-run.jar  {#out-of-bandre-indexingtarmkusingoak-run-jar}
 
 >[!NOTE]
 >
@@ -182,4 +181,3 @@ Om tiden eller prestandaeffekten av omindexering med icke-`oak-run.jar`-metoder 
 Om tiden eller prestandaeffekten av omindexering med icke-`oak-run.jar`-metoder är för hög kan följande `oak-run.jar`-baserade metod användas för att importera och indexera om Lucene-indexdefinitioner i MongoMK-baserade AEM.
 
 ![11](assets/11.png)
-

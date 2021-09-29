@@ -1,8 +1,8 @@
 ---
 title: Konfigurera översättningsintegreringsramverket
-seo-title: Konfigurera översättningsintegreringsramverket
+seo-title: Configuring the Translation Integration Framework
 description: Lär dig hur du konfigurerar TLF (Translation Integration Framework).
-seo-description: Lär dig hur du konfigurerar TLF (Translation Integration Framework).
+seo-description: Learn how to configure the Translation Integration Framework.
 uuid: 5ecfe154-732f-4a13-96f8-92f55023c54d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,14 +10,13 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
 feature: Language Copy
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: e68b5a5c-e12a-4b7b-b607-451ef8fdeff0
+source-git-commit: a9459872f9ce8e68dccb46e7dfddebe9eeb39bd4
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1550'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera översättningsintegreringsramverket{#configuring-the-translation-integration-framework}
 
@@ -39,7 +38,7 @@ Följande översättningsleverantörer tillhandahåller en implementering av det
 * [Lionbridge](https://exchange.adobe.com/experiencecloud.details.100064.lionbridge-connector-for-experience-manager-63.html)
 * [Memsource](https://exchange.adobe.com/experiencecloud.details.103166.memsource-connector-for-adobe-experience-manager.html)
 * [Molnord](https://exchange.adobe.com/experiencecloud.details.90019.html)
-* [CrossLang NV](https://exchange.adobe.com/experiencecloud.details.90049.crosslang-xtm-for-adobe-experience-manager.html)
+* [XTM Cloud](https://exchange.adobe.com/experiencecloud.details.105037.xtm-connect-for-adobe-experience-manager.html)
 * [Lingotek](https://exchange.adobe.com/experiencecloud.details.90088.lingotek-collaborative-translation-platform.html)
 * [Smartling](https://exchange.adobe.com/experiencecloud.details.90101.smartling-connector-for-adobe-experience-manager.html)
 * [SDL](https://exchange.adobe.com/experiencecloud.details.100110.sdl-translation-management.html)
@@ -58,14 +57,13 @@ Följande översättningsleverantörer tillhandahåller en implementering av det
 >
 
 
-
 När du har installerat ett anslutningspaket kan du skapa en molnkonfiguration för anslutaren. Vanligtvis måste du ange dina autentiseringsuppgifter för autentisering med översättningstjänsten. Mer information om hur du lägger till en molnkonfiguration för Microsoft Translator-anslutningen finns i [Integrera med Microsoft Translator](/help/sites-administering/tc-msconf.md).
 
 Du kan skapa flera molnkonfigurationer för samma anslutning om det behövs. Skapa till exempel en konfiguration för varje konto eller projekt som du har med samma leverantör.
 
 När du har konfigurerat en anslutning kan du skapa den konfiguration av översättningsintegreringsramverket som använder den.
 
-## Skapar en konfiguration för översättningsintegrering {#creating-a-translation-integration-configuration}
+## Skapa en konfiguration för översättningsintegrering {#creating-a-translation-integration-configuration}
 
 Skapa en konfiguration för ramverk för översättningsintegrering som anger hur ditt innehåll ska översättas. Konfigurationen innehåller följande information:
 
@@ -131,7 +129,7 @@ Webbplatsegenskaperna styr hur översättning av sidinnehåll utförs.
  </tbody> 
 </table>
 
-### Egenskaper för webbgruppskonfiguration {#communities-configuration-properties}
+### Egenskaper för webbkonfiguration {#communities-configuration-properties}
 
 Communities-egenskaper styr hur översättning av användargenererat innehåll utförs. Översättningen av användargenererat innehåll använder alltid maskinöversättning. Mer information finns i [Översätta användargenererat innehåll](/help/communities/translate-ugc.md).
 
@@ -196,7 +194,7 @@ Resursegenskaperna styr hur resurser konfigureras. Mer information om översätt
 1. Ange ett namn för konfigurationen och klicka eller tryck sedan på Skapa.
 1. Konfigurera egenskaperna på fliken Platser, Communities och Assets och klicka sedan på OK.
 
-## Konfigurerar sidor för översättning {#configuring-pages-for-translation}
+## Konfigurera sidor för översättning {#configuring-pages-for-translation}
 
 Om du vill konfigurera översättning av källsidor till andra språk associerar du sidorna med följande molnkonfigurationer:
 
@@ -211,7 +209,7 @@ Vid behov kan du åsidosätta associationen på en underordnad sida. Innehållet
 
 Dessutom, för alla communities [SCF-komponenter](/help/communities/scf.md) på sidorna, kommer det användargenererade innehållet (UGC) att innehålla möjligheten för användare att översätta innehåll. Mer information finns i [Översättning av användargenererat innehåll](/help/communities/translate-ugc.md).
 
-### Koppla en sida till en översättningsprovider {#associating-a-page-with-a-translation-provider}
+### Koppla en sida till en översättningsleverantör {#associating-a-page-with-a-translation-provider}
 
 Koppla en sida till översättningsleverantören som du använder för att översätta sidan och underordnade sidor.
 
@@ -220,7 +218,7 @@ Koppla en sida till översättningsleverantören som du använder för att över
 1. Klicka eller tryck på Add Configuration (Lägg till konfiguration) > Translation Integration (Översättningsintegrering).
 1. Välj den översättningsleverantör som ska användas och klicka eller tryck sedan på Klar.
 
-### Associera sidor med ett Translation Integration Framework {#associating-pages-with-a-translation-integration-framework}
+### Associera sidor med ett översättningsintegreringsramverk {#associating-pages-with-a-translation-integration-framework}
 
 Koppla en sida till översättningsintegreringsramverket som definierar hur du vill översätta sidan och underordnade sidor.
 
@@ -228,4 +226,3 @@ Koppla en sida till översättningsintegreringsramverket som definierar hur du v
 1. Klicka eller tryck på Redigera och sedan på fliken Cloud Services.
 1. Klicka eller tryck på Add Configuration (Lägg till konfiguration) > Translation Integration (Översättningsintegrering).
 1. Markera det översättningsintegreringsramverk som ska användas och klicka eller tryck sedan på Klar.
-
