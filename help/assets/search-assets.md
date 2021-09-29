@@ -1,20 +1,20 @@
 ---
 title: Sök efter resurser i AEM
-description: Lär dig hur du söker efter nödvändiga resurser i AEM genom att använda panelen Filter och hur du använder de resurser som visas i sökningen.
+description: Lär dig hur du söker efter de nödvändiga resurserna i [!DNL Experience Manager] genom att använda panelen Filter och hur du använder de resurser som visas i sökningen.
 contentOwner: AG
-feature: Sök,Metadata
+feature: Search,Metadata
 role: User
 exl-id: cc1a5946-e13d-4433-a25a-d297fd07e2e4
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '547'
 ht-degree: 1%
 
 ---
 
-# Sök efter resurser i AEM {#search-assets-in-aem}
+# Sök efter resurser i [!DNL Experience Manager] {#search-assets-in-aem}
 
-Lär dig hur du söker efter nödvändiga resurser i AEM genom att använda panelen Filter och hur du använder de resurser som visas i sökningen.
+Lär dig hur du söker efter de nödvändiga resurserna i [!DNL Experience Manager] med hjälp av panelen Filter och hur du använder de resurser som visas i sökningen.
 
 Använd panelen Filter för att söka efter resurser, mappar, taggar och metadata. Du kan söka efter delar av en sträng med hjälp av asterisk med jokertecken.
 

@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management,Asset Distribution
 role: User
 exl-id: bfe4d597-1080-4de5-a100-73a5175863d7
-source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
+source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '783'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar
 
 Så här hämtar du resurser:
 
-1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **[!UICONTROL Navigation]** i den vänstra listen.
+1. I det övre vänstra hörnet av AEM trycker du på logotypen [!DNL Experience Manager] och sedan på **[!UICONTROL Navigation]** i den vänstra listen.
 1. På navigeringssidan trycker du på **[!UICONTROL Assets]** > **[!UICONTROL Files.]**
 1. Navigera till en mapp som innehåller resurser som du vill hämta.
 1. Markera mappen eller välj en eller flera resurser i mappen.

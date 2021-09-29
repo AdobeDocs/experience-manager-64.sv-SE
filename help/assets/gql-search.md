@@ -1,20 +1,20 @@
 ---
 title: Fulltextsökning i GQL
-description: Utforska fulltextsökningsfunktionen i GQL i AEM Assets. Använd det för att söka efter resurser baserat på specifika metadata, som titel, beskrivning och författarnamn.
+description: Utforska fulltextsökningsfunktionen i  [!DNL Experience Manager] Assets. Använd det för att söka efter resurser baserat på specifika metadata, som titel, beskrivning och författarnamn.
 contentOwner: AG
-feature: Sök,Metadata
+feature: Search,Metadata
 role: User
 exl-id: e819501c-4ac3-447f-944c-67adc42e8c61
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
 
 # Fulltextsökning i GQL {#gql-full-text-search}
 
-Utforska fulltextsökningsfunktionen i GQL i AEM Assets. Använd det för att söka efter resurser baserat på specifika metadata, som titel, beskrivning och författarnamn.
+Utforska fulltextsökningsfunktionen i [!DNL Experience Manager] Assets. Använd det för att söka efter resurser baserat på specifika metadata, som titel, beskrivning och författarnamn.
 
 Med fulltextsökningsfunktionen i GQL kan du söka efter resurser baserat på specifika metadata, som titel, beskrivning, författare och så vidare.
 
@@ -38,7 +38,7 @@ Om du till exempel vill söka efter resurser som har titeln &quot;Mål&quot; utf
 
    ![gql_search](assets/gql_search.png)
 
-1. Tryck på **[!UICONTROL Enter]**. AEM Assets användargränssnitt visar endast de resurser vars namn exakt matchar&quot;Target&quot;.
+1. Tryck på **[!UICONTROL Enter]**. [!DNL Assets]-användargränssnittet visar endast resurser vars titel exakt matchar &quot;Target&quot;.
 
 Med fulltextsökningsfunktionen i GQL kan du söka efter resurser baserat på följande:
 
@@ -112,7 +112,6 @@ title:&quot;Meeting&quot;;
 >Egenskapernas sökväg, gräns, storlek och sorteringsordning kan inte vara ELLERed med någon annan egenskap.
 >
 >Nyckelordet för en användargenererad egenskap är dess fältetikett i egenskapsredigeraren i gemener, med borttagna blanksteg.
-
 
 >[!NOTE]
 >

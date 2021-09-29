@@ -1,8 +1,8 @@
 ---
 title: Skapa översättningsprojekt för innehållsfragment
-seo-title: Skapa översättningsprojekt för innehållsfragment
+seo-title: Creating Translation Projects for Content Fragments
 description: Lär dig hur du översätter innehållsfragment.
-seo-description: Lär dig hur du översätter innehållsfragment.
+seo-description: Learn how to translate content fragments.
 uuid: 23176e70-4003-453c-af25-6499a5ed3f6d
 contentOwner: heimoz
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,11 +10,11 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: d2decc31-a04b-4a8e-bb19-65f21cf7107e
 exl-id: 4b9fd241-82db-466e-95bd-6d212717801d
-feature: Innehållsfragment
+feature: Content Fragments
 role: User
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '910'
 ht-degree: 3%
 
 ---
@@ -54,13 +54,13 @@ Du kan också skapa tillfälliga språkkopior för fragment som liknar det sätt
 
 ## Översätta blandade mediefragment {#translating-mixed-media-fragments}
 
-Med AEM kan du översätta innehållsfragment som innehåller olika typer av medieresurser och samlingar. Om du översätter ett innehållsfragment som innehåller textbundna resurser lagras de översatta kopiorna av dessa resurser under målspråkets rot.
+[!DNL Experience Manager] Med kan du översätta innehållsfragment som innehåller olika typer av medieresurser och samlingar. Om du översätter ett innehållsfragment som innehåller textbundna resurser lagras de översatta kopiorna av dessa resurser under målspråkets rot.
 
 Om innehållsfragmentet innehåller en samling, översätts resurserna i samlingen tillsammans med innehållsfragmentet. De översatta kopiorna av resurserna lagras i rätt målspråksrot på en plats som matchar den fysiska platsen för källresurserna under källspråkets rot.
 
 Om du vill kunna översätta innehållsfragment som innehåller blandade media måste du först redigera standardöversättningsramverket för att aktivera översättning av textbundna resurser och samlingar som är kopplade till innehållsfragment.
 
-1. Klicka/tryck på AEM logotyp och navigera till **[!UICONTROL Tools > Deployment > Cloud Services]**.
+1. Klicka/tryck på [!DNL Experience Manager]-logotypen och navigera till **[!UICONTROL Tools > Deployment > Cloud Services]**.
 1. Gå till **[!UICONTROL Translation Integration]** under **[!UICONTROL Adobe Marketing Cloud]** och klicka/tryck på **[!UICONTROL Show Configurations]**.
 
    ![chlimage_1-444](assets/chlimage_1-444.png)

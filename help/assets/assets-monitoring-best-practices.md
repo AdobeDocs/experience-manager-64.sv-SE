@@ -1,20 +1,20 @@
 ---
 title: Metodtips för resursövervakning
-description: Bästa tillvägagångssätt för att övervaka miljön och prestanda för AEM efter att den har distribuerats.
+description: Bästa tillvägagångssätt för att övervaka miljön och prestanda för din [!DNL Experience Manager] instans efter att den har distribuerats.
 contentOwner: AG
-feature: Resurshantering
+feature: Asset Management
 role: Admin,Architect
 exl-id: edbb275a-5ead-4ed2-8708-29e766081d75
-source-git-commit: 4048c4c76a892e3bb32dbbeef140b5dc9ebffad3
+source-git-commit: cc6de21180c9fff74f7d64067db82f0c11ac9333
 workflow-type: tm+mt
-source-wordcount: '1766'
+source-wordcount: '1745'
 ht-degree: 0%
 
 ---
 
 # Metodtips för resursövervakning {#assets-monitoring-best-practices}
 
-Från Adobe Experience Manager (AEM) Assets-synvinkel bör övervakningen omfatta övervakning och rapportering av följande processer och tekniker:
+Från Adobe Experience Manager Assets-synpunkt bör övervakningen omfatta övervakning och rapportering av följande processer och tekniker:
 
 * Systemprocessor
 * Systemminnesanvändning
@@ -27,7 +27,7 @@ Från Adobe Experience Manager (AEM) Assets-synvinkel bör övervakningen omfatt
 
 * OSGi-konsolens hälsokontroller
 
-Vanligtvis kan AEM Assets övervakas på två sätt: live-övervakning och långsiktig övervakning.
+Vanligtvis kan [!DNL Assets] övervakas på två sätt: live-övervakning och långtidsövervakning.
 
 ## Live-övervakning {#live-monitoring}
 
@@ -42,10 +42,10 @@ Du bör utföra direktövervakning under prestandatestningsfasen av din utveckli
 * [Iftop](https://www.ex-parrot.com/pdw/iftop/): Iftop visar detaljerad information om Ethernet-/nätverksanvändning. Om Iftop visar statistik per kommunikationskanal för de enheter som använder Ethernet och den bandbredd de använder. Iftop kan installeras på de flesta Linux-system med `yum install iftop` eller `apt-get install iftop`.
 
 * Java Flight Recorder (JFR): Ett kommersiellt verktyg från Oracle som du kan använda fritt i icke-produktionsmiljöer. Mer information finns i [Så här använder du Java Flight Recorder för att diagnostisera CQ-körningsproblem](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq).
-* AEM error.log-fil: Du kan undersöka filen AEM error.log om du vill ha mer information om fel som har loggats i systemet. Använd kommandot `tail -F quickstart/logs/error.log` för att identifiera fel som du bör undersöka.
+* [!DNL Experience Manager] error.log-fil: Du kan undersöka filen  [!DNL Experience Manager] error.log om du vill ha mer information om fel som har loggats i systemet. Använd kommandot `tail -F quickstart/logs/error.log` för att identifiera fel som du bör undersöka.
 * [Arbetsflödeskonsol](../sites-administering/workflows.md): Utnyttja arbetsflödeskonsolen för att övervaka arbetsflöden som släpar efter eller fastnar.
 
-Vanligtvis använder du de här verktygen tillsammans för att få en heltäckande bild av hur AEM fungerar.
+Vanligtvis använder du de här verktygen tillsammans för att få en heltäckande bild av hur din [!DNL Experience Manager]-instans fungerar.
 
 >[!NOTE]
 >
@@ -55,11 +55,11 @@ Vanligtvis använder du de här verktygen tillsammans för att få en heltäckan
 
 ## Övervakning på lång sikt {#long-term-monitoring}
 
-Långsiktig övervakning av en AEM-instans innebär övervakning under en längre tid av samma delar som övervakas live. Det innehåller även definitioner av varningar som är specifika för din miljö.
+Långsiktig övervakning av en [!DNL Experience Manager]-instans innebär övervakning under en längre tid av samma delar som övervakas live. Det innehåller även definitioner av varningar som är specifika för din miljö.
 
 ### Loggaggning och rapportering {#log-aggregation-and-reporting}
 
-Det finns flera verktyg tillgängliga för att samla loggar, till exempel Splunk(TM) och Elastic Search/Logstash/Kabana (ELK). Om du vill utvärdera drifttiden för AEM är det viktigt att du förstår logghändelser som är specifika för ditt system och skapar varningar baserade på dem. En god kunskap om dina utvecklings- och operationsrutiner kan hjälpa dig att bättre förstå hur du kan trimma loggsammanställningsprocessen för att generera kritiska varningar.
+Det finns flera verktyg tillgängliga för att samla loggar, till exempel Splunk(TM) och Elastic Search/Logstash/Kabana (ELK). Om du vill utvärdera drifttiden för din [!DNL Experience Manager]-instans är det viktigt att du förstår logghändelser som är specifika för ditt system och skapar varningar som baseras på dem. En god kunskap om dina utvecklings- och operationsrutiner kan hjälpa dig att bättre förstå hur du kan trimma loggsammanställningsprocessen för att generera kritiska varningar.
 
 ### Miljöövervakning {#environment-monitoring}
 
@@ -76,7 +76,7 @@ Du behöver externa verktyg, som NewRelic(TM) och AppDynamics(TM), för att kunn
 
 #### Intern programövervakning {#internal-application-monitoring}
 
-Intern programövervakning omfattar övervakning av de programkomponenter som utgör AEM, inklusive JVM, innehållsdatabasen och övervakning via anpassad programkod som är byggd på plattformen. I allmänhet genomförs det via JMX Mbeans, som kan övervakas direkt av många populära övervakningslösningar, till exempel SolarWinds (TM), HP OpenView(TM), Hyperic(TM), Zabbix(TM) och andra. För system som inte har stöd för en direkt anslutning till JMX kan du skriva gränssnittsskript för att extrahera JMX-data och exponera dem för dessa system i ett format som de själva förstår.
+Intern programövervakning omfattar övervakning av de programkomponenter som utgör [!DNL Experience Manager]-stacken, inklusive JVM, innehållsdatabasen och övervakning via anpassad programkod som är byggd på plattformen. I allmänhet genomförs det via JMX Mbeans, som kan övervakas direkt av många populära övervakningslösningar, till exempel SolarWinds (TM), HP OpenView(TM), Hyperic(TM), Zabbix(TM) och andra. För system som inte har stöd för en direkt anslutning till JMX kan du skriva gränssnittsskript för att extrahera JMX-data och exponera dem för dessa system i ett format som de själva förstår.
 
 Fjärråtkomst till JMX Mbeans är inte aktiverat som standard. Mer information om övervakning via JMX finns i [Övervakning och hantering med JMX-teknik](https://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html).
 
@@ -84,7 +84,7 @@ I många fall krävs en baslinje för att effektivt kunna övervaka en statistik
 
 **JVM-övervakning**
 
-Precis som med alla Java-baserade programstackar är AEM beroende av vilka resurser som tillhandahålls via den underliggande Java Virtual Machine. Du kan övervaka status för många av dessa resurser via plattforms-MXBeans som exponeras av JVM. Mer information om MXBeans finns i [Använda Platform MBean Server och Platform MXBeans](https://docs.oracle.com/javase/7/docs/technotes/guides/management/mxbeans.html).
+Precis som för alla Java-baserade programstackar är [!DNL Experience Manager] beroende av vilka resurser som finns tillgängliga via den underliggande Java Virtual Machine. Du kan övervaka status för många av dessa resurser via plattforms-MXBeans som exponeras av JVM. Mer information om MXBeans finns i [Använda Platform MBean Server och Platform MXBeans](https://docs.oracle.com/javase/7/docs/technotes/guides/management/mxbeans.html).
 
 Här följer några baslinjeparametrar som du kan övervaka för JVM:
 
@@ -106,11 +106,11 @@ Trådar
 * Larm threshold: När antalet trådar är större än 150 % av baslinjen.
 * Larm-definition: Antingen finns det en aktiv runaway-process, eller så använder en ineffektiv åtgärd en stor mängd resurser. Analysera en tråddump för att komma fram till en definition.
 
-**AEM**
+**[!DNL Experience Manager]övervakning**
 
-AEM visar också en uppsättning statistik och åtgärder via JMX. Dessa kan hjälpa till att utvärdera systemets hälsa och identifiera potentiella problem innan de påverkar användarna. Mer information finns i [dokumentationen](/help/sites-administering/jmx-console.md) AEM JMX MBeans.
+[!DNL Experience Manager] visar också en uppsättning statistik och åtgärder via JMX. Dessa kan hjälpa till att utvärdera systemets hälsa och identifiera potentiella problem innan de påverkar användarna. Mer information finns i [dokumentationen](/help/sites-administering/jmx-console.md) för [!DNL Experience Manager] JMX MBeans.
 
-Här följer några baslinjepametrar som du kan övervaka för AEM:
+Här är några baslinjeparametrar som du kan övervaka för [!DNL Experience Manager]:
 
 Replikeringsagenter
 
@@ -187,13 +187,13 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
 
 ## Vanliga problem och lösningar  {#common-issues-and-resolutions}
 
-Om du råkar ut för problem i samband med övervakningen finns det några felsökningsuppgifter som du kan utföra för att lösa vanliga problem med AEM instanser:
+Om du råkar ut för problem i samband med övervakningen finns det några felsökningsuppgifter som du kan utföra för att lösa vanliga problem med [!DNL Experience Manager]-instanser:
 
 * Om du använder tarMK ska du köra Tjärkomprimering ofta. Mer information finns i [Underhålla databasen](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
 * Kontrollera `OutOfMemoryError`-loggar. Mer information finns i [Analysera minnesproblem](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html).
 * Kontrollera loggarna om det finns referenser till oindexerade frågor, trädgenomgångar eller indexgenomgångar. Dessa indikerar oindexerade frågor eller otillräckligt indexerade frågor. Mer information om hur du optimerar fråga- och indexeringsprestanda finns i [Bästa metoder för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 * Använd arbetsflödeskonsolen för att verifiera att arbetsflödena fungerar som förväntat. Om det är möjligt kan du komprimera flera arbetsflöden till ett enda arbetsflöde.
 * Läs om live-övervakning och leta efter fler flaskhalsar eller konsumenter av specifika resurser.
-* Undersök ingångspunkterna från klientnätverket och ingångspunkterna till AEM instansnätverk, inklusive dispatchern. Det är ofta flaskhalsar. Mer information finns i [Resursnätverkshänsyn](assets-network-considerations.md).
-* Ändra storlek på AEM. Du kan ha en otillräckligt stor AEM. Adobe kundtjänst kan hjälpa dig att identifiera om din server är för liten.
+* Undersök ingångspunkterna från klientnätverket och ingångspunkterna till instansnätverket [!DNL Experience Manager], inklusive dispatchern. Det är ofta flaskhalsar. Mer information finns i [Resursnätverkshänsyn](assets-network-considerations.md).
+* Ändra storlek på din [!DNL Experience Manager]-server. Du kan ha en otillräckligt stor [!DNL Experience Manager]-instans. Adobe kundtjänst kan hjälpa dig att identifiera om din server är för liten.
 * Undersök `access.log`- och `error.log`-filerna för att se om det finns poster runt tiden när något gick fel. Leta efter mönster som kan indikera anpassade kodavvikelser. Lägg till dem i listan med händelser som du övervakar.

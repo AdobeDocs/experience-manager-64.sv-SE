@@ -1,22 +1,22 @@
 ---
-title: Filformat som stöds i AEM Assets
-description: Lista över filformat och MIME-typer som stöds av AEM Assets och de funktioner som stöds för varje format.
+title: Filformat som stöds i [!DNL Experience Manager] Resurser
+description: Lista över filformat och MIME-typer som stöds av Assets och de funktioner som stöds för varje format.
 contentOwner: AG
-feature: Resurshantering,Återgivningar
+feature: Asset Management,Renditions
 role: User,Admin
 exl-id: ee25fe8f-36fb-42b3-9f90-0ea77bc02e2f
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: cc6de21180c9fff74f7d64067db82f0c11ac9333
 workflow-type: tm+mt
-source-wordcount: '1641'
+source-wordcount: '1625'
 ht-degree: 2%
 
 ---
 
-# Filformat som stöds i AEM Assets {#assets-supported-formats}
+# Filformat som stöds i [!DNL Adobe Experience Manager Assets] {#assets-supported-formats}
 
-AEM Assets har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika MIME-typer.
+[!DNL Experience Manager Assets] har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika MIME-typer.
 
-Om du vill integrera AEM Assets med andra standardbaserade DAM-lösningar och datorprogram använder du Adobe Extensible Metadata Platform (XMP).
+Om du vill integrera [!DNL Assets] med andra standardkompatibla DAM-lösningar (Digital Asset Management) och datorprogramvara använder du Adobe Extensible Metadata Platform (XMP).
 
 Använd teckenförklaringen för att förstå supportnivån.
 
@@ -111,7 +111,7 @@ Se [Bildkonverteringsbibliotek](imaging-transcoding-library.md).
 
 ## Camera Raw {#supported-camera-raw}
 
-Med Adobe Camera Raw-biblioteket kan AEM Assets importera råbilder. Se [Camera Raw Support](camera-raw.md).
+Med Adobe Camera Raw-biblioteket kan [!DNL Assets] importera råbilder. Se [Camera Raw Support](camera-raw.md).
 
 ## Dokumentformat {#supported-document-formats}
 
@@ -244,7 +244,7 @@ Hur vanliga DAM-arbetsflöden kan användas för ett par andra filformat beskriv
 
 ## MIME-typer som stöds {#supported-mime-types}
 
-Som standard identifierar AEM filtypen med hjälp av filtillägget. AEM kan identifiera det från filernas innehåll. För det senare alternativet väljer du [!UICONTROL Detect MIME from content] i [!UICONTROL Day CQ DAM Mime Type Service] i AEM webbkonsol.
+Som standard identifierar [!DNL Experience Manager] filtypen med hjälp av filtillägget. [!DNL Experience Manager] kan identifiera det från innehållet i filerna. För det senare alternativet väljer du [!UICONTROL Detect MIME from content] i [!UICONTROL Day CQ DAM Mime Type Service] på webbkonsolen [!DNL Experience Manager].
 
 En lista över MIME-typer som stöds finns i CRXDE Lite på `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`.
 

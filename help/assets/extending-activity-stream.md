@@ -1,25 +1,24 @@
 ---
 title: Integrera resurser med aktivitetsström
-description: Beskriver inspelningsfunktionerna i AEM och hur du konfigurerar AEM för att spela in specifika händelser.
+description: Beskriver inspelningsfunktionerna i [!DNL Experience Manager] and how to configure [!DNL Experience Manager] för att spela in specifika händelser.
 contentOwner: AG
 feature: Asset Management
 role: Developer
-translation-type: tm+mt
-source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
+exl-id: c25a4da7-1c58-41cf-9ff6-c094b50208e6
+source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '254'
 ht-degree: 1%
 
 ---
 
+# Integrera resurser med aktivitetsström {#integrating-assets-with-activity-stream}
 
-# Integrera resurser med aktivitetsströmmen {#integrating-assets-with-activity-stream}
-
-Adobe Experience Manager (AEM) Assets-användare utför många åtgärder, till exempel att skapa, överföra och ta bort resurser. Dessa åtgärder kan spelas in så att du kan ge en historik över vad en användare har gjort. I det här avsnittet beskrivs inspelningsfunktionerna i AEM och hur du konfigurerar AEM för att spela in specifika händelser.
+Adobe Experience Manager Assets-användare utför många åtgärder, till exempel att skapa, överföra och ta bort resurser. Dessa åtgärder kan spelas in så att du kan ge en historik över vad en användare har gjort. I det här avsnittet beskrivs inspelningsfunktionerna i [!DNL Experience Manager] och hur du konfigurerar [!DNL Experience Manager] för att spela in specifika händelser.
 
 ## Prestandaöverväganden och standardbeteende {#performance-considerations-and-default-behavior}
 
-Den här integreringen kan ta processorkraft och diskutrymme, t.ex. vid bulkimport. Därför är AEM Assets-integreringen med aktivitetsströmmen inaktiverad som standard.
+Den här integreringen kan ta processorkraft och diskutrymme, t.ex. vid bulkimport. Därför är [!DNL Experience Manager]-resursintegreringen med aktivitetsströmmen inaktiverad som standard.
 
 ## Åtgärdshändelser som stöds {#supported-action-events}
 
@@ -41,9 +40,9 @@ Följande händelser kan konfigureras för inspelning:
 * Undertillgången har uppdaterats (SUBASSET_UPDATED)
 * Deltillgång borttagen (SUBASSET_REMOVED)
 
-## Konfigurerar inspelning av AEM Assets-händelser {#configuring-aem-assets-events-recording}
+## Konfigurerar [!DNL Assets]-händelseinspelning {#configuring-aem-assets-events-recording}
 
-[Webbkonsolen](/help/sites-deploying/configuring-osgi.md) ger åtkomst till AEM Assets Event Recorder-justering. Så här konfigurerar du AEM Assets Event Recorder:
+[Webbkonsolen](/help/sites-deploying/configuring-osgi.md) ger åtkomst till [!DNL Assets]-inställningarna för händelseinspelning. Så här konfigurerar du [!DNL Assets]-händelseinspelaren:
 
 1. Navigera till **[!UICONTROL Web console]**
 
@@ -57,6 +56,6 @@ Följande händelser kan konfigureras för inspelning:
 
 1. Klicka på **[!UICONTROL Save]**.
 
-## Läser registrerade händelser {#reading-recorded-events}
+## Läsa inspelade händelser {#reading-recorded-events}
 
 De registrerade händelserna lagras som aktiviteter. Du kan läsa dem programmatiskt med hjälp av [ActivityManager API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ActivityManager.html).

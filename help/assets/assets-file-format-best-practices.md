@@ -1,20 +1,20 @@
 ---
 title: Bästa metoder för att använda filformat
-description: Bästa tillvägagångssätt för filstöd i AEM Assets.
+description: Metodtips för filstöd i [!DNL Experience Manager] Resurser.
 contentOwner: AG
-feature: Resurshantering,Utvecklarverktyg
+feature: Asset Management,Developer Tools
 role: Admin
 exl-id: ff739a17-188e-4779-8820-9e4d9b7031d0
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '424'
 ht-degree: 0%
 
 ---
 
 # Bästa metoder för att använda filformat {#assets-file-format-best-practices}
 
-AEM Assets har stöd för många egna bibliotek och bibliotek för tredjepartsfilformat som tillgodoser olika krav från användarna. Bland de Adobe-bibliotek som stöds finns Adobe Camera Raw, Gibson, Adobe PDF Rasterizer och Adobe InDesign Server. Dessutom har AEM Assets stöd för bibliotek från tredje part, inklusive ImageMagick, TwelveMonkeys och så vidare.
+[!DNL Experience Manager Assets] har stöd för många egna och tredjepartsbibliotek för filformat för att tillgodose användarnas olika krav på filstöd. Bland de Adobe-bibliotek som stöds finns Adobe Camera Raw, Gibson, Adobe PDF Rasterizer och Adobe InDesign Server. Dessutom stöder [!DNL Assets] bibliotek från tredje part, inklusive ImageMagick, TwelveMonkeys och så vidare.
 
 Information om vilka filformat som stöds finns i [Format för resurser som stöds](assets-formats.md).
 
@@ -27,7 +27,7 @@ För optimala prestanda rekommenderar Adobe att du använder Adobe Camera Raw-bi
 
 Adobe Camera Raw-biblioteket stöder CMYK-färgprofil som indata. Däremot genereras utdata i RGB-färgrymd och endast JPEG-format stöds. Källfilens färgrymd (till exempel CMYK) behålls inte i miniatyrbilderna.
 
-Mer information finns i [Camera Raw support](camera-raw.md) i AEM Assets.
+Mer information finns i [Camera Raw stöd](camera-raw.md) i [!DNL Assets].
 
 ## Adobe PDF Rasterizer-bibliotek {#adobe-pdf-rasterizer-library}
 
@@ -41,7 +41,7 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
 
 ## Adobe InDesign-server {#adobe-indesign-cc-server}
 
-Adobe rekommenderar att du använder Adobe InDesign server för att extrahera Adobe InDesign-specifika återgivningar som IDML och HTML. Mer information finns i [Lägga till AEM resurser som referenser i Adobe InDesign](managing-linked-subassets.md#add-aem-assets-as-references-in-adobe-indesign).
+Adobe rekommenderar att du använder Adobe InDesign server för att extrahera Adobe InDesign-specifika återgivningar som IDML och HTML. Mer information finns i [Lägga till [!DNL Experience Manager] resurser som referenser i Adobe InDesign](managing-linked-subassets.md#add-aem-assets-as-references-in-adobe-indesign).
 
 ## Dynamic Media  {#dynamic-media}
 
@@ -58,7 +58,7 @@ Adobe rekommenderar att du använder ImageMagick-biblioteket i följande scenari
 * Bevara genomskinlighet
 * Bearbeta PSD- och PSB-filer
 
-Mer information om hur du konfigurerar ImageMagic-biblioteket i AEM finns i [Använda ImageMagick](media-handlers.md#an-example-using-imagemagick). Mer information finns i [Bästa metoder för att konfigurera ImageMagick](best-practices-for-imagemagick.md).
+Mer information om hur du konfigurerar ImageMagic-biblioteket i [!DNL Experience Manager] finns i [Använda ImageMagick](media-handlers.md#an-example-using-imagemagick). Mer information finns i [Bästa metoder för att konfigurera ImageMagick](best-practices-for-imagemagick.md).
 
 ## Bildomkodningsbibliotek {#image-transcoding-library}
 
@@ -74,4 +74,4 @@ Bildkodningsbiblioteket stöder följande MIME-typer:
 * ICO
 * ICN
 
-Mer information finns i [Bildkonverteringsbibliotek](imaging-transcoding-library.md).
+Mer information finns i [Imaging Transcoding Library](imaging-transcoding-library.md).

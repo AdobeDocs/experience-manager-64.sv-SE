@@ -3,12 +3,12 @@ title: Hantera resurssamlingar
 description: Lär dig mer om hur du hanterar samlingar med resurser, som att skapa, visa, ta bort, redigera och hämta samlingar.
 contentOwner: AG
 mini-toc-levels: 1
-feature: Samlingar
+feature: Collections
 role: User
 exl-id: cadfc569-5725-4012-9f73-864243ba7743
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
 workflow-type: tm+mt
-source-wordcount: '2178'
+source-wordcount: '2175'
 ht-degree: 13%
 
 ---
@@ -195,7 +195,7 @@ Om du vill anpassa sidan med metadata [!UICONTROL Properties], inklusive lägga 
 
 ## Sök i samlingar {#searching-collections}
 
-Du kan söka efter samlingar från samlingskonsolen. När du söker med nyckelord i rutan Sök söker AEM Assets efter samlingsnamn, metadata och de taggar som har lagts till i samlingarna.
+Du kan söka efter samlingar från samlingskonsolen. När du söker med nyckelord i sökrutan söker [!DNL Experience Manager] Resurser efter samlingsnamn, metadata och de taggar som har lagts till i samlingarna.
 
 Om du söker efter samlingar från den översta nivån returneras bara enskilda samlingar i sökresultaten. Resurser eller mappar i samlingarna exkluderas. I alla andra fall (till exempel i en enskild samling eller i en mapphierarki) returneras alla relevanta resurser, mappar och samlingar.
 
@@ -203,7 +203,7 @@ Om du söker efter samlingar från den översta nivån returneras bara enskilda 
 
 Tryck/klicka på en samling i Samlingar-konsolen för att öppna den.
 
-I en samling är AEM resurssökning begränsad till resurser (och deras taggar och metadata) i den samling som du visar. När du söker i en mapp returneras alla matchande resurser och underordnade mappar i den aktuella mappen. När du söker i en samling returneras endast matchande resurser, mappar och andra samlingar som är direktmedlemmar i samlingen.
+I en samling är sökningen begränsad till resurser (och deras taggar och metadata) i den samling som du visar. När du söker i en mapp returneras alla matchande resurser och underordnade mappar i den aktuella mappen. När du söker i en samling returneras endast matchande resurser, mappar och andra samlingar som är direktmedlemmar i samlingen.
 
 ## Redigera samlingsinställningar {#editing-collection-settings}
 
@@ -305,5 +305,5 @@ Du kan köra ett arbetsflöde för resurserna i en samling. Om samlingen innehå
 >[!MORELIKETHIS]
 >
 >* [Konfigurera e-postmeddelanden för Experience Manager Assets](/help/sites-administering/notification.md#assetsconfig)
-* [Skapa en granskningsuppgift för samlingar](bulk-approval.md)
+>* [Skapa en granskningsuppgift för samlingar](bulk-approval.md)
 

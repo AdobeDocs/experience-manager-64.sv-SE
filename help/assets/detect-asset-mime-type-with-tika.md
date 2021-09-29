@@ -1,20 +1,20 @@
 ---
 title: Använd Apache Tika för att identifiera MIME-typ av digitalt material
-description: Aktivera Apache Tika för att hjälpa AEM Assets att identifiera MIME-typen för resurser från innehållsströmmen under överföringen i stället för filtillägget.
+description: Aktivera Apache Tika för att hjälpa [!DNL Experience Manager] Resurser att identifiera MIME-typen för resurser från innehållsströmmen under överföringen i stället för filtillägget.
 contentOwner: AG
-feature: Metadata,Utvecklarverktyg,Resurshantering
+feature: Metadata,Developer Tools,Asset Management
 role: Admin,Architect
 exl-id: 6c9e53e9-5e54-4816-9431-41e796340d1e
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '182'
 ht-degree: 3%
 
 ---
 
 # Använd Apache Tika för att identifiera MIME-typ av digitalt material {#detecting-mime-type-of-assets-using-apache-tika}
 
-Vanligtvis identifierar Adobe Experience Manager (AEM) Assets MIME-typen för resurser som du överför från filtillägget. Om du använder Apache Tika för att överföra resurser, identifierar AEM Assets deras MIME-typ från innehållsströmmen under överföringen i stället för filtillägget.
+Vanligtvis identifierar Adobe Experience Manager Assets MIME-typen för resurser som du överför från filtillägget. Om du använder Apache Tika för att överföra resurser, identifierar [!DNL Experience Manager] Assets deras MIME-typ från innehållsströmmen under överföringen i stället för filtillägget.
 
 Den här funktionen är inaktiverad som standard. Om du vill aktivera funktionen konfigurerar du tjänsten **Day CQ DAM Mime Type** från Configuration Manager.
 

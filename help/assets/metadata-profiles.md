@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: a7b0f1d6-7deb-4565-8c7f-27cad7cd6bf8
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 19%
+source-wordcount: '1123'
+ht-degree: 18%
 
 ---
 
@@ -18,7 +18,7 @@ Med en metadataprofil kan du använda standardmetadata för resurser i en mapp. 
 
 ## Lägg till en metadataprofil {#adding-a-metadata-profile}
 
-1. Tryck eller klicka på AEM logotyp, navigera till **[!UICONTROL Tools > Assets > Metadata Profiles]** och tryck sedan på **[!UICONTROL Create]**.
+1. Tryck eller klicka på logotypen [!DNL Experience Manager], navigera till **[!UICONTROL Tools > Assets > Metadata Profiles]** och tryck sedan på **[!UICONTROL Create]**.
 1. Ange en rubrik för metadataprofilen, till exempel Exempelmetadata, och klicka på **[!UICONTROL Submit]**. **[!UICONTROL Edit Form]** för metadataprofilen visas.
 
    ![chlimage_1-480](assets/chlimage_1-480.png)
@@ -34,7 +34,7 @@ Med en metadataprofil kan du använda standardmetadata för resurser i en mapp. 
 
    ![chlimage_1-482](assets/chlimage_1-482.png)
 
-   Värdet som du anger för **[!UICONTROL Map to property]** lagras som en egenskap under objektets metadatanod. Om du till exempel anger . `/jcr:content/metadata/dc:desc` som namn på  **[!UICONTROL Map to property]** lagrar AEM Assets värdet  `dc:desc` på objektets metadatanod.
+   Värdet som du anger för **[!UICONTROL Map to property]** lagras som en egenskap under objektets metadatanod. Om du till exempel anger . `/jcr:content/metadata/dc:desc` som namn på  **[!UICONTROL Map to property]** lagrar  [!DNL Experience Manager] Resurser värdet  `dc:desc` på objektets metadatanod.
 
    * **[!UICONTROL Default Value]**: Använd den här egenskapen om du vill lägga till ett standardvärde för metadatakomponenten. Om du till exempel anger &quot;Min beskrivning&quot; tilldelas det här värdet till egenskapen `dc:desc` vid objektets metadatanod.
 
@@ -102,7 +102,7 @@ För mappar som redan har tilldelats en profil visas profilens namn direkt under
 
 #### Använda metadataprofiler på mappar från användargränssnittet för profiler {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
 
-1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools > Assets > Metadata Profiles]**.
+1. Tryck på [!DNL Experience Manager]-logotypen och navigera till **[!UICONTROL Tools > Assets > Metadata Profiles]**.
 1. Välj den metadataprofil som du vill använda för en eller flera mappar.
 
    ![chlimage_1-490](assets/chlimage_1-490.png)
@@ -122,7 +122,7 @@ För mappar som redan har tilldelats en profil visas profilens namn direkt under
 
 ### Använd en metadataprofil globalt {#applying-a-metadata-profile-globally}
 
-Förutom att tillämpa en profil på en mapp kan du även tillämpa en profil globalt så att allt innehåll som överförs till AEM resurser i en mapp har den valda profilen. Så här använder du en metadataprofil globalt:
+Förutom att tillämpa en profil på en mapp kan du även tillämpa en profil globalt så att allt innehåll som överförs till [!DNL Experience Manager]-resurser i en mapp har den valda profilen. Så här använder du en metadataprofil globalt:
 
 1. Gör något av följande:
 
@@ -144,7 +144,7 @@ Du kan ta bort en metadataprofil från en mapp från menyn **[!UICONTROL Tools]*
 
 Så här tar du bort en metadataprofil från mappar via användargränssnittet för profiler:
 
-1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools > Assets > Metadata Profiles]**.
+1. Tryck på [!DNL Experience Manager]-logotypen och navigera till **[!UICONTROL Tools > Assets > Metadata Profiles]**.
 1. Markera den metadataprofil som du vill ta bort från en eller flera mappar.
 1. Tryck på **[!UICONTROL Remove Metadata Profile from Folder(s)]** och markera den eller de mappar du vill ta bort en profil från och tryck sedan på **[!UICONTROL Done]**.
 
@@ -152,7 +152,7 @@ Så här tar du bort en metadataprofil från mappar via användargränssnittet f
 
 ### Ta bort metadataprofiler från mappar via Egenskaper {#removing-metadata-profiles-from-folders-via-properties}
 
-1. Tryck på AEM logotyp, navigera till **[!UICONTROL Assets]** och sedan till mappen som du vill ta bort en metadataprofil från.
+1. Tryck på [!DNL Experience Manager]-logotypen och navigera till **[!UICONTROL Assets]** och sedan till mappen som du vill ta bort en metadataprofil från.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
 1. Välj fliken **[!UICONTROL Metadata Profiles]** och välj sedan **[!UICONTROL None]** i listrutan. Tryck på **[!UICONTROL Save]**.
 

@@ -2,12 +2,12 @@
 title: Använd funktionen för resursinsikter för att spåra användningen av dina bilder
 description: Funktionen Assets Insights gör att du kan spåra användarbetyg och användningsstatistik för bilder som används på tredjepartswebbplatser, marknadsföringskampanjer och Adobe kreativa lösningar.
 contentOwner: AG
-feature: Resursinsikter,Resursrapporter
+feature: Asset Insights,Asset Reports
 role: User,Admin
 exl-id: a9604b09-1c83-4c1e-aff7-13107b898cb3
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '751'
 ht-degree: 2%
 
 ---
@@ -77,7 +77,7 @@ Du kan visa bakgrundsmusik för alla resurser i en mapp samtidigt med **[!UICONT
 
 Assets Insights hämtar användningsdata för resurser från Adobe Analytics rapportsviter regelbundet. Som standard kör Assets Insights ett bakgrundsjobb var 24:e timme kl. 2:00 för att hämta data. Du kan dock ändra både frekvens och tid genom att konfigurera tjänsten **[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]** från webbkonsolen.
 
-1. Tryck på AEM logotyp och gå till **[!UICONTROL Tools > Operations > Web Console]**.
+1. Tryck på logotypen [!DNL Experience Manager] och gå till **[!UICONTROL Tools > Operations > Web Console]**.
 1. Öppna tjänstkonfigurationen för **[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]**.
 
    ![chlimage_1-304](assets/chlimage_1-304.png)

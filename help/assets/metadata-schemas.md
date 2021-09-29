@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: 82f42bb3-2c01-407c-a41b-9abe7be4660e
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
 workflow-type: tm+mt
-source-wordcount: '2398'
-ht-degree: 9%
+source-wordcount: '2386'
+ht-degree: 8%
 
 ---
 
@@ -174,7 +174,7 @@ Klicka på `+` för att lägga till en ny flik i ett schemaformulär. Som standa
 
 ## Ta bort metadata-schemaformulär {#deleting-metadata-schema-forms}
 
-AEM låter dig endast ta bort anpassade schemaformulär. Du kan inte ta bort standardschemaformulär/-mallar. Du kan dock ta bort anpassade ändringar i dessa formulär.
+[!DNL Experience Manager] I kan du bara ta bort anpassade schemaformulär. Du kan inte ta bort standardschemaformulär/-mallar. Du kan dock ta bort anpassade ändringar i dessa formulär.
 
 Om du vill ta bort ett formulär markerar du det och klickar på ikonen **[!UICONTROL Delete]**.
 
@@ -184,11 +184,11 @@ Om du vill ta bort ett formulär markerar du det och klickar på ikonen **[!UICO
 
 >[!NOTE]
 >
->Du kan inte ta bort metadatamatchschemaformulär i AEM Assets.
+>Det går inte att ta bort metadata som inte ingår i schemaformulären i [!DNL Experience Manager] Resurser.
 
 ## Schemaformulär för MIME-typer {#schema-forms-for-mime-types}
 
-AEM Assets innehåller standardformulär för olika MIME-typer. Du kan dock lägga till anpassade formulär för resurser av olika MIME-typer.
+[!DNL Experience Manager] Resurser innehåller standardformulär för olika MIME-typer. Du kan dock lägga till anpassade formulär för resurser av olika MIME-typer.
 
 ### Lägg till nya formulär för MIME-typer {#adding-new-forms-for-mime-types}
 
@@ -205,7 +205,7 @@ I det här fallet skapar du en ny nod på `/etc/dam/metadataeditor/mimetypemappi
 | `exposedmimetype` | Namnet på det befintliga formulär som ska mappas | `String` | `image/jpeg` |
 | `mimetypes` | Lista över MIME-typer som använder formuläret som definierats i attributet `exposedmimetype` | `String` | `image/png` |
 
-AEM Assets mappar följande MIME-typer och schemaformulär:
+[!DNL Experience Manager] Resurser mappar följande MIME-typer och schemaformulär:
 
 | Schemaformulär | MIME-typer |
 |---|---|
@@ -227,7 +227,7 @@ Metadatchemafunktionen är bara tillgänglig för administratörer. Administrat�
 
 ## Använd mappspecifika metadata {#applying-folder-specific-metadata}
 
-Med AEM Assets kan du definiera en variant av ett metadataram och använda det på en viss mapp.
+[!DNL Experience Manager] Med Resurser kan du definiera en variant av ett metadataram och använda det på en viss mapp.
 
 Du kan t.ex. definiera en variant av standardmetadataschemat och använda det på en mapp. När du använder det ändrade schemat åsidosätter det det ursprungliga standardmetadatarammet som används för resurser i mappen.
 
@@ -239,7 +239,7 @@ Metadataarv av resurser baseras på det schema som tillämpas på mappen på fö
 
 Om mappen har en undermapp ärver resurserna i undermappen metadata från det schema som används på undermappsnivå om ett annat schema används på undermappsnivå. Om inget schema eller samma schema används på undermappsnivå ärver undermappsresurserna metadata från det schema som används på den överordnade mappnivån.
 
-1. Klicka på AEM-logotypen och navigera sedan till **[!UICONTROL Tools > Assets > Metadata Schemas]**. Sidan **[!UICONTROL Metadata Schema Forms]** visas.
+1. Klicka på logotypen [!DNL Experience Manager] och navigera sedan till **[!UICONTROL Tools > Assets > Metadata Schemas]**. Sidan **[!UICONTROL Metadata Schema Forms]** visas.
 1. Markera kryssrutan före ett formulär, till exempel standardformuläret för metadata, och klicka eller tryck på ikonen **[!UICONTROL Copy]** och spara det som ett anpassat formulär. Ange ett anpassat namn för formuläret, till exempel `my_default`. Du kan också skapa ett eget formulär.
 
    ![chlimage_1-184](assets/chlimage_1-184.png)
@@ -269,9 +269,9 @@ Du kan definiera obligatoriska fält på mappnivå, vilket tillämpas på resurs
 
 >[!NOTE]
 >
->Ett metadatafält kan definieras som obligatoriskt baserat på värdet i ett annat fält. I vyn Kort visar AEM inte varningsmeddelandet om att metadata saknas för sådana obligatoriska metadatafält.
+>Ett metadatafält kan definieras som obligatoriskt baserat på värdet i ett annat fält. I vyn Kort visar [!DNL Experience Manager] inte varningsmeddelandet om att metadata saknas för sådana obligatoriska metadatafält.
 
-1. Klicka på AEM-logotypen och navigera sedan till **[!UICONTROL Tools > Assets > Metadata Schemas]**. Sidan **[!UICONTROL Metadata Schema Forms]** visas.
+1. Klicka på logotypen [!DNL Experience Manager] och navigera sedan till **[!UICONTROL Tools > Assets > Metadata Schemas]**. Sidan **[!UICONTROL Metadata Schema Forms]** visas.
 1. Spara standardformuläret för metadata som ett anpassat formulär. Spara den till exempel som `my_default`.
 
    ![chlimage_1-189](assets/chlimage_1-189.png)
@@ -286,8 +286,8 @@ Du kan definiera obligatoriska fält på mappnivå, vilket tillämpas på resurs
 
    ![chlimage_1-192](assets/chlimage_1-192.png)
 
-1. (Valfritt) Åtkomst `http://[server]:[port]/system/console/components/`. Konfigurera och aktivera `com.day.cq.dam.core.impl.MissingMetadataNotificationJob`-komponenten som är inaktiverad som standard. Ange en frekvens med vilken AEM kontrollerar om metadata för resurserna är giltiga.
-Den här konfigurationen lägger till en egenskap `hasValidMetadata` i jcr:innehåll för resurser. Med den här egenskapen kan AEM filtrera resultatet i en sökning.
+1. (Valfritt) Åtkomst `http://[server]:[port]/system/console/components/`. Konfigurera och aktivera `com.day.cq.dam.core.impl.MissingMetadataNotificationJob`-komponenten som är inaktiverad som standard. Ange en frekvens med vilken [!DNL Experience Manager] kontrollerar om metadata för resurserna är giltiga.
+Den här konfigurationen lägger till en egenskap `hasValidMetadata` i jcr:innehåll för resurser. Med den här egenskapen kan [!DNL Experience Manager] filtrera resultaten i en sökning.
 
 >[!NOTE]
 >
@@ -295,4 +295,4 @@ Den här konfigurationen lägger till en egenskap `hasValidMetadata` i jcr:inneh
 
 >[!CAUTION]
 >
->Valideringskontrollerna av metadata är resurskrävande och kan påverka systemets prestanda. Schemalägg kontrollerna därefter. Om AEM har prestandaproblem kan du inaktivera det här jobbet.
+>Valideringskontrollerna av metadata är resurskrävande och kan påverka systemets prestanda. Schemalägg kontrollerna därefter. Om [!DNL Experience Manager]-distributionen har prestandaproblem kan du inaktivera det här jobbet.

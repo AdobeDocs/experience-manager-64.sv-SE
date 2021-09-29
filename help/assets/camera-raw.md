@@ -2,12 +2,12 @@
 title: Camera Raw stöd
 description: Lär dig hur du aktiverar Camera Raw support i Adobe Experience Manager Assets.
 contentOwner: AG
-feature: Utvecklarverktyg
+feature: Developer Tools
 role: Admin
 exl-id: 637c57ae-55a6-4032-9821-b55839b3e567
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '360'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,7 @@ Så här aktiverar du Camera Raw support i Adobe Experience Manager Assets:
 >
 >Kontrollera att ovanstående konfiguration är samma som **[!UICONTROL Sample DAM Update Asset With Camera RAW and DNG Handling Step]**-konfigurationen.
 
-Nu kan du importera Camera Raw-filer till AEM Assets. När du har installerat det Camera Raw paketet och konfigurerat arbetsflödet visas **[!UICONTROL Image Adjust]**-alternativet i listan med sidorutor.
+Nu kan du importera Camera Raw-filer till [!DNL Experience Manager]-resurser. När du har installerat det Camera Raw paketet och konfigurerat arbetsflödet visas **[!UICONTROL Image Adjust]**-alternativet i listan med sidorutor.
 
 ![chlimage_1-337](assets/chlimage_1-337.png)
 

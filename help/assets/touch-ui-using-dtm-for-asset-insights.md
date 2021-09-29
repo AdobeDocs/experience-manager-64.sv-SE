@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Asset Insights,Asset Reports
 role: User,Admin
 exl-id: d19cea4d-5395-479d-b303-4529ae2c0bf2
-source-git-commit: 2b3a6972d703314d56d3dc711fb6a514cb1942d5
+source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
 workflow-type: tm+mt
-source-wordcount: '624'
-ht-degree: 4%
+source-wordcount: '619'
+ht-degree: 1%
 
 ---
 
@@ -22,10 +22,10 @@ Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknads
 
 Utför dessa steg för att aktivera Assets Insights via DTM:
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Insights Configuration]**.
-1. [Konfigurera AEM med DTM-Cloud Service](../sites-administering/dtm.md)
+1. Tryck/klicka på logotypen [!DNL Experience Manager] och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Insights Configuration]**.
+1. [Konfigurera [!DNL Experience Manager] instans med DTM-Cloud Service](../sites-administering/dtm.md)
 
-   API-token bör vara tillgänglig när du har loggat in på [https://dtm.adobe.com](https://dtm.adobe.com/) och går till **[!UICONTROL Account Settings]** från profilikonen. Detta steg är inte nödvändigt från Assets Insights-synpunkt eftersom integrationen av AEM Sites med Assets Insights fortfarande pågår.
+   API-token bör vara tillgänglig när du har loggat in på [https://dtm.adobe.com](https://dtm.adobe.com/) och går till **[!UICONTROL Account Settings]** från profilikonen. Detta steg är inte nödvändigt från Assets Insights-synpunkt eftersom integreringen av [!DNL Experience Manager Sites] med Assets Insights fortfarande pågår.
 
 1. Logga in på [https://dtm.adobe.com](https://dtm.adobe.com/) och välj ett företag efter behov.
 1. Skapa/öppna en befintlig webbegenskap
@@ -43,7 +43,7 @@ Utför dessa steg för att aktivera Assets Insights via DTM:
 
    ![chlimage_1-195](assets/chlimage_1-195.png)
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Tools > Assets]**.
+1. Tryck/klicka på logotypen [!DNL Experience Manager] och gå till **[!UICONTROL Tools > Assets]**.
 1. Tryck/klicka på **[!UICONTROL Insights Page Tracker]**, kopiera spårningskoden och klistra sedan in den i skriptdialogrutan som du öppnade i steg 6. Spara ändringarna.
 
    >[!NOTE]

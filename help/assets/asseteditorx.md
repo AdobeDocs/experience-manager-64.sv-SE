@@ -2,12 +2,12 @@
 title: Utöka resursredigeraren
 description: Lär dig hur du utökar funktionerna i Resursredigeraren med hjälp av anpassade komponenter.
 contentOwner: AG
-feature: Utvecklarverktyg
+feature: Developer Tools
 role: User,Admin
 exl-id: 1e02a2f6-8194-46b9-b418-87103c3f4a69
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '691'
 ht-degree: 13%
 
 ---
@@ -18,7 +18,7 @@ Resursredigeraren är den sida som öppnas när användaren klickar på en resur
 
 Konfigurationen av redigeraren med de fördefinierade redigeringskomponenterna beskrivs i [Skapa och konfigurera en resursredigeringssida](assets-finder-editor.md#creating-and-configuring-an-asset-editor-page).
 
-Förutom att använda befintliga redigeringskomponenter kan Adobe Experience Manager (AEM)-utvecklare även skapa egna komponenter.
+Förutom att använda befintliga redigeringskomponenter kan Adobe Experience Manager-utvecklare även skapa egna komponenter.
 
 ## Skapa en resursredigeringsmall {#creating-an-asset-editor-template}
 
@@ -30,9 +30,9 @@ Följande exempelsidor finns i geometrixx:
 
 ### Konfigurerar Clientlib {#configuring-clientlib}
 
-AEM Assets-komponenter använder ett tillägg till klienten för WCM-redigering. Klientlibs läses vanligtvis in i `init.jsp`.
+[!DNL Experience Manager Assets] -komponenter använder ett tillägg till WCM-klienten för redigering. Klientlibs läses vanligtvis in i `init.jsp`.
 
-Jämfört med standardinläsningen av klientlib (i kärnans `init.jsp`) måste en AEM Assets-mall ha följande:
+Jämfört med standardinläsningen av klientlib (i kärnans `init.jsp`) måste en [!DNL Assets]-mall ha följande:
 
 * Mallen måste innehålla klientlib `cq.dam.edit` (i stället för `cq.wcm.edit`).
 
@@ -42,7 +42,7 @@ I de flesta fall bör kopiering av det befintliga exemplet `init.jsp` (`/apps/ge
 
 ### Konfigurera JS-åtgärder {#configuring-js-actions}
 
-Vissa av AEM Assets-komponenterna kräver JS-funktioner som definieras i `component.js`. Kopiera den här filen till komponentkatalogen och länka den.
+Vissa av [!DNL Assets]-komponenterna kräver JS-funktioner som definieras i `component.js`. Kopiera den här filen till komponentkatalogen och länka den.
 
 ```javascript
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
@@ -52,7 +52,7 @@ Exemplet läser in den här JavaScript-källan i `head.jsp`(`/apps/geometrixx/co
 
 ### Ytterligare formatmallar {#additional-style-sheets}
 
-Vissa av AEM Assets-komponenterna använder AEM widgetbibliotek. För att kunna återges korrekt i innehållskontexten måste ytterligare en formatmall läsas in. Kodåtgärdskomponenten kräver en till.
+Vissa [!DNL Assets]-komponenter använder widgetbiblioteket [!DNL Experience Manager]. För att kunna återges korrekt i innehållskontexten måste ytterligare en formatmall läsas in. Kodåtgärdskomponenten kräver en till.
 
 ```css
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">

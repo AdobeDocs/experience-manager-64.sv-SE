@@ -2,19 +2,19 @@
 title: Aktivitetsström på tidslinjen
 description: 'I den här artikeln beskrivs hur du visar aktivitetsloggar för resurser på tidslinjen. '
 contentOwner: AG
-feature: Resurshantering
+feature: Asset Management
 role: User,Admin
 exl-id: 52fa2d59-177f-49ca-a480-7213ce0ca7d7
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 23%
+source-wordcount: '210'
+ht-degree: 11%
 
 ---
 
 # Aktivitetsström på tidslinjen {#activity-stream-in-timeline}
 
-Den här funktionen visar aktivitetsloggar för resurser på tidslinjen. Om du utför någon av följande resursrelaterade åtgärder i Adobe Experience Manager (AEM) Resurser uppdaterar funktionen för aktivitetsström tidslinjen för att återspegla aktiviteten.
+Den här funktionen visar aktivitetsloggar för resurser på tidslinjen. Om du utför någon av följande resursrelaterade åtgärder i [!DNL Adobe Experience Manager Assets] uppdaterar funktionen för aktivitetsström tidslinjen för att återspegla aktiviteten.
 
 Följande åtgärder är loggade i aktivitetsströmmen:
 
@@ -29,7 +29,7 @@ Följande åtgärder är loggade i aktivitetsströmmen:
 
 Aktivitetsloggarna som ska visas på tidslinjen hämtas från platsen `/var/audit/com.day.cq.dam/content/dam` i CRX, där loggfiler lagras.
 
-Dessutom loggas tidslinjeaktiviteten när nya resurser överförs eller befintliga resurser ändras och checkas in i AEM via [Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html) eller [datorversionen av AEM](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html).
+Dessutom loggas tidslinjeaktiviteten när nya resurser överförs eller befintliga resurser ändras och checkas in i Experience Manager via [Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html) eller [[!DNL Experience Manager] datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html).
 
 >[!NOTE]
 >

@@ -1,44 +1,44 @@
 ---
-title: Installera och konfigurera ImageMagick så att det fungerar med AEM Assets
+title: Installera och konfigurera ImageMagick så att det fungerar med [!DNL Experience Manager] Assets
 description: Läs om programmet ImageMagick, hur du installerar det, konfigurerar kommandoradsprocessen och använder det för att redigera, skapa och generera miniatyrbilder från bilder.
 contentOwner: AG
-feature: Återgivningar,Utvecklarverktyg
+feature: Renditions,Developer Tools
 role: Admin
 exl-id: 9aeda88a-fd66-4fad-b496-3352a6ecab81
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '726'
 ht-degree: 1%
 
 ---
 
-# Installera och konfigurera ImageMagick så att det fungerar med AEM Assets {#install-and-configure-imagemagick-to-work-with-aem-assets}
+# Installera och konfigurera ImageMagick så att det fungerar med [!DNL Experience Manager Assets] {#install-and-configure-imagemagick-to-work-with-aem-assets}
 
 ImageMagick är en plugin för att skapa, redigera, komponera och konvertera bitmappsbilder. Det kan läsa och skriva bilder i olika format (över 200), bland annat PNG, JPEG, JPEG-2000, GIF, TIFF, DPX, EXR, WebP, Postscript, PDF och SVG. Använd ImageMagick för att ändra storlek, vända, spegla, rotera, förvränga, skeva och omforma bilder. Du kan också justera bildfärger, använda olika specialeffekter eller rita text, linjer, polygoner, ellipser och kurvor med ImageMagick.
 
-Använd Adobe Experience Manager-mediehanteraren (AEM) från kommandoraden för att bearbeta bilder via ImageMagick. Information om hur du arbetar med olika filformat med ImageMagick finns i [Metodtips för resursfilformat](assets-file-format-best-practices.md). Mer information om alla filformat som stöds finns i [Format som stöds för resurser](assets-formats.md).
+Använd Adobe Experience Manager mediehanterare från kommandoraden för att bearbeta bilder via ImageMagick. Information om hur du arbetar med olika filformat med ImageMagick finns i [Metodtips för resursfilformat](assets-file-format-best-practices.md). Mer information om alla filformat som stöds finns i [Format som stöds för resurser](assets-formats.md).
 
-Om du vill bearbeta stora filer med ImageMagick bör du tänka på högre minneskrav än vanligt, möjliga ändringar av IM-policyer och den övergripande inverkan på prestanda. Minneskraven beror på olika faktorer som upplösning, bitdjup, färgprofil och filformat. Om du tänker bearbeta mycket stora filer med ImageMagick bör du testa AEM server ordentligt. Äntligen finns det resurser som kan vara till hjälp.
+Om du vill bearbeta stora filer med ImageMagick bör du tänka på högre minneskrav än vanligt, möjliga ändringar av IM-policyer och den övergripande inverkan på prestanda. Minneskraven beror på olika faktorer som upplösning, bitdjup, färgprofil och filformat. Om du tänker bearbeta mycket stora filer med ImageMagick bör du testa [!DNL Experience Manager]-servern ordentligt. Äntligen finns det resurser som kan vara till hjälp.
 
 >[!NOTE]
 >
->Om du använder AEM på Adobes hanterade tjänster (AMS) kan du kontakta Adobe kundtjänst om du tänker bearbeta många stora PSD- eller PSB-filer. Det går inte att bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar i Experience Manager.
+>Om du använder [!DNL Experience Manager] på Adobe Managed Services (AMS) kan du kontakta Adobe kundtjänst om du tänker bearbeta många stora PSD- eller PSB-filer. Det går inte att bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar i Experience Manager.
 
 ## Installera ImageMagick {#installing-imagemagick}
 
 Det finns flera versioner av installationsfilerna för ImageMagic för olika operativsystem. Använd rätt version för ditt operativsystem.
 
 1. Hämta rätt [ImageMagick-installationsfiler](https://www.imagemagick.org/script/download.php) för ditt operativsystem.
-1. Starta installationsfilen om du vill installera ImageMagick på den disk där AEM finns.
+1. Om du vill installera ImageMagick på den disk där [!DNL Experience Manager]-servern finns startar du installationsfilen.
 
 1. Ange miljövariabeln path till installationskatalogen för ImageMagic.
 1. Om du vill kontrollera om installationen lyckades kör du kommandot `identify -version`.
 
 ## Ställa in kommandoradens processsteg {#set-up-the-command-line-process-step}
 
-Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfall. Följ de här stegen för att skapa en vänd bild och miniatyrbilder (140x100, 48x48, 319x319 och 1280x1280) varje gång du lägger till en JPEG-bildfil i `/content/dam` på den AEM servern:
+Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfall. Följ de här stegen för att skapa en vänd bild och miniatyrbilder (140x100, 48x48, 319x319 och 1280x1280) varje gång du lägger till en JPEG-bildfil i `/content/dam` på [!DNL Experience Manager]-servern:
 
-1. Gå till arbetsflödeskonsolen (`https://[aem_server]:[Port]/workflow`) på AEM och öppna arbetsflödesmodellen **[!UICONTROL DAM Update Asset]**.
+1. Gå till arbetsflödeskonsolen (`https://[aem_server]:[Port]/workflow`) på [!DNL Experience Manager]-servern och öppna arbetsflödesmodellen för **[!UICONTROL DAM Update Asset]**.
 1. Öppna steget **[!UICONTROL EPS thumbnails (powered by ImageMagick)]** i arbetsflödesmodellen **[!UICONTROL DAM Update Asset]**.
 1. I **[!UICONTROL Arguments tab]** lägger du till `image/jpeg` i listan **[!UICONTROL Mime Types]**.
 
@@ -73,7 +73,7 @@ Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfa
    ![web_enabled](assets/web_enabled.png)
 
 1. Spara arbetsflödet.
-1. Om du vill kontrollera om ImageMagic kan bearbeta bilderna på rätt sätt överför du en JPG-bild till AEM Assets. Kontrollera om en bild som har vänts och återgivningarna genereras för den.
+1. Om du vill kontrollera om ImageMagic kan bearbeta bilder på rätt sätt överför du en JPG-bild till [!DNL Assets]. Kontrollera om en bild som har vänts och återgivningarna genereras för den.
 
 ## Minska säkerhetsluckor {#mitigating-security-vulnerabilities}
 
@@ -88,10 +88,10 @@ Om du använder ImageMagick eller ett drabbat bibliotek rekommenderar Adobe att 
 
 >[!MORELIKETHIS]
 >
->* [Bästa tillvägagångssätt för att bearbeta olika filformat med AEM Assets](assets-file-format-best-practices.md)
-* [Kommandoradsalternativ för ImageMagick](https://www.imagemagick.org/script/command-line-options.php)
-* [Grundläggande och avancerade exempel på användning av ImageMagick](https://www.imagemagick.org/Usage/)
-* [Prestandajustering för resurser för ImageMagick](performance-tuning-guidelines.md)
-* [Fullständig lista över filformat som stöds av AEM Assets](assets-formats.md)
-* [Förstå filformat och minneskostnad för bilder](https://www.scantips.com/basics1d.html)
+>* [Bästa tillvägagångssätt för att bearbeta olika filformat med [!DNL Assets]](assets-file-format-best-practices.md)
+>* [Kommandoradsalternativ för ImageMagick](https://www.imagemagick.org/script/command-line-options.php)
+>* [Grundläggande och avancerade exempel på användning av ImageMagick](https://www.imagemagick.org/Usage/)
+>* [Prestandajustering för resurser för ImageMagick](performance-tuning-guidelines.md)
+>* [Fullständig lista över filformat som stöds av [!DNL Assets]](assets-formats.md)
+>* [Förstå filformat och minneskostnad för bilder](https://www.scantips.com/basics1d.html)
 

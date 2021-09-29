@@ -1,24 +1,24 @@
 ---
 title: Resursproxyutveckling
-description: 'En proxy är en AEM som använder proxyarbetare för att bearbeta jobb. Lär dig hur du konfigurerar en AEM, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare. '
+description: 'En proxy är en  [!DNL Experience Manager] instance that uses proxy workers to process jobs. Learn how to configure an [!DNL Experience Manager] proxy, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare. '
 contentOwner: AG
-feature: Resursbearbetning
+feature: Asset Processing
 role: Admin, Architect
 exl-id: c7511326-697e-4749-ab46-513cdbaa00d8
-source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
+source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '869'
 ht-degree: 0%
 
 ---
 
 # Resursproxyutveckling {#assets-proxy-development}
 
-Adobe Experience Manager (AEM) Assets använder en proxy för att distribuera bearbetning för vissa åtgärder.
+Adobe Experience Manager Assets använder en proxy för att distribuera bearbetningen för vissa uppgifter.
 
-En proxy är en specifik (och ibland separat) AEM instans som använder proxyarbetare som processorer som hanterar ett jobb och skapar ett resultat. En proxyarbetare kan användas för en mängd olika uppgifter. Om det är en AEM Assets-proxy kan detta användas för att läsa in resurser för återgivning inom AEM Assets. Exempelvis använder IDS-proxyarbetaren [ett InDesign Server för att bearbeta filer som ska användas i AEM Assets.](indesign.md)
+En proxy är en specifik (och ibland separat) [!DNL Experience Manager]-instans som använder proxyarbetare som processorer som hanterar ett jobb och skapar ett resultat. En proxyarbetare kan användas för en mängd olika uppgifter. Om det är en [!DNL Experience Manager]-resursproxy kan detta användas för att läsa in resurser för återgivning i [!DNL Experience Manager]-resurser. Exempelvis använder IDS-proxyarbetaren [ett InDesign Server för att bearbeta filer för användning i [!DNL Experience Manager]-resurser.](indesign.md)
 
-När proxyn är en separat AEM blir inläsningen av AEM. Som standard kör AEM Assets resurshanteringsuppgifterna i samma JVM (externaliserat via Proxy) för att minska belastningen på AEM.
+När proxyn är en separat [!DNL Experience Manager]-instans minskar detta belastningen på [!DNL Experience Manager]-redigeringsinstansen/-instanserna. Som standard kör [!DNL Experience Manager] Resurser resurshanteringsuppgifterna i samma JVM (externaliserat via Proxy) för att minska belastningen på [!DNL Experience Manager]-redigeringsinstansen.
 
 ## Proxy (HTTP Access) {#proxy-http-access}
 
@@ -110,7 +110,7 @@ Här följer ett exempel på API-användning:
 >
 >Referensdokumentation för proxy-API:t finns under [`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/commons/proxy/package-summary.html).
 
-Både proxy- och proxyarbetarkonfigurationer är tillgängliga via molntjänster som tillgängliga från AEM Assets **Tools**-konsolen eller under `/etc/cloudservices/proxy`. Varje proxyarbetare förväntas lägga till en nod under `/etc/cloudservices/proxy` för arbetarspecifik konfigurationsinformation (till exempel `/etc/cloudservices/proxy/workername`).
+Både proxy- och proxyarbetarkonfigurationer är tillgängliga via molntjänster som tillgängliga från [!DNL Experience Manager] Assets **Tools**-konsolen eller under `/etc/cloudservices/proxy`. Varje proxyarbetare förväntas lägga till en nod under `/etc/cloudservices/proxy` för arbetarspecifik konfigurationsinformation (till exempel `/etc/cloudservices/proxy/workername`).
 
 >[!NOTE]
 >
@@ -133,9 +133,9 @@ Här följer ett exempel på API-användning:
 
 ### Utveckla en anpassad proxyarbetare {#developing-a-customized-proxy-worker}
 
-[IDS-proxyarbetaren](indesign.md) är ett exempel på en AEM Assets-proxyarbetare som redan medföljer för att lägga ut bearbetning av InDesign-resurser på entreprenad.
+[IDS-proxyarbetaren](indesign.md) är ett exempel på en [!DNL Experience Manager] Assets-proxyarbetare som redan finns tillgänglig för att lägga ut bearbetningen av InDesign-resurser på entreprenad.
 
-Du kan också utveckla och konfigurera din egen AEM Assets-proxyarbetare så att du kan skapa en specialarbetare som skickar ut och lägger ut dina AEM Assets-bearbetningsuppgifter på entreprenad.
+Du kan också utveckla och konfigurera din egen [!DNL Experience Manager] Assets-proxyarbetare för att skapa en specialarbetare som kan skicka och utkontraktera dina [!DNL Experience Manager] Assets-bearbetningsuppgifter.
 
 Om du konfigurerar en egen anpassad proxyarbetare måste du:
 
@@ -177,12 +177,12 @@ Följande diagram och steg visar hur du fortsätter:
 
 >[!NOTE]
 >
->Det som inte finns med i AEM Assets proxyramverk är poolmekanismen.
+>Det som [!DNL Experience Manager] Assets proxy-ramverket inte tillhandahåller är poolmekanismen.
 >
->Integreringen med InDesign ger åtkomst till en pool med indesign-servrar (IDSPool). Den här poolen är specifik för InDesign-integrering och ingår inte i AEM Assets proxyramverk.
+>Integreringen med InDesign ger åtkomst till en pool med indesign-servrar (IDSPool). Den här poolen är specifik för InDesign-integrering och ingår inte i [!DNL Experience Manager] Assets-proxyramverket.
 
 >[!NOTE]
 >
 >Synkronisering av resultat:
 >
->Om ingen instans använder samma proxy stannar bearbetningsresultatet kvar hos proxyn. Det är klientens (AEM Author) uppgift att begära resultatet med samma unika jobb-ID som anges för klienten när jobbet skapas. Proxyservern utför jobbet och ser till att resultatet är klart att begäras.
+>Om ingen instans använder samma proxy stannar bearbetningsresultatet kvar hos proxyn. Det är klientens ([!DNL Experience Manager] Author) jobb att begära resultatet med samma unika jobb-ID som anges för klienten när jobbet skapas. Proxyservern utför jobbet och ser till att resultatet är klart att begäras.

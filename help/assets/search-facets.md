@@ -2,13 +2,13 @@
 title: Söka efter fasetter
 description: I den här artikeln beskrivs hur du skapar, ändrar och använder sökfaktorer i AEM.
 contentOwner: AG
-feature: Sökning
+feature: Search
 role: Admin,Developer
 exl-id: ef1c0b57-68cc-460e-ae45-e16b079194c2
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
 workflow-type: tm+mt
-source-wordcount: '2399'
-ht-degree: 18%
+source-wordcount: '2391'
+ht-degree: 17%
 
 ---
 
@@ -30,7 +30,7 @@ De sökfaktorer som visas på panelen Filter definieras i det underliggande sök
 
 För textsökningar lägger du till predikatet Fulltext i formuläret. Använd predikatet Egenskap för att söka efter resurser som matchar en enskild egenskap som du anger. Använd predikatet Alternativ för att söka efter resurser som matchar ett eller flera värden för en viss egenskap. Lägg till predikatet för datumintervall för att söka efter resurser som skapats inom ett angivet datumintervall.
 
-1. Tryck/klicka på AEM-logotypen och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
+1. Tryck/klicka på logotypen [!DNL Experience Manager] och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och trycker sedan på **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
 
    ![Leta reda på och välj Resursadministratörens sökspår](assets/assets_admin_searchrail.png)
@@ -39,7 +39,7 @@ För textsökningar lägger du till predikatet Fulltext i formuläret. Använd p
 
    >[!NOTE]
    >
-   >Utför följande steg om du vill använda mappsökningsfunktionen från den förkonfigurerade **Resursadministratörssökvägen** från en tidigare AEM version:
+   >Utför följande steg om du vill använda mappsökningsfunktionen från den förkonfigurerade **Resursadministratörssökvägen** från en tidigare [!DNL Experience Manager]-version:
    > 
    >1. Navigera till */conf/global/settings/dam/search/facets/assets/jcr:content/items* i CRX-DE.
    >1. Ta bort noden **type**.
@@ -117,7 +117,7 @@ Om du vill använda en befintlig nod anger du den i valdialogrutan.
 >
 >Alternativpredikatet är en anpassad wrapper som innehåller egenskapspredikat som demonstrerar det beskrivna beteendet. För närvarande finns det ingen tillgänglig REST-slutpunkt som stöder funktionen internt.
 
-1. Tryck på AEM logotyp och gå sedan till **[!UICONTROL Tools > General > Search Forms]**.
+1. Tryck på logotypen [!DNL Experience Manager] och gå sedan till **[!UICONTROL Tools > General > Search Forms]**.
 1. På sidan **[!UICONTROL Search Forms]** väljer du **[!UICONTROL Assets Admin Search Rail]** och trycker sedan på ikonen Redigera.
 1. På sidan **[!UICONTROL Edit Search Form]** drar du **[!UICONTROL Options Predicate]** från fliken **[!UICONTROL Select Predicate]** till huvudrutan.
 1. Ange en etikett och ett namn för egenskapen på fliken **[!UICONTROL Settings]**. Om du till exempel vill söka efter resurser baserat på deras format anger du ett användarvänligt namn på etiketten, till exempel **[!UICONTROL File Type]**. Ange egenskapen som ska användas för sökningen i egenskapsfältet, till exempel `jcr:content/metadata/dc:format.`
@@ -137,9 +137,9 @@ Om du vill använda en befintlig nod anger du den i valdialogrutan.
 
 ## Lägga till ett egenskapspredikat för flera värden {#adding-a-multi-value-property-predicate}
 
-Med Multi Value Property-predikatet kan du söka efter resurser efter flera värden. Tänk dig ett scenario där du har bilder på flera produkter i AEM Assets och där metadata för varje bild innehåller ett SKU-nummer som är kopplat till produkten. Du kan använda det här predikatet för att söka efter produktbilder baserat på flera SKU-nummer.
+Med Multi Value Property-predikatet kan du söka efter resurser efter flera värden. Tänk dig ett scenario där du har bilder på flera produkter i [!DNL Experience Manager] Assets och metadata för varje bild innehåller ett SKU-nummer som är kopplat till produkten. Du kan använda det här predikatet för att söka efter produktbilder baserat på flera SKU-nummer.
 
-1. Klicka på AEM-logotypen och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
+1. Klicka på logotypen [!DNL Experience Manager] och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och trycker på **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
 1. På sidan Redigera sökformulär drar du **[!UICONTROL Multi Value Property Predicate]** från fliken **[!UICONTROL Select Predicate]** till huvudrutan.
 1. På fliken **[!UICONTROL Settings]** anger du en etikett och platshållartext för predikatet. Ange egenskapsnamnet som ska användas för sökningen i egenskapsfältet, till exempel `jcr:content/metadata/dc:value`. Du kan också använda valdialogrutan för att välja en nod.
@@ -150,9 +150,9 @@ Med Multi Value Property-predikatet kan du söka efter resurser efter flera vär
 
 ## Lägga till ett taggpredikat {#adding-a-tags-predicate}
 
-Med taggpredikatet kan du utföra taggbaserade sökningar efter resurser. Som standard söker AEM Assets efter resurser efter en eller flera taggar som matchar baserat på de taggar du anger. Med andra ord utför sökfrågan en ELLER-åtgärd med de angivna taggarna. Du kan dock använda alternativet Matcha alla taggar för att söka efter resurser som innehåller alla taggar som du anger.
+Med taggpredikatet kan du utföra taggbaserade sökningar efter resurser. Som standard söker [!DNL Experience Manager] Resurser efter en eller flera taggar som matchar baserat på de taggar du anger. Med andra ord utför sökfrågan en ELLER-åtgärd med de angivna taggarna. Du kan dock använda alternativet Matcha alla taggar för att söka efter resurser som innehåller alla taggar som du anger.
 
-1. Klicka på AEM-logotypen och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
+1. Klicka på logotypen [!DNL Experience Manager] och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och trycker sedan på **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
 1. På sidan Redigera sökformulär drar du **[!UICONTROL Tags Predicate]** från fliken Välj predikat till huvudrutan.
 1. Ange en platshållartext för predikatet på fliken Inställningar. Ange egenskapsnamnet som ska användas för sökningen i egenskapsfältet, till exempel *jcr:content/metadata/cq:tags*. Du kan också välja en nod i CRXDE i urvalsdialogrutan.
@@ -223,6 +223,6 @@ Om du inte har tilldelats en administratörsroll finns det en lista med behörig
 >[!MORELIKETHIS]
 >
 >* [Utöka Assets-sökning](searchx.md)
-* [Söka efter resurser](search-assets.md)
-* [Söka efter videoresurser](search-video-assets.md)
+>* [Söka efter resurser](search-assets.md)
+>* [Söka efter videoresurser](search-video-assets.md)
 

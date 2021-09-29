@@ -1,27 +1,27 @@
 ---
-title: Hantera era digitala resurser med AEM Assets
-description: Lär dig mer om olika resurshanterings- och redigeringsuppgifter som du kan utföra med det Touch-optimerade användargränssnittet i AEM Assets
+title: Hantera dina digitala resurser med  [!DNL Experience Manager] Assets
+description: Lär dig mer om olika resurshanterings- och redigeringsåtgärder som du kan utföra med det Touch-optimerade användargränssnittet i [!DNL Experience Manager] Resurser
 contentOwner: AG
 mini-toc-levels: 1
-feature: Resurshantering, sökning, renderingar, samarbete
+feature: Asset Management,Search,Renditions,Collaboration
 role: User
 exl-id: aa1a702b-18dd-496b-a6e0-aa593af6e57c
-source-git-commit: cdee53ea75faa2e6d1a1ec6ca7aa8bf8b8840e46
+source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
 workflow-type: tm+mt
-source-wordcount: '9810'
+source-wordcount: '9757'
 ht-degree: 2%
 
 ---
 
 # Hantera era digitala resurser {#managing-assets-with-the-touch-optimized-ui}
 
-Lär dig mer om olika resurshanterings- och redigeringsuppgifter som du kan utföra med det pekoptimerade användargränssnittet i AEM Assets.
+Lär dig mer om olika resurshanteringsåtgärder och redigeringsåtgärder som du kan utföra med det Touchoptimerade användargränssnittet för [!DNL Experience Manager]-resurser.
 
-I den här artikeln beskrivs hur du hanterar och redigerar resurser med det användargränssnitt som är optimerat för Adobe Experience Manager (AEM) Assets Touch. Mer information om användargränssnittet finns i [Grundläggande hantering av Touch-gränssnittet](/help/sites-authoring/basic-handling.md). Information om hur du hanterar innehållsfragment finns i [Hantera innehållsfragment](content-fragments-managing.md) resurser.
+I den här artikeln beskrivs hur du hanterar och redigerar resurser med det Touch-optimerade användargränssnittet för Adobe Experience Manager Assets. Mer information om användargränssnittet finns i [Grundläggande hantering av Touch-gränssnittet](/help/sites-authoring/basic-handling.md). Information om hur du hanterar innehållsfragment finns i [Hantera innehållsfragment](content-fragments-managing.md) resurser.
 
 ## Skapa mappar {#create-folders}
 
-När du organiserar en samling resurser, till exempel alla `Nature`-bilder, kan du skapa mappar som håller ihop dem. Du kan använda mappar för att kategorisera och ordna dina resurser. AEM Assets kräver inte att du ordnar resurser i mappar för att fungera bättre.
+När du organiserar en samling resurser, till exempel alla `Nature`-bilder, kan du skapa mappar som håller ihop dem. Du kan använda mappar för att kategorisera och ordna dina resurser. [!DNL Experience Manager] Du behöver inte ordna resurser i mappar för att de ska fungera bättre.
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ Följande (blankstegsavgränsad lista med) tecken stöds inte:
 
 ## Överför resurser {#uploading-assets}
 
-Du kan överföra olika typer av resurser (inklusive bilder, PDF-filer, RAW-filer och så vidare) från en lokal mapp eller en nätverksenhet till AEM Assets.
+Du kan överföra olika typer av resurser (inklusive bilder, PDF-filer, RAW-filer och så vidare) från den lokala mappen eller en nätverksenhet till [!DNL Experience Manager]-resurser.
 
 >[!NOTE]
 >
@@ -79,11 +79,11 @@ Innan du överför en resurs måste du kontrollera att den har ett [format som s
 
    ![chlimage_1-6](assets/chlimage_1-6.png)
 
-   Om du vill avbryta en pågående överföring klickar du på `X` bredvid förloppsindikatorn. När du avbryter överföringen tar AEM Assets bort den delvis överförda delen av resursen.
+   Om du vill avbryta en pågående överföring klickar du på `X` bredvid förloppsindikatorn. När du avbryter överföringen tas den delvis överförda delen av resursen bort med [!DNL Experience Manager] Resurser.
 
    Möjligheten att återuppta överföring är särskilt användbar i scenarier med låg bandbredd och nätverksfel, där det tar lång tid att överföra stora resurser. Du kan pausa överföringen och fortsätta senare när situationen förbättras. När du återupptar startar överföringen från den punkt där du pausade den.
 
-   Under överföringsåtgärden sparar AEM de delar av resursen som överförs som datablock i CRX-databasen. När överföringen är klar konsoliderar AEM dessa segment till ett enda datablock.
+   Under överföringen sparar [!DNL Experience Manager] delarna av resursen som överförs som datablock i CRX-databasen. När överföringen är klar konsoliderar [!DNL Experience Manager] dessa segment till ett enda datablock.
 
    Om du vill konfigurera rensningsaktiviteten för de oavslutade segmentöverföringsjobben går du till `https://[aem_server]:[port]/system/console/configMgr/org.apache.sling.servlets.post.impl.helper.ChunkCleanUpTask`.
 
@@ -99,7 +99,7 @@ Innan du överför en resurs måste du kontrollera att den har ett [format som s
    >
    >Om **[!UICONTROL Asset Insights]** är aktiverat för att spåra visningar/klickningar med Adobe Analytics blir det här återskapade resurs-ID:t ogiltigt för de data som hämtats för resursen på Adobe Analytics.
 
-   Om resursen som du överför finns i AEM Assets visas en varning i dialogrutan **[!UICONTROL Duplicates Detected]** om att du försöker överföra en dubblettresurs. Dialogrutan visas bara om kontrollsummevärdet SHA 1 för den befintliga resursens binära värde matchar kontrollsummevärdet för den resurs som du överför. I det här fallet är namnen på tillgångarna oväsentliga. Dialogrutan kan med andra ord även visas för resurser som har olika namn om SHA 1-värdena för deras binärfiler är desamma.
+   Om resursen som du överför finns i [!DNL Experience Manager] Resurser visas en varning i dialogrutan **[!UICONTROL Duplicates Detected]** om att du försöker överföra en dubblettresurs. Dialogrutan visas bara om kontrollsummevärdet SHA 1 för den befintliga resursens binära värde matchar kontrollsummevärdet för den resurs som du överför. I det här fallet är namnen på tillgångarna oväsentliga. Dialogrutan kan med andra ord även visas för resurser som har olika namn om SHA 1-värdena för deras binärfiler är desamma.
 
    >[!NOTE]
    >
@@ -107,9 +107,9 @@ Innan du överför en resurs måste du kontrollera att den har ett [format som s
 
    ![chlimage_1-8](assets/chlimage_1-8.png)
 
-   Tryck på **[!UICONTROL Keep]** om du vill behålla den duplicerade resursen i AEM Assets. Tryck på **[!UICONTROL Delete]** för att ta bort den duplicerade resursen som du överförde.
+   Tryck på **[!UICONTROL Keep]** om du vill behålla den duplicerade resursen i [!DNL Experience Manager] Resurser. Tryck på **[!UICONTROL Delete]** för att ta bort den duplicerade resursen som du överförde.
 
-   AEM Assets förhindrar att du överför resurser med förbjudna tecken i filnamnen. Om du försöker överföra en resurs som innehåller otillåtna tecken visar AEM Assets ett varningsmeddelande om att det finns otillåtna tecken i filnamnet och stoppar överföringen tills du tar bort dessa tecken eller överför med ett tillåtet namn.
+   [!DNL Experience Manager] Resurser förhindrar att du överför resurser med förbjudna tecken i filnamn. Om du försöker överföra en resurs som innehåller otillåtna tecken visar [!DNL Experience Manager] Resurser ett varningsmeddelande om att det finns otillåtna tecken i filnamnet och stoppar överföringen tills du tar bort dessa tecken eller överför med ett tillåtet namn.
 
    Om du vill anpassa filnamnsreglerna för din organisation kan du i dialogrutan **[!UICONTROL Upload Assets]** ange långa namn för de filer som du överför.
 
@@ -125,13 +125,13 @@ Innan du överför en resurs måste du kontrollera att den har ett [format som s
 
    ![chlimage_1-10](assets/chlimage_1-10.png)
 
-   Om du avbryter överföringen innan filerna har överförts, avbryter AEM Assets överföringen av den aktuella filen och uppdaterar innehållet. Filer som redan har överförts tas dock inte bort.
+   Om du avbryter överföringen innan filerna har överförts slutar [!DNL Experience Manager] Resurser att överföra den aktuella filen och uppdaterar innehållet. Filer som redan har överförts tas dock inte bort.
 
 ### Serieuppladdningar {#serial-uploads}
 
-Vid överföring av flera resurser i grupp förbrukas betydande systemresurser, vilket kan påverka prestandan i AEM. Möjliga flaskhalsar kan vara din internetanslutning, läs- och skrivåtgärder på disk, webbläsarbegränsningar för antalet begäranden om POST vid samtidig överföring av resurser. En gruppöverföring kan misslyckas eller avslutas i förtid. Med andra ord kan AEM resurser sakna vissa filer när en grupp filer importeras eller inte alls kan importera någon fil.
+När du överför flera resurser i grupp förbrukas betydande systemresurser, vilket kan påverka prestandan för din [!DNL Experience Manager]-distribution negativt. Möjliga flaskhalsar kan vara din internetanslutning, läs- och skrivåtgärder på disk, webbläsarbegränsningar för antalet begäranden om POST vid samtidig överföring av resurser. En gruppöverföring kan misslyckas eller avslutas i förtid. Med andra ord kan [!DNL Experience Manager]-resurser sakna vissa filer när en grupp filer importeras eller helt misslyckas med att importera någon fil.
 
-För att komma till rätta med denna situation importerar AEM Assets en mediefil i taget (seriell överföring) under en gruppöverföring, i stället för att alla mediefiler hämtas samtidigt.
+För att lösa den här situationen importerar [!DNL Experience Manager] Assets en resurs i taget (seriell överföring) under en massöverföring, i stället för att alla resurser hämtas samtidigt.
 
 Seriell överföring av resurser är aktiverat som standard. Om du vill inaktivera funktionen och tillåta samtidig överföring ska du täcka över noden `fileupload` i CRXDe och ange värdet `parallelUploads` för egenskapen till `true`.
 
@@ -145,9 +145,9 @@ Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du t�
 
 >[!NOTE]
 >
->Om du vill överföra resurser via FTP i Dynamic Media - Scene7 mode installerar du funktionspaket (FP) 18912 på AEM. Kontakta Adobe kundtjänst för att få tillgång till FP-18912 och slutföra konfigurationen av ditt FTP-konto. Se [Installera funktionspaket 18912 för migrering av gruppresurser](/help/assets/bulk-ingest-migrate.md).
+>Om du vill överföra resurser via FTP i Dynamic Media - Scene7 mode installerar du funktionspaket (FP) 18912 på [!DNL Experience Manager]-författare. Kontakta Adobe kundtjänst för att få tillgång till FP-18912 och slutföra konfigurationen av ditt FTP-konto. Se [Installera funktionspaket 18912 för migrering av gruppresurser](/help/assets/bulk-ingest-migrate.md).
 >
->Om du använder FTP för att överföra resurser ignoreras de överföringsinställningar som anges i AEM. I stället används filbearbetningsregler, enligt definitionen i Dynamic Media Classic,.
+>Om du använder FTP för att överföra resurser ignoreras de överföringsinställningar som anges i [!DNL Experience Manager]. I stället används filbearbetningsregler, enligt definitionen i Dynamic Media Classic,.
 
 **Så här överför du resurser med FTP**
 
@@ -167,7 +167,7 @@ Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du t�
 1. Tryck på **[!UICONTROL Save]** i det nedre högra hörnet av dialogrutan **[!UICONTROL Upload Job Options]**.
 1. Tryck på **[!UICONTROL Submit Upload]** i det nedre högra hörnet på sidan **[!UICONTROL Upload]**.
 
-   Om du vill visa överföringsförloppet trycker du på **[!UICONTROL Jobs]** på det globala navigeringsfältet. Sidan **[!UICONTROL Jobs]** visar överföringsförloppet. Du kan när som helst fortsätta arbeta i AEM och gå tillbaka till jobbsidan i Dynamic Media Classic för att granska ett pågående jobb.
+   Om du vill visa överföringsförloppet trycker du på **[!UICONTROL Jobs]** på det globala navigeringsfältet. Sidan **[!UICONTROL Jobs]** visar överföringsförloppet. Du kan fortsätta arbeta i [!DNL Experience Manager] och gå tillbaka till jobbsidan i Dynamic Media Classic när som helst för att granska ett pågående jobb.
 
    Om du vill avbryta ett pågående överföringsjobb trycker du på **[!UICONTROL Cancel]** bredvid **[!UICONTROL Duration]**-tiden.
 
@@ -181,7 +181,7 @@ Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du t�
 | Dekomprimera ZIP- eller TAR-filer vid överföring |  |  |
 | Jobbalternativ |  | Tryck/klicka på **[!UICONTROL Job Options]** för att öppna dialogrutan [!UICONTROL Upload Job Options] och välj alternativ som påverkar hela överföringsjobbet. De här alternativen är desamma för alla filtyper.<br>Du kan välja standardalternativ för att överföra filer från sidan Allmänna inställningar i programmet. Om du vill öppna den här sidan väljer du **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]**. Tryck på knappen **[!UICONTROL Default Upload Options]** för att öppna dialogrutan [!UICONTROL Upload Job Options]. |
 |  | När | Välj En gång eller Återkommande. Om du vill ställa in ett återkommande jobb väljer du alternativet Upprepa - varje dag, Varje vecka, Varje månad eller Anpassa - för att ange när du vill att FTP-överföringsjobbet ska återkomma. Ange sedan schemaläggningsalternativen efter behov. |
-|  | Inkludera undermappar | Överför alla undermappar i mappen som du vill överföra. Namnen på mappen och dess undermappar som du överför anges automatiskt i AEM Assets. |
+|  | Inkludera undermappar | Överför alla undermappar i mappen som du vill överföra. Namnen på mappen och dess undermappar som du överför anges automatiskt i [!DNL Experience Manager] Resurser. |
 |  | Beskärningsalternativ | Om du vill beskära manuellt från sidorna av en bild väljer du Beskär-menyn och sedan Manuell. Ange sedan antalet pixlar att beskära från en sida eller från varje sida av bilden. Hur mycket av bilden som beskärs beror på bildfilens ppi-inställning (pixlar per tum). Om bilden till exempel visar 150 ppi och du anger 75 i textrutorna Överkant, Höger, Underkant och Vänster beskärs en halv tum från varje sida.<br> Om du vill beskära pixlar med tomt utrymme automatiskt från en bild öppnar du menyn Beskär, väljer Manuell och anger pixelmått i fälten Överkant, Höger, Underkant och Vänster för att beskära från sidorna. Du kan också välja Trimma på menyn Beskär och välja följande alternativ:<br> **Trimma bort baserat på** <ul><li>**Färg**  - Välj alternativet Färg. Välj sedan menyn Hörn och välj hörnet på bilden med den färg som bäst motsvarar den tomrumsfärg som du vill beskära.</li><li>**Genomskinlighet**  - Välj alternativet Genomskinlighet.<br> **Tolerans**  - Dra i skjutreglaget för att ange en tolerans mellan 0 och 1. För beskärning baserat på färg anger du 0 om pixlarna bara ska beskäras om de exakt matchar den färg som du har markerat i hörnet av bilden. Nummer som ligger närmare 1 ger större färgskillnader.<br>Om du vill trimma baserat på genomskinlighet anger du 0 så att pixlarna bara beskärs om de är genomskinliga. Siffror närmare 1 ger större genomskinlighet.</li></ul><br>Observera att dessa beskärningsalternativ är icke-förstörande. |
 |  | Alternativ för färgprofil | Välj en färgkonvertering när du skapar optimerade filer som används för leverans:<ul><li>Standardfärgbevaring: Behåller källbildens färger när bilderna innehåller färgrymdsinformation. det inte finns någon färgkonvertering. Nästan alla bilder idag har rätt färgprofil inbäddad. Om en CMYK-källbild inte innehåller någon inbäddad färgprofil konverteras färgerna till sRGB-färgrymden (standard röd grön). sRGB är den rekommenderade färgrymden för visning av bilder på webbsidor.</li><li>Behåll ursprunglig färgrymd: Bevarar de ursprungliga färgerna utan någon färgkonvertering vid punkten. För bilder utan inbäddad färgprofil görs färgkonverteringen med de standardfärgprofiler som konfigurerats i publiceringsinställningarna. Färgprofilerna kanske inte justeras mot färgen i de filer som skapas med det här alternativet. Därför bör du använda alternativet Standardfärgbevaring.</li><li>Anpassad från > Till<br> Öppnar menyer så att du kan välja färgmodellen Konvertera från och Konvertera till. Det här avancerade alternativet åsidosätter eventuell färginformation som är inbäddad i källfilen. Välj det här alternativet när alla bilder som du skickar in innehåller felaktiga eller saknade färgprofildata.</li></ul> |
 |  | Bildredigeringsalternativ | Du kan bevara urklippsmaskerna i bilder och välja en färgprofil.<br> Se  [Ange bildredigeringsalternativ vid överföring](#setting-image-editing-options-at-upload). |
@@ -298,17 +298,17 @@ Mer information om hur du skapar gruppuppsättningsförinställningar finns i [K
 
 ### Strömmade överföringar {#streamed-uploads}
 
-Om du överför flera resurser ökar I/O-anropen till AEM drastiskt, vilket minskar överföringseffektiviteten och till och med kan göra att den tar slut. AEM Assets har stöd för direktuppspelad överföring av resurser. Direktuppspelad överföring minskar I/O-disken under överföringen genom att undvika att lagra resurser i en tillfällig mapp på servern innan den kopieras till databasen. I stället överförs data direkt till databasen. På så sätt minskas tiden det tar att överföra stora resurser och möjligheten till timeout. Direktuppspelning är aktiverat som standard i AEM Assets.
+Om du överför flera resurser ökar I/O-anrop till [!DNL Experience Manager]-servern drastiskt, vilket minskar uppladdningseffektiviteten och kan till och med leda till att det tar för lång tid. [!DNL Experience Manager] Resurser har stöd för direktuppspelad överföring av resurser. Direktuppspelad överföring minskar I/O-disken under överföringen genom att undvika att lagra resurser i en tillfällig mapp på servern innan den kopieras till databasen. I stället överförs data direkt till databasen. På så sätt minskas tiden det tar att överföra stora resurser och möjligheten till timeout. Direktuppspelad överföring är som standard aktiverad i [!DNL Experience Manager] Resurser.
 
-Direktuppspelningsöverföring är inaktiverat för AEM som körs på JEE-server med en servlet-api-version som är lägre än 3.1.
+Direktuppspelningsöverföring är inaktiverat för [!DNL Experience Manager] som körs på JEE-servern med en servlet-api-version som är lägre än 3.1.
 
 ### Extrahera ZIP-arkiv som innehåller resurser {#extract-zip-archive-containing-assets}
 
-Du kan överföra ZIP-arkiv precis som andra resurser som stöds. Samma filnamnsregler gäller för ZIP-filer. AEM kan du extrahera ett ZIP-arkiv till en DAM-plats.
+Du kan överföra ZIP-arkiv precis som andra resurser som stöds. Samma filnamnsregler gäller för ZIP-filer. [!DNL Experience Manager] gör att du kan extrahera ett ZIP-arkiv till en DAM-plats.
 
 Välj ett ZIP-arkiv i taget, klicka på **[!UICONTROL Extract Archive]** och välj en målmapp. Välj ett alternativ för att hantera eventuella konflikter. Om resurserna i ZIP-filen redan finns i målmappen kan du välja något av följande alternativ: hoppa över extrahering, ersätta befintliga filer, behålla båda resurserna genom att byta namn eller skapa en ny version.
 
-När extraheringen är klar meddelar AEM dig i meddelandefältet. Medan AEM extraherar ZIP-filen kan du gå tillbaka till arbetet utan att avbryta extraheringen.
+När extraheringen är klar meddelar [!DNL Experience Manager] dig i meddelandefältet. När [!DNL Experience Manager] extraherar ZIP kan du gå tillbaka till ditt arbete utan att avbryta extraheringen.
 
 ![Meddelande om ZIP-extrahering](assets/zip_extract_notification.png)
 
@@ -413,7 +413,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    >[!NOTE]
    >
-   >Om du kopierar en resurs på samma plats, genererar AEM automatiskt en variant av namnet. Om du till exempel kopierar en resurs med namnet Fyrkant, genererar AEM automatiskt titeln för kopian som Fyrkant1.
+   >Om du kopierar en resurs på samma plats, genererar [!DNL Experience Manager] automatiskt en variant av namnet. Om du till exempel kopierar en resurs med namnet Fyrkant, genererar [!DNL Experience Manager] automatiskt titeln för resursens kopia som Fyrkant1.
 
 1. Tryck på resursikonen **[!UICONTROL Paste]** från verktygsfältet:
 
@@ -500,7 +500,7 @@ När du flyttar resurser genom att dra dem öppnas inte guiden [!UICONTROL Move 
 
    >[!NOTE]
    >
-   >Som standard visas inte den ursprungliga återgivningen av resursen i förhandsgranskningsläget i AEM Assets. Om du är administratör kan du använda övertäckningar för att konfigurera AEM Assets så att ursprungliga återgivningar visas i förhandsgranskningsläget.
+   >Som standard visas inte den ursprungliga återgivningen av resursen i förhandsvisningsläget i [!DNL Experience Manager] Resurser. Om du är administratör kan du använda övertäckningar för att konfigurera [!DNL Experience Manager] Resurser så att de ursprungliga återgivningarna visas i förhandsgranskningsläget.
 
 1. Välj en återgivning om du vill visa eller ta bort återgivningen.
 
@@ -520,7 +520,7 @@ När du flyttar resurser genom att dra dem öppnas inte guiden [!UICONTROL Move 
    >
    >Om du väljer en återgivning på panelen **[!UICONTROL Renditions]** ändras sammanhanget för verktygsfältet och endast de åtgärder som är relevanta visas. Alternativ som ikonen **[!UICONTROL Upload Rendition]** visas inte. Om du vill visa de här alternativen i verktygsfältet går du till informationssidan för resursen.
 
-   Du kan konfigurera dimensionerna för den återgivning som du vill ska visas på informationssidan för en bild- eller videoresurs. Beroende på de dimensioner du anger visas återgivningen med de exakta eller närmaste måtten i AEM Assets.
+   Du kan konfigurera dimensionerna för den återgivning som du vill ska visas på informationssidan för en bild- eller videoresurs. Baserat på de dimensioner du anger visar [!DNL Experience Manager] Resurser återgivningen med de exakta eller närmaste dimensionerna.
 
    Om du vill konfigurera återgivningsdimensionerna för en bild på resursdetaljnivån ska du täcka över noden **[!UICONTROL renditionpicker]** `libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/renditionpicker` och konfigurera värdet för egenskapen width. Konfigurera egenskapen **[!UICONTROL size (Long) in KB]** i stället för bredden för att anpassa återgivningen på resursdetaljsidan utifrån bildstorleken. För storleksbaserad anpassning prioriterar egenskapen **[!UICONTROL preferOriginal]** originalet om storleken på den matchade återgivningen är större än originalet.
 
@@ -615,10 +615,10 @@ CUG är ett extra sätt att begränsa åtkomsten till dina resurser. Du kan ocks
 
    ![login_page](assets/login_page.png)
 
-   Om du inte anger sökvägen till en inloggningssida visas AEM standardinloggningssidan i publiceringsinstansen.
+   Om du inte anger sökvägen till en inloggningssida visar [!DNL Experience Manager] standardinloggningssidan i publiceringsinstansen.
 
 1. Publicera mappen och försök sedan komma åt den från publiceringsinstansen. En inloggningsskärm visas.
-1. Om du är CUG-medlem anger du dina säkerhetsuppgifter. Mappen visas när AEM autentiserar dig.
+1. Om du är CUG-medlem anger du dina säkerhetsuppgifter. Mappen visas när [!DNL Experience Manager] autentiserar dig.
 
 ## Söka efter resurser {#searching-assets}
 
@@ -628,7 +628,7 @@ Grundläggande sökning finns i avsnittet [Sök och filtrera](/help/sites-author
 
 För nyligen överförda resurser är deras metadata (inklusive titlar, taggar och så vidare) inte direkt tillgängliga i listan med förslag som visas när du skriver i rutan Sök.
 
-Detta beror på att AEM Assets väntar tills en timeout-period har passerats (1 timme som standard) innan ett bakgrundsjobb körs för att indexera metadata för alla nyligen överförda/uppdaterade resurser och lägga till dem i listan med förslag.
+Detta beror på att [!DNL Experience Manager] Resurser väntar tills en timeout-period har gått ut (1 timme som standard) innan ett bakgrundsjobb körs för att indexera metadata för alla nyligen överförda/uppdaterade resurser och lägga till dem i listan med förslag.
 
 ## Använd snabbåtgärder {#quick-actions}
 
@@ -655,7 +655,7 @@ Mer information finns i [Visa och välja resurser](/help/sites-authoring/basic-h
 
 ## Redigera bilder {#editing-images}
 
-Med redigeringsverktygen i AEM Assets gränssnitt kan du utföra små redigeringsjobb på bildresurser. Du kan beskära, rotera, vända och utföra andra redigeringsjobb på bilder. Du kan också lägga till bildscheman till resurser.
+Med redigeringsverktygen i gränssnittet [!DNL Experience Manager] Resurser kan du utföra små redigeringsjobb på bildresurser. Du kan beskära, rotera, vända och utföra andra redigeringsjobb på bilder. Du kan också lägga till bildscheman till resurser.
 
 Bildredigering stöds för filer som har följande format:
 
@@ -715,7 +715,7 @@ Med **[!UICONTROL Timeline]** kan du visa olika händelser för ett markerat obj
 
 I [Samlingskonsolen](managing-collections-touch-ui.md#navigating-the-collections-console) innehåller **[!UICONTROL Show All]**-listan alternativ som du kan använda för att endast visa kommentarer och arbetsflöden. Dessutom visas tidslinjen bara för samlingar på den översta nivån som visas i konsolen. Den visas inte om du navigerar i någon av samlingarna.
 
-**[!UICONTROL Timeline]** innehåller flera  [alternativ som är specifika för innehållsfragment](content-fragments-managing.md#timeline-for-content-fragments), den här funktionen kräver  [AEM 6.4 Service Pack 2 (6.4.2.0)](/help/release-notes/sp-release-notes.md) eller senare.
+**[!UICONTROL Timeline]** innehåller flera  [alternativ som är specifika för innehållsfragment](content-fragments-managing.md#timeline-for-content-fragments), denna funktion kräver  [[!DNL Experience Manager] 6.4 Service Pack 2 (6.4.2.0)](/help/release-notes/sp-release-notes.md) eller senare.
 
 **Så här använder du tidslinjen**:
 
@@ -732,9 +732,9 @@ I [Samlingskonsolen](managing-collections-touch-ui.md#navigating-the-collections
 
 Anteckningar är kommentarer eller förklarande kommentarer som läggs till i bilder eller videoklipp. Anteckningar ger marknadsförarna möjlighet att samarbeta och lämna feedback om resurser.
 
-Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Videoformat som AEM Assets stöder beror på webbläsaren.
+Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Videoformat som [!DNL Experience Manager] Resurser stöder beror på webbläsaren.
 
-För innehållsfragment skapas [anteckningar i redigeraren](content-fragments-variations.md#annotating-a-content-fragment); den här funktionen kräver [AEM 6.4 Service Pack 2 (6.4.2.0)](/help/release-notes/sp-release-notes.md) eller senare.
+För innehållsfragment skapas [anteckningar i redigeraren](content-fragments-variations.md#annotating-a-content-fragment); den här funktionen kräver [[!DNL Experience Manager] 6.4 Service Pack 2 (6.4.2.0)](/help/release-notes/sp-release-notes.md) eller senare.
 
 Du kan lägga till flera anteckningar innan du sparar dem.
 
@@ -769,7 +769,7 @@ Du kan också lägga till anteckningar i en samling. Men om en samling innehåll
    ![chlimage_1-32](assets/chlimage_1-32.png)
 
 1. Tryck på **[!UICONTROL Close]** för att avsluta **[!UICONTROL Annotation]**-läget.
-1. Om du vill visa meddelandet loggar du in på AEM Assets med Aaron MacDonald&#39;s credentials och trycker på ikonen **[!UICONTROL Notifications]** för att visa meddelandet.
+1. Om du vill visa meddelandet loggar du in på [!DNL Experience Manager] Assets with Aaron MacDonald&#39;s credentials och trycker på ikonen **[!UICONTROL Notifications]** för att visa meddelandet.
 
 1. Om du vill välja en annan färg så att du kan skilja mellan användarna trycker du på ikonen **[!UICONTROL Profile]** och trycker på **[!UICONTROL My Preferences]**.
 
@@ -861,12 +861,12 @@ Om du vill skriva ut anteckningarna och granskningsstatusen trycker du på ikone
 
    Återgå till den återgivna PDF-filen och uppdatera den. Den uppdaterade PDF-filen återspeglar de ändringar du har gjort.
 
-**Så här skriver du ut anteckningar på främmande språk**: Om en resurs innehåller anteckningar på främmande språk (särskilt icke-latinska språk) måste du först konfigurera tjänsten CQ-DAM-Handler-Gibson Font Manager på AEM server så att anteckningarna kan skrivas ut. När du konfigurerar Font Manager-tjänsten CQ-DAM-Handler-Gibson anger du sökvägen till teckensnitten för de önskade språken.
+**Så här skriver du ut anteckningar på främmande språk**: Om en resurs innehåller anteckningar på främmande språk (särskilt icke-latinska språk) måste du först konfigurera tjänsten CQ-DAM-Handler-Gibson Font Manager på  [!DNL Experience Manager] servern så att den kan skriva ut anteckningarna. När du konfigurerar Font Manager-tjänsten CQ-DAM-Handler-Gibson anger du sökvägen till teckensnitten för de önskade språken.
 
 1. Öppna konfigurationssidan **[!UICONTROL CQ-DAM-Handler-Gibson Font Manager Service]** från URL:en [https://&lt;server>:&lt;port>/system/console/configMgr/com.day.cq.dam.handler.gibson.fontmanager.impl.FontManagerServiceImpl](http://localhost:4502/system/console/configMgr/com.day.cq.dam.handler.gibson.fontmanager.impl.FontManagerServiceImpl).
 1. Gör något av följande om du vill konfigurera **[!UICONTROL CQ-DAM-Handler-Gibson Font Manager Service]**:
 
-   * Ange den fullständiga sökvägen till teckensnittskatalogen på datorn i katalogalternativet **[!UICONTROL System Fonts]**. Om du till exempel är Mac-användare kan du ange sökvägen som `/Library/Fonts` i katalogalternativet **[!UICONTROL System Fonts]**. AEM hämtar teckensnitten från den här katalogen.
+   * Ange den fullständiga sökvägen till teckensnittskatalogen på datorn i katalogalternativet **[!UICONTROL System Fonts]**. Om du till exempel är Mac-användare kan du ange sökvägen som `/Library/Fonts` i katalogalternativet **[!UICONTROL System Fonts]**. [!DNL Experience Manager] hämtar teckensnitten från den här katalogen.
    * Skapa en katalog med namnet **fonts** i mappen **[!UICONTROL crx-quickstart]**. **[!UICONTROL CQ-DAM-Handler-Gibson Font Manager Service]** hämtar teckensnitten automatiskt på platsen  `crx-quickstart/fonts`. Du kan åsidosätta den här standardsökvägen inifrån katalogalternativet **[!UICONTROL Adobe Server Fonts]**.
    * Skapa en ny mapp för teckensnitt i datorn och lagra önskade teckensnitt i mappen. Ange sedan den fullständiga sökvägen till den mappen i katalogalternativet **[!UICONTROL Customer Fonts]**.
 
@@ -875,9 +875,9 @@ Om du vill skriva ut anteckningarna och granskningsstatusen trycker du på ikone
 
    * Inkludera strängen `<font_family_name_of_custom_font, sans-serif>` i alternativet för teckensnittsfamilj. Om du till exempel vill skriva ut anteckningar i CJK (kinesiska, japanska och koreanska), inkluderar du strängen `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif` i alternativet för teckensnittsfamilj. Om du vill skriva ut anteckningar på hindi hämtar du lämpligt teckensnitt och konfigurerar teckensnittsfamiljen som Arial Unicode MS, Noto Sans, Noto Sans CJK JP, Noto Sans Devanagari, sans-serif.
 
-1. Starta om AEM.
+1. Starta om instansen [!DNL Experience Manager].
 
-Följande är ett exempel på hur du konfigurerar AEM att skriva ut anteckningar i CJK (kinesiska, japanska och koreanska):
+Följande är ett exempel på hur du konfigurerar [!DNL Experience Manager] att skriva ut anteckningar i CJK (kinesiska, japanska och koreanska):
 
 1. Hämta Google Noto CJK-teckensnitt från följande länkar och lagra dem i den teckensnittskatalog som konfigurerats i teckensnittshanterartjänsten.
 
@@ -894,9 +894,9 @@ Versionshantering skapar en ögonblicksbild av digitala resurser vid en viss tid
 
 Här följer exempel där du skapar versioner:
 
-* Du ändrar en bild i ett annat program och överför den till AEM Assets. En version av bilden skapas så att originalbilden inte skrivs över.
+* Du ändrar en bild i ett annat program och överför den till [!DNL Experience Manager] Resurser. En version av bilden skapas så att originalbilden inte skrivs över.
 * Du redigerar metadata för en resurs.
-* Du använder AEM datorprogram för att checka ut en befintlig resurs och spara ändringarna. En ny version skapas varje gång resursen sparas.
+* Du använder [!DNL Experience Manager]-datorprogrammet för att checka ut en befintlig resurs och spara ändringarna. En ny version skapas varje gång resursen sparas.
 
 Du kan även aktivera automatisk versionshantering via ett arbetsflöde. När du skapar en version för en resurs sparas metadata och återgivningar tillsammans med versionen. Återgivningar är renderingsalternativ för samma bilder, till exempel en PNG-återgivning av en överförd JPEG-fil.
 
@@ -952,7 +952,7 @@ Versionsfunktionen gör följande:
 
 ### Starta ett arbetsflöde för en resurs {#starting-a-workflow-on-an-asset}
 
-Se [tillämpa ett arbetsflöde på en AEM](/help/assets/assets-workflow.md#apply-a-workflow-to-an-aem-asset).
+Se [tillämpa ett arbetsflöde på en [!DNL Experience Manager] resurs](/help/assets/assets-workflow.md#apply-a-workflow-to-an-aem-asset).
 
 ## Om samlingar {#collections}
 

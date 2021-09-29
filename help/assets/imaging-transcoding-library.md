@@ -2,12 +2,12 @@
 title: Konverteringsbibliotek för bildbehandling
 description: Lär dig hur du konfigurerar och använder Adobe Imaging Transcoding Library, en bildbehandlingslösning som kan utföra grundläggande bildhanteringsfunktioner, inklusive kodning, omkodning, bildomsampling och storleksändring.
 contentOwner: AG
-feature: Återgivningar,Utvecklarverktyg,Resurshantering
+feature: Renditions,Developer Tools,Asset Processing
 role: Admin
 exl-id: 0314626d-e846-4f10-950e-6c1ceb7f4c06
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '911'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Om du vill konfigurera ITL-bearbetning skapar du en konfigurationsfil och uppdat
 
 Om du vill konfigurera biblioteket skapar du en .conf-fil som anger biblioteken med följande steg. Du behöver administratörs- eller rotbehörigheter.
 
-1. Hämta paketet [Imaging Transcoding Library från Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) och installera det med Package Manager. Paketet är kompatibelt med AEM 6.5.
+1. Hämta paketet [Imaging Transcoding Library från Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) och installera det med Package Manager. Paketet är kompatibelt med [!DNL Experience Manager] 6.5.
 
 1. Om du vill veta ett paket-ID för `com.day.cq.dam.cq-dam-switchengine` loggar du in på webbkonsolen och trycker på **[!UICONTROL OSGi > Bundles]**. Du kan även öppna paketkonsolen genom att gå till URL:en `https://[aem_server:[port]/system/console/bundles/`. Leta reda på `com.day.cq.dam.cq-dam-switchengine`-paketet och dess ID.
 
@@ -109,7 +109,7 @@ Om du vill konfigurera biblioteket skapar du en .conf-fil som anger biblioteken 
 
 Uppdatera [!UICONTROL DAM Update Asset]-arbetsflödet om du vill använda biblioteket för bearbetning av bilder.
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Tools > Workflow > Models]**.
+1. Tryck/klicka på logotypen [!DNL Experience Manager] och gå till **[!UICONTROL Tools > Workflow > Models]**.
 
 1. Öppna arbetsflödesmodellen **[!UICONTROL DAM Update Asset]** i redigeringsläge från sidan **[!UICONTROL Workflow Models]**.
 

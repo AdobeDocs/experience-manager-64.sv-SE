@@ -1,29 +1,29 @@
 ---
 title: Resurser - nätverksaspekter
-description: Diskutera nätverksaspekter när du utformar en AEM Assets-distribution.
+description: Diskuterar nätverksaspekter när du utformar en  [!DNL Experience Manager] Assets-distribution.
 contentOwner: AG
-feature: Utvecklarverktyg
+feature: Developer Tools
 role: Architect,Admin
 exl-id: f8f9d86f-a5e3-46ac-8d96-c2e44eac9c93
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: cc6de21180c9fff74f7d64067db82f0c11ac9333
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '999'
 ht-degree: 0%
 
 ---
 
 # Resurser för nätverksaspekter {#assets-network-considerations}
 
-Att förstå ert nätverk är lika viktigt som att förstå Adobe Experience Manager (AEM) Assets. Nätverket kan påverka uppladdning, nedladdning och användarupplevelser. Genom att diagram över din nätverkstopologi kan du identifiera kodpunkter och underoptimerade områden i nätverket som du måste åtgärda för att förbättra nätverkets prestanda och användarupplevelsen.
+Att förstå ert nätverk är lika viktigt som att förstå Adobe Experience Manager Assets. Nätverket kan påverka uppladdning, nedladdning och användarupplevelser. Genom att diagram över din nätverkstopologi kan du identifiera kodpunkter och underoptimerade områden i nätverket som du måste åtgärda för att förbättra nätverkets prestanda och användarupplevelsen.
 
 Se till att du inkluderar följande i nätverksdiagrammet:
 
 * Anslutning från klientenheten (till exempel dator, mobil och surfplatta) till nätverket
 * Företagets topologi
-* Länka till Internet från företagets nätverk och AEM
-* Topologi i AEM
-* Definiera samtidiga konsumenter av AEM
-* Definierade arbetsflöden för AEM instans
+* Länka till Internet från företagsnätverket och [!DNL Experience Manager]-miljön
+* Topologi för [!DNL Experience Manager]-miljön
+* Definiera samtidiga konsumenter av [!DNL Experience Manager]-nätverksgränssnittet
+* Definierade arbetsflöden för [!DNL Experience Manager]-instansen
 
 ## Anslutning från klientenheten till företagsnätverket {#connectivity-from-the-client-device-to-the-corporate-network}
 
@@ -47,13 +47,13 @@ Den dator som visas till höger har en begränsad uppström till företagsnätve
 
 Diagrammet visar högre hastigheter för överordnad länk inom företagsnätverket än vad som vanligtvis används. Dessa rör är delade resurser. Om den delade växeln förväntas hantera 50 klienter kan det vara en kontrollpunkt. I det inledande diagrammet delar bara två datorer den aktuella anslutningen.
 
-## Länka till Internet från företagets nätverk och AEM {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
+## Länka till Internet från företagsnätverket och [!DNL Experience Manager]-miljön {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
 
 ![chlimage_1-355](assets/chlimage_1-355.png)
 
 Det är viktigt att ta hänsyn till okända faktorer på Internet och VPC-anslutningen eftersom bandbredden över Internet kan försämras på grund av belastningstopp eller storskaliga leverantörsavbrott. I allmänhet är internetanslutningen tillförlitlig. Ibland kan det dock medföra att kontrollpunkter läggs till.
 
-På uppkopplingen från ett företagsnätverk till Internet kan det finnas andra tjänster som använder bandbredden. Det är viktigt att du förstår hur stor del av bandbredden som kan dedikeras eller prioriteras för AEM Assets. Om till exempel en 1 Gbit/s-länk redan har 80 % utnyttjandegrad kan du bara tilldela högst 20 % av bandbredden för AEM resurser.
+På uppkopplingen från ett företagsnätverk till Internet kan det finnas andra tjänster som använder bandbredden. Det är viktigt att du förstår hur mycket av bandbredden som kan dedikeras eller prioriteras för [!DNL Assets]. Om till exempel en 1 Gbit/s-länk redan har 80 % utnyttjandegrad kan du bara tilldela maximalt 20 % av bandbredden för [!DNL Experience Manager]-resurser.
 
 Företagets brandväggar och proxies kan också forma bandbredden på många olika sätt. Den här typen av enhet kan prioritera bandbredden med hjälp av tjänstekvalitet, bandbreddsbegränsningar per användare eller bithastighetsbegränsningar per värd. Det här är viktiga punkter att undersöka eftersom de kan påverka Assets-användarupplevelsen avsevärt.
 
@@ -63,21 +63,21 @@ Det här är den minsta klientorienterade kontrollpunkten. Du kan dock utvärder
 
 I exempeldiagrammen kan du dra slutsatsen att sex enheter delar en konceptuell kanal på 10 Mbit/s. Beroende på storleken på de tillgångar som används kan detta vara otillräckligt för att uppfylla användarnas förväntningar.
 
-## Topologi i AEM {#topology-of-the-aem-environment}
+## Topologi för [!DNL Experience Manager]-miljön {#topology-of-the-aem-environment}
 
 ![chlimage_1-356](assets/chlimage_1-356.png)
 
-För att kunna designa topologin i den AEM miljön krävs detaljerade kunskaper om systemkonfigurationen och hur nätverket är anslutet i användarmiljön.
+Att utforma topologin för [!DNL Experience Manager]-miljön kräver detaljerade kunskaper om systemkonfigurationen och hur nätverket är anslutet i användarmiljön.
 
 Exempelscenariot innehåller en publiceringsgrupp med fem servrar, en binär S3-butik och dynamiska media konfigurerade.
 
-Dispatchern delar med sig av sin 100 Mbit/s-anslutning med två enheter, utsidan av världen och AEM. För samtidiga överförings- och nedladdningsåtgärder bör du dividera numret med två. Den anslutna externa lagringsplatsen använder en separat anslutning.
+Avsändaren delar med sig av sin 100 Mbit/s-anslutning med två entiteter, utifrån och [!DNL Experience Manager]-instansen. För samtidiga överförings- och nedladdningsåtgärder bör du dividera numret med två. Den anslutna externa lagringsplatsen använder en separat anslutning.
 
-Den AEM instansen delar sin 1 Gbit/s-anslutning med flera tjänster. Från ett nätverkstopologiperspektiv motsvarar det att dela en kanal med olika tjänster.
+Instansen [!DNL Experience Manager] delar sin 1Gbit/s-anslutning med flera tjänster. Från ett nätverkstopologiperspektiv motsvarar det att dela en kanal med olika tjänster.
 
-Om du granskar nätverket från klientenheten till den AEM instansen verkar den minsta kontrollpunkten vara begränsningen för företagets brandvägg på 10 Mbit. Du kan använda de här värdena i storlekskalkylatorn i [Resursstorlekshandboken](assets-sizing-guide.md) för att avgöra användarupplevelsen.
+Om du granskar nätverket från klientenheten till [!DNL Experience Manager]-instansen verkar den minsta kontrollpunkten vara begränsningen för företagsbrandväggen på 10 Mbit. Du kan använda de här värdena i storlekskalkylatorn i [Resursstorlekshandboken](assets-sizing-guide.md) för att avgöra användarupplevelsen.
 
-## Definierade arbetsflöden för AEM instans {#defined-workflows-of-the-aem-instance}
+## Definierade arbetsflöden för [!DNL Experience Manager]-instansen {#defined-workflows-of-the-aem-instance}
 
 När du tar hänsyn till nätverksprestanda kan det vara viktigt att tänka på arbetsflödena och publiceringen som kommer att ske i systemet. Dessutom använder S3 eller annan nätverksansluten lagring som du använder och I/O-begäranden nätverksbandbredd. Det innebär att även i ett helt optimerat nätverk kan prestanda begränsas av disk-I/O.
 

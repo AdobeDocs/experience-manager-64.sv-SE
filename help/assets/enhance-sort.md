@@ -1,28 +1,28 @@
 ---
 title: Förbättrad sortering av material i AEM
-description: Läs om hur AEM Assets använder sortering på serversidan för att sortera mappresurser eller en sökfråga samtidigt i stället för att sortera dem gruppvis på klientsidan.
+description: Lär dig hur  [!DNL Experience Manager] Assets distribuerar sortering på serversidan för att sortera mappresurser eller en sökfråga på en gång i stället för att sortera dem i grupper på klientsidan.
 contentOwner: AG
-feature: Sökning
+feature: Search
 role: User
 exl-id: aa24ca68-d94e-4bd4-a5cc-113906650a2e
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '429'
 ht-degree: 3%
 
 ---
 
-# Förbättrad sortering av material i AEM {#enhanced-sorting-of-assets-in-aem}
+# Förbättrad sortering av resurser i [!DNL Experience Manager] {#enhanced-sorting-of-assets-in-aem}
 
-Läs om hur AEM Assets använder sortering på serversidan för att sortera mappresurser eller en sökfråga samtidigt i stället för att sortera dem gruppvis på klientsidan.
+Lär dig hur [!DNL Experience Manager] Assets använder sortering på serversidan för att sortera mappresurser eller en sökfråga på en gång i stället för att sortera dem i grupper på klientsidan.
 
-Sökfunktionen i Adobe Experience Manager (AEM) Assets har förbättrats så att du effektivt kan sortera ett stort antal resurser i mapplistvyn och söka efter resultatsidor. Du kan också sortera tidslinjeposter.
+Sökfunktionen i Adobe Experience Manager Assets har förbättrats så att du effektivt kan sortera ett stort antal resurser i mapplistvyn och på sökresultatsidorna. Du kan också sortera tidslinjeposter.
 
-AEM Assets använder sortering på serversidan för att sortera hela uppsättningen resurser (oavsett var de är stora) i en mapp eller en sökfråga på en gång i stället för att sortera dem gruppvis på klientsidan. På så sätt kan förhämtade resultat snabbt visas i användargränssnittet, vilket gör sorteringsåtgärden mer responsiv och snabb.
+[!DNL Experience Manager] Resurser använder sortering på serversidan för att sortera hela uppsättningen resurser (oavsett var de är stora) i en mapp eller en sökfråga på en gång i stället för att sortera dem i grupper på klientsidan. På så sätt kan förhämtade resultat snabbt visas i användargränssnittet, vilket gör sorteringsåtgärden mer responsiv och snabb.
 
 ## Sortera resurser i listvyn {#sorting-assets-in-list-view}
 
-I AEM Assets kan du sortera mappresurser baserat på följande fält:
+[!DNL Experience Manager] Med resurser kan du sortera mappresurser baserat på följande fält:
 
 * Nat. inst
 * Status
@@ -75,7 +75,7 @@ Du kan sortera sökresultaten baserat på följande fält:
 
 ## Sortera resurser på tidslinjen {#sorting-assets-in-timeline}
 
-Med AEM Assets kan du sortera tidslinjeposter kronologiskt, till exempel anteckningar, versioner, arbetsflöden och aktiviteter.
+[!DNL Assets] Med kan du sortera tidslinjeposter kronologiskt, t.ex. anteckningar, versioner, arbetsflöden och aktiviteter.
 
 1. I resursgränssnittet väljer du en resurs som du vill visa tidslinjen för.
 1. Klicka på/tryck på ikonen GlobalNav och välj **[!UICONTROL Timeline]**.

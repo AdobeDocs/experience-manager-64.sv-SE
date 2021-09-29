@@ -3,12 +3,12 @@ title: Återanvända resurser med MSM
 description: Använd resurser på flera sidor/mappar som är härledda från och länkade till överordnade resurser. Resurserna är synkroniserade med en primär kopia och med några klick får du uppdateringar från överordnade resurser.
 contentOwner: AG
 mini-toc-levels: 1
-feature: Resurshantering,Multi Site Manager
+feature: Asset Management,Multi Site Manager
 role: User,Admin,Architect
 exl-id: a8e9f8de-ca84-4107-8f73-2fc75eeae1f1
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
 workflow-type: tm+mt
-source-wordcount: '3074'
+source-wordcount: '3061'
 ht-degree: 9%
 
 ---
@@ -64,7 +64,7 @@ MSM upprätthåller en aktiv relation mellan källresursen och dess livekopior s
 Om du vill skapa en live-kopia av en eller flera källresurser eller mappar gör du något av följande:
 
 * **Metod 1**: Välj källresurserna och klicka på  **[!UICONTROL Create]** >  **[!UICONTROL Live Copy]** i verktygsfältet överst.
-* **Metod 2**: I AEM användargränssnitt klickar du  **[!UICONTROL Create > Live Copy]** i det övre högra hörnet av gränssnittet.
+* **Metod 2**: I  [!DNL Experience Manager] användargränssnittet klickar du  **[!UICONTROL Create > Live Copy]** i det övre högra hörnet av gränssnittet.
 
 Du kan skapa live-kopior av en resurs eller en mapp åt gången. Du kan skapa live-kopior som är härledda från en resurs eller en mapp som är en live-kopia.
 
@@ -73,15 +73,15 @@ Content Fragments (CF) stöds inte för användningsfallet. När de försöker s
 Så här skapar du live-kopior med den första metoden:
 
 1. Välj källmaterial eller mappar. Klicka på **[!UICONTROL Create > Live Copy]** i verktygsfältet.
-   ![Skapa en live-kopia från AEM gränssnitt](assets/lc_create1.png)
+   ![Skapa live copy från  [!DNL Experience Manager] gränssnitt](assets/lc_create1.png)
 1. Välj källresurs eller källmapp. Klicka på **[!UICONTROL Next]**.
 1. Ange titel och namn. Resurserna har inga underordnade. När du skapar en live-kopia av mappar kan du välja att ta med eller exkludera underordnade.
 1. Välj en utrullningskonfiguration. Klicka på **[!UICONTROL Create]**.
 
 Så här skapar du live-kopior med den andra metoden:
 
-1. Klicka på **[!UICONTROL Create > Live Copy]** i AEM övre högra hörnet.
-   ![Skapa en live-kopia från AEM gränssnitt](assets/lc_create2.png)
+1. I [!DNL Experience Manager]-gränssnittet klickar du på **[!UICONTROL Create > Live Copy]** i det övre högra hörnet.
+   ![Skapa live copy från  [!DNL Experience Manager] gränssnitt](assets/lc_create2.png)
 1. Välj källresurs eller källmapp. Klicka på **[!UICONTROL Next]**.
 1. Välj målmapp. Klicka på **[!UICONTROL Next]**.
 1. Ange titel och namn. Resurserna har inga underordnade. När du skapar en live-kopia av mappar kan du välja att ta med eller exkludera underordnade.
@@ -93,7 +93,7 @@ Så här skapar du live-kopior med den andra metoden:
 
 ## Visa olika egenskaper och statusvärden för käll- och livekopia {#view-properties-statuses-source-and-lc}
 
-Du kan visa information och MSM-relaterade statusar för en live-kopia som relation, synkronisering, rollouts med mera från de olika områdena i AEM användargränssnitt. Följande två metoder fungerar för resurser och mappar:
+Du kan visa information och MSM-relaterade statusar för en live-kopia som relation, synkronisering, rollouts med mera från de olika områdena i [!DNL Experience Manager]-användargränssnittet. Följande två metoder fungerar för resurser och mappar:
 
 * Markera en live-kopia och hitta informationen på sidan **[!UICONTROL Properties]**.
 * Välj källmapp och sök efter detaljerad information om varje live-kopia i **[!UICONTROL Live Copy Console]**.
@@ -220,7 +220,7 @@ Du kan ångra alla lokala ändringar och återställa resursen till källans lä
 
 ## Ta bort direktrelation {#remove-live-relationship}
 
-Du kan ta bort relationen mellan en källa och en live-kopia helt med åtgärden Koppla loss. Den aktiva kopian blir en fristående resurs eller mapp när den har kopplats loss. Den visas som en ny resurs i AEM, omedelbart efter att den kopplats loss. Följ de här stegen för att koppla loss en live-kopia från källan.
+Du kan ta bort relationen mellan en källa och en live-kopia helt med åtgärden Koppla loss. Den aktiva kopian blir en fristående resurs eller mapp när den har kopplats loss. Den visas som en ny resurs i [!DNL Experience Manager]-gränssnittet, omedelbart efter frånkoppling. Följ de här stegen för att koppla loss en live-kopia från källan.
 
 1. Välj en resurs eller mapp för en live-kopia. Klicka på **[!UICONTROL Properties]** i verktygsfältet. Du kan också använda kortkommandot `p`.
 1. Klicka på **[!UICONTROL Live Copy]**. Klicka på **[!UICONTROL Detach]** i verktygsfältet. Klicka på **[!UICONTROL Detach]** i den dialogruta som visas.
@@ -243,7 +243,7 @@ Om du har flera resurser i en live-kopieringsmapp kan initieringsåtgärder för
 
 ## Utöka MSM för resurser {#extend-msm-for-assets}
 
-AEM gör att du kan utöka funktionaliteten med MSM Java API:er. För Assets fungerar utökningen på samma sätt som för MSM för Site. Mer information finns i [Utöka MSM](../sites-developing/extending-msm.md) och följande avsnitt för information om specifika uppgifter:
+[!DNL Experience Manager] Med kan du utöka funktionaliteten med MSM Java API:er. För Assets fungerar utökningen på samma sätt som för MSM för Site. Mer information finns i [Utöka MSM](../sites-developing/extending-msm.md) och följande avsnitt för information om specifika uppgifter:
 
 * [Översikt över API:er](../sites-developing/extending-msm.md#overview-of-the-java-api)
 * [Skapa en ny synkroniseringsåtgärd](../sites-developing/extending-msm.md#creating-a-new-synchronization-action)
@@ -259,7 +259,7 @@ AEM gör att du kan utöka funktionaliteten med MSM Java API:er. För Assets fun
 
 ## Effekter av tillgångshanteringsåtgärder på live-kopior {#impact-of-asset-management-tasks-on-live-copies}
 
-Live-kopior och källor är resurser eller mappar som i viss utsträckning kan hanteras som digitala resurser. Vissa resurshanteringsåtgärder i AEM har en specifik effekt på livekopiorna.
+Live-kopior och källor är resurser eller mappar som i viss utsträckning kan hanteras som digitala resurser. Vissa resurshanteringsåtgärder i [!DNL Experience Manager] har en specifik effekt på live-kopiorna.
 
 * När du kopierar en live-kopia skapas en live-kopia med samma källa som den första live-kopian.
 * När du flyttar en källa eller dess livekopia behålls den aktiva relationen.

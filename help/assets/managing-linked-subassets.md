@@ -1,35 +1,35 @@
 ---
 title: Hantera sammansatta resurser och generera delresurser.
-description: Lär dig hur du skapar referenser till AEM resurser från filer i InDesign, Adobe Illustrator och Photoshop. Lär dig även hur du använder funktionen för sidvisning för att visa enskilda sidor med flersidiga filer, inklusive PDF-, INDD-, PPT-, PPTX- och AI-filer.
+description: Lär dig hur du skapar referenser till [!DNL Experience Manager] resurser i InDesign-, Adobe Illustrator- och Photoshop-filer. Lär dig även hur du använder funktionen för sidvisning för att visa enskilda sidor med flersidiga filer.
 contentOwner: AG
 feature: Asset Management
 role: User,Admin
 exl-id: 9fa44b26-76f7-48e2-a9df-4fd1c0074158
-source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
+source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1318'
 ht-degree: 0%
 
 ---
 
 # Hantera sammansatta resurser med delresurser {#managing-compound-assets}
 
-Adobe Experience Manager (AEM) Resurser kan identifiera om en överförd fil innehåller referenser till resurser som redan finns i databasen. Den här funktionen är endast tillgänglig för filformat som stöds. Om den överförda resursen innehåller referenser till AEM resurser skapas en dubbelriktad länk mellan den överförda och refererade resursen.
+Adobe Experience Manager Assets kan identifiera om en överförd fil innehåller referenser till resurser som redan finns i databasen. Den här funktionen är endast tillgänglig för filformat som stöds. Om den överförda resursen innehåller referenser till [!DNL Experience Manager]-resurser skapas en dubbelriktad länk mellan de överförda och refererade resurserna.
 
-Förutom att eliminera redundans förbättrar referensen AEM resurser i Adobe Creative Cloud-program samarbetet och ökar användarnas effektivitet och produktivitet.
+Förutom att eliminera redundans förbättrar referensen till [!DNL Experience Manager]-resurser i Adobe Creative Cloud-program samarbetet och ökar användarnas effektivitet och produktivitet.
 
-AEM Assets stöder **dubbelriktad referens**. Du kan hitta refererade resurser på sidan med tillgångsinformation i den överförda filen. Dessutom kan du visa de refererande filerna för AEM resurser på sidan med resursinformation för den refererade resursen.
+[!DNL Experience Manager] Resurser har stöd för  **dubbelriktade referenser**. Du kan hitta refererade resurser på sidan med tillgångsinformation i den överförda filen. Dessutom kan du visa de refererande filerna för [!DNL Experience Manager]-resurser på sidan med resursinformation för den refererade resursen.
 
 Referenser tolkas utifrån sökväg, dokument-ID och instans-ID för de refererade resurserna.
 
 ## Adobe Illustrator: Lägga till resurser som referenser {#refai}
 
-Du kan referera till befintliga AEM från en Adobe Illustrator-fil.
+Du kan referera till befintliga [!DNL Experience Manager]-resurser inifrån en Adobe Illustrator-fil.
 
-1. Använd [AEM skrivbordsapp](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html) och montera AEM Assets-databasen som en enhet på den lokala datorn. Navigera till platsen för resursen som du vill referera till i den monterade enheten.
+1. Använd [[!DNL Experience Manager] skrivbordsappen](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html) och montera [!DNL Experience Manager] resurskatalogen som en enhet på den lokala datorn. Navigera till platsen för resursen som du vill referera till i den monterade enheten.
 1. Dra resursen från den monterade enheten till Illustrator-filen.
-1. Spara Illustrator-filen på den monterade enheten eller [överför](managing-assets-touch-ui.md#uploading-assets) till AEM.
-1. När arbetsflödet är klart går du till sidan med resursinformation för resursen. Referenserna till befintliga AEM resurser visas under **[!UICONTROL Dependencies]** i kolumnen **[!UICONTROL References]**.
+1. Spara Illustrator-filen på den monterade enheten eller [överför](managing-assets-touch-ui.md#uploading-assets) till [!DNL Experience Manager]-databasen.
+1. När arbetsflödet är klart går du till sidan med resursinformation för resursen. Referenserna till befintliga [!DNL Experience Manager]-resurser visas under **[!UICONTROL Dependencies]** i kolumnen **[!UICONTROL References]**.
 
    ![chlimage_1-258](assets/chlimage_1-258.png)
 
@@ -43,9 +43,9 @@ Du kan referera till befintliga AEM från en Adobe Illustrator-fil.
 
 ## Adobe InDesign: Lägga till resurser som referenser {#add-aem-assets-as-references-in-adobe-indesign}
 
-Om du vill referera AEM resurser från en InDesign-fil drar du AEM resurser till InDesign-filen eller exporterar InDesign-filen som en ZIP-fil.
+Om du vill referera till [!DNL Experience Manager]-resurser från en InDesign-fil drar du [!DNL Experience Manager]-resurser till InDesign-filen eller exporterar InDesign-filen som en ZIP-fil.
 
-Referensresurser finns redan i AEM Assets. Du kan extrahera delresurser genom att [konfigurera InDesign server](indesign.md). Inbäddade resurser i en InDesign-fil extraheras som delresurser.
+Refererade resurser finns redan i [!DNL Experience Manager] Resurser. Du kan extrahera delresurser genom att [konfigurera InDesign server](indesign.md). Inbäddade resurser i en InDesign-fil extraheras som delresurser.
 
 >[!NOTE]
 >
@@ -61,19 +61,19 @@ Den här proceduren liknar [Lägg till resurser som referenser i Adobe Illustrat
 
 1. Utför stegen i [Skapa arbetsflödesmodeller](/help/sites-developing/workflows-models.md) för att skapa ett nytt arbetsflöde.
 1. Använd [paketeringsfunktionen i Adobe InDesign](https://helpx.adobe.com/indesign/how-to/indesign-package-files-for-handoff.html) för att exportera dokumentet. Adobe InDesign kan exportera ett dokument och de länkade resurserna som ett paket. I det här fallet innehåller den exporterade mappen en `Links`-mapp som innehåller underresurser i InDesign-filen. Mappen `Links` finns i samma mapp som INDD-filen.
-1. Skapa en ZIP-fil och överför den till AEM.
+1. Skapa en ZIP-fil och överför den till [!DNL Experience Manager]-databasen.
 1. Starta arbetsflödet för Unarchiver.
 1. När arbetsflödet är klart refereras referenserna i mappen Länkar automatiskt till underresurser. Om du vill visa en lista över refererade resurser går du till sidan med tillgångsinformation för resursen i InDesign och stänger [Rail](/help/sites-authoring/basic-handling.md#rail-selector).
 
 ## Adobe Photoshop: Lägga till resurser som referenser {#refps}
 
-1. Montera AEM Assets som en enhet med en WebDav-klient.
-1. Om du vill skapa referenser till AEM resurser i en Photoshop-fil navigerar du till motsvarande resurser på den monterade enheten med hjälp av funktionen Montera länkad i Photoshop.
+1. Använd en WebDav-klient och montera [!DNL Experience Manager]-resurser som en enhet.
+1. Om du vill skapa referenser till [!DNL Experience Manager]-resurser i en Photoshop-fil navigerar du till motsvarande resurser på den monterade enheten med hjälp av funktionen Montera länkad i Photoshop.
 
    ![chlimage_1-261](assets/chlimage_1-261.png)
 
-1. Spara i Photoshop-fil till den monterade enheten eller [överför](managing-assets-touch-ui.md#uploading-assets) till AEM.
-1. När arbetsflödet är klart visas referenserna till befintliga AEM resurser på sidan med tillgångsinformation.
+1. Spara i Photoshop-fil till den monterade enheten eller [överför](managing-assets-touch-ui.md#uploading-assets) till [!DNL Experience Manager]-databasen.
+1. När arbetsflödet är klart visas referenserna till befintliga [!DNL Experience Manager]-resurser på sidan med resursinformation.
 
    Om du vill visa de refererade resurserna stänger du [Rail](/help/sites-authoring/basic-handling.md#rail-selector) på sidan med resursinformation.
 
@@ -85,7 +85,7 @@ Den här proceduren liknar [Lägg till resurser som referenser i Adobe Illustrat
 
 ## Skapa delresurser {#generate-subassets}
 
-För resurser som stöds i flersidiga format - PDF-filer, AI-filer, Microsoft PowerPoint- och Apple Keynote-filer samt Adobe InDesign-filer - kan AEM generera delresurser som motsvarar varje enskild sida i den ursprungliga resursen. Dessa underresurser är länkade till *överordnad* resurs och underlättar flersidesvisning. I alla andra syften behandlas deltillgångarna som normala tillgångar i AEM.
+För resurser som stöds i flersidiga format - PDF-filer, AI-filer, Microsoft PowerPoint- och Apple Keynote-filer samt Adobe InDesign-filer - kan [!DNL Experience Manager] generera delresurser som motsvarar varje enskild sida i den ursprungliga resursen. Dessa underresurser är länkade till *överordnad* resurs och underlättar flersidesvisning. I alla andra syften behandlas deltillgångarna som normala tillgångar i AEM.
 
 Generering av delresurser är inaktiverat som standard. Så här aktiverar du generering av delresurser:
 
@@ -111,7 +111,7 @@ Delresurserna visas bara om delresurserna genereras och är tillgängliga för d
 
 ## Visa sidor i en flersidig fil {#view-pages-of-a-multi-page-file}
 
-Du kan visa en flersidig fil, till exempel PDF-, INDD-, PPT-, PPTX- och AI-filer, med hjälp av sidvisningsfunktionen i AEM Assets. Öppna en flersidig resurs och klicka på **[!UICONTROL View Pages]** i det övre vänstra hörnet på sidan. Sidvisningsprogrammet som öppnas visar sidorna för resursen och kontrollerna för att bläddra igenom och zooma varje sida.
+Du kan visa en flersidig fil, till exempel PDF-, INDD-, PPT-, PPTX- och AI-filer, med hjälp av funktionen för sidvisningsprogram i [!DNL Experience Manager]-resurser. Öppna en flersidig resurs och klicka på **[!UICONTROL View Pages]** i det övre vänstra hörnet på sidan. Sidvisningsprogrammet som öppnas visar sidorna för resursen och kontrollerna för att bläddra igenom och zooma varje sida.
 
 ![Visa och visa sidor för en flersidig resurs](assets/view_multipage_asset_fmr.gif)
 
@@ -119,7 +119,7 @@ För InDesign kan du extrahera sidor med hjälp av InDesign-servern. Om förhand
 
 Följande alternativ är tillgängliga i verktygsfältet, i den vänstra listen och i kontrollerna i sidvisningsprogrammet:
 
-* **[!UICONTROL Desktop Actions]** för att öppna eller visa en viss underresurs med AEM skrivbordsapp. Se hur du [konfigurerar skrivbordsåtgärder](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2) om du använder AEM skrivbordsapp.
+* **[!UICONTROL Desktop Actions]** för att öppna eller visa en viss underresurs med  [!DNL Experience Manager] skrivbordsappen. Se hur du [konfigurerar skrivbordsåtgärder](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2) om du använder [!DNL Experience Manager]-datorprogrammet.
 
 * **[!UICONTROL Properties]** öppnar  [!UICONTROL Properties] sidan för den specifika underresursen.
 

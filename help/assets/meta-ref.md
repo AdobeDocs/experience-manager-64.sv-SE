@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: 883bebc6-8bbc-43b1-91e5-9e2bf2470b6e
-source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
+source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '392'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Följande referens innehåller information om en viss metadataram (i alfabetisk 
 
 ## Dublin Core {#dublin-core}
 
-Dublin Core-metadata innehåller en standardiserad uppsättning konventioner för att beskriva resurser så att de blir lättare att hitta. I AEM Assets beskriver Dublin Core digitala resurser som video, ljud, bilder och dokument.
+Dublin Core-metadata innehåller en standardiserad uppsättning konventioner för att beskriva resurser så att de blir lättare att hitta. I [!DNL Experience Manager] Assets beskriver Dublin Core digitala resurser som video, ljud, bilder och dokument.
 
 Den enkla DCMES-uppsättningen (Dublin Core Metadata Element Set) innehåller 15 metadataelement som listas i följande tabell. Varje Dublin Core-element är valfritt och kan upprepas. Du kan lägga till eller ta bort metadata för Dublin Core på samma sätt som du gör för medietypsspecifika metadata.
 
@@ -31,7 +31,7 @@ Förutom DCMES finns det andra metadataelement som skapats av Dublin Core Initia
 | skapare | Den person eller det företag som ansvarar för att skapa innehållet. |
 | date | Datum eller tidsperiod som är associerad med tillgången. |
 | description | Mer information om resursen. |
-| format | Filformat, fysiskt medium eller dimensioner för resursen. AEM använder dc:format för att ange resursens mime-typ. |
+| format | Filformat, fysiskt medium eller dimensioner för resursen. [!DNL Experience Manager] använder dc:format för att ange resursens mime-typ. |
 | identifierare | En unik referens till tillgången. |
 | language | Språket för resursen (t.ex. en för engelska). |
 | utgivare | Den person eller det företag som ansvarar för att göra tillgången tillgänglig. |

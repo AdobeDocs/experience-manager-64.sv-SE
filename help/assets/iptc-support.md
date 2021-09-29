@@ -1,22 +1,22 @@
 ---
 title: Stöd för IPTC-metadata
-description: Läs om hur Adobe Experience Manager (AEM) Assets stöder IPTC-metadata, kreativa betyg och nyckelord som läggs till i resurser via Adobe Bridge och andra Creative-program.
+description: Läs om hur Adobe Experience Manager Assets stöder IPTC-metadata, kreativa betyg och nyckelord som läggs till i resurser via Adobe Bridge och andra Creative-program.
 contentOwner: AG
 feature: Metadata
 role: User,Admin,Leader
 exl-id: 3e22e8e4-3675-4d6d-94f4-fc1a4d4801e8
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '353'
 ht-degree: 7%
 
 ---
 
 # Stöd för IPTC-metadata {#support-for-iptc-metadata}
 
-Läs om hur Adobe Experience Manager (AEM) Assets stöder IPTC-metadata, kreativa betyg och nyckelord som läggs till i resurser via Adobe Bridge och andra Creative-program.
+Läs om hur Adobe Experience Manager Assets stöder IPTC-metadata, kreativa betyg och nyckelord som läggs till i resurser via Adobe Bridge och andra Creative-program.
 
-Adobe Experience Manager (AEM) Assets har stöd för IPTC-metadatastandarden som används ofta för att beskriva resurser. På så sätt blir AEM Assets bättre på att acceptera bilderna hos olika parter, bland annat fotografer, reklambyråer, bibliotek, museer osv.
+Adobe Experience Manager Assets har stöd för IPTC-metadatastandarden som används ofta för att beskriva resurser. På så sätt kan [!DNL Experience Manager Assets] förbättra accepterandet av bilder från olika parter, bland annat fotografer, byråer, museer och så vidare.
 
 Standardschemat för metadata för mediefiler innehåller nu metadatamodeller för IPTC Core och IPTC Extension för att definiera omfattande metadataegenskaper som gör att användare kan lägga till exakta och tillförlitliga data om personer, platser och produkter som visas i en bild. Det har även stöd för datum, namn och identifierare för att skapa bilden samt ett flexibelt sätt att uttrycka rättighetsinformation.
 

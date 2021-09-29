@@ -2,12 +2,12 @@
 title: Redigera metadata gruppvis för flera resurser och samlingar
 description: Lär dig hur du redigerar metadata för många resurser och samlingar samtidigt för att snabbt sprida vanliga metadataändringar.
 contentOwner: AG
-feature: Resurshantering,Metadata,Samlingar
+feature: Asset Management,Metadata,Collections
 role: User
 exl-id: 3541b50a-f226-4a6a-9c2a-03a5f47f1c23
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '411'
 ht-degree: 13%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 13%
 
 Lär dig hur du redigerar metadata för flera resurser och samlingar samtidigt för att snabbt sprida vanliga metadataändringar.
 
-Med Adobe Enterprise Manager (AEM) Assets kan du redigera metadata för flera resurser samtidigt så att du snabbt kan sprida vanliga metadataändringar till resurser samtidigt. Du kan också redigera metadata för flera samlingar samtidigt.
+Med Adobe Enterprise Manager Assets kan du redigera metadata för flera resurser samtidigt så att du snabbt kan sprida vanliga metadataändringar till flera resurser samtidigt. Du kan också redigera metadata för flera samlingar samtidigt.
 
 Använd egenskapssidan för att utföra metadataändringar på flera resurser eller samlingar:
 
@@ -47,7 +47,7 @@ Om du vill anpassa sidan med metadataegenskaper, inklusive lägga till, ändra e
 
 ## Konfigurera gräns för uppdatering av massmetadata {#configure-limit-for-bulk-metadata-update}
 
-För att förhindra DOS-liknande situationer begränsar AEM antalet parametrar som stöds i en Sling-begäran. När du uppdaterar metadata för många resurser på en gång kan du nå gränsen och metadata uppdateras inte för fler resurser. AEM genererar följande varning i loggarna:
+För att förhindra DOS-liknande situationer begränsar [!DNL Experience Manager] antalet parametrar som stöds i en Sling-begäran. När du uppdaterar metadata för många resurser på en gång kan du nå gränsen och metadata uppdateras inte för fler resurser. [!DNL Experience Manager] genererar följande varning i loggarna:
 
 `org.apache.sling.engine.impl.parameters.Util Too many name/value pairs, stopped processing after 10000 entries`
 

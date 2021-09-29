@@ -5,16 +5,16 @@ contentOwner: VG
 feature: Brand Portal
 role: Admin
 exl-id: cde35555-259f-4d16-999f-2b93d597b8a5
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
 workflow-type: tm+mt
-source-wordcount: '1557'
-ht-degree: 36%
+source-wordcount: '1554'
+ht-degree: 37%
 
 ---
 
 # Konfigurera AEM Assets med varumärkesportalen {#configure-integration-64}
 
-Adobe Experience Manager (AEM) Assets konfigureras med Brand Portal via [!DNL Adobe I/O], som anskaffar en IMS-token för auktorisering av din Brand Portal-klient.
+Adobe Experience Manager Assets konfigureras med Brand Portal via [!DNL Adobe I/O], som anskaffar en IMS-token för auktorisering av din Brand Portal-klient.
 
 >[!NOTE]
 >

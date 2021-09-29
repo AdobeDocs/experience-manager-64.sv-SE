@@ -1,8 +1,8 @@
 ---
 title: Bädda in Dynamic Media Video eller Image Viewer på en webbsida
-seo-title: Bädda in Dynamic Media Video eller Image Viewer på en webbsida
+seo-title: Embedding the Dynamic Media Video or Image viewer on a web page
 description: Lär dig bädda in Dynamic Media-video eller -bilder på en webbsida
-seo-description: Lär dig bädda in dynamisk medievideo eller bilder på en webbsida
+seo-description: Learn how to embed Dynamic media video or images on a web page
 uuid: 6f786521-eb6c-4c80-8c15-9bf97b56818f
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,12 +10,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
 exl-id: bff564a8-e982-4e1a-a9b5-05e44e3e4d46
-feature: Komponenter
+feature: Components
 role: User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 20%
+source-wordcount: '358'
+ht-degree: 21%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 20%
 
 Använd funktionen **[!UICONTROL Embed Code]** när du vill spela upp videon eller visa en resurs som är inbäddad på en webbsida. Du kopierar inbäddningskoden till Urklipp så att du kan klistra in den på webbsidorna. Det är inte tillåtet att redigera koden i dialogrutan **[!UICONTROL Embed Code]**.
 
-Du bäddar bara in URL:er om du är _inte_ och använder AEM som WCM. Om du använder AEM som WCM-fil [lägger du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
+Du bäddar bara in URL:er om du är _inte_ och använder [!DNL Experience Manager] som WCM. Om du använder [!DNL Experience Manager] som WCM-fil [lägger du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
 
 Se [Länka URL:er till ditt webbprogram.](linking-urls-to-yourwebapplication.md)
 

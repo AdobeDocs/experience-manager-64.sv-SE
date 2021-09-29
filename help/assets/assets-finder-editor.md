@@ -2,12 +2,12 @@
 title: Skapa och konfigurera sidor för Resursredigeraren
 description: Lär dig hur du skapar anpassade sidor i Resursredigeraren och redigerar flera resurser samtidigt.
 contentOwner: AG
-feature: Utvecklarverktyg,Resurshantering
+feature: Developer Tools,Asset Management
 role: User,Admin
 exl-id: 12899f61-9ceb-4bde-a501-6c50c93e3276
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
 workflow-type: tm+mt
-source-wordcount: '3200'
+source-wordcount: '3182'
 ht-degree: 0%
 
 ---
@@ -26,13 +26,13 @@ I det här dokumentet beskrivs följande:
 
 ## Varför skapa och konfigurera resursredigeringssidor? {#why-create-and-configure-asset-editor-pages}
 
-Digital Asset Management används i allt fler scenarier. När man går över från en småskalig lösning för en liten användargrupp yrkesutbildade användare - till exempel fotografer eller taxonomier - till större och mer mångsidiga användargrupper - t.ex. affärsanvändare, WCM-författare, journalister osv. - kan det kraftfulla användargränssnittet i Adobe Experience Manager (AEM) Assets för professionella användare tillhandahålla för mycket information och intressenter börjar begära specifika användargränssnitt eller applikationer för att få tillgång till de digitala resurserna som är relevanta för dem.
+Digital Asset Management används i allt fler scenarier. När man går från en småskalig lösning för en liten användargrupp yrkesutbildade användare - till exempel fotografer eller taxonomier - till större och mer mångsidiga användargrupper - t.ex. affärsanvändare, WCM-författare, journalister osv. - kan det kraftfulla användargränssnittet [!DNL Adobe Experience Manager Assets] för professionella användare tillhandahålla för mycket information och intressenter börjar begära specifika användargränssnitt eller applikationer för att få tillgång till de digitala resurserna som är relevanta för dem.
 
 Dessa resurscentrerade program kan vara enkla fotogallerier i ett intranät där medarbetarna kan ladda upp bilder från mässor eller ett presscenter på en offentlig webbplats, till exempel i Geometrixx. Tillgångscentrerade tillämpningar kan även omfatta kompletta lösningar som kundvagnar, kassor och verifieringsprocesser.
 
-Att skapa ett resurscentrerat program blir i stor utsträckning en konfigurationsprocess som inte kräver kodning, bara kunskap om användargrupper och deras behov samt kunskap om de metadata som används. Resurscentrerade program som skapats med AEM Assets kan utökas: med måttlig kodningsansträngning kan återanvändbara komponenter för att söka, visa och ändra resurser skapas.
+Att skapa ett resurscentrerat program blir i stor utsträckning en konfigurationsprocess som inte kräver kodning, bara kunskap om användargrupper och deras behov samt kunskap om de metadata som används. Resurscentrerade program som skapats med [!DNL Assets] kan utökas: med måttlig kodningsansträngning kan återanvändbara komponenter för att söka, visa och ändra resurser skapas.
 
-Ett resurscentrerat program i AEM består av en tillgångsredigeringssida, som kan användas för att få en detaljerad vy över en viss resurs. På en resursredigeringssida kan du även redigera metadata, förutsatt att användaren som använder resursen har de behörigheter som krävs.
+Ett resurscentrerat program i [!DNL Experience Manager] består av en resursredigeringssida, som kan användas för att få en detaljerad vy av en viss resurs. På en resursredigeringssida kan du även redigera metadata, förutsatt att användaren som använder resursen har de behörigheter som krävs.
 
 ## Skapa och konfigurera en resursdelningssida {#creating-and-configuring-an-asset-share-page}
 
@@ -161,7 +161,7 @@ Så här anpassar du frågeverktyget:
 
 #### Lägg till predikat {#adding-predicates}
 
-AEM Assets innehåller ett antal predikat som du kan lägga till på sidan Resursresurs. På så sätt kan användarna begränsa sökningarna ytterligare. I vissa fall kan de åsidosätta en frågebyggarparameter (till exempel parametern Path).
+[!DNL Experience Manager Assets] innehåller ett antal predikat som du kan lägga till på sidan Resursresurs. På så sätt kan användarna begränsa sökningarna ytterligare. I vissa fall kan de åsidosätta en frågebyggarparameter (till exempel parametern Path).
 
 Så här lägger du till predikat:
 
@@ -279,7 +279,7 @@ Metadataformuläret är ett formulär som innehåller en start- och slutåtgärd
 
    ![screen_shot_2012-04-23at23305pm](assets/screen_shot_2012-04-23at23305pm.png)
 
-   Mer information om hur du ändrar namnutrymmen i metadataformuläret finns i [Anpassa och utöka AEM Assets](extending-assets.md).
+   Mer information om hur du ändrar namnutrymmen i metadataformuläret finns i [Anpassa och utöka [!DNL Assets]](extending-assets.md).
 
 1. Klicka på fliken **[!UICONTROL Constraints]**. Här kan du välja om ett fält är obligatoriskt och vid behov lägga till begränsningar.
 
@@ -392,7 +392,7 @@ Så här lägger du till åtgärder på sidan Resursredigeraren:
 
 ## Redigera flera resurser med sidan Resursredigeraren {#multi-editing-assets-with-the-asset-editor-page}
 
-Med AEM Assets kan du ändra flera resurser samtidigt. När du har valt resurser kan du ändra deras:
+Med [!DNL Assets] kan du ändra flera resurser samtidigt. När du har valt resurser kan du ändra deras:
 
 * Taggar
 * Metadata

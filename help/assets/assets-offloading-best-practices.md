@@ -1,13 +1,13 @@
 ---
 title: Metodtips för att avlasta resurser
-description: Rekommenderade användningsexempel och bästa praxis för att avlasta arbetsflöden för tillgångsintag och replikering i AEM Assets.
+description: Rekommenderade användningsexempel och bästa praxis för att avlasta arbetsflöden för tillgångsintag och replikering i [!DNL Experience Manager] Resurser.
 contentOwner: AG
-feature: Resurshantering
+feature: Asset Management
 role: User,Admin
 exl-id: 3ecc8988-add1-47d5-80b4-984beb4d8dab
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: cc6de21180c9fff74f7d64067db82f0c11ac9333
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1805'
 ht-degree: 0%
 
 ---
@@ -16,17 +16,17 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->Den här funktionen är borttagen AEM 6.4 och framåt och tas bort i AEM 6.5. Planera därefter.
+>Den här funktionen är inaktuell [!DNL Experience Manager] 6.4 och framåt och har tagits bort i [!DNL Experience Manager] 6.5. Planera därefter.
 
-Hantering av stora filer och arbetsflöden som körs i Adobe Experience Manager (AEM) Resurser kan ta mycket processorkraft, minne och I/O-resurser i anspråk. I synnerhet kan storleken på resurser, arbetsflöden, antalet användare och frekvensen för tillgångsinmatning påverka systemets totala prestanda. De mest resurskrävande åtgärderna omfattar arbetsflöden för AEM och replikering. Intensiv användning av dessa arbetsflöden i en enda AEM kan påverka redigeringseffektiviteten negativt.
+Att hantera stora filer och köra arbetsflöden i Adobe Experience Manager Assets kan ta mycket processorkraft, minne och I/O-resurser i anspråk. I synnerhet kan storleken på resurser, arbetsflöden, antalet användare och frekvensen för tillgångsinmatning påverka systemets totala prestanda. De mest resurskrävande åtgärderna omfattar arbetsflöden för tillgångsinmatning och replikering. Intensiv användning av dessa arbetsflöden i en enda redigeringsinstans kan påverka redigeringseffektiviteten negativt.
 
 Genom att avlasta dessa uppgifter för dedikerade arbetarinstanser kan du minska kostnaderna för processor, minne och IO. I allmänhet är tanken bakom avlastning att distribuera uppgifter som förbrukar intensiva processor-/minnes-/IO-resurser till dedikerade arbetarinstanser. Följande avsnitt innehåller rekommenderade användningsfall för avlastning av resurser.
 
-## AEM Assets Offloading {#aem-assets-offloading}
+## [!DNL Experience Manager Assets] Avlastning {#aem-assets-offloading}
 
-AEM Assets implementerar ett internt resursspecifikt arbetsflödestillägg för avlastning. Det bygger på det allmänna arbetsflödestillägget som avlastningsramverket erbjuder, men innehåller ytterligare resursspecifika funktioner i implementeringen. Målet med resursavlastning är att effektivt köra arbetsflödet för DAM-uppdatering av tillgångar på en överförd resurs. Genom att avlasta resurser får du bättre kontroll över arbetsflödena för att lägga in material.
+[!DNL Experience Manager] Resurser implementerar ett internt resursspecifikt arbetsflödestillägg för avlastning. Det bygger på det allmänna arbetsflödestillägget som avlastningsramverket erbjuder, men innehåller ytterligare resursspecifika funktioner i implementeringen. Målet med resursavlastning är att effektivt köra arbetsflödet för DAM-uppdatering av tillgångar på en överförd resurs. Genom att avlasta resurser får du bättre kontroll över arbetsflödena för att lägga in material.
 
-## AEM Assets Offloading Components {#aem-assets-offloading-components}
+## [!DNL Experience Manager] Resurser som avlastar komponenter {#aem-assets-offloading-components}
 
 I följande diagram visas huvudkomponenterna i resursavlastningsprocessen:
 
@@ -40,7 +40,7 @@ Arbetsflödet för DAM Update Asset Offloading körs på den primära (författa
 
 Jobbhanteraren distribuerar nya jobb till arbetarinstanser. När du utformar distributionsmekanismen är det viktigt att ta hänsyn till ämnesaktivering. Jobb kan bara tilldelas till instanser där jobbets ämne är aktiverat. Inaktivera ämnet `com/adobe/granite/workflow/offloading` på den primära arbetsytan och aktivera det på arbetaren för att se till att jobbet är tilldelat arbetaren.
 
-### AEM avlastning {#aem-offloading}
+### [!DNL Experience Manager] avlastning {#aem-offloading}
 
 Avlastningsramverket identifierar arbetsflödesavlastningsjobb som tilldelats arbetsinstanser och använder replikering för att fysiskt överföra dem, inklusive deras nyttolast (till exempel bilder som ska hämtas), till arbetare.
 
@@ -50,7 +50,7 @@ När ett jobb har skrivits på arbetaren anropar jobbhanteraren den jobbkonsumen
 
 ## Sling Topology {#sling-topology}
 
-Sling-topologigrupperna AEM instanser och gör det möjligt för dem att vara medvetna om varandra, oberoende av den underliggande persistensen. Denna egenskap hos Sling-topologin gör att du kan skapa topologier för icke-klustrade, grupperade och blandade scenarier. En instans kan visa egenskaper för hela topologin. Ramverket innehåller återanrop för avlyssning av ändringar i topologin (instanser och egenskaper). Sling-topologin utgör grunden för Sling-distribuerade jobb.
+Sling-topologin grupperar [!DNL Experience Manager] instanser och gör det möjligt för dem att vara medvetna om varandra, oberoende av den underliggande persistensen. Denna egenskap hos Sling-topologin gör att du kan skapa topologier för icke-klustrade, grupperade och blandade scenarier. En instans kan visa egenskaper för hela topologin. Ramverket innehåller återanrop för avlyssning av ändringar i topologin (instanser och egenskaper). Sling-topologin utgör grunden för Sling-distribuerade jobb.
 
 ### Säljer distribuerade jobb {#sling-distributed-jobs}
 
@@ -89,7 +89,7 @@ Om du kommer fram till att avlastning av resurser är ett lämpligt sätt för d
 
 ### Rekommenderade resurser avlastar distributionen {#recommended-assets-offloading-deployment}
 
-Med AEM och Oak finns det flera möjliga distributionsscenarier. För avlastning av resurser rekommenderas en TARMK-baserad distribution med ett delat datalager. I följande diagram visas den rekommenderade distributionen:
+Med [!DNL Experience Manager] och Oak finns flera distributionsscenarier möjliga. För avlastning av resurser rekommenderas en TARMK-baserad distribution med ett delat datalager. I följande diagram visas den rekommenderade distributionen:
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 

@@ -2,12 +2,12 @@
 title: Använda demopaket för Assets Insights
 description: Använd demopaketet för att möjliggöra för Adobe Assets Insights att hämta in data från och generera insikter för en webbsida.
 contentOwner: AG
-feature: Resursinsikter,Resursrapporter
+feature: Asset Insights,Asset Reports
 role: User,Admin
 exl-id: c6d321f5-4c48-47f2-bff1-c4da988c0e84
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
@@ -16,10 +16,10 @@ ht-degree: 0%
 
 Med hjälp av demopaketet kan du göra det möjligt för Adobe Assets Insights att samla in data från och generera insikter för en exempelwebbsida.
 
-## Använda AEM Assets Insights med exempelwebbsidor  {#using-aem-assets-insights-with-sample-web-page}
+## Använda [!DNL Experience Manager] Assets Insights med exempelwebbsida  {#using-aem-assets-insights-with-sample-web-page}
 
 1. Konfigurera resursinsikter med hjälp av instruktionerna i [Konfigurera resursinsikter](touch-ui-configuring-asset-insights.md).
-1. Hämta exempelpaketet för AEM Assets nedan och installera paketet från pakethanteraren för CRXDE.
+1. Hämta [!DNL Experience Manager]-resurspaketet nedan och installera paketet från CRXDE-pakethanteraren.
 
 [Hämta fil](assets/insightsdemo.zip)
 
@@ -35,4 +35,4 @@ Med hjälp av demopaketet kan du göra det möjligt för Adobe Assets Insights a
 
    >[!NOTE]
    >
-   >Den externa webbsidan kan vara AEM.
+   >Den externa webbsidan kan vara i själva [!DNL Experience Manager].

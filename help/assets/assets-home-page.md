@@ -1,26 +1,26 @@
 ---
-title: AEM Assets Home Page Experience
-description: Anpassa AEM Assets hemsida för att få en bra välkomstskärm, inklusive en ögonblicksbild av nyligen gjorda aktiviteter kring resurser.
+title: '[!DNL Experience Manager Assets] Home Page Experience'
+description: Anpassa startsidan för Assets för en rik välkomstskärm, inklusive en ögonblicksbild av nyligen gjorda aktiviteter kring resurser.
 contentOwner: AG
-feature: Utvecklarverktyg,Resurshantering
+feature: Developer Tools,Asset Management
 role: Admin,User
 exl-id: f47c6da7-aa21-4f49-9c66-2a8091e19561
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: cc6de21180c9fff74f7d64067db82f0c11ac9333
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '530'
 ht-degree: 1%
 
 ---
 
-# AEM Assets Home Page Experience {#aem-assets-home-page-experience}
+# [!DNL Adobe Experience Manager Assets] Home Page Experience {#aem-assets-home-page-experience}
 
-Anpassa AEM Assets hemsida för att få en bra välkomstskärm, inklusive en ögonblicksbild av nyligen gjorda aktiviteter kring resurser.
+Anpassa startsidan för [!DNL Experience Manager Assets] för en rik välkomstskärm, inklusive en ögonblicksbild av nyligen gjorda aktiviteter kring resurser.
 
-Adobe Experience Manager (AEM) Assets Home page (startsidan för resurser) innehåller en omfattande och personlig välkomstskärm, som innehåller en ögonblicksbild av nyligen gjorda aktiviteter, t.ex. resurser som nyligen har visats eller överförts.
+På startsidan för [!DNL Adobe Experience Manager Assets] finns en omfattande och personlig välkomstskärm, som innehåller en ögonblicksbild av de senaste aktiviteterna, till exempel resurser som nyligen har visats eller överförts.
 
 Hemsidan för Resurser är inaktiverad som standard. Så här aktiverar du den:
 
-1. Klicka på **[!UICONTROL Tools > Operation > Web Console]** för att komma åt AEM Configuration Manager.
+1. Klicka på **[!UICONTROL Tools > Operation > Web Console]** om du vill komma åt Configuration Manager.[!DNL Experience Manager]
 1. Öppna tjänsten **Day CQ DAM Event Recorder**.
 1. Välj **[!UICONTROL Enable this service]** för att aktivera aktivitetsinspelning.
 
@@ -70,7 +70,7 @@ Det här avsnittet visas under välkomstavsnittet och visar widgetar som inte fi
 
 **Senaste**: Widgeten  **Senast** visad i det här avsnittet visar nyligen använda enheter som den inloggade användaren har använt, inklusive mappar, samlingar och projekt.
 
-**Upptäck**: I  **** Newwidgeten under det här avsnittet visas de resurser och återgivningar som nyligen har överförts till AEM Assets-instansen.
+**Upptäck**: I  **** Newwidgeten under det här avsnittet visas de resurser och återgivningar som nyligen har överförts till  [!DNL Assets] instansen.
 
 Aktivera tjänsten **DAM Event Renge** från Configuration Manager om du vill aktivera rensning av användaraktivitetsdata. När du har aktiverat den här tjänsten tas aktiviteter av den inloggade användaren som överskrider ett angivet nummer bort av systemet.
 
@@ -78,7 +78,7 @@ Välkomstskärmen innehåller enkla navigeringshjälpmedel, t.ex. ikoner i verkt
 
 >[!NOTE]
 >
->Om du aktiverar tjänsterna Day CQ DAM Event Recorder och DAM Event Rensa ökas skrivåtgärderna till JCR och sökindexering, vilket avsevärt ökar belastningen på AEM. Den extra belastningen på AEM kan påverka dess prestanda.
+>Om du aktiverar tjänsterna Day CQ DAM Event Recorder och DAM Event Rensa ökas skrivåtgärderna till JCR och sökindexering, vilket avsevärt ökar inläsningen på [!DNL Experience Manager]-servern. Ytterligare belastning på [!DNL Experience Manager]-servern kan påverka dess prestanda.
 
 >[!CAUTION]
 >

@@ -5,26 +5,26 @@ contentOwner: VG
 feature: Brand Portal
 role: User
 exl-id: 6b78124d-4022-452f-8d0f-b667de337bf4
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 39%
+source-wordcount: '361'
+ht-degree: 34%
 
 ---
 
 # Publicera resurser på varumärkesportalen {#publish-assets-to-brand-portal}
 
-Som Adobe Experience Manager (AEM) Assets-administratör kan du publicera resurser på AEM Assets Brand Portal-instansen (eller schemalägga publiceringsarbetsflödet till ett senare datum/tid) för din organisation. Du måste dock först konfigurera AEM Assets med Brand Portal. Mer information finns i [Konfigurera AEM Assets med varumärkesportalen](configure-aem-assets-with-brand-portal.md).
+Som Adobe Experience Manager Assets-administratör kan du publicera resurser på [!DNL Experience Manager Assets Brand Portal]-instansen (eller schemalägga publiceringsarbetsflödet till ett senare datum/tid) för din organisation. Du måste dock först konfigurera [!DNL Assets] med [!DNL Brand Portal]. Mer information finns i [Konfigurera [!DNL Assets] med [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md).
 
 När du har publicerat en resurs är den tillgänglig för användare i Brand Portal.
 
-Om du gör senare ändringar av den ursprungliga resursen i AEM Assets återspeglas inte ändringarna i Brand Portal förrän du publicerar resursen på nytt. Funktionen säkerställer att pågående ändringar inte finns i varumärkesportalen. Endast godkända ändringar som publiceras av en administratör finns i varumärkesportalen.
+Om du gör senare ändringar i den ursprungliga resursen i [!DNL Assets] återspeglas inte ändringarna i Brand Portal förrän du publicerar resursen på nytt. Funktionen säkerställer att pågående ändringar inte finns i varumärkesportalen. Endast godkända ändringar som publiceras av en administratör finns i varumärkesportalen.
 
-När replikeringen är klar kan du publicera resurser, mappar och samlingar till Brand Portal. Så här publicerar du resurser på Brand Portal:
+När replikeringen är klar kan du publicera resurser, mappar och samlingar till [!DNL Brand Portal]. Så här publicerar du resurser på Brand Portal:
 
 >[!NOTE]
 >
->Adobe rekommenderar stegvis publicering, helst vid tidpunkter med låg belastning, för att AEM-författaren inte ska uppta för mycket resurser.
+>Adobe rekommenderar att publiceringen stagneras, helst under icke-toppade timmar, så att författaren [!DNL Experience Manager] inte tar upp för mycket resurser.
 
 1. I resurskonsolen håller du muspekaren över de önskade resurserna och väljer **[!UICONTROL Publish]**-alternativ bland snabbåtgärderna.
 

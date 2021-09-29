@@ -5,24 +5,24 @@ contentOwner: VG
 feature: Brand Portal
 role: User
 exl-id: f41ab750-5780-42ae-a131-5bc748280215
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '475'
 ht-degree: 31%
 
 ---
 
 # Publicera mappar på varumärkesportalen {#publish-folders-to-brand-portal}
 
-Som Adobe Experience Manager (AEM) Assets-administratör kan du publicera resurser och mappar i AEM Assets Brand Portal-instansen (eller schemalägga publiceringsarbetsflödet till ett senare datum/tid) för din organisation. Du måste dock först integrera AEM Assets med Brand Portal. Mer information finns i [Konfigurera AEM Assets med varumärkesportalen](configure-aem-assets-with-brand-portal.md).
+Som Adobe Experience Manager Assets-administratör kan du publicera resurser och mappar till [!DNL Experience Manager Assets Brand Portal]-instansen (eller schemalägga publiceringsarbetsflödet till ett senare datum/tid) för din organisation. Du måste dock först integrera [!DNL Experience Manager Assets] med [!DNL Brand Portal]. Mer information finns i [Konfigurera [!DNL Experience Manager Assets] med Brand Portal](configure-aem-assets-with-brand-portal.md).
 
 När du har publicerat en resurs eller mapp är den tillgänglig för användare i Brand Portal.
 
-Om du gör senare ändringar i den ursprungliga resursen eller mappen i AEM Assets återspeglas inte ändringarna i Brand Portal förrän du publicerar resursen eller mappen på nytt. Funktionen säkerställer att pågående ändringar inte finns i varumärkesportalen. Endast godkända ändringar som publiceras av en administratör finns i varumärkesportalen.
+Om du gör senare ändringar i den ursprungliga resursen eller mappen i [!DNL Assets] återspeglas inte ändringarna i Brand Portal förrän du publicerar resursen eller mappen på nytt. Funktionen säkerställer att pågående ändringar inte finns i varumärkesportalen. Endast godkända ändringar som publiceras av en administratör finns i varumärkesportalen.
 
 ## Publicera mappar på varumärkesportalen {#publish-folders-to-brand-portal-1}
 
-1. I AEM Assets-gränssnittet för du pekaren över den önskade mappen och väljer **[!UICONTROL Publish]**-alternativ bland snabbåtgärderna.
+1. I gränssnittet [!DNL Assets] håller du pekaren över den önskade mappen och väljer **[!UICONTROL Publish]**-alternativet bland snabbåtgärderna.
 
    Du kan också markera önskad mapp och följa stegen nedan.
 
@@ -57,11 +57,11 @@ Om du gör senare ändringar i den ursprungliga resursen eller mappen i AEM Asse
 
 ## Avpublicera mappar från varumärkesportalen {#unpublish-folders-from-brand-portal}
 
-Du kan ta bort en resursmapp som publicerats till Brand Portal genom att avpublicera den från AEM Author-instansen. När du har avpublicerat originalmappen har varumärkesportalens användare har inte längre tillgång till kopian.
+Du kan ta bort en resursmapp som publicerats till Brand Portal genom att avpublicera den från författarinstansen [!DNL Experience Manager]. När du har avpublicerat originalmappen har varumärkesportalens användare har inte längre tillgång till kopian.
 
 Du kan avpublicera mappar från Brand Portal snabbt eller schemalägga dem för ett senare datum och en senare tidpunkt. Gör så här för att avpublicerar resursmappar från varumärkesportalen:
 
-1. I AEM Assets-gränssnittet i AEM Author-instansen väljer du den mapp du vill avpublicera.
+1. I gränssnittet [!DNL Assets] i [!DNL Experience Manager] Author instance väljer du den mapp som du vill avpublicera.
 
    ![publish2bp-1](assets/publish2bp-1.png)
 

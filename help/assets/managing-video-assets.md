@@ -8,20 +8,20 @@ discoiquuid: f341fae1-dda3-4917-b6db-ad02fec63702
 feature: Asset Management,Video
 role: User
 exl-id: eb652414-5b10-45af-a8b6-f1de649994c5
-source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
+source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '692'
 ht-degree: 6%
 
 ---
 
 # Hantera videoresurser {#managing-video-assets}
 
-Lär dig hur du hanterar och redigerar videoresurser i Adobe Experience Manager (AEM) Assets. Om du har licens att använda Dynamic Media läser du [Dynamic Media Video documentation](video.md).
+Lär dig hur du hanterar och redigerar videoresurser i Adobe Experience Manager Assets. Om du har licens att använda Dynamic Media läser du [Dynamic Media Video documentation](video.md).
 
 ## Överföra och förhandsgranska videomaterial {#uploading-and-previewing-video-assets}
 
-AEM Assets genererar förhandsgranskningar för videomaterial med filnamnstillägget MP4. Om resursens format inte är MP4 installerar du FFmpeg-paketet för att generera en förhandsvisning. FFmpeg skapar videoåtergivningar av typen OGG och MP4. Du kan förhandsgranska dessa återgivningar i AEM Assets användargränssnitt.
+[!DNL Experience Manager] Resurser genererar förhandsvisningar för videoresurser med filnamnstillägget MP4. Om resursens format inte är MP4 installerar du FFmpeg-paketet för att generera en förhandsvisning. FFmpeg skapar videoåtergivningar av typen OGG och MP4. Du kan förhandsgranska de här återgivningarna i användargränssnittet för [!DNL Experience Manager] Resurser.
 
 1. I mappen eller undermapparna Digital Assets navigerar du till den plats där du vill lägga till digitala resurser.
 1. Om du vill överföra resursen klickar eller trycker du på **[!UICONTROL Create]** i verktygsfältet och väljer sedan **[!UICONTROL Files]**. Du kan också släppa det direkt i resursområdet. Mer information om överföring finns i [Överföra resurser](managing-assets-touch-ui.md#uploading-assets).
@@ -39,16 +39,16 @@ AEM Assets genererar förhandsgranskningar för videomaterial med filnamnstillä
 
 ## Konfiguration för att överföra resurser som är större än 2 GB {#configuration-to-upload-video-assets-that-are-larger-than-gb}
 
-Som standard kan du inte överföra resurser som är större än 2 GB på grund av en filstorleksgräns i AEM Assets. Du kan dock skriva över den här gränsen genom att gå till CRXDE Lite och skapa en nod under katalogen `/apps`. Noden måste ha samma nodnamn, katalogstruktur och jämförbara nodegenskaper i ordningen.
+Som standard kan du inte överföra resurser som är större än 2 GB på grund av en filstorleksgräns med [!DNL Experience Manager]-resurserna. Du kan dock skriva över den här gränsen genom att gå till CRXDE Lite och skapa en nod under katalogen `/apps`. Noden måste ha samma nodnamn, katalogstruktur och jämförbara nodegenskaper i ordningen.
 
-Förutom AEM Assets-konfigurationen kan du ändra följande konfigurationer för att överföra stora resurser:
+Förutom [!DNL Experience Manager] Resurskonfiguration kan du ändra följande konfigurationer för att överföra stora resurser:
 
 * Öka tokens förfallotid. Se [!UICONTROL Adobe Granite CSRF Servlet] i webbkonsolen på `https://[aem_server]:[port]/system/console/configMgr`. Mer information finns i [CSRF-skydd](/help/sites-developing/csrf-protection.md).
 * Öka `receiveTimeout` i Dispatcher-konfigurationen. Mer information finns i [Experience Manager Dispatcher configuration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options).
 
 >[!NOTE]
 >
->AEM Classic-användargränssnittet har ingen begränsning av filstorleken med två gigabyte. Slutgiltigt arbetsflöde för stor video stöds inte heller helt.
+>[!DNL Experience Manager] Classic-användargränssnittet har ingen begränsning för filstorlek på två gigabyte. Slutgiltigt arbetsflöde för stor video stöds inte heller helt.
 
 Utför följande steg i katalogen `/apps` om du vill konfigurera en större filstorleksgräns.
 

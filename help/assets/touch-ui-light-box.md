@@ -1,24 +1,24 @@
 ---
 title: Ljuslåda
-description: Läs mer om ljuslådan i AEM Assets.
+description: Lär dig mer om ljuslådan i [!DNL Experience Manager] Resurser.
 contentOwner: AG
-feature: Utvecklarverktyg,Återgivningar
+feature: Developer Tools,Renditions
 role: User,Admin
 exl-id: acb61924-9b71-474a-833d-e441c0b83cc7
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
 
 # Ljuslåda {#lightbox}
 
-Läs mer om ljuslådan i AEM Assets.
+Lär dig mer om ljuslådan i [!DNL Experience Manager] Assets.
 
 Ljuslådan är en särskild typ av samling som ger enkel åtkomst till resurser. Du kan snabbt komma åt Ljuslådan för att lägga till eller ta bort resurser. Det fungerar som ditt personliga bildgalleri.
 
-Om du är en Adobe Experience Manager-användare (AEM) skapas ljuslådan automatiskt när du loggar in i programmet. Den är exklusiv för din inloggning. Andra användare kan inte komma åt din ljuslåda.
+Om du använder Adobe Experience Manager Assets skapas ljuslådan automatiskt när du loggar in i programmet första gången. Den är exklusiv för din inloggning. Andra användare kan inte komma åt din ljuslåda.
 
 ## Lägga till resurser i ljuslådan {#adding-assets-to-lightbox}
 

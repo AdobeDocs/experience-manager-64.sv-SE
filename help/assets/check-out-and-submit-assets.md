@@ -2,19 +2,19 @@
 title: Checka in och checka ut dina digitala resurser för redigering
 description: Lär dig hur du checkar ut resurser för redigering och checkar in dem igen när ändringarna är klara.
 contentOwner: AG
-feature: Resurshantering
+feature: Asset Management
 role: User
 exl-id: 0c79ed42-0acd-426e-8e14-412bb4117585
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '385'
 ht-degree: 6%
 
 ---
 
 # Checka in och checka ut filer i Resurser {#check-in-and-check-out-files-in-assets}
 
-Med Adobe Experience Manager (AEM) Assets kan du checka ut resurser för redigering och checka in dem igen när du är klar med ändringarna. När du har checkat ut en resurs kan bara du redigera, kommentera, publicera, flytta eller ta bort resursen. När du checkar ut en resurs låses den. Andra användare kan inte utföra någon av dessa åtgärder på resursen förrän du checkar in resursen på AEM Assets igen. De kan dock fortfarande ändra metadata för den låsta resursen.
+Med Adobe Experience Manager Assets kan du checka ut resurser för redigering och checka in dem igen när du är klar med ändringarna. När du har checkat ut en resurs kan bara du redigera, kommentera, publicera, flytta eller ta bort resursen. När du checkar ut en resurs låses den. Andra användare kan inte utföra någon av dessa åtgärder på resursen förrän du checkar in resursen igen på [!DNL Experience Manager] Resurser. De kan dock fortfarande ändra metadata för den låsta resursen.
 
 Om du vill kunna checka ut eller checka in resurser måste du ha skrivbehörighet för dem.
 
@@ -58,13 +58,13 @@ Den här funktionen förhindrar att andra användare åsidosätter ändringar so
 
    ![chlimage_1-475](assets/chlimage_1-475.png)
 
-   Den ändrade resursen checkas in i AEM Assets och är tillgänglig för andra användare för redigering.
+   Den ändrade resursen checkas in i [!DNL Assets] och är tillgänglig för andra användare för redigering.
 
 ## Tvingad incheckning {#forced-check-in}
 
 Administratörer kan checka in resurser som är utcheckade av andra användare.
 
-1. Logga in på AEM Assets som administratör.
+1. Logga in på [!DNL Assets] som administratör.
 1. I resursgränssnittet väljer du en eller flera resurser som har checkats ut av andra användare.
 
    ![chlimage_1-476](assets/chlimage_1-476.png)

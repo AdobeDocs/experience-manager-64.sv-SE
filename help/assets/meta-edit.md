@@ -1,13 +1,13 @@
 ---
 title: Redigera eller lägga till metadata
-description: Läs om metadata för resurser i AEM Assets och olika sätt att redigera metadata för resurser.
+description: Lär dig mer om metadata för resurser i [!DNL Experience Manager] Resurser och olika sätt att redigera metadata för resurser.
 contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: f0522343-f8a9-4d89-8ce8-b3357ae3fe70
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '468'
 ht-degree: 8%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 8%
 
 Metadata är ytterligare information om resursen som kan sökas igenom. Den extraheras automatiskt när du överför en bild. Du kan redigera befintliga metadata eller lägga till nya metadataegenskaper i befintliga fält (till exempel när ett metadatafält är tomt).
 
-Eftersom företag behöver kontrollerade och tillförlitliga metadata-ordlistor tillåter inte AEM Assets att nya metadataegenskaper läggs till för hand. Även om författare inte kan lägga till nya metadatafält för resurser kan utvecklare göra det. Se [Skapa ny metadataegenskap för resurser](meta-edit.md#editing-metadata-schema).
+Eftersom företag behöver kontrollerade och tillförlitliga metadata-ordlistor går det inte att lägga till nya metadataegenskaper i [!DNL Experience Manager] Assets. Även om författare inte kan lägga till nya metadatafält för resurser kan utvecklare göra det. Se [Skapa ny metadataegenskap för resurser](meta-edit.md#editing-metadata-schema).
 
 ## Redigera metadata för en resurs {#editing-metadata-for-an-asset}
 
@@ -28,7 +28,7 @@ Så här redigerar du metadata:
    * Välj snabbåtgärden **[!UICONTROL View Properties]** från miniatyrbilden av resursen.
    * Klicka/tryck på ikonen **[!UICONTROL View Properties]** ![informationsikon](assets/do-not-localize/info_icon.png) från verktygsfältet på resurssida.
 
-   Resurssidan visar alla metadata för resursen. Dessa metadata extraherades automatiskt när de överfördes (överfördes) till AEM Assets.
+   Resurssidan visar alla metadata för resursen. Dessa metadata extraherades automatiskt när de överfördes till [!DNL Experience Manager] Assets.
 
    ![chlimage_1-169](assets/chlimage_1-169.png)
 
@@ -46,7 +46,7 @@ XMP stöds och är aktiverat för de plattformar och filformat som beskrivs i [T
 
 Mer information om hur du redigerar metadataschemat finns i [Redigera metadataschemaformulär](metadata-schemas.md#editing-metadata-schema-forms).
 
-## Registrera ett anpassat namnutrymme i AEM {#registering-a-custom-namespace-within-aem}
+## Registrera ett anpassat namnutrymme i [!DNL Experience Manager] {#registering-a-custom-namespace-within-aem}
 
 Du kan lägga till egna namnutrymmen i AEM. Precis som det finns fördefinierade namnutrymmen som cq, jcr och sling kan du ha ett namnutrymme för databasens metadata och XML-bearbetning.
 

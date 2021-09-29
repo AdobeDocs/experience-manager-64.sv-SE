@@ -2,12 +2,12 @@
 title: Skapa översättningsprojekt
 description: Lär dig hur du skapar översättningsprojekt i AEM.
 contentOwner: AG
-feature: Översättning
+feature: Translation
 role: Architect,Admin
 exl-id: 1b931fef-eed0-4758-993d-cdf8d478fb6f
-source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
+source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1807'
 ht-degree: 20%
 
 ---
@@ -282,9 +282,9 @@ Om du använder det här alternativet läggs resursuppsättningen till i ett bef
 
 ## Skapa tillfälliga språkkopior {#creating-temporary-language-copies}
 
-När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia med redigerade versioner av originalresurser bevaras den befintliga språkkopian tills du godkänner översatta resurser. AEM Assets lagrar de nyligen översatta resurserna på en tillfällig plats och uppdaterar den befintliga språkkopian när du uttryckligen har godkänt resurserna. Om du avvisar resurserna ändras inte språkkopian.
+När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia med redigerade versioner av originalresurser bevaras den befintliga språkkopian tills du godkänner översatta resurser. [!DNL Experience Manager] Resurserna lagrar de nyligen översatta resurserna på en tillfällig plats och uppdaterar den befintliga språkkopian när du uttryckligen har godkänt resurserna. Om du avvisar resurserna ändras inte språkkopian.
 
-1. Klicka/tryck på källrotmappen under **[!UICONTROL Language Copies]** som du redan har skapat en språkkopia för och klicka/tryck sedan på **[!UICONTROL Reveal in Assets]** för att öppna mappen i AEM Assets.
+1. Klicka/tryck på källrotmappen under **[!UICONTROL Language Copies]** som du redan har skapat en språkkopia för och klicka/tryck sedan på **[!UICONTROL Reveal in Assets]** för att öppna mappen i Assets.[!DNL Experience Manager]
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 

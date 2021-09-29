@@ -1,28 +1,28 @@
 ---
 title: Förbättringar av användarupplevelsen i Assets
-description: I den här artikeln beskrivs förbättringarna av användarupplevelsen i AEM 6.4 Assets.
+description: I den här artikeln beskrivs förbättringar av användarupplevelsen i [!DNL Experience Manager] 6.4 Assets.
 contentOwner: AG
-feature: Versionsinformation
+feature: Release Information
 role: Leader,User
 exl-id: 65029113-987e-46eb-86eb-8028233031f9
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
 
 # Förbättringar av användarupplevelsen i Assets {#user-experience-enhancements-in-assets}
 
-AEM 6.4 Assets innehåller flera förbättringar av användbarheten som ger en smidig användarupplevelse och förbättrar produktiviteten. Den snabba hastigheten med vilken ni kan skapa/hantera ert marknadsmaterial ökar företagets innehållshastighet.
+[!DNL Experience Manager] 6.4 Materialet innehåller flera förbättringar av användbarheten som ger en smidig användarupplevelse och ökar produktiviteten. Den snabba hastigheten med vilken ni kan skapa/hantera ert marknadsmaterial ökar företagets innehållshastighet.
 
 Gränssnittet är mer responsivt, vilket hjälper dig att hantera en stor portfölj med resurser på ett effektivt sätt. Du kan snabbt söka, visa, sortera och smidigt bläddra igenom en lång lista med objekt.
 
-Du kan anpassa de olika vyerna - kort-, lista- och kolumnvyer. Du kan till exempel konfigurera storleken på miniatyrbilder som du vill visa i kortvyn. I listvyn kan du konfigurera den detaljnivå som du vill visa för resurser i listan. AEM 6.4 Assets innehåller en ny trädvy där du bekvämt kan navigera i resurskatalogen och hitta dina resurser.
+Du kan anpassa de olika vyerna - kort-, lista- och kolumnvyer. Du kan till exempel konfigurera storleken på miniatyrbilder som du vill visa i kortvyn. I listvyn kan du konfigurera den detaljnivå som du vill visa för resurser i listan. [!DNL Experience Manager] 6.4 Resurser innehåller en ny trädvy där du bekvämt kan navigera i resurskatalogen och hitta dina resurser.
 
 ## Lazy loading {#lazy-loading}
 
-När du söker efter resurser i AEM 6.4 visas upp till 200 resurser i taget. Du kan bläddra igenom resultaten snabbare, vilket är särskilt användbart när du bläddrar igenom en lång lista med resultat. Eftersom ett stort antal resurser läses in samtidigt blir webbläsarupplevelsen smidig.
+När du bläddrar bland/söker efter resurser i [!DNL Experience Manager] 6.4 Resurser visas upp till 200 resurser i taget. Du kan bläddra igenom resultaten snabbare, vilket är särskilt användbart när du bläddrar igenom en lång lista med resultat. Eftersom ett stort antal resurser läses in samtidigt blir webbläsarupplevelsen smidig.
 
 Om du trycker/klickar på en resurs för att granska dess informationssida kan du gå tillbaka till resultatsidan genom att trycka/klicka på knappen Bakåt i verktygsfältet.
 
@@ -66,7 +66,7 @@ Förutom kort- och listvyer kan du nu navigera till informationssidan för en re
 
 ## Trädvy {#tree-view}
 
-AEM 6.4 Resurser innehåller en trädvy där du bekvämt kan bläddra i resurshierarkin och navigera till önskad resurs eller mapp.
+[!DNL Experience Manager] 6.4 Resurser innehåller en trädvy där du bekvämt kan bläddra i resurshierarkin och navigera till önskad resurs eller mapp.
 
 Om du vill öppna trädvyn trycker/klickar du på ikonen GlobalNav i `Assets UI` och väljer **[!UICONTROL Content tree]** på menyn.
 

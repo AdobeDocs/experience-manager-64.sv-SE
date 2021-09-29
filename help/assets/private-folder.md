@@ -1,20 +1,20 @@
 ---
 title: Delning av privata mappar
-description: Lär dig hur du skapar en privat mapp i Adobe Experience Manager (AEM) Resurser och delar den med andra användare samt tilldelar olika behörigheter till dem.
+description: Lär dig hur du skapar en privat mapp i Adobe Experience Manager Assets och delar den med andra användare samt tilldelar olika behörigheter till dem.
 contentOwner: AG
-feature: Samarbete
+feature: Collaboration
 role: User
 exl-id: b6aa3cba-4085-47ac-a249-7461baee2a00
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '433'
 ht-degree: 7%
 
 ---
 
 # Delning av privata mappar {#private-folder-sharing}
 
-Du kan skapa en privat mapp i användargränssnittet för Adobe Experience Manager (AEM) Resurser som är exklusivt tillgänglig för dig. Du kan dela den här privata mappen med andra användare och tilldela olika behörigheter till dem. Beroende på vilken behörighetsnivå du tilldelar kan användare utföra olika åtgärder i mappen, till exempel visa resurser i mappen eller redigera resurserna.
+Du kan skapa en privat mapp i Adobe Experience Manager Assets-användargränssnittet som är exklusivt tillgänglig för dig. Du kan dela den här privata mappen med andra användare och tilldela olika behörigheter till dem. Beroende på vilken behörighetsnivå du tilldelar kan användare utföra olika åtgärder i mappen, till exempel visa resurser i mappen eller redigera resurserna.
 
 1. I resurskonsolen trycker/klickar du på **[!UICONTROL Create]** i verktygsfältet och väljer sedan **[!UICONTROL Folder]** på menyn.
 
@@ -44,9 +44,9 @@ Du kan skapa en privat mapp i användargränssnittet för Adobe Experience Manag
    >
    >Du kan tilldela olika roller, till exempel redigeraren, ägaren eller visningsprogrammet, till användaren som du delar mappen med. Om du tilldelar användaren en ägarroll har användaren redigeringsbehörighet för mappen. Dessutom kan användaren dela mappen med andra. Om du tilldelar en redigeringsroll kan användaren redigera resurserna i din privata mapp. Om du tilldelar en visningsprogramroll kan användaren bara visa resurserna i din privata mapp.
 
-1. Klicka på **[!UICONTROL Save]**. Beroende på vilken roll du tilldelar tilldelas användaren en uppsättning behörigheter i din privata mapp när användaren loggar in på AEM Assets.
+1. Klicka på **[!UICONTROL Save]**. Beroende på vilken roll du tilldelar tilldelas användaren en uppsättning behörigheter i din privata mapp när användaren loggar in på [!DNL Experience Manager] Resurser.
 1. Klicka på **[!UICONTROL Ok]** för att stänga bekräftelsemeddelandet.
-1. Användaren som du delar mappen med får ett delningsmeddelande. Logga in på AEM Assets med användarens inloggningsuppgifter för att visa meddelandet.
+1. Användaren som du delar mappen med får ett delningsmeddelande. Logga in på [!DNL Experience Manager] Resurser med inloggningsuppgifterna för användaren för att visa meddelandet.
 
    ![chlimage_1-416](assets/chlimage_1-416.png)
 

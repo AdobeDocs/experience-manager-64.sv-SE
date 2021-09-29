@@ -2,12 +2,12 @@
 title: Bearbeta material för att genomföra affärsprocesser, utföra revisioner, uppfylla regelkrav och upprätthålla en grundläggande smidighet
 description: Resursbearbetning för att konvertera format, skapa renderingar, hantera resurser, validera resurser och köra arbetsflöden.
 contentOwner: AG
-feature: arbetsflöde,återgivningar
+feature: Workflow,Renditions
 role: User,Admin
 exl-id: 4fb3d12c-feac-45b9-8d09-3b6995591b3d
-source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
+source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '995'
 ht-degree: 3%
 
 ---
@@ -40,7 +40,7 @@ Använd arbetsflöden i digitala resurser för att aktivera resursen eller skapa
 >
 >Om ett arbetsflöde i Classic UI inte är tillgängligt i det Touch-aktiverade gränssnittet, som [!UICONTROL Request to Activate] och [!UICONTROL Request to Deactivate], ska du läsa [skapa arbetsflödesmodeller](/help/sites-developing/workflows-models.md#make-workflow-models-available-in-touchui).
 
-## Tillämpa ett arbetsflöde på en AEM {#apply-a-workflow-to-an-aem-asset}
+## Tillämpa ett arbetsflöde på en [!DNL Experience Manager]-resurs {#apply-a-workflow-to-an-aem-asset}
 
 <!-- 
 TBD: Add animated GIF for these steps instead of all these screenshots.
@@ -111,7 +111,7 @@ För en arbetsflödesmodell kan användare skapa en startfil för arbetsflödet 
 >[!MORELIKETHIS]
 >
 >* [Använda och delta i arbetsflöden](/help/sites-authoring/workflows.md)
-* [Skapa arbetsflödesmodeller och utöka arbetsflödesfunktioner](/help/sites-developing/workflows.md)
-* [Metoder som kör arbetsflöden](/help/sites-administering/workflows-starting.md)
-* [Bästa arbetsflöden](/help/sites-developing/workflows-best-practices.md)
+>* [Skapa arbetsflödesmodeller och utöka arbetsflödesfunktioner](/help/sites-developing/workflows.md)
+>* [Metoder som kör arbetsflöden](/help/sites-administering/workflows-starting.md)
+>* [Bästa arbetsflöden](/help/sites-developing/workflows-best-practices.md)
 

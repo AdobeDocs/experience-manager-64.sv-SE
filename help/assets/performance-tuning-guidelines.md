@@ -1,24 +1,24 @@
 ---
 title: Prestandajusteringsguide för resurser
-description: Viktiga fokusområden kring AEM, ändringar av maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar och optimera AEM Assets prestanda.
+description: Viktiga fokusområden kring [!DNL Experience Manager] configuration, changes to hardware, software, and network components to remove bottlenecks and optimize the performance of [!DNL Experience Manager] Resurser.
 contentOwner: AG
-feature: Resurshantering
+feature: Asset Management
 role: Architect,Admin
 exl-id: 6c1bff46-f9e0-4638-9374-a9e820d30534
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
 workflow-type: tm+mt
-source-wordcount: '3168'
+source-wordcount: '3112'
 ht-degree: 0%
 
 ---
 
 # Prestandajusteringsguide för resurser {#assets-performance-tuning-guide}
 
-En Adobe Experience Manager (AEM) Assets-konfiguration innehåller ett antal maskinvaru-, programvaru- och nätverkskomponenter. Beroende på ditt driftsättningsscenario kan du behöva specifika konfigurationsändringar för maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar i prestandan.
+En Adobe Experience Manager Assets-konfiguration innehåller ett antal maskinvaru-, programvaru- och nätverkskomponenter. Beroende på ditt driftsättningsscenario kan du behöva specifika konfigurationsändringar för maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar i prestandan.
 
-Genom att identifiera och följa vissa riktlinjer för optimering av maskinvara och programvara kan du dessutom skapa en stabil grund som gör att driftsättningen av AEM Assets kan uppfylla förväntningarna på prestanda, skalbarhet och tillförlitlighet.
+Genom att identifiera och följa vissa riktlinjer för optimering av maskinvara och programvara kan du dessutom skapa en stabil grund som gör att din [!DNL Experience Manager] Assets-distribution kan uppfylla förväntningarna på prestanda, skalbarhet och tillförlitlighet.
 
-Dåliga prestanda i AEM Assets kan påverka användarupplevelsen när det gäller interaktiva prestanda, bearbetning av resurser, nedladdningshastighet och andra områden.
+Dåliga prestanda i [!DNL Experience Manager] Assets kan påverka användarupplevelsen kring interaktiva prestanda, bearbetning av resurser, hämtningshastighet och andra områden.
 
 Prestandaoptimering är en grundläggande uppgift som du utför innan du fastställer målvärden för ett projekt.
 
@@ -26,7 +26,7 @@ Här är några viktiga fokusområden där du kan identifiera och åtgärda pres
 
 ## Plattform {#platform}
 
-AEM stöds på ett antal plattformar, men Adobe har funnit det bästa stödet för inbyggda verktyg i Linux och Windows, vilket ger optimala prestanda och förenklad implementering. Det bästa är om du driftsätter ett 64-bitars operativsystem för att uppfylla de höga minneskraven som en AEM Assets-driftsättning medför. Precis som med andra AEM bör du implementera tarMK där det är möjligt. Även om TonaMK inte kan skalas bortom en enda författarinstans, fungerar det bättre än MongoMK. Du kan lägga till instanser för TjärMK-avlastning för att öka arbetsflödets bearbetningsstyrka för din AEM Assets-distribution.
+[!DNL Experience Manager] stöds på ett antal plattformar, men Adobe har funnit det bästa stödet för inbyggda verktyg i Linux och Windows, vilket ger optimala prestanda och förenklad implementering. Bäst är att du distribuerar ett 64-bitars operativsystem för att uppfylla de höga minneskraven för en [!DNL Experience Manager] Assets-distribution. Precis som för alla [!DNL Experience Manager]-distributioner bör du implementera tarMK där det är möjligt. Även om TonaMK inte kan skalas bortom en enda författarinstans, fungerar det bättre än MongoMK. Du kan lägga till instanser för TjärMK-avlastning för att öka arbetsflödets bearbetningskraft för din [!DNL Experience Manager] Assets-distribution.
 
 ### Tillfällig mapp {#temp-folder}
 
@@ -51,7 +51,7 @@ När den tillfälliga volymen med höga prestanda är klar anger du JVM-paramete
 
 ### Java-version {#java-version}
 
-Eftersom Oraclet har slutat släppa uppdateringar för Java 7 från och med april 2015 rekommenderar Adobe att du distribuerar AEM Assets på Java 8. I vissa fall har den visat bättre prestanda.
+Eftersom Oraclet har slutat släppa uppdateringar för Java 7 från och med april 2015 rekommenderar Adobe att du distribuerar [!DNL Experience Manager]-resurser på Java 8. I vissa fall har den visat bättre prestanda.
 
 ### JVM-parametrar {#jvm-parameters}
 
@@ -67,7 +67,7 @@ Du bör ange följande JVM-parametrar:
 
 ### Konfiguration av fillagring {#file-data-store-configuration}
 
-Du bör separera datalagret från segmentlagret för alla AEM Assets-användare. Dessutom kan du maximera prestanda genom att konfigurera parametrarna `maxCachedBinarySize` och `cacheSizeInMB`. Ange `maxCachedBinarySize` som den minsta filstorleken som kan sparas i cachen. Ange storleken på den minnescache som ska användas för datalagret i `cacheSizeInMB`. Adobe rekommenderar att du anger det här värdet mellan 2 och 10 procent av den totala stackstorleken. Inläsnings-/prestandatestning kan dock hjälpa till att fastställa den idealiska inställningen.
+Du bör separera datalagret från segmentarkivet för alla [!DNL Experience Manager] Assets-användare. Dessutom kan du maximera prestanda genom att konfigurera parametrarna `maxCachedBinarySize` och `cacheSizeInMB`. Ange `maxCachedBinarySize` som den minsta filstorleken som kan sparas i cachen. Ange storleken på den minnescache som ska användas för datalagret i `cacheSizeInMB`. Adobe rekommenderar att du anger det här värdet mellan 2 och 10 procent av den totala stackstorleken. Inläsnings-/prestandatestning kan dock hjälpa till att fastställa den idealiska inställningen.
 
 ### Konfigurera maximal storlek för buffrad bildcache {#configure-the-maximum-size-of-the-buffered-image-cache}
 
@@ -75,7 +75,7 @@ När du överför stora mängder resurser till Adobe Experience Manager kan du m
 
 Konfigurera den buffrade cachestorleken i OSGi-webbkonsolen. Vid `https://host:port/system/console/configMgr/com.day.cq.dam.core.impl.cache.CQBufferedImageCache` anger du egenskapen `cq.dam.image.cache.max.memory` i byte. 1073741824 är till exempel 1 GB (1 024 x 1 024 x 1 024 = 1 GB).
 
-Om du använder en `sling:osgiConfig`-nod från AEM 6.1 SP1 för att konfigurera den här egenskapen måste du ange datatypen till Long. Mer information finns i [CQBufferedImageCache använder heap under överföring av tillgångar](https://helpx.adobe.com/experience-manager/kb/cqbufferedimagecache-consumes-heap-during-asset-uploads.html).
+Om du använder en [!DNL Experience Manager]-nod för att konfigurera den här egenskapen från `sling:osgiConfig` 6.1 SP1 måste du ange datatypen till Long. Mer information finns i [CQBufferedImageCache använder heap under överföring av tillgångar](https://helpx.adobe.com/experience-manager/kb/cqbufferedimagecache-consumes-heap-during-asset-uploads.html).
 
 ### Gemensamma datalager {#shared-data-stores}
 
@@ -110,10 +110,10 @@ accessKey=<snip>
 
 Adobe rekommenderar att du aktiverar HTTPS eftersom många företag har brandväggar som fångar upp HTTP-trafik, vilket påverkar överföringar negativt och skadar filer. För stora filöverföringar måste användarna ha kabelanslutna anslutningar till nätverket eftersom ett WiFi-nätverk snabbt blir mättat. Riktlinjer för identifiering av nätverksflaskhalsar finns i [Handbok för resursstorlek](assets-sizing-guide.md). Information om hur du utvärderar nätverksprestanda genom att analysera nätverkstopologi finns i [Resurser, nätverksöverväganden](assets-network-considerations.md).
 
-Din nätverksoptimeringsstrategi är i första hand beroende av hur mycket bandbredd som är tillgänglig och hur stor belastning din AEM har. Gemensamma konfigurationsalternativ, inklusive brandväggar och proxies, kan förbättra nätverkets prestanda. Här följer några viktiga punkter att tänka på:
+Din nätverksoptimeringsstrategi beror i första hand på den tillgängliga bandbredden och belastningen på din [!DNL Experience Manager]-instans. Gemensamma konfigurationsalternativ, inklusive brandväggar och proxies, kan förbättra nätverkets prestanda. Här följer några viktiga punkter att tänka på:
 
-* Beroende på vilken instanstyp du har (liten, måttlig, stor) kontrollerar du att du har tillräcklig nätverksbandbredd för AEM. Lämplig bandbreddsallokering är särskilt viktig om AEM ligger på AWS.
-* Om din AEM ligger på AWS kan du dra nytta av en mångsidig skalningspolicy. Överför instansen om användarna förväntar sig hög belastning. Minska storleken för måttlig/låg belastning.
+* Beroende på vilken instanstyp du har (liten, måttlig, stor) kontrollerar du att du har tillräcklig nätverksbandbredd för din [!DNL Experience Manager]-instans. Lämplig bandbreddsallokering är särskilt viktig om [!DNL Experience Manager] finns på AWS.
+* Om din [!DNL Experience Manager]-instans finns på AWS kan du dra nytta av en flexibel skalförändringsprincip. Överför instansen om användarna förväntar sig hög belastning. Minska storleken för måttlig/låg belastning.
 * HTTPS: De flesta användare har brandväggar som tolkar HTTP-trafik, vilket kan påverka överföringen av filer negativt eller till och med skada filer under överföringen.
 * Stora filöverföringar: Se till att användarna har kabelanslutna anslutningar till nätverket (WiFi-anslutningar blir snabbt mättade).
 
@@ -125,9 +125,9 @@ Ställ in arbetsflödet DAM Update Asset på Transient när det är möjligt. In
 
 >[!NOTE]
 >
->Som standard är arbetsflödet för DAM-uppdatering av tillgångar inställt på Transient i AEM 6.3. I så fall kan du hoppa över följande procedur.
+>Som standard är arbetsflödet för DAM-uppdatering av resurser inställt på Transient i [!DNL Experience Manager] 6.3. I så fall kan du hoppa över följande procedur.
 
-1. Öppna `http://localhost:4502/miscadmin` på den AEM instansen som du vill konfigurera.
+1. Öppna `http://localhost:4502/miscadmin` på den [!DNL Experience Manager]-instans som du vill konfigurera.
 
 1. Expandera **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]** > **[!UICONTROL dam]** från navigeringsträdet.
 1. Dubbelklicka på **[!UICONTROL DAM Update Asset]**.
@@ -136,7 +136,7 @@ Ställ in arbetsflödet DAM Update Asset på Transient när det är möjligt. In
 
    >[!NOTE]
    >
-   >Vissa funktioner har inte stöd för tillfälliga arbetsflöden. Om AEM Assets-distributionen kräver dessa funktioner ska du inte konfigurera tillfälliga arbetsflöden.
+   >Vissa funktioner har inte stöd för tillfälliga arbetsflöden. Om din [!DNL Experience Manager] Assets-distribution kräver dessa funktioner ska du inte konfigurera tillfälliga arbetsflöden.
 
    Om det inte går att använda tillfälliga arbetsflöden kör du regelbundet arbetsflödesrensning för att ta bort arkiverade arbetsflöden för DAM Update Asset för att säkerställa att systemprestanda inte försämras.
 
@@ -150,9 +150,9 @@ Ställ in arbetsflödet DAM Update Asset på Transient när det är möjligt. In
 
 ### Maximalt antal parallella jobb {#maximum-parallel-jobs}
 
-Som standard kör AEM ett maximalt antal parallella jobb som är lika med antalet processorer på servern. Problemet med den här inställningen är att under perioder med hög belastning används alla processorer av arbetsflödena för DAM Update Asset, vilket gör att användargränssnittet tar längre tid och förhindrar AEM från att köra andra processer som skyddar serverns prestanda och stabilitet. Det är en god vana att ange det här värdet till hälften av de processorer som är tillgängliga på servern genom att utföra följande steg:
+Som standard kör [!DNL Experience Manager] ett maximalt antal parallella jobb som är lika med antalet processorer på servern. Problemet med den här inställningen är att under perioder med hög belastning används alla processorer av arbetsflödena för DAM Update Asset, vilket gör att användargränssnittet tar längre tid och förhindrar att [!DNL Experience Manager] kör andra processer som skyddar serverns prestanda och stabilitet. Det är en god vana att ange det här värdet till hälften av de processorer som är tillgängliga på servern genom att utföra följande steg:
 
-1. På AEM Author går du till [http://localhost:4502/system/console/slingevent](http://localhost:4702/system/console/slingevent).
+1. På [!DNL Experience Manager] Author, gå till [http://localhost:4502/system/console/slingevent](http://localhost:4702/system/console/slingevent).
 1. Klicka på Redigera i varje arbetsflödeskö som är relevant för implementeringen, till exempel Bevilja tillfällig arbetsflödeskö.
 1. Ändra värdet för Maximalt antal parallella jobb och klicka på Spara.
 
@@ -162,7 +162,7 @@ Att ställa in en kö på hälften av de tillgängliga processorerna är en anv�
 
 För stora arbetsflöden eller arbetsflöden som är resurskrävande, till exempel videotranskodning, kan du avlasta arbetsflöden för DAM Update Asset till en andra författarinstans. Problemet med avlastning är ofta att eventuell inläsning som sparas genom avlastning av arbetsflödesbearbetningen motverkas av kostnaden för att replikera innehållet fram och tillbaka mellan instanser.
 
-Från och med AEM 6.2 och med ett funktionspaket för AEM 6.1 kan du utföra avlastning med binär replikering utan. I den här modellen delar författarinstanserna ett vanligt datalager och skickar bara metadata fram och tillbaka genom framåtreplikering. Detta fungerar bra med ett delat fildatalager, men det kan uppstå problem med ett S3-datalager. Eftersom bakgrundstrådar kan orsaka fördröjning är det möjligt att en resurs inte har skrivits till datalagret innan avlastningsjobbet startar.
+Från och med [!DNL Experience Manager] 6.2 och med ett funktionspaket för [!DNL Experience Manager] 6.1 kan du utföra avlastning med binär replikering. I den här modellen delar författarinstanserna ett vanligt datalager och skickar bara metadata fram och tillbaka genom framåtreplikering. Detta fungerar bra med ett delat fildatalager, men det kan uppstå problem med ett S3-datalager. Eftersom bakgrundstrådar kan orsaka fördröjning är det möjligt att en resurs inte har skrivits till datalagret innan avlastningsjobbet startar.
 
 ### DAM-uppdateringskonfiguration {#dam-update-asset-configuration}
 
@@ -184,7 +184,7 @@ Kunderna använder bilder av olika storlek och format på sin webbplats eller f�
 
 Många webbplatskunder implementerar en bildservett som ändrar storlek på och beskär bilder när de begärs, vilket medför ytterligare belastning på publiceringsinstansen. Så länge dessa bilder kan cachas kan utmaningen dock mildras.
 
-Ett annat sätt är att använda Dynamic Media Classic-teknik för att helt och hållet överlåta bildbearbetning. Dessutom kan ni driftsätta Brand Portal, som inte bara tar över ansvaret för återgivningsgenerering från den AEM infrastrukturen, utan också hela publiceringsnivån.
+Ett annat sätt är att använda Dynamic Media Classic-teknik för att helt och hållet överlåta bildbearbetning. Dessutom kan du distribuera Brand Portal, som inte bara tar över ansvaret för att skapa renderingar från [!DNL Experience Manager]-infrastrukturen, utan även hela publiceringsnivån.
 
 #### ImageMagick {#imagemagick}
 
@@ -209,13 +209,13 @@ Dessutom anger du sökvägen till ImageMagick:s temporära mapp i filen *configu
 
 >[!CAUTION]
 >
->En felaktig konfiguration kan göra servern instabil om ImageMagick använder allt tillgängligt diskutrymme. De principändringar som krävs för att bearbeta stora filer med ImageMagick kan påverka AEM prestanda. Mer information finns i [installera och konfigurera ImageMagick](best-practices-for-imagemagick.md).
+>En felaktig konfiguration kan göra servern instabil om ImageMagick använder allt tillgängligt diskutrymme. De principändringar som krävs för att bearbeta stora filer med ImageMagick kan påverka [!DNL Experience Manager]-prestanda. Mer information finns i [installera och konfigurera ImageMagick](best-practices-for-imagemagick.md).
 
 >[!NOTE]
 >
 >ImageMagick `policy.xml`- och `configure.xml`-filerna finns under `/usr/lib64/ImageMagick-*/config/` i stället för `/etc/ImageMagick/`. Se [ImageMagick-dokumentation](https://www.imagemagick.org/script/resources.php) för mer information om var konfigurationsfilen finns.
 
-Om du använder AEM på Adobes hanterade tjänster (AMS) kan du kontakta Adobe kundtjänst om du tänker bearbeta många stora PSD- eller PSB-filer. Det går inte att bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar i Experience Manager.
+Om du använder [!DNL Experience Manager] på Adobe Managed Services (AMS) kan du kontakta Adobe kundtjänst om du tänker bearbeta många stora PSD- eller PSB-filer. Det går inte att bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar i Experience Manager.
 
 <!-- 
 
@@ -307,12 +307,12 @@ Skapa anpassade index för frågor som du kör ofta. Mer information finns i [me
 
 ### Lucene-indexkonfigurationer {#lucene-index-configurations}
 
-Vissa optimeringar kan göras för Oak-indexkonfigurationer som kan förbättra AEM Assets prestanda:
+Vissa optimeringar kan göras för Oak-indexkonfigurationer som kan förbättra prestanda för [!DNL Experience Manager] Resurser:
 
 Uppdatera LuceneIndexProvider-konfigurationen:
 
 1. Gå till /system/console/configMgrorg.apache.jackrabbit.oak.plugins.index.lucene.LuceneIndexProviderService
-1. Aktivera **[!UICONTROL CopyOnRead , CopyOnWrite , and Prefetch Index Files]** i versioner före AEM 6.2. Dessa värden är aktiverade som standard i AEM 6.2 och senare versioner.
+1. Aktivera **[!UICONTROL CopyOnRead , CopyOnWrite , and Prefetch Index Files]** i versioner före [!DNL Experience Manager] 6.2. Dessa värden är aktiverade som standard i [!DNL Experience Manager] 6.2 och senare versioner.
 
 Uppdatera indexkonfigurationer för att förbättra omindexeringstiden:
 
@@ -367,7 +367,7 @@ Inaktivera Lucene-textextrahering:
 
 Om användarna inte behöver kunna söka i innehållet i resurser, till exempel genom att söka i texten i PDF-dokument, kan du förbättra indexprestanda genom att inaktivera den här funktionen.
 
-1. Gå till AEM pakethanterare /crx/packmgr/index.jsp
+1. Gå till [!DNL Experience Manager]-pakethanteraren /crx/packmgr/index.jsp
 1. Överför och installera paketet nedan
 
 [Hämta fil](assets/disable_indexingbinarytextextraction-10.zip)
@@ -380,13 +380,13 @@ När du skapar frågor som genererar stora resultatuppsättningar ska du använd
 
 ### Stora filer {#large-files}
 
-Det finns två stora kända fel som rör stora filer i AEM. När filer når större storlekar än 2 GB kan synkronisering med vänteläge i kallt läge hamna i en situation där minnet är slut. I vissa fall förhindras att standby-synkronisering körs. I andra fall kraschar den primära instansen. Detta scenario gäller för alla filer i AEM som är större än 2 GB, inklusive innehållspaket.
+Det finns två stora kända fel som rör stora filer i AEM. När filer når större storlekar än 2 GB kan synkronisering med vänteläge i kallt läge hamna i en situation där minnet är slut. I vissa fall förhindras att standby-synkronisering körs. I andra fall kraschar den primära instansen. Detta scenario gäller för alla filer i [!DNL Experience Manager] som är större än 2 GB, inklusive innehållspaket.
 
 På samma sätt kan det ta lite tid innan filen är helt beständig från cachen till filsystemet om filstorleken når 2 GB när ett delat S3-datalager används. Detta innebär att om du använder en binär replikering utan binärfiler kan det hända att binära data inte har befunnits beständiga innan replikeringen slutförs. Denna situation kan leda till problem, särskilt om det är viktigt att data är tillgängliga, till exempel i avlastningsscenarier.
 
 ## Prestandatestning {#performance-testing}
 
-För varje AEM driftsättning måste ni skapa ett system för prestandatestning som snabbt kan identifiera och lösa flaskhalsar. Här är några nyckelområden att fokusera på.
+För varje [!DNL Experience Manager]-distribution måste du skapa ett prestandatestningssystem som snabbt kan identifiera och lösa flaskhalsar. Här är några nyckelområden att fokusera på.
 
 ### Nätverkstestning {#network-testing}
 
@@ -398,14 +398,14 @@ Utför följande uppgifter för alla problem med nätverkets prestanda från kun
 * Genom att använda ett prestandatest för nätverk
 * Testa mot dispatchern
 
-### Testning av AEM {#aem-instance-testing}
+### [!DNL Experience Manager] instanstestning {#aem-instance-testing}
 
-För att minimera latens och uppnå hög genomströmning genom effektiv CPU-användning och lastdelning ska du regelbundet övervaka prestanda i din AEM. Särskilt gäller följande:
+För att minimera latens och uppnå hög genomströmning genom effektiv processoranvändning och lastdelning ska du regelbundet övervaka [!DNL Experience Manager]-instansens prestanda. Särskilt gäller följande:
 
-* Kör inläsningstester mot AEM
+* Kör inläsningstester mot [!DNL Experience Manager]-instansen
 * Övervaka uppladdningsprestanda och gränssnittsvarstider
 
-## AEM Assets checklista för prestanda {#aem-assets-performance-checklist}
+## [!DNL Experience Manager] Kontrollistor för resursprestanda {#aem-assets-performance-checklist}
 
 * Gör det möjligt för HTTPS att kringgå alla HTTP-trafiksniffare på företag.
 * Använd en kabelanslutning för överföring av stora resurser.
@@ -420,4 +420,4 @@ För att minimera latens och uppnå hög genomströmning genom effektiv CPU-anv�
 * Optimera Lucene-indexkonfigurationen.
 * Optimera index med de senaste servicepaketen och snabbkorrigeringarna. Kontakta Adobe kundtjänst för eventuella ytterligare indexoptimeringar.
 * Använd `guessTotal` för att optimera frågeprestanda.
-* Om du konfigurerar AEM att identifiera filtyper från filernas innehåll (genom att konfigurera [!UICONTROL Day CQ DAM Mime Type Service] i [!UICONTROL AEM Web Console]) överför du många filer samtidigt under icke-toppvärdesdagar eftersom åtgärden är resursintensiv.
+* Om du konfigurerar [!DNL Experience Manager] för att identifiera filtyper från innehållet i filerna (genom att konfigurera [!UICONTROL Day CQ DAM Mime Type Service] i [!UICONTROL [!DNL Experience Manager] Web Console]), överför många filer samtidigt under icke-toppvärdesdagar eftersom åtgärden är resursintensiv.

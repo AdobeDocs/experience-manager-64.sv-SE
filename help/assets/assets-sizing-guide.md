@@ -1,31 +1,31 @@
 ---
 title: Handbok för resursstorlek
-description: 'Bästa metoder för att fastställa effektiva mätvärden för att uppskatta den infrastruktur och de resurser som krävs för att driftsätta AEM Assets. '
+description: 'Bästa metoder för att fastställa effektiva mått för att uppskatta den infrastruktur och de resurser som krävs för att distribuera [!DNL Experience Manager] resurser. '
 uuid: f847c07d-2a38-427a-9c38-8cdca3a1210c
 contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 82c1725e-a092-42e2-a43b-72f2af3a8e04
-feature: Resurshantering
+feature: Asset Management
 role: Architect,Admin
 exl-id: 6115e5e8-9cf5-417c-91b3-0c0c9c278b5b
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
 workflow-type: tm+mt
-source-wordcount: '1860'
+source-wordcount: '1840'
 ht-degree: 0%
 
 ---
 
 # Handbok för resursstorlek {#assets-sizing-guide}
 
-När du ändrar storlek på miljön för en implementering av Adobe Experience Manager (AEM) Assets är det viktigt att se till att det finns tillräckligt med resurser tillgängliga i fråga om disk, processor, minne, IO och nätverksgenomströmning. Om du vill ändra storlek på många av dessa resurser måste du känna till hur många resurser som läses in i systemet. Om det inte finns något bättre mätvärde kan du dividera storleken på det befintliga biblioteket med bibliotekets ålder för att hitta frekvensen som resurserna skapas med.
+När du ändrar storlek på miljön för en Adobe Experience Manager Assets-implementering är det viktigt att se till att det finns tillräckligt med resurser tillgängliga vad gäller disk, processor, minne, IO och nätverksgenomströmning. Om du vill ändra storlek på många av dessa resurser måste du känna till hur många resurser som läses in i systemet. Om det inte finns något bättre mätvärde kan du dividera storleken på det befintliga biblioteket med bibliotekets ålder för att hitta frekvensen som resurserna skapas med.
 
 ## Skiva {#disk}
 
 ### DataStore {#datastore}
 
-Ett vanligt misstag när storleken på det nödvändiga diskutrymmet för en resursimplementering väljs är att beräkningarna baseras på storleken på de råbilder som ska importeras till systemet. Som standard skapar AEM tre återgivningar utöver den ursprungliga bilden som kan användas för att återge AEM gränssnittselement. I tidigare implementeringar har dessa återgivningar observerats anta dubbelt så stora som storleken på de resurser som har importerats.
+Ett vanligt misstag när storleken på det nödvändiga diskutrymmet för en resursimplementering väljs är att beräkningarna baseras på storleken på de råbilder som ska importeras till systemet. Som standard skapar [!DNL Experience Manager] tre renderingar utöver den ursprungliga bilden, som används för att återge gränssnittselementen [!DNL Experience Manager]. I tidigare implementeringar har dessa återgivningar observerats anta dubbelt så stora som storleken på de resurser som har importerats.
 
-De flesta användare definierar anpassade återgivningar utöver de färdiga återgivningarna. Förutom återgivningarna kan du med AEM Assets extrahera underresurser från vanliga filtyper, som InDesign och Illustrator.
+De flesta användare definierar anpassade återgivningar utöver de färdiga återgivningarna. Förutom återgivningarna kan du med Assets extrahera underresurser från vanliga filtyper, till exempel InDesign och Illustrator.
 
 Slutligen lagras dubbletter av resurserna i versionshistoriken i AEM versionsfunktioner. Du kan konfigurera versionerna så att de rensas ofta. Många användare väljer dock att behålla versioner i systemet under lång tid, vilket kräver ytterligare lagringsutrymme.
 
@@ -34,11 +34,11 @@ Med tanke på dessa faktorer behöver du en metod för att beräkna ett tillräc
 1. Fastställ storleken och antalet resurser som ska läsas in i systemet.
 1. Hämta ett representativt urval av de resurser som ska överföras till AEM. Om du till exempel tänker läsa in PSD-, JPG-, AI- och PDF-filer i systemet behöver du flera exempelbilder för varje filformat. Dessutom bör dessa prover representera de olika filstorlekarna och komplexiteterna i bilderna.
 1. Definiera de återgivningar som ska användas.
-1. Skapa återgivningarna i AEM med ImageMagick eller Adobe’s Creative Cloud. Förutom de återgivningar som användarna anger skapar du färdiga återgivningar. För användare som implementerar Dynamic Media Classic kan du använda IC-binärfilen för att generera de PTIFF-återgivningar som ska lagras i AEM.
+1. Skapa renderingarna i [!DNL Experience Manager] med ImageMagick eller Adobe i Creative Cloud. Förutom de återgivningar som användarna anger skapar du färdiga återgivningar. För användare som implementerar Dynamic Media Classic kan du använda IC-binärfilen för att generera de PTIFF-återgivningar som ska lagras i AEM.
 1. Om du tänker använda delresurser genererar du dem för rätt filtyper. Mer information finns i onlinedokumentationen om hur du genererar underresurssidor från InDesign-filer eller PNG-/PDF-filer från Illustrator-lager.
 1. Jämför storleken på utdatabilder, återgivningar och delresurser med originalbilderna. Det gör att du kan generera en förväntad tillväxtfaktor när systemet har lästs in. Om du till exempel genererar återgivningar och delresurser med en kombinerad storlek på 3 GB efter att ha bearbetat 1 GB resurser, blir återgivningens tillväxtfaktor 3.
 1. Fastställer den maximala tid som tillgångsversionerna ska underhållas i systemet.
-1. Bestäm hur ofta befintliga resurser ändras i systemet. Om AEM används som samarbetsnav i kreativa arbetsflöden är antalet ändringar höga. Om endast färdiga resurser överförs till systemet är det här antalet mycket lägre.
+1. Bestäm hur ofta befintliga resurser ändras i systemet. Om [!DNL Experience Manager] används som samarbetsnav i kreativa arbetsflöden är antalet ändringar höga. Om endast färdiga resurser överförs till systemet är det här antalet mycket lägre.
 1. Bestäm hur många resurser som ska läsas in i systemet varje månad. Om du är osäker kan du kontrollera antalet tillgängliga resurser och dividera antalet med åldern på den äldsta resursen för att beräkna ett ungefärligt antal.
 
 Om du utför steg 1-9 kan du se följande:
@@ -51,7 +51,7 @@ Om du utför steg 1-9 kan du se följande:
 * Antal nya resurser som läses in varje månad
 * År av tillväxt att allokera utrymme för
 
-Du kan ange dessa tal i kalkylbladet Nätverksstorlek för att fastställa det totala utrymmet som krävs för datalagret. Det är också ett användbart verktyg för att avgöra vilken inverkan som underhåll av resursversioner eller ändringar av AEM har på disktillväxten.
+Du kan ange dessa tal i kalkylbladet Nätverksstorlek för att fastställa det totala utrymmet som krävs för datalagret. Det är också ett användbart verktyg för att fastställa effekten av att underhålla resursversioner eller ändra resurser i [!DNL Experience Manager] på disktillväxten.
 
 De exempeldata som finns i verktyget visar hur viktigt det är att utföra de angivna stegen. Om du ändrar storlek på datalagret baserat enbart på de Raw-bilder som läses in (1 TB) kan du ha underskattat databasstorleken med faktorn 15.
 
@@ -106,11 +106,11 @@ Använd SSD-diskar eller diskar med en IOPS-nivå som är högre än 3 000 för 
 
 ## Nätverk {#network}
 
-AEM Assets har ett antal användningsområden som gör nätverksprestanda viktigare än många av våra AEM projekt. En kund kan ha en snabb server, men om nätverksanslutningen inte är tillräckligt stor för att stödja belastningen på de användare som överför och hämtar resurser från systemet verkar den ändå vara långsam. Det finns en bra metod för att fastställa krympningspunkten i en användares nätverksanslutning till AEM på [AEM tillgångshänsyn för användarupplevelser, instansstorlek, utvärdering av arbetsflöde och nätverkstopologi](assets-network-considerations.md).
+[!DNL Assets] har ett antal användningsområden som gör nätverksprestanda viktigare än i många av våra  [!DNL Experience Manager] projekt. En kund kan ha en snabb server, men om nätverksanslutningen inte är tillräckligt stor för att stödja belastningen på de användare som överför och hämtar resurser från systemet verkar den ändå vara långsam. Det finns en bra metod för att fastställa kodpunkten i en användares nätverksanslutning till [!DNL Experience Manager] på [[!DNL Experience Manager]  Resursaspekter för användarupplevelse, instansstorlek, utvärdering av arbetsflöde och nätverkstopologi](assets-network-considerations.md).
 
 ## WebDAV {#webdav}
 
-Om du lägger till den AEM datorappen i mixen blir nätverksproblemen svårare på grund av ineffektivitet i WebDAV-protokollet.
+Om du lägger till [!DNL Experience Manager]-datorprogrammet i mixen blir nätverksproblemen svårare på grund av ineffektivitet i WebDAV-protokollet.
 
 För att illustrera dessa ineffektiva funktioner testade Adobe systemets prestanda med WebDAV i OS X. En 3,5 MB InDesign-fil öppnades, redigerades och ändringarna sparades. Följande iakttagelser gjordes:
 
@@ -122,7 +122,7 @@ För att illustrera dessa ineffektiva funktioner testade Adobe systemets prestan
 
 Vid analys av den genomsnittliga tiden för att spara filer via WebDAV, upptäcktes att prestandan ökar dramatiskt när bandbredden ökar upp till nivån 5-10 Mbit/s. Därför rekommenderar Adobe att alla användare som samtidigt ansluter till systemet ska ha en överföringshastighet på minst 10 Mbit/s och en bandbredd på 5-10 Mbit/s.
 
-Mer information finns i [Felsökning AEM datorprogram](https://helpx.adobe.com/experience-manager/kb/troubleshooting-companion-app.html).
+Mer information finns i [Felsökning [!DNL Experience Manager] datorprogram](https://helpx.adobe.com/experience-manager/kb/troubleshooting-companion-app.html).
 
 ## Begränsningar {#limitations}
 
@@ -142,8 +142,8 @@ Gränsen för antalet filer som kan finnas i ett datalager kan vara 2,1 miljarde
 
 Använd det Camera Raw biblioteket om återgivningarna genereras på fel sätt. I det här fallet får dock den längsta sidan av bilden inte vara större än 65 000 pixlar. Dessutom får bilden inte innehålla fler än 512 MP (512 &amp;ast; 1024 &amp;ast; 1024 pixlar)&#39;. *Storleken på tillgången är inkonsekvent*.
 
-Det är svårt att exakt uppskatta storleken på TIFF-filen som stöds utan att vara ifylld (OTB) med en särskild hake för AEM eftersom ytterligare faktorer, som pixelstorlek, påverkar bearbetningen. Det är möjligt att AEM kan bearbeta en fil med storleken 255 MB OTB, men inte kan bearbeta en filstorlek på 18 MB eftersom den senare innehåller ett ovanligt högre antal pixlar jämfört med den förra.
+Det är svårt att exakt uppskatta storleken på TIFF-filen som stöds av OTB (out-of-box) med en särskild heap för [!DNL Experience Manager] eftersom ytterligare faktorer, som pixelstorlek, påverkar bearbetningen. Det är möjligt att [!DNL Experience Manager] kan bearbeta en fil med storleken 255 MB OTB, men inte bearbeta en filstorlek på 18 MB eftersom den senare innehåller ett ovanligt högre antal pixlar jämfört med den förra.
 
 ## Storlek på tillgångar {#size-of-assets}
 
-Som standard kan du överföra resurser med en filstorlek på upp till 2 GB AEM. Information om hur du överför mycket stora resurser i AEM finns i [Konfiguration för att överföra mycket stora resurser](managing-video-assets.md#configuration-to-upload-video-assets-that-are-larger-than-gb).
+Som standard kan du med [!DNL Experience Manager] överföra resurser med filstorlek upp till 2 GB. Information om hur du överför mycket stora resurser i AEM finns i [Konfiguration för att överföra mycket stora resurser](managing-video-assets.md#configuration-to-upload-video-assets-that-are-larger-than-gb).
