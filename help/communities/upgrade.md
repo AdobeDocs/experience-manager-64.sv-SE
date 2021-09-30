@@ -1,8 +1,8 @@
 ---
 title: Uppgradera till AEM 6.4 Communities
-seo-title: Uppgradera till AEM 6.4 Communities
+seo-title: Upgrading to AEM 6.4 Communities
 description: Hur man uppgraderar från en tidigare version till AEM 6.4 Communities
-seo-description: Hur man uppgraderar från en tidigare version till AEM 6.4 Communities
+seo-description: How to upgrade from an earlier version to AEM 6.4 Communities
 uuid: c6c2846e-38d4-4e99-9038-bfb486afd8b9
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 7aa28e36-6b31-4447-b800-cab2dc78c93c
 exl-id: ef622ac3-d96d-48bf-bfb2-61516d9deb5c
-source-git-commit: a70f874ad7fcae59ee4c6ec20e23ffb2e339590b
+source-git-commit: 0f82e82cf6e09a2734893a98d67ed1a84b1fec5e
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
@@ -51,17 +51,17 @@ Om den uppgraderade webbplatsen har konfigurerats för att använda molnlagring 
 
 Det går alltså att instruera ASRP att använda `AEM 6.0 compatability-mode` för att få åtkomst till UGC.
 
-För alla AEM 6.3-författare och publiceringsinstanser
+För alla AEM 6.3-instanser:
 
-1. Logga in med administratörsbehörighet
-2. Konfigurera [ASRP](asrp.md)
-3. Följ de här stegen för att göra befintlig UGC synlig:
-i. Bläddra till webbkonsolen, till exempel
-   [https://&lt;host>:&lt;port>/system/console/](http://localhost:4502/system/console/configMgr)
-configMgrii. Sök efter **[!UICONTROL AEM Communities Utilities]**-konfiguration
-iii. Markera för att expandera konfigurationspanelen
-   * *Avmarkera* **`Cloud Storage`**
-   * Välj **[!UICONTROL Save]**
+1. Logga in med administratörsbehörighet och konfigurera [ASRP](asrp.md).
+1. Följ de här stegen för att göra den befintliga UGC-filen synlig:
+
+   i. Bläddra till webbkonsolen. Standardwebbadressen är
+   `https://localhost:4502/system/console/configMgr`.
+
+   ii. Leta reda på konfigurationen **[!UICONTROL AEM Communities Utilities]** och välj för att expandera konfigurationspanelen.
+
+   iii. Avmarkera **[!UICONTROL Cloud Storage]** och klicka på **[!UICONTROL Save]**.
 
 ![chlimage_1-126](assets/chlimage_1-126.png)
 
