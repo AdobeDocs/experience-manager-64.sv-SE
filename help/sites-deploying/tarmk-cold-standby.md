@@ -1,24 +1,24 @@
 ---
 title: Så här kör du AEM med TARMK Cold Standby
-seo-title: Så här kör du AEM med TARMK Cold Standby
+seo-title: How to Run AEM with TarMK Cold Standby
 description: Lär dig hur du skapar, konfigurerar och underhåller en StjärtMK Cold Standby-konfiguration.
-seo-description: Lär dig hur du skapar, konfigurerar och underhåller en StjärtMK Cold Standby-konfiguration.
+seo-description: Learn how to create, configure and maintain a TarMK Cold Standby setup.
 uuid: 27fd2b64-8983-40be-910e-1776a16e127c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: deploying
 discoiquuid: cb041407-ec30-47f8-a01e-314c4835a5d9
-feature: Konfigurerar
+feature: Configuring
 exl-id: 73f5c1a4-3d2d-4594-877e-93bd09a94e91
-source-git-commit: e22d12ee2096548e8303521b4c7dac79e7385f49
+source-git-commit: 63367e85f66d7830183403af6ad32ecca9dc8396
 workflow-type: tm+mt
-source-wordcount: '2713'
+source-wordcount: '2727'
 ht-degree: 0%
 
 ---
 
-# Så här kör du AEM med TjärMK Cold Standby{#how-to-run-aem-with-tarmk-cold-standby}
+# Så här kör du AEM med TARMK Cold Standby{#how-to-run-aem-with-tarmk-cold-standby}
 
 ## Introduktion {#introduction}
 
@@ -33,6 +33,16 @@ Innehållet synkroniseras linjärt mellan den primära instansen och standby-ins
 >Funktionen för vänteläge i kallt format är avsedd att skydda scenarier där hög tillgänglighet krävs för **författare**-instanser. I situationer där hög tillgänglighet krävs för **publicera**-instanser med hjälp av Tjärmikrokärnan rekommenderar Adobe att du använder en publiceringsgrupp.
 >
 >Mer information om fler tillgängliga distributioner finns på sidan [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md).
+
+>[!NOTE]
+>
+>När standby-instansen är konfigurerad, eller härleds från den primära noden, ger den endast åtkomst till följande två konsoler (för administrationsrelaterade aktiviteter):
+>
+>* CRXDE Lite
+>* OSGI Web Console
+
+>
+>Andra konsoler är inte tillgängliga.
 
 ## Så här fungerar det {#how-it-works}
 
@@ -73,7 +83,7 @@ Du kan dessutom ange vilka standby-instanser som tillåts ansluta genom att begr
 >
 >Vi rekommenderar att en belastningsutjämnare läggs till mellan Dispatcher och servrarna som ingår i konfigurationen för vänteläge i molnet. Belastningsutjämnaren bör konfigureras så att den endast dirigerar användartrafik till den primära **instansen** för att säkerställa konsekvens och förhindra att innehåll kopieras i standby-instansen på något annat sätt än i Cold Standby-mekanismen.
 
-## Skapar en AEM StjärnaMK Cold Standby-inställning {#creating-an-aem-tarmk-cold-standby-setup}
+## Skapa en AEM Stjärtöverläge i Cold {#creating-an-aem-tarmk-cold-standby-setup}
 
 >[!CAUTION]
 >
@@ -83,8 +93,7 @@ Du kan dessutom ange vilka standby-instanser som tillåts ansluta genom att begr
 >* från org.apache.jackrabbit.oak.**plugins**.segment.SegmentNodeStoreService to org.apache.jackrabbit.oak.segment.SegmentNodeStoreService
 
 >
->
-Se till att du gör de nödvändiga konfigurationsjusteringarna för att återspegla den här ändringen.
+>Se till att du gör de nödvändiga konfigurationsjusteringarna för att återspegla den här ändringen.
 
 För att kunna skapa en kallig TjärMK-standby-inställning måste du först skapa standby-instanserna genom att utföra en kopia av hela installationsmappen för den primära till en ny plats. Du kan sedan starta varje instans med ett körningsläge som anger dess roll ( `primary` eller `standby`).
 
@@ -207,7 +216,6 @@ Tjänsten kan även konfigureras via webbkonsolen genom att:
 >
 >Detta kan du göra genom att gå till *http://localhost:4502/system/console/status-slingsettings* och kontrollera raden **&quot;Run Modes&quot;**.
 
-
 ## Första synkroniseringen {#first-time-synchronization}
 
 När beredningen är klar och standby-läget startas för första gången kommer det att uppstå en kraftig nätverkstrafik mellan instanserna när standby-läget fångar upp till primärt läge. Du kan läsa loggarna för att se synkroniseringens status.
@@ -306,7 +314,7 @@ Om den primära instansen av någon anledning inte fungerar kan du ställa in en
 1. Lägg till den nya primära till belastningsutjämnaren.
 1. Skapa och starta en ny standby-instans. Mer information finns i proceduren ovan på [Skapa en AEM Stenk Cold Standby Setup](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup).
 
-## Använda snabbkorrigeringar i en inställning för vänteläge med kallt format {#applying-hotfixes-to-a-cold-standby-setup}
+## Använda snabbkorrigeringar i en konfiguration för vänteläge i kallt format {#applying-hotfixes-to-a-cold-standby-setup}
 
 Det rekommenderade sättet att tillämpa snabbkorrigeringar på en kallstartsinstallation är att installera dem på den primära instansen och sedan klona den i en ny kallig standby-instans med snabbkorrigeringarna installerade.
 
@@ -359,7 +367,7 @@ Dessutom kan information för upp till 10 klienter (standby-instanser) som är a
 * `TransferredSegments:` det totala antalet segment som överförts till den här klienten.
 * `TransferredSegmentBytes:`det totala antalet byte som har överförts till klienten.
 
-## Underhåll av vänteläge i kallt läge {#cold-standby-repository-maintenance}
+## Underhåll av vänteläge, kall {#cold-standby-repository-maintenance}
 
 ### Revision Cleanup {#revision-clean}
 
