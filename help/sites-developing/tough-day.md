@@ -1,8 +1,8 @@
 ---
 title: Tålig dag
-seo-title: Tålig dag
+seo-title: Tough Day
 description: Tough Day-testet simulerar den dagliga belastningen för cirka 1 000 författare i ett värsta scenario där alla åtgärder utförs samtidigt.
-seo-description: Tough Day-testet simulerar den dagliga belastningen för cirka 1 000 författare i ett värsta scenario där alla åtgärder utförs samtidigt.
+seo-description: The Tough Day test simulates the daily load of around 1000 authors in a worst-case scenario with all the operations going on at the same time.
 uuid: 7a13efe0-c455-4af0-ad7b-c39cb2479d74
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,23 +10,22 @@ topic-tags: testing
 content-type: reference
 discoiquuid: f48fa5ba-749b-4d3d-a4dd-c802006c8f07
 exl-id: 80442184-212a-424d-b320-5b301a54f974
-translation-type: tm+mt
-source-git-commit: 204b28653c8771fead77c484aec40d6ec6629b6c
+source-git-commit: 119023a24d5f21fd003439992fe5a520f48b6861
 workflow-type: tm+mt
-source-wordcount: '1923'
+source-wordcount: '1894'
 ht-degree: 0%
 
 ---
 
 # Tålig dag{#tough-day}
 
-## Vad är Tough Day 2 {#what-is-tough-day}?
+## Vad är Tom Dag 2? {#what-is-tough-day}
 
 Tough Day 2 är ett program som gör att du kan stresstesta gränserna för din AEM. Den kan köras direkt med testsviten eller konfigureras för att passa dina testbehov. Du kan titta på [den här inspelningen](https://docs.adobe.com/ddc/en/gems/Toughday2---A-new-and-improved-stress-testing-and-benchmarking-tool.html) om du vill se en presentation av programmet.
 
 ## Köra Tough Day 2 {#how-to-run-tough-day}
 
-Hämta den senaste versionen av Tough Day 2 från [Adobe-databasen](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/qe/toughday2/). När du har hämtat programmet kan du köra det direkt genom att ange parametern `host`. I följande exempel körs den AEM instansen lokalt så att `localhost`-värdet används:
+Hämta den senaste versionen av Tough Day 2 från [Adobe-databasen](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/). När du har hämtat programmet kan du köra det direkt genom att ange parametern `host`. I följande exempel körs den AEM instansen lokalt så att `localhost`-värdet används:
 
 ```xml
 java -jar toughday2.jar --host=localhost
@@ -54,8 +53,7 @@ java -jar toughday2.jar [--help | --help_full | --help_tests | --help_publish]  
 >
 >Grovdag 2 har inget upprensningssteg. Därför bör du köra Tough Day 2 på en klonad mellanlagringsinstans och inte på huvudproduktionsinstansen. Mellanlagringsinstansen bör tas bort efter testerna.
 
-
-### Hämta hjälp {#getting-help}
+### Få hjälp {#getting-help}
 
 Dag 2 erbjuder en mängd hjälpalternativ som du kan komma åt från kommandoraden. Till exempel:
 
@@ -147,7 +145,7 @@ Anpassning kan göras på två sätt: kommandoradsparametrar eller dynamiska kon
 
 Det enda sättet att spara en testkonfiguration är att kopiera den i yaml-format. Mer information finns i den här [toughday.yaml](https://repo.adobe.com/nexus/service/local/repositories/releases/content/com/adobe/qe/toughday2/0.2.1/toughday2-0.2.1.yaml)-konfigurationen och i exemplen på yaml-konfiguration i avsnitten nedan.
 
-### Lägger till ett nytt test {#adding-a-new-test}
+### Lägga till ett nytt test {#adding-a-new-test}
 
 Om du inte vill använda standardsviten `toughday` kan du lägga till ett test med parametern `add`. I exemplen nedan visas hur du lägger till `CreateAssetTreeTest`-testet antingen med kommandoradsparametrar eller en gul konfigurationsfil.
 
@@ -166,7 +164,7 @@ tests:
   - add : CreateAssetTreeTest
 ```
 
-### Lägga till flera instanser av samma test {#adding-multiple-instances-of-the-same-test}
+### Lägga till flera instanser av samma test  {#adding-multiple-instances-of-the-same-test}
 
 Du kan också lägga till och köra flera instanser av samma test, men varje instans måste ha ett unikt namn. I exemplen nedan visas hur du lägger till två instanser av samma test antingen med kommandoradsparametrar eller en gul konfigurationsfil.
 
@@ -190,7 +188,7 @@ tests:
       name : SecondAssetTree
 ```
 
-### Ändra testegenskaperna {#changing-the-test-properties}
+### Ändra testegenskaper {#changing-the-test-properties}
 
 Om du behöver ändra en eller flera av testegenskaperna kan du lägga till den egenskapen på kommandoraden eller i yaml-konfigurationsfilen. Om du vill visa alla tillgängliga testegenskaper lägger du till parametern `--help <TestClass/PublisherClass>` på kommandoraden, till exempel:
 
@@ -396,7 +394,7 @@ publishmode:
         -add : CreatePageTreeTest
 ```
 
-### Loggar {#logging}
+### Loggning {#logging}
 
 Tough Day 2 skapar en loggmapp i samma katalog som du körde Tough Day 2. Den här mappen innehåller två typer av loggar:
 
