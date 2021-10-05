@@ -10,9 +10,9 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 2be468e7-2b4e-4e04-881b-b9bdd1f55e57
 exl-id: ee034595-2d2a-4887-86c4-6bf0770da6a2
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: d750c852b6367d753d18be57c8910bf5671fd5e8
 workflow-type: tm+mt
-source-wordcount: '2754'
+source-wordcount: '2751'
 ht-degree: 1%
 
 ---
@@ -117,7 +117,7 @@ Införandet av flytande upplevelser i början av 2017, med stöd av innehållsfr
 
 **[Innehållsfragment](/help/assets/content-fragments.md)**
 
-Nyheter i 6.4 är en visuell [innehållsmodell](/help/assets/content-fragments-models.md)-redigerare och en ny [konfigurerbar komponent](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html) som ger flexibel HTML-utskrift och JSON som ska ingå i Content Services.
+Nyheter i 6.4 är en visuell [innehållsmodell](/help/assets/content-fragments-models.md)-redigerare och en ny [konfigurerbar komponent](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html) som ger flexibla HTML-utdata och JSON som ska ingå i Content Services.
 
 **Experience Fragments**
 
@@ -135,7 +135,7 @@ Rekommenderad självstudiekurs för att lära dig hur du bäst utnyttjar den nya
 
 #### Tillägget Skärmar {#screens-add-on}
 
-AEM Screens står för att leverera ett enhetligt budskap i alla marknadsföringskanaler, inklusive digitala signaturer och kiosknätverk. AEM 6.4 lägger till stöd för att köra signeringsspelaren på maskinvaran för Microsoft Windows och Google Chrome OS. Dessutom finns det förbättringar av enhetshantering och scheman (grupper av kanaler) på fjärrbasis.
+AEM Screens står för att leverera ett enhetligt budskap i alla marknadsföringskanaler, inklusive digitala signaturer och kiosknätverk. AEM 6.4 har stöd för att köra signeringsspelaren på maskinvaran i Microsoft Windows och Google Chrome OS. Dessutom finns det förbättringar av enhetshantering och scheman (grupper av kanaler) på fjärrbasis.
 
 Mer information om skärmuppdateringar finns i [AEM Screens användarhandbok](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html).
 
@@ -187,7 +187,7 @@ AEM 6.4 innehåller flera nya funktioner och förbättringar av Assets, bland an
 
 **Adobe Asset Link**
 
-Adobe Asset Link i Creative Cloud for enterprise effektiviserar samarbetet mellan kreatörer och marknadsförare vid framtagningen av innehåll. Det är en ny inbyggd funktion i Creative Cloud for enterprise som kopplar Photoshop CC, Illustrator CC och InDesign CC till AEM - utan att kreatörerna behöver lämna sina valverktyg.
+Adobe Asset Link i Creative Cloud for enterprise effektiviserar samarbetet mellan kreatörer och marknadsförare vid framtagningen av innehåll. Det är en ny inbyggd funktion i Creative Cloud for enterprise som kopplar Photoshop, Illustrator och InDesign till AEM - utan att kreatörerna behöver lämna sina valverktyg.
 
 Mer information om den här funktionen, de nödvändiga komponenterna och hur du får tillgång till den finns i [Adobe Asset Link](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html).
 
@@ -304,7 +304,7 @@ Denna prioriteringsprocess har resulterat i över 500 kundfokuserade förändrin
 
 * Adobe Experience Manager-datorprogram ([läs mer](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) och [ladda ned](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html))
 
-* Paket för att lägga till förbättrad PDF-rastrerare ([läs mer](/help/assets/aem-pdf-rasterizer.md) och [ladda ned](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg))
+* Paket för att lägga till förbättrad PDF Rasterizer ([läs mer](/help/assets/aem-pdf-rasterizer.md) och [ladda ned](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg))
 
 * Paket för att lägga till stöd för utökad RAW-bild ([läs mer](/help/assets/camera-raw.md))
 

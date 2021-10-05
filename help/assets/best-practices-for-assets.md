@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management
 role: Architect,Admin
 exl-id: e2ab924b-53cb-4011-8c0a-9e8e59dd2f16
-source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
+source-git-commit: d750c852b6367d753d18be57c8910bf5671fd5e8
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '625'
 ht-degree: 0%
 
 ---
@@ -37,4 +37,4 @@ Att hantera stora filer och köra arbetsflöden i [!DNL Experience Manager] Resu
 * [[!DNL Experience Manager] och integrering med Creative Cloud ](aem-cc-integration-best-practices.md)
 de bästa sättenDu kan integrera  [!DNL Experience Manager] driftsättningen med Creative Cloud på flera sätt. Om du följer några metodtips för att effektivisera arbetsflödena för integrering och överföring av resurser blir det effektivare. Den här guiden innehåller metodtips om hur du integrerar [!DNL Experience Manager]-resurser med Adobe Creative Cloud.
 * (Föråldrat) [[!DNL Experience Manager] till Creative Cloud för att dela metodtips](aem-cc-folder-sharing-best-practices.md)
-Du kan konfigurera [!DNL Experience Manager] så att användare i DAM kan dela mappar med Creative Cloud-användare (CC) så att de är tillgängliga som delade mappar i tjänsten Creative Cloud Assets. Funktionen kan användas för utbyte av filer mellan kreativa team och DAM-användare. I den här guiden beskrivs de bästa sätten att utnyttja funktionen [!DNL Experience Manager] för delning av Creative Cloud-mappar.
+Du kan konfigurera [!DNL Experience Manager] så att användare i DAM kan dela mappar med Creative Cloud-användare, så att de är tillgängliga som delade mappar i tjänsten Creative Cloud Assets. Funktionen kan användas för utbyte av filer mellan kreativa team och DAM-användare. I den här guiden beskrivs de bästa sätten att utnyttja funktionen [!DNL Experience Manager] för delning av Creative Cloud-mappar.
