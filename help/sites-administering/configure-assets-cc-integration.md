@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar AEM Assets-integrering med Experience 
 feature: Asset Management
 role: User, Architect, Admin
 exl-id: f8629c30-1901-4b6e-b5a6-e46ee3c72fba
-source-git-commit: d750c852b6367d753d18be57c8910bf5671fd5e8
+source-git-commit: 63a4304a1a10f868261eadce74a81148026390b6
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 1%
@@ -25,7 +25,7 @@ I backend autentiserar AEM din profil med gatewayen och synkroniserar sedan data
 
 >[!NOTE]
 >
->Den här funktionen är föråldrad i AEM Assets. Sök efter ersättningar i [Bästa praxis för integrering av AEM och Creative Cloud](/help/assets/aem-cc-integration-best-practices.md). Om du har frågor, [kontakta Adobe kundtjänst](https://www.adobe.com/account/sign-in.supportportal.html).
+>Den här funktionen är föråldrad i AEM Assets. Sök efter ersättningar i [Bästa praxis för integrering av AEM och Creative Cloud](/help/assets/aem-cc-integration-best-practices.md). Om du har frågor, [kontakta Adobe kundsupport](https://www.adobe.com/account/sign-in.supportportal.html).
 
 <!-- Hiding this for now via cqdoc-16834.
 ![Flow of data when AEM Assets and Creative Cloud are integrated](assets/chlimage_1-287.png)

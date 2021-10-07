@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Management
 role: Architect,Admin
 exl-id: 6c1bff46-f9e0-4638-9374-a9e820d30534
-source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
+source-git-commit: 63a4304a1a10f868261eadce74a81148026390b6
 workflow-type: tm+mt
 source-wordcount: '3112'
 ht-degree: 0%
@@ -113,7 +113,7 @@ Adobe rekommenderar att du aktiverar HTTPS eftersom många företag har brandvä
 Din nätverksoptimeringsstrategi beror i första hand på den tillgängliga bandbredden och belastningen på din [!DNL Experience Manager]-instans. Gemensamma konfigurationsalternativ, inklusive brandväggar och proxies, kan förbättra nätverkets prestanda. Här följer några viktiga punkter att tänka på:
 
 * Beroende på vilken instanstyp du har (liten, måttlig, stor) kontrollerar du att du har tillräcklig nätverksbandbredd för din [!DNL Experience Manager]-instans. Lämplig bandbreddsallokering är särskilt viktig om [!DNL Experience Manager] finns på AWS.
-* Om din [!DNL Experience Manager]-instans finns på AWS kan du dra nytta av en flexibel skalförändringsprincip. Överför instansen om användarna förväntar sig hög belastning. Minska storleken för måttlig/låg belastning.
+* Om din [!DNL Experience Manager]-instans finns på AWS kan du dra nytta av en mångsidig skalningsprincip. Överför instansen om användarna förväntar sig hög belastning. Minska storleken för måttlig/låg belastning.
 * HTTPS: De flesta användare har brandväggar som tolkar HTTP-trafik, vilket kan påverka överföringen av filer negativt eller till och med skada filer under överföringen.
 * Stora filöverföringar: Se till att användarna har kabelanslutna anslutningar till nätverket (WiFi-anslutningar blir snabbt mättade).
 
@@ -166,7 +166,7 @@ Från och med [!DNL Experience Manager] 6.2 och med ett funktionspaket för [!DN
 
 ### DAM-uppdateringskonfiguration {#dam-update-asset-configuration}
 
-Arbetsflödet för DAM-uppdatering av resurser innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel generering av Dynamic Media Classic PTIFF och integrering med InDesign Server. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen för DAM-uppdatering och tar bort alla onödiga steg. I det här fallet ska du uppdatera startarna för DAM Update Asset så att de pekar på den nya modellen.
+Arbetsflödet för DAM-uppdatering av tillgångar innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel Dynamic Media Classic PTIFF-generering och integrering med InDesign Server. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen för DAM-uppdatering och tar bort alla onödiga steg. I det här fallet ska du uppdatera startarna för DAM Update Asset så att de pekar på den nya modellen.
 
 >[!NOTE]
 >
@@ -184,7 +184,7 @@ Kunderna använder bilder av olika storlek och format på sin webbplats eller f�
 
 Många webbplatskunder implementerar en bildservett som ändrar storlek på och beskär bilder när de begärs, vilket medför ytterligare belastning på publiceringsinstansen. Så länge dessa bilder kan cachas kan utmaningen dock mildras.
 
-Ett annat sätt är att använda Dynamic Media Classic-teknik för att helt och hållet överlåta bildbearbetning. Dessutom kan du distribuera Brand Portal, som inte bara tar över ansvaret för att skapa renderingar från [!DNL Experience Manager]-infrastrukturen, utan även hela publiceringsnivån.
+Ett annat sätt är att använda Dynamic Media Classic-teknik för att helt och hållet överge bildbearbetning. Dessutom kan du distribuera Brand Portal, som inte bara tar över ansvaret för att skapa renderingar från [!DNL Experience Manager]-infrastrukturen, utan även hela publiceringsnivån.
 
 #### ImageMagick {#imagemagick}
 
@@ -215,7 +215,7 @@ Dessutom anger du sökvägen till ImageMagick:s temporära mapp i filen *configu
 >
 >ImageMagick `policy.xml`- och `configure.xml`-filerna finns under `/usr/lib64/ImageMagick-*/config/` i stället för `/etc/ImageMagick/`. Se [ImageMagick-dokumentation](https://www.imagemagick.org/script/resources.php) för mer information om var konfigurationsfilen finns.
 
-Om du använder [!DNL Experience Manager] på Adobe Managed Services (AMS) kan du kontakta Adobe kundtjänst om du tänker bearbeta många stora PSD- eller PSB-filer. Det går inte att bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar i Experience Manager.
+Om du använder [!DNL Experience Manager] på Adobe Managed Services (AMS) kan du kontakta Adobe kundsupport om du tänker bearbeta många stora PSD- eller PSB-filer. Det går inte att bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar i Experience Manager.
 
 <!-- 
 
@@ -365,7 +365,7 @@ Uppdatera indexkonfigurationer för att förbättra omindexeringstiden:
 
 Inaktivera Lucene-textextrahering:
 
-Om användarna inte behöver kunna söka i innehållet i resurser, till exempel genom att söka i texten i PDF-dokument, kan du förbättra indexprestanda genom att inaktivera den här funktionen.
+Om dina användare inte behöver kunna söka efter innehåll i resurser, till exempel genom att söka efter texten i PDF-dokument, kan du förbättra indexprestanda genom att inaktivera den här funktionen.
 
 1. Gå till [!DNL Experience Manager]-pakethanteraren /crx/packmgr/index.jsp
 1. Överför och installera paketet nedan
@@ -418,6 +418,6 @@ För att minimera latens och uppnå hög genomströmning genom effektiv processo
 * Ta bort onödiga steg från DAM Update Asset-arbetsflödet.
 * Konfigurera arbetsflöde och versionsrensning.
 * Optimera Lucene-indexkonfigurationen.
-* Optimera index med de senaste servicepaketen och snabbkorrigeringarna. Kontakta Adobe kundtjänst för eventuella ytterligare indexoptimeringar.
+* Optimera index med de senaste servicepaketen och snabbkorrigeringarna. Kontakta Adobe kundsupport för eventuella ytterligare indexoptimeringar.
 * Använd `guessTotal` för att optimera frågeprestanda.
 * Om du konfigurerar [!DNL Experience Manager] för att identifiera filtyper från innehållet i filerna (genom att konfigurera [!UICONTROL Day CQ DAM Mime Type Service] i [!UICONTROL [!DNL Experience Manager] Web Console]), överför många filer samtidigt under icke-toppvärdesdagar eftersom åtgärden är resursintensiv.

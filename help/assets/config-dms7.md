@@ -8,7 +8,7 @@ content-type: reference
 exl-id: b0f0c6e4-77c8-40db-a9f4-699d1a633571
 feature: Configuration,Scene7 Mode
 role: Admin,User,Developer
-source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
+source-git-commit: a750c5425e33c2a115aab581b71862c1d30cf166
 workflow-type: tm+mt
 source-wordcount: '5171'
 ht-degree: 2%
@@ -69,7 +69,7 @@ Mer information finns i [Installera funktionspaket 18912 för migrering av grupp
 
 ## Konfigurera Dynamic Media-Cloud Services {#configuring-dynamic-media-cloud-services}
 
-Ändra lösenordet innan du konfigurerar Dynamic Media-Cloud Services. När du har fått ditt e-postmeddelande med Dynamic Media-inloggningsuppgifter måste du [logga in](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app) på Dynamic Media Classic för att kunna ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
+Ändra lösenordet innan du konfigurerar Dynamic Media-Cloud Services. När du har fått ditt e-postmeddelande med Dynamic Media-inloggningsuppgifter måste du [logga in](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app) på Dynamic Media Classic datorprogram för att ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ Mer information finns i [Installera funktionspaket 18912 för migrering av grupp
 
 1. I Experience Manager Author-instansen trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen och sedan på verktygsikonen och sedan på **[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media Configuration]**.
 1. På sidan Dynamic Media Configuration Browser (Konfigurationsläsare) trycker du på **[!UICONTROL global]** i den vänstra rutan och trycker på **[!UICONTROL Create]**. Tryck inte på eller välj mappikonen till vänster om [!UICONTROL global].
-1. På sidan [!UICONTROL Create Dynamic Media Configuration] anger du en titel, e-postadress och lösenord för Dynamic Media-kontot. Välj region. Den här informationen tillhandahålls av Adobe i ditt e-postmeddelande om etablering. Kontakta Adobe kundtjänst om du inte har fått e-postmeddelandet.
+1. På sidan [!UICONTROL Create Dynamic Media Configuration] anger du en titel, e-postadress och lösenord för Dynamic Media-kontot. Välj region. Den här informationen tillhandahålls av Adobe i ditt e-postmeddelande om etablering. Kontakta Adobe kundsupport om du inte fått e-postmeddelandet.
 
    Tryck på **[!UICONTROL Connect to Dynamic Media]**.
 
@@ -128,7 +128,7 @@ Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media - Scene7
 
 ### (Valfritt) Installation och konfiguration av Dynamic Media - inställningar för Scene7-läge</p> {#optional-setup-and-configuration-of-dynamic-media-scene-mode-settings-p}
 
-När du är i körningsläget **dynamicmedia_scene7** använder du användargränssnittet i Dynamic Media Classic för att ändra dina Dynamic Media-inställningar.
+När du är i körningsläget **dynamicmedia_scene7** använder du Dynamic Media Classic användargränssnitt för att ändra dina Dynamic Media-inställningar.
 
 Vissa av ovanstående uppgifter kräver att du öppnar [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och sedan loggar in på ditt konto.
 
@@ -203,10 +203,10 @@ Du kan till exempel ställa in **[!UICONTROL RGB Default Color Space]** på `sRG
 
 Om du gör det gör du så här:
 
-* Aktiverar färgkorrigering för RGB- och CMYK-bilder.
+* Aktiverar färgkorrigering för RGB och CMYK-bilder.
 * RGB-bilder som inte har någon färgprofil antas finnas i färgmodellen `sRGB`.
 * CMYK-bilder som inte har någon färgprofil antas vara i färgrymden `WebCoated`.
-* Dynamiska återgivningar som returnerar RGB-utdata returnerar det i färgmodellen `sRGB`.
+* Dynamiska återgivningar som returnerar utdata från RGB, returnerar dem i färgmodellen `sRGB`.
 * Dynamiska återgivningar som returnerar CMYK-utdata returnerar det i färgmodellen `WebCoated`.
 
 #### Redigera MIME-typer för format som stöds {#editing-mime-types-for-supported-formats}
@@ -452,7 +452,7 @@ När rotationsuppsättningen överförs och publiceras, aktiverar du namnet på 
 
 1. För **[!UICONTROL Set Naming]** och **[!UICONTROL Creation Convention]** anger du suffixet eller prefixet till basnamnet som du definierade i **[!UICONTROL Asset Naming Convention]**.
 
-   Du kan även definiera var rotationsuppsättningen ska skapas i mappstrukturen för Dynamic Media Classic.
+   Du kan också definiera var rotationsuppsättningen ska skapas i mappstrukturen för Dynamic Media Classic.
 
    Om du definierar ett stort antal uppsättningar ska du hålla dem åtskilda från de mappar som innehåller själva resurserna. Du kan till exempel skapa en mapp för snurruppsättningar där du kan placera genererade uppsättningar här.
 
@@ -478,7 +478,7 @@ Om du vill aktivera mallskapande använder du följande parametrar: `process=Mai
 
 <!-- REMOVED BASED ON CQDOC-17657 You can tune job parameters for faster processing when you upload files. For example, if you are uploading PSD files, but do not want to process them as templates, you can set layer extraction to false (off). In such case, the tuned job parameter would appear as `process=None&createTemplate=false`. -->
 
-Adobe rekommenderar att du använder följande&quot;justerade&quot; jobbparametrar för PDF-, PostScript®- och PSD-filer:
+Adobe rekommenderar att du använder följande &quot;justerade&quot; jobbparametrar för PDF, PostScript® och PSD:
 
 <!-- OLD PDF JOB PARAMETERS `pdfprocess=Rasterize&resolution=150&colorspace=Auto&pdfbrochure=false&keywords=false&links=false` -->
 
@@ -492,7 +492,7 @@ Adobe rekommenderar att du använder följande&quot;justerade&quot; jobbparametr
 
 <!-- CQDOC-17657 for PSD entry in table above -->
 
-Om du vill uppdatera någon av de här parametrarna följer du stegen i [Aktivera stöd för MIME-typbaserade resurser/Dynamic Media Classic-överföringsjobbparametrar](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support).
+Om du vill uppdatera någon av de här parametrarna följer du stegen i [Aktivera stöd för MIME-typbaserade resurser/Dynamic Media Classic överföringsjobbparametrar](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support).
 
 #### Uppdaterar kön för Granska tillfälligt arbetsflöde {#updating-the-granite-transient-workflow-queue}
 
@@ -542,7 +542,7 @@ Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynam
 
 #### Uppdaterar Scene7 överföringsanslutning {#updating-the-scene-upload-connection}
 
-Inställningen Scene7 Upload Connection synkroniserar Experience Manager Assets till Dynamic Media Classic-servrar.
+Inställningen Scene7 Upload Connection synkroniserar Experience Manager Assets med Dynamic Media Classic-servrar.
 
 **Så här uppdaterar du Scene7 överföringsanslutning:**
 

@@ -5,7 +5,7 @@ contentOwner: VG
 feature: Brand Portal
 role: Admin
 exl-id: cde35555-259f-4d16-999f-2b93d597b8a5
-source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
+source-git-commit: 8910716cf6b5c4e872db8d965200787de7c2d121
 workflow-type: tm+mt
 source-wordcount: '1554'
 ht-degree: 37%
@@ -37,7 +37,7 @@ Informationen baseras på antagandet att alla som läser den här hjälpen känn
 
 * Installera, konfigurera och administrera Adobe Experience Manager- och AEM-paket
 
-* Använda Linux och Microsoft Windows
+* Använda operativsystemen Linux och Microsoft Windows
 
 ## Förutsättningar {#prerequisites}
 
@@ -67,7 +67,7 @@ Detaljerade instruktioner finns i
 
 * [AEM 6.4 Service Pack versionsinformation](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)
 
-**Kontakta Customer** Careiom du inte kan hitta det senaste AEM eller Service Pack.
+**Kontakta kundsupporten** om du inte kan hitta det senaste AEM eller Service Pack.
 
 ## Skapa en konfiguration {#configure-new-integration-64}
 

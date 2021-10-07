@@ -2,7 +2,7 @@
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation om borttagna funktioner i Adobe Experience Manager 6.4.
 exl-id: 2fe0dad7-fc78-4aac-afa3-79a278008453
-source-git-commit: af7bced72b8043d4460b575dc62c64f188575452
+source-git-commit: dcc36e499517f3f35d5f1d849802c4a5c35121bd
 workflow-type: tm+mt
 source-wordcount: '1310'
 ht-degree: 2%
@@ -151,7 +151,7 @@ föråldrad.
 
 | Yta | Funktion | Ersättning |
 |---|---|---|
-| Integrering med [!DNL Experience Cloud] | Du kan synkronisera dina resurser med [!DNL Experience Cloud] genom att konfigurera via [!DNL Adobe I/O]. [!DNL Adobe Experience Cloud] kallades tidigare  [!DNL Adobe Marketing Cloud]. | Om du har frågor kan du kontakta [Adobe kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support). |
+| Integrering med [!DNL Experience Cloud] | Du kan synkronisera dina resurser med [!DNL Experience Cloud] genom att konfigurera via [!DNL Adobe I/O]. [!DNL Adobe Experience Cloud] kallades tidigare  [!DNL Adobe Marketing Cloud]. | Om du har frågor kan du kontakta [Adobe kundsupport](https://experienceleague.adobe.com/?support-solution=General#support). |
 | Analytics Activity Map | Den version av Activity Map som ingår i AEM. | På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM. Plugin-programmet [ActivityMap som tillhandahålls av Adobe Analytics](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) bör nu användas. |
 | Components-Forms | Form Captcha (foundation/components/form/captcha) | Använd komponenten ReCaptcha från Google i stället |
 | Komponenter | Bildspel (grund/komponenter/bildspel) | Ingen ersättning |
@@ -170,9 +170,9 @@ föråldrad.
 | Forms | Borttagen AEM Forms på JEE-specifik landningssida. | AEM Forms på JEE-landningssida ersätts med AEM landningssida (/aem/start.html) |
 | Forms | Stöd för standard-Captcha har tagits bort | Använd tjänsten reCAPTCHA från Google. |
 | Forms | Stöd för flash-fält i AEM Designer har tagits bort. AEM Designer tillåter inte redigering av Flash-fält som används i ett formulär. | Du kan använda AEM Designer som släppts för en tidigare version för att redigera sådana formulär. |
-| Communities | Stöd för Captcha-verifiering har tagits bort. | Använd anpassad Captcha-integrering (till exempel reCAPTCHA från Google) för verifiering. |
+| Communities | Stöd för Captcha-verifiering har tagits bort. | Använd anpassad captcha-integrering (till exempel reCAPTCHA från Google) för verifiering. |
 
-## Förhandsmeddelande för nästa version {#pre-announcement-for-next-release}
+## Förhandsmeddelande för nästa release {#pre-announcement-for-next-release}
 
 Tabellen nedan innehåller en lista över ändringar för framtida releaser som inte är inaktuella, men som kan påverka kunderna. Dessa tillhandahålls för planeringsändamål.
 

@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Renditions,Developer Tools
 role: Admin
 exl-id: 9aeda88a-fd66-4fad-b496-3352a6ecab81
-source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
+source-git-commit: 63a4304a1a10f868261eadce74a81148026390b6
 workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 1%
@@ -22,7 +22,7 @@ Om du vill bearbeta stora filer med ImageMagick bör du tänka på högre minnes
 
 >[!NOTE]
 >
->Om du använder [!DNL Experience Manager] på Adobe Managed Services (AMS) kan du kontakta Adobe kundtjänst om du tänker bearbeta många stora PSD- eller PSB-filer. Det går inte att bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar i Experience Manager.
+>Om du använder [!DNL Experience Manager] på Adobe Managed Services (AMS) kan du kontakta Adobe kundsupport om du tänker bearbeta många stora PSD- eller PSB-filer. Det går inte att bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar i Experience Manager.
 
 ## Installera ImageMagick {#installing-imagemagick}
 
@@ -36,7 +36,7 @@ Det finns flera versioner av installationsfilerna för ImageMagic för olika ope
 
 ## Ställa in kommandoradens processsteg {#set-up-the-command-line-process-step}
 
-Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfall. Följ de här stegen för att skapa en vänd bild och miniatyrbilder (140x100, 48x48, 319x319 och 1280x1280) varje gång du lägger till en JPEG-bildfil i `/content/dam` på [!DNL Experience Manager]-servern:
+Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfall. Följ de här stegen för att skapa en speglad bild och miniatyrbilder (140x100, 48x48, 319x319 och 1280x1280) varje gång du lägger till en JPEG-bildfil i `/content/dam` på [!DNL Experience Manager]-servern:
 
 1. Gå till arbetsflödeskonsolen (`https://[aem_server]:[Port]/workflow`) på [!DNL Experience Manager]-servern och öppna arbetsflödesmodellen för **[!UICONTROL DAM Update Asset]**.
 1. Öppna steget **[!UICONTROL EPS thumbnails (powered by ImageMagick)]** i arbetsflödesmodellen **[!UICONTROL DAM Update Asset]**.
@@ -73,7 +73,7 @@ Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfa
    ![web_enabled](assets/web_enabled.png)
 
 1. Spara arbetsflödet.
-1. Om du vill kontrollera om ImageMagic kan bearbeta bilder på rätt sätt överför du en JPG-bild till [!DNL Assets]. Kontrollera om en bild som har vänts och återgivningarna genereras för den.
+1. Om du vill kontrollera om ImageMagic kan bearbeta bilderna på rätt sätt överför du en JPG-bild till [!DNL Assets]. Kontrollera om en bild som har vänts och återgivningarna genereras för den.
 
 ## Minska säkerhetsluckor {#mitigating-security-vulnerabilities}
 

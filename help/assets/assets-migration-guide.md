@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Migration,Renditions,Asset Management
 role: Architect,Admin
 exl-id: 31da9f3d-460a-4b71-9ba0-7487f1b159cb
-source-git-commit: cc6de21180c9fff74f7d64067db82f0c11ac9333
+source-git-commit: 63a4304a1a10f868261eadce74a81148026390b6
 workflow-type: tm+mt
 source-wordcount: '1772'
 ht-degree: 8%
@@ -22,7 +22,7 @@ Innan du utför något av stegen som beskrivs nedan bör du granska och implemen
 
 >[!NOTE]
 >
->Följande verktyg för resursmigrering ingår inte i Adobe Experience Manager. Adobe kundtjänst stöder inte dessa verktyg.
+>Följande verktyg för resursmigrering ingår inte i Adobe Experience Manager. Adobe kundsupport stöder inte dessa verktyg.
 >
 >* ACS [!DNL Experience Manager] Tools Tag Maker
 >* ACS [!DNL Experience Manager] Tools CSV Asset Importer
@@ -129,7 +129,7 @@ I det här fallet är dina resurser redan ifyllda med metadata och återgivninga
 1. Migrera resurser: Det finns två verktyg som rekommenderas för att flytta resurser från en [!DNL Experience Manager]-instans till en annan:
 
    * **Med Vault Remote Copy**, eller  `vlt rcp`, kan du använda VLT i ett nätverk. Du kan ange en käll- och målkatalog och hämta alla databasdata från en instans och läsa in dem i en annan. Vlt rcp finns på [https://jackrabbit.apache.org/filevault/rcp.html](https://jackrabbit.apache.org/filevault/rcp.html)
-   * **Grabbitis är ett** verktyg för innehållssynkronisering med öppen källkod som utvecklats av Time Warner Cable för  [!DNL Experience Manager] implementering. Eftersom den använder kontinuerliga dataströmmar har den en lägre fördröjning jämfört med vlt rcp och kräver en hastighetsförbättring på två till tio gånger snabbare än vlt rcp. Grabbit har även stöd för synkronisering av deltainnehåll, vilket gör att det kan synkronisera ändringar efter att en första migreringspass har slutförts.
+   * **** Grabbitis är ett verktyg för innehållssynkronisering med öppen källkod som utvecklats av Time Warner Cable för deras  [!DNL Experience Manager] implementering. Eftersom den använder kontinuerliga dataströmmar har den en lägre fördröjning jämfört med vlt rcp och kräver en hastighetsförbättring på två till tio gånger snabbare än vlt rcp. Grabbit har även stöd för synkronisering av deltainnehåll, vilket gör att det kan synkronisera ändringar efter att en första migreringspass har slutförts.
 
 1. Aktivera resurser: Följ instruktionerna för [aktivering av resurser](#activate-assets) som dokumenterats för den inledande migreringen till AEM.
 

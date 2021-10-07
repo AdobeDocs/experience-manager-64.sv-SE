@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Management
 role: Admin,Architect
 exl-id: edbb275a-5ead-4ed2-8708-29e766081d75
-source-git-commit: cc6de21180c9fff74f7d64067db82f0c11ac9333
+source-git-commit: 63a4304a1a10f868261eadce74a81148026390b6
 workflow-type: tm+mt
 source-wordcount: '1745'
 ht-degree: 0%
@@ -195,5 +195,5 @@ Om du råkar ut för problem i samband med övervakningen finns det några fels�
 * Använd arbetsflödeskonsolen för att verifiera att arbetsflödena fungerar som förväntat. Om det är möjligt kan du komprimera flera arbetsflöden till ett enda arbetsflöde.
 * Läs om live-övervakning och leta efter fler flaskhalsar eller konsumenter av specifika resurser.
 * Undersök ingångspunkterna från klientnätverket och ingångspunkterna till instansnätverket [!DNL Experience Manager], inklusive dispatchern. Det är ofta flaskhalsar. Mer information finns i [Resursnätverkshänsyn](assets-network-considerations.md).
-* Ändra storlek på din [!DNL Experience Manager]-server. Du kan ha en otillräckligt stor [!DNL Experience Manager]-instans. Adobe kundtjänst kan hjälpa dig att identifiera om din server är för liten.
+* Ändra storlek på din [!DNL Experience Manager]-server. Du kan ha en otillräckligt stor [!DNL Experience Manager]-instans. Adobe kundsupport kan hjälpa dig att identifiera om din server är för liten.
 * Undersök `access.log`- och `error.log`-filerna för att se om det finns poster runt tiden när något gick fel. Leta efter mönster som kan indikera anpassade kodavvikelser. Lägg till dem i listan med händelser som du övervakar.

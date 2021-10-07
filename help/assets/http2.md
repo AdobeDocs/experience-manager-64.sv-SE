@@ -1,8 +1,8 @@
 ---
 title: HTTP2-leverans av innehåll
-seo-title: HTTP2-leverans av innehåll
+seo-title: HTTP2 Delivery of Content
 description: HTTP/2 förbättrar kommunikationen mellan webbläsare och servrar, vilket ger snabbare överföring av information samtidigt som man minskar behovet av processorkraft.
-seo-description: HTTP/2 förbättrar kommunikationen mellan webbläsare och servrar, vilket ger snabbare överföring av information samtidigt som man minskar behovet av processorkraft.
+seo-description: HTTP/2 improves the way browsers and servers communicate, allowing for faster transfer of information while reducing the amount of needed processing power.
 uuid: d9deb945-bdf5-4d6b-95c8-8bae4442e618
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,11 +10,11 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 exl-id: 59cd9f8c-6d01-448d-bf57-bdc9fd2e381b
-feature: Resurshantering
+feature: Asset Management
 role: Admin,User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: a750c5425e33c2a115aab581b71862c1d30cf166
 workflow-type: tm+mt
-source-wordcount: '733'
+source-wordcount: '705'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 
 Du måste initiera begäran om att växla över till HTTP/2; det görs inte automatiskt åt dig.
 
-1. Initiera en begäran om teknisk support för att växla till HTTP2. Se [Gå till AEM supportportal](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html).
+1. Initiera en begäran om teknisk support för att växla till HTTP2. Se [Gå till kundsupportportalen](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html).
 
    1. Ange följande information i din supportförfrågan:
 
